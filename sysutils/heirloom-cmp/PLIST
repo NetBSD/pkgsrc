@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:30:54 cheusov Exp $
+${HLROOT}/bin/cmp
+${HLROOT}/man/man1/cmp.1
