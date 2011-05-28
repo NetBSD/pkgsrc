@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/08 11:05:31 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2011/05/28 11:15:25 ryoon Exp $
 
-SHA1 (Ricty-2.0.1.tar.gz) = 04d706b41289739e02f9caa41416a9757657bf6e
-RMD160 (Ricty-2.0.1.tar.gz) = de326ec62976cd3603ec58ccea872243fd8cf1cb
-Size (Ricty-2.0.1.tar.gz) = 4316124 bytes
+SHA1 (Ricty-3.0.1.tar.gz) = 7138bf8d328290ee82ed1c8e846b31d41b9e1d17
+RMD160 (Ricty-3.0.1.tar.gz) = aa50029c9d2ff5cf0ee7758aac4fe527b8b47ff3
+Size (Ricty-3.0.1.tar.gz) = 3884 bytes
