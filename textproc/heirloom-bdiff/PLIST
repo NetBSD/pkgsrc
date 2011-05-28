@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:11:47 cheusov Exp $
+${HLROOT}/bin/bdiff
+${HLROOT}/man/man1/bdiff.1
