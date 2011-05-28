@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:41:17 cheusov Exp $
+${HLROOT}/bin/units
+${HLROOT}/lib/unittab
+${HLROOT}/man/man1/units.1
