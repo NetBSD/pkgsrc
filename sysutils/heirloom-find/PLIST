@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 00:22:37 cheusov Exp $
+${HLROOT}/bin/find
+${HLROOT}/bin/posix2001/find
+${HLROOT}/bin/posix/find
+${HLROOT}/bin/s42/find
+${HLROOT}/man/man1/find.1
