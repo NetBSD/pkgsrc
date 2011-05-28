@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1346 2011/05/28 08:38:19 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1347 2011/05/28 08:41:08 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added misc/heirloom-time version 070715 [cheusov 2011-05-28]
 	Added security/heirloom-su version 070715 [cheusov 2011-05-28]
 	Added news/heirloom-news version 070715 [cheusov 2011-05-28]
+	Added math/heirloom-factor version 070715 [cheusov 2011-05-28]
