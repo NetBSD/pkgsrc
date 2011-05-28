@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:30:56 cheusov Exp $
+${HLROOT}/bin/more
+${HLROOT}/bin/page
+${HLROOT}/bin/s42/more
+${HLROOT}/bin/s42/page
+${HLROOT}/man/man1/more.1
+${HLROOT}/man/man1/page.1
+${HLROOT}/ucb/more
