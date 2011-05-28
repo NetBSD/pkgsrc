@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1313 2011/05/28 08:13:20 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1314 2011/05/28 08:13:40 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2091,3 +2091,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/heirloom-col version 070715 [cheusov 2011-05-28]
 	Added textproc/heirloom-comm version 070715 [cheusov 2011-05-28]
 	Added textproc/heirloom-cut version 070715 [cheusov 2011-05-28]
+	Added textproc/heirloom-diff3 version 070715 [cheusov 2011-05-28]
