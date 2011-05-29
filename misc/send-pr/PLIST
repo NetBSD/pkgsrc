@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/29 13:51:30 cheusov Exp $
+bin/install-sid
+bin/send-pr
+info/send-pr.info
+man/man1/send-pr.1
+share/emacs/site-lisp/send-pr.el
+share/examples/gnats/config
+share/gnats/cygnus
+share/gnats/dist/INSTALL.send-pr
+share/gnats/netbsd
