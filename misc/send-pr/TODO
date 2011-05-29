@@ -1,0 +1,4 @@
+maybe remove send-pr from database/gnats and depend on this instead
+(and get rid of any CONFLICTs)
+
+update to latest version
