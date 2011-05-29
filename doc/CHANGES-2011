@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1367 2011/05/29 06:55:13 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1368 2011/05/29 11:52:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2143,3 +2143,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/uim to 1.7.0 [obache 2011-05-29]
 	Updated inputmethod/uim-elisp to 1.7.0 [obache 2011-05-29]
 	Updated net/mikutter to 0.0.3.6 [obache 2011-05-29]
+	Updated devel/cppcheck to 1.48 [wiz 2011-05-29]
