@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1370 2011/05/29 15:13:55 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1371 2011/05/29 15:38:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2146,3 +2146,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cppcheck to 1.48 [wiz 2011-05-29]
 	Added misc/send-pr version 3.113.1 [cheusov 2011-05-29]
 	Updated devel/sparsehash to 1.10 [cheusov 2011-05-29]
+	Updated www/contao29-translations to 20110529 [taca 2011-05-29]
