@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1364 2011/05/28 22:02:19 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1365 2011/05/29 01:38:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/drupal6 to 6.21 [taca 2011-05-28]
 	Updated www/drupal6 to 6.22 [taca 2011-05-28]
 	Updated audio/picard to 0.14 [gls 2011-05-28]
+	Updated lang/ruby18-base to 1.8.7.334nb2 [taca 2011-05-29]
