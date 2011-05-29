@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/08/03 19:46:42 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/05/29 15:12:26 cheusov Exp $
 
-SHA1 (sparsehash-0.4.tar.gz) = fd0467f3a1cc08e409d4638e98baf625b7565565
-RMD160 (sparsehash-0.4.tar.gz) = b65f032e1a7262940ecea17b4448506bbc35ea88
-Size (sparsehash-0.4.tar.gz) = 249743 bytes
-SHA1 (patch-aa) = 1c085b909211d6f1747f5de972113148f22985a3
+SHA1 (sparsehash-1.10.tar.gz) = 47be68232edb4175bde7e1eeda0f0e453a932be8
+RMD160 (sparsehash-1.10.tar.gz) = 7c3dd4310cae69364cb46f4827b403309f539f29
+Size (sparsehash-1.10.tar.gz) = 289819 bytes
