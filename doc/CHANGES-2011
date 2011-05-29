@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1366 2011/05/29 06:15:38 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1367 2011/05/29 06:55:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2142,3 +2142,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby18-base to 1.8.7.334nb2 [taca 2011-05-29]
 	Updated inputmethod/uim to 1.7.0 [obache 2011-05-29]
 	Updated inputmethod/uim-elisp to 1.7.0 [obache 2011-05-29]
+	Updated net/mikutter to 0.0.3.6 [obache 2011-05-29]
