@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1369 2011/05/29 13:51:41 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1370 2011/05/29 15:13:55 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2145,3 +2145,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.6 [obache 2011-05-29]
 	Updated devel/cppcheck to 1.48 [wiz 2011-05-29]
 	Added misc/send-pr version 3.113.1 [cheusov 2011-05-29]
+	Updated devel/sparsehash to 1.10 [cheusov 2011-05-29]
