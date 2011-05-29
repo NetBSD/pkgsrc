@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.23 2011/04/13 13:45:16 obache Exp $
+# $NetBSD: options.mk,v 1.24 2011/05/29 06:13:57 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-#PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gtk m17nlib openssl prime sj3 sqlite uim-fep wnn xim
-PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gtk m17nlib openssl prime sj3 sqlite uim-fep xim
+#PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn xim
+PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep xim
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde3
 PKG_OPTIONS_GROUP.qt=	qt qt3
@@ -21,8 +21,8 @@ PKG_FAIL_REASON+=	"'qt3' conflict with 'qt' or 'kde' option"
 .  endif
 .endif
 
-PLIST_VARS+=		helperdata uim-dict-gtk fep
-PLIST_VARS+=		anthy curl eb expat ffi gnome gtk kde kde3 m17nlib openssl qt qt3 sqlite wnn xim
+PLIST_VARS+=		helperdata uim-dict-gtk uim-dict-gtk3 uim-dict-helperdata fep
+PLIST_VARS+=		anthy curl eb expat ffi gnome gnome3 gtk gtk3 kde kde3 m17nlib openssl qt qt3 sqlite wnn xim
 
 .if !empty(PKG_OPTIONS:Mxim)
 .include "../../x11/libX11/buildlink3.mk"
@@ -100,6 +100,14 @@ PLIST.gnome=		yes
 CONFIGURE_ARGS+=	--disable-gnome-applet
 .endif
 
+# No gnome3 packages
+#.if !empty(PKG_OPTIONS:Mgnome3)
+#.  include "../../x11/gnome-panel/buildlink3.mk"
+#.  include "../../devel/libgnomeui/buildlink3.mk"
+#CONFIGURE_ARGS+=	--enable-gnome3-applet
+#PLIST.gnome3=		yes
+#.endif
+
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mgnome)
 GTK2_IMMODULES=		YES
 .include "../../x11/gtk2/modules.mk"
@@ -110,9 +118,24 @@ PLIST.gtk=		yes
 .    endif
 CONFIGURE_ARGS+=	--enable-dict
 PLIST.uim-dict-gtk=	yes
+PLIST.uim-dict-helperdata=	yes
 .  endif
 .else
 CONFIGURE_ARGS+=	--without-gtk2
+.endif
+
+.if !empty(PKG_OPTIONS:Mgtk3) || !empty(PKG_OPTIONS:Mgnome3)
+GTK3_IMMODULES=		YES
+.include "../../x11/gtk3/modules.mk"
+PLIST.gtk3=		yes
+.  if !empty(PKG_OPTIONS:Manthy) || !empty(PKG_OPTIONS:Mcanna)
+.    if !empty(PKG_OPTIONS:Mcanna)
+.      include "../../inputmethod/canna-lib/buildlink3.mk"
+.    endif
+CONFIGURE_ARGS+=	--enable-dict
+PLIST.uim-dict-gtk3=	yes
+PLIST.uim-dict-helperdata=	yes
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mkde3)
@@ -191,6 +214,8 @@ PLIST.sqlite=		yes
 
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
+.elif !empty(PKG_OPTIONS:Mgtk3) || !empty(PKG_OPTIONS:Mgnome3)
+CONFIGURE_ARGS+=	--enable-default-toolkit=gtk3
 .elif !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
 CONFIGURE_ARGS+=	--enable-default-toolkit=qt4
 .elif !empty(PKG_OPTIONS:Mqt3) || !empty(PKG_OPTIONS:Mkde3)
