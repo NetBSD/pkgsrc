@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.104 2011/05/21 16:39:03 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.105 2011/05/29 15:15:07 kano Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -337,7 +337,7 @@ BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 
       <listitem>
 	<para>If your package needs a library with which to link and
-	again there is no <filename>buildlink3.mk</filename> file
+	there is no <filename>buildlink3.mk</filename> file
 	available, create one. Using
 	<varname>DEPENDS</varname> won't be sufficient because the
 	include files and libraries will be hidden from the compiler.</para>
