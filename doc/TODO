@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10354 2011/05/29 06:15:38 obache Exp $
+$NetBSD: TODO,v 1.10355 2011/05/29 14:06:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o FlightCrew-0.7.1 [wip]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.0.0
+	o ImageMagick-6.7.0.2
 	o MAMEDiff-2.30
 	o Mesa-7.10.2
 	o MesaLib-7.10
@@ -449,6 +449,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o calibre-0.8.3
 	o camlimages-4.0.0
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -537,6 +538,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o efax-gtk-3.2.8
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
+	o eigen2-2.0.16
 	o eigen2-3.0.0
 	o ejabberd-2.1.6
 	o ekiga-3.2.7
@@ -556,6 +558,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o enlightenment-1.0.0
 	o enscript-1.6.5.2
 	o eog-3.0.1
+	o epdfview-0.1.8
 	o epic4-2.6
 	o epstool-3.08
 	o eric5-5.1.2
@@ -905,6 +908,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.1
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o libraw-0.13.5
 	o librep-0.92.0
 	o libssh-0.4.7
 	o libssh2-1.2.7
@@ -955,7 +959,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mksh-39c
 	o mkvtoolnix-4.8.0
 	o moc-2.4.4
-	o modular-xorg-server-1.10.1
+	o modular-xorg-server-1.10.2
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-2.10.2
@@ -1025,7 +1029,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Perl-Tidy-20101217
-	o p5-PerlMagick-6.7.0.0
+	o p5-PerlMagick-6.7.0.2
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1067,7 +1071,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o podofo-0.9.1
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.16.5
+	o poppler-0.16.6
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1093,7 +1097,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-TTFQuery-1.0.0
 	o py-checker-0.8.19
 	o py-cups-1.9.55
-	o py-dbus-0.83.2
+	o py-dbus-0.84.0
 	o py-game-1.9.1
 	o py-gdata-2.0.14
 	o py-gnosis-1.2.2
@@ -1110,6 +1114,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-twisted-11.0.0
 	o python-3.1.3 [wip]
 	o python-3.2
+	o python25-2.5.6
 	o qbrew-0.3.9
 	o qemu-0.14.1
 	o qnetwalk-1.3
@@ -1135,7 +1140,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o renderproto-0.11.1
 	o rep-gtk-0.90.6
 	o resize_image-0.7
-	o resourceproto-1.1.1
+	o resourceproto-1.2.0
 	o rgb-1.0.4
 	o rhythmbox-0.13.3
 	o riece-7.0.1 [pkg/43970]
@@ -1168,6 +1173,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.3.1
 	o scm-5e7
+	o scmgit-base-1.7.5.3
+	o scmgit-docs-1.7.5.3
 	o scons-2.0.1
 	o scribus-1.3.9
 	o scrnsaverproto-1.2.1
@@ -1314,11 +1321,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.24
 	o windowlab-1.40
+	o wine-devel-1.3.21
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
-	o worker-2.17.11
+	o worker-2.17.12
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9g
 	o wxGTK28-2.8.11
@@ -1326,7 +1334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.3
-	o x264-devel-20110521
+	o x264-devel-20110528
 	o xanalyser-1.30
 	o xapian-1.2.4
 	o xapian-omega-1.2.4
@@ -1429,7 +1437,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.4
 	o xorg-util-macros-1.10.1 [pkg/43891]
-	o xorg-util-macros-1.13.0
+	o xorg-util-macros-1.14.0
 	o xorp-1.8.3
 	o xpaint-2.9.8.2
 	o xpr-1.0.3 [unpackaged]
