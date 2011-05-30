@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.17 2010/02/24 22:27:11 joerg Exp $
+# $NetBSD: url2pkg.pl,v 1.18 2011/05/30 07:28:23 cheusov Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -138,6 +138,13 @@ sub magic_configure() {
 
 	my $varname = ($gnu_configure ? "GNU_CONFIGURE" : "HAS_CONFIGURE");
 	push(@build_vars, [$varname, "yes"]);
+}
+
+sub magic_cmake() {
+	open(CONF, "<", "${abs_wrksrc}/CMakeLists.txt") or return;
+	close(CONF);
+
+	push(@build_vars, ["USE_CMAKE", "yes"]);
 }
 
 sub magic_gconf2_schemas() {
@@ -281,6 +288,16 @@ sub generate_initial_package($) {
 	}
 
 	if (!$found) {
+		if ($url =~ qr"^http://([^.]*).googlecode\.com/files/(.*$)") {
+			my $pkgbase = $1;
+			$distfile = $2;
+			$master_sites = "http://${pkgbase}.googlecode.com/files/";
+			$homepage = "http://code.google.com/p/${pkgbase}/";
+			$found = true;
+		}
+	}
+
+	if (!$found) {
 		if ($url =~ qr"^(.*/)(.*)$") {
 			($master_sites, $distfile) = ($1, $2);
 			$homepage = $master_sites;
@@ -375,6 +392,7 @@ sub adjust_package_from_extracted_distfiles()
 	chomp(@wrksrc_dirs = `cd "${abs_wrksrc}" && find * -type d`);
 
 	magic_configure();
+	magic_cmake();
 	magic_gconf2_schemas();
 	magic_libtool();
 	magic_perlmod();
