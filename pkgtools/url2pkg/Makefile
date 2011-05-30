@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2009/11/20 11:49:18 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2011/05/30 07:28:21 cheusov Exp $
 #
 
-DISTNAME=	url2pkg-2.12
+DISTNAME=	url2pkg-2.13
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -9,6 +9,7 @@ DISTFILES=	# none
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/creating.html
 COMMENT=	Tool to automate initial steps in building a package
+LICENSE=	original-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
