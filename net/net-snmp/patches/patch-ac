@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2011/05/27 10:55:24 adam Exp $
+$NetBSD: patch-ac,v 1.11 2011/05/30 08:58:33 adam Exp $
 
 --- agent/mibgroup/if-mib/data_access/interface.h.orig	2011-02-04 12:47:44.000000000 +0000
 +++ agent/mibgroup/if-mib/data_access/interface.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.10 2011/05/27 10:55:24 adam Exp $
      config_require(if-mib/data_access/interface_ioctl)
  
 -#   elif defined( openbsd3 ) || defined( openbsd4 ) || \
-+#   elif defined( netbsd ) || defined( openbsd3 ) || defined( openbsd4 ) || \
++#   elif defined(netbsd) || defined(netbsd1) || defined(netbsdelf) || defined(netbsdelf2) || defined(netbsdelf3) || defined( openbsd3 ) || defined( openbsd4 ) || \
      defined( freebsd4 ) || defined( freebsd5 ) || defined( freebsd6 ) || defined (darwin)
  
      config_require(if-mib/data_access/interface_sysctl)
