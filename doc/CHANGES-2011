@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1374 2011/05/30 07:28:38 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1375 2011/05/30 12:03:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2150,3 +2150,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/libraw to 0.13.5 [gls 2011-05-29]
 	Updated lang/ruby18-base to 1.8.7.334nb3 [taca 2011-05-30]
 	Updated pkgtools/url2pkg to 2.13 [cheusov 2011-05-30]
+	Updated textproc/groonga to 1.2.2 [obache 2011-05-30]
