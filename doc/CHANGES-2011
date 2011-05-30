@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1372 2011/05/29 17:56:35 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1373 2011/05/30 04:22:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2148,3 +2148,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/sparsehash to 1.10 [cheusov 2011-05-29]
 	Updated www/contao29-translations to 20110529 [taca 2011-05-29]
 	Updated graphics/libraw to 0.13.5 [gls 2011-05-29]
+	Updated lang/ruby18-base to 1.8.7.334nb3 [taca 2011-05-30]
