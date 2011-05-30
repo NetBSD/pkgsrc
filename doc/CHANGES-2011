@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1375 2011/05/30 12:03:00 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1376 2011/05/30 19:58:16 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2151,3 +2151,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby18-base to 1.8.7.334nb3 [taca 2011-05-30]
 	Updated pkgtools/url2pkg to 2.13 [cheusov 2011-05-30]
 	Updated textproc/groonga to 1.2.2 [obache 2011-05-30]
+	Updated sysutils/memtestplus to 4.20 [jakllsch 2011-05-30]
