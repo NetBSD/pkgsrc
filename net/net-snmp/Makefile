@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2011/05/27 10:55:24 adam Exp $
+# $NetBSD: Makefile,v 1.86 2011/05/30 10:21:43 tron Exp $
 
 DISTNAME=	net-snmp-5.6.1.1
 CATEGORIES=	net
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 MAKE_ENV+=	OPSYS=${OPSYS}
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
