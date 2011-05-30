@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/04/29 13:29:35 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/30 12:01:40 obache Exp $
 #
 
-DISTNAME=	groonga-1.2.1
+DISTNAME=	groonga-1.2.2
 CATEGORIES=	textproc
-MASTER_SITES=	http://groonga.org/files/groonga/
+MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://groonga.org/
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+# for long file name
+EXTRACT_USING=	bsdtar
 
 .include "options.mk"
 
