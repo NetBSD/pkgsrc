@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1380 2011/05/31 12:01:28 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1381 2011/05/31 14:44:43 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2156,3 +2156,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/zeromq to 2.1.7 [obache 2011-05-31]
 	Updated devel/guile-www to 2.31 [gdt 2011-05-31]
 	Updated sysutils/bup to 0.24bnb1 [wiz 2011-05-31]
+	Updated net/GeoIP to 1.4.7nb1 [mspo 2011-05-31]
