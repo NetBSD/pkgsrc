@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2010/02/07 16:12:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/05/31 11:53:52 gdt Exp $
 info/guile-www.info
 share/guile/site/www/cgi
-share/guile/site/www/data/content-type
 share/guile/site/www/data/http-status
 share/guile/site/www/data/mime-types
 share/guile/site/www/http
@@ -13,6 +12,7 @@ share/guile/site/www/server-utils/cookies
 share/guile/site/www/server-utils/filesystem
 share/guile/site/www/server-utils/form-2-form
 share/guile/site/www/server-utils/log
+share/guile/site/www/server-utils/modlisp
 share/guile/site/www/server-utils/parse-request
 share/guile/site/www/url
 share/guile/site/www/url-coding
