@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1377 2011/05/30 22:14:17 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1378 2011/05/31 11:02:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2153,3 +2153,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/groonga to 1.2.2 [obache 2011-05-30]
 	Updated sysutils/memtestplus to 4.20 [jakllsch 2011-05-30]
 	Updated mail/getmail to 4.20.3 [schmonz 2011-05-30]
+	Updated net/zeromq to 2.1.7 [obache 2011-05-31]
