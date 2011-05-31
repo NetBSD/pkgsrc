@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2011/05/29 06:13:57 obache Exp $
+# $NetBSD: Makefile,v 1.50 2011/05/31 03:09:20 obache Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
@@ -47,6 +47,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgcroots+=	libgcroots>=0.2.3
 .include "../../devel/libgcroots/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
