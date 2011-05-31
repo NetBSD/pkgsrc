@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/16 13:52:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/31 12:01:18 wiz Exp $
 #
 
 DISTNAME=	bup-0.24b
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	# manually packaged since master site is git repository
 # and only available via https
@@ -23,7 +24,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DOCDIR=		${WRKDIR}/apenwarr-bup-1783a57
 WRKSRC=		${WRKDIR}/apenwarr-bup-d8d6406
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/bup
 
 TEST_TARGET=	test
 
@@ -81,6 +82,8 @@ REPLACE_PYTHON+=	wvtest.py
 
 post-install:
 	${INSTALL_DATA} ${DOCDIR}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/DESIGN ${DESTDIR}${PREFIX}/share/doc/bup
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/bup
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
