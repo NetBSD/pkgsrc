@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/16 13:52:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/31 12:01:18 wiz Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -96,5 +96,5 @@ man/man1/bup-tag.1
 man/man1/bup-tick.1
 man/man1/bup-web.1
 man/man1/bup.1
-@pkgdir share/man/man1
-@pkgdir share/doc/bup
+share/doc/bup/DESIGN
+share/doc/bup/README
