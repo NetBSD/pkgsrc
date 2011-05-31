@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/16 13:52:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/05/31 12:01:18 wiz Exp $
 
 SHA1 (bup-0.24b.tar.gz) = 478aa11b9f1ecc72d6d1ca07fb543042d152b81e
 RMD160 (bup-0.24b.tar.gz) = f2c3474c9f5467ad95153725947cc6c3a016f0f0
@@ -6,5 +6,5 @@ Size (bup-0.24b.tar.gz) = 330630 bytes
 SHA1 (bup-man-0.24b.tar.gz) = 03e84f5e61405a00750a7f1bd3ea9e9213a9ffd7
 RMD160 (bup-man-0.24b.tar.gz) = dff92315d4b54c5373fd21130c52987899e793f2
 Size (bup-man-0.24b.tar.gz) = 21950 bytes
-SHA1 (patch-Makefile) = 6fe278c6ccfbda257880e4d8b52730238d3dbcb7
+SHA1 (patch-Makefile) = e9d549e00e7ebb4f84724e62acffb3fdf9b7dda3
 SHA1 (patch-lib_bup_t_tgit.py) = aaf8fb8738aef2dae5379848895de1532118ea51
