@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1378 2011/05/31 11:02:13 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1379 2011/05/31 11:54:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2154,3 +2154,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/memtestplus to 4.20 [jakllsch 2011-05-30]
 	Updated mail/getmail to 4.20.3 [schmonz 2011-05-30]
 	Updated net/zeromq to 2.1.7 [obache 2011-05-31]
+	Updated devel/guile-www to 2.31 [gdt 2011-05-31]
