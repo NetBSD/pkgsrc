@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2010/11/13 21:09:01 shattered Exp $
+# $NetBSD: Makefile,v 1.26 2011/05/31 14:40:25 mspo Exp $
 
-DISTNAME=	GeoIP-1.4.6
+DISTNAME=	GeoIP-1.4.7
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://geolite.maxmind.com/download/geoip/api/c/
