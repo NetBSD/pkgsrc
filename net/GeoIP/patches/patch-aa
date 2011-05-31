@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/04/24 10:17:22 adam Exp $
+$NetBSD: patch-aa,v 1.6 2011/05/31 14:40:25 mspo Exp $
 
   - pkgsrc patch: put configuration file into examples directory so CONF_FILES
     can use it as a reference.
@@ -6,9 +6,9 @@ $NetBSD: patch-aa,v 1.5 2009/04/24 10:17:22 adam Exp $
   - pkgsrc patch: do not install the configuration file (in target
     install-exec-hook), let CONF_FILES handle it.
 
---- conf/Makefile.in.orig	2009-02-24 23:56:08.000000000 +0100
+--- conf/Makefile.in.orig	2011-05-31 11:49:22.000000000 +0000
 +++ conf/Makefile.in
-@@ -160,7 +160,7 @@ psdir = @psdir@
+@@ -177,7 +177,7 @@ psdir = @psdir@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
@@ -17,11 +17,11 @@ $NetBSD: patch-aa,v 1.5 2009/04/24 10:17:22 adam Exp $
  target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
-@@ -310,7 +310,6 @@ install-dvi: install-dvi-am
+@@ -340,7 +340,6 @@ install-dvi-am:
  
  install-exec-am: install-dist_sysconfDATA
  	@$(NORMAL_INSTALL)
 -	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
- 
  install-html: install-html-am
  
+ install-html-am:
