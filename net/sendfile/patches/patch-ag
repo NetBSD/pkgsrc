@@ -1,0 +1,25 @@
+$NetBSD: patch-ag,v 1.1 2011/06/01 11:21:01 is Exp $
+
+--- src/address.c.orig	2005-06-06 21:14:16.000000000 +0000
++++ src/address.c
+@@ -688,7 +688,8 @@ int saft_connect(const char *type, 
+ 	if (strcasecmp(service, SERVICE) == 0 || strcmp(service, PORT_STRING) == 0) {
+ 	  snprintf(MAXS(ahost),"saft.%s",host);
+ 	  if (client) {
+-	    if(gethostbyname2(ahost, addressFamily)){
++	    sockfd=open_connection(host,service);
++	    if(sockfd >= 0){
+ 	      if (!quiet) {
+ 		printf("try sending to %s@%s ? ",recipient,ahost);
+ 		fgetl(answer,stdin);
+@@ -703,7 +704,9 @@ int saft_connect(const char *type, 
+ 	      snprintf(MAXS(tmp),"opening connection to %s@%s",recipient,host);
+ 	      if (quiet<2) message(prg,'I',tmp);
+ 	    }
+-	    sockfd=open_connection(host,service);
++	  } else {
++	    close(sockfd);
++	    sockfd = -3;
+ 	  }
+ 	}
+ 	
