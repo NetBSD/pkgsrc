@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1382 2011/05/31 14:46:45 mspo Exp $
+$NetBSD: CHANGES-2011,v 1.1383 2011/06/01 07:22:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2158,3 +2158,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/bup to 0.24bnb1 [wiz 2011-05-31]
 	Updated net/GeoIP to 1.4.7nb1 [mspo 2011-05-31]
 	Updated databases/maatkit to 7486nb1 [mspo 2011-05-31]
+	Updated net/wireshark to 1.4.7 [tron 2011-06-01]
