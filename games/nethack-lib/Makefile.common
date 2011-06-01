@@ -1,5 +1,10 @@
-# $NetBSD: Makefile.common,v 1.26 2009/08/04 13:58:57 joerg Exp $
+# $NetBSD: Makefile.common,v 1.27 2011/06/01 11:20:29 wiz Exp $
 #
+# used by games/nethack/Makefile
+# used by games/nethack-lib/Makefile
+# used by games/nethack-x11/Makefile
+# used by games/nethack-tty/Makefile
+# used by games/nethack-qt/Makefile
 
 NETHACK_BASEVER=	3.4.3
 NETHACK_VERSION=	${NETHACK_BASEVER}
@@ -13,15 +18,17 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pooka@NetBSD.org
 HOMEPAGE=		http://www.nethack.org/
+LICENSE=		nethack-license
 
 MAKE_JOBS_SAFE=		no
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if !defined(META_PACKAGE)
 
 WRKSRC=			${WRKDIR}/nethack-${NETHACK_BASEVER}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
-USE_TOOLS+=		gzip yacc lex
+USE_TOOLS+=		gzip yacc lex awk
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,20 +47,28 @@ NETHACK_OS=		SYSV
 NETHACK_OS?=		BSD
 
 SUBST_CLASSES+=		os
-SUBST_MESSAGE.os=	Configuring for $(NETHACK_OS)
+SUBST_MESSAGE.os=	Configuring for ${NETHACK_OS}
 SUBST_STAGE.os=		post-patch
 SUBST_FILES.os=		include/unixconf.h
 SUBST_SED.os=		-e 's,__NETHACK_OS__,${NETHACK_OS},'
 
-NETHACK_GROUP=		games
-PKG_GROUPS=		${NETHACK_GROUP}
+USE_GAMESGROUP=		yes
+NETHACK_USER=		${GAMES_USER}
+NETHACK_GROUP=		${GAMES_GROUP}
+BUILD_DEFS+=		GAMES_USER GAMES_GROUP
+GAMEPERM=		${NETHACK_USER} ${NETHACK_GROUP} 2555
+
+GAMEDIR=		${PREFIX}/share/${NETHACK_DIR}
+VARDIR=			/var/games/nethack340
+MAKE_ENV+=		GAMEDIR=${GAMEDIR:Q}
+MAKE_ENV+=		VARDIR=${VARDIR:Q}
 
 pre-configure:
 	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
 
 post-patch:
 	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/config.h-pre
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g'				\
+	@${SED} -e 's|@PREFIX@|${PREFIX}|g'				\
 		-e 's|@GZIP_PROGRAM@|'`${ECHO} ${GZIP_CMD}		\
 		| ${AWK} '{ print $$1 }'`'|g'				\
 		< ${WRKSRC}/config.h-pre > ${WRKSRC}/include/config.h

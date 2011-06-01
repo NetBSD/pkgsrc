@@ -1,7 +1,9 @@
-$NetBSD: patch-ad,v 1.7 2007/10/27 18:26:34 pooka Exp $
+$NetBSD: patch-ad,v 1.8 2011/06/01 11:20:29 wiz Exp $
 
---- sys/unix/nethack.sh.orig	2003-12-08 00:39:13.000000000 +0100
-+++ sys/unix/nethack.sh	2007-10-27 20:18:37.000000000 +0200
+Make configurable.
+
+--- sys/unix/nethack.sh.orig	2003-12-07 23:39:13.000000000 +0000
++++ sys/unix/nethack.sh
 @@ -1,9 +1,31 @@
  #!/bin/sh
  #	SCCS Id: @(#)nethack.sh	3.4	1990/02/26
@@ -11,7 +13,7 @@ $NetBSD: patch-ad,v 1.7 2007/10/27 18:26:34 pooka Exp $
 +findbin ()
 +{
 +	for x in $UILIST; do
-+		if [ -x XXXPREFIXXXX/bin/nethack-$x ]; then
++		if [ -x @PREFIX@/bin/nethack-$x ]; then
 +			echo $x
 +			return
 +		fi
@@ -29,10 +31,10 @@ $NetBSD: patch-ad,v 1.7 2007/10/27 18:26:34 pooka Exp $
 +	exit 1
 +fi
 +
-+HACKDIR=XXXPREFIXXXX/share/nethackdir340
++HACKDIR=@GAMEDIR@
  export HACKDIR
 -HACK=$HACKDIR/nethack
-+HACK=XXXPREFIXXXX/bin/nethack-$TTY
++HACK=@PREFIX@/bin/nethack-$TTY
  MAXNROFPLAYERS=4
  
  # Since Nethack.ad is installed in HACKDIR, add it to XUSERFILESEARCHPATH

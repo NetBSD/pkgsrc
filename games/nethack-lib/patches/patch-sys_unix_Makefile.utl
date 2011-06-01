@@ -1,0 +1,21 @@
+$NetBSD: patch-sys_unix_Makefile.utl,v 1.1 2011/06/01 11:20:29 wiz Exp $
+
+Make configurable.
+
+--- sys/unix/Makefile.utl.orig	2011-05-27 15:13:59.000000000 +0000
++++ sys/unix/Makefile.utl
+@@ -94,6 +94,14 @@ LFLAGS =
+ 
+ LIBS =
+  
++.if "${GTYPE}" == "-tty"
++CFLAGS += -DGTYPE_TTY
++.elif "${GTYPE}" == "-x11"
++CFLAGS += -DGTYPE_X11
++.elif "${GTYPE}" == "-qt"
++CFLAGS += -DGTYPE_QT
++.endif
++
+ # If you are cross-compiling, you must use this:
+ #OBJDIR = .
+ # otherwise, you can save a little bit of disk space with this:

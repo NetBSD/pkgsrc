@@ -1,8 +1,45 @@
-$NetBSD: patch-aa,v 1.9 2004/03/05 15:21:01 pooka Exp $
+$NetBSD: patch-aa,v 1.10 2011/06/01 11:20:29 wiz Exp $
 
---- include/config.h.old	2004-03-05 15:39:59.000000000 +0200
-+++ include/config.h	2004-03-05 15:40:05.000000000 +0200
-@@ -169,11 +169,11 @@
+Make configurable.
+
+--- include/config.h.orig	2003-12-07 23:39:13.000000000 +0000
++++ include/config.h
+@@ -42,6 +42,16 @@
+  * Define all of those you want supported in your binary.
+  * Some combinations make no sense.  See the installation document.
+  */
++#if   defined(GTYPE_TTY)
++#  define DEFAULT_WINDOW_SYS "tty"
++#elif defined(GTYPE_X11)
++#  define X11_GRAPHICS
++#  define DEFAULT_WINDOW_SYS "x11"
++#elif defined(GTYPE_QT)
++#  define QT_GRAPHICS
++#  define DEFAULT_WINDOW_SYS "Qt"
++#endif
++
+ #define TTY_GRAPHICS	/* good old tty based graphics */
+ /* #define X11_GRAPHICS */	/* X11 interface */
+ /* #define QT_GRAPHICS */	/* Qt interface */
+@@ -86,7 +96,7 @@
+ # define DEFAULT_WC_TILED_MAP   /* Default to tiles if users doesn't say wc_ascii_map */
+ # define USER_SOUNDS		/* Use sounds */
+ # ifndef __APPLE__
+-#  define USER_SOUNDS_REGEX
++/*#  define USER_SOUNDS_REGEX */
+ # endif
+ # define USE_XPM		/* Use XPM format for images (required) */
+ # define GRAPHIC_TOMBSTONE	/* Use graphical tombstone (rip.ppm) */
+@@ -126,7 +136,7 @@
+  * would allow:
+  *  xpmtoppm <x11tiles.xpm | pnmscale 1.25 | ppmquant 90 >x11tiles_big.xpm
+  */
+-/* # define USE_XPM */		/* Disable if you do not have the XPM library */
++# define USE_XPM		/* Disable if you do not have the XPM library */
+ # ifdef USE_XPM
+ #  define GRAPHIC_TOMBSTONE	/* Use graphical tombstone (rip.xpm) */
+ # endif
+@@ -169,11 +179,11 @@
  
  #ifdef UNIX
  /* path and file name extension for compression program */
@@ -18,16 +55,16 @@ $NetBSD: patch-aa,v 1.9 2004/03/05 15:21:01 pooka Exp $
  #endif
  
  #ifndef COMPRESS
-@@ -204,7 +204,7 @@
+@@ -204,7 +214,7 @@
   * otherwise it will be the current directory.
   */
  # ifndef HACKDIR
 -#  define HACKDIR "/usr/games/lib/nethackdir"
-+#  define HACKDIR "XXXPREFIXXXX/share/nethackdir340"
++#  define HACKDIR "@PREFIX@/share/nethackdir340"
  # endif
  
  /*
-@@ -300,7 +300,7 @@
+@@ -300,7 +310,7 @@ typedef unsigned char	uchar;
   * functions that have been macroized.
   */
  
