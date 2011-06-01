@@ -1,23 +1,19 @@
-# $NetBSD: Makefile,v 1.29 2011/05/27 13:13:35 is Exp $
+# $NetBSD: Makefile,v 1.30 2011/06/01 11:21:01 is Exp $
 #
 
-DISTNAME=	sendfile-20010216
-PKGNAME=	sendfile-2.1.0.2
-PKGREVISION=	2
+DISTNAME=	sendfile-2.1b
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.belwue.de/pub/unix/sendfile/current/
-# http://fex.rus.uni-stuttgart.de/download/
+MASTER_SITES=	http://fex.rus.uni-stuttgart.de/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fex.rus.uni-stuttgart.de/saft/sendfile.html
 COMMENT=	Implementation of the Simple asynchronous file transfer protocol
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/sendfile-2.1a
+#WRKSRC=		${WRKDIR}/sendfile-2.1b
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_SYSCONFSUBDIR=	sendfile
 EGDIR=		${PREFIX}/share/examples/sendfile
 CONF_FILES=	${EGDIR}/sendfile.cf ${PKG_SYSCONFDIR}/sendfile.cf
 CONF_FILES+=	${EGDIR}/sendfile.deny ${PKG_SYSCONFDIR}/sendfile.deny

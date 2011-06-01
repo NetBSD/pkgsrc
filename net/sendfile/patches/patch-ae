@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2011/06/01 11:21:01 is Exp $
+
+--- src/net.c.orig	2011-05-30 16:21:42.000000000 +0200
++++ src/net.c
+@@ -393,7 +393,7 @@ int open_connection(char *adr, char* ser
+   result = getaddrinfo(hostname, service, &hints, &addressInfo);
+   free(hostptr);
+ 
+-  if (result < 0) return (-3);
++  if (result != 0) return (-3);
+ 
+   for (aiptr = addressInfo; aiptr != NULL; aiptr = aiptr->ai_next)
+   {

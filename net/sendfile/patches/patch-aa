@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2011/03/20 12:13:44 obache Exp $
+$NetBSD: patch-aa,v 1.7 2011/06/01 11:21:01 is Exp $
 
---- makeconfig.orig	1999-08-26 18:53:32.000000000 +0000
+--- makeconfig.orig	2006-06-07 13:57:47.000000000 +0000
 +++ makeconfig
 @@ -9,17 +9,13 @@
  #	$HOME/.develenv
@@ -17,35 +17,54 @@ $NetBSD: patch-aa,v 1.6 2011/03/20 12:13:44 obache Exp $
 -MANDIR=/usr/local/man
 -CONFIG=/usr/local/etc
 -SERVERDIR=/usr/local/sbin
-+BINDIR=@PREFIX@/bin
-+MANDIR=@PREFIX@/man
-+CONFIG=@PKG_SYSCONFBASEDIR@
-+EGDIR=@PREFIX@/share/examples/sendfile
-+SERVERDIR=@PREFIX@/sbin
- INETDCONF=/etc/inetd.conf
++BINDIR=${LOCALBASE}/bin
++MANDIR=${LOCALBASE}/man
++CONFIG=${LOCALBASE}/etc
++EGDIR=${LOCALBASE}/share/examples/sendfile
++SERVERDIR=${LOCALBASE}/sbin
+ INETDCONF=/etc/inetd.conf # xinetd will be automaticly recognized
  SERVICES=/etc/services
  
-@@ -99,7 +95,7 @@ case "$SYSTEM" in
+@@ -89,17 +85,22 @@ SYSTEM=`./config.guess`
+ case "$SYSTEM" in
+   *linux*)	SYSTEM=LINUX;;
+   *sunos4*)	SYSTEM=SOLARIS1
++		SENDMAIL=/usr/lib/sendmail
+   		if [ -f /lib/lib44bsd.a -o -f /usr/lib/lib44bsd.a ]; then
+ 		  LIBS="-l44bsd"
+ 		fi;;
+-  *solaris2*)	SYSTEM=SOLARIS2;;
+-  *hp-ux*)	SYSTEM=HPUX;;
+-  *aix*)	SYSTEM=AIX;;
++  *solaris2*)	SYSTEM=SOLARIS2
++		SENDMAIL=/usr/lib/sendmail;;
++  *hp-ux*)	SYSTEM=HPUX
++		SENDMAIL=/usr/lib/sendmail;;
++  *aix*)	SYSTEM=AIX
++		SENDMAIL=/usr/lib/sendmail;;
+   *irix*)	SYSTEM=IRIX;;
    *next*)	SYSTEM=NEXT;;
-   *convex*)	SYSTEM=CONVEXOS;;
+-  *convex*)	SYSTEM=CONVEXOS;;
++  *convex*)	SYSTEM=CONVEXOS
++		SENDMAIL=/usr/lib/sendmail;;
    *osf*)	SYSTEM=OSF1;;
 -  *bsd*)	SYSTEM=BSD;;
 +  *bsd*|*dragonfly*)	SYSTEM=BSD;;
+   *darwin*)	SYSTEM=DARWIN;;
    *)		SYSTEM=UNKNOWN;;
  #  *)		SYSTEM=`uname -a | tr '[a-z]' '[A-Z]'`
- #  		case "$SYSTEM" in
-@@ -110,6 +106,10 @@ case "$SYSTEM" in
+@@ -111,6 +112,10 @@ case "$SYSTEM" in
  #		esac;;
  esac
  
 +case "$SYSTEM" in
-+BSD)	CFLAGS="$CFLAGS -DHAVE_STRERROR=1" ;;
++BSD)	CFLAGS="$CFLAGS -DHAVE_STRERROR=1 -DHAVE_GETOPT_H=1" ;;
 +esac
 +
  cd ../src
  echo now in `pwd`
  
-@@ -133,6 +133,7 @@ cat <<EOD>globals.h
+@@ -134,6 +139,7 @@ cat <<EOD>globals.h
  #define MANDIR		"$MANDIR"
  #define SERVERDIR	"$SERVERDIR"
  
@@ -53,3 +72,35 @@ $NetBSD: patch-aa,v 1.6 2011/03/20 12:13:44 obache Exp $
  #define CONFIG		"$CONFIG/sendfile.cf"
  #define ALIASES		"$CONFIG/sendfile.aliases"
  #define ALLOW		"$CONFIG/sendfile.allow"
+@@ -151,7 +157,7 @@ cat <<EOD>globals.h
+ #define PGP	 	"${PGP:-pgp}"
+ #define RECODE	 	"${RECODE:-recode}"
+ #define METAMAIL 	"${METAMAIL:-metamail}"
+-#define SENDMAIL 	"${SENDMAIL:-/usr/lib/sendmail}"
++#define SENDMAIL 	"${SENDMAIL:-/usr/sbin/sendmail}"
+ #define FIFODIR  	"${FIFODIR:-/tmp/sfm}"	
+ 
+ #define DBF		 "/var/log/sendfiled.dbg"
+@@ -170,7 +176,7 @@ cat <<EOD>globals.h
+ #undef  DEBUG			/* more debugging output */
+ #undef  ALT_MESSAGES		/* alternative user message format */
+ #undef  RESPECT_MAIL_ALIASES	/* look for elm aliases, too */
+-#undef  ENABLE_MULTIPROTOCOL	/* ipv6 support for Linux */
++#define  ENABLE_MULTIPROTOCOL	/* ipv6 support for Linux */
+ 
+ #ifdef ENABLE_MULTIPROTOCOL
+ #define SERVICE         "saft"  /* service entry for saft */
+@@ -204,6 +210,13 @@ cat <<EOD>>config.h
+   #endif
+   #ifndef _POSIX_SOURCE
+     #define _POSIX_SOURCE
++    #define _POSIX_C_SOURCE	200112L	/* snprintf */
++  #endif
++  #ifndef _XOPEN_SOURCE
++    #define _XOPEN_SOURCE		/* strdup */
++  #endif
++  #ifndef _NETBSD_SOURCE
++    #define _NETBSD_SOURCE		/* struct timezone */
+   #endif
+   #ifndef __USE_BSD
+     #define __USE_BSD

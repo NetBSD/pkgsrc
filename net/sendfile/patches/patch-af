@@ -1,0 +1,47 @@
+$NetBSD: patch-af,v 1.1 2011/06/01 11:21:01 is Exp $
+
+--- src/peername.c.orig	2005-06-06 23:14:16.000000000 +0200
++++ src/peername.c
+@@ -65,7 +65,7 @@
+ #ifndef ENABLE_MULTIPROTOCOL
+ 
+ char *peername(int fd) {
+-  size_t len;
++  socklen_t len;
+   struct sockaddr addr;
+   struct in_addr *iaddr;
+   struct hostent *hptr;
+@@ -109,7 +109,7 @@ char *defaultName = "UNKNOWN_HOST";
+ 
+ 
+ char *peername(int fd) {
+-  size_t len;
++  socklen_t len;
+   char addrbuf[1024];
+   struct sockaddr *addr;
+   char service[1024];
+@@ -125,11 +125,13 @@ char *peername(int fd) {
+    * is less than sizeof(struct sockadd_in6)
+    */
+ 
+-  if ((getpeername(fd,&addrbuf,&len)) < 0) return(defaultName);
++  if ((getpeername(fd,(struct sockaddr *)&addrbuf,&len)) < 0) {
++	return(defaultName);
++  }
+   addr = (struct sockaddr*)addrbuf;
+ 
+   if (getnameinfo(addr, len, peerHostName, 1023, 
+-                  service, 1023, 0) < 0) {
++                  service, 1023, 0) != 0) {
+     return defaultName;
+   }
+ 
+@@ -171,7 +173,7 @@ char *peername(int fd) {
+   }
+ 
+   if (getnameinfo(addr, len, peerHostName, 1023, 
+-                  service, 1023, NI_NUMERICHOST) < 0) {
++                  service, 1023, NI_NUMERICHOST) != 0) {
+     return defaultName;
+   } else {
+     return strdup(peerHostName);
