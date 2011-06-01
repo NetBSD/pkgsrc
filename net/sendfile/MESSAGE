@@ -4,11 +4,12 @@ To complete installation, you must
 	saft     487/tcp         # simple asynchronous file transfer
 
 - add to /etc/inetd.conf:
-	saft stream tcp nowait root ${LOCALBASE}/sbin/sendfiled sendfiled
+	saft stream tcp6 nowait root ${LOCALBASE}/sbin/sendfiled sendfiled
+	saft stream tcp  nowait root ${LOCALBASE}/sbin/sendfiled sendfiled
 
 - If you want to use the outgoing spooling feature, then add to your
   system bootup file (/etc/rc.local or /etc/rc.d/rc.local):
-	${LOCALBASE}/sbin/sendfiled -Q
+	${PREFIX}/sbin/sendfiled -Q
 
 - Users should add to their .login or .profile:
-	${LOCALBASE}/bin/check_sendfile
+	${PREFIX}/bin/check_sendfile

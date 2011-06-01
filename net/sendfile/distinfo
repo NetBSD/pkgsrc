@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.11 2011/05/27 13:13:35 is Exp $
+$NetBSD: distinfo,v 1.12 2011/06/01 11:21:01 is Exp $
 
-SHA1 (sendfile-20010216.tar.gz) = cdf6ff67bdc11709209c5f93ac94d380fa1abac3
-RMD160 (sendfile-20010216.tar.gz) = 3e1f9648875b1844d391b86b733c8d04318c4d90
-Size (sendfile-20010216.tar.gz) = 292130 bytes
-SHA1 (patch-aa) = 3b61185e0d0a4e792945cdfc1ec1e318b77869c5
-SHA1 (patch-ab) = c74cf201573068d8e1afa8e285831181d1be789e
-SHA1 (patch-ac) = d2c70f4a40066d83650efe32d0e16574b01f472d
+SHA1 (sendfile-2.1b.tar.gz) = cd0ee8eb2865c3320529b45812f96805c357bc35
+RMD160 (sendfile-2.1b.tar.gz) = 2095f4252db0f15f358e969460d61f29d90e8fad
+Size (sendfile-2.1b.tar.gz) = 335621 bytes
+SHA1 (patch-aa) = 3071fcbc26705b2f382d373913fa804aac0b35ab
+SHA1 (patch-ac) = d6830d56fa5a610d376cf847f0a4d54ed15d2056
 SHA1 (patch-ad) = ec9cf6dd79b6856c196058cb3117f2b140fffa31
+SHA1 (patch-ae) = 19847558b6b1bae8ce6d7ba37cb217ccd6fe896e
+SHA1 (patch-af) = f04e5bb9956e34b2b0ae1f1ba72addfffdd1ff78
+SHA1 (patch-ag) = d43da0ec208923ca825567b82197b8dcba97a94e
