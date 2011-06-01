@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10356 2011/05/29 17:56:35 gls Exp $
+$NetBSD: TODO,v 1.10357 2011/06/01 11:27:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -452,6 +452,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o calibre-0.8.3
 	o camlimages-4.0.0
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o ccache-3.1.5
 	o cddbd-1.5.2
 	o cdif-1.19
 	o cdlabelgen-4.1.0
@@ -539,7 +540,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
 	o eigen2-2.0.16
-	o eigen2-3.0.0
+	o eigen2-3.0.1
 	o ejabberd-2.1.6
 	o ekiga-3.2.7
 	o electric-9.00
@@ -656,6 +657,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.29.92
 	o gap-4r4p9
 	o gated-3.6
+	o gaupol-0.18
 	o gbdfed-1.6
 	o gcc44-4.4.6
 	o gcin-1.5.5
@@ -666,7 +668,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdeskcal-1.01
 	o gdl-2.30.1 [GNOME 2.32]
 	o gdl-3.0.2
-	o gdm-2.32.1 [GNOME 2.32]
+	o gdm-2.32.2 [GNOME 2.32]
+	o gdm-3.0.3
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.12
@@ -712,6 +715,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.4.6
 	o gnuchess-5.08
 	o gnutls-2.12.5
 	o gok-2.30.1 [GNOME 2.32]
@@ -723,6 +727,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gpredict-1.3
 	o gpsdrive-2.11
 	o gramofile-1.6P
+	o gramps3-3.2.6
 	o granulate-0.2
 	o graphviz-2.28.0
 	o grep-2.7
@@ -760,7 +765,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o help2man-1.39.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-7.4
+	o hiawatha-7.5
 	o highlight-3.4
 	o honeyd-1.5c
 	o horde-4.0.3
@@ -1149,7 +1154,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o root-5.24.00 [needs newer f2c]
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o roundup-1.4.17
+	o roundup-1.4.18
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
@@ -1180,6 +1185,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scrollz-1.9.99
 	o scrotwm-0.9.28
 	o scsh-1.3.0
+	o scummvm-1.3.0
 	o sdcc-2.9.0
 	o seahorse-2.32.0
 	o seamonkey-2.0.13
@@ -1205,7 +1211,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snes9x-1.53
 	o snort-2.9.0.5
 	o snownews-1.5.12
-	o solfege-3.19.1
+	o solfege-3.18.8
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o spcaview-20060501
@@ -1214,7 +1220,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o star-1.5.1
 	o startup-notification-0.12
 	o statist-1.3.0
-	o stella-3.3
+	o stella-3.4
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
@@ -1321,6 +1327,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-devel-1.3.21
+	o wireshark-1.4.7
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1415,7 +1422,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbevd-1.1.2 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
-	o xkeyboard-config-2.2.1
+	o xkeyboard-config-2.3
 	o xkill-1.0.3
 	o xli-2006.11.10
 	o xload-1.1.0
