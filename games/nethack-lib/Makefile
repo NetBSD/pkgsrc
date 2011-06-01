@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2011/06/01 11:20:29 wiz Exp $
 #
 
 .include		"../../games/nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-lib-${NETHACK_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 
 COMMENT=		Data files for Nethack
 
@@ -20,17 +20,20 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man6
 # These should eventually migrate to a better location, but keep them
 # here for now until we lose backward compatibility because of changes
 # to the fileformat.
-CONF_FILES_PERMS+=	/dev/null ${PREFIX}/share/${NETHACK_DIR}/record \
-			${ROOT_USER} ${NETHACK_GROUP} 664
-CONF_FILES_PERMS+=	/dev/null ${PREFIX}/share/${NETHACK_DIR}/logfile \
-			${ROOT_USER} ${NETHACK_GROUP} 664
+CONF_FILES_PERMS+=	/dev/null ${VARDIR}/logfile \
+			${NETHACK_USER} ${NETHACK_GROUP} 664
+CONF_FILES_PERMS+=	/dev/null ${VARDIR}/perm \
+			${NETHACK_USER} ${NETHACK_GROUP} 664
+CONF_FILES_PERMS+=	/dev/null ${VARDIR}/record \
+			${NETHACK_USER} ${NETHACK_GROUP} 664
 
-REQD_DIRS_PERMS+=	${PREFIX}/share/${NETHACK_DIR}			\
-			${ROOT_USER} ${NETHACK_GROUP} 775
-REQD_DIRS_PERMS+=	${PREFIX}/share/${NETHACK_DIR}/save		\
-			${ROOT_USER} ${NETHACK_GROUP} 770
+REQD_DIRS_PERMS+=	${VARDIR}					\
+			${NETHACK_USER} ${NETHACK_GROUP} 775
+REQD_DIRS_PERMS+=	${VARDIR}/save					\
+			${NETHACK_USER} ${NETHACK_GROUP} 770
 
-CHECK_FILES_SKIP+=	${PREFIX}/share/${NETHACK_DIR}/logfile		\
-			${PREFIX}/share/${NETHACK_DIR}/record
+CHECK_FILES_SKIP+=	${VARDIR}/logfile				\
+			${VARDIR}/perm					\
+			${VARDIR}/record
 
 .include "../../mk/bsd.pkg.mk"

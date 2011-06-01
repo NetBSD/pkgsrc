@@ -1,6 +1,9 @@
-$NetBSD: patch-af,v 1.6 2006/10/09 02:06:58 ben Exp $
+$NetBSD: patch-af,v 1.7 2011/06/01 11:20:29 wiz Exp $
 
---- include/unixconf.h.orig	2003-12-07 18:39:13.000000000 -0500
+Make configurable.
+Fix for BSD.
+
+--- include/unixconf.h.orig	2003-12-07 23:39:13.000000000 +0000
 +++ include/unixconf.h
 @@ -19,20 +19,21 @@
   */
@@ -36,7 +39,15 @@ $NetBSD: patch-af,v 1.6 2006/10/09 02:06:58 ben Exp $
  			/* Should be defined for most SYSV, SVR4 (including
  			 * Solaris 2+), HPUX, and Linux systems.  In
  			 * particular, it should NOT be defined for the UNIXPC
-@@ -171,7 +172,7 @@
+@@ -103,6 +104,7 @@
+  * system, define VAR_PLAYGROUND to be where the variable parts are kept.
+  */
+ /* #define VAR_PLAYGROUND "/var/lib/games/nethack" */
++#define VAR_PLAYGROUND "/var/games/nethack340"
+ 
+ 
+ /*
+@@ -171,7 +173,7 @@
  #  ifdef AMS
  #define AMS_MAILBOX	"/Mailbox"
  #  else
@@ -45,3 +56,12 @@ $NetBSD: patch-af,v 1.6 2006/10/09 02:06:58 ben Exp $
  #define DEF_MAILREADER	"/usr/bin/mail"
  #   else
  #define DEF_MAILREADER	"/usr/ucb/Mail"
+@@ -284,7 +286,7 @@
+ #endif
+ 
+ #if defined(BSD) || defined(ULTRIX)
+-# if !defined(DGUX) && !defined(SUNOS4)
++# if !defined(DGUX) && !defined(SUNOS4) && !defined(BSD)
+ #define memcpy(d, s, n)		bcopy(s, d, n)
+ #define memcmp(s1, s2, n)	bcmp(s2, s1, n)
+ # endif
