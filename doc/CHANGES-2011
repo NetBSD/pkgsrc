@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1386 2011/06/01 11:23:26 is Exp $
+$NetBSD: CHANGES-2011,v 1.1387 2011/06/01 16:04:32 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2163,3 +2163,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/jabberd2 to 2.2.14 [adam 2011-06-01]
 	Updated games/nethack to 3.4.3nb3 [wiz 2011-06-01]
 	Updated net/sendfile to 2.1b [is 2011-06-01]
+	Updated filesystems/perfuse to 20110601 [manu 2011-06-01]
