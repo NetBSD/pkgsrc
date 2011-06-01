@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1383 2011/06/01 07:22:11 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1384 2011/06/01 11:18:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2159,3 +2159,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/GeoIP to 1.4.7nb1 [mspo 2011-05-31]
 	Updated databases/maatkit to 7486nb1 [mspo 2011-05-31]
 	Updated net/wireshark to 1.4.7 [tron 2011-06-01]
+	Updated security/gsasl to 1.6.1 [adam 2011-06-01]
+	Updated chat/jabberd2 to 2.2.14 [adam 2011-06-01]
