@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.7 2009/06/09 08:40:27 joerg Exp $
+$NetBSD: README,v 1.8 2011/06/01 07:44:40 dholland Exp $
 
 = Introduction =
 
@@ -64,6 +64,6 @@ The following make targets must be implemented:
 = Bugs =
 
 The name "flavor" is badly chosen, especially since flavor is such a
-broad term that OpenBSD ports collection has chosen to implement
-something entirely different using the same name. (This has happended
-before pkgsrc has chosen to use this word, though, so no blame on them.)
+broad term that OpenBSD ports collection has implemented something
+entirely different using the same name. (This happened before pkgsrc
+chose to use this word, though, so no blame attaches to them.)
