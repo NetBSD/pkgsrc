@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1384 2011/06/01 11:18:00 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1385 2011/06/01 11:20:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2161,3 +2161,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/wireshark to 1.4.7 [tron 2011-06-01]
 	Updated security/gsasl to 1.6.1 [adam 2011-06-01]
 	Updated chat/jabberd2 to 2.2.14 [adam 2011-06-01]
+	Updated games/nethack to 3.4.3nb3 [wiz 2011-06-01]
