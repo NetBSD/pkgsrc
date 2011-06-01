@@ -1,0 +1,91 @@
+$NetBSD: patch-sys_unix_Makefile.src,v 1.1 2011/06/01 11:20:29 wiz Exp $
+
+Make configurable.
+
+--- sys/unix/Makefile.src.orig	2003-12-07 23:39:13.000000000 +0000
++++ sys/unix/Makefile.src
+@@ -36,7 +36,11 @@ SHELL=/bin/sh
+ # SHELL=E:/GEMINI2/MUPFEL.TTP
+ 
+ # Normally, the C compiler driver is used for linking:
++.if "${GTYPE}" == "-qt"
++LINK=$(CXX)
++.else
+ LINK=$(CC)
++.endif
+ 
+ # Pick the SYSSRC and SYSOBJ lines corresponding to your desired operating
+ # system.
+@@ -154,12 +158,24 @@ GNOMEINC=-I/usr/lib/glib/include -I/usr/
+ CFLAGS = -O -I../include
+ LFLAGS = 
+ 
++.if "${GTYPE}" == "-x11" || "${GTYPE}" == "-qt"
++CFLAGS += -I${X11BASE}/include
++LFLAGS += ${LDFLAGS}
++.endif
++
++.if "${GTYPE}" == "-tty"
++CFLAGS += -DGTYPE_TTY
++.elif "${GTYPE}" == "-x11"
++CFLAGS += -DGTYPE_X11
++.elif "${GTYPE}" == "-qt"
++CFLAGS += -DGTYPE_QT
++.endif
++
+ # The Qt and Be window systems are written in C++, while the rest of
+ # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
+ # the C++ libraries linked in.
+ CXXFLAGS = $(CFLAGS) -I. -I$(QTDIR)/include
+-CXX=g++
+-#LINK=g++
++#CXX=g++
+ #	For cross-compiling, eg. with gcc on Linux (see also CC further up):
+ #CXX=arm-linux-g++
+ #LINK=arm-linux-gcc
+@@ -217,6 +233,15 @@ WINBEOBJ =
+ WINSRC = $(WINTTYSRC)
+ WINOBJ = $(WINTTYOBJ)
+ 
++.if "${GTYPE}" == "-tty"
++.elif "${GTYPE}" == "-x11"
++WINSRC += $(WINX11SRC)
++WINOBJ += $(WINX11OBJ)
++.elif "${GTYPE}" == "-qt"
++WINSRC += $(WINQTSRC)
++WINOBJ += $(WINQTOBJ)
++.endif
++
+ # on some systems the termcap library is in -ltermcap or -lcurses
+ # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
+ # Sysatt uses shared library in lieu of this option
+@@ -235,13 +260,13 @@ WINTTYLIB = -ltermlib
+ #
+ # libraries for X11
+ # If USE_XPM is defined in config.h, you will also need -lXpm here.
+-WINX11LIB = -lXaw -lXmu -lXext -lXt -lX11
++WINX11LIB = -lXaw -lXmu -lXext -lXt -lX11 -lXpm
+ # WINX11LIB = -lXaw -lXmu -lXt -lX11
+ # WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11 -lm
+ # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
+ #
+ # libraries for Qt
+-WINQTLIB = -L$(QTDIR)/lib -lqt
++WINQTLIB = -L$(QTDIR)/lib -lqt-mt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ #
+ # libraries for KDE (with Qt)
+ WINKDELIB = -lkdecore -lkdeui -lXext
+@@ -257,6 +282,13 @@ WINBELIB = -lbe
+ 
+ WINLIB = $(WINTTYLIB)
+ 
++.if "${GTYPE}" == "-tty"
++.elif "${GTYPE}" == "-x11"
++WINLIB += $(WINX11LIB)
++.elif "${GTYPE}" == "-qt"
++WINLIB += $(WINQTLIB)
++.endif
++
+ # any other strange libraries your system needs (for Sysunix only -- the more
+ # specialized targets should already be right)
+ #

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:56:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/06/01 11:20:29 wiz Exp $
 bin/nethack
 bin/recover
 man/man6/dgn_comp.6
@@ -113,7 +113,6 @@ share/nethackdir340/options
 share/nethackdir340/oracle.lev
 share/nethackdir340/oracles
 share/nethackdir340/orcus.lev
-share/nethackdir340/perm
 share/nethackdir340/pet_mark.xbm
 share/nethackdir340/quest.dat
 share/nethackdir340/rip.xpm

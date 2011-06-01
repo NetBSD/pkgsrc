@@ -1,12 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/09/28 12:41:40 rillig Exp $
+$NetBSD: MESSAGE,v 1.5 2011/06/01 11:20:30 wiz Exp $
 
 You can run the X11 NetHack by typing "nethack x11".
 
-A custom NetHack font was installed.  You must add
-${PREFIX}/lib/X11/fonts/misc to fontpath and set
+Two fonts were installed for NetHack.  You must add
+${PREFIX}/lib/X11/fonts/misc to fontpath and set one of
 
 NetHack*map*font: nh10
+NetHack*map*font: -misc-fixed-medium-r-normal-ibmpc-14-120-75-75-c-80-iso8859-1
 
 in ${PREFIX}/lib/X11/app-defaults/NetHack to use it.
 Tiled mode is enabled by:
@@ -14,5 +15,13 @@ Tiled mode is enabled by:
 NetHack.tile_file: x11tiles
 
 Also see ${PREFIX}/share/nethackdir340/nethack.x11.rc
+
+You may also want to set this environment variable, so NetHack can
+find its app-defaults file:
+
+XFILESEARCHPATH=%D:/usr/pkg/lib/X11/%T/%N%C:/usr/pkg/lib/X11/%T/%N
+
+To fall back to tty mode, use "NETHACKOPTIONS=windowtype:tty nethack"
+or set that option in your .nethackrc file.
 
 ===========================================================================
