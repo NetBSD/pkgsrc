@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2011/04/14 19:37:26 tez Exp $
+$NetBSD: distinfo,v 1.30 2011/06/01 09:57:23 adam Exp $
 
 SHA1 (2010-006-patch.txt) = 600f0890de65f96112f267b56317a4fd0166cba0
 RMD160 (2010-006-patch.txt) = fc262a23e9aa118262a4258f74832445062444e4
@@ -37,3 +37,4 @@ SHA1 (patch-ch) = 0e36012b43c498b8920f204bab2ba9a68f8c851a
 SHA1 (patch-ci) = 4e310f0a4dfe27cf94d0e63d623590691b6c5970
 SHA1 (patch-cj) = 78342f649f8e9d3a3b5a4f83e65b6c46f589586b
 SHA1 (patch-ck) = 87b7704ca9de02880ef8b3dbb097e87d0252bd4b
+SHA1 (patch-lib_krb5_asn.1_asn1buf.h) = a1e46ca9256aea4facc1d41841b1707b044a69e7
