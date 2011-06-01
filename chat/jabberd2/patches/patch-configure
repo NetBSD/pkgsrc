@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.2 2011/02/12 18:50:14 adam Exp $
+$NetBSD: patch-configure,v 1.3 2011/06/01 11:16:09 adam Exp $
 
---- configure.orig	2010-08-08 15:51:09.000000000 +0000
+--- configure.orig	2011-05-31 22:11:47.000000000 +0000
 +++ configure
-@@ -10875,7 +10875,7 @@ fi
+@@ -10896,7 +10896,7 @@ fi
  # check for optimisation level
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking CFLAGS optimization level" >&5
  $as_echo_n "checking CFLAGS optimization level... " >&6; }
 -if echo $CFLAGS | grep '.*-O[3s].*' >/dev/null 2>&1; then
 +if echo $CFLAGS | grep '.*-O[3].*' >/dev/null 2>&1; then
-     as_fn_error "maximum allowed optimization level is -O2" "$LINENO" 5
+     as_fn_error $? "maximum allowed optimization level is -O2" "$LINENO" 5
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: fine" >&5
