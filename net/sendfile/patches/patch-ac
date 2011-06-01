@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
+$NetBSD: patch-ac,v 1.6 2011/06/01 11:21:01 is Exp $
 
---- develop/install.orig	1999-12-07 10:40:11.000000000 +0100
+--- develop/install.orig	2005-06-06 20:39:29.000000000 +0000
 +++ develop/install
-@@ -58,12 +58,12 @@ mkdir_recursive() {
+@@ -59,12 +59,12 @@ mkdir_recursive() {
  }
  
  make_dirs() {
@@ -15,13 +15,13 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
 +  mkdir_recursive $D$BINDIR
 +  mkdir_recursive $D$MANDIR/man1
 +  mkdir_recursive $D$SERVERDIR
-+  mkdir_recursive $D`dirname $DENY`
-+  mkdir_recursive $D`dirname $CONFIG`
++  mkdir_recursive $D$EGDIR
++  mkdir_recursive $D$EGDIR
 +  mkdir $D/$MANDIR/man$manmisc $D/$MANDIR/man$manadmin 2>/dev/null
  }
  
  make_man() {
-@@ -71,7 +71,7 @@ make_man() {
+@@ -72,7 +72,7 @@ make_man() {
         s:/usr/local/etc/sendfile.deny:$DENY:
         s:/usr/local/etc/sendfile.cf:$CONFIG:
         s:/var/spool/sendfile:$SPOOL:
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
  }
  
  install_man() {
-@@ -81,8 +81,8 @@ install_man() {
+@@ -82,8 +82,8 @@ install_man() {
    make_man fetchfile 1 1
    make_man fetchfile 7 $manmisc
    make_man sendfiled 8 $manadmin
@@ -41,7 +41,7 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
  }
  
  SYSTEM=$1
-@@ -93,18 +93,11 @@ if [ "$SYSTEM" = "" ]; then 
+@@ -94,18 +94,11 @@ if [ "$SYSTEM" = "" ]; then 
    exit
  fi
  
@@ -61,7 +61,7 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
                  /define CONFIG/    {print "CONFIG="$2}
                  /define DENY/	   {print "DENY="$2}
                  /define ALLOW/	   {print "ALLOW="$2}
-@@ -113,6 +106,8 @@ eval `awk -F\" '/define BINDIR/    {prin
+@@ -114,6 +107,8 @@ eval `awk -F\" '/define BINDIR/    {prin
                  /define OUTLOG/    {print "OUTLOG="$2}
  	       ' src/globals.h`
  
@@ -70,30 +70,31 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
  if [ "$BINDIR" = "" ]; then	BINDIR=/usr/local/bin; fi
  if [ "$MANDIR" = "" ]; then	MANDIR=/usr/local/man; fi
  if [ "$SERVERDIR" = "" ]; then	SERVERDIR=/usr/local/sbin; fi
-@@ -126,53 +121,29 @@ if [ "$OUTLOG" = "" ]; then	OUTLOG=$SPOO
- if [ "$INETDCONF" = "" ]; then	INETDCONF=/etc/inetd.conf; fi
- if [ "$SERVICES" = "" ]; then	SERVICES=/etc/services; fi
+@@ -131,54 +126,28 @@ if [ -f /etc/xinetd.conf -a -d /etc/xine
+   INETDCONF=/etc/xinetd.d/sendfile
+ fi  
  
-+CONFIG=$EGDIR/sendfile.cf
-+DENY=$EGDIR/sendfile.deny
++CONFIG=$PKG_SYSCONFDIR/sendfile.cf
++DENY=$PKG_SYSCONFDIR/sendfile.deny
 +
  case "$SYSTEM" in
-   *BSD*) manmisc=7; manadmin=8;;
-       *) manmisc=5; manadmin=1m;;
+-  *BSD*) manmisc=7; manadmin=8;;
+-      *) manmisc=5; manadmin=1m;;
++     *) manmisc=7; manadmin=8;;
  esac
  
 -# purge old logfiles (bug from sendfile revision < 19980310)
--(cd $SPOOL && rm -f */.sendfile*.log)
+-rm -f $SPOOL*/.sendfile*.log
 -
  if [ "$2"  = "reinstall" ] ; then
  	umask 022
  	cd src || exit 1
  	make_dirs
--	cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $BINDIR/
+-	cp sendfile sendmsg receive utf7encode fetchfile wlock $BINDIR/
 -	[ -x $SERVERDIR/sendfiled ] && mv $SERVERDIR/sendfiled $SERVERDIR/sendfiled.old && rm -f $SERVERDIR/sendfiled.old
 -	cp sendfiled $SERVERDIR
-+	cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $D$BINDIR/
-+	[ -x $D$SERVERDIR/sendfiled ] && mv $D$SERVERDIR/sendfiled $D$SERVERDIR/sendfiled.old && rm -f $SERVERDIR/sendfiled.old
++	cp sendfile sendmsg receive utf7encode fetchfile wlock $D$BINDIR/
++	[ -x $D$SERVERDIR/sendfiled ] && mv $D$SERVERDIR/sendfiled $D$SERVERDIR/sendfiled.old && rm -f $D$SERVERDIR/sendfiled.old
 +	cp sendfiled $D$SERVERDIR
  	cd ../etc
 -	cp sfconf sfdconf $BINDIR/
@@ -128,10 +129,11 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
 -  echo
 -  exit
 -fi
- 
+-
  umask 022
  
-@@ -183,7 +154,7 @@ echo "installing the clients in $BINDIR"
+ echo "checking for directories"
+@@ -188,7 +157,7 @@ echo "installing the clients in $BINDIR"
  cd etc || exit 1
  sed "s:/usr/local/etc/sendfile.cf:$CONFIG:
       s:/var/spool/sendfile:$SPOOL:" sf_cleanup \
@@ -140,7 +142,7 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
  sed "s:SPOOL=/var/spool/sendfile:SPOOL=$SPOOL:
       s:INLOG=/var/spool/sendfile/LOG/in:INLOG=$INLOG:
       s:OUTLOG=/var/spool/sendfile/LOG/in:OUTLOG=$OUTLOG:
-@@ -193,13 +164,13 @@ sed "s:SPOOL=/var/spool/sendfile:SPOOL=$
+@@ -198,13 +167,13 @@ sed "s:SPOOL=/var/spool/sendfile:SPOOL=$
       s:ALLOW=/usr/local/etc/sendfile.allow:ALLOW=$ALLOW:
      " sfdconf \
      | awk '{if ($0 != "CONFIG") print $0; else system("cat sendfile.cf")}' \
@@ -151,49 +153,62 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
 +sed "s:/var/spool/sendfile:$SPOOL:" sfconf >$D$BINDIR/sfconf
 +sed "s:receive :$BINDIR/receive :" check_sendfile >$D$BINDIR/check_sendfile
  cd ../src || exit 1
--cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $BINDIR/
-+cp sendfile sendmsg receive utf7encode fetchfile wlock ewl $D$BINDIR/
+-cp sendfile sendmsg receive utf7encode fetchfile wlock $BINDIR/
++cp sendfile sendmsg receive utf7encode fetchfile wlock $D$BINDIR/
  cd ..
 -(cd $BINDIR
 +(cd $D$BINDIR
   ln -s utf7encode utf7decode 2>/dev/null
   ln -s sendfile sf 2>/dev/null
   ln -s sendmsg  sm 2>/dev/null
-@@ -220,8 +191,8 @@ if [ "$SENDFILED" != "$SERVERDIR/sendfil
-   echo "         there is $SERVERDIR/sendfiled in makeconfig! Check it!"
- fi
+@@ -216,153 +185,37 @@ echo "installing the man-pages in $MANDI
+ install_man
+ 
  echo "installing the sendfile-daemon in $SERVERDIR"
 -[ -x $SERVERDIR/sendfiled ] && mv $SERVERDIR/sendfiled $SERVERDIR/sendfiled.old && rm -f $SERVERDIR/sendfiled.old
 -cp src/sendfiled $SERVERDIR  || exit 1
 +[ -x $D$SERVERDIR/sendfiled ] && mv $D$SERVERDIR/sendfiled $D$SERVERDIR/sendfiled.old && rm -f $D$SERVERDIR/sendfiled.old
 +cp src/sendfiled $D$SERVERDIR  || exit 1
  
- NOSENDFILE=`dirname $DENY 2>/dev/null`/nosendfile
+-NOSENDFILE=`dirname $DENY 2>/dev/null`/nosendfile
++NOSENDFILE=$D`dirname $DENY 2>/dev/null`/nosendfile
  if [ -f $NOSENDFILE ]; then 
-@@ -233,16 +204,16 @@ if [ -f $NOSENDFILE ]; then 
-     mv $NOSENDFILE $DENY
+-  if grep ^allow-only $NOSENDFILE >/dev/null; then 
+-    echo "Information: $NOSENDFILE is now $ALLOW (autoconverted)"
+-    grep -v ^allow-only $NOSENDFILE > $ALLOW
++  if grep ^allow-only $D$NOSENDFILE >/dev/null; then 
++    echo "Information: $D$NOSENDFILE is now $ALLOW (autoconverted)"
++    grep -v ^allow-only $D$NOSENDFILE > $D$ALLOW
+   else  
+     echo "Information: $NOSENDFILE is now $DENY (autoconverted)"
+-    mv $NOSENDFILE $DENY
++    mv $NOSENDFILE $D$DENY
    fi
  fi
 -if [ ! -f $DENY -a ! -f $ALLOW ]; then 
-+if [ ! -f $D$DENY -a ! -f $D$ALLOW ]; then 
-   echo "installing the sendfile deny file as $DENY"
+-  echo "installing the sendfile deny file as $DENY"
 -  cp etc/sendfile.deny $DENY
 -  chmod 644 $DENY
-+  cp etc/sendfile.deny $D$DENY
-+  chmod 644 $D$DENY
++if [ ! -f $D$EGDIR/sendfile.allow -a ! -f $D$EGDIR/sendfile.deny ]; then 
++  echo "installing the sendfile deny file into $D/$EGDIR"
++  cp etc/sendfile.deny $D$EGDIR
++  chmod 644 $D$EGDIR/sendfile.deny
  fi
  
 -if [ ! -f $CONFIG ]; then 
-+if [ ! -f $D$CONFIG ]; then 
-   echo "installing the global sendfile config file as $CONFIG"
+-  echo "installing the global sendfile config file as $CONFIG"
 -  cp etc/sendfile.cf $CONFIG
 -  chmod 644 $CONFIG
-+  cp etc/sendfile.cf $D$CONFIG
-+  chmod 644 $D$CONFIG
++if [ ! -f $D$EGDIR ]; then 
++  echo "installing the global sendfile config file as $D$EGDIR/sendfile.cf"
++  cp etc/sendfile.cf $D$EGDIR
++  chmod 644 $D$EGDIR/sendfile.cf
  else 
-   if [ "`diff etc/sendfile.cf $CONFIG`" ]; then
-     echo "Warning: `pwd`/etc/sendfile.cf differs from $CONFIG !"
-@@ -250,100 +221,6 @@ else 
+-  if [ "`diff etc/sendfile.cf $CONFIG`" ]; then
+-    echo "Warning: `pwd`/etc/sendfile.cf differs from $CONFIG !"
++  if [ "`diff etc/sendfile.cf $D$EGDIR`" ]; then
++    echo "Warning: `pwd`/etc/sendfile.cf differs from $D$EGDIR !"
+     echo "Please take a look what has been changed!"
    fi
  fi
  
@@ -218,17 +233,40 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
 -  fi
 -fi
 -
--if [ "$SENDFILED" = "" ]; then
--  if [ -f /usr/sbin/tcpd ]; then 
--    SFD="/usr/sbin/tcpd $SERVERDIR/sendfiled"
--  else
--    SFD="$SERVERDIR/sendfiled sendfiled"
--  fi
--  RESTART=true
--  echo "configuring $INETDCONF"
--  echo "#" >>$INETDCONF
--  echo "# simple asynchronous file transfer" >>$INETDCONF
--  echo "saft	stream	tcp	nowait	root	$SFD" >>$INETDCONF
+-case "$INETDCONF" in
+-  *xinetd*) 
+-    if [ -f $INETDCONF ]; then
+-      echo $INETDCONF does already exist -skipping
+-    else
+-      echo installing $INETDCONF
+-      sed "s:/usr/local/sbin/sendfiled:$SERVERDIR/sendfiled:" etc/xinetd >$INETDCONF
+-      RESTART=true
+-    fi
+-    SENDFILED=`awk '/[ \t]*server[ \t]*=/ { print $3 }' $INETDCONF`
+-    ;;  
+-  *) 
+-    SENDFILED=`awk '/^saft/ { sfd=$6;
+-    	if (index($7,"/sendfiled")>0) sfd=$7;
+-        if (substr(sfd,1,1)=="?") sfd=substr(sfd,2);
+-        print sfd; }' $INETDCONF`
+-    if [ "$SENDFILED" = "" ]; then
+-      if [ -f /usr/sbin/tcpd ]; then 
+-        SFD="/usr/sbin/tcpd $SERVERDIR/sendfiled"
+-      else
+-        SFD="$SERVERDIR/sendfiled sendfiled"
+-      fi
+-      RESTART=true
+-      echo "configuring $INETDCONF"
+-      echo "#" >>$INETDCONF
+-      echo "# simple asynchronous file transfer" >>$INETDCONF
+-      echo "saft	stream	tcp	nowait	root	$SFD" >>$INETDCONF
+-    fi
+-    ;;  
+-esac
+-
+-if [ "$SENDFILED" != "$SERVERDIR/sendfiled" -a "$SENDFILED" != "" ]; then
+- echo "WARNING: you have specified $SENDFILED in $INETDCONF, but"
+- echo "         there is $SERVERDIR/sendfiled in makeconfig! Check it!"
 -fi
 -
 -if [ -f /etc/inetd.sec ]; then
@@ -291,6 +329,26 @@ $NetBSD: patch-ac,v 1.5 2011/05/27 13:13:35 is Exp $
 -EOD
 -fi
 -
++			
  echo
  echo "You may want to add the following line to your system bootup script:"
  echo "    $SERVERDIR/sendfiled -Q"
+@@ -370,18 +223,3 @@ echo "This will start an outgoing spooli
+ echo "which processes any old files in the outgoing spool."
+ echo
+ 
+-if [ "$RESTART" = true ]; then
+-  if [ -f /etc/init.d/xinetd ]; then
+-    echo reloading xinetd:
+-    if fgrep reload\) /etc/init.d/xinetd >/dev/null; then
+-      /etc/init.d/xinetd reload
+-    else
+-      /etc/init.d/xinetd stop
+-      /etc/init.d/xinetd start
+-    fi
+-  else
+-    echo
+-    echo "please restart now your inetd ( or simply reboot :-) )"
+-    echo
+-  fi
+-fi
