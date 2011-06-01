@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2010/12/23 18:03:48 christos Exp $
+$NetBSD: distinfo,v 1.15 2011/06/01 10:05:57 adam Exp $
 
-SHA1 (gsasl-1.6.0.tar.gz) = 56055324ebf1d1b823412b6fcee192c03452ea84
-RMD160 (gsasl-1.6.0.tar.gz) = e2fc43899a18f19afa1a06d4e97788fe74689dc4
-Size (gsasl-1.6.0.tar.gz) = 4611016 bytes
+SHA1 (gsasl-1.6.1.tar.gz) = 5439fd32ac975c36015263fafdc79ededdd57c72
+RMD160 (gsasl-1.6.1.tar.gz) = 510661e88a41300ad3b32dd4a6bd6236aab28c78
+Size (gsasl-1.6.1.tar.gz) = 4623634 bytes
