@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.19 2011/03/14 13:46:32 adam Exp $
+$NetBSD: distinfo,v 1.20 2011/06/02 07:06:10 adam Exp $
 
-SHA1 (icu4c-4_6_1-src.tgz) = b8bbf80dff1727a7528f9601b0502db1633658c3
-RMD160 (icu4c-4_6_1-src.tgz) = decd6e5fb17e1369af91aad6685c1a39d6f63132
-Size (icu4c-4_6_1-src.tgz) = 15561883 bytes
+SHA1 (icu4c-4_8-src.tgz) = f458b41800cc21bbb92ceb119380ad3249252fd6
+RMD160 (icu4c-4_8-src.tgz) = 77674ce09823f80810b7f5a0898881b5a62d938c
+Size (icu4c-4_8-src.tgz) = 18620856 bytes
 SHA1 (patch-aa) = 30999774a19659299b5eb31d0fd3c0945468e0ea
 SHA1 (patch-ab) = ca4ce0d1cb3d989044102d093863ae9dfb09ea43
 SHA1 (patch-ac) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-ad) = e3b21cef4f5d26b448d13f5743036b241e1837eb
-SHA1 (patch-ae) = e89e71f79d32bc8471eb99a54c8c1350aa139552
+SHA1 (patch-ae) = a4f5c7c4d3e147646e4c09c766fa07506bda273a
 SHA1 (patch-af) = 0b085d7d72da4bc9d7ca382295ecad679b6c65ac
+SHA1 (patch-tools_toolutil_pkg_gencmn.c) = 30ff5589f2c9343db5631de6c986373903c58213
