@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.27 2010/12/23 10:42:16 asau Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.28 2011/06/02 06:45:49 asau Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -164,12 +164,15 @@ release -d
 <sect2 id="uptodate-cvs">
 <title>Via CVS</title>
 
-	<para>To update pkgsrc via CVS, make sure the environment
-	variable <varname>CVS_RSH</varname> is set as above. Then,
-	change to the <filename>pkgsrc</filename> directory and run cvs:</para>
+	<para>To update pkgsrc via CVS, change to the <filename>pkgsrc</filename> directory and run cvs:</para>
 
-<screen>&uprompt; <userinput>cd /usr/pkgsrc</userinput>
-&uprompt; <userinput>cvs update -dP</userinput></screen>
+<screen>&uprompt; <userinput>cd /usr/pkgsrc &amp;&amp; cvs update -dP</userinput>
+</screen>
+
+	<para>If you get error messages from <literal>rsh</literal>, you need to set CVS_RSH variable as described above. E.g.:</para>
+
+<screen>&uprompt; <userinput>cd /usr/pkgsrc &amp;&amp; env CVS_RSH=ssh cvs up -dP</userinput>
+</screen>
 
 <sect3 id="uptodate-cvs-switch">
 <title>Switching between different pkgsrc branches</title>
