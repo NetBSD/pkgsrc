@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:07:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/02 10:09:37 obache Exp $
 bin/scim-make-table
 lib/scim-1.0/1.4.0/IMEngine/table.la
 lib/scim-1.0/1.4.0/SetupUI/table-imengine-setup.la
@@ -33,6 +33,7 @@ share/scim/icons/Hangul.png
 share/scim/icons/Hanja.png
 share/scim/icons/Hindi-inscript.png
 share/scim/icons/Hindi-phonetic.png
+share/scim/icons/Hindi-remington.png
 share/scim/icons/IPA-X-SAMPA.png
 share/scim/icons/Jyutping.png
 share/scim/icons/KATAKANA.png
@@ -41,20 +42,27 @@ share/scim/icons/Kannada-kgp.png
 share/scim/icons/LaTeX.png
 share/scim/icons/Malayalam-inscript.png
 share/scim/icons/Malayalam-phonetic.png
+share/scim/icons/Marathi-remington.png
 share/scim/icons/Nepali.png
 share/scim/icons/Nippon.png
 share/scim/icons/Punjabi-inscript.png
 share/scim/icons/Punjabi-jhelum.png
 share/scim/icons/Punjabi-phonetic.png
+share/scim/icons/Punjabi-remington.png
 share/scim/icons/Quick.png
 share/scim/icons/RussianTraditional.png
 share/scim/icons/Simplex.png
+share/scim/icons/SmartCangJie6.png
 share/scim/icons/Stroke5.png
 share/scim/icons/Tamil-inscript.png
 share/scim/icons/Tamil-phonetic.png
 share/scim/icons/Tamil-remington.png
+share/scim/icons/Tamil-tamil99.png
 share/scim/icons/Telugu-inscript.png
 share/scim/icons/Thai.png
+share/scim/icons/Translit.png
+share/scim/icons/Ukrainian-Translit.png
+share/scim/icons/Uyghur.png
 share/scim/icons/Viqr.png
 share/scim/icons/Wu.png
 share/scim/icons/Wubi.png
@@ -85,6 +93,8 @@ share/scim/tables/HangulRomaja.bin
 share/scim/tables/Hanja.bin
 share/scim/tables/Hindi-inscript.bin
 share/scim/tables/Hindi-phonetic.bin
+share/scim/tables/Hindi-remington.bin
+share/scim/tables/IPA-Kirshenbaum.bin
 share/scim/tables/IPA-X-SAMPA.bin
 share/scim/tables/Jyutping.bin
 share/scim/tables/KATAKANA.bin
@@ -93,23 +103,29 @@ share/scim/tables/Kannada-kgp.bin
 share/scim/tables/LaTeX.bin
 share/scim/tables/Malayalam-inscript.bin
 share/scim/tables/Malayalam-phonetic.bin
+share/scim/tables/Marathi-remington.bin
 share/scim/tables/Nepali_Rom.bin
 share/scim/tables/Nepali_Trad.bin
 share/scim/tables/Nippon.bin
 share/scim/tables/Punjabi-inscript.bin
 share/scim/tables/Punjabi-jhelum.bin
 share/scim/tables/Punjabi-phonetic.bin
+share/scim/tables/Punjabi-remington.bin
 share/scim/tables/Quick.bin
 share/scim/tables/RussianTraditional.bin
 share/scim/tables/Simplex.bin
+share/scim/tables/SmartCangJie6.bin
 share/scim/tables/Stroke5.bin
 share/scim/tables/Tamil-inscript.bin
 share/scim/tables/Tamil-phonetic.bin
 share/scim/tables/Tamil-remington.bin
+share/scim/tables/Tamil-tamil99.bin
 share/scim/tables/Telugu-inscript.bin
 share/scim/tables/Thai.bin
 share/scim/tables/Translit.bin
 share/scim/tables/Ukrainian-Translit.bin
+share/scim/tables/Uyghur-Romanized.bin
+share/scim/tables/Uyghur-Standard.bin
 share/scim/tables/Viqr.bin
 share/scim/tables/Wu.bin
 share/scim/tables/Wubi.bin
@@ -117,3 +133,5 @@ share/scim/tables/Yawerty.bin
 share/scim/tables/ZhuYin-Big.bin
 share/scim/tables/ZhuYin.bin
 share/scim/tables/Ziranma.bin
+share/scim/tables/classicalhebrew.bin
+share/scim/tables/greekpoly.bin
