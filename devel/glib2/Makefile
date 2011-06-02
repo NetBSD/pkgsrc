@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2011/05/25 09:38:42 drochner Exp $
+# $NetBSD: Makefile,v 1.185 2011/06/02 18:08:46 reed Exp $
 
 .include "Makefile.common"
 
@@ -34,6 +34,9 @@ CHECK_INTERPRETER_SKIP+=	bin/gtester-report
 
 # need pcre utf8 + unicode-properties
 BUILDLINK_API_DEPENDS.pcre+=	pcre>=8.11
+
+# needs gz_header structure
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.2.1
 
 LIBS.SunOS+=	-lnsl -lsocket
 
