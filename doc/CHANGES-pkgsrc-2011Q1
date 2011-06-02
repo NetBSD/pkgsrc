@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.28 2011/05/31 11:05:40 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.29 2011/06/02 05:38:01 sbd Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -110,3 +110,5 @@ Pullup ticket #3442 - requested by taca
 www/drupal6: security update
 Pullup ticket #3443 - requested by taca
 lang/ruby18-base security update
+Pullup ticket #3444 - requested by tron
+net/wireshark security update
