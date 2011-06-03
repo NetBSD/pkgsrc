@@ -1,7 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2011/06/03 00:57:47 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2011/06/03 12:48:48 wiz Exp $
 
 Fix broken test by assuming pkgsrc handles version check for us.
 (Problem here is that 1.10 doesn't compare as bigger than 1.4.)
+http://tickets.musicbrainz.org/browse/OTHER-44
 
 --- configure.orig	2006-11-28 20:34:18.000000000 +0000
 +++ configure
