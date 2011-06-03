@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1392 2011/06/03 01:44:53 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1393 2011/06/03 07:21:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2172,3 +2172,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/scim-tables to 0.5.10 [obache 2011-06-02]
 	Updated devel/mercurial to 1.8.4 [wiz 2011-06-03]
 	Updated www/ruby-httpclient to 2.2.1 [obache 2011-06-03]
+	Updated mail/roundcube to 0.5.3 [adam 2011-06-03]
