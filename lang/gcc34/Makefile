@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2011/04/22 13:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.48 2011/06/03 08:32:30 wiz Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,8 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GCC_VERSION=		3.4.6
 
@@ -50,6 +52,7 @@ CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 .endif
+MAKEFLAGS+=	DESTDIR=${DESTDIR}
 
 REPLACE_AWK+=		libjava/addr2name.awk
 USE_TOOLS+=		awk:run
@@ -228,7 +231,7 @@ do-test:
 
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
-	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 		(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
 		for EXPANDEDSPECPATH in $${SPECPATH} ; do \
@@ -239,8 +242,8 @@ do-install:
 .endif
 
 GENERATE_PLIST+=							\
-	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g";
+	${FIND} ${DESTDIR}${GCC_PREFIX} \( -type f -o -type l \) -print		\
+		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g";
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
