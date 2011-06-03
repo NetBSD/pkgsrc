@@ -1,8 +1,8 @@
-$NetBSD: patch-Clients_dns-sd.c,v 1.2 2011/02/24 22:42:20 wiz Exp $
+$NetBSD: patch-Clients_dns-sd.c,v 1.3 2011/06/03 19:30:39 shattered Exp $
 
 --- Clients/dns-sd.c.orig	2010-05-15 00:16:11.000000000 +0000
 +++ Clients/dns-sd.c
-@@ -169,9 +169,20 @@ cl dns-sd.c -I../mDNSShared -DNOT_HAVE_G
+@@ -170,8 +170,19 @@ cl dns-sd.c -I../mDNSShared -DNOT_HAVE_G
  	#include <netinet/in.h>		// For struct sockaddr_in()
  	#include <arpa/inet.h>		// For inet_addr()
  	#include <net/if.h>			// For if_nametoindex()
