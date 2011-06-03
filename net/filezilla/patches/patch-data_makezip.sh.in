@@ -1,0 +1,15 @@
+$NetBSD: patch-data_makezip.sh.in,v 1.1 2011/06/03 00:22:19 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- data/makezip.sh.in.orig	2011-05-21 03:30:16.000000000 +0000
++++ data/makezip.sh.in
+@@ -34,7 +34,7 @@ copy_libtool()
+ {
+   local target
+ 
+-  if [ "$3" == "" ]; then
++  if [ "$3" = "" ]; then
+     target="$2"
+   else
+     target="$3"
