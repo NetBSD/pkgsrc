@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.5 2006/01/12 16:46:21 joerg Exp $
+$NetBSD: patch-ba,v 1.6 2011/06/03 19:29:54 shattered Exp $
 
 --- Makefile.orig	1995-09-17 13:18:20.000000000 +0000
 +++ Makefile
@@ -35,7 +35,7 @@ $NetBSD: patch-ba,v 1.5 2006/01/12 16:46:21 joerg Exp $
 +LDFLAGS_OS =
 +LIBS_OS =
 +CFLAGS_OS += -DDAC_DEV=\"/dev/audio\"
-+.if ${OPSYS} == "DragonFly"
++.if ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
 +DACIO_ARCH = dacio-linux.c
 +.else
 +DACIO_ARCH = dacio-netbsd.c
