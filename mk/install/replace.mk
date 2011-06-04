@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.11 2009/06/09 08:40:28 joerg Exp $
+# $NetBSD: replace.mk,v 1.12 2011/06/04 10:05:00 obache Exp $
 #
 # Public targets:
 #
@@ -21,6 +21,9 @@
 #
 # _flavor-undo-replace:
 #	Undoes a previous "make _flavor-replace".
+
+# _flavor-destdir-undo-replace:
+#	Undoes a previous "make _flavor-destdir-replace".
 
 .if ${_USE_DESTDIR} == "no"
 _REPLACE_TARGETS+=	${_PKGSRC_BUILD_TARGETS}
@@ -62,5 +65,9 @@ undo-replace-message: .PHONY
 	@${PHASE_MSG} "Undoing replacement for ${PKGNAME}"
 	@${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
+.if ${_USE_DESTDIR} == "no"
 su-undo-replace: .PHONY _flavor-undo-replace
+.else
+su-undo-replace: .PHONY _flavor-destdir-undo-replace
+.endif
 MAKEFLAGS.su-undo-replace=	_UPDATE_RUNNING=yes

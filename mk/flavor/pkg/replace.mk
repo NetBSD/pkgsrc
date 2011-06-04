@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.31 2010/09/14 22:30:42 gdt Exp $
+# $NetBSD: replace.mk,v 1.32 2011/06/04 10:05:00 obache Exp $
 #
 
 # _flavor-replace:
@@ -29,6 +29,7 @@ _flavor-replace: \
 
 _flavor-destdir-replace: \
 	replace-names \
+	replace-tarup \
 	replace-destdir \
 	.PHONY
 
@@ -45,6 +46,12 @@ _flavor-undo-replace: \
 	deinstall \
 	undo-replace-install \
 	replace-fixup-required-by \
+	replace-clean \
+	.PHONY
+
+_flavor-destdir-undo-replace: \
+	undo-replace-check \
+	undo-destdir-replace-install \
 	replace-clean \
 	.PHONY
 
@@ -89,6 +96,12 @@ undo-replace-install: .PHONY
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
 	${ECHO} "Installing saved package ${WRKDIR}/$${oldname}${PKG_SUFX}"; \
 	${PKG_ADD} ${WRKDIR}/$${oldname}${PKG_SUFX}
+
+undo-destdir-replace-install: .PHONY
+	@${PHASE_MSG} "Re-adding ${PKGNAME} from saved tar-up package."
+	${RUN} ${_REPLACE_OLDNAME_CMD};					\
+	${ECHO} "Installing saved package ${WRKDIR}/$${oldname}${PKG_SUFX}"; \
+	${PKG_ADD} -U -D ${WRKDIR}/$${oldname}${PKG_SUFX}
 
 # Computes and saves the full names of the installed package to be replaced
 # (oldname) and the package that will be installed (newname), so that these
