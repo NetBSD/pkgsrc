@@ -1,27 +1,52 @@
-$NetBSD: patch-aa,v 1.21 2011/03/23 22:25:06 schmonz Exp $
+$NetBSD: patch-aa,v 1.22 2011/06/04 15:23:36 schmonz Exp $
 
---- Makefile.PL.orig	2011-03-19 18:02:24.000000000 +0000
+PKG_SYSCONFDIR and PKGMANDIR support, avoid GNUisms in standard utilities.
+
+--- Makefile.PL.orig	2011-06-03 16:40:11.000000000 +0000
 +++ Makefile.PL
-@@ -19,6 +19,8 @@ SED?=sed
+@@ -19,11 +19,14 @@ SED?=sed
  
  # Additional configurable path variables.
  W3M_CGI_BIN?=$(PREFIX)/lib/w3m/cgi-bin
-+CONFIGDIR?=/etc/ikiwiki
++SYSCONFDIR?=/etc/ikiwiki
 +MANDIR?=$(PREFIX)/share/man
  
  tflag=$(shell if [ -n "$$NOTAINT" ] && [ "$$NOTAINT" != 1 ]; then printf -- "-T"; fi)
  extramodules=$(shell if [ "$$PROFILE" = 1 ]; then printf -- "-d:NYTProf"; fi)
-@@ -50,7 +52,7 @@ extra_build: $(outprogs) ikiwiki.setup d
+ outprogs=ikiwiki.out ikiwiki-transition.out ikiwiki-calendar.out
+ scripts=ikiwiki-update-wikilist ikiwiki-makerepo
++sysconfdir_scripts=ikiwiki-mass-rebuild ikiwiki-update-wikilist
+ 
+ PROBABLE_INST_LIB=$(shell \\
+ 	if [ "$(INSTALLDIRS)" = "perl" ]; then \\
+@@ -42,7 +45,7 @@ PROBABLE_INST_LIB=$(shell \\
+ ikiwiki.setup:
+ 	HOME=/home/me $(PERL) -Iblib/lib $(extramodules) $(tflag) ikiwiki.in -dumpsetup ikiwiki.setup
+ 
+-extra_build: $(outprogs) ikiwiki.setup docwiki
++extra_build: $(outprogs) ikiwiki.setup docwiki sysconfdir
+ 	./mdwn2man ikiwiki 1 doc/usage.mdwn > ikiwiki.man
+ 	./mdwn2man ikiwiki-mass-rebuild 8 doc/ikiwiki-mass-rebuild.mdwn > ikiwiki-mass-rebuild.man
+ 	./mdwn2man ikiwiki-makerepo 1 doc/ikiwiki-makerepo.mdwn > ikiwiki-makerepo.man
+@@ -50,12 +53,15 @@ extra_build: $(outprogs) ikiwiki.setup d
  	./mdwn2man ikiwiki-update-wikilist 1 doc/ikiwiki-update-wikilist.mdwn > ikiwiki-update-wikilist.man
  	./mdwn2man ikiwiki-calendar 1 doc/ikiwiki-calendar.mdwn > ikiwiki-calendar.man
  	$(MAKE) -C po
 -	$(SED) -i.bkp "s/Version:.*/Version: $(VER)/" ikiwiki.spec
-+	#$(SED) -i.bkp "s/Version:.*/Version: $(VER)/" ikiwiki.spec
++	$(PERL) -pi.bkp -e "s/Version:.*/Version: $(VER)/" ikiwiki.spec
  	rm -f ikiwiki.spec.bkp
  	
  docwiki:
-@@ -70,7 +72,7 @@ underlay_install:
- 	for dir in `cd underlays && $(FIND) . -follow -type d ! -regex '.*\.svn.*'`; do \
+ 	$(PERL) -Iblib/lib $(extramodules) $(tflag) ikiwiki.in -setup docwiki.setup -refresh
+ 
++sysconfdir:
++	$(PERL) -pi -e "s|/etc/ikiwiki|$(SYSCONFDIR)|g" $(sysconfdir_scripts)
++	
+ extra_clean:
+ 	$(PERL) -Iblib/lib $(extramodules) $(tflag) ikiwiki.in -setup docwiki.setup -clean
+ 	rm -f *.man $(outprogs) ikiwiki.setup plugins/*.pyc
+@@ -70,7 +76,7 @@ underlay_install:
+ 	for dir in `cd underlays && $(FIND) . -follow -type d`; do \
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
  		for file in `$(FIND) underlays/$$dir -follow -maxdepth 1 -type f`; do \
 -			cp -aL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir 2>/dev/null || \
@@ -29,7 +54,7 @@ $NetBSD: patch-aa,v 1.21 2011/03/23 22:25:06 schmonz Exp $
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
  		done; \
  	done
-@@ -79,7 +81,7 @@ underlay_install:
+@@ -79,7 +85,7 @@ underlay_install:
  	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/directives/ikiwiki/directive
  	for file in doc/ikiwiki/directive/*; do \
  		if [ -f "$$file" ]; then \
@@ -38,7 +63,7 @@ $NetBSD: patch-aa,v 1.21 2011/03/23 22:25:06 schmonz Exp $
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/directives/ikiwiki/directive; \
  		fi \
  	done
-@@ -94,7 +96,7 @@ underlay_install:
+@@ -94,7 +100,7 @@ underlay_install:
  			elif echo "$$file" | grep -q base.css; then \
  				:; \
  			elif [ -f "$$file" ]; then \
@@ -47,16 +72,16 @@ $NetBSD: patch-aa,v 1.21 2011/03/23 22:25:06 schmonz Exp $
  				install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$file; \
  			fi \
  		done; \
-@@ -106,7 +108,7 @@ extra_install: underlay_install
+@@ -106,7 +112,7 @@ extra_install: underlay_install
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$dir; \
  	done
- 	for file in `cd doc/examples; $(FIND) . -type f ! -regex '.*\.svn.*'`; do \
+ 	for file in `cd doc/examples; $(FIND) . -type f ! -regex '.*discussion.*'`; do \
 -		cp -aL doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file 2>/dev/null || \
 +		cp -pRL doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file 2>/dev/null || \
  		install -m 644 doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file; \
  	done
  
-@@ -125,15 +127,15 @@ extra_install: underlay_install
+@@ -125,15 +131,15 @@ extra_install: underlay_install
  		install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/ikiwiki/plugins; \
  	done
  
@@ -80,7 +105,7 @@ $NetBSD: patch-aa,v 1.21 2011/03/23 22:25:06 schmonz Exp $
  	
  	install -d $(DESTDIR)$(PREFIX)/sbin
  	install ikiwiki-mass-rebuild $(DESTDIR)$(PREFIX)/sbin
-@@ -150,10 +152,10 @@ extra_install: underlay_install
+@@ -150,10 +156,10 @@ extra_install: underlay_install
  	
  	# These might fail if a regular user is installing into a home
  	# directory.
@@ -88,10 +113,10 @@ $NetBSD: patch-aa,v 1.21 2011/03/23 22:25:06 schmonz Exp $
 -	-install -m 0644 wikilist $(DESTDIR)/etc/ikiwiki
 -	-install -m 0644 auto.setup $(DESTDIR)/etc/ikiwiki
 -	-install -m 0644 auto-blog.setup $(DESTDIR)/etc/ikiwiki
-+	-install -d $(DESTDIR)/$(CONFIGDIR)
-+	-install -m 0644 wikilist $(DESTDIR)/$(CONFIGDIR)
-+	-install -m 0644 auto.setup $(DESTDIR)/$(CONFIGDIR)
-+	-install -m 0644 auto-blog.setup $(DESTDIR)/$(CONFIGDIR)
++	-install -d $(DESTDIR)$(SYSCONFDIR)
++	-install -m 0644 wikilist $(DESTDIR)$(SYSCONFDIR)
++	-install -m 0644 auto.setup $(DESTDIR)$(SYSCONFDIR)
++	-install -m 0644 auto-blog.setup $(DESTDIR)$(SYSCONFDIR)
  }
  }
  
