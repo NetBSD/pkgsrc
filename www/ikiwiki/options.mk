@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2011/03/23 22:25:05 schmonz Exp $
+# $NetBSD: options.mk,v 1.13 2011/06/04 15:23:35 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cvs ikiwiki-amazon-s3 ikiwiki-search
@@ -32,14 +32,8 @@ DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 
 .if !empty(PKG_OPTIONS:Mpython)
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-.include "../../lang/python/application.mk"
 .else
-CHECK_INTERPRETER_SKIP+=lib/ikiwiki/plugins/*
-# and no python dependency, so let's not use a system python by mistake
-REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	.*python[^[:space:]]*
-REPLACE.python.new=	${LOCALBASE}/bin/python
-REPLACE_FILES.python=	${REPLACE_PYTHON}
+PYTHON_FOR_BUILD_ONLY=	yes	# actually just defined
 .endif
 
 .if !empty(PKG_OPTIONS:Msvn)
