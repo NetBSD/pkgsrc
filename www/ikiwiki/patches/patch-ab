@@ -1,13 +1,18 @@
-$NetBSD: patch-ab,v 1.5 2010/04/04 17:23:30 schmonz Exp $
+$NetBSD: patch-ab,v 1.6 2011/06/04 15:23:36 schmonz Exp $
 
---- IkiWiki/Setup/Standard.pm.orig	2010-03-19 19:44:10.000000000 +0000
+When generating scripts, give them the interpreter we generated them with.
+
+--- IkiWiki/Setup/Standard.pm.orig	2011-05-30 18:25:10.000000000 +0000
 +++ IkiWiki/Setup/Standard.pm
-@@ -14,7 +14,7 @@ sub import {
+@@ -14,7 +14,10 @@ sub import {
  sub gendump ($@) {
  	my $class=shift;
  
 -	"#!/usr/bin/perl",
-+	"#!@PERL5@",
++	my $thisperl = eval q{use Config; $Config{perlpath}};
++	error($@) if $@;
++
++	"#!$thisperl",
  	"#",
  	(map { "# $_" } @_),
  	"use IkiWiki::Setup::Standard {",
