@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
+$NetBSD: patch-am,v 1.7 2011/06/04 05:08:20 obache Exp $
 
---- setup.py.orig	2008-10-16 14:58:19.000000000 -0400
+--- setup.py.orig	2008-10-16 18:58:19.000000000 +0000
 +++ setup.py
-@@ -15,7 +15,7 @@
+@@ -15,7 +15,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -11,7 +11,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -243,9 +243,15 @@
+@@ -243,9 +243,15 @@ class PyBuildExt(build_ext):
          return sys.platform
  
      def detect_modules(self):
@@ -30,7 +30,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -534,9 +540,7 @@
+@@ -534,9 +540,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -41,7 +41,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -609,269 +613,51 @@
+@@ -609,269 +613,51 @@ class PyBuildExt(build_ext):
          # a release.  Most open source OSes come with one or more
          # versions of BerkeleyDB already installed.
  
@@ -263,7 +263,12 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
 -            sqlite_defines = []
 -            if sys.platform != "win32":
 -                sqlite_defines.append(('MODULE_NAME', '"sqlite3"'))
--            else:
++            # check if need to use the db_185.h compat header
++            bsddb185_define_macros=[]
++            if bdb_type == "db2" or  bdb_type == "db3" or bdb_type == "db4":
++                bsddb185_define_macros=[('HAVE_DB_185_H',1)]
++                dblib_dir = [os.environ['PY_BDB_LIBDIRS']]
+             else:
 -                sqlite_defines.append(('MODULE_NAME', '\\"sqlite3\\"'))
 -
 -
@@ -274,12 +279,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
 -                # This way a staticly linked custom sqlite gets picked up
 -                # before the dynamic library in /usr/lib.
 -                sqlite_extra_link_args = ('-Wl,-search_paths_first',)
-+            # check if need to use the db_185.h compat header
-+            bsddb185_define_macros=[]
-+            if bdb_type == "db2" or  bdb_type == "db3" or bdb_type == "db4":
-+                bsddb185_define_macros=[('HAVE_DB_185_H',1)]
-+                dblib_dir = [os.environ['PY_BDB_LIBDIRS']]
-             else:
+-            else:
 -                sqlite_extra_link_args = ()
 -
 -            exts.append(Extension('_sqlite3', sqlite_srcs,
@@ -290,25 +290,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
 -                                  runtime_library_dirs=sqlite_libdir,
 -                                  extra_link_args=sqlite_extra_link_args,
 -                                  libraries=["sqlite3",]))
-+                # check if db_incs/db.h really is db 1.85
-+                f = "%s/db.h" % db_incs[0]
-+                if os.path.exists(f):
-+                    data = open(f).read()
-+                    m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
-+                    if m is None:
-+                        # check for 1.85 compat header
-+                        if os.path.exists("%s/db_185.h" % db_incs[0]):
-+                            bsddb185_define_macros=[('HAVE_DB_185_H',1)]
-+                        else:
-+                            raise NotFound
-+            try:
-+                bltransform = os.environ['PY_BDB_TRANSFORM']
-+                m = re.search(r"l:db:(db.)\s*", bltransform)
-+                if m is not None and m.group(1) is not None:
-+                    dblibs = [m.group(1)]
-+            except:
-+                pass
- 
+-
 -        # Look for Berkeley db 1.85.   Note that it is built as a different
 -        # module name so it can be included even when later versions are
 -        # available.  A very restrictive search is performed to avoid
@@ -335,6 +317,25 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
 -                                          libraries=libraries))
 -                else:
 -                    exts.append(Extension('bsddb185', ['bsddbmodule.c']))
++                # check if db_incs/db.h really is db 1.85
++                f = "%s/db.h" % db_incs[0]
++                if os.path.exists(f):
++                    data = open(f).read()
++                    m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
++                    if m is None:
++                        # check for 1.85 compat header
++                        if os.path.exists("%s/db_185.h" % db_incs[0]):
++                            bsddb185_define_macros=[('HAVE_DB_185_H',1)]
++                        else:
++                            raise NotFound
++            try:
++                bltransform = os.environ['PY_BDB_TRANSFORM']
++                m = re.search(r"l:db:(db.)\s*", bltransform)
++                if m is not None and m.group(1) is not None:
++                    dblibs = [m.group(1)]
++            except:
++                pass
++
 +            # build the bsddb185 extension module
 +            exts.append(Extension('bsddb185', ['bsddbmodule.c'],
 +                                   library_dirs=dblib_dir,
@@ -349,7 +350,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -884,11 +670,6 @@
+@@ -884,11 +670,6 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -361,7 +362,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
              elif db_incs is not None:
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         library_dirs=dblib_dir,
-@@ -899,9 +680,9 @@
+@@ -899,9 +680,9 @@ class PyBuildExt(build_ext):
                                         libraries=dblibs))
  
          # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
@@ -374,7 +375,7 @@ $NetBSD: patch-am,v 1.6 2010/01/27 08:43:04 wiz Exp $
  
          # Unix-only modules
          if platform not in ['mac', 'win32']:
-@@ -1536,8 +1317,8 @@
+@@ -1536,8 +1317,8 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
