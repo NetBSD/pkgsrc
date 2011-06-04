@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.15 2011/03/28 15:58:15 drochner Exp $
+$NetBSD: distinfo,v 1.16 2011/06/04 05:08:19 obache Exp $
 
-SHA1 (Python-2.5.5.tar.bz2) = dcf1abd94a1ab4155dcd3668cca42c5bfc81159f
-RMD160 (Python-2.5.5.tar.bz2) = 4754238d415142466778560d989582464385654c
-Size (Python-2.5.5.tar.bz2) = 9822917 bytes
+SHA1 (Python-2.5.6.tar.bz2) = 29f6dd41bf09c5e04311b367cbb7604fa016e699
+RMD160 (Python-2.5.6.tar.bz2) = 92f0a955971f187a7d50c6422168202ec551bf22
+Size (Python-2.5.6.tar.bz2) = 9821788 bytes
 SHA1 (patch-SA43463) = df776e171f1794bae52b6e98bc71ae63734b7693
 SHA1 (patch-aa) = d44e67645dc86ff14f5daf5705de02c6f330cc48
 SHA1 (patch-ab) = d35025df83e70d129f9fbcd277652b0eea83b026
 SHA1 (patch-ac) = 4de5b8dc20b41dc3bb4acd38011ef59570318d3f
-SHA1 (patch-ad) = eb4948ee5aaae93f8a193defac7638a37f65caed
+SHA1 (patch-ad) = 9b401fc293ffb06ca1dd03526f6c38a8f28201ac
 SHA1 (patch-ae) = 5425515c6bf130eee204ca2749386f6447eaa35b
 SHA1 (patch-ag) = 95be54a4c8fe291cd7edd14a9180bbcb07bba2ce
 SHA1 (patch-ah) = 98e9fa55c2af38d8032398cae693492c199dc5fa
@@ -15,7 +15,7 @@ SHA1 (patch-ai) = a89bee00860910f53a23b1c670d9c091846a03c1
 SHA1 (patch-aj) = a75d680a6b8b1ad3c9222dcb841f4fb10db6d16d
 SHA1 (patch-ak) = 948362c15ad59abeef46971f9b870b70655a62c7
 SHA1 (patch-al) = 6247e3f85d555bae7850befbd7bfffbb233cecb3
-SHA1 (patch-am) = 49ee3f90df54c0ef85b5cf7a9b9f1edb293375f2
+SHA1 (patch-am) = d2e59cbc21542c436f1b1957e6089b4cda21ef8b
 SHA1 (patch-an) = 17b4e17b3b562c29a050e9bb20447084ce82b8ab
 SHA1 (patch-ao) = 9bbd5561c010e0a1ab8e0a70d27a5f77fd2089d2
 SHA1 (patch-ap) = b864db92761c843a91374663bd2dbcfa57b317cf
@@ -23,6 +23,3 @@ SHA1 (patch-ar) = 2a0c3f9a798afdfda7af4823e67579b2e000c072
 SHA1 (patch-at) = 6fdd64ce70eb8c2de5336f3415f45bc467e46373
 SHA1 (patch-au) = c1a759765095d246151ba027ed06f423e05c9218
 SHA1 (patch-av) = a1d41cb3a93879d54f0964ff84a63a297c333156
-SHA1 (patch-ba) = aa0ad5a9dff1cd7c1c456aa6371733727ac1425b
-SHA1 (patch-bb) = 56beb934d46edd77b42bc89766a9ab921a42f8f9
-SHA1 (patch-bc) = 7d73c761c581b55d2810719ddd606d1a2c874714
