@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2010/07/06 10:17:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2011/06/04 23:13:40 schnoebe Exp $
 #
 
-DISTNAME=	luaexpat-1.1
-PKGNAME=	${DISTNAME:S/lua/lua-/}.0
+DISTNAME=	luaexpat-1.2.0
+PKGNAME=	${DISTNAME:S/lua/lua-/}
 CATEGORIES=	textproc
-MASTER_SITES=	http://luaforge.net/frs/download.php/2469/
+MASTER_SITES=	http://matthewwild.co.uk/projects/luaexpat/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.keplerproject.org/luaexpat/
+HOMEPAGE=	http://matthewwild.co.uk/projects/projects
 COMMENT=	XML parser for LUA based on expat
 LICENSE=	mit
 

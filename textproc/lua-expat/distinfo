@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/12/15 12:43:04 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2011/06/04 23:13:40 schnoebe Exp $
 
-SHA1 (luaexpat-1.1.tar.gz) = ea359bdbd346ee378c47179a17ac3ee410be5c9d
-RMD160 (luaexpat-1.1.tar.gz) = f661c0e7f22363f51862187e96306498addea9d9
-Size (luaexpat-1.1.tar.gz) = 27907 bytes
+SHA1 (luaexpat-1.2.0.tar.gz) = 76f036e6fb928a3e5f3c3ba1b854e5fef8e1b28f
+RMD160 (luaexpat-1.2.0.tar.gz) = e92fb3447b3cd17bdd03ebfdaf000a1f001c59f2
+Size (luaexpat-1.2.0.tar.gz) = 28621 bytes
 SHA1 (patch-aa) = dd908d36c310b3a17a7e2319dc4f969a903f9402
 SHA1 (patch-ac) = 61d9bb455ef189d6ceb5dd71b06f7218da29e2f9
