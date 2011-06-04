@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1395 2011/06/04 03:59:30 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1396 2011/06/04 05:08:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-subversion to 1.6.17 [taca 2011-06-03]
 	Updated devel/subversion to 1.6.17 [taca 2011-06-03]
 	Updated lang/python26 to 2.6.7 [obache 2011-06-04]
+	Updated lang/python25 to 2.5.6 [obache 2011-06-04]
