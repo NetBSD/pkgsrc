@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1400 2011/06/05 08:58:20 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1401 2011/06/05 11:18:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2185,3 +2185,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/lua-expat to 1.2.0 [schnoebe 2011-06-04]
 	Updated devel/libgsf-gnome to 1.14.21 [schnoebe 2011-06-04]
 	Updated net/mikutter to 0.0.3.7 [obache 2011-06-05]
+	Updated x11/mlterm to 3.0.5 [ryoon 2011-06-05]
