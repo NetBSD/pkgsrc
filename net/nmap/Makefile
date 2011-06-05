@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2011/04/22 14:40:44 obache Exp $
+# $NetBSD: Makefile,v 1.81 2011/06/05 23:10:12 pettai Exp $
 #
 
 DISTNAME=	nmap-5.51
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libpcap=	libpcap>=1.0.0
 BUILDLINK_API_DEPENDS.libpcre=	libpcre>=7.6
+BUILDLINK_API_DEPENDS.openssl=  openssl>=0.9.8
 
 GNU_CONFIGURE=		yes
 
