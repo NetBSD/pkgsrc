@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2011/04/10 07:25:36 ryoon Exp $
+$NetBSD: distinfo,v 1.22 2011/06/05 11:17:28 ryoon Exp $
 
-SHA1 (mlterm-3.0.3.tar.gz) = bec5406a8d47eaa9e50afb2656ac876864f15228
-RMD160 (mlterm-3.0.3.tar.gz) = db4ff4c4d5f08a5055213debdbbdfd3d93773cc9
-Size (mlterm-3.0.3.tar.gz) = 2706811 bytes
+SHA1 (mlterm-3.0.5.tar.gz) = 277f4083049c2bf5a0d4aacf7ff1a8e8c4f4e265
+RMD160 (mlterm-3.0.5.tar.gz) = bece240fe92211129ff0392b8ab79d673a07b6a1
+Size (mlterm-3.0.5.tar.gz) = 2722809 bytes
 SHA1 (patch-ae) = e951a8917470484850cbd755420d7daf84e3ecec
