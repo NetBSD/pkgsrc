@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/25 09:39:57 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/05 12:13:47 obache Exp $
 
 DISTNAME=		gtk+-3.0.10
 PKGNAME=		${DISTNAME:S/gtk/gtk3/}
@@ -62,7 +62,7 @@ CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 # anew in the +INSTALL script as part of the POST-INSTALL action.
 #
 post-install:
-	${RM} -f ${DESTDIR}${GTK_IMMODULES_DB}
+	${RM} -f ${DESTDIR}${GTK3_IMMODULES_DB}
 
 _BUILDING_GTK3=	yes
 .include "modules.mk"
