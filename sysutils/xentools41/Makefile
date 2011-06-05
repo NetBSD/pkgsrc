@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2011/05/20 17:09:21 bouyer Exp $
+# $NetBSD: Makefile,v 1.9 2011/06/05 23:05:58 abs Exp $
 #
 VERSION=		4.1.0
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools41-${VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -73,6 +73,12 @@ PY_PATCHPLIST=		yes
 #PYTHON_PATCH_SCRIPTS+=	security/*.py
 #PYTHON_PATCH_SCRIPTS+=	xenmon/*.py
 #PYTHON_PATCH_SCRIPTS+=	xentrace/xentrace_format
+
+REPLACE_PYTHON+=	python/xen/remus/*.py
+REPLACE_PYTHON+=	python/xen/util/*.py
+REPLACE_PYTHON+=	python/xen/xend/*.py
+REPLACE_PYTHON+=	python/xen/xm/*.py
+REPLACE_PYTHON+=	xenmon/xenmon.py
 
 SUBST_CLASSES+=		pathsvar
 SUBST_STAGE.pathsvar=	pre-configure
