@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2011/05/29 06:54:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/06/05 08:57:47 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
 share/mikutter/core/addon/addon.rb
 share/mikutter/core/addon/bitly/bitly.rb
+share/mikutter/core/addon/bitly/test.bitly.rb
 share/mikutter/core/addon/bugreport.rb
 share/mikutter/core/addon/change_account.rb
 share/mikutter/core/addon/contextmenu.rb
@@ -29,6 +30,7 @@ share/mikutter/core/chi.rb
 share/mikutter/core/config.rb
 share/mikutter/core/configloader.rb
 share/mikutter/core/delayer.rb
+share/mikutter/core/entity.rb
 share/mikutter/core/environment.rb
 share/mikutter/core/image.rb
 share/mikutter/core/initialize.rb
@@ -61,6 +63,7 @@ share/mikutter/core/mui/cairo_cell_renderer_message.rb
 share/mikutter/core/mui/cairo_coordinate_module.rb
 share/mikutter/core/mui/cairo_icon_over_button.rb
 share/mikutter/core/mui/cairo_inner_tl.rb
+share/mikutter/core/mui/cairo_markup_generator.rb
 share/mikutter/core/mui/cairo_miracle_painter.rb
 share/mikutter/core/mui/cairo_pseudo_message_widget.rb
 share/mikutter/core/mui/cairo_replyviewer.rb
