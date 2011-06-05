@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1399 2011/06/05 00:43:24 schnoebe Exp $
+$NetBSD: CHANGES-2011,v 1.1400 2011/06/05 08:58:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ikiwiki to 3.20110431 [schmonz 2011-06-04]
 	Updated textproc/lua-expat to 1.2.0 [schnoebe 2011-06-04]
 	Updated devel/libgsf-gnome to 1.14.21 [schnoebe 2011-06-04]
+	Updated net/mikutter to 0.0.3.7 [obache 2011-06-05]
