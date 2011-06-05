@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/01/13 13:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/06/05 06:06:10 obache Exp $
 #
 
 DISTNAME=		lprof-1.10.1
@@ -12,10 +12,16 @@ COMMENT=		ICC Profile generation tool (for IT8.7 targets)
 
 MAKE_JOBS_SAFE=		no
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	BASEDIR=${PREFIX:Q} QTDIR=${PREFIX}/qt3
+MAKE_ENV+=	BASEDIR=${PREFIX:Q}
 MAKE_ENV+=	LDFLAGS=${LDFLAGS:M*:Q}
+
+# mis-usage of ${DESTDIR}
+DESTDIR_VARNAME=	#empty
+INSTALL_MAKE_FLAGS+=	BASEDIR=${DESTDIR}${PREFIX}
 
 PTHREAD_AUTO_VARS=	yes
 
