@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2011/06/06 12:32:02 drochner Exp $
+
+kill illegal substitution (bashism)
+
+--- examples/xmlstarlet.orig	2011-05-23 20:45:02.000000000 +0000
++++ examples/xmlstarlet
+@@ -2,11 +2,5 @@
+ exepath=`dirname $0`
+ xml="${abs_builddir-$exepath/..}"/xml
+ 
+-if [ x"$OSTYPE" = xmsys ] ; then
+-    # MSYS does unix -> windows path conversion, eg: /x -> C:\Mingw\msys\1.0\x
+-    # so we double all leading /'s to avoid this
+-    exec "$xml" "${@/#\////}"
+-fi
+-
+ exec "$xml" "$@"
+ 
