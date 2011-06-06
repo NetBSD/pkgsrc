@@ -1,7 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/09/21 11:01:22 fhajny Exp $
+$NetBSD: patch-ad,v 1.2 2011/06/06 14:41:48 schnoebe Exp $
 
-Fix POSIX logic for BSD systems
---- util-src/signal.c.orig	2010-06-13 00:23:02.000000000 +0000
+Include <sys/param.h> when on UNIX
+
+--- util-src/signal.c.orig	2011-06-03 15:31:34.000000000 +0000
 +++ util-src/signal.c
 @@ -29,6 +29,10 @@
  #include <signal.h>
@@ -14,21 +15,3 @@ Fix POSIX logic for BSD systems
  #include "lua.h"
  #include "lauxlib.h"
  
-@@ -326,7 +330,7 @@ static int l_raise(lua_State *L)
-   return 1;
- }
- 
--#if defined _POSIX_SOURCE || (defined(sun) || defined(__sun))
-+#ifdef __unix__
- 
- /* define some posix only functions */
- 
-@@ -373,7 +377,7 @@ static int l_kill(lua_State *L)
- static const struct luaL_Reg lsignal_lib[] = {
-   {"signal", l_signal},
-   {"raise", l_raise},
--#if defined _POSIX_SOURCE || (defined(sun) || defined(__sun))
-+#ifdef __unix__
-   {"kill", l_kill},
- #endif
-   {NULL, NULL}
