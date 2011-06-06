@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/21 11:01:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.1.1.1.6.1 2011/06/06 19:49:00 tron Exp $
 #
 
-DISTNAME=		prosody-0.7.0
+DISTNAME=		prosody-0.8.1
 CATEGORIES=		chat
 MASTER_SITES=		http://prosody.im/downloads/source/
 
@@ -13,7 +13,7 @@ LICENSE=		mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		lua-filesystem>=1.0:../../devel/lua-filesystem
-DEPENDS+=		lua-expat>=1.1:../../textproc/lua-expat
+DEPENDS+=		lua-expat>=1.2:../../textproc/lua-expat
 DEPENDS+=		lua-sec>=0.3.3:../../security/lua-sec
 DEPENDS+=		lua-socket>=2.0:../../net/lua-socket
 
