@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2010/09/03 10:31:43 fhajny Exp $
+$NetBSD: patch-aa,v 1.9 2011/06/06 13:45:38 fhajny Exp $
 
---- src/Makefile.in.orig	2010-08-02 16:33:20.000000000 +0000
+--- src/Makefile.in.orig	2011-06-06 13:25:51.841507950 +0000
 +++ src/Makefile.in
-@@ -65,7 +65,7 @@ endif
+@@ -71,7 +71,7 @@ endif
  
  INSTALL_EPAM=
  ifeq (@pam@, pam)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.8 2010/09/03 10:31:43 fhajny Exp $
  endif
  
  prefix = @prefix@
-@@ -83,13 +83,13 @@ BEAMS = $(SOURCES:.erl=.beam)
+@@ -89,13 +89,13 @@ BEAMS = $(SOURCES:.erl=.beam)
  DESTDIR =
  
  # /etc/ejabberd/
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.8 2010/09/03 10:31:43 fhajny Exp $
  
  # /share/doc/ejabberd
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -115,16 +115,16 @@ SODIR = $(PRIVDIR)/lib
+@@ -121,16 +121,16 @@ SODIR = $(PRIVDIR)/lib
  MSGSDIR = $(PRIVDIR)/msgs
  
  # /var/lib/ejabberd/
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.8 2010/09/03 10:31:43 fhajny Exp $
  
  # Assume Linux-style dynamic library flags
  DYNAMIC_LIB_CFLAGS = -fpic -shared
-@@ -177,10 +177,10 @@ translations:
+@@ -183,10 +183,10 @@ translations:
  install: all
  	#
  	# Configuration files
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.8 2010/09/03 10:31:43 fhajny Exp $
  	sed -e "s*@rootdir@*@prefix@*" \
  		-e "s*@installuser@*@INSTALLUSER@*" \
  		-e "s*@LIBDIR@*@libdir@*" \
-@@ -190,13 +190,13 @@ install: all
+@@ -196,13 +196,13 @@ install: all
  		-e "s*@erl@*@ERL@*" ejabberdctl.template \
  		> ejabberdctl.example
  	[ -f $(ETCDIR)/ejabberdctl.cfg ] \
@@ -80,8 +80,8 @@ $NetBSD: patch-aa,v 1.8 2010/09/03 10:31:43 fhajny Exp $
  	#
  	# Init script
  	sed -e "s*@ctlscriptpath@*$(SBINDIR)*" \
-@@ -204,64 +204,58 @@ install: all
- 		> ejabberd.init
+@@ -211,64 +211,58 @@ install: all
+ 	chmod 755 ejabberd.init
  	#
  	# Binary Erlang files
 -	install -d $(BEAMDIR)
