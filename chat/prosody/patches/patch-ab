@@ -1,24 +1,31 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/09/21 11:01:22 fhajny Exp $
+$NetBSD: patch-ab,v 1.2 2011/06/06 14:41:48 schnoebe Exp $
 
-Enable POSIX functionality by default
---- prosody.cfg.lua.dist.orig	2010-06-13 00:23:02.000000000 +0000
+enable POSIX functionality by default
+set the logging paths
+set up the pid files
+
+--- prosody.cfg.lua.dist.orig	2011-06-03 15:31:34.000000000 +0000
 +++ prosody.cfg.lua.dist
-@@ -54,7 +54,7 @@ modules_enabled = {
- 		"register"; -- Allow users to register on this server using a client and change passwords
+@@ -59,7 +59,7 @@ modules_enabled = {
+ 		--"admin_telnet"; -- Opens telnet console interface on localhost port 5582
  
  	-- Other specific functionality
 -		--"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
-+		"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
- 		--"console"; -- Opens admin telnet interface on localhost port 5582
++		posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
  		--"bosh"; -- Enable BOSH clients, aka "Jabber over HTTP"
  		--"httpserver"; -- Serve static files from a directory over HTTP
-@@ -90,9 +90,12 @@ ssl = {
- 
+ 		--"groups"; -- Shared roster support
+@@ -123,12 +123,15 @@ authentication = "internal_plain"
  -- Logging configuration
  -- For advanced logging see http://prosody.im/doc/logging
--log = "prosody.log";
-+log = "@PROSODY_LOG@/prosody.log";
- debug = false; -- Log debug messages?
+ log = {
+-	info = "prosody.log"; -- Change 'info' to 'debug' for verbose logging
+-	error = "prosody.err";
++	info = "@PROSODY_LOG@/prosody.log"; -- Change 'info' to 'debug' for verbose logging
++	error = "@PROSODY_LOG@/prosody.err";
+ 	-- "*syslog"; -- Uncomment this for logging to syslog
+ 	-- "*console"; -- Log to the console, useful for debugging with daemonize=false
+ }
  
 +-- Enable PID file by default
 +pidfile = "@PROSODY_RUN@/prosody.pid";
