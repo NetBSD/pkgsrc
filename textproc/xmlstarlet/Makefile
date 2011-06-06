@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/05/05 19:36:09 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2011/06/06 12:32:01 drochner Exp $
 #
 
-DISTNAME=		xmlstarlet-1.1.0
+DISTNAME=		xmlstarlet-1.2.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmlstar/}
 
