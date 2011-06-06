@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/05/12 13:39:09 adam Exp $
+# $NetBSD: Makefile,v 1.17 2011/06/06 08:31:18 obache Exp $
 
 DISTNAME=	libcanberra-0.26
 PKGREVISION=	2
@@ -26,10 +26,6 @@ SUBST_MESSAGE.ltdlc=	Fixing libtool convenience library name.
 SUBST_STAGE.ltdlc=	pre-configure
 
 CONFIGURE_ENV+=	ac_cv_lib_ltdl_lt_dladvise_init=yes
-
-# Workaround for Upstream Bug#562310.
-# for more detail, see also PR#41475.
-TOOLS_NOOP+=		gtkdoc-rebase
 
 PLIST_VARS+=		oss
 
