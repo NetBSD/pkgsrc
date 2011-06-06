@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1 2011/06/06 12:09:01 drochner Exp $
+
+from gnome git: Fix memory corruption
+
+--- parser.c.orig	2010-11-04 15:55:45.000000000 +0000
++++ parser.c
+@@ -6992,6 +6992,7 @@ xmlParseReference(xmlParserCtxtPtr ctxt)
+ 		    ent->owner = 1;
+ 		    while (list != NULL) {
+ 			list->parent = (xmlNodePtr) ent;
++			xmlSetTreeDoc(list, ent->doc);
+ 			if (list->next == NULL)
+ 			    ent->last = list;
+ 			list = list->next;
