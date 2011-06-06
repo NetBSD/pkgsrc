@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10362 2011/06/05 04:31:22 obache Exp $
+$NetBSD: TODO,v 1.10363 2011/06/06 13:46:00 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -541,7 +541,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o egtk-0.3.6.2
 	o eigen2-2.0.16
 	o eigen2-3.0.1
-	o ejabberd-2.1.6
 	o ekiga-3.2.7
 	o electric-9.00
 	o electricfence-2.4.16
