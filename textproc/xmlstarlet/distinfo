@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2011/05/05 19:36:09 drochner Exp $
+$NetBSD: distinfo,v 1.6 2011/06/06 12:32:01 drochner Exp $
 
-SHA1 (xmlstarlet-1.1.0.tar.gz) = d8b5976687681bf0fe80ddc01627939424485f6d
-RMD160 (xmlstarlet-1.1.0.tar.gz) = c3710b2c311cac6a1a340778cb36690c528fd0bf
-Size (xmlstarlet-1.1.0.tar.gz) = 382008 bytes
+SHA1 (xmlstarlet-1.2.0.tar.gz) = 6016d4b2dee8805044c3522c65f7cf3449825cf5
+RMD160 (xmlstarlet-1.2.0.tar.gz) = 1b371ed1fdf8a42c9fc1d9a02116c9fa69bbceb2
+Size (xmlstarlet-1.2.0.tar.gz) = 382893 bytes
+SHA1 (patch-aa) = b79deefa45fe986bbbf1c25d6c1158ff7fed0a37
+SHA1 (patch-ab) = ad371ef7c360c3c4d758e6e5c5d879e60f4433ad
