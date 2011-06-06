@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2011/06/06 12:32:02 drochner Exp $
+
+make BRE portable: '+' is not allowed
+
+--- examples/bigxml.orig	2011-05-26 00:42:39.000000000 +0000
++++ examples/bigxml
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ # check error messages on lines past 2^16
+ 
+-SEDLINUM_PROG='s/^\([^:]\+:[0-9]\{4\}\)[0-9]\.[0-9]\+:.*$/\1x/p'
++SEDLINUM_PROG='s/^\([^:][^:]*:[0-9]\{4\}\)[0-9]\.[0-9][0-9]*:.*$/\1x/p'
+ 
+ xmldoc()
+ {
