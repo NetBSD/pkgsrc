@@ -1,12 +1,45 @@
-$NetBSD: patch-ak,v 1.1 2011/01/03 12:17:43 drochner Exp $
+$NetBSD: patch-ak,v 1.2 2011/06/06 12:09:01 drochner Exp $
 
 from gnome git:
--fix realloc bug
+-fix realloc bugs (CVE-2011-1944)
 -fix CVE-2010-4494 / SA42721
 
 --- xpath.c.orig	2010-11-03 19:18:27.000000000 +0000
 +++ xpath.c
-@@ -3575,13 +3575,13 @@ xmlXPathNodeSetAdd(xmlNodeSetPtr cur, xm
+@@ -722,14 +722,13 @@ xmlXPathCompExprAdd(xmlXPathCompExprPtr 
+     if (comp->nbStep >= comp->maxStep) {
+ 	xmlXPathStepOp *real;
+ 
+-	comp->maxStep *= 2;
+ 	real = (xmlXPathStepOp *) xmlRealloc(comp->steps,
+-		                      comp->maxStep * sizeof(xmlXPathStepOp));
++		                      comp->maxStep * 2 * sizeof(xmlXPathStepOp));
+ 	if (real == NULL) {
+-	    comp->maxStep /= 2;
+ 	    xmlXPathErrMemory(NULL, "adding step\n");
+ 	    return(-1);
+ 	}
++	comp->maxStep *= 2;
+ 	comp->steps = real;
+     }
+     comp->last = comp->nbStep;
+@@ -3522,13 +3521,13 @@ xmlXPathNodeSetAddNs(xmlNodeSetPtr cur, 
+     } else if (cur->nodeNr == cur->nodeMax) {
+         xmlNodePtr *temp;
+ 
+-        cur->nodeMax *= 2;
+-	temp = (xmlNodePtr *) xmlRealloc(cur->nodeTab, cur->nodeMax *
++	temp = (xmlNodePtr *) xmlRealloc(cur->nodeTab, cur->nodeMax * 2 *
+ 				      sizeof(xmlNodePtr));
+ 	if (temp == NULL) {
+ 	    xmlXPathErrMemory(NULL, "growing nodeset\n");
+ 	    return;
+ 	}
++	cur->nodeMax *= 2;
+ 	cur->nodeTab = temp;
+     }
+     cur->nodeTab[cur->nodeNr++] = xmlXPathNodeSetDupNs(node, ns);
+@@ -3575,13 +3574,13 @@ xmlXPathNodeSetAdd(xmlNodeSetPtr cur, xm
      } else if (cur->nodeNr == cur->nodeMax) {
          xmlNodePtr *temp;
  
@@ -22,7 +55,88 @@ from gnome git:
  	cur->nodeTab = temp;
      }
      if (val->type == XML_NAMESPACE_DECL) {
-@@ -11763,11 +11763,16 @@ xmlXPathCompOpEvalPositionalPredicate(xm
+@@ -3627,14 +3626,14 @@ xmlXPathNodeSetAddUnique(xmlNodeSetPtr c
+     } else if (cur->nodeNr == cur->nodeMax) {
+         xmlNodePtr *temp;
+ 
+-        cur->nodeMax *= 2;
+-	temp = (xmlNodePtr *) xmlRealloc(cur->nodeTab, cur->nodeMax *
++	temp = (xmlNodePtr *) xmlRealloc(cur->nodeTab, cur->nodeMax * 2 *
+ 				      sizeof(xmlNodePtr));
+ 	if (temp == NULL) {
+ 	    xmlXPathErrMemory(NULL, "growing nodeset\n");
+ 	    return;
+ 	}
+ 	cur->nodeTab = temp;
++	cur->nodeMax *= 2;
+     }
+     if (val->type == XML_NAMESPACE_DECL) {
+ 	xmlNsPtr ns = (xmlNsPtr) val;
+@@ -3738,13 +3737,13 @@ xmlXPathNodeSetMerge(xmlNodeSetPtr val1,
+ 	} else if (val1->nodeNr == val1->nodeMax) {
+ 	    xmlNodePtr *temp;
+ 
+-	    val1->nodeMax *= 2;
+-	    temp = (xmlNodePtr *) xmlRealloc(val1->nodeTab, val1->nodeMax *
++	    temp = (xmlNodePtr *) xmlRealloc(val1->nodeTab, val1->nodeMax * 2 *
+ 					     sizeof(xmlNodePtr));
+ 	    if (temp == NULL) {
+ 	        xmlXPathErrMemory(NULL, "merging nodeset\n");
+ 		return(NULL);
+ 	    }
++	    val1->nodeMax *= 2;
+ 	    val1->nodeTab = temp;
+ 	}
+ 	if (n2->type == XML_NAMESPACE_DECL) {
+@@ -3800,13 +3799,13 @@ xmlXPathNodeSetMergeUnique(xmlNodeSetPtr
+ 	} else if (val1->nodeNr == val1->nodeMax) {
+ 	    xmlNodePtr *temp;
+ 
+-	    val1->nodeMax *= 2;
+-	    temp = (xmlNodePtr *) xmlRealloc(val1->nodeTab, val1->nodeMax *
++	    temp = (xmlNodePtr *) xmlRealloc(val1->nodeTab, val1->nodeMax * 2 *
+ 					     sizeof(xmlNodePtr));
+ 	    if (temp == NULL) {
+ 	        xmlXPathErrMemory(NULL, "merging nodeset\n");
+ 		return(NULL);
+ 	    }
++	    val1->nodeMax *= 2;
+ 	    val1->nodeTab = temp;
+ 	}
+ 	if (val2->nodeTab[i]->type == XML_NAMESPACE_DECL) {
+@@ -3907,13 +3906,13 @@ xmlXPathNodeSetMergeAndClear(xmlNodeSetP
+ 	    } else if (set1->nodeNr >= set1->nodeMax) {
+ 		xmlNodePtr *temp;
+ 
+-		set1->nodeMax *= 2;
+ 		temp = (xmlNodePtr *) xmlRealloc(
+-		    set1->nodeTab, set1->nodeMax * sizeof(xmlNodePtr));
++		    set1->nodeTab, set1->nodeMax * 2 * sizeof(xmlNodePtr));
+ 		if (temp == NULL) {
+ 		    xmlXPathErrMemory(NULL, "merging nodeset\n");
+ 		    return(NULL);
+ 		}
++		set1->nodeMax *= 2;
+ 		set1->nodeTab = temp;
+ 	    }
+ 	    if (n2->type == XML_NAMESPACE_DECL) {
+@@ -3991,13 +3990,13 @@ xmlXPathNodeSetMergeAndClearNoDupls(xmlN
+ 	    } else if (set1->nodeNr >= set1->nodeMax) {
+ 		xmlNodePtr *temp;
+ 
+-		set1->nodeMax *= 2;
+ 		temp = (xmlNodePtr *) xmlRealloc(
+-		    set1->nodeTab, set1->nodeMax * sizeof(xmlNodePtr));
++		    set1->nodeTab, set1->nodeMax * 2 * sizeof(xmlNodePtr));
+ 		if (temp == NULL) {
+ 		    xmlXPathErrMemory(NULL, "merging nodeset\n");
+ 		    return(NULL);
+ 		}
++		set1->nodeMax *= 2;
+ 		set1->nodeTab = temp;
+ 	    }
+ 	    set1->nodeTab[set1->nodeNr++] = n2;
+@@ -11763,11 +11762,16 @@ xmlXPathCompOpEvalPositionalPredicate(xm
  
  	    if ((ctxt->error != XPATH_EXPRESSION_OK) || (res == -1)) {
  	        xmlXPathObjectPtr tmp;
