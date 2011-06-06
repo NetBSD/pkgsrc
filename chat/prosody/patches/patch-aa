@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 11:01:22 fhajny Exp $
+$NetBSD: patch-aa,v 1.2 2011/06/06 14:41:48 schnoebe Exp $
 
 Fix installation directories and scripts
---- Makefile.orig	2010-06-13 00:23:01.000000000 +0000
+--- Makefile.orig	2011-06-03 15:31:32.000000000 +0000
 +++ Makefile
 @@ -3,10 +3,11 @@ include config.unix
  
@@ -16,7 +16,7 @@ Fix installation directories and scripts
  
  INSTALLEDSOURCE = $(PREFIX)/lib/prosody
  INSTALLEDCONFIG = $(SYSCONFDIR)
-@@ -17,27 +18,31 @@ all: prosody.install prosodyctl.install 
+@@ -17,28 +18,33 @@ all: prosody.install prosodyctl.install 
  	$(MAKE) -C util-src install
  
  install: prosody.install prosodyctl.install prosody.cfg.lua.install util/encodings.so util/encodings.so util/pposix.so util/signal.so
@@ -37,17 +37,18 @@ Fix installation directories and scripts
 -	install -d $(MODULES)/muc
 -	install -m644 plugins/muc/* $(MODULES)/muc
 -	install -m644 certs/* $(CONFIG)/certs
--	install -m644 plugins/*.lua $(MODULES)
+-	install -d $(MODULES)/adhoc
+-	install -m644 plugins/adhoc/*.lua $(MODULES)/adhoc
 -	install -m644 man/prosodyctl.man $(MAN)/man1/prosodyctl.1
 -	test -e $(CONFIG)/prosody.cfg.lua || install -m644 prosody.cfg.lua.install $(CONFIG)/prosody.cfg.lua
 -	test -e prosody.version && install prosody.version $(SOURCE)/prosody.version || true
-+	$(BSD_INSTALL_SCRIPT_DIR) $(BIN)
++	$(BSD_INSTALL_SCRIPT_DIR) $(BIN) 
 +	$(BSD_INSTALL_DATA_DIR) $(EGDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(MODULES)
 +	$(BSD_INSTALL_DATA_DIR) $(SOURCE)
 +	$(BSD_INSTALL_DATA_DIR) -m 750 $(DATA)
 +	$(BSD_INSTALL_MAN_DIR) $(MAN)/man1
-+	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/core
++	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/core 
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/net
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/util
 +	$(BSD_INSTALL_SCRIPT) ./prosody.install $(BIN)/prosody
@@ -59,10 +60,12 @@ Fix installation directories and scripts
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/util/sasl
 +	$(BSD_INSTALL_DATA) util/sasl/* $(SOURCE)/util/sasl
 +	$(BSD_INSTALL_DATA) plugins/*.lua $(MODULES)
-+	$(BSD_INSTALL_DATA_DIR) $(MODULES)/muc
++	$(BSD_INSTALL_LIB_DIR) $(MODULES)/muc
 +	$(BSD_INSTALL_DATA) plugins/muc/* $(MODULES)/muc
 +	$(BSD_INSTALL_DATA_DIR) $(EGDIR)/certs
 +	$(BSD_INSTALL_DATA) certs/* $(EGDIR)/certs
++	$(BSD_INSTALL_LIB_DIR) $(MODULES)/adhoc
++	$(BSD_INSTALL_DATA) plugins/adhoc/*.lua $(MODULES)/adhoc
 +	$(BSD_INSTALL_MAN) man/prosodyctl.man $(MAN)/man1/prosodyctl.1
 +	$(BSD_INSTALL_DATA) prosody.cfg.lua.install $(EGDIR)/prosody.cfg.lua
 +	$(BSD_INSTALL_DATA) prosody.version $(SOURCE)/prosody.version
