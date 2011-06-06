@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1402 2011/06/06 01:40:11 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1403 2011/06/06 14:42:13 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2187,3 +2187,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.7 [obache 2011-06-05]
 	Updated x11/mlterm to 3.0.5 [ryoon 2011-06-05]
 	Updated pkgtools/port2pkg to 1.11nb8 [obache 2011-06-06]
+	Updated chat/prosody to 0.8.1 [schnoebe 2011-06-06]
