@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2009/02/10 00:19:50 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2011/06/06 01:39:59 obache Exp $
 #
 
 DISTNAME=	port2pkg-1.11
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -27,6 +27,8 @@ SUBST_CLASSES+=		gtar
 SUBST_STAGE.gtar=	pre-configure
 SUBST_FILES.gtar=	port2pkg.pl
 SUBST_SED.gtar=		-e 's|$${GTAR}|${GTAR}|g'
+
+REPLACE_PERL+=		port2pkg.pl
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/port2pkg.pl ${DESTDIR}${PREFIX}/bin/port2pkg
