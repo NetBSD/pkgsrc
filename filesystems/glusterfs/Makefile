@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/05/19 14:54:22 manu Exp $
+# $NetBSD: Makefile,v 1.10 2011/06/06 15:53:13 manu Exp $
 #
 
 DISTNAME=	glusterfs-3.2.0
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	http://download.gluster.com/pub/gluster/glusterfs/3.2/LATEST/
 
@@ -55,16 +56,24 @@ SUBST_FILES.etc+=	doc/glusterfsd.8
 SUBST_FILES.etc+=	doc/glusterfsd.vol.sample
 SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
 
+SUBST_CLASSES+=		vol
+SUBST_STAGE.vol=	post-build
+SUBST_FILES.vol=	doc/Makefile
+SUBST_SED.vol=		-e "s/glusterd.vol/glusterd.vol.sample/g"
+
 REPLACE_PYTHON+=	${WRKSRC}/extras/volgen/glusterfs-volgen
 
 EGDIR=			${PREFIX}/etc/glusterfs
 CONF_FILES+=		${EGDIR}/glusterfs.vol.sample ${EGDIR}/glusterfs.vol
 CONF_FILES+=		${EGDIR}/glusterfsd.vol.sample ${EGDIR}/glusterfsd.vol
-CONF_FILES+=		${EGDIR}/glusterd.vol ${EGDIR}/glusterd.vol
+CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
 OWN_DIRS+=		${VARBASE}/log/glusterfs
 BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		glusterfsd glusterd
+
+post-build:
+	 cp ${WRKSRC}/doc/glusterd.vol ${WRKSRC}/doc/glusterd.vol.sample
 
 post-install:
 	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount.glusterfs \
