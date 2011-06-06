@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: xattr-init.sh,v 1.3 2011/05/19 14:54:22 manu Exp $
+# $NetBSD: xattr-init.sh,v 1.4 2011/06/06 15:53:14 manu Exp $
 
 GLUSTERFS_XATTR="
   trusted.distribute.linkinfo

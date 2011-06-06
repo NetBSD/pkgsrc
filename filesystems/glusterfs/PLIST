@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2011/05/19 14:54:22 manu Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/06/06 15:53:13 manu Exp $
 etc/glusterfs/xattr-init.sh
 etc/glusterfs/glusterfs.vol.sample
 etc/glusterfs/glusterfsd.vol.sample
-etc/glusterfs/glusterd.vol
+etc/glusterfs/glusterd.vol.sample
 etc/glusterfs/xattr-init.sh
 lib/libglusterfs.so.0.0.0
 lib/libglusterfs.la
