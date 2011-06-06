@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/01/19 18:12:21 tron Exp $
+# $NetBSD: Makefile,v 1.25 2011/06/06 12:48:14 seanb Exp $
 
 DISTNAME=	xf86-video-intel-2.7.1
 PKGREVISION=	4
@@ -27,4 +27,5 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
 .include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
