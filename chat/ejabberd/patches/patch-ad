@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2010/03/13 21:05:49 fhajny Exp $
+$NetBSD: patch-ad,v 1.6 2011/06/06 13:45:38 fhajny Exp $
 
---- src/ejabberd.cfg.example.orig	2010-03-12 10:40:41.000000000 +0000
+--- src/ejabberd.cfg.example.orig	2011-06-01 09:03:36.000000000 +0000
 +++ src/ejabberd.cfg.example
 @@ -109,7 +109,6 @@
   [
@@ -42,7 +42,7 @@ $NetBSD: patch-ad,v 1.5 2010/03/13 21:05:49 fhajny Exp $
    %%			    {hosts, ["icq.example.org", "sms.example.org"],
    %%			     [{password, "secret"}]
    %%			    }
-@@ -471,7 +470,7 @@
+@@ -472,7 +471,7 @@
  %%
  %% Full path to a script that generates the image.
  %%
@@ -50,4 +50,4 @@ $NetBSD: patch-ad,v 1.5 2010/03/13 21:05:49 fhajny Exp $
 +%%{captcha_cmd, "@PREFIX@/lib/erlang/lib/@DISTNAME@/priv/bin/captcha.sh"}.
  
  %%
- %% Host part of the URL sent to the user.
+ %% Host for the URL and port where ejabberd listens for CAPTCHA requests.

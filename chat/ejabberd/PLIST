@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2010/09/03 10:31:43 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/06/06 13:45:37 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
 lib/erlang/lib/${PKGNAME}/ebin/adhoc.beam
+lib/erlang/lib/${PKGNAME}/ebin/cache_tab.beam
+lib/erlang/lib/${PKGNAME}/ebin/cache_tab_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_anonymous.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_digest.beam
@@ -73,6 +75,7 @@ lib/erlang/lib/${PKGNAME}/ebin/jd2ejd.beam
 lib/erlang/lib/${PKGNAME}/ebin/jlib.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_adhoc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_announce.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_blocking.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure2.beam
@@ -91,6 +94,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_muc_room.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_offline.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_offline_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_ping.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_pres_counter.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_privacy.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_privacy_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_private.beam
@@ -103,10 +107,12 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_stream.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_pubsub.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_pubsub_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_register.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_register_web.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_roster.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_roster_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_service_log.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_shared_roster.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_shared_roster_ldap.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_sic.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_stats.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_time.beam
@@ -135,6 +141,7 @@ lib/erlang/lib/${PKGNAME}/ebin/nodetree_virtual.beam
 lib/erlang/lib/${PKGNAME}/ebin/odbc_queries.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_fsm.beam
 lib/erlang/lib/${PKGNAME}/ebin/p1_mnesia.beam
+lib/erlang/lib/${PKGNAME}/ebin/pg2_backport.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_db_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_index.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription.beam
@@ -183,6 +190,7 @@ lib/erlang/lib/${PKGNAME}/priv/msgs/eo.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/es.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/fr.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/gl.msg
+lib/erlang/lib/${PKGNAME}/priv/msgs/id.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/it.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/ja.msg
 lib/erlang/lib/${PKGNAME}/priv/msgs/nl.msg
@@ -208,6 +216,10 @@ share/doc/ejabberd/features.pdf
 share/doc/ejabberd/guide.html
 share/doc/ejabberd/guide.pdf
 share/doc/ejabberd/logo.png
+share/doc/ejabberd/msrl-dit-deep.png
+share/doc/ejabberd/msrl-dit-flat.png
+share/doc/ejabberd/msrl-roster-deep.png
+share/doc/ejabberd/msrl-roster-flat.png
 share/doc/ejabberd/release_notes_0.9.1.txt
 share/doc/ejabberd/release_notes_0.9.8.txt
 share/doc/ejabberd/release_notes_0.9.txt
@@ -229,6 +241,8 @@ share/doc/ejabberd/release_notes_2.1.2.txt
 share/doc/ejabberd/release_notes_2.1.3.txt
 share/doc/ejabberd/release_notes_2.1.4.txt
 share/doc/ejabberd/release_notes_2.1.5.txt
+share/doc/ejabberd/release_notes_2.1.6.txt
+share/doc/ejabberd/release_notes_2.1.7.txt
 share/doc/ejabberd/webadmmain.png
 share/doc/ejabberd/webadmmainru.png
 share/doc/ejabberd/yozhikheader.png
