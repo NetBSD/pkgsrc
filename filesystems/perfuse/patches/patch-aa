@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2011/05/17 12:44:13 wiz Exp $
-
---- lib/libperfuse/Makefile.orig	2011-05-09 11:44:28.000000000 +0200
-+++ lib/libperfuse/Makefile	2011-05-09 11:44:35.000000000 +0200
-@@ -2,6 +2,6 @@
+$NetBSD: patch-aa,v 1.5 2011/06/06 16:20:32 manu Exp $
+--- lib/libperfuse/Makefile.orig	2011-05-26 12:56:30.000000000 +0000
++++ lib/libperfuse/Makefile	2011-06-06 16:13:13.000000000 +0000
+@@ -2,5 +2,5 @@
  
  LIB=            perfuse
 -LIBDPLIBS+=     puffs	${.CURDIR}/../libpuffs
 +#LIBDPLIBS+=     puffs	${.CURDIR}/../libpuffs
  
  .ifdef DEBUG
- PERFUSE_OPT_DEBUG_FLAGS=   -g -DPERFUSE_DEBUG
+@@ -13,4 +13,5 @@
+ CPPFLAGS+=	-I${.CURDIR} 
+ CPPFLAGS+=	-I${NETBSDSRCDIR}/lib/libpuffs 
++LDADD+=		-lpuffs
+ SRCS=           perfuse.c ops.c subr.c debug.c
+ MAN=		libperfuse.3
