@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.30 2011/06/04 01:43:51 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.31 2011/06/06 19:52:11 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -114,3 +114,6 @@ Pullup ticket #3444 - requested by tron
 net/wireshark security update
 Pullup ticket #3447 - requested by tez
 security/openssl security fix
+Pullup ticket #3448 - requested by schnoebe
+textproc/lua-expat: security update
+chat/prosody: security update
