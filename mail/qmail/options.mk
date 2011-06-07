@@ -1,14 +1,10 @@
-# $NetBSD: options.mk,v 1.30 2008/04/12 22:43:04 jlam Exp $
+# $NetBSD: options.mk,v 1.31 2011/06/07 02:53:42 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
 PKG_OPTIONS_GROUP.rcpt=	qmail-badrcptto qmail-qregex qmail-realrcptto
-PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-bigdns qmail-netqmail
+PKG_SUPPORTED_OPTIONS+=	sasl syncdir tls qmail-bigdns qmail-netqmail
 PKG_SUPPORTED_OPTIONS+=	qmail-outgoingip qmail-viruscan
-
-.if ${OPSYS} == "Darwin"
-PKG_SUGGESTED_OPTIONS+=	darwin
-.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,15 +20,6 @@ BIGDNS_PATCH=		qmail-103.patch
 PATCHFILES+=		${BIGDNS_PATCH}
 SITES.${BIGDNS_PATCH}=	http://www.ckdhr.com/ckd/
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=	-p1
-.endif
-
-PLIST_SUBST+=		DARWINSUFX=""
-.if !empty(PKG_OPTIONS:Mdarwin)
-DARWIN_PATCH=		panther.patch
-PATCHFILES+=		${DARWIN_PATCH}
-SITES.${DARWIN_PATCH}=	http://http.netdevice.com:9080/qmail/patch/
-PATCH_DIST_STRIP.${DARWIN_PATCH}=	-p1
-PLIST_SUBST+=		DARWINSUFX=".doc"
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-netqmail)
