@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/07/25 19:33:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2011/06/07 11:28:14 obache Exp $
 #
 
 DISTNAME=	websvn-2.2.1
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/45918/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://websvn.tigris.org/
+HOMEPAGE=	http://www.websvn.info/
 COMMENT=	Subversion repository web frontend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
