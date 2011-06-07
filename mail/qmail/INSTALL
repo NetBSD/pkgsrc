@@ -1,7 +1,8 @@
-# $NetBSD: INSTALL,v 1.4 2004/12/21 05:32:56 schmonz Exp $
+# $NetBSD: INSTALL,v 1.5 2011/06/07 02:53:42 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
+PKGMANDIR=@PKGMANDIR@
 QMAILDIR=@QMAILDIR@
 QMAIL_QUEUE_DIR=@QMAIL_QUEUE_DIR@
 QMAIL_QUEUE_EXTRA=@QMAIL_QUEUE_EXTRA@
@@ -40,12 +41,13 @@ EOF
 		exit 1
 	fi
 
+	# keep in sync with Makefile:pre-install
 	${LN} -s ${PKG_SYSCONFDIR}/alias	${QMAILDIR}/alias
 	${LN} -s ${PREFIX}/bin			${QMAILDIR}/bin
 	${LN} -s ${EGDIR}/boot			${QMAILDIR}/boot
 	${LN} -s ${PKG_SYSCONFDIR}/control	${QMAILDIR}/control
 	${LN} -s ${DOCDIR}			${QMAILDIR}/doc
-	${LN} -s ${PREFIX}/man			${QMAILDIR}/man
+	${LN} -s ${PREFIX}/${PKGMANDIR}		${QMAILDIR}/man
 	${LN} -s ${QMAIL_QUEUE_DIR}		${QMAILDIR}/queue
 	${LN} -s ${PKG_SYSCONFDIR}/users	${QMAILDIR}/users
 

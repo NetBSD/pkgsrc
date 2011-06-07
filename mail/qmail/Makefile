@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2009/05/19 09:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2011/06/07 02:53:42 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -27,23 +27,28 @@ NOT_FOR_UNPRIVILEGED=	yes
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
+PKG_DESTDIR_SUPPORT=	destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		nroff
 
+DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q}${QMAILDIR:Q} > conf-destdir
 DJB_BUILD_TARGETS=	man
 DJB_RESTRICTED=		no
 
-MAKE_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/control ${PKG_SYSCONFDIR}/users
-OWN_DIRS+=		${QMAILDIR} ${QMAIL_QUEUE_DIR}
 PKG_SYSCONFSUBDIR=	qmail
+OWN_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
+OWN_DIRS+=		${PKG_SYSCONFDIR}/control ${PKG_SYSCONFDIR}/users
+OWN_DIRS+=		${QMAILDIR} ${QMAIL_QUEUE_DIR}
 
 DOCDIR=			${PREFIX}/share/doc/qmail
 EGDIR=			${PREFIX}/share/examples/qmail
 SHAREDIR=		${PREFIX}/share/qmail
+PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX:Q}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
-FILES_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q} SHAREDIR=${SHAREDIR:Q}
-FILES_SUBST+=		QMAILDIR=${QMAILDIR:Q} QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR:Q}
+FILES_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
+FILES_SUBST+=		PKGMANDIR=${PKGMANDIR:Q} SHAREDIR=${SHAREDIR:Q}
+FILES_SUBST+=		QMAILDIR=${QMAILDIR:Q}
+FILES_SUBST+=		QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR:Q}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		VIRUSCAN_SIGS_SRCFILE=${VIRUSCAN_SIGS_SRCFILE:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
@@ -57,8 +62,9 @@ MANDIRS=		man
 MANDIRS+=		man/${i}${j}
 .  endfor
 .endfor
-INSTALLATION_DIRS=	bin ${MANDIRS}
-INSTALLATION_DIRS+=	share/doc/qmail share/examples/qmail/boot share/qmail
+INSTALLATION_DIRS=	bin ${MANDIRS} ${DOCDIR} ${SHAREDIR}
+INSTALLATION_DIRS+=	${EGDIR}/alias ${EGDIR}/boot ${EGDIR}/control
+INSTALLATION_DIRS+=	${EGDIR}/users
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -80,12 +86,18 @@ SUBST_SED.logging+=	-e 's|""|${QUEUE_EXTRA}|g'
 SUBST_MESSAGE.logging=	Setting QUEUE_EXTRA.
 .endif
 
+SUBST_CLASSES+=		caseclash
+SUBST_STAGE.caseclash=	do-configure
+SUBST_FILES.caseclash=	hier.c
+SUBST_SED.caseclash=	-e 's|"INSTALL"|"INSTALL${DARWINSUFX}"|g'
+SUBST_SED.caseclash+=	-e 's|"SENDMAIL"|"SENDMAIL${DARWINSUFX}"|g'
+
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/README.pkgsrc
-SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME:Q},g'
+SUBST_STAGE.paths=	do-configure
+SUBST_FILES.paths=	README.pkgsrc
+SUBST_SED.paths=	-e 's,@PKGNAME@,${PKGNAME:Q},g'
 SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO:Q},g'
 SUBST_SED.paths+=	-e 's,@GREP@,${GREP:Q},g'
-SUBST_STAGE.paths=	post-patch
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
@@ -101,31 +113,57 @@ PKG_HOME.alias=		${QMAILDIR}/alias
 
 SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 4555
 
+.if ${OPSYS} == "Darwin"
+DARWINSUFX=		.doc
+.else
+DARWINSUFX=		# empty
+.endif
+
 post-extract:
-	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}/README.pkgsrc
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}
+.	for i in INSTALL SENDMAIL
+	  mv ${WRKSRC}/${i} ${WRKSRC}/${i}${DARWINSUFX}
+.	endfor
+
+pre-install:
+.	if ${USE_DESTDIR} != "no"
+	  ${MKDIR} ${DESTDIR}${QMAILDIR}
+	  ${MKDIR} ${DESTDIR}${QMAIL_QUEUE_DIR}
+	  # keep in sync with INSTALL:PRE-INSTALL
+	  ${LN} -s ${DESTDIR}${EGDIR}/alias	${DESTDIR}${QMAILDIR}/alias
+	  ${LN} -s ${DESTDIR}${PREFIX}/bin	${DESTDIR}${QMAILDIR}/bin
+	  ${LN} -s ${DESTDIR}${EGDIR}/boot	${DESTDIR}${QMAILDIR}/boot
+	  ${LN} -s ${DESTDIR}${EGDIR}/control	${DESTDIR}${QMAILDIR}/control
+	  ${LN} -s ${DESTDIR}${DOCDIR}		${DESTDIR}${QMAILDIR}/doc
+	  ${LN} -s ${DESTDIR}${PREFIX}/${PKGMANDIR} ${DESTDIR}${QMAILDIR}/man
+	  ${LN} -s ${DESTDIR}${QMAIL_QUEUE_DIR}	${DESTDIR}${QMAILDIR}/queue
+	  ${LN} -s ${DESTDIR}${EGDIR}/users	${DESTDIR}${QMAILDIR}/users
+.	endif
 
 post-install:
 	# qmail's installer sets strange permissions, set them back
 .	if (${PKG_INSTALLATION_TYPE} == "overwrite")
 .	  for i in bin boot
-	    ${CHGRP} ${BINGRP} ${QMAILDIR}/${i}
+	    ${CHGRP} ${BINGRP} ${DESTDIR}${QMAILDIR}/${i}
 .	  endfor
 .	  for i in doc
-	    ${CHGRP} ${SHAREGRP} ${QMAILDIR}/${i}
+	    ${CHGRP} ${SHAREGRP} ${DESTDIR}${QMAILDIR}/${i}
 .	  endfor
 .	  for i in ${MANDIRS}
-	    ${CHGRP} ${MANGRP} ${QMAILDIR}/${i}
+	    ${CHGRP} ${MANGRP} ${DESTDIR}${QMAILDIR}/${i}
 .	  endfor
 .	endif
 
-	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR}
 
-	${INSTALL_PROGRAM_DIR} ${SHAREDIR}/setup
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${SHAREDIR}/setup
 	for i in ${SETUP_PROGRAMS}; do					\
-		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${SHAREDIR}/setup;	\
+		${INSTALL_PROGRAM} ${WRKSRC}/$$i			\
+			${DESTDIR}${SHAREDIR}/setup;			\
 	done
 	for i in ${SETUP_SCRIPTS}; do					\
-		${INSTALL_SCRIPT} ${WRKSRC}/$$i ${SHAREDIR}/setup;	\
+		${INSTALL_SCRIPT} ${WRKSRC}/$$i				\
+			${DESTDIR}${SHAREDIR}/setup;			\
 	done
 
 .include "../../mk/djbware.mk"
