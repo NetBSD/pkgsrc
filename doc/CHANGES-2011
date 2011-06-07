@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1404 2011/06/07 11:48:18 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1405 2011/06/07 12:01:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2187,5 +2187,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.7 [obache 2011-06-05]
 	Updated x11/mlterm to 3.0.5 [ryoon 2011-06-05]
 	Updated pkgtools/port2pkg to 1.11nb8 [obache 2011-06-06]
+	Updated chat/ejabberd to 2.1.7 [fhajny 2011-06-06]
 	Updated chat/prosody to 0.8.1 [schnoebe 2011-06-06]
 	Updated net/nagios-plugin-radius to 1.4.15nb2 [taca 2011-06-07]
