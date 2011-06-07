@@ -1,13 +1,13 @@
-$NetBSD: patch-bq,v 1.1 2011/06/06 15:53:14 manu Exp $
+$NetBSD: patch-bq,v 1.2 2011/06/07 07:27:11 manu Exp $
 
-Make sur glusterfsd uses the same address family as gluserd. 
+Make sur glusterfsd uses the same address family as glusterd. 
 
 glusterfsd uses getaddrinfo and picks the first entry for its
-listening address. The first entru is of inet7 family on 
+listening address. The first entry is of inet6 family on 
 NetBSD. Even if glusterd was started with option 
 transport.address-family inet, we ended with glusterfsd 
-started with inet6, and the client could not connect to it
-if the letwork lack IPv6
+using inet6. Since the client assumes glusterd and glusterfsd
+use the same address family, it could not reach glusterfsd.
 
 --- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-06-06 10:28:42.000000000 +0200
 +++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-06-06 16:17:30.000000000 +0200
