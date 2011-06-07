@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2011/04/06 08:14:21 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.42 2011/06/07 13:59:17 drochner Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -366,7 +366,9 @@ share/icons/hicolor/48x48/apps/vlc.png
 share/kde/apps/solid/actions/vlc-opencda.desktop
 share/kde/apps/solid/actions/vlc-opendvd.desktop
 share/kde/apps/solid/actions/vlc-openvcd.desktop
+share/locale/ach/LC_MESSAGES/vlc.mo
 share/locale/af/LC_MESSAGES/vlc.mo
+share/locale/am/LC_MESSAGES/vlc.mo
 share/locale/ar/LC_MESSAGES/vlc.mo
 share/locale/ast/LC_MESSAGES/vlc.mo
 share/locale/be/LC_MESSAGES/vlc.mo
@@ -374,6 +376,7 @@ share/locale/bg/LC_MESSAGES/vlc.mo
 share/locale/bn/LC_MESSAGES/vlc.mo
 share/locale/br/LC_MESSAGES/vlc.mo
 share/locale/ca/LC_MESSAGES/vlc.mo
+share/locale/cgg/LC_MESSAGES/vlc.mo
 share/locale/ckb/LC_MESSAGES/vlc.mo
 share/locale/co/LC_MESSAGES/vlc.mo
 share/locale/cs/LC_MESSAGES/vlc.mo
@@ -385,6 +388,7 @@ share/locale/es/LC_MESSAGES/vlc.mo
 share/locale/et/LC_MESSAGES/vlc.mo
 share/locale/eu/LC_MESSAGES/vlc.mo
 share/locale/fa/LC_MESSAGES/vlc.mo
+share/locale/ff/LC_MESSAGES/vlc.mo
 share/locale/fi/LC_MESSAGES/vlc.mo
 share/locale/fr/LC_MESSAGES/vlc.mo
 share/locale/fur/LC_MESSAGES/vlc.mo
@@ -403,6 +407,7 @@ share/locale/ka/LC_MESSAGES/vlc.mo
 share/locale/kk/LC_MESSAGES/vlc.mo
 share/locale/km/LC_MESSAGES/vlc.mo
 share/locale/ko/LC_MESSAGES/vlc.mo
+share/locale/lg/LC_MESSAGES/vlc.mo
 share/locale/lt/LC_MESSAGES/vlc.mo
 share/locale/lv/LC_MESSAGES/vlc.mo
 share/locale/mk/LC_MESSAGES/vlc.mo
@@ -438,6 +443,7 @@ share/locale/vi/LC_MESSAGES/vlc.mo
 share/locale/wa/LC_MESSAGES/vlc.mo
 share/locale/zh_CN/LC_MESSAGES/vlc.mo
 share/locale/zh_TW/LC_MESSAGES/vlc.mo
+share/locale/zu/LC_MESSAGES/vlc.mo
 share/vlc/http/.hosts
 share/vlc/http/dialogs/.hosts
 share/vlc/http/dialogs/browse
