@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/08 10:10:16 fhajny Exp $
+
+SHA1 (php-redis/nicolasff-phpredis-2.1.3-0-g43bc590.tar.gz) = 852b1d066301904a0b10fbd42cfaa9421f5c1d41
+RMD160 (php-redis/nicolasff-phpredis-2.1.3-0-g43bc590.tar.gz) = 816b412fc4d9e214342ffd476037ba7736cb53f7
+Size (php-redis/nicolasff-phpredis-2.1.3-0-g43bc590.tar.gz) = 86820 bytes
