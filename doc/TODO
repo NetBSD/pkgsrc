@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10366 2011/06/08 13:34:13 obache Exp $
+$NetBSD: TODO,v 1.10367 2011/06/08 21:16:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -494,7 +494,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dansguardian-2.10.0.3
 	o dante-1.2.3
 	o dap-3.7
-	o dar-2.3.11
+	o dar-2.4.0
 	o darcs-2.4
 	o dasher-4.11
 	o davical-0.9.9.4
@@ -561,7 +561,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epdfview-0.1.8
 	o epic4-2.6
 	o epstool-3.08
-	o eric5-5.1.2
+	o eric4-4.4.15
+	o eric5-5.1.3
 	o esh-0.8.5
 	o espeak-1.40
 	o et-2.60
@@ -636,6 +637,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
+	o fotoxx-11.06
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.2.5
@@ -683,6 +685,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o glade3-3.8.0 [GNOME 2.34]
 	o glade3-3.10.0
+	o glib2-2.28.8
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.13
 	o gnet1-1.1.9
@@ -701,7 +704,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
 	o gnome-packagekit-2.32.0 [GNOME 2.32]
-	o gnome-packagekit-3.0.0
+	o gnome-packagekit-3.0.3
 	o gnome-pilot-2.32.1 [GNOME 2.32]
 	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
@@ -716,7 +719,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnucash-2.4.6
 	o gnuchess-5.08
-	o gnutls-2.12.5
+	o gnutls-2.12.6
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -740,6 +743,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-gnutella-0.96.9
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
+	o gtk3-3.0.11
 	o gtkmm-3.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.21
@@ -767,7 +771,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-7.5
 	o highlight-3.4
 	o honeyd-1.5c
-	o horde-4.0.3
+	o horde-4.0.5
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -788,9 +792,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
 	o imapsync-1.404
-	o imp-5.0.4
+	o imp-5.0.5
 	o ingo-2.0.1
-	o inputproto-2.0.1
+	o inputproto-2.0.2
 	o inspircd-1.2.1
 	o instiki-0.13
 	o isc-dhcp4-4.2.1
@@ -810,7 +814,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jed-0.99-18
-	o john-1.7.7jumbo1
+	o john-1.7.7jumbo5
 	o jools-1.0
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
@@ -868,7 +872,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXfixes-5.0
 	o libXfont-1.4.3
 	o libXft-2.2.0
-	o libXi-1.4.2
+	o libXi-1.4.3
 	o libXinerama-1.1.1
 	o libXmu-1.1.0
 	o libXpm-3.5.9
@@ -886,7 +890,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdvbpsi-0.2.0
 	o libextractor-0.6.2
 	o libflash-0.4.13
-	o libfolks-0.5.1
+	o libfolks-0.5.2
 	o libfontenc-1.1.0
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
@@ -912,7 +916,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.92.0
-	o libssh-0.4.7
+	o libssh-0.5.0
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
@@ -975,7 +979,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpop-1.0.24
 	o mrtg-2.17.1
 	o mserv-devel-0.41
-	o mu-0.9.5
+	o mu-0.9.6
 	o multitail-5.2.8
 	o munin-1.4.4
 	o mupdf-0.8.165
@@ -1026,7 +1030,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssh-5.8p1
 	o openssl-1.0.0d [pkg/44717]
 	o open-vm-tools-2010.09.19.301124
-	o openttd-1.1.0
+	o openttd-1.1.1
 	o opera-11.11
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
@@ -1060,6 +1064,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php-libawl-0.46
 	o phpmyadmin-3.4.1
 	o picp-0.6.8
+	o pidgin-2.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
@@ -1101,7 +1106,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
 	o py-checker-0.8.19
-	o py-cups-1.9.55
+	o py-cups-1.9.56
 	o py-dbus-0.84.0
 	o py-game-1.9.1
 	o py-gdata-2.0.14
@@ -1131,7 +1136,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o raine-0.51.8
 	o randrproto-1.3.2
 	o rapidsvn-0.12
-	o raptor-2.0.1
+	o raptor-2.0.3
 	o rasqal-0.9.25 [needs raptor-2.0.0]
 	o rat-4.2.25
 	o rayshade-4.0.6
@@ -1274,7 +1279,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
-	o turba-3.0.2
+	o turba-3.0.3
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o twm-1.0.6
@@ -1292,6 +1297,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
+	o vala-0.12.1
 	o valgrind-3.6.0
 	o vbetool-1.1
 	o vera-1.17
@@ -1306,7 +1312,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vino-2.32.2
 	o vino-3.0.2
 	o visual-regexp-3.1
-	o vlc-1.1.10
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
@@ -1329,7 +1334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
-	o worker-2.17.12
+	o worker-2.17.13
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9g
 	o wxGTK28-2.8.11
