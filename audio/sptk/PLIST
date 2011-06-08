@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/02 11:57:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/08 13:32:03 obache Exp $
 SPTK/bin/acep
 SPTK/bin/acorr
 SPTK/bin/agcep
@@ -50,6 +50,7 @@ SPTK/bin/grpdelay
 SPTK/bin/gwave
 SPTK/bin/gwave.sh
 SPTK/bin/histogram
+SPTK/bin/idct
 SPTK/bin/ifft
 SPTK/bin/ifft2
 SPTK/bin/ignorm
@@ -85,7 +86,7 @@ SPTK/bin/norm0
 SPTK/bin/nrand
 SPTK/bin/par2lpc
 SPTK/bin/pca
-SPTK/bin/pcap
+SPTK/bin/pcas
 SPTK/bin/phase
 SPTK/bin/pitch
 SPTK/bin/poledf
