@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2008/05/05 10:41:22 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2011/06/08 13:03:34 obache Exp $
 
 --- setup.py.orig	2008-05-04 02:30:45.000000000 +0200
 +++ setup.py
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2008/05/05 10:41:22 drochner Exp $
                      ('share/applications', ['sonata.desktop']),
                      ('share/pixmaps', glob.glob('sonata/pixmaps/*')),
 -                    ('share/man/man1', ['sonata.1']),
-+                    ('man/man1', ['sonata.1']),
++                    ('@PKGMANDIR@/man1', ['sonata.1']),
                      ('share/locale/de/LC_MESSAGES', ['mo/de/sonata.mo']),
                      ('share/locale/pl/LC_MESSAGES', ['mo/pl/sonata.mo']),
                      ('share/locale/ru/LC_MESSAGES', ['mo/ru/sonata.mo']),
