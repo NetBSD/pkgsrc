@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/02 11:57:16 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/06/08 13:32:03 obache Exp $
 
-SHA1 (SPTK-3.4.tar.gz) = a4d40898b016bdf901059e32fe568d4839ec3b8d
-RMD160 (SPTK-3.4.tar.gz) = 00ffb879e52ee8539bff03b6cbf25f2d812d5c2b
-Size (SPTK-3.4.tar.gz) = 567094 bytes
-SHA1 (SPTKexamples-3.4.pdf) = 20cf15c3355fde44b83a9250452596fa6e665db4
-RMD160 (SPTKexamples-3.4.pdf) = 368dabdc3f29b55b602a734f53d1103b0d95f8b0
-Size (SPTKexamples-3.4.pdf) = 2410436 bytes
-SHA1 (SPTKref-3.4.pdf) = 56e9d9dc6099d64fe953b92d677857acd0b2a48d
-RMD160 (SPTKref-3.4.pdf) = 97485692c0153eddac93584b8e7916139501218f
-Size (SPTKref-3.4.pdf) = 780651 bytes
+SHA1 (SPTK-3.4.1.tar.gz) = 296531f27a64d18ef2ee7995307ea260d40ae983
+RMD160 (SPTK-3.4.1.tar.gz) = c13c21f888008dcb8481180d181a7c6bc82279bf
+Size (SPTK-3.4.1.tar.gz) = 574062 bytes
+SHA1 (SPTKexamples-3.4.1.pdf) = f2938d4e6c5076c0851ece5cfabc0b60a9681d4d
+RMD160 (SPTKexamples-3.4.1.pdf) = 389624b90ab97c1628d2789ee8e020168245c853
+Size (SPTKexamples-3.4.1.pdf) = 2410428 bytes
+SHA1 (SPTKref-3.4.1.pdf) = 1426c0eae60e163b70a43d78c816b43f20ae4159
+RMD160 (SPTKref-3.4.1.pdf) = fd1b5893dd277a86a57ff8f3dd665642eb1bd3d8
+Size (SPTKref-3.4.1.pdf) = 783126 bytes
