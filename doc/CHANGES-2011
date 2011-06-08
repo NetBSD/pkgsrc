@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1407 2011/06/08 10:07:35 fhajny Exp $
+$NetBSD: CHANGES-2011,v 1.1408 2011/06/08 13:04:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2192,3 +2192,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/nagios-plugin-radius to 1.4.15nb2 [taca 2011-06-07]
 	Updated graphics/png to 1.5.3rc02 [wiz 2011-06-08]
 	Added databases/php-redis version 5.3.6.2.1.3 [fhajny 2011-06-08]
+	Updated audio/sonata to 1.6.2.1 [obache 2011-06-08]
