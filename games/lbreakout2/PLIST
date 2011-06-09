@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/01/11 20:20:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/06/09 17:06:16 drochner Exp $
 bin/lbreakout2
 bin/lbreakout2server
 share/applications/lbreakout2.desktop
@@ -256,6 +256,7 @@ share/lbreakout2/levels/Twilight
 share/lbreakout2/levels/Vader
 share/lbreakout2/levels/WTF
 share/lbreakout2/levels/Weirdness
+share/lbreakout2/levels/Wizi
 share/lbreakout2/levels/Wolvie
 share/lbreakout2/levels/WonderWalls
 share/lbreakout2/levels/X
