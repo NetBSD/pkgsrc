@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2010/01/19 20:51:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/06/09 16:55:30 drochner Exp $
 bin/etherape
 man/man1/etherape.1
 share/applications/etherape.desktop
 share/etherape/glade/etherape.glade
 share/etherape/glade/etherape.png
-share/etherape/glade/pause.xpm
-share/etherape/glade/play.xpm
-share/etherape/glade/stop.xpm
+share/etherape/glade/nodes.xpm
 share/examples/etherape/services
 share/gnome/help/etherape/C/etherape.xml
 share/gnome/help/etherape/C/figures/all_nodes.eps
@@ -35,7 +33,9 @@ share/gnome/help/etherape/C/figures/protocol_edit_dlg.eps
 share/gnome/help/etherape/C/figures/protocol_edit_dlg.png
 share/locale/es/LC_MESSAGES/etherape.mo
 share/locale/fr/LC_MESSAGES/etherape.mo
+share/locale/it/LC_MESSAGES/etherape.mo
 share/locale/nl/LC_MESSAGES/etherape.mo
+share/locale/sv/LC_MESSAGES/etherape.mo
 share/locale/tr/LC_MESSAGES/etherape.mo
 share/omf/etherape/etherape-C.omf
 share/pixmaps/etherape.png
