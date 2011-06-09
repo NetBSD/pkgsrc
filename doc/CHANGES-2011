@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1415 2011/06/09 06:21:47 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1416 2011/06/09 06:22:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2200,3 +2200,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ucspi-tcp to 0.88nb3 [schmonz 2011-06-09]
 	Updated www/ikiwiki to 3.20110608 [schmonz 2011-06-09]
 	Updated textproc/py-html2text to 3.02 [schmonz 2011-06-09]
+	Updated mail/rss2email to 2.71 [schmonz 2011-06-09]
