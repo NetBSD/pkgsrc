@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+$NetBSD: patch-aa,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
 
---- Makefile.orig	2010-11-11 22:13:38.000000000 +0000
+--- Makefile.orig	2011-02-01 18:02:06.000000000 +0000
 +++ Makefile
 @@ -126,7 +126,7 @@ DEBUG=-g3
  
@@ -22,7 +22,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
  ifeq ($(findstring -march,$(_ASTCFLAGS) $(ASTCFLAGS)),)
    ifneq ($(PROC),ultrasparc)
      _ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
-@@ -449,7 +445,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
+@@ -442,7 +438,6 @@ dist-clean: distclean
+ 
+ distclean: $(SUBDIRS_DIST_CLEAN) _clean
+ 	@$(MAKE) -C menuselect dist-clean
+-	@$(MAKE) -C sounds dist-clean
+ 	rm -f menuselect.makeopts makeopts menuselect-tree menuselect.makedeps
+ 	rm -f makeopts.embed_rules
+ 	rm -f config.log config.status config.cache
+@@ -452,7 +447,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
  	rm -rf doc/api
  	rm -f build_tools/menuselect-deps
  
@@ -31,15 +39,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
  	CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)$(libdir)/pkgconfig;
  # Should static HTTP be installed during make samples or even with its own target ala
  # webvoicemail?  There are portions here that *could* be customized but might also be
-@@ -468,7 +464,6 @@ datafiles: _all doc/core-en_US.xml
- 	for x in images/*.jpg; do \
- 		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTDATADIR)/images ; \
- 	done
--	$(MAKE) -C sounds install
- 
- doc/core-en_US.xml: $(foreach dir,$(MOD_SUBDIRS),$(shell $(GREP) -l "language=\"en_US\"" $(dir)/*.c $(dir)/*.cc 2>/dev/null))
- 	@printf "Building Documentation For: "
-@@ -520,7 +515,7 @@ OLDHEADERS=$(filter-out $(NEWHEADERS),$(
+@@ -517,7 +512,7 @@ OLDHEADERS=$(filter-out $(NEWHEADERS),$(
  installdirs:
  	$(INSTALL) -d "$(DESTDIR)$(MODULES_DIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSBINDIR)"
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
  	$(INSTALL) -d "$(DESTDIR)$(ASTVARRUNDIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/dictate"
-@@ -547,8 +542,9 @@ installdirs:
+@@ -544,8 +539,9 @@ installdirs:
  	$(INSTALL) -d "$(DESTDIR)$(ASTDATADIR)/static-http"
  	$(INSTALL) -d "$(DESTDIR)$(ASTMANDIR)/man8"
  	$(INSTALL) -d "$(DESTDIR)$(AGI_DIR)"
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
  	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
  	$(LN) -sf asterisk $(DESTDIR)$(ASTSBINDIR)/rasterisk
  	$(INSTALL) -m 755 contrib/scripts/astgenkey $(DESTDIR)$(ASTSBINDIR)/
-@@ -640,21 +636,21 @@ upgrade: bininstall
+@@ -637,21 +633,21 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
  		if [ -f $${dst} ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s $${dst} $$x ; then \
-@@ -682,9 +678,9 @@ samples: adsi
+@@ -679,9 +675,9 @@ samples: adsi
  			-e 's|^astspooldir.*$$|astspooldir => $(ASTSPOOLDIR)|' \
  			-e 's|^astrundir.*$$|astrundir => $(ASTVARRUNDIR)|' \
  			-e 's|^astlogdir.*$$|astlogdir => $(ASTLOGDIR)|' \
@@ -97,26 +97,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
 +		rm -f $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp ; \
  	fi ; \
  	$(INSTALL) -d $(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/INBOX
- 	build_tools/make_sample_voicemail $(DESTDIR)/$(ASTDATADIR) $(DESTDIR)/$(ASTSPOOLDIR)
-@@ -710,7 +706,7 @@ samples: adsi
+ 	build_tools/make_sample_voicemail "$(DESTDIR)$(ASTDATADIR)" "$(DESTDIR)$(ASTSPOOLDIR)"
+@@ -707,7 +703,7 @@ samples: adsi
  webvmail:
  	@[ -d $(DESTDIR)$(HTTP_DOCSDIR)/ ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
  	@[ -d $(DESTDIR)$(HTTP_CGIDIR) ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
--	$(INSTALL) -m 4755 contrib/scripts/vmail.cgi $(DESTDIR)$(HTTP_CGIDIR)/vmail.cgi
-+	$(INSTALL) contrib/scripts/vmail.cgi $(DESTDIR)$(HTTP_CGIDIR)/vmail
+-	$(INSTALL) -m 4755 contrib/scripts/vmail.cgi "$(DESTDIR)$(HTTP_CGIDIR)/vmail.cgi"
++	$(INSTALL) contrib/scripts/vmail.cgi "$(DESTDIR)$(HTTP_CGIDIR)/vmail"
  	$(INSTALL) -d $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk
  	for x in images/*.gif; do \
- 		$(INSTALL) -m 644 $$x $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/; \
-@@ -854,7 +850,7 @@ uninstall-all: _uninstall
- 	rm -rf $(DESTDIR)$(ASTVARLIBDIR)
- 	rm -rf $(DESTDIR)$(ASTDATADIR)
- 	rm -rf $(DESTDIR)$(ASTSPOOLDIR)
--	rm -rf $(DESTDIR)$(ASTETCDIR)
-+	rm -rf $(DESTDIR)$(ASTEXAMPLEDIR)
- 	rm -rf $(DESTDIR)$(ASTLOGDIR)
+ 		$(INSTALL) -m 644 $$x "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/"; \
+@@ -860,7 +856,7 @@ uninstall-all: _uninstall
+ 	rm -rf "$(DESTDIR)$(ASTVARLIBDIR)"
+ 	rm -rf "$(DESTDIR)$(ASTDATADIR)"
+ 	rm -rf "$(DESTDIR)$(ASTSPOOLDIR)"
+-	rm -rf "$(DESTDIR)$(ASTETCDIR)"
++	rm -rf "$(DESTDIR)$(ASTEXAMPLEDIR)"
+ 	rm -rf "$(DESTDIR)$(ASTLOGDIR)"
  
  menuconfig: menuselect
-@@ -923,6 +919,7 @@ menuselect-tree: $(foreach dir,$(filter-
+@@ -929,6 +925,7 @@ menuselect-tree: $(foreach dir,$(filter-
  	@echo "</menu>" >> $@
  
  .PHONY: menuselect
