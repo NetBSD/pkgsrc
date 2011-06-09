@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1413 2011/06/09 01:47:23 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1414 2011/06/09 02:57:33 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2198,3 +2198,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-dbi to 0.4.5nb1 [taca 2011-06-08]
 	Updated net/djbdns to 1.05nb10 [schmonz 2011-06-09]
 	Updated net/ucspi-tcp to 0.88nb3 [schmonz 2011-06-09]
+	Updated www/ikiwiki to 3.20110608 [schmonz 2011-06-09]
