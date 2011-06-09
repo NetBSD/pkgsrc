@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/09/01 20:07:35 schmonz Exp $
+$NetBSD: patch-aa,v 1.3 2011/06/09 00:55:41 schmonz Exp $
+
+PKG_SYSCONFDIR support.
 
 --- dnscache-conf.c.orig	2001-02-11 16:11:45.000000000 -0500
 +++ dnscache-conf.c
