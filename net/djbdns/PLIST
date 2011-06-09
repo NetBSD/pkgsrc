@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/06/09 01:44:16 schmonz Exp $
 bin/axfr-get
 bin/axfrdns
 bin/axfrdns-conf
@@ -55,3 +55,5 @@ man/man8/tinydns.8
 man/man8/walldns-conf.8
 man/man8/walldns.8
 share/examples/djbdns/dnsroots.global
+${PLIST.inet6}bin/dnsip6
+${PLIST.inet6}bin/dnsip6q
