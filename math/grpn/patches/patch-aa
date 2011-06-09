@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2009/11/15 13:32:17 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2011/06/09 17:01:39 drochner Exp $
 
---- Makefile.orig	2009-11-14 01:25:54.000000000 +0100
+--- Makefile.orig	2011-05-10 16:58:46.000000000 +0000
 +++ Makefile
 @@ -3,10 +3,10 @@
  # Please read the next few lines and enter the correct values.
@@ -13,22 +13,22 @@ $NetBSD: patch-aa,v 1.4 2009/11/15 13:32:17 drochner Exp $
 -CC = gcc 
 +#CC = gcc 
  
- # Where to find the gtk-config script
- GTK_DIR =
-@@ -20,9 +20,10 @@ GTK_DIR =
+ # NOTE:
+ #
+@@ -15,9 +15,10 @@ CC = gcc 
  # add -DUSE_GNOME if you want to make grpn GNOME compliant.
  
  
--CFLAGS = -g -O2 -I/usr/include/X11  `$(GTK_DIR)pkg-config --cflags gtk+-2.0` -DGTK_VER_2_0 
-+#CFLAGS = -g -O2 -I/usr/include/X11  `$(GTK_DIR)pkg-config --cflags gtk+-2.0` -DGTK_VER_2_0 
-+CFLAGS+= `pkg-config --cflags gtk+-2.0` -DGTK_VER_2_0
+-CFLAGS = -g -O2 -I/usr/X11/include  `pkg-config --cflags gtk+-2.0` -DGTK_VER_1_1
++#CFLAGS = -g -O2 -I/usr/X11/include  `pkg-config --cflags gtk+-2.0` -DGTK_VER_1_1
++CFLAGS+= `pkg-config --cflags gtk+-2.0` -DGTK_VER_1_1
  
--DFLAGS =  -L/usr/lib/X11 
-+#DFLAGS =  -L/usr/lib/X11 
+-DFLAGS =  -L/usr/X11/lib 
++#DFLAGS =  -L/usr/X11/lib 
  
  # end of user configurable section
  
-@@ -49,12 +50,10 @@ pure:	$(OBJS)
+@@ -39,12 +40,10 @@ pure:	$(OBJS)
  	$(PURIFY) $(CC) $(DFLAGS) -o $@ $(OBJS) $(LIBS) 
  
  install:	grpn
