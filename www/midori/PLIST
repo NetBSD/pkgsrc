@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/04/08 20:02:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/06/09 11:02:13 drochner Exp $
 bin/midori
 lib/midori/libadblock.so
 lib/midori/libaddons.so
@@ -8,7 +8,6 @@ lib/midori/libcopy-tabs.so
 lib/midori/libfeed-panel.so
 lib/midori/libformhistory.so
 lib/midori/libmouse-gestures.so
-lib/midori/libpage-holder.so
 lib/midori/libshortcuts.so
 lib/midori/libstatus-clock.so
 lib/midori/libstatusbar-features.so
@@ -88,4 +87,3 @@ share/midori/res/error.html
 share/midori/res/logo-shade.png
 share/midori/res/mootools.js
 share/midori/res/speeddial-head.html
-share/midori/res/speeddial.json
