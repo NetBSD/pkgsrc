@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2011/06/05 12:13:47 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/06/09 11:18:09 drochner Exp $
 
-DISTNAME=		gtk+-3.0.10
+DISTNAME=		gtk+-3.0.11
 PKGNAME=		${DISTNAME:S/gtk/gtk3/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/3.0/ \
