@@ -1,11 +1,17 @@
-$NetBSD: patch-ab,v 1.8 2011/02/27 23:42:10 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2011/06/09 11:00:01 drochner Exp $
 
-Fix build with png-1.5. From John Bowler.
-https://bugs.webkit.org/show_bug.cgi?id=54406
-
---- WebCore/platform/image-decoders/png/PNGImageDecoder.cpp.orig	2010-12-28 12:28:51.000000000 +0000
-+++ WebCore/platform/image-decoders/png/PNGImageDecoder.cpp
-@@ -216,18 +220,18 @@ void PNGImageDecoder::headerAvailable()
+--- Source/WebCore/platform/image-decoders/png/PNGImageDecoder.cpp.orig	2011-03-21 18:43:07.000000000 +0000
++++ Source/WebCore/platform/image-decoders/png/PNGImageDecoder.cpp
+@@ -226,7 +226,7 @@ static ColorProfile readColorProfile(png
+ #ifdef PNG_iCCP_SUPPORTED
+     char* profileName;
+     int compressionType;
+-    char* profile;
++    png_byte* profile;
+     png_uint_32 profileLength;
+     if (png_get_iCCP(png, info, &profileName, &compressionType, &profile, &profileLength)) {
+         ColorProfile colorProfile;
+@@ -241,11 +241,11 @@ void PNGImageDecoder::headerAvailable()
  {
      png_structp png = m_reader->pngPtr();
      png_infop info = m_reader->infoPtr();
@@ -20,14 +26,7 @@ https://bugs.webkit.org/show_bug.cgi?id=54406
          longjmp(JMPBUF(png), 1);
          return;
      }
-     
-     // We can fill in the size now that the header is available.
-     if (!setSize(width, height)) {
-         longjmp(JMPBUF(png), 1);
-         return;
-     }
- 
-@@ -277,8 +289,7 @@ void PNGImageDecoder::headerAvailable()
+@@ -319,8 +319,7 @@ void PNGImageDecoder::headerAvailable()
  
      if (m_reader->decodingSizeOnly()) {
          // If we only needed the size, halt the reader.     
@@ -37,9 +36,9 @@ https://bugs.webkit.org/show_bug.cgi?id=54406
      }
  }
  
-@@ -300,7 +315,8 @@ void PNGImageDecoder::rowAvailable(unsig
+@@ -343,7 +342,8 @@ void PNGImageDecoder::rowAvailable(unsig
          // For PNGs, the frame always fills the entire image.
-         buffer.setRect(IntRect(IntPoint(), size()));
+         buffer.setOriginalFrameRect(IntRect(IntPoint(), size()));
  
 -        if (m_reader->pngPtr()->interlaced)
 +        if (png_get_interlace_type(m_reader->pngPtr(), m_reader->infoPtr())

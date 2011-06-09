@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2011/04/22 13:42:34 obache Exp $
+# $NetBSD: Makefile,v 1.42 2011/06/09 11:00:00 drochner Exp $
 
-DISTNAME=	webkit-1.2.7
+DISTNAME=	webkit-1.4.1
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
-PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/
 
@@ -34,6 +33,10 @@ REPLACE_PERL+=	JavaScriptCore/pcre/dftables \
 		WebCore/css/*.pl \
 		WebCore/dom/*.pl \
 		WebCore/platform/text/mac/*.pl
+
+BUILDLINK_DEPMETHOD.python= build
+.include "../../lang/python/application.mk"
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
