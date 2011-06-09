@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.26 2011/02/12 14:11:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2011/06/09 06:21:58 schmonz Exp $
 #
 
-DISTNAME=		rss2email-2.70
-PKGREVISION=		1
+DISTNAME=		rss2email-2.71
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
+EXTRACT_SUFX=		.zip
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.allthingsrss.com/rss2email/
 COMMENT=		Get RSS feeds emailed to you
+LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
