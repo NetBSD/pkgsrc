@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1417 2011/06/09 09:08:41 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1418 2011/06/09 09:08:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2202,3 +2202,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-html2text to 3.02 [schmonz 2011-06-09]
 	Updated mail/rss2email to 2.71 [schmonz 2011-06-09]
 	Updated lang/sun-jre6 to 6.0.26 [obache 2011-06-09]
+	Updated lang/sun-jdk6 to 6.0.26 [obache 2011-06-09]
