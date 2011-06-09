@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1421 2011/06/09 11:21:22 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1422 2011/06/09 11:53:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2206,3 +2206,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/asterisk18 to 1.8.4.2 [root 2011-06-09]
 	Updated comms/asterisk16 to 1.6.2.18 [root 2011-06-09]
 	Updated net/quvi to 0.2.16 [wiz 2011-06-09]
+	Updated mail/fetchmail to 6.3.20 [obache 2011-06-09]
+	Updated mail/fetchmailconf to 6.3.20 [obache 2011-06-09]
