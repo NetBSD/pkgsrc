@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.175 2011/04/22 13:44:03 obache Exp $
+# $NetBSD: Makefile,v 1.176 2011/06/09 11:52:33 obache Exp $
 
 # Note to updaters: mail/fetchmailconf reaches over here, make sure it builds.
-DISTNAME=	fetchmail-6.3.17
-PKGREVISION=	3
+DISTNAME=	fetchmail-6.3.20
 CATEGORIES=	mail
 MASTER_SITES=	http://download.berlios.de/fetchmail/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,16 +29,12 @@ CFLAGS.Darwin+=		-DBIND_8_COMPAT -DHAVE_RESOLV_H
 
 .include "options.mk"
 
+TEST_TARGET=	check
+
 DOCDIR=		${PREFIX}/share/doc/fetchmail
 RCD_SCRIPTS=	fetchmail
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-
-post-extract:
-	@${RM} -f ${WRKSRC}/intl/libintl.h
-.if ${OPSYS} == "NetBSD"
-	@${RM} -f ${WRKSRC}/md5.h
-.endif
 
 .if defined(REPLACE_KERBEROS_LIBS)
 pre-configure:
