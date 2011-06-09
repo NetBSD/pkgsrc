@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2011/01/28 01:41:53 schmonz Exp $
+$NetBSD: patch-ab,v 1.5 2011/06/09 06:21:58 schmonz Exp $
+
+Fixes from the Debian package.
 
 --- r2e.orig	2006-03-16 23:43:03.000000000 +0000
 +++ r2e
