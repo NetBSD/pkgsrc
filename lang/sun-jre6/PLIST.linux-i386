@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.21 2011/02/21 07:48:20 obache Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.22 2011/06/09 09:08:17 obache Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -11,6 +11,7 @@ bin/sun6-tnameserv
 java/sun-6/.systemPrefs/.system.lock
 java/sun-6/.systemPrefs/.systemRootModFile
 java/sun-6/COPYRIGHT
+java/sun-6/LICENSE
 java/sun-6/README
 java/sun-6/THIRDPARTYLICENSEREADME.txt
 java/sun-6/Welcome.html
@@ -122,6 +123,8 @@ java/sun-6/lib/fontconfig.RedHat.3.bfc.default
 java/sun-6/lib/fontconfig.RedHat.3.properties.src.default
 java/sun-6/lib/fontconfig.RedHat.4.bfc.default
 java/sun-6/lib/fontconfig.RedHat.4.properties.src.default
+java/sun-6/lib/fontconfig.RedHat.6.0.bfc.default
+java/sun-6/lib/fontconfig.RedHat.6.0.properties.src.default
 java/sun-6/lib/fontconfig.RedHat.bfc.default
 java/sun-6/lib/fontconfig.RedHat.properties.src.default
 java/sun-6/lib/fontconfig.SuSE.11.bfc.default
@@ -396,6 +399,7 @@ java/sun-6/lib/zi/America/Matamoros
 java/sun-6/lib/zi/America/Mazatlan
 java/sun-6/lib/zi/America/Menominee
 java/sun-6/lib/zi/America/Merida
+java/sun-6/lib/zi/America/Metlakatla
 java/sun-6/lib/zi/America/Mexico_City
 java/sun-6/lib/zi/America/Miquelon
 java/sun-6/lib/zi/America/Moncton
@@ -408,6 +412,7 @@ java/sun-6/lib/zi/America/New_York
 java/sun-6/lib/zi/America/Nipigon
 java/sun-6/lib/zi/America/Nome
 java/sun-6/lib/zi/America/Noronha
+java/sun-6/lib/zi/America/North_Dakota/Beulah
 java/sun-6/lib/zi/America/North_Dakota/Center
 java/sun-6/lib/zi/America/North_Dakota/New_Salem
 java/sun-6/lib/zi/America/Ojinaga
@@ -431,6 +436,7 @@ java/sun-6/lib/zi/America/Santiago
 java/sun-6/lib/zi/America/Santo_Domingo
 java/sun-6/lib/zi/America/Sao_Paulo
 java/sun-6/lib/zi/America/Scoresbysund
+java/sun-6/lib/zi/America/Sitka
 java/sun-6/lib/zi/America/St_Johns
 java/sun-6/lib/zi/America/St_Kitts
 java/sun-6/lib/zi/America/St_Lucia
