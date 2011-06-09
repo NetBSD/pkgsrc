@@ -1,9 +1,9 @@
-$NetBSD: patch-au,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+$NetBSD: patch-au,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
 
---- sounds/Makefile.orig	2010-10-18 22:01:16.000000000 +0000
+--- sounds/Makefile.orig	2010-12-29 19:28:36.000000000 +0000
 +++ sounds/Makefile
-@@ -135,20 +135,6 @@ endif
- all: $(SOUNDS_CACHE_DIR) $(CORE_SOUNDS) $(EXTRA_SOUNDS) $(MOH)
+@@ -150,20 +150,6 @@ prefixcmd:
+ 	@$(PREFIXCMD)
  
  have_download:
 -	@if test "$(DOWNLOAD)" = ":" ; then \
