@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1422 2011/06/09 11:53:06 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1423 2011/06/09 12:10:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2208,3 +2208,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/quvi to 0.2.16 [wiz 2011-06-09]
 	Updated mail/fetchmail to 6.3.20 [obache 2011-06-09]
 	Updated mail/fetchmailconf to 6.3.20 [obache 2011-06-09]
+	Updated games/onscripter to 20110528 [obache 2011-06-09]
