@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2009/04/22 04:48:13 schmonz Exp $
+$NetBSD: patch-ac,v 1.6 2011/06/09 00:55:41 schmonz Exp $
+
+Fix the security hole found by Matthew Dempsky.
 
 --- response.c.orig	2001-02-11 16:11:45.000000000 -0500
 +++ response.c
