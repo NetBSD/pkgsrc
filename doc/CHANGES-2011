@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1419 2011/06/09 09:17:44 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.1420 2011/06/09 09:18:01 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2204,3 +2204,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/sun-jre6 to 6.0.26 [obache 2011-06-09]
 	Updated lang/sun-jdk6 to 6.0.26 [obache 2011-06-09]
 	Updated comms/asterisk18 to 1.8.4.2 [root 2011-06-09]
+	Updated comms/asterisk16 to 1.6.2.18 [root 2011-06-09]
