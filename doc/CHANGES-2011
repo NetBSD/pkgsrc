@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1423 2011/06/09 12:10:03 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1424 2011/06/09 17:19:29 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2209,3 +2209,19 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/fetchmail to 6.3.20 [obache 2011-06-09]
 	Updated mail/fetchmailconf to 6.3.20 [obache 2011-06-09]
 	Updated games/onscripter to 20110528 [obache 2011-06-09]
+	Updated games/ltris to 1.0.16 [drochner 2011-06-09]
+	Updated games/lbreakout2 to 2.6.3 [drochner 2011-06-09]
+	Updated math/grpn to 1.3.3 [drochner 2011-06-09]
+	Updated net/etherape to 0.9.12 [drochner 2011-06-09]
+	Updated devel/eric4 to 4.4.15 [drochner 2011-06-09]
+	Updated editors/emacs to 23.3 [drochner 2011-06-09]
+	Updated x11/xscreensaver to 5.14 [drochner 2011-06-09]
+	Updated x11/py-sip to 4.12.3 [drochner 2011-06-09]
+	Updated databases/gramps3 to 3.2.6 [drochner 2011-06-09]
+	Updated cad/gplcver to 2.12a [drochner 2011-06-09]
+	Updated cad/gtkwave to 3.3.22 [drochner 2011-06-09]
+	Updated x11/gtk3 to 3.0.11 [drochner 2011-06-09]
+	Updated devel/glib2 to 2.28.8 [drochner 2011-06-09]
+	Updated lang/vala to 0.12.1 [drochner 2011-06-09]
+	Updated www/midori to 0.3.6 [drochner 2011-06-09]
+	Updated www/webkit-gtk to 1.4.1 [drochner 2011-06-09]
