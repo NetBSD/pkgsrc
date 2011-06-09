@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/04/05 17:52:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/06/09 11:10:41 drochner Exp $
 bin/vala
 bin/vala-0.12
 bin/valac
@@ -38,6 +38,7 @@ share/doc/vala/devhelp/books/statements.html
 share/doc/vala/devhelp/books/structs.html
 share/doc/vala/devhelp/books/types.html
 share/doc/vala/devhelp/books/vala.devhelp2
+share/vala-0.12/vapi/alsa.deps
 share/vala-0.12/vapi/alsa.vapi
 share/vala-0.12/vapi/atk.vapi
 share/vala-0.12/vapi/avahi-gobject.deps
