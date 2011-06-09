@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2011/05/28 08:43:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.218 2011/06/09 04:39:26 jnemeth Exp $
 
 COMMENT=	Mathematics
 
@@ -91,9 +91,9 @@ SUBDIR+=	graphopt
 SUBDIR+=	grpn
 SUBDIR+=	gsl
 SUBDIR+=	gtklife
-SUBDIR+=	itpp
 SUBDIR+=	heirloom-factor
 SUBDIR+=	heirloom-units
+SUBDIR+=	itpp
 SUBDIR+=	kseg
 SUBDIR+=	lapack
 SUBDIR+=	libffm
