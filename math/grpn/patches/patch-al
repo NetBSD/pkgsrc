@@ -1,9 +1,9 @@
-$NetBSD: patch-al,v 1.2 2009/11/15 13:32:17 drochner Exp $
+$NetBSD: patch-al,v 1.3 2011/06/09 17:01:39 drochner Exp $
 
---- button_def.c.orig	2009-11-14 01:25:54.000000000 +0100
+--- button_def.c.orig	2011-05-10 16:58:46.000000000 +0000
 +++ button_def.c
-@@ -38,6 +38,16 @@ extern void radixCmdCB(GtkWidget *, gpoi
- 
+@@ -36,6 +36,16 @@ extern void cmodeCmdCB(GtkWidget *, gpoi
+ extern void radixCmdCB(GtkWidget *, gpointer);
  
  FuncInfo invisible1[] = {
 +   { "k", "k", "Boltzmann's constant (Joules/Kelvin).",
@@ -19,7 +19,7 @@ $NetBSD: patch-al,v 1.2 2009/11/15 13:32:17 drochner Exp $
     { "Modulo", "mod", "Remainder of division.",
        genericButtonCB, (void *)ModStack },
     { "Hex", "hex", "Hexidecimal display mode.",
-@@ -159,7 +169,7 @@ struct RowInfo rowinf[] = {
+@@ -155,7 +165,7 @@ struct RowInfo rowinf[] = {
     { 8, 8, num456 },
     { 8, 8, num123 },
     { 8, 8, num0 },

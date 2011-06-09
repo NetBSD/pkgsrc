@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:44:06 obache Exp $
+# $NetBSD: Makefile,v 1.28 2011/06/09 17:01:39 drochner Exp $
 #
 
-DISTNAME=	grpn
-PKGNAME=	grpn-1.2
-DIST_SUBDIR=	grpn-1.2
-PKGREVISION=	5
+DISTNAME=	grpn_1.3.3-1
+PKGNAME=	grpn-1.3.3
 CATEGORIES=	math
 #MASTER_SITES=	http://lashwhip.com/grpn/
-MASTER_SITES=	http://www.getreu.net/public/downloads/
+MASTER_SITES=	http://www.getreu.net/public/downloads/software/grpn/grpn-1.3.3/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 # the original gtk1 version
@@ -17,7 +15,7 @@ COMMENT=	Graphical reverse polish notation (RPN) calculator
 
 BUILD_TARGET=	grpn
 USE_TOOLS+=	mkdirhier pkg-config
-WRKSRC=		${WRKDIR}/grpn-1.2
+WRKSRC=		${WRKDIR}/grpn-1.3.3
 PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../x11/gtk2/buildlink3.mk"
