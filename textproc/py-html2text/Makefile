@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2011/05/10 16:45:35 schnoebe Exp $
+# $NetBSD: Makefile,v 1.20 2011/06/09 06:21:38 schmonz Exp $
 #
 
-DISTNAME=		html2text-2.39
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=		aaronsw-${GHNAME}-${GHVERSION}-0-g${GHCOMMIT}
+GHNAME=			html2text
+GHVERSION=		3.02
+GHCOMMIT=		d9bf7d6
+PKGNAME=		${PYPKGPREFIX}-${GHNAME}-${GHVERSION}
 CATEGORIES=		textproc python
-MASTER_SITES=		${HOMEPAGE}
-EXTRACT_SUFX=		.py
+MASTER_SITES=		http://download.github.com/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.aaronsw.com/2002/html2text/
@@ -14,19 +16,13 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}
+WRKSRC=			${WRKDIR}/aaronsw-${GHNAME}-${GHCOMMIT}
 
-USE_TOOLS+=		tr
 NO_BUILD=		yes
 
 REPLACE_PYTHON=		html2text.py
 
 INSTALLATION_DIRS=	share/html2text
-
-do-extract:
-	${RUN}								\
-	${TR} -d '\r' < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}		\
-		> ${WRKSRC}/html2text.py
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/html2text.py ${DESTDIR}${PREFIX}/share/html2text
