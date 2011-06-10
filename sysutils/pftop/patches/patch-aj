@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2010/09/18 20:48:23 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2011/06/10 11:45:01 obache Exp $
 
---- sf-gencode.h.orig	2009-11-16 23:47:42 +0100
-+++ sf-gencode.h	2009-11-16 23:47:54 +0100
-@@ -169,8 +169,13 @@
+--- sf-gencode.h.orig	2007-11-07 06:34:18.000000000 +0000
++++ sf-gencode.h
+@@ -169,8 +169,13 @@ struct arth  *gen_loadage(void);
  struct arth  *gen_loadexpire(void);
  
  void bpf_optimize(struct block **);
@@ -16,7 +16,7 @@ $NetBSD: patch-aj,v 1.1 2010/09/18 20:48:23 wiz Exp $
  
  void finish_parse(struct block *);
  char *sdup(const char *);
-@@ -184,11 +189,19 @@
+@@ -184,11 +189,14 @@ void sappend(struct slist *, struct slis
  #define JT(b)  ((b)->et.succ)
  #define JF(b)  ((b)->ef.succ)
  
@@ -28,11 +28,7 @@ $NetBSD: patch-aj,v 1.1 2010/09/18 20:48:23 wiz Exp $
  const char *sf_get_error(void);
  int sf_compile(struct bpf_program *, char *, int, bpf_u_int32);
  void sf_freecode(struct bpf_program *);
-+#ifdef __DragonFly__
-+void bpf_dump(const struct bpf_program *, int);
-+#else
- void bpf_dump(struct bpf_program *, int);
-+#endif
+-void bpf_dump(struct bpf_program *, int);
  
  extern int no_optimize;
  
