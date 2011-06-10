@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2010/11/13 22:30:56 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2011/06/10 10:36:18 joerg Exp $
 
-DISTNAME=		nginx-0.8.53
+DISTNAME=		nginx-1.0.4
 DISTFILES=		${DEFAULT_DISTFILES}
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
@@ -60,7 +60,8 @@ CONF_FILES+=		${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
 
 RCD_SCRIPTS=		nginx
 
-INSTALLATION_DIRS=	sbin share/examples/nginx/conf share/examples/nginx/html
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/nginx/conf \
+			share/examples/nginx/html
 MAKE_DIRS+=		${NGINX_PIDDIR}
 OWN_DIRS=		${NGINX_LOGDIR}
 OWN_DIRS_PERMS+=	${NGINX_DATADIR} ${NGINX_USER} ${NGINX_GROUP} 0700
@@ -88,6 +89,7 @@ do-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${DESTDIR}${EGDIR}/html/50x.html
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
+	${INSTALL_MAN} ${WRKSRC}/man/nginx.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
