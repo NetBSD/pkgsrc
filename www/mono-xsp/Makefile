@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2011/04/25 14:06:08 kefren Exp $
+# $NetBSD: Makefile,v 1.25 2011/06/10 04:12:38 kefren Exp $
 
-DISTNAME=	xsp-2.10
+DISTNAME=	xsp-2.10.2
 PKGNAME=	mono-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www
