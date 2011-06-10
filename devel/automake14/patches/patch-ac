@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1 2011/06/10 09:43:41 tron Exp $
+
+Fix for CVE-2009-4029 taken from here:
+
+http://git.savannah.gnu.org/gitweb/?p=automake.git;a=commitdiff;h=449d20aa12e13fefd848604225fc83d0c39c61d0
+
+--- automake.in.orig	2002-07-27 21:55:58.000000000 +0100
++++ automake.in	2011-06-10 10:34:37.000000000 +0100
+@@ -2336,7 +2336,7 @@
+ 	# Create dist directory.
+ 	$output_rules .= ("\t-rm -rf \$(distdir)\n"
+ 			  . "\tmkdir \$(distdir)\n"
+-			  . "\t-chmod 777 \$(distdir)\n");
++			  . "\t-chmod 755 \$(distdir)\n");
+     }
+ 
+     # Only run automake in `dist' target if --include-deps and
+@@ -2468,7 +2468,7 @@
+ 	     . "\t" . '    test -d $(distdir)/$$subdir ' . "\\\n"
+ 	     . "\t" . '    || mkdir $(distdir)/$$subdir ' . "\\\n"
+ 	     . "\t" . '    || exit 1; ' . "\\\n"
+-	     . "\t" . '    chmod 777 $(distdir)/$$subdir; ' . "\\\n"
++	     . "\t" . '    chmod 755 $(distdir)/$$subdir; ' . "\\\n"
+ 	     . "\t" . '    (cd $$subdir'
+ 	     . ' && $(MAKE) $(AM_MAKEFLAGS) top_distdir=../$('
+ 	     . (($relative_dir eq '.') ? 'distdir' : 'top_distdir')
