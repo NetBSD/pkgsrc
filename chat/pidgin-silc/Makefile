@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:43:07 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/06/10 09:39:49 obache Exp $
 
 PKGNAME=	pidgin-silc-${PIDGIN_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	SILC plugin for the Pidgin instant messenger
 
 PKG_DESTDIR_SUPPORT=	user-destdir

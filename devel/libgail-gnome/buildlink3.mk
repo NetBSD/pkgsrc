@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2011/04/22 13:42:40 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2011/06/10 09:39:45 obache Exp $
 
 BUILDLINK_TREE+=	libgail-gnome
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgail-gnome
 LIBGAIL_GNOME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgail-gnome+=	libgail-gnome>=1.1.1nb2
-BUILDLINK_ABI_DEPENDS.libgail-gnome?=	libgail-gnome>=1.20.1nb7
+BUILDLINK_ABI_DEPENDS.libgail-gnome?=	libgail-gnome>=1.20.1nb8
 BUILDLINK_PKGSRCDIR.libgail-gnome?=	../../devel/libgail-gnome
 
 .include "../../devel/at-spi/buildlink3.mk"
