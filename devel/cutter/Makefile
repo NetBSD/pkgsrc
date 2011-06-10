@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/04/22 13:42:27 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/06/10 21:57:06 obache Exp $
 #
 
 DISTNAME=	cutter-1.1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cutter/}
 
