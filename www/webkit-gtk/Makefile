@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/06/09 11:00:00 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2011/06/10 09:36:57 drochner Exp $
 
 DISTNAME=	webkit-1.4.1
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
@@ -50,12 +50,11 @@ BUILDLINK_API_DEPENDS.png+= png>=1.5.1beta08
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.28.0
+BUILDLINK_API_DEPENDS.libsoup24+= libsoup24>=2.34.2
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
