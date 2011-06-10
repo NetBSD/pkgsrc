@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/05/18 09:49:03 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/10 09:39:58 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	soup
 GST_PLUGINS0.10_DIRS=	ext/soup
+
+PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
