@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.14 2011/04/25 14:01:40 kefren Exp $
+@comment $NetBSD: PLIST.common,v 1.15 2011/06/10 04:11:29 kefren Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -639,8 +639,10 @@ lib/mono/gac/Mono.Web/2.0.0.0__0738eb9f132ed756/Mono.Web.dll
 lib/mono/gac/Mono.Web/2.0.0.0__0738eb9f132ed756/Mono.Web.dll.mdb
 lib/mono/gac/Mono.Web/4.0.0.0__0738eb9f132ed756/Mono.Web.dll
 lib/mono/gac/Mono.Web/4.0.0.0__0738eb9f132ed756/Mono.Web.dll.mdb
-lib/mono/gac/Mono.WebBrowser/0.5.0.0__0738eb9f132ed756/Mono.WebBrowser.dll
-lib/mono/gac/Mono.WebBrowser/0.5.0.0__0738eb9f132ed756/Mono.WebBrowser.dll.mdb
+lib/mono/gac/Mono.WebBrowser/2.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll
+lib/mono/gac/Mono.WebBrowser/2.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll.mdb
+lib/mono/gac/Mono.WebBrowser/4.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll
+lib/mono/gac/Mono.WebBrowser/4.0.0.0__0738eb9f132ed756/Mono.WebBrowser.dll.mdb
 lib/mono/gac/Novell.Directory.Ldap/2.0.0.0__0738eb9f132ed756/Novell.Directory.Ldap.dll
 lib/mono/gac/Novell.Directory.Ldap/2.0.0.0__0738eb9f132ed756/Novell.Directory.Ldap.dll.mdb
 lib/mono/gac/Novell.Directory.Ldap/4.0.0.0__0738eb9f132ed756/Novell.Directory.Ldap.dll
@@ -892,6 +894,10 @@ lib/mono/xbuild/Microsoft/Silverlight/v3.0/Microsoft.Silverlight.Common.targets
 lib/mono/xbuild/Microsoft/Silverlight/v3.0/Microsoft.Silverlight.VisualBasic.targets
 lib/mono/xbuild/Microsoft/Silverlight/v3.0/Moonlight.Build.Tasks.dll
 lib/mono/xbuild/Microsoft/VisualStudio/v9.0/WebApplications/Microsoft.WebApplication.targets
+lib/mono/xbuild-frameworks/.NETFramework/v2.0/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v3.0/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v3.5/RedistList/FrameworkList.xml
+lib/mono/xbuild-frameworks/.NETFramework/v4.0/RedistList/FrameworkList.xml
 lib/monodoc/monodoc.xml
 lib/monodoc/sources/Mono.source
 lib/monodoc/sources/Mono.tree

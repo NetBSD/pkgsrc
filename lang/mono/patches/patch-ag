@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.9 2010/12/29 05:41:20 obache Exp $
---- mono/metadata/threadpool.c.orig	2010-10-07 22:59:36.000000000 +0300
-+++ mono/metadata/threadpool.c	2010-10-07 23:00:03.000000000 +0300
-@@ -1898,7 +1898,7 @@ async_invoke_thread (gpointer data)
+$NetBSD: patch-ag,v 1.10 2011/06/10 04:11:29 kefren Exp $
+--- mono/metadata/threadpool.c.orig	2011-04-18 14:23:28.000000000 +0300
++++ mono/metadata/threadpool.c	2011-06-10 05:39:18.000000000 +0300
+@@ -1468,7 +1468,7 @@ async_invoke_thread (gpointer data)
+ 			gboolean res;
  
- 			TP_DEBUG ("Waiting");
  			InterlockedIncrement (&tp->waiting);
 -#if defined(__OpenBSD__)
 +#if (defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__))
