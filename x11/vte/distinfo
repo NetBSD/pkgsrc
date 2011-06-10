@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2010/11/16 13:53:06 drochner Exp $
+$NetBSD: distinfo,v 1.48 2011/06/10 17:07:16 drochner Exp $
 
 SHA1 (vte-0.26.2.tar.bz2) = 4c8fb07403538b7f743ec1d7af7b127683c7b9c2
 RMD160 (vte-0.26.2.tar.bz2) = 22a2217f69c2f64090a9d45105047fb1a440b07f
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 3b357bf9d1bca93c24f5b09dae1adec82323be0d
 SHA1 (patch-af) = 69ea7e022f6c495c3c9af681d05644b9d70e7bdc
 SHA1 (patch-ah) = 28cee2661439d7d6f1959ebf3c7d1b7b3fe0a764
 SHA1 (patch-ai) = 986dd7c2a5778c9c35100901cfaa25acd0cbdc32
+SHA1 (patch-aj) = 7d4d272bd86948f93b9218d6268332e0ece677f0
