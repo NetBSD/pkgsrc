@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2010/10/21 20:33:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/06/10 09:33:53 drochner Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
 include/libsoup-2.4/libsoup/soup-auth-domain.h
 include/libsoup-2.4/libsoup/soup-auth.h
+include/libsoup-2.4/libsoup/soup-cache.h
 include/libsoup-2.4/libsoup/soup-content-decoder.h
 include/libsoup-2.4/libsoup/soup-content-sniffer.h
 include/libsoup-2.4/libsoup/soup-cookie-jar-text.h
@@ -22,8 +23,14 @@ include/libsoup-2.4/libsoup/soup-misc.h
 include/libsoup-2.4/libsoup/soup-multipart.h
 include/libsoup-2.4/libsoup/soup-password-manager.h
 include/libsoup-2.4/libsoup/soup-portability.h
+include/libsoup-2.4/libsoup/soup-proxy-resolver-default.h
 include/libsoup-2.4/libsoup/soup-proxy-resolver.h
 include/libsoup-2.4/libsoup/soup-proxy-uri-resolver.h
+include/libsoup-2.4/libsoup/soup-request-data.h
+include/libsoup-2.4/libsoup/soup-request-file.h
+include/libsoup-2.4/libsoup/soup-request-http.h
+include/libsoup-2.4/libsoup/soup-request.h
+include/libsoup-2.4/libsoup/soup-requester.h
 include/libsoup-2.4/libsoup/soup-server.h
 include/libsoup-2.4/libsoup/soup-session-async.h
 include/libsoup-2.4/libsoup/soup-session-feature.h
