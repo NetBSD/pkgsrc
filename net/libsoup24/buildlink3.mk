@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/04/22 13:42:16 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/06/10 09:39:43 obache Exp $
 
 BUILDLINK_TREE+=	libsoup24
 
@@ -7,7 +7,7 @@ LIBSOUP24_BUILDLINK3_MK:=
 
 # API 2.4.0 but 2.28.0 due to buildlink dependency change
 BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.28.0
-BUILDLINK_ABI_DEPENDS.libsoup24?=	libsoup24>=2.32.2nb1
+BUILDLINK_ABI_DEPENDS.libsoup24?=	libsoup24>=2.34.2
 BUILDLINK_PKGSRCDIR.libsoup24?=		../../net/libsoup24
 
 .include "../../databases/sqlite3/buildlink3.mk"

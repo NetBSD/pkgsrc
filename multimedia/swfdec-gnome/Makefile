@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2011/04/22 13:44:18 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/06/10 09:39:58 obache Exp $
 #
 
 DISTNAME=	swfdec-gnome-2.28.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/swfdec-gnome/2.28/}
 EXTRACT_SUFX=	.tar.bz2

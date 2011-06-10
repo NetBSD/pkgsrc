@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/04/22 13:42:41 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/10 09:39:46 obache Exp $
 #
 
 DISTNAME=	gupnp-av-0.5.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.gupnp.org/sources/gupnp-av/
 
