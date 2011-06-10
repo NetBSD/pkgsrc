@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2011/04/22 13:42:45 obache Exp $
+# $NetBSD: Makefile,v 1.51 2011/06/10 09:39:58 obache Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PKGREVISION=	3
+PKGREVISION=	4
 
 DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 
