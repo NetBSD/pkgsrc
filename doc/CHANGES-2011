@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1427 2011/06/10 09:44:04 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1428 2011/06/10 12:10:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/mono to 2.10.2 [kefren 2011-06-10]
 	Updated www/mono-xsp to 2.10.2 [kefren 2011-06-10]
 	Updated devel/automake14 to 1.4.6nb1 [tron 2011-06-10]
+	Updated www/nginx to 1.0.4 [joerg 2011-06-10]
