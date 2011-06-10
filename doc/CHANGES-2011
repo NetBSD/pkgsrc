@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1424 2011/06/09 17:19:29 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.1425 2011/06/10 02:10:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2225,3 +2225,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/vala to 0.12.1 [drochner 2011-06-09]
 	Updated www/midori to 0.3.6 [drochner 2011-06-09]
 	Updated www/webkit-gtk to 1.4.1 [drochner 2011-06-09]
+	Updated security/ruby-roauth to 0.0.7 [obache 2011-06-10]
