@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10370 2011/06/10 04:14:02 kefren Exp $
+$NetBSD: TODO,v 1.10371 2011/06/10 12:10:50 joerg Exp $
 
 Suggested new packages
 ======================
@@ -996,7 +996,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newmail-1.0.2
 	o newt-0.52.12
 	o ng-1.4.4
-	o nginx-1.0.0
 	o nikto-2.0.1
 	o notification-daemon-0.7.0
 	o ns-3.10
