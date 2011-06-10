@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2011/05/22 22:47:19 tron Exp $
+# $NetBSD: Makefile,v 1.22 2011/06/10 21:57:06 obache Exp $
 
 DISTNAME=	apr-util-1.3.12
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
