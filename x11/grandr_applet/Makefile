@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 13:45:03 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/06/10 09:40:03 obache Exp $
 #
 
 DISTNAME=	grandr_applet-0.4
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11
 MASTER_SITES=	http://dekorte.homeip.net/download/grandr-applet/
 
