@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/10/16 05:03:23 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/06/10 02:09:57 obache Exp $
 
-SHA1 (roauth-0.0.6.gem) = ba636509babfcb28d9141529a3d40fd098e23736
-RMD160 (roauth-0.0.6.gem) = d6f8efcbb9c3b6436a8ead0607e0b061c8d2e143
-Size (roauth-0.0.6.gem) = 7168 bytes
+SHA1 (roauth-0.0.7.gem) = 2e21a85fa1f9c01d5d8731c13813e0c06f0bc9d9
+RMD160 (roauth-0.0.7.gem) = 50435c2dd1664a65852a000909e42361f971ca01
+Size (roauth-0.0.7.gem) = 7168 bytes
