@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:45:04 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/06/10 09:40:03 obache Exp $
 
 DISTNAME=	gtksourceview-sharp-2.0-0.12
 PKGNAME=	${DISTNAME:S/-2.0-/2-/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gtksourceview-sharp2/
 EXTRACT_SUFX=	.tar.bz2
