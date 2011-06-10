@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2011/03/11 21:00:06 drochner Exp $
+$NetBSD: MESSAGE,v 1.3 2011/06/10 16:23:45 drochner Exp $
 
 Execute these commands to extract and rehash all CA root certificates
 distributed by the Mozilla Project, so that they can be used by third
@@ -15,4 +15,13 @@ be used by applications using GnuTLS, do the following:
 	# mkdir -p /etc/ssl/certs
 	# cd /etc/ssl/certs
 	# cat ../../openssl/certs/*.pem >ca-certificates.crt
+
+To mark these certificates as trusted for users of gnupg2, do
+the following (assuming default PKG_SYSCONFBASE and a Bourne shell):
+
+	# mkdir /usr/pkg/etc/gnupg
+	# cd /usr/pkg/etc/gnupg
+	# for c in /etc/openssl/certs/*.pem; do
+	> openssl x509 -in $c -noout -fingerprint|sed 's|^.*=\(.*\)|\1 S|'
+	> done > trustlist.txt
 ===========================================================================
