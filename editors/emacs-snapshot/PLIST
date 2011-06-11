@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/05/27 21:41:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/06/11 20:53:11 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1024,6 +1024,7 @@ share/emacs/${EMACS_VERSION}/leim/quail/hebrew.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/hebrew.elc
 share/emacs/${EMACS_VERSION}/leim/quail/indian.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/indian.elc
+share/emacs/${EMACS_VERSION}/leim/quail/ipa-praat.el
 share/emacs/${EMACS_VERSION}/leim/quail/ipa.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/ipa.elc
 share/emacs/${EMACS_VERSION}/leim/quail/japanese.el.gz
@@ -3607,6 +3608,8 @@ share/emacs/${EMACS_VERSION}/lisp/url/url-dired.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-dired.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-expand.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-expand.elc
+share/emacs/${EMACS_VERSION}/lisp/url/url-future.el.gz
+share/emacs/${EMACS_VERSION}/lisp/url/url-future.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-file.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-file.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-ftp.el.gz
