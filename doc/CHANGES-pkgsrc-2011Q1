@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.33 2011/06/09 18:44:51 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.34 2011/06/11 05:13:27 sbd Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -122,3 +122,9 @@ graphics/png security update.
 Pullup ticket #3452 - requested by obache
 lang/sun-jdk6: security update
 lang/sun-jre6: security update
+Pullup ticket #3450 - requested by tron
+mail/dovecot2 security update
+Pullup ticket #3451 - requested by tron
+textproc/libxml2 security update
+Pullup ticket #3453 - requested by tron
+devel/automake14 security update
