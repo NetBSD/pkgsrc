@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/03/23 14:51:54 taca Exp $
+# $NetBSD: Makefile,v 1.5 2011/06/11 03:25:00 taca Exp $
 
 DISTNAME=	railties-${RUBY_RAILS3_VERSION}
 CATEGORIES=	databases
@@ -11,7 +11,7 @@ LICENSE=	mit
 RUBY_RAILS=	3
 
 DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.14.4<0.15:../../devel/ruby-thor
-DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
+#DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 
 .include "../../lang/ruby/gem.mk"
