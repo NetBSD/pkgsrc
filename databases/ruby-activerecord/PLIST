@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/10/15 11:35:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/06/11 03:13:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README
@@ -198,9 +198,7 @@ ${GEM_LIBDIR}/test/fixtures/developers_projects.yml
 ${GEM_LIBDIR}/test/fixtures/edges.yml
 ${GEM_LIBDIR}/test/fixtures/entrants.yml
 ${GEM_LIBDIR}/test/fixtures/faces.yml
-${GEM_LIBDIR}/test/fixtures/fixture_database.sqlite
 ${GEM_LIBDIR}/test/fixtures/fixture_database.sqlite3
-${GEM_LIBDIR}/test/fixtures/fixture_database_2.sqlite
 ${GEM_LIBDIR}/test/fixtures/fixture_database_2.sqlite3
 ${GEM_LIBDIR}/test/fixtures/fk_test_has_fk.yml
 ${GEM_LIBDIR}/test/fixtures/fk_test_has_pk.yml
