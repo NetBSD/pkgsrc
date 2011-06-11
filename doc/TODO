@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10371 2011/06/10 12:10:50 joerg Exp $
+$NetBSD: TODO,v 1.10372 2011/06/11 04:44:18 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -1189,7 +1189,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o seahorse-2.32.0
 	o seamonkey-2.0.13
 	o sendfile-20010424
-	o sendmail-8.14.5
 	o ser-0.9.6
 	o sessreg-1.0.6
 	o setxkbmap-1.2.0
