@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1433 2011/06/11 03:17:01 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1434 2011/06/11 03:26:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2242,3 +2242,11 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-activerecord to 2.3.12 [taca 2011-06-11]
 	Updated www/ruby-activeresource to 2.3.12 [taca 2011-06-11]
 	Updated www/ruby-rails to 2.3.12 [taca 2011-06-11]
+	Updated devel/ruby-activesupport3 to 3.0.8 [taca 2011-06-11]
+	Updated devel/ruby-activemodel to 3.0.8 [taca 2011-06-11]
+	Updated www/ruby-actionpack3 to 3.0.8 [taca 2011-06-11]
+	Updated databases/ruby-activerecord3 to 3.0.8 [taca 2011-06-11]
+	Updated www/ruby-activeresource3 to 3.0.8 [taca 2011-06-11]
+	Updated mail/ruby-actionmailer3 to 3.0.8 [taca 2011-06-11]
+	Updated devel/ruby-railties to 3.0.8 [taca 2011-06-11]
+	Updated www/ruby-rails3 to 3.0.8 [taca 2011-06-11]
