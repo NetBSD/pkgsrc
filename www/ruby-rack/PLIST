@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2010/09/10 13:16:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/06/11 02:42:44 taca Exp $
 bin/rackup
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/KNOWN-ISSUES
 ${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/SPEC
 ${GEM_LIBDIR}/bin/rackup
 ${GEM_LIBDIR}/contrib/rack_logo.svg
@@ -73,6 +74,7 @@ ${GEM_LIBDIR}/test/cgi/sample_rackup.ru
 ${GEM_LIBDIR}/test/cgi/test
 ${GEM_LIBDIR}/test/cgi/test.fcgi
 ${GEM_LIBDIR}/test/cgi/test.ru
+${GEM_LIBDIR}/test/gemloader.rb
 ${GEM_LIBDIR}/test/multipart/bad_robots
 ${GEM_LIBDIR}/test/multipart/binary
 ${GEM_LIBDIR}/test/multipart/empty
