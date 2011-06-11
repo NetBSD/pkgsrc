@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/03/23 15:03:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/06/11 02:38:03 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -19,12 +19,15 @@ ${GEM_LIBDIR}/lib/bundler/deployment.rb
 ${GEM_LIBDIR}/lib/bundler/dsl.rb
 ${GEM_LIBDIR}/lib/bundler/environment.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helper.rb
+${GEM_LIBDIR}/lib/bundler/gem_tasks.rb
 ${GEM_LIBDIR}/lib/bundler/graph.rb
 ${GEM_LIBDIR}/lib/bundler/index.rb
 ${GEM_LIBDIR}/lib/bundler/installer.rb
 ${GEM_LIBDIR}/lib/bundler/lazy_specification.rb
 ${GEM_LIBDIR}/lib/bundler/lockfile_parser.rb
 ${GEM_LIBDIR}/lib/bundler/man/bundle
+${GEM_LIBDIR}/lib/bundler/man/bundle-benchmark
+${GEM_LIBDIR}/lib/bundler/man/bundle-benchmark.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle-config
 ${GEM_LIBDIR}/lib/bundler/man/bundle-config.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle-exec
@@ -41,6 +44,7 @@ ${GEM_LIBDIR}/lib/bundler/man/gemfile.5.txt
 ${GEM_LIBDIR}/lib/bundler/remote_specification.rb
 ${GEM_LIBDIR}/lib/bundler/resolver.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_ext.rb
+${GEM_LIBDIR}/lib/bundler/rubygems_integration.rb
 ${GEM_LIBDIR}/lib/bundler/runtime.rb
 ${GEM_LIBDIR}/lib/bundler/settings.rb
 ${GEM_LIBDIR}/lib/bundler/setup.rb
