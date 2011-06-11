@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/03/10 13:42:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2011/06/11 05:11:43 sbd Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -129,6 +129,7 @@ include/dovecot/ioloop-iolist.h
 include/dovecot/ioloop-notify-fd.h
 include/dovecot/ioloop.h
 include/dovecot/iostream-internal.h
+include/dovecot/ipwd.h
 include/dovecot/istream-attachment.h
 include/dovecot/istream-base64-encoder.h
 include/dovecot/istream-concat.h
@@ -380,6 +381,7 @@ man/man1/doveadm-fetch.1
 man/man1/doveadm-force-resync.1
 man/man1/doveadm-help.1
 man/man1/doveadm-import.1
+man/man1/doveadm-index.1
 man/man1/doveadm-kick.1
 man/man1/doveadm-log.1
 man/man1/doveadm-mailbox.1
@@ -468,6 +470,7 @@ share/doc/dovecot/wiki/Design.txt
 share/doc/dovecot/wiki/Dict.txt
 share/doc/dovecot/wiki/Director.txt
 share/doc/dovecot/wiki/DomainLost.txt
+share/doc/dovecot/wiki/Errors.ChgrpNoPerm.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
@@ -542,6 +545,9 @@ share/doc/dovecot/wiki/Pigeonhole.ManageSieve.Troubleshooting.txt
 share/doc/dovecot/wiki/Pigeonhole.ManageSieve.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Configuration.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Examples.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.SpamtestVirustest.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Vacation.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extdata.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Usage.txt
