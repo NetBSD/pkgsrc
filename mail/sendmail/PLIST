@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/01/16 00:31:13 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/06/11 04:44:08 jnemeth Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -202,6 +202,7 @@ share/sendmail/ostype/riscos4.5.m4
 share/sendmail/ostype/sco-uw-2.1.m4
 share/sendmail/ostype/sco3.2.m4
 share/sendmail/ostype/sinix.m4
+share/sendmail/ostype/solaris11.m4
 share/sendmail/ostype/solaris2.m4
 share/sendmail/ostype/solaris2.ml.m4
 share/sendmail/ostype/solaris2.pre5.m4
