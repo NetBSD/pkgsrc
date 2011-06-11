@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/28 13:23:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/06/11 02:49:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/README.rdoc
@@ -82,6 +82,7 @@ ${GEM_LIBDIR}/lib/mail/network.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/file_delivery.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/sendmail.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/smtp.rb
+${GEM_LIBDIR}/lib/mail/network/delivery_methods/smtp_connection.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/test_mailer.rb
 ${GEM_LIBDIR}/lib/mail/network/retriever_methods/base.rb
 ${GEM_LIBDIR}/lib/mail/network/retriever_methods/imap.rb
