@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1429 2011/06/10 17:49:55 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1430 2011/06/11 02:39:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2231,3 +2231,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/automake14 to 1.4.6nb1 [tron 2011-06-10]
 	Updated www/nginx to 1.0.4 [joerg 2011-06-10]
 	Updated databases/sqlite3 to 3.7.6.3 [tron 2011-06-10]
+	Updated databases/ruby-arel to 2.0.10 [taca 2011-06-11]
+	Updated misc/ruby-bundler to 1.0.15 [taca 2011-06-11]
