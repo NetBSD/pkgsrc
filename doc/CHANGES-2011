@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1431 2011/06/11 02:47:25 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1432 2011/06/11 02:50:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2235,3 +2235,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/ruby-bundler to 1.0.15 [taca 2011-06-11]
 	Updated www/ruby-rack to 1.2.3 [taca 2011-06-11]
 	Updated www/ruby-rack-mount to 0.6.14 [taca 2011-06-11]
+	Updated mail/ruby-mail to 2.2.19 [taca 2011-06-11]
