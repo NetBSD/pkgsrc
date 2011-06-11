@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/05/11 01:27:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/06/11 18:54:23 ryoon Exp $
 bin/fotoxx
 share/applications/kornelix-fotoxx.desktop
 share/doc/fotoxx/CHANGES
@@ -31,6 +31,7 @@ share/doc/fotoxx/images/sharpen.jpeg
 share/doc/fotoxx/images/smart-erase.png
 share/doc/fotoxx/images/stack.png
 share/doc/fotoxx/images/tone-mapping.png
+share/doc/fotoxx/images/translate.jpg
 share/doc/fotoxx/images/trim.jpg
 share/doc/fotoxx/images/unbend.png
 share/doc/fotoxx/images/watermark.jpg
