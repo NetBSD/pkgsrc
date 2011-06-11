@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/03/23 14:50:15 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/11 03:24:05 taca Exp $
 
 DISTNAME=	actionmailer-${RUBY_RAILS3_VERSION}
 CATEGORIES=	mail devel
@@ -11,7 +11,7 @@ LICENSE=	mit
 RUBY_RAILS=	3
 
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.2.15<2.3:../../mail/ruby-mail
+DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.2.19<2.3:../../mail/ruby-mail
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
