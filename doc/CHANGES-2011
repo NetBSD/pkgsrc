@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1436 2011/06/11 18:55:36 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1437 2011/06/11 19:24:26 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2252,3 +2252,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-rails3 to 3.0.8 [taca 2011-06-11]
 	Updated mail/sendmail to 8.14.5 [root 2011-06-11]
 	Updated graphics/fotoxx to 11.06.1 [ryoon 2011-06-11]
+	Updated lang/sbcl to 1.0.49 [asau 2011-06-11]
