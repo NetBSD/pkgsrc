@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2010/09/10 18:52:06 joerg Exp $
+$NetBSD: distinfo,v 1.14 2011/06/12 00:21:53 dholland Exp $
 
-SHA1 (libXi-1.3.2.tar.bz2) = 50fdac374d45feb4fe39938d3530bd4f314f3a85
-RMD160 (libXi-1.3.2.tar.bz2) = c3811a4c3ed3b8d216ba1ac53b7d51fc2beaa449
-Size (libXi-1.3.2.tar.bz2) = 362340 bytes
+SHA1 (libXi-1.4.3.tar.bz2) = c66cfdee74e8d169a7992b5f257395e653ca761b
+RMD160 (libXi-1.4.3.tar.bz2) = 142d44e8e13abbb8a41826b7005f8ede1807e3ff
+Size (libXi-1.4.3.tar.bz2) = 422637 bytes
