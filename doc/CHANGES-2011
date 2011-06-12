@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1438 2011/06/11 20:54:01 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1439 2011/06/12 00:23:06 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2139,6 +2139,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/drupal6 to 6.21 [taca 2011-05-28]
 	Updated www/drupal6 to 6.22 [taca 2011-05-28]
 	Updated audio/picard to 0.14 [gls 2011-05-28]
+	Updated games/velena to 1.0nb4 [dholland 2011-05-28]
 	Updated lang/ruby18-base to 1.8.7.334nb2 [taca 2011-05-29]
 	Updated inputmethod/uim to 1.7.0 [obache 2011-05-29]
 	Updated inputmethod/uim-elisp to 1.7.0 [obache 2011-05-29]
@@ -2254,3 +2255,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/fotoxx to 11.06.1 [ryoon 2011-06-11]
 	Updated lang/sbcl to 1.0.49 [asau 2011-06-11]
 	Updated editors/emacs-snapshot to 24.0.50.20110608 [minskim 2011-06-11]
+	Updated x11/libXi to 1.4.3 [dholland 2011-06-12]
