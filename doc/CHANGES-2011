@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1442 2011/06/12 09:07:24 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1443 2011/06/12 11:08:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2259,3 +2259,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/xbiff to 1.0.3 [dholland 2011-06-12]
 	Updated games/sex to 1.0nb1 [dholland 2011-06-12]
 	Added misc/libreoffice3-bin version 3.3.2 [ryoon 2011-06-12]
+	Updated mail/milter-manager to 1.8.0 [obache 2011-06-12]
