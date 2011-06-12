@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.5 2006/09/14 15:35:46 jmmv Exp $
+# $NetBSD: verifypc.sh,v 1.6 2011/06/12 20:28:33 dholland Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -123,13 +123,13 @@ main() {
         err "pkg-config log not found; must run '${MAKE} configure' first"
 
     # Construct a list of dependency specifications for the current package.
-    SORTED_DEPS=$(${MAKE} show-vars VARNAMES="BUILD_DEPENDS DEPENDS" | tr ' ' '
-' | sed 's,\([.<>=]\)\([0-9][.:n]\),\10\2,g' | \
-    sed 's,\([.<>=]\)\([0-9][.:n]\),\10\2,g' | \
-    sort -r | \
-    sed 's,\([.<>=]\)0\([0-9][.:n]\),\1\2,g' | \
-    sed 's,\([.<>=]\)0\([0-9][.:n]\),\1\2,g' | \
-    uniq)
+    #
+    # (The list is no longer actually sorted -- the important part is that
+    # the loop in search_file_in_depends finds the most restrictive spec
+    # first, which used to be done by sorting but is now done with 
+    # reduce-depends.)
+    SORTED_DEPS=$(awk -f ../../mk/flavor/pkg/reduce-depends.awk \
+	"$(${MAKE} show-vars VARNAMES='BUILD_DEPENDS DEPENDS')")
 
     error=0
     lines=$(cat ${log} | sort | uniq | tr ' ' '¬')
