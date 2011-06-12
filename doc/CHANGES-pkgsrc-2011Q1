@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.34 2011/06/11 05:13:27 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.35 2011/06/12 12:38:14 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -128,3 +128,10 @@ Pullup ticket #3451 - requested by tron
 textproc/libxml2 security update
 Pullup ticket #3453 - requested by tron
 devel/automake14 security update
+Pullup ticket #3455 - requested by taca
+devel/java-subversion: security update
+devel/p5-subversion: security update
+devel/py-subversion: security update
+devel/subversion: security update
+devel/subversion-base: security update
+www/ap2-subversion: security update
