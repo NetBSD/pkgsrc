@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/12 15:14:52 joerg Exp $
+$NetBSD: distinfo,v 1.2 2011/06/12 00:31:02 dholland Exp $
 
-SHA1 (xbiff-1.0.1.tar.bz2) = 9a925f8565e79c9e24cca66b8e5d868a5670b08f
-RMD160 (xbiff-1.0.1.tar.bz2) = a728ca1004b88b7909de4bec6045e7ae0802b392
-Size (xbiff-1.0.1.tar.bz2) = 83634 bytes
+SHA1 (xbiff-1.0.3.tar.bz2) = 17337a951264f0f96f6d03893f9dfd9cf8f12a5a
+RMD160 (xbiff-1.0.3.tar.bz2) = 05a38bee9e9207e4630691ee430faefa055698eb
+Size (xbiff-1.0.3.tar.bz2) = 116043 bytes
