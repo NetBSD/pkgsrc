@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/26 09:51:52 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/12 04:47:26 dholland Exp $
 
 DISTNAME=	sex-1.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://spatula.net/software/sex/
 
