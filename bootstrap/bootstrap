@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.166 2011/04/15 09:02:00 joerg Exp $
+# $NetBSD: bootstrap,v 1.167 2011/06/12 07:58:51 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -57,7 +57,6 @@ usage="Usage: $0 "'
     [ --pkgmandir <pkgmandir> ]
     [ --sysconfdir <sysconfdir> ]
     [ --varbase <varbase> ]
-    [ --fetch-cmd <ftp command> ]
     [ --ignore-case-check ]
     [ --unprivileged | --ignore-user-check ]
     [ --preserve-path ]
@@ -383,8 +382,6 @@ while [ $# -gt 0 ]; do
 	--sysconfdir)	sysconfdir="$2"; shift ;;
 	--varbase=*)	varbase=`get_optarg "$1"` ;;
 	--varbase)	varbase="$2"; shift ;;
-	--fetch-cmd=*)	fetch_cmd=`get_optarg "$1"` ;;
-	--fetch-cmd)	fetch_cmd="$2"; shift ;;
 	--compiler=*)	compiler=`get_optarg "$1"` ;;
 	--compiler)	compiler="$2"; shift ;;
 	--abi=*)	abi=`get_optarg "$1"` ;;
@@ -470,7 +467,6 @@ Darwin)
 	need_awk=no
 	need_sed=no
 	set_opsys=no
-	[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
 	machine_arch=`uname -p`
 	CC=${CC:-"gcc -isystem /usr/include"}; export CC
 	osrev=`uname -r`
@@ -493,16 +489,6 @@ DragonFly)
 	set_opsys=no
 	check_prog tarprog tar
 	machine_arch=`uname -p`
-	case `uname -r` in
-	1.1[0-9]*)
-		[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
-		;;
-	1.0* | 1.1 | 1.2.* | 1.3.*)
-		;;
-	*)
-		[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
-		;;
-	esac
 	;;
 FreeBSD)
 	root_group=wheel
@@ -624,7 +610,6 @@ MirBSD)
 	set_opsys=no
 	check_prog mtreeprog mtree
 	machine_arch=`arch -s`
-	[ -z "$fetch_cmd" ] && fetch_cmd=/usr/bin/ftp
 	# there is no /usr/bin/cc, so use mgcc if unset
 	test -n "$CC" || { CC=mgcc; export CC; }
 	# get some variables from the native make if unset
@@ -675,7 +660,6 @@ QNX)
 	set_opsys=no
 	groupsprog="id -gn"
 	whoamiprog="id -un"
-	fetch_cmd="/usr/bin/ftp"
 	machine_arch=`uname -p | sed -e 's/x86/i386/'`
 	;;
 SunOS)
@@ -1023,10 +1007,6 @@ run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/info/pkg_i
 echo "PKG_ADMIN_CMD?=			$wrkdir/sbin/pkg_admin" >> ${BOOTSTRAP_MKCONF}
 echo "PKG_CREATE_CMD?=			$wrkdir/sbin/pkg_create" >> ${BOOTSTRAP_MKCONF}
 echo "PKG_INFO_CMD?=			$wrkdir/sbin/pkg_info" >> ${BOOTSTRAP_MKCONF}
-
-if [ -n "${fetch_cmd}" ]; then
-	echo "FETCH_CMD=		$fetch_cmd" >> ${TARGET_MKCONF}
-fi
 
 MAKECONF=$wrkdir/mk.conf
 export MAKECONF
