@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.360 2011/05/29 13:53:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.361 2011/06/12 09:08:12 ryoon Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -142,6 +142,7 @@ SUBDIR+=	latin-words-bin
 SUBDIR+=	less
 SUBDIR+=	libcdio
 SUBDIR+=	libquantum
+SUBDIR+=	libreoffice3-bin
 SUBDIR+=	libutf
 SUBDIR+=	lile
 SUBDIR+=	linux-words
