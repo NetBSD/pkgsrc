@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1444 2011/06/12 11:46:42 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1445 2011/06/12 12:41:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-gtk to 0.90.9 [obache 2011-06-12]
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.90.9 [obache 2011-06-12]
 	Updated x11/ruby-gnome2-vte to 0.90.9 [obache 2011-06-12]
+	Updated net/mikutter to 0.0.3.8 [obache 2011-06-12]
