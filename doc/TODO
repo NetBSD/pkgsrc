@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10374 2011/06/12 00:23:06 dholland Exp $
+$NetBSD: TODO,v 1.10375 2011/06/12 00:31:48 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1342,7 +1342,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xaric-0.13.2
 	o xauth-1.0.6
 	o xbacklight-1.1.2
-	o xbiff-1.0.3
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
 	o xbitmaps-1.1.1
