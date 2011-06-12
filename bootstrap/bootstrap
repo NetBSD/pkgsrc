@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.167 2011/06/12 07:58:51 obache Exp $
+# $NetBSD: bootstrap,v 1.168 2011/06/12 08:28:32 obache Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -39,7 +39,6 @@ BOOTSTRAP_VERSION=20060721
 MAKECONF=/dev/null
 export MAKECONF
 
-ignorecasecheck=no
 unprivileged=no
 
 preserve_path=no
@@ -57,7 +56,6 @@ usage="Usage: $0 "'
     [ --pkgmandir <pkgmandir> ]
     [ --sysconfdir <sysconfdir> ]
     [ --varbase <varbase> ]
-    [ --ignore-case-check ]
     [ --unprivileged | --ignore-user-check ]
     [ --preserve-path ]
     [ --compiler <compiler> ]
@@ -386,7 +384,6 @@ while [ $# -gt 0 ]; do
 	--compiler)	compiler="$2"; shift ;;
 	--abi=*)	abi=`get_optarg "$1"` ;;
 	--abi)		abi="$2"; shift ;;
-	--ignore-case-check) ignorecasecheck=yes ;;
 	--unprivileged | --ignore-user-check) unprivileged=yes ;;
 	--preserve-path) preserve_path=yes ;;
 	--mk-fragment=*)
@@ -815,25 +812,6 @@ LIBOWN=$user
 LIBGRP=$group
 MANOWN=$user
 MANGRP=$group" > ${wrkdir}/Makefile.inc
-fi
-
-# make sure we're using a case-sensitive file system
-if [ $ignorecasecheck = "no" ]; then
-case "$opsys" in
-Interix)
-	echo_msg "Testing file system case sensitivity"
-	for fs in "$prefix"; do
-		testdir="pkgsrc-REQUIRES-case-SENSITIVE-filesystem"
-		testdir_mangled="PKGSRC-requires-CASE-sensitive-FILESYSTEM"
-		mkdir_p "$fs/$testdir" || die "can't verify filesystem ($fs) case-sensitivity"
-		if [ -d "$fs/$testdir_mangled" ]; then
-			$rmdirprog "$fs/$testdir"
-			die "\"$fs\" needs to be on a case-sensitive filesystem (see README.$opsys)"
-		fi
-		$rmdirprog "$fs/$testdir"
-	done
-	;;
-esac
 fi
 
 # export the proper environment
