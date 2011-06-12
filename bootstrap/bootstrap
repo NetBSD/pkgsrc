@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.168 2011/06/12 08:28:32 obache Exp $
+# $NetBSD: bootstrap,v 1.169 2011/06/12 17:46:02 agc Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -50,23 +50,24 @@ pkgsrcdir=`dirname "${bootstrapdir}"`
 wrkdir="`pwd`/work"
 
 usage="Usage: $0 "'
-    [ --workdir <workdir> ]
-    [ --prefix <prefix> ]
+    [ --abi [32|64] ]
+    [ --binary-kit <tarball> ]
+    [ --binary-macpkg <pkg> ]
+    [ --compiler <compiler> ]
+    [ --full ]
+    [ --gzip-binary-kit <tarball> ]
+    [ --help ]
+    [ --mk-fragment <mk.conf> ]
     [ --pkgdbdir <pkgdbdir> ]
     [ --pkgmandir <pkgmandir> ]
-    [ --sysconfdir <sysconfdir> ]
-    [ --varbase <varbase> ]
-    [ --unprivileged | --ignore-user-check ]
+    [ --prefix <prefix> ]
     [ --preserve-path ]
-    [ --compiler <compiler> ]
-    [ --abi [32|64] ]
-    [ --mk-fragment <mk.conf> ]
-    [ --binary-kit <tarball> ]
-    [ --gzip-binary-kit <tarball> ]
-    [ --binary-macpkg <pkg> ]
-    [ --full ]
     [ --quiet ]
-    [ --help ]'
+    [ --sysconfdir <sysconfdir> ]
+    [ --unprivileged | --ignore-user-check ]
+    [ --varbase <varbase> ]
+    [ --workdir <workdir> ]
+'
 
 # this replicates some of the logic in bsd.prefs.mk. until
 # bootstrap-pkgsrc is merged into pkgsrc, we need to determine the
