@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1440 2011/06/12 00:31:48 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1441 2011/06/12 04:48:26 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2257,3 +2257,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/emacs-snapshot to 24.0.50.20110608 [minskim 2011-06-11]
 	Updated x11/libXi to 1.4.3 [dholland 2011-06-12]
 	Updated mail/xbiff to 1.0.3 [dholland 2011-06-12]
+	Updated games/sex to 1.0nb1 [dholland 2011-06-12]
