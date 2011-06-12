@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10373 2011/06/11 18:56:16 ryoon Exp $
+$NetBSD: TODO,v 1.10374 2011/06/12 00:23:06 dholland Exp $
 
 Suggested new packages
 ======================
@@ -870,7 +870,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXfixes-5.0
 	o libXfont-1.4.3
 	o libXft-2.2.0
-	o libXi-1.4.3
 	o libXinerama-1.1.1
 	o libXmu-1.1.0
 	o libXpm-3.5.9
