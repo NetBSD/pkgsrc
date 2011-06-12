@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/06/09 06:21:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2011/06/12 11:59:20 schnoebe Exp $
 #
 
 DISTNAME=		aaronsw-${GHNAME}-${GHVERSION}-0-g${GHCOMMIT}
@@ -7,12 +7,14 @@ GHVERSION=		3.02
 GHCOMMIT=		d9bf7d6
 PKGNAME=		${PYPKGPREFIX}-${GHNAME}-${GHVERSION}
 CATEGORIES=		textproc python
-MASTER_SITES=		http://download.github.com/
+MASTER_SITES=		https://github.com/aaronsw/html2text/tarball/${GHVERSION}/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.aaronsw.com/2002/html2text/
 COMMENT=		Convert HTML into easy-to-read plain ASCII text
 LICENSE=		gnu-gpl-v2
+
+FETCH_USING=		curl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
