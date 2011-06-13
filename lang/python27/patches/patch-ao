@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+$NetBSD: patch-ao,v 1.2 2011/06/13 11:31:13 obache Exp $
 
---- Lib/distutils/util.py.orig	2010-05-05 19:09:31.000000000 +0000
+--- Lib/distutils/util.py.orig	2011-06-11 15:46:24.000000000 +0000
 +++ Lib/distutils/util.py
-@@ -177,6 +177,8 @@ def get_platform ():
+@@ -176,6 +176,8 @@ def get_platform ():
                  # See 'i386' case
                  if sys.maxint >= 2**32:
                      machine = 'ppc64'
