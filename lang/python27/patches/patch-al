@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
+$NetBSD: patch-al,v 1.2 2011/06/13 11:31:13 obache Exp $
 
---- configure.orig	2010-11-01 01:47:19.000000000 +0000
+--- configure.orig	2011-06-11 15:46:28.000000000 +0000
 +++ configure
-@@ -4912,15 +4912,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -4927,15 +4927,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -19,7 +19,7 @@ $NetBSD: patch-al,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -7586,9 +7581,9 @@ then
+@@ -7648,9 +7643,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -32,7 +32,7 @@ $NetBSD: patch-al,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -7612,15 +7607,15 @@ then
+@@ -7674,15 +7669,15 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -52,21 +52,17 @@ $NetBSD: patch-al,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -7649,8 +7644,11 @@ then
- 				esac
- 		fi;;
+@@ -7713,6 +7708,9 @@ then
  	NetBSD*|DragonFly*)
--		LDSHARED="cc -shared ${LDFLAGS}"
--		LDCXXSHARED="c++ -shared ${LDFLAGS}";;
-+		LDSHARED='$(CC) -shared'
-+		LDCXXSHARED='$(CXX) -shared ${LDFLAGS}';;
+ 		LDSHARED='$(CC) -shared'
+ 		LDCXXSHARED='$(CXX) -shared';;
 +	Interix*)
 +		LDSHARED='$(CC) -shared'" ${LDFLAGS}"
 +		LDCXXSHARED='$(CXX) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes" ; then
  			LDSHARED='$(CC) -shared'
-@@ -7695,6 +7693,7 @@ then
+@@ -7757,6 +7755,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
  	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
@@ -74,7 +70,7 @@ $NetBSD: patch-al,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -7751,6 +7750,7 @@ then
+@@ -7813,6 +7812,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
