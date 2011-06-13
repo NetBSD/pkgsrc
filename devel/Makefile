@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1459 2011/05/28 09:48:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.1460 2011/06/13 12:21:14 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1203,6 +1203,7 @@ SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-mako
 SUBDIR+=	py-mock
+SUBDIR+=	py-msgpack
 SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-newt
 SUBDIR+=	py-nose
