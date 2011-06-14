@@ -1,8 +1,16 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:10:13 agc Exp $
+$NetBSD: patch-ae,v 1.3 2011/06/14 13:25:57 wiz Exp $
 
---- print.c.orig	Sun Dec 22 00:40:58 1996
-+++ print.c	Thu May 21 15:42:08 1998
-@@ -64,6 +64,26 @@
+--- print.c.orig	1996-12-21 23:40:58.000000000 +0000
++++ print.c
+@@ -43,6 +43,7 @@ static char const sccsid[] = "@(#)print.
+ #include <sys/param.h>
+ #include <sys/stat.h>
+ 
++#include <ctype.h>
+ #include <err.h>
+ #include <errno.h>
+ #include <fts.h>
+@@ -64,6 +65,26 @@ static int	printtype __P((u_int));
  
  #define	IS_NOPRINT(p)	((p)->fts_number == NO_PRINT)
  
@@ -29,7 +37,7 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:13 agc Exp $
  void
  printscol(dp)
  	DISPLAY *dp;
-@@ -124,10 +144,14 @@
+@@ -124,10 +145,14 @@ printlong(dp)
  			printtime(sp->st_ctime);
  		else
  			printtime(sp->st_mtime);
@@ -45,7 +53,7 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:13 agc Exp $
  			printlink(p);
  		(void)putchar('\n');
  	}
-@@ -190,10 +214,22 @@
+@@ -190,10 +215,22 @@ printcol(dp)
  			    dp->s_block);
  			if ((base += numrows) >= num)
  				break;
@@ -72,7 +80,7 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:13 agc Exp $
  			endcol += colwidth;
  		}
  		(void)putchar('\n');
-@@ -219,9 +255,13 @@
+@@ -219,9 +256,13 @@ printaname(p, inodefield, sizefield)
  	if (f_size)
  		chcnt += printf("%*qd ",
  		    (int)sizefield, howmany(sp->st_blocks, blocksize));
@@ -86,7 +94,7 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:13 agc Exp $
  	return (chcnt);
  }
  
-@@ -281,6 +321,95 @@
+@@ -281,6 +322,96 @@ printtype(mode)
  	return (0);
  }
  
@@ -105,6 +113,7 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:13 agc Exp $
 +	printf("m");
 +}
 +
++int
 +colortype(mode)
 +       mode_t mode;
 +{
