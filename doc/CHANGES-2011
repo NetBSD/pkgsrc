@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1451 2011/06/13 12:20:36 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1452 2011/06/14 08:31:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2281,3 +2281,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/python27 to 2.7.2 [obache 2011-06-13]
 	Updated net/nicotine to 1.0.8nb13 [obache 2011-06-13]
 	Added devel/py-msgpack version 0.1.9 [obache 2011-06-13]
+	Updated net/py-medusa to 0.5.4nb1 [obache 2011-06-14]
