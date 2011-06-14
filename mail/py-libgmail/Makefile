@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/06/14 11:33:27 obache Exp $
 #
 
 DISTNAME=	libgmail-0.1.5.1
@@ -13,7 +13,6 @@ COMMENT=	Python bindings to access Google mail
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
