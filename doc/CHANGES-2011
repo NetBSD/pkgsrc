@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1459 2011/06/14 13:55:46 jmmv Exp $
+$NetBSD: CHANGES-2011,v 1.1460 2011/06/14 21:21:39 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2290,3 +2290,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/fuse-gmailfs to 0.7.2nb2 [obache 2011-06-14]
 	Updated www/elinks to 0.12rc5 [wiz 2011-06-14]
 	Updated devel/atf to 0.14 [jmmv 2011-06-14]
+	Updated pkgtools/nih to 0.7.2 [cheusov 2011-06-14]
