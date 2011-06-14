@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/08/17 22:57:04 darcy Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/14 09:04:13 obache Exp $
 #
 
 DISTNAME=		web.py-0.23
@@ -11,8 +11,6 @@ HOMEPAGE=		http://webpy.org/
 COMMENT=		Simple, public domain web publishing system
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED=	25 24
 
 WRKSRC=			${WRKDIR}/webpy
 PYDISTUTILSPKG=		yes
