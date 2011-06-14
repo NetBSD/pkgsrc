@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10375 2011/06/12 00:31:48 dholland Exp $
+$NetBSD: TODO,v 1.10376 2011/06/14 08:48:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -1109,7 +1109,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gtk2-2.24.0
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
-	o py-kenosis-0.96 [pkg/42561]
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
 	o py-simplejson-2.1.6
