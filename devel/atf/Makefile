@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2011/03/31 16:30:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2011/06/14 13:55:15 jmmv Exp $
 #
 
-DISTNAME=	atf-0.13
+DISTNAME=	atf-0.14
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.13/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.14/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/~jmmv/atf/
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKGCONFIG_OVERRIDE=	data/atf-c.pc.in
 PKGCONFIG_OVERRIDE+=	data/atf-c++.pc.in
+PKGCONFIG_OVERRIDE+=	data/atf-sh.pc.in
 
 PKG_SYSCONFSUBDIR=	atf
 
