@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1453 2011/06/14 08:48:35 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1454 2011/06/14 09:42:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2283,3 +2283,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/py-msgpack version 0.1.9 [obache 2011-06-13]
 	Updated net/py-medusa to 0.5.4nb1 [obache 2011-06-14]
 	Updated net/py-kenosis to 0.96 [obache 2011-06-14]
+	Updated mail/dovecot to 1.2.17nb2 [tron 2011-06-14]
+	Updated mail/dovecot2 to 2.0.13nb2 [tron 2011-06-14]
