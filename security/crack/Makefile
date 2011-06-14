@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/03/18 20:26:02 zafer Exp $
+# $NetBSD: Makefile,v 1.29 2011/06/14 14:07:37 uebayasi Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.crypticide.com/dropsafe/info/home.html
 COMMENT=	The "Sensible" Unix Password Cracker
 
 WRKSRC=		${WRKDIR}/c50a
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	sbin
 
@@ -39,27 +41,27 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Crack -makeonly
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/libexec/crack
-	@${CHMOD} go-rwx ${PREFIX}/libexec/crack
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/conf
-	@${CHMOD} go-rwx ${PREFIX}/share/crack
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/crack
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/extra
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/run
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/scripts
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/1
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/2
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/3
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/run
-	@${INSTALL_DATA_DIR} ${PREFIX}/crack/run/dict
-	${INSTALL_SCRIPT} ${WRKSRC}/Crack ${PREFIX}/sbin
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libexec/crack
+	@${CHMOD} go-rwx ${DESTDIR}${PREFIX}/libexec/crack
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/conf
+	@${CHMOD} go-rwx ${DESTDIR}${PREFIX}/share/crack
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/dict
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/crack
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/extra
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/run
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/scripts
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/dict/1
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/dict/2
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/dict/3
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/crack/run
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/crack/run/dict
+	${INSTALL_SCRIPT} ${WRKSRC}/Crack ${DESTDIR}${PREFIX}/sbin
 	@${SED} 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Reporter > \
-	    ${PREFIX}/sbin/Reporter
-	@${CHMOD} 700 ${PREFIX}/sbin/Crack ${PREFIX}/sbin/Reporter
-	${INSTALL_DATA} ${WRKSRC}/LICENCE ${PREFIX}/share/doc/crack/
-	${INSTALL_DATA} ${WRKSRC}/manual.html ${PREFIX}/share/doc/crack/
-	${INSTALL_DATA} ${WRKSRC}/manual.txt ${PREFIX}/share/doc/crack/
+	    ${DESTDIR}${PREFIX}/sbin/Reporter
+	@${CHMOD} 700 ${DESTDIR}${PREFIX}/sbin/Crack ${DESTDIR}${PREFIX}/sbin/Reporter
+	${INSTALL_DATA} ${WRKSRC}/LICENCE ${DESTDIR}${PREFIX}/share/doc/crack/
+	${INSTALL_DATA} ${WRKSRC}/manual.html ${DESTDIR}${PREFIX}/share/doc/crack/
+	${INSTALL_DATA} ${WRKSRC}/manual.txt ${DESTDIR}${PREFIX}/share/doc/crack/
 	@for i in \
 		conf/dictrun.conf \
 		conf/rules.weird \
@@ -150,8 +152,8 @@ do-install:
 		extra/Makefile \
 		extra/brute.c ;\
 	do \
-		${ECHO} ${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
+		${ECHO} ${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/share/crack/$$i ;\
+		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/share/crack/$$i ;\
 	done
 	@for i in \
 		credits,v5.0.txt \
@@ -165,9 +167,9 @@ do-install:
 		humour.txt; \
 	do \
 		${ECHO} ${INSTALL_DATA} ${WRKSRC}/doc/$$i \
-		    ${PREFIX}/share/doc/crack/$$i ;\
+		    ${DESTDIR}${PREFIX}/share/doc/crack/$$i ;\
 		${INSTALL_DATA} ${WRKSRC}/doc/$$i \
-		    ${PREFIX}/share/doc/crack/$$i ;\
+		    ${DESTDIR}${PREFIX}/share/doc/crack/$$i ;\
 	done
 	@for i in \
 		scripts/smartcat \
@@ -200,8 +202,8 @@ do-install:
 		extra/Dictstats.pl; \
 	do \
 		${ECHO} ${INSTALL_SCRIPT} ${WRKSRC}/$$i \
-		    ${PREFIX}/share/crack/$$i ;\
-		${INSTALL_SCRIPT} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
+		    ${DESTDIR}${PREFIX}/share/crack/$$i ;\
+		${INSTALL_SCRIPT} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/share/crack/$$i ;\
 	done
 	@for i in \
 		dawg \
@@ -211,12 +213,15 @@ do-install:
 		kickdict; \
 	do \
 		${ECHO} ${INSTALL_PROGRAM} ${WRKSRC}/run/bin/$$i \
-		    ${PREFIX}/libexec/crack/$$i ;\
+		    ${DESTDIR}${PREFIX}/libexec/crack/$$i ;\
 		${INSTALL_PROGRAM} ${WRKSRC}/run/bin/$$i \
-		    ${PREFIX}/libexec/crack/$$i ;\
+		    ${DESTDIR}${PREFIX}/libexec/crack/$$i ;\
 	done
 
 post-install:
-	${PREFIX}/sbin/Crack -makedict
+	${SED} -e 's|PREFIX=${PREFIX}|PREFIX=${DESTDIR}${PREFIX}|' \
+	    <${DESTDIR}${PREFIX}/sbin/Crack \
+	    >${WRKDIR}/Crack.tmp
+	${SH} ${WRKDIR}/Crack.tmp -makedict
 
 .include "../../mk/bsd.pkg.mk"
