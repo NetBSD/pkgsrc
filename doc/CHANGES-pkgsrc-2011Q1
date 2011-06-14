@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.36 2011/06/13 08:50:09 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.37 2011/06/14 11:52:41 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -137,3 +137,5 @@ devel/subversion-base: security update
 www/ap2-subversion: security update
 Pullup ticket #3454 - requested by tron
 mail/fetchmail security update
+Pullup ticket #3456 - requested by wiz
+graphics/tiff: security update
