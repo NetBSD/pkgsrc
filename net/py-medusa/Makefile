@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2011/06/14 08:31:05 obache Exp $
 #
 
 DISTNAME=	medusa-0.5.4
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www.amk.ca/files/python/
@@ -13,7 +14,6 @@ COMMENT=	Framework for writing asynchronous socket-based servers
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
