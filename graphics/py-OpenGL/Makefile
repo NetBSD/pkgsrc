@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/11/01 00:08:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2011/06/14 11:17:56 obache Exp $
 #
 
 DISTNAME=	PyOpenGL-3.0.1
@@ -15,8 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG=	yes
 #PY_PATCHPLIST=	YES
 
-# XXX devel/py-ctypes doesn't work, Python-2.5's builtin ctypes is OK
-PYTHON_VERSIONS_ACCEPTED= 25
+# XXX devel/py-ctypes doesn't work, Python>=2.5's builtin ctypes is OK
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 #.include "../../lang/python/egg.mk"
 .include "../../lang/python/extension.mk"
