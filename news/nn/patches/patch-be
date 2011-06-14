@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.2 2006/10/14 19:33:45 schwarz Exp $
+$NetBSD: patch-be,v 1.3 2011/06/14 13:13:14 wiz Exp $
 
---- global.c.orig	2005-04-20 00:26:50.000000000 +0200
-+++ global.c	2006-10-14 20:43:21.000000000 +0200
-@@ -81,7 +81,6 @@
+--- global.c.orig	2005-04-19 22:26:50.000000000 +0000
++++ global.c
+@@ -81,7 +81,6 @@ int             who_am_i;
  int             dont_write_console = 0;
  int             mail_errors_mode = 2;
  
@@ -10,3 +10,12 @@ $NetBSD: patch-be,v 1.2 2006/10/14 19:33:45 schwarz Exp $
  extern char    *getlogin(), *getenv();
  
  
+@@ -1312,7 +1311,7 @@ fgetstr(FILE * f)
+  */
+ 
+ int
+-getline(char *line, int max)
++nngetline(char *line, int max)
+ {
+     if (fgets(line, max, stdin) == NULL)
+ 	return 0;
