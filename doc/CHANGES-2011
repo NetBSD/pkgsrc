@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1456 2011/06/14 10:51:28 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1457 2011/06/14 11:31:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2287,3 +2287,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/dovecot2 to 2.0.13nb2 [tron 2011-06-14]
 	Updated www/urlgrabber to 3.1.0nb2 [obache 2011-06-14]
 	Updated news/lottanzb to 0.4.0nb9 [obache 2011-06-14]
+	Updated filesystems/fuse-gmailfs to 0.7.2nb2 [obache 2011-06-14]
