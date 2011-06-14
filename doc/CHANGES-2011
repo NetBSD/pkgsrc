@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1461 2011/06/14 21:34:35 alnsn Exp $
+$NetBSD: CHANGES-2011,v 1.1462 2011/06/14 22:00:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2293,3 +2293,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/nih to 0.7.2 [cheusov 2011-06-14]
 	Added math/R-bitops version 1.0-4.1 [alnsn 2011-06-14]
 	Added math/R-XML version 3.4-0 [alnsn 2011-06-14]
+	Added devel/mr version 1.03 [schmonz 2011-06-14]
