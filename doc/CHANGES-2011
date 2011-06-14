@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1457 2011/06/14 11:31:03 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1458 2011/06/14 13:36:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2288,3 +2288,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/urlgrabber to 3.1.0nb2 [obache 2011-06-14]
 	Updated news/lottanzb to 0.4.0nb9 [obache 2011-06-14]
 	Updated filesystems/fuse-gmailfs to 0.7.2nb2 [obache 2011-06-14]
+	Updated www/elinks to 0.12rc5 [wiz 2011-06-14]
