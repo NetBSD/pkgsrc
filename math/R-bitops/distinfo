@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2011/06/14 21:28:50 alnsn Exp $
+
+SHA1 (R/bitops_1.0-4.1.tar.gz) = 29ab3f01440a5f51df04bebedfee663086659124
+RMD160 (R/bitops_1.0-4.1.tar.gz) = 4ad4bc0f676c14296fc78f7b4dc73584d0887ec3
+Size (R/bitops_1.0-4.1.tar.gz) = 8001 bytes
