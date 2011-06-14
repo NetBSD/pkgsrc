@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/25 11:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/14 11:10:54 obache Exp $
 #
 
 DISTNAME=	pyexcelerator-${VERSION}
@@ -15,7 +15,6 @@ COMMENT=	Python library for generating Excel 97/2000/XP/2003 files
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	25 24
 
 WRKSRC=${WRKDIR}/pyExcelerator-${VERSION}
 
