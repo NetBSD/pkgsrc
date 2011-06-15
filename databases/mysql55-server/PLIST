@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/05/07 04:03:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/06/15 21:00:06 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1439,6 +1439,8 @@ share/mysql/test/std_data/words.dat
 share/mysql/test/std_data/words2.dat
 share/mysql/test/suite/binlog/combinations
 share/mysql/test/suite/binlog/r/binlog_base64_flag.result
+share/mysql/test/suite/binlog/r/binlog_bug23533.result
+share/mysql/test/suite/binlog/r/binlog_bug36391.result
 share/mysql/test/suite/binlog/r/binlog_database.result
 share/mysql/test/suite/binlog/r/binlog_delete_and_flush_index.result
 share/mysql/test/suite/binlog/r/binlog_drop_if_exists.result
@@ -1505,6 +1507,9 @@ share/mysql/test/suite/binlog/std_data/ver_5_1_23.001
 share/mysql/test/suite/binlog/std_data/write-full-row.binlog
 share/mysql/test/suite/binlog/std_data/write-partial-row.binlog
 share/mysql/test/suite/binlog/t/binlog_base64_flag.test
+share/mysql/test/suite/binlog/t/binlog_bug23533.test
+share/mysql/test/suite/binlog/t/binlog_bug36391-master.opt
+share/mysql/test/suite/binlog/t/binlog_bug36391.test
 share/mysql/test/suite/binlog/t/binlog_database.test
 share/mysql/test/suite/binlog/t/binlog_delete_and_flush_index.test
 share/mysql/test/suite/binlog/t/binlog_drop_if_exists.test
@@ -1575,28 +1580,6 @@ share/mysql/test/suite/binlog/t/binlog_unsafe-master.opt
 share/mysql/test/suite/binlog/t/binlog_unsafe.test
 share/mysql/test/suite/binlog/t/binlog_write_error.test
 share/mysql/test/suite/binlog/t/disabled.def
-share/mysql/test/suite/bugs/combinations
-share/mysql/test/suite/bugs/data/rpl_bug12691.dat
-share/mysql/test/suite/bugs/r/bug57108.result
-share/mysql/test/suite/bugs/r/rpl_bug12691.result
-share/mysql/test/suite/bugs/r/rpl_bug23533.result
-share/mysql/test/suite/bugs/r/rpl_bug31582.result
-share/mysql/test/suite/bugs/r/rpl_bug31583.result
-share/mysql/test/suite/bugs/r/rpl_bug33029.result
-share/mysql/test/suite/bugs/r/rpl_bug36391.result
-share/mysql/test/suite/bugs/r/rpl_bug37426.result
-share/mysql/test/suite/bugs/r/rpl_bug38205.result
-share/mysql/test/suite/bugs/t/bug57108-master.opt
-share/mysql/test/suite/bugs/t/bug57108.test
-share/mysql/test/suite/bugs/t/rpl_bug12691.test
-share/mysql/test/suite/bugs/t/rpl_bug23533.test
-share/mysql/test/suite/bugs/t/rpl_bug31582.test
-share/mysql/test/suite/bugs/t/rpl_bug31583.test
-share/mysql/test/suite/bugs/t/rpl_bug33029.test
-share/mysql/test/suite/bugs/t/rpl_bug36391-master.opt
-share/mysql/test/suite/bugs/t/rpl_bug36391.test
-share/mysql/test/suite/bugs/t/rpl_bug37426.test
-share/mysql/test/suite/bugs/t/rpl_bug38205.test
 share/mysql/test/suite/engines/README
 share/mysql/test/suite/engines/funcs/r/ai_init_alter_table.result
 share/mysql/test/suite/engines/funcs/r/ai_init_create_table.result
@@ -2951,6 +2934,8 @@ share/mysql/test/suite/innodb/r/innodb_bug57252.result
 share/mysql/test/suite/innodb/r/innodb_bug57255.result
 share/mysql/test/suite/innodb/r/innodb_bug57904.result
 share/mysql/test/suite/innodb/r/innodb_bug59307.result
+share/mysql/test/suite/innodb/r/innodb_bug59410.result
+share/mysql/test/suite/innodb/r/innodb_bug59641.result
 share/mysql/test/suite/innodb/r/innodb_bug60049.result
 share/mysql/test/suite/innodb/r/innodb_bug60196.result
 share/mysql/test/suite/innodb/r/innodb_file_format.result
@@ -3045,6 +3030,8 @@ share/mysql/test/suite/innodb/t/innodb_bug57252.test
 share/mysql/test/suite/innodb/t/innodb_bug57255.test
 share/mysql/test/suite/innodb/t/innodb_bug57904.test
 share/mysql/test/suite/innodb/t/innodb_bug59307.test
+share/mysql/test/suite/innodb/t/innodb_bug59410.test
+share/mysql/test/suite/innodb/t/innodb_bug59641.test
 share/mysql/test/suite/innodb/t/innodb_bug60049-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60049.test
 share/mysql/test/suite/innodb/t/innodb_bug60196-master.opt
@@ -3782,6 +3769,7 @@ share/mysql/test/suite/rpl/r/rpl_blackhole.result
 share/mysql/test/suite/rpl/r/rpl_bug26395.result
 share/mysql/test/suite/rpl/r/rpl_bug31076.result
 share/mysql/test/suite/rpl/r/rpl_bug33931.result
+share/mysql/test/suite/rpl/r/rpl_bug37426.result
 share/mysql/test/suite/rpl/r/rpl_bug38694.result
 share/mysql/test/suite/rpl/r/rpl_bug41902.result
 share/mysql/test/suite/rpl/r/rpl_change_master.result
@@ -4079,6 +4067,7 @@ share/mysql/test/suite/rpl/t/rpl_bug26395.test
 share/mysql/test/suite/rpl/t/rpl_bug31076.test
 share/mysql/test/suite/rpl/t/rpl_bug33931-master.opt
 share/mysql/test/suite/rpl/t/rpl_bug33931.test
+share/mysql/test/suite/rpl/t/rpl_bug37426.test
 share/mysql/test/suite/rpl/t/rpl_bug38694-slave.opt
 share/mysql/test/suite/rpl/t/rpl_bug38694.test
 share/mysql/test/suite/rpl/t/rpl_bug41902-slave.opt
