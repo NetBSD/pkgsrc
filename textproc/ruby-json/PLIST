@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2011/03/23 14:12:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/06/15 15:14:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/COPYING-json-jruby
 ${GEM_LIBDIR}/GPL
-${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/README-json-jruby.markdown
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/VERSION
@@ -77,6 +77,8 @@ ${GEM_LIBDIR}/java/src/json/ext/RuntimeInfo.java
 ${GEM_LIBDIR}/java/src/json/ext/StringDecoder.java
 ${GEM_LIBDIR}/java/src/json/ext/StringEncoder.java
 ${GEM_LIBDIR}/java/src/json/ext/Utils.java
+${GEM_LIBDIR}/json.gemspec
+${GEM_LIBDIR}/json_pure.gemspec
 ${GEM_LIBDIR}/json-java.gemspec
 ${GEM_LIBDIR}/lib/json.rb
 ${GEM_LIBDIR}/lib/json/Array.xpm
