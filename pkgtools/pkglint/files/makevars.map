@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.211 2011/05/15 16:30:59 wiz Exp $
+# $NetBSD: makevars.map,v 1.212 2011/06/15 22:22:28 cheusov Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -677,6 +677,7 @@ SUBST_MESSAGE.*		Message [m:s,c:s,h:s,o:s,Makefile.*:s]
 SUBST_SED.*		SedCommands [m:as,c:as,h:as,o:as,Makefile.*:as]
 SUBST_STAGE.*		Stage [$package]
 SUBST_VARS.*		List of Varname [$package_list]
+SUPERSEDES		InternalList of Dependency [$package_list]
 SVR4_PKGNAME		SVR4PkgName [$package]
 TEST_DIRS		List of WrksrcSubdirectory [$package_list]
 TEST_ENV		List of ShellWord [$package_list]
