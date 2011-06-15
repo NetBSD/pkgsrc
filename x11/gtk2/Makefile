@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2011/04/28 01:57:38 obache Exp $
+# $NetBSD: Makefile,v 1.217 2011/06/15 15:48:50 drochner Exp $
 
 DISTNAME=		gtk+-2.24.4
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -30,8 +30,8 @@ USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 
 GNU_CONFIGURE=		 yes
-# XXX there is a subtle bashism in "configure" or a bug in NetBSD's sh
-CONFIG_SHELL=		bash
+# bashism in "configure" (illegal variable substitution), patched
+#CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 # Work around build problems, disable unstable PAPI, PR #41608:
 CONFIGURE_ARGS+=	--disable-papi
