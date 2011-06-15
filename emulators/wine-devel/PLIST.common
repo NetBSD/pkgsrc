@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.11 2011/06/02 09:09:09 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.12 2011/06/15 13:01:57 adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -288,6 +288,7 @@ include/wine/windows/exdisp.idl
 include/wine/windows/exdispid.h
 include/wine/windows/fci.h
 include/wine/windows/fdi.h
+include/wine/windows/fltdefs.h
 include/wine/windows/fusion.h
 include/wine/windows/fusion.idl
 include/wine/windows/gameux.h
@@ -320,6 +321,8 @@ include/wine/windows/icftypes.idl
 include/wine/windows/icm.h
 include/wine/windows/icmpapi.h
 include/wine/windows/idispids.h
+include/wine/windows/iextag.h
+include/wine/windows/iextag.idl
 include/wine/windows/ifdef.h
 include/wine/windows/imagehlp.h
 include/wine/windows/imm.h
@@ -1802,6 +1805,7 @@ man/man1/winepath.1
 man/man1/wineserver.1
 man/man1/wmc.1
 man/man1/wrc.1
+man/pl.UTF-8/man1/wine.1
 share/applications/wine.desktop
 ${PLIST.x11}share/wine/fonts/coue1255.fon
 ${PLIST.x11}share/wine/fonts/coue1256.fon
