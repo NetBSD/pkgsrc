@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/03/23 14:12:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/06/15 15:14:24 taca Exp $
 bin/edit_json.rb
 bin/prettify_json.rb
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -6,8 +6,8 @@ ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/COPYING-json-jruby
 ${GEM_LIBDIR}/GPL
-${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/README-json-jruby.markdown
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/VERSION
@@ -77,6 +77,8 @@ ${GEM_LIBDIR}/java/src/json/ext/StringDecoder.java
 ${GEM_LIBDIR}/java/src/json/ext/StringEncoder.java
 ${GEM_LIBDIR}/java/src/json/ext/Utils.java
 ${GEM_LIBDIR}/json-java.gemspec
+${GEM_LIBDIR}/json.gemspec
+${GEM_LIBDIR}/json_pure.gemspec
 ${GEM_LIBDIR}/lib/json.rb
 ${GEM_LIBDIR}/lib/json/Array.xpm
 ${GEM_LIBDIR}/lib/json/FalseClass.xpm
@@ -137,4 +139,4 @@ ${GEM_LIBDIR}/tests/test_json_string_matching.rb
 ${GEM_LIBDIR}/tests/test_json_unicode.rb
 ${GEM_LIBDIR}/tools/fuzz.rb
 ${GEM_LIBDIR}/tools/server.rb
-${GEM_HOME}/specifications/json_pure-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
