@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.37 2011/06/14 11:52:41 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.38 2011/06/15 18:16:04 tron Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -139,3 +139,5 @@ Pullup ticket #3454 - requested by tron
 mail/fetchmail security update
 Pullup ticket #3456 - requested by wiz
 graphics/tiff: security update
+Pullup ticket #3457 - requested by drochner
+x11/vte: security patch
