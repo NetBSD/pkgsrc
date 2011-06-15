@@ -1,15 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2011/03/23 14:12:58 taca Exp $
+$NetBSD: patch-aa,v 1.7 2011/06/15 15:14:24 taca Exp $
 
---- ../json-1.5.1.gemspec.orig	2011-01-26 04:38:55.000000000 +0000
-+++ ../json-1.5.1.gemspec
-@@ -15,14 +15,12 @@ bindir: bin
- cert_chain: []
- 
- date: 2011-01-25 23:00:00 +00:00
--default_executable: edit_json.rb
-+default_executable: []
- dependencies: []
- 
+--- ../json-1.5.2.gemspec.orig	2011-06-15 10:57:07.000000000 +0000
++++ ../json-1.5.2.gemspec
+@@ -48,9 +48,7 @@ dependencies: 
+   version_requirements: *id003
  description: This is a JSON implementation as a Ruby extension in C.
  email: flori@ping.de
 -executables: 
@@ -17,5 +11,5 @@ $NetBSD: patch-aa,v 1.6 2011/03/23 14:12:58 taca Exp $
 -- prettify_json.rb
 +executables: []
  extensions: 
- - ext/json/ext/generator/extconf.rb
  - ext/json/ext/parser/extconf.rb
+ - ext/json/ext/generator/extconf.rb
