@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1469 2011/06/15 15:25:29 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1470 2011/06/15 17:45:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2307,3 +2307,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/fengoffice to 1.7.5 [taca 2011-06-15]
 	Updated www/geeklog to 1.8.0 [taca 2011-06-15]
 	Updated www/contao29-translations to 20110613 [taca 2011-06-15]
+	Removed www/chimera [wiz 2011-06-15]
