@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/03/23 15:22:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/06/15 15:19:44 taca Exp $
 ${FO_DIR}/.htaccess
 ${FO_DIR}/application/application.php
 ${FO_DIR}/application/controllers/AccessController.class.php
@@ -603,8 +603,9 @@ ${FO_DIR}/application/views/webpage/add.php
 ${FO_DIR}/application/views/webpage/view.php
 ${FO_DIR}/application/views/webpage/view_content.php
 ${FO_DIR}/cache/dummy.txt
+${FO_DIR}/cache/index.html
+${FO_DIR}/config/index.html
 ${FO_DIR}/config/ldap.config.example.php
-${FO_DIR}/console.php
 ${FO_DIR}/cron.php
 ${FO_DIR}/crossdomain.xml
 ${FO_DIR}/dummy.php
@@ -721,6 +722,7 @@ ${FO_DIR}/language/bg_bg/site_interface.php
 ${FO_DIR}/language/bg_bg/slimey.js
 ${FO_DIR}/language/bg_bg/timezones.php
 ${FO_DIR}/language/bg_bg/upgrade.php
+${FO_DIR}/language/ca_es.php
 ${FO_DIR}/language/ca_es/_config.php
 ${FO_DIR}/language/ca_es/actions.php
 ${FO_DIR}/language/ca_es/administration.php
@@ -1005,6 +1007,7 @@ ${FO_DIR}/language/ja_jp/site_interface.php
 ${FO_DIR}/language/ja_jp/slimey.js
 ${FO_DIR}/language/ja_jp/timezones.php
 ${FO_DIR}/language/ja_jp/upgrade.php
+${FO_DIR}/language/ko_kr.php
 ${FO_DIR}/language/ko_kr/_config.php
 ${FO_DIR}/language/ko_kr/actions.php
 ${FO_DIR}/language/ko_kr/administration.php
@@ -2612,12 +2615,10 @@ ${FO_DIR}/public/assets/javascript/slimey/logo.png
 ${FO_DIR}/public/assets/javascript/slimey/logo.svg
 ${FO_DIR}/public/assets/javascript/slimey/navigation.js
 ${FO_DIR}/public/assets/javascript/slimey/readme.txt
-${FO_DIR}/public/assets/javascript/slimey/save.php
 ${FO_DIR}/public/assets/javascript/slimey/slang/en_us.js
 ${FO_DIR}/public/assets/javascript/slimey/slang/es_la.js
 ${FO_DIR}/public/assets/javascript/slimey/slime.html
 ${FO_DIR}/public/assets/javascript/slimey/slimey.css
-${FO_DIR}/public/assets/javascript/slimey/slimey.html
 ${FO_DIR}/public/assets/javascript/slimey/slimey.js
 ${FO_DIR}/public/assets/javascript/slimey/stack.js
 ${FO_DIR}/public/assets/javascript/slimey/toolbar.js
@@ -2836,6 +2837,8 @@ ${FO_DIR}/public/assets/themes/default/fckeditor/images/toolbar.end.gif
 ${FO_DIR}/public/assets/themes/default/fckeditor/images/toolbar.expand.gif
 ${FO_DIR}/public/assets/themes/default/fckeditor/images/toolbar.separator.gif
 ${FO_DIR}/public/assets/themes/default/fckeditor/images/toolbar.start.gif
+${FO_DIR}/public/assets/themes/default/images/12x12/chkoff.png
+${FO_DIR}/public/assets/themes/default/images/12x12/chkon.png
 ${FO_DIR}/public/assets/themes/default/images/12x12/collapse.png
 ${FO_DIR}/public/assets/themes/default/images/12x12/expand.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/2arrowleft.png
@@ -2843,7 +2846,7 @@ ${FO_DIR}/public/assets/themes/default/images/16x16/2arrowright.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/account.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/add.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/administration.png
-${FO_DIR}/public/assets/themes/default/images/16x16/all_16_16_vertical.png
+${FO_DIR}/public/assets/themes/default/images/16x16/all_16_16_sprite.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/archive_obj.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/arrowleft.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/arrowright.png
@@ -2852,8 +2855,6 @@ ${FO_DIR}/public/assets/themes/default/images/16x16/back.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/calendar.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/checkin.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/checkout.png
-${FO_DIR}/public/assets/themes/default/images/16x16/chkoff.png
-${FO_DIR}/public/assets/themes/default/images/16x16/chkon.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/classify.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/collapse.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/comment.png
@@ -2923,7 +2924,6 @@ ${FO_DIR}/public/assets/themes/default/images/16x16/properties.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/prsn.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/queue.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/random.png
-${FO_DIR}/public/assets/themes/default/images/16x16/read.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/recurrent.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/refresh.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/remember.png
@@ -3006,7 +3006,6 @@ ${FO_DIR}/public/assets/themes/default/images/16x16/unarchive_obj.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/unclassify.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/undo.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/unlocked.png
-${FO_DIR}/public/assets/themes/default/images/16x16/unread.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/up.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/upload.png
 ${FO_DIR}/public/assets/themes/default/images/16x16/user_pagination_active.png
@@ -3057,6 +3056,7 @@ ${FO_DIR}/public/assets/themes/default/images/32x32/trash.png
 ${FO_DIR}/public/assets/themes/default/images/32x32/view_calendar_month.png
 ${FO_DIR}/public/assets/themes/default/images/32x32/view_calendar_week.png
 ${FO_DIR}/public/assets/themes/default/images/32x32/warning.png
+${FO_DIR}/public/assets/themes/default/images/48x48/all_48_48_sprite.png
 ${FO_DIR}/public/assets/themes/default/images/48x48/billing.png
 ${FO_DIR}/public/assets/themes/default/images/48x48/chart.png
 ${FO_DIR}/public/assets/themes/default/images/48x48/company.png
@@ -3131,6 +3131,8 @@ ${FO_DIR}/public/assets/themes/default/images/48x48/weblink.png
 ${FO_DIR}/public/assets/themes/default/images/48x48/weblink_archived.png
 ${FO_DIR}/public/assets/themes/default/images/48x48/weblink_trashed.png
 ${FO_DIR}/public/assets/themes/default/images/48x48/workspace.png
+${FO_DIR}/public/assets/themes/default/images/8x8/read.png
+${FO_DIR}/public/assets/themes/default/images/8x8/unread.png
 ${FO_DIR}/public/assets/themes/default/images/avatar.gif
 ${FO_DIR}/public/assets/themes/default/images/box/box.xcf
 ${FO_DIR}/public/assets/themes/default/images/box/corners-blue.gif
@@ -3251,6 +3253,12 @@ ${FO_DIR}/public/assets/themes/default/images/plugin/progress/bg1.png
 ${FO_DIR}/public/assets/themes/default/images/plugin/progress/bg2.png
 ${FO_DIR}/public/assets/themes/default/images/plugins/webpage_post_fields/postform.png
 ${FO_DIR}/public/assets/themes/default/images/rx/grid_drag.png
+${FO_DIR}/public/assets/themes/default/images/wizard/cerrar.gif
+${FO_DIR}/public/assets/themes/default/images/wizard/customer.gif
+${FO_DIR}/public/assets/themes/default/images/wizard/done.gif
+${FO_DIR}/public/assets/themes/default/images/wizard/project.gif
+${FO_DIR}/public/assets/themes/default/images/wizard/tasks.gif
+${FO_DIR}/public/assets/themes/default/images/wizard/user.gif
 ${FO_DIR}/public/assets/themes/default/reesecal/default.css
 ${FO_DIR}/public/assets/themes/default/slimey/images/addslide.png
 ${FO_DIR}/public/assets/themes/default/slimey/images/addslided.png
@@ -3384,6 +3392,7 @@ ${FO_DIR}/public/assets/themes/default/stylesheets/plugin/task_dependencies.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/plugin/webpage_post_fields.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/project/project.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/website.css
+${FO_DIR}/public/assets/themes/default/stylesheets/wizard/wizard.css
 ${FO_DIR}/public/files/dummy.txt
 ${FO_DIR}/public/help/help.html
 ${FO_DIR}/public/help/index.html
@@ -3478,5 +3487,7 @@ ${FO_DIR}/readme.txt
 ${FO_DIR}/robots.txt
 ${FO_DIR}/s.gif
 ${FO_DIR}/tmp/dummy.php
+${FO_DIR}/tmp/index.html
 ${FO_DIR}/upload/dummy.php
+${FO_DIR}/upload/index.html
 ${FO_DIR}/version.php

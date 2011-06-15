@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2011/03/23 15:22:10 taca Exp $
+$NetBSD: patch-ag,v 1.2 2011/06/15 15:19:45 taca Exp $
 
 Use monospace font for mail body.
 
@@ -9,7 +9,7 @@ Use monospace font for mail body.
  /* -----  Email  ----- */
  
 +.email .coViewBody {
-+	font-family: monospace;
++	font-family: osaka-mono,monospace;
 +	font-size: 12px;
 +}
 +
