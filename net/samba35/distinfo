@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.3 2011/03/08 08:30:07 adam Exp $
+$NetBSD: distinfo,v 1.4 2011/06/15 11:45:08 adam Exp $
 
-SHA1 (samba-3.5.8.tar.gz) = ffb71de38442eee14aafb44f819671354dc5cce9
-RMD160 (samba-3.5.8.tar.gz) = 02703bbaf7d7e7b9786a2228fe6085143c99251a
-Size (samba-3.5.8.tar.gz) = 30721269 bytes
+SHA1 (samba-3.5.9.tar.gz) = 77da3dff05032950fa1943057182d16894591a05
+RMD160 (samba-3.5.9.tar.gz) = c48b3d0ecf0b4cde2764cebdde5f8513320cd966
+Size (samba-3.5.9.tar.gz) = 30750297 bytes
 SHA1 (patch-ab) = 0372ff2e3caca866dacd6ed25ae1d02e34a5b567
 SHA1 (patch-ac) = 5b1c0fdb781cb75f81af71ed2695144d4a35e032
 SHA1 (patch-ad) = 447aaf4ea4cc98f0ccd5a3a22e1ffec0e69a3971
 SHA1 (patch-ae) = 6698c698dc64c0f3df159157d182eae6aaa70958
-SHA1 (patch-af) = 16cac48a004ce77c3e58b7ac3a492d61e2f2c36a
+SHA1 (patch-af) = cd01ec9f17c6e329973a26991fc2bda1df9519d6
 SHA1 (patch-ag) = 92fd576c4b05a913051925e461cde9f5a2f2d6bf
-SHA1 (patch-ah) = ce4529a6f0afcc8a14bdd6ad4fc86c5c097cfef0
-SHA1 (patch-ai) = 7dc10895549439f87b8a62458878fd8c766dadb7
+SHA1 (patch-ah) = 6142078efec4263124aa793108c43eef0ce61da4
+SHA1 (patch-ai) = 0a12dcfabcab7986968493d5f06701d06c3d5386
 SHA1 (patch-aj) = aecf98cf53e6bf6890e0fc9a40e6936df5f20a1a
 SHA1 (patch-ak) = cb51a96310eb7dde14351e4f12b68ce8d52c92c3
 SHA1 (patch-al) = f347808c376922da057256d3614a34b556721a66
@@ -18,10 +18,10 @@ SHA1 (patch-am) = 13744f8a5cce3016c37002079eba3c47077e8d6d
 SHA1 (patch-an) = a9b31b791d979a1062006bbe55375aaab69210a1
 SHA1 (patch-ao) = bc31d3003bdaad141652daff2e0b6b3cafcee8c1
 SHA1 (patch-ap) = 3a47d212b1c29a6b3c46b83903c4f011c28a8c3c
-SHA1 (patch-aq) = a8b1084c6dab6102847cc4686bd53d9f3186fc43
+SHA1 (patch-aq) = c3d1a3045364bebaa6c90967837907bd1de0964b
 SHA1 (patch-ar) = 5213b0a3d95d106939c2e268a8538c5e2901079a
 SHA1 (patch-as) = a9fcb1813d55d598bf1226cf004de85701c93e61
 SHA1 (patch-at) = dcfbe79496065559380e5713a758816e538e728b
 SHA1 (patch-au) = f94b27a5792acfa3742b4c07b23b3395b73eba84
-SHA1 (patch-av) = 72c73ee755fd260726fca23ff8c8e0e49fa9dbf0
+SHA1 (patch-av) = fccde3e48f2b3de3b1adfaa488a67c57696d1a83
 SHA1 (patch-aw) = 36cb31313cdbd1e4670f33924371df5ed3390420
