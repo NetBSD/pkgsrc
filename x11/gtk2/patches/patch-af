@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.19 2010/11/15 18:28:45 drochner Exp $
+$NetBSD: patch-af,v 1.20 2011/06/15 15:48:50 drochner Exp $
 
---- configure.orig	2010-09-23 14:27:27.000000000 +0000
+--- configure.orig	2011-04-01 21:41:11.000000000 +0000
 +++ configure
-@@ -21936,7 +21936,7 @@ _ACEOF
+@@ -22773,7 +22773,7 @@ _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
@@ -11,3 +11,18 @@ $NetBSD: patch-af,v 1.19 2010/11/15 18:28:45 drochner Exp $
  else
    LIBS="$ac_xsave_LIBS -R $x_libraries"
         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -24724,10 +24724,10 @@ $as_echo "$found_introspection" >&6; }
+        INTROSPECTION_SCANNER=`$PKG_CONFIG --variable=g_ir_scanner gobject-introspection-1.0`
+        INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
+        INTROSPECTION_GENERATE=`$PKG_CONFIG --variable=g_ir_generate gobject-introspection-1.0`
+-       INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
+-       INTROSPECTION_GIRDIR=${INTROSPECTION_GIRDIR/$datadir/\$(datadir)}
+-       INTROSPECTION_TYPELIBDIR="$($PKG_CONFIG --variable=typelibdir gobject-introspection-1.0)"
+-       INTROSPECTION_TYPELIBDIR=${INTROSPECTION_TYPELIBDIR/$libdir/\$(libdir)}
++#       INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
++#       INTROSPECTION_GIRDIR=${INTROSPECTION_GIRDIR/$datadir/\$(datadir)}
++#       INTROSPECTION_TYPELIBDIR="$($PKG_CONFIG --variable=typelibdir gobject-introspection-1.0)"
++#       INTROSPECTION_TYPELIBDIR=${INTROSPECTION_TYPELIBDIR/$libdir/\$(libdir)}
+        INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
+        INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
+        INTROSPECTION_MAKEFILE=`$PKG_CONFIG --variable=datadir gobject-introspection-1.0`/gobject-introspection-1.0/Makefile.introspection
