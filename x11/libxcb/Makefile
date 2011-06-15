@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/02/25 09:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2011/06/15 11:15:35 obache Exp $
 #
 
 DISTNAME=	libxcb-1.7
@@ -12,7 +12,7 @@ COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 
 BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
-BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.6nb1:../../x11/py-xcbgen
+BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.6nb2:../../x11/py-xcbgen
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
