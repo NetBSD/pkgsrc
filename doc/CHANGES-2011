@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1462 2011/06/14 22:00:31 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1463 2011/06/15 11:13:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2294,3 +2294,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added math/R-bitops version 1.0-4.1 [alnsn 2011-06-14]
 	Added math/R-XML version 3.4-0 [alnsn 2011-06-14]
 	Added devel/mr version 1.03 [schmonz 2011-06-14]
+	Updated x11/py-xcbgen to 1.6nb2 [obache 2011-06-15]
