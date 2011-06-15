@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2011/03/08 08:30:07 adam Exp $
+$NetBSD: patch-af,v 1.3 2011/06/15 11:45:08 adam Exp $
 
---- configure.orig	2011-03-06 18:58:41.000000000 +0000
+--- configure.orig	2011-06-14 11:18:38.000000000 +0000
 +++ configure
-@@ -52168,6 +52168,7 @@ _ACEOF
+@@ -18317,6 +18317,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
  
  			BLDSHARED="true"
  			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
@@ -10,29 +10,29 @@ $NetBSD: patch-af,v 1.2 2011/03/08 08:30:07 adam Exp $
  			CFLAGS="$CFLAGS -fno-common"
  			SHLD="\${CC}"
  			SHLIBEXT="dylib"
-@@ -52208,7 +52209,7 @@ fi
+@@ -18353,7 +18354,7 @@ fi
  $as_echo "$BLDSHARED" >&6; }
  
  saved_before_as_needed_ldflags="$LDFLAGS"
 -for flags in "-Wl,--as-needed" "-Wl,-z,ignore" "-z ignore" ; do
 +for flags in "-Wl,-z,ignore" "-z ignore" ; do
  	saved_ldflags="$LDFLAGS"
- 	{ $as_echo "$as_me:$LINENO: checking if $flags works" >&5
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $flags works" >&5
  $as_echo_n "checking if $flags works... " >&6; }
-@@ -65482,9 +65483,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -25327,9 +25328,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
--        { $as_echo "$as_me:$LINENO: checking for des_set_key in -lcrypto" >&5
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for des_set_key in -lcrypto" >&5
 -$as_echo_n "checking for des_set_key in -lcrypto... " >&6; }
--if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then
-+        { $as_echo "$as_me:$LINENO: checking for EVP_des_cbc -lcrypto" >&5
+-if test "${ac_cv_lib_ext_crypto_des_set_key+set}" = set; then :
++        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EVP_des_cbc in -lcrypto" >&5
 +$as_echo_n "checking for EVP_des_cbc in -lcrypto... " >&6; }
-+if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then
++if test "${ac_cv_lib_ext_crypto_EVP_des_cbc+set}" = set; then :
    $as_echo_n "(cached) " >&6
  else
-   cat >conftest.$ac_ext <<_ACEOF
-@@ -65500,11 +65501,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -25341,31 +25342,31 @@ else
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -46,39 +46,33 @@ $NetBSD: patch-af,v 1.2 2011/03/08 08:30:07 adam Exp $
    ;
    return 0;
  }
-@@ -65530,13 +65531,13 @@ $as_echo "$ac_try_echo") >&5
- 	 test "$cross_compiling" = yes ||
- 	 $as_test_x conftest$ac_exeext
-        }; then
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
 -  ac_cv_lib_ext_crypto_des_set_key=yes;
 +  ac_cv_lib_ext_crypto_EVP_des_cbc=yes;
  		  ac_cv_lib_ext_crypto=yes
  else
-   $as_echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--	ac_cv_lib_ext_crypto_des_set_key=no;
-+	ac_cv_lib_ext_crypto_EVP_des_cbc=no;
+-  ac_cv_lib_ext_crypto_des_set_key=no;
++  ac_cv_lib_ext_crypto_EVP_des_cbc=no;
  		  ac_cv_lib_ext_crypto=no
  fi
- 
-@@ -65545,11 +65546,11 @@ rm -f core conftest.err conftest.$ac_obj
-       conftest$ac_exeext conftest.$ac_ext
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
  
  fi
--{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_des_set_key" >&5
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ext_crypto_des_set_key" >&5
 -$as_echo "$ac_cv_lib_ext_crypto_des_set_key" >&6; }
--    if test $ac_cv_lib_ext_crypto_des_set_key = yes; then
-+{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_ext_crypto_EVP_des_cbc" >&5
+-    if test $ac_cv_lib_ext_crypto_des_set_key = yes; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ext_crypto_EVP_des_cbc" >&5
 +$as_echo "$ac_cv_lib_ext_crypto_EVP_des_cbc" >&6; }
-+    if test $ac_cv_lib_ext_crypto_EVP_des_cbc = yes; then
++    if test $ac_cv_lib_ext_crypto_EVP_des_cbc = yes; then :
    cat >>confdefs.h <<_ACEOF
 -#define HAVE_DES_SET_KEY 1
 +#define HAVE_EVP_DES_CBC 1
  _ACEOF
  
  fi
-@@ -81694,31 +81695,39 @@ case "$host_os" in
+@@ -34478,31 +34479,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
  		;;
