@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/12/14 23:31:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/06/16 09:24:05 adam Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/Angle.h
@@ -56,7 +56,6 @@ include/geos/geom/Dimension.h
 include/geos/geom/Envelope.h
 include/geos/geom/Envelope.inl
 include/geos/geom/Geometry.h
-include/geos/geom/Geometry.inl
 include/geos/geom/GeometryCollection.h
 include/geos/geom/GeometryCollection.inl
 include/geos/geom/GeometryComponentFilter.h
@@ -68,6 +67,7 @@ include/geos/geom/IntersectionMatrix.h
 include/geos/geom/LineSegment.h
 include/geos/geom/LineSegment.inl
 include/geos/geom/LineString.h
+include/geos/geom/Lineal.h
 include/geos/geom/LinearRing.h
 include/geos/geom/Location.h
 include/geos/geom/MultiLineString.h
@@ -77,8 +77,10 @@ include/geos/geom/MultiPolygon.h
 include/geos/geom/MultiPolygon.inl
 include/geos/geom/Point.h
 include/geos/geom/Polygon.h
+include/geos/geom/Polygonal.h
 include/geos/geom/PrecisionModel.h
 include/geos/geom/PrecisionModel.inl
+include/geos/geom/Puntal.h
 include/geos/geom/Triangle.h
 include/geos/geom/prep/AbstractPreparedPolygonContains.h
 include/geos/geom/prep/BasicPreparedGeometry.h
@@ -98,11 +100,13 @@ include/geos/geom/util/CoordinateOperation.h
 include/geos/geom/util/GeometryCombiner.h
 include/geos/geom/util/GeometryEditor.h
 include/geos/geom/util/GeometryEditorOperation.h
+include/geos/geom/util/GeometryExtracter.h
 include/geos/geom/util/GeometryTransformer.h
 include/geos/geom/util/LinearComponentExtracter.h
 include/geos/geom/util/PointExtracter.h
 include/geos/geom/util/PolygonExtracter.h
 include/geos/geom/util/ShortCircuitedGeometryVisitor.h
+include/geos/geom/util/SineStarFactory.h
 include/geos/geomUtil.h
 include/geos/geomgraph.h
 include/geos/geomgraph/Depth.h
@@ -216,6 +220,7 @@ include/geos/noding/SegmentIntersectionDetector.h
 include/geos/noding/SegmentIntersector.h
 include/geos/noding/SegmentNode.h
 include/geos/noding/SegmentNodeList.h
+include/geos/noding/SegmentPointComparator.h
 include/geos/noding/SegmentSetMutualIntersector.h
 include/geos/noding/SegmentString.h
 include/geos/noding/SegmentString.inl
@@ -227,7 +232,6 @@ include/geos/noding/snapround/HotPixel.h
 include/geos/noding/snapround/HotPixel.inl
 include/geos/noding/snapround/MCIndexPointSnapper.h
 include/geos/noding/snapround/MCIndexSnapRounder.h
-include/geos/noding/snapround/MCIndexSnapRounder.inl
 include/geos/noding/snapround/SimpleSnapRounder.h
 include/geos/nodingSnapround.h
 include/geos/opBuffer.h
@@ -247,6 +251,8 @@ include/geos/operation/buffer/BufferParameters.h
 include/geos/operation/buffer/BufferSubgraph.h
 include/geos/operation/buffer/OffsetCurveBuilder.h
 include/geos/operation/buffer/OffsetCurveSetBuilder.h
+include/geos/operation/buffer/OffsetSegmentGenerator.h
+include/geos/operation/buffer/OffsetSegmentString.h
 include/geos/operation/buffer/RightmostEdgeFinder.h
 include/geos/operation/buffer/SubgraphDepthLocater.h
 include/geos/operation/distance/ConnectedElementLocationFilter.h
@@ -293,7 +299,12 @@ include/geos/operation/relate/RelateNode.h
 include/geos/operation/relate/RelateNodeFactory.h
 include/geos/operation/relate/RelateNodeGraph.h
 include/geos/operation/relate/RelateOp.h
+include/geos/operation/sharedpaths/SharedPathsOp.h
 include/geos/operation/union/CascadedPolygonUnion.h
+include/geos/operation/union/CascadedUnion.h
+include/geos/operation/union/GeometryListHolder.h
+include/geos/operation/union/PointGeometryUnion.h
+include/geos/operation/union/UnaryUnionOp.h
 include/geos/operation/valid/ConnectedInteriorTester.h
 include/geos/operation/valid/ConsistentAreaTester.h
 include/geos/operation/valid/IsValidOp.h
@@ -338,6 +349,8 @@ include/geos/util/CoordinateArrayFilter.h
 include/geos/util/GEOSException.h
 include/geos/util/GeometricShapeFactory.h
 include/geos/util/IllegalArgumentException.h
+include/geos/util/IllegalStateException.h
+include/geos/util/Machine.h
 include/geos/util/TopologyException.h
 include/geos/util/UniqueCoordinateArrayFilter.h
 include/geos/util/UnsupportedOperationException.h
