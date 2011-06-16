@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/06 09:05:53 cegger Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/16 10:28:47 cegger Exp $
 #
 
-VERSION=	4.1.0
+VERSION=	4.1.1
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel41-${VERSION}
 #PKGREVISION=	1
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
-COMMENT=	Xen 4.1.0 Kernel
+COMMENT=	Xen 4.1.1 Kernel
 
 LICENSE=        gnu-gpl-v2
 
@@ -29,7 +29,7 @@ PYTHON_FOR_BUILD_ONLY=	# empty
 PY_PATCHPLIST=		NO
 
 # XXX Why does this not work?
-# See work/xen-4.1.0/Config.mk:41 why PYTHON must be set and what for
+# See work/xen-4.1.1/Config.mk:41 why PYTHON must be set and what for
 MAKE_ENV+=	PYTHON=${PYTHONBIN:Q}
 MAKE_ENV+=	OCAML_TOOLS=no
 
