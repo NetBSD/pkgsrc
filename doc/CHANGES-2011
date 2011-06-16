@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1473 2011/06/16 15:09:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1474 2011/06/16 15:20:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2313,3 +2313,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql55-server to 5.5.13 [adam 2011-06-15]
 	Updated databases/py-psycopg2 to 2.4.2 [adam 2011-06-16]
 	Added devel/ruby-rdoc version 3.6.1 [taca 2011-06-16]
+	Updated lang/ruby18-base to 1.8.7.334nb4 [taca 2011-06-16]
+	Updated lang/ruby19-base to 1.9.2pl180nb2 [taca 2011-06-16]
+	Updated lang/ruby to 1.8.7.334nb1 [taca 2011-06-16]
+	Updated lang/ruby to 1.9.2pl180nb1 [taca 2011-06-16]
