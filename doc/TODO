@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10383 2011/06/15 21:01:59 adam Exp $
+$NetBSD: TODO,v 1.10384 2011/06/16 09:17:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -1113,7 +1113,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ldap-2.4.0
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
-	o py-psycopg2-2.4.2
 	o py-simplejson-2.1.6
 	o py-sybase-0.37
 	o py-twisted-11.0.0
