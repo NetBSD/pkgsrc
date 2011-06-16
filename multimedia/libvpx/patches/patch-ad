@@ -1,10 +1,24 @@
-$NetBSD: patch-ad,v 1.2 2011/04/14 07:08:00 adam Exp $
+$NetBSD: patch-ad,v 1.3 2011/06/16 13:22:48 seanb Exp $
 
-*BSD are identified as linux.
+*BSD and qnx are identified as linux.
 
---- build/make/configure.sh.orig	2010-10-28 13:14:14.000000000 +0000
+--- build/make/configure.sh.orig	2011-03-04 20:40:37.000000000 +0000
 +++ build/make/configure.sh
-@@ -956,6 +956,18 @@ EOF
+@@ -559,7 +559,7 @@ process_common_toolchain() {
+                 [ -z "$tgt_isa" ] && tgt_isa=x86
+                 tgt_os=win32
+                 ;;
+-            *linux*|*bsd*)
++            *linux*|*bsd*|*qnx6*)
+                 tgt_os=linux
+                 ;;
+             *solaris2.10)
+@@ -975,10 +975,29 @@ EOF
+     if enabled multithread; then
+         case ${toolchain} in
+             *-win*);;
+-            *) check_header pthread.h && add_extralibs -lpthread
++            *) check_header pthread.h && add_extralibs ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
          esac
      fi
  
@@ -16,7 +30,14 @@ $NetBSD: patch-ad,v 1.2 2011/04/14 07:08:00 adam Exp $
 +	add_extralibs -lm -lrt
 +	;;
 +    linux*)
-+	add_extralibs -lm -lrt
++	case ${gcctarget} in
++	*qnx6*)
++	    add_extralibs -lm
++	    ;;
++	*)
++	    add_extralibs -lm -lrt
++	    ;;
++	esac
 +	;;
 +    esac
 +
