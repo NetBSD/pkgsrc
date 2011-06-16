@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/06/16 10:28:48 cegger Exp $
+$NetBSD: distinfo,v 1.4 2011/06/16 13:02:50 cegger Exp $
 
 SHA1 (xen-4.1.1.tar.gz) = f1b5ef4b663c339faf9c77fc895327cfbcc9776c
 RMD160 (xen-4.1.1.tar.gz) = 4b3c0641b0f098889f627662aa6b8fea00c5b636
 Size (xen-4.1.1.tar.gz) = 10355625 bytes
+SHA1 (patch-xen_drivers_char_console_c) = 0fe186369602ccffaeec6f4bfbee8bb4298d3ff0
