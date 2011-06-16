@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.7 2011/05/20 17:09:21 bouyer Exp $
+$NetBSD: distinfo,v 1.8 2011/06/16 13:40:06 cegger Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
 Size (ipxe-git-v1.0.0.tar.gz) = 1996881 bytes
-SHA1 (xen-4.1.0.tar.gz) = 4295e67524746ce155ff991db5fd2a611be27f67
-RMD160 (xen-4.1.0.tar.gz) = e9ef987b24503d6c993bccfd203be5af9f104f48
-Size (xen-4.1.0.tar.gz) = 10348539 bytes
-SHA1 (patch-CVE-2011-1583) = adbe2e6d2bc89cfdfb44ff8011e29f1d128fd820
+SHA1 (xen-4.1.1.tar.gz) = f1b5ef4b663c339faf9c77fc895327cfbcc9776c
+RMD160 (xen-4.1.1.tar.gz) = 4b3c0641b0f098889f627662aa6b8fea00c5b636
+Size (xen-4.1.1.tar.gz) = 10355625 bytes
 SHA1 (patch-aa) = 9b53ba4a809dad7a1de34c8fa0dbe493d7256ada
 SHA1 (patch-ab) = 0906a5ec3a7450fc987b01289e2560e60966d00d
 SHA1 (patch-ac) = c3cc5335a1d6b066307c5f03fe72f513a9eb2bdb
@@ -36,4 +35,3 @@ SHA1 (patch-dc) = d860fe3725978227278d58f09e7d5157001e463e
 SHA1 (patch-dd) = b0c6253a77c09c8625bc9425742b395d1ce67010
 SHA1 (patch-de) = b118ff85070cac7cd81375d2f59ad10b719ae263
 SHA1 (patch-qemu-phy-devices) = fef90e50ef0a58db2f2b49b6c23218f371791de5
-SHA1 (patch-xm-test_ramdisk_make-release.sh) = 0844f1e022182d91dc04df552828820f4c946b5f
