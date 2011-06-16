@@ -1,0 +1,12 @@
+$NetBSD: patch-xen_drivers_char_console_c,v 1.1 2011/06/16 13:02:50 cegger Exp $
+
+--- xen/drivers/char/console.c.orig     2011-06-14 16:03:45.000000000 +0000
++++ xen/drivers/char/console.c
+@@ -10,7 +10,6 @@
+  *     Ported to Xen - Steven Rostedt - Red Hat
+  */
+ 
+-#include <xen/stdarg.h>
+ #include <xen/config.h>
+ #include <xen/version.h>
+ #include <xen/init.h>
