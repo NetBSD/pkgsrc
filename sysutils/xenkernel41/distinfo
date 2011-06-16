@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/05/07 07:11:22 tnn Exp $
+$NetBSD: distinfo,v 1.3 2011/06/16 10:28:48 cegger Exp $
 
-SHA1 (xen-4.1.0.tar.gz) = 4295e67524746ce155ff991db5fd2a611be27f67
-RMD160 (xen-4.1.0.tar.gz) = e9ef987b24503d6c993bccfd203be5af9f104f48
-Size (xen-4.1.0.tar.gz) = 10348539 bytes
-SHA1 (patch-aa) = a93592a78fd7050aee9d522e22cec182d75bbbfa
-SHA1 (patch-xen_common_libelf_libelf-loader.c) = a38b484080115077cfb12bcfff8bad642e9413ee
-SHA1 (patch-xen_include_xen_stdarg.h) = 26975533b5b63a2b9d559b9ab2018a4609767e26
+SHA1 (xen-4.1.1.tar.gz) = f1b5ef4b663c339faf9c77fc895327cfbcc9776c
+RMD160 (xen-4.1.1.tar.gz) = 4b3c0641b0f098889f627662aa6b8fea00c5b636
+Size (xen-4.1.1.tar.gz) = 10355625 bytes
