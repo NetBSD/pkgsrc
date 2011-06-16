@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/16 15:06:49 taca Exp $
+
+SHA1 (rdoc-3.6.1.gem) = 8e4ae75c72674f84a126bca04535063bc568fbc3
+RMD160 (rdoc-3.6.1.gem) = 6528e3019d9d5968489267a61dc942c6b0890d41
+Size (rdoc-3.6.1.gem) = 235520 bytes
