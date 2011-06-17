@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1496 2011/06/17 15:38:00 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1497 2011/06/17 15:41:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-highline to 1.6.2 [taca 2011-06-17]
 	Updated devel/ruby-inline to 3.9.0 [taca 2011-06-17]
 	Updated devel/ruby-linecache to 0.45 [taca 2011-06-17]
+	Updated databases/phpldapadmin to 1.2.1.1 [taca 2011-06-17]
