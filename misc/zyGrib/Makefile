@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/04/22 13:44:14 obache Exp $
+# $NetBSD: Makefile,v 1.18 2011/06/17 15:57:13 plunky Exp $
 #
 
-DISTNAME=	zyGrib-3.9.9.1
-PKGREVISION=	1
+DISTNAME=	zyGrib-4.0.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz
@@ -25,18 +24,33 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Fixing shared data paths.
-SUBST_FILES.paths=	map/GisReader.cpp GribAnimator.cpp
-SUBST_FILES.paths+=	MenuBar.cpp MainWindow.cpp main.cpp
-SUBST_SED.paths+=	-e "s|maps/|${PREFIX}/share/zyGrib/maps/|"
-SUBST_SED.paths+=	-e "s|img/|${PREFIX}/share/zyGrib/img/|"
-SUBST_SED.paths+=	-e "s|tr/|${PREFIX}/share/zyGrib/tr/|"
+SUBST_FILES.paths=	util/Util.h
+SUBST_SED.paths+=	-e "s|\"data/|\"${PREFIX}/share/zyGrib/|"
 
-INSTALLATION_DIRS+=	bin share/zyGrib/img
-INSTALLATION_DIRS+=	share/zyGrib/maps/gis
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/zyGrib/colors
+INSTALLATION_DIRS+=	share/zyGrib/config
+INSTALLATION_DIRS+=	share/zyGrib/gis
+INSTALLATION_DIRS+=	share/zyGrib/img
 INSTALLATION_DIRS+=	share/zyGrib/maps/gshhs
+INSTALLATION_DIRS+=	share/zyGrib/stuff
 INSTALLATION_DIRS+=	share/zyGrib/tr
 
-INSTALL_FILES=	img/1leftarrow.png
+INSTALL_FILES+=	colors/colors_binary.txt
+INSTALL_FILES+=	colors/colors_cape_jkg.txt
+INSTALL_FILES+=	colors/colors_clouds_black_pc.txt
+INSTALL_FILES+=	colors/colors_clouds_white_pc.txt
+INSTALL_FILES+=	colors/colors_deltatemp_celcius.txt
+INSTALL_FILES+=	colors/colors_humidrel_pc.txt
+INSTALL_FILES+=	colors/colors_rain_mmh.txt
+INSTALL_FILES+=	colors/colors_snowdepth_m.txt
+INSTALL_FILES+=	colors/colors_temp_celcius.txt
+INSTALL_FILES+=	colors/colors_wind_kts.txt
+INSTALL_FILES+=	gis/cities_10k-more.txt.gz
+INSTALL_FILES+=	gis/cities_3k-10k.txt.gz
+INSTALL_FILES+=	gis/countries_en.txt.gz
+INSTALL_FILES+=	gis/countries_fr.txt.gz
+INSTALL_FILES+=	img/1leftarrow.png
 INSTALL_FILES+=	img/1rightarrow.png
 INSTALL_FILES+=	img/2leftarrow.png
 INSTALL_FILES+=	img/2rightarrow.png
@@ -60,6 +74,7 @@ INSTALL_FILES+=	img/forward.png
 INSTALL_FILES+=	img/help.png
 INSTALL_FILES+=	img/info.png
 INSTALL_FILES+=	img/media-floppy.png
+INSTALL_FILES+=	img/meteoblue.png
 INSTALL_FILES+=	img/network.png
 INSTALL_FILES+=	img/player_eject.png
 INSTALL_FILES+=	img/player_end.png
@@ -71,14 +86,15 @@ INSTALL_FILES+=	img/player_rew.png
 INSTALL_FILES+=	img/player_start.png
 INSTALL_FILES+=	img/player_stop.png
 INSTALL_FILES+=	img/reload.png
+INSTALL_FILES+=	img/resource.rc
 INSTALL_FILES+=	img/up.png
 INSTALL_FILES+=	img/viewmag+.png
 INSTALL_FILES+=	img/viewmag-.png
 INSTALL_FILES+=	img/viewmag1.png
 INSTALL_FILES+=	img/viewmagfit.png
-INSTALL_FILES+=	maps/gis/cities.txt.gz
-INSTALL_FILES+=	maps/gis/countries_en.txt.gz
-INSTALL_FILES+=	maps/gis/countries_fr.txt.gz
+INSTALL_FILES+=	img/zyGrib.icns
+INSTALL_FILES+=	img/zyGrib_32.ico
+INSTALL_FILES+=	img/zyGrib_32.xpm
 INSTALL_FILES+=	maps/gshhs/README.gshhs
 INSTALL_FILES+=	maps/gshhs/README.gshhs.rangs
 INSTALL_FILES+=	maps/gshhs/gshhs_2.rim
@@ -96,6 +112,7 @@ INSTALL_FILES+=	maps/gshhs/wdb_borders_l.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_c.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_i.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_l.b
+INSTALL_FILES+=	stuff/boat_parameters.csv
 INSTALL_FILES+=	tr/zyGrib_cz.qm
 INSTALL_FILES+=	tr/zyGrib_cz.ts
 INSTALL_FILES+=	tr/zyGrib_de.qm
@@ -117,7 +134,7 @@ do-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/zyGrib ${DESTDIR}${PREFIX}/bin
 .for f in ${INSTALL_FILES}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/data/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
