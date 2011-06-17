@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/06/11 20:53:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/06/17 19:23:01 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -935,6 +935,7 @@ share/emacs/${EMACS_VERSION}/etc/srecode/template.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/test.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/texi.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/wisent.srt
+share/emacs/${EMACS_VERSION}/etc/themes/dichromacy-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/light-blue-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/misterioso-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tango-dark-theme.el
@@ -970,23 +971,30 @@ share/emacs/${EMACS_VERSION}/etc/yow.lines
 share/emacs/${EMACS_VERSION}/leim/ja-dic/ja-dic.el.gz
 share/emacs/${EMACS_VERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${EMACS_VERSION}/leim/leim-list.el
-share/emacs/${EMACS_VERSION}/leim/quail/4Corner.el
-share/emacs/${EMACS_VERSION}/leim/quail/ARRAY30.el
+share/emacs/${EMACS_VERSION}/leim/quail/4Corner.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/4Corner.elc
+share/emacs/${EMACS_VERSION}/leim/quail/ARRAY30.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/ARRAY30.elc
 share/emacs/${EMACS_VERSION}/leim/quail/CCDOSPY.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/CCDOSPY.elc
 share/emacs/${EMACS_VERSION}/leim/quail/CTLau-b5.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/CTLau-b5.elc
 share/emacs/${EMACS_VERSION}/leim/quail/CTLau.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/CTLau.elc
-share/emacs/${EMACS_VERSION}/leim/quail/ECDICT.el
-share/emacs/${EMACS_VERSION}/leim/quail/ETZY.el
-share/emacs/${EMACS_VERSION}/leim/quail/PY-b5.el
+share/emacs/${EMACS_VERSION}/leim/quail/ECDICT.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/ECDICT.elc
+share/emacs/${EMACS_VERSION}/leim/quail/ETZY.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/ETZY.elc
+share/emacs/${EMACS_VERSION}/leim/quail/PY-b5.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/PY-b5.elc
 share/emacs/${EMACS_VERSION}/leim/quail/PY.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/PY.elc
-share/emacs/${EMACS_VERSION}/leim/quail/Punct-b5.el
+share/emacs/${EMACS_VERSION}/leim/quail/Punct-b5.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/Punct-b5.elc
 share/emacs/${EMACS_VERSION}/leim/quail/Punct.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/Punct.elc
-share/emacs/${EMACS_VERSION}/leim/quail/QJ-b5.el
+share/emacs/${EMACS_VERSION}/leim/quail/QJ-b5.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/QJ-b5.elc
 share/emacs/${EMACS_VERSION}/leim/quail/QJ.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/QJ.elc
 share/emacs/${EMACS_VERSION}/leim/quail/SW.el.gz
@@ -995,7 +1003,8 @@ share/emacs/${EMACS_VERSION}/leim/quail/TONEPY.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/TONEPY.elc
 share/emacs/${EMACS_VERSION}/leim/quail/ZIRANMA.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/ZIRANMA.elc
-share/emacs/${EMACS_VERSION}/leim/quail/ZOZY.el
+share/emacs/${EMACS_VERSION}/leim/quail/ZOZY.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/ZOZY.elc
 share/emacs/${EMACS_VERSION}/leim/quail/arabic.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/arabic.elc
 share/emacs/${EMACS_VERSION}/leim/quail/croatian.el.gz
