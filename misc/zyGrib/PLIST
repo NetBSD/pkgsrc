@@ -1,5 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2010/10/16 06:50:52 plunky Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/06/17 15:57:13 plunky Exp $
 bin/zyGrib
+share/zyGrib/colors/colors_binary.txt
+share/zyGrib/colors/colors_cape_jkg.txt
+share/zyGrib/colors/colors_clouds_black_pc.txt
+share/zyGrib/colors/colors_clouds_white_pc.txt
+share/zyGrib/colors/colors_deltatemp_celcius.txt
+share/zyGrib/colors/colors_humidrel_pc.txt
+share/zyGrib/colors/colors_rain_mmh.txt
+share/zyGrib/colors/colors_snowdepth_m.txt
+share/zyGrib/colors/colors_temp_celcius.txt
+share/zyGrib/colors/colors_wind_kts.txt
+share/zyGrib/gis/cities_10k-more.txt.gz
+share/zyGrib/gis/cities_3k-10k.txt.gz
+share/zyGrib/gis/countries_en.txt.gz
+share/zyGrib/gis/countries_fr.txt.gz
 share/zyGrib/img/1leftarrow.png
 share/zyGrib/img/1rightarrow.png
 share/zyGrib/img/2leftarrow.png
@@ -24,6 +38,7 @@ share/zyGrib/img/forward.png
 share/zyGrib/img/help.png
 share/zyGrib/img/info.png
 share/zyGrib/img/media-floppy.png
+share/zyGrib/img/meteoblue.png
 share/zyGrib/img/network.png
 share/zyGrib/img/player_eject.png
 share/zyGrib/img/player_end.png
@@ -35,14 +50,15 @@ share/zyGrib/img/player_rew.png
 share/zyGrib/img/player_start.png
 share/zyGrib/img/player_stop.png
 share/zyGrib/img/reload.png
+share/zyGrib/img/resource.rc
 share/zyGrib/img/up.png
 share/zyGrib/img/viewmag+.png
 share/zyGrib/img/viewmag-.png
 share/zyGrib/img/viewmag1.png
 share/zyGrib/img/viewmagfit.png
-share/zyGrib/maps/gis/cities.txt.gz
-share/zyGrib/maps/gis/countries_en.txt.gz
-share/zyGrib/maps/gis/countries_fr.txt.gz
+share/zyGrib/img/zyGrib.icns
+share/zyGrib/img/zyGrib_32.ico
+share/zyGrib/img/zyGrib_32.xpm
 share/zyGrib/maps/gshhs/README.gshhs
 share/zyGrib/maps/gshhs/README.gshhs.rangs
 share/zyGrib/maps/gshhs/gshhs_2.rim
@@ -60,6 +76,7 @@ share/zyGrib/maps/gshhs/wdb_borders_l.b
 share/zyGrib/maps/gshhs/wdb_rivers_c.b
 share/zyGrib/maps/gshhs/wdb_rivers_i.b
 share/zyGrib/maps/gshhs/wdb_rivers_l.b
+share/zyGrib/stuff/boat_parameters.csv
 share/zyGrib/tr/zyGrib_cz.qm
 share/zyGrib/tr/zyGrib_cz.ts
 share/zyGrib/tr/zyGrib_de.qm
