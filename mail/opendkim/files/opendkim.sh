@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: opendkim.sh,v 1.1.1.1 2010/10/19 23:11:42 pettai Exp $
+# $NetBSD: opendkim.sh,v 1.2 2011/06/17 13:42:04 pettai Exp $
 #
 # PROVIDE: opendkim
 # REQUIRE: DAEMON
@@ -16,9 +16,9 @@ command="@PREFIX@/sbin/opendkim"
 pidfile="@VARBASE@/run/${name}.pid"
 command_args="-P ${pidfile} -l -x @PKG_SYSCONFDIR@/opendkim.conf -u @DKIM_USER@:@DKIM_GROUP@"
 required_files="@PKG_SYSCONFDIR@/opendkim.conf"
-start_precmd="dkimfilter_precmd"
+start_precmd="opendkim_precmd"
 
-dkimfilter_precmd()
+opendkim_precmd()
 {
 	if [ ! -d @VARBASE@/run/opendkim ]; then
 		@MKDIR@ @VARBASE@/run/opendkim
@@ -36,5 +36,5 @@ if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
 	echo -n " ${name}"
-	${command} ${dkimfilter_flags} ${command_args}
+	${command} ${opendkim_flags} ${command_args}
 fi
