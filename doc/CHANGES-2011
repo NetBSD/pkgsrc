@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1489 2011/06/17 14:02:40 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1490 2011/06/17 14:14:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2339,3 +2339,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-rails3 to 3.0.9 [taca 2011-06-17]
 	Updated databases/ruby-activeldap to 1.2.4 [taca 2011-06-17]
 	Updated databases/ruby-pg to 0.11.0 [taca 2011-06-17]
+	Updated databases/ruby-sequel to 3.24.1 [taca 2011-06-17]
