@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/04 03:57:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/06/17 15:14:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/History.txt
@@ -39,6 +39,8 @@ ${GEM_LIBDIR}/ext/ffi_c/StructByReference.h
 ${GEM_LIBDIR}/ext/ffi_c/StructByValue.c
 ${GEM_LIBDIR}/ext/ffi_c/StructByValue.h
 ${GEM_LIBDIR}/ext/ffi_c/StructLayout.c
+${GEM_LIBDIR}/ext/ffi_c/Thread.c
+${GEM_LIBDIR}/ext/ffi_c/Thread.h
 ${GEM_LIBDIR}/ext/ffi_c/Type.c
 ${GEM_LIBDIR}/ext/ffi_c/Type.h
 ${GEM_LIBDIR}/ext/ffi_c/Types.c
@@ -317,6 +319,19 @@ ${GEM_LIBDIR}/lib/ffi/library.rb
 ${GEM_LIBDIR}/lib/ffi/managedstruct.rb
 ${GEM_LIBDIR}/lib/ffi/memorypointer.rb
 ${GEM_LIBDIR}/lib/ffi/platform.rb
+${GEM_LIBDIR}/lib/ffi/platform/i386-darwin/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-openbsd/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-solaris/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-windows/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/powerpc-aix/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/powerpc-darwin/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/sparc-solaris/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/sparcv9-solaris/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-darwin/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-openbsd/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/pointer.rb
 ${GEM_LIBDIR}/lib/ffi/struct.rb
 ${GEM_LIBDIR}/lib/ffi/struct_layout_builder.rb
@@ -325,7 +340,6 @@ ${GEM_LIBDIR}/lib/ffi/tools/generator.rb
 ${GEM_LIBDIR}/lib/ffi/tools/generator_task.rb
 ${GEM_LIBDIR}/lib/ffi/tools/struct_generator.rb
 ${GEM_LIBDIR}/lib/ffi/tools/types_generator.rb
-${GEM_LIBDIR}/lib/ffi/types.conf
 ${GEM_LIBDIR}/lib/ffi/types.rb
 ${GEM_LIBDIR}/lib/ffi/union.rb
 ${GEM_LIBDIR}/lib/ffi/variadic.rb
@@ -336,6 +350,7 @@ ${GEM_LIBDIR}/spec/ffi/buffer_spec.rb
 ${GEM_LIBDIR}/spec/ffi/callback_spec.rb
 ${GEM_LIBDIR}/spec/ffi/custom_param_type.rb
 ${GEM_LIBDIR}/spec/ffi/custom_type_spec.rb
+${GEM_LIBDIR}/spec/ffi/dup_spec.rb
 ${GEM_LIBDIR}/spec/ffi/enum_spec.rb
 ${GEM_LIBDIR}/spec/ffi/errno_spec.rb
 ${GEM_LIBDIR}/spec/ffi/ffi_spec.rb
