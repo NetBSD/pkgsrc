@@ -1,0 +1,69 @@
+$NetBSD: patch-am,v 1.1.1.1 2011/06/17 00:10:19 reed Exp $
+
+--- setup.py.orig	2011-06-11 15:48:52.000000000 +0000
++++ setup.py
+@@ -17,7 +17,7 @@ from distutils.command.install_lib impor
+ from distutils.spawn import find_executable
+ 
+ # This global variable is used to hold the list of modules to be disabled.
+-disabled_module_list = []
++disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree", "_sqlite3", "_tkinter", "_gdbm", "expat", "readline"]
+ 
+ def add_dir_to_list(dirlist, dir):
+     """Add the directory 'dir' to the list 'dirlist' (at the front) if
+@@ -362,9 +362,15 @@ class PyBuildExt(build_ext):
+             os.unlink(tmpfile)
+ 
+     def detect_modules(self):
+-        # Ensure that /usr/local is always used
+-        add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
+-        add_dir_to_list(self.compiler.include_dirs, '/usr/local/include')
++        # Add the buildlink directories for pkgsrc
++        if os.environ.get('BUILDLINK_DIR'):
++            dir = os.environ['BUILDLINK_DIR']
++            libdir = dir + '/lib'
++            incdir = dir + '/include'
++            if libdir not in self.compiler.library_dirs:
++                self.compiler.library_dirs.insert(0, libdir)
++            if incdir not in self.compiler.include_dirs:
++                self.compiler.include_dirs.insert(0, incdir)
+         self.add_multiarch_paths()
+ 
+         # Add paths specified in the environment variables LDFLAGS and
+@@ -674,9 +680,7 @@ class PyBuildExt(build_ext):
+             if krb5_h:
+                 ssl_incs += krb5_h
+         ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
+-                                     ['/usr/local/ssl/lib',
+-                                      '/usr/contrib/ssl/lib/'
+-                                     ] )
++                                     [] )
+ 
+         if (ssl_incs is not None and
+             ssl_libs is not None):
+@@ -1315,6 +1319,14 @@ class PyBuildExt(build_ext):
+             macros = dict()
+             libraries = []
+ 
++        elif platform.startswith('dragonfly'):
++            macros = dict(
++                HAVE_SEM_OPEN=0,
++                HAVE_SEM_TIMEDWAIT=0,
++                HAVE_FD_TRANSFER=1,
++                )
++            libraries = []
++
+         else:                                   # Linux and other unices
+             macros = dict()
+             libraries = ['rt']
+@@ -1831,8 +1843,8 @@ def main():
+           # called unless there's at least one extension module defined.
+           ext_modules=[Extension('_struct', ['_struct.c'])],
+ 
+-          scripts = ["Tools/scripts/pydoc3", "Tools/scripts/idle3",
+-                     "Tools/scripts/2to3"]
++          scripts = ["Tools/scripts/pydoc3.1", "Tools/scripts/idle3",
++                     "Tools/scripts/2to3-3.1"]
+         )
+ 
+ # --install-platlib
