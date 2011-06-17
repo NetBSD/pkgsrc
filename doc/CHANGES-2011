@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1485 2011/06/17 13:41:06 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1486 2011/06/17 13:43:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated news/pan to 0.135 [obache 2011-06-17]
 	Updated devel/ruby-uuidtools to 2.1.2 [taca 2011-06-17]
 	Updated devel/ruby-simple_uuid to 0.1.2 [taca 2011-06-17]
+	Updated devel/ruby-test-unit to 2.3.0 [taca 2011-06-17]
