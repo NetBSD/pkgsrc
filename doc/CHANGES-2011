@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1476 2011/06/16 15:37:01 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1477 2011/06/17 01:11:41 reed Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2319,3 +2319,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby to 1.9.2pl180nb1 [taca 2011-06-16]
 	Updated x11/qwt-qt4 to 6.0.0 [adam 2011-06-16]
 	Updated textproc/ruby-nokogiri to 1.4.5 [taca 2011-06-16]
+	Added lang/python31 version 3.1.4 [reed 2011-06-17]
