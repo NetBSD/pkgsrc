@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1478 2011/06/17 12:06:11 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1479 2011/06/17 12:19:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2321,3 +2321,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/ruby-nokogiri to 1.4.5 [taca 2011-06-16]
 	Added lang/python31 version 3.1.4 [reed 2011-06-17]
 	Updated wm/dwm to 5.8.2 [obache 2011-06-17]
+	Updated lang/py24-html-docs to 2.4.4 [obache 2011-06-17]
