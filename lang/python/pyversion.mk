@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.88 2011/03/26 07:53:30 obache Exp $
+# $NetBSD: pyversion.mk,v 1.89 2011/06/17 01:01:04 reed Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 24 25 26 27
+#	Possible values: 24 25 26 27 31
 #	Default: 26
 #
 # === Package-settable variables ===
@@ -18,13 +18,13 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 27 26 25 24
-#	Default: 27 26 25 24
+#	Possible values: 31 27 26 25 24
+#	Default: 31 27 26 25 24
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 24 25 26 27
+#	Possible values: 24 25 26 27 31
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -69,13 +69,14 @@ BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		26
-PYTHON_VERSIONS_ACCEPTED?=		27 26 25 24
+PYTHON_VERSIONS_ACCEPTED?=		31 27 26 25 24
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
 BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
 BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
 BUILDLINK_API_DEPENDS.python27?=		python27>=2.7
+BUILDLINK_API_DEPENDS.python31?=		python31>=3.1
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -121,7 +122,13 @@ MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 _PYTHON_VERSION=	none
 .endif
 
-.if ${_PYTHON_VERSION} == "27"
+.if ${_PYTHON_VERSION} == "31"
+PYPKGSRCDIR=	../../lang/python31
+PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python26}:${PYPKGSRCDIR}
+PYPACKAGE=	python31
+PYVERSSUFFIX=	3.1
+PYPKGPREFIX=	py31
+.elif ${_PYTHON_VERSION} == "27"
 PYPKGSRCDIR=	../../lang/python27
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python27}:${PYPKGSRCDIR}
 PYPACKAGE=	python27
