@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1498 2011/06/17 16:01:44 plunky Exp $
+$NetBSD: CHANGES-2011,v 1.1499 2011/06/17 17:00:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2349,3 +2349,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/phpldapadmin to 1.2.1.1 [taca 2011-06-17]
 	Updated misc/zyGrib to 4.0.1 [plunky 2011-06-17]
 	Updated misc/zyGrib-maps to 2.4 [plunky 2011-06-17]
+	Updated textproc/p5-File-ReadBackwards to 1.05 [schmonz 2011-06-17]
