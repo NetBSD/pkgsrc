@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/25 23:39:01 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/17 12:27:09 obache Exp $
 #
 
-VERS=		2.6.3
+VERS=		2.6.7
 DISTNAME=	python-${VERS}-docs-html
 PKGNAME=	py26-html-docs-${VERS}
 CATEGORIES=	lang python
-MASTER_SITES=	http://docs.python.org/ftp/python/doc/current/
+MASTER_SITES=	http://docs.python.org/ftp/python/doc/${VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
