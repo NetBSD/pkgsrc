@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10384 2011/06/16 09:17:50 adam Exp $
+$NetBSD: TODO,v 1.10385 2011/06/17 12:06:11 obache Exp $
 
 Suggested new packages
 ======================
@@ -531,7 +531,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvdisaster-0.72.2
 	o dvdstyler-1.8.3
 	o dvtm-0.6
-	o dwm-5.8.2 [pkg/44987]
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.5
