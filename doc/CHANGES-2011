@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1493 2011/06/17 15:32:24 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1494 2011/06/17 15:34:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2343,3 +2343,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/hoe to 2.9.4 [taca 2011-06-17]
 	Updated devel/ruby-ffi to 1.0.9 [taca 2011-06-17]
 	Updated devel/ruby-flexmock to 0.9.0 [taca 2011-06-17]
+	Updated devel/ruby-highline to 1.6.2 [taca 2011-06-17]
