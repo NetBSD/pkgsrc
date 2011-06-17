@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1483 2011/06/17 13:08:09 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1484 2011/06/17 13:39:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2326,3 +2326,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/py26-html-docs to 2.6.7 [obache 2011-06-17]
 	Added lang/py27-html-docs version 2.7.2 [obache 2011-06-17]
 	Updated news/pan to 0.135 [obache 2011-06-17]
+	Updated devel/ruby-uuidtools to 2.1.2 [taca 2011-06-17]
