@@ -1,9 +1,10 @@
-Download and display weather data contained in GRIB1 files.
+Download and display Meteorological data in GRIB Format 1 files.
 
 Weather data display:
     - Surface Pressure
     - Wind 10 m above mean sea level
-    - Temperature 10 m above mean sea level
+    - Wind gust
+    - Temperature 2 m above mean sea level
     - Potential Temperature min - max 2 m above mean sea level
     - Relative Humidity 2 m above mean sea level
     - Total Precipitation (mm/h)
