@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:20 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/17 19:46:34 minskim Exp $
 
 DISTNAME=	type1cm.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.03
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
+PKGREVISION=	1
+TEXLIVE_REV=	21820
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-type1cm
