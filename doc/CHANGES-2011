@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1497 2011/06/17 15:41:13 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1498 2011/06/17 16:01:44 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2347,3 +2347,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-inline to 3.9.0 [taca 2011-06-17]
 	Updated devel/ruby-linecache to 0.45 [taca 2011-06-17]
 	Updated databases/phpldapadmin to 1.2.1.1 [taca 2011-06-17]
+	Updated misc/zyGrib to 4.0.1 [plunky 2011-06-17]
+	Updated misc/zyGrib-maps to 2.4 [plunky 2011-06-17]
