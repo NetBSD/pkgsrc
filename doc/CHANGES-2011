@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1491 2011/06/17 15:13:22 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1492 2011/06/17 15:15:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2341,3 +2341,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-pg to 0.11.0 [taca 2011-06-17]
 	Updated databases/ruby-sequel to 3.24.1 [taca 2011-06-17]
 	Updated devel/hoe to 2.9.4 [taca 2011-06-17]
+	Updated devel/ruby-ffi to 1.0.9 [taca 2011-06-17]
