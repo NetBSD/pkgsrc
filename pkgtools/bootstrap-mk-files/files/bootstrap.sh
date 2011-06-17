@@ -25,8 +25,8 @@ done
 
 subst_pattern='s|@ROOT_GROUP@|'${ROOT_GROUP}'|g;s|@ROOT_USER@|'${ROOT_USER}'|g;s|@SYSCONFDIR@|'${SYSCONFDIR}'|g'
 
-if [ -f mods/${OPSYS}.own.mk.in ]; then
-	${SED} -e "${subst_pattern}" mods/${OPSYS}.own.mk.in > ${MK_DST}/bsd.own.mk
+if [ -f mods/${OPSYS}.bsd.own.mk.in ]; then
+	${SED} -e "${subst_pattern}" mods/${OPSYS}.bsd.own.mk.in > ${MK_DST}/bsd.own.mk
 else
 	${SED} -e "${subst_pattern}" mods/bsd.own.mk.in > ${MK_DST}/bsd.own.mk
 fi
