@@ -1,0 +1,14 @@
+$NetBSD: patch-au,v 1.1.1.1 2011/06/17 00:10:19 reed Exp $
+
+--- Makefile.pre.in.orig	2011-06-11 15:48:51.000000000 +0000
++++ Makefile.pre.in
+@@ -807,7 +807,8 @@ altbininstall: $(BUILDPYTHON)
+ 				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
+ 			fi \
+ 		fi; \
+-	else	true; \
++	elif test -f $(INSTSONAME); then \
++		$(INSTALL_SHARED) $(INSTSONAME) $(DESTDIR)$(LIBDIR); \
+ 	fi
+ 
+ bininstall: altbininstall
