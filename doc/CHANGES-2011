@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1499 2011/06/17 17:00:42 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1500 2011/06/17 19:23:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2350,3 +2350,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/zyGrib to 4.0.1 [plunky 2011-06-17]
 	Updated misc/zyGrib-maps to 2.4 [plunky 2011-06-17]
 	Updated textproc/p5-File-ReadBackwards to 1.05 [schmonz 2011-06-17]
+	Updated editors/emacs-snapshot to 24.0.50.20110614 [minskim 2011-06-17]
