@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/17 00:10:18 reed Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/17 00:59:25 reed Exp $
 
 .include "dist.mk"
 
@@ -151,9 +151,7 @@ INSTALL_TARGET=	altinstall
 REPLACE_INTERPRETER+=	py31
 REPLACE.py31.old=	.*python[^ ]*
 REPLACE.py31.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py31=	Lib/cgi.py	# explicitly demanded to be patched
-REPLACE_FILES.py31+=	Lib/test/test_bz2.py
-REPLACE_FILES.py31+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
+REPLACE_FILES.py31=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
 
 SUBST_CLASSES+=		findlib
 SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
