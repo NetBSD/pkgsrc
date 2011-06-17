@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/14 20:57:43 plunky Exp $
+$NetBSD: distinfo,v 1.2 2011/06/17 16:00:17 plunky Exp $
 
-SHA1 (zyGrib_maps2.tgz) = 87a90cbbe74e730b0cadbac19ad572924728df97
-RMD160 (zyGrib_maps2.tgz) = e5dabc93e899bc05622a979a199044052310df32
-Size (zyGrib_maps2.tgz) = 105736055 bytes
+SHA1 (zyGrib_maps2.4.tgz) = d5cd95b2c713738a742193950ceb331080c06b5e
+RMD160 (zyGrib_maps2.4.tgz) = 83ec6bd506c6f167421998a7ab0c67cc4101e555
+Size (zyGrib_maps2.4.tgz) = 105735981 bytes

@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/17 16:00:17 plunky Exp $
 #
 
-DISTNAME=	zyGrib-maps-2
+DISTNAME=	zyGrib-maps-2.4
 CATEGORIES=	misc
-MASTER_SITES=	http://www.zygrib.org/files/
-DISTFILES=	zyGrib_maps2.tgz
+MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
+DISTFILES=	zyGrib_maps2.4.tgz
 
 MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://www.zygrib.org/
 COMMENT=	High resolution map files for zyGrib
-#LICENSE=	gnu-gpl
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	zyGrib>=2.0:../../misc/zyGrib
 
@@ -28,7 +28,7 @@ INSTALL_FILES+=	maps/gshhs/wdb_borders_h.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_f.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_h.b
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/data
 
 do-configure:
 
