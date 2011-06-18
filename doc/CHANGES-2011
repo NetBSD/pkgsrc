@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1501 2011/06/17 19:47:20 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1502 2011/06/18 01:54:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2352,3 +2352,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-File-ReadBackwards to 1.05 [schmonz 2011-06-17]
 	Updated editors/emacs-snapshot to 24.0.50.20110614 [minskim 2011-06-17]
 	Updated print/tex-type1cm-doc to 0.03nb1 [minskim 2011-06-17]
+	Updated devel/ruby-mocha to 0.9.12 [taca 2011-06-18]
+	Updated devel/ruby-parser to 2.0.6 [taca 2011-06-18]
+	Updated devel/ruby-parsetree to 3.0.7 [taca 2011-06-18]
+	Updated devel/ruby-pathname2 to 1.6.4 [taca 2011-06-18]
