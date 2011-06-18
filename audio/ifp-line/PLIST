@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/22 04:08:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/06/18 10:01:28 shattered Exp $
 bin/ifp
 man/man1/ifp.1
+share/ifp-line/NEWS
+share/ifp-line/README
+share/ifp-line/TIPS
+share/ifp-line/nonroot.sh
