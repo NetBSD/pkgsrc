@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.5 2010/04/24 21:10:29 joerg Exp $	*/
+/*	$NetBSD: make.h,v 1.6 2011/06/18 22:39:46 bsiegert Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -203,8 +203,7 @@ typedef struct GNode {
     int             unmade;    	/* The number of unmade children */
 
     time_t          mtime;     	/* Its modification time */
-    time_t     	    cmtime;    	/* The modification time of its youngest
-				 * child */
+    struct GNode    *cmgn;    	/* The youngest child */
 
     Lst     	    iParents;  	/* Links to parents for which this is an
 				 * implied source, if any */
@@ -276,6 +275,9 @@ typedef struct GNode {
 #define OP_PHONY	0x00010000  /* Not a file target; run always */
 #define OP_NOPATH	0x00020000  /* Don't search for file in the path */
 #define OP_WAIT 	0x00040000  /* .WAIT phony node */
+#define OP_NOMETA	0x00080000  /* .NOMETA do not create a .meta file */
+#define OP_META		0x00100000  /* .META we _do_ want a .meta file */
+#define OP_NOMETA_CMP	0x00200000  /* Do not compare commands in .meta file */
 /* Attributes applied by PMake */
 #define OP_TRANSFORM	0x80000000  /* The node is a transformation rule */
 #define OP_MEMBER 	0x40000000  /* Target is a member of an archive */
@@ -408,6 +410,7 @@ extern Boolean	oldVars;    	/* Do old-style variable substitution */
 extern Lst	sysIncPath;	/* The system include path. */
 extern Lst	defIncPath;	/* The default include path. */
 
+extern char	curdir[];	/* Startup directory */
 extern char	*progname;	/* The program name */
 extern char	*makeDependfile; /* .depend */
 
@@ -449,6 +452,8 @@ extern int debug;
 #define DEBUG_SHELL	0x00800
 #define DEBUG_ERROR	0x01000
 #define DEBUG_LOUD	0x02000
+#define DEBUG_META	0x04000
+
 #define DEBUG_GRAPH3	0x10000
 #define DEBUG_SCRIPT	0x20000
 #define DEBUG_PARSE	0x40000
@@ -474,6 +479,7 @@ void PrintOnError(GNode *, const char *);
 void Main_ExportMAKEFLAGS(Boolean);
 Boolean Main_SetObjdir(const char *);
 int mkTempFile(const char *, char **);
+int str2Lst_Append(Lst, char *, const char *);
 
 #ifdef __GNUC__
 #define UNCONST(ptr)	({ 		\
