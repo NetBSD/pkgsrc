@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 06:25:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/06/18 02:23:24 taca Exp $
 bin/autospec
 bin/spec
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/License.txt
-${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Ruby1.9.rdoc
@@ -14,6 +16,7 @@ ${GEM_LIBDIR}/Upgrade.rdoc
 ${GEM_LIBDIR}/bin/autospec
 ${GEM_LIBDIR}/bin/spec
 ${GEM_LIBDIR}/cucumber.yml
+${GEM_LIBDIR}/example_spec.rb
 ${GEM_LIBDIR}/examples/failing/README.txt
 ${GEM_LIBDIR}/examples/failing/diffing_spec.rb
 ${GEM_LIBDIR}/examples/failing/failing_implicit_docstrings_example.rb
@@ -59,6 +62,8 @@ ${GEM_LIBDIR}/examples/passing/stack_spec_with_nested_example_groups.rb
 ${GEM_LIBDIR}/examples/passing/stubbing_example.rb
 ${GEM_LIBDIR}/examples/passing/yielding_example.rb
 ${GEM_LIBDIR}/examples/ruby1.9.compatibility/access_to_constants_spec.rb
+${GEM_LIBDIR}/features-pending/cli/conditional_exclusion.feature
+${GEM_LIBDIR}/features-pending/heckle/heckle.feature
 ${GEM_LIBDIR}/features/before_and_after_blocks/before_and_after_blocks.feature
 ${GEM_LIBDIR}/features/command_line/line_number_option.feature
 ${GEM_LIBDIR}/features/command_line/line_number_option_with_example_with_no_name.feature
@@ -101,7 +106,6 @@ ${GEM_LIBDIR}/features/subject/explicit_subject.feature
 ${GEM_LIBDIR}/features/subject/implicit_subject.feature
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/support/matchers/smart_match.rb
-${GEM_LIBDIR}/geminstaller.yml
 ${GEM_LIBDIR}/init.rb
 ${GEM_LIBDIR}/lib/autotest/discover.rb
 ${GEM_LIBDIR}/lib/autotest/rspec.rb
@@ -227,6 +231,7 @@ ${GEM_LIBDIR}/resources/rake/examples.rake
 ${GEM_LIBDIR}/resources/rake/examples_with_rcov.rake
 ${GEM_LIBDIR}/resources/rake/failing_examples_with_html.rake
 ${GEM_LIBDIR}/resources/rake/verify_rcov.rake
+${GEM_LIBDIR}/rspec.gemspec
 ${GEM_LIBDIR}/spec/README.jruby
 ${GEM_LIBDIR}/spec/autotest/autotest_helper.rb
 ${GEM_LIBDIR}/spec/autotest/autotest_matchers.rb
@@ -288,6 +293,7 @@ ${GEM_LIBDIR}/spec/spec/matchers/match_spec.rb
 ${GEM_LIBDIR}/spec/spec/matchers/matcher_spec.rb
 ${GEM_LIBDIR}/spec/spec/matchers/matchers_spec.rb
 ${GEM_LIBDIR}/spec/spec/matchers/operator_matcher_spec.rb
+${GEM_LIBDIR}/spec/spec/matchers/pretty_spec.rb
 ${GEM_LIBDIR}/spec/spec/matchers/raise_exception_spec.rb
 ${GEM_LIBDIR}/spec/spec/matchers/respond_to_spec.rb
 ${GEM_LIBDIR}/spec/spec/matchers/satisfy_spec.rb
@@ -301,6 +307,7 @@ ${GEM_LIBDIR}/spec/spec/mocks/at_least_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/at_most_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_10260_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_10263_spec.rb
+${GEM_LIBDIR}/spec/spec/mocks/bug_report_1049_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_11545_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_15719_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_496_spec.rb
@@ -310,6 +317,7 @@ ${GEM_LIBDIR}/spec/spec/mocks/bug_report_7805_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_8165_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_8302_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_830_spec.rb
+${GEM_LIBDIR}/spec/spec/mocks/bug_report_957_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/double_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/failing_argument_matchers_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/hash_including_matcher_spec.rb
@@ -351,6 +359,7 @@ ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.8.6-jruby.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.8.6.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.8.7.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.9.1.html
+${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.9.2.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatter_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/formatter/nested_text_formatter_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/formatter/profile_formatter_spec.rb
@@ -361,6 +370,7 @@ ${GEM_LIBDIR}/spec/spec/runner/formatter/text_mate_formatted-1.8.6-jruby.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/text_mate_formatted-1.8.6.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/text_mate_formatted-1.8.7.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/text_mate_formatted-1.9.1.html
+${GEM_LIBDIR}/spec/spec/runner/formatter/text_mate_formatted-1.9.2.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/text_mate_formatter_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/heckle_runner_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/heckler_spec.rb
