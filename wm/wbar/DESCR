@@ -1,0 +1,6 @@
+Just a simple and highly customizable quick-launch tool.
+
+Features
+* It's coded in C++
+* It uses Imlib2 to do the image processing
+* It rides just on top of Xlib, no other toolkits.
