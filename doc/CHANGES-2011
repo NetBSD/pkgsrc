@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1508 2011/06/18 04:18:33 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1509 2011/06/18 10:44:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2366,3 +2366,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/ruby-rspec-mocks version 2.6.0 [taca 2011-06-18]
 	Updated devel/ruby-rspec to 2.6.0 [taca 2011-06-18]
 	Added devel/ruby-rspec-rails version 2.6.1 [taca 2011-06-18]
+	Added wm/py-tyle version 0.7.5 [wiz 2011-06-18]
