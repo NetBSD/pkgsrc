@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/18 09:09:02 obache Exp $
+$NetBSD: patch-aa,v 1.2 2011/06/18 02:45:13 obache Exp $
 
 install as usual manner.
 
---- Makefile.in.orig	2009-11-19 13:05:26.000000000 +0000
+--- Makefile.in.orig	2011-02-28 08:41:44.000000000 +0000
 +++ Makefile.in
 @@ -7,6 +7,8 @@ exec_prefix = @exec_prefix@
  VPATH = @srcdir@
@@ -13,7 +13,7 @@ install as usual manner.
  
  # Coment this for AIX/xlC 5.0
  LIBEXT=la
-@@ -152,16 +154,11 @@ testleak: testleak.o $(GB_LIB)
+@@ -155,16 +157,11 @@ testleak: testleak.o $(GB_LIB)
  
  install: subsql $(GB_LIB) $(CLI_LIB)
  	mkdir -p $(includedir)
