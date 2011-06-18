@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2011/06/18 10:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2011/06/18 15:16:41 wiz Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -75,6 +75,7 @@ SUBDIR+=	vtwm
 SUBDIR+=	w9wm
 SUBDIR+=	waimea
 SUBDIR+=	wampager
+SUBDIR+=	wbar
 SUBDIR+=	weewm
 SUBDIR+=	windowlab
 SUBDIR+=	windowmaker
