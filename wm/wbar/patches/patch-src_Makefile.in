@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.in,v 1.1.1.1 2011/06/18 15:16:24 wiz Exp $
+
+Uses symbols from libintl, so link against it.
+http://code.google.com/p/wbar/issues/detail?id=56
+
+--- src/Makefile.in.orig	2011-05-20 16:15:57.000000000 +0000
++++ src/Makefile.in
+@@ -272,7 +272,7 @@ $(top_srcdir)/src/utils/OptParser.h \
+ $(top_srcdir)/src/utils/i18n.h
+ 
+ wbar_CXXFLAGS = @modules_CFLAGS@
+-wbar_LDADD = @modules_LIBS@
++wbar_LDADD = @modules_LIBS@ @INTLLIBS@
+ @WBAR_CONFIG_TRUE@wbar_config_CXXFLAGS = @gui_modules_CFLAGS@
+ @WBAR_CONFIG_TRUE@wbar_config_LDADD = @gui_modules_LIBS@
+ all: all-am
