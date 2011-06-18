@@ -1,18 +1,18 @@
-/*	$NetBSD: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $	*/
+/*	$NetBSD: util.c,v 1.10 2011/06/18 22:39:46 bsiegert Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $
+ *	$Id: util.c,v 1.10 2011/06/18 22:39:46 bsiegert Exp $
  */
 
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.10 2011/06/18 22:39:46 bsiegert Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.9 2010/12/21 22:57:44 seanb Exp $");
+__RCSID("$NetBSD: util.c,v 1.10 2011/06/18 22:39:46 bsiegert Exp $");
 #endif
 #endif
 
@@ -47,7 +47,7 @@ findenv(const char *name, int *offset)
 	char *p, *q;
 
 	for (i = 0; (q = environ[i]); i++) {
-		char *p = strchr(q, '=');
+		p = strchr(q, '=');
 		if (p == NULL)
 			continue;
 		if (strncmp(name, q, len = p - q) == 0) {
@@ -528,4 +528,91 @@ killpg(int pid, int sig)
     return kill(-pid, sig);
 }
 #endif
+#endif
+
+#if !defined(HAVE_WARNX)
+static void
+vwarnx(const char *fmt, va_list args)
+{
+	fprintf(stderr, "%s: ", progname);
+	if ((fmt)) {
+		vfprintf(stderr, fmt, args);
+		fprintf(stderr, ": ");
+	}
+}
+#endif
+
+#if !defined(HAVE_WARN)
+static void
+vwarn(const char *fmt, va_list args)
+{
+	vwarnx(fmt, args);
+	fprintf(stderr, "%s\n", strerror(errno));
+}
+#endif
+
+#if !defined(HAVE_ERR)
+static void
+verr(int eval, const char *fmt, va_list args)
+{
+	vwarn(fmt, args);
+	exit(eval);
+}
+#endif
+
+#if !defined(HAVE_ERRX)
+static void
+verrx(int eval, const char *fmt, va_list args)
+{
+	vwarnx(fmt, args);
+	exit(eval);
+}
+#endif
+
+#if !defined(HAVE_ERR)
+void
+err(int eval, const char *fmt, ...)
+{
+        va_list ap;
+
+        va_start(ap, fmt);
+        verr(eval, fmt, ap);
+        va_end(ap);
+}
+#endif
+
+#if !defined(HAVE_ERRX)
+void
+errx(int eval, const char *fmt, ...)
+{
+        va_list ap;
+
+        va_start(ap, fmt);
+        verrx(eval, fmt, ap);
+        va_end(ap);
+}
+#endif
+
+#if !defined(HAVE_WARN)
+void
+warn(const char *fmt, ...)
+{
+        va_list ap;
+
+        va_start(ap, fmt);
+        vwarn(fmt, ap);
+        va_end(ap);
+}
+#endif
+
+#if !defined(HAVE_WARNX)
+void
+warnx(const char *fmt, ...)
+{
+        va_list ap;
+
+        va_start(ap, fmt);
+        vwarnx(fmt, ap);
+        va_end(ap);
+}
 #endif
