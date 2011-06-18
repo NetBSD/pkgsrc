@@ -1,4 +1,4 @@
-.\"	$NetBSD: bmake.1,v 1.8 2010/09/07 14:41:39 joerg Exp $
+.\"	$NetBSD: bmake.1,v 1.9 2011/06/18 22:39:46 bsiegert Exp $
 .\"
 .\" Copyright (c) 1990, 1993
 .\"	The Regents of the University of California.  All rights reserved.
@@ -29,7 +29,7 @@
 .\"
 .\"	from: @(#)make.1	8.4 (Berkeley) 3/19/94
 .\"
-.Dd June 30, 2010
+.Dd May 29, 2011
 .Dt BMAKE 1
 .Os
 .Sh NAME
@@ -194,6 +194,8 @@ Print commands in Makefiles regardless of whether or not they are prefixed by
 .Ql @
 or other "quiet" flags.
 Also known as "loud" behavior.
+.It Ar M
+Print debugging information about "meta" mode decisions about targets.
 .It Ar m
 Print debugging information about making targets, including modification
 dates.
@@ -266,6 +268,8 @@ cooperate to avoid overloading the system.
 Specify the maximum number of jobs that
 .Nm
 may have running at any one time.
+The value is saved in
+.Va .MAKE.JOBS .
 Turns compatibility mode off, unless the
 .Ar B
 flag is also specified.
@@ -759,9 +763,65 @@ Processed after reading all makefiles.
 Can affect the mode that
 .Nm
 runs in.
-Currently just
-.Ql Pa compat
-mode.
+It can contain a number of keywords:
+.Bl -hang -width ignore-cmd
+.It Pa compat
+Like
+.Fl B ,
+puts
+.Nm
+into "compat" mode.
+.It Pa meta
+Puts
+.Nm
+into "meta" mode, where meta files are created for each target
+to capture the command run, the output generated and if
+.Xr filemon 4
+is available, the system calls which are of interest to
+.Nm .
+The captured output can be very useful when diagnosing errors.
+.It Pa curdirOk= Ar bf
+Normally
+.Nm
+will not create .meta files in
+.Ql Va .CURDIR .
+This can be overridden by setting
+.Va bf
+to a value which represents True.
+.It Pa verbose
+If in "meta" mode, print a clue about the target being built.
+This is useful if the build is otherwise running silently.
+The message printed the value of:
+.Va .MAKE.META.PREFIX .
+.It Pa ignore-cmd
+Some makefiles have commands which are simply not stable.
+This keyword causes them to be ignored for
+determining whether a target is out of date in "meta" mode.
+See also
+.Ic .NOMETA_CMP .
+.El
+.It Va .MAKE.META.BAILIWICK
+In "meta" mode, provides a list of prefixes which
+match the directories controlled by
+.Nm .
+If a file that was generated outside of
+.Va .OBJDIR
+but within said bailiwick is missing,
+the current target is considered out-of-date.
+.It Va .MAKE.META.CREATED
+In "meta" mode, this variable contains a list of all the meta files
+updated.
+If not empty, it can be used to trigger processing of
+.Va .MAKE.META.FILES .
+.It Va .MAKE.META.FILES
+In "meta" mode, this variable contains a list of all the meta files
+used (updated or not).
+This list can be used to process the meta files to extract dependency
+information.
+.It Va .MAKE.META.PREFIX
+Defines the message printed for each meta file updated in "meta verbose" mode.
+The default value is:
+.Dl Building ${.TARGET:H:tA}/${.TARGET:T}
 .It Va .MAKEOVERRIDES
 This variable is used to record the names of variables assigned to
 on the command line, so that they may be exported as part of
@@ -990,6 +1050,18 @@ safely through recursive invocations of
 .Nm .
 .It Cm \&:R
 Replaces each word in the variable with everything but its suffix.
+.It Cm \&:gmtime
+The value is a format string for
+.Xr strftime 3 ,
+using the current
+.Xr gmtime 3 .
+.It Cm \&:hash
+Compute a 32bit hash of the value and encode it as hex digits.
+.It Cm \&:localtime
+The value is a format string for
+.Xr strftime 3 ,
+using the current
+.Xr localtime 3 .
 .It Cm \&:tA
 Attempt to convert variable to an absolute path using
 .Xr realpath 3 ,
@@ -1129,7 +1201,7 @@ A common error is trying to use expressions like
 .Dl ${NUMBERS:M42:?match:no}
 which actually tests defined(NUMBERS),
 to determine is any words match "42" you need to use something like:
-.Dl ${${NUMBERS:M42} != "":?match:no} .
+.Dl ${"${NUMBERS:M42}" != \&"\&":?match:no} .
 .It Ar :old_string=new_string
 This is the
 .At V
@@ -1612,6 +1684,27 @@ or
 options were specified.
 Normally used to mark recursive
 .Nm Ns 's .
+.It Ic .META
+Create a meta file for the target, even if it is flagged as
+.Ic .PHONY ,
+.Ic .MAKE ,
+or
+.Ic .SPECIAL .
+Usage in conjunction with
+.Ic .MAKE
+is the most likely case.
+.It Ic .NOMETA
+Do not create a meta file for the target.
+Meta files are also not created for
+.Ic .PHONY ,
+.Ic .MAKE ,
+or
+.Ic .SPECIAL
+targets.
+.It Ic .NOMETA_CMP
+Ignore differences in commands when deciding if target is out of date.
+This is useful if the command contains a value which always changes.
+If the number of commands change, though, the target will still be out of date.
 .It Ic .NOPATH
 Do not search for the target in the directories specified by
 .Ic .PATH .
@@ -1774,7 +1867,7 @@ could be built, unless
 is built by another part of the dependency graph,
 the following is a dependency loop:
 .Bd -literal
-\&.ORDER: a b
+\&.ORDER: b a
 b: a
 .Ed
 .Pp
@@ -1926,6 +2019,21 @@ The way that .for loop variables are substituted changed after
 so that they still appear to be variable expansions.
 In particular this stops them being treated as syntax, and removes some
 obscure problems using them in .if statements.
+.Pp
+Unlike other
+.Nm
+programs, this implementation by default executes all commands for a given
+target using a single shell invocation.
+This is done for both efficiency and to simplify error handling in remote
+command invocations.
+Typically this is transparent to the user, unless the target commands change
+the current working directory using
+.Dq cd
+or
+.Dq chdir .
+To be compatible with Makefiles that do this, one can use
+.Fl B
+to disable this behavior.
 .Sh SEE ALSO
 .Xr mkdep 1
 .Sh HISTORY
