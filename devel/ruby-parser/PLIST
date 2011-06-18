@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/10 06:05:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/06/18 01:49:18 taca Exp $
 bin/ruby_parse
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
