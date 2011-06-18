@@ -1,0 +1,11 @@
+Behaviour Driven Development for Ruby
+
+# RSpec Core
+
+RSpec Core provides the structure for writing executable examples of how your
+code should behave.
+
+## Documentation
+
+* [Cucumber features](http://relishapp.com/rspec/rspec-expectations)
+* [RDoc](http://rubydoc.info/gems/rspec-expectations/2.4.0/frames)
