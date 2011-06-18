@@ -81,6 +81,14 @@ make: Graph cycles through `cycle.2.97'
 cycle.1.99
 cycle.1.99
 .for with :S;... OK
+b2af338b
+3360ac65
+7747f046
+9ca87054
+880fe816
+208fcbd3
+d5d376eb
+de41416c
 Expect: Unknown modifier 'Z'
 make: Unknown modifier 'Z'
 VAR:Z=
@@ -120,6 +128,7 @@ path='/bin':'/tmp':'/':'/no/such/dir'
 path_/usr/xbin=/opt/xbin/
 paths=/bin /tmp / /no/such/dir /opt/xbin
 PATHS=/BIN /TMP / /NO/SUCH/DIR /OPT/XBIN
+The answer is 42
 LIST      = one two three four five six seven eight nine ten
 LIST:O    = eight five four nine one seven six ten three two
 LIST:Ox   = Ok
@@ -306,6 +315,12 @@ Now we expect an error...
 *** Error code 1 (continuing)
 `all' not remade because of errors.
 V.i386 ?= OK
+FOOBAR =
+FOOBAR = foobar fubar
+fun
+fun
+fun
+In the Sun
 The answer is unknown
 The answer is unknown
 The answer is empty

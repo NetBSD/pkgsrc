@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.8 2010/09/07 14:28:01 joerg Exp $	*/
+/*	$NetBSD: var.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: var.c,v 1.8 2010/09/07 14:28:01 joerg Exp $";
+static char rcsid[] = "$NetBSD: var.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)var.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: var.c,v 1.8 2010/09/07 14:28:01 joerg Exp $");
+__RCSID("$NetBSD: var.c,v 1.9 2011/06/18 22:39:46 bsiegert Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -129,8 +129,10 @@ __RCSID("$NetBSD: var.c,v 1.8 2010/09/07 14:28:01 joerg Exp $");
 #include    <regex.h>
 #endif
 #include    <ctype.h>
+#include    <inttypes.h>
 #include    <stdlib.h>
 #include    <limits.h>
+#include    <time.h>
 
 #include    "make.h"
 #include    "buf.h"
@@ -302,6 +304,7 @@ static char *VarGetPattern(GNode *, Var_Parse_State *,
 			   VarPattern *);
 static char *VarQuote(char *);
 static char *VarChangeCase(char *, int);
+static char *VarHash(char *);
 static char *VarModify(GNode *, Var_Parse_State *,
     const char *,
     Boolean (*)(GNode *, Var_Parse_State *, char *, Boolean, Buffer *, void *),
@@ -379,6 +382,12 @@ VarFind(const char *name, GNode *ctxt, int flags)
 				name = TARGET;
 			break;
 		}
+#ifdef notyet
+    /* for compatibility with gmake */
+    if (name[0] == '^' && name[1] == '\0')
+	    name = ALLSRC;
+#endif
+
     /*
      * First look for the variable in the given context. If it's not there,
      * look for it in VAR_CMD, VAR_GLOBAL and the environment, in that order,
@@ -2256,6 +2265,79 @@ VarQuote(char *str)
 
 /*-
  *-----------------------------------------------------------------------
+ * VarHash --
+ *      Hash the string using the MurmurHash3 algorithm.
+ *      Output is computed using 32bit Little Endian arithmetic.
+ *
+ * Input:
+ *	str		String to modify
+ *
+ * Results:
+ *      Hash value of str, encoded as 8 hex digits.
+ *
+ * Side Effects:
+ *      None.
+ *
+ *-----------------------------------------------------------------------
+ */
+static char *
+VarHash(char *str)
+{
+    static const char    hexdigits[16] = "0123456789abcdef";
+    Buffer         buf;
+    size_t         len, len2;
+    unsigned char  *ustr = (unsigned char *)str;
+    uint32_t       h, k, c1, c2;
+    int            done;
+
+    done = 1;
+    h  = 0x971e137bU;
+    c1 = 0x95543787U;
+    c2 = 0x2ad7eb25U;
+    len2 = strlen(str);
+
+    for (len = len2; len; ) {
+	k = 0;
+	switch (len) {
+	default:
+	    k = (ustr[3] << 24) | (ustr[2] << 16) | (ustr[1] << 8) | ustr[0];
+	    len -= 4;
+	    ustr += 4;
+	    break;
+	case 3:
+	    k |= (ustr[2] << 16);
+	case 2:
+	    k |= (ustr[1] << 8);
+	case 1:
+	    k |= ustr[0];
+	    len = 0;
+	}
+	c1 = c1 * 5 + 0x7b7d159cU;
+	c2 = c2 * 5 + 0x6bce6396U;
+	k *= c1;
+	k = (k << 11) ^ (k >> 21);
+	k *= c2;
+	h = (h << 13) ^ (h >> 19);
+	h = h * 5 + 0x52dce729U;
+	h ^= k;
+   } while (!done);
+   h ^= len2;
+   h *= 0x85ebca6b;
+   h ^= h >> 13;
+   h *= 0xc2b2ae35;
+   h ^= h >> 16;
+
+   Buf_Init(&buf, 0);
+   for (len = 0; len < 8; ++len) {
+       Buf_AddByte(&buf, hexdigits[h & 15]);
+       h >>= 4;
+   }
+
+   return Buf_Destroy(&buf, FALSE);
+}
+
+/*-
+ *-----------------------------------------------------------------------
  * VarChangeCase --
  *      Change the string to all uppercase or all lowercase
  *
@@ -2283,6 +2365,21 @@ VarChangeCase(char *str, int upper)
        Buf_AddByte(&buf, modProc(*str));
    }
    return Buf_Destroy(&buf, FALSE);
+}
+
+static char *
+VarStrftime(const char *fmt, int zulu)
+{
+    char buf[BUFSIZ];
+    time_t utc;
+
+    time(&utc);
+    if (!*fmt)
+	fmt = "%c";
+    strftime(buf, sizeof(buf), fmt, zulu ? gmtime(&utc) : localtime(&utc));
+    
+    buf[sizeof(buf) - 1] = '\0';
+    return bmake_strdup(buf);
 }
 
 /*
@@ -2370,6 +2467,10 @@ VarChangeCase(char *str, int upper)
  *			variable.
  */
 
+/* we now have some modifiers with long names */
+#define STRMOD_MATCH(s, want, n) \
+    (strncmp(s, want, n) == 0 && (s[n] == endc || s[n] == ':'))
+
 static char *
 ApplyModifiers(char *nstr, const char *tstr,
 	       int startc, int endc,
@@ -2397,13 +2498,27 @@ ApplyModifiers(char *nstr, const char *tstr,
 
 	if (*tstr == '$') {
 	    /*
-	     * We have some complex modifiers in a variable.
+	     * We may have some complex modifiers in a variable.
 	     */
 	    void *freeIt;
 	    char *rval;
 	    int rlen;
+	    int c;
 
 	    rval = Var_Parse(tstr, ctxt, errnum, &rlen, &freeIt);
+
+	    /*
+	     * If we have not parsed up to endc or ':',
+	     * we are not interested.
+	     */
+	    if (rval != NULL && *rval &&
+		(c = tstr[rlen]) != '\0' &&
+		c != ':' &&
+		c != endc) {
+		if (freeIt)
+		    free(freeIt);
+		goto apply_mods;
+	    }
 
 	    if (DEBUG(VAR)) {
 		fprintf(debug_file, "Got '%s' from '%.*s'%.*s\n",
@@ -2436,6 +2551,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 	    }
 	    continue;
 	}
+    apply_mods:
 	if (DEBUG(VAR)) {
 	    fprintf(debug_file, "Applying :%c to \"%s\"\n", *tstr, nstr);
 	}
@@ -2486,7 +2602,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 			cp = ++tstr;
 			break;
 		    }
-		    delim = BRCLOSE;
+		    delim = startc == PROPEN ? PRCLOSE : BRCLOSE;
 		    pattern.flags = 0;
 
 		    pattern.rhs = VarGetPattern(ctxt, &parsestate, errnum,
@@ -2815,6 +2931,36 @@ ApplyModifiers(char *nstr, const char *tstr,
 		}
 
 	    }
+	case 'g':
+	    cp = tstr + 1;	/* make sure it is set */
+	    if (STRMOD_MATCH(tstr, "gmtime", 6)) {
+		newStr = VarStrftime(nstr, 1);
+		cp = tstr + 6;
+		termc = *cp;
+	    } else {
+		goto default_case;
+	    }
+	    break;
+	case 'h':
+	    cp = tstr + 1;	/* make sure it is set */
+	    if (STRMOD_MATCH(tstr, "hash", 4)) {
+		newStr = VarHash(nstr);
+		cp = tstr + 4;
+		termc = *cp;
+	    } else {
+		goto default_case;
+	    }
+	    break;
+	case 'l':
+	    cp = tstr + 1;	/* make sure it is set */
+	    if (STRMOD_MATCH(tstr, "localtime", 9)) {
+		newStr = VarStrftime(nstr, 0);
+		cp = tstr + 9;
+		termc = *cp;
+	    } else {
+		goto default_case;
+	    }
+	    break;
 	case 't':
 	    {
 		cp = tstr + 1;	/* make sure it is set */
@@ -3340,9 +3486,13 @@ ApplyModifiers(char *nstr, const char *tstr,
 		 */
 		termc = *--cp;
 		delim = '\0';
-		newStr = VarModify(ctxt, &parsestate, nstr,
-				   VarSYSVMatch,
-				   &pattern);
+		if (pattern.leftLen == 0 && *nstr == '\0') {
+		    newStr = nstr;	/* special case */
+		} else {
+		    newStr = VarModify(ctxt, &parsestate, nstr,
+				       VarSYSVMatch,
+				       &pattern);
+		}
 		free(UNCONST(pattern.lhs));
 		free(UNCONST(pattern.rhs));
 	    } else
@@ -3740,7 +3890,7 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 		nstr = bmake_strndup(start, *lengthPtr);
 		*freePtr = nstr;
 	    } else {
-		nstr = var_Error;
+		nstr = errnum ? var_Error : varNoError;
 	    }
 	}
 	if (nstr != Buf_GetAll(&v->val, NULL))

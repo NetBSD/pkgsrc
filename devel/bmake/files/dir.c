@@ -1,4 +1,4 @@
-/*	$NetBSD: dir.c,v 1.4 2009/09/18 21:27:25 joerg Exp $	*/
+/*	$NetBSD: dir.c,v 1.5 2011/06/18 22:39:46 bsiegert Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: dir.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
+static char rcsid[] = "$NetBSD: dir.c,v 1.5 2011/06/18 22:39:46 bsiegert Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)dir.c	8.2 (Berkeley) 1/2/94";
 #else
-__RCSID("$NetBSD: dir.c,v 1.4 2009/09/18 21:27:25 joerg Exp $");
+__RCSID("$NetBSD: dir.c,v 1.5 2011/06/18 22:39:46 bsiegert Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -1061,6 +1061,7 @@ Dir_FindFile(const char *name, Lst path)
     Boolean	  hasSlash;		/* true if 'name' contains a / */
     struct stat	  stb;			/* Buffer for stat, if necessary */
     Hash_Entry	  *entry;		/* Entry for mtimes table */
+    const char   *trailing_dot = ".";
 
     /*
      * Find the final component of the name and note whether it has a
@@ -1163,6 +1164,11 @@ Dir_FindFile(const char *name, Lst path)
 	}
 	misses += 1;
 	return NULL;
+    }
+
+    if (*cp == '\0') {
+	/* we were given a trailing "/" */
+	cp = trailing_dot;
     }
 
     if (name[0] != '/') {
@@ -1272,6 +1278,10 @@ Dir_FindFile(const char *name, Lst path)
      * b/c we added it here. This is not good...
      */
 #ifdef notdef
+    if (cp == traling_dot) {
+	cp = strrchr(name, '/');
+	cp += 1;
+    }
     cp[-1] = '\0';
     (void)Dir_AddDir(path, name);
     cp[-1] = '/';
@@ -1434,6 +1444,31 @@ Dir_MTime(GNode *gn)
 	    fullName = NULL;
 	else {
 	    fullName = Dir_FindFile(gn->name, Suff_FindPath(gn));
+	    if (fullName == NULL && gn->flags & FROM_DEPEND &&
+		!Lst_IsEmpty(gn->iParents)) {
+		char *cp;
+
+		cp = strrchr(gn->name, '/');
+		if (cp) {
+		    /*
+		     * This is an implied source, and it may have moved,
+		     * see if we can find it via the current .PATH
+		     */
+		    cp++;
+			
+		    fullName = Dir_FindFile(cp, Suff_FindPath(gn));
+		    if (fullName) {
+			/*
+			 * Put the found file in gn->path
+			 * so that we give that to the compiler.
+			 */
+			gn->path = bmake_strdup(fullName);
+			fprintf(stdout,
+				"%s: ignoring stale %s for %s, found %s\n",
+				progname, makeDependfile, gn->name, fullName);
+		    }
+		}
+	    }
 	    if (DEBUG(DIR))
 		fprintf(debug_file, "Found '%s' as '%s'\n",
 			gn->name, fullName ? fullName : "(not found)" );

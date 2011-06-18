@@ -1,3 +1,173 @@
+2011-06-07  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Merge with NetBSD make, pick up
+	  o unit-tests/modts now works on MirBSD
+
+2011-06-04  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110606
+	  Merge with NetBSD make, pick up
+	  o ApplyModifiers: when we parse a variable which is not
+	    the entire modifier string, or not followed by ':', do not
+	    consider it as containing modifiers.
+	  o loadfile: ensure newline at end of mapped file.
+
+2011-05-05  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110505
+	  Merge with NetBSD make, pick up
+	  o .MAKE.META.BAILIWICK - list of prefixes which define the scope
+	    of make's control.  In meta mode, any generated file within
+	    said bailiwick, which  is found to be missing, causes current
+	    target to be out-of-date. 
+	
+2011-04-11  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110411
+	  Merge with NetBSD make, pick up
+	  o when long modifiers fail to match, check sysV style.
+	    - add a test case
+	
+2011-04-10  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110410
+	  Merge with NetBSD make, pick up
+	  o :hash - cheap 32bit hash of value
+	  o :localtime, :gmtime - use value as format string for strftime.
+	
+2011-03-30  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110330
+	  mostly because its a cooler version.
+	  Merge with NetBSD make, pick up
+	  o NetBSD tags for meta.[ch]
+	  o job.c call meta_job_finish() after meta_job_error().
+	  o meta_job_error() should call meta_job_finish() to ensure
+	    .meta file is closed, and safe to copy - if .ERROR target wants.
+	   meta_job_finish() is safe to call repeatedly.
+	
+2011-03-29  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* unit-tests/modts: use printf if it is a builtin, 
+	  to save us from MirBSD
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110329
+	  Merge with NetBSD make, pick up
+	  o fix for use after free() in CondDoExists().
+	  o meta_oodate() report extra commands and return earlier.
+	
+2011-03-27  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110327
+	  Merge with NetBSD make, pick up
+	  o meta.c, if .MAKE.MODE contains curdirOk=yes
+	    allow creating .meta files in .CURDIR
+	* boot-strap (TOOL_DIFF): aparently at least on linux distro
+	  formats the output of 'type' differently - so eat any "()"
+
+2011-03-06  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110306
+	  Merge with NetBSD make, pick up
+	  o meta.c, only do getcwd() once
+	
+2011-03-05  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110305
+	  Merge with NetBSD make, pick up
+	  o correct sysV substitution handling of empty lhs and variable
+	  o correct exists() check for dir with trailing /
+	  o correct handling of modifiers for non-existant variables
+	    during evaluation of conditionals.
+	  o ensure MAP_FILE is defined.
+	  o meta.c use curdir[] now exported by main.c
+	
+2011-02-25  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110225
+	  Merge with NetBSD make, pick up
+	  o fix for incorrect .PARSEDIR when .OBJDIR is re-computed after
+	    makefiles have been read.
+	  o fix example of :? modifier in man page.
+	
+2011-02-13  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110214
+	  Merge with NetBSD make, pick up
+	  o meta.c handle realpath() failing when generating meta file
+	    name.
+
+	* sigcompat.c: convert to ansi so we can use higher warning levels.
+
+
+2011-02-07  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110207
+	  Merge with NetBSD make, pick up
+	  o fix for bug in meta mode.
+	
+2011-01-03  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* parse.c: SunOS 5.8 at least does not have MAP_FILE
+
+2011-01-01  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20110101
+	  Merge with NetBSD make, pick up
+	  o use mmap(2) if available, for reading makefiles
+
+2010-12-15  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20101215
+	  Merge with NetBSD make, pick up
+	  o ensure meta_job_error() does not report a previous .meta file
+	    as being culprit.
+
+2010-12-10  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20101210
+	  Merge with NetBSD make, pick up
+	  o meta_oodate: track cwd per process, and only consider target
+	    out-of-date if missing file is outside make's CWD.
+	    Ignore files in /tmp/ etc.
+	  o to ensure unit-tests results match, need to control LC_ALL
+	    as well as LANG.
+	  o fix for parsing bug in var.c
+
+2010-11-26  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20101126
+	  Merge with NetBSD make, pick up
+	  o if stale dependency is an IMPSRC, search via .PATH
+	  o meta_oodate: if a referenced file is missing, target is
+	    out-of-date.
+	  o meta_oodate: if a target uses .OODATE in its commands,
+	    it (.OODATE) needs to be recomputed.
+	  o keep a pointer to youngest child node, rather than just its
+	    mtime.
+	
+2010-11-02  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* Makefile.in (MAKE_VERSION): bump version to 20101101
+
+2010-10-16  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* machine.sh: like os.sh, 
+	allow for uname -p producing useless drivel
+
+2010-09-13  Simon J. Gerraty  <sjg@bad.crufty.net>
+
+	* boot-strap: document configure knobs for meta and filemon.
+
+	* Makefile.in (MAKE_VERSION): bump version to 20100911
+	  Merge with NetBSD make, pick up
+	  o meta.c - meta mode
+
+	* make-bootstrap.sh.in: handle meta.c
+	* configure.in: add knobs for use_meta and filemon_h
+	  also, look for dirname, str[e]sep and strlcpy
+	* util.c: add simple err[x] and warn[x]
+
 2010-08-08  Simon J. Gerraty  <sjg@bad.crufty.net>
 
 	* boot-strap (TOOL_DIFF): set this to ensure tests use

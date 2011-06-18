@@ -30,9 +30,14 @@ hash.h
 install-sh
 job.c
 job.h
+meta.c
+meta.h
+dirname.c
 realpath.c
+strlcpy.c
 strlist.c
 strlist.h
+stresep.c
 trace.c
 trace.h
 lst.h
@@ -96,6 +101,8 @@ unit-tests/error
 unit-tests/export
 unit-tests/export-all
 unit-tests/forsubst
+unit-tests/hash
+unit-tests/misc
 unit-tests/moderrs
 unit-tests/modmatch
 unit-tests/modmisc
@@ -104,6 +111,7 @@ unit-tests/modts
 unit-tests/modword
 unit-tests/posix
 unit-tests/qequals
+unit-tests/sysv
 unit-tests/ternary
 unit-tests/test.exp
 unit-tests/unexport

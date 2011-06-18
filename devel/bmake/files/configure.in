@@ -1,10 +1,10 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.10 2010/04/20 13:37:49 joerg Exp $
+dnl	$Id: configure.in,v 1.11 2011/06/18 22:39:46 bsiegert Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
-AC_INIT([bmake], [20100414], [sjg@NetBSD.org])
+AC_INIT([bmake], [2010505], [sjg@NetBSD.org])
 AC_CONFIG_HEADER(config.h)
 
 dnl
@@ -22,6 +22,42 @@ no)    ;;
        ;;
        esac])
 dnl
+use_meta=yes
+AC_ARG_WITH(meta,
+[ --without-meta dissable use of meta-mode],
+[case "${withval}" in
+yes|no) use_meta=${withval};;
+*) AC_MSG_ERROR(bad value ${withval} given for meta) ;;
+esac])
+dnl
+AC_ARG_WITH(filemon,
+[ --with-filemon=path/filemon.h indicate path to filemon.h for meta-mode],
+[ case "/${withval}" in
+/no|*/filemon.h) filemon_h="${withval}";;
+*/filemon*) filemon_h="${withval}/filemon.h";;
+*) AC_MSG_ERROR(bad value ${withval} given for filemon) ;;
+esac],
+[
+OS=`uname -s`
+for d in "$srcdir/filemon" "$srcdir/../filemon"
+do
+	for x in "/$OS" ""
+	do
+		filemon_h="$d$x/filemon.h"
+		test -s "$filemon_h" && break
+	done
+	test -s "$filemon_h" && break
+done
+test -s "${filemon_h:-/dev/null}" || filemon_h=no
+])
+dnl echo "Note: use_meta=$use_meta filemon_h=$filemon_h" >&6
+case "$use_meta" in
+yes)
+	case "$filemon_h" in
+	*.h) echo "Using: filemon=$filemon_h" >&6;;
+	esac
+	;;
+esac
 dnl
 dnl Check for OS problems
 dnl Solaris's signal.h only privides sigset_t etc if one of
@@ -47,11 +83,13 @@ AC_HEADER_DIRENT
 dnl Keep this list sorted
 AC_CHECK_HEADERS( \
 	ar.h \
+	err.h \
 	fcntl.h \
 	paths.h \
 	poll.h \
 	ranlib.h \
 	string.h \
+	sys/mman.h \
 	sys/select.h \
 	sys/socket.h \
 	sys/time.h \
@@ -94,11 +132,14 @@ AC_FUNC_VPRINTF
 AC_FUNC_WAIT3
 dnl Keep this list sorted
 AC_CHECK_FUNCS( \
+	err \
+	errx \
 	getcwd \
 	getenv \
 	getopt \
 	getwd \
 	killpg \
+	mmap \
 	putenv \
 	select \
 	setenv \
@@ -107,6 +148,7 @@ AC_CHECK_FUNCS( \
 	snprintf \
 	strerror \
 	strftime \
+	strsep \
 	strtod \
 	strtol \
 	unsetenv \
@@ -114,12 +156,17 @@ AC_CHECK_FUNCS( \
 	wait3 \
 	wait4 \
 	waitpid \
+	warn \
+	warnx \
 	)
 
 dnl functions which we may need to provide
 AC_REPLACE_FUNCS( \
 	getenv \
 	realpath \
+	dirname \
+	stresep \
+	strlcpy \
 	)
 
 AC_CHECK_LIB([util], [emalloc],
@@ -298,6 +345,8 @@ AC_SUBST(default_sys_path)
 AC_SUBST(INSTALL)
 AC_SUBST(GCC)
 AC_SUBST(diff_u)
+AC_SUBST(use_meta)
+AC_SUBST(filemon_h)
 AC_OUTPUT(Makefile make-bootstrap.sh unit-tests/Makefile)
 
 cat <<EOF

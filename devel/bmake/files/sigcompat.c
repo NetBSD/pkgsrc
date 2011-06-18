@@ -104,7 +104,7 @@
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)sigcompat.c	5.3 (Berkeley) 2/24/91";*/
-static char *rcsid = "$Id: sigcompat.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
+static char *rcsid = "$Id: sigcompat.c,v 1.5 2011/06/18 22:39:46 bsiegert Exp $";
 #endif				/* LIBC_SCCS and not lint */
 
 #undef signal
@@ -163,9 +163,7 @@ static char *rcsid = "$Id: sigcompat.c,v 1.4 2009/09/18 21:27:25 joerg Exp $";
 #endif
 int     _signalFlags = SIGNAL_FLAGS;
 
-SIG_HDLR(*signal(sig, handler)) __P((int))
-	int     sig;
-	SIG_HDLR(*handler) __P((int));
+SIG_HDLR(*signal(int sig, SIG_HDLR(*handler)(int)))(int)
 {
 	_DBUG(static int depth_signal = 0);
 	struct sigaction act, oact;
@@ -183,11 +181,9 @@ SIG_HDLR(*signal(sig, handler)) __P((int))
 	return (oact.sa_handler);
 }
 #else
-SIG_HDLR(*signal(sig, handler)) __P((int))
-	int     sig;
-	SIG_HDLR(*handler) __P((int));
+SIG_HDLR(*signal(int sig, SIG_HDLR(*handler)(int)))(int)
 {
-	extern  SIG_HDLR(*Signal __P((int, void (*) __P((int))))) __P((int));
+	extern  SIG_HDLR(*Signal(int, void (*)(int)))(int);
 	_DBUG(static int depth_signal = 0);
 	SIG_HDLR(*old) __P((int));
 
@@ -210,8 +206,7 @@ SIG_HDLR(*signal(sig, handler)) __P((int))
 # define m2ss(ss, m)	*ss = (sigset_t) *(m)
 #else
 static  MASK_T
-ss2m(ss)
-	sigset_t *ss;
+ss2m(sigset_t *ss)
 {
 	MASK_T  ma[(sizeof(sigset_t) / sizeof(MASK_T)) + 1];
 
@@ -220,9 +215,7 @@ ss2m(ss)
 }
 
 static void
-m2ss(ss, m)
-	sigset_t *ss;
-	MASK_T *m;
+m2ss(sigset_t *ss, MASK_T *m)
 {
 	if (sizeof(sigset_t) > sizeof(MASK_T))
 		memset((char *) ss, 0, sizeof(sigset_t));
@@ -233,8 +226,7 @@ m2ss(ss, m)
 
 #if !defined(HAVE_SIGSETMASK) || defined(FORCE_POSIX_SIGNALS)
 MASK_T
-sigsetmask(mask)
-	MASK_T  mask;
+sigsetmask(MASK_T mask)
 {
 	_DBUG(static int depth_sigsetmask = 0);
 	sigset_t m, omask;
@@ -253,8 +245,7 @@ sigsetmask(mask)
 
 
 MASK_T
-sigblock(mask)
-	MASK_T  mask;
+sigblock(MASK_T mask)
 {
 	_DBUG(static int depth_sigblock = 0);
 	sigset_t m, omask;
@@ -274,8 +265,7 @@ sigblock(mask)
 #undef sigpause				/* Linux at least */
 
 PAUSE_MASK_T
-sigpause(mask)
-	PAUSE_MASK_T  mask;
+sigpause(PAUSE_MASK_T mask)
 {
 	_DBUG(static int depth_sigpause = 0);
 	sigset_t m;
@@ -292,9 +282,7 @@ sigpause(mask)
 
 #if defined(HAVE_SIGVEC) && defined(FORCE_POSIX_SIGNALS)
 int
-sigvec(signo, sv, osv)
-	int     signo;
-	struct sigvec *sv, *osv;
+sigvec(int signo, struct sigvec *sv, struct sigvec *osv)
 {
 	_DBUG(static int depth_sigvec = 0);
 	int     ret;
@@ -321,9 +309,7 @@ sigvec(signo, sv, osv)
 # endif
 
 int
-main(argc, argv)
-	int     argc;
-	char  **argv;
+main(int  argc, char *argv[])
 {
 	MASK_T  old = 0;
 

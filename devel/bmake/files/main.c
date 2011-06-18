@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.10 2010/09/07 14:28:00 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.11 2011/06/18 22:39:46 bsiegert Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,7 +69,7 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: main.c,v 1.10 2010/09/07 14:28:00 joerg Exp $";
+static char rcsid[] = "$NetBSD: main.c,v 1.11 2011/06/18 22:39:46 bsiegert Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
@@ -81,7 +81,7 @@ __COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993\
 #if 0
 static char sccsid[] = "@(#)main.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.10 2010/09/07 14:28:00 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.11 2011/06/18 22:39:46 bsiegert Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -183,8 +183,8 @@ static int		ReadMakefile(const void *, const void *);
 static void		usage(void);
 
 static Boolean		ignorePWD;	/* if we use -C, PWD is meaningless */
-static char curdir[MAXPATHLEN + 1];	/* startup directory */
 static char objdir[MAXPATHLEN + 1];	/* where we chdir'ed to */
+char curdir[MAXPATHLEN + 1];		/* Startup directory */
 char *progname;				/* the program name */
 char *makeDependfile;
 pid_t myPid;
@@ -252,6 +252,9 @@ parse_debug_options(const char *argvalue)
 			break;
 		case 'l':
 			debug |= DEBUG_LOUD;
+			break;
+		case 'M':
+			debug |= DEBUG_META;
 			break;
 		case 'm':
 			debug |= DEBUG_MAKE;
@@ -713,7 +716,7 @@ ReadAllMakefiles(const void *p, const void *q)
 	return (ReadMakefile(p, q) == 0);
 }
 
-static int
+int
 str2Lst_Append(Lst lp, char *str, const char *sep)
 {
     char *cp;
@@ -732,7 +735,7 @@ str2Lst_Append(Lst lp, char *str, const char *sep)
 #ifdef SIGINFO
 /*ARGSUSED*/
 static void
-siginfo(int signo)
+siginfo(int signo __unused)
 {
 	char dir[MAXPATHLEN];
 	char str[2 * MAXPATHLEN];
@@ -761,6 +764,10 @@ MakeMode(const char *mode)
 	    compatMake = TRUE;
 	    forceJobs = FALSE;
 	}
+#if USE_META
+	if (strstr(mode, "meta"))
+	    meta_init(mode);
+#endif
     }
     if (mp)
 	free(mp);
@@ -792,9 +799,9 @@ main(int argc, char **argv)
 	char *p1, *path, *pwd;
 	char mdpath[MAXPATHLEN];
 #ifdef FORCE_MACHINE
-	char *machine = FORCE_MACHINE;
+	const char *machine = FORCE_MACHINE;
 #else
-    	char *machine = getenv("MACHINE");
+    	const char *machine = getenv("MACHINE");
 #endif
 	const char *machine_arch = getenv("MACHINE_ARCH");
 	char *syspath = getenv("MAKESYSPATH");
@@ -990,7 +997,8 @@ main(int argc, char **argv)
 	 * We take care of PWD for the automounter below...
 	 */
 	if (getcwd(curdir, MAXPATHLEN) == NULL) {
-		(void)fprintf(stderr, "%s: %s.\n", progname, strerror(errno));
+		(void)fprintf(stderr, "%s: getcwd: %s.\n",
+		    progname, strerror(errno));
 		exit(2);
 	}
 
@@ -1336,7 +1344,7 @@ ReadMakefile(const void *p, const void *q __unused)
 	char *name, *path = bmake_malloc(len);
 
 	if (!strcmp(fname, "-")) {
-		Parse_File("(stdin)", dup(fileno(stdin)));
+		Parse_File(NULL /*stdin*/, -1);
 		Var_Set("MAKEFILE", "", VAR_GLOBAL, 0);
 	} else {
 		/* if we've chdir'd, rebuild the path name */
@@ -2013,20 +2021,10 @@ Main_ExportMAKEFLAGS(Boolean first)
     }
 }
 
-/*
- * Create and open a temp file using "pattern".
- * If "fnamep" is provided set it to a copy of the filename created.
- * Otherwise unlink the file once open.
- */
-int
-mkTempFile(const char *pattern, char **fnamep)
+char *
+getTmpdir(void)
 {
     static char *tmpdir = NULL;
-    char tfile[MAXPATHLEN];
-    int fd;
-    
-    if (!pattern)
-	pattern = TMPPAT;
 
     if (!tmpdir) {
 	struct stat st;
@@ -2041,6 +2039,25 @@ mkTempFile(const char *pattern, char **fnamep)
 	    tmpdir = bmake_strdup(_PATH_TMP);
 	}
     }
+    return tmpdir;
+}
+
+/*
+ * Create and open a temp file using "pattern".
+ * If "fnamep" is provided set it to a copy of the filename created.
+ * Otherwise unlink the file once open.
+ */
+int
+mkTempFile(const char *pattern, char **fnamep)
+{
+    static char *tmpdir = NULL;
+    char tfile[MAXPATHLEN];
+    int fd;
+    
+    if (!pattern)
+	pattern = TMPPAT;
+    if (!tmpdir)
+	tmpdir = getTmpdir();
     if (pattern[0] == '/') {
 	snprintf(tfile, sizeof(tfile), "%s", pattern);
     } else {
