@@ -1,4 +1,4 @@
-/*	$NetBSD: for.c,v 1.5 2010/04/20 13:37:49 joerg Exp $	*/
+/*	$NetBSD: for.c,v 1.6 2011/06/18 22:39:46 bsiegert Exp $	*/
 
 /*
  * Copyright (c) 1992, The Regents of the University of California.
@@ -30,14 +30,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: for.c,v 1.5 2010/04/20 13:37:49 joerg Exp $";
+static char rcsid[] = "$NetBSD: for.c,v 1.6 2011/06/18 22:39:46 bsiegert Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)for.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: for.c,v 1.5 2010/04/20 13:37:49 joerg Exp $");
+__RCSID("$NetBSD: for.c,v 1.6 2011/06/18 22:39:46 bsiegert Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -366,7 +366,7 @@ for_substitute(Buffer *cmds, strlist_t *items, unsigned int item_no, char ech)
 }
 
 static char *
-For_Iterate(void *v_arg)
+For_Iterate(void *v_arg, size_t *ret_len)
 {
     For *arg = v_arg;
     int i, len;
@@ -451,6 +451,7 @@ For_Iterate(void *v_arg)
     arg->sub_next += strlist_num(&arg->vars);
 
     arg->parse_buf = cp;
+    *ret_len = strlen(cp);
     return cp;
 }
 

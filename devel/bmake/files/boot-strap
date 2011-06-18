@@ -34,6 +34,16 @@
 #
 #	Possibly useful configure_args:
 #
+#	--without-meta
+#		disable use of meta mode.
+#
+#	--without-filemon
+#		disable use of filemon(9) which is currently only
+#		available for NetBSD and FreeBSD.
+#
+#	--with-filemon="path/to/filemon.h"
+#		enables use of filemon(9) by meta mode.
+#		
 #	--with-machine="machine"
 #		set "machine" to override that determined by
 #		machine.sh
@@ -53,7 +63,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.9 2010/09/07 14:28:00 joerg Exp $
+#	$Id: boot-strap,v 1.10 2011/06/18 22:39:46 bsiegert Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -263,6 +273,12 @@ ShareDir() {
 	echo $1/share
 }
 
+# make it easy to force prefix to use $HOST_TARGET
+: looking at "$prefix"
+case "$prefix" in
+*/host?target) prefix=`echo "$prefix" | sed "s,host.target,${HOST_TARGET},"`;;
+esac
+
 share_dir="${share_dir:-`ShareDir $prefix`}"
 
 AddConfigure --prefix= "$prefix"
@@ -294,7 +310,7 @@ if [ -s "${mksrc:-/dev/null}/install-mk" ]; then
         esac
 fi
 # make sure test below uses the same diff that configure did
-TOOL_DIFF=`type diff | sed 's,^[^/][^/]*,,;q'`
+TOOL_DIFF=`type diff | sed 's,[()],,g;s,^[^/][^/]*,,;q'`
 export MAKESYSPATH TOOL_DIFF
 if [ "$mksrc" ]; then
         $objdir/bmake test || exit 1

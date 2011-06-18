@@ -1,6 +1,6 @@
-# $Id: Makefile.in,v 1.7 2010/09/07 14:28:01 joerg Exp $
+# $Id: Makefile.in,v 1.8 2011/06/18 22:39:46 bsiegert Exp $
 #
-# $NetBSD: Makefile.in,v 1.7 2010/09/07 14:28:01 joerg Exp $
+# $NetBSD: Makefile.in,v 1.8 2011/06/18 22:39:46 bsiegert Exp $
 #
 # Unit tests for make(1)
 # The main targets are:
@@ -31,6 +31,8 @@ SUBFILES= \
 	doterror \
 	dotwait \
 	forsubst \
+	hash \
+	misc \
 	moderrs \
 	modmatch \
 	modmisc \
@@ -39,6 +41,7 @@ SUBFILES= \
 	modword \
 	posix \
 	qequals \
+	sysv \
 	ternary \
 	unexport \
 	unexport-env \
@@ -66,12 +69,9 @@ TOOL_DIFF?= diff
 DIFF_FLAGS?= @diff_u@
 
 # ensure consistent results from sort(1)
+LC_ALL= C
 LANG= C
-.export LANG
-
-# ensure consistent results from sort(1)
-LANG= C
-.export LANG
+.export LANG LC_ALL
 
 # The driver.
 # We always pretend .MAKE was called 'make' 
