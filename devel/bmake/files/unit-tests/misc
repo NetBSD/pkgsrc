@@ -1,0 +1,16 @@
+# $Id: misc,v 1.1.1.1 2011/06/18 22:18:21 bsiegert Exp $
+
+.if !exists(${.CURDIR}/)
+.warning ${.CURDIR}/ doesn't exist ?
+.endif
+
+.if !exists(${.CURDIR}/.)
+.warning ${.CURDIR}/. doesn't exist ?
+.endif
+
+.if !exists(${.CURDIR}/..)
+.warning ${.CURDIR}/.. doesn't exist ?
+.endif
+
+all:
+	@: all is well
