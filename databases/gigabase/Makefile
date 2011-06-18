@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/18 09:09:02 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/18 02:45:13 obache Exp $
 #
 
-DISTNAME=	gigabase-3.79
+DISTNAME=	gigabase-3.82
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gigabase/}
 
