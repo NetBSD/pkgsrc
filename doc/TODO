@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10386 2011/06/17 13:08:09 obache Exp $
+$NetBSD: TODO,v 1.10387 2011/06/18 14:15:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,6 +343,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Sigil-0.3.4 [wip]
 	o SmartEiffel-2.3
 	o TiffIO-130e
+	o Transmission-2.31 [pkg/45063]
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -404,7 +405,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
-	o asymptote-2.10
+	o asymptote-2.11
 	o aterm-1.0.1
 	o atk-2.0.1
 	o audacious-plugins-2.4.4
@@ -473,7 +474,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clamav-0.97.1
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-1.6.14
+	o clutter-1.6.16
 	o cmus-2.4.1
 	o colorize-0.3.4
 	o compositeproto-0.4.2
@@ -675,7 +676,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o genius-1.0.12
 	o gentoo-0.19.10
 	o gfract-0.33
-	o ghc-7.0.1
+	o ghc-7.0.4
 	o ghostscript-9.02
 	o gifsicle-1.48
 	o gimp-ufraw-0.18
@@ -691,6 +692,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-3.0.2
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
+	o gnome-commander-1.2.8.12
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-doc-utils-0.20.5
@@ -740,6 +742,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-gnutella-0.96.9
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
+	o gtk2-2.24.5
 	o gtkmm-3.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtodo-0.16.0rc2
@@ -758,7 +761,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hanzim-3.4
 	o haskell-mode-1.45
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
-	o hdf5-1.8.5
+	o hdf5-1.8.7
 	o heimdal-1.2.1
 	o help2man-1.40.2
 	o hesiod-3.1.0
@@ -1005,7 +1008,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
-	o octave-3.4.0
+	o octave-3.4.1
 	o offlineimap-6.2.0
 	o olvwm-4.5
 	o oo2c-2.1.7
@@ -1068,7 +1071,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plone-3.3.4
 	o ploticus-2.41
 	o ploticus-examples-230
-	o png-1.5.4beta02
+	o png-1.5.4beta06
 	o po4a-0.36.3
 	o podofo-0.9.1
 	o polsms-2.1.0
@@ -1122,6 +1125,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qpopper-4.0.14
 	o qrencode-3.1.1
 	o quagga-0.99.18
+	o quvi-0.2.17
 	o qvplay-0.95
 	o radiance-3.7.2
 	o rails-3.0.7
@@ -1203,7 +1207,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snes9x-1.53
 	o snort-2.9.0.5
 	o snownews-1.5.12
-	o solfege-3.18.8
+	o solfege-3.20.0
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o spcaview-20060501
@@ -1289,6 +1293,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o utilisp-1.14
 	o valgrind-3.6.0
 	o vbetool-1.1
+	o vcdimager-0.7.24
 	o vera-1.17
 	o vfu-4.09
 	o vicq-0.4.2
@@ -1312,7 +1317,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o webmin-1.550
+	o webmin-1.550 [pkg/45066]
 	o websvn-2.3.2
 	o weechat-0.3.5
 	o weewm-0.01
