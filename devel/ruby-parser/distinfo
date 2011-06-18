@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 06:05:17 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/06/18 01:49:18 taca Exp $
 
-SHA1 (ruby_parser-2.0.5.gem) = 0a665d43ec8d33f3d7fe171a4dfefc65a319401f
-RMD160 (ruby_parser-2.0.5.gem) = bfbf8ce210ffabf3287b95fd76a6250ef14e1f7e
-Size (ruby_parser-2.0.5.gem) = 79360 bytes
+SHA1 (ruby_parser-2.0.6.gem) = 2e0aea1edad76a0355e8ef8a199a9b1f881d5ccb
+RMD160 (ruby_parser-2.0.6.gem) = 297e84ff58ca3a3f488468988f8d16df9f3c15ff
+Size (ruby_parser-2.0.6.gem) = 79360 bytes
