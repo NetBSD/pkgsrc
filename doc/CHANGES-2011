@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1510 2011/06/18 10:45:41 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1511 2011/06/18 15:31:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2368,3 +2368,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/ruby-rspec-rails version 2.6.1 [taca 2011-06-18]
 	Added wm/py-tyle version 0.7.5 [wiz 2011-06-18]
 	Updated pkgtools/pkglint to 4.101 [wiz 2011-06-18]
+	Added wm/wbar version 2.2.2 [wiz 2011-06-18]
