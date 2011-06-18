@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.11 2010/09/07 14:28:00 joerg Exp $	*/
+/*	$NetBSD: job.c,v 1.12 2011/06/18 22:39:46 bsiegert Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.11 2010/09/07 14:28:00 joerg Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.12 2011/06/18 22:39:46 bsiegert Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.11 2010/09/07 14:28:00 joerg Exp $");
+__RCSID("$NetBSD: job.c,v 1.12 2011/06/18 22:39:46 bsiegert Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -1030,6 +1030,11 @@ JobFinish (Job *job, WAIT_T status)
 		    MESSAGE(stdout, job->node);
 		    lastNode = job->node;
 		}
+#ifdef USE_META
+		if (useMeta) {
+		    meta_job_error(job, job->node, job->flags, WEXITSTATUS(status));
+		}
+#endif
 		(void)printf("*** [%s] Error code %d%s\n",
 				job->node->name,
 			       WEXITSTATUS(status),
@@ -1058,6 +1063,12 @@ JobFinish (Job *job, WAIT_T status)
 	(void)fflush(stdout);
     }
 
+#ifdef USE_META
+    if (useMeta) {
+	meta_job_finish(job);
+    }
+#endif
+    
     return_job_token = FALSE;
 
     Trace_Log(JOBEND, job);
@@ -1325,6 +1336,11 @@ JobExec(Job *job, char **argv)
 	/* Child */
 	sigset_t tmask;
 
+#ifdef USE_META
+	if (useMeta) {
+	    meta_job_child(job);
+	}
+#endif
 	/*
 	 * Reset all signal handlers; this is necessary because we also
 	 * need to unblock signals before we exec(2).
@@ -1588,6 +1604,11 @@ JobStart(GNode *gn, int flags)
 	 */
 	noExec = FALSE;
 
+#ifdef USE_META
+	if (useMeta) {
+	    meta_job_start(job, gn);
+	}
+#endif
 	/*
 	 * We can do all the commands at once. hooray for sanity
 	 */
@@ -1860,6 +1881,11 @@ end_loop:
 		    MESSAGE(stdout, job->node);
 		    lastNode = job->node;
 		}
+#ifdef USE_META
+		if (useMeta) {
+		    meta_job_output(job, cp, gotNL ? "\n" : "");
+		}
+#endif
 		(void)fprintf(stdout, "%s%s", cp, gotNL ? "\n" : "");
 		(void)fflush(stdout);
 	    }
