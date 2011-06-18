@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/18 15:16:24 wiz Exp $
+
+SHA1 (wbar-2.2.2.tar.gz) = 66b41b06e65e02b42eec36c4e5ec8fb68f670697
+RMD160 (wbar-2.2.2.tar.gz) = a9f6bcc29678d2011c38aab720ff7e692d4e92b4
+Size (wbar-2.2.2.tar.gz) = 369592 bytes
+SHA1 (patch-configure) = 59426913069f00cb174148a23164062f1dbc6a94
+SHA1 (patch-etc_Makefile.in) = 0222395e313218aa9ba1b9f5430c69f6c7c552c7
+SHA1 (patch-src_Makefile.am) = dbc2f2305f5dd43216ff60ed6c0292436847acea
+SHA1 (patch-src_Makefile.in) = 44a317b86d08cb468cf0d561397a49e4fa4b27f4
+SHA1 (patch-src_utils_OptParser.cc) = 923de61055dd0e9fb5cd4f1d386ab06d056e302b

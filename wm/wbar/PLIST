@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/18 15:16:24 wiz Exp $
+bin/wbar
+bin/wbar-config
+man/es/man1/wbar-config.1
+man/es/man1/wbar.1
+man/man1/wbar-config.1
+man/man1/wbar.1
+share/applications/wbar.desktop
+share/examples/wbar/wbar.cfg
+share/locale/de/LC_MESSAGES/wbar.mo
+share/locale/es/LC_MESSAGES/wbar.mo
+share/locale/fi/LC_MESSAGES/wbar.mo
+share/pixmaps/wbar.png
+share/pixmaps/wbar/anjuta.png
+share/pixmaps/wbar/bluefish.png
+share/pixmaps/wbar/gimp.png
+share/pixmaps/wbar/ooffice.png
+share/pixmaps/wbar/osxbarback.png
+share/pixmaps/wbar/pidgin.png
+share/pixmaps/wbar/synaptic.png
+share/pixmaps/wbar/terminal.png
+share/pixmaps/wbar/wbar.png
+share/wbar/glade/wbar.glade
