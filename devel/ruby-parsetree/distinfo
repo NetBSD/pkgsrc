@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/09/10 06:07:32 taca Exp $
+$NetBSD: distinfo,v 1.6 2011/06/18 01:50:36 taca Exp $
 
-SHA1 (ParseTree-3.0.6.gem) = 3e86fb3003c6a225f750f0916aaa2ba7cc7e255a
-RMD160 (ParseTree-3.0.6.gem) = fc239a5843af85b223659c0f9eacdbcfd733b977
-Size (ParseTree-3.0.6.gem) = 50176 bytes
+SHA1 (ParseTree-3.0.7.gem) = b4ee065ecb08b5f02299e377fd9ac3824431fdf5
+RMD160 (ParseTree-3.0.7.gem) = d5bb4af10fb4a9c842cc76fba61445f943b47d3e
+Size (ParseTree-3.0.7.gem) = 53248 bytes
