@@ -1,0 +1,105 @@
+From VM Fri Jun 17 00:01:39 2011
+Status: RO
+X-VM-v5-Data: ([nil nil nil nil nil nil nil nil nil]
+	["545" "Friday" "17" "June" "2011" "15:32:36" "+1000" "Nicholas Setzer" "nsetzer@unimelb.edu.au" nil "24" "Re: LaTeX forloop package" "^From:" nil nil "6" nil nil nil nil nil nil nil nil nil]
+	nil)
+Return-Path: <nsetzer@unimelb.edu.au>
+X-Original-To: brook@biology.nmsu.edu
+Delivered-To: brook@biology.nmsu.edu
+Received: from mailrelay2.nmsu.edu (mailrelay2.NMSU.Edu [128.123.34.235])
+	by biology.nmsu.edu (Postfix) with ESMTP id E36163FCF8E
+	for <brook@biology.nmsu.edu>; Thu, 16 Jun 2011 23:33:08 -0600 (MDT)
+Authentication-Results: mailrelay2.nmsu.edu; dkim=neutral (message not signed) header.i=none
+Received-SPF: None identity=pra; client-ip=213.199.154.208;
+  receiver=mailrelay2.nmsu.edu;
+  envelope-from="nsetzer@unimelb.edu.au";
+  x-sender="nsetzer@unimelb.edu.au";
+  x-conformance=sidf_compatible
+Received-SPF: None identity=mailfrom; client-ip=213.199.154.208;
+  receiver=mailrelay2.nmsu.edu;
+  envelope-from="nsetzer@unimelb.edu.au";
+  x-sender="nsetzer@unimelb.edu.au";
+  x-conformance=sidf_compatible
+Received-SPF: None identity=helo; client-ip=213.199.154.208;
+  receiver=mailrelay2.nmsu.edu;
+  envelope-from="nsetzer@unimelb.edu.au";
+  x-sender="postmaster@AM1EHSOBE005.bigfish.com";
+  x-conformance=sidf_compatible
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AvsBAHjm+k3Vx5rQkGdsb2JhbABSEKZwAQEBAQkJDQcUBCGIcwKjZQGTJ4h4hicElkYUhxmDMkg
+X-IronPort-AV: E=Sophos;i="4.65,379,1304316000"; 
+   d="scan'208";a="273162071"
+Received: from am1ehsobe005.messaging.microsoft.com (HELO AM1EHSOBE005.bigfish.com) ([213.199.154.208])
+  by mailrelay2.nmsu.edu with ESMTP/TLS/AES128-SHA; 16 Jun 2011 23:33:07 -0600
+Received: from mail22-am1-R.bigfish.com (10.3.201.244) by
+ AM1EHSOBE005.bigfish.com (10.3.204.25) with Microsoft SMTP Server id
+ 14.1.225.22; Fri, 17 Jun 2011 05:33:05 +0000
+Received: from mail22-am1 (localhost.localdomain [127.0.0.1])	by
+ mail22-am1-R.bigfish.com (Postfix) with ESMTP id 3277D1950249	for
+ <brook@biology.nmsu.edu>; Fri, 17 Jun 2011 05:33:05 +0000 (UTC)
+X-SpamScore: -17
+X-BigFish: VPS-17(zzbb2dK9371M1432N98dKzz1202hzzz2dh2a8h668h839h8aah62h)
+X-Spam-TCS-SCL: 1:0
+X-Forefront-Antispam-Report: CIP:128.250.6.44;KIP:(null);UIP:(null);IPVD:NLI;SRV:BULK;H:000s-ex-tmg-qs1.unimelb.edu.au;RD:exmail1.unimelb.edu.au;EFVD:NLI
+Received: from mail22-am1 (localhost.localdomain [127.0.0.1]) by mail22-am1
+ (MessageSwitch) id 1308288784897268_6048; Fri, 17 Jun 2011 05:33:04 +0000
+ (UTC)
+Received: from AM1EHSMHS004.bigfish.com (unknown [10.3.201.251])	by
+ mail22-am1.bigfish.com (Postfix) with ESMTP id CE21236004B	for
+ <brook@biology.nmsu.edu>; Fri, 17 Jun 2011 05:33:04 +0000 (UTC)
+Received: from 000s-ex-tmg-qs1.unimelb.edu.au (128.250.6.44) by
+ AM1EHSMHS004.bigfish.com (10.3.207.104) with Microsoft SMTP Server (TLS) id
+ 14.1.225.22; Fri, 17 Jun 2011 05:33:04 +0000
+Received: from 000S-EX-HUB-NP1.unimelb.edu.au (172.22.174.20) by
+ 000s-ex-tmg-qs1.unimelb.edu.au (172.22.46.4) with Microsoft SMTP Server (TLS)
+ id 14.1.289.1; Fri, 17 Jun 2011 15:32:27 +1000
+Received: from IS-EX-FE5.unimelb.edu.au (172.17.3.40) by
+ 000s-ex-hub-np1.unimelb.edu.au (172.22.174.20) with Microsoft SMTP Server id
+ 14.1.289.1; Fri, 17 Jun 2011 15:32:46 +1000
+Received: from IS-EX-BEV3.unimelb.edu.au ([172.17.3.10]) by
+ IS-EX-FE5.unimelb.edu.au with Microsoft SMTPSVC(6.0.3790.3959);	 Fri, 17 Jun
+ 2011 15:32:37 +1000
+Received: from 172.22.46.5 ([172.22.46.5]) by IS-EX-BEV3.unimelb.edu.au
+ ([172.17.3.18]) via Exchange Front-End Server owa2.unimelb.edu.au
+ ([172.17.3.38]) with Microsoft Exchange Server HTTP-DAV ; Fri, 17 Jun 2011
+ 05:32:37 +0000
+User-Agent: Microsoft-Entourage/11.4.0.080122
+Message-ID: <CA212414.3204%nsetzer@unimelb.edu.au>
+Thread-Topic: LaTeX forloop package
+Thread-Index: Acwsr/bkNYRkHpijEeCs/QAfW7tteA==
+In-Reply-To: <19962.57510.471531.95552@gargle.gargle.HOWL>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-OriginalArrivalTime: 17 Jun 2011 05:32:38.0052 (UTC) FILETIME=[F81E0E40:01CC2CAF]
+X-OriginatorOrg: unimelb.edu.au
+From: Nicholas Setzer <nsetzer@unimelb.edu.au>
+To: Brook Milligan <brook@biology.nmsu.edu>
+Subject: Re: LaTeX forloop package
+Date: Fri, 17 Jun 2011 15:32:36 +1000
+
+Hi Brook,
+
+the forloop package is covered by LGPLv2.1
+
+Nick
+
+
+On 6/17/11 3:05 PM, "Brook Milligan" <brook@biology.nmsu.edu> wrote:
+
+> I am interested in potentially using your forloop package for LaTeX.
+> The documentation states that it is released under the GNU Lesser
+> General Public License.  However, there is no indication of which
+> version of the LGPL applies, yet there are several different ones.
+> 
+> Will you please clarify for me which version of LGPL applies to your
+> forloop package?
+> 
+> Thanks alot.
+> 
+> Cheers,
+> Brook
+> 
+
+
+
