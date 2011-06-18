@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/18 15:30:59 wiz Exp $
+
+SHA1 (bmpanel2-2.1pre1.tar.gz) = c1d2a29b91c618f9f2e8be4ad3dea417e3c475e8
+RMD160 (bmpanel2-2.1pre1.tar.gz) = 70fa0d80fce449a0580613ddbc5d032aa870d931
+Size (bmpanel2-2.1pre1.tar.gz) = 386297 bytes
+SHA1 (patch-widget-utils.c) = 488a7842dd10277385d6249341e96177b78cc570
