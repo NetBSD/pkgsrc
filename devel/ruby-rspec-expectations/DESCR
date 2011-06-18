@@ -1,0 +1,11 @@
+Behaviour Driven Development for Ruby
+
+# RSpec Expectations
+
+rspec-expectations adds `should` and `should_not` to every object and includes
+RSpec::Matchers, a library of standard matchers.
+
+## Documentation
+
+* [Cucumber features](http://relishapp.com/rspec/rspec-expectations)
+* [RDoc](http://rubydoc.info/gems/rspec-expectations/2.4.0/frames)
