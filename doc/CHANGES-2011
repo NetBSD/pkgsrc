@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1503 2011/06/18 02:03:50 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1504 2011/06/18 02:24:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2358,3 +2358,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-pathname2 to 1.6.4 [taca 2011-06-18]
 	Updated devel/ruby-thrift to 0.6.0 [taca 2011-06-18]
 	Updated devel/ruby-thrift_client to 0.6.2 [taca 2011-06-18]
+	Updated devel/ruby-rspec to 1.3.2 [taca 2011-06-18]
