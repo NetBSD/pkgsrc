@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2010/12/04 04:01:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/06/18 01:47:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/COPYING.rdoc
 ${GEM_LIBDIR}/MIT-LICENSE.rdoc
 ${GEM_LIBDIR}/README.rdoc
@@ -33,7 +34,9 @@ ${GEM_LIBDIR}/lib/mocha/integration/mini_test/exception_translation.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_13.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_140.rb
 ${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_141.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_142_and_above.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_142_to_172.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_200.rb
+${GEM_LIBDIR}/lib/mocha/integration/mini_test/version_201_to_202.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/assertion_counter.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/gem_version_200.rb
@@ -71,6 +74,7 @@ ${GEM_LIBDIR}/lib/mocha/parameter_matchers/kind_of.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/not.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/object.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/optionally.rb
+${GEM_LIBDIR}/lib/mocha/parameter_matchers/query_string.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/regexp_matches.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/responds_with.rb
 ${GEM_LIBDIR}/lib/mocha/parameter_matchers/yaml_equivalent.rb
@@ -101,6 +105,7 @@ ${GEM_LIBDIR}/test/acceptance/mocha_test_result_test.rb
 ${GEM_LIBDIR}/test/acceptance/mock_test.rb
 ${GEM_LIBDIR}/test/acceptance/mock_with_initializer_block_test.rb
 ${GEM_LIBDIR}/test/acceptance/mocked_methods_dispatch_test.rb
+${GEM_LIBDIR}/test/acceptance/multiple_expectations_failure_message_test.rb
 ${GEM_LIBDIR}/test/acceptance/optional_parameters_test.rb
 ${GEM_LIBDIR}/test/acceptance/parameter_matcher_test.rb
 ${GEM_LIBDIR}/test/acceptance/partial_mocks_test.rb
