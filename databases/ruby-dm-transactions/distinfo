@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/11 23:53:11 taca Exp $
+$NetBSD: distinfo,v 1.2 2011/06/19 08:26:58 taca Exp $
 
-SHA1 (dm-transactions-1.0.2.gem) = 0780ceb598b5c81e0aac40e32c9b6ccd80b95308
-RMD160 (dm-transactions-1.0.2.gem) = aaf7daeff92c9f29f2c28e1f2a76b26cb02786da
-Size (dm-transactions-1.0.2.gem) = 14336 bytes
+SHA1 (dm-transactions-1.1.0.gem) = ad54bbec3e5f769946612acf0d31c6920377c497
+RMD160 (dm-transactions-1.1.0.gem) = 0cc51088ce1385ddc781ac3d9d48def9768ed2a7
+Size (dm-transactions-1.1.0.gem) = 12800 bytes
