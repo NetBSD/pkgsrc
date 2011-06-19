@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/01/13 13:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/06/19 18:43:06 dholland Exp $
 
 DISTNAME=	luma-2.3
 PKGREVISION=	6
@@ -16,7 +16,7 @@ SUBST_CLASSES+=		luma
 SUBST_STAGE.luma=	pre-configure
 SUBST_FILES.luma=	bin/luma
 SUBST_SED.luma=		-e "s|@PREFIX@|${PREFIX}|"
-PYTHON_PATCH_SCRIPTS=	bin/luma
+PYTHON_PATCH_SCRIPTS=	bin/luma lib/luma/luma.py
 
 post-extract:
 	cd ${WRKSRC} && mv share/man man
