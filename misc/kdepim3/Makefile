@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2011/06/10 09:39:56 obache Exp $
+# $NetBSD: Makefile,v 1.92 2011/06/19 02:12:59 dholland Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -9,9 +9,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_TOOLS+=		bison flex gawk perl:run pkg-config
+USE_TOOLS+=		bison flex gawk bash:run perl:run pkg-config
 
 BUILDLINK_API_DEPENDS.gpgme+=     gpgme>=0.4.5
+
+REPLACE_BASH+=	kmail/kmail-*.sh
 
 REPLACE_PERL+=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		kmail/kmail-3.1-use-UOID-for-identities.pl \
