@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1557 2011/06/19 15:40:59 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1558 2011/06/19 15:53:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/ruby-prawn version 0.11.1 [taca 2011-06-19]
 	Updated devel/ruby-debug-extra to 0.10.4 [taca 2011-06-19]
 	Updated lang/pear to 1.9.3 [taca 2011-06-19]
+	Updated net/pear-Net_SMTP to 1.6.0 [taca 2011-06-19]
