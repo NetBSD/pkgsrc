@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.4 2011/06/19 12:25:42 plunky Exp $
+$NetBSD: distinfo,v 1.5 2011/06/19 13:02:35 plunky Exp $
 
-SHA1 (bluez-4.87.tar.gz) = a7b0f04d3005e130a193afd457e4fe5450ea9aa0
-RMD160 (bluez-4.87.tar.gz) = 1caa1068d99dc37f1fe48cfc3c83dd756ff03c14
-Size (bluez-4.87.tar.gz) = 1114526 bytes
-SHA1 (bluez-hcidump-2.0.tar.gz) = e6f2e7d63fb92efc8683be8f5bb6373893a7fd72
-RMD160 (bluez-hcidump-2.0.tar.gz) = 277702f4deb364d44f73ab109f6cb97b9ab35bf3
-Size (bluez-hcidump-2.0.tar.gz) = 149918 bytes
+SHA1 (bluez-4.94.tar.gz) = 5a6ac6dfe6074e002a517f6e841623f0ded66e41
+RMD160 (bluez-4.94.tar.gz) = 20010e0db361fce9e08c0342d092f8397e478551
+Size (bluez-4.94.tar.gz) = 1152526 bytes
+SHA1 (bluez-hcidump-2.1.tar.gz) = d797000ac0f840803abecdae5e44db88c5e5dbe8
+RMD160 (bluez-hcidump-2.1.tar.gz) = cf26c5ea4f68abc6dee1135a0a9b35cac45ebb7f
+Size (bluez-hcidump-2.1.tar.gz) = 154630 bytes
 SHA1 (patch-aa) = 6e30f3bd8e06e152bd2b65b32e173de039320787
-SHA1 (patch-ab) = fc31a15eee6531faca3ce3df1286762f0e1d1433
+SHA1 (patch-ab) = e313255f11be98686f40af27c6a18550656759ea
 SHA1 (patch-ac) = adbc1e33996e61ccc5c016154bee3c4af72d784d
 SHA1 (patch-ad) = b7007a6c55011ac6a1da2fd1883f953532d75ea5
 SHA1 (patch-ae) = e59424e971879f368c09adae894088952612f1be
@@ -15,8 +15,8 @@ SHA1 (patch-af) = 7748d6d83ce118eff90b9d8158badd0664faa308
 SHA1 (patch-ah) = b5a190251ccb9e55d2ac8460a436df3026d6be3d
 SHA1 (patch-ai) = 46239a7931f8fecee9216b13f98227711c69c54d
 SHA1 (patch-aj) = 3ef708a26e82ea209ef66c556889ba0cb9c9dd86
-SHA1 (patch-ak) = 0d7d144bb67cd5ebf8e3c74fbb0fbdcce87bc4ac
-SHA1 (patch-al) = cdef6a512fc1fa4e64c59ae43ce07506103061d4
-SHA1 (patch-am) = 0f3d33c1f06edabed5fef4500109a83eff599219
+SHA1 (patch-ak) = bbdb271ca8ff39b57082659ceceb9435273ab5ac
+SHA1 (patch-al) = 0a7330fbc9b38c13797aae1a46ecc07b2eca8643
+SHA1 (patch-am) = 7de396188d6c519e4d7b95eb5134cb1464dfb865
 SHA1 (patch-an) = 35d9fd1b0d82addf0688e2997fdf589fbc89d921
-SHA1 (patch-ao) = f726655e31fef49fd3826853442957e770545413
+SHA1 (patch-ao) = 9572764ecba59a92f69996f5601fe14d4ebe3b23
