@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1521 2011/06/19 03:24:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1522 2011/06/19 03:42:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2386,3 +2386,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Added security/ruby-bcrypt version 2.1.4 [taca 2011-06-19]
 	Updated sysutils/ruby-directory-watcher to 1.4.0 [taca 2011-06-19]
 	Updated sysutils/ruby-facter to 1.5.9 [taca 2011-06-19]
+	Updated textproc/ruby-bluecloth to 2.1.0 [taca 2011-06-19]
+	Updated textproc/ruby-coderay to 0.9.8 [taca 2011-06-19]
+	Updated textproc/ruby-fastercsv to 1.5.4 [taca 2011-06-19]
+	Updated textproc/ruby-hpricot to 0.8.4 [taca 2011-06-19]
+	Updated textproc/ruby-redcloth to 4.2.7 [taca 2011-06-19]
+	Updated textproc/ruby-stringex to 1.2.1 [taca 2011-06-19]
