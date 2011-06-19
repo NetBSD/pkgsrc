@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/18 16:05:21 brook Exp $
+$NetBSD: distinfo,v 1.2 2011/06/19 04:26:38 minskim Exp $
 
-SHA1 (tex-forloop-3.0/forloop.tar.xz) = ddb3ebb862f2bb259481af582822a8b7a9a4854e
-RMD160 (tex-forloop-3.0/forloop.tar.xz) = 3eddd3ddfbf81bce8d7a89fdd4b87a2b32e45baf
-Size (tex-forloop-3.0/forloop.tar.xz) = 1252 bytes
+SHA1 (tex-forloop-15878/forloop.tar.xz) = ddb3ebb862f2bb259481af582822a8b7a9a4854e
+RMD160 (tex-forloop-15878/forloop.tar.xz) = 3eddd3ddfbf81bce8d7a89fdd4b87a2b32e45baf
+Size (tex-forloop-15878/forloop.tar.xz) = 1252 bytes
