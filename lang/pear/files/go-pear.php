@@ -35,7 +35,7 @@
  * @author     Tias Guns <tias@ulyssis.org>
  */
 
-/* $NetBSD: go-pear.php,v 1.2 2009/10/29 08:29:03 seb Exp $ */
+/* $NetBSD: go-pear.php,v 1.3 2011/06/19 15:40:21 taca Exp $ */
 
 $sapi_name = php_sapi_name();
 
@@ -113,7 +113,8 @@ $bootstrap_files = array(
 
 $bootstrap_pkgs = array( // uses URL like http://pear.php.net/get/%s
     'PEAR',
-    'Structures_Graph'
+    'Structures_Graph',
+    'XML_Util',
 );
 
 $installer_packages = array(
@@ -121,6 +122,7 @@ $installer_packages = array(
     'Structures_Graph-stable',
     'Archive_Tar-stable',
     'Console_Getopt-stable',
+    'XML_Util-stable',
 );
 
 $pfc_packages = array(
