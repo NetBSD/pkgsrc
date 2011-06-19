@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 23:51:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:26:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -35,6 +34,7 @@ ${GEM_LIBDIR}/lib/dm-migrations/sql/table_modifier.rb
 ${GEM_LIBDIR}/lib/spec/example/migration_example_group.rb
 ${GEM_LIBDIR}/lib/spec/matchers/migration_matchers.rb
 ${GEM_LIBDIR}/spec/integration/auto_migration_spec.rb
+${GEM_LIBDIR}/spec/integration/auto_upgrade_spec.rb
 ${GEM_LIBDIR}/spec/integration/migration_runner_spec.rb
 ${GEM_LIBDIR}/spec/integration/migration_spec.rb
 ${GEM_LIBDIR}/spec/integration/sql_spec.rb
@@ -52,9 +52,6 @@ ${GEM_LIBDIR}/spec/unit/sql/table_creator_spec.rb
 ${GEM_LIBDIR}/spec/unit/sql/table_modifier_spec.rb
 ${GEM_LIBDIR}/spec/unit/sql/table_spec.rb
 ${GEM_LIBDIR}/spec/unit/sql_spec.rb
-${GEM_LIBDIR}/tasks/ci.rake
-${GEM_LIBDIR}/tasks/local_gemfile.rake
-${GEM_LIBDIR}/tasks/metrics.rake
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/tasks/yardstick.rake
