@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 04:27:45 minskim Exp $
+share/texmf-dist/doc/latex/forloop/README
+share/texmf-dist/doc/latex/forloop/forloop.pdf
