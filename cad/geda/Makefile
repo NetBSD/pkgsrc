@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2011/05/11 11:20:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.70 2011/06/19 06:37:44 dholland Exp $
 #
 
 DISTNAME=	geda-gaf-1.6.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/release/v1.6/${PKGVERSION_NOREV}/ \
 		http://geda.seul.org/release/v1.6/${PKGVERSION_NOREV}/
@@ -75,6 +76,10 @@ USE_TOOLS+=		sh:run
 EVAL_PREFIX+=		PCBDIR=pcb
 CONFIGURE_ARGS+=	--with-pcb-datadir=${PCBDIR}/share
 USE_TOOLS+=		gawk:run lex perl:run pkg-config
+
+# disable groff for a consistent build
+# (otherwise html man pages appear if and only if groff -Thtml works)
+CONFIGURE_ENV+=		GROFF=false
 
 .include "../../lang/python/application.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
