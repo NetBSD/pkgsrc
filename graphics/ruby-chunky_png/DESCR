@@ -1,0 +1,24 @@
+= Chunky PNG
+
+This library can read and write PNG files. It is written in pure Ruby for
+maximum portability. Let me rephrase: it does NOT require RMagick or any other
+memory leaking image library.
+
+== Features
+* Decodes any image that the PNG standard allows. This includes all standard
+  color modes, all bit depths and all transparency, interlacing and
+  filtering options.
+* Encodes images supports all color modes (true color, grayscale and indexed)
+  and transparency for all these color modes. The best color mode will be
+  chosen automatically, based on the amount of used colors.
+* R/W access to the image's pixels.
+* R/W access to all image metadata that is stored in chunks.
+* Memory efficient (uses a Fixnum, i.e. 4 or 8 bytes of memory per pixel,
+  depending on the hardware)
+* Reasonably fast for Ruby standards, by only using integer math and a highly
+  optimized saving routine.
+* Interoperability with RMagick if you really have to.
+
+Also, have a look at OilyPNG at http://github.com/wvanbergen/oily_png.
+OilyPNG is a mixin module that implements some of the ChunkyPNG algorithms
+in C, which provides a massive speed boost to encoding and decoding.
