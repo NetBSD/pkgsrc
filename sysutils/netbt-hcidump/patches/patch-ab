@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/12/19 20:20:42 plunky Exp $
+$NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
 
 --- bluetooth/bluetooth.h.orig	2009-11-30 19:29:17.000000000 +0000
 +++ bluetooth/bluetooth.h
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/12/19 20:20:42 plunky Exp $
  int str2ba(const char *str, bdaddr_t *ba);
  int ba2oui(const bdaddr_t *ba, char *oui);
  int bachk(const char *str);
-@@ -146,12 +163,15 @@ int baprintf(const char *format, ...);
+@@ -146,11 +163,14 @@ int baprintf(const char *format, ...);
  int bafprintf(FILE *stream, const char *format, ...);
  int basprintf(char *str, const char *format, ...);
  int basnprintf(char *str, size_t size, const char *format, ...);
@@ -68,8 +68,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/12/19 20:20:42 plunky Exp $
  
 +#if 0
  int bt_error(uint16_t code);
- char *bt_compidtostr(int id);
 +#endif
+ char *bt_compidtostr(int id);
  
  #ifdef __cplusplus
- }
