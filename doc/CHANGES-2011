@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1546 2011/06/19 10:03:23 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1547 2011/06/19 10:34:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Algorithm-HowSimilar version 0.01 [obache 2011-06-19]
 	Added textproc/p5-Text-WagnerFischer version 0.04 [obache 2011-06-19]
 	Added mail/quickml version 0.7 [obache 2011-06-19]
+	Added devel/ruby-rbx-require-relative version 0.0.5 [taca 2011-06-19]
