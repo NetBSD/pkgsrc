@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/06/10 09:39:50 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/06/19 02:30:17 dholland Exp $
 #
 
 DISTNAME=		apache-couchdb-1.0.1
@@ -76,6 +76,12 @@ SUBST_FILES.paths+=	configure
 SUBST_SED.paths=	-e 's,@EGDIR@,${COUCH_EGDIR},g'
 SUBST_SED.paths+=	-e 's,@RUNDIR@,${COUCH_RUNDIR},g'
 SUBST_SED.paths+=	-e 's,@ERLANG_PREFIX@,${BUILDLINK_PREFIX.erlang},g'
+
+SUBST_CLASSES+=		unstrip
+SUBST_MESSAGE.unstrip=	Avoiding trying to strip a shell script
+SUBST_STAGE.unstrip=	post-configure
+SUBST_FILES.unstrip+=	src/couchdb/priv/Makefile
+SUBST_SED.unstrip=	-e '/^INSTALL_PROGRAM =/s,-s,,'
 
 PLIST_SUBST+=		VERSION.ibrowse=${VERSION.ibrowse}
 PLIST_SUBST+=		VERSION.mochiweb=${VERSION.mochiweb}
