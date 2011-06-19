@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/10/02 08:58:56 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/19 07:53:07 taca Exp $
 
-DISTNAME=	compass-0.10.5
-PKGREVISION=	1
+DISTNAME=	compass-0.11.3
 CATEGORIES=	www
 #MASTER_SITES=	http://gems.github.com/gems/
 
@@ -10,7 +9,9 @@ HOMEPAGE=	http://compass-style.org/
 COMMENT=	Stylesheet authoring framework based on Sass
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-haml>=3.0.0:../../textproc/ruby-haml
+DEPENDS+=	${RUBY_PKGPREFIX}-sass>=3.1<4:../../www/ruby-sass
+DEPENDS+=	${RUBY_PKGPREFIX}-chunky_png>=1.1<2:../../graphics/ruby-chunky_png
+DEPENDS+=	${RUBY_PKGPREFIX}-fssm>=0.2.7:../../sysutils/ruby-fssm
 
 CONFLICTS+=	ruby[1-9][0-9]-compass-[0-9]*
 
