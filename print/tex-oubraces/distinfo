@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/29 22:38:44 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/06/19 04:43:45 minskim Exp $
 
-SHA1 (tex-oubraces-2009/oubraces.tar.xz) = 39c009a64835f0210bd4b9630be749cb70c815f5
-RMD160 (tex-oubraces-2009/oubraces.tar.xz) = f8f9439ebd0e549f147f25135267cf119433deab
-Size (tex-oubraces-2009/oubraces.tar.xz) = 1588 bytes
+SHA1 (tex-oubraces-21833/oubraces.tar.xz) = 560d6f0c053d91d791db20e597abc6d6ba1d1aa3
+RMD160 (tex-oubraces-21833/oubraces.tar.xz) = 28b32341e0125782fd82cc6b65a3ddb97465fdc5
+Size (tex-oubraces-21833/oubraces.tar.xz) = 1644 bytes
