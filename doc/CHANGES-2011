@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1530 2011/06/19 07:38:20 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1531 2011/06/19 07:53:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2409,3 +2409,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/ruby-chunky_png version 1.2.0 [taca 2011-06-19]
 	Added www/ruby-sass version 3.1.2 [taca 2011-06-19]
 	Added sysutils/ruby-fssm version 0.2.7 [taca 2011-06-19]
+	Updated www/ruby-compass to 0.11.3 [taca 2011-06-19]
