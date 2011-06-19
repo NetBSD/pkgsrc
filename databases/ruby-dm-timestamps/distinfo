@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/11 23:52:44 taca Exp $
+$NetBSD: distinfo,v 1.2 2011/06/19 08:29:32 taca Exp $
 
-SHA1 (dm-timestamps-1.0.2.gem) = 23af17aac4b63b8897c0577ffc7395d21c9c2234
-RMD160 (dm-timestamps-1.0.2.gem) = 1790a264e0d4e36105a60461d31fa2f804ef749b
-Size (dm-timestamps-1.0.2.gem) = 10752 bytes
+SHA1 (dm-timestamps-1.1.0.gem) = f63581ed92d0757d63fff7d0fe83cc9e68094310
+RMD160 (dm-timestamps-1.1.0.gem) = 760c2687331e0468c94b444e28c520d270ab58dc
+Size (dm-timestamps-1.1.0.gem) = 8704 bytes
