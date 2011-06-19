@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/19 14:07:17 taca Exp $
+
+SHA1 (net-ldap-0.2.2.gem) = 6bdb7687171b1f6a2e1ee9a56a2c74826bb0b412
+RMD160 (net-ldap-0.2.2.gem) = 1316b4212aa546f5466bd4fde67d2dde9a8daf9f
+Size (net-ldap-0.2.2.gem) = 66048 bytes
