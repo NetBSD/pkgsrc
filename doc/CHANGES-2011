@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1549 2011/06/19 12:05:19 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1550 2011/06/19 13:04:10 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2438,3 +2438,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/ruby-rbx-require-relative version 0.0.5 [taca 2011-06-19]
 	Updated devel/ruby-linecache to 0.46 [taca 2011-06-19]
 	Updated time/p5-Time-modules to 2011.0517 [obache 2011-06-19]
+	Updated sysutils/netbt-hcidump to 2.1 [plunky 2011-06-19]
