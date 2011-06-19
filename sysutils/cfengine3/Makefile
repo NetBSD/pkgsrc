@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2011/02/06 18:44:23 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/19 16:40:52 pettai Exp $
 #
 
 DISTNAME=	cfengine-3.1.4
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.cfengine.org/tarballs/
+MASTER_SITES=	http://cfengine.com/tarballs/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://www.cfengine.org/
+HOMEPAGE=	http://cfengine.com/pages/community
 COMMENT=	Tool for automating system administration
 LICENSE=	gnu-gpl-v3
 
