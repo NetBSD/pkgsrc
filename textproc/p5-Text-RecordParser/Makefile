@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/08 05:26:37 sno Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/19 01:28:28 dholland Exp $
 #
 
 DISTNAME=	Text-RecordParser-v1.5.0
@@ -29,6 +29,10 @@ PERL5_PACKLIST=		auto/Text/RecordParser/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
 USE_TOOLS+=perl
+
+REPLACE_PERL+=		bin/tab2graph	blib/script/tab2graph
+REPLACE_PERL+=		bin/tablify	blib/script/tablify
+REPLACE_PERL+=		bin/tabmerge	blib/script/tabmerge
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
