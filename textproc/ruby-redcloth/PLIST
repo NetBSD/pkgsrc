@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:39:59 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/06/19 03:39:05 taca Exp $
 bin/redcloth
-${GEM_HOME}/cache/RedCloth-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.require_paths
+${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/Manifest
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/RedCloth.gemspec
 ${GEM_LIBDIR}/bin/redcloth
+${GEM_LIBDIR}/doc/textile_reference.html
 ${GEM_LIBDIR}/ext/redcloth_scan/extconf.rb
 ${GEM_LIBDIR}/ext/redcloth_scan/redcloth.h
 ${GEM_LIBDIR}/ext/redcloth_scan/redcloth_attributes.c
@@ -23,11 +25,12 @@ ${GEM_LIBDIR}/lib/redcloth/formatters/latex.rb
 ${GEM_LIBDIR}/lib/redcloth/formatters/latex_entities.yml
 ${GEM_LIBDIR}/lib/redcloth/textile_doc.rb
 ${GEM_LIBDIR}/lib/redcloth/version.rb
+${GEM_LIBDIR}/lib/redcloth_scan.jar
 ${GEM_LIBDIR}/lib/redcloth_scan.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/tasks/pureruby.rake
-${GEM_LIBDIR}/setup.rb
+${GEM_LIBDIR}/redcloth.gemspec
+${GEM_LIBDIR}/spec/benchmark_spec.rb
 ${GEM_LIBDIR}/spec/custom_tags_spec.rb
-${GEM_LIBDIR}/spec/differs/inline.rb
 ${GEM_LIBDIR}/spec/erb_spec.rb
 ${GEM_LIBDIR}/spec/extension_spec.rb
 ${GEM_LIBDIR}/spec/fixtures/basic.yml
@@ -57,6 +60,11 @@ ${GEM_LIBDIR}/spec/formatters/no_span_caps_html_spec.rb
 ${GEM_LIBDIR}/spec/formatters/sanitized_html_spec.rb
 ${GEM_LIBDIR}/spec/formatters/style_filtered_html_spec.rb
 ${GEM_LIBDIR}/spec/parser_spec.rb
-${GEM_LIBDIR}/spec/spec.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_HOME}/specifications/RedCloth-${PKGVERSION}.gemspec
+${GEM_LIBDIR}/tasks/compile.rake
+${GEM_LIBDIR}/tasks/gems.rake
+${GEM_LIBDIR}/tasks/ragel_extension_task.rb
+${GEM_LIBDIR}/tasks/release.rake
+${GEM_LIBDIR}/tasks/rspec.rake
+${GEM_LIBDIR}/tasks/rvm.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
