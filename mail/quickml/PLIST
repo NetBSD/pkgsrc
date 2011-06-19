@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 10:01:53 obache Exp $
+${PLIST.analog}bin/quickml-analog
+${RUBY_VENDORLIB}/quickml.rb
+${RUBY_VENDORLIB}/quickml/config.rb
+${RUBY_VENDORLIB}/quickml/core.rb
+${RUBY_VENDORLIB}/quickml/gettext.rb
+${RUBY_VENDORLIB}/quickml/logger.rb
+${RUBY_VENDORLIB}/quickml/mail.rb
+${RUBY_VENDORLIB}/quickml/server.rb
+${RUBY_VENDORLIB}/quickml/sweeper.rb
+${RUBY_VENDORLIB}/quickml/utils.rb
+${RUBY_VENDORLIB}/quickml/version.rb
+sbin/quickml
+sbin/quickml-ctl
+share/examples/quickml/quickmlrc.sample
+share/examples/rc.d/quickml
+share/quickml/messages.ja
