@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2010/12/04 04:23:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/06/19 03:35:05 taca Exp $
 bin/bluecloth
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.require_paths
-${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/LICENSE.discount
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/Rakefile.local
 ${GEM_LIBDIR}/bin/bluecloth
 ${GEM_LIBDIR}/ext/Csio.c
 ${GEM_LIBDIR}/ext/VERSION
@@ -27,6 +27,7 @@ ${GEM_LIBDIR}/ext/markdown.h
 ${GEM_LIBDIR}/ext/mkdio.c
 ${GEM_LIBDIR}/ext/mkdio.h
 ${GEM_LIBDIR}/ext/resource.c
+${GEM_LIBDIR}/ext/setup.c
 ${GEM_LIBDIR}/ext/tags.c
 ${GEM_LIBDIR}/ext/tags.h
 ${GEM_LIBDIR}/ext/version.c
@@ -34,19 +35,8 @@ ${GEM_LIBDIR}/ext/xml.c
 ${GEM_LIBDIR}/ext/xmlpage.c
 ${GEM_LIBDIR}/lib/bluecloth.rb
 ${GEM_LIBDIR}/lib/bluecloth_ext.${RUBY_DLEXT}
-${GEM_LIBDIR}/rake/191_compat.rb
-${GEM_LIBDIR}/rake/dependencies.rb
-${GEM_LIBDIR}/rake/documentation.rb
-${GEM_LIBDIR}/rake/helpers.rb
-${GEM_LIBDIR}/rake/hg.rb
-${GEM_LIBDIR}/rake/manual.rb
-${GEM_LIBDIR}/rake/packaging.rb
-${GEM_LIBDIR}/rake/publishing.rb
-${GEM_LIBDIR}/rake/style.rb
-${GEM_LIBDIR}/rake/svn.rb
-${GEM_LIBDIR}/rake/testing.rb
-${GEM_LIBDIR}/rake/verifytask.rb
 ${GEM_LIBDIR}/spec/bluecloth/101_changes_spec.rb
+${GEM_LIBDIR}/spec/bluecloth/TEMPLATE
 ${GEM_LIBDIR}/spec/bluecloth/autolinks_spec.rb
 ${GEM_LIBDIR}/spec/bluecloth/blockquotes_spec.rb
 ${GEM_LIBDIR}/spec/bluecloth/code_spans_spec.rb
