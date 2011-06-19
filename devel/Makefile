@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1466 2011/06/18 04:05:14 taca Exp $
+# $NetBSD: Makefile,v 1.1467 2011/06/19 09:02:50 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -477,6 +477,7 @@ SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Algorithm-CheckDigits
 SUBDIR+=	p5-Algorithm-Dependency
 SUBDIR+=	p5-Algorithm-Diff
+SUBDIR+=	p5-Algorithm-HowSimilar
 SUBDIR+=	p5-Algorithm-Merge
 SUBDIR+=	p5-AnnoCPAN-Perldoc
 SUBDIR+=	p5-Any-Moose
@@ -1016,6 +1017,7 @@ SUBDIR+=	p5-Term-Shell
 SUBDIR+=	p5-Term-ShellUI
 SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-Aggregate
+SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
 SUBDIR+=	p5-Test-Base
 SUBDIR+=	p5-Test-CheckManifest
