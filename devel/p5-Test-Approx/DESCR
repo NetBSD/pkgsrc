@@ -1,0 +1,5 @@
+This module lets you test if two things are *approximately* equal. Yes,
+that sounds a bit wrong at first - surely you know if they should be
+equal or not? But there are actually valid cases when you don't/can't
+know. This module is meant for those rare cases when close is good
+enough.
