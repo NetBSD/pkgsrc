@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 07:54:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/06/19 03:22:03 taca Exp $
+bin/dw
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/dw
 ${GEM_LIBDIR}/lib/directory_watcher.rb
+${GEM_LIBDIR}/lib/directory_watcher/coolio_scanner.rb
 ${GEM_LIBDIR}/lib/directory_watcher/em_scanner.rb
 ${GEM_LIBDIR}/lib/directory_watcher/rev_scanner.rb
 ${GEM_LIBDIR}/lib/directory_watcher/scanner.rb
