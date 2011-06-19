@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1529 2011/06/19 07:30:30 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1530 2011/06/19 07:38:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2407,3 +2407,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/libreoffice3-bin to 3.3.3 [ryoon 2011-06-19]
 	Updated cad/geda to 1.6.2nb1 [dholland 2011-06-19]
 	Added graphics/ruby-chunky_png version 1.2.0 [taca 2011-06-19]
+	Added www/ruby-sass version 3.1.2 [taca 2011-06-19]
+	Added sysutils/ruby-fssm version 0.2.7 [taca 2011-06-19]
