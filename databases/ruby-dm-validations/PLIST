@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 23:54:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:30:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -15,6 +14,7 @@ ${GEM_LIBDIR}/lib/dm-validations/formats/email.rb
 ${GEM_LIBDIR}/lib/dm-validations/formats/url.rb
 ${GEM_LIBDIR}/lib/dm-validations/support/context.rb
 ${GEM_LIBDIR}/lib/dm-validations/support/object.rb
+${GEM_LIBDIR}/lib/dm-validations/support/ordered_hash.rb
 ${GEM_LIBDIR}/lib/dm-validations/validation_errors.rb
 ${GEM_LIBDIR}/lib/dm-validations/validators/absent_field_validator.rb
 ${GEM_LIBDIR}/lib/dm-validations/validators/acceptance_validator.rb
@@ -71,6 +71,7 @@ ${GEM_LIBDIR}/spec/integration/automatic_validation/inferred_integer_properties_
 ${GEM_LIBDIR}/spec/integration/automatic_validation/inferred_length_validation_spec.rb
 ${GEM_LIBDIR}/spec/integration/automatic_validation/inferred_presence_validation_spec.rb
 ${GEM_LIBDIR}/spec/integration/automatic_validation/inferred_primitive_validation_spec.rb
+${GEM_LIBDIR}/spec/integration/automatic_validation/inferred_uniqueness_validation_spec.rb
 ${GEM_LIBDIR}/spec/integration/automatic_validation/inferred_within_validation_spec.rb
 ${GEM_LIBDIR}/spec/integration/automatic_validation/spec_helper.rb
 ${GEM_LIBDIR}/spec/integration/block_validator/block_validator_spec.rb
@@ -135,13 +136,12 @@ ${GEM_LIBDIR}/spec/unit/contextual_validators/emptiness_spec.rb
 ${GEM_LIBDIR}/spec/unit/contextual_validators/execution_spec.rb
 ${GEM_LIBDIR}/spec/unit/contextual_validators/spec_helper.rb
 ${GEM_LIBDIR}/spec/unit/generic_validator/equality_operator_spec.rb
+${GEM_LIBDIR}/spec/unit/generic_validator/optional_spec.rb
 ${GEM_LIBDIR}/spec/unit/validation_errors/adding_spec.rb
 ${GEM_LIBDIR}/spec/unit/validation_errors/emptiness_spec.rb
 ${GEM_LIBDIR}/spec/unit/validation_errors/enumerable_spec.rb
 ${GEM_LIBDIR}/spec/unit/validation_errors/reading_spec.rb
-${GEM_LIBDIR}/tasks/ci.rake
-${GEM_LIBDIR}/tasks/local_gemfile.rake
-${GEM_LIBDIR}/tasks/metrics.rake
+${GEM_LIBDIR}/spec/unit/validation_errors/respond_to_spec.rb
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/tasks/yardstick.rake
