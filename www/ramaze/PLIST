@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 12:42:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/06/19 03:56:24 taca Exp $
 bin/ramaze
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/.mailmap
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/TODO.md
 ${GEM_LIBDIR}/benchmark/bench_templates/bench.rb
 ${GEM_LIBDIR}/benchmark/bench_templates/view/large.erb
 ${GEM_LIBDIR}/benchmark/bench_templates/view/large.haml
@@ -162,10 +163,8 @@ ${GEM_LIBDIR}/examples/basic/linking.rb
 ${GEM_LIBDIR}/examples/basic/partial.rb
 ${GEM_LIBDIR}/examples/basic/simple.rb
 ${GEM_LIBDIR}/examples/helpers/cache.rb
-${GEM_LIBDIR}/examples/helpers/form_with_sequel.rb
 ${GEM_LIBDIR}/examples/helpers/httpdigest.rb
 ${GEM_LIBDIR}/examples/helpers/identity.rb
-${GEM_LIBDIR}/examples/helpers/nitro_form.rb
 ${GEM_LIBDIR}/examples/helpers/paginate.rb
 ${GEM_LIBDIR}/examples/helpers/rest.rb
 ${GEM_LIBDIR}/examples/helpers/simple_captcha.rb
@@ -246,10 +245,10 @@ ${GEM_LIBDIR}/lib/ramaze/helper/auth.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/bench.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/blue_form.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/cache.rb
+${GEM_LIBDIR}/lib/ramaze/helper/csrf.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/disqus.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/erector.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/flash.rb
-${GEM_LIBDIR}/lib/ramaze/helper/form.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/formatting.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/gestalt.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/gravatar.rb
@@ -260,14 +259,10 @@ ${GEM_LIBDIR}/lib/ramaze/helper/link.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/localize.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/markaby.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/maruku.rb
-${GEM_LIBDIR}/lib/ramaze/helper/nitroform.rb
-${GEM_LIBDIR}/lib/ramaze/helper/pager.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/paginate.rb
-${GEM_LIBDIR}/lib/ramaze/helper/partial.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/remarkably.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/request_accessor.rb
-${GEM_LIBDIR}/lib/ramaze/helper/sequel.rb
-${GEM_LIBDIR}/lib/ramaze/helper/sequel_form.rb
+${GEM_LIBDIR}/lib/ramaze/helper/send_file.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/simple_captcha.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/stack.rb
 ${GEM_LIBDIR}/lib/ramaze/helper/tagz.rb
@@ -353,7 +348,6 @@ ${GEM_LIBDIR}/lib/ramaze/view/sass.rb
 ${GEM_LIBDIR}/lib/ramaze/view/slippers.rb
 ${GEM_LIBDIR}/lib/ramaze/view/tagz.rb
 ${GEM_LIBDIR}/lib/ramaze/view/tenjin.rb
-${GEM_LIBDIR}/lib/vendor/etag.rb
 ${GEM_LIBDIR}/lib/vendor/route_exceptions.rb
 ${GEM_LIBDIR}/ramaze.gemspec
 ${GEM_LIBDIR}/spec/contrib/addressable_route.rb
@@ -420,8 +414,8 @@ ${GEM_LIBDIR}/spec/ramaze/helper/auth.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/bench.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/blue_form.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/cache.rb
+${GEM_LIBDIR}/spec/ramaze/helper/csrf.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/flash.rb
-${GEM_LIBDIR}/spec/ramaze/helper/form.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/formatting.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/gestalt.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/gravatar.rb
@@ -431,10 +425,8 @@ ${GEM_LIBDIR}/spec/ramaze/helper/layout/default.xhtml
 ${GEM_LIBDIR}/spec/ramaze/helper/link.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/localize.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/maruku.rb
-${GEM_LIBDIR}/spec/ramaze/helper/pager.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/paginate.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/request_accessor.rb
-${GEM_LIBDIR}/spec/ramaze/helper/sequel_form.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/simple_captcha.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/stack.rb
 ${GEM_LIBDIR}/spec/ramaze/helper/user.rb
@@ -447,6 +439,7 @@ ${GEM_LIBDIR}/spec/ramaze/helper/view/recursive_local_ivars.xhtml
 ${GEM_LIBDIR}/spec/ramaze/helper/view/recursive_locals.xhtml
 ${GEM_LIBDIR}/spec/ramaze/helper/view/test_template.xhtml
 ${GEM_LIBDIR}/spec/ramaze/helper/xhtml.rb
+${GEM_LIBDIR}/spec/ramaze/log/growl.rb
 ${GEM_LIBDIR}/spec/ramaze/log/informer.rb
 ${GEM_LIBDIR}/spec/ramaze/log/logging.rb
 ${GEM_LIBDIR}/spec/ramaze/log/syslog.rb
@@ -461,11 +454,11 @@ ${GEM_LIBDIR}/spec/ramaze/struct.rb
 ${GEM_LIBDIR}/spec/ramaze/template/ramaze/external.test
 ${GEM_LIBDIR}/spec/ramaze/view.rb
 ${GEM_LIBDIR}/spec/ramaze/view/erector.rb
-${GEM_LIBDIR}/spec/ramaze/view/erector/external.erector
-${GEM_LIBDIR}/spec/ramaze/view/erector/invoke_helper_method.erector
+${GEM_LIBDIR}/spec/ramaze/view/erector/external_view.erector
+${GEM_LIBDIR}/spec/ramaze/view/erector/index.erector
 ${GEM_LIBDIR}/spec/ramaze/view/erector/layout.erector
-${GEM_LIBDIR}/spec/ramaze/view/erector/strict_xhtml.erector
-${GEM_LIBDIR}/spec/ramaze/view/erector/sum.erector
+${GEM_LIBDIR}/spec/ramaze/view/erector/tables.erector
+${GEM_LIBDIR}/spec/ramaze/view/erector/view.erector
 ${GEM_LIBDIR}/spec/ramaze/view/erubis.rb
 ${GEM_LIBDIR}/spec/ramaze/view/erubis/external.rhtml
 ${GEM_LIBDIR}/spec/ramaze/view/erubis/sum.rhtml
