@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2010/08/21 16:35:10 seb Exp $
+# $NetBSD: Makefile,v 1.44 2011/06/19 13:50:57 bouyer Exp $
 #
 
 DISTNAME=	sympa-5.4.4
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.sympa.org/distribution/ \
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.sympa.org/
 COMMENT=	Mailing list manager
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 DEPENDS+=	p5-Archive-Zip>=1.05:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-MIME-Base64>=1.0:../../converters/p5-MIME-Base64
@@ -137,10 +139,10 @@ INSTALLATION_DIRS+=	share/doc/sympa
 post-install:
 .if ${OPSYS} == "NetBSD"
 	: We do not support set-uid scripts...
-	${CHMOD} ug-s ${SYMPA_BIN}/sympa_soap_server.fcgi
-	${CHMOD} ug-s ${SYMPA_BIN}/wwsympa.fcgi
+	${CHMOD} ug-s ${DESTDIR}${SYMPA_BIN}/sympa_soap_server.fcgi
+	${CHMOD} ug-s ${DESTDIR}${SYMPA_BIN}/wwsympa.fcgi
 .endif
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/sympa/NEWS
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/doc/sympa/NEWS
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
