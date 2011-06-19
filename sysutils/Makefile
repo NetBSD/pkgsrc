@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.520 2011/05/28 10:02:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.521 2011/06/19 07:36:56 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -335,6 +335,7 @@ SUBDIR+=	rtty
 SUBDIR+=	ruby-activesambaldap
 SUBDIR+=	ruby-directory-watcher
 SUBDIR+=	ruby-facter
+SUBDIR+=	ruby-fssm
 SUBDIR+=	ruby-notify
 SUBDIR+=	ruby-quota
 SUBDIR+=	ruby-rb-appscript
