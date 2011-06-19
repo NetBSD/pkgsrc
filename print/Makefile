@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.487 2011/06/18 16:36:54 brook Exp $
+# $NetBSD: Makefile,v 1.488 2011/06/19 04:28:35 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -298,6 +298,7 @@ SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-footmisc
 SUBDIR+=	tex-footmisc-doc
 SUBDIR+=	tex-forloop
+SUBDIR+=	tex-forloop-doc
 SUBDIR+=	tex-framed
 SUBDIR+=	tex-framed-doc
 SUBDIR+=	tex-ftcap
