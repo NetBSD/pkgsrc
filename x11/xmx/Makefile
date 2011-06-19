@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/01/18 00:13:47 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2011/06/19 09:30:49 alnsn Exp $
 
 DISTNAME=	xmx-2.1alpha.pl7
 PKGNAME=	xmx-2.1a7
@@ -12,6 +12,7 @@ COMMENT=	X11 Protocol Multiplexor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+MAKE_JOBS_SAFE=	no
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
