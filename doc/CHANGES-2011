@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1537 2011/06/19 08:16:13 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1538 2011/06/19 08:36:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2416,3 +2416,13 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/thin to 1.2.11 [taca 2011-06-19]
 	Added finance/ruby-braintree version 2.10.1 [taca 2011-06-19]
 	Updated finance/ruby-activemerchant to 1.15.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-core to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-aggregates to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-constraints to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-migrations to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-transactions to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-serializer to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-timestamps to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-validations to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-dm-types to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-datamapper to 1.1.0 [taca 2011-06-19]
