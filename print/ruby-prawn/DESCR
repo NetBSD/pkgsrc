@@ -1,0 +1,11 @@
+= Prawn: Fast, Nimble PDF Generation For Ruby
+
+Prawn is a PDF writing library for Ruby designed to be tiny, fast, and nimble,
+just like the majestic sea creature.
+
+Development on this library was initially made possible thanks to
+the many people who donated to the Ruby Mendicant project:
+http://rubymendicant.wikidot.com
+
+The project is currently maintained by Gregory Brown, with lots of help from
+Prawn's core developers and the community.
