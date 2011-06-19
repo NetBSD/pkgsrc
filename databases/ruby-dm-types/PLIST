@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 23:53:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:32:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -64,9 +63,6 @@ ${GEM_LIBDIR}/spec/unit/regexp_spec.rb
 ${GEM_LIBDIR}/spec/unit/uri_spec.rb
 ${GEM_LIBDIR}/spec/unit/uuid_spec.rb
 ${GEM_LIBDIR}/spec/unit/yaml_spec.rb
-${GEM_LIBDIR}/tasks/ci.rake
-${GEM_LIBDIR}/tasks/local_gemfile.rake
-${GEM_LIBDIR}/tasks/metrics.rake
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/tasks/yardstick.rake
