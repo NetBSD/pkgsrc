@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1518 2011/06/19 01:50:34 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1519 2011/06/19 02:58:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2380,3 +2380,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/ruby-commander to 4.0.4 [taca 2011-06-19]
 	Updated misc/ruby-daemons to 1.1.4 [taca 2011-06-19]
 	Updated misc/ruby-launchy to 0.4.0 [taca 2011-06-19]
+	Updated net/ruby-addressable to 2.2.6 [taca 2011-06-19]
+	Updated net/ruby-amqp to 0.7.1 [taca 2011-06-19]
+	Updated net/ruby-rubytter to 1.4.2 [taca 2011-06-19]
