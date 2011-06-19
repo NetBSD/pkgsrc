@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/12/04 04:33:52 taca Exp $
+$NetBSD: distinfo,v 1.6 2011/06/19 03:38:21 taca Exp $
 
-SHA1 (hpricot-0.8.3.gem) = 1edc570109fe42533ad314d84a03f74898c49c71
-RMD160 (hpricot-0.8.3.gem) = 592cc8f56861280bdb10f553b031604454b51c9b
-Size (hpricot-0.8.3.gem) = 277504 bytes
+SHA1 (hpricot-0.8.4.gem) = 029ef48af199aa5bf05c99b4173244ae4c9852c8
+RMD160 (hpricot-0.8.4.gem) = 88e96058a5b988e12ed28562bb0b183b8e7d2177
+Size (hpricot-0.8.4.gem) = 278016 bytes
 SHA1 (patch-aa) = 790aef98f752752b10a031c257fd32be1d623010
