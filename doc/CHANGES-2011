@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1565 2011/06/19 16:51:57 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1566 2011/06/19 16:58:54 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2455,3 +2455,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/nsd to 3.2.8 [pettai 2011-06-19]
 	Updated emulators/stella to 3.4.1 [dholland 2011-06-19]
 	Updated fonts/umefont-ttf to 0.428 [ryoon 2011-06-19]
+	Updated net/lftp to 4.2.3 [pettai 2011-06-19]
