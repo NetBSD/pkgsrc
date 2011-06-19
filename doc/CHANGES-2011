@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1517 2011/06/19 01:42:53 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1518 2011/06/19 01:50:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2376,3 +2376,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/ruby-gnuplot to 2.3.6 [taca 2011-06-19]
 	Updated graphics/ruby-mini-magick to 3.3 [taca 2011-06-19]
 	Updated math/ruby-spreadsheet to 0.6.5.4 [taca 2011-06-19]
+	Updated misc/ruby-columnize to 0.3.3 [taca 2011-06-19]
+	Updated misc/ruby-commander to 4.0.4 [taca 2011-06-19]
+	Updated misc/ruby-daemons to 1.1.4 [taca 2011-06-19]
+	Updated misc/ruby-launchy to 0.4.0 [taca 2011-06-19]
