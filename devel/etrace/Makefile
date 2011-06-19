@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/02/14 10:34:56 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/19 19:40:36 dholland Exp $
 #
 
 DISTNAME=	etrace-2.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ndevilla.free.fr/etrace/
 
@@ -23,8 +24,7 @@ BINDIR=		${PREFIX}/bin
 AUTO_MKDIRS=	yes
 
 REPLACE_PERL=	src/etrace.pl
-# python script uses /usr/bin/env; let it slide pending wondering if
-# we really want to depend on python and use a pyNN- prefix.
+REPLACE_PYTHON=	src/etrace
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/etrace ${DESTDIR}${BINDIR}
@@ -33,4 +33,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/example/* ${DESTDIR}${EXAMPLEDIR}
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
