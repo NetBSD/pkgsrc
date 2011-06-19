@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1516 2011/06/19 01:40:13 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1517 2011/06/19 01:42:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2375,3 +2375,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/bmake to 20110606 [bsiegert 2011-06-19]
 	Updated graphics/ruby-gnuplot to 2.3.6 [taca 2011-06-19]
 	Updated graphics/ruby-mini-magick to 3.3 [taca 2011-06-19]
+	Updated math/ruby-spreadsheet to 0.6.5.4 [taca 2011-06-19]
