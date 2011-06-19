@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/06/17 15:37:19 taca Exp $
+$NetBSD: distinfo,v 1.4 2011/06/19 10:36:43 taca Exp $
 
-SHA1 (linecache-0.45.gem) = a4cd16b349ee30ca1145c1855cba44460d6f9856
-RMD160 (linecache-0.45.gem) = 85b7da25c47bbff260e0bc8e23e7bce9a114527e
-Size (linecache-0.45.gem) = 28160 bytes
+SHA1 (linecache-0.46.gem) = cfef1ba477f109c37d1fdb6e3fb91cec8a762cf7
+RMD160 (linecache-0.46.gem) = 6d447c9e0fa90b5da9faf3ae2471d0eb52e52f1c
+Size (linecache-0.46.gem) = 28160 bytes
