@@ -452,6 +452,8 @@ qpopper-servermode	Enable server mode.
 qt			Enable support for QT.
 qt3			Enable support for QT3.
 quartz			Enable Quartz support on Mac OS X.
+quickml-analog		Enable quickml log analizer.
+quickml-limit		Enable quickml creators and members limitation.
 readline		Enable use of GNU readline library.
 rsaref			Use RSAREF library.
 rtree			Enable R-tree support.
