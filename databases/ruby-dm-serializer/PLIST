@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 23:52:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:28:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -17,13 +16,14 @@ ${GEM_LIBDIR}/lib/dm-serializer/to_csv.rb
 ${GEM_LIBDIR}/lib/dm-serializer/to_json.rb
 ${GEM_LIBDIR}/lib/dm-serializer/to_xml.rb
 ${GEM_LIBDIR}/lib/dm-serializer/to_yaml.rb
-${GEM_LIBDIR}/lib/dm-serializer/xml_serializers.rb
-${GEM_LIBDIR}/lib/dm-serializer/xml_serializers/libxml.rb
-${GEM_LIBDIR}/lib/dm-serializer/xml_serializers/nokogiri.rb
-${GEM_LIBDIR}/lib/dm-serializer/xml_serializers/rexml.rb
+${GEM_LIBDIR}/lib/dm-serializer/xml.rb
+${GEM_LIBDIR}/lib/dm-serializer/xml/libxml.rb
+${GEM_LIBDIR}/lib/dm-serializer/xml/nokogiri.rb
+${GEM_LIBDIR}/lib/dm-serializer/xml/rexml.rb
 ${GEM_LIBDIR}/spec/fixtures/cow.rb
 ${GEM_LIBDIR}/spec/fixtures/planet.rb
 ${GEM_LIBDIR}/spec/fixtures/quan_tum_cat.rb
+${GEM_LIBDIR}/spec/fixtures/vehicle.rb
 ${GEM_LIBDIR}/spec/lib/serialization_method_shared_spec.rb
 ${GEM_LIBDIR}/spec/public/serializer_spec.rb
 ${GEM_LIBDIR}/spec/public/to_csv_spec.rb
@@ -33,9 +33,6 @@ ${GEM_LIBDIR}/spec/public/to_yaml_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/spec.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/tasks/ci.rake
-${GEM_LIBDIR}/tasks/local_gemfile.rake
-${GEM_LIBDIR}/tasks/metrics.rake
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/tasks/yardstick.rake
