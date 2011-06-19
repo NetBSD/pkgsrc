@@ -1,10 +1,8 @@
-#
-# $NetBSD: spadmin-patch,v 1.1.1.1 2011/06/12 09:05:30 ryoon Exp $
-#
+$NetBSD: spadmin-patch,v 1.2 2011/06/19 06:12:27 ryoon Exp $
 
---- spadmin.orig	2009-10-08 12:21:04.000000000 +0200
-+++ spadmin	2009-10-08 12:22:22.000000000 +0200
-@@ -56,6 +56,10 @@
+--- /usr/tmp/misc/libreoffice3-bin/work/.destdir/usr/pkg/opt/libreoffice/program/spadmin.orig	2011-06-19 05:55:59.000000000 +0000
++++ /usr/tmp/misc/libreoffice3-bin/work/.destdir/usr/pkg/opt/libreoffice/program/spadmin
+@@ -52,6 +52,10 @@ do
    esac
  done
  
