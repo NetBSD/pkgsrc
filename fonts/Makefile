@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2011/05/28 08:23:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.200 2011/06/19 14:14:36 taca Exp $
 #
 
 COMMENT=	Fonts
@@ -157,6 +157,7 @@ SUBDIR+=	ps2pkm
 SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-fonttools
 SUBDIR+=	ricty-ttf
+SUBDIR+=	ruby-ttfunk
 SUBDIR+=	sgi-fonts
 SUBDIR+=	t1lib
 SUBDIR+=	t1utils
