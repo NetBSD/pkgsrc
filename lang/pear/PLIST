@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/29 08:29:03 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/06/19 15:40:21 taca Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -17,6 +17,7 @@ lib/php/.registry/archive_tar.reg
 lib/php/.registry/console_getopt.reg
 lib/php/.registry/pear.reg
 lib/php/.registry/structures_graph.reg
+lib/php/.registry/xml_util.reg
 lib/php/Archive/Tar.php
 lib/php/Console/Getopt.php
 lib/php/OS/Guess.php
@@ -115,6 +116,7 @@ lib/php/Structures/Graph/Manipulator/AcyclicTest.php
 lib/php/Structures/Graph/Manipulator/TopologicalSorter.php
 lib/php/Structures/Graph/Node.php
 lib/php/System.php
+lib/php/XML/Util.php
 lib/php/data/PEAR/package.dtd
 lib/php/data/PEAR/template.spec
 lib/php/data/Structures_Graph/LICENSE
@@ -143,10 +145,31 @@ lib/php/doc/Structures_Graph/docs/html/media/stylesheet.css
 lib/php/doc/Structures_Graph/docs/html/packages.html
 lib/php/doc/Structures_Graph/docs/html/todolist.html
 lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph/Structures_Graph.pkg
+lib/php/doc/XML_Util/examples/example.php
+lib/php/doc/XML_Util/examples/example2.php
 lib/php/pearcmd.php
 lib/php/peclcmd.php
 lib/php/test/Structures_Graph/tests/AllTests.php
 lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
+lib/php/test/XML_Util/tests/AllTests.php
+lib/php/test/XML_Util/tests/testBasic_apiVersion.phpt
+lib/php/test/XML_Util/tests/testBasic_attributesToString.phpt
+lib/php/test/XML_Util/tests/testBasic_collapseEmptyTags.phpt
+lib/php/test/XML_Util/tests/testBasic_createCDataSection.phpt
+lib/php/test/XML_Util/tests/testBasic_createComment.phpt
+lib/php/test/XML_Util/tests/testBasic_createEndElement.phpt
+lib/php/test/XML_Util/tests/testBasic_createStartElement.phpt
+lib/php/test/XML_Util/tests/testBasic_createTag.phpt
+lib/php/test/XML_Util/tests/testBasic_createTagFromArray.phpt
+lib/php/test/XML_Util/tests/testBasic_getDocTypeDeclaration.phpt
+lib/php/test/XML_Util/tests/testBasic_getXmlDeclaration.phpt
+lib/php/test/XML_Util/tests/testBasic_isValidName.phpt
+lib/php/test/XML_Util/tests/testBasic_raiseError.phpt
+lib/php/test/XML_Util/tests/testBasic_replaceEntities.phpt
+lib/php/test/XML_Util/tests/testBasic_reverseEntities.phpt
+lib/php/test/XML_Util/tests/testBasic_splitQualifiedName.phpt
+lib/php/test/XML_Util/tests/testBug_4950.phpt
+lib/php/test/XML_Util/tests/testBug_5392.phpt
 share/examples/pear/pear.conf
 @pkgdir lib/php/.registry/.channel.pecl.php.net
 @pkgdir lib/php/.registry/.channel.doc.php.net
