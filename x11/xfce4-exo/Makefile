@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/04/22 13:42:16 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/06/19 01:14:53 dholland Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	0.3.101
 
 DISTNAME=	exo-${XFCE4_VERSION}
 PKGNAME=	xfce4-exo-${XFCE4_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 COMMENT=	Xfce extension library
 
@@ -17,6 +17,9 @@ DEPENDS+=	p5-URI>=0:../../www/p5-URI
 PKGCONFIG_OVERRIDE+=	exo/exo-0.3.pc.in exo-hal/exo-hal-0.3.pc.in
 
 CONFIGURE_ARGS+=	--disable-python
+
+USE_TOOLS+=		perl:run
+REPLACE_PERL+=		exo-helper/helpers/exo-compose-mail-0.3
 
 PKG_SYSCONFSUBDIR=	xdg/xfce4
 EGDIR=			${XFCE4_EGBASE}
