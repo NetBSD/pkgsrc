@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1528 2011/06/19 07:04:36 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1529 2011/06/19 07:30:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2406,3 +2406,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-oubraces-doc to 2010 [minskim 2011-06-19]
 	Updated misc/libreoffice3-bin to 3.3.3 [ryoon 2011-06-19]
 	Updated cad/geda to 1.6.2nb1 [dholland 2011-06-19]
+	Added graphics/ruby-chunky_png version 1.2.0 [taca 2011-06-19]
