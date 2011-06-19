@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2011/01/20 11:48:18 markd Exp $
+$NetBSD: distinfo,v 1.4 2011/06/19 03:14:22 dholland Exp $
 
 SHA1 (30375-akode-2.0.2.tar.bz2) = 10ad1e335bc53c2a90d133b493568324514c729c
 RMD160 (30375-akode-2.0.2.tar.bz2) = fa0322367d8e24e541007d3f9e508c3c31370d96
@@ -14,4 +14,5 @@ SHA1 (patch-ah) = f58249f5d32e86e82a5831a826dafc0590653a5e
 SHA1 (patch-ai) = 0b1196a792259ed573c964f66b68f56adb8a4b0e
 SHA1 (patch-aj) = c8dcff8937b4bf72b34479ac7d701fdf241d14cd
 SHA1 (patch-ak) = 45ce8e7d2ca98c64a56af4f549208de9de89757d
+SHA1 (patch-akode_plugins_ffmpeg_decoder_ffmpeg__decoder_cpp) = f8b7faae0d3805a342231bcf8efe841e348c0fbe
 SHA1 (patch-al) = b910d7a82a1a341e8b3929e09f6d16470bdbb34f
