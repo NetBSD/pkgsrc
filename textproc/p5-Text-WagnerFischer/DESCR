@@ -1,0 +1,7 @@
+This module implements the Wagner-Fischer dynamic programming
+technique, used here to calculate the edit distance of two strings.
+The edit distance is a measure of the degree of proximity between two
+strings, based on "edits": the operations of substitutions, deletions
+or insertions needed to transform the string into the other one (and
+vice versa).  The module is designed to be easily extensible by
+functioning as a base class for other modules.
