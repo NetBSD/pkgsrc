@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/10 13:11:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/06/19 03:55:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -42,7 +43,6 @@ ${GEM_LIBDIR}/lib/innate/helper/flash.rb
 ${GEM_LIBDIR}/lib/innate/helper/link.rb
 ${GEM_LIBDIR}/lib/innate/helper/redirect.rb
 ${GEM_LIBDIR}/lib/innate/helper/render.rb
-${GEM_LIBDIR}/lib/innate/helper/send_file.rb
 ${GEM_LIBDIR}/lib/innate/log.rb
 ${GEM_LIBDIR}/lib/innate/log/color_formatter.rb
 ${GEM_LIBDIR}/lib/innate/log/hub.rb
@@ -89,7 +89,6 @@ ${GEM_LIBDIR}/spec/innate/helper/flash.rb
 ${GEM_LIBDIR}/spec/innate/helper/link.rb
 ${GEM_LIBDIR}/spec/innate/helper/redirect.rb
 ${GEM_LIBDIR}/spec/innate/helper/render.rb
-${GEM_LIBDIR}/spec/innate/helper/send_file.rb
 ${GEM_LIBDIR}/spec/innate/helper/view/aspect_hello.xhtml
 ${GEM_LIBDIR}/spec/innate/helper/view/locals.xhtml
 ${GEM_LIBDIR}/spec/innate/helper/view/loop.xhtml
