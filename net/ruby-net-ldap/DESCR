@@ -1,0 +1,11 @@
+Net::LDAP for Ruby (also called net-ldap) implements client access for the
+Lightweight Directory Access Protocol (LDAP), an IETF standard protocol for
+accessing distributed directory services. Net::LDAP is written completely in
+Ruby with no external dependencies. It supports most LDAP client features
+and a subset of server features as well.
+
+Net::LDAP has been tested against modern popular LDAP servers including
+OpenLDAP and Active Directory. The current release is mostly compliant with
+earlier versions of the IETF LDAP RFCs (2251-2256, 2829-2830, 3377, and 3771).
+Our roadmap for Net::LDAP 1.0 is to gain full <em>client</em> compliance with
+the most recent LDAP RFCs (4510-4519, plus portions of 4520-4532).
