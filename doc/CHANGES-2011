@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1560 2011/06/19 15:57:50 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1561 2011/06/19 16:02:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2450,3 +2450,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/pear-Net_SMTP to 1.6.0 [taca 2011-06-19]
 	Updated security/sudo to 1.7.6.2 [taca 2011-06-19]
 	Updated sysutils/pear-Log to 1.12.6 [taca 2011-06-19]
+	Updated textproc/ruby-ferret to 0.11.6nb3 [taca 2011-06-19]
