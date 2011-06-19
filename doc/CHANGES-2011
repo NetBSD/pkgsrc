@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1547 2011/06/19 10:34:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1548 2011/06/19 10:37:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/p5-Text-WagnerFischer version 0.04 [obache 2011-06-19]
 	Added mail/quickml version 0.7 [obache 2011-06-19]
 	Added devel/ruby-rbx-require-relative version 0.0.5 [taca 2011-06-19]
+	Updated devel/ruby-linecache to 0.46 [taca 2011-06-19]
