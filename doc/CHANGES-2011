@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1551 2011/06/19 14:09:00 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1552 2011/06/19 14:11:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2440,3 +2440,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/p5-Time-modules to 2011.0517 [obache 2011-06-19]
 	Updated sysutils/netbt-hcidump to 2.1 [plunky 2011-06-19]
 	Added net/ruby-net-ldap version 0.2.2 [taca 2011-06-19]
+	Added net/ruby-net-ping version 1.5.0 [taca 2011-06-19]
