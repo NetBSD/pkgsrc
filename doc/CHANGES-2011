@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1543 2011/06/19 08:55:13 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1544 2011/06/19 08:59:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2432,3 +2432,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Test-Approx version 0.03 [obache 2011-06-19]
 	Updated www/merb-admin to 0.8.8 [taca 2011-06-19]
 	Updated www/merb-datamapper to 1.1.3 [taca 2011-06-19]
+	Added devel/p5-Algorithm-HowSimilar version 0.01 [obache 2011-06-19]
