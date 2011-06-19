@@ -1,0 +1,67 @@
+$NetBSD: patch-quickml-analog.in,v 1.1.1.1 2011/06/19 10:01:53 obache Exp $
+
+* gnuplot>=4.0 support.
+
+--- quickml-analog.in.orig	2004-06-07 08:50:59.000000000 +0000
++++ quickml-analog.in
+@@ -15,6 +15,7 @@ require 'getoptlong'
+ require 'ftools'
+ require 'time'
+ require 'cgi'
++require 'open3'
+ 
+ class Array
+   def tail (n)
+@@ -395,19 +396,40 @@ class QuickMLPlot
+   end
+ 
+   def add_basic (f)
+-    f.print '
+-    set grid
+-    set timefmt "%y%m%d%H"
+-    set xdata time
+-    set size ratio 0.76
+-    set linestyle 1 linetype 1 linewidth 5
+-    set linestyle 2 linetype 3 linewidth 5
+-    set linestyle 3 linetype 2 linewidth 5
+-    set linestyle 4 linetype 4 linewidth 5
+-    set linestyle 5 linetype 5 linewidth 5
+-    set linestyle 6 linetype 7 linewidth 5
++    Open3.popen3( "gnuplot" ) { |stdin, stdout, stderr|
++      stdin.puts "show version"
++      stdin.close
++      stderr.read[/[Vv]ersion (\d+\.\d+)/]
++    }
++    if ( Float( $1 ) < 4.0 ) then
++      f.print '
++      set grid
++      set timefmt "%y%m%d%H"
++      set xdata time
++      set size ratio 0.76
++      set linestyle 1 linetype 1 linewidth 5
++      set linestyle 2 linetype 3 linewidth 5
++      set linestyle 3 linetype 2 linewidth 5
++      set linestyle 4 linetype 4 linewidth 5
++      set linestyle 5 linetype 5 linewidth 5
++      set linestyle 6 linetype 7 linewidth 5
+ 
+-    '.gsub(/^    /, "")
++      '.gsub(/^    /, "")
++    else
++       f.print '
++       set grid
++       set timefmt "%y%m%d%H"
++       set xdata time
++       set size ratio 0.76
++       set style line 1 linetype 1 linewidth 5
++       set style line 2 linetype 3 linewidth 5
++       set style line 3 linetype 2 linewidth 5
++       set style line 4 linetype 4 linewidth 5
++       set style line 5 linetype 5 linewidth 5
++       set style line 6 linetype 7 linewidth 5
++
++       '.gsub(/^    /, "")
++    end
+   end
+ 
+   def add_chart (f, default, lang, chart_prefix, stat_files, type, 
