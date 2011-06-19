@@ -1,0 +1,3 @@
+This module leverages Algorithm::Diff to let you compare the degree of
+sameness of arrays or strings. It returns a result set that defines
+exactly how similar these things are.
