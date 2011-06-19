@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/23 07:27:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:47:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
@@ -125,7 +125,6 @@ ${GEM_LIBDIR}/screenshots/edit.png
 ${GEM_LIBDIR}/screenshots/index.png
 ${GEM_LIBDIR}/screenshots/list.png
 ${GEM_LIBDIR}/screenshots/new.png
-${GEM_LIBDIR}/spec/controllers/main_spec.rb
 ${GEM_LIBDIR}/spec/migrations/activerecord/001_create_divisions_migration.rb
 ${GEM_LIBDIR}/spec/migrations/activerecord/002_create_drafts_migration.rb
 ${GEM_LIBDIR}/spec/migrations/activerecord/003_create_leagues_migration.rb
