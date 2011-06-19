@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1520 2011/06/19 03:20:31 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1521 2011/06/19 03:24:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2384,3 +2384,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ruby-amqp to 0.7.1 [taca 2011-06-19]
 	Updated net/ruby-rubytter to 1.4.2 [taca 2011-06-19]
 	Added security/ruby-bcrypt version 2.1.4 [taca 2011-06-19]
+	Updated sysutils/ruby-directory-watcher to 1.4.0 [taca 2011-06-19]
+	Updated sysutils/ruby-facter to 1.5.9 [taca 2011-06-19]
