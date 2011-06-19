@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1568 2011/06/19 22:40:26 chs Exp $
+$NetBSD: CHANGES-2011,v 1.1569 2011/06/19 22:49:08 chs Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/lftp to 4.2.3 [pettai 2011-06-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q2 branch [agc 2011-06-19]
 	Updated emulators/suse113_openssl to 11.3nb4 [chs 2011-06-19]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.181.26 [chs 2011-06-19]
