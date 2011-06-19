@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1522 2011/06/19 03:42:28 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1523 2011/06/19 03:57:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2392,3 +2392,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/ruby-hpricot to 0.8.4 [taca 2011-06-19]
 	Updated textproc/ruby-redcloth to 4.2.7 [taca 2011-06-19]
 	Updated textproc/ruby-stringex to 1.2.1 [taca 2011-06-19]
+	Updated www/ruby-css-parser to 1.1.9 [taca 2011-06-19]
+	Updated www/ruby-innate to 2011.04 [taca 2011-06-19]
+	Updated www/ramaze to 2011.01.30 [taca 2011-06-19]
