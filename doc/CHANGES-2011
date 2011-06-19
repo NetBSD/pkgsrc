@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1538 2011/06/19 08:36:55 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1539 2011/06/19 08:42:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2426,3 +2426,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-dm-validations to 1.1.0 [taca 2011-06-19]
 	Updated databases/ruby-dm-types to 1.1.0 [taca 2011-06-19]
 	Updated databases/ruby-datamapper to 1.1.0 [taca 2011-06-19]
+	Updated databases/ruby-cassandra to 0.11.1 [taca 2011-06-19]
