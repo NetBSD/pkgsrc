@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/03/17 20:55:27 zafer Exp $
+# $NetBSD: Makefile,v 1.26 2011/06/19 01:41:32 dholland Exp $
 #
 
 DISTNAME=	gap4r3
@@ -31,6 +31,9 @@ GAP_DIRECTORY=	${PREFIX}/lib/gap4.3
 GAP_PLATFORM=	${MACHINE_GNU_PLATFORM}-${CC}
 
 PLIST_SUBST+=	GAP_PLATFORM=${GAP_PLATFORM:Q}
+
+CHECK_INTERPRETER_SKIP+=	lib/gap4.3/pkg/example/make_zoo
+
 
 INSTALLATION_DIRS=	bin
 
