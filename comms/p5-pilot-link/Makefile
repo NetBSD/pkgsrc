@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/01/13 13:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2011/06/19 18:37:38 dholland Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -16,13 +16,25 @@ BUILDLINK_API_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
 USE_TOOLS+=		gmake
 
-CONFIGURE_ARGS+=        --enable-conduits
+CONFIGURE_ARGS+=	--enable-conduits
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=		auto/PDA/Pilot/.packlist
 PERL5_LDFLAGS=		-lpisock
 
-REPLACE_PERL+=		bindings/Perl/h2xs-pilot-link src/pilot-ietf2datebook.pl
+REPLACE_PERL+=		bindings/Perl/h2xs-pilot-link
+REPLACE_PERL+=		bindings/Perl/dump.pl
+REPLACE_PERL+=		bindings/Perl/blib/lib/PDA/dump.pl
+
+# Cannot use REPLACE_PERL for this because the substitution needs to be
+# done either after build (on src/pilot-ietf2datebook, which is a build
+# product) or not on the first line (on src/pilot-ietf2datebook.pl, which
+# generates the installed script).
+SUBST_CLASSES+=		moreperl
+SUBST_STAGE.moreperl=	post-build
+SUBST_MESSAGE.moreperl=	Fixing Perl interpreter in build products.
+SUBST_FILES.moreperl=	src/pilot-ietf2datebook
+SUBST_SED.moreperl=	-e 1s,/usr/bin/env.perl,${PERL5:Q},
 
 INSTALL_DIRS=		bindings
 INSTALLATION_DIRS=	bin
