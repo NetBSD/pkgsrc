@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1567 2011/06/19 17:02:52 agc Exp $
+$NetBSD: CHANGES-2011,v 1.1568 2011/06/19 22:40:26 chs Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2461,3 +2461,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/umefont-ttf to 0.428 [ryoon 2011-06-19]
 	Updated net/lftp to 4.2.3 [pettai 2011-06-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q2 branch [agc 2011-06-19]
+	Updated emulators/suse113_openssl to 11.3nb4 [chs 2011-06-19]
