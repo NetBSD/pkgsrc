@@ -1,1 +1,2 @@
-Provide a for loop capability for LaTeX.
+The package provides a command \forloop for doing iteration in
+LaTeX macro programming.
