@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2011/06/19 05:29:24 dholland Exp $
 #
 
 DISTNAME=	covered-0.4.7
@@ -18,6 +18,14 @@ CONFLICTS+=	covered-current-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	bison gmake lex
+
+REPLACE_INTERPRETER+=	WISH
+REPLACE.WISH.old=	.*wish
+REPLACE.WISH.new=	${PREFIX}/bin/wish
+REPLACE_FILES.WISH=	scripts/main_view.tcl
+REPLACE_FILES.WISH+=	scripts/menu_create.tcl
+REPLACE_FILES.WISH+=	scripts/preferences.tcl
+REPLACE_FILES.WISH+=	scripts/summary.tcl
 
 # we use this hack of setting a cache variable because
 # the configure script uses AC_PATH_PROG to try and find
