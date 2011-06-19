@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
+$NetBSD: patch-ab,v 1.3 2011/06/19 13:02:35 plunky Exp $
 
---- bluetooth/bluetooth.h.orig	2009-11-30 19:29:17.000000000 +0000
+--- bluetooth/bluetooth.h.orig	2011-06-19 12:38:18.000000000 +0000
 +++ bluetooth/bluetooth.h
 @@ -30,6 +30,7 @@
  extern "C" {
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
  #include <stdio.h>
  #include <stdint.h>
  #include <string.h>
-@@ -97,6 +98,17 @@ enum {
+@@ -103,6 +104,17 @@ enum {
  #else
  #error "Unknown byte order"
  #endif
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
  
  /* Bluetooth unaligned access */
  #define bt_get_unaligned(ptr)			\
-@@ -115,6 +127,7 @@ do {						\
+@@ -121,6 +133,7 @@ do {						\
  	__p->__v = (val);			\
  } while(0)
  
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
  /* BD Address */
  typedef struct {
  	uint8_t b[6];
-@@ -123,6 +136,7 @@ typedef struct {
+@@ -129,6 +142,7 @@ typedef struct {
  #define BDADDR_ANY   (&(bdaddr_t) {{0, 0, 0, 0, 0, 0}})
  #define BDADDR_ALL   (&(bdaddr_t) {{0xff, 0xff, 0xff, 0xff, 0xff, 0xff}})
  #define BDADDR_LOCAL (&(bdaddr_t) {{0, 0, 0, 0xff, 0xff, 0xff}})
@@ -44,7 +44,7 @@ $NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
  
  /* Copy, swap, convert BD Address */
  static inline int bacmp(const bdaddr_t *ba1, const bdaddr_t *ba2)
-@@ -135,9 +149,12 @@ static inline void bacpy(bdaddr_t *dst, 
+@@ -141,9 +155,12 @@ static inline void bacpy(bdaddr_t *dst, 
  }
  
  void baswap(bdaddr_t *dst, const bdaddr_t *src);
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
  int str2ba(const char *str, bdaddr_t *ba);
  int ba2oui(const bdaddr_t *ba, char *oui);
  int bachk(const char *str);
-@@ -146,11 +163,14 @@ int baprintf(const char *format, ...);
+@@ -152,11 +169,14 @@ int baprintf(const char *format, ...);
  int bafprintf(FILE *stream, const char *format, ...);
  int basprintf(char *str, const char *format, ...);
  int basnprintf(char *str, size_t size, const char *format, ...);
@@ -71,4 +71,4 @@ $NetBSD: patch-ab,v 1.2 2011/06/19 12:25:42 plunky Exp $
 +#endif
  char *bt_compidtostr(int id);
  
- #ifdef __cplusplus
+ typedef struct {

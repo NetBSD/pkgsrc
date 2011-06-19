@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+$NetBSD: patch-al,v 1.2 2011/06/19 13:02:35 plunky Exp $
 
---- src/bt_lib.c.orig	2010-01-05 12:27:30.000000000 +0000
+--- src/bt_lib.c.orig	2011-06-19 12:38:18.000000000 +0000
 +++ src/bt_lib.c
 @@ -35,8 +35,8 @@
  #include <string.h>
@@ -21,23 +21,23 @@ $NetBSD: patch-al,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
  char *batostr(const bdaddr_t *ba)
  {
  	char *str = bt_malloc(18);
-@@ -79,6 +80,7 @@ bdaddr_t *strtoba(const char *str)
+@@ -73,6 +74,7 @@ bdaddr_t *strtoba(const char *str)
  
- 	return (bdaddr_t *) ba;
+ 	return ba;
  }
 +#endif
  
  int ba2str(const bdaddr_t *ba, char *str)
  {
-@@ -89,6 +91,7 @@ int ba2str(const bdaddr_t *ba, char *str
- 		b[0], b[1], b[2], b[3], b[4], b[5]);
+@@ -80,6 +82,7 @@ int ba2str(const bdaddr_t *ba, char *str
+ 		ba->b[5], ba->b[4], ba->b[3], ba->b[2], ba->b[1], ba->b[0]);
  }
  
 +#if 0
  int str2ba(const char *str, bdaddr_t *ba)
  {
- 	uint8_t b[6];
-@@ -197,6 +200,7 @@ int basnprintf(char *str, size_t size, c
+ 	bdaddr_t b;
+@@ -175,6 +178,7 @@ int basnprintf(char *str, size_t size, c
  
  	return len;
  }
@@ -45,7 +45,7 @@ $NetBSD: patch-al,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
  
  void *bt_malloc(size_t size)
  {
-@@ -208,6 +212,7 @@ void bt_free(void *ptr)
+@@ -186,6 +190,7 @@ void bt_free(void *ptr)
  	free(ptr);
  }
  
@@ -53,7 +53,7 @@ $NetBSD: patch-al,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
  /* Bluetooth error codes to Unix errno mapping */
  int bt_error(uint16_t code)
  {
-@@ -282,6 +287,7 @@ int bt_error(uint16_t code)
+@@ -260,6 +265,7 @@ int bt_error(uint16_t code)
  		return ENOSYS;
  	}
  }
