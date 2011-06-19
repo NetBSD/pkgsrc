@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/09/10 07:56:40 taca Exp $
+# $NetBSD: Makefile,v 1.8 2011/06/19 03:23:13 taca Exp $
 
-DISTNAME=	facter-1.5.8
+DISTNAME=	facter-1.5.9
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://reductivelabs.com/downloads/gems/
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.puppetlabs.com/puppet/related-projects/facter/
 COMMENT=	Cross-platform Ruby library for retrieving facts from OS
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=	ruby[1-9][0-9]-facter-*
+CONFLICTS+=	ruby[1-9][0-9]-facter-[0-9]*
 
 pre-configure:
 	${CHMOD} -R g-w ${WRKSRC}
