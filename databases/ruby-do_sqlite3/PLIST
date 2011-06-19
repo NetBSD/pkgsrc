@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 23:56:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:44:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog.markdown
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/do_sqlite3/compat.h
+${GEM_LIBDIR}/ext/do_sqlite3/do_common.c
+${GEM_LIBDIR}/ext/do_sqlite3/do_common.h
 ${GEM_LIBDIR}/ext/do_sqlite3/do_sqlite3.c
 ${GEM_LIBDIR}/ext/do_sqlite3/do_sqlite3.h
 ${GEM_LIBDIR}/ext/do_sqlite3/do_sqlite3_extension.c
@@ -17,6 +19,7 @@ ${GEM_LIBDIR}/lib/do_sqlite3/version.rb
 ${GEM_LIBDIR}/spec/command_spec.rb
 ${GEM_LIBDIR}/spec/connection_spec.rb
 ${GEM_LIBDIR}/spec/encoding_spec.rb
+${GEM_LIBDIR}/spec/error/sql_error_spec.rb
 ${GEM_LIBDIR}/spec/reader_spec.rb
 ${GEM_LIBDIR}/spec/result_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
