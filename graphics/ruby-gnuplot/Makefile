@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 06:47:43 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/19 01:37:30 taca Exp $
 
-DISTNAME=	gnuplot-2.3.4
+DISTNAME=	gnuplot-2.3.6
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
