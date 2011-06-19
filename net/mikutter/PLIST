@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/06/12 12:41:15 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/06/19 04:19:56 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -36,8 +36,8 @@ share/mikutter/core/entity.rb
 share/mikutter/core/environment.rb
 share/mikutter/core/image.rb
 share/mikutter/core/initialize.rb
-share/mikutter/core/lib/escape.rb
 share/mikutter/core/lib/lazy.rb
+share/mikutter/core/lib/miku/escape.rb
 share/mikutter/core/lib/piapro.rb
 share/mikutter/core/lib/timelimitedqueue.rb
 share/mikutter/core/lib/timelimitedqueue/test/test_timelimitedqueue.rb
