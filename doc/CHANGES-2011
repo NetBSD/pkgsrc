@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1563 2011/06/19 16:25:38 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.1564 2011/06/19 16:44:32 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2453,3 +2453,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/ruby-ferret to 0.11.6nb3 [taca 2011-06-19]
 	Updated net/unbound to 1.4.10 [pettai 2011-06-19]
 	Updated net/nsd to 3.2.8 [pettai 2011-06-19]
+	Updated emulators/stella to 3.4.1 [dholland 2011-06-19]
