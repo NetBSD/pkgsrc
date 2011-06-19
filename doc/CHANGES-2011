@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1527 2011/06/19 06:13:34 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1528 2011/06/19 07:04:36 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2373,6 +2373,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-forloop version 3.0 [brook 2011-06-18]
 	Updated net/quvi to 0.2.17 [ryoon 2011-06-18]
 	Updated devel/bmake to 20110606 [bsiegert 2011-06-19]
+	Updated x11/wxGTK28 to 2.8.10nb12 [dholland 2011-06-19]
+	Updated x11/wxGTK28-contrib to 2.8.10nb9 [dholland 2011-06-19]
+	Updated x11/xfce4-exo to 0.3.101nb7 [dholland 2011-06-19]
 	Updated graphics/ruby-gnuplot to 2.3.6 [taca 2011-06-19]
 	Updated graphics/ruby-mini-magick to 3.3 [taca 2011-06-19]
 	Updated math/ruby-spreadsheet to 0.6.5.4 [taca 2011-06-19]
@@ -2380,6 +2383,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/ruby-commander to 4.0.4 [taca 2011-06-19]
 	Updated misc/ruby-daemons to 1.1.4 [taca 2011-06-19]
 	Updated misc/ruby-launchy to 0.4.0 [taca 2011-06-19]
+	Updated misc/kdepim3 to 3.5.10nb10 [dholland 2011-06-19]
+	Updated misc/kdepim4 to 4.4.9nb5 [dholland 2011-06-19]
 	Updated net/ruby-addressable to 2.2.6 [taca 2011-06-19]
 	Updated net/ruby-amqp to 0.7.1 [taca 2011-06-19]
 	Updated net/ruby-rubytter to 1.4.2 [taca 2011-06-19]
@@ -2400,3 +2405,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-oubraces to 2010 [minskim 2011-06-19]
 	Updated print/tex-oubraces-doc to 2010 [minskim 2011-06-19]
 	Updated misc/libreoffice3-bin to 3.3.3 [ryoon 2011-06-19]
+	Updated cad/geda to 1.6.2nb1 [dholland 2011-06-19]
