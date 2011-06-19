@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1532 2011/06/19 08:00:43 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1533 2011/06/19 08:03:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2411,3 +2411,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/ruby-fssm version 0.2.7 [taca 2011-06-19]
 	Updated www/ruby-compass to 0.11.3 [taca 2011-06-19]
 	Updated textproc/ruby-haml to 3.1.2 [taca 2011-06-19]
+	Updated www/ruby-compass-susy-plugin to 0.9 [taca 2011-06-19]
