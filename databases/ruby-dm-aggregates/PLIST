@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/11 23:49:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:22:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -12,7 +11,9 @@ ${GEM_LIBDIR}/lib/dm-aggregates/adapters/dm-do-adapter.rb
 ${GEM_LIBDIR}/lib/dm-aggregates/aggregate_functions.rb
 ${GEM_LIBDIR}/lib/dm-aggregates/collection.rb
 ${GEM_LIBDIR}/lib/dm-aggregates/core_ext/symbol.rb
+${GEM_LIBDIR}/lib/dm-aggregates/functions.rb
 ${GEM_LIBDIR}/lib/dm-aggregates/model.rb
+${GEM_LIBDIR}/lib/dm-aggregates/operators.rb
 ${GEM_LIBDIR}/lib/dm-aggregates/query.rb
 ${GEM_LIBDIR}/lib/dm-aggregates/repository.rb
 ${GEM_LIBDIR}/spec/isolated/require_after_setup_spec.rb
@@ -24,9 +25,6 @@ ${GEM_LIBDIR}/spec/public/shared/aggregate_shared_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/spec.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/tasks/ci.rake
-${GEM_LIBDIR}/tasks/local_gemfile.rake
-${GEM_LIBDIR}/tasks/metrics.rake
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/tasks/yardstick.rake
