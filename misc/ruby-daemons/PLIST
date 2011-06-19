@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 07:22:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/06/19 01:48:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -19,13 +19,10 @@ ${GEM_LIBDIR}/examples/run/ctrl_normal.rb
 ${GEM_LIBDIR}/examples/run/ctrl_ontop.rb
 ${GEM_LIBDIR}/examples/run/ctrl_optionparser.rb
 ${GEM_LIBDIR}/examples/run/ctrl_proc.rb
-${GEM_LIBDIR}/examples/run/ctrl_proc.rb.output
 ${GEM_LIBDIR}/examples/run/ctrl_proc_multiple.rb
-${GEM_LIBDIR}/examples/run/ctrl_proc_multiple.rb.output
 ${GEM_LIBDIR}/examples/run/ctrl_proc_simple.rb
 ${GEM_LIBDIR}/examples/run/myserver.rb
 ${GEM_LIBDIR}/examples/run/myserver_crashing.rb
-${GEM_LIBDIR}/examples/run/myserver_crashing.rb.output
 ${GEM_LIBDIR}/examples/run/myserver_exiting.rb
 ${GEM_LIBDIR}/examples/run/myserver_hanging.rb
 ${GEM_LIBDIR}/lib/daemons.rb
