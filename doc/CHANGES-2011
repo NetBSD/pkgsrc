@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1526 2011/06/19 04:44:16 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1527 2011/06/19 06:13:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2399,3 +2399,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-forloop-doc version 3.0 [minskim 2011-06-19]
 	Updated print/tex-oubraces to 2010 [minskim 2011-06-19]
 	Updated print/tex-oubraces-doc to 2010 [minskim 2011-06-19]
+	Updated misc/libreoffice3-bin to 3.3.3 [ryoon 2011-06-19]
