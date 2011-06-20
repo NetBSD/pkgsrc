@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1570 2011/06/20 13:38:54 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1571 2011/06/20 15:10:42 taca Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2464,3 +2464,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_openssl to 11.3nb4 [chs 2011-06-19]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.181.26 [chs 2011-06-19]
 	Updated lang/php53 to 5.3.6nb3 [taca 2011-06-20]
+	Updated www/php-apc to 5.3.6.3.1.9nb1 [taca 2011-06-20]
