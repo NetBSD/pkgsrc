@@ -1,4 +1,4 @@
-$NetBSD: patch-pri,v 1.3 2011/06/16 15:21:34 adam Exp $
+$NetBSD: patch-pri,v 1.4 2011/06/20 12:43:00 drochner Exp $
 
 --- qwtconfig.pri.orig	2011-04-15 10:48:51.000000000 +0000
 +++ qwtconfig.pri
@@ -19,3 +19,12 @@ $NetBSD: patch-pri,v 1.3 2011/06/16 15:21:34 adam Exp $
  QWT_INSTALL_HEADERS   = $${QWT_INSTALL_PREFIX}/include
  QWT_INSTALL_LIBS      = $${QWT_INSTALL_PREFIX}/lib
  
+@@ -34,7 +34,7 @@ QWT_INSTALL_LIBS      = $${QWT_INSTALL_P
+ # Designer plugin
+ ######################################################################
+ 
+-QWT_INSTALL_PLUGINS   = $${QWT_INSTALL_PREFIX}/plugins/designer
++QWT_INSTALL_PLUGINS   = $${QWT_INSTALL_PREFIX}/qt4/plugins/designer
+ # QWT_INSTALL_PLUGINS   = $${QT_INSTALL_PREFIX}/plugins/designer
+ 
+ ######################################################################
