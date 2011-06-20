@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/04/14 07:08:00 adam Exp $
+# $NetBSD: Makefile,v 1.5 2011/06/20 18:57:01 ryoon Exp $
 
 DISTNAME=	libvpx-v0.9.6
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -26,6 +26,16 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
+.endif
+
+.if ${OPSYS} == "Darwin"
+.  if ${MACHINE_ARCH} == "i386"
+.    if empty(OS_VERSION:M8.*)
+CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
+.    else
+CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
+.    endif
+.  endif
 .endif
 
 REPLACE_BASH=		configure \
