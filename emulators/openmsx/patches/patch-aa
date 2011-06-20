@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2007/05/19 01:24:26 xtraeme Exp $
+$NetBSD: patch-aa,v 1.5 2011/06/20 09:27:46 wiz Exp $
+
+Add DragonFly to recognized platforms.
 
 --- build/detectsys.sh.orig	2007-05-19 03:12:27.000000000 +0200
 +++ build/detectsys.sh	2007-05-19 03:12:48.000000000 +0200
