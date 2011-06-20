@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/01/17 12:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2011/06/20 23:49:36 schnoebe Exp $
 
 .include "version.mk"
 
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webmin.com/
 COMMENT=	Perl web server and CGI for Unix system administration
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
@@ -80,14 +82,14 @@ pre-configure:
 		*)	rm -rf $${m} ;;					\
 		esac;							\
 	done &&								\
-	for t in `${ECHO} */theme.info | sed -e 's/\/theme.info//g'`; do\
+	for t in `${ECHO} */theme.info | ${SED} -e 's/\/theme.info//g'`; do\
 		rm -rf $${t};						\
 	done &&								\
 	touch ${WRKSRC}/minimal-install
 
 do-configure:
-	${SED}	-e "s,@WEBMIN_EGDIR@,${WEBMIN_EGDIR},g"			\
-		-e "s,@WEBMIN_VARDIR@,${WEBMIN_VARDIR},g"		\
+	${SED}	-e "s,@WEBMIN_EGDIR@,${DESTDIR}/${WEBMIN_EGDIR},g"	\
+		-e "s,@WEBMIN_VARDIR@,${DESTDIR}/${WEBMIN_VARDIR},g"	\
 		-e "s,@PERL5@,"${PERL5:Q}",g"				\
 		${FILESDIR}/setup-pre.sh > ${WRKSRC}/setup-pre.sh
 	cd ${WRKSRC}; for file in acl/config acl/config-*; do		\
@@ -101,26 +103,30 @@ do-configure:
 # files.
 #
 do-install:
-	${SH} ${WRKSRC}/setup.sh ${WEBMIN_DIR}
+	${SH} ${WRKSRC}/setup.sh ${DESTDIR}${WEBMIN_DIR}
 	${SED}	-e "/^env_WEBMIN_CONFIG=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR}," \
 		-e "/^logout=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
 		-e "/^userfile=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
 		-e "/^keyfile=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
-		${WEBMIN_EGDIR}/miniserv.conf > ${WRKDIR}/miniserv.conf
+		${DESTDIR}${WEBMIN_EGDIR}/miniserv.conf > ${WRKDIR}/miniserv.conf
 	for file in reload start stop; do				\
 		${SED}	-e "s,${WEBMIN_EGDIR}/miniserv.conf,${WEBMIN_ETCDIR}/miniserv.conf," \
-			${WEBMIN_EGDIR}/$$file > ${WRKDIR}/$$file;	\
+			${DESTDIR}${WEBMIN_EGDIR}/$$file > ${WRKDIR}/$$file; \
 	done
-	cd ${WEBMIN_EGDIR} && ${RM} -f miniserv.conf reload start stop
+	cd ${DESTDIR}${WEBMIN_EGDIR} && ${RM} -f miniserv.conf reload start stop
 	for file in miniserv.conf; do					\
-		${INSTALL_DATA} ${WRKDIR}/$$file ${WEBMIN_EGDIR}/$$file; \
+		${INSTALL_DATA} ${WRKDIR}/$$file			\
+				    ${DESTDIR}${WEBMIN_EGDIR}/$$file;	\
 		${RM} -f ${WRKDIR}/$$file;				\
 	done
 	for file in reload start stop; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$$file ${WEBMIN_EGDIR}/$$file; \
+		${INSTALL_SCRIPT} ${WRKDIR}/$$file		    	\
+				    ${DESTDIR}${WEBMIN_EGDIR}/$$file;	\
 		${RM} -f ${WRKDIR}/$$file;				\
 	done
-	${RM} -f ${WEBMIN_EGDIR}/miniserv.pem ${WEBMIN_EGDIR}/module.infos.cache
-	cd ${WEBMIN_DIR} && ${CHMOD} 0400 setup.pl setup.sh setup-pre.sh
+	${RM} -f ${DESTDIR}${WEBMIN_EGDIR}/miniserv.pem			\
+			    ${DESTDIR}${WEBMIN_EGDIR}/module.infos.cache
+	cd ${DESTDIR}${WEBMIN_DIR} &&					\
+				${CHMOD} 0400 setup.pl setup.sh setup-pre.sh
 
 .include "../../mk/bsd.pkg.mk"
