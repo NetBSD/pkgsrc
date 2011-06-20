@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2011/01/13 13:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/06/20 09:27:52 wiz Exp $
 #
 
 DISTNAME=		openmsx-0.6.2
-#PKGREVISION=		1
 PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmsx/}
@@ -22,9 +21,9 @@ CONFIGURE_ENV+=		OPENMSX_FLAVOUR=pkgsrc
 MAKE_ENV+=		OPENMSX_FLAVOUR=pkgsrc
 
 post-extract:
-	@${CP} ${FILESDIR}/platform-netbsd.mk ${WRKSRC}/build
-	@${LN} -s platform-netbsd.mk ${WRKSRC}/build/platform-dragonfly.mk
-	@${ECHO_MSG} "OPENMSX_STRIP:=true" > \
+	${CP} ${FILESDIR}/platform-netbsd.mk ${WRKSRC}/build
+	${LN} -s platform-netbsd.mk ${WRKSRC}/build/platform-dragonfly.mk
+	${ECHO_MSG} "OPENMSX_STRIP:=true" > \
 		${WRKSRC}/build/flavour-pkgsrc.mk
 
 SUBST_CLASSES+=		prefix
@@ -34,7 +33,7 @@ SUBST_SED.prefix=	-e "s,/opt/openMSX,${PREFIX}/openmsx,"
 SUBST_MESSAGE.prefix=	Fixing installation directory.
 
 post-build:
-	@(							\
+	(							\
 	${ECHO} "#!${SH}";					\
 	${ECHO} 'exec ${PREFIX}/openmsx/bin/openmsx $$@'	\
 	) > ${WRKSRC}/openmsx.sh
