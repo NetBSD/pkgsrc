@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.31 2007/08/20 11:00:33 joerg Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.32 2011/06/20 09:12:19 obache Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -62,7 +62,9 @@ TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
+.if exists(/usr/bin/nroff)
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
+.endif
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
@@ -74,7 +76,9 @@ TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
+.if exists(/usr/bin/soelim)
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
+.endif
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
