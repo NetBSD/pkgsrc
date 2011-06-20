@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2011/06/20 09:17:50 drochner Exp $
+
+http://www.openwall.com/lists/john-dev/2011/06/19/3
+
+--- src/BF_std.c.orig	2010-05-25 06:30:33.000000000 +0000
++++ src/BF_std.c
+@@ -587,7 +587,7 @@ void BF_std_set_key(char *key, int index
+ 		tmp = 0;
+ 		for (j = 0; j < 4; j++) {
+ 			tmp <<= 8;
+-			tmp |= *ptr;
++			tmp |= (unsigned char)*ptr;
+ 
+ 			if (!*ptr) ptr = key; else ptr++;
+ 		}
