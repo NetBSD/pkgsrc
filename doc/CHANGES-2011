@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1572 2011/06/20 15:17:12 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1573 2011/06/21 02:57:20 schmonz Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/php53 to 5.3.6nb3 [taca 2011-06-20]
 	Updated www/php-apc to 5.3.6.3.1.9nb1 [taca 2011-06-20]
 	Updated pkgtools/pkgin to 0.4.2nb2 [wiz 2011-06-20]
+	Updated devel/mr to 1.04 [schmonz 2011-06-21]
