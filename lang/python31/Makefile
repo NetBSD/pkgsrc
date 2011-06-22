@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/17 00:59:25 reed Exp $
+# $NetBSD: Makefile,v 1.3 2011/06/22 18:42:16 adam Exp $
 
 .include "dist.mk"
 
@@ -107,11 +107,6 @@ PLIST.oss=	yes
 # Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
-
-PLIST_VARS+=	nav
-.  if ${ABI} != "64"
-PLIST.nav=	yes
-.  endif
 .endif
 
 PLIST_VARS+=	bsddb dll nis no-nis
@@ -141,8 +136,8 @@ MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}
 
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
-PRINT_PLIST_AWK+=        { gsub(/${PY_PLATNAME}/, "$${PY_PLATNAME}") }
-PRINT_PLIST_AWK+=        { gsub(/python${PY_VER_SUFFIX}/, \
+PRINT_PLIST_AWK+=	{ gsub(/${PY_PLATNAME}/, "$${PY_PLATNAME}") }
+PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER_SUFFIX}/, \
 				"python$${PY_VER_SUFFIX}") }
 
 TEST_TARGET=	test
