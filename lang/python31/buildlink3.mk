@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/06/17 00:10:19 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2011/06/22 18:42:16 adam Exp $
 
 BUILDLINK_TREE+=	python31
 
@@ -8,9 +8,9 @@ PYTHON31_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.python31+=	python31>=3.1
 BUILDLINK_PKGSRCDIR.python31?=		../../lang/python31
 
-.  if defined(BUILDLINK_DEPMETHOD.python)
+.if defined(BUILDLINK_DEPMETHOD.python)
 BUILDLINK_DEPMETHOD.python31?=	${BUILDLINK_DEPMETHOD.python}
-.  endif
+.endif
 
 BUILDLINK_INCDIRS.python31+=	include/python3.1
 BUILDLINK_LIBDIRS.python31+=	lib/python3.1/config
