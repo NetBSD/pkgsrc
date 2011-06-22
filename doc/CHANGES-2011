@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1575 2011/06/21 13:44:39 schnoebe Exp $
+$NetBSD: CHANGES-2011,v 1.1576 2011/06/22 01:05:51 obache Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2469,3 +2469,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mr to 1.04 [schmonz 2011-06-21]
 	Updated mail/sylpheed to 3.1.1 [taca 2011-06-21]
 	Updated chat/prosody to 0.8.2 [schnoebe 2011-06-21]
+	Updated mail/cyrus-imapd24 to 2.4.9 [obache 2011-06-22]
