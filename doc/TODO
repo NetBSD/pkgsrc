@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10390 2011/06/19 16:58:54 pettai Exp $
+$NetBSD: TODO,v 1.10391 2011/06/22 08:19:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o FlightCrew-0.7.1 [wip]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.0.7
+	o ImageMagick-6.7.0.9
 	o MAMEDiff-2.30
 	o Mesa-7.10.3
 	o MesaLib-7.10
@@ -405,7 +405,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
-	o asymptote-2.11
+	o asymptote-2.13
 	o aterm-1.0.1
 	o atk-2.0.1
 	o audacious-plugins-2.4.4
@@ -440,7 +440,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
-	o botan-1.8.10
+	o botan-1.10.0
 	o bouml-4.22.2
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
@@ -496,14 +496,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cygwin_lib-1.5.24.2
 	o damageproto-1.2.1
 	o dansguardian-2.10.0.3
-	o dante-1.3.0
+	o dante-1.3.1
 	o dap-3.7
 	o dar-2.4.0
 	o darcs-2.4
 	o dasher-4.11
 	o davical-0.9.9.4
 	o dbench-4.0
-	o dbus-1.4.8
+	o dbus-1.4.10
 	o dbus-glib-0.94
 	o dcc-1.3.140
 	o dconf-0.7.1
@@ -593,7 +593,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
-	o firefox-4.01
+	o firefox-5.0
 	o fisg-0.3.12
 	o fixesproto-5.0
 	o flashplayer-0.4.13
@@ -737,6 +737,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.1
 	o gssdp-0.10.0
+	o gst-plugins0.10-base-0.10.35
+	o gst-plugins0.10-good-0.10.30
+	o gstreamer0.10-0.10.35
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.96.9
@@ -763,7 +766,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.8.7
 	o heimdal-1.2.1
-	o help2man-1.40.2
+	o help2man-1.40.3
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-7.5
@@ -831,6 +834,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdenlive-0.8
 	o kdevelop-4.2.2
 	o kdrill-6.5
+	o kile-2.1
 	o kipi-plugins-1.9.0
 	o kismet-2011.01r1
 	o kmess-1.5.1
@@ -988,7 +992,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ne-2.01
 	o neon-0.29.6
 	o nessus-4.4.1
-	o netcdf-4.1.2
+	o netcdf-4.1.3
 	o netramet-50
 	o newmail-1.0.2
 	o newt-0.52.12
@@ -1032,7 +1036,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Perl-Tidy-20101217
-	o p5-PerlMagick-6.7.0.7
+	o p5-PerlMagick-6.7.0.9
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1070,7 +1074,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plone-3.3.4
 	o ploticus-2.41
 	o ploticus-examples-230
-	o png-1.5.4beta06
+	o png-1.5.4beta07
 	o po4a-0.36.3
 	o podofo-0.9.1
 	o polsms-2.1.0
@@ -1091,7 +1095,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-0.93.3
 	o puppet-2.6.6
 	o puzzle-9173
-	o puzzles-9175
+	o puzzles-9179
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1410,7 +1414,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xinit-1.3.0
 	o xinput-1.5.3
 	o xjman-0.7
-	o xkbcomp-1.2.1
+	o xkbcomp-1.2.3
 	o xkbevd-1.1.2 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
