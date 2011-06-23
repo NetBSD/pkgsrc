@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 14:40:45 obache Exp $
+# $NetBSD: Makefile,v 1.34 2011/06/23 05:12:12 obache Exp $
 #
 
 DISTNAME=	honeyd-1.5b
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.citi.umich.edu/u/provos/honeyd/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.honeyd.org/
 COMMENT=	Small daemon that creates virtual hosts on a network
+LICENSE=	gnu-gpl-v2 # or later
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,7 +19,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKG_SYSCONFSUBDIR=	honeyd
 RCD_SCRIPTS=		honeyd
-USE_BUILTIN.libevent=	NO
 
 LIBS.Linux+=		-lutil
 
@@ -33,6 +33,7 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 CONF_FILES+=		${EGDIR:Q}/${f:Q} ${PKG_SYSCONFDIR:Q}/${f:Q}
 .endfor
 
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libdnsres/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
