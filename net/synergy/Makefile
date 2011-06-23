@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2011/01/23 02:26:58 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2011/06/23 03:16:50 taca Exp $
 #
 
-DISTNAME=		synergy-1.3.6-Source
+DISTNAME=		synergy-1.3.7-Source
 PKGNAME=		${DISTNAME:S/-Source//}
 CATEGORIES=		net x11
 MASTER_SITES=		http://synergy.googlecode.com/files/
@@ -9,10 +9,15 @@ MASTER_SITES=		http://synergy.googlecode.com/files/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synergy-foss.org/
 COMMENT=		Let a user share a mouse and keyboard among computers
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
+
+EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
+		org.synergy-foss.org.synergys.plist synergy.conf.example \
+		synergy.conf.example-advanced synergy.conf.example-basic
 
 # Below rpath fix is copypasted from graphics/vtk.
 CMAKE_OPTS+=	-DCMAKE_INSTALL_RPATH:STRING=${PREFIX}/lib:${X11BASE}/lib${LIBABISUFFIX:Q}	\
@@ -36,11 +41,13 @@ post-build:
 	${CP} ${WRKSRC}/doc/synergys.man ${WRKSRC}/doc/synergys.1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/synergyc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/synergys ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergyc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/synergys ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/synergyc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/synergys.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/doc/*.conf ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
+.for f in ${EXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
+.endfor
 
 .include "../../devel/cmake/buildlink3.mk"
 .if !exists(/System/Library/Frameworks/Carbon.framework)

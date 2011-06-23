@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2011/01/23 02:24:29 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/06/23 03:16:50 taca Exp $
 bin/synergyc
 bin/synergys
 man/man1/synergyc.1
 man/man1/synergys.1
-share/examples/synergy/synergy-advanced.conf
-share/examples/synergy/synergy-basic.conf
-share/examples/synergy/synergy-stooges.conf
+share/examples/synergy/MacReadme.txt
+share/examples/synergy/org.synergy-foss.org.synergyc.plist
+share/examples/synergy/org.synergy-foss.org.synergys.plist
+share/examples/synergy/synergy.conf.example
+share/examples/synergy/synergy.conf.example-advanced
+share/examples/synergy/synergy.conf.example-basic
