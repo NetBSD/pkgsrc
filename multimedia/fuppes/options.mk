@@ -1,11 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2010/09/27 11:15:23 obache Exp $
+# $NetBSD: options.mk,v 1.3 2011/06/23 09:50:25 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fuppes
-PKG_SUPPORTED_OPTIONS=	mysql
+PKG_SUPPORTED_OPTIONS=	mpeg4ip mysql
+PKG_SUGGESTED_OPTIONS=	mpeg4ip
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
+.if !empty(PKG_OPTIONS:Mmpeg4ip)
+.include "../../multimedia/mpeg4ip/buildlink3.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 PLIST.mysql=		yes
