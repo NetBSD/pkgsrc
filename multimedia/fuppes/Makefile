@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/06/10 09:39:57 obache Exp $
+# $NetBSD: Makefile,v 1.19 2011/06/23 09:50:25 wiz Exp $
 #
 
 DISTNAME=	fuppes-0.640
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuppes/}
 MAINTAINER=	tech-multimedia@NetBSD.org
 HOMEPAGE=	http://fuppes.ulrich-voelkel.de/
 COMMENT=	Free UPnP Entertainment Service
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,5 +39,4 @@ CONFIGURE_ARGS+=	--enable-lame
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/simage/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
-.include "../../multimedia/mpeg4ip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
