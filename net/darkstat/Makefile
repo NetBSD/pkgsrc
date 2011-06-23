@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2010/04/13 21:02:00 morr Exp $
+# $NetBSD: Makefile,v 1.11 2011/06/23 09:21:37 wiz Exp $
 #
 
-DISTNAME=		darkstat-3.0.713
+DISTNAME=		darkstat-3.0.714
 CATEGORIES=		net
-MASTER_SITES=		http://dmr.ath.cx/net/darkstat/
-DIST_SUBDIR=		darkstat
+MASTER_SITES=		http://unix4lyfe.org/darkstat/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://dmr.ath.cx/net/darkstat/
+HOMEPAGE=		http://unix4lyfe.org/darkstat/
 COMMENT=		Network statistics gatherer
 LICENSE=		gnu-gpl-v2
 
@@ -19,8 +18,6 @@ BUILD_TARGET=		darkstat
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-chroot-dir=${PREFIX}/share/darkstat/chroot
 
-BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.6.0
-
 RCD_SCRIPTS=		darkstat
 
 post-install:
@@ -28,5 +25,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/darkstat/chroot
 
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.6.0
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
