@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2010/05/21 13:06:19 obache Exp $
+$NetBSD: patch-ab,v 1.7 2011/06/24 13:04:43 tron Exp $
 
---- configure.orig	2009-05-28 17:13:31.000000000 +0000
-+++ configure
+--- build/generic/configure.orig	2009-05-28 17:13:31.000000000 +0000
++++ build/generic/configure
 @@ -3802,7 +3802,7 @@ SHARED_EXTENSION=""
  STATIC_EXTENSION=""
  OBJECT_EXTENSION=""
