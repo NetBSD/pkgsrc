@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.42 2011/05/08 10:53:22 ryoon Exp $
+# $NetBSD: license.mk,v 1.43 2011/06/24 12:00:37 taca Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -111,7 +111,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	cpl-1.0 \
 	open-font-license \
 	mpl-1.0 mpl-1.1 \
-	png-license \
+	php png-license \
 	postgresql-license \
 	zpl \
 	python-software-foundation \
