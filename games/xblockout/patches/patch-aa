@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2007/02/06 17:08:19 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2011/06/25 11:32:10 obache Exp $
 
---- Makefile.in.orig	2007-01-28 18:22:32.000000000 +0000
+--- Makefile.in.orig	2009-02-14 14:23:05.000000000 +0000
 +++ Makefile.in
 @@ -128,9 +128,6 @@ install:bl
  	@-if [ "" != "$(USE_SETGID)" ] ; then \
@@ -12,7 +12,39 @@ $NetBSD: patch-aa,v 1.2 2007/02/06 17:08:19 joerg Exp $
  	#
  	# Remove old score file
  	#
-@@ -173,14 +170,8 @@ install:bl
+@@ -146,42 +143,20 @@ install:bl
+ 	#
+ 	# Install executable
+ 	#
+-	$(CP) bl $(BINDIR)/xbl	
+-	-if [ "" = "$(USE_SETGID)" ] ; then \
+-	     chmod 755  $(BINDIR)/xbl ;\
+-	   else \
+-	     chmod 2755  $(BINDIR)/xbl ;\
+-	     chown root $(BINDIR)/xbl ;\
+-	     chgrp $(GROUP_GID) $(BINDIR)/xbl ;\
+-	   fi
++	$(BSD_INSTALL_PROGRAM) bl $(DESTDIR)$(BINDIR)/xbl	
+ 	#
+ 	# Install executable
+ 	#
+-	-mkdir $(SCOREDIR) 2>/dev/null
+-	$(CP) Xbl.ad  $(RESOURCEDIR)/Xbl ;	chmod 644 $(RESOURCEDIR)/Xbl
+-	$(CP) Xbl.ad  $(SCOREDIR)/Xbl ;		chmod 644 $(SCOREDIR)/Xbl
+-	$(CP) COPYING  $(SCOREDIR) ;		chmod 444 $(SCOREDIR)/COPYING
+-	-if [ "" = "$(USE_SETGID)" ] ; then \
+-	     chmod 777 $(SCOREDIR) ;\
+-	     chmod 666 $(SCOREDIR)/[1-9]* ;\
+-	   else \
+-	     chmod 775 $(SCOREDIR) ;\
+-	     chmod 664 $(SCOREDIR)/[1-9]* ;\
+-	     chown root $(SCOREDIR) $(SCOREDIR)/[1-9]* ;\
+-	     chgrp $(GROUP_GID) $(SCOREDIR) $(SCOREDIR)/[1-9]* ;\
+-	fi
++	-mkdir $(DESTDIR)$(SCOREDIR) 2>/dev/null
++	$(BSD_INSTALL_DATA) Xbl.ad  $(DESTDIR)$(RESOURCEDIR)/Xbl ;
++	$(BSD_INSTALL_DATA) Xbl.ad  $(DESTDIR)$(SCOREDIR)/Xbl ;	
++	$(BSD_INSTALL_DATA) COPYING  $(DESTDIR)$(SCOREDIR) ;
  	#
  	# Install manual pages
  	#
@@ -24,8 +56,10 @@ $NetBSD: patch-aa,v 1.2 2007/02/06 17:08:19 joerg Exp $
 -		$(CP) xbl.man $(MANPATH)/man1/xbl.1 ;\
 -		chmod 444 $(MANPATH)/man1/xbl.1 ; \
 -		fi
-+	${BSD_INSTALL_MAN_DIR} ${MANPATH}/man1
-+	${BSD_INSTALL_MAN} xbl.man $(MANPATH)/man1/xbl.1
- 	cp *.gif *.html $(SCOREDIR)
+-	cp *.gif *.html $(SCOREDIR)
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)${MANPATH}/man1
++	${BSD_INSTALL_MAN} xbl.man $(DESTDIR)$(MANPATH)/man1/xbl.1
++	${BSD_INSTALL_DATA} *.gif *.html $(DESTDIR)$(SCOREDIR)
  	#
  	-ls -lsa $(SCOREDIR) $(BINDIR)/xbl $(MANPATH)/man[1n]/xbl.[1n]
+ 	@echo "Type xbl to play"
