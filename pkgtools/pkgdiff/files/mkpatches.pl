@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.16 2011/03/04 15:57:07 wiz Exp $
+# $NetBSD: mkpatches.pl,v 1.17 2011/06/26 12:11:39 wiz Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -69,19 +69,21 @@ undef($opt_d);
 undef($opt_h);
 undef($opt_r);
 undef($opt_v);
+undef($opt_w);
 
-getopts('cDd:hrv');
+getopts('cDd:hrvw');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog [-hv] [-c | -r] [-D | -d dir]
+usage: $prog [-hvw] [-c | -r] [-D | -d dir]
     -c   	commit -- clean up old patches backups
     -d dir   	create patches in this directory
     -D   	create patches in \$WRKDIR/.newpatches
     -h   	show this help
     -r   	revert -- remove new patches, put old patches back
     -v   	verbose - list .orig files as processed
+    -w   	look for changes in \$WRKDIR instead of \$WRKSRC
 EOF
 		exit 0;
 };
@@ -143,7 +145,6 @@ if ($opt_r) {
 
 create_patchdir();
 
-
 move_away_old_patches();
 
 analyze_old_patches();
@@ -152,7 +153,11 @@ chdir $wrksrc or die ("can't cd to WRKSRC ($wrksrc)");
 
 # find files
 
-open(HANDLE, "find ${wrksrc} -type f -name \\\*.orig |");
+if ($opt_w) {
+    open(HANDLE, "find ${wrkdir} -type f -name \\\*.orig |");
+} else {
+    open(HANDLE, "find ${wrksrc} -type f -name \\\*.orig |");
+}
 
 # create patches
 
