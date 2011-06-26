@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/08/21 16:33:08 seb Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/26 09:56:36 wiz Exp $
 #
 
 DISTNAME=	RTx-Shredder-0.03
@@ -13,6 +13,9 @@ COMMENT=	Utility to clean a RT database
 DEPENDS+=	rt>=3.4.5:../../devel/rt3
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_ENV+=		DESTDIR=${DESTDIR}
 
 .include "../../devel/rt3/dirs.mk"
 
