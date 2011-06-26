@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1582 2011/06/26 12:11:49 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1583 2011/06/26 12:46:31 obache Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2476,3 +2476,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/darkstat to 3.0.714 [wiz 2011-06-23]
 	Updated geography/viking to 1.2.1 [gdt 2011-06-24]
 	Updated pkgtools/pkgdiff to 1.2 [wiz 2011-06-26]
+	Updated misc/yelp to 2.30.2nb3 [obache 2011-06-26]
