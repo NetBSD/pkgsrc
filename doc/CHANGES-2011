@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1583 2011/06/26 12:46:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1584 2011/06/27 19:47:08 gls Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2477,3 +2477,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated geography/viking to 1.2.1 [gdt 2011-06-24]
 	Updated pkgtools/pkgdiff to 1.2 [wiz 2011-06-26]
 	Updated misc/yelp to 2.30.2nb3 [obache 2011-06-26]
+	Updated mail/claws-mail to 3.7.8nb2 [gls 2011-06-27]
