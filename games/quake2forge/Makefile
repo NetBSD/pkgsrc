@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/02/19 19:16:09 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/06/27 10:03:38 obache Exp $
 #
 
 DISTNAME=	quake2-0.3
@@ -10,6 +10,9 @@ MASTER_SITES=	http://www.quakeforge.net/files/quake2forge/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.quakeforge.net/
 COMMENT=	Enhanced Quake II engine
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
@@ -19,9 +22,9 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 CONFIGURE_ARGS+=	--program-transform-name='s/^quake2$$/quake2forge/'
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/quake2forge
-	${INSTALL_DATA} ${WRKSRC}/docs/README* ${PREFIX}/share/doc/quake2forge
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/quake2forge
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/quake2forge
+	${INSTALL_DATA} ${WRKSRC}/docs/README* ${DESTDIR}${PREFIX}/share/doc/quake2forge
+	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${PREFIX}/share/doc/quake2forge
 
 SUBST_CLASSES+=		snd data
 SUBST_STAGE.snd=	post-patch
