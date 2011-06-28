@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2010/10/16 15:25:09 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/06/28 09:28:24 wiz Exp $
 
 SHA1 (cppunit-1.12.1.tar.gz) = f1ab8986af7a1ffa6760f4bacf5622924639bf4a
 RMD160 (cppunit-1.12.1.tar.gz) = c5f38b1d201afcba7913f2b53fb7558add3d21f5
 Size (cppunit-1.12.1.tar.gz) = 762803 bytes
+SHA1 (patch-include_cppunit_Message.h) = aa4442b3c8d144a686d8d43f4c97943ee0d82ba4
+SHA1 (patch-src_cppunit_Message.cpp) = 4e5d38c70879d30f18bc7135916346a58652d3ce
