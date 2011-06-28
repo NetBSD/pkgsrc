@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1585 2011/06/28 09:28:34 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1586 2011/06/28 10:11:37 obache Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2479,3 +2479,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/yelp to 2.30.2nb3 [obache 2011-06-26]
 	Updated mail/claws-mail to 3.7.8nb2 [gls 2011-06-27]
 	Updated devel/cppunit to 1.12.1nb1 [wiz 2011-06-28]
+	Updated www/curl to 7.21.7 [obache 2011-06-28]
