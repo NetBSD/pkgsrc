@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2011/03/09 19:22:25 asau Exp $
+@comment $NetBSD: PLIST,v 1.33 2011/06/28 10:11:08 obache Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -10,7 +10,6 @@ include/curl/mprintf.h
 include/curl/multi.h
 include/curl/stdcheaders.h
 include/curl/typecheck-gcc.h
-include/curl/types.h
 lib/libcurl.la
 lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
