@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10392 2011/06/22 20:51:20 wiz Exp $
+$NetBSD: TODO,v 1.10393 2011/06/28 12:24:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -304,6 +304,8 @@ Suggested new packages
 	font-bitstream-speedo, oclock, xstdcmap, constype, xedit, xfs,
 	libWindowsWM, libXfontcache, util-macros, viewres, windowswmproto,
 	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
+	xf86-input-fpit, xf86-input-hyperpen, xf86-input-penmount,
+	xf86-input-mutouch,
 	xf86-input-joystick, xf86-input-synaptics, xf86-input-wacom,
 	xf86-video-dummy, xf86-video-fbdev, xf86-video-glide, xfsinfo,
 	xf86-video-impact, xf86-video-newport, xf86-video-sisusb, xmh,
@@ -411,7 +413,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.4.4
 	o audacity-1.3.13
 	o autoconvert-0.3.16
-	o autogen-5.11.8
+	o autogen-5.12
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.10
@@ -434,7 +436,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bison-2.5
 	o bitlbee-3.0.3
 	o bitmap-1.0.5
-	o blender-2.57b
+	o blender-2.58
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bonnie++-1.96
@@ -491,6 +493,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cross-h8300-hms-binutils-2.17
 	o cryptopp-5.6.0
 	o csound5-5.13
+	o curl-7.21.7
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.22
 	o cygwin_lib-1.5.24.2
@@ -589,6 +592,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o festival-1.96
 	o felt-3.07
 	o fetchyahoo-2.14.0
+	o ffmpeg-20110627.0.8
 	o file-5.07
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -661,6 +665,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gaupol-0.18
 	o gbdfed-1.6
 	o gcc44-4.4.6
+	o gcc46-4.6.1
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-9.5
@@ -719,7 +724,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnucash-2.4.6
 	o gnuchess-5.08
-	o gnutls-2.12.6.1
+	o gnutls-2.12.7
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -731,7 +736,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gramps3-3.3.0
 	o granulate-0.2
 	o graphviz-2.28.0
-	o grep-2.7
+	o grep-2.9
 	o grhino-0.16.1
 	o groff-1.21
 	o gsharutils-4.11
@@ -766,7 +771,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.8.7
 	o heimdal-1.2.1
-	o help2man-1.40.3
+	o help2man-1.40.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-7.5
@@ -817,7 +822,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jed-0.99-18
-	o john-1.7.7jumbo6
+	o john-1.7.8
 	o jools-1.0
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
@@ -832,7 +837,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdbg-2.5.0
 	o kde4-4.6.4
 	o kdenlive-0.8
-	o kdevelop-4.2.2
+	o kdevelop-4.2.3
 	o kdrill-6.5
 	o kile-2.1
 	o kipi-plugins-1.9.0
@@ -851,13 +856,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lapack-3.3.0
 	o latd-1.21
 	o latex2rtf-1.9.19
-	o lbdb-0.37
+	o lbdb-0.38
 	o lcc-4.2
 	o lcms-2.2
 	o ldapsdk-6.0.2
 	o leafnode-1.11.8
 	o less-443
 	o level9-4.1
+	o lftp-4.3.0
 	o lgeneral-1.2.1
 	o libAppleWM-1.4.1
 	o libFS-1.0.3
@@ -1012,7 +1018,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
-	o octave-3.4.1
+	o octave-3.4.2
 	o offlineimap-6.2.0
 	o olvwm-4.5
 	o oo2c-2.1.7
@@ -1045,6 +1051,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o packagekit-0.5.1
 	o paprefs-0.9.8
 	o parallel-20110622
+	o pari-2.5.0
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.2
@@ -1061,7 +1068,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o photopc-3.05
 	o php-jpgraph-3.0.6
 	o php-libawl-0.46
-	o phpmyadmin-3.4.2
+	o phpmyadmin-3.4.3
 	o picp-0.6.8
 	o pidgin-2.8
 	o pim6dd-20040819a
@@ -1076,7 +1083,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plone-3.3.4
 	o ploticus-2.41
 	o ploticus-examples-230
-	o png-1.5.4beta07
+	o png-1.5.4beta08
 	o po4a-0.36.3
 	o podofo-0.9.1
 	o polsms-2.1.0
@@ -1085,6 +1092,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
+	o postgresql-postgis-1.5.3
 	o powwow-1.2.16
 	o prboom-2.5.0.8
 	o printproto-1.0.5
@@ -1095,7 +1103,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.0 [pkg/42941]
 	o ptlib-2.8.3
 	o puf-0.93.3
-	o puppet-2.6.6
+	o puppet-2.7
 	o puzzle-9173
 	o puzzles-9179
 	o pv-1.1.4
@@ -1185,7 +1193,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
-	o scrotwm-0.9.30
+	o scrotwm-0.9.32
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o seahorse-2.32.0
@@ -1245,7 +1253,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-29.0.3
+	o tea-30.0.0
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.3
@@ -1257,7 +1265,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o thunderbird-3.1.11
 	o tightvnc-1.5.1
 	o tile-0.7.4
-	o tinc-1.0.14
+	o tinc-1.0.15
 	o tinyproxy-1.8.0
 	o tk-8.5.8
 	o tkcvs-8.2.2
@@ -1271,7 +1279,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o tree-1.5.3
+	o tree-1.6.0
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
@@ -1327,6 +1335,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.24
 	o windowlab-1.40
+	o wine-devel-1.3.23
 	o wireshark-1.6.0
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1340,7 +1349,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.3
-	o x264-devel-20110611
+	o x264-devel-20110625
 	o xanalyser-1.30
 	o xapian-1.2.4
 	o xapian-omega-1.2.4
@@ -1443,12 +1452,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xnap-2.5r3
 	o xorg-cf-files-1.0.4
 	o xorg-util-macros-1.10.1 [pkg/43891]
-	o xorg-util-macros-1.14.0
+	o xorg-util-macros-1.15.0
 	o xorp-1.8.3
 	o xpaint-2.9.8.2
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.0
-	o xproto-7.0.21
+	o xproto-7.0.22
 	o xpuyopuyo-0.9.8
 	o xrandr-1.3.4
 	o xrefresh-1.0.4
