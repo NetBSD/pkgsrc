@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/08 10:10:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/29 03:03:31 taca Exp $
 #
 
 MODNAME=	redis
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nicolasff/phpredis
 COMMENT=	PHP extension for Redis
-#LICENSE=	php-license
+LICENSE=	php
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
