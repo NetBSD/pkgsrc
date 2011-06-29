@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1587 2011/06/28 16:25:14 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1588 2011/06/29 14:47:37 taca Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2481,3 +2481,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cppunit to 1.12.1nb1 [wiz 2011-06-28]
 	Updated www/curl to 7.21.7 [obache 2011-06-28]
 	Updated filesystems/perfuse to 20110828 [manu 2011-06-28]
+	Updated www/contao29-translations to 20110629 [taca 2011-06-29]
