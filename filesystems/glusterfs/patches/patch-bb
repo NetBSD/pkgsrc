@@ -1,0 +1,13 @@
+--- xlators/performance/quick-read/src/quick-read.c.orig	2011-04-22 19:37:28.000000000 +0200
++++ xlators/performance/quick-read/src/quick-read.c	2011-06-29 15:09:58.000000000 +0200
+@@ -726,9 +726,9 @@
+                 }
+         }
+         UNLOCK (&table->lock);
+ 
+-        if (content_cached && ((flags & O_DIRECTORY) == O_DIRECTORY)) {
++        if (content_cached && (flags & O_DIRECTORY)) {
+                 op_ret = -1;
+                 op_errno = ENOTDIR;
+                 gf_log (this->name, GF_LOG_WARNING,
+                         "open with O_DIRECTORY flag received on non-directory");
