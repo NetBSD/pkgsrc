@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/06/07 07:27:11 manu Exp $
+$NetBSD: distinfo,v 1.6 2011/06/29 13:53:01 manu Exp $
 
 SHA1 (glusterfs-3.2.0.tar.gz) = a8095e04feedce81aa21634639f278b3810398b8
 RMD160 (glusterfs-3.2.0.tar.gz) = a69f47efd396a413ffb350e1711345ff49557325
@@ -14,6 +14,7 @@ SHA1 (patch-ar) = a5a18baa88fda145795d0b6f85ba86014e2128f7
 SHA1 (patch-as) = 54f6ea0ee4208cd29052084efeb928618936c7d1
 SHA1 (patch-ax) = 2588db4c21df8559ffbcf1b814479228dadd4623
 SHA1 (patch-ba) = e53d4b833f7b26eaa474a339e5962a251ecacd49
+SHA1 (patch-bb) = 10689b5cf75f3d66ee53b1950212af2d4af998d7
 SHA1 (patch-bc) = e9323641ed748cbe0ef6cb8912ab76dc5508cc80
 SHA1 (patch-be) = 0db2543504300504be1064cdbb6f19de06917e17
 SHA1 (patch-bf) = 30a39360435dd5f9faaf00e272a2d14fdb1ec86c
