@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prayer.sh,v 1.2 2010/06/08 12:34:38 adam Exp $
+# $NetBSD: prayer.sh,v 1.3 2011/06/30 01:17:37 schnoebe Exp $
 #
 # This shell script takes care of starting and stopping prayer,
 # a program providing web access to a mail server using IMAP
@@ -33,8 +33,8 @@ OPSYS=@OPSYS@
 get_prayer_pid()   
 {
 	if [ -f ${pidfile} ];  then
-		prayer_pid=`head -1 ${pidfile}`
-		if ps -p ${prayer_pid} | fgrep ${name} >/dev/null; then
+		prayer_pid=$(head -1 ${pidfile})
+		if kill -0 ${prayer_pid} >/dev/null; then
 			:
 		else
 			prayer_pid=
@@ -67,14 +67,15 @@ prayer_stop()
 	fi
 	echo "Stopping ${name}."
 	kill -HUP ${prayer_pid}
-	prayer_session_pid=`cat @VAR_PREFIX@/pid/prayer-session`
+	prayer_session_pid=$(cat @VAR_PREFIX@/pid/prayer-session.pid)
 	if [ -n "${prayer_session_pid}" ]; then
-	  if ps -p ${prayer_session_pid} | fgrep ${name} >/dev/null; then
+	  if kill -0 ${prayer_session_pid} >/dev/null; then
 		kill -HUP ${prayer_session_pid}
 	  fi
 	fi
 
-	slaves=`ps -U prayer| cut -d' ' -f1`; kill -HUP $slaves
+	slaves=$(ps -U prayer| awk '/PID/ {next}; {print $1}')
+	kill -HUP $slaves
 
 }
 prayer_status()
