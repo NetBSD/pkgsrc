@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/02/10 12:17:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/06/30 13:03:39 obache Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -82,7 +82,6 @@ lib/purple-2/libmxit.la
 lib/purple-2/libmyspace.la
 lib/purple-2/libnovell.la
 lib/purple-2/liboscar.la
-lib/purple-2/libqq.la
 lib/purple-2/libsimple.la
 lib/purple-2/libxmpp.la
 lib/purple-2/libyahoo.la
@@ -131,6 +130,7 @@ share/locale/gl/LC_MESSAGES/pidgin.mo
 share/locale/gu/LC_MESSAGES/pidgin.mo
 share/locale/he/LC_MESSAGES/pidgin.mo
 share/locale/hi/LC_MESSAGES/pidgin.mo
+share/locale/hr/LC_MESSAGES/pidgin.mo
 share/locale/hu/LC_MESSAGES/pidgin.mo
 share/locale/hy/LC_MESSAGES/pidgin.mo
 share/locale/id/LC_MESSAGES/pidgin.mo
@@ -188,6 +188,7 @@ share/purple/ca-certs/America_Online_Root_Certification_Authority_1.pem
 share/purple/ca-certs/CAcert_Class3.pem
 share/purple/ca-certs/CAcert_Root.pem
 share/purple/ca-certs/Deutsche_Telekom_Root_CA_2.pem
+share/purple/ca-certs/DigiCertHighAssuranceCA-3.pem
 share/purple/ca-certs/Entrust.net_Secure_Server_CA.pem
 share/purple/ca-certs/Equifax_Secure_CA.pem
 share/purple/ca-certs/Equifax_Secure_Global_eBusiness_CA-1.pem
