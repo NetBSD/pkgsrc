@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
+$NetBSD: patch-defaults_Config,v 1.1 2011/06/30 01:17:38 schnoebe Exp $
 
---- defaults/Config.orig	2009-09-01 10:25:22.000000000 +0000
+--- defaults/Config.orig	2011-06-17 15:22:57.000000000 +0000
 +++ defaults/Config
-@@ -15,9 +15,9 @@ FENCE_ENABLE         = false  # Use Elec
- MUTEX_SEMAPHORE      = false  # Use SYSV mutexes rather than file locking
+@@ -16,9 +16,9 @@ MUTEX_SEMAPHORE      = false  # Use SYSV
+ TIDY_ENABLE          = true   # Use libtidy for HTML sanitisation.
  
  # Following depend on the way that you have configured c-client
 -CCLIENT_SSL_ENABLE   = false  # C-client was built with SSL support
 -CCLIENT_PAM_ENABLE   = false  # C-client was built with PAM support
 -CCLIENT_KERB_ENABLE  = false  # C-client was built with Kerberos support
-+CCLIENT_SSL_ENABLE   = true  # C-client was built with SSL support
-+CCLIENT_PAM_ENABLE   = true  # C-client was built with PAM support
-+CCLIENT_KERB_ENABLE  = true  # C-client was built with Kerberos support
++CCLIENT_SSL_ENABLE   = true   # C-client was built with SSL support
++CCLIENT_PAM_ENABLE   = true   # C-client was built with PAM support
++CCLIENT_KERB_ENABLE  = true   # C-client was built with Kerberos support
  
  # Probably don't need the following
  RAVEN_ENABLE         = false  # Only of use in Cambridge at the moment.
-@@ -31,22 +31,18 @@ CC           = gcc
+@@ -32,22 +32,18 @@ CC           = gcc
  # Location of make program (GNU make required)
  MAKE         = gmake
  # Location of install program (GNU install or compatible required)
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
 +  BASECFLAGS   += $(CPPFLAGS)
  else
 -  BASECFLAGS   = -Wall -g -O2
-+  BASECFLAGS   += -Wall
++  BASECFLAGS   += -Wall -g -O2
  endif
  ifdef INCLUDES
    BASECFLAGS += $(INCLUDES)
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
  
  # Minimal libraries needed by Linux
  BASE_LIBS    = -lcrypt -lutil
-@@ -71,9 +67,9 @@ BASE_LIBS    = -lcrypt -lutil
+@@ -72,9 +68,9 @@ BASE_LIBS    = -lcrypt -lutil
  # which points to ../../imap/c-client. This just reduces the amount of
  # noise output on each line when building the package.
  #
@@ -55,7 +55,18 @@ $NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
  
  #
  # Following works with imap-devel RPM package from Redhat 7.
-@@ -119,8 +115,8 @@ PAM_INCLUDE =
+@@ -108,8 +104,8 @@ FENCE_INCLUDE=
+ FENCE_LIBS=-lmcheck
+ 
+ # Tidy library (required if TIDY_ENABLE set)
+-TIDY_INCLUDE=-I/usr/include/tidy
+-TIDY_LIBS=-ltidy
++TIDY_INCLUDE=-I ${BUILDLINK_PREFIX.tidy}/include/tidy
++TIDY_LIBS=-L${BUILDLINK_PREFIX.tidy}/lib -Wl,-R${BUILDLINK_PREFIX.tidy}/lib -ltidy
+ # Add following if using tidyp fork.
+ # TIDY_IS_TIDYP=true
+ 
+@@ -126,8 +122,8 @@ PAM_INCLUDE =
  PAM_LIBS    = -lpam
  
  # Kerberos (required if CCLIENT_KERB_ENABLE set)
@@ -66,7 +77,7 @@ $NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
  
  # SSL definitions (required if SSL_ENABLE or CCLIENT_SSL_ENABLE set)
  #
-@@ -140,8 +136,8 @@ OPENSSL=openssl
+@@ -147,8 +143,8 @@ OPENSSL=openssl
  # DB definitions (required if SESSION_CACHE_ENABLE set)
  #
  # Following suitable for Redhat Linux which has DB 3 preinstalled
@@ -77,7 +88,12 @@ $NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
  
  # Following suitable for FreeBSD with DB 4 package installed
  #DB_INCLUDE=-I/usr/local/include/db4
-@@ -159,16 +155,16 @@ BROOT=
+@@ -162,20 +158,20 @@ DB_LIBS=-ldb
+ # RW_GROUP. It is important that nothing else can read the certificate file.
+ 
+ # Build root (used by Redhat RPM system)
+-BROOT=
++BROOT=${DESTDIR}
  
  # Directory, User and group for read-write files: log files, sockets etc
  VAR_PREFIX = /var/spool/prayer
@@ -99,7 +115,7 @@ $NetBSD: patch-aa,v 1.10 2010/06/08 12:34:38 adam Exp $
  
  # Access permissions for general objects (wrt above users and groups)
  PUBLIC_EXEC  = 0755
-@@ -181,6 +177,6 @@ PRIVATE_DIR  = 0750
+@@ -188,6 +184,6 @@ PRIVATE_DIR  = 0750
  PRIVATE_FILE = 0640
  
  # Location of configuration files and binaries
