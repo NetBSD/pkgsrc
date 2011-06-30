@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.40 2010/09/16 08:06:17 adam Exp $
+# $NetBSD: Makefile,v 1.41 2011/06/30 01:17:37 schnoebe Exp $
 
-DISTNAME=	prayer-1.3.2
-PKGREVISION=	1
+DISTNAME=	prayer-1.3.4
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
-MAINTAINER=	abs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
+LICENSE=		gnu-gpl-v2
 
 BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		gmake perl
@@ -27,18 +27,21 @@ MAKE_ENV+=	BASECFLAGS=${CFLAGS:Q}
 MAKE_ENV+=	BDBBASE="${BDBBASE}"
 MAKE_ENV+=	BDB_TYPE="${BDB_TYPE}"
 MAKE_ENV+=	BUILDLINK_PREFIX.imap-uw="${BUILDLINK_PREFIX.imap-uw}"
+MAKE_ENV+=	BUILDLINK_PREFIX.tidy="${BUILDLINK_PREFIX.tidy}"
 MAKE_ENV+=	EGDIR=${EGDIR}
 MAKE_ENV+=	KRB5BASE="${KRB5BASE}"
 MAKE_ENV+=	KRB5_TYPE=${KRB5_TYPE:Q}
 MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	PRAYER_USER=${PRAYER_USER} PRAYER_GROUP=${PRAYER_GROUP}
 MAKE_ENV+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
+MAKE_ENV+=	RO_USER=${ROOT_USER}
 MAKE_ENV+=	SSLCERTS=${SSLCERTS:Q}
 
 PKG_SYSCONFSUBDIR=	prayer
 EGDIR=			${PREFIX}/share/examples/prayer
 
 RCD_SCRIPTS=		prayer
+PKG_DESTDIR_SUPPORT =	user-destdir
 
 CONF_FILES=	${EGDIR}/prayer.cf ${PKG_SYSCONFDIR}/prayer.cf
 CONF_FILES+=	${EGDIR}/prayer-accountd.cf ${PKG_SYSCONFDIR}/prayer-accountd.cf
@@ -56,13 +59,13 @@ post-patch:
 		${XARGS} ${RM} -r
 	cp ${WRKSRC}/defaults/Config ${WRKSRC}
 
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mail/imap-uw/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../www/tidy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
