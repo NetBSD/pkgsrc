@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10393 2011/06/28 12:24:42 wiz Exp $
+$NetBSD: TODO,v 1.10394 2011/06/30 11:19:01 gdt Exp $
 
 Suggested new packages
 ======================
@@ -299,6 +299,11 @@ Suggested new packages
 	Torque
 	http://www.clusterresources.com/products/torque-resource-manager.php
 	Open source batch jobs resource manager, successor to OpenPBS.
+
+	lightspark
+	http://sourceforge.net/apps/trac/lightspark
+	Implementation of ActionScript3 (modern Flash), needed for
+	(but not quite working for) Potlatch2 of OpenStreetMap.
 
 	Missing xorg packages
 	font-bitstream-speedo, oclock, xstdcmap, constype, xedit, xfs,
