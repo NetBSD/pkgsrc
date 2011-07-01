@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1590 2011/06/30 13:07:00 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1591 2011/07/01 03:31:40 taca Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2488,3 +2488,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin to 2.9.0 [obache 2011-06-30]
 	Updated chat/pidgin-sametime to 2.9.0 [obache 2011-06-30]
 	Updated chat/pidgin-silc to 2.9.0 [obache 2011-06-30]
+	Updated time/ruby-tzinfo to 0.3.29 [taca 2011-07-01]
