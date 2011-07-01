@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/06/16 15:34:12 taca Exp $
+$NetBSD: distinfo,v 1.5 2011/07/01 15:10:04 taca Exp $
 
-SHA1 (nokogiri-1.4.5.gem) = 5fcd34eb15364537a848bd157490eaddd95c1a13
-RMD160 (nokogiri-1.4.5.gem) = b761282c22af5bd236ec556ba42a83b8c53b3736
-Size (nokogiri-1.4.5.gem) = 203264 bytes
+SHA1 (nokogiri-1.5.0.gem) = c82f210a45b7c6b87c681e79a29e6a08ec8c6d71
+RMD160 (nokogiri-1.5.0.gem) = ab4f6f9704f71899edb815f033e4f70560653b3c
+Size (nokogiri-1.5.0.gem) = 187904 bytes
