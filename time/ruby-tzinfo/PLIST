@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/03/16 14:49:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/07/01 03:31:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -151,10 +151,12 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Juneau.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Kentucky/Louisville.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Kentucky/Monticello.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Knox_IN.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Kralendijk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/La_Paz.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Lima.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Los_Angeles.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Louisville.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Lower_Princes.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Maceio.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Managua.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Manaus.rb
