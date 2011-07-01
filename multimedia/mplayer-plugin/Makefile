@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/04/22 13:44:17 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/07/01 13:25:02 obache Exp $
 #
 
 DISTNAME=		mplayerplug-in-3.55
@@ -48,6 +48,7 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/*.so	${DESTDIR}${PREFIX}/lib/netscape/plugins
 	${INSTALL_DATA} ${WRKSRC}/*.xpt	${DESTDIR}${PREFIX}/lib/netscape/plugins
 
+BUILDLINK_DEPMETHOD.xulrunner=	build
 .include "../../devel/xulrunner/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
