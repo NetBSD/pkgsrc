@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1594 2011/07/02 17:58:19 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.1595 2011/07/02 22:21:34 dholland Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/ruby-tzinfo to 0.3.29 [taca 2011-07-01]
 	Updated textproc/ruby-nokogiri to 1.5.0 [taca 2011-07-01]
 	Updated misc/stellarium to 0.11.0 [jakllsch 2011-07-02]
+	Updated www/amaya to 11.3.1 [dholland 2011-07-02]
