@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2011/07/02 18:54:48 dholland Exp $
+# $NetBSD: Makefile,v 1.65 2011/07/02 19:05:06 dholland Exp $
 
 DISTNAME=	amaya-fullsrc-10.0.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -78,6 +78,9 @@ CFLAGS+=		-fno-strict-aliasing
 # once one forcibly persuades the Amaya configure script to configure
 # it correctly, isn't a big problem.
 #
+# - Update 20110702: switched to pkgsrc wxWidgets because the builtin
+# one doesn't compile any more.
+#
 # - The code using redland does not work, even using the copy of
 # redland included in the distfile. The schemas it tries to build are
 # syntactically invalid. It *might* be a simple problem, I don't know
@@ -140,25 +143,25 @@ CONFIGURE_ARGS+=	--without-dav
 #EXTRACT_ELEMENTS+=	redland
 #  -or-
 #CONFIGURE_ARGS+=	--enable-system-redland
-#.include "../../???/redland/buildlink3.mk"
+#.include "../../textproc/redland/buildlink3.mk"
 
 # pkgsrc's wxGTK is too old (2.6.3; 2.8.x is required)
-EXTRACT_ELEMENTS+=	wxWidgets
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xf86vidmodeproto/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
-CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
+#EXTRACT_ELEMENTS+=	wxWidgets
+#.include "../../x11/gtk2/buildlink3.mk"
+#.include "../../x11/libXinerama/buildlink3.mk"
+#.include "../../x11/libSM/buildlink3.mk"
+#.include "../../x11/libXxf86vm/buildlink3.mk"
+#.include "../../x11/xf86vidmodeproto/buildlink3.mk"
+#.include "../../graphics/MesaLib/buildlink3.mk"
+#.include "../../graphics/glu/buildlink3.mk"
+#CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 # wxWidgets has *another* copy of a bunch of image libs.
-CONFIGURE_ARGS+=	--with-libpng=sys	# Use pkgsrc libraries
-CONFIGURE_ARGS+=	--with-libjpeg=sys	# Use pkgsrc libraries
-CONFIGURE_ARGS+=	--with-libtiff=sys	# Use pkgsrc libraries
-CONFIGURE_ARGS+=	--with-libxpm=sys	# Use pkgsrc libraries
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-libpng=sys	# Use pkgsrc libraries
+#CONFIGURE_ARGS+=	--with-libjpeg=sys	# Use pkgsrc libraries
+#CONFIGURE_ARGS+=	--with-libtiff=sys	# Use pkgsrc libraries
+#CONFIGURE_ARGS+=	--with-libxpm=sys	# Use pkgsrc libraries
+#.include "../../graphics/tiff/buildlink3.mk"
+#.include "../../x11/libXpm/buildlink3.mk"
 # wxWidgets also has a private copy of expat; since Amaya ostensibly
 # needs the patched expat in its libwww, which is at least the same
 # version as the one in wxWidgets, we'll let wxWidgets use its builtin
@@ -167,9 +170,9 @@ CONFIGURE_ARGS+=	--with-libxpm=sys	# Use pkgsrc libraries
 # break with pkgsrc wxWidgets, but we can worry about that later.
 #.include "../../textproc/expat/buildlink3.mk"
 # -or-
-#CONFIGURE_ARGS+=	--enable-system-wx	# Use pkgsrc libraries
-#.include "../../graphics/glu/buildlink3.mk"
-#.include "../../x11/wxGTK/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-system-wx	# Use pkgsrc libraries
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
 
 # also uses glib
 .include "../../devel/glib2/buildlink3.mk"
