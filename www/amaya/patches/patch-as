@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1 2011/07/02 18:54:49 dholland Exp $
+
+Remove bashism.
+
+--- libwww/configure~	2006-03-22 15:17:24.000000000 +0000
++++ libwww/configure
+@@ -32726,7 +32726,7 @@ fi
+ echo "$as_me:$LINENO: result: $ac_cv_func_remove" >&5
+ echo "${ECHO_T}$ac_cv_func_remove" >&6
+ 
+-     if test "$ac_cv_func_remove" == yes ; then
++     if test "$ac_cv_func_remove" = yes ; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define unlink remove
