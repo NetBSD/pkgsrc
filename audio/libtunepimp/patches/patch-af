@@ -1,10 +1,11 @@
-$NetBSD: patch-af,v 1.1 2011/01/29 21:15:11 markd Exp $
+$NetBSD: patch-af,v 1.2 2011/07/02 21:33:09 markd Exp $
 
 fix build with gcc4.3
+curl/types.h is not used (empty) since curl-7.12.0 and removed at curl-7.21.7.
 
 --- lib/protocol.cpp.orig	2006-11-28 20:25:04.000000000 +0000
 +++ lib/protocol.cpp
-@@ -8,6 +8,7 @@
+@@ -8,11 +8,11 @@
  -------------------------------------------------------------------*/
  #include <stdio.h>
  #include <stdlib.h>
@@ -12,3 +13,8 @@ fix build with gcc4.3
  #include <string>
  #include <map>
  #include <expat.h>
+ #include <curl/curl.h>
+-#include <curl/types.h>
+ #include <curl/easy.h>
+ using namespace std;
+ 
