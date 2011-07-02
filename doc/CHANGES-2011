@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1593 2011/07/02 16:56:24 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1594 2011/07/02 17:58:19 jakllsch Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2493,3 +2493,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin-silc to 2.9.0 [obache 2011-06-30]
 	Updated time/ruby-tzinfo to 0.3.29 [taca 2011-07-01]
 	Updated textproc/ruby-nokogiri to 1.5.0 [taca 2011-07-01]
+	Updated misc/stellarium to 0.11.0 [jakllsch 2011-07-02]
