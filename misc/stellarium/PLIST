@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/12/06 21:03:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/07/02 17:58:00 jakllsch Exp $
 bin/stellarium
 man/man1/stellarium.1
 share/locale/af/LC_MESSAGES/stellarium-skycultures.mo
@@ -169,12 +169,16 @@ share/stellarium/data/iso3166-1-alpha-2.utf8
 share/stellarium/data/iso639-1.utf8
 share/stellarium/data/ssystem.ini
 share/stellarium/data/stellarium.ico
+share/stellarium/landscapes/garching/description.en.utf8
+share/stellarium/landscapes/garching/description.ru.utf8
 share/stellarium/landscapes/garching/garching-gl1.png
 share/stellarium/landscapes/garching/garching-gl2.png
 share/stellarium/landscapes/garching/garching-gl3.png
 share/stellarium/landscapes/garching/garching-gl4.png
 share/stellarium/landscapes/garching/garching-ground3.png
 share/stellarium/landscapes/garching/landscape.ini
+share/stellarium/landscapes/guereins/description.en.utf8
+share/stellarium/landscapes/guereins/description.ru.utf8
 share/stellarium/landscapes/guereins/guereins1.png
 share/stellarium/landscapes/guereins/guereins2.png
 share/stellarium/landscapes/guereins/guereins3.png
@@ -185,6 +189,8 @@ share/stellarium/landscapes/guereins/guereins7.png
 share/stellarium/landscapes/guereins/guereins8.png
 share/stellarium/landscapes/guereins/guereinsb.png
 share/stellarium/landscapes/guereins/landscape.ini
+share/stellarium/landscapes/hurricane/description.en.utf8
+share/stellarium/landscapes/hurricane/description.ru.utf8
 share/stellarium/landscapes/hurricane/hurricane1.png
 share/stellarium/landscapes/hurricane/hurricane2.png
 share/stellarium/landscapes/hurricane/hurricane3.png
@@ -195,10 +201,16 @@ share/stellarium/landscapes/hurricane/hurricane7.png
 share/stellarium/landscapes/hurricane/hurricane8.png
 share/stellarium/landscapes/hurricane/hurricaneb.png
 share/stellarium/landscapes/hurricane/landscape.ini
+share/stellarium/landscapes/mars/description.en.utf8
+share/stellarium/landscapes/mars/description.ru.utf8
 share/stellarium/landscapes/mars/landscape.ini
 share/stellarium/landscapes/mars/mars.png
 share/stellarium/landscapes/moon/apollo17.png
+share/stellarium/landscapes/moon/description.en.utf8
+share/stellarium/landscapes/moon/description.ru.utf8
 share/stellarium/landscapes/moon/landscape.ini
+share/stellarium/landscapes/ocean/description.en.utf8
+share/stellarium/landscapes/ocean/description.ru.utf8
 share/stellarium/landscapes/ocean/landscape.ini
 share/stellarium/landscapes/ocean/ocean1.png
 share/stellarium/landscapes/ocean/ocean2.png
@@ -209,8 +221,12 @@ share/stellarium/landscapes/ocean/ocean6.png
 share/stellarium/landscapes/ocean/ocean7.png
 share/stellarium/landscapes/ocean/ocean8.png
 share/stellarium/landscapes/ocean/ocean9.png
+share/stellarium/landscapes/saturn/description.en.utf8
+share/stellarium/landscapes/saturn/description.ru.utf8
 share/stellarium/landscapes/saturn/landscape.ini
 share/stellarium/landscapes/saturn/saturn-256.png
+share/stellarium/landscapes/trees/description.en.utf8
+share/stellarium/landscapes/trees/description.ru.utf8
 share/stellarium/landscapes/trees/landscape.ini
 share/stellarium/landscapes/trees/trees_512.png
 share/stellarium/nebulae/default/ic434bousquet.png
@@ -568,6 +584,7 @@ share/stellarium/stars/default/stars_2_0v0_1.cat
 share/stellarium/stars/default/stars_3_1v0_0.cat
 share/stellarium/stars/default/stars_hip_cids_0v0_0.cat
 share/stellarium/stars/default/stars_hip_sp_0v0_0.cat
+share/stellarium/textures/amalthea.png
 share/stellarium/textures/ariel.png
 share/stellarium/textures/callisto.png
 share/stellarium/textures/deimos.png
@@ -580,6 +597,7 @@ share/stellarium/textures/europa.png
 share/stellarium/textures/fog.png
 share/stellarium/textures/fogridge.png
 share/stellarium/textures/ganymede.png
+share/stellarium/textures/gcl.png
 share/stellarium/textures/halo.png
 share/stellarium/textures/haloLune.png
 share/stellarium/textures/hyperion.png
@@ -597,11 +615,14 @@ share/stellarium/textures/neb.png
 share/stellarium/textures/neptune.png
 share/stellarium/textures/nomap.png
 share/stellarium/textures/oberon.png
+share/stellarium/textures/ocl.png
 share/stellarium/textures/phobos.png
 share/stellarium/textures/planet-indicator.png
+share/stellarium/textures/pnb.png
 share/stellarium/textures/pointeur2.png
 share/stellarium/textures/pointeur4.png
 share/stellarium/textures/pointeur5.png
+share/stellarium/textures/proteus.png
 share/stellarium/textures/rhea.png
 share/stellarium/textures/saturn.png
 share/stellarium/textures/saturn_rings_radial.png
@@ -610,6 +631,7 @@ share/stellarium/textures/sun.png
 share/stellarium/textures/tethys.png
 share/stellarium/textures/titan.png
 share/stellarium/textures/titania.png
+share/stellarium/textures/triton.png
 share/stellarium/textures/umbriel.png
 share/stellarium/textures/uranus.png
 share/stellarium/textures/venus.png
