@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2011/04/22 13:44:56 obache Exp $
+# $NetBSD: Makefile,v 1.64 2011/07/02 18:54:48 dholland Exp $
 
 DISTNAME=	amaya-fullsrc-10.0.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -19,7 +19,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 
-WRKSRC=			${WRKDIR}/Amaya/work
+BUILDDIR=		${WRKDIR}/Amaya/work
+WRKSRC=			${WRKDIR}
+CONFIGURE_DIRS=		Amaya/work		# also sets BUILD_DIRS
 CONFIGURE_SCRIPT=	../configure
 BUILD_TARGET=		all
 
@@ -50,7 +52,7 @@ CFLAGS+=		-fno-strict-aliasing
 # hacking this package:
 #
 # - The build directory must be a subdir of the Amaya dir of the
-# distribution. If it isn't, the build breaks. Hence WRKSRC.
+# distribution. If it isn't, the build breaks. Hence CONFIGURE_DIRS.
 #
 # - The copy of libwww that comes in the distfile is required; it is
 # custom-patched in unspecified ways. The copy of expat in that copy
@@ -100,12 +102,12 @@ CFLAGS+=		-fno-strict-aliasing
 #
 
 post-extract:
-	${MKDIR} ${WRKSRC}
+	${MKDIR} ${BUILDDIR}
 
 post-configure:
-	${CP} ${WRKSRC}/Options.orig ${WRKSRC}/Options
-	${TOUCH} ${WRKSRC}/Makefile
-	cd ${WRKSRC} && \
+	${CP} ${BUILDDIR}/Options.orig ${BUILDDIR}/Options
+	${TOUCH} ${BUILDDIR}/Makefile
+	cd ${BUILDDIR} && \
 		${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} ${GMAKE} libwww_config
 
 #
