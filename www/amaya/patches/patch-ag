@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.8 2011/07/02 18:54:49 dholland Exp $
+$NetBSD: patch-ag,v 1.9 2011/07/02 22:19:30 dholland Exp $
+
+- use standard headers correctly
 
 --- Amaya/tools/cextract-1.7/xtract.h.orig	2005-05-30 10:21:42.000000000 -0400
 +++ Amaya/tools/cextract-1.7/xtract.h	2008-09-08 05:20:38.000000000 -0400
