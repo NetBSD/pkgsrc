@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/07/07 18:22:02 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2011/07/02 18:06:50 dholland Exp $
 #
 
 DISTNAME=	tix8.2.0b1
@@ -15,7 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
-WRKSRC=			${WRKDIR}/tix8.2.0/unix
+WRKSRC=			${WRKDIR}/tix8.2.0
+CONFIGURE_DIRS=		unix	# also sets BUILD_DIRS
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${BUILDLINK_PREFIX.tcl}/lib \
 			--with-tk=${BUILDLINK_PREFIX.tk}/lib \
