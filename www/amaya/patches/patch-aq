@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2008/09/11 04:22:50 dholland Exp $
+$NetBSD: patch-aq,v 1.2 2011/07/02 18:54:49 dholland Exp $
 
---- ../batch/Makefile.in~	2006-11-13 07:24:16.000000000 -0500
-+++ ../batch/Makefile.in	2008-09-08 07:32:38.000000000 -0400
+--- Amaya/batch/Makefile.in.orig	2006-11-13 07:24:16.000000000 -0500
++++ Amaya/batch/Makefile.in	2008-09-08 07:32:38.000000000 -0400
 @@ -11,7 +11,7 @@ THOTDIR = @top_srcdir@
  
  include ../Options
