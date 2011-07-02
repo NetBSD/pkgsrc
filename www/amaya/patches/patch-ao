@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.1 2008/09/11 04:22:50 dholland Exp $
+$NetBSD: patch-ao,v 1.2 2011/07/02 18:54:49 dholland Exp $
 
---- ../thotlib/base/structlist.c~	2008-01-21 06:24:18.000000000 -0500
-+++ ../thotlib/base/structlist.c	2008-09-08 05:45:32.000000000 -0400
+--- Amaya/thotlib/base/structlist.c~	2008-01-21 06:24:18.000000000 -0500
++++ Amaya/thotlib/base/structlist.c	2008-09-08 05:45:32.000000000 -0400
 @@ -577,7 +577,7 @@ static void WrTree (PtrElement pNode, in
                switch (pAttr1->AttrType)
                  {
