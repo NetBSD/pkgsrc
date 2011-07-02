@@ -1,8 +1,15 @@
-$NetBSD: patch-ab,v 1.14 2011/07/02 18:54:49 dholland Exp $
+$NetBSD: patch-ab,v 1.15 2011/07/02 22:19:30 dholland Exp $
 
---- Amaya/configure.orig	2008-01-31 09:07:46.000000000 -0500
-+++ Amaya/configure	2008-09-09 20:44:33.000000000 -0400
-@@ -4939,7 +4939,7 @@ done
+- need to check for wchar.h
+- configure the included wxWidgets to use pksrc png/jpeg/tiff/xpm instead
+  of its own copies (note: the included wxWidgets currently isn't being
+  used, but this change will be wanted again if it ever comes back)
+- don't overwrite pkgsrc CFLAGS/CXXFLAGS
+- fix install paths for pkgsrc
+
+--- Amaya/configure.orig	2009-12-09 13:42:57.000000000 +0000
++++ Amaya/configure
+@@ -5471,7 +5471,7 @@ done
  
  
  
@@ -10,8 +17,8 @@ $NetBSD: patch-ab,v 1.14 2011/07/02 18:54:49 dholland Exp $
 +for ac_header in stdio.h wchar.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
- if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -13574,11 +13574,11 @@ echo "$as_me: error: wxWidgets library s
+ if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
+@@ -13689,11 +13689,11 @@ echo "$as_me: error: wxWidgets library s
      #   --enable-unicode        compile wxString with Unicode support
      #   --with-gtk              use GTK+
      #   --with-opengl           use OpenGL (or Mesa)
@@ -25,7 +32,7 @@ $NetBSD: patch-ab,v 1.14 2011/07/02 18:54:49 dholland Exp $
    fi
    if test $with_wxdebug = yes ; then
      WXCONFIGURE_OPTION="$WXCONFIGURE_OPTION --enable-debug"
-@@ -13696,8 +13696,8 @@ if test "$with_debug" = "yes" ; then
+@@ -13810,8 +13810,8 @@ if test "$with_debug" = "yes" ; then
    CXXFLAGS="-g"
  else
    with_debug="no"
@@ -36,7 +43,7 @@ $NetBSD: patch-ab,v 1.14 2011/07/02 18:54:49 dholland Exp $
  fi
  
  if test "${CC}" = "gcc" ; then
-@@ -14510,7 +14510,7 @@ if test "${VPATHOPT}" = "" ; then
+@@ -14785,7 +14785,7 @@ if test "${VPATHOPT}" = "" ; then
  	VPATHOPT="VPATH"
  fi
  

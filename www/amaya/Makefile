@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2011/07/02 19:05:06 dholland Exp $
+# $NetBSD: Makefile,v 1.66 2011/07/02 22:19:29 dholland Exp $
 
-DISTNAME=	amaya-fullsrc-10.0.1
+DISTNAME=	amaya-fullsrc-11.3.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
-PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://ftp.w3.org/pub/amaya/ \
@@ -12,12 +11,16 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.w3.org/Amaya/
 COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
+LICENSE=	amaya-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
+
+# builds receive SIGSEGV (go figure)
+MAKE_JOBS_SAFE=		no
 
 BUILDDIR=		${WRKDIR}/Amaya/work
 WRKSRC=			${WRKDIR}
@@ -36,63 +39,57 @@ REQD_DIRS+=		${PREFIX}/share/Amaya ${PREFIX}/share/Amaya/fonts
 CFLAGS+=		-fno-strict-aliasing
 .endif
 
-# GNOME/KDE desktop icon and related bits
-# These used to get installed only on Linux; in 10.0.1 they don't seem
-# to exist any more, but given the makefiles in this package that
-# doesn't prove anything, and I can't test on Linux easily. So I'm
-# going to leave this here commented out, along with the PLIST
-# entries, until they're confirmed to be gone.
-#PLIST_VARS+=	desktop
-#.if ${OPSYS} == "Linux"
-#PLIST.desktop=	yes
-#.endif
-
 #
 # Some notes on the build issues, for the benefit of the next person
 # hacking this package:
 #
 # - The build directory must be a subdir of the Amaya dir of the
-# distribution. If it isn't, the build breaks. Hence CONFIGURE_DIRS.
+# distribution. If it isn't, the build breaks. This is why the
+# build dir is put where it is and not directly under ${WRKDIR}.
+# (This was true in 10.x; it might not be true any longer.)
 #
-# - The copy of libwww that comes in the distfile is required; it is
-# custom-patched in unspecified ways. The copy of expat in that copy
-# of libwww is also custom-patched. This means we need to use that
-# expat and not the pkgsrc one, which is problematic because wxWidgets
-# also uses expat.
+# - The distfile currently includes copies of Mesa, freetype, libwww,
+# redland, and wxWidgets as well as Amaya itself. In 10.x it used to
+# also contain a pile of graphics libraries; these have thankfully
+# been pruned.
 #
-# - The build system is incapable of building that libwww without
-# help; if the libwww subdir of the build directory does not exist,
-# the makefiles won't create it, and it's not created by the configure
-# script. Thus the manual invocation of make libwww_config in
-# post-configure.
+# - There is no reason I can see to use or care about the included
+# Mesa, freetype, or redland.
 #
-# - The distfile contains not just one but multiple included copies of
-# various basic libraries (libpng, libjpeg, zlib, expat) and for the
-# most part we don't want to use those copies, because they're out of
-# date. It is like pulling teeth - you have to patch all over the
-# place, even though the configure script ostensibly supports using
-# the system versions.
+# - The pkgsrc package used to use the included wxWidgets because at
+# the time it was put together pkgsrc didn't have wxGTK28, only
+# 26. This is no longer true and it should be safe to ignore the
+# included wxWidgets. However, if it needs to come back, beware of
+# copies of other libs included in it that Amaya may forcibly build
+# and use; in 10.x the only way to get the included wxWidgets to not
+# use its own copies of png, jpeg, tiff, and xpm was to patch the
+# Amaya build logic. I've left this patch in place for future
+# reference, although it's only about 50% likely it'll have any effect
+# next time. Do not believe the build docs or the configure script
+# when it claims to allow you to disable builtin copies of libs; it
+# lies.
 #
-# - For now I'm using the included copy of wxWidgets, because the
-# pkgsrc copy is too old. This has a couple of its own issues, but,
-# once one forcibly persuades the Amaya configure script to configure
-# it correctly, isn't a big problem.
+# - The included libwww, however, appears to be necessary. In 10.x it
+# was a custom-patched version; now it appears not to be but it is
+# also a newer version than found in pkgsrc. As I don't think a newer
+# libwww than the one in pkgsrc has actually been released, it may as
+# well be a custom-patched version. Given the history it is unlikely
+# that Amaya will work with the older libwww in pkgsrc... assuming it
+# works at all of course... so it is probably best to use the included
+# libwww until such time as this becoems clearer.
 #
-# - Update 20110702: switched to pkgsrc wxWidgets because the builtin
-# one doesn't compile any more.
+# - The included libwww includes in turn its own copy of expat. In
+# 10.x this was also a custom-patched version. This may or may not be
+# true now. Regardless, Amaya shold be made to use pkgsrc expat,
+# because as things stand it is likely to end up with multiple expats
+# linked into it at once, and that's unlikely to work. I have not done
+# this yet though. (XXX)
 #
-# - The code using redland does not work, even using the copy of
-# redland included in the distfile. The schemas it tries to build are
-# syntactically invalid. It *might* be a simple problem, I don't know
-# enough about that stuff to fix it. Maybe someone else does.
-#
-# - The DAV code does not build. It requires generated files from a
-# later part of the build to already exist when it's compiled. I don't
-# know if it also must come before that part of the build, but it
-# wouldn't entirely surprise me if it did; between this and the libwww
-# issue it's clear that whoever develops this thing never tries
-# building a clean tree. By the time I got to this I was tired of the
-# lossage and just disabled the DAV code entirely.
+# - As of 10.x the code using redland did not work, even using the
+# copy of redland included in the distfile. The schemas it tries to
+# build are syntactically invalid. It *might* be a simple problem, I
+# don't know enough about that stuff to fix it. Maybe someone else
+# does. I haven't tried this in 11.x yet. (XXX)
 #
 # - The build target is "all". This is not the default. The default
 # build target (if you just run make) also sort of builds the package
@@ -103,6 +100,18 @@ CFLAGS+=		-fno-strict-aliasing
 # wrappers reorder these and break the build. I patched the makefiles
 # to always explicitly name .a files for internal program pieces.
 #
+# - The DAV code does not build by default. It requires generated
+# files from a later part of the build to already exist when it's
+# compiled. (That is, davlib/ doesn't build until part of amaya/ is
+# built, but you can't successfully build amaya/ without davlib/
+# because it needs to link with it. It turns out that this can be
+# hacked around by forcibly disabling the davlib/ directory in the
+# top-level makefile; if davlib is nonetheless enabled, the amaya/
+# makefile recurses back to it to build it after generating the file
+# it needs. Sheesh. Between this and other issues it's clear that
+# whoever develops this thing never tries building a clean tree, and
+# sometimes I wonder if they compile it at all before releasing it.
+#
 
 post-extract:
 	${MKDIR} ${BUILDDIR}
@@ -110,72 +119,24 @@ post-extract:
 post-configure:
 	${CP} ${BUILDDIR}/Options.orig ${BUILDDIR}/Options
 	${TOUCH} ${BUILDDIR}/Makefile
-	cd ${BUILDDIR} && \
-		${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} ${GMAKE} libwww_config
+
+# The davlib code doesn't build, so disable it. (no longer necessary)
+#CONFIGURE_ARGS+=	--without-dav
 
 #
-# Components, deps, and included copies of libraries
+# Use the supplied (prerelease?) libwww; use pkgsrc for everything else.
+# See notes above, and check the cvs history for tips if trying to reenable
+# the builtin wxWidgets.
 #
+EXTRACT_ELEMENTS=	Amaya libwww
+CONFIGURE_ARGS+=	--enable-system-redland
+CONFIGURE_ARGS+=	--enable-system-wx
 
-EXTRACT_ELEMENTS=	Amaya
-
-# Requires its own custom-patched libwww,
-# which also incl. a custom-patched expat.
-EXTRACT_ELEMENTS+=	libwww
-# -or-
 #.include "../../www/libwww/buildlink3.mk"
-#.include "../../textproc/expat/buildlink3.mk"
-
-# The Amaya portion of the distfile inclues copies of libpng, jpeg, and zlib.
-# Use pkgsrc's libpng, jpeg, and zlib instead.
-CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
-# link correctly with pkgsrc zlib (XXX: is this needed or correct?)
-LIBS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-
-# The davlib code doesn't build.
-CONFIGURE_ARGS+=	--without-dav
-
-# pkgsrc doesn't have redland (yet?)
-# disable; currently doesn't work and I don't have time to chase down why
-#EXTRACT_ELEMENTS+=	redland
-#  -or-
-#CONFIGURE_ARGS+=	--enable-system-redland
-#.include "../../textproc/redland/buildlink3.mk"
-
-# pkgsrc's wxGTK is too old (2.6.3; 2.8.x is required)
-#EXTRACT_ELEMENTS+=	wxWidgets
-#.include "../../x11/gtk2/buildlink3.mk"
-#.include "../../x11/libXinerama/buildlink3.mk"
-#.include "../../x11/libSM/buildlink3.mk"
-#.include "../../x11/libXxf86vm/buildlink3.mk"
-#.include "../../x11/xf86vidmodeproto/buildlink3.mk"
-#.include "../../graphics/MesaLib/buildlink3.mk"
-#.include "../../graphics/glu/buildlink3.mk"
-#CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
-# wxWidgets has *another* copy of a bunch of image libs.
-#CONFIGURE_ARGS+=	--with-libpng=sys	# Use pkgsrc libraries
-#CONFIGURE_ARGS+=	--with-libjpeg=sys	# Use pkgsrc libraries
-#CONFIGURE_ARGS+=	--with-libtiff=sys	# Use pkgsrc libraries
-#CONFIGURE_ARGS+=	--with-libxpm=sys	# Use pkgsrc libraries
-#.include "../../graphics/tiff/buildlink3.mk"
-#.include "../../x11/libXpm/buildlink3.mk"
-# wxWidgets also has a private copy of expat; since Amaya ostensibly
-# needs the patched expat in its libwww, which is at least the same
-# version as the one in wxWidgets, we'll let wxWidgets use its builtin
-# copy. That way if both are linked the fallout should be limited, and
-# maybe (ha!) the Amaya developers have seen to it. This will probably
-# break with pkgsrc wxWidgets, but we can worry about that later.
-#.include "../../textproc/expat/buildlink3.mk"
-# -or-
-CONFIGURE_ARGS+=	--enable-system-wx	# Use pkgsrc libraries
+.include "../../textproc/redland/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
-
-# also uses glib
 .include "../../devel/glib2/buildlink3.mk"
-
+.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

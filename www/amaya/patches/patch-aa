@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2011/07/02 18:54:49 dholland Exp $
+$NetBSD: patch-aa,v 1.14 2011/07/02 22:19:30 dholland Exp $
+
+- need to be able to check for wchar.h
 
 --- Amaya/config.h.in~	2003-01-07 09:33:07.000000000 -0500
 +++ Amaya/config.h.in	2008-09-08 04:37:57.000000000 -0400

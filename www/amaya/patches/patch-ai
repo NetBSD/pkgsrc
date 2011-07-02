@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.3 2011/07/02 18:54:49 dholland Exp $
+$NetBSD: patch-ai,v 1.4 2011/07/02 22:19:30 dholland Exp $
+
+- disable macos stuff that doesn't work
 
 --- Amaya/batch/script_install_macosxbundle.in~	2007-03-29 09:24:04.000000000 -0400
 +++ Amaya/batch/script_install_macosxbundle.in	2008-09-08 04:50:37.000000000 -0400
