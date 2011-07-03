@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2010/02/19 19:31:59 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2011/07/03 01:36:58 dholland Exp $
 
 DISTNAME=	delegate9.9.1
 PKGNAME=	delegate-9.9.1
@@ -27,6 +27,8 @@ OWN_DIRS_PERMS+=${VARBASE}/spool/delegate/cache ${REAL_ROOT_USER} ${REAL_ROOT_GR
 OWN_DIRS_PERMS+=${VARBASE}/spool/delegate-nobody nobody nobody 755
 
 INSTALLATION_DIRS=	sbin share/doc/delegate
+
+MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 
 pre-build:
 	@${ECHO} "ADMIN=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
