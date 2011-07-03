@@ -1,18 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/07/26 23:33:35 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2011/07/03 21:42:24 jym Exp $
 
-Drew Einhorn's gpsfetchmap.pl enhancements from:
-
-http://s2.selwerd.nl/~dirk-jan/gpsdrive/archive/msg01772.html
-
---- src/gpsfetchmap.pl.orig	Sun Nov 24 11:04:38 2002
-+++ src/gpsfetchmap.pl	Wed Jan  8 12:13:17 2003
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl
-+#!/usr/bin/env perl
- 
- # gpsfetchmap
- #
-@@ -9,38 +9,71 @@
+--- src/gpsfetchmap.pl.orig	2002-11-24 16:04:38.000000000 +0000
++++ src/gpsfetchmap.pl
+@@ -9,38 +9,71 @@ my $VERSION =<<EOP;
  gpsfetchmap (c) 2002 Kevin Stephens <gps\@suburbialost.com>
  modified (Sept 06, 2002) by Sven Fichtner <sven.fichtner\@flugfunk.de>
  modified (Sept 18, 2002) by Sven Fichtner <sven.fichtner\@flugfunk.de>
@@ -95,7 +85,7 @@ http://s2.selwerd.nl/~dirk-jan/gpsdrive/archive/msg01772.html
  pod2usage(1) if $help;
  pod2usage(-verbose=>2) if $man;
  
-@@ -55,7 +88,6 @@
+@@ -55,7 +88,6 @@ pod2usage(1) if (&error_check);
  
  
  # Setup up some constants
@@ -103,7 +93,7 @@ http://s2.selwerd.nl/~dirk-jan/gpsdrive/archive/msg01772.html
  my $DIFF          = 0.0000028;
  my $RADIUS_KM     = 6371.01;
  my $LAT_DIST_KM   = 110.87;
-@@ -64,7 +96,7 @@
+@@ -64,7 +96,7 @@ my $KM2MILES      = 0.62137119;
  
  # Get the list of scales we need
  my $SCALES_TO_GET_ref = get_scales(\$scale);
@@ -112,7 +102,7 @@ http://s2.selwerd.nl/~dirk-jan/gpsdrive/archive/msg01772.html
  
  # Get the center waypoint if they want one
  if ($waypoint) {
-@@ -82,7 +114,7 @@
+@@ -82,7 +114,7 @@ $mapdir = &get_mapdir unless ($mapdir);
  unless ($slat && $slon && $endlat && $endlon) {
     ($slat,$slon,$endlat,$endlon) = get_coords(\$lat,\$lon,\$area,\$unit); 
  }
@@ -121,7 +111,7 @@ http://s2.selwerd.nl/~dirk-jan/gpsdrive/archive/msg01772.html
  
  unless ($force) {
     my $count = file_count(\($slat,$slon,$endlat,$endlon));
-@@ -93,67 +125,136 @@
+@@ -93,61 +125,12 @@ unless ($force) {
  
  print "\nDownloading files:\n";
  
@@ -187,10 +177,10 @@ http://s2.selwerd.nl/~dirk-jan/gpsdrive/archive/msg01772.html
  
  ################################################################################
  #
- # Subroutines
+@@ -155,6 +138,124 @@ print "\n";
  #
  ################################################################################
-+
+ 
 +sub getmaps {
 +  my ($scale, $slat, $endlat, $slon, $endlon, $k) = @_;
 +
@@ -308,6 +298,7 @@ http://s2.selwerd.nl/~dirk-jan/gpsdrive/archive/msg01772.html
 +  $filename = sprintf("%s%d-%08.4f-%09.4f.gif", $prefix, $scale, $lati, $long);
 +  return "$pathname$filename";
 +}
- 
++
  sub error_check {
     my $status;
+    
