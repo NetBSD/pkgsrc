@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2011/01/13 13:40:02 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2011/07/03 21:40:44 dholland Exp $
 
 DISTNAME=	Tk-804.029
 PKGNAME=	p5-${DISTNAME}
@@ -26,6 +26,7 @@ MAKE_PARAMS=	X11=${X11BASE}
 REPLACE_PERL+=	TextList/reindex.pl
 REPLACE_PERL+=	pTk/Tcl-pTk
 REPLACE_PERL+=	pTk/mkVFunc
+REPLACE_PERL+=	demos/widget
 
 SUBST_CLASSES+=	prefix
 SUBST_STAGE.prefix=	post-patch
