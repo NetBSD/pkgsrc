@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1598 2011/07/03 10:09:43 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1599 2011/07/03 12:53:29 obache Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/libva to 1.0.6nb1 [dholland 2011-07-03]
 	Updated chat/jabberd to 1.4.2nb9 [obache 2011-07-03]
 	Updated net/py-boto to 1.9bnb1 [dholland 2011-07-03]
+	Updated net/mikutter to 0.0.3.10 [obache 2011-07-03]
