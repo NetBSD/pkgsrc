@@ -1,4 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ba,v 1.2 2011/07/03 20:15:59 dholland Exp $
+
+- use modern C
 
 --- server/args.c~	1998-03-27 10:11:58.000000000 -0500
 +++ server/args.c	2008-08-31 00:25:23.000000000 -0400

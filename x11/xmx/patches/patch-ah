@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ah,v 1.2 2011/07/03 20:15:58 dholland Exp $
+
+- use modern C
 
 --- lib/Xmc/Open.c~	1998-02-12 09:13:22.000000000 -0500
 +++ lib/Xmc/Open.c	2008-08-31 00:19:40.000000000 -0400
