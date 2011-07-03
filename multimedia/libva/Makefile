@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/19 04:15:41 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/03 08:22:12 dholland Exp $
 #
 
 # libva-1.0.7+ needs libdrm-2.4.23
 DISTNAME=	libva-1.0.6
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://cgit.freedesktop.org/libva/snapshot/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,6 +35,9 @@ PKGCONFIG_OVERRIDE+=	libva.pc.in
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
