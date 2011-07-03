@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/18 22:26:28 jym Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/03 11:08:29 jym Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -59,7 +59,7 @@ CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
 			${PKG_SYSCONFDIR}/config.php		\
 			${APACHE_USER} ${APACHE_GROUP} 0640
 
-REPLACE_PERL=		scripts/po/extract.pl
+REPLACE_PERL=		scripts/po/extract.pl dba/update-davical-database
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*/bin/php
