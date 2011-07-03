@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/23 16:57:33 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/03 06:59:56 dholland Exp $
 #
 
 DISTNAME=	fml-7.98.15-${FML_STAMP}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.fml.org/pub/fml8/
 
@@ -16,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 FML_STAMP=	20100306
 
 GNU_CONFIGURE=	yes
-USE_TOLLS=	perl:run
+USE_TOOLS=	perl:run
 
 PLIST_SUBST+=	FML_STAMP=${FML_STAMP} EGDIR=${EGDIR}
 
