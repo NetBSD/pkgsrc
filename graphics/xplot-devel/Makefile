@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/03/28 19:36:30 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/03 11:47:41 jym Exp $
 
 DISTNAME=	xplot-0.90.8
 PKGREVISION=	2
@@ -13,6 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
+
+REPLACE_PERL+=	tcpdump2xplot.pl
 
 DOCFILES=	ANNOUNCE README README.tcp_plots \
 		demo.0 demo.1 demo.2 demo.3 demo.4 demo.5 demo.6 demo.7
