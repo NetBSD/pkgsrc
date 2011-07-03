@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/12 06:02:34 gls Exp $
+# $NetBSD: Makefile,v 1.13 2011/07/03 11:27:46 gls Exp $
 
 DISTNAME=	App-Nopaste-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/App/Nopaste/.packlist
+
+REPLACE_PERL+=	bin/nopaste
 
 DEPENDS+=	p5-Moose>=0.74:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Getopt>=0.17:../../devel/p5-MooseX-Getopt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/08/21 16:36:52 seb Exp $
+# $NetBSD: Makefile,v 1.21 2011/07/03 11:31:55 gls Exp $
 #
 
 DISTNAME=	HTTP-DAV-0.41
@@ -15,6 +15,8 @@ COMMENT=	HTTP::DAV interface and 'dave'
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+REPLACE_PERL+=	bin/dave
 
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
