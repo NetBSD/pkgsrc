@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2011/05/20 11:15:01 adam Exp $
+# $NetBSD: Makefile,v 1.63 2011/07/03 01:57:06 dholland Exp $
 
 DISTNAME=	proftpd-1.3.3e
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
@@ -16,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-USE_TOOLS+=		gmake intltool msgfmt
+USE_TOOLS+=		gmake intltool msgfmt perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
@@ -30,7 +31,7 @@ BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		proftpd
 REPLACE_PERL+=		contrib/ftpasswd
-REPLACE_PERL+=		src/prxs
+REPLACE_PERL+=		src/prxs.in
 
 CONF_FILES=		${PREFIX}/share/examples/proftpd/basic.conf \
 			${PKG_SYSCONFDIR}/proftpd.conf
