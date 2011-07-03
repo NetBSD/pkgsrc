@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/02/28 14:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2011/07/03 11:19:37 jym Exp $
 
 DISTNAME=	roundup-1.4.6
 PKGREVISION=	2
@@ -17,11 +17,13 @@ USE_LANGUAGES=
 USE_TOOLS+=	pax
 
 PYTHON_PATCH_SCRIPTS+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
+PYTHON_PATCH_SCRIPTS+=	frontends/roundup.cgi
 PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py
 PYTHON_PATCH_SCRIPTS+=	roundup/cgi/TAL/talgettext.py
 PYTHON_PATCH_SCRIPTS+=	roundup/msgfmt.py
 PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_demo.py
 PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_gettext.py
+PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_xmlrpc_server.py
 PYTHON_PATCH_SCRIPTS+=	roundup/version_check.py run_tests.py
 PYTHON_PATCH_SCRIPTS+=	scripts/add-issue scripts/copy-user.py
 PYTHON_PATCH_SCRIPTS+=	scripts/imapServer.py scripts/roundup-reminder
