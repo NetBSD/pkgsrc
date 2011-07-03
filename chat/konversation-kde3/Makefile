@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/04/22 13:43:06 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/03 06:38:58 markd Exp $
 #
 
 DISTNAME=	konversation-1.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	chat kde
 MASTER_SITES=	http://download.berlios.de/konversation/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,8 +26,17 @@ REPLACE_PERL+=		konversation/src/konversation-0.19-appearance.pl \
 			konversation/src/konversation-0.19-sortorder.pl \
 			konversation/src/konversation-0.19-tabplacement.pl \
 			konversation/src/konversation-0.20-customfonts.pl \
-			konversation/src/konversation-0.20-quickbuttons.pl
-REPLACE_BASH+=		konversation/scripts/mail
+			konversation/src/konversation-0.20-quickbuttons.pl \
+			konversation/scripts/cmd \
+			konversation/scripts/fortune \
+			konversation/scripts/uptime
+
+REPLACE_PYTHON+=	konversation/scripts/media \
+			konversation/scripts/weather
+
+REPLACE_BASH+=		konversation/scripts/mail \
+			konversation/scripts/gauge \
+			konversation/scripts/tinyurl
 USE_TOOLS+=		bash:run
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,6 +47,7 @@ DEPENDS+=		psmisc>=20.1:../../sysutils/psmisc
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
