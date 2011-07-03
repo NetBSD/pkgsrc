@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/03/02 13:07:35 obache Exp $
+# $NetBSD: Makefile,v 1.27 2011/07/03 12:26:34 jym Exp $
 #
 
 DISTNAME=	screws-0.56
@@ -27,6 +27,11 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 EGDIR=		${PREFIX}/share/examples/screws
 CONF_FILES=	${EGDIR}/default.conf ${PKG_SYSCONFDIR}/screws.conf
+
+REPLACE_PERL+=	src/Exec/obsd-qos.x
+REPLACE_PERL+=	src/Exec/perl.pl
+REPLACE_PERL+=	src/Exec/perl/*.pl
+REPLACE_PERL+=	src/Exec/perl/htdocs/example.x
 
 RCD_SCRIPTS=		screws
 RCD_SCRIPT_SRC.screws=	${WRKSRC}/src/Utils/files/screws.sh
