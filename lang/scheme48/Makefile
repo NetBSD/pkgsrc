@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/08/31 09:17:56 obache Exp $
+# $NetBSD: Makefile,v 1.33 2011/07/03 12:40:20 jym Exp $
 
 DISTNAME=		scheme48-1.8
 CATEGORIES=		lang
@@ -23,6 +23,11 @@ BUILD_TARGET=		enough
 TEST_TARGET=		check		# fail if USER == root directory owner
 
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}/man1
+
+REPLACE_INTERPRETER+=	scheme
+REPLACE.scheme.old=	.*/bin/env scheme-srfi-7
+REPLACE.scheme.new=	${PREFIX}/bin/scheme-srfi-7
+REPLACE_FILES.scheme=	build/scheme48-config.in
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
