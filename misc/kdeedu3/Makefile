@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2011/04/22 13:44:11 obache Exp $
+# $NetBSD: Makefile,v 1.59 2011/07/03 02:31:10 markd Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	misc
 COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 
@@ -13,8 +13,11 @@ REPLACE_PERL+=	\
 	kvoctrain/kvoctrain/langen2kvtml \
 	kvoctrain/kvoctrain/spotlight2kvtml
 
+REPLACE_PYTHON+=	kig/pykig/pykig.py
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
