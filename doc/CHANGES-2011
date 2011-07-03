@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1596 2011/07/03 07:41:14 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1597 2011/07/03 08:27:11 obache Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2496,3 +2496,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/stellarium to 0.11.0 [jakllsch 2011-07-02]
 	Updated www/amaya to 11.3.1 [dholland 2011-07-02]
 	Updated editors/tomboy to 1.2.1nb5 [obache 2011-07-03]
+	Updated chat/jabberd to 1.4.2nb9 [obache 2011-07-03]
