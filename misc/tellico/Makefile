@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/06/10 09:39:57 obache Exp $
+# $NetBSD: Makefile,v 1.37 2011/07/03 16:27:14 jym Exp $
 #
 
 DISTNAME=	tellico-2.3.2
@@ -16,6 +16,11 @@ BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+REPLACE_PERL+=		src/core/tellico-1-3-update.pl
+REPLACE_PYTHON+=	src/fetch/scripts/*.py
+REPLACE_PYTHON+=	src/translators/griffith2tellico.py
+REPLACE_RUBY+=		src/fetch/scripts/boardgamegeek.rb
+
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	msgfmt pkg-config
@@ -25,6 +30,9 @@ USE_TOOLS+=	msgfmt pkg-config
 .include "../../devel/exempi/buildlink3.mk"
 .include "../../graphics/kdegraphics4/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/ruby/buildlink3.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../net/yaz/buildlink3.mk"
