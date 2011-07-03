@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ak,v 1.2 2011/07/03 20:15:59 dholland Exp $
+
+- use modern C
 
 --- lib/Xmc/SetAuth.c~	1998-02-01 14:04:53.000000000 -0500
 +++ lib/Xmc/SetAuth.c	2008-08-31 00:20:55.000000000 -0400

@@ -1,4 +1,6 @@
-$NetBSD: patch-ed,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ed,v 1.2 2011/07/03 20:16:00 dholland Exp $
+
+- use modern C
 
 --- clients/xmtg/ui.c.orig	1998-04-01 18:55:00.000000000 -0500
 +++ clients/xmtg/ui.c	2008-08-31 02:40:34.000000000 -0400

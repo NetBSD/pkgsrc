@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-aj,v 1.2 2011/07/03 20:15:58 dholland Exp $
+
+- use modern C
 
 --- lib/Xmc/Register.c~	1998-02-01 14:04:48.000000000 -0500
 +++ lib/Xmc/Register.c	2008-08-31 00:20:32.000000000 -0400
