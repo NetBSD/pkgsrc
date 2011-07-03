@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/08/06 01:44:54 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2011/07/03 08:09:49 dholland Exp $
 #
 
 DISTNAME=	lookup-1.4.1
@@ -12,6 +12,8 @@ HOMEPAGE=	http://openlab.jp/edict/lookup/index.html.ja
 COMMENT=	Electric dictionary agent for Emacs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 DEPENDS+=	eblook>=1.4:../../textproc/eblook
 
