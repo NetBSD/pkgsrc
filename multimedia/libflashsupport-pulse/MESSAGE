@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2011/07/03 14:39:20 shattered Exp $
+
+Enable "module-native-protocol-tcp" in pulseaudio config (e.g. default.pa)
+if there's no sound.
+
+===========================================================================
