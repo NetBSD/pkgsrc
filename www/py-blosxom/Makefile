@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/06 14:46:16 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/03 12:07:43 jym Exp $
 #
 
 PYBLOXSOMVERS=	1.5
@@ -25,7 +25,7 @@ WRKSRC=		${WRKDIR}/pybloxsom-1.5rc2
 
 INSTALLATION_DIRS=	${DOC_SUBDIR}
 
-REPLACE_PYTHON=		${WRKSRC}/*.py
+REPLACE_PYTHON=		Pyblosxom/data/pyblosxom.cgi
 EGG_NAME=		${DISTNAME}
 
 # There is a set of manual files in docs/source that could be
@@ -35,5 +35,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
 .endfor
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
