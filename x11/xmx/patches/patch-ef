@@ -1,4 +1,6 @@
-$NetBSD: patch-ef,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ef,v 1.2 2011/07/03 20:16:00 dholland Exp $
+
+- use modern C
 
 --- clients/xmxinit/xmxinit.c~	1995-04-19 23:05:04.000000000 -0400
 +++ clients/xmxinit/xmxinit.c	2008-08-31 02:38:46.000000000 -0400
