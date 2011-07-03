@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2011/04/22 13:44:19 obache Exp $
+# $NetBSD: Makefile,v 1.48 2011/07/03 14:22:46 shattered Exp $
 #
 
 DISTNAME=		xine-ui-0.99.6
@@ -41,5 +41,6 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
