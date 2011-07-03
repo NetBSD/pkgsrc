@@ -1,4 +1,6 @@
-$NetBSD: patch-ec,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ec,v 1.2 2011/07/03 20:16:00 dholland Exp $
+
+- use modern C
 
 --- clients/xmtg/ig.c~	1998-04-01 19:19:37.000000000 -0500
 +++ clients/xmtg/ig.c	2008-08-31 02:31:03.000000000 -0400
