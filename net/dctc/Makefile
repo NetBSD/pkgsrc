@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/04/22 13:44:20 obache Exp $
+# $NetBSD: Makefile,v 1.43 2011/07/03 11:55:14 jym Exp $
 
 DISTNAME=	dctc-0.85.9
 PKGREVISION=	2
@@ -18,6 +18,8 @@ USE_TOOLS+=		gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 CONFIGURE_ENV+=		BDB_TYPE=${BDB_TYPE}
+
+REPLACE_PERL+=		GDLjoiner
 
 CPPFLAGS+=		-I${BDBBASE}/include/${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	l:db4:${BDB_TYPE}
