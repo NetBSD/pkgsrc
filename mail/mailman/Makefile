@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2011/04/07 15:45:37 hauke Exp $
+# $NetBSD: Makefile,v 1.64 2011/07/03 06:20:06 markd Exp $
 
 DISTNAME=	mailman-2.1.14-1
 PKGNAME=	mailman-2.1.14.1
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.14/+download/
 EXTRACT_SUFX=	.tgz
@@ -103,7 +104,7 @@ SUBST_STAGE.paths=	post-patch
 # mailman depends a lot on it and will bitch if changed.
 CHECK_PERMS=	no
 
-REPLACE_PYTHON+=	cron/senddigests
+REPLACE_PYTHON+=	cron/senddigests tests/fblast.py tests/onebounce.py
 
 post-extract:
 	${CP} ${FILESDIR}/mailman.conf.dist ${WRKDIR}/mailman.conf.dist
