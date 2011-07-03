@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/06/10 09:39:52 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/07/03 02:09:48 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGREVISION=	3
@@ -86,7 +86,7 @@ REPLACE_SH+= \
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake bash:run
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"
