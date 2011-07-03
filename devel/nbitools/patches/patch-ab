@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/06/03 09:53:47 sakamoto Exp $
+$NetBSD: patch-ab,v 1.2 2011/07/03 19:45:14 jym Exp $
 
 --- config/extras/extras.tmpl.orig	Thu May 29 22:59:30 1997
 +++ config/extras/extras.tmpl
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/06/03 09:53:47 sakamoto Exp $
   */
  
 -     PERLPATH = /usr/local/bin/perl
-+     PERLPATH = /usr/bin/env perl
++     PERLPATH = ${PREFIX}/bin/perl
  
  /*#define UsePerlImboot	YES*/
  /*#define UsePerlXmkmf	YES*/
