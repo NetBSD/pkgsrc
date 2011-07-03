@@ -1,4 +1,6 @@
-$NetBSD: patch-ee,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ee,v 1.2 2011/07/03 20:16:00 dholland Exp $
+
+- use modern C
 
 --- clients/xmtg/layout.c~	1998-04-01 18:56:29.000000000 -0500
 +++ clients/xmtg/layout.c	2008-08-31 02:34:22.000000000 -0400
