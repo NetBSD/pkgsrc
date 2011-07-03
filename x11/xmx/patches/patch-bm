@@ -1,4 +1,6 @@
-$NetBSD: patch-bm,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-bm,v 1.2 2011/07/03 20:15:59 dholland Exp $
+
+- use modern C
 
 --- server/cursor.c~	1998-02-26 18:31:52.000000000 -0500
 +++ server/cursor.c	2008-08-31 00:40:42.000000000 -0400
