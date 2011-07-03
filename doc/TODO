@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10397 2011/07/02 22:21:34 dholland Exp $
+$NetBSD: TODO,v 1.10398 2011/07/03 11:49:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -1230,6 +1230,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spcaview-20060501
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
+	o ssmtp-2.64
 	o star-1.5.1
 	o startup-notification-0.12
 	o statist-1.3.0
