@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1597 2011/07/03 08:27:11 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1598 2011/07/03 10:09:43 dholland Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2495,5 +2495,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/ruby-nokogiri to 1.5.0 [taca 2011-07-01]
 	Updated misc/stellarium to 0.11.0 [jakllsch 2011-07-02]
 	Updated www/amaya to 11.3.1 [dholland 2011-07-02]
+	Updated devel/lmdbg to 0.16.0nb2 [dholland 2011-07-03]
+	Updated net/proftpd to 1.3.3enb1 [dholland 2011-07-03]
+	Updated mail/fml to 20100306nb1 [dholland 2011-07-03]
 	Updated editors/tomboy to 1.2.1nb5 [obache 2011-07-03]
+	Updated multimedia/libva to 1.0.6nb1 [dholland 2011-07-03]
 	Updated chat/jabberd to 1.4.2nb9 [obache 2011-07-03]
+	Updated net/py-boto to 1.9bnb1 [dholland 2011-07-03]
