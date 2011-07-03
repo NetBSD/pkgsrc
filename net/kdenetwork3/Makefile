@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2011/04/22 13:42:07 obache Exp $
+# $NetBSD: Makefile,v 1.79 2011/07/03 02:14:12 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		qca-tls>=1.0:../../security/qca-tls
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config bash:run
 PTHREAD_OPTS+=		require
 
 REPLACE_PERL+=		ksirc/dsirc \
@@ -21,10 +21,7 @@ REPLACE_PERL+=		ksirc/dsirc \
 			kopete/kopete/kconf_update/kopete-account-0.10.pl \
 			kopete/kopete/kconf_update/kopete-pluginloader.pl
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${SH}
-REPLACE_FILES.bash=	krfb/krfb_httpd/krfb_httpd
+REPLACE_BASH+=		krfb/krfb_httpd/krfb_httpd
 
 CONFIGURE_ARGS+=	--disable-meanwhile
 
