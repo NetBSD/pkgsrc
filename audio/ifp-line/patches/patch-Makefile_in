@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile_in,v 1.1 2011/07/03 22:04:51 dholland Exp $
+
+Avoid confusing make with multiple paths to the same file.
+
+--- Makefile.in~	2005-12-10 08:35:05.000000000 +0000
++++ Makefile.in
+@@ -70,7 +70,7 @@ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+ PROGRAMS = $(bin_PROGRAMS)
+ am_ifp_OBJECTS = ifp-ifp.$(OBJEXT) ifp-ifp_routines.$(OBJEXT)
+ ifp_OBJECTS = $(am_ifp_OBJECTS)
+-ifp_DEPENDENCIES = ./libunicodehack.a
++ifp_DEPENDENCIES = libunicodehack.a
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I.
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+@@ -193,7 +193,7 @@ target_alias = @target_alias@
+ EXTRA_DIST = $(man1_MANS) $(pkgdata_DATA)
+ ifp_SOURCES = ifp.c ifp_routines.c ifp_routines.h
+ ifp_CFLAGS = @LIBUSB_CFLAGS@
+-ifp_LDADD = ./libunicodehack.a @LIBICONV@ @LIBUSB_LIBS@
++ifp_LDADD = libunicodehack.a @LIBICONV@ @LIBUSB_LIBS@
+ noinst_LIBRARIES = libunicodehack.a
+ libunicodehack_a_SOURCES = unicodehack.c unicodehack.h
+ libunicodehack_a_CFLAGS = @CPPFLAGS@
