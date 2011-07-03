@@ -1,0 +1,23 @@
+$NetBSD: patch-Tomboy_tomboy.in,v 1.1 2011/07/03 07:39:27 obache Exp $
+
+* Fix CVE-2010-4005.
+  https://bugzilla.gnome.org/show_bug.cgi?id=635614
+
+--- Tomboy/tomboy.in.orig	2010-04-01 16:47:37.000000000 +0000
++++ Tomboy/tomboy.in
+@@ -3,13 +3,13 @@
+ if [ "x$PWD" = "x@srcdir@" ] ; then
+     echo "*** Running uninstalled @target@ ***"
+ 
+-    export LD_LIBRARY_PATH="../libtomboy/.libs${LD_LIBRARY_PATH+:$LD_LIBRARY_PATH}:./Addins/PrintNotes/.libs"
++    export LD_LIBRARY_PATH="../libtomboy/.libs${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}:./Addins/PrintNotes/.libs"
+     export TOMBOY_WRAPPER_PATH="$PWD/@wrapper@"
+     export MONO_PATH=$MONO_PATH:./Addins:../Mono.Addins/Mono.Addins:../Mono.Addins/Mono.Addins.Setup:../Mono.Addins/Mono.Addins.Gui
+ 
+     THIS_EXE="--debug ./@target@"
+ else
+-    export LD_LIBRARY_PATH="@pkglibdir@${LD_LIBRARY_PATH+:$LD_LIBRARY_PATH}"
++    export LD_LIBRARY_PATH="@pkglibdir@${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+     export MONO_PATH=$MONO_PATH:@pkglibdir@:@pkglibdir@/addins
+     export TOMBOY_WRAPPER_PATH="@bindir@/@wrapper@"
+ 

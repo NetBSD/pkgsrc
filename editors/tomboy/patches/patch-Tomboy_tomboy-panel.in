@@ -1,0 +1,15 @@
+$NetBSD: patch-Tomboy_tomboy-panel.in,v 1.1 2011/07/03 07:39:27 obache Exp $
+
+* Fix CVE-2010-4005
+  https://bugzilla.gnome.org/show_bug.cgi?id=635614
+
+--- Tomboy/tomboy-panel.in.orig	2010-02-06 20:59:53.000000000 +0000
++++ Tomboy/tomboy-panel.in
+@@ -1,6 +1,6 @@
+ #!/usr/bin/env bash
+ 
+-export LD_LIBRARY_PATH="@pkglibdir@${LD_LIBRARY_PATH+:$LD_LIBRARY_PATH}"
++export LD_LIBRARY_PATH="@pkglibdir@${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+ export MONO_PATH=$MONO_PATH:@pkglibdir@:@pkglibdir@/addins
+ export TOMBOY_WRAPPER_PATH="@bindir@/@wrapper@"
+ TOMBOY_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/tomboy"
