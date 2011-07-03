@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ac,v 1.2 2011/07/03 20:15:58 dholland Exp $
+
+- use modern C
 
 --- lib/Xmc/AddDis.c~	1998-02-01 14:02:27.000000000 -0500
 +++ lib/Xmc/AddDis.c	2008-08-31 00:17:18.000000000 -0400

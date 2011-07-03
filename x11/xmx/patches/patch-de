@@ -1,4 +1,6 @@
-$NetBSD: patch-de,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-de,v 1.2 2011/07/03 20:16:00 dholland Exp $
+
+- use modern C
 
 --- server/time.c~	1998-03-31 14:12:31.000000000 -0500
 +++ server/time.c	2008-08-31 02:23:31.000000000 -0400

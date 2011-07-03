@@ -1,4 +1,6 @@
-$NetBSD: patch-bk,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-bk,v 1.2 2011/07/03 20:15:59 dholland Exp $
+
+- use modern C
 
 --- server/connect.c~	1998-04-01 18:41:25.000000000 -0500
 +++ server/connect.c	2008-08-31 00:39:48.000000000 -0400

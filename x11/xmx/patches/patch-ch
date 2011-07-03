@@ -1,4 +1,6 @@
-$NetBSD: patch-ch,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-ch,v 1.2 2011/07/03 20:15:59 dholland Exp $
+
+- use modern C
 
 --- server/mitauth.c~	1996-04-03 11:41:24.000000000 -0500
 +++ server/mitauth.c	2008-08-31 01:37:39.000000000 -0400

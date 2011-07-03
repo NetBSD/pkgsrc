@@ -1,4 +1,6 @@
-$NetBSD: patch-db,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-db,v 1.2 2011/07/03 20:16:00 dholland Exp $
+
+- use modern C
 
 --- server/socket.c~	1998-01-08 14:59:17.000000000 -0500
 +++ server/socket.c	2008-08-31 02:22:10.000000000 -0400

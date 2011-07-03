@@ -1,4 +1,6 @@
-$NetBSD: patch-dj,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-dj,v 1.2 2011/07/03 20:16:00 dholland Exp $
+
+- use modern C
 
 --- server/xmc.c~	1998-04-01 18:45:05.000000000 -0500
 +++ server/xmc.c	2008-08-31 02:26:54.000000000 -0400

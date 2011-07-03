@@ -1,4 +1,6 @@
-$NetBSD: patch-by,v 1.1 2008/08/31 06:52:29 dholland Exp $
+$NetBSD: patch-by,v 1.2 2011/07/03 20:15:59 dholland Exp $
+
+- use modern C
 
 --- server/hash.c~	1997-12-15 12:12:11.000000000 -0500
 +++ server/hash.c	2008-08-31 01:33:36.000000000 -0400
