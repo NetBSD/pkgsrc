@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2011/04/22 13:44:11 obache Exp $
+# $NetBSD: Makefile,v 1.54 2011/07/03 05:43:34 markd Exp $
 
 DISTNAME=	kdeadmin-${_KDE_VERSION}
 PKGREVISION=	7
@@ -17,6 +17,9 @@ CONFIGURE_ARGS+=	--with-shadow
 CONFIGURE_ARGS+=	--without-shadow
 .endif
 CONFIGURE_ENV+=		DO_NOT_COMPILE="ksysv kdat"
+
+REPLACE_PERL+=	knetworkconf/backends/*.pl.in \
+		knetworkconf/backends/network-conf.in
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
