@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/12/23 11:44:52 dsainty Exp $
+# $NetBSD: Makefile,v 1.28 2011/07/03 18:16:19 dholland Exp $
 #
 
 DISTNAME=	xawtv-3.95
@@ -55,6 +55,7 @@ CONFIGURE_ARGS+=	--enable-mmx
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
