@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile_am,v 1.1 2011/07/03 22:04:51 dholland Exp $
+
+Avoid confusing make with multiple paths to the same file.
+
+--- Makefile.am~	2005-12-10 07:35:04.000000000 +0000
++++ Makefile.am
+@@ -5,7 +5,7 @@ EXTRA_DIST = $(man1_MANS) $(pkgdata_DATA
+ bin_PROGRAMS = ifp
+ ifp_SOURCES = ifp.c ifp_routines.c ifp_routines.h
+ ifp_CFLAGS = @LIBUSB_CFLAGS@
+-ifp_LDADD = ./libunicodehack.a @LIBICONV@ @LIBUSB_LIBS@
++ifp_LDADD = libunicodehack.a @LIBICONV@ @LIBUSB_LIBS@
+ 
+ noinst_LIBRARIES = libunicodehack.a
+ libunicodehack_a_SOURCES = unicodehack.c unicodehack.h
