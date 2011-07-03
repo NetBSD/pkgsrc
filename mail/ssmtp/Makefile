@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/08/17 16:52:48 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2011/07/03 11:47:50 obache Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -14,6 +14,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/stable/mail/ssmtp
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
