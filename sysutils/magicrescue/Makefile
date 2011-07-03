@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/27 19:17:08 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/03 11:52:55 jym Exp $
 #
 
 DISTNAME=		magicrescue-1.1.4
@@ -14,7 +14,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		perl:run
 HAS_CONFIGURE=		yes
 
-REPLACE_PERL=		tools/elfextract.pl \
+REPLACE_PERL=		magicsort \
+			tools/checkrecipe \
+			tools/elfextract.pl \
 			tools/gimp-resave.pl \
 			tools/gzip_rename.pl \
 			tools/laola.pl \
