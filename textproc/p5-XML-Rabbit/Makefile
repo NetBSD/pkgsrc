@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/19 11:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/03 20:47:34 jym Exp $
 
 DISTNAME=	XML-Rabbit-0.0.3
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/XML/Rabbit/.packlist
+
+REPLACE_PERL+=	bin/*
 
 DEPENDS+=	p5-Data-Visitor-[0-9]*:../../devel/p5-Data-Visitor
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
