@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/08/08 23:32:17 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2011/07/03 12:45:11 jym Exp $
 
 DISTNAME=	se
 PKGNAME=	SmartEiffel-2.0
@@ -25,6 +25,9 @@ ONLY_FOR_COMPILER=	gcc
 CHECK_INTERPRETER_SKIP=	SmartEiffel/contrib/edb/sec \
 			  SmartEiffel/misc/benchmarks/all_bench.elate \
 			  SmartEiffel/www/libraries/eiffeldoc.sh
+
+REPLACE_PYTHON+=	contrib/htmldoc/htmlshort
+
 post-patch:
 	${SED} "s:XXXWORKDIRXXX:${WRKDIR}:g" ${FILESDIR}/system.se \
 		> ${WRKSRC}/sys/system.se
@@ -41,4 +44,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/SmartEiffel
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/SmartEiffel
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
