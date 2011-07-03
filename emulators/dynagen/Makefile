@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/02/10 19:17:37 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/03 07:08:27 markd Exp $
 
 DISTNAME=	dynagen-0.11.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dyna-gen/}
 
@@ -16,7 +16,8 @@ DEPENDS+=	dynamips>=0.2.8rc1:../../emulators/dynamips
 
 NO_BUILD=	yes
 PY_PATCHPLIST=	yes
-REPLACE_PYTHON+= dynagen confConsole.py console.py dynamips_lib.py pemu_lib.py
+REPLACE_PYTHON+= dynagen confConsole.py console.py dynamips_lib.py pemu_lib.py \
+		pemubin.py pemuwrapper.py
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
