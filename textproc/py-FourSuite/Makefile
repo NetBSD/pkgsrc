@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/06/14 10:57:37 obache Exp $
+# $NetBSD: Makefile,v 1.19 2011/07/04 01:13:30 jym Exp $
 #
 
 DISTNAME=	4Suite-0.12.0a3
@@ -19,7 +19,21 @@ PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED=	25 24
 
+REPLACE_PYTHON+=	Ft/Lib/DistExt/Tools/*.py
+REPLACE_PYTHON+=	Ft/Ods/*.py
+REPLACE_PYTHON+=	Ft/Ods/Parsers/Odl/*.py
+REPLACE_PYTHON+=	Ft/Ods/Tools/*.py
+REPLACE_PYTHON+=	Ft/Rdf/*.py
+REPLACE_PYTHON+=	Ft/Server/ThirdParty/*.py
+REPLACE_PYTHON+=	Ft/Server/Share/Data/*.py
+REPLACE_PYTHON+=	Ft/ThirdParty/Xvif/*.py
+REPLACE_PYTHON+=	Ft/Xml/*.py
+REPLACE_PYTHON+=	Ft/Xml/*/*.py
+REPLACE_PYTHON+=	test/test.py
+REPLACE_PYTHON+=	test/Xml/XPath/*/*.py
+
 #pyxml is needed at runtime to get pyexpat
 #.include "../../textproc/py-xml/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
