@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2011/05/01 23:28:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2011/07/04 21:37:34 dholland Exp $
 
 DISTNAME=		hercules-3.07
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.hercules-390.org/
 
@@ -21,6 +22,7 @@ USE_LIBTOOL=		YES
 PTHREAD_OPTS+=		require
 
 REPLACE_PERL+=		util/cvslvlck
+USE_TOOLS+=		perl:run
 
 INSTALLATION_DIRS+=	bin share/examples/hercules
 #CONFIGURE_ARGS+=	--enable-setuid-hercifc=hercules
