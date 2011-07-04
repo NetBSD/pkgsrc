@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/04 00:18:07 jym Exp $
 #
 
 DISTNAME=	asymptote-1.85
@@ -27,6 +27,14 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 USE_TOOLS+=		gmake makeinfo perl
 CFLAGS+=		-DGC_NO_THREAD_REDIRECTS
 
+REPLACE_PYTHON+=	GUI/*.py
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	post-patch
+SUBST_FILES.python=	Makefile.in
+SUBST_MESSAGE.python=	Fixing path to python interpreter.
+SUBST_SED.python+=	-e "s|/usr/bin/env python|${PYTHONBIN:Q}|g"
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1x \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1
@@ -40,6 +48,7 @@ BUILD_DEPENDS+=         gtexinfo-[0-9]*:../../devel/gtexinfo
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../lang/python/application.mk"
 # next two could be split off into options
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
