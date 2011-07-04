@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2011/07/04 21:33:52 jym Exp $
+# $NetBSD: Makefile,v 1.91 2011/07/04 21:58:37 jym Exp $
 
 DISTNAME=		TeXmacs-1.0.6.15-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 TEX_ACCEPTED=		teTeX3
 
 PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
+PYTHON_PATCH_SCRIPTS+=	plugins/sage/bin/tm_sage
+PYTHON_PATCH_SCRIPTS+=	plugins/mathematica/bin/realpath.py
 
 SUBST_CLASSES+=		init
 SUBST_STAGE.init=	post-patch
@@ -41,9 +43,6 @@ REPLACE_SH+=		plugins/mupad/bin/tm_mupad_help
 REPLACE_SH+=		plugins/octave/bin/tm_octave
 REPLACE_SH+=		plugins/reduce/bin/tm_reduce
 REPLACE_SH+=		plugins/xypic/bin/tm_xypic
-
-REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
-REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
 
 pre-install:
 	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
