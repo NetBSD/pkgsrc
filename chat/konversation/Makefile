@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/04/22 13:43:06 obache Exp $
+# $NetBSD: Makefile,v 1.31 2011/07/04 21:22:46 jym Exp $
 #
 
 DISTNAME=	konversation-1.3.1
@@ -20,16 +20,11 @@ USE_CMAKE=	yes
 USE_TOOLS+=	perl msgfmt
 USE_LANGUAGES=	c c++
 
-REPLACE_PERL+=		data/updaters/konversation-0.19-appearance.pl \
-			data/updaters/konversation-0.19-colorcodes.pl \
-			data/updaters/konversation-0.19-colors.pl \
-			data/updaters/konversation-0.19-custombrowser.pl \
-			data/updaters/konversation-0.19-notifylists.pl \
-			data/updaters/konversation-0.19-sortorder.pl \
-			data/updaters/konversation-0.19-tabplacement.pl \
-			data/updaters/konversation-0.20-customfonts.pl \
-			data/updaters/konversation-0.20-quickbuttons.pl
-REPLACE_BASH+=		data/scripts/mail
+REPLACE_BASH+=		data/scripts/*
+REPLACE_PERL+=		data/updaters/konversation-*.pl
+REPLACE_PERL+=		data/scripts/*
+REPLACE_PYTHON+=	data/scripts/*
+
 USE_TOOLS+=		bash:run
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,6 +35,7 @@ DEPENDS+=		psmisc>=20.1:../../sysutils/psmisc
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
