@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2011/07/04 23:08:22 jym Exp $
+Clear path to env(1). setup.py will then use python absolute path directly.
+--- setup.py.orig	2011-07-04 22:30:30.000000000 +0000
++++ setup.py
+@@ -130,6 +130,7 @@ os.environ["SGML_CATALOG_FILES"] = cat
+         else:
+             style_set = ""
+ 
++        env_exec = ''
+         script_args = { 'env_executable': env_exec,
+                         'env_args': env_exec and (' %s' % env_args) or '',
+                         'py_executable': py_exec,
