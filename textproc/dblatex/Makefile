@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/08/24 01:45:10 gls Exp $
+# $NetBSD: Makefile,v 1.8 2011/07/04 23:08:22 jym Exp $
 #
 
 DISTNAME=	dblatex-0.3
@@ -21,6 +21,8 @@ DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 PYDISTUTILSPKG=	yes
 USE_LANGUAGES=	# none
 
+REPLACE_PYTHON+=	lib/dbtexmf/dblatex/xetex/*.py
+
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Fixing man page installation path.
 SUBST_STAGE.man=	pre-configure
@@ -28,11 +30,6 @@ SUBST_FILES.man=	setup.py
 SUBST_SED.man+=		-e 's,share/man/man1,${PKGMANDIR}/man1,'
 SUBST_SED.man+=		-e "s,'python','${PYTHONBIN}',"
 
-#SUBST_CLASSES+=		path
-#SUBST_MESSAGE.path=	Fixing python path.
-#SUBST_STAGE.path=	pre-configure
-#SUBST_FILES.path=	scripts/dblatex
-#SUBST_SED.path=         -e 's,/usr/bin/env python,${PYTHONBIN},g'
-
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
