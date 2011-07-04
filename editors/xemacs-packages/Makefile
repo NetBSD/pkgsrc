@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/04/30 06:35:01 tron Exp $
+# $NetBSD: Makefile,v 1.56 2011/07/04 22:23:12 jym Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.16
@@ -163,9 +163,11 @@ REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/idlwave/idlwave_cat
 REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/fonts/makesub
 REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/lisp/hyperbole/file-newer
 
+REPLACEMENTS.python+=	${PREFIX}/lib/xemacs/xemacs-packages/lisp/python-modes/pydoc_lisp.py
+
 REPLACEMENTS.zsh=	${PREFIX}/lib/xemacs/xemacs-packages/lisp/erc/mkChangeLog.upstream
 
-REPLACEMENT_PROGS=	perl zsh
+REPLACEMENT_PROGS=	perl python zsh
 
 .include "../../editors/xemacs/Makefile.pkg"
 
