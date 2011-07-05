@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 11:47:32 fhajny Exp $
+$NetBSD: patch-aa,v 1.2 2011/07/05 13:09:05 mspo Exp $
 
-Makefile really expects Bash to be used for shell calls
-
---- Makefile.orig	2009-10-06 14:45:47.000000000 +0000
+--- Makefile.orig	2011-07-05 12:03:54.000000000 +0000
 +++ Makefile
-@@ -1,4 +1,4 @@
--
-+SHELL=@SHELL@
+@@ -1,4 +1,5 @@
  TMPDIR ?= /tmp
++SHELL=@SHELL@
  
  RABBITMQ_NODENAME ?= rabbit
+ RABBITMQ_SERVER_START_ARGS ?=
