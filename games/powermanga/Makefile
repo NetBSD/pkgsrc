@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/10/29 20:21:43 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2011/07/05 01:39:10 dholland Exp $
 #
 
 DISTNAME=	powermanga-0.90
@@ -51,4 +51,5 @@ SUBST_FILES.path+=	texts/Makefile.in
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
