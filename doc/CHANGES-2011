@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1604 2011/07/05 14:29:16 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1605 2011/07/05 16:31:54 dholland Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2504,7 +2504,14 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-boto to 1.9bnb1 [dholland 2011-07-03]
 	Updated net/mikutter to 0.0.3.10 [obache 2011-07-03]
 	Updated games/scid to 3.6.1nb2 [mspo 2011-07-03]
+	Updated x11/xgamma to 1.0.3nb1 [dholland 2011-07-03]
 	Updated security/openssl to 0.9.8qnb3 [tez 2011-07-04]
+	Updated emulators/hercules to 3.07nb1 [dholland 2011-07-04]
+	Updated lang/gcc44 to 4.4.5nb3 [dholland 2011-07-05]
+	Updated net/dhcpd-pools to 2.14nb1 [dholland 2011-07-05]
+	Updated parallel/sge to 6.2.2.1nb4 [dholland 2011-07-05]
+	Updated multimedia/fxtv to 1.03nb18 [dholland 2011-07-05]
+	Updated games/quakeforge to 0.5.5nb10 [dholland 2011-07-05]
 	Updated net/bind98 to 9.8.0pl4 [taca 2011-07-05]
 	Updated net/bind97 to 9.7.3pl3 [taca 2011-07-05]
 	Updated net/bind96 to 9.6.3.1.ESV.4pl3 [taca 2011-07-05]
