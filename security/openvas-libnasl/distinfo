@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/04 01:09:31 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2011/07/05 05:02:10 dholland Exp $
 
 SHA1 (openvas-libnasl-2.0.0.tar.gz) = 91d6e0c9e6686aaba6b9bc64df3a941f703381af
 RMD160 (openvas-libnasl-2.0.0.tar.gz) = 4f1933bfa2c4cdfdd8047e2e5572ed0f045b7719
 Size (openvas-libnasl-2.0.0.tar.gz) = 497973 bytes
-SHA1 (patch-aa) = 6806a22757a48a53faa278342e6ea1098e0a5bad
+SHA1 (patch-aa) = da45176003eaf27c61b707a17cef48ee2fcb95da
+SHA1 (patch-nasl_Makefile) = 395a2da0af5249c9cce0e916f1c0f641bc183a21
