@@ -1,11 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/23 00:01:38 tez Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/05 19:48:59 tez Exp $
 
 DISTNAME=	krb5-appl-1.0.1
 PKGNAME=	mit-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5-appl/1.0/
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar
+
+PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
+
+PATCHFILES=	2011-005-patch.txt
 
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/
@@ -21,9 +26,12 @@ CONFLICTS+=	kth-krb4-[0-9]*
 CONFLICTS+=	mit-krb5<1.8
 
 USE_TOOLS+=		yacc
+USE_TOOLS+=		autoconf
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+PATCH_DIST_ARGS=	-d ${WRKSRC} -p1
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mit-krb5
 PKG_SUPPORTED_OPTIONS=	kerberos-prefix-cmds
@@ -56,6 +64,11 @@ post-extract:
 	@${ECHO} "=> Extracting internal tarball";	\
 	extract_file="${WRKDIR}/${DISTNAME}.tar.gz";	\
 	cd ${WRKDIR} && ${EXTRACT_CMD}
+
+pre-configure:
+	@${ECHO} "=> Generating configure";		\
+	cd ${WRKSRC}; autoheader -I ${WRKSRC} -f;	\
+	cd ${WRKSRC}; autoconf -I ${WRKSRC} -f;
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/mit-krb5/buildlink3.mk"
