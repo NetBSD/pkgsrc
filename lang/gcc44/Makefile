@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2011/04/22 14:40:43 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/07/05 00:28:33 dholland Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -68,6 +68,8 @@ REPLACE_BASH+= contrib/reghunt/date_based/reg_search
 REPLACE_BASH+= gcc/dbgcnt.def
 REPLACE_BASH+= gcc/testsuite/gcc.test-framework/gen_directive_tests
 REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
+
+REPLACE_PYTHON+=libjava/contrib/aot-compile.in
 
 # Optional languages - change as required
 # Ada could be added although there is a bootstrapping issue.  See
@@ -179,6 +181,7 @@ GENERATE_PLIST+=                                                        \
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print \
 	| ${SORT} ;
 
+.include "../../lang/python/application.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
