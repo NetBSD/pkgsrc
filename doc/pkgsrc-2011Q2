@@ -1,8 +1,9 @@
 Statistics
 ==========
 
-11222 packages in pkgsrc-2011Q2, up from 10973 in pkgsrc-2011Q1 [XXX - prior to obache's deletions - agc]
-10033 distinct pkgsrc entries
+11222 packages in pkgsrc-2011Q2, up from 10973 in pkgsrc-2011Q1 [XXX - best guess prior to obache's deletions - agc]
+10585 pkgsrc Makefiles
+10033 distinct pkgsrc entries [XXX figure unreliable - agc]
 250 pkgsrc entries added since previous branch
 1 entry removed, 4 entries replaced by successors
 
