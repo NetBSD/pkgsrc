@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/27 06:41:42 adam Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/05 01:14:20 dholland Exp $
 
 DISTNAME=	dhcpd-pools-2.14
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dhcpd-pools/}
 
@@ -18,6 +19,7 @@ CONFIGURE_ARGS+=	--with-dhcpd-leases=${VARBASE}/db/dhcpd.leases
 
 BUILD_DEFS+=		VARBASE
 REPLACE_PERL=		contrib/snmptest.pl
+USE_TOOLS+=		perl:run
 
 SUBST_CLASSES+=		fix-name
 SUBST_STAGE.fix-name=	pre-configure
