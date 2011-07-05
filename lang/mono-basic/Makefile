@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/06/10 09:39:56 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/07/05 15:06:28 schnoebe Exp $
 
 DISTNAME=	mono-basic-2.10
 PKGREVISION=	1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Visual Basic .NET support for mono
+LICENSE=	gnu-lgpl-v2 AND mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
