@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/08/29 19:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2011/07/05 01:40:17 dholland Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -58,6 +58,7 @@ do-install:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
