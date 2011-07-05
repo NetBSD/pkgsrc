@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
+$NetBSD: patch-ah,v 1.2 2011/07/05 03:27:22 dholland Exp $
+
+Handle png.
 
 --- imgsav_dlg.c.orig	Mon Sep  6 15:07:29 1999
 +++ imgsav_dlg.c

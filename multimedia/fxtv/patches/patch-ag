@@ -1,4 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
+$NetBSD: patch-ag,v 1.2 2011/07/05 03:27:22 dholland Exp $
+
+Handle png.
+Use raw instead of AIFF for ... (unclear what) ...
 
 --- fxtv_cnvt.sh.orig	Mon Feb 12 22:18:40 2001
 +++ fxtv_cnvt.sh

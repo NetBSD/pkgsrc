@@ -1,6 +1,9 @@
-$NetBSD: patch-bc,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
+$NetBSD: patch-bc,v 1.2 2011/07/05 03:27:22 dholland Exp $
 
---- tvmenu.c.orig	2001-02-12 22:19:33.000000000 +0100
+Handle always-on-top.
+Fix LP64 problems.
+
+--- tvmenu.c.orig	2001-02-12 21:19:33.000000000 +0000
 +++ tvmenu.c
 @@ -103,7 +103,7 @@ typedef void XT_CB( Widget w, XtPointer 
  
@@ -36,6 +39,15 @@ $NetBSD: patch-bc,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
  void TVMENUSetSelectedInputFormat( TV_INPUT_FORMAT fmt )
  {
      TV_MENUITEM_DEF *mi;
+@@ -896,7 +907,7 @@ void TVTOOLSSetToggleState( TV_TOOLITEM_
+             break;
+ 
+     if ( i >= XtNumber( Toolitem_def ) ) {
+-        fprintf( stderr, "TVTOOLSETSetToggleState: Bad key %ld\n", i );
++        fprintf( stderr, "TVTOOLSETSetToggleState: Bad key %d\n", i );
+         exit(1);
+     }
+ 
 @@ -1008,6 +1019,19 @@ void TVMENUSetSelectedAfcMode( TV_BOOL a
                                  NULL);
  }
@@ -64,3 +76,12 @@ $NetBSD: patch-bc,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
  }
  
  /*  TVTOOLSSetStationText  -  Sets the channel text to the specified      */
+@@ -1134,7 +1159,7 @@ void TVTOOLSResync()
+         strncat( chan_str, station->id, sizeof(chan_str)-1 );
+     }
+     else if ( s.tuner_chan_active )
+-        sprintf( chan_str, "%ld", s.tuner_chan );
++        sprintf( chan_str, "%d", s.tuner_chan );
+     else
+         sprintf( chan_str, "f%.2f", s.tuner_freq );
+ 

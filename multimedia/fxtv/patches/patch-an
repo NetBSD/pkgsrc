@@ -1,4 +1,6 @@
-$NetBSD: patch-an,v 1.1 2006/01/03 15:03:02 joerg Exp $
+$NetBSD: patch-an,v 1.2 2011/07/05 03:27:22 dholland Exp $
+
+Dragonfly support.
 
 --- voxware.h.orig	2006-01-03 14:46:08.000000000 +0000
 +++ voxware.h

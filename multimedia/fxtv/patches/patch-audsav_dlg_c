@@ -1,0 +1,51 @@
+$NetBSD: patch-audsav_dlg_c,v 1.1 2011/07/05 03:27:22 dholland Exp $
+
+Fix LP64 problems.
+
+--- audsav_dlg.c~	1999-09-04 18:09:01.000000000 +0000
++++ audsav_dlg.c
+@@ -154,7 +154,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= XtNumber( Ffmt_item_def ) ) {
+             fprintf( stderr, 
+-                     "TVAUDSAVDIALOGSetSel: Unsupported filefmt %ld\n", 
++                     "TVAUDSAVDIALOGSetSel: Unsupported filefmt %d\n", 
+                      choice );
+             exit(1);
+         }
+@@ -171,7 +171,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= XtNumber( Sfmt_item_def ) ) {
+             fprintf( stderr, 
+-                     "TVAUDSAVDIALOGSetSel: Unsupported sampfmt %ld\n", 
++                     "TVAUDSAVDIALOGSetSel: Unsupported sampfmt %d\n", 
+                      choice );
+             exit(1);
+         }
+@@ -187,7 +187,7 @@ static void SetMenuSelection( Widget men
+                 break;
+             }
+         if ( i >= XtNumber( Chan_item_def ) ) {
+-            fprintf( stderr, "TVAUDSAVDIALOGSetSel: Unsupported #chan %ld\n", 
++            fprintf( stderr, "TVAUDSAVDIALOGSetSel: Unsupported #chan %d\n", 
+                              choice );
+             exit(1);
+         }
+@@ -203,7 +203,7 @@ static void SetMenuSelection( Widget men
+                 break;
+             }
+         if ( i >= XtNumber( Rate_item_def ) ) {
+-            fprintf( stderr, "TVAUDSAVDIALOGSetSel: Unsupported rate %ld\n", 
++            fprintf( stderr, "TVAUDSAVDIALOGSetSel: Unsupported rate %d\n", 
+                              choice );
+             exit(1);
+         }
+@@ -698,7 +698,7 @@ static void PlaybackCmdCB( Widget w, XtP
+                 break;
+ 
+         /*  Build Cmd: "sox %s - %s -c %d -r %d -"  */
+-        sprintf( shell_cmd, "sox %s - %s -c %d -r %ld -",
++        sprintf( shell_cmd, "sox %s - %s -c %d -r %d -",
+                  Ffmt_item_def[j].sox_opt, Sfmt_item_def[i].sox_opt,
+                  Sel_stereo ? 2 : 1, Sel_rate );
+     }

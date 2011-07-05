@@ -1,0 +1,15 @@
+$NetBSD: patch-appear_dlg_c,v 1.1 2011/07/05 03:27:22 dholland Exp $
+
+Fix LP64 warning.
+
+--- appear_dlg.c~	1999-09-04 18:10:26.000000000 +0000
++++ appear_dlg.c
+@@ -159,7 +159,7 @@ static void ControlSliderScrollCB( Widge
+     TV_CAPTURE        *c       = &G_glob.capture;
+     TV_APPEAR_CTL_DEF *r       = (TV_APPEAR_CTL_DEF *) cl_data;
+     float              percent;
+-    int                pos     = (int)cb_data;
++    int                pos     = (intptr_t)cb_data;
+     Dimension          length;
+     double             lim[2],
+                        val;

@@ -1,0 +1,127 @@
+$NetBSD: patch-actions_c,v 1.1 2011/07/05 03:27:22 dholland Exp $
+
+Fix LP64 problems.
+Fix illegal C.
+
+--- actions.c~	2001-02-12 19:26:23.000000000 +0000
++++ actions.c
+@@ -238,7 +238,7 @@ static void TVACTIONKeyStationEntryHdlr(
+         S_chan_entry_active = TRUE;
+         S_entry_freq   = do_freq;
+         if ( isa_digit )
+-            sprintf( S_chan_str, "%ld", digit );
++            sprintf( S_chan_str, "%d", digit );
+         else if ( do_freq )
+             strcpy( S_chan_str, "f" );
+         else 
+@@ -549,7 +549,7 @@ static void TVActionSetStationAction(
+ 
+         /*  Are we incrementally changing the channel or frequency?  */
+         if (( str[0] == '+' ) || ( str[0] == '-' )) {
+-            if ( toupper( str[1] ) == 'F' )
++            if ( toupper( (unsigned char)str[1] ) == 'F' )
+                 freq_inc = ( str[0] == '-' ? -1 : +1 );
+             else {
+                 chan_inc = atoi( str );
+@@ -609,7 +609,7 @@ static void TVActionSetStationAction(
+             if (( sscanf( str, "f%f", &chan_freq ) == 1 ) ||
+                 ( sscanf( str, "F%f", &chan_freq ) == 1 )) 
+                 chan_num  = -1;
+-            else if (( sscanf( str, "%ld", &chan_num ) == 1 ) &&
++            else if (( sscanf( str, "%d", &chan_num ) == 1 ) &&
+                      ( chan_num >= TV_CHAN_MIN ))
+                 chan_freq = 0.0;
+             else {
+@@ -729,8 +729,10 @@ static void TVActionToggleZoomAction(
+ 
+         arg[0] = '\0';
+         strncat( arg, params[0], sizeof(arg)-1 );
+-        while ( *p != '\0' )
+-            *(p++) = tolower( *p );
++        while ( *p != '\0' ) {
++            *p = tolower( (unsigned char)*p );
++	    p++;
++	}
+         if ( strncmp( arg, "win", strlen("win") ) == 0 )
+             fullscreen = False;
+         else if ( strncmp( arg, "full", strlen("full") ) == 0 )
+@@ -925,8 +927,10 @@ static void TVActionSetCaptureInputActio
+ 
+             arg[0] = '\0';
+             strncat( arg, str, sizeof(arg)-1 );
+-            while ( *p != '\0' )
+-                *(p++) = tolower( *p );
++            while ( *p != '\0' ) {
++                *p = tolower( (unsigned char)*p );
++		p++;
++	    }
+ 
+             if ( strncmp( str, "tuner", strlen("tuner") ) == 0 )
+                 dev = TV_DEVICE_TUNER;
+@@ -1032,8 +1036,10 @@ static void TVActionSetTunerModeAction(
+ 
+             arg[0] = '\0';
+             strncat( arg, str, sizeof(arg)-1 );
+-            while ( *p != '\0' )
+-                *(p++) = tolower( *p );
++            while ( *p != '\0' ) {
++                *p = tolower( (unsigned char)*p );
++		p++;
++	    }
+ 
+             if ( strncmp( str, "ant", strlen("ant") ) == 0 )
+                 mode = TV_TUNER_MODE_ANTENNA;
+@@ -1151,7 +1157,7 @@ static void TVActionSaveImageAction(
+         else
+             len = p - dsk->fn_freeze_base;
+ 
+-        sprintf( fname, "%.*s%.3ld%s", (int)len, dsk->fn_freeze_base, 
++        sprintf( fname, "%.*s%.3d%s", (int)len, dsk->fn_freeze_base, 
+                         dsk->freeze_next_suffix, (p ? p : "") );
+     }
+     else
+@@ -1306,7 +1312,7 @@ static void TVActionVideoRecordStartActi
+     }
+ 
+     if (( *num_params == 1 ) && params[0] ) {
+-        if (( sscanf( params[0], "%ldx%ld", &w, &h ) != 2 ) ||
++        if (( sscanf( params[0], "%dx%d", &w, &h ) != 2 ) ||
+             ( w <= 0 ) || ( h <= 0 )) {
+             fprintf( stderr, 
+                 "TVActionVideoRecordStartAction:  Bad resolution.\n" );
+@@ -1426,7 +1432,7 @@ void TVActionSetVolume( TV_INT32 vol )
+     String   param[1] = { str };
+     Cardinal num_param = 1;
+ 
+-    sprintf( str, "%ld", vol );
++    sprintf( str, "%d", vol );
+     TVActionSetVolumeAction( NULL, NULL, param, &num_param );
+ }
+ 
+@@ -1436,7 +1442,7 @@ void TVActionSetVolumeRel( TV_INT32 vol_
+     String   param[1] = { str };
+     Cardinal num_param = 1;
+ 
+-    sprintf( str, "%+ld", vol_delta );
++    sprintf( str, "%+d", vol_delta );
+     TVActionSetVolumeAction( NULL, NULL, param, &num_param );
+ }
+ 
+@@ -1467,7 +1473,7 @@ void TVActionSetCaptureInputRel( TV_INT3
+     String   param[1] = { str };
+     Cardinal num_param = 1;
+ 
+-    sprintf( str, "%+ld", dev_delta );
++    sprintf( str, "%+d", dev_delta );
+     TVActionSetCaptureInputAction( NULL, NULL, param, &num_param );
+ }
+ 
+@@ -1528,7 +1534,7 @@ static void TVActionFlipStationAction(
+     }
+ 
+     if ( p->last_chan >= TV_CHAN_MIN )
+-      sprintf( chan_str, "%ld" , p->last_chan );
++      sprintf( chan_str, "%d" , p->last_chan );
+     else
+       sprintf( chan_str, "f%f", p->last_freq );
+     TVActionSetStation( chan_str );
