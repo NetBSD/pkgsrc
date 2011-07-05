@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/01/13 13:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/07/05 01:59:46 dholland Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	17
@@ -45,6 +45,7 @@ pre-configure:
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
