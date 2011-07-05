@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/04 01:09:31 adrianp Exp $
+$NetBSD: patch-aa,v 1.2 2011/07/05 05:02:10 dholland Exp $
+
+Remove bashism.
 
 --- test/test_script_signing.sh.orig	2008-06-30 11:55:03.000000000 +0100
 +++ test/test_script_signing.sh
