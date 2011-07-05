@@ -1,4 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2007/10/05 22:14:34 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2011/07/05 04:28:34 dholland Exp $
+
+Don't disable deprecated functions; more stuff has been deprecated
+since this package was shipped. Don't use -ansi -pedantic either.
+
+Configure for pkgsrc.
 
 --- Makefile.orig	2005-02-28 15:00:56.000000000 +0000
 +++ Makefile
@@ -8,12 +13,12 @@ $NetBSD: patch-aa,v 1.6 2007/10/05 22:14:34 joerg Exp $
  
 -DEFS := -Wall -ansi -pedantic -D_GNU_SOURCE -DGDK_DISABLE_DEPRECATED \
 -	-DGTK_DISABLE_DEPRECATED
-+DEFS := -Wall -D_GNU_SOURCE -DGDK_DISABLE_DEPRECATED
++DEFS := -Wall -D_GNU_SOURCE
  
  DEFS := $(shell pkg-config --cflags gtk+-2.0) $(DEFS)
  
 -CXXFLAGS := $(DEFS) -O2 -fomit-frame-pointer -ffast-math
-+CXXFLAGS := $(DEFS)
++CXXFLAGS += $(DEFS)
  #CXXFLAGS := $(DEFS) -g
  
  LDFLAGS := -lpng -lz

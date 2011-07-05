@@ -1,0 +1,15 @@
+$NetBSD: patch-my_png_cpp,v 1.1 2011/07/05 04:28:34 dholland Exp $
+
+Update for png 1.5.
+
+--- my_png.cpp~	2005-02-28 15:00:56.000000000 +0000
++++ my_png.cpp
+@@ -58,7 +58,7 @@ void save_file(image_info* img, char* fi
+         return;
+     }
+ 
+-    if (setjmp(png_ptr->jmpbuf)) {
++    if (setjmp(png_jmpbuf(png_ptr))) {
+         fprintf(stderr, "Internal error in libpng\n");
+         if (png_pal)
+             delete[] png_pal;
