@@ -1,0 +1,15 @@
+$NetBSD: patch-remotetrans_c,v 1.1 2011/07/05 03:27:22 dholland Exp $
+
+Fix LP64 problems.
+
+--- remotetrans.c~	1999-09-05 16:36:35.000000000 +0000
++++ remotetrans.c
+@@ -152,7 +152,7 @@ void TVREMOTETRANSParse( Display *displa
+     }
+     Rem_trans_len = i;
+ 
+-    RMPRINTF(( "\nTVREMOTE:  Parsed %ld user translations:\n",
++    RMPRINTF(( "\nTVREMOTE:  Parsed %d user translations:\n",
+                Rem_trans_len ));
+     for ( i = 0; i < Rem_trans_len; i++ ) {
+         RMPRINTF(( "   <Remote>%-10s : %s(",
