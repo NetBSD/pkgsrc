@@ -1,8 +1,19 @@
-$NetBSD: patch-ao,v 1.1 2006/01/05 19:07:44 joerg Exp $
+$NetBSD: patch-ao,v 1.2 2011/07/05 03:27:22 dholland Exp $
 
---- haup_remote.c.orig	2006-01-03 14:47:24.000000000 +0000
+Needs sys/ioctl.h.
+Dragonfly support.
+
+--- haup_remote.c.orig	2000-05-21 15:10:04.000000000 +0000
 +++ haup_remote.c
-@@ -38,6 +38,9 @@
+@@ -31,6 +31,7 @@
+  *
+  */
+ 
++#include <sys/ioctl.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+@@ -38,6 +39,9 @@
  #include <sys/fcntl.h>
  #ifdef __NetBSD__
  # include <dev/ic/bt8xx.h>

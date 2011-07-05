@@ -1,4 +1,6 @@
-$NetBSD: patch-ca,v 1.1 2008/01/16 13:53:55 jmcneill Exp $
+$NetBSD: patch-ca,v 1.2 2011/07/05 03:27:22 dholland Exp $
+
+Use correct sized types.
 
 --- tvtypes.h.orig	2008-01-15 18:31:30.000000000 -0500
 +++ tvtypes.h	2008-01-15 18:32:33.000000000 -0500
