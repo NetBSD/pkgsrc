@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2011/01/13 13:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2011/07/05 03:44:06 dholland Exp $
 
 DISTNAME=		quakeforge-0.5.5
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=quake/}
 
@@ -25,6 +25,8 @@ SUBST_MESSAGE.dsp=	Adjusting sound device path.
 SUBST_FILES.dsp=	libs/audio/targets/snd_oss.c
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
+REPLACE_PYTHON+=	tools/qfcc/source/qfpreqcc
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quakeforge
 PKG_SUPPORTED_OPTIONS=	inet6
 
@@ -47,10 +49,15 @@ PLIST.linux=		yes
 
 INSTALLATION_DIRS=	include/QF/GL include/QF/plugin include/QF/ruamoko/gui
 
+.include "../../lang/python/application.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xf86vidmodeproto/buildlink3.mk"
+.include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
