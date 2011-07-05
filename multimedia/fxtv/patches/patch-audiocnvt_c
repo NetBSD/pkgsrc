@@ -1,0 +1,15 @@
+$NetBSD: patch-audiocnvt_c,v 1.1 2011/07/05 03:27:22 dholland Exp $
+
+Fix LP64 problems.
+
+--- audiocnvt.c~	1999-09-04 18:27:13.000000000 +0000
++++ audiocnvt.c
+@@ -166,7 +166,7 @@ void TVAUDIOCNVTBuildSoundFmtSoxArgs(
+ 
+     if ( fmt->file_fmt == TV_AUDIO_FILE_FMT_RAW ) {
+         srec = GetSampleFmtDef( fmt->samp_fmt );
+-        sprintf( args, "%s -c %d -r %ld",
++        sprintf( args, "%s -c %d -r %d",
+                  srec->sox_opt, fmt->stereo ? 2 : 1, fmt->samp_rate );
+     }
+     else {
