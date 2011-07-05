@@ -1,0 +1,116 @@
+$NetBSD: patch-tvscreen_c,v 1.1 2011/07/05 03:27:22 dholland Exp $
+
+Fix LP64 problems.
+
+--- tvscreen.c~	2000-05-21 13:49:47.000000000 +0000
++++ tvscreen.c
+@@ -517,8 +517,8 @@ void TVSCREENInit( TV_XSCREEN *s,
+                                (int *) &s->ram_size );
+             s->ram_size *= 1024;
+             
+-            SUPRINTF(( "   BaseAddr = 0x%lx, Pitch = %ld, "
+-                          "BankSize/RamSize = %ld/%ld\n",
++            SUPRINTF(( "   BaseAddr = 0x%x, Pitch = %d, "
++                          "BankSize/RamSize = %d/%d\n",
+                        s->base_addr, s->pitch, s->bank_size, s->ram_size ));
+         }
+     }
+@@ -611,7 +611,7 @@ void TVSCREENInit( TV_XSCREEN *s,
+ 
+         /*  FIXME:  Handle byte swapping  */
+         SUPRINTF(( 
+-           "   %3ld     %-11s   %2d  %1ld,%1ld  %.8lx, %.8lx, %.8lx   "
++           "   %3d     %-11s   %2d  %1d,%1d  %.8lx, %.8lx, %.8lx   "
+            "--      %-3s\n",
+            rank, visual_classes[ v->class ], v->depth, Bpp_pixmap, Bpp_fbuffer,
+            v->red_mask, v->green_mask, v->blue_mask, 
+@@ -1003,11 +1003,12 @@ static void TVSCREENGetCapturePixGeom( T
+ 
+             /*  Prefer 2Bpp byte swapped over the rest (since its the  */
+             /*    thing NewFrameHdlr currently byte swaps well).       */
+-            else if (( best_pg.Bpp != 2 ) || !best_pg.swap_bytes )
++            else if (( best_pg.Bpp != 2 ) || !best_pg.swap_bytes ) {
+                 if  (( pg.Bpp      == 2 ) &&  pg.swap_bytes      )
+                     take_it = True;
+                 else if ( pg.Bpp == 2 )
+                     take_it = True;
++	    }
+ 
+             if ( take_it ) {
+                 best_i          = i;
+@@ -1628,7 +1629,7 @@ void TVSCREENVideoWinEventHdlr(
+     }
+ 
+     S_call_level++;
+-    EVPRINTF(( "%2ld: VideoWin EVENT: %s\n", S_call_level, 
++    EVPRINTF(( "%2d: VideoWin EVENT: %s\n", S_call_level, 
+                                          event_names[ ev->type ] ));
+ 
+     /*  Always keep recorded visibility state current  */
+@@ -1939,7 +1940,7 @@ void TVSCREENSetVideoWinGeom(
+                                  XtNy, g.y,
+                                  NULL );
+ #endif
+-    EVPRINTF(( "Resetting video widget geometry: %ldx%ld\n", g.w, g.h ));
++    EVPRINTF(( "Resetting video widget geometry: %dx%d\n", g.w, g.h ));
+ #ifdef OLD
+     XawPanedSetRefigureMode( XtParent( d->video_wgt ), False );
+     XtVaSetValues( d->video_wgt, XtNwidth , g.w,
+@@ -2390,8 +2391,8 @@ void TVSCREENSetScreenUpdateEnabled( 
+     char              *cfg_fail_msg;
+ 
+     if ( enabled == d->enabled ) {
+-        fprintf( stderr, "TVSCREENSetScreenUpdateEnabled: new/was=%ld\n",
+-                 enabled );
++        fprintf( stderr, "TVSCREENSetScreenUpdateEnabled: new/was=%d\n",
++                 (int)enabled );
+         return;
+     }
+ 
+@@ -2479,7 +2480,7 @@ static void TVSCREENPrepXImage( TV_DISPL
+         d->ximage_use_for_expose = FALSE;
+ 
+         /*  Free the old  */
+-        if ( image->ximg )
++        if ( image->ximg ) {
+             if ( image->is_shm ) {
+                 if ( !XShmDetach   ( TVDISPLAY, &image->shm_info ) ) {
+                     fprintf( stderr, "XShmDetach() failed\n" );
+@@ -2503,6 +2504,7 @@ static void TVSCREENPrepXImage( TV_DISPL
+                 XDestroyImage( image->ximg );
+                 image->ximg = NULL;
+             }
++	}
+ 
+         /*  Create desired new  */
+         if ( c->xfer_mode == TV_TRANSFER_SHMEM_IMAGE ) {
+@@ -2587,7 +2589,7 @@ static void TVSCREENPrepXImage( TV_DISPL
+ static void TVSCREENAllocColorCube( TV_DISPLAY   *d,
+                                     VL_COLORMAP **cmap )
+ {
+-    static Color_cubes[][3] = 
++    static int Color_cubes[][3] = 
+       { {7,7,5},{6,6,6},{6,6,5},{6,6,4},{5,5,5},{5,5,4},{5,5,3},
+         {4,4,4},{3,3,3},{2,2,2} };
+ 
+@@ -2646,17 +2648,17 @@ static void TVSCREENAllocColorCube( TV_D
+         if ( i >= num_col ) 
+             break;
+ 
+-        SUPRINTF(( "Failed to alloc %ldx%ldx%ld color cube\n", 
++        SUPRINTF(( "Failed to alloc %dx%dx%d color cube\n", 
+                    r_dim, g_dim, b_dim ));
+         for ( i--; i >= 0; i-- )
+             XFreeColors( TVDISPLAY, colormap, &col[i].pixel, 1, 0 );
+     }
+     if ( r_dim < 2 ) {
+-        fprintf( stderr, "Can't even get a %ldx%ldx%ld colormap..."
++        fprintf( stderr, "Can't even get a %dx%dx%d colormap..."
+                  "bailing out\n", r_dim, g_dim, b_dim );
+         exit(1);
+     }
+-    SUPRINTF(( "%ldx%ldx%ld Color Cube Allocated\n",r_dim,g_dim,b_dim ));
++    SUPRINTF(( "%dx%dx%d Color Cube Allocated\n",r_dim,g_dim,b_dim ));
+ 
+     /*  Done.  Now allocate and fill in the VideoLib colormap definition  */
+     *cmap = VIDEOLIBNewColormap( num_col );

@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2006/01/03 15:03:02 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2011/07/05 03:27:22 dholland Exp $
+
+Needs sys/ioctl.h.
+Dragonfly support.
 
 --- pixelview_remote.c.orig	2000-05-21 15:10:09.000000000 +0000
 +++ pixelview_remote.c

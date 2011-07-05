@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.1 2006/01/05 19:07:44 joerg Exp $
+$NetBSD: patch-am,v 1.2 2011/07/05 03:27:22 dholland Exp $
+
+Dragonfly support.
 
 --- tvcapture.h.orig	2006-01-03 14:45:01.000000000 +0000
 +++ tvcapture.h
