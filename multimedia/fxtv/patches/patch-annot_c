@@ -1,0 +1,33 @@
+$NetBSD: patch-annot_c,v 1.1 2011/07/05 03:27:22 dholland Exp $
+
+Fix LP64 problems.
+
+--- annot.c~	1999-09-05 18:42:16.000000000 +0000
++++ annot.c
+@@ -57,7 +57,7 @@
+ 
+ #define AUTOMODE_TIMER_MS 8
+ 
+-#define VOLUME_FMT "Volume: %ld%%"
++#define VOLUME_FMT "Volume: %d%%"
+ #define MUTE_STR   "MUTE"
+ 
+ /*#define FNPRINTF(x) printf x*/
+@@ -444,7 +444,7 @@ static void TVANNOTVolumePropSetDrawable
+     }
+ 
+     /*  Determine new location  */
+-    sprintf( str, VOLUME_FMT, 100L );
++    sprintf( str, VOLUME_FMT, 100 );
+     str_width = XmbTextEscapement( p->fontset, str, strlen(str) );
+     extents    = XExtentsOfFontSet( p->fontset );
+ 
+@@ -607,7 +607,7 @@ static TV_BOOL TVANNOTStationPropUpdate(
+                                                     station->freq );
+     }
+     else if ( state.tuner_chan_active )
+-        sprintf( chan_str, "%ld", state.tuner_chan );
++        sprintf( chan_str, "%d", state.tuner_chan );
+     else
+         sprintf( chan_str, "%.2f MHz", state.tuner_freq );
+ 
