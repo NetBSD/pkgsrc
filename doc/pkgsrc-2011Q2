@@ -1,0 +1,94 @@
+Statistics
+==========
+
+11222 packages in pkgsrc-2011Q2, up from 10973 in pkgsrc-2011Q1 [XXX - prior to obache's deletions - agc]
+10033 distinct pkgsrc entries
+250 pkgsrc entries added since previous branch
+1 entry removed, 4 entries replaced by successors
+
+
+Headline package versions
+=========================
+
+databases/mysql5-server mysql-server-5.0.92
+databases/mysql51-server mysql-server-5.1.57
+databases/mysql55-server mysql-server-5.5.13
+databases/postgresql84 postgresql84-8.4.8
+databases/postgresql90 postgresql90-9.0.4
+
+devel/scmgit scmgit-1.7.5.4
+devel/mercurial mercurial-1.8.4
+devel/subversion subversion-1.6.17
+
+editors/emacs emacs-23.3
+editors/vim vim-7.2.446nb1
+
+lang/gcc45 gcc45-4.5.2
+lang/gcc46 gcc46-4.6.0
+lang/perl5 perl-5.12.2nb2
+lang/php53 php-5.3.6nb4
+lang/python27 python27-2.7.2
+lang/python31 python31-3.1.4
+lang/ruby ruby-1.8.7.334nb1
+
+meta-pkgs/boost boost-1.46.1
+meta-pkgs/gnome-platform gnome-platform-2.32.1
+meta-pkgs/kde3 kde-3.5.10
+meta-pkgs/kde4 kde4-4.5.5
+meta-pkgs/suse113 suse-11.3
+meta-pkgs/xfce4 xfce4-4.6.1nb9
+
+misc/libreoffice3-bin libreoffice3-bin-3.3.3
+misc/openoffice3-bin openoffice3-bin-3.2.1nb1
+
+www/firefox36 firefox-3.6.17
+www/firefox firefox-4.0.1
+www/seamonkey seamonkey-2.0.14
+
+
+Notable additions
+=================
+
+databases/mysql55-server mysql-server-5.5.13
+devel/pcc-libs pcc-libs-1.0.0
+misc/libreoffice3-bin libreoffice3-bin-3.3.3
+net/zeromq zeromq-2.1.7
+www/firefox36 firefox-3.6.17
+lang/gcc45 gcc45-4.5.2
+lang/gcc46 gcc46-4.6.0
+sysutils/heirloom-*
+
+
+Notable retirals
+================
+security/fwbuilder21, replaced by security/fwbuilder fwbuilder-4.1.3nb1
+www/chimera
+
+
+Pkgsrc Platforms
+================
+
+AIX
+BSDOS
+Darwin/Mac OS X
+DragonFly
+FreeBSD
+FreeMiNT
+HPUX
+Haiku
+IRIX
+Interix
+Linux
+MirBSD
+NetBSD
+OSF1
+OpenBSD
+SunOS/Solaris
+UnixWare
+
+
+Thanks
+======
+
+pkgsrc release engineering: Matthias Scheler, Steven Drake, S.P.Zeidler, and Eric Schnoebelen
+pkgsrc security: OBATA Akio, Guillaume Lasmayous, Fredrik Pettai, Tim Zingelman
