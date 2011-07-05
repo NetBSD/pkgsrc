@@ -1,6 +1,9 @@
-$NetBSD: patch-ai,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
+$NetBSD: patch-ai,v 1.2 2011/07/05 03:27:22 dholland Exp $
 
---- batch_mode.c.orig	Sat Oct 23 15:50:35 1999
+Support png.
+Fix LP64 problems.
+
+--- batch_mode.c.orig	1999-10-23 13:50:35.000000000 +0000
 +++ batch_mode.c
 @@ -154,6 +154,8 @@ static void DoStreamVideo( TV_BATCH_PARM
  
@@ -19,7 +22,24 @@ $NetBSD: patch-ai,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
              case TV_STILL_FMT_PPM  : frame_ext = "ppm";  break;
              case TV_STILL_FMT_YUV  : frame_ext = "yuv";  break;
              default: abort();
-@@ -209,7 +212,8 @@ static void DoStreamVideo( TV_BATCH_PARM
+@@ -187,7 +190,7 @@ static void DoStreamVideo( TV_BATCH_PARM
+     }
+ 
+     /*  Prepare the audio output filedesc  */
+-    if ( parm->audio_target )
++    if ( parm->audio_target ) {
+         if ( audio2stdout )
+             aud_fd = 1;
+         else
+@@ -197,6 +200,7 @@ static void DoStreamVideo( TV_BATCH_PARM
+                          parm->audio_target );
+                 exit(1);
+             }
++    }
+ 
+     /*  Read header  */
+     if ( !TVRAWVIDEOHeaderRead( rf, &img, &snd, &eof ) ) {
+@@ -209,7 +213,8 @@ static void DoStreamVideo( TV_BATCH_PARM
          return;
  
      /*  Sanity check raw data with save type  */
@@ -29,3 +49,12 @@ $NetBSD: patch-ai,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
            ( img.pix_geom.type != TV_PIXELTYPE_RGB )) ||
           (( fmt == TV_STILL_FMT_YUV ) &&
            ( img.pix_geom.type != TV_PIXELTYPE_YUV )) ) {
+@@ -288,7 +293,7 @@ static void DoStreamVideo( TV_BATCH_PARM
+                 else {
+                     char suffix[80];
+ 
+-                    sprintf( suffix, ".%.5ld.%s", frame_no++, frame_ext );
++                    sprintf( suffix, ".%.5d.%s", frame_no++, frame_ext );
+ 
+                     sprintf( img_fname, parm->video_target, suffix );
+                     if ( i == 0 ) {
