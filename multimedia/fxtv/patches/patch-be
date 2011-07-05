@@ -1,4 +1,6 @@
-$NetBSD: patch-be,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
+$NetBSD: patch-be,v 1.2 2011/07/05 03:27:22 dholland Exp $
+
+Handle always-on-top.
 
 --- xutil.h.orig	2003-09-28 17:18:28.000000000 +0200
 +++ xutil.h	2003-09-28 17:18:28.000000000 +0200

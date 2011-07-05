@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2011/07/05 01:59:46 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2011/07/05 03:27:22 dholland Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	17
 CATEGORIES=	multimedia
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	${HOMEPAGE:Q}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,10 +28,10 @@ SUBST_FILES.root=	Makefile
 SUBST_SED.root=		-e 's,-o root,-o ${ROOT_USER},'
 
 post-extract:
-	@${RM} -f ${WRKSRC}/videolib/videolib.o
+	${RM} -f ${WRKSRC}/videolib/videolib.o
 
 pre-configure:
-	if [ -r /usr/include/machine/mouse.h ] ; then \
+	set -e; if [ -r /usr/include/machine/mouse.h ] ; then \
 		${ECHO} '#define HAVE_MOUSE_H 1' > ${WRKSRC}/netbsdconf.h; \
 	else \
 		${ECHO} '#define HAVE_MOUSE_H 0' > ${WRKSRC}/netbsdconf.h; \

@@ -1,6 +1,9 @@
-$NetBSD: patch-bf,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
+$NetBSD: patch-bf,v 1.2 2011/07/05 03:27:22 dholland Exp $
 
---- xutil.c.orig	1999-11-05 01:38:54.000000000 +0100
+Handle always-on-top.
+Fix LP64 problems.
+
+--- xutil.c.orig	1999-11-05 00:38:54.000000000 +0000
 +++ xutil.c
 @@ -44,6 +44,7 @@
  #include <X11/Shell.h>
@@ -21,7 +24,30 @@ $NetBSD: patch-bf,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
  typedef struct {
      pid_t                  cmd_pid;
      TVUTIL_PIPE_END        end[3];
-@@ -1543,3 +1548,46 @@ void XUTILDetermineFrameBufferVisual( Di
+@@ -371,7 +376,7 @@ TV_BOOL XUTILPixmapLoad( char    *pixmap
+         XFreePixmap( XtDisplay( wgt ), pixmap_depth1 );
+         XFreeGC    ( XtDisplay( wgt ), gc );
+         if ( pixmap_mask != NULL )
+-            *pixmap_mask = NULL;
++            *pixmap_mask = 0;
+     }
+     else {
+ 
+@@ -406,11 +411,12 @@ TV_BOOL XUTILPixmapLoad( char    *pixmap
+         }
+ 
+         *pixmap = pix_returned;
+-        if ( pix_mask_returned )
++        if ( pix_mask_returned ) {
+             if ( pixmap_mask != NULL )
+                 *pixmap_mask = pix_mask_returned;
+             else
+                 XFreePixmap( XtDisplay( wgt ), pix_mask_returned );
++	}
+     }
+ 
+     if ( pixmap_path != NULL )
+@@ -1543,3 +1549,46 @@ void XUTILDetermineFrameBufferVisual( Di
          }
      }
  }
