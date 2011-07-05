@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1605 2011/07/05 16:31:54 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1606 2011/07/05 17:10:09 mspo Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2515,3 +2515,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/bind98 to 9.8.0pl4 [taca 2011-07-05]
 	Updated net/bind97 to 9.7.3pl3 [taca 2011-07-05]
 	Updated net/bind96 to 9.6.3.1.ESV.4pl3 [taca 2011-07-05]
+	Updated net/rabbitmq to 2.5.1 [mspo 2011-07-05]
