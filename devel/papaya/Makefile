@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2009/12/14 20:53:43 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/07/06 13:17:46 obache Exp $
 #
 
 DISTNAME=	papaya-0.1.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
 
@@ -29,6 +29,10 @@ pre-configure:
 	cd ${WRKSRC}/src &&						\
 	${CP} detab.in detab.in.cr &&					\
 	${TR} -d '\r' < detab.in.cr > detab.in
+
+# let not to be regenerated from patched papaya.texi file.
+post-patch:
+	${TOUCH} ${WRKSRC}/doc/papaya.info
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html ${WRKSRC}/doc/papaya/*.html ${DESTDIR}${PREFIX}/share/doc/papaya
