@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2011/06/22 01:05:37 obache Exp $
+$NetBSD: patch-ab,v 1.5 2011/07/06 09:45:45 obache Exp $
 
---- configure.orig	2011-06-21 19:51:34.000000000 +0000
+--- configure.orig	2011-07-04 15:06:30.000000000 +0000
 +++ configure
-@@ -7191,7 +7191,7 @@ if test "x$ac_cv_header_pcreposix_h" = x
+@@ -7201,7 +7201,7 @@ if test "x$ac_cv_header_pcreposix_h" = x
  fi
  
  
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.4 2011/06/22 01:05:37 obache Exp $
 +	    if test "$ac_cv_header_pcreposix_h" = "yes"; then
  		    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for utf8 enabled pcre" >&5
  $as_echo_n "checking for utf8 enabled pcre... " >&6; }
- 		    if test "${cyrus_cv_pcre_utf8+set}" = set; then :
-@@ -7219,7 +7219,7 @@ $as_echo "$cyrus_cv_pcre_utf8" >&6; }
+ 		    if ${cyrus_cv_pcre_utf8+:} false; then :
+@@ -7229,7 +7229,7 @@ $as_echo "$cyrus_cv_pcre_utf8" >&6; }
  	    fi
  	fi
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.4 2011/06/22 01:05:37 obache Exp $
  		LIBS="$LIBS -lpcre -lpcreposix";
  
  $as_echo "#define ENABLE_REGEX /**/" >>confdefs.h
-@@ -7240,7 +7240,7 @@ fi
+@@ -7250,7 +7250,7 @@ fi
  
  done
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.4 2011/06/22 01:05:37 obache Exp $
  			LIBS="$LIBS -lrx"
  
  $as_echo "#define ENABLE_REGEX /**/" >>confdefs.h
-@@ -10483,7 +10483,7 @@ elif test "${with_perl}" != "no"; then
+@@ -10493,7 +10493,7 @@ elif test "${with_perl}" != "no"; then
      PERL_SUBDIRS="imap"
      PERL="${with_perl}"
      case "${target_os}" in
