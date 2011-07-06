@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:49:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/07/06 13:17:46 obache Exp $
 bin/add-html-signature
 bin/compare-version
 bin/copy-if-changed
@@ -52,7 +52,6 @@ share/doc/papaya/papaya_2.html
 share/doc/papaya/papaya_3.html
 share/doc/papaya/papaya_4.html
 share/doc/papaya/papaya_5.html
-share/doc/papaya/papaya_6.html
 share/doc/papaya/papaya_abt.html
 share/doc/papaya/papaya_ovr.html
 share/doc/papaya/papaya_toc.html
