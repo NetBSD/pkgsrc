@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_papaya.texinfo,v 1.1 2011/07/06 13:17:46 obache Exp $
+
+* remove redundant link
+
+--- doc/papaya.texinfo.orig	2002-01-12 07:22:16.000000000 +0000
++++ doc/papaya.texinfo
+@@ -388,7 +388,7 @@ program. If both program exist, @code{te
+ The generated html file's <BODY> tag will be replaced to change
+ foreground/background color etc...
+ 
+-@node Library Manual, , Utility Manual, Manual, Manual
++@node Library Manual, , Utility Manual, Manual
+ @section Manuals for libraries
+ @menu 
+ * papaya-lib.pl::	perl library 
