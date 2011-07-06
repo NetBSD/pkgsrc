@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2010/11/09 08:18:56 obache Exp $
+# $NetBSD: options.mk,v 1.3 2011/07/06 09:45:45 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
-PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap snmp
+PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap pcre snmp
 PKG_SUPPORTED_OPTIONS+=	bdb mysql pgsql sqlite
-PKG_SUGGESTED_OPTIONS=	bdb
+PKG_SUGGESTED_OPTIONS=	bdb pcre
 
 .include "../../mk/bsd.options.mk"
 
@@ -86,4 +86,11 @@ CONFIGURE_ARGS+=	--without-pgsql
 CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite3}
 .else
 CONFIGURE_ARGS+=	--without-sqlite
+.endif
+
+.if !empty(PKG_OPTIONS:Mpcre)
+.  include "../../devel/pcre/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-pcre
+.else
+CONFIGURE_ARGS+=	--disable-pcre
 .endif
