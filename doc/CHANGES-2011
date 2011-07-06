@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1607 2011/07/06 09:46:05 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1608 2011/07/06 13:18:01 obache Exp $
 
 [WARNING - pkgsrc is in a FREEZE for new functionality and infrastructure
 changes right now - if you have any doubts that you should be making any
@@ -2517,3 +2517,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/bind96 to 9.6.3.1.ESV.4pl3 [taca 2011-07-05]
 	Updated net/rabbitmq to 2.5.1 [mspo 2011-07-05]
 	Updated mail/cyrus-imapd24 to 2.4.10 [obache 2011-07-06]
+	Updated devel/papaya to 0.1.7nb7 [obache 2011-07-06]
