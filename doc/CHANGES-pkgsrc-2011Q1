@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.39 2011/06/18 01:22:50 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q1,v 1.1.2.40 2011/07/06 03:07:05 sbd Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2011Q1
 branch:
@@ -143,3 +143,9 @@ Pullup ticket #3457 - requested by drochner
 x11/vte: security patch
 Pullup ticket #3458 - requested by tez
 sysutils/dbus security update
+Pullup ticket #3461 - requested by taca
+security update for net/bind98
+Pullup ticket #3462 - requested by taca
+security update for net/bind97
+Pullup ticket #3463 - requested by taca
+security update for net/bind96
