@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.4 2009/08/09 20:05:37 tonnerre Exp $
+$NetBSD: patch-aq,v 1.5 2011/07/06 06:24:38 is Exp $
 
---- /dev/null	2009-07-25 19:31:04.000000000 +0200
-+++ mvchgat.c	2009-07-25 19:30:48.000000000 +0200
-@@ -0,0 +1,25 @@
+--- mvchgat.c.orig	2011-07-05 08:47:10.596708000 +0000
++++ mvchgat.c
+@@ -0,0 +1,27 @@
 +#ifdef HAVE_CONFIG_H
 +#include "config.h"
 +#endif
@@ -10,6 +10,7 @@ $NetBSD: patch-aq,v 1.4 2009/08/09 20:05:37 tonnerre Exp $
 +#include "mutt.h"
 +#include "mutt_curses.h"
 +
++#ifndef USE_SLANG_CURSES
 +#ifndef HAVE_MVWCHGAT
 +int
 +mvwchgat(WINDOW *win, int y, int x, int count, attr_t attr, short color,
@@ -27,4 +28,5 @@ $NetBSD: patch-aq,v 1.4 2009/08/09 20:05:37 tonnerre Exp $
 +{
 +	return mvwchgat(stdscr, y, x, count, attr, color, opts);
 +}
++#endif
 +#endif
