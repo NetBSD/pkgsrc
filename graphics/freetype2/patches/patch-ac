@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.8 2011/07/07 17:02:12 drochner Exp $
+
+avoid sign extension
+
+--- src/psaux/t1decode.c.orig	2010-11-23 18:28:53.000000000 +0000
++++ src/psaux/t1decode.c
+@@ -662,7 +662,7 @@
+         if ( large_int )
+           FT_TRACE4(( " %ld", value ));
+         else
+-          FT_TRACE4(( " %ld", (FT_Int32)( value >> 16 ) ));
++          FT_TRACE4(( " %ld", (FT_Int32)( (FT_UInt32)value >> 16 ) ));
+ #endif
+ 
+         *top++       = value;
+@@ -684,8 +684,8 @@
+ 
+         top -= 2;
+ 
+-        subr_no = (FT_Int)( top[1] >> 16 );
+-        arg_cnt = (FT_Int)( top[0] >> 16 );
++        subr_no = (FT_Int)( (FT_ULong)top[1] >> 16 );
++        arg_cnt = (FT_Int)( (FT_ULong)top[0] >> 16 );
+ 
+         /***********************************************************/
+         /*                                                         */
