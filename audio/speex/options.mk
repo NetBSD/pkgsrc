@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/02/24 23:02:32 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2011/07/07 12:26:45 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.speex
@@ -10,8 +10,8 @@ PKG_OPTIONS_GROUP.i386=	simd
 ###
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if defined(PKG_OPTIONS_GROUP.${MACHINE_GNU_ARCH})
-PKG_OPTIONS_OPTIONAL_GROUPS+=	${MACHINE_GNU_ARCH}
+.if defined(PKG_OPTIONS_GROUP.${MACHINE_ARCH})
+PKG_OPTIONS_OPTIONAL_GROUPS+=	${MACHINE_ARCH}
 .endif
 
 .include "../../mk/bsd.options.mk"
