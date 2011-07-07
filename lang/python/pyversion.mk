@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.90 2011/06/21 14:11:24 reed Exp $
+# $NetBSD: pyversion.mk,v 1.91 2011/07/07 18:46:32 joerg Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -128,6 +128,7 @@ PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python31}:${PYPKGSRCDIR}
 PYPACKAGE=	python31
 PYVERSSUFFIX=	3.1
 PYPKGPREFIX=	py31
+PYDISTUTILS_CREATES_EGGFILES=	yes
 .elif ${_PYTHON_VERSION} == "27"
 PYPKGSRCDIR=	../../lang/python27
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python27}:${PYPKGSRCDIR}
@@ -158,6 +159,7 @@ PYPKGPREFIX=	py24
 PYDISTUTILS_CREATES_EGGFILES=	no
 .else
 PKG_FAIL_REASON+=   "No valid Python version"
+PYDISTUTILS_CREATES_EGGFILES=	no
 .endif
 
 PTHREAD_OPTS+=	require
