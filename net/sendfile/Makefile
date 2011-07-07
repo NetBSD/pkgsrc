@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2011/06/01 11:21:01 is Exp $
+# $NetBSD: Makefile,v 1.31 2011/07/07 03:06:24 mspo Exp $
 #
 
 DISTNAME=	sendfile-2.1b
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://fex.rus.uni-stuttgart.de/download/
 
@@ -13,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 #WRKSRC=		${WRKDIR}/sendfile-2.1b
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 EGDIR=		${PREFIX}/share/examples/sendfile
 CONF_FILES=	${EGDIR}/sendfile.cf ${PKG_SYSCONFDIR}/sendfile.cf
