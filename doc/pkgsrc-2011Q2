@@ -62,8 +62,30 @@ sysutils/heirloom-*
 
 Notable retirals
 ================
+
 security/fwbuilder21, replaced by security/fwbuilder fwbuilder-4.1.3nb1
 www/chimera
+
+
+Upcoming retirals
+=================
+
+The following packages are scheduled for removal before the next
+stable pkgsrc release (2011Q3). Please migrate to successors
+or alternatives.
+
+emulators/doscmd
+emulators/linuxppc_lib
+misc/openoffice2
+misc/openoffice2-bin
+net/ctorrent
+net/hobbitmon
+net/hobbitclient
+mail/cyrus-imapd21
+www/jakarta-tomcat4
+www/jakarta-tomcat5
+www/firefox-bin
+www/seamonkey-bin
 
 
 Pkgsrc Platforms
