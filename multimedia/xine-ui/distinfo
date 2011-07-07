@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2011/01/24 15:12:59 wiz Exp $
+$NetBSD: distinfo,v 1.21 2011/07/07 11:46:31 obache Exp $
 
 SHA1 (xine-ui-0.99.6.tar.bz2) = a8d6ab9a9e4cbeb0a5d677d6948e23d11019fc5b
 RMD160 (xine-ui-0.99.6.tar.bz2) = 6cdf639b5ffff54bacfa0a7bef65af1e7ebcacee
@@ -12,4 +12,5 @@ SHA1 (patch-ah) = 9beaee5509306e6afa1b06aef4eab24635c2a79e
 SHA1 (patch-ai) = bd73bc709708f8ce9a94d87f4c6142948445affd
 SHA1 (patch-aj) = 768594b88a1014d2f2f2b56a851b9d13362fa31b
 SHA1 (patch-at) = eab32a39c19b108bd8ea11adeb19ff50020e2b5f
+SHA1 (patch-src_xitk_download.c) = 9678802f57ec780669f4d8b321ea279155f68fe2
 SHA1 (patch-zz) = f3b33d65805a9e58daaf812a3b9eb572c86ee7b9
