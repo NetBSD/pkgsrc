@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2008/03/02 15:35:33 bjs Exp $
+$NetBSD: distinfo,v 1.12 2011/07/08 10:42:53 tron Exp $
 
-SHA1 (less-418.tar.gz) = ec4fb48680878a7ac3499c46564c47c448b0aa22
-RMD160 (less-418.tar.gz) = a10402aa423e3d3c4d950735208991d7d4afb85d
-Size (less-418.tar.gz) = 299213 bytes
-SHA1 (patch-aa) = 60eb5a9b9901ceafbf7b17647018e4c311a13101
-SHA1 (patch-ac) = af806f0965d3a92dafdf54fdc96a8c29635d6380
+SHA1 (less-444.tar.gz) = 2a10860360a98c07353bbd5b28ec7477af3ec8a4
+RMD160 (less-444.tar.gz) = 3ae4bac91a786af638eb07a6b63c85c31db7c829
+Size (less-444.tar.gz) = 307308 bytes
+SHA1 (patch-ac) = d50886aff976d81f23684cd96b5c9e7f94554b93

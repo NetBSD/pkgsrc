@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2007/04/25 18:10:17 tnn Exp $
+$NetBSD: patch-ac,v 1.2 2011/07/08 10:42:53 tron Exp $
+
+Fix resource leak found by Coverity scan of the NetBSD sources.
 
 --- edit.c.orig	2005-12-03 21:20:32.000000000 +0100
 +++ edit.c
