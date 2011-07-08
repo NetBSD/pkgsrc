@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2011/06/05 23:10:12 pettai Exp $
+# $NetBSD: Makefile,v 1.82 2011/07/08 09:24:48 adam Exp $
 #
 
 DISTNAME=	nmap-5.51
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libpcap=	libpcap>=1.0.0
 BUILDLINK_API_DEPENDS.libpcre=	libpcre>=7.6
-BUILDLINK_API_DEPENDS.openssl=  openssl>=0.9.8
+BUILDLINK_API_DEPENDS.openssl=	openssl>=0.9.8
 
 GNU_CONFIGURE=		yes
 
