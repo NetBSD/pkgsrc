@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1621 2011/07/08 11:41:40 asau Exp $
+$NetBSD: CHANGES-2011,v 1.1622 2011/07/08 17:46:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2539,3 +2539,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-base to 1.7.6 [adam 2011-07-08]
 	Updated devel/scmgit-docs to 1.7.6 [adam 2011-07-08]
 	Updated lang/yap to 6.2.1 [asau 2011-07-08]
+	Updated net/clive to 2.3.1.1 [wiz 2011-07-08]
