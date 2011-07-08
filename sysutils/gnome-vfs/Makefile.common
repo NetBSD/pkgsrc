@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2011/04/21 11:32:02 obache Exp $
+# $NetBSD: Makefile.common,v 1.27 2011/07/08 11:03:35 drochner Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-smb/Makefile
@@ -25,9 +25,7 @@ USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--disable-cdda
 CONFIGURE_ARGS+=	--disable-howl
-CONFIGURE_ARGS+=	--disable-openssl
 CONFIGURE_ARGS+=	--disable-samba
-CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
@@ -100,7 +98,6 @@ do-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
-.include "../../security/gnutls/libgnutls-config.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
