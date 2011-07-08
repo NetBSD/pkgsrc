@@ -1,0 +1,28 @@
+$NetBSD: patch-br,v 1.1 2011/07/08 08:02:57 manu Exp $
+
+Hide .attribute to glusterfs clients in order to make sure it will
+not be distributed by the cluster/dht xlator
+--- xlators/storage/posix/src/posix.c.orig	2011-06-19 11:02:41.000000000 +0200
++++ xlators/storage/posix/src/posix.c	2011-06-19 11:05:41.000000000 +0200
+@@ -4094,8 +4094,21 @@
+ 
+                 if ((!strcmp(real_path, base_path))
+                     && (!strcmp(entry->d_name, GF_REPLICATE_TRASH_DIR)))
+                         continue;
++#ifdef __NetBSD__
++		/*
++		 * NetBSD with UFS1 backend uses backing files for
++		 * extended attributes. They can be found in a
++		 * .attribute file located at the root of the filesystem
++		 * We hide it to glusterfs clients, since chaos will occur 
++		 * when the cluster/dht xlator decides to distribute
++		 * exended attribute backing file accross storage servers.
++		 */ 
++                if ((!strcmp(real_path, base_path))
++                    && (!strcmp(entry->d_name, ".attribute")))
++                        continue;
++#endif /* __NetBSD__ */
+ 
+                 if ((!strcmp (real_path, base_path))
+                     && (!strncmp (GF_HIDDEN_PATH, entry->d_name,
+                                   strlen(GF_HIDDEN_PATH)))) {
