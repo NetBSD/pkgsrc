@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2011/01/24 04:38:50 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.32 2011/07/08 03:16:12 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -19,6 +19,18 @@ ${PLIST.w3m}share/doc/ikiwiki/w3mmode/ikiwiki.setup
 share/examples/ikiwiki/auto-blog.setup
 share/examples/ikiwiki/auto.setup
 share/examples/ikiwiki/wikilist
+share/ikiwiki/attachment/ikiwiki/images/pbar-ani.gif
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_flat_75_ffffff_40x100.png
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_glass_75_e6e6e6_1x400.png
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+share/ikiwiki/attachment/ikiwiki/images/ui-icons_222222_256x240.png
+share/ikiwiki/attachment/ikiwiki/images/ui-icons_888888_256x240.png
+share/ikiwiki/attachment/ikiwiki/jquery-ui.min.css
+share/ikiwiki/attachment/ikiwiki/jquery-ui.min.js
+share/ikiwiki/attachment/ikiwiki/jquery.fileupload-ui.js
+share/ikiwiki/attachment/ikiwiki/jquery.fileupload.js
+share/ikiwiki/attachment/ikiwiki/jquery.iframe-transport.js
+share/ikiwiki/attachment/ikiwiki/jquery.tmpl.min.js
 share/ikiwiki/basewiki/favicon.ico
 share/ikiwiki/basewiki/ikiwiki.mdwn
 share/ikiwiki/basewiki/ikiwiki/directive.mdwn
@@ -120,7 +132,7 @@ share/ikiwiki/examples/softwaresite/templates/release.mdwn
 share/ikiwiki/javascript/ikiwiki/ikiwiki.js
 share/ikiwiki/javascript/ikiwiki/relativedate.js
 share/ikiwiki/javascript/ikiwiki/toggle.js
-share/ikiwiki/openid-selector/ikiwiki/openid/jquery.js
+share/ikiwiki/jquery/ikiwiki/jquery.min.js
 share/ikiwiki/openid-selector/ikiwiki/openid/openid-jquery.js
 share/ikiwiki/po/cs/basewiki/ikiwiki.cs.po
 share/ikiwiki/po/cs/basewiki/ikiwiki/directive.cs.po
