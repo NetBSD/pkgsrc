@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/07/03 19:49:37 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/08 09:59:19 hauke Exp $
 #
 
 PYBLOXSOMVERS=	1.5
-DISTNAME=	pyblosxom-${PYBLOXSOMVERS}rc2
+DISTNAME=	pyblosxom-${PYBLOXSOMVERS}rc3
 PKGNAME=	${PYPKGPREFIX}-blosxom-${PYBLOXSOMVERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://pyblosxom.bluesock.org/download/
 
@@ -20,9 +20,6 @@ DIST_SUBDIR=	${DISTNAME}	# upstream reissued tarball with no changes
 DOC_SUBDIR=     share/doc/pyblosxom
 DOCDIR=         ${PREFIX}/${DOC_SUBDIR}
 DOCFILES=       AUTHORS CHANGELOG INSTALL LICENSE README THANKS TODO UPGRADE
-
-# Mend author's spelling mitsake
-WRKSRC=		${WRKDIR}/pybloxsom-1.5rc2
 
 INSTALLATION_DIRS=	${DOC_SUBDIR}
 
