@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/06 16:21:16 abs Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/08 09:32:07 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=	mysqs
@@ -31,7 +31,7 @@ PLIST.embedded=		yes
 PLIST_VARS+=		embedded ndb auth_socket
 
 .if ${OPSYS} == "Linux"
-PLIST.auth_socket=            yes
+PLIST.auth_socket=	yes
 .endif
 
 PTHREAD_OPTS+=		require
