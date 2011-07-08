@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1 2011/07/08 11:47:28 drochner Exp $
+
+--- libmissing/mktime.c.orig	2009-05-12 07:49:42.000000000 +0000
++++ libmissing/mktime.c
+@@ -165,8 +165,10 @@ ydhms_diff (long int year1, long int yda
+ 	    int year0, int yday0, int hour0, int min0, int sec0)
+ {
+   verify (C99_integer_division, -1 / 2 == 0);
++#if 0
+   verify (long_int_year_and_yday_are_wide_enough,
+ 	  INT_MAX <= LONG_MAX / 2 || TIME_T_MAX <= UINT_MAX);
++#endif
+ 
+   /* Compute intervening leap days correctly even if year is negative.
+      Take care to avoid integer overflow here.  */
