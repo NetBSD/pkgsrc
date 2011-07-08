@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2011/06/01 07:21:53 tron Exp $
+# $NetBSD: Makefile,v 1.65 2011/07/08 11:01:49 drochner Exp $
 
 DISTNAME=		wireshark-1.4.7
 CATEGORIES=		net
@@ -49,6 +49,7 @@ BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libsmi/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
