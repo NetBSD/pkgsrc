@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2010/03/23 15:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2011/07/08 09:49:21 adam Exp $
 
-DISTNAME=	heimdal-1.1
-PKGREVISION=	5
+DISTNAME=	heimdal-1.4
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -30,27 +29,28 @@ MAKE_ENV+=		INSTALL_CATPAGES=no
 HEIMDAL_HDB_DIR=	${VARBASE}/heimdal
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/krb5
-CONFIGURE_ARGS+=	--with-hdbdir=${HEIMDAL_HDB_DIR:H:Q}
-CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--without-krb4
 CONFIGURE_ARGS+=	--enable-kcm
+CONFIGURE_ARGS+=	--enable-pthread-support
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/krb5
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-hdbdir=${HEIMDAL_HDB_DIR:H}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
+CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	${ABI:D--with-mips-abi=${ABI}}
 CONFIGURE_ENV+=		COMPILE_ET=no	# build Heimdal's compile_et(1)
+# XXX Grand Central Dispatch is broken in 1.4
+CONFIGURE_ENV+=		ac_cv_funclib_dispatch_async_f=no
 
 CFLAGS.Darwin+=		-DBIND_8_COMPAT
 
 # Though Solaris has a <vis.h> header, it does something very unrelated
 # to the BSD <vis.h> header.
-#
 OPSYSVARS+=		CONFIGURE_ENV
 CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 
 # Heimdal's configure script expects to find the readline.h header as
 # <readline.h>.
-#
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
 
@@ -70,12 +70,19 @@ INFO_FILES=		yes
 
 # Dynamically determine the "replacement" headers for bits needed by
 # Heimdal but are missing in the base system and add them to the PLIST.
-#
 GENERATE_PLIST+=	\
 	( cd ${WRKSRC}/lib/roken && ${BUILD_MAKE_CMD} print-xheaders |	\
 	  ${XARGS} -n 1 | ${SED} -e "s,^,include/krb5/roken/," );
 
+# remove manpages conficting with OpenSSL keeping only the important ones
+pre-configure:
+	cd ${WRKSRC}/doc/doxyout/hcrypto && \
+	${GREP} -e /hcrypto_ -e /page_ manpages > manpages.new && \
+	mv manpages.new manpages
+
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
