@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2011/06/10 09:39:48 obache Exp $
+# $NetBSD: Makefile,v 1.85 2011/07/08 11:35:52 drochner Exp $
 #
 
 DISTNAME=	rhythmbox-0.12.8
@@ -38,7 +38,6 @@ BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
