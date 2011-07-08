@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2011/06/22 06:36:37 asau Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/07/08 10:18:21 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -55,6 +55,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATCANON.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATCS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATCUNOR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATFINAG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATLR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATMULVA.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATNZDIV.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATPOSET.${FASL}
@@ -107,6 +108,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CHARPOL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CHARZ.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CHVAR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CINTSLPE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CKP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CLAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CLAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CLIF.${FASL}
@@ -128,6 +130,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPLEX.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPLEX2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPLPAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPPROP.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPUTIL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMRING.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CONTFRAC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COORDSYS.${FASL}
@@ -173,6 +176,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIRRING.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DISPLAY.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIVRING-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIVRING.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DJBP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DLAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DLIST.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DLP.${FASL}
@@ -446,7 +450,9 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IFAMON.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IFARRAY.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IFF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IIARRAY2.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IJB.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ILIST.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ILOGIC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IMATLIN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IMATQF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IMATRIX.${FASL}
@@ -513,7 +519,25 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ITUPLE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IVECTOR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IXAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IXAGG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBBFC-.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBBFC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBC-.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBFC-.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBFC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBLF.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBP.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBSA.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBUNDLE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JBX.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JCT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JDE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JDIFF.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JGB.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JLF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JORDAN.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/JVF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/KAFILE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/KDAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/KDAGG.${FASL}
@@ -525,6 +549,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/KOVACIC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LA.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LALG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LALG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LAMBDA.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LAPLACE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LAUPOL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LAZM3PK.${FASL}
@@ -570,6 +595,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LSMP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LSMP1.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LSPP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LSQM.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LUD.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LWORD.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LZSTAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/LZSTAGG.${FASL}
@@ -953,6 +979,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SEGBIND.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SEGBIND2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SEGCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SEGXCAT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SEM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SET.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SETAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SETAGG.${FASL}
@@ -976,6 +1003,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SIGNRF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SIMPAN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SINT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SKAGG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SKICOMB.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMITH.${FASL}
@@ -1034,6 +1062,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPFRACF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPXS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUTS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SWITCH.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SYMANA.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SYMBOL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SYMFUNC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SYMPOLY.${FASL}
@@ -1085,6 +1114,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TUBETOOL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TUPLE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TWOFACT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TYPE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TYPED.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/U32VEC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UDPO.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UDVO.${FASL}
@@ -1101,6 +1131,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ULSCONS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UNIFACT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UNISEG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UNISEG2.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UNTYPED.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UP2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UPCDEN.${FASL}
@@ -1130,6 +1161,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UTSCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UTSODE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UTSODETL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UTSSOL.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VARCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VARIABLE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VECREC1.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VECREC2.${FASL}
@@ -1145,6 +1177,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VOID.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VSBASIS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VSPACE-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VSPACE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VTYP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/WEIER.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/WFFINTBS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/WP.${FASL}
@@ -1275,7 +1308,6 @@ ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/showimp.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/topics.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/topics.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/topics.o
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/translate-files.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/AXIOMsys
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/asq
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/axiom
@@ -2562,6 +2594,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/color.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/combfunc.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/combinat.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/complet.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/computation.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/constant.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/contfrac.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/coordsys.spad.pamphlet
@@ -2669,6 +2702,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/intrf.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/irexpand.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/irsn.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/ituple.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/jet.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/kl.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/kovacic.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/laplace.spad.pamphlet

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2011/06/22 06:36:37 asau Exp $
+# $NetBSD: Makefile,v 1.15 2011/07/08 10:18:21 asau Exp $
 
-PKGNAME=		fricas-1.1.2
+PKGNAME=		fricas-1.1.3
 DISTNAME=		${PKGNAME_NOREV}-full
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
@@ -9,18 +9,17 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
-
 LICENSE=		modified-bsd
-
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
+
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
 
 # Problems:
 # 4. Emacs files should go into "site-lisp".
