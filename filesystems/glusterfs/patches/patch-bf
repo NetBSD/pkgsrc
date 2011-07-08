@@ -1,12 +1,12 @@
-$NetBSD: patch-bf,v 1.3 2011/05/19 14:54:23 manu Exp $
+$NetBSD: patch-bf,v 1.4 2011/07/08 08:02:57 manu Exp $
 
 basename() and dirname() are not supposed to be thread-safe, and NetBSD's
 implementation is not. glusterfs assume the functions are thread-safe. 
 Borrow basename() and rdirname() form glibc and make NetBSD use them.
 
---- libglusterfs/src/compat.h.orig	2011-04-22 19:37:28.000000000 +0200
-+++ libglusterfs/src/compat.h	2011-05-19 12:45:53.000000000 +0200
-@@ -57,9 +57,9 @@
+--- libglusterfs/src/compat.h.orig	2011-06-10 18:59:04.000000000 +0200
++++ libglusterfs/src/compat.h	2011-07-07 18:30:56.000000000 +0200
+@@ -57,26 +57,31 @@
  #endif /* HAVE_LLISTXATTR */
  #endif /* GF_LINUX_HOST_OS */
  
@@ -17,7 +17,29 @@ Borrow basename() and rdirname() form glibc and make NetBSD use them.
  #define UNIX_PATH_MAX 104
  #include <sys/types.h>
  
-@@ -110,8 +110,15 @@
+ #include <sys/un.h>
+ #include <sys/endian.h>
+ #include <sys/extattr.h>
++#ifdef HAVE_SYS_XATTR_H
++#include <sys/xattr.h>
++#endif /* HAVE_SYS_XATTR_H */
+ #include <limits.h>
+ 
+ #include <libgen.h>
+ 
++#ifndef XATTR_CREATE
+ enum {
+         ATTR_CREATE = 1,
+ #define XATTR_CREATE ATTR_CREATE
+         ATTR_REPLACE = 2
+ #define XATTR_REPLACE ATTR_REPLACE
+ };
++#endif /* XATTR_CREATE */
+ 
+ 
+ #ifndef sighandler_t
+ #define sighandler_t sig_t
+@@ -110,8 +115,15 @@
  #define F_GETLK64       F_GETLK
  #define F_SETLK64       F_SETLK
  #define F_SETLKW64      F_SETLKW
