@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2011/04/22 13:42:20 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2011/07/08 11:03:36 drochner Exp $
 
 BUILDLINK_TREE+=	gnome-vfs
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.gnome-vfs?=		../../sysutils/gnome-vfs
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 
 pkgbase := gnome-vfs
