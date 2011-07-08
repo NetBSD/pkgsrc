@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1611 2011/07/08 07:29:07 agc Exp $
+$NetBSD: CHANGES-2011,v 1.1612 2011/07/08 08:05:00 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2515,5 +2515,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/cyrus-imapd24 to 2.4.10 [obache 2011-07-06]
 	Updated devel/papaya to 0.1.7nb7 [obache 2011-07-06]
 	Updated net/sendfile to 2.1bnb1 [mspo 2011-07-07]
-	Updated www/ikiwiki to 3.20110707 [schmonz 2011-07-08]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2011Q2 branch [agc 2011-07-07]
+	Updated www/ikiwiki to 3.20110707 [schmonz 2011-07-08]
+	Updated filesystems/glusterfs to 3.2.1 [manu 2011-07-08]
