@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10401 2011/07/08 10:43:09 tron Exp $
+$NetBSD: TODO,v 1.10402 2011/07/08 11:19:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -338,7 +338,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o FlightCrew-0.7.1 [wip]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o GeoIP-1.4.8
 	o ImageMagick-6.7.0.9
 	o MAMEDiff-2.30
 	o Mesa-7.10.3
