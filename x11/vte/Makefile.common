@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2011/03/03 12:05:22 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/07/08 17:23:05 drochner Exp $
 #
 # used by x11/py-vte/Makefile
 
-DISTNAME=	vte-0.26.2
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.26/}
+DISTNAME=	vte-0.28.1
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.28/}
 EXTRACT_SUFX=	.tar.bz2
 
 HOMEPAGE=	http://www.gnome.org/
