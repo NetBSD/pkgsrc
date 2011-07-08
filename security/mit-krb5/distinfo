@@ -1,26 +1,8 @@
-$NetBSD: distinfo,v 1.30 2011/06/01 09:57:23 adam Exp $
+$NetBSD: distinfo,v 1.31 2011/07/08 09:59:28 adam Exp $
 
-SHA1 (2010-006-patch.txt) = 600f0890de65f96112f267b56317a4fd0166cba0
-RMD160 (2010-006-patch.txt) = fc262a23e9aa118262a4258f74832445062444e4
-Size (2010-006-patch.txt) = 1066 bytes
-SHA1 (2010-007-patch.txt) = a6fbc3b6ab15ca98c1aa1521fd42dad1f5003ee8
-RMD160 (2010-007-patch.txt) = 848b776218473200e5a54beb4f3adfc3db915cf4
-Size (2010-007-patch.txt) = 7908 bytes
-SHA1 (2011-001-patch.txt) = 79ece8b1c140deb2c01bfb64af575636b9bc7704
-RMD160 (2011-001-patch.txt) = 62a7b2b0d4acbca919fd9df52e707bf0b9fff076
-Size (2011-001-patch.txt) = 632 bytes
-SHA1 (2011-002-patch-r18.txt) = 574a3c82ad7d3c9a1c9c62c6ff95c2d6f0e0fc96
-RMD160 (2011-002-patch-r18.txt) = 23cb2560f0d87e6128cdbb12f1e7d8aae85f85f5
-Size (2011-002-patch-r18.txt) = 6130 bytes
-SHA1 (2011-003-patch.txt) = 1c72390c5d629eee592e5cb0c2b600b376e2fdc5
-RMD160 (2011-003-patch.txt) = 9b0d172a1abfaf437edacc9f18fd0a6e83028b3e
-Size (2011-003-patch.txt) = 544 bytes
-SHA1 (2011-004-patch-r18.txt) = 7853bcbdf0dba6f0fce15fc3b475f86d692287b2
-RMD160 (2011-004-patch-r18.txt) = 03d06d5c88505688eb4dbcd516144999ecb89a70
-Size (2011-004-patch-r18.txt) = 1136 bytes
-SHA1 (krb5-1.8.3-signed.tar) = 69696f63b6c2b0e3238156b19eed68cecd661c6b
-RMD160 (krb5-1.8.3-signed.tar) = bdf3a505e4b2447af0c9080b441918d665dcdd9c
-Size (krb5-1.8.3-signed.tar) = 11642880 bytes
+SHA1 (krb5-1.8.4-signed.tar) = fe1fc21e923ae8dcaa7a26f4f97e0ac49c8e3115
+RMD160 (krb5-1.8.4-signed.tar) = 34d6df8248007bac0321400b2650c2aca774af16
+Size (krb5-1.8.4-signed.tar) = 11642880 bytes
 SHA1 (patch-aa) = cd8cdc594bc872d641ceaba0aa0d91b5f1caf2ae
 SHA1 (patch-ad) = 49a9429d163adb872b1c97ade8ed0e13d8eec3cb
 SHA1 (patch-ae) = c7395b9de5baf6612b8787fad55dbc051a680bfd
