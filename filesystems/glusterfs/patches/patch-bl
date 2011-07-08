@@ -1,4 +1,4 @@
-$NetBSD: patch-bl,v 1.1 2011/05/19 14:54:23 manu Exp $
+$NetBSD: patch-bl,v 1.2 2011/07/08 08:02:57 manu Exp $
 
 #include <signal.h> for SIGTERM
 
