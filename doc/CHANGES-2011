@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1612 2011/07/08 08:05:00 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1613 2011/07/08 08:20:29 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2518,3 +2518,4 @@ Changes to the packages collection and infrastructure in 2011:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2011Q2 branch [agc 2011-07-07]
 	Updated www/ikiwiki to 3.20110707 [schmonz 2011-07-08]
 	Updated filesystems/glusterfs to 3.2.1 [manu 2011-07-08]
+	Updated www/mediawiki to 1.17.0 [abs 2011-07-08]
