@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+$NetBSD: patch-af,v 1.1.1.1.6.1 2011/07/08 16:33:12 tron Exp $
 
 Fix compilation error DragonFly.
 
 --- database/Makefile.in.orig	2010-05-07 22:02:57.000000000 +0300
 +++ database/Makefile.in	2010-05-20 10:07:22.000000000 +0300
-@@ -435,17 +435,6 @@
+@@ -436,17 +436,6 @@
  	$(mkinstalldirs) $(DESTDIR)$(DBINST);\
  	test -f $(DESTDIR)$(DBINST)/main.cvd || test -f $(DESTDIR)$(DBINST)/main.cld || $(INSTALL_DATA) $(srcdir)/main.cvd $(DESTDIR)$(DBINST);\
  	test -f $(DESTDIR)$(DBINST)/daily.cvd || test -f $(DESTDIR)$(DBINST)/daily.cld || $(INSTALL_DATA) $(srcdir)/daily.cvd $(DESTDIR)$(DBINST);\
