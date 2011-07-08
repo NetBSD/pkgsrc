@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1468 2011/06/19 10:33:29 taca Exp $
+# $NetBSD: Makefile,v 1.1469 2011/07/08 09:50:08 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -288,6 +288,7 @@ SUBDIR+=	kdevplatform
 SUBDIR+=	kdiff3
 SUBDIR+=	ko-po-check
 SUBDIR+=	kscope
+SUBDIR+=	kyua-cli
 SUBDIR+=	lcc
 SUBDIR+=	lcov
 SUBDIR+=	ldapsdk
