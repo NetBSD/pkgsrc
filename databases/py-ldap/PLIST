@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/11/09 07:11:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/07/08 10:23:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,12 +18,33 @@ ${PYSITELIB}/ldap/async.pyo
 ${PYSITELIB}/ldap/cidict.py
 ${PYSITELIB}/ldap/cidict.pyc
 ${PYSITELIB}/ldap/cidict.pyo
-${PYSITELIB}/ldap/controls.py
-${PYSITELIB}/ldap/controls.pyc
-${PYSITELIB}/ldap/controls.pyo
+${PYSITELIB}/ldap/controls/__init__.py
+${PYSITELIB}/ldap/controls/__init__.pyc
+${PYSITELIB}/ldap/controls/__init__.pyo
+${PYSITELIB}/ldap/controls/libldap.py
+${PYSITELIB}/ldap/controls/libldap.pyc
+${PYSITELIB}/ldap/controls/libldap.pyo
+${PYSITELIB}/ldap/controls/ppolicy.py
+${PYSITELIB}/ldap/controls/ppolicy.pyc
+${PYSITELIB}/ldap/controls/ppolicy.pyo
+${PYSITELIB}/ldap/controls/psearch.py
+${PYSITELIB}/ldap/controls/psearch.pyc
+${PYSITELIB}/ldap/controls/psearch.pyo
+${PYSITELIB}/ldap/controls/readentry.py
+${PYSITELIB}/ldap/controls/readentry.pyc
+${PYSITELIB}/ldap/controls/readentry.pyo
+${PYSITELIB}/ldap/controls/simple.py
+${PYSITELIB}/ldap/controls/simple.pyc
+${PYSITELIB}/ldap/controls/simple.pyo
 ${PYSITELIB}/ldap/dn.py
 ${PYSITELIB}/ldap/dn.pyc
 ${PYSITELIB}/ldap/dn.pyo
+${PYSITELIB}/ldap/extop/__init__.py
+${PYSITELIB}/ldap/extop/__init__.pyc
+${PYSITELIB}/ldap/extop/__init__.pyo
+${PYSITELIB}/ldap/extop/dds.py
+${PYSITELIB}/ldap/extop/dds.pyc
+${PYSITELIB}/ldap/extop/dds.pyo
 ${PYSITELIB}/ldap/filter.py
 ${PYSITELIB}/ldap/filter.pyc
 ${PYSITELIB}/ldap/filter.pyo
@@ -33,6 +54,9 @@ ${PYSITELIB}/ldap/functions.pyo
 ${PYSITELIB}/ldap/ldapobject.py
 ${PYSITELIB}/ldap/ldapobject.pyc
 ${PYSITELIB}/ldap/ldapobject.pyo
+${PYSITELIB}/ldap/logger.py
+${PYSITELIB}/ldap/logger.pyc
+${PYSITELIB}/ldap/logger.pyo
 ${PYSITELIB}/ldap/modlist.py
 ${PYSITELIB}/ldap/modlist.pyc
 ${PYSITELIB}/ldap/modlist.pyo
@@ -75,7 +99,10 @@ share/doc/py-ldap/Demo/page_control.py
 share/doc/py-ldap/Demo/passwd_ext_op.py
 share/doc/py-ldap/Demo/pickle_ldapobject.py
 share/doc/py-ldap/Demo/pyasn1/README
-share/doc/py-ldap/Demo/pyasn1/prereadcontrol.py
+share/doc/py-ldap/Demo/pyasn1/dds.py
+share/doc/py-ldap/Demo/pyasn1/psearch.py
+share/doc/py-ldap/Demo/pyasn1/readentrycontrol.py
+share/doc/py-ldap/Demo/pyasn1/sessiontrack.py
 share/doc/py-ldap/Demo/reconnect.py
 share/doc/py-ldap/Demo/rename.py
 share/doc/py-ldap/Demo/resiter.py
