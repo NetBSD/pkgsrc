@@ -1,0 +1,84 @@
+$NetBSD: patch-bs,v 1.1 2011/07/08 08:02:57 manu Exp $
+
+Actually use the Linux [lf]?(set|get|list|remove)xattr reimplementation
+we have in libglusterfs/src/compat.c
+
+--- libglusterfs/src/syscall.c.orig	2011-06-25 03:34:26.000000000 +0200
++++ libglusterfs/src/syscall.c	2011-06-25 03:39:37.000000000 +0200
+@@ -267,9 +267,9 @@
+ sys_lsetxattr (const char *path, const char *name, const void *value,
+                size_t size, int flags)
+ {
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+         return lsetxattr (path, name, value, size, flags);
+ #endif
+ 
+ #ifdef GF_BSD_HOST_OS
+@@ -292,9 +292,9 @@
+ ssize_t
+ sys_llistxattr (const char *path, char *list, size_t size)
+ {
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+         return llistxattr (path, list, size);
+ #endif
+ 
+ #ifdef GF_BSD_HOST_OS
+@@ -315,9 +315,9 @@
+ ssize_t
+ sys_lgetxattr (const char *path, const char *name, void *value, size_t size)
+ {
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+         return lgetxattr (path, name, value, size);
+ #endif
+ 
+ #ifdef GF_BSD_HOST_OS
+@@ -339,9 +339,9 @@
+ ssize_t
+ sys_fgetxattr (int filedes, const char *name, void *value, size_t size)
+ {
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+         return fgetxattr (filedes, name, value, size);
+ #endif
+ 
+ #ifdef GF_BSD_HOST_OS
+@@ -364,9 +364,9 @@
+ sys_fsetxattr (int filedes, const char *name, const void *value,
+                size_t size, int flags)
+ {
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+         return fsetxattr (filedes, name, value, size, flags);
+ #endif
+ 
+ #ifdef GF_BSD_HOST_OS
+@@ -388,9 +388,9 @@
+ ssize_t
+ sys_flistxattr (int filedes, char *list, size_t size)
+ {
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+         return flistxattr (filedes, list, size);
+ #endif
+ 
+ #ifdef GF_BSD_HOST_OS
+@@ -411,9 +411,9 @@
+ int
+ sys_lremovexattr (const char *path, const char *name)
+ {
+ 
+-#ifdef GF_LINUX_HOST_OS
++#if defined(GF_LINUX_HOST_OS) || defined(__NetBSD__)
+         return lremovexattr (path, name);
+ #endif
+ 
+ #ifdef GF_BSD_HOST_OS
