@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2010/12/27 14:28:38 obache Exp $
+$NetBSD: distinfo,v 1.9 2011/07/08 20:57:02 wiz Exp $
 
 SHA1 (metisse-0.4.1.tar.bz2) = acf97b125905d91988955560a9b14b06a530eed6
 RMD160 (metisse-0.4.1.tar.bz2) = 7487322f22a3655d756b5d3d3cc59afbf277d137
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 356b60c73fc85a87dbc6bf832035e29f0ccc614b
 SHA1 (patch-af) = 45cf852490bd30d17cac341916d83b0688f7bce0
 SHA1 (patch-ag) = ec2cfd9c8602e440faba1a1722b6d1f05451a7fe
 SHA1 (patch-ah) = 6afe0c047a67f83149a4130b4eae55612e437ad0
+SHA1 (patch-fvwm-insitu_libs_PictureImageLoader.c) = a4d860ba441cab16aa3c9a49d20b7c9de3b030be
