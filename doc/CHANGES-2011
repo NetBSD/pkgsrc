@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1618 2011/07/08 10:43:09 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1619 2011/07/08 11:19:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2534,3 +2534,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/openvpn to 2.2.1 [adam 2011-07-08]
 	Updated databases/py-ldap to 2.4.1 [adam 2011-07-08]
 	Updated misc/less to 444 [tron 2011-07-08]
+	Updated devel/scmgit to 1.7.6 [adam 2011-07-08]
+	Updated devel/scmgit-base to 1.7.6 [adam 2011-07-08]
+	Updated devel/scmgit-docs to 1.7.6 [adam 2011-07-08]
