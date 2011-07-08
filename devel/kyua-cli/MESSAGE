@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/07/08 09:49:11 jmmv Exp $
+
+Kyua has been successfully installed.
+
+You can now proceed to run the automated test suite of the kyua-cli package
+as well as any other packages you have installed, by running:
+
+	kyua test -k ${PREFIX}/tests/Kyuafile
+
+===========================================================================
