@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2009/05/27 05:38:52 obache Exp $
+$NetBSD: patch-aa,v 1.7 2011/07/08 10:23:35 adam Exp $
 
---- setup.cfg.orig	2009-05-26 11:56:18.000000000 +0000
+--- setup.cfg.orig	2011-06-02 18:08:10.000000000 +0000
 +++ setup.cfg
 @@ -1,9 +1,9 @@
  [_ldap]
- extra_objects = 
- extra_compile_args = 
--libs = ldap_r lber sasl2 ssl crypto
--library_dirs = /usr/local/openldap-2.3/lib
--include_dirs = /usr/local/openldap-2.3/include /usr/include/sasl
-+libs = @PY_LDAP_LIBS@
+-library_dirs = /opt/openldap-RE24/lib
+-include_dirs = /opt/openldap-RE24/include /usr/include/sasl
 +library_dirs = @PY_LDAP_LIBRARY_DIRS@
 +include_dirs = @PY_LDAP_INCLUDE_DIRS@
+ extra_compile_args = -g
+ extra_objects = 
+-libs = ldap_r lber sasl2 ssl crypto
++libs = @PY_LDAP_LIBS@
  
- [egg_info]
- tag_build = 
+ [install]
+ compile = 1
