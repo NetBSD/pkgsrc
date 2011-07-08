@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/04/12 22:43:10 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2011/07/08 09:49:21 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
 PKG_SUPPORTED_OPTIONS=	inet6 kerberos-prefix-cmds ldap
@@ -23,10 +23,10 @@ PLIST_VARS+=		ldap
 .  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap-client}
 PLIST.ldap=		yes
+INSTALLATION_DIRS+=	share/examples/heimdal
 
 post-install: heimdal-ldap-schema
 heimdal-ldap-schema:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/heimdal
 	${INSTALL_DATA} ${WRKSRC}/lib/hdb/hdb.schema			\
 		${DESTDIR}${PREFIX}/share/examples/heimdal
 .endif
@@ -57,11 +57,10 @@ CONFIGURE_ARGS+=	--program-transform-name=${HEIMDAL_TRANSFORM:Q}
 #
 SUBST_CLASSES+=		heimdal
 SUBST_STAGE.heimdal=	pre-configure
-SUBST_FILES.heimdal=	appl/rcp/rcp.c appl/rcp/rcp_locl.h		\
-			appl/rsh/rsh_locl.h				\
-			appl/telnet/telnetd/telnetd.h
-SUBST_SED.heimdal=	\
-	-e "/RSH_PROGRAM/s,rsh,${KRB5_PREFIX}rsh,g"			\
-	-e "/PATH_RSH/s,\"/usr/bin/rsh\",BINDIR \"${KRB5_PREFIX}rsh\",g" \
-	-e "/PATH_RSH/s,/rsh,/${KRB5_PREFIX}rsh,g"			\
-	-e "/PATH_LOGIN/s,/login,/${KRB5_PREFIX}login,g"
+SUBST_FILES.heimdal=	appl/rcp/rcp.c appl/rcp/rcp_locl.h
+SUBST_FILES.heimdal+=	appl/rsh/rsh_locl.h
+SUBST_FILES.heimdal+=	appl/telnet/telnetd/telnetd.h
+SUBST_SED.heimdal=	-e "/RSH_PROGRAM/s,rsh,${KRB5_PREFIX}rsh,g"
+SUBST_SED.heimdal+=	-e "/PATH_RSH/s,\"/usr/bin/rsh\",BINDIR \"${KRB5_PREFIX}rsh\",g"
+SUBST_SED.heimdal+=	-e "/PATH_RSH/s,/rsh,/${KRB5_PREFIX}rsh,g"
+SUBST_SED.heimdal+=	-e "/PATH_LOGIN/s,/login,/${KRB5_PREFIX}login,g"
