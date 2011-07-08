@@ -1,6 +1,12 @@
---- libglusterfs/src/compat.c.orig	2011-04-22 19:37:28.000000000 +0200
-+++ libglusterfs/src/compat.c	2011-05-19 15:27:32.000000000 +0200
-@@ -529,8 +529,285 @@
+$NetBSD: patch-be,v 1.4 2011/07/08 08:02:57 manu Exp $
+
+basename() and dirname() are not supposed to be thread-safe, and NetBSD's
+implementation is not. glusterfs assume the functions are thread-safe.
+Borrow basename() and rdirname() form glibc and make NetBSD use them.
+
+--- libglusterfs/src/compat.c.orig	2011-06-10 16:59:04.000000000 +0000
++++ libglusterfs/src/compat.c	2011-07-08 01:37:36.000000000 +0000
+@@ -529,8 +529,412 @@
  
  }
  #endif /* GF_SOLARIS_HOST_OS */
@@ -229,59 +235,186 @@
 +
 +  return path;
 +}
++#ifndef HAVE_SYS_XATTR_H
 +
-+/*
-+ * Extended attribute API for NetBSD
-+ */
++#define MATCH_NS(ns, key) (strncmp(ns, key, sizeof(ns) - 1) == 0)
++static int
++xattr_native_ns(const char *key) {
++        if (MATCH_NS("system.", key))
++                return EXTATTR_NAMESPACE_SYSTEM;
++        else if (MATCH_NS("user.", key))
++                return EXTATTR_NAMESPACE_USER;
++        else if (MATCH_NS("security.", key))
++                return EXTATTR_NAMESPACE_SYSTEM; 
++        else if (MATCH_NS("trusted.", key))
++                return EXTATTR_NAMESPACE_SYSTEM; 
++        else
++                return EXTATTR_NAMESPACE_USER;
++ 
++}
++#undef MATCH_NS
++
++static void 
++xattr_native_list(char *data, ssize_t len) {
++	int i;
++	size_t attrlen;
++
++	for (i = 0; i < len; i += attrlen + 1) {
++		attrlen = (size_t)data[i];
++		memmove(data + i, data + i + 1, attrlen);
++		data[i + attrlen] = 0;
++	}
++
++	return;
++}
++
 +int
 +removexattr(const char *path, const char *key)
-+{ return extattr_delete_file(path, EXTATTR_NAMESPACE_USER, key); }
++{
++	return extattr_delete_file(path, xattr_native_ns(key), key);
++}
 +
 +ssize_t
 +listxattr(const char *path, void *value, size_t size) 
-+{ return extattr_list_file(path, EXTATTR_NAMESPACE_USER, value, size); }
++{ 
++	ssize_t syslen;
++	ssize_t usrlen;
++
++	usrlen = extattr_list_file(path, EXTATTR_NAMESPACE_USER, value, size);
++	if (usrlen == -1)
++		return -1;
++
++	if (value != NULL) {
++		xattr_native_list(value, usrlen);
++		value += usrlen;
++		size -= usrlen;
++	}
++
++	syslen = extattr_list_file(path, EXTATTR_NAMESPACE_SYSTEM, value, size);
++	if (usrlen == -1)
++		return usrlen;
++
++	if (value != NULL)
++		xattr_native_list(value, syslen);
++
++	return usrlen + syslen; 
++}
 +
 +ssize_t
 +getxattr(const char *path, const char *key, void *value, size_t size)
-+{ return extattr_get_file(path, EXTATTR_NAMESPACE_USER, key, value, size); }
++{ 
++	return extattr_get_file(path, xattr_native_ns(key), key, value, size); 
++}
 +
 +int
 +setxattr(const char *path, const char *key, const void *value, size_t size)
-+{ return extattr_set_file(path, EXTATTR_NAMESPACE_USER, key, value, size); }
++{
++	ssize_t ret;
++
++	ret = extattr_set_file(path, xattr_native_ns(key), key, value, size);
++
++	return (ret == -1) ? -1 : 0;
++}
 +
 +int
 +fremovexattr(int fd, const char *key)
-+{ return extattr_delete_fd(fd, EXTATTR_NAMESPACE_USER, key); }
++{
++	return extattr_delete_fd(fd, xattr_native_ns(key), key);
++}
 +
 +ssize_t
 +flistxattr(int fd, void *value, size_t size) 
-+{ return extattr_list_fd(fd, EXTATTR_NAMESPACE_USER, value, size); }
++{ 
++	ssize_t syslen;
++	ssize_t usrlen;
++
++	usrlen = extattr_list_fd(fd, EXTATTR_NAMESPACE_USER, value, size);
++	if (usrlen == -1)
++		return -1;
++
++	if (value != NULL) {
++		xattr_native_list(value, usrlen);
++		value += usrlen;
++		size -= usrlen;
++	}
++
++	syslen = extattr_list_fd(fd, EXTATTR_NAMESPACE_SYSTEM, value, size);
++	if (usrlen == -1)
++		return usrlen;
++
++	if (value != NULL)
++		xattr_native_list(value, syslen);
++
++	return usrlen + syslen; 
++}
 +
 +ssize_t
 +fgetxattr(int fd, const char *key, void *value, size_t size)
-+{ return extattr_get_fd(fd, EXTATTR_NAMESPACE_USER, key, value, size); }
++{ 
++	return extattr_get_fd(fd, xattr_native_ns(key), key, value, size); 
++}
 +
 +int
 +fsetxattr(int fd, const char *key, const void *value, size_t size)
-+{ return extattr_set_fd(fd, EXTATTR_NAMESPACE_USER, key, value, size); }
++{
++	ssize_t ret;
++
++	ret = extattr_set_fd(fd, xattr_native_ns(key), key, value, size);
++
++	return (ret == -1) ? -1 : 0;
++}
 +
 +int
 +lremovexattr(const char *path, const char *key)
-+{ return extattr_delete_link(path, EXTATTR_NAMESPACE_USER, key); }
++{
++	return extattr_delete_link(path, xattr_native_ns(key), key);
++}
 +
 +ssize_t
 +llistxattr(const char *path, void *value, size_t size) 
-+{ return extattr_list_link(path, EXTATTR_NAMESPACE_USER, value, size); }
++{ 
++	ssize_t syslen;
++	ssize_t usrlen;
++
++	usrlen = extattr_list_link(path, EXTATTR_NAMESPACE_USER, value, size);
++	if (usrlen == -1)
++		return -1;
++
++	if (value != NULL) {
++		xattr_native_list(value, usrlen);
++		value += usrlen;
++		size -= usrlen;
++	}
++
++	syslen = extattr_list_link(path, EXTATTR_NAMESPACE_SYSTEM, value, size);
++	if (usrlen == -1)
++		return usrlen;
++
++	if (value != NULL)
++		xattr_native_list(value, syslen);
++
++	return usrlen + syslen; 
++}
 +
 +ssize_t
 +lgetxattr(const char *path, const char *key, void *value, size_t size)
-+{ return extattr_get_link(path, EXTATTR_NAMESPACE_USER, key, value, size); }
++{ 
++	return extattr_get_link(path, xattr_native_ns(key), key, value, size); 
++}
 +
 +int
 +lsetxattr(const char *path, const char *key, const void *value, size_t size)
-+{ return extattr_set_link(path, EXTATTR_NAMESPACE_USER, key, value, size); }
++{
++	ssize_t ret;
 +
++	ret = extattr_set_link(path, xattr_native_ns(key), key, value, size);
++
++	return (ret == -1) ? -1 : 0;
++}
++
++#endif /* HAVE_SYS_XATTR_H */
 +#endif /* __NetBSD__ */
++
  #ifndef HAVE_STRNLEN
  size_t
  strnlen(const char *string, size_t maxlen)
