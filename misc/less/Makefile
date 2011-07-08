@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2008/03/02 15:35:33 bjs Exp $
-#
+# $NetBSD: Makefile,v 1.20 2011/07/08 10:42:53 tron Exp $
 
-DISTNAME=	less-418
+DISTNAME=	less-444
 CATEGORIES=	misc
 MASTER_SITES=	http://www.greenwoodsoftware.com/less/
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.greenwoodsoftware.com/less/
 COMMENT=	Pager similar to more and pg
+LICENSE=	modified-bsd OR gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
