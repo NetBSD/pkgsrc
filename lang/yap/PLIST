@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/10/27 12:32:52 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/07/08 11:40:27 asau Exp $
 bin/yap
 include/Yap/Atoms.h
 include/Yap/Regs.h
@@ -73,6 +73,7 @@ include/Yap/rheap.h
 include/Yap/rhstruct.h
 include/Yap/rtree_udi.h
 include/Yap/sshift.h
+include/Yap/swi.h
 include/Yap/tab.structs.h
 include/Yap/tatoms.h
 include/Yap/threads.h
@@ -130,7 +131,9 @@ share/Yap/autoloader.yap
 share/Yap/avl.yap
 share/Yap/base64.pl
 share/Yap/bhash.yap
+share/Yap/block_diagram.yap
 share/Yap/broadcast.pl
+share/Yap/c_alarms.yap
 share/Yap/cgi.pl
 share/Yap/charsio.yap
 share/Yap/chr.pl
@@ -158,6 +161,7 @@ share/Yap/clp/clp_events.pl
 share/Yap/clpbn.yap
 share/Yap/clpbn/aggregates.yap
 share/Yap/clpbn/bnt.yap
+share/Yap/clpbn/bp.yap
 share/Yap/clpbn/connected.yap
 share/Yap/clpbn/discrete_utils.yap
 share/Yap/clpbn/display.yap
@@ -233,6 +237,7 @@ share/Yap/dtproblog.yap
 share/Yap/error.pl
 share/Yap/expand_macros.yap
 share/Yap/filesex.pl
+share/Yap/flags.yap
 share/Yap/gensym.yap
 share/Yap/hacks.yap
 share/Yap/heaps.yap
@@ -334,6 +339,7 @@ share/Yap/pl/modules.yap
 share/Yap/pl/preds.yap
 share/Yap/pl/profile.yap
 share/Yap/pl/protect.yap
+share/Yap/pl/save.yap
 share/Yap/pl/setof.yap
 share/Yap/pl/signals.yap
 share/Yap/pl/sockets.yap
@@ -350,6 +356,7 @@ share/Yap/pltotex.pl
 share/Yap/plunit.pl
 share/Yap/prandom.yap
 share/Yap/problog.yap
+share/Yap/problog/ad_converter.yap
 share/Yap/problog/extlists.yap
 share/Yap/problog/flags.yap
 share/Yap/problog/gflags.yap
@@ -357,13 +364,16 @@ share/Yap/problog/hash_table.yap
 share/Yap/problog/intervals.yap
 share/Yap/problog/logger.yap
 share/Yap/problog/mc_DNF_sampling.yap
+share/Yap/problog/nestedtries.yap
 share/Yap/problog/os.yap
 share/Yap/problog/print.yap
 share/Yap/problog/print_learning.yap
+share/Yap/problog/ptree.yap
 share/Yap/problog/sampling.yap
 share/Yap/problog/tabling.yap
+share/Yap/problog/termhandling.yap
 share/Yap/problog/timer.yap
-share/Yap/problog/tptree.yap
+share/Yap/problog/utils.yap
 share/Yap/problog/utils_learning.yap
 share/Yap/problog/variable_elimination.yap
 share/Yap/problog/variables.yap
@@ -448,6 +458,6 @@ share/Yap/xpath.pl
 share/Yap/xsdp_types.pl
 share/Yap/ypp.yap
 share/Yap/zlib.pl
-share/docs/Yap/Artistic
-share/docs/Yap/COPYING
-share/docs/Yap/README
+share/doc/Yap/Artistic
+share/doc/Yap/COPYING
+share/doc/Yap/README
