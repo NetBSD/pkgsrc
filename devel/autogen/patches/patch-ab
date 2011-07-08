@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.3 2011/07/08 11:44:02 drochner Exp $
+
+--- autoopts/mk-tpl-config.sh.orig	2011-06-06 15:08:10.000000000 +0000
++++ autoopts/mk-tpl-config.sh
+@@ -70,7 +70,7 @@ do
+     st=`sed 1q $f`
+ 
+     case "$st" in
+-    */perl ) echo '#!' `which perl`
++    */perl ) echo '#!' ${PERL5}
+              sed 1d $f
+              ;;
+ 
+@@ -87,7 +87,8 @@ done
+ while :
+ do
+     \unalias -a
+-    unset -f command cat which
++    unset -f command cat which || true
++    test -x "$POSIX_CAT" && break
+     POSIX_CAT=`which cat`
+     test -x "$POSIX_CAT" && break
+     POSIX_CAT=`
