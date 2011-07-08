@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/25 09:51:35 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/08 18:51:15 drochner Exp $
 #
 
 DISTNAME=	glib-networking-2.28.7
@@ -24,5 +24,7 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.28.0
 BUILDLINK_API_DEPENDS.libproxy+= libproxy>=0.3.1
 .include "../../www/libproxy/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+# XXX libcgrypt is not necessary if gnutls was built against nettle,
+# but the assumption is hardwired at multiple places
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
