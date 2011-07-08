@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/03/19 07:01:18 taca Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/07/08 10:20:10 adam Exp $
 # used by lang/php53/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php53-extensions/Makefile
@@ -42,7 +42,7 @@ HOMEPAGE?=		http://www.php.net/
 PHP_BASE_VERS=		5.3.6
 
 PHP_EXTENSION_DIR=	lib/php/20090630
-PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
+PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 PKG_SYSCONFVAR?=	php
 
