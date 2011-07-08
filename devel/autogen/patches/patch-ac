@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2011/07/08 11:44:02 drochner Exp $
+
+fmt(1) options portability: width=75 should be default
+
+--- autoopts/tpl/optcode.tlib.orig	2011-05-03 21:08:02.000000000 +0000
++++ autoopts/tpl/optcode.tlib
+@@ -171,7 +171,7 @@ ELSE  =][=
+     "#define zLicenseDescrip zCopyright\n"
+     (begin
+      (set! ext-text (string-append (shell (string-append
+-           "fmt -w 75 <<_EOF_\n" ext-text "\n_EOF_" )) "\n" ))
++           "fmt <<_EOF_\n" ext-text "\n_EOF_" )) "\n" ))
+ 
+      (sprintf "static char const zLicenseDescrip[%d] =\n%s;\n"
+              (+ (string-length ext-text) 1)
+@@ -448,7 +448,7 @@ s/^@item *$/\
+ /[=
+ 
+ (define patch-text-sed
+-  (sprintf "sed %s <<\\_EODetail_ | fmt -w 75\n"
++  (sprintf "sed %s <<\\_EODetail_ | fmt\n"
+     (raw-shell-str (out-pop #t)) ) )
+ 
+ (define patch-text (lambda (t-name)
