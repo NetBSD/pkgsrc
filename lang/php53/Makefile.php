@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.5 2011/02/21 16:23:58 taca Exp $
+# $NetBSD: Makefile.php,v 1.6 2011/07/08 10:20:10 adam Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 
@@ -16,13 +16,13 @@ PLIST_VARS+=		suhosin
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
 PHP_EXTENSION_DIR=	lib/php/20090630
-PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
+PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-config-file-scan-dir=${PKG_SYSCONFDIR:Q}/php.d
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-config-file-scan-dir=${PKG_SYSCONFDIR}/php.d
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 CONFIGURE_ARGS+=	--with-regex=system
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--disable-pdo
 CONFIGURE_ARGS+=	--disable-json
 
 CONFIGURE_ARGS+=	--enable-xml
-CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 # Note: This expression is the same as ${PKGBASE}, but the latter is
@@ -60,19 +60,19 @@ PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 
 .if !empty(PKG_OPTIONS:Msuhosin)
 SUHOSIN_PHPVER=		5.3.4
-. if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS} && (${SUHOSIN_PHPVER} != "5.3.4" || ${PHP_BASE_VERS} != "5.3.5")
+.  if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS} && (${SUHOSIN_PHPVER} != "5.3.4" || ${PHP_BASE_VERS} != "5.3.5")
 PKG_FAIL_REASON+=	"The suhosin patch is currently not available for"
 PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
 PKG_FAIL_REASON+=	"an updated patch is released or temporarily"
 PKG_FAIL_REASON+=	"build this package without the suhosin option."
-. else
+.  else
 PATCH_SITES=		http://download.suhosin.org/
 PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.gz
 PATCH_DIST_STRIP=	-p1
 PLIST.suhosin=		yes
 MESSAGE_SRC=		${.CURDIR}/../../lang/php53/MESSAGE
 MESSAGE_SRC+=		${.CURDIR}/../../lang/php53/MESSAGE.suhosin
-. endif
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
