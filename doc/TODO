@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10402 2011/07/08 11:19:26 adam Exp $
+$NetBSD: TODO,v 1.10403 2011/07/08 11:25:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o acme-091 [pkg/44771]
 	o acr-0.5.2
 	o acroread9-9.3.4 [wip]
-	o adobe-flash-plugin10.1-10.3
 	o adocman-0.13
 	o adtool-1.3
 	o advi-1.9.0
@@ -382,7 +381,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
-	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
 	o ap-dtcl-1.0.0
 	o ap-jk-1.2.27 [pkg/40542]
@@ -391,10 +389,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap-mp3-0.40
 	o ap-xslt-1.3.8
 	o ap2-auth-ldap-3.11
-	o ap2-suphp-0.7.1 [pkg/44762]
 	o ap2-transform-0.6.0
 	o apache-maven-3.0
-	o apache-tomcat55-5.5.29
 	o applewmproto-1.4.2
 	o appres-1.0.3
 	o apsfilter-7.2.8
@@ -443,7 +439,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o blender-2.58
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bonnie++-1.96
 	o bos-2.5
 	o boson-0.13
 	o botan-1.10.0
@@ -471,7 +466,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.0.1
 	o cherokee-1.2.1
-	o chicken-4.7.0
 	o chromium-0.9.15
 	o chrony-1.25
 	o cinepaint-0.23
@@ -770,7 +764,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.4
 	o haskell-mode-1.45
-	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.8.7
 	o help2man-1.40.4
 	o hesiod-3.1.0
@@ -784,7 +777,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o html2ps-1.0b5
 	o html2wml-0.4.11
 	o htop-0.9
-	o httping-1.4.4
 	o httptunnel-3.3
 	o hugin-2011.0.0
 	o hunspell-de-20110609
@@ -806,7 +798,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inputproto-2.0.2
 	o inspircd-1.2.1
 	o instiki-0.13
-	o isc-dhcp4-4.2.1
 	o ircservices-5.1.21
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
@@ -854,13 +845,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o krusader-2.0
 	o ktorrent-4.1.1
 	o ktorrent3-3.3.4
-	o lapack-3.3.0
 	o latd-1.21
 	o latex2rtf-1.9.19
 	o lbdb-0.38
 	o lcc-4.2
 	o lcms-2.2
-	o ldapsdk-6.0.2
 	o leafnode-1.11.8
 	o level9-4.1
 	o lftp-4.3.0
@@ -907,7 +896,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnome-keyring-3.0.3
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.0.0
-	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o libjpeg-turbo-1.1.1
 	o liblbxutil-1.1.0
@@ -923,7 +911,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.92.0
-	o libssh-0.5.0
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
@@ -938,7 +925,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o licq-1.3.8
 	o liferea-1.6.6
 	o lincvs-2.1.4 [now called CrossVC]
-	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
@@ -983,7 +969,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3splt-2.3a
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.3
-	o mplayer-1.0rc4
 	o mpop-1.0.24
 	o mrtg-2.17.1
 	o mserv-devel-0.41
@@ -1041,7 +1026,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
-	o oto-0.5
 	o otpCalc-0.97
 	o p5-Perl-Tidy-20101217
 	o p5-PerlMagick-6.7.0.9
@@ -1071,7 +1055,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php-libawl-0.46
 	o phpmyadmin-3.4.3
 	o picp-0.6.8
-	o pidgin-2.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
@@ -1122,7 +1105,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gobject-2.28.6
-	o py-gtk2-2.24.0
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-m2crypto-0.20.2
@@ -1185,7 +1167,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o saxon-9.2
 	o scapy-2.2.0
 	o scew-0.4.0
-	o sch-3.8.3
 	o scilab-5.3.1
 	o scm-5e7
 	o scons-2.0.1
@@ -1367,7 +1348,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xcmiscproto-1.2.1
 	o xcmsdb-1.0.3 [unpackaged]
 	o xconsole-1.0.4
-	o xcursorgen-1.0.4
 	o xdesktopwaves-1.3
 	o xdpyinfo-1.2.0
 	o xdriinfo-1.0.4
@@ -1490,7 +1470,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ysm-2.9.9.1
 	o yorick-2.1.05
 	o z26-2.14
-	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
 	o zile-2.4.0.50
 	o zircon-1.18.256
