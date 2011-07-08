@@ -1,4 +1,4 @@
-$NetBSD: patch-bp,v 1.1 2011/06/06 15:53:14 manu Exp $
+$NetBSD: patch-bp,v 1.2 2011/07/08 08:02:57 manu Exp $
 
 NetBSD does not have umount(2), but unmount(2)
 

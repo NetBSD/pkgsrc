@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2011/06/29 13:53:01 manu Exp $
+# $NetBSD: Makefile,v 1.12 2011/07/08 08:02:56 manu Exp $
 #
 
-DISTNAME=	glusterfs-3.2.0
-PKGREVISION=	3
+DISTNAME=	glusterfs-3.2.1
+PKGREVISION=	1
 CATEGORIES=	filesystems
-MASTER_SITES=	http://download.gluster.com/pub/gluster/glusterfs/3.2/LATEST/
+MASTER_SITES=	http://download.gluster.com/pub/gluster/glusterfs/3.2/3.2.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gluster.org/
