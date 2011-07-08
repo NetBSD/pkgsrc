@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/02/08 07:56:09 adam Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2011/07/08 16:33:12 tron Exp $
 
-DISTNAME=	clamav-0.97
+DISTNAME=	clamav-0.97.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -75,5 +75,4 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CFGINST=${EGDIR} DBINST=${EGDIR}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

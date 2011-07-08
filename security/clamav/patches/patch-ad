@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/12/24 07:11:05 kefren Exp $
+$NetBSD: patch-ad,v 1.1.1.1.6.1 2011/07/08 16:33:12 tron Exp $
 
 Fix compilation error DragonFly.
 
---- docs/Makefile.in.orig	2010-05-14 14:16:49.000000000 +0300
-+++ docs/Makefile.in	2010-05-20 10:07:03.000000000 +0300
-@@ -273,6 +273,8 @@
- man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/clamav-milter.conf.5 man/freshclam.conf.5 man/clamconf.1 man/clamdtop.1
+--- docs/Makefile.in.orig	2011-06-09 06:51:36.000000000 +0000
++++ docs/Makefile.in
+@@ -274,6 +274,8 @@ EXTRA_DIST = html $(top_srcdir)/docs/man
+ man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/clamav-milter.conf.5 man/freshclam.conf.5 man/clamconf.1 man/clamdtop.1 man/clambc.1
  all: all-am
  
 +@BUILD_CLAMD_TRUE@@HAVE_MILTER_TRUE@MILTER_MANS = man/clamav-milter.8
