@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.10 2008/05/26 14:50:19 wiz Exp $
+$NetBSD: distinfo,v 1.11 2011/07/08 11:44:02 drochner Exp $
 
-SHA1 (autogen-5.9.5.tar.bz2) = b83961796a060f91ed30584eaffacd046368ba28
-RMD160 (autogen-5.9.5.tar.bz2) = 17f5fc8288f03663d27a7031e65173311d6bab92
-Size (autogen-5.9.5.tar.bz2) = 1007798 bytes
+SHA1 (autogen-5.12.tar.bz2) = 3212cf32da9ba2866e1566e78dac3867ee247ac2
+RMD160 (autogen-5.12.tar.bz2) = b00ab61cf0b47fb53039fa680071382c34b51f65
+Size (autogen-5.12.tar.bz2) = 1059162 bytes
+SHA1 (patch-ab) = 095ad72ef6ac6b1f3677a9898d8788c5ff60f4e0
+SHA1 (patch-ac) = 2a37cc72d2affbb8d99d3d23d0e6782a013cfec4
+SHA1 (patch-ad) = 3bb19c5e15768335bf5ae11be3803b2587298fa3
