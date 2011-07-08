@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/10/27 12:32:52 asau Exp $
+# $NetBSD: Makefile,v 1.12 2011/07/08 11:40:27 asau Exp $
 #
 
-DISTNAME=		yap-6.2.0
+DISTNAME=		yap-6.2.1
 CATEGORIES=		lang
 # MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yap/}
 MASTER_SITES=		http://www.dcc.fc.up.pt/~vsc/Yap/ \
@@ -13,15 +13,11 @@ COMMENT=		ISO-compliant Prolog
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			$(WRKDIR)/yap-6
-
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS=		gmake
 
-# Don't enable system malloc, it dumps core otherwise:
-#CONFIGURE_ARGS=		--enable-use-malloc
 CONFIGURE_ENV+=		INDENT=${TRUE:Q}
 
 # debug option:
