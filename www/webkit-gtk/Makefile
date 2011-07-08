@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2011/06/10 09:39:41 obache Exp $
+# $NetBSD: Makefile,v 1.45 2011/07/08 17:27:29 drochner Exp $
 
-DISTNAME=	webkit-1.4.1
+DISTNAME=	webkit-1.4.2
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/
 
