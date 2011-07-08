@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10399 2011/07/05 13:36:57 taca Exp $
+$NetBSD: TODO,v 1.10400 2011/07/08 10:30:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -478,7 +478,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
-	o clamav-0.97.1
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.6.16
@@ -498,7 +497,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cross-h8300-hms-binutils-2.17
 	o cryptopp-5.6.0
 	o csound5-5.13
-	o curl-7.21.7
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.22
 	o cygwin_lib-1.5.24.2
@@ -775,7 +773,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o haskell-mode-1.45
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o hdf5-1.8.7
-	o heimdal-1.2.1
 	o help2man-1.40.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
@@ -1130,13 +1127,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gtk2-2.24.0
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
-	o py-ldap-2.4.0
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
 	o py-simplejson-2.1.6
 	o py-sybase-0.37
 	o py-twisted-11.0.0
-	o python-3.1.3 [wip]
 	o python-3.2
 	o qbrew-0.3.9
 	o qemu-0.14.1
@@ -1179,7 +1174,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rp-l2tp-0.4
 	o rp-pppoe-3.10
 	o rpm-5.1.4
-	o rrdtool-1.4.5
 	o rsnapshot-1.3.1
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
