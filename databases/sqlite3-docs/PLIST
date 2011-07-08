@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/04/12 19:03:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/07/08 09:35:40 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -37,8 +37,9 @@ share/doc/sqlite3/c3ref/c_busy_recovery.html
 share/doc/sqlite3/c3ref/c_checkpoint_full.html
 share/doc/sqlite3/c3ref/c_config_getmalloc.html
 share/doc/sqlite3/c3ref/c_dbconfig_enable_fkey.html
-share/doc/sqlite3/c3ref/c_dbstatus_cache_used.html
+share/doc/sqlite3/c3ref/c_dbstatus options.html
 share/doc/sqlite3/c3ref/c_deny.html
+share/doc/sqlite3/c3ref/c_fail.html
 share/doc/sqlite3/c3ref/c_fcntl_chunk_size.html
 share/doc/sqlite3/c3ref/c_index_constraint_eq.html
 share/doc/sqlite3/c3ref/c_iocap_atomic.html
@@ -51,9 +52,10 @@ share/doc/sqlite3/c3ref/c_shm_nlock.html
 share/doc/sqlite3/c3ref/c_source_id.html
 share/doc/sqlite3/c3ref/c_static.html
 share/doc/sqlite3/c3ref/c_status_malloc_count.html
-share/doc/sqlite3/c3ref/c_stmtstatus_autoindex.html
+share/doc/sqlite3/c3ref/c_stmtstatus counter.html
 share/doc/sqlite3/c3ref/c_sync_dataonly.html
 share/doc/sqlite3/c3ref/c_testctrl_always.html
+share/doc/sqlite3/c3ref/c_vtab_constraint_support.html
 share/doc/sqlite3/c3ref/changes.html
 share/doc/sqlite3/c3ref/clear_bindings.html
 share/doc/sqlite3/c3ref/close.html
@@ -145,13 +147,16 @@ share/doc/sqlite3/c3ref/threadsafe.html
 share/doc/sqlite3/c3ref/total_changes.html
 share/doc/sqlite3/c3ref/unlock_notify.html
 share/doc/sqlite3/c3ref/update_hook.html
+share/doc/sqlite3/c3ref/uri_parameter.html
 share/doc/sqlite3/c3ref/user_data.html
 share/doc/sqlite3/c3ref/value.html
 share/doc/sqlite3/c3ref/value_blob.html
 share/doc/sqlite3/c3ref/vfs.html
 share/doc/sqlite3/c3ref/vfs_find.html
 share/doc/sqlite3/c3ref/vtab.html
+share/doc/sqlite3/c3ref/vtab_config.html
 share/doc/sqlite3/c3ref/vtab_cursor.html
+share/doc/sqlite3/c3ref/vtab_on_conflict.html
 share/doc/sqlite3/c3ref/wal_autocheckpoint.html
 share/doc/sqlite3/c3ref/wal_checkpoint.html
 share/doc/sqlite3/c3ref/wal_checkpoint_v2.html
@@ -192,13 +197,11 @@ share/doc/sqlite3/fileio.html
 share/doc/sqlite3/foreignkeys.html
 share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
-share/doc/sqlite3/fts3req.html
 share/doc/sqlite3/howtocompile.html
+share/doc/sqlite3/howtocorrupt.html
 share/doc/sqlite3/images/2005osaward.gif
 share/doc/sqlite3/images/SQLite.gif
 share/doc/sqlite3/images/SQLite_big.gif
-share/doc/sqlite3/images/ac/btreemodule_balance_shallower.svg
-share/doc/sqlite3/images/ac/btreemodule_overview.svg
 share/doc/sqlite3/images/ac/commit-0.gif
 share/doc/sqlite3/images/ac/commit-1.gif
 share/doc/sqlite3/images/ac/commit-2.gif
@@ -265,9 +268,7 @@ share/doc/sqlite3/images/fileformat/overflowpage.gif
 share/doc/sqlite3/images/fileformat/pointermapentry.gif
 share/doc/sqlite3/images/fileformat/recordformat.gif
 share/doc/sqlite3/images/fileformat/rtdocs.css
-share/doc/sqlite3/images/fileformat/rtdocs.css~
 share/doc/sqlite3/images/fileformat/rtdocs.js
-share/doc/sqlite3/images/fileformat/rtdocs.js~
 share/doc/sqlite3/images/fileformat/tablelongrecord.gif
 share/doc/sqlite3/images/fileformat/tablenodecell.gif
 share/doc/sqlite3/images/fileformat/tableshortrecord.gif
@@ -349,7 +350,6 @@ share/doc/sqlite3/images/sqlite370_banner.gif
 share/doc/sqlite3/images/src_logo.gif
 share/doc/sqlite3/images/sw.gif
 share/doc/sqlite3/images/sw.png
-share/doc/sqlite3/images/syntax/a.gif
 share/doc/sqlite3/images/syntax/alter-table-stmt.gif
 share/doc/sqlite3/images/syntax/analyze-stmt.gif
 share/doc/sqlite3/images/syntax/attach-stmt.gif
@@ -403,6 +403,7 @@ share/doc/sqlite3/images/syntax/update-stmt-limited.gif
 share/doc/sqlite3/images/syntax/update-stmt.gif
 share/doc/sqlite3/images/syntax/vacuum-stmt.gif
 share/doc/sqlite3/images/table-ex1b2.gif
+share/doc/sqlite3/images/vfs1.gif
 share/doc/sqlite3/index.html
 share/doc/sqlite3/inmemorydb.html
 share/doc/sqlite3/keyword_index.html
@@ -441,7 +442,6 @@ share/doc/sqlite3/lang_update.html
 share/doc/sqlite3/lang_vacuum.html
 share/doc/sqlite3/limits.html
 share/doc/sqlite3/lockingv3.html
-share/doc/sqlite3/logformat.html
 share/doc/sqlite3/malloc.html
 share/doc/sqlite3/mingw.html
 share/doc/sqlite3/mostdeployed.html
@@ -551,6 +551,11 @@ share/doc/sqlite3/releaselog/3_7_3.html
 share/doc/sqlite3/releaselog/3_7_4.html
 share/doc/sqlite3/releaselog/3_7_5.html
 share/doc/sqlite3/releaselog/3_7_6.html
+share/doc/sqlite3/releaselog/3_7_6_1.html
+share/doc/sqlite3/releaselog/3_7_6_2.html
+share/doc/sqlite3/releaselog/3_7_6_3.html
+share/doc/sqlite3/releaselog/3_7_7.html
+share/doc/sqlite3/releaselog/3_7_7_1.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rtree.html
@@ -562,6 +567,7 @@ share/doc/sqlite3/session/funclist.html
 share/doc/sqlite3/session/intro.html
 share/doc/sqlite3/session/objlist.html
 share/doc/sqlite3/sharedcache.html
+share/doc/sqlite3/shortnames.html
 share/doc/sqlite3/sitemap.html
 share/doc/sqlite3/speed.html
 share/doc/sqlite3/sqlite.html
@@ -574,8 +580,10 @@ share/doc/sqlite3/th3.html
 share/doc/sqlite3/threadsafe.html
 share/doc/sqlite3/transactional.html
 share/doc/sqlite3/unlock_notify.html
+share/doc/sqlite3/uri.html
 share/doc/sqlite3/vdbe.html
 share/doc/sqlite3/version3.html
+share/doc/sqlite3/vfs.html
 share/doc/sqlite3/vtab.html
 share/doc/sqlite3/wal.html
 share/doc/sqlite3/whentouse.html
