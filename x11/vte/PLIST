@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/11/16 13:53:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/07/08 17:23:05 drochner Exp $
 bin/vte
 include/vte-0.0/vte/pty.h
 include/vte-0.0/vte/reaper.h
@@ -10,31 +10,30 @@ include/vte-0.0/vte/vtetypebuiltins.h
 include/vte-0.0/vte/vteversion.h
 lib/libvte.la
 lib/pkgconfig/vte.pc
-lib/vte-0.0/decset
-lib/vte-0.0/interpret
-lib/vte-0.0/osc
-lib/vte-0.0/slowcat
-lib/vte-0.0/window
 libexec/gnome-pty-helper
-share/gtk-doc/html/vte-0.0/VteReaper.html
 share/gtk-doc/html/vte-0.0/VteTerminal.html
-share/gtk-doc/html/vte-0.0/VteTerminalAccessible.html
 share/gtk-doc/html/vte-0.0/annotation-glossary.html
 share/gtk-doc/html/vte-0.0/api-index-0-20.html
 share/gtk-doc/html/vte-0.0/api-index-0-24.html
 share/gtk-doc/html/vte-0.0/api-index-0-26.html
+share/gtk-doc/html/vte-0.0/api-index-0-28.html
+share/gtk-doc/html/vte-0.0/api-index-0-30.html
 share/gtk-doc/html/vte-0.0/api-index-deprecated.html
 share/gtk-doc/html/vte-0.0/api-index-full.html
 share/gtk-doc/html/vte-0.0/ch01.html
 share/gtk-doc/html/vte-0.0/ch02.html
 share/gtk-doc/html/vte-0.0/ch03.html
-share/gtk-doc/html/vte-0.0/deprecated-objects.html
+share/gtk-doc/html/vte-0.0/ch04s02.html
+share/gtk-doc/html/vte-0.0/ch04s03.html
+share/gtk-doc/html/vte-0.0/ch04s04.html
+share/gtk-doc/html/vte-0.0/ch04s05.html
+share/gtk-doc/html/vte-0.0/ch04s06.html
 share/gtk-doc/html/vte-0.0/home.png
 share/gtk-doc/html/vte-0.0/index.html
 share/gtk-doc/html/vte-0.0/index.sgml
-share/gtk-doc/html/vte-0.0/internal-objects.html
 share/gtk-doc/html/vte-0.0/left.png
 share/gtk-doc/html/vte-0.0/licence.html
+share/gtk-doc/html/vte-0.0/migration-0-30.html
 share/gtk-doc/html/vte-0.0/object-hierarchy.html
 share/gtk-doc/html/vte-0.0/pt01.html
 share/gtk-doc/html/vte-0.0/right.png
@@ -133,4 +132,4 @@ share/locale/xh/LC_MESSAGES/vte-0.0.mo
 share/locale/zh_CN/LC_MESSAGES/vte-0.0.mo
 share/locale/zh_HK/LC_MESSAGES/vte-0.0.mo
 share/locale/zh_TW/LC_MESSAGES/vte-0.0.mo
-share/vte/termcap/xterm
+share/vte/termcap-0.0/xterm
