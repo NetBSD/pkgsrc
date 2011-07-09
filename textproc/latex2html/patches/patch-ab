@@ -1,8 +1,21 @@
-$NetBSD: patch-ab,v 1.1 2006/04/07 02:23:19 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2011/07/09 14:19:30 bsiegert Exp $
 
---- config/install.pl.orig	2002-04-28 05:15:01.000000000 +0000
+--- config/install.pl.orig	2002-11-29 11:49:01.000000000 +0000
 +++ config/install.pl
-@@ -394,10 +394,11 @@ if($cfg{TEXPATH}) {
+@@ -372,12 +372,6 @@ foreach $item (sort keys %Install_items)
+ 
+ if($cfg{TEXPATH}) {
+   print "\nNote: trying to install LaTeX2HTML style files in TeX directory tree\n     ($cfg{TEXPATH})\n";
+-  unless(mkpath($cfg{TEXPATH})) {
+-  #my $testpath = $cfg{TEXPATH}; # to strip (latex2)html
+-  #$testpath =~ s/[$dd$dd][^$dd$dd]*$//;
+-  #if((-d $cfg{TEXPATH} && !-w _) || (-d $testpath && !-w _)) {
+-    print STDERR "\nError: Cannot install LaTeX2HTML style files in $cfg{TEXPATH}\n";
+-  } else {
+     my $dir = 'texinputs';
+     my $dest = $cfg{TEXPATH};
+     unless(opendir(DIR,$dir)) {
+@@ -394,12 +388,12 @@ if($cfg{TEXPATH}) {
          }
        }
        closedir(DIR);
@@ -16,5 +29,7 @@ $NetBSD: patch-ab,v 1.1 2006/04/07 02:23:19 minskim Exp $
 +#        system($cfg{MKTEXLSR});
 +#      }
      }
-   }
+-  }
  }
+ print "Done. Have a lot of fun with LaTeX2HTML!\n";
+ exit 0;

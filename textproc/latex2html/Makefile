@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/07/22 09:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2011/07/09 14:19:30 bsiegert Exp $
 
 DISTNAME=	latex2html-2008
 #PKGNAME=	latex2html-2008
@@ -16,6 +16,7 @@ DEPENDS+=	netpbm>=10.29nb2:../../graphics/netpbm
 TEX_ACCEPTED=		teTeX3
 USE_TOOLS+=		gs:run perl:run
 GNU_CONFIGURE=		yes
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
