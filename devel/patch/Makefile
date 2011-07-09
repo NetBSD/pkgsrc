@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2009/11/30 18:32:53 heinz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2011/07/09 10:32:17 tron Exp $
 
-DISTNAME=	patch-2.5.4
-PKGREVISION=	2
+DISTNAME=	patch-2.5.9
 CATEGORIES=	devel
 # We keep an uncompressed tar archive of the sources on
 # ${MASTER_SITE_LOCAL} so that we won't need gzcat to extract the
@@ -43,8 +41,8 @@ INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin \
 do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
 	${AWK} '/#include <pch.h>/{print $$0 "\n#include <sys/param.h>";next;}\
-		/^#if HAVE_SETMODE/					\
-		{gsub(/^#if HAVE_SETMODE/,"#if defined(HAVE_SETMODE) \\&\\& !(defined(BSD) \\&\\& BSD >= 199306) \\&\\& !defined(__INTERIX)");print $$0; next; } \
+		/^#if HAVE_SETMODE_DOS/					\
+		{gsub(/^#if HAVE_SETMODE_DOS/,"#if defined(HAVE_SETMODE_DOS) \\&\\& !(defined(BSD) \\&\\& BSD >= 199306) \\&\\& !defined(__INTERIX)");print $$0; next; } \
 		{print $$0;}'						\
 		< ${WRKSRC}/pch.c.orig 					\
 		> ${WRKSRC}/pch.c
