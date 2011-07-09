@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.72 2011/01/20 07:13:31 obache Exp $
+$NetBSD: distinfo,v 1.73 2011/07/09 15:51:52 jmcneill Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -63,7 +63,7 @@ Size (mplayer/xanim-1.6.tar.bz2) = 94564 bytes
 SHA1 (mplayer/xine-lcd-1.2.tar.bz2) = 2fa7811e0dc7316d0c996b0a5bc37f5c97d1dd18
 RMD160 (mplayer/xine-lcd-1.2.tar.bz2) = 785f6826d49eddabd7ebc431db77139771f208f5
 Size (mplayer/xine-lcd-1.2.tar.bz2) = 172270 bytes
-SHA1 (patch-aa) = 9eae4563081e370d14560bb407a9b986b0128d7f
+SHA1 (patch-aa) = a1d82fd9999c656bd9ecf703cd9f2c0245330874
 SHA1 (patch-ab) = 1a927d956155a7b9a2daa1a4f522e47d830c5af6
 SHA1 (patch-ac) = 3d037c96537233cdbda582afdb878dcf3f43e923
 SHA1 (patch-ad) = 84ce5a0f5cd8f59831c56b14dd2bc762793427ac
@@ -72,5 +72,7 @@ SHA1 (patch-ag) = bef25568c913dcb8535afa51976ce7c94a6af5a2
 SHA1 (patch-ah) = 8cbd14c61e74023055770baf27201687aa34fede
 SHA1 (patch-an) = 3e72fb86abe7ab572f12a4fef002edb623ab6fae
 SHA1 (patch-ar) = df7e7cdc6fb8187bbcf0b285afc14d275a51e17a
+SHA1 (patch-stream_dvb_tune.c) = b663830ff64ab31488684b1a324da50ab52d68cc
+SHA1 (patch-stream_dvbin.h) = 56f6e71fcdf6bf3afccbdbc8682834c806114677
 SHA1 (patch-vb) = ce584c31e0e32865e87aa1f537a1f9e4817c7442
 SHA1 (patch-ve_x264) = 1946a2b2a7643bbc1d3f6a8963e21c4f6cbd2c89
