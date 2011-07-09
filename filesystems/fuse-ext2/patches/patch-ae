@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+
+Avoid NULL pointer access with "librefuse" under NetBSD.
+
+--- fuse-ext2/op_getattr.c.orig	2009-10-19 20:19:42.000000000 +0100
++++ fuse-ext2/op_getattr.c	2011-07-09 16:12:35.000000000 +0100
+@@ -27,6 +27,10 @@
+ 	struct ext2_vnode *vnode;
+ 	ext2_filsys e2fs = current_ext2fs();
+ 
++	if (e2fs == NULL) {
++		return -EIO;
++	}
++
+ 	debugf("enter");
+ 	debugf("path = %s", path);
+ 
