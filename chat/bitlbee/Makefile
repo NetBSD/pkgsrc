@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2011/05/04 17:41:15 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2011/07/09 11:13:20 mspo Exp $
 #
 
-DISTNAME=		bitlbee-3.0.1
+DISTNAME=		bitlbee-3.0.3
 PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
@@ -74,7 +74,7 @@ RCD_SCRIPTS=		bitlbee
 RCD_SCRIPT_SRC.bitlbee=	${FILESDIR}/bitlbee.sh
 
 # see https://savannah.gnu.org/support/index.php?107660
-BUILDLINK_ABI_DEPENDS.gnutls+= gnutls<2.12.0
+#BUILDLINK_ABI_DEPENDS.gnutls+= gnutls<2.12.0
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
