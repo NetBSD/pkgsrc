@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/09 10:24:18 abs Exp $
+include/ass/ass.h
+include/ass/ass_types.h
+lib/libass.la
+lib/pkgconfig/libass.pc
