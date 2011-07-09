@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.12 2011/06/15 13:01:57 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.13 2011/07/09 14:27:38 asau Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -272,8 +272,8 @@ include/wine/windows/dxerr9.h
 include/wine/windows/dxfile.h
 include/wine/windows/dxgi.h
 include/wine/windows/dxgi.idl
+include/wine/windows/dxgiformat.h
 include/wine/windows/dxgitype.h
-include/wine/windows/dxgitype.idl
 include/wine/windows/dyngraph.idl
 include/wine/windows/endpointvolume.h
 include/wine/windows/endpointvolume.idl
@@ -313,6 +313,9 @@ include/wine/windows/htiframe.h
 include/wine/windows/htiframe.idl
 include/wine/windows/htmlhelp.h
 include/wine/windows/http.h
+include/wine/windows/httprequest.h
+include/wine/windows/httprequest.idl
+include/wine/windows/httprequestid.h
 include/wine/windows/i_cryptasn1tls.h
 include/wine/windows/iads.h
 include/wine/windows/iads.idl
@@ -451,6 +454,8 @@ include/wine/windows/ntstatus.h
 include/wine/windows/oaidl.h
 include/wine/windows/oaidl.idl
 include/wine/windows/objbase.h
+include/wine/windows/objectarray.h
+include/wine/windows/objectarray.idl
 include/wine/windows/objidl.h
 include/wine/windows/objidl.idl
 include/wine/windows/objsafe.h
@@ -603,6 +608,8 @@ include/wine/windows/vfwmsgs.h
 include/wine/windows/vmr9.h
 include/wine/windows/vmr9.idl
 include/wine/windows/vmrender.idl
+include/wine/windows/vsstyle.h
+include/wine/windows/vssym32.h
 include/wine/windows/wbemcli.h
 include/wine/windows/wbemcli.idl
 include/wine/windows/werapi.h
@@ -655,6 +662,8 @@ include/wine/windows/winver.h
 include/wine/windows/wmistr.h
 include/wine/windows/wnaspi32.h
 include/wine/windows/wownt32.h
+include/wine/windows/wpcapi.h
+include/wine/windows/wpcapi.idl
 include/wine/windows/ws2def.h
 include/wine/windows/ws2ipdef.h
 include/wine/windows/ws2spi.h
@@ -1208,6 +1217,7 @@ lib/wine/fakedlls/user32.dll
 lib/wine/fakedlls/userenv.dll
 lib/wine/fakedlls/usp10.dll
 lib/wine/fakedlls/uxtheme.dll
+lib/wine/fakedlls/vbscript.dll
 lib/wine/fakedlls/vcomp.dll
 lib/wine/fakedlls/vdhcp.vxd
 lib/wine/fakedlls/vdmdbg.dll
@@ -1699,6 +1709,7 @@ lib/wine/user32.dll.so
 lib/wine/userenv.dll.so
 lib/wine/usp10.dll.so
 lib/wine/uxtheme.dll.so
+lib/wine/vbscript.dll.so
 lib/wine/vcomp.dll.so
 lib/wine/vdhcp.vxd.so
 lib/wine/vdmdbg.dll.so
