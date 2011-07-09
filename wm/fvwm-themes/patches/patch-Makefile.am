@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.am,v 1.1 2011/07/09 14:20:53 wiz Exp $
+
+Use destdir fake version at install target:
+
+--- work/fvwm-themes-0.6.2/Makefile.am.orig	2002-12-06 02:01:37.000000000 +0000
++++ Makefile.am
+@@ -33,10 +33,10 @@ install-data-local:
+ 	mv -f $(DESTDIR)$(SETTINGS_FILE).tmp $(DESTDIR)$(SETTINGS_FILE)
+ 
+ 	PATH="$(DESTDIR)$(bindir):$(FVWM_BINDIR):$$PATH"; \
+-	$(DESTDIR)$(bindir)/fvwm-themes-config --site --reset
++	$(DESTDIR)$(bindir)/fvwm-themes-config-destdir --site --reset
+ 
+ 	if test "$(BUILD_MENUS)" = "yes"; then \
+-		$(DESTDIR)$(bindir)/fvwm-themes-menuapp --site --build-menus --remove-popup; \
++		$(DESTDIR)$(bindir)/fvwm-themes-menuapp-destdir --site --build-menus --remove-popup; \
+ 	fi
+ 
+ 	if test "$(GNOME_ICONS)" = "yes"; then \

@@ -1,0 +1,78 @@
+$NetBSD: patch-bin_Makefile.in,v 1.1 2011/07/09 14:20:53 wiz Exp $
+
+(1) Delete harmful DESTDIR= (empty)
+(2) Add bin_SCRIPTS_DESTDIR variable for extra files faking for DESTDIR
+    of two scripts.
+(3) Add targets to generate above two scripts
+
+--- work/fvwm-themes-0.6.2/bin/Makefile.in.orig	2002-12-06 02:59:29.000000000 +0000
++++ ./bin/Makefile.in
+@@ -32,8 +32,6 @@ mandir = @mandir@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+ 
+-DESTDIR =
+-
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+@@ -97,6 +95,8 @@ bin_SCRIPTS = fvwm-themes-config fvwm-th
+ 	fvwm-themes-menuapp fvwm-themes-com fvwm-themes-script \
+ 	fvwm-themes-images
+ 
++bin_SCRIPTS_DESTDIR = fvwm-themes-config-destdir \
++	fvwm-themes-menuapp-destdir
+ 
+ man_MANS = fvwm-themes-config.1 fvwm-themes-menuapp.1 fvwm-themes-com.1 \
+ 	fvwm-themes-images.1 fvwm-themes-start.1
+@@ -104,12 +104,12 @@ man_MANS = fvwm-themes-config.1 fvwm-the
+ 
+ EXTRA_DIST = $(man_MANS)
+ 
+-CLEANFILES = $(bin_SCRIPTS)
++CLEANFILES = $(bin_SCRIPTS) $(bin_SCRIPTS_DESTDIR)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES =  fvwm-themes-config fvwm-themes-start \
+ fvwm-themes-xrdb fvwm-themes-menuapp fvwm-themes-com fvwm-themes-script \
+ fvwm-themes-images
+-SCRIPTS =  $(bin_SCRIPTS)
++SCRIPTS =  $(bin_SCRIPTS) $(bin_SCRIPTS_DESTDIR)
+ 
+ man1dir = $(mandir)/man1
+ MANS = $(man_MANS)
+@@ -117,7 +117,7 @@ MANS = $(man_MANS)
+ NROFF = nroff
+ DIST_COMMON =  Makefile.am Makefile.in fvwm-themes-com.in \
+ fvwm-themes-config.in fvwm-themes-images.in fvwm-themes-menuapp.in \
+-fvwm-themes-script.in fvwm-themes-start.in fvwm-themes-xrdb.in
++fvwm-themes-script.in fvwm-themes-start.in fvwm-themes-xrdb.in fvwm-themes-config-destdir.in
+ 
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+@@ -146,11 +146,15 @@ fvwm-themes-script: $(top_builddir)/conf
+ 	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ fvwm-themes-images: $(top_builddir)/config.status fvwm-themes-images.in
+ 	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++fvwm-themes-config-destdir: $(top_builddir)/config.status fvwm-themes-config-destdir.in
++	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++fvwm-themes-menuapp-destdir: $(top_builddir)/config.status fvwm-themes-menuapp-destdir.in
++	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+-install-binSCRIPTS: $(bin_SCRIPTS)
++install-binSCRIPTS: $(bin_SCRIPTS)  $(bin_SCRIPTS_DESTDIR)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	@list='$(bin_SCRIPTS)'; for p in $$list; do \
++	@list='$(bin_SCRIPTS) $(bin_SCRIPTS_DESTDIR)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+ 	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+@@ -162,7 +166,7 @@ install-binSCRIPTS: $(bin_SCRIPTS)
+ 
+ uninstall-binSCRIPTS:
+ 	@$(NORMAL_UNINSTALL)
+-	list='$(bin_SCRIPTS)'; for p in $$list; do \
++	list='$(bin_SCRIPTS) $(bin_SCRIPTS_DESTDIR)'; for p in $$list; do \
+ 	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
+ 	done
+ 
