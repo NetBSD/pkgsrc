@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1626 2011/07/09 11:14:20 mspo Exp $
+$NetBSD: CHANGES-2011,v 1.1627 2011/07/09 11:38:25 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2545,3 +2545,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/libmicrohttpd version 0.9.9 [abs 2011-07-09]
 	Added multimedia/libass version 0.9.12 [abs 2011-07-09]
 	Updated chat/bitlbee to 3.0.3nb1 [mspo 2011-07-09]
+	Updated www/p5-Mojolicious to 1.60 [mspo 2011-07-09]
