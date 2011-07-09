@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+
+Add NetBSD support.
+
+--- configure.ac.orig	2009-12-24 12:38:06.000000000 +0000
++++ configure.ac	2011-07-09 13:54:03.000000000 +0100
+@@ -15,6 +15,7 @@
+ case $target_os in
+      *linux*)	arch=linux;;
+      *darwin*)	arch=darwin;;
++     *netbsd*)	arch=netbsd;;
+      *)			arch=unknown;;
+ esac
+ 
+@@ -137,7 +138,7 @@
+ ])
+ 
+ # Checks for libraries
+-AC_CHECK_LIB([fuse], [fuse_main], [FUSE_LIBS="-lfuse"], [AC_MSG_ERROR([Can't find libfuse, please install it])])
++AC_CHECK_LIB([fuse], [fuse_exit], [FUSE_LIBS="-lfuse"], [AC_MSG_ERROR([Can't find libfuse, please install it])])
+ 
+ AC_MSG_CHECKING([if FUSE on this system is too new for us])
+ AC_EGREP_CPP([fuse_version_yes], [
+@@ -193,6 +194,7 @@
+ 
+ AM_CONDITIONAL(LINUX, test "$arch" = linux)
+ AM_CONDITIONAL(DARWIN, test "$arch" = darwin)
++AM_CONDITIONAL(NETBSD, test "$arch" = netbsd)
+ 
+ AC_CONFIG_FILES([
+ 	fuse-ext2.pc

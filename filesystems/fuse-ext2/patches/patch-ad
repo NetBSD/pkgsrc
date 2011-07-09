@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+
+Avoid NULL pointer access with "librefuse" under NetBSD.
+
+--- fuse-ext2/fuse-ext2.h.orig	2009-11-09 16:31:37.000000000 +0000
++++ fuse-ext2/fuse-ext2.h	2011-07-09 16:15:41.000000000 +0100
+@@ -71,12 +71,17 @@
+ {
+ 	struct fuse_context *mycontext=fuse_get_context();
+ 	struct extfs_data *e2data=mycontext->private_data;
++	ext2_filsys e2fs = e2data->e2fs;
++	if (e2fs == NULL) {
++		return NULL;
++	}
++
+ 	time_t now=time(NULL);
+ 	if ((now - e2data->last_flush) > FLUSH_BITMAPS_TIMEOUT) {
+ 		ext2fs_write_bitmaps(e2data->e2fs);
+ 		e2data->last_flush=now;
+ 	}
+-	return (ext2_filsys) e2data->e2fs;
++	return e2fs;
+ }
+ 
+ #if ENABLE_DEBUG

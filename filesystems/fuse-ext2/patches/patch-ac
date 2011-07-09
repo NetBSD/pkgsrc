@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+
+Fix build under NetBSD, based on "pkgsrc/sysutils/e2fsprogs/patches/patch-af".
+
+--- e2fsprogs-1.41.9/ext2fs/ismounted.c.orig	2010-05-18 03:04:39.000000000 +0000
++++ e2fsprogs-1.41.9/ext2fs/ismounted.c
+@@ -198,7 +198,11 @@ static errcode_t check_mntent(const char
+ static errcode_t check_getmntinfo(const char *file, int *mount_flags,
+ 				  char *mtpt, int mtlen)
+ {
+-	struct statfs *mp;
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 299000900
++        struct statvfs *mp;
++#else
++        struct statfs *mp;
++#endif
+         int    len, n;
+         const  char   *s1;
+ 	char	*s2;

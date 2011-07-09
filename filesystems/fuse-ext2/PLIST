@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+bin/fuse-ext2
+bin/fuse-ext2.e2label
+bin/fuse-ext2.mke2fs
+bin/fuse-ext2.probe
+lib/pkgconfig/fuse-ext2.pc
+man/man1/fuse-ext2.1
