@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.26 2010/12/05 16:42:16 tsutsui Exp $
+$NetBSD: patch-aa,v 1.27 2011/07/09 15:51:52 jmcneill Exp $
 
 --- configure.orig	2010-09-13 03:12:07.000000000 +0000
 +++ configure
@@ -86,6 +86,50 @@ $NetBSD: patch-aa,v 1.26 2010/12/05 16:42:16 tsutsui Exp $
      else
        _ld_tmp="$I -lXext -lX11 $_ld_pthread"
      fi
+@@ -5016,7 +5016,6 @@ EOF
+       extra_cflags="$extra_cflags $_inc_tmp" && break
+   done
+ fi
+-echores "$_dvb"
+ if test "$_dvb" = yes ; then
+   _dvbin=yes
+   inputmodules="dvb $inputmodules"
+@@ -5025,14 +5024,28 @@ if test "$_dvb" = yes ; then
+   aomodules="mpegpes(dvb) $aomodules"
+   vomodules="mpegpes(dvb) $vomodules"
+ else
+-  _dvbin=no
+-  noinputmodules="dvb $noinputmodules"
+-  def_dvb='#undef CONFIG_DVB'
+-  def_dvbin='#undef CONFIG_DVBIN '
+-  aomodules="mpegpes(file) $aomodules"
+-  vomodules="mpegpes(file) $vomodules"
++  cat >$TMPC <<EOF
++#include <dev/dtv/dtvio.h>
++int main(void) {return 0;}
++EOF
++  cc_check && _dvb=yes
++  if test "$_dvb" = yes ; then
++    _dvbin=yes
++    inputmodules="dvb $inputmodules"
++    def_dvb='#undef CONFIG_DVB'
++    def_dvbin='#define CONFIG_DVBIN 1'
++    aomodules="mpegpes(file) $aomodules"
++    vomodules="mpegpes(file) $vomodules"
++  else
++    _dvbin=no
++    noinputmodules="dvb $noinputmodules"
++    def_dvb='#undef CONFIG_DVB'
++    def_dvbin='#undef CONFIG_DVBIN '
++    aomodules="mpegpes(file) $aomodules"
++    vomodules="mpegpes(file) $vomodules"
++  fi
+ fi
+-
++echores "$_dvb"
+ 
+ if darwin; then
+ 
 @@ -5623,8 +5637,13 @@ if test "$_ivtv" = auto ; then
    cat > $TMPC << EOF
  #include <stdlib.h>
