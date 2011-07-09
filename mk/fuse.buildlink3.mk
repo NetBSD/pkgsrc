@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.11 2010/11/15 04:51:33 dholland Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.12 2011/07/09 12:33:40 tron Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -74,12 +74,7 @@ BUILDLINK_TRANSFORM+=	l:fuse:refuse
 .    if defined(GNU_CONFIGURE)
 SUBST_CLASSES+=		refuse
 SUBST_STAGE.refuse=	pre-configure
-SUBST_FILES.refuse=	configure
-.      for _f_ in configure.in configure.ac
-.        if exists(${WRKSRC}/${_f_})
-SUBST_FILES.refuse+=	${_f_}
-.        endif
-.      endfor
+SUBST_FILES.refuse=	configure configure.ac configure.in
 SUBST_SED.refuse=	-e "s|fuse_main|fuse_exit|g"
 .    endif
 
