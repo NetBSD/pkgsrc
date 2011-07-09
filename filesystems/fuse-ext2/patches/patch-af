@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+
+Fix build under NetBSD.
+
+--- fuse-ext2/fuse-ext2.c.orig	2009-11-09 15:28:02.000000000 +0000
++++ fuse-ext2/fuse-ext2.c	2011-07-09 12:52:23.000000000 +0100
+@@ -78,6 +78,13 @@
+ 	return 0;
+ }
+ 
++#ifdef __NetBSD__
++static int fuse_version (void)
++{
++	return FUSE_VERSION;
++}
++#endif
++
+ static void usage (void)
+ {
+ 	printf(usage_msg, PACKAGE, VERSION, fuse_version(), PACKAGE, HOME);
