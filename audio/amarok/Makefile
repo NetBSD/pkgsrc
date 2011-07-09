@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.96 2011/04/22 13:42:50 obache Exp $
+# $NetBSD: Makefile,v 1.97 2011/07/09 10:26:52 abs Exp $
 #
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio multimedia
 #MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
 #		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
@@ -37,19 +37,27 @@ SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
 SUBST_FILES.mysql+=	src/core-impl/collections/db/sql/mysqlecollection/CMakeLists.txt
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-server}:
-SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
+# Additional SUBST_SED.mysql added later based on mysql server version
 
 .include "options.mk"
+
+.include "../../mk/mysql.buildlink3.mk"
+.if ${_MYSQL_VERSION} == "55"
+DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql55-server
+SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib:
+.elif ${_MYSQL_VERSION} == "51"
+DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql51-server
+SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
+.else
+DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql5-server
+SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
+.endif
 
 .include "../../audio/liblastfm/buildlink3.mk"
 .include "../../audio/libofa/buildlink3.mk"
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/taglib-extras/buildlink3.mk"
-BUILDLINK_API_DEPENDS.mysql-client+=	mysql-client>=5.1.44nb1
-.include "../../databases/mysql51-client/buildlink3.mk"
-BUILDLINK_API_DEPENDS.mysql-server+=	mysql-server>=5.1.44nb1
-.include "../../databases/mysql51-server/buildlink3.mk"
 .include "../../devel/qtscriptgenerator/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
