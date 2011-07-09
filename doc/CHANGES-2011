@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1630 2011/07/09 17:23:06 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1631 2011/07/09 17:24:07 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2547,4 +2547,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/bitlbee to 3.0.3nb1 [mspo 2011-07-09]
 	Updated www/p5-Mojolicious to 1.60 [mspo 2011-07-09]
 	Updated shells/mksh to 40 [bsiegert 2011-07-09]
-	Updated filesystems/fuse-ext2 to 0.0.7nb1 [tron 2011-07-09]
+	Added filesystems/fuse-ext2 version 0.0.7nb1 [tron 2011-07-09]
