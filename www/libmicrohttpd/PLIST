@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/09 10:21:41 abs Exp $
+include/microhttpd.h
+info/microhttpd-tutorial.info
+info/microhttpd.info
+lib/libmicrohttpd.la
+lib/pkgconfig/libmicrohttpd.pc
+man/man3/libmicrohttpd.3
