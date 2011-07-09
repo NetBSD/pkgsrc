@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10407 2011/07/09 14:31:44 asau Exp $
+$NetBSD: TODO,v 1.10408 2011/07/09 15:44:36 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkfontdir-1.0.6
 	o mkfontscale-1.0.8
 	o mknmz-wwwoffle-0.7.2
-	o mksh-40
 	o mkvtoolnix-4.8.0
 	o moc-2.4.4
 	o modular-xorg-server-1.10.2
