@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.802 2011/06/19 07:34:09 taca Exp $
+# $NetBSD: Makefile,v 1.803 2011/07/09 10:22:20 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -171,6 +171,7 @@ SUBDIR+=	konq-plugins
 SUBDIR+=	lhs
 SUBDIR+=	libghttp
 SUBDIR+=	libgtkhtml
+SUBDIR+=	libmicrohttpd
 SUBDIR+=	libproxy
 SUBDIR+=	librest
 SUBDIR+=	libwww
