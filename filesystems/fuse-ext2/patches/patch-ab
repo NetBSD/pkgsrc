@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+
+Add NetBSD support to autotools files.
+
+--- fuse-ext2/Makefile.am.orig	2009-11-09 16:31:37.000000000 +0000
++++ fuse-ext2/Makefile.am	2011-07-09 14:17:19.000000000 +0100
+@@ -39,6 +39,17 @@
+ 	-lfuse \
+ 	-lext2fs
+ endif
++if NETBSD
++fuse_ext2_probe_CFLAGS = \
++	-Wall \
++	-DHAVE_CONFIG_H \
++	-I$(top_srcdir)/e2fsprogs-1.41.9
++
++fuse_ext2_probe_LDADD =	\
++	../e2fsprogs-1.41.9/ext2fs/libext2fs.a \
++	../e2fsprogs-1.41.9/et/libcom_err.a \
++	-lrefuse
++endif
+ 
+ fuse_ext2_SOURCES =	\
+ 	fuse-ext2.h \
+@@ -183,6 +194,12 @@
+ 	-lfuse \
+ 	-lext2fs
+ endif
++if NETBSD
++fuse_ext2_LDADD = \
++	../e2fsprogs-1.41.9/ext2fs/libext2fs.a	\
++	../e2fsprogs-1.41.9/et/libcom_err.a	\
++	-lrefuse
++endif
+ 
+ install-data-hook:
+ 	cd "$(DESTDIR)/$(moddir)" && rm -f $(mod_LTLIBRARIES)
