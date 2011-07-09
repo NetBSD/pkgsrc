@@ -1,0 +1,115 @@
+$NetBSD: patch-bin_fvwm-themes-config-destdir.in,v 1.1 2011/07/09 14:20:53 wiz Exp $
+
+(0) This file (fvwm-themes-config-destdir) is fake version of
+    fvwm-themes-config.
+    It is only for build time, and will be deleted before install.
+(1) Duplicates @searchPath to @searchPathD for DESTDIR version.
+    It will be SUBST'ed by Makefile
+(2) s/^$ROOT_PREFIX//; tweak borrowed from another purpose of original scripts
+    It also will be SUBST'ed.
+
+--- work/fvwm-themes-0.6.2/bin/fvwm-themes-config-destdir.in.orig	2011-07-02 00:38:28.000000000 +0000
++++ ./bin/fvwm-themes-config-destdir.in
+@@ -21,6 +21,7 @@ my $buildId = '@FT_BUILD_ID@';
+ 
+ my $scriptName = ($0 =~ m:([^/]+)$:, $1);
+ my $scriptFile = "$bindir/$scriptName";
++   $scriptFile =~ s|-destdir||;
+ my $rcFile = "themes-rc";
+ my $rcFile2 = "$rcFile-2";
+ # maybe we may use .$rcFile-3
+@@ -28,6 +29,7 @@ my $rcFile3 = "$rcFile-3";
+ my $userHome = $ENV{'HOME'} || "./.";
+ my $userDir = $ENV{'FVWM_USERDIR'} || "$userHome/.fvwm";
+ my @searchPath = ($userDir, $ftDataDir);
++my @searchPathD = ($userDir, $ftDataDir);
+ my ($workDir, $siteDir);
+ my $themesSubDir = 'themes';
+ my $currentThemeName = 'current';
+@@ -274,7 +276,7 @@ sub getExpandedRc ($) {
+ 	my $file = shift;
+ 	### should detect infinitive loops?
+ 	if (!-f $file) {
+-		foreach (@searchPath) {
++		foreach (@searchPathD) {
+ 			if (-f "$_/$file") { $file = "$_/$file"; last; }
+ 		}
+ 	}
+@@ -310,7 +312,7 @@ sub searchThemeCfgIncludeFile ($$) {
+ 		unshift @subDirs, ".";
+ 	}
+ 	my $dir;
+-	foreach $dir (@searchPath) {
++	foreach $dir (@searchPathD) {
+ 		foreach (@subDirs) {
+ 			my $file = "$dir/$themesSubDir/$_/$file";
+ 			return $file if -f $file;
+@@ -655,7 +657,7 @@ sub parseComponentName ($) {
+ sub getThemeDir ($) {
+ 	my $theme = shift;
+ 	my $dir;
+-	foreach $dir (@searchPath) {
++	foreach $dir (@searchPathD) {
+ 		my $dir = "$dir/$themesSubDir/$theme";
+ 		return $dir if -d $dir;
+ 	}
+@@ -712,7 +714,7 @@ sub getAllThemes (;$$) {
+ 	my @dirList = ();
+ 	push @dirList, $siteDir if $onlySite;
+ 	push @dirList, $userDir if $onlyUser;
+-	@dirList = @searchPath unless @dirList;
++	@dirList = @searchPathD unless @dirList;
+ 	my $themes = {};
+ 	my $dir;
+ 	foreach $dir (@dirList) {
+@@ -1322,6 +1324,7 @@ sub getAllThemeSubMenusRc ($) {
+ 		} @$components);
+ 
+ 		my $readmeFile = getThemeDir($theme) . "/README";
++                $readmeFile =~ s/^$ROOT_PREFIX//;
+ 		if (-r $readmeFile) {
+ 			$menuRc .= qq(+ "" Nop\n);
+ 			$menuRc .= qq(+ "README%menu/information.xpm%"\tFuncFvwmViewFile "$readmeFile"\n);
+@@ -2023,6 +2026,7 @@ sub getReadsRc($) {
+ 				. $valueFile0;
+ 			$optionFile =~ s/^$ROOT_PREFIX//;
+ 			$valueFile =~ s/^$ROOT_PREFIX//;
++			$valueFile0 =~ s/^$ROOT_PREFIX//;
+ 
+ 			push @$optionExports, {
+ 				'f' => $valueFile, 'c' => $current, 'v' => $valueFile0
+@@ -2296,8 +2300,10 @@ Read @$rcFile2@
+ 		"\nFuncFvwmRestartFvwmTheme\n": "";
+ 
+ 	$contents = "# fvwm/$rcFile2 $version$header";
++	my $siteDirD = $siteDir;
++	$siteDirD =~ s/^$ROOT_PREFIX//;
+ 	$contents .= qq{
+-SetEnv FT_DATADIR '$siteDir'
++SetEnv FT_DATADIR '$siteDirD'
+ ImagePath $imagePath
+ $funcFvwmRestartFvwmTheme
+ $menusAndHooksRc
+@@ -2307,7 +2313,7 @@ Mouse 2 A CM Menu MenuFvwmThemes
+ 
+ 	$contents = "# fvwm/$rcFile3 $version$header";
+ 	$contents .= qq{
+-SetEnv FT_DATADIR '$siteDir'
++SetEnv FT_DATADIR '$siteDirD'
+ ImagePath $imagePath
+ 
+ $switchMenusAndHooksRc
+@@ -2399,10 +2405,9 @@ GetOptions(
+ 	"no-cfg-cache" => \$noCfgCache,
+ ) || wrongUsage();
+ 
+-shift @searchPath if $site;
+-$workDir = $searchPath[0];
+-$siteDir = $searchPath[-1];
+-
++shift @searchPathD if $site;
++$workDir = $searchPathD[0];
++$siteDir = $searchPathD[-1];
+ if ($install) {
+ 	my $themesDir = "$workDir";
+ 	my $version = $version;
