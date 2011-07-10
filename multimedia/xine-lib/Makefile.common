@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2011/02/20 14:29:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.67 2011/07/10 16:52:24 jmcneill Exp $
 #
 
 # used by audio/xine-arts/Makefile
@@ -63,6 +63,7 @@ BUILDLINK_TRANSFORM+=	"rm:-Wl,--no-undefined"
 .endif
 
 pre-configure:
+	cd ${WRKSRC} && autoheader
 	cd ${WRKSRC} && autoconf
 
 .include "../../converters/libiconv/buildlink3.mk"
