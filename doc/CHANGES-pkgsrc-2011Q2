@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.2 2011/07/08 16:33:56 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.3 2011/07/10 13:07:02 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -7,3 +7,5 @@ Created pkgsrc-2011Q2 branch [agc Fri Jul  8 07:03:04 UTC 2011]
 
 Pullup ticket #3466 - requested by adam
 security/clamav: bug fix update
+Pullup ticket #3468 - requested by mspo
+chat/bitlbee: build fix
