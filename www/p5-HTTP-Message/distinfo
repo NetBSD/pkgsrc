@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/10 12:41:57 spz Exp $
+
+SHA1 (HTTP-Message-6.02.tar.gz) = 8622a3ac18c39c3594ff42a330ceb65ac6c91c43
+RMD160 (HTTP-Message-6.02.tar.gz) = 6703f508af52ba7d30a1a3362c0f40f8a01af20d
+Size (HTTP-Message-6.02.tar.gz) = 49243 bytes
