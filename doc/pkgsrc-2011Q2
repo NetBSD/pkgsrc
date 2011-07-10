@@ -74,18 +74,36 @@ The following packages are scheduled for removal before the next
 stable pkgsrc release (2011Q3). Please migrate to successors
 or alternatives.
 
+audio/tunapie
+comms/synce-dccm
+devel/newt
+devel/roundup
 emulators/doscmd
 emulators/linuxppc_lib
+graphics/aview
+graphics/camlimages
+mail/cyrus-imapd21
+mail/mailscanner
 misc/openoffice2
 misc/openoffice2-bin
+multimedia/RealPlayerGold
 net/ctorrent
-net/hobbitmon
 net/hobbitclient
-mail/cyrus-imapd21
+net/hobbitmon
+net/ntop1
+net/trickle
+print/acroread
+print/acroread5
+print/mgv
+textproc/libxml
+www/firefox-bin
+www/firefox-bin-flash
+www/instiki
 www/jakarta-tomcat4
 www/jakarta-tomcat5
-www/firefox-bin
+www/sarg
 www/seamonkey-bin
+x11/tkman
 
 
 Pkgsrc Platforms
