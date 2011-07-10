@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1469 2011/07/08 09:50:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.1470 2011/07/10 12:51:43 spz Exp $
 #
 
 COMMENT=	Development utilities
@@ -698,6 +698,7 @@ SUBDIR+=	p5-File-Flat
 SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-HomeDir
 SUBDIR+=	p5-File-LibMagic
+SUBDIR+=	p5-File-Listing
 SUBDIR+=	p5-File-MimeInfo
 SUBDIR+=	p5-File-Modified
 SUBDIR+=	p5-File-NFSLock
