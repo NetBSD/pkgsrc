@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1632 2011/07/10 16:20:30 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1633 2011/07/10 20:41:43 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2548,3 +2548,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Mojolicious to 1.60 [mspo 2011-07-09]
 	Updated shells/mksh to 40 [bsiegert 2011-07-09]
 	Added filesystems/fuse-ext2 version 0.0.7nb1 [tron 2011-07-09]
+	Updated wm/pekwm to 0.13 [gls 2011-07-10]
