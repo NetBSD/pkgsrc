@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/10 14:19:03 spz Exp $
+
+SHA1 (LWP-Protocol-https-6.02.tar.gz) = 476a62275bf5ae89dd6799d8f660071dba1819b9
+RMD160 (LWP-Protocol-https-6.02.tar.gz) = a4ee19e141a4da9dc0d6a415573204c80a330569
+Size (LWP-Protocol-https-6.02.tar.gz) = 3443 bytes
