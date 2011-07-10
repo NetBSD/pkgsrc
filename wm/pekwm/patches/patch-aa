@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.6 2010/04/17 10:07:18 gls Exp $
+$NetBSD: patch-aa,v 1.7 2011/07/10 20:41:23 gls Exp $
 
 Fix installation dirs
 
---- data/Makefile.in.orig	2009-01-26 17:59:45.000000000 +0000
+--- data/Makefile.in.orig	2011-04-20 13:13:14.000000000 +0000
 +++ data/Makefile.in
-@@ -182,7 +182,7 @@ AUTOMAKE_OPTIONS = foreign
+@@ -187,7 +187,7 @@ xrandr_LIBS = @xrandr_LIBS@
+ AUTOMAKE_OPTIONS = foreign
  SUBDIRS = themes scripts
- CLEANFILES = config menu
- EXTRA_DIST = autoproperties config.in keys menu.in mouse start vars
+ EXTRA_DIST = autoproperties autoproperties_typerules config keys menu mouse start vars
 -cfgdatadir = $(sysconfdir)/pekwm
 +cfgdatadir = $(prefix)/share/examples/@PACKAGE@
- cfgdata_DATA = autoproperties config keys menu mouse start vars
+ cfgdata_DATA = autoproperties autoproperties_typerules config keys menu mouse start vars
  all: all-recursive
  
