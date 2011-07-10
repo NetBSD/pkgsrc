@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.803 2011/07/09 10:22:20 abs Exp $
+# $NetBSD: Makefile,v 1.804 2011/07/10 12:57:58 spz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -347,6 +347,7 @@ SUBDIR+=	p5-HTML-Element-Extended
 SUBDIR+=	p5-HTML-Email-Obfuscate
 SUBDIR+=	p5-HTML-FillInForm
 SUBDIR+=	p5-HTML-FixEntities
+SUBDIR+=	p5-HTML-Form
 SUBDIR+=	p5-HTML-FormFu
 SUBDIR+=	p5-HTML-Format
 SUBDIR+=	p5-HTML-LinkExtractor
@@ -381,9 +382,14 @@ SUBDIR+=	p5-HTMLObject
 SUBDIR+=	p5-HTTP-Async
 SUBDIR+=	p5-HTTP-Body
 SUBDIR+=	p5-HTTP-Cache-Transparent
+SUBDIR+=	p5-HTTP-Cookies
+SUBDIR+=	p5-HTTP-Daemon
+SUBDIR+=	p5-HTTP-Date
 SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
+SUBDIR+=	p5-HTTP-Message
+SUBDIR+=	p5-HTTP-Negotiate
 SUBDIR+=	p5-HTTP-OAI
 SUBDIR+=	p5-HTTP-Parser
 SUBDIR+=	p5-HTTP-Parser-XS
@@ -428,12 +434,14 @@ SUBDIR+=	p5-Kwiki-Wikiwyg
 SUBDIR+=	p5-Kwiki-Zipcode
 SUBDIR+=	p5-LWP-Authen-Negotiate
 SUBDIR+=	p5-LWP-Authen-Wsse
+SUBDIR+=	p5-LWP-MediaTypes
 SUBDIR+=	p5-LWP-Online
 SUBDIR+=	p5-LWP-UserAgent-Determined
 SUBDIR+=	p5-LWPx-ParanoidAgent
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-Mojolicious
 SUBDIR+=	p5-Net-FastCGI
+SUBDIR+=	p5-Net-HTTP
 SUBDIR+=	p5-POE-Component-Server-PSGI
 SUBDIR+=	p5-POE-Filter-HTTP-Parser
 SUBDIR+=	p5-PSGI
@@ -503,6 +511,7 @@ SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-WWW-Mechanize-GZip
 SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
 SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
+SUBDIR+=	p5-WWW-RobotRules
 SUBDIR+=	p5-WWW-Shorten
 SUBDIR+=	p5-Web-Scraper
 SUBDIR+=	p5-WordPress-XMLRPC
