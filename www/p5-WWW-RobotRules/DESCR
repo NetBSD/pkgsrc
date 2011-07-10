@@ -1,0 +1,10 @@
+The Perl 5 module WWW::RobotRules parses /robots.txt files as specified
+in "A Standard for Robot Exclusion", at
+http://www.robotstxt.org/wc/norobots.htmls
+Webmasters can use the /robots.txt file to forbid conforming robots
+from accessing parts of their web site.
+
+The parsed files are kept in a WWW::RobotRules object, and this object
+provides methods to check if access to a given URL is prohibited.
+The same WWW::RobotRules object can be used for one or more parsed
+/robots.txt files on any number of hosts.
