@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.21 2011/05/01 13:52:34 cegger Exp $
+# $NetBSD: mozilla-common.mk,v 1.22 2011/07/11 12:46:14 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 # 
@@ -30,11 +30,11 @@ CONFIGURE_ARGS+=	--disable-system-cairo
 CONFIGURE_ARGS+=	--disable-system-pixman
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
+CONFIGURE_ARGS+=	--with-system-libevent
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
-CONFIGURE_ARGS+=	--disable-ipc	# no chromium platform support on BSD
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -88,6 +88,7 @@ PREFER.bzip2?=	pkgsrc
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.4
 CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
