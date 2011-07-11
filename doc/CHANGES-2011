@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1643 2011/07/11 11:58:49 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1644 2011/07/11 12:49:43 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2559,3 +2559,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/ruby-oauth to 0.4.5 [obache 2011-07-11]
 	Added www/ruby-http_parser.rb version 0.5.1 [obache 2011-07-11]
 	Updated net/ruby-twitter-stream to 0.1.14 [obache 2011-07-11]
+	Updated devel/xulrunner to 5.0 [tnn 2011-07-11]
+	Updated devel/nspr to 4.8.8 [tnn 2011-07-11]
+	Updated www/firefox-l10n to 5.0 [tnn 2011-07-11]
