@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1651 2011/07/11 22:54:51 morr Exp $
+$NetBSD: CHANGES-2011,v 1.1652 2011/07/11 23:26:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated wm/pekwm to 0.1.13 [asau 2011-07-11]
 	Updated lang/gcc45 to 4.5.3 [wiz 2011-07-11]
 	Updated www/wordpress to 3.2 [morr 2011-07-11]
+	Updated lang/gcc44 to 4.4.6 [wiz 2011-07-11]
