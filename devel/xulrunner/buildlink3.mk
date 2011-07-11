@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/04/26 14:16:36 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/07/11 12:46:14 tnn Exp $
 
 BUILDLINK_TREE+=	xulrunner
 
 .if !defined(XULRUNNER_BUILDLINK3_MK)
 XULRUNNER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=2.0
+BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=5.0
 BUILDLINK_PKGSRCDIR.xulrunner?=		../../devel/xulrunner
 
 pkgbase := xulrunner
