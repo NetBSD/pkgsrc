@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2009/08/09 12:01:18 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2011/07/11 14:54:38 ryoon Exp $
 
---- mew-key.el.orig	2008-12-09 23:48:20.000000000 -0800
+--- mew-key.el.orig	2009-01-21 05:54:56.000000000 +0000
 +++ mew-key.el
 @@ -619,7 +619,7 @@
  	(if (file-exists-p (expand-file-name file path))
