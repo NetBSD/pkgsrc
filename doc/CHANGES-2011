@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1647 2011/07/11 20:48:27 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1648 2011/07/11 22:12:47 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2564,5 +2564,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/firefox-l10n to 5.0 [tnn 2011-07-11]
 	Updated security/stunnel to 4.39 [ryoon 2011-07-11]
 	Updated mail/mew to 6.3nb2 [ryoon 2011-07-11]
-	Updated print/tex-ulem to 2010.21840 [minskim 2011-07-11]
-	Updated print/tex-ulem-doc to 2010.21840 [minskim 2011-07-11]
+	Updated wm/pekwm to 0.1.13 [asau 2011-07-11]
