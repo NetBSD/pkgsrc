@@ -1,8 +1,8 @@
-$NetBSD: patch-et,v 1.1 2010/11/09 10:37:12 jmmv Exp $
+$NetBSD: patch-et,v 1.2 2011/07/11 09:57:18 ryoon Exp $
 
---- Makefile.orig	2010-10-15 20:56:09.000000000 +0000
+--- Makefile.orig	2011-05-06 19:01:43.000000000 +0000
 +++ Makefile
-@@ -179,8 +179,8 @@ ifdef CONFIG_POSIX
+@@ -229,8 +229,8 @@ ifdef CONFIG_POSIX
  endif
  
  install-sysconfig:

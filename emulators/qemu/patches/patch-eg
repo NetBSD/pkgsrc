@@ -1,11 +1,11 @@
-$NetBSD: patch-eg,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+$NetBSD: patch-eg,v 1.2 2011/07/11 09:57:18 ryoon Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
 
---- hw/etraxfs_eth.c.orig	2010-07-28 10:55:42.000000000 +0900
-+++ hw/etraxfs_eth.c	2010-08-08 04:14:31.000000000 +0900
-@@ -184,7 +184,7 @@
+--- hw/etraxfs_eth.c.orig	2011-05-06 19:01:43.000000000 +0000
++++ hw/etraxfs_eth.c
+@@ -184,7 +184,7 @@ static void mdio_read_req(struct qemu_md
  
  	phy = bus->devs[bus->addr];
  	if (phy && phy->read)
@@ -14,7 +14,7 @@ Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
  	else 
  		bus->data = 0xffff;
  }
-@@ -347,7 +347,7 @@
+@@ -347,7 +347,7 @@ static void eth_validate_duplex(struct f
  	int new_mm = 0;
  
  	phy = eth->mdio_bus.devs[eth->phyaddr];
