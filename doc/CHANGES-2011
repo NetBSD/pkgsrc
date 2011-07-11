@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1649 2011/07/11 22:31:29 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1650 2011/07/11 22:33:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2548,7 +2548,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Mojolicious to 1.60 [mspo 2011-07-09]
 	Updated shells/mksh to 40 [bsiegert 2011-07-09]
 	Added filesystems/fuse-ext2 version 0.0.7nb1 [tron 2011-07-09]
-	Updated wm/pekwm to 0.13 [gls 2011-07-10]
 	Updated editors/nts to 78 [ryoon 2011-07-11]
 	Updated textproc/groonga to 1.2.3 [obache 2011-07-11]
 	Added security/ruby-twitter_oauth version 0.4.3 [obache 2011-07-11]
