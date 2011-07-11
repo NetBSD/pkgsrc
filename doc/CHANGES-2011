@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1648 2011/07/11 22:12:47 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1649 2011/07/11 22:31:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2565,3 +2565,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/stunnel to 4.39 [ryoon 2011-07-11]
 	Updated mail/mew to 6.3nb2 [ryoon 2011-07-11]
 	Updated wm/pekwm to 0.1.13 [asau 2011-07-11]
+	Updated lang/gcc45 to 4.5.3 [wiz 2011-07-11]
