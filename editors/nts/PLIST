@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/07 20:02:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/11 07:00:42 ryoon Exp $
 bin/n.py
 bin/n.pyw
 ${PYSITELIB}/ez_setup.py
 ${PYSITELIB}/ez_setup.pyc
 ${PYSITELIB}/ez_setup.pyo
-${PYSITELIB}/nts-77-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/nts-77-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/nts-77-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/nts-77-py2.6.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/nts/NTS.ico
 ${PYSITELIB}/nts/NTS_128.png
 ${PYSITELIB}/nts/NTS_256.png
