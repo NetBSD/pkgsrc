@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2011/07/11 12:46:14 tnn Exp $
+@comment $NetBSD: PLIST,v 1.30 2011/07/11 13:27:24 tnn Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -2523,6 +2523,7 @@ lib/xulrunner/components/PlacesCategoriesStarter.js
 lib/xulrunner/components/addonManager.js
 lib/xulrunner/components/amContentHandler.js
 lib/xulrunner/components/amWebInstallListener.js
+${PLIST.gnome}lib/xulrunner/components/components.manifest
 lib/xulrunner/components/contentAreaDropListener.js
 lib/xulrunner/components/contentAreaDropListener.manifest
 lib/xulrunner/components/contentSecurityPolicy.js
