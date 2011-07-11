@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/11 18:26:29 jmcneill Exp $
+libdata/firmware/xc3028/xc3028L-v36.fw
