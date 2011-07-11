@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/07/11 10:05:22 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2011/07/11 18:43:03 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -13,6 +13,10 @@ CONFIGURE_ARGS+=	--disable-cairo-output
 CONFIGURE_ARGS+=	--enable-poppler-qt4
 CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-utils
+
+BUILDLINK_API_DEPENDS.poppler+= poppler>=${POPPLER_VERS}
+.include "../../print/poppler/buildlink3.mk"
+
 .if !empty(PKG_BUILD_OPTIONS.poppler:Mpoppler-cms)
 CONFIGURE_ARGS+=	--enable-cms
 .else
@@ -31,10 +35,8 @@ pre-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/poppler-qt4.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
-BUILDLINK_API_DEPENDS.poppler+=	poppler>=${POPPLER_VERS}
 BUILDLINK_DEPMETHOD.qt4-tools?=	full
 
-.include "../../print/poppler/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

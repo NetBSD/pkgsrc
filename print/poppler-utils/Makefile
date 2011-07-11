@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/07/11 10:05:23 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2011/07/11 18:43:03 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -27,6 +27,10 @@ CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-poppler-glib
 # Enable build and install of the tools
 CONFIGURE_ARGS+=	--enable-utils	# the default
+
+BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
+.include "../../print/poppler/buildlink3.mk"
+
 .if !empty(PKG_BUILD_OPTIONS.poppler:Mpoppler-cms)
 CONFIGURE_ARGS+=	--enable-cms
 .else
@@ -34,9 +38,6 @@ CONFIGURE_ARGS+=	--disable-cms
 .endif
 
 BUILD_DIRS=		utils # implies INSTALL_DIRS too
-
-BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
-.include "../../print/poppler/buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
