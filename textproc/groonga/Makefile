@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/05/30 12:01:40 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/11 08:32:38 obache Exp $
 #
 
-DISTNAME=	groonga-1.2.2
+DISTNAME=	groonga-1.2.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
@@ -12,7 +12,11 @@ LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../lang/ruby/rubyversion.mk"
+DEPENDS+=	${RUBY_BASE}>=${RUBY_REQD}:../../lang/${RUBY_BASE}
+
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 # for long file name
@@ -22,6 +26,7 @@ EXTRACT_USING=	bsdtar
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-ruby=${RUBY}
 
 PKGCONFIG_OVERRIDE+=	groonga.pc.in
 
@@ -38,8 +43,13 @@ OWN_DIRS+=		${VARBASE}/log/${PKGBASE}
 
 CHECK_WRKREF_SKIP+=	bin/groonga
 CHECK_INTERPRETER_SKIP+=	share/groonga/examples/*
-# XXX: should be in separate package.
-CHECK_INTERPRETER_SKIP+=	share/groonga/munin/plugins/*
+
+REPLACE_RUBY+=	data/munin/groonga_cpu_time
+REPLACE_RUBY+=	data/munin/groonga_disk
+REPLACE_RUBY+=	data/munin/groonga_n_records
+REPLACE_RUBY+=	data/munin/groonga_query_performance
+REPLACE_RUBY+=	data/munin/groonga_status
+.include "../../lang/ruby/replace.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/05/30 12:01:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/07/11 08:32:38 obache Exp $
 bin/grntest
 bin/groonga
+bin/groonga-query-log-analyzer
 bin/groonga-suggest-create-dataset
 ${PLIST.learner}bin/groonga-suggest-httpd
 ${PLIST.learner}bin/groonga-suggest-learner
@@ -470,6 +471,7 @@ share/doc/groonga/source/example/tutorial07-2.log
 share/doc/groonga/source/example/tutorial07-3.log
 share/doc/groonga/source/example/tutorial07-4.log
 share/doc/groonga/source/example/tutorial08-1.log
+share/doc/groonga/source/example/tutorial08-2.log
 share/doc/groonga/source/example/tutorial10-1.log
 share/doc/groonga/source/example/tutorial10-10.log
 share/doc/groonga/source/example/tutorial10-2.log
