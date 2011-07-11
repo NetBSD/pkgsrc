@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.12 2011/01/26 19:25:55 drochner Exp $
+$NetBSD: patch-ae,v 1.13 2011/07/11 10:50:58 drochner Exp $
 
---- configure.orig	2011-01-19 13:22:54.000000000 +0000
+--- configure.orig	2011-07-04 20:24:41.000000000 +0000
 +++ configure
-@@ -11366,7 +11366,7 @@ fi
+@@ -21325,7 +21325,7 @@ fi
  # if we're using Sun Studio and neither the user nor a config.site
  # has set CFLAGS.
  if test $SUNCC = yes &&			\
@@ -11,19 +11,19 @@ $NetBSD: patch-ae,v 1.12 2011/01/26 19:25:55 drochner Exp $
     test "$CFLAGS" = "-g"
  then
    CFLAGS="-O -g"
-@@ -11677,6 +11677,7 @@ fi
+@@ -21767,6 +21767,7 @@ fi
  
  
  
 +if false; then
- 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports -fvisibility=hidden" >&5
+ 	{ $as_echo "$as_me:$LINENO: checking whether the compiler supports -fvisibility=hidden" >&5
  $as_echo_n "checking whether the compiler supports -fvisibility=hidden... " >&6; }
  		save_CFLAGS="$CFLAGS"
-@@ -11727,6 +11728,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -21841,6 +21842,7 @@ rm -f core conftest.err conftest.$ac_obj
  	fi
- 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $_yesno" >&5
+ 	{ $as_echo "$as_me:$LINENO: result: $_yesno" >&5
  $as_echo "$_yesno" >&6; }
 +fi
  
  
- 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports -xldscope=hidden" >&5
+ 	{ $as_echo "$as_me:$LINENO: checking whether the compiler supports -xldscope=hidden" >&5
