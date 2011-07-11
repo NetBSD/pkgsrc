@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/07/11 10:44:29 drochner Exp $
 bin/epdfview
+man/man1/epdfview.1
 share/applications/epdfview.desktop
 share/epdfview/pixmaps/icon_epdfview-24.png
 share/epdfview/pixmaps/icon_epdfview-32.png
@@ -11,6 +12,7 @@ share/epdfview/pixmaps/stock_rotate-90.png
 share/epdfview/pixmaps/stock_zoom-page-width.png
 share/epdfview/ui/epdfview-ui-print.xml
 share/epdfview/ui/epdfview-ui.xml
+share/locale/ar/LC_MESSAGES/epdfview.mo
 share/locale/ca/LC_MESSAGES/epdfview.mo
 share/locale/cs/LC_MESSAGES/epdfview.mo
 share/locale/de/LC_MESSAGES/epdfview.mo
@@ -18,8 +20,12 @@ share/locale/el/LC_MESSAGES/epdfview.mo
 share/locale/es/LC_MESSAGES/epdfview.mo
 share/locale/eu/LC_MESSAGES/epdfview.mo
 share/locale/fr/LC_MESSAGES/epdfview.mo
+share/locale/gl/LC_MESSAGES/epdfview.mo
+share/locale/he_IL/LC_MESSAGES/epdfview.mo
+share/locale/hu/LC_MESSAGES/epdfview.mo
 share/locale/it/LC_MESSAGES/epdfview.mo
 share/locale/ja/LC_MESSAGES/epdfview.mo
+share/locale/nl_NL/LC_MESSAGES/epdfview.mo
 share/locale/pl/LC_MESSAGES/epdfview.mo
 share/locale/pt_BR/LC_MESSAGES/epdfview.mo
 share/locale/pt_PT/LC_MESSAGES/epdfview.mo
