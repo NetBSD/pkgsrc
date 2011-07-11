@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1634 2011/07/11 07:01:30 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1635 2011/07/11 08:33:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2550,3 +2550,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added filesystems/fuse-ext2 version 0.0.7nb1 [tron 2011-07-09]
 	Updated wm/pekwm to 0.13 [gls 2011-07-10]
 	Updated editors/nts to 78 [ryoon 2011-07-11]
+	Updated textproc/groonga to 1.2.3 [obache 2011-07-11]
