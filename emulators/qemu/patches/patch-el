@@ -1,10 +1,10 @@
-$NetBSD: patch-el,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+$NetBSD: patch-el,v 1.2 2011/07/11 09:57:18 ryoon Exp $
 
 NetBSD 4.0 (actually around 4.99.10) and prior don't have some C99 FP macro.
 (PR pkg/42899)
 
---- fpu/softfloat-native.h.orig	2010-07-28 10:55:42.000000000 +0900
-+++ fpu/softfloat-native.h	2010-08-10 22:08:51.000000000 +0900
+--- fpu/softfloat-native.h.orig	2011-05-06 19:01:43.000000000 +0000
++++ fpu/softfloat-native.h
 @@ -19,11 +19,15 @@
   *        or Solaris 10 systems running GCC 3.x or less.
   *   Solaris 10 with GCC4 does not need these macros as they
