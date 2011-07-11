@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1641 2011/07/11 11:28:52 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1642 2011/07/11 11:42:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2557,3 +2557,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/qemu to 0.14.1 [ryoon 2011-07-11]
 	Updated math/ruby-spreadsheet to 0.6.5.5 [obache 2011-07-11]
 	Updated security/ruby-oauth to 0.4.5 [obache 2011-07-11]
+	Added www/ruby-http_parser.rb version 0.5.1 [obache 2011-07-11]
