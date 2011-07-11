@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/07/11 10:50:58 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.41 2011/07/11 19:19:42 tron Exp $
 
 DISTNAME=	pixman-0.22.2
 CATEGORIES=	x11
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Library of low-level pixel manipulation routines
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -41,5 +41,16 @@ PIXMAN_SYMFILE=	${WRKDIR}/pixman.sym
 post-extract:
 	${CP} ${FILESDIR}/pixman.sym ${WRKDIR}
 	${CP} ${FILESDIR}/solaris-hwcap.mapfile ${WRKSRC}/pixman
+
+.include "../../mk/bsd.prefs.mk"
+
+# Link the tests with the static library under Mac OS X as we cannot use
+# the shared library out of the build area.
+.if ${OPSYS} == "Darwin"
+SUBST_CLASSES+=			pixmantests
+SUBST_STAGE.pixmantests=	post-configure
+SUBST_FILES.pixmantests=	test/Makefile
+SUBST_SED.pixmantests=		-e 's@libpixman-1\.la@\.libs/libpixman-1\.a@'
+.endif
 
 .include "../../mk/bsd.pkg.mk"
