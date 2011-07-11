@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2011/04/27 16:56:43 tnn Exp $
+# $NetBSD: Makefile,v 1.101 2011/07/11 16:10:29 drochner Exp $
 
-DISTNAME=	gnutls-2.12.3
-PKGREVISION=	1
+DISTNAME=	gnutls-2.12.7
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		ftp://ftp.gnupg.org/gcrypt/gnutls/ \
@@ -23,6 +22,9 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 INFO_FILES=		yes
+
+USE_TOOLS+=		perl
+REPLACE_PERL+=	doc/scripts/gdoc doc/scripts/sort2.pl
 
 # this library duplicates (and conflicts with) openssl
 CONFIGURE_ARGS+=	--disable-openssl-compatibility
@@ -50,8 +52,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libcfg+/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4
-.include "../../security/libgcrypt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"
