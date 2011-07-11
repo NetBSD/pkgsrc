@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2011/04/22 13:43:19 obache Exp $
+# $NetBSD: Makefile,v 1.77.2.1 2011/07/11 07:47:02 tron Exp $
 
 DISTNAME=	make-3.82
 PKGNAME=	g${DISTNAME}
@@ -51,6 +51,11 @@ USE_TOOLS+=			msgfmt
 .else
 CONFIGURE_ARGS+=	--without-libintl
 CONFIGURE_ARGS+=	--without-libiconv
+.endif
+
+.if ${OPSYS} == "MirBSD"
+# workaround for broken strndup
+CONFIGURE_ARGS+=	ac_cv_func_strndup=no
 .endif
 
 post-install:
