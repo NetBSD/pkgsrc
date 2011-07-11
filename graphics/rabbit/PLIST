@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.16 2010/12/31 10:47:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/07/11 09:37:50 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
 bin/rabbit-theme-manager
 bin/rabbiter
 bin/rabrick
+bin/rabwii
 ${RUBY_VENDORLIB}/rabbit/action.rb
 ${RUBY_VENDORLIB}/rabbit/action/basic.rb
 ${RUBY_VENDORLIB}/rabbit/action/radio.rb
 ${RUBY_VENDORLIB}/rabbit/action/toggle.rb
 ${RUBY_VENDORLIB}/rabbit/canvas.rb
-${RUBY_VENDORLIB}/rabbit/comment-canvas.rb
-${RUBY_VENDORLIB}/rabbit/comment/log.rb
 ${RUBY_VENDORLIB}/rabbit/config.rb
 ${RUBY_VENDORLIB}/rabbit/console.rb
 ${RUBY_VENDORLIB}/rabbit/console/roff.rb
@@ -123,8 +122,6 @@ ${RUBY_VENDORLIB}/rabbit/renderer/display.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/base.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/button-handler.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/clutter-embed.rb
-${RUBY_VENDORLIB}/rabbit/renderer/display/comment-drawing-area.rb
-${RUBY_VENDORLIB}/rabbit/renderer/display/comment.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/cursor.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/drawing-area-base.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/drawing-area-primitive.rb
@@ -198,6 +195,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/clear-blue/clear-blue.rb
 ${RUBY_VENDORLIB}/rabbit/theme/clear-blue/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/clock/clock.rb
 ${RUBY_VENDORLIB}/rabbit/theme/clock/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/clutter-comment/clutter-comment.rb
+${RUBY_VENDORLIB}/rabbit/theme/clutter-comment/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle-block-quote/color-circle-block-quote.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle-block-quote/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle-common/color-circle-common.rb
@@ -222,12 +221,12 @@ ${RUBY_VENDORLIB}/rabbit/theme/color-circle-title-text/color-circle-title-text.r
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle-title-text/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle/color-circle.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/comment/comment.rb
-${RUBY_VENDORLIB}/rabbit/theme/comment/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng-powered-by/cozmixng-powered-by.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng-powered-by/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng/cozmixng.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/dark-gradation/dark-gradation.rb
+${RUBY_VENDORLIB}/rabbit/theme/dark-gradation/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/day-white/day-white.rb
 ${RUBY_VENDORLIB}/rabbit/theme/day-white/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/debian/debian.rb
@@ -264,6 +263,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/edge-info-toolkit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/emphasize-keyword/emphasize-keyword.rb
 ${RUBY_VENDORLIB}/rabbit/theme/emphasize-keyword/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/entry.rb
+${RUBY_VENDORLIB}/rabbit/theme/footer-comment/footer-comment.rb
+${RUBY_VENDORLIB}/rabbit/theme/footer-comment/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/footer-logo/footer-logo.rb
 ${RUBY_VENDORLIB}/rabbit/theme/footer-logo/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/green-circle/green-circle.rb
@@ -368,6 +369,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/slide-number/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-number/slide-number.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-show/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-show/slide-show.rb
+${RUBY_VENDORLIB}/rabbit/theme/stream-comment/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/stream-comment/stream-comment.rb
 ${RUBY_VENDORLIB}/rabbit/theme/table/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/table/table.rb
 ${RUBY_VENDORLIB}/rabbit/theme/tag/property.rb
@@ -384,14 +387,14 @@ ${RUBY_VENDORLIB}/rabbit/theme/title-on-image-toolkit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-on-image-toolkit/title-on-image-toolkit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-shadow/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-shadow/title-shadow.rb
+${RUBY_VENDORLIB}/rabbit/theme/twitter-comment/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/twitter-comment/twitter-comment.rb
 ${RUBY_VENDORLIB}/rabbit/trackball.rb
+${RUBY_VENDORLIB}/rabbit/twitter.rb
 ${RUBY_VENDORLIB}/rabbit/utils.rb
 ${RUBY_VENDORLIB}/rabbit/xmlrpc/base.rb
 ${RUBY_VENDORLIB}/rabbit/xmlrpc/client.rb
 ${RUBY_VENDORLIB}/rabbit/xmlrpc/server.rb
-${RUBY_VENDORLIB}/rwiki/soap/common.rb
-${RUBY_VENDORLIB}/rwiki/soap/driver.rb
-${RUBY_VENDORLIB}/rwiki/soap/servant.rb
 share/locale/en/LC_MESSAGES/rabbit.mo
 share/locale/fr/LC_MESSAGES/rabbit.mo
 share/locale/ja/LC_MESSAGES/rabbit.mo
@@ -403,6 +406,9 @@ share/rabbit/image/cozmixng-images/cozmixchu.png
 share/rabbit/image/cozmixng-images/cozmixng-images.rb
 share/rabbit/image/cozmixng-images/powered-by-cozmixng.png
 share/rabbit/image/cozmixng-images/property.rb
+share/rabbit/image/dark-gradation-images/background-gradation.png
+share/rabbit/image/dark-gradation-images/dark-gradation-images.rb
+share/rabbit/image/dark-gradation-images/property.rb
 share/rabbit/image/debian-images/bottom.png
 share/rabbit/image/debian-images/debian-images.rb
 share/rabbit/image/debian-images/debian-logo-pink.png
