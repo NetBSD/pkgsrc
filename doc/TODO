@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10409 2011/07/10 08:51:03 wiz Exp $
+$NetBSD: TODO,v 1.10410 2011/07/11 09:19:33 tnn Exp $
 
 Suggested new packages
 ======================
@@ -350,8 +350,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Sigil-0.3.4 [wip]
 	o SmartEiffel-2.3
 	o TiffIO-130e
-	o Transmission-2.31 [pkg/45063]
-	o Transmission-2.32 [pkg/45127]
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
