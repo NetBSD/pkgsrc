@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/11/09 10:37:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/07/11 09:57:18 ryoon Exp $
 bin/qemu
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
@@ -47,7 +47,6 @@ share/examples/qemu/target-x86_64.conf
 share/qemu/bamboo.dtb
 share/qemu/bios.bin
 share/qemu/gpxe-eepro100-80861209.rom
-share/qemu/gpxe-eepro100-80861229.rom
 share/qemu/keymaps/ar
 share/qemu/keymaps/common
 share/qemu/keymaps/da
@@ -98,4 +97,6 @@ share/qemu/pxe-virtio.bin
 share/qemu/s390-zipl.rom
 share/qemu/vgabios-cirrus.bin
 share/qemu/vgabios.bin
-share/qemu/video.x
+share/qemu/vgabios-qxl.bin
+share/qemu/vgabios-stdvga.bin
+share/qemu/vgabios-vmware.bin
