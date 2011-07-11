@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1636 2011/07/11 08:54:04 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1637 2011/07/11 09:19:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2552,3 +2552,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/nts to 78 [ryoon 2011-07-11]
 	Updated textproc/groonga to 1.2.3 [obache 2011-07-11]
 	Added security/ruby-twitter_oauth version 0.4.3 [obache 2011-07-11]
+	Updated net/Transmission to 2.32 [tnn 2011-07-11]
