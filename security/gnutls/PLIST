@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2011/04/26 10:35:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2011/07/11 16:10:29 drochner Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -67,6 +67,7 @@ man/man3/gnutls_certificate_free_cas.3
 man/man3/gnutls_certificate_free_credentials.3
 man/man3/gnutls_certificate_free_crls.3
 man/man3/gnutls_certificate_free_keys.3
+man/man3/gnutls_certificate_get_issuer.3
 man/man3/gnutls_certificate_get_openpgp_keyring.3
 man/man3/gnutls_certificate_get_ours.3
 man/man3/gnutls_certificate_get_peers.3
@@ -175,6 +176,7 @@ man/man3/gnutls_global_set_log_function.3
 man/man3/gnutls_global_set_log_level.3
 man/man3/gnutls_global_set_mem_functions.3
 man/man3/gnutls_global_set_mutex.3
+man/man3/gnutls_global_set_time_function.3
 man/man3/gnutls_handshake.3
 man/man3/gnutls_handshake_get_last_in.3
 man/man3/gnutls_handshake_get_last_out.3
@@ -572,6 +574,7 @@ man/man3/gnutls_x509_crq_set_subject_alt_name.3
 man/man3/gnutls_x509_crq_set_version.3
 man/man3/gnutls_x509_crq_sign.3
 man/man3/gnutls_x509_crq_sign2.3
+man/man3/gnutls_x509_crq_verify.3
 man/man3/gnutls_x509_crt_check_hostname.3
 man/man3/gnutls_x509_crt_check_issuer.3
 man/man3/gnutls_x509_crt_check_revocation.3
