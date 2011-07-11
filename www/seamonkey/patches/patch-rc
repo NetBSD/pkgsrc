@@ -1,12 +1,11 @@
-$NetBSD: patch-rc,v 1.1 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-rc,v 1.2 2011/07/11 20:46:36 tnn Exp $
 
---- mozilla/browser/branding/unofficial/locales/en-US/brand.dtd.orig	2009-08-24 17:52:36.000000000 +0200
+--- mozilla/browser/branding/unofficial/locales/en-US/brand.dtd.orig	2011-01-22 00:24:21.000000000 +0000
 +++ mozilla/browser/branding/unofficial/locales/en-US/brand.dtd
-@@ -1,5 +1,5 @@
--<!ENTITY  brandShortName        "Shiretoko">
--<!ENTITY  brandFullName         "Shiretoko">
+@@ -1,4 +1,4 @@
+-<!ENTITY  brandShortName        "Mozilla Developer Preview">
+-<!ENTITY  brandFullName         "Mozilla Developer Preview">
 +<!ENTITY  brandShortName        "Browser">
 +<!ENTITY  brandFullName         "Browser">
  <!ENTITY  vendorShortName       "mozilla.org">
- <!ENTITY  logoCopyright         " ">
- 
+ <!ENTITY  trademarkInfo.part1   " ">
