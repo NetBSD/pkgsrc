@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1644 2011/07/11 12:49:43 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.1645 2011/07/11 14:23:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2562,3 +2562,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/xulrunner to 5.0 [tnn 2011-07-11]
 	Updated devel/nspr to 4.8.8 [tnn 2011-07-11]
 	Updated www/firefox-l10n to 5.0 [tnn 2011-07-11]
+	Updated security/stunnel to 4.39 [ryoon 2011-07-11]
