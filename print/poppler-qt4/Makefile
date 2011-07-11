@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:44:32 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/07/11 10:05:22 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-qt4-${POPPLER_VERS}
-PKGREVISION=		1
 
 COMMENT=		PDF rendering library (QT4 wrapper)
 MAINTAINER=		reed@reedmedia.net
@@ -14,7 +13,11 @@ CONFIGURE_ARGS+=	--disable-cairo-output
 CONFIGURE_ARGS+=	--enable-poppler-qt4
 CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-utils
+.if !empty(PKG_BUILD_OPTIONS.poppler:Mpoppler-cms)
+CONFIGURE_ARGS+=	--enable-cms
+.else
 CONFIGURE_ARGS+=	--disable-cms
+.endif
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-qt4.pc.in
 
