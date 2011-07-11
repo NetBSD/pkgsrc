@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/11 08:53:47 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.textile
+${GEM_LIBDIR}/lib/twitter_oauth.rb
+${GEM_LIBDIR}/lib/twitter_oauth/account.rb
+${GEM_LIBDIR}/lib/twitter_oauth/blocks.rb
+${GEM_LIBDIR}/lib/twitter_oauth/client.rb
+${GEM_LIBDIR}/lib/twitter_oauth/direct_messages.rb
+${GEM_LIBDIR}/lib/twitter_oauth/favorites.rb
+${GEM_LIBDIR}/lib/twitter_oauth/friendships.rb
+${GEM_LIBDIR}/lib/twitter_oauth/geo.rb
+${GEM_LIBDIR}/lib/twitter_oauth/lists.rb
+${GEM_LIBDIR}/lib/twitter_oauth/notifications.rb
+${GEM_LIBDIR}/lib/twitter_oauth/saved_searches.rb
+${GEM_LIBDIR}/lib/twitter_oauth/search.rb
+${GEM_LIBDIR}/lib/twitter_oauth/spam.rb
+${GEM_LIBDIR}/lib/twitter_oauth/status.rb
+${GEM_LIBDIR}/lib/twitter_oauth/timeline.rb
+${GEM_LIBDIR}/lib/twitter_oauth/trends.rb
+${GEM_LIBDIR}/lib/twitter_oauth/user.rb
+${GEM_LIBDIR}/lib/twitter_oauth/utils.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
