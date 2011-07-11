@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2009/11/29 02:22:35 tnn Exp $
+# $NetBSD: options.mk,v 1.18 2011/07/11 20:46:36 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 .endif
 
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Msparc) || \
-	!empty(MACHINE_ARCH:Marm)
+	!empty(MACHINE_ARCH:Marm) || !empty(MACHINE_ARCH:Mx86_64)
 PKG_SUPPORTED_OPTIONS+=	mozilla-jit
 PKG_SUGGESTED_OPTIONS+=	mozilla-jit
 .endif
