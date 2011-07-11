@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/01/18 21:27:44 minskim Exp $
+$NetBSD: distinfo,v 1.3 2011/07/11 20:47:57 minskim Exp $
 
-SHA1 (tex-ulem-20083/ulem.tar.xz) = e99e3a3049ee132ae8d393af6d3ceaa62a308d74
-RMD160 (tex-ulem-20083/ulem.tar.xz) = a321e87b99477550562b7895ec124a5ed156c468
-Size (tex-ulem-20083/ulem.tar.xz) = 9368 bytes
+SHA1 (tex-ulem-21840/ulem.tar.xz) = 2bf94483229627e9d3117982776a76217841b379
+RMD160 (tex-ulem-21840/ulem.tar.xz) = 6ddc469a34dd3585059ec42cdaa8947cd7a747fc
+Size (tex-ulem-21840/ulem.tar.xz) = 9496 bytes
