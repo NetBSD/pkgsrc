@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2011/04/05 08:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2011/07/11 09:57:18 ryoon Exp $
 
-DISTNAME=		qemu-0.13.0
-PKGREVISION=		1
+DISTNAME=		qemu-0.14.1
 CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
 
@@ -49,6 +48,7 @@ SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
 			hw/cs4231a.c \
 			hw/es1370.c \
 			hw/gus.c \
+			hw/hda-audio.c \
 			hw/marvell_88w8618_audio.c \
 			hw/mips_fulong2e.c \
 			hw/mips_jazz.c \

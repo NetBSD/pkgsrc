@@ -1,11 +1,11 @@
-$NetBSD: patch-eh,v 1.1 2010/10/27 13:24:09 tsutsui Exp $
+$NetBSD: patch-eh,v 1.2 2011/07/11 09:57:18 ryoon Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 (PR lib/43832: ssp causes common names to be defines)
 
---- hw/omap_dss.c.orig	2010-07-28 10:55:42.000000000 +0900
-+++ hw/omap_dss.c	2010-08-08 04:13:39.000000000 +0900
-@@ -774,18 +774,18 @@
+--- hw/omap_dss.c.orig	2011-05-06 19:01:43.000000000 +0000
++++ hw/omap_dss.c
+@@ -774,18 +774,18 @@ static void omap_rfbi_write(void *opaque
          break;
      case 0x58:	/* RFBI_READ */
          if ((s->rfbi.control & (1 << 2)) && s->rfbi.chip[0])
