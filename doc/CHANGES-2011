@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1655 2011/07/12 12:03:40 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1656 2011/07/12 12:19:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2583,3 +2583,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/autogen to 5.12 [drochner 2011-07-11]
 	Updated devel/mercurial to 1.9 [wiz 2011-07-12]
 	Updated finance/gnucash to 2.4.7 [wiz 2011-07-12]
+	Updated graphics/sane-backends to 1.0.22 [wiz 2011-07-12]

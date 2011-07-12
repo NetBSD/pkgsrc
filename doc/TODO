@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10418 2011/07/12 12:04:56 wiz Exp $
+$NetBSD: TODO,v 1.10419 2011/07/12 12:19:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1177,7 +1177,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rxvt-unicode-9.10
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.2
-	o sane-backends-1.0.22
 	o sarg-2.2.5
 	o sawfish-1.8.1
 	o saxon-9.2
