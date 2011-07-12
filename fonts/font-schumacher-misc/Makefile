@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/10 05:54:09 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/12 13:45:51 wiz Exp $
 #
 
-DISTNAME=	font-schumacher-misc-1.1.0
+DISTNAME=	font-schumacher-misc-1.1.2
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=	.tar.bz2
