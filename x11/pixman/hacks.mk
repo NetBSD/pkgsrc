@@ -1,15 +1,15 @@
-# $NetBSD: hacks.mk,v 1.4 2009/12/16 22:28:32 tnn Exp $
+# $NetBSD: hacks.mk,v 1.5 2011/07/12 18:23:09 tron Exp $
 #
 .if !defined(PIXMAN_HACKS_MK)
 PIXMAN_HACKS_MK=	# empty
 .  include "../../mk/bsd.fast.prefs.mk"
 .  include "../../mk/compiler.mk"
 ###
-### XXX SSE2 intrinsics require gcc-4.2+ to build unless
-###	${MACHINE_ARCH} == "x86_64".
+### XXX SSE2 intrinsics require gcc-4.2+ to build.
 ###
-.if (empty(MACHINE_ARCH:Mx86_64) && \
-     (empty(CC_VERSION:Mgcc-4.[2-9]*) || empty(CC_VERSION:Mgcc-[5-9].*) || empty(CC_VERSION:Mgcc-[1-9][0-9]*)))
+.if empty(CC_VERSION:Mgcc-4.[2-9]*) && \
+    empty(CC_VERSION:Mgcc-[5-9].*) && \
+    empty(CC_VERSION:Mgcc-[1-9][0-9].*)
 CONFIGURE_ARGS+=	--disable-sse2
 .  endif
 .endif
