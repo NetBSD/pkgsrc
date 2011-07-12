@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2009/12/11 21:47:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/07/12 19:04:00 drochner Exp $
 bin/tgif
 lib/X11/tgif/Copyright
 lib/X11/tgif/License
 lib/X11/tgif/eq4-2x-jpg.sym
+lib/X11/tgif/eq4-2x-nowin-jpg.sym
 lib/X11/tgif/eq4-2x.sym
 lib/X11/tgif/eq4-epstool.sym
 lib/X11/tgif/eq4-lyx-ps2epsi.sym
