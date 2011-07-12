@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/07/12 13:28:31 tron Exp $
+# $NetBSD: Makefile,v 1.43 2011/07/12 18:23:09 tron Exp $
 
 DISTNAME=	pixman-0.22.2
 PKGREVISION=	1
@@ -45,11 +45,9 @@ post-extract:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:NetBSD-*-x86_64)
-CONFIGURE_ARGS+=	--disable-sse2
 # Link the tests with the static library under Mac OS X as we cannot use
 # the shared library out of the build area.
-.elif ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin"
 SUBST_CLASSES+=			pixmantests
 SUBST_STAGE.pixmantests=	post-configure
 SUBST_FILES.pixmantests=	test/Makefile
