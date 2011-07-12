@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1657 2011/07/12 13:26:10 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1658 2011/07/12 13:29:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2585,3 +2585,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated finance/gnucash to 2.4.7 [wiz 2011-07-12]
 	Updated graphics/sane-backends to 1.0.22 [wiz 2011-07-12]
 	Updated graphics/xsane to 0.99.8 [wiz 2011-07-12]
+	Updated x11/pixman to 0.22.2nb1 [tron 2011-07-12]
