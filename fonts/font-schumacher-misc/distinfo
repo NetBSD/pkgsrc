@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/10 05:54:09 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/07/12 13:45:51 wiz Exp $
 
-SHA1 (font-schumacher-misc-1.1.0.tar.bz2) = ea7e009e222379fa31a16bdbd4ca5b1e9d412944
-RMD160 (font-schumacher-misc-1.1.0.tar.bz2) = e346d08210f3d2bb03b7ce7d5549d7f286d1ba60
-Size (font-schumacher-misc-1.1.0.tar.bz2) = 136883 bytes
+SHA1 (font-schumacher-misc-1.1.2.tar.bz2) = fbe3629e9dcc03d12300d4ebab64fd038ea98952
+RMD160 (font-schumacher-misc-1.1.2.tar.bz2) = 36421161141e790a060d00846792b0d4c7fb2dbc
+Size (font-schumacher-misc-1.1.2.tar.bz2) = 141170 bytes
