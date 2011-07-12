@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.23 2011/07/11 21:20:34 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.24 2011/07/12 11:12:36 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 # 
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-system-cairo
 CONFIGURE_ARGS+=	--disable-system-pixman
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
-CONFIGURE_ARGS+=	--with-system-libevent
+CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-libnotify
