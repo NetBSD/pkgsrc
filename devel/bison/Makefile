@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2011/04/22 13:43:15 obache Exp $
+# $NetBSD: Makefile,v 1.77 2011/07/12 14:12:13 wiz Exp $
 
-DISTNAME=		bison-2.4.3
-PKGREVISION=		1
+DISTNAME=		bison-2.5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=bison/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,7 +17,7 @@ GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		grep gm4:run msgfmt
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes \
 			ac_cv_prog_M4=${TOOLS_PATH.gm4}
@@ -29,8 +28,9 @@ TEST_TARGET=		check
 pre-build:
 	${TOUCH} ${WRKSRC}/doc/bison.1
 
-# "bison" wants a recent version of "gettext" which at least NetBSD doesn't
-# provide. Figure out whether it will install the locale files or not.
+# "bison" wants a recent version of "gettext" which at least some
+# NetBSD versions don't provide. Figure out whether it will install
+# the locale files or not.
 PLIST_SRC=	${WRKDIR}/PLIST
 
 post-configure:
