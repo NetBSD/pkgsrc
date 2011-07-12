@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.4 2011/07/11 07:47:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.5 2011/07/12 10:59:53 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -11,3 +11,5 @@ Pullup ticket #3468 - requested by mspo
 chat/bitlbee: build fix
 Pullup ticket #3469 - requested by bsiegert
 devel/gmake: portability fix
+Pullup ticket #3471 - requested by morr
+www/wordpress: security update
