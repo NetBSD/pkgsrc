@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1660 2011/07/12 13:33:30 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1661 2011/07/12 13:35:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2588,3 +2588,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/pixman to 0.22.2nb1 [tron 2011-07-12]
 	Updated sysutils/cdrtools to 3.01alpha05 [wiz 2011-07-12]
 	Updated inputmethod/ibus-skk to 1.3.7 [obache 2011-07-12]
+	Updated textproc/hunspell-de to 20110609 [wiz 2011-07-12]
