@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.buildlink3.mk,v 1.1 2010/02/08 22:11:43 roy Exp $
+# $NetBSD: terminfo.buildlink3.mk,v 1.2 2011/07/12 06:42:58 obache Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any terminfo implementation instead of one particular one.  The available
@@ -73,12 +73,12 @@ PKG_FAIL_REASON=	\
 .elif ${TERMINFO_TYPE} == "ncurses"
 USE_NCURSES=			yes
 .  include "../../devel/ncurses/buildlink3.mk"
-BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.ncurses}
-BUILDLINK_LIBNAME.curses?=	${BUILDLINK_LIBNAME.ncurses}
-BUILDLINK_LDADD.curses?=	${BUILDLINK_LDADD.ncurses}
+BUILDLINK_PREFIX.terminfo?=	${BUILDLINK_PREFIX.ncurses}
+BUILDLINK_LIBNAME.terminfo?=	${BUILDLINK_LIBNAME.ncurses}
+BUILDLINK_LDADD.terminfo?=	${BUILDLINK_LDADD.ncurses}
 .elif ${TERMINFO_TYPE} == "pdcurses"
 .  include "../../devel/pdcurses/buildlink3.mk"
-BUILDLINK_PREFIX.curses?=	${BUILDLINK_PREFIX.pdcurses}
-BUILDLINK_LIBNAME.curses?=	${BUILDLINK_LIBNAME.pdcurses}
-BUILDLINK_LDADD.curses?=	${BUILDLINK_LDADD.pdcurses}
+BUILDLINK_PREFIX.terminfo?=	${BUILDLINK_PREFIX.pdcurses}
+BUILDLINK_LIBNAME.terminfo?=	${BUILDLINK_LIBNAME.pdcurses}
+BUILDLINK_LDADD.terminfo?=	${BUILDLINK_LDADD.pdcurses}
 .endif
