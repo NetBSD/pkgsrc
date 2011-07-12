@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.49 2011/07/12 12:19:40 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2011/07/12 13:19:09 wiz Exp $
+# used by graphics/sane-frontends/Makefile
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
