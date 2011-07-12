@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/07/12 13:25:57 wiz Exp $
 bin/xsane
 man/man1/xsane.1
+share/applications/xsane.desktop
 share/locale/ca/LC_MESSAGES/xsane.mo
 share/locale/cs/LC_MESSAGES/xsane.mo
 share/locale/da/LC_MESSAGES/xsane.mo
 share/locale/de/LC_MESSAGES/xsane.mo
 share/locale/es/LC_MESSAGES/xsane.mo
+share/locale/fi/LC_MESSAGES/xsane.mo
 share/locale/fr/LC_MESSAGES/xsane.mo
 share/locale/hu/LC_MESSAGES/xsane.mo
 share/locale/it/LC_MESSAGES/xsane.mo
 share/locale/ja/LC_MESSAGES/xsane.mo
 share/locale/nl/LC_MESSAGES/xsane.mo
+share/locale/pa/LC_MESSAGES/xsane.mo
 share/locale/pl/LC_MESSAGES/xsane.mo
 share/locale/pt/LC_MESSAGES/xsane.mo
 share/locale/pt_BR/LC_MESSAGES/xsane.mo
@@ -24,6 +27,7 @@ share/locale/tr/LC_MESSAGES/xsane.mo
 share/locale/vi/LC_MESSAGES/xsane.mo
 share/locale/zh/LC_MESSAGES/xsane.mo
 share/locale/zh_CN/LC_MESSAGES/xsane.mo
+share/pixmaps/xsane.xpm
 share/sane/xsane/Mustek-logo.xpm
 share/sane/xsane/Plustek-logo.xpm
 share/sane/xsane/UMAX-logo.xpm
