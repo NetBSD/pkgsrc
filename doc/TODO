@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10416 2011/07/12 11:28:09 wiz Exp $
+$NetBSD: TODO,v 1.10417 2011/07/12 12:03:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -724,7 +724,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnomeicu-0.99.16
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnucash-2.4.7
 	o gnucash-docs-2.4.1
 	o gnuchess-5.08
 	o gnutls-2.12.7
