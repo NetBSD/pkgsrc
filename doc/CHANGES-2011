@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1663 2011/07/12 13:40:39 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1664 2011/07/12 13:44:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2591,3 +2591,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/hunspell-de to 20110609 [wiz 2011-07-12]
 	Updated misc/gaupol to 0.18 [wiz 2011-07-12]
 	Updated x11/startup-notification to 0.12 [wiz 2011-07-12]
+	Updated games/gbrainy to 2.00 [wiz 2011-07-12]
