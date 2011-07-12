@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/06/10 09:39:55 obache Exp $
+# $NetBSD: Makefile,v 1.20 2011/07/12 19:00:57 drochner Exp $
 #
 
-DISTNAME=		shotwell-0.9.3
-PKGREVISION=		2
+DISTNAME=		shotwell-0.10.1
 CATEGORIES=		graphics
-MASTER_SITES=		http://yorba.org/download/shotwell/0.9/
+MASTER_SITES=		http://yorba.org/download/shotwell/0.10/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
@@ -48,7 +47,6 @@ BUILDLINK_API_DEPENDS.vala+= vala>=0.11.7
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
