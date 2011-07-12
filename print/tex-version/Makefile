@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 00:18:21 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/12 20:54:26 minskim Exp $
 
 DISTNAME=	version
 PKGNAME=	tex-${DISTNAME}-2.0
-TEXLIVE_REV=	15878
+TEXLIVE_REV=	21920
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Conditionally include text
