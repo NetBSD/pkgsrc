@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2011/07/11 23:26:32 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2011/07/12 18:05:58 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -67,38 +68,6 @@ REPLACE_BASH+= contrib/reghunt/date_based/reg_search
 REPLACE_BASH+= gcc/dbgcnt.def
 REPLACE_BASH+= gcc/testsuite/gcc.test-framework/gen_directive_tests
 REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
-
-# Optional languages - change as required
-# Ada could be added although there is a bootstrapping issue.  See
-# ../gcc34-ada for guidance
-BUILD_DEFS+=		BUILD_CXX BUILD_FORTRAN BUILD_JAVA BUILD_OBJC
-BUILD_CXX?=		YES
-BUILD_FORTRAN?=		YES
-BUILD_JAVA?=		YES
-BUILD_OBJC?=		YES
-
-LANGS= c
-
-#.if !empty(BUILD_CXX:M[aA][dD][aA])
-#LANGS+= ada
-#.endif
-
-.if !empty(BUILD_CXX:M[Yy][Ee][Ss])
-LANGS+= c++
-.endif
-
-.if !empty(BUILD_FORTRAN:M[Yy][Ee][Ss])
-LANGS+= fortran
-.endif
-
-.if !empty(BUILD_JAVA:M[Yy][Ee][Ss])
-LANGS+= java
-REPLACE_PYTHON= libjava/contrib/aot-compile.py.in
-.endif
-
-.if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
-LANGS+= objc
-.endif
 
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
