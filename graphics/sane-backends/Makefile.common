@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.28 2011/07/12 12:19:40 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2011/07/12 13:19:26 wiz Exp $
+# used by graphics/sane-frontends/Makefile
 
 CATEGORIES?=	graphics
 MASTER_SITES?=	ftp://gd.tuwien.ac.at/hci/sane/${DISTNAME}/ \
