@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1669 2011/07/12 14:09:55 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1670 2011/07/12 14:12:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2597,3 +2597,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/dialog to 1.1.20110707 [wiz 2011-07-12]
 	Updated textproc/aspell to 0.60.6.1 [wiz 2011-07-12]
 	Updated multimedia/gnome-mplayer to 1.0.4 [obache 2011-07-12]
+	Updated multimedia/gecko-mediaplayer to 1.0.4 [obache 2011-07-12]
