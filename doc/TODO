@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10426 2011/07/12 13:48:20 wiz Exp $
+$NetBSD: TODO,v 1.10427 2011/07/12 13:50:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -513,7 +513,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.7
 	o denemo-0.8.22
 	o dhid-5.3
-	o dialog-1.1.20110707
 	o diffpdf-1.2.2
 	o diffstat-1.54
 	o diffutils-3.0
