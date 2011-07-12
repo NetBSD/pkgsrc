@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1673 2011/07/12 20:56:38 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1674 2011/07/12 23:23:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2601,3 +2601,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/bison to 2.5 [wiz 2011-07-12]
 	Added print/tex-version-doc version 2.0 [minskim 2011-07-12]
 	Updated sysutils/fabric to 1.1.1 [gls 2011-07-12]
+	Updated www/ikiwiki to 3.20110712 [schmonz 2011-07-12]
