@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/12/27 15:07:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2011/07/12 12:19:40 wiz Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -44,9 +44,11 @@ lib/sane/libsane-hs2p.la
 lib/sane/libsane-ibm.la
 lib/sane/libsane-kodak.la
 lib/sane/libsane-kvs1025.la
+lib/sane/libsane-kvs20xx.la
 lib/sane/libsane-leo.la
 lib/sane/libsane-lexmark.la
 lib/sane/libsane-ma1509.la
+lib/sane/libsane-magicolor.la
 lib/sane/libsane-matsushita.la
 lib/sane/libsane-microtek.la
 lib/sane/libsane-microtek2.la
@@ -124,9 +126,11 @@ man/man5/sane-hs2p.5
 man/man5/sane-ibm.5
 man/man5/sane-kodak.5
 man/man5/sane-kvs1025.5
+man/man5/sane-kvs20xx.5
 man/man5/sane-leo.5
 man/man5/sane-lexmark.5
 man/man5/sane-ma1509.5
+man/man5/sane-magicolor.5
 man/man5/sane-matsushita.5
 man/man5/sane-microtek.5
 man/man5/sane-microtek2.5
@@ -287,6 +291,7 @@ share/examples/sane/kodak.conf
 share/examples/sane/leo.conf
 share/examples/sane/lexmark.conf
 share/examples/sane/ma1509.conf
+share/examples/sane/magicolor.conf
 share/examples/sane/matsushita.conf
 share/examples/sane/microtek.conf
 share/examples/sane/microtek2.conf
@@ -320,6 +325,25 @@ share/examples/sane/umax.conf
 share/examples/sane/umax1220u.conf
 share/examples/sane/umax_pp.conf
 share/examples/sane/xerox_mfp.conf
+share/locale/bg/LC_MESSAGES/sane-backends.mo
+share/locale/cs/LC_MESSAGES/sane-backends.mo
+share/locale/da/LC_MESSAGES/sane-backends.mo
+share/locale/de/LC_MESSAGES/sane-backends.mo
+share/locale/en_GB/LC_MESSAGES/sane-backends.mo
+share/locale/eo/LC_MESSAGES/sane-backends.mo
+share/locale/es/LC_MESSAGES/sane-backends.mo
+share/locale/fi/LC_MESSAGES/sane-backends.mo
+share/locale/fr/LC_MESSAGES/sane-backends.mo
+share/locale/gl/LC_MESSAGES/sane-backends.mo
+share/locale/it/LC_MESSAGES/sane-backends.mo
+share/locale/ja/LC_MESSAGES/sane-backends.mo
+share/locale/nb/LC_MESSAGES/sane-backends.mo
+share/locale/nl/LC_MESSAGES/sane-backends.mo
+share/locale/pl/LC_MESSAGES/sane-backends.mo
+share/locale/pt/LC_MESSAGES/sane-backends.mo
+share/locale/ru/LC_MESSAGES/sane-backends.mo
+share/locale/sv/LC_MESSAGES/sane-backends.mo
+share/locale/uk/LC_MESSAGES/sane-backends.mo
 @pkgdir share/sane/snapscan
 @pkgdir share/sane/gt68xx
 @pkgdir share/sane/epjitsu
