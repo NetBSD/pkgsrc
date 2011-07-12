@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/07/10 16:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2011/07/12 11:25:31 wiz Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
@@ -25,13 +25,13 @@ PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 .include "../../lang/python/extension.mk"
 
-.if ${_PYTHON_VERSION} >= 27                                                                                                                                                                                       
-EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/tkinter.h                                                                                                                                                               
-.endif                                                                                                                                                                                                             
+.if ${_PYTHON_VERSION} >= 27
+EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/tkinter.h
+.endif
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
-	for f in ${PATCHDIR}/patch-*; do \
+	cd ${WRKSRC} && for f in ${PATCHDIR}/patch-*; do \
 	${PATCH} ${PATCHARGS} --batch <$$f || true; \
 	done
 
