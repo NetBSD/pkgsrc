@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1664 2011/07/12 13:44:46 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1665 2011/07/12 13:46:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2592,3 +2592,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/gaupol to 0.18 [wiz 2011-07-12]
 	Updated x11/startup-notification to 0.12 [wiz 2011-07-12]
 	Updated games/gbrainy to 2.00 [wiz 2011-07-12]
+	Updated fonts/font-schumacher-misc to 1.1.2 [wiz 2011-07-12]
