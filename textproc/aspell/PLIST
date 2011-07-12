@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:17:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/07/12 14:06:02 wiz Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -101,6 +101,7 @@ share/aspell/split.kbd
 share/aspell/standard.kbd
 ${PLIST.filters}share/aspell/tex-filter.info
 ${PLIST.filters}share/aspell/texinfo-filter.info
+share/locale/ast/LC_MESSAGES/aspell.mo
 share/locale/be/LC_MESSAGES/aspell.mo
 share/locale/ca/LC_MESSAGES/aspell.mo
 share/locale/cs/LC_MESSAGES/aspell.mo
@@ -108,10 +109,14 @@ share/locale/da/LC_MESSAGES/aspell.mo
 share/locale/de/LC_MESSAGES/aspell.mo
 share/locale/en_GB/LC_MESSAGES/aspell.mo
 share/locale/es/LC_MESSAGES/aspell.mo
+share/locale/fi/LC_MESSAGES/aspell.mo
 share/locale/fr/LC_MESSAGES/aspell.mo
 share/locale/ga/LC_MESSAGES/aspell.mo
+share/locale/id/LC_MESSAGES/aspell.mo
 share/locale/it/LC_MESSAGES/aspell.mo
+share/locale/ja/LC_MESSAGES/aspell.mo
 share/locale/mn/LC_MESSAGES/aspell.mo
+share/locale/ms/LC_MESSAGES/aspell.mo
 share/locale/nl/LC_MESSAGES/aspell.mo
 share/locale/pt_BR/LC_MESSAGES/aspell.mo
 share/locale/ro/LC_MESSAGES/aspell.mo
@@ -125,3 +130,4 @@ share/locale/tg/LC_MESSAGES/aspell.mo
 share/locale/uk/LC_MESSAGES/aspell.mo
 share/locale/vi/LC_MESSAGES/aspell.mo
 share/locale/wa/LC_MESSAGES/aspell.mo
+share/locale/zh_CN/LC_MESSAGES/aspell.mo
