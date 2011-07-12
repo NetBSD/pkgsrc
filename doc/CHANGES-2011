@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1658 2011/07/12 13:29:09 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1659 2011/07/12 13:32:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2586,3 +2586,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/sane-backends to 1.0.22 [wiz 2011-07-12]
 	Updated graphics/xsane to 0.99.8 [wiz 2011-07-12]
 	Updated x11/pixman to 0.22.2nb1 [tron 2011-07-12]
+	Updated sysutils/cdrtools to 3.01alpha05 [wiz 2011-07-12]
