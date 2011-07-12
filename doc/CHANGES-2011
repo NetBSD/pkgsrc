@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1652 2011/07/11 23:26:42 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1653 2011/07/12 09:16:20 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2567,3 +2567,17 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/gcc45 to 4.5.3 [wiz 2011-07-11]
 	Updated www/wordpress to 3.2 [morr 2011-07-11]
 	Updated lang/gcc44 to 4.4.6 [wiz 2011-07-11]
+	Updated multimedia/gst-plugins0.10-good to 0.10.30 [drochner 2011-07-11]
+	Updated multimedia/gst-plugins0.10-base to 0.10.35 [drochner 2011-07-11]
+	Updated	multimedia/gstreamer0.10 to 0.10.35 [drochner 2011-07-11]
+	Updated security/gnutls to 2.12.7 [drochner 2011-07-11]
+	Updated x11/pixman to 0.22.2 [drochner 2011-07-11]
+	Updated print/epdfview to 0.1.8 [drochner 2011-07-11]
+	Updated textproc/xmlstarlet to 1.2.1 [drochner 2011-07-11]
+	Updated print/poppler to 0.16.7 [drochner 2011-07-11]
+	Updated textproc/gnome-doc-utils to 0.20.6 [drochner 2011-07-11]
+	Updated www/webkit-gtk to 1.4.2 [drochner 2011-07-11]
+	Updated x11/vte to 0.28.1 [drochner 2011-07-11]
+	Updated x11/gtk2 to 2.24.5 [drochner 2011-07-11]
+	Updated textproc/json-glib to 0.12.6 [drochner 2011-07-11]
+	Updated devel/autogen to 5.12 [drochner 2011-07-11]
