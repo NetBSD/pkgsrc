@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1667 2011/07/12 13:50:17 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1668 2011/07/12 14:06:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2595,3 +2595,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/font-schumacher-misc to 1.1.2 [wiz 2011-07-12]
 	Updated graphics/p5-Image-ExifTool to 8.60 [wiz 2011-07-12]
 	Updated misc/dialog to 1.1.20110707 [wiz 2011-07-12]
+	Updated textproc/aspell to 0.60.6.1 [wiz 2011-07-12]

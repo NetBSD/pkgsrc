@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10427 2011/07/12 13:50:17 wiz Exp $
+$NetBSD: TODO,v 1.10428 2011/07/12 14:06:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -402,7 +402,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o arping-2.09
 	o asapm-3.1
 	o asc-2.4.0
-	o aspell-0.60.6.1
 	o aspell-faroese-0.4.0
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
