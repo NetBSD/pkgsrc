@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2011/07/12 18:23:09 tron Exp $
+# $NetBSD: hacks.mk,v 1.6 2011/07/12 22:03:28 tron Exp $
 #
 .if !defined(PIXMAN_HACKS_MK)
 PIXMAN_HACKS_MK=	# empty
@@ -9,7 +9,7 @@ PIXMAN_HACKS_MK=	# empty
 ###
 .if empty(CC_VERSION:Mgcc-4.[2-9]*) && \
     empty(CC_VERSION:Mgcc-[5-9].*) && \
-    empty(CC_VERSION:Mgcc-[1-9][0-9].*)
+    empty(CC_VERSION:Mgcc-[1-9][0-9]*)
 CONFIGURE_ARGS+=	--disable-sse2
 .  endif
 .endif
