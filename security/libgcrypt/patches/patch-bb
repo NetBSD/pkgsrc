@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2009/12/18 18:54:24 drochner Exp $
+$NetBSD: patch-bb,v 1.2 2011/07/13 21:21:52 adam Exp $
 
 --- src/cipher.h.orig	2009-04-02 09:25:32.000000000 +0000
 +++ src/cipher.h
-@@ -94,6 +94,7 @@ extern gcry_cipher_spec_t _gcry_cipher_s
+@@ -135,6 +135,7 @@ extern gcry_cipher_spec_t _gcry_cipher_s
  extern gcry_cipher_spec_t _gcry_cipher_spec_camellia128;
  extern gcry_cipher_spec_t _gcry_cipher_spec_camellia192;
  extern gcry_cipher_spec_t _gcry_cipher_spec_camellia256;
