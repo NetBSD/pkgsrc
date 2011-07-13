@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2011/02/02 13:18:48 adam Exp $
+# $NetBSD: options.mk,v 1.19 2011/07/13 11:02:41 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
@@ -29,7 +29,9 @@ CONFIGURE_ARGS+=	--enable-gnutls
 CONFIGURE_ARGS+= --with-gnutls-includes=${BUILDLINK_PREFIX.gnutls}/include
 CONFIGURE_ARGS+= --with-gnutls-libs=${BUILDLINK_PREFIX.gnutls}/lib
 .  include "../../security/gnutls/buildlink3.mk"
+.  include "../../security/libgcrypt/buildlink3.mk"
 .else
+CONFIGURE_ARGS+=	--disable-gnutls
 PLIST.nss=		yes
 CONFIGURE_ARGS+=	--enable-nss
 CONFIGURE_ARGS+= --with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
