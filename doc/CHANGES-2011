@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1681 2011/07/13 20:50:21 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1682 2011/07/13 21:03:20 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2609,3 +2609,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/diffuse to 0.4.5 [wiz 2011-07-13]
 	Updated graphics/glew to 1.6.0 [adam 2011-07-13]
 	Updated devel/gettext-tools to 0.18.1.1nb2 [tron 2011-07-13]
+	Updated comms/obexapp to 1.4.15 [plunky 2011-07-13]
