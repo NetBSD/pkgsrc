@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2005/07/20 15:42:34 taca Exp $
+$NetBSD: MESSAGE,v 1.5.52.1 2011/07/13 19:09:16 tron Exp $
 
 Please run the SquirrelMail configuration script:
 
@@ -19,5 +19,9 @@ into DocumentRoot, or add the following line to httpd.conf:
 to make IMAP accounts accessible through:
 
 	http://www.example.com/squirrelmail/
+
+And please refer Release Notes for important changes:
+
+	http://www.example.com/squirrelmail/doc/ReleaseNotes
 
 ===========================================================================

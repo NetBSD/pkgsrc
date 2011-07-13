@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2010/07/24 12:20:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.37.8.1 2011/07/13 19:09:16 tron Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/data/.htaccess
 share/examples/squirrelmail/data/index.php
@@ -77,6 +77,7 @@ share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.17.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.18.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.19.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.20.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.21.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.2.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.20-RC2.txt
 share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.20RC1.txt
