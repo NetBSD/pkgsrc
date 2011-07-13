@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2011/07/11 13:27:24 tnn Exp $
+@comment $NetBSD: PLIST,v 1.31 2011/07/13 12:04:06 tnn Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -2197,7 +2197,7 @@ include/xulrunner/nspr/md/_irix64.cfg
 include/xulrunner/nspr/md/_linux.cfg
 include/xulrunner/nspr/md/_ncr.cfg
 include/xulrunner/nspr/md/_nec.cfg
-include/xulrunner/nspr/md/_${LOWER_OPSYS}.cfg
+include/xulrunner/nspr/md/_netbsd.cfg
 include/xulrunner/nspr/md/_nextstep.cfg
 include/xulrunner/nspr/md/_nto.cfg
 include/xulrunner/nspr/md/_openbsd.cfg
