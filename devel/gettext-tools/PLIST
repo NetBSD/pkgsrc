@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/07/13 14:26:01 abs Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/07/13 20:50:05 tron Exp $
 bin/autopoint
 bin/envsubst
 bin/gettext
@@ -111,7 +111,7 @@ share/doc/gettext/recode-sr-latin.1.html
 share/doc/gettext/textdomain.3.html
 share/doc/gettext/tutorial.html
 share/doc/gettext/xgettext.1.html
-share/gettext/archive.git.tar.gz
+share/gettext/archive.dir.tar.gz
 share/locale/be/LC_MESSAGES/gettext-runtime.mo
 share/locale/be/LC_MESSAGES/gettext-tools.mo
 share/locale/bg/LC_MESSAGES/gettext-runtime.mo

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2011/07/13 14:26:01 abs Exp $
+# $NetBSD: Makefile,v 1.17 2011/07/13 20:50:05 tron Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Tools for providing messages in different languages
 
 #MAKE_JOBS_SAFE=		no
@@ -15,6 +15,7 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--disable-csharp
+CONFIGURE_ARGS+=	--without-git
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
