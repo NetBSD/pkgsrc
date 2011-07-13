@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/07/12 18:05:58 hans Exp $
+# $NetBSD: Makefile,v 1.24 2011/07/13 13:25:17 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -14,11 +14,9 @@ LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		awk:run bash:run perl chmod \
+USE_TOOLS+=		awk:run bash:run chmod \
 			gmake:run makeinfo bison flex gm4 \
-			sed:run unzip
-
-DEPENDS+=		zip-[0-9]*:../../archivers/zip
+			sed:run
 
 GCC_VERSION=		4.4.6
 
@@ -71,9 +69,7 @@ REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
 
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
-CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--disable-libssp
@@ -82,20 +78,6 @@ CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
-
-# ${WRKSRC}/gcc-4.4.1/libjava/contrib/aotcompile.py.in stores the path to
-# a 'make' program so we need to make sure we give it the installed 'make' and not
-# the tool wrapped one.
-CONFIGURE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake}
-MAKE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake}
-
-# fastjar-0.93 from pkgsrc/archivers/fastjar seems to trigger a build
-# failure (seen on NetBSD-5.0/i386) when building java.  So in case
-# the fastjar package is installed, make sure the configure script
-# doesn't pick it up.
-CONFIGURE_ENV+=		JAR=no
-MAKE_ENV+=		JAR=no
-MAKE_ENV+=		ac_cv_prog_JAR=no
 
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
@@ -149,7 +131,5 @@ GENERATE_PLIST+=                                                        \
 	| ${SORT} ;
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
