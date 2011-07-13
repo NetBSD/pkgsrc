@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2011/04/12 17:41:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/07/13 14:26:01 abs Exp $
+bin/autopoint
 bin/envsubst
 bin/gettext
 bin/gettext.sh
+bin/gettextize
 bin/msgattrib
 bin/msgcat
 bin/msgcmp
@@ -24,8 +26,10 @@ info/gettext.info
 lib/libgettextlib.la
 lib/libgettextpo.la
 lib/libgettextsrc.la
+man/man1/autopoint.1
 man/man1/envsubst.1
 man/man1/gettext.1
+man/man1/gettextize.1
 man/man1/msgattrib.1
 man/man1/msgcat.1
 man/man1/msgcmp.1
@@ -107,6 +111,7 @@ share/doc/gettext/recode-sr-latin.1.html
 share/doc/gettext/textdomain.3.html
 share/doc/gettext/tutorial.html
 share/doc/gettext/xgettext.1.html
+share/gettext/archive.git.tar.gz
 share/locale/be/LC_MESSAGES/gettext-runtime.mo
 share/locale/be/LC_MESSAGES/gettext-tools.mo
 share/locale/bg/LC_MESSAGES/gettext-runtime.mo
