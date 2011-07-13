@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1674 2011/07/12 23:23:06 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1675 2011/07/13 11:42:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2602,3 +2602,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-version-doc version 2.0 [minskim 2011-07-12]
 	Updated sysutils/fabric to 1.1.1 [gls 2011-07-12]
 	Updated www/ikiwiki to 3.20110712 [schmonz 2011-07-12]
+	Updated net/mikutter to 0.0.3.11 [obache 2011-07-13]
