@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/05/28 12:05:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/13 12:05:52 ryoon Exp $
 #
 
-DISTNAME=	Ricty-3.0.1
+DISTNAME=	Ricty-3.1.1
 PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty/
@@ -27,6 +27,8 @@ INSTALLATION_DIRS=	lib/X11/fonts/TTF
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
+
+WRKSRC=		${WRKDIR}/Ricty
 
 INSTALL_FONTS=	Ricty-Bold.ttf \
 		Ricty-Regular.ttf \
