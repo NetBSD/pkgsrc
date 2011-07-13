@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2009/05/26 17:38:55 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2011/07/13 20:01:40 drochner Exp $
 
---- src/common.c.orig	2009-03-12 19:37:32.000000000 +0100
+--- src/common.c.orig	2011-06-22 13:25:40.000000000 +0000
 +++ src/common.c
 @@ -273,9 +273,9 @@ static const gchar *dayofweek[] = { "Sun
  static const gchar *months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2009/05/26 17:38:55 drochner Exp $
  	return g_strdup_printf("%s, %2d %s %4d %02d:%02d:%02d GMT", dayofweek[tm->tm_wday], tm->tm_mday,
  					   months[tm->tm_mon], 1900 + tm->tm_year, tm->tm_hour, tm->tm_min, tm->tm_sec);
  }
-@@ -325,7 +325,7 @@ static time_t common_parse_rfc822_tz(cha
+@@ -374,7 +374,7 @@ static time_t common_parse_rfc822_tz(cha
  
  /* converts a RFC822 time string to a time_t value */
  time_t parseRFC822Date(gchar *date) {
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2009/05/26 17:38:55 drochner Exp $
  	time_t		t, t2;
  	char 		*oldlocale;
  	char		*pos;
-@@ -373,7 +373,7 @@ time_t parseRFC822Date(gchar *date) {
+@@ -422,7 +422,7 @@ time_t parseRFC822Date(gchar *date) {
  			   correction. (Usually, there is no daylight savings
  			   time since the input is GMT.) */
  			t = t - common_parse_rfc822_tz(pos);
