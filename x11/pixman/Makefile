@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2011/07/12 18:23:09 tron Exp $
+# $NetBSD: Makefile,v 1.44 2011/07/13 19:25:42 tron Exp $
 
 DISTNAME=	pixman-0.22.2
 PKGREVISION=	1
@@ -42,16 +42,5 @@ PIXMAN_SYMFILE=	${WRKDIR}/pixman.sym
 post-extract:
 	${CP} ${FILESDIR}/pixman.sym ${WRKDIR}
 	${CP} ${FILESDIR}/solaris-hwcap.mapfile ${WRKSRC}/pixman
-
-.include "../../mk/bsd.prefs.mk"
-
-# Link the tests with the static library under Mac OS X as we cannot use
-# the shared library out of the build area.
-.if ${OPSYS} == "Darwin"
-SUBST_CLASSES+=			pixmantests
-SUBST_STAGE.pixmantests=	post-configure
-SUBST_FILES.pixmantests=	test/Makefile
-SUBST_SED.pixmantests=		-e 's@libpixman-1\.la@\.libs/libpixman-1\.a@'
-.endif
 
 .include "../../mk/bsd.pkg.mk"
