@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1675 2011/07/13 11:42:03 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1676 2011/07/13 12:01:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2603,3 +2603,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/fabric to 1.1.1 [gls 2011-07-12]
 	Updated www/ikiwiki to 3.20110712 [schmonz 2011-07-12]
 	Updated net/mikutter to 0.0.3.11 [obache 2011-07-13]
+	Updated fonts/migu-ttf to 20110610 [ryoon 2011-07-13]
