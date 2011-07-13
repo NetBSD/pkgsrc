@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1678 2011/07/13 12:23:33 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1679 2011/07/13 14:45:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2606,3 +2606,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/migu-ttf to 20110610 [ryoon 2011-07-13]
 	Updated fonts/ricty-ttf to 3.1.1 [ryoon 2011-07-13]
 	Updated mail/squirrelmail to 1.4.22 [taca 2011-07-13]
+	Updated devel/diffuse to 0.4.5 [wiz 2011-07-13]
