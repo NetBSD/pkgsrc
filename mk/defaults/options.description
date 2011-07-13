@@ -155,6 +155,11 @@ freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
 ftp			Enable File Transfer Protocol (FTP) support.
 fts			Enable full-text searching.
+gcc-ada			Build the gcc Ada frontend and libraries.
+gcc-c++			Build the gcc C++ frontend and libraries.
+gcc-fortran		Build the gcc Fortran frontend and libraries.
+gcc-java		Build the gcc Java frontend, tools and libraries.
+gcc-objc		Build the gcc Objective-C frontend and libraries.
 gd			Use GD to render graphical output.
 gdal			Use the GDAL library.
 gdb6-tui		Build the tui application.
