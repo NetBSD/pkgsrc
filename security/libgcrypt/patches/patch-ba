@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2009/12/18 18:54:24 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2011/07/13 21:21:52 adam Exp $
 
 --- cipher/cipher.c.orig	2009-04-02 09:25:34.000000000 +0000
 +++ cipher/cipher.c
-@@ -109,6 +109,10 @@ static struct cipher_table_entry
+@@ -112,6 +112,10 @@ static struct cipher_table_entry
      { &_gcry_cipher_spec_camellia256,
        &dummy_extra_spec,                  GCRY_CIPHER_CAMELLIA256 },
  #endif
