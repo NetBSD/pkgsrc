@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2010/10/30 19:20:49 adam Exp $
+$NetBSD: patch-ad,v 1.3 2011/07/13 19:47:38 adam Exp $
 
---- config/Makefile.darwin.orig	2009-08-31 11:41:51.000000000 +0200
+--- config/Makefile.darwin.orig	2011-04-27 16:16:34.000000000 +0000
 +++ config/Makefile.darwin
-@@ -17,7 +17,7 @@ endif
+@@ -13,7 +13,7 @@ endif
  LDFLAGS.STATIC =
  LDFLAGS.DYNAMIC =
  WARN = -Wall -W
 -POPT = -O2
 +POPT ?= -O2
  BIN.SUFFIX =
- LIB.SONAME = lib$(NAME).$(SO_MAJOR).dylib
- LIB.DEVLNK = lib$(NAME).dylib
+ LIB.SONAME    = lib$(NAME).$(SO_MAJOR).dylib
+ LIB.DEVLNK    = lib$(NAME).dylib
