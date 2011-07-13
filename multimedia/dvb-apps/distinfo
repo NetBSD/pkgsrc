@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/13 23:42:16 jmcneill Exp $
+
+SHA1 (dvb-apps/148ede2a6809.tar.gz) = 1d7b7713cce5a2a1db4a5639789140b5c3ba272f
+RMD160 (dvb-apps/148ede2a6809.tar.gz) = b024e3fa143d4b89ce842aeb799217f48c0df58a
+Size (dvb-apps/148ede2a6809.tar.gz) = 516680 bytes
+SHA1 (patch-util_scan_diseqc.c) = 048e7e3dac5e8f096e926bdb971257f263f8cd01
+SHA1 (patch-util_scan_diseqc.h) = 2dc00e508282fd7fc73e0b94556eff7bbd54332b
+SHA1 (patch-util_scan_dump-vdr.c) = 82f89c3a687744632d59df53d788df92c4d678f3
+SHA1 (patch-util_scan_dump-vdr.h) = 28fa7f3bd25f72bc305de180a76ad56283c11de9
+SHA1 (patch-util_scan_dump-zap.c) = fea36c5447734fba91ec0f1b4aa9f6e32e59e158
+SHA1 (patch-util_scan_dump-zap.h) = 238f11ca1b8b75910391f62397a9ae824fa2ad28
+SHA1 (patch-util_scan_lnb.c) = 34592aef076e6b508a0a22d70af69029388a1946
+SHA1 (patch-util_scan_scan.c) = b327a1740b80d7a7c659c1a8566543e532909044
