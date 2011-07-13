@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/12 11:33:33 obache Exp $
+# $NetBSD: Makefile,v 1.16 2011/07/13 11:26:09 shattered Exp $
 
 DISTNAME=	ldns-1.6.9
 CATEGORIES=	net
@@ -20,8 +20,14 @@ REPLACE_PERL=	doc/doxyparse.pl
 BUILDLINK_ABI_DEPENDS.openssl+= openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
 
-PLIST_VARS+=		sha2
+PLIST_VARS+=		sha2 gost
 .if defined(USE_BUILTIN.openssl) && !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+PLIST_VARS.gost!=	\
+	if ${PKG_ADMIN} pmatch 'openssl>=1.0.0' ${BUILTIN_PKG.openssl:Q}; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
+	fi
 PLIST_VARS.sha2!=	\
 	if ${PKG_ADMIN} pmatch 'openssl>=0.9.8' ${BUILTIN_PKG.openssl:Q}; then \
 		${ECHO} "yes";						\
@@ -29,12 +35,23 @@ PLIST_VARS.sha2!=	\
 		${ECHO} "no";						\
 	fi
 .else
+PLIST_VARS.gost!=	\
+	if ${PKG_INFO} -qe 'openssl>=1.0.0'; then			\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
 PLIST_VARS.sha2!=	\
 	if ${PKG_INFO} -qe 'openssl>=0.9.8'; then			\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
 	fi
+.endif
+.if ${PLIST_VARS.gost} == "yes"
+CONFIGURE_ARGS+=	--enable-gost
+.else
+CONFIGURE_ARGS+=	--disable-gost
 .endif
 .if ${PLIST_VARS.sha2} == "yes"
 CONFIGURE_ARGS+=	--enable-sha2
