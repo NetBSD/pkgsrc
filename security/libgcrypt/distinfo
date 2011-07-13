@@ -1,17 +1,16 @@
-$NetBSD: distinfo,v 1.32 2010/07/27 04:45:41 taca Exp $
+$NetBSD: distinfo,v 1.33 2011/07/13 21:21:52 adam Exp $
 
-SHA1 (libgcrypt-1.4.6/gcrypt.tar.bz2) = 5d402e4e4e6831f74b738f1a022cf024bcb24ecd
-RMD160 (libgcrypt-1.4.6/gcrypt.tar.bz2) = d1032e66bd4b6f51e437993a7178d14b09a2955a
-Size (libgcrypt-1.4.6/gcrypt.tar.bz2) = 4231 bytes
-SHA1 (libgcrypt-1.4.6/libgcrypt-1.4.6.tar.bz2) = 445b9e158aaf91e24eae3d1040c6213e9d9f5ba6
-RMD160 (libgcrypt-1.4.6/libgcrypt-1.4.6.tar.bz2) = d4d720c4bfe80f0799b2cbdbbb49d304e3195049
-Size (libgcrypt-1.4.6/libgcrypt-1.4.6.tar.bz2) = 1151877 bytes
-SHA1 (patch-aa) = 27db0d01f6a95566ccf0471a12f9a16dd7f994eb
-SHA1 (patch-ab) = eb6d759e98acdce7aebc9ca28fff84e07a06e11c
-SHA1 (patch-ac) = b8333a4c7a4a6d34c2e6840a5dd3af070280b42a
-SHA1 (patch-ad) = f32281612b51c5bb3788cf03c6f5615bdfc0d3e8
-SHA1 (patch-ae) = 7199ed8fe571b8c892d6eafb868820d625c2b7fa
+SHA1 (libgcrypt-1.5.0/libgcrypt-1.5.0.tar.bz2) = 3e776d44375dc1a710560b98ae8437d5da6e32cf
+RMD160 (libgcrypt-1.5.0/libgcrypt-1.5.0.tar.bz2) = f01e8198dcc379ff2fa5e8d3ac39e7b32fc41dad
+Size (libgcrypt-1.5.0/libgcrypt-1.5.0.tar.bz2) = 1433506 bytes
+SHA1 (patch-aa) = 7c46612f912d45dfd4ce4f4b510e72c00bd38585
+SHA1 (patch-ab) = 18fa39f87103959955ab1c0a36e3063e085403bc
+SHA1 (patch-ac) = c59d7bb73fa0e79522b287054633e276ffbb069d
+SHA1 (patch-ad) = 19345b7d164521d526a44eb3f1a465ff09d8266c
+SHA1 (patch-ae) = 50eeea5a193e14012e0d127a0618dfc03727d96c
 SHA1 (patch-af) = e6d33b3e9c25a560c1df11843c6be3c9319bd018
-SHA1 (patch-ba) = f20a6c954339151cde8e0ada1c833491eeb2f2c8
-SHA1 (patch-bb) = 76ac3399ac26ee4c631bc608225b708273beb2af
-SHA1 (patch-bc) = 837eefee38382eb47068a965d378c1dfb2c7b82b
+SHA1 (patch-ba) = a39a6972d197193ea7831d23cfa66f14ca55105e
+SHA1 (patch-bb) = b75a2cb6d526976bb4d3a0948ce4c15eead4e2ae
+SHA1 (patch-bc) = 86b594ac2ee25d8a68809765a13942e8fd3be051
+SHA1 (patch-mpi_mpi-inline.h) = 0cec82342605ea5ebe7ef1da90bceecd2816e2bf
+SHA1 (patch-mpi_mpi-internal.h) = 431485228bdacd043e159f4f84de3871dc82f0d2
