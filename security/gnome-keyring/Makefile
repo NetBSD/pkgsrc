@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2011/04/22 13:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.62 2011/07/14 14:25:45 obache Exp $
 
 DISTNAME=	gnome-keyring-2.32.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,9 +17,8 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gcr/gcr.pc.in
-PKGCONFIG_OVERRIDE=	${WRKSRC}/library/gnome-keyring-1.pc.in
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gp11/gp11.pc.in
+PKGCONFIG_OVERRIDE+=	gcr/gcr.pc.in
+PKGCONFIG_OVERRIDE+=	gp11/gp11.pc.in
 
 CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
 
