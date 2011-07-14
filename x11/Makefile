@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2011/04/20 18:40:43 hans Exp $
+# $NetBSD: Makefile,v 1.636 2011/07/14 23:25:47 ryoon Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -235,6 +235,7 @@ SUBDIR+=	libgnomekbd
 SUBDIR+=	liblbxutil
 SUBDIR+=	liboldXrandr
 SUBDIR+=	libunique
+SUBDIR+=	libunique3
 SUBDIR+=	libxcb
 SUBDIR+=	libxdg-basedir
 SUBDIR+=	libxfce4gui
