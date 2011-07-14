@@ -1,21 +1,27 @@
-@comment $NetBSD: PLIST,v 1.9 2011/01/25 11:02:35 ryoon Exp $
-bin/gwaei
+@comment $NetBSD: PLIST,v 1.10 2011/07/14 21:11:54 ryoon Exp $
 bin/waei
+include/libwaei/dictinfo.h
+include/libwaei/dictinfolist.h
+include/libwaei/dictinst.h
+include/libwaei/dictinstlist.h
+include/libwaei/engine.h
+include/libwaei/historylist.h
+include/libwaei/io.h
+include/libwaei/libwaei.h
+include/libwaei/preferences.h
+include/libwaei/queryline.h
+include/libwaei/regex.h
+include/libwaei/resultline.h
+include/libwaei/searchitem.h
+include/libwaei/utilities.h
+lib/libwaei.la
 man/man1/waei.1
 share/doc/gwaei/COPYING
 share/doc/gwaei/ChangeLog
 share/doc/gwaei/NEWS
-share/glib-2.0/schemas/org.gnome.gwaei.dictionary.gschema.xml
-share/glib-2.0/schemas/org.gnome.gwaei.fonts.gschema.xml
 share/glib-2.0/schemas/org.gnome.gwaei.gschema.xml
-share/glib-2.0/schemas/org.gnome.gwaei.highlight.gschema.xml
-share/glib-2.0/schemas/org.gnome.gwaei.kanjipad_window.gschema.xml
-share/glib-2.0/schemas/org.gnome.gwaei.main_window.gschema.xml
-share/glib-2.0/schemas/org.gnome.gwaei.radicals_window.gschema.xml
 share/locale/cs/LC_MESSAGES/gwaei.mo
 share/locale/de/LC_MESSAGES/gwaei.mo
-share/locale/en@boldquot/LC_MESSAGES/gwaei.mo
-share/locale/en@quot/LC_MESSAGES/gwaei.mo
 share/locale/es/LC_MESSAGES/gwaei.mo
 share/locale/fr/LC_MESSAGES/gwaei.mo
 share/locale/it/LC_MESSAGES/gwaei.mo
