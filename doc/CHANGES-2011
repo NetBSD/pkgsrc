@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1686 2011/07/14 07:46:15 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1687 2011/07/14 08:16:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2614,3 +2614,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/aria2 to 1.12.0 [ryoon 2011-07-14]
 	Updated games/onscripter to 20110619 [ryoon 2011-07-14]
 	Updated databases/py-bsddb3 to 5.2.0 [adam 2011-07-14]
+	Updated graphics/fotoxx to 11.07 [ryoon 2011-07-14]
