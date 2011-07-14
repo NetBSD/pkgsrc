@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1692 2011/07/14 22:07:42 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1693 2011/07/14 22:10:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2620,3 +2620,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/lighttpd to 1.4.29 [adam 2011-07-14]
 	Added x11/libunique3 version 3.0.2 [ryoon 2011-07-14]
 	Updated print/tex-ltxmisc to 2010.21927 [minskim 2011-07-14]
+	Added print/tex-verbasef version 1.1 [minskim 2011-07-14]
+	Added print/tex-verbasef-doc version 1.1 [minskim 2011-07-14]
