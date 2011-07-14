@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/01/22 23:53:36 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2011/07/14 22:07:17 minskim Exp $
 
 DISTNAME=	ltxmisc
-PKGNAME=	tex-${DISTNAME}-2010.20350
-TEXLIVE_REV=	20350
+PKGNAME=	tex-${DISTNAME}-2010.21927
+TEXLIVE_REV=	21927
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Miscellaneous LaTeX packages
@@ -11,7 +11,6 @@ DEPENDS+=	tex-beton-[0-9]*:../../print/tex-beton
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-euler-[0-9]*:../../print/tex-euler
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-minitoc-[0-9]*:../../print/tex-minitoc
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
