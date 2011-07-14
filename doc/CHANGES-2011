@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1689 2011/07/14 14:26:01 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1690 2011/07/14 20:00:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2617,3 +2617,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/fotoxx to 11.07 [ryoon 2011-07-14]
 	Updated net/libtrace to 3.0.10 [markd 2011-07-14]
 	Updated security/gnome-keyring to 2.32.1nb2 [obache 2011-07-14]
+	Updated www/lighttpd to 1.4.29 [adam 2011-07-14]
