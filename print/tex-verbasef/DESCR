@@ -1,0 +1,7 @@
+Verbasef allows you to input (subsections of a) file, print them in
+verbatim mode, while automatically breaking up the inputted lines into
+pieces of a given length, which are output as figures. These figures are
+posted using the [H] specification, which forces LaTeX to place the
+figure at the spot of invocation, rather than floating the figures to
+the top of the next page. The package requires the verbatim, here and
+vrbexin packages.
