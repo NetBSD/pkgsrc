@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/10 12:47:38 spz Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/14 21:47:35 spz Exp $
 
 DISTNAME=	WWW-RobotRules-6.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/WWW-RobotRules/
-COMMENT=	Perl 5 module interface to URL shortening sites
+COMMENT=	Perl 5 module database of robots.txt-derived permissions
+LICENSE=	${PERL5_LICENSE}
+
+CONFLICTS+=	p5-libwww-[0-5]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
