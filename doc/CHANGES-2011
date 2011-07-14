@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1683 2011/07/13 21:23:02 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1684 2011/07/14 06:00:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2611,3 +2611,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/gettext-tools to 0.18.1.1nb2 [tron 2011-07-13]
 	Updated comms/obexapp to 1.4.15 [plunky 2011-07-13]
 	Updated security/libgcrypt to 1.5.0 [adam 2011-07-13]
+	Updated net/aria2 to 1.12.0 [ryoon 2011-07-14]
