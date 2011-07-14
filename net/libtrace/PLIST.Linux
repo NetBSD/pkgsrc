@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2011/07/14 11:47:17 markd Exp $
+bin/tracetop
+man/man1/tracetop.1
