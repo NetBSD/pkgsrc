@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.4 2011/06/11 18:54:23 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2011/07/14 08:15:35 ryoon Exp $
 
---- Makefile.orig	2011-06-09 06:29:46.000000000 +0000
+--- Makefile.orig	2011-07-01 17:05:59.000000000 +0000
 +++ Makefile
-@@ -24,8 +24,7 @@ LIBS = `pkg-config --libs gtk+-2.0 gthre
- 
- fotoxx: fotoxx.o fotoxx_area.o fotoxx_info.o fotoxx_edit.o zfuncs.o
- 	$(CXX) $(LDFLAGS) fotoxx.o fotoxx_area.o fotoxx_info.o fotoxx_edit.o \
--	           zfuncs.o $(LIBS) -ltiff -o fotoxx 
--	@ ./dependencies.sh
-+	           zfuncs.o $(LIBS) -ltiff -o fotoxx -lcompat
+@@ -26,8 +26,7 @@ fotoxx: fotoxx.o fotoxx_area.o fotoxx_in
+         fotoxx_transform.o fotoxx_art.o fotoxx_comp.o zfuncs.o 
+ 	$(CXX) $(LDFLAGS) fotoxx.o fotoxx_area.o fotoxx_info.o fotoxx_retouch.o \
+           fotoxx_transform.o fotoxx_art.o fotoxx_comp.o zfuncs.o \
+-          $(LIBS) -ltiff -o fotoxx 
+-	@ ./dependencies.sh                             ## after the build
++          $(LIBS) -ltiff -o fotoxx -lcompat
  
  fotoxx.o: $(VERSION) fotoxx.h
  	$(CXX) $(CFLAGS) -o fotoxx.o $(VERSION)

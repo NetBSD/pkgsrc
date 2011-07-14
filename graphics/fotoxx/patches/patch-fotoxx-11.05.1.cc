@@ -1,41 +1,17 @@
-$NetBSD: patch-fotoxx-11.05.1.cc,v 1.2 2011/06/11 18:54:23 ryoon Exp $
+$NetBSD: patch-fotoxx-11.05.1.cc,v 1.3 2011/07/14 08:15:35 ryoon Exp $
 
---- fotoxx-11.06.1.cc.orig	2011-06-09 06:29:46.000000000 +0000
-+++ fotoxx-11.06.1.cc
-@@ -427,7 +427,7 @@ int gtkinitfunc(void *data)
+--- fotoxx-11.07.cc.orig	2011-07-01 17:05:59.000000000 +0000
++++ fotoxx-11.07.cc
+@@ -451,7 +451,7 @@ int gtkinitfunc(void *data)
  
- //  set up current file and directory from command line input or last session parameters        v.11.04
- 
--   ppv = get_current_dir_name();                                           //  save current directory
-+   ppv = getcwd((char *)0, 0);                                           //  save current directory
-    if (ppv) {
-       curr_dirk = strdupz(ppv,0,"curr_dirk");
-       free(ppv);
-@@ -436,6 +436,15 @@ int gtkinitfunc(void *data)
-    else curr_dirk = 0;
-    
-    if (last_file) {                                                        //  from command line or parameters
-+#ifdef __NetBSD__
-+	ppv = zmalloc(MAXPATHLEN+1, "last_file");
-+	if (ppv) {
-+	  if (realpath(last_file, ppv)) {
-+	    zfree(last_file);
-+	    last_file = ppv;
-+	  }
-+	}
-+#else
-       ppv = realpath(last_file,0);                                         //  prepend directory if needed
+    if (topdirk) curr_dirk = strdupz(topdirk,0,"curr_dirk");                //  use top directory if defined       v.11.07
+    else {
+-      ppv = get_current_dir_name();                                        //  or use current directory
++      ppv = getcwd((char *)0, 0);                                        //  or use current directory
        if (ppv) {
-          curr_file = strdupz(ppv,0,"curr_file");
-@@ -446,6 +455,7 @@ int gtkinitfunc(void *data)
-          zfree(last_file);
-          last_file = 0;
-       }
-+#endif
-    }
- 
-    if (curr_file) {
-@@ -1953,7 +1963,7 @@ void m_gallery(GtkWidget *, cchar *)
+          curr_dirk = strdupz(ppv,0,"curr_dirk");
+          free(ppv);
+@@ -2083,7 +2083,7 @@ void m_gallery(GtkWidget *, cchar *)
     if (curr_file)
        image_gallery(0,"paint1",curr_file_posn,m_gallery2,mWin);            //  overlay main window    v.10.9
     else {
