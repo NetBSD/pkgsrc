@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10432 2011/07/14 08:17:24 ryoon Exp $
+$NetBSD: TODO,v 1.10433 2011/07/14 08:31:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
-	o cdrtools-3.01a05
 	o celestia-1.6.0
 	o cfitsio-3.280
 	o cgdb-0.6.5
@@ -463,7 +462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cheese-3.0.1
 	o cherokee-1.2.1
 	o chromium-0.9.15
-	o chrony-1.25
+	o chrony-1.26
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -593,7 +592,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
-	o firefox-5.0
 	o fisg-0.3.12
 	o fixesproto-5.0
 	o flashplayer-0.4.13
@@ -693,7 +691,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-3.0.2
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.2.8.12
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.0.2
@@ -911,7 +908,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.1
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o libraw-0.13.6
 	o librep-0.92.0
 	o libssh-0.5.0 [www.libssh.org]
 	o libssh2-1.2.7
@@ -926,7 +922,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxkbfile-1.0.7
 	o libxklavier-5.1
 	o licq-1.3.8
-	o liferea-1.6.6
 	o lighttpd-1.4.29
 	o lincvs-2.1.4 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -935,7 +930,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lq-sp-1.3.4.13
 	o luit-1.1.0
 	o lwm-1.2.2
-	o lynx-2.8.8dev9
 	o lyx-2.0.0
 	o lzip-1.12
 	o maelstrom-sdl-3.0.6
@@ -994,6 +988,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o net-snmp-5.7
 	o netcdf-4.1.3
 	o netramet-50
+	o nettle-2.2
 	o newmail-1.0.2
 	o newt-0.52.12
 	o ng-1.4.4
@@ -1004,7 +999,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-16.12
+	o nut-16.13
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1169,6 +1164,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sarg-2.2.5
 	o sawfish-1.8.1
 	o saxon-9.2
+	o sbcl-1.0.50
 	o scapy-2.2.0
 	o scew-0.4.0
 	o scilab-5.3.1
@@ -1246,7 +1242,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tetrinetx-1.40c
 	o texmaker-3.0.2
 	o tfmxplay-1.1.6
-	o tgif-4.2.3
 	o thunderbird-5.0
 	o tightvnc-1.5.1
 	o tile-0.7.4
@@ -1293,7 +1288,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vbetool-1.1
 	o vcdimager-0.7.24
 	o vera-1.17
-	o veusz-1.12
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
