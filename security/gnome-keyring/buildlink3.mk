@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2011/04/22 13:41:55 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2011/07/14 14:53:42 drochner Exp $
 
 BUILDLINK_TREE+=	gnome-keyring
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.gnome-keyring?=	../../security/gnome-keyring
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../security/libtasn1/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .endif # GNOME_KEYRING_BUILDLINK3_MK
