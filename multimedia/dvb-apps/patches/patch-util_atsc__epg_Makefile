@@ -1,0 +1,17 @@
+$NetBSD: patch-util_atsc__epg_Makefile,v 1.1 2011/07/15 22:59:21 jmcneill Exp $
+
+--- util/atsc_epg/Makefile.orig	2011-06-28 05:50:24.000000000 +0000
++++ util/atsc_epg/Makefile
+@@ -4,10 +4,10 @@ binaries = atsc_epg
+ 
+ inst_bin = $(binaries)
+ 
+-CPPFLAGS += -I../../lib -std=c99 -D_POSIX_SOURCE
++CPPFLAGS += -I../../lib -std=c99 -D_POSIX_SOURCE -D_NETBSD_SOURCE
+ #LDFLAGS  += -static -L../../lib/libdvbapi -L../../lib/libucsi
+ LDFLAGS  += -L../../lib/libdvbapi -L../../lib/libucsi
+-LDLIBS   += -ldvbapi -lucsi
++LDLIBS   += -ldvbapi -lucsi -Wl,-R$(prefix)/lib
+ 
+ .PHONY: all
+ 
