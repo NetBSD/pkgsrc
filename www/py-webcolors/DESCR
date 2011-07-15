@@ -1,0 +1,13 @@
+Support is included for the following formats (RGB colorspace only;
+conversion to/from HSL can be handled by the ``colorsys`` module in
+the Python standard library):
+
+        * Specification-defined color names
+
+        * Six-digit hexadecimal
+
+        * Three-digit hexadecimal
+
+        * Integer rgb() triplet
+
+        * Percentage rgb() triplet

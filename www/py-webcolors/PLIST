@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/15 13:37:23 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/webcolors.py
+${PYSITELIB}/webcolors.pyc
+${PYSITELIB}/webcolors.pyo
