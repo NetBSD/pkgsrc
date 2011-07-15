@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2010/10/12 22:57:55 joerg Exp $
+# $NetBSD: Makefile,v 1.95 2011/07/15 08:47:22 asau Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		7
@@ -16,6 +16,8 @@ HOMEPAGE=		http://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection, version 2
 
 NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-* *-*-x86_64 DragonFly-*-*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake bison
 MAKEFLAGS+=		GMAKE_LOCALE=no
@@ -68,7 +70,6 @@ BUILD_TARGET=		bootstrap
 GCC_PREFIX=	${PREFIX}/${DISTNAME}
 GCC_VERSION=	${PKGVERSION:C|nb.*||}
 GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -99,22 +100,18 @@ post-build:
 #	make install; make deinstall; make install
 #
 post-install:
-	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
+	-cd ${DESTDIR}${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .else
 post-install:
 .  if exists(/usr/include/g++/FlexLexer.h)
 	${LN} -fs /usr/include/g++/FlexLexer.h				\
-		${GCC_PREFIX}/include/g++-3/FlexLexer.h
+		${DESTDIR}${GCC_PREFIX}/include/g++-3/FlexLexer.h
 .  endif
-	${RM} -f ${GCC_ARCHDIR}/include/curses.h ${GCC_PREFIX}/bin/cc
+	${RM} -f ${DESTDIR}${GCC_ARCHDIR}/include/curses.h ${DESTDIR}${GCC_PREFIX}/bin/cc
 .endif
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
-	${LN} -s gcc ${GCC_PREFIX}/bin/cc
-	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
-		>> ${PLIST_SRC}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${DISTNAME}
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${DESTDIR}${PREFIX}/share/examples/${DISTNAME}/mk.conf
+	${LN} -s gcc ${DESTDIR}${GCC_PREFIX}/bin/cc
 
 .include "../../mk/bsd.pkg.mk"
 
