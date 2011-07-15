@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1697 2011/07/15 12:24:39 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1698 2011/07/15 13:31:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2627,3 +2627,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/pngcrush to 1.7.16 [adam 2011-07-15]
 	Updated devel/glibmm to 2.28.2 [adam 2011-07-15]
 	Updated x11/gtkmm to 2.24.2 [adam 2011-07-15]
+	Updated graphics/py-imaging to 1.1.7nb3 [obache 2011-07-15]
