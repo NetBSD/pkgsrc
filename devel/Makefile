@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1470 2011/07/10 12:51:43 spz Exp $
+# $NetBSD: Makefile,v 1.1471 2011/07/15 13:35:56 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1196,6 +1196,7 @@ SUBDIR+=	py-darcsver
 SUBDIR+=	py-dulwich
 SUBDIR+=	py-expect
 SUBDIR+=	py-fann
+SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-game
 SUBDIR+=	py-generate
 SUBDIR+=	py-gobject
