@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/05/12 11:09:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/07/15 12:22:08 adam Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/appinfo.h
 include/giomm-2.4/giomm/asyncinitable.h
@@ -573,7 +573,6 @@ share/doc/glibmm-2.4/reference/html/classGio_1_1VolumeMonitor__inherit__graph.pn
 share/doc/glibmm-2.4/reference/html/classGio_1_1Volume__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ArrayHandle-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ArrayHandle.html
-share/doc/glibmm-2.4/reference/html/classGlib_1_1ArrayHandle_3_01bool_00_01Container__Helpers_1_1TypeTraits_3_01bool_01_4_01_4-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ArrayHandle_3_01bool_00_01Container__Helpers_1_1TypeTraits_3_01bool_01_4_01_4.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ArrayHandler-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ArrayHandler.html
@@ -963,6 +962,8 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring__Iterator-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring__Iterator.html
 share/doc/glibmm-2.4/reference/html/classes.html
+share/doc/glibmm-2.4/reference/html/classsigc_1_1trackable.html
+share/doc/glibmm-2.4/reference/html/classsigc_1_1trackable__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/closed.png
 share/doc/glibmm-2.4/reference/html/deprecated.html
 share/doc/glibmm-2.4/reference/html/doxygen.css
@@ -1269,13 +1270,9 @@ share/doc/glibmm-2.4/reference/html/since_2_28.html
 share/doc/glibmm-2.4/reference/html/since_2_6.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits.html
-share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Drive_01_4_01_4-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Drive_01_4_01_4.html
-share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1File_01_4_01_4-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1File_01_4_01_4.html
-share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Mount_01_4_01_4-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Mount_01_4_01_4.html
-share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Volume_01_4_01_4-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Volume_01_4_01_4.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1StaticMutex-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1StaticMutex.html
