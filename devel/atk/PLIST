@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2010/10/16 23:59:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2011/07/15 13:08:15 abs Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -53,21 +53,30 @@ share/gtk-doc/html/atk/AtkTable.html
 share/gtk-doc/html/atk/AtkText.html
 share/gtk-doc/html/atk/AtkUtil.html
 share/gtk-doc/html/atk/AtkValue.html
+share/gtk-doc/html/atk/api-index-1-12.html
+share/gtk-doc/html/atk/api-index-1-13.html
+share/gtk-doc/html/atk/api-index-1-18.html
+share/gtk-doc/html/atk/api-index-1-20.html
+share/gtk-doc/html/atk/api-index-1-22.html
+share/gtk-doc/html/atk/api-index-1-24.html
+share/gtk-doc/html/atk/api-index-1-26.html
+share/gtk-doc/html/atk/api-index-1-28.html
+share/gtk-doc/html/atk/api-index-1-3.html
+share/gtk-doc/html/atk/api-index-1-30.html
+share/gtk-doc/html/atk/api-index-1-32.html
+share/gtk-doc/html/atk/api-index-1-4.html
+share/gtk-doc/html/atk/api-index-1-6.html
+share/gtk-doc/html/atk/api-index-deprecated.html
+share/gtk-doc/html/atk/api-index-full.html
 share/gtk-doc/html/atk/atk-AtkHyperlinkImpl.html
+share/gtk-doc/html/atk/atk-AtkPlug.html
+share/gtk-doc/html/atk/atk-AtkSocket.html
 share/gtk-doc/html/atk/atk-AtkState.html
-share/gtk-doc/html/atk/atk.devhelp
 share/gtk-doc/html/atk/atk.devhelp2
 share/gtk-doc/html/atk/atk.html
 share/gtk-doc/html/atk/home.png
 share/gtk-doc/html/atk/index.html
 share/gtk-doc/html/atk/index.sgml
-share/gtk-doc/html/atk/ix01.html
-share/gtk-doc/html/atk/ix02.html
-share/gtk-doc/html/atk/ix03.html
-share/gtk-doc/html/atk/ix04.html
-share/gtk-doc/html/atk/ix05.html
-share/gtk-doc/html/atk/ix06.html
-share/gtk-doc/html/atk/ix07.html
 share/gtk-doc/html/atk/left.png
 share/gtk-doc/html/atk/right.png
 share/gtk-doc/html/atk/style.css
@@ -165,3 +174,4 @@ share/locale/yi/LC_MESSAGES/atk10.mo
 share/locale/zh_CN/LC_MESSAGES/atk10.mo
 share/locale/zh_HK/LC_MESSAGES/atk10.mo
 share/locale/zh_TW/LC_MESSAGES/atk10.mo
+share/locale/zu/LC_MESSAGES/atk10.mo
