@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2011/07/15 13:04:56 abs Exp $
+# $NetBSD: Makefile,v 1.76 2011/07/15 13:38:04 ryoon Exp $
 #
 
 DISTNAME=		atk-2.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://developer.gnome.org/projects/gap/
+HOMEPAGE=		http://developer.gnome.org/atk/
 COMMENT=		Set of interfaces for accessibility
 LICENSE=		gnu-lgpl-v2
 
