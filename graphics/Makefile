@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.604 2011/06/19 07:29:48 taca Exp $
+# $NetBSD: Makefile,v 1.605 2011/07/15 13:56:09 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -342,6 +342,7 @@ SUBDIR+=	pstoedit
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-aafigure
 SUBDIR+=	py-biggles
+SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
 SUBDIR+=	py-clutter
 SUBDIR+=	py-clutter-gtk
