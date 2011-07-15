@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.30 2008/09/11 23:00:31 adrianp Exp $
+# $NetBSD: tools.SunOS.mk,v 1.31 2011/07/15 15:33:15 hans Exp $
 #
 # System-supplied tools for the Solaris operating system.
 #
@@ -97,7 +97,7 @@ TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
 TOOLS_PLATFORM.sh?=		/bin/ksh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 .if exists(/usr/bin/soelim)
-TOOLS_PLATFORM.tbl?=		/usr/bin/soelim
+TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 .endif
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/ccs/bin/strip
