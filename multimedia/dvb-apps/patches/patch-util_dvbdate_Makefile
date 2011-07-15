@@ -1,0 +1,13 @@
+$NetBSD: patch-util_dvbdate_Makefile,v 1.1 2011/07/15 22:59:21 jmcneill Exp $
+
+--- util/dvbdate/Makefile.orig	2011-06-28 05:50:24.000000000 +0000
++++ util/dvbdate/Makefile
+@@ -6,7 +6,7 @@ inst_bin = $(binaries)
+ 
+ CPPFLAGS += -I../../lib
+ LDFLAGS  += -L../../lib/libdvbapi -L../../lib/libucsi
+-LDLIBS   += -ldvbapi -lucsi
++LDLIBS   += -ldvbapi -lucsi -Wl,-R$(prefix)/lib
+ 
+ .PHONY: all
+ 
