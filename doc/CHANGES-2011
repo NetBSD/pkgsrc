@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1694 2011/07/15 02:42:55 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1695 2011/07/15 08:08:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2623,3 +2623,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-verbasef version 1.1 [minskim 2011-07-14]
 	Added print/tex-verbasef-doc version 1.1 [minskim 2011-07-14]
 	Updated print/diffpdf to 1.2.2 [ryoon 2011-07-15]
+	Updated devel/atk to 2.0.1 [ryoon 2011-07-15]
