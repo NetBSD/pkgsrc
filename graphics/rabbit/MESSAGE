@@ -1,13 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2011/07/11 09:37:50 obache Exp $
+$NetBSD: MESSAGE,v 1.6 2011/07/15 14:28:07 obache Exp $
 You can install the following packages for feature improvement.
 	www/mimetex:			for writing TeX in RD
 	textproc/ruby-rttool:		for writing RT in RD.
 	print/ghostscript:		for reading EPS
 	devel/ruby-gettext:		for displaying localized messages
-	print/enscript and textproc/ruby-htree:
-					source code hilight
 	graphics/py-aafigure		for writing ASCII art
+	graphics/py-blockdiag		for writing Block Diagram
 	chat/ruby-net-irc		for using rabbirc tool
 	www/ruby-div			for using rabrick tool
+	net/ruby-twitter-stream and security/ruby-twitter_oauth:
+					for using rabbiter and twitter comment
 ===========================================================================
