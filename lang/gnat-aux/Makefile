@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/10 13:46:22 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/15 19:59:40 drochner Exp $
 #
 
 DISTNAME=	gnat-aux-${SNAPSHOT}
@@ -159,7 +159,7 @@ CONFIGURE_ARGS+=	--disable-nls
 # Automatic package list generation
 # lib/libquadmath.* will have to be added if __float128 support is added
 # Alternatively, libquadmath support could be intentionally disabled.
-GENERATE_PLIST=  cd ${PREFIX};
+GENERATE_PLIST=  cd ${DESTDIR}${PREFIX};
 GENERATE_PLIST+= ${FIND} bin/gnat* | ${SORT};
 GENERATE_PLIST+= ${FIND} bin/${BLD_TARGET}* | ${SORT};
 GENERATE_PLIST+= ${FIND} lib/libiberty.a;
@@ -243,7 +243,8 @@ do-test: build
 
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install-strip
+	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install-strip \
+	DESTDIR=${DESTDIR}
 
 
 
