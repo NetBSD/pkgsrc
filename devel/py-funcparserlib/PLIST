@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/15 13:34:02 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/funcparserlib/__init__.py
+${PYSITELIB}/funcparserlib/__init__.pyc
+${PYSITELIB}/funcparserlib/__init__.pyo
+${PYSITELIB}/funcparserlib/lexer.py
+${PYSITELIB}/funcparserlib/lexer.pyc
+${PYSITELIB}/funcparserlib/lexer.pyo
+${PYSITELIB}/funcparserlib/parser.py
+${PYSITELIB}/funcparserlib/parser.pyc
+${PYSITELIB}/funcparserlib/parser.pyo
+${PYSITELIB}/funcparserlib/util.py
+${PYSITELIB}/funcparserlib/util.pyc
+${PYSITELIB}/funcparserlib/util.pyo
