@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/07/05 08:42:56 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/07/16 21:35:11 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -348,13 +348,13 @@ libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
 libdata/asterisk/phoneprov/snom-mac.xml
-libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.20
+libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.21
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.20
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.21
 libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.11
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.20
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.20
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.21
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.21
 libdata/asterisk/sounds/en/T-changed-to.gsm
 libdata/asterisk/sounds/en/T-is-not-available.gsm
 libdata/asterisk/sounds/en/T-to-disable-ancmnt.gsm
@@ -595,6 +595,8 @@ libdata/asterisk/sounds/en/conf-userswilljoin.gsm
 libdata/asterisk/sounds/en/conf-userwilljoin.gsm
 libdata/asterisk/sounds/en/conf-waitforleader.gsm
 libdata/asterisk/sounds/en/conf-youareinconfnum.gsm
+libdata/asterisk/sounds/en/confbridge-join.gsm
+libdata/asterisk/sounds/en/confbridge-leave.gsm
 libdata/asterisk/sounds/en/conference-call.gsm
 libdata/asterisk/sounds/en/conference-reservations.gsm
 libdata/asterisk/sounds/en/conference.gsm
@@ -2237,6 +2239,7 @@ share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
+@pkgdir libdata/asterisk/sounds/ru
 @pkgdir libdata/asterisk/sounds/fr
 @pkgdir libdata/asterisk/sounds/es
 @pkgdir libdata/asterisk/sounds/en_AU

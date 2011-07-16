@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/02/06 08:30:17 jnemeth Exp $
+# $NetBSD: options.mk,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -18,16 +18,16 @@ PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
 #MAKE_FLAGS+=		WITHOUT_ZAPTEL=1
 #.endif
 
-# gtkconsole depends on GTK 1.x
+# gtkconsole depends on GTK 2.x
 .if !empty(PKG_OPTIONS:Mx11)
-.  include "../../x11/gtk/buildlink3.mk"
+.  include "../../x11/gtk2/buildlink3.mk"
 .  include "../../devel/SDL/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sdl
-CONFIGURE_ARGS+=	--with-gtk
+CONFIGURE_ARGS+=	--with-gtk2
 PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--without-sdl
-CONFIGURE_ARGS+=	--without-gtk
+CONFIGURE_ARGS+=	--without-gtk2
 .endif
 
 .if !empty(PKG_OPTIONS:Munixodbc)
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--with-unixodbc
 PLIST.unixodbc=		yes
 .else
 CONFIGURE_ARGS+=	--without-ltdl
-CONFIGURE_ARGS+=	--without-odbc
+CONFIGURE_ARGS+=	--without-unixodbc
 .endif
 
 .if !empty(PKG_OPTIONS:Milbc)
