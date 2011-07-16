@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/03/22 17:07:32 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2011/07/16 17:32:00 minskim Exp $
 
 DISTNAME=	koma-script
-PKGNAME=	tex-${DISTNAME}-3.08a
-TEXLIVE_REV=	21554
+PKGNAME=	tex-${DISTNAME}-3.09
+TEXLIVE_REV=	21983
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Bundle of versatile classes and packages

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/02/02 18:13:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/07/16 17:32:00 minskim Exp $
 share/texmf-dist/doc/latex/koma-script/INSTALL.txt
 share/texmf-dist/doc/latex/koma-script/INSTALLD.txt
 share/texmf-dist/doc/latex/koma-script/README
@@ -185,6 +185,7 @@ share/texmf-dist/tex/latex/koma-script/scrbook.cls
 share/texmf-dist/tex/latex/koma-script/scrdate.sty
 share/texmf-dist/tex/latex/koma-script/scrdoc.cls
 share/texmf-dist/tex/latex/koma-script/scrextend.sty
+share/texmf-dist/tex/latex/koma-script/scrfontsizes.sty
 share/texmf-dist/tex/latex/koma-script/scrhack.sty
 share/texmf-dist/tex/latex/koma-script/scrjura.sty
 share/texmf-dist/tex/latex/koma-script/scrkbase.sty
