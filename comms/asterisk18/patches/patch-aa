@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
+$NetBSD: patch-aa,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
 
---- Makefile.orig	2011-02-01 18:02:06.000000000 +0000
+--- Makefile.orig	2011-06-16 15:58:22.000000000 +0000
 +++ Makefile
 @@ -126,7 +126,7 @@ DEBUG=-g3
  
@@ -48,18 +48,16 @@ $NetBSD: patch-aa,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
  	$(INSTALL) -d "$(DESTDIR)$(ASTVARRUNDIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/dictate"
-@@ -544,8 +539,9 @@ installdirs:
- 	$(INSTALL) -d "$(DESTDIR)$(ASTDATADIR)/static-http"
- 	$(INSTALL) -d "$(DESTDIR)$(ASTMANDIR)/man8"
+@@ -545,7 +540,7 @@ installdirs:
  	$(INSTALL) -d "$(DESTDIR)$(AGI_DIR)"
-+	$(INSTALL) -d "$(DESTDIR)$(ASTDBDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTDBDIR)"
  
 -bininstall: _all installdirs $(SUBDIRS_INSTALL)
 +bininstall: installdirs $(SUBDIRS_INSTALL)
  	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
  	$(LN) -sf asterisk $(DESTDIR)$(ASTSBINDIR)/rasterisk
  	$(INSTALL) -m 755 contrib/scripts/astgenkey $(DESTDIR)$(ASTSBINDIR)/
-@@ -637,21 +633,21 @@ upgrade: bininstall
+@@ -637,21 +632,21 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
@@ -85,7 +83,7 @@ $NetBSD: patch-aa,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
  		if [ -f $${dst} ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s $${dst} $$x ; then \
-@@ -679,9 +675,9 @@ samples: adsi
+@@ -679,9 +674,9 @@ samples: adsi
  			-e 's|^astspooldir.*$$|astspooldir => $(ASTSPOOLDIR)|' \
  			-e 's|^astrundir.*$$|astrundir => $(ASTVARRUNDIR)|' \
  			-e 's|^astlogdir.*$$|astlogdir => $(ASTLOGDIR)|' \
@@ -98,7 +96,7 @@ $NetBSD: patch-aa,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
  	fi ; \
  	$(INSTALL) -d $(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/INBOX
  	build_tools/make_sample_voicemail "$(DESTDIR)$(ASTDATADIR)" "$(DESTDIR)$(ASTSPOOLDIR)"
-@@ -707,7 +703,7 @@ samples: adsi
+@@ -707,7 +702,7 @@ samples: adsi
  webvmail:
  	@[ -d $(DESTDIR)$(HTTP_DOCSDIR)/ ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
  	@[ -d $(DESTDIR)$(HTTP_CGIDIR) ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
@@ -107,7 +105,7 @@ $NetBSD: patch-aa,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
  	$(INSTALL) -d $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk
  	for x in images/*.gif; do \
  		$(INSTALL) -m 644 $$x "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/"; \
-@@ -860,7 +856,7 @@ uninstall-all: _uninstall
+@@ -860,7 +855,7 @@ uninstall-all: _uninstall
  	rm -rf "$(DESTDIR)$(ASTVARLIBDIR)"
  	rm -rf "$(DESTDIR)$(ASTDATADIR)"
  	rm -rf "$(DESTDIR)$(ASTSPOOLDIR)"
@@ -116,7 +114,7 @@ $NetBSD: patch-aa,v 1.2 2011/06/09 09:17:27 jnemeth Exp $
  	rm -rf "$(DESTDIR)$(ASTLOGDIR)"
  
  menuconfig: menuselect
-@@ -929,6 +925,7 @@ menuselect-tree: $(foreach dir,$(filter-
+@@ -929,6 +924,7 @@ menuselect-tree: $(foreach dir,$(filter-
  	@echo "</menu>" >> $@
  
  .PHONY: menuselect
