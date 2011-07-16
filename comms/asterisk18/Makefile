@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2011/07/05 08:42:56 jnemeth Exp $
+# $NetBSD: Makefile,v 1.11 2011/07/16 21:35:11 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-1.8.4.4
+DISTNAME=	asterisk-1.8.5.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -123,6 +123,7 @@ OWN_DIRS_PERMS+=	${ASTSPOOLDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR}/dictate ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR}/meetme ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR}/monitor ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
+OWN_DIRS_PERMS+=	${ASTSPOOLDIR}/outgoing ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR}/system ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR}/tmp ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR}/voicemail ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
@@ -179,7 +180,7 @@ post-patch:
 
 post-install:
 # check sounds directory for current versions when upgrading package
-	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.20.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.21.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
 	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
