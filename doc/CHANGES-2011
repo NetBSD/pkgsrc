@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1705 2011/07/16 17:32:28 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1706 2011/07/16 21:35:22 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2635,3 +2635,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-adobemapping to 2010.21940 [minskim 2011-07-15]
 	Updated www/ikiwiki to 3.20110715 [schmonz 2011-07-16]
 	Updated print/tex-koma-script to 3.09 [minskim 2011-07-16]
+	Updated comms/asterisk18 to 1.8.5.0 [root 2011-07-16]
