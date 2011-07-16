@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1704 2011/07/16 02:52:49 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.1705 2011/07/16 17:32:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2634,3 +2634,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/rabbit to 1.0.2 [obache 2011-07-15]
 	Updated fonts/tex-adobemapping to 2010.21940 [minskim 2011-07-15]
 	Updated www/ikiwiki to 3.20110715 [schmonz 2011-07-16]
+	Updated print/tex-koma-script to 3.09 [minskim 2011-07-16]
