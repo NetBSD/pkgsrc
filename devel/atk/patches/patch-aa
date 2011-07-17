@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.6 2011/07/17 12:04:27 tron Exp $
+
+Work around shared library version problems which cause a version number
+downgrade that e.g. break Mac OS X. Details are available here:
+
+https://bugzilla.gnome.org/show_bug.cgi?id=654767
+
+--- configure.orig	2011-06-13 17:34:43.000000000 +0100
++++ configure	2011-07-17 12:57:10.000000000 +0100
+@@ -2971,7 +2971,7 @@
+ 
+ 
+ 
+-LT_VERSION_INFO=10:1:10
++LT_VERSION_INFO=3210:1:3210
+ LT_CURRENT_MINUS_AGE=0
+ 
+ 
