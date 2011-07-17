@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1 2011/07/17 12:49:17 mrg Exp $
+
+--- src/cpus/memory_sh.cc.orig	2010-02-14 01:33:54.000000000 -0800
++++ src/cpus/memory_sh.cc	2011-07-15 01:12:18.000000000 -0700
+@@ -273,15 +273,17 @@
+ 	}
+ 
+ 	if (user) {
++		int expevt;
++		int wf = flags & FLAG_WRITEFLAG;
++
+ 		if (flags & FLAG_NOEXCEPTIONS) {
+ 			*return_paddr = 0;
+ 			return 2;
+ 		}
+ 
+-		fatal("Userspace tried to access non-user space memory."
+-		    " TODO: cause exception! (vaddr=0x%08"PRIx32"\n",
+-		    (uint32_t) vaddr);
+-		exit(1);
++		expevt = wf? EXPEVT_TLB_PROT_ST : EXPEVT_TLB_PROT_LD;
++		sh_exception(cpu, expevt, 0, (uint32_t)vaddr);
++		return 0;
+ 	}
+ 
+ 	/*  P1,P2: Direct-mapped physical memory.  */

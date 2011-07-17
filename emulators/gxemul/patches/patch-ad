@@ -1,0 +1,40 @@
+$NetBSD: patch-ad,v 1.1 2011/07/17 12:49:17 mrg Exp $
+
+patch to fix big-endian mips support from matt@netbsd.org
+
+
+diff -rup src/cpus/cpu_mips_coproc.cc src/cpus/cpu_mips_coproc.cc
+--- src/cpus/cpu_mips_coproc.cc	2009-06-21 09:03:48.000000000 -0700
++++ src/cpus/cpu_mips_coproc.cc	2009-11-12 12:22:12.000000000 -0800
+@@ -1987,6 +1987,13 @@ void coproc_function(struct cpu *cpu, st
+ 
+ 	if (cpnr < 2 && (((function & 0x03e007f8) == (COPz_MTCz << 21))
+ 	              || ((function & 0x03e007f8) == (COPz_DMTCz << 21)))) {
++		tmpvalue = cpu->cd.mips.gpr[rt];
++		if (copz == COPz_MTCz) {
++			/*  Sign-extend:  */
++			tmpvalue &= 0xffffffffULL;
++			if (tmpvalue & 0x80000000ULL)
++				tmpvalue |= 0xffffffff00000000ULL;
++		}
+ 		if (unassemble_only) {
+ 			debug("%s%i\t%s,", copz==COPz_DMTCz? "dmtc" : "mtc",
+ 			    cpnr, regnames[rt]);
+@@ -1996,16 +2003,10 @@ void coproc_function(struct cpu *cpu, st
+ 				debug("r%i", rd);
+ 			if (function & 7)
+ 				debug(",%i", (int)(function & 7));
++			debug(" [%016llx]", (long long)tmpvalue);
+ 			debug("\n");
+ 			return;
+ 		}
+-		tmpvalue = cpu->cd.mips.gpr[rt];
+-		if (copz == COPz_MTCz) {
+-			/*  Sign-extend:  */
+-			tmpvalue &= 0xffffffffULL;
+-			if (tmpvalue & 0x80000000ULL)
+-				tmpvalue |= 0xffffffff00000000ULL;
+-		}
+ 		coproc_register_write(cpu, cpu->cd.mips.coproc[cpnr], rd,
+ 		    &tmpvalue, copz == COPz_DMTCz, function & 7);
+ 		return;
