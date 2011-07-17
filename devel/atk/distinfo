@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.38 2011/07/15 08:07:03 ryoon Exp $
+$NetBSD: distinfo,v 1.39 2011/07/17 12:04:26 tron Exp $
 
 SHA1 (atk-2.0.1.tar.bz2) = f830ff27590e4dd486ebe6538e2b03484faee10a
 RMD160 (atk-2.0.1.tar.bz2) = 8161a41614bcd13d82b90ae654b24437a165d2c9
 Size (atk-2.0.1.tar.bz2) = 734314 bytes
+SHA1 (patch-aa) = fbbcde090aae72ef996bfeee87b9d2075059cdd0
