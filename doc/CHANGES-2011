@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1708 2011/07/17 12:04:39 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1709 2011/07/17 12:31:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2638,3 +2638,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/asterisk18 to 1.8.5.0 [root 2011-07-16]
 	Updated devel/roundup to 1.4.19 [dholland 2011-07-17]
 	Updated devel/atk to 2.0.1nb1 [tron 2011-07-17]
+	Updated net/mikutter to 0.0.3.12 [obache 2011-07-17]
