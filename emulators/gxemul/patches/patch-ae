@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.1 2011/07/17 12:49:17 mrg Exp $
+
+patch to enable big-endian mips support from matt@netbsd.org
+
+
+diff -rup src/devices/dev_gt.cc src/devices/dev_gt.cc
+--- src/devices/dev_gt.cc	2009-06-21 09:03:48.000000000 -0700
++++ src/devices/dev_gt.cc	2009-11-12 11:55:32.000000000 -0800
+@@ -172,19 +172,23 @@ DEVICE_ACCESS(gt)
+ 		break;
+ 
+ 	case GT_PCI0_CFG_ADDR:
++#if 0
+ 		if (cpu->byte_order != EMUL_LITTLE_ENDIAN) {
+ 			fatal("[ gt: TODO: big endian PCI access ]\n");
+ 			exit(1);
+ 		}
++#endif
+ 		bus_pci_decompose_1(idata, &bus, &dev, &func, &reg);
+ 		bus_pci_setaddr(cpu, d->pci_data, bus, dev, func, reg);
+ 		break;
+ 
+ 	case GT_PCI0_CFG_DATA:
++#if 0
+ 		if (cpu->byte_order != EMUL_LITTLE_ENDIAN) {
+ 			fatal("[ gt: TODO: big endian PCI access ]\n");
+ 			exit(1);
+ 		}
++#endif
+ 		bus_pci_data_access(cpu, d->pci_data, writeflag == MEM_READ?
+ 		    &odata : &idata, len, writeflag);
+ 		break;
