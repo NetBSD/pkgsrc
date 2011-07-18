@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/31 02:57:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/07/18 16:10:32 gson Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -20,6 +20,9 @@ ${PYSITELIB}/dns/exception.pyo
 ${PYSITELIB}/dns/flags.py
 ${PYSITELIB}/dns/flags.pyc
 ${PYSITELIB}/dns/flags.pyo
+${PYSITELIB}/dns/hash.py
+${PYSITELIB}/dns/hash.pyc
+${PYSITELIB}/dns/hash.pyo
 ${PYSITELIB}/dns/inet.py
 ${PYSITELIB}/dns/inet.pyc
 ${PYSITELIB}/dns/inet.pyo
