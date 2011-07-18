@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2010/10/16 10:45:31 gson Exp $
+$NetBSD: distinfo,v 1.11 2011/07/18 16:10:32 gson Exp $
 
-SHA1 (dnspython-1.8.0.tar.gz) = 71f9a1b4243fca7a4cbda064665d15fc4c28f91e
-RMD160 (dnspython-1.8.0.tar.gz) = d7ab6f336a2c677544d1706d1d32e67afaad9405
-Size (dnspython-1.8.0.tar.gz) = 108588 bytes
+SHA1 (dnspython-1.9.4.tar.gz) = 41d00d0f81bc9aba02c5c62e1d4a8ee57810410e
+RMD160 (dnspython-1.9.4.tar.gz) = 0ec0bb554208b215e8f70b7ebc41414387d6a178
+Size (dnspython-1.9.4.tar.gz) = 120126 bytes
