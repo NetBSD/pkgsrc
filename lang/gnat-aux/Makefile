@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/07/15 19:59:40 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/18 09:27:25 drochner Exp $
 #
 
 DISTNAME=	gnat-aux-${SNAPSHOT}
@@ -12,9 +12,9 @@ HOMEPAGE=	http://www.dragonlace.net/
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-SNAPSHOT=	20110325
+SNAPSHOT=	20110627
 GCC_BRANCH=	4.6
-GCC_POINT=	0
+GCC_POINT=	1
 LANGS=		c
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -42,6 +42,8 @@ INTENDED_COMPILER=	NATIVE
 BOOTSTRAP_TRIPLET=      NOT SET
 FULL_GNATGCC=		NOT SET
 FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
+OLD_EH=			register_frame
+REBUILD_LIB=		Rebuild the following library first:
 
 
 .if ${OPSYS} == "DragonFly"
@@ -54,6 +56,7 @@ FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin
    BOOTSTRAP_TRIPLET=	x86_64-bootstrap-dragonfly2.8/4.6.0
 .endif
 BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.dragonfly.tar.bz2
+LINK_HEADER=		/usr/include/sys/link_elf.h
 .endif
 
 
@@ -74,6 +77,7 @@ BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.dragonfly.tar.bz2
    BLD_TARGET=		${MACHINE_ARCH}-aux-netbsd${NSUFF}
 .endif
 BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.netbsd.tar.bz2
+LINK_HEADER=		/usr/include/link_elf.h
 .endif
 
 
@@ -94,6 +98,7 @@ SMAN7=			share/man/man7
 LPATH=			lib/gcc/${BLD_TARGET}/${GCC_BRANCH}.${GCC_POINT}
 LEPATH=			libexec/gcc/${BLD_TARGET}/${GCC_BRANCH}.${GCC_POINT}
 REVFILE= 		${GCC_WRKSRC}/gcc/REVISION
+BASELIB=		${LOCALBASE}/lib
 
 
 
@@ -131,7 +136,6 @@ FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:$
 MY_CONFIGURE_ENV=	CC=${FULL_GNATGCC}
 MY_CONFIGURE_ENV+=	PATH=${FULL_PATH}
 MY_CONFIGURE_ENV+=	CONFIG_SHELL=${CONFIG_SHELL}
-MY_CONFIGURE_ENV+=	MAKEINFO=/usr/bin/false
 MY_MAKE_ENV=		PATH=${FULL_PATH}
 MY_MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/gcc
 
@@ -142,9 +146,9 @@ CONFIGURE_ARGS+=	--build=${BLD_TARGET}
 CONFIGURE_ARGS+=	--program-prefix=gnat
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--with-gmp=${PKG_PREFIX}
-CONFIGURE_ARGS+=	--with-mpfr=${PKG_PREFIX}
-CONFIGURE_ARGS+=	--with-mpc=${PKG_PREFIX}
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
+CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
+CONFIGURE_ARGS+=	--with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${PKG_PREFIX}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-threads=${THREAD_MODEL}
@@ -201,6 +205,35 @@ post-extract:
 .endif
 .endif
 
+
+pre-configure:
+# NetBSD's system compiler is not configured to use dl_iterate_phdr which is
+# required to build shared libraries if gnat-aux handles exceptions via
+# dl_iterate_phdr.  Therefore this functionality is disabled for NetBSD until
+# further notice.  DragonFly introduced this functionality with 2.11, but it's
+# possible the shared libraries were built with an earlier compiler in the
+# case of an upgrade.  We need to detect this situation and stop the build
+# if the libraries need to be rebuilt.
+.if ${OPSYS} == "DragonFly"
+	@if ${GREP} dl_iterate_phdr ${LINK_HEADER} > /dev/null; then \
+	  if ${GREP} ${OLD_EH} ${BASELIB}/libmpc.so > /dev/null; then \
+	    ${ERROR_MSG} "${REBUILD_LIB} math/mpcomplex"; \
+	    exit 101; \
+	  fi; \
+	  if ${GREP} ${OLD_EH} ${BASELIB}/libmpfr.so > /dev/null; then \
+	    ${ERROR_MSG} "${REBUILD_LIB} math/mpfr"; \
+	    exit 102; \
+	  fi; \
+	  if ${GREP} ${OLD_EH} ${BASELIB}/libgmp.so > /dev/null; then \
+	    ${ERROR_MSG} "${REBUILD_LIB} devel/gmp"; \
+	    exit 103; \
+	  fi; \
+	  if ${GREP} ${OLD_EH} ${BASELIB}/libiconv.so > /dev/null; then \
+	    ${ERROR_MSG} "${REBUILD_LIB} converters/libiconv"; \
+	    exit 104; \
+	  fi; \
+	fi
+.endif
 
 
 do-configure:
