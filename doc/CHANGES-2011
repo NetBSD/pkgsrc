@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1710 2011/07/18 06:10:15 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.1711 2011/07/18 16:12:36 gson Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2639,3 +2639,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/roundup to 1.4.19 [dholland 2011-07-17]
 	Updated devel/atk to 2.0.1nb1 [tron 2011-07-17]
 	Updated net/mikutter to 0.0.3.12 [obache 2011-07-17]
+	Updated net/py-dns to 1.9.4 [gson 2011-07-18]
