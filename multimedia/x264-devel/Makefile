@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2011/01/19 20:40:06 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2011/07/18 21:00:11 drochner Exp $
 
-SNAPSHOT_DATE=		20110101
+SNAPSHOT_DATE=		20110707
 
 DISTNAME=		x264-snapshot-${SNAPSHOT_DATE}-2245
 PKGNAME=		x264-devel-${SNAPSHOT_DATE}
-PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		ftp://ftp.videolan.org/pub/videolan/x264/snapshots/
 EXTRACT_SUFX=		.tar.bz2
@@ -56,6 +55,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 MAKE_ENV+=		SH=${SH:Q}
 
 BUILD_TARGET=		default
+INSTALL_TARGET=		install-lib-static
 BUILDLINK_TRANSFORM+=	rm:-O4	# XXX does this mean anything to any compiler?
 REPLACE_SH=		strip_fopt.sh version.sh
 

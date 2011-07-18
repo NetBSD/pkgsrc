@@ -1,13 +1,13 @@
-$NetBSD: patch-ba,v 1.2 2011/01/17 16:46:42 drochner Exp $
+$NetBSD: patch-ba,v 1.3 2011/07/18 21:00:12 drochner Exp $
 
---- encoder/analyse.c~	2011-01-09 17:35:15.000000000 +0900
-+++ encoder/analyse.c	2011-01-09 17:46:47.000000000 +0900
-@@ -252,7 +252,7 @@
-     for( int i = 0; i <= 2*4*2048; i++ )
-     {
-         h->cost_mv[lambda][-i] =
--        h->cost_mv[lambda][i]  = lambda * (log2f(i+1)*2 + 0.718f + !!i) + .5f;
-+        h->cost_mv[lambda][i]  = lambda * (logf(i+1)*2.88539f + 0.718f + !!i) + .5f;
-     }
-     x264_pthread_mutex_lock( &cost_ref_mutex );
-     for( int i = 0; i < 3; i++ )
+--- encoder/analyse.c.orig	2011-07-07 20:45:05.000000000 +0000
++++ encoder/analyse.c
+@@ -283,7 +283,7 @@ float *x264_analyse_prepare_costs( x264_
+         return NULL;
+     logs[0] = 0.718f;
+     for( int i = 1; i <= 2*4*2048; i++ )
+-        logs[i] = log2f(i+1)*2 + 1.718f;
++        logs[i] = logf(i+1)*2.88539f + 1.718f;
+     return logs;
+ }
+ 

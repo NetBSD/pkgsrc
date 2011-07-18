@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2011/01/17 16:46:42 drochner Exp $
+$NetBSD: patch-aa,v 1.12 2011/07/18 21:00:11 drochner Exp $
 
---- configure.orig	2011-01-02 06:45:05.000000000 +0900
-+++ configure	2011-01-09 21:33:08.000000000 +0900
-@@ -306,6 +306,10 @@
+--- configure.orig	2011-07-07 20:45:05.000000000 +0000
++++ configure
+@@ -403,6 +403,10 @@ case $host_os in
          SYS="FREEBSD"
          LDFLAGS="$LDFLAGS -lm"
          ;;
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.11 2011/01/17 16:46:42 drochner Exp $
      kfreebsd*-gnu)
          SYS="FREEBSD"
          define HAVE_MALLOC_H
-@@ -369,7 +373,7 @@
+@@ -487,7 +491,7 @@ case $host_cpu in
              ASFLAGS="$ASFLAGS -f elf"
          fi
          ;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.11 2011/01/17 16:46:42 drochner Exp $
          ARCH="X86_64"
          AS="yasm"
          if [ "$SYS" = MACOSX ]; then
-@@ -386,13 +390,14 @@
+@@ -505,13 +509,14 @@ case $host_cpu in
          fi
          ;;
      powerpc|powerpc64)
@@ -38,17 +38,17 @@ $NetBSD: patch-aa,v 1.11 2011/01/17 16:46:42 drochner Exp $
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
-@@ -522,7 +527,7 @@
+@@ -648,7 +653,7 @@ fi
  # pthread-win32 is lgpl, prevent its use if --disable-gpl is specified and targeting windows
- [ "$SYS" = "MINGW" -a "$gpl" = "no" -a "$thread" = "auto" ] && thread="win32"
+ [ "$SYS" = "WINDOWS" -a "$gpl" = "no" -a "$thread" = "auto" ] && thread="win32"
  
 -libpthread=""
 +libpthread="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
  if [ "$thread" = "auto" ]; then
      thread="no"
      case $SYS in
-@@ -712,7 +717,8 @@
- fi
+@@ -835,7 +840,8 @@ fi
+ cc_check "stdint.h" "" "uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3};" && define HAVE_VECTOREXT
  
  if [ "$pic" = "yes" ] ; then
 -    CFLAGS="$CFLAGS -fPIC"
