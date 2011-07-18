@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/11/02 21:14:23 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/18 19:18:09 drochner Exp $
 #
 
 DISTNAME=	boxbackup-0.10
@@ -13,6 +13,9 @@ HOMEPAGE=	http://www.boxbackup.org/
 COMMENT=	Backup tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PATCHDIR=	${.CURDIR}/../../sysutils/boxbackup-client/patches
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/boxbackup-client/distinfo
 
 MAKE_JOBS_SAFE=	no
 
