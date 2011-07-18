@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.9 2011/07/12 16:30:28 drochner Exp $
+$NetBSD: patch-ac,v 1.10 2011/07/18 09:54:27 drochner Exp $
 
-SA45167
+CVE-2011-0226
 
 --- src/psaux/t1decode.c.orig	2010-11-23 18:28:53.000000000 +0000
 +++ src/psaux/t1decode.c
