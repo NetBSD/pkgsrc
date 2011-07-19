@@ -1,0 +1,14 @@
+$NetBSD: patch-randtest_cpp,v 1.1 2011/07/19 04:24:19 dholland Exp $
+
+Use valid C++.
+
+--- randtest.cpp~	1996-10-25 09:53:14.000000000 +0000
++++ randtest.cpp
+@@ -3,6 +3,7 @@
+ 
+ #include "fastrand.cc"
+ 
++int
+ main()
+ {
+ 	SeedRandom(1L);

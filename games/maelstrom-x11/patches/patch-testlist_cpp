@@ -1,0 +1,14 @@
+$NetBSD: patch-testlist_cpp,v 1.1 2011/07/19 04:24:19 dholland Exp $
+
+Use valid C++.
+
+--- testlist.cpp~	1996-11-08 18:31:40.000000000 +0000
++++ testlist.cpp
+@@ -7,6 +7,7 @@ int findfirst(int *isit)
+ 	return(1);
+ }
+ 
++int
+ main(int argc, char *argv[])
+ {
+ 	/*
