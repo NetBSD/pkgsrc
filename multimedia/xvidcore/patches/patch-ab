@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2011/06/24 13:04:43 tron Exp $
+$NetBSD: patch-ab,v 1.8 2011/07/19 18:56:46 drochner Exp $
 
 --- build/generic/configure.orig	2009-05-28 17:13:31.000000000 +0000
 +++ build/generic/configure
@@ -8,20 +8,20 @@ $NetBSD: patch-ab,v 1.7 2011/06/24 13:04:43 tron Exp $
  case "$target_os" in
 -     *bsd*|linux*|beos|irix*|solaris*)
 +     *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
- 	echo "$as_me:$LINENO: result: .so .a .o" >&5
- echo "${ECHO_T}.so .a .o" >&6
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: .so .a .o" >&5
+ $as_echo ".so .a .o" >&6; }
  	STATIC_EXTENSION="a"
-@@ -3853,7 +3853,7 @@ echo "${ECHO_T}ok" >&6
+@@ -4312,7 +4312,7 @@ $as_echo "ok" >&6; }
  	SPECIFIC_LDFLAGS="-Wl,-soname,libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR) -shared -Wl,--version-script=libxvidcore.ld -lc -lm"
  	SPECIFIC_CFLAGS="-fPIC"
  	;;
 -     *bsd*|irix*)
 +     *bsd*|dragonfly*|irix*)
- 	echo "$as_me:$LINENO: result: ok" >&5
- echo "${ECHO_T}ok" >&6
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ok" >&5
+ $as_echo "ok" >&6; }
  	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
-@@ -3882,7 +3882,7 @@ echo "${ECHO_T}dylib options" >&6
- echo "${ECHO_T}module options" >&6
+@@ -4341,7 +4341,7 @@ $as_echo "dylib options" >&6; }
+ $as_echo "module options" >&6; }
   	   PRE_SHARED_LIB="libxvidcore.\$(SHARED_EXTENSION)-temp.o"
  	   SHARED_LIB="libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR)"
 -	   SPECIFIC_LDFLAGS="-r -keep_private_externs -nostdlib && \$(CC) \$(LDFLAGS) \$(PRE_SHARED_LIB) -o libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR) -bundle -flat_namespace -undefined suppress"
@@ -29,16 +29,16 @@ $NetBSD: patch-ab,v 1.7 2011/06/24 13:04:43 tron Exp $
  	fi
  	;;
       beos)
-@@ -4075,7 +4075,7 @@ echo "$as_me: WARNING: nasm version is t
-        echo "$as_me:$LINENO: checking for asm object format" >&5
- echo $ECHO_N "checking for asm object format... $ECHO_C" >&6
+@@ -4538,7 +4538,7 @@ $as_echo "$as_me: WARNING: nasm version 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for asm object format" >&5
+ $as_echo_n "checking for asm object format... " >&6; }
         case "$target_os" in
 -           *bsd*|linux*|beos|irix*|solaris*)
 +           *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
                 if test "$ARCHITECTURE" = "X86_64" ; then
-                    echo "$as_me:$LINENO: result: elf64" >&5
- echo "${ECHO_T}elf64" >&6
-@@ -4108,6 +4108,13 @@ echo "${ECHO_T}macho" >&6
+                    { $as_echo "$as_me:${as_lineno-$LINENO}: result: elf64" >&5
+ $as_echo "elf64" >&6; }
+@@ -4577,6 +4577,13 @@ $as_echo "macho32" >&6; }
                 PREFIX="-DPREFIX"
                 MARK_FUNCS=""
                 ;;
