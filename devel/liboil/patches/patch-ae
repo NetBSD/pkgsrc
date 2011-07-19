@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.3 2011/07/19 13:57:17 joerg Exp $
+
+Clang rejects lvalue-casts in assembler constraints.
+
+--- liboil/amd64/wavelet.c.orig	2008-09-25 22:36:18.000000000 +0000
++++ liboil/amd64/wavelet.c
+@@ -1753,7 +1753,7 @@ mas8_across_add_s16_mmx (int16_t *d, int
+         [s3_8] "+r" (s3_8),
+         [d] "+r" (d),
+         [n] "+m" (n),
+-        [s1] "+r" ((long)(s1))
++        [s1] "+r" (s1)
+       : [sstr] "r" ((long)(sstr2))
+       );
+ }
