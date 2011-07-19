@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.6 2010/12/26 14:09:01 asau Exp $
+# $NetBSD: clang.mk,v 1.7 2011/07/19 14:02:47 joerg Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -34,6 +34,11 @@ CXXPATH=		${CLANGBASE}/bin/clang++
 PKG_CXX:=		${CXXPATH}
 .endif
 
+.if exists(${CLANGBASE}/bin/clang-cpp)
+CPPPATH=		${CLANGBASE}/bin/clang-cpp
+PKG_CPP:=		${CPPPATH}
+.endif
+
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -v 2>&1
 CC_VERSION!=		${CCPATH} -dumpversion 2>&1
@@ -56,8 +61,13 @@ _LANGUAGES.clang=	# empty
 _LANGUAGES.clang+=	${LANGUAGES.clang:M${_lang_}}
 .endfor
 
-.if defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN)
+PKGSRC_FORTRAN?=f2c
+
+.if !empty(PKGSRC_FORTRAN)
 .  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
 .endif
+
+_WRAP_EXTRA_ARGS.CC+=	-Qunused-arguments
+_WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
 
 .endif	# COMPILER_CLANG_MK
