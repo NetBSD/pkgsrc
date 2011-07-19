@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2011/06/28 16:25:14 manu Exp $
+# $NetBSD: Makefile,v 1.21 2011/07/19 07:51:08 manu Exp $
 #
 
-DISTNAME=	perfuse-20110628
-#PKGREVISION=	1
+DISTNAME=	perfuse-20110719
 CATEGORIES=	filesystems
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/perfuse/
 EXTRACT_SUFX=	.tgz
@@ -17,6 +16,7 @@ WRKSRC=	${WRKDIR}/src/
 BUILD_DIRS=	lib/libperfuse usr.sbin/perfused
 BUILDLINK_TRANSFORM=	rm:-Werror
 CFLAGS+=	-D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
+CFLAGS+=	-DPERFUSE_DEBUG -g
 
 INSTALLATION_DIRS=	include lib sbin
 
