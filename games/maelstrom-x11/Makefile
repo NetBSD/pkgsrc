@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2011/07/19 04:24:18 dholland Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games x11
 MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/
 MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Maelstrom-binaries/
@@ -12,6 +12,8 @@ DISTFILES=		${DISTNAME} ${STREK} ${SWARS} ${ESOUND}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ambrosiasw.com/Products/Maelstrom.html
 COMMENT=	High resolution graphics version of Asteroids (X11 version)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ESOUND=			Maelstrom-Sounds-L2.0.0.tar.gz
 STREK=			Star_Trek.tar.gz
@@ -30,19 +32,26 @@ MAKE_ENV+=		GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP}
 MAKE_ENV+=		GAMEMODE=${GAMEMODE} GAMEDATAMODE=${GAMEDATAMODE}
 MAKE_ENV+=		VARBASE=${VARBASE}
 
-MAKE_DIRS_PERMS+=	${VARBASE}/games ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
-CONF_FILES_PERMS+=	${PREFIX}/share/maelstrom/Maelstrom-Scores \
-	${VARBASE}/games/Maelstrom-Scores ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+USE_GAMESGROUP=		yes
+SCOREDIR=		${VARBASE}/games
+SCOREFILE=		${SCOREDIR}/Maelstrom-Scores
+ORIGSCOREFILE=		${PREFIX}/share/maelstrom/Maelstrom-Scores
+MAKE_DIRS_PERMS+=	${SCOREDIR} ${GAMEDIR_PERMS}
+REQD_FILES_PERMS+=	${ORIGSCOREFILE} ${SCOREFILE} ${GAMEDATA_PERMS}
+BUILD_DEFS+=		VARBASE SCOREFILE
+
+SPECIAL_PERMS+=		bin/Maelstrom ${SETGID_GAMES_PERMS}
+
+INSTALLATION_DIRS+=	bin share/maelstrom
 
 post-install:
-	cd ${PREFIX}/share/maelstrom && \
+	cd ${DESTDIR}${PREFIX}/share/maelstrom && \
 		pax -O -pm -zrf ${DISTDIR}/${ESOUND} && \
 		pax -O -pm -zrf ${DISTDIR}/${STREK} && \
 		pax -O -pm -zrf ${DISTDIR}/${SWARS}
-	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${PREFIX}/bin/Maelstrom
-	${CHMOD} ${GAMEMODE} ${PREFIX}/bin/Maelstrom
-	${INSTALL_DATA} ${WRKSRC}/README.* ${PREFIX}/share/maelstrom
-	${INSTALL_PROGRAM} ${WRKSRC}/netplayd/netplayd ${PREFIX}/bin/Maelstrom_netplayd
+	${INSTALL_DATA} ${WRKSRC}/README.* ${DESTDIR}${PREFIX}/share/maelstrom
+	${INSTALL_PROGRAM} ${WRKSRC}/netplayd/netplayd \
+		${DESTDIR}${PREFIX}/bin/Maelstrom_netplayd
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
