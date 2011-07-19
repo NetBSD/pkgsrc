@@ -1,0 +1,14 @@
+$NetBSD: patch-maelstrom_sound_cpp,v 1.1 2011/07/19 04:24:19 dholland Exp $
+
+Use valid C++.
+
+--- Maelstrom_sound.cpp~	1997-05-25 21:18:08.000000000 +0000
++++ Maelstrom_sound.cpp
+@@ -43,6 +43,7 @@ void Handle_Signal(int sig)
+ 	exit(sig);
+ }
+ 
++int
+ main(int argc, char *argv[])
+ {
+ 	extern char *optarg;
