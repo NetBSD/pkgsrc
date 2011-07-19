@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.9 2009/08/10 20:37:15 drochner Exp $
+$NetBSD: patch-aa,v 1.10 2011/07/19 19:53:18 drochner Exp $
 
---- libavcodec/x86/cpuid.c.orig	2009-08-10 22:17:29.000000000 +0200
-+++ libavcodec/x86/cpuid.c
-@@ -80,6 +80,7 @@ int mm_support(void)
-             rval |= FF_MM_MMX2
+--- libavutil/x86/cpu.c.orig	2011-07-07 20:46:02.000000000 +0000
++++ libavutil/x86/cpu.c
+@@ -86,6 +86,7 @@ int ff_get_cpu_flags_x86(void)
+             rval |= AV_CPU_FLAG_MMX2
  #if HAVE_SSE
-                   | FF_MM_SSE;
+                   | AV_CPU_FLAG_SSE;
 +#if !defined(__GNUC__) || (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 2))
          if (std_caps & (1<<26))
-             rval |= FF_MM_SSE2;
+             rval |= AV_CPU_FLAG_SSE2;
          if (ecx & 1)
-@@ -90,6 +91,7 @@ int mm_support(void)
-             rval |= FF_MM_SSE4;
-         if (ecx & 0x00100000 )
-             rval |= FF_MM_SSE42;
+@@ -105,6 +106,7 @@ int ff_get_cpu_flags_x86(void)
+                 rval |= AV_CPU_FLAG_AVX;
+         }
+ #endif
 +#endif /* gcc >= 4.2 */
  #endif
                    ;
