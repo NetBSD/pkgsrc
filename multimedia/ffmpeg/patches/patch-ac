@@ -1,17 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2011/01/17 16:51:05 drochner Exp $
+$NetBSD: patch-ac,v 1.10 2011/07/19 19:53:18 drochner Exp $
 
---- Makefile.orig	2010-04-19 22:05:26.000000000 +0900
-+++ Makefile	2011-01-05 17:04:14.000000000 +0900
-@@ -107,7 +107,7 @@
- 
- doc/%.html: TAG = HTML
- doc/%.html: doc/%.texi
--	$(M)cd doc && texi2html -monolithic -number $(<:doc/%=%)
-+	$(M)cd doc && texi2html -monolithic -number-sections $(<:doc/%=%)
- 
- doc/%.pod: TAG = POD
- doc/%.pod: doc/%-doc.texi
-@@ -125,11 +125,11 @@
+--- Makefile.orig	2011-06-21 19:29:25.000000000 +0000
++++ Makefile
+@@ -152,11 +152,11 @@ install-progs: install-progs-yes $(PROGS
  
  install-data: $(DATA_FILES)
  	$(Q)mkdir -p "$(DATADIR)"
@@ -23,5 +14,5 @@ $NetBSD: patch-ac,v 1.9 2011/01/17 16:51:05 drochner Exp $
 -	$(INSTALL) -m 644 $(MANPAGES) "$(MANDIR)/man1"
 +	$(INSTALL) -c -m 644 $(MANPAGES) "$(MANDIR)/man1"
  
- uninstall: uninstall-progs uninstall-data uninstall-man
+ uninstall: uninstall-libs uninstall-headers uninstall-progs uninstall-data uninstall-man
  
