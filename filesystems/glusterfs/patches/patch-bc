@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.4 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-bc,v 1.5 2011/07/19 07:54:31 manu Exp $
                  
 glibc dirname() modify the string it is given and returns it.
 glusterfs takes this behavior for granted, and assume that if it
