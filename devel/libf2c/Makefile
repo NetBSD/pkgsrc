@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/29 18:12:44 asau Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/19 13:53:30 joerg Exp $
 
 DISTNAME=	libf2c-20090201
 PKGREVISION=	3
@@ -38,6 +38,12 @@ post-extract:
 do-test:
 	@cd ${WRKDIR} && ${CC} -I libf2c -o chktypes chktypes.c
 	${WRKDIR}/chktypes -v
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.endif
 
 # Notes
 #
