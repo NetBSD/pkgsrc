@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.41 2011/04/29 07:41:01 obache Exp $
+$NetBSD: distinfo,v 1.42 2011/07/19 19:53:18 drochner Exp $
 
-SHA1 (ffmpeg-0.6.3.tar.bz2) = 25dd82e8a3627a1a9d4464e15685720215fecb3c
-RMD160 (ffmpeg-0.6.3.tar.bz2) = 623bf7c60ad7dd4febdac5ae5ef12566fb8dbf38
-Size (ffmpeg-0.6.3.tar.bz2) = 3750617 bytes
-SHA1 (patch-aa) = e40f61850fe5c85bdd4b659802601dfacfe73ad1
-SHA1 (patch-ac) = d29395cf05612d6be213a69eafaf549c802b6ce1
+SHA1 (ffmpeg-0.7.1.tar.bz2) = d006cf0fb61d654c0845240da868ecf3a94c043f
+RMD160 (ffmpeg-0.7.1.tar.bz2) = 6539f725d869b97a1821636bd1416312970a6457
+Size (ffmpeg-0.7.1.tar.bz2) = 4555714 bytes
+SHA1 (patch-aa) = c9540d0ca0a671e9faa8b5b7847c103b515ac382
+SHA1 (patch-ac) = 63e3835a9af2123ab872f6e105bf355bb16cad6c
 SHA1 (patch-ad) = d3e06c855ab1a5ff3ddb0bee108ea88166c32cb6
-SHA1 (patch-ae) = 7734efe9f6b496ca292d17859cffcc0129aaa90b
-SHA1 (patch-af) = d29dd9ae373fd086d3c3b952d8831af1717a8ddf
-SHA1 (patch-bktr) = 62c31edc0fa0712d438d0e1ea6539749bfd1df34
-SHA1 (patch-configure) = 3de6a217d60897208e71f201e551095e9d36f8be
+SHA1 (patch-configure) = 041d976ee22fab612580c2fb141fb5c829fa68d5
