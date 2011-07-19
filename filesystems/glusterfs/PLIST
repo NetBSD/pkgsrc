@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/07/08 08:02:56 manu Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/07/19 07:54:31 manu Exp $
 etc/glusterfs/xattr-init.sh
 etc/glusterfs/glusterfs.vol.sample
 etc/glusterfs/glusterfsd.vol.sample

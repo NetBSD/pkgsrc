@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.5 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-bb,v 1.6 2011/07/19 07:54:31 manu Exp $
 --- xlators/performance/quick-read/src/quick-read.c.orig	2011-07-03 03:59:32.000000000 +0200
 +++ xlators/performance/quick-read/src/quick-read.c	2011-07-03 03:59:42.000000000 +0200
 @@ -726,9 +726,9 @@

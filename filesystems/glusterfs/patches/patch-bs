@@ -1,4 +1,4 @@
-$NetBSD: patch-bs,v 1.1 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-bs,v 1.2 2011/07/19 07:54:31 manu Exp $
 
 Actually use the Linux [lf]?(set|get|list|remove)xattr reimplementation
 we have in libglusterfs/src/compat.c

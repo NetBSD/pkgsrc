@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: glusterd.sh,v 1.4 2011/07/08 08:02:57 manu Exp $
+# $NetBSD: glusterd.sh,v 1.5 2011/07/19 07:54:31 manu Exp $
 #
 
 # PROVIDE: glusterd
