@@ -1,4 +1,4 @@
-$NetBSD: patch-bt,v 1.1 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-bt,v 1.2 2011/07/19 07:54:31 manu Exp $
 
 Fix the io-threads xlator, which forgot to initialize its pthread
 condition and mutex.
