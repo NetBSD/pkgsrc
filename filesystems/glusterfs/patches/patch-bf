@@ -1,4 +1,4 @@
-$NetBSD: patch-bf,v 1.4 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-bf,v 1.5 2011/07/19 07:54:31 manu Exp $
 
 basename() and dirname() are not supposed to be thread-safe, and NetBSD's
 implementation is not. glusterfs assume the functions are thread-safe. 
