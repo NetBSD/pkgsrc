@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/08 18:32:23 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/07/19 18:32:13 drochner Exp $
 
 SHA1 (gps-5.0.0.tar.bz2) = 913aca264a341e228b3b02e7bb8ea77b0cb96805
 RMD160 (gps-5.0.0.tar.bz2) = 67fd5e95e1e4fd1f728522395623812091b7dfda
@@ -10,3 +10,6 @@ SHA1 (patch-ad) = 058f89c0fa9bf2c2d4baca8d35ce11c97086697a
 SHA1 (patch-ae) = 2847e353fdec774262adc14f80c4ba6c6a5fe283
 SHA1 (patch-af) = c3c29f06eb91a7656a8c251b1914686b4aea9723
 SHA1 (patch-ag) = b1756db403619becb790c3e0641d5e0606f4e92c
+SHA1 (patch-ah) = 8b5fb8546a6de24cc8d9ce0a5125bda03149ec06
+SHA1 (patch-ai) = 604edae7bc4fcf8e0cbd707848d79b22aca1a3df
+SHA1 (patch-aj) = eb5c2f7850468d5718ddd30d54f8f4efdb2187e5
