@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1713 2011/07/19 07:56:28 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1714 2011/07/19 21:12:53 tez Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2643,3 +2643,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/maelstrom-x11 to 2.0.6nb3 [dholland 2011-07-19]
 	Updated filesystems/perfuse to 20110719 [manu 2011-07-19]
 	Updated filesystems/glusterfs to 3.2.1nb2 [manu 2011-07-19]
+	Updated textproc/groff to 1.20.1nb4 [tez 2011-07-19]
