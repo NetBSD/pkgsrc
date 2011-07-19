@@ -1,4 +1,4 @@
-$NetBSD: patch-br,v 1.1 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-br,v 1.2 2011/07/19 07:54:31 manu Exp $
 
 Hide .attribute to glusterfs clients in order to make sure it will
 not be distributed by the cluster/dht xlator

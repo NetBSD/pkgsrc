@@ -1,4 +1,4 @@
-$NetBSD: patch-bh,v 1.3 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-bh,v 1.4 2011/07/19 07:54:31 manu Exp $
 
 NetBSD's <dirent.h> does a #defiine d_ino d_fileno. Since glusterfs 
 declares structs with d_ino members, we must include <dirent.h> early

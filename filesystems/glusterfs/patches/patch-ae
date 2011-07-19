@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2011/07/08 08:02:57 manu Exp $
+$NetBSD: patch-ae,v 1.5 2011/07/19 07:54:31 manu Exp $
 
 On NetBSD use libperfuse(3), rename umount2(2) as unmount(2), and skip
 inexistant /etc/mtab management.
