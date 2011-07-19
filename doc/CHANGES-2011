@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1712 2011/07/19 04:24:56 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1713 2011/07/19 07:56:28 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2641,3 +2641,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.12 [obache 2011-07-17]
 	Updated net/py-dns to 1.9.4 [gson 2011-07-18]
 	Updated games/maelstrom-x11 to 2.0.6nb3 [dholland 2011-07-19]
+	Updated filesystems/perfuse to 20110719 [manu 2011-07-19]
+	Updated filesystems/glusterfs to 3.2.1nb2 [manu 2011-07-19]
