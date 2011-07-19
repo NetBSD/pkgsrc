@@ -1,0 +1,14 @@
+$NetBSD: patch-macres_cpp,v 1.1 2011/07/19 04:24:19 dholland Exp $
+
+Use valid C++.
+
+--- Macres.cpp~	1996-10-25 09:53:10.000000000 +0000
++++ Macres.cpp
+@@ -2,6 +2,7 @@
+ #include <stdlib.h>
+ #include "Mac_Resource.h"
+ 
++int
+ main(int argc, char *argv[])
+ {
+ 	if ( ! argv[1] ) {
