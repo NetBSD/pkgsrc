@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2006/06/26 08:56:37 rillig Exp $
+$NetBSD: distinfo,v 1.8 2011/07/19 04:24:19 dholland Exp $
 
 SHA1 (Maelstrom-1.4.3-L2.0.6-src.tar.gz) = 66c81365104bfab9985919f0cba5a6d955727d79
 RMD160 (Maelstrom-1.4.3-L2.0.6-src.tar.gz) = 071b36ecd31830f3b62e4b6e2f64b7f7d87b1386
@@ -16,10 +16,14 @@ SHA1 (patch-aa) = bf6a9c5394b5ac491a1b92d62d7dc716013ece23
 SHA1 (patch-ab) = d767d9646f98f1d8b7ce5f471a8a789ed29d0e75
 SHA1 (patch-ac) = 81ae36f64ea8db22ba81be8911e05f6c66459edc
 SHA1 (patch-ad) = d5405b696f839c4965fb8e299108aff1b689399a
-SHA1 (patch-ae) = 8bda24b06ba07558ed3cbd46eb7e22d47795529b
+SHA1 (patch-ae) = 1e63b3f3ebe9e98b19c6fb08d6b4ea608a500fb4
 SHA1 (patch-af) = 46b5ab4cfe3e20401fc5feaa9319c093b025ca1d
 SHA1 (patch-ag) = 0accbc0a198e66a1cc2e86b62f32656e213d8de1
 SHA1 (patch-ah) = b39ccc02f3e27e655d5169bb843554b7bdb323a9
 SHA1 (patch-ai) = 153db1c1860e5d336a51aac2d86f753fc3858d31
 SHA1 (patch-aj) = 5135031fbbfa06eb11d24859bb1589361b025ba4
 SHA1 (patch-ak) = 40a94611f4051824f72e757a13a3cb03e141d1ac
+SHA1 (patch-macres_cpp) = bc9d2519da4332b4fc8dd03d0dfeedfeb9d95e7c
+SHA1 (patch-maelstrom_sound_cpp) = 6fcade9c4f816ba0560f34843b5b9982bc575c4e
+SHA1 (patch-randtest_cpp) = 9719c2942a95ca83e1d58ea42821d99741305f17
+SHA1 (patch-testlist_cpp) = be367726c1d5411397dd3b00daf4f1dada8673fd
