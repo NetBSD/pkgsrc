@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/01/07 10:52:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/07/19 18:56:46 drochner Exp $
 include/xvid.h
 lib/libxvidcore.a
 lib/libxvidcore.so
 lib/libxvidcore.so.4
-lib/libxvidcore.so.4.2
+lib/libxvidcore.so.4.3

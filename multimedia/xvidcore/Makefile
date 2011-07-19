@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2011/06/24 13:04:43 tron Exp $
+# $NetBSD: Makefile,v 1.39 2011/07/19 18:56:46 drochner Exp $
 
-DISTNAME=	xvidcore-1.2.2
+DISTNAME=	xvidcore-1.3.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xvid.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -8,8 +8,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xvid.org/
 COMMENT=	ISO MPEG-4 compliant video codec
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
