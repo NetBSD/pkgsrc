@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1716 2011/07/20 02:00:43 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1717 2011/07/20 02:03:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2646,3 +2646,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/groff to 1.20.1nb4 [tez 2011-07-19]
 	Updated net/wireshark to 1.4.8 [tron 2011-07-19]
 	Updated fonts/tex-avantgar to 2010.21993 [minskim 2011-07-20]
+	Updated fonts/tex-bookman to 2010.21993 [minskim 2011-07-20]
