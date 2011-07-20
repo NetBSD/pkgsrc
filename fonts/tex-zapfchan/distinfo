@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/07 19:53:14 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/07/20 02:18:17 minskim Exp $
 
-SHA1 (tex-zapfchan-21570/zapfchan.tar.xz) = 3cdfda59b58bd7acc0ff558259a001a43e15105c
-RMD160 (tex-zapfchan-21570/zapfchan.tar.xz) = 28590d85f4499eef034277409bf6790441d4851f
-Size (tex-zapfchan-21570/zapfchan.tar.xz) = 83448 bytes
+SHA1 (tex-zapfchan-21993/zapfchan.tar.xz) = a57ab5ebd853d0737b702e348519710785b3444e
+RMD160 (tex-zapfchan-21993/zapfchan.tar.xz) = 40635ac100515a9098edab1b9587b847e3f1b5cd
+Size (tex-zapfchan-21993/zapfchan.tar.xz) = 82828 bytes
