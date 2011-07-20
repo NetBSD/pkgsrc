@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 19:52:58 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:11:23 minskim Exp $
 share/texmf-dist/dvips/ncntrsbk/config.unc
 share/texmf-dist/fonts/afm/adobe/ncntrsbk/pncb8a.afm
 share/texmf-dist/fonts/afm/adobe/ncntrsbk/pncbi8a.afm
@@ -56,10 +56,6 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/ncntrsbk/rpncb.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/ncntrsbk/rpncbi.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/ncntrsbk/rpncr.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/ncntrsbk/rpncri.tfm
-share/texmf-dist/fonts/tfm/groff/ncntrsbk/pncb8g.tfm
-share/texmf-dist/fonts/tfm/groff/ncntrsbk/pncbi8g.tfm
-share/texmf-dist/fonts/tfm/groff/ncntrsbk/pncr8g.tfm
-share/texmf-dist/fonts/tfm/groff/ncntrsbk/pncri8g.tfm
 share/texmf-dist/fonts/tfm/urw35vf/ncntrsbk/uncb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/ncntrsbk/uncb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/ncntrsbk/uncb8r.tfm
