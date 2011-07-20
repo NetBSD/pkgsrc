@@ -1,10 +1,10 @@
-$NetBSD: patch-bb,v 1.1 2010/09/26 23:15:18 tron Exp $
+$NetBSD: patch-bb,v 1.2 2011/07/20 18:42:45 tron Exp $
 
 Avoid conflict with NetBSD's popcount(3).
 
---- epan/dissectors/x11-extension-implementation.h.orig	2010-08-29 23:17:00.000000000 +0100
-+++ epan/dissectors/x11-extension-implementation.h	2010-09-26 23:55:27.000000000 +0100
-@@ -20648,8 +20648,8 @@
+--- epan/dissectors/x11-extension-implementation.h.orig	2011-07-18 21:17:51.000000000 +0100
++++ epan/dissectors/x11-extension-implementation.h	2011-07-20 19:08:11.000000000 +0100
+@@ -20760,8 +20760,8 @@
      int f_namesPresent;
      f_namesPresent = VALUE32(tvb, *offsetp + size + 4);
      f_mapsPresent = VALUE32(tvb, *offsetp + size + 8);
@@ -15,7 +15,7 @@ Avoid conflict with NetBSD's popcount(3).
      return size + 20;
  }
  
-@@ -20682,8 +20682,8 @@
+@@ -20794,8 +20794,8 @@
  	f_state = VALUE32(tvb, *offsetp);
  	proto_tree_add_item(t, hf_x11_struct_DeviceLedInfo_state, tvb, *offsetp, 4, little_endian);
  	*offsetp += 4;
@@ -26,7 +26,7 @@ Avoid conflict with NetBSD's popcount(3).
      }
  }
  
-@@ -22981,7 +22981,7 @@
+@@ -23093,7 +23093,7 @@
      *offsetp += 2;
      UNUSED(16);
      listOfByte(tvb, offsetp, t, hf_x11_xkb_GetCompatMap_reply_si_rtrn, (16 * f_nSIRtrn), little_endian);
@@ -35,7 +35,7 @@ Avoid conflict with NetBSD's popcount(3).
  }
  
  static void xkbSetCompatMap(tvbuff_t *tvb, packet_info *pinfo _U_, int *offsetp, proto_tree *t, int little_endian, int length _U_)
-@@ -23021,8 +23021,8 @@
+@@ -23133,8 +23133,8 @@
      UNUSED(2);
      listOfByte(tvb, offsetp, t, hf_x11_xkb_SetCompatMap_si, (16 * f_nSI), little_endian);
      length -= (16 * f_nSI) * 1;
@@ -46,7 +46,7 @@ Avoid conflict with NetBSD's popcount(3).
  }
  
  static void xkbGetIndicatorState(tvbuff_t *tvb, packet_info *pinfo _U_, int *offsetp, proto_tree *t, int little_endian, int length _U_)
-@@ -23117,8 +23117,8 @@
+@@ -23229,8 +23229,8 @@
      f_which = VALUE32(tvb, *offsetp);
      proto_tree_add_item(t, hf_x11_xkb_SetIndicatorMap_which, tvb, *offsetp, 4, little_endian);
      *offsetp += 4;
@@ -57,7 +57,7 @@ Avoid conflict with NetBSD's popcount(3).
  }
  
  static void xkbGetNamedIndicator(tvbuff_t *tvb, packet_info *pinfo _U_, int *offsetp, proto_tree *t, int little_endian, int length _U_)
-@@ -23615,13 +23615,13 @@
+@@ -23727,13 +23727,13 @@
          listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_KTLevelNames_ktLevelNames, hf_x11_xkb_GetNames_reply_KTLevelNames_ktLevelNames_item, (length - 56) / 4, little_endian);
      }
      if ((f_which & (1 << 8)) != 0) {
@@ -74,7 +74,7 @@ Avoid conflict with NetBSD's popcount(3).
      }
      if ((f_which & (1 << 9)) != 0) {
          struct_KeyName(tvb, offsetp, t, little_endian, f_nKeys);
-@@ -23783,16 +23783,16 @@
+@@ -23895,16 +23895,16 @@
          length -= (length - 52) / 4 * 4;
      }
      if ((f_which & (1 << 8)) != 0) {
@@ -97,7 +97,7 @@ Avoid conflict with NetBSD's popcount(3).
      }
      if ((f_which & (1 << 9)) != 0) {
          struct_KeyName(tvb, offsetp, t, little_endian, f_nKeys);
-@@ -24569,7 +24569,7 @@
+@@ -24693,7 +24693,7 @@
          *offsetp += 2;
          UNUSED(16);
          listOfByte(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_CompatMap_si_rtrn, (16 * f_nSIRtrn), little_endian);
@@ -106,8 +106,8 @@ Avoid conflict with NetBSD's popcount(3).
      }
      if ((f_reported & (1 << 2)) != 0) {
          int f_clientDeviceID;
-@@ -25032,13 +25032,13 @@
-             listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_KTLevelNames_ktLevelNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_KTLevelNames_ktLevelNames_item, (length - 230) / 4, little_endian);
+@@ -25156,13 +25156,13 @@
+             listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_KTLevelNames_ktLevelNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_KTLevelNames_ktLevelNames_item, (length - 237) / 4, little_endian);
          }
          if ((f_which & (1 << 8)) != 0) {
 -            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_IndicatorNames_indicatorNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_IndicatorNames_indicatorNames_item, popcount(f_indicators), little_endian);
@@ -123,8 +123,8 @@ Avoid conflict with NetBSD's popcount(3).
          }
          if ((f_which & (1 << 9)) != 0) {
              struct_KeyName(tvb, offsetp, t, little_endian, f_nKeys);
-@@ -25191,13 +25191,13 @@
-             listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_OtherNames_KTLevelNames_ktLevelNames, hf_x11_xkb_GetKbdByName_reply_OtherNames_KTLevelNames_ktLevelNames_item, (length - 279) / 4, little_endian);
+@@ -25315,13 +25315,13 @@
+             listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_OtherNames_KTLevelNames_ktLevelNames, hf_x11_xkb_GetKbdByName_reply_OtherNames_KTLevelNames_ktLevelNames_item, (length - 286) / 4, little_endian);
          }
          if ((f_which & (1 << 8)) != 0) {
 -            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_OtherNames_IndicatorNames_indicatorNames, hf_x11_xkb_GetKbdByName_reply_OtherNames_IndicatorNames_indicatorNames_item, popcount(f_indicators), little_endian);
