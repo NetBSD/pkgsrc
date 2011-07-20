@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2011/07/20 10:35:19 alnsn Exp $
+
+Add ifdef(__NetBSD__).
+
+--- icc11/include/stddef.h.orig	2009-10-03 22:44:32.000000000 +0100
++++ icc11/include/stddef.h
+@@ -19,7 +19,7 @@
+ #define _STDDEF
+ */
+ 
+-#if defined(__QNX__) || defined(__FreeBSD__)
++#if defined(__QNX__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ #include_next <stddef.h>
+ 
+ #undef offsetof
