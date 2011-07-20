@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/18 21:35:46 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/07/20 02:09:38 minskim Exp $
 share/texmf-dist/dvips/helvetic/config.uhv
 share/texmf-dist/fonts/afm/adobe/helvetic/phvb8a.afm
 share/texmf-dist/fonts/afm/adobe/helvetic/phvb8an.afm
@@ -87,14 +87,6 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvr.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvro.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvron.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/helvetic/rphvrrn.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvb8g.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvb8gn.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvbo8g.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvbo8gn.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvr8g.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvr8gn.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvro8g.tfm
-share/texmf-dist/fonts/tfm/groff/helvetic/phvro8gn.tfm
 share/texmf-dist/fonts/tfm/monotype/helvetic/arb10u.tfm
 share/texmf-dist/fonts/tfm/monotype/helvetic/arb2n.tfm
 share/texmf-dist/fonts/tfm/monotype/helvetic/arb7j.tfm
