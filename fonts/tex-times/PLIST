@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/22 21:12:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/07/20 02:16:08 minskim Exp $
 share/texmf-dist/dvips/times/config.utm
 share/texmf-dist/fonts/afm/adobe/times/ptmb8a.afm
 share/texmf-dist/fonts/afm/adobe/times/ptmbi8a.afm
@@ -112,10 +112,6 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/times/rptmri.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/times/rptmro.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/times/rptmrre.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/times/rptmrrn.tfm
-share/texmf-dist/fonts/tfm/groff/times/ptmb8g.tfm
-share/texmf-dist/fonts/tfm/groff/times/ptmbi8g.tfm
-share/texmf-dist/fonts/tfm/groff/times/ptmr8g.tfm
-share/texmf-dist/fonts/tfm/groff/times/ptmri8g.tfm
 share/texmf-dist/fonts/tfm/urw35vf/times/utmb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/times/utmb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/times/utmb8r.tfm
