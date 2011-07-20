@@ -1,0 +1,52 @@
+#!/bin/sh
+
+LANG=C
+LC_MESSAGES=C
+export LANG LC_MESSAGES
+
+ICC11_REALAS="@BINUTILS_PREFIX@/bin/as"
+
+icc_arch=@ICC_ARCH@
+
+for opt in "$@"
+do
+	case "${opt}"
+	in
+	-m32) icc_arch=ia32    ;;
+	-m64) icc_arch=intel64 ;;
+	-dryrun) dryrun=1 ;;
+	-Qlocation,as,*)
+		ICC11_REALAS="${opt#-Qlocation,as,}/as"
+		;;
+	-Qlocation,ld,*)
+		ICC11_REALLD="${opt#-Qlocation,ld,}/ld"
+		export ICC11_REALLD
+		;;
+	-shared-intel|-openmp|-mkl=*|-opt-malloc-options=[1-9])
+		echo "${opt} is not supported on $(uname)." 1>&2
+		exit 1
+		;;
+	esac
+done
+
+export ICC11_REALAS
+
+INTEL_LICENSE_FILE="${INTEL_LICENSE_FILE:+${INTEL_LICENSE_FILE}:}@ICC_PREFIX@/licenses:/opt/intel/licenses:${HOME}/intel/licenses"
+export INTEL_LICENSE_FILE
+
+PATH="@ICC_PREFIX@/bin/${icc_arch}:@GCC_PREFIX@/bin:${PATH:-/bin:/usr/bin}"
+export PATH
+
+if [ -z "${dryrun}" ]
+then
+	exec ${0##*/} -Ulinux -U__linux__ -U__linux -U__gnu_linux__ -D__NetBSD__ "$@" \
+		          "-Qlocation,as,@ICC_PREFIX@/libexec" \
+		          "-Qlocation,ld,@ICC_PREFIX@/libexec"
+else
+	${0##*/} -Ulinux -U__linux__ -U__linux -U__gnu_linux__ -D__NetBSD__ "$@" \
+	         "-Qlocation,as,@ICC_PREFIX@/libexec"                            \
+	         "-Qlocation,ld,@ICC_PREFIX@/libexec" 3>&1 1>&2 2>&3 3>&- |      \
+	sed -e 's|^\( *\)/lib[64]*/ld-linux[x864-]*\.so\.2\([ \]*\)$|\1/usr/libexec/ld.elf_so\2|' \
+	    -e 's|^\( *\)/usr/lib[64]*/crt1.o\([ \]*\)$|\1/usr/lib/crt0.o\2|'             \
+	    -e 's|^\( *\)-ldl\([ \]*\)$|\1-licc11bsd\2|' 3>&1 1>&2 2>&3 3>&-
+fi

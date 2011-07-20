@@ -1,0 +1,13 @@
+#!/bin/sh
+
+LANG=C
+LC_MESSAGES=C
+export LANG LC_MESSAGES
+
+INTEL_LICENSE_FILE="${INTEL_LICENSE_FILE:+${INTEL_LICENSE_FILE}:}@ICC_PREFIX@/licenses:/opt/intel/licenses:${HOME}/intel/licenses"
+export INTEL_LICENSE_FILE
+
+PATH="@ICC_PREFIX@/bin/@ICC_ARCH@:@GCC_PREFIX@/bin:${PATH:-/bin:/usr/bin}"
+export PATH
+
+exec ${0##*/} "$@"

@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2011/07/20 10:35:19 alnsn Exp $
+
+Add ifdef(__NetBSD__).
+
+--- icc11/include/tgmath.h.orig	2009-10-03 22:44:32.000000000 +0100
++++ icc11/include/tgmath.h
+@@ -19,7 +19,7 @@
+ #else
+ 
+ #if !defined(__PURE_INTEL_C99_HEADERS__) && !(defined(_WIN32) || defined(_WIN64))
+-#if !defined (__APPLE__) && !defined(__FreeBSD__) && !defined(__QNX__)
++#if !defined (__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__)
+ # include_next <tgmath.h> /* utilize and expand sys header */
+ #endif
+ 

@@ -1,0 +1,18 @@
+Disclaimer: this document is not a part of Intel distribution.
+
+Intel C++ compiler does not run natively on BSD systems and some
+options will never be supported. Most options that require linking
+with Linux libraries fall into this category. For instance,
+
+ -shared-intel
+ -openmp
+ -mkl=[lib]
+ -opt-malloc-options=n, n > 0
+
+are not supported.
+
+However, runtime CPU detection and profile guided optimization seem
+to work even though correspondent intel libraries depend on a couple
+of glibc functions.
+
+Global optimization (-ipo) works for some packages.
