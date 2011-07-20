@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/07/20 23:24:05 tron Exp $
+# $NetBSD: Makefile,v 1.15 2011/07/20 23:29:27 tron Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
@@ -64,7 +64,7 @@ CPPFLAGS+=		-DDFLY_CRT_USRLIB
 # "emacs" uses the C pre-processor to generate makefiles. The C pre-processor
 # of newer GCC version is designed to break this by purpose. We work around
 # that using the traditional mode to generate makefiles. 
-.if !emtpy(CC_VERSION:Mgcc-[4-9].*)
+.if !empty(CC_VERSION:Mgcc-[4-9].*)
 CPP+=		-traditional
 CONFIGURE_ENV+=	CPP=${CPP:Q}
 .endif
