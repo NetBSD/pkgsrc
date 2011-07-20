@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 07:20:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:25:56 minskim Exp $
+share/texmf-dist/doc/fonts/stmaryrd/INSTALL
 share/texmf-dist/doc/fonts/stmaryrd/README
-share/texmf-dist/doc/fonts/stmaryrd/stmaryrd.dvi
+share/texmf-dist/doc/fonts/stmaryrd/README.hoekwater
+share/texmf-dist/doc/fonts/stmaryrd/stmaryrd.pdf
