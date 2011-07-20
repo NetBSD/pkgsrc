@@ -1,0 +1,113 @@
+$NetBSD: patch-ad,v 1.1 2011/07/20 10:35:19 alnsn Exp $
+
+Add ifdef(__NetBSD__) and definitions of FP_* constants on NetBSD.
+
+--- icc11/include/math.h.orig	2009-11-01 14:41:27.000000000 +0000
++++ icc11/include/math.h
+@@ -27,7 +27,7 @@
+ # error "This Intel <math.h> is for use with only the Intel compilers!"
+ #endif
+ 
+-#if defined(__linux__) || defined (__APPLE__) || defined(__FreeBSD__) || defined(__QNX__)
++#if defined(__linux__) || defined (__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__QNX__)
+ # if defined(fpclassify)
+ #  undef fpclassify
+ # endif
+@@ -51,7 +51,7 @@
+ # endif
+ #endif /* __linux__ */
+ 
+-#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__QNX__)
++#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__QNX__)
+ # if defined(isgreater)
+ #  undef isgreater
+ # endif
+@@ -70,9 +70,9 @@
+ # if defined(isunordered)
+ #  undef isunordered
+ # endif
+-#endif /* __linux__ || __APPLE__ || __FreeBSD__ || __QNX__ */
++#endif /* __linux__ || __APPLE__ || __FreeBSD__ || __NetBSD__ || __QNX__ */
+ 
+-#if (!defined (__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__QNX__)) || defined (__PURE_INTEL_C99_HEADERS__)
++#if (!defined (__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__)) || defined (__PURE_INTEL_C99_HEADERS__)
+ #if !(defined (DECIMAL_DIG))
+ #define DECIMAL_DIG 21
+ #endif
+@@ -95,20 +95,20 @@ typedef double  double_t;
+ typedef float   float_t;
+ typedef double  double_t;
+ #endif /* FLT_EVAL_METHOD */
+-#endif /* (!__linux__ && !__APPLE__ && !__FreeBSD__ && !__QNX__) || __PURE_INTEL_C99_HEADERS__ */
++#endif /* (!__linux__ && !__APPLE__ && !__FreeBSD__ && !__NetBSD__ && !__QNX__) || __PURE_INTEL_C99_HEADERS__ */
+ 
+ 
+ #if defined(__APPLE__)
+ #undef NAN
+ #endif
+-#if (!defined(__linux__) && !defined(__FreeBSD__) && !defined(__QNX__)) || defined(__PURE_INTEL_C99_HEADERS__)
++#if (!defined(__linux__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__)) || defined(__PURE_INTEL_C99_HEADERS__)
+ static unsigned int __qnan[] = {0x7fc00001};
+ #define NAN (*((float *)__qnan))
+ #endif
+ 
+ 
+-#if defined(__PURE_INTEL_C99_HEADERS__) || !(defined(__linux__) || defined(__unix__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__QNX__)) /* We need to define FP_ILOGB0, FP_ILOGBNAN */
+-#if (defined(__linux__) || defined(__unix__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__QNX__)) && !(defined(__ECL) || defined(__ECC))   /* Linux/unix or MacOS */           
++#if defined(__PURE_INTEL_C99_HEADERS__) || !(defined(__linux__) || defined(__unix__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__QNX__)) /* We need to define FP_ILOGB0, FP_ILOGBNAN */
++#if (defined(__linux__) || defined(__unix__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__QNX__)) && !(defined(__ECL) || defined(__ECC))   /* Linux/unix or MacOS */           
+ #define FP_ILOGB0	(-2147483647 - 1)
+ #define FP_ILOGBNAN (-2147483647 - 1)
+ #else /* Windows and Intel(R) Itanium(R) architecture */
+@@ -117,7 +117,7 @@ static unsigned int __qnan[] = {0x7fc000
+ #endif
+ #endif
+ 
+-#if (!defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__QNX__)) || defined(__PURE_INTEL_C99_HEADERS__)
++#if (!defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__)) || defined(__PURE_INTEL_C99_HEADERS__)
+ static unsigned int __huge_valf[] = {0x7f800000};
+ #define HUGE_VALF (*((double *)__huge_valf))
+ static unsigned int __huge_vall[] = {0, 0, 0x00007f80, 0};
+@@ -153,7 +153,7 @@ extern "C" {
+ #endif
+ 
+ /* for Microsoft compatibility */
+-#if !defined (__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__QNX__) && !defined(__INTEL_COMPILER)
++#if !defined (__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__) && !defined(__INTEL_COMPILER)
+ #define _LIBIMF_LONGLONG __int64
+ #else
+ #define _LIBIMF_LONGLONG long long int
+@@ -182,6 +182,15 @@ extern "C" {
+ # define FP_ZERO        (16)
+ # define FP_SUBNORMAL   (8)
+ # define FP_NORMAL      (4)
++#elif defined (__NetBSD__)
++#define	FP_INFINITE	0x00
++#define	FP_NAN		0x01
++#define	FP_NORMAL	0x02
++#define	FP_SUBNORMAL	0x03
++#define	FP_ZERO		0x04
++/* NetBSD extensions */
++#define	_FP_LOMD	0x80		/* range for machine-specific classes */
++#define	_FP_HIMD	0xff
+ #else
+ # define FP_NAN       (0)
+ # define FP_INFINITE  (1)
+@@ -300,7 +309,7 @@ _LIBIMF_EXT _LIBIMF_INT __signbitl     (
+     )
+ 
+ 
+-#if defined (__FreeBSD__)
++#if defined (__FreeBSD__) || defined (__NetBSD__)
+ 
+ #define fpclassify( __x__ ) __IMFC99MACRO1ARG_ALL( __x__, fpclassify, __, f, __, d, __, l)
+ #define isinf( __x__ )      __IMFC99MACRO1ARG_ALL( __x__, isinf,      __, f,   ,  , __, l)
+@@ -1142,7 +1151,7 @@ _LIBIMF_EXT ___pmatherrl _LIBIMF_PUBAPI 
+ 
+ /* Standard conformance support */
+ 
+-#if (!defined(__linux__) || !defined(__USE_MISC)) || defined (__PURE_INTEL_C99_HEADERS__)
++#if ((!defined(__linux__) || !defined(__USE_MISC)) && !defined(_NETBSD_SOURCE)) || defined (__PURE_INTEL_C99_HEADERS__)
+ typedef enum ___LIB_VERSIONIMF_TYPE {
+      _IEEE_ = -1    /* IEEE-like behavior    */
+     ,_SVID_         /* SysV, Rel. 4 behavior */

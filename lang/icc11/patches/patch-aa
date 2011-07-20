@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2011/07/20 10:35:19 alnsn Exp $
+
+Add ifdef(__NetBSD__).
+
+--- icc11/include/complex.h.orig	2009-10-03 22:44:32.000000000 +0100
++++ icc11/include/complex.h
+@@ -54,7 +54,7 @@ extern "C" {
+ #endif
+ 
+ /* for Microsoft compatibility */
+-#if !defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__QNX__) && !defined(__INTEL_COMPILER)
++#if !defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__) && !defined(__INTEL_COMPILER)
+ #define _LIBIMF_LONGLONG __int64
+ #else
+ #define _LIBIMF_LONGLONG long long int
+@@ -75,7 +75,7 @@ extern "C" {
+ 
+ #if !defined(__cplusplus)  /* No _Complex or GNU __complex__ types available for C++ */
+ 
+-#if (!defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__QNX__)) || defined(__PURE_INTEL_C99_HEADERS__)
++#if (!defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__)) || defined(__PURE_INTEL_C99_HEADERS__)
+ # define complex		_Complex
+ # define _Complex_I	(1.0iF)
+ # undef I

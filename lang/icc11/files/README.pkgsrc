@@ -1,0 +1,49 @@
+Disclaimer: this document is not a part of Intel distribution.
+
+How to use pkgsrc with the Intel C++ Compiler
+=============================================
+
+License
+-------
+
+The compiler will search for a license file in a directory specified
+by ${INTEL_LICENSE_FILE} variable if it's set, then in
+@ICC_PREFIX@/licenses, ${HOME}/intel/licenses and /opt/intel/licenses
+directories.
+
+There is one caveat, though.  Pkgsrc creates a fake home directory
+so ${HOME}/intel/licenses is not a good choice for building
+packages.
+
+Bootstrap
+---------
+
+Some options below are probably redundant but these commands work
+for me:
+
+$ cat > /tmp/mk-fragment <<EOF
+PKGSRC_COMPILER=icc
+ICCBASE=@ICC_PREFIX@
+NOGCCERROR=yes
+EOF
+
+$ env PKGSRC_COMPILER=icc             \
+>     ICCBASE=@ICC_PREFIX@          \
+>     NOGCCERROR=yes                  \
+>     CC=@ICC_PREFIX@/bin/icc       \
+>     CPP='@ICC_PREFIX@/bin/icc -E' \
+>     CXX=@ICC_PREFIX@/bin/icpc     \
+> ./bootstrap                         \
+>     --compiler=icc                  \
+>     --mk-fragment=/tmp/mk-fragment  \
+>    ...
+
+Building Packages
+-----------------
+
+Add these lines to your mk.conf file:
+
+PKGSRC_COMPILER=icc
+ICCBASE=@ICC_PREFIX@
+NOGCCERROR=yes
+

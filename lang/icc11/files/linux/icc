@@ -1,0 +1,24 @@
+#!/bin/sh
+
+LANG=C
+LC_MESSAGES=C
+export LANG LC_MESSAGES
+
+icc_arch=@ICC_ARCH@
+
+for opt in "$@"
+do
+	case "${opt}"
+	in
+	-m32) icc_arch=ia32    ;;
+	-m64) icc_arch=intel64 ;;
+	esac
+done
+
+INTEL_LICENSE_FILE="${INTEL_LICENSE_FILE:+${INTEL_LICENSE_FILE}:}@ICC_PREFIX@/licenses:/opt/intel/licenses:${HOME}/intel/licenses"
+export INTEL_LICENSE_FILE
+
+PATH="@ICC_PREFIX@/bin/${icc_arch}:@GCC_PREFIX@/bin:${PATH:-/bin:/usr/bin}"
+export PATH
+
+exec ${0##*/} "-Qlocation,as,@BINUTILS_PREFIX@/bin" "$@"

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2011/07/20 10:35:19 alnsn Exp $
+
+Add ifdef(__NetBSD__).
+
+--- icc11/include/fenv.h.orig	2009-10-03 22:44:32.000000000 +0100
++++ icc11/include/fenv.h
+@@ -28,7 +28,7 @@ extern "C" {
+ 
+ #if defined(_DLL) && (defined(_WIN32) || defined(_WIN64))   /* Windows DLL */
+ # define _FENV_PUBAPI __declspec(dllimport) __cdecl
+-#elif defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__QNX__)   /* Linux, MacOS, FreeBSD or QNX */
++#elif defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__QNX__)   /* Linux, MacOS, FreeBSD, NetBSD or QNX */
+ # define _FENV_PUBAPI                             /* do not change this line! */
+ #else                                             /* Windows static */
+ # define _FENV_PUBAPI __cdecl
