@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 07:20:23 minskim Exp $
-share/texmf-dist/fonts/afm/hoekwater/stmaryrd/stmary10.afm
-share/texmf-dist/fonts/afm/hoekwater/stmaryrd/stmary5.afm
-share/texmf-dist/fonts/afm/hoekwater/stmaryrd/stmary6.afm
-share/texmf-dist/fonts/afm/hoekwater/stmaryrd/stmary7.afm
-share/texmf-dist/fonts/afm/hoekwater/stmaryrd/stmary8.afm
-share/texmf-dist/fonts/afm/hoekwater/stmaryrd/stmary9.afm
+@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:25:55 minskim Exp $
+share/texmf-dist/fonts/afm/public/stmaryrd/stmary10.afm
+share/texmf-dist/fonts/afm/public/stmaryrd/stmary5.afm
+share/texmf-dist/fonts/afm/public/stmaryrd/stmary6.afm
+share/texmf-dist/fonts/afm/public/stmaryrd/stmary7.afm
+share/texmf-dist/fonts/afm/public/stmaryrd/stmary8.afm
+share/texmf-dist/fonts/afm/public/stmaryrd/stmary9.afm
 share/texmf-dist/fonts/map/dvips/stmaryrd/stmaryrd.map
 share/texmf-dist/fonts/source/public/stmaryrd/stmary10.mf
 share/texmf-dist/fonts/source/public/stmaryrd/stmary5.mf
@@ -23,17 +23,17 @@ share/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
 share/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
 share/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
 share/texmf-dist/fonts/tfm/public/stmaryrd/stmary9.tfm
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary10.pfb
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary10.pfm
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary5.pfb
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary5.pfm
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary6.pfb
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary6.pfm
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary7.pfb
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary7.pfm
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary8.pfb
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary8.pfm
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary9.pfb
-share/texmf-dist/fonts/type1/hoekwater/stmaryrd/stmary9.pfm
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfm
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary5.pfb
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary5.pfm
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary6.pfb
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary6.pfm
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary7.pfb
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary7.pfm
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfm
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary9.pfb
+share/texmf-dist/fonts/type1/public/stmaryrd/stmary9.pfm
 share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
 share/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
