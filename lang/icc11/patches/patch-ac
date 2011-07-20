@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2011/07/20 10:35:19 alnsn Exp $
+
+Add ifdef(__NetBSD__).
+
+--- icc11/include/ia32/xmmintrin.h.orig	2009-10-03 22:44:35.000000000 +0100
++++ icc11/include/ia32/xmmintrin.h
+@@ -455,7 +455,7 @@ extern __m128  __cdecl _mm_cvtsi64_ss(__
+ /*
+  * Include the SSE2 definitions for compatibility with gcc.
+  */
+-#if defined (__linux__) || defined (__QNX__) || defined(__APPLE__) || defined(__FreeBSD__)
++#if defined (__linux__) || defined (__QNX__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <emmintrin.h>
+ #endif
+ 
