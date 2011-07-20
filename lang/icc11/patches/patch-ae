@@ -1,0 +1,67 @@
+$NetBSD: patch-ae,v 1.1 2011/07/20 10:35:19 alnsn Exp $
+
+Add ifdef(__NetBSD__) and definitions of FP_* constants on NetBSD.
+
+--- icc11/include/mathimf.h.orig	2009-10-03 22:44:32.000000000 +0100
++++ icc11/include/mathimf.h
+@@ -53,7 +53,7 @@
+ # define __IMFCOMPLEXON
+ #endif
+ 
+-#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__QNX__)
++#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__QNX__)
+ # if defined(fpclassify)
+ #  undef fpclassify
+ # endif
+@@ -77,7 +77,7 @@
+ # endif
+ #endif /* __linux__ */
+ 
+-#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__QNX__)
++#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__QNX__)
+ # if defined(isgreater)
+ #  undef isgreater
+ # endif
+@@ -99,7 +99,7 @@
+ #endif /* __linux__ || __APPLE__ */
+ 
+ #if !(defined(__unix__) || defined(__APPLE__) || defined(__QNX__)) /* We need to define FP_ILOGB0, FP_ILOGBNAN */
+-#if (defined(__FreeBSD__)) && !(defined(__ECL) || defined(__ECC))   /* FreeBSD - for other unix macro are defined in included math.h*/           
++#if (defined(__FreeBSD__) || defined(__NetBSD__)) && !(defined(__ECL) || defined(__ECC))   /* FreeBSD & NetBSD - for other unix macro are defined in included math.h*/ 
+ #define FP_ILOGB0	(-2147483647 - 1)
+ #define FP_ILOGBNAN (-2147483647 - 1)
+ #else /* Windows */
+@@ -108,7 +108,7 @@
+ #endif
+ #endif
+ 
+-#if !defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__QNX__)
++#if !defined(__linux__) && !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__QNX__)
+ static unsigned int __huge_valf[] = {0x7f800000};
+ #define HUGE_VALF (*(double *) __huge_valf)
+ static unsigned int __huge_vall[] = {0, 0, 0x00007f80, 0};
+@@ -172,6 +172,15 @@ extern "C" {
+ # define FP_ZERO        (16)
+ # define FP_SUBNORMAL   (8)
+ # define FP_NORMAL      (4)
++#elif defined(__NetBSD__)
++#define	FP_INFINITE	0x00
++#define	FP_NAN		0x01
++#define	FP_NORMAL	0x02
++#define	FP_SUBNORMAL	0x03
++#define	FP_ZERO		0x04
++/* NetBSD extensions */
++#define	_FP_LOMD	0x80		/* range for machine-specific classes */
++#define	_FP_HIMD	0xff
+ #else
+ # define FP_NAN       (0)
+ # define FP_INFINITE  (1)
+@@ -286,7 +295,7 @@ _LIBIMF_EXT _LIBIMF_INT __signbitl     (
+     )
+ 
+ 
+-#if defined (__FreeBSD__)
++#if defined (__FreeBSD__) || defined(__NetBSD__)
+ 
+ #define fpclassify( __x__ ) __IMFC99MACRO1ARG_ALL( __x__, fpclassify, __, f, __, d, __, l)
+ #define isinf( __x__ )      __IMFC99MACRO1ARG_ALL( __x__, isinf,      __, f,   ,  , __, l)
