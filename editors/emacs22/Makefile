@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 14:40:42 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/07/20 23:24:05 tron Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
@@ -21,7 +21,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake gzip mktemp:run perl:run pkg-config
 GNU_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 SETGIDGAME=		yes
 
@@ -57,6 +57,16 @@ SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/updat
 
 .if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
 CPPFLAGS+=		-DDFLY_CRT_USRLIB
+.endif
+
+.include "../../mk/compiler.mk"
+
+# "emacs" uses the C pre-processor to generate makefiles. The C pre-processor
+# of newer GCC version is designed to break this by purpose. We work around
+# that using the traditional mode to generate makefiles. 
+.if !emtpy(CC_VERSION:Mgcc-[4-9].*)
+CPP+=		-traditional
+CONFIGURE_ENV+=	CPP=${CPP:Q}
 .endif
 
 post-extract:
