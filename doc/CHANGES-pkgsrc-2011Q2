@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.8 2011/07/16 21:13:32 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.9 2011/07/20 02:38:29 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -19,3 +19,5 @@ Pullup ticket #3473 - requested by drochner
 audio/libsndfile: security patches
 Pullup ticket #3474 - requested by drochner
 print/foomatic4-filters: security patch
+Pullup ticket #3476 - requested by tron
+net/wireshark: security update
