@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1723 2011/07/20 02:18:46 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1724 2011/07/20 02:26:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2653,3 +2653,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-palatino to 2010.21993 [minskim 2011-07-20]
 	Updated fonts/tex-times to 2010.21993 [minskim 2011-07-20]
 	Updated fonts/tex-zapfchan to 2010.21993 [minskim 2011-07-20]
+	Updated fonts/tex-stmaryrd to 2010 [minskim 2011-07-20]
+	Updated fonts/tex-stmaryrd-doc to 2010 [minskim 2011-07-20]
