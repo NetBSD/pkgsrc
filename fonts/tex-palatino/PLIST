@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/04 22:14:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:13:53 minskim Exp $
 share/texmf-dist/dvips/palatino/config.upl
 share/texmf-dist/fonts/afm/adobe/palatino/pplb8a.afm
 share/texmf-dist/fonts/afm/adobe/palatino/pplbi8a.afm
@@ -105,10 +105,6 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplro.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplrre.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplrrn.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/palatino/rpplru.tfm
-share/texmf-dist/fonts/tfm/groff/palatino/pplb8g.tfm
-share/texmf-dist/fonts/tfm/groff/palatino/pplbi8g.tfm
-share/texmf-dist/fonts/tfm/groff/palatino/pplr8g.tfm
-share/texmf-dist/fonts/tfm/groff/palatino/pplri8g.tfm
 share/texmf-dist/fonts/tfm/urw35vf/palatino/uplb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/palatino/uplb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/palatino/uplb8r.tfm
