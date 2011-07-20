@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 19:53:14 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/20 02:18:17 minskim Exp $
 
 DISTNAME=	zapfchan
-PKGNAME=	tex-${DISTNAME}-2010
-TEXLIVE_REV=	21570
+PKGNAME=	tex-${DISTNAME}-2010.21993
+TEXLIVE_REV=	21993
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Zapf Chancery fonts
