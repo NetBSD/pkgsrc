@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1727 2011/07/20 11:07:01 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1728 2011/07/20 11:45:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2658,3 +2658,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/dhcpd-pools to 2.16 [adam 2011-07-20]
 	Added lang/icc11 version 11.1.080 [alnsn 2011-07-20]
 	Updated math/ruby-spreadsheet to 0.6.5.6 [obache 2011-07-20]
+	Updated www/squid31 to 3.1.14 [adam 2011-07-20]
