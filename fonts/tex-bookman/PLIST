@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/20 23:33:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:03:25 minskim Exp $
 share/texmf-dist/dvips/bookman/config.ubk
 share/texmf-dist/fonts/afm/adobe/bookman/pbkd8a.afm
 share/texmf-dist/fonts/afm/adobe/bookman/pbkdi8a.afm
@@ -55,10 +55,6 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/bookman/rpbkd.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/bookman/rpbkdi.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/bookman/rpbkl.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/bookman/rpbkli.tfm
-share/texmf-dist/fonts/tfm/groff/bookman/pbkd8g.tfm
-share/texmf-dist/fonts/tfm/groff/bookman/pbkdi8g.tfm
-share/texmf-dist/fonts/tfm/groff/bookman/pbkl8g.tfm
-share/texmf-dist/fonts/tfm/groff/bookman/pbkli8g.tfm
 share/texmf-dist/fonts/tfm/urw35vf/bookman/ubkb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/bookman/ubkb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/bookman/ubkb8r.tfm
