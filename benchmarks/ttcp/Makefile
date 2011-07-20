@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/07/11 10:35:09 tron Exp $
+# $NetBSD: Makefile,v 1.18 2011/07/20 21:48:29 tron Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -16,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
+MAKE_ENV+=		NOGCCERROR=yes
 WRKSRC=			${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
