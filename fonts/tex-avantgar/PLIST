@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/19 01:46:23 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/20 02:00:15 minskim Exp $
 share/texmf-dist/dvips/avantgar/config.uag
 share/texmf-dist/fonts/afm/adobe/avantgar/pagd8a.afm
 share/texmf-dist/fonts/afm/adobe/avantgar/pagdo8a.afm
@@ -49,10 +49,6 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagd.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagdo.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagk.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/avantgar/rpagko.tfm
-share/texmf-dist/fonts/tfm/groff/avantgar/pagd8g.tfm
-share/texmf-dist/fonts/tfm/groff/avantgar/pagdo8g.tfm
-share/texmf-dist/fonts/tfm/groff/avantgar/pagk8g.tfm
-share/texmf-dist/fonts/tfm/groff/avantgar/pagko8g.tfm
 share/texmf-dist/fonts/tfm/urw35vf/avantgar/uagb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/avantgar/uagb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/avantgar/uagb8r.tfm
