@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/09/25 11:19:10 tron Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/07/20 18:42:44 tron Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -52,10 +52,12 @@ share/wireshark/colorfilters
 ${PLIST.lua}share/wireshark/console.lua
 share/wireshark/dfilters
 share/wireshark/dftest.html
+share/wireshark/diameter/Cisco.xml
 share/wireshark/diameter/Ericsson.xml
 share/wireshark/diameter/TGPPGmb.xml
 share/wireshark/diameter/TGPPRx.xml
 share/wireshark/diameter/TGPPSh.xml
+share/wireshark/diameter/Vodafone.xml
 share/wireshark/diameter/chargecontrol.xml
 share/wireshark/diameter/dictionary.dtd
 share/wireshark/diameter/dictionary.xml
@@ -95,6 +97,7 @@ ${PLIST.lua}share/wireshark/init.lua
 share/wireshark/ipmap.html
 share/wireshark/manuf
 share/wireshark/mergecap.html
+share/wireshark/pdml2html.xsl
 share/wireshark/radius/README.radius_dictionary
 share/wireshark/radius/dictionary
 share/wireshark/radius/dictionary.3com
@@ -130,6 +133,7 @@ share/wireshark/radius/dictionary.compat
 share/wireshark/radius/dictionary.cosine
 share/wireshark/radius/dictionary.dhcp
 share/wireshark/radius/dictionary.digium
+share/wireshark/radius/dictionary.eltex
 share/wireshark/radius/dictionary.epygi
 share/wireshark/radius/dictionary.ericsson
 share/wireshark/radius/dictionary.erx
