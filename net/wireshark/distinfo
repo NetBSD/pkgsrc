@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.46 2011/07/19 21:29:53 tron Exp $
+$NetBSD: distinfo,v 1.47 2011/07/20 18:42:44 tron Exp $
 
-SHA1 (wireshark-1.4.8.tar.bz2) = 8f9d0a920d00ac22ae0b2fa5844adbadc7e2de1e
-RMD160 (wireshark-1.4.8.tar.bz2) = 970ada8ccbbca17695038faf4c0bca83d126d9a4
-Size (wireshark-1.4.8.tar.bz2) = 20505798 bytes
+SHA1 (wireshark-1.6.1.tar.bz2) = e4ff6150f25be96a0b1d7e33da51001d453e7828
+RMD160 (wireshark-1.6.1.tar.bz2) = ef1f76f2b1abe7db253f80e36546aa2d828268b3
+Size (wireshark-1.6.1.tar.bz2) = 21305013 bytes
 SHA1 (patch-aa) = d0744f069ac2d3a8a43b810e1f958360d99200a9
 SHA1 (patch-ab) = 5ae79916603f04c2d362c764d39f0c99728e716c
 SHA1 (patch-ac) = 4e985520ea4b118aea6fc001f256b5de96de7840
-SHA1 (patch-ad) = a09b5ac9e836ef01fbd6ba103de00d08c0af2800
 SHA1 (patch-ae) = 7af195e797f8636a9636d30cdea4ee464fd853df
-SHA1 (patch-ba) = 49825d82605a665f54a5cdb6ccb364e55c0e0ffa
-SHA1 (patch-bb) = 1e16337d1894f196f61b233423d729246dea33b5
+SHA1 (patch-ba) = f2fa69d1254b94c7b6b28d5e056c211a019d1db9
+SHA1 (patch-bb) = 0758ca0be8054b8b95bb56a304605e6fea0a8f72
 SHA1 (patch-bc) = 052ede4ba58502117fe7b355e22a906ff65b773e
