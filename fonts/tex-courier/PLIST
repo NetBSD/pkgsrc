@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/18 21:39:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/07/20 02:06:03 minskim Exp $
 share/texmf-dist/dvips/courier/config.ucr
 share/texmf-dist/fonts/afm/adobe/courier/pcrb8a.afm
 share/texmf-dist/fonts/afm/adobe/courier/pcrbo8a.afm
@@ -85,10 +85,6 @@ share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrb.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrbo.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrr.tfm
 share/texmf-dist/fonts/tfm/cspsfonts-adobe/courier/rpcrro.tfm
-share/texmf-dist/fonts/tfm/groff/courier/pcrb8g.tfm
-share/texmf-dist/fonts/tfm/groff/courier/pcrbo8g.tfm
-share/texmf-dist/fonts/tfm/groff/courier/pcrr8g.tfm
-share/texmf-dist/fonts/tfm/groff/courier/pcrro8g.tfm
 share/texmf-dist/fonts/tfm/urw35vf/courier/ucrb7t.tfm
 share/texmf-dist/fonts/tfm/urw35vf/courier/ucrb8c.tfm
 share/texmf-dist/fonts/tfm/urw35vf/courier/ucrb8r.tfm
