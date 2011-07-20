@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10439 2011/07/19 21:14:06 tron Exp $
+$NetBSD: TODO,v 1.10440 2011/07/20 11:45:23 adam Exp $
 
 Suggested new packages
 ======================
@@ -1201,7 +1201,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spamassassin-3.3.2
 	o spcaview-20060501
 	o srp_client-1.7.5
-	o squid-3.1.13
 	o ssh-askpass-1.2.4.1
 	o ssmtp-2.64
 	o star-1.5.1
