@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1725 2011/07/20 07:04:40 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1726 2011/07/20 10:44:33 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2656,3 +2656,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-stmaryrd to 2010 [minskim 2011-07-20]
 	Updated fonts/tex-stmaryrd-doc to 2010 [minskim 2011-07-20]
 	Updated net/dhcpd-pools to 2.16 [adam 2011-07-20]
+	Added lang/icc11 version 11.1.080 [alnsn 2011-07-20]
