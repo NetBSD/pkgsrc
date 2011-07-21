@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.7 2011/07/21 17:05:36 joerg Exp $
+
+For localtime_r, safer than adjusting the _XOPEN_SOURCE earlier in the file.
+
+--- libedataserver/e-time-utils.c.orig	2011-07-20 12:30:18.000000000 +0000
++++ libedataserver/e-time-utils.c
+@@ -13,6 +13,7 @@
+ 
+ /* For tm_gmtoff */
+ #define _BSD_SOURCE
++#define _NETBSD_SOURCE
+ 
+ #include <time.h>
+ #include <sys/time.h>
