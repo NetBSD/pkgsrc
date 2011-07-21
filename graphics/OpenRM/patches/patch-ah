@@ -1,13 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2005/06/23 04:02:48 jlam Exp $
+$NetBSD: patch-ah,v 1.2 2011/07/21 17:04:46 joerg Exp $
 
 --- /dev/null	2005-06-22 02:24:06.000000000 -0400
 +++ bin/mklib.libtool	2005-06-22 02:23:35.000000000 -0400
-@@ -0,0 +1,52 @@
+@@ -0,0 +1,48 @@
 +#!/bin/sh
 +
 +# Make a libtool archive
 +
-+# $Id: patch-ah,v 1.1 2005/06/23 04:02:48 jlam Exp $
++# $Id: patch-ah,v 1.2 2011/07/21 17:04:46 joerg Exp $
 +
 +#--common--------------------------------------------------------------
 +
@@ -49,9 +49,5 @@ $NetBSD: patch-ah,v 1.1 2005/06/23 04:02:48 jlam Exp $
 +
 +#--platform------------------------------------------------------------
 +
-+# build library objects
-+echo "Building libtool archive $LIBRARY.la"
-+libtool --mode=clean rm -f ${LIBRARY}.la
-+
 +# libtool specific build
-+libtool --mode=link cc ${LDFLAGS} -o ${LIBRARY}.la ${OBJECTS} ${DEPLIBS} -rpath ${PREFIX}/lib -version-info ${MAJOR}:${MINOR}
++libtool --mode=link ${REAL_CC} ${LDFLAGS} -o ${LIBRARY}.la ${OBJECTS} ${DEPLIBS} -rpath ${PREFIX}/lib -version-info ${MAJOR}:${MINOR}
