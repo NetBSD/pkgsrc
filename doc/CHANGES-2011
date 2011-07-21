@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1731 2011/07/20 19:09:39 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1732 2011/07/21 03:33:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2662,3 +2662,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/ruby-spreadsheet to 0.6.5.7 [obache 2011-07-20]
 	Updated net/wireshark to 1.6.1 [tron 2011-07-20]
 	Updated converters/qrencode to 3.1.1 [ryoon 2011-07-20]
+	Updated lang/ruby18-base to 1.8.7.334nb4 [taca 2011-07-21]
