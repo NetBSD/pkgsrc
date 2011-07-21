@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2011/07/20 23:41:12 tron Exp $
+# $NetBSD: hacks.mk,v 1.5 2011/07/21 01:35:44 tron Exp $
 
 .if !defined(EMACS_HACKS_MK)
 EMACS_HACKS_MK=	defined
@@ -9,11 +9,19 @@ EMACS_HACKS_MK=	defined
 ### On NetBSD/i386, gcc optimisation, at least for version 4.5.3 produces a
 ### "temacs" binary which segfaults.
 ###
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-.  if !empty(CC_VERSION:Mgcc-4.5.*)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.    if !empty(CC_VERSION:Mgcc-4.5.*)
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-O0
+.    endif
 .  endif
-.endif
+
+###
+### Workaround for PR pkg/39778
+###
+.  if !empty(MACHINE_PLATFORM:MNetBSD-[4-9].*-x86_64)
+pre-build:
+	${TOUCH} ${WRKSRC}/leim/quail/tsang-b5.el
+.  endif
 
 .endif  # EMACS_HACKS_MK
