@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2011/01/13 13:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2011/07/21 17:06:18 joerg Exp $
 
 DISTNAME=	ghostscript-8.71
 PKGREVISION=	7
@@ -59,7 +59,7 @@ CONFIGURE_ENV+=		ac_cv_func_fopen64=no
 # On Linux-*-x86_64, there was an error message:
 # gp_unix.o: relocation R_X86_64_32 against `a local symbol' can not be
 # used when making a shared object; recompile with -fPIC
-.if !empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=		-fPIC
 .endif
 
