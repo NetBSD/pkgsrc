@@ -1,0 +1,23 @@
+$NetBSD: patch-ak,v 1.1 2011/07/21 17:03:58 joerg Exp $
+
+Out of declarations are invalid.
+
+--- plus/xadbm.h.orig	2011-07-21 13:00:18.000000000 +0000
++++ plus/xadbm.h
+@@ -72,6 +72,7 @@ private:
+  * @param latter the latter datum.
+  * @return reference to a temporary instance.
+  */
++#if 0
+ qdbm::Datum qdbm::operator +(const qdbm::Datum& former, const qdbm::Datum& latter);
+ /**
+  * Temporary concatenation operator for Datum.
+@@ -87,7 +88,7 @@ qdbm::Datum qdbm::operator +(const qdbm:
+  * @return reference to a temporary instance.
+  */
+ qdbm::Datum qdbm::operator +(const char* str, const qdbm::Datum& datum);
+-
++#endif
+ 
+ 
+ /**
