@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2011/05/16 22:13:46 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.27 2011/07/21 17:07:11 joerg Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -37,8 +37,7 @@ CONFIGURE_ARGS+=	-optimized-qmake
 CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
 CONFIGURE_ARGS+=	-qt-gif	# qt4 does not write compressed GIFs
 CONFIGURE_ARGS.SunOS+=	-no-xrender
-CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*}
-CONFIGURE_ARGS+=	${LDFLAGS:M-Wl*:S/-Wl,//:S/-syslibroot,/-sdk /}
+CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-opensource -confirm-license
 OPSYSVARS+=		CONFIGURE_ARGS
 
