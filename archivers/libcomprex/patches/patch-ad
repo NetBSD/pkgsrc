@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2006/11/12 04:21:07 rillig Exp $
+$NetBSD: patch-ad,v 1.2 2011/07/21 14:31:52 joerg Exp $
 
 --- modules/scheme/curl/curl.c.orig	2003-01-01 07:22:34.000000000 +0100
 +++ modules/scheme/curl/curl.c	2006-11-12 05:16:12.000000000 +0100
-@@ -51,7 +51,9 @@ schemeGet(const char *scheme, const char
+@@ -23,7 +23,6 @@
+ #include <libcomprex/internal.h>
+ 
+ #include <curl/curl.h>
+-#include <curl/types.h>
+ #include <curl/easy.h>
+ 
+ static CxStatus
+@@ -51,7 +50,9 @@ schemeGet(const char *scheme, const char
  
  	curl_easy_setopt(curl, CURLOPT_URL, url);
  	curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1);
