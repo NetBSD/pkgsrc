@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2011/04/26 12:07:14 obache Exp $
+# $NetBSD: Makefile,v 1.57.2.1 2011/07/21 04:24:07 sbd Exp $
 #
 
 DISTNAME=	groff-1.20.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 
@@ -61,10 +61,12 @@ CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
 # "operating-system" is for the default .Os value (operating system
 # and version/release) and is usually displayed at bottom of man page.
 # XXX Use "pkgsrc" as default .Os value.
+# Also, avoid having pre-patched groff.info-2 installed (install uses wildcard)
 post-patch:
 	${SED}	-e "s,@@VOLUME_OPERATING_SYSTEM@@,${OPSYS},g"	\
 		-e "s,@@OPERATING_SYSTEM@@,pkgsrc,g"	\
 		${FILESDIR}/mdoc.local > ${WRKDIR}/mdoc.local
+	@${RM} ${WRKSRC}/doc/groff.info-2.orig
 
 # Groff installs its own man and ms macros as mgan and mgs if the
 # configure script thinks replacing the system ones is not safe. Since
