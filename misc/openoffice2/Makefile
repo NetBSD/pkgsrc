@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.87 2011/06/10 09:39:57 obache Exp $
+# $NetBSD: Makefile,v 1.88 2011/07/21 13:05:59 obache Exp $
 #
 
 OO_VER=			2.4.3
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
