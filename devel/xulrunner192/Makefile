@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/07/21 12:17:55 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/21 13:05:51 obache Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
+PKGREVISION=	1
 CATEGORIES=	devel www
 
 MAINTAINER=	tnn@NetBSD.org

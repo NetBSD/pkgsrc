@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2011/04/22 13:44:07 obache Exp $
+# $NetBSD: Makefile,v 1.39 2011/07/21 13:05:58 obache Exp $
 
 DISTNAME=	qalculate-gtk-0.9.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
