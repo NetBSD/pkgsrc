@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2011/06/10 21:57:07 obache Exp $
+# $NetBSD: Makefile,v 1.52 2011/07/21 13:05:57 obache Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Multilingual input method library
 
 CONFLICTS+=		uim-qt4-immodule-[0-9]*
