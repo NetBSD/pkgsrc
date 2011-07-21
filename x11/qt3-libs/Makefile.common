@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.73 2011/03/06 16:10:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.74 2011/07/21 17:07:11 joerg Exp $
 # used by x11/qt3-docs/Makefile
 # used by x11/qt3-libs/Makefile
 # used by x11/qt3-tools/Makefile
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	-prefix ${QTPREFIX}
 CONFIGURE_ARGS+=	-shared -sm -thread \
 			-system-zlib -system-libpng \
 			-system-libmng -system-libjpeg \
-			${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//:S/-dylib_file//:C/.*\.dylib\:.*\.dylib//}
+			${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-qt-gif	# qt3 does not write compressed GIFs
 
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
