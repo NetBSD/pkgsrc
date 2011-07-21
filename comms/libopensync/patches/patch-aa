@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2007/12/11 06:04:02 yyamano Exp $
+$NetBSD: patch-aa,v 1.3 2011/07/21 15:35:55 joerg Exp $
 
 --- formats/vformats-xml/vformat.c.orig	2007-03-27 20:49:27.000000000 +0900
 +++ formats/vformats-xml/vformat.c
@@ -26,8 +26,8 @@ $NetBSD: patch-aa,v 1.2 2007/12/11 06:04:02 yyamano Exp $
  			
 -			if (isalnum(a)) {
 -				if (isalnum(b)) {
-+			if (isalnum((int)a)) {
-+				if (isalnum((int)b)) {
++			if (isalnum((unsigned char)a)) {
++				if (isalnum((unsigned char)b)) {
  					/* e.g. ...N=C3=BCrnberg\r\n
  					 *          ^^^
  			       		 */
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.2 2007/12/11 06:04:02 yyamano Exp $
  					 */
  					char *tmplp = lp;
 -					if (*(++tmplp) == '\r' && *(++tmplp) == '\n' && isalnum(*(++tmplp))) {
-+					if (*(++tmplp) == '\r' && *(++tmplp) == '\n' && isalnum((int)*(++tmplp))) {
++					if (*(++tmplp) == '\r' && *(++tmplp) == '\n' && isalnum((unsigned char)*(++tmplp))) {
  						x1 = a;
  						x2 = *tmplp;
  						lp = tmplp;	
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.2 2007/12/11 06:04:02 yyamano Exp $
  				d = *(++tmplp);
  				e = *(++tmplp);
 -				if (b == '\r' && c == '\n' && isalnum(d) && isalnum(e)) {
-+				if (b == '\r' && c == '\n' && isalnum((int)d) && isalnum((int)e)) {
++				if (b == '\r' && c == '\n' && isalnum((unsigned char)d) && isalnum((unsigned char)e)) {
  					x1 = d;
  					x2 = e;
  					lp = tmplp;
@@ -55,8 +55,31 @@ $NetBSD: patch-aa,v 1.2 2007/12/11 06:04:02 yyamano Exp $
  
 -				a = tolower (x1);
 -				b = tolower (x2);
-+				a = tolower ((int)x1);
-+				b = tolower ((int)x2);
++				a = tolower ((unsigned char)x1);
++				b = tolower ((unsigned char)x2);
  
  				c = (((a>='a'?a-'a'+10:a-'0')&0x0f) << 4)
  					| ((b>='a'?b-'a'+10:b-'0')&0x0f);
+@@ -1751,11 +1751,11 @@ static const char *base64_alphabet = "AB
+ 
+ //static unsigned char _evc_base64_rank[256];
+ 
+-static void base64_init(char *rank)
++static void base64_init(char *rank, size_t len)
+ {
+ 	int i;
+ 
+-	memset(rank, 0xff, sizeof(rank));
++	memset(rank, 0xff, len);
+ 	for (i=0;i<64;i++) {
+ 		rank[(unsigned int)base64_alphabet[i]] = i;
+ 	}
+@@ -1880,7 +1880,7 @@ static size_t base64_encode_step(unsigne
+ static size_t base64_decode_step(unsigned char *in, size_t len, unsigned char *out, int *state, unsigned int *save)
+ {
+ 	unsigned char base64_rank[256];
+-	base64_init((char*)base64_rank);
++	base64_init((char*)base64_rank, sizeof(base64_rank));
+ 	
+ 	register unsigned char *inptr, *outptr;
+ 	unsigned char *inend, c;
