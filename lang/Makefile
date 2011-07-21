@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.304 2011/06/17 12:39:46 obache Exp $
+# $NetBSD: Makefile,v 1.305 2011/07/21 04:52:55 dholland Exp $
 #
 
 COMMENT=	Programming languages
@@ -68,6 +68,7 @@ SUBDIR+=	guile16
 SUBDIR+=	gwydion-dylan
 SUBDIR+=	heirloom-awk
 SUBDIR+=	hugs
+SUBDIR+=	icc11
 SUBDIR+=	icon
 SUBDIR+=	inform
 SUBDIR+=	intercal
