@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2011/04/22 13:44:42 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/07/21 13:06:02 obache Exp $
 #
 
 DISTNAME=	gnome-device-manager-0.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.bz2
