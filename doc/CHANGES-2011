@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1733 2011/07/22 03:19:19 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1734 2011/07/22 03:41:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2664,3 +2664,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated converters/qrencode to 3.1.1 [ryoon 2011-07-20]
 	Updated lang/ruby18-base to 1.8.7.334nb4 [taca 2011-07-21]
 	Updated devel/ruby-rdoc to 3.8 [taca 2011-07-22]
+	Updated devel/ruby-railties to 3.0.9nb1 [taca 2011-07-22]
