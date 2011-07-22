@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1735 2011/07/22 07:31:49 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.1736 2011/07/22 11:31:35 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-rdoc to 3.8 [taca 2011-07-22]
 	Updated devel/ruby-railties to 3.0.9nb1 [taca 2011-07-22]
 	Updated mail/thunderbird to 3.1.11 [tnn 2011-07-22]
+	Updated net/btpd to 0.16 [hauke 2011-07-22]
