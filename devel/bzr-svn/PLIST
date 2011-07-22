@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2009/09/09 05:45:08 epg Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/07/22 14:17:37 obache Exp $
+${PYSITELIB}/bzr_svn-${PKGVERSION}-py2.6.egg-info
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyo
