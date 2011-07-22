@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1471 2011/07/15 13:35:56 obache Exp $
+# $NetBSD: Makefile,v 1.1472 2011/07/22 14:16:06 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -1226,6 +1226,7 @@ SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
 SUBDIR+=	py-sysctl
+SUBDIR+=	py-testtools
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-urwid
