@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2011/06/10 09:39:53 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/22 14:54:45 obache Exp $
 
-DISTNAME=	subvertpy-0.6.6
+DISTNAME=	subvertpy-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-#PKGREVISION=	1
-PKGREVISION=	2
 CATEGORIES=	devel scm
-MASTER_SITES=	http://launchpad.net/subvertpy/trunk/0.6.6/+download/
+MASTER_SITES=	http://launchpad.net/subvertpy/trunk/${PKGVERSION_NOREV}/+download/
 MASTER_SITES+=	http://samba.org/~jelmer/subvertpy/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://launchpad.net/subvertpy
 COMMENT=	Alternative Python bindings for Subversion
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=	SVN_PREFIX=${BUILDLINK_PREFIX.subversion-base}
-PYDISTUTILSPKG=	yes
 
 .include "../../devel/subversion-base/buildlink3.mk"
-.include "../../lang/python/extension.mk"
-#.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
