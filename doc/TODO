@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10442 2011/07/20 19:10:31 ryoon Exp $
+$NetBSD: TODO,v 1.10443 2011/07/22 03:42:24 taca Exp $
 
 Suggested new packages
 ======================
@@ -1284,6 +1284,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vcdimager-0.7.24
 	o vera-1.17
 	o vfu-4.09
+	o vlc-1.1.11
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
 	o viewvc-1.1.11
