@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.21 2011/04/05 15:03:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/07/22 12:28:26 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
+${PLIST.dynamic}${PLIST.xattr}lib/zsh/${PKGVERSION}/zsh/attr.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/cap.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/clone.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/compctl.so
