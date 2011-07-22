@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10443 2011/07/22 03:42:24 taca Exp $
+$NetBSD: TODO,v 1.10444 2011/07/22 13:21:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cfitsio-3.280
 	o cgdb-0.6.5
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.0.1
+	o cheese-3.0.2
 	o cherokee-1.2.1
 	o chromium-0.9.15
 	o chrony-1.26
@@ -941,6 +941,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
 	o mathomatic-15.6.2
+	o mdds-0.5.3
 	o mdocml-1.11.4
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
@@ -1087,6 +1088,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.3
 	o puf-0.93.3
 	o puppet-2.7
+	o putty-0.61
 	o puzzle-9173
 	o puzzles-9179
 	o pv-1.1.4
@@ -1170,6 +1172,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scrollz-1.9.99
 	o scrotwm-0.9.32
 	o scsh-1.3.0
+	o scummvm-1.3.1
 	o sdcc-2.9.0
 	o seahorse-2.32.0
 	o seamonkey-2.2
@@ -1292,8 +1295,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vile-9.8
 	o vim-7.3
 	o vinagre-3.0.2
-	o vino-2.32.2
-	o vino-3.0.2
+	o vino-2.32.2 [GNOME 2.32]
+	o vino-3.0.3
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
@@ -1312,6 +1315,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.24
 	o windowlab-1.40
+	o wine-devel-1.3.24
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
