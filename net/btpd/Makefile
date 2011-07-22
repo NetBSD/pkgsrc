@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.19 2010/02/07 19:15:43 zafer Exp $
+# $NetBSD: Makefile,v 1.20 2011/07/22 11:30:42 hauke Exp $
 
-DISTNAME=	btpd-0.15
-PKGREVISION=	1
+DISTNAME=	btpd-0.16
 CATEGORIES=	net
-MASTER_SITES=	http://www.murmeldjur.se/btpd/
+MASTER_SITES=	https://cloud.github.com/downloads/btpd/btpd/
 
 MAINTAINER=	rnyberg@murmeldjur.se
-HOMEPAGE=	http://www.murmeldjur.se/btpd/
+HOMEPAGE=	https://github.com/btpd/btpd/wiki/
 COMMENT=	Daemon for file sharing over bittorrent
 LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Force using "curl" for fetching the distribution file. It is only available
+# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
+FETCH_USING=		curl
 
 GNU_CONFIGURE=		YES
 

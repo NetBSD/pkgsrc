@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/05/06 04:03:52 snj Exp $
+$NetBSD: distinfo,v 1.5 2011/07/22 11:30:42 hauke Exp $
 
-SHA1 (btpd-0.15.tar.gz) = d613ae3d46f3ef548ad8a7e0df278b0e272bb66c
-RMD160 (btpd-0.15.tar.gz) = 203ea8942a5302ed26d9008fd1a08da358591d3c
-Size (btpd-0.15.tar.gz) = 144706 bytes
-SHA1 (patch-aa) = 29db22a6a7532054951ee273f953b84a12184078
+SHA1 (btpd-0.16.tar.gz) = fb7d396ed5c224dc6e743ac481e4feb4a3cf7b75
+RMD160 (btpd-0.16.tar.gz) = 05af142d8ecc582677909087bd53129561c86135
+Size (btpd-0.16.tar.gz) = 159716 bytes
