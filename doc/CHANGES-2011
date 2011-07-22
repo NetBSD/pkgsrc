@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1740 2011/07/22 15:00:11 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1741 2011/07/22 20:29:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2671,3 +2671,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/bzr-svn to 1.0.2 [obache 2011-07-22]
 	Updated devel/py-subvertpy to 0.8.2 [obache 2011-07-22]
 	Updated security/py-paramiko to 1.7.7.1 [obache 2011-07-22]
+	Updated fonts/vlgothic-ttf to 20110414 [ryoon 2011-07-22]
