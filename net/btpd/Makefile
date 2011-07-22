@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2011/07/22 11:30:42 hauke Exp $
+# $NetBSD: Makefile,v 1.21 2011/07/22 11:58:13 hauke Exp $
 
 DISTNAME=	btpd-0.16
 CATEGORIES=	net
 MASTER_SITES=	https://cloud.github.com/downloads/btpd/btpd/
 
-MAINTAINER=	rnyberg@murmeldjur.se
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/btpd/btpd/wiki/
 COMMENT=	Daemon for file sharing over bittorrent
 LICENSE=	2-clause-bsd
