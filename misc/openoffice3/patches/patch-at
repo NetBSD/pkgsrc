@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2011/07/22 03:03:28 mrg Exp $
+
+--- connectivity/source/parse/sqlbison.y.orig	2008-11-19 10:43:08.000000000 -0800
++++ connectivity/source/parse/sqlbison.y	2011-07-20 22:26:46.000000000 -0700
+@@ -3654,7 +3654,7 @@
+ }
+ 
+ // -------------------------------------------------------------------------
+-void OSQLParser::error(sal_Char *fmt)
++void OSQLParser::error(const sal_Char *fmt)
+ {
+ 	if(!m_sErrorMessage.getLength())
+ 	{

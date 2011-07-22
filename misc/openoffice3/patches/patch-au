@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2011/07/22 03:03:28 mrg Exp $
+
+--- connectivity/inc/connectivity/sqlparse.hxx.orig	2008-12-30 14:32:01.000000000 +0000
++++ connectivity/inc/connectivity/sqlparse.hxx
+@@ -213,7 +213,7 @@ namespace connectivity
+ 
+ 
+ 
+-		void error(sal_Char *fmt);
++		void error(const sal_Char *fmt);
+ 		int SQLlex();
+ #ifdef YYBISON
+ 		void setParseTree(OSQLParseNode * pNewParseTree);
