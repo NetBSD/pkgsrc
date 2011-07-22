@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1739 2011/07/22 14:55:00 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1740 2011/07/22 15:00:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2670,3 +2670,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/py-testtools version 0.9.11 [obache 2011-07-22]
 	Updated devel/bzr-svn to 1.0.2 [obache 2011-07-22]
 	Updated devel/py-subvertpy to 0.8.2 [obache 2011-07-22]
+	Updated security/py-paramiko to 1.7.7.1 [obache 2011-07-22]
