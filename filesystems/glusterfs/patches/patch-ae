@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.5 2011/07/19 07:54:31 manu Exp $
+$NetBSD: patch-ae,v 1.6 2011/07/23 01:14:44 manu Exp $
 
 On NetBSD use libperfuse(3), rename umount2(2) as unmount(2), and skip
 inexistant /etc/mtab management.
---- contrib/fuse-lib/mount.c.orig	2011-04-22 19:37:28.000000000 +0200
-+++ contrib/fuse-lib/mount.c	2011-05-19 12:32:47.000000000 +0200
+--- contrib/fuse-lib/mount.c.orig	2011-07-14 14:21:10.000000000 +0200
++++ contrib/fuse-lib/mount.c	2011-07-22 08:59:10.000000000 +0200
 @@ -19,16 +19,23 @@
  #include <limits.h>
  #include <fcntl.h>

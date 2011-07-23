@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.5 2011/07/19 07:54:31 manu Exp $
+$NetBSD: patch-ao,v 1.6 2011/07/23 01:14:44 manu Exp $
 
 NetBSD uses libperfuse(3). Also enable debugging (-g) for now,
 and let it build georeplication
---- configure.orig	2011-06-10 18:59:14.000000000 +0200
-+++ configure	2011-07-18 15:18:08.000000000 +0200
+--- configure.orig	2011-07-14 14:21:15.000000000 +0200
++++ configure	2011-07-22 08:59:47.000000000 +0200
 @@ -464,9 +464,9 @@
  # include <unistd.h>
  #endif"
@@ -47,7 +47,7 @@ and let it build georeplication
          GF_HOST_OS="GF_BSD_HOST_OS"
  	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -O0"
  	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
-@@ -22853,8 +22867,9 @@
+@@ -22854,8 +22868,9 @@
  s,@GF_GLUSTERFS_CFLAGS@,$GF_GLUSTERFS_CFLAGS,;t t
  s,@GF_CFLAGS@,$GF_CFLAGS,;t t
  s,@GF_LDFLAGS@,$GF_LDFLAGS,;t t

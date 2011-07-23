@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.8 2011/07/19 07:54:30 manu Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.9 2011/07/23 01:14:43 manu Exp $
 
 In order to use mount -t glusterfs, please install this link
 	ln -s ${PREFIX}/sbin/mount.glusterfs /sbin/mount_glusterfs
