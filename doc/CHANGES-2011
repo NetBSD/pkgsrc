@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1742 2011/07/23 01:16:03 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1743 2011/07/23 02:23:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2673,3 +2673,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/py-paramiko to 1.7.7.1 [obache 2011-07-22]
 	Updated fonts/vlgothic-ttf to 20110414 [ryoon 2011-07-22]
 	Updated filesystems/glusterfs to 3.2.2 [manu 2011-07-23]
+	Updated www/snownews to 1.5.12 [obache 2011-07-23]
