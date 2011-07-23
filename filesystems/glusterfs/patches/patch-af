@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2011/07/19 07:54:31 manu Exp $
+$NetBSD: patch-af,v 1.6 2011/07/23 01:14:44 manu Exp $
 
 Works around "error: 'TCP_KEEPALIVE' undeclared" on NetBSD
---- rpc/rpc-transport/socket/src/socket.c.orig	2011-04-22 19:37:28.000000000 +0200
-+++ rpc/rpc-transport/socket/src/socket.c	2011-05-19 12:32:50.000000000 +0200
+--- rpc/rpc-transport/socket/src/socket.c.orig	2011-07-14 14:21:10.000000000 +0200
++++ rpc/rpc-transport/socket/src/socket.c	2011-07-22 08:59:33.000000000 +0200
 @@ -397,9 +397,9 @@
  
          if (keepalive_intvl == GF_USE_DEFAULT_KEEPALIVE)
