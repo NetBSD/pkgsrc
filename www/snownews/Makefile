@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2011/04/22 13:45:00 obache Exp $
+# $NetBSD: Makefile,v 1.36 2011/07/23 02:22:43 obache Exp $
 
-DISTNAME=	snownews-1.5.11
-PKGREVISION=	1
+DISTNAME=	snownews-1.5.12
 CATEGORIES=	www
 MASTER_SITES=	http://kiza.kcore.de/software/snownews/download/
 
@@ -32,5 +31,6 @@ post-configure:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
