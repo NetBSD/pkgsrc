@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.5 2011/07/19 07:54:31 manu Exp $
+$NetBSD: patch-an,v 1.6 2011/07/23 01:14:44 manu Exp $
 
 NetBSD uses libperfuse(3). Also enable debugging (-g) for now,
 and let it build georeplication.
---- configure.ac.orig	2011-06-10 18:59:08.000000000 +0200
-+++ configure.ac	2011-07-18 15:17:46.000000000 +0200
-@@ -290,8 +290,11 @@
+--- configure.ac.orig	2011-07-14 14:21:10.000000000 +0200
++++ configure.ac	2011-07-22 08:59:39.000000000 +0200
+@@ -291,8 +291,11 @@
  case $host_os in
       linux*)
  #do nothing
@@ -16,7 +16,7 @@ and let it build georeplication.
  #disabling geo replication for non-linux platforms
  	enable_georeplication=no
          ;;
-@@ -413,8 +416,19 @@
+@@ -414,8 +417,19 @@
  	GF_GLUSTERFS_LDFLAGS="-lnsl -lresolv -lsocket"
          BUILD_FUSE_CLIENT=no
          FUSE_CLIENT_SUBDIR=""
@@ -36,7 +36,7 @@ and let it build georeplication.
          GF_HOST_OS="GF_BSD_HOST_OS"
  	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -O0"
  	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
-@@ -449,8 +463,9 @@
+@@ -450,8 +464,9 @@
  AC_SUBST(GF_GLUSTERFS_CFLAGS)
  AC_SUBST(GF_CFLAGS)
  AC_SUBST(GF_LDFLAGS)
