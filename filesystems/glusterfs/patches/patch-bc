@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.5 2011/07/19 07:54:31 manu Exp $
+$NetBSD: patch-bc,v 1.6 2011/07/23 01:14:44 manu Exp $
                  
 glibc dirname() modify the string it is given and returns it.
 glusterfs takes this behavior for granted, and assume that if it
@@ -14,8 +14,8 @@ At least NetBSD returns a static storage. glusterfs will return it to
 a calling function that has the responsability to free it, causing
 a SIGSEGV.
 
---- xlators/performance/quick-read/src/quick-read.c.orig	2011-04-22 19:37:28.000000000 +0200
-+++ xlators/performance/quick-read/src/quick-read.c	2011-05-19 12:44:01.000000000 +0200
+--- xlators/performance/quick-read/src/quick-read.c.orig	2011-07-22 09:00:09.000000000 +0200
++++ xlators/performance/quick-read/src/quick-read.c	2011-07-22 09:00:12.000000000 +0200
 @@ -80,8 +80,9 @@
  qr_loc_fill (loc_t *loc, inode_t *inode, char *path)
  {

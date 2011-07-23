@@ -1,10 +1,10 @@
-$NetBSD: patch-br,v 1.2 2011/07/19 07:54:31 manu Exp $
+$NetBSD: patch-br,v 1.3 2011/07/23 01:14:44 manu Exp $
 
 Hide .attribute to glusterfs clients in order to make sure it will
 not be distributed by the cluster/dht xlator
---- xlators/storage/posix/src/posix.c.orig	2011-06-19 11:02:41.000000000 +0200
-+++ xlators/storage/posix/src/posix.c	2011-06-19 11:05:41.000000000 +0200
-@@ -4094,8 +4094,21 @@
+--- xlators/storage/posix/src/posix.c.orig	2011-07-14 14:21:10.000000000 +0200
++++ xlators/storage/posix/src/posix.c	2011-07-22 09:01:30.000000000 +0200
+@@ -4313,8 +4313,21 @@
  
                  if ((!strcmp(real_path, base_path))
                      && (!strcmp(entry->d_name, GF_REPLICATE_TRASH_DIR)))
