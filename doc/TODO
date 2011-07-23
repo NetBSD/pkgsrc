@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10445 2011/07/23 02:23:26 obache Exp $
+$NetBSD: TODO,v 1.10446 2011/07/23 02:59:42 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -749,7 +749,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gupnp-igd-0.1.11
 	o gutenprint-5.2.7
 	o gvfs-1.6.7
-	o gwaei-3.0.0
 	o gworkspace-0.8.8
 	o gzip-1.4
 	o hackbot-2.21
