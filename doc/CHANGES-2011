@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1743 2011/07/23 02:23:26 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1744 2011/07/23 02:58:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2622,6 +2622,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-ltxmisc to 2010.21927 [minskim 2011-07-14]
 	Added print/tex-verbasef version 1.1 [minskim 2011-07-14]
 	Added print/tex-verbasef-doc version 1.1 [minskim 2011-07-14]
+	Updated misc/gwaei to 3.0.0 [ryoon 2011-07-14]
 	Updated print/diffpdf to 1.2.2 [ryoon 2011-07-15]
 	Updated devel/atk to 2.0.1 [ryoon 2011-07-15]
 	Updated graphics/pngcrush to 1.7.16 [adam 2011-07-15]
@@ -2674,3 +2675,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/vlgothic-ttf to 20110414 [ryoon 2011-07-22]
 	Updated filesystems/glusterfs to 3.2.2 [manu 2011-07-23]
 	Updated www/snownews to 1.5.12 [obache 2011-07-23]
+	Updated misc/gwaei to 3.0.2 [ryoon 2011-07-23]
