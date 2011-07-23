@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10444 2011/07/22 13:21:05 wiz Exp $
+$NetBSD: TODO,v 1.10445 2011/07/23 02:23:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -1196,7 +1196,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snd-10.6
 	o snes9x-1.53
 	o snort-2.9.0.5
-	o snownews-1.5.12
 	o solfege-3.20.1
 	o sope-4.6
 	o sound-juicer-2.32.0
