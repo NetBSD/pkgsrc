@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10446 2011/07/23 02:59:42 ryoon Exp $
+$NetBSD: TODO,v 1.10447 2011/07/23 12:12:27 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1200,6 +1200,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sound-juicer-2.32.0
 	o spamassassin-3.3.2
 	o spcaview-20060501
+	o spidermonkey-1.8.5
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o ssmtp-2.64
