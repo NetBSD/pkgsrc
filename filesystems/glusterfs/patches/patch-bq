@@ -1,5 +1,10 @@
---- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-06-10 18:59:07.000000000 +0200
-+++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-07-03 03:37:40.000000000 +0200
+$NetBSD: patch-bq,v 1.4 2011/07/23 01:14:44 manu Exp $
+
+Make sure glusterfsd listens on the same address family as glusterd: if
+glusterd uses inet, glusterfsd should not use inet6
+
+--- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-07-14 14:21:10.000000000 +0200
++++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-07-22 09:01:28.000000000 +0200
 @@ -88,8 +88,52 @@
          //TODO: set timestamp
          return 0;
