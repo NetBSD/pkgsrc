@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/24 08:49:29 cheusov Exp $
+${LUA_CDIR}/rex_pcre.la
