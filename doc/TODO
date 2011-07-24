@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10447 2011/07/23 12:12:27 ryoon Exp $
+$NetBSD: TODO,v 1.10448 2011/07/24 15:15:29 mef Exp $
 
 Suggested new packages
 ======================
@@ -356,6 +356,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o abcmidi-20110429
 	o accerciser-1.12.2 [GNOME 2.32]
 	o acme-091 [pkg/44771]
+	o acpica-utils-20110623
 	o acr-0.5.2
 	o acroread9-9.3.4 [wip]
 	o adocman-0.13
