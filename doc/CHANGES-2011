@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1745 2011/07/23 06:21:35 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1746 2011/07/24 08:49:40 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/snownews to 1.5.12 [obache 2011-07-23]
 	Updated misc/gwaei to 3.0.2 [ryoon 2011-07-23]
 	Updated net/mikutter to 0.0.3.13 [obache 2011-07-23]
+	Added devel/lua-lrexlib-pcre version 2.4.0 [cheusov 2011-07-24]
