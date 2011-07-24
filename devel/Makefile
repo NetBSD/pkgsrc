@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1472 2011/07/22 14:16:06 obache Exp $
+# $NetBSD: Makefile,v 1.1473 2011/07/24 09:53:32 cheusov Exp $
 #
 
 COMMENT=	Development utilities
@@ -407,6 +407,10 @@ SUBDIR+=	log4shib
 SUBDIR+=	ltsa
 SUBDIR+=	lua-alt-getopt
 SUBDIR+=	lua-filesystem
+SUBDIR+=	lua-lrexlib
+SUBDIR+=	lua-lrexlib-onig
+SUBDIR+=	lua-lrexlib-pcre
+SUBDIR+=	lua-lrexlib-posix
 SUBDIR+=	lua-mode
 SUBDIR+=	lua-stdlib
 SUBDIR+=	lua-stdlib-doc
