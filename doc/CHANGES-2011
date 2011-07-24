@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1748 2011/07/24 08:50:50 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1749 2011/07/24 08:51:37 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2680,3 +2680,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/lua-lrexlib-pcre version 2.4.0 [cheusov 2011-07-24]
 	Added devel/lua-lrexlib-posix version 2.4.0 [cheusov 2011-07-24]
 	Added devel/lua-lrexlib-onig version 2.4.0 [cheusov 2011-07-24]
+	Added devel/lua-lrexlib version 2.4.0 [cheusov 2011-07-24]
