@@ -1,0 +1,2 @@
+This package provides Lua module for POSIX regular expressions
+(libc's regexp is currently used).
