@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2010/12/25 14:03:57 jmcneill Exp $
+$NetBSD: patch-ab,v 1.5 2011/07/24 18:00:07 jmcneill Exp $
 
---- usbctl.c.orig	2002-02-25 00:50:55.000000000 +0000
-+++ usbctl.c
+--- usbctl.c.orig	2002-02-24 19:50:55.000000000 -0500
++++ usbctl.c	2011-07-24 09:56:59.000000000 -0400
 @@ -27,12 +27,18 @@
  #include <stdio.h>
  #include <stdlib.h>
@@ -156,7 +156,31 @@ $NetBSD: patch-ab,v 1.4 2010/12/25 14:03:57 jmcneill Exp $
  	case UDESC_CS_DEVICE:
  		if (*class == UICLASS_HID) {
  			usb_hid_descriptor_t *hid = p;
-@@ -1243,8 +1312,8 @@ prdesc(void *p, int *class, int *subclas
+@@ -1155,10 +1224,14 @@ prdesc(void *p, int *class, int *subclas
+ 			printf("\n");
+ 			for(k = 0; k < hid->bNumDescriptors; k++) {
+ 				int type, len;
+-				u_char buf[256];
++				u_char *buf;
+ 
+ 				type = hid->descrs[k].bDescriptorType;
+ 				len = UGETW(hid->descrs[k].wDescriptorLength);
++				buf = malloc(len);
++				if (buf == NULL) {
++					errx(1, "malloc failed (size=%d)\n", len);
++				}
+ 				if (type == UDESC_REPORT) {
+ 					getreportdesc(globf, *iface, k, buf, len, globaddr);
+ 					printf("Report descriptor\n");
+@@ -1169,6 +1242,7 @@ prdesc(void *p, int *class, int *subclas
+ 					printf("Unknown HID descriptor type %d\n", type);
+ 				}
+ 				printf("\n");
++				free(buf);
+ 			}
+ 		} else
+ 			goto def;
+@@ -1243,8 +1317,8 @@ prdesc(void *p, int *class, int *subclas
  	default:
  	def:
  		printf("Unknown descriptor (class %d/%d):\n", *class, *subclass);
@@ -167,7 +191,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/25 14:03:57 jmcneill Exp $
  		       );
  		break;
  	}
-@@ -1321,6 +1390,7 @@ main(int argc, char **argv)
+@@ -1321,6 +1395,7 @@ main(int argc, char **argv)
  
  	if (!doaddr)
  		prunits(f);
@@ -175,7 +199,7 @@ $NetBSD: patch-ab,v 1.4 2010/12/25 14:03:57 jmcneill Exp $
  	if (!nodisc) {
  		r = ioctl(f, USB_DISCOVER);
  		if (r < 0)
-@@ -1329,6 +1399,7 @@ main(int argc, char **argv)
+@@ -1329,6 +1404,7 @@ main(int argc, char **argv)
  		if (disconly)
  			exit(0);
  	}
