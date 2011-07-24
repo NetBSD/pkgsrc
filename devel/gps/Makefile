@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/07/19 18:32:13 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/24 13:11:43 obache Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
@@ -27,7 +27,7 @@ TPLS=			${PREFIX}/share/gps/templates
 
 .include "options.mk"
 
-# Doe to hardcoding on GPS' part, can't get python to work yet
+# Due to hardcoding on GPS' part, can't get python to work yet
 CONFIGURE_ARGS+=	--with-gmp=${PREFIX}
 CONFIGURE_ARGS+=	--with-python=no
 CONFIGURE_ARGS+=	--enable-shared-python=yes
