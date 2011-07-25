@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1753 2011/07/25 10:18:02 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1754 2011/07/25 11:37:14 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2685,3 +2685,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/parrot to 3.5.0 [he 2011-07-25]
 	Updated www/py-uwsgi to 0.9.8.3 [joerg 2011-07-25]
 	Updated textproc/icu to 4.8.1 [adam 2011-07-25]
+	Updated www/spawn-fcgi to 1.6.3nb3 [imil 2011-07-25]
