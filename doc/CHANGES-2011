@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1755 2011/07/25 17:50:39 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.1756 2011/07/25 23:00:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2687,3 +2687,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/icu to 4.8.1 [adam 2011-07-25]
 	Updated www/spawn-fcgi to 1.6.3nb3 [imil 2011-07-25]
 	Added graphics/lcms2 version 2.2 [jakllsch 2011-07-25]
+	Updated security/clamav to 0.97.2 [adam 2011-07-26]
