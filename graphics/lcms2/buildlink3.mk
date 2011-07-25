@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/07/25 17:48:55 jakllsch Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2011/07/25 17:53:17 jakllsch Exp $
 
 BUILDLINK_TREE+=	lcms2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lcms2
 LCMS2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lcms2+=	lcms2>=2.2
-BUILDLINK_PKGSRCDIR.lcms?=	../../jakllsch/lcms2
+BUILDLINK_PKGSRCDIR.lcms2?=	../../graphics/lcms2
 
 BUILDLINK_TARGETS+=	buildlink-include-lcms2
 
