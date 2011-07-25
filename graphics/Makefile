@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2011/07/15 13:56:09 obache Exp $
+# $NetBSD: Makefile,v 1.606 2011/07/25 17:50:03 jakllsch Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -228,6 +228,7 @@ SUBDIR+=	kphotoalbum
 SUBDIR+=	kphotobook
 SUBDIR+=	kphotools
 SUBDIR+=	lcms
+SUBDIR+=	lcms2
 SUBDIR+=	lensfun
 SUBDIR+=	lib3ds
 SUBDIR+=	libart
