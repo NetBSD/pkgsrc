@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.9 2010/12/07 17:58:13 adam Exp $
+$NetBSD: patch-af,v 1.10 2011/07/25 10:16:54 adam Exp $
 
---- runConfigureICU.orig	2010-08-30 19:24:42.000000000 +0000
+--- runConfigureICU.orig	2011-07-19 21:19:38.000000000 +0000
 +++ runConfigureICU
-@@ -276,7 +276,7 @@ case $platform in
-         DEBUG_CFLAGS='-g -O0'
-         DEBUG_CXXFLAGS='-g -O0'
+@@ -283,7 +283,7 @@ case $platform in
+         RELEASE_CFLAGS='-O3'
+         RELEASE_CXXFLAGS='-O3'
          ;;
 -    *BSD)
 +    *BSD | DragonFly)
