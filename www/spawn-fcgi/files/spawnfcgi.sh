@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: spawnfcgi.sh,v 1.3 2010/02/20 15:23:41 joerg Exp $
+# $NetBSD: spawnfcgi.sh,v 1.4 2011/07/25 11:36:29 imil Exp $
 #
 # PROVIDE: spawnfcgi
 # REQUIRE: DAEMON
@@ -37,6 +37,7 @@ spawnfcgi_start()
 		job_args=$(eval echo \$${name}_${job}_args)
 		job_user=$(eval echo \$${name}_${job}_user)
 		job_cwd=$(eval echo \$${name}_${job}_cwd)
+		job_port=$(eval echo \$${name}_${job}_port)
 		job_socket=$(eval echo \$${name}_${job}_socket)
 		job_socket_mode=$(eval echo \$${name}_${job}_socket_mode)
 		job_address=$(eval echo \$${name}_${job}_address)
