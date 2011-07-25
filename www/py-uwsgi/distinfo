@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/04/08 12:26:29 adam Exp $
+$NetBSD: distinfo,v 1.6 2011/07/25 10:15:00 joerg Exp $
 
-SHA1 (uwsgi-0.9.7.2.tar.gz) = e279c2c597d349d9cf463bc4d226db7123c43342
-RMD160 (uwsgi-0.9.7.2.tar.gz) = a6f0a548d6db46230946ec0a33395d5f5b119a58
-Size (uwsgi-0.9.7.2.tar.gz) = 306218 bytes
-SHA1 (patch-plugins_python_uwsgi_pymodule.c) = eafbba58cb88aed40c6e15695af32e0b94c1ff38
-SHA1 (patch-utils.c) = a8c125a32f2d433619c29a93d5adf0e1cc91f038
-SHA1 (patch-uwsgi.h) = 44c55b56055fb956153ff1a85449b26550506e6e
+SHA1 (uwsgi-0.9.8.3.tar.gz) = 780a96a2c32a0f7bb7f5a63353acca2fbd23a8e6
+RMD160 (uwsgi-0.9.8.3.tar.gz) = 8bfdaa9a503516378e834bca60dfa828b7bee9d2
+Size (uwsgi-0.9.8.3.tar.gz) = 351168 bytes
