@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.9 2010/12/07 17:58:13 adam Exp $
+$NetBSD: patch-ad,v 1.10 2011/07/25 10:16:54 adam Exp $
 
 --- icudefs.mk.in.orig	2010-12-07 12:14:06.000000000 +0000
 +++ icudefs.mk.in
-@@ -189,13 +189,13 @@ LIBICU = $(LIBPREFIX)$(ICUPREFIX)
+@@ -190,13 +190,13 @@ LIBICU = $(LIBPREFIX)$(ICUPREFIX)
  
  ## If we can't use the shared libraries, use the static libraries
  ifneq ($(ENABLE_SHARED),YES)
