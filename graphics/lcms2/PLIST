@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/25 17:48:55 jakllsch Exp $
+bin/jpgicc
+bin/linkicc
+bin/psicc
+bin/tificc
+bin/transicc
+include/lcms2.h
+include/lcms2_plugin.h
+lib/liblcms2.la
+lib/pkgconfig/lcms2.pc
+man/man1/jpgicc.1
+man/man1/tificc.1
+@pkgdir share/doc/lcms
