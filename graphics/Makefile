@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.606 2011/07/25 17:50:03 jakllsch Exp $
+# $NetBSD: Makefile,v 1.607 2011/07/26 21:39:45 jakllsch Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -60,6 +60,7 @@ SUBDIR+=	comix
 SUBDIR+=	compface
 SUBDIR+=	cpia2view
 SUBDIR+=	cqcam
+SUBDIR+=	darktable
 SUBDIR+=	dcraw
 SUBDIR+=	denemo
 SUBDIR+=	dia
