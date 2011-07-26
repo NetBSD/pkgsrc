@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1757 2011/07/26 06:08:33 agc Exp $
+$NetBSD: CHANGES-2011,v 1.1758 2011/07/26 13:01:03 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2664,6 +2664,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/wireshark to 1.6.1 [tron 2011-07-20]
 	Updated converters/qrencode to 3.1.1 [ryoon 2011-07-20]
 	Updated lang/ruby18-base to 1.8.7.334nb4 [taca 2011-07-21]
+	Updated graphics/radiance to 3.6.1nb7 [dholland 2011-07-21]
 	Updated devel/ruby-rdoc to 3.8 [taca 2011-07-22]
 	Updated devel/ruby-railties to 3.0.9nb1 [taca 2011-07-22]
 	Updated mail/thunderbird to 3.1.11 [tnn 2011-07-22]
