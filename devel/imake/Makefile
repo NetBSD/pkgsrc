@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/05/21 22:10:11 schwarz Exp $
+# $NetBSD: Makefile,v 1.11 2011/07/26 16:05:27 dholland Exp $
 
 DISTNAME=		imake-1.0.3
 CATEGORIES=		x11 devel
@@ -22,17 +22,24 @@ CONFIGURE_ENV+=		HAS_PERL=no
 REPLACE_SH+=		mkhtmlindex.sh
 
 .include "../../mk/compiler.mk"
-.if empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(PKGSRC_COMPILER:Mclang)
+# clang's cpp destroys whitespace, particularly hard tabs in makefiles,
+# which is fatal for imake.
+DEPENDS+=ucpp-[0-9]*:../../devel/ucpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="ucpp -s"
+
+.elif empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 
-.  if ${OPSYS} == "SunOS"
+.endif
+
+# This required with some C preprocessors and not others,
+# but is harmless when not required.
 SUBST_CLASSES+=		xmkmf
 SUBST_MESSAGE.xmkmf=	Fixing "xmkmf" script.
 SUBST_STAGE.xmkmf=	post-build
 SUBST_FILES.xmkmf=	xmkmf
 SUBST_SED.xmkmf=	-e "s/^configdirspec= */configdirspec=/"
-.  endif
-.endif
 
 .include "../../x11/xproto/buildlink3.mk"
 
