@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/07/26 06:05:00 agc Exp $
+
+There is a problem expanding the macro in base64.h, so we'll do it here
+
+--- tools/virsh.c	2011/07/17 21:47:08	1.1
++++ tools/virsh.c	2011/07/17 21:48:19
+@@ -8862,7 +8862,7 @@
+     if (vshCommandOptString(cmd, "base64", &base64) <= 0)
+         goto cleanup;
+ 
+-    if (!base64_decode_alloc(base64, strlen(base64), &value, &value_size)) {
++    if (!base64_decode_alloc_ctx(NULL, base64, strlen(base64), &value, &value_size)) {
+         vshError(ctl, "%s", _("Invalid base64 data"));
+         goto cleanup;
+     }

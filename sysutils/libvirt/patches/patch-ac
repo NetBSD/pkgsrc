@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/07/26 06:05:00 agc Exp $
+
+Make sure the header inclusion guard is unique
+
+--- gnulib/lib/base64.h	2011/07/17 21:51:19	1.1
++++ gnulib/lib/base64.h	2011/07/17 21:52:04
+@@ -18,8 +18,8 @@
+    along with this program; if not, write to the Free Software Foundation,
+    Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.  */
+ 
+-#ifndef BASE64_H
+-# define BASE64_H
++#ifndef GNULIB_LIB_BASE64_H
++# define GNULIB_LIB_BASE64_H
+ 
+ /* Get size_t. */
+ # include <stddef.h>
+@@ -60,4 +60,4 @@
+ #define base64_decode_alloc(in, inlen, out, outlen) \
+         base64_decode_alloc_ctx (NULL, in, inlen, out, outlen)
+ 
+-#endif /* BASE64_H */
++#endif /* GNULIB_LIB_BASE64_H */
