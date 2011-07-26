@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1758 2011/07/26 13:01:03 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1759 2011/07/26 21:38:59 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2690,3 +2690,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/lcms2 version 2.2 [jakllsch 2011-07-25]
 	Updated security/clamav to 0.97.2 [adam 2011-07-26]
 	Added sysutils/libvirt version 0.9.3 [agc 2011-07-25]
+	Added graphics/darktable version 0.9 [jakllsch 2011-07-26]
