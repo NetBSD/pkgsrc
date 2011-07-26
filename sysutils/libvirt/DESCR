@@ -1,0 +1,24 @@
+libvirt is:
++ A toolkit to interact with the virtualization capabilities of recent
+  versions of operating systems, see our project goals for details.
++ A long term stable C API
++ A set of bindings for common languages
++ A CIM provider for the DMTF virtualization schema
++ A QMF agent for the AMQP/QPid messaging system
+libvirt supports:
++ The KVM/QEMU Linux hypervisor
++ The Xen hypervisor
++ The LXC Linux container system
++ The OpenVZ Linux container system
++ The User Mode Linux paravirtualized kernel
++ The VirtualBox hypervisor
++ The VMware ESX and GSX hypervisors
++ The VMware Workstation and Player hypervisors
++ Virtual networks using bridging, NAT, VEPA and VN-LINK.
++ Storage on IDE/SCSI/USB disks, FibreChannel, LVM, iSCSI, NFS and filesystems
+libvirt provides:
++ Remote management using TLS encryption and x509 certificates
++ Remote management authenticating with Kerberos and SASL
++ Local access control using PolicyKit
++ Zero-conf discovery using Avahi multicast-DNS
++ Management of virtual machines, virtual networks and storage
