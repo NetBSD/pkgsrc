@@ -1,0 +1,41 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1.1.1 2011/07/26 21:37:47 jakllsch Exp $
+
+Various thing to possibly improve portability.
+
+--- src/CMakeLists.txt.orig	2011-07-02 03:15:32.000000000 +0000
++++ src/CMakeLists.txt
+@@ -219,7 +219,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} 
+ 
+ if(NOT APPLE)
+   # apple build fails on deprecated warnings..
+-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror")
++  #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror")
+ endif(NOT APPLE)
+ 
+ if(NOT WIN32)
+@@ -227,17 +227,17 @@ if(NOT WIN32)
+ endif(NOT WIN32)
+ 
+ if(NOT BINARY_PACKAGE_BUILD)
+-	set(MARCH "-march=native")	
++#	set(MARCH "-march=native")	
+ else()
+-	set(MARCH "-mtune=generic")
++#	set(MARCH "-mtune=generic")
+ endif()
+ 
+-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse2 -mfpmath=sse ${MARCH} -g")
+-set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -ffast-math -fexpensive-optimizations")
+-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0 -g -D_DEBUG")
+-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse2 -mfpmath=sse ${MARCH} -g")
+-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -ffast-math -fexpensive-optimizations")
+-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -g -D_DEBUG")
++#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse2 -mfpmath=sse ${MARCH} -g")
++#set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -ffast-math -fexpensive-optimizations")
++#set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0 -g -D_DEBUG")
++#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse2 -mfpmath=sse ${MARCH} -g")
++#set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -ffast-math -fexpensive-optimizations")
++#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -g -D_DEBUG")
+   
+ 
+ #
