@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1761 2011/07/27 03:14:28 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.1762 2011/07/27 04:03:01 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2694,3 +2694,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/samba35 to 3.5.10 [taca 2011-07-27]
 	Updated net/samba33 to 3.3.16 [taca 2011-07-27]
 	Updated security/opendnssec to 1.3.0 [pettai 2011-07-27]
+	Updated net/ldns to 1.6.10 [pettai 2011-07-27]
