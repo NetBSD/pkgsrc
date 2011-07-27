@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1759 2011/07/26 21:38:59 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.1760 2011/07/27 00:55:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2691,3 +2691,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/clamav to 0.97.2 [adam 2011-07-26]
 	Added sysutils/libvirt version 0.9.3 [agc 2011-07-25]
 	Added graphics/darktable version 0.9 [jakllsch 2011-07-26]
+	Updated net/samba35 to 3.5.10 [taca 2011-07-27]
+	Updated net/samba33 to 3.3.16 [taca 2011-07-27]
