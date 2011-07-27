@@ -1,0 +1,149 @@
+$NetBSD: patch-ap,v 1.1.1.1 2011/07/27 10:23:50 cherry Exp $
+
+--- src/netbsd/syscall-netbsd.h.orig	2009-12-16 13:06:31.000000000 +0000
++++ src/netbsd/syscall-netbsd.h
+@@ -0,0 +1,144 @@
++/*
++ * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or 
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, 
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License along
++ * with this program; if not, write to the Free Software Foundation, Inc.,
++ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
++ *
++ */
++#ifndef _SKI_SYSCALL_H
++#define _SKI_SYSCALL_H
++
++#define	STAT64_USE_TIMESPEC	1
++
++typedef long long	long64 __attribute__((aligned(8)));
++typedef long64		time64;
++
++struct timeval64 {
++	long64	tv_sec;
++	long64	tv_usec;
++};
++
++struct itimerval64 {
++	struct timeval64 it_interval;
++	struct timeval64 it_value;
++};
++
++struct rusage64 {
++	struct timeval64 ru_utime;
++	struct timeval64 ru_stime;
++	long64	ru_maxrss;
++	long64	ru_ixrss;
++	long64	ru_idrss;
++	long64	ru_isrss;
++	long64	ru_minflt;
++	long64	ru_majflt;
++	long64	ru_nswap;
++	long64	ru_inblock;
++	long64	ru_oublock;
++	long64	ru_msgsnd;
++	long64	ru_msgrcv;
++	long64	ru_nsignals;
++	long64	ru_nvcsw;
++	long64	ru_nivcsw;
++};
++
++struct timespec64 {
++	time64	tv_sec;
++	long64	tv_nsec;
++};
++
++
++/*	$NetBSD: patch-ap,v 1.1.1.1 2011/07/27 10:23:50 cherry Exp $	*/
++
++struct stat64 {
++	dev_t	  st_dev;		/* inode's device */
++	mode_t	  st_mode;		/* inode protection mode */
++	ino_t	  st_ino;		/* inode's number */
++	nlink_t	  st_nlink;		/* number of hard links */
++	uid_t	  st_uid;		/* user ID of the file's owner */
++	gid_t	  st_gid;		/* group ID of the file's group */
++	dev_t	  st_rdev;		/* device type */
++
++#if defined(_NETBSD_SOURCE)
++	struct	  timespec64 st_atimespec;/* time of last access */
++	struct	  timespec64 st_mtimespec;/* time of last data modification */
++	struct	  timespec64 st_ctimespec;/* time of last file status change */
++	struct 	  timespec64 st_birthtimespec; /* time of creation */
++#else
++	time_t	  st_atime;		/* time of last access */
++	long	  st_atimensec;		/* nsec of last access */
++	time_t	  st_mtime;		/* time of last data modification */
++	long	  st_mtimensec;		/* nsec of last data modification */
++	time_t	  st_ctime;		/* time of last file status change */
++	long	  st_ctimensec;		/* nsec of last file status change */
++	time_t	  st_birthtime;		/* time of creation */
++	long	  st_birthtimensec;	/* nsec of time of creation */
++#endif
++	off_t	  st_size;		/* file size, in bytes */
++	blkcnt_t  st_blocks;		/* blocks allocated for file */
++	blksize_t st_blksize;		/* optimal blocksize for I/O */
++	uint32_t  st_flags;		/* user defined flags for file */
++	uint32_t  st_gen;		/* file generation number */
++	uint32_t  st_spare[2];
++};
++
++
++/*	$NetBSD: patch-ap,v 1.1.1.1 2011/07/27 10:23:50 cherry Exp $	 */
++struct statvfs64 {
++	unsigned long	f_flag;		/* copy of mount exported flags */
++	unsigned long	f_bsize;	/* file system block size */
++	unsigned long	f_frsize;	/* fundamental file system block size */
++	unsigned long	f_iosize;	/* optimal file system block size */
++
++	fsblkcnt_t	f_blocks;	/* number of blocks in file system, */
++					/*   (in units of f_frsize) */
++	fsblkcnt_t	f_bfree;	/* free blocks avail in file system */
++	fsblkcnt_t	f_bavail;	/* free blocks avail to non-root */
++	fsblkcnt_t	f_bresvd;	/* blocks reserved for root */
++
++	fsfilcnt_t	f_files;	/* total file nodes in file system */
++	fsfilcnt_t	f_ffree;	/* free file nodes in file system */
++	fsfilcnt_t	f_favail;	/* free file nodes avail to non-root */
++	fsfilcnt_t	f_fresvd;	/* file nodes reserved for root */
++
++	uint64_t  	f_syncreads;	/* count of sync reads since mount */
++	uint64_t  	f_syncwrites;	/* count of sync writes since mount */
++
++	uint64_t  	f_asyncreads;	/* count of async reads since mount */
++	uint64_t  	f_asyncwrites;	/* count of async writes since mount */
++
++	fsid_t		f_fsidx;	/* NetBSD compatible fsid */
++	unsigned long	f_fsid;		/* Posix compatible fsid */
++	unsigned long	f_namemax;	/* maximum filename length */
++	uid_t		f_owner;	/* user that mounted the file system */
++
++	uint32_t	f_spare[4];	/* spare space */
++
++	char	f_fstypename[_VFS_NAMELEN]; /* fs type name */
++	char	f_mntonname[_VFS_MNAMELEN];  /* directory on which mounted */
++	char	f_mntfromname[_VFS_MNAMELEN];  /* mounted file system */
++
++};
++
++void ntos_itimerval(const struct itimerval *, struct itimerval64 *);
++void ntos_rusage(const struct rusage *, struct rusage64 *);
++void ntos_stat(const struct stat *, struct stat64 *);
++void ntos_statvfs(const struct statvfs *, struct statvfs64 *);
++void ntos_timespec(const struct timespec *, struct timespec64 *);
++void ntos_timeval(const struct timeval *, struct timeval64 *);
++
++void ston_itimerval(const struct itimerval64 *, struct itimerval *);
++void ston_timeval(const struct timeval64 *, struct timeval *);
++
++#endif	/* _SKI_SYSCALL_H */

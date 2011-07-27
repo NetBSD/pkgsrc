@@ -1,0 +1,145 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
+
+--- src/netbsd/convert-netbsd.c.orig	2009-12-16 12:47:32.000000000 +0000
++++ src/netbsd/convert-netbsd.c
+@@ -0,0 +1,140 @@
++/*
++ * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or 
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, 
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License along
++ * with this program; if not, write to the Free Software Foundation, Inc.,
++ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
++ *
++ */
++
++#include <sys/types.h>
++#include <sys/param.h>
++#include <sys/stat.h>
++#include <sys/time.h>
++#include <sys/mount.h>
++#include <sys/resource.h>
++#include <string.h>
++
++#include "netbsd/syscall-netbsd.h"
++
++void ntos_itimerval(const struct itimerval *it, struct itimerval64 *it64)
++{
++	ntos_timeval(&it->it_interval, &it64->it_interval);
++	ntos_timeval(&it->it_value, &it64->it_value);
++}
++
++void ntos_rusage(const struct rusage *ru, struct rusage64 *ru64)
++{
++	ntos_timeval(&ru->ru_utime, &ru64->ru_utime);
++	ntos_timeval(&ru->ru_stime, &ru64->ru_stime);
++	ru64->ru_maxrss = ru->ru_maxrss;
++	ru64->ru_ixrss = ru->ru_ixrss;
++	ru64->ru_idrss = ru->ru_idrss;
++	ru64->ru_isrss = ru->ru_isrss;
++	ru64->ru_minflt = ru->ru_minflt;
++	ru64->ru_majflt = ru->ru_majflt;
++	ru64->ru_nswap = ru->ru_nswap;
++	ru64->ru_inblock = ru->ru_inblock;
++	ru64->ru_oublock = ru->ru_oublock;
++	ru64->ru_msgsnd = ru->ru_msgsnd;
++	ru64->ru_msgrcv = ru->ru_msgrcv;
++	ru64->ru_nsignals = ru->ru_nsignals;
++	ru64->ru_nvcsw = ru->ru_nvcsw;
++	ru64->ru_nivcsw = ru->ru_nivcsw;
++}
++
++/* Assume we're on POSIX, so we're rather portable */
++void ntos_stat(const struct stat *st, struct stat64 *st64)
++{
++	st64->st_dev = st->st_dev;
++	st64->st_ino = st->st_ino;
++	st64->st_mode = st->st_mode;
++	st64->st_nlink = st->st_nlink;
++	st64->st_uid = st->st_uid;
++	st64->st_gid = st->st_gid;
++	st64->st_rdev = st->st_rdev;
++	st64->st_size = st->st_size;
++
++#if defined(_NETBSD_SOURCE)
++	ntos_timespec(&st->st_atimespec, &st64->st_atimespec);
++	ntos_timespec(&st->st_mtimespec, &st64->st_mtimespec);
++	ntos_timespec(&st->st_ctimespec, &st64->st_ctimespec);
++	ntos_timespec(&st->st_birthtimespec, &st64->st_birthtimespec);
++#else
++	st64->st_atime = st->st_atime;
++	st64->st_atimensec = 0;
++	st64->st_mtime = st->st_mtime;
++	st64->st_mtimensec = 0;
++	st64->st_ctime = st->st_ctime;
++	st64->st_ctimensec = 0;
++#endif
++
++	st64->st_blksize = st->st_blksize;
++	st64->st_blocks = st->st_blocks;
++}
++
++void ntos_statvfs(const struct statvfs *f, struct statvfs64 *f64)
++{
++	f64->f_bsize = f->f_bsize;
++	f64->f_frsize = f->f_frsize;
++	f64->f_blocks = f->f_blocks;
++	f64->f_bfree = f->f_bfree;
++	f64->f_bavail = f->f_bavail;
++	f64->f_files = f->f_files;
++	f64->f_ffree = f->f_ffree;
++	f64->f_favail = f->f_favail;
++	f64->f_fsid = f->f_fsid;
++	f64->f_flag = f->f_flag;
++	f64->f_namemax = f->f_namemax;
++
++
++#if defined(_NETBSD_SOURCE)
++	/* NetBSD specific fields */
++
++	f64->f_owner = f->f_owner;
++
++	memcpy(f64->f_fstypename,  f->f_fstypename, VFS_NAMELEN);
++
++	f64->f_syncwrites = f->f_syncwrites;
++	f64->f_asyncwrites = f->f_asyncwrites;
++	memcpy(f64->f_fstypename, f->f_fstypename, VFS_NAMELEN);
++	memcpy(f64->f_mntonname, f->f_mntonname, VFS_MNAMELEN);
++	f64->f_syncreads = f->f_syncreads;
++	f64->f_asyncreads = f->f_asyncreads;
++	memcpy(f64->f_mntfromname, f->f_mntfromname, VFS_MNAMELEN);
++#endif
++}
++
++void ntos_timespec(const struct timespec * tv, struct timespec64 *tv64)
++{
++	tv64->tv_sec = tv->tv_sec;
++	tv64->tv_nsec = tv->tv_nsec;
++}
++
++void ntos_timeval(const struct timeval *tv, struct timeval64 *tv64)
++{
++	tv64->tv_sec = tv->tv_sec;
++	tv64->tv_usec = tv->tv_usec;
++}
++
++void ston_itimerval(const struct itimerval64 *it64, struct itimerval *it)
++{
++	ston_timeval(&it64->it_interval, &it->it_interval);
++	ston_timeval(&it64->it_value, &it->it_value);
++}
++
++void ston_timeval(const struct timeval64 *tv64, struct timeval *tv)
++{
++	tv->tv_sec = tv64->tv_sec;
++	tv->tv_usec = tv64->tv_usec;
++}

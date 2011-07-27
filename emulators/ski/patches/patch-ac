@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
+
+--- src/sim.c.orig	2008-02-05 04:11:38.000000000 +0000
++++ src/sim.c
+@@ -29,7 +29,7 @@
+ #include <ltdl.h>
+ 
+ /* XXX should list systems that need the header */
+-#if !defined(linux) && !defined HPUX9 && !defined(__FreeBSD__)
++#if !defined(linux) && !defined HPUX9 && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <dl.h>
+ #endif
+ #ifdef NEW_MP

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
+
+--- src/load.c.orig	2008-02-05 04:11:38.000000000 +0000
++++ src/load.c
+@@ -106,7 +106,7 @@ LMINFO lminfo[MAX_LOAD_MODULES];
+ 
+ #include <sys/mman.h>
+ #include <sys/param.h>
+-#if !defined __linux__
++#if !defined __linux__ && !defined(__NetBSD__)
+ #include <sys/pstat.h>
+ #endif /* !defined __linux__ */
+ #include <sys/unistd.h>

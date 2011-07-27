@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
+
+--- src/dos.c.orig	2008-02-05 04:11:38.000000000 +0000
++++ src/dos.c
+@@ -26,14 +26,14 @@
+ #include <errno.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+-#if !defined(__FreeBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <syscall.h>
+ #endif
+ #include <sys/times.h>
+ #include <sys/stat.h>
+ #include <signal.h>
+ #include <string.h>
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <termios.h>
+ #define termio  termios
+ #define TCGETA  TIOCGETA
+@@ -44,12 +44,14 @@
+ #include <time.h>
+ #if defined __linux__
+ # include <sys/time.h>
++#elif defined(__NetBSD__)
++# include <time.h>
+ #else /* !defined __linux */
+ extern int localtime_r(const __time_t *, __struct_tm *);
+ # include <ulimit.h>
+ #endif /* !defined __linux */
+ #include <unistd.h>	/* Also #includes <utime.h> */
+-#if !defined(__FreeBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <ustat.h>
+ #endif
+ #include <sys/utsname.h>
