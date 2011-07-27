@@ -1,0 +1,52 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
+
+--- configure.ac.orig	2008-02-05 09:41:37.000000000 +0530
++++ configure.ac
+@@ -33,12 +33,14 @@ case $host_os in
+     linux*)	HOST_OS=linux;;
+     hpux*)	HOST_OS=hpux;;
+     freebsd*)	HOST_OS=freebsd;;
++    netbsd*)	HOST_OS=netbsd;;
+     *)		HOST_OS=unknown;;
+ esac
+ AC_SUBST(HOST_OS)
+ AM_CONDITIONAL(LINUX, test "$HOST_OS" = linux)
+ AM_CONDITIONAL(HPUX,  test "$HOST_OS" = hpux)
+ AM_CONDITIONAL(FREEBSD, test "$HOST_OS" = freebsd)
++AM_CONDITIONAL(NETBSD, test "$HOST_OS" = netbsd)
+ 
+ # Version number definitions
+ #
+@@ -259,6 +261,10 @@ if test "$HOST_OS" = freebsd; then
+ 	LDFLAGS="$LDFLAGS -lutil"
+ fi
+ 
++if test "$HOST_OS" = netbsd; then
++	LDFLAGS="$LDFLAGS -lutil"
++fi
++
+ dnl Check for optional libs
+ AC_CHECK_LIB(unwind-ia64, _Uia64_get_proc_name, )
+ 
+@@ -331,6 +337,13 @@ if test "$HOST_OS" = hpux; then
+         check_curses=no], [])
+ fi    
+ 
++if test "$HOST_OS" = netbsd; then
++    # Not ported to NetBSD curses yet.
++    AC_SEARCH_LIBS(tgetent, ncurses,
++	[check_curses=no],
++	[AC_MSG_ERROR(Required ncurses library not found.)])
++fi
++
+ if test "x$check_curses" != xno; then
+ AC_CHECK_LIB(curses, tgetent, [],
+     [AC_CHECK_LIB(ncurses, tgetent, ,
+@@ -347,6 +360,7 @@ case $host_os in
+     hpux10*)	CFLAGS="$CFLAGS -DHPUX1020";;
+     hpux11*)	CFLAGS="$CFLAGS -DHPUX1100";;
+     freebsd*)	CFLAGS="$CFLAGS -DFREEBSD -D__linux__";;
++    netbsd*)	CFLAGS="$CFLAGS -DNETBSD -D__linux__";;
+ esac
+ 
+ dnl Add extra flags to CFLAGS depending on compiler
