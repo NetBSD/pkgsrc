@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2011/06/19 02:32:52 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2011/07/27 19:20:57 fhajny Exp $
 #
 
-DISTNAME=		apache-couchdb-1.0.1
+DISTNAME=		apache-couchdb-1.1.0
 PKGNAME=		${DISTNAME:S/apache-//}
-PKGREVISION=		3
 CATEGORIES=		databases
-MASTER_SITES=		${MASTER_SITE_APACHE:=couchdb/1.0.1/}
+MASTER_SITES=		${MASTER_SITE_APACHE:=couchdb/1.1.0/}
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://couchdb.apache.org/
@@ -14,8 +13,8 @@ LICENSE=		apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-VERSION.ibrowse=	1.5.2
-VERSION.mochiweb=	r113
+VERSION.ibrowse=	2.2.0
+VERSION.mochiweb=	7c2bc2
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
@@ -72,7 +71,7 @@ REPLACE_FILES.sh=	bin/couchdb.tpl.in bin/couchjs.tpl.in
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths+=	configure
+SUBST_FILES.paths+=	configure bin/couchdb.tpl.in
 SUBST_SED.paths=	-e 's,@EGDIR@,${COUCH_EGDIR},g'
 SUBST_SED.paths+=	-e 's,@RUNDIR@,${COUCH_RUNDIR},g'
 SUBST_SED.paths+=	-e 's,@ERLANG_PREFIX@,${BUILDLINK_PREFIX.erlang},g'
@@ -83,7 +82,7 @@ SUBST_CLASSES+=		unstrip
 SUBST_MESSAGE.unstrip=	Avoiding trying to strip a shell script
 SUBST_STAGE.unstrip=	post-configure
 SUBST_FILES.unstrip+=	src/couchdb/priv/Makefile
-SUBST_SED.unstrip=	-e '/^INSTALL_PROGRAM =/s,-s,,'
+SUBST_SED.unstrip=	-e '/^INSTALL_PROGRAM =/s, -s,,'
 
 PLIST_SUBST+=		VERSION.ibrowse=${VERSION.ibrowse}
 PLIST_SUBST+=		VERSION.mochiweb=${VERSION.mochiweb}
