@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1765 2011/07/27 04:59:22 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.1766 2011/07/27 05:30:56 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2698,3 +2698,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/unbound to 1.4.12 [pettai 2011-07-27]
 	Updated mail/mimedefang to 2.72 [pettai 2011-07-27]
 	Updated net/lftp to 4.3.1 [pettai 2011-07-27]
+	Updated security/dnssec-tools to 1.10 [pettai 2011-07-27]
