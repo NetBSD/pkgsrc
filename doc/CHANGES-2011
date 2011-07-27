@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1766 2011/07/27 05:30:56 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.1767 2011/07/27 06:05:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2699,3 +2699,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/mimedefang to 2.72 [pettai 2011-07-27]
 	Updated net/lftp to 4.3.1 [pettai 2011-07-27]
 	Updated security/dnssec-tools to 1.10 [pettai 2011-07-27]
+	Updated mail/postfix to 2.8.4 [taca 2011-07-27]
