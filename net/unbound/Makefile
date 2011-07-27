@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2011/06/19 16:15:57 pettai Exp $
+# $NetBSD: Makefile,v 1.16 2011/07/27 04:11:25 pettai Exp $
 
-DISTNAME=	unbound-1.4.10
+DISTNAME=	unbound-1.4.12
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -21,6 +21,49 @@ CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
 CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--enable-allsymbols
+
+# Add the same logic as for ldns, so sha2/gost is configured automatically
+.include "../../security/openssl/buildlink3.mk"
+
+PLIST_VARS+=            sha2 gost
+.if defined(USE_BUILTIN.openssl) && !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+PLIST_VARS.gost!=       \
+        if ${PKG_ADMIN} pmatch 'openssl>=1.0.0' ${BUILTIN_PKG.openssl:Q}; then \
+                ${ECHO} "yes";                                          \
+        else                                                            \
+                ${ECHO} "no";                                           \
+        fi
+PLIST_VARS.sha2!=       \
+        if ${PKG_ADMIN} pmatch 'openssl>=0.9.8' ${BUILTIN_PKG.openssl:Q}; then \
+                ${ECHO} "yes";                                          \
+        else                                                            \
+                ${ECHO} "no";                                           \
+        fi
+.else
+PLIST_VARS.gost!=       \
+        if ${PKG_INFO} -qe 'openssl>=1.0.0'; then                       \
+                ${ECHO} yes;                                            \
+        else                                                            \
+                ${ECHO} no;                                             \
+        fi
+PLIST_VARS.sha2!=       \
+        if ${PKG_INFO} -qe 'openssl>=0.9.8'; then                       \
+                ${ECHO} yes;                                            \
+        else                                                            \
+                ${ECHO} no;                                             \
+        fi
+.endif
+.if ${PLIST_VARS.gost} == "yes"
+CONFIGURE_ARGS+=        --enable-gost
+.else
+CONFIGURE_ARGS+=        --disable-gost
+.endif
+.if ${PLIST_VARS.sha2} == "yes"
+CONFIGURE_ARGS+=        --enable-sha2
+.else
+CONFIGURE_ARGS+=        --disable-sha2
+.endif
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-configure
@@ -48,5 +91,4 @@ PKG_USERS=	${UNBOUND_USER}:${UNBOUND_GROUP}
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
