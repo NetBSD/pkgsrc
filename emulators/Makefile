@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2011/03/04 08:15:50 jnemeth Exp $
+# $NetBSD: Makefile,v 1.188 2011/07/27 09:26:41 cherry Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -104,7 +104,7 @@ SUBDIR+=	raine
 #SUBDIR+=	sap	# only contains a Makefile.common
 SUBDIR+=	simh
 SUBDIR+=	simulavr
-SUBDIR+=	ski
+SUBDIR+=	ski-bin
 SUBDIR+=	sms_sdl
 SUBDIR+=	snes9x
 SUBDIR+=	snes9x-gtk
