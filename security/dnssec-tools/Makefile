@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/03/12 20:07:19 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/27 05:30:31 pettai Exp $
 #
 
-DISTNAME=	dnssec-tools-1.8
+DISTNAME=	dnssec-tools-1.10
 CATEGORIES=	security
 MASTER_SITES=	http://www.dnssec-tools.org/download/
 
