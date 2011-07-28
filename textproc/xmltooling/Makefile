@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/07/27 22:26:59 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2011/07/28 22:24:16 pettai Exp $
 
-DISTNAME=	xmltooling-1.4.1
-PKGREVISION=	1
+DISTNAME=	xmltooling-1.4.2
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.shibboleth.net/downloads/c++-opensaml/2.4.1/
+MASTER_SITES=	http://www.shibboleth.net/downloads/c++-opensaml/2.4.3/
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://shibboleth.internet2.edu/
