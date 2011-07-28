@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1769 2011/07/27 12:33:02 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1770 2011/07/28 04:53:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2702,3 +2702,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/postfix to 2.8.4 [taca 2011-07-27]
 	Updated games/scummvm to 1.3.1 [adam 2011-07-27]
 	Updated x11/mlterm to 3.0.6 [ryoon 2011-07-27]
+	Updated print/kpathsea to 6.0.1 [minskim 2011-07-28]
+	Updated print/ptexenc to 1.2.0 [minskim 2011-07-28]
+	Updated print/web2c to 2011 [minskim 2011-07-28]
+	Updated print/luatex to 0.70.1 [minskim 2011-07-28]
+	Updated print/xetex to 0.9997.5 [minskim 2011-07-28]
+	Updated print/xdvik to 22.84.16nb2 [minskim 2011-07-28]
+	Updated fonts/ps2pkm to 1.5nb3 [minskim 2011-07-28]
