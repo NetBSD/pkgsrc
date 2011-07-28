@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/09/13 04:45:02 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2011/07/28 04:45:53 minskim Exp $
 
-DISTNAME=	texlive-20100720-source
+DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvik-22.84.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 BUILD_DEPENDS+=	tex-xdvi-[0-9]*:../../print/tex-xdvi
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
+DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/xdvik
