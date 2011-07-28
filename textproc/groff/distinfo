@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14.14.1 2011/07/21 04:24:07 sbd Exp $
+$NetBSD: distinfo,v 1.14.14.2 2011/07/28 02:30:24 sbd Exp $
 
 SHA1 (groff-1.20.1.tar.gz) = 3066587d73df73c2bda235034f4515cf52d22549
 RMD160 (groff-1.20.1.tar.gz) = ec311727206d183fb04f1b4bd01c1284142fdb52
@@ -15,7 +15,7 @@ SHA1 (patch-contrib_grap2graph_grap2graph.sh) = 5b5a5ac958edc8d4f5e828b57198178b
 SHA1 (patch-contrib_groffer_perl_groffer.pl) = 2583145fe594a11619cf237ca38a20bbbfee17f1
 SHA1 (patch-contrib_groffer_perl_roff2.pl) = 8ee9d4bba3c25a391b406e4dfac6352d414f7263
 SHA1 (patch-contrib_pdfmark_pdfroff.man) = c2a48a9f16650044a493d23192d9c00c2dabbc67
-SHA1 (patch-contrib_pdfmark_pdfroff.sh) = 0f23f02561913aaf9fabd2f41236de62b79bdf71
+SHA1 (patch-contrib_pdfmark_pdfroff.sh) = 8ff3360392c214940854a1b93a5f262c37e3cd2e
 SHA1 (patch-contrib_pic2graph_pic2graph.sh) = 447e25325f3c26be1e5fa8b6cd0bc05d9f99474e
 SHA1 (patch-doc_fixinfo.sh) = 7ad376be722b712b129f736804b9c8c30789da2d
 SHA1 (patch-doc_groff.info-2) = a5e366af0bc9ee018664d2ba9192b136980af6ce

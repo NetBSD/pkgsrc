@@ -1,4 +1,4 @@
-$NetBSD: patch-contrib_pdfmark_pdfroff.sh,v 1.1.2.2 2011/07/21 04:24:07 sbd Exp $
+$NetBSD: patch-contrib_pdfmark_pdfroff.sh,v 1.1.2.3 2011/07/28 02:30:24 sbd Exp $
 
 Fix many temporary file handling issues, including in pdfroff
 (resolves CVE-2009-5044 / SA44999)
@@ -6,6 +6,7 @@ Patches copied from:
  http://cvsweb.openwall.com/cgi/cvsweb.cgi/Owl/packages/groff/groff-1.20.1-owl-tmp.diff?rev=1.2
 Modified for pkgsrc and excluded a documentaion change to doc/groff.texinfo
 that changes a `makeinfo' is too old warning into a fatal error.
+Modified to not use '-p' option to mktemp which is missing on some platforms.
 
 Added patch to make pdfroff.sh use -dSAFER
 See http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=538338 for why.
@@ -18,7 +19,7 @@ See http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=538338 for why.
  #
 -  WRKFILE=${GROFF_TMPDIR=${TMPDIR-${TMP-${TEMP-"."}}}}/pdf$$.tmp
 +  MYTMPDIR=${GROFF_TMPDIR-${TMPDIR-${TMP-${TEMP-"/tmp"}}}}
-+  WRKDIR="`unset TMPDIR && mktemp -dp "$MYTMPDIR" groff-pdfroff.XXXXXXXXXX`" || exit
++  WRKDIR="`TMPDIR=$MYTMPDIR mktemp -d -t groff-pdfroff.XXXXXXXXXX`" || exit
 +
 +  trap 'rm -rf -- "$WRKDIR"' EXIT
 +  trap 'trap - EXIT; rm -rf -- "$WRKDIR"; exit 1' HUP INT QUIT PIPE TERM
