@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10451 2011/07/28 20:41:57 ryoon Exp $
+$NetBSD: TODO,v 1.10452 2011/07/28 21:11:08 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1257,7 +1257,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o ttf2pk-1.5.20050518
 	o turba-3.0.4
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
