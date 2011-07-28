@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/13 04:24:27 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/28 04:53:03 minskim Exp $
 
-DISTNAME=	texlive-20100720-source
+DISTNAME=	texlive-20110705-source
 PKGNAME=	ps2pkm-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Tool to convert PostSCript fonts into TeX PK fonts
 
 CONFLICTS+=	teTeX-bin<=3.0nb34
+DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/ps2pkm
