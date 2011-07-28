@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/07/08 09:32:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/07/28 08:10:29 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1007,6 +1007,7 @@ share/mysql/test/r/mysql.result
 share/mysql/test/r/mysql_client_test.result
 share/mysql/test/r/mysql_comments.result
 share/mysql/test/r/mysql_cp932.result
+share/mysql/test/r/mysql_embedded.result
 share/mysql/test/r/mysql_locale_posix.result
 share/mysql/test/r/mysql_not_windows.result
 share/mysql/test/r/mysql_protocols.result
@@ -5821,6 +5822,7 @@ share/mysql/test/t/mysql_cp932.test
 share/mysql/test/t/mysql_delimiter.sql
 share/mysql/test/t/mysql_delimiter_19799.sql
 share/mysql/test/t/mysql_delimiter_source.sql
+share/mysql/test/t/mysql_embedded.test
 share/mysql/test/t/mysql_locale_posix.test
 share/mysql/test/t/mysql_not_windows.test
 share/mysql/test/t/mysql_protocols.test
