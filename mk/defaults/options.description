@@ -600,6 +600,7 @@ xjdic-locale		Honor LOCALE env var, instead of requiring ISO-2022-JP.
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
+xmlrpc			Enable XMLRPC support.
 xrandr			Enable Xrandr support.
 xrender			Enable Xrender support.
 xscreensaver-webcollage	Install webcollage screensaver.
