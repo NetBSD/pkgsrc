@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1781 2011/07/28 23:15:22 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1782 2011/07/28 23:25:29 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2723,3 +2723,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/xmltooling to 1.4.2 [pettai 2011-07-28]
 	Updated security/opensaml to 2.4.3 [pettai 2011-07-28]
 	Updated net/rtorrent to 0.8.6nb4 [tron 2011-07-28]
+	Updated www/shibboleth-sp to 2.4.3 [pettai 2011-07-28]
