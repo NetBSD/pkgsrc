@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/10/09 07:33:43 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/07/28 04:34:06 minskim Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -7,11 +7,15 @@ bin/cweave
 bin/dvicopy
 bin/dvitomp
 bin/dvitype
+bin/eptex
 bin/gftodvi
 bin/gftopk
 bin/gftype
+bin/inimf
+bin/initex
 bin/mf
 bin/mf-nowin
+bin/mfplain
 bin/mft
 bin/mkocp
 bin/mkofm
