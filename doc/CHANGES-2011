@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1775 2011/07/28 08:37:55 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1776 2011/07/28 08:46:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2716,3 +2716,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql55-client to 5.5.15 [adam 2011-07-28]
 	Updated databases/mysql55-server to 5.5.15 [adam 2011-07-28]
 	Updated databases/py-ldap to 2.4.3 [adam 2011-07-28]
+	Updated print/tex-kpathsea to 2011 [minskim 2011-07-28]
+	Updated print/tex-kpathsea-doc to 2011 [minskim 2011-07-28]
