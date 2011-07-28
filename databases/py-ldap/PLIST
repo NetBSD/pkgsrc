@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/07/08 10:23:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/07/28 08:37:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -33,6 +33,9 @@ ${PYSITELIB}/ldap/controls/psearch.pyo
 ${PYSITELIB}/ldap/controls/readentry.py
 ${PYSITELIB}/ldap/controls/readentry.pyc
 ${PYSITELIB}/ldap/controls/readentry.pyo
+${PYSITELIB}/ldap/controls/sessiontrack.py
+${PYSITELIB}/ldap/controls/sessiontrack.pyc
+${PYSITELIB}/ldap/controls/sessiontrack.pyo
 ${PYSITELIB}/ldap/controls/simple.py
 ${PYSITELIB}/ldap/controls/simple.pyc
 ${PYSITELIB}/ldap/controls/simple.pyo
