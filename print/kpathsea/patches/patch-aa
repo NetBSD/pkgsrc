@@ -1,48 +1,36 @@
-$NetBSD: patch-aa,v 1.7 2010/11/17 19:27:05 minskim Exp $
+$NetBSD: patch-aa,v 1.8 2011/07/28 04:25:06 minskim Exp $
 
-- Set paths to texmf trees for pkgsrc.
-- Sync with kpathsea r19875.
+Set paths to texmf trees for pkgsrc.
 
---- texmf.cnf.orig	2010-05-30 21:52:39.000000000 +0000
+--- texmf.cnf.orig	2011-06-18 22:10:46.000000000 +0000
 +++ texmf.cnf
-@@ -53,15 +53,15 @@
+@@ -49,7 +49,7 @@
+ % (http://tug.org/tds), or files may not be found.
+ %
+ % Redistributors will probably want $SELFAUTODIR/share, i.e., /usr/share.
+-TEXMFROOT = $SELFAUTOPARENT
++TEXMFROOT = $SELFAUTODIR/share
  
- % The tree containing the runtime files closely related to the specific
- % program version used:
--TEXMFMAIN = $SELFAUTOPARENT/texmf
-+TEXMFMAIN = @PREFIX@/share/texmf
+ % The tree containing runtime files related to the specific
+ % distribution and version.
+@@ -59,13 +59,13 @@ TEXMFMAIN = $TEXMFROOT/texmf
+ TEXMFDIST = $TEXMFROOT/texmf-dist
  
- % The main distribution tree:
--TEXMFDIST = $SELFAUTOPARENT/texmf-dist
-+TEXMFDIST = @PREFIX@/share/texmf-dist
- 
- % A place for local additions to a "standard" texmf tree.
- % This tree is not used for local configuration maintained by
- % texconfig, it uses TEXMFCONFIG below.
--TEXMFLOCAL = $SELFAUTOPARENT/../texmf-local
+ % Local additions to the distribution trees.
+-TEXMFLOCAL = $TEXMFROOT/../texmf-local
 +TEXMFLOCAL = @TEXMFLOCAL@
  
- % TEXMFSYSVAR, where texconfig-sys stores variable runtime data.
- % With teTeX-3.0 or later, this must be set.
-@@ -69,7 +69,7 @@ TEXMFLOCAL = $SELFAUTOPARENT/../texmf-lo
- %   TEXMFSYSVAR = $TEXMFMAIN
- % For using a separate tree:
- %   TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
--TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
+ % TEXMFSYSVAR, where *-sys store cached runtime data.
+-TEXMFSYSVAR = $TEXMFROOT/texmf-var
 +TEXMFSYSVAR = @VARBASE@/lib/texmf
  
- % TEXMFSYSCONFIG, where texconfig-sys stores configuration data.
- % With teTeX-3.0 or later, this must be set.
-@@ -77,7 +77,7 @@ TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
- %   TEXMFSYSCONFIG = $TEXMFMAIN
- % For using a separate tree:
- %   TEXMFSYSCONFIG = $SELFAUTOPARENT/texmf-config
--TEXMFSYSCONFIG = $SELFAUTOPARENT/texmf-config
+ % TEXMFSYSCONFIG, where *-sys store configuration data.
+-TEXMFSYSCONFIG = $TEXMFROOT/texmf-config
 +TEXMFSYSCONFIG = @PKG_SYSCONFDIR@
  
- % User texmf trees are allowed as follows.
- % This used to be HOMETEXMF.
-@@ -136,7 +136,7 @@ SYSTEXMF = $TEXMFSYSVAR;$TEXMFMAIN;$TEXM
+ % Per-user texmf tree(s) -- organized per the TDS, as usual.  To define
+ % more than one per-user tree, set this to a list of directories in
+@@ -111,7 +111,7 @@ SYSTEXMF = $TEXMFSYSVAR;$TEXMFMAIN;$TEXM
  % Where generated fonts may be written.  This tree is used when the sources
  % were found in a system tree and either that tree wasn't writable, or the
  % varfonts feature was enabled in MT_FEATURES in mktex.cnf.
@@ -51,20 +39,7 @@ $NetBSD: patch-aa,v 1.7 2010/11/17 19:27:05 minskim Exp $
  
  % On some systems, there will be a system tree which contains all the font
  % files that may be created as well as the formats.  For example
-@@ -345,10 +345,10 @@ T1FONTS = .;$TEXMF/fonts/type1//;$OSFONT
- AFMFONTS = .;$TEXMF/fonts/afm//;$OSFONTDIR//
- 
- % TrueType outline fonts.
--TTFONTS = .;$TEXMF/fonts/truetype//;$OSFONTDIR//
-+TTFONTS = .;$TEXMF/fonts/{truetype,opentype}//;$OSFONTDIR//
- 
- % Opentype outline fonts.
--OPENTYPEFONTS = .;$TEXMF/fonts/opentype//;$OSFONTDIR//
-+OPENTYPEFONTS = .;$TEXMF/fonts/{opentype,truetype}//;$OSFONTDIR//
- 
- % Type 42 outline fonts.
- T42FONTS = .;$TEXMF/fonts/type42//
-@@ -463,7 +463,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+@@ -442,7 +442,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
  % 
  % For security reasons, it is better not to include . in this path.
  %
