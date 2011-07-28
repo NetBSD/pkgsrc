@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1778 2011/07/28 21:11:07 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1779 2011/07/28 22:24:59 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2720,3 +2720,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-kpathsea-doc to 2011 [minskim 2011-07-28]
 	Updated graphics/tex-metapost to 1.211nb1 [minskim 2011-07-28]
 	Updated fonts/ttf2pk to 1.5nb5 [minskim 2011-07-28]
+	Updated textproc/xmltooling to 1.4.2 [pettai 2011-07-28]
