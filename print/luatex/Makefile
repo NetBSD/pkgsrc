@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2011/03/09 12:16:35 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2011/07/28 04:37:32 minskim Exp $
 
-DISTNAME=	luatex-beta-0.65.0-source
+DISTNAME=	luatex-beta-0.70.1
 PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
-PKGREVISION=	2
 CATEGORIES=	print
-MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/386/1704/
+MASTER_SITES=	http://foundry.supelec.fr/gf/download/frsrelease/392/1730/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
@@ -16,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=no
 
 CONFLICTS+=	web2c<=7.5.7nb3
+DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -117,6 +117,8 @@ INSTALLATION_DIRS+=	bin
 
 post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
+	${ECHO} '#define luatex_svn_revision 4279' \
+		> ${WRKSRC}/texk/web2c/luatexdir/luatex_svnversion.h
 
 do-install:
 .for f in luatex
