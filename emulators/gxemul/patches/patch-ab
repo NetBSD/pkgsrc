@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.6 2011/07/28 06:25:14 mrg Exp $
+
+--- src/cpus/cpu_sh_instr.cc.orig	2010-02-14 01:33:54.000000000 -0800
++++ src/cpus/cpu_sh_instr.cc	2011-07-26 17:55:15.000000000 -0700
+@@ -3378,6 +3378,11 @@
+ 			case 0x19:	/*  SHLR8 Rn  */
+ 				ic->f = instr(shlr8_rn);
+ 				break;
++			case 0x1a:	/*  LDS Rn,MACL */
++				ic->f = instr(mov_rm_rn);
++				ic->arg[0] = (size_t)&cpu->cd.sh.r[r8];
++				ic->arg[1] = (size_t)&cpu->cd.sh.macl;
++				break;
+ 			case 0x1b:	/*  TAS.B @Rn  */
+ 				ic->f = instr(tas_b_rn);
+ 				break;
