@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/07/27 22:33:26 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/28 23:16:24 pettai Exp $
 #
 
-DISTNAME=	shibboleth-sp-2.4.2
-PKGREVISION=	1
+DISTNAME=	shibboleth-sp-2.4.3
 CATEGORIES=	www
-MASTER_SITES=	http://www.shibboleth.net/downloads/service-provider/2.4.2/
+MASTER_SITES=	http://www.shibboleth.net/downloads/service-provider/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://shibboleth.internet2.edu/

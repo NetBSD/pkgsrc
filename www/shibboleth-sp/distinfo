@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/15 13:15:37 pettai Exp $
+$NetBSD: distinfo,v 1.2 2011/07/28 23:16:24 pettai Exp $
 
-SHA1 (shibboleth-sp-2.4.2.tar.gz) = a93e64a6a6b46d79f177395aecbd67985247f5c4
-RMD160 (shibboleth-sp-2.4.2.tar.gz) = 16e2ead5e8279d900bcfba6961ce813c3e9a29c9
-Size (shibboleth-sp-2.4.2.tar.gz) = 854404 bytes
+SHA1 (shibboleth-sp-2.4.3.tar.gz) = f7cff91740ba61a4e537924b7572bd4faa204132
+RMD160 (shibboleth-sp-2.4.3.tar.gz) = e2a909f5ea49d6c295056cc3530708fc5534eb63
+Size (shibboleth-sp-2.4.3.tar.gz) = 854326 bytes
 SHA1 (patch-aa) = 904faee5523244854bb792b41719ec76adfe8558
 SHA1 (patch-ab) = f667e876e1ebd84e706433156eed2cd60e905372
