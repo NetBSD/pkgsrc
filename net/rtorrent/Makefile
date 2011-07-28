@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2011/04/22 13:44:27 obache Exp $
+# $NetBSD: Makefile,v 1.39 2011/07/28 23:14:46 tron Exp $
 
 DISTNAME=	rtorrent-0.8.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -19,16 +19,15 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 GCC_REQD+=		3.3
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly"
 MESSAGE_SRC=	${PKGDIR}/MESSAGE.BSD
 .endif
 
+# See http://libtorrent.rakshasa.no/ticket/77
 .include "../../mk/compiler.mk"
-
-# See http://libtorrent.rakshasa.no/ticket/96
-.if !empty(CC_VERSION:Mgcc-4.*)
+.if !empty(CC_VERSION:Mgcc-4.0.*)
 CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
 		-fno-inline -fforce-addr
 .endif
