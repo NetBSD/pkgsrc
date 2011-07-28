@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1779 2011/07/28 22:24:59 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.1780 2011/07/28 22:55:28 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2721,3 +2721,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/tex-metapost to 1.211nb1 [minskim 2011-07-28]
 	Updated fonts/ttf2pk to 1.5nb5 [minskim 2011-07-28]
 	Updated textproc/xmltooling to 1.4.2 [pettai 2011-07-28]
+	Updated security/opensaml to 2.4.3 [pettai 2011-07-28]
