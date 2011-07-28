@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/07/30 10:36:28 asau Exp $
+# $NetBSD: Makefile,v 1.12 2011/07/28 06:30:15 adam Exp $
 
-DISTNAME=	fftw-3.2.1
-PKGNAME=	fftwf-3.2.1
-PKGREVISION=	1
+DISTNAME=	fftw-3.3
+PKGNAME=	${DISTNAME:C/fftw/fftwf/}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/ \
 		http://www.fftw.org/
@@ -10,6 +9,7 @@ MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fftw.org/
 COMMENT=	Collection of fast C routines to compute DFTs
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
