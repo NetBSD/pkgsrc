@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.11 2011/07/27 06:40:33 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.12 2011/07/28 02:32:13 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -27,3 +27,7 @@ Pullup ticket #3478 - requested by taca
 net/samba35 security update
 Pullup ticket #3479 - requested by taca
 net/samba33 security update
+Pullup ticket #3480 - requested by obache
+security/clamav security update
+Pullup ticket #3481 - requested by tez
+textproc/groff security/portablity update
