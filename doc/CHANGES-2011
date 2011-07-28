@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1772 2011/07/28 07:21:44 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.1773 2011/07/28 07:22:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2709,6 +2709,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/xetex to 0.9997.5 [minskim 2011-07-28]
 	Updated print/xdvik to 22.84.16nb2 [minskim 2011-07-28]
 	Updated fonts/ps2pkm to 1.5nb3 [minskim 2011-07-28]
+	Updated print/tex-texlive-scripts to 2011 [minskim 2011-07-28]
 	Updated math/fftw to 3.3 [adam 2011-07-28]
 	Updated math/fftwf to 3.3 [adam 2011-07-28]
 	Updated graphics/ps2eps to 1.68 [minskim 2011-07-28]
