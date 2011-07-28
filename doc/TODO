@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10450 2011/07/27 12:28:50 adam Exp $
+$NetBSD: TODO,v 1.10451 2011/07/28 20:41:57 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -224,9 +224,6 @@ Suggested new packages
 	netdude [pkg/34473]
 	http://netdude.sourceforge.net/
 	NETwork DUmp data Displayer and Editor for tcpdump tracefiles
-
-	INADYN [pkg/34502]
-	INADYN is a free DynDNS client.
 
 	Fenix Project [pkg/35346]
 	http://fenix.divsite.net
