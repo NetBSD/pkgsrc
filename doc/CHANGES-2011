@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1783 2011/07/28 23:35:43 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.1784 2011/07/29 12:30:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2725,3 +2725,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/rtorrent to 0.8.6nb4 [tron 2011-07-28]
 	Updated www/shibboleth-sp to 2.4.3 [pettai 2011-07-28]
 	Updated security/xml-security-c to 1.6.1 [pettai 2011-07-28]
+	Updated textproc/groonga to 1.2.4 [obache 2011-07-29]
