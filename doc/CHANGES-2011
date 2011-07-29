@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1790 2011/07/29 19:39:58 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1791 2011/07/29 21:09:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2736,3 +2736,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/gmock version 1.6.0 [ryoon 2011-07-29]
 	Updated databases/phpmyadmin to 3.4.3.2 [tron 2011-07-29]
 	Added textproc/FlightCrew version 0.7.1 [ryoon 2011-07-29]
+	Updated net/nicovideo-dl to 0.0.20110208 [ryoon 2011-07-29]
