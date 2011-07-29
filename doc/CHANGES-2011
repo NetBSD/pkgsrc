@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1787 2011/07/29 15:21:49 bouyer Exp $
+$NetBSD: CHANGES-2011,v 1.1788 2011/07/29 15:25:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2733,3 +2733,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/ups-nut-usb to 2.6.1 [bouyer 2011-07-29]
 	Added sysutils/p5-UPS-Nut version 2.6.1 [bouyer 2011-07-29]
 	Updated devel/p5-Proc-Daemon to 0.14 [bouyer 2011-07-29]
+	Added devel/gmock version 1.6.0 [ryoon 2011-07-29]
