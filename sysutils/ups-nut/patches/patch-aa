@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2004/02/15 13:14:25 lukem Exp $
+$NetBSD: patch-aa,v 1.10 2011/07/29 15:11:40 bouyer Exp $
 
---- conf/Makefile.in.orig	Tue Sep  3 09:23:02 2002
-+++ conf/Makefile.in	Sat Feb 14 22:02:46 2004
-@@ -4,7 +4,7 @@
- prefix		= @prefix@
- exec_prefix	= @exec_prefix@
- 
--CONFPATH	= $(DESTDIR)@sysconfdir@
-+CONFPATH	= $(DESTDIR)@prefix@/share/examples/nut
- 
- INSTALLCMD  = @INSTALL@
- 
+--- conf/Makefile.in.orig	2011-06-27 14:45:05.000000000 +0200
++++ conf/Makefile.in	2011-06-27 14:49:32.000000000 +0200
+@@ -109,7 +109,7 @@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+ CFLAGS = @CFLAGS@
+-CONFPATH = @CONFPATH@
++CONFPATH = $(DESTDIR)@prefix@/share/examples/nut
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
