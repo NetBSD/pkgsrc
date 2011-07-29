@@ -1,0 +1,6 @@
+FlightCrew is a C++, cross-platform, native code epub validator.
+It is composed of three parts:
+
+* FlightCrew, the validation library;
+* FlightCrew-cli, the command-line front-end to the FlightCrew library;
+* FlightCrew-gui, the GUI front-end to the FlightCrew library;
