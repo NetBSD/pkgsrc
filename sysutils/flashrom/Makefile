@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/02/08 19:33:18 jakllsch Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/29 13:35:42 jakllsch Exp $
 #
 
-DISTNAME=	flashrom-0.9.3
+DISTNAME=	flashrom-0.9.4
 PKGNAME=	${DISTNAME:S/-r/pre/}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://qa.coreboot.org/releases/
+MASTER_SITES=	http://download.flashrom.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jakllsch@NetBSD.org
