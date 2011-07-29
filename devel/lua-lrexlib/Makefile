@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/24 08:51:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/29 22:09:15 cheusov Exp $
 
 .include "../../devel/lua-lrexlib/Makefile.version"
 
@@ -15,7 +15,7 @@ LICENSE=	mit
 APIs=		pcre posix onig
 
 .for i in ${APIs}
-DEPENDS+=	lua-lrexlib-${i}-${VERSION}nb1:../../devel/lua-lrexlib-${i}
+DEPENDS+=	lua-lrexlib-${i}-${VERSION}{,nb*}:../../devel/lua-lrexlib-${i}
 .endfor
 
 DESCR_SRC=		${.CURDIR}/DESCR.common
