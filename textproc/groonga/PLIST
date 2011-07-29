@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/07/11 08:32:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/07/29 12:30:36 obache Exp $
 bin/grntest
 bin/groonga
 bin/groonga-query-log-analyzer
@@ -51,7 +51,11 @@ share/doc/groonga/en/html/_sources/contribution/documentation.txt
 share/doc/groonga/en/html/_sources/contribution/documentation/c-api.txt
 share/doc/groonga/en/html/_sources/contribution/documentation/i18n.txt
 share/doc/groonga/en/html/_sources/contribution/report.txt
-share/doc/groonga/en/html/_sources/execfile.txt
+share/doc/groonga/en/html/_sources/executables.txt
+share/doc/groonga/en/html/_sources/executables/grnslap.txt
+share/doc/groonga/en/html/_sources/executables/grntest.txt
+share/doc/groonga/en/html/_sources/executables/groonga.txt
+share/doc/groonga/en/html/_sources/executables/http.txt
 share/doc/groonga/en/html/_sources/expr.txt
 share/doc/groonga/en/html/_sources/functions.txt
 share/doc/groonga/en/html/_sources/functions/edit_distance.txt
@@ -60,9 +64,6 @@ share/doc/groonga/en/html/_sources/functions/geo_in_circle.txt
 share/doc/groonga/en/html/_sources/functions/geo_in_rectangle.txt
 share/doc/groonga/en/html/_sources/functions/now.txt
 share/doc/groonga/en/html/_sources/functions/rand.txt
-share/doc/groonga/en/html/_sources/grnslap.txt
-share/doc/groonga/en/html/_sources/grntest.txt
-share/doc/groonga/en/html/_sources/http.txt
 share/doc/groonga/en/html/_sources/index.txt
 share/doc/groonga/en/html/_sources/install.txt
 share/doc/groonga/en/html/_sources/limitations.txt
@@ -70,7 +71,6 @@ share/doc/groonga/en/html/_sources/news.txt
 share/doc/groonga/en/html/_sources/news/0.x.txt
 share/doc/groonga/en/html/_sources/news/1.0.x.txt
 share/doc/groonga/en/html/_sources/news/1.1.x.txt
-share/doc/groonga/en/html/_sources/process.txt
 share/doc/groonga/en/html/_sources/pseudo_column.txt
 share/doc/groonga/en/html/_sources/reference.txt
 share/doc/groonga/en/html/_sources/spec.txt
@@ -155,7 +155,11 @@ share/doc/groonga/en/html/contribution/documentation.html
 share/doc/groonga/en/html/contribution/documentation/c-api.html
 share/doc/groonga/en/html/contribution/documentation/i18n.html
 share/doc/groonga/en/html/contribution/report.html
-share/doc/groonga/en/html/execfile.html
+share/doc/groonga/en/html/executables.html
+share/doc/groonga/en/html/executables/grnslap.html
+share/doc/groonga/en/html/executables/grntest.html
+share/doc/groonga/en/html/executables/groonga.html
+share/doc/groonga/en/html/executables/http.html
 share/doc/groonga/en/html/expr.html
 share/doc/groonga/en/html/functions.html
 share/doc/groonga/en/html/functions/edit_distance.html
@@ -165,9 +169,6 @@ share/doc/groonga/en/html/functions/geo_in_rectangle.html
 share/doc/groonga/en/html/functions/now.html
 share/doc/groonga/en/html/functions/rand.html
 share/doc/groonga/en/html/genindex.html
-share/doc/groonga/en/html/grnslap.html
-share/doc/groonga/en/html/grntest.html
-share/doc/groonga/en/html/http.html
 share/doc/groonga/en/html/index.html
 share/doc/groonga/en/html/install.html
 share/doc/groonga/en/html/limitations.html
@@ -176,7 +177,6 @@ share/doc/groonga/en/html/news/0.x.html
 share/doc/groonga/en/html/news/1.0.x.html
 share/doc/groonga/en/html/news/1.1.x.html
 share/doc/groonga/en/html/objects.inv
-share/doc/groonga/en/html/process.html
 share/doc/groonga/en/html/pseudo_column.html
 share/doc/groonga/en/html/reference.html
 share/doc/groonga/en/html/search.html
@@ -235,7 +235,11 @@ share/doc/groonga/ja/html/_sources/contribution/documentation.txt
 share/doc/groonga/ja/html/_sources/contribution/documentation/c-api.txt
 share/doc/groonga/ja/html/_sources/contribution/documentation/i18n.txt
 share/doc/groonga/ja/html/_sources/contribution/report.txt
-share/doc/groonga/ja/html/_sources/execfile.txt
+share/doc/groonga/ja/html/_sources/executables.txt
+share/doc/groonga/ja/html/_sources/executables/grnslap.txt
+share/doc/groonga/ja/html/_sources/executables/grntest.txt
+share/doc/groonga/ja/html/_sources/executables/groonga.txt
+share/doc/groonga/ja/html/_sources/executables/http.txt
 share/doc/groonga/ja/html/_sources/expr.txt
 share/doc/groonga/ja/html/_sources/functions.txt
 share/doc/groonga/ja/html/_sources/functions/edit_distance.txt
@@ -244,9 +248,6 @@ share/doc/groonga/ja/html/_sources/functions/geo_in_circle.txt
 share/doc/groonga/ja/html/_sources/functions/geo_in_rectangle.txt
 share/doc/groonga/ja/html/_sources/functions/now.txt
 share/doc/groonga/ja/html/_sources/functions/rand.txt
-share/doc/groonga/ja/html/_sources/grnslap.txt
-share/doc/groonga/ja/html/_sources/grntest.txt
-share/doc/groonga/ja/html/_sources/http.txt
 share/doc/groonga/ja/html/_sources/index.txt
 share/doc/groonga/ja/html/_sources/install.txt
 share/doc/groonga/ja/html/_sources/limitations.txt
@@ -254,7 +255,6 @@ share/doc/groonga/ja/html/_sources/news.txt
 share/doc/groonga/ja/html/_sources/news/0.x.txt
 share/doc/groonga/ja/html/_sources/news/1.0.x.txt
 share/doc/groonga/ja/html/_sources/news/1.1.x.txt
-share/doc/groonga/ja/html/_sources/process.txt
 share/doc/groonga/ja/html/_sources/pseudo_column.txt
 share/doc/groonga/ja/html/_sources/reference.txt
 share/doc/groonga/ja/html/_sources/spec.txt
@@ -339,7 +339,11 @@ share/doc/groonga/ja/html/contribution/documentation.html
 share/doc/groonga/ja/html/contribution/documentation/c-api.html
 share/doc/groonga/ja/html/contribution/documentation/i18n.html
 share/doc/groonga/ja/html/contribution/report.html
-share/doc/groonga/ja/html/execfile.html
+share/doc/groonga/ja/html/executables.html
+share/doc/groonga/ja/html/executables/grnslap.html
+share/doc/groonga/ja/html/executables/grntest.html
+share/doc/groonga/ja/html/executables/groonga.html
+share/doc/groonga/ja/html/executables/http.html
 share/doc/groonga/ja/html/expr.html
 share/doc/groonga/ja/html/functions.html
 share/doc/groonga/ja/html/functions/edit_distance.html
@@ -349,9 +353,6 @@ share/doc/groonga/ja/html/functions/geo_in_rectangle.html
 share/doc/groonga/ja/html/functions/now.html
 share/doc/groonga/ja/html/functions/rand.html
 share/doc/groonga/ja/html/genindex.html
-share/doc/groonga/ja/html/grnslap.html
-share/doc/groonga/ja/html/grntest.html
-share/doc/groonga/ja/html/http.html
 share/doc/groonga/ja/html/index.html
 share/doc/groonga/ja/html/install.html
 share/doc/groonga/ja/html/limitations.html
@@ -360,7 +361,6 @@ share/doc/groonga/ja/html/news/0.x.html
 share/doc/groonga/ja/html/news/1.0.x.html
 share/doc/groonga/ja/html/news/1.1.x.html
 share/doc/groonga/ja/html/objects.inv
-share/doc/groonga/ja/html/process.html
 share/doc/groonga/ja/html/pseudo_column.html
 share/doc/groonga/ja/html/reference.html
 share/doc/groonga/ja/html/search.html
@@ -482,7 +482,11 @@ share/doc/groonga/source/example/tutorial10-6.log
 share/doc/groonga/source/example/tutorial10-7.log
 share/doc/groonga/source/example/tutorial10-8.log
 share/doc/groonga/source/example/tutorial10-9.log
-share/doc/groonga/source/execfile.txt
+share/doc/groonga/source/executables.txt
+share/doc/groonga/source/executables/grnslap.txt
+share/doc/groonga/source/executables/grntest.txt
+share/doc/groonga/source/executables/groonga.txt
+share/doc/groonga/source/executables/http.txt
 share/doc/groonga/source/expr.txt
 share/doc/groonga/source/functions.txt
 share/doc/groonga/source/functions/edit_distance.txt
@@ -491,9 +495,6 @@ share/doc/groonga/source/functions/geo_in_circle.txt
 share/doc/groonga/source/functions/geo_in_rectangle.txt
 share/doc/groonga/source/functions/now.txt
 share/doc/groonga/source/functions/rand.txt
-share/doc/groonga/source/grnslap.txt
-share/doc/groonga/source/grntest.txt
-share/doc/groonga/source/http.txt
 share/doc/groonga/source/index.txt
 share/doc/groonga/source/install.txt
 share/doc/groonga/source/limitations.txt
@@ -501,7 +502,6 @@ share/doc/groonga/source/news.txt
 share/doc/groonga/source/news/0.x.txt
 share/doc/groonga/source/news/1.0.x.txt
 share/doc/groonga/source/news/1.1.x.txt
-share/doc/groonga/source/process.txt
 share/doc/groonga/source/pseudo_column.txt
 share/doc/groonga/source/rdoc.py
 share/doc/groonga/source/reference.txt
