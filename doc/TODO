@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10452 2011/07/28 21:11:08 minskim Exp $
+$NetBSD: TODO,v 1.10453 2011/07/29 14:36:01 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -904,6 +904,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.92.0
+	o libslang2-2.2.4
 	o libssh-0.5.0 [www.libssh.org]
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
