@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1784 2011/07/29 12:30:56 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1785 2011/07/29 13:36:12 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2726,3 +2726,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/shibboleth-sp to 2.4.3 [pettai 2011-07-28]
 	Updated security/xml-security-c to 1.6.1 [pettai 2011-07-28]
 	Updated textproc/groonga to 1.2.4 [obache 2011-07-29]
+	Updated sysutils/flashrom to 0.9.4 [jakllsch 2011-07-29]
