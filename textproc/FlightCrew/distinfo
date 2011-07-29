@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/29 19:32:18 ryoon Exp $
+
+SHA1 (FlightCrew-0.7.1-Code.zip) = fda658c25b5991caa6a912d5f4198f0222bc1466
+RMD160 (FlightCrew-0.7.1-Code.zip) = 591f25e8f7631a381f4a00cc1e63d6974d27df86
+Size (FlightCrew-0.7.1-Code.zip) = 7738824 bytes
+SHA1 (patch-CMakeLists.txt) = 8423ab7b53fad354e04fdfd159b070a8f8bf61f9
+SHA1 (patch-src_FlightCrew_tests_CMakeLists.txt) = a505955df3d6d1901f0a331311fa401ba9fec3ba

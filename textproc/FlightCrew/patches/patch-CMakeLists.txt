@@ -1,0 +1,23 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/07/29 19:32:18 ryoon Exp $
+
+* Use external boost, xerces-c, zlib, and gmock.
+
+--- CMakeLists.txt.orig	2010-11-11 10:05:50.000000000 +0000
++++ CMakeLists.txt
+@@ -42,12 +42,12 @@ set( CMAKE_OSX_SYSROOT "/Developer/SDKs/
+ set( CMAKE_OSX_ARCHITECTURES "i386;x86_64" )
+ 
+ # The parsing order is significant!
+-add_subdirectory( src/BoostParts )
+-add_subdirectory( src/Xerces )
++#add_subdirectory( src/BoostParts )
++#add_subdirectory( src/Xerces )
+ add_subdirectory( src/XercesExtensions )
+-add_subdirectory( src/zlib )
++#add_subdirectory( src/zlib )
+ add_subdirectory( src/zipios )
+-add_subdirectory( src/googlemock )
++#add_subdirectory( src/googlemock )
+ add_subdirectory( src/FlightCrew )
+ add_subdirectory( src/FlightCrew-cli )
+ 
