@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1.1.1 2011/07/29 15:18:29 ryoon Exp $
+
+* Improve compatibility.
+
+--- configure.orig	2011-04-15 19:55:43.000000000 +0000
++++ configure
+@@ -14896,7 +14896,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+        have_pthreads="$acx_pthread_ok"
+ fi
+- if test "x$have_pthreads" == "xyes"; then
++ if test "x$have_pthreads" = "xyes"; then
+   HAVE_PTHREADS_TRUE=
+   HAVE_PTHREADS_FALSE='#'
+ else
+@@ -14926,7 +14926,7 @@ else
+   enable_external_gtest=yes
+ fi
+ 
+-if test "x$with_gtest" == "xno"; then :
++if test "x$with_gtest" = "xno"; then :
+   as_fn_error "Support for GoogleTest was explicitly disabled. Currently GoogleMock has a hard
+ dependency upon GoogleTest to build, please provide a version, or allow
+ GoogleMock to use any installed version and fall back upon its internal

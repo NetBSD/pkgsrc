@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/07/29 15:18:29 ryoon Exp $
+
+* Enable 'make install'
+
+--- Makefile.in.orig	2011-04-15 19:55:44.000000000 +0000
++++ Makefile.in
+@@ -1202,14 +1202,14 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-pkgincludeHEADERS \
++install-data-am: install-pkgincludeHEADERS \
+ 	install-pkginclude_internalHEADERS
+ 
+ install-dvi: install-dvi-recursive
+ 
+ install-dvi-am:
+ 
+-install-exec-am: install-exec-local install-libLTLIBRARIES
++install-exec-am: install-libLTLIBRARIES
+ 
+ install-html: install-html-recursive
+ 
