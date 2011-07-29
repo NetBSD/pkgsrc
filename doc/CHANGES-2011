@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1788 2011/07/29 15:25:20 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1789 2011/07/29 17:21:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2734,3 +2734,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/p5-UPS-Nut version 2.6.1 [bouyer 2011-07-29]
 	Updated devel/p5-Proc-Daemon to 0.14 [bouyer 2011-07-29]
 	Added devel/gmock version 1.6.0 [ryoon 2011-07-29]
+	Updated databases/phpmyadmin to 3.4.3.2 [tron 2011-07-29]
