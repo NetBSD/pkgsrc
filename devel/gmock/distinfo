@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/29 15:18:29 ryoon Exp $
+
+SHA1 (gmock-1.6.0.zip) = 4702e98af194d320a915f1e6d2532a32b280819e
+RMD160 (gmock-1.6.0.zip) = e08ea01a82e119591eef9bab69629d0af247784f
+Size (gmock-1.6.0.zip) = 2053682 bytes
+SHA1 (patch-Makefile.in) = e82f7d84f6e2662bd1e64af833fff5261c473fc3
+SHA1 (patch-configure) = b3721fc233d1e21e5b023f5bbad85e49333c6e3d
+SHA1 (patch-gtest_configure) = 74873f4bc13306bc39c1c6ad87b1c1bb66eb950d
