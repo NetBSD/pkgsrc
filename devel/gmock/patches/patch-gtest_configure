@@ -1,0 +1,15 @@
+$NetBSD: patch-gtest_configure,v 1.1.1.1 2011/07/29 15:18:29 ryoon Exp $
+
+* Improve compatibility.
+
+--- gtest/configure.orig	2011-04-15 19:55:40.000000000 +0000
++++ gtest/configure
+@@ -14861,7 +14861,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+        have_pthreads="$acx_pthread_ok"
+ fi
+- if test "x$have_pthreads" == "xyes"; then
++ if test "x$have_pthreads" = "xyes"; then
+   HAVE_PTHREADS_TRUE=
+   HAVE_PTHREADS_FALSE='#'
+ else
