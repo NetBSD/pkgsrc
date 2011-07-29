@@ -1,25 +1,114 @@
-$NetBSD: patch-ab,v 1.10 2008/01/30 22:10:13 ghen Exp $
+$NetBSD: patch-ab,v 1.11 2011/07/29 15:11:40 bouyer Exp $
 
---- Makefile.in.orig	2006-11-08 03:08:45.000000000 +0100
-+++ Makefile.in
-@@ -41,7 +41,7 @@ distclean: clean
- 		rm $$i/Makefile; \
- 	done
+Keep trying initialisation if we get a timeout or network error while
+probing the device.
+Submitted upstream as tracker #313195
+
+--- drivers/snmp-ups.c.orig	2011-05-31 12:36:49.000000000 +0200
++++ drivers/snmp-ups.c	2011-06-29 13:16:16.000000000 +0200
+@@ -76,6 +76,9 @@
+ const char *mibname;
+ const char *mibvers;
  
--install: install-dirs install-bin install-man install-data
-+install: install-dirs install-bin install-man install-conf install-data
++int nut_snmp_err; /* saved snmp error from nut_snmp_get */
++int nut_sys_err; /* saved system errno from nut_snmp_get */
++
+ static void disable_transfer_oids(void);
  
- install-bin:
- 	@for i in $(SUBDIRS); do \
-@@ -72,9 +72,10 @@ build-cgi-fake:
- 	@echo "Run 'configure --with-cgi' before doing 'make cgi'."
+ #define DRIVER_NAME	"Generic SNMP UPS driver"
+@@ -225,15 +228,15 @@
  
- build-cgi:
-+	@cd common; $(MAKE); cd ..;
- 	@cd clients; $(MAKE) cgi; cd ..;
+ 	/* FIXME: first test if the device is reachable to avoid timeouts! */
  
--install-cgi: cgi install-cgi-dir install-dirs install-cgi-bin install-cgi-man install-cgi-html
-+install-cgi: cgi install-cgi-dir install-dirs install-cgi-conf install-cgi-bin install-cgi-man install-cgi-html
+-	/* Load the SNMP to NUT translation data */
+-	load_mib2nut(mibs);
+-
+ 	/* init polling frequency */
+ 	if (getval(SU_VAR_POLLFREQ))
+ 		pollfreq = atoi(getval(SU_VAR_POLLFREQ));
+ 	else
+ 		pollfreq = DEFAULT_POLLFREQ;
  
- install-cgi-dir:
- 	if (test ! -d $(CGIPATH)) then \
++	/* Load the SNMP to NUT translation data */
++	load_mib2nut(mibs);
++
+ 	/* Get UPS Model node to see if there's a MIB */
+ 	su_info_p = su_find_info("ups.model");
+ 	status = nut_snmp_get_str(su_info_p->OID, model, sizeof(model), NULL);
+@@ -393,6 +396,9 @@
+ 	size_t name_len = MAX_OID_LEN;
+ 	static unsigned int numerr = 0;
+ 
++	nut_sys_err = 0;
++	nut_snmp_err = 0;
++
+ 	upsdebugx(3, "nut_snmp_get(%s)", OID);
+ 
+ 	/* create and send request. */
+@@ -411,8 +417,10 @@
+ 
+ 	status = snmp_synch_response(g_snmp_sess_p, pdu, &response);
+ 
+-	if (!response)
++	if (!response) {
++		snmp_error(g_snmp_sess_p, &nut_sys_err, &nut_snmp_err, NULL);
+ 		return NULL;
++	}
+ 
+ 	if (!((status == STAT_SUCCESS) && (response->errstat == SNMP_ERR_NOERROR)))
+ 	{
+@@ -431,7 +439,7 @@
+ 
+ 		if ((numerr < SU_ERR_LIMIT) || ((numerr % SU_ERR_RATE) == 0))
+ 			nut_snmp_perror(g_snmp_sess_p, status, response,
+-				"nut_snmp_get: %s", OID);
++			    "nut_snmp_get: %s", OID);
+ 
+ 		snmp_free_pdu(response);
+ 		response = NULL;
+@@ -718,6 +726,7 @@
+ {
+ 	int	i;
+ 	char	buf[LARGEBUF];
++	int snmp_timeout = 0;
+ 
+ 	upsdebugx(2, "SNMP UPS driver : entering load_mib2nut(%s)", mib);
+ 
+@@ -728,12 +737,16 @@
+ 	 * APHEL-GENESIS-II-MIB => .iso.org.dod.internet.private.enterprises.17373
+ 	 * APHEL Revelation MIB => .iso.org.dod.internet.private.enterprises.534.6.6.6
+ 	 */
++again:
+ 	for (i = 0; mib2nut[i] != NULL; i++) {
+ 		if (strcmp(mib, "auto") && strcmp(mib, mib2nut[i]->mib_name)) {
+ 			continue;
+ 		}
+ 		upsdebugx(1, "load_mib2nut: trying %s mib", mib2nut[i]->mib_name);
+ 		if (!nut_snmp_get_str(mib2nut[i]->oid_auto_check, buf, sizeof(buf), NULL)) {
++			if (nut_snmp_err == SNMPERR_BAD_SENDTO ||
++			    nut_snmp_err == SNMPERR_TIMEOUT)
++				snmp_timeout++;
+ 			continue;
+ 		}
+ 		snmp_info = mib2nut[i]->snmp_info;
+@@ -743,6 +756,20 @@
+ 		upsdebugx(1, "load_mib2nut: using %s mib", mibname);
+ 		return TRUE;
+ 	}
++	if (snmp_timeout > 0) {
++		upslogx(LOG_WARNING, "timeout while probing %s",
++		    upsname?upsname:device_name);
++		snmp_timeout = 0;
++		if (sleep(pollfreq) == 0) {
++			/*
++			 * we're likely to end up in background if started
++			 * from upsdrvctl so enable syslog now
++			 */
++			syslogbit_set();
++			goto again;
++		}
++	}
++		    
+ 	/* Did we find something or is it really an unknown mib */
+ 	if (strcmp(mib, "auto") != 0) {
+ 		fatalx(EXIT_FAILURE, "Unknown mibs value: %s", mib);
