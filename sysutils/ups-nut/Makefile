@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2010/02/19 21:23:34 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2011/07/29 15:11:40 bouyer Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,18 +7,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKGNAME=		ups-${DISTNAME}
 COMMENT=		Network UPS Tools
 
-CONFIGURE_ARGS+=	--with-user=${NUT_USER:Q}
-CONFIGURE_ARGS+=	--with-group=${NUT_GROUP:Q}
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
 
-NUT_USER?=		nut
-NUT_GROUP?=		nut
-
 PKG_GROUPS_VARS+=	NUT_GROUP
 PKG_USERS_VARS+=	NUT_USER
-BUILD_DEFS+=		NUT_STATEDIR
+BUILD_DEFS+=		NUT_STATEDIR VARBASE
 
 FILES_SUBST+=		NUT_CONFDIR=${NUT_CONFDIR:Q}
 FILES_SUBST+=		NUT_STATEDIR=${NUT_STATEDIR:Q}
@@ -33,7 +28,8 @@ PKG_GECOS.${NUT_USER}=	Network UPS Tools
 PKG_HOME.${NUT_USER}=	${NUT_STATEDIR}
 PKG_SHELL.${NUT_USER}=	${SH}
 
-CONF_FILES=		${NUT_EGDIR}/ups.conf.sample ${NUT_CONFDIR}/ups.conf
+CONF_FILES=		${NUT_EGDIR}/nut.conf.sample ${NUT_CONFDIR}/nut.conf
+CONF_FILES+=		${NUT_EGDIR}/ups.conf.sample ${NUT_CONFDIR}/ups.conf
 CONF_FILES+=		${NUT_EGDIR}/upssched.conf.sample 		\
 			${NUT_CONFDIR}/upssched.conf
 
@@ -42,7 +38,7 @@ CONF_FILES_PERMS=	${NUT_EGDIR}/upsd.conf.sample			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 CONF_FILES_PERMS+=	${NUT_EGDIR}/upsd.users.sample			\
 			${NUT_CONFDIR}/upsd.users			\
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
+			${NUT_USER} ${NUT_GROUP} 0600
 CONF_FILES_PERMS+=	${NUT_EGDIR}/upsmon.conf.sample			\
 			${NUT_CONFDIR}/upsmon.conf			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
@@ -54,13 +50,17 @@ OWN_DIRS_PERMS=		${NUT_STATEDIR} ${NUT_USER} ${NUT_GROUP} 0770
 INSTALLATION_DIRS+=	${NUT_EGDIR} ${NUT_DOCDIR}/cables ${NUT_DOCDIR}/drivers
 
 post-install:
-	${INSTALL_DATA_DIR} 
+	${INSTALL_DATA_DIR} ${DESTDIR}${NUT_EGDIR}
+	${MV} ${DESTDIR}${NUT_CONFDIR}/*.sample ${DESTDIR}${NUT_EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${NUT_DOCDIR}
 	for f in COPYING CREDITS ChangeLog NEWS README INSTALL UPGRADING; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${NUT_DOCDIR}; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${DESTDIR}${NUT_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/data/driver.list ${DESTDIR}${NUT_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${NUT_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/cables/*.txt ${DESTDIR}${NUT_DOCDIR}/cables
+	for f in ${WRKSRC}/docs/*.txt; do \
+		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}; \
+	done
+	for f in ${WRKSRC}/docs/cables/*.txt; do \
+		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}/cables/; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
