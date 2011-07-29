@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1785 2011/07/29 13:36:12 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.1786 2011/07/29 15:17:33 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2727,3 +2727,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/xml-security-c to 1.6.1 [pettai 2011-07-28]
 	Updated textproc/groonga to 1.2.4 [obache 2011-07-29]
 	Updated sysutils/flashrom to 0.9.4 [jakllsch 2011-07-29]
+	Updated sysutils/ups-nut to 2.6.1 [bouyer 2011-07-29]
+	Updated sysutils/ups-nut-cgi to 2.6.1 [bouyer 2011-07-29]
+	Updated sysutils/ups-nut-snmp to 2.6.1 [bouyer 2011-07-29]
+	Updated sysutils/ups-nut-usb to 2.6.1 [bouyer 2011-07-29]
+	Added sysutils/p5-UPS-Nut version 2.6.1 [bouyer 2011-07-29]
