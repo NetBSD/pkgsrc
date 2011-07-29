@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.49 2011/02/13 16:11:11 tron Exp $
+$NetBSD: distinfo,v 1.50 2011/07/29 17:21:20 tron Exp $
 
-SHA1 (phpMyAdmin-2.11.11.3-all-languages.tar.bz2) = 6cb39194ec848b8697de087f6d94e1a9aca74563
-RMD160 (phpMyAdmin-2.11.11.3-all-languages.tar.bz2) = f4677040807f28a2362ce4b8acdafdab2201ea4b
-Size (phpMyAdmin-2.11.11.3-all-languages.tar.bz2) = 3118923 bytes
-SHA1 (patch-CVE-2010-4480-1) = e2a36a254e573406bc8aeb027935b1dde5717c03
-SHA1 (patch-CVE-2010-4480-2) = 650f0a8d60a1ad1e1a14c8c66c715d4304138433
-SHA1 (patch-CVE-2010-4480-3) = 403dbfdd099e5928f38fa1a9beac210b26e8ab89
-SHA1 (patch-CVE-2010-4481) = 3bbf3576d8c39df22613ac2560cadb6f890f534e
+SHA1 (phpMyAdmin-3.4.3.2-all-languages.tar.bz2) = 4a6b2bd7da67be9cdf45799dcb3e46f4d1a8397a
+RMD160 (phpMyAdmin-3.4.3.2-all-languages.tar.bz2) = 39c1192bab3907a2a9ff67082c24d97cc6f6e8d3
+Size (phpMyAdmin-3.4.3.2-all-languages.tar.bz2) = 4924912 bytes
