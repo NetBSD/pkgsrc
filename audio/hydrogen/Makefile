@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/04/28 10:27:38 mrg Exp $
+# $NetBSD: Makefile,v 1.21 2011/07/30 21:01:17 schnoebe Exp $
 
 DISTNAME=	hydrogen-0.9.4.2
 CATEGORIES=	audio
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		scons>=0.98:../../devel/scons
 BUILD_DEPENDS+=		subversion-base>=1.0:../../devel/subversion-base
 
 MAKE_ENV+=	QTDIR=${PREFIX}/qt4 PATH=$$PATH:${PREFIX}/qt4/bin
-SCONS_ARGS=	libarchive=1 jack=0 lrdf=0 alsa=0 QTDIR=/usr/pkg/qt4
+SCONS_ARGS=	libarchive=1 jack=0 lrdf=0 alsa=0 QTDIR=${QTDIR}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons DESTDIR=${DESTDIR} prefix=${PREFIX} ${SCONS_ARGS}
