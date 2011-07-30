@@ -1,0 +1,13 @@
+$NetBSD: patch-cg,v 1.1 2011/07/30 11:16:06 shattered Exp $
+
+--- calendar/libedata-cal/Makefile.in.orig	2011-07-13 20:22:21.000000000 +0000
++++ calendar/libedata-cal/Makefile.in
+@@ -120,7 +120,7 @@ libedata_cal_1_2_la_LINK = $(LIBTOOL) $(
+ 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
+ 	$(AM_CFLAGS) $(CFLAGS) $(libedata_cal_1_2_la_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
+-PROGRAMS = $(factory_PROGRAMS) $(noinst_PROGRAMS)
++PROGRAMS = $(factory_PROGRAMS)
+ am_e_calendar_factory_OBJECTS =  \
+ 	e_calendar_factory-e-data-cal-factory.$(OBJEXT) \
+ 	e_calendar_factory-e-data-cal-migrate.$(OBJEXT) \
