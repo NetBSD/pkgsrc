@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10456 2011/07/30 07:52:14 ryoon Exp $
+$NetBSD: TODO,v 1.10457 2011/07/30 12:38:30 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -809,7 +809,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kadu-0.6.5
 	o kaffe-1.1.9
 	o kaffeine-0.8.7
-	o kanjistrokeorders-ttf-2.016
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kbiff-4.0
