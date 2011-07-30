@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1800 2011/07/30 17:07:27 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1801 2011/07/30 20:13:21 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2752,3 +2752,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_libxml2 to 11.3nb3 [chs 2011-07-30]
 	Updated net/libtorrent to 0.12.9 [tron 2011-07-30]
 	Updated net/rtorrent to 0.8.9 [tron 2011-07-30]
+	Updated chat/finch to 2.9.0nb1 [gls 2011-07-30]
