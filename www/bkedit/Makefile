@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/04/22 13:44:57 obache Exp $
+# $NetBSD: Makefile,v 1.20 2011/07/30 10:17:41 cheusov Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
@@ -15,13 +15,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		bison
+USE_TOOLS+=		bison lex
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-MAKE_ENV+=		PKG_CFLAGS=${CFLAGS:M*:Q}
-MAKE_ENV+=		PKG_LDFLAGS=${LDFLAGS:M*:Q}
+MAKE_ENV+=		PKG_CFLAGS=${CFLAGS:Q}
+MAKE_ENV+=		PKG_LDFLAGS=${LDFLAGS:Q}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
