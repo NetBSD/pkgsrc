@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1802 2011/07/30 21:28:44 plunky Exp $
+$NetBSD: CHANGES-2011,v 1.1803 2011/07/30 21:51:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2754,3 +2754,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/rtorrent to 0.8.9 [tron 2011-07-30]
 	Updated chat/finch to 2.9.0nb1 [gls 2011-07-30]
 	Updated misc/zyGrib to 5.0.2 [plunky 2011-07-30]
+	Updated net/quvi to 0.2.18 [ryoon 2011-07-30]
