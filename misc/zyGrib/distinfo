@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2011/06/17 15:57:13 plunky Exp $
+$NetBSD: distinfo,v 1.9 2011/07/30 21:27:36 plunky Exp $
 
-SHA1 (zyGrib-4.0.1.tgz) = bcf231220ddeb4a69d3d61c8c719a35f87d17071
-RMD160 (zyGrib-4.0.1.tgz) = 9672bd90effd50abe7001428824a3cf28a325f82
-Size (zyGrib-4.0.1.tgz) = 16935568 bytes
-SHA1 (patch-aa) = c15ab1aa116a6d81477e173bb246fc7c5bee1d18
+SHA1 (zyGrib-5.0.2.tgz) = ef6dbce0c5b8acf918df8263e2b72f9b77b46c9c
+RMD160 (zyGrib-5.0.2.tgz) = c60cdf0de644b4ba6947824e495b819cecc7dbd4
+Size (zyGrib-5.0.2.tgz) = 16958099 bytes
+SHA1 (patch-aa) = 246b64ed3dabbc582b6cc9afde998d7b5257df40
 SHA1 (patch-ab) = 0be80e7d5b784da70b65db3eb7d31aa62f660a1d
