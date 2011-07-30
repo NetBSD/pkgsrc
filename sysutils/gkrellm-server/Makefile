@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/04/22 13:44:42 obache Exp $
+# $NetBSD: Makefile,v 1.26 2011/07/30 10:47:54 shattered Exp $
 
 .include "../../sysutils/gkrellm/Makefile.common"
 
@@ -12,7 +12,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		pkg-config
 PTHREAD_OPTS+=		require
 RCD_SCRIPTS=		gkrellmd
-CONF_FILES=		${PREFIX:Q}/share/examples/gkrellm-server/gkrellmd.conf ${PREFIX:Q}/etc/gkrellmd.conf
+EGDIR=			${PREFIX}/share/examples/gkrellm-server
+CONF_FILES=		${EGDIR}/gkrellmd.conf ${PKG_SYSCONFDIR}/gkrellmd.conf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,7 +34,7 @@ PKG_SUPPORTED_OPTIONS=	glib1
 SUBST_CLASSES+=		gkprefix
 SUBST_STAGE.gkprefix=	post-patch
 SUBST_FILES.gkprefix=	server/gkrellmd.h
-SUBST_SED.gkprefix=	-e '/GKRELLMD_SYS_ETC/{s!/etc!${PREFIX}&!;}'
+SUBST_SED.gkprefix=	-e '/GKRELLMD_SYS_ETC/{s!/etc!${PKG_SYSCONFDIR}&!;}'
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/examples/gkrellm-server
