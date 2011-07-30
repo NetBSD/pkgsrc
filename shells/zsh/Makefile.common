@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.60 2011/04/06 11:27:59 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.61 2011/07/30 11:42:42 ryoon Exp $
+# used by shells/zsh/Makefile
+# used by shells/zsh-current/Makefile
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
