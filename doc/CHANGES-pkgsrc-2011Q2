@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.12 2011/07/28 02:32:13 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.13 2011/07/30 05:42:15 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -31,3 +31,5 @@ Pullup ticket #3480 - requested by obache
 security/clamav security update
 Pullup ticket #3481 - requested by tez
 textproc/groff security/portablity update
+Pullup ticket #3482 - requested by pettai
+security/xml-security-c security update
