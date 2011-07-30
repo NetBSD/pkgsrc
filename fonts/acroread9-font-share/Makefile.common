@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/07/30 07:36:14 ryoon Exp $
+#
+# used by fonts/acroread9-chsfont/Makefile
+# used by fonts/acroread9-chtfont/Makefile
+# used by fonts/acroread9-jpnfont/Makefile
+# used by fonts/acroread9-korfont/Makefile
+# used by fonts/acroread9-font-share/Makefile
+
+PKGNAME=	acroread9-${DISTNAME}-9.1
+MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.1/misc/
+
+HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
+LICENSE=	adobe-acrobat-license
+
+DEPENDS+=	acroread9-9.*:../../print/acroread9
+
+DIST_SUBDIR=	acrobat9-fonts
+
+RESTRICTED=	Redistribution not permitted
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+USE_TOOLS+=	tar
+
+INSTALLATION_DIRS=	Acrobat9
+
+do-install:
+	${ECHO} CMap/Identity-H > ${WRKSRC}/exclude.txt
+	${ECHO} CMap/Identity-V >> ${WRKSRC}/exclude.txt
+	${TAR} -xf ${TAR_FILE} -X ${WRKSRC}/exclude.txt -C ${DESTDIR}${PREFIX}/Acrobat9
+
+.include "../../mk/bsd.pkg.mk"
