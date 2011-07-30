@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/07/30 07:30:42 ryoon Exp $
+
+--- INSTALL.orig	2010-09-22 15:19:28.000000000 +0900
++++ INSTALL	2010-10-09 08:03:26.881020586 +0900
+@@ -122,6 +122,8 @@
+ 
+         if [ "${OSname}" = "Linux" ] ; then
+           size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
++	elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" -o `uname -s` = "DragonFly" ] ; then
++	  size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
+         else
+           size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
+         fi
+@@ -657,12 +661,8 @@
+           record_config remove /usr/local/etc/bash_completion.d/acroread.sh
+       fi
+   fi
+-  if [ "${OSname}" = "Linux" ]; then
+-    manPageFile="acroread.1.gz"
+-  else
+     manPageFile="acroread.1"
+     gunzip "$ReadInstallDir/Adobe/Reader9/Resource/Shell/acroread.1.gz" 2>/dev/null 
+-  fi
+ 
+   rm -f "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
+   ln -s "$ReadInstallDir/Adobe/Reader9/Resource/Shell/${manPageFile}" "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
+@@ -950,6 +950,19 @@
+     ReadDefaultNum="$ReadIntelLinuxNum"
+     DefaultName="Intel/Linux"
+     ;;
++  NetBSD | DragonFly)
++    MachArch=`uname -p`
++    case "$MachArch" in
++     i386|x86_64)
++       ReadDefaultNum="$ReadIntelLinuxNum"
++       DefaultName="Intel/Linux"
++       ;;
++     sparc*)
++       ReadDefaultNum="$ReadSparcSolarisNum"
++       DefaultName="SPARC/Solaris 2.x"
++       ;;
++    esac
++    ;;
+ esac
+ 
+ if  [ -z "$ReadDefaultNum" ] ; then

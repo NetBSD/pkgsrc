@@ -1,0 +1,34 @@
+$NetBSD: acroread.diff,v 1.1.1.1 2011/07/30 07:30:42 ryoon Exp $
+
+--- acroread.orig	2010-08-13 07:41:12.000000000 +0000
++++ acroread
+@@ -461,6 +461,20 @@ case "$os_name" in
+   HP-UX)
+     ACRO_CONFIG=hppahpux
+     export ACRO_CONFIG
++    ;;
++  NetBSD | DragonFly)
++    machine_type=`uname -p`
++    case "$machine_type" in
++      i386|x86_64)
++        ACRO_CONFIG=intellinux
++        export ACRO_CONFIG
++        ;;
++      sparc*)
++        ACRO_CONFIG=sparcsolaris
++        export ACRO_CONFIG
++        ;;
++    esac
++    ;;
+ esac
+ 
+ if [ -z "$ACRO_CONFIG" ] ; then
+@@ -550,6 +564,8 @@ export ACRO_LD_LIBRARY_PATH
+ case "$ACRO_CONFIG" in
+   sparcsolaris)
+     LD_LIBRARY_PATH="`prepend "$ACRO_INSTALL_DIR/$ACRO_CONFIG/lib:$ACRO_INSTALL_DIR/$ACRO_CONFIG/sidecars:${MOZILLA_COMP_PATH}" "${LD_LIBRARY_PATH}"`"
++    LD_NOVERSION=1
++    export LD_NOVERSION
+     export LD_LIBRARY_PATH
+     ;;
+   intelsolaris)
