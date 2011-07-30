@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1792 2011/07/30 02:01:00 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1793 2011/07/30 07:51:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2738,3 +2738,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/FlightCrew version 0.7.1 [ryoon 2011-07-29]
 	Updated net/nicovideo-dl to 0.0.20110208 [ryoon 2011-07-29]
 	Updated net/mikutter to 0.0.3.14 [obache 2011-07-30]
+	Added print/acroread9 version 9.4.2 [ryoon 2011-07-30]
+	Added fonts/acroread9-chsfont version 9.1 [ryoon 2011-07-30]
+	Added fonts/acroread9-font-share version 9.1 [ryoon 2011-07-30]
+	Added fonts/acroread9-jpnfont version 9.1 [ryoon 2011-07-30]
+	Added fonts/acroread9-korfont version 9.1 [ryoon 2011-07-30]
+	Added fonts/acroread9-chtfont version 9.1 [ryoon 2011-07-30]
