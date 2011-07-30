@@ -1,4 +1,0 @@
-www/ap2-vhost-ldap
-graphics/png
-wip/distbb
-wip/dict-server
