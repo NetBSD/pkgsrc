@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/04/03 14:02:51 chs Exp $
+$NetBSD: distinfo,v 1.4 2011/07/30 14:34:56 chs Exp $
 
-SHA1 (suse113/i586/libxml2-2.7.7-4.5.1.i586.rpm) = 1d1ad1ba48c4a86f1fb952f5f5c45ebc90be01f3
-RMD160 (suse113/i586/libxml2-2.7.7-4.5.1.i586.rpm) = 24ee8ee69cd983cc4d8d6f6f2385c45bc4db05e9
-Size (suse113/i586/libxml2-2.7.7-4.5.1.i586.rpm) = 567725 bytes
-SHA1 (suse113/x86_64/libxml2-2.7.7-4.5.1.x86_64.rpm) = 547a5867e59da7f890d9c6c46e85df825886f8ca
-RMD160 (suse113/x86_64/libxml2-2.7.7-4.5.1.x86_64.rpm) = 6921fc982294a35c9e89b2db79a5c27245732928
-Size (suse113/x86_64/libxml2-2.7.7-4.5.1.x86_64.rpm) = 571674 bytes
+SHA1 (suse113/i586/libxml2-2.7.7-4.7.1.i586.rpm) = 7aa4b22f611eab1dc0a6b38c83dc062ed9000a87
+RMD160 (suse113/i586/libxml2-2.7.7-4.7.1.i586.rpm) = 8dd9c4d5d293fc6a9fc17ef13d5c3f8ac72b9ef4
+Size (suse113/i586/libxml2-2.7.7-4.7.1.i586.rpm) = 567559 bytes
+SHA1 (suse113/x86_64/libxml2-2.7.7-4.7.1.x86_64.rpm) = 8325bf8267480a66c084ad96f64c5eedfe75f094
+RMD160 (suse113/x86_64/libxml2-2.7.7-4.7.1.x86_64.rpm) = 5f9ed4463f9d86222091096b16f8681bebbefddf
+Size (suse113/x86_64/libxml2-2.7.7-4.7.1.x86_64.rpm) = 571406 bytes
