@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1796 2011/07/30 11:57:05 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1797 2011/07/30 12:37:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2747,3 +2747,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkg_summary-utils to 0.54.0 [cheusov 2011-07-30]
 	Updated pkgtools/nih to 0.8.0 [cheusov 2011-07-30]
 	Updated shells/zsh-current to 4.3.12 [ryoon 2011-07-30]
+	Updated fonts/kanjistrokeorders-ttf to 2.016 [ryoon 2011-07-30]
