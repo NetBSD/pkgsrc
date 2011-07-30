@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1 2011/07/30 17:06:33 tron Exp $
+
+Fix handling of command line options. Please look here for details:
+
+http://libtorrent.rakshasa.no/ticket/2657
+
+--- src/main.cc.orig	2011-06-12 07:43:04.000000000 +0100
++++ src/main.cc	2011-07-30 17:21:50.000000000 +0100
+@@ -822,13 +822,13 @@
+     }
+ #endif
+ 
+-    int firstArg = parse_options(control, argc, argv);
+-
+     if (OptionParser::has_flag('n', argc, argv))
+       control->core()->push_log("Ignoring ~/.rtorrent.rc.");
+     else
+       rpc::parse_command_single(rpc::make_target(), "try_import = ~/.rtorrent.rc");
+ 
++    int firstArg = parse_options(control, argc, argv);
++
+     control->initialize();
+ 
+     // Load session torrents and perform scheduled tasks to ensure

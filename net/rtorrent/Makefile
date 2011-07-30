@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2011/07/28 23:14:46 tron Exp $
+# $NetBSD: Makefile,v 1.40 2011/07/30 17:06:33 tron Exp $
 
-DISTNAME=	rtorrent-0.8.6
-PKGREVISION=	4
+DISTNAME=	rtorrent-0.8.9
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -18,6 +17,9 @@ USE_NCURSES=		chgat
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 GCC_REQD+=		3.3
+
+.include "../../mk/pthread.buildlink3.mk"
+LDFLAGS+=	${PTHREAD_LDFLAGS}
 
 .include "options.mk"
 
