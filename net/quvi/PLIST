@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/06/18 22:18:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/07/30 21:49:00 ryoon Exp $
 bin/quvi
 include/quvi/llst.h
 include/quvi/net.h
@@ -13,6 +13,7 @@ share/quvi/lua/util/trim.lua
 share/quvi/lua/website/README
 share/quvi/lua/website/academicearth.lua
 share/quvi/lua/website/arte.lua
+share/quvi/lua/website/audioboo.lua
 share/quvi/lua/website/bikeradar.lua
 share/quvi/lua/website/blip.lua
 share/quvi/lua/website/bloomberg.lua
@@ -23,6 +24,7 @@ share/quvi/lua/website/charlierose.lua
 share/quvi/lua/website/clipfish.lua
 share/quvi/lua/website/collegehumor.lua
 share/quvi/lua/website/dailymotion.lua
+share/quvi/lua/website/foxnews.lua
 share/quvi/lua/website/francetelevisions.lua
 share/quvi/lua/website/funnyhub.lua
 share/quvi/lua/website/funnyordie.lua
@@ -34,6 +36,7 @@ share/quvi/lua/website/guardian.lua
 share/quvi/lua/website/keezmovies.lua
 share/quvi/lua/website/liveleak.lua
 share/quvi/lua/website/megavideo.lua
+share/quvi/lua/website/metacafe.lua
 share/quvi/lua/website/pluzz.lua
 share/quvi/lua/website/pornhub.lua
 share/quvi/lua/website/publicsenat.lua
@@ -54,5 +57,6 @@ share/quvi/lua/website/tube8.lua
 share/quvi/lua/website/vimeo.lua
 share/quvi/lua/website/xhamster.lua
 share/quvi/lua/website/xvideos.lua
+share/quvi/lua/website/yfrog.lua
 share/quvi/lua/website/youjizz.lua
 share/quvi/lua/website/youtube.lua
