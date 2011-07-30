@@ -1,4 +1,0 @@
-PKGNAME=dictem-1.0.0
-PKGPATH=wip/dictem
-CVS_CHECKSUM=345
-
