@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1801 2011/07/30 20:13:21 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1802 2011/07/30 21:28:44 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2753,3 +2753,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/libtorrent to 0.12.9 [tron 2011-07-30]
 	Updated net/rtorrent to 0.8.9 [tron 2011-07-30]
 	Updated chat/finch to 2.9.0nb1 [gls 2011-07-30]
+	Updated misc/zyGrib to 5.0.2 [plunky 2011-07-30]
