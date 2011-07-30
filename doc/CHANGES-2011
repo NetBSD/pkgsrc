@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1799 2011/07/30 14:35:10 chs Exp $
+$NetBSD: CHANGES-2011,v 1.1800 2011/07/30 17:07:27 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2750,3 +2750,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/kanjistrokeorders-ttf to 2.016 [ryoon 2011-07-30]
 	Updated emulators/suse113_freetype2 to 11.3nb3 [chs 2011-07-30]
 	Updated emulators/suse113_libxml2 to 11.3nb3 [chs 2011-07-30]
+	Updated net/libtorrent to 0.12.9 [tron 2011-07-30]
+	Updated net/rtorrent to 0.8.9 [tron 2011-07-30]
