@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.492 2011/07/14 22:10:17 minskim Exp $
+# $NetBSD: Makefile,v 1.493 2011/07/30 07:47:59 ryoon Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -13,6 +13,7 @@ SUBDIR+=	acroread
 SUBDIR+=	acroread5
 SUBDIR+=	acroread7
 SUBDIR+=	acroread8
+SUBDIR+=	acroread9
 SUBDIR+=	adobeps-win
 SUBDIR+=	advi
 SUBDIR+=	apsfilter
