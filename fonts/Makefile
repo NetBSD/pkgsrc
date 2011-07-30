@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2011/06/19 14:14:36 taca Exp $
+# $NetBSD: Makefile,v 1.201 2011/07/30 07:47:13 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -21,6 +21,11 @@ SUBDIR+=	acroread7-chtfont
 SUBDIR+=	acroread7-font-share
 SUBDIR+=	acroread7-jpnfont
 SUBDIR+=	acroread7-korfont
+SUBDIR+=	acroread9-chsfont
+SUBDIR+=	acroread9-chtfont
+SUBDIR+=	acroread9-font-share
+SUBDIR+=	acroread9-jpnfont
+SUBDIR+=	acroread9-korfont
 SUBDIR+=	adobe-cidfonts
 SUBDIR+=	adobe-cmaps
 SUBDIR+=	ae-mono-ttf
