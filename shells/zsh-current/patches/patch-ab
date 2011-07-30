@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2011/04/05 13:54:24 ryoon Exp $
+$NetBSD: patch-ab,v 1.5 2011/07/30 11:53:52 ryoon Exp $
 
---- Src/zsh.h.orig	2010-12-14 10:09:52.000000000 +0000
+--- Src/zsh.h.orig	2011-05-16 15:49:11.000000000 +0000
 +++ Src/zsh.h
-@@ -2105,6 +2105,7 @@ struct ttyinfo {
+@@ -2122,6 +2122,7 @@ struct ttyinfo {
  #endif
  };
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.4 2011/04/05 13:54:24 ryoon Exp $
  /* defines for whether tabs expand to spaces */
  #if defined(HAVE_TERMIOS_H) || defined(HAVE_TERMIO_H)
  #define SGTTYFLAG       shttyinfo.tio.c_oflag
-@@ -2122,6 +2123,7 @@ struct ttyinfo {
+@@ -2139,6 +2140,7 @@ struct ttyinfo {
  #   endif
  #  endif
  # endif
