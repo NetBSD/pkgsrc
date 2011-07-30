@@ -1,0 +1,14 @@
+$NetBSD: patch-cf,v 1.1 2011/07/30 11:16:06 shattered Exp $
+
+--- libedataserver/e-time-utils.c.orig	2011-04-21 19:35:37.000000000 +0000
++++ libedataserver/e-time-utils.c
+@@ -14,6 +14,9 @@
+ /* For tm_gmtoff */
+ #define _BSD_SOURCE
+ 
++/* For strptime */
++#define _NETBSD_SOURCE
++
+ #include <time.h>
+ #include <sys/time.h>
+ 
