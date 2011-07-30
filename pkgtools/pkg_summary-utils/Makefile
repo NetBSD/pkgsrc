@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/05/11 19:28:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/30 09:54:17 cheusov Exp $
 
-DISTNAME=	pkg_summary-utils-${VERSION}
+DISTNAME=	pkg_summary-utils-0.54.0
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/psu/ \
+		http://www.mova.org/~cheusov/pub/pkg_summary-utils/
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/pub/pkg_summary-utils/
@@ -25,15 +25,10 @@ CONFLICTS+=	pkg_summary4view-[0-9]*
 
 TEST_TARGET=		test
 
-NO_CHECKSUM=		yes
-
 USE_LANGUAGES=		#empty
 USE_TOOLS+=		gzip:run
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-WRKSRC=		${WRKDIR}/files
 
 EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
 
@@ -55,10 +50,6 @@ MAKE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
 
 AUTO_MKDIRS=	yes
 
-MAKE_PROGRAM=	mkcmake
+MAKE_PROGRAM=	${PREFIX}/bin/mkcmake
 
-do-extract:
-	${CP} -Rp ${FILESDIR} ${WRKSRC}
-
-.include "../../pkgtools/pkg_summary-utils/files/version.mk"
 .include "../../mk/bsd.pkg.mk"

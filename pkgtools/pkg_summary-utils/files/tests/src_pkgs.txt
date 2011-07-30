@@ -1,3 +1,0 @@
-wip/runawk
-textproc/dictem
-wip/libuxre

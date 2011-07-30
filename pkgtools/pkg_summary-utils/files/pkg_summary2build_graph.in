@@ -1,6 +1,0 @@
-#!/bin/sh
-
-echo 'This tool will be removed in the future,
-please use pkg_summary2deps -Ap' 1>&2
-
-pkg_summary2deps -Ap "$@"
