@@ -1,4 +1,0 @@
-CVS_CHECKSUM=345
-PKGPATH=textproc/dictem
-PKGNAME=dictem-1.0.0
-
