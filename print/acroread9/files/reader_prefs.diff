@@ -1,0 +1,8 @@
+--- reader_prefs.orig	2010-01-14 13:15:31.064565700 -0600
++++ reader_prefs	2010-01-14 13:14:57.180723500 -0600
+@@ -9,3 +9,5 @@
+ >>]
+ >>
+ 
++	/JavaScriptPerms [/c << /BlackList [/t (DocMedia.newPlayer) ] >> ]
++
