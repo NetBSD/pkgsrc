@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.3 2008/12/22 02:18:51 uebayasi Exp $
+$NetBSD: patch-ag,v 1.4 2011/07/30 11:53:52 ryoon Exp $
 
---- Makefile.in.orig	2008-02-01 20:22:22.000000000 +0900
+--- Makefile.in.orig	2009-03-14 18:27:05.000000000 +0000
 +++ Makefile.in
 @@ -87,6 +87,7 @@ install.fns:
  	  scriptdir="$(scriptdir)" \
