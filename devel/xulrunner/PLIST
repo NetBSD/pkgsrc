@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2011/07/13 12:04:06 tnn Exp $
+@comment $NetBSD: PLIST,v 1.32 2011/07/31 18:00:05 tnn Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -473,6 +473,7 @@ include/xulrunner/mozilla/storage/StatementCache.h
 include/xulrunner/mozilla/storage/Variant.h
 include/xulrunner/mozilla/storage/Variant_inl.h
 include/xulrunner/mozilla/threads/nsThreadIDs.h
+include/xulrunner/mozilla/throw_gcc.h
 include/xulrunner/mozilla/unused.h
 include/xulrunner/mozpngconf.h
 ${PLIST.jit}include/xulrunner/nanojit.h
