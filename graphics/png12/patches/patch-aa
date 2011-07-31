@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/07/31 17:48:16 jakllsch Exp $
+
+--- Makefile.in.orig	2010-06-26 00:31:30.000000000 +0000
++++ Makefile.in
+@@ -303,7 +303,7 @@ TESTS = test-pngtest.sh
+ TESTS_ENVIRONMENT = srcdir=$(srcdir)
+ 
+ # man pages
+-dist_man_MANS = libpng.3 libpngpf.3 png.5
++dist_man_MANS = libpng12.3 libpngpf12.3 png12.5
+ EXTRA_SCRIPTS = libpng-config libpng12-config
+ bin_SCRIPTS = @binconfigs@
+ 
+@@ -1370,25 +1370,20 @@ libpng.vers: libpng.sym
+ 
+ test: check
+ 
+-# install the .../include headers as links to the new ones
++# don't install the .../include headers as links to the new ones
+ install-data-hook:
+ 	cd $(DESTDIR)$(includedir); rm -f png.h pngconf.h
+-	cd $(DESTDIR)$(includedir); $(LN_S) $(PNGLIB_BASENAME)/png.h png.h
+-	cd $(DESTDIR)$(includedir); $(LN_S) $(PNGLIB_BASENAME)/pngconf.h pngconf.h
+ 	cd $(DESTDIR)$(pkgconfigdir); rm -f libpng.pc
+-	cd $(DESTDIR)$(pkgconfigdir); $(LN_S) $(PNGLIB_BASENAME).pc libpng.pc
+ 
+ # do evil things to libpng to cause libpng12 to be used
+ install-exec-hook:
+-	cd $(DESTDIR)$(bindir); rm -f libpng-config
+-	cd $(DESTDIR)$(bindir); $(LN_S) $(PNGLIB_BASENAME)-config libpng-config
++	cd $(DESTDIR)$(bindir); rm -f libpng12-config
++	cd $(DESTDIR)$(bindir); $(LN_S) $(PNGLIB_BASENAME)-config libpng12-config
+ 	@set -x;\
+ 	cd $(DESTDIR)$(libdir);\
++	mv libpng.la libpngcompat.la;\
+ 	for ext in a la so sl dylib; do\
+ 		rm -f libpng.$$ext;\
+-                if test -f $(PNGLIB_BASENAME).$$ext; then\
+-                       $(LN_S) $(PNGLIB_BASENAME).$$ext libpng.$$ext;\
+-                fi;\
+ 	done
+ 
+ uninstall-hook:
