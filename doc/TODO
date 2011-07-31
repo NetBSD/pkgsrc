@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10457 2011/07/30 12:38:30 ryoon Exp $
+$NetBSD: TODO,v 1.10458 2011/07/31 08:48:22 spz Exp $
 
 Suggested new packages
 ======================
@@ -1540,8 +1540,8 @@ Suggested other platform enhancements
 
 	o platform independent bulk build infrastructure
 
-	o update the binary bootstrap kits on
-	  ftp://ftp.netbsd.org/pub/NetBSD/packages/bootstrap-pkgsrc/
+	o update the binary bootstrap kits in
+	  ftp.NetBSD.org:/pub/pkgsrc/packages/OS/arch/version-branch/
 
 Suggested cleanups in pkgsrc
 ============================

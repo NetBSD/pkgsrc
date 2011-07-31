@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.38 2011/04/09 08:03:49 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.39 2011/07/31 08:48:22 spz Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -68,7 +68,7 @@ works.</para>
 	    <filename>${MASTER_SITES}</filename> or
 	    <filename>${PATCH_SITES}</filename> respectively.
 	    The defaults are
-	    <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/</filename>
+	    <filename>ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/${DIST_SUBDIR}/</filename>
 	    and
 	    <filename>ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/</filename>.</para>
 	</listitem>

@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.8 2010/03/18 10:56:18 wiz Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.9 2011/07/31 08:48:22 spz Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -528,26 +528,21 @@ fi
       set properly in your <filename>mk/bulk/build.conf</filename>
       file, i.e. adjust it to something like one of the following:</para>
 
-      <screen>RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload </screen>
+      <screen>RSYNC_DST=ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</screen>
 
-      <para>Please use appropriate values for "packages-20xxQy",
-      "NetBSD-a.b.c" and "arch" here. If your login on ftp.NetBSD.org
+      <para>Please use appropriate values for "20xxQy" (the branch),
+      "a.b.c" (the OS version) and "arch" here. If your login on ftp.NetBSD.org
       is different from your local login, write your login directly
       into the variable, e.g. my local account is "feyrer", but for my
       login "hubertf", I use:</para>
 
-      <screen>RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</screen>
+      <screen>RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</screen>
 
       <para>A separate <filename>upload</filename> directory is used
       here to allow "closing" the directory during upload. To do
       so, run the following command on ftp.NetBSD.org next:</para>
 
-      <screen>nbftp% <userinput>mkdir -p -m 750 /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</userinput></screen>
-
-      <para>Please note that <filename>/pub/NetBSD/packages</filename> is
-      only appropriate for packages for the NetBSD operating
-      system. Binary packages for other operating systems should go
-      into <filename>/pub/pkgsrc</filename>.</para>
+      <screen>nbftp% <userinput>mkdir -p -m 750 /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</userinput></screen>
 
       <para>Before uploading the binary pkgs, ssh authentication needs
       to be set up. This example shows how to set up temporary keys
@@ -557,13 +552,13 @@ fi
       <screen>
 &rprompt; <userinput>chroot /usr/sandbox</userinput>
 chroot-&rprompt; <userinput>rm $HOME/.ssh/id-dsa*</userinput>
-chroot-&rprompt; <userinput>ssh-keygen -t dsa</userinput>
-chroot-&rprompt; <userinput>cat $HOME/.ssh/id-dsa.pub</userinput>
+chroot-&rprompt; <userinput>ssh-keygen -t rsa</userinput>
+chroot-&rprompt; <userinput>cat $HOME/.ssh/id-rsa.pub</userinput>
       </screen>
 
-      <para>Now take the output of <filename>id-dsa.pub</filename> and
+      <para>Now take the output of <filename>id-rsa.pub</filename> and
       append it to your <filename>~/.ssh/authorized_keys</filename>
-      file on ftp.NetBSD.org. You can remove the key after the
+      file on ftp.NetBSD.org. You should remove the key after the
       upload is done!</para>
 
       <para>Next, test if your ssh connection really works:</para>
@@ -597,10 +592,11 @@ chroot-&rprompt; <userinput>exit</userinput>
       to everyone:</para>
 
       <screen>
-nbftp% <userinput>cd /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch</userinput>
+nbftp% <userinput>cd /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy</userinput>
 nbftp% <userinput>mv upload/* .</userinput>
 nbftp% <userinput>rmdir upload</userinput>
-nbftp% <userinput>chmod 755 .</userinput>
+nbftp% <userinput>chgrp -R netbsd .</userinput>
+nbftp% <userinput>find . -type d | xargs chmod 775</userinput>
       </screen>
 
 <!-- end old -->
