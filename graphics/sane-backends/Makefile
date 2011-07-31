@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2011/07/12 13:19:26 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2011/07/31 20:05:58 gls Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PKGREVISION=	1
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digital cameras, frame grabbers etc.
@@ -58,9 +59,9 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .endfor
 
 .if (${OPSYS} == "Linux")
-.for f in qcam.conf v4l.conf
+.  for f in qcam.conf v4l.conf
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
-.endfor
+.  endfor
 .endif
 
 .include "options.mk"
