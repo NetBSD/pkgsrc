@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/07/21 13:05:51 obache Exp $
+# $NetBSD: Makefile,v 1.52 2011/07/31 18:00:05 tnn Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
@@ -47,5 +47,6 @@ post-install:
 	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libunicharutil_external_s.a
 	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libunicharutil_external_s.a \
 	  ${DESTDIR}${PREFIX}/lib/xulrunner/libunicharutil_external_s.a
+	${TOUCH} ${TOUCH_FLAGS} ${DESTDIR}${PREFIX}/include/xulrunner/mozilla/throw_gcc.h
 
 .include "../../mk/bsd.pkg.mk"
