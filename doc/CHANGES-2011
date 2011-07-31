@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1805 2011/07/31 14:15:06 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1806 2011/07/31 17:34:11 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2770,3 +2770,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-gtk to 1.0.0 [obache 2011-07-31]
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.0.0 [obache 2011-07-31]
 	Updated x11/ruby-gnome2-vte to 1.0.0 [obache 2011-07-31]
+	Updated graphics/libraw to 0.13.7 [gls 2011-07-31]
