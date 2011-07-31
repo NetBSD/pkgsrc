@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/31 17:48:16 jakllsch Exp $
+bin/libpng12-config
+include/libpng12/png.h
+include/libpng12/pngconf.h
+lib/libpng12.la
+lib/pkgconfig/libpng12.pc
+man/man3/libpng12.3
+man/man3/libpngpf12.3
+man/man5/png12.5
