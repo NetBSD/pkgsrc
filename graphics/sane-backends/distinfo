@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2011/07/12 12:19:40 wiz Exp $
+$NetBSD: distinfo,v 1.33 2011/07/31 20:05:58 gls Exp $
 
 SHA1 (sane-backends-1.0.22.tar.gz) = dc04d6e6fd18791d8002c3fdb23e89fef3327135
 RMD160 (sane-backends-1.0.22.tar.gz) = 524713474a819331d0179fa642fef710d073f1d1
@@ -14,3 +14,5 @@ SHA1 (patch-ah) = 6e747c3b541c9ebb57db6477ac6b6e48b1df0248
 SHA1 (patch-ai) = 74f27b5a66e3dfd96337cb00a4ff3bc48804256b
 SHA1 (patch-aj) = c2e0733796872f1b074d0491dea4cffa1891bccc
 SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
+SHA1 (patch-backend_magicolor.c) = d717160eef83b7f412f55ca2716ebf76f3fb1900
+SHA1 (patch-backend_xerox__mfp-tcp.c) = 45cf630762ec9757aa8e1306190641dd99dcc673
