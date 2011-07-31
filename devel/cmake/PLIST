@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/02/22 15:05:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/07/31 22:04:03 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -117,7 +117,10 @@ share/cmake-${CMAKE_API}/Modules/CPack.VolumeIcon.icns.in
 share/cmake-${CMAKE_API}/Modules/CPack.background.png.in
 share/cmake-${CMAKE_API}/Modules/CPack.cmake
 share/cmake-${CMAKE_API}/Modules/CPack.distribution.dist.in
+share/cmake-${CMAKE_API}/Modules/CPackBundle.cmake
+share/cmake-${CMAKE_API}/Modules/CPackComponent.cmake
 share/cmake-${CMAKE_API}/Modules/CPackDeb.cmake
+share/cmake-${CMAKE_API}/Modules/CPackNSIS.cmake
 share/cmake-${CMAKE_API}/Modules/CPackRPM.cmake
 share/cmake-${CMAKE_API}/Modules/CPackZIP.cmake
 share/cmake-${CMAKE_API}/Modules/CTest.cmake
@@ -140,6 +143,8 @@ share/cmake-${CMAKE_API}/Modules/CheckIncludeFileCXX.cmake
 share/cmake-${CMAKE_API}/Modules/CheckIncludeFiles.cmake
 share/cmake-${CMAKE_API}/Modules/CheckLibraryExists.cmake
 share/cmake-${CMAKE_API}/Modules/CheckLibraryExists.lists.in
+share/cmake-${CMAKE_API}/Modules/CheckPrototypeDefinition.c.in
+share/cmake-${CMAKE_API}/Modules/CheckPrototypeDefinition.cmake
 share/cmake-${CMAKE_API}/Modules/CheckSizeOf.cmake
 share/cmake-${CMAKE_API}/Modules/CheckStructHasMember.cmake
 share/cmake-${CMAKE_API}/Modules/CheckSymbolExists.cmake
@@ -148,19 +153,23 @@ share/cmake-${CMAKE_API}/Modules/CheckTypeSize.cmake
 share/cmake-${CMAKE_API}/Modules/CheckTypeSizeMap.cmake.in
 share/cmake-${CMAKE_API}/Modules/CheckVariableExists.c
 share/cmake-${CMAKE_API}/Modules/CheckVariableExists.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/Absoft-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Clang-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Clang-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/G95-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/GNU-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/HP-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/HP-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/HP-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/HP-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/Intel-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Intel-Fortran.cmake
@@ -179,15 +188,18 @@ share/cmake-${CMAKE_API}/Modules/Compiler/PathScale.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SCO-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SCO-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SCO.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/XL-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/XL-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/XL-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/XL-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/XL.cmake
 share/cmake-${CMAKE_API}/Modules/Dart.cmake
 share/cmake-${CMAKE_API}/Modules/DartConfiguration.tcl.in
 share/cmake-${CMAKE_API}/Modules/Documentation.cmake
@@ -198,6 +210,7 @@ share/cmake-${CMAKE_API}/Modules/FeatureSummary.cmake
 share/cmake-${CMAKE_API}/Modules/FindALSA.cmake
 share/cmake-${CMAKE_API}/Modules/FindASPELL.cmake
 share/cmake-${CMAKE_API}/Modules/FindAVIFile.cmake
+share/cmake-${CMAKE_API}/Modules/FindArmadillo.cmake
 share/cmake-${CMAKE_API}/Modules/FindBISON.cmake
 share/cmake-${CMAKE_API}/Modules/FindBLAS.cmake
 share/cmake-${CMAKE_API}/Modules/FindBZip2.cmake
@@ -349,6 +362,7 @@ share/cmake-${CMAKE_API}/Modules/FortranCInterface/mymodule.f90
 share/cmake-${CMAKE_API}/Modules/FortranCInterface/mymodule_.c
 share/cmake-${CMAKE_API}/Modules/FortranCInterface/mysub.f
 share/cmake-${CMAKE_API}/Modules/FortranCInterface/symbol.c.in
+share/cmake-${CMAKE_API}/Modules/GNUInstallDirs.cmake
 share/cmake-${CMAKE_API}/Modules/GetPrerequisites.cmake
 share/cmake-${CMAKE_API}/Modules/ITKCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/InstallRequiredSystemLibraries.cmake
@@ -364,9 +378,11 @@ share/cmake-${CMAKE_API}/Modules/Platform/AIX-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-GNU.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-VisualAge-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/BSDOS.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/BeOS.cmake
@@ -393,6 +409,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-windres.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Catamount.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Darwin-Absoft-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-GNU-Fortran.cmake
@@ -418,10 +435,16 @@ share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-HP-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-HP-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-HP-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-HP-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/HP-UX-HP.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/HP-UX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Haiku.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/IRIX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/IRIX64.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-Absoft-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Clang-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Clang-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-GNU-C.cmake
@@ -477,6 +500,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-Fortran.cmake
@@ -495,6 +519,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/eCos.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/gas.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/kFreeBSD.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/syllable.cmake
+share/cmake-${CMAKE_API}/Modules/ProcessorCount.cmake
 share/cmake-${CMAKE_API}/Modules/Qt4ConfigDependentSettings.cmake
 share/cmake-${CMAKE_API}/Modules/Qt4Macros.cmake
 share/cmake-${CMAKE_API}/Modules/RepositoryInfo.txt.in
