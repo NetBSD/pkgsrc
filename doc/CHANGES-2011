@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1807 2011/07/31 17:37:28 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1808 2011/07/31 17:49:42 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2772,3 +2772,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-vte to 1.0.0 [obache 2011-07-31]
 	Updated graphics/libraw to 0.13.7 [gls 2011-07-31]
 	Updated graphics/shotwell to 0.10.1nb1 [gls 2011-07-31]
+	Added graphics/png12 version 1.2.46 [jakllsch 2011-07-31]
