@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.1 2006/09/17 22:33:36 rillig Exp $
+$NetBSD: patch-ag,v 1.2 2011/07/31 17:58:09 jakllsch Exp $
 
 SunPro is a little picky about the places in which the "const" qualifier
 is significant, so make sure that the function prototypes match their
 declarations in the header file.
 
---- unix/unix.cpp.orig	2006-09-18 00:17:03.513608780 +0200
-+++ unix/unix.cpp	2006-09-18 00:20:40.589099772 +0200
+--- unix/unix.cpp.orig	2004-08-02 23:14:17.000000000 +0000
++++ unix/unix.cpp
 @@ -1892,7 +1892,7 @@ static bool unix_subdir (const char *Fil
  *
  ******************************************************************************/
