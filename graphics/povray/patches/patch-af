@@ -1,6 +1,4 @@
-$NetBSD: patch-af,v 1.3 2010/06/20 19:05:11 wiz Exp $
-
-http://bugs.povray.org/task/144
+$NetBSD: patch-af,v 1.4 2011/07/31 17:58:09 jakllsch Exp $
 
 --- source/png_pov.cpp.orig	2004-08-02 23:11:37.000000000 +0000
 +++ source/png_pov.cpp
@@ -22,21 +20,3 @@ http://bugs.povray.org/task/144
        }
  
  #ifdef POV_COMMENTS // temporarily skip comment writing code 
-@@ -1428,7 +1424,7 @@ void Read_Png_Image(IMAGE *Image, char *
- 		if(r_info_ptr->valid & PNG_INFO_tRNS)
- 		{
- 			for (index = 0; index < r_info_ptr->num_trans; index++)
--				cmap[index].Transmit = 255 - r_info_ptr->trans[index];
-+				cmap[index].Transmit = 255 - r_info_ptr->trans_alpha[index];
- 		}
- 
- 		Image->data.map_lines = (unsigned char **)POV_MALLOC(height * sizeof(unsigned char *), "PNG image");
-@@ -1461,7 +1457,7 @@ void Read_Png_Image(IMAGE *Image, char *
- 		if(r_info_ptr->valid & PNG_INFO_tRNS)
- 		{
- 			for (index = 0; index < r_info_ptr->num_trans; index++)
--				cmap[index].Transmit = 255 - r_info_ptr->trans[index];
-+				cmap[index].Transmit = 255 - r_info_ptr->trans_alpha[index];
- 		}
- 
- 		Image->data.map_lines = (unsigned char **)POV_MALLOC(height * sizeof(unsigned char *), "PNG image");

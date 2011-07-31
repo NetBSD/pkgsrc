@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2011/07/31 17:58:09 jakllsch Exp $
+
+--- configure.orig	2004-08-02 23:20:13.000000000 +0000
++++ configure
+@@ -1385,7 +1385,7 @@ ac_configure="$SHELL $ac_aux_dir/configu
+ # Required versions of the supporting libraries.
+ # Must be declared after AC_INIT.
+ required_libz_version="1.2.1"
+-required_libpng_version="1.2.5"
++required_libpng_version="1.2.44"
+ required_libjpeg_version="6b"
+ required_libtiff_version="3.6.1"
+ 

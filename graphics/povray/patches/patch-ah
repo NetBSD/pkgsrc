@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 2006/10/19 23:46:01 rillig Exp $
+$NetBSD: patch-ah,v 1.2 2011/07/31 17:58:09 jakllsch Exp $
 
---- scripts/allanim.sh.orig	2004-08-03 01:16:20.000000000 +0200
-+++ scripts/allanim.sh	2006-10-20 01:22:43.000000000 +0200
+--- scripts/allanim.sh.orig	2004-08-02 23:16:20.000000000 +0000
++++ scripts/allanim.sh
 @@ -57,12 +57,12 @@ case "$OPTIONS" in
      ;;
  esac
