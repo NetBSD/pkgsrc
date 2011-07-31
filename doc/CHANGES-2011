@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1809 2011/07/31 17:58:20 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.1810 2011/07/31 20:06:10 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2774,3 +2774,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/shotwell to 0.10.1nb1 [gls 2011-07-31]
 	Added graphics/png12 version 1.2.46 [jakllsch 2011-07-31]
 	Updated graphics/povray to 3.6.1nb10 [jakllsch 2011-07-31]
+	Updated graphics/sane-backends to 1.0.22nb1 [gls 2011-07-31]
