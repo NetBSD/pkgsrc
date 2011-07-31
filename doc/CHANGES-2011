@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1811 2011/07/31 20:42:44 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1812 2011/07/31 21:21:16 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2776,3 +2776,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/povray to 3.6.1nb10 [jakllsch 2011-07-31]
 	Updated graphics/sane-backends to 1.0.22nb1 [gls 2011-07-31]
 	Updated graphics/povray to 3.6.1nb11 [dholland 2011-07-31]
+	Updated security/heimdal to 1.4nb1 [gls 2011-07-31]
