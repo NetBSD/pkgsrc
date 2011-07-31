@@ -518,7 +518,7 @@ pkgsrc provides the following key features:
 
   * Like NetBSD, pkgsrc is designed with portability in mind and consists of
     highly portable code. This allows the greatest speed of development when
-    porting to new a platform. This portability also ensures that pkgsrc is 
+    porting to a new platform. This portability also ensures that pkgsrc is 
     consistent across all platforms.
 
   * The installation prefix, acceptable software licenses, international
@@ -937,11 +937,14 @@ directory. Remove the pkgsrc directory and extract the new tar file. Done.
 
 2.2.2. Via CVS
 
-To update pkgsrc via CVS, make sure the environment variable CVS_RSH is set as
-above. Then, change to the pkgsrc directory and run cvs:
+To update pkgsrc via CVS, change to the pkgsrc directory and run cvs:
 
-$ cd /usr/pkgsrc
-$ cvs update -dP
+$ cd /usr/pkgsrc && cvs update -dP
+
+If you get error messages from rsh, you need to set CVS_RSH variable as
+described above. E.g.:
+
+$ cd /usr/pkgsrc && env CVS_RSH=ssh cvs up -dP
 
 2.2.2.1. Switching between different pkgsrc branches
 
@@ -1828,8 +1831,8 @@ each variable's intent.
 
   * MASTER_SITE_BACKUP: Backup location(s) for distribution files and patch
     files if not found locally or in ${MASTER_SITES} or ${PATCH_SITES}
-    respectively. The defaults are ftp://ftp.NetBSD.org/pub/NetBSD/packages/
-    distfiles/${DIST_SUBDIR}/ and ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/$
+    respectively. The defaults are ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/$
+    {DIST_SUBDIR}/ and ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/$
     {DIST_SUBDIR}/.
 
   * BINPKG_SITES: List of sites carrying binary pkgs. rel and arch are replaced
@@ -2458,23 +2461,19 @@ everything.
 Then, make sure that you have RSYNC_DST set properly in your mk/bulk/build.conf
 file, i.e. adjust it to something like one of the following:
 
-RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload
+RSYNC_DST=ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload
 
-Please use appropriate values for "packages-20xxQy", "NetBSD-a.b.c" and "arch"
-here. If your login on ftp.NetBSD.org is different from your local login, write
-your login directly into the variable, e.g. my local account is "feyrer", but
-for my login "hubertf", I use:
+Please use appropriate values for "20xxQy" (the branch), "a.b.c" (the OS
+version) and "arch" here. If your login on ftp.NetBSD.org is different from
+your local login, write your login directly into the variable, e.g. my local
+account is "feyrer", but for my login "hubertf", I use:
 
-RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload
+RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload
 
 A separate upload directory is used here to allow "closing" the directory
 during upload. To do so, run the following command on ftp.NetBSD.org next:
 
-nbftp% mkdir -p -m 750 /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload
-
-Please note that /pub/NetBSD/packages is only appropriate for packages for the
-NetBSD operating system. Binary packages for other operating systems should go
-into /pub/pkgsrc.
+nbftp% mkdir -p -m 750 /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload
 
 Before uploading the binary pkgs, ssh authentication needs to be set up. This
 example shows how to set up temporary keys for the root account inside the
@@ -2482,12 +2481,12 @@ sandbox (assuming that no keys should be present there usually):
 
 # chroot /usr/sandbox
 chroot-# rm $HOME/.ssh/id-dsa*
-chroot-# ssh-keygen -t dsa
-chroot-# cat $HOME/.ssh/id-dsa.pub
+chroot-# ssh-keygen -t rsa
+chroot-# cat $HOME/.ssh/id-rsa.pub
 
 
-Now take the output of id-dsa.pub and append it to your ~/.ssh/authorized_keys
-file on ftp.NetBSD.org. You can remove the key after the upload is done!
+Now take the output of id-rsa.pub and append it to your ~/.ssh/authorized_keys
+file on ftp.NetBSD.org. You should remove the key after the upload is done!
 
 Next, test if your ssh connection really works:
 
@@ -2515,10 +2514,11 @@ Use whatever is needed to remove the key you've entered before! Last, move the
 uploaded packages out of the upload directory to have them accessible to
 everyone:
 
-nbftp% cd /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch
+nbftp% cd /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy
 nbftp% mv upload/* .
 nbftp% rmdir upload
-nbftp% chmod 755 .
+nbftp% chgrp -R netbsd .
+nbftp% find . -type d | xargs chmod 775
 
 
 7.4. Running a pbulk-style bulk build
@@ -3060,10 +3060,9 @@ following two tools (installed as part of the pkgtools/pkg_install package):
 
  1. pkg_admin fetch-pkg-vulnerabilities, an easy way to download a list of the
     security vulnerabilities information. This list is kept up to date by the
-    NetBSD security officer and the NetBSD packages team, and is distributed
-    from the NetBSD ftp server:
+    pkgsrc security team, and is distributed from the NetBSD ftp server:
 
-    ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities
+    ftp://ftp.NetBSD.org/pkgsrc/distfiles/pkg-vulnerabilities
 
  2. pkg_admin audit, an easy way to audit the current machine, checking each
     known vulnerability. If a vulnerable package is installed, it will be shown
@@ -3391,9 +3390,13 @@ package involves only a few steps.
     each of these dependencies, look where it exists in pkgsrc, and if there is
     a file called buildlink3.mk in that directory, add a line to your package
     Makefile which includes that file just before the last line. If the
-    buildlink3.mk file does not exist, add a DEPENDS line to the Makefile,
-    which specifies the version of the dependency and where it can be found in
-    pkgsrc. This line should be placed in the third paragraph. If the
+    buildlink3.mk file does not exist, it must be created first. The
+    buildlink3.mk file makes sure that the package's include files and
+    libraries are provided.
+
+    If you just need binaries from a package, add a DEPENDS line to the
+    Makefile, which specifies the version of the dependency and where it can be
+    found in pkgsrc. This line should be placed in the third paragraph. If the
     dependency is only needed for building the package, but not when using it,
     use BUILD_DEPENDS instead of DEPENDS. Your package may then look like this:
 
@@ -5703,9 +5706,9 @@ ${MASTER_SITE_XEMACS}
 
 Some explanations for the less self-explaining ones: MASTER_SITE_BACKUP
 contains backup sites for packages that are maintained in ftp://ftp.NetBSD.org/
-pub/NetBSD/packages/distfiles/${DIST_SUBDIR}. MASTER_SITE_LOCAL contains local
-package source distributions that are maintained in ftp://ftp.NetBSD.org/pub/
-NetBSD/packages/distfiles/LOCAL_PORTS/.
+pkgsrc/distfiles/${DIST_SUBDIR}. MASTER_SITE_LOCAL contains local package
+source distributions that are maintained in ftp://ftp.NetBSD.org/pub/pkgsrc/
+distfiles/LOCAL_PORTS/.
 
 If you choose one of these predefined sites, you may want to specify a
 subdirectory of that site. Since these macros may expand to more than one
@@ -6670,71 +6673,15 @@ version numbers recognized by pkg_info(1).
     .include "../../graphics/jpeg/buildlink3.mk"
 
 
- 2. If your package needs to use another package to build itself and there is
-    no buildlink3.mk file available, use the BUILD_DEPENDS definition:
+ 2. If your package needs binaries from another package to build, use the
+    BUILD_DEPENDS definition:
 
-    BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
-
-
- 3. If your package needs a library with which to link and again there is no
-    buildlink3.mk file available, this is specified using the DEPENDS
-    definition. For example:
-
-    DEPENDS+=       xpm-3.4j:../../graphics/xpm
+    BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 
 
-    You can also use wildcards in package dependencies:
-
-    DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
-
-
-    Note that such wildcard dependencies are retained when creating binary
-    packages. The dependency is checked when installing the binary package and
-    any package which matches the pattern will be used. Wildcard dependencies
-    should be used with care.
-
-    The "-[0-9]*" should be used instead of "-*" to avoid potentially ambiguous
-    matches such as "tk-postgresql" matching a "tk-*" DEPENDS.
-
-    Wildcards can also be used to specify that a package will only build
-    against a certain minimum version of a pre-requisite:
-
-    DEPENDS+=       tiff>=3.5.4:../../graphics/tiff
-
-
-    This means that the package will build against version 3.5.4 of the tiff
-    library or newer. Such a dependency may be warranted if, for example, the
-    API of the library has changed with version 3.5.4 and a package would not
-    compile against an earlier version of tiff.
-
-    Please note that such dependencies should only be updated if a package
-    requires a newer pre-requisite, but not to denote recommendations such as
-    ABI changes that do not prevent a package from building correctly. Such
-    recommendations can be expressed using ABI_DEPENDS:
-
-    ABI_DEPENDS+=   tiff>=3.6.1:../../graphics/tiff
-
-
-    In addition to the above DEPENDS line, this denotes that while a package
-    will build against tiff>=3.5.4, at least version 3.6.1 is recommended.
-    ABI_DEPENDS entries will be turned into dependencies unless explicitly
-    ignored (in which case a warning will be printed).
-
-    To ignore these ABI dependency recommendations and just use the required
-    DEPENDS, set USE_ABI_DEPENDS=NO. This may make it easier and faster to
-    update packages built using pkgsrc, since older compatible dependencies can
-    continue to be used. This is useful for people who watch their rebuilds
-    very carefully; it is not very good as a general-purpose hammer. If you use
-    it, you need to be mindful of possible ABI changes, including those from
-    the underlying OS.
-
-    Packages that are built with recommendations ignored may not be uploaded to
-    ftp.NetBSD.org by developers and should not be used across different
-    systems that may have different versions of binary packages installed.
-
-    For security fixes, please update the package vulnerabilities file. See
-    Section 19.1.10, "Handling packages with security problems" for more
-    information.
+ 3. If your package needs a library with which to link and there is no
+    buildlink3.mk file available, create one. Using DEPENDS won't be sufficient
+    because the include files and libraries will be hidden from the compiler.
 
  4. If your package needs some executable to be able to run correctly and if
     there's no buildlink3.mk file, this is specified using the DEPENDS
@@ -6744,8 +6691,30 @@ version numbers recognized by pkg_info(1).
     DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 
 
-    The comment about wildcard dependencies from previous paragraph applies
-    here, too.
+ 5. You can use wildcards in package dependencies. Note that such wildcard
+    dependencies are retained when creating binary packages. The dependency is
+    checked when installing the binary package and any package which matches
+    the pattern will be used. Wildcard dependencies should be used with care.
+
+    The "-[0-9]*" should be used instead of "-*" to avoid potentially ambiguous
+    matches such as "tk-postgresql" matching a "tk-*" DEPENDS.
+
+    Wildcards can also be used to specify that a package will only build
+    against a certain minimum version of a pre-requisite:
+
+    DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
+
+
+    This means that the package will build using version 6.0 of ImageMagick or
+    newer. Such a dependency may be warranted if, for example, the command line
+    options of an executable have changed.
+
+    If you need to depend on minimum versions of libraries, see the buildlink
+    section of the pkgsrc guide.
+
+    For security fixes, please update the package vulnerabilities file. See
+    Section 19.1.10, "Handling packages with security problems" for more
+    information.
 
 If your package needs files from another package to build, add the relevant
 distribution files to DISTFILES, so they will be extracted automatically. See
