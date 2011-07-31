@@ -1,0 +1,20 @@
+$NetBSD: patch-tig_c,v 1.1 2011/07/31 22:15:36 dholland Exp $
+
+--- tig.c.orig	2011-03-07 01:50:11.000000000 +0000
++++ tig.c
+@@ -1897,12 +1897,12 @@ redraw_display(bool clear)
+  */
+ 
+ #define TOGGLE_MENU \
+-	TOGGLE_(LINENO,    '.', "line numbers",      &opt_line_number, NULL) \
++	TOGGLE_(LINENO,    '.', "line numbers",      &opt_line_number, (struct enum_map *)NULL) \
+ 	TOGGLE_(DATE,      'D', "dates",             &opt_date,	  date_map) \
+ 	TOGGLE_(AUTHOR,    'A', "author names",      &opt_author, author_map) \
+ 	TOGGLE_(GRAPHIC,   '~', "graphics",          &opt_line_graphics, graphic_map) \
+-	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, NULL) \
+-	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, NULL)
++	TOGGLE_(REV_GRAPH, 'g', "revision graph",    &opt_rev_graph, (struct enum_map *)NULL) \
++	TOGGLE_(REFS,      'F', "reference display", &opt_show_refs, (struct enum_map *)NULL)
+ 
+ static void
+ toggle_option(enum request request)
