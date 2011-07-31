@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/07/31 17:48:16 jakllsch Exp $
+
+--- scripts/libpng-config.in.orig	2010-06-26 00:31:16.000000000 +0000
++++ scripts/libpng-config.in
+@@ -16,10 +16,10 @@ prefix="@prefix@"
+ exec_prefix="@exec_prefix@"
+ libdir="@libdir@"
+ includedir="@includedir@/libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@"
+-libs="-lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@"
++libs="-lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@ @LIBS@"
+ all_libs="-lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@ @LIBS@"
+ I_opts="-I${includedir}"
+-L_opts="-L${libdir}"
++L_opts="-Wl,-R${libdir} -Wl,-R${libdir} -L${libdir}"
+ R_opts=""
+ cppflags=""
+ ccopts="@LIBPNG_NO_MMX@"
