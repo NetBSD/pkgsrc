@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1803 2011/07/30 21:51:00 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1804 2011/07/31 09:15:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/finch to 2.9.0nb1 [gls 2011-07-30]
 	Updated misc/zyGrib to 5.0.2 [plunky 2011-07-30]
 	Updated net/quvi to 0.2.18 [ryoon 2011-07-30]
+	Updated print/lilypond to 2.14.2 [ryoon 2011-07-31]
