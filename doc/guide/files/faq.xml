@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.47 2010/12/23 23:54:17 abs Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.48 2011/07/31 08:48:22 spz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -369,7 +369,7 @@ transfers.</para>
 <para>You would like to download all the distfiles in a single batch
 from work or university, where you can't run a <command>make
 fetch</command>.  There is an archive of distfiles on <ulink
-url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/">ftp.NetBSD.org</ulink>,
+url="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/">ftp.NetBSD.org</ulink>,
 but downloading the entire directory may not be appropriate.</para>
 
 <para>The answer here is to do a <command>make fetch-list</command> in
@@ -517,11 +517,11 @@ do this, refer to the following two tools (installed as part of the
   <listitem>
     <para><command>pkg_admin fetch-pkg-vulnerabilities</command>, an easy way to
     download a list of the security vulnerabilities information.  This list
-    is kept up to date by the NetBSD security officer and the NetBSD
-    packages team, and is distributed from the NetBSD ftp server:</para>
+    is kept up to date by the pkgsrc security team, and is distributed
+    from the NetBSD ftp server:</para>
 
     <para><ulink
-    url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities"/></para>
+    url="ftp://ftp.NetBSD.org/pkgsrc/distfiles/pkg-vulnerabilities"/></para>
   </listitem>
 
   <listitem>

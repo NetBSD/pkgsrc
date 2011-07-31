@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.24 2011/04/09 19:09:45 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.25 2011/07/31 08:48:22 spz Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -291,7 +291,7 @@ minutes!</para>
 	    recompile. Packages are usually generated in
 	    <filename>/usr/pkgsrc/packages</filename>; there is also
 	    an archive on <ulink
-	    url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/">ftp.NetBSD.org</ulink>.</para>
+	    url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/">ftp.NetBSD.org</ulink>.</para>
 
 	  <para>Sometimes, this is referred to by the term <quote>package</quote> too,
 	    especially in the context of precompiled packages.</para>
