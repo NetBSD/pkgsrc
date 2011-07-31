@@ -1,0 +1,12 @@
+$NetBSD: patch-az,v 1.1 2011/07/31 22:08:49 tnn Exp $
+
+--- bridges/source/cpp_uno/gcc3_netbsd_x86-64/except.cxx.orig	2008-04-11 10:24:53.000000000 +0000
++++ bridges/source/cpp_uno/gcc3_netbsd_x86-64/except.cxx
+@@ -33,6 +33,7 @@
+ 
+ #include <stdio.h>
+ #include <dlfcn.h>
++#include <string.h>
+ #include <cxxabi.h>
+ #include <hash_map>
+ #include <sys/param.h>
