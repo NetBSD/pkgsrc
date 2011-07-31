@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2011/07/21 17:03:58 joerg Exp $
+$NetBSD: patch-ak,v 1.2 2011/07/31 23:45:22 dholland Exp $
 
-Out of declarations are invalid.
+Out-of-class member declarations are invalid.
 
 --- plus/xadbm.h.orig	2011-07-21 13:00:18.000000000 +0000
 +++ plus/xadbm.h
