@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.61 2009/08/02 02:41:53 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.62 2011/07/31 08:48:22 spz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -339,10 +339,10 @@ ${MASTER_SITE_XEMACS}
       <para>Some explanations for the less self-explaining ones:
       <varname>MASTER_SITE_BACKUP</varname> contains backup sites
       for packages that are maintained in <ulink
-      url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}"
+      url="ftp://ftp.NetBSD.org/pkgsrc/distfiles/${DIST_SUBDIR}"
       />.  <varname>MASTER_SITE_LOCAL</varname> contains local
       package source distributions that are maintained in <ulink
-      url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/"
+      url="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/"
       />.</para>
 
       <para>If you choose one of these predefined sites, you may
