@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/07/11 09:57:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/07/31 09:55:09 cheusov Exp $
 bin/qemu
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
@@ -96,7 +96,7 @@ share/qemu/pxe-rtl8139.bin
 share/qemu/pxe-virtio.bin
 share/qemu/s390-zipl.rom
 share/qemu/vgabios-cirrus.bin
-share/qemu/vgabios.bin
 share/qemu/vgabios-qxl.bin
 share/qemu/vgabios-stdvga.bin
 share/qemu/vgabios-vmware.bin
+share/qemu/vgabios.bin
