@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/07/31 17:48:16 jakllsch Exp $
+
+--- configure.orig	2010-06-26 00:31:29.000000000 +0000
++++ configure
+@@ -11456,7 +11456,7 @@ LIBPNG_DEFINES=$LIBPNG_DEFINES\ $LIBPNG_
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if libraries can be versioned" >&5
+ $as_echo_n "checking if libraries can be versioned... " >&6; }
+ GLD=`$LD --help < /dev/null 2>/dev/null | grep version-script`
+-if test "$GLD"; then
++if test "$GLD" && test "`uname -s`" != "Interix"; then
+     have_ld_version_script=yes
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
