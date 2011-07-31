@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>The pkgsrc guide</title>
-<link rel="stylesheet" href="/global.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="/global.css">
 <meta name="generator" content="DocBook XSL Stylesheets VX.X.X">
 <meta name="description" content="pkgsrc is a centralized package management system for Unix-like operating systems. This guide provides information for users and developers of pkgsrc. It covers installation of binary and source packages, creation of binary and source packages and a high-level overview about the infrastructure.">
 </head>
@@ -548,7 +548,7 @@ pkgsrc provides the following key features:
   are preserved.</p></li>
 <li class="listitem"><p>Like NetBSD, pkgsrc is designed with portability in mind and
   consists of highly portable code. This allows the greatest speed of
-  development when porting to new a platform. This portability also
+  development when porting to a new platform. This portability also
   ensures that pkgsrc is <span class="emphasis"><em>consistent across all
   platforms</em></span>.</p></li>
 <li class="listitem"><p>The installation prefix, acceptable software licenses,
@@ -724,7 +724,7 @@ minutes!</p>
 	    machine architecture without the need to
 	    recompile. Packages are usually generated in
 	    <code class="filename">/usr/pkgsrc/packages</code>; there is also
-	    an archive on <a class="ulink" href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/" target="_top">ftp.NetBSD.org</a>.</p>
+	    an archive on <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/" target="_top">ftp.NetBSD.org</a>.</p>
 <p>Sometimes, this is referred to by the term <span class="quote">&#8220;<span class="quote">package</span>&#8221;</span> too,
 	    especially in the context of precompiled packages.</p>
 </dd>
@@ -1037,11 +1037,12 @@ release -d
 <div class="sect2" title="2.2.2. Via CVS">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="uptodate-cvs"></a>2.2.2. Via CVS</h3></div></div></div>
-<p>To update pkgsrc via CVS, make sure the environment
-	variable <code class="varname">CVS_RSH</code> is set as above. Then,
-	change to the <code class="filename">pkgsrc</code> directory and run cvs:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr/pkgsrc</code></strong>
-<code class="prompt">$</code> <strong class="userinput"><code>cvs update -dP</code></strong></pre>
+<p>To update pkgsrc via CVS, change to the <code class="filename">pkgsrc</code> directory and run cvs:</p>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr/pkgsrc &amp;&amp; cvs update -dP</code></strong>
+</pre>
+<p>If you get error messages from <code class="literal">rsh</code>, you need to set CVS_RSH variable as described above. E.g.:</p>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr/pkgsrc &amp;&amp; env CVS_RSH=ssh cvs up -dP</code></strong>
+</pre>
 <div class="sect3" title="2.2.2.1. Switching between different pkgsrc branches">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="uptodate-cvs-switch"></a>2.2.2.1. Switching between different pkgsrc branches</h4></div></div></div>
@@ -2082,7 +2083,7 @@ works.</p>
 	    <code class="filename">${MASTER_SITES}</code> or
 	    <code class="filename">${PATCH_SITES}</code> respectively.
 	    The defaults are
-	    <code class="filename">ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/</code>
+	    <code class="filename">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/${DIST_SUBDIR}/</code>
 	    and
 	    <code class="filename">ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/</code>.</p></li>
 <li class="listitem"><p><code class="varname">BINPKG_SITES</code>:
@@ -2866,21 +2867,17 @@ fi
 <p>Then, make sure that you have <code class="varname">RSYNC_DST</code>
       set properly in your <code class="filename">mk/bulk/build.conf</code>
       file, i.e. adjust it to something like one of the following:</p>
-<pre class="screen">RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload </pre>
-<p>Please use appropriate values for "packages-20xxQy",
-      "NetBSD-a.b.c" and "arch" here. If your login on ftp.NetBSD.org
+<pre class="screen">RSYNC_DST=ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</pre>
+<p>Please use appropriate values for "20xxQy" (the branch),
+      "a.b.c" (the OS version) and "arch" here. If your login on ftp.NetBSD.org
       is different from your local login, write your login directly
       into the variable, e.g. my local account is "feyrer", but for my
       login "hubertf", I use:</p>
-<pre class="screen">RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</pre>
+<pre class="screen">RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</pre>
 <p>A separate <code class="filename">upload</code> directory is used
       here to allow "closing" the directory during upload. To do
       so, run the following command on ftp.NetBSD.org next:</p>
-<pre class="screen">nbftp% <strong class="userinput"><code>mkdir -p -m 750 /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch/upload</code></strong></pre>
-<p>Please note that <code class="filename">/pub/NetBSD/packages</code> is
-      only appropriate for packages for the NetBSD operating
-      system. Binary packages for other operating systems should go
-      into <code class="filename">/pub/pkgsrc</code>.</p>
+<pre class="screen">nbftp% <strong class="userinput"><code>mkdir -p -m 750 /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy/upload</code></strong></pre>
 <p>Before uploading the binary pkgs, ssh authentication needs
       to be set up. This example shows how to set up temporary keys
       for the root account <span class="emphasis"><em>inside the sandbox</em></span>
@@ -2888,12 +2885,12 @@ fi
 <pre class="screen">
 <code class="prompt">#</code> <strong class="userinput"><code>chroot /usr/sandbox</code></strong>
 chroot-<code class="prompt">#</code> <strong class="userinput"><code>rm $HOME/.ssh/id-dsa*</code></strong>
-chroot-<code class="prompt">#</code> <strong class="userinput"><code>ssh-keygen -t dsa</code></strong>
-chroot-<code class="prompt">#</code> <strong class="userinput"><code>cat $HOME/.ssh/id-dsa.pub</code></strong>
+chroot-<code class="prompt">#</code> <strong class="userinput"><code>ssh-keygen -t rsa</code></strong>
+chroot-<code class="prompt">#</code> <strong class="userinput"><code>cat $HOME/.ssh/id-rsa.pub</code></strong>
       </pre>
-<p>Now take the output of <code class="filename">id-dsa.pub</code> and
+<p>Now take the output of <code class="filename">id-rsa.pub</code> and
       append it to your <code class="filename">~/.ssh/authorized_keys</code>
-      file on ftp.NetBSD.org. You can remove the key after the
+      file on ftp.NetBSD.org. You should remove the key after the
       upload is done!</p>
 <p>Next, test if your ssh connection really works:</p>
 <pre class="screen">chroot-<code class="prompt">#</code> <strong class="userinput"><code>ssh ftp.NetBSD.org date</code></strong> </pre>
@@ -2917,10 +2914,11 @@ chroot-<code class="prompt">#</code> <strong class="userinput"><code>exit</code>
       <code class="filename">upload</code> directory to have them accessible
       to everyone:</p>
 <pre class="screen">
-nbftp% <strong class="userinput"><code>cd /pub/NetBSD/packages/packages-20xxQy/NetBSD-a.b.c/arch</code></strong>
+nbftp% <strong class="userinput"><code>cd /pub/pkgsrc/packages/NetBSD/arch/a.b.c-20xxQy</code></strong>
 nbftp% <strong class="userinput"><code>mv upload/* .</code></strong>
 nbftp% <strong class="userinput"><code>rmdir upload</code></strong>
-nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
+nbftp% <strong class="userinput"><code>chgrp -R netbsd .</code></strong>
+nbftp% <strong class="userinput"><code>find . -type d | xargs chmod 775</code></strong>
       </pre>
 </div>
 </div>
@@ -3397,7 +3395,7 @@ transfers.</p>
 <a name="fetching-all-distfiles"></a>9.9. How to fetch all distfiles at once</h2></div></div></div>
 <p>You would like to download all the distfiles in a single batch
 from work or university, where you can't run a <span class="command"><strong>make
-fetch</strong></span>.  There is an archive of distfiles on <a class="ulink" href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/" target="_top">ftp.NetBSD.org</a>,
+fetch</strong></span>.  There is an archive of distfiles on <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/" target="_top">ftp.NetBSD.org</a>,
 but downloading the entire directory may not be appropriate.</p>
 <p>The answer here is to do a <span class="command"><strong>make fetch-list</strong></span> in
 <code class="filename">/usr/pkgsrc</code> or one of its subdirectories, carry the
@@ -3505,9 +3503,9 @@ do this, refer to the following two tools (installed as part of the
 <li class="listitem">
 <p><span class="command"><strong>pkg_admin fetch-pkg-vulnerabilities</strong></span>, an easy way to
     download a list of the security vulnerabilities information.  This list
-    is kept up to date by the NetBSD security officer and the NetBSD
-    packages team, and is distributed from the NetBSD ftp server:</p>
-<p><a class="ulink" href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities" target="_top">ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities</a></p>
+    is kept up to date by the pkgsrc security team, and is distributed
+    from the NetBSD ftp server:</p>
+<p><a class="ulink" href="ftp://ftp.NetBSD.org/pkgsrc/distfiles/pkg-vulnerabilities" target="_top">ftp://ftp.NetBSD.org/pkgsrc/distfiles/pkg-vulnerabilities</a></p>
 </li>
 <li class="listitem"><p><span class="command"><strong>pkg_admin audit</strong></span>, an easy way to audit the
     current machine, checking each known vulnerability.  If a
@@ -3857,7 +3855,9 @@ these dependencies, look where it exists in pkgsrc, and if there is a
 file called <code class="filename">buildlink3.mk</code> in that directory, add a
 line to your package <code class="filename">Makefile</code> which includes that
 file just before the last line. If the
-<code class="filename">buildlink3.mk</code> file does not exist, add a
+<code class="filename">buildlink3.mk</code> file does not exist, it must be
+created first. The <code class="filename">buildlink3.mk</code> file makes sure that the package's include files and libraries are provided.</p>
+<p>If you just need binaries from a package, add a
 <code class="varname">DEPENDS</code> line to the Makefile, which specifies the
 version of the dependency and where it can be found in pkgsrc. This line
 should be placed in the third paragraph. If the dependency is only
@@ -6716,8 +6716,8 @@ ${MASTER_SITE_XEMACS}
 </pre>
 <p>Some explanations for the less self-explaining ones:
       <code class="varname">MASTER_SITE_BACKUP</code> contains backup sites
-      for packages that are maintained in <a class="ulink" href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/%24%7BDIST_SUBDIR%7D" target="_top">ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}</a>.  <code class="varname">MASTER_SITE_LOCAL</code> contains local
-      package source distributions that are maintained in <a class="ulink" href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/" target="_top">ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/</a>.</p>
+      for packages that are maintained in <a class="ulink" href="ftp://ftp.NetBSD.org/pkgsrc/distfiles/%24%7BDIST_SUBDIR%7D" target="_top">ftp://ftp.NetBSD.org/pkgsrc/distfiles/${DIST_SUBDIR}</a>.  <code class="varname">MASTER_SITE_LOCAL</code> contains local
+      package source distributions that are maintained in <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/</a>.</p>
 <p>If you choose one of these predefined sites, you may
       want to specify a subdirectory of that site. Since these
       macros may expand to more than one actual site, you
@@ -7521,7 +7521,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229346836"></a><dl>
+<a name="id1168229333580"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7538,7 +7538,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168229346839"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168229333584"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7548,7 +7548,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168229346848"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168229333592"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7559,7 +7559,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168229346857"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168229333601"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7917,78 +7917,17 @@ ACCEPTABLE_LICENSES+=xv-license
 	</pre>
 </li>
 <li class="listitem">
-<p>If your package needs to use another package to build
-	itself and there is no <code class="filename">buildlink3.mk</code>
-	file available, use the <code class="varname">BUILD_DEPENDS</code>
-	definition:</p>
+<p>If your package needs binaries from another package to build,
+	use the <code class="varname">BUILD_DEPENDS</code> definition:</p>
 <pre class="programlisting">
-BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 	</pre>
 </li>
-<li class="listitem">
-<p>If your package needs a library with which to link and
-	again there is no <code class="filename">buildlink3.mk</code> file
-	available, this is specified using the
-	<code class="varname">DEPENDS</code> definition. For example:</p>
-<pre class="programlisting">
-DEPENDS+=       xpm-3.4j:../../graphics/xpm
-	</pre>
-<p>You can also use wildcards in package dependencies:</p>
-<pre class="programlisting">
-DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
-	</pre>
-<p>Note that such wildcard dependencies are retained when
-	creating binary packages.  The dependency is checked when
-	installing the binary package and any package which matches
-	the pattern will be used.  Wildcard dependencies should be
-	used with care.</p>
-<p>The <span class="quote">&#8220;<span class="quote">-[0-9]*</span>&#8221;</span> should be used instead of
-	<span class="quote">&#8220;<span class="quote">-*</span>&#8221;</span> to avoid potentially ambiguous matches
-	such as <span class="quote">&#8220;<span class="quote">tk-postgresql</span>&#8221;</span> matching a
-	<span class="quote">&#8220;<span class="quote">tk-*</span>&#8221;</span> <code class="varname">DEPENDS</code>.</p>
-<p>Wildcards can also be used to specify that a package
-	will only build against a certain minimum version of a
-	pre-requisite:</p>
-<pre class="programlisting">
-DEPENDS+=       tiff&gt;=3.5.4:../../graphics/tiff
-	</pre>
-<p>This means that the package will build against version
-	3.5.4 of the tiff library or newer.  Such a dependency may
-	be warranted if, for example, the API of the library has
-	changed with version 3.5.4 and a package would not compile
-	against an earlier version of tiff.</p>
-<p>Please note that such dependencies should only be
-	updated if a package requires a newer pre-requisite, but
-	not to denote recommendations such as
-	ABI changes that do not prevent a package from building
-	correctly.  Such recommendations can be expressed using
-	<code class="varname">ABI_DEPENDS</code>:</p>
-<pre class="programlisting">
-ABI_DEPENDS+=   tiff&gt;=3.6.1:../../graphics/tiff
-	</pre>
-<p>In addition to the above <code class="varname">DEPENDS</code>
-	line, this denotes that while a package will build against
-	tiff&gt;=3.5.4, at least version 3.6.1 is recommended.
-	<code class="varname">ABI_DEPENDS</code> entries will be turned into
-	dependencies unless explicitly ignored (in which case a
-	warning will be printed).</p>
-<p>To ignore these ABI dependency recommendations and just
-	use the required <code class="varname">DEPENDS</code>, set
-	<code class="varname">USE_ABI_DEPENDS=NO</code>.   This may make
-	it easier and faster to update packages built using pkgsrc,
-	since older compatible dependencies can continue to be
-	used. This is useful for people who watch their rebuilds
-	very carefully; it is not very good as a general-purpose
-	hammer.  If you use it, you need to be mindful of possible
-	ABI changes, including those from the underlying OS.</p>
-<p>Packages that are built with recommendations ignored
-	may not be uploaded to ftp.NetBSD.org by developers and
-	should not be used across different systems that may have
-	different versions of binary packages installed.</p>
-<p>For security fixes, please update the package
-	vulnerabilities file. See <a class="xref" href="#security-handling" title="19.1.10. Handling packages with security problems">Section 19.1.10, &#8220;Handling packages with security problems&#8221;</a> for more
-	information.</p>
-</li>
+<li class="listitem"><p>If your package needs a library with which to link and
+	there is no <code class="filename">buildlink3.mk</code> file
+	available, create one. Using
+	<code class="varname">DEPENDS</code> won't be sufficient because the
+	include files and libraries will be hidden from the compiler.</p></li>
 <li class="listitem">
 <p>If your package needs some executable to be able to run
 	correctly and if there's no
@@ -8000,8 +7939,32 @@ ABI_DEPENDS+=   tiff&gt;=3.6.1:../../graphics/tiff
 <pre class="programlisting">
 DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 	</pre>
-<p>The comment about wildcard dependencies from previous
-	paragraph applies here, too.</p>
+</li>
+<li class="listitem">
+<p>You can use wildcards in package dependencies. Note that
+	such wildcard dependencies are retained when creating binary
+	packages. The dependency is checked when installing the binary
+	package and any package which matches the pattern will be
+	used. Wildcard dependencies should be used with care.</p>
+<p>The <span class="quote">&#8220;<span class="quote">-[0-9]*</span>&#8221;</span> should be used instead of
+	<span class="quote">&#8220;<span class="quote">-*</span>&#8221;</span> to avoid potentially ambiguous matches
+	such as <span class="quote">&#8220;<span class="quote">tk-postgresql</span>&#8221;</span> matching a
+	<span class="quote">&#8220;<span class="quote">tk-*</span>&#8221;</span> <code class="varname">DEPENDS</code>.</p>
+<p>Wildcards can also be used to specify that a package
+	will only build against a certain minimum version of a
+	pre-requisite:</p>
+<pre class="programlisting">
+DEPENDS+=       ImageMagick&gt;=6.0:../../graphics/ImageMagick
+	</pre>
+<p>This means that the package will build using version 6.0
+	of ImageMagick or newer. Such a dependency may be warranted
+	if, for example, the command line options of an executable
+	have changed.</p>
+<p>If you need to depend on minimum versions of libraries,
+	see the buildlink section of the pkgsrc guide.</p>
+<p>For security fixes, please update the package
+	vulnerabilities file. See <a class="xref" href="#security-handling" title="19.1.10. Handling packages with security problems">Section 19.1.10, &#8220;Handling packages with security problems&#8221;</a> for more
+	information.</p>
 </li>
 </ol></div>
 <p>If your package needs files from another package to build,
@@ -9571,7 +9534,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229333677"></a><dl>
+<a name="id1168229337993"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9614,7 +9577,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168229333681"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168229337996"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9630,7 +9593,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168229333783"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168229338029"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9648,7 +9611,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168229333819"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168229338067"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9666,7 +9629,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168229333854"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168229338101"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9679,7 +9642,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168229333873"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168229338120"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9695,7 +9658,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168229333898"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168229338146"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9719,7 +9682,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168229333965"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168229338247"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9744,7 +9707,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168229333997"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168229338278"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9792,7 +9755,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168229334052"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168229338332"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
