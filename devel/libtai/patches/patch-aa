@@ -1,12 +1,28 @@
-$NetBSD: patch-aa,v 1.1 2008/07/30 10:36:27 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2011/08/01 05:37:12 dholland Exp $
 
---- leapsecs_read.c.orig	1998-09-04 22:33:37.000000000 -0400
+Use malloc correctly.
+Don't declare own errno.
+Needs unistd.h.
+
+--- leapsecs_read.c.orig	1998-10-13 16:52:20.000000000 +0000
 +++ leapsecs_read.c
-@@ -2,6 +2,7 @@
+@@ -2,7 +2,9 @@
  #include <sys/stat.h>
  #include <fcntl.h>
  #include <errno.h>
+-extern int errno;
++#include <stdlib.h>
 +#include <unistd.h>
- extern int errno;
++
  #include "tai.h"
  #include "leapsecs.h"
+ 
+@@ -29,7 +31,7 @@ int leapsecs_read()
+ 
+   if (fstat(fd,&st) == -1) { close(fd); return -1; }
+ 
+-  t = (struct tai *) malloc(st.st_size);
++  t = malloc(st.st_size);
+   if (!t) { close(fd); return -1; }
+ 
+   n = read(fd,(char *) t,st.st_size);
