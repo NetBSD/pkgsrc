@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1816 2011/08/01 11:52:02 asau Exp $
+$NetBSD: CHANGES-2011,v 1.1817 2011/08/01 11:58:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2782,3 +2782,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/minicom to 2.5 [adam 2011-08-01]
 	Updated lang/racket to 5.1.1 [asau 2011-08-01]
 	Updated lang/racket-textual to 5.1.1 [asau 2011-08-01]
+	Updated pkgtools/pkglint to 4.102 [tron 2011-08-01]
