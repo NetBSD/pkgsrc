@@ -1,0 +1,77 @@
+$NetBSD: patch-makefile_in,v 1.1 2011/08/01 05:19:12 dholland Exp $
+
+Fix energizer-bunny-makefiles.
+
+--- Makefile.in~	2005-02-24 20:35:55.000000000 +0000
++++ Makefile.in
+@@ -34,15 +34,15 @@ SUBDIRS = gnats send-pr doc
+ all: all-gnats
+ 
+ all-gnats:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ all-tools:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ install: install-gnats
+ 
+ install-gnats:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ install-strip:
+ 	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' $@
+@@ -51,37 +51,37 @@ install-tools:
+ 	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' $@
+ 
+ uninstall:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ mostlyclean:
+ 	-rm -f TAGS *.tar *.tar.gz
+ 	-rm -f .\#* *~*
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ clean: mostlyclean
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ distclean: clean distclean-here
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ distclean-here:
+ 	-rm -f Makefile config.status config.cache config.log
+ 	-rm -f .\#* \#* *~*
+ 	-rm -f *.orig *.rej
+ 
+ maintainer-clean: distclean-here
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ Makefile: $(srcdir)/Makefile.in config.status
+ 	./config.status
+ 
+ TAGS:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ info:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ dvi:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
+ 
+ dist: maintainer-clean
+ 	./configure
+@@ -105,4 +105,4 @@ dist: maintainer-clean
+ 	gzip -9 $(DISTDIR).tar
+ 
+ check:
+-	for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	for d in $(SUBDIRS); do $(MAKE) -C $$d $@ || exit 1; done
