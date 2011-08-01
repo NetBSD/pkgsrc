@@ -1,11 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2005/06/19 11:34:45 veego Exp $
+$NetBSD: patch-ab,v 1.5 2011/08/01 09:30:33 adam Exp $
 
---- man/Makefile.am.orig	2003-03-30 22:49:40.000000000 +0200
-+++ man/Makefile.am	2005-05-17 21:57:15.000000000 +0200
-@@ -1,5 +1,5 @@
- AUTOMAKE_OPTIONS = dist-tarZ no-dependencies 1.0
- 
--man_MANS = ascii-xfr.1 minicom.1 runscript.1 xminicom.1
-+man_MANS = ascii-xfr.1 minicom.1 runscript.1
- 
- EXTRA_DIST = $(man_MANS)
+--- man/Makefile.am.orig	2009-12-12 15:47:47.000000000 +0000
++++ man/Makefile.am
+@@ -1 +1 @@
+-dist_man_MANS = ascii-xfr.1 minicom.1 runscript.1 xminicom.1
++dist_man_MANS = ascii-xfr.1 minicom.1 runscript.1

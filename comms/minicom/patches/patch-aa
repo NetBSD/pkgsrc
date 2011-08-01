@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2005/06/19 11:34:45 veego Exp $
+$NetBSD: patch-aa,v 1.10 2011/08/01 09:30:33 adam Exp $
 
---- src/Makefile.am.orig	2003-04-30 00:03:22.000000000 +0200
-+++ src/Makefile.am	2005-05-17 21:55:32.000000000 +0200
-@@ -3,8 +3,6 @@
+--- src/Makefile.in.orig	2011-01-29 11:45:05.000000000 +0000
++++ src/Makefile.in
+@@ -247,7 +247,7 @@ confdir = @MINICOM_CONFDIR@
+ AM_CPPFLAGS = @CPPFLAGS@ -I$(top_srcdir)/lib -DCONFDIR=\"$(confdir)\" \
+               -DLOCALEDIR=\"$(datadir)/locale\"
  
- bin_PROGRAMS = minicom runscript ascii-xfr @KEYSERV@
- 
--bin_SCRIPTS = xminicom
--
- minicom_SOURCES = minicom.c vt100.c config.c help.c updown.c \
- 	util.c dial.c window.c wkeys.c ipc.c \
- 	windiv.c sysdep1.c sysdep1_s.c sysdep2.c rwconf.c main.c \
-@@ -34,5 +32,5 @@
- 
- runscript_LDADD = @INTLLIBS@
- 
--EXTRA_DIST = functions.c xminicom
-+EXTRA_DIST = functions.c
- 
+-minicom_LDADD = @LIBINTL@ $(MINICOM_LIBPORT)
++minicom_LDADD = @LIBINTL@ $(MINICOM_LIBPORT) $(LIBICONV)
+ minicom_keyserv_LDADD = @LIBINTL@ $(MINICOM_LIBPORT)
+ runscript_LDADD = @LIBINTL@ $(MINICOM_LIBPORT)
+ EXTRA_DIST = functions.c
