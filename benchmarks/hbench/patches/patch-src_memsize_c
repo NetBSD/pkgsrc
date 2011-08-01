@@ -1,0 +1,30 @@
+$NetBSD: patch-src_memsize_c,v 1.1 2011/08/01 03:54:53 dholland Exp $
+
+Use c89. Fixes broken clang build.
+
+--- src/memsize.c~	1997-06-27 00:35:25.000000000 +0000
++++ src/memsize.c
+@@ -44,6 +44,7 @@ char	*id = "$Id: memsize.c,v 1.8 1997/06
+ #define	TOO_LONG	10	/* usecs */
+ #endif
+ 
++int
+ main(ac, av)
+ 	char **av;
+ {
+@@ -91,6 +92,7 @@ main(ac, av)
+ 	exit(0);
+ }
+ 
++void
+ timeit(where, size)
+ 	char	*where;
+ {
+@@ -122,6 +124,7 @@ timeit(where, size)
+ 	printf("%d\n", (size>>20));
+ }
+ 
++void
+ touch(char *p, char *end, int range)
+ {
+ 	char	*tmp = p;
