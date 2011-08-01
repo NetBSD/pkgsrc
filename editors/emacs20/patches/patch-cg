@@ -1,0 +1,15 @@
+$NetBSD: patch-cg,v 1.1 2011/08/01 05:44:26 dholland Exp $
+
+Fix illegal C, caught by clang.
+
+--- src/eval.c~	2000-05-02 13:33:57.000000000 +0000
++++ src/eval.c
+@@ -2090,7 +2090,7 @@ run_hook_with_args (nargs, args, cond)
+   /* If we are dying or still initializing,
+      don't do anything--it would probably crash if we tried.  */
+   if (NILP (Vrun_hooks))
+-    return;
++    return Qnil;
+ 
+   sym = args[0];
+   val = find_symbol_value (sym);
