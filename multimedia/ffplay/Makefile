@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/10/24 22:01:34 ahoka Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/01 17:01:29 drochner Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffplay/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,8 +20,8 @@ CONFIGURE_ARGS+=        --enable-ffplay \
 			--disable-parsers \
 			--disable-bsfs \
 			--disable-protocols \
-			--disable-devices \
-			--disable-filters
+			--disable-devices
+#			--disable-filters
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
