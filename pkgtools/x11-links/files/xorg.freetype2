@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.7 2010/11/23 13:24:26 wiz Exp $
+# $NetBSD: xorg.freetype2,v 1.8 2011/08/01 15:09:28 wiz Exp $
 #
 bin/freetype-config
 include/freetype2/freetype/config/ftconfig.h
@@ -11,6 +11,7 @@ include/freetype2/freetype/ftadvanc.h
 include/freetype2/freetype/ftbbox.h
 include/freetype2/freetype/ftbdf.h
 include/freetype2/freetype/ftbitmap.h
+include/freetype2/freetype/ftbzip2.h
 include/freetype2/freetype/ftcache.h
 include/freetype2/freetype/ftchapters.h
 include/freetype2/freetype/ftcid.h
@@ -59,6 +60,7 @@ lib/libfreetype.so.6.3.17
 lib/libfreetype.so.7
 lib/libfreetype.so.7.1
 lib/libfreetype.so.7.2
+lib/libfreetype.so.7.3
 lib/libfreetype.so.17.0
 lib/pkgconfig/freetype2.pc
 share/aclocal/freetype2.m4
