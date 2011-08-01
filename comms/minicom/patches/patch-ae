@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2005/07/11 17:29:16 veego Exp $
+$NetBSD: patch-ae,v 1.6 2011/08/01 09:30:33 adam Exp $
 
 --- src/windiv.c.orig	2003-04-22 01:56:46.000000000 +0200
 +++ src/windiv.c	2005-06-29 07:03:12.000000000 +0200
-@@ -21,2 +21,3 @@
+@@ -22,2 +22,3 @@
  
 +#include <sys/types.h>
  #include <dirent.h>
