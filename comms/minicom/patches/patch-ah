@@ -1,19 +1,16 @@
-$NetBSD: patch-ah,v 1.1 2005/12/19 14:34:33 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2011/08/01 09:30:33 adam Exp $
 
---- src/getsdir.h.orig	2005-12-19 14:24:44.000000000 +0000
+--- src/getsdir.h.orig	2009-12-12 15:47:47.000000000 +0000
 +++ src/getsdir.h
-@@ -19,9 +19,14 @@
-  */
- 
+@@ -25,7 +25,11 @@
  #include <dirent.h>
-+#include <limits.h>
  
  typedef struct dirEntry {		/* structure of data item */
 +#ifdef NAME_MAX
-+   char fname[NAME_MAX + 1];
++  char fname[NAME_MAX + 1];
 +#else
-    char fname[MAXNAMLEN + 1];		/* filename + terminating null */
+   char fname[MAXNAMLEN + 1];		/* filename + terminating null */
 +#endif
-    time_t time;				/* last modification date */
-    mode_t mode;				/* file mode (dir? etc.) */
-    ushort cflags;			/* caller field for convenience */
+   time_t time;				/* last modification date */
+   mode_t mode;				/* file mode (dir? etc.) */
+   ushort cflags;			/* caller field for convenience */

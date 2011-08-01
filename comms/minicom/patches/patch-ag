@@ -1,19 +1,16 @@
-$NetBSD: patch-ag,v 1.3 2005/12/19 14:34:33 joerg Exp $
+$NetBSD: patch-ag,v 1.4 2011/08/01 09:30:33 adam Exp $
 
---- src/getsdir.c.orig	2005-12-19 14:23:45.000000000 +0000
+--- src/getsdir.c.orig	2009-12-12 15:47:47.000000000 +0000
 +++ src/getsdir.c
-@@ -207,9 +207,14 @@ int *len;
- 		    int l;
+@@ -185,7 +185,11 @@ int getsdir(const char *dirpath, const c
+           int l;
  
- 		    /* copy the filename */
+           /* copy the filename */
 +#ifdef NAME_MAX
-+		    strncpy(datb_cur->data[datb_cur->cnt].fname,
-+		            dp->d_name, NAME_MAX);
++          strncpy(datb_cur->data[datb_cur->cnt].fname, dp->d_name, NAME_MAX);
 +#else
- 		    strncpy(datb_cur->data[datb_cur->cnt].fname,
- 			    dp->d_name,
- 			    MAXNAMLEN);
+           strncpy(datb_cur->data[datb_cur->cnt].fname, dp->d_name, MAXNAMLEN);
 +#endif
  
- 	            /* get information about the directory entry */
- 	            snprintf(fpath, sizeof(fpath), "%s/%s", dirpath, dp->d_name);
+           /* get information about the directory entry */
+           snprintf(fpath, sizeof(fpath), "%s/%s", dirpath, dp->d_name);

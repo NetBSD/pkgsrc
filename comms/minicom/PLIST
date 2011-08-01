@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/11/16 10:39:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/08/01 09:30:33 adam Exp $
 bin/ascii-xfr
 bin/minicom
 bin/runscript
@@ -7,13 +7,21 @@ man/man1/ascii-xfr.1
 man/man1/minicom.1
 man/man1/runscript.1
 man/man1/xminicom.1
-share/examples/minicom/minicom.users
 share/locale/cs/LC_MESSAGES/minicom.mo
+share/locale/da/LC_MESSAGES/minicom.mo
+share/locale/de/LC_MESSAGES/minicom.mo
 share/locale/es/LC_MESSAGES/minicom.mo
 share/locale/fi/LC_MESSAGES/minicom.mo
 share/locale/fr/LC_MESSAGES/minicom.mo
 share/locale/hu/LC_MESSAGES/minicom.mo
+share/locale/id/LC_MESSAGES/minicom.mo
 share/locale/ja/LC_MESSAGES/minicom.mo
+share/locale/nb/LC_MESSAGES/minicom.mo
 share/locale/pl/LC_MESSAGES/minicom.mo
 share/locale/pt_BR/LC_MESSAGES/minicom.mo
+share/locale/ro/LC_MESSAGES/minicom.mo
 share/locale/ru/LC_MESSAGES/minicom.mo
+share/locale/rw/LC_MESSAGES/minicom.mo
+share/locale/sv/LC_MESSAGES/minicom.mo
+share/locale/vi/LC_MESSAGES/minicom.mo
+share/locale/zh_TW/LC_MESSAGES/minicom.mo

@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2005/06/19 11:34:45 veego Exp $
+$NetBSD: patch-ac,v 1.6 2011/08/01 09:30:33 adam Exp $
 
---- src/updown.c.orig	2003-04-13 00:52:20.000000000 +0200
-+++ src/updown.c	2005-05-17 20:33:24.000000000 +0200
-@@ -245,7 +245,7 @@
+--- src/updown.c.orig	2010-05-30 20:34:00.000000000 +0000
++++ src/updown.c
+@@ -294,7 +294,7 @@ void updown(int what, int nr)
      do_log("%s", cmdline);   /* jl 22.06.97 */
  
    if (P_PFULL(g) == 'N') {
--    win = wopen(10, 7, 70, 13, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
-+    win = wopen(5, 5, 74, 11, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
+-    win = mc_wopen(10, 7, 70, 13, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
++    win = mc_wopen(5, 5, 74, 11, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
      snprintf(title, sizeof(title), _("%.30s %s - Press CTRL-C to quit"), P_PNAME(g),
- 	    what == 'U' ? _("upload") : _("download"));
-     wtitle(win, TMID, title);
+              what == 'U' ? _("upload") : _("download"));
+     mc_wtitle(win, TMID, title);
