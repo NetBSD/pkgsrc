@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.12 2011/06/04 10:05:00 obache Exp $
+# $NetBSD: replace.mk,v 1.13 2011/08/01 11:00:13 apb Exp $
 #
 # Public targets:
 #
@@ -54,6 +54,7 @@ su-replace: .PHONY _flavor-replace
 su-replace: .PHONY _flavor-destdir-replace
 .endif
 MAKEFLAGS.su-replace=	_UPDATE_RUNNING=yes
+MAKEFLAGS.su-replace+=	PKGNAME_REQD=${PKGNAME_REQD:Q}
 
 #
 # undo-replace
