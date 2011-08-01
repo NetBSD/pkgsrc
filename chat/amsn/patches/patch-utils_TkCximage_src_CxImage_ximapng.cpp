@@ -1,4 +1,4 @@
-$NetBSD: patch-utils_TkCximage_src_CxImage_ximapng.cpp,v 1.2 2011/08/01 00:43:58 dholland Exp $
+$NetBSD: patch-utils_TkCximage_src_CxImage_ximapng.cpp,v 1.3 2011/08/01 01:16:50 dholland Exp $
 
 Fix build with png-1.5.
 
@@ -268,16 +268,18 @@ Fix build with png-1.5.
  
    cx_try
    {
-@@ -362,7 +368,7 @@ bool CxImagePNG::Encode(CxFile *hFile)
+@@ -362,9 +368,8 @@ bool CxImagePNG::Encode(CxFile *hFile)
     /* Set error handling.  REQUIRED if you aren't supplying your own
      * error hadnling functions in the png_create_write_struct() call.
      */
 -	if (setjmp(png_ptr->jmpbuf)){
 +	if (setjmp(png_jmpbuf(png_ptr))){
  		/* If we get here, we had a problem reading the file */
- 		if (info_ptr->palette) free(info_ptr->palette);
+-		if (info_ptr->palette) free(info_ptr->palette);
  		png_destroy_write_struct(&png_ptr,  (png_infopp)&info_ptr);
-@@ -376,20 +382,18 @@ bool CxImagePNG::Encode(CxFile *hFile)
+ 		cx_throw("Error saving PNG file");
+ 	}
+@@ -376,20 +381,18 @@ bool CxImagePNG::Encode(CxFile *hFile)
      png_set_write_fn(png_ptr,hFile,/*(png_rw_ptr)*/user_write_data,/*(png_flush_ptr)*/user_flush_data);
  
  	/* set the file information here */
@@ -305,7 +307,7 @@ Fix build with png-1.5.
  	}
  
  	/* set compression level */
-@@ -399,19 +403,19 @@ bool CxImagePNG::Encode(CxFile *hFile)
+@@ -399,19 +402,19 @@ bool CxImagePNG::Encode(CxFile *hFile)
  
  	if (GetNumColors()){
  		if (bGrayScale){
@@ -332,7 +334,7 @@ Fix build with png-1.5.
  	}
  #endif
  
-@@ -428,8 +432,8 @@ bool CxImagePNG::Encode(CxFile *hFile)
+@@ -428,29 +431,21 @@ bool CxImagePNG::Encode(CxFile *hFile)
  	/* set metrics */
  	png_set_pHYs(png_ptr, info_ptr, head.biXPelsPerMeter, head.biYPelsPerMeter, PNG_RESOLUTION_METER);
  
@@ -343,7 +345,47 @@ Fix build with png-1.5.
  				PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
  
  	//<DP> simple transparency
-@@ -469,13 +473,7 @@ bool CxImagePNG::Encode(CxFile *hFile)
+ 	if (info.nBkgndIndex >= 0){
+-		info_ptr->num_trans = 1;
+-		info_ptr->valid |= PNG_INFO_tRNS;
+-#if PNG_LIBPNG_VER_MAJOR >= 1 && PNG_LIBPNG_VER_MINOR >= 4
+-		info_ptr->trans_alpha = trans;
+-		info_ptr->trans_color.index = (BYTE)info.nBkgndIndex;
+-		info_ptr->trans_color.red   = tc.rgbRed;
+-		info_ptr->trans_color.green = tc.rgbGreen;
+-		info_ptr->trans_color.blue  = tc.rgbBlue;
+-		info_ptr->trans_color.gray  = info_ptr->trans_color.index;
+-#else
+-		info_ptr->trans = trans;
+-		info_ptr->trans_values.index = (BYTE)info.nBkgndIndex;
+-		info_ptr->trans_values.red   = tc.rgbRed;
+-		info_ptr->trans_values.green = tc.rgbGreen;
+-		info_ptr->trans_values.blue  = tc.rgbBlue;
+-		info_ptr->trans_values.gray  = info_ptr->trans_values.index;
+-#endif
++		png_color_16 trans_color;
++
++		trans_color.index = (BYTE)info.nBkgndIndex;
++		trans_color.red   = tc.rgbRed;
++		trans_color.green = tc.rgbGreen;
++		trans_color.blue  = tc.rgbBlue;
++		trans_color.gray  = (BYTE)info.nBkgndIndex;
++
++		png_set_tRNS(png_ptr, info_ptr, trans, 1, &trans_color);
+ 
+ 		// the transparency indexes start from 0 for non grayscale palette
+ 		if (!bGrayScale && head.biClrUsed && info.nBkgndIndex)
+@@ -459,30 +454,27 @@ bool CxImagePNG::Encode(CxFile *hFile)
+ 
+ 	/* set the palette if there is one */
+ 	if (GetPalette()){
+-		if (!bGrayScale){
+-			info_ptr->valid |= PNG_INFO_PLTE;
+-		}
+-
+ 		int nc = GetClrImportant();
+ 		if (nc==0) nc = GetNumColors();
+ 
  		if (info.bAlphaPaletteEnabled){
  			for(WORD ip=0; ip<nc;ip++)
  				trans[ip]=GetPaletteColor((BYTE)ip).rgbReserved;
@@ -358,7 +400,25 @@ Fix build with png-1.5.
  		}
  
  		// copy the palette colors
-@@ -496,8 +494,8 @@ bool CxImagePNG::Encode(CxFile *hFile)
+-		info_ptr->palette = new png_color[nc];
+-		info_ptr->num_palette = (png_uint_16) nc;
+-		for (int i=0; i<nc; i++)
+-			GetPaletteColor(i, &info_ptr->palette[i].red, &info_ptr->palette[i].green, &info_ptr->palette[i].blue);
++		if (!bGrayScale) {
++			png_color *palette;
++
++			palette = (png_color *)png_malloc(png_ptr, nc*sizeof(palette[0]));
++			for (int i=0; i<nc; i++)
++				GetPaletteColor(i, &palette[i].red, &palette[i].green, &palette[i].blue);
++			png_set_PLTE(png_ptr, info_ptr, palette, nc);
++			png_data_freer(png_ptr, info_ptr,
++				       PNG_DESTROY_WILL_FREE_DATA,
++				       PNG_FREE_PLTE);
++		}
+ 	}  
+ 
+ #if CXIMAGE_SUPPORT_ALPHA	// <vho>
+@@ -496,8 +488,8 @@ bool CxImagePNG::Encode(CxFile *hFile)
  	}	}	}
  #endif // CXIMAGE_SUPPORT_ALPHA	// <vho>
  
@@ -369,7 +429,7 @@ Fix build with png-1.5.
  	BYTE *row_pointers = new BYTE[row_size];
  
  	/* write the file information */
-@@ -515,7 +513,7 @@ bool CxImagePNG::Encode(CxFile *hFile)
+@@ -515,7 +507,7 @@ bool CxImagePNG::Encode(CxFile *hFile)
  			if (AlphaIsValid()){
  				for (long ax=head.biWidth-1; ax>=0;ax--){
  					c = BlindGetPixelColor(ax,ay);
@@ -378,7 +438,7 @@ Fix build with png-1.5.
  					if (!bGrayScale){
  						row_pointers[px++]=c.rgbRed;
  						row_pointers[px++]=c.rgbGreen;
-@@ -530,7 +528,7 @@ bool CxImagePNG::Encode(CxFile *hFile)
+@@ -530,7 +522,7 @@ bool CxImagePNG::Encode(CxFile *hFile)
  #endif //CXIMAGE_SUPPORT_ALPHA	// <vho>
  			{
  				iter.GetRow(row_pointers, row_size);
@@ -387,3 +447,16 @@ Fix build with png-1.5.
  					RGBtoBGR(row_pointers, row_size);
  				png_write_row(png_ptr, row_pointers);
  			}
+@@ -547,12 +539,6 @@ bool CxImagePNG::Encode(CxFile *hFile)
+ 	/* It is REQUIRED to call this to finish writing the rest of the file */
+ 	png_write_end(png_ptr, info_ptr);
+ 
+-	/* if you malloced the palette, free it here */
+-	if (info_ptr->palette){
+-		delete [] (info_ptr->palette);
+-		info_ptr->palette = NULL;
+-	}
+-
+ 	/* clean up after the write, and free any memory allocated */
+ 	png_destroy_write_struct(&png_ptr, (png_infopp)&info_ptr);
+ 
