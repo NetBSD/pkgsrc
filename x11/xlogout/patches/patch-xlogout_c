@@ -1,0 +1,13 @@
+$NetBSD: patch-xlogout_c,v 1.1 2011/08/01 06:03:35 dholland Exp $
+
+--- xlogout.c~	1989-11-29 23:29:37.000000000 +0000
++++ xlogout.c
+@@ -48,7 +48,7 @@ static XrmOptionDescRec options[] = {
+ };
+ 
+ 
+-void main (argc, argv)
++int main (argc, argv)
+     int argc;
+     char **argv;
+ {

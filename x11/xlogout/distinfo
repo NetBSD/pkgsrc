@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:24 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/08/01 06:03:35 dholland Exp $
 
 SHA1 (xlogout.tar.gz) = fca768ed9b07354d1a2226d6e1945d0f8958610f
 RMD160 (xlogout.tar.gz) = 6e214fe72df67a7cf376d0cd58f2d8076aac9813
 Size (xlogout.tar.gz) = 5612 bytes
 SHA1 (patch-aa) = 1ebcafc86e02690f5400c5fc30f5983c555eea84
+SHA1 (patch-xlogout_c) = af7c8c2fb0fcaa69f31a3beb1fc458e19e24039b
