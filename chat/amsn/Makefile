@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/04/03 22:10:35 zafer Exp $
+# $NetBSD: Makefile,v 1.21 2011/08/01 01:16:50 dholland Exp $
 #
 
 DISTNAME=		amsn-0.98.3
@@ -22,6 +22,13 @@ REPLACE_INTERPRETER+=	WISH
 REPLACE.WISH.old=	.*wish
 REPLACE.WISH.new=	${PREFIX}/bin/wish
 REPLACE_FILES.WISH=	amsn-remote
+REPLACE_FILES.WISH+=	skins/Dark\ Matter\ 4.0/pixmapscroll/test.tcl
+REPLACE_FILES.WISH+=	skins/Oxygen/pixmapscroll/test.tcl
+REPLACE_FILES.WISH+=	utils/linux/capture/test.tcl
+REPLACE_FILES.WISH+=	utils/pixmapbutton/test.tcl
+REPLACE_FILES.WISH+=	utils/pixmapprogbar/test.tcl
+REPLACE_FILES.WISH+=	utils/pixmapscroll/test.tcl
+REPLACE_FILES.WISH+=	utils/voipcontrols/test.tcl
 
 REPLACE_INTERPRETER+=	TCLSH
 REPLACE.TCLSH.old=	.*tclsh
@@ -40,12 +47,15 @@ REPLACE_BASH+=		plugins/music/infompris
 REPLACE_BASH+=		plugins/music/inforhythmbox
 REPLACE_BASH+=		plugins/music/infospotify
 REPLACE_BASH+=		plugins/music/infovlc
+REPLACE_PYTHON+=	plugins/music/infosongbird
+REPLACE_PYTHON+=	lang/missing.py
 USE_TOOLS+=		perl:run bash:run
 
 USE_TOOLS+=		gmake
 
 CHECK_PORTABILITY_SKIP=	utils/macosx/finishbuild.sh
 
+.include "../../lang/python/application.mk"
 .include "../../security/tcl-tls/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
