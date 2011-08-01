@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2011/07/03 20:01:26 jym Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/01 11:45:43 asau Exp $
 
-PKGNAME=	racket-textual-5.0.1
+PKGNAME=	racket-textual-5.1.1
 DISTNAME=	$(PKGNAME)-src-unix
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
@@ -26,7 +26,7 @@ REPLACE_FILES.racket=	collects/ffi/examples/*.rkt
 
 CONFLICTS+=	drscheme-[0-9]* mzscheme-[0-9]* racket-[0-9]*
 
-WRKSRC=		$(WRKDIR)/mz-$(PKGVERSION_NOREV)
+WRKSRC=		$(WRKDIR)/$(PKGNAME_NOREV)
 
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	src
