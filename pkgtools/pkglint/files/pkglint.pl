@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.827 2011/05/26 20:31:47 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.828 2011/08/01 11:58:14 tron Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5510,7 +5510,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		} elsif ($value ne "" && $value_novar eq "") {
 			# The value of another variable
 
-		} elsif ($value_novar !~ m"^(?:\.|[0-9A-Za-z_][-0-9A-Za-z._/+]*)$") {
+		} elsif ($value_novar !~ m"^(?:\.|[0-9A-Za-z_\@][-0-9A-Za-z_\@./+]*)$") {
 			$line->log_warning("\"${value}\" is not a valid subdirectory of \${WRKSRC}.");
 		}
 
