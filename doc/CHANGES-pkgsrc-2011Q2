@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.13 2011/07/30 05:42:15 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.14 2011/08/01 04:35:45 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -33,3 +33,11 @@ Pullup ticket #3481 - requested by tez
 textproc/groff security/portablity update
 Pullup ticket #3482 - requested by pettai
 security/xml-security-c security update
+Pullup ticket #3483 - requested by pettai
+security/opensaml security update
+Pullup ticket #3484 - requested by dholland
+devel/tig build fix
+Pullup ticket #3485 - requested by dholland
+editors/scite build fix
+Pullup ticket #3486 - requested by dholland
+chat/amsn build fix
