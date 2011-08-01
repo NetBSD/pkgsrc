@@ -1,0 +1,17 @@
+$NetBSD: patch-src_out_c,v 1.1 2011/08/01 05:03:45 dholland Exp $
+
+Avoid generating "#line 0" as clang objects strenuously. This patch
+serves as an added precaution.
+
+--- src/out.c~	2009-07-10 14:43:05.000000000 +0000
++++ src/out.c
+@@ -69,6 +69,9 @@ out_addline_infile(FILE *fp, int line)
+ 	} else
+ 		g_assert_not_reached();
+ 
++	if (line == 0) {
++		line = 1;
++	}
+ 	fprintf(fp, "#line %d \"%s\"\n", line, filename);
+ }
+ 

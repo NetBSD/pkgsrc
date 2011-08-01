@@ -1,0 +1,23 @@
+$NetBSD: patch-src_main_c,v 1.1 2011/08/01 05:03:45 dholland Exp $
+
+Avoid generating "#line 0" as clang objects strenuously. This patch
+fixes two cases that audio/gmpc ran into.
+
+--- src/main.c.orig	2011-01-03 19:50:33.000000000 +0000
++++ src/main.c
+@@ -652,6 +652,7 @@ make_inits(Class *cl)
+ 				 "method", CLASS_INIT_METHOD,
+ 				 "mtype:steal", type,
+ 				 "id", "class_init",
++				 "line_no", 1,
+ 				 "args:steal", make_func_arg (cl->otype,
+ 							      TRUE /* is_class */,
+ 							      "c" /* name */),
+@@ -668,6 +669,7 @@ make_inits(Class *cl)
+ 				 "method", INIT_METHOD,
+ 				 "mtype:steal", type,
+ 				 "id", "init",
++				 "line_no", 1,
+ 				 "args:steal", make_func_arg (cl->otype,
+ 							      FALSE /* is_class */,
+ 							      "o" /* name */),
