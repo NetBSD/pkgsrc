@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/07/07 16:38:39 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/08/01 03:49:50 dholland Exp $
 
 SHA1 (rosegarden-2.1pl4.tar.gz) = 5a6e293eb38a7090ba6929fec23104ffef587533
 RMD160 (rosegarden-2.1pl4.tar.gz) = 94604241c8e4101520d8b79544a16839d98436e5
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 22b2a1a060e8b2b3f7dda5d7c7189fc96b99c1a0
 SHA1 (patch-ae) = b6fb9815ee6918dbc5b28fd1fec6bca1d42cf028
 SHA1 (patch-af) = f3c99ccf142420255ae10f19bed37933ee24c744
 SHA1 (patch-ag) = 9f1185353c2663d7b250cfff45b2fdef8639e124
+SHA1 (patch-editor_src_midiout_c) = 7f4eca850df83af49b3f5c69ea1283e3dfa05ee8
