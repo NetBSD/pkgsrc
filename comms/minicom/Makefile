@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.58 2011/04/22 13:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.59 2011/08/01 09:30:33 adam Exp $
 
-DISTNAME=	minicom-2.1
-PKGREVISION=	4
+DISTNAME=	minicom-2.5
 CATEGORIES=	comms
-MASTER_SITES=	http://alioth.debian.org/download.php/123/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/3487/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/projects/minicom/
 COMMENT=	MS-DOS Telix serial communication program "workalike"
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
@@ -19,22 +19,18 @@ INSTALLATION_DIRS=	share/examples/minicom
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	minicom
 EGDIR=			${PREFIX}/share/examples/minicom
 
 PKG_GROUPS=		${DIALER_GROUP}
 PKG_USERS=		${UUCP_USER}:${UUCP_GROUP}
-
 PKG_GROUPS_VARS+=	DIALER_GROUP UUCP_GROUP
-PKG_USERS_VARS+=	UUCP_USER
+PKG_USERS_VARS=		UUCP_USER
 
 SPECIAL_PERMS=		${PREFIX}/bin/minicom ${UUCP_USER} ${DIALER_GROUP} 4555
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} ${UUCP_USER} ${DIALER_GROUP} 0755
-CONF_FILES_PERMS=	${EGDIR}/minicom.users ${PKG_SYSCONFDIR}/minicom.users \
-			${UUCP_USER} ${DIALER_GROUP} 0644
 
 EVAL_PREFIX+=		GKERMIT_PREFIX=gkermit
 EVAL_PREFIX+=		LRZSZ_PREFIX=lrzsz
@@ -45,8 +41,6 @@ SUBST_STAGE.minicom=	post-patch
 SUBST_FILES.minicom=	src/rwconf.c
 SUBST_VARS.minicom=	PREFIX GKERMIT_PREFIX LRZSZ_PREFIX
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/minicom.users ${DESTDIR}${EGDIR}
-
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
