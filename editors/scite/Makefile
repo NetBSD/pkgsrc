@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:43:27 obache Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2011/08/01 04:32:51 sbd Exp $
 #
 
 DISTNAME=	scite225
 PKGNAME=	scite-2.25
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/scite
 USE_LANGUAGES=	c c++
 BUILD_DIRS+=	gtk
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 MAKE_FILE=	makefile
 INSTALLATION_DIRS= share/applications share/pixmaps
 
@@ -27,6 +27,7 @@ post-extract:
 	${RM} ${WRKSRC}/gtk/deps.mak
 	${TOUCH} ${WRKSRC}/gtk/deps.mak
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/scintilla/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
