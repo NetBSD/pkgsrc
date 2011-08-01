@@ -1,0 +1,23 @@
+$NetBSD: patch-exrecover_c,v 1.1 2011/08/01 05:47:40 dholland Exp $
+
+Fix illegal C caught by clang.
+
+--- exrecover.c~	2002-04-07 12:02:27.000000000 +0000
++++ exrecover.c
+@@ -198,7 +198,7 @@ char *getblock __P((line, int));
+ int blkio __P((bloc, char *, ssize_t (*) __P((int, void *, size_t))));
+ char *poolsbrk __P((intptr_t));
+ int error __P((char *str, ...));
+-int listfiles __P((char *));
++void listfiles __P((char *));
+ int enter __P((struct svfile *, char *, int));
+ int qucmp __P((struct svfile *, struct svfile *));
+ int findtmp __P((char *));
+@@ -384,6 +384,7 @@ error(char *str, ...)
+ 	exit(1);
+ }
+ 
++void
+ listfiles(dirname)
+ 	char *dirname;
+ {
