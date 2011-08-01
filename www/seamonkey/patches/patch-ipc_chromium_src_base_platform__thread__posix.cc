@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.1 2011/07/11 20:46:36 tnn Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.2 2011/08/01 08:17:17 tnn Exp $
 
 --- mozilla/ipc/chromium/src/base/platform_thread_posix.cc.orig	2011-06-15 21:57:27.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/platform_thread_posix.cc
@@ -18,7 +18,7 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.1 2011/07/11
 +#elif defined(OS_NETBSD)
 +  return _lwp_self();
 +#elif defined(OS_DRAGONFLY)
-+#error No DragonFly support. hint: look at FreeBSD ports.
++  return lwp_gettid();
  #elif defined(OS_LINUX)
    return syscall(__NR_gettid);
  #endif

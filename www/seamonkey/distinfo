@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.63 2011/07/12 15:12:36 tnn Exp $
+$NetBSD: distinfo,v 1.64 2011/08/01 08:17:17 tnn Exp $
 
 SHA1 (seamonkey-2.2.source.tar.bz2) = bb2181fbbb4aa16e51899b483acadb31f7e0cbbc
 RMD160 (seamonkey-2.2.source.tar.bz2) = cfad0460357c357df7a5936c0bd10374c18eac04
@@ -38,7 +38,7 @@ SHA1 (patch-ipc_chromium_src_base_debug__util__posic.cc) = bc98be56df67b1a3c2b11
 SHA1 (patch-ipc_chromium_src_base_file__util.h) = 51dc4a5a32da8e7d7eb3c026e3ebaae7858564cf
 SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = ce60e80e3ddc417c1fa867f6f4258aece166fc51
 SHA1 (patch-ipc_chromium_src_base_platform__file__posix.cc) = 3c83eeb7f40416b61a799ca55b223a93353f7f6a
-SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = a68ba3b5b891bed422c751a924a7d1b792211db1
+SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 0c493e4ae0e8ce5c65577667bb301ffa1ac60b5c
 SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = 2dc6cd2bac4bc45406709090369f2901090d855f
 SHA1 (patch-ipc_chromium_src_base_third__party_nspr_prcpucfg.h) = 648804b5b2cccba36ac14e693f5dac16c55dcb32
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = a1a2a267b89533d6097edb0fa8e5480ddba51291
