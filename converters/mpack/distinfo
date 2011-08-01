@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2010/11/17 22:24:40 is Exp $
+$NetBSD: distinfo,v 1.13 2011/08/01 04:08:51 dholland Exp $
 
 SHA1 (mpack-1.6.tar.gz) = 7fd3a73e0f131412920b6ff34872e7e7fa03e03b
 RMD160 (mpack-1.6.tar.gz) = a83330aa15437dc3ca6475cbf6e35b09ab9cef07
@@ -9,3 +9,4 @@ SHA1 (patch-ad) = 76f32d163021a81d73d8316f72b141ef3edf4f14
 SHA1 (patch-ae) = 7cbc232a310d0aa2c18b8f2fc3dba0a3fae311b8
 SHA1 (patch-af) = 2b38171d450ddbe1f9bb7a520d5e114a15afab9d
 SHA1 (patch-ag) = 9075ca42dd37e349284e5bb44bc15b740998a987
+SHA1 (patch-uudecode_c) = ca9ccf61afeef850fca198346105c437023ba4e3
