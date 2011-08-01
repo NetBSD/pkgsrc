@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1815 2011/08/01 09:31:22 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1816 2011/08/01 11:52:02 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2780,3 +2780,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cmake to 2.8.5 [adam 2011-07-31]
 	Updated editors/scite to 2.25nb2 [dholland 2011-07-31]
 	Updated comms/minicom to 2.5 [adam 2011-08-01]
+	Updated lang/racket to 5.1.1 [asau 2011-08-01]
+	Updated lang/racket-textual to 5.1.1 [asau 2011-08-01]
