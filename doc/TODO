@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10459 2011/08/01 09:31:22 adam Exp $
+$NetBSD: TODO,v 1.10460 2011/08/01 18:53:11 gls Exp $
 
 Suggested new packages
 ======================
@@ -465,7 +465,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.6.16
-	o cmus-2.4.1
 	o colorize-0.3.4
 	o compositeproto-0.4.2
 	o cone-0.87
