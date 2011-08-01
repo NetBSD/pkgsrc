@@ -1,0 +1,12 @@
+$NetBSD: patch-trycpp_c,v 1.1 2011/08/01 05:37:12 dholland Exp $
+
+Fix illegal C.
+
+--- trycpp.c~	1998-10-13 16:52:20.000000000 +0000
++++ trycpp.c
+@@ -1,4 +1,4 @@
+-void main()
++int main()
+ {
+ #ifdef NeXT
+   printf("nextstep\n"); exit(0);
