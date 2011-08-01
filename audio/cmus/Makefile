@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2011/05/18 21:08:49 gls Exp $
+# $NetBSD: Makefile,v 1.29 2011/08/01 18:52:21 gls Exp $
 #
 
-DISTNAME=		cmus-v2.4.0
+DISTNAME=		cmus-v2.4.2
 PKGNAME=		${DISTNAME:S/-v/-/}
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cmus/}
