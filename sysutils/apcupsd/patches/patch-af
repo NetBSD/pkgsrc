@@ -1,12 +1,21 @@
-$NetBSD: patch-af,v 1.6 2008/06/20 01:09:35 joerg Exp $
+$NetBSD: patch-af,v 1.7 2011/08/01 14:54:51 bouyer Exp $
 
---- Makefile.in.orig	2004-02-07 11:04:05.000000000 +0100
-+++ Makefile.in	2006-11-15 17:48:50.000000000 +0100
-@@ -26,6 +26,7 @@
- install-directories: install-dir@CGI@
- 	$(SHELL) $(MKINSTALLDIRS) $(DESTDIR)$(sbindir)	
- 	$(SHELL) $(MKINSTALLDIRS) $(DESTDIR)$(mandir)  
-+	$(SHELL) $(MKINSTALLDIRS) ${DESTDIR}$(prefix)/share/examples/apcupsd
- 	@if [ ! -d $(DESTDIR)$(sysconfdir) ] ; then \
- 	      $(SHELL) $(MKINSTALLDIRS) $(DESTDIR)$(sysconfdir); \
- 	      chmod 755 $(DESTDIR)$(sysconfdir); \
+--- src/Makefile.orig		2009-09-30 01:20:45.000000000 +0200
++++ src/Makefile		2011-08-01 16:07:24.000000000 +0200
+@@ -23,7 +23,7 @@
+ SRCS = $(common_srcs) $(apcupsd_srcs) $(apcaccess_srcs) \
+        $(apctest_srcs) $(smtp_srcs) 
+ 
+-all-targets: apcupsd apcaccess apctest smtp 
++all-targets: apcupsd apcaccess apctest 
+ 
+ apcupsd: $(common_obj) $(apcupsd_obj) $(APCDRVLIBS) $(APCLIBS)
+ 	$(LINK) $(DRVLIBS)
+@@ -45,7 +45,6 @@
+ 	$(call INSTPROG,700,apcupsd,$(sbindir)/apcupsd)
+ 	$(call INSTPROG,700,apctest,$(sbindir)/apctest)
+ 	$(call INSTPROG,755,apcaccess,$(sbindir)/apcaccess)
+-	$(call INSTPROG,755,smtp,$(sbindir)/smtp)
+ 
+ uninstall-base:
+ 	$(call UNINST,$(sbindir)/apcupsd)
