@@ -1,0 +1,15 @@
+$NetBSD: patch-editor_src_midiout_c,v 1.1 2011/08/01 03:49:50 dholland Exp $
+
+Fix broken build with clang.
+
+--- editor/src/MidiOut.c~	2002-03-30 01:54:41.000000000 +0000
++++ editor/src/MidiOut.c
+@@ -316,7 +316,7 @@ AmpChangeAssoc *AddAmp(AmpChangeAssoc **
+     return *array;
+   }
+ 
+-  End;
++  Return(NULL);
+ }
+ 
+ 
