@@ -1,0 +1,16 @@
+$NetBSD: patch-gnats_gnats_h,v 1.1 2011/08/01 05:19:12 dholland Exp $
+
+Remove redundant and improperly protected copy of private asprintf decl.
+
+--- gnats/gnats.h~	2005-02-24 20:35:55.000000000 +0000
++++ gnats/gnats.h
+@@ -137,9 +137,6 @@ char *alloca ();
+ # define ATTRIBUTE_UNUSED __attribute__ ((__unused__))
+ #endif
+ 
+-extern int asprintf (char **buf, const char *fmt, ...);
+-extern int vasprintf (char **buf, const char *fmt, va_list args);
+-
+ #if ! HAVE_DECL_UNSETENV
+ extern void unsetenv (const char *name);
+ #endif
