@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:42:52 obache Exp $
+# $NetBSD: Makefile,v 1.16 2011/08/01 03:40:58 dholland Exp $
 #
 
 DISTNAME=	gimmix-0.5.7.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://download.berlios.de/gimmix/
 EXTRACT_SUFX=	.tar.bz2
@@ -35,4 +35,6 @@ BUILDLINK_API_DEPENDS.taglib+=		taglib>=1.4
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libnxml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
