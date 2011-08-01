@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/04/03 15:26:36 wiz Exp $
+$NetBSD: distinfo,v 1.7.4.1 2011/08/01 04:33:23 sbd Exp $
 
 SHA1 (amsn-0.98.3-src.tar.bz2) = aa8383a11ce66352aceee27f9c291c1410b3403d
 RMD160 (amsn-0.98.3-src.tar.bz2) = 20f707062da4a5ab1eb6beec49d01dfd2ba90a99
 Size (amsn-0.98.3-src.tar.bz2) = 13275477 bytes
 SHA1 (patch-configure) = ddbd6a9616683c44202a551d734b2c9b10b2e05b
-SHA1 (patch-utils_TkCximage_src_CxImage_ximapng.cpp) = f8b7695ec8b5ce5730490fefc5f2e4b3d7e44e8a
+SHA1 (patch-utils_TkCximage_src_CxImage_ximapng.cpp) = 823904f7b17aff6034339e7873135edb7362b489
 SHA1 (patch-utils_TkCximage_src_CxImage_ximapng.h) = 1d7a1cc0acd397629a0e6b1f83f9fdf943fb6d8a
