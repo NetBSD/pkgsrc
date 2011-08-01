@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1814 2011/07/31 23:32:40 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1815 2011/08/01 09:31:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2779,3 +2779,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/heimdal to 1.4nb1 [gls 2011-07-31]
 	Updated devel/cmake to 2.8.5 [adam 2011-07-31]
 	Updated editors/scite to 2.25nb2 [dholland 2011-07-31]
+	Updated comms/minicom to 2.5 [adam 2011-08-01]
