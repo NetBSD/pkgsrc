@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2011/08/01 05:56:30 dholland Exp $
+
+Disable the groff html check to prevent random PLIST variation.
+
+--- configure~	2011-08-01 05:52:01.000000000 +0000
++++ configure
+@@ -8293,7 +8293,7 @@ fi
+ # Check for groff html support
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for HTML support in groff" >&5
+ $as_echo_n "checking for HTML support in groff... " >&6; }
+-groff -t -mandoc -Thtml </dev/null >/dev/null
++false #groff -t -mandoc -Thtml </dev/null >/dev/null
+ if test $? -ne 0 ; then
+     echo "no"
+     echo "*** Will not generate HTML version of man pages  ***"
