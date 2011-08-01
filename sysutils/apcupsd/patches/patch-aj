@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.7 2007/06/15 19:05:57 bouyer Exp $
+$NetBSD: patch-aj,v 1.8 2011/08/01 14:54:51 bouyer Exp $
 
---- configure.orig	2007-06-15 13:48:18.000000000 +0200
-+++ configure	2007-06-15 13:48:42.000000000 +0200
-@@ -1538,9 +1538,6 @@
+--- configure.orig	2010-09-02 16:23:39.000000000 +0200
++++ configure	2011-08-01 15:50:48.000000000 +0200
+@@ -1542,9 +1542,6 @@
        sysconfdir='/etc/apcupsd'
     fi
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aj,v 1.7 2007/06/15 19:05:57 bouyer Exp $
  fi
  
  # Make sure we can run config.sub.
-@@ -3578,7 +3575,7 @@
+@@ -3416,7 +3413,7 @@
  
  
  APCACCESS=apcaccess
@@ -21,26 +21,16 @@ $NetBSD: patch-aj,v 1.7 2007/06/15 19:05:57 bouyer Exp $
  APCTEST=apctest
  
  
-@@ -10687,7 +10684,7 @@
- fi
- fi
- 
--if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
-+if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD || test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
- then
- 
- 
-@@ -11751,7 +11748,8 @@
+@@ -10575,7 +10572,7 @@
+             echo "$as_me:$LINENO: result: Using Linux USB driver." >&5
  echo "${ECHO_T}Using Linux USB driver." >&6
-         elif test $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD -o \
-                   $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD -o \
--                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xNetBSD ; then
-+                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xNetBSD -o \
-+                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xDragonFly ; then
-            LIBUSBHIDINC="-I\$(topdir)/src/libusbhid"
-            LIBUSBHID=libusbhid
-            LIBUSBHIDOBJS="\$(topdir)/src/libusbhid/*.o"
-@@ -16723,7 +16721,7 @@
+             ;;
+-         *-*-freebsd* | *-*-openbsd* | *-*-netbsd*)
++         *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-dragonfly*)
+             LIBUSBHIDINC="-I\$(topdir)/src/libusbhid"
+             LIBUSBHID=libusbhid
+             APCDRVLIBS="$APCDRVLIBS \$(topdir)/src/libusbhid/libusbhid.a"
+@@ -12200,7 +12197,7 @@
  elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
  then
     DISTNAME=freebsd
@@ -49,7 +39,7 @@ $NetBSD: patch-aj,v 1.7 2007/06/15 19:05:57 bouyer Exp $
  then
     DISTNAME=netbsd
  elif test $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD
-@@ -16842,7 +16840,7 @@
+@@ -12331,7 +12328,7 @@
        platforms/debian/apcupsd \
        platforms/debian/ups-monitor"
     ;;
@@ -58,10 +48,10 @@ $NetBSD: patch-aj,v 1.7 2007/06/15 19:05:57 bouyer Exp $
     DISTVER=`uname -a |awk '{print $3}'`
     SERIALDEV=/dev/cuaa0
     nologdir=/var/run
-@@ -16880,7 +16878,8 @@
+@@ -12365,7 +12362,8 @@
+    PTHREAD_LFLAGS=""
     LDFLAGS="$LDFLAGS -pthread"
     DFILES="\
-       platforms/netbsd/Makefile \
 -      platforms/netbsd/apcupsd"
 +      platforms/netbsd/apcupsd \
 +      platforms/netbsd/apccontrol"
