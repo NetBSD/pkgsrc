@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2007/08/01 20:48:15 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2011/08/01 15:21:16 joerg Exp $
 
---- bunzip021.c.orig	2007-08-01 20:31:16.000000000 +0000
+--- bunzip021.c.orig	1999-05-22 21:00:00.000000000 +0000
 +++ bunzip021.c
 @@ -114,9 +114,9 @@
  --*/
@@ -13,6 +13,15 @@ $NetBSD: patch-aa,v 1.3 2007/08/01 20:48:15 joerg Exp $
     #include <sys/stat.h>
     #include <sys/times.h>
  
+@@ -141,7 +141,7 @@
+       run rather slowly.  gcc version 2.x is recommended.
+    --*/
+    #ifdef __GNUC__
+-      #define INLINE   inline
++      #define INLINE   static inline
+       #define NORETURN __attribute__ ((noreturn))
+    #else
+       #define INLINE   /**/
 @@ -400,7 +400,8 @@
  
  Int32   bytesIn, bytesOut;
