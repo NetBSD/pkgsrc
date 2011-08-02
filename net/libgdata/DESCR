@@ -1,3 +1,3 @@
-libgdata is a GLib-based library for accessing online service APIs using the GData protocol
-Google's services. It provides APIs to access the common Google services, and has full
-asynchronous support
+libgdata is a GLib-based library for accessing online service APIs using the
+GData protocol Google's services. It provides APIs to access the common Google
+services, and has full asynchronous support.
