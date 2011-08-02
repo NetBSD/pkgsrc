@@ -1,19 +1,29 @@
-$NetBSD: patch-ac,v 1.1 1998/11/11 11:42:57 agc Exp $
+$NetBSD: patch-ac,v 1.2 2011/08/02 17:05:48 joerg Exp $
 
 Read papersize from a config file, rather than using a compiled-in default.
 
---- psresize.c	1998/11/11 09:37:52	1.1
-+++ psresize.c	1998/11/11 10:31:11
-@@ -14,6 +14,8 @@
+--- psresize.c.orig	1997-03-11 22:53:03.000000000 +0000
++++ psresize.c
+@@ -14,6 +14,9 @@
   *              -H<dim> sets the input paper height
   *              -Ppaper sets the input paper size (width and height) by name
   */
 +#include <sys/types.h>
 +#include <sys/param.h>
++#include <string.h>
  
  #include "psutil.h"
  #include "psspec.h"
-@@ -56,13 +58,21 @@
+@@ -46,7 +49,7 @@ static void argerror(void)
+ #define MIN(x,y) ((x) > (y) ? (y) : (x))
+ #define MAX(x,y) ((x) > (y) ? (x) : (y))
+ 
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+    double scale, rscale;			/* page scale */
+    double waste, rwaste;			/* amount wasted */
+@@ -56,13 +59,21 @@ void main(int argc, char *argv[])
     double inheight = -1;
     Paper *paper;
     PageSpec *specs;
