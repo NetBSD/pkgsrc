@@ -1,19 +1,29 @@
-$NetBSD: patch-ab,v 1.1 1998/11/11 11:42:57 agc Exp $
+$NetBSD: patch-ab,v 1.2 2011/08/02 17:05:48 joerg Exp $
 
 Read papersize from a config file, rather than using a compiled-in default.
 
---- psnup.c	1998/11/11 09:37:52	1.1
-+++ psnup.c	1998/11/11 10:25:45
-@@ -22,6 +22,8 @@
+--- psnup.c.orig	1997-03-11 22:53:02.000000000 +0000
++++ psnup.c
+@@ -22,6 +22,9 @@
   *		-f	for flipped (wider than tall) pages
   * 		-d<wid>	to draw the page boundaries
   */
 +#include <sys/types.h>
 +#include <sys/param.h>
++#include <string.h>
  
  #include "psutil.h"
  #include "psspec.h"
-@@ -79,13 +81,21 @@
+@@ -66,7 +69,7 @@ static int nextdiv(int n, int m)
+    return (0);
+ }
+ 
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+    int horiz, vert, rotate, column, flip, leftright, topbottom;
+    int nup = 1;
+@@ -79,13 +82,21 @@ void main(int argc, char *argv[])
     double iwidth, iheight ;			/* input paper size */
     double tolerance = 100000;			/* layout tolerance */
     Paper *paper;

@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2011/08/02 17:05:48 joerg Exp $
+
+--- epsffit.c.orig	2011-08-02 13:51:58.000000000 +0000
++++ epsffit.c
+@@ -39,7 +39,7 @@ static void usage(void)
+    exit(1);
+ }
+ 
+-void main(int argc, char **argv)
++int main(int argc, char **argv)
+ {
+    int bbfound = 0;              /* %%BoundingBox: found */
+    int urx, ury, llx, lly;

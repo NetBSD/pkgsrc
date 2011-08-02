@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2011/08/02 17:05:48 joerg Exp $
+
+--- psutil.h.orig	2011-08-02 13:50:20.000000000 +0000
++++ psutil.h
+@@ -40,6 +40,8 @@ extern void writetrailer(void);
+ extern void writeemptypage(void);
+ extern void scanpages(void);
+ extern void writestring(char *s);
++extern int readconfig(char *name, size_t namesize);
++extern char *strnncpy(char *to, size_t tosize, char *from, size_t cc);
+ 
+ /* These variables are imported from the client program (e.g. psbook, psnup,
+    etc.) */

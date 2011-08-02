@@ -1,13 +1,17 @@
-$NetBSD: distinfo,v 1.6 2007/11/14 02:27:36 minskim Exp $
+$NetBSD: distinfo,v 1.7 2011/08/02 17:05:48 joerg Exp $
 
 SHA1 (psutils-p17.tar.gz) = 6f1ecb5846cffb644826a02bd9153fe5d6387a9b
 RMD160 (psutils-p17.tar.gz) = 1494f37e7ae809f0e446d52d4b3a21cd48690cc0
 Size (psutils-p17.tar.gz) = 62039 bytes
 SHA1 (patch-aa) = 90961e898a113c4d4fa64e8d44d40469c76f156d
-SHA1 (patch-ab) = 818a4169aaa9765c9629bb2a01eb5fa887b90f7f
-SHA1 (patch-ac) = 5d7c0c0872b9101b29b0a5294f53d3dd1c550971
-SHA1 (patch-ad) = 74bd84ae49127e5e7e69eca4025927e230d4521f
+SHA1 (patch-ab) = 60f1d0cef0632cccc30735bdf04c2b97a7a2c20f
+SHA1 (patch-ac) = 5dcbb4fbbf883486e41dddbf5c9eca0ed91166c6
+SHA1 (patch-ad) = 9f2ed03ad9fd298692ef19204a9b5092022150c8
 SHA1 (patch-ae) = d6ed0910d6b2b6f43ffe1fa29c35543bb4b9855c
 SHA1 (patch-af) = 4452ec086be0abe895a48b2684f7e4afe65cf25c
 SHA1 (patch-ag) = a07233adb18ffa01999449935fce96983626e7c9
 SHA1 (patch-ah) = c79bfd15e8befdb592facfd8a4f4f7194ad6a3ea
+SHA1 (patch-ai) = 892656673a66e7088dd479d8aac330293541cc1f
+SHA1 (patch-aj) = b40914b40486599fcec8baba362dc8f38a39848f
+SHA1 (patch-ak) = af57aff407916deab9221485b62b9c81f8d7b55b
+SHA1 (patch-am) = 7ee8c9666051ecca81fd09b3c51acb76184ba6cb
