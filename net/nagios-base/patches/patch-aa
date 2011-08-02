@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
+$NetBSD: patch-aa,v 1.9 2011/08/02 14:03:18 bouyer Exp $
 
---- Makefile.in.orig	2009-12-31 10:12:08.000000000 +0000
-+++ Makefile.in
-@@ -24,17 +24,16 @@ prefix=@prefix@
+--- Makefile.in.orig	2011-07-26 04:02:18.000000000 +0200
++++ Makefile.in	2011-08-01 20:14:30.000000000 +0200
+@@ -24,17 +24,16 @@
  exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CHECKRESULTDIR=@CHECKRESULTDIR@
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
 -CGIDIR=@sbindir@
 +CGIDIR=@libexecdir@
  LIBEXECDIR=@libexecdir@
- HTMLDIR=@datarootdir@
+ HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
  COMMAND_OPTS=@COMMAND_OPTS@
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -64,66 +63,6 @@ all:
+@@ -69,74 +68,6 @@
  	cd $(SRC_BASE) && $(MAKE)
  	cd $(SRC_CGI) && $(MAKE)
  	cd $(SRC_HTM) && $(MAKE)
@@ -60,6 +60,14 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
 -	@echo "     - This installs the Apache config file for the Nagios"
 -	@echo "       web interface"
 -	@echo ""
+-	@echo "  make install-exfoliation"
+-	@echo "     - This installs the Exfoliation theme for the Nagios"
+-	@echo "       web interface"
+-	@echo ""
+-	@echo "  make install-classicui"
+-	@echo "     - This installs the classic theme for the Nagios"
+-	@echo "       web interface"
+-	@echo ""
 -	@echo ""
 -	@echo "*** Support Notes *******************************************"
 -	@echo ""
@@ -67,8 +75,8 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
 -	@echo "please make sure that you:"
 -	@echo ""
 -	@echo "     - Look at the sample config files"
--	@echo "     - Read the HTML documentation"
--	@echo "     - Read the FAQs online at http://www.nagios.org/faqs"
+-	@echo "     - Read the documentation on the Nagios Library at:"
+-	@echo "           http://library.nagios.com"
 -	@echo ""
 -	@echo "before you post a question to one of the mailing lists."
 -	@echo "Also make sure to include pertinent information that could"
@@ -81,7 +89,7 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
 -	@echo ""
 -	@echo "For more information on obtaining support for Nagios, visit:"
 -	@echo ""
--	@echo "       http://www.nagios.org/support/"
+-	@echo "       http://support.nagios.com"
 -	@echo ""
 -	@echo "*************************************************************"
 -	@echo ""
@@ -90,7 +98,7 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
  
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
-@@ -214,14 +153,10 @@ install-unstripped:
+@@ -230,14 +161,10 @@
  	$(MAKE) install-basic
  
  install-basic:
@@ -107,7 +115,7 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
  	@echo ""
  	@echo "*** Main program, CGIs and HTML files installed ***"
  	@echo ""
-@@ -241,20 +176,20 @@ install-basic:
+@@ -257,20 +184,20 @@
  
  
  install-config:
@@ -142,7 +150,25 @@ $NetBSD: patch-aa,v 1.8 2011/04/08 22:37:25 morr Exp $
  	@echo ""
  	@echo "*** Config files installed ***"
  	@echo ""
-@@ -282,7 +217,10 @@ install-daemoninit:
+@@ -287,8 +214,15 @@
+ 	@echo ""
+ 	
+ install-exfoliation:
+-	cp -rf contrib/exfoliation/stylesheets/* $(DESTDIR)$(HTMLDIR)/stylesheets
+-	cp -rf contrib/exfoliation/images/* $(DESTDIR)$(HTMLDIR)/images
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/stylesheets
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images/logos
++	for file in contrib/exfoliation/stylesheets/* ; \
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/stylesheets; done
++	for file in contrib/exfoliation/images/*.* ; \
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
++	for file in contrib/exfoliation/images/logos/* ; \
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
+ 
+ 	@echo ""
+ 	@echo "*** Exfoliation theme installed ***"
+@@ -316,7 +250,10 @@
  
  
  install-commandmode:

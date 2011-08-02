@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2011/04/08 22:56:12 morr Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/08/02 14:03:18 bouyer Exp $
 #
 # used by net/nagios-plugin-mysql/Makefile
 # used by net/nagios-plugin-pgsql/Makefile
@@ -20,3 +20,4 @@ CONFIGURE_ARGS+=	fu_cv_sys_stat_statvfs=no
 
 CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER:Q}
 CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP:Q}
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/nagios
