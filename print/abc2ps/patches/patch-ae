@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2011/08/02 17:04:34 joerg Exp $
+
+--- parse.h.orig	2011-08-02 14:08:23.000000000 +0000
++++ parse.h
+@@ -2325,7 +2325,7 @@ char ln[];
+   strcpy (ln, "");
+   if (feof(fp)) return 0;
+ 
+-  getline(ln, BSIZE, fp);
++  my_getline(ln, BSIZE, fp);
+ /*|   fgets(ln, BSIZE, fp); |*/
+   linenum++;
+   l=strlen(ln);
