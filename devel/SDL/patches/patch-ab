@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.10 2011/08/02 17:02:38 joerg Exp $
+
+--- src/video/mmx.h.orig	2011-08-02 12:38:09.000000000 +0000
++++ src/video/mmx.h
+@@ -355,7 +355,7 @@ mmx_ok(void)
+ 
+ #define	mmx_r2m(op, reg, mem) \
+ 	__asm__ __volatile__ (#op " %%" #reg ", %0" \
+-			      : "=X" (mem) \
++			      : "=m" (mem) \
+ 			      : /* nothing */ )
+ 
+ #define	mmx_r2r(op, regs, regd) \
