@@ -1,19 +1,17 @@
-$NetBSD: patch-ad,v 1.7 2011/04/08 22:37:25 morr Exp $
+$NetBSD: patch-ad,v 1.8 2011/08/02 14:03:18 bouyer Exp $
 
---- html/Makefile.in.orig	2009-07-07 22:34:51.000000000 +0000
-+++ html/Makefile.in
-@@ -7,8 +7,8 @@ exec_prefix=@exec_prefix@
+--- html/Makefile.in.orig	2011-07-24 19:53:52.000000000 +0200
++++ html/Makefile.in	2011-08-01 18:50:04.000000000 +0200
+@@ -7,7 +7,7 @@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
 -CGIDIR=@sbindir@
--HTMLDIR=@datadir@
 +CGIDIR=@libexecdir@
-+HTMLDIR=@datarootdir@
+ HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
- COMMAND_OPTS=@COMMAND_OPTS@
-@@ -33,46 +33,45 @@ distclean: clean
+@@ -33,52 +33,52 @@
  devclean: distclean
  
  install:
@@ -26,20 +24,25 @@ $NetBSD: patch-ad,v 1.7 2011/04/08 22:37:25 morr Exp $
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images/logos
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/includes
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/includes/rss
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/includes/rss/extlib
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/ssi
 -	$(INSTALL) -m 664 $(INSTALL_OPTS) robots.txt $(DESTDIR)$(HTMLDIR)
--	$(INSTALL) -m 664 $(INSTALL_OPTS) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
-+	[ -d $(DESTDIR)$(HTMLDIR) ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)
-+	[ -d $(DESTDIR)$(HTMLDIR)/stylesheets ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/stylesheets
-+	[ -d $(DESTDIR)$(HTMLDIR)/contexthelp ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/contexthelp
-+	[ -d $(DESTDIR)$(HTMLDIR)/docs ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs
-+	[ -d $(DESTDIR)$(HTMLDIR)/docs/images ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs/images
-+	[ -d $(DESTDIR)$(HTMLDIR)/images ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images
-+	[ -d $(DESTDIR)$(HTMLDIR)/images/logos ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images/logos
-+	[ -d $(DESTDIR)$(HTMLDIR)/includes ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/includes
-+	[ -d $(DESTDIR)$(HTMLDIR)/ssi ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/ssi
+-#	$(INSTALL) -m 664 $(INSTALL_OPTS) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/media
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/stylesheets
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/contexthelp
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs/images
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images/logos
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/includes
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/includes/rss
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/includes/rss/extlib
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/ssi
 +	${BSD_INSTALL_DATA} robots.txt $(DESTDIR)$(HTMLDIR)
-+	${BSD_INSTALL_DATA} docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
++	#${BSD_INSTALL_DATA} docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
  # Remove old HTML files (PHP files are used now)
  	rm -f $(DESTDIR)$(HTMLDIR)/index.html
  	rm -f $(DESTDIR)$(HTMLDIR)/main.html
@@ -55,12 +58,10 @@ $NetBSD: patch-ad,v 1.7 2011/04/08 22:37:25 morr Exp $
  	for file in contexthelp/*.html; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/contexthelp; done
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/contexthelp; done
- 	for file in docs/*.html; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/docs; done
- 	for file in docs/images/*.*; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
+ #	for file in docs/*.html; \
+ #	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs; done
+ #	for file in docs/images/*.*; \
+ #	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
  	for file in images/*.gif; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images; done
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
@@ -79,6 +80,13 @@ $NetBSD: patch-ad,v 1.7 2011/04/08 22:37:25 morr Exp $
  	for file in includes/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes; done
 +	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/includes; done
+-	for file in includes/rss/*; \
++	for file in AUTHORS NEWS rss_parse.inc CHANGES README rss_utils.inc ChangeLog TROUBLESHOOTING rss_cache.inc INSTALL cookbook rss_fetch.inc ; \
+-	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes/rss; done
++	do ${BSD_INSTALL_DATA} includes/rss/$$file $(DESTDIR)$(HTMLDIR)/includes/rss; done
+ 	for file in includes/rss/extlib/*; \
+-	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes/rss/extlib; done
++	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/includes/rss/extlib; done
  
  install-unstripped:
  	$(MAKE) install
