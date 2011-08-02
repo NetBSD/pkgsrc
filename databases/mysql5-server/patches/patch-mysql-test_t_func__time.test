@@ -1,0 +1,26 @@
+$NetBSD: patch-mysql-test_t_func__time.test,v 1.1 2011/08/02 16:15:08 taca Exp $
+
+* Handling of time_t: http://lists.mysql.com/commits/128103
+
+--- mysql-test/t/func_time.test.orig	2011-01-25 11:52:35.000000000 +0000
++++ mysql-test/t/func_time.test
+@@ -838,4 +838,19 @@ SELECT '2008-02-18' + INTERVAL 1 FRAC_SE
+ --error ER_PARSE_ERROR
+ SELECT '2008-02-18' - INTERVAL 1 FRAC_SECOND;
+ 
++
++--echo #
++--echo # Bug #52315 part 2 : utc_date() crashes when system time > year 2037
++--echo #
++
++--disable_result_log
++--error ER_UNKNOWN_ERROR
++SET TIMESTAMP=-147490000; SELECT UTC_TIMESTAMP();
++--error ER_UNKNOWN_ERROR
++SET TIMESTAMP=2147483648; SELECT UTC_TIMESTAMP();
++SET TIMESTAMP=2147483646; SELECT UTC_TIMESTAMP();
++SET TIMESTAMP=2147483647; SELECT UTC_TIMESTAMP();
++--enable_result_log
++
++
+ --echo End of 5.0 tests

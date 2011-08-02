@@ -1,6 +1,8 @@
-$NetBSD: patch-cc,v 1.3 2010/02/18 15:46:10 taca Exp $
+$NetBSD: patch-cc,v 1.4 2011/08/02 16:15:08 taca Exp $
 
-See patch-ca.
+* Before calling sigsend(), make sure the function actuall exists.
+  Fixes the build on NetBSD >= 4.99.49, in which the macro P_MYID
+  is defined somewhere unrelated to signals.
 
 --- sql/stacktrace.c.orig	2010-01-15 09:49:23.000000000 +0000
 +++ sql/stacktrace.c
