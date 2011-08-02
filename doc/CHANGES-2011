@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1824 2011/08/02 14:11:54 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1825 2011/08/02 16:15:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2791,3 +2791,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/nagios-base to 3.3.1 [bouyer 2011-08-02]
 	Updated databases/mysql51-client to 5.1.58 [taca 2011-08-02]
 	Updated databases/mysql51-server to 5.1.58 [taca 2011-08-02]
+	Updated databases/mysql5-server to 5.0.92nb1 [taca 2011-08-02]
