@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2011/08/02 17:09:21 joerg Exp $
+
+--- src/safe.hpp.orig	2011-08-02 13:39:15.000000000 +0000
++++ src/safe.hpp
+@@ -129,7 +129,7 @@ public:
+   SafeEntry(SafeGroup *parent);
+   SafeEntry(SafeGroup *parent,
+ 	    const QString &n, const QString &u,
+-	    const EncryptedString &p, const QString &n);
++	    const EncryptedString &p, const QString &m);
+   SafeEntry(const SafeEntry &item);
+   ~SafeEntry();
+ 
