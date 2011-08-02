@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2011/08/02 17:04:34 joerg Exp $
+
+--- abc2ps.c.orig	2011-08-02 14:08:15.000000000 +0000
++++ abc2ps.c
+@@ -649,7 +649,7 @@ char *argv[];
+       printf ("\nSelect tunes: ");
+ /*|   gets (aaa); |*/
+ /*|   fgets (aaa, sizeof(aaa), stdin); |*/
+-      getline(aaa,500,stdin);
++      my_getline(aaa,500,stdin);
+       if (isblank(aaa)) break;
+       sscanf(aaa,"%s",ccc);
+       if (ccc[0]=='?') {

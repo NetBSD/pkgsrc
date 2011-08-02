@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/01 14:32:48 ben Exp $
+$NetBSD: distinfo,v 1.2 2011/08/02 17:04:34 joerg Exp $
 
 SHA1 (ABC2PS-1.3.3.tar.Z) = 0596e3c1c357767407d984b33103549b70009d93
 RMD160 (ABC2PS-1.3.3.tar.Z) = bd73aee0443e34e95377b6f3b036e3f83cd63b1c
 Size (ABC2PS-1.3.3.tar.Z) = 186611 bytes
 SHA1 (patch-aa) = 8f128d6ea0ef91cbe67126febf1d7959e63604f7
+SHA1 (patch-ab) = f64532dea945682960d2809257c6809158674165
+SHA1 (patch-ac) = edbdbb2d2030b929182a4f55be82ba3226eb2163
+SHA1 (patch-ad) = 478d0cdeb099d2b5658a89e9bb217d48a657d187
+SHA1 (patch-ae) = f2f26a07ef48039a73460c31cb7ddfba1010990c
+SHA1 (patch-af) = 844f8bc5049c2f2c7b5b49f0cdddb574062237e1

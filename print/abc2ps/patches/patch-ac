@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2011/08/02 17:04:34 joerg Exp $
+
+--- format.h.orig	2011-08-02 14:08:18.000000000 +0000
++++ format.h
+@@ -474,13 +474,13 @@ struct FORMAT *f;
+   if (vb>=4) printf ("Reading format file %s:\n", fname);
+   printf ("%s .. ", fname);
+   strcpy (line, "");
+-  getline(line, BSIZE, fp);
++  my_getline(line, BSIZE, fp);
+   for (i=0;i<200;i++) {
+     end=interpret_format_line (line,f);
+     if (end==1) return 1;
+     strcpy (line, "");
+     if (feof(fp)) return 1;
+-    if (!getline(line, BSIZE, fp)) return 1 ;
++    if (!my_getline(line, BSIZE, fp)) return 1 ;
+   }
+   fclose (fp);
+   return 1;
