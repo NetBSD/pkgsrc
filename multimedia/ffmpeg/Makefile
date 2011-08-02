@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2011/07/19 19:53:18 drochner Exp $
+# $NetBSD: Makefile,v 1.70 2011/08/02 17:03:14 joerg Exp $
 
 # XXX This is release 0.7.1 but we had date-based pkgnames before.
 PKGNAME=	ffmpeg-20110623.${DISTVERSION}
@@ -41,6 +41,12 @@ post-install:
 
 # "lame-3.98" isn't compatible with "ffmpeg" which breaks audio encoding.
 BUILDLINK_ABI_DEPENDS.lame+=	lame>=3.98.2nb1
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-no-integrated-as
+.endif
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
