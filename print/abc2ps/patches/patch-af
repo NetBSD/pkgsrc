@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2011/08/02 17:04:34 joerg Exp $
+
+--- util.h.orig	2011-08-02 14:08:26.000000000 +0000
++++ util.h
+@@ -70,7 +70,7 @@ float x1,x2;
+ }
+ 
+ 
+-/* ----- getline ----- */
++/* ----- my_getline ----- */
+ /*
+ * Added by jc:
+ * This routine reads a line from fp into  buf,  and  trims  away  any
+@@ -78,7 +78,7 @@ float x1,x2;
+ * returns true for CR, so this routine should work even if the  input
+ * came from a DOS system.
+ */
+-char * getline(buf,len,fp)
++char * my_getline(buf,len,fp)
+ 	char* buf;
+ 	int   len;
+ 	FILE* fp;
