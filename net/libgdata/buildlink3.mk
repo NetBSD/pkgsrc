@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2011/06/10 09:39:45 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2011/08/02 21:50:46 gls Exp $
 
 BUILDLINK_TREE+=	libgdata
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgdata
 LIBGDATA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgdata+=	libgdata>=0.6.4
-BUILDLINK_ABI_DEPENDS.libgdata?=	libgdata>=0.6.6nb2
+BUILDLINK_ABI_DEPENDS.libgdata+=	libgdata>=0.6.6nb2
 BUILDLINK_PKGSRCDIR.libgdata?=	../../net/libgdata
 
 
