@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.19 2011/08/02 17:11:00 joerg Exp $
+
+--- mpi/mpi-inline.h.orig	2008-12-11 16:39:43.000000000 +0000
++++ mpi/mpi-inline.h
+@@ -28,10 +28,6 @@
+ #ifndef G10_MPI_INLINE_H
+ #define G10_MPI_INLINE_H
+ 
+-#ifndef G10_MPI_INLINE_DECL
+-#define G10_MPI_INLINE_DECL  extern __inline__
+-#endif
+-
+ G10_MPI_INLINE_DECL  mpi_limb_t
+ mpihelp_add_1( mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr,
+ 	       mpi_size_t s1_size, mpi_limb_t s2_limb)
