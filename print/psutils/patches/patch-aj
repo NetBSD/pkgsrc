@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2011/08/02 17:05:48 joerg Exp $
+
+--- psselect.c.orig	2011-08-02 13:49:30.000000000 +0000
++++ psselect.c
+@@ -91,7 +91,7 @@ static PageRange *addrange(char *str, Pa
+ }
+ 
+ 
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+    int currentpg, maxpage = 0;
+    int even = 0, odd = 0, reverse = 0;

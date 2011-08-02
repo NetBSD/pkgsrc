@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2011/08/02 17:05:48 joerg Exp $
+
+--- psbook.c.orig	2011-08-02 13:48:35.000000000 +0000
++++ psbook.c
+@@ -32,7 +32,7 @@ static void usage(void)
+ }
+ 
+ 
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+    int signature = 0;
+    int currentpg, maxpage;
