@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/07/30 10:46:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/02 14:16:12 cheusov Exp $
 
 DISTNAME=	pkgnih-0.8.0
 PKGNAME=	${DISTNAME:S/pkgnih/nih/}
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/nih/ \
 		http://mova.org/~cheusov/pub/pkgnih/
@@ -40,5 +41,17 @@ REPLACE_FILES.runawk=	nih/pkg_update_plan.in
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 MAKE_PROGRAM=		mkcmake
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == NetBSD || ${OPSYS} == FreeBSD || ${OPSYS} == OpenBSD || \
+    ${OPSYS} == DragonFly || ${OPSYS} == MirBSD
+FTP_CMD=/usr/bin/ftp
+.else
+FTP_CMD=${PREFIX}/bin/ftp
+DEPENDS+=	tnftp-[0-9]*:../../net/tnftp
+.endif
+
+MAKE_ENV+= FTP=${FTP_CMD:Q}
 
 .include "../../mk/bsd.pkg.mk"
