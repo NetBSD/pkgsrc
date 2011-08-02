@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2011/07/27 04:05:10 taca Exp $
+$NetBSD: distinfo,v 1.76 2011/08/02 14:05:27 taca Exp $
 
 SHA1 (samba-3.0.37.tar.gz) = 5ec6bc6558b3c799f747eb49fbba019d5edf0cbd
 RMD160 (samba-3.0.37.tar.gz) = 06b76ae22729e10c83d6af42d03b03ad69e49103
@@ -40,4 +40,5 @@ SHA1 (patch-ch) = 3c4c404519154e294cee134ddb4d2b9c7d8e02a2
 SHA1 (patch-ci) = d78298d0997cf7877cfe2411355fb6c61dec17f6
 SHA1 (patch-da) = 2dddd250b2207d658b02ff43b46199ce4305b7f8
 SHA1 (patch-ee) = d52511dc7d065db7ba1464138c4bc85cfe2f0d59
+SHA1 (patch-lib_replace_test_os2__delete.c) = 27958a98f37fdc03e109c641d768721e4e587f31
 SHA1 (patch-libsmb_clikrb5.c) = 0efe8e7b06588a727b8cf459ed6e9dc46d1b8f13
