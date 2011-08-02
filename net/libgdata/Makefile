@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/06/10 09:39:45 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/08/02 21:50:46 gls Exp $
 #
 
 DISTNAME=	libgdata-0.6.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgdata/0.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake intltool msgfmt
-USE_LANGUAGES+=  c c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libgdata.pc.in
 
@@ -29,14 +29,16 @@ PKG_SUGGESTED_OPTIONS=	gnome
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnome)
-BUILDLINK_API_DEPENDS.libsoup24+=   libsoup24>=2.26.0
-. include "../../net/libsoup24/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gnome
+.else
+CONFIGURE_ARGS+=	--disable-gnome
 .endif
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.19.7
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.26.0
+.include "../../net/libsoup24/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
