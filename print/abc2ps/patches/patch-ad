@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2011/08/02 17:04:34 joerg Exp $
+
+--- music.h.orig	2011-08-02 14:08:20.000000000 +0000
++++ music.h
+@@ -4126,7 +4126,7 @@ int  job;
+   for (i=0;i<100;i++) {
+     if (feof(fpin)) rx("EOF reached scanning text block","");
+     strcpy (ln, "");
+-    getline(ln, BSIZE, fpin);
++    my_getline(ln, BSIZE, fpin);
+     ll=strlen(ln);
+     linenum++;
+     if ((verbose>=5) || (vb>=10) ) printf ("%3d  %s \n", linenum, ln);
