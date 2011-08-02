@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1821 2011/08/01 21:51:53 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1822 2011/08/02 12:15:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2787,3 +2787,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/x11-links to 0.66 [wiz 2011-08-01]
 	Updated audio/cmus to 2.4.2 [gls 2011-08-01]
 	Updated net/rtorrent to 0.8.9nb2 [tron 2011-08-01]
+	Updated devel/cutter to 1.1.8 [obache 2011-08-02]
