@@ -1,12 +1,29 @@
-$NetBSD: patch-ca,v 1.3 2010/02/18 15:46:10 taca Exp $
+$NetBSD: patch-ca,v 1.4 2011/08/02 16:15:08 taca Exp $
 
-Before calling sigsend(), make sure the function actuall exists. Fixes
-the build on NetBSD >= 4.99.49, in which the macro P_MYID is defined
-somewhere unrelated to signals.
+* Handling of time_t: http://lists.mysql.com/commits/128103
+* Before calling sigsend(), make sure the function actuall exists.
+  Fixes the build on NetBSD >= 4.99.49, in which the macro P_MYID
+  is defined somewhere unrelated to signals.
 
---- configure.in.orig	2010-01-15 09:47:42.000000000 +0000
+--- configure.in.orig	2011-01-25 11:27:51.000000000 +0000
 +++ configure.in
-@@ -2051,7 +2051,7 @@ AC_CHECK_HEADERS(varargs.h stdarg.h dire
+@@ -1956,6 +1956,15 @@ dnl
+ 
+ MYSQL_CHECK_TIME_T
+ 
++dnl
++dnl check size of time_t
++dnl
++
++AC_CHECK_SIZEOF(time_t, 8)
++if test "$ac_cv_sizeof_time_t" -eq 0
++then
++  AC_MSG_ERROR("MySQL needs a time_t type.")
++fi
+ 
+ # do we need #pragma interface/#pragma implementation ?
+ # yes if it's gcc 2.x, and not icc pretending to be gcc, and not cygwin
+@@ -2051,7 +2060,7 @@ AC_CHECK_HEADERS(varargs.h stdarg.h dire
  paths.h semaphore.h)
  
  # Already-done: strcasecmp
