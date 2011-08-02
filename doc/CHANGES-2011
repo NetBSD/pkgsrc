@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1825 2011/08/02 16:15:50 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1826 2011/08/02 21:27:45 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2792,3 +2792,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql51-client to 5.1.58 [taca 2011-08-02]
 	Updated databases/mysql51-server to 5.1.58 [taca 2011-08-02]
 	Updated databases/mysql5-server to 5.0.92nb1 [taca 2011-08-02]
+	Updated pkgtools/pkgin to 0.4.2.1 [imil 2011-08-02]
