@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1823 2011/08/02 14:04:18 bouyer Exp $
+$NetBSD: CHANGES-2011,v 1.1824 2011/08/02 14:11:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2789,3 +2789,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/rtorrent to 0.8.9nb2 [tron 2011-08-01]
 	Updated devel/cutter to 1.1.8 [obache 2011-08-02]
 	Updated net/nagios-base to 3.3.1 [bouyer 2011-08-02]
+	Updated databases/mysql51-client to 5.1.58 [taca 2011-08-02]
+	Updated databases/mysql51-server to 5.1.58 [taca 2011-08-02]
