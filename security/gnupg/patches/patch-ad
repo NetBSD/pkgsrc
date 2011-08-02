@@ -1,0 +1,45 @@
+$NetBSD: patch-ad,v 1.7 2011/08/02 17:11:00 joerg Exp $
+
+--- mpi/mpi-internal.h.orig	2008-12-11 16:39:43.000000000 +0000
++++ mpi/mpi-internal.h
+@@ -29,6 +29,14 @@
+ #ifndef G10_MPI_INTERNAL_H
+ #define G10_MPI_INTERNAL_H
+ 
++#ifndef G10_MPI_INLINE_DECL
++#if defined(__GNUC_STDC_INLINE__) && __GNUC_STDC_INLINE__
++#define G10_MPI_INLINE_DECL  __inline__
++#else
++#define G10_MPI_INLINE_DECL  extern __inline__
++#endif
++#endif
++
+ #include "mpi.h"
+ #include "mpi-asm-defs.h"
+ 
+@@ -198,19 +206,19 @@ void mpi_lshift_limbs( MPI a, unsigned i
+ 
+ 
+ /*-- mpihelp-add.c --*/
+-mpi_limb_t mpihelp_add_1(mpi_ptr_t res_ptr,  mpi_ptr_t s1_ptr,
++G10_MPI_INLINE_DECL mpi_limb_t mpihelp_add_1(mpi_ptr_t res_ptr,  mpi_ptr_t s1_ptr,
+ 			 mpi_size_t s1_size, mpi_limb_t s2_limb );
+-mpi_limb_t mpihelp_add_n( mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr,
++G10_MPI_INLINE_DECL mpi_limb_t mpihelp_add_n( mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr,
+ 			  mpi_ptr_t s2_ptr,  mpi_size_t size);
+-mpi_limb_t mpihelp_add(mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr, mpi_size_t s1_size,
++G10_MPI_INLINE_DECL mpi_limb_t mpihelp_add(mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr, mpi_size_t s1_size,
+ 		       mpi_ptr_t s2_ptr, mpi_size_t s2_size);
+ 
+ /*-- mpihelp-sub.c --*/
+-mpi_limb_t mpihelp_sub_1( mpi_ptr_t res_ptr,  mpi_ptr_t s1_ptr,
++G10_MPI_INLINE_DECL mpi_limb_t mpihelp_sub_1( mpi_ptr_t res_ptr,  mpi_ptr_t s1_ptr,
+ 			  mpi_size_t s1_size, mpi_limb_t s2_limb );
+-mpi_limb_t mpihelp_sub_n( mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr,
++G10_MPI_INLINE_DECL mpi_limb_t mpihelp_sub_n( mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr,
+ 			  mpi_ptr_t s2_ptr, mpi_size_t size);
+-mpi_limb_t mpihelp_sub(mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr, mpi_size_t s1_size,
++G10_MPI_INLINE_DECL mpi_limb_t mpihelp_sub(mpi_ptr_t res_ptr, mpi_ptr_t s1_ptr, mpi_size_t s1_size,
+ 		       mpi_ptr_t s2_ptr, mpi_size_t s2_size);
+ 
+ /*-- mpihelp-cmp.c --*/
