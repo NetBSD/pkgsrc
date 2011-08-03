@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1829 2011/08/03 08:28:49 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1830 2011/08/03 08:34:00 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2796,3 +2796,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/libgdata to 0.6.6nb3 [gls 2011-08-02]
 	Updated filesystems/perfuse to 20110803 [manu 2011-08-03]
 	Updated graphics/freetype2 to 2.4.6 [cheusov 2011-08-03]
+	Updated net/openvpn to 2.2.1nb1 [cheusov 2011-08-03]
