@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.7 2011/04/08 22:37:25 morr Exp $
+$NetBSD: patch-ag,v 1.7.2.1 2011/08/03 17:51:52 tron Exp $
 
---- configure.orig	2010-10-04 03:56:55.000000000 +0000
-+++ configure
-@@ -6239,7 +6239,7 @@ else
- fi
- 
+--- configure.orig	2011-07-26 05:16:26.000000000 +0200
++++ configure	2011-08-01 18:36:37.000000000 +0200
+@@ -5775,7 +5775,7 @@
+   CHECKRESULTDIR=no
+ fi;
  if test x$CHECKRESULTDIR = xno; then
 -	CHECKRESULTDIR="$localstatedir/spool/checkresults"
 +	CHECKRESULTDIR="$localstatedir/checkresults"
