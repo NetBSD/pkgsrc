@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1827 2011/08/02 21:51:02 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1828 2011/08/03 04:17:32 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2794,3 +2794,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql5-server to 5.0.92nb1 [taca 2011-08-02]
 	Updated pkgtools/pkgin to 0.4.2.1 [imil 2011-08-02]
 	Updated net/libgdata to 0.6.6nb3 [gls 2011-08-02]
+	Updated filesystems/perfuse to 20110803 [manu 2011-08-03]
