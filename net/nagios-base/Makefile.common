@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2011/04/08 22:37:24 morr Exp $
+# $NetBSD: Makefile.common,v 1.11.2.1 2011/08/03 17:51:52 tron Exp $
 #
 # used by net/nagios-base/Makefile
 # used by net/nagios-nsca/Makefile
@@ -19,9 +19,10 @@ PERL5_REQD=		5.6
 
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
 .if ${PKGPATH} != "net/nagios-nsca"
-CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/nagios
-.endif
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/nagios
+.else
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
+.endif
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${NAGIOSDIR}
 
