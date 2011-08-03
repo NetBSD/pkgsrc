@@ -1,0 +1,24 @@
+$NetBSD: patch-av,v 1.2.2.1 2011/08/03 21:04:08 tron Exp $
+
+CVE-2011-2587
+
+--- modules/demux/real.c.orig	2010-12-29 21:38:25.000000000 +0000
++++ modules/demux/real.c
+@@ -841,7 +841,8 @@ static void DemuxAudioSipr( demux_t *p_d
+     demux_sys_t *p_sys = p_demux->p_sys;
+     block_t *p_block = tk->p_sipr_packet;
+ 
+-    if( p_sys->i_buffer < tk->i_frame_size )
++    if( p_sys->i_buffer < tk->i_frame_size
++     || tk->i_sipr_subpacket_count >= tk->i_subpacket_h )
+         return;
+ 
+     if( !p_block )
+@@ -851,7 +852,6 @@ static void DemuxAudioSipr( demux_t *p_d
+             return;
+         tk->p_sipr_packet = p_block;
+     }
+-
+     memcpy( p_block->p_buffer + tk->i_sipr_subpacket_count * tk->i_frame_size,
+             p_sys->buffer, tk->i_frame_size );
+     if (!tk->i_sipr_subpacket_count)
