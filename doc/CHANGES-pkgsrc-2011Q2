@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.15 2011/08/02 08:11:44 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.16 2011/08/03 21:05:13 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -43,3 +43,7 @@ Pullup ticket #3486 - requested by dholland
 chat/amsn build fix
 Pullup ticket #3487 - requested by drochner
 net/libsoup24: security patch
+Pullup ticket #3488 - requested by bouyer
+net/nagios-base: security update
+Pullup ticket #3489 - requested by drochner
+multimedia/vlc: security patch
