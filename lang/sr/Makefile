@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/03/03 13:01:43 is Exp $
+# $NetBSD: Makefile,v 1.20 2011/08/03 09:30:48 cheusov Exp $
 #
 
 DISTNAME=		sr233
@@ -15,6 +15,8 @@ COMMENT=		The SR language compiler and run time system
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
+
+USE_TOOLS+=		yacc
 
 WRKSRC= ${WRKDIR}
 TEST_TARGET=		verify
