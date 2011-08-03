@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1828 2011/08/03 04:17:32 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1829 2011/08/03 08:28:49 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2795,3 +2795,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkgin to 0.4.2.1 [imil 2011-08-02]
 	Updated net/libgdata to 0.6.6nb3 [gls 2011-08-02]
 	Updated filesystems/perfuse to 20110803 [manu 2011-08-03]
+	Updated graphics/freetype2 to 2.4.6 [cheusov 2011-08-03]
