@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: openvpn.sh,v 1.3 2005/11/03 14:31:19 salo Exp $
+# $NetBSD: openvpn.sh,v 1.4 2011/08/03 08:33:33 cheusov Exp $
 #
 # PROVIDE: openvpn
 # REQUIRE: NETWORKING
@@ -19,6 +19,11 @@
 #					# started for each file, otherwise
 #					# a process is started for all
 #					# *.conf files.
+#
+#       openvpn_chrootdir="dir"         # Chroot to "dir" after initialization.
+#                                       # See --chroot option for details.
+#
+#       openvpn_flags="flags"           # Flags to pass to the openvpn(8) command
 #
 # The "reset" action will trigger a SIGUSR1 restart of the OpenVPN
 # process.  Please read the openvpn(8) man page for more details.
@@ -44,6 +49,11 @@ reset_cmd="openvpn_reset"
 
 openvpn_start()
 {
+	command_args="$command_args $openvpn_flags"
+	if test -n "$openvpn_chrootdir"; then
+		command_args="$command_args --chroot $openvpn_chrootdir"
+	fi
+
 	: ${openvpn_cfg="*.conf"}
 
 	for d in $required_dirs; do
