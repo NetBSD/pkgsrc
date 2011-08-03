@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2011/07/08 10:15:31 adam Exp $
+# $NetBSD: Makefile,v 1.43 2011/08/03 08:33:32 cheusov Exp $
 
 DISTNAME=	openvpn-2.2.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://swupdate.openvpn.net/community/releases/
 
@@ -40,6 +41,14 @@ SUBST_MESSAGE.pkitool=	Fixing up default paths to grep & openssl in pkitool.
 SUBST_FILES.pkitool=	easy-rsa/2.0/pkitool
 SUBST_SED.pkitool=	-e "s|\\(GREP\\)=.*|\\1=\""${GREP:Q}"\"|"
 SUBST_SED.pkitool+=	-e "s|\\(OPENSSL\\)=.*|\\1=\""${SSLBASE:Q}/bin/openssl"\"|"
+
+.include "../../mk/bsd.prefs.mk"
+
+OPENVPN_USER?=		openvpn
+OPENVPN_GROUP?=		openvpn
+PKG_GROUPS=		${OPENVPN_GROUP}
+PKG_USERS=		${OPENVPN_USER}:${OPENVPN_GROUP}
+PKG_GECOS.${OPENVPN_USER}=	OpenVPN\ server\ user
 
 post-install: post-install-pam
 	set -e; cd ${WRKSRC}/easy-rsa/2.0; for file in [a-zR]*; do	\
