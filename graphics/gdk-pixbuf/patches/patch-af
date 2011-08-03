@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2005/01/15 00:10:41 cube Exp $
+$NetBSD: patch-af,v 1.2 2011/08/03 10:01:25 drochner Exp $
 
 --- gdk-pixbuf/io-gif.c.orig	2002-12-18 19:49:01.000000000 +0000
 +++ gdk-pixbuf/io-gif.c
@@ -11,3 +11,14 @@ $NetBSD: patch-af,v 1.1 2005/01/15 00:10:41 cube Exp $
  		return;
  
  	/* The frame is completely off-bounds */
+@@ -944,6 +944,10 @@ gif_prepare_lzw (GifContext *context)
+ 		return -1;
+ 	}
+ 
++	if (context->lzw_set_code_size > MAX_LZW_BITS) {
++		return -1;
++	}
++
+ 	context->lzw_code_size = context->lzw_set_code_size + 1;
+ 	context->lzw_clear_code = 1 << context->lzw_set_code_size;
+ 	context->lzw_end_code = context->lzw_clear_code + 1;
