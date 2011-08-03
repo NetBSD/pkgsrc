@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.16 2010/12/26 19:16:16 adam Exp $
+$NetBSD: patch-ab,v 1.17 2011/08/03 08:25:41 cheusov Exp $
 
---- builds/unix/unix-cc.in.orig	2010-12-26 19:07:52.000000000 +0000
+--- builds/unix/unix-cc.in.orig	2010-08-31 11:04:28.000000000 +0000
 +++ builds/unix/unix-cc.in
-@@ -101,7 +101,7 @@ LDFLAGS := @LDFLAGS@
+@@ -89,7 +89,7 @@ ANSIFLAGS := @XX_ANSIFLAGS@
+ #
+ #
+ CCraw := $(CC)
+-CC    := $(LIBTOOL) --mode=compile $(CCraw)
++CC    := $(LIBTOOL) --tag=CC --mode=compile $(CCraw)
+ 
+ # Linker flags.
+ #
+@@ -101,12 +101,12 @@ LDFLAGS := @LDFLAGS@
  CCraw_build  := @CC_BUILD@	# native CC of building system
  E_BUILD      := @EXEEXT_BUILD@	# extension for exexutable on building system
  EXPORTS_LIST := $(OBJ_DIR)/ftexport.sym
@@ -11,3 +20,9 @@ $NetBSD: patch-ab,v 1.16 2010/12/26 19:16:16 adam Exp $
  
  
  # Library linking
+ #
+-LINK_LIBRARY = $(LIBTOOL) --mode=link $(CCraw) -o $@ $(OBJECTS_LIST) \
++LINK_LIBRARY = $(LIBTOOL) --tag=CC --mode=link $(CCraw) -o $@ $(OBJECTS_LIST) \
+                           -rpath $(libdir) -version-info $(version_info) \
+                           $(LDFLAGS) -no-undefined \
+                           # -export-symbols $(EXPORTS_LIST)
