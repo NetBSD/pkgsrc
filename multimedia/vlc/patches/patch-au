@@ -1,0 +1,25 @@
+$NetBSD: patch-au,v 1.6.2.1 2011/08/03 21:04:08 tron Exp $
+
+CVE-2011-2588
+
+--- modules/demux/avi/libavi.c.orig	2011-05-06 15:41:42.000000000 +0000
++++ modules/demux/avi/libavi.c
+@@ -386,7 +386,8 @@ static int AVI_ChunkRead_strf( stream_t 
+         case( AVIFOURCC_vids ):
+             p_strh->strh.i_samplesize = 0; /* XXX for ffmpeg avi file */
+             p_chk->strf.vids.i_cat = VIDEO_ES;
+-            p_chk->strf.vids.p_bih = malloc( p_chk->common.i_chunk_size );
++            p_chk->strf.vids.p_bih = malloc( __MAX( p_chk->common.i_chunk_size,
++                                         sizeof( *p_chk->strf.vids.p_bih ) ) );
+             AVI_READ4BYTES( p_chk->strf.vids.p_bih->biSize );
+             AVI_READ4BYTES( p_chk->strf.vids.p_bih->biWidth );
+             AVI_READ4BYTES( p_chk->strf.vids.p_bih->biHeight );
+@@ -402,7 +403,7 @@ static int AVI_ChunkRead_strf( stream_t 
+             {
+                 p_chk->strf.vids.p_bih->biSize = p_chk->common.i_chunk_size;
+             }
+-            if( p_chk->common.i_chunk_size - sizeof(BITMAPINFOHEADER) > 0 )
++            if( p_chk->common.i_chunk_size > sizeof(BITMAPINFOHEADER) )
+             {
+                 memcpy( &p_chk->strf.vids.p_bih[1],
+                         p_buff + 8 + sizeof(BITMAPINFOHEADER), /* 8=fourrc+size */
