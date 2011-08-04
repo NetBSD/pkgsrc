@@ -1,10 +1,10 @@
-$NetBSD: patch-sql-common_my__time.c,v 1.1 2011/08/02 16:15:08 taca Exp $
+$NetBSD: patch-sql-common_my__time.c,v 1.2 2011/08/04 09:09:41 taca Exp $
 
 * Handling of time_t: http://lists.mysql.com/commits/128103
 
 --- sql-common/my_time.c.orig	2011-01-25 11:28:00.000000000 +0000
 +++ sql-common/my_time.c
-@@ -984,8 +984,16 @@ my_system_gmt_sec(const MYSQL_TIME *t_sr
+@@ -984,8 +984,17 @@ my_system_gmt_sec(const MYSQL_TIME *t_sr
      So, tmp < TIMESTAMP_MIN_VALUE will be triggered. On platfroms
      with unsigned time_t tmp+= shift*86400L might result in a number,
      larger then TIMESTAMP_MAX_VALUE, so another check will work.
@@ -17,8 +17,9 @@ $NetBSD: patch-sql-common_my__time.c,v 1.1 2011/08/02 16:15:08 taca Exp $
 -  if ((tmp < TIMESTAMP_MIN_VALUE) || (tmp > TIMESTAMP_MAX_VALUE))
 +  if ((tmp < TIMESTAMP_MIN_VALUE)
 +#if SIZEOF_TIME_T > 4
-+      || (tmp > TIMESTAMP_MAX_VALUE))
++      || (tmp > TIMESTAMP_MAX_VALUE)
 +#endif
++					)
      tmp= 0;
  
    return (my_time_t) tmp;
