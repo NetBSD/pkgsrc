@@ -1,6 +1,7 @@
-$NetBSD: patch-utils_TkCximage_src_CxImage_ximapng.h,v 1.1 2011/04/03 15:26:36 wiz Exp $
+$NetBSD: patch-utils_TkCximage_src_CxImage_ximapng.h,v 1.2 2011/08/04 23:58:36 wiz Exp $
 
 Fix build with png-1.5.
+https://sourceforge.net/tracker/?func=detail&aid=3386428&group_id=54091&atid=472655
 
 --- utils/TkCximage/src/CxImage/ximapng.h.orig	2008-03-07 19:14:37.000000000 +0000
 +++ utils/TkCximage/src/CxImage/ximapng.h
