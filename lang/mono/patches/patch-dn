@@ -1,0 +1,17 @@
+$NetBSD: patch-dn,v 1.1 2011/08/04 05:23:02 kefren Exp $
+
+http://gnats.netbsd.org/45201
+
+--- mono/mini/mini-amd64.h.orig	2011-08-04 08:13:43.000000000 +0300
++++ mono/mini/mini-amd64.h	2011-08-04 08:15:09.000000000 +0300
+@@ -272,6 +272,10 @@ typedef struct {
+ 
+ #define MONO_ARCH_NOMAP32BIT
+ 
++#elif defined (__DragonFly__)
++
++#define MONO_ARCH_NOMAP32BIT
++
+ #elif defined (__NetBSD__)
+ 
+ #define REG_RAX 14
