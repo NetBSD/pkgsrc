@@ -1,20 +1,6 @@
-$NetBSD: patch-ej,v 1.4 2011/07/11 09:57:18 ryoon Exp $
+$NetBSD: patch-ej,v 1.5 2011/08/04 12:20:54 ryoon Exp $
 
-1) bswap_NN() variants are not available in CONFIG_MACHINE_BSWAP_H case
-   (fixed in upstream master but not in stable-0.13 branch)
-http://git.qemu.org/qemu.git/commit/?id=ba5e7f82169f32ab8163c707d97c799ca09f8924
-
-2) don't use -1 against uint8_t
-   (fixed in upstream master but not in stable-0.13 branch)
-http://git.qemu.org/qemu.git/commit/?id=7bccf57383cca60a778d5c543ac80c9f62d89ef2
-http://git.qemu.org/qemu.git/commit/?id=aee474ebc62686ae8827747b0b1aed85b8122979
-
-3) fix uninitialized warning
-   (fixed in upstream master but not in stable-0.13 branch)
-http://git.qemu.org/qemu.git/commit/?id=d167f9bc06a577d6c85b8ed6991c1efe175aae7d
-http://git.qemu.org/qemu.git/commit/?id=ad7ee4ad6c3a5388acf94dd532d291ea6d3a5972
-
-4) include <sys/types.h> to fix build on Mac OS X
+* include <sys/types.h> to fix build on Mac OS X
 
 --- ui/vnc-enc-tight.c.orig	2011-05-06 19:01:44.000000000 +0000
 +++ ui/vnc-enc-tight.c
