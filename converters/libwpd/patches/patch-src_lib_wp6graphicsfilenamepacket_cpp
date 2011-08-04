@@ -1,6 +1,7 @@
-$NetBSD: patch-src_lib_wp6graphicsfilenamepacket_cpp,v 1.1 2011/08/01 04:05:01 dholland Exp $
+$NetBSD: patch-src_lib_wp6graphicsfilenamepacket_cpp,v 1.2 2011/08/04 23:35:43 wiz Exp $
 
 Fix bug, caught by clang.
+http://bugzilla.abisource.com/show_bug.cgi?id=13128
 
 --- src/lib/WP6GraphicsFilenamePacket.cpp~	2010-08-26 11:35:21.000000000 +0000
 +++ src/lib/WP6GraphicsFilenamePacket.cpp
