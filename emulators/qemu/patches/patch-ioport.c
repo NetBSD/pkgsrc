@@ -1,4 +1,6 @@
-$NetBSD: patch-ioport.c,v 1.2 2011/08/04 12:20:54 ryoon Exp $
+$NetBSD: patch-ioport.c,v 1.3 2011/08/04 18:48:17 ryoon Exp $
+
+* Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 
 --- ioport.c.orig	2011-05-06 19:01:44.000000000 +0000
 +++ ioport.c
