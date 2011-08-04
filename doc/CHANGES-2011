@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1832 2011/08/04 21:37:13 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1833 2011/08/04 23:43:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2799,3 +2799,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/openvpn to 2.2.1nb1 [cheusov 2011-08-03]
 	Updated pkgtools/nih to 0.8.0nb1 [cheusov 2011-08-03]
 	Updated net/youtube-dl to 20110804 [tron 2011-08-04]
+	Updated multimedia/ffmpeg to 20110623.0.7.1nb1 [wiz 2011-08-04]
