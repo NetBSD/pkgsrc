@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.20 2011/07/19 19:53:18 drochner Exp $
+# $NetBSD: options.mk,v 1.21 2011/08/04 23:43:48 wiz Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	theora xvid faad faac x264 opencore-amr libvpx
-PKG_SUGGESTED_OPTIONS=	theora xvid x264 libvpx
+PKG_SUPPORTED_OPTIONS=	theora vorbis xvid faad faac x264 opencore-amr libvpx
+PKG_SUGGESTED_OPTIONS=	theora vorbis xvid x264 libvpx
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faad faac
 
@@ -64,6 +64,14 @@ CONFIGURE_ARGS+=	--disable-libopencore-amrwb
 .if !empty(PKG_OPTIONS:Mtheora)
 CONFIGURE_ARGS+=	--enable-libtheora
 .include "../../multimedia/libtheora/buildlink3.mk"
+.endif
+
+###
+### OGG Vorbis support
+###
+.if !empty(PKG_OPTIONS:Mvorbis)
+CONFIGURE_ARGS+=	--enable-libvorbis
+.include "../../audio/libvorbis/buildlink3.mk"
 .endif
 
 ###
