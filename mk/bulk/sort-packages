@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.15 2010/04/10 21:44:44 wiz Exp $
+# $NetBSD: sort-packages,v 1.16 2011/08/04 14:39:33 reinoud Exp $
 
 # This program scans all binary packages in the current directory and
 # creates two lists of files in OUTDIR:
@@ -58,10 +58,13 @@ for pkg in *${PKG_SUFX}; do
 		;;
 	esac
 
-	if [ "${restricted}" != "unknown" ] && [ "${no_bin_on_ftp}" != "unknown" ]; then
-		category="restricted"
+	category="unknown"
+	if [ "${restricted}" = "no" ] && [ "${no_bin_on_ftp}" = "no" ]; then
+		category="regular"
 	else
-		category="unknown"
+		if [ "${restricted}" = "yes" ] || [ "${no_bin_on_ftp}" = "yes" ]; then
+			category="restricted"
+		fi
 	fi
 
 	: echo "upload> ${pkg} is ${category}."
