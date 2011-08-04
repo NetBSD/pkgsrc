@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2010/08/21 16:37:14 seb Exp $
+# $NetBSD: Makefile,v 1.29 2011/08/04 23:40:48 wiz Exp $
 
 DISTNAME=		rxvt-unicode-9.06
 PKGREVISION=		2
@@ -15,7 +15,6 @@ LICENSE=		gnu-gpl-v2
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-USE_TOOLS+=     	perl:run
 USE_FEATURES+=		snprintf
 
 CONFIGURE_ENV+=		ac_cv_path_TIC=no
