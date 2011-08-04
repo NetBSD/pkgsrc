@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1831 2011/08/03 08:34:34 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1832 2011/08/04 21:37:13 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2798,3 +2798,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/freetype2 to 2.4.6 [cheusov 2011-08-03]
 	Updated net/openvpn to 2.2.1nb1 [cheusov 2011-08-03]
 	Updated pkgtools/nih to 0.8.0nb1 [cheusov 2011-08-03]
+	Updated net/youtube-dl to 20110804 [tron 2011-08-04]
