@@ -1,0 +1,118 @@
+# $NetBSD: cmd-sink-cross-gxx,v 1.1 2011/08/04 13:32:05 obache Exp $
+#
+# Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+# All rights reserved.
+#
+# This code was developed as part of Google's Summer of Code 2007 program.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+# COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+# OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+
+if [ "${dont_link}" != yes ]; then
+	# Don't use standard search paths
+	arg="-Wl,-nostdlib"
+	$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+	. $buildcmd
+
+	# All normal library locations should be checked for
+	for libdir in /usr/lib @PREFIX@/lib; do
+		arg="-Wl,-rpath-link,@CROSS_DESTDIR@${libdir}"
+		$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+		. $buildcmd
+	done
+
+	# Compiler searches for libraries in /usr/lib, emulate.
+	arg="-L@CROSS_DESTDIR@/usr/lib"
+	$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+	. $buildcmd
+
+	# crt1.o and friends needs to be found as well.
+	arg="-B@CROSS_DESTDIR@/usr/lib"
+	$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+	. $buildcmd
+fi
+
+# Don't use standard include path.
+arg="-nostdinc"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+# Compiler searches for headers in /usr/include, emulate.
+arg="-isystem"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+arg="@CROSS_DESTDIR@/usr/include"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+# Don't use standard include path.
+arg="-nostdinc++"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+# Compiler searches for headers in /usr/include/g++, emulate.
+arg="-isystem"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+arg="@CROSS_DESTDIR@/usr/include/g++"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+arg="-isystem"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+arg="@CROSS_DESTDIR@/usr/include/g++/backward"
+$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+. $buildcmd
+
+while ! queue_is_empty cmdbuf; do
+	pop_queue cmdbuf arg
+	case $arg in
+	-R*|-Wl,-R*|-Wl,-rpath,*|-Wl,--rpath,*)
+		# First, push the option out again.
+		$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+		. $buildcmd
+
+		# Now translate the directory to be relative to the
+		# the target DESTDIR for the linker.
+		case $arg in
+		-R*)			R="-R" ;;
+		-Wl,-R*)		R="-Wl,-R" ;;
+		-Wl,-rpath,*)		R="-Wl,-rpath," ;;
+		-Wl,--rpath,*)		R="-Wl,--rpath," ;;
+		esac
+		dir="${arg#$R}"
+		arg="-Wl,-rpath-link,@CROSS_DESTDIR@${dir}"
+		$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop: $arg"
+		. $buildcmd
+		;;
+	*)
+		$debug_log $wrapperlog "    (cmd-sink-native-cxx) pop:  $arg"
+		. $buildcmd
+		;;
+	esac
+done
