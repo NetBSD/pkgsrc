@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2011/06/09 11:16:38 drochner Exp $
+# $NetBSD: Makefile.common,v 1.13 2011/08/04 23:52:04 wiz Exp $
 #
 # used by devel/glib2/Makefile
 # used by sysutils/gio-fam/Makefile
@@ -21,7 +21,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
