@@ -1,0 +1,16 @@
+$NetBSD: patch-au,v 1.1 2011/08/04 11:45:20 joerg Exp $
+
+--- src/os/unix/os.h.orig	2011-08-03 12:02:43.000000000 +0000
++++ src/os/unix/os.h
+@@ -33,7 +33,11 @@
+ /* Compiler supports inline, so include the inlineable functions as
+  * part of the header
+  */
++#if defined(__GNUC_STDC_INLINE__) && __GNUC_STDC_INLINE__
++#define INLINE ap_inline
++#else
+ #define INLINE extern ap_inline
++#endif
+ 
+ INLINE int ap_os_is_path_absolute(const char *file);
+ 
