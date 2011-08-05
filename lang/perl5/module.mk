@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.63 2010/08/27 05:27:37 sno Exp $
+# $NetBSD: module.mk,v 1.64 2011/08/05 18:06:14 adam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -214,7 +214,7 @@ PERL5_MAKE_FLAGS.makemaker+=	${_var_}=${PERL5_${_var_}:Q}
 # so override its value to the module's ${PREFIX}.
 # Also, set VENDORARCHEXP, so existing .packlist won't be read.
 #
-PERL5_MAKE_FLAGS.makemaker+=   PREFIX=${PREFIX:Q} VENDORARCHEXP=${DESTDIR}${PERL5_INSTALLVENDORARCH}
+PERL5_MAKE_FLAGS.makemaker+=	PREFIX=${PREFIX:Q} VENDORARCHEXP=${DESTDIR}${PERL5_INSTALLVENDORARCH}
 
 PERL5_MAKE_FLAGS+=	${PERL5_MAKE_FLAGS.${PERL5_MODTYPE}}
 MAKE_FLAGS+=		${PERL5_MAKE_FLAGS}
