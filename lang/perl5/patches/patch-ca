@@ -1,11 +1,8 @@
-$NetBSD: patch-ca,v 1.9 2011/01/30 21:31:43 wiz Exp $
+$NetBSD: patch-ca,v 1.10 2011/08/05 18:06:14 adam Exp $
 
-Hunk 7 (MirBSD) was submitted and accepted upstream, see
-http://rt.perl.org/rt3/Ticket/Display.html?id=82532
-
---- Configure.orig	2010-09-06 23:30:32.000000000 +0000
-+++ Configure
-@@ -3251,13 +3251,14 @@ EOM
+--- Configure.orig	2011-06-09 22:04:29.000000000 +0200
++++ Configure	2011-07-31 12:24:09.000000000 +0200
+@@ -3256,13 +3256,14 @@ EOM
  			osvers="$3"
  			;;
  		dragonfly) osname=dragonfly
@@ -22,7 +19,7 @@ http://rt.perl.org/rt3/Ticket/Display.html?id=82532
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3279,7 +3280,7 @@ EOM
+@@ -3284,7 +3285,7 @@ EOM
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -31,7 +28,7 @@ http://rt.perl.org/rt3/Ticket/Display.html?id=82532
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3290,7 +3291,7 @@ EOM
+@@ -3295,7 +3296,7 @@ EOM
  		next*) osname=next ;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -71,16 +68,23 @@ http://rt.perl.org/rt3/Ticket/Display.html?id=82532
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -8326,7 +8331,7 @@ if "$useshrplib"; then
- 	solaris)
- 		xxx="-R $shrpdir"
- 		;;
--	freebsd|netbsd|openbsd|interix|dragonfly)
-+	freebsd|mirbsd|netbsd|openbsd|interix|dragonfly)
- 		xxx="-Wl,-R$shrpdir"
- 		;;
- 	bsdos|linux|irix*|dec_osf|gnu*)
-@@ -8339,7 +8344,7 @@ if "$useshrplib"; then
+@@ -7510,6 +7515,15 @@ case "$nm_so_opt" in
+ 	;;
+ esac
+ 
++: Mac OS X 10.7 is different
++case "$osname" in 
++    darwin) 
++	case "$osvers" in
++	    11.*)
++	        libnames="$libnames /usr/lib/system/libsystem_*.dylib"
++	esac
++esac
++
+ : Figure out where the libc is located
+ case "$runnm" in
+ true)
+@@ -8339,7 +8353,7 @@ if "$useshrplib"; then
  		# beos doesn't like the default, either.
  		;;
  	haiku)
@@ -89,7 +93,7 @@ http://rt.perl.org/rt3/Ticket/Display.html?id=82532
  		;;
  	hpux*)
  		# hpux doesn't like the default, either.
-@@ -9410,6 +9415,13 @@ EOCP
+@@ -9410,6 +9424,13 @@ EOCP
  	;;
  esac
  
@@ -103,7 +107,7 @@ http://rt.perl.org/rt3/Ticket/Display.html?id=82532
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -18925,7 +18937,15 @@ RCAT(Rei,ser)
+@@ -19061,7 +19082,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
