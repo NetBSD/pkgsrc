@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.5 2011/03/28 08:01:20 wiz Exp $
+$NetBSD: distinfo,v 1.6 2011/08/05 18:21:13 wiz Exp $
 
 SHA1 (libvideogfx-1.0.3.tar.gz) = 1f78e185a05bf063a5f2c9ea4afae1a2d2715b89
 RMD160 (libvideogfx-1.0.3.tar.gz) = db64375cc2e298b2cd0c7ff95401b913d4cc5236
 Size (libvideogfx-1.0.3.tar.gz) = 332532 bytes
 SHA1 (patch-aa) = 35f558789c9a8704a0324691c1ab53dbc5310850
-SHA1 (patch-ab) = 69e0eee594c5930f181241b963cd59f6c022beb4
-SHA1 (patch-ac) = 720cac4ec2a0df8bb44fb4834dd245dc8e693166
-SHA1 (patch-ad) = 9189a999ef64636562014306b7a3e5e138776273
-SHA1 (patch-ae) = 6462a94b85a7be12fcff1d36c17b83f640f27b43
-SHA1 (patch-af) = 06704cb9bfe2a940c676880104c976d2948afe83
-SHA1 (patch-ag) = 12ae1ab89d325944f00e46e6584d4b3a691f0b1b
+SHA1 (patch-ab) = 4b74ee809d86a29355019952dc457cbf50b32076
+SHA1 (patch-ac) = 617e3f449a67718a36532a7e549ce798a86c5561
+SHA1 (patch-ad) = 0c02424e0bb876de29d70400314b997f1ce63c4e
+SHA1 (patch-ae) = 979c2c53fb28e5b98c9de0be73c46b2f3415e240
+SHA1 (patch-af) = 9d439e6cd14be344dd4ca39e2a319ee9b6b990d1
+SHA1 (patch-ag) = f089e49bc735fb107013760cc77a0cd323f8caf2
 SHA1 (patch-libvideogfx_graphics_fileio_png.cc) = d2f0d228b5f3f2a9478709ef9228dd1fa5d62a55
