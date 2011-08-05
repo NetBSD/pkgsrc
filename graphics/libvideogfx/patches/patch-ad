@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2006/01/15 20:34:13 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2011/08/05 18:21:13 wiz Exp $
+
+Be nice and include sys/types.h before sys/ipc.h.
 
 --- libvideogfx/x11/imgwin.cc.orig	2006-01-15 20:21:10.000000000 +0000
 +++ libvideogfx/x11/imgwin.cc
