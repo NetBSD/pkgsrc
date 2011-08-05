@@ -1,4 +1,4 @@
-$NetBSD: patch-ck,v 1.1 2005/06/24 06:43:47 jlam Exp $
+$NetBSD: patch-ck,v 1.2 2011/08/05 18:06:14 adam Exp $
 --- hints/aix_4.sh.orig	2004-09-09 23:29:04.000000000 -0700
 +++ hints/aix_4.sh	2005-03-08 18:42:35.000000000 -0700
 @@ -103,9 +103,10 @@
@@ -15,7 +15,7 @@ $NetBSD: patch-ck,v 1.1 2005/06/24 06:43:47 jlam Exp $
  
  cc=${cc:-cc}
  ccflags="$ccflags -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE"
-@@ -297,6 +298,7 @@
+@@ -310,6 +311,7 @@
  	d_getgrent_r='undef'
  	d_getpwent_r='undef'
  	d_random_r='undef'
