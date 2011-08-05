@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2010/09/21 21:12:39 sno Exp $
+# $NetBSD: Makefile,v 1.81 2011/08/05 19:38:47 spz Exp $
 
-DISTNAME=	libwww-perl-5.837
+DISTNAME=	libwww-perl-6.02
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
@@ -23,6 +23,15 @@ DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 DEPENDS+=	{perl>=5.10,p5-Net>=1.09}:../../net/p5-Net		# for Net::FTP>=2.58
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
+DEPENDS+=	p5-File-Listing>=6.02:../../devel/p5-File-Listing
+DEPENDS+=	p5-HTTP-Message>=6.02:../../www/p5-HTTP-Message
+DEPENDS+=	p5-HTTP-Cookies>=6.00:../../www/p5-HTTP-Cookies
+DEPENDS+=	p5-HTTP-Daemon>=6.00:../../www/p5-HTTP-Daemon
+DEPENDS+=	p5-HTTP-Negotiate>=6.00:../../www/p5-HTTP-Negotiate
+DEPENDS+=	p5-Net-HTTP>=6.01:../../www/p5-Net-HTTP
+DEPENDS+=	p5-WWW-RobotRules>=6.01:../../www/p5-WWW-RobotRules
+# it would run without the following, but not do any https then
+DEPENDS+=	p5-LWP-Protocol-https>=6.02:../../www/p5-LWP-Protocol-https
 
 USE_LANGUAGES=		# empty
 
