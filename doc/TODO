@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10461 2011/08/04 09:44:50 wiz Exp $
+$NetBSD: TODO,v 1.10462 2011/08/05 18:07:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -1059,7 +1059,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pdfjam-2.08
 	o pdmenu-1.2.87
 	o pen-0.17.3
-	o perl5-5.14.0
 	o pessulus-2.30.3 [GNOME 2.28]
 	o phonon-4.5.0
 	o phoon-20050629
