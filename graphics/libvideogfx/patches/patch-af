@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1 2006/01/15 20:34:13 joerg Exp $
+$NetBSD: patch-af,v 1.2 2011/08/05 18:21:13 wiz Exp $
+
+Try to fix stricter GCC 3.4 template handling.
 
 --- libvideogfx/utility/smartpointer.hh.orig	2006-01-15 20:23:53.000000000 +0000
 +++ libvideogfx/utility/smartpointer.hh
