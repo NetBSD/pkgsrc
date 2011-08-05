@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/04/03 10:28:20 wiz Exp $
+$NetBSD: distinfo,v 1.8 2011/08/05 00:56:36 wiz Exp $
 
 SHA1 (stratagus-2.1-src.tar.gz) = 33181d57e018825a450f1e8c0ec31b0887cbd39c
 RMD160 (stratagus-2.1-src.tar.gz) = f5f97854cad9f17104de34613012fd3aa2efbb9b
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = cd9235023dcb2bc05828857c8f1d538a0d06eab5
 SHA1 (patch-ac) = 78aca58075dd730a799dc9d0fb79ca4c6c010a34
 SHA1 (patch-ad) = 20dc341faf2fc160fbbd8b6ae68b1de1a9e21294
 SHA1 (patch-af) = 06e264e6a3fb785285da503f240405dedf851ec5
-SHA1 (patch-src_video_png.c) = fe1ac8d6c610b6f2e0dc259c98fc912b3259bfde
+SHA1 (patch-src_video_png.c) = 5fb6d1f54a2eb0adbfffc2fb8b9ac95519ae63c6

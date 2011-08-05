@@ -1,6 +1,7 @@
-$NetBSD: patch-src_video_png.c,v 1.1 2011/04/03 10:28:21 wiz Exp $
+$NetBSD: patch-src_video_png.c,v 1.2 2011/08/05 00:56:37 wiz Exp $
 
 Fix build with png-1.5.
+https://bugs.launchpad.net/stratagus/+bug/821210
 
 --- src/video/png.c.orig	2004-06-26 22:38:20.000000000 +0000
 +++ src/video/png.c
