@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1836 2011/08/05 15:12:40 abs Exp $
+$NetBSD: CHANGES-2011,v 1.1837 2011/08/05 18:07:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2803,3 +2803,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/samba35 to 3.5.11 [adam 2011-08-05]
 	Added mail/mailhops version 1.4 [is 2011-08-05]
 	Updated multimedia/libflashsupport to 1.1 [abs 2011-08-05]
+	Updated lang/perl5 to 5.14.1 [adam 2011-08-05]
