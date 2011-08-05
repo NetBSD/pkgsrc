@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2011/08/05 14:21:31 abs Exp $
+At time of writing pkgsrc includes taglib 1.10, whih the cmake check
+incorrectly views as older than 1.6, so just update the check to match
+1.10 or later...
+
+--- CMakeLists.txt.orig	2011-08-01 15:23:14.000000000 +0000
++++ CMakeLists.txt
+@@ -13,7 +13,7 @@ option(WITH_MYSQL_EMBEDDED "Build the em
+ include(CheckLibraryExists)
+ check_library_exists(dl dlopen "" LIBDL_FOUND)
+ 
+-set(TAGLIB_MIN_VERSION "1.6")
++set(TAGLIB_MIN_VERSION "1.10")
+ find_package(Taglib REQUIRED)
+ 
+ # Check if TagLib is built with ASF and MP4 support
