@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2011/04/12 17:41:28 adam Exp $
+$NetBSD: patch-ae,v 1.5 2011/08/05 00:36:10 adam Exp $
 
 --- gettext-tools/configure.orig	2010-06-06 20:12:20.000000000 +0000
 +++ gettext-tools/configure
@@ -13,3 +13,13 @@ $NetBSD: patch-ae,v 1.4 2011/04/12 17:41:28 adam Exp $
        fi
  
        CATOBJEXT=
+@@ -40606,7 +40602,9 @@ else
+ #include <stdlib.h>
+ #include <string.h> /* for strcpy */
+ /* The stpncpy prototype is missing in <string.h> on AIX 4.  */
++#ifndef __APPLE__
+ extern char *stpncpy (char *dest, const char *src, size_t n);
++#endif
+ int main () {
+   const char *src = "Hello";
+   char dest[10];
