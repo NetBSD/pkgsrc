@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.2 2008/10/10 21:58:43 he Exp $
+$NetBSD: patch-aq,v 1.3 2011/08/05 18:06:14 adam Exp $
 
 --- XSUB.h.orig	2007-12-18 11:47:07.000000000 +0100
 +++ XSUB.h
-@@ -93,6 +93,9 @@ is a lexical $_ in scope.
+@@ -94,6 +94,9 @@ is a lexical $_ in scope.
  #ifndef PERL_UNUSED_VAR
  #  define PERL_UNUSED_VAR(x) ((void)x)
  #endif
@@ -12,7 +12,7 @@ $NetBSD: patch-aq,v 1.2 2008/10/10 21:58:43 he Exp $
  
  #define ST(off) PL_stack_base[ax + (off)]
  
-@@ -116,15 +119,7 @@ is a lexical $_ in scope.
+@@ -117,15 +120,7 @@ is a lexical $_ in scope.
  #  define XS(name) EXPORT_C XSPROTO(name)
  #endif
  #ifndef XS
