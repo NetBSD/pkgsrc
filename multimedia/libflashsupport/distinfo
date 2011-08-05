@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/22 21:46:44 abs Exp $
+$NetBSD: distinfo,v 1.2 2011/08/05 15:12:20 abs Exp $
 
-SHA1 (libflashsupport-1-0-2098-i586.rpm) = 625d61e4b13f37a3357de58b26549de0e9a6d57d
-RMD160 (libflashsupport-1-0-2098-i586.rpm) = 1981e73c2fdc5805a499cb2fe0cd258ac915d726
-Size (libflashsupport-1-0-2098-i586.rpm) = 11623 bytes
+SHA1 (libflashsupport-1.1.tbz) = 7d482f10b6a4b569fce0e5d981f5dd2876755f06
+RMD160 (libflashsupport-1.1.tbz) = 030311126d076040d11b67c12a2da37c0afc3ab6
+Size (libflashsupport-1.1.tbz) = 8799 bytes
