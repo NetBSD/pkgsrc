@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/06 22:03:53 ryoon Exp $
+
+SHA1 (gource-0.35.tar.gz) = f2bc23224cd3e01279a33e3856a6d027560f6509
+RMD160 (gource-0.35.tar.gz) = 7a6302613b0d15851885a79453c073e3ebab9742
+Size (gource-0.35.tar.gz) = 668033 bytes
