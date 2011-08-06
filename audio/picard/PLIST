@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/15 13:19:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/08/06 19:29:37 gls Exp $
 bin/picard
 ${PYSITELIB}/picard/__init__.py
 ${PYSITELIB}/picard/__init__.pyc
@@ -182,6 +182,9 @@ ${PYSITELIB}/picard/ui/options/proxy.pyo
 ${PYSITELIB}/picard/ui/options/ratings.py
 ${PYSITELIB}/picard/ui/options/ratings.pyc
 ${PYSITELIB}/picard/ui/options/ratings.pyo
+${PYSITELIB}/picard/ui/options/releases.py
+${PYSITELIB}/picard/ui/options/releases.pyc
+${PYSITELIB}/picard/ui/options/releases.pyo
 ${PYSITELIB}/picard/ui/options/renaming.py
 ${PYSITELIB}/picard/ui/options/renaming.pyc
 ${PYSITELIB}/picard/ui/options/renaming.pyo
@@ -257,6 +260,9 @@ ${PYSITELIB}/picard/ui/ui_options_proxy.pyo
 ${PYSITELIB}/picard/ui/ui_options_ratings.py
 ${PYSITELIB}/picard/ui/ui_options_ratings.pyc
 ${PYSITELIB}/picard/ui/ui_options_ratings.pyo
+${PYSITELIB}/picard/ui/ui_options_releases.py
+${PYSITELIB}/picard/ui/ui_options_releases.pyc
+${PYSITELIB}/picard/ui/ui_options_releases.pyo
 ${PYSITELIB}/picard/ui/ui_options_renaming.py
 ${PYSITELIB}/picard/ui/ui_options_renaming.pyc
 ${PYSITELIB}/picard/ui/ui_options_renaming.pyo
@@ -318,32 +324,41 @@ share/icons/hicolor/32x32/apps/picard.png
 share/icons/hicolor/48x48/apps/picard.png
 share/locale/af/LC_MESSAGES/picard.mo
 share/locale/ar/LC_MESSAGES/picard.mo
+share/locale/ast/LC_MESSAGES/picard.mo
 share/locale/bg/LC_MESSAGES/picard.mo
 share/locale/ca/LC_MESSAGES/picard.mo
 share/locale/cs/LC_MESSAGES/picard.mo
 share/locale/cy/LC_MESSAGES/picard.mo
 share/locale/da/LC_MESSAGES/picard.mo
 share/locale/de/LC_MESSAGES/picard.mo
+share/locale/el/LC_MESSAGES/picard.mo
 share/locale/en/LC_MESSAGES/picard.mo
 share/locale/en_CA/LC_MESSAGES/picard.mo
 share/locale/en_GB/LC_MESSAGES/picard.mo
+share/locale/eo/LC_MESSAGES/picard.mo
 share/locale/es/LC_MESSAGES/picard.mo
 share/locale/et/LC_MESSAGES/picard.mo
 share/locale/fa/LC_MESSAGES/picard.mo
 share/locale/fi/LC_MESSAGES/picard.mo
+share/locale/fo/LC_MESSAGES/picard.mo
 share/locale/fr/LC_MESSAGES/picard.mo
+share/locale/fr_CA/LC_MESSAGES/picard.mo
 share/locale/fy/LC_MESSAGES/picard.mo
 share/locale/gl/LC_MESSAGES/picard.mo
 share/locale/he/LC_MESSAGES/picard.mo
 share/locale/hi/LC_MESSAGES/picard.mo
 share/locale/hu/LC_MESSAGES/picard.mo
+share/locale/id/LC_MESSAGES/picard.mo
 share/locale/is/LC_MESSAGES/picard.mo
 share/locale/it/LC_MESSAGES/picard.mo
+share/locale/ja/LC_MESSAGES/picard.mo
 share/locale/kn/LC_MESSAGES/picard.mo
 share/locale/ko/LC_MESSAGES/picard.mo
 share/locale/lt/LC_MESSAGES/picard.mo
 share/locale/nb/LC_MESSAGES/picard.mo
+share/locale/nds/LC_MESSAGES/picard.mo
 share/locale/nl/LC_MESSAGES/picard.mo
+share/locale/oc/LC_MESSAGES/picard.mo
 share/locale/pl/LC_MESSAGES/picard.mo
 share/locale/pt/LC_MESSAGES/picard.mo
 share/locale/pt_BR/LC_MESSAGES/picard.mo
@@ -354,5 +369,7 @@ share/locale/sk/LC_MESSAGES/picard.mo
 share/locale/sl/LC_MESSAGES/picard.mo
 share/locale/sr/LC_MESSAGES/picard.mo
 share/locale/sv/LC_MESSAGES/picard.mo
+share/locale/ta/LC_MESSAGES/picard.mo
 share/locale/tr/LC_MESSAGES/picard.mo
+share/locale/uk/LC_MESSAGES/picard.mo
 share/locale/zh_CN/LC_MESSAGES/picard.mo
