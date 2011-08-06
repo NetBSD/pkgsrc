@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2011/04/29 17:25:02 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2011/08/06 23:22:15 ryoon Exp $
 
-SHA1 (etm-707.tar.gz) = 012c9243832a1beb3837d8929aac2a25163561ee
-RMD160 (etm-707.tar.gz) = a0c3ba6801c1fd641f8af133ebc216fe1b4145e6
-Size (etm-707.tar.gz) = 165404 bytes
+SHA1 (etm-855.tar.gz) = adde343642a93a8eaecc6feda247b070e1904ae9
+RMD160 (etm-855.tar.gz) = da3113b9ddb96914bb333db6a6074c69e7a3dbdb
+Size (etm-855.tar.gz) = 182280 bytes
