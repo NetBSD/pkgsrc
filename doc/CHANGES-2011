@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1844 2011/08/06 10:53:39 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1845 2011/08/06 10:54:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2811,3 +2811,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/surfraw to 2.2.8 [wiz 2011-08-06]
 	Updated devel/meld to 1.5.2 [wiz 2011-08-06]
 	Updated devel/mdds to 0.5.3 [wiz 2011-08-06]
+	Updated net/p5-IO-Socket-INET6 to 2.67 [tron 2011-08-06]
