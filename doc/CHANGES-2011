@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1840 2011/08/06 10:21:28 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1841 2011/08/06 10:23:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2807,3 +2807,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Devel-PPPort to 3.19.03 [tron 2011-08-06]
 	Updated devel/p5-Mouse to 0.93 [tron 2011-08-06]
 	Updated devel/mercurial to 1.9.1 [wiz 2011-08-06]
+	Updated audio/libsndfile to 1.0.25 [wiz 2011-08-06]
