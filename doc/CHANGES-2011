@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1842 2011/08/06 10:43:35 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1843 2011/08/06 10:45:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2809,3 +2809,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mercurial to 1.9.1 [wiz 2011-08-06]
 	Updated audio/libsndfile to 1.0.25 [wiz 2011-08-06]
 	Updated www/surfraw to 2.2.8 [wiz 2011-08-06]
+	Updated devel/meld to 1.5.2 [wiz 2011-08-06]
