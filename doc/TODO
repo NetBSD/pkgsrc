@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10468 2011/08/06 11:36:40 wiz Exp $
+$NetBSD: TODO,v 1.10469 2011/08/06 11:53:30 tron Exp $
 
 Suggested new packages
 ======================
@@ -974,7 +974,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.3
 	o mpop-1.0.24
-	o mrtg-2.17.1
 	o mserv-devel-0.41
 	o mtools-4.0.17
 	o mu-0.9.6
