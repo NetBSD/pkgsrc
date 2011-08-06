@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.3 2011/08/06 22:21:58 ryoon Exp $
+include/unique-3.0/unique/unique.h
+include/unique-3.0/unique/uniqueapp.h
+include/unique-3.0/unique/uniquebackend.h
+include/unique-3.0/unique/uniqueenumtypes.h
+include/unique-3.0/unique/uniquemessage.h
+include/unique-3.0/unique/uniqueversion.h
+lib/libunique-3.0.la
+lib/pkgconfig/unique-3.0.pc
+share/gtk-doc/html/unique-3.0/UniqueApp.html
+share/gtk-doc/html/unique-3.0/UniqueBackend.html
+share/gtk-doc/html/unique-3.0/home.png
+share/gtk-doc/html/unique-3.0/index.html
+share/gtk-doc/html/unique-3.0/index.sgml
+share/gtk-doc/html/unique-3.0/ix01.html
+share/gtk-doc/html/unique-3.0/left.png
+share/gtk-doc/html/unique-3.0/license.html
+share/gtk-doc/html/unique-3.0/right.png
+share/gtk-doc/html/unique-3.0/style.css
+share/gtk-doc/html/unique-3.0/unique-3.0.devhelp
+share/gtk-doc/html/unique-3.0/unique-3.0.devhelp2
+share/gtk-doc/html/unique-3.0/unique-Message-Data.html
+share/gtk-doc/html/unique-3.0/unique-Versioning-Information.html
+share/gtk-doc/html/unique-3.0/unique-glossary.html
+share/gtk-doc/html/unique-3.0/unique-overview.html
+share/gtk-doc/html/unique-3.0/up.png
