@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/06 13:33:20 obache Exp $
+
+SHA1 (sinatra-1.2.6.gem) = 74674a7a42676446d0acc01c2d5689c768daa6cf
+RMD160 (sinatra-1.2.6.gem) = 4bd2ed53b29b99d25531f4be08436f4bb74b5b5c
+Size (sinatra-1.2.6.gem) = 245248 bytes
