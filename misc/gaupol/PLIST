@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/07/12 13:36:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/08/06 11:36:30 wiz Exp $
 bin/gaupol
 ${PYSITELIB}/aeidon/__init__.py
 ${PYSITELIB}/aeidon/__init__.pyc
@@ -369,6 +369,9 @@ ${PYSITELIB}/gaupol/dialogs/preferences.pyo
 ${PYSITELIB}/gaupol/dialogs/previewerr.py
 ${PYSITELIB}/gaupol/dialogs/previewerr.pyc
 ${PYSITELIB}/gaupol/dialogs/previewerr.pyo
+${PYSITELIB}/gaupol/dialogs/recognition.py
+${PYSITELIB}/gaupol/dialogs/recognition.pyc
+${PYSITELIB}/gaupol/dialogs/recognition.pyo
 ${PYSITELIB}/gaupol/dialogs/save.py
 ${PYSITELIB}/gaupol/dialogs/save.pyc
 ${PYSITELIB}/gaupol/dialogs/save.pyo
@@ -470,7 +473,12 @@ share/gaupol/extensions/bookmarks/bookmarks.gaupol-extension
 share/gaupol/extensions/bookmarks/bookmarks.py
 share/gaupol/extensions/bookmarks/bookmarks.pyo
 share/gaupol/extensions/bookmarks/bookmarks.ui.xml
+share/gaupol/extensions/custom-framerates/add-framerate-dialog.ui
 share/gaupol/extensions/custom-framerates/custom-framerates.gaupol-extension
+share/gaupol/extensions/custom-framerates/custom-framerates.py
+share/gaupol/extensions/custom-framerates/custom-framerates.pyo
+share/gaupol/extensions/custom-framerates/custom-framerates.ui.xml
+share/gaupol/extensions/custom-framerates/preferences-dialog.ui
 share/gaupol/extensions/side-pane/side-pane.gaupol-extension
 share/gaupol/extensions/side-pane/side-pane.py
 share/gaupol/extensions/side-pane/side-pane.pyo
@@ -520,6 +528,7 @@ share/gaupol/ui/multisave-dialog.ui
 share/gaupol/ui/open-dialog.ui
 share/gaupol/ui/preferences-dialog.ui
 share/gaupol/ui/previewerr-dialog.ui
+share/gaupol/ui/recognition-dialog.ui
 share/gaupol/ui/save-dialog.ui
 share/gaupol/ui/search-dialog.ui
 share/gaupol/ui/shift-dialog.ui
