@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/06/02 13:21:03 adam Exp $
+$NetBSD: distinfo,v 1.3 2011/08/06 15:23:35 adam Exp $
 
-SHA1 (BDB-1.88.tar.gz) = 75f1701d0e768755a7789e4329ac8f8dc6c6c788
-RMD160 (BDB-1.88.tar.gz) = 0140f02283726f29c69cae66af5b2fe43155a55d
-Size (BDB-1.88.tar.gz) = 35879 bytes
-SHA1 (patch-aa) = 8f86278fa8496dc982d779293da798b5eeb0d990
+SHA1 (BDB-1.89.tar.gz) = 3c217b1f186d603ada91d0621a3b174c0db04351
+RMD160 (BDB-1.89.tar.gz) = 80130462b8f1e058cef9def894abfd877f29887b
+Size (BDB-1.89.tar.gz) = 36333 bytes
+SHA1 (patch-aa) = 65c5934b2eee5550951eb2068ddc3925e4591e70
