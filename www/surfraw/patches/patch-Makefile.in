@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2010/05/09 20:53:15 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2011/08/06 10:43:26 wiz Exp $
 
---- Makefile.in.orig	2010-05-06 19:26:01.000000000 +0000
+To more easily install into share/examples.
+
+--- Makefile.in.orig	2011-07-12 00:35:20.000000000 +0000
 +++ Makefile.in
-@@ -763,14 +763,13 @@ links: links.IN
+@@ -790,9 +790,9 @@ opensearch-genquery.1: opensearch-genque
  
  install-data-hook: links
  	chmod -x surfraw.conf elvi.1sr surfraw.1
@@ -15,8 +17,3 @@ $NetBSD: patch-ab,v 1.4 2010/05/09 20:53:15 wiz Exp $
  	while read target link ;\
  	do \
  		ln -sf $$target  $(DESTDIR)/$$link ;\
- 	done < links
--@OPENSEARCH_TRUE@	ln -sf elvi.1sr.gz $(DESTDIR)/@mandir@/man1/opensearch.1sr.gz
- @INSTALLSR_TRUE@	ln -sf surfraw $(DESTDIR)/@bindir@/sr
- @INSTALLSR_TRUE@	ln -sf surfraw.1.gz $(DESTDIR)/@mandir@/man1/sr.1.gz
- 
