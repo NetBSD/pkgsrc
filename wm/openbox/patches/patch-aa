@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.10 2010/05/02 10:37:07 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2011/08/06 17:09:04 wiz Exp $
 
---- Makefile.in.orig	2010-03-26 01:16:44.000000000 +0000
+Install config files into examples directory (and use CONF_FILES
+to handle them).
+
+--- Makefile.in.orig	2011-08-01 20:15:35.000000000 +0000
 +++ Makefile.in
-@@ -484,7 +484,7 @@ target_alias = @target_alias@
+@@ -542,7 +542,7 @@ top_srcdir = @top_srcdir@
  SUBDIRS = m4 po
  docxbmdir = $(docdir)/xbm
  themedir = $(datadir)/themes
@@ -11,35 +14,62 @@ $NetBSD: patch-aa,v 1.10 2010/05/02 10:37:07 wiz Exp $
  rcdir = $(configdir)/openbox
  xsessionsdir = $(datadir)/xsessions
  gnomewmfilesdir = $(datadir)/gnome/wm-properties
-@@ -3160,12 +3160,12 @@ uninstall-dist_pixmapDATA:
- 	done
+@@ -1534,7 +1534,7 @@ uninstall-dist_libexecSCRIPTS:
+ 	cd "$(DESTDIR)$(libexecdir)" && rm -f $$files
+ install-dist_rcSCRIPTS: $(dist_rc_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(rcdir)" || $(MKDIR_P) "$(DESTDIR)$(rcdir)"
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/openbox
+ 	@list='$(dist_rc_SCRIPTS)'; test -n "$(rcdir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+@@ -1553,8 +1553,8 @@ install-dist_rcSCRIPTS: $(dist_rc_SCRIPT
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(rcdir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(rcdir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(datadir)/examples/openbox/$$dir'"; \
++	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(datadir)/examples/openbox/$$dir" || exit $$?; \
+ 	     } \
+ 	; done
+ 
+@@ -1636,7 +1636,7 @@ uninstall-nodist_libexecSCRIPTS:
+ 	cd "$(DESTDIR)$(libexecdir)" && rm -f $$files
+ install-nodist_rcSCRIPTS: $(nodist_rc_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(rcdir)" || $(MKDIR_P) "$(DESTDIR)$(rcdir)"
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/openbox
+ 	@list='$(nodist_rc_SCRIPTS)'; test -n "$(rcdir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+@@ -1655,8 +1655,8 @@ install-nodist_rcSCRIPTS: $(nodist_rc_SC
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(rcdir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(rcdir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(datadir)/examples/openbox/$$dir'"; \
++	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(datadir)/examples/openbox/$$dir" || exit $$?; \
+ 	     } \
+ 	; done
+ 
+@@ -3482,15 +3482,15 @@ uninstall-dist_pixmapDATA:
+ 	cd "$(DESTDIR)$(pixmapdir)" && rm -f $$files
  install-dist_rcDATA: $(dist_rc_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(rcdir)" || $(mkdir_p) "$(DESTDIR)$(rcdir)"
+-	test -z "$(rcdir)" || $(MKDIR_P) "$(DESTDIR)$(rcdir)"
 +	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/openbox
- 	@list='$(dist_rc_DATA)'; for p in $$list; do \
+ 	@list='$(dist_rc_DATA)'; test -n "$(rcdir)" || list=; \
+ 	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f=$(am__strip_dir) \
--	  echo " $(dist_rcDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(rcdir)/$$f'"; \
--	  $(dist_rcDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(rcdir)/$$f"; \
-+	  echo " $(dist_rcDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datadir)/examples/openbox/$$f'"; \
-+	  $(dist_rcDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datadir)/examples/openbox/$$f"; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(rcdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(rcdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(datadir)/examples/openbox'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(datadir)/examples/openbox" || exit $$?; \
  	done
  
  uninstall-dist_rcDATA:
-@@ -3211,12 +3211,12 @@ uninstall-nodist_pkgconfigDATA:
- 	done
- install-nodist_rcDATA: $(nodist_rc_DATA)
- 	@$(NORMAL_INSTALL)
--	test -z "$(rcdir)" || $(mkdir_p) "$(DESTDIR)$(rcdir)"
-+	$(mkinstalldirs) "$(DESTDIR)$(datadir)/examples/openbox"
- 	@list='$(nodist_rc_DATA)'; for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f=$(am__strip_dir) \
--	  echo " $(nodist_rcDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(rcdir)/$$f'"; \
--	  $(nodist_rcDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(rcdir)/$$f"; \
-+	  echo " $(nodist_rcDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(datadir)/examples/openbox/$$f'"; \
-+	  $(nodist_rcDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(datadir)/examples/openbox/$$f"; \
- 	done
- 
- uninstall-nodist_rcDATA:
