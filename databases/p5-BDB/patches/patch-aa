@@ -1,31 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2010/06/02 13:21:03 adam Exp $
+$NetBSD: patch-aa,v 1.2 2011/08/06 15:23:35 adam Exp $
 
---- BDB.xs.orig	2010-06-01 07:59:05.000000000 +0000
+--- BDB.xs.orig	2011-08-06 15:21:38.000000000 +0000
 +++ BDB.xs
-@@ -33,7 +33,7 @@
- 
- #include <db.h>
- 
--#if DB_VERSION_MAJOR != 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR < 3)
-+#if DB_VERSION_MAJOR < 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR < 3)
- # error you need Berkeley DB 4.3 or a newer 4.x version installed
- #endif
- 
-@@ -1228,7 +1228,7 @@ BOOT:
-           const_iv (WRITECURSOR)
-           const_iv (YIELDCPU)
-           const_iv (ENCRYPT_AES)
--#if DB_VERSION_MINOR < 8
-+#if (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR < 8)
-           const_iv (XA_CREATE)
- #endif
-           const_iv (BTREE)
-@@ -1382,7 +1382,7 @@ BOOT:
-           const_iv (PRIORITY_VERY_HIGH)
-           const_iv (IGNORE_LEASE)
- #endif
--#if DB_VERSION_MINOR >= 7
-+#if DB_VERSION_MAJOR > 4 || (DB_VERSION_MAJOR == 4 && DB_VERSION_MINOR >= 7)
-           //const_iv (MULTIPLE_KEY)
-           const_iv (LOG_DIRECT)
-           const_iv (LOG_DSYNC)
+@@ -1313,8 +1313,10 @@ BOOT:
+           const_iv (LOCK_DEADLOCK)
+           const_iv (LOCK_NOTGRANTED)
+           const_iv (NOSERVER)
++#if DBVER < 520
+           const_iv (NOSERVER_HOME)
+           const_iv (NOSERVER_ID)
++#endif
+           const_iv (NOTFOUND)
+           const_iv (PAGE_NOTFOUND)
+           const_iv (REP_DUPMASTER)
