@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1857 2011/08/06 22:07:06 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1858 2011/08/06 22:51:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2824,3 +2824,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/py-mutagen to 1.20 [gls 2011-08-06]
 	Updated audio/picard to 0.15.1 [gls 2011-08-06]
 	Added graphics/gource version 0.35 [ryoon 2011-08-06]
+	Added databases/py-cdb version 0.34 [ryoon 2011-08-06]
