@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1853 2011/08/06 17:09:13 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1854 2011/08/06 17:15:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2820,3 +2820,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/gst-plugins0.10-v4l2 to 0.10.30nb1 [jakllsch 2011-08-06]
 	Updated devel/cfitsio to 3.280 [wiz 2011-08-06]
 	Updated wm/openbox to 3.5.0 [wiz 2011-08-06]
+	Updated devel/bison to 2.5nb1 [wiz 2011-08-06]
