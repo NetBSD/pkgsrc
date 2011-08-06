@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2011/08/06 17:15:43 wiz Exp $
+
+Do not install yacc(1).
+
+--- doc/Makefile.in.orig	2011-05-14 22:24:27.000000000 +0000
++++ doc/Makefile.in
+@@ -1133,7 +1133,7 @@ remove_time_stamp = \
+ MOSTLYCLEANFILES = $(srcdir)/*.t
+ SUFFIXES = .x .1
+ PREPATH = $(top_builddir)/src
+-nodist_man_MANS = yacc.1
++nodist_man_MANS = 
+ DOXYGEN = doxygen
+ edit = sed -e 's,@PACKAGE_NAME\@,$(PACKAGE_NAME),g' \
+ 	   -e 's,@PACKAGE_VERSION\@,$(PACKAGE_VERSION),g' \

@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.21 2011/07/12 14:12:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/08/06 17:15:43 wiz Exp $
 bin/bison
 info/bison.info
 lib/liby.a
 man/man1/bison.1
-man/man1/yacc.1
 share/aclocal/bison-i18n.m4
 share/bison/README
 share/bison/bison.m4
