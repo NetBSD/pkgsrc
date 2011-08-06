@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2011/04/22 13:44:25 obache Exp $
+# $NetBSD: Makefile,v 1.102 2011/08/06 11:52:16 tron Exp $
 
-DISTNAME=	mrtg-2.16.4
-PKGREVISION=	2
+DISTNAME=	mrtg-2.17.2
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/mrtg/pub/ \
 		http://oss.oetiker.ch/mrtg/pub/old/
@@ -14,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl:run
+PERL5_REQD=		5.14.1
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gd=${BUILDLINK_PREFIX.gd}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
