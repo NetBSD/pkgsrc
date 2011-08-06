@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2011/08/06 16:36:41 cheusov Exp $
+
+--- Makefile.am.orig	2010-11-23 15:56:32.000000000 +0000
++++ Makefile.am
+@@ -55,8 +55,8 @@ hardened-debug:
+ debuglite:
+ 	$(MAKE) all CFLAGS="-ggdb -DDEBUGLITE"
+ 
+-.c.h:
+-	scripts/MakeHeader.py $<
++#.c.h:
++#	scripts/MakeHeader.py $<
+ 
+ 
+ 
