@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1839 2011/08/06 10:17:26 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1840 2011/08/06 10:21:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2806,3 +2806,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/perl5 to 5.14.1 [adam 2011-08-05]
 	Updated devel/p5-Devel-PPPort to 3.19.03 [tron 2011-08-06]
 	Updated devel/p5-Mouse to 0.93 [tron 2011-08-06]
+	Updated devel/mercurial to 1.9.1 [wiz 2011-08-06]
