@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1845 2011/08/06 10:54:43 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1846 2011/08/06 11:36:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2812,3 +2812,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/meld to 1.5.2 [wiz 2011-08-06]
 	Updated devel/mdds to 0.5.3 [wiz 2011-08-06]
 	Updated net/p5-IO-Socket-INET6 to 2.67 [tron 2011-08-06]
+	Updated misc/gaupol to 0.19 [wiz 2011-08-06]
