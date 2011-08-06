@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/03/05 13:57:51 obache Exp $
+$NetBSD: distinfo,v 1.5 2011/08/06 19:16:32 gls Exp $
 
-SHA1 (mutagen-1.19.tar.gz) = a2e25d311999ffe76c1e7f85510cf5c04d24638d
-RMD160 (mutagen-1.19.tar.gz) = a25497b809ebc2448415f507072c294ba40bb4b4
-Size (mutagen-1.19.tar.gz) = 650488 bytes
+SHA1 (mutagen-1.20.tar.gz) = 7a8c1918160e6b5d24acd146f57c08ed942a2fa8
+RMD160 (mutagen-1.20.tar.gz) = e8edceba11d670cdd3021429debcf454e11d4d96
+Size (mutagen-1.20.tar.gz) = 651649 bytes
 SHA1 (patch-aa) = ead410683c604d010bb197d39c902ec100a038a1
