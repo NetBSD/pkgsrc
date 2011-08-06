@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2011/06/09 04:38:51 jnemeth Exp $
+# $NetBSD: Makefile,v 1.376 2011/08/06 22:50:52 ryoon Exp $
 #
 
 COMMENT=	Databases
@@ -265,6 +265,7 @@ SUBDIR+=	py-PgSQL
 SUBDIR+=	py-bdb-xml
 SUBDIR+=	py-bsddb3
 SUBDIR+=	py-cassa
+SUBDIR+=	py-cdb
 SUBDIR+=	py-cx_Oracle
 SUBDIR+=	py-elixir
 SUBDIR+=	py-gdbm
