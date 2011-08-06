@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/06 22:49:44 ryoon Exp $
+${PYSITELIB}/cdbmodule.so
