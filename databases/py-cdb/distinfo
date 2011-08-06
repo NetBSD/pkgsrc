@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/06 22:49:44 ryoon Exp $
+
+SHA1 (python-cdb-0.34.tar.gz) = 6c5ef1f27fe0e5c2e9a4a032435ebf58c82639f2
+RMD160 (python-cdb-0.34.tar.gz) = 02519e7c03aae5798823ab4cd0388b6afaf1908a
+Size (python-cdb-0.34.tar.gz) = 18865 bytes

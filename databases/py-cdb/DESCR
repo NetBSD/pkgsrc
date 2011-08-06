@@ -1,0 +1,3 @@
+D. J. Bernstein's constant database library adapted as a python
+extension module. Like GDBM and kin, cdb files map keys to values.
+The file format boasts wickedly fast lookups and atomic updates.
