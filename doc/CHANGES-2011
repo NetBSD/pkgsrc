@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1855 2011/08/06 19:17:01 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1856 2011/08/06 19:29:50 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2822,3 +2822,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated wm/openbox to 3.5.0 [wiz 2011-08-06]
 	Updated devel/bison to 2.5nb1 [wiz 2011-08-06]
 	Updated audio/py-mutagen to 1.20 [gls 2011-08-06]
+	Updated audio/picard to 0.15.1 [gls 2011-08-06]
