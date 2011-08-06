@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/06 22:55:34 ryoon Exp $
+bin/qq
+dict/dict.cdb
+${PYSITELIB}/abstfilter.py
+${PYSITELIB}/constraint.py
+${PYSITELIB}/dictionary.py
+${PYSITELIB}/document.py
+${PYSITELIB}/grammarerror.py
+${PYSITELIB}/markupbase_rev.py
+${PYSITELIB}/output.py
+${PYSITELIB}/postagfix.py
+${PYSITELIB}/pstring.py
+${PYSITELIB}/regpat.py
+${PYSITELIB}/sentence.py
+${PYSITELIB}/sgmllib_rev.py
+${PYSITELIB}/texparser.py
+${PYSITELIB}/unification.py
