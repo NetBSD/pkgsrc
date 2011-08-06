@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10464 2011/08/06 10:23:26 wiz Exp $
+$NetBSD: TODO,v 1.10465 2011/08/06 10:43:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1222,7 +1222,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stunnel-4.40
 	o subtitleeditor-0.33.0
 	o supertuxkart-0.7.2
-	o surfraw-2.2.8
 	o swfdec-gnome-2.30.1
 	o sympa-6.1.6
 	o sysinfo-4.2.2
