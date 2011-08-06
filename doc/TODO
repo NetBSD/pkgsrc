@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10465 2011/08/06 10:43:35 wiz Exp $
+$NetBSD: TODO,v 1.10466 2011/08/06 10:45:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -947,7 +947,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mathomatic-15.6.2
 	o mdds-0.5.3
 	o mdocml-1.11.5
-	o meld-1.5.2
 	o memtester-4.2.2
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
