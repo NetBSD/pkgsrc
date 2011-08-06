@@ -1,8 +1,14 @@
-$NetBSD: patch-ae,v 1.5 2008/02/13 12:05:26 martti Exp $
+$NetBSD: patch-ae,v 1.6 2011/08/06 11:52:16 tron Exp $
 
---- lib/mrtg2/SNMP_Session.pm.orig	2008-02-06 16:35:49.000000000 +0200
-+++ lib/mrtg2/SNMP_Session.pm	2008-02-13 13:57:53.000000000 +0200
-@@ -110,7 +110,7 @@
+Fix two problems:
+1.) Avoid negative request ids (default_avoid_negative_request_ids=1) as
+    this might cause problems with some devices. Solution provided by
+    Tobias Oetiker in a private mail.
+2.) Avoid redefinition of "SNMP_Session::pack_sockaddr_in6".
+
+--- lib/mrtg2/SNMP_Session.pm.orig	2011-02-20 22:33:38.000000000 +0000
++++ lib/mrtg2/SNMP_Session.pm	2011-08-06 12:38:35.000000000 +0100
+@@ -111,7 +111,7 @@
  ### some agents erroneously encode the response ID as an unsigned,
  ### which prevents this code from matching such responses to requests.
  ###
@@ -11,3 +17,21 @@ $NetBSD: patch-ae,v 1.5 2008/02/13 12:05:26 martti Exp $
  
  ### Default value for "use_16bit_request_ids".
  ###
+@@ -146,7 +146,7 @@
+ 
+     if (eval {local $SIG{__DIE__};require Socket6;} &&
+        eval {local $SIG{__DIE__};require IO::Socket::INET6; IO::Socket::INET6->VERSION("1.26");}) {
+-       Socket6->import(qw(pack_sockaddr_in6 inet_pton getaddrinfo));
++       Socket6->import(qw(inet_pton getaddrinfo));
+ 	$ipv6_addr_len = length(pack_sockaddr_in6(161, inet_pton(AF_INET6(), "::1")));
+ 	$SNMP_Session::ipv6available = 1;
+     }
+@@ -601,7 +601,7 @@
+ BEGIN {
+     if($SNMP_Session::ipv6available) {
+ 	    import IO::Socket::INET6;
+-        Socket6->import(qw(pack_sockaddr_in6 inet_pton getaddrinfo));
++        Socket6->import(qw(inet_pton getaddrinfo));
+     }
+ }
+ 
