@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/07/15 14:28:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/08/06 13:39:27 obache Exp $
 bin/rabbirack
 bin/rabbirc
 bin/rabbit
@@ -302,6 +302,7 @@ ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/manager.rb
 ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect/mirror-effect.rb
 ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/nari/nari.rb
 ${RUBY_VENDORLIB}/rabbit/theme/newline-in-slides/newline-in-slides.rb
 ${RUBY_VENDORLIB}/rabbit/theme/newline-in-slides/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title/newline-in-title.rb
@@ -427,6 +428,12 @@ share/rabbit/image/debian-images/debian-whirl.png
 share/rabbit/image/debian-images/item1.png
 share/rabbit/image/debian-images/property.rb
 share/rabbit/image/debian-images/top.png
+share/rabbit/image/nari-images/chibi_nari.png
+share/rabbit/image/nari-images/gc_kun.png
+share/rabbit/image/nari-images/nari-goal-flag.png
+share/rabbit/image/nari-images/nari-images.rb
+share/rabbit/image/nari-images/nari-start-flag.png
+share/rabbit/image/nari-images/property.rb
 share/rabbit/image/rabbit-images/blue-item.png
 share/rabbit/image/rabbit-images/close-quote-blue.png
 share/rabbit/image/rabbit-images/close-quote-brown.png
@@ -488,4 +495,3 @@ share/rabbit/image/rubykaigi2011-images/property.rb
 share/rabbit/image/rubykaigi2011-images/rubykaigi2011-background-black.jpg
 share/rabbit/image/rubykaigi2011-images/rubykaigi2011-background-white.jpg
 share/rabbit/image/rubykaigi2011-images/rubykaigi2011-images.rb
-@pkgdir lib/ruby/vendor_ruby/1.8/rt
