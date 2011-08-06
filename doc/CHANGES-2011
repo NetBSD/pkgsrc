@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1850 2011/08/06 13:39:49 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1851 2011/08/06 15:19:40 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2817,3 +2817,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/ruby-tilt version 1.3.2 [obache 2011-08-06]
 	Added www/ruby-sinatra version 1.2.6 [obache 2011-08-06]
 	Updated graphics/rabbit to 1.0.4 [obache 2011-08-06]
+	Updated multimedia/gst-plugins0.10-v4l2 to 0.10.30nb1 [jakllsch 2011-08-06]
