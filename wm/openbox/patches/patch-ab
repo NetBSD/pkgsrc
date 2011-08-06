@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/07/30 13:58:28 tnn Exp $
+$NetBSD: patch-ab,v 1.5 2011/08/06 17:09:04 wiz Exp $
+
+Attempt to fix two problems seen with the installation of translation files:
+ - Don't be explicit about using a shell interpreter for install_sh.
+ - use $(mkinstalldirs) as the "mkdir -p" replacement.
 
 --- po/Makefile.in.in.orig	2007-07-13 16:21:27.000000000 +0200
 +++ po/Makefile.in.in

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2011/05/02 12:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2011/08/06 17:09:03 wiz Exp $
 
-DISTNAME=	openbox-3.4.11.2
-PKGREVISION=	5
+DISTNAME=	openbox-3.5.0
 CATEGORIES=	wm x11
 MASTER_SITES=	http://openbox.org/dist/openbox/
 
@@ -20,8 +19,8 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_FEATURES+=		setenv
 
-PKGCONFIG_OVERRIDE=	parser/obparser-3.0.pc.in
-PKGCONFIG_OVERRIDE+=	render/obrender-3.0.pc.in
+PKGCONFIG_OVERRIDE=	obrender/obrender-3.5.pc.in
+PKGCONFIG_OVERRIDE+=	obt/obt-3.5.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 LDFLAGS+=		${BUILDLINK_LDADD.libsetenv}
@@ -30,19 +29,19 @@ OWN_DIRS=		${PKG_SYSCONFDIR}
 OWN_DIRS+=		${PKG_SYSCONFDIR}/openbox
 
 EGDIR=			${PREFIX}/share/examples/openbox
-CONF_FILES=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/openbox/menu.xml
+CONF_FILES=		${EGDIR}/autostart ${PKG_SYSCONFDIR}/openbox/autostart
+CONF_FILES+=		${EGDIR}/environment ${PKG_SYSCONFDIR}/openbox/environment
+CONF_FILES+=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/openbox/menu.xml
 CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/openbox/rc.xml
-CONF_FILES+=		${EGDIR}/autostart.sh \
-			    ${PKG_SYSCONFDIR}/openbox/autostart.sh
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-build
-SUBST_FILES.python+=	tools/xdg-autostart/xdg-autostart
+SUBST_FILES.python+=	data/autostart/openbox-xdg-autostart
 # Best we can do without pulling in a python dependency.
 # Update when PYTHON_VERSION_DEFAULT changes!
 SUBST_SED.python+=      -e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.6,'
 SUBST_MESSAGE.python=	Fixing path to python.
-CHECK_INTERPRETER_SKIP=	lib/openbox/xdg-autostart
+CHECK_INTERPRETER_SKIP=	libexec/openbox-xdg-autostart
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
