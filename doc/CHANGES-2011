@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1860 2011/08/06 23:23:47 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.1861 2011/08/06 23:40:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2827,3 +2827,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/py-cdb version 0.34 [ryoon 2011-08-06]
 	Added textproc/queequeg version 0.91 [ryoon 2011-08-06]
 	Updated time/etm to 855 [ryoon 2011-08-06]
+	Updated www/p5-HTML-Format to 2.10 [tron 2011-08-06]
