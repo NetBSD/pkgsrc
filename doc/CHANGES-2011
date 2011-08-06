@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1841 2011/08/06 10:23:26 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1842 2011/08/06 10:43:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2808,3 +2808,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Mouse to 0.93 [tron 2011-08-06]
 	Updated devel/mercurial to 1.9.1 [wiz 2011-08-06]
 	Updated audio/libsndfile to 1.0.25 [wiz 2011-08-06]
+	Updated www/surfraw to 2.2.8 [wiz 2011-08-06]
