@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:12:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2011/08/06 14:33:52 adam Exp $
 
-SHA1 (Unicode-IMAPUtf7-2.00.tar.gz) = 1e4133cb2f64a8f039a80958147a41c880c13fe0
-RMD160 (Unicode-IMAPUtf7-2.00.tar.gz) = f002abd1260682eebd93e53969745fbcd1e07626
-Size (Unicode-IMAPUtf7-2.00.tar.gz) = 3574 bytes
+SHA1 (Unicode-IMAPUtf7-2.01.tar.gz) = bdee17094d55d08df7a3dbddcf987d14316d9ba1
+RMD160 (Unicode-IMAPUtf7-2.01.tar.gz) = 2d95c735b350d1d422039d4e636e6b1c1ca8d6e4
+Size (Unicode-IMAPUtf7-2.01.tar.gz) = 3634 bytes
