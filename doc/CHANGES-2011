@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1863 2011/08/07 07:47:34 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1864 2011/08/07 08:05:07 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2830,3 +2830,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTML-Format to 2.10 [tron 2011-08-06]
 	Updated graphics/py-blockdiag to 0.8.7 [obache 2011-08-07]
 	Updated mail/spamassassin to 3.3.2 [tron 2011-08-07]
+	Updated mail/p5-MailTools to 2.08 [tron 2011-08-07]
