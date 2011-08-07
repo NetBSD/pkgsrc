@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:16:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12.18.1 2011/08/07 09:39:48 tron Exp $
 ${PLIST.cgi}libexec/cgi-bin/upsstats.cgi
 ${PLIST.cgi}libexec/cgi-bin/upsfstats.cgi
 ${PLIST.cgi}libexec/cgi-bin/upsimage.cgi
@@ -6,8 +6,11 @@ ${PLIST.cgi}libexec/cgi-bin/multimon.cgi
 sbin/apcaccess
 sbin/apctest
 sbin/apcupsd
-man/man8/apcupsd.8
+man/man5/apcupsd.conf.5
+man/man8/apcaccess.8
+man/man8/apccontrol.8
 man/man8/apctest.8
+man/man8/apcupsd.8
 share/doc/html/apcupsd/apcupsd.gif
 share/doc/html/apcupsd/bclogo.gif
 share/doc/html/apcupsd/bugs.html
