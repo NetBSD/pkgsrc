@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2011/08/06 22:05:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.610 2011/08/07 15:50:22 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -345,6 +345,7 @@ SUBDIR+=	ps2eps
 SUBDIR+=	pstoedit
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-aafigure
+SUBDIR+=	py-actdiag
 SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-cairo
@@ -360,8 +361,10 @@ SUBDIR+=	py-imagingtk
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-matplotlib-tk
+SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pyfits
+SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
 SUBDIR+=	py-uniconvertor
 SUBDIR+=	qimageblitz
