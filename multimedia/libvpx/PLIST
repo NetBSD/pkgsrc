@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/19 21:15:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/07 17:20:09 ryoon Exp $
 bin/vpxdec
 bin/vpxenc
 include/vpx/vp8.h
@@ -14,3 +14,4 @@ include/vpx/vpx_encoder.h
 include/vpx/vpx_image.h
 include/vpx/vpx_integer.h
 lib/libvpx.la
+lib/pkgconfig/vpx.pc
