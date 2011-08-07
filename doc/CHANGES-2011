@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1879 2011/08/07 20:41:09 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1880 2011/08/07 20:59:02 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ocaml-graphics to 3.12.0nb1 [wiz 2011-08-07]
 	Updated graphics/camlimages to 4.0.1 [wiz 2011-08-07]
 	Updated print/advi to 1.10.1 [wiz 2011-08-07]
+	Updated wm/dwm to 5.9 [gls 2011-08-07]
