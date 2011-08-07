@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10480 2011/08/07 20:41:10 wiz Exp $
+$NetBSD: TODO,v 1.10481 2011/08/07 20:59:02 gls Exp $
 
 Suggested new packages
 ======================
@@ -522,7 +522,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvdisaster-0.72.2
 	o dvdstyler-1.8.4
 	o dvtm-0.6
-	o dwm-5.9 [pkg/45218]
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.5
