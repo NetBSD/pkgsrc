@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/15 13:54:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/07 06:14:27 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -33,6 +33,12 @@ ${PYSITELIB}/blockdiag/imagedraw/SVGdraw.pyo
 ${PYSITELIB}/blockdiag/imagedraw/__init__.py
 ${PYSITELIB}/blockdiag/imagedraw/__init__.pyc
 ${PYSITELIB}/blockdiag/imagedraw/__init__.pyo
+${PYSITELIB}/blockdiag/imagedraw/filters/__init__.py
+${PYSITELIB}/blockdiag/imagedraw/filters/__init__.pyc
+${PYSITELIB}/blockdiag/imagedraw/filters/__init__.pyo
+${PYSITELIB}/blockdiag/imagedraw/filters/linejump.py
+${PYSITELIB}/blockdiag/imagedraw/filters/linejump.pyc
+${PYSITELIB}/blockdiag/imagedraw/filters/linejump.pyo
 ${PYSITELIB}/blockdiag/imagedraw/pdf.py
 ${PYSITELIB}/blockdiag/imagedraw/pdf.pyc
 ${PYSITELIB}/blockdiag/imagedraw/pdf.pyo
@@ -166,6 +172,7 @@ ${PYSITELIB}/blockdiag/tests/diagrams/node_attribute.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_attribute_and_group.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_has_multilined_label.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_height.diag
+${PYSITELIB}/blockdiag/tests/diagrams/node_id_includes_dot.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_in_group_follows_outer_node.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_shape.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/node_shape_background.diag
