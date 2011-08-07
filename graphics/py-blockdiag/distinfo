@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/15 13:54:07 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/08/07 06:14:27 obache Exp $
 
-SHA1 (blockdiag-0.8.4.tar.gz) = 578e480513af1b572d3dac88c27e5e4024053ff9
-RMD160 (blockdiag-0.8.4.tar.gz) = 25c7e60dbdb2b617aca0bf0fb86c4847307505a6
-Size (blockdiag-0.8.4.tar.gz) = 114489 bytes
+SHA1 (blockdiag-0.8.7.tar.gz) = 73eb60e60f3098268e958df06d41f3e548d6b31b
+RMD160 (blockdiag-0.8.7.tar.gz) = c780fbed0840de443de73f1fc9b43379f58c5fcf
+Size (blockdiag-0.8.7.tar.gz) = 115198 bytes
