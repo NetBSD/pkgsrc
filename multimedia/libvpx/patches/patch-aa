@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2011/04/14 07:08:00 adam Exp $
+$NetBSD: patch-aa,v 1.3 2011/08/07 17:20:09 ryoon Exp $
 
---- build/make/Makefile.orig	2010-10-28 13:14:14.000000000 +0000
+--- build/make/Makefile.orig	2011-08-04 17:30:15.000000000 +0000
 +++ build/make/Makefile
 @@ -102,7 +102,7 @@ $(BUILD_PFX)%.c.d: %.c
  
  $(BUILD_PFX)%.c.o: %.c
  	$(if $(quiet),@echo "    [CC] $@")
--	$(qexec)$(CC) $(CFLAGS) -c -o $@ $<
-+	$(qexec)${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
+-	$(qexec)$(CC) $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
++	$(qexec)${LIBTOOL} --mode=compile $(CC) $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
  
  $(BUILD_PFX)%.asm.d: %.asm
  	$(if $(quiet),@echo "    [DEP] $@")
@@ -21,17 +21,17 @@ $NetBSD: patch-aa,v 1.2 2011/04/14 07:08:00 adam Exp $
  
  $(BUILD_PFX)%.s.d: %.s
  	$(if $(quiet),@echo "    [DEP] $@")
-@@ -188,7 +189,8 @@ define linker_template
+@@ -194,7 +195,8 @@ define linker_template
  $(1): $(filter-out -%,$(2))
  $(1):
  	$(if $(quiet),@echo    "    [LD] $$@")
--	$(qexec)$$(LD) $$(strip $$(LDFLAGS) -o $$@ $(2) $(3) $$(extralibs))
+-	$(qexec)$$(LD) $$(strip $$(INTERNAL_LDFLAGS) $$(LDFLAGS) -o $$@ $(2) $(3) $$(extralibs))
 +	$(qexec)${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $$@ \
 +	    $$(filter-out -lvpx,$(2)) libvpx.la $$(extralibs)
  endef
  # make-3.80 has a bug with expanding large input strings to the eval function,
  # which was triggered in some cases by the following component of
-@@ -201,8 +203,12 @@ endef
+@@ -207,8 +209,12 @@ endef
  define install_map_template
  $(DIST_DIR)/$(1): $(2)
  	$(if $(quiet),@echo "    [INSTALL] $$@")
@@ -40,24 +40,24 @@ $NetBSD: patch-aa,v 1.2 2011/04/14 07:08:00 adam Exp $
 +	$(qexec)${BSD_INSTALL_DATA} -d -m 755 $$(dir $$@)
 +	$$(if $$(filter %.a,$$<), \
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} -c $$(patsubst %.a,%.la,$$<) $$(dir $$@), \
-+	$$(if $$(filter %.h,$$<), \
++	$$(if $$(filter %.h %.pc,$$<), \
 +	${BSD_INSTALL_DATA} -c -m 644 $$< $$(dir $$@), \
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} -c -s $$< $$(dir $$@)))
  endef
  
  define archive_template
-@@ -211,7 +217,9 @@ define archive_template
+@@ -217,7 +223,9 @@ define archive_template
  # for creating them.
  $(1):
  	$(if $(quiet),@echo "    [AR] $$@")
 -	$(qexec)$$(AR) $$(ARFLAGS) $$@ $$?
 +	$(qexec)${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $$(patsubst %.a,%.la,$$@) \
-+	    $$(patsubst %.o,%.lo,$$?) -rpath $(DIST_DIR)/lib $$(extralibs) \
++	    $$(patsubst %.o,%.lo,$$?) -rpath $(PREFIX)/lib $$(extralibs) \
 +	    -version-info $(VERSION_MINOR):$(VERSION_PATCH):$(VERSION_MINOR)
  endef
  
  define so_template
-@@ -290,7 +298,7 @@ clean::
+@@ -296,7 +304,7 @@ clean::
  LIBS=$(call enabled,LIBS)
  .libs: $(LIBS)
  	@touch $@
