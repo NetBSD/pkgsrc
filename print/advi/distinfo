@@ -1,19 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/05/28 16:45:12 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/08/07 20:40:58 wiz Exp $
 
-SHA1 (advi-1.6.0.tgz) = 8c033df906f3e208471506f64ffa0b175c1c5ee8
-RMD160 (advi-1.6.0.tgz) = 55bc5f2742964f29bc694997c3dd9573f8c71964
-Size (advi-1.6.0.tgz) = 11436152 bytes
-SHA1 (patch-aa) = 1e5eb89fc756d1a9a9aeca5e2da1a19d366da8e1
-SHA1 (patch-ab) = 2f9a2c22a2a8a6b79f09436a46332daf59c94638
-SHA1 (patch-ac) = 7461e39cfc42d476b5c9e07493415ee2013815ca
-SHA1 (patch-ad) = 5ec6fcdfac79cc9ceeb0314b937cec2e431c6c7c
-SHA1 (patch-ae) = 99eb3c8e731e0019a4e9012071403621fb9d670a
-SHA1 (patch-af) = 0096612f7cca942219df81d3a285ef6edad1d7bc
-SHA1 (patch-ag) = ecb347a6b95f90056335d9015824ac80c3860ae2
-SHA1 (patch-ah) = 6773de8e41be9dbc033ba28861da411170c017d1
-SHA1 (patch-ai) = c6a3d5f956dcdf79f9f4ad33d0f596a567efe72f
-SHA1 (patch-aj) = 87737dc00a68e7c020cec98b039eecf0f7cadf1a
-SHA1 (patch-ak) = 831b0bbc22b25e1160809ad7db981d03eb3388ca
-SHA1 (patch-al) = 97c591d60aefbc15c5ef1624f74b12be57daf6d8
-SHA1 (patch-am) = 8bacf3de7ef836183543b12b5dca66d97bfd4ae4
-SHA1 (patch-an) = 85bc55e6409e1be813693425e5b7d7cc2ca6f23d
+SHA1 (advi-1.10.1.tar.gz) = eedadf8d461b233eb352ba90fd312c094e643344
+RMD160 (advi-1.10.1.tar.gz) = 9962992f6512d185ead94d2a44ef11e454b80563
+Size (advi-1.10.1.tar.gz) = 9769604 bytes
+SHA1 (patch-Makefile.in) = 81947381ac464c8aa1de84d337ef82bfbf9caf54
+SHA1 (patch-configure) = cd53f7190a217beddff8e9988c489a4280e8d007
+SHA1 (patch-src_Makefile.in) = ce197feab5b1b3e575b4c745e424ce7fb8559325
