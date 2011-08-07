@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/11 22:07:18 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/07 16:11:16 cheusov Exp $
 
 DISTNAME=	mcast-tools-20061214
 PKGREVISION=	1
@@ -14,6 +14,8 @@ MAKE_JOBS_SAFE=		no
 CONFLICTS=	pim6sd-[0-9]* pim6dd-[0-9]*
 
 GNU_CONFIGURE=	yes
+
+USE_TOOLS+=	yacc lex
 
 INSTALLATION_DIRS= share/examples/mcast-tools
 
