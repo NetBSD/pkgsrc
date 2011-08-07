@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2011/07/21 13:06:07 obache Exp $
+# $NetBSD: Makefile,v 1.49 2011/08/07 20:29:23 wiz Exp $
 #
 
 DISTNAME=	lablgtk-2.14.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
@@ -38,6 +38,12 @@ PLIST.stubs=	yes
 .endif
 
 .include "options.mk"
+
+INSTALLATION_DIRS+=	lib/ocaml/site-lib
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/lib/ocaml/site-lib && ${LN} -s ../lablgtk2
+	${INSTALL_DATA} ${WRKSRC}/META ${DESTDIR}${PREFIX}/lib/ocaml/lablgtk2
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
