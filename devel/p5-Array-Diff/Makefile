@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/07 08:00:00 adam Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/07 10:01:09 obache Exp $
 
 DISTNAME=	Array-Diff-0.07
 PKGNAME=	p5-${DISTNAME:S/05002/05.002/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Array-Diff/
 COMMENT=	Perl 5 module to diff two arrays
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Algorithm-Diff>0:../../devel/p5-Algorithm-Diff
+DEPENDS+=	p5-Algorithm-Diff>1.19:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-Class-Accessor>0:../../devel/p5-Class-Accessor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
