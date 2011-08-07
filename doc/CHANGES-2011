@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1871 2011/08/07 15:44:08 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1872 2011/08/07 15:46:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2837,3 +2837,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/gst123 to 0.2.1 [ryoon 2011-08-07]
 	Updated net/mikutter to 0.0.3.456 [obache 2011-08-07]
 	Added graphics/py-actdiag version 0.1.7 [obache 2011-08-07]
+	Added graphics/py-nwdiag version 0.3.3 [obache 2011-08-07]
