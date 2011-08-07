@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1868 2011/08/07 08:47:53 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1869 2011/08/07 14:31:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2834,3 +2834,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/p5-MIME-tools to 5.502 [tron 2011-08-07]
 	Updated www/p5-URI to 1.58 [tron 2011-08-07]
 	Updated www/p5-HTML-Tree to 4.2 [tron 2011-08-07]
+	Updated multimedia/gst123 to 0.2.1 [ryoon 2011-08-07]
