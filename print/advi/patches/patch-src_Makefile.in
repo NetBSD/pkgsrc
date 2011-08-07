@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2011/08/07 20:40:58 wiz Exp $
+
+--- src/Makefile.in.orig	2011-08-07 14:43:38.000000000 +0000
++++ src/Makefile.in	2011-08-07 14:44:05.000000000 +0000
+@@ -624,7 +624,7 @@
+ 	$(OCAMLMKLIB) -o advi \
+ 		$(OCAMLCFLAGS) $(AM_OCAMLCFLAGS) $(AM_LINKFLAGS) \
+ 		$(COBJS) \
+-		$(CAMLIMAGES_MKLIBS) $(CAMLIMAGES_LPATH) $(XINERAMA_MKLIB) 
++		$(CAMLIMAGES_MKLIBS) $(CAMLIMAGES_LPATH) $(X_LIBS) $(XINERAMA_MKLIB) 
+ 
+ advi.byt$(EXEEXT): dlladvi.so $(OCAMLBYTOBJS)
+ 	$(OCAMLC) -o advi.byt$(EXEEXT) \

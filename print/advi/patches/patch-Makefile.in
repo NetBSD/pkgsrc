@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/08/07 20:40:58 wiz Exp $
+
+--- Makefile.in.orig	2011-08-07 14:15:44.000000000 +0000
++++ Makefile.in	2011-08-07 14:16:03.000000000 +0000
+@@ -225,7 +225,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = src tex doc
++SUBDIRS = src tex
+ # SUBDIRS = src 
+ DIST_SUBDIRS = $(SUBDIRS) examples
+ CVSRELEASETAG = Release-$(subst .,_,$(VERSION))
