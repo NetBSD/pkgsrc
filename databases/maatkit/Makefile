@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/05/28 12:28:46 mspo Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/07 02:16:03 mspo Exp $
 #
 
-DISTNAME=	maatkit-7486
+DISTNAME=	maatkit-7540
 PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://maatkit.googlecode.com/files/
