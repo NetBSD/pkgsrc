@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/11/07 18:36:08 tonio Exp $
+# $NetBSD: Makefile,v 1.12 2011/08/07 20:30:15 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,6 +7,7 @@ DISTINFO_FILE= ${PKGDIR}/../../lang/ocaml/distinfo
 PATCHDIR= ${PKGDIR}/../../lang/ocaml/patches
 
 PKGNAME=		${DISTNAME:S/ocaml/ocaml-graphics/}
+PKGREVISION=		1
 
 COMMENT+=		(graphics library)
 
@@ -30,7 +31,8 @@ PLIST_VARS+=		natdynlib
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
-      !empty(MACHINE_PLATFORM:MFreeBSD-*-*)
+      !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 PLIST.natdynlib=		yes
 .  endif
 .endif
