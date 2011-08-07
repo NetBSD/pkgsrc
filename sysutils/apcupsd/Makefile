@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2011/08/01 14:54:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.63 2011/08/07 17:27:24 bouyer Exp $
 
 DISTNAME=		apcupsd-3.14.9
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
+PKGREVISION=		1
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
@@ -65,7 +66,11 @@ CONF_FILES_PERMS+= ${EGDIR}/offbattery ${PKG_SYSCONFDIR}/offbattery ${REAL_ROOT_
 CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 RCD_SCRIPTS=	apcupsd
-RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/platforms/${OPSYS:tl}/apcupsd
+PLATFORM_SUBDIR=${OPSYS:tl}
+.if ${OPSYS} == "DragonFly"
+PLATFORM_SUBDIR=netbsd
+.endif
+RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/platforms/${PLATFORM_SUBDIR}/apcupsd
 
 EGFILES= netbsd/apccontrol etc/changeme etc/commfailure etc/commok \
     etc/offbattery etc/onbattery etc/multimon.conf etc/hosts.conf
