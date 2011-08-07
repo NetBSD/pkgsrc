@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1874 2011/08/07 16:01:04 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1875 2011/08/07 17:22:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2840,3 +2840,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/py-nwdiag version 0.3.3 [obache 2011-08-07]
 	Added graphics/py-seqdiag version 0.3.8 [obache 2011-08-07]
 	Updated sysutils/htop to 0.9 [cheusov 2011-08-07]
+	Updated multimedia/libvpx to 0.9.7 [ryoon 2011-08-07]
