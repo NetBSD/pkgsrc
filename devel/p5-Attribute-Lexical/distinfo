@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/04/24 16:33:57 seb Exp $
+$NetBSD: distinfo,v 1.3 2011/08/07 08:11:02 adam Exp $
 
-SHA1 (Attribute-Lexical-0.002.tar.gz) = 8ffa40e7b4849781427c79e819420512b2df7c67
-RMD160 (Attribute-Lexical-0.002.tar.gz) = 2cf495445e3a865ec6f61c4a18efffd6a8c535d5
-Size (Attribute-Lexical-0.002.tar.gz) = 13333 bytes
+SHA1 (Attribute-Lexical-0.004.tar.gz) = e277d8bf521ce0abbecff6a8dd984e1a710f6a33
+RMD160 (Attribute-Lexical-0.004.tar.gz) = 82559d6b2da4fcaba6829bdd4ac8e6c6f798f587
+Size (Attribute-Lexical-0.004.tar.gz) = 13967 bytes
