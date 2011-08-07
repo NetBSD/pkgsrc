@@ -1,0 +1,45 @@
+$NetBSD: patch-configure,v 1.1 2011/08/07 20:40:58 wiz Exp $
+
+--- configure.orig	2011-08-04 13:40:01.000000000 +0000
++++ configure	2011-08-07 15:50:51.000000000 +0000
+@@ -5624,7 +5624,7 @@
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking TeX root path" >&5
+ $as_echo_n "checking TeX root path... " >&6; }
+-texdir=`$KPSEXPAND '$TEXMFMAIN'`
++texdir=`$KPSEXPAND '$TEXMFDIST'`
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $texdir" >&5
+ $as_echo "$texdir" >&6; }
+ if test -z "$texdir"; then
+@@ -5633,9 +5633,7 @@
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking LaTeX root path" >&5
+ $as_echo_n "checking LaTeX root path... " >&6; }
+-if test -d "$texdir/tex/latex"; then
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $texdir/tex/latex" >&5
+-$as_echo "$texdir/tex/latex" >&6; }
++#if test -d "$texdir/tex/latex"; then
+     # this ugly stuff, shamelessly stolen from lispdir computation, is supposed
+     # to find latex resources installation directory expressed in term of prefix
+     # the ugly [^\/] is meant to express [^\/] regexp
+@@ -5643,12 +5641,14 @@
+ 	-e 's,/$,,' \
+ 	-e '/.*\/lib\/[^\/]*\/tex\/latex$/{s,.*/lib/\([^\/]*\/tex\/latex\)$,${libdir}/\1,;p;q;}' \
+ 	-e '/.*\/share\/[^\/]*\/tex\/latex$/{s,.*/share/\([^\/]*\/tex\/latex\),${datadir}/\1,;p;q;}'`
+-else
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: result: not found" >&5
+-$as_echo "not found" >&6; }
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: no LaTeX root path found, check your setup" >&5
+-$as_echo "$as_me: WARNING: no LaTeX root path found, check your setup" >&2;}
+-fi
++    { $as_echo "$as_me:${as_lineno-$LINENO}: result: ($texdir/tex/latex) -> $latexdir" >&5
++$as_echo "($texdir/tex/latex) -> $latexdir" >&6; }
++#else
++#    { $as_echo "$as_me:${as_lineno-$LINENO}: result: not found" >&5
++#$as_echo "not found" >&6; }
++#    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: no LaTeX root path found, check your setup" >&5
++#$as_echo "$as_me: WARNING: no LaTeX root path found, check your setup" >&2;}
++#fi
+ 
+ 
+ # # Checking gunzip and bunzip2. not mandatory.
