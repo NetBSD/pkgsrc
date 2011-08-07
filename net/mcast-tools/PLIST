@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/27 17:46:53 joerg Exp $
-bin/mtrace6
+@comment $NetBSD: PLIST,v 1.3 2011/08/07 16:11:16 cheusov Exp $
 bin/mcastread
 bin/mcastsend
+bin/mtrace6
 bin/pmsft
 man/man1/mcastread.1
 man/man1/mcastsend.1
@@ -17,6 +17,6 @@ sbin/mfc
 sbin/pim6dd
 sbin/pim6sd
 sbin/pim6stat
-share/examples/mcast-tools/pim6sd.conf.sample
-share/examples/mcast-tools/pim6dd.conf.sample
 share/examples/mcast-tools/mfc.conf.sample
+share/examples/mcast-tools/pim6dd.conf.sample
+share/examples/mcast-tools/pim6sd.conf.sample
