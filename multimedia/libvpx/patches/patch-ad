@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.3 2011/06/16 13:22:48 seanb Exp $
+$NetBSD: patch-ad,v 1.4 2011/08/07 17:20:09 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 
---- build/make/configure.sh.orig	2011-03-04 20:40:37.000000000 +0000
+--- build/make/configure.sh.orig	2011-08-04 17:30:15.000000000 +0000
 +++ build/make/configure.sh
-@@ -559,7 +559,7 @@ process_common_toolchain() {
+@@ -562,7 +562,7 @@ process_common_toolchain() {
                  [ -z "$tgt_isa" ] && tgt_isa=x86
                  tgt_os=win32
                  ;;
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.3 2011/06/16 13:22:48 seanb Exp $
                  tgt_os=linux
                  ;;
              *solaris2.10)
-@@ -975,10 +975,29 @@ EOF
+@@ -970,10 +970,29 @@ EOF
      if enabled multithread; then
          case ${toolchain} in
              *-win*);;
@@ -24,23 +24,23 @@ $NetBSD: patch-ad,v 1.3 2011/06/16 13:22:48 seanb Exp $
  
 +    case ${tgt_os} in
 +    darwin*)
-+	add_extralibs -lm
-+	;;
++       add_extralibs -lm
++       ;;
 +    solaris*)
-+	add_extralibs -lm -lrt
-+	;;
++       add_extralibs -lm -lrt
++       ;;
 +    linux*)
-+	case ${gcctarget} in
-+	*qnx6*)
-+	    add_extralibs -lm
-+	    ;;
-+	*)
-+	    add_extralibs -lm -lrt
-+	    ;;
-+	esac
-+	;;
++       case ${gcctarget} in
++       *qnx6*)
++           add_extralibs -lm
++           ;;
++       *)
++           add_extralibs -lm -lrt
++           ;;
++       esac
++       ;;
 +    esac
 +
-     # glibc needs these
-     if enabled linux; then
-         add_cflags -D_LARGEFILE_SOURCE
+     # for sysconf(3) and friends.
+     check_header unistd.h
+ 
