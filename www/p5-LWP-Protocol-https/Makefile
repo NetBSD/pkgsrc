@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/07/14 21:47:35 spz Exp $
-#
+# $NetBSD: Makefile,v 1.3 2011/08/07 08:36:35 tron Exp $
 
 DISTNAME=	LWP-Protocol-https-6.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 
