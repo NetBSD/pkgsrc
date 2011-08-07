@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1876 2011/08/07 20:29:35 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1877 2011/08/07 20:30:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2842,3 +2842,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/htop to 0.9 [cheusov 2011-08-07]
 	Updated multimedia/libvpx to 0.9.7 [ryoon 2011-08-07]
 	Updated x11/lablgtk to 2.14.2nb7 [wiz 2011-08-07]
+	Updated x11/ocaml-graphics to 3.12.0nb1 [wiz 2011-08-07]
