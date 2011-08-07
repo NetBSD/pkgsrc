@@ -1,25 +1,19 @@
-$NetBSD: patch-ao,v 1.6 2008/04/28 08:28:05 sborrill Exp $
+$NetBSD: patch-ao,v 1.6.30.1 2011/08/07 09:39:49 tron Exp $
 
---- platforms/Makefile.in.orig	2007-11-17 19:09:23.000000000 +0000
-+++ platforms/Makefile.in	2008-04-26 22:24:19.000000000 +0100
-@@ -26,20 +26,6 @@
- 	      DESTDIR=$(DESTDIR) install);
+--- platforms/Makefile.orig	2011-08-01 15:55:53.000000000 +0200
++++ platforms/Makefile	2011-08-01 15:56:26.000000000 +0200
+@@ -9,14 +9,6 @@
+ all-uninstall: uninstall-platform
  
- install: @INSTALL_DISTDIR@
--	@echo "Installing apccontrol script..."
--	@if test -f $(DESTDIR)$(sysconfdir)/apccontrol; then \
--	   mv -f $(DESTDIR)$(sysconfdir)/apccontrol $(DESTDIR)$(sysconfdir)/apccontrol.orig; \
--	   echo " Found old apccontrol moving it to $(DESTDIR)$(sysconfdir)/apccontrol.orig"; \
--	fi 
--	@if test -f ./$(DISTNAME)/apccontrol; then \
--	   $(INSTALL_SCRIPT) -m 744 ./$(DISTNAME)/apccontrol $(DESTDIR)$(sysconfdir)/apccontrol; \
--	else \
--	   $(INSTALL_SCRIPT) -m 744 ./apccontrol $(DESTDIR)$(sysconfdir)/apccontrol; \
--	fi
--	(cd etc/; $(MAKE) DESTDIR=$(DESTDIR) install)
--	@if test "x@HALPOLICYDIR@" != "xno" -a "x@HALPOLICYDIR@" != "x" ; then \
--	   $(INSTALL_DATA) -m 644 ./80-apcupsd-ups-policy.fdi $(DESTDIR)@HALPOLICYDIR@ ; \
--	fi
+ install-platform:
+-	$(call MKDIR,$(sysconfdir))
+-	$(if $(wildcard ./$(DISTNAME)/apccontrol), \
+-      $(call INSTORIG,744,$(DISTNAME)/apccontrol,$(sysconfdir)), \
+-      $(call INSTORIG,744,apccontrol,$(sysconfdir)))
+-	$(if $(HALPOLICYDIR),$(call MKDIR,$(HALPOLICYDIR)))
+-	$(if $(HALPOLICYDIR),$(call INSTDATA,644,80-apcupsd-ups-policy.fdi,$(HALPOLICYDIR)))
  
- #
- # uninstall symlinks before removing the boot script etc etc
+ uninstall-platform:
+-	$(call UNINST,$(sysconfdir)/apccontrol)
+-	$(if $(HALPOLICYDIR),$(call UNINST,$(HALPOLICYDIR)/80-apcupsd-ups-policy.fdi))
+ 

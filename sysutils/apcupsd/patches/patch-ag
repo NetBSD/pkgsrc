@@ -1,14 +1,18 @@
-$NetBSD: patch-ag,v 1.4 2006/11/15 21:46:25 bouyer Exp $
+$NetBSD: patch-ag,v 1.4.42.1 2011/08/07 09:39:48 tron Exp $
 
---- doc/Makefile.in.orig	2006-11-15 20:57:26.000000000 +0100
-+++ doc/Makefile.in	2006-11-15 20:57:52.000000000 +0100
-@@ -21,7 +21,8 @@
- install-man: apcupsd.man
- 	@$(ECHO) "Installing manual pages..."
- 	@$(SHELL) $(MKINSTALLDIRS) $(DESTDIR)$(mandir)/man$(manext)
--	@$(INSTALL_DATA) apcupsd.man $(DESTDIR)$(mandir)/man$(manext)/apcupsd.$(manext)
-+	@$(INSTALL_DATA) apcupsd.8 $(DESTDIR)$(mandir)/man$(manext)/apcupsd.$(manext)
-+	@$(INSTALL_DATA) apctest.8 $(DESTDIR)$(mandir)/man$(manext)/apctest.$(manext)
+--- platforms/etc/Makefile.orig	2011-08-01 16:13:04.000000000 +0200
++++ platforms/etc/Makefile	2011-08-01 16:13:13.000000000 +0200
+@@ -7,13 +7,6 @@
+ all-uninstall: uninstall-etc
  
- uninstall:
- 	@$(ECHO) "Removing manual page ..."
+ install-etc:
+-	$(call MKDIR,$(sysconfdir))
+-	$(call INSTNEW,644,apcupsd.conf,$(sysconfdir))
+-	$(call INSTORIG,744,changeme,$(sysconfdir))
+-	$(call INSTORIG,744,commfailure,$(sysconfdir))
+-	$(call INSTORIG,744,commok,$(sysconfdir))
+-	$(call INSTORIG,744,offbattery,$(sysconfdir))
+-	$(call INSTORIG,744,onbattery,$(sysconfdir))
+ 
+ uninstall-etc:
+ 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2011/04/22 13:44:39 obache Exp $
+# $NetBSD: Makefile,v 1.61.2.1 2011/08/07 09:39:48 tron Exp $
 
-DISTNAME=		apcupsd-3.14.3
-PKGREVISION=		3
+DISTNAME=		apcupsd-3.14.9
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
@@ -11,7 +10,7 @@ COMMENT=		UPS power management for APCC Products
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		msgfmt sh makedepend
+USE_TOOLS+=		gmake msgfmt sh makedepend
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
@@ -38,6 +37,7 @@ CONFIGURE_ARGS+=	--enable-net		# enable NIS network driver
 CONFIGURE_ARGS+=	--enable-usb		# enable USB network driver
 CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
+CONFIGURE_ARGS+=	--enable-snmp		# enable SNMP driver
 CONFIGURE_ARGS+=	--with-lock-dir=${VARBASE}/spool/lock
 # XXX is this supposed to be the full filename?
 CONFIGURE_ARGS+=	--with-log-dir=${VARBASE}/db/apcupsd.events
@@ -84,12 +84,6 @@ SUBST_MESSAGE.strip=	Fixing conflicting STRIP variable name
 
 # XXX we should probably allow the tty to be set in /etc/mk.conf too
 #
-post-build:
-.for file in ${MANFILES}
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|'\
-	     -e 's|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|' \
-	     ${WRKSRC}/doc/${file}.man > ${WRKSRC}/doc/${file}.8
-.endfor
 
 HTMLDOCS= apcupsd.gif bclogo.gif bugs.html bugs.wml index.html index.wml \
     license.html license.wml lists.html lists.wml mail16d.png menu.inc \
