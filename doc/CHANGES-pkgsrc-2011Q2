@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.17 2011/08/05 12:22:55 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.18 2011/08/07 09:40:29 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -49,3 +49,7 @@ Pullup ticket #3489 - requested by drochner
 multimedia/vlc: security patch
 Pullup ticket #3490 - requested by obache
 lang/openjdk7: build fix
+Pullup ticket #3492 - requested by drocher
+graphics/gdk-pixbuf: security update
+Pullup ticket #3493 - requested by bouyer
+sysutils/apcupsd: build fix
