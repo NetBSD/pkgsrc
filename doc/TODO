@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10473 2011/08/07 07:47:34 tron Exp $
+$NetBSD: TODO,v 1.10474 2011/08/07 12:39:23 obache Exp $
 
 Suggested new packages
 ======================
@@ -793,6 +793,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inputproto-2.0.2
 	o inspircd-1.2.1
 	o instiki-0.13
+	o intltool-0.41.1 [https://launchpad.net/intltool/+download]
 	o ircservices-5.1.21
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
