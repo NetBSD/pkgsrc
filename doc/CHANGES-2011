@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1861 2011/08/06 23:40:41 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1862 2011/08/07 06:14:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2828,3 +2828,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/queequeg version 0.91 [ryoon 2011-08-06]
 	Updated time/etm to 855 [ryoon 2011-08-06]
 	Updated www/p5-HTML-Format to 2.10 [tron 2011-08-06]
+	Updated graphics/py-blockdiag to 0.8.7 [obache 2011-08-07]
