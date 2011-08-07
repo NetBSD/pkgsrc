@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1865 2011/08/07 08:09:19 tron Exp $
+$NetBSD: CHANGES-2011,v 1.1866 2011/08/07 08:16:19 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2832,3 +2832,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/spamassassin to 3.3.2 [tron 2011-08-07]
 	Updated mail/p5-MailTools to 2.08 [tron 2011-08-07]
 	Updated mail/p5-MIME-tools to 5.502 [tron 2011-08-07]
+	Updated pkgtools/p5-pkgsrc-Dewey to 1.1nb2 [tron 2011-08-07]
