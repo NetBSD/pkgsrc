@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10476 2011/08/07 14:53:17 wiz Exp $
+$NetBSD: TODO,v 1.10477 2011/08/07 16:01:04 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -776,7 +776,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
 	o html2wml-0.4.11
-	o htop-0.9
 	o httping-1.5.2
 	o httptunnel-3.3
 	o hugin-2011.0.0
