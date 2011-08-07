@@ -1,46 +1,27 @@
-$NetBSD: patch-an,v 1.5 2007/06/19 22:22:55 bouyer Exp $
+$NetBSD: patch-an,v 1.5.38.1 2011/08/07 09:39:49 tron Exp $
 
---- src/cgi/Makefile.in.orig	2006-09-21 02:07:36.000000000 +0200
-+++ src/cgi/Makefile.in	2007-06-19 23:59:26.000000000 +0200
-@@ -57,41 +57,6 @@
- 	    echo $(INSTALL_PROGRAM) $(STRIP) $$p $(DESTDIR)$(cgibin); \
- 	    $(INSTALL_PROGRAM) $(STRIP) $$p $(DESTDIR)$(cgibin); \
- 	done
--	# don't overwrite any existing config file
--	@if test ! -f $(DESTDIR)$(sysconfdir)/apcupsd.css; then \
--	   (echo "Installing apcupsd.css..." && \
--	      $(INSTALL_DATA) apcupsd.css \
--		 $(DESTDIR)$(sysconfdir)/apcupsd.css); \
--	else \
--	    (echo "Installing apcupsd.css as $(DESTDIR)$(sysconfdir)/apcupsd.css.new" && \
--	       $(INSTALL_DATA) apcupsd.css \
--		 $(DESTDIR)$(sysconfdir)/apcupsd.css.new); \
--	fi
--
--	# don't overwrite any existing config file
--	@if test ! -f $(DESTDIR)$(sysconfdir)/hosts.conf; then \
--	   (echo "Installing hosts.conf..." && \
--	      $(INSTALL_DATA) \
--		 $(topdir)/platforms/etc/hosts.conf \
--		 $(DESTDIR)$(sysconfdir)/hosts.conf); \
--	else \
--	    (echo "Installing hosts.conf as $(DESTDIR)$(sysconfdir)/hosts.conf.new" && \
--	       $(INSTALL_DATA) \
--		  $(topdir)/platforms/etc/hosts.conf \
--		  $(DESTDIR)$(sysconfdir)/hosts.conf.new); \
--	fi
--	# don't overwrite any existing config file
--	@if test ! -f $(DESTDIR)$(sysconfdir)/multimon.conf; then \
--	   (echo "Installing multimon.conf..." && \
--	       $(INSTALL_DATA) \
--		  $(topdir)/platforms/etc/multimon.conf \
--		  $(DESTDIR)$(sysconfdir)/multimon.conf ); \
--	else \
--	   (echo "Installing multimon.conf as $(DESTDIR)$(sysconfdir)/multimon.conf.new" && \
--	       $(INSTALL_DATA) \
--		  $(topdir)/platforms/etc/multimon.conf \
--		  $(DESTDIR)$(sysconfdir)/multimon.conf.new); \
--	fi
+--- src/cgi/Makefile.orig	2011-08-01 15:54:51.000000000 +0200
++++ src/cgi/Makefile	2011-08-01 15:55:10.000000000 +0200
+@@ -39,22 +39,12 @@
+ 	$(call INSTPROG,755,upsstats.cgi,$(cgibin))
+ 	$(call INSTPROG,755,upsfstats.cgi,$(cgibin))
+ 	$(call INSTPROG,755,upsimage.cgi,$(cgibin))
+-	$(call MKDIR,$(sysconfdir))
+-	$(call INSTNEW,644,apcupsd.css,$(sysconfdir))
+-	$(call INSTNEW,644,$(topdir)/platforms/etc/hosts.conf,$(sysconfdir))
+-	$(call INSTNEW,644,$(topdir)/platforms/etc/multimon.conf,$(sysconfdir))
  
- uninstall:
- 	@echo "Uninstalling cgi program support..."
+ uninstall-cgi:
+ 	$(call UNINST,$(cgibin)/multimon.cgi)
+ 	$(call UNINST,$(cgibin)/upsstats.cgi)
+ 	$(call UNINST,$(cgibin)/upsfstats.cgi)
+ 	$(call UNINST,$(cgibin)/upsimage.cgi)
+-	$(call UNINST,$(sysconfdir)/apcupsd.css)
+-	$(call UNINST,$(sysconfdir)/apcupsd.css.new)
+-	$(call UNINST,$(sysconfdir)/hosts.conf)
+-	$(call UNINST,$(sysconfdir)/hosts.conf.new)
+-	$(call UNINST,$(sysconfdir)/multimon.conf)
+-	$(call UNINST,$(sysconfdir)/multimon.conf.new)
+ 
+ # Include dependencies
+ -include $(DEPS)

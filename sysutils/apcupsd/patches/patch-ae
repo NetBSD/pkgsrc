@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2007/06/15 19:05:56 bouyer Exp $
+$NetBSD: patch-ae,v 1.6.38.1 2011/08/07 09:39:48 tron Exp $
 
---- autoconf/configure.in.orig	2007-06-15 13:15:54.000000000 +0200
-+++ autoconf/configure.in	2007-06-15 13:34:19.000000000 +0200
-@@ -80,12 +80,6 @@
+--- autoconf/configure.in.orig	2010-09-02 16:23:39.000000000 +0200
++++ autoconf/configure.in	2011-08-01 15:40:05.000000000 +0200
+@@ -89,12 +89,6 @@
        sysconfdir='/etc/apcupsd'
     fi
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ae,v 1.6 2007/06/15 19:05:56 bouyer Exp $
  fi
  
  dnl
-@@ -154,7 +148,7 @@
+@@ -146,7 +140,7 @@
  AC_SUBST(PTHREAD_LFLAGS)
  
  APCACCESS=apcaccess
@@ -24,26 +24,7 @@ $NetBSD: patch-ae,v 1.6 2007/06/15 19:05:56 bouyer Exp $
  APCTEST=apctest
  AC_SUBST(APCACCESS)
  AC_SUBST(SMTP)
-@@ -439,7 +433,7 @@
-    AM_CONDITIONAL(HAVE_LINUX_OS, $FALSEPRG)
- fi
- 
--if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
-+if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD || test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
- then
-    AM_CONDITIONAL(HAVE_FREEBSD_OS, $TRUEPRG)
-    AC_DEFINE(HAVE_FREEBSD_OS)
-@@ -718,7 +712,8 @@
-            AC_MSG_RESULT([Using Linux USB driver.])
-         elif test $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD -o \
-                   $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD -o \
--                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xNetBSD ; then
-+                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xNetBSD -o \
-+                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xDragonFly ; then
-            LIBUSBHIDINC="-I\$(topdir)/src/libusbhid"
-            LIBUSBHID=libusbhid
-            LIBUSBHIDOBJS="\$(topdir)/src/libusbhid/*.o"
-@@ -1169,7 +1164,7 @@
+@@ -989,7 +983,7 @@
  elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
  then
     DISTNAME=freebsd
@@ -52,7 +33,7 @@ $NetBSD: patch-ae,v 1.6 2007/06/15 19:05:56 bouyer Exp $
  then
     DISTNAME=netbsd
  elif test $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD
-@@ -1297,7 +1292,7 @@
+@@ -1130,7 +1124,7 @@
        platforms/debian/apcupsd \
        platforms/debian/ups-monitor"
     ;;
@@ -61,10 +42,10 @@ $NetBSD: patch-ae,v 1.6 2007/06/15 19:05:56 bouyer Exp $
     DISTVER=`uname -a |awk '{print $3}'`
     SERIALDEV=/dev/cuaa0
     nologdir=/var/run
-@@ -1335,7 +1330,8 @@
+@@ -1164,7 +1158,8 @@
+    PTHREAD_LFLAGS=""
     LDFLAGS="$LDFLAGS -pthread"
     DFILES="\
-       platforms/netbsd/Makefile \
 -      platforms/netbsd/apcupsd"
 +      platforms/netbsd/apcupsd \
 +      platforms/netbsd/apccontrol"
