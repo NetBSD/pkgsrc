@@ -1,0 +1,3 @@
+`actdiag' generate activity-diagram image file from spec-text file.
+* Generate activity-diagram from dot like text (basic feature).
+* Multilingualization for node-label (utf-8 only).
