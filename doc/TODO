@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10477 2011/08/07 16:01:04 cheusov Exp $
+$NetBSD: TODO,v 1.10478 2011/08/07 17:23:18 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -924,7 +924,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libupnp-1.6.9 [break API/ABI compatibility]
 	o libusb-1.0
 	o libv4l-0.8.5
-	o libvpx-0.9.7
 	o libxkbfile-1.0.7
 	o libxklavier-5.1
 	o licq-1.3.8
