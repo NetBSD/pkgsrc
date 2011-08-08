@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/18 19:36:39 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2011/08/08 10:05:21 cheusov Exp $
 
-SHA1 (distbb-0.40.0.tar.gz) = 45091e1d41e8a934bf47685beb93cfcc87b77edc
-RMD160 (distbb-0.40.0.tar.gz) = bae3831e2bc41f96ed009b485cc93ba111cf1920
-Size (distbb-0.40.0.tar.gz) = 93098 bytes
+SHA1 (distbb-0.40.1.tar.gz) = 7528f9eaebcff1803c00abc1bd9b2dffc930b4a4
+RMD160 (distbb-0.40.1.tar.gz) = 61e4c43ea473f98d7fa46841bb852a5559d05df1
+Size (distbb-0.40.1.tar.gz) = 93255 bytes
