@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.18 2011/08/07 09:40:29 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.19 2011/08/08 19:59:12 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -53,3 +53,7 @@ Pullup ticket #3492 - requested by drocher
 graphics/gdk-pixbuf: security update
 Pullup ticket #3493 - requested by bouyer
 sysutils/apcupsd: build fix
+Pullup ticket #3491 - requested by tron
+net/youtube-dl: functionality update
+Pullup ticket #3494 - requested by bouyer
+sysutils/apcupsd: fix for DragonFly
