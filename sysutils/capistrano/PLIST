@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/04/22 20:31:49 gls Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/08/08 21:37:52 gls Exp $
 bin/cap
 bin/capify
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.mdown
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/bin/cap
 ${GEM_LIBDIR}/bin/capify
 ${GEM_LIBDIR}/capistrano.gemspec
@@ -34,11 +33,13 @@ ${GEM_LIBDIR}/lib/capistrano/configuration/roles.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/servers.rb
 ${GEM_LIBDIR}/lib/capistrano/configuration/variables.rb
 ${GEM_LIBDIR}/lib/capistrano/errors.rb
+${GEM_LIBDIR}/lib/capistrano/ext/string.rb
 ${GEM_LIBDIR}/lib/capistrano/extensions.rb
 ${GEM_LIBDIR}/lib/capistrano/logger.rb
 ${GEM_LIBDIR}/lib/capistrano/processable.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/compat.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy.rb
+${GEM_LIBDIR}/lib/capistrano/recipes/deploy/assets.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/dependencies.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/local_dependency.rb
 ${GEM_LIBDIR}/lib/capistrano/recipes/deploy/remote_dependency.rb
@@ -105,6 +106,7 @@ ${GEM_LIBDIR}/test/fixtures/cli_integration.rb
 ${GEM_LIBDIR}/test/fixtures/config.rb
 ${GEM_LIBDIR}/test/fixtures/custom.rb
 ${GEM_LIBDIR}/test/logger_test.rb
+${GEM_LIBDIR}/test/recipes_test.rb
 ${GEM_LIBDIR}/test/role_test.rb
 ${GEM_LIBDIR}/test/server_definition_test.rb
 ${GEM_LIBDIR}/test/shell_test.rb
