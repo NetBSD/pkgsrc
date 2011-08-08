@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1885 2011/08/08 21:38:12 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1886 2011/08/08 23:28:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2851,3 +2851,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Class-MethodMaker to 2.18 [wiz 2011-08-08]
 	Updated sysutils/fabric to 1.2.0 [gls 2011-08-08]
 	Updated sysutils/capistrano to 2.8.0 [gls 2011-08-08]
+	Added fonts/nanum-ttf version 3.0 [minskim 2011-08-08]
