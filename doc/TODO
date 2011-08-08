@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10481 2011/08/07 20:59:02 gls Exp $
+$NetBSD: TODO,v 1.10482 2011/08/08 21:54:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -524,7 +524,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvtm-0.6
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
-	o echinus-0.4.5
+	o echinus-0.4.6
 	o eclipse-3.2.0
 	o ed-1.5
 	o ede-2.0
@@ -893,6 +893,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnome-keyring-3.0.3
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.0.0
+	o libiconv-1.14
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o libjpeg-turbo-1.1.1
@@ -1236,7 +1237,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-30.0.0
+	o tea-30.1.0
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.3
