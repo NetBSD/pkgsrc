@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1882 2011/08/08 10:05:47 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1883 2011/08/08 20:45:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2848,3 +2848,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated wm/dwm to 5.9 [gls 2011-08-07]
 	Updated www/p5-FCGI to 0.73 [abs 2011-08-07]
 	Updated pkgtools/distbb to 0.40.1 [cheusov 2011-08-08]
+	Updated devel/p5-Class-MethodMaker to 2.18 [wiz 2011-08-08]
