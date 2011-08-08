@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/07/12 20:56:21 gls Exp $
+# $NetBSD: Makefile,v 1.12 2011/08/08 21:04:26 gls Exp $
 #
 
-VERSION=		1.1.1
+VERSION=		1.2.0
 DISTNAME=		Fabric-${VERSION}
 PKGNAME=		${DISTNAME:S/F/f/}
 CATEGORIES=		sysutils net
@@ -31,7 +31,7 @@ post-install:
 	${INSTALL_MAN} files/fab.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 	cd ${WRKSRC}/docs && pax -wr -pma *.rst api/contrib/*.rst \
-		api/core/*.rst changes/* usage/* \
+		api/core/*.rst usage/* \
 		${DESTDIR}${PREFIX}/share/doc/fabric/.
 
 .include "../../lang/python/egg.mk"
