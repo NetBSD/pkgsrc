@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1884 2011/08/08 21:04:40 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1885 2011/08/08 21:38:12 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2850,3 +2850,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/distbb to 0.40.1 [cheusov 2011-08-08]
 	Updated devel/p5-Class-MethodMaker to 2.18 [wiz 2011-08-08]
 	Updated sysutils/fabric to 1.2.0 [gls 2011-08-08]
+	Updated sysutils/capistrano to 2.8.0 [gls 2011-08-08]
