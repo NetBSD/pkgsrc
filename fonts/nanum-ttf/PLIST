@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/08 23:26:31 minskim Exp $
+lib/X11/fonts/TTF/NanumBrush.ttf
+lib/X11/fonts/TTF/NanumGothic.ttf
+lib/X11/fonts/TTF/NanumGothicBold.ttf
+lib/X11/fonts/TTF/NanumGothicExtraBold.ttf
+lib/X11/fonts/TTF/NanumMyeongjo.ttf
+lib/X11/fonts/TTF/NanumMyeongjoBold.ttf
+lib/X11/fonts/TTF/NanumMyeongjoExtraBold.ttf
+lib/X11/fonts/TTF/NanumPen.ttf
