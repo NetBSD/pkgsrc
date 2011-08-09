@@ -1,16 +1,17 @@
-$NetBSD: patch-ao,v 1.6 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-ao,v 1.7 2011/08/09 07:15:42 manu Exp $
 
 NetBSD uses libperfuse(3). Also enable debugging (-g) for now,
 and let it build georeplication
+
 --- configure.orig	2011-07-14 14:21:15.000000000 +0200
-+++ configure	2011-07-22 08:59:47.000000000 +0200
++++ configure	2011-08-02 11:13:53.000000000 +0200
 @@ -464,9 +464,9 @@
  # include <unistd.h>
  #endif"
  
  ac_subdirs_all="$ac_subdirs_all argp-standalone"
 -ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar build build_cpu build_vendor build_os host host_cpu host_vendor host_os CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE SED EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CPP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL mountutildir initdir launchddir LEX LEXLIB LEX_OUTPUT_ROOT YACC LD ac_ct_LD HAVE_SPINLOCK HAVE_STRNLEN FUSE_CLIENT_SUBDIR FUSERMOUNT_SUBDIR IBVERBS_SUBDIR RDMA_SUBDIR PYTHON PYTHON_VERSION PYTHON_PREFIX PYTHON_EXEC_PREFIX PYTHON_PLATFORM pythondir pkgpythondir pyexecdir pkgpyexecdir SYNCDAEMON_COMPILE SYNCDAEMON_SUBDIR HAVE_BACKTRACE HAVE_MALLOC_STATS subdirs ARGP_STANDALONE_CPPFLAGS ARGP_STANDALONE_LDADD GF_DISTRIBUTION GF_HOST_OS GF_GLUSTERFS_LDFLAGS GF_GLUSTERFS_CFLAGS GF_CFLAGS GF_LDFLAGS GF_LDADD GF_FUSE_CFLAGS RLLIBS CONTRIBDIR INCLUDES GF_DARWIN_HOST_OS_TRUE GF_DARWIN_HOST_OS_FALSE LIBOBJS LTLIBOBJS'
-+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar build build_cpu build_vendor build_os host host_cpu host_vendor host_os CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE SED EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CPP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL mountutildir initdir launchddir LEX LEXLIB LEX_OUTPUT_ROOT YACC LD ac_ct_LD HAVE_SPINLOCK HAVE_STRNLEN FUSE_CLIENT_SUBDIR FUSERMOUNT_SUBDIR IBVERBS_SUBDIR RDMA_SUBDIR PYTHON PYTHON_VERSION PYTHON_PREFIX PYTHON_EXEC_PREFIX PYTHON_PLATFORM pythondir pkgpythondir pyexecdir pkgpyexecdir SYNCDAEMON_COMPILE SYNCDAEMON_SUBDIR HAVE_BACKTRACE HAVE_MALLOC_STATS subdirs ARGP_STANDALONE_CPPFLAGS ARGP_STANDALONE_LDADD GF_DISTRIBUTION GF_HOST_OS GF_GLUSTERFS_LDFLAGS GF_GLUSTERFS_CFLAGS GF_CFLAGS GF_LDFLAGS GF_LDADD GF_FUSE_LDADD GF_FUSE_CFLAGS RLLIBS CONTRIBDIR INCLUDES GF_DARWIN_HOST_OS_TRUE GF_DARWIN_HOST_OS_FALSE LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar build build_cpu build_vendor build_os host host_cpu host_vendor host_os CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE SED EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CPP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL mountutildir initdir launchddir LEX LEXLIB LEX_OUTPUT_ROOT YACC LD ac_ct_LD HAVE_SPINLOCK HAVE_STRNLEN FUSE_CLIENT_SUBDIR FUSERMOUNT_SUBDIR IBVERBS_SUBDIR RDMA_SUBDIR PYTHON PYTHON_VERSION PYTHON_PREFIX PYTHON_EXEC_PREFIX PYTHON_PLATFORM pythondir pkgpythondir pyexecdir pkgpyexecdir SYNCDAEMON_COMPILE SYNCDAEMON_SUBDIR HAVE_BACKTRACE HAVE_MALLOC_STATS HAVE_LINKAT subdirs ARGP_STANDALONE_CPPFLAGS ARGP_STANDALONE_LDADD GF_DISTRIBUTION GF_HOST_OS GF_GLUSTERFS_LDFLAGS GF_GLUSTERFS_CFLAGS GF_CFLAGS GF_LDFLAGS GF_LDADD GF_FUSE_LDADD GF_FUSE_CFLAGS RLLIBS CONTRIBDIR INCLUDES GF_DARWIN_HOST_OS_TRUE GF_DARWIN_HOST_OS_FALSE LIBOBJS LTLIBOBJS'
  ac_subst_files=''
  
  # Initialize some variables set by options.
@@ -27,14 +28,125 @@ and let it build georeplication
  #disabling geo replication for non-linux platforms
  	enable_georeplication=no
          ;;
-@@ -21731,8 +21734,19 @@
+@@ -20907,8 +20910,110 @@
+ 
+ fi
+ 
+ 
++echo "$as_me:$LINENO: checking for linkat" >&5
++echo $ECHO_N "checking for linkat... $ECHO_C" >&6
++if test "${ac_cv_func_linkat+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++/* Define linkat to an innocuous variant, in case <limits.h> declares linkat.
++   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
++#define linkat innocuous_linkat
++
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char linkat (); below.
++    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
++    <limits.h> exists even on freestanding compilers.  */
++
++#ifdef __STDC__
++# include <limits.h>
++#else
++# include <assert.h>
++#endif
++
++#undef linkat
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++{
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char linkat ();
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined (__stub_linkat) || defined (__stub___linkat)
++choke me
++#else
++char (*f) () = linkat;
++#endif
++#ifdef __cplusplus
++}
++#endif
++
++int
++main ()
++{
++return f != linkat;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_func_linkat=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++ac_cv_func_linkat=no
++fi
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++fi
++echo "$as_me:$LINENO: result: $ac_cv_func_linkat" >&5
++echo "${ECHO_T}$ac_cv_func_linkat" >&6
++if test $ac_cv_func_linkat = yes; then
++  have_linkat=yes
++fi
++
++if test "x${have_linkat}" = "xyes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_LINKAT 1
++_ACEOF
++
++fi
++
+ echo "$as_me:$LINENO: checking for struct stat.st_atim.tv_nsec" >&5
+ echo $ECHO_N "checking for struct stat.st_atim.tv_nsec... $ECHO_C" >&6
+ if test "${ac_cv_member_struct_stat_st_atim_tv_nsec+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+@@ -21731,8 +21836,19 @@
  	GF_GLUSTERFS_LDFLAGS="-lnsl -lresolv -lsocket"
          BUILD_FUSE_CLIENT=no
          FUSE_CLIENT_SUBDIR=""
  	;;
 +     *netbsd*)
 +	GF_HOST_OS="GF_BSD_HOST_OS"
-+	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS}"
++	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -D_INCOMPLETE_XOPEN_C063"
 +	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
 +	GF_LDADD="${ARGP_STANDALONE_LDADD}"
 +	if test "x$ac_cv_header_execinfo_h" = "xyes"; then
@@ -47,7 +159,17 @@ and let it build georeplication
          GF_HOST_OS="GF_BSD_HOST_OS"
  	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -O0"
  	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
-@@ -22854,8 +22868,9 @@
+@@ -22844,8 +22960,9 @@
+ s,@SYNCDAEMON_COMPILE@,$SYNCDAEMON_COMPILE,;t t
+ s,@SYNCDAEMON_SUBDIR@,$SYNCDAEMON_SUBDIR,;t t
+ s,@HAVE_BACKTRACE@,$HAVE_BACKTRACE,;t t
+ s,@HAVE_MALLOC_STATS@,$HAVE_MALLOC_STATS,;t t
++s,@HAVE_LINKAT@,$HAVE_LINKAT,;t t
+ s,@subdirs@,$subdirs,;t t
+ s,@ARGP_STANDALONE_CPPFLAGS@,$ARGP_STANDALONE_CPPFLAGS,;t t
+ s,@ARGP_STANDALONE_LDADD@,$ARGP_STANDALONE_LDADD,;t t
+ s,@GF_DISTRIBUTION@,$GF_DISTRIBUTION,;t t
+@@ -22854,8 +22971,9 @@
  s,@GF_GLUSTERFS_CFLAGS@,$GF_GLUSTERFS_CFLAGS,;t t
  s,@GF_CFLAGS@,$GF_CFLAGS,;t t
  s,@GF_LDFLAGS@,$GF_LDFLAGS,;t t
