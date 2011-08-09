@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/11 20:09:31 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/08/09 09:04:26 adam Exp $
 
-SHA1 (BackPAN-Index-0.39.tar.gz) = d6f6569cd2a2bba196bef2fd3ef907378dfa46b3
-RMD160 (BackPAN-Index-0.39.tar.gz) = 778fd641fde6a038a54498e7d43888987d8ac6ed
-Size (BackPAN-Index-0.39.tar.gz) = 3159736 bytes
-SHA1 (patch-aa) = e34578cbd4cab7bf59967bc4dab3ecf5f403bbfa
+SHA1 (BackPAN-Index-0.40.tar.gz) = 390b70981394f80a840c4619a106ba18b9983d5d
+RMD160 (BackPAN-Index-0.40.tar.gz) = fdcb1a957392302c698040ab651528a080216dd6
+Size (BackPAN-Index-0.40.tar.gz) = 3160542 bytes
