@@ -1,9 +1,10 @@
-$NetBSD: patch-an,v 1.6 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-an,v 1.7 2011/08/09 07:15:42 manu Exp $
 
 NetBSD uses libperfuse(3). Also enable debugging (-g) for now,
 and let it build georeplication.
+
 --- configure.ac.orig	2011-07-14 14:21:10.000000000 +0200
-+++ configure.ac	2011-07-22 08:59:39.000000000 +0200
++++ configure.ac	2011-08-02 11:17:51.000000000 +0200
 @@ -291,8 +291,11 @@
  case $host_os in
       linux*)
@@ -16,14 +17,28 @@ and let it build georeplication.
  #disabling geo replication for non-linux platforms
  	enable_georeplication=no
          ;;
-@@ -414,8 +417,19 @@
+@@ -346,8 +349,13 @@
+ dnl Linux, Solaris, Cygwin
+ AC_CHECK_MEMBERS([struct stat.st_atim.tv_nsec])
+ dnl FreeBSD, NetBSD
+ AC_CHECK_MEMBERS([struct stat.st_atimespec.tv_nsec])
++AC_CHECK_FUNC([linkat], [have_linkat=yes])
++if test "x${have_linkat}" = "xyes"; then
++   AC_DEFINE(HAVE_LINKAT, 1, [define if found linkat])
++fi
++AC_SUBST(HAVE_LINKAT)
+ 
+ dnl Check for argp
+ AC_CHECK_HEADER([argp.h], AC_DEFINE(HAVE_ARGP, 1, [have argp]))
+ AC_CONFIG_SUBDIRS(argp-standalone)
+@@ -414,8 +422,19 @@
  	GF_GLUSTERFS_LDFLAGS="-lnsl -lresolv -lsocket"
          BUILD_FUSE_CLIENT=no
          FUSE_CLIENT_SUBDIR=""
  	;;
 +     *netbsd*)
 +	GF_HOST_OS="GF_BSD_HOST_OS"
-+	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS}"
++	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -D_INCOMPLETE_XOPEN_C063"
 +	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
 +	GF_LDADD="${ARGP_STANDALONE_LDADD}"
 +	if test "x$ac_cv_header_execinfo_h" = "xyes"; then
@@ -36,7 +51,7 @@ and let it build georeplication.
          GF_HOST_OS="GF_BSD_HOST_OS"
  	GF_CFLAGS="${ARGP_STANDALONE_CPPFLAGS} -O0"
  	GF_GLUSTERFS_CFLAGS="${GF_CFLAGS}"
-@@ -450,8 +464,9 @@
+@@ -450,8 +469,9 @@
  AC_SUBST(GF_GLUSTERFS_CFLAGS)
  AC_SUBST(GF_CFLAGS)
  AC_SUBST(GF_LDFLAGS)
