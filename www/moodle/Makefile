@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2011/03/07 21:32:47 gls Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/09 18:59:23 gls Exp $
 
-DISTNAME=	moodle-2.0.2
+DISTNAME=	moodle-2.1.1
 CATEGORIES=	www
-MASTER_SITES=	http://download.moodle.org/stable20/ \
-		http://download2.moodle.org/stable20/ \
-		http://download3.moodle.org/stable20/ \
-		http://download4.moodle.org/stable20/
+MASTER_SITES=	http://download.moodle.org/stable21/ \
+		http://download2.moodle.org/stable21/ \
+		http://download3.moodle.org/stable21/ \
+		http://download4.moodle.org/stable21/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wenheping@gmail.com
@@ -50,6 +50,12 @@ CONF_FILES=		${PREFIX}/${EGDIR}/moodle.conf \
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
+SUBST_CLASSES+=			bash
+SUBST_MESSAGE.bash=		Replacing /bin/bash with ${SH}
+SUBST_STAGE.bash=		post-patch
+SUBST_FILES.bash=		lib/editor/tinymce/extra/tools/download_langs.sh
+SUBST_SED.bash=			-e "s,/bin/bash,${SH},g"
+
 SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
 SUBST_STAGE.conf=	post-patch
@@ -60,7 +66,14 @@ SUBST_SED.conf+=	-e "s,@MOODLEDATADIR@,${MOODLEDATADIR},g"
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing the path of php.
 SUBST_STAGE.php=	post-patch
-SUBST_FILES.php=	admin/mailout-debugger.php admin/process_email.php mod/chat/chatd.php
+SUBST_FILES.php=	admin/cli/mysql_engine.php admin/cli/maintenance.php admin/cli/cron.php
+SUBST_FILES.php+=	admin/cli/reset_password.php admin/cli/automated_backups.php
+SUBST_FILES.php+=	admin/cli/install.php admin/cli/install_database.php admin/cli/upgrade.php
+SUBST_FILES.php+=	admin/mailout-debugger.php admin/process_email.php
+SUBST_FILES.php+=	auth/ldap/cli/sync_users.php auth/cas/cli/sync_users.php auth/db/cli/sync_users.php
+SUBST_FILES.php+=	enrol/ldap/cli/sync.php enrol/database/cli/sync.php enrol/category/cli/sync.php
+SUBST_FILES.php+=	lib/pear/PHP/runsniffer lib/spikephpcoverage/src/cli/instrument.php
+SUBST_FILES.php+=	mod/chat/chatd.php
 SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
 SUBST_CLASSES+=		perl
