@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/10 14:19:38 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/08/09 07:35:41 adam Exp $
 
-SHA1 (B-Hooks-OP-Annotation-0.43.tar.gz) = 0e18c6e2890718aa25db2bd746e381e2ae9ded7d
-RMD160 (B-Hooks-OP-Annotation-0.43.tar.gz) = 7348781f8d35ea63fc32ec14904da4718f83713a
-Size (B-Hooks-OP-Annotation-0.43.tar.gz) = 49437 bytes
+SHA1 (B-Hooks-OP-Annotation-0.44.tar.gz) = 5997fbc426b5912ecffeef7bcb24335f53c7349b
+RMD160 (B-Hooks-OP-Annotation-0.44.tar.gz) = d6a1b59486692a3d182c09e43df1cc8a8feb5464
+Size (B-Hooks-OP-Annotation-0.44.tar.gz) = 49974 bytes
