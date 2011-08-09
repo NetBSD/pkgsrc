@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1887 2011/08/09 07:22:52 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1888 2011/08/09 14:52:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/capistrano to 2.8.0 [gls 2011-08-08]
 	Added fonts/nanum-ttf version 3.0 [minskim 2011-08-08]
 	Updated filesystems/perfuse to 20110809 [manu 2011-08-09]
+	Updated fonts/umefont-ttf to 0.430 [ryoon 2011-08-09]
