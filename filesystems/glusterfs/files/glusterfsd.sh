@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: glusterfsd.sh,v 1.6 2011/07/23 01:14:44 manu Exp $
+# $NetBSD: glusterfsd.sh,v 1.7 2011/08/09 07:15:42 manu Exp $
 #
 
 # PROVIDE: glusterfsd
