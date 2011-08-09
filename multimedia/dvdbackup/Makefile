@@ -1,29 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2011/02/28 14:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2011/08/09 20:56:27 adam Exp $
 
-DISTNAME=	dvdbackup-0.1.1
-PKGREVISION=	5
+DISTNAME=	dvdbackup-0.4.1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://dvd-create.sourceforge.net/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdbackup/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dvd-create.sourceforge.net/
+HOMEPAGE=	http://dvdbackup.sourceforge.net/
 COMMENT=	DVD backup utility
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/dvdbackup/src
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-build:
-	cd ${WRKSRC}; \
-	${CC} -o dvdbackup dvdbackup.c ${CFLAGS} ${LDFLAGS} -ldvdread
-
-do-install:
-	cd ${WRKSRC}; \
-	${INSTALL_PROGRAM} dvdbackup ${DESTDIR}${PREFIX}/bin;
-	${INSTALL_MAN} ${FILESDIR}/dvdbackup.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+GNU_CONFIGURE=		yes
 
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
