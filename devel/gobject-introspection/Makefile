@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2011/05/13 17:12:19 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2011/08/09 16:28:03 ryoon Exp $
 #
 
 DISTNAME=	gobject-introspection-0.10.8
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/0.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config flex bison gmake
+
+CONFIGURE_ARGS+=	--disable-tests
 
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
@@ -44,7 +47,6 @@ TEST_TARGET=	check
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
