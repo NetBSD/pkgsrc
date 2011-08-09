@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1892 2011/08/09 19:29:39 gls Exp $
+$NetBSD: CHANGES-2011,v 1.1893 2011/08/09 20:58:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2858,3 +2858,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/aria2 to 1.12.1 [ryoon 2011-08-09]
 	Updated www/moodle to 2.1.1 [gls 2011-08-09]
 	Updated audio/libmodplug to 0.8.8.4 [gls 2011-08-09]
+	Updated multimedia/libdvdread to 4.1.3nb1 [adam 2011-08-09]
+	Updated multimedia/dvdbackup to 0.4.1 [adam 2011-08-09]
