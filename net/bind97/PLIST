@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/02/16 17:43:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/08/10 15:26:11 taca Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -362,6 +362,7 @@ share/doc/bind9/arm/man.nsupdate.html
 share/doc/bind9/arm/man.rndc-confgen.html
 share/doc/bind9/arm/man.rndc.conf.html
 share/doc/bind9/arm/man.rndc.html
+share/doc/bind9/draft/draft-faltstrom-uri-06.txt
 share/doc/bind9/draft/draft-ietf-6man-text-addr-representation-07.txt
 share/doc/bind9/draft/draft-ietf-behave-address-format-07.txt
 share/doc/bind9/draft/draft-ietf-behave-dns64-11.txt
@@ -371,13 +372,13 @@ share/doc/bind9/draft/draft-ietf-dnsext-dnssec-bis-updates-12.txt
 share/doc/bind9/draft/draft-ietf-dnsext-dnssec-registry-fixes-06.txt
 share/doc/bind9/draft/draft-ietf-dnsext-ecc-key-07.txt
 share/doc/bind9/draft/draft-ietf-dnsext-interop3597-02.txt
-share/doc/bind9/draft/draft-ietf-dnsext-rfc2671bis-edns0-02.txt
+share/doc/bind9/draft/draft-ietf-dnsext-rfc2671bis-edns0-05.txt
 share/doc/bind9/draft/draft-ietf-dnsext-rfc2672bis-dname-19.txt
 share/doc/bind9/draft/draft-ietf-dnsext-rfc3597-bis-02.txt
 share/doc/bind9/draft/draft-ietf-dnsext-tsig-md5-deprecated-03.txt
 share/doc/bind9/draft/draft-ietf-dnsop-bad-dns-res-05.txt
 share/doc/bind9/draft/draft-ietf-dnsop-default-local-zones-10.txt
-share/doc/bind9/draft/draft-ietf-dnsop-dnssec-key-timing-00.txt
+share/doc/bind9/draft/draft-ietf-dnsop-dnssec-key-timing-02.txt
 share/doc/bind9/draft/draft-ietf-dnsop-dnssec-trust-history-01.txt
 share/doc/bind9/draft/draft-ietf-dnsop-inaddr-required-07.txt
 share/doc/bind9/draft/draft-ietf-dnsop-name-server-management-reqs-02.txt
