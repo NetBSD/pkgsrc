@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/07/12 00:35:18 seb Exp $
+$NetBSD: distinfo,v 1.9 2011/08/10 08:46:11 adam Exp $
 
-SHA1 (common-sense-3.3.tar.gz) = 26ab5aa5d171267a8ae02c894a57d0cb0e651d15
-RMD160 (common-sense-3.3.tar.gz) = 3e4b68bccbb1535c26b123c8034a4da29b09592d
-Size (common-sense-3.3.tar.gz) = 11372 bytes
+SHA1 (common-sense-3.4.tar.gz) = 1f0a99a882c222b7b5000ccfaf5ea22dd28ca2b6
+RMD160 (common-sense-3.4.tar.gz) = 679bc9469a1df52c25f0ce88c5abd02d8b0f639e
+Size (common-sense-3.4.tar.gz) = 11717 bytes
