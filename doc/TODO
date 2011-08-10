@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10483 2011/08/09 17:02:02 ryoon Exp $
+$NetBSD: TODO,v 1.10484 2011/08/10 15:28:09 taca Exp $
 
 Suggested new packages
 ======================
@@ -1024,7 +1024,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmotif-2.3.3
 	o openmsx-0.8.1
 	o openoffice3-3.3
-	o openssh-5.8p1
 	o openssl-1.0.0d [pkg/44717]
 	o open-vm-tools-2010.09.19.301124
 	o openttd-1.1.1
@@ -1287,7 +1286,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
-	o valgrind-3.6.0
+	o valgrind-3.6.1
 	o vbetool-1.1
 	o vcdimager-0.7.24
 	o vera-1.17
@@ -1329,7 +1328,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o worker-2.18.0
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9g
-	o wxGTK28-2.8.11
+	o wxGTK28-2.8.12
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
