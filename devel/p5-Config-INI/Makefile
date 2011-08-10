@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/09/08 05:38:03 sno Exp $
-#
+# $NetBSD: Makefile,v 1.5 2011/08/10 08:33:08 adam Exp $
 
-DISTNAME=	Config-INI-0.016
+DISTNAME=	Config-INI-0.018
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
@@ -14,10 +12,10 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Config/INI/.packlist
-
 DEPENDS+=	p5-Mixin-Linewise-[0-9]*:../../devel/p5-Mixin-Linewise
+
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Config/INI/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
