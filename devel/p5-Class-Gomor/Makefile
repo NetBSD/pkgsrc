@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 16:33:21 seb Exp $
+# $NetBSD: Makefile,v 1.7 2011/08/10 04:14:51 adam Exp $
 
 DISTNAME=	Class-Gomor-1.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
