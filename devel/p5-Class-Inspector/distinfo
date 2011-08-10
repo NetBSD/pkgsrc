@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/04/23 06:59:31 sno Exp $
+$NetBSD: distinfo,v 1.8 2011/08/10 04:17:23 adam Exp $
 
-SHA1 (Class-Inspector-1.24.tar.gz) = 0ec9ad8743fa212e9a13b4a33aac581f5708649a
-RMD160 (Class-Inspector-1.24.tar.gz) = 93ff9cf478deeadb28208b4a15c38cd275ecec6c
-Size (Class-Inspector-1.24.tar.gz) = 35004 bytes
+SHA1 (Class-Inspector-1.25.tar.gz) = 85a9cf2667dce01f32bbd11ef10328c14bd36c45
+RMD160 (Class-Inspector-1.25.tar.gz) = f13abef727683db84d1c7c0a9273e6d66c740ccb
+Size (Class-Inspector-1.25.tar.gz) = 38462 bytes
