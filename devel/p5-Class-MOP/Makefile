@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2010/09/17 05:52:51 sno Exp $
-#
+# $NetBSD: Makefile,v 1.41 2011/08/10 04:30:01 adam Exp $
 
-DISTNAME=	Class-MOP-1.08
+DISTNAME=	Class-MOP-1.12
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-MOP/
 COMMENT=	Perl 5 module providing a meta object protocol
 LICENSE=	${PERL5_LICENSE}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
 DEPENDS+=	p5-Devel-GlobalDestruction-[0-9]*:../../devel/p5-Devel-GlobalDestruction
@@ -29,12 +30,9 @@ BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace # t/312_a
 BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output # t/310_inline_structor.t
 BUILD_DEPENDS+=	p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
 
-USE_LANGUAGES=	c
-MAKE_JOBS_SAFE= no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-PERL5_PACKLIST=	auto/Class/MOP/.packlist
+USE_LANGUAGES=		c
+MAKE_JOBS_SAFE= 	no
+PERL5_PACKLIST=		auto/Class/MOP/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
