@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2010/08/21 16:34:48 seb Exp $
-#
+# $NetBSD: Makefile,v 1.18 2011/08/10 06:24:06 adam Exp $
 
-DISTNAME=	version-0.82
+DISTNAME=	version-0.93
 PKGNAME=	p5-${DISTNAME}00
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=version/}
 
@@ -14,14 +12,13 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-# would require Module::Build >= 0.3305 - but this will result in circular dependency
-PERL5_MODULE_TYPE= Module::Build
+
+USE_LANGUAGES=		c
+PERL5_PACKLIST=		auto/version/.packlist
+PERL5_MODULE_TYPE=	MakeMaker
 
 REPLACE_PERL+=	lib/version.pm
 REPLACE_PERL+=	vutil/lib/version/vxs.pm
-
-USE_LANGUAGES=	c
-PERL5_PACKLIST=	auto/version/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
