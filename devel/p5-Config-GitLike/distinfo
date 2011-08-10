@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/04/24 17:17:01 seb Exp $
+$NetBSD: distinfo,v 1.3 2011/08/10 08:30:07 adam Exp $
 
-SHA1 (Config-GitLike-1.04.tar.gz) = ca4d7f07f4eb555c2f56722c212901e759b41d91
-RMD160 (Config-GitLike-1.04.tar.gz) = c9533a7a0c99ea22d8ac19a6dc6110ae4625c07e
-Size (Config-GitLike-1.04.tar.gz) = 40319 bytes
+SHA1 (Config-GitLike-1.05.tar.gz) = 18277b6fd013c5c55346e3031b71e7d255703f6e
+RMD160 (Config-GitLike-1.05.tar.gz) = 7eeff0d8e956a852dfacb14e61fb1aac79ae9d64
+Size (Config-GitLike-1.05.tar.gz) = 44126 bytes
