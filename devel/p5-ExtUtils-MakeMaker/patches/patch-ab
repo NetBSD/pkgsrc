@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2009/01/05 12:15:17 he Exp $
+$NetBSD: patch-ab,v 1.4 2011/08/10 12:01:13 adam Exp $
 
 Changes:
  o More general adaptation for BSDs
  o Install scripts in DESTINSTALLSITESCRIPT instead of DESTINSTALLSCRIPT
 
---- lib/ExtUtils/MM_Unix.pm.orig	2008-02-29 01:06:28.000000000 +0100
+--- lib/ExtUtils/MM_Unix.pm.orig	2011-08-05 11:13:10.000000000 +0000
 +++ lib/ExtUtils/MM_Unix.pm
-@@ -931,7 +931,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+@@ -932,7 +932,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
  
      my $libs = '$(LDLOADLIBS)';
  
@@ -15,7 +15,7 @@ Changes:
  	# Use nothing on static perl platforms, and to the flags needed
  	# to link against the shared libperl library on shared perl
  	# platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -2119,7 +2119,7 @@ pure_perl_install ::
+@@ -2060,7 +2060,7 @@ pure_perl_install :: all
  		$(INST_LIB) $(DESTINSTALLPRIVLIB) \
  		$(INST_ARCHLIB) $(DESTINSTALLARCHLIB) \
  		$(INST_BIN) $(DESTINSTALLBIN) \
