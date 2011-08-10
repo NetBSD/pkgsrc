@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1894 2011/08/10 04:58:48 manu Exp $
+$NetBSD: CHANGES-2011,v 1.1895 2011/08/10 10:57:05 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2861,3 +2861,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/libdvdread to 4.1.3nb1 [adam 2011-08-09]
 	Updated multimedia/dvdbackup to 0.4.1 [adam 2011-08-09]
 	Updated filesystems/perfuse to 20110810 [manu 2011-08-10]
+	Updated pkgtools/pkgin to 0.4.2.2 [imil 2011-08-10]
