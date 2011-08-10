@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1896 2011/08/10 15:22:38 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1897 2011/08/10 15:27:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2863,3 +2863,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/perfuse to 20110810 [manu 2011-08-10]
 	Updated pkgtools/pkgin to 0.4.2.2 [imil 2011-08-10]
 	Updated security/openssh to 5.8.2nb3 [taca 2011-08-10]
+	Updated net/bind96 to 9.6.3.1.ESV.5 [taca 2011-08-10]
+	Updated net/bind97 to 9.7.4 [taca 2011-08-10]
