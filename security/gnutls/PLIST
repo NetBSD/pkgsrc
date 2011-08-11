@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.40 2011/07/11 16:10:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.41 2011/08/11 11:03:35 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
 bin/gnutls-serv
-bin/p11tool
 bin/psktool
 bin/srptool
 include/gnutls/abstract.h
