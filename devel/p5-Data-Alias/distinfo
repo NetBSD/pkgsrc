@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/17 08:27:07 obache Exp $
+$NetBSD: distinfo,v 1.3 2011/08/11 17:09:33 adam Exp $
 
-SHA1 (Data-Alias-1.08.tar.gz) = 24bafefeb1be1296e6493fb76891e38ee299cfa3
-RMD160 (Data-Alias-1.08.tar.gz) = 02cf42dcf84b94cfc4355fb94e1288a794333452
-Size (Data-Alias-1.08.tar.gz) = 62816 bytes
+SHA1 (Data-Alias-1.15.tar.gz) = 5152209c3db6146136bffeb3c5e2f5c03a4ca155
+RMD160 (Data-Alias-1.15.tar.gz) = 06c820e8750b0b0621166adc9f5988f6215fb090
+Size (Data-Alias-1.15.tar.gz) = 64648 bytes
