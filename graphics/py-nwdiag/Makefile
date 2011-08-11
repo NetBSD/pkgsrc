@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/07 15:45:04 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/11 12:46:29 obache Exp $
 #
 
-DISTNAME=	nwdiag-0.3.3
+DISTNAME=	nwdiag-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/n/nwdiag/
