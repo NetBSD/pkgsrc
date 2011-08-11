@@ -186,7 +186,7 @@ groff-docs		Install documentation images.
 groonga-suggest-learner	Enable Groonga suggest learner.
 gsasl			Enable SASL support with gsasl.
 gsl			Use GNU Scientific Library.
-gssapi			Enable gssapi support.
+gssapi			Enable gssapi (Kerberos V) support.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
