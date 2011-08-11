@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/05/21 11:12:50 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.26 2011/08/11 09:36:50 tron Exp $
 
 DISTNAME=	demime-1.1d
 CATEGORIES=	mail textproc
@@ -8,7 +7,7 @@ DISTFILES=	${DISTNAME:S/-/./} \
 		demime_junkmail.cf
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://scifi.squawk.com/demime.html
+#HOMEPAGE=	http://scifi.squawk.com/demime.html
 COMMENT=	Tool to scrub mime from mailing lists
 
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
