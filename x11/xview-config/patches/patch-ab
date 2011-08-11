@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2009/12/10 20:34:44 abs Exp $
+$NetBSD: patch-ab,v 1.9 2011/08/11 02:40:52 dholland Exp $
  
 --- XView.cf.orig	1994-06-27 02:09:19.000000000 +0000
 +++ XView.cf
@@ -27,6 +27,13 @@ $NetBSD: patch-ab,v 1.8 2009/12/10 20:34:44 abs Exp $
 -# define LibXViewDefines -DFULL_R5 -I$(OPENWINHOME)/include -DSUNOS41 -DX11R6
 +# define LibXViewDefines -DNO_CAST_VATOAV -DFULL_R5 -I$(OPENWINHOME)/include -DSUNOS41 -DX11R6
  # endif
+ #endif
+ /*
+@@ -232,5 +232,5 @@
+  */
+ #ifndef DebugLibXView
+-#define DebugLibXView NO
++#define DebugLibXView NO
  #endif
  /*
 @@ -259,7 +259,7 @@
