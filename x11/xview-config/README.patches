@@ -1,0 +1,42 @@
+This package uses per-topic patches, rather than per-file patches.
+
+This means some of the patches patch multiple files, and some files
+are patched more than once. The order the patches are applied in
+matters, too. If you use mkpatches or regenerate patches naively you
+*will* screw things up. Don't.
+
+If you need to rebuild any of the existing patches, until such time as
+pkgsrc gets native support for per-topic patches the proper way is to
+(1) make extract, (2) touch work/.patch_done, (3) use quilt or
+Mercurial's mq extension to push and pop the patches one at a time and
+regenerate as necessary. (When done, don't forget to propagate the
+updated patches back to the patches directory if necessary before
+making clean.)
+
+However, in general you shouldn't need to rebuild the existing
+patches; if you have additional changes, in general they should go in
+as additional new patches.
+
+The long-term intent is to move these and the large number of
+xview-lib and xview-clients patches to distfile patches, or maybe even
+to issue a new distfile. However, doing this usefully requires
+organization. Per-topic patches aren't critical for xview-config,
+because there's only a handful of relatively minor changes; however,
+the old way there are 131 patches in xview-lib and 96 in xview-clients
+and (particularly in the absence of cvs rename) it's become nearly
+impossible to work with them, so sorting and reorganization has to be
+done in small steps.
+
+The intent also is for the xview-config patches to be patch-a?-*,
+xview-lib patches to be patch-[b-n]?-* or thereabouts, and the
+xview-clients patches to be patch-[o-z]?-* or thereabouts, so that the
+three sets of patches can be combined later without excessive
+difficulty. These three sets should be disjoint: files in config/ are
+patched in xview-config, files in clients/ are patched in xview-clients,
+and the rest are patched in xview-lib. The build is such that there's
+no overlap at build time.
+
+Hopefully the above is enough information for someone to pick this up
+if I get hit by a bus.
+
+ - dholland 20110811
