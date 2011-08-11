@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2011/08/06 22:58:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.591 2011/08/11 03:51:38 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -556,6 +556,7 @@ SUBDIR+=	ruby-stringex
 SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-textpow
+SUBDIR+=	ruby-tilt
 SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-will-paginate
