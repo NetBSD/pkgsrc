@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.5 2011/03/03 11:39:48 adam Exp $
+$NetBSD: patch-aj,v 1.6 2011/08/11 11:15:00 adam Exp $
 
 --- src/Makefile.in.orig	2010-01-11 11:06:54.000000000 +0000
 +++ src/Makefile.in
-@@ -544,7 +544,7 @@ libgpgme_pthread_la_LDFLAGS = $(no_undef
+@@ -558,7 +558,7 @@ libgpgme_pthread_la_LDFLAGS = $(no_undef
  
  libgpgme_pthread_la_DEPENDENCIES = @LTLIBOBJS@ $(srcdir)/libgpgme.vers
  libgpgme_pthread_la_LIBADD = $(gpgme_res) @LIBASSUAN_LIBS@ @LTLIBOBJS@ \

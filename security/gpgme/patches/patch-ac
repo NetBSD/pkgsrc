@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2011/03/04 11:34:12 obache Exp $
+$NetBSD: patch-ac,v 1.9 2011/08/11 11:15:00 adam Exp $
 
---- configure.orig	2010-01-11 11:06:55.000000000 +0000
+--- configure.orig	2011-06-16 12:44:52.000000000 +0000
 +++ configure
-@@ -16809,7 +16809,7 @@ if test "${ac_cv_lib_pthread_pthread_cre
+@@ -16866,7 +16866,7 @@ if test "${ac_cv_lib_pthread_pthread_cre
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,16 +11,16 @@ $NetBSD: patch-ac,v 1.8 2011/03/04 11:34:12 obache Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -16921,7 +16921,7 @@ fi
+@@ -17020,7 +17020,7 @@ fi
  
+ done
  
- # Checks for header files.
 -for ac_header in sys/select.h
 +for ac_header in rfuncs.h sys/select.h
  do :
    ac_fn_c_check_header_mongrel "$LINENO" "sys/select.h" "ac_cv_header_sys_select_h" "$ac_includes_default"
  if test "x$ac_cv_header_sys_select_h" = x""yes; then :
-@@ -17302,7 +17302,7 @@ else
+@@ -17417,7 +17417,7 @@ else
  /* end confdefs.h.  */
  __thread int foo;
  _ACEOF
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.8 2011/03/04 11:34:12 obache Exp $
    gpgme_cv_tls_works=yes
  else
    gpgme_cv_tls_works=no
-@@ -18105,7 +18105,7 @@ IFS=$as_save_IFS
+@@ -18342,7 +18342,7 @@ IFS=$as_save_IFS
  esac
  fi
  GPGSM=$ac_cv_path_GPGSM

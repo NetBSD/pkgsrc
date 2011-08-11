@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2011/03/03 11:39:47 adam Exp $
+$NetBSD: patch-aa,v 1.10 2011/08/11 11:15:00 adam Exp $
 
 --- src/gpgme-config.in.orig	2009-10-23 13:44:56.000000000 +0000
 +++ src/gpgme-config.in
@@ -13,12 +13,3 @@ $NetBSD: patch-aa,v 1.9 2011/03/03 11:39:47 adam Exp $
  
  # Configure glib.
  libs_glib="@GLIB_LIBS@"
-@@ -120,7 +120,7 @@ while test $# -gt 0; do
- 	    ;;
- 	--libs)
- 	    if test "x$libdir" != "x/usr/lib" -a "x$libdir" != "x/lib"; then
--		output="$output -L$libdir"
-+		output="$output -Wl,-R$libdir -L$libdir"
- 	    fi
- 	    case "$thread_module" in
- 		pthread)
