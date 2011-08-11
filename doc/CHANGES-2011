@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1901 2011/08/11 12:41:35 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1902 2011/08/11 12:46:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2870,3 +2870,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/gnutls to 2.12.8 [adam 2011-08-11]
 	Updated security/gpgme to 1.3.1 [adam 2011-08-11]
 	Updated graphics/py-blockdiag to 0.8.9 [obache 2011-08-11]
+	Updated graphics/py-nwdiag to 0.4.0 [obache 2011-08-11]
