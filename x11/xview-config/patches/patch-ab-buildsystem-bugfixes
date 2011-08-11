@@ -1,0 +1,45 @@
+$NetBSD: patch-ab-buildsystem-bugfixes,v 1.1 2011/08/11 05:50:37 dholland Exp $
+
+Fix a couple outright bugs in the build system as shipped.
+
+ - Install XView.prog, which exists and is needed, and not library.tmpl,
+   which does not exist and is not referenced otherwise.
+
+ - Install in ProjectRoot, not in a fixed location of /usr/X11/xview.
+
+ - Use $(PIC) and $(SHAREDCODEDEF) when compiling for debug shared
+   libraries as well as non-debug shared libraries.
+
+--- Imakefile	Thu Aug 11 01:01:32 2011 -0400
++++ Imakefile	Thu Aug 11 01:05:35 2011 -0400
+@@ -8,7 +8,7 @@
+ /**/# config directory
+ /**/# @(#)Imakefile	1.9 28 Jun 1993 SMI
+ 
+-XVFILES = XView.cf XView.lib XView.obj XView.rules XView.tmpl library.tmpl
++XVFILES = XView.cf XView.lib XView.obj XView.rules XView.tmpl XView.prog
+ CFFILES = $(XVFILES) $(HEADERS)
+ 
+ InstallMultipleDestFlags(install,$(CFFILES),$(CONFIGDIR),$(INSTDATFLAGS))
+--- XView.cf	Thu Aug 11 01:01:32 2011 -0400
++++ XView.cf	Thu Aug 11 01:05:35 2011 -0400
+@@ -101,7 +101,7 @@
+  *	the appropriate value.
+  */
+ #ifndef XVDestDir
+-#define XVDestDir /usr/X11/xview
++#define XVDestDir ProjectRoot
+ #endif
+ /*
+  *	Command to add object modules to the library.
+--- XView.rules	Thu Aug 11 01:01:32 2011 -0400
++++ XView.rules	Thu Aug 11 01:05:35 2011 -0400
+@@ -273,7 +273,7 @@
+ 	$(RM) $@ shared/$@ debugger/$@					@@\
+ 	$(CC) -g -c $(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c		@@\
+ 	$(CP) $*.o debugger/$*.o					@@\
+-	$(CC) -c $(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c				@@\
++	$(CC) -c $(PIC) $(SHAREDCODEDEF) $(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c	@@\
+ 									@@\
+ clean::									@@\
+ 	$(RM) strings*                                                  @@\

@@ -1,0 +1,70 @@
+$NetBSD: patch-az-pkgsrc-config,v 1.1 2011/08/11 05:50:37 dholland Exp $
+
+Configure for pkgsrc.
+
+ - Install the imake files explicitly under $(PREFIX). While the given
+   path is the same as $(CONFIGDIR) for pkgsrc X, for native X using
+   $(CONFIGDIR) would drop the XView imake files in /usr/X11R[67] and
+   we don't want that.
+
+ - Set OnlyNeedsNewXViewConfigInstalled, which doesn't mean what it
+   sounds like it means and will get cleaned up at some future point.
+
+ - Add -DNO_CAST_VATOAV to avoid undefined behavior handling va_list.
+
+ - Turn off OsHasMmap. Not sure why (been this way since the initial
+   pkgsrc import), but I'll leave it for now.
+
+ - Use the pkgsrc mkdirhier.
+
+--- Imakefile	Thu Aug 11 00:54:45 2011 -0400
++++ Imakefile	Thu Aug 11 00:59:56 2011 -0400
+@@ -11,7 +11,7 @@
+ XVFILES = XView.cf XView.lib XView.obj XView.rules XView.tmpl XView.prog
+ CFFILES = $(XVFILES) $(HEADERS)
+ 
+-InstallMultipleDestFlags(install,$(CFFILES),$(CONFIGDIR),$(INSTDATFLAGS))
++InstallMultipleDestFlags(install,$(CFFILES),$(PREFIX)/lib/X11/config,$(INSTDATFLAGS))
+ 
+ depend::
+ 
+--- XView.cf	Thu Aug 11 00:54:45 2011 -0400
++++ XView.cf	Thu Aug 11 00:59:56 2011 -0400
+@@ -139,7 +139,7 @@
+  *	installed in $(DESTDIR)/lib/X11/config (aka $(CONFIGDIR)).
+  */ 
+ #ifndef OnlyNeedsNewXViewConfigInstalled 
+-#define OnlyNeedsNewXViewConfigInstalled NO 
++#define OnlyNeedsNewXViewConfigInstalled YES 
+ #endif 
+ /*
+  *	If you would like the XView man pages to be installed in 
+@@ -195,7 +195,7 @@
+ # if PreR4Server
+ # define LibXViewDefines -DPRE_R4_ICCCM
+ # else
+-# define LibXViewDefines -DFULL_R5 -I$(OPENWINHOME)/include -DSUNOS41 -DX11R6
++# define LibXViewDefines -DNO_CAST_VATOAV -DFULL_R5 -I$(OPENWINHOME)/include -DSUNOS41 -DX11R6
+ # endif
+ #endif
+ /*
+@@ -305,7 +305,7 @@
+  *	malloc() and read() will be used instead.
+  */
+ #ifndef OsHasMmap
+-#define OsHasMmap YES
++#define OsHasMmap NO
+ #endif
+ /*
+  *	The implementation of internationalization support in XView depends
+--- XView.tmpl	Thu Aug 11 00:54:45 2011 -0400
++++ XView.tmpl	Thu Aug 11 00:59:56 2011 -0400
+@@ -96,7 +96,7 @@
+  *      Work around small conflict with Project.tmpl file
+  */
+ #if UseInstalled
+-              MKDIRHIER = BourneShell BinDir/mkdirhier
++              MKDIRHIER = mkdirhier
+ #endif
+ 
+ #if OsHasLocale

@@ -1,0 +1,57 @@
+$NetBSD: patch-aa-buildsystem-whitespace,v 1.1 2011/08/11 05:50:37 dholland Exp $
+
+Use whitespace correctly in makefiles.
+
+--- XView.rules	Thu Aug 11 00:25:10 2011 -0400
++++ XView.rules	Thu Aug 11 01:01:32 2011 -0400
+@@ -366,9 +366,9 @@
+ #ifndef InstallSharedLibraryNoBuild
+ #define	InstallSharedLibraryNoBuild(libname,rev,dest)				@@\
+ install::  								@@\
+-        $(RM) /dest/lib/**/libname.so                                   @@\
++	$(RM) /dest/lib/**/libname.so                                   @@\
+ 	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
+-        (cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
++	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
+ 
+ #endif /* InstallSharedLibraryNoBuild */
+ 
+--- XView.tmpl	Thu Aug 11 00:25:10 2011 -0400
++++ XView.tmpl	Thu Aug 11 01:01:32 2011 -0400
+@@ -356,10 +356,10 @@
+ 
+ #if SystemV4
+              SYSV_CLIENT_LIB = -lintl -ldl
+-	     XVCLIENTSYSDEFINES = -DSVR4 -DSYSV
++             XVCLIENTSYSDEFINES = -DSVR4 -DSYSV
+ #else
+              SYSV_CLIENT_LIB =
+-	     XVCLIENTSYSDEFINES = -DSUNOS41
++             XVCLIENTSYSDEFINES = -DSUNOS41
+ #endif
+ 
+ /*
+@@ -371,16 +371,16 @@
+  */
+ 
+ #if XvI18nLevel == 4
+-	XVCLIENTI18NDEFINES = -DOW_I18N_L4 -DOW_I18N_L3 -DOW_I18N -DFULL_R5
+-	XVCLIENTMISCLIB = -lw
+-	XVCLIENTINCLUDES = -I$(OPENWINHOME)/include
++        XVCLIENTI18NDEFINES = -DOW_I18N_L4 -DOW_I18N_L3 -DOW_I18N -DFULL_R5
++        XVCLIENTMISCLIB = -lw
++        XVCLIENTINCLUDES = -I$(OPENWINHOME)/include
+ #else
+-	XVCLIENTI18NDEFINES = -DOW_I18N_L3
+-	XVCLIENTMISCLIB = 
+-	XVCLIENTINCLUDES = 
++        XVCLIENTI18NDEFINES = -DOW_I18N_L3
++        XVCLIENTMISCLIB = 
++        XVCLIENTINCLUDES = 
+ #endif
+ 
+-	XVCLIENTDEFINES = $(XVCLIENTSYSDEFINES) $(XVCLIENTI18NDEFINES)
++        XVCLIENTDEFINES = $(XVCLIENTSYSDEFINES) $(XVCLIENTI18NDEFINES)
+ 
+ /*
+  *	Define libraries for XView clients

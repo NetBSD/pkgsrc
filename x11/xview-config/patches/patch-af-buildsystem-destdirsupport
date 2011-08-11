@@ -1,0 +1,91 @@
+$NetBSD: patch-af-buildsystem-destdirsupport,v 1.1 2011/08/11 05:50:37 dholland Exp $
+
+Add DESTDIR support.
+
+--- XView.lib	Thu Aug 11 00:53:28 2011 -0400
++++ XView.lib	Thu Aug 11 00:54:45 2011 -0400
+@@ -6,14 +6,14 @@
+ #include BandAidCompiler
+ #endif
+ install::
+-	$(MKDIRHIER) $(LIBRARY_DEST)
++	$(MKDIRHIER) $(DESTDIR)$(LIBRARY_DEST)
+ 
+ #if DebugLibXView
+-InstallLibraryNoBuild(${LIBTARGET}_d,$(LIBRARY_DEST))
++InstallLibraryNoBuild(${LIBTARGET}_d,$(DESTDIR)$(LIBRARY_DEST))
+ #endif
+ 
+ #if ProfileLibXView
+-InstallLibraryNoBuild(${LIBTARGET}_p,$(LIBRARY_DEST))
++InstallLibraryNoBuild(${LIBTARGET}_p,$(DESTDIR)$(LIBRARY_DEST))
+ #endif
+ 
+ #if SharedLibXView
+@@ -24,14 +24,14 @@
+ # endif
+ # if !NoDataObjs
+ SubdirBuildNormalSharedLibraryDataTarget(${LIBTARGET},${SOREV},$(UNSHARED_DIR))
+-InstallSharedLibraryDataNoBuild(${LIBTARGET},${SOREV},$(LIBRARY_DEST))
++InstallSharedLibraryDataNoBuild(${LIBTARGET},${SOREV},$(DESTDIR)$(LIBRARY_DEST))
+ # endif
+-InstallSharedLibraryNoBuild(${LIBTARGET},${SOREV},$(LIBRARY_DEST))
++InstallSharedLibraryNoBuild(${LIBTARGET},${SOREV},$(DESTDIR)$(LIBRARY_DEST))
+ #endif
+ 
+-InstallLibraryNoBuild(${LIBTARGET}, $(LIBRARY_DEST))
++InstallLibraryNoBuild(${LIBTARGET}, $(DESTDIR)$(LIBRARY_DEST))
+ SubdirLintLibraryBuild(${LIBTARGET},lint)
+-InstallLintLibrary(${LIBTARGET},$(LINT_LIBRARY_DEST))
++InstallLintLibrary(${LIBTARGET},$(DESTDIR)$(LINT_LIBRARY_DEST))
+ 
+ #ifndef IncludePopulateSCCS
+ #define IncludePopulateSCCS YES
+--- XView.obj	Thu Aug 11 00:53:28 2011 -0400
++++ XView.obj	Thu Aug 11 00:54:45 2011 -0400
+@@ -88,14 +88,14 @@
+ BuildIncludes($(HDRSPUBLIC),$(PUB_INCDIR),.)
+ 
+ install::
+-	$(MKDIRHIER) $(PUB_HEADER_DEST)
++	$(MKDIRHIER) $(DESTDIR)$(PUB_HEADER_DEST)
+ 
+ InstallMultiple($(HDRSPUBLIC),$(PUB_HEADER_DEST))
+ # else
+ BuildIncludes($(HDRSPUBLIC),$(XVPUB_INCDIR),.)
+ 
+ install::
+-	$(MKDIRHIER) $(XVPUB_HEADER_DEST)
++	$(MKDIRHIER) $(DESTDIR)$(XVPUB_HEADER_DEST)
+ 
+ InstallMultiple($(HDRSPUBLIC),$(XVPUB_HEADER_DEST))
+ # endif
+@@ -110,12 +110,12 @@
+ # if InstallPrivateHeaders
+ #  if NotLibXView
+ install::
+-	$(MKDIRHIER) $(PRI_HEADER_DEST)
++	$(MKDIRHIER) $(DESTDIR)$(PRI_HEADER_DEST)
+ 
+ InstallMultiple($(HDRSPRIVATE),$(PRI_HEADER_DEST))
+ #  else
+ install::
+-	$(MKDIRHIER) $(XVPRI_HEADER_DEST)
++	$(MKDIRHIER) $(DESTDIR)$(XVPRI_HEADER_DEST)
+ 
+ InstallMultiple($(HDRSPRIVATE),$(XVPRI_HEADER_DEST))
+ #  endif
+--- XView.prog	Thu Aug 11 00:53:28 2011 -0400
++++ XView.prog	Thu Aug 11 00:54:45 2011 -0400
+@@ -4,9 +4,9 @@
+ 
+ #if HasInfoFiles
+ install::
+-	$(MKDIRHIER) $(HELP_DEST)
++	$(MKDIRHIER) $(DESTDIR)$(HELP_DEST)
+ 
+-InstallNonExecList($(INFOFILES),$(HELP_DEST))
++InstallNonExecList($(INFOFILES),$(DESTDIR)$(HELP_DEST))
+ #endif
+ 
+ #if InstallSrcs
