@@ -1,0 +1,105 @@
+$NetBSD: patch-ae-buildsystem-failstop,v 1.1 2011/08/11 05:50:37 dholland Exp $
+
+Make the build stop on error.
+
+--- XView.rules	Thu Aug 11 01:15:45 2011 -0400
++++ XView.rules	Thu Aug 11 01:16:12 2011 -0400
+@@ -69,7 +69,7 @@
+ 	for i in dirs ;\						@@\
+ 	do \								@@\
+ 		(cd $$i ; echo "making name in $$i"; \			@@\
+-			$(MAKE) PassCDebugFlags $(MFLAGS) name); \	@@\
++		  $(MAKE) PassCDebugFlags $(MFLAGS) name) || exit $$?; \	@@\
+ 	done
+ 
+ #endif /* MakeAnythingSubdirs */
+@@ -110,7 +110,7 @@
+ lib/**/libname.so.rev::  solist						@@\
+ 	-@if [ ! -d dir ]; then mkdir dir; else exit 0; fi		@@\
+ 	@case '${MFLAGS}' in *[i]*) set +e;; esac; \			@@\
+-	for i in solist; do (set -x; $(CP) sub/$$i dir; $(CP) sub/$$i .); done
++	for i in solist; do (set -x; $(CP) sub/$$i dir; $(CP) sub/$$i .) || exit $$?; done
+ 
+ #endif /* SubdirNormalSharedLibraryTarget */
+ 
+@@ -128,7 +128,7 @@
+ 	-@if [ ! -d dir ]; then mkdir dir; else exit 0; fi		@@\
+ 	@case '${MFLAGS}' in *[i]*) set +e;; esac; \			@@\
+ 	for i in salist; do \						@@\
+-	(set -x; $(CP) sub/$$i dir; $(CP) shared/$$i $(SHARED_DIR)); done
++	(set -x; $(CP) sub/$$i dir; $(CP) shared/$$i $(SHARED_DIR)) || exit $$?; done
+ 
+ #endif /* SubdirNormalSharedLibraryDataTarget */
+ 
+@@ -149,7 +149,7 @@
+ 	$(RM) $@~ sodir/lib/**/libname.so.xs.o				@@\
+ 	@if [ -f xstrings ]; then \                                     @@\
+         	$(RM) strings; $(CP) xstrings strings; fi               @@\
+-	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o)		@@\
++	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $$?	@@\
+ 	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
+ 	$(RM) $@  							@@\
+ 	$(MV) $@~ $@							@@\
+@@ -165,7 +165,7 @@
+ 	$(RM) $@~ sodir/lib/**/libname.so.xs.o				@@\
+ 	@if [ -f xstrings ]; then \                                     @@\
+         	$(RM) strings; $(CP) xstrings strings; fi               @@\
+-	(cd sodir; $(LD) -o ../$@~ $(SHLIBLDFLAGS) ?*.o)		@@\
++	(cd sodir; $(LD) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $$?	@@\
+ 	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
+ 	$(RM) $@  							@@\
+ 	$(MV) $@~ $@							@@\
+@@ -217,7 +217,7 @@
+ 									@@\
+ lib/**/libname.sa.rev::  						@@\
+ 	$(RM) $@~							@@\
+-	(cd sadir; $(AR) ../$@~ ?*.o)					@@\
++	(cd sadir; $(AR) ../$@~ ?*.o) || exit $$?			@@\
+ 	$(RM) $@ 							@@\
+ 	$(MV) $@~ $@							@@\
+ 	$(RANLIB) $@							@@\
+@@ -235,7 +235,7 @@
+ 									@@\
+ lib/**/libname.sa.rev::  						@@\
+ 	$(RM) $@~							@@\
+-	(cd sadir; $(AR) ../$@~ ?*.o)					@@\
++	(cd sadir; $(AR) ../$@~ ?*.o) || exit $$?			@@\
+ 	$(RM) $@ 							@@\
+ 	$(MV) $@~ $@							@@\
+ 									@@\
+@@ -389,7 +389,7 @@
+ install::  								@@\
+ 	$(RM) /dest/lib/**/libname.so                                   @@\
+ 	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
+-	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
++	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so) || exit $$?
+ 
+ #endif /* InstallSharedLibraryNoBuild */
+ 
+@@ -471,7 +471,7 @@
+ 	-@if [ ! -f dir/linkname ]; then \				@@\
+ 		echo "linking dir/linkname to filename..." \		@@\
+ 		echo "  cd" dir; cd dir ; $(RM) linkname ; \		@@\
+-		(set -x; $(LN) filename linkname); \			@@\
++		(set -x; $(LN) filename linkname) || exit $$?; \	@@\
+ 	else \								@@\
+ 		echo "dir/linkname exists, no link made." ; \		@@\
+ 	fi
+@@ -483,7 +483,7 @@
+ #ifndef StartNamedTarget
+ #define StartNamedTarget(step,dir,flags)				@@\
+ step:: 									@@\
+-	(cd dir ; $(MAKE) $(MFLAGS) flags step );
++	(cd dir ; $(MAKE) $(MFLAGS) flags step ) || exit $$?;
+ #endif /* StartNamedTarget */
+ 
+ /*
+@@ -498,7 +498,7 @@
+ 		echo "installing $$i"; \				@@\
+ 		$(RM) dest/$$i dest/.$$i; \				@@\
+ 		$(INSTALL) -c $(INSTDATFLAGS) $$i dest ; \ 		@@\
+-		( cd dest; $(MV) $$i .$$i; $(LN) .$$i $$i ); \		@@\
++		( cd dest; $(MV) $$i .$$i; $(LN) .$$i $$i ) || exit $$?; \ @@\
+ 	done
+ #endif /* InstallSupportList */
+ 

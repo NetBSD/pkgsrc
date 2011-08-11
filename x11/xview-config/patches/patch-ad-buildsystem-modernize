@@ -1,0 +1,121 @@
+$NetBSD: patch-ad-buildsystem-modernize,v 1.1 2011/08/11 05:50:37 dholland Exp $
+
+Assorted minor modernizations to the build system.
+
+ - Install all icons and other images by default. By modern standards
+   they're small.
+
+ - Make the default compiler flag for PIC -fPIC, which will work without
+   further fuss in the largest number of environments.
+
+ - Support ELF as well as legacy a.out linking, using $(CC) instead of
+   $(LD) to link in order to get the proper startup files for a library.
+
+ - Write suffix rules that work properly with current make dialects.
+
+ - Some adjoining cosmetic fixups.
+
+--- XView.cf	Thu Aug 11 01:06:50 2011 -0400
++++ XView.cf	Thu Aug 11 01:19:01 2011 -0400
+@@ -259,7 +259,7 @@
+  *	following variable to YES.  
+  */
+ #ifndef InstallAllImages
+-#define InstallAllImages NO
++#define InstallAllImages YES
+ #endif
+ /*
+  *	If you do not already have the textsw extras menu installed in
+@@ -358,9 +358,11 @@
+  *	PositionIndependentCodeFlag should be defined as -K PIC
+  *	If you are running 4.x, then PositionIndependentCodeFlag should
+  *    	be defined as -PIC
++ *	For gcc and most gcc-like modern compilers this should be -fPIC,
++ *	so that'll be the default.
+  */
+ #ifndef PositionIndependentCodeFlag
+-#define PositionIndependentCodeFlag -PIC
++#define PositionIndependentCodeFlag -fPIC
+ #endif
+ 
+ /*
+--- XView.rules	Thu Aug 11 01:06:50 2011 -0400
++++ XView.rules	Thu Aug 11 01:19:01 2011 -0400
+@@ -141,6 +141,23 @@
+  * included in both the .so and the .sa parts of the library.
+  */
+ #ifndef SubdirBuildNormalSharedLibraryTarget
++#if UseElfFormat == YES
++#define SubdirBuildNormalSharedLibraryTarget(libname,rev,solist,sodir)		@@\
++AllTarget(lib/**/libname.so.rev)					@@\
++									@@\
++lib/**/libname.so.rev:: solist 						@@\
++	$(RM) $@~ sodir/lib/**/libname.so.xs.o				@@\
++	@if [ -f xstrings ]; then \                                     @@\
++        	$(RM) strings; $(CP) xstrings strings; fi               @@\
++	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o)		@@\
++	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
++	$(RM) $@  							@@\
++	$(MV) $@~ $@							@@\
++									@@\
++clean::									@@\
++	$(RM) lib/**/libname.so.rev sodir/?*.o strings*
++
++#else
+ #define SubdirBuildNormalSharedLibraryTarget(libname,rev,solist,sodir)		@@\
+ AllTarget(lib/**/libname.so.rev)					@@\
+ 									@@\
+@@ -156,6 +173,7 @@
+ clean::									@@\
+ 	$(RM) lib/**/libname.so.rev sodir/?*.o strings*
+ 
++#endif
+ #endif /* SubdirBuildNormalSharedLibraryTarget */
+ 
+ /*
+@@ -245,8 +263,9 @@
+ 									@@\
+ .c.o:									@@\
+ 	$(RM) $@ shared/$@						@@\
+-	$(CC) $(PIC) $(SHAREDCODEDEF) $(SHLIBDEF) $(CFLAGS) $(STRCONST) -c $*.c \	@@\
+-		-o shared/$*.o						@@\
++	$(CC) -c $(PIC) $(SHAREDCODEDEF) \                              @@\
++		$(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c			@@\
++	$(CP) $*.o shared/$*.o						@@\
+ 									@@\
+ clean::									@@\
+ 	$(RM) strings*							@@\
+@@ -256,24 +275,26 @@
+ #endif /* SubdirSharedLibraryObjectRule */
+ 
+ /*
+- * SubdirSharedAndDebuggedLibraryObjectRule - generate make rules to build shared,
+- * debuggable, and "normal" object files.
++ * SubdirSharedAndDebuggedLibraryObjectRule - generate make rules to
++ * build shared, debuggable, and "normal" object files.
+  */
+ #ifndef SubdirSharedAndDebuggedLibraryObjectRule
+-#define SubdirSharedAndDebuggedLibraryObjectRule()				@@\
++#define SubdirSharedAndDebuggedLibraryObjectRule()			@@\
+ all::									@@\
+ 	-@if [ ! -d shared ]; then mkdir shared; else exit 0; fi	@@\
+ 	-@if [ ! -f $(XSTR_STRINGS_FILE) ]; then \                      @@\
+ 		touch $(XSTR_STRINGS_FILE);  else exit 0; fi            @@\
+-	-@if [ -f strings ]; then $(RM) strings; else exit 0; fi        @@\
+-	$(LN) $(XSTR_STRINGS_FILE) strings                              @@\
++	-@if [ ! -f strings ]; then \                                   @@\
++		$(LN) $(XSTR_STRINGS_FILE) strings; else exit 0; fi     @@\
+ 	-@if [ ! -d debugger ]; then mkdir debugger; else exit 0; fi	@@\
+ 									@@\
+ .c.o:									@@\
+ 	$(RM) $@ shared/$@ debugger/$@					@@\
+-	$(CC) -g -c $(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c		@@\
++	$(CC) -c -g $(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c		@@\
+ 	$(CP) $*.o debugger/$*.o					@@\
+-	$(CC) -c $(PIC) $(SHAREDCODEDEF) $(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c	@@\
++	$(CC) -c $(PIC) $(SHAREDCODEDEF) \                              @@\
++		$(SHLIBDEF) $(CFLAGS) $(STRCONST) $*.c			@@\
++	$(CP) $*.o shared/$*.o						@@\
+ 									@@\
+ clean::									@@\
+ 	$(RM) strings*                                                  @@\

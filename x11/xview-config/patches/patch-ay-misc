@@ -1,0 +1,22 @@
+$NetBSD: patch-ay-misc,v 1.1 2011/08/11 05:50:37 dholland Exp $
+
+_Use is already defined by the standard makefile templates, so don't
+redefine it.
+
+--- XView.tmpl	Thu Aug 11 01:19:03 2011 -0400
++++ XView.tmpl	Thu Aug 11 01:19:06 2011 -0400
+@@ -192,14 +192,6 @@
+                      AS = as
+  */
+ /*
+- *	use the same trick X11R5 does for defining rules for installed libs
+- */
+-#ifdef UseInstalled
+-#define _Use(a,b) a
+-#else
+-#define _Use(a,b) b
+-#endif
+-/*
+  *	Temporary directory used during build process before the include
+  *	files are installed.  This is just a place where symbolic links are
+  *	placed to point back to the actual files in the build hierarchy to

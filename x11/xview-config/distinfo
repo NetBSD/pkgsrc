@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.9 2011/08/11 02:40:52 dholland Exp $
+$NetBSD: distinfo,v 1.10 2011/08/11 05:50:37 dholland Exp $
 
 SHA1 (xview3.2p1-X11R6.tar.gz) = 1cd04231b893c3e6c70b56791d527b498e21a27a
 RMD160 (xview3.2p1-X11R6.tar.gz) = 2f21b14cb088aec887683bbc6d4ed9a3bc3fe2bb
 Size (xview3.2p1-X11R6.tar.gz) = 3436814 bytes
-SHA1 (patch-aa) = a6ec694a489cb6d2da58d73e089974249a30d543
-SHA1 (patch-ab) = cafcf2582ee1267be7e00f403ffe2f6bc3da4280
-SHA1 (patch-ac) = 7f664dd96b3b66d7483f07da476a411bfec49acf
-SHA1 (patch-ad) = d648af539f4261e0bc25b6a3b69dc3b76213c2ed
-SHA1 (patch-ae) = f20b16be4ce57e241ce01b0999fb1ae6d3fbc98a
-SHA1 (patch-af) = 2290db121bd833eaeec6f3c3ee98bd6cbfd9e060
-SHA1 (patch-ag) = 9234826d08daf274da0203e8515c9396e379f016
+SHA1 (patch-aa-buildsystem-whitespace) = 5e36ff70a280196de0d1a2e7bfb3ba72d1df9460
+SHA1 (patch-ab-buildsystem-bugfixes) = dc86fe8e95d2cf4cfdd2a3ea1244240c6cf44c02
+SHA1 (patch-ac-buildsystem-includedir) = 99f258b06cd6bd9a393ebe02400bd5af18393130
+SHA1 (patch-ad-buildsystem-modernize) = 57a1abc9df6ec6797a4b78902ddfdf32ba5b8982
+SHA1 (patch-ae-buildsystem-failstop) = af001a61d76bb244ccc93251266e7a4d941c5d25
+SHA1 (patch-af-buildsystem-destdirsupport) = 75b41aab6700490e7eed2241616212826866a5a8
+SHA1 (patch-ay-misc) = 90097cdba97abd83c856b0e481b1b4b864f96ca4
+SHA1 (patch-az-pkgsrc-config) = 831fa625a6daef2930cbaeafe516cadcb32accf0
