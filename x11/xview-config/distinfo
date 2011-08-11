@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2011/08/11 05:50:37 dholland Exp $
+$NetBSD: distinfo,v 1.11 2011/08/11 06:09:34 dholland Exp $
 
 SHA1 (xview3.2p1-X11R6.tar.gz) = 1cd04231b893c3e6c70b56791d527b498e21a27a
 RMD160 (xview3.2p1-X11R6.tar.gz) = 2f21b14cb088aec887683bbc6d4ed9a3bc3fe2bb
@@ -9,5 +9,6 @@ SHA1 (patch-ac-buildsystem-includedir) = 99f258b06cd6bd9a393ebe02400bd5af1839313
 SHA1 (patch-ad-buildsystem-modernize) = 57a1abc9df6ec6797a4b78902ddfdf32ba5b8982
 SHA1 (patch-ae-buildsystem-failstop) = af001a61d76bb244ccc93251266e7a4d941c5d25
 SHA1 (patch-af-buildsystem-destdirsupport) = 75b41aab6700490e7eed2241616212826866a5a8
+SHA1 (patch-ax-debugswitches) = f2c8b42ce1f85ba898fb0bf55436f7c8f6d156f9
 SHA1 (patch-ay-misc) = 90097cdba97abd83c856b0e481b1b4b864f96ca4
 SHA1 (patch-az-pkgsrc-config) = 831fa625a6daef2930cbaeafe516cadcb32accf0
