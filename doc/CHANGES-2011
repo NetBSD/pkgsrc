@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1898 2011/08/11 10:35:15 adam Exp $
+$NetBSD: CHANGES-2011,v 1.1899 2011/08/11 11:04:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2866,3 +2866,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/bind96 to 9.6.3.1.ESV.5 [taca 2011-08-10]
 	Updated net/bind97 to 9.7.4 [taca 2011-08-10]
 	Updated security/libassuan2 to 2.0.2 [adam 2011-08-11]
+	Updated security/gnupg2 to 2.0.18 [adam 2011-08-11]
+	Updated security/gnutls to 2.12.8 [adam 2011-08-11]
