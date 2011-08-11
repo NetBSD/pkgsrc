@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/04/12 13:17:20 adam Exp $
+$NetBSD: distinfo,v 1.4 2011/08/11 10:34:21 adam Exp $
 
-SHA1 (libassuan-2.0.1.tar.bz2) = b7e9dbd41769cc20b1fb7db9f2ecdf276ffc352c
-RMD160 (libassuan-2.0.1.tar.bz2) = 2064f7f977f7084ba4780e0a87de0c808ee6f680
-Size (libassuan-2.0.1.tar.bz2) = 494384 bytes
+SHA1 (libassuan-2.0.2.tar.bz2) = dbcd96e2525d4c3a2da9e8054a06fa517f20a185
+RMD160 (libassuan-2.0.2.tar.bz2) = 7ba0138d83f242da3fd2ebae6f9deef6383329a6
+Size (libassuan-2.0.2.tar.bz2) = 491172 bytes
 SHA1 (patch-src_Makefile.in) = 30d1e1c156090e761efbae28cdc22f9017bc259f
