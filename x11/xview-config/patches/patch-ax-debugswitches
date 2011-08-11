@@ -1,0 +1,25 @@
+$NetBSD: patch-ax-debugswitches,v 1.1 2011/08/11 06:09:34 dholland Exp $
+
+Vacuous patches that can be hand-edited temporarily to turn on debug
+info and add extra CFLAGS, respectively. Don't regenerate this patch
+or the first hunk will evaporate...
+
+--- XView.cf	Thu Aug 11 00:54:45 2011 -0400
++++ XView.cf	Thu Aug 11 00:59:56 2011 -0400
+@@ -232,7 +232,7 @@
+  *	       size.
+  */
+ #ifndef DebugLibXView
+-#define DebugLibXView NO
++#define DebugLibXView NO
+ #endif
+ /*
+  *	To compile a profiled version of the library, set ProfileLibXView to
+@@ -383,4 +383,7 @@
+ #define StringConstantFlag
+ #endif
+ 
++MYEXTRACFLAGS=
++CDEBUGFLAGS:=$(CDEBUGFLAGS) $(MYEXTRACFLAGS)
++
+ #endif /* XViewCf */
