@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2011/07/11 16:10:29 drochner Exp $
+# $NetBSD: Makefile,v 1.102 2011/08/11 11:03:35 adam Exp $
 
-DISTNAME=	gnutls-2.12.7
+DISTNAME=	gnutls-2.12.8
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		ftp://ftp.gnupg.org/gcrypt/gnutls/ \
@@ -18,16 +18,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-p11-kit
+# this library duplicates (and conflicts with) openssl
+CONFIGURE_ARGS+=	--disable-openssl-compatibility
+
 TEST_TARGET=		check
 INFO_FILES=		yes
 
-USE_TOOLS+=		perl
 REPLACE_PERL+=	doc/scripts/gdoc doc/scripts/sort2.pl
-
-# this library duplicates (and conflicts with) openssl
-CONFIGURE_ARGS+=	--disable-openssl-compatibility
 
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in

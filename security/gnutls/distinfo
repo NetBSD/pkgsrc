@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.74 2011/07/11 16:10:29 drochner Exp $
+$NetBSD: distinfo,v 1.75 2011/08/11 11:03:35 adam Exp $
 
-SHA1 (gnutls-2.12.7.tar.bz2) = 41943d8f8648072a8e6a40cb213c91acf0451937
-RMD160 (gnutls-2.12.7.tar.bz2) = dd1043938087add3ce5e48e6253b5c5cc8140468
-Size (gnutls-2.12.7.tar.bz2) = 7153031 bytes
+SHA1 (gnutls-2.12.8.tar.bz2) = b250d3ddf3fafe69916f248d7ba909ae92022a35
+RMD160 (gnutls-2.12.8.tar.bz2) = 0fc7abac111629fa3f3794ca2d5b1b72972dde00
+Size (gnutls-2.12.8.tar.bz2) = 7153363 bytes
 SHA1 (patch-ab) = 49de2419935972f958acacdffec32388986f1ea0
 SHA1 (patch-ae) = cadc476a6a120390c3c2792b52dd02d27a3884e6
 SHA1 (patch-af) = 321c3488dd383a09dd95f6a15f50b9f54f6aa5fc
 SHA1 (patch-ai) = 2c5c181ec6de9622cac66c2d5fe2cc8f3f89fbe8
-SHA1 (patch-lib_configure) = a3a64d0aed1929d3b4edf91d48f213da23269027
+SHA1 (patch-lib_configure) = 26b1f6c0cf6dd8af27fb1d27513c0d007f7b0da6
 SHA1 (patch-lib_nettle_egd.c) = b7e9769e8c620519c43ca7b7481a558e9d389c68
