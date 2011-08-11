@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/07 06:14:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/08/11 12:40:57 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -114,6 +114,7 @@ ${PYSITELIB}/blockdiag/noderenderer/roundedbox.pyo
 ${PYSITELIB}/blockdiag/noderenderer/textbox.py
 ${PYSITELIB}/blockdiag/noderenderer/textbox.pyc
 ${PYSITELIB}/blockdiag/noderenderer/textbox.pyo
+${PYSITELIB}/blockdiag/tests/diagrams/auto_jumping_edge.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/background_url_image.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/beginpoint_color.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/branched.diag
