@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/09/10 03:35:58 taca Exp $
+# $NetBSD: Makefile,v 1.33 2011/08/12 15:37:54 taca Exp $
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_SUFFIX}
@@ -20,6 +20,7 @@ EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/tk
 WRKSRC=			${RUBY_WRKSRC}/ext/tk
 CONFIGURE_ARGS+=	--with-X11-dir=${X11BASE:Q}
 
+REPLACE_RUBY=		lib/tkextlib/pkg_checker.rb
 REPLACE_RUBY_DIRS=	sample
 INSTALLATION_DIRS=	${RUBY_EG}/tk
 
