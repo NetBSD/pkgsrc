@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2011/06/18 02:02:09 taca Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/12 16:38:48 taca Exp $
 
-DISTNAME=	thrift_client-0.6.2
+DISTNAME=	thrift_client-0.6.3
 CATEGORIES=	devel
 
 MAINTAINER=	tonnerre@NetBSD.org
