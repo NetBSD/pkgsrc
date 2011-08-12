@@ -1,0 +1,13 @@
+Templater has the ability to both copy files from A to B and also to render
+templates using ERB. Templater consists of four parts:
+
+- Actions (File copying routines, templates generation and directories
+  creation routines).
+- Generators (set of rules).
+- Manifolds (generator suites).
+- The command line interface.
+
+Hierarchy is pretty simple: manifold has one or many public and private
+generators. Public ones are supposed to be called by end user. Generators have
+one or more action that specify what they do, where they take files, how they
+name resulting files and so forth.
