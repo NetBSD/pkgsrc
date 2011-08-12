@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 15:03:57 sno Exp $
+$NetBSD: distinfo,v 1.2 2011/08/12 06:55:53 adam Exp $
 
-SHA1 (Debug-Client-0.11.tar.gz) = efdaac99c4e8292e24e66eab6c6af5c79205cf43
-RMD160 (Debug-Client-0.11.tar.gz) = 7f60336ffd8a21290ff86b3b8b10281f8ce658c9
-Size (Debug-Client-0.11.tar.gz) = 23506 bytes
+SHA1 (Debug-Client-0.12.tar.gz) = 82bd0962fc787b4f4cd453bc5382d89045e2a4dc
+RMD160 (Debug-Client-0.12.tar.gz) = 112a106e66078c77c94598f2979ec3d325afb933
+Size (Debug-Client-0.12.tar.gz) = 30339 bytes
