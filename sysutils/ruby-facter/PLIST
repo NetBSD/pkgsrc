@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2011/06/19 03:23:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/08/12 17:14:42 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/INSTALL
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/README.rst
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/bin/facter
 ${GEM_LIBDIR}/conf/osx/PackageInfo.plist
 ${GEM_LIBDIR}/conf/osx/createpackage.sh
@@ -63,7 +60,6 @@ ${GEM_LIBDIR}/lib/facter/uptime.rb
 ${GEM_LIBDIR}/lib/facter/uptime_days.rb
 ${GEM_LIBDIR}/lib/facter/uptime_hours.rb
 ${GEM_LIBDIR}/lib/facter/uptime_seconds.rb
-${GEM_LIBDIR}/lib/facter/util/#uptime.rb#
 ${GEM_LIBDIR}/lib/facter/util/collection.rb
 ${GEM_LIBDIR}/lib/facter/util/confine.rb
 ${GEM_LIBDIR}/lib/facter/util/fact.rb
@@ -121,7 +117,8 @@ ${GEM_LIBDIR}/spec/fixtures/netstat/open_solaris_10
 ${GEM_LIBDIR}/spec/fixtures/netstat/open_solaris_b132
 ${GEM_LIBDIR}/spec/fixtures/netstat/ubuntu_7_04
 ${GEM_LIBDIR}/spec/fixtures/uptime/kstat_boot_time
-${GEM_LIBDIR}/spec/fixtures/uptime/sysctl_kern_boottime
+${GEM_LIBDIR}/spec/fixtures/uptime/sysctl_kern_boottime_big_endian
+${GEM_LIBDIR}/spec/fixtures/uptime/sysctl_kern_boottime_little_endian
 ${GEM_LIBDIR}/spec/fixtures/uptime/ubuntu_proc_uptime
 ${GEM_LIBDIR}/spec/fixtures/uptime/who_b_boottime
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_1/guest
@@ -154,6 +151,7 @@ ${GEM_LIBDIR}/spec/unit/ipaddress6_spec.rb
 ${GEM_LIBDIR}/spec/unit/memory_spec.rb
 ${GEM_LIBDIR}/spec/unit/operatingsystem_spec.rb
 ${GEM_LIBDIR}/spec/unit/operatingsystemrelease_spec.rb
+${GEM_LIBDIR}/spec/unit/physicalprocessorcount_spec.rb
 ${GEM_LIBDIR}/spec/unit/selinux_spec.rb
 ${GEM_LIBDIR}/spec/unit/uptime_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/collection_spec.rb
