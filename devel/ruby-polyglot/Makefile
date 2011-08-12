@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2011/06/08 14:06:06 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/12 16:33:05 taca Exp $
 
-DISTNAME=	polyglot-0.3.1
-PKGREVISION=	1
+DISTNAME=	polyglot-0.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	filip@joyent.com
