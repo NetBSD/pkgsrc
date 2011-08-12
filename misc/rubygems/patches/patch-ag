@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.8 2011/03/23 14:35:05 taca Exp $
+$NetBSD: patch-ag,v 1.9 2011/08/12 15:50:44 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/uninstaller.rb.orig	2011-03-04 00:01:24.000000000 +0000
+--- lib/rubygems/uninstaller.rb.orig	2011-05-26 04:01:53.000000000 +0000
 +++ lib/rubygems/uninstaller.rb
-@@ -52,6 +52,12 @@ class Gem::Uninstaller
-     @bin_dir = options[:bin_dir]
+@@ -51,6 +51,12 @@ class Gem::Uninstaller
+     @bin_dir           = options[:bin_dir]
      @format_executable = options[:format_executable]
  
 +    install_root = options[:install_root]
