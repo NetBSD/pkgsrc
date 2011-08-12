@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/08/20 05:23:29 sno Exp $
+$NetBSD: distinfo,v 1.7 2011/08/12 18:56:24 adam Exp $
 
-SHA1 (ExtUtils-XSpp-0.15.tar.gz) = 4219c1ab4d9b441c41bca1a099cf1bbc731602a5
-RMD160 (ExtUtils-XSpp-0.15.tar.gz) = d455c6037111309e23f8c5fe056a1a4add533249
-Size (ExtUtils-XSpp-0.15.tar.gz) = 172543 bytes
+SHA1 (ExtUtils-XSpp-0.1602.tar.gz) = fc2fd4f46eece8736e89f6ef1f6fdfb440ecca65
+RMD160 (ExtUtils-XSpp-0.1602.tar.gz) = c6412ba9918ea71d0706ee50e454cb1a9d9556d1
+Size (ExtUtils-XSpp-0.1602.tar.gz) = 173721 bytes
