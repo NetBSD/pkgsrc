@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/12 17:30:51 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/webrobots.rb
+${GEM_LIBDIR}/lib/webrobots/nokogiri.rb
+${GEM_LIBDIR}/lib/webrobots/robotstxt.rb
+${GEM_LIBDIR}/lib/webrobots/robotstxt.ry
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_webrobots.rb
+${GEM_LIBDIR}/webrobots.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
