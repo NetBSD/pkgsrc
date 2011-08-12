@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.810 2011/08/12 13:14:29 taca Exp $
+# $NetBSD: Makefile,v 1.811 2011/08/12 17:33:41 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -593,6 +593,8 @@ SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-liquid
 SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-net-flickr
+SUBDIR+=	ruby-net-http-digest_auth
+SUBDIR+=	ruby-net-http-persistent
 SUBDIR+=	ruby-patron
 SUBDIR+=	ruby-rack
 SUBDIR+=	ruby-rack-mount
@@ -604,6 +606,7 @@ SUBDIR+=	ruby-sass
 SUBDIR+=	ruby-sinatra
 SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
+SUBDIR+=	ruby-webrobots
 SUBDIR+=	ruby-webunit
 SUBDIR+=	sarg
 SUBDIR+=	screws
