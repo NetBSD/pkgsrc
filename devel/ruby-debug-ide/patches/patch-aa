@@ -1,25 +1,26 @@
-$NetBSD: patch-aa,v 1.4 2010/12/04 03:55:29 taca Exp $
+$NetBSD: patch-aa,v 1.5 2011/08/12 16:26:48 taca Exp $
 
 Extension is included in ruby-debug-base package and it should be
 installed by pkgsrc's dependency.
 
---- ../ruby-debug-ide-0.4.16.gemspec.orig	2010-12-01 02:42:53.000000000 +0000
+--- ../ruby-debug-ide-0.4.16.gemspec.orig	2011-08-08 02:08:52.000000000 +0000
 +++ ../ruby-debug-ide-0.4.16.gemspec
-@@ -28,8 +28,7 @@ description: |
+@@ -39,8 +39,8 @@ description: |
  email: rubymine-feedback@jetbrains.com
  executables: 
  - rdebug-ide
 -extensions: 
 -- ext/mkrf_conf.rb
 +extensions: []
++
  extra_rdoc_files: []
  
  files: 
-@@ -60,7 +59,6 @@ files: 
+@@ -71,7 +71,6 @@ files: 
  - lib/ruby-debug/version.rb
  - lib/ruby-debug/xml_printer.rb
  - lib/ruby-debug-ide.rb
 -- ext/mkrf_conf.rb
- has_rdoc: true
  homepage: http://rubyforge.org/projects/debug-commons/
  licenses: []
+ 
