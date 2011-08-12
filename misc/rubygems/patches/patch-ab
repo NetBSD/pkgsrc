@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2010/09/16 12:02:05 taca Exp $
+$NetBSD: patch-ab,v 1.13 2011/08/12 15:50:44 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/dependency_installer.rb.orig	2010-04-22 04:43:02.000000000 +0000
+--- lib/rubygems/dependency_installer.rb.orig	2011-05-18 23:36:37.000000000 +0000
 +++ lib/rubygems/dependency_installer.rb
 @@ -38,6 +38,7 @@ class Gem::DependencyInstaller
    # :format_executable:: See Gem::Installer#initialize.
@@ -12,20 +12,25 @@ Add install_root option for pkgsrc's rubygems support.
    # :prerelease:: Allow prerelease versions.  See #install.
    # :security_policy:: See Gem::Installer::new and Gem::Security.
    # :user_install:: See Gem::Installer.new
-@@ -45,7 +46,11 @@ class Gem::DependencyInstaller
+@@ -45,11 +46,15 @@ class Gem::DependencyInstaller
  
    def initialize(options = {})
      if options[:install_dir] then
--      spec_dir = options[:install_dir], 'specifications'
+-      @gem_home = options[:install_dir]
 +      if options[:install_root].nil? or options[:install_root] == "" then
-+        spec_dir = options[:install_dir], 'specifications'
++        @gem_home = options[:install_root].dup
 +      else
-+        spec_dir = options[:install_root], options[:install_dir], 'specifications'
++        @gem_home = options[:install_dir].dup
 +      end
-       @source_index = Gem::SourceIndex.from_gems_in spec_dir
-     else
-       @source_index = Gem.source_index
-@@ -68,7 +73,12 @@ class Gem::DependencyInstaller
+ 
+       Gem::Specification.dirs = @gem_home
+       Gem.ensure_gem_subdirectories @gem_home
+-      options[:install_dir] = @gem_home # FIX: because we suck and reuse below
++#     options[:install_dir] = @gem_home # FIX: because we suck and reuse below
+     end
+ 
+     options = DEFAULT_OPTIONS.merge options
+@@ -69,7 +74,12 @@ class Gem::DependencyInstaller
      @installed_gems = []
  
      @install_dir = options[:install_dir] || Gem.dir
@@ -39,11 +44,11 @@ Add install_root option for pkgsrc's rubygems support.
  
      # Set with any errors that SpecFetcher finds while search through
      # gemspecs for a dep
-@@ -269,6 +279,7 @@ class Gem::DependencyInstaller
+@@ -290,6 +300,7 @@ class Gem::DependencyInstaller
                                  :format_executable   => @format_executable,
                                  :ignore_dependencies => @ignore_dependencies,
                                  :install_dir         => @install_dir,
 +                                :install_root        => @install_root,
                                  :security_policy     => @security_policy,
-                                 :source_index        => @source_index,
                                  :user_install        => @user_install,
+                                 :wrappers            => @wrappers
