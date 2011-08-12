@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.21 2011/08/04 23:43:48 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2011/08/12 06:14:27 mrg Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	theora vorbis xvid faad faac x264 opencore-amr libvpx
+PKG_SUPPORTED_OPTIONS=	theora vorbis xvid faac x264 opencore-amr libvpx
 PKG_SUGGESTED_OPTIONS=	theora vorbis xvid x264 libvpx
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
-#PKG_OPTIONS_GROUP.aac-decoder=	faad faac
+#PKG_OPTIONS_GROUP.aac-decoder=	faac
 
 ### Add vdpau if it is available
 .include "../../multimedia/libvdpau/available.mk"
@@ -16,14 +16,6 @@ PKG_SUGGESTED_OPTIONS+=	vdpau
 .endif
 
 .include "../../mk/bsd.options.mk"
-
-###
-### faad option
-###
-.if !empty(PKG_OPTIONS:Mfaad)
-CONFIGURE_ARGS+=	--enable-libfaad
-.include "../../audio/faad2/buildlink3.mk"
-.endif
 
 ###
 ### faac option
