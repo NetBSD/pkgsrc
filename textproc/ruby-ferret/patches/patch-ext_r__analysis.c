@@ -1,23 +1,24 @@
-$NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
+$NetBSD: patch-ext_r__analysis.c,v 1.2 2011/08/12 17:19:27 taca Exp $
 
 * Switch to modern Ruby's API: http://cvs.pld-linux.org/
 
---- ext/r_analysis.c.orig	2011-06-10 06:23:08.000000000 +0000
+--- ext/r_analysis.c.orig	2011-08-08 00:44:55.000000000 +0000
 +++ ext/r_analysis.c
-@@ -1,6 +1,11 @@
+@@ -1,6 +1,12 @@
 +#include "lang.h"
 +#ifdef RUBY18
  #include <regex.h>
+-#include <locale.h>
+ #include <st.h>
 +#else
 +#include <ruby/regex.h>
-+#endif
- #include <locale.h>
--#include <st.h>
 +#include <ruby/st.h>
++#endif
++#include <locale.h>
  #include "ferret.h"
  #include "analysis.h"
  
-@@ -47,13 +52,15 @@ static ID id_token_stream;
+@@ -47,13 +53,15 @@ static ID id_token_stream;
  
  static VALUE object_space;
  
@@ -34,7 +35,7 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
  }
  
  /****************************************************************************
-@@ -69,11 +76,11 @@ get_stopwords(VALUE rstop_words)
+@@ -69,11 +77,11 @@ get_stopwords(VALUE rstop_words)
      int i, len;
      VALUE rstr;
      Check_Type(rstop_words, T_ARRAY);
@@ -49,7 +50,7 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
          stop_words[i] = rs2s(rstr);
      }
      return stop_words;
-@@ -132,7 +139,7 @@ frt_set_token(Token *tk, VALUE rt)
+@@ -132,7 +140,7 @@ frt_set_token(Token *tk, VALUE rt)
      if (rt == Qnil) return NULL;
  
      Data_Get_Struct(rt, RToken, rtk);
@@ -58,7 +59,7 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
             rtk->start, rtk->end, rtk->pos_inc);
      return tk;
  }
-@@ -372,7 +379,7 @@ frt_token_to_s(VALUE self)
+@@ -372,7 +380,7 @@ frt_token_to_s(VALUE self)
      RToken *token;
      char *buf;
      GET_TK(token, self);
@@ -67,7 +68,7 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
      sprintf(buf, "token[\"%s\":%d:%d:%d]", rs2s(token->text),
              token->start, token->end, token->pos_inc);
      return rb_str_new2(buf);
-@@ -621,7 +628,7 @@ typedef struct RegExpTokenStream {
+@@ -621,7 +629,7 @@ typedef struct RegExpTokenStream {
      VALUE rtext;
      VALUE regex;
      VALUE proc;
@@ -76,7 +77,7 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
  } RegExpTokenStream;
  
  static void
-@@ -689,16 +696,20 @@ frt_rets_get_text(VALUE self)
+@@ -689,16 +697,20 @@ frt_rets_get_text(VALUE self)
      return RETS(ts)->rtext;
  }
  
@@ -100,7 +101,7 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
                           &regs);
  
      if (ret == -2) rb_raise(rb_eStandardError, "regexp buffer overflow");
-@@ -707,15 +718,78 @@ rets_next(TokenStream *ts)
+@@ -707,16 +719,79 @@ rets_next(TokenStream *ts)
      beg = regs.beg[0];
      RETS(ts)->curr_ind = end = regs.end[0];
      if (NIL_P(RETS(ts)->proc)) {
@@ -142,14 +143,14 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
 +        RSTRING_END(str), enc);
 +      else
 +        *start = END(0)+1;
-+    }
+     }
 +    else {
 +      *start = END(0);
-     }
++    }
 +    return rb_reg_nth_match(0, match);
 +  }
 +  return Qnil;
- }
++}
 +//
 +
 +static Token *
@@ -176,13 +177,14 @@ $NetBSD: patch-ext_r__analysis.c,v 1.1 2011/06/19 16:01:52 taca Exp $
 +    return tk_set(&(CachedTS(ts)->token), rs2s(rtok),
 +      RSTRING_LEN(rtok), beg, end, 1);
 +  }
-+}
-+
-+#endif
+ }
  
++#endif
++
  static TokenStream *
  rets_reset(TokenStream *ts, char *text)
-@@ -1029,8 +1103,8 @@ static int frt_add_mappings_i(VALUE key,
+ {
+@@ -1029,8 +1104,8 @@ static int frt_add_mappings_i(VALUE key,
          }
          if (TYPE(key) == T_ARRAY) {
              int i;
