@@ -1,0 +1,15 @@
+# $NetBSD: INSTALL.translations,v 1.1 2011/08/12 12:46:42 taca Exp $
+
+CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
+CT_OWN="@WWWOWN@"
+CT_GRP="@WWWGRP@"
+
+case ${STAGE} in
+POST-INSTALL)
+	cd ${CT_WEBDIR}/system/modules && \
+		for i in */languages; do
+			${CHGRP} -R ${CT_GRP} $i
+			${CHOWN} -R ${CT_OWN} $i
+		done
+	;;
+esac
