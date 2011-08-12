@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/03 05:24:40 sno Exp $
+$NetBSD: distinfo,v 1.3 2011/08/12 07:07:33 adam Exp $
 
-SHA1 (Devel-CheckOS-1.63.tar.gz) = 34161fd31fbdf387a722011110b178406c9d013d
-RMD160 (Devel-CheckOS-1.63.tar.gz) = 7d84a8e1ef65e1b5169892116c9b97e10583e48a
-Size (Devel-CheckOS-1.63.tar.gz) = 29641 bytes
+SHA1 (Devel-CheckOS-1.64.tar.gz) = 3cff5466d2aa4622fbff193d3cae4ba1bb74e622
+RMD160 (Devel-CheckOS-1.64.tar.gz) = 4119372dc4e8684d48c6500be39465b7622c51aa
+Size (Devel-CheckOS-1.64.tar.gz) = 29753 bytes
