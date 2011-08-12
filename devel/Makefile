@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1474 2011/07/29 15:21:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.1475 2011/08/12 16:09:47 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1306,6 +1306,7 @@ SUBDIR+=	ruby-locale-rails
 SUBDIR+=	ruby-lockfile
 SUBDIR+=	ruby-log4r
 SUBDIR+=	ruby-logging
+SUBDIR+=	ruby-loquacious
 SUBDIR+=	ruby-memcache
 SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-metaid
@@ -1344,6 +1345,7 @@ SUBDIR+=	ruby-simple_uuid
 SUBDIR+=	ruby-stream
 SUBDIR+=	ruby-subexec
 SUBDIR+=	ruby-subversion
+SUBDIRS+=	ruby-templater
 SUBDIR+=	ruby-termcolor
 SUBDIR+=	ruby-test-spec
 SUBDIR+=	ruby-test-unit
