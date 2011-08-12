@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/12/04 04:38:20 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/12 17:23:33 taca Exp $
 
-DISTNAME=	treetop-1.4.9
+DISTNAME=	treetop-1.4.10
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rubyonrails.org/
+HOMEPAGE=	https://github.com/nathansobo/treetop
 COMMENT=	Ruby-based text parsing and interpretation DSL
 LICENSE=	mit
 
