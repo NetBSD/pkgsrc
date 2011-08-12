@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1920 2011/08/12 17:11:58 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1921 2011/08/12 17:15:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2915,3 +2915,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ruby-amqp to 0.7.4 [taca 2011-08-12]
 	Updated print/ruby-pdf-reader to 0.10.0 [taca 2011-08-12]
 	Updated print/ruby-pdf-writer to 1.1.8nb1 [taca 2011-08-12]
+	Updated sysutils/capistrano to 2.8.0nb1 [taca 2011-08-12]
+	Updated sysutils/ruby-facter to 1.6.0 [taca 2011-08-12]
