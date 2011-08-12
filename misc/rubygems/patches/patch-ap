@@ -1,10 +1,10 @@
-$NetBSD: patch-ap,v 1.1 2010/09/10 03:48:40 taca Exp $
+$NetBSD: patch-ap,v 1.2 2011/08/12 15:50:44 taca Exp $
 
 Prevent access to HOME when --install-root is used.
 
---- lib/rubygems/doc_manager.rb.orig	2009-06-22 22:54:36.000000000 +0000
+--- lib/rubygems/doc_manager.rb.orig	2011-05-18 23:36:37.000000000 +0000
 +++ lib/rubygems/doc_manager.rb
-@@ -61,7 +61,7 @@ class Gem::DocManager
+@@ -60,7 +60,7 @@ class Gem::DocManager
    ##
    # Updates the RI cache for RDoc 2 if it is installed
  
@@ -13,7 +13,7 @@ Prevent access to HOME when --install-root is used.
      load_rdoc rescue return
  
      return unless defined? RDoc::VERSION # RDoc 1 does not have VERSION
-@@ -72,7 +72,7 @@ class Gem::DocManager
+@@ -71,7 +71,7 @@ class Gem::DocManager
        :use_cache => true,
        :use_system => true,
        :use_site => true,

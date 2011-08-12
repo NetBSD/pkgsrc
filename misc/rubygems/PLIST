@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/03/27 13:02:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/08/12 15:50:44 taca Exp $
 bin/gem${RUBY_VER}.new
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
@@ -41,6 +41,7 @@ ${RUBY_VENDORLIB}/rubygems/defaults.rb
 ${RUBY_VENDORLIB}/rubygems/dependency.rb
 ${RUBY_VENDORLIB}/rubygems/dependency_installer.rb
 ${RUBY_VENDORLIB}/rubygems/dependency_list.rb
+${RUBY_VENDORLIB}/rubygems/deprecate.rb
 ${RUBY_VENDORLIB}/rubygems/doc_manager.rb
 ${RUBY_VENDORLIB}/rubygems/errors.rb
 ${RUBY_VENDORLIB}/rubygems/exceptions.rb
@@ -71,6 +72,7 @@ ${RUBY_VENDORLIB}/rubygems/package/tar_reader/entry.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_test_case.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_writer.rb
 ${RUBY_VENDORLIB}/rubygems/package_task.rb
+${RUBY_VENDORLIB}/rubygems/path_support.rb
 ${RUBY_VENDORLIB}/rubygems/platform.rb
 ${RUBY_VENDORLIB}/rubygems/remote_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/require_paths_builder.rb

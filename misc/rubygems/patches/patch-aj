@@ -1,15 +1,15 @@
-$NetBSD: patch-aj,v 1.6 2010/09/16 12:02:05 taca Exp $
+$NetBSD: patch-aj,v 1.7 2011/08/12 15:50:44 taca Exp $
 
 Use vendordir instead of sitedir.
 
---- lib/rubygems/defaults.rb.orig	2010-04-20 05:57:27.000000000 +0000
+--- lib/rubygems/defaults.rb.orig	2011-05-18 23:36:37.000000000 +0000
 +++ lib/rubygems/defaults.rb
-@@ -18,7 +18,7 @@ module Gem
- 
+@@ -21,7 +21,7 @@ module Gem
    def self.default_dir
-     if defined? RUBY_FRAMEWORK_VERSION then
--      File.join File.dirname(ConfigMap[:sitedir]), 'Gems',
-+      File.join File.dirname(ConfigMap[:vendordir]), 'Gems',
-                 ConfigMap[:ruby_version]
-     elsif ConfigMap[:rubylibprefix] then
-       File.join(ConfigMap[:rubylibprefix], 'gems',
+     path = if defined? RUBY_FRAMEWORK_VERSION then
+              [
+-               File.dirname(ConfigMap[:sitedir]),
++               File.dirname(ConfigMap[:vendordir]),
+                'Gems',
+                ConfigMap[:ruby_version]
+              ]

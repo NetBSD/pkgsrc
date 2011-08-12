@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.28 2011/03/23 14:35:04 taca Exp $
+$NetBSD: distinfo,v 1.29 2011/08/12 15:50:44 taca Exp $
 
-SHA1 (rubygems-1.6.2.tgz) = 32bb7823eb28907c883e194fa7ce0fc1118eb8bc
-RMD160 (rubygems-1.6.2.tgz) = 1994ac432f178612a75ac8454d7962359b87cda5
-Size (rubygems-1.6.2.tgz) = 242518 bytes
-SHA1 (patch-aa) = 8fa88c8b44a792740a695571ce5e66fcbc6cbaca
-SHA1 (patch-ab) = 6e98c1d41e5bb9f824d60073354837ebf2e7d2d1
-SHA1 (patch-ac) = de613df5f7b17e3a9fe5cbc4febe6bebe479dff8
-SHA1 (patch-ad) = 8d37e84782c0724428399507a5fee3b0eb6af2e6
+SHA1 (rubygems-1.8.7.tgz) = 02ab2356c08fe6a8eeb818dcbbc96e231f1512e5
+RMD160 (rubygems-1.8.7.tgz) = 7e309e9705921d10d5d5ec68ed235d5fd14c9776
+Size (rubygems-1.8.7.tgz) = 248796 bytes
+SHA1 (patch-aa) = abb8adc8f8edd0d4b5278f2a375e8b799559d5a4
+SHA1 (patch-ab) = 00c16e5c0a82a26062e6d9d9b7a2d275f8537ab4
+SHA1 (patch-ac) = 7c3e254d120bcb9fb90895a7119eb18920508948
+SHA1 (patch-ad) = 6df1c96bee978425fdc7189af4e8389963b34782
 SHA1 (patch-af) = 0a9f3f4b2b323c9e5578a9080e45cf930b511bd1
-SHA1 (patch-ag) = 94caf33061c1c455388c5e027c13adf6b7811bd6
-SHA1 (patch-ah) = 36ec4d8524dfe2960f6afb7afcd34f8ed2368a60
-SHA1 (patch-aj) = eb079e5b072c65f8b60df33c6b53791bb5129b38
-SHA1 (patch-al) = d0e26e23501274749831ff4bd9f4f8ff8bc774ab
-SHA1 (patch-am) = 83f22425e521ac577d91c17d9b0dcb79e086dc01
-SHA1 (patch-an) = f583e03e69aba2543a2b858a376eb81fb7a4a581
+SHA1 (patch-ag) = fe209f86dd68bfb8de7084b7a64e22a4dd6240f9
+SHA1 (patch-ah) = ef4fc236d7f1686d86104823a8c2a11ba6f89e35
+SHA1 (patch-aj) = 3b77a675470ea3702b9870843d2bb39bb6a83f3e
+SHA1 (patch-al) = beeff0531ff4bd23c0796b1e28805ae6fe2202b0
+SHA1 (patch-am) = 374b16a77a3471958e0fcf7a60633658f9e9d559
+SHA1 (patch-an) = a4de56fc44a4c7556486268344d44640538db108
 SHA1 (patch-ao) = b78557ffaa2df6c251ad7bfce760574e0ef3157a
-SHA1 (patch-ap) = c70cd7cf263ef53fc4fde1fd9b499563dab1325b
-SHA1 (patch-lib_rubygems_require__paths__builder.rb) = d6da3c9e55ed3dd3ab35d9de71c7776cfdfb3fc4
-SHA1 (patch-test_rubygems_test__gem.rb) = 77496b0b8e2c23930d10aa4171667138b6fef33c
+SHA1 (patch-ap) = eaf2bf2fc7cc71139df7ce2677c3ec9fa95d1081
+SHA1 (patch-lib_rubygems_require__paths__builder.rb) = 4c59ff6c4389fdb69308f0ab67e50d47420de099
+SHA1 (patch-test_rubygems_test__gem.rb) = 8bad451e8054fe954c13d28e542509b8adae2764
