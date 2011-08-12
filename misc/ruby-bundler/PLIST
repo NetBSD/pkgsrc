@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/06/11 02:38:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/08/12 16:53:37 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -64,6 +64,7 @@ ${GEM_LIBDIR}/lib/bundler/ui.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/create_file.rb
+${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/create_link.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/directory.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/empty_directory.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/file_manipulation.rb
@@ -73,12 +74,15 @@ ${GEM_LIBDIR}/lib/bundler/vendor/thor/core_ext/file_binary_read.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/core_ext/hash_with_indifferent_access.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/core_ext/ordered_hash.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/error.rb
+${GEM_LIBDIR}/lib/bundler/vendor/thor/group.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/invocation.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/parser.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/parser/argument.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/parser/arguments.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/parser/option.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/parser/options.rb
+${GEM_LIBDIR}/lib/bundler/vendor/thor/rake_compat.rb
+${GEM_LIBDIR}/lib/bundler/vendor/thor/runner.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/shell.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/shell/basic.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/shell/color.rb
@@ -86,6 +90,7 @@ ${GEM_LIBDIR}/lib/bundler/vendor/thor/shell/html.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/task.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/util.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/version.rb
+${GEM_LIBDIR}/lib/bundler/vendored_thor.rb
 ${GEM_LIBDIR}/lib/bundler/version.rb
 ${GEM_LIBDIR}/lib/bundler/vlad.rb
 ${GEM_LIBDIR}/man/bundle-config.ronn
@@ -130,7 +135,6 @@ ${GEM_LIBDIR}/spec/other/init_spec.rb
 ${GEM_LIBDIR}/spec/other/newgem_spec.rb
 ${GEM_LIBDIR}/spec/other/open_spec.rb
 ${GEM_LIBDIR}/spec/other/show_spec.rb
-${GEM_LIBDIR}/spec/pack/gems_spec.rb
 ${GEM_LIBDIR}/spec/quality_spec.rb
 ${GEM_LIBDIR}/spec/resolver/basic_spec.rb
 ${GEM_LIBDIR}/spec/resolver/platform_spec.rb
