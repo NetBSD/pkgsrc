@@ -1,32 +1,65 @@
-$NetBSD: patch-aa,v 1.9 2010/09/16 12:02:05 taca Exp $
+$NetBSD: patch-aa,v 1.10 2011/08/12 15:50:44 taca Exp $
 
-* Make sure to load YAML.
-* Avoid access nil.
+* Relax to allow some attribute could be nil.
+* Complete "http://" to homepage attribute if it isn't begin with it.
 
---- lib/rubygems/specification.rb.orig	2010-04-22 04:43:03.000000000 +0000
+--- lib/rubygems/specification.rb.orig	2011-07-25 23:44:31.000000000 +0000
 +++ lib/rubygems/specification.rb
-@@ -476,6 +476,7 @@ class Gem::Specification
-   # 'input' can be anything that YAML.load() accepts: String or IO.
+@@ -118,6 +118,12 @@ class Gem::Specification
+     @@default_value[k].nil?
+   }
  
-   def self.from_yaml(input)
-+    require 'yaml'
-     input = normalize_yaml_input input
-     spec = YAML.load input
++  # under pkgsrc environment
++  @@pkgsrc_nil_attributes = {}
++  [:authors, :cert_chain, :executables, :extensions, :extra_rdoc_files, :licenses, :required_rubygems_version, :test_files].each do |k|
++    @@pkgsrc_nil_attributes[k] = true
++  end
++
+   ######################################################################
+   # :section: Required gemspec attributes
  
-@@ -837,12 +838,12 @@ class Gem::Specification
+@@ -1950,7 +1956,24 @@ class Gem::Specification
+     normalize
+ 
+     nil_attributes = self.class.non_nil_attributes.find_all do |name|
+-      instance_variable_get("@#{name}").nil?
++      val = instance_variable_get("@#{name}")
++      if val.nil?
++        if @@pkgsrc_nil_attributes.key?(name)
++          case name
++          when :required_rubygems_version
++            val = Gem::Requirement.default
++          else
++            val = []
++          end
++          instance_variable_set("@#{name}", val)
++          false
++        end
++      end
++      if name == :authors and val.empty?
++        val = ['not specified']
++        self.authors = val
++        false
++      end
      end
  
-     @files.delete_if            do |file| File.directory? file end
--    @test_files.delete_if       do |file| File.directory? file end
--    @executables.delete_if      do |file|
-+    @test_files and @test_files.delete_if       do |file| File.directory? file end
-+    @executables and @executables.delete_if      do |file|
-       File.directory? File.join(bindir, file)
+     unless nil_attributes.empty? then
+@@ -2053,10 +2076,15 @@ class Gem::Specification
+       raise Gem::InvalidSpecificationException, "#{lazy} is not a summary"
      end
--    @extra_rdoc_files.delete_if do |file| File.directory? file end
--    @extensions.delete_if       do |file| File.directory? file end
-+    @extra_rdoc_files and @extra_rdoc_files.delete_if do |file| File.directory? file end
-+    @extensions and @extensions.delete_if       do |file| File.directory? file end
  
-     non_files = files.select do |file|
-       !File.file? file
+-    if homepage and not homepage.empty? and
+-       homepage !~ /\A[a-z][a-z\d+.-]*:/i then
+-      raise Gem::InvalidSpecificationException,
++    if homepage and not homepage.empty?
++      if @homepage =~ /\A[a-z][a-z\d+.-]*/i and
++          @homepage !~ /\A[a-z][a-z\d+.-]*:/i
++        @homepage = "http://" + @homepage
++      end
++      if homepage !~ /\A[a-z][a-z\d+.-]*:/i then
++        raise Gem::InvalidSpecificationException,
+             "\"#{homepage}\" is not a URI"
++      end
+     end
+ 
+     # Warnings
