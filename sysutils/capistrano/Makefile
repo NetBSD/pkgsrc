@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/08/08 21:37:52 gls Exp $
+# $NetBSD: Makefile,v 1.9 2011/08/12 17:13:38 taca Exp $
 
 DISTNAME=	capistrano-2.8.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +12,7 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.0.14:../../security/ruby-net-ssh
-DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh-gateway>=1.0.0:../../security/ruby-net-ssh-gateway
+DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh-gateway>=1.1.0:../../security/ruby-net-ssh-gateway
 DEPENDS+=	${RUBY_PKGPREFIX}-net-sftp>=2.0.0:../../security/ruby-net-sftp
 DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=1.0.0:../../security/ruby-net-scp
 DEPENDS+=	${RUBY_PKGPREFIX}-highline>=0:../../devel/ruby-highline
