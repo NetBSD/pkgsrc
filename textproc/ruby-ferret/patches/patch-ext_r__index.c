@@ -1,18 +1,21 @@
-$NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
+$NetBSD: patch-ext_r__index.c,v 1.2 2011/08/12 17:19:27 taca Exp $
 
 * Switch to modern Ruby's API: http://cvs.pld-linux.org/
 
---- ext/r_index.c.orig	2011-06-10 06:23:08.000000000 +0000
+--- ext/r_index.c.orig	2011-08-08 00:44:55.000000000 +0000
 +++ ext/r_index.c
-@@ -1,6 +1,6 @@
+@@ -1,6 +1,10 @@
  #include "ferret.h"
  #include "index.h"
--#include <st.h>
++#ifdef RUBY18
+ #include <st.h>
++#else
 +#include <ruby/st.h>
++#endif
  
  VALUE mIndex;
  
-@@ -765,8 +765,8 @@ frt_te_each(VALUE self)
+@@ -765,8 +769,8 @@ frt_te_each(VALUE self)
      char *term;
      int term_cnt = 0;
      VALUE vals = rb_ary_new2(2);
@@ -23,7 +26,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
  
  
      /* each is being called so there will be no current term */
-@@ -775,8 +775,8 @@ frt_te_each(VALUE self)
+@@ -775,8 +779,8 @@ frt_te_each(VALUE self)
      
      while (NULL != (term = te->next(te))) {
          term_cnt++;
@@ -34,7 +37,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
          rb_yield(vals);
      }
      return INT2FIX(term_cnt);
-@@ -1040,13 +1040,13 @@ frt_tde_each(VALUE self)
+@@ -1040,13 +1044,13 @@ frt_tde_each(VALUE self)
      int doc_cnt = 0;
      TermDocEnum *tde = (TermDocEnum *)DATA_PTR(self);
      VALUE vals = rb_ary_new2(2);
@@ -52,7 +55,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
          rb_yield(vals);
  
      }
-@@ -1212,14 +1212,11 @@ frt_get_tv_term(TVTerm *tv_term)
+@@ -1212,14 +1216,11 @@ frt_get_tv_term(TVTerm *tv_term)
      VALUE rpositions = Qnil;
      rtext = rb_str_new2(tv_term->text);
      if (tv_term->positions) {
@@ -68,7 +71,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
      }
      return rb_struct_new(cTVTerm, rtext, rpositions, NULL);
  }
-@@ -1237,25 +1234,20 @@ frt_get_tv(TermVector *tv)
+@@ -1237,25 +1238,20 @@ frt_get_tv(TermVector *tv)
      TVTerm *terms = tv->terms;
      const int t_cnt = tv->term_cnt;
      const int o_cnt = tv->offset_cnt;
@@ -97,7 +100,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
          }
      }
  
-@@ -1458,19 +1450,19 @@ frt_hash_to_doc_i(VALUE key, VALUE value
+@@ -1458,19 +1454,19 @@ frt_hash_to_doc_i(VALUE key, VALUE value
                  {
                      int i;
                      df->destroy_data = true;
@@ -122,7 +125,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
                  break;
          }
          doc_add_field(doc, df);
-@@ -1498,9 +1490,9 @@ frt_get_doc(VALUE rdoc)
+@@ -1498,9 +1494,9 @@ frt_get_doc(VALUE rdoc)
                  int i;
                  df = df_new("content");
                  df->destroy_data = true;
@@ -135,7 +138,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
                  }
                  doc_add_field(doc, df);
              }
-@@ -1511,13 +1503,13 @@ frt_get_doc(VALUE rdoc)
+@@ -1511,13 +1507,13 @@ frt_get_doc(VALUE rdoc)
              break;
          case T_STRING:
              df = df_add_data_len(df_new("content"), rs2s(rdoc),
@@ -151,7 +154,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
              df->destroy_data = true;
              doc_add_field(doc, df);
              break;
-@@ -1597,14 +1589,14 @@ frt_iw_add_readers(VALUE self, VALUE rre
+@@ -1597,14 +1593,14 @@ frt_iw_add_readers(VALUE self, VALUE rre
      IndexReader **irs;
      Check_Type(rreaders, T_ARRAY);
  
@@ -170,7 +173,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
      free(irs);
      return self;
  }
-@@ -1953,9 +1945,7 @@ frt_lazy_df_load(VALUE self, VALUE rkey,
+@@ -1953,9 +1949,7 @@ frt_lazy_df_load(VALUE self, VALUE rkey,
              rdata = rb_ary_new2(lazy_df->size);
              for (i = 0; i < lazy_df->size; i++) {
                  char *data = lazy_df_get_data(lazy_df, i);
@@ -181,7 +184,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
              }
          }
          rb_hash_aset(self, rkey, rdata);
-@@ -2038,8 +2028,7 @@ frt_get_lazy_doc(LazyDoc *lazy_doc)
+@@ -2038,8 +2032,7 @@ frt_get_lazy_doc(LazyDoc *lazy_doc)
      rb_ivar_set(self, id_data, rdata);
  
      for (i = 0; i < lazy_doc->size; i++) {
@@ -191,7 +194,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
      }
      rb_ivar_set(self, id_fields, rfields);
  
-@@ -2115,11 +2104,11 @@ frt_ir_init(VALUE self, VALUE rdir)
+@@ -2115,11 +2108,11 @@ frt_ir_init(VALUE self, VALUE rdir)
  
      if (TYPE(rdir) == T_ARRAY) {
          VALUE rdirs = rdir;
@@ -205,7 +208,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
              switch (TYPE(rdir)) {
                  case T_DATA:
                      if (CLASS_OF(rdir) == cIndexReader) {
-@@ -2235,11 +2224,11 @@ frt_ir_get_norms_into(VALUE self, VALUE 
+@@ -2235,11 +2228,11 @@ frt_ir_get_norms_into(VALUE self, VALUE 
      int offset;
      offset = FIX2INT(roffset);
      Check_Type(rnorms, T_STRING);
@@ -220,7 +223,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
      }
  
      ir_get_norms_into(ir, frt_field(rfield),
-@@ -2382,8 +2371,7 @@ frt_get_doc_range(IndexReader *ir, int p
+@@ -2382,8 +2375,7 @@ frt_get_doc_range(IndexReader *ir, int p
      len = max - pos;
      ary = rb_ary_new2(len);
      for (i = 0; i < len; i++) {
@@ -230,7 +233,7 @@ $NetBSD: patch-ext_r__index.c,v 1.1 2011/06/19 16:01:52 taca Exp $
      }
      return ary;
  }
-@@ -2410,9 +2398,8 @@ frt_ir_get_doc(int argc, VALUE *argv, VA
+@@ -2410,9 +2402,8 @@ frt_ir_get_doc(int argc, VALUE *argv, VA
              pos = FIX2INT(arg1);
              pos = (pos < 0) ? (max + pos) : pos;
              if (pos < 0 || pos >= max) {
