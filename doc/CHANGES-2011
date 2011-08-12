@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1903 2011/08/12 12:25:46 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1904 2011/08/12 12:57:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2872,3 +2872,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/py-blockdiag to 0.8.9 [obache 2011-08-11]
 	Updated graphics/py-nwdiag to 0.4.0 [obache 2011-08-11]
 	Updated www/ap-php to 5.3.6nb1 [taca 2011-08-12]
+	Updated www/contao29 to 2.9.5nb1 [taca 2011-08-12]
