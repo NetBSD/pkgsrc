@@ -1,9 +1,26 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/07/05 14:39:32 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/08/12 12:48:48 taca Exp $
 #
 # used by www/contao29/Makefile
 # used by www/contao29-example/Makefile
 # used by www/contao29-translations/Makefile
+# used by www/contao210/Makefile
+# used by www/contao210-example/Makefile
+# used by www/contao210-translations/Makefile
 #
+
+# current release
+CT29_VERSION=	2.9.5
+CT210_VERSION=	2.10.0
+
+CT_VERS?=	210
+
+.if ${CT_VERS} == "29"
+CT_VERSION=    ${CT29_VERSION}
+.elif ${CT_VERS} == "210"
+CT_VERSION=    ${CT210_VERSION}
+.else
+.error "Illegal version specified: ${CT_VERS}"
+.endif
 
 CT_VER?=	${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1\2/}
 CT_PKGVER=	${CT_VERSION:S/.RC/rc/}
