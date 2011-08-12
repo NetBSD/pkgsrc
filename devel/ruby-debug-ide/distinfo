@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2010/12/04 03:55:29 taca Exp $
+$NetBSD: distinfo,v 1.7 2011/08/12 16:26:48 taca Exp $
 
 SHA1 (ruby-debug-ide-0.4.16.gem) = 81568a7dc096663e598c13c6764d2a3bbca42a97
 RMD160 (ruby-debug-ide-0.4.16.gem) = 142d6638202eb87132449d76efd199ad95e610ca
 Size (ruby-debug-ide-0.4.16.gem) = 20480 bytes
-SHA1 (patch-aa) = 1c1b79a12585fb6b4c8d7619b3ff30535a31a573
+SHA1 (patch-aa) = 8d00ad0dd67a41297872a5a35e12da77f5d68540
