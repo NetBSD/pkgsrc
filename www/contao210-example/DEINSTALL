@@ -1,0 +1,11 @@
+#!@SH@
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2011/08/12 13:09:03 taca Exp $
+
+CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
+CT_DATA="tl_files/music_academy"
+
+case "${STAGE}" in
+DEINSTALL)
+	cd ${CT_WEBDIR} && ${RM} -rf ${CT_DATA}
+esac
