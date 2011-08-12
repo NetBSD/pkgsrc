@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 16:33:38 seb Exp $
-#
+# $NetBSD: Makefile,v 1.7 2011/08/12 12:13:52 adam Exp $
 
 DISTNAME=	Event-ExecFlow-0.64
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.exit1.org/packages/Event-ExecFlow/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.exit1.org/Event-ExecFlow/
 COMMENT=	High level API for event-based execution flow control
+LICENSE=	${PERL5_LICENSE}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-AnyEvent>=0.4:../../devel/p5-AnyEvent
 DEPENDS+=	p5-Test-Simple>=0.62:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Event/ExecFlow/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Event/ExecFlow/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
