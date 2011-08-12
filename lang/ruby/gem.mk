@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.6 2011/05/10 13:31:49 taca Exp $
+# $NetBSD: gem.mk,v 1.7 2011/08/12 14:35:34 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -11,6 +11,24 @@
 #	resuiqred, set RUBYGEMS_REQD to minimum version.
 #
 #	Default: not defined
+#
+# OVERRIDE_GEMSPEC
+#	Fix version of depending gem.  Specify as gem and dependency
+#	pattern as usual pkgsrc's one.
+#
+#	Example:
+#	    When gemspec contains "json~>1.4.6" as runtime dependency and
+#	    if you want to relax dependency to "json>=1.4.6" then use:
+#
+#		OVERRIDE_GEMSPEC+= json>=1.4.7
+#
+#		or
+#
+#		OVERRIDE_GEMSPEC+= json:json_pure>=1.4.7
+#
+#	    With latter case, depending gem's name will be renamed, too.
+#
+#	Default: (empty)
 #
 # BUILD_TARGET
 #	The Rakefile target that creates a local gem if using the
@@ -69,6 +87,12 @@ REPLACE_RUBY_PAT?=	*
 
 # Default to using rake to build the local gem from the unpacked files.
 GEM_BUILD?=	gemspec
+
+OVERRIDE_GEMSPEC?=	# default is empty
+
+.if !empty(OVERRIDE_GEMSPEC)
+UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
+.endif
 
 .if ${GEM_BUILD} == "rake"
 USE_RAKE=		YES
@@ -199,7 +223,12 @@ PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"
 do-build: _gem-pre-build gem-build
 
 _gem-pre-build:
-	@${STEP_MSG} "Removing backup files of patch before build "
+.if !empty(OVERRIDE_GEMSPEC)
+	@${STEP_MSG} Override gemspec dependency
+	@${RUBY} ${.CURDIR}/${UPDATE_GEMSPEC} ${WRKDIR}/${GEM_NAME}.gemspec \
+		${OVERRIDE_GEMSPEC:Q}
+.endif
+	@${STEP_MSG} "Removing backup files of patch before build"
 	@find ${WRKSRC} -name \*.orig -exec rm {} \;
 
 gem-build: _gem-${GEM_BUILD}-build
@@ -235,7 +264,9 @@ _RUBYGEM_OPTIONS+=	--no-ri
 .if !empty(RUBY_BUILD_RDOC:M[nN][oO])
 _RUBYGEM_OPTIONS+=	--no-rdoc
 .endif
+.if !empty(CONFIGURE_ARGS)
 _RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
+.endif
 
 RUBYGEM_INSTALL_ROOT_OPTION=	--install-root ${RUBYGEM_INSTALL_ROOT}
 
