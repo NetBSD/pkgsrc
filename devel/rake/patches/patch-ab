@@ -1,15 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2010/09/10 05:05:40 taca Exp $
+$NetBSD: patch-ab,v 1.6 2011/08/12 16:01:39 taca Exp $
 
---- ../rake-0.8.7.gemspec.orig	2010-09-08 00:41:33.000000000 +0000
+--- ../rake-0.8.7.gemspec.orig	2011-08-07 22:25:39.000000000 +0000
 +++ ../rake-0.8.7.gemspec
-@@ -10,13 +10,13 @@ bindir: bin
- cert_chain: []
- 
- date: 2009-05-15 04:00:00 +00:00
--default_executable: rake
-+default_executable: rake18
- dependencies: []
- 
+@@ -20,7 +20,7 @@ dependencies: []
  description: Rake is a Make-like program implemented in Ruby. Tasks and dependencies are specified in standard Ruby syntax.
  email: jim@weirichhouse.org
  executables: 
@@ -18,7 +11,7 @@ $NetBSD: patch-ab,v 1.5 2010/09/10 05:05:40 taca Exp $
  extensions: []
  
  extra_rdoc_files: 
-@@ -53,7 +53,7 @@ files: 
+@@ -57,7 +57,7 @@ files: 
  - Rakefile
  - README
  - TODO
@@ -27,7 +20,7 @@ $NetBSD: patch-ab,v 1.5 2010/09/10 05:05:40 taca Exp $
  - lib/rake/alt_system.rb
  - lib/rake/classic_namespace.rb
  - lib/rake/clean.rb
-@@ -127,7 +127,6 @@ files: 
+@@ -131,7 +131,6 @@ files: 
  - test/data/namespace/Rakefile
  - test/data/statusreturn/Rakefile
  - test/data/unittest/Rakefile
@@ -35,7 +28,7 @@ $NetBSD: patch-ab,v 1.5 2010/09/10 05:05:40 taca Exp $
  - doc/command_line_usage.rdoc
  - doc/example
  - doc/example/a.c
-@@ -138,7 +137,7 @@ files: 
+@@ -142,7 +141,7 @@ files: 
  - doc/glossary.rdoc
  - doc/jamis.rb
  - doc/proto_rake.rdoc
