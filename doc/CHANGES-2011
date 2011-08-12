@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1915 2011/08/12 16:51:40 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1916 2011/08/12 17:00:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2904,3 +2904,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-dm-types to 1.1.0nb1 [taca 2011-08-12]
 	Updated databases/ruby-sequel to 3.26.0 [taca 2011-08-12]
 	Updated fonts/ruby-ttfunk to 1.0.2 [taca 2011-08-12]
+	Updated misc/ruby-bundler to 1.0.17 [taca 2011-08-12]
+	Updated misc/ruby-columnize to 0.3.4 [taca 2011-08-12]
+	Updated misc/ruby-commander to 4.0.5 [taca 2011-08-12]
+	Updated misc/ruby-configuration to 1.3.1 [taca 2011-08-12]
+	Updated misc/ruby-launchy to 2.0.5 [taca 2011-08-12]
