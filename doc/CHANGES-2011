@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1917 2011/08/12 17:03:58 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1918 2011/08/12 17:05:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2911,3 +2911,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/ruby-launchy to 2.0.5 [taca 2011-08-12]
 	Updated graphics/ruby-chunky_png to 1.2.1 [taca 2011-08-12]
 	Updated graphics/ruby-mini-magick to 3.3nb1 [taca 2011-08-12]
+	Updated misc/ruby-transaction-simple to 1.4.0nb2 [taca 2011-08-12]
