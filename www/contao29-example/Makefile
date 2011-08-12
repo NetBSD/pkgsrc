@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2011/08/12 12:53:20 taca Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/12 12:56:13 taca Exp $
 #
-
-PKGREVISION=	1
 
 LICENSE=	gnu-lgpl-v3
 
