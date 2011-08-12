@@ -1,22 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2010/09/10 08:20:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/08/12 17:21:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.require_paths
-${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/HISTORY
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/MANIFEST
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/doc/css/normal.css
-${GEM_LIBDIR}/doc/img/raze-tiny.png
-${GEM_LIBDIR}/doc/img/red-cube.jpg
-${GEM_LIBDIR}/doc/img/xml-ruby.png
-${GEM_LIBDIR}/doc/index.xml
-${GEM_LIBDIR}/doc/install.xml
-${GEM_LIBDIR}/doc/layout.rhtml
-${GEM_LIBDIR}/doc/layout.xsl
-${GEM_LIBDIR}/doc/license.xml
-${GEM_LIBDIR}/doc/log/changelog.xml
-${GEM_LIBDIR}/doc/log/changelog.xsl
-${GEM_LIBDIR}/ext/libxml/build.log
+${GEM_LIBDIR}/ext/libxml/extconf.h
 ${GEM_LIBDIR}/ext/libxml/extconf.rb
 ${GEM_LIBDIR}/ext/libxml/libxml.c
 ${GEM_LIBDIR}/ext/libxml/ruby_libxml.h
@@ -82,8 +71,6 @@ ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath_object.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath_object.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpointer.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpointer.h
-${GEM_LIBDIR}/ext/mingw/Rakefile
-${GEM_LIBDIR}/ext/mingw/build.rake
 ${GEM_LIBDIR}/ext/vc/libxml_ruby.sln
 ${GEM_LIBDIR}/lib/libxml.rb
 ${GEM_LIBDIR}/lib/libxml/attr.rb
@@ -107,6 +94,13 @@ ${GEM_LIBDIR}/lib/libxml/xpath_object.rb
 ${GEM_LIBDIR}/lib/libxml_ruby.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/xml.rb
 ${GEM_LIBDIR}/lib/xml/libxml.rb
+${GEM_LIBDIR}/libxml-ruby.gemspec
+${GEM_LIBDIR}/script/benchmark/depixelate
+${GEM_LIBDIR}/script/benchmark/hamlet.xml
+${GEM_LIBDIR}/script/benchmark/parsecount
+${GEM_LIBDIR}/script/benchmark/sock_entries.xml
+${GEM_LIBDIR}/script/benchmark/throughput
+${GEM_LIBDIR}/script/test
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/etc_doc_to_s.rb
 ${GEM_LIBDIR}/test/ets_doc_file.rb
@@ -116,8 +110,11 @@ ${GEM_LIBDIR}/test/ets_node_gc.rb
 ${GEM_LIBDIR}/test/ets_test.xml
 ${GEM_LIBDIR}/test/ets_tsr.rb
 ${GEM_LIBDIR}/test/model/atom.xml
+${GEM_LIBDIR}/test/model/bands.iso-8859-1.xml
+${GEM_LIBDIR}/test/model/bands.utf-8.xml
 ${GEM_LIBDIR}/test/model/bands.xml
 ${GEM_LIBDIR}/test/model/books.xml
+${GEM_LIBDIR}/test/model/kml_sample.xml
 ${GEM_LIBDIR}/test/model/merge_bug_data.xml
 ${GEM_LIBDIR}/test/model/ruby-lang.html
 ${GEM_LIBDIR}/test/model/rubynet.xml
@@ -128,6 +125,7 @@ ${GEM_LIBDIR}/test/model/shiporder.xml
 ${GEM_LIBDIR}/test/model/shiporder.xsd
 ${GEM_LIBDIR}/test/model/soap.xml
 ${GEM_LIBDIR}/test/model/xinclude.xml
+${GEM_LIBDIR}/test/new_main.rb
 ${GEM_LIBDIR}/test/tc_attr.rb
 ${GEM_LIBDIR}/test/tc_attr_decl.rb
 ${GEM_LIBDIR}/test/tc_attributes.rb
@@ -135,8 +133,11 @@ ${GEM_LIBDIR}/test/tc_deprecated_require.rb
 ${GEM_LIBDIR}/test/tc_document.rb
 ${GEM_LIBDIR}/test/tc_document_write.rb
 ${GEM_LIBDIR}/test/tc_dtd.rb
+${GEM_LIBDIR}/test/tc_encoding.rb
 ${GEM_LIBDIR}/test/tc_error.rb
+${GEM_LIBDIR}/test/tc_gc.rb
 ${GEM_LIBDIR}/test/tc_html_parser.rb
+${GEM_LIBDIR}/test/tc_html_parser_context.rb
 ${GEM_LIBDIR}/test/tc_namespace.rb
 ${GEM_LIBDIR}/test/tc_namespaces.rb
 ${GEM_LIBDIR}/test/tc_node.rb
@@ -161,5 +162,6 @@ ${GEM_LIBDIR}/test/tc_xpath.rb
 ${GEM_LIBDIR}/test/tc_xpath_context.rb
 ${GEM_LIBDIR}/test/tc_xpath_expression.rb
 ${GEM_LIBDIR}/test/tc_xpointer.rb
+${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/test_suite.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
