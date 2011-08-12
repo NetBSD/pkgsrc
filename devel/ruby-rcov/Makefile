@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2011/02/21 16:01:15 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/12 16:36:01 taca Exp $
 
-DISTNAME=	rcov-0.9.9
-PKGREVISION=	1
+DISTNAME=	rcov-0.9.10
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/relevance/rcov
-COMMENT=	code coverage analysis for Ruby
+COMMENT=	Code coverage analysis for Ruby
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
 post-install:
