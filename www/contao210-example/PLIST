@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/12 13:09:03 taca Exp $
+${CT_EGDIR}/tl_files/music_academy/admin.gif
+${CT_EGDIR}/tl_files/music_academy/background.gif
+${CT_EGDIR}/tl_files/music_academy/campus/campus_building.jpg
+${CT_EGDIR}/tl_files/music_academy/campus/campus_hall.jpg
+${CT_EGDIR}/tl_files/music_academy/campus/campus_library.jpg
+${CT_EGDIR}/tl_files/music_academy/campus/campus_overview.jpg
+${CT_EGDIR}/tl_files/music_academy/campus/meta.txt
+${CT_EGDIR}/tl_files/music_academy/frontendmodules.gif
+${CT_EGDIR}/tl_files/music_academy/image.png
+${CT_EGDIR}/tl_files/music_academy/james-wilson.jpg
+${CT_EGDIR}/tl_files/music_academy/layout.gif
+${CT_EGDIR}/tl_files/music_academy/modules.gif
+${CT_EGDIR}/tl_files/music_academy/news.gif
+${CT_EGDIR}/tl_files/music_academy/pagemounts.gif
+${CT_EGDIR}/tl_files/music_academy/permissions.gif
+${CT_EGDIR}/tl_files/music_academy/protect.gif
+${CT_EGDIR}/tl_files/music_academy/screenshot.jpg
+${CT_WEBDIR}/templates/music_academy.sql
