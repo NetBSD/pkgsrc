@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/12 16:04:22 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/gutters.rb
+${GEM_LIBDIR}/examples/nested.rb
+${GEM_LIBDIR}/examples/simple.rb
+${GEM_LIBDIR}/lib/loquacious.rb
+${GEM_LIBDIR}/lib/loquacious/configuration.rb
+${GEM_LIBDIR}/lib/loquacious/configuration/help.rb
+${GEM_LIBDIR}/lib/loquacious/configuration/iterator.rb
+${GEM_LIBDIR}/lib/loquacious/core_ext/string.rb
+${GEM_LIBDIR}/lib/loquacious/undefined.rb
+${GEM_LIBDIR}/spec/configuration_spec.rb
+${GEM_LIBDIR}/spec/help_spec.rb
+${GEM_LIBDIR}/spec/iterator_spec.rb
+${GEM_LIBDIR}/spec/loquacious_spec.rb
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/string_spec.rb
+${GEM_LIBDIR}/tmp.rb
+${GEM_LIBDIR}/version.txt
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
