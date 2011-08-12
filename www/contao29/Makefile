@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2011/05/18 13:25:17 taca Exp $
+# $NetBSD: Makefile,v 1.14 2011/08/12 12:50:36 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -20,37 +21,41 @@ DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.2.0:../../net/php-soap
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+CT_VERS=	29
 USE_TOOLS=	pax
 NO_BUILD=	yes
 
+EG_FILES=	config.php countries.php dcaconfig.php editArea.php \
+		fancyUpload.php initconfig.php langconfig.php languages.php \
+		tcpdf.php timezones.php tinyFlash.php tinyMCE.php tinyNews.php
 EG_DATA=	${WWW_EG_FILES} system/config tl_files
-EG_FILES=	system/config/config.php system/config/countries.php \
-		system/config/dcaconfig.php system/config/editArea.php \
-		system/config/fancyUpload.php system/config/initconfig.php \
-		system/config/langconfig.php system/config/languages.php \
-		system/config/tcpdf.php system/config/timezones.php \
-		system/config/tinyFlash.php system/config/tinyMCE.php \
-		system/config/tinyNews.php
-TMPL_FILES=	tl_files/tinymce.css tl_files/tiny_templates/index.html
+EG_TEMPLATES=	tinymce.css tiny_templates/index.html
 WWW_EG_FILES=	basic.css print.css robots.txt
+RESTRICT_DIRS=	system/html system/logs system/tmp templates tl_files
 
-CONF_FILES_PERMS+=	${CT_EGDIR}/system/config/localconfig.php \
-			${CT_WEBDIR}/system/config/localconfig.php \
-			${APACHE_USER} ${APACHE_GROUP} 0600
+CONF_FILES_PERMS+= \
+		${CT_EGDIR}/system/config/localconfig.php \
+		${CT_WEBDIR}/system/config/localconfig.php \
+		${APACHE_USER} ${APACHE_GROUP} 0600
 
-CONF_FILES+=		${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf
+CONF_FILES+=	${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf
 
-.for f in ${EG_FILES}
-CONF_FILES+=		${CT_EGDIR}/${f} ${CT_WEBDIR}/${f}
+.for f in ${EG_CONFIG}
+CONF_FILES+=	${CT_EGDIR}/system/config/${f} ${CT_WEBDIR}/system/config/${f}
 .endfor
 
-.for f in ${TMPL_FILES}
-REQD_FILES+=		${CT_EGDIR}/${f} ${CT_WEBDIR}/${f}
+MAKE_DIRS+=	${CT_WEBDIR}/tl_files/tiny_templates
+
+.for f in ${EG_TEMPLATES}
+REQD_FILES+=	${CT_EGDIR}/tl_files/${f} ${CT_WEBDIR}/tl_files/${f}
 .endfor
 
 .for f in ${WWW_EG_FILES}
-CONF_FILES_PERMS+=	${CT_EGDIR}/${f} ${CT_WEBDIR}/${f} \
-			${APACHE_USER} ${APACHE_GROUP} 0644
+REQD_FILES+=	${CT_EGDIR}/${f} ${CT_WEBDIR}/${f}
+.endfor
+
+.for d in ${RESTRICT_DIRS}
+OWN_DIRS_PERMS+=	${CT_WEBDIR}/${d} ${APACHE_USER} ${APACHE_GROUP} 0770
 .endfor
 
 SUBST_CLASSES+=		conf
@@ -68,26 +73,12 @@ WWW_SYSFILES=	config/.htaccess constants.php contao.css drivers \
 		tmp/.htaccess utf8_lookup.php
 
 INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR} ${CT_WEBDIR}/system/config
-OWN_DIRS_PERMS+= \
-	${CT_WEBDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/plugins ${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/plugins/tcpdf/cache \
-		${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/system ${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/system/drivers ${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/system/html ${REAL_ROOT_USER} ${APACHE_GROUP} 0770 \
-	${CT_WEBDIR}/system/libraries ${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/system/logs ${REAL_ROOT_USER} ${APACHE_GROUP} 0770 \
-	${CT_WEBDIR}/system/modules ${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/system/themes ${REAL_ROOT_USER} ${APACHE_GROUP} 0775 \
-	${CT_WEBDIR}/system/tmp ${REAL_ROOT_USER} ${APACHE_GROUP} 0770 \
-	${CT_WEBDIR}/templates ${REAL_ROOT_USER} ${APACHE_GROUP} 0770 \
-	${CT_WEBDIR}/tl_files ${REAL_ROOT_USER} ${APACHE_GROUP} 0770 \
-	${CT_WEBDIR}/tl_files/tiny_templates \
-		${REAL_ROOT_USER} ${APACHE_GROUP} 0770
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
+
+post-extract:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
 pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
@@ -114,7 +105,6 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/README \
 		${DESTDIR}${PREFIX}/${CT_DOCDIR}
 
-.include "Makefile.version"
 .include "../../www/contao/Makefile.common"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
