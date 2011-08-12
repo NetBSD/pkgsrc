@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/01/20 23:23:20 he Exp $
+$NetBSD: distinfo,v 1.4 2011/08/12 12:44:03 adam Exp $
 
-SHA1 (ExtUtils-Command-1.16.tar.gz) = 03d75e03ed91ef0a3efb900f40af8825a5961850
-RMD160 (ExtUtils-Command-1.16.tar.gz) = 1d68c4ced011e1a8dc1a94afbcbe672087d698bb
-Size (ExtUtils-Command-1.16.tar.gz) = 11999 bytes
+SHA1 (ExtUtils-Command-1.17.tar.gz) = 25c4ca941ef4bbd7d4c9fbe1d2039ac289a38cfe
+RMD160 (ExtUtils-Command-1.17.tar.gz) = b812578311c9eeb624f0a9c54867ff999a10b931
+Size (ExtUtils-Command-1.17.tar.gz) = 19381 bytes
