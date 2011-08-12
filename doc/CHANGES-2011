@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1910 2011/08/12 16:05:57 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1911 2011/08/12 16:10:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2886,3 +2886,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-dbi to 0.4.5nb2 [taca 2011-08-12]
 	Updated devel/rake to 0.8.7nb2 [taca 2011-08-12]
 	Added devel/ruby-loquacious version 1.8.1 [taca 2011-08-12]
+	Added devel/ruby-templater version 1.0.0 [taca 2011-08-12]
