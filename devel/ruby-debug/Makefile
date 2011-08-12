@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/05/28 16:32:10 bad Exp $
+# $NetBSD: Makefile,v 1.8 2011/08/12 16:25:03 taca Exp $
 
 DISTNAME=	ruby-debug-0.10.4
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	devel
 
@@ -11,7 +11,7 @@ COMMENT=	Command line interface for ruby-debug
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${RUBY_PKGPREFIX}-columnize>=0.1:../../misc/ruby-columnize
-DEPENDS+=	${RUBY_PKGPREFIX}-debug-base>=0.10.3:../../devel/ruby-debug-base
+DEPENDS+=	${RUBY_PKGPREFIX}-debug-base>=0.10.4<0.10.5:../../devel/ruby-debug-base
 
 RUBY_VERSION_SUPPORTED= 18
 
