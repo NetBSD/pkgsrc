@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 07:28:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/12 17:01:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.infinity_test
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/BENCHMARKS.rdoc
 ${GEM_LIBDIR}/Gemfile
@@ -279,6 +280,9 @@ ${GEM_LIBDIR}/spec/resources/bezier_three_point_flipped.png
 ${GEM_LIBDIR}/spec/resources/circles.png
 ${GEM_LIBDIR}/spec/resources/clock.png
 ${GEM_LIBDIR}/spec/resources/clock_base.png
+${GEM_LIBDIR}/spec/resources/clock_bl_xdown_ydown.png
+${GEM_LIBDIR}/spec/resources/clock_bl_xdown_yup.png
+${GEM_LIBDIR}/spec/resources/clock_bl_xup_yup.png
 ${GEM_LIBDIR}/spec/resources/clock_mask.png
 ${GEM_LIBDIR}/spec/resources/clock_mask_updated.png
 ${GEM_LIBDIR}/spec/resources/clock_nn_xdown_ydown.png
