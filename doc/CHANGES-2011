@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1914 2011/08/12 16:49:27 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1915 2011/08/12 16:51:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2903,3 +2903,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-dm-serializer to 1.1.0nb1 [taca 2011-08-12]
 	Updated databases/ruby-dm-types to 1.1.0nb1 [taca 2011-08-12]
 	Updated databases/ruby-sequel to 3.26.0 [taca 2011-08-12]
+	Updated fonts/ruby-ttfunk to 1.0.2 [taca 2011-08-12]
