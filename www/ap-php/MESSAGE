@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/03/30 03:25:00 darcy Exp $
+$NetBSD: MESSAGE,v 1.3 2011/08/12 12:24:52 taca Exp $
 
 In order to use this module in your Apache 1.x installation, you need to
 add the following to your httpd.conf file:
 
-  LoadModule php${PKG_PHP_VERSION}_module lib/httpd/mod_php${PKG_PHP_VERSION}.so
+  LoadModule php${PKG_PHP_MAJOR_VERS}_module lib/httpd/mod_php${PKG_PHP_MAJOR_VERS}.so
   AddType application/x-httpd-php .php
 
 You may also add following if you still use .php3 files:
@@ -13,7 +13,7 @@ You may also add following if you still use .php3 files:
 
 For Apache 2.x installation, you need following:
 
-  LoadModule php${PKG_PHP_VERSION}_module lib/httpd/mod_php${PKG_PHP_VERSION}.so
+  LoadModule php${PKG_PHP_MAJOR_VERS}_module lib/httpd/mod_php${PKG_PHP_MAJOR_VERS}.so
   AddHandler application/x-httpd-php .php
 
 You may also add following if you still use .php3 files:
