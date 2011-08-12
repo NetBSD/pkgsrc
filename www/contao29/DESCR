@@ -4,6 +4,3 @@ information). It was formerly known as TYPOlight Open Source CMS. Its open
 architecture allows everybody to extend the system to fit his needs. Contao
 specializes in accessible websites and is accessbile itself (front end and
 back end), rendering valid XHTML pages.
-
-Note: Live update feature would work with contao-liveupdate PKG_OPTION
-enabled, but it might be conflict with regular pkgsrc maintainous.
