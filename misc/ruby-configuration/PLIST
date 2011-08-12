@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2010/12/04 04:12:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/08/12 16:57:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/README.erb
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/config/a.rb
 ${GEM_LIBDIR}/config/b.rb
 ${GEM_LIBDIR}/config/c.rb
 ${GEM_LIBDIR}/config/d.rb
 ${GEM_LIBDIR}/config/e.rb
+${GEM_LIBDIR}/config/f.rb
 ${GEM_LIBDIR}/configuration.gemspec
 ${GEM_LIBDIR}/lib/configuration.rb
 ${GEM_LIBDIR}/samples/a.rb
@@ -16,4 +16,5 @@ ${GEM_LIBDIR}/samples/b.rb
 ${GEM_LIBDIR}/samples/c.rb
 ${GEM_LIBDIR}/samples/d.rb
 ${GEM_LIBDIR}/samples/e.rb
+${GEM_LIBDIR}/samples/f.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
