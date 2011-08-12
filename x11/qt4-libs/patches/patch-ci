@@ -1,9 +1,18 @@
-$NetBSD: patch-ci,v 1.1 2011/03/03 05:50:04 adam Exp $
+$NetBSD: patch-ci,v 1.2 2011/08/12 13:24:07 adam Exp $
 
 Rename argument 'id'; 'id' is a key-word in Objective-C.
 
 --- src/plugins/bearer/corewlan/qcorewlanengine.mm.orig	2011-03-02 13:32:05.000000000 +0000
 +++ src/plugins/bearer/corewlan/qcorewlanengine.mm
+@@ -73,7 +73,7 @@ inline QString qt_NSStringToQString(cons
+ { return QCFString::toQString(reinterpret_cast<const CFStringRef>(nsstr)); }
+ 
+ inline NSString *qt_QStringToNSString(const QString &qstr)
+-{ return [reinterpret_cast<const NSString *>(QCFString::toCFStringRef(qstr)) autorelease]; }
++{ return (NSString *)[reinterpret_cast<const NSString *>(QCFString::toCFStringRef(qstr)) autorelease]; }
+ 
+ 
+ @interface QT_MANGLE_NAMESPACE(QNSListener) : NSObject
 @@ -864,7 +864,7 @@ quint64 QCoreWlanEngine::bytesReceived(c
      return getBytes(interfaceStr,true);
  }
