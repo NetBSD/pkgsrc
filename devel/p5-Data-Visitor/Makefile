@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/08/21 16:33:31 seb Exp $
+# $NetBSD: Makefile,v 1.13 2011/08/12 06:42:15 adam Exp $
 
 DISTNAME=	Data-Visitor-0.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -18,9 +18,9 @@ DEPENDS+=	p5-Test-use-ok>=0:../../devel/p5-Test-use-ok
 DEPENDS+=	p5-Tie-ToObject>=0.01:../../devel/p5-Tie-ToObject
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 
-PERL5_PACKLIST=	auto/Data/Visitor/.packlist
-
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PERL5_PACKLIST=	auto/Data/Visitor/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
