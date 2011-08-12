@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 16:33:34 seb Exp $
-#
+# $NetBSD: Makefile,v 1.7 2011/08/12 07:27:10 adam Exp $
 
 DISTNAME=	Devel-Events-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NU/NUFFIN/}
 
@@ -14,8 +13,8 @@ LICENSE=	mit OR ${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Devel/Events/.packlist
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Devel/Events/.packlist
 
 BUILD_DEPENDS+=	p5-Test-use-ok-[0-9]*:../../devel/p5-Test-use-ok
 DEPENDS+=	p5-Moose>=0.33:../../devel/p5-Moose
