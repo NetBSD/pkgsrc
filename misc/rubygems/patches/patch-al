@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.1 2010/09/10 03:48:40 taca Exp $
+$NetBSD: patch-al,v 1.2 2011/08/12 15:50:44 taca Exp $
 
 Prevent access to HOME when --install-root is used.
 
---- lib/rubygems/commands/install_command.rb.orig	2009-06-22 22:54:36.000000000 +0000
+--- lib/rubygems/commands/install_command.rb.orig	2011-05-18 23:36:37.000000000 +0000
 +++ lib/rubygems/commands/install_command.rb
-@@ -144,7 +144,7 @@ to write the specification by hand.  For
+@@ -148,7 +148,7 @@ to write the specification by hand.  For
            Gem::DocManager.new(gem, options[:rdoc_args]).generate_ri
          end
  
