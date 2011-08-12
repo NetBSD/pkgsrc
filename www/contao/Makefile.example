@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.example,v 1.1.1.1 2010/07/05 14:39:32 taca Exp $
+# $NetBSD: Makefile.example,v 1.2 2011/08/12 12:48:03 taca Exp $
 #
 # used by www/contao29-example/Makefile
 #
@@ -22,7 +22,7 @@ NO_CONFIGURE=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WWW_EG_FILES=	music_academy.css tl_files/music_academy
+WWW_EG_FILES?=	tl_files/music_academy
 WWW_FILE?=	templates/music_academy.sql
 
 .for f in ${WWW_EG_FILES} ${WWW_FILE}
