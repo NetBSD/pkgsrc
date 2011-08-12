@@ -1,0 +1,22 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2011/08/12 13:07:45 taca Exp $
+
+CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
+CT_DIRS="system/config system/drivers system/libraries system/logs \
+	 system/modules system/themes system/config system templates"
+
+case ${STAGE} in
+DEINSTALL)
+	# remove cache files.
+	${FIND} ${CT_WEBDIR}/system/html -type f ! -name index.html \
+		-exec ${RM} -f {} \;
+	${FIND} ${CT_WEBDIR}/plugins/tcpdf/cache -type f ! -name .htaccess \
+		-exec ${RM} -f {} \;
+	;;
+POST-DEINSTALL)
+	(cd ${CT_WEBDIR}
+	for d in ${CT_DIRS}; do
+		${RMDIR} $d >/dev/null 2>&1
+	done)
+	${RMDIR} ${CT_WEBDIR} >/dev/null 2>&1
+	;;
+esac
