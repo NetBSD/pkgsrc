@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/06/19 03:40:08 taca Exp $
+$NetBSD: distinfo,v 1.4 2011/08/12 17:22:41 taca Exp $
 
-SHA1 (stringex-1.2.1.gem) = 54dcb6e194e3240438c8df38b38d3c36e72fb06f
-RMD160 (stringex-1.2.1.gem) = 9612090b90861f008a5092b5ec9352d78a8689fe
-Size (stringex-1.2.1.gem) = 102912 bytes
+SHA1 (stringex-1.3.0.gem) = e8d6a394cc7f465991a755098d0646a84bab4fd9
+RMD160 (stringex-1.3.0.gem) = cab7420c09e2935638489f080dae6d4a35e92494
+Size (stringex-1.3.0.gem) = 103424 bytes
