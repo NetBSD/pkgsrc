@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 04:22:08 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/08/12 15:58:36 taca Exp $
 
 SHA1 (dbi-0.4.5.gem) = 4b56d97772c8e9cbcd0a10414a681c255089a5bc
 RMD160 (dbi-0.4.5.gem) = d92baf34b31d9c9cefdb3780e2e7f20bafd2952c
 Size (dbi-0.4.5.gem) = 73728 bytes
+SHA1 (patch-lib_dbi.rb) = 56dfaeb016a498d2f9525a0499d016f0025f329c
+SHA1 (patch-lib_dbi_columninfo.rb) = 7576fee7475171d16c3c4a7a5c8a25fdf87152c1
