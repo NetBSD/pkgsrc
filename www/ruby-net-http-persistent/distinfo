@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/12 17:29:56 taca Exp $
+
+SHA1 (net-http-persistent-1.8.1.gem) = 59ec653586942f11d16288be360391744707924e
+RMD160 (net-http-persistent-1.8.1.gem) = d23917ea38a125c1301c5a93f3f5a378beebec98
+Size (net-http-persistent-1.8.1.gem) = 16896 bytes
