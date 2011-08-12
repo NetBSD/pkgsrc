@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2011/05/20 08:48:03 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/12 12:53:20 taca Exp $
 #
+
+PKGREVISION=	1
 
 LICENSE=	gnu-lgpl-v3
 
-.include "../../www/contao29/Makefile.version"
+CT_VERS=	29
+WWW_EG_FILES=	music_academy.css tl_files/music_academy
+
 .include "../../www/contao/Makefile.example"
 .include "../../www/contao/Makefile.common"
 .include "../../lang/php/phpversion.mk"
