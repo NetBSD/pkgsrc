@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1908 2011/08/12 15:51:29 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1909 2011/08/12 16:02:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2882,3 +2882,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby19-base to 1.9.2pl290 [taca 2011-08-12]
 	Updated lang/ruby19-1.9.2pl290 [taca 2011-08-12]
 	Updated misc/rubygems to 1.8.7 [taca 2011-08-12]
+	Updated devel/ruby-deprecated to 2.0.1nb1 [taca 2011-08-12]
+	Updated databases/ruby-dbi to 0.4.5nb2 [taca 2011-08-12]
+	Updated devel/rake to 0.8.7nb2 [taca 2011-08-12]
