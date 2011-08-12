@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.809 2011/08/11 03:53:15 jnemeth Exp $
+# $NetBSD: Makefile,v 1.810 2011/08/12 13:14:29 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -101,6 +101,9 @@ SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
 SUBDIR+=	clisp-fastcgi
 #SUBDIR+=	contao		# only contains Makefile fragments
+SUBDIR+=	contao210
+SUBDIR+=	contao210-example
+SUBDIR+=	contao210-translations
 SUBDIR+=	contao29
 SUBDIR+=	contao29-example
 SUBDIR+=	contao29-translations
