@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/03/25 16:52:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/08/12 12:50:36 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.txt
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/INSTALL.txt
@@ -80,6 +80,7 @@ ${CT_WEBDIR}/plugins/editArea/langs/pl.js
 ${CT_WEBDIR}/plugins/editArea/langs/pt.js
 ${CT_WEBDIR}/plugins/editArea/langs/ru.js
 ${CT_WEBDIR}/plugins/editArea/langs/sk.js
+${CT_WEBDIR}/plugins/editArea/langs/sv.js
 ${CT_WEBDIR}/plugins/editArea/langs/zh.js
 ${CT_WEBDIR}/plugins/editArea/license_apache.txt
 ${CT_WEBDIR}/plugins/editArea/license_bsd.txt
@@ -106,6 +107,7 @@ ${CT_WEBDIR}/plugins/editArea/plugins/charmap/langs/pl.js
 ${CT_WEBDIR}/plugins/editArea/plugins/charmap/langs/pt.js
 ${CT_WEBDIR}/plugins/editArea/plugins/charmap/langs/ru.js
 ${CT_WEBDIR}/plugins/editArea/plugins/charmap/langs/sk.js
+${CT_WEBDIR}/plugins/editArea/plugins/charmap/langs/sv.js
 ${CT_WEBDIR}/plugins/editArea/plugins/charmap/langs/zh.js
 ${CT_WEBDIR}/plugins/editArea/plugins/charmap/popup.html
 ${CT_WEBDIR}/plugins/editArea/plugins/test/css/test.css
@@ -127,6 +129,7 @@ ${CT_WEBDIR}/plugins/editArea/plugins/test/langs/pl.js
 ${CT_WEBDIR}/plugins/editArea/plugins/test/langs/pt.js
 ${CT_WEBDIR}/plugins/editArea/plugins/test/langs/ru.js
 ${CT_WEBDIR}/plugins/editArea/plugins/test/langs/sk.js
+${CT_WEBDIR}/plugins/editArea/plugins/test/langs/sv.js
 ${CT_WEBDIR}/plugins/editArea/plugins/test/langs/zh.js
 ${CT_WEBDIR}/plugins/editArea/plugins/test/test.js
 ${CT_WEBDIR}/plugins/editArea/plugins/test/test2.js
@@ -2006,4 +2009,3 @@ ${CT_EGDIR}/system/config/tinyMCE.php
 ${CT_EGDIR}/system/config/tinyNews.php
 ${CT_EGDIR}/tl_files/tiny_templates/index.html
 ${CT_EGDIR}/tl_files/tinymce.css
-${CT_EGDIR}/contao.conf
