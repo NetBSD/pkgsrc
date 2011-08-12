@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2011/06/15 15:14:24 taca Exp $
+$NetBSD: patch-aa,v 1.8 2011/08/12 17:20:20 taca Exp $
 
---- ../json-1.5.2.gemspec.orig	2011-06-15 10:57:07.000000000 +0000
-+++ ../json-1.5.2.gemspec
-@@ -48,9 +48,7 @@ dependencies: 
+--- ../json-1.5.3.gemspec.orig	2011-08-04 02:01:16.000000000 +0000
++++ ../json-1.5.3.gemspec
+@@ -47,9 +47,7 @@ dependencies: 
    version_requirements: *id003
  description: This is a JSON implementation as a Ruby extension in C.
  email: flori@ping.de
