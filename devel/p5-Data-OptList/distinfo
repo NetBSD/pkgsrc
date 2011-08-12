@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/02/16 00:26:15 seb Exp $
+$NetBSD: distinfo,v 1.6 2011/08/12 06:27:04 adam Exp $
 
-SHA1 (Data-OptList-0.106.tar.gz) = 00f22cdb5ae1ef9f1e1db878078b23455d7bf573
-RMD160 (Data-OptList-0.106.tar.gz) = 22e1fad1c4f323ee34ef758eb3150bc873f797e8
-Size (Data-OptList-0.106.tar.gz) = 25903 bytes
+SHA1 (Data-OptList-0.107.tar.gz) = b802570a41b9393120e6a2d93971c3e3a6293ee5
+RMD160 (Data-OptList-0.107.tar.gz) = 4df7c036c86f417a45cfa0227904a44a2526265d
+Size (Data-OptList-0.107.tar.gz) = 13735 bytes
