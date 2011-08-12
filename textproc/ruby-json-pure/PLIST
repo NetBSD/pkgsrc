@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/06/15 15:14:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/08/12 17:20:20 taca Exp $
 bin/edit_json.rb
 bin/prettify_json.rb
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/COPYING-json-jruby
 ${GEM_LIBDIR}/GPL
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README-json-jruby.markdown
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
