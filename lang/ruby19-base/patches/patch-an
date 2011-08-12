@@ -1,10 +1,23 @@
-$NetBSD: patch-an,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+$NetBSD: patch-an,v 1.2 2011/08/12 15:35:22 taca Exp $
 
 * Make sure to load YAML before use it.  When should YAML be loaded?
+* Relax to allow some attribute could be nil.
+* Complete "http://" to homepage attribute if it isn't begin with it.
 
 --- lib/rubygems/specification.rb.orig	2010-04-22 08:24:42.000000000 +0000
 +++ lib/rubygems/specification.rb
-@@ -476,6 +476,7 @@ class Gem::Specification
+@@ -107,6 +107,10 @@ class Gem::Specification
+ 
+   @@default_value = {}
+ 
++  # under pkgsrc environment
++  @@pkgsrc_nil_attributes =
++    [:authors, :cert_chain, :executables, :extensions, :extra_rdoc_files, :licenses, :required_rubygems_version, :test_files]
++
+   ##
+   # Names of all specification attributes
+ 
+@@ -476,6 +480,7 @@ class Gem::Specification
    # 'input' can be anything that YAML.load() accepts: String or IO.
  
    def self.from_yaml(input)
@@ -12,3 +25,47 @@ $NetBSD: patch-an,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
      input = normalize_yaml_input input
      spec = YAML.load input
  
+@@ -819,6 +824,23 @@ class Gem::Specification
+             "expected RubyGems version #{Gem::VERSION}, was #{rubygems_version}"
+     end
+ 
++    @@pkgsrc_nil_attributes.each do |name|
++      val = instance_variable_get("@#{name}")
++      if val.nil?
++        case name
++        when :required_rubygems_version
++          val = Gem::Requirement.default
++        else
++          val = []
++        end
++        instance_variable_set("@#{name}", val)
++      end
++      if name == :authors and val.empty?
++        val = ['not specified']
++        instance_variable_set("@#{name}", val)
++      end
++    end
++
+     @@required_attributes.each do |symbol|
+       unless self.send symbol then
+         raise Gem::InvalidSpecificationException,
+@@ -901,10 +923,15 @@ class Gem::Specification
+             '"FIXME" or "TODO" is not a summary'
+     end
+ 
+-    if homepage and not homepage.empty? and
+-       homepage !~ /\A[a-z][a-z\d+.-]*:/i then
+-      raise Gem::InvalidSpecificationException,
+-            "\"#{homepage}\" is not a URI"
++    if homepage and not homepage.empty?
++      if @homepage =~ /\A[a-z][a-z\d+.-]*/i and
++          @homepage !~ /\A[a-z][a-z\d+.-]*:/i
++        @homepage = "http://" + @homepage
++      end
++      if homepage !~ /\A[a-z][a-z\d+.-]*:/i then
++        raise Gem::InvalidSpecificationException,
++              "\"#{homepage}\" is not a URI"
++      end
+     end
+ 
+     # Warnings
