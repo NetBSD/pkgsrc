@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/12 17:27:54 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/net/http/digest_auth.rb
+${GEM_LIBDIR}/sample/auth_server.rb
+${GEM_LIBDIR}/sample/net_http_example.rb
+${GEM_LIBDIR}/test/test_net_http_digest_auth.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
