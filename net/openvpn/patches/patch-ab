@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2011/04/28 07:27:25 adam Exp $
+$NetBSD: patch-ab,v 1.8 2011/08/12 09:38:08 adam Exp $
 
 --- syshead.h.orig	2010-11-04 19:29:02.000000000 +0000
 +++ syshead.h
@@ -12,4 +12,14 @@ $NetBSD: patch-ab,v 1.7 2011/04/28 07:27:25 adam Exp $
 +
  #ifdef HAVE_NET_IF_TUN_H
  #include <net/if_tun.h>
+ #endif
+@@ -387,6 +391,9 @@
+  */
+ #if defined(ENABLE_MULTIHOME) && defined(HAVE_IN_PKTINFO) && defined(IP_PKTINFO) && defined(HAVE_MSGHDR) && defined(HAVE_CMSGHDR) && defined(HAVE_IOVEC) && defined(CMSG_FIRSTHDR) && defined(CMSG_NXTHDR) && defined(HAVE_RECVMSG) && defined(HAVE_SENDMSG)
+ #define ENABLE_IP_PKTINFO 1
++#ifndef SOL_IP
++#define SOL_IP 0
++#endif
+ #else
+ #define ENABLE_IP_PKTINFO 0
  #endif
