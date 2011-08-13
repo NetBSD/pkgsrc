@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1926 2011/08/13 00:38:45 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1927 2011/08/13 00:58:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2892,6 +2892,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/hoe to 2.11.0 [taca 2011-08-12]
 	Updated devel/ruby-debug to 0.10.4nb2 [taca 2011-08-12]
 	Updated devel/ruby-gemcutter to 0.7.0 [taca 2011-08-12]
+	Updated devel/ruby-getopt to 1.4.1 [taca 2011-08-12]
 	Updated devel/ruby-heckle to 1.4.3nb2 [taca 2011-08-12]
 	Updated devel/ruby-polyglot to 0.3.2 [taca 2011-08-12]
 	Updated devel/ruby-rcov to 0.9.10 [taca 2011-08-12]
