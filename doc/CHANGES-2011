@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1930 2011/08/13 02:14:19 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1931 2011/08/13 11:24:30 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2963,3 +2963,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-rdoc to 3.9.2 [taca 2011-08-13]
 	Updated devel/ZenTest to 4.6.1 [taca 2011-08-13]
 	Added x11/ruby-wxruby version 2.0.1 [taca 2011-08-13]
+	Updated pkgtools/pkgin to 0.4.3 [imil 2011-08-13]
