@@ -1,36 +1,36 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:34 agc Exp $
+$NetBSD: patch-aa,v 1.3 2011/08/13 09:09:00 apb Exp $
 
---- Makefile-orig	Fri May 22 15:35:18 1998
-+++ Makefile	Fri May 22 15:36:25 1998
+--- Makefile.orig	1995-07-01 15:33:24.000000000 +0000
++++ Makefile
 @@ -1,25 +1,10 @@
 -CFLAGS		=-O
 -LDFLAGS		=-s
-+PROG=	team
- 
+-
 -INSTX		=install -m 0755 -s
 -INSTD		=install -m 0644
-+BINDIR=	${PREFIX}/bin
-+MANDIR=	${PREFIX}/man
- 
+-
 -DEST=		
-+MANINSTALL= catinstall maninstall
- 
+-
 -MI		=$(DEST)/usr/
 -MD		=$(DEST)/usr/
-+CFLAGS+= -DHAVE_PARAM_H -DHAVE_WAIT_H
- 
+-
 -M1X		=1
 -
 -BIND		=$(MD)bin/
 -MANI		=$(MI)man
--
++PROG=	team
+ 
 -MANI1		=$(MANI)$(M1X)/
--
++BINDIR=	${PREFIX}/bin
++MANDIR=	${PREFIX}/man
+ 
 -all:		team
--
++MANINSTALL= catinstall maninstall
+ 
 -clean::
 -	rm -f team team.o
--
++CFLAGS+= -DHAVE_PARAM_H -DHAVE_WAIT_H
+ 
 -$(BIND)team:		team;			$(INSTX) $? $@
 -$(MANI1)team.$(M1X):	team.1;			$(INSTD) $? $@
 +.include <bsd.prog.mk>
