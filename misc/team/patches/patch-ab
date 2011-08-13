@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2011/08/13 09:09:00 apb Exp $
 
---- team.c.orig	1995-07-01 08:33:24.000000000 -0700
+--- team.c.orig	1995-07-01 15:33:24.000000000 +0000
 +++ team.c
 @@ -58,8 +58,8 @@ static char Notice[] =
    upstream to it, which has much the same effect.
@@ -13,11 +13,13 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  
  #define TeamLBUFSZ	(64)		/* Low buffer size		*/
  #define TeamDBUFSZ	(60*512)	/* Default buffer size		*/
-@@ -80,15 +80,28 @@ static char Notice[] =
+@@ -80,15 +80,30 @@ static char Notice[] =
  #include <errno.h>
  #include <signal.h>
  #include <stdio.h>
++#include <stdio.h>
 +#include <stdlib.h>
++#include <unistd.h>
  #include <sys/types.h>
  #include <sys/file.h>
  #include <sys/stat.h>
@@ -42,7 +44,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  #if (PCG)
  # include "Extend.h"
  # include "Here.h"
-@@ -99,6 +112,7 @@ static char Notice[] =
+@@ -99,6 +114,7 @@ static char Notice[] =
  # define fast		register
  # define global     	/* extern */
  # define local		static
@@ -50,7 +52,15 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  # define when		break; case
  # define otherwise	break; default
  # define mode(which,name) typedef which name name; which name
-@@ -160,14 +174,12 @@ mesg(a,b,c,d,e,f,g,h,i)
+@@ -137,6 +153,7 @@ static char Notice[] =
+ #endif
+ 
+ /*VARARGS1*/
++int
+ mesg(a,b,c,d,e,f,g,h,i)
+   char *a;
+   int b,c,d,e,f,g,h,i;
+@@ -160,17 +177,15 @@ mesg(a,b,c,d,e,f,g,h,i)
  
  local bool		verbose = false;
  local bool		report = true;
@@ -65,8 +75,12 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
 -extern char		*calloc of((address,unsigned));
  extern char		*strchr of((const char *,int));
  
- extern int		getopt of((int,char *[],const char *));
-@@ -190,7 +202,7 @@ mode(struct,Fd)
+-extern int		getopt of((int,char *[],const char *));
++/*extern int		getopt of((int,char *[],const char *));*/
+ extern char		*optarg;
+ extern int		optind;
+ 
+@@ -190,7 +205,7 @@ mode(struct,Fd)
  {
    int 	    fd;
    short	    status;
@@ -75,7 +89,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  };
  
  local Fd		FdIn,FdOut;
-@@ -199,7 +211,7 @@ local bool		FdOpen on((fd,ffd,size)) is
+@@ -199,7 +214,7 @@ local bool		FdOpen on((fd,ffd,size)) is
  (
    fast Fd		  *fd
  _ int			  ffd
@@ -84,7 +98,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  )
  {
    fd->status = (ffd >= 0) ? FdOPEN :   FdCLOSED;
-@@ -252,12 +264,12 @@ _ fast Fd		  *from
+@@ -252,12 +267,12 @@ _ fast Fd		  *from
    to->fd	= from->fd;
  }
  
@@ -100,7 +114,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  )
  {
    int			  tty;
-@@ -286,16 +298,21 @@ _ long unsigned		  space
+@@ -286,16 +301,21 @@ _ long unsigned		  space
    do
    {
  #if (defined i386 || defined sun)
@@ -124,7 +138,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  
      read(tty,reply,sizeof reply);
    }
-@@ -320,7 +337,7 @@ _ long unsigned		  space
+@@ -320,7 +340,7 @@ _ long unsigned		  space
  local unsigned		FdCanDo on((remaining,available)) is
  (
    fast address		  remaining
@@ -133,7 +147,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  )
  {
    return (remaining < available)
-@@ -332,16 +349,16 @@ local address		FdRead on((fd,buffer,todo
+@@ -332,16 +352,16 @@ local address		FdRead on((fd,buffer,todo
    fast Fd		  *fd
  _ pointer		  buffer
  _ fast address		  todo
@@ -153,7 +167,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
    when FdERROR:   return -1;
    when FdCLOSED:  return -1;
  
-@@ -373,16 +390,16 @@ local address		FdWrite on((fd,buffer,tod
+@@ -373,16 +393,16 @@ local address		FdWrite on((fd,buffer,tod
    fast Fd		  *fd
  _ pointer		  buffer
  _ fast address		  todo
@@ -173,7 +187,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
    when FdERROR:   return -1;
    when FdCLOSED:  return -1;
  
-@@ -453,7 +470,7 @@ mode(struct,StreamMsg)
+@@ -453,7 +473,7 @@ mode(struct,StreamMsg)
  {
    Token			  token;
    short			  status;
@@ -182,7 +196,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  };
  
  local bool		StreamSend on((fd,token,status,done)) is
-@@ -461,7 +478,7 @@ local bool		StreamSend on((fd,token,stat
+@@ -461,7 +481,7 @@ local bool		StreamSend on((fd,token,stat
    fast Fd		  *fd
  _ Token 		  token
  _ short 		  status
@@ -191,7 +205,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  )
  {
    fast int		  n;
-@@ -483,7 +500,7 @@ local bool		StreamReceive on((fd,tokenp,
+@@ -483,7 +503,7 @@ local bool		StreamReceive on((fd,tokenp,
    fast Fd		  *fd
  _ Token 		  *tokenp
  _ short 		  *statusp
@@ -200,7 +214,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  )
  {
    fast int		  n;
-@@ -536,7 +553,7 @@ _ Fd			  *downstream
+@@ -536,7 +556,7 @@ _ Fd			  *downstream
  #define GuyRECEIVE(guy,tokenp,statusp,donep) \
    StreamReceive(&guy->upStream,tokenp,statusp,donep)
  
@@ -209,7 +223,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  
  local bool		GuyStart on((guy,bufsize)) is
  (
-@@ -547,7 +564,7 @@ _ address		  bufsize
+@@ -547,7 +567,7 @@ _ address		  bufsize
    fast char		  *buffer;
    Token 		  token;
    short 		  status;
@@ -218,7 +232,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
    bool		  received;
    static int 		  bytesRead,bytesWritten;
  
-@@ -564,7 +581,7 @@ _ address		  bufsize
+@@ -564,7 +584,7 @@ _ address		  bufsize
    while ((received = GuyRECEIVE(guy,&token,&status,&done)) && token != TokenSTOP)
    switch (token)
    {
@@ -227,7 +241,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
      FdIn.status = status;
  
      Mesg(("GuyStart reading %d chars\n",bufsize));
-@@ -577,7 +594,7 @@ _ address		  bufsize
+@@ -577,7 +597,7 @@ _ address		  bufsize
      done += bytesRead;
  
      if (verbose)
@@ -236,7 +250,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  
      if (!GuySEND(guy,TokenREAD,FdIn.status,done))
        GuyStop(guy,"guy cannot send READ",done);
-@@ -595,7 +612,7 @@ _ address		  bufsize
+@@ -595,7 +615,7 @@ _ address		  bufsize
      done += bytesWritten;
  
      if (verbose)
@@ -245,7 +259,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  
      if (!GuySEND(guy,TokenWRITE,FdOut.status,done))
        GuyStop(guy,"guy cannot send WRITE",done);
-@@ -619,7 +636,7 @@ local bool		GuyStop on((guy,errormsg,don
+@@ -619,7 +639,7 @@ local bool		GuyStop on((guy,errormsg,don
  (
    fast Guy		  *guy
  _ char			  *errormsg
@@ -254,7 +268,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  )
  {
    Mesg(("GuyStop guy %#o\n",guy));
-@@ -627,8 +644,8 @@ _ long unsigned		  done
+@@ -627,8 +647,8 @@ _ long unsigned		  done
    if (done)
    {
      if (report)
@@ -265,7 +279,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
      else if (verbose)
        mesg("\n");
    }
-@@ -637,7 +654,7 @@ _ long unsigned		  done
+@@ -637,7 +657,7 @@ _ long unsigned		  done
    {
      mesg("team: guy pid %u: %s\n",guy->pid,errormsg);
      call GuySEND(guy,TokenABORT,FdERROR,0L);
@@ -274,7 +288,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
      /*NOTREACHED*/
    }
  
-@@ -697,8 +714,8 @@ local bool		TeamStart on((team,bufsize,i
+@@ -697,8 +717,8 @@ local bool		TeamStart on((team,bufsize,i
  (
    fast Team		  *team
  _ address		  bufsize
@@ -285,7 +299,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  )
  {
    /*
-@@ -797,6 +814,9 @@ _ long unsigned		  osize
+@@ -797,6 +817,9 @@ _ long unsigned		  osize
      {
        pid = getpid();
  
@@ -295,7 +309,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
        if (!FdClose(&last_downstream))
  	perror("cannot close inherited first link");
  
-@@ -816,13 +836,13 @@ _ long unsigned		  osize
+@@ -816,13 +839,13 @@ _ long unsigned		  osize
      }
    }
  
@@ -311,7 +325,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
    {
      perror("cannot send first WRITE token");
      return false;
-@@ -864,6 +884,14 @@ local bool		TeamWait on((team)) is
+@@ -864,6 +887,14 @@ local bool		TeamWait on((team)) is
  
      --team->active;
  
@@ -326,7 +340,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
      if (status != 0   && team->active != 0)
        return false;
    }
-@@ -914,8 +942,8 @@ local void		usage of((noparms))
+@@ -914,8 +945,8 @@ local void		usage of((noparms))
  syntax: team [-[vr]] [-iI[bkm] [-oO[bkm] [N[bkm] [P]]\n\
    copies standard input to output\n\
    -v gives ongoing report, -r final report\n\
@@ -337,7 +351,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
    N is buffer size (default %luk)\n\
    P is number of processes (default %u)\n\
    (postfix b means *512, k means *1KB, m means *1MB)\n\
-@@ -927,19 +955,19 @@ syntax: team [-[vr]] [-iI[bkm] [-oO[bkm]
+@@ -927,19 +958,19 @@ syntax: team [-[vr]] [-iI[bkm] [-oO[bkm]
    /*NOTREACHED*/
  }
  
@@ -360,7 +374,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  
    if (*s == 'b') l *= (1L<<9);
    if (*s == 'k') l *= (1L<<10);
-@@ -958,8 +986,8 @@ _ char			  *(argv[])
+@@ -958,8 +989,8 @@ _ char			  *(argv[])
    short unsigned	  teamsize;
  
    address		  bufsize;
@@ -371,7 +385,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
    int			  opt;
  
    teamsize = TeamDTEAMSZ;
-@@ -971,11 +999,11 @@ _ char			  *(argv[])
+@@ -971,11 +1002,11 @@ _ char			  *(argv[])
    while ((opt = getopt(argc,argv,"vri:o:")) != -1)
      switch (opt)
      {
@@ -385,7 +399,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  	usage();
        }
    
-@@ -983,7 +1011,7 @@ _ char			  *(argv[])
+@@ -983,7 +1014,7 @@ _ char			  *(argv[])
        osize = atos(optarg);
        if (osize < TeamLVOLSZ || osize > TeamHVOLSZ)
        {
@@ -394,7 +408,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
  	usage();
        }
  
-@@ -1032,6 +1060,11 @@ _ char			  *(argv[])
+@@ -1032,6 +1063,11 @@ _ char			  *(argv[])
  
    origin = time((time_t *) 0);
  
@@ -406,7 +420,7 @@ $NetBSD: patch-ab,v 1.5 2006/07/18 18:03:47 minskim Exp $
    if (!TeamStart(&team,bufsize,isize,osize))
    {
      mesg("team: cannot start the team\n");
-@@ -1055,5 +1088,11 @@ _ char			  *(argv[])
+@@ -1055,5 +1091,11 @@ _ char			  *(argv[])
      return 1;
    }
  
