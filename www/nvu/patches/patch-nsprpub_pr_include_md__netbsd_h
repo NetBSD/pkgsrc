@@ -1,0 +1,32 @@
+$NetBSD: patch-nsprpub_pr_include_md__netbsd_h,v 1.1 2011/08/13 22:20:14 dholland Exp $
+
+Build on amd64.
+
+--- nsprpub/pr/include/md/_netbsd.h~	2003-09-11 17:24:53.000000000 +0000
++++ nsprpub/pr/include/md/_netbsd.h
+@@ -42,6 +42,8 @@
+ #define _PR_SI_SYSNAME  "NetBSD"
+ #if defined(__i386__)
+ #define _PR_SI_ARCHITECTURE "x86"
++#elif defined(__x86_64__)
++#define _PR_SI_ARCHITECTURE "x86-64"
+ #elif defined(__alpha__)
+ #define _PR_SI_ARCHITECTURE "alpha"
+ #elif defined(__m68k__)
+@@ -108,6 +110,16 @@
+ }
+ #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[2]
+ #endif
++#ifdef __x86_64__
++#define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
++{									\
++    sigsetjmp(CONTEXT(_thread), 1);					\
++    CONTEXT(_thread)[_JB_RSP] = (unsigned char*) ((_sp) - 128);		\
++    CONTEXT(_thread)[_JB_PC] = (int) _main;				\
++    *status = PR_TRUE;							\
++}
++#define	_MD_GET_SP(_thread)	CONTEXT(_thread)[_JB_RSP]
++#endif
+ #ifdef __sparc__
+ #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
+ {									\

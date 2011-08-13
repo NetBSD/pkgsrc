@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2011/03/17 13:24:07 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/08/13 22:20:14 dholland Exp $
 
 SHA1 (nvu-1.0-sources.tar.bz2) = 438b1633cb820bbede503ef2da90f46d4e96bee8
 RMD160 (nvu-1.0-sources.tar.bz2) = 6d6fdb747d79e8602a4757e8eff8bbb21db6df8c
@@ -11,4 +11,8 @@ SHA1 (patch-al) = 57a15074fca3ddba756d0b3898ad9bf06a6e130a
 SHA1 (patch-an) = 99ac2da44322db96f8d65fbfdb380727b9da96fe
 SHA1 (patch-ao) = 617d232bd335bc988388f2004ca919c829e371da
 SHA1 (patch-ap) = 82a85df0b172f949509561f83ae7849e177babee
+SHA1 (patch-netwerk_protocol_http_src_nshttpconnectionmgr_cpp) = 37d4aa3d3ce2f4885deaac3cdc97e0b010216511
 SHA1 (patch-nsprpub_config_Makefile.in) = daf6423b53385c32e658fa5d93e33a0c5f31ca91
+SHA1 (patch-nsprpub_pr_include_md__netbsd_cfg) = 4f65863a7516ed8c37a752e040ef1e3d4b881f29
+SHA1 (patch-nsprpub_pr_include_md__netbsd_h) = 059df4799777743947b74ae39ed250c17c78ad37
+SHA1 (patch-nsprpub_pr_src_io_prprf_c) = fabb1a52ced70a7640dd8a8d91e20e9672b22b76

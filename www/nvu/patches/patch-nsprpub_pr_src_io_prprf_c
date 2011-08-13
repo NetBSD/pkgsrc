@@ -1,0 +1,18 @@
+$NetBSD: patch-nsprpub_pr_src_io_prprf_c,v 1.1 2011/08/13 22:20:14 dholland Exp $
+
+Use valid va_list handling.
+
+--- nsprpub/pr/src/io/prprf.c~	2004-03-09 03:18:19.000000000 +0000
++++ nsprpub/pr/src/io/prprf.c
+@@ -51,7 +51,10 @@
+ ** Note: on some platforms va_list is defined as an array,
+ ** and requires array notation.
+ */
+-#if (defined(LINUX) && defined(__x86_64__))
++#if __STDC__ >= 19990101 || defined(__NetBSD__) || defined(__FreeBSD__) || \
++   defined(__OpenBSD__) || defined(__DragonFly__)
++#define VARARGS_ASSIGN(foo, bar) va_copy((foo), (bar))
++#elif (defined(LINUX) && defined(__x86_64__))
+ #define VARARGS_ASSIGN(foo, bar) __va_copy((foo), (bar))
+ #elif (defined(LINUX) && defined(__powerpc__)) || \
+     (defined(LINUX) && defined(__s390__)) || \
