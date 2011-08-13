@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 20:53:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/08/13 04:43:51 cheusov Exp $
 bin/dump-mixers
 bin/ntsc-cc
 bin/pia
@@ -17,7 +17,6 @@ lib/X11/app-defaults/Xawtv
 lib/xawtv/bilinear.so
 lib/xawtv/conv-mjpeg.so
 lib/xawtv/cubic.so
-lib/xawtv/drv0-bsd.so
 lib/xawtv/flt-disor.so
 lib/xawtv/flt-gamma.so
 lib/xawtv/flt-invert.so

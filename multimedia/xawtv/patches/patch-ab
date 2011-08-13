@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/01/26 11:39:14 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2011/08/13 04:43:51 cheusov Exp $
 
---- Makefile.in.orig	2003-04-12 20:00:30.000000000 +0200
+--- Makefile.in.orig	2004-04-22 14:52:29.000000000 +0000
 +++ Makefile.in
 @@ -84,7 +84,7 @@ CXXFLAGS := $(CFLAGS)
  %.so : CXXFLAGS += -fPIC

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2011/08/13 04:43:51 cheusov Exp $
+lib/xawtv/drv0-bsd.so

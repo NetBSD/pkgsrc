@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/07/03 18:16:19 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2011/08/13 04:43:51 cheusov Exp $
 #
 
 DISTNAME=	xawtv-3.95
@@ -43,10 +43,15 @@ PKG_SUPPORTED_OPTIONS=	mmx
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
 
+CFLAGS+=		-I${X11BASE}/include/X11/fonts
+
+MAKE_FLAGS+=		SUID_ROOT= FS_LIBS=-lFS
+
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../x11/libFS/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
