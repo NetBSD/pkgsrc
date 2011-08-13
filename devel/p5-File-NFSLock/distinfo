@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/06 18:48:59 abs Exp $
+$NetBSD: distinfo,v 1.2 2011/08/13 08:20:29 adam Exp $
 
-SHA1 (File-NFSLock-1.20.tar.gz) = de254502b47a9b4013ee6b5f6b8b553dc323dab5
-RMD160 (File-NFSLock-1.20.tar.gz) = b6c72e2c680c2d81341caf7003ef4249ec0d4fc2
-Size (File-NFSLock-1.20.tar.gz) = 18521 bytes
+SHA1 (File-NFSLock-1.21.tar.gz) = c196e281a90d2eb45ba7b85d4019d6a4bae6c77e
+RMD160 (File-NFSLock-1.21.tar.gz) = 5e3bfdc409779336bb13b0c5c7d0c4894924402d
+Size (File-NFSLock-1.21.tar.gz) = 17301 bytes
