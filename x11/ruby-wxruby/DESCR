@@ -1,0 +1,4 @@
+wxRuby is a cross-platform GUI library for creating desktop
+applications. It has a comprehensive widget set, and provides native
+look and feel on Windows, OS X and Linux. It's based on the mature and
+liberally-licensed wxWidgets framework.
