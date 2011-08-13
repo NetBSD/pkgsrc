@@ -1,0 +1,17 @@
+$NetBSD: patch-netwerk_protocol_http_src_nshttpconnectionmgr_cpp,v 1.1 2011/08/13 22:20:14 dholland Exp $
+
+Build on amd64.
+
+--- netwerk/protocol/http/src/nsHttpConnectionMgr.cpp~	2004-09-01 23:31:03.000000000 +0000
++++ netwerk/protocol/http/src/nsHttpConnectionMgr.cpp
+@@ -834,8 +834,8 @@ nsHttpConnectionMgr::OnMsgReclaimConnect
+ void
+ nsHttpConnectionMgr::OnMsgUpdateParam(nsresult status, void *param)
+ {
+-    PRUint16 name  = (PRUint32(param) & 0xFFFF0000) >> 16;
+-    PRUint16 value =  PRUint32(param) & 0x0000FFFF;
++    PRUint16 name  = (PRUint32((uintptr_t)param) & 0xFFFF0000) >> 16;
++    PRUint16 value =  PRUint32((uintptr_t)param) & 0x0000FFFF;
+ 
+     switch (name) {
+     case MAX_CONNECTIONS:
