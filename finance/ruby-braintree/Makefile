@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/19 08:12:10 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/13 01:03:43 taca Exp $
 
-DISTNAME=	braintree-2.10.1
+DISTNAME=	braintree-2.10.2
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
