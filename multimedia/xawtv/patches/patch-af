@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2006/01/23 14:28:18 joerg Exp $
+$NetBSD: patch-af,v 1.2 2011/08/13 04:43:51 cheusov Exp $
 
 --- libng/devices.c.orig	2006-01-17 22:21:30.000000000 +0100
 +++ libng/devices.c
@@ -12,3 +12,12 @@ $NetBSD: patch-af,v 1.1 2006/01/23 14:28:18 joerg Exp $
  struct ng_device_config ng_dev = {
      video:  "/dev/bktr0",
      radio:  NULL,
+@@ -15,7 +15,7 @@ struct ng_device_config ng_dev = {
+     video:  "/dev/bktr0",
+     radio:  NULL,
+     vbi:    "/dev/vbi0",
+-    dsp:    "/dev/dsp",
++    dsp:    "/dev/audio",
+     mixer:  "/dev/mixer",
+     video_scan: {
+ 	"/dev/bktr0",

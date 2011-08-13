@@ -1,0 +1,10 @@
+@comment $NetBSD@
+bin/fbtv
+bin/radio
+bin/v4l-conf
+bin/v4l-info
+lib/xawtv/drv0-v4l2-old.so
+lib/xawtv/drv0-v4l2.so
+lib/xawtv/drv1-v4l.so
+man/es/man1/v4lctl.1
+man/es/man8/v4l-conf.8
