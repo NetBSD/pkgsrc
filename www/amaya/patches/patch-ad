@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.12 2011/08/13 19:03:38 dholland Exp $
+
+Amaya, being Special, thinks it can redefine standard library symbols...
+
+--- Amaya/thotlib/include/thot_sys.h~	2007-09-05 13:16:46.000000000 +0000
++++ Amaya/thotlib/include/thot_sys.h
+@@ -251,10 +251,14 @@ and must be removed at the end of the de
+ #define NBSP      0xA0
+ #define MAX_BYTES 6
+ 
++#ifdef HAVE_STDINT_H
++#include <stdint.h>
++#else
+ /* we encourage using "long" to store pointer values, never use "int" ! */
+ #if !defined(__intptr_t_defined) && !defined(_INTPTR_T_DEFINED)
+ #define __intptr_t_defined
+ typedef           long   intptr_t;
+ #endif
++#endif /* HAVE_STDINT_H */
+ 
+ #endif /* THOT_SYS_H */
