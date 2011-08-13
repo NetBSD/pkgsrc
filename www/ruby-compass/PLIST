@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/06/19 07:53:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/08/13 00:28:13 taca Exp $
 bin/compass
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.markdown
@@ -492,6 +492,7 @@ ${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/typography/lists/_horizonta
 ${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss
 ${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss
 ${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/typography/text/_ellipsis.scss
+${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/typography/text/_force-wrap.scss
 ${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/typography/text/_nowrap.scss
 ${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/typography/text/_replacement.scss
 ${GEM_LIBDIR}/frameworks/compass/stylesheets/compass/utilities/_color.scss
@@ -780,6 +781,7 @@ ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/box.css
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/box_shadow.css
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/columns.css
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/fonts.css
+${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/force-wrap.css
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/gradients.css
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/grid_background.css
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/css/image_size.css
@@ -1055,6 +1057,7 @@ ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/box.sass
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/box_shadow.scss
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/columns.scss
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/fonts.sass
+${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/force-wrap.scss
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/gradients.sass
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/grid_background.scss
 ${GEM_LIBDIR}/test/fixtures/stylesheets/compass/sass/image_size.sass
