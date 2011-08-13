@@ -1,0 +1,15 @@
+$NetBSD: patch-nsprpub_pr_include_md__netbsd_cfg,v 1.1 2011/08/13 22:20:14 dholland Exp $
+
+Build on amd64.
+
+--- nsprpub/pr/include/md/_netbsd.cfg~	2000-12-01 21:29:17.000000000 +0000
++++ nsprpub/pr/include/md/_netbsd.cfg
+@@ -137,7 +137,7 @@
+ #define PR_ALIGN_OF_DOUBLE  8
+ #define PR_ALIGN_OF_POINTER 4
+ 
+-#elif defined(__alpha__)
++#elif defined(__alpha__) || defined(__x86_64__)
+ #define IS_LITTLE_ENDIAN 1
+ #undef  IS_BIG_ENDIAN
+ #define	HAVE_LONG_LONG
