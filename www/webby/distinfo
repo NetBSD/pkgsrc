@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 13:32:05 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/08/13 00:34:46 taca Exp $
 
 SHA1 (webby-0.9.4.gem) = 39da1ac429dfbca6ec20b966e2bd1210c1e416d3
 RMD160 (webby-0.9.4.gem) = 0626bbd1175ebfb3a8f6374264c0ca3d7f0db24e
 Size (webby-0.9.4.gem) = 344064 bytes
+SHA1 (patch-.._webby-0.9.4.gemspec) = 36a2c7abe1093963ab7dfd5f4fd872af5dc807e5
