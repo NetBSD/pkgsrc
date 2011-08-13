@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1928 2011/08/13 01:06:27 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1929 2011/08/13 02:07:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2960,3 +2960,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/webby to 0.9.4nb1 [taca 2011-08-13]
 	Updated finance/ruby-braintree to 2.10.2 [taca 2011-08-13]
 	Updated finance/ruby-activemerchant to 1.16.0 [taca 2011-08-13]
+	Updated devel/ruby-rdoc to 3.9.2 [taca 2011-08-13]
+	Updated devel/ZenTest to 4.6.1 [taca 2011-08-13]
