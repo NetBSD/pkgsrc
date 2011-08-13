@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2011/08/13 16:40:44 wiz Exp $
+
+To make OCaml findlib more aware of the installation of camlimages,
+add the following line to the ld.conf file of OCaml:
+
+  ${PREFIX}lib/ocaml/site-lib/camlimages
+
+By default the ld.conf is located in ${PREFIX}lib/ocaml/ld.conf
+
+===========================================================================
