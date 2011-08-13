@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1925 2011/08/13 00:25:33 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1926 2011/08/13 00:38:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2948,3 +2948,12 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/merb-parts to 0.9.14 [taca 2011-08-13]
 	Updated www/merb-slices to 1.1.3nb2 [taca 2011-08-13]
 	Updated www/merb-stories to 0.9.13nb1 [taca 2011-08-13]
+	Updated www/ramaze to 2011.07.25 [taca 2011-08-13]
+	Updated www/ruby-compass to 0.11.5 [taca 2011-08-13]
+	Updated www/ruby-mechanize to 2.0.1 [taca 2011-08-13]
+	Updated www/ruby-patron to 0.4.14 [taca 2011-08-13]
+	Updated www/ruby-sass to 3.1.7 [taca 2011-08-13]
+	Updated www/thoth to 0.2.1nb1 [taca 2011-08-13]
+	Updated www/thoth-delicious to 0.1.0nb1 [taca 2011-08-13]
+	Updated www/thoth-flickr to 0.1.0nb1 [taca 2011-08-13]
+	Updated www/webby to 0.9.4nb1 [taca 2011-08-13]
