@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/19 08:12:10 taca Exp $
+$NetBSD: distinfo,v 1.2 2011/08/13 01:03:43 taca Exp $
 
-SHA1 (braintree-2.10.1.gem) = 0c6372c18ea8748e6d8b8c6789e47aec953dc035
-RMD160 (braintree-2.10.1.gem) = 07838f607aaa84b399bfa0662d998ce2b803afbb
-Size (braintree-2.10.1.gem) = 84480 bytes
+SHA1 (braintree-2.10.2.gem) = d0eca2e7a6c1c39b0d917eea1cc4fdbe4abc1eb5
+RMD160 (braintree-2.10.2.gem) = f1618f1a4bb5144c66db9ac3b8cc8111e3240f52
+Size (braintree-2.10.2.gem) = 86016 bytes
