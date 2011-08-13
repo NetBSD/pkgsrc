@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/03/23 16:41:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/08/13 00:30:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gitignore
@@ -20,6 +20,7 @@ ${GEM_LIBDIR}/lib/patron/request.rb
 ${GEM_LIBDIR}/lib/patron/response.rb
 ${GEM_LIBDIR}/lib/patron/session.rb
 ${GEM_LIBDIR}/lib/patron/session_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/patron/util.rb
 ${GEM_LIBDIR}/lib/patron/version.rb
 ${GEM_LIBDIR}/patron.gemspec
 ${GEM_LIBDIR}/script/console
@@ -29,4 +30,5 @@ ${GEM_LIBDIR}/spec/request_spec.rb
 ${GEM_LIBDIR}/spec/response_spec.rb
 ${GEM_LIBDIR}/spec/session_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/util_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
