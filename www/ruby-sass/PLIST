@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 07:31:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/13 00:31:49 taca Exp $
 bin/sass
 bin/sass-convert
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/REVISION
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/VERSION_NAME
@@ -31,6 +32,9 @@ ${GEM_LIBDIR}/lib/sass/importers.rb
 ${GEM_LIBDIR}/lib/sass/importers/base.rb
 ${GEM_LIBDIR}/lib/sass/importers/filesystem.rb
 ${GEM_LIBDIR}/lib/sass/less.rb
+${GEM_LIBDIR}/lib/sass/logger.rb
+${GEM_LIBDIR}/lib/sass/logger/base.rb
+${GEM_LIBDIR}/lib/sass/logger/log_level.rb
 ${GEM_LIBDIR}/lib/sass/plugin.rb
 ${GEM_LIBDIR}/lib/sass/plugin/compiler.rb
 ${GEM_LIBDIR}/lib/sass/plugin/configuration.rb
@@ -99,7 +103,9 @@ ${GEM_LIBDIR}/lib/sass/tree/visitors/base.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/check_nesting.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/convert.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/cssize.rb
+${GEM_LIBDIR}/lib/sass/tree/visitors/deep_copy.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/perform.rb
+${GEM_LIBDIR}/lib/sass/tree/visitors/set_options.rb
 ${GEM_LIBDIR}/lib/sass/tree/visitors/to_css.rb
 ${GEM_LIBDIR}/lib/sass/tree/warn_node.rb
 ${GEM_LIBDIR}/lib/sass/tree/while_node.rb
@@ -114,9 +120,12 @@ ${GEM_LIBDIR}/test/sass/css2sass_test.rb
 ${GEM_LIBDIR}/test/sass/data/hsl-rgb.txt
 ${GEM_LIBDIR}/test/sass/engine_test.rb
 ${GEM_LIBDIR}/test/sass/extend_test.rb
+${GEM_LIBDIR}/test/sass/fixtures/test_staleness_check_across_importers.css
+${GEM_LIBDIR}/test/sass/fixtures/test_staleness_check_across_importers.scss
 ${GEM_LIBDIR}/test/sass/functions_test.rb
 ${GEM_LIBDIR}/test/sass/importer_test.rb
 ${GEM_LIBDIR}/test/sass/less_conversion_test.rb
+${GEM_LIBDIR}/test/sass/logger_test.rb
 ${GEM_LIBDIR}/test/sass/mock_importer.rb
 ${GEM_LIBDIR}/test/sass/more_results/more1.css
 ${GEM_LIBDIR}/test/sass/more_results/more1_with_line_comments.css
@@ -202,16 +211,17 @@ ${GEM_LIBDIR}/test/sass/test_helper.rb
 ${GEM_LIBDIR}/test/sass/util/subset_map_test.rb
 ${GEM_LIBDIR}/test/sass/util_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
+${GEM_LIBDIR}/vendor/fssm/Gemfile
 ${GEM_LIBDIR}/vendor/fssm/LICENSE
 ${GEM_LIBDIR}/vendor/fssm/README.markdown
 ${GEM_LIBDIR}/vendor/fssm/Rakefile
-${GEM_LIBDIR}/vendor/fssm/VERSION.yml
 ${GEM_LIBDIR}/vendor/fssm/example.rb
 ${GEM_LIBDIR}/vendor/fssm/fssm.gemspec
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/backends/fsevents.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/backends/inotify.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/backends/polling.rb
+${GEM_LIBDIR}/vendor/fssm/lib/fssm/backends/rbfsevent.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/backends/rubycocoa/fsevents.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/monitor.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/path.rb
@@ -220,12 +230,15 @@ ${GEM_LIBDIR}/vendor/fssm/lib/fssm/state/directory.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/state/file.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/support.rb
 ${GEM_LIBDIR}/vendor/fssm/lib/fssm/tree.rb
-${GEM_LIBDIR}/vendor/fssm/pkg/fssm-0.0.8.gem
+${GEM_LIBDIR}/vendor/fssm/lib/fssm/version.rb
 ${GEM_LIBDIR}/vendor/fssm/profile/prof-cache.rb
 ${GEM_LIBDIR}/vendor/fssm/profile/prof-fssm-pathname.html
+${GEM_LIBDIR}/vendor/fssm/profile/prof-pathname-rubinius.rb
 ${GEM_LIBDIR}/vendor/fssm/profile/prof-pathname.rb
 ${GEM_LIBDIR}/vendor/fssm/profile/prof-plain-pathname.html
 ${GEM_LIBDIR}/vendor/fssm/profile/prof.html
+${GEM_LIBDIR}/vendor/fssm/spec/count_down_latch.rb
+${GEM_LIBDIR}/vendor/fssm/spec/monitor_spec.rb
 ${GEM_LIBDIR}/vendor/fssm/spec/path_spec.rb
 ${GEM_LIBDIR}/vendor/fssm/spec/root/duck/quack.txt
 ${GEM_LIBDIR}/vendor/fssm/spec/root/file.css

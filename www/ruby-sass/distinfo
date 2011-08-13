@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/19 07:31:57 taca Exp $
+$NetBSD: distinfo,v 1.2 2011/08/13 00:31:49 taca Exp $
 
-SHA1 (sass-3.1.2.gem) = a63667d33402fa4041fd1effc441b99099223982
-RMD160 (sass-3.1.2.gem) = 29e23596b324fdd9551177e172da1da80b2ef7f4
-Size (sass-3.1.2.gem) = 231424 bytes
+SHA1 (sass-3.1.7.gem) = 58b7aa21586ec0f2ab96c959914d63d35875b7ff
+RMD160 (sass-3.1.7.gem) = 33affbd6cb0512ef091aea5f4873b92dc26ad432
+Size (sass-3.1.7.gem) = 211968 bytes
