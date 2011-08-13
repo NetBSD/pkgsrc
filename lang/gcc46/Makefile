@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/15 00:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/13 14:06:22 wiz Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -20,7 +20,7 @@ USE_TOOLS+=		awk:run bash:run perl chmod \
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 
-GCC_VERSION=		4.6.0
+GCC_VERSION=		4.6.1
 
 GCC_SUBPREFIX=		gcc46
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
@@ -113,6 +113,9 @@ MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .endif
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--disable-libquadmath --disable-libquadmath-support
+.else
+.include "../../devel/binutils/buildlink3.mk"
+.include "../../devel/libelf/buildlink3.mk"
 .endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
@@ -192,7 +195,5 @@ GENERATE_PLIST+=                                                        \
 .include "../../math/mpcomplex/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-.include "../../devel/binutils/buildlink3.mk"
-.include "../../devel/libelf/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
