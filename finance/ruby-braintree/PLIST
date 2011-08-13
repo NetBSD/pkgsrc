@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 08:12:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/13 01:03:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
@@ -26,6 +26,8 @@ ${GEM_LIBDIR}/lib/braintree/exceptions.rb
 ${GEM_LIBDIR}/lib/braintree/gateway.rb
 ${GEM_LIBDIR}/lib/braintree/http.rb
 ${GEM_LIBDIR}/lib/braintree/modification.rb
+${GEM_LIBDIR}/lib/braintree/payer_authentication.rb
+${GEM_LIBDIR}/lib/braintree/payer_authentication_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/resource_collection.rb
 ${GEM_LIBDIR}/lib/braintree/subscription.rb
 ${GEM_LIBDIR}/lib/braintree/subscription_gateway.rb
@@ -81,6 +83,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/digest_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/error_result_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/errors_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/http_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/payer_authentication_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_spec.rb
