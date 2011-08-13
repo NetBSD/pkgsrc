@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1927 2011/08/13 00:58:44 taca Exp $
+$NetBSD: CHANGES-2011,v 1.1928 2011/08/13 01:06:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2958,3 +2958,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/thoth-delicious to 0.1.0nb1 [taca 2011-08-13]
 	Updated www/thoth-flickr to 0.1.0nb1 [taca 2011-08-13]
 	Updated www/webby to 0.9.4nb1 [taca 2011-08-13]
+	Updated finance/ruby-braintree to 2.10.2 [taca 2011-08-13]
+	Updated finance/ruby-activemerchant to 1.16.0 [taca 2011-08-13]
