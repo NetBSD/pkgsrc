@@ -1,15 +1,17 @@
-$NetBSD: distinfo,v 1.56 2011/08/12 13:24:07 adam Exp $
+$NetBSD: distinfo,v 1.57 2011/08/14 08:56:21 mrg Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.7.3.tar.gz) = 765eb70d9779f93fefddddda5e6ddb33f4c0b71e
 RMD160 (qt-everywhere-opensource-src-4.7.3.tar.gz) = ab9c11c85898430fa74e5e07894f8da5e5936645
 Size (qt-everywhere-opensource-src-4.7.3.tar.gz) = 213659173 bytes
 SHA1 (patch-aa) = 70cf085b3f5ac32e8d2e7312eb998e08500f30f1
+SHA1 (patch-ab) = 447a888cbc784a54935f23d1005d6977374a484d
 SHA1 (patch-ac) = 078ddafefc719f248740f40e2063dae07cd601e5
 SHA1 (patch-ad) = 42ab1fa5f0dd54c3cdc898c1a95c399414ca33ea
 SHA1 (patch-ae) = 249bae0d7befeb74b2e855f2b9d3e6e8dd101540
 SHA1 (patch-af) = 54bb375f7c1a43e7bf3f9528e31000a1f292f7d3
 SHA1 (patch-ag) = 61f992a4f8e36cd2bbdf56849f3c39c86f0b1033
 SHA1 (patch-ah) = 62c50fe48b9ff1ce9fb757b432c8b1db7693e112
+SHA1 (patch-ai) = 5ae8d5516b577e017ea61bce8faa774da8c96f47
 SHA1 (patch-aj) = c5510b6f6044f17855f2840fabb8ed94fddbd525
 SHA1 (patch-ak) = 6ee5822d81723cddb44226b34d891fd93c4779b9
 SHA1 (patch-al) = 4a2a30551a4970bf3b2f5347b9067a7d490d01fb
@@ -17,7 +19,7 @@ SHA1 (patch-am) = 0d4a4f2767cad5414c8bfe4dc8485064a9be4381
 SHA1 (patch-an) = 8aa6ceffb9acab4771d22b3184a1360227a81409
 SHA1 (patch-ao) = becfc697d7ae337327a416cfcea2ca8952fe1ed4
 SHA1 (patch-ap) = 86a2f5cce47607c8c453c63c6213d5efb48c8569
-SHA1 (patch-aq) = 4eaa78ad4b6f5d4db37c28a9bcc0e2cdd73490ab
+SHA1 (patch-aq) = 0650bcff29fddc65d093c0630cdb7ffafb0451cf
 SHA1 (patch-ar) = ba839210b42532b1797604722442841e43acbae1
 SHA1 (patch-as) = b0962c535fc2e8da08bb78b9ebcb5cd678565058
 SHA1 (patch-at) = f9b090ead20dd1b664484237ac5777fdd03ea1ed
