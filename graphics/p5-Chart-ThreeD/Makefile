@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/08/21 16:34:55 seb Exp $
+# $NetBSD: Makefile,v 1.12 2011/08/14 12:59:48 obache Exp $
 
 DISTNAME=	Chart-ThreeD-0.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 SVR4_PKGNAME=	p5c3d
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Chart/}
