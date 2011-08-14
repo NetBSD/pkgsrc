@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2011/08/01 14:54:51 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/08/14 21:42:14 shattered Exp $
 ${PLIST.cgi}libexec/cgi-bin/upsstats.cgi
 ${PLIST.cgi}libexec/cgi-bin/upsfstats.cgi
-${PLIST.cgi}libexec/cgi-bin/upsimage.cgi
+${PLIST.cgi}libexec/cgi-bin/apcupsimage.cgi
 ${PLIST.cgi}libexec/cgi-bin/multimon.cgi
 sbin/apcaccess
 sbin/apctest
