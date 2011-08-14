@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1934 2011/08/14 14:11:30 chs Exp $
+$NetBSD: CHANGES-2011,v 1.1935 2011/08/14 16:26:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/gcc46 to 4.6.1 [wiz 2011-08-13]
 	Updated multimedia/xawtv to 3.95nb6 [cheusov 2011-08-14]
 	Updated emulators/suse113_base to 11.3nb5 [chs 2011-08-14]
+	Updated time/rem2ics to 0.93nb2 [obache 2011-08-14]
