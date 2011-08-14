@@ -1,0 +1,16 @@
+$NetBSD: patch-bg,v 1.1 2011/08/14 08:56:21 mrg Exp $
+
+this ends up going into non-const-able interfaces inside qt4
+
+
+--- src/dbus/qdbusintegrator.cpp.orig	2011-03-30 05:19:07.000000000 +0000
++++ src/dbus/qdbusintegrator.cpp	2011-08-08 21:44:34.000000000 +0000
+@@ -71,7 +71,7 @@
+ static bool isDebugging;
+ #define qDBusDebug              if (!::isDebugging); else qDebug
+ 
+-Q_GLOBAL_STATIC_WITH_ARGS(const QString, orgFreedesktopDBusString, (QLatin1String(DBUS_SERVICE_DBUS)))
++Q_GLOBAL_STATIC_WITH_ARGS(QString, orgFreedesktopDBusString, (QLatin1String(DBUS_SERVICE_DBUS)))
+ 
+ static inline QString dbusServiceString()
+ { return *orgFreedesktopDBusString(); }
