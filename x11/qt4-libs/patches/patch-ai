@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.3 2011/08/14 08:56:21 mrg Exp $
+
+--- src/corelib/arch/sparc/arch.pri.orig	2011-08-07 21:39:57.000000000 -0700
++++ src/corelib/arch/sparc/arch.pri	2011-08-07 21:40:56.000000000 -0700
+@@ -1,7 +1,7 @@
+ #
+ # SPARC architecture
+ #
+-*-64* {
++isEqual(QT_HOST_BITSIZE, 64) | *-64* {
+     SOURCES += $$QT_ARCH_CPP/qatomic64.s
+ } 
+ else {
