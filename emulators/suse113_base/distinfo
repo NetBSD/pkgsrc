@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/03/27 14:48:36 chs Exp $
+$NetBSD: distinfo,v 1.6 2011/08/14 14:11:05 chs Exp $
 
 SHA1 (suse113/i586/aaa_base-11.3-8.9.1.i586.rpm) = 0500794d3195e7868e03305abdb2047e3380553f
 RMD160 (suse113/i586/aaa_base-11.3-8.9.1.i586.rpm) = b537f26831c960b714ddc3b65f83239edf440c82
@@ -63,9 +63,9 @@ Size (suse113/i586/libreadline6-6.1-8.1.i586.rpm) = 111079 bytes
 SHA1 (suse113/i586/libselinux1-2.0.91-4.2.i586.rpm) = 0706d0db72767bf222363e0325c120afc9ea0790
 RMD160 (suse113/i586/libselinux1-2.0.91-4.2.i586.rpm) = 192e5a43062c6ffbc7719d400928bdec58d9fbbc
 Size (suse113/i586/libselinux1-2.0.91-4.2.i586.rpm) = 51068 bytes
-SHA1 (suse113/i586/libsndfile-1.0.20-7.2.i586.rpm) = f9b431bac93d509cb8c75cb7f16fdee4afe1fd08
-RMD160 (suse113/i586/libsndfile-1.0.20-7.2.i586.rpm) = 46abb7adb5a91bd0f51c4691b8ff1f87249776cd
-Size (suse113/i586/libsndfile-1.0.20-7.2.i586.rpm) = 139185 bytes
+SHA1 (suse113/i586/libsndfile-1.0.20-8.3.1.i586.rpm) = d048985a9b63aba9020432ea0ac91707c2a219b2
+RMD160 (suse113/i586/libsndfile-1.0.20-8.3.1.i586.rpm) = be1b3e9dda7ee826d9aaf4ac9f54137905f86793
+Size (suse113/i586/libsndfile-1.0.20-8.3.1.i586.rpm) = 139550 bytes
 SHA1 (suse113/i586/libssh2-1-1.2.2_git200911281702-3.1.i586.rpm) = 43d93036db3ca64240c649ccdc47f4203be02a7d
 RMD160 (suse113/i586/libssh2-1-1.2.2_git200911281702-3.1.i586.rpm) = 7dbf0d6ce61fbaaf941fcd6c05b42bad045671c9
 Size (suse113/i586/libssh2-1-1.2.2_git200911281702-3.1.i586.rpm) = 59605 bytes
@@ -156,9 +156,9 @@ Size (suse113/x86_64/libreadline6-6.1-8.1.x86_64.rpm) = 113838 bytes
 SHA1 (suse113/x86_64/libselinux1-2.0.91-4.2.x86_64.rpm) = 4d8fcd52342deddf60addad9164da320d01abe46
 RMD160 (suse113/x86_64/libselinux1-2.0.91-4.2.x86_64.rpm) = a816f215c5c5b171db63d598e54c9defc487075b
 Size (suse113/x86_64/libselinux1-2.0.91-4.2.x86_64.rpm) = 51432 bytes
-SHA1 (suse113/x86_64/libsndfile-1.0.20-7.2.x86_64.rpm) = 805e81fdb21d3ad5ce0eca14037f640633e2fc81
-RMD160 (suse113/x86_64/libsndfile-1.0.20-7.2.x86_64.rpm) = 859eee8a1692e09d94687dca7c3057f5ae2cbd79
-Size (suse113/x86_64/libsndfile-1.0.20-7.2.x86_64.rpm) = 130945 bytes
+SHA1 (suse113/x86_64/libsndfile-1.0.20-8.3.1.x86_64.rpm) = 372f8430a00684199bccdb42a51dc992a9f76ab3
+RMD160 (suse113/x86_64/libsndfile-1.0.20-8.3.1.x86_64.rpm) = 52e5913979635cf7c2217175af27df9f3072896d
+Size (suse113/x86_64/libsndfile-1.0.20-8.3.1.x86_64.rpm) = 131195 bytes
 SHA1 (suse113/x86_64/libssh2-1-1.2.2_git200911281702-3.1.x86_64.rpm) = b107651ae121da7f98e0f251269e480810b37402
 RMD160 (suse113/x86_64/libssh2-1-1.2.2_git200911281702-3.1.x86_64.rpm) = 073867a1bc5f4d8606f15cec9cab67751f653192
 Size (suse113/x86_64/libssh2-1-1.2.2_git200911281702-3.1.x86_64.rpm) = 59537 bytes
