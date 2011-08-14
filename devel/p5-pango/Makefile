@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2011/04/22 13:42:41 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/08/14 12:26:49 obache Exp $
 #
 
 DISTNAME=	Pango-${DIST_VER}
 PKGNAME=	p5-pango-${DIST_VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
