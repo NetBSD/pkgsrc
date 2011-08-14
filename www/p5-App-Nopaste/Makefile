@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2011/07/03 11:27:46 gls Exp $
+# $NetBSD: Makefile,v 1.14 2011/08/14 16:05:43 obache Exp $
 
 DISTNAME=	App-Nopaste-0.28
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
