@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.19 2011/08/08 19:59:12 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.20 2011/08/14 12:18:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -57,3 +57,11 @@ Pullup ticket #3491 - requested by tron
 net/youtube-dl: functionality update
 Pullup ticket #3494 - requested by bouyer
 sysutils/apcupsd: fix for DragonFly
+Pullup ticket #3495 - requested by gls
+www/moodle: security update
+Pullup ticket #3496 - requested by gls
+audio/libmodplug: security update
+Pullup ticket #3498 - requested by dholland
+geography/viking: build fix
+Pullup ticket #3499 - requested by sbd
+print/cups: build fix
