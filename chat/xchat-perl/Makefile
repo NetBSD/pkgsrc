@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2011/04/22 13:45:17 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/08/14 07:38:55 obache Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-perl-/}
-PKGREVISION=		1
+PKGREVISION=		2
 OWNER=			tron@NetBSD.org
 
 COMMENT=		Perl scripting plugin for XChat

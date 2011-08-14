@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 16:32:47 seb Exp $
+# $NetBSD: Makefile,v 1.7 2011/08/14 07:43:02 obache Exp $
 #
 
 DISTNAME=		asterisk-perl-1.01
 PKGNAME=		p5-Asterisk-1.01
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		comms perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JA/JAMESGOL/}
 MASTER_SITES+=		http://asterisk.gnuinter.net/files/
