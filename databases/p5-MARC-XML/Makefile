@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/05/19 05:31:02 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/14 08:18:09 obache Exp $
 
 DISTNAME=	MARC-XML-0.92
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MARC/}
 
