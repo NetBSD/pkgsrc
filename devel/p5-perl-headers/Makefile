@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2010/08/21 16:34:47 seb Exp $
+# $NetBSD: Makefile,v 1.37 2011/08/14 12:26:50 obache Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 SVR4_PKGNAME=		p5plh
 CATEGORIES=		devel perl5
 MASTER_SITES=		# empty

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2011/02/28 14:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/08/14 12:26:40 obache Exp $
 
 DISTNAME=	Test-Cmd-1.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	p5tcm
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://www.baldmt.com/Test-Cmd/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/08/21 16:33:09 seb Exp $
+# $NetBSD: Makefile,v 1.18 2011/08/14 12:26:05 obache Exp $
 #
 
 DISTNAME=	adocman-0.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sitedocs/}
 
