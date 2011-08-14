@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2011/08/11 11:15:00 adam Exp $
+# $NetBSD: Makefile,v 1.66 2011/08/14 19:47:37 wiz Exp $
 
 DISTNAME=	gpgme-1.3.1
 CATEGORIES=	security
@@ -47,6 +47,7 @@ CONFIGURE_ENV+=		ac_cv_lib_pthread_pthread_create=yes
 
 BUILDLINK_API_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
 .include "../../devel/librfuncs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.0.2
 .include "../../security/libassuan2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
 .include "../../security/libgpg-error/buildlink3.mk"
