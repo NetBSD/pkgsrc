@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2010/08/21 16:34:26 seb Exp $
+# $NetBSD: Makefile,v 1.16 2011/08/14 12:26:36 obache Exp $
 
 DISTNAME=	Spoon-0.24
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-${AUTHOR_DIR}/}
 AUTHOR_DIR=	authors/id/I/IN/INGY

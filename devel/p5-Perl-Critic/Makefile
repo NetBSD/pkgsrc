@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2010/09/01 06:03:55 sno Exp $
+# $NetBSD: Makefile,v 1.17 2011/08/14 12:26:30 obache Exp $
 #
 
 DISTNAME=	Perl-Critic-1.109
 PKGNAME=	p5-${DISTNAME}
 #PKGNAME=	p5-${DISTNAME:C/0[0-9][0-9]$/.&/}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
 
