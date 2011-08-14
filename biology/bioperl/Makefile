@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2010/08/21 16:32:45 seb Exp $
+# $NetBSD: Makefile,v 1.21 2011/08/14 07:27:39 obache Exp $
 #
 
 DISTNAME=		bioperl-0.7.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		biology
 MASTER_SITES=		http://bioperl.org/DIST/old_releases/
 
