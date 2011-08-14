@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/08/21 16:35:40 seb Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/14 14:42:48 obache Exp $
 #
 
 DISTNAME=	Crypt-PasswdMD5-1.3
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security perl5
 MASTER_SITES=	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Crypt/
 
