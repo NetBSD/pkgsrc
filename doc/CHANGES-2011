@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1933 2011/08/14 08:04:59 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.1934 2011/08/14 14:11:30 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2966,3 +2966,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkgin to 0.4.3 [imil 2011-08-13]
 	Updated lang/gcc46 to 4.6.1 [wiz 2011-08-13]
 	Updated multimedia/xawtv to 3.95nb6 [cheusov 2011-08-14]
+	Updated emulators/suse113_base to 11.3nb5 [chs 2011-08-14]
