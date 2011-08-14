@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2010/08/21 16:36:36 seb Exp $
+# $NetBSD: Makefile,v 1.16 2011/08/14 16:05:45 obache Exp $
 
 DISTNAME=		CGI-FormBuilder-3.0501
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 EXTRACT_SUFX=		.tgz
