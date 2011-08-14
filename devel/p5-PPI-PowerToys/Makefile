@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/08/21 16:34:13 seb Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/14 12:26:26 obache Exp $
 #
 
 DISTNAME=	PPI-PowerToys-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PPI/}
 

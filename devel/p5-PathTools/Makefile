@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/09/21 06:11:38 sno Exp $
+# $NetBSD: Makefile,v 1.14 2011/08/14 12:26:30 obache Exp $
 
 DISTNAME=	PathTools-3.33
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
