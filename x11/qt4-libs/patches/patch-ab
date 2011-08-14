@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.13 2011/08/14 08:56:21 mrg Exp $
+
+--- src/corelib/arch/powerpc/arch.pri.orig	2011-08-07 17:47:09.000000000 -0700
++++ src/corelib/arch/powerpc/arch.pri	2011-08-07 17:47:23.000000000 -0700
+@@ -1,7 +1,7 @@
+ #
+ # PowerPC architecture
+ #
+-!*-g++* {
++netbsd* | !*-g++* {
+     *-64 {
+         SOURCES += $$QT_ARCH_CPP/qatomic64.s
+     } else {
