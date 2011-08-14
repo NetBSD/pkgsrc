@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/12/25 08:08:06 taca Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/14 14:52:52 obache Exp $
 
 DISTNAME=	smbldap-tools-${VERS}
+PKGREVISION=	1
 CATEGORIES=	sysutils net databases
 MASTER_SITES=	http://download.gna.org/smbldap-tools/sources/${VERS}/
 
