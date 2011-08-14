@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/08/21 16:35:45 seb Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/14 14:42:51 obache Exp $
 #
 
 DISTNAME=	pcsc-perl-1.4.7
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://ludovic.rousseau.free.fr/softwares/pcsc-perl/
 
