@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/08/21 16:36:36 seb Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/14 16:05:45 obache Exp $
 #
 
 DISTNAME=	CGI-ProgressBar-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/L/LG/LGODDARD/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 16:36:38 seb Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/14 16:05:46 obache Exp $
 #
 
 DISTNAME=	Captcha-reCAPTCHA-Mailhide-0.93
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AN/ANDYA/}
 
