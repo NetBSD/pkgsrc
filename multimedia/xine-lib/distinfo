@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2011/07/18 09:58:38 drochner Exp $
+$NetBSD: distinfo,v 1.71 2011/08/14 10:14:25 sbd Exp $
 
 SHA1 (xine-lib-1.1.19.tar.bz2) = 5afcc28c5cf2bdaab99d951960f6587797e1e5a0
 RMD160 (xine-lib-1.1.19.tar.bz2) = 84999c43d3cc115c3bda4b2e06089dc827c646cc
@@ -21,3 +21,4 @@ SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
 SHA1 (patch-ga) = c4770b6be12bbc4dd72f8299f3b0bbf92546cc68
 SHA1 (patch-gb) = edbb3b607c84a271c31324881fa521f656203e53
 SHA1 (patch-input_dvb.c) = 37aa191dca0df058dc09477624ff76dbc3a2f9b9
+SHA1 (patch-src_video_out_xxmc.h) = b82877f498abb2ef29b88aa4ae6dbcbbf72bd3f7
