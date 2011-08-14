@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1935 2011/08/14 16:26:34 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1936 2011/08/14 16:27:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2968,3 +2968,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/xawtv to 3.95nb6 [cheusov 2011-08-14]
 	Updated emulators/suse113_base to 11.3nb5 [chs 2011-08-14]
 	Updated time/rem2ics to 0.93nb2 [obache 2011-08-14]
+	Updated devel/p5-Lexical-SealRequireHints to 0.005 [obache 2011-08-14]
