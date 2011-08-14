@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/08/21 16:36:03 seb Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/14 15:14:11 obache Exp $
 
 DISTNAME=	Text-DHCPLeases-0.9
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

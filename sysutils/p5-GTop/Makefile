@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/04/22 13:44:44 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/08/14 14:52:50 obache Exp $
 
 DISTNAME=		GTop-0.16
 PKGNAME=		p5-GTop-0.16
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=GTop/}
 
