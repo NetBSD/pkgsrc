@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2010/08/21 16:35:16 seb Exp $
+# $NetBSD: Makefile,v 1.15 2011/08/14 13:45:15 obache Exp $
 #
 
 DISTNAME=		Business-ISBN-Data-20081208
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	p5bid
 CATEGORIES=		misc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Business/}
