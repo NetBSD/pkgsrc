@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/03/27 14:48:36 chs Exp $
+# $NetBSD: Makefile,v 1.8 2011/08/14 14:11:05 chs Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 DISTFILES+=	aaa_base-11.3-8.9.1.${SUSE_ARCH}.rpm
 DISTFILES+=	bash-4.1-8.1.${SUSE_ARCH}.rpm
@@ -24,7 +24,7 @@ DISTFILES+=	libogg0-1.1.4-7.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libpcre0-7.9.0-6.7.${SUSE_ARCH}.rpm
 DISTFILES+=	libreadline6-6.1-8.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libselinux1-2.0.91-4.2.${SUSE_ARCH}.rpm
-DISTFILES+=	libsndfile-1.0.20-7.2.${SUSE_ARCH}.rpm
+DISTFILES+=	libsndfile-1.0.20-8.3.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libssh2-1-1.2.2_git200911281702-3.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libstdc++45-4.5.0_20100604-1.12.${SUSE_ARCH}.rpm
 DISTFILES+=	libuuid1-2.17.2-5.3.${SUSE_ARCH}.rpm
