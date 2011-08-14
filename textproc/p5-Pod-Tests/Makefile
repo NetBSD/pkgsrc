@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 16:35:58 seb Exp $
+# $NetBSD: Makefile,v 1.7 2011/08/14 15:14:08 obache Exp $
 
 DISTNAME=		Pod-Tests-1.19
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Pod/}
 
