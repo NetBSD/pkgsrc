@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2011/01/24 16:43:26 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/08/14 19:13:03 wiz Exp $
 
 SHA1 (pingus-0.7.3.tar.bz2) = ca7fe5cea65fb3392d1e81056a879831925502f2
 RMD160 (pingus-0.7.3.tar.bz2) = 664d259a98a172d10480be9aa4ec87a424ecd6f1
@@ -6,3 +6,6 @@ Size (pingus-0.7.3.tar.bz2) = 11127278 bytes
 SHA1 (patch-aa) = 7df701ca791e01d7c6fbff558bca906f56fbb643
 SHA1 (patch-ab) = 2f897472e0c006e6fa325c17eda34b05d0ba6a01
 SHA1 (patch-ac) = f0c357e4b5d5b71eacac243c15792b3a78a146ec
+SHA1 (patch-src_system.cpp) = 20d4522096aa537f60a03e43027b745ecf10b6f3
+SHA1 (patch-src_tinygettext_po__file__reader.cpp) = ab2fe607e943f72ad4cdfa0d0117886119d8593d
+SHA1 (patch-src_tinygettext_po__file__reader.hpp) = a378319caa8a4e2269893c698c2732a4aea1b7a2
