@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.56 2011/07/26 21:00:24 abs Exp $
+$NetBSD: distinfo,v 1.57 2011/08/15 21:19:33 wiz Exp $
 
 SHA1 (ocaml-3.12.0.tar.bz2) = 33ebbfb1115806f117808f37e40d206c8994943d
 RMD160 (ocaml-3.12.0.tar.bz2) = 3d10d5f7431d8200688fa74122e7ed528126a0fa
 Size (ocaml-3.12.0.tar.bz2) = 2639049 bytes
-SHA1 (patch-aa) = 858f326fe4db7971a05b3b001c6aecc02ecb2903
+SHA1 (patch-aa) = 1bedb77b12c457966b2a8b86f756535bfef9c496
 SHA1 (patch-ab) = e91cbb94c0897ffd02daebc19835a24c257dccd9
 SHA1 (patch-ac) = efe8290b394f40d6675fc9d57557c49ddafdb239
 SHA1 (patch-ad) = f2c1dcc3c31db31e2484fdea1076692a63252a87
@@ -11,6 +11,7 @@ SHA1 (patch-ag) = f1b751098d3693b92feb26cda87970426bffcaf1
 SHA1 (patch-ah) = 3165bbcdb98d09f5161912e51a3131486aa0b488
 SHA1 (patch-aj) = 6fd989f1e5dd1263890c14459dd4ab85d75e86cd
 SHA1 (patch-an) = 8fb8efecd2b3f0ec6f913a0840f4cfebcbb6161e
+SHA1 (patch-asmcomp_amd64_emit.mlp) = 72854ca013303155573417c6c694d03f9f802ac9
 SHA1 (patch-at) = 4b16f924f9bad771ac06137ae0b05ca35276b92a
 SHA1 (patch-au) = 1e36bcdf39d40e781273ea51df213db05ff46c89
 SHA1 (patch-av) = f56c8924b81a620602bc5a67b0c4459b721701d2
