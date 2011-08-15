@@ -1,0 +1,6 @@
+Linux compatibility package based on the SuSE Linux distribution.
+Please visit http://www.suse.com/ for more information about SuSE
+Linux.
+
+This package supports running ELF binaries linked with glibc2 that
+require libdrm (for X acceleration).
