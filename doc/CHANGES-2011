@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1937 2011/08/14 20:47:14 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1938 2011/08/15 04:23:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2970,3 +2970,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/rem2ics to 0.93nb2 [obache 2011-08-14]
 	Updated devel/p5-Lexical-SealRequireHints to 0.005 [obache 2011-08-14]
 	Updated security/gpgme to 1.3.1nb1 [wiz 2011-08-14]
+	Updated devel/p5-Module-Build to 0.38000 [obache 2011-08-15]
