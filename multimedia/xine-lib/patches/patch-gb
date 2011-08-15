@@ -1,4 +1,7 @@
-$NetBSD: patch-gb,v 1.9 2011/07/18 09:58:38 drochner Exp $
+$NetBSD: patch-gb,v 1.10 2011/08/15 07:35:18 wiz Exp $
+
+With videoproto-2.3.1 and newer XvMClib.h is nolonger included by
+vldXvMC.h.
 
 --- src/video_out/xxmc.h.orig	2010-03-09 22:17:05.000000000 +0000
 +++ src/video_out/xxmc.h
