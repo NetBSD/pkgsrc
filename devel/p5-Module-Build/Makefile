@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2011/08/14 12:26:17 obache Exp $
+# $NetBSD: Makefile,v 1.31 2011/08/15 04:22:56 obache Exp $
 
-DISTNAME=	Module-Build-0.3607
+DISTNAME=	Module-Build-0.3800
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	2
 SVR4_PKGNAME=	p5mob
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
@@ -14,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-ExtUtils-CBuilder>=0.27:../../devel/p5-ExtUtils-CBuilder
-DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:../../devel/p5-ExtUtils-ParseXS
+DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.27}:../../devel/p5-ExtUtils-CBuilder
+DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-ParseXS>=2.21}:../../devel/p5-ExtUtils-ParseXS
 DEPENDS+=	{perl>=5.10.1,p5-PathTools>=3.30}:../../devel/p5-PathTools
 
 .include "options.mk"
