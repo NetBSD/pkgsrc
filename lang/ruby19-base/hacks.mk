@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+# $NetBSD: hacks.mk,v 1.2 2011/08/15 01:13:25 taca Exp $
 
 .if !defined(RUBY19_BASE_HACKS_MK)
 RUBY19_BASE_HACKS_MK=	defined
@@ -16,6 +16,13 @@ RUBY19_BASE_HACKS_MK=	defined
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .  endif
+.endif
+
+#
+# Work around for utimensat(2).
+#
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		ac_cv_func_utimensat=no
 .endif
 
 .endif	# RUBY19_BASE_HACKS_MK
