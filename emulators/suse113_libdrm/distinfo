@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/15 09:07:04 wiz Exp $
+
+SHA1 (suse113/i586/libdrm-2.4.21-1.2.i586.rpm) = 44d21a36a22f1b4c27696f731cbd9951426cb6de
+RMD160 (suse113/i586/libdrm-2.4.21-1.2.i586.rpm) = cda9f130267023e49ec9082643de0b80f580192f
+Size (suse113/i586/libdrm-2.4.21-1.2.i586.rpm) = 80195 bytes
+SHA1 (suse113/x86_64/libdrm-2.4.21-1.2.x86_64.rpm) = 84a294f56e9be5ad3af8fd3721b64ad402d17406
+RMD160 (suse113/x86_64/libdrm-2.4.21-1.2.x86_64.rpm) = 0b3fd9220e09642f863fb3e1d32043ffe84a85fc
+Size (suse113/x86_64/libdrm-2.4.21-1.2.x86_64.rpm) = 77730 bytes
