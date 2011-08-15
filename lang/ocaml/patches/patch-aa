@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.8 2007/09/14 15:34:10 adam Exp $
+$NetBSD: patch-aa,v 1.9 2011/08/15 21:19:33 wiz Exp $
 
---- asmcomp/i386/emit.mlp.orig	2007-03-07 10:14:29.000000000 +0100
+Second chunk: fix build with binutils-2.21.
+http://caml.inria.fr/mantis/view.php?id=5237
+
+--- asmcomp/i386/emit.mlp.orig	2010-01-20 16:26:46 +0000
 +++ asmcomp/i386/emit.mlp
-@@ -860,7 +860,7 @@ let emit_profile () =
+@@ -861,7 +861,7 @@ let emit_profile () =
        `	movl	%esp, %ebp\n`;
        `	pushl	%ecx\n`;
        `	pushl	%edx\n`;
@@ -11,3 +14,19 @@ $NetBSD: patch-aa,v 1.8 2007/09/14 15:34:10 adam Exp $
        `	popl	%edx\n`;
        `	popl	%ecx\n`;
        `	popl	%eax\n`
+@@ -905,12 +905,12 @@ let fundecl fundecl =
+   emit_all true fundecl.fun_body;
+   List.iter emit_call_gc !call_gc_sites;
+   emit_call_bound_errors ();
+-  List.iter emit_float_constant !float_constants;
+-  match Config.system with
++  begin match Config.system with
+     "linux_elf" | "bsd_elf" | "gnu" ->
+       `	.type	{emit_symbol fundecl.fun_name},@function\n`;
+       `	.size	{emit_symbol fundecl.fun_name},.-{emit_symbol fundecl.fun_name}\n`
+-  | _ -> ()
++  | _ -> () end;
++  List.iter emit_float_constant !float_constants
+ 
+ 
+ (* Emission of data *)
