@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/08 20:52:22 sno Exp $
+$NetBSD: distinfo,v 1.2 2011/08/16 09:37:17 adam Exp $
 
-SHA1 (Guard-1.021.tar.gz) = a2e6ca5a8336add12c5a75cbd7408e14f62d2a77
-RMD160 (Guard-1.021.tar.gz) = d432ea4c9fdff3eaa41fe786cb52201acb870d27
-Size (Guard-1.021.tar.gz) = 6621 bytes
+SHA1 (Guard-1.022.tar.gz) = d144eae8b5ed42315f69da0699946d0e507f56ac
+RMD160 (Guard-1.022.tar.gz) = a236240f39edb3d0893f8508ac64691f1efffd99
+Size (Guard-1.022.tar.gz) = 6793 bytes
