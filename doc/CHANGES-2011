@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1964 2011/08/16 21:39:51 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1965 2011/08/16 21:45:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3129,3 +3129,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-CPAN-Meta version 2.112150 [wiz 2011-08-16]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.59nb1 [wiz 2011-08-16]
 	Updated devel/p5-CPAN-Reporter to 1.2002 [wiz 2011-08-16]
+	Updated finance/p5-Locale-Currency-Format to 1.30 [wiz 2011-08-16]
