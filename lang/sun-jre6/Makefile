@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/06/09 09:08:17 obache Exp $
+# $NetBSD: Makefile,v 1.30 2011/08/16 22:11:42 abs Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -40,7 +40,7 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_SRC=	PLIST.linux-i386
+PLIST_SRC=	PLIST.linux-${EMUL_ARCH}
 
 PLIST_VARS+=	jce x11
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
