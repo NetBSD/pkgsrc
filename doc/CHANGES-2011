@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1974 2011/08/16 22:14:03 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1975 2011/08/16 22:15:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3139,3 +3139,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/p5-gtk2 to 1.224 [wiz 2011-08-16]
 	Updated devel/p5-Locale-Msgfmt to 0.15 [wiz 2011-08-16]
 	Updated devel/p5-pango to 1.222 [wiz 2011-08-16]
+	Updated math/p5-Excel-Template to 0.33 [wiz 2011-08-16]
