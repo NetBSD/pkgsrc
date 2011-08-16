@@ -1,10 +1,18 @@
-$NetBSD: patch-netwerk_protocol_http_src_nshttpconnectionmgr_cpp,v 1.1 2011/08/13 22:20:14 dholland Exp $
+$NetBSD: patch-netwerk_protocol_http_src_nshttpconnectionmgr_cpp,v 1.2 2011/08/16 01:31:00 dholland Exp $
 
 Build on amd64.
 
---- netwerk/protocol/http/src/nsHttpConnectionMgr.cpp~	2004-09-01 23:31:03.000000000 +0000
+--- netwerk/protocol/http/src/nsHttpConnectionMgr.cpp.orig	2004-09-01 23:31:03.000000000 +0000
 +++ netwerk/protocol/http/src/nsHttpConnectionMgr.cpp
-@@ -834,8 +834,8 @@ nsHttpConnectionMgr::OnMsgReclaimConnect
+@@ -36,6 +36,7 @@
+  *
+  * ***** END LICENSE BLOCK ***** */
+ 
++#include <stdint.h>
+ #include "nsHttpConnectionMgr.h"
+ #include "nsHttpConnection.h"
+ #include "nsHttpPipeline.h"
+@@ -834,8 +835,8 @@ nsHttpConnectionMgr::OnMsgReclaimConnect
  void
  nsHttpConnectionMgr::OnMsgUpdateParam(nsresult status, void *param)
  {
