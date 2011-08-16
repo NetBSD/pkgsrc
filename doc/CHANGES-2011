@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1986 2011/08/16 22:39:37 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1987 2011/08/16 22:41:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3151,3 +3151,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/p5-Spreadsheet-Read to 0.43a [wiz 2011-08-16]
 	Updated math/p5-Statistics-Descriptive to 3.0202 [wiz 2011-08-16]
 	Updated time/p5-Date-ICal to 2.678 [wiz 2011-08-16]
+	Updated devel/p5-IMDB-Film to 0.50 [wiz 2011-08-16]
