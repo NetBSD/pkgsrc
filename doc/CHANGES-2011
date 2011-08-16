@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1988 2011/08/16 22:42:34 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1989 2011/08/16 22:48:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3153,3 +3153,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/p5-Date-ICal to 2.678 [wiz 2011-08-16]
 	Updated devel/p5-IMDB-Film to 0.50 [wiz 2011-08-16]
 	Updated devel/p5-Params-Util to 1.04 [wiz 2011-08-16]
+	Updated devel/p5-PPI to 1.215 [wiz 2011-08-16]
