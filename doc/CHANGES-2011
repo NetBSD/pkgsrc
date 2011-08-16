@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1951 2011/08/16 20:07:53 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1952 2011/08/16 20:09:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3116,3 +3116,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/p5-Device-Gsm to 1.58 [wiz 2011-08-16]
 	Updated converters/p5-JSON-XS to 2.320 [wiz 2011-08-16]
 	Updated databases/p5-BerkeleyDB to 0.49 [wiz 2011-08-16]
+	Updated databases/p5-DB_File to 1.824 [wiz 2011-08-16]
