@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.18 2007/10/13 11:41:44 adam Exp $
+$NetBSD: patch-aa,v 1.19 2011/08/16 10:18:58 cheusov Exp $
 
---- unix/Makefile.in.orig	2007-09-21 19:07:02.000000000 +0200
+--- unix/Makefile.in.orig	2008-02-06 15:38:26.000000000 +0000
 +++ unix/Makefile.in
 @@ -185,8 +185,8 @@ SHELL			= /bin/sh
  INSTALL_STRIP_PROGRAM   = -s
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.18 2007/10/13 11:41:44 adam Exp $
  
  STLIB_LD		= @STLIB_LD@
 -SHLIB_LD		= @SHLIB_LD@
-+SHLIB_LD		= ${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib
++SHLIB_LD		= ${LIBTOOL} --tag CC --mode=link @CC@ -rpath ${PREFIX}/lib
  SHLIB_CFLAGS		= @SHLIB_CFLAGS@
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
  TCL_SHLIB_LD_EXTRAS	= @TCL_SHLIB_LD_EXTRAS@
@@ -36,8 +36,8 @@ $NetBSD: patch-aa,v 1.18 2007/10/13 11:41:44 adam Exp $
  
 -CC			= @CC@
  #CC			= purify -best-effort @CC@ -DPURIFY
-+CC			= ${LIBTOOL} --mode=compile @CC@
-+LD			= ${LIBTOOL} --mode=link @CC@
++CC			= ${LIBTOOL} --tag CC --mode=compile @CC@
++LD			= ${LIBTOOL} --tag CC --mode=link @CC@
  
  # Flags to be passed to installManPage to control whether the manpages
  # should be compressed and linked with softlinks
