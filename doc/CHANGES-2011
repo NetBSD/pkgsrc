@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1957 2011/08/16 20:41:32 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1958 2011/08/16 20:52:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3122,3 +3122,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-ORLite to 1.50 [wiz 2011-08-16]
 	Added devel/p5-Devel-PatchPerl version 0.52 [wiz 2011-08-16]
 	Added devel/p5-Test-Trap version 0.2.1 [wiz 2011-08-16]
+	Added devel/p5-Dist-CheckConflicts version 0.02 [wiz 2011-08-16]
