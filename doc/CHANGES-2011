@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1967 2011/08/16 21:49:36 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1968 2011/08/16 21:51:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated finance/p5-Locale-Currency-Format to 1.30 [wiz 2011-08-16]
 	Updated fonts/p5-Font-TTF to 0.48 [wiz 2011-08-16]
 	Updated geography/p5-Geo-Distance to 0.17 [wiz 2011-08-16]
+	Updated graphics/p5-cairo to 1.062 [wiz 2011-08-16]
