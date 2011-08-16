@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1958 2011/08/16 20:52:01 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1959 2011/08/16 20:59:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3123,3 +3123,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Devel-PatchPerl version 0.52 [wiz 2011-08-16]
 	Added devel/p5-Test-Trap version 0.2.1 [wiz 2011-08-16]
 	Added devel/p5-Dist-CheckConflicts version 0.02 [wiz 2011-08-16]
+	Added devel/p5-Package-Stash-XS version 0.23 [wiz 2011-08-16]
