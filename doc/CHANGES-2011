@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1943 2011/08/16 03:10:11 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1944 2011/08/16 05:59:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3090,7 +3090,13 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-rdoc to 3.9.2 [taca 2011-08-13]
 	Updated devel/ZenTest to 4.6.1 [taca 2011-08-13]
 	Added x11/ruby-wxruby version 2.0.1 [taca 2011-08-13]
+	Updated devel/p5-File-Find-Rule-PPI to 1.06 [adam 2011-08-13]
+	Updated devel/p5-File-Find-Rule-VCS to 1.08 [adam 2011-08-13]
+	Updated devel/p5-File-HomeDir to 0.98 [adam 2011-08-13]
+	Updated devel/p5-File-NFSLock to 1.21 [adam 2011-08-13]
+	Updated devel/p5-File-ShareDir to 1.03 [adam 2011-08-13]
 	Updated pkgtools/pkgin to 0.4.3 [imil 2011-08-13]
+	Updated devel/p5-AnyEvent to 5.340 [joerg 2011-08-13]
 	Updated lang/gcc46 to 4.6.1 [wiz 2011-08-13]
 	Updated multimedia/xawtv to 3.95nb6 [cheusov 2011-08-14]
 	Updated emulators/suse113_base to 11.3nb5 [chs 2011-08-14]
