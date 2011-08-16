@@ -1,0 +1,5 @@
+This is a declarative specification-style testing system for
+behavior-driven development (BDD) in Perl. The tests (a.k.a.
+examples) are named with strings instead of subroutine names, so
+your fingers will suffer less fatigue from underscore-itis, with
+the side benefit that the test reports are more legible.
