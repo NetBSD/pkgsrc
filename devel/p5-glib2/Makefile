@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2011/08/14 12:26:49 obache Exp $
-#
+# $NetBSD: Makefile,v 1.36 2011/08/16 08:36:10 adam Exp $
 
-DISTNAME=	Glib-${DIST_VERSION}
-PKGNAME=	p5-glib2-${DIST_VERSION}
-PKGREVISION=	2
+DISTNAME=	Glib-1.224
+PKGNAME=	p5-${DISTNAME:S/Glib/glib2/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
@@ -13,19 +11,16 @@ HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings for Glib 2
 LICENSE=	gnu-lgpl-v2.1
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.00:../../devel/p5-ExtUtils-PkgConfig
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.0.0
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=	pkg-config
-
-DIST_VERSION=	1.223
-
-PERL5_PACKLIST=	auto/Glib/.packlist
+USE_TOOLS+=		pkg-config
+PERL5_PACKLIST=		auto/Glib/.packlist
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
