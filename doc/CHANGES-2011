@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1945 2011/08/16 06:00:47 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.1946 2011/08/16 11:54:47 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3110,3 +3110,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Module-Build to 0.38000 [obache 2011-08-15]
 	Added emulators/suse113_libdrm version 11.3 [wiz 2011-08-15]
 	Added emulators/suse113_32_libdrm version 11.3 [wiz 2011-08-15]
+	Updated devel/p5-Try-Tiny to 0.09 [abs 2011-08-16]
