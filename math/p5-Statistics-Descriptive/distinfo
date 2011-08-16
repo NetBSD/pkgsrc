@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/12 12:28:17 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/08/16 22:36:56 wiz Exp $
 
-SHA1 (Statistics-Descriptive-3.0200.tar.gz) = f4aad26964333fc8fc16d867dd054a3f503f13cf
-RMD160 (Statistics-Descriptive-3.0200.tar.gz) = 185cddbc8ce8d97194e3d9b05cfc575b956c50a6
-Size (Statistics-Descriptive-3.0200.tar.gz) = 22458 bytes
+SHA1 (Statistics-Descriptive-3.0202.tar.gz) = c43f1946fc60995c5b9adb6a2bce3ec6635e33a5
+RMD160 (Statistics-Descriptive-3.0202.tar.gz) = 6aa69dbad2af8d70e5c760061d1268189b9a109a
+Size (Statistics-Descriptive-3.0202.tar.gz) = 23450 bytes
