@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.828 2011/08/01 11:58:14 tron Exp $
+# $NetBSD: pkglint.pl,v 1.829 2011/08/16 23:13:34 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2299,11 +2299,11 @@ sub load_shared_dirs() {
 	my $varname_to_dirs = {};
 	my $dir_to_id = {};
 
-	foreach my $pkg qw(
+	foreach my $pkg (qw(
 		misc/gnome-dirs misc/gnome1-dirs misc/gnome2-dirs
 		misc/theme-dirs
 		misc/xdg-dirs misc/xdg-x11-dirs
-		print/texmf-dirs) {
+		print/texmf-dirs)) {
 
 		$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "pkg=$pkg");
 		my $dirs_mk = load_lines("$cwd_pkgsrcdir/$pkg/dirs.mk", true);
