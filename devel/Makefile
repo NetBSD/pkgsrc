@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1480 2011/08/16 20:51:43 wiz Exp $
+# $NetBSD: Makefile,v 1.1481 2011/08/16 20:58:49 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -915,6 +915,7 @@ SUBDIR+=	p5-Package-Constants
 SUBDIR+=	p5-Package-DeprecationManager
 SUBDIR+=	p5-Package-Generator
 SUBDIR+=	p5-Package-Stash
+SUBDIR+=	p5-Package-Stash-XS
 SUBDIR+=	p5-PadWalker
 SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Parallel-Prefork
