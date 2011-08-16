@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/08/14 12:26:49 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/08/16 22:13:54 wiz Exp $
 #
 
 DISTNAME=	Pango-${DIST_VER}
 PKGNAME=	p5-pango-${DIST_VER}
-PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
@@ -18,7 +17,7 @@ MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	pkg-config
 
-DIST_VER=	1.221
+DIST_VER=	1.222
 BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.220
 BUILDLINK_API_DEPENDS.p5-cairo+=	p5-cairo>=1.000
 BUILDLINK_API_DEPENDS.pango+=		pango>=1.0.0
