@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2006/01/16 14:47:35 adam Exp $
+$NetBSD: patch-ad,v 1.5 2011/08/16 10:18:58 cheusov Exp $
 
 --- unix/dltest/Makefile.in.orig	2004-09-23 20:04:07.000000000 +0000
 +++ unix/dltest/Makefile.in
@@ -6,12 +6,12 @@ $NetBSD: patch-ad,v 1.4 2006/01/16 14:47:35 adam Exp $
  
  TCL_DBGX =		@TCL_DBGX@
 -CC = @CC@
-+CC = ${LIBTOOL} --mode=compile @CC@
++CC = ${LIBTOOL} --tag CC --mode=compile @CC@
  LIBS =			@TCL_BUILD_STUB_LIB_SPEC@ @DL_LIBS@ @LIBS@ @MATH_LIBS@
  AC_FLAGS =		@DEFS@
  SHLIB_CFLAGS =		@SHLIB_CFLAGS@
 -SHLIB_LD =		@SHLIB_LD@
-+SHLIB_LD =		${LIBTOOL} --mode=link cc -module -pipe -rpath ${PREFIX}/lib
++SHLIB_LD =		${LIBTOOL} --tag CC --mode=link cc -module -pipe -rpath ${PREFIX}/lib
  SHLIB_LD_LIBS =		@SHLIB_LD_LIBS@
 -SHLIB_SUFFIX =		@SHLIB_SUFFIX@
 +SHLIB_SUFFIX =		.la
