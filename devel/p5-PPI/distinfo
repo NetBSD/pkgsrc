@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/07/12 01:56:00 seb Exp $
+$NetBSD: distinfo,v 1.9 2011/08/16 22:48:24 wiz Exp $
 
-SHA1 (PPI-1.213.tar.gz) = d8516e1f1a268875be9f07546e178e9cbf3659f1
-RMD160 (PPI-1.213.tar.gz) = 0fd0ac1e3686c50448ab941ef13d624552c95662
-Size (PPI-1.213.tar.gz) = 227743 bytes
+SHA1 (PPI-1.215.tar.gz) = 58fd00fcd5efaa625a18e2662ba1ea6ad8657b31
+RMD160 (PPI-1.215.tar.gz) = 7a8253443a795428dc3ae6a831fef3b8be753175
+Size (PPI-1.215.tar.gz) = 228887 bytes
