@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2011/08/10 12:01:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2011/08/16 21:37:44 wiz Exp $
 
 DISTNAME=	ExtUtils-MakeMaker-6.59
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTROUT/}
 
@@ -13,7 +14,12 @@ LICENSE=	${PERL5_LICENSE}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	p5-CPAN-Meta>=2.112150:../../devel/p5-CPAN-Meta
 DEPENDS+=	p5-Parse-CPAN-Meta>=1.4401:../../devel/p5-Parse-CPAN-Meta
+DEPENDS+=	p5-File-Copy-Recursive>=0.38:../../sysutils/p5-File-Copy-Recursive
+# perhaps package JSON::PP::Compat5006, otherwise 'make complains:
+#Using included version of JSON::PP::Compat5006 (1.09) because it is not already installed.
+# on the other hand, it's only needed for Perl-5.6 ...
 
 PERL5_PACKLIST=		auto/ExtUtils/MakeMaker/.packlist
 
