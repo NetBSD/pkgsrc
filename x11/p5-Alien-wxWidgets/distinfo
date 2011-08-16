@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/07/31 07:51:52 sno Exp $
+$NetBSD: distinfo,v 1.4 2011/08/16 22:03:34 wiz Exp $
 
-SHA1 (Alien-wxWidgets-0.51.tar.gz) = b5bed6ed570c267fa75ce4c9dcdc84a76f9c0f2d
-RMD160 (Alien-wxWidgets-0.51.tar.gz) = 18c0481a027a66133adc97e9023d0266c39fe369
-Size (Alien-wxWidgets-0.51.tar.gz) = 673085 bytes
+SHA1 (Alien-wxWidgets-0.52.tar.gz) = 7a31e617a86008fb2f0bbc67659da000272b9a5c
+RMD160 (Alien-wxWidgets-0.52.tar.gz) = 2b1ddaa42ddb8977c7bec5c3e2b05e915b5b266a
+Size (Alien-wxWidgets-0.52.tar.gz) = 684550 bytes
