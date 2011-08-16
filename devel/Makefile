@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1481 2011/08/16 20:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1482 2011/08/16 21:05:26 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1073,6 +1073,7 @@ SUBDIR+=	p5-Test-Script
 SUBDIR+=	p5-Test-Script-Run
 SUBDIR+=	p5-Test-SharedFork
 SUBDIR+=	p5-Test-Simple
+SUBDIR+=	p5-Test-Spec
 SUBDIR+=	p5-Test-SubCalls
 SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-TempDir
