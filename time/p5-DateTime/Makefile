@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/08/14 15:28:44 obache Exp $
+# $NetBSD: Makefile,v 1.29 2011/08/16 09:56:41 obache Exp $
 
 DISTNAME=	DateTime-0.66
 PKGNAME=	p5-${DISTNAME}00
@@ -11,7 +11,6 @@ HOMEPAGE=	http://datetime.perl.org/
 COMMENT=	Perl module for date/time sets and ranges
 LICENSE=	artistic-2.0
 
-BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
