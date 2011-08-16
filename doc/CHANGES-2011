@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1949 2011/08/16 19:58:15 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1950 2011/08/16 19:59:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3114,3 +3114,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Test-Fatal version 0.006 [abs 2011-08-16]
 	Updated comms/p5-Device-Modem to 1.54 [wiz 2011-08-16]
 	Updated comms/p5-Device-Gsm to 1.58 [wiz 2011-08-16]
+	Updated converters/p5-JSON-XS to 2.320 [wiz 2011-08-16]
