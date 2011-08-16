@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1976 2011/08/16 22:16:49 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1977 2011/08/16 22:18:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3141,3 +3141,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-pango to 1.222 [wiz 2011-08-16]
 	Updated math/p5-Excel-Template to 0.33 [wiz 2011-08-16]
 	Updated math/p5-Math-Base36 to 0.09 [wiz 2011-08-16]
+	Updated math/p5-Math-BaseCnv to 1.8 [wiz 2011-08-16]
