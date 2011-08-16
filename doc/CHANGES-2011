@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1984 2011/08/16 22:35:53 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1985 2011/08/16 22:37:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3149,3 +3149,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/racket-textual to 5.1.3 [asau 2011-08-16]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.5900 [wiz 2011-08-16]
 	Updated math/p5-Spreadsheet-Read to 0.43a [wiz 2011-08-16]
+	Updated math/p5-Statistics-Descriptive to 3.0202 [wiz 2011-08-16]
