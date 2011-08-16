@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2011/08/14 12:26:30 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/08/16 23:04:17 wiz Exp $
 #
 
-DISTNAME=	Perl-Tidy-20090616
+DISTNAME=	Perl-Tidy-20101217
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 SVR4_PKGNAME=	p5pt
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=perltidy/}
