@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1991 2011/08/16 22:56:13 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1992 2011/08/16 23:02:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3156,3 +3156,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-PPI to 1.215 [wiz 2011-08-16]
 	Updated devel/p5-PPIx-Regexp to 0.021 [wiz 2011-08-16]
 	Updated devel/p5-PPIx-Utilities to 1.001.000 [wiz 2011-08-16]
+	Updated devel/p5-Perl-Critic to 1.116 [wiz 2011-08-16]
