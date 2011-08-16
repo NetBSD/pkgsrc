@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1971 2011/08/16 22:03:45 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1972 2011/08/16 22:10:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/p5-Chart to 2.4.2 [wiz 2011-08-16]
 	Updated multimedia/p5-GStreamer to 0.16 [wiz 2011-08-16]
 	Updated x11/p5-Alien-wxWidgets to 0.52 [wiz 2011-08-16]
+	Updated x11/p5-gtk2 to 1.224 [wiz 2011-08-16]
