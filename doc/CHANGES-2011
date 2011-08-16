@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1969 2011/08/16 21:53:50 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1970 2011/08/16 21:55:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3134,3 +3134,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated geography/p5-Geo-Distance to 0.17 [wiz 2011-08-16]
 	Updated graphics/p5-cairo to 1.062 [wiz 2011-08-16]
 	Updated graphics/p5-Chart to 2.4.2 [wiz 2011-08-16]
+	Updated multimedia/p5-GStreamer to 0.16 [wiz 2011-08-16]
