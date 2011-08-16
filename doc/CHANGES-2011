@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1996 2011/08/16 23:06:40 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1997 2011/08/16 23:09:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3161,3 +3161,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Perl-Tidy to 20101217 [wiz 2011-08-16]
 	Updated devel/p5-Perl-Version to 1.011 [wiz 2011-08-16]
 	Updated devel/p5-SVN-Dump to 0.05 [wiz 2011-08-16]
+	Updated devel/p5-SVN-Notify to 2.82 [wiz 2011-08-16]
