@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1979 2011/08/16 22:23:05 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1980 2011/08/16 22:23:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3144,3 +3144,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/p5-Math-BaseCnv to 1.8 [wiz 2011-08-16]
 	Updated math/p5-Math-BigInt-GMP to 1.36 [wiz 2011-08-16]
 	Updated math/p5-Math-BigInt-Pari to 1.16 [wiz 2011-08-16]
+	Updated math/p5-Math-Random-MT to 1.12 [wiz 2011-08-16]
