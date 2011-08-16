@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1944 2011/08/16 05:59:13 obache Exp $
+$NetBSD: CHANGES-2011,v 1.1945 2011/08/16 06:00:47 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2779,6 +2779,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/heimdal to 1.4nb1 [gls 2011-07-31]
 	Updated devel/cmake to 2.8.5 [adam 2011-07-31]
 	Updated editors/scite to 2.25nb2 [dholland 2011-07-31]
+	Updated audio/gimmix to 0.5.7.1nb7 [dholland 2011-08-01]
+	Updated converters/libwpd to 0.9.2nb1 [dholland 2011-08-01]
+	Updated devel/gob2 to 2.0.18nb2 [dholland 2011-08-01]
+	Updated devel/libtai to 0.60nb2 [dholland 2011-08-01]
 	Updated comms/minicom to 2.5 [adam 2011-08-01]
 	Updated lang/racket to 5.1.1 [asau 2011-08-01]
 	Updated lang/racket-textual to 5.1.1 [asau 2011-08-01]
