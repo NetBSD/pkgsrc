@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1961 2011/08/16 21:11:40 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1962 2011/08/16 21:33:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3126,3 +3126,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Package-Stash-XS version 0.23 [wiz 2011-08-16]
 	Updated devel/p5-Package-Stash to 0.31 [wiz 2011-08-16]
 	Updated devel/p5-App-perlbrew to 0.28 [wiz 2011-08-16]
+	Added devel/p5-CPAN-Meta version 2.112150 [wiz 2011-08-16]
