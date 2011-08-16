@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/04/23 19:55:12 wiz Exp $
+$NetBSD: distinfo,v 1.5 2011/08/16 07:00:59 adam Exp $
 
-SHA1 (File-Slurp-9999.13.tar.gz) = ee3df8f2f2efcd6439051f76a08f3536e8f04e7c
-RMD160 (File-Slurp-9999.13.tar.gz) = ef2b89f9dbfd35ebfa3d4b2ab8e09a42e7442dc0
-Size (File-Slurp-9999.13.tar.gz) = 26403 bytes
+SHA1 (File-Slurp-9999.19.tar.gz) = e734e5d93a82fbd179d33db35d1f98c5e5934bf1
+RMD160 (File-Slurp-9999.19.tar.gz) = 38a646144cf4dada0d3e2918e33665de742700d1
+Size (File-Slurp-9999.19.tar.gz) = 39927 bytes
