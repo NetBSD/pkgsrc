@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.13 2011/06/09 09:08:17 obache Exp $
+$NetBSD: distinfo,v 1.14 2011/08/16 22:11:42 abs Exp $
 
 SHA1 (jdk-6u26-linux-i586.bin) = 5f5c9c8489391b881ec324b455a98cabf832ca7a
 RMD160 (jdk-6u26-linux-i586.bin) = 613bb466a85679517d7415bc70b15add2e1cc395
 Size (jdk-6u26-linux-i586.bin) = 85141056 bytes
+SHA1 (jdk-6u26-linux-x64.bin) = b1043562198c94acafd5b53c59363d9f5e752072
+RMD160 (jdk-6u26-linux-x64.bin) = aa218040a5d8ab0b2b23b77938eef5e8788c10ef
+Size (jdk-6u26-linux-x64.bin) = 85407904 bytes
