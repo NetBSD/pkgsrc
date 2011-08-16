@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.1954 2011/08/16 20:17:01 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.1955 2011/08/16 20:19:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3119,3 +3119,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-DB_File to 1.824 [wiz 2011-08-16]
 	Updated databases/p5-MARC-Record to 2.0.3 [wiz 2011-08-16]
 	Updated devel/p5-Module-Install to 1.01 [wiz 2011-08-16]
+	Updated databases/p5-ORLite to 1.50 [wiz 2011-08-16]
