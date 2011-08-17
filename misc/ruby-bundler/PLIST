@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/08/12 16:53:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/08/17 13:30:09 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -26,8 +26,6 @@ ${GEM_LIBDIR}/lib/bundler/installer.rb
 ${GEM_LIBDIR}/lib/bundler/lazy_specification.rb
 ${GEM_LIBDIR}/lib/bundler/lockfile_parser.rb
 ${GEM_LIBDIR}/lib/bundler/man/bundle
-${GEM_LIBDIR}/lib/bundler/man/bundle-benchmark
-${GEM_LIBDIR}/lib/bundler/man/bundle-benchmark.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle-config
 ${GEM_LIBDIR}/lib/bundler/man/bundle-config.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle-exec
