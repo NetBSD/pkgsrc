@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10491 2011/08/17 11:40:10 taca Exp $
+$NetBSD: TODO,v 1.10492 2011/08/17 13:38:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -951,7 +951,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
 	o mathomatic-15.6.3
-	o mdocml-1.11.5
+	o mdocml-1.11.6
 	o memtester-4.2.2
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
@@ -1254,7 +1254,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tetrinetx-1.40c
 	o texmaker-3.1
 	o tfmxplay-1.1.6
-	o thunderbird-5.0
+	o thunderbird-6.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tinc-1.0.16
@@ -1452,6 +1452,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xorg-util-macros-1.15.0
 	o xorp-1.8.3
 	o xpaint-2.9.8.2
+	o xpdf-3.03
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.1
 	o xproto-7.0.22
