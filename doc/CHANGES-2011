@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2002 2011/08/17 09:44:01 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2003 2011/08/17 09:44:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3168,3 +3168,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.460 [obache 2011-08-17]
 	Updated devel/p5-Hash-Flatten to 1.19 [wiz 2011-08-17]
 	Updated devel/p5-Hash-MultiValue to 0.09 [wiz 2011-08-17]
+	Updated devel/p5-Hook-LexWrap to 0.24 [wiz 2011-08-17]
