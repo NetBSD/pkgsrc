@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/08/12 17:21:33 taca Exp $
+$NetBSD: distinfo,v 1.6 2011/08/17 13:38:30 taca Exp $
 
-SHA1 (libxml-ruby-2.2.0.gem) = 82bbe311878adce98e9649ffbfc624e459c03b95
-RMD160 (libxml-ruby-2.2.0.gem) = 3d7e7b3bc295ce861266edf840aad93f2004df9a
-Size (libxml-ruby-2.2.0.gem) = 243712 bytes
+SHA1 (libxml-ruby-2.2.1.gem) = a8f9c27b0dc2ff38a84700ffd2e8b608a98ae9b8
+RMD160 (libxml-ruby-2.2.1.gem) = 82a548f9949ff51ecdd7811b871c8beeaeef0c7a
+Size (libxml-ruby-2.2.1.gem) = 244224 bytes
