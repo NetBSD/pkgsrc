@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2012 2011/08/17 13:29:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2013 2011/08/17 13:31:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3178,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-sexp-processor to 3.0.6 [taca 2011-08-17]
 	Updated devel/ruby-parser to 2.1.0 [taca 2011-08-17]
 	Updated devel/ruby-test-unit to 2.3.2 [taca 2011-08-17]
+	Updated misc/ruby-bundler to 1.0.18 [taca 2011-08-17]
