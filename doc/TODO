@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10492 2011/08/17 13:38:12 wiz Exp $
+$NetBSD: TODO,v 1.10493 2011/08/17 16:57:45 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -1264,7 +1264,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkgate-1.8.7
 	o tkhylafax-3.2
 	o tkpasman-2.2b
-	o tmux-1.5
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.4.2 [GNOME 2.32]
