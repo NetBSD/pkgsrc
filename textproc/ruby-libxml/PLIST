@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/08/12 17:21:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/08/17 13:38:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/HISTORY
 ${GEM_LIBDIR}/LICENSE
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/libxml/extconf.h
 ${GEM_LIBDIR}/ext/libxml/extconf.rb
 ${GEM_LIBDIR}/ext/libxml/libxml.c
+${GEM_LIBDIR}/ext/libxml/libxml_ruby.def
 ${GEM_LIBDIR}/ext/libxml/ruby_libxml.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml.h
