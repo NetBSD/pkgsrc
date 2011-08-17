@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2014 2011/08/17 13:36:41 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2015 2011/08/17 13:39:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3180,3 +3180,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-test-unit to 2.3.2 [taca 2011-08-17]
 	Updated misc/ruby-bundler to 1.0.18 [taca 2011-08-17]
 	Updated print/ruby-prawn to 0.12.0 [taca 2011-08-17]
+	Updated textproc/ruby-libxml to 2.2.1 [taca 2011-08-17]
