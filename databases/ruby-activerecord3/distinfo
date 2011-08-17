@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2011/06/17 13:50:48 taca Exp $
+$NetBSD: distinfo,v 1.9 2011/08/17 14:18:44 taca Exp $
 
-SHA1 (activerecord-3.0.9.gem) = 285759d41c79460a3f49d26d8a0b3f8c9279e868
-RMD160 (activerecord-3.0.9.gem) = 529529dcaf8323891296f6c17eac95c712078fb7
-Size (activerecord-3.0.9.gem) = 344576 bytes
+SHA1 (activerecord-3.0.10.gem) = 38648633d198499b2784fe503dbd2bd419fcf6ed
+RMD160 (activerecord-3.0.10.gem) = 2b538eb07493d0ddd7a5347ae44892be9890f27d
+Size (activerecord-3.0.10.gem) = 345088 bytes
