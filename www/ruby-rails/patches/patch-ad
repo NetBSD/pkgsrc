@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.3 2011/06/11 03:14:44 taca Exp $
+$NetBSD: patch-ad,v 1.4 2011/08/17 14:15:34 taca Exp $
 
 Remove a junk file.
 
---- ../rails-2.3.12.gemspec.orig	2011-06-08 12:39:40.000000000 +0000
-+++ ../rails-2.3.12.gemspec
-@@ -128,7 +128,6 @@ files: 
+--- ../rails-2.3.14.gemspec.orig	2011-08-17 01:52:22.000000000 +0000
++++ ../rails-2.3.14.gemspec
+@@ -127,7 +127,6 @@ files: 
  - MIT-LICENSE
  - Rakefile
  - README
