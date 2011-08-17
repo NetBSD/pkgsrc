@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.7 2011/06/17 13:47:29 taca Exp $
+# $NetBSD: rails.mk,v 1.8 2011/08/17 14:11:18 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -25,8 +25,8 @@ _RUBY_RAILS_MK=	# defined
 #
 # current Ruby on Rails versions.
 #
-RUBY_RAILS2_VERSION?=	2.3.12
-RUBY_RAILS3_VERSION?=	3.0.9
+RUBY_RAILS2_VERSION?=	2.3.14
+RUBY_RAILS3_VERSION?=	3.0.10
 
 .if !empty(RUBY_RAILS)
 RUBY_RAILS_DEFAULT=		${RUBY_RAILS}
