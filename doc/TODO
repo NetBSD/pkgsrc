@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10490 2011/08/17 08:33:01 adam Exp $
+$NetBSD: TODO,v 1.10491 2011/08/17 11:40:10 taca Exp $
 
 Suggested new packages
 ======================
@@ -921,6 +921,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
+	o libthrift-0.7.0
 	o libtool-2.4
 	o libtool-base-2.4
 	o libtool-info-2.4
