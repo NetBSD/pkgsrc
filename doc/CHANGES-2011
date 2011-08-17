@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2016 2011/08/17 13:43:07 asau Exp $
+$NetBSD: CHANGES-2011,v 1.2017 2011/08/17 14:25:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3182,3 +3182,17 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/ruby-prawn to 0.12.0 [taca 2011-08-17]
 	Updated textproc/ruby-libxml to 2.2.1 [taca 2011-08-17]
 	Updated devel/fossil to 1.18 [asau 2011-08-17]
+	Updated devel/ruby-activesupport to 2.3.14 [taca 2011-08-17]
+	Updated databases/ruby-activerecord to 2.3.14 [taca 2011-08-17]
+	Updated www/ruby-actionpack to 2.3.14 [taca 2011-08-17]
+	Updated mail/ruby-actionmailer to 2.3.14 [taca 2011-08-17]
+	Updated www/ruby-activeresource to 2.3.14 [taca 2011-08-17]
+	Updated www/ruby-rails to 2.3.14 [taca 2011-08-17]
+	Updated devel/ruby-activesupport3 to 3.0.10 [taca 2011-08-17]
+	Updated devel/ruby-activemodel to 3.0.10 [taca 2011-08-17]
+	Updated www/ruby-actionpack3 to 3.0.10 [taca 2011-08-17]
+	Updated databases/ruby-activerecord3 to 3.0.10 [taca 2011-08-17]
+	Updated www/ruby-activeresource3 to 3.0.10 [taca 2011-08-17]
+	Updated mail/ruby-actionmailer3 to 3.0.10 [taca 2011-08-17]
+	Updated devel/ruby-railties to 3.0.10 [taca 2011-08-17]
+	Updated www/ruby-rails3 to 3.0.10 [taca 2011-08-17]
