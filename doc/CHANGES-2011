@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2007 2011/08/17 12:05:49 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2008 2011/08/17 13:04:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3173,3 +3173,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-InlineX-C2XS to 0.16 [wiz 2011-08-17]
 	Updated devel/p5-Log-Any to 0.13 [wiz 2011-08-17]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.893 [wiz 2011-08-17]
+	Updated www/contao210-translations to 20110817 [taca 2011-08-17]
