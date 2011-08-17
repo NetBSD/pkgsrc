@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/08/12 16:53:37 taca Exp $
+$NetBSD: distinfo,v 1.7 2011/08/17 13:30:09 taca Exp $
 
-SHA1 (bundler-1.0.17.gem) = 8e19ec7fb7723d086534901a02be7b7cc1fb2ea7
-RMD160 (bundler-1.0.17.gem) = 85695544c986b502faad8400d061a7debce3a72e
-Size (bundler-1.0.17.gem) = 175104 bytes
+SHA1 (bundler-1.0.18.gem) = a98b654e2c29c074acbdd55c200d0f36bfcff8f8
+RMD160 (bundler-1.0.18.gem) = 42e3a2462bb4f927c923d4e159da8ad2935877c9
+Size (bundler-1.0.18.gem) = 172544 bytes
