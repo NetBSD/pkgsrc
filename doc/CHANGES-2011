@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2005 2011/08/17 11:57:31 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2006 2011/08/17 11:58:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Hook-LexWrap to 0.24 [wiz 2011-08-17]
 	Updated devel/p5-Inline to 0.48 [wiz 2011-08-17]
 	Updated devel/p5-InlineX-C2XS to 0.16 [wiz 2011-08-17]
+	Updated devel/p5-Log-Any to 0.13 [wiz 2011-08-17]
