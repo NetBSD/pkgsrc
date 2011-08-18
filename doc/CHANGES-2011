@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2021 2011/08/18 09:22:44 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2022 2011/08/18 09:46:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3200,3 +3200,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-activeresource3 to 3.0.10 [obache 2011-08-18]
 	Updated net/tinyfugue to 4.0s1nb7 [dholland 2011-08-18]
 	Updated security/openssh to 5.8.2nb4 [taca 2011-08-18]
+	Updated net/p5-Net-Amazon to 0.60 [obache 2011-08-18]
