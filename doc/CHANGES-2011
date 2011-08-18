@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2027 2011/08/18 12:22:27 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2028 2011/08/18 12:39:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3212,3 +3212,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/p5-Net-Amazon to 0.60 [obache 2011-08-18]
 	Updated devel/p5-namespace-clean to 0.21 [abs 2011-08-18]
 	Updated www/typo3 to 4.5.5 [taca 2011-08-18]
+	Updated security/ruby-net-ssh to 2.2.0 [taca 2011-08-18]
