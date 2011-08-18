@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2022 2011/08/18 09:46:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2023 2011/08/18 11:37:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3110,6 +3110,15 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Module-Build to 0.38000 [obache 2011-08-15]
 	Added emulators/suse113_libdrm version 11.3 [wiz 2011-08-15]
 	Added emulators/suse113_32_libdrm version 11.3 [wiz 2011-08-15]
+	Updated devel/p5-File-Slurp to 9999.19 [adam 2011-08-16]
+	Updated devel/p5-Filesys-Notify-Simple to 0.07 [adam 2011-08-16]
+	Updated devel/p5-Getopt-Euclid to 0.2.7 [adam 2011-08-16]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.090 [adam 2011-08-16]
+	Updated devel/p5-Data-Section to 0.101.621 [adam 2011-08-16]
+	Updated devel/p5-Git-CPAN-Patch to 0.6.1 [adam 2011-08-16]
+	Updated devel/p5-Params-Validate to 1.00 [adam 2011-08-16]
+	Updated devel/p5-glib2 to 1.224 [adam 2011-08-16]
+	Updated devel/p5-Guard to 1.022 [adam 2011-08-16]
 	Updated devel/p5-Try-Tiny to 0.09 [abs 2011-08-16]
 	Added devel/p5-Test-Fatal version 0.006 [abs 2011-08-16]
 	Updated comms/p5-Device-Modem to 1.54 [wiz 2011-08-16]
