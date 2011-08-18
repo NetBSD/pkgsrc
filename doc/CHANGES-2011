@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2023 2011/08/18 11:37:02 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2024 2011/08/18 11:53:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3210,3 +3210,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/tinyfugue to 4.0s1nb7 [dholland 2011-08-18]
 	Updated security/openssh to 5.8.2nb4 [taca 2011-08-18]
 	Updated net/p5-Net-Amazon to 0.60 [obache 2011-08-18]
+	Updated devel/p5-namespace-clean to 0.21 [abs 2011-08-18]
