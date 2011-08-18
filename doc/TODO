@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10494 2011/08/18 12:47:19 taca Exp $
+$NetBSD: TODO,v 1.10495 2011/08/18 15:20:55 taca Exp $
 
 Suggested new packages
 ======================
@@ -1063,6 +1063,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phonon-4.5.0
 	o phoon-20050629
 	o photopc-3.05
+	o php-5.3.7 [taca]
 	o php-jpgraph-3.0.6
 	o php-libawl-0.46
 	o picp-0.6.8
