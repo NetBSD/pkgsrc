@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10493 2011/08/17 16:57:45 jmmv Exp $
+$NetBSD: TODO,v 1.10494 2011/08/18 12:47:19 taca Exp $
 
 Suggested new packages
 ======================
@@ -1226,6 +1226,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o stunnel-4.40
 	o subtitleeditor-0.33.0
+	o sudo-1.8.2
 	o supertuxkart-0.7.2
 	o swfdec-gnome-2.30.1
 	o sympa-6.1.6
