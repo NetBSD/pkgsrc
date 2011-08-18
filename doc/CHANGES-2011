@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2019 2011/08/18 02:46:32 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2020 2011/08/18 05:35:37 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3198,3 +3198,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-rails3 to 3.0.10 [taca 2011-08-17]
 	Updated misc/tmux to 1.5 [jmmv 2011-08-17]
 	Updated www/ruby-activeresource3 to 3.0.10 [obache 2011-08-18]
+	Updated net/tinyfugue to 4.0s1nb7 [dholland 2011-08-18]
