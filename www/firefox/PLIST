@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2011/07/11 13:17:40 tnn Exp $
+@comment $NetBSD: PLIST,v 1.44 2011/08/18 18:31:10 tnn Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -8,6 +8,7 @@ ${PLIST.nobranding}lib/firefox/chrome/browser/content/branding/about-background.
 lib/firefox/chrome/browser/content/branding/about-logo.png
 lib/firefox/chrome/browser/content/branding/about-wordmark.png
 lib/firefox/chrome/browser/content/branding/about.png
+lib/firefox/chrome/browser/content/branding/aboutDialog.css
 lib/firefox/chrome/browser/content/branding/icon128.png
 lib/firefox/chrome/browser/content/branding/icon16.png
 lib/firefox/chrome/browser/content/branding/icon48.png
@@ -81,6 +82,10 @@ lib/firefox/chrome/browser/content/browser/places/places.xul
 lib/firefox/chrome/browser/content/browser/places/placesOverlay.xul
 lib/firefox/chrome/browser/content/browser/places/tree.xml
 lib/firefox/chrome/browser/content/browser/places/treeView.js
+lib/firefox/chrome/browser/content/browser/preferences/aboutPermissions.css
+lib/firefox/chrome/browser/content/browser/preferences/aboutPermissions.js
+lib/firefox/chrome/browser/content/browser/preferences/aboutPermissions.xml
+lib/firefox/chrome/browser/content/browser/preferences/aboutPermissions.xul
 lib/firefox/chrome/browser/content/browser/preferences/advanced-scripts.xul
 lib/firefox/chrome/browser/content/browser/preferences/advanced.js
 lib/firefox/chrome/browser/content/browser/preferences/advanced.xul
@@ -127,6 +132,8 @@ lib/firefox/chrome/browser/content/browser/sanitize.js
 lib/firefox/chrome/browser/content/browser/sanitize.xul
 lib/firefox/chrome/browser/content/browser/sanitizeDialog.css
 lib/firefox/chrome/browser/content/browser/sanitizeDialog.js
+lib/firefox/chrome/browser/content/browser/scratchpad.js
+lib/firefox/chrome/browser/content/browser/scratchpad.xul
 lib/firefox/chrome/browser/content/browser/search/engineManager.js
 lib/firefox/chrome/browser/content/browser/search/engineManager.xul
 lib/firefox/chrome/browser/content/browser/search/search.xml
@@ -208,6 +215,7 @@ lib/firefox/chrome/browser/skin/classic/browser/places/unsortedBookmarks.png
 lib/firefox/chrome/browser/skin/classic/browser/places/unstarred48.png
 lib/firefox/chrome/browser/skin/classic/browser/preferences/Options-sync.png
 lib/firefox/chrome/browser/skin/classic/browser/preferences/Options.png
+lib/firefox/chrome/browser/skin/classic/browser/preferences/aboutPermissions.css
 lib/firefox/chrome/browser/skin/classic/browser/preferences/alwaysAsk.png
 lib/firefox/chrome/browser/skin/classic/browser/preferences/applications.css
 lib/firefox/chrome/browser/skin/classic/browser/preferences/mail.png
@@ -226,6 +234,7 @@ lib/firefox/chrome/browser/skin/classic/browser/sync-32.png
 lib/firefox/chrome/browser/skin/classic/browser/sync-bg.png
 lib/firefox/chrome/browser/skin/classic/browser/sync-desktopIcon.png
 lib/firefox/chrome/browser/skin/classic/browser/sync-mobileIcon.png
+lib/firefox/chrome/browser/skin/classic/browser/sync-notification-24.png
 lib/firefox/chrome/browser/skin/classic/browser/syncCommon.css
 lib/firefox/chrome/browser/skin/classic/browser/syncQuota.css
 lib/firefox/chrome/browser/skin/classic/browser/syncSetup.css
@@ -241,7 +250,7 @@ lib/firefox/chrome/browser/skin/classic/browser/tabview/search.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/stack-expander.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/tabview.css
 lib/firefox/chrome/browser/skin/classic/browser/tabview/tabview.png
-lib/firefox/chrome/browser/skin/classic/browser/urlbar-favicon-glow.png
+lib/firefox/chrome/browser/skin/classic/browser/urlbar-arrow.png
 lib/firefox/chrome/browser/skin/classic/communicator/communicator.css
 lib/firefox/chrome/en-US/locale/branding/brand.dtd
 lib/firefox/chrome/en-US/locale/branding/brand.properties
@@ -276,6 +285,8 @@ lib/firefox/chrome/en-US/locale/browser/places/editBookmarkOverlay.dtd
 lib/firefox/chrome/en-US/locale/browser/places/moveBookmarks.dtd
 lib/firefox/chrome/en-US/locale/browser/places/places.dtd
 lib/firefox/chrome/en-US/locale/browser/places/places.properties
+lib/firefox/chrome/en-US/locale/browser/preferences/aboutPermissions.dtd
+lib/firefox/chrome/en-US/locale/browser/preferences/aboutPermissions.properties
 lib/firefox/chrome/en-US/locale/browser/preferences/advanced-scripts.dtd
 lib/firefox/chrome/en-US/locale/browser/preferences/advanced.dtd
 lib/firefox/chrome/en-US/locale/browser/preferences/applicationManager.dtd
@@ -301,11 +312,12 @@ lib/firefox/chrome/en-US/locale/browser/safeMode.dtd
 lib/firefox/chrome/en-US/locale/browser/safebrowsing/phishing-afterload-warning-message.dtd
 lib/firefox/chrome/en-US/locale/browser/safebrowsing/report-phishing.dtd
 lib/firefox/chrome/en-US/locale/browser/sanitize.dtd
+lib/firefox/chrome/en-US/locale/browser/scratchpad.dtd
+lib/firefox/chrome/en-US/locale/browser/scratchpad.properties
 lib/firefox/chrome/en-US/locale/browser/search.properties
 lib/firefox/chrome/en-US/locale/browser/searchbar.dtd
 lib/firefox/chrome/en-US/locale/browser/setDesktopBackground.dtd
 lib/firefox/chrome/en-US/locale/browser/shellservice.properties
-lib/firefox/chrome/en-US/locale/browser/sidebar/sidebar.properties
 lib/firefox/chrome/en-US/locale/browser/syncBrand.dtd
 lib/firefox/chrome/en-US/locale/browser/syncGenericChange.properties
 lib/firefox/chrome/en-US/locale/browser/syncKey.dtd
@@ -361,6 +373,7 @@ lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
 lib/firefox/firefox
 lib/firefox/icons/document.png
 lib/firefox/icons/mozicon128.png
+lib/firefox/modules/AutocompletePopup.jsm
 lib/firefox/modules/HUDService.jsm
 lib/firefox/modules/NetworkHelper.jsm
 lib/firefox/modules/NetworkPrioritizer.jsm
