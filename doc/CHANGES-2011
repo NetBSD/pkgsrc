@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2030 2011/08/18 12:50:57 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2031 2011/08/18 12:52:29 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3214,4 +3214,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/typo3 to 4.5.5 [taca 2011-08-18]
 	Updated security/ruby-net-ssh to 2.2.0 [taca 2011-08-18]
 	Updated security/sudo to 1.7.7 [taca 2011-08-18]
+	Updated x11/qt4-libs to 4.7.3nb1 [cheusov 2011-08-18]
 	Updated textproc/ruby-redcloth to 4.2.8 [taca 2011-08-18]
+	Updated x11/qt4-libs to 4.7.3nb1 [cheusov 2011-08-18]
