@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2031 2011/08/18 12:52:29 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2032 2011/08/18 12:52:55 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3217,3 +3217,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/qt4-libs to 4.7.3nb1 [cheusov 2011-08-18]
 	Updated textproc/ruby-redcloth to 4.2.8 [taca 2011-08-18]
 	Updated x11/qt4-libs to 4.7.3nb1 [cheusov 2011-08-18]
+	Updated x11/qt4-tools to 4.7.3nb1 [cheusov 2011-08-18]
