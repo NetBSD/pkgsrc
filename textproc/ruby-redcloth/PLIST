@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/06/19 03:39:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/08/18 12:50:14 taca Exp $
 bin/redcloth
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
@@ -25,7 +25,6 @@ ${GEM_LIBDIR}/lib/redcloth/formatters/latex.rb
 ${GEM_LIBDIR}/lib/redcloth/formatters/latex_entities.yml
 ${GEM_LIBDIR}/lib/redcloth/textile_doc.rb
 ${GEM_LIBDIR}/lib/redcloth/version.rb
-${GEM_LIBDIR}/lib/redcloth_scan.jar
 ${GEM_LIBDIR}/lib/redcloth_scan.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/tasks/pureruby.rake
 ${GEM_LIBDIR}/redcloth.gemspec
