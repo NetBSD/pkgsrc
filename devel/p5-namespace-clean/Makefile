@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/08/14 12:26:49 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/08/18 11:53:02 abs Exp $
 
-DISTNAME=	namespace-clean-0.18
+DISTNAME=	namespace-clean-0.21
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=namespace/}
 
@@ -15,9 +14,7 @@ USE_LANGUAGES=		# empty
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-B-Hooks-EndOfScope>=0.07:../../devel/p5-B-Hooks-EndOfScope
-DEPENDS+=	p5-Package-Stash>=0.03:../../devel/p5-Package-Stash
-DEPENDS+=	p5-Sub-Identify>=0.04:../../devel/p5-Sub-Identify
-DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
+DEPENDS+=	p5-Package-Stash>=0.23:../../devel/p5-Package-Stash
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
