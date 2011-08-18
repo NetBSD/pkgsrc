@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2011/07/21 13:06:05 obache Exp $
+# $NetBSD: Makefile,v 1.87 2011/08/18 18:31:10 tnn Exp $
 
 .include "../../devel/xulrunner/dist.mk"
 PKGNAME=	firefox-${FIREFOX_VER}
-PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	tnn@NetBSD.org
@@ -15,8 +14,6 @@ MOZILLA_DIR=	# empty
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--with-libxul-sdk=${PREFIX}/lib/xulrunner-sdk
 CONFIGURE_ARGS+=	--with-system-libxul
-# XXX tnn with omnijar enabled it just doesn't start
-CONFIGURE_ARGS+=	--enable-chrome-format=flat
 
 ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 
@@ -24,12 +21,11 @@ ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 .include "options.mk"
 
 MOZILLA=firefox
+MOZILLA_ICON=	${WRKSRC}/dist/firefox/chrome/icons/default/default48.png
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 MOZILLA_NAME=	Firefox
-MOZILLA_ICON=	${WRKSRC}/other-licenses/branding/firefox/default48.png
 .else
 MOZILLA_NAME=	Browser
-MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/default48.png
 .endif
 
 pre-configure:
