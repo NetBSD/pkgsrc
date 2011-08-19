@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2011/08/07 15:50:22 obache Exp $
+# $NetBSD: Makefile,v 1.611 2011/08/19 06:11:02 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -334,7 +334,6 @@ SUBDIR+=	ploticus-examples
 SUBDIR+=	plotmtv
 SUBDIR+=	plotutils
 SUBDIR+=	png
-SUBDIR+=	png12
 SUBDIR+=	png2html
 SUBDIR+=	pngcheck
 SUBDIR+=	pngcrush
