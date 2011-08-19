@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.14 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-ab,v 1.15 2011/08/19 14:39:09 tnn Exp $
 
---- mozilla/nsprpub/pr/include/md/_netbsd.h.orig	2010-03-15 14:56:04.000000000 +0000
+--- mozilla/nsprpub/pr/include/md/_netbsd.h.orig	2010-05-03 18:21:00.000000000 +0000
 +++ mozilla/nsprpub/pr/include/md/_netbsd.h
 @@ -79,7 +79,7 @@
  #define HAVE_DLL
@@ -11,20 +11,7 @@ $NetBSD: patch-ab,v 1.14 2010/07/12 16:49:22 tnn Exp $
  #define _PR_STAT_HAS_ST_ATIMESPEC
  #define _PR_POLL_AVAILABLE
  #define _PR_USE_POLL
-@@ -94,6 +94,12 @@
- #define _PR_INET6_PROBE
- #endif
- 
-+#if __NetBSD_Version__ >= 106370000
-+/* NetBSD 1.6ZK */
-+#define _PR_HAVE_GETPROTO_R
-+#define _PR_HAVE_GETPROTO_R_INT
-+#endif
-+
- #define USE_SETJMP
- 
- #ifndef _PR_PTHREADS
-@@ -107,6 +113,8 @@
+@@ -107,6 +107,8 @@
  #define JB_SP_INDEX 2
  #elif defined(__mips__)
  #define JB_SP_INDEX 4
