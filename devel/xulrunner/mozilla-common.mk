@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.25 2011/08/18 18:31:09 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.26 2011/08/19 14:31:10 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 # 
@@ -42,11 +42,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		${MOZILLA_DIR}xpcom/build/nsXPCOMPrivate.h
-SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xulrunner/app/nsRegisterGREUnix.cpp
-SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xulrunner/installer/Makefile.in
-SUBST_FILES.fix-paths+=		${MOZILLA_DIR}extensions/java/xpcom/interfaces/org/mozilla/xpcom/Mozilla.java
 SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
-SUBST_SED.fix-paths=		-e 's,/etc/gre.d,${PREFIX}/lib/xulrunner/gre.d,g'
 SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
