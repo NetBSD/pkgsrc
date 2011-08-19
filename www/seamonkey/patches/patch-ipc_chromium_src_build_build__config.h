@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.1 2011/07/11 20:46:36 tnn Exp $
+$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.2 2011/08/19 10:10:01 tnn Exp $
 
---- mozilla/ipc/chromium/src/build/build_config.h.orig	2011-06-15 21:57:27.000000000 +0000
+--- mozilla/ipc/chromium/src/build/build_config.h.orig	2011-08-11 21:41:01.000000000 +0000
 +++ mozilla/ipc/chromium/src/build/build_config.h
 @@ -19,6 +19,10 @@
  #define OS_MACOSX 1
@@ -23,7 +23,7 @@ $NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.1 2011/07/11 20:46:36 
  #endif
  
 @@ -60,6 +64,9 @@
- #elif defined(__ppc__)
+ #elif defined(__ppc__) || defined(__powerpc__)
  #define ARCH_CPU_PPC 1
  #define ARCH_CPU_32_BITS 1
 +#elif defined(__sparc64__)

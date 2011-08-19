@@ -1,6 +1,6 @@
-$NetBSD: patch-aa-toplevel,v 1.2 2011/07/11 20:46:36 tnn Exp $
+$NetBSD: patch-aa-toplevel,v 1.3 2011/08/19 10:10:01 tnn Exp $
 
---- configure.in.orig	2011-07-06 08:40:27.000000000 +0000
+--- configure.in.orig	2011-08-14 01:09:28.000000000 +0000
 +++ configure.in
 @@ -1974,7 +1974,7 @@ ld.])
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
@@ -31,22 +31,7 @@ $NetBSD: patch-aa-toplevel,v 1.2 2011/07/11 20:46:36 tnn Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4333,6 +4339,14 @@ else
-    fi
- fi
- 
-+if test -n "${LIBXUL_SDK_DIR}"; then
-+    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
-+    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags mozilla-nspr`"
-+    NSPR_LIBS="`pkg-config --libs mozilla-nspr`"
-+    NSS_CFLAGS="`pkg-config --cflags mozilla-nss`"
-+    NSS_LIBS="`pkg-config --libs mozilla-nss`"
-+fi
-+
- if test -z "$SKIP_LIBRARY_CHECKS"; then
- dnl system JPEG support
- dnl ========================================================
-@@ -7294,7 +7308,8 @@ rm -f confdefs.h.save
+@@ -7304,7 +7310,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
