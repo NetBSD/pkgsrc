@@ -1,8 +1,8 @@
-$NetBSD: patch-za,v 1.1 2009/12/16 10:11:01 tnn Exp $
+$NetBSD: patch-za,v 1.2 2011/08/19 10:10:01 tnn Exp $
 
---- suite/app/Makefile.in.orig	2009-10-25 15:29:07.000000000 +0100
+--- suite/app/Makefile.in.orig	2011-08-14 01:09:42.000000000 +0000
 +++ suite/app/Makefile.in
-@@ -104,6 +104,10 @@ TK_LIBS := -framework SystemConfiguratio
+@@ -103,6 +103,10 @@ TK_LIBS := -framework SystemConfiguratio
  endif
  endif
  
@@ -10,6 +10,6 @@ $NetBSD: patch-za,v 1.1 2009/12/16 10:11:01 tnn Exp $
 +LIBS += -lossaudio
 +endif
 +
- ifdef MOZ_ENABLE_LIBXUL
  APP_XPCOM_LIBS = $(XPCOM_GLUE_LDOPTS)
- else
+ 
+ LIBS += \
