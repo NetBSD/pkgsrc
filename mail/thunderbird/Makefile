@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2011/07/22 07:31:07 tnn Exp $
+# $NetBSD: Makefile,v 1.71 2011/08/19 14:39:09 tnn Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		3.1.11
+TB_VER=		6.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,25 +13,32 @@ HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
 
 USE_TOOLS+=	unzip pax
-WRKSRC=		${WRKDIR}/comm-1.9.2
+WRKSRC=		${WRKDIR}/comm-release
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	PLIST
 
-CONFIG_GUESS_OVERRIDE+=	directory/sdks/c-sdk/config/autoconf/config.guess
-CONFIG_SUB_OVERRIDE+=	directory/sdks/c-sdk/config/autoconf/config.sub
+CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
+CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=mail
-CONFIGURE_ARGS+=	--enable-static
 
 ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 
+# Looks like mozilla forgot to bump allowed versions to 6.0
+SUBST_CLASSES+=			ext-compat
+SUBST_STAGE.ext-compat=		pre-configure
+SUBST_MESSAGE.ext-compat=	Fixing extension compatibility
+SUBST_FILES.ext-compat=		mailnews/extensions/enigmail/package/install.rdf
+SUBST_FILES.ext-compat+=	calendar/*/install.rdf
+SUBST_FILES.ext-compat+=	calendar/*/*/install.rdf
+SUBST_SED.ext-compat=		-e 's,\(<em:maxVersion>\)5.*<,\16.0<,g'
+
 pre-configure:
-	cd ${WRKSRC}/directory/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/nsprpub && ${SETENV} ${CONFIGURE_ENV} autoconf
-	cd ${WRKSRC}/directory/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
+	cd ${WRKSRC}/ldap/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
@@ -50,9 +57,10 @@ INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
-	${INSTALL_DATA} ${WRKSRC}/mail/branding/nightly/mailicon48.png	\
+	${INSTALL_DATA} ${WRKSRC}/dist/thunderbird/chrome/icons/default/default48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 	@${STEP_MSG} "Installing bundled thunderbird extensions."
+	${TOUCH} ${TOUCH_FLAGS} ${DESTDIR}${PREFIX}/include/thunderbird/mozilla/throw_gcc.h
 	rm -rf ${WRKDIR}/extensions
 	${MKDIR} ${WRKDIR}/extensions
 	${RUN} for e in ${XPI_FILES}; do				\
