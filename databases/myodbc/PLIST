@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2010/05/03 05:03:11 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/08/19 07:59:58 adam Exp $
 bin/myodbc-installer
 ${PLIST.gui}lib/libmyodbc3S.la
 lib/libmyodbc5.la
 share/doc/mysql-connector-odbc/ChangeLog
 share/doc/mysql-connector-odbc/INSTALL
-share/doc/mysql-connector-odbc/LICENSE.exceptions
 share/doc/mysql-connector-odbc/LICENSE.gpl
 share/doc/mysql-connector-odbc/README
 share/doc/mysql-connector-odbc/README.debug
