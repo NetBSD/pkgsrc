@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.7 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-aw,v 1.8 2011/08/19 14:39:09 tnn Exp $
 
 --- mozilla/xulrunner/stub/nsXULStub.cpp.orig	2009-08-24 17:53:30.000000000 +0200
 +++ mozilla/xulrunner/stub/nsXULStub.cpp

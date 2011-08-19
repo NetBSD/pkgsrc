@@ -1,29 +1,18 @@
-$NetBSD: patch-mm,v 1.4 2011/03/05 13:09:35 tnn Exp $
+$NetBSD: patch-mm,v 1.5 2011/08/19 14:39:10 tnn Exp $
 
-Don't link with -lCstd on Solaris when using GCC. From Tim Zingelman.
-part of PR pkg/39085
-
---- mozilla/toolkit/library/Makefile.in.orig	2011-02-21 11:47:17.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2011-06-15 21:58:10.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -253,13 +253,20 @@ EXTRA_DSO_LDOPTS += -lbe -ltracker
+@@ -216,6 +216,13 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
- 
- ifeq ($(OS_ARCH),SunOS)
--EXTRA_DSO_LDOPTS += -lelf -ldemangle -lCstd
-+EXTRA_DSO_LDOPTS += -lelf -ldemangle
-+ifndef GNU_CC
-+EXTRA_DSO_LDOPTS += -lCstd
-+endif
- endif
- 
- ifeq ($(OS_ARCH),AIX)
- EXTRA_DSO_LDOPTS += -bbigtoc 
  endif
  
 +ifeq ($(OS_ARCH),NetBSD)
 +EXTRA_DSO_LDOPTS += -lossaudio
 +endif
++ifdef PKGSRC_PULSEAUDIO
++EXTRA_DSO_LDOPTS += -lpulse
++endif
 +
  ifeq ($(OS_ARCH),WINNT)
- EXTRA_DSO_LDOPTS += $(call EXPAND_LIBNAME,shell32 ole32 uuid version winspool comdlg32 imm32 winmm wsock32 msimg32)
+ OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 uuid version winspool comdlg32 imm32 winmm wsock32 msimg32 shlwapi psapi ws2_32 dbghelp)
  ifneq (,$(MOZ_DEBUG)$(NS_TRACE_MALLOC))

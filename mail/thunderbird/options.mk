@@ -1,17 +1,17 @@
-# $NetBSD: options.mk,v 1.6 2010/07/23 06:04:33 tnn Exp $
+# $NetBSD: options.mk,v 1.7 2011/08/19 14:39:09 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning mozilla-enigmail
 PKG_SUGGESTED_OPTIONS=	mozilla-lightning
 
-PLIST_VARS+=		branding debug gnome
+PLIST_VARS+=		branding nobranding debug gnome
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 .endif
 
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Msparc) || \
-	!empty(MACHINE_ARCH:Marm)
+	!empty(MACHINE_ARCH:Marm) || !empty(MACHINE_ARCH:Mx86_64)
 PKG_SUPPORTED_OPTIONS+=	mozilla-jit
 PKG_SUGGESTED_OPTIONS+=	mozilla-jit
 .endif
@@ -69,4 +69,5 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 .else
 CONFIGURE_ARGS+=	--disable-official-branding
+PLIST.nobranding=	yes
 .endif

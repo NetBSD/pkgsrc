@@ -1,11 +1,20 @@
-$NetBSD: patch-as,v 1.6 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-as,v 1.7 2011/08/19 14:39:09 tnn Exp $
 
 Treat DragonFly like FreeBSD.
 
---- mozilla/js/src/configure.in.orig	2009-06-29 18:14:51.000000000 +0200
+--- mozilla/js/src/configure.in.orig	2011-08-11 21:41:02.000000000 +0000
 +++ mozilla/js/src/configure.in
-@@ -1693,7 +1693,7 @@ case "$target" in
-     fi
+@@ -748,7 +748,7 @@ EOF
+                 AC_LANG_RESTORE
+             ])
+ 
+-        if test "$ac_cv_have_std__Throw" == "yes"; then
++        if test "$ac_cv_have_std__Throw" = "yes"; then
+             AC_CACHE_CHECK(for |class __declspec(dllimport) exception| bug,
+                            ac_cv_have_dllimport_exception_bug,
+                 [
+@@ -1977,7 +1977,7 @@ case "$target" in
+     MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
 -*-freebsd*)
@@ -13,21 +22,21 @@ Treat DragonFly like FreeBSD.
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2504,7 +2504,7 @@ darwin*)
- solaris*)
+@@ -2821,7 +2821,7 @@ case "$target" in
+ *-solaris*)
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
--freebsd*|kfreebsd*)
-+freebsd*|kfreebsd*|netbsd*|dragonfly*)
+-*-freebsd*|*-kfreebsd*)
++*-freebsd*|*-kfreebsd*|*-netbsd*|*-dragonfly*)
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
- *cygwin*|*mingw*|*mks*|*msvc*|*wince)
-@@ -4185,7 +4185,7 @@ if test "$MOZ_MEMORY"; then
-   darwin*)
+ *-openbsd*)
+@@ -4730,7 +4730,7 @@ if test "$MOZ_MEMORY"; then
+   *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
--  *freebsd*)
-+  *freebsd*|dragonfly*)
+-  *-*freebsd*)
++  *-*freebsd*|*-*dragonfly*)
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
-   *linux*)
+   *-*linux*)
