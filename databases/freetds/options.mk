@@ -1,13 +1,22 @@
-# $NetBSD: options.mk,v 1.5 2009/07/02 19:29:29 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2011/08/19 07:54:04 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freetds
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc tls
 PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
 PKG_OPTIONS_GROUP.tls=		gnutls openssl
+PKG_SUPPORTED_OPTIONS=		kerberos
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=			odbc
+
+###
+### Kerberos5 support
+###
+.if !empty(PKG_OPTIONS:Mkerberos)
+CONFIGURE_ARGS+=	--enable-krb5
+.include "../../mk/krb5.buildlink3.mk"
+.endif
 
 ###
 ### Whether to build with iODBC to enable ODBC access to TDS servers.
@@ -50,7 +59,7 @@ CONFIGURE_ARGS+=	--without-gnutls
 ###
 .if !empty(PKG_OPTIONS:Mopenssl)
 .include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 .else
 CONFIGURE_ARGS+=	--without-openssl
 .endif
