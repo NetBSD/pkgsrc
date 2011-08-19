@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2011/08/19 14:39:09 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2011/08/19 15:07:26 tnn Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
@@ -57,7 +57,7 @@ INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/desktop				\
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
-	${INSTALL_DATA} ${WRKSRC}/dist/thunderbird/chrome/icons/default/default48.png	\
+	${INSTALL_DATA} ${WRKSRC}/mozilla/dist/thunderbird/chrome/icons/default/default48.png	\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 	@${STEP_MSG} "Installing bundled thunderbird extensions."
 	${TOUCH} ${TOUCH_FLAGS} ${DESTDIR}${PREFIX}/include/thunderbird/mozilla/throw_gcc.h
