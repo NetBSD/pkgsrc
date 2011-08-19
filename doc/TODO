@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10497 2011/08/19 07:26:48 tnn Exp $
+$NetBSD: TODO,v 1.10498 2011/08/19 14:42:16 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1193,7 +1193,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o seahorse-2.32.0
-	o seamonkey-2.2
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1261,7 +1260,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tetrinetx-1.40c
 	o texmaker-3.1
 	o tfmxplay-1.1.6
-	o thunderbird-6.0
 	o tightvnc-2.0.95
 	o tile-0.7.4
 	o tinc-1.0.16
