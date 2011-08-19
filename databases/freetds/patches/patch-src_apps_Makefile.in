@@ -1,0 +1,42 @@
+$NetBSD: patch-src_apps_Makefile.in,v 1.1 2011/08/19 07:54:04 adam Exp $
+
+Also link libtds.
+
+--- src/apps/Makefile.in.orig	2011-06-21 10:04:47.000000000 +0000
++++ src/apps/Makefile.in
+@@ -88,7 +88,7 @@ bsqlodbc_OBJECTS = bsqlodbc-bsqlodbc.$(O
+ @ODBC_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ am_datacopy_OBJECTS = datacopy.$(OBJEXT)
+ datacopy_OBJECTS = $(am_datacopy_OBJECTS)
+-datacopy_DEPENDENCIES = ../dblib/libsybdb.la \
++datacopy_DEPENDENCIES = ../dblib/libsybdb.la ../tds/libtds.la \
+ 	../replacements/libreplacements.la $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1)
+ defncopy_SOURCES = defncopy.c
+@@ -98,7 +98,7 @@ defncopy_DEPENDENCIES = ../dblib/libsybd
+ 	$(am__DEPENDENCIES_1)
+ am_freebcp_OBJECTS = freebcp.$(OBJEXT)
+ freebcp_OBJECTS = $(am_freebcp_OBJECTS)
+-freebcp_DEPENDENCIES = ../dblib/libsybdb.la \
++freebcp_DEPENDENCIES = ../dblib/libsybdb.la ../tds/libtds.la \
+ 	../replacements/libreplacements.la $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1)
+ tsql_SOURCES = tsql.c
+@@ -344,7 +344,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include 
+ SUBDIRS = fisql
+ DIST_SUBDIRS = $(SUBDIRS)
+ dist_bin_SCRIPTS = osql
+-freebcp_LDADD = ../dblib/libsybdb.la ../replacements/libreplacements.la $(LIBICONV) $(NETWORK_LIBS)
++freebcp_LDADD = ../dblib/libsybdb.la ../tds/libtds.la ../replacements/libreplacements.la $(LIBICONV) $(NETWORK_LIBS)
+ freebcp_SOURCES = freebcp.c freebcp.h
+ tsql_LDADD = ../tds/libtds.la \
+ 		  ../replacements/libreplacements.la \
+@@ -363,7 +363,7 @@ defncopy_LDADD = ../dblib/libsybdb.la \
+ 		  $(NETWORK_LIBS) $(LIBICONV)
+ 
+ datacopy_SOURCES = datacopy.c
+-datacopy_LDADD = ../dblib/libsybdb.la \
++datacopy_LDADD = ../dblib/libsybdb.la ../tds/libtds.la \
+ 		  ../replacements/libreplacements.la \
+ 		$(NETWORK_LIBS) $(LIBICONV)
+ 
