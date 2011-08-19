@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2036 2011/08/19 01:23:00 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2037 2011/08/19 06:16:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3220,3 +3220,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20110818 [taca 2011-08-18]
 	Updated textproc/p5-XML-Simple to 2.18nb4 [obache 2011-08-19]
 	Updated misc/p5-Business-ISBN-Data to 20081208nb3 [obache 2011-08-19]
+	Removed graphics/png12 successor graphics/png [wiz 2011-08-19]
