@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/08/14 14:42:45 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/08/19 12:16:33 obache Exp $
 #
 
 DISTNAME=	dnssec-tools-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.dnssec-tools.org/download/
 
@@ -13,9 +13,8 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS=	p5-Net-DNS-SEC-[0-9]*:../../security/p5-Net-DNS-SEC
-DEPENDS=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
-DEPENDS=	p5-ExtUtils-MakeMaker-[0-9]*:../../devel/p5-ExtUtils-MakeMaker
+DEPENDS+=	p5-Net-DNS-SEC-[0-9]*:../../security/p5-Net-DNS-SEC
+DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 BUILD_DEFS+=	IPV6_READY
 
@@ -38,7 +37,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=        --with-nsec3
 CONFIGURE_ARGS+=	--with-resolv-conf=${PKG_SYSCONFDIR}/dnssec-tools/resolv.conf
 CONFIGURE_ARGS+=	--with-root-hints=${PKG_SYSCONFDIR}/dnssec-tools/root.hints
-CONFIGURE_ARGS+=	--with-perl-build-args="INSTALLDIRS=vendor DESTDIR=${DESTDIR}"
+CONFIGURE_ARGS+=	--with-perl-build-args=${MAKE_PARAMS:Q}
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
@@ -59,7 +58,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/validator/etc/resolv.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/validator/etc/root.hints ${DESTDIR}${EGDIR}
 
-.include "../../lang/perl5/packlist.mk"
-.include "../../lang/perl5/buildlink3.mk"
+PERL5_CONFIGURE=	no
+.include "../../lang/perl5/module.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
