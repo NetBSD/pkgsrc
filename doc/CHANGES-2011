@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2040 2011/08/19 12:17:07 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2041 2011/08/19 14:42:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3229,3 +3229,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/freetds to 0.91 [adam 2011-08-18]
 	Updated databases/myodbc to 5.1.8 [adam 2011-08-18]
 	Updated security/dnssec-tools to 1.10nb2 [obache 2011-08-19]
+	Updated www/seamonkey to 2.3 [tnn 2011-08-19]
+	Updated www/seamonkey-l10n to 2.3 [tnn 2011-08-19]
+	Updated mail/thunderbird to 6.0 [tnn 2011-08-19]
+	Updated mail/thunderbird-l10n to 6.0 [tnn 2011-08-19]
