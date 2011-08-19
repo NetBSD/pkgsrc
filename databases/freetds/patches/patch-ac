@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2008/09/02 00:58:07 grant Exp $
+$NetBSD: patch-ac,v 1.7 2011/08/19 07:54:04 adam Exp $
 
---- doc/Makefile.in.orig	2008-05-08 08:59:15.000000000 +1000
+--- doc/Makefile.in.orig	2011-06-10 08:29:28.000000000 +0000
 +++ doc/Makefile.in
-@@ -627,8 +627,9 @@ install-data-local: installdirs $(DOCDIR
+@@ -649,8 +649,9 @@ install-data-local: installdirs $(noinst
  	if test -r $(DOCDIR)/reference ; then d=.; else d="$(srcdir)"; fi; \
  	find $$d/$(DOCDIR)/reference \( -type f -o -type l \) -exec \
  		$(INSTALL_DATA) {} $(TARGET_DOCDIR)/reference ';'
