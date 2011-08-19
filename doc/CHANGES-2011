@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2041 2011/08/19 14:42:16 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.2042 2011/08/19 18:18:43 morr Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/seamonkey-l10n to 2.3 [tnn 2011-08-19]
 	Updated mail/thunderbird to 6.0 [tnn 2011-08-19]
 	Updated mail/thunderbird-l10n to 6.0 [tnn 2011-08-19]
+	Updated www/wordpress to 3.2.1 [morr 2011-08-19]
