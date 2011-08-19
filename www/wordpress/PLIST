@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/07/11 22:53:49 morr Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/08/19 18:18:26 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -475,7 +475,7 @@ share/wordpress/wp-content/themes/twentyeleven/license.txt
 share/wordpress/wp-content/themes/twentyeleven/page.php
 share/wordpress/wp-content/themes/twentyeleven/readme.txt
 share/wordpress/wp-content/themes/twentyeleven/rtl.css
-share/wordpress/wp-content/themes/twentyeleven/screenshot.jpg
+share/wordpress/wp-content/themes/twentyeleven/screenshot.png
 share/wordpress/wp-content/themes/twentyeleven/search.php
 share/wordpress/wp-content/themes/twentyeleven/searchform.php
 share/wordpress/wp-content/themes/twentyeleven/showcase.php
@@ -552,6 +552,7 @@ share/wordpress/wp-includes/category.php
 share/wordpress/wp-includes/class-IXR.php
 share/wordpress/wp-includes/class-feed.php
 share/wordpress/wp-includes/class-http.php
+share/wordpress/wp-includes/class-json.php
 share/wordpress/wp-includes/class-oembed.php
 share/wordpress/wp-includes/class-phpass.php
 share/wordpress/wp-includes/class-phpmailer.php
