@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/06/03 13:39:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/08/19 12:37:09 obache Exp $
 bin/thrift
 include/thrift/TApplicationException.h
 include/thrift/TLogging.h
@@ -102,17 +102,17 @@ ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_transport_state_te
 lib/libthrift.la
 lib/libthriftnb.la
 lib/libthriftz.la
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/BinaryProtocol.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/BufferedTransport.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/FramedTransport.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/HttpClient.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/MemoryBuffer.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/Protocol.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/Server.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/Socket.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/Thrift/Transport.pm
-${PLIST.perl}lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Thrift/.packlist
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/BinaryProtocol.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/BufferedTransport.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/FramedTransport.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/HttpClient.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/MemoryBuffer.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/Protocol.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/Server.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/Socket.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORLIB}/Thrift/Transport.pm
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Thrift/.packlist
 ${PLIST.php}${PHP_EXTENSION_DIR}/thrift_protocol.so
 lib/pkgconfig/thrift-nb.pc
 lib/pkgconfig/thrift-z.pc
