@@ -1,6 +1,7 @@
-$NetBSD: patch-gst_hls_gsthlsdemux.c,v 1.1 2011/08/15 21:08:32 wiz Exp $
+$NetBSD: patch-gst_hls_gsthlsdemux.c,v 1.2 2011/08/19 14:03:06 wiz Exp $
 
 Fix build on NetBSD-5.0 where NULL doesn't have enough parentheses.
+https://bugzilla.gnome.org/show_bug.cgi?id=655319
 
 --- gst/hls/gsthlsdemux.c.orig	2011-05-03 13:30:13.000000000 +0000
 +++ gst/hls/gsthlsdemux.c
