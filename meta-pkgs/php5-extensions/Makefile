@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2010/03/21 17:37:22 jdolecek Exp $
+# $NetBSD: Makefile,v 1.24 2011/08/20 15:03:42 taca Exp $
 
 DISTNAME=	php-extensions-${PHP_BASE_VERS}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -57,6 +58,7 @@ DEPENDS+=	php5-sqlite>=${PHP_BASE_VERS}<5.3:../../databases/php-sqlite
 DEPENDS+=	php5-sysvmsg>=${PHP_BASE_VERS}<5.3:../../devel/php-sysvmsg
 DEPENDS+=	php5-sysvsem>=${PHP_BASE_VERS}<5.3:../../devel/php-sysvsem
 DEPENDS+=	php5-sysvshm>=${PHP_BASE_VERS}<5.3:../../devel/php-sysvshm
+DEPENDS+=	php5-tidy>=${PHP_BASE_VERS}<5.3:../../www/php-tidy
 DEPENDS+=	php5-wddx>=${PHP_BASE_VERS}<5.3:../../textproc/php-wddx
 DEPENDS+=	php5-xsl>=${PHP_BASE_VERS}<5.3:../../textproc/php-xsl
 DEPENDS+=	php5-xmlrpc>=${PHP_BASE_VERS}<5.3:../../net/php-xmlrpc
