@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2046 2011/08/20 13:52:25 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2047 2011/08/20 13:55:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3238,3 +3238,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/unbound to 1.4.12nb1 [obache 2011-08-20]
 	Updated misc/yelp to 2.30.2nb5 [obache 2011-08-20]
 	Updated lang/ruby19-base to 1.9.2pl290nb1 [taca 2011-08-20]
+	Updated lang/php53 to 5.3.7 [taca 2011-08-20]
