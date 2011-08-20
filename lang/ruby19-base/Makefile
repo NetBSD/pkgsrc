@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2011/08/12 15:35:22 taca Exp $
+# $NetBSD: Makefile,v 1.11 2011/08/20 13:51:29 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 #PKGREVISION=
@@ -87,7 +88,7 @@ CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 #
 # work around for getaddrinfo(3)
 #
-.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "Linux" || (${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.[6-9]))
 CONFIGURE_ARGS+=	--enable-wide-getaddrinfo
 .endif
 
