@@ -1,4 +1,4 @@
-$NetBSD: patch-pd,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
+$NetBSD: patch-pd,v 1.2 2011/08/20 13:05:50 tnn Exp $
 
 --- xulrunner/installer/mozilla-nss.pc.in.orig	2009-10-29 23:11:24.000000000 +0100
 +++ xulrunner/installer/mozilla-nss.pc.in
@@ -7,5 +7,5 @@ $NetBSD: patch-pd,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
  Version: %MOZILLA_VERSION%
  Requires: %NSPR_NAME% >= %NSPR_VERSION%
 -Libs: -L${sdkdir}/lib -lsmime3 -lssl3 -lnss3 -lnssutil3
-+Libs: -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lsmime3 -lssl3 -lnss3 -lnssutil3
++Libs: -Wl,-R${prefix}/lib/xulrunner192 -L${prefix}/lib/xulrunner192 -lsmime3 -lssl3 -lnss3 -lnssutil3
  Cflags: -I${includedir}

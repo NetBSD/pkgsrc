@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/04/19 11:16:07 tnn Exp $
+$NetBSD: patch-aa,v 1.2 2011/08/20 13:05:50 tnn Exp $
 
 --- configure.in.orig	2009-10-16 17:13:35.000000000 +0200
 +++ configure.in
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/04/19 11:16:07 tnn Exp $
  
 +if test -n "${LIBXUL_SDK_DIR}"; then
 +    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
-+    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags mozilla-nspr`"
++    NSPR_CFLAGS="-I${prefix}/include/xulrunner192/unstable `pkg-config --cflags mozilla-nspr`"
 +    NSPR_LIBS="`pkg-config --libs mozilla-nspr`"
 +    NSS_CFLAGS="`pkg-config --cflags mozilla-nss`"
 +    NSS_LIBS="`pkg-config --libs mozilla-nss`"
