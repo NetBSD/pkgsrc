@@ -1,7 +1,14 @@
-$NetBSD: distinfo,v 1.7 2010/05/20 06:54:23 wiz Exp $
+$NetBSD: distinfo,v 1.8 2011/08/20 19:25:38 wiz Exp $
 
 SHA1 (libofx-0.9.1.tar.gz) = a12110ddcbff596e26496865570fb4dcb75c08d0
 RMD160 (libofx-0.9.1.tar.gz) = 84b139cb39006f8f6433d490d72e83f103156952
 Size (libofx-0.9.1.tar.gz) = 1177818 bytes
 SHA1 (patch-aa) = dc3df3ee3b6154a529bf407f9f2eacdf07499c2f
-SHA1 (patch-ab) = 1afecedcc76ac45824a13da1d2a39881c734a179
+SHA1 (patch-ab) = 2c5f2d69778d7428b8247751ccc64053817eb6cf
+SHA1 (patch-lib_ofx__container__transaction.cpp) = 9aba00ec4798e3f93a095d3c49da365d50a7cf89
+SHA1 (patch-lib_ofx__request.cpp) = 699386e96b7528f17b8d95feb5af586bb4bf7fbe
+SHA1 (patch-lib_ofx__request__accountinfo.cpp) = a3e90b301403694cd38a3bd58b5e44d0592bd0d4
+SHA1 (patch-lib_ofx__request__statement.cpp) = 44da33136702f0d84c2fd254026f9e733477edaf
+SHA1 (patch-lib_ofx__utilities.cpp) = fce612ed44de70967fdca6345d1921b4e9c814b4
+SHA1 (patch-ofxconnect_ofxconnect.cpp) = 3b4d556f80474ac6497df1472abb1a9f9e170212
+SHA1 (patch-ofxdump_ofxdump.cpp) = 0a51258e115d39572dce0c254d6a07d545cff2c1
