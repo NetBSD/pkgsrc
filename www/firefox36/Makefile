@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/07/21 13:06:05 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/20 13:05:50 tnn Exp $
 
 .include "../../devel/xulrunner192/dist.mk"
-PKGNAME=	firefox-${FIREFOX_VER}
-PKGREVISION=	1
+PKGNAME=	firefox36-${FIREFOX_VER}
+PKGREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	tnn@NetBSD.org
@@ -13,15 +13,24 @@ LICENSE=	mpl-1.1
 MOZILLA_DIR=	# empty
 
 CONFIGURE_ARGS+=	--enable-application=browser
-CONFIGURE_ARGS+=	--with-libxul-sdk=${PREFIX}/lib/xulrunner-sdk
+CONFIGURE_ARGS+=	--with-libxul-sdk=${PREFIX}/lib/xulrunner192-sdk
 CONFIGURE_ARGS+=	--with-system-libxul
 
-ALL_ENV+=		MOZILLA_PKG_NAME=firefox
+ALL_ENV+=		MOZILLA_PKG_NAME=firefox36
+
+SUBST_CLASSES+=			fix-paths2
+SUBST_STAGE.fix-paths2=		pre-configure 
+SUBST_MESSAGE.fix-paths2=	Fixing absolute paths. 
+SUBST_FILES.fix-paths2=		${MOZILLA_DIR}xpcom/build/nsXPCOMPrivate.h 
+SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/app/nsRegisterGREUnix.cpp 
+SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/installer/Makefile.in 
+SUBST_SED.fix-paths2=		-e 's,/etc/gre.d,${PREFIX}/lib/xulrunner192/gre.d,g' 
 
 .include "../../devel/xulrunner/mozilla-common.mk"
+CONFIGURE_ARGS+=		--enable-chrome-format=jar
 .include "options.mk"
 
-MOZILLA=firefox
+MOZILLA=firefox36
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 MOZILLA_NAME=	Firefox 3.6
 MOZILLA_ICON=	${WRKSRC}/other-licenses/branding/firefox/default48.png
@@ -40,7 +49,7 @@ post-build:
 	  < ${FILESDIR}/desktop.in					\
 	  > ${WRKDIR}/desktop
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${FILESDIR}/firefox.sh.in	\
-	  > ${WRKDIR}/firefox
+	  > ${WRKDIR}/${MOZILLA}
 
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 post-install:
@@ -48,11 +57,11 @@ post-install:
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${MOZILLA_ICON}					\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
-	rm -f ${DESTDIR}${PREFIX}/bin/firefox
-	${INSTALL_SCRIPT} ${WRKDIR}/firefox ${DESTDIR}${PREFIX}/bin
+	rm -f ${DESTDIR}${PREFIX}/bin/${MOZILLA}
+	${INSTALL_SCRIPT} ${WRKDIR}/${MOZILLA} ${DESTDIR}${PREFIX}/bin
 
-BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-BUILD_DEPENDS+=				xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}{,nb*}:../../devel/xulrunner192
+BUILDLINK_API_DEPENDS.xulrunner192+=	xulrunner192>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
+BUILD_DEPENDS+=				xulrunner192-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}{,nb*}:../../devel/xulrunner192
 .include "../../devel/xulrunner192/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.xulrunner:Mgnome)
 CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus --enable-gnomeui
