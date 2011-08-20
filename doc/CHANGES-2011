@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2055 2011/08/20 15:35:55 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2056 2011/08/20 16:02:42 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3250,3 +3250,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated meta-pkgs/php5-extensions to 5.2.17nb1 [taca 2011-08-20]
 	Updated meta-pkgs/php53-extensions to 5.3.7nb1 [taca 2011-08-20]
 	Updated net/mikutter to 0.0.3.472 [obache 2011-08-20]
+	Updated archivers/dar to 2.4.1 [cheusov 2011-08-20]
