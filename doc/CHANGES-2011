@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2053 2011/08/20 14:56:38 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2054 2011/08/20 15:06:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3247,3 +3247,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/php-yaz to 1.1.1 [taca 2011-08-20]
 	Updated www/php-eaccelerator to 0.9.6.1 [taca 2011-08-20]
 	Added www/php-tidy version 5.2.17/5.3.7 [taca 2011-08-20]
+	Updated meta-pkgs/php5-extensions to 5.2.17nb1 [taca 2011-08-20]
+	Updated meta-pkgs/php53-extensions to 5.3.7nb1 [taca 2011-08-20]
