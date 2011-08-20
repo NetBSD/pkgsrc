@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/07/21 13:05:51 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/20 13:05:49 tnn Exp $
 
 .include "dist.mk"
-PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-PKGREVISION=	1
+PKGNAME=	xulrunner192-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
+PKGREVISION=	2
 CATEGORIES=	devel www
 
 MAINTAINER=	tnn@NetBSD.org
@@ -25,11 +25,20 @@ CONFIGURE_ARGS+=	--enable-application=xulrunner
 CONFIGURE_ARGS+=	--enable-libxul
 CONFIGURE_ARGS+=	--disable-ipc
 
-ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner
+ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner192
 
 MAKE_ENV+=		FREEBL_NO_DEPEND=0
 
+SUBST_CLASSES+=			fix-paths2
+SUBST_STAGE.fix-paths2=		pre-configure
+SUBST_MESSAGE.fix-paths2=	Fixing absolute paths.
+SUBST_FILES.fix-paths2=		${MOZILLA_DIR}xpcom/build/nsXPCOMPrivate.h
+SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/app/nsRegisterGREUnix.cpp
+SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/installer/Makefile.in
+SUBST_SED.fix-paths2=           -e 's,/etc/gre.d,${PREFIX}/lib/xulrunner192/gre.d,g' 
+
 .include "../../devel/xulrunner/mozilla-common.mk"
+CONFIGURE_ARGS+=	--enable-chrome-format=jar
 .include "options.mk"
 
 pre-configure:
@@ -39,14 +48,14 @@ pre-configure:
 
 post-install:
 	# XXX fix the pkg-config files instead
-	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue.a
-	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libxpcomglue.a	\
-	  ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue.a
-	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
-	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libxpcomglue_s.a	\
-	  ${DESTDIR}${PREFIX}/lib/xulrunner/libxpcomglue_s.a
-	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner/libunicharutil_external_s.a
-	ln -s ${PREFIX}/lib/xulrunner-sdk/sdk/lib/libunicharutil_external_s.a \
-	  ${DESTDIR}${PREFIX}/lib/xulrunner/libunicharutil_external_s.a
+	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner192/libxpcomglue.a
+	ln -s ${PREFIX}/lib/xulrunner192-sdk/sdk/lib/libxpcomglue.a	\
+	  ${DESTDIR}${PREFIX}/lib/xulrunner192/libxpcomglue.a
+	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner192/libxpcomglue_s.a
+	ln -s ${PREFIX}/lib/xulrunner192-sdk/sdk/lib/libxpcomglue_s.a	\
+	  ${DESTDIR}${PREFIX}/lib/xulrunner192/libxpcomglue_s.a
+	rm -f ${DESTDIR}${PREFIX}/lib/xulrunner192/libunicharutil_external_s.a
+	ln -s ${PREFIX}/lib/xulrunner192-sdk/sdk/lib/libunicharutil_external_s.a \
+	  ${DESTDIR}${PREFIX}/lib/xulrunner192/libunicharutil_external_s.a
 
 .include "../../mk/bsd.pkg.mk"
