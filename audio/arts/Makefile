@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2011/04/22 13:42:14 obache Exp $
+# $NetBSD: Makefile,v 1.74 2011/08/20 21:37:49 abs Exp $
 
 DISTNAME=	arts-1.5.10
 PKGREVISION=	4
@@ -29,6 +29,8 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "options.mk"
+
+CONFIGURE_ARGS+=	--enable-libsuffix=none
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+=	--disable-threading
