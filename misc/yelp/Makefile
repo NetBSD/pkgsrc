@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2011/07/21 13:05:59 obache Exp $
+# $NetBSD: Makefile,v 1.98 2011/08/20 08:41:52 obache Exp $
 #
 
 DISTNAME=		yelp-2.30.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.30/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,20 +33,12 @@ BUILDLINK_API_DEPENDS.libxml2+=			libxml2>=2.6.5
 BUILDLINK_DEPMETHOD.gnome-doc-utils+=	full
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-# for xulrunner-2 support patch
-BUILD_DEPENDS+=		gnome-common-[0-9]*:../../devel/gnome-common
-USE_TOOLS+=		autoconf automake aclocal gettext-m4
-AUTOMAKE_REQD=		1.9
-AUTOMAKE_OVERRIDE=	no
-pre-configure:
-	${RUN}cd ${WRKSRC};${SETENV} ${CONFIGURE_ENV} NOCONFIGURE=y ./autogen.sh
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/xulrunner/buildlink3.mk"
+.include "../../devel/xulrunner192/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
