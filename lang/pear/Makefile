@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2011/06/19 15:40:21 taca Exp $
+# $NetBSD: Makefile,v 1.19 2011/08/20 14:02:29 taca Exp $
 #
 
-DISTNAME=	PEAR-1.9.3
+DISTNAME=	PEAR-1.9.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -47,9 +47,8 @@ STRUCTURES_SRCS=	Structures_Graph-1.0.4${EXTRACT_SUFX}
 DISTFILES+=		${STRUCTURES_SRCS}
 
 XMLUTIL_SRCS=		XML_Util-1.2.1${EXTRACT_SUFX}
-XMLUTIL_WRKSRC=		${WRKDIR}/${XMLUTIL_SRCS:S/${EXTRACT_SUFX}//}
 DISTFILES+=		${XMLUTIL_SRCS}
-EXTRACT_ONLY+=		${XMLUTIL_SRCS}
+
 #
 # end of base components
 
