@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.32 2011/06/26 12:46:06 obache Exp $
+$NetBSD: distinfo,v 1.33 2011/08/20 08:41:52 obache Exp $
 
 SHA1 (yelp-2.30.2.tar.bz2) = b36d36449ff19844a429b4e2bd5eaad0a7537281
 RMD160 (yelp-2.30.2.tar.bz2) = a92fde9f64489c5dee6a249964245b087aab5981
 Size (yelp-2.30.2.tar.bz2) = 1159521 bytes
 SHA1 (patch-ab) = de7b2abf4d12066650663241ce5a1f610540fcdc
-SHA1 (patch-aclocal.m4) = 58a457ff140ba9ac70b1751ca2e31ec613485c34
-SHA1 (patch-m4_gecko.m4) = a6884cbd4622aba05bf1683300082d58ff0615db
-SHA1 (patch-src_yelp-gecko-services.cpp) = 51c02cb86671739c5714a10ad37bf8d9587208a9
-SHA1 (patch-src_yelp-gecko-utils.cpp) = b9addf9fb652acbc72ce67b860e6ae09afe48bee
