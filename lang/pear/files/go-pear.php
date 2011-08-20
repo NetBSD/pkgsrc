@@ -35,7 +35,7 @@
  * @author     Tias Guns <tias@ulyssis.org>
  */
 
-/* $NetBSD: go-pear.php,v 1.3 2011/06/19 15:40:21 taca Exp $ */
+/* $NetBSD: go-pear.php,v 1.4 2011/08/20 14:02:29 taca Exp $ */
 
 $sapi_name = php_sapi_name();
 
@@ -57,6 +57,8 @@ define('WINDOWS', (substr(PHP_OS, 0, 3) == 'WIN'));
 define('GO_PEAR_VER', '1.1.2');
 
 define('WIN32GUI', !WEBINSTALLER && WINDOWS && $sapi_name=='cli' && which('cscript'));
+
+$destdir = getenv('DESTDIR');
 
 /*
  * See bug #23069
@@ -101,6 +103,9 @@ If your source is 4.3.x or newer, just make sure you don't run
 Please upgrade PHP to a newer version, and try again.  See you then.
 
 ");
+}
+if (version_compare(phpversion(), "5.3.0", '>')) {
+    error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 }
 
 $gopear_bundle_dir = dirname(__FILE__).'/go-pear-bundle';
@@ -254,50 +259,6 @@ if (WEBINSTALLER) {
     // Anything past this step has something to do with the installation    
 }
 
-if (!WEBINSTALLER) {
-    $tty = WINDOWS ? @fopen('\con', 'r') : @fopen('/dev/tty', 'r');
-
-    if (!$tty) {
-        $tty = fopen('php://stdin', 'r');
-    }
-
-    $local = isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'local';
-    if ($local) {
-        $local = "
-Running in local install mode
-";
-    } elseif (WINDOWS) {
-        $local = "
-Use 'php " . $_SERVER['argv'][0] . " local' to install a local copy of PEAR.
-";
-    }
-    print "Welcome to go-pear!
-
-Go-pear will install the 'pear' command and all the files needed by
-it.  This command is your tool for PEAR installation and maintenance.
-$local
-Go-pear also lets you download and install the following optional PEAR
-packages: " . implode(', ', array_keys($pfc_packages)) . ".
-
-
-If you wish to abort, press Control-C now, or press Enter to continue: ";
-
-    fgets($tty, 1024);
-
-    print "\n";
-
-        print "HTTP proxy (http://user:password@proxy.myhost.com:port), or Enter for none:";
-
-    if (!empty($http_proxy)) {
-        print " [$http_proxy]";
-    }
-    print ": ";
-    $tmp = trim(fgets($tty, 1024));
-    if (!empty($tmp)) {
-        $http_proxy = $tmp;
-    }
-}
-
 $origpwd = getcwd();
 
 $config_vars = array_keys($config_desc);
@@ -346,89 +307,6 @@ we strongly recommand to use it.
 
 ";
         break;
-    }
-}
-
-while (!WEBINSTALLER) {
-    print "
-Below is a suggested file layout for your new PEAR installation.  To
-change individual locations, type the number in front of the
-directory.  Type 'all' to change all of them or simply press Enter to
-accept these locations.
-
-";
-
-    foreach ($config_vars as $n => $var) {
-        printf("%2d. $descfmt : %s\n", $n, $config_desc[$var], $$var);
-    }
-
-    print "\n$first-$last, 'all' or Enter to continue: ";
-    $tmp = trim(fgets($tty, 1024));
-    if ( empty($tmp) ) {
-        if( WINDOWS && !$php_bin_set ){
-            echo "**ERROR**
-Please, enter the php.exe path.
-
-";
-        } else {
-            break;
-        }
-    }
-    if (isset($config_vars[(int)$tmp])) {
-        $var = $config_vars[(int)$tmp];
-        $desc = $config_desc[$var];
-        $current = $$var;
-
-        if(WIN32GUI){
-            $tmp = win32BrowseForFolder("$desc [$current] :");
-        } else {
-            print "$desc [$current] : ";
-            $tmp = trim(fgets($tty, 1024));
-        }
-
-        $old = $$var;
-        if(WINDOWS && $var=='php_bin' ){
-            if(file_exists($tmp.DIRECTORY_SEPARATOR.'php.exe')){
-                $tmp = $tmp.DIRECTORY_SEPARATOR.'php.exe';
-                $php_bin_sapi = win32DetectPHPSAPI();
-                if($php_bin_sapi=='cgi'){
-            print "
-******************************************************************************
-NOTICE! We found php.exe under $php_bin, it uses a $php_bin_sapi SAPI.
-PEAR commandline tool works well with it.
-If you have a CLI php.exe available, we recommand to use it.
-
-";
-                } elseif ($php_bin_sapi=='unknown') {
-            print "
-******************************************************************************
-WARNING! We found php.exe under $php_bin, it uses an $php_bin_sapi SAPI.
-PEAR commandline tool has not been tested with it.
-If you have a CLI (or CGI) php.exe available, we strongly recommand to use it.
-
-";
-                }
-                echo "php.exe (sapi: $php_bin_sapi) found.\n\n";
-                $php_bin_set = true;
-            } else {
-                echo "**ERROR**: no php.exe found in this folder.\n";
-                $tmp='';
-            }
-        }
-
-        if (!empty($tmp) ) {
-            $$var = parse_dirname($tmp);
-        }
-    } elseif ($tmp == 'all') {
-        foreach ($config_vars as $n => $var) {
-            $desc = $config_desc[$var];
-            $current = $$var;
-            print "$desc [$current] : ";
-            $tmp = trim(fgets($tty, 1024));
-            if (!empty($tmp)) {
-                $$var = $tmp;
-            }
-        }
     }
 }
 
@@ -491,7 +369,7 @@ full write access to this directory and the install directory.
             continue;
         }
 
-        $dir = $$var;
+        $dir = ($destdir ? $destdir : '').$$var;
         if (!@is_dir($dir)) {
             if (!mkdir_p($dir)) {
                 if (!WEBINSTALLER) {
@@ -566,13 +444,7 @@ if (WEBINSTALLER) {
 }
 
 if (!WEBINSTALLER) {
-    $msg = "The following PEAR packages are bundled with PHP: " .
-        implode(', ', array_keys($pfc_packages));
-    print "\n" . wordwrap($msg, 75) . ".\n";
-    print "Would you like to install these as well? [Y/n] : ";
-    $install_pfc = !stristr(fgets($tty, 1024), "n");
     $install_optional_packages = array();
-    print "\n";
 }
 
 ####
@@ -584,31 +456,6 @@ if (function_exists('set_include_path')) {
 } else {
    ini_set('include_path', $ptmp);
 }
-
-if (!extension_loaded('zlib') && !WEBINSTALLER) { // In Web context we could be in multithread env which makes dl() end up with a fatal error.
-    if (WINDOWS) {
-        @dl('php_zlib.dll');
-    } elseif (PHP_OS == 'HP-UX') {
-        @dl('zlib.sl');
-    } elseif (PHP_OS == 'AIX') {
-        @dl('zlib.a');
-    } else {
-        @dl('zlib.so');
-    }
-}
-if (!extension_loaded('zlib')) {
-    $urltemplate = 'http://pear.php.net/get/%s?uncompress=yes';
-    $have_gzip = null;
-} else {
-    $urltemplate = 'http://pear.php.net/get/%s';
-    $have_gzip = true;
-}
-
-print "Loading zlib: ".($have_gzip ? 'ok' : 'failed')."\n";
-
-if (!$have_gzip) {
-    print "Downloading uncompressed packages\n";
-};
 
 if ($install_pfc) {
     $to_install = array_merge($installer_packages, array_keys($pfc_packages));
@@ -648,12 +495,6 @@ displayHTMLProgress($progress = 5);
 
 // Bootstrap needed ?
 $nobootstrap = false;
-if (is_dir($php_dir)) {
-    $nobootstrap = true;
-    foreach ($bootstrap_files as $file => $url) {
-        $nobootstrap &= is_file($php_dir.'/'.$file);
-    }
-}
 
 if ($nobootstrap) {
     print('Using previously install ... ');
@@ -694,16 +535,6 @@ displayHTMLProgress($progress = 20);
 
 // Extract needed ?
 $noextract = false;
-if (is_dir($php_dir)) {
-    $noextract = @include_once 'PEAR/Registry.php';
-    
-    if ($noextract) {
-        $registry = new PEAR_Registry($php_dir);
-        foreach ($bootstrap_pkgs as $pkg) {
-            $noextract &= $registry->packageExists($pkg);
-        }
-    }
-}
 
 if ($noextract) {
     print('Using previously installed installer ... ');
@@ -725,7 +556,7 @@ if ($noextract) {
         displayHTMLProgress($progress += round(19 / count($bootstrap_pkgs)));
 
         $fullpkg = substr($tarball, 0, strrpos($tarball, '.'));
-        $tar = &new Archive_Tar($tarball, $have_gzip);
+        $tar = new Archive_Tar($tarball, $have_gzip);
         if (!$tar->extractModify($ptmp, $fullpkg)) {
             bail("Extraction for $fullpkg failed!\n");
         }
@@ -751,7 +582,7 @@ include_once "PEAR/Command.php";
 include_once "PEAR/Registry.php";
 
 if (WEBINSTALLER || isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'local') {
-    $config = &PEAR_Config::singleton($prefix."/pear.conf", '');
+    $config = &PEAR_Config::singleton("@WRKSRC@"."/pear.conf", '');
 } else {
     $config = &PEAR_Config::singleton();
 }
@@ -768,7 +599,7 @@ $config->set('temp_dir', $temp_dir);
 $config->set('http_proxy', $http_proxy);
 $config->store();
 
-$registry = new PEAR_Registry($php_dir);
+$registry = new PEAR_Registry(($destdir ? $destdir : '').$php_dir);
 PEAR_Command::setFrontendType('CLI');
 
 PEAR::staticPushErrorHandling(PEAR_ERROR_DIE); //fail silently
@@ -783,12 +614,21 @@ displayHTMLProgress($progress = 45);
 
 $install = &PEAR_Command::factory('install', $config);
 foreach ($to_install as $pkg) {
-    $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
+    if (strpos($pkg, '-')) {
+        $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
+    } else {
+        $pkg_basename = $pkg;
+    }
 
     if (in_array($pkg, $installer_packages)) {
         $options = array('nodeps' => true);
     } else {
         $options = array('onlyreqdeps' => true);
+    }
+    if ($destdir) {
+        $options['packagingroot'] = $destdir;
+	$options['force'] = true;
+	$options['nodeps'] = true;
     }
     if ($registry->packageExists($pkg) || $registry->packageExists($pkg_basename)) {
         print(str_pad("Package: $pkg", max(50,9+strlen($pkg)+4), '.').' already installed ... ok'."\n");
@@ -796,7 +636,6 @@ foreach ($to_install as $pkg) {
         continue;
     }
     
-    $pkg_basename = substr($pkg, 0, strpos($pkg, '-'));
     if (in_array($pkg_basename, $bootstrap_pkgs)) {
         print(str_pad("Installing bootstrap package: $pkg_basename", max(50,30+strlen($pkg_basename)+4), '.')."...");
         displayHTMLProgress($progress += round(25 / count($to_install)));
@@ -819,170 +658,16 @@ print "\n".'Making sure every package is at the latest version........';
 $install->run('upgrade-all', array('soft' => true), array());
 print "ok\n";
 */
+$config->set('download_dir', '/tmp' . '/download');
+$config->set('temp_dir', '/tmp');
+$config->store();
 unset($config, $registry, $install);
 displayHTMLProgress($progress = 99);
 
 
 // Base installation finished
 
-ini_restore("include_path");
 
-if (!WEBINSTALLER) {
-    $sep = WINDOWS ? ';' : ':';
-    $include_path = explode($sep, ini_get('include_path'));
-    if (WINDOWS) {
-        $found = false;
-        $t = strtolower($php_dir);
-        foreach($include_path as $path) {
-            if ($t==strtolower($path)) {
-                $found = true;
-                break;
-            }
-        }
-    } else {
-        $found = in_array($php_dir, $include_path);
-    }
-    if (!$found) {
-        print "
-******************************************************************************
-WARNING!  The include_path defined in the currently used php.ini does not
-contain the PEAR PHP directory you just specified:
-<$php_dir>
-If the specified directory is also not in the include_path used by
-your scripts, you will have problems getting any PEAR packages working.
-";
-
-        if ( $php_ini = getPhpiniPath() ) {
-            print "\n\nWould you like to alter php.ini <$php_ini>? [Y/n] : ";
-            $alter_phpini = !stristr(fgets($tty, 1024), "n");
-            if( $alter_phpini ) {
-                alterPhpIni($php_ini);
-            } else {
-                if (WINDOWS) {
-                    print "
-Please look over your php.ini file to make sure
-$php_dir is in your include_path.";
-                } else {
-                    print "
-I will add a workaround for this in the 'pear' command to make sure
-the installer works, but please look over your php.ini or Apache
-configuration to make sure $php_dir is in your include_path.
-";
-                }
-
-            }
-        }
-
-    print "
-Current include path           : ".ini_get('include_path')."
-Configured directory           : $php_dir
-Currently used php.ini (guess) : $php_ini
-";
-
-        print "Press Enter to continue: ";
-        fgets($tty, 1024);
-    }
-
-    $pear_cmd = $bin_dir . DIRECTORY_SEPARATOR . 'pear';
-    $pear_cmd = WINDOWS ? strtolower($pear_cmd).'.bat' : $pear_cmd;
-
-    // check that the installed pear and the one in tha path are the same (if any)
-    $pear_old = which(WINDOWS ? 'pear.bat' : 'pear', $bin_dir);
-    if ($pear_old && ($pear_old != $pear_cmd)) {
-        // check if it is a link or symlink
-        $islink = WINDOWS ? false : is_link($pear_old) ;
-        if ($islink && readlink($pear_old) != $pear_cmd) {
-            print "\n** WARNING! The link $pear_old does not point to the " .
-                  "installed $pear_cmd\n";
-        } elseif (is_writable($pear_old) && !is_dir($pear_old)) {
-            rename($pear_old, "{$pear_old}_old");
-            print "\n** WARNING! Backed up old pear to {$pear_old}_old\n";
-        } else {
-            print "\n** WARNING! Old version found at $pear_old, please remove it or ".
-                  "be sure to use the new $pear_cmd command\n";
-        }
-    }
-
-    print "\nThe 'pear' command is now at your service at $pear_cmd\n";
-
-    // Alert the user if the pear cmd is not in PATH
-    $old_dir = $pear_old ? dirname($pear_old) : false;
-    if (!which('pear', $old_dir)) {
-        print "
-** The 'pear' command is not currently in your PATH, so you need to
-** use '$pear_cmd' until you have added
-** '$bin_dir' to your PATH environment variable.
-
-";
-
-    print "Run it without parameters to see the available actions, try 'pear list'
-to see what packages are installed, or 'pear help' for help.
-
-For more information about PEAR, see:
-
-  http://pear.php.net/faq.php
-  http://pear.php.net/manual/
-
-Thanks for using go-pear!
-
-";
-    }
-}
-
-if (WEBINSTALLER) {
-    print "\n".'Writing WebFrontend file ... ';
-    @unlink($webfrontend_file); //Delete old one
-    copy ( $doc_dir.DIRECTORY_SEPARATOR.
-            'PEAR_Frontend_Web'.DIRECTORY_SEPARATOR.
-            'docs'.DIRECTORY_SEPARATOR.
-            'index.php.txt',
-            $webfrontend_file
-        );
-    print "ok\n";
-    
-    if ($_GET['step'] == 'install-progress') {
-        displayHTMLProgress($progress = 100);
-        ob_end_clean();
-        displayHTMLInstallationSummary();
-        displayHTMLFooter();
-    } else {
-        $out = ob_get_contents();
-
-        $out = explode("\n", $out);
-        foreach($out as $line => $value) {
-            if (preg_match('/ok$/', $value)) {
-                $value = preg_replace('/(ok)$/', '<span class="green">\1</span>', $value);
-            };
-            if (preg_match('/^install ok:/', $value)) {
-                $value = preg_replace('/^(install ok:)/', '<span class="green">\1</span>', $value);
-            };
-            if (preg_match('/^Warning:/', $value)) {
-                $value = '<span style="color: #ff0000">'.$value.'</span>';
-            };
-            $out[$line] = $value;
-        };
-        $out = nl2br(implode("\n",$out));
-        ob_end_clean();
-
-        displayHTML('install', $out);
-    }
-    // Little hack, this will be fixed in PEAR later
-    if ( WINDOWS ) {
-        clearstatcache();
-        @unlink($bin_dir.DIRECTORY_SEPARATOR.'.tmppear');
-    }
-    exit;
-}
-
-// Little hack, this will be fixed in PEAR later
-if ( WINDOWS ) {
-    clearstatcache();
-    @unlink($bin_dir.DIRECTORY_SEPARATOR.'.tmppear');
-}
-
-if (WINDOWS && !WEBINSTALLER) {
-    win32CreateRegEnv();
-}
 // Set of functions following
 /**
  * Parse the given dirname
@@ -1422,29 +1107,17 @@ function detect_install_dirs($_prefix = null) {
     } else {
         if ($_prefix === null) {
             #$prefix    = dirname(PHP_BINDIR);
-            $prefix    = dirname(__FILE__);
+            $prefix    = "@PREFIX@";
         } else {
             $prefix = $_prefix;
         }
         $bin_dir   = '$prefix/bin';
         #$php_dir   = '$prefix/share/pear';
-        $php_dir   = '$prefix/PEAR';
-        $doc_dir   = '$php_dir/docs';
+        $php_dir   = '$prefix/lib/php';
+        $doc_dir   = '$php_dir/doc';
         $data_dir  = '$php_dir/data';
-        $test_dir  = '$php_dir/tests';
-        $temp_dir   = '$prefix/temp';
-
-        // check if the user has installed PHP with PHP or GNU layout
-        if (@is_dir("$prefix/lib/php/.registry")) {
-            $php_dir = '$prefix/lib/php';
-        } elseif (@is_dir("$prefix/share/pear/lib/.registry")) {
-            $php_dir = '$prefix/share/pear/lib';
-            $doc_dir   = '$prefix/share/pear/docs';
-            $data_dir  = '$prefix/share/pear/data';
-            $test_dir  = '$prefix/share/pear/tests';
-        } elseif (@is_dir("$prefix/share/php/.registry")) {
-            $php_dir = '$prefix/share/php';
-        }
+        $test_dir  = '$php_dir/test';
+        $temp_dir   = '@WRKSRC@/tmp';
     }
 }
 
