@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2054 2011/08/20 15:06:36 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2055 2011/08/20 15:35:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3249,3 +3249,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/php-tidy version 5.2.17/5.3.7 [taca 2011-08-20]
 	Updated meta-pkgs/php5-extensions to 5.2.17nb1 [taca 2011-08-20]
 	Updated meta-pkgs/php53-extensions to 5.3.7nb1 [taca 2011-08-20]
+	Updated net/mikutter to 0.0.3.472 [obache 2011-08-20]
