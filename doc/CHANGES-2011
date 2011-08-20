@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2048 2011/08/20 14:03:05 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2049 2011/08/20 14:09:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3240,3 +3240,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby19-base to 1.9.2pl290nb1 [taca 2011-08-20]
 	Updated lang/php53 to 5.3.7 [taca 2011-08-20]
 	Updated lang/pear to 1.9.4 [taca 2011-08-20]
+	Updated databases/php-dbx to 1.1.2 [taca 2011-08-20]
