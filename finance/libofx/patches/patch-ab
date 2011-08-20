@@ -1,12 +1,15 @@
-$NetBSD: patch-ab,v 1.3 2006/09/11 07:18:27 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2011/08/20 19:25:39 wiz Exp $
 
---- ofxconnect/ofxpartner.cpp.orig	2006-09-11 07:14:37.000000000 +0000
+--- ofxconnect/ofxpartner.cpp.orig	2006-03-26 04:49:54.000000000 +0000
 +++ ofxconnect/ofxpartner.cpp
-@@ -31,6 +31,7 @@
+@@ -31,7 +31,10 @@
  #include "nodeparser.h"
  
  #include <sys/stat.h>
 +#include <unistd.h>
  
++#include <algorithm>
++#include <cstring>
  #include <iostream>
  #include <string>
+ #include <vector>
