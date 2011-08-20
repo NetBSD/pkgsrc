@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/22 13:43:43 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/08/20 21:33:27 wiz Exp $
 
 DISTNAME=	exiv2-0.21.1
 PKGNAME=	exiv2-organize-0.21.1
@@ -28,6 +28,12 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/contrib/organize/organize \
 		${DESTDIR}${PREFIX}/bin/exiv2-organize
+
+.include "../../mk/compiler.mk"
+# GCC 4.4 and above needs this
+.if !empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)
+_WRAP_EXTRA_ARGS.CXX+=	-std=c++0x
+.endif
 
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"

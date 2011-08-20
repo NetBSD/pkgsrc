@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/29 19:32:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/20 21:33:27 wiz Exp $
 #
 
 DISTNAME=	FlightCrew-0.7.1-Code
@@ -27,6 +27,12 @@ SUBST_MESSAGE.fix-damaged=	fixing
 SUBST_FILES.fix-damaged=	src/FlightCrew/tests/misc_tests/ConvertUtf8PathToBoostPath_test.cpp
 SUBST_SED.fix-damaged+=		-e "2,2s/^/\//" # commented-out
 SUBST_SED.fix-damaged+=		-e "1,1d" # deleted
+
+.include "../../mk/compiler.mk"
+# GCC 4.4 and above needs this
+.if !empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)
+_WRAP_EXTRA_ARGS.CXX+=	-std=c++0x
+.endif
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/gmock/buildlink3.mk"
