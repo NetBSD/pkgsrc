@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2011/08/20 13:53:23 taca Exp $
+# $NetBSD: Makefile,v 1.74 2011/08/20 14:52:57 wiz Exp $
 
 DISTNAME=		magicpoint-1.13a
 PKGREVISION=		8
@@ -80,8 +80,6 @@ post-install:
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.if ${X11_TYPE} == "modular"
 .include "../../x11/xextproto/buildlink3.mk"
-.endif
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
