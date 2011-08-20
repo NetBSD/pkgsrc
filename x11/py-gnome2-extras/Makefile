@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2011/07/21 13:06:07 obache Exp $
+# $NetBSD: Makefile,v 1.46 2011/08/20 13:17:59 tnn Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.25/}
 EXTRACT_SUFX=	.tar.bz2
@@ -44,7 +44,7 @@ BUILDLINK_TRANSFORM+=	l:xpcomglue:xpcomglue_pic
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/xulrunner/buildlink3.mk"
+.include "../../devel/xulrunner192/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 # newer gdl versions are incompatible
 #.include "../../devel/gdl/buildlink3.mk"
