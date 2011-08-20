@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2011/04/22 13:42:49 obache Exp $
+# $NetBSD: Makefile,v 1.37 2011/08/20 16:02:23 cheusov Exp $
 
-DISTNAME=	dar-2.3.8
-PKGREVISION=	2
+DISTNAME=	dar-2.4.1
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dar.linux.free.fr/
 COMMENT=	Disk archiver
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config bash:run
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-dar-static
@@ -34,13 +34,6 @@ CHECK_INTERPRETER_SKIP+=	share/dar/samples/*
 REPLACE_PERL+=			doc/samples/dar_backup
 REPLACE_BASH+=			doc/samples/*.bash doc/samples/clust*.sh
 
-.if defined(TOOLS_PLATFORM.bash) && exists(${${TOOLS_PLATFORM.bash}:L})
-BASH?=			${TOOLS_PLATFORM.bash}
-.else
-BASH?=			${TOOLS_PREFIX.bash}/bin/bash
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.bash=bash
-.endif
-
 ## Our threading check here is the same as the one used in devel/perl5.
 #
 CHECK_BUILTIN.pthread:=yes
@@ -56,7 +49,7 @@ USE_FEATURES.dar=	# empty
 .endif
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.dar
-PKG_OPTIONS_OPTIONAL_GROUPS+=	int
+PKG_OPTIONS_OPTIONAL_GROUPS=	int
 PKG_OPTIONS_GROUP.int=		dar-int32 dar-int64
 PKG_SUGGESTED_OPTIONS=		dar-int64 ${USE_FEATURES.dar}
 PKG_SUPPORTED_OPTIONS=		threads
@@ -75,6 +68,11 @@ PLIST_SUBST+=		DARBITS=${DARBITS}
 .if !empty(DARBITS)
 CONFIGURE_ARGS+=	--enable-mode=${DARBITS:Q}
 .endif
+
+EGDIR=			${PREFIX}/share/examples/dar
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
+CONF_FILES=		${EGDIR}/darrc ${PKG_SYSCONFDIR}/darrc
 
 ## We want the threading library to be specified by pkgsrc, and only
 ## when desired, viz. in the case below.  Using PTHREAD_AUTO_VARS
