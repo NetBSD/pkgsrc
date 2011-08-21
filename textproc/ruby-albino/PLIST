@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/21 05:01:27 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/albino.gemspec
+${GEM_LIBDIR}/lib/albino.rb
+${GEM_LIBDIR}/lib/albino/multi.rb
+${GEM_LIBDIR}/test/albino_test.rb
+${GEM_LIBDIR}/test/multi_albino_test.rb
+${GEM_LIBDIR}/vendor/multipygmentize
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
