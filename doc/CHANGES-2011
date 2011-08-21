@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2064 2011/08/21 11:03:23 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2065 2011/08/21 11:23:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3259,3 +3259,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-jekyll to 0.11.0nb1 [minskim 2011-08-21]
 	Updated net/quvi to 0.2.19 [wiz 2011-08-21]
 	Updated textproc/p5-XML-Parser to 2.41 [obache 2011-08-21]
+	Updated textproc/intltool to 0.41.1 [obache 2011-08-21]
