@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2059 2011/08/21 04:59:11 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2060 2011/08/21 05:01:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3254,3 +3254,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/wine-devel to 1.3.26 [adam 2011-08-20]
 	Updated www/ruby-jekyll to 0.11.0 [minskim 2011-08-21]
 	Added devel/ruby-posix-spawn version 0.3.6 [minskim 2011-08-21]
+	Added textproc/ruby-kramdown version 0.13.3 [minskim 2011-08-21]
