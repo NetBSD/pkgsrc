@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2065 2011/08/21 11:23:29 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2066 2011/08/21 11:44:36 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3260,3 +3260,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/quvi to 0.2.19 [wiz 2011-08-21]
 	Updated textproc/p5-XML-Parser to 2.41 [obache 2011-08-21]
 	Updated textproc/intltool to 0.41.1 [obache 2011-08-21]
+	Updated lang/sbcl to 1.0.51 [asau 2011-08-21]
