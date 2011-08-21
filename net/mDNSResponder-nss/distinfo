@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/07/20 07:24:10 sbd Exp $
+$NetBSD: distinfo,v 1.3 2011/08/21 18:48:43 jmcneill Exp $
 
-SHA1 (mDNSResponder-214.3.2.tar.gz) = bd59e0e3008ba797a30360dd8e59beb7152d9872
-RMD160 (mDNSResponder-214.3.2.tar.gz) = f9670f661083dae5529422b19655ba9c473960c7
-Size (mDNSResponder-214.3.2.tar.gz) = 1633510 bytes
+SHA1 (mDNSResponder-258.14.tar.gz) = 2a34794ff9a5184ce1e57ccea4001b5af6635f7b
+RMD160 (mDNSResponder-258.14.tar.gz) = fbd9dcfa84dbeb9de379066958a0b509af074dbc
+Size (mDNSResponder-258.14.tar.gz) = 1833244 bytes
 SHA1 (patch-aa) = e8e0f41dd5793cc431f56866e8b44a3c9f3c207a
