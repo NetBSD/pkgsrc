@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.813 2011/08/21 13:31:09 obache Exp $
+# $NetBSD: Makefile,v 1.814 2011/08/21 23:05:18 tnn Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -157,6 +157,7 @@ SUBDIR+=	htmldoc-x11
 SUBDIR+=	htmlfix
 SUBDIR+=	htmllint
 SUBDIR+=	http_load
+SUBDIR+=	icedtea-web
 SUBDIR+=	ies4linux
 SUBDIR+=	ijb
 SUBDIR+=	ikiwiki
@@ -240,7 +241,6 @@ SUBDIR+=	ns-remote
 SUBDIR+=	nspluginwrapper
 SUBDIR+=	nvu
 SUBDIR+=	ocsigen
-SUBDIR+=	openjdk7-icedtea-plugin
 SUBDIR+=	opera
 SUBDIR+=	opera-acroread
 SUBDIR+=	opera-acroread5
