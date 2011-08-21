@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/21 04:57:36 minskim Exp $
+
+SHA1 (posix-spawn-0.3.6.gem) = 36025fd942b93910ab2a043e2561b2660f64c3cc
+RMD160 (posix-spawn-0.3.6.gem) = 36e583d222fe6b5cad9256033d955f95aa845248
+Size (posix-spawn-0.3.6.gem) = 25600 bytes
