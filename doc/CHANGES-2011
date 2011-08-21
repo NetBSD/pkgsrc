@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2067 2011/08/21 13:12:07 gson Exp $
+$NetBSD: CHANGES-2011,v 1.2068 2011/08/21 13:30:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3262,3 +3262,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/intltool to 0.41.1 [obache 2011-08-21]
 	Updated lang/sbcl to 1.0.51 [asau 2011-08-21]
 	Updated misc/py-anita to 1.21 [gson 2011-08-21]
+	Added www/webkit-gtk3 version 1.4.2 [obache 2011-08-21]
