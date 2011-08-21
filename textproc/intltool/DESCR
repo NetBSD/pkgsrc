@@ -13,4 +13,4 @@ The intltool collection can be used to do these things:
 The intltool package has a script, intltoolize, which copies the various
 scripts and does the other magic to your module. So users building
 from tarballs don't need intltool, only folks building from cvs.
-(This is modeled on gettextize.)
+(This is modelled on gettextize.)
