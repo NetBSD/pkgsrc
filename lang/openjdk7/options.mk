@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2011/08/03 13:28:35 obache Exp $
+# $NetBSD: options.mk,v 1.3 2011/08/21 22:57:54 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk7
-PKG_SUPPORTED_OPTIONS=		sun-jre-jce
+PKG_SUPPORTED_OPTIONS=		sun-jre-jce # jdk-zero-vm
 PKG_SUGGESTED_OPTIONS=		#
 
 .include "../../mk/bsd.options.mk"
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=		#
 ### Java(TM) Cryptography Extension (JCE)
 ###
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
-JCE_DISTFILE=jce_policy-6.zip
+JCE_DISTFILE=	UnlimitedJCEPolicyJDK7.zip
 DISTFILES+=	${JCE_DISTFILE}
 EXTRACT_ONLY+=	${JCE_DISTFILE}
 PLIST.jce=	yes
@@ -18,8 +18,8 @@ USE_TOOLS+=	pax
 #
 .if !exists(${DISTDIR}/${DIST_SUBDIR}/${JCE_DISTFILE})
 FETCH_MESSAGE+= "Please download the Java(TM) Cryptography Extension (JCE) Unlimited"
-FETCH_MESSAGE+= "Strength Jurisdiction Policy Files 6 '${JCE_DISTFILE}' from:"
-FETCH_MESSAGE+= "	http://java.sun.com/javase/downloads/"
+FETCH_MESSAGE+= "Strength Jurisdiction Policy Files 7 '${JCE_DISTFILE}' from:"
+FETCH_MESSAGE+= "	http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 FETCH_MESSAGE+= " and place it in:"
 FETCH_MESSAGE+= "       ${DISTDIR}/${DIST_SUBDIR}/${JCE_DISTFILE}"
 FETCH_MESSAGE+= ""
@@ -27,5 +27,12 @@ FETCH_MESSAGE+= " Then resume this build by running '"${MAKE:Q}"' again."
 .endif
 #
 post-install:
-	cd ${WRKDIR}/jce ; pax -rw -pp . ${DESTDIR}${JAVA_HOME}/jre/lib/security
+	cd ${WRKDIR}/UnlimitedJCEPolicy && pax -rw -pp . ${DESTDIR}${JAVA_HOME}/jre/lib/security
+.endif
+
+# this option builds a JVM without assembly optimisation. Useful for porting.
+# NOTE: This is work in progress.
+.if !empty(PKG_OPTIONS:Mjdk-zero-vm)
+MAKE_ENV+=	ZERO_BUILD=true
+.include "../../devel/libffi/buildlink3.mk"
 .endif

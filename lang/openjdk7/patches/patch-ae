@@ -1,16 +1,19 @@
-$NetBSD: patch-ae,v 1.2 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-ae,v 1.3 2011/08/21 22:57:55 tnn Exp $
 
---- hotspot/make/bsd/makefiles/gcc.make.orig	2009-10-18 02:16:47.000000000 +0200
+--- hotspot/make/bsd/makefiles/gcc.make.orig	2011-08-20 10:42:27.000000000 +0000
 +++ hotspot/make/bsd/makefiles/gcc.make
-@@ -153,6 +153,12 @@ MAPFLAG = -Xlinker --version-script=FILE
+@@ -201,6 +201,15 @@ MAPFLAG = -Xlinker --version-script=FILE
  #
  # Shared Library
  #
 +
 +ifeq ($(OS_VENDOR), NetBSD)
 +# XXX tnn fixme: -lgcc_s seems to be needed on NetBSD.
-+LFLAGS+=	-lgcc_s
++LFLAGS += -lgcc_s
 +endif
++
++# XXX tnn fixme: this probably should go someplace else.
++CFLAGS += -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 +
  ifeq ($(OS_VENDOR), Darwin)
    # Standard linker flags
