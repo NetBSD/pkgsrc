@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.6 2011/07/11 20:46:36 tnn Exp $
+$NetBSD: patch-at,v 1.7 2011/08/21 23:21:34 tnn Exp $
 
 Avoid silly redefinitions of standard types on NetBSD.
 
@@ -8,7 +8,7 @@ Avoid silly redefinitions of standard types on NetBSD.
  #if defined (__SVR4) && defined (__sun)
  /* int_types.h gets included somehow, so avoid redefining the types differently */
  #include <sys/int_types.h>
-+#elif defined(__NetBSD__)
++#elif defined(__NetBSD__) || defined(__DragonFly__)
 +#include <stdint.h>
  #elif defined (_AIX)
  #include <sys/types.h>
