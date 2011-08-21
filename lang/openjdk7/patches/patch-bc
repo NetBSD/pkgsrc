@@ -1,13 +1,14 @@
-$NetBSD: patch-bc,v 1.1 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-bc,v 1.2 2011/08/21 22:57:55 tnn Exp $
 
---- jdk/src/solaris/hpi/native_threads/src/threads_bsd.c.orig	2009-10-17 16:49:37.000000000 +0200
-+++ jdk/src/solaris/hpi/native_threads/src/threads_bsd.c
-@@ -42,7 +42,7 @@
- #include <sys/sysctl.h>
+--- hotspot/src/share/vm/utilities/globalDefinitions.hpp.orig	2011-08-18 19:00:26.000000000 +0000
++++ hotspot/src/share/vm/utilities/globalDefinitions.hpp
+@@ -25,7 +25,9 @@
+ #ifndef SHARE_VM_UTILITIES_GLOBALDEFINITIONS_HPP
+ #define SHARE_VM_UTILITIES_GLOBALDEFINITIONS_HPP
  
- #include <pthread.h>
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
- #include <pthread_np.h>
- #endif
- #ifdef __NetBSD__
++#ifndef __STDC_FORMAT_MACROS
+ #define __STDC_FORMAT_MACROS
++#endif
+ 
+ #ifdef TARGET_COMPILER_gcc
+ # include "utilities/globalDefinitions_gcc.hpp"

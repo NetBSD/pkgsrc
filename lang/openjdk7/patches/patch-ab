@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.2 2009/10/18 10:21:01 tnn Exp $
+$NetBSD: patch-ab,v 1.3 2011/08/21 22:57:55 tnn Exp $
 
---- jdk/make/common/shared/Sanity.gmk.orig	2008-12-21 21:41:14.000000000 +0100
+--- jdk/make/common/shared/Sanity.gmk.orig	2011-08-11 12:31:36.000000000 +0000
 +++ jdk/make/common/shared/Sanity.gmk
-@@ -787,7 +787,8 @@ $(TEMPDIR)/freetypeinfo: FRC
+@@ -809,7 +809,8 @@ ifdef OPENJDK
  	@(($(CD) $(BUILDDIR)/tools/freetypecheck && $(MAKE)) || \
  	    $(ECHO) "Failed to build freetypecheck." ) > $@
  
--sane-freetype: $(TEMPDIR)/freetypeinfo
-+sane-freetype:
-+sane-freetype_: $(TEMPDIR)/freetypeinfo
+-    sane-freetype: $(TEMPDIR)/freetypeinfo
++    sane-freetype:
++    sane-freetype_: $(TEMPDIR)/freetypeinfo
  	@if [ "`$(CAT) $< | $(GREP) Fail`" != "" ]; then \
  	  $(ECHO) "ERROR: FreeType version " $(REQUIRED_FREETYPE_VERSION) \
  	          " or higher is required. \n" \
