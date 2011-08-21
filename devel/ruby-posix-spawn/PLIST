@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/21 04:57:36 minskim Exp $
+bin/posix-spawn-benchmark
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/HACKING
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/bin/posix-spawn-benchmark
+${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/ext/posix-spawn.c
+${GEM_LIBDIR}/lib/posix-spawn.rb
+${GEM_LIBDIR}/lib/posix/spawn.rb
+${GEM_LIBDIR}/lib/posix/spawn/child.rb
+${GEM_LIBDIR}/lib/posix/spawn/version.rb
+${GEM_LIBDIR}/lib/posix_spawn_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/posix-spawn.gemspec
+${GEM_LIBDIR}/test/test_backtick.rb
+${GEM_LIBDIR}/test/test_child.rb
+${GEM_LIBDIR}/test/test_popen.rb
+${GEM_LIBDIR}/test/test_spawn.rb
+${GEM_LIBDIR}/test/test_system.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
