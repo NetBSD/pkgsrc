@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10503 2011/08/21 11:44:36 asau Exp $
+$NetBSD: TODO,v 1.10504 2011/08/21 13:12:07 gson Exp $
 
 Suggested new packages
 ======================
@@ -1109,7 +1109,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
-	o py-anita-1.20
 	o py-checker-0.8.19
 	o py-cups-1.9.58
 	o py-dbus-0.84.0
