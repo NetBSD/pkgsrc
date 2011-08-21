@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2063 2011/08/21 10:23:52 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2064 2011/08/21 11:03:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3258,3 +3258,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added textproc/ruby-albino version 1.3.3 [minskim 2011-08-21]
 	Updated www/ruby-jekyll to 0.11.0nb1 [minskim 2011-08-21]
 	Updated net/quvi to 0.2.19 [wiz 2011-08-21]
+	Updated textproc/p5-XML-Parser to 2.41 [obache 2011-08-21]
