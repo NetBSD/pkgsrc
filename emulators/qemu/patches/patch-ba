@@ -1,6 +1,6 @@
-$NetBSD: patch-ba,v 1.4 2011/07/11 09:57:18 ryoon Exp $
+$NetBSD: patch-ba,v 1.5 2011/08/22 12:00:34 ryoon Exp $
 
---- hw/pcspk.c.orig	2011-05-06 19:01:43.000000000 +0000
+--- hw/pcspk.c.orig	2011-08-08 18:28:42 +0000
 +++ hw/pcspk.c
 @@ -42,7 +42,6 @@ typedef struct {
      unsigned int samples;
@@ -36,7 +36,7 @@ $NetBSD: patch-ba,v 1.4 2011/07/11 09:57:18 ryoon Exp $
      int out;
  
 -    s->dummy_refresh_clock ^= (1 << 4);
-     out = pit_get_out(s->pit, 2, qemu_get_clock(vm_clock)) << 5;
+     out = pit_get_out(s->pit, 2, qemu_get_clock_ns(vm_clock)) << 5;
  
 -    return pit_get_gate(s->pit, 2) | (s->data_on << 1) | s->dummy_refresh_clock | out;
 +    return pit_get_gate(s->pit, 2) | (s->data_on << 1) |
