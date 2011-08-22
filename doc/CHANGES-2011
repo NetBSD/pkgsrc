@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2069 2011/08/21 23:27:24 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.2070 2011/08/22 09:40:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3266,3 +3266,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/openjdk7 to 1.7.0.147.20110811 [tnn 2011-08-22]
 	Removed www/openjdk7-icedtea-plugin successor www/icedtea-web [tnn 2011-08-22]
 	Added www/icedtea-web version 1.2pre [tnn 2011-08-22]
+	Updated lang/php53 to 5.3.7 [taca 2011-08-22]
