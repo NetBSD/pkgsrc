@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/05/28 20:40:49 zafer Exp $
+# $NetBSD: Makefile,v 1.26 2011/08/22 13:06:19 wiz Exp $
 
 DISTNAME=	openal-0.0.8
 PKGREVISION=	4
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openal.org/
 COMMENT=	3D positional spatialized sound library
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,7 +18,7 @@ GNU_CONFIGURE=		yes
 
 PTHREAD_AUTO_VARS=	yes
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 INSTALLATION_DIRS=	${PKGINFODIR} include/AL
 PKGCONFIG_OVERRIDE=	admin/pkgconfig/openal.pc.in
 LIBS+=			${LIBOSSAUDIO}
