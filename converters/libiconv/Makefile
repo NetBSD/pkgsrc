@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.57 2010/11/10 21:00:49 adam Exp $
+# $NetBSD: Makefile,v 1.58 2011/08/22 14:03:36 wiz Exp $
 
-DISTNAME=	libiconv-1.13.1
+DISTNAME=	libiconv-1.14
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=libiconv/}
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libiconv/
 COMMENT=	Character set conversion library
-#LICENSE=		gnu-gplv3 gnu-lgplv2
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -39,7 +39,8 @@ MAKE_JOBS_SAFE=		no		# ENOENT(srclib)
 CFLAGS+=		-c99
 .endif
 
-.include "options.mk"
+# no patch for libiconv-1.14 available yet
+#.include "options.mk"
 
 PLIST_VARS+=		preload
 

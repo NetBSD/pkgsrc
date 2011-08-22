@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.34 2010/11/10 21:00:49 adam Exp $
+$NetBSD: distinfo,v 1.35 2011/08/22 14:03:36 wiz Exp $
 
 SHA1 (libiconv-1.13-cp932.patch.gz) = 3dd6ed92e0d9f58db71edf63e31ab6cbd4420f99
 RMD160 (libiconv-1.13-cp932.patch.gz) = 71040b00489ad1a5f218a09b4d22e550b1d31fc8
 Size (libiconv-1.13-cp932.patch.gz) = 178020 bytes
-SHA1 (libiconv-1.13.1.tar.gz) = 5b0524131cf0d7abd50734077f13aaa5508f6bbe
-RMD160 (libiconv-1.13.1.tar.gz) = a3e4b4d419006447045fde50fef0fe39bed9d501
-Size (libiconv-1.13.1.tar.gz) = 4716070 bytes
+SHA1 (libiconv-1.14.tar.gz) = be7d67e50d72ff067b2c0291311bc283add36965
+RMD160 (libiconv-1.14.tar.gz) = 87c36ba3f8ad1a49eb0d06f71856c856893bb52e
+Size (libiconv-1.14.tar.gz) = 4984397 bytes
 SHA1 (patch-aa) = 7fe47a14379dbeb487c677957e67fc7b043297ce
 SHA1 (patch-ab) = f10e4d1de691043acca775eed5c47c6061b31626
 SHA1 (patch-ad) = e94da1c4423677b74f463d4b132c7714efc65815
