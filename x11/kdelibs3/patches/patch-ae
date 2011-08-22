@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.11 2007/10/20 10:36:15 markd Exp $
+$NetBSD: patch-ae,v 1.12 2011/08/22 17:16:24 adam Exp $
 
---- configure.orig	2007-10-09 03:42:25.000000000 +1300
+--- configure.orig	2008-08-20 16:06:05.000000000 +0000
 +++ configure
 @@ -8315,7 +8315,7 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
@@ -92,7 +92,7 @@ $NetBSD: patch-ae,v 1.11 2007/10/20 10:36:15 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -45210,7 +45210,7 @@ echo "$as_me: error: Fast malloc is not 
+@@ -45355,7 +45355,7 @@ echo "$as_me: error: Fast malloc is not 
      esac
      case $target_os in
          linux*) ;;
@@ -101,7 +101,15 @@ $NetBSD: patch-ae,v 1.11 2007/10/20 10:36:15 markd Exp $
          *)
              if test "$kde_fast_malloc" = "notgiven"; then
                  kde_fast_malloc=no
-@@ -51069,7 +51069,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
+@@ -49056,6 +49056,7 @@ ac_link='rm -rf SunWS_cache; ${CXX-g++} 
+            kde_save_CXXFLAGS="$CXXFLAGS"
+            EXR_FLAGS=`$PKG_CONFIG --cflags OpenEXR`
+            CXXFLAGS="$CXXFLAGS $all_includes $USER_INCLUDES $EXR_FLAGS"
++           CXXFLAGS="`echo $CXXFLAGS | sed s/-fno-exceptions//`"
+ 
+            cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+@@ -51215,7 +51216,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
        gssapi_flavor=HEIMDAL
      fi
    else
@@ -110,7 +118,7 @@ $NetBSD: patch-ae,v 1.11 2007/10/20 10:36:15 markd Exp $
  
  gssapi_incdir=NO
  for i in $search_incs;
-@@ -51112,7 +51112,7 @@ done
+@@ -51258,7 +51259,7 @@ done
              GSSAPI_LIBS="-L$gssapi_libdir "
              test "$USE_RPATH" = yes && GSSAPI_RPATH="-R $gssapi_libdir"
            fi
@@ -119,7 +127,7 @@ $NetBSD: patch-ae,v 1.11 2007/10/20 10:36:15 markd Exp $
            with_gssapi=FOUND
            gssapi_flavor=HEIMDAL
            break
-@@ -51156,7 +51156,7 @@ echo "${ECHO_T}searched but not found" >
+@@ -51302,7 +51303,7 @@ echo "${ECHO_T}searched but not found" >
        GSSAPI_LIBS="${GSSAPI_LIBS}-lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err ${LIBRESOLV}"
      else
        gssapi_flavor=HEIMDAL
