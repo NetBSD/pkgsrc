@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2011/08/22 13:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2011/08/22 13:36:31 wiz Exp $
 
 DISTNAME=	openal-0.0.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
