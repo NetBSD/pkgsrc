@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.493 2011/07/30 07:47:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.494 2011/08/22 16:31:52 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -464,7 +464,6 @@ SUBDIR+=	tex-ntgclass
 SUBDIR+=	tex-ntgclass-doc
 SUBDIR+=	tex-oberdiek
 SUBDIR+=	tex-oberdiek-doc
-SUBDIR+=	tex-ocrb
 SUBDIR+=	tex-optional
 SUBDIR+=	tex-optional-doc
 SUBDIR+=	tex-oubraces
