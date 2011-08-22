@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10512 2011/08/22 15:16:43 wiz Exp $
+$NetBSD: TODO,v 1.10513 2011/08/22 15:17:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -675,7 +675,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o getmail-4.20.4
 	o gfract-0.33
 	o ghc-7.0.4
-	o ghostscript-9.04
+	o ghostscript-9.04 [wip]
 	o gifsicle-1.48
 	o gimp-ufraw-0.18
 	o gkrellm-2.3.5
@@ -972,7 +972,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.0.2
-	o mp3diags-1.1.07
 	o mp3splt-2.4
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.3
@@ -1296,6 +1295,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vbetool-1.1
 	o vcdimager-0.7.24
 	o vera-1.17
+	o veusz-1.13
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
@@ -1323,7 +1323,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webmin-1.560 [security]
 	o websvn-2.3.2
 	o weechat-0.3.5
-	o wget-1.13
 	o whohas-0.24
 	o windowlab-1.40
 	o wml-2.0.11
