@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2011/02/07 12:57:30 taca Exp $
+$NetBSD: patch-aa,v 1.5.4.1 2011/08/22 21:27:01 tron Exp $
 
 Better default path.
 
---- t3lib/config_default.php.orig	2011-01-26 19:36:02.000000000 +0000
+--- t3lib/config_default.php.orig	2011-08-16 10:40:47.000000000 +0000
 +++ t3lib/config_default.php
-@@ -34,8 +34,8 @@ $TYPO3_CONF_VARS = array(
+@@ -37,8 +37,8 @@ $TYPO3_CONF_VARS = array(
  		'gdlib_png' => FALSE,					// Boolean: Enables the use of GD, with PNG only. This means that all items normally generated as gif-files will be png-files instead!
  
  		'im' => TRUE,							// Boolean: Enables the use of IM.

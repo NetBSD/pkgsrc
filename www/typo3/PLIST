@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/02/26 03:02:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.19.4.1 2011/08/22 21:27:01 tron Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -294,6 +294,7 @@ ${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/class.t3lib_utility_dependency.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/class.t3lib_utility_http.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/class.t3lib_utility_mail.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/class.t3lib_utility_phpoptions.php
+${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/class.t3lib_utility_versionnumber.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/dependency/class.t3lib_utility_dependency_callback.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/dependency/class.t3lib_utility_dependency_element.php
 ${TYPO3DIR}/${TYPO3NAME}/t3lib/utility/dependency/class.t3lib_utility_dependency_factory.php
@@ -2750,7 +2751,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/ext_tables.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/handlers/class.tx_dbal_handler_openoffice.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/handlers/class.tx_dbal_handler_rawmysql.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/handlers/class.tx_dbal_handler_xmldb.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/last_synched_target
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/lib/class.tx_dbal_querycache.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/lib/class.tx_dbal_sqlengine.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/lib/class.tx_dbal_tsparserext.php
@@ -2814,6 +2814,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/ext_tables.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/ext_tables_static+adt.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/interfaces/interface.tx_em_index_checkdatabaseupdateshook.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/interfaces/interface.tx_em_renderhook.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/language/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/css/editor.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/em/res/css/t3_em.css
@@ -3172,7 +3173,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_tables.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/ext_typoscript_setup.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/last_synched_target
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extra_page_cm_options/class.tx_extrapagecmoptions.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extra_page_cm_options/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extra_page_cm_options/ext_icon.gif
@@ -3427,7 +3427,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/ext_typoscript_setup.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/fluid/last_synched_target
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func/ext_tables.php
@@ -5019,6 +5018,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/ext_tables.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/locallang_csh_sysaction.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/locallang_tca.xml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/task/class.tx_sysaction_list.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/task/class.tx_sysaction_task.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/tca.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/toolbarmenu/class.tx_sysaction_toolbarmenu.php
@@ -6685,6 +6685,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-mount.pn
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/filetree-root.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-backend-user-hideinmenu.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-backend-user.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-collapse.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-drag-copy-above.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-drag-copy-below.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-drag-move-above.png
@@ -6694,6 +6695,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-drag-mov
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-drag-new-between.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-drag-new-inside.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-drag-place-denied.png
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-expand.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-folder-contains-approve.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-folder-contains-board.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/images/icons/apps/pagetree-folder-contains-fe_users.png
@@ -7218,6 +7220,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/Resources/Private/Language/locallang_emails.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/class.tx_version_cm1.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/class.tx_version_gui.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/class.tx_version_iconworks.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/class.tx_version_tcemain.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/class.tx_version_tcemain_commandmap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/cli/conf.php
@@ -7231,7 +7234,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/ext_localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/ext_tables.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/last_synched_target
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/tasks/class.tx_version_tasks_autopublish.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/version/tca.php
@@ -7293,6 +7295,9 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Classes/Service/GridData.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Classes/Service/Stages.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Classes/Service/Tcemain.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Classes/Service/Workspaces.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/manual.odt
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/manual.pdf
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/manual.sxw
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Resources/Private/Language/locallang.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Resources/Private/Language/locallang_csh_sysws_stage.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Resources/Private/Language/locallang_db.xml
@@ -7352,14 +7357,12 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Service/WorkspaceTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Service/fixtures/dbDefaultPages.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Service/fixtures/dbDefaultWorkspaces.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Service/fixtures/dbMovedContent.xml
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/doc/manual.sxw
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/ext_localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/ext_tables.sql
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/last_synched_target
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/tca.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/tab.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/tce_db.php
@@ -7416,17 +7419,23 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_tsconfig.php
 ${TYPO3DIR}/${SITEDIR}/INSTALL.txt
 ${TYPO3DIR}/${SITEDIR}/README.txt
 ${TYPO3DIR}/${SITEDIR}/RELEASE_NOTES.txt
-${TYPO3DIR}/${SITEDIR}/_.htaccess
 ${TYPO3DIR}/${SITEDIR}/clear.gif
 ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/.htaccess
 ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/index.html
+${TYPO3DIR}/${SITEDIR}/fileadmin/user_upload/index.html
 ${TYPO3DIR}/${SITEDIR}/index.php
 ${TYPO3DIR}/${SITEDIR}/t3lib
 ${TYPO3DIR}/${SITEDIR}/typo3
 ${TYPO3DIR}/${SITEDIR}/typo3_src
+${TYPO3DIR}/${SITEDIR}/typo3conf/ext/index.html
 ${TYPO3DIR}/${SITEDIR}/typo3conf/extTables.php
 ${TYPO3DIR}/${SITEDIR}/typo3conf/index.html
+${TYPO3DIR}/${SITEDIR}/typo3conf/l10n/index.html
+${TYPO3DIR}/${SITEDIR}/typo3temp/index.html
 ${TYPO3DIR}/${SITEDIR}/uploads/index.html
+${TYPO3DIR}/${SITEDIR}/uploads/media/index.html
+${TYPO3DIR}/${SITEDIR}/uploads/pics/index.html
+${TYPO3DIR}/${SITEDIR}/uploads/tf/index.html
 @pkgdir share/typo3/www/uploads/tf
 @pkgdir share/typo3/www/uploads/pics
 @pkgdir share/typo3/www/uploads/media
