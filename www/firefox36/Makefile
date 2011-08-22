@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/20 13:05:50 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/22 08:28:07 wiz Exp $
 
 .include "../../devel/xulrunner192/dist.mk"
 PKGNAME=	firefox36-${FIREFOX_VER}
@@ -63,7 +63,7 @@ post-install:
 BUILDLINK_API_DEPENDS.xulrunner192+=	xulrunner192>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 BUILD_DEPENDS+=				xulrunner192-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}{,nb*}:../../devel/xulrunner192
 .include "../../devel/xulrunner192/buildlink3.mk"
-.if !empty(PKG_BUILD_OPTIONS.xulrunner:Mgnome)
+.if !empty(PKG_BUILD_OPTIONS.xulrunner192:Mgnome)
 CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus --enable-gnomeui
 .else
 CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
