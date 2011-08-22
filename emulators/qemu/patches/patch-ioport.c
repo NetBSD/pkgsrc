@@ -1,10 +1,10 @@
-$NetBSD: patch-ioport.c,v 1.3 2011/08/04 18:48:17 ryoon Exp $
+$NetBSD: patch-ioport.c,v 1.4 2011/08/22 12:00:34 ryoon Exp $
 
-* Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
+Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 
---- ioport.c.orig	2011-05-06 19:01:44.000000000 +0000
+--- ioport.c.orig	2011-08-08 18:28:42 +0000
 +++ ioport.c
-@@ -179,7 +179,7 @@ static uint32_t ioport_readb_thunk(void 
+@@ -181,7 +181,7 @@ static uint32_t ioport_readb_thunk(void 
      IORange *ioport = opaque;
      uint64_t data;
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ioport.c,v 1.3 2011/08/04 18:48:17 ryoon Exp $
      return data;
  }
  
-@@ -188,7 +188,7 @@ static uint32_t ioport_readw_thunk(void 
+@@ -190,7 +190,7 @@ static uint32_t ioport_readw_thunk(void 
      IORange *ioport = opaque;
      uint64_t data;
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ioport.c,v 1.3 2011/08/04 18:48:17 ryoon Exp $
      return data;
  }
  
-@@ -197,7 +197,7 @@ static uint32_t ioport_readl_thunk(void 
+@@ -199,7 +199,7 @@ static uint32_t ioport_readl_thunk(void 
      IORange *ioport = opaque;
      uint64_t data;
  

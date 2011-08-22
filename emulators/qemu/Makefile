@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2011/07/11 09:57:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2011/08/22 12:00:34 ryoon Exp $
 
-DISTNAME=		qemu-0.14.1
+DISTNAME=		qemu-0.15.0
 CATEGORIES=		emulators
-MASTER_SITES=		http://download.savannah.gnu.org/releases/qemu/
+MASTER_SITES=		http://wiki.qemu.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.qemu.org/
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
-USE_TOOLS+=		gmake makeinfo perl:build
+USE_TOOLS+=		gmake makeinfo perl:build pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
@@ -28,6 +28,7 @@ CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--python=${PYTHONBIN}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
 			${PKG_SYSCONFDIR}/target-x86_64.conf
@@ -50,6 +51,7 @@ SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
 			hw/gus.c \
 			hw/hda-audio.c \
 			hw/marvell_88w8618_audio.c \
+			hw/milkymist-ac97.c \
 			hw/mips_fulong2e.c \
 			hw/mips_jazz.c \
 			hw/mips_malta.c \
@@ -73,7 +75,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
 UE_ARCHS+=		alpha arm armeb cris i386 m68k microblaze mips mipsel
 UE_ARCHS+=		ppc ppc64 ppc64abi32 sh4 sh4eb sparc sparc32plus
-UE_ARCHS+=		sparc64 x86_64
+UE_ARCHS+=		sparc64 x86_64 microblazeel s390x unicore32
 
 .if ${OPSYS} == "NetBSD"
 .if (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*))
@@ -114,6 +116,8 @@ post-install:
 .if empty(OPSYS:MDarwin)
 .include "../../mk/oss.buildlink3.mk"
 .endif
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
