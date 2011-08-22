@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.4 2011/07/11 09:57:18 ryoon Exp $
+$NetBSD: patch-ao,v 1.5 2011/08/22 12:00:34 ryoon Exp $
 
---- audio/mixeng.c.orig	2011-05-06 19:01:43.000000000 +0000
+--- audio/mixeng.c.orig	2011-08-08 18:28:42 +0000
 +++ audio/mixeng.c
 @@ -143,56 +143,64 @@
  #undef IN_T
