@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2074 2011/08/22 12:58:22 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2075 2011/08/22 13:22:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3270,3 +3270,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/fbreader to 0.10.7nb8 [wiz 2011-08-22]
 	Updated emulators/qemu to 0.15.0 [ryoon 2011-08-22]
 	Updated devel/pcre to 8.13 [wiz 2011-08-22]
+	Updated games/gbrainy to 2.01 [wiz 2011-08-22]
