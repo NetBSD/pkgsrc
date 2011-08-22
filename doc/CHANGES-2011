@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2078 2011/08/22 13:43:38 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2079 2011/08/22 14:03:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3273,3 +3273,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/gbrainy to 2.01 [wiz 2011-08-22]
 	Updated converters/convmv to 1.15 [wiz 2011-08-22]
 	Updated audio/openal to 0.0.8nb5 [wiz 2011-08-22]
+	Updated converters/libiconv to 1.14 [wiz 2011-08-22]
