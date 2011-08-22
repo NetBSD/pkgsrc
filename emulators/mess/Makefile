@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:45:18 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/22 21:41:01 wiz Exp $
 #
 
-DISTNAME=		mess0142s
+DISTNAME=		mess0143s
 PKGNAME=		${DISTNAME:S/0/-0./:S/s$//}
-PKGREVISION=		1
-MASTER_SITES=		http://www.mess.org/files/
+MASTER_SITES=		http://www.mess.org/_media/downloads:
 DISTFILES=		${DISTNAME:S/mess/mame/}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
 COMMENT=		Multi Emulator Super System
