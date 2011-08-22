@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2072 2011/08/22 11:43:30 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2073 2011/08/22 12:03:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3268,3 +3268,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/icedtea-web version 1.2pre [tnn 2011-08-22]
 	Updated lang/php53 to 5.3.7nb1 [taca 2011-08-22]
 	Updated misc/fbreader to 0.10.7nb8 [wiz 2011-08-22]
+	Updated emulators/qemu to 0.15.0 [ryoon 2011-08-22]
