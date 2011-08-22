@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2085 2011/08/22 16:29:46 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2086 2011/08/22 16:32:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3281,3 +3281,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/gnutls to 2.12.9 [wiz 2011-08-22]
 	Added fonts/tex-ocr-b version 2011 [minskim 2011-08-22]
 	Added fonts/tex-ocr-b-doc version 2011 [minskim 2011-08-22]
+	Removed print/tex-ocrb successor fonts/tex-ocr-b [minskim 2011-08-22]
