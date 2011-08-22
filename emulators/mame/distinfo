@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/04/21 20:42:44 wiz Exp $
+$NetBSD: distinfo,v 1.7 2011/08/22 21:40:25 wiz Exp $
 
-SHA1 (mame0142s.zip) = 6d70b7a2a15abfdb7955772844ac4c6eae50ced4
-RMD160 (mame0142s.zip) = 20b7fc0af868521462e8081021acbfbe98bea16d
-Size (mame0142s.zip) = 17657289 bytes
-SHA1 (patch-makefile) = 7117269c9818a1bf018c7d650a5fd64fc0ea3728
-SHA1 (patch-src_lib_util_astring.h) = 103db1d57f11f2df65eccd6957c551003e55a137
-SHA1 (patch-src_mame_machine_naomibd.c) = 7bc53bd57a6d75eae4e0d1d27b1b8cb7fd2fb4df
+SHA1 (mame0143s.zip) = dd7cf43ec9f31321ee698facce3b2d3b21cebf15
+RMD160 (mame0143s.zip) = 0cfffdf5939fb740abdb030256011a8e6ca6ee54
+Size (mame0143s.zip) = 17902802 bytes
