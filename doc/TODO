@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10505 2011/08/22 12:03:39 ryoon Exp $
+$NetBSD: TODO,v 1.10506 2011/08/22 12:56:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,9 +445,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.14
+	o calibre-0.8.15
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o ccache-3.1.5
+	o ccache-3.1.6
 	o cddbd-1.5.2
 	o cdialog-1.1.20110707
 	o cdif-1.19
@@ -471,6 +471,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cone-0.87
 	o connect-1.96
 	o consolekit-0.4.0
+	o convmv-1.15
 	o cook-2.31
 	o coreutils-8.9
 	o courier-0.66.1
@@ -515,7 +516,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnsmasq-2.57
 	o dnstracer-1.9
 	o doclifter-2.6
-	o doxygen-1.7.5
+	o doxygen-1.7.5.1
 	o dpkg-1.16.0.3
 	o dri2proto-2.6
 	o drivel-3.0.3
@@ -526,7 +527,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvtm-0.6
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
-	o echinus-0.4.6
+	o echinus-0.4.7
 	o eclipse-3.2.0
 	o ed-1.5
 	o ede-2.0
@@ -585,7 +586,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o festival-1.96
 	o fetchyahoo-2.14.0
 	o ffmpeg-20110807.0.8.2
-	o file-5.07
+	o file-5.08
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
@@ -676,7 +677,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o getmail-4.20.4
 	o gfract-0.33
 	o ghc-7.0.4
-	o ghostscript-9.02
+	o ghostscript-9.04
 	o gifsicle-1.48
 	o gimp-ufraw-0.18
 	o gkrellm-2.3.5
@@ -720,7 +721,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.1
 	o gnuchess-5.08
-	o gnutls-3.0.0
+	o gnutls-2.12.9
+	o gnutls-3.0.1
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -768,7 +770,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o help2man-1.40.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-7.5
+	o hiawatha-7.6
 	o highlight-3.5
 	o honeyd-1.5c
 	o horde-4.0.8
@@ -792,7 +794,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
 	o imapsync-1.452
-	o imp-5.0.9
+	o imp-5.0.10
 	o ingo-2.0.4
 	o inputproto-2.0.2
 	o inspircd-1.2.1
@@ -839,7 +841,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kodos-2.4.5
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-3.0.7
+	o kronolith-3.0.8
 	o krusader-2.0
 	o ktorrent-4.1.1
 	o ktorrent3-3.3.4
@@ -890,7 +892,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
-	o libgdata-0.8.1
+	o libgdata-0.10.0
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.0.3
 	o libgnomedb-3.1.2
@@ -968,7 +970,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mksh-40b
 	o mkvtoolnix-4.9.0
 	o moc-2.4.4
-	o modular-xorg-server-1.10.3
+	o modular-xorg-server-1.10.4
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o moserial-2.30.0 [GNOME 2.30]
@@ -1047,7 +1049,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o paprefs-0.9.8
-	o parallel-20110722
+	o parallel-20110822
 	o pari-2.5.0
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
@@ -1087,6 +1089,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o posh-0.5.5
 	o postal-0.70
 	o postgresql-postgis-1.5.3
+	o potrace-1.10
 	o powwow-1.2.16
 	o prboom-2.5.0.8
 	o printproto-1.0.5
@@ -1274,7 +1277,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o turba-3.0.5
+	o turba-3.0.7
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o twm-1.0.7
@@ -1341,7 +1344,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20110813
+	o x264-devel-20110820
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
