@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2007/06/17 17:05:08 joerg Exp $
+$NetBSD: patch-aa,v 1.13 2011/08/22 12:58:08 wiz Exp $
+
+Use pkgsrc's COMPILER_RPATH_FLAG variable, so this works on all pkgsrc platforms.
 
 --- pcre-config.in.orig	2007-06-17 16:31:18.000000000 +0000
 +++ pcre-config.in
