@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2011/07/21 13:05:55 obache Exp $
+# $NetBSD: Makefile,v 1.43 2011/08/22 13:22:40 wiz Exp $
 #
 
-DISTNAME=	gbrainy-2.00
-PKGREVISION=	1
+DISTNAME=	gbrainy-2.01
 CATEGORIES=	games
 MASTER_SITES=	http://gent.softcatala.org/jmas/gbrainy/
 
@@ -26,16 +25,13 @@ REPLACE_BASH=		src/Clients/Classical/gbrainy.in
 # mono-style, pkgsrc infrastructure doesn't change anything in it.
 #PKGCONFIG_OVERRIDE=	data/gbrainy.pc.in
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../x11/gnome-sharp/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
