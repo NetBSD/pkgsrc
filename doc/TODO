@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10504 2011/08/21 13:12:07 gson Exp $
+$NetBSD: TODO,v 1.10505 2011/08/22 12:03:39 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1128,7 +1128,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-twisted-11.0.0
 	o python-3.2
 	o qbrew-0.3.9
-	o qemu-0.15
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o quagga-0.99.18
