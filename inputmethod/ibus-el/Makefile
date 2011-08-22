@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/25 09:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/22 12:21:56 wiz Exp $
 #
 
 DISTNAME=	ibus-el-0.2.1
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 EMACS_VERSIONS_ACCEPTED=	emacs22 emacs23 emacs24
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
+PYTHON_VERSIONS_INCOMPATIBLE=	24 25
 
 REPLACE_PYTHON=	ibus-el-agent
 # then execute directly
