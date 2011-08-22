@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2011/05/06 19:30:13 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/22 15:09:21 wiz Exp $
 
-DISTNAME=	nettle-2.1
+DISTNAME=	nettle-2.2
 CATEGORIES=	devel security
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/ \
 		ftp://ftp.lysator.liu.se/pub/security/lsh/
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lysator.liu.se/~nisse/nettle/
 COMMENT=	Cryptographic library
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

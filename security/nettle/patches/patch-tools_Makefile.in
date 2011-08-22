@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_Makefile.in,v 1.1.1.1 2011/04/26 08:59:33 adam Exp $
+$NetBSD: patch-tools_Makefile.in,v 1.2 2011/08/22 15:09:21 wiz Exp $
 
 Use LIBTOOL.
 
---- tools/Makefile.in.orig	2010-07-25 19:30:14.000000000 +0000
+--- tools/Makefile.in.orig	2011-07-11 13:59:25.000000000 +0000
 +++ tools/Makefile.in
-@@ -32,15 +32,15 @@ SOURCES = $(sexp_conv_SOURCES) nettle-lf
+@@ -33,19 +33,19 @@ SOURCES = $(sexp_conv_SOURCES) nettle-ha
  DISTFILES = $(SOURCES) Makefile.in getopt.h input.h misc.h output.h parse.h
  
  sexp_conv_OBJS = $(sexp_conv_SOURCES:.c=.$(OBJEXT))
@@ -24,9 +24,14 @@ Use LIBTOOL.
 +pkcs1-conv$(EXEEXT): $(pkcs1_conv_OBJS) ../libnettle.la ../libhogweed.la
 +	$(LINK) $(pkcs1_conv_OBJS) ../libhogweed.la ../libnettle.la $(LIBS) -o $@
  
- .c.$(OBJEXT):
- 	$(COMPILE) -c $< && $(DEP_PROCESS)
-@@ -55,7 +55,7 @@ check:
+ # FIXME: Avoid linking with gmp
+ nettle_hash_OBJS = $(nettle_hash_SOURCES:.c=.$(OBJEXT))
+-nettle-hash$(EXEEXT): $(nettle_hash_OBJS) ../libnettle.a
++nettle-hash$(EXEEXT): $(nettle_hash_OBJS) ../libnettle.la
+ 	$(LINK) $(nettle_hash_OBJS) -lnettle $(LIBS) -o $@
+ 
+ 
+@@ -62,7 +62,7 @@ check:
  install: $(TARGETS)
  	$(MKDIR_P) $(DESTDIR)$(bindir)
  	for f in $(TARGETS) ; do \
