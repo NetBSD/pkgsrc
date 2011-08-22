@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/22 16:27:36 minskim Exp $
+share/texmf-dist/fonts/source/public/ocr-b/ocrb10.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb10e.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb10f.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb10g.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb10l.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb10s.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb10x.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb5.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb6.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb7.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb8.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrb9.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrbdef.mf
+share/texmf-dist/fonts/source/public/ocr-b/ocrbmac.mf
+share/texmf-dist/fonts/tfm/public/ocr-b/ocrb10.tfm
+share/texmf-dist/fonts/tfm/public/ocr-b/ocrb5.tfm
+share/texmf-dist/fonts/tfm/public/ocr-b/ocrb6.tfm
+share/texmf-dist/fonts/tfm/public/ocr-b/ocrb7.tfm
+share/texmf-dist/fonts/tfm/public/ocr-b/ocrb8.tfm
+share/texmf-dist/fonts/tfm/public/ocr-b/ocrb9.tfm
