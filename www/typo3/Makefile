@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2011/03/02 19:06:09 bouyer Exp $
+# $NetBSD: Makefile,v 1.32.4.1 2011/08/22 21:27:01 tron Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	typo3-${VER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
@@ -19,20 +18,19 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-VER=		4.5.2
+VER=		4.5.5
 NO_BUILD=	yes
 USE_TOOLS=	pax
 
 TYPO3NAME=	typo3_src-${VER}
 SITESRC=	dummy-${VER}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 # maybe resides in lang/php/phpversion.mk
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	typo3/cli_dispatch.phpsh \
-			typo3/mod/user/ws/cli/ws_cli.phpsh \
-			typo3/sysext/indexed_search/cli/indexer_cli.phpsh
+REPLACE_FILES.php=	typo3/cli_dispatch.phpsh
 
 TYPO3DATADIR=	fileadmin fileadmin/_temp_ fileadmin/user_upload \
 		typo3conf typo3conf/ext typo3conf/l10n typo3temp uploads \
