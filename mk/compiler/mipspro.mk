@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.41 2009/06/02 22:32:49 joerg Exp $
+# $NetBSD: mipspro.mk,v 1.42 2011/08/22 09:18:29 cheusov Exp $
 #
 # This is the compiler definition for the MIPSpro C compiler.
 #
@@ -14,6 +14,8 @@ COMPILER_MIPSPRO_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 MIPSPROBASE?=	/usr
+
+COMPILER_USE_SYMLINKS=	no # PR pkg/42424
 
 # LANGUAGES.<compiler> is the list of supported languages by the
 # compiler.
