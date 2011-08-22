@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10509 2011/08/22 13:23:48 wiz Exp $
+$NetBSD: TODO,v 1.10510 2011/08/22 14:03:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -895,7 +895,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnome-keyring-3.0.3
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.0.0
-	o libiconv-1.14
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
 	o libjpeg-turbo-1.1.1
