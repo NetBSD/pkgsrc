@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/04 12:09:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/08/22 21:41:01 wiz Exp $
 bin/castool
 bin/imgtool
 bin/mess
@@ -326,9 +326,11 @@ share/mess/artwork/aim65.zip
 share/mess/artwork/alm16.zip
 share/mess/artwork/alm32.zip
 share/mess/artwork/amsterd.zip
+share/mess/artwork/aperture.png
 share/mess/artwork/avigo.zip
 share/mess/artwork/berlinp.zip
 share/mess/artwork/bpl32.zip
+share/mess/artwork/dallas16.zip
 share/mess/artwork/gen32.zip
 share/mess/artwork/gen32_41.zip
 share/mess/artwork/gen32_oc.zip
@@ -361,8 +363,10 @@ share/mess/artwork/supercon.zip
 share/mess/artwork/thomson.zip
 share/mess/artwork/van16.zip
 share/mess/artwork/van32.zip
+share/mess/artwork/white.png
 share/mess/hash/32x.xml
 share/mess/hash/a2600.hsi
+share/mess/hash/a2600.xml
 share/mess/hash/a5200.hsi
 share/mess/hash/a5200.xml
 share/mess/hash/a7800.hsi
@@ -379,11 +383,14 @@ share/mess/hash/advision.xml
 share/mess/hash/aes.xml
 share/mess/hash/aim65.hsi
 share/mess/hash/alice32.xml
+share/mess/hash/alice90.xml
 share/mess/hash/apexc.hsi
 share/mess/hash/apfm1000.hsi
 share/mess/hash/apfm1000.xml
 share/mess/hash/apple1.hsi
 share/mess/hash/apple2.hsi
+share/mess/hash/apple2.xml
+share/mess/hash/apple2gs.xml
 share/mess/hash/aquarius.hsi
 share/mess/hash/aquarius.xml
 share/mess/hash/arcadia.hsi
@@ -395,13 +402,18 @@ share/mess/hash/bbca.hsi
 share/mess/hash/bbcbc.xml
 share/mess/hash/bw2.xml
 share/mess/hash/c128.hsi
+share/mess/hash/c128_cart.xml
+share/mess/hash/c128_flop.xml
+share/mess/hash/c128_rom.xml
 share/mess/hash/c16.hsi
 share/mess/hash/c64.hsi
 share/mess/hash/c64_cart.xml
+share/mess/hash/c64_flop.xml
 share/mess/hash/casloopy.xml
 share/mess/hash/cbm30.hsi
 share/mess/hash/cbm40.hsi
 share/mess/hash/cbm610.hsi
+share/mess/hash/cbm700_cart.xml
 share/mess/hash/cbm80.hsi
 share/mess/hash/cd32.xml
 share/mess/hash/cdi.xml
@@ -410,6 +422,7 @@ share/mess/hash/cgenie.hsi
 share/mess/hash/channelf.hsi
 share/mess/hash/channelf.xml
 share/mess/hash/coco.hsi
+share/mess/hash/coco_cart.xml
 share/mess/hash/coleco.hsi
 share/mess/hash/coleco.xml
 share/mess/hash/cpc464.hsi
@@ -463,6 +476,7 @@ share/mess/hash/megapc.xml
 share/mess/hash/megatech.xml
 share/mess/hash/microtan.hsi
 share/mess/hash/mo5.hsi
+share/mess/hash/mpz80.xml
 share/mess/hash/msx.hsi
 share/mess/hash/msx2.hsi
 share/mess/hash/mtx512.hsi
@@ -472,7 +486,9 @@ share/mess/hash/n64.xml
 share/mess/hash/nascom1.hsi
 share/mess/hash/nes.hsi
 share/mess/hash/nes.xml
+share/mess/hash/next.xml
 share/mess/hash/ngp.xml
+share/mess/hash/ngpc.xml
 share/mess/hash/odyssey2.hsi
 share/mess/hash/oric.hsi
 share/mess/hash/p2000t.hsi
@@ -490,6 +506,8 @@ share/mess/hash/pico.hsi
 share/mess/hash/pico.xml
 share/mess/hash/pippin.xml
 share/mess/hash/pippin_flop.xml
+share/mess/hash/plus4_cart.xml
+share/mess/hash/plus4_flop.xml
 share/mess/hash/pokemini.hsi
 share/mess/hash/pokemini.xml
 share/mess/hash/psion.xml
@@ -515,6 +533,8 @@ share/mess/hash/spectrum.xml
 share/mess/hash/st.xml
 share/mess/hash/studio2.hsi
 share/mess/hash/studio2.xml
+share/mess/hash/stv.xml
+share/mess/hash/super6.xml
 share/mess/hash/supracan.xml
 share/mess/hash/svi318.hsi
 share/mess/hash/svi318_cart.xml
@@ -538,6 +558,7 @@ share/mess/hash/vectrex.hsi
 share/mess/hash/vectrex.xml
 share/mess/hash/vg5k.xml
 share/mess/hash/vic1001_cart.xml
+share/mess/hash/vic1001_flop.xml
 share/mess/hash/vic20.hsi
 share/mess/hash/vidbrain.xml
 share/mess/hash/vii.xml
