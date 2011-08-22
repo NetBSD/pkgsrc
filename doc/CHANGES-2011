@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2075 2011/08/22 13:22:54 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2076 2011/08/22 13:23:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3271,3 +3271,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/qemu to 0.15.0 [ryoon 2011-08-22]
 	Updated devel/pcre to 8.13 [wiz 2011-08-22]
 	Updated games/gbrainy to 2.01 [wiz 2011-08-22]
+	Updated converters/convmv to 1.15 [wiz 2011-08-22]
