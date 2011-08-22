@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2076 2011/08/22 13:23:48 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2077 2011/08/22 13:36:43 reed Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2832,7 +2832,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated converters/p5-JSON-Any to 1.29 [adam 2011-08-06]
 	Updated converters/p5-Unicode-IMAPUtf7 to 2.01 [adam 2011-08-06]
 	Updated databases/p5-DBI to 1.1616 [adam 2011-08-06]
-	Updated databases/p5-DerkeleyDB to 0.48 [adam 2011-08-06]
+	Updated databases/p5-BerkeleyDB to 0.48 [adam 2011-08-06]
 	Updated databases/p5-Apache-DBI to 1.10 [adam 2011-08-06]
 	Updated databases/p5-CDB_File to 0.97 [adam 2011-08-06]
 	Updated databases/p5-DB_File to 1.822 [adam 2011-08-06]
@@ -2871,7 +2871,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Array-Diff to 0.07 [adam 2011-08-07]
 	Updated devel/p5-asa to 1.03 [adam 2011-08-07]
 	Updated mail/p5-MailTools to 2.08 [tron 2011-08-07]
-	Updated devel/p5-Attribute-Handler to 0.91 [adam 2011-08-07]
+	Updated devel/p5-Attribute-Handlers to 0.91 [adam 2011-08-07]
 	Updated mail/p5-MIME-tools to 5.502 [tron 2011-08-07]
 	Updated devel/p5-Attribute-Lexical to 0.004 [adam 2011-08-07]
 	Updated devel/p5-autobox to 2.75 [adam 2011-08-07]
@@ -2926,7 +2926,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-version to 0.9300 [adam 2011-08-10]
 	Updated devel/p5-Class-Unload to 0.07 [adam 2011-08-10]
 	Updated devel/p5-Class-XSAccessor to 1.11 [adam 2011-08-10]
-	Updated devel/p5-Class-common-sense to 3.4 [adam 2011-08-10]
+	Updated devel/p5-common-sense to 3.4 [adam 2011-08-10]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.037 [adam 2011-08-10]
 	Updated devel/p5-Compress-Raw-Zlib to 2.037 [adam 2011-08-10]
 	Updated devel/p5-Config-Any to 0.23 [adam 2011-08-10]
@@ -2946,7 +2946,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-CPAN-Reporter to 1.2001 [adam 2011-08-10]
 	Updated pkgtools/pkgin to 0.4.2.2 [imil 2011-08-10]
 	Updated devel/p5-Parse-CPAN-Meta to 1.4401 [adam 2011-08-10]
-	Updated devel/p5-ExtUtils-Make-Maker to 6.59 [adam 2011-08-10]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.59 [adam 2011-08-10]
 	Updated security/openssh to 5.8.2nb3 [taca 2011-08-10]
 	Updated net/bind96 to 9.6.3.1.ESV.5 [taca 2011-08-10]
 	Updated net/bind97 to 9.7.4 [taca 2011-08-10]
@@ -2964,13 +2964,13 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Data-Peek to 0.33 [adam 2011-08-12]
 	Updated devel/p5-Data-Serializer to 0.59 [adam 2011-08-12]
 	Updated devel/p5-Data-Taxi to 0.96 [adam 2011-08-12]
-	Updated devel/p5-Data-Manip to 6.24 [adam 2011-08-12]
+	Updated devel/p5-Date-Manip to 6.24 [adam 2011-08-12]
 	Updated devel/p5-Debug-Client to 0.12 [adam 2011-08-12]
 	Updated devel/p5-Devel-Checklib to 0.93 [adam 2011-08-12]
-	Updated devel/p5-Devel-CheckOK to 1.64 [adam 2011-08-12]
+	Updated devel/p5-Devel-CheckOS to 1.64 [adam 2011-08-12]
 	Updated devel/p5-Devel-Cover to 0.79 [adam 2011-08-12]
 	Updated devel/p5-Devel-Declare to 0.006005 [adam 2011-08-12]
-	Updated devel/p5-Devel-GlobalDEstruction to 0.04 [adam 2011-08-12]
+	Updated devel/p5-Devel-GlobalDestruction to 0.04 [adam 2011-08-12]
 	Updated devel/p5-Devel-NYTProf to 4.06 [adam 2011-08-12]
 	Updated devel/p5-Devel-PartialDump to 0.15 [adam 2011-08-12]
 	Updated textproc/p5-Encode-Locale to 1.02nb2 [obache 2011-08-12]
