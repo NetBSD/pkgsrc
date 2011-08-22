@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/11/13 21:08:55 shattered Exp $
+# $NetBSD: Makefile,v 1.39 2011/08/22 08:51:46 wiz Exp $
 
 DISTNAME=	binutils-2.17
 PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://directory.fsf.org/project/binutils/
 COMMENT=	GNU binary utilities
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -33,7 +34,7 @@ BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 PLIST_SRC=	${PKGDIR}/PLIST.common
 PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
