@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2081 2011/08/22 14:56:14 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2082 2011/08/22 14:57:22 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3276,3 +3276,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated converters/libiconv to 1.14 [wiz 2011-08-22]
 	Updated emulators/suse113_gtk2 to 11.3nb5 [chs 2011-08-22]
 	Updated lang/gcc46 to 4.6.1nb1 [wiz 2011-08-22]
+	Updated emulators/suse113_libpng to 11.3nb2 [chs 2011-08-22]
