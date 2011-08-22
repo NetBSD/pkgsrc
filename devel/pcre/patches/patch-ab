@@ -1,4 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2008/05/27 16:20:52 tnn Exp $
+$NetBSD: patch-ab,v 1.6 2011/08/22 12:58:08 wiz Exp $
+
+Remove a feeble attempt at providing ABI compatibility for the C++ portion
+of the PCRE library. Relying on the C++ compiler to crunch symbols in a
+particular way is platform dependent at best, and the comments indicate
+that this was done for OSX.
+Also, the test misfired on SunOS leading to breakage (PR pkg/38768).
 
 --- configure.orig	2008-05-07 18:22:58.000000000 +0200
 +++ configure
