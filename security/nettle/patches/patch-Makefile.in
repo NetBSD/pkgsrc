@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.2 2011/04/26 09:54:55 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2011/08/22 15:09:21 wiz Exp $
 
 Use LIBTOOL.
 
---- Makefile.in.orig	2010-07-25 19:30:13.000000000 +0000
+--- Makefile.in.orig	2011-07-11 13:59:25.000000000 +0000
 +++ Makefile.in
 @@ -14,13 +14,13 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
  INSTALL_STRIP_PROGRAM = $(INSTALL_PROGRAM) -s
@@ -19,25 +19,25 @@ Use LIBTOOL.
 +LIBTARGETS = libnettle.la @IF_HOGWEED@ libhogweed.la
  SHLIBTARGETS = $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
  
- TARGETS = aesdata$(EXEEXT) desdata$(EXEEXT) shadata$(EXEEXT) \
-@@ -138,19 +138,19 @@ hogweed_OBJS = $(hogweed_SOURCES:.c=.$(O
+ TARGETS = aesdata$(EXEEXT) desdata$(EXEEXT) shadata$(EXEEXT) gcmdata$(EXEEXT)\
+@@ -141,18 +141,18 @@ nettle_PURE_OBJS = $(nettle_OBJS:.$(OBJE
+ hogweed_OBJS = $(hogweed_SOURCES:.c=.$(OBJEXT))
  hogweed_PURE_OBJS = $(hogweed_OBJS:.$(OBJEXT)=.p$(OBJEXT))
  
- # FIXME: Do we really need to delete the archive first?
 -libnettle.a: $(nettle_OBJS)
 -	-rm -f $@
 -	$(AR) $(ARFLAGS) $@ $(nettle_OBJS)
+-	$(RANLIB) $@
+-
+-libhogweed.a: $(hogweed_OBJS)
+-	-rm -f $@
+-	$(AR) $(ARFLAGS) $@ $(hogweed_OBJS)
 -	$(RANLIB) $@
 +libnettle.la: $(nettle_OBJS)
 +	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libnettle.la \
 +		${nettle_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
 +		-version-info ${LIBNETTLE_MAJOR}:${LIBNETTLE_MINOR}
- 
- # FIXME: Do we really need to delete the archive first?
--libhogweed.a: $(hogweed_OBJS)
--	-rm -f $@
--	$(AR) $(ARFLAGS) $@ $(hogweed_OBJS)
--	$(RANLIB) $@
++
 +libhogweed.la: $(hogweed_OBJS)
 +	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o libhogweed.la \
 +		${hogweed_OBJS:.o=.lo} -rpath ${PREFIX}/lib \
@@ -49,7 +49,7 @@ Use LIBTOOL.
  	&& $(DEP_PROCESS)
  
  # Rules building shared libraries
-@@ -200,7 +200,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
+@@ -205,7 +205,7 @@ des.$(OBJEXT): des.c des.h $(des_headers
  .asm.$(OBJEXT):
  	$(M4) $(srcdir)/asm.m4 machine.m4 config.m4 \
  		$< >$*.s
@@ -58,7 +58,7 @@ Use LIBTOOL.
  	echo "$@ : $< $(srcdir)/asm.m4 machine.m4 config.m4" >$@.d 
  
  .asm.p$(OBJEXT):
-@@ -266,7 +266,7 @@ install-here: install-info install-heade
+@@ -271,7 +271,7 @@ install-here: install-info install-heade
  install-static: $(LIBTARGETS)
  	$(MKDIR_P) $(DESTDIR)$(libdir)
  	for f in $(LIBTARGETS); do \
