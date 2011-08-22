@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2082 2011/08/22 14:57:22 chs Exp $
+$NetBSD: CHANGES-2011,v 1.2083 2011/08/22 15:09:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3277,3 +3277,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_gtk2 to 11.3nb5 [chs 2011-08-22]
 	Updated lang/gcc46 to 4.6.1nb1 [wiz 2011-08-22]
 	Updated emulators/suse113_libpng to 11.3nb2 [chs 2011-08-22]
+	Updated security/nettle to 2.2 [wiz 2011-08-22]
