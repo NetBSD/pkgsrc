@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2011/02/26 07:06:23 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2011/08/22 21:40:25 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -35,6 +35,12 @@ MAKE_ENV=		NOWERROR=1
 .if ${MACHINE_ENDIAN:Mbig}
 MAKE_FLAGS+=	BIGENDIAN=true
 .endif
+
+SUBST_CLASSES+=		exe
+SUBST_SED.exe=		-e 's,$$(PREFIX)$$(PREFIXSDL)$$(NAME)$$(SUFFIX)$$(SUFFIX64)$$(SUFFIXDEBUG)$$(SUFFIXPROFILE),$$(PREFIXSDL)$$(NAME)$$(SUFFIX)$$(SUFFIXDEBUG)$$(SUFFIXPROFILE),'
+SUBST_FILES.exe=	makefile
+SUBST_STAGE.exe=	post-patch
+SUBST_MESSAGE.exe=	Fixing executable name.
 
 # mame source is double-zipped
 post-extract:
