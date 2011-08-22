@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2010/04/05 18:50:48 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/08/22 11:24:06 wiz Exp $
 
 SHA1 (fbreader-sources-0.10.7.tgz) = d47a2fa46d43057cac9408db1f2c409f0d3a9942
 RMD160 (fbreader-sources-0.10.7.tgz) = dec4d8ee716697dd021535295c9fe62970f059a2
@@ -12,3 +12,4 @@ SHA1 (patch-ag) = 19e92bd82df3cfb134ff17c9bdbb59028aceff95
 SHA1 (patch-ah) = 1a154c4650eefd8d255e3b17583e401000c07a54
 SHA1 (patch-ai) = d62ca84596a94f1ec020d419eb0c4f0a28422e1e
 SHA1 (patch-aj) = 5db2865b8975eb9972ec78ebc0914a81bd382b4c
+SHA1 (patch-zlibrary_text_src_view_ZLTextStyle.h) = a4b82ee22148ef3a5f381fb85583ac6f838a24d1
