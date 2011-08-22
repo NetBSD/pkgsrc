@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.41 2011/01/15 21:14:21 adam Exp $
+$NetBSD: distinfo,v 1.42 2011/08/22 12:58:08 wiz Exp $
 
-SHA1 (pcre-8.12.tar.bz2) = 2219b372bff53ee29a7e44ecf5977ad15df01cea
-RMD160 (pcre-8.12.tar.bz2) = ec7978604cdf92d8dbd98e0d0c360fe35eb62021
-Size (pcre-8.12.tar.bz2) = 992502 bytes
-SHA1 (patch-aa) = 2bca13cdd4a398ae3dbf26f75fd94557cb076dbe
-SHA1 (patch-ab) = a51a173c41825effd94c104f3b7eea3e48d019f9
+SHA1 (pcre-8.13.tar.bz2) = 4dedf8f2e1d7fb29bd00e62bcd26ca3ba71ff9bb
+RMD160 (pcre-8.13.tar.bz2) = 0448109dbf489e4c18cd9e2a0cf97a33ff7e5364
+Size (pcre-8.13.tar.bz2) = 1037903 bytes
+SHA1 (patch-aa) = f64935ca3ff7987f7259fcca44fefdac2c60cd2f
+SHA1 (patch-ab) = 0da1392febca936ad89a8bda66c7114240a0fe4b
