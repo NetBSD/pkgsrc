@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/08/13 14:06:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/22 14:55:57 wiz Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,7 +19,6 @@ USE_TOOLS+=		awk:run bash:run perl chmod \
 			sed:run unzip
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
-DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 
 GCC_VERSION=		4.6.1
 
@@ -104,7 +104,7 @@ CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC_PREFIX}/include/c++/
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
