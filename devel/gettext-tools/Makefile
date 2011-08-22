@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/07/13 20:50:05 tron Exp $
+# $NetBSD: Makefile,v 1.18 2011/08/22 21:53:40 cheusov Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ARGS+=	--without-git
+CONFIGURE_ARGS+=	--with-included-libcroco
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
