@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2094 2011/08/23 11:14:34 abs Exp $
+$NetBSD: CHANGES-2011,v 1.2095 2011/08/23 11:59:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3301,3 +3301,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-Role-Parameterized to 0.27 [abs 2011-08-23]
 	Updated www/p5-WWW-Mechanize to 1.68 [abs 2011-08-23]
 	Updated www/p5-Reaction to 0.2.5 [abs 2011-08-23]
+	Updated archivers/lzo to 2.06 [adam 2011-08-23]
