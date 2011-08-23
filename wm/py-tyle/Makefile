@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/08/22 12:21:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/23 09:33:25 wiz Exp $
 #
 
 DISTNAME=	pytyle-0.7.5
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
 PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG=	yes
 PY_PATCHLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	24 25
+PYTHON_VERSIONS_INCOMPATIBLE=	24 25 31
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
