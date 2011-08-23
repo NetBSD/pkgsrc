@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2011/08/23 09:08:12 abs Exp $
+# $NetBSD: Makefile,v 1.53 2011/08/23 09:14:28 abs Exp $
 
 DISTNAME=	Moose-2.0202
 PKGNAME=	p5-${DISTNAME}
@@ -27,6 +27,8 @@ DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
 
 BUILD_DEPENDS+= p5-Test-Fatal>=0.05:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+= p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
+
+CONFLICTS+=	p5-Class-MOP>=0
 
 # t/200_examples/002_example_Moose_POOP.t
 BUILD_DEPENDS+= p5-DBM-Deep-[0-9]*:../../databases/p5-DBM-Deep
