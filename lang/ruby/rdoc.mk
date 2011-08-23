@@ -1,4 +1,4 @@
-# $NetBSD: rdoc.mk,v 1.1 2011/06/16 15:03:29 taca Exp $
+# $NetBSD: rdoc.mk,v 1.1.2.1 2011/08/23 09:12:11 tron Exp $
 
 .if !defined(_RUBY_RDOC_MK)
 _RUBY_RDOC_MK=	# defined
@@ -19,7 +19,7 @@ _RUBY_RDOC_MK=	# defined
 #
 # current rdoc versions.
 #
-RUBY_RDOC_VERSION=	3.6.1
+RUBY_RDOC_VERSION=	3.8
 
 .if !empty(RUBY_RDOC_REQD)
 
@@ -37,18 +37,20 @@ _RUBY_RDOC_MAJOR=	${RUBY19_RDOC_VERS:C/\.[0-9\.]+$//}
 _RUBY_RDOC_MINORS=	${RUBY19_RDOC_VERS:C/^([0-9]+)\.*//}
 . endif
 
+_RUBY_RDOC_REQD=	NO
+
 . if ${_RDOC_REQD_MAJOR} > ${_RUBY_RDOC_MAJOR}
-_RUBY_RDOC_REQD=	yes
+_RUBY_RDOC_REQD=	YES
 . elif ${_RDOC_REQD_MAJOR} == ${_RUBY_RDOC_MAJOR}
 .  if !empty(_RUBY_RDOC_MINORS) && ${_RDOC_REQD_MINORS} > ${_RUBY_RDOC_MINORS}
-_RUBY_RDOC_REQD=	yes
+_RUBY_RDOC_REQD=	YES
 .  endif
 . endif
 
-. if defined(_RUBY_RDOC_REQD)
+. if empty(_RUBY_RDOC_REQD:M[nN][oO])
 RDOC=			${PREFIX}/bin/rdoc
-.  if !empty(RUBY_BUILD_RI:M[nN][oO]) || !empty(RUBY_BUILD_RDOC:M[nN][oO])
-# for safety, use newer rdoc on runtime, too.
+.  if empty(RUBY_BUILD_RI:M[nN][oO]) && empty(RUBY_BUILD_RDOC:M[nN][oO])
+# rdoc will be required at runtime, too.
 DEPENDS+= ${RUBY_PKGPREFIX}-rdoc>=${RUBY_RDOC_REQD}:../../devel/ruby-rdoc
 .  endif
 . endif
