@@ -1,32 +1,38 @@
-$NetBSD: patch-ab,v 1.8 2011/05/25 12:01:51 mspo Exp $
+$NetBSD: patch-ab,v 1.8.2.1 2011/08/23 07:16:46 tron Exp $
+
+Config for pkgsrc.
+DESTDIR support.
+Make the SYMLINK relative.
 
 --- unix/Config.orig	1999-03-06 22:43:28.000000000 +0000
 +++ unix/Config
-@@ -33,9 +33,9 @@
+@@ -33,9 +33,11 @@
  #   even if an old version is currently in use.  You can remove
  #   the old version manually later when it is no longer in use.
  
 -# TF="/usr/local/bin/tf-${TFVER}"
 -# LIBDIR="/usr/local/lib/tf-${TFVER}-lib"
 -# SYMLINK="/usr/local/bin/tf"
-+TF="@DESTDIR@${PREFIX}/bin/tf-${TFVER}"
-+LIBDIR="@DESTDIR@${PREFIX}/lib/tf-${TFVER}-lib"
-+SYMLINK="@DESTDIR@${PREFIX}/bin/tf"
++DESTDIR="@DESTDIR@"
++TF="${PREFIX}/bin/tf-${TFVER}"
++LIBDIR="${PREFIX}/lib/tf-${TFVER}-lib"
++SYMLINK="${PREFIX}/bin/tf"
++SYMLINKTARGET="tf-${TFVER}"
  
  
  ### Manual Page.
-@@ -44,8 +44,8 @@
+@@ -44,8 +46,8 @@
  # uses nroff format; set MANTYPE=cat if your man uses pre-formatted
  # vt100 "catman" pages.  Default is "cat".
  
 -# MANTYPE="nroff"
 -# MANPAGE="/usr/local/man/man1/tf.1"
 +MANTYPE="nroff"
-+MANPAGE="@DESTDIR@${PREFIX}/${PKGMANDIR}/man1/tf.1"
++MANPAGE="${PREFIX}/${PKGMANDIR}/man1/tf.1"
  
  
  ### Flags.
-@@ -111,7 +111,8 @@ FLAGS=''
+@@ -111,7 +113,8 @@ FLAGS=''
  
  # CC=cc
  # CCFLAGS="-g"
