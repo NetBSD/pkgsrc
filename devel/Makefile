@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1484 2011/08/21 04:59:11 minskim Exp $
+# $NetBSD: Makefile,v 1.1485 2011/08/23 08:50:43 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -666,6 +666,7 @@ SUBDIR+=	p5-Dir-Self
 SUBDIR+=	p5-Dist-CheckConflicts
 SUBDIR+=	p5-EV
 SUBDIR+=	p5-Error
+SUBDIR+=	p5-Eval-Closure
 SUBDIR+=	p5-Event
 SUBDIR+=	p5-Event-ExecFlow
 SUBDIR+=	p5-Event-RPC
