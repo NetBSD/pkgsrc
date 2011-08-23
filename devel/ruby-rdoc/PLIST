@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/16 15:06:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2011/08/23 09:12:11 tron Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -69,6 +69,7 @@ ${GEM_LIBDIR}/lib/rdoc/markup/document.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/formatter.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/formatter_test_case.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/heading.rb
+${GEM_LIBDIR}/lib/rdoc/markup/indented_paragraph.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/inline.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/list.rb
 ${GEM_LIBDIR}/lib/rdoc/markup/list_item.rb
@@ -105,6 +106,7 @@ ${GEM_LIBDIR}/lib/rdoc/ri/paths.rb
 ${GEM_LIBDIR}/lib/rdoc/ri/store.rb
 ${GEM_LIBDIR}/lib/rdoc/ruby_lex.rb
 ${GEM_LIBDIR}/lib/rdoc/ruby_token.rb
+${GEM_LIBDIR}/lib/rdoc/rubygems_hook.rb
 ${GEM_LIBDIR}/lib/rdoc/single_class.rb
 ${GEM_LIBDIR}/lib/rdoc/stats.rb
 ${GEM_LIBDIR}/lib/rdoc/stats/normal.rb
@@ -137,6 +139,7 @@ ${GEM_LIBDIR}/test/test_rdoc_include.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_attribute_manager.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_document.rb
+${GEM_LIBDIR}/test/test_rdoc_markup_indented_paragraph.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_paragraph.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_parser.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_pre_process.rb
@@ -161,6 +164,7 @@ ${GEM_LIBDIR}/test/test_rdoc_ri_driver.rb
 ${GEM_LIBDIR}/test/test_rdoc_ri_paths.rb
 ${GEM_LIBDIR}/test/test_rdoc_ri_store.rb
 ${GEM_LIBDIR}/test/test_rdoc_ruby_lex.rb
+${GEM_LIBDIR}/test/test_rdoc_rubygems_hook.rb
 ${GEM_LIBDIR}/test/test_rdoc_single_class.rb
 ${GEM_LIBDIR}/test/test_rdoc_stats.rb
 ${GEM_LIBDIR}/test/test_rdoc_task.rb
