@@ -1,6 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2007/12/27 11:43:51 obache Exp $
+$NetBSD: patch-ac,v 1.4.34.1 2011/08/23 07:16:46 tron Exp $
 
---- unix/tfconfig.orig	2007-12-27 11:03:19.000000000 +0000
+Config for pkgsrc.
+DESTDIR support.
+Make the SYMLINK relative.
+
+--- unix/tfconfig.orig	2011-08-18 04:45:11.000000000 +0000
 +++ unix/tfconfig
 @@ -168,18 +168,18 @@ fi
  # The cd;pwd is needed to normalize the directory name in case of links, etc.
@@ -54,3 +58,14 @@ $NetBSD: patch-ac,v 1.4 2007/12/27 11:43:51 obache Exp $
  echo; echo
  
  rm -f ../src/Makefile ${AOUT}
+@@ -246,8 +246,10 @@ else
+ fi
+ 
+ echo "MAKE       = ${MAKE}" >&5
++echo "DESTDIR    = ${DESTDIR}" >&5
+ echo "TF         = ${TF}" >&5
+ echo "SYMLINK    = ${SYMLINK}" >&5
++echo "SYMLINKTARGET    = ${SYMLINKTARGET}" >&5
+ echo "LIBDIR     = ${LIBDIR}" >&5
+ echo "MAILDIR    = ${MAILDIR}" >&5
+ echo "MANPAGE    = ${MANPAGE}" >&5
