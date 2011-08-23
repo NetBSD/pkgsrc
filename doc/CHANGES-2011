@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2089 2011/08/23 00:26:34 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2090 2011/08/23 08:51:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3284,3 +3284,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed print/tex-ocrb successor fonts/tex-ocr-b [minskim 2011-08-22]
 	Updated emulators/mame to 0.143 [wiz 2011-08-22]
 	Updated emulators/mess to 0.143 [wiz 2011-08-22]
+	Added devel/p5-Eval-Closure version 0.06 [abs 2011-08-23]
