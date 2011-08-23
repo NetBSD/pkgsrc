@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:42:55 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/23 13:06:46 obache Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-pulse/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT+=	(pulse plugin)
 
