@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/09 19:20:17 asau Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/23 13:06:48 obache Exp $
 #
 
 CLISP_MODULE=	gdbm
 
 PKGNAME=	clisp-$(CLISP_MODULE)-$(CLISP_VERSION)
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 

@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2011/05/18 09:49:00 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/23 13:06:46 obache Exp $
 #
 
 GST_PLUGINS0.10_NAME=	pulse
 GST_PLUGINS0.10_DIRS=	ext/pulse
 GST_PLUGINS0.10_FLAGS=	pulse
+
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
