@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2011/05/15 04:17:15 taca Exp $
+$NetBSD: distinfo,v 1.80.2.1 2011/08/23 07:17:44 tron Exp $
 
 SHA1 (openssh-5.8p1-hpn13v11.diff.gz) = ea61ab71605ee867eebc1a92875a3ea5369e2d28
 RMD160 (openssh-5.8p1-hpn13v11.diff.gz) = 45fbb8e2db2f829f2749cd745ed6a0542adb1c45
@@ -24,6 +24,7 @@ SHA1 (patch-ao) = effe1720917a645452f1a7afd92588709355fb48
 SHA1 (patch-ap) = 48c92b26f64c682ed45cae3f8d20ec91815543ea
 SHA1 (patch-aq) = 1a7d8a4c5e70a0c6211247ba583534ed8ce317d0
 SHA1 (patch-ar) = a1099e0175a2b14f3b19db04261891179b1e3299
+SHA1 (patch-atomicio.c) = ff4cfc78c9f37d53e3b3be94d92beaf176adfdfc
 SHA1 (patch-au) = 6cfdfc531e2267017a15e66ea48c7ecfa2a3926f
 SHA1 (patch-av) = dd34ac767d08b989775add25c5c015a2f19fce5c
 SHA1 (patch-aw) = 22d873bfe56464ce8a978082ebce73d441f81e5d
