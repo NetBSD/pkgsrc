@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2093 2011/08/23 09:08:59 abs Exp $
+$NetBSD: CHANGES-2011,v 1.2094 2011/08/23 11:14:34 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3288,3 +3288,16 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Package-DeprecationManager to 0.11 [abs 2011-08-23]
 	Updated devel/p5-List-MoreUtils to 0.33 [abs 2011-08-23]
 	Updated devel/p5-Moose to 2.0202 [abs 2011-08-23]
+	Updated devel/p5-MooseX-InsideOut to 0.106 [abs 2011-08-23]
+	Updated devel/p5-namespace-autoclean to 0.12 [abs 2011-08-23]
+	Replaced devel/p5-Class-MOP with devel/p5-Moose [abs 2011-08-23]
+	Added devel/p5-MooseX-Types-LoadableClass version 0.006 [abs 2011-08-23]
+	Added devel/p5-MooseX-Types-LoadableClass version 0.006 [abs 2011-08-23]
+	Added www/p5-Plack-Test-ExternalServer version 0.01 [abs 2011-08-23]
+	Updated devel/p5-MooseX-Role-WithOverloading to 0.09 [abs 2011-08-23]
+	Updated www/p5-Plack to 0.9982 [abs 2011-08-23]
+	Updated www/p5-Catalyst-Runtime to 5.90002 [abs 2011-08-23]
+	Updated www/p5-Catalyst-Plugin-Authentication to 0.100180 [abs 2011-08-23]
+	Updated devel/p5-MooseX-Role-Parameterized to 0.27 [abs 2011-08-23]
+	Updated www/p5-WWW-Mechanize to 1.68 [abs 2011-08-23]
+	Updated www/p5-Reaction to 0.2.5 [abs 2011-08-23]
