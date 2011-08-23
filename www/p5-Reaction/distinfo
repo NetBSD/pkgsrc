@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/09 16:30:59 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/08/23 11:03:41 abs Exp $
 
-SHA1 (Reaction-0.002000.tar.gz) = 30e757d66e619f27284190fc00618ea5c68b6769
-RMD160 (Reaction-0.002000.tar.gz) = c0f433eed6e7a452e7d1bfa5463116bec7ac3f2c
-Size (Reaction-0.002000.tar.gz) = 154623 bytes
+SHA1 (Reaction-0.002005.tar.gz) = 3bddbf06a17749c92236e7deaedbc11cbec94ae4
+RMD160 (Reaction-0.002005.tar.gz) = d8a00edbc1a27c3b09347cd553d81ddf991e1bb5
+Size (Reaction-0.002005.tar.gz) = 1365166 bytes

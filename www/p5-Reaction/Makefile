@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/08/14 16:06:06 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/23 11:03:41 abs Exp $
 
-DISTNAME=	Reaction-0.002000
-PKGNAME=	p5-Reaction-0.2.0
-PKGREVISION=	3
+DISTNAME=	Reaction-0.002005
+PKGNAME=	p5-Reaction-0.2.5
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Reaction/}
 
@@ -25,7 +24,6 @@ DEPENDS+=	p5-Catalyst-Plugin-Static-Simple>=0.21:../../www/p5-Catalyst-Plugin-St
 DEPENDS+=	p5-Catalyst-View-TT>=0.29:../../www/p5-Catalyst-View-TT
 DEPENDS+=	p5-Config-General>=2.42:../../devel/p5-Config-General
 DEPENDS+=	p5-Crypt-Eksblowfish>=0.005:../../security/p5-Crypt-Eksblowfish
-DEPENDS+=	p5-Class-MOP>=0.81:../../devel/p5-Class-MOP
 DEPENDS+=	p5-DBIx-Class>=0.08100:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBIx-Class-IntrospectableM2M>=0.001001:../../databases/p5-DBIx-Class-IntrospectableM2M
 DEPENDS+=	p5-DateTime>=0.47:../../time/p5-DateTime
@@ -35,10 +33,12 @@ DEPENDS+=	p5-Devel-Declare>=0.005000:../../devel/p5-Devel-Declare
 DEPENDS+=	p5-Email-Valid>=0.181:../../mail/p5-Email-Valid
 DEPENDS+=	p5-File-ShareDir>=1.00:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-PathTools>=3.29:../../devel/p5-PathTools
-DEPENDS+=	p5-Moose>=0.74:../../devel/p5-Moose
+DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types>=0.10:../../devel/p5-MooseX-Types
+DEPENDS+=	p5-MooseX-Types-URI>=0.02:../../devel/p5-MooseX-Types-URI
 DEPENDS+=	p5-MooseX-Types-Common>=0.001000:../../devel/p5-MooseX-Types-Common
 DEPENDS+=	p5-MooseX-Types-DateTime>=0.03:../../time/p5-MooseX-Types-DateTime
+DEPENDS+=	p5-MooseX-MethodAttributes>=0.18:../../devel/p5-MooseX-MethodAttributes
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Sub-Exporter>=0.982:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
@@ -49,6 +49,8 @@ DEPENDS+=	p5-aliased>=0.22:../../devel/p5-aliased
 DEPENDS+=	p5-namespace-clean>=0.11:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Method-Signatures-Simple>=0.03:../../devel/p5-Method-Signatures-Simple
 DEPENDS+=	p5-signatures>=0.05:../../devel/p5-signatures
+DEPENDS+=	p5-MooseX-Role-Parameterized>=0.24:../../devel/p5-MooseX-Role-Parameterized
+DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 
 # For test target
 BUILD_DEPENDS+=	p5-Test-Class>=0.31:../../devel/p5-Test-Class
