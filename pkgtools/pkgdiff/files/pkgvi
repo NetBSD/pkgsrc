@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pkgvi,v 1.10 2006/08/01 17:59:17 bad Exp $
+# $NetBSD: pkgvi,v 1.11 2011/08/23 21:47:18 abs Exp $
 #
 # Copyright (c) 2001 Tomasz Luchowski. All rights reserved.
 #
@@ -59,7 +59,7 @@ then
 	exit 2
 fi
 
-if [ -f $file.orig ]
+if [ -f "$file.orig" ]
 then
 	chmod u+w "$file"
 	$editor $cmd "$file"
@@ -68,8 +68,8 @@ then
 	exit 0
 fi
 
-bfile=`basename $file`
-dfile=`dirname $file`
+bfile=`basename "$file"`
+dfile=`dirname "$file"`
 
 ext=`echo $bfile | awk -F. '{ print $NF }'`
 
@@ -96,7 +96,7 @@ else
 	mv "$file" "$file.orig"
 	mv "$tmp" "$file"
 	echo "$progname: File was modified. For a diff, type:"
-	echo "pkgdiff $file"
+	echo "pkgdiff \"$file\""
 fi
 
 if [ -f "$tmp" ]
