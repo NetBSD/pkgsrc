@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2010/12/23 11:44:48 dsainty Exp $
+# $NetBSD: Makefile,v 1.50 2011/08/23 13:06:50 obache Exp $
 
 DISTNAME=		xfmail-1.5.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail x11
 MASTER_SITES=		ftp://xfmail.ufies.org/pub/xfmail/release/1.5.5/source/
 EXTRACT_SUFX=		.tar.bz2
