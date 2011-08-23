@@ -1,0 +1,106 @@
+$NetBSD: patch-ae,v 1.1.2.2 2011/08/23 07:16:46 tron Exp $
+
+DESTDIR support.
+
+--- unix/unix.mak~	1999-03-06 22:43:28.000000000 +0000
++++ unix/unix.mak
+@@ -19,7 +19,7 @@ SHELL      = /bin/sh
+ BUILDERS   = Makefile
+ 
+ 
+-install:  _failmsg _all $(TF) LIBRARY $(MANPAGE) $(SYMLINK)
++install:  _failmsg _all $(DESTDIR)$(TF) LIBRARY $(DESTDIR)$(MANPAGE) $(DESTDIR)$(SYMLINK)
+ 	@echo '#####################################################' > exitmsg
+ 	@echo '## TinyFugue installation successful.' >> exitmsg
+ 	@echo "## You can safely delete everything in `cd ..; pwd`". >> exitmsg
+@@ -64,43 +64,43 @@ TF tf$(X):     $(OBJS) $(BUILDERS)
+ #	@# ULTRIX's sh errors here if strip isn't found, despite "true".
+ 	-test -z "$(STRIP)" || $(STRIP) tf$(X) || true
+ 
+-install_TF $(TF): tf$(X) $(BUILDERS)
+-	-@rm -f $(TF)
+-	cp tf$(X) $(TF)
+-	chmod $(MODE) $(TF)
++install_TF $(DESTDIR)$(TF): tf$(X) $(BUILDERS)
++	-@rm -f $(DESTDIR)$(TF)
++	cp tf$(X) $(DESTDIR)$(TF)
++	chmod $(MODE) $(DESTDIR)$(TF)
+ 
+-SYMLINK $(SYMLINK): $(TF)
+-	test -z "$(SYMLINK)" || { rm -f $(SYMLINK) && ln -s $(TF) $(SYMLINK); }
++SYMLINK $(DESTDIR)$(SYMLINK): $(DESTDIR)$(TF)
++	test -z "$(DESTDIR)$(SYMLINK)" || { rm -f $(DESTDIR)$(SYMLINK) && ln -s $(SYMLINKTARGET) $(DESTDIR)$(SYMLINK); }
+ 
+-LIBRARY $(LIBDIR): ../tf-lib/tf-help ../tf-lib/tf-help.idx
++LIBRARY $(DESTDIR)$(LIBDIR): ../tf-lib/tf-help ../tf-lib/tf-help.idx
+ 	@echo '## Creating library directory...'
+ #	@# Overly simplified shell commands, to avoid problems on ultrix
+-	-@test -n "$(LIBDIR)" || echo "LIBDIR is undefined.  Check unix/Config."
+-	test -n "$(LIBDIR)"
+-	test -d "$(LIBDIR)" || mkdir $(LIBDIR)
+-	-@test -d "$(LIBDIR)" || echo "Can't make $(LIBDIR) directory.  See if"
+-	-@test -d "$(LIBDIR)" || echo "there is already a file with that name."
+-	test -d "$(LIBDIR)"
++	-@test -n "$(DESTDIR)$(LIBDIR)" || echo "LIBDIR is undefined.  Check unix/Config."
++	test -n "$(DESTDIR)$(LIBDIR)"
++	test -d "$(DESTDIR)$(LIBDIR)" || mkdir $(DESTDIR)$(LIBDIR)
++	-@test -d "$(DESTDIR)$(LIBDIR)" || echo "Can't make $(DESTDIR)$(LIBDIR) directory.  See if"
++	-@test -d "$(DESTDIR)$(LIBDIR)" || echo "there is already a file with that name."
++	test -d "$(DESTDIR)$(LIBDIR)"
+ #
+-#	@#rm -f $(LIBDIR)/*;  # wrong: this would remove local.tf, etc.
++#	@#rm -f $(DESTDIR)$(LIBDIR)/*;  # wrong: this would remove local.tf, etc.
+ 	@echo '## Copying library files...'
+ 	cd ../tf-lib; \
+ 	for f in *; do test -f $$f && files="$$files $$f"; done; \
+-	( cd $(LIBDIR); rm -f $$files tf.help tf.help.index; ); \
+-	cp $$files $(LIBDIR); \
+-	cd $(LIBDIR); \
++	( cd $(DESTDIR)$(LIBDIR); rm -f $$files tf.help tf.help.index; ); \
++	cp $$files $(DESTDIR)$(LIBDIR); \
++	cd $(DESTDIR)$(LIBDIR); \
+ 	chmod $(MODE) $$files; chmod ugo-wx $$files
+-	-rm -f $(LIBDIR)/CHANGES 
+-	cp ../CHANGES $(LIBDIR)
+-	chmod $(MODE) $(LIBDIR)/CHANGES; chmod ugo-wx $(LIBDIR)/CHANGES
+-	chmod $(MODE) $(LIBDIR)
+-	-@cd $(LIBDIR); old=`ls replace.tf 2>/dev/null`; \
++	-rm -f $(DESTDIR)$(LIBDIR)/CHANGES 
++	cp ../CHANGES $(DESTDIR)$(LIBDIR)
++	chmod $(MODE) $(DESTDIR)$(LIBDIR)/CHANGES; chmod ugo-wx $(DESTDIR)$(LIBDIR)/CHANGES
++	chmod $(MODE) $(DESTDIR)$(LIBDIR)
++	-@cd $(DESTDIR)$(LIBDIR); old=`ls replace.tf 2>/dev/null`; \
+ 	if [ -n "$$old" ]; then \
+-	    echo "## WARNING: Obsolete files found in $(LIBDIR): $$old"; \
++	    echo "## WARNING: Obsolete files found in $(DESTDIR)$(LIBDIR): $$old"; \
+ 	fi
+ 	@echo '## Creating links so old library names still work...'
+ #	@# note: ln -sf isn't portable.
+-	@cd $(LIBDIR); \
++	@cd $(DESTDIR)$(LIBDIR); \
+ 	rm -f bind-bash.tf;    ln -s  kb-bash.tf   bind-bash.tf;    \
+ 	rm -f bind-emacs.tf;   ln -s  kb-emacs.tf  bind-emacs.tf;   \
+ 	rm -f completion.tf;   ln -s  complete.tf  completion.tf;   \
+@@ -126,10 +126,10 @@ __always__:
+ 	$(MAKE) -f ../unix/unix.mak CC='$(CC)' CFLAGS='$(FLAGS)' makehelp
+ 	./makehelp < ../tf-lib/tf-help > ../tf-lib/tf-help.idx
+ 
+-MANPAGE $(MANPAGE): $(BUILDERS) tf.1.$(MANTYPE)man
+-	cp tf.1.$(MANTYPE)man $(MANPAGE)
+-	chmod $(MODE) $(MANPAGE)
+-	chmod ugo-x $(MANPAGE)
++MANPAGE $(DESTDIR)$(MANPAGE): $(BUILDERS) tf.1.$(MANTYPE)man
++	cp tf.1.$(MANTYPE)man $(DESTDIR)$(MANPAGE)
++	chmod $(MODE) $(DESTDIR)$(MANPAGE)
++	chmod ugo-x $(DESTDIR)$(MANPAGE)
+ 
+ tf.1.catman:  tf.1.nroffman
+ 	TERM=vt100; nroff -man tf.1.nroffman > tf.1.catman
+@@ -142,6 +142,7 @@ Makefile: ../unix/Config ../unix/vars.ma
+ dist: tf.1.catman ../tf-lib/tf-help.idx
+ 
+ uninstall:
++	false
+ 	@echo "Remove $(LIBDIR) $(TF) $(MANPAGE)"
+ 	@echo "Is this okay? (y/n)"
+ 	@read response; test "$$response" = "y"
