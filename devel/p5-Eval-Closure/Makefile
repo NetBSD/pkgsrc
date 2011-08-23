@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/23 08:50:14 abs Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/23 08:53:08 abs Exp $
 
 DISTNAME=	Eval-Closure-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -10,11 +10,11 @@ HOMEPAGE=	http://search.cpan.org/~doy/Eval-Closure/
 COMMENT=	Safely and cleanly create closures via string eval
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Sub-Exporter>=0.980:../../devel/p5-Sub-Exporter
-DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
+DEPENDS+=	p5-Sub-Exporter>=0:../../devel/p5-Sub-Exporter
+DEPENDS+=	p5-Try-Tiny>=0:../../devel/p5-Try-Tiny
 
-BUILD_DEPENDS+=	p5-Test-Fatal>=0.05:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
+BUILD_DEPENDS+=	p5-Test-Requires>=0:../../devel/p5-Test-Requires
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
