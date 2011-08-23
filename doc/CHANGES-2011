@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2088 2011/08/22 21:41:13 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2089 2011/08/23 00:26:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2985,7 +2985,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-LWP-Protocol-https to 6.02nb3 [obache 2011-08-12]
 	Updated www/p5-Net-HTTP to 6.01nb3 [obache 2011-08-12]
 	Updated www/p5-WWW-RobotRules to 6.01nb4 [obache 2011-08-12]
-	Updated devel/p5-Devel-PEPL to 1.003.012 [adam 2011-08-12]
+	Updated devel/p5-Devel-REPL to 1.003.012 [adam 2011-08-12]
 	Updated devel/p5-Devel-Size to 0.77 [adam 2011-08-12]
 	Updated devel/p5-Devel-StackTrace to 1.27 [adam 2011-08-12]
 	Updated devel/p5-Devel-StackTrace-AsHTML to 0.11 [adam 2011-08-12]
