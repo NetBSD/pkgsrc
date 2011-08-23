@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.22 2011/08/22 22:22:19 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.23 2011/08/23 09:13:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -68,7 +68,7 @@ print/cups: build fix
 Pullup ticket #3501 - requested by joerg
 x11/libXfont buffer overflow fix
 Pullup ticket #3503 - requested by dholland
-net/tinyfugue: bug fix
+net/tinyfugue: bug fix patch
 Pullup ticket #3506 - requested by taca
 textproc/namazu: security update
 Pullup ticket #3507 - requested by taca
@@ -79,3 +79,7 @@ Pullup ticket #3509 - requested by taca
 net/bind97: security update
 Pullup ticket #3510 - requested by taca
 www/typo3: security update
+Pullup ticket #3504 - requested by dholland
+www/amaya: build fix
+Pullup ticket #3505 - requested by taca
+devel/ruby-railties: bug fix update
