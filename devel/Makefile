@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1485 2011/08/23 08:50:43 abs Exp $
+# $NetBSD: Makefile,v 1.1486 2011/08/23 09:30:04 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -563,7 +563,6 @@ SUBDIR+=	p5-Class-Inner
 SUBDIR+=	p5-Class-InsideOut
 SUBDIR+=	p5-Class-Inspector
 SUBDIR+=	p5-Class-Loader
-SUBDIR+=	p5-Class-MOP
 SUBDIR+=	p5-Class-MakeMethods
 SUBDIR+=	p5-Class-Method-Modifiers
 SUBDIR+=	p5-Class-MethodMaker
