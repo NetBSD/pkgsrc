@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2092 2011/08/23 08:59:26 abs Exp $
+$NetBSD: CHANGES-2011,v 1.2093 2011/08/23 09:08:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3287,3 +3287,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Eval-Closure version 0.06 [abs 2011-08-23]
 	Updated devel/p5-Package-DeprecationManager to 0.11 [abs 2011-08-23]
 	Updated devel/p5-List-MoreUtils to 0.33 [abs 2011-08-23]
+	Updated devel/p5-Moose to 2.0202 [abs 2011-08-23]
