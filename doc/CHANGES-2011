@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2091 2011/08/23 08:56:48 abs Exp $
+$NetBSD: CHANGES-2011,v 1.2092 2011/08/23 08:59:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3286,3 +3286,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/mess to 0.143 [wiz 2011-08-22]
 	Added devel/p5-Eval-Closure version 0.06 [abs 2011-08-23]
 	Updated devel/p5-Package-DeprecationManager to 0.11 [abs 2011-08-23]
+	Updated devel/p5-List-MoreUtils to 0.33 [abs 2011-08-23]
