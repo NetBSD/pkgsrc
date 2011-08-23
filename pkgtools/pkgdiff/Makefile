@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2011/06/26 12:11:39 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2011/08/23 21:47:18 abs Exp $
 #
 
-DISTNAME=	pkgdiff-1.2
+DISTNAME=	pkgdiff-1.3
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +11,7 @@ HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Tools to create, maintain, and send back patches for pkgsrc
 LICENSE=	2-clause-bsd AND original-bsd
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_INSTALLATION_TYPES= overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
@@ -45,12 +45,12 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 .endif
 
 do-build:
-.for FILE in mkpatches patchdiff
+.for f in mkpatches patchdiff
 	${SED}	-e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PERL5@|${PERL5}|g'		\
 		-e 's|@MAKE@|${MAKE}|g'			\
-		< ${FILESDIR}/${FILE}.pl 		\
-		> ${WRKSRC}/${FILE}
+		< ${FILESDIR}/${f}.pl			\
+		> ${WRKSRC}/${f}
 .endfor
 	${SED} -e 's|@DIFF@|${DIFF}|g'			\
 		-e 's|@SH@|${SH}|g'			\
@@ -59,20 +59,20 @@ do-build:
 	${CP} ${FILESDIR}/pkgvi ${WRKSRC}
 	${CP} ${FILESDIR}/feedback-patches ${WRKSRC}
 .if !empty(MANINSTALL:Mcatinstall)
-.  for FILE in mkpatches patchdiff pkgdiff pkgvi feedback-patches
-	${CP} ${FILESDIR}/${FILE}.0 ${WRKSRC}/${FILE}.0
+.  for f in mkpatches patchdiff pkgdiff pkgvi feedback-patches
+	${CP} ${FILESDIR}/${f}.0 ${WRKSRC}/${f}.0
 .  endfor
 .endif
 
 do-install:
-.for FILE in mkpatches patchdiff pkgdiff pkgvi feedback-patches
-	${INSTALL_SCRIPT} ${WRKSRC}/${FILE} ${DESTDIR}${PREFIX}/bin
-.   if !empty(MANINSTALL:Mcatinstall)
-	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
-.   endif
-.   if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${FILESDIR}/${FILE}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.   endif
+.for f in mkpatches patchdiff pkgdiff pkgvi feedback-patches
+	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
+.  if !empty(MANINSTALL:Mcatinstall)
+	${INSTALL_MAN} ${WRKSRC}/${f}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+.  endif
+.  if !empty(MANINSTALL:Mmaninstall)
+	${INSTALL_MAN} ${FILESDIR}/${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.  endif
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
