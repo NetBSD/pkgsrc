@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2098 2011/08/24 17:53:32 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2099 2011/08/24 17:57:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3304,3 +3304,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/lzo to 2.06 [adam 2011-08-23]
 	Updated pkgtools/pkgdiff to 1.3 [abs 2011-08-23]
 	Updated lang/php53 to 5.3.8 [taca 2011-08-23]
+	Updated security/stunnel to 4.42 [tron 2011-08-24]
