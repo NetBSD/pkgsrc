@@ -1,13 +1,15 @@
-$NetBSD: patch-ac,v 1.12 2011/07/11 14:20:24 ryoon Exp $
+$NetBSD: patch-ac,v 1.13 2011/08/24 17:56:50 tron Exp $
 
---- src/Makefile.in.orig	2011-05-02 22:14:27.000000000 +0000
-+++ src/Makefile.in
-@@ -254,7 +254,7 @@ libstunnel_la_LDFLAGS = -avoid-version
+Change pid file location.
+
+--- src/Makefile.in.orig	2011-08-17 12:15:27.000000000 +0100
++++ src/Makefile.in	2011-08-24 18:49:46.000000000 +0100
+@@ -254,7 +254,7 @@
  INCLUDES = -I/usr/kerberos/include
  
  # Additional compiler flags
 -AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
-+AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"$(localstatedir)/run/stunnel.pid"'
++AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(localstatedir)/run/stunnel.pid"'
  
  # Win32 executable
- EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak makew32.bat version.rc nogui.c os2.mak
+ EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak makew32.bat nogui.c os2.mak
