@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2097 2011/08/23 22:23:49 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2098 2011/08/24 17:53:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3290,7 +3290,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Moose to 2.0202 [abs 2011-08-23]
 	Updated devel/p5-MooseX-InsideOut to 0.106 [abs 2011-08-23]
 	Updated devel/p5-namespace-autoclean to 0.12 [abs 2011-08-23]
-	Replaced devel/p5-Class-MOP with devel/p5-Moose [abs 2011-08-23]
+	Removed devel/p5-Class-MOP successor devel/p5-Moose [abs 2011-08-23]
 	Added devel/p5-MooseX-Types-LoadableClass version 0.006 [abs 2011-08-23]
 	Added devel/p5-MooseX-Types-LoadableClass version 0.006 [abs 2011-08-23]
 	Added www/p5-Plack-Test-ExternalServer version 0.01 [abs 2011-08-23]
