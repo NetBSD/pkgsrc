@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2011/08/13 02:06:29 taca Exp $
+$NetBSD: distinfo,v 1.10 2011/08/25 15:21:47 taca Exp $
 
-SHA1 (ZenTest-4.6.1.gem) = 0384b61549e553c0b1d61d531ed555690fe1090b
-RMD160 (ZenTest-4.6.1.gem) = 9ac65824bc5bc98162558608d096e7b67da83132
-Size (ZenTest-4.6.1.gem) = 68096 bytes
+SHA1 (ZenTest-4.6.2.gem) = c1ea0a727a8ff45df0ce4aaa3b932a86c6c857b2
+RMD160 (ZenTest-4.6.2.gem) = 801e23e5db386b74eb822f1bc7a2fb85366fcb2e
+Size (ZenTest-4.6.2.gem) = 68096 bytes
