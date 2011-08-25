@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2100 2011/08/24 21:06:34 jmmv Exp $
+$NetBSD: CHANGES-2011,v 1.2101 2011/08/25 03:14:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3306,3 +3306,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/php53 to 5.3.8 [taca 2011-08-23]
 	Updated security/stunnel to 4.42 [tron 2011-08-24]
 	Updated devel/kyua-cli to 0.2 [jmmv 2011-08-24]
+	Updated editors/emacs-snapshot to 24.0.50.20110821 [minskim 2011-08-25]
