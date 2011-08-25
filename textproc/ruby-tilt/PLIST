@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/06 13:10:18 obache Exp $
-bin/tilt${RUBY_VER}
+@comment $NetBSD: PLIST,v 1.2 2011/08/25 11:30:44 obache Exp $
+bin/tilt18
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TEMPLATES.md
@@ -9,7 +10,6 @@ ${GEM_LIBDIR}/bin/tilt
 ${GEM_LIBDIR}/lib/tilt.rb
 ${GEM_LIBDIR}/lib/tilt/builder.rb
 ${GEM_LIBDIR}/lib/tilt/coffee.rb
-${GEM_LIBDIR}/lib/tilt/creole.rb
 ${GEM_LIBDIR}/lib/tilt/css.rb
 ${GEM_LIBDIR}/lib/tilt/erb.rb
 ${GEM_LIBDIR}/lib/tilt/haml.rb
@@ -22,6 +22,8 @@ ${GEM_LIBDIR}/lib/tilt/rdoc.rb
 ${GEM_LIBDIR}/lib/tilt/string.rb
 ${GEM_LIBDIR}/lib/tilt/template.rb
 ${GEM_LIBDIR}/lib/tilt/textile.rb
+${GEM_LIBDIR}/lib/tilt/wiki.rb
+${GEM_LIBDIR}/lib/tilt/yajl.rb
 ${GEM_LIBDIR}/test/contest.rb
 ${GEM_LIBDIR}/test/markaby/locals.mab
 ${GEM_LIBDIR}/test/markaby/markaby.mab
@@ -55,5 +57,7 @@ ${GEM_LIBDIR}/test/tilt_sasstemplate_test.rb
 ${GEM_LIBDIR}/test/tilt_stringtemplate_test.rb
 ${GEM_LIBDIR}/test/tilt_template_test.rb
 ${GEM_LIBDIR}/test/tilt_test.rb
+${GEM_LIBDIR}/test/tilt_wikiclothtemplate_test.rb
+${GEM_LIBDIR}/test/tilt_yajltemplate_test.rb
 ${GEM_LIBDIR}/tilt.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
