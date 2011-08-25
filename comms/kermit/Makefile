@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2011/05/14 19:27:53 hans Exp $
+# $NetBSD: Makefile,v 1.77 2011/08/25 14:54:06 hans Exp $
 
-DISTNAME=	cku211
-PKGNAME=	kermit-8.0.211
-PKGREVISION=	4
+DISTNAME=	cku302
+PKGNAME=	kermit-9.0.302
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
@@ -19,14 +18,9 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 BUILD_DEFS+=	KFLAGS LIBS MANINSTALL
 MAKE_ENV+=	KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
-MAKE_ENV+=	SSLINC=${SSLINC:Q} SSLLIB=${SSLLIB:Q}
 MAKE_FILE=	makefile
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
-
-# Set to empty
-SSLINC=		-I${WRKDIR}/.buildlink/include
-SSLLIB=		-L${WRKDIR}/.buildlink/lib ${COMPILER_RPATH_FLAG}${WRKDIR}/.buildlink/lib
 
 .include "options.mk"
 
@@ -46,17 +40,18 @@ LIBS+=		-ltermcap
 
 .if ${OPSYS} == "Darwin"
 .  if empty(OS_VERSION:M[0-6]\.*)
-BUILD_TARGET=	macosx103
+BUILD_TARGET_OPSYS=	macosx103
 .  else
-BUILD_TARGET=	macosx10
+BUILD_TARGET_OPSYS=	macosx10
 .  endif
 .elif ${OPSYS} == "Linux"
-BUILD_TARGET=	linux
+BUILD_TARGET_OPSYS=	linux
 .elif ${OPSYS} == "SunOS"
-BUILD_TARGET=	solaris10g+openssl+shadow+pam+zlib
+BUILD_TARGET_OPSYS=	solaris11g
 .else
-BUILD_TARGET=	netbsd+openssl
-.include "../../security/openssl/buildlink3.mk"
+BUILD_TARGET_OPSYS=	netbsd
 .endif
+
+BUILD_TARGET=	${BUILD_TARGET_OPSYS}${BUILD_TARGET_OPTIONS:ts}
 
 .include "../../mk/bsd.pkg.mk"

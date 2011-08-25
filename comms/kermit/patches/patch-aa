@@ -1,36 +1,43 @@
-$NetBSD: patch-aa,v 1.8 2011/05/14 19:27:53 hans Exp $
+$NetBSD: patch-aa,v 1.9 2011/08/25 14:54:06 hans Exp $
 
---- makefile.orig	2004-04-17 20:52:00.000000000 +0200
-+++ makefile	2009-12-26 23:49:53.284197908 +0100
-@@ -745,8 +745,8 @@ K5LIB=-L/usr/kerberos/lib
- K5INC=-I/usr/kerberos/include
+--- makefile.orig	2011-08-21 17:12:07.000000000 +0200
++++ makefile	2011-08-25 16:36:42.000000000 +0200
+@@ -824,12 +824,12 @@ manroot = $(prefix)
+ 
+ K4LIB=-L/usr/kerberos/lib
+ K4INC=-I/usr/kerberos/include
+-K5LIB=-L/usr/kerberos/lib
+-K5INC=-I/usr/kerberos/include
++#K5LIB=-L/usr/kerberos/lib
++#K5INC=-I/usr/kerberos/include
  SRPLIB=-L$(srproot)/lib
  SRPINC=-I$(srproot)/include
 -SSLLIB=-L$(sslroot)/ssl/lib
 -SSLINC=-I$(sslroot)/ssl/include
 +#SSLLIB=-L$(sslroot)/ssl/lib
 +#SSLINC=-I$(sslroot)/ssl/include
- #
- # aix41+krb5+krb4:                    IBM AIX 4.1 with Kerberos IV and V
- # aix43gcc+krb5+krb4:                 IBM AIX 4.3 built with gcc, ditto
-@@ -1821,6 +1821,16 @@ netbsd:
- 	-DCK_DTRCD -DCK_DTRCTS -DTPUTSARGTYPE=int -DFNFLOAT $(KFLAGS) -O" \
- 	"LIBS= -lcurses -lcrypt -lm $(LIBS)"
  
-+# For NetBSD 1.6 and later OpenSSL is included
-+netbsd+openssl:
-+	@echo Making C-Kermit $(CKVER) for NetBSD with curses...
-+	$(MAKE) xermit KTARGET=$${KTARGET:-$(@)} \
-+	"CFLAGS= -DBSD44 -DCK_CURSES -DTCPSOCKET -DUSE_STRERROR \
-+	-DNETBSD15 -DNETBSD16 \
-+	-DCK_AUTHENTICATION -DCK_SSL $(SSLINC) -DZLIB \
-+	-DCK_DTRCD -DCK_DTRCTS -DTPUTSARGTYPE=int -DFNFLOAT $(KFLAGS) -O" \
-+	"LIBS= -lcurses -lcrypt $(SSLLIB) -lssl -lcrypto -lm $(LIBS)"
-+
- #NetBSD 1.5.x in which the return type of the function pointer that is the
- #third argument of tputs() was changed from void to int...  The regular NetBSD
- #target builds OK here but this one eliminates the (harmless) warning.
-@@ -3263,7 +3273,7 @@ solaris2xg+openssl+zlib+pam+shadow:
+ # To override these assignments; for example, if your OpenSSL files are
+ # not in /usr/local/ssl, invoke the desired target like this:
+@@ -1869,7 +1869,7 @@ netbsd+krb5:
+ 	-DCK_CAST $$HAVE_DES -DNOFTP_GSSAPI $(K5INC) $(K5INC)/krb5 \
+ 	$(KFLAGS)" \
+ 	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lcurses $$DES_LIB \
+-	-lcrypto -lgssapi -lkrb5 -lm -lutil $(LIBS)"
++	-lcrypto -lgssapi_krb5 -lkrb5 -lm -lutil $(LIBS)"
+ 
+ # NetBSD - With Kerberos 5 and SSL and Zlib.
+ # OK: 2011/08/21 on 5.1 with MIT Kerberos.
+@@ -1896,7 +1896,7 @@ netbsd+krb5+ssl netbsd+krb5+openssl+zlib
+ 	-DCK_SSL -DCK_PAM -DZLIB -DNO_DCL_INET_ATON $$OPENSSLOPTION \
+ 	$(KFLAGS)" "LNKFLAGS = $(LNKFLAGS)" \
+ 	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lssl $$DES_LIB \
+-	-lcrypto -lcrypt -lgssapi -lkrb5 -lz -lm -lpam -lutil -lcurses $(LIBS)"
++	-lcrypto -lcrypt -lgssapi_krb5 -lkrb5 -lz -lm -lpam -lutil -lcurses $(LIBS)"
+ 
+ #Special Security Enhanced NetBSD target with SRP, SSL, and zlib support.
+ #To build this, you need to BUILD the pkgsrc srp_client package.  After
+@@ -3544,7 +3544,7 @@ solaris2xg+openssl+zlib+pam+shadow:
  	-DCK_AUTHENTICATION -DCK_SSL -DCK_PAM -DCK_SHADOW  -DZLIB \
  	-DBIGBUFOK $(SSLINC) $(KFLAGS)" \
  	"LIBS= $(SSLLIB) -ltermlib \
@@ -39,17 +46,12 @@ $NetBSD: patch-aa,v 1.8 2011/05/14 19:27:53 hans Exp $
  
  #Ditto but with GCC 3.1 in which you have to specify 32-bit with -m32.
  #In Solaris 9 (and maybe 8) you'll also need specifiy the Library path.
-@@ -3401,6 +3411,13 @@ solaris9g+openssl+shadow+pam+zlib:
- 	"KFLAGS=-DSOLARIS9 -DHDBUUCP -DDIRENT -DZLIB -DCK_PAM -DCK_SHADOW \
- 	-DLIBDES $(KFLAGS)" "LIBS= -lpam -ldes425 -lz $(LIBS)"
- 
-+#Solaris 10 with gcc + OpenSSL + Shadow (32-bit)
-+solaris10g+openssl+shadow+pam+zlib:
-+	$(MAKE) "MAKE=$(MAKE)" solaris2xg+openssl+zlib+pam+shadow \
-+	KTARGET=$${KTARGET:-$(@)} \
-+	"KFLAGS=-DSOLARIS9 -DHDBUUCP -DDIRENT -DZLIB -DCK_PAM -DCK_SHADOW \
-+	-DLIBDES $(KFLAGS)" "LIBS= -lpam -lz $(LIBS)"
-+
- #Solaris 9 with gcc + OpenSSL + Kerberos 5 + Krb4 + Shadow (32-bit)
- solaris9g+krb5+krb4+openssl+shadow+pam+zlib:
- 	$(MAKE) "MAKE=$(MAKE)" solaris2xg+krb5+krb4+openssl+shadow \
+@@ -3899,7 +3899,7 @@ solaris9g+krb5+ssl solaris10g+krb5+ssl s
+ 	-DCK_CURSES -DCK_NEWTERM -DDIRENT -DHDBUUCP -DTCPSOCKET  -DBIGBUFOK \
+ 	-DCK_AUTHENTICATION -DCK_SSL -DZLIB -DCK_KERBEROS -DKRB5 \
+ 	-DCK_ENCRYPTION -DCK_CAST $$OPENSSLOPTION \
+-	$$HAVE_DES $(SSLINC) $(K5INC) $(K5INC)/krb5 $(KFLAGS)" \
++	$$HAVE_DES $(SSLINC) $(K5INC) $(K5INC)/kerberosv5 $(KFLAGS)" \
+ 	"LIBS= $(SSLLIB) $(K5LIB) -lz -lssl -ltermlib -lsocket -lnsl -lm \
+ 	-lresolv -lcrypto \
+ 	$$GSSAPILIB -lkrb5 -lcom_err -lk5crypto $$DES_LIB $(LIBS)"

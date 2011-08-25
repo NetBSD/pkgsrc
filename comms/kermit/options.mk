@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2008/03/01 05:17:32 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2011/08/25 14:54:06 hans Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kermit
-PKG_SUPPORTED_OPTIONS=		kermit-suid-uucp
+PKG_SUPPORTED_OPTIONS=		kermit-suid-uucp ssl kerberos
 PKG_OPTIONS_OPTIONAL_GROUPS+=	socks
 PKG_OPTIONS_GROUP.socks=	socks4 socks5
 
@@ -29,4 +29,21 @@ LIBS+=		-L${BUILDLINK_PREFIX.socks4}/lib -lsocks4
 KFLAGS+=	-DSOCKS -DCK_SOCKS5
 LIBS+=		-L${BUILDLINK_PREFIX.socks5}/lib -lsocks5
 .include "../../net/socks5/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mkerberos)
+BUILD_TARGET_OPTIONS+=	+krb5
+.include "../../security/mit-krb5/buildlink3.mk"
+K5INC=		-I${WRKDIR}/.buildlink/include
+K5LIB=		-L${WRKDIR}/.buildlink/lib ${COMPILER_RPATH_FLAG}${WRKDIR}/.buildlink/lib
+MAKE_ENV+=	K5INC=${K5INC:Q} K5LIB=${K5LIB:Q}
+.endif
+
+.if !empty(PKG_OPTIONS:Mssl)
+BUILD_TARGET_OPTIONS+=	+ssl
+.include "../../security/openssl/buildlink3.mk"
+# Set to empty
+SSLINC=		-I${WRKDIR}/.buildlink/include
+SSLLIB=		-L${WRKDIR}/.buildlink/lib ${COMPILER_RPATH_FLAG}${WRKDIR}/.buildlink/lib
+MAKE_ENV+=	SSLINC=${SSLINC:Q} SSLLIB=${SSLLIB:Q}
 .endif
