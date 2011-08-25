@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2103 2011/08/25 11:33:35 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2104 2011/08/25 13:32:14 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3309,3 +3309,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/emacs-snapshot to 24.0.50.20110821 [minskim 2011-08-25]
 	Updated editors/zim to 0.52nb1 [ryoon 2011-08-25]
 	Updated textproc/ruby-tilt to 1.3.3 [obache 2011-08-25]
+	Added net/flickcurl version 1.21 [jakllsch 2011-08-25]
