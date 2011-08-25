@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.881 2011/06/19 14:10:39 taca Exp $
+# $NetBSD: Makefile,v 1.882 2011/08/25 13:33:01 jakllsch Exp $
 #
 
 COMMENT=	Networking tools
@@ -113,6 +113,7 @@ SUBDIR+=	fair-identd
 SUBDIR+=	fetch
 SUBDIR+=	filezilla
 SUBDIR+=	firewalk
+SUBDIR+=	flickcurl
 SUBDIR+=	flodo
 SUBDIR+=	flow-tools
 SUBDIR+=	fmirror
