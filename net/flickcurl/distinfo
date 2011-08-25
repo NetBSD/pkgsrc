@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/25 13:30:23 jakllsch Exp $
+
+SHA1 (flickcurl-1.21.tar.gz) = 42f73733e750a54758bd07db81fdd12b91c430dd
+RMD160 (flickcurl-1.21.tar.gz) = 5943d029d98d540802a162eab8ca13b9b2e9480a
+Size (flickcurl-1.21.tar.gz) = 1775999 bytes
+SHA1 (patch-src_flickcurl__internal.h) = d0d2312289ccd99101bc135cb38f1e371dc88ecb
