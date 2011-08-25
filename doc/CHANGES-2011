@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2108 2011/08/25 15:24:24 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2109 2011/08/25 15:25:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3314,3 +3314,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/rubygems to 1.8.9 [taca 2011-08-25]
 	Updated devel/ruby-rdoc to 3.9.3 [taca 2011-08-25]
 	Updated sysutils/tarsnap to 1.0.30 [wiz 2011-08-25]
+	Updated devel/ZenTest to 4.6.2 [taca 2011-08-25]
+	Updated devel/hoe to 2.12.1 [taca 2011-08-25]
+	Updated devel/ruby-parser to 2.2.0 [taca 2011-08-25]
