@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/26 21:37:47 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/25 14:42:53 jakllsch Exp $
 
-DISTNAME=	darktable-0.9
-CATEGORIES=	misc
+DISTNAME=	darktable-0.9.2
+CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darktable/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -43,6 +43,7 @@ CFLAGS+=	-mstackrealign
 post-extract:
 	${RM} ${WRKSRC}/po/cs.po
 	${RM} ${WRKSRC}/po/es.po
+	${RM} ${WRKSRC}/po/sv.po
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/pkgsrc_build
@@ -61,6 +62,7 @@ pre-configure:
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../net/flickcurl/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
