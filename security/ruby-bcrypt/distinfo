@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/19 03:17:32 taca Exp $
+$NetBSD: distinfo,v 1.2 2011/08/25 15:31:01 taca Exp $
 
-SHA1 (bcrypt-ruby-2.1.4.gem) = 80b6bed1b814d9f2d27c66ca0acde2c1b08c17fa
-RMD160 (bcrypt-ruby-2.1.4.gem) = f2c48e1866bfe984bab4b87bce598a1338a5198f
-Size (bcrypt-ruby-2.1.4.gem) = 39424 bytes
+SHA1 (bcrypt-ruby-3.0.0.gem) = e97ab972e4e4f2c68edb3b9f2008cc5e85b86403
+RMD160 (bcrypt-ruby-3.0.0.gem) = 3a9f8a6e575263b3846d8edb54deda43b913ea90
+Size (bcrypt-ruby-3.0.0.gem) = 41984 bytes

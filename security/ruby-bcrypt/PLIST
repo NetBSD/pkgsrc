@@ -1,21 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 03:17:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/25 15:31:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Gemfile.lock
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bcrypt-ruby.gemspec
 ${GEM_LIBDIR}/ext/jruby/bcrypt_jruby/BCrypt.java
-${GEM_LIBDIR}/ext/mri/bcrypt.c
-${GEM_LIBDIR}/ext/mri/bcrypt.h
 ${GEM_LIBDIR}/ext/mri/bcrypt_ext.c
-${GEM_LIBDIR}/ext/mri/blf.h
-${GEM_LIBDIR}/ext/mri/blowfish.c
+${GEM_LIBDIR}/ext/mri/crypt.c
+${GEM_LIBDIR}/ext/mri/crypt.h
+${GEM_LIBDIR}/ext/mri/crypt_blowfish.c
+${GEM_LIBDIR}/ext/mri/crypt_gensalt.c
 ${GEM_LIBDIR}/ext/mri/extconf.rb
+${GEM_LIBDIR}/ext/mri/ow-crypt.h
+${GEM_LIBDIR}/ext/mri/wrapper.c
 ${GEM_LIBDIR}/lib/bcrypt.rb
+${GEM_LIBDIR}/lib/bcrypt_engine.rb
 ${GEM_LIBDIR}/lib/bcrypt_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/spec/TestBCrypt.java
 ${GEM_LIBDIR}/spec/bcrypt/engine_spec.rb
