@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2101 2011/08/25 03:14:10 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2102 2011/08/25 10:11:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/stunnel to 4.42 [tron 2011-08-24]
 	Updated devel/kyua-cli to 0.2 [jmmv 2011-08-24]
 	Updated editors/emacs-snapshot to 24.0.50.20110821 [minskim 2011-08-25]
+	Updated editors/zim to 0.52nb1 [ryoon 2011-08-25]
