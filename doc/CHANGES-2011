@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2113 2011/08/25 15:49:58 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2114 2011/08/25 15:54:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3322,3 +3322,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/ruby-net-ssh to 2.2.1 [taca 2011-08-25]
 	Updated textproc/ruby-markaby to 0.7.2 [taca 2011-08-25]
 	Updated www/ruby-patron to 0.4.15 [taca 2011-08-25]
+	Updated www/contao210-translations to 20110825 [taca 2011-08-25]
