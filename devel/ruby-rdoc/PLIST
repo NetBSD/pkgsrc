@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/08/12 15:21:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/08/25 15:17:59 taca Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -141,6 +141,7 @@ ${GEM_LIBDIR}/test/test_rdoc_include.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_attribute_manager.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_document.rb
+${GEM_LIBDIR}/test/test_rdoc_markup_formatter.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_indented_paragraph.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_paragraph.rb
 ${GEM_LIBDIR}/test/test_rdoc_markup_parser.rb
