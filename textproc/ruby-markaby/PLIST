@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 08:21:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/08/25 15:42:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Markaby.gemspec
 ${GEM_LIBDIR}/README.rdoc
@@ -21,10 +20,11 @@ ${GEM_LIBDIR}/lib/markaby/sinatra.rb
 ${GEM_LIBDIR}/lib/markaby/tags.rb
 ${GEM_LIBDIR}/lib/markaby/tilt.rb
 ${GEM_LIBDIR}/spec/markaby/builder_spec.rb
-${GEM_LIBDIR}/spec/markaby/css_proxy_spec.rb
-${GEM_LIBDIR}/spec/markaby/fragment_spec.rb
+${GEM_LIBDIR}/spec/markaby/css_proxy_test.rb
+${GEM_LIBDIR}/spec/markaby/fragment_test.rb
 ${GEM_LIBDIR}/spec/markaby/markaby_other_static.mab
 ${GEM_LIBDIR}/spec/markaby/markaby_spec.rb
+${GEM_LIBDIR}/spec/markaby/markaby_test.rb
 ${GEM_LIBDIR}/spec/markaby/rails/spec_helper.rb
 ${GEM_LIBDIR}/spec/markaby/rails/views/layouts/layout.mab
 ${GEM_LIBDIR}/spec/markaby/rails/views/markaby/_a_partial.mab
@@ -52,7 +52,7 @@ ${GEM_LIBDIR}/spec/markaby/rails/views/markaby/yielding.mab
 ${GEM_LIBDIR}/spec/markaby/rails/views/markaby/yielding_content_for_with_block_helper.mab
 ${GEM_LIBDIR}/spec/markaby/rails/views/markaby/yielding_two.mab
 ${GEM_LIBDIR}/spec/markaby/rails/views/markaby/yielding_with_content_for.mab
-${GEM_LIBDIR}/spec/markaby/rails_spec.rb
+${GEM_LIBDIR}/spec/markaby/rails_test.rb
 ${GEM_LIBDIR}/spec/markaby/rails_version_spec.rb
 ${GEM_LIBDIR}/spec/markaby/sinatra/app.rb
 ${GEM_LIBDIR}/spec/markaby/sinatra/sinatra_spec.rb

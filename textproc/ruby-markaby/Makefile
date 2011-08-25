@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/09/23 09:22:14 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/25 15:42:05 taca Exp $
 
-DISTNAME=	markaby-0.7.1
+DISTNAME=	markaby-0.7.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
