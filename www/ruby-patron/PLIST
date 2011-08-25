@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2011/08/13 00:30:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/08/25 15:49:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.rvmrc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE
