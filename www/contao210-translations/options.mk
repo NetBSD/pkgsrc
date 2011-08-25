@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/08/18 14:51:23 taca Exp $
+# $NetBSD: options.mk,v 1.4 2011/08/25 15:53:26 taca Exp $
 
 # Not yet ready for Contao 2.10: af ca gl id is no pt th tl zh
 #
@@ -27,15 +27,15 @@ CT_TRANSLATIONS.ja=	Contao-Japanese-v67.zip		# 2011/08/18
 CT_TRANSLATIONS.ku=	Contao-Kurdish-v5.zip		# 2010/12/24
 CT_TRANSLATIONS.lt=	Contao-Lithuanian-v7.zip	# 2010/05/01
 CT_TRANSLATIONS.lv=	Contao-Latvian-v28.zip		# 2011/04/13
-CT_TRANSLATIONS.nl=	Contao-Dutch-v50.zip		# 2011/03/14
+CT_TRANSLATIONS.nl=	Contao-Dutch-v53.zip		# 2011/08/21
 CT_TRANSLATIONS.no=	TYPOlight-Norwegian-v11.zip	# 2009/11/16
 CT_TRANSLATIONS.pl=	Contao-Polish-v30.zip		# 2011/03/09
 CT_TRANSLATIONS.pt=	TYPOlight-Portuguese-v7.zip	# 2009/11/01
 CT_TRANSLATIONS.rm=	Contao-Rhaeto-Romance-v4.zip	# 2011/04/22
-CT_TRANSLATIONS.ro=	Contao-Romanian-v12.zip		# 2011/03/19
-CT_TRANSLATIONS.ru=	Contao-Russian-v37.zip		# 2011/04/09
+CT_TRANSLATIONS.ro=	Contao-Romanian-v13.zip		# 2011/08/22
+CT_TRANSLATIONS.ru=	Contao-Russian-v39.zip		# 2011/08/25
 CT_TRANSLATIONS.sk=	Contao-Slovak-v9.zip		# 2011/03/18
-CT_TRANSLATIONS.sl=	Contao-Slovenian-v8.zip		# 2011/05/29
+CT_TRANSLATIONS.sl=	Contao-Slovenian-v9.zip		# 2011/08/23
 CT_TRANSLATIONS.sq=	Contao-Albanian-v6.zip		# 2010/12/28
 CT_TRANSLATIONS.sr=	Contao-Serbian-v8.zip		# 2011/05/24
 CT_TRANSLATIONS.sv=	Contao-Swedish-v60.zip		# 2011/08/17
