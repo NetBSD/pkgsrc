@@ -1,7 +1,27 @@
-$NetBSD: patch-ae,v 1.5 2005/12/18 23:15:43 joerg Exp $
+$NetBSD: patch-ae,v 1.6 2011/08/25 13:46:28 hans Exp $
 
 --- ckucmd.c.orig	2005-12-18 22:57:18.000000000 +0000
 +++ ckucmd.c
+@@ -7115,8 +7115,19 @@ cmdconchk() {
+ #ifdef NOARROWKEYS
+     debug(F101,"cmdconchk NOARROWKEYS x","",0);
+ #else
++#if defined(__sun) && (defined(__amd64) || defined(__sparcv9))
++    struct sun_64_FILE {
++	unsigned char	*_ptr;  /* next character from/to here in buffer */
++	unsigned char	*_base; /* the buffer */
++	unsigned char	*_end;  /* the end of the buffer */
++	ssize_t		_cnt;   /* number of available characters in buffer */
++    } *sun_64_stdin = (struct sun_64_FILE *)stdin;
++    debug(F101,"cmdconchk sun_64_stdin->_cnt","",sun_64_stdin->_cnt);
++    x = sun_64_stdin->_cnt;
++#else
+     debug(F101,"cmdconchk stdin->_cnt","",stdin->_cnt);
+     x = stdin->_cnt;
++#endif
+ #endif /* NOARROWKEYS */
+ #endif /* VMS */
+     if (x == 0) x = conchk();
 @@ -7128,7 +7128,12 @@ cmdconchk() {
      if (x == 0) x = conchk();
      if (x < 0) x = 0;
