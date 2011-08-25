@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.2 2011/08/24 04:01:27 sbd Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.3 2011/08/25 10:32:52 sbd Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -253,7 +253,7 @@ java/sun-6/lib/security/local_policy.jar
 java/sun-6/lib/security/trusted.libraries
 java/sun-6/lib/servicetag/jdk_header.png
 java/sun-6/lib/sound.properties.default
-java/sun-6/lib/x86_64
+${PLIST.x11}java/sun-6/lib/amd64/libX11.so.6
 java/sun-6/lib/zi/Africa/Abidjan
 java/sun-6/lib/zi/Africa/Accra
 java/sun-6/lib/zi/Africa/Addis_Ababa

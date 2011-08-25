@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2011/08/16 22:11:42 abs Exp $
+# $NetBSD: Makefile.common,v 1.16 2011/08/25 10:32:52 sbd Exp $
 # used by lang/sun-jre6/Makefile
 # used by lang/sun-jdk6/Makefile
 
@@ -36,6 +36,14 @@ DIST_ARCH=		${DIST_ARCH.${EMUL_ARCH}}
 DIST_ARCH=		${EMUL_ARCH}
 .endif
 
+JAVA_ARCH.x86_64=	amd64
+
+.if defined(JAVA_ARCH.${EMUL_ARCH})
+JAVA_ARCH=		${JAVA_ARCH.${EMUL_ARCH}}
+.else
+JAVA_ARCH=		${EMUL_ARCH}
+.endif
+
 INTERACTIVE_STAGE=	fetch
 BUILD_DIRS=		# empty
 
@@ -44,7 +52,7 @@ BUILD_DIRS=		# empty
 JAVA_HOME=		${PREFIX}/java/sun-6
 JAVA_NAME=		sun6
 JAVA_UNLIMIT=		datasize
-JAVA_LD_LIBRARY_PATH=	${JAVA_HOME}/lib/${EMUL_ARCH}/jli
+JAVA_LD_LIBRARY_PATH=	${JAVA_HOME}/lib/${JAVA_ARCH}/jli
 
 MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
 
