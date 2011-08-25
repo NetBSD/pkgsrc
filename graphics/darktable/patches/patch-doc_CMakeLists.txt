@@ -1,6 +1,6 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.1 2011/07/26 21:48:00 jakllsch Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.2 2011/08/25 14:42:53 jakllsch Exp $
 
---- doc/CMakeLists.txt.orig	2011-07-02 03:15:32.000000000 +0000
+--- doc/CMakeLists.txt.orig	2011-08-24 09:20:29.000000000 +0000
 +++ doc/CMakeLists.txt
 @@ -20,6 +20,6 @@ add_custom_command(
  add_custom_target(manpages ALL DEPENDS darktable.1)
