@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:38:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/08/25 14:54:06 hans Exp $
 bin/kermit
 man/man1/kermit.1
 share/doc/kermit/ckaaaa.txt
-share/doc/kermit/ckc211.txt
+share/doc/kermit/ckc302.txt
 share/doc/kermit/ckcbwr.txt
 share/doc/kermit/ckccfg.txt
 share/doc/kermit/ckcplm.txt
 share/doc/kermit/ckermit70.txt
 share/doc/kermit/ckermit80.txt
+share/doc/kermit/ckermit90.txt
 share/doc/kermit/ckubwr.txt
 share/doc/kermit/ckuins.txt
 share/doc/kermit/ckututor.txt
