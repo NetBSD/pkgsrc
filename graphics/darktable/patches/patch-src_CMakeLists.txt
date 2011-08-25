@@ -1,10 +1,10 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1.1.1 2011/07/26 21:37:47 jakllsch Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2011/08/25 14:42:53 jakllsch Exp $
 
 Various thing to possibly improve portability.
 
---- src/CMakeLists.txt.orig	2011-07-02 03:15:32.000000000 +0000
+--- src/CMakeLists.txt.orig	2011-08-24 09:20:29.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -219,7 +219,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} 
+@@ -240,7 +240,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} 
  
  if(NOT APPLE)
    # apple build fails on deprecated warnings..
@@ -13,7 +13,7 @@ Various thing to possibly improve portability.
  endif(NOT APPLE)
  
  if(NOT WIN32)
-@@ -227,17 +227,17 @@ if(NOT WIN32)
+@@ -248,17 +248,17 @@ if(NOT WIN32)
  endif(NOT WIN32)
  
  if(NOT BINARY_PACKAGE_BUILD)

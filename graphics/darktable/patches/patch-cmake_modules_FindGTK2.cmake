@@ -1,10 +1,10 @@
-$NetBSD: patch-cmake_modules_FindGTK2.cmake,v 1.1.1.1 2011/07/26 21:37:47 jakllsch Exp $
+$NetBSD: patch-cmake_modules_FindGTK2.cmake,v 1.2 2011/08/25 14:42:53 jakllsch Exp $
 
 Look for GTK where we might find it.  Should honor ${PREFIX} someday.
 
---- cmake/modules/FindGTK2.cmake.orig	2011-07-02 03:15:32.000000000 +0000
+--- cmake/modules/FindGTK2.cmake.orig	2011-08-24 09:20:29.000000000 +0000
 +++ cmake/modules/FindGTK2.cmake
-@@ -182,6 +182,9 @@ function(_GTK2_FIND_INCLUDE_DIR _var _hd
+@@ -184,6 +184,9 @@ function(_GTK2_FIND_INCLUDE_DIR _var _hd
              /usr/openwin/lib
              /sw/include
              /sw/lib
