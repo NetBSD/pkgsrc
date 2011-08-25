@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/06/17 19:23:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/08/25 03:13:44 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -937,6 +937,7 @@ share/emacs/${EMACS_VERSION}/etc/srecode/texi.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/wisent.srt
 share/emacs/${EMACS_VERSION}/etc/themes/dichromacy-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/light-blue-theme.el
+share/emacs/${EMACS_VERSION}/etc/themes/manoj-dark-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/misterioso-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tango-dark-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tango-theme.el
@@ -1033,9 +1034,10 @@ share/emacs/${EMACS_VERSION}/leim/quail/hebrew.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/hebrew.elc
 share/emacs/${EMACS_VERSION}/leim/quail/indian.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/indian.elc
-share/emacs/${EMACS_VERSION}/leim/quail/ipa-praat.el
 share/emacs/${EMACS_VERSION}/leim/quail/ipa.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/ipa.elc
+share/emacs/${EMACS_VERSION}/leim/quail/ipa-praat.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/ipa-praat.elc
 share/emacs/${EMACS_VERSION}/leim/quail/japanese.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/japanese.elc
 share/emacs/${EMACS_VERSION}/leim/quail/lao.el.gz
@@ -2249,6 +2251,8 @@ share/emacs/${EMACS_VERSION}/lisp/gnus/nnvirtual.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnvirtual.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/nnweb.elc
+share/emacs/${EMACS_VERSION}/lisp/gnus/plstore.el.gz
+share/emacs/${EMACS_VERSION}/lisp/gnus/plstore.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.el.gz
 share/emacs/${EMACS_VERSION}/lisp/gnus/pop3.elc
 share/emacs/${EMACS_VERSION}/lisp/gnus/qp.el.gz
@@ -2876,6 +2880,8 @@ share/emacs/${EMACS_VERSION}/lisp/obsolete/lmenu.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lmenu.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lucid.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/lucid.elc
+share/emacs/${EMACS_VERSION}/lisp/obsolete/old-emacs-lock.el.gz
+share/emacs/${EMACS_VERSION}/lisp/obsolete/old-emacs-lock.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/old-whitespace.el.gz
 share/emacs/${EMACS_VERSION}/lisp/obsolete/old-whitespace.elc
 share/emacs/${EMACS_VERSION}/lisp/obsolete/options.el.gz
@@ -2916,6 +2922,8 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-C.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-C.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-R.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-R.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-awk.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-awk.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-asymptote.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-asymptote.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-calc.el.gz
@@ -2940,6 +2948,8 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-gnuplot.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-gnuplot.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-haskell.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-haskell.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-java.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-java.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-js.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-js.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-keys.el.gz
@@ -2948,10 +2958,14 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-latex.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-latex.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-ledger.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-ledger.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-lilypond.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-lilypond.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lisp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lisp.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lob.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lob.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-maxima.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-maxima.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-matlab.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-matlab.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-mscgen.el.gz
@@ -3012,8 +3026,6 @@ share/emacs/${EMACS_VERSION}/lisp/org/org-colview.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-colview.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-compat.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-compat.elc
-share/emacs/${EMACS_VERSION}/lisp/org/org-complete.el.gz
-share/emacs/${EMACS_VERSION}/lisp/org/org-complete.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-crypt.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-crypt.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-ctags.el.gz
@@ -3078,6 +3090,8 @@ share/emacs/${EMACS_VERSION}/lisp/org/org-mobile.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-mobile.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-mouse.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-mouse.elc
+share/emacs/${EMACS_VERSION}/lisp/org/org-pcomplete.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/org-pcomplete.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-plot.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-plot.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-protocol.el.gz
@@ -3088,6 +3102,8 @@ share/emacs/${EMACS_VERSION}/lisp/org/org-remember.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-remember.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-rmail.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-rmail.elc
+share/emacs/${EMACS_VERSION}/lisp/org/org-special-blocks.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/org-special-blocks.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-src.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/org-src.elc
 share/emacs/${EMACS_VERSION}/lisp/org/org-table.el.gz
@@ -3221,6 +3237,8 @@ share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-engine.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-engine.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-fonts.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-fonts.elc
+share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-guess.el.gz
+share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-guess.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-langs.el.gz
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-langs.elc
 share/emacs/${EMACS_VERSION}/lisp/progmodes/cc-menus.el.gz
