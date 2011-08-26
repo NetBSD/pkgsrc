@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2115 2011/08/25 20:40:45 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2116 2011/08/26 07:19:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3324,3 +3324,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-patron to 0.4.15 [taca 2011-08-25]
 	Updated www/contao210-translations to 20110825 [taca 2011-08-25]
 	Updated databases/phpmyadmin to 3.4.4 [tron 2011-08-25]
+	Updated mail/fetchmail to 6.3.21 [tron 2011-08-26]
