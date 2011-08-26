@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1.1.1 2011/08/26 13:46:43 cheusov Exp $
+
+Replace '%var%' with '@VAR@'
+--- scripts/netbsd/yaws.sh.orig	2009-07-05 22:20:13.000000000 +0400
++++ scripts/netbsd/yaws.sh	2009-10-01 03:53:05.000000000 +0400
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!@RCD_SCRIPTS_SHELL@
+ #
+ 
+ #
+@@ -19,8 +19,8 @@
+ 
+ name="yaws"
+ rcvar=$name
+-yaws_command="%prefix%bin/${name}"
+-required_files="%etcdir%yaws/yaws.conf"
++yaws_command="@PREFIX@/bin/${name}"
++required_files="@PKG_SYSCONFDIR@/yaws/yaws.conf"
+ 
+ start_cmd="yaws_start"
+ stop_cmd="yaws_stop"
