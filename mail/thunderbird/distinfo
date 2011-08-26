@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2011/08/21 23:21:33 tnn Exp $
+$NetBSD: distinfo,v 1.83 2011/08/26 09:24:40 tnn Exp $
 
 SHA1 (enigmail-1.2.1.tar.gz) = 44ea48d881a936dd72d1f974b56f31632c5ed91a
 RMD160 (enigmail-1.2.1.tar.gz) = b712e964e71c3b4dd14018b33ee1d985ba4fef8b
@@ -36,6 +36,7 @@ SHA1 (patch-be) = 8783683729e40b5deec2e33fbc50e63e1357aea3
 SHA1 (patch-bf) = b95177e3a5db42bf4edf59eaae5232910c802d69
 SHA1 (patch-bg) = b30ecac3ee44d749a3eb125bbcd5e24e31b23243
 SHA1 (patch-bi) = c47064c71c6fc960a1a9afb735f249f3f7d0d09d
+SHA1 (patch-calendar_base_src_caldateTime.cpp) = 90ad68ba9a37863f340566a4e9567c5e19e663be
 SHA1 (patch-directory_c-sdk_ldap_include_portable.h) = 5f9f69ac57da0c830f2fa33e82057a1eb5907249
 SHA1 (patch-ipc_chromium_src_base_debug__util__posic.cc) = bc98be56df67b1a3c2b1174613f0d6c3134a2c8e
 SHA1 (patch-ipc_chromium_src_base_file__util.h) = 51dc4a5a32da8e7d7eb3c026e3ebaae7858564cf
