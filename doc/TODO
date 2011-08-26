@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10517 2011/08/24 17:57:04 tron Exp $
+$NetBSD: TODO,v 1.10518 2011/08/26 06:55:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dmenu-4.4
 	o dnsmasq-2.57
 	o dnstracer-1.9
-	o doclifter-2.6
+	o doclifter-2.7
 	o doxygen-1.7.5.1
 	o dpkg-1.16.0.3
 	o dri2proto-2.6
@@ -563,7 +563,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
-	o etm-863
+	o etm-866
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evince-3.0.2
@@ -583,6 +583,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o feh-1.15.1
 	o felt-3.07
 	o festival-1.96
+	o fetchmail-6.3.21
 	o fetchyahoo-2.14.0
 	o ffmpeg-20110807.0.8.2
 	o file-5.08
@@ -710,6 +711,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
 	o gnome-power-manager-3.0.0
 	o gnome-session-2.32.1 [GNOME 2.32, wants DeviceKit-power]
+	o gnome-subtitles-1.2
 	o gnome-system-monitor-2.28.2
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
 	o gnome-system-tools-3.0.0
@@ -932,6 +934,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lmms-0.4.5
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
+	o ltris-1.0.17
 	o luit-1.1.0
 	o lwm-1.2.2
 	o lyx-2.0.0
@@ -945,7 +948,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.6.3
+	o mathomatic-15.6.4
 	o mdocml-1.11.6
 	o memtester-4.2.2
 	o merb-builder-0.9.13
@@ -1025,6 +1028,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openldap-client-2.4.26
 	o openmortal-0.7.1
 	o openmotif-2.3.3
+	o openmpi-1.5.4
 	o openmsx-0.8.1
 	o openoffice3-3.3
 	o openssl-1.0.0d [pkg/44717]
@@ -1249,6 +1253,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tfmxplay-1.1.6
 	o tightvnc-2.0.95
 	o tile-0.7.4
+	o tin-2.0.0
 	o tinc-1.0.16
 	o tinyproxy-1.8.3
 	o tk-8.5.8
@@ -1457,7 +1462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsetroot-1.1.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-271
+	o xterm-273
 	o xtraceroute-0.9.1
 	o xtrans-1.2.6
 	o xtu-1.3
