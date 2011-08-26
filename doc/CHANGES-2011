@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2116 2011/08/26 07:19:42 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2117 2011/08/26 08:31:01 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3325,3 +3325,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20110825 [taca 2011-08-25]
 	Updated databases/phpmyadmin to 3.4.4 [tron 2011-08-25]
 	Updated mail/fetchmail to 6.3.21 [tron 2011-08-26]
+	Updated lang/parrot to 3.7.0 [he 2011-08-26]
