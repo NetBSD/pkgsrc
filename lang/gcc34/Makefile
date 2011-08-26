@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2011/06/03 08:32:30 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2011/08/26 02:57:13 sbd Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -52,7 +52,6 @@ CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 .endif
-MAKEFLAGS+=	DESTDIR=${DESTDIR}
 
 REPLACE_AWK+=		libjava/addr2name.awk
 USE_TOOLS+=		awk:run
@@ -230,7 +229,7 @@ do-test:
 	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
+	(cd ${WRKDIR}/obj && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${GMAKE} install \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 		(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
