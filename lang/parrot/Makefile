@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2011/07/25 06:44:23 he Exp $
+# $NetBSD: Makefile,v 1.48 2011/08/26 08:30:30 he Exp $
 #
 
-VERSION=		3.5.0
+VERSION=		3.7.0
 RTYPE=			devel
 DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
@@ -51,7 +51,6 @@ REPLACE_PERL+=		tools/build/ops2c.pl
 REPLACE_PERL+=		tools/build/pmc2c.pl
 REPLACE_PERL+=		tools/dev/create_language.pl
 REPLACE_PERL+=		tools/dev/gen_makefile.pl
-REPLACE_PERL+=		tools/dev/mk_language_shell.pl
 REPLACE_PERL+=		tools/dev/pprof2cg.pl
 REPLACE_PERL+=		tools/dev/reconfigure.pl
 
