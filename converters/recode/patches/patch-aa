@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2009/03/25 06:08:17 yyamano Exp $
+$NetBSD: patch-aa,v 1.3 2011/08/26 08:13:44 wiz Exp $
+
+date: 2009/03/04 08:44:13;  author: yyamano;  state: Exp;
+Make this build on Mac OS X.
 
 --- lib/Makefile.in.orig	2001-01-22 10:14:14.000000000 -0800
 +++ lib/Makefile.in
