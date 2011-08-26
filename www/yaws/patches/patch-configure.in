@@ -1,0 +1,18 @@
+$NetBSD: patch-configure.in,v 1.1.1.1 2011/08/26 13:46:43 cheusov Exp $
+
+Support for DragonflyBSD
+--- configure.in.orig	2011-08-02 13:43:09 +0000
++++ configure.in
+@@ -253,10 +253,10 @@ case "$host_os" in
+            AC_SUBST(FPIC)
+            ;;
+ 
+-        *bsd*)
++        *bsd*|*dragonfly*)
+            AC_DEFINE(BSD)
+            case "$host_os" in
+-                freebsd*)
++                freebsd*|dragonfly*)
+                     HAVE_SENDFILE=true
+                     ;;
+                 bsdi*)
