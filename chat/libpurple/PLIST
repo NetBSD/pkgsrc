@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/06/30 13:03:39 obache Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/08/26 13:14:58 obache Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -60,7 +60,6 @@ include/libpurple/theme-manager.h
 include/libpurple/theme.h
 include/libpurple/upnp.h
 include/libpurple/util.h
-include/libpurple/valgrind.h
 include/libpurple/value.h
 include/libpurple/version.h
 include/libpurple/whiteboard.h
