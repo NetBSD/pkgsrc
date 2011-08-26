@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/06/30 13:03:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/08/26 13:14:58 obache Exp $
 bin/pidgin
 include/pidgin/gtkaccount.h
 include/pidgin/gtkblist-theme-loader.h
@@ -487,6 +487,7 @@ share/pixmaps/pidgin/protocols/22/irc.png
 share/pixmaps/pidgin/protocols/22/jabber.png
 share/pixmaps/pidgin/protocols/22/meanwhile.png
 share/pixmaps/pidgin/protocols/22/msn.png
+share/pixmaps/pidgin/protocols/22/mxit.png
 share/pixmaps/pidgin/protocols/22/myspace.png
 share/pixmaps/pidgin/protocols/22/novell.png
 share/pixmaps/pidgin/protocols/22/silc.png
