@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2117 2011/08/26 08:31:01 he Exp $
+$NetBSD: CHANGES-2011,v 1.2118 2011/08/26 13:19:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3326,3 +3326,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/phpmyadmin to 3.4.4 [tron 2011-08-25]
 	Updated mail/fetchmail to 6.3.21 [tron 2011-08-26]
 	Updated lang/parrot to 3.7.0 [he 2011-08-26]
+	Updated chat/libpurple to 2.10.0 [obache 2011-08-26]
+	Updated chat/finch to 2.10.0 [obache 2011-08-26]
+	Updated chat/pidgin to 2.10.0 [obache 2011-08-26]
+	Updated chat/pidgin-sametime to 2.10.0 [obache 2011-08-26]
+	Updated chat/pidgin-silc to 2.10.0 [obache 2011-08-26]
