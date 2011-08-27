@@ -1,10 +1,11 @@
-$NetBSD: patch-ab,v 1.3 2011/01/29 19:39:14 spz Exp $
+$NetBSD: patch-ab,v 1.4 2011/08/27 15:47:43 schnoebe Exp $
 
 avoid the wrapper + -C trap
+Update to silence perl 5.12+ complaints.
 
 --- archive2.pl.orig	2000-01-07 11:00:49.000000000 +0000
 +++ archive2.pl
-@@ -47,19 +47,23 @@
+@@ -47,21 +47,24 @@
  # Change directory to our home
  chdir($ENV{'HOME'}) if $ENV{'HOME'};
   
@@ -28,5 +29,28 @@ avoid the wrapper + -C trap
  # All these should be in the standard PERL library
 +unshift(@INC, $bindir);
  unshift(@INC, $homedir);
- require "ctime.pl";		# To get MoY definitions for month abbrevs
+-require "ctime.pl";		# To get MoY definitions for month abbrevs
  require "majordomo_version.pl";	# What version of Majordomo is this?
+ require "majordomo.pl";		# all sorts of general-purpose Majordomo subs
+ require "shlock.pl";		# NNTP-style file locking
+@@ -72,16 +75,17 @@ $hostname = &chop_nl(`hostname`);
+ 
+ # Here's where the fun begins...
+ 
+-require "getopts.pl";
++use Getopt::Std;
+ 
+ $m = 1;
+-foreach (@ctime'MoY) {
++foreach ('Jan','Feb','Mar','Apr','May','Jun',
++	    'Jul','Aug','Sep','Oct','Nov','Dec') {
+     $MoY{$_} = $m++;
+ }
+ 
+ $usage = "Usage: $0 -f <file> {-u|-a} [-d|-D|-m|-M|-y|-Y] [file ...]";
+ 
+-&Getopts("f:uadDmMyY") || die("$usage\nStopped");
++&getopts("f:uadDmMyY") || die("$usage\nStopped");
+ 
+ if (!defined($opt_f)) {
+     print STDERR "'-f <list>' required\n$usage\n";
