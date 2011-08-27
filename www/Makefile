@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.815 2011/08/23 10:02:13 abs Exp $
+# $NetBSD: Makefile,v 1.816 2011/08/27 07:57:02 cheusov Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -681,6 +681,7 @@ SUBDIR+=	wordpress
 SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
 SUBDIR+=	wwwoffle
+SUBDIR+=	yaws
 #SUBDIR+=	zope		# only contains Makefile fragments
 SUBDIR+=	zope-ejsplitter
 SUBDIR+=	zope-jamailhost
