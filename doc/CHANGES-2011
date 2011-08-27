@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2122 2011/08/27 19:33:10 asau Exp $
+$NetBSD: CHANGES-2011,v 1.2123 2011/08/27 19:51:03 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3335,3 +3335,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.485 [obache 2011-08-27]
 	Added sysutils/netbsd-kmod-tools version 5.1 [jmcneill 2011-08-27]
 	Updated parallel/openmpi to 1.5.4 [asau 2011-08-27]
+	Added parallel/threadingbuildingblocks version 3.0.6 [asau 2011-08-27]
