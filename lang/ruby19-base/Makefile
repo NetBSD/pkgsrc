@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/08/20 13:51:29 taca Exp $
+# $NetBSD: Makefile,v 1.12 2011/08/27 16:04:22 minskim Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -121,6 +121,7 @@ EMPTY_DIRS=		generator/template markup/simple_markup
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
+	${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
 
