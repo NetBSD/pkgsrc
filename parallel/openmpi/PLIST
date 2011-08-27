@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/03/23 05:32:29 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/08/27 19:32:55 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -89,6 +89,8 @@ lib/openmpi/mca_coll_sm.la
 lib/openmpi/mca_coll_sync.la
 lib/openmpi/mca_coll_tuned.la
 lib/openmpi/mca_crs_none.la
+lib/openmpi/mca_debugger_mpir.la
+lib/openmpi/mca_debugger_mpirx.la
 lib/openmpi/mca_dpm_orte.la
 lib/openmpi/mca_errmgr_default.la
 lib/openmpi/mca_ess_env.la
@@ -140,7 +142,6 @@ lib/openmpi/mca_routed_direct.la
 lib/openmpi/mca_routed_linear.la
 lib/openmpi/mca_routed_radix.la
 lib/openmpi/mca_routed_slave.la
-lib/openmpi/mca_sysinfo_linux.la
 lib/openmpi/mca_topo_unity.la
 lib/openmpi/mca_vprotocol_pessimist.la
 lib/pkgconfig/ompi-c.pc
