@@ -1,8 +1,19 @@
-$NetBSD: patch-ai,v 1.3 2011/01/29 17:16:33 spz Exp $
+$NetBSD: patch-ai,v 1.4 2011/08/27 15:47:43 schnoebe Exp $
+
+Quite messages from perl 5.14.1, this is very old code.
 
 --- resend.orig	2000-01-07 15:32:39.000000000 +0000
 +++ resend
-@@ -78,8 +78,8 @@ if (! defined($opt_l)) {
+@@ -71,15 +71,15 @@ if ($ARGV[0] =~ /^\@/) {
+ # getopts.pl was place where it's supposed to be.  This changes previous
+ # behavior which allowed getopts.pl to be in the same place as
+ # majordomo.cf.
+-require "getopts.pl";
+-&Getopts("C:c:Aa:df:h:I:l:M:p:Rr:s") || die("resend: Getopts() failed: $!");
++use Getopt::Std;
++getopts("C:c:Aa:df:h:I:l:M:p:Rr:s") || die("resend: Getopts() failed: $!");
+ 
+ if (! defined($opt_l)) {
    die("resend: must specify '-l list'");
  }
      
