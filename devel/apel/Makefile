@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/03/23 14:55:01 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2011/08/27 22:05:12 hiramatsu Exp $
 
 DISTNAME=	apel-10.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -37,7 +37,7 @@ MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 PLIST_VARS+=	emacs23 emacs19
 .if empty(EMACS_TYPE:Mxemacs)
-.  if !empty(EMACS_TYPE:Memacs2[3-9])
+.  if !empty(EMACS_TYPE:Memacs2[3-9]*)
 PLIST.emacs23=	yes
 .  else
 PLIST.emacs19=	yes
