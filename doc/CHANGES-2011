@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2121 2011/08/27 12:35:10 jmcneill Exp $
+$NetBSD: CHANGES-2011,v 1.2122 2011/08/27 19:33:10 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/yaws version 1.91 [cheusov 2011-08-26]
 	Updated net/mikutter to 0.0.3.485 [obache 2011-08-27]
 	Added sysutils/netbsd-kmod-tools version 5.1 [jmcneill 2011-08-27]
+	Updated parallel/openmpi to 1.5.4 [asau 2011-08-27]
