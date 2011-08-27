@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10520 2011/08/26 09:12:06 wiz Exp $
+$NetBSD: TODO,v 1.10521 2011/08/27 19:33:11 asau Exp $
 
 Suggested new packages
 ======================
@@ -1028,7 +1028,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openldap-client-2.4.26
 	o openmortal-0.7.1
 	o openmotif-2.3.3
-	o openmpi-1.5.4
 	o openmsx-0.8.1
 	o openoffice3-3.3
 	o openssl-1.0.0d [pkg/44717]
