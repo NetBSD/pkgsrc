@@ -1,0 +1,12 @@
+Kernel modules allow the system administrator to dynamically add and
+remove functionality from a running system.  This ability also helps
+software developers to develop new parts of the kernel without constantly
+rebooting to test their changes.
+
+This package provides the necessary utilities for using kernel modules on
+NetBSD 5.x.
+
+The modload utility loads a kernel module specified by the module parameter
+into the running system. The modunload utility unloads a loadable kernel
+module from a running system. The modstat utility displays the status of
+any kernel modules present in the kernel.
