@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2119 2011/08/26 13:47:05 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2120 2011/08/27 11:52:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3332,3 +3332,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin-sametime to 2.10.0 [obache 2011-08-26]
 	Updated chat/pidgin-silc to 2.10.0 [obache 2011-08-26]
 	Added www/yaws version 1.91 [cheusov 2011-08-26]
+	Updated net/mikutter to 0.0.3.485 [obache 2011-08-27]
