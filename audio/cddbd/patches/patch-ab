@@ -1,8 +1,36 @@
-$NetBSD: patch-ab,v 1.3 2005/05/23 08:42:39 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2011/08/28 22:30:17 dholland Exp $
 
---- cddbd.c.orig	Sun Jun 14 06:42:12 1998
-+++ cddbd.c	Sun Jun 14 06:42:50 1998
-@@ -191,14 +191,14 @@
+- needs stdlib.h instead of casting return value of malloc
+- other LP64 fixes
+- add const to silence qsort type warnings
+- fix printf follies, use stdarg.h
+- don't use included custom snprintf
+- avoid symbol name conflict with standard log(), which is a gcc builtin
+- void main
+
+--- cddbd.c.orig	1996-12-22 03:49:54.000000000 +0000
++++ cddbd.c
+@@ -43,6 +43,8 @@ static char *_cddbd_c_ident_ = "@(#)$Id:
+ #include <time.h>
+ #include <sys/time.h>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <stdarg.h>
+ #include "patchlevel.h"
+ #include "access.h"
+ #include "list.h"
+@@ -87,7 +89,7 @@ int cddbd_locked(clck_t *);
+ int cddbd_nus(int);
+ int cddbd_parse_access(arg_t *, int);
+ int cddbd_strcasecmp(char *, char *);
+-int comp_client(void *, void *);
++int comp_client(const void *, const void *);
+ int comp_user(void *, void *);
+ int cvt_date(char *, char *);
+ int get_conv(char **, char *);
+@@ -189,18 +191,18 @@ lhead_t *lock_head;			/* Lock list head.
+ 
+ /* Access file fields. */
  access_t acctab[] = {
 -	"logfile",	logfile,       AC_PATH,    0,	     (int)TMPDIR"/log",
 -	"motdfile",	motdfile,      AC_PATH,    0,	     (int)"",
@@ -28,3 +56,202 @@ $NetBSD: patch-ab,v 1.3 2005/05/23 08:42:39 rillig Exp $
 -	"bounce_email",	bounce_email,  AC_STRING,  0,	     (int)"",
 +	"bounce_email",	bounce_email,  AC_STRING,  0,	     (long)"",
  	"xmit_time",	&xmit_time,    AC_NUMERIC, AF_ZERO,  DEF_XMIT_TO,
+ 	"transmits",	&max_xmits,    AC_NUMERIC, AF_ZERO,  DEF_MAX_XMITS,
+ 	"post_lines",	&max_lines,    AC_NUMERIC, AF_ZERO,  DEF_MAX_LINES,
+@@ -230,7 +232,7 @@ proto_t proto_flags[MAX_PROTO_LEVEL + 1]
+ 
+ 
+ /* Log flags. */
+-log_t log[] = {
++static log_t logs[] = {
+ 	{ LOG_NONE,   0, 0,        "none",   0, },
+ 	{ LOG_INPUT,  0, 0,        "input",  0, },
+ 	{ LOG_INFO,   0, 0,        "info",   0, },
+@@ -339,7 +341,7 @@ char *day[] = { "Sun", "Mon", "Tue", "We
+ 
+ 
+ /* ARGSUSED */
+-void
++int
+ main(int argc, char **argv)
+ {
+ 	int i;
+@@ -1126,7 +1128,7 @@ cddbd_check_access(void)
+ 			log_flags = 0;
+ 
+ 			for(i = 1; i < args.nargs; i++) {
+-				for(lp = log; lp->name; lp++) {
++				for(lp = logs; lp->name; lp++) {
+ 					if(!cddbd_strcasecmp(args.arg[i],
+ 					    lp->name)) {
+ 						if(lp->flag)
+@@ -1460,7 +1462,7 @@ cddbd_db_init(void)
+ 		if(dp->d_name[0] == '.')
+ 			continue;
+ 
+-		p = (char *)malloc(strlen(dp->d_name) + 1);
++		p = malloc(strlen(dp->d_name) + 1);
+ 		if(p == NULL) {
+ 			cddbd_log(LOG_ERR, "Malloc failed.");
+ 			quit(QUIT_ERR);
+@@ -2407,8 +2409,8 @@ do_log(arg_t *args)
+ 		last[0] = '\0';
+ 	}
+ 
+-	for(i = 0; log[i].name; i++)
+-		log[i].cnt = 0;
++	for(i = 0; logs[i].name; i++)
++		logs[i].cnt = 0;
+ 
+ 	lines = 0;
+ 	nclient = 0; 
+@@ -2452,9 +2454,9 @@ do_log(arg_t *args)
+ 			lines++;
+ 
+ 		/* Log the message if it's acceptable. */
+-		for(i = 0; log[i].name; i++) {
+-			if((log[i].flag & flag) && incl)
+-				log[i].cnt++;
++		for(i = 0; logs[i].name; i++) {
++			if((logs[i].flag & flag) && incl)
++				logs[i].cnt++;
+ 		}
+ 
+ 		/* Count clients. */
+@@ -2515,10 +2517,10 @@ do_log(arg_t *args)
+ 		printf("Log status between: %s and %s\r\n", start, end);
+ 	}
+ 
+-	for(i = 0; log[i].name; i++)
+-		if(log[i].banr != 0 && !((log[i].dflag & L_NOSHOW) &&
+-		    log[i].cnt == 0))
+-			printf("%s: %d\r\n", log[i].banr, log[i].cnt);
++	for(i = 0; logs[i].name; i++)
++		if(logs[i].banr != 0 && !((logs[i].dflag & L_NOSHOW) &&
++		    logs[i].cnt == 0))
++			printf("%s: %d\r\n", logs[i].banr, logs[i].cnt);
+ 
+ 	if(nclient > 0) {
+ 		for(i = 0; i < nclient; i++)
+@@ -2541,7 +2543,7 @@ do_log(arg_t *args)
+ 
+ 	printf("Total messages: %d\r\n", lines);
+ 	if(sbuf.st_size != 0)
+-		printf("Log size: %d bytes\r\n", sbuf.st_size);
++		printf("Log size: %lld bytes\r\n", (long long)sbuf.st_size);
+ 
+ 	printf(".\r\n");
+ }
+@@ -2562,15 +2564,15 @@ comp_user(void *u1, void *u2)
+ 
+ 
+ int
+-comp_client(void *c1, void *c2)
++comp_client(const void *c1, const void *c2)
+ {
+ 	int x;
+ 
+-	x = client_cnt[*(int *)c2] - client_cnt[*(int *)c1];
++	x = client_cnt[*(const int *)c2] - client_cnt[*(const int *)c1];
+ 	if(x != 0)
+ 		return(x);
+ 
+-	return(cddbd_strcasecmp(client[*(int *)c1], client[*(int *)c2]));
++	return(cddbd_strcasecmp(client[*(const int *)c1], client[*(const int *)c2]));
+ }
+ 
+ 
+@@ -2895,7 +2897,7 @@ cddbd_lock_alloc(char *name)
+ 		quit(QUIT_ERR);
+ 	}
+ 
+-	if((lk = (clck_t *)malloc(sizeof(clck_t))) == NULL) {
++	if((lk = malloc(sizeof(clck_t))) == NULL) {
+ 		cddbd_log(LOG_ERR | LOG_LOCK, "Can't allocate %s lock memory.",
+ 		    name);
+ 		quit(QUIT_ERR);
+@@ -3179,15 +3181,15 @@ trunc_log(void)
+ 	}
+ 
+ 	/* Get a buffer for the file. */
+-	if((buf = (char *)malloc(len)) == 0) {
++	if((buf = malloc(len)) == 0) {
+ 		cddbd_log(LOG_ERR, "Can't malloc %d bytes for logfile (%d).",
+-		    (void *)len, errno);
++		    len, errno);
+ 		return;
+ 	}
+ 
+ 	if((fd = open(logfile, O_RDONLY)) < 0) {
+ 		cddbd_log(LOG_ERR, "Can't open logfile %s for reading (%d).",
+-		    logfile, (void *)errno);
++		    logfile, errno);
+ 		free(buf);
+ 		return;
+ 	}
+@@ -3195,7 +3197,7 @@ trunc_log(void)
+ 	/* Read in the whole log file. */
+ 	if(read(fd, buf, len) != len) {
+ 		cddbd_log(LOG_ERR, "Can't read logfile: %s (%d).", logfile,
+-		    (void *)errno);
++		    errno);
+ 		close(fd);
+ 		free(buf);
+ 		return;
+@@ -3219,7 +3221,7 @@ trunc_log(void)
+ 
+ 	if((fd = open(logfile, O_TRUNC | O_WRONLY)) < 0) {
+ 		cddbd_log(LOG_ERR, "Can't open logfile %s for writing (%d).",
+-		    logfile, (void *)errno);
++		    logfile, errno);
+ 		free(buf);
+ 		return;
+ 	}
+@@ -3227,7 +3229,7 @@ trunc_log(void)
+ 	/* Write out the truncated file. */
+ 	if(write(fd, p, len) != len) {
+ 		cddbd_log(LOG_ERR, "Can't write logfile: %s (%d).",
+-		    logfile, (void *)errno);
++		    logfile, errno);
+ 	}
+ 
+ 	close(fd);
+@@ -3236,7 +3238,7 @@ trunc_log(void)
+ 	return;
+ }
+ 
+-
++#if 0
+ #define SCOPY(p, buf) if(cc < (CDDBBUFSIZ-1)) {(buf)[cc] = **(p),(*(p))++,cc++;}
+ #define SASGN(c, buf) if(cc < (CDDBBUFSIZ-1)) {(buf)[cc] = c, cc++;}
+ #define SPUT(c, buf) (buf)[cc] = c, cc++
+@@ -3408,15 +3412,15 @@ cddbd_snprintf(char *buf, int size, char
+ 	if(!logging)
+ 		cddbd_log(LOG_ERR, "Buf overflow in snprintf: \"%s\"", buf);
+ }
+-
++#endif
+ 
+ /* This should be the last function in the file, to avoid compile errors. */
+ void
+-cddbd_log(unsigned int flags, char *fmt, void *a1, void *a2, void *a3,
+-    void *a4, void *a5, void *a6)
++cddbd_log(unsigned int flags, const char *fmt, ...)
+ {
+ 	FILE *fp;
+ 	char buf[CDDBBUFSIZ];
++	va_list ap;
+ 
+ 	if((!(log_flags & (short)flags) && !debug) || quiet)
+ 		return;
+@@ -3455,7 +3459,9 @@ cddbd_log(unsigned int flags, char *fmt,
+ 	strip_crlf(buf);
+ 
+ 	/* Print the log message. */
+-	fprintf(fp, buf, a1, a2, a3, a4, a5, a6);
++	va_start(ap, fmt);
++	vfprintf(fp, buf, ap);
++	va_end(ap);
+ 	fputc('\n', fp);
+ 
+ 	if(fp != stderr && fp != stdout) {

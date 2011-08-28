@@ -1,0 +1,39 @@
+$NetBSD: patch-xmit_c,v 1.1 2011/08/28 22:30:17 dholland Exp $
+
+- needs stdlib.h instead of casting return value of malloc
+- other LP64 fixes
+
+--- xmit.c~	1996-12-22 03:49:54.000000000 +0000
++++ xmit.c
+@@ -30,6 +30,7 @@ static char *_sites_c_ident_ = "@(#)$Id:
+ #include <string.h>
+ #include <fcntl.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <errno.h>
+ #include <dirent.h>
+ #include <time.h>
+@@ -571,12 +572,12 @@ cddbd_do_transmit(site_t *sp)
+ 		}
+ 
+ 		/* Don't transmit the same file twice. */
+-		if(list_find(li, (void *)(int)sbuf.st_ino) != 0) {
++		if(list_find(li, (void *)(uintptr_t)sbuf.st_ino) != 0) {
+ 			files--;
+ 			continue;
+ 		}
+ 
+-		if(list_add_cur(li, (void *)(int)sbuf.st_ino) == 0) {
++		if(list_add_cur(li, (void *)(uintptr_t)sbuf.st_ino) == 0) {
+ 			cddbd_log(LOG_ERR, "Can't malloc linked list entry.");
+ 
+ 			if(!cddbd_close_history()) {
+@@ -1112,7 +1113,7 @@ cddbd_write_history(char *dir, unsigned 
+ {
+ 	tfile_t *tf;
+ 
+-	if((tf = (tfile_t *)malloc(sizeof(tfile_t))) == NULL) {
++	if((tf = malloc(sizeof(tfile_t))) == NULL) {
+ 		cddbd_log(LOG_ERR | LOG_XMIT,
+ 		    "Can't malloc transmit list entry.");
+ 		quit(QUIT_ERR);
