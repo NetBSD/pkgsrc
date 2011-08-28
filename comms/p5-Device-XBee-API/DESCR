@@ -1,0 +1,3 @@
+Device::XBee::API is a module designed to encapsulate the Digi XBee API in
+object-oriented Perl.  This module expects to communicate with an XBee
+module using the API firmware via a serial (or serial over USB) device.
