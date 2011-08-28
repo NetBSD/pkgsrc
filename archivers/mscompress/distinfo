@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 14:45:24 agc Exp $
+$NetBSD: distinfo,v 1.4 2011/08/28 20:31:13 dholland Exp $
 
 SHA1 (mscompress-0.3.tar.bz2) = 76fd76b08ca62b20cf4aacef78e5030a4b08c285
 RMD160 (mscompress-0.3.tar.bz2) = 15fed6fb4158e6f1a1284f97f0c4d7b4fc0fe4e4
 Size (mscompress-0.3.tar.bz2) = 40989 bytes
-SHA1 (patch-aa) = 0ea60f32b2d4479f006a9de15648d8875c31075e
+SHA1 (patch-aa) = 6a6d7c29a8d07d2d85716fea3ad03b4eb07d72db
+SHA1 (patch-msexpand_c) = 39a449e07acc1306098d89d042d4f7d96299a36f
