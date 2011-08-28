@@ -1,0 +1,40 @@
+$NetBSD: patch-sq_c,v 1.1 2011/08/28 20:41:47 dholland Exp $
+
+Fix function return types.
+
+--- sq.c.orig	2011-08-28 20:38:10.000000000 +0000
++++ sq.c
+@@ -85,6 +85,9 @@
+ struct	filename    req;
+ #endif
+ 
++void obey(char *);
++void squeeze(char *, char *);
++
+ main(argc, argv)
+ int argc;
+ char *argv[];
+@@ -122,6 +125,7 @@ char *argv[];
+ 
+ /* ejecteject */
+ 
++void
+ obey(p)
+ char *p;
+ {
+@@ -142,7 +146,6 @@ char *p;
+ 	for (d = dir (p, 0); *d; d = dir (NULL, 0)) {
+ 	    dofil (d);
+ 	}
+-	return (0);
+ }
+ 
+ int
+@@ -215,6 +218,7 @@ char *p;
+ 
+ /* ejecteject */
+ 
++void
+ squeeze(infile, outfile)
+ char *infile, *outfile;
+ {
