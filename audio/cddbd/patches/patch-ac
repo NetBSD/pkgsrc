@@ -1,9 +1,47 @@
-$NetBSD: patch-ac,v 1.3 2005/05/23 08:42:39 rillig Exp $
+$NetBSD: patch-ac,v 1.4 2011/08/28 22:30:17 dholland Exp $
 
---- cddbd.h.orig	Sun Jun 14 06:41:32 1998
-+++ cddbd.h	Sun Jun 14 06:42:05 1998
-@@ -261,3 +261,3 @@
+- LP64 fixes
+- fix printf follies
+- don't use included custom snprintf
+
+--- cddbd.h.orig	1996-12-22 03:49:54.000000000 +0000
++++ cddbd.h
+@@ -26,4 +26,7 @@ static char *_cddbd_h_ident_ = "@(#)$Id:
+ #endif
+ 
++#include <stddef.h>
++#include <stdint.h>
++
+ 
+ /* Preprocessor definitions. */
+@@ -260,5 +263,5 @@ typedef struct access {
+ 	int	at_type;		/* Field type. */
  	int	at_flags;		/* Access flags. */
 -	int	at_def;			/* Default value. */
-+	long	at_def;			/* Default value. */
++	uintptr_t at_def;		/* Default value. */
  } access_t;
+ 
+@@ -364,4 +367,11 @@ typedef struct encode {
+ } encode_t;
+ 
++#ifdef __GNUC__
++#define PRINTFLIKE(a, b) __attribute__((__format__(__printf__, a, b)))
++#else
++#define PRINTFLIKE(a, b)
++#endif
++
++#define cddbd_snprintf snprintf
+ 
+ /* External prototypes. */
+@@ -371,10 +381,9 @@ void cddbd_build_fuzzy(void);
+ void cddbd_check_db(int, int);
+ void cddbd_lock_free(clck_t *);
+-void cddbd_log();
++void cddbd_log(unsigned, const char *fmt, ...) PRINTFLIKE(2, 3);
+ void cddbd_mail(void);
+ void cddbd_parse_args(arg_t *, int);
+ void cddbd_rmt_op(int, char *, char *);
+ void cddbd_serve(void);
+-void cddbd_snprintf();
+ void cddbd_stand(int);
+ void cddbd_unlock(clck_t *);

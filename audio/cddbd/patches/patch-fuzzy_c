@@ -1,0 +1,77 @@
+$NetBSD: patch-fuzzy_c,v 1.1 2011/08/28 22:30:17 dholland Exp $
+
+- needs stdlib.h instead of casting return value of malloc
+- other LP64 fixes
+- add const to silence qsort type warnings
+
+--- fuzzy.c.orig	1996-12-22 03:49:54.000000000 +0000
++++ fuzzy.c
+@@ -34,6 +34,7 @@ static char *_fuzzy_c_ident_ = "@(#)$Id:
+ #include <unistd.h>
+ #include <dirent.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <time.h>
+ #include "access.h"
+ #include "list.h"
+@@ -81,7 +82,7 @@ flist_t *flist;
+ 
+ /* Prototypes. */
+ 
+-int comp_fhash(void *, void *);
++int comp_fhash(const void *, const void *);
+ db_errno_t read_db_fuzzy(char *, fhash_t *, int *, char *, char *);
+ 
+ 
+@@ -355,12 +356,12 @@ cddbd_build_fuzzy(void)
+ 			}
+ 
+ 			if(sbuf.st_nlink > 1 && list_find(lh,
+-			    (void *)(int)sbuf.st_ino) != 0) {
++			    (void *)(uintptr_t)sbuf.st_ino) != 0) {
+ 				links++;
+ 				continue;
+ 			}
+ 
+-			fl = (flist_t *)malloc(sizeof(flist_t));
++			fl = malloc(sizeof(flist_t));
+ 			if(fl == 0) {
+ 				cddbd_log(LOG_ERR | LOG_HASH,
+ 				    "Can't malloc hash list entry (%d).",
+@@ -409,7 +410,7 @@ cddbd_build_fuzzy(void)
+ 			}
+ 
+ 			if(sbuf.st_nlink > 1 &&
+-			    list_add_cur(lh, (void *)(int)sbuf.st_ino) == 0) {
++			    list_add_cur(lh, (void *)(uintptr_t)sbuf.st_ino) == 0) {
+ 				cddbd_log(LOG_ERR | LOG_HASH,
+ 				    "Can't malloc linked list entry.");
+ 				quit(QUIT_ERR);
+@@ -425,7 +426,7 @@ cddbd_build_fuzzy(void)
+ 		quit(QUIT_ERR);
+ 	}
+ 
+-	ftab = (fhash_t **)malloc(sizeof(fhash_t *) * fhdr.count);
++	ftab = malloc(sizeof(fhash_t *) * fhdr.count);
+ 	if(ftab == NULL) {
+ 		cddbd_log(LOG_ERR | LOG_HASH,
+ 		    "Can't malloc hash table (%d).", errno);
+@@ -506,13 +507,13 @@ cddbd_build_fuzzy(void)
+ 
+ 
+ int
+-comp_fhash(void *c1, void *c2)
++comp_fhash(const void *c1, const void *c2)
+ {
+-	fhash_t *h1;
+-	fhash_t *h2;
++	const fhash_t *h1;
++	const fhash_t *h2;
+ 
+-	h1 = *(fhash_t **)c1;
+-	h2 = *(fhash_t **)c2;
++	h1 = *(const fhash_t **)c1;
++	h2 = *(const fhash_t **)c2;
+ 
+ 	if(h1->trks != h2->trks)
+ 		return (h1->trks - h2->trks);
