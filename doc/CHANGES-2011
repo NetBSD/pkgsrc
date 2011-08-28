@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2126 2011/08/28 07:22:29 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2127 2011/08/28 07:44:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3339,3 +3339,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-http_parser.rb to 0.5.2 [obache 2011-08-28]
 	Added comms/p5-Device-XBee-API version 0.3 [dsainty 2011-08-28]
 	Updated print/cups to 1.4.8nb1 [sbd 2011-08-28]
+	Updated sysutils/gnome-settings-daemon to 2.32.1nb4 [obache 2011-08-28]
