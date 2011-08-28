@@ -1,0 +1,15 @@
+$NetBSD: patch-shell_xquery_c,v 1.1 2011/08/28 20:50:04 dholland Exp $
+
+fix void main.
+
+--- shell/xQuery.c~	2000-04-15 00:37:42.000000000 +0000
++++ shell/xQuery.c
+@@ -83,7 +83,7 @@ void packerquery(unsigned int packerid)
+   printf("\n");
+ }
+ 
+-void main(int argc, char **argv)
++int main(int argc, char **argv)
+ {
+   struct XpkPackerList list;
+   int i;
