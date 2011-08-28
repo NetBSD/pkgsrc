@@ -1,0 +1,153 @@
+$NetBSD: patch-db_c,v 1.1 2011/08/28 22:30:17 dholland Exp $
+
+- needs stdlib.h instead of casting return value of malloc
+- other LP64 fixes
+
+--- db.c.orig	2011-08-28 21:43:47.000000000 +0000
++++ db.c
+@@ -31,6 +31,8 @@ static char *_db_c_ident_ = "@(#)$Id: db
+ #include <errno.h>
+ #include <dirent.h>
+ #include <time.h>
++#include <stdlib.h>
++#include <string.h>
+ #include "list.h"
+ #include "cddbd.h"
+ #include "patchlevel.h"
+@@ -109,7 +111,7 @@ list_init(void *data, int (*comp_func)(v
+ {
+ 	lhead_t *lh;
+ 
+-	lh = (lhead_t *)malloc(sizeof(lhead_t));
++	lh = malloc(sizeof(lhead_t));
+ 	if(lh == 0)
+ 		return 0;
+ 
+@@ -159,9 +161,9 @@ list_find(lhead_t *lh, void *data)
+ 			else if(cmp > 0)
+ 				return 0;
+ 		}
+-		else if((unsigned int)lp->l_data == (unsigned int)data)
++		else if((uintptr_t)lp->l_data == (uintptr_t)data)
+ 			return lp;
+-		else if((unsigned int)lp->l_data > (unsigned int)data)
++		else if((uintptr_t)lp->l_data > (uintptr_t)data)
+ 			return 0;
+ 	}
+ 
+@@ -704,14 +706,14 @@ cddbd_check_db(int level, int fix)
+ 			islink = 0;
+ 
+ 			if(sbuf.st_nlink > 1) {
+-				if(list_find(lh, (void *)(int)sbuf.st_ino)
++				if(list_find(lh, (void *)(uintptr_t)sbuf.st_ino)
+ 				    != 0) {
+ 					links++;
+ 					islink++;
+ 					continue;
+ 				}
+ 				else if(list_add_cur(lh,
+-				    (void *)(int)sbuf.st_ino) == 0) {
++				    (void *)(uintptr_t)sbuf.st_ino) == 0) {
+ 					cddbd_log(LOG_ERR,
+ 					    "Can't malloc linked list entry.");
+ 					quit(QUIT_ERR);
+@@ -803,11 +805,11 @@ cddbd_check_db(int level, int fix)
+ 				post = 0;
+ 
+ 				if(!list_find(db->db_phase[DP_DISCID],
+-				    (void *)discid)) {
++				    (void *)(uintptr_t)discid)) {
+ 					/* Add the discid to the entry. */
+ 					if(!list_add_cur(
+ 					    db->db_phase[DP_DISCID],
+-					    (void *)discid)) {
++					    (void *)(uintptr_t)discid)) {
+ 						cddbd_log(LOG_ERR, 
+ 						    "Can't malloc list entry");
+ 
+@@ -857,7 +859,7 @@ cddbd_check_db(int level, int fix)
+ 			else {
+ 				/* Make sure discid is in the DB entry. */
+ 				if(!list_find(db->db_phase[DP_DISCID],
+-				    (void *)discid)) {
++				    (void *)(uintptr_t)discid)) {
+ 					cddbd_log(LOG_ERR,
+ 					    "Warning: DB entry %s missing %s",
+ 					    parstab[DP_DISCID].dp_name,
+@@ -1232,7 +1234,7 @@ db_read(FILE *fp, char *errstr, int flag
+ 					return 0;
+ 				}
+ 
+-				if(list_find(lh, (void *)discid) != 0) {
++				if(list_find(lh, (void *)(uintptr_t)discid) != 0) {
+ 					cddbd_snprintf(errstr, CDDBBUFSIZ,
+ 					    "duplicate disc ID on line %d",
+ 					    line);
+@@ -1241,7 +1243,7 @@ db_read(FILE *fp, char *errstr, int flag
+ 					return 0;
+ 				}
+ 
+-				if(list_add_cur(lh, (void *)discid) == 0) {
++				if(list_add_cur(lh, (void *)(uintptr_t)discid) == 0) {
+ 					cddbd_snprintf(errstr, CDDBBUFSIZ,
+ 					    "can't malloc list entry");
+ 
+@@ -1642,7 +1644,7 @@ db_read(FILE *fp, char *errstr, int flag
+ 	/* Ensure the discid is in the DB entry. */
+ 	discid = db_gen_discid(db);
+ 
+-	if(list_find(db->db_phase[DP_DISCID], (void *)discid) == 0) {
++	if(list_find(db->db_phase[DP_DISCID], (void *)(uintptr_t)discid) == 0) {
+ 		cddbd_snprintf(errstr, CDDBBUFSIZ,
+ 		    "disc ID generated from track offsets (%08x) not found "
+ 		    "in %s", discid, parstab[DP_DISCID].dp_name);
+@@ -1659,7 +1661,7 @@ db_read(FILE *fp, char *errstr, int flag
+ 
+ 	for(; !list_rewound(lh); list_forw(lh)) {
+ 		lp = list_cur(lh);
+-		discid = (unsigned int)lp->l_data;
++		discid = (unsigned int)(uintptr_t)lp->l_data;
+ 
+ 		if((discid & 0xFF) != db->db_trks) {
+ 			cddbd_snprintf(errstr, CDDBBUFSIZ,
+@@ -1738,7 +1740,7 @@ db_write_num(FILE *fp, lhead_t *lh, db_p
+ 		if(!(i % n) && fputs(dp->dp_pstr, fp) == EOF)
+ 			return 0;
+ 
+-		if(fprintf(fp, "%08x", (unsigned int)lp->l_data) == EOF)
++		if(fprintf(fp, "%08lx", (unsigned long)(uintptr_t)lp->l_data) == EOF)
+ 			return 0;
+ 
+ 		if(i == (list_count(lh) - 1) || !((i + 1) % n))
+@@ -1783,7 +1785,7 @@ db_post(db_t *db, char *dir, unsigned in
+ 	cddbd_snprintf(name, sizeof(name), "%08x", discid);
+ 
+ 	/* Make sure discid is in the DB entry. */
+-	if(!list_find(db->db_phase[DP_DISCID], (void *)discid)) {
++	if(!list_find(db->db_phase[DP_DISCID], (void *)(uintptr_t)discid)) {
+ 		cddbd_snprintf(errstr, CDDBBUFSIZ,
+ 		    "discid %s is not in the DB entry", name);
+ 
+@@ -2124,8 +2126,8 @@ db_unlink(char *dir, char *name)
+ 		    list_forw(lh)) {
+ 			lp = list_cur(lh);
+ 
+-			cddbd_snprintf(buf, sizeof(buf), "%s/%08x",
+-			    dir, (unsigned int)lp->l_data);
++			cddbd_snprintf(buf, sizeof(buf), "%s/%08lx",
++			    dir, (unsigned long)(uintptr_t)lp->l_data);
+ 
+ 			unlink(buf);
+ 		}
+@@ -2157,8 +2159,8 @@ db_link(db_t *db, char *dir, char *name,
+ 	for(list_rewind(lh), list_forw(lh); !list_rewound(lh); list_forw(lh)) {
+ 		lp = list_cur(lh);
+ 
+-		cddbd_snprintf(dblink, sizeof(dblink), "%s/%08x", dir,
+-		    (unsigned int)lp->l_data);
++		cddbd_snprintf(dblink, sizeof(dblink), "%s/%08lx", dir,
++		    (unsigned long)(uintptr_t)lp->l_data);
+ 
+ 		/* This should already exist. */
+ 		if(!strcmp(dbname, dblink))

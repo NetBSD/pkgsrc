@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2007/08/30 14:12:38 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2011/08/28 22:30:17 dholland Exp $
+
+- avoid interactive configure
 
 --- config.sh.orig	2007-08-30 13:38:11.000000000 +0000
 +++ config.sh
