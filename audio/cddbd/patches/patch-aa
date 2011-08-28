@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2010/02/03 14:43:57 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2011/08/28 22:30:17 dholland Exp $
+
+- avoid interactive install
+- configure for pkgsrc
 
 --- install.sh.orig	1996-12-22 03:49:54.000000000 +0000
 +++ install.sh
