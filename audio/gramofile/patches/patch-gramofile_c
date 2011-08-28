@@ -1,0 +1,15 @@
+$NetBSD: patch-gramofile_c,v 1.1 2011/08/28 22:55:49 dholland Exp $
+
+- fix void main
+
+--- gramofile.c.orig	2000-03-28 21:07:25.000000000 +0000
++++ gramofile.c
+@@ -42,7 +42,7 @@ finishmenu (int sig)
+   exit (0);
+ }
+ 
+-void
++int
+ main (void)
+ {
+   char startdir[250];
