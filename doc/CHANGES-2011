@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2124 2011/08/28 02:02:28 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2125 2011/08/28 06:44:03 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated parallel/openmpi to 1.5.4 [asau 2011-08-27]
 	Added parallel/threadingbuildingblocks version 3.0.6 [asau 2011-08-27]
 	Updated www/ruby-http_parser.rb to 0.5.2 [obache 2011-08-28]
+	Added comms/p5-Device-XBee-API version 0.3 [dsainty 2011-08-28]
