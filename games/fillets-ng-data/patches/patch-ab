@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2011/08/29 08:24:31 christos Exp $
+
+--- script/gems/code.lua.orig	2004-08-18 17:50:46.000000000 +0300
++++ script/gems/code.lua	2011-08-29 10:41:37.000000000 +0300
+@@ -85,7 +85,7 @@
+         end
+ 
+         return function()
+-            for key, gem in gems do
++            for key, gem in pairs(gems) do
+                 gem.glob = gem.glob + 1
+                 if isIn(gem.glob, {1, 2, 3}) then
+                     gem.afaze = gem.afaze + 1
