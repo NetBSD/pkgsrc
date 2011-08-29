@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2011/08/29 06:09:19 dholland Exp $
+
+- fix void main.
+
+--- bwbasic-2.20/bwx_tty.c~	2011-08-29 06:01:48.000000000 +0000
++++ bwbasic-2.20/bwx_tty.c
+@@ -66,7 +66,7 @@ extern jmp_buf mark;
+ ***************************************************************/
+ 
+ #if ANSI_C
+-void
++int
+ main( int argc, char **argv )
+ #else
+ main( argc, argv )
