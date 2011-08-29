@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2008/08/12 13:11:30 agc Exp $
+$NetBSD: patch-ab,v 1.3 2011/08/29 01:33:49 dholland Exp $
 
 --- makefile	2008/08/12 12:14:05	1.1
 +++ makefile	2008/08/12 11:24:23
@@ -27,11 +27,11 @@ $NetBSD: patch-ab,v 1.2 2008/08/12 13:11:30 agc Exp $
 -dbu: dbu.o sdbm util.o
 -	cc $(LDFLAGS) -o dbu dbu.o util.o libsdbm.a
 +dbu: dbu.o ${LIBS} util.o
-+	${LIBTOOL} --mode=link ${CC} dbu.o util.o ${LIBS:.a=.la} -o dbu
++	${LIBTOOL} --mode=link --tag=CC ${CC} dbu.o util.o ${LIBS:.a=.la} -o dbu
  
  dba: dba.o util.o
 -	cc $(LDFLAGS) -o dba dba.o util.o
-+	${LIBTOOL} --mode=link ${CC} dba.o util.o ${LIBS:.a=.la} -o dba
++	${LIBTOOL} --mode=link --tag=CC ${CC} dba.o util.o ${LIBS:.a=.la} -o dba
  dbd: dbd.o util.o
 -	cc $(LDFLAGS) -o dbd dbd.o util.o
 -dbe: dbe.o sdbm
@@ -41,19 +41,19 @@ $NetBSD: patch-ab,v 1.2 2008/08/12 13:11:30 agc Exp $
 -	ar cr libsdbm.a $(OBJS)
 -	ranlib libsdbm.a
 -###	cp libsdbm.a /usr/lib/libsdbm.a
-+	${LIBTOOL} --mode=link ${CC} dbd.o util.o ${LIBS:.a=.la} -o dbd
++	${LIBTOOL} --mode=link --tag=CC ${CC} dbd.o util.o ${LIBS:.a=.la} -o dbd
 +dbe: dbe.o ${LIBS}
-+	${LIBTOOL} --mode=link ${CC} dbe.o ${LIBS:.a=.la} -o dbe
++	${LIBTOOL} --mode=link --tag=CC ${CC} dbe.o ${LIBS:.a=.la} -o dbe
 +
 +$(LIBS): $(OBJS)
-+	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
++	${LIBTOOL} --mode=link  --tag=CC ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
  dba.o: sdbm.h
  dbu.o: sdbm.h
  util.o:sdbm.h
  
  $(OBJS): sdbm.h tune.h pair.h
-+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c $<
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c $<
  
  #
  # dbu using berkelezoid ndbm routines [if you have them] for testing
