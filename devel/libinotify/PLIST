@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/29 09:44:01 wiz Exp $
+include/sys/inotify.h
+lib/libinotify.la
