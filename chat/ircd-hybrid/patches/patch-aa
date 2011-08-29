@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2006/01/03 13:09:25 adrianp Exp $
+$NetBSD: patch-aa,v 1.4 2011/08/29 01:24:03 dholland Exp $
 
---- Makefile.in.orig	2005-12-22 00:01:36.000000000 +0000
+- configure installation for pkgsrc
+- fix usage of $(DESTDIR) with @prefix@
+
+--- Makefile.in.orig	2007-02-28 04:17:54.000000000 +0000
 +++ Makefile.in
-@@ -25,7 +25,7 @@ RM          = @RM@
+@@ -25,12 +25,12 @@ RM          = @RM@
  #MFLAGS   = -j 4
  DEPEND_DIRS  = lib modules src servlink
  BUILD_DIRS   = ${DEPEND_DIRS} tools
@@ -11,3 +14,9 @@ $NetBSD: patch-aa,v 1.3 2006/01/03 13:09:25 adrianp Exp $
  CLEAN_DIRS   = ${BUILD_DIRS} contrib
  # Anywhere that we can make install, we obviously can rm -f Makefile
  DISTCLEAN_DIRS = ${INSTALL_DIRS} contrib messages
+ 
+-prefix		= $(DESTDIR)@prefix@
++prefix		= @prefix@
+ datarootdir	= $(DESTDIR)@datarootdir@
+ 
+ # The make used HAS to set $(MAKE). But then, if we don't do it this
