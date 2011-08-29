@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2131 2011/08/29 14:49:25 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2132 2011/08/29 20:44:48 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3344,3 +3344,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/libinotify version 0.0 [wiz 2011-08-29]
 	Updated mail/dovecot2 to 2.0.14 [adam 2011-08-29]
 	Updated devel/mercurial to 1.9.2 [wiz 2011-08-29]
+	Updated pkgtools/pkg_summary-utils to 0.56.0 [cheusov 2011-08-29]
