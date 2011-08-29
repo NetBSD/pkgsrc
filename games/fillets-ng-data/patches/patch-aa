@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2011/08/29 08:24:31 christos Exp $
+
+--- script/columns/code.lua.orig	2004-07-04 18:03:14.000000000 +0300
++++ script/columns/code.lua	2011-08-29 10:40:40.000000000 +0300
+@@ -203,7 +203,7 @@
+                     rada1beg.faze = 0
+                 end,
+             }
+-            for index, advice in advices1 do
++            for index, advice in pairs(advices1) do
+                 advice:updateAnim()
+             end
+         end
+@@ -312,7 +312,7 @@
+                     rada2beg.faze = 0
+                 end,
+             }
+-            for index, advice in advices2 do
++            for index, advice in pairs(advices2) do
+                 advice:updateAnim()
+             end
+         end
