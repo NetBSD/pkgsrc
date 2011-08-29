@@ -1,10 +1,11 @@
-/* $NetBSD: unshlight.c,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $ */
+/* $NetBSD: unshlight.c,v 1.2 2011/08/29 06:22:07 dholland Exp $ */
 #include <sys/param.h>
 #include <sys/mount.h>
 
 #include <err.h>
 #include <sysexits.h>
 #include <unistd.h>
+#include <string.h>
 #include <stdlib.h>
 #include <signal.h>
 
@@ -40,7 +41,7 @@ main(int argc, char** argv)
 		pid_t pid=0;
 		if (argc > 0) {
 			if (realpath(argv[0], abspath) == 0) {
-				warn(abspath);
+				warn("%s", abspath);
 				continue;
 			}
 		}
@@ -59,7 +60,7 @@ main(int argc, char** argv)
 			if (error == 0) {
 				kill (pid, SIGHUP);
 			} else {
-				warn(mntbuf[i].f_mntonname);
+				warn("%s", mntbuf[i].f_mntonname);
 			}
 		}
 		if (argc > 0 && !pid) 
