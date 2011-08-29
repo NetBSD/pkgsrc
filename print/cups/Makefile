@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2011/01/19 03:28:42 sbd Exp $
+# $NetBSD: Makefile,v 1.176.4.1 2011/08/29 08:15:07 tron Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,10 +6,10 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
-BASE_VERS=	1.4.6
+BASE_VERS=	1.4.8
 DIST_VERS=	${BASE_VERS}
-
 PKGREVISION=	1
+
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
