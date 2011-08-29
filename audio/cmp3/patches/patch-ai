@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 2011/08/29 13:11:39 joerg Exp $
+
+--- cmp3manager.c.orig	2011-08-29 11:31:12.000000000 +0000
++++ cmp3manager.c
+@@ -4,6 +4,7 @@
+     This file contains the manager process.
+ */
+ 
++#include"cmp3funcs.h"
+ #include"cmp3manager.h"
+ 
+ FILE *debugfile;
