@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2011/01/19 03:28:42 sbd Exp $
+@comment $NetBSD: PLIST,v 1.35.4.1 2011/08/29 08:15:07 tron Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -947,7 +947,9 @@ share/doc/cups/images/cups.png
 share/doc/cups/images/generic.png
 share/doc/cups/images/left.gif
 share/doc/cups/images/raster.png
+share/doc/cups/images/raster-organization.png
 share/doc/cups/images/right.gif
+share/doc/cups/images/sample-image.png
 share/doc/cups/images/sel.gif
 share/doc/cups/images/smiley.jpg
 share/doc/cups/images/unsel.gif
