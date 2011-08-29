@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.26 2011/08/26 08:10:04 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.27 2011/08/29 08:16:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -89,3 +89,5 @@ Pullup ticket #3502 - requested by taca
 x11/qt4-libs build fix
 Pullup ticket #3512 - requested by tron
 mail/fetchmail critical bug fix
+Pullup ticket #3513 - requested by sbd
+print/cups: security update
