@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/29 09:44:01 wiz Exp $
+
+SHA1 (libinotify-0.0.tar.gz) = 7fc5deca89a65191916e608ee6ae32b79d3d186a
+RMD160 (libinotify-0.0.tar.gz) = 546d99010a98da33633126c6b9096e70c0e972fa
+Size (libinotify-0.0.tar.gz) = 29345 bytes
