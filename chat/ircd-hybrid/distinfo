@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2010/02/04 20:14:00 adrianp Exp $
+$NetBSD: distinfo,v 1.12 2011/08/29 00:36:05 dholland Exp $
 
 SHA1 (ircd-hybrid-7.2.3.tgz) = f8a61e5500d28a4b4cded5f096c3627c2e5f01a0
 RMD160 (ircd-hybrid-7.2.3.tgz) = 58bec65da2492480b9a4e86777c6c19a4b568408
@@ -12,3 +12,4 @@ SHA1 (patch-af) = 98f8e425e935f468de1ae3b29e4a81e8188f90a8
 SHA1 (patch-ag) = 34e4e1d6af0398f893916b8daef666103cb4d005
 SHA1 (patch-ah) = 398bff5e39ce04eccd959b612c84282c26e02224
 SHA1 (patch-ai) = 85e2f0650e22d8b948f65f66c6f35a9465f07b53
+SHA1 (patch-include_memory_h) = dbfa0d3987716e70464054d4f67facd42f3b1973
