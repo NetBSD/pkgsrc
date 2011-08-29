@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/05/13 07:36:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/08/29 11:27:00 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -129,6 +129,8 @@ include/dovecot/ioloop-iolist.h
 include/dovecot/ioloop-notify-fd.h
 include/dovecot/ioloop.h
 include/dovecot/iostream-internal.h
+include/dovecot/ipc-client.h
+include/dovecot/ipc-server.h
 include/dovecot/ipwd.h
 include/dovecot/istream-attachment.h
 include/dovecot/istream-base64-encoder.h
@@ -360,6 +362,7 @@ libexec/dovecot/dovecot-lda
 libexec/dovecot/gdbhelper
 libexec/dovecot/imap
 libexec/dovecot/imap-login
+libexec/dovecot/ipc
 libexec/dovecot/listview
 libexec/dovecot/lmtp
 libexec/dovecot/log
@@ -550,6 +553,7 @@ share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Vacation.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extdata.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Troubleshooting.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Usage.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.txt
 share/doc/dovecot/wiki/Pigeonhole.txt
