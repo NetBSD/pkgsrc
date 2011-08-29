@@ -1,0 +1,2 @@
+libinotify provides an inotify emulation layer on the kqueue/kevent
+interface.
