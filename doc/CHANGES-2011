@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2133 2011/08/29 20:53:50 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2134 2011/08/29 22:08:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3346,3 +3346,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mercurial to 1.9.2 [wiz 2011-08-29]
 	Updated pkgtools/pkg_summary-utils to 0.56.0 [cheusov 2011-08-29]
 	Updated pkgtools/nih to 0.9.0 [cheusov 2011-08-29]
+	Updated www/apache22 to 2.2.19nb1 [tron 2011-08-29]
