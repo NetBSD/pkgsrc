@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2011/08/29 08:24:31 christos Exp $
+
+--- script/share/Pickle.lua.orig	2004-06-26 03:22:12.000000000 +0300
++++ script/share/Pickle.lua	2011-08-29 10:42:22.000000000 +0300
+@@ -78,7 +78,7 @@
+   end
+   for tnum = 1, table.getn(tables) do
+     local t = tables[tnum]
+-    local tcopy = {}; for i, v in t do tcopy[i] = v end
++    local tcopy = {}; for i, v in pairs(t) do tcopy[i] = v end
+     for i, v in pairs(tcopy) do
+       local ni, nv
+       if type(i) == "table" then ni = tables[i[1]] else ni = i end

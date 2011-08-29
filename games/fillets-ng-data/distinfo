@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2006/08/14 22:33:59 wiz Exp $
+$NetBSD: distinfo,v 1.5 2011/08/29 08:24:30 christos Exp $
 
 SHA1 (fillets-ng-data-0.7.1.tar.gz) = 37731b58877565165a258ff0df48243f29001d50
 RMD160 (fillets-ng-data-0.7.1.tar.gz) = bee5a815bbcb439bb3bf1fdcf925fb3db304a566
 Size (fillets-ng-data-0.7.1.tar.gz) = 95672064 bytes
+SHA1 (patch-aa) = 6524ed574038a57296ff3f86489f7d54bbd5e449
+SHA1 (patch-ab) = 85f8da0cb2e17acc6b96d4c944ed700b0513c949
+SHA1 (patch-ac) = 0afd27cf38be236ecb48ad2ffa97d774c8ac9170
