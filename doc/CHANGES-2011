@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2129 2011/08/29 09:44:40 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2130 2011/08/29 11:27:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3342,3 +3342,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/gnome-settings-daemon to 2.32.1nb4 [obache 2011-08-28]
 	Updated audio/cddbd to 1.3.1p1nb2 [dholland 2011-08-28]
 	Added devel/libinotify version 0.0 [wiz 2011-08-29]
+	Updated mail/dovecot2 to 2.0.14 [adam 2011-08-29]
