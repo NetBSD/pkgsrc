@@ -1,6 +1,10 @@
-$NetBSD: patch-ah,v 1.2 2004/01/18 13:59:25 mrauch Exp $
+$NetBSD: patch-ah,v 1.3 2011/08/29 00:04:07 dholland Exp $
 
---- maplay.cc.orig	1994-06-23 14:14:36.000000000 +0200
+- avoid assorted name conflicts
+- support NetBSD and FreeBSD
+- main() needs a return type
+
+--- maplay.cc.orig	1994-06-23 12:14:36.000000000 +0000
 +++ maplay.cc
 @@ -54,14 +54,14 @@
  
@@ -22,8 +26,12 @@ $NetBSD: patch-ah,v 1.2 2004/01/18 13:59:25 mrauch Exp $
  static real scalefactor;
  
  // data extracted from header of first frame:
-@@ -93,7 +93,7 @@ static void Exit (int returncode)
- main (int argc, char *argv[])
+@@ -90,10 +90,10 @@ static void Exit (int returncode)
+ }
+ 
+ 
+-main (int argc, char *argv[])
++int main (int argc, char *argv[])
  {
    int i;
 -  bool read_ready = False, write_ready = False;

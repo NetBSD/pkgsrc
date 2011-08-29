@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2009/07/07 15:25:39 joerg Exp $
+$NetBSD: distinfo,v 1.8 2011/08/29 00:04:07 dholland Exp $
 
 SHA1 (maplay1_2.tar) = faeac51cfbf011956a17721e2077d0ed11f8d8dd
 RMD160 (maplay1_2.tar) = bc016d4cc8f356d9c2c0a90d4afde5e67c45ba14
@@ -10,7 +10,7 @@ SHA1 (patch-ad) = 389c418dac740b6959b441439cc4660ed28daee0
 SHA1 (patch-ae) = 4579d1dc9dbae73c0d33f0fc5fe038733640bcef
 SHA1 (patch-af) = 843b8fad21e2feeee07feb3292a34456f88c639f
 SHA1 (patch-ag) = 582bec6631acd1478dacc19feba60e4bed9062ab
-SHA1 (patch-ah) = fa050751a8d88ad247c024ad20a575a03e67e298
+SHA1 (patch-ah) = 8694b317538758c2eb06b6a815b707c1ceaa250a
 SHA1 (patch-ai) = 2d7cc43f33db4f60549e2be27f388b92c7b0b4a8
 SHA1 (patch-aj) = 9b44b0e3b85adfe24419d8fa4dac9253fbf9c36d
 SHA1 (patch-ak) = 3edf1fb29f243eb5e0507f57fee2e200e9214045
