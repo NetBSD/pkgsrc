@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/01/13 13:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2011/08/29 21:18:36 joerg Exp $
 #
 
 DISTNAME=	fillets-ng-0.7.3
@@ -12,7 +12,7 @@ COMMENT=	Puzzle game about witty fish saving the world sokoban style
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	fillets-ng-data-0.7.1:../../games/fillets-ng-data
+DEPENDS+=	fillets-ng-data-0.7.1{,nb*}:../../games/fillets-ng-data
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
