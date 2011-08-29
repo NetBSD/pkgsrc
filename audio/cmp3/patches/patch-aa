@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2005/03/02 17:50:18 rxg Exp $
+$NetBSD: patch-aa,v 1.4 2011/08/29 13:11:39 joerg Exp $
 
---- Makefile.orig	2001-07-29 13:43:49.000000000 +0800
+--- Makefile.orig	2001-07-29 05:43:49.000000000 +0000
 +++ Makefile
 @@ -4,25 +4,25 @@
  #  Set these variables
@@ -35,7 +35,15 @@ $NetBSD: patch-aa,v 1.3 2005/03/02 17:50:18 rxg Exp $
  
  # You need debugging info? Uncomment this and check /tmp/cmp3log
  #debugging := 1
-@@ -42,9 +42,9 @@ RNMP3PARAMS= -DVERSION="\$(VERSION)\"
+@@ -36,15 +36,15 @@ ogg123_params := -d oss
+ 
+ VERSION="2.0pre6"
+ WKGDIR=cmp3-kenrevs
+-PARAMS= -DCMP3_VER="\$(VERSION)\" -DEXEC_LOC="\$(mpg123_location)\" \
+-    -DCMP3_CONFIG="\$(config_file)\" -DOGG_LOC="\$(ogg123_location)\"
++PARAMS= -DCMP3_VER=\"$(VERSION)\" -DEXEC_LOC=\"$(mpg123_location)\" \
++    -DCMP3_CONFIG=\"$(config_file)\" -DOGG_LOC=\"$(ogg123_location)\"
+ RNMP3PARAMS= -DVERSION="\$(VERSION)\"
  # Something for me and my cd changer, you definately don't want it as it
  # stands. Change the code to do something else you want it to do...
  #PARAMS +=-DMY_CD
@@ -44,7 +52,7 @@ $NetBSD: patch-aa,v 1.3 2005/03/02 17:50:18 rxg Exp $
 -CC= gcc
 +LIBS= $(LDFLAGS) -lform -lncurses
 +CFLAGS+= -Inevlib
-+CC?= gcc
++CC?= clang
  OBJS= cmp3common.o cmp3fileio.o cmp3manager.o cmp3curses.o \
        cmp3llist.o cmp3main.o cmp3listfiles.o cmp3playlist.o cmp3volume.o \
        cmp3general.o cmp3id3.o
