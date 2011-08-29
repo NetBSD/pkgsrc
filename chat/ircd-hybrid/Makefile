@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2010/02/04 20:14:00 adrianp Exp $
+# $NetBSD: Makefile,v 1.42 2011/08/29 01:24:02 dholland Exp $
 
 DISTNAME=	ircd-hybrid-7.2.3
 PKGREVISION=	3
@@ -12,6 +12,8 @@ COMMENT=	IRC server with many options
 
 CONFLICTS+=	ircu-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	pax
 
 GNU_CONFIGURE=	YES
@@ -23,9 +25,15 @@ BUILD_DEFS+=	IRCD_HYBRID_SYSLOG_FACILITY IRCD_HYBRID_NICLEN \
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR=	ircd-hybrid
-HYBRID_EG=		${PREFIX}/share/examples/ircd-hybrid
-HYBRID_DOC=		${PREFIX}/share/doc/ircd-hybrid
 RCD_SCRIPTS=		ircd-hybrid
+
+HYBRID_EG_PLACE=	share/examples/ircd-hybrid
+HYBRID_DOC_PLACE=	share/doc/ircd-hybrid
+HYBRID_EG=		${PREFIX}/${HYBRID_EG_PLACE}
+HYBRID_DOC=		${PREFIX}/${HYBRID_DOC_PLACE}
+
+INSTALLATION_DIRS+=	${HYBRID_EG_PLACE} ${HYBRID_DOC_PLACE}/doc
+INSTALLATION_DIRS+=	share/ircd-hybrid/messages
 
 CONF_FILES_PERMS=	${HYBRID_EG}/example.conf ${PKG_SYSCONFDIR}/ircd.conf \
 			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 0640
@@ -85,37 +93,31 @@ CONFIGURE_ARGS+=	--with-maxconn=${IRCD_HYBRID_MAXCONN:Q}
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${HYBRID_EG}
-	${INSTALL_DATA_DIR} ${HYBRID_DOC}
-	${INSTALL_DATA_DIR} ${HYBRID_DOC}/doc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ircd-hybrid
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ircd-hybrid/messages
+	${INSTALL_DATA} ${WRKSRC}/etc/example.conf ${DESTDIR}${HYBRID_EG}
+	${INSTALL_DATA} ${WRKSRC}/etc/example.efnet.conf ${DESTDIR}${HYBRID_EG}
+	${INSTALL_DATA} ${WRKSRC}/etc/example.conf.quick ${DESTDIR}${HYBRID_EG}
+	${INSTALL_DATA} ${WRKSRC}/etc/simple.conf ${DESTDIR}${HYBRID_EG}
 
-	${INSTALL_DATA} ${WRKSRC}/etc/example.conf ${HYBRID_EG}
-	${INSTALL_DATA} ${WRKSRC}/etc/example.efnet.conf ${HYBRID_EG}
-	${INSTALL_DATA} ${WRKSRC}/etc/example.conf.quick ${HYBRID_EG}
-	${INSTALL_DATA} ${WRKSRC}/etc/simple.conf ${HYBRID_EG}
-
-	${INSTALL_DATA} ${WRKSRC}/BUGS ${HYBRID_DOC}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${HYBRID_DOC}
-	${INSTALL_DATA} ${WRKSRC}/README.FIRST ${HYBRID_DOC}
-	${INSTALL_DATA} ${WRKSRC}/README.PLATFORMS ${HYBRID_DOC}
-	${INSTALL_DATA} ${WRKSRC}/RELNOTES ${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/README.FIRST ${DESTDIR}${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/README.PLATFORMS ${DESTDIR}${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/RELNOTES ${DESTDIR}${HYBRID_DOC}
 	${INSTALL_DATA} ${WRKSRC}/messages/README \
-		${HYBRID_DOC}/README.messages
+		${DESTDIR}${HYBRID_DOC}/README.messages
 	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
-		${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
+		${DESTDIR}${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
 
 	${RM} ${WRKSRC}/doc/Makefile
 	${RM} ${WRKSRC}/doc/Makefile.in
-	cd ${WRKSRC}/doc && pax -rwppm . ${HYBRID_DOC}/doc
+	cd ${WRKSRC}/doc && pax -rwppm . ${DESTDIR}${HYBRID_DOC}/doc
 
 	cd ${WRKSRC}/messages && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install
+		${SETENV} ${INSTALL_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install
 
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/encspeed \
-		${PREFIX}/bin/encspeed
+		${DESTDIR}${PREFIX}/bin/encspeed
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkpasswd \
-		${PREFIX}/bin/ircd-hybrid-mkpasswd
+		${DESTDIR}${PREFIX}/bin/ircd-hybrid-mkpasswd
 
 .include "../../mk/bsd.pkg.mk"
