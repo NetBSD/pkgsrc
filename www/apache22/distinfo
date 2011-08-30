@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.38 2011/05/22 22:54:50 tron Exp $
+$NetBSD: distinfo,v 1.38.2.1 2011/08/30 08:10:22 sbd Exp $
 
 SHA1 (httpd-2.2.19.tar.bz2) = 5676da63f3203129287d7c09a16cf523c00ec6cf
 RMD160 (httpd-2.2.19.tar.bz2) = faa901121776092604d2f4ad61366e1a1fabaefd
 Size (httpd-2.2.19.tar.bz2) = 5322082 bytes
+SHA1 (patch-CVE-2011-3192) = b4762ca0682a1dc388da9d030a8866635bc4ebd7
 SHA1 (patch-aa) = e0bfdf6bc9cb034bea46a390a12a5508e363c9a7
 SHA1 (patch-ab) = 365cc3b0ac2d9d68ccb94f5699fe168a1c9b0150
 SHA1 (patch-ac) = 515043b5c215d49fe8f6d3191b502c978e2a2dad
