@@ -4777,10 +4777,9 @@ the other binary compatibility (ABI). The difference is that a change in the
 API breaks compilation of programs while changes in the ABI stop compiled
 programs from running.
 
-Changes to the BUILDLINK_API_DEPENDS.pkgreplaceable>varname> variable in a
-buildlink3.mk file happen very rarely. One possible reason is that all packages
-depending on this already need a newer version. In case it is bumped see the
-description below.
+Changes to the BUILDLINK_API_DEPENDS.pkg variable in a buildlink3.mk file
+happen very rarely. One possible reason is that all packages depending on this
+already need a newer version. In case it is bumped see the description below.
 
 The most common example of an ABI change is that the major version of a shared
 library is increased. In this case, BUILDLINK_ABI_DEPENDS.pkg should be
