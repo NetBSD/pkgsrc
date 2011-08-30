@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2011/04/22 13:44:26 obache Exp $
+# $NetBSD: Makefile,v 1.76.2.1 2011/08/30 17:42:23 tron Exp $
 
 DISTNAME=	netatalk-2.1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
