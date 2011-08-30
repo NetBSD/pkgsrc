@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/16 03:55:42 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/08/30 06:45:43 adam Exp $
 
-SHA1 (Parallel-Prefork-0.08.tar.gz) = 681b9529f3bd7d5a7cf1878a96bc571be5049a98
-RMD160 (Parallel-Prefork-0.08.tar.gz) = d0d5af9214d8c1c846dcdd75c6c8d7e079d67ad2
-Size (Parallel-Prefork-0.08.tar.gz) = 6694 bytes
+SHA1 (Parallel-Prefork-0.11.tar.gz) = b1560d9b620bedf056530b412f35a451c827d66b
+RMD160 (Parallel-Prefork-0.11.tar.gz) = 863c54e77d90f0714e86260bf7e244edd24fbb5b
+Size (Parallel-Prefork-0.11.tar.gz) = 24782 bytes
