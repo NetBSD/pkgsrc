@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2139 2011/08/30 12:11:48 dmcmahill Exp $
+$NetBSD: CHANGES-2011,v 1.2140 2011/08/30 15:10:39 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3355,3 +3355,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-docs to 1.7.6.1 [adam 2011-08-30]
 	Added sysutils/p5-IO-BufferedSelect version 1.0 [obache 2011-08-30]
 	Updated cad/ng-spice to 23 [dmcmahill 2011-08-30]
+	Updated net/netatalk to 2.1.5nb2 [bouyer 2011-08-30]
