@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.18 2009/06/14 17:12:03 joerg Exp $
+# $NetBSD: print-plist.mk,v 1.19 2011/08/30 11:19:51 obache Exp $
 
 ###
 ### Automatic PLIST generation
@@ -148,7 +148,7 @@ print-PLIST:
 	 | ${_PRINT_PLIST_LIBTOOLIZE_FILTER}				\
 	 | ${SORT}							\
 	 | ${AWK} '							\
-		{ sub("${DESTDIR}${PREFIX}/\\./", ""); }		\
+		{ sub("${DESTDIR:S|+|\\\\+|g}${PREFIX}/\\./", ""); }	\
 		${_PRINT_PLIST_AWK_IGNORE} { next; } 			\
 		${PRINT_PLIST_AWK}					\
 		${_PRINT_PLIST_AWK_SUBST}				\
@@ -177,9 +177,9 @@ print-PLIST:
 			| ${SORT} -r					\
 			| ${AWK} '					\
 				/emul\/linux\/proc/ { next; }		\
-				/${DESTDIR:S|/|\\/|g}${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
+				/${DESTDIR:S|/|\\/|g:S/+/\\\\+/g}${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
 				/${PKG_DBDIR:S|/|\\/|g}\// { next; }	\
-				{ sub("${DESTDIR}${PREFIX}/\\\\./", ""); }	\
+				{ sub("${DESTDIR:S/+/\\\\\\+/g}${PREFIX}/\\\\./", ""); }	\
 				{ sub("^${PKGINFODIR}/", "info/"); }	\
 				{ sub("^${PKGMANDIR}/", "man/"); }	\
 				/^${PKG_DBDIR:S|^${PREFIX}/||:S|/|\\/|g}(\/|$$)/ { next; } \
