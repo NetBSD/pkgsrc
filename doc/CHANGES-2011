@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2134 2011/08/29 22:08:22 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2135 2011/08/30 06:46:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3347,3 +3347,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkg_summary-utils to 0.56.0 [cheusov 2011-08-29]
 	Updated pkgtools/nih to 0.9.0 [cheusov 2011-08-29]
 	Updated www/apache22 to 2.2.19nb1 [tron 2011-08-29]
+	Updated devel/p5-Parallel-ForkManager to 0.7.9 [adam 2011-08-30]
+	Updated devel/p5-Parallel-Prefork to 0.11 [adam 2011-08-30]
