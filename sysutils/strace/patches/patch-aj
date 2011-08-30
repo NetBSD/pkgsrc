@@ -1,10 +1,10 @@
-$NetBSD: patch-aj,v 1.4 2008/05/08 20:03:03 christos Exp $
+$NetBSD: patch-aj,v 1.5 2011/08/30 10:43:11 christos Exp $
 
---- /dev/null	2008-05-08 16:01:35.000000000 -0400
-+++ netbsd/ioctlent.sh	2008-05-08 15:54:29.000000000 -0400
-@@ -0,0 +1,125 @@
+--- /dev/null	2011-08-30 13:38:39.000000000 +0300
++++ netbsd/ioctlent.sh	2011-08-30 12:45:46.000000000 +0300
+@@ -0,0 +1,126 @@
 +#!/bin/sh
-+#	$NetBSD: patch-aj,v 1.4 2008/05/08 20:03:03 christos Exp $
++#	$NetBSD: patch-aj,v 1.5 2011/08/30 10:43:11 christos Exp $
 +#
 +# Copyright (c) 1994
 +#	The Regents of the University of California.  All rights reserved.
@@ -48,6 +48,7 @@ $NetBSD: patch-aj,v 1.4 2008/05/08 20:03:03 christos Exp $
 +echo "struct videomemory_t { int _xxx; };" # XXX arm video lossage
 +echo "typedef struct videomemory_t videomemory_t;" # XXX arm video lossage
 +echo "typedef int domid_t;" # XEN lossage
++echo "typedef int xen_pfn_t;" # XEN lossage
 +
 +echo "#include <sys/types.h>"
 +echo "#include <sys/param.h>"
