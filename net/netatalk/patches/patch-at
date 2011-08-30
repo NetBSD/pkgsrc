@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.5 2011/03/26 18:45:52 bouyer Exp $
+$NetBSD: patch-at,v 1.5.4.1 2011/08/30 17:42:23 tron Exp $
 
 --- etc/afpd/quota.c.orig	2011-03-24 15:43:48.000000000 +0100
 +++ etc/afpd/quota.c	2011-03-24 17:56:34.000000000 +0100
@@ -11,7 +11,7 @@ $NetBSD: patch-at,v 1.5 2011/03/26 18:45:52 bouyer Exp $
 +
 +static int
 +getfreespace(struct vol *vol, VolSpace *bfree, VolSpace *btotal,
-+    uid_t uid, const char *classq)
++    uid_t ouruid, uid_t quid, const char *classq)
 +{
 +	int retq;
 +	struct ufs_quota_entry ufsq[QUOTA_NLIMITS];
@@ -28,11 +28,11 @@ $NetBSD: patch-at,v 1.5 2011/03/26 18:45:52 bouyer Exp $
 +		    strerror(errno));
 +		return -1;
 +	}
-+	if ((retq = getfsquota(vol->v_path, ufsq, uid, classq)) < 0) {
++	if ((retq = getfsquota(vol->v_path, ufsq, quid, classq)) < 0) {
 +		LOG(log_info, logtype_afpd, "getfsquota(%s, %s): %s",
 +		    vol->v_path, classq, strerror(errno));
 +	}
-+        seteuid( uid );
++        seteuid( ouruid );
 +	if (retq < 1)
 +		return retq;
 +
@@ -60,12 +60,12 @@ $NetBSD: patch-at,v 1.5 2011/03/26 18:45:52 bouyer Exp $
 +	VolSpace ubfree, ubtotal;
 +	VolSpace gbfree, gbtotal;
 +
-+	uretq = getfreespace(vol, &ubfree, &ubtotal,
++	uretq = getfreespace(vol, &ubfree, &ubtotal, uuid,
 +	    uuid, QUOTADICT_CLASS_USER);
 +	LOG(log_info, logtype_afpd, "getfsquota(%s): %d %d",
 +	    vol->v_path, (int)ubfree, (int)ubtotal);
 +	if (ngroups >= 1) {
-+		gretq = getfreespace(vol, &ubfree, &ubtotal,
++		gretq = getfreespace(vol, &ubfree, &ubtotal, uuid,
 +		    groups[0], QUOTADICT_CLASS_GROUP);
 +	} else
 +		gretq = -1;
