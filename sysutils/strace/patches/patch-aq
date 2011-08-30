@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.3 2007/12/05 16:31:01 christos Exp $
+$NetBSD: patch-aq,v 1.4 2011/08/30 10:43:11 christos Exp $
 
---- signal.c.orig	2007-01-11 17:08:38.000000000 -0500
-+++ signal.c	2007-12-05 11:22:31.000000000 -0500
+--- signal.c.orig	2007-01-12 00:08:38.000000000 +0200
++++ signal.c	2011-08-30 12:50:29.000000000 +0300
 @@ -36,12 +36,27 @@
  #include "defs.h"
  
@@ -48,6 +48,38 @@ $NetBSD: patch-aq,v 1.3 2007/12/05 16:31:01 christos Exp $
  
  #endif /* !SVR4 */
  
+@@ -1165,13 +1180,13 @@
+ 		printsignal(tcp->u_arg[0]);
+ 		tprintf(", ");
+ 		switch (tcp->u_arg[1]) {
+-		case (int) SIG_ERR:
++		case (long) SIG_ERR:
+ 			tprintf("SIG_ERR");
+ 			break;
+-		case (int) SIG_DFL:
++		case (long) SIG_DFL:
+ 			tprintf("SIG_DFL");
+ 			break;
+-		case (int) SIG_IGN:
++		case (long) SIG_IGN:
+ #ifndef USE_PROCFS
+ 			if (tcp->u_arg[0] == SIGTRAP) {
+ 				tcp->flags |= TCB_SIGTRAPPED;
+@@ -1193,11 +1208,11 @@
+ 	}
+ 	else {
+ 		switch (tcp->u_rval) {
+-		    case (int) SIG_ERR:
++		    case (long) SIG_ERR:
+ 			tcp->auxstr = "SIG_ERR"; break;
+-		    case (int) SIG_DFL:
++		    case (long) SIG_DFL:
+ 			tcp->auxstr = "SIG_DFL"; break;
+-		    case (int) SIG_IGN:
++		    case (long) SIG_IGN:
+ 			tcp->auxstr = "SIG_IGN"; break;
+ 		    default:
+ 			tcp->auxstr = NULL;
 @@ -1489,7 +1504,7 @@
  
  #endif /* LINUX */
