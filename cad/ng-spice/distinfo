@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.14 2010/03/17 21:54:58 dmcmahill Exp $
+$NetBSD: distinfo,v 1.15 2011/08/30 12:01:03 dmcmahill Exp $
 
-SHA1 (ng-spice-rework-20.tar.gz) = 870d69b88d6cc0d83a8a0416a6782a4abd296de0
-RMD160 (ng-spice-rework-20.tar.gz) = 73eff9cd601253523816a7c8a93e88a795ce96bb
-Size (ng-spice-rework-20.tar.gz) = 7167239 bytes
-SHA1 (patch-aa) = 08f84b761ac1cf568af6e5a10475259c39f6ecc3
-SHA1 (patch-ak) = c5c08a75b6d41eaad75ac121566dd1b289579a39
+SHA1 (ngspice-23.tar.gz) = 65fa23d1168cb3af7651b990344f763c77bf6132
+RMD160 (ngspice-23.tar.gz) = 34a5bb0a06e67a9ebe21f7abe8067cd8e793ea9e
+Size (ngspice-23.tar.gz) = 6485536 bytes
