@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:42:16 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/30 22:34:13 drochner Exp $
 #
 
-DISTNAME=	gdk-pixbuf-2.22.1
-PKGNAME=	gdk-pixbuf2-xlib-2.22.1
-PKGREVISION=	1
+DISTNAME=	gdk-pixbuf-2.24.0
+PKGNAME=	gdk-pixbuf2-xlib-2.24.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	ftp://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.22/
+HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Image loaders for gtk2
 LICENSE=	gnu-gpl-v2
 
