@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.26 2009/03/20 19:33:28 joerg Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.27 2011/08/30 15:18:56 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -224,7 +224,7 @@ BUILDLINK_TREE+=	-tiff
 	  <command>+=</command> to ensure that
 	  we're appending to any pre-existing list of values.  This
 	  variable should be set to the first version of the
-	  package that had an API change.
+	  package that had an backwards-incompatible API change.
 	  </para>
 	</listitem>
 
@@ -334,36 +334,40 @@ BUILDLINK_TREE+=	-tiff
     </sect2>
 
     <sect2 id="updating-buildlink-depends">
-      <title>Updating <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname> in <filename>buildlink3.mk</filename> files</title>
-
-      <para>The situation that requires increasing the dependency listed in
-	<varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
-	after a package update is when the API or interface to the
-      header files change.</para>
-
-      <para>In this case,
+      <title>Updating
       <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
-      should be adjusted to require at least the new package
-      version.  In some cases, the packages that depend on this new
-      version may need their <varname>PKGREVISION</varname>s
-      increased and, if they have <filename>buildlink3.mk</filename>
-      files, their
-      <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
-      adjusted, too.  This is needed so pkgsrc will require the
-      correct package dependency and not settle for an older one
-      when building the source.</para>
+      and
+      <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
+      in <filename>buildlink3.mk</filename> files</title>
 
-      <para><varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
-	should be increased when the binary interface or sonames
-	(major number of the library version) of any installed
-	shared libraries change.  This is needed so that binary
-	packages made using it will require the correct package
-	dependency and not settle for an older one which will not
-      contain the necessary shared libraries.</para>
+      <para>These two variables differ in that one describes source
+      compatibility (API) and the other binary compatibility (ABI).
+      The difference is that a change in the API breaks compilation of
+      programs while changes in the ABI stop compiled programs from
+      running.</para>
+
+      <para>Changes to the
+      <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable>replaceable></varname>varname>
+      variable in a <filename>buildlink3.mk</filename> file happen
+      very rarely. One possible reason is that all packages depending
+      on this already need a newer version. In case it is bumped see
+      the description below.</para>
+
+      <para>The most common example of an ABI change is that the major
+      version of a shared library is increased. In this case,
+      <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
+      should be adjusted to require at least the new package version.
+      Then the packages that depend on this package need their
+      <varname>PKGREVISION</varname>s increased and, if they have
+      <filename>buildlink3.mk</filename> files, their
+      <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
+      adjusted, too. This is needed so pkgsrc will require the correct
+      package dependency and not settle for an older one when building
+      the source.</para>
 
       <para>See <xref linkend="dependencies"/> for
-	more information about dependencies on other packages,
-	including the <varname>BUILDLINK_ABI_DEPENDS</varname> and
+      more information about dependencies on other packages,
+      including the <varname>BUILDLINK_ABI_DEPENDS</varname> and
       <varname>ABI_DEPENDS</varname> definitions.</para>
 
       <para>Please take careful consideration before adjusting
@@ -375,8 +379,8 @@ BUILDLINK_TREE+=	-tiff
       fine with older dependencies.</para>
 
       <para>Also it is not needed to set
-	<varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
-	when it is identical to
+      <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
+      when it is identical to
       <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>.	</para>
     </sect2>
   </sect1>
