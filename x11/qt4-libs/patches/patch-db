@@ -1,0 +1,16 @@
+$NetBSD: patch-db,v 1.1 2011/08/30 22:18:31 drochner Exp $
+
+CVE-2011-3193
+
+--- src/3rdparty/harfbuzz/src/harfbuzz-gpos.c.orig	2011-03-30 05:19:01.000000000 +0000
++++ src/3rdparty/harfbuzz/src/harfbuzz-gpos.c
+@@ -3012,6 +3012,9 @@ static HB_Error  Lookup_MarkMarkPos( GPO
+     j--;
+   }
+ 
++  if ( i > buffer->in_pos )
++    return HB_Err_Not_Covered;
++
+   error = _HB_OPEN_Coverage_Index( &mmp->Mark2Coverage, IN_GLYPH( j ),
+ 			  &mark2_index );
+   if ( error )
