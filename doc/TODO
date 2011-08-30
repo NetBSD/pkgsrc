@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10522 2011/08/29 14:49:56 wiz Exp $
+$NetBSD: TODO,v 1.10523 2011/08/30 09:35:54 adam Exp $
 
 Suggested new packages
 ======================
@@ -1182,9 +1182,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scew-0.4.0
 	o scilab-5.3.1
 	o scm-5e7
-	o scmgit-1.7.6.1
-	o scmgit-base-1.7.6.1
-	o scmgit-docs-1.7.6.1
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99

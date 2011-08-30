@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2136 2011/08/30 09:13:08 abs Exp $
+$NetBSD: CHANGES-2011,v 1.2137 2011/08/30 09:35:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3350,3 +3350,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Parallel-ForkManager to 0.7.9 [adam 2011-08-30]
 	Updated devel/p5-Parallel-Prefork to 0.11 [adam 2011-08-30]
 	Added devel/p5-Class-Load version 0.08 [abs 2011-08-30]
+	Updated devel/scmgit to 1.7.6.1 [adam 2011-08-30]
+	Updated devel/scmgit-base to 1.7.6.1 [adam 2011-08-30]
+	Updated devel/scmgit-docs to 1.7.6.1 [adam 2011-08-30]
