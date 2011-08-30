@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.27 2011/08/30 15:18:56 wiz Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.28 2011/08/30 15:21:46 wiz Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -347,7 +347,7 @@ BUILDLINK_TREE+=	-tiff
       running.</para>
 
       <para>Changes to the
-      <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable>replaceable></varname>varname>
+      <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
       variable in a <filename>buildlink3.mk</filename> file happen
       very rarely. One possible reason is that all packages depending
       on this already need a newer version. In case it is bumped see
