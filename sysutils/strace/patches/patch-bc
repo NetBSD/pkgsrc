@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.1 2007/12/05 16:31:01 christos Exp $
+$NetBSD: patch-bc,v 1.2 2011/08/30 10:43:11 christos Exp $
 
---- quota.c.orig	2006-10-15 20:30:53.000000000 -0400
-+++ quota.c	2007-12-05 11:04:38.000000000 -0500
-@@ -687,13 +687,13 @@
+--- quota.c.orig	2006-10-16 03:30:53.000000000 +0300
++++ quota.c	2011-08-30 12:49:51.000000000 +0300
+@@ -687,14 +687,17 @@
  
  #endif /* Linux */
  
@@ -16,9 +16,13 @@ $NetBSD: patch-bc,v 1.1 2007/12/05 16:31:01 christos Exp $
 -#ifdef FREEBSD
 +#ifdef ALLBSD
  #include <ufs/ufs/quota.h>
++#ifdef __NetBSD__
++#include <ufs/ufs/quota1.h>
++#endif
  #endif
  
-@@ -723,7 +723,7 @@
+ static const struct xlat quotacmds[] = {
+@@ -723,7 +726,7 @@
  		tprintf(", ");
  		printstr(tcp, tcp->u_arg[1], -1);
  #endif
@@ -27,7 +31,7 @@ $NetBSD: patch-bc,v 1.1 2007/12/05 16:31:01 christos Exp $
  		printpath(tcp, tcp->u_arg[0]);
  		tprintf(", ");
  		printxval(quotacmds, tcp->u_arg[1], "Q_???");
-@@ -733,4 +733,4 @@
+@@ -733,4 +736,4 @@
  	return 0;
  }
  
