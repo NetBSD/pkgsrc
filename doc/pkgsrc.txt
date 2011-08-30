@@ -227,7 +227,8 @@ II. The pkgsrc developer's guide
         14.2. Writing buildlink3.mk files
 
             14.2.1. Anatomy of a buildlink3.mk file
-            14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
+            14.2.2. Updating BUILDLINK_API_DEPENDS.pkg and
+                BUILDLINK_ABI_DEPENDS.pkg in buildlink3.mk files
 
         14.3. Writing builtin.mk files
 
@@ -3194,7 +3195,8 @@ Table of Contents
     14.2. Writing buildlink3.mk files
 
         14.2.1. Anatomy of a buildlink3.mk file
-        14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
+        14.2.2. Updating BUILDLINK_API_DEPENDS.pkg and BUILDLINK_ABI_DEPENDS.
+            pkg in buildlink3.mk files
 
     14.3. Writing builtin.mk files
 
@@ -4576,7 +4578,8 @@ Table of Contents
 14.2. Writing buildlink3.mk files
 
     14.2.1. Anatomy of a buildlink3.mk file
-    14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
+    14.2.2. Updating BUILDLINK_API_DEPENDS.pkg and BUILDLINK_ABI_DEPENDS.pkg in
+        buildlink3.mk files
 
 14.3. Writing builtin.mk files
 
@@ -4715,7 +4718,8 @@ dependency on pkg is added. Several important variables are set in the section:
   * BUILDLINK_API_DEPENDS.pkg is the actual dependency recorded in the
     installed package; this should always be set using += to ensure that we're
     appending to any pre-existing list of values. This variable should be set
-    to the first version of the package that had an API change.
+    to the first version of the package that had an backwards-incompatible API
+    change.
 
   * BUILDLINK_PKGSRCDIR.pkg is the location of the pkg pkgsrc directory.
 
@@ -4765,24 +4769,26 @@ headers and libraries for these dependencies are also symlinked into $
 {BUILDLINK_DIR} whenever the pkg buildlink3.mk file is included. Dependencies
 are only added for directly include buildlink3.mk files.
 
-14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
+14.2.2. Updating BUILDLINK_API_DEPENDS.pkg and BUILDLINK_ABI_DEPENDS.pkg in
+buildlink3.mk files
 
-The situation that requires increasing the dependency listed in
-BUILDLINK_API_DEPENDS.pkg after a package update is when the API or interface
-to the header files change.
+These two variables differ in that one describes source compatibility (API) and
+the other binary compatibility (ABI). The difference is that a change in the
+API breaks compilation of programs while changes in the ABI stop compiled
+programs from running.
 
-In this case, BUILDLINK_API_DEPENDS.pkg should be adjusted to require at least
-the new package version. In some cases, the packages that depend on this new
-version may need their PKGREVISIONs increased and, if they have buildlink3.mk
-files, their BUILDLINK_API_DEPENDS.pkg adjusted, too. This is needed so pkgsrc
-will require the correct package dependency and not settle for an older one
-when building the source.
+Changes to the BUILDLINK_API_DEPENDS.pkgreplaceable>varname> variable in a
+buildlink3.mk file happen very rarely. One possible reason is that all packages
+depending on this already need a newer version. In case it is bumped see the
+description below.
 
-BUILDLINK_ABI_DEPENDS.pkg should be increased when the binary interface or
-sonames (major number of the library version) of any installed shared libraries
-change. This is needed so that binary packages made using it will require the
-correct package dependency and not settle for an older one which will not
-contain the necessary shared libraries.
+The most common example of an ABI change is that the major version of a shared
+library is increased. In this case, BUILDLINK_ABI_DEPENDS.pkg should be
+adjusted to require at least the new package version. Then the packages that
+depend on this package need their PKGREVISIONs increased and, if they have
+buildlink3.mk files, their BUILDLINK_ABI_DEPENDS.pkg adjusted, too. This is
+needed so pkgsrc will require the correct package dependency and not settle for
+an older one when building the source.
 
 See Section 19.1.6, "Handling dependencies" for more information about
 dependencies on other packages, including the BUILDLINK_ABI_DEPENDS and
@@ -5706,7 +5712,7 @@ ${MASTER_SITE_XEMACS}
 
 Some explanations for the less self-explaining ones: MASTER_SITE_BACKUP
 contains backup sites for packages that are maintained in ftp://ftp.NetBSD.org/
-pkgsrc/distfiles/${DIST_SUBDIR}. MASTER_SITE_LOCAL contains local package
+pub/pkgsrc/distfiles/${DIST_SUBDIR}. MASTER_SITE_LOCAL contains local package
 source distributions that are maintained in ftp://ftp.NetBSD.org/pub/pkgsrc/
 distfiles/LOCAL_PORTS/.
 

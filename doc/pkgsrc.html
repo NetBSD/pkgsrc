@@ -244,7 +244,11 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing <code class="filename">buildlink3.mk</code> files</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#anatomy-of-bl3">14.2.1. Anatomy of a buildlink3.mk file</a></span></dt>
-<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code> in <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating
+      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      and
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      in <code class="filename">buildlink3.mk</code> files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
 <dd><dl>
@@ -3655,7 +3659,11 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing <code class="filename">buildlink3.mk</code> files</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#anatomy-of-bl3">14.2.1. Anatomy of a buildlink3.mk file</a></span></dt>
-<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code> in <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating
+      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      and
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      in <code class="filename">buildlink3.mk</code> files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
 <dd><dl>
@@ -5334,7 +5342,11 @@ ${PLIST.foo}@dirrm share/bar
 <dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing <code class="filename">buildlink3.mk</code> files</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#anatomy-of-bl3">14.2.1. Anatomy of a buildlink3.mk file</a></span></dt>
-<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code> in <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating
+      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      and
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      in <code class="filename">buildlink3.mk</code> files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
 <dd><dl>
@@ -5500,7 +5512,7 @@ BUILDLINK_TREE+=	-tiff
 	  <span class="command"><strong>+=</strong></span> to ensure that
 	  we're appending to any pre-existing list of values.  This
 	  variable should be set to the first version of the
-	  package that had an API change.
+	  package that had an backwards-incompatible API change.
 	  </p></li>
 <li class="listitem"><p><code class="varname">BUILDLINK_PKGSRCDIR.<em class="replaceable"><code>pkg</code></em></code>
 	  is the location of the <em class="replaceable"><code>pkg</code></em>
@@ -5581,34 +5593,38 @@ BUILDLINK_TREE+=	-tiff
       file is included. Dependencies are only added for directly
       include <code class="filename">buildlink3.mk</code> files.</p>
 </div>
-<div class="sect2" title="14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files">
+<div class="sect2" title="14.2.2. Updating BUILDLINK_API_DEPENDS.pkg and BUILDLINK_ABI_DEPENDS.pkg in buildlink3.mk files">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="updating-buildlink-depends"></a>14.2.2. Updating <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code> in <code class="filename">buildlink3.mk</code> files</h3></div></div></div>
-<p>The situation that requires increasing the dependency listed in
-	<code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-	after a package update is when the API or interface to the
-      header files change.</p>
-<p>In this case,
+<a name="updating-buildlink-depends"></a>14.2.2. Updating
       <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-      should be adjusted to require at least the new package
-      version.  In some cases, the packages that depend on this new
-      version may need their <code class="varname">PKGREVISION</code>s
-      increased and, if they have <code class="filename">buildlink3.mk</code>
-      files, their
-      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-      adjusted, too.  This is needed so pkgsrc will require the
-      correct package dependency and not settle for an older one
-      when building the source.</p>
-<p><code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-	should be increased when the binary interface or sonames
-	(major number of the library version) of any installed
-	shared libraries change.  This is needed so that binary
-	packages made using it will require the correct package
-	dependency and not settle for an older one which will not
-      contain the necessary shared libraries.</p>
+      and
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      in <code class="filename">buildlink3.mk</code> files</h3></div></div></div>
+<p>These two variables differ in that one describes source
+      compatibility (API) and the other binary compatibility (ABI).
+      The difference is that a change in the API breaks compilation of
+      programs while changes in the ABI stop compiled programs from
+      running.</p>
+<p>Changes to the
+      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em>replaceable&gt;</code>varname&gt;
+      variable in a <code class="filename">buildlink3.mk</code> file happen
+      very rarely. One possible reason is that all packages depending
+      on this already need a newer version. In case it is bumped see
+      the description below.</p>
+<p>The most common example of an ABI change is that the major
+      version of a shared library is increased. In this case,
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      should be adjusted to require at least the new package version.
+      Then the packages that depend on this package need their
+      <code class="varname">PKGREVISION</code>s increased and, if they have
+      <code class="filename">buildlink3.mk</code> files, their
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      adjusted, too. This is needed so pkgsrc will require the correct
+      package dependency and not settle for an older one when building
+      the source.</p>
 <p>See <a class="xref" href="#dependencies" title="19.1.6. Handling dependencies">Section 19.1.6, &#8220;Handling dependencies&#8221;</a> for
-	more information about dependencies on other packages,
-	including the <code class="varname">BUILDLINK_ABI_DEPENDS</code> and
+      more information about dependencies on other packages,
+      including the <code class="varname">BUILDLINK_ABI_DEPENDS</code> and
       <code class="varname">ABI_DEPENDS</code> definitions.</p>
 <p>Please take careful consideration before adjusting
       <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
@@ -5618,8 +5634,8 @@ BUILDLINK_TREE+=	-tiff
       rebuilds.  In many cases, new versions of packages work just
       fine with older dependencies.</p>
 <p>Also it is not needed to set
-	<code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-	when it is identical to
+      <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
+      when it is identical to
       <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>.	</p>
 </div>
 </div>
@@ -6716,7 +6732,7 @@ ${MASTER_SITE_XEMACS}
 </pre>
 <p>Some explanations for the less self-explaining ones:
       <code class="varname">MASTER_SITE_BACKUP</code> contains backup sites
-      for packages that are maintained in <a class="ulink" href="ftp://ftp.NetBSD.org/pkgsrc/distfiles/%24%7BDIST_SUBDIR%7D" target="_top">ftp://ftp.NetBSD.org/pkgsrc/distfiles/${DIST_SUBDIR}</a>.  <code class="varname">MASTER_SITE_LOCAL</code> contains local
+      for packages that are maintained in <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/%24%7BDIST_SUBDIR%7D" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/${DIST_SUBDIR}</a>.  <code class="varname">MASTER_SITE_LOCAL</code> contains local
       package source distributions that are maintained in <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/" target="_top">ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/</a>.</p>
 <p>If you choose one of these predefined sites, you may
       want to specify a subdirectory of that site. Since these
@@ -7521,7 +7537,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229333580"></a><dl>
+<a name="id1168229333724"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7538,7 +7554,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168229333584"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168229333728"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7548,7 +7564,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168229333592"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168229333736"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7559,7 +7575,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168229333601"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168229333745"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9534,7 +9550,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229337993"></a><dl>
+<a name="id1168229338137"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9577,7 +9593,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168229337996"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168229338140"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9593,7 +9609,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168229338029"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168229338173"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9611,7 +9627,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168229338067"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168229338211"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9629,7 +9645,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168229338101"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168229338245"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9642,7 +9658,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168229338120"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168229338264"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9658,7 +9674,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168229338146"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168229338290"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9682,7 +9698,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168229338247"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168229338391"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9707,7 +9723,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168229338278"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168229338423"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9755,7 +9771,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168229338332"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168229338476"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
