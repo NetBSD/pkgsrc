@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/11/13 21:09:03 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2011/08/31 11:42:43 drochner Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
@@ -15,7 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS=	awk:run echo:run expr:run ln:run ls:run openssl:run rm:run
 
-CERTDATA_DATE=	20100827
+# This is not the file from the repository in HOMEPAGE above but
+# the version distributed with firefox-6.0.1.
+# (Newer versions seem to handle trust explicitely so that the mere
+# presence of a certificate doesn't mean that it is trusted. The
+# extraction by our "mozilla-rootcerts" script doesn't handle this.)
+CERTDATA_DATE=	20110830
 CERTDATA=	certdata-${CERTDATA_DATE}.txt
 
 WRKSRC=		${WRKDIR}
