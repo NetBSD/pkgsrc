@@ -1,8 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/08/12 13:07:45 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2011/08/31 14:33:22 taca Exp $
 
 To complete the setup, please read:
 
 	${PREFIX}/share/doc/contao${CT_VER}/README
+
+To use minify the HTML markup function, you'll have to install the
+following package:
+
+	www/php-tidy
 
 ===========================================================================
