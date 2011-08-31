@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/10/22 10:41:49 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/08/31 11:42:43 drochner Exp $
 
-SHA1 (certdata-20100827.txt) = 774c0132ac6920a4f37ce670bed4abcb6e21476c
-RMD160 (certdata-20100827.txt) = 5af26ece6f3e379b247ac8da565d41ff36768972
-Size (certdata-20100827.txt) = 1135654 bytes
+SHA1 (certdata-20110830.txt) = a43ca7e68478739b2a12fb5d32a745b29170dfa1
+RMD160 (certdata-20110830.txt) = c31be39b17bbced1ea0caec011ca58cdef7ddde3
+Size (certdata-20110830.txt) = 1151237 bytes
