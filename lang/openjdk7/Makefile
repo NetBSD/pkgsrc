@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/08/21 22:57:54 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2011/08/31 14:48:04 joerg Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -71,6 +71,15 @@ MAKE_ENV+=	EXTRA_CFLAGS="-DDEFAULT_LIBPATH=\\\"${PREFIX}/lib/jni:${PREFIX}/lib:/
 BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/}-${MACHINE_ARCH:S/i386/i586/:S/x86_64/amd64/}
 PLIST_SUBST+=	ARCH=${MACHINE_ARCH:S/x86_64/amd64/}
 PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
+			-Wno-shorten-64-to-32 -Wno-conversion \
+			-Wno-unused-value -Wno-switch-enum \
+			-Wno-tautological-compare \
+			-Wno-delete-non-virtual-dtor \
+			-Wno-return-type -Wno-unused-parameter
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .include "bootstrap.mk"
