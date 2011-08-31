@@ -1,0 +1,9 @@
+pythontidy reads Python code from standard input and writes a revised
+version to standard output.  Alternatively, it may be invoked with file
+names as arguments.
+
+It means to encapsulate the wisdom revealed in:
+
+Rossum, Guido van, and Barry Warsaw. "PEP 8: Style Guide for Python Code."
+23 Mar. 2006. Python.org. 28 Nov. 2006
+<http://www.python.org/dev/peps/pep-0008/>.
