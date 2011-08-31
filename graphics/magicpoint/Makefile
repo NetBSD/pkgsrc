@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2011/08/20 14:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2011/08/31 13:37:10 taca Exp $
 
 DISTNAME=		magicpoint-1.13a
 PKGREVISION=		8
@@ -72,8 +72,6 @@ post-install:
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${DESTDIR}${PREFIX}/${EGDIR}
 .endfor
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/giflib.buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
