@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2011/04/23 08:53:53 obache Exp $
+# $NetBSD: Makefile,v 1.57 2011/08/31 14:45:27 joerg Exp $
 
 .include "dist.mk"
 
@@ -163,6 +163,12 @@ post-install:
 
 USE_GNU_READLINE=	# defined
 BUILDLINK_DEPMETHOD.readline=		build
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ENV+=		ac_cv_opt_olimit_ok=no
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
