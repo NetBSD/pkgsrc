@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.29 2011/08/30 17:42:45 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.30 2011/08/31 09:20:19 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -95,3 +95,5 @@ Pullup ticket #3514 - requested by tron
 www/apache22 security update
 Pullup ticket #3515 - requested by bouyer
 net/netatalk: bug fix patch
+Pullup ticket #3516 - requested by tron
+www/squid31 security update
