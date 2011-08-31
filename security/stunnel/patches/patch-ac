@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.13 2011/08/24 17:56:50 tron Exp $
+$NetBSD: patch-ac,v 1.14 2011/08/31 08:26:16 jym Exp $
 
 Change pid file location.
 
@@ -9,7 +9,7 @@ Change pid file location.
  
  # Additional compiler flags
 -AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
-+AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(localstatedir)/run/stunnel.pid"'
++AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"$(localstatedir)/run/stunnel.pid"'
  
  # Win32 executable
  EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak makew32.bat nogui.c os2.mak
