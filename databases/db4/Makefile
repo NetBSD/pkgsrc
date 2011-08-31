@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2011/08/30 17:35:41 tron Exp $
+# $NetBSD: Makefile,v 1.61 2011/08/31 21:30:40 tron Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -18,7 +18,6 @@ MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db/db/index.html
 COMMENT=	Berkeley DB version 4 from Oracle
-LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
