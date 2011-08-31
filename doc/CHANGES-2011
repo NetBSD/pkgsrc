@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2142 2011/08/31 11:44:06 apb Exp $
+$NetBSD: CHANGES-2011,v 1.2143 2011/08/31 12:53:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3358,3 +3358,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/netatalk to 2.1.5nb2 [bouyer 2011-08-30]
 	Updated www/squid31 to 3.1.15 [tron 2011-08-30]
 	Added devel/pythontidy version 1.20 [apb 2011-08-31]
+	Updated www/apache22 to 2.2.20 [tron 2011-08-31]
