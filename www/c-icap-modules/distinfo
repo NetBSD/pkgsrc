@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/11 04:30:06 adam Exp $
+$NetBSD: distinfo,v 1.2 2011/08/31 07:47:17 adam Exp $
 
-SHA1 (c_icap_modules-0.1.5.tar.gz) = b19dbbe4dab9e30c42ad8b549f9b7af33225f5a9
-RMD160 (c_icap_modules-0.1.5.tar.gz) = ba8f1983fb80ad50021047c582f1a87f43b4080e
-Size (c_icap_modules-0.1.5.tar.gz) = 320945 bytes
+SHA1 (c_icap_modules-0.1.6.tar.gz) = 535f203e6665320f6b2cd93697f5acdcb37c8f0d
+RMD160 (c_icap_modules-0.1.6.tar.gz) = 200d5a45f13b3e4159468445abdc113411eda1bb
+Size (c_icap_modules-0.1.6.tar.gz) = 321011 bytes
 SHA1 (patch-configure) = dd712ea5e18de59535200caef9d7298d5668dc58
 SHA1 (patch-services_clamav_Makefile.in) = cb6b6445cbc2b9811f70b1cc115ff843d65dbbdd
 SHA1 (patch-services_url_check_Makefile.in) = 2033feaec3f6d8680c98106f17d24e862a3446dc
