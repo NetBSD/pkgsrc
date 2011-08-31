@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2145 2011/08/31 13:34:53 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2146 2011/08/31 13:53:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3361,3 +3361,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/apache22 to 2.2.20 [tron 2011-08-31]
 	Updated misc/dvtm to 0.6 [obache 2011-08-31]
 	Updated math/ruby-spreadsheet to 0.6.5.8 [obache 2011-08-31]
+	Updated inputmethod/ibus-m17n to 1.3.3 [obache 2011-08-31]
