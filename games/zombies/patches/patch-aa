@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2010/01/04 20:55:52 abs Exp $
+$NetBSD: patch-aa,v 1.8 2011/08/31 12:13:30 obache Exp $
 
 --- Makefile.orig	1999-06-26 14:37:17.000000000 +0000
 +++ Makefile
@@ -27,6 +27,18 @@ $NetBSD: patch-aa,v 1.7 2010/01/04 20:55:52 abs Exp $
  SCOREMODE	= 664
  
  # ---- COMPILER OPTIONS ----
+@@ -39,9 +39,9 @@ SIG		= -DSIGTYPE=void
+ # ---- LIBRARIES ----
+ 
+ # Older BSDs need -ltermcap
+-LIBS		= -lcurses -ltermcap
++#LIBS		= -lcurses -ltermcap
+ # Newer BSDs and SysV use just curses
+-#LIBS		= -lcurses
++LIBS		= -lcurses
+ # ncurses need -DUSE_NCURSES as well
+ #LIBS		= -lncurses
+ #DEFS		= -DUSE_NCURSES
 @@ -49,9 +49,9 @@ LIBS		= -lcurses -ltermcap
  # ---- INSTALLATION PROGRAMS ----
  
