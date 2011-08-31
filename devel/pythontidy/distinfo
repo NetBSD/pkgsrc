@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2011/08/31 11:43:17 apb Exp $
+
+SHA1 (PythonTidy-1.20.python) = f2ea4dfaa5ff8a13573e7d6df19f2ee9d45135ae
+RMD160 (PythonTidy-1.20.python) = 08d867f769b39114259c0d174a0e3e9030a3bdd7
+Size (PythonTidy-1.20.python) = 142174 bytes
+SHA1 (patch-pythontidy.py) = 3f913ccc86f13c0772b8c7afaf7d5ff86882feeb
