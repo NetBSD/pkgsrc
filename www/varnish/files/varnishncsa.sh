@@ -8,7 +8,7 @@
 name="varnishncsa"
 rcvar=$name
 command="@PREFIX@/bin/varnishncsa"
-commands_args="-D"
+command_args="-D"
 
 load_rc_config $name
 run_rc_command "$1"
