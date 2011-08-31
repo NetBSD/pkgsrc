@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2143 2011/08/31 12:53:05 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2144 2011/08/31 12:55:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3359,3 +3359,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/squid31 to 3.1.15 [tron 2011-08-30]
 	Added devel/pythontidy version 1.20 [apb 2011-08-31]
 	Updated www/apache22 to 2.2.20 [tron 2011-08-31]
+	Updated misc/dvtm to 0.6 [obache 2011-08-31]
