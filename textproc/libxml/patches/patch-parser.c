@@ -1,6 +1,6 @@
-$NetBSD: patch-parser.c,v 1.1 2011/09/01 14:29:05 obache Exp $
+$NetBSD: patch-parser.c,v 1.2 2011/09/01 14:42:09 obache Exp $
 
-* fixes CVE-2009-2414 and CVE-2009-2616.
+* fixes CVE-2009-2414 and CVE-2009-2416.
 
 --- parser.c.orig	2001-09-14 14:09:41.000000000 +0000
 +++ parser.c
