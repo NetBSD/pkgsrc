@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.4 2011/07/05 13:35:29 taca Exp $
+$NetBSD: distinfo,v 1.5 2011/09/01 03:44:35 taca Exp $
 
-SHA1 (bind-9.8.0-P4.tar.gz) = 969864200c1516a8bea54266de60f316d79182b4
-RMD160 (bind-9.8.0-P4.tar.gz) = cd44fe00d5f052ab441c16b2e735ad5771b4230a
-Size (bind-9.8.0-P4.tar.gz) = 7703981 bytes
+SHA1 (bind-9.8.1.tar.gz) = 7e6ed6ebc896b1de33a9f440233066c60539de4c
+RMD160 (bind-9.8.1.tar.gz) = a1a49ce0b1b6a5c6dd339fe160920cd4f39e2372
+Size (bind-9.8.1.tar.gz) = 8450567 bytes
 SHA1 (patch-config.threads.in) = 3d8ee03230fdb6aca545a67759ba7aacda52bb61
-SHA1 (patch-configure) = edf5a32b5c05aea110316f877264c22a2c4344ba
+SHA1 (patch-configure) = 81a83d750f5c6d21abb30a743a4aa09e7d91711e
+SHA1 (patch-contrib_dlz_drivers_sdlz__helper.c) = d6e9a7145449874ad00a0b28b1582df5a2516965
 SHA1 (patch-lib_dns_rbt.c) = 29fb5c24ff3558f1621e93ea16419e32dbc695b7
 SHA1 (patch-lib_lwres_getaddrinfo.c) = 9585a26a376d32f80ac8266eb7967c00b433f14d
 SHA1 (patch-lib_lwres_getnameinfo.c) = c26dcff4637b7beb16b66c32b304d0f187390eed
