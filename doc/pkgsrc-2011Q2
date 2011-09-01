@@ -94,7 +94,6 @@ net/trickle
 print/acroread
 print/acroread5
 print/mgv
-textproc/libxml
 www/firefox-bin
 www/firefox-bin-flash
 www/instiki
