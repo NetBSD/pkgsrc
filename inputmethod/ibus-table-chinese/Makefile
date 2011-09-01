@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/12/06 05:16:14 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/01 11:46:06 obache Exp $
 #
 
-DISTNAME=	ibus-table-chinese-1.3.0.20101206-Source
-PKGNAME=	${DISTNAME:S/-Source//}
+DISTNAME=	ibus-table-chinese-1.3.4-Source-Standalone
+PKGNAME=	${DISTNAME:S/-Source-Standalone//}
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -12,6 +12,8 @@ COMMENT=	Chinese tables for IBus-Table
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-Standalone//}
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
