@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/09/01 14:29:04 obache Exp $
+# $NetBSD: Makefile,v 1.41 2011/09/01 14:29:40 obache Exp $
 #
 
 DISTNAME=		libxml-1.8.17
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libxml/1.8/}
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://xmlsoft.org/
 COMMENT=		XML parser (version 1), mainly used by the GNOME project
+LICENSE=		gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
