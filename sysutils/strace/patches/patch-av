@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.3 2011/08/30 10:43:11 christos Exp $
+$NetBSD: patch-av,v 1.4 2011/09/01 13:00:49 christos Exp $
 
---- syscalls.pl.orig 2011-08-30 13:27:50.000000000 +0300
-+++ syscalls.pl	2011-08-30 12:41:16.000000000 +0300
-@@ -0,0 +1,171 @@
+--- /dev/null	2011-09-01 15:59:46.000000000 +0300
++++ syscalls.pl	2011-09-01 15:59:28.000000000 +0300
+@@ -0,0 +1,184 @@
 +#!/usr/pkg/bin/perl -w
 +#
 +# Copyright (c) 2000, Gaël Roualland <gael.roualland@iname.com>
@@ -30,7 +30,7 @@ $NetBSD: patch-av,v 1.3 2011/08/30 10:43:11 christos Exp $
 +# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 +# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 +#
-+#      $Id: patch-av,v 1.3 2011/08/30 10:43:11 christos Exp $
++#      $Id: patch-av,v 1.4 2011/09/01 13:00:49 christos Exp $
 +#/
 +
 +# Buils syscall.h and syscallent.h from:
@@ -117,7 +117,8 @@ $NetBSD: patch-av,v 1.3 2011/08/30 10:43:11 christos Exp $
 +
 +    if (/^(\d+)\s+(\w+)\s+\{\s*([^}]+)\s*\}([^}]*)$/ ||
 +	/^(\d+)\s+(\w+)\s+\w+\s+\{\s*([^}]+)\s*\}([^}]*)$/) {
-+	my($compat, $proto, $ext, $name, $nargs, @fun, @args, $pfunc, $cat, $num);
++	my($compat, $proto, $ext, $name, $nargs, @args, $pfunc, $cat, $num);
++	my(@fun, $xproto, $oldstyle);
 +	$num = $1;
 +	if ($2 eq 'OBSOL' || $2 eq 'UNIMPL') {
 +	    $sysnum++;
@@ -145,12 +146,24 @@ $NetBSD: patch-av,v 1.3 2011/08/30 10:43:11 christos Exp $
 +
 +	# int|sys||name(args);
 +	@fun = split(/\|/, $proto);
++	$oldstyle = @fun;
++	if ($oldstyle == 1) {
++		$xproto = $proto;
++	} else {
++		$xproto = $fun[3];
++	}
 +	
-+	if ($fun[3] =~ /^(\w+)\(([^)]*)\); /) {
++	if (($oldstyle == 1 && $xproto =~ /^[^\s]+\s+([^\s]+)\s*\(([^)]*)\);/)
++	    || ($oldstyle != 1 && $xproto =~ /^(\w+)\(([^)]*)\); /)) { 
 +	    my @args = split(/,/, $2);
 +	    $nargs = @args;
 +	    $name = $1;
-+	    $name = "__" . $name . $fun[2] if ($fun[2] ne "");
++	    if ($oldstyle == 1) {
++		$name = substr($name, 1) if (substr($name, 0, 1) eq "*");
++		$name = substr($name, 4);
++	    } else {
++		$name = "__" . $name . $fun[2] if ($fun[2] ne "");
++	    }
 +	    if (defined($sysprint{$name})) {
 +		$pfunc = $sysprint{$name};
 +		print SYSCALL "int $pfunc();\n";
@@ -166,7 +179,7 @@ $NetBSD: patch-av,v 1.3 2011/08/30 10:43:11 christos Exp $
 +	    print "  { $nargs,\t$cat,\t$pfunc,\t\"$name\"\t}, /* $sysnum */\n";
 +	    $sysnum++;
 +	} else {
-+	    warn "bad syscall specification for $sysnum: >$fun[3]<";
++	    warn "bad syscall specification for $sysnum: >$xproto<";
 +	}
 +    } else {
 +	# warn "unregognized line $_";
