@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2153 2011/09/01 12:39:58 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2154 2011/09/01 14:30:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3371,3 +3371,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20110831 [taca 2011-09-01]
 	Updated inputmethod/ibus-table-chinese to 1.3.4 [obache 2011-09-01]
 	Updated www/squidclamav to 6.4 [adam 2011-09-01]
+	Updated textproc/libxml to 1.8.17nb4 [obache 2011-09-01]
