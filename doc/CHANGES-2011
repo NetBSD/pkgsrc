@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2150 2011/09/01 03:45:15 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2151 2011/09/01 04:04:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3368,3 +3368,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/c-icap-modules to 0.1.6 [adam 2011-08-31]
 	Updated comms/p5-Device-XBee-API to 0.4 [dsainty 2011-09-01]
 	Updated net/bind98 to 9.8.1 [taca 2011-09-01]
+	Updated www/contao210-translations to 20110831 [taca 2011-09-01]
