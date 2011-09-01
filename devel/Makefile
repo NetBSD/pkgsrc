@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1489 2011/08/30 09:10:57 abs Exp $
+# $NetBSD: Makefile,v 1.1490 2011/09/01 03:41:07 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1250,6 +1250,7 @@ SUBDIR+=	py-windbg
 SUBDIR+=	py-xdg
 SUBDIR+=	py-zconfig
 SUBDIR+=	python-mode
+SUBDIR+=	pythontidy
 SUBDIR+=	qbzr
 SUBDIR+=	qconf
 SUBDIR+=	qof
