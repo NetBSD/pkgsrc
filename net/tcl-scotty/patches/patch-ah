@@ -1,0 +1,99 @@
+$NetBSD: patch-ah,v 1.1 2011/09/02 08:06:55 he Exp $
+
+Avoid use of _res, since scotty is a pthread-linked program.
+Instead, use the newer resolver interfaces.
+
+--- tnm/generic/tnmDns.c.orig	1997-11-13 11:17:41.000000000 +0000
++++ tnm/generic/tnmDns.c
+@@ -141,6 +141,8 @@ AssocDeleteProc(clientData, interp)
+  *----------------------------------------------------------------------
+  */
+ 
++static struct __res_state rs;
++
+ static void
+ DnsInit(timeout, retries, server)
+     int timeout;
+@@ -150,20 +152,20 @@ DnsInit(timeout, retries, server)
+     static int initialized = 0;
+ 
+     if (! initialized) {
+-	res_init();
+-	_res.options |= RES_RECURSE | RES_DNSRCH | RES_DEFNAMES | RES_AAONLY;
++	res_ninit(&rs);
++	rs.options |= RES_RECURSE | RES_DNSRCH | RES_DEFNAMES | RES_AAONLY;
+ 	initialized = 1;
+-	if (_res.nscount > 0) {
+-	    *server = _res.nsaddr.sin_addr;
++	if (rs.nscount > 0) {
++	    *server = rs.nsaddr.sin_addr;
+ 	}
+ 	if (! server->s_addr) {
+ 	    server->s_addr = htonl(INADDR_LOOPBACK);
+ 	}
+     }
+ 
+-    _res.retrans = timeout;
+-    _res.retry = retries + 1;
+-    _res.nsaddr.sin_addr = *server;
++    rs.retrans = timeout;
++    rs.retry = retries + 1;
++    rs.nsaddr.sin_addr = *server;
+ }
+ 
+ /*
+@@ -248,7 +250,7 @@ DnsDoQuery(query_string, query_type, que
+      * res_mkquery(op, dname, class, type, data, datalen, newrr, buf, buflen) 
+      */
+ 	
+-    qlen = res_mkquery(QUERY, query_string, C_IN, query_type, 
++    qlen = res_nmkquery(&rs, QUERY, query_string, C_IN, query_type, 
+ 		       (u_char *) 0, 0, 0,
+ 		       (u_char *) &query, sizeof(query));
+     if (qlen <= 0) {
+@@ -261,7 +263,7 @@ DnsDoQuery(query_string, query_type, que
+      * res_send(msg, msglen, answer, anslen)
+      */
+ 
+-    alen = res_send((u_char *) &query, qlen, 
++    alen = res_nsend(&rs, (u_char *) &query, qlen, 
+ 		    (u_char *) &answer, sizeof (answer));
+     if (alen <= 0) {
+ 	query_result->n = -1;
+@@ -499,10 +501,10 @@ DnsHaveQuery(query_string, query_type, q
+ 
+         if (i == -1) {
+ 	    strcpy(tmp, query_string);
+-	} else if (! _res.dnsrch[i]) {
++	} else if (! rs.dnsrch[i]) {
+ 	    break;
+ 	} else {
+-	    sprintf(tmp, "%s.%s", query_string, _res.dnsrch[i]);
++	    sprintf(tmp, "%s.%s", query_string, rs.dnsrch[i]);
+ 	}
+ 	
+ 	DnsDoQuery(tmp, query_type, &res);
+@@ -529,10 +531,10 @@ DnsHaveQuery(query_string, query_type, q
+ 
+ 	if (i == -1) {
+ 	    strcpy(tmp, query_string);
+-	} else if (! _res.dnsrch[i]) {
++	} else if (! rs.dnsrch[i]) {
+ 	    break;
+ 	} else {
+-	    sprintf(tmp, "%s.%s", query_string, _res.dnsrch[i]);
++	    sprintf(tmp, "%s.%s", query_string, rs.dnsrch[i]);
+ 	}
+ 	
+ 	DnsDoQuery(tmp, query_type, &res);
+@@ -562,8 +564,8 @@ DnsHaveQuery(query_string, query_type, q
+ 	if (tmpres.type != T_A || tmpres.n <= 0) {
+ 	    return;
+ 	}
+-	_res.nsaddr.sin_addr = tmpres.u.addr[0];
+-	_res.nscount = 1;
++	rs.nsaddr.sin_addr = tmpres.u.addr[0];
++	rs.nscount = 1;
+ 	DnsHaveQuery(query_string, query_type, query_result, depth + 1);
+ 	return;
+     }
