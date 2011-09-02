@@ -1,7 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2001/01/24 18:49:56 he Exp $
+$NetBSD: patch-ad,v 1.3 2011/09/02 08:06:55 he Exp $
 
---- ../tnm/generic/tnmInit.c.orig	Mon Jan 26 16:35:26 1998
-+++ ../tnm/generic/tnmInit.c	Wed Jan 24 19:09:20 2001
+Don't try to include OS version in directory name for mib files.
+
+--- tnm/generic/tnmInit.c.orig	Mon Jan 26 16:35:26 1998
++++ tnm/generic/tnmInit.c	Wed Jan 24 19:09:20 2001
 @@ -83,15 +83,12 @@
  
      machine = Tcl_GetVar2(interp, "tcl_platform", "machine", TCL_GLOBAL_ONLY);
