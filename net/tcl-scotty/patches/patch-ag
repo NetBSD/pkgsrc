@@ -1,7 +1,9 @@
-$NetBSD: patch-ag,v 1.1 2004/07/07 14:39:33 he Exp $
+$NetBSD: patch-ag,v 1.2 2011/09/02 08:06:55 he Exp $
 
---- ../tnm/snmp/straps.c.orig	Tue Mar  9 18:06:10 1999
-+++ ../tnm/snmp/straps.c
+Provide more robustness for the straps helper program.
+
+--- tnm/snmp/straps.c.orig	Tue Mar  9 18:06:10 1999
++++ tnm/snmp/straps.c
 @@ -246,6 +246,17 @@ main(argc, argv)
  #endif
      

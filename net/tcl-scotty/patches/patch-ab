@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
+$NetBSD: patch-ab,v 1.5 2011/09/02 08:06:55 he Exp $
 
---- Makefile.in.orig	2001-06-15 12:06:35.000000000 +0200
-+++ Makefile.in	2005-05-16 18:28:53.000000000 +0200
-@@ -35,13 +35,13 @@
+Put installed files under lib/tcl, so that tcl more easily picks it
+up using e.g. "package require Tnm".
+
+Don't initialize $(LD_SEARCH_FLAGS), fixes PR#30241.
+
+Support DESTDIR installs, but not yet for the "uninstall" target,
+since that's not used in pkgsrc.
+
+--- unix/Makefile.in.orig	2001-06-15 10:06:35.000000000 +0000
++++ unix/Makefile.in
+@@ -35,13 +35,13 @@ LIB_INSTALL_DIR =       $(exec_prefix)/l
  LIB_RUNTIME_DIR =       $(exec_prefix)/lib
  
  # Directory in which to install library files belonging to the extension.
@@ -18,7 +26,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  
  # Top-level directory for manual entries:
  MAN_INSTALL_DIR =	$(prefix)/man
-@@ -82,7 +82,7 @@
+@@ -82,7 +82,7 @@ TCL_EXEC_PREFIX=@TCL_EXEC_PREFIX@
  
  # The full name of the tclsh executable (including the full path
  # and the Tcl version number).
@@ -27,7 +35,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  
  # Top-level directory in which Tk's platform-specific files (e.g.
  # executables) are installed.
-@@ -90,7 +90,7 @@
+@@ -90,7 +90,7 @@ TK_EXEC_PREFIX=@TK_EXEC_PREFIX@
  
  # The full name of the wish executable (including the full path
  # and the Tk version number).
@@ -36,7 +44,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  
  # A "-I" switch that can be used when compiling to make all the
  # Tcl include files accessible (the configure script will try to
-@@ -197,8 +197,8 @@
+@@ -197,8 +197,8 @@ LD_FLAGS = @LD_FLAGS@
  
  # Flags to pass to the compiler to tell the run-time dynamic linker 
  # where to look for shared libraries.
@@ -47,7 +55,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  
  #----------------------------------------------------------------
  # The information below is modified by the configure script when
-@@ -207,8 +207,8 @@
+@@ -207,8 +207,8 @@ LD_SEARCH_FLAGS = @LD_SEARCH_FLAGS@
  #----------------------------------------------------------------
  
  INSTALL =		@INSTALL@
@@ -58,7 +66,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  RPCGEN =		@RPCGEN@
  LEX =			@LEX@
  YACC =			@YACC@
-@@ -244,8 +244,8 @@
+@@ -244,8 +244,8 @@ TKI_LIBRARY_DIR =	$(TKI_DIR)/library
  # either.
  #----------------------------------------------------------------
  
@@ -69,7 +77,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  
  CC_SWITCHES	= $(CFLAGS) $(PROTO_FLAGS) $(SHLIB_CFLAGS) $(MEM_DEBUG_FLAGS)
  
-@@ -261,13 +261,14 @@
+@@ -261,13 +261,14 @@ TNM_GENERIC_SRCS = $(TNM_GENERIC_DIR)/tn
  		$(TNM_GENERIC_DIR)/tnmHttp.c $(TNM_GENERIC_DIR)/tnmNetdb.c \
  		$(UNIX_DIR)/tnmUnixInit.c $(UNIX_DIR)/tnmUnixLog.c \
  		$(UNIX_DIR)/tnmUnixSocket.c $(UNIX_DIR)/tnmUnixIcmp.c
@@ -86,7 +94,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  
  SNMP_SRCS =	$(TNM_SNMP_DIR)/tnmAsn1.c $(TNM_SNMP_DIR)/tnmMD5.c \
  		$(TNM_SNMP_DIR)/tnmSnmpNet.c $(TNM_SNMP_DIR)/tnmSnmpUtil.c \
-@@ -406,21 +407,23 @@
+@@ -406,21 +407,23 @@ TKI_OBJS =	$(TKI_GENERIC_OBJS)
  
  all: @TARGET@
  
@@ -116,40 +124,221 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  
  test:
  	@echo
-@@ -495,7 +498,7 @@
- 	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
+@@ -457,128 +460,135 @@ tki-install: tki-install-bin tki-install
+ install-man:
+ 	@for i in $(MAN_INSTALL_DIR) $(MAN1_INSTALL_DIR) $(MAN8_INSTALL_DIR) $(MANN_INSTALL_DIR) ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+ 	@cd $(TOP_DIR)/doc; for i in *.1; \
+ 	    do \
+ 	    echo "Installing $(TOP_DIR)/doc/$$i"; \
+-	    rm -f $(MAN1_INSTALL_DIR)/$$i; \
++	    rm -f ${DESTDIR}/$(MAN1_INSTALL_DIR)/$$i; \
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+ 		-e 's/%TNM_VERSION%/$(TNM_VERSION)/' \
+ 		-e 's/%TKI_VERSION%/$(TKI_VERSION)/' \
+-		    $$i > $(MAN1_INSTALL_DIR)/$$i; \
+-	    chmod 444 $(MAN1_INSTALL_DIR)/$$i; \
++		    $$i > ${DESTDIR}/$(MAN1_INSTALL_DIR)/$$i; \
++	    chmod 444 ${DESTDIR}/$(MAN1_INSTALL_DIR)/$$i; \
+ 	    done;
+ 	@cd $(TOP_DIR)/doc; for i in *.8; \
+ 	    do \
+ 	    echo "Installing $(TOP_DIR)/doc/$$i"; \
+-	    rm -f $(MAN8_INSTALL_DIR)/$$i; \
++	    rm -f ${DESTDIR}/$(MAN8_INSTALL_DIR)/$$i; \
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+ 		-e 's/%TNM_VERSION%/$(TNM_VERSION)/' \
+ 		-e 's/%TKI_VERSION%/$(TKI_VERSION)/' \
+-		    $$i > $(MAN8_INSTALL_DIR)/$$i; \
+-	    chmod 444 $(MAN8_INSTALL_DIR)/$$i; \
++		    $$i > ${DESTDIR}/$(MAN8_INSTALL_DIR)/$$i; \
++	    chmod 444 ${DESTDIR}/$(MAN8_INSTALL_DIR)/$$i; \
+ 	    done;
+ 	@cd $(TOP_DIR)/doc; for i in *.n; \
+ 	    do \
+ 	    echo "Installing $(TOP_DIR)/doc/$$i"; \
+-	    rm -f $(MANN_INSTALL_DIR)/$$i; \
++	    rm -f ${DESTDIR}/$(MANN_INSTALL_DIR)/$$i; \
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+ 		-e 's/%TNM_VERSION%/$(TNM_VERSION)/' \
+ 		-e 's/%TKI_VERSION%/$(TKI_VERSION)/' \
+-		    $$i > $(MANN_INSTALL_DIR)/$$i; \
+-	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
++		    $$i > ${DESTDIR}/$(MANN_INSTALL_DIR)/$$i; \
++	    chmod 444 ${DESTDIR}/$(MANN_INSTALL_DIR)/$$i; \
  	    done;
  
 -tnm-install-bin: scotty tnm$(SHLIB_SUFFIX)
 +tnm-install-bin: scotty libtnm$(SHLIB_SUFFIX)
  	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TNM_INSTALL_DIR) ; \
  	    do \
- 	    if [ ! -d $$i ] ; then \
-@@ -505,11 +508,10 @@
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
  		else true; \
  		fi; \
  	    done;
 -	@echo "Installing scotty$(TNM_VERSION) and tnm$(TNM_VERSION)$(SHLIB_SUFFIX)"
-+	@echo "Installing scotty$(TNM_VERSION) and libtnm$(SHLIB_SUFFIX)"
- 	@$(INSTALL_PROGRAM) scotty $(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
+-	@$(INSTALL_PROGRAM) scotty $(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
 -	@$(INSTALL_DATA) tnm$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
 -	@chmod 555 $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
 -	@echo 'package ifneeded Tnm $(TNM_VERSION) "load $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)[info sharedlibextension]"' > $(TNM_INSTALL_DIR)/pkgIndex.tcl
-+	@$(INSTALL_DATA) libtnm$(SHLIB_SUFFIX:C/\.so.*/.la/) $(LIB_RUNTIME_DIR)
-+	@echo 'package ifneeded Tnm $(TNM_VERSION) "load $(LIB_RUNTIME_DIR)/libtnm[info sharedlibextension]"' > $(TNM_INSTALL_DIR)/pkgIndex.tcl
++	@echo "Installing scotty$(TNM_VERSION) and libtnm$(SHLIB_SUFFIX)"
++	@$(INSTALL_PROGRAM) scotty ${DESTDIR}/$(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
++	@$(INSTALL_DATA) libtnm$(SHLIB_SUFFIX:C/\.so.*/.la/) ${DESTDIR}/$(LIB_RUNTIME_DIR)
++	@echo 'package ifneeded Tnm $(TNM_VERSION) "load ${DESTDIR}/$(LIB_RUNTIME_DIR)/libtnm[info sharedlibextension]"' > ${DESTDIR}/$(TNM_INSTALL_DIR)/pkgIndex.tcl
  
  tnm-install-mibs:
  	@for i in $(TNM_INSTALL_DIR)/mibs ; \
-@@ -597,7 +599,7 @@
- 	    $(INSTALL_DATA) $$i $(TNM_INSTALL_DIR)/agents; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+ 	@for i in $(TNM_MIB_DIR)/*.mib $(TNM_MIB_DIR)/*.smi $(TNM_MIB_DIR)/*.tc $(TNM_MIB_DIR)/*.gdmo ; \
+             do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(TNM_INSTALL_DIR)/mibs ; \
++	    $(INSTALL_DATA) $$i ${DESTDIR}/$(TNM_INSTALL_DIR)/mibs ; \
+ 	    done
+-	@TCLLIBPATH="$(TNM_INSTALL_DIR) $$TCLLIBPATH"; \
++	@TCLLIBPATH="${DESTDIR}/$(TNM_INSTALL_DIR) $$TCLLIBPATH"; \
+ 	export TCLLIBPATH; \
++	LD_LIBRARY_PATH="${DESTDIR}/${LIB_RUNTIME_DIR}:/usr/lib"; \
++	export LD_LIBRARY_PATH; \
++	TNM_LIBRARY="${DESTDIR}/${TNM_INSTALL_DIR}"; \
++	export TNM_LIBRARY; \
+ 	echo 'foreach f $$tnm(mibs) {puts "Parsing $$f"; mib load $$f}; exit' | \
+ 		./scotty
+ 
+ tnm-install-library:
+ 	@for i in $(TNM_INSTALL_DIR)/library ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+ 	@for i in $(TNM_LIBRARY_DIR)/README $(TNM_LIBRARY) ; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(TNM_INSTALL_DIR)/library; \
++	    $(INSTALL_DATA) $$i ${DESTDIR}/$(TNM_INSTALL_DIR)/library; \
+ 	    done
+-	@TCLLIBPATH="$(TNM_INSTALL_DIR) $$TCLLIBPATH"; \
++	@TCLLIBPATH="${DESTDIR}/$(TNM_INSTALL_DIR) $$TCLLIBPATH"; \
+ 	export TCLLIBPATH; \
+-	echo 'cd $(TNM_INSTALL_DIR)/library; auto_mkindex . *.tcl; exit' | \
++	LD_LIBRARY_PATH="${DESTDIR}/${LIB_RUNTIME_DIR}:/usr/lib"; \
++	export LD_LIBRARY_PATH; \
++	TNM_LIBRARY="${DESTDIR}/${TNM_INSTALL_DIR}"; \
++	export TNM_LIBRARY; \
++	echo 'cd ${DESTDIR}/$(TNM_INSTALL_DIR)/library; auto_mkindex . *.tcl; exit' | \
+ 	    ./scotty
+ 
+ tnm-install-examples:
+ 	@for i in $(TNM_INSTALL_DIR)/examples ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+ 	@for i in $(TNM_EXAMPLES) ; do \
+ 	    echo "Installing $$i"; \
+ 	    base=`basename $$i`; \
+-	    rm -f $(TNM_INSTALL_DIR)/examples/$$base; \
++	    rm -f ${DESTDIR}/$(TNM_INSTALL_DIR)/examples/$$base; \
+ 	    sed -e 's/^exec scotty.*$$/exec scotty$(TNM_VERSION) "$$0" "$$@"/'\
+ 		-e 's+^exec wish.*$$+exec $(TK_WISH) "$$0" "$$@"+'\
+-		    $$i > $(TNM_INSTALL_DIR)/examples/$$base; \
+-	    chmod 755 $(TNM_INSTALL_DIR)/examples/$$base; \
+-	    $(INSTALL_DATA) $$i.n $(TNM_INSTALL_DIR)/examples; \
++		    $$i > ${DESTDIR}/$(TNM_INSTALL_DIR)/examples/$$base; \
++	    chmod 755 ${DESTDIR}/$(TNM_INSTALL_DIR)/examples/$$base; \
++	    $(INSTALL_DATA) $$i.n ${DESTDIR}/$(TNM_INSTALL_DIR)/examples; \
+ 	    done
+ 
+ tnm-install-agents:
+ 	@for i in $(TNM_INSTALL_DIR)/agents ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+@@ -586,74 +596,73 @@ tnm-install-agents:
+ 	    do \
+ 	    echo "Installing $$i"; \
+ 	    base=`basename $$i`; \
+-	    rm -f $(TNM_INSTALL_DIR)/agents/$$base; \
++	    rm -f ${DESTDIR}/$(TNM_INSTALL_DIR)/agents/$$base; \
+ 	    sed -e 's/^exec scotty.*$$/exec scotty$(TNM_VERSION) "$$0" "$$@"/'\
+-		    $$i > $(TNM_INSTALL_DIR)/agents/$$base; \
+-	    chmod 755 $(TNM_INSTALL_DIR)/agents/$$base; \
++		    $$i > ${DESTDIR}/$(TNM_INSTALL_DIR)/agents/$$base; \
++	    chmod 755 ${DESTDIR}/$(TNM_INSTALL_DIR)/agents/$$base; \
+ 	    done
+ 	@for i in $(TNM_AGENTS) $(TNM_AGENT_DIR)/README ; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(TNM_INSTALL_DIR)/agents; \
++	    $(INSTALL_DATA) $$i ${DESTDIR}/$(TNM_INSTALL_DIR)/agents; \
  	    done
  
 -tki-install-bin: tkined tkined$(SHLIB_SUFFIX) $(TKI_LIBRARY_DIR)/pkgIndex.tcl
 +tki-install-bin: tkined libtkined$(SHLIB_SUFFIX) $(TKI_LIBRARY_DIR)/pkgIndex.tcl
  	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TKI_INSTALL_DIR) ; \
  	    do \
- 	    if [ ! -d $$i ] ; then \
-@@ -607,11 +609,10 @@
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
  		else true; \
  		fi; \
  	    done;
@@ -158,14 +347,118 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
 -	@$(INSTALL_DATA) tkined$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
 -	@chmod 555 $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
 -	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)[info sharedlibextension]"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
+-	@$(INSTALL_DATA) $(TKI_DIR)/tkined.defaults $(TKI_INSTALL_DIR)
 +	@echo "Installing tkined$(TKI_VERSION) and libtkined$(SHLIB_SUFFIX)"
-+	$(BSD_INSTALL_SCRIPT) tkined $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
-+	$(INSTALL_DATA) libtkined$(SHLIB_SUFFIX:C/\.so.*/.la/) $(LIB_RUNTIME_DIR)
-+	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/libtkined[info sharedlibextension]"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
- 	@$(INSTALL_DATA) $(TKI_DIR)/tkined.defaults $(TKI_INSTALL_DIR)
++	$(BSD_INSTALL_SCRIPT) tkined ${DESTDIR}/$(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
++	$(INSTALL_DATA) libtkined$(SHLIB_SUFFIX:C/\.so.*/.la/) ${DESTDIR}/$(LIB_RUNTIME_DIR)
++	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/libtkined[info sharedlibextension]"' > ${DESTDIR}/$(TKI_INSTALL_DIR)/pkgIndex.tcl
++	@$(INSTALL_DATA) $(TKI_DIR)/tkined.defaults ${DESTDIR}/$(TKI_INSTALL_DIR)
  
  tki-install-library:
-@@ -696,9 +697,9 @@
+ 	@for i in $(TKI_INSTALL_DIR)/library ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+ 	@for i in $(TKI_LIBRARY) ; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(TKI_INSTALL_DIR)/library; \
++	    $(INSTALL_DATA) $$i ${DESTDIR}/$(TKI_INSTALL_DIR)/library; \
+ 	    done
+-	@$(INSTALL_DATA) $(TKI_LIBRARY_DIR)/pkgIndex.tcl $(TKI_INSTALL_DIR)/library
++	@$(INSTALL_DATA) $(TKI_LIBRARY_DIR)/pkgIndex.tcl ${DESTDIR}/$(TKI_INSTALL_DIR)/library
+ 
+ tki-install-bitmaps:
+ 	@for i in $(TKI_INSTALL_DIR)/bitmaps ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+ 	@for i in $(TKI_DIR)/bitmaps/*.xbm ; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(TKI_INSTALL_DIR)/bitmaps ; \
++	    $(INSTALL_DATA) $$i ${DESTDIR}/$(TKI_INSTALL_DIR)/bitmaps ; \
+ 	    done
+ 
+ tki-install-apps:
+ 	@for i in $(TKI_INSTALL_DIR)/apps ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+@@ -661,44 +670,44 @@ tki-install-apps:
+ 	    do \
+ 	    echo "Installing $$i"; \
+ 	    base=`basename $$i`; \
+-	    rm -f $(TKI_INSTALL_DIR)/apps/$$base; \
++	    rm -f ${DESTDIR}/$(TKI_INSTALL_DIR)/apps/$$base; \
+ 	    sed -e 's/^exec scotty.*$$/exec scotty$(TNM_VERSION) "$$0" "$$@"/'\
+ 		-e 's+^exec wish.*$$+exec $(TK_WISH) "$$0" "$$@"+'\
+-		    $$i > $(TKI_INSTALL_DIR)/apps/$$base; \
+-	    chmod 755 $(TKI_INSTALL_DIR)/apps/$$base; \
++		    $$i > ${DESTDIR}/$(TKI_INSTALL_DIR)/apps/$$base; \
++	    chmod 755 ${DESTDIR}/$(TKI_INSTALL_DIR)/apps/$$base; \
+ 	    done
+ 	@for i in $(TKI_MISC) ; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_DATA) $$i $(TKI_INSTALL_DIR)/apps; \
++	    $(INSTALL_DATA) $$i ${DESTDIR}/$(TKI_INSTALL_DIR)/apps; \
+ 	    done
+-	@TCLLIBPATH="$(TNM_INSTALL_DIR) $$TCLLIBPATH"; \
++	@TCLLIBPATH="${DESTDIR}/$(TNM_INSTALL_DIR) $$TCLLIBPATH"; \
+ 	export TCLLIBPATH; \
+-	echo 'cd $(TKI_INSTALL_DIR)/apps; auto_mkindex . library.tcl; exit' | \
++	echo 'cd ${DESTDIR}/$(TKI_INSTALL_DIR)/apps; auto_mkindex . library.tcl; exit' | \
+ 		$(TCL_TCLSH)
+ 
+ sinstall: ntping straps
+ 	@for i in $(BIN_INSTALL_DIR) ; \
+ 	    do \
+-	    if [ ! -d $$i ] ; then \
+-		echo "Making directory $$i"; \
+-		$(MKDIR) -p $$i; \
+-		chmod 755 $$i; \
++	    if [ ! -d ${DESTDIR}/$$i ] ; then \
++		echo "Making directory ${DESTDIR}/$$i"; \
++		$(MKDIR) -p ${DESTDIR}/$$i; \
++		chmod 755 ${DESTDIR}/$$i; \
+ 		else true; \
+ 		fi; \
+ 	    done;
+ 	@for i in ntping straps ; \
+ 	    do \
+ 	    echo "Installing $$i"; \
+-	    $(INSTALL_PROGRAM) -o root -m 4755 $$i $(BIN_INSTALL_DIR)/$$i; \
++	    $(INSTALL_PROGRAM) -o root -m 4555 $$i ${DESTDIR}/$(BIN_INSTALL_DIR)/$$i; \
+ 	    done
+ 
  uninstall: tnm-uninstall uninstall-man tki-uninstall
  
  tnm-uninstall:
@@ -177,7 +470,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  	@for i in $(LIB_INSTALL_DIR)/tnm$(TNM_VERSION)/* ; \
  	    do \
  	    if [ "`basename $$i`" != "site" ] ; then \
-@@ -713,9 +714,9 @@
+@@ -713,9 +722,9 @@ tnm-uninstall:
  	    fi
  
  tki-uninstall:
@@ -189,7 +482,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  	@for i in $(LIB_INSTALL_DIR)/tkined$(TKI_VERSION)/* ; \
  	    do \
  	    if [ "`basename $$i`" != "site" ] ; then \
-@@ -750,7 +751,7 @@
+@@ -750,7 +759,7 @@ clean:
  	@rm -f $(TNM_OBJS) $(TKI_OBJS) scotty.o ntping.o straps.o
  	@rm -f tnmGdmoScan.c tnmGdmoParser.c tnmGdmoParser.h
  	@rm -f scotty ntping straps tkined
@@ -198,7 +491,7 @@ $NetBSD: patch-ab,v 1.4 2005/05/17 06:26:40 veego Exp $
  	@rm -f core *_svc.c *~ *.bak so_locations lmake.???
  	@rm -f map.so tnmMap.o tnmMapUtil.o 
  	@rm -f tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
-@@ -821,8 +822,8 @@
+@@ -821,8 +830,8 @@ BIN_FILES =	$(BIN_INSTALL_DIR)/tkined$(T
  		$(MAN8_INSTALL_DIR)/straps.8 \
  		$(BIN_INSTALL_DIR)/ntping \
  		$(MAN8_INSTALL_DIR)/ntping.8 \
