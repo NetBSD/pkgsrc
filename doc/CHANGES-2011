@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2159 2011/09/03 15:25:37 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2160 2011/09/03 15:39:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3378,3 +3378,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/lsof to 4.84 [christos 2011-09-03]
 	Updated mail/postfix to 2.8.5 [taca 2011-09-03]
 	Updated graphics/giflib to 4.1.6nb1 [obache 2011-09-03]
+	Updated www/contao29 to 2.9.5nb2 [taca 2011-09-03]
