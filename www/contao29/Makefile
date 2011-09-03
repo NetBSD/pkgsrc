@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2011/08/12 12:50:36 taca Exp $
+# $NetBSD: Makefile,v 1.15 2011/09/03 15:38:36 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -25,7 +25,7 @@ CT_VERS=	29
 USE_TOOLS=	pax
 NO_BUILD=	yes
 
-EG_FILES=	config.php countries.php dcaconfig.php editArea.php \
+EG_CONFIG=	config.php countries.php dcaconfig.php editArea.php \
 		fancyUpload.php initconfig.php langconfig.php languages.php \
 		tcpdf.php timezones.php tinyFlash.php tinyMCE.php tinyNews.php
 EG_DATA=	${WWW_EG_FILES} system/config tl_files
