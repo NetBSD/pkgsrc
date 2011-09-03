@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
+$NetBSD: patch-ae,v 1.15 2011/09/03 08:52:59 obache Exp $
 
 --- configure.orig	2005-12-16 22:40:30.000000000 +0000
 +++ configure
@@ -76,7 +76,32 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
-@@ -2418,7 +2418,7 @@ EOF
+@@ -1418,12 +1418,22 @@ runMake()
+ CheckForCXXRuntime()
+ {
+ cat>t.c++<<EOF
++#include <iostream>
++int main(){ std::cout << "Hello World!" << std::endl; return 0;}
++EOF
++    runMake t "t:; \${C++F} \${C++FILE} t.c++${MAKECXXOVERRIDE}" || return $?
++    Note "Looks like the system has a CXX runtime"
++}
++CheckForDeprecatedCXXRuntime()
++{
++cat>t.c++<<EOF
+ #include "iostream.h"
+ int main(){ cout << "Hello World!" << endl; return 0;}
+ EOF
+-    runMake t "t:; \${C++F} \${C++FILE} t.c++${MAKECXXOVERRIDE}"
++    runMake t "t:; \${C++F} \${C++FILE} t.c++${MAKECXXOVERRIDE}" || return $?
++    Note "Looks like the system has a CXX runtime with deprecated headers"
+ }
+-CheckForCXXRuntime || {
++CheckForCXXRuntime || CheckForDeprecatedCXXRuntime || {
+     cat 1>&2 <<EOF
+ 
+ Missing C++ runtime support for $CXX ($CXXCOMPILER).
+@@ -2418,7 +2428,7 @@ EOF
  	if [ ${header_ver} -ge 19960307 ]; then
  	    case ${lib_ver} in
  		3.4)		tiff_runlen_t="uint16" ;;
@@ -85,7 +110,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  	    esac
  	fi
      else
-@@ -3145,13 +3145,7 @@ main()
+@@ -3145,13 +3155,7 @@ main()
          printf("old include files: version %u\n", ZLIB_VERSION);
          exit(-1);
      }
@@ -99,7 +124,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  }
  EOF
  capture cat t.c
-@@ -3213,7 +3207,7 @@ Note "Checking TIFF support."
+@@ -3213,7 +3217,7 @@ Note "Checking TIFF support."
  # Location of TIFF binaries
  #
  if [ -z "$TIFFBIN" ]; then
@@ -108,7 +133,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
      for i in $DIRS; do
          test -x $i/tiff2ps && { TIFFBIN=$i; break; }
      done
-@@ -3722,6 +3716,7 @@ if [ -z "$FAXGID" ]; then
+@@ -3722,6 +3726,7 @@ if [ -z "$FAXGID" ]; then
      *-bsdi*)	FAXGID=uucp;;
      *freebsd2.1*) FAXGID=uucp; break;; # Not sure when this changed..
      *bsd*)	FAXGID=dialer;;
@@ -116,7 +141,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
      *-hpux*)	FAXGID=sys;;
      *-irix*)	FAXGID=nuucp;;
      *-isc*)	FAXGID=uucp;;
-@@ -3750,6 +3745,7 @@ if [ -z "$SYSGID" ]; then
+@@ -3750,6 +3755,7 @@ if [ -z "$SYSGID" ]; then
      *-aix*)	SYSGID=sys;;
      *netbsd*)	SYSGID=wheel;;
      *bsd*)	SYSGID=bin;;
@@ -124,7 +149,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
      *-hpux*)	SYSGID=bin;;
      *-irix*)	SYSGID=sys;;
      *-isc*)	SYSGID=sys;;
-@@ -3794,6 +3790,7 @@ fi
+@@ -3794,6 +3800,7 @@ fi
  if [ "$GETTY" = auto ]; then
      case $TARGET in
      *bsd*)	GETTY=BSD;;
@@ -132,7 +157,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
      *-sunos*)	GETTY=BSD;;
      *-ultrix*)	GETTY=BSD;;
      *darwin*)   GETTY=BSD;;
-@@ -3836,7 +3833,7 @@ fi
+@@ -3836,7 +3843,7 @@ fi
  if [ -z "$PATH_VGETTY" ]; then
      PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_VGETTY" ]; then
@@ -141,7 +166,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
      else
  	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
-@@ -3849,7 +3846,7 @@ fi
+@@ -3849,7 +3856,7 @@ fi
  if [ -z "$PATH_EGETTY" ]; then
      PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_EGETTY" ]; then
@@ -150,7 +175,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  	Note "WARNING, no egetty program found, using $PATH_EGETTY."
      else
  	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
-@@ -3871,6 +3868,7 @@ if [ "$LOCKS" = auto ]; then
+@@ -3871,6 +3878,7 @@ if [ "$LOCKS" = auto ]; then
      *-sysv5*)	LOCKS="+ascii";;
      *-solaris*)	LOCKS="+ascii";;
      *-freebsd*)	LOCKS=ascii;;
@@ -158,7 +183,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
      *-netbsd*)	LOCKS=ascii;;
      *bsd*)	LOCKS=binary;;
      *)		LOCKS=ascii;;
-@@ -3920,6 +3918,7 @@ PickRIP()
+@@ -3920,6 +3928,7 @@ PickRIP()
  {
      if [ -z "$PATH_GSRIP" ]; then
  	GSLOCS="
@@ -166,7 +191,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  	    /usr/local/bin/gs
  	    /usr/contrib/bin/gs
  	    /usr/gnu/bin/gs
-@@ -3967,7 +3966,7 @@ fax software to operate correctly.  See 
+@@ -3967,7 +3976,7 @@ fax software to operate correctly.  See 
  on building Ghostscript with the necessary TIFF driver.
  
  EOF
@@ -175,7 +200,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  	PATH_GSRIP=$PATH_PSRIP
      fi
  }
-@@ -4034,9 +4033,9 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4034,9 +4043,9 @@ if [ -z "$PATH_AFM" ]; then
      else
          DIR_AFMS="
  	    /usr/lib/afm
@@ -188,7 +213,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  	    /usr/share/ghostscript/fonts
  	    /usr/gnu/lib/ghostscript/fonts
  	    /opt/gnu/lib/ghostscript/fonts
-@@ -4056,7 +4055,7 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4056,7 +4065,7 @@ if [ -z "$PATH_AFM" ]; then
  fi
  if [ -z "$PATH_AFM" ]; then
      # put it where ghostscript normally puts things
@@ -197,7 +222,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
      Note "WARNING, could not locate a directory with font metric information,"
      Note "guessing that font metric information goes in $PATH_AFM."
  else
-@@ -4075,7 +4074,7 @@ fi
+@@ -4075,7 +4084,7 @@ fi
  #
  if [ -z "$DIR_MAN" ]; then
      MANPATH="
@@ -206,7 +231,7 @@ $NetBSD: patch-ae,v 1.14 2009/08/27 17:09:55 wiz Exp $
  	/usr/local/man
  	/usr/contrib/man
  	/usr/catman/local
-@@ -4084,43 +4083,11 @@ if [ -z "$DIR_MAN" ]; then
+@@ -4084,43 +4093,11 @@ if [ -z "$DIR_MAN" ]; then
      for i in $MANPATH; do
  	test -d $i && { DIR_MAN=$i; break; }
      done
