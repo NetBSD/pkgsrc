@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2009/02/10 00:01:55 joerg Exp $
+$NetBSD: patch-ab,v 1.7 2011/09/03 21:45:03 dholland Exp $
 
---- Makefile.in.orig	2004-10-12 00:25:19.000000000 +0200
-+++ Makefile.in
+--- nulib2-203/Makefile.in.orig	2004-10-12 00:25:19.000000000 +0200
++++ nulib2-203/Makefile.in
 @@ -69,14 +69,18 @@ LIB_PRODUCT	= libnufx.a
  # Build stuff
  #
