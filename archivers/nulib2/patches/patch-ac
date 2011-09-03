@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2004/11/29 04:50:35 tv Exp $
+$NetBSD: patch-ac,v 1.5 2011/09/03 21:45:03 dholland Exp $
 
---- ../nufxlib-203/Makefile.in.orig	Mon May 22 20:15:37 2000
-+++ ../nufxlib-203/Makefile.in
+--- nufxlib-203/Makefile.in.orig	Mon May 22 20:15:37 2000
++++ nufxlib-203/Makefile.in
 @@ -88,10 +88,10 @@
  # The build date is approximate, the build flags are accurate so long
  # as they were changed by touching the makefile.
