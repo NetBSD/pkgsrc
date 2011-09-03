@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2155 2011/09/02 08:07:38 he Exp $
+$NetBSD: CHANGES-2011,v 1.2156 2011/09/03 10:34:11 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3373,3 +3373,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/squidclamav to 6.4 [adam 2011-09-01]
 	Updated textproc/libxml to 1.8.17nb4 [obache 2011-09-01]
 	Updated net/tcl-scotty to 2.1.11nb5 [he 2011-09-02]
+	Updated net/wpa_supplicant to 0.7.3 [shattered 2011-09-02]
+	Updated net/wpa_gui to 0.7.3 [shattered 2011-09-02]
