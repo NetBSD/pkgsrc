@@ -1,0 +1,9 @@
+Lightweight connection pooler for PostgreSQL that provides
+the following features:
+
+ * Several levels of brutality when rotating connections.
+ * Low memory requirements.
+ * It is not tied to one backend server, the destination databases
+   can reside on different hosts.
+ * Supports online reconfiguration for most of the settings.
+ * Supports online restart/upgrade.
