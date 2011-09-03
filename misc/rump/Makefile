@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/11/16 15:29:57 stacktic Exp $
+# $NetBSD: Makefile,v 1.15 2011/09/03 20:35:48 alnsn Exp $
 #
 
 DISTNAME=		rump_20091108
@@ -70,4 +70,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/libukfs/ukfs.h \
 		${DESTDIR}${PREFIX}/include/rump
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
