@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2011/06/20 10:19:54 tron Exp $
+# $NetBSD: Makefile,v 1.111 2011/09/03 12:32:32 christos Exp $
 
-DISTNAME=		lsof_4.83
+DISTNAME=		lsof_4.84
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		sysutils
 PKGREVISION=		1
