@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.2 2011/09/03 21:39:09 dholland Exp $
+$NetBSD: patch-ae,v 1.3 2011/09/03 21:45:03 dholland Exp $
 
 - don't declare "kNufxLibName" extern as it's file-static in one source file
 - fix gcc/C99 inline mess
 
---- ../nufxlib-203/NufxLibPriv.h.orig	2004-03-10 21:05:39.000000000 +0000
-+++ ../nufxlib-203/NufxLibPriv.h
+--- nufxlib-203/NufxLibPriv.h.orig	2004-03-10 21:05:39.000000000 +0000
++++ nufxlib-203/NufxLibPriv.h
 @@ -557,7 +557,11 @@ ushort Nu_CalcCRC16(ushort seed, const u
  #ifdef __Crc16_c__      /* just doing "static inline" warns def-but-not-used */
   #define CRC_INLINE /**/
