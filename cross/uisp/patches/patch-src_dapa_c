@@ -1,0 +1,15 @@
+$NetBSD: patch-src_dapa_c,v 1.1 2011/09/03 21:59:18 dholland Exp $
+
+Use toupper correctly. (clang complains and fails the build)
+
+--- src/DAPA.C~	2004-02-07 18:54:06.000000000 +0000
++++ src/DAPA.C
+@@ -1128,7 +1128,7 @@ TDAPA::TDAPA(): 
+       strncpy(temp, val, MAXLINESIZE-1);
+       temp[MAXLINESIZE-1] = '\0';
+       for (p=temp; *p; p++)
+-        *p=toupper(*p);
++        *p=toupper((unsigned char)*p);
+       Info(3, "Inverting %s\n",temp);
+       if (strstr(temp,"SCK"))
+         sck_invert=1;
