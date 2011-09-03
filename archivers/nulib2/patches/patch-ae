@@ -1,8 +1,23 @@
-$NetBSD: patch-ae,v 1.1 2005/10/31 05:34:07 minskim Exp $
+$NetBSD: patch-ae,v 1.2 2011/09/03 21:39:09 dholland Exp $
 
---- ../nufxlib-203/NufxLibPriv.h.orig	2004-03-10 13:05:39.000000000 -0800
+- don't declare "kNufxLibName" extern as it's file-static in one source file
+- fix gcc/C99 inline mess
+
+--- ../nufxlib-203/NufxLibPriv.h.orig	2004-03-10 21:05:39.000000000 +0000
 +++ ../nufxlib-203/NufxLibPriv.h
-@@ -673,7 +673,6 @@ NuError Nu_ExpandLZW(NuArchive* pArchive
+@@ -557,7 +557,11 @@ ushort Nu_CalcCRC16(ushort seed, const u
+ #ifdef __Crc16_c__      /* just doing "static inline" warns def-but-not-used */
+  #define CRC_INLINE /**/
+ #else
++#if defined(__GNUC__) && !defined(__GNUC_STDC_INLINE__)
+  #define CRC_INLINE extern inline
++#else
++ #define CRC_INLINE inline
++#endif
+ #endif
+ #if defined(inline) && !defined(__Crc16_c__)    /* somebody ovrd inline def? */
+ ushort Nu_UpdateCRC16(uchar val, ushort crc);
+@@ -673,7 +677,6 @@ NuError Nu_ExpandLZW(NuArchive* pArchive
      const NuThread* pThread, FILE* infp, NuFunnel* pFunnel, ushort* pThreadCrc);
  
  /* MiscUtils.c */
@@ -10,3 +25,15 @@ $NetBSD: patch-ae,v 1.1 2005/10/31 05:34:07 minskim Exp $
  extern NuCallback gNuGlobalErrorMessageHandler;
  const char* Nu_StrError(NuError err);
  void Nu_ReportError(NuArchive* pArchive, const char* file, int line,
+@@ -811,7 +814,11 @@ NuError Nu_ExpandHuffmanSQ(NuArchive* pA
+ #ifdef __Thread_c__
+  #define THREAD_INLINE  /**/
+ #else
++#if defined(__GNUC__) && !defined(__GNUC_STDC_INLINE__)
+  #define THREAD_INLINE extern inline
++#else
++ #define THREAD_INLINE inline
++#endif
+ #endif
+ #if defined(inline) && !defined(__Thread_c__)   /* somebody ovrd inline def? */
+ NuThread* Nu_GetThread(const NuRecord* pRecord, int idx);
