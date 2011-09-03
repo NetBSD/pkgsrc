@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2005/10/31 05:34:07 minskim Exp $
+$NetBSD: patch-af,v 1.2 2011/09/03 21:45:03 dholland Exp $
 
---- ../nufxlib-203/SysDefs.h.orig	2004-03-10 13:05:51.000000000 -0800
-+++ ../nufxlib-203/SysDefs.h
+--- nufxlib-203/SysDefs.h.orig	2004-03-10 13:05:51.000000000 -0800
++++ nufxlib-203/SysDefs.h
 @@ -108,7 +108,6 @@
  #endif
  
