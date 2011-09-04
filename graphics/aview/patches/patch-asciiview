@@ -1,0 +1,51 @@
+$NetBSD: patch-asciiview,v 1.1 2011/09/04 08:54:03 obache Exp $
+
+* CVE-2008-4935
+* some space-in-the-path fixes
+
+--- asciiview.orig	2011-09-02 14:12:10.000000000 +0000
++++ asciiview
+@@ -3,13 +3,13 @@
+ clear()
+ {
+   kill $! 2>/dev/null
+-  rm -f /tmp/aview$$.pgm 2>/dev/null
++  rm -rf $tmpdir 2>/dev/null
+ }
+ myconvert()
+ {
+-   if anytopnm $1 >/tmp/aview$$.pgm 2>/dev/null ; then
++   if anytopnm "$1" > "$2" 2>/dev/null ; then
+      exit
+-   elif convert -colorspace gray $1 pgm:- 2>/dev/null ; then
++   elif convert -colorspace gray "$1" pgm:- 2>/dev/null ; then
+      exit
+    fi
+    echo "Failed to convert file format to PNM by both convert and anytopnm" >&2
+@@ -51,20 +51,21 @@ while [ "$1" != "" ]; do
+   esac
+ done
+ trap clear 0
+-mkfifo /tmp/aview$$.pgm
+-outfile=/tmp/aview$$.pgm
++tmpdir=`mktemp -d -t aview.XXXXXX`
++outfile=$tmpdir/aview.pgm
++mkfifo $outfile
+ for name in $filenames ; do
+ if test -r $name ; then
+ case $name in
+ *.fli | *.lfc | *.flic )
+   PATH="$PATH:."
+-  aaflip $options $name
++  aaflip $options "$name"
+   ;;
+ *)
+-  myconvert $name >/tmp/aview$$.pgm &
++  myconvert "$name" "$outfile" >"$outfile" &
+   pid=$!
+   PATH="$PATH:."
+-  aview  $options /tmp/aview$$.pgm
++  aview  $options $outfile
+   kill $pid 2>/dev/null
+ esac
+ else
