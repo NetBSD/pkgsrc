@@ -1,0 +1,39 @@
+$NetBSD: patch-cdrom__sgi_c,v 1.1 2011/09/04 22:05:39 dholland Exp $
+
+- needs stdlib.h
+- use calloc properly
+
+--- cdrom_sgi.c~	1993-01-12 18:59:51.000000000 +0000
++++ cdrom_sgi.c
+@@ -26,6 +26,7 @@ static int c;
+ # include <mntent.h>
+ # include <string.h>
+ # include <signal.h>
++# include <stdlib.h>
+ 
+ # include <sys/buf.h>
+ 
+@@ -1075,10 +1076,9 @@ unsigned short *
+ ushort_malloc(n)
+ 	int		n;
+ {
+-	extern char	*calloc();
+ 	unsigned short	*ptr;
+ 
+-	ptr = (unsigned short *) calloc(n, sizeof(unsigned short));
++	ptr = calloc(n, sizeof(unsigned short));
+ 	if (ptr == NULL) {
+ 		perror("calloc");
+ 		exit(1);
+@@ -1091,10 +1091,9 @@ struct msf *
+ msf_malloc(n)
+ 	int		n;
+ {
+-	extern char	*calloc();
+ 	struct msf	*ptr;
+ 
+-	ptr = (struct msf *) calloc(n, sizeof(struct msf));
++	ptr = calloc(n, sizeof(struct msf));
+ 	if (ptr == NULL) {
+ 		perror("calloc");
+ 		exit(1);
