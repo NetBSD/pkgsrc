@@ -1,0 +1,14 @@
+$NetBSD: patch-player_h,v 1.1 2011/09/04 21:04:57 dholland Exp $
+
+- add prototypes for a couple of the external functions now that they
+  have a defined return type.
+
+--- player.h~	2001-06-24 14:10:51.000000000 +0000
++++ player.h
+@@ -92,3 +92,6 @@ struct Cdb
+ 
+ 	struct Hdb *hw;
+ };
++
++void TfmxInit(void);
++void Startsong(int song, int mode);
