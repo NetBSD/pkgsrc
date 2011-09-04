@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2172 2011/09/04 19:24:19 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.2173 2011/09/04 19:50:37 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3401,3 +3401,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-rdoc to 3.9.4 [taca 2011-09-04]
 	Updated misc/rubygems to 1.8.10 [taca 2011-09-04]
 	Updated net/Transmission to 2.33 [tnn 2011-09-04]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.7 [tnn 2011-09-04]
