@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.72 2011/08/15 07:35:18 wiz Exp $
+$NetBSD: distinfo,v 1.73 2011/09/04 14:34:52 joerg Exp $
 
 SHA1 (xine-lib-1.1.19.tar.bz2) = 5afcc28c5cf2bdaab99d951960f6587797e1e5a0
 RMD160 (xine-lib-1.1.19.tar.bz2) = 84999c43d3cc115c3bda4b2e06089dc827c646cc
@@ -21,3 +21,21 @@ SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
 SHA1 (patch-ga) = c4770b6be12bbc4dd72f8299f3b0bbf92546cc68
 SHA1 (patch-gb) = 569539c868711a004740f40d1c48d30eb9e0399f
 SHA1 (patch-input_dvb.c) = 37aa191dca0df058dc09477624ff76dbc3a2f9b9
+SHA1 (patch-src-demuxers-demux_qt.c) = 2942911c09c0580c6017474af2a14f5b1f193c1d
+SHA1 (patch-src-post-audio-stretch.c) = bc083541c410e8b8c2b5c23bc7b2b0ae312272a5
+SHA1 (patch-src-post-audio-upmix.c) = ab01e157b42b8dd99622a17b5a8ecdb464ee694e
+SHA1 (patch-src-post-audio-upmix_mono.c) = 182a73985d6158c5ab2409bc372b302d3385320e
+SHA1 (patch-src-post-audio-volnorm.c) = 49d9bd437d240ddf2a14275d518469313cb29a0c
+SHA1 (patch-src-post-deinterlace-xine_plugin.c) = 132554aa9bdc43fbe9e7dc42fee5916cb60be806
+SHA1 (patch-src-post-goom-mmx.h) = 09b82b9e1fae57afb385daa1cd3bb265fd680a1d
+SHA1 (patch-src-post-mosaico-mosaico.c) = f26e6ccc60c78a499d2bd0fd8f3d4c2f4efffde8
+SHA1 (patch-src-post-mosaico-switch.c) = 11dd1ec387c298693fc82feba1f16a316648e580
+SHA1 (patch-src-post-planar-boxblur.c) = 1bcaec011aaf581394ad42c9ff324ec0a3d28ecb
+SHA1 (patch-src-post-planar-denoise3d.c) = 05059a1864278f749a5796661075db522c2e202c
+SHA1 (patch-src-post-planar-eq.c) = 85f6f72bc5fbc52f0ae48751b20fb100d5d6f27b
+SHA1 (patch-src-post-planar-eq2.c) = 7d2bab3cfc0d7d03c84e48985c2c55ebf1582126
+SHA1 (patch-src-post-planar-expand.c) = 7c532feeae4078f40d6f9a28dfa207e5cbee60a1
+SHA1 (patch-src-post-planar-noise.c) = b3baf82e150ca9a27e73753398c18839066748f1
+SHA1 (patch-src-post-planar-pp.c) = 147dc05a09ff851af99c488112c6a77926ae5afb
+SHA1 (patch-src-post-planar-unsharp.c) = 964ec33c8c3cfcc8783b5fae1093c8fba76ff2a9
+SHA1 (patch-src-xine-engine-post.h) = 9a768aa3558bcde6f382f6945758a969f669338c
