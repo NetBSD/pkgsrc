@@ -1,4 +1,8 @@
-$NetBSD: patch-bb,v 1.2 2005/12/11 20:35:41 joerg Exp $
+$NetBSD: patch-bb,v 1.3 2011/09/04 22:25:36 dholland Exp $
+
+- initialize errfp (but why twice?)
+- fix void main
+- pass the XtAppContext to widget.c, which now needs it
 
 --- main.c.orig	1996-11-07 16:01:43.000000000 +0000
 +++ main.c
@@ -11,6 +15,15 @@ $NetBSD: patch-bb,v 1.2 2005/12/11 20:35:41 joerg Exp $
  
  
  /***********************
+@@ -95,7 +95,7 @@ usage(int argc, char **argv)
+  * main
+  *	The main function
+  */
+-void
++int
+ main(int argc, char **argv)
+ {
+ 	XtAppContext	app;
 @@ -103,6 +103,7 @@ main(int argc, char **argv)
  
  	/* Initialize variables */
