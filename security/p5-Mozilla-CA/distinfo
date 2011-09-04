@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/04 04:39:42 hiramatsu Exp $
+
+SHA1 (Mozilla-CA-20110409.tar.gz) = 0aa37930b8be113590aa6f5bd12a7a650c7eea37
+RMD160 (Mozilla-CA-20110409.tar.gz) = 4fb0e67859df36d27548052854455975f95657b2
+Size (Mozilla-CA-20110409.tar.gz) = 134272 bytes
