@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.25 2011/05/05 12:37:07 adam Exp $
+# $NetBSD: Makefile.common,v 1.26 2011/09/04 15:42:51 adam Exp $
 # used by x11/qt4-libs/Makefile.common
 # used by x11/qt4-tools/Makefile
 
-QTVERSION=	4.7.3
+QTVERSION=	4.7.4
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qt.nokia.com/

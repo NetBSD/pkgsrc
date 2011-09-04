@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2011/06/10 09:40:04 obache Exp $
+# $NetBSD: Makefile,v 1.20 2011/09/04 15:42:52 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-sqlite3-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	QT sqlite3 driver
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include
