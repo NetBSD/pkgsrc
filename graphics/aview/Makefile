@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.25 2011/01/13 13:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/09/04 08:54:02 obache Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
 PKGNAME=	aview-1.3.0.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 
 MAINTAINER=	salo@Xtrmntr.org
 HOMEPAGE=	http://aa-project.sourceforge.net/aview/
 COMMENT=	ASCII Art image viewer
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -20,6 +21,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 WRKSRC=		${WRKDIR}/aview-1.3.0
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	mktemp:run
 
 .include "../../mk/bsd.prefs.mk"
 
