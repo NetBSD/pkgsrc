@@ -1,18 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2005/07/30 11:30:03 grant Exp $
+$NetBSD: patch-aa,v 1.3 2011/09/04 21:20:06 dholland Exp $
 
 these patches correct invalid C code that declares variables after statements.
 
 --- psycho_3.c.orig	2003-03-01 20:35:14.000000000 +1100
 +++ psycho_3.c
-@@ -22,7 +22,7 @@
- 
- /* Keep a table to fudge the adding of dB */
- #define DBTAB 1000
--static double dbtable[DBTAB];
-+double dbtable[DBTAB];
- 
- #define CRITBANDMAX 32 /* this is much higher than it needs to be. really only about 24 */
- int cbands=0; /* How many critical bands there really are */
 @@ -133,8 +133,8 @@ void psycho_3_fft(FLOAT sample[BLKSIZE],
    static FLOAT *window;
  
