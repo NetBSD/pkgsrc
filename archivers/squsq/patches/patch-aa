@@ -1,8 +1,37 @@
-$NetBSD: patch-aa,v 1.1 2001/09/15 21:44:45 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2011/09/04 01:22:04 dholland Exp $
 
---- usq.c.orig	Sun Jan 17 01:54:04 1988
+Fix function return types.
+Fix invalid cpp usage.
+
+--- usq.c.orig	1988-01-17 00:54:04.000000000 +0000
 +++ usq.c
-@@ -215,7 +215,7 @@
+@@ -62,6 +62,9 @@
+ 
+ #define VERSION "3.3   10/29/86"
+ 
++void obey(char *p);
++void unsqueeze(char *infile);
++
+ /* This must follow all include files */
+ unsigned int dispcnt;	/* How much of each file to preview */
+ char	ffflag;		/* should formfeed separate preview from different files */
+@@ -107,6 +110,7 @@ char *argv[];
+ 
+ /* ejecteject */
+ 
++void
+ obey(p)
+ char *p;
+ {
+@@ -153,6 +157,7 @@ char *p;
+ 
+ /* ejecteject */
+ 
++void
+ unsqueeze(infile)
+ char *infile;
+ {
+@@ -215,7 +220,7 @@ char *infile;
  		goto closein;
  	}
  
@@ -11,7 +40,7 @@ $NetBSD: patch-aa,v 1.1 2001/09/15 21:44:45 wiz Exp $
  	filecrc = getx16(inbuff);
  #else
  	filecrc = getw16(inbuff);
-@@ -239,7 +239,7 @@
+@@ -239,7 +244,7 @@ char *infile;
  	printf("%s -> %s: ", infile, outfile);
  #endif
  
