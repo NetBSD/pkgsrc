@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2011/09/04 23:41:52 dholland Exp $
+
+Fix test program; implicit int return type is not valid in C++.
+
+--- configure~	1999-03-19 21:04:21.000000000 +0000
++++ configure
+@@ -818,7 +818,7 @@ cross_compiling=$ac_cv_prog_cxx_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 820 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:824: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cxx_works=yes
