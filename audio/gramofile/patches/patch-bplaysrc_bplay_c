@@ -1,0 +1,15 @@
+$NetBSD: patch-bplaysrc_bplay_c,v 1.1 2011/09/04 01:42:25 dholland Exp $
+
+- fix void main
+
+--- bplaysrc/bplay.c~	2000-03-27 21:42:02.000000000 +0000
++++ bplaysrc/bplay.c
+@@ -91,7 +91,7 @@ extern void initsems(int disks, int snds
+ extern void cleanupsems(void);
+ 
+ 
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+ 	
+ 	int recorder = 0;		/* 1 if recording, 0 else */
