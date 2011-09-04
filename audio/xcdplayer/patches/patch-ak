@@ -1,13 +1,18 @@
-$NetBSD: patch-ak,v 1.4 2005/12/11 20:48:46 joerg Exp $
+$NetBSD: patch-ak,v 1.5 2011/09/04 22:05:39 dholland Exp $
 
---- program.c.orig	Tue Jan 12 19:59:49 1993
-+++ program.c	Mon Sep  6 18:37:05 1999
+- needs stdlib.h, not malloc.h
+- support BSD cdroms
+- move function "prototypes" outside of functions
+- use malloc properly
+
+--- program.c.orig	1993-01-12 18:59:49.000000000 +0000
++++ program.c
 @@ -27,10 +27,13 @@
  
  # include <stdio.h>
  # include <string.h>
 -# include <malloc.h>
-+# include <sys/malloc.h>
++# include <stdlib.h>
  
  # include "debug.h"
  # include "cdrom_globs.h"
@@ -17,7 +22,7 @@ $NetBSD: patch-ak,v 1.4 2005/12/11 20:48:46 joerg Exp $
  #ifdef sun
  # include "cdrom_sun.h"
  #endif
-@@ -52,6 +55,15 @@
+@@ -52,6 +55,15 @@ static	Widget	new_track_button;
  static	Boolean	adding_to_new_track = False;
  static	struct	prognode *current_node = NULL;
  
@@ -33,11 +38,10 @@ $NetBSD: patch-ak,v 1.4 2005/12/11 20:48:46 joerg Exp $
  void
  program_form_setup (parent_widget)
  	Widget	parent_widget;
-@@ -66,15 +78,6 @@
- 	Widget	cancel_button;
+@@ -67,15 +79,6 @@ program_form_setup (parent_widget)
  	Widget	save_button;
  	Widget	all_button;
--
+ 
 -	extern	void	cb_move_program_ptr();
 -	extern	void	cb_clear_program();
 -	extern	void	cb_cancel_program();
@@ -46,6 +50,34 @@ $NetBSD: patch-ak,v 1.4 2005/12/11 20:48:46 joerg Exp $
 -	extern	void	cb_add_10();
 -	extern	void	cb_new_track();
 -	extern	void	cb_program_all();
- 
+-
  	/* 
  	 * create program form as a non-managed widget, because this 
+ 	 * form "pops up" when requested, as part of the main form, and
+@@ -291,7 +294,7 @@ unsigned char	track;
+ 
+ 	if (cdi.program == NULL)
+ 	{
+-	    new = (struct prognode *) malloc(sizeof(struct prognode));
++	    new = malloc(sizeof(struct prognode));
+ 	    new->track = track;
+ 	    new->next = NULL;
+ 	    new->prev = NULL;
+@@ -304,7 +307,7 @@ unsigned char	track;
+ 
+ 	else if (current_node == NULL) /* pre-insert */
+ 	{
+-	    new = (struct prognode *) malloc(sizeof(struct prognode));
++	    new = malloc(sizeof(struct prognode));
+             new->track = track;
+             new->next = cdi.program;
+             new->prev = NULL;
+@@ -327,7 +330,7 @@ unsigned char	track;
+ 		   (insert_point != current_node))
+ 		 insert_point = insert_point->next;
+ 
+-	    new = (struct prognode *) malloc(sizeof(struct prognode));
++	    new = malloc(sizeof(struct prognode));
+ 	    new->track = track;
+ 	    new->next = insert_point->next;
+ 	    new->prev = insert_point;

@@ -1,4 +1,4 @@
-/* $NetBSD: cdrom_freebsd.c,v 1.6 2005/12/11 20:48:46 joerg Exp $ */
+/* $NetBSD: cdrom_freebsd.c,v 1.7 2011/09/04 22:05:39 dholland Exp $ */
 /*
  * Copyright (C) 1990 Regents of the University of California.
  *
@@ -22,6 +22,7 @@ static int c;
 # include <sys/param.h>
 # include <sys/stat.h>
 # include <string.h>
+# include <stdlib.h>
 #ifndef __DragonFly__
 # include <sys/buf.h>
 #endif
@@ -561,10 +562,9 @@ unsigned short *
 ushort_malloc(n)
 	int		n;
 {
-	extern char	*calloc();
 	unsigned short	*ptr;
 
-	ptr = (unsigned short *) calloc(n, sizeof(unsigned short));
+	ptr = calloc(n, sizeof(unsigned short));
 	if (ptr == NULL) {
 		perror("calloc");
 		exit(1);
@@ -577,10 +577,9 @@ struct msf *
 msf_malloc(n)
 	int		n;
 {
-	extern char	*calloc();
 	struct msf	*ptr;
 
-	ptr = (struct msf *) calloc(n, sizeof(struct msf));
+	ptr = calloc(n, sizeof(struct msf));
 	if (ptr == NULL) {
 		perror("calloc");
 		exit(1);

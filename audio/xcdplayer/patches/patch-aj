@@ -1,6 +1,11 @@
-$NetBSD: patch-aj,v 1.4 2006/08/12 14:51:39 darcy Exp $
+$NetBSD: patch-aj,v 1.5 2011/09/04 22:05:39 dholland Exp $
 
---- main.c.orig Tue Jan 12 19:59:36 1993
+- Rearrange position of some static functions to allow them to
+self-define and compile under GCC-4.
+
+- fix void main.
+
+--- main.c.orig	1993-01-12 18:59:36.000000000 +0000
 +++ main.c
 @@ -23,13 +23,36 @@
  
@@ -24,14 +29,14 @@ $NetBSD: patch-aj,v 1.4 2006/08/12 14:51:39 darcy Exp $
 +	}
 +}
 +
-+void
+ void
 +usage() {
 +	(void) fprintf(stderr, "usage: xcdplayer [-debug]\n");
 +
 +	exit(1);
 +}
 +
- void
++int
  main(argc, argv)
  	int		argc;
  	char		**argv;
