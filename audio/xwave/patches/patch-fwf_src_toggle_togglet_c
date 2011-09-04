@@ -1,0 +1,15 @@
+$NetBSD: patch-fwf_src_toggle_togglet_c,v 1.1 2011/09/04 23:35:53 dholland Exp $
+
+fix void main
+
+--- FWF/src/Toggle/ToggleT.c.orig	1998-08-12 23:27:08.000000000 +0000
++++ FWF/src/Toggle/ToggleT.c
+@@ -72,7 +72,7 @@ static void quit(w, client_data, call_da
+ /*
+  *  Main program
+  */
+-void main(argc, argv)
++int main(argc, argv)
+     int argc;
+     String *argv;
+ {

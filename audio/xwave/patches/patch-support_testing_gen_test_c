@@ -1,0 +1,15 @@
+$NetBSD: patch-support_testing_gen_test_c,v 1.1 2011/09/04 23:35:53 dholland Exp $
+
+fix void main
+
+--- support/testing/gen_test.c.orig	1998-08-12 23:27:11.000000000 +0000
++++ support/testing/gen_test.c
+@@ -10,7 +10,7 @@
+ 
+ #define LENGTH 5000
+ 
+-void main (int argc,char *argv[])
++int main (int argc,char *argv[])
+ {
+    unsigned char buffer[LENGTH];
+    short *buf16;
