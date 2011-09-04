@@ -1,0 +1,33 @@
+$NetBSD: patch-tr2_c,v 1.1 2011/09/04 01:22:04 dholland Exp $
+
+Don't use NULL as an integer zero.
+
+--- tr2.c~	1986-12-31 04:02:20.000000000 +0000
++++ tr2.c
+@@ -321,7 +321,7 @@ init_enc()
+  * Returns ERROR if codes are too long.
+  */
+ 
+-int		/* returns ERROR or NULL */
++int		/* returns ERROR or FALSE */
+ buildenc(level, root)
+ int level;/* level of tree being examined, from zero */
+ int root; /* root of subtree is also data value if leaf */
+@@ -347,7 +347,7 @@ int root; /* root of subtree is also dat
+ #ifdef DEBUG
+ 		if (debug) printf("  codelen[%d]=%d,code[%d]=%02x\n",root,codelen[root],root,code[root]);
+ #endif
+-		return ((level > 16) ? ERROR : NULL);
++		return ((level > 16) ? ERROR : FALSE);
+ 	} else {
+ 		if( l != NOCHILD) {
+ 			/* Clear path bit and continue deeper */
+@@ -364,7 +364,7 @@ int root; /* root of subtree is also dat
+ 				return (ERROR);
+ 		}
+ 	}
+-	return (NULL);	/* if we got here we're ok so far */
++	return (FALSE);	/* if we got here we're ok so far */
+ }
+ /*  */
+ /* Write out the header of the compressed file */
