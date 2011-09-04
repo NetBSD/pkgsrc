@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2161 2011/09/03 22:19:54 mjl Exp $
+$NetBSD: CHANGES-2011,v 1.2162 2011/09/04 02:57:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3380,3 +3380,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/giflib to 4.1.6nb1 [obache 2011-09-03]
 	Updated www/contao29 to 2.9.5nb2 [taca 2011-09-03]
 	Added databases/pgbouncer version 1.4.2 [mjl 2011-09-03]
+	Updated devel/msgpack to 0.5.7 [obache 2011-09-04]
