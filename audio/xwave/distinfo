@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2005/10/09 15:04:14 joerg Exp $
+$NetBSD: distinfo,v 1.10 2011/09/04 23:35:53 dholland Exp $
 
 SHA1 (xwave2.tar.gz) = 7ace9911c9425eab4907a34694cd208d21a6dac2
 RMD160 (xwave2.tar.gz) = 71df0bc4640be385c33ea3a2525bc7287741d9ab
@@ -23,3 +23,14 @@ SHA1 (patch-aq) = 62164a6a788190b5cce231bfadf5d7e0a22ee0d1
 SHA1 (patch-ar) = 22874069ef6de212d3f13302e649be06d03760a9
 SHA1 (patch-as) = 71bfcb6ebf047e01d08ba9d9b091e506943aa944
 SHA1 (patch-at) = 49e89a952862f47f00c37e6dd6879b5f3fea49b8
+SHA1 (patch-fwf_src_board_boardt_c) = c2b02ba3b4a7ddb7d182ce4c6c00dc97dd310b21
+SHA1 (patch-fwf_src_button_buttont_c) = b54d39bdc59ad4a4acbaa49528c8b9fecb3fb9c2
+SHA1 (patch-fwf_src_frame_framet_c) = d4a0663179e2879e51a2289ba89cd95a86794f52
+SHA1 (patch-fwf_src_group_groupt_c) = 07aa703cbdfa4314576c14d8740e1b981ceaa870
+SHA1 (patch-fwf_src_label_labelt_c) = ec6892aa6a76d45aeb444153b33c9f02f80b70d8
+SHA1 (patch-fwf_src_radiogroup_radiogrpt_c) = 4d05b80ec2aa8a3d0386cd8d43ce75311ffa11d8
+SHA1 (patch-fwf_src_rowcol_rowcolt_c) = c8219991ff683b4c6a82d483b16f8294caa9a962
+SHA1 (patch-fwf_src_toggle_togglet_c) = f5593ce50cec7d55e8fd9508245740a394365348
+SHA1 (patch-src_xwave_c) = f47800c1977471510988cc54dd7adf2c6e2dd2a7
+SHA1 (patch-support_testing_gen_test_c) = 490f57b9d49d16ffc72a2c58b8ea6abfef7c1ba1
+SHA1 (patch-support_wplay_c) = 70723d252d702b3cde7fb4334ee51a2aeaf0c37b
