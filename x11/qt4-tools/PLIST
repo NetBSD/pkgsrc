@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/03/03 05:50:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/09/04 15:42:52 adam Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -186,6 +186,8 @@ qt4/mkspecs/common/symbian/stl-off/new
 qt4/mkspecs/common/symbian/symbian-makefile.conf
 qt4/mkspecs/common/symbian/symbian-mmp.conf
 qt4/mkspecs/common/symbian/symbian.conf
+qt4/mkspecs/common/symbian/symbianincludes.h
+qt4/mkspecs/common/symbian/template.applite
 qt4/mkspecs/common/unix.conf
 qt4/mkspecs/common/wince/qmake.conf
 qt4/mkspecs/common/wince/qplatformdefs.h
@@ -255,6 +257,7 @@ qt4/mkspecs/features/symbian/moc.prf
 qt4/mkspecs/features/symbian/nested_exceptions.prf
 qt4/mkspecs/features/symbian/opengl.prf
 qt4/mkspecs/features/symbian/platform_paths.prf
+qt4/mkspecs/features/symbian/prepend_includepath.prf
 qt4/mkspecs/features/symbian/qt.prf
 qt4/mkspecs/features/symbian/qt_config.prf
 qt4/mkspecs/features/symbian/release.prf
@@ -262,6 +265,7 @@ qt4/mkspecs/features/symbian/run_on_phone.prf
 qt4/mkspecs/features/symbian/sis_targets.prf
 qt4/mkspecs/features/symbian/stl.prf
 qt4/mkspecs/features/symbian/stl_off.prf
+qt4/mkspecs/features/symbian/symbian_appbooster.prf
 qt4/mkspecs/features/symbian/symbian_building.prf
 qt4/mkspecs/features/symbian/thread.prf
 qt4/mkspecs/features/testcase.prf
@@ -468,6 +472,13 @@ qt4/mkspecs/solaris-g++/qmake.conf
 qt4/mkspecs/solaris-g++/qplatformdefs.h
 qt4/mkspecs/symbian-abld/qmake.conf
 qt4/mkspecs/symbian-abld/qplatformdefs.h
+qt4/mkspecs/symbian-armcc/features/default_post.prf
+qt4/mkspecs/symbian-armcc/qmake.conf
+qt4/mkspecs/symbian-armcc/qplatformdefs.h
+qt4/mkspecs/symbian-gcce/features/default_post.prf
+qt4/mkspecs/symbian-gcce/qmake.conf
+qt4/mkspecs/symbian-gcce/qplatformdefs.h
+qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_clean.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_emulator_deployment.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_extra_pre_targetdep.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_post_link.flm
@@ -475,13 +486,6 @@ qt4/mkspecs/symbian-sbsv2/flm/qt/qmake_store_build.flm
 qt4/mkspecs/symbian-sbsv2/flm/qt/qt.xml
 qt4/mkspecs/symbian-sbsv2/qmake.conf
 qt4/mkspecs/symbian-sbsv2/qplatformdefs.h
-qt4/mkspecs/symbian/linux-armcc/features/default_post.prf
-qt4/mkspecs/symbian/linux-armcc/qmake.conf
-qt4/mkspecs/symbian/linux-armcc/qplatformdefs.h
-qt4/mkspecs/symbian/linux-gcce/features/default_post.prf
-qt4/mkspecs/symbian/linux-gcce/qmake.conf
-qt4/mkspecs/symbian/linux-gcce/qplatformdefs.h
-qt4/mkspecs/symbian/qmake.conf
 qt4/mkspecs/tru64-cxx/qmake.conf
 qt4/mkspecs/tru64-cxx/qplatformdefs.h
 qt4/mkspecs/tru64-g++/qmake.conf
