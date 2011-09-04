@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/09/04 21:17:13 dholland Exp $
+$NetBSD: distinfo,v 1.6 2011/09/04 21:20:06 dholland Exp $
 
 SHA1 (toolame-02l.tgz) = 9f58345ec5d552f49a9ad598e6eb2dc126cb10b4
 RMD160 (toolame-02l.tgz) = 65ff0757f48080093df9e1932b5952199d03f5c6
 Size (toolame-02l.tgz) = 127493 bytes
-SHA1 (patch-aa) = 44633513f0ad2768ad1531ab41e059659d661630
-SHA1 (patch-ab) = 3dae25436a931eea5fe33aa0dcca16c46e529ed7
+SHA1 (patch-aa) = 873031612d0f8bb7f41d49be647f24d73dc15384
+SHA1 (patch-ab) = 97c2c56083f89ef0b999e692db4f38eb405cd3fb
 SHA1 (patch-ac) = 35901599b52f09e6b50db7fde81d3332271eb0ef
-SHA1 (patch-ad) = 9b3f8fc15012714da8b1c701103b5aa2ed77ac87
