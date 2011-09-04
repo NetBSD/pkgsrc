@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2167 2011/09/04 08:54:17 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2168 2011/09/04 15:45:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3386,3 +3386,13 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-LWP-Protocol-https to 6.02nb4 [hiramatsu 2011-09-04]
 	Updated devel/py-msgpack to 0.1.10 [obache 2011-09-04]
 	Updated graphics/aview to 1.3.0.1nb12 [obache 2011-09-04]
+	Updated x11/qt4 to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-libs to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-tools to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-docs to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-mng to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-mysql to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-pgsql to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-qdbus to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-sqlite3 to 4.7.4 [adam 2011-09-04]
+	Updated x11/qt4-tiff to 4.7.4 [adam 2011-09-04]
