@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/09/04 06:01:59 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/04 06:37:49 obache Exp $
 
 DISTNAME=	LWP-Protocol-https-6.02
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 CONFLICTS+=	p5-libwww<6.02
 
 DEPENDS+=	p5-IO-Socket-SSL>=1.38:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-Mozilla-CA:../../security/p5-Mozilla-CA
+DEPENDS+=	p5-Mozilla-CA>=20110101:../../security/p5-Mozilla-CA
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
