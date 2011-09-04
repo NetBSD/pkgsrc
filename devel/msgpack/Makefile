@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/05/06 05:48:11 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/04 02:57:11 obache Exp $
 #
 
-DISTNAME=	msgpack-0.5.6
+DISTNAME=	msgpack-0.5.7
 CATEGORIES=	devel
 MASTER_SITES=	http://msgpack.org/releases/cpp/
 
