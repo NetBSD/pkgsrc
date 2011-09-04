@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2008/04/07 16:15:25 bjs Exp $
+$NetBSD: patch-ab,v 1.2 2011/09/04 14:31:58 joerg Exp $
 
---- configure.in.orig	2007-07-30 11:48:41.000000000 -0400
+--- configure.in.orig	2007-07-30 15:48:41.000000000 +0000
 +++ configure.in
+@@ -39,7 +39,7 @@ case "$OS" in
+ 		;;
+ esac
+ 
+-LDFLAGS="$LDFLAGS -export-dynamic"
++LDFLAGS="$LDFLAGS -Wl,--export-dynamic"
+ 
+ AC_HEADER_STDC
+ AC_CHECK_HEADERS([fcntl.h string.h strings.h sys/param.h unistd.h sys/un.h \
 @@ -49,7 +49,10 @@ AC_CHECK_HEADERS([fcntl.h string.h strin
  		 AC_MSG_ERROR([Can't find required header files.]))
  AC_CHECK_HEADERS([sys/select.h inttypes.h limits.h stdint.h])
