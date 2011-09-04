@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2003/03/01 10:54:40 jmc Exp $
+$NetBSD: patch-ab,v 1.4 2011/09/04 21:04:57 dholland Exp $
 
---- player.c.orig	Sat Mar  1 10:51:04 2003
-+++ player.c	Sat Mar  1 10:51:31 2003
+- use valid C
+
+--- player.c.orig	2001-07-31 17:34:05.000000000 +0000
++++ player.c
 @@ -5,6 +5,7 @@
   */
  
@@ -10,3 +12,30 @@ $NetBSD: patch-ab,v 1.3 2003/03/01 10:54:40 jmc Exp $
  #include "player.h"
  #include "tfmxsong.h"
  
+@@ -384,7 +385,7 @@ void RunMacro(struct Cdb *c)
+ 	goto loop;
+ }
+ 
+-DoEffects(struct Cdb *c)
++static void DoEffects(struct Cdb *c)
+ {
+ 	register int a;
+ 	if (c->EfxRun<0) return;
+@@ -798,7 +799,7 @@ AllOff() {
+ 	}
+ }
+ 
+-TfmxInit()
++void TfmxInit(void)
+ {
+ 	int x;
+ 	AllOff();
+@@ -811,7 +812,7 @@ TfmxInit()
+ 	return;
+ }
+ 
+-StartSong(int song, int mode) {
++void StartSong(int song, int mode) {
+ 	int x;
+ 	mdb.PlayerEnable=0; /* sort of locking mechanism */
+ 	mdb.MasterVol=0x40;

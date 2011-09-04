@@ -1,4 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2005/11/10 19:51:23 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2011/09/04 21:04:57 dholland Exp $
+
+- Support more OSes
+- use valid C
 
 --- audio.c.orig	2001-08-02 11:06:48.000000000 +0000
 +++ audio.c
@@ -14,3 +17,12 @@ $NetBSD: patch-ad,v 1.1 2005/11/10 19:51:23 joerg Exp $
  #else
  #include <linux/soundcard.h>
  #endif
+@@ -545,7 +547,7 @@ int play_it()
+ }
+ 
+ #if 0
+-play_it()
++void play_it(void)
+ {
+ 	char c=0;
+ 	int i,j=0;
