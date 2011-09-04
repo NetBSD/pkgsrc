@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2165 2011/09/04 06:04:10 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2166 2011/09/04 06:12:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3384,3 +3384,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added security/p5-Mozilla-CA version 20110409 [hiramatsu 2011-09-04]
 	Updated security/p5-IO-Socket-SSL to 1.44 [hiramatsu 2011-09-04]
 	Updated www/p5-LWP-Protocol-https to 6.02nb4 [hiramatsu 2011-09-04]
+	Updated devel/py-msgpack to 0.1.10 [obache 2011-09-04]
