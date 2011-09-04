@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2163 2011/09/04 04:44:20 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2164 2011/09/04 05:06:05 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/pgbouncer version 1.4.2 [mjl 2011-09-03]
 	Updated devel/msgpack to 0.5.7 [obache 2011-09-04]
 	Added security/p5-Mozilla-CA version 20110409 [hiramatsu 2011-09-04]
+	Updated security/p5-IO-Socket-SSL to 1.44 [hiramatsu 2011-09-04]
