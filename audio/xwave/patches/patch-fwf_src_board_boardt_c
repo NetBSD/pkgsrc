@@ -1,0 +1,15 @@
+$NetBSD: patch-fwf_src_board_boardt_c,v 1.1 2011/09/04 23:35:53 dholland Exp $
+
+fix void main
+
+--- FWF/src/Board/BoardT.c.orig	1998-08-12 23:27:07.000000000 +0000
++++ FWF/src/Board/BoardT.c
+@@ -48,7 +48,7 @@ void quit(w, client_data, call_data)
+     exit(0);
+ }
+ 
+-void main(argc, argv)
++int main(argc, argv)
+     int argc;
+     char *argv[];
+ {
