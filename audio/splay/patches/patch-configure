@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2011/09/04 23:49:57 dholland Exp $
+
+Fix test programs; implicit int return type is not valid in C++.
+
+--- configure~	1998-03-07 21:04:19.000000000 +0000
++++ configure
+@@ -856,7 +856,7 @@ cross_compiling=$ac_cv_prog_cc_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 858 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:862: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cc_works=yes
+@@ -982,7 +982,7 @@ cross_compiling=$ac_cv_prog_cxx_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 984 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:988: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cxx_works=yes
+@@ -1688,7 +1688,7 @@ else
+   cat > conftest.$ac_ext <<EOF
+ #line 1690 "configure"
+ #include "confdefs.h"
+-main () {
++int main () {
+   /* Are we little or big endian?  From Harbison&Steele.  */
+   union
+   {
