@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10525 2011/08/31 12:55:16 obache Exp $
+$NetBSD: TODO,v 1.10526 2011/09/04 12:12:06 obache Exp $
 
 Suggested new packages
 ======================
@@ -389,6 +389,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
 	o apache-maven-3.0
+	o apache-tomcat6-6.0.33
 	o apache-tomcat7-7.0.20
 	o applewmproto-1.4.2
 	o appres-1.0.3
