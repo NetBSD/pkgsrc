@@ -1,0 +1,15 @@
+$NetBSD: patch-configure_in,v 1.1 2011/09/04 23:55:00 dholland Exp $
+
+Use valid C in test programs.
+
+--- configure.in~	1997-03-03 03:45:05.000000000 +0000
++++ configure.in
+@@ -260,7 +260,7 @@ do
+ SAVECC="$CC"
+ CC="$CC $opt"
+ AC_TEST_PROGRAM([
+-int main(int argc, char *argv) { void *ptr; exit(0); }
++int main(int argc, char **argv) { void *ptr; exit(0); }
+ ],
+ [have_ansi=1
+ break],
