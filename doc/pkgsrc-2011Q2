@@ -79,7 +79,6 @@ comms/synce-dccm
 devel/newt
 emulators/doscmd
 emulators/linuxppc_lib
-graphics/aview
 mail/cyrus-imapd21
 mail/mailscanner
 misc/openoffice2
