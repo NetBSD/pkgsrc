@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/02 12:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/04 18:21:26 cheusov Exp $
 #
 
 DISTNAME=	runawk-1.3.1
@@ -40,6 +40,7 @@ MAKE_ENV+=	SUBPRJ_DFLT='runawk modules a_getopt doc examples'
 
 AUTO_MKDIRS=	yes
 
-.include "../../mk/bsd.pkg.mk"
+MAKE_PROGRAM=	mkcmake
 
-MAKE_PROGRAM=		mkcmake
+.include "../../devel/mk-configure/configure.mk"
+.include "../../mk/bsd.pkg.mk"

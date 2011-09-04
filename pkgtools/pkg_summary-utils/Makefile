@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/29 20:45:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/04 18:21:27 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-0.56.0
 CATEGORIES=	pkgtools
@@ -58,4 +58,5 @@ AUTO_MKDIRS=	yes
 
 MAKE_PROGRAM=	${PREFIX}/bin/mkcmake
 
+.include "../../devel/mk-configure/configure.mk"
 .include "../../mk/bsd.pkg.mk"
