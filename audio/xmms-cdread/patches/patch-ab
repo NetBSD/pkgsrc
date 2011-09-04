@@ -1,7 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 2011/03/06 16:46:04 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2011/09/04 23:10:30 dholland Exp $
 
---- cdread.c.orig	2001-08-18 14:29:43.000000000 +0300
+- support more OSes
+- avoid gross linker abuse 
+
+--- cdread.c.orig	2001-08-18 11:29:43.000000000 +0000
 +++ cdread.c
+@@ -57,7 +57,7 @@ struct cd_cfg cd_cfg;
+ #endif
+ 
+ /*\ Neat.. Three OSes with three different ways of talking to CDROM drives.. \*/
+-#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
+ #include "cdrombsd.h"
+ #elif defined(__SOLARIS__) || defined(__Solaris__) || defined(__solaris__) || defined(__sun__) || defined(sun)
+ #include "cdromsolaris.h"
 @@ -377,7 +377,7 @@ init_thread(gchar *device)
  }
  
