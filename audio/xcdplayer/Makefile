@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2010/10/31 08:54:34 shattered Exp $
+# $NetBSD: Makefile,v 1.25 2011/09/04 22:05:39 dholland Exp $
 
 DISTNAME=	xcdplayer-2.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.x.org/R5contrib/
 EXTRACT_SUFX=	.tar.Z
