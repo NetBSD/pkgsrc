@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/20 13:47:59 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/04 21:51:17 cheusov Exp $
 #
 # Replacement Makefile for bzip2.
 #
@@ -13,7 +13,7 @@ CFLAGS+=		-D_FILE_OFFSET_BITS=64
 all: libbz2.la bzip2 bzip2recover
 
 libbz2.la: ${LOBJS}
-	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
+	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
 	    ${LOBJS} -version-info 0:0 -rpath ${PREFIX}/lib
 
 libbz2.a: ${OBJS}
@@ -21,7 +21,7 @@ libbz2.a: ${OBJS}
 	${RANLIB} ${.TARGET}
 
 bzip2: libbz2.a bzip2.o
-	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
+	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} \
 	    bzip2.o libbz2.la
 bzip2recover: bzip2recover.o
 	${CC} ${LDFLAGS} ${CFLAGS} -o ${.TARGET} bzip2recover.o
@@ -32,4 +32,4 @@ bzip2recover: bzip2recover.o
 	${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
 
 .c.lo:
-	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
+	${LIBTOOL} --tag=CC --mode=compile ${CC} -c ${CFLAGS} -o ${.TARGET} ${.IMPSRC}
