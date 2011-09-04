@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2009/01/20 20:01:23 sketch Exp $
+# $NetBSD: Makefile,v 1.19 2011/09/04 21:20:06 dholland Exp $
 #
 
 DISTNAME=	toolame-02l
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=toolame/}
 EXTRACT_SUFX=	.tgz
