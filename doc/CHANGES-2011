@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2170 2011/09/04 17:03:27 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2171 2011/09/04 17:07:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3398,3 +3398,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/qt4-tiff to 4.7.4 [adam 2011-09-04]
 	Updated www/contao210-translations to 20110904 [taca 2011-09-04]
 	Updated lang/ruby19-base to 1.9.2pl290nb2 [taca 2011-09-04]
+	Updated devel/ruby-rdoc to 3.9.4 [taca 2011-09-04]
+	Updated misc/rubygems to 1.8.10 [taca 2011-09-04]
