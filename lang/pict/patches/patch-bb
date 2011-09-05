@@ -1,0 +1,15 @@
+$NetBSD: patch-bb,v 1.1 2011/09/05 00:15:37 dholland Exp $
+
+fix void main.
+
+--- Config/autoconf~	1998-03-22 23:26:53.000000000 +0000
++++ Config/autoconf
+@@ -6,7 +6,7 @@ touch Config test.h config.h config.outp
+ # Test for broken include files (SunOS)
+ 
+ echo "#include <stdio.h>" > test.c
+-echo "void main() { fprintf(stderr,\"hello\"); }" >> test.c
++echo "int main() { fprintf(stderr,\"hello\"); return 0; }" >> test.c
+ if gcc -Wall -c test.c 2>config.output; then
+   if grep -q implicit config.output; then
+     echo "Some function prototypes seem to be missing"

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/28 06:13:40 dholland Exp $
+$NetBSD: distinfo,v 1.2 2011/09/05 00:15:37 dholland Exp $
 
 SHA1 (pict-4.1.tar.gz) = e3d3341d4dc54ed015b0d89eab6760ee7f14c5cd
 RMD160 (pict-4.1.tar.gz) = aea1df3530387c592a1c5eb9e8f464e242109f86
@@ -9,6 +9,10 @@ SHA1 (patch-ac) = e6e93f42efc49d6d3a37335b4a40ec5694b2e0d4
 SHA1 (patch-ad) = 5867631186c5973b76d81704306fb142e479b72d
 SHA1 (patch-ae) = 5eaf7be65894e22a7200e8075dfb988722220765
 SHA1 (patch-af) = 38a20d8bf945b3a3662d4c4ebc0d7158eac607ec
+SHA1 (patch-ba) = b7dc6e6b43935e2c87e636cd43ebd9fb9c53c762
+SHA1 (patch-bb) = bf1b3a2fb74f4740439bc4c3f67f8aa3178a5600
+SHA1 (patch-bc) = 81f178d7e48f21afb5fbc1c21f4de839307568c1
+SHA1 (patch-bd) = d1784b7d180c26625205d68aa0143d7796a80c2f
 SHA1 (patch-ya) = d7513a4431ede203217bb39feb42b62c2f9784b0
 SHA1 (patch-yb) = 19c3a5d892f253a450f10ce468b8238653543ee5
 SHA1 (patch-yc) = abc0298eedeb0d459ce067567f96c759df025eb1
