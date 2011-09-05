@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2011/06/04 15:23:36 schmonz Exp $
+$NetBSD: patch-ab,v 1.7 2011/09/05 22:07:28 schmonz Exp $
 
 When generating scripts, give them the interpreter we generated them with.
 
---- IkiWiki/Setup/Standard.pm.orig	2011-05-30 18:25:10.000000000 +0000
+--- IkiWiki/Setup/Standard.pm.orig	2011-07-29 10:59:11.000000000 +0000
 +++ IkiWiki/Setup/Standard.pm
 @@ -14,7 +14,10 @@ sub import {
  sub gendump ($@) {
