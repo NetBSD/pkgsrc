@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/27 19:48:13 asau Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/05 20:19:52 cheusov Exp $
 
 DISTNAME=	tbb30_20110325oss_src
 PKGNAME=	threadingbuildingblocks-3.0.6 # for "3.0 update 6"
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		$(WRKDIR)/$(DISTNAME:_src=) #tbb30_20101215oss
 
 USE_LANGUAGES=	c c++
-USE_TOOLS=	gmake
+USE_TOOLS=	gmake pax
 MAKE_FLAGS=	tbb_build_prefix=build # use fixed path
 BUILD_TARGET=	default
 TEST_TARGET=	test
