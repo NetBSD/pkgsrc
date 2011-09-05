@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2177 2011/09/05 11:07:17 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.2178 2011/09/05 14:49:28 gson Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3413,3 +3413,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-jinja2 to 2.6 [adam 2011-09-05]
 	Updated devel/xulrunner192 to 1.9.2.21 [tnn 2011-09-05]
 	Updated www/firefox36 to 3.6.21 [tnn 2011-09-05]
+	Updated misc/py-anita to 1.23 [gson 2011-09-05]
