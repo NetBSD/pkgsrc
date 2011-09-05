@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.8 2009/09/03 12:35:32 joerg Exp $
+$NetBSD: patch-ag,v 1.9 2011/09/05 20:24:56 cheusov Exp $
 
 --- unix/makefile.orig	1994-03-25 13:01:31.000000000 -0600
 +++ unix/makefile
@@ -8,7 +8,7 @@ $NetBSD: patch-ag,v 1.8 2009/09/03 12:35:32 joerg Exp $
  # commands
 -CC = cc
 -LIB = ar
-+CC := ${LIBTOOL} --mode=compile ${CC}
++CC := ${LIBTOOL} --tag=CC --mode=compile ${CC}
  
  # name of temporary library script
  TEMPFILE = $(TEMP)/temp.mak
@@ -40,7 +40,7 @@ $NetBSD: patch-ag,v 1.8 2009/09/03 12:35:32 joerg Exp $
    r_stdlib.$(O)
 -	$(LIB) r $@ $?
 -	ranlib $@
-+	${LIBTOOL} --mode=link cc -o $@ ${?:.o=.lo} -rpath ${PREFIX}/lib -version-info 3:0
++	${LIBTOOL} --tag=CC --mode=link cc -o $@ ${?:.o=.lo} -rpath ${PREFIX}/lib -version-info 3:0
  
  rdemo.$(O) : $(RDEMODIR)rdemo.c $(RSAREFDIR)global.h $(RSAREFDIR)rsaref.h
  	$(CC) $(CFLAGS) $(RDEMODIR)rdemo.c
