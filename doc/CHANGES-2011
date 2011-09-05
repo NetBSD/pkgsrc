@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2174 2011/09/05 04:25:42 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.2175 2011/09/05 05:39:09 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3406,3 +3406,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/toolame to 02lnb3 [dholland 2011-09-04]
 	Updated audio/wmmp3 to 0.12nb3 [dholland 2011-09-04]
 	Updated audio/xcdplayer to 2.2nb5 [dholland 2011-09-04]
+	Updated mail/thunderbird to 6.0.1 [tnn 2011-09-04]
+	Updated www/seamonkey to 2.3.2 [tnn 2011-09-05]
+	Updated devel/xulrunner to 6.0.1 [tnn 2011-09-05]
+	Updated www/firefox to 6.0.1 [tnn 2011-09-05]
