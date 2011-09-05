@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/08/31 14:48:04 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2011/09/05 11:46:14 joerg Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -72,6 +72,8 @@ BUILDDIR=	${WRKSRC}/build/${OPSYS:C/.*BSD/bsd/:S/DragonFly/bsd/}-${MACHINE_ARCH:
 PLIST_SUBST+=	ARCH=${MACHINE_ARCH:S/x86_64/amd64/}
 PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 
+.include "../../mk/compiler.mk"
+
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-shorten-64-to-32 -Wno-conversion \
@@ -80,8 +82,6 @@ _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 .include "bootstrap.mk"
 .include "icedtea-extras.mk"
 
