@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2176 2011/09/05 10:55:17 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2177 2011/09/05 11:07:17 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3411,3 +3411,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/xulrunner to 6.0.1 [tnn 2011-09-05]
 	Updated www/firefox to 6.0.1 [tnn 2011-09-05]
 	Updated textproc/py-jinja2 to 2.6 [adam 2011-09-05]
+	Updated devel/xulrunner192 to 1.9.2.21 [tnn 2011-09-05]
+	Updated www/firefox36 to 3.6.21 [tnn 2011-09-05]
