@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2011/06/04 15:23:36 schmonz Exp $
+$NetBSD: patch-aa,v 1.23 2011/09/05 22:07:28 schmonz Exp $
 
 PKG_SYSCONFDIR and PKGMANDIR support, avoid GNUisms in standard utilities.
 
---- Makefile.PL.orig	2011-06-03 16:40:11.000000000 +0000
+--- Makefile.PL.orig	2011-08-24 21:14:48.000000000 +0000
 +++ Makefile.PL
 @@ -19,11 +19,14 @@ SED?=sed
  
@@ -48,7 +48,7 @@ PKG_SYSCONFDIR and PKGMANDIR support, avoid GNUisms in standard utilities.
 @@ -70,7 +76,7 @@ underlay_install:
  	for dir in `cd underlays && $(FIND) . -follow -type d`; do \
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
- 		for file in `$(FIND) underlays/$$dir -follow -maxdepth 1 -type f`; do \
+ 		for file in `$(FIND) underlays/$$dir -follow -maxdepth 1 -type f -not -name \\*.full.js -not -name \\*.full.css`; do \
 -			cp -aL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir 2>/dev/null || \
 +			cp -pRL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir 2>/dev/null || \
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
