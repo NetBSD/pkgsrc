@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/04 23:37:53 tez Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/09/06 21:08:09 cheusov Exp $
 Acrobat8/Adobe/Reader8/bin/UNINSTALL
 Acrobat8/Adobe/Reader8/bin/acroread
 Acrobat8/Adobe/Reader8/Reader/help/ENU/ReadMe.htm
@@ -655,5 +655,4 @@ Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/WSDB9A75C3-9D33-4717-AF04-761385A6435
 Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/YAHOO.js
 Acrobat8/Adobe/HelpViewer/1.0/resources/help.html
 Acrobat8/Adobe/HelpViewer/1.0/resources/help.jpg
-bin/acroread
 bin/acroread8
