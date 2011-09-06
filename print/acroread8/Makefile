@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/01/23 05:49:59 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/09/06 21:08:09 cheusov Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/enu/
 
@@ -18,12 +18,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS+=	acroread-5.*
-# conflict with acroread5 due to bin/acroread
-# maybe should do ALTERNATIVES?
-CONFLICTS+=	acroread5-5.*
-CONFLICTS+=	acroread7-7.*
 
 WRKSRC=			${WRKDIR}/AdobeReader
 BUILD_DIRS=		# empty
@@ -77,6 +71,5 @@ post-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread8
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${DESTDIR}${PREFIX}/Acrobat8/Reader/Legal/ENU/License.html"
-	${LN} -sf acroread8 ${DESTDIR}${PREFIX}/bin/acroread
 
 .include "../../mk/bsd.pkg.mk"

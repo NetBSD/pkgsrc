@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2011/03/17 13:37:48 obache Exp $
+# $NetBSD: Makefile,v 1.57 2011/09/06 21:08:09 cheusov Exp $
 
 DISTNAME=	acroread	# overridden below
 PKGNAME=	acroread-4.05
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/ \
 		http://download.adobe.com/pub/adobe/acrobatreader/unix/4.x/
@@ -59,17 +59,15 @@ NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
 BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PREFIX}/Acrobat4 ${NS_PLUGINS_DIR}
 
 do-install:
-	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/Acrobat4
 	@( ${ECHO} accept ) | PAGER=${CAT} ReadInstallDir=${DESTDIR}${PREFIX}/Acrobat4 ${WRKSRC}/INSTALL
 	@cd ${DESTDIR}${PREFIX}/Acrobat4/bin && \
 	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${DESTDIR}${PREFIX}/Acrobat4/bin/acroread \
 	     ${DESTDIR}${PREFIX}/bin/acroread4 && ${RM} -f acroread.orig
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread4
-	${INSTALL_DATA_DIR} ${DESTDIR}${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${DESTDIR}${PREFIX}/Acrobat4/Browsers/${PLATFORM}/nppdf.so \
 		${DESTDIR}${NS_PLUGINS_DIR}
 	@${ECHO_MSG} "Be sure to read the license agreement in"
