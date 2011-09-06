@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2011/03/17 13:39:29 obache Exp $
+# $NetBSD: Makefile,v 1.42 2011/09/06 21:08:09 cheusov Exp $
 
 DISTNAME=	acroread5	# overridden below
 PKGNAME=	acroread5-5.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 
@@ -16,11 +16,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-
-CONFLICTS+=	acroread-5.*
-# conflict with acroread7 due to bin/acroread
-CONFLICTS+=	acroread-7.*
-CONFLICTS+=	acroread7-7.*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -47,10 +42,9 @@ PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
 
 BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PREFIX}/Acrobat5
 
 do-install:
-	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/Acrobat5
 	@( ${ECHO} accept ) | PAGER=${CAT} ReadInstallDir=${DESTDIR}${PREFIX}/Acrobat5 ${WRKSRC}/INSTALL
 	@cd ${DESTDIR}${PREFIX}/Acrobat5/bin && \
 	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
@@ -59,7 +53,6 @@ do-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread5
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat5/Reader/license.txt"
-	${LN} -sf ${PREFIX}/bin/acroread5 ${DESTDIR}${PREFIX}/bin/acroread
 
 SUBST_CLASSES+=		rmdestdir
 SUBST_STAGE.rmdestdir=	post-install
