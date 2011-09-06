@@ -1,18 +1,19 @@
-$NetBSD: patch-ai,v 1.3 2007/10/02 20:23:08 heinz Exp $
+$NetBSD: patch-ai,v 1.4 2011/09/06 11:20:19 obache Exp $
 
---- tftpyale.c.orig	1995-03-20 21:11:11.000000000 +0100
+--- tftpyale.c.orig	1995-03-20 20:11:11.000000000 +0000
 +++ tftpyale.c
-@@ -2,8 +2,8 @@
+@@ -2,8 +2,9 @@
  #include <string.h>
  #include <syslog.h>
  #include <ctype.h>
 -#include <arpa/tftp.h>
  #include <sys/types.h>
++#include <arpa/inet.h>
 +#include <arpa/tftp.h>
  #include <sys/stat.h>
  #include <netinet/in.h>
  #include "tftpyale.h"
-@@ -95,7 +95,7 @@ addFileRestriction (ac, av)
+@@ -95,7 +96,7 @@ addFileRestriction (ac, av)
  int	ac;
  char**	av;
  {
@@ -21,7 +22,7 @@ $NetBSD: patch-ai,v 1.3 2007/10/02 20:23:08 heinz Exp $
  
  	ac--; av++;
  	if (ac != 2) {
-@@ -104,7 +104,7 @@ char**	av;
+@@ -104,7 +105,7 @@ char**	av;
  	}
  
  	/* get list number */
@@ -30,7 +31,7 @@ $NetBSD: patch-ai,v 1.3 2007/10/02 20:23:08 heinz Exp $
  	if (list <= 0) {
  		accessFormatError = "list argument not positive integer";
  		return 0;
-@@ -157,27 +157,24 @@ struct stat* sb;
+@@ -157,27 +158,24 @@ struct stat* sb;
   * qualified (starts with '/') check to see if the
   * prefix matches the default directory.
   */
@@ -64,7 +65,7 @@ $NetBSD: patch-ai,v 1.3 2007/10/02 20:23:08 heinz Exp $
  
  	return list ? list : defaultAccessList;
  }
-@@ -269,7 +266,7 @@ char**	argv;
+@@ -269,7 +267,7 @@ char**	argv;
  			continue;
  
  		cargv = config_fields(cnf);
@@ -73,7 +74,7 @@ $NetBSD: patch-ai,v 1.3 2007/10/02 20:23:08 heinz Exp $
  		  /* specify default directory */
  		  case CMD_DEFAULT_DIR:
  			if (cargc != 2)
-@@ -481,7 +478,7 @@ char*	buf;
+@@ -481,7 +479,7 @@ char*	buf;
  
  static struct CMDS {
  	char* cmdName;
