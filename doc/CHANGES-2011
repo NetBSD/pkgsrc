@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2180 2011/09/06 09:49:11 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2181 2011/09/06 11:20:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3416,3 +3416,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/py-anita to 1.23 [gson 2011-09-05]
 	Updated www/ikiwiki to 3.20110905 [schmonz 2011-09-05]
 	Updated textproc/mdocml to 1.11.7 [wiz 2011-09-06]
+	Updated net/yale-tftpd to 3.0nb5 [obache 2011-09-06]
