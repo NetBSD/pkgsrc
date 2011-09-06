@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2179 2011/09/05 22:07:45 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.2180 2011/09/06 09:49:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3415,3 +3415,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/firefox36 to 3.6.21 [tnn 2011-09-05]
 	Updated misc/py-anita to 1.23 [gson 2011-09-05]
 	Updated www/ikiwiki to 3.20110905 [schmonz 2011-09-05]
+	Updated textproc/mdocml to 1.11.7 [wiz 2011-09-06]
