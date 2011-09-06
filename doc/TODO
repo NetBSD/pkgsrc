@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10528 2011/09/04 19:24:19 tnn Exp $
+$NetBSD: TODO,v 1.10529 2011/09/06 09:49:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -951,7 +951,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
 	o mathomatic-15.6.4
-	o mdocml-1.11.6
 	o memtester-4.2.2
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
