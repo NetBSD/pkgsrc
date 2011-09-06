@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.5 2011/08/22 12:18:18 wiz Exp $
+$NetBSD: distinfo,v 1.6 2011/09/06 20:45:05 wiz Exp $
 
 SHA1 (python-xlib-0.14.tar.gz) = e25e3c1284e768d3f84eaebbea4ed3e647c2a05b
 RMD160 (python-xlib-0.14.tar.gz) = be5610035fb1aee36a55e3e276582e3e31ba1cfc
 Size (python-xlib-0.14.tar.gz) = 200223 bytes
 SHA1 (patch-Xlib_____init____.py) = 201d4855b03534204723d88522d6af3529e5bd6c
-SHA1 (patch-Xlib_protocol_display.py) = 02c7f9eb41e0208350451b3f5306b465b64ee986
-SHA1 (patch-Xlib_protocol_rq.py) = 3ef1926b0afc4f89113308195470e5b52cb31fd0
-SHA1 (patch-Xlib_rdb.py) = c4848428f461fe911d6611ede1f5e6bd9e58efa5
-SHA1 (patch-Xlib_support_unix__connect.py) = 5ca41fd48ab26999ffdf0c3dd2fb4c170f1c8bb4
-SHA1 (patch-Xlib_support_vms__connect.py) = 573e4cf6028d7edca268f16e0899e59b34373545
-SHA1 (patch-Xlib_xauth.py) = f4b9518f159200b1ef0681b871ede9b10d3cc3bb
-SHA1 (patch-Xlib_xobject_cursor.py) = 4a0bcbd8548eec7f1954ea1397a30d833d0c7edd
-SHA1 (patch-Xlib_xobject_drawable.py) = ff0426003b6260273e241fd4062e2130fef942f5
-SHA1 (patch-Xlib_xobject_fontable.py) = 9c8337e1bd520464e92d3b06e177980402f8bd43
+SHA1 (patch-Xlib_protocol_display.py) = e6943531a5e2ae1164e5faab2824f8e90b3d2493
+SHA1 (patch-Xlib_protocol_rq.py) = 08909f1bf14bc76f61ac186ba980ab44bc8ed3f8
+SHA1 (patch-Xlib_rdb.py) = 34e5be7f62577b4eb887288eea4be9a509be9414
+SHA1 (patch-Xlib_support_unix__connect.py) = 529d31935bf0aee30a628c1b80c6bee6874888d3
+SHA1 (patch-Xlib_support_vms__connect.py) = 8acb059239059f2b943fdc2a20231c7d9f79bb1d
+SHA1 (patch-Xlib_xauth.py) = 6e7444789a17f5e4264ba8a70f1c2ff1bb812850
+SHA1 (patch-Xlib_xobject_cursor.py) = c45c11b4cd5589cdd88c14c8f3029f93fc0bc18f
+SHA1 (patch-Xlib_xobject_drawable.py) = 590206bf0d83fa639a871d303c6bf9845ee9bf7f
+SHA1 (patch-Xlib_xobject_fontable.py) = 3a6cb416d9a81932657e2bd7db2fc6430d54d766
