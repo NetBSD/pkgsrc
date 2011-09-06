@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2011/09/06 09:50:16 cheusov Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
+@comment $NetBSD: PLIST.SunOS,v 1.3 2011/09/06 09:51:27 cheusov Exp $
+lib/python${PY_VER_SUFFIX}/lib-dynload/sunaudiodev.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.pyc
