@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2011/08/22 14:03:36 wiz Exp $
+$NetBSD: distinfo,v 1.36 2011/09/06 18:51:14 bsiegert Exp $
 
 SHA1 (libiconv-1.13-cp932.patch.gz) = 3dd6ed92e0d9f58db71edf63e31ab6cbd4420f99
 RMD160 (libiconv-1.13-cp932.patch.gz) = 71040b00489ad1a5f218a09b4d22e550b1d31fc8
@@ -10,4 +10,4 @@ SHA1 (patch-aa) = 7fe47a14379dbeb487c677957e67fc7b043297ce
 SHA1 (patch-ab) = f10e4d1de691043acca775eed5c47c6061b31626
 SHA1 (patch-ad) = e94da1c4423677b74f463d4b132c7714efc65815
 SHA1 (patch-ae) = ab346a515d5ab0efd679e7783edebd95a05db782
-SHA1 (patch-af) = 513a8f995161853870a01afabccdb2a650b794a6
+SHA1 (patch-af) = 8338647dbf181e908fc52dbc12e7bdff62f7bcb7
