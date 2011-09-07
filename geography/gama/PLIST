@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/07 23:04:38 gdt Exp $
+bin/gama-g3
+bin/gama-local
+bin/gama-local-xml2sql
+bin/gama-local-xml2txt
+info/gama.info
