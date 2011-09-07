@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/09/07 12:42:02 obache Exp $
 bin/csound5
 include/csound5/CppSound.hpp
 include/csound5/CsoundFile.hpp
@@ -29,19 +29,12 @@ lib/csound5/extractor
 lib/csound5/het_export
 lib/csound5/het_import
 lib/csound5/hetro
+lib/csound5/libcsound.a
 lib/csound5/lpanal
 lib/csound5/lpc_export
 lib/csound5/lpc_import
 lib/csound5/makecsd
 lib/csound5/mixer
-lib/csound5/pvanal
-lib/csound5/pvlook
-lib/csound5/scale
-lib/csound5/scot
-lib/csound5/scsort
-lib/csound5/sndinfo
-lib/csound5/srconv
-lib/csound5/csnd.py
 lib/csound5/plugins/libbabo.so
 lib/csound5/plugins/libbarmodel.so
 lib/csound5/plugins/libfluidOpcodes.so
@@ -54,7 +47,6 @@ lib/csound5/plugins/libmodal4.so
 lib/csound5/plugins/libphisem.so
 lib/csound5/plugins/libphysmod.so
 lib/csound5/plugins/libpitch.so
-@comment -- portaudio module -- lib/csound5/plugins/librtpa.so
 lib/csound5/plugins/libscansyn.so
 lib/csound5/plugins/libsfont.so
 lib/csound5/plugins/libstdopcod.so
@@ -62,5 +54,17 @@ lib/csound5/plugins/libstdutil.so
 lib/csound5/plugins/libvbap.so
 lib/csound5/plugins/libwidgets.so
 lib/csound5/plugins/opcodes.dir
-lib/csound5/lib_csnd.so
-lib/csound5/libcsound.a
+lib/csound5/pvanal
+lib/csound5/pvlook
+lib/csound5/scale
+lib/csound5/scot
+lib/csound5/scsort
+lib/csound5/sndinfo
+lib/csound5/srconv
+share/csound/xmg/American.xmg
+share/csound/xmg/English.xmg
+share/csound/xmg/csound.xmg
+share/doc/csound/COPYING
+share/doc/csound/ChangeLog
+share/doc/csound/INSTALL
+share/doc/csound/readme-csound5.txt
