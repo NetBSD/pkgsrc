@@ -1,0 +1,12 @@
+GNU Gama is a project dedicated to adjustment of geodetic networks. It
+is intended for use with traditional geodetic surveyings which are
+still used and needed in special measurements (e.g., underground or
+high precision engineering measurements) where the Global Positioning
+System (GPS) cannot be used.
+
+Adjustment in local Cartesian coordinate systems is fully supported by
+a command-line program gama-local that adjusts geodetic (free)
+networks of observed distances, directions, angles, height
+differences, 3D vectors and observed coordinates (coordinates with
+given variance-covariance matrix). Adjustment in global coordinate
+systems is supported only partly as a gama-g3 program.
