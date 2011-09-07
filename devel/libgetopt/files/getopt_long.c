@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.3 2008/04/29 05:46:09 martin Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.4 2011/09/07 00:56:17 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -42,20 +42,12 @@
 #endif
 
 #ifdef REPLACE_GETOPT
-#ifdef __weak_alias
-__weak_alias(getopt,_getopt)
-#endif
 int	opterr = 1;		/* if error message should be printed */
 int	optind = 1;		/* index into parent argv vector */
 int	optopt = '?';		/* character checked for validity */
 int	optreset;		/* reset getopt */
 char    *optarg;		/* argument associated with option */
 #endif
-
-#ifdef __weak_alias
-__weak_alias(getopt_long,_getopt_long)
-#endif
-
 
 #define IGNORE_FIRST	(*options == '-' || *options == '+')
 #define PRINT_ERROR	((opterr) && ((*options != ':') \
