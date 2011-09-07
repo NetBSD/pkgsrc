@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2011/09/06 23:49:25 gdt Exp $
+# $NetBSD: Makefile,v 1.82 2011/09/07 00:34:56 gdt Exp $
 #
 
 DISTNAME=		tor-0.2.2.32
@@ -17,6 +17,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES=		c99
+# tor is not documented to require GNU make, but it fails to build on
+# NetBSD 5.1 with (system) BSD make.  Reported to
+# tor-talk@lists.torproject.org on 20110907.
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
