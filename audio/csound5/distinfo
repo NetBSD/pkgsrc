@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/12/30 13:19:58 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/09/07 12:42:02 obache Exp $
 
 SHA1 (Csound5.01_src.tar.gz) = b387da9b6c24961397e89ddcedd1229cdfebffe7
 RMD160 (Csound5.01_src.tar.gz) = 24652f8f650464d886f6d537ae991654f475ad4a
@@ -17,3 +17,4 @@ SHA1 (patch-am) = 9770973e54770b9eebcf66c17f90f459e71a71c6
 SHA1 (patch-an) = 7dfbd38a4eca8c7767a53c2b93bb4967344c0f0e
 SHA1 (patch-ao) = 64ee0a2a70dd317c992088212bc3f241f6296113
 SHA1 (patch-ap) = 9229c0166b37fb6991da5557c475d754715df711
+SHA1 (patch-install.py) = 8150b01843b5875558cbbf0bd621d8cf7b021905
