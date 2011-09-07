@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:42:42 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/09/07 23:45:06 joerg Exp $
 #
 
 DISTNAME=		pygame-1.8.1release
@@ -28,6 +28,12 @@ post-install:
 	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.icns
 	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.ttf
 	${CHMOD} 644 ${DESTDIR}${PREFIX}/${PYSITELIB}/pygame/*.tiff
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-no-integrated-as
+.endif
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
