@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/10 23:55:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/09/07 23:40:23 joerg Exp $
 
 SHA1 (libdbi-0.8.3.tar.gz) = bda606fa6628eed451e492182e1943bd1d824c33
 RMD160 (libdbi-0.8.3.tar.gz) = c264a9cf0ef85ccd823273a205a961b6e33773cf
 Size (libdbi-0.8.3.tar.gz) = 1060714 bytes
+SHA1 (patch-configure) = d1faa0a217b8900660afab0dd1c9da04ee9b12c9
