@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2011/09/07 00:57:30 joerg Exp $
+
+--- vis/libvis.c.orig	2011-09-07 00:34:51.000000000 +0000
++++ vis/libvis.c
+@@ -81,14 +81,6 @@ __RCSID("$NetBSD: vis.c,v 1.27 2004/02/2
+ #include <vis.h>
+ #include <stdlib.h>
+ 
+-#ifdef __weak_alias
+-__weak_alias(strsvis,_strsvis)
+-__weak_alias(strsvisx,_strsvisx)
+-__weak_alias(strvis,_strvis)
+-__weak_alias(strvisx,_strvisx)
+-__weak_alias(svis,_svis)
+-__weak_alias(vis,_vis)
+-#endif
+ #ifndef _DIAGASSERT
+ #define _DIAGASSERT(a)
+ #endif
