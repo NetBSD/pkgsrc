@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2010/11/04 19:43:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/09/08 21:10:26 wiz Exp $
+include/dvbpsi/bat.h
 include/dvbpsi/cat.h
 include/dvbpsi/demux.h
 include/dvbpsi/descriptor.h
@@ -19,6 +20,7 @@ include/dvbpsi/dr_0e.h
 include/dvbpsi/dr_0f.h
 include/dvbpsi/dr_42.h
 include/dvbpsi/dr_43.h
+include/dvbpsi/dr_44.h
 include/dvbpsi/dr_45.h
 include/dvbpsi/dr_47.h
 include/dvbpsi/dr_48.h
@@ -31,6 +33,7 @@ include/dvbpsi/dr_58.h
 include/dvbpsi/dr_59.h
 include/dvbpsi/dr_5a.h
 include/dvbpsi/dr_69.h
+include/dvbpsi/dr_8a.h
 include/dvbpsi/dvbpsi.h
 include/dvbpsi/eit.h
 include/dvbpsi/nit.h
@@ -38,6 +41,7 @@ include/dvbpsi/pat.h
 include/dvbpsi/pmt.h
 include/dvbpsi/psi.h
 include/dvbpsi/sdt.h
+include/dvbpsi/sis.h
 include/dvbpsi/tot.h
 lib/libdvbpsi.la
 lib/pkgconfig/libdvbpsi.pc
