@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.32 2011/06/04 10:05:00 obache Exp $
+# $NetBSD: replace.mk,v 1.33 2011/09/08 20:17:16 abs Exp $
 #
 
 # _flavor-replace:
@@ -84,7 +84,7 @@ replace-tarup: .PHONY
 	${RUN} [ -x ${_PKG_TARUP_CMD:Q} ] \
 	|| ${FAIL_MSG} ${_PKG_TARUP_CMD:Q}" was not found.";		\
 	${_REPLACE_OLDNAME_CMD};					\
-	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
+	${PKGSRC_SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}	\
 		PKGREPOSITORY=${WRKDIR}					\
 		${_PKG_TARUP_CMD} $${oldname} ||			\
 	${FAIL_MSG} "Could not pkg_tarup $${oldname}".
@@ -157,7 +157,7 @@ replace-fixup-required-by: .PHONY
 		esac;							\
 		contents="$$pkgdir/+CONTENTS";				\
 		newcontents="$$contents.$$$$";				\
-		${SETENV} OLDNAME="$$oldname" NEWNAME="$$newname"	\
+		${PKGSRC_SETENV} OLDNAME="$$oldname" NEWNAME="$$newname"	\
 		${AWK} '($$0 ~ "^@pkgdep " ENVIRON["OLDNAME"])		\
 			{ print "@pkgdep " ENVIRON["NEWNAME"]; next }	\
 			{ print }'					\

@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.45 2009/07/17 23:24:57 agc Exp $
+# $NetBSD: depends.mk,v 1.46 2011/09/08 20:17:16 abs Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -27,7 +27,7 @@ _RDEPENDS_FILE=	${WRKDIR}/.rdepends
 _FULL_DEPENDS_CMD=	\
 	${AWK} '$$1 == "full" { print $$3; }' < ${_RDEPENDS_FILE}
 
-_REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
+_REDUCE_DEPENDS_CMD=	${PKGSRC_SETENV} CAT=${CAT:Q}			\
 				PKG_ADMIN=${PKG_ADMIN_CMD:Q}		\
 				PWD_CMD=${PWD_CMD:Q} TEST=${TEST:Q}	\
 			${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk
@@ -39,7 +39,7 @@ _flavor-show-depends: .PHONY
 	esac
 
 _LIST_DEPENDS_CMD=	\
-	${SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
+	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/flavor/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
@@ -47,13 +47,13 @@ _LIST_DEPENDS_CMD=	\
 			" "${DEPENDS:Q}
 
 _LIST_DEPENDS_CMD.bootstrap=	\
-	${SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
+	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/flavor/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} " " " "
 
 _RESOLVE_DEPENDS_CMD=	\
-	${SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_INFO=${PKG_INFO:Q} \
+	${PKGSRC_SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_INFO=${PKG_INFO:Q} \
 		_DEPENDS_FILE=${_DEPENDS_FILE:Q} \
 		${SH} ${PKGSRCDIR}/mk/flavor/pkg/resolve-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
@@ -79,7 +79,7 @@ _DEPENDS_INSTALL_CMD=							\
 		${STEP_MSG} "Verifying $$target for $$dir";		\
 		[ -d "$$dir" ] || ${FAIL_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
 		cd $$dir;						\
-		${SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
+		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		case "$$pkg" in						\
 		"")	${ERROR_MSG} "[depends.mk] A package matching \`\`$$pattern'' should"; \
@@ -141,10 +141,10 @@ _flavor-post-install-dependencies: .PHONY ${_RDEPENDS_FILE}
 pkg_install-depends:
 	${RUN}if [ `${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302` -lt ${PKGTOOLS_REQD} ]; then \
 	${PHASE_MSG} "Trying to handle out-dated pkg_install..."; \
-	cd ../../pkgtools/pkg_install && ${SETENV} ${PKGSRC_MAKE_ENV} \
+	cd ../../pkgtools/pkg_install && ${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} \
 	    _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes clean && \
-	cd ../../pkgtools/pkg_install && ${SETENV} ${PKGSRC_MAKE_ENV} \
+	cd ../../pkgtools/pkg_install && ${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} \
 	    _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes ${DEPENDS_TARGET:Q}; \
 	fi

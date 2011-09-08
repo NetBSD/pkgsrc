@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.151 2010/05/11 18:36:15 mbalmer Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.152 2011/09/08 20:17:15 abs Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -252,10 +252,10 @@ bulk-cache:
 	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
 	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
 	@${BULK_MSG} "Building complete pkgsrc dependency tree (this may take a while)."
-	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printdepends ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${DEPENDSTREEFILE:Q}
+	cd ${PKGSRCDIR} && ${PKGSRC_SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printdepends ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${DEPENDSTREEFILE:Q}
 	@${BULK_MSG} "Generating package name <=> package directory cross reference file"
 	@${BULK_MSG_CONT} "(this may take a while)."
-	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printindex ${NOT_AVAILABLE_FILE} ${BULKFILESDIR:Q} > ${INDEXFILE:Q}
+	cd ${PKGSRCDIR} && ${PKGSRC_SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printindex ${NOT_AVAILABLE_FILE} ${BULKFILESDIR:Q} > ${INDEXFILE:Q}
 .else
 	@${BULK_MSG} "Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${BULK_MSG_CONT} "along with their dependencies"
@@ -264,7 +264,7 @@ bulk-cache:
 		${BULK_MSG} "WARN: Skipping nonexisting directory ${__tmp__}"; \
 		${ECHO} " 0 ${__tmp__} 0" >> ${BULKFILESDIR:Q}/${BROKENFILE:Q}; \
 	else \
-		cd ${PKGSRCDIR}/${__tmp__} && ${SETENV} BMAKE=${MAKE:Q} AWK=${AWK:Q} EXPR=${EXPR:Q} ${SH} ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE:Q}; \
+		cd ${PKGSRCDIR}/${__tmp__} && ${PKGSRC_SETENV} BMAKE=${MAKE:Q} AWK=${AWK:Q} EXPR=${EXPR:Q} ${SH} ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE:Q}; \
 	fi
 .  endfor
 	@${BULK_MSG} "Extracting dependency tree file"
