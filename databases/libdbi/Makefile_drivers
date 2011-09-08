@@ -1,4 +1,4 @@
-# $NetBSD: Makefile_drivers,v 1.1.1.1 2010/03/10 23:55:48 wiz Exp $
+# $NetBSD: Makefile_drivers,v 1.2 2011/09/08 13:49:03 joerg Exp $
 #
 
 DISTNAME=	libdbi-drivers-0.8.3-1
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 DISTINFO_FILE=		${.CURDIR}/../../databases/libdbi/distinfo_drivers
-#PATCHDIR=		${.CURDIR}/../../databases/libdbi/patches_drivers
+PATCHDIR=		${.CURDIR}/../../databases/libdbi/patches_drivers
 
 INSTALLATION_DIRS+=	lib/dbd
 

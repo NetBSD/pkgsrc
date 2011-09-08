@@ -1,0 +1,27 @@
+$NetBSD: patch-configure,v 1.1 2011/09/08 13:49:03 joerg Exp $
+
+--- configure.orig	2011-09-08 12:21:45.000000000 +0000
++++ configure
+@@ -20202,16 +20202,16 @@ else
+         case $host in
+         *-*-linux*)
+                 DEBUG="-g -Wall -D_REENTRANT -D__NO_MATH_INLINES -fsigned-char"
+-                CFLAGS="-O20 -ffast-math -D_REENTRANT -fsigned-char"
+-                PROFILE="-pg -g -O20 -ffast-math -D_REENTRANT -fsigned-char";;
++                CFLAGS="-O3 -ffast-math -D_REENTRANT -fsigned-char"
++                PROFILE="-pg -g -O3 -ffast-math -D_REENTRANT -fsigned-char";;
+         sparc-sun-*)
+                 DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char -mv8"
+-                CFLAGS="-O20 -ffast-math -D__NO_MATH_INLINES -fsigned-char -mv8"
+-                PROFILE="-pg -g -O20 -D__NO_MATH_INLINES -fsigned-char -mv8" ;;
++                CFLAGS="-O3 -ffast-math -D__NO_MATH_INLINES -fsigned-char -mv8"
++                PROFILE="-pg -g -O3 -D__NO_MATH_INLINES -fsigned-char -mv8" ;;
+         *)
+                 DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char"
+-                CFLAGS="-O20 -D__NO_MATH_INLINES -fsigned-char"
+-                PROFILE="-O20 -g -pg -D__NO_MATH_INLINES -fsigned-char" ;;
++                CFLAGS="-O3 -D__NO_MATH_INLINES -fsigned-char"
++                PROFILE="-O3 -g -pg -D__NO_MATH_INLINES -fsigned-char" ;;
+         esac
+ fi
+ 
