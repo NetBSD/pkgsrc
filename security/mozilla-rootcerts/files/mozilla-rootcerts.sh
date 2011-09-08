@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.3 2010/10/22 10:41:50 wiz Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.4 2011/09/08 19:46:01 drochner Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -156,6 +156,20 @@ extract)
 				}
 			}
 			close(cmd)
+			# kill untrusted certificates (not clean, but the script which comes
+			# with "curl" works the same way)
+			untrusted = 0
+			while (getline) {
+				if ($0 ~ /^#$/) break
+				if ($0 ~ /^CKA_TRUST_SERVER_AUTH.*CK_TRUST.*CKT_NSS_NOT_TRUSTED$/)
+					untrusted = 1
+				if ($0 ~ /^CKA_TRUST_SERVER_AUTH.*CK_TRUST.*CKT_NETSCAPE_UNTRUSTED$/)
+					untrusted = 1
+			}
+			if (untrusted) {
+				print filename " untrusted"
+				system("rm -f " filename)
+			}
 		}
 	}'
 	;;
