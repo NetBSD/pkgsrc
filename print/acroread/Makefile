@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2011/09/06 21:08:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.58 2011/09/08 19:29:35 cheusov Exp $
 
 DISTNAME=	acroread	# overridden below
 PKGNAME=	acroread-4.05
@@ -80,10 +80,12 @@ do-install:
 	done
 .endif
 
+.if !empty(DESTDIR)
 SUBST_CLASSES+=		rmdestdir
 SUBST_STAGE.rmdestdir=	post-install
 SUBST_FILES.rmdestdir=	${DESTDIR}${PREFIX}/bin/acroread4
 SUBST_FILES.rmdestdir+=	${DESTDIR}${PREFIX}/Acrobat4/bin/acroread
 SUBST_SED.rmdestdir=	-e 's,${DESTDIR},,g'
+.endif
 
 .include "../../mk/bsd.pkg.mk"
