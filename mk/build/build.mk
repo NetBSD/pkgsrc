@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.19 2009/01/10 15:59:29 tnn Exp $
+# $NetBSD: build.mk,v 1.20 2011/09/08 20:17:15 abs Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -46,7 +46,7 @@ BUILD_MAKE_FLAGS?=	# none
 BUILD_TARGET?=		all
 
 BUILD_MAKE_CMD= \
-	${SETENV} ${MAKE_ENV}						\
+	${PKGSRC_SETENV} ${MAKE_ENV}					\
 		${MAKE_PROGRAM} ${_MAKE_JOBS}				\
 			${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}		\
 			-f ${MAKE_FILE}
@@ -163,7 +163,7 @@ BUILD_ENV_SHELL?=	${SH}
 build-env: .PHONY configure
 	@${STEP_MSG} "Entering the build environment for ${PKGNAME}"
 	${RUN}${_ULIMIT_CMD}						\
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BUILD_ENV_SHELL}
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${BUILD_ENV_SHELL}
 .else
 build-env: barrier
 .endif

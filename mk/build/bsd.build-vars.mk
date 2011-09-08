@@ -1,4 +1,4 @@
-# $NetBSD: bsd.build-vars.mk,v 1.6 2010/02/01 00:16:54 joerg Exp $
+# $NetBSD: bsd.build-vars.mk,v 1.7 2011/09/08 20:17:15 abs Exp $
 #
 # Package-settable variables:
 #
@@ -52,3 +52,4 @@ MAKE_ENV+=	${USETOOLS:DUSETOOLS=${USETOOLS:Q}}
 # processes for build-related phases.
 #
 PKGSRC_MAKE_ENV+=	PATH=${PATH:Q}
+PKGSRC_MAKE_ENV+=	USE_DESTDIR=${USE_DESTDIR:Q}
