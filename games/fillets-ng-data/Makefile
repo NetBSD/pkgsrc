@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/08/29 08:24:30 christos Exp $
+# $NetBSD: Makefile,v 1.8 2011/09/08 00:12:37 joerg Exp $
 #
 
 DISTNAME=	fillets-ng-data-0.7.1
@@ -16,13 +16,16 @@ NO_BUILD=	yes
 NO_CONFIGURE=	yes
 USE_TOOLS+=	pax
 
+FIND_EXCLUDE=	\( -name \*.orig \)
+
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/games/fillets-ng
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fillets-ng
 	cd ${WRKSRC} && \
-		pax -rw -pm font images music script sound \
-			${DESTDIR}${PREFIX}/share/games/fillets-ng/
-	cd ${WRKSRC}/doc/html && \
-		pax -rw -pm . ${DESTDIR}${PREFIX}/share/doc/fillets-ng/
+	cd ${WRKSRC} && ${FIND} font images music script sound \
+	    -type f -and \! ${FIND_EXCLUDE} -print | \
+	    pax -rw -pm  ${DESTDIR}${PREFIX}/share/games/fillets-ng/
+	cd ${WRKSRC}/doc/html && ${FIND} . -type f -and \! ${FIND_EXCLUDE} \
+	    -print | pax -rw -pp -pm ${DESTDIR}${PREFIX}/share/doc/fillets-ng/
 
 .include "../../mk/bsd.pkg.mk"
