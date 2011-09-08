@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10537 2011/09/08 20:32:33 wiz Exp $
+$NetBSD: TODO,v 1.10538 2011/09/08 20:59:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -498,7 +498,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.4.2
 	o darcs-2.4
 	o dasher-4.11
-	o davical-0.9.9.4
 	o dbench-4.0
 	o dbus-1.4.14
 	o dbus-glib-0.94
