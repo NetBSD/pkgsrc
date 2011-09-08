@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2188 2011/09/08 20:06:57 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2189 2011/09/08 20:12:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3424,3 +3424,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cgdb to 0.6.5 [wiz 2011-09-08]
 	Updated www/p5-CGI-Simple to 1.113 [wiz 2011-09-08]
 	Updated mail/gmime24 to 2.4.24 [wiz 2011-09-08]
+	Updated games/puzzles to 9179 [wiz 2011-09-08]
