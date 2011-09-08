@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2183 2011/09/07 23:07:26 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.2184 2011/09/08 10:49:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3419,3 +3419,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/yale-tftpd to 3.0nb5 [obache 2011-09-06]
 	Updated audio/csound5 to 5.01nb10 [obache 2011-09-07]
 	Added geography/gama version 1.11 [gdt 2011-09-07]
+	Updated devel/ruby-ole to 1.2.11.2 [obache 2011-09-08]
