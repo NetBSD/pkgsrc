@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/07/12 19:17:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/09/08 20:15:17 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -629,6 +629,7 @@ share/gnome/help/gnumeric/C/figures/printing-preview.png
 share/gnome/help/gnumeric/C/figures/printing-setup-header-config.png
 share/gnome/help/gnumeric/C/figures/printing-setup-header.png
 share/gnome/help/gnumeric/C/figures/printing-setup-page.png
+share/gnome/help/gnumeric/C/figures/printing-setup-printarea.png
 share/gnome/help/gnumeric/C/figures/printing-setup-sheet.png
 share/gnome/help/gnumeric/C/figures/selection-1.png
 share/gnome/help/gnumeric/C/figures/selection-10.png
@@ -740,6 +741,7 @@ share/gnumeric/${PKGVERSION}/ui/autofilter-top10.ui
 share/gnumeric/${PKGVERSION}/ui/autoformat.ui
 share/gnumeric/${PKGVERSION}/ui/autosave.ui
 share/gnumeric/${PKGVERSION}/ui/cell-comment.ui
+share/gnumeric/${PKGVERSION}/ui/cell-format-cond.ui
 share/gnumeric/${PKGVERSION}/ui/cell-format.ui
 share/gnumeric/${PKGVERSION}/ui/cell-sort.ui
 share/gnumeric/${PKGVERSION}/ui/chi-squared.ui
