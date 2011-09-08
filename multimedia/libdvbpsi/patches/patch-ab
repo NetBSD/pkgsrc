@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2010/11/04 19:43:33 adam Exp $
+$NetBSD: patch-ab,v 1.2 2011/09/08 21:10:26 wiz Exp $
 
---- configure.orig	2010-11-04 09:06:29.000000000 +0000
+--- configure.orig	2011-09-01 08:45:08.000000000 +0000
 +++ configure
-@@ -11226,8 +11226,6 @@ fi
+@@ -11643,8 +11643,6 @@ fi
  if test "$release" = "true"
  then
    CFLAGS="${CFLAGS} -O6"
@@ -10,4 +10,4 @@ $NetBSD: patch-ab,v 1.1 2010/11/04 19:43:33 adam Exp $
 -  CFLAGS="${CFLAGS} -O2"
  fi
  
- 
+ for ac_header in stdint.h inttypes.h
