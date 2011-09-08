@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.54 2011/04/30 23:58:29 dholland Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.55 2011/09/08 20:17:16 abs Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -331,7 +331,7 @@ pre-install: create-usergroup
 .endif
 
 _INSTALL_USERGROUP_CHECK=						\
-	${SETENV} PERL5=${PERL5:Q}					\
+	${PKGSRC_SETENV} PERL5=${PERL5:Q}					\
 	${SH} ${PKGSRCDIR}/mk/pkginstall/usergroup-check
 
 .PHONY: create-usergroup
@@ -772,7 +772,7 @@ install-script-data-info-files:
 					>> ${INSTALL_FILE} ;;		\
 			esac;						\
 		done;							\
-		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+		cd ${PKG_DB_TMPDIR} && ${PKGSRC_SETENV} ${INSTALL_SCRIPTS_ENV} \
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
 			UNPACK +INFO_FILES;				\
 	fi
@@ -1125,7 +1125,7 @@ pre-install-script:
 	${RUN}								\
 	if ${TEST} -x ${INSTALL_FILE}; then				\
 		${STEP_MSG} "Running PRE-INSTALL script actions";	\
-		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+		cd ${PKG_DB_TMPDIR} && ${PKGSRC_SETENV} ${INSTALL_SCRIPTS_ENV} \
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
 			PRE-INSTALL;					\
 	fi
@@ -1134,7 +1134,7 @@ post-install-script:
 	${RUN}								\
 	if ${TEST} -x ${INSTALL_FILE}; then				\
 		${STEP_MSG} "Running POST-INSTALL script actions";	\
-		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+		cd ${PKG_DB_TMPDIR} && ${PKGSRC_SETENV} ${INSTALL_SCRIPTS_ENV} \
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
 			POST-INSTALL;					\
 	fi
