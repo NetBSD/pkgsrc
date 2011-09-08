@@ -1,17 +1,8 @@
-$NetBSD: patch-af,v 1.7 2011/09/06 18:51:14 bsiegert Exp $
+$NetBSD: patch-af,v 1.8 2011/09/08 16:29:49 bsiegert Exp $
 
---- lib/Makefile.in.orig	Sun Aug  7 17:47:39 2011
+--- lib/Makefile.in.orig	2009-06-21 11:17:33.000000000 +0000
 +++ lib/Makefile.in
-@@ -68,7 +68,7 @@ OBJECTS_RES_no =
- all : libiconv.la
- 
- libiconv.la : $(OBJECTS)
--	$(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(CFLAGS) -o libiconv.la -rpath $(libdir) -version-info $(LIBICONV_VERSION_INFO) -no-undefined $(OBJECTS)
-+	$(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(CFLAGS) -o libiconv.la -rpath $(libdir) -version-info $(LIBICONV_VERSION_INFO) -no-undefined $(OBJECTS) libcharset.la
- 
- iconv.lo : $(srcdir)/iconv.c $(srcdir)/converters.h \
-            $(srcdir)/encodings.def $(srcdir)/encodings_aix.def $(srcdir)/encodings_osf1.def $(srcdir)/encodings_dos.def $(srcdir)/encodings_local.def \
-@@ -96,7 +96,7 @@ libiconv.res.lo : $(srcdir)/../windows/l
+@@ -96,14 +96,14 @@ libiconv.res.lo : $(srcdir)/../windows/l
  # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
  install-lib : all force
  	if [ ! -d $(libdir) ] ; then $(mkinstalldirs) $(libdir) ; fi
@@ -20,7 +11,6 @@ $NetBSD: patch-af,v 1.7 2011/09/06 18:51:14 bsiegert Exp $
  
  # On AIX, libiconv.a must include the object files of /lib/libiconv.a,
  # otherwise the setlocale() call fails when invoked from executables linked
-@@ -103,7 +103,7 @@ install-lib : all force
  # with -rpath $(libdir), even if linked without -liconv.
  install : all force
  	if [ ! -d $(DESTDIR)$(libdir) ] ; then $(mkinstalldirs) $(DESTDIR)$(libdir) ; fi
