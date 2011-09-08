@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2011/07/30 10:47:54 shattered Exp $
+# $NetBSD: Makefile,v 1.27 2011/09/08 20:59:13 shattered Exp $
 
 .include "../../sysutils/gkrellm/Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm-server
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../sysutils/gkrellm-share
 
@@ -34,7 +34,7 @@ PKG_SUPPORTED_OPTIONS=	glib1
 SUBST_CLASSES+=		gkprefix
 SUBST_STAGE.gkprefix=	post-patch
 SUBST_FILES.gkprefix=	server/gkrellmd.h
-SUBST_SED.gkprefix=	-e '/GKRELLMD_SYS_ETC/{s!/etc!${PKG_SYSCONFDIR}&!;}'
+SUBST_SED.gkprefix=	-e '/GKRELLMD_SYS_ETC/{s!/etc!${PKG_SYSCONFDIR}!;}'
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/examples/gkrellm-server
