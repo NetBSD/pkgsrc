@@ -1,4 +1,4 @@
-# $NetBSD: toplevel.mk,v 1.4 2007/10/13 11:04:19 dsl Exp $
+# $NetBSD: toplevel.mk,v 1.5 2011/09/08 20:17:16 abs Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
@@ -15,7 +15,7 @@
 _README_TYPE_FLAG?=	none
 README.html: .PRECIOUS
 .if ${_README_TYPE_FLAG} == "--ftp" || ${_README_TYPE_FLAG} == "--cdrom"
-	${SETENV} TMPDIR=${TMPDIR:U/tmp}/mkreadme	 		\
+	${PKGSRC_SETENV} TMPDIR=${TMPDIR:U/tmp}/mkreadme	 		\
 		BMAKE=${MAKE}						\
 		./mk/scripts/mkreadme --pkgsrc ${.CURDIR} 		\
 		--packages ${PACKAGES} ${_README_TYPE_FLAG}		\
