@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/11/12 18:20:19 jym Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/08 20:46:37 wiz Exp $
 #
 
 DISTNAME=	awl-${LIBAWL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-libawl-${LIBAWL_VERSION}
-LIBAWL_VERSION=	0.45
+LIBAWL_VERSION=	0.46
 CATEGORIES=	devel
 MASTER_SITES=	http://debian.mcmillan.net.nz/packages/awl/
 

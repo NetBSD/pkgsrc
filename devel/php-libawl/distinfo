@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/12 18:20:19 jym Exp $
+$NetBSD: distinfo,v 1.3 2011/09/08 20:46:37 wiz Exp $
 
-SHA1 (awl-0.45.tar.gz) = 2c4c15011ab6633bac414a4be14378ba530decda
-RMD160 (awl-0.45.tar.gz) = 47a94b597c30a5ebd337021b1a9ba5cbbee836f4
-Size (awl-0.45.tar.gz) = 279339 bytes
+SHA1 (awl-0.46.tar.gz) = 000a19cb01ce568458c48c4516a2f94fc681e6ff
+RMD160 (awl-0.46.tar.gz) = 94bd032387e4c6d47b405cc7151f65e502178aa3
+Size (awl-0.46.tar.gz) = 283719 bytes
