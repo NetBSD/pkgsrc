@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/31 12:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/08 21:57:55 wiz Exp $
 #
 
 DISTNAME=	bup-0.24b
@@ -10,7 +10,7 @@ MASTER_SITES=	# manually packaged since master site is git repository
 # doc tarball: switch to "man" branch before downloading
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}${EXTRACT_SUFX}
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/apenwarr/bup
 COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
