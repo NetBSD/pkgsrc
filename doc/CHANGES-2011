@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2185 2011/09/08 10:57:59 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2186 2011/09/08 19:46:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3421,3 +3421,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added geography/gama version 1.11 [gdt 2011-09-07]
 	Updated devel/ruby-ole to 1.2.11.2 [obache 2011-09-08]
 	Updated math/ruby-spreadsheet to 0.6.5.9 [obache 2011-09-08]
+	Updated devel/cgdb to 0.6.5 [wiz 2011-09-08]
