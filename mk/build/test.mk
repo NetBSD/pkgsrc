@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.15 2008/11/05 23:44:55 rillig Exp $
+# $NetBSD: test.mk,v 1.16 2011/09/08 20:17:15 abs Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -47,7 +47,7 @@ TEST_ENV+=		${MAKE_ENV}
 TEST_MAKE_FLAGS?=	# none
 
 TEST_MAKE_CMD= \
-	${SETENV} ${MAKE_ENV}						\
+	${PKGSRC_SETENV} ${MAKE_ENV}					\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${TEST_MAKE_FLAGS}	\
 			-f ${MAKE_FILE}
 

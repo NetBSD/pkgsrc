@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.15 2009/07/15 09:40:30 joerg Exp $
+# $NetBSD: checksum.mk,v 1.16 2011/09/08 20:17:15 abs Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -27,7 +27,7 @@ _PATCH_DIGEST_ALGORITHMS?=	SHA1
 _COOKIE.checksum=	${_COOKIE.extract}
 
 _CHECKSUM_CMD=								\
-	${SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}		\
+	${PKGSRC_SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}	\
 		ECHO=${TOOLS_ECHO:Q} SED=${TOOLS_SED:Q}			\
 		TEST=${TOOLS_TEST:Q}					\
 	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
@@ -51,7 +51,7 @@ checksum checksum-phase:
 	fi
 .endif
 
-_DISTINFO_CMD=	${SETENV} DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_SED:Q}	\
+_DISTINFO_CMD=	${PKGSRC_SETENV} DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_SED:Q} \
 			TEST=${TOOLS_TEST:Q} WC=${TOOLS_WC:Q}		\
 		${AWK} -f ${PKGSRCDIR}/mk/checksum/distinfo.awk --
 

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1977 2011/03/12 14:07:13 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1978 2011/09/08 20:17:15 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -150,6 +150,9 @@ ${_var_}+=	${${_var_}.*}
 .endfor
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
+
+# To sanitise environment set PKGSRC_SETENV=${SETENV} -i
+PKGSRC_SETENV=	${SETENV}
 
 ALL_ENV+=	CC=${CC:Q}
 ALL_ENV+=	CFLAGS=${CFLAGS:M*:Q}
@@ -600,7 +603,7 @@ ${.CURDIR}/${WRKDIR_BASENAME}:
 # XXX: Shouldn't the $${PATH} be ${PATH} here? This may be related to
 # PR 34470.
 _ROOT_CMD=	cd ${.CURDIR} &&					\
-		${SETENV} ${PKGSRC_MAKE_ENV}				\
+		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV}				\
 			PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}		\
 		${MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes		\
 			PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q}		\

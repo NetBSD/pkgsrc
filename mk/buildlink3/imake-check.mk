@@ -1,4 +1,4 @@
-# $NetBSD: imake-check.mk,v 1.8 2010/06/16 20:23:05 schwarz Exp $
+# $NetBSD: imake-check.mk,v 1.9 2011/09/08 20:17:15 abs Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -76,7 +76,7 @@ IMAKE?=		${X11BASE}/bin/imake
 
 .    if !defined(BUILTIN_IMAKE_CHECK.${pkg})
 BUILTIN_IMAKE_CHECK.${pkg}!=				\
-	if ${SETENV} CAT=${CAT:Q} ECHO=${ECHO:Q} GREP=${GREP:Q}		\
+	if ${PKGSRC_SETENV} CAT=${CAT:Q} ECHO=${ECHO:Q} GREP=${GREP:Q}	\
 		IMAKE=${IMAKE:Q} IMAKE_MAKE=${IMAKE_MAKE:Q}		\
 		MKDIR=${MKDIR:Q} PATH_ORIG=${_PATH_ORIG:Q}		\
 		RM=${RM:Q} TEST=${TEST:Q}				\
