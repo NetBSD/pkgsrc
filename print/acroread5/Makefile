@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/09/06 21:08:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.43 2011/09/08 19:29:35 cheusov Exp $
 
 DISTNAME=	acroread5	# overridden below
 PKGNAME=	acroread5-5.10
@@ -54,10 +54,12 @@ do-install:
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat5/Reader/license.txt"
 
+.if !empty(DESTDIR)
 SUBST_CLASSES+=		rmdestdir
 SUBST_STAGE.rmdestdir=	post-install
 SUBST_FILES.rmdestdir=	${DESTDIR}${PREFIX}/bin/acroread5
 SUBST_FILES.rmdestdir=	${DESTDIR}${PREFIX}/Acrobat5/bin/acroread
 SUBST_SED.rmdestdir=	-e 's,${DESTDIR},,g'
+.endif
 
 .include "../../mk/bsd.pkg.mk"
