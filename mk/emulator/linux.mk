@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.9 2011/09/06 17:48:24 abs Exp $
+# $NetBSD: linux.mk,v 1.10 2011/09/08 21:04:59 abs Exp $
 #
 # Linux binary emulation framework
 #
@@ -6,6 +6,15 @@
 .if ${OPSYS} == "Linux"
 EMUL_TYPE.linux?=	native
 .else
+
+# NetBSD 5.99.50 or later default to 11.3, otherwise 10.0
+.if ${OPSYS} == "NetBSD" && (empty(OS_VERSION:M[0-5].*) || \
+	!empty(OS_VERSION:M5.99.[5-9][0-9]) || \
+	!empty(OS_VERSION:M5.99.[0-9][0-9][0-9]*))
+SUSE_PREFER?=	11.3
+.else
+SUSE_PREFER?=	10.0
+.endif
 
 .for _version_ in ${EMUL_REQD:Msuse>=*:S/suse>=//}
 SUSE_VERSION_REQD?=	${_version_}
