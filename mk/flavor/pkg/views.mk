@@ -1,4 +1,4 @@
-# $NetBSD: views.mk,v 1.6 2009/03/17 22:13:36 rillig Exp $
+# $NetBSD: views.mk,v 1.7 2011/09/08 20:17:16 abs Exp $
 
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -53,7 +53,7 @@ su-build-views:
 			;;						\
 		esac;							\
 		${STEP_MSG} "Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
-		dups=`${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v check ${PKGNAME} || ${TRUE}`; \
+		dups=`${PKGSRC_SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v check ${PKGNAME} || ${TRUE}`; \
 		case "$$dups" in					\
 		"")	;;						\
 		*)	${WARNING_MSG} "***********************************************************"; \
@@ -65,7 +65,7 @@ su-build-views:
 			;;						\
 		esac;							\
 		${STEP_MSG} "Linking package into $$viewname view";	\
-		${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
+		${PKGSRC_SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
 	done
 
 ######################################################################
@@ -86,5 +86,5 @@ su-remove-views:
 		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
 		esac;							\
 		${STEP_MSG} "Removing package from $$viewname view";	\
-		${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
+		${PKGSRC_SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
 	done

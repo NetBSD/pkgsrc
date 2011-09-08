@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.39 2009/03/17 22:13:36 rillig Exp $
+# $NetBSD: plist.mk,v 1.40 2011/09/08 20:17:16 abs Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -101,7 +101,7 @@ _IMAKE_MANINSTALL=	# empty
 .endif
 
 _LIBTOOL_EXPAND=							\
-	${SETENV} ECHO=${TOOLS_ECHO:Q} GREP=${TOOLS_GREP:Q}		\
+	${PKGSRC_SETENV} ECHO=${TOOLS_ECHO:Q} GREP=${TOOLS_GREP:Q}		\
 		SORT=${TOOLS_SORT:Q} TEST=${TOOLS_TEST:Q}		\
 	${SH} ${.CURDIR}/../../mk/plist/libtool-expand
 
@@ -258,9 +258,9 @@ ${PLIST}: ${PLIST_SRC}
 ${PLIST}:
 	${RUN} ${MKDIR} ${.TARGET:H}
 	${RUN} { ${_GENERATE_PLIST} } > ${.TARGET}-1src
-	${RUN} ${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_1_AWK} < ${.TARGET}-1src > ${.TARGET}-2mac
-	${RUN} ${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} < ${.TARGET}-2mac > ${.TARGET}-3mag
-	${RUN} ${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK} < ${.TARGET}-3mag > ${.TARGET}
+	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_1_AWK} < ${.TARGET}-1src > ${.TARGET}-2mac
+	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} < ${.TARGET}-2mac > ${.TARGET}-3mag
+	${RUN} ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK} < ${.TARGET}-3mag > ${.TARGET}
 
 # for list of keywords see pkg_create(1)
 ${_PLIST_NOKEYWORDS}: ${PLIST}
@@ -279,6 +279,6 @@ ${_PLIST_NOKEYWORDS}: ${PLIST}
 .if defined(INFO_FILES)
 INFO_FILES_cmd=								\
 	${CAT} ${PLIST} |						\
-	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |		\
+	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |	\
 	${AWK} '($$0 !~ "-[0-9]*(\\.gz)?$$") { print }'
 .endif

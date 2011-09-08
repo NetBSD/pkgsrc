@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.8 2006/07/27 22:01:28 jlam Exp $
+# $NetBSD: bsd.utils.mk,v 1.9 2011/09/08 20:17:15 abs Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -21,7 +21,7 @@ _ALL_DEPENDS+=	${DEPENDS}
 # ${PKGSRCDIR} and also verifies that they exist within pkgsrc.
 #
 _PKG_PATHS_CMD=								\
-	${SETENV} ECHO=${TOOLS_ECHO:Q} PKGSRCDIR=${PKGSRCDIR:Q}		\
+	${PKGSRC_SETENV} ECHO=${TOOLS_ECHO:Q} PKGSRCDIR=${PKGSRCDIR:Q}	\
 		PWD_CMD=${TOOLS_PWD_CMD:Q} TEST=${TOOLS_TEST:Q}		\
 	${SH} ${.CURDIR}/../../mk/scripts/pkg_path
 
@@ -34,7 +34,7 @@ show-depends-dirs show-depends-pkgpaths:
 #
 _DEPENDS_WALK_MAKEFLAGS?=	${MAKEFLAGS}
 _DEPENDS_WALK_CMD=							\
-	${SETENV} ECHO=${TOOLS_ECHO:Q} MAKE=${MAKE:Q}			\
+	${PKGSRC_SETENV} ECHO=${TOOLS_ECHO:Q} MAKE=${MAKE:Q}		\
 		MAKEFLAGS=${_DEPENDS_WALK_MAKEFLAGS:Q}			\
 		PKGSRCDIR=${PKGSRCDIR:Q} TEST=${TOOLS_TEST:Q}		\
 	${AWK} -f ${.CURDIR}/../../mk/scripts/depends-depth-first.awk --

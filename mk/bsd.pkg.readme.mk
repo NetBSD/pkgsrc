@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.24 2011/06/03 10:25:04 spz Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.25 2011/09/08 20:17:15 abs Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -237,7 +237,7 @@ SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 # the target used to generate the README.html file.
 .PHONY: README.html
 README.html: .PRECIOUS
-	@${SETENV} BMAKE=${MAKE:Q} ${SH} ../../mk/scripts/mkdatabase -f $@.tmp1
+	@${PKGSRC_SETENV} BMAKE=${MAKE:Q} ${SH} ../../mk/scripts/mkdatabase -f $@.tmp1
 	@if ${TEST} -d ${PACKAGES}; then				\
 		cd ${PACKAGES};						\
 		case `${PWD_CMD}` in					\

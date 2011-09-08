@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.18 2010/08/24 19:08:29 bad Exp $
+# $NetBSD: check-shlibs.mk,v 1.19 2011/09/08 20:17:15 abs Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -57,7 +57,7 @@ _check-shlibs: error-check .PHONY
 	cd ${DESTDIR:Q}${PREFIX:Q};					\
 	${_CHECK_SHLIBS_FILELIST_CMD} |					\
 	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
-	${SETENV} ${CHECK_SHLIBS_ELF_ENV} ${AWK} -f ${CHECK_SHLIBS_ELF} > ${ERROR_DIR}/${.TARGET}
+	${PKGSRC_SETENV} ${CHECK_SHLIBS_ELF_ENV} ${AWK} -f ${CHECK_SHLIBS_ELF} > ${ERROR_DIR}/${.TARGET}
 
 .else
 .  if ${_USE_DESTDIR} != "no"

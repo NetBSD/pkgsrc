@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.61 2011/03/21 08:55:12 obache Exp $
+# $NetBSD: install.mk,v 1.62 2011/09/08 20:17:16 abs Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -322,7 +322,7 @@ do-install:
 .  for _dir_ in ${INSTALL_DIRS}
 	${RUN} ${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} 				\
+	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} 			\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
 			-f ${MAKE_FILE} ${INSTALL_TARGET}
 .  endfor
@@ -370,7 +370,7 @@ _PLIST_REGEXP.man=	\
 	^([^/]*/)+(man[1-9ln]/[^/]*\.[1-9ln]|cat[1-9ln]/[^/]*\.[0-9])(\.gz)?$$
 
 _DOC_COMPRESS=								\
-	${SETENV} PATH=${PATH:Q}					\
+	${PKGSRC_SETENV} PATH=${PATH:Q}					\
 		MANZ=${_MANZ}						\
 		PKG_VERBOSE=${PKG_VERBOSE}				\
 		TEST=${TOOLS_TEST:Q}					\
