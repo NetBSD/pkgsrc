@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.6 2002/12/28 19:49:09 jschauma Exp $
+$NetBSD: patch-ab,v 1.7 2011/09/08 00:24:43 joerg Exp $
 
---- demos/Imakefile.orig	2002-11-19 12:50:52.000000000 -0800
-+++ demos/Imakefile	2002-12-25 10:38:30.000000000 -0800
-@@ -109,7 +109,7 @@
-
+--- demos/Imakefile.orig	2002-11-19 20:50:52.000000000 +0000
++++ demos/Imakefile
+@@ -109,7 +109,7 @@ UNSTATIC	= -Xlinker -Bdynamic
+ 
  FORMSLIBDIR     = $(TOP)/lib
  FORMSINCDIR     = $(FORMSLIBDIR)       
 -FORMSLIB        = -L$(FORMSLIBDIR) -lforms
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2002/12/28 19:49:09 jschauma Exp $
  DEPFORMSLIB     = $(FORMSLIBDIR)/libforms.a
  
  IMAGELIBDIR     = $(TOP)/image
-@@ -154,7 +154,7 @@
+@@ -154,7 +154,7 @@ EXTRA_INCLUDES  = \
  		  -I.
  
  DEPEND_DEFINES	= \
@@ -20,3 +20,12 @@ $NetBSD: patch-ab,v 1.6 2002/12/28 19:49:09 jschauma Exp $
  
  EXTRA_LIBRARIES	= \
  		  $(STATIC) \
+@@ -176,7 +176,7 @@ CDEBUGFLAGS	= -g $(OPTIMIZER)
+ 
+ #if Optimize
+ IMAKE_OPTIMIZE  = -DDoOptimize=1
+-OPTIMIZER	= -O4
++OPTIMIZER	= -O2
+ #else
+ OPTIMIZER	=
+ #endif

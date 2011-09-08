@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2002/12/28 19:49:09 jschauma Exp $
+$NetBSD: patch-ac,v 1.5 2011/09/08 00:24:43 joerg Exp $
 
---- fd2ps/Imakefile.orig	2002-10-01 09:40:02.000000000 -0700
-+++ fd2ps/Imakefile	2002-12-25 10:39:45.000000000 -0800
-@@ -32,7 +32,7 @@
+--- fd2ps/Imakefile.orig	2002-10-01 16:40:02.000000000 +0000
++++ fd2ps/Imakefile
+@@ -32,7 +32,7 @@ OBJS	= $(SRCS:.c=.o)
  #if !defined( PpcDarwinArchitecture )
  FORMSLIBDIR     = $(TOP)/lib
  FORMSINCDIR     = $(FORMSLIBDIR)       
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2002/12/28 19:49:09 jschauma Exp $
  DEPFORMSLIB     = $(FORMSLIBDIR)/libforms.a
  #endif
  
-@@ -64,7 +64,7 @@
+@@ -64,7 +64,7 @@ EXTRA_INCLUDES  = \
  		  -I.
  
  DEPEND_DEFINES	= \
@@ -20,3 +20,12 @@ $NetBSD: patch-ac,v 1.4 2002/12/28 19:49:09 jschauma Exp $
  
  EXTRA_LIBRARIES	= \
  		  $(STATIC) \
+@@ -83,7 +83,7 @@ PSRCS	= $(SPLSRCS) \
+ CDEBUGFLAGS	= -g $(OPTIMIZER)
+ #if Optimize
+ IMAKE_OPTIMIZE  = -DDoOptimize=1
+-OPTIMIZER	= -O4
++OPTIMIZER	= -O2
+ #else
+ OPTIMIZER	=
+ #endif
