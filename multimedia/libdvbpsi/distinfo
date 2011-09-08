@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/11/04 19:43:32 adam Exp $
+$NetBSD: distinfo,v 1.5 2011/09/08 21:10:26 wiz Exp $
 
-SHA1 (libdvbpsi-0.1.7.tar.bz2) = 4fc21425068a42daf6b261b413e0107cc67fb37c
-RMD160 (libdvbpsi-0.1.7.tar.bz2) = 0ce91c22e8a6abf01f75c719951b524bd31c87ff
-Size (libdvbpsi-0.1.7.tar.bz2) = 308173 bytes
-SHA1 (patch-aa) = 50ac67f20b06b8c9ebeef0140e279085df9164af
-SHA1 (patch-ab) = 462d926b4f78a20502f4bb6fb70302e85556ecc6
+SHA1 (libdvbpsi-0.2.1.tar.bz2) = 75c42de1cb391a65f8d41c72d39ce6968de48b63
+RMD160 (libdvbpsi-0.2.1.tar.bz2) = 1e8ab8835a5873d5a5d198c7574a227bd3026776
+Size (libdvbpsi-0.2.1.tar.bz2) = 330137 bytes
+SHA1 (patch-aa) = dc8c3b5a99e5e6dd73f0d0461e0924bcbdfbeb7d
+SHA1 (patch-ab) = eea9e53dac6982d1681ccd005960ceef3a0d74e8
