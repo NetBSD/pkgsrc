@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2009/10/22 10:25:02 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2011/09/08 00:15:50 joerg Exp $
 
 SHA1 (Botan-1.8.7.tgz) = 69d985f66aa024f0d53c2d5597a4f1a0b9735959
 RMD160 (Botan-1.8.7.tgz) = 73a6417f1445282e4b2fbf45557f2644b2996563
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 1229c25c86ac686ddeeaaabca3c5eea1ebccfed7
 SHA1 (patch-ab) = a53a3e23722d8f478c5a6c5ecf1df08d74fd21c0
 SHA1 (patch-ac) = 4f98ff086983b27ed17d048486a8afced47e7970
 SHA1 (patch-ak) = 7bf66c1faa84971b490be96efefac0ef44f97b70
+SHA1 (patch-src-alloc-secmem.h) = 532423f824e63acd8cafa0a74dc860990d40c41b
