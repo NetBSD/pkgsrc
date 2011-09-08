@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/13 13:21:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/09/08 10:57:42 obache Exp $
 bin/xlsopcodes${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
@@ -56,6 +56,7 @@ ${GEM_LIBDIR}/test/data/test_version_excel5.xls
 ${GEM_LIBDIR}/test/data/test_version_excel95.xls
 ${GEM_LIBDIR}/test/data/test_version_excel97.xls
 ${GEM_LIBDIR}/test/excel/row.rb
+${GEM_LIBDIR}/test/excel/writer/workbook.rb
 ${GEM_LIBDIR}/test/excel/writer/worksheet.rb
 ${GEM_LIBDIR}/test/font.rb
 ${GEM_LIBDIR}/test/integration.rb
