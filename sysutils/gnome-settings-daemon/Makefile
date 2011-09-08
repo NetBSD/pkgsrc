@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2011/08/28 07:44:29 obache Exp $
+# $NetBSD: Makefile,v 1.27 2011/09/08 20:09:25 drochner Exp $
 #
 
 DISTNAME=	gnome-settings-daemon-2.32.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,9 +29,17 @@ GCONF_SCHEMAS+=	desktop_gnome_peripherals_touchpad.schemas
 GCONF_SCHEMAS+=	desktop_gnome_peripherals_smartcard.schemas
 PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-settings-daemon
+PKG_SUPPORTED_OPTIONS=	pulseaudio
+.include "../../mk/bsd.options.mk"
+PLIST_VARS+=		pulseaudio
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+PLIST.pulseaudio=	yes
 BUILDLINK_API_DEPENDS.pulseaudio+=	pulseaudio>=0.9.15
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
+.endif
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
