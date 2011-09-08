@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+$NetBSD: patch-aa,v 1.2 2011/09/08 20:58:58 wiz Exp $
 
---- dba/create-database.sh.orig	2010-03-11 11:12:07.000000000 +0000
+--- dba/create-database.sh.orig	2010-10-17 19:00:55.000000000 +0000
 +++ dba/create-database.sh
 @@ -16,7 +16,7 @@ testawldir() {
  
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
  if ! testawldir "${AWLDIR}"; then
    AWLDIR="/usr/share/awl"
    if ! testawldir "${AWLDIR}"; then
-@@ -168,7 +168,7 @@ rm "${INSTALL_NOTE_FN}"
+@@ -175,7 +175,7 @@ rm "${INSTALL_NOTE_FN}"
  cat <<FRIENDLY
- *  The password for the 'admin' user has been set to '${ADMINPW}'"
+ *  The password for the 'admin' user has been set to '${ADMINPW}'
  
 -Thanks for trying DAViCal!  Check in /usr/share/doc/davical/examples/ for
 +Thanks for trying DAViCal!  Check in @EGDIRCONFIG@/ for
