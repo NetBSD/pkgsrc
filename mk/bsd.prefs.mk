@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.314 2011/04/07 08:08:45 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.315 2011/09/08 20:17:15 abs Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -711,7 +711,7 @@ PREPEND_PATH+=		${LOCALBASE}/bin
 # processes invoked by pkgsrc.
 #
 PKGSRC_MAKE_ENV+=	${MAKECONF:DMAKECONF=${MAKECONF:Q}}
-RECURSIVE_MAKE=		${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE}
+RECURSIVE_MAKE=		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} ${MAKE}
 
 _VARGROUPS+=		dirs
 _USER_VARS.dirs=	DISTDIR LOCALBASE PACKAGES PKG_SYSCONFDIR WRKOBJDIR
