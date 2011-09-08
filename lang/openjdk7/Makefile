@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/09/05 11:46:14 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/09/08 00:14:34 joerg Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -80,7 +80,8 @@ _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-unused-value -Wno-switch-enum \
 			-Wno-tautological-compare \
 			-Wno-delete-non-virtual-dtor \
-			-Wno-return-type -Wno-unused-parameter
+			-Wno-return-type -Wno-unused-parameter \
+			-Wno-parentheses-equality
 .endif
 .include "bootstrap.mk"
 .include "icedtea-extras.mk"
