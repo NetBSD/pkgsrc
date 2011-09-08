@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2194 2011/09/08 20:59:09 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2195 2011/09/08 21:10:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3430,3 +3430,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/mp3diags to 1.0.08.053 [wiz 2011-09-08]
 	Updated devel/php-libawl to 0.46 [wiz 2011-09-08]
 	Updated www/davical to 0.9.9.4 [wiz 2011-09-08]
+	Updated multimedia/libdvbpsi to 0.2.1 [wiz 2011-09-08]
