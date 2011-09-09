@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.10 2011/09/08 21:04:59 abs Exp $
+# $NetBSD: linux.mk,v 1.11 2011/09/09 21:01:36 abs Exp $
 #
 # Linux binary emulation framework
 #
@@ -19,7 +19,9 @@ SUSE_PREFER?=	10.0
 .for _version_ in ${EMUL_REQD:Msuse>=*:S/suse>=//}
 SUSE_VERSION_REQD?=	${_version_}
 .endfor
-SUSE_VERSION_REQD?=	${SUSE_PREFER}
+.if !defined(SUSE_VERSION_REQD) || ${SUSE_PREFER} > ${SUSE_VERSION_REQD}
+SUSE_VERSION_REQD=	${SUSE_PREFER}
+.endif
 
 EMUL_TYPE.linux?=	suse-${SUSE_VERSION_REQD}
 .endif
