@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2200 2011/09/09 12:09:58 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2201 2011/09/09 12:43:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3437,3 +3437,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/cyrus-imapd23 to 2.3.17 [obache 2011-09-09]
 	Updated pkgtools/x11-links to 0.67 [abs 2011-09-09]
 	Updated mail/cyrus-imapd24 to 2.4.11 [obache 2011-09-09]
+	Updated math/genius to 1.0.14 [drochner 2011-09-09]
+	Updated math/gnumeric110 to 0.10.17 [drochner 2011-09-09]
+	Updated misc/goffice0.8 to 0.8.17 [drochner 2011-09-09]
+	Updated net/tor to 0.2.2.32 [drochner 2011-09-09]
+	Updated x11/gtk2 to 2.24.6 [drochner 2011-09-09]
+	Updated www/webkit-gtk to 1.4.3 [drochner 2011-09-09]
