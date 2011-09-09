@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2011/07/06 09:45:45 obache Exp $
+$NetBSD: patch-ab,v 1.6 2011/09/09 12:09:34 obache Exp $
 
---- configure.orig	2011-07-04 15:06:30.000000000 +0000
+--- configure.orig	2011-09-08 19:03:38.000000000 +0000
 +++ configure
 @@ -7201,7 +7201,7 @@ if test "x$ac_cv_header_pcreposix_h" = x
  fi
@@ -29,12 +29,3 @@ $NetBSD: patch-ab,v 1.5 2011/07/06 09:45:45 obache Exp $
  			LIBS="$LIBS -lrx"
  
  $as_echo "#define ENABLE_REGEX /**/" >>confdefs.h
-@@ -10493,7 +10493,7 @@ elif test "${with_perl}" != "no"; then
-     PERL_SUBDIRS="imap"
-     PERL="${with_perl}"
-     case "${target_os}" in
--        linux*|netbsd*)
-+        linux*|netbsd*|freebsd*|dragonfly*)
-             { $as_echo "$as_me:${as_lineno-$LINENO}: checking for perl cccdlflags needed on \"${target_os}\"" >&5
- $as_echo_n "checking for perl cccdlflags needed on \"${target_os}\"... " >&6; }
-             eval `${PERL} -V:cccdlflags`
