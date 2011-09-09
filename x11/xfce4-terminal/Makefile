@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/04/22 13:45:16 obache Exp $
+# $NetBSD: Makefile,v 1.18 2011/09/09 09:41:46 abs Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -13,6 +13,8 @@ CATEGORIES=	x11
 COMMENT=	Xfce terminal emulator
 
 MASTER_SITES=	http://www.xfce.org/archive/src/apps/terminal/0.4/
+
+MAKE_JOBS_SAFE=	no
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
