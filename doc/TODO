@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10540 2011/09/09 11:48:08 adam Exp $
+$NetBSD: TODO,v 1.10541 2011/09/09 13:32:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Sigil-0.3.4 [wip]
 	o Sigil-0.4.2
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.11
+	o TeXmacs-1.0.7.12
 	o TiffIO-130e
 	o XaoS-3.5
 	o YoSucker-81
@@ -392,7 +392,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-maven-3.0
 	o apache-tomcat6-6.0.33
 	o apache-tomcat7-7.0.20
-	o apache2-2.2.20
 	o applewmproto-1.4.2
 	o appres-1.0.3
 	o apsfilter-7.2.8
@@ -443,7 +442,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bouml-4.22.2
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
-	o byacc-20101229
+	o byacc-20110908
 	o bzr-2.2.5
 	o bzr-2.4.0
 	o bzr-svn-1.1.0
@@ -513,7 +512,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o diffstat-1.54
 	o diffutils-3.0
 	o digikam-2.0.0
-	o dillo-2.2.1
+	o dillo-3.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.4
@@ -528,6 +527,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dspam-3.10.0
 	o dvdisaster-0.72.2
 	o dvdstyler-1.8.4
+	o dvtm-0.7
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.7
@@ -661,6 +661,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.9.2
+	o gaupol-0.19.1
 	o gawk-4.0.0
 	o gbdfed-1.6
 	o gcal-3.6.1
@@ -676,7 +677,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdm-3.0.3
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o genius-1.0.14
 	o gentoo-0.19.11
 	o getmail-4.20.4
 	o gfract-0.33
@@ -689,10 +689,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o glade3-3.8.0 [GNOME 2.34]
 	o glade3-3.10.0
-	o global-5.9.7
+	o global-6.0
 	o glom-1.14.2 [GNOME 2.26]
 	o glpk-4.46
 	o glproto-1.4.14
+	o gmime24-2.4.26
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.0.2
@@ -979,7 +980,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mousetweaks-3.0.2
 	o mp3splt-2.4
 	o mpeg4ip-1.6.1
-	o mpg123-1.13.3
+	o mpg123-1.13.4
 	o mpop-1.0.24
 	o mserv-devel-0.41
 	o mtools-4.0.17
@@ -1038,6 +1039,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openoffice3-3.3
 	o openssh-5.9p1
 	o openssl-1.0.0d [pkg/44717]
+	o openssl-1.0.0e
 	o openttd-1.1.1
 	o opera-11.51
 	o orca-2.32.1 [GNOME 2.32]
@@ -1228,6 +1230,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
+	o stunnel-4.43
 	o subtitleeditor-0.33.0
 	o sudo-1.8.2
 	o supertuxkart-0.7.2
@@ -1390,7 +1393,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-glint-1.2.5
+	o xf86-video-glint-1.2.6
 	o xf86-video-i128-1.3.4
 	o xf86-video-intel-2.15.0
 	o xf86-video-mach64-6.9.0
