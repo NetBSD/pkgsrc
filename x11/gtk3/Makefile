@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2011/07/17 03:34:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2011/09/09 10:02:03 adam Exp $
 
-DISTNAME=		gtk+-3.0.11
-PKGNAME=		${DISTNAME:S/gtk/gtk3/}
-CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/3.0/ \
-			${MASTER_SITE_GNOME:=sources/gtk+/3.0/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	gtk+-3.0.12
+PKGNAME=	${DISTNAME:S/gtk/gtk3/}
+CATEGORIES=	x11
+MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/3.0/ \
+		${MASTER_SITE_GNOME:=sources/gtk+/3.0/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gtk.org/
-COMMENT=		GIMP Toolkit v3 - libraries for building X11 user interfaces
-LICENSE=		gnu-lgpl-v2.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gtk.org/
+COMMENT=	GIMP Toolkit v3 - libraries for building X11 user interfaces
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--disable-papi
 # XXX for now, to avoid conflict
 CONFIGURE_ARGS+=	--enable-gtk2-dependency
 DEPENDS+=		gtk2+-[0-9]*:../../x11/gtk2
-MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE+=	gdk-3.0.pc.in
