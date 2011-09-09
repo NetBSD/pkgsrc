@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/03/18 17:06:10 drochner Exp $
+# $NetBSD: options.mk,v 1.2 2011/09/09 10:02:03 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 PLIST_VARS+=		quartz x11
 .if !empty(PKG_OPTIONS:Mquartz)
 CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--with-gdktarget=quartz
+CONFIGURE_ARGS+=	--enable-quartz-backend
 PLIST.quartz=		yes
 .else
 CONFIGURE_ARGS+=	--with-xinput=xfree
