@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.18 2011/01/19 16:33:51 jmcneill Exp $
+# $NetBSD: xorg,v 1.19 2011/09/09 09:08:07 abs Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -290,6 +290,9 @@ lib/libFS.so.7
 lib/libFS.so.7.0
 lib/libFS.so.8.0
 lib/libFS.so.9.0
+lib/libGL.1.2.dylib
+lib/libGL.1.dylib
+lib/libGL.dylib
 lib/libGL.so.2
 lib/libGL.so.2.0
 lib/libGL.so.9.0
@@ -297,6 +300,9 @@ lib/libGL.so.9.1
 lib/libGLw.so.2
 lib/libGLw.so.2.0
 lib/libGLw.so.5.1
+lib/libOSMesa.7.8.dylib
+lib/libOSMesa.7.dylib
+lib/libOSMesa.dylib
 lib/libOSMesa.so.7
 lib/libOSMesa.so.7.0
 lib/libPEX5.6.0.dylib
@@ -330,6 +336,7 @@ lib/libXaw.6.dylib
 lib/libXaw.7.0.dylib
 lib/libXaw.7.dylib
 lib/libXaw.8.dylib
+lib/libXaw6.6.0.1.dylib
 lib/libXaw6.6.dylib
 lib/libXaw6.so.6
 lib/libXaw6.so.6.1
@@ -343,6 +350,7 @@ lib/libXaw7.so.7.0
 lib/libXaw7.so.10
 lib/libXaw7.so.10.0
 lib/libXaw7.so.12.0
+lib/libXaw7.7.0.0.dylib
 lib/libXaw7.7.dylib
 lib/libXaw8.a
 lib/libXaw8.la
@@ -350,6 +358,7 @@ lib/libXaw8.so
 lib/libXaw8.so.8
 lib/libXaw8.so.8.0
 lib/libXaw8.so.13.0
+lib/libXaw8.8.0.0.dylib
 lib/libXaw8.8.dylib
 lib/libXaw.a
 lib/libXaw.dylib
@@ -390,6 +399,7 @@ lib/libXft.so.3
 lib/libXft.so.3.0
 lib/libXft.so.7.0
 lib/libXft.so.8.0
+lib/libXi.6.1.0.dylib
 lib/libXi.6.0.0.dylib
 lib/libXi.6.0.dylib
 lib/libXi.6.0.0.dylib
@@ -531,6 +541,9 @@ lib/libpsres.so
 lib/libpsres.so.1
 lib/libpsres.so.1.0
 lib/libxf86config.a
+lib/libxkbfile.1.0.2.dylib
+lib/libxkbfile.1.dylib
+lib/libxkbfile.dylib
 lib/libxkbfile.a
 lib/libxkbfile.la
 lib/libxkbfile.so
@@ -540,6 +553,9 @@ lib/libxkbfile.so.1.0.2
 lib/libxkbfile.so.2
 lib/libxkbfile.so.2.0
 lib/libxkbfile.so.4.0
+lib/libxkbui.1.0.0.dylib
+lib/libxkbui.1.dylib
+lib/libxkbui.dylib
 lib/libxkbui.a
 lib/libxkbui.la
 lib/libxkbui.so

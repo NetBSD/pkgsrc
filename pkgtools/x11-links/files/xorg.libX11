@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libX11,v 1.9 2011/03/05 08:36:54 wiz Exp $
+# $NetBSD: xorg.libX11,v 1.10 2011/09/09 09:08:07 abs Exp $
 #
 include/X11/ImUtil.h
 include/X11/XKBlib.h
@@ -14,12 +14,16 @@ include/X11/Xregion.h
 include/X11/Xresource.h
 include/X11/Xutil.h
 include/X11/cursorfont.h
+lib/libX11-xcb.1.0.0.dylib
+lib/libX11-xcb.1.dylib
+lib/libX11-xcb.dylib
 lib/libX11-xcb.so
 lib/libX11-xcb.so.1
 lib/libX11-xcb.so.1.0
 lib/libX11.6.1.dylib
 lib/libX11.6.2.0.dylib 
 lib/libX11.6.2.dylib
+lib/libX11.6.3.0.dylib 
 lib/libX11.6.dylib
 lib/libX11.a
 lib/libX11.dylib
