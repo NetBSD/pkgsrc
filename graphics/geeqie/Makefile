@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:43:44 obache Exp $
+# $NetBSD: Makefile,v 1.16 2011/09/09 11:22:50 gdt Exp $
 #
 
 DISTNAME=	geeqie-1.0
@@ -14,9 +14,14 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-gps
+
+LDFLAGS.SunOS+=		-lm -lsocket -lnsl
+
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS=		bash:run gmake intltool msgfmt pkg-config
+
 REPLACE_BASH=		plugins/rotate/geeqie-rotate
 REPLACE_BASH+=		plugins/ufraw/geeqie-ufraw
 REPLACE_BASH+=		plugins/import/geeqie-import
@@ -24,6 +29,7 @@ REPLACE_BASH+=		plugins/import/geeqie-import
 post-build:
 	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
 
+.include "../../geography/libchamplain04/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
