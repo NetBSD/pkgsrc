@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/10 04:30:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/09/09 10:02:03 adam Exp $
 bin/gtk-query-immodules-3.0
 bin/gtk3-demo
 include/gail-3.0/gail/gailwidget.h
@@ -35,25 +35,37 @@ include/gtk-3.0/gdk/gdkthreads.h
 include/gtk-3.0/gdk/gdktypes.h
 include/gtk-3.0/gdk/gdkvisual.h
 include/gtk-3.0/gdk/gdkwindow.h
-include/gtk-3.0/gdk/gdkx.h
-include/gtk-3.0/gdk/x11/gdkx11applaunchcontext.h
-include/gtk-3.0/gdk/x11/gdkx11cursor.h
-include/gtk-3.0/gdk/x11/gdkx11device-core.h
-include/gtk-3.0/gdk/x11/gdkx11device-xi.h
-include/gtk-3.0/gdk/x11/gdkx11device-xi2.h
-include/gtk-3.0/gdk/x11/gdkx11devicemanager-core.h
-include/gtk-3.0/gdk/x11/gdkx11devicemanager-xi.h
-include/gtk-3.0/gdk/x11/gdkx11devicemanager-xi2.h
-include/gtk-3.0/gdk/x11/gdkx11display.h
-include/gtk-3.0/gdk/x11/gdkx11displaymanager.h
-include/gtk-3.0/gdk/x11/gdkx11dnd.h
-include/gtk-3.0/gdk/x11/gdkx11keys.h
-include/gtk-3.0/gdk/x11/gdkx11property.h
-include/gtk-3.0/gdk/x11/gdkx11screen.h
-include/gtk-3.0/gdk/x11/gdkx11selection.h
-include/gtk-3.0/gdk/x11/gdkx11utils.h
-include/gtk-3.0/gdk/x11/gdkx11visual.h
-include/gtk-3.0/gdk/x11/gdkx11window.h
+${PLIST.quartz}include/gtk-3.0/gdk/gdkquartz.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzcursor.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdevice-core.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdevicemanager-core.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdisplay.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdisplaymanager.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdnd.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzkeys.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzscreen.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzutils.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzvisual.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzwindow.h
+${PLIST.x11}include/gtk-3.0/gdk/gdkx.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11applaunchcontext.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11cursor.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11device-core.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11device-xi.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11device-xi2.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11devicemanager-core.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11devicemanager-xi.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11devicemanager-xi2.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11display.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11displaymanager.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11dnd.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11keys.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11property.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11screen.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11selection.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11utils.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11visual.h
+${PLIST.x11}include/gtk-3.0/gdk/x11/gdkx11window.h
 include/gtk-3.0/gtk/gtk.h
 include/gtk-3.0/gtk/gtkaboutdialog.h
 include/gtk-3.0/gtk/gtkaccelgroup.h
@@ -277,7 +289,7 @@ lib/gtk-3.0/3.0.0/immodules/im-thai.la
 lib/gtk-3.0/3.0.0/immodules/im-ti-er.la
 lib/gtk-3.0/3.0.0/immodules/im-ti-et.la
 lib/gtk-3.0/3.0.0/immodules/im-viqr.la
-lib/gtk-3.0/3.0.0/immodules/im-xim.la
+${PLIST.x11}lib/gtk-3.0/3.0.0/immodules/im-xim.la
 ${PLIST.cups}lib/gtk-3.0/3.0.0/printbackends/libprintbackend-cups.la
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-file.la
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-lpr.la
@@ -288,10 +300,12 @@ lib/libgdk-3.la
 lib/libgtk-3.la
 lib/pkgconfig/gail-3.0.pc
 lib/pkgconfig/gdk-3.0.pc
-lib/pkgconfig/gdk-x11-3.0.pc
+${PLIST.quartz}lib/pkgconfig/gdk-quartz-3.0.pc
+${PLIST.x11}lib/pkgconfig/gdk-x11-3.0.pc
 lib/pkgconfig/gtk+-3.0.pc
 lib/pkgconfig/gtk+-unix-print-3.0.pc
-lib/pkgconfig/gtk+-x11-3.0.pc
+${PLIST.quartz}lib/pkgconfig/gtk+-quartz-3.0.pc
+${PLIST.x11}lib/pkgconfig/gtk+-x11-3.0.pc
 libdata/gtk-3.0/im-multipress.conf
 man/man1/gtk-query-immodules-3.0.1
 man/man1/gtk-update-icon-cache.1
@@ -352,7 +366,7 @@ share/gtk-3.0/demo/tree_store.c
 share/gtk-3.0/demo/ui_manager.c
 share/gtk-doc/html/gail-libgail-util3/gail-libgail-util3-GailMisc.html
 share/gtk-doc/html/gail-libgail-util3/gail-libgail-util3-GailTextUtil.html
-share/gtk-doc/html/gail-libgail-util3/gail-libgail-util3.devhelp
+${PLIST.x11}share/gtk-doc/html/gail-libgail-util3/gail-libgail-util3.devhelp
 share/gtk-doc/html/gail-libgail-util3/gail-libgail-util3.devhelp2
 share/gtk-doc/html/gail-libgail-util3/home.png
 share/gtk-doc/html/gail-libgail-util3/index.html
@@ -418,7 +432,7 @@ share/gtk-doc/html/gdk3/gdk3-Threads.html
 share/gtk-doc/html/gdk3/gdk3-Visuals.html
 share/gtk-doc/html/gdk3/gdk3-Windows.html
 share/gtk-doc/html/gdk3/gdk3-X-Window-System-Interaction.html
-share/gtk-doc/html/gdk3/gdk3.devhelp
+${PLIST.x11}share/gtk-doc/html/gdk3/gdk3.devhelp
 share/gtk-doc/html/gdk3/gdk3.devhelp2
 share/gtk-doc/html/gdk3/gobbler.png
 share/gtk-doc/html/gdk3/gumby.png
@@ -848,7 +862,7 @@ share/gtk-doc/html/gtk3/gtk3-Stock-Items.html
 share/gtk-doc/html/gtk3/gtk3-Testing.html
 share/gtk-doc/html/gtk3/gtk3-Themeable-Stock-Images.html
 share/gtk-doc/html/gtk3/gtk3-gtkcheckmenuitem.html
-share/gtk-doc/html/gtk3/gtk3.devhelp
+${PLIST.x11}share/gtk-doc/html/gtk3/gtk3.devhelp
 share/gtk-doc/html/gtk3/gtk3.devhelp2
 share/gtk-doc/html/gtk3/gtkbase.html
 share/gtk-doc/html/gtk3/gtkobjects.html
@@ -925,6 +939,7 @@ share/gtk-doc/html/gtk3/statusbar.png
 share/gtk-doc/html/gtk3/style.css
 share/gtk-doc/html/gtk3/switch.png
 share/gtk-doc/html/gtk3/system-run.png
+${PLIST.quartz}share/gtk-doc/html/gtk3/text-x-generic.png
 share/gtk-doc/html/gtk3/theming.html
 share/gtk-doc/html/gtk3/toggle-button.png
 share/gtk-doc/html/gtk3/toolbar.png
@@ -1163,6 +1178,7 @@ share/locale/zh_TW/LC_MESSAGES/gtk30-properties.mo
 share/locale/zh_TW/LC_MESSAGES/gtk30.mo
 share/themes/Default/gtk-3.0/gtk-keys.css
 share/themes/Emacs/gtk-3.0/gtk-keys.css
+${PLIST.quartz}share/themes/Mac/gtk-3.0/gtk-keys.css
 share/themes/Raleigh/gtk-3.0/gtk.css
 @pkgdir lib/gtk-3.0/immodules
 @pkgdir lib/gtk-3.0/3.0.0/filesystems
