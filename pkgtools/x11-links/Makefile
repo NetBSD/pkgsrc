@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.128 2011/08/01 15:09:28 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2011/09/09 09:08:07 abs Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-DISTNAME=	x11-links-0.66
+DISTNAME=	x11-links-0.67
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -50,7 +50,8 @@ PKG_FAIL_REASON+=	"pkgsrc installations is not supported!"
 .elif exists(${X11BASE}/lib/X11/config/xorgversion.def) || \
       (exists(${X11BASE}/lib/X11/config/xorg.cf) && \
        exists(${X11BASE}/lib/X11/config/version.def)) || \
-      exists(${X11BASE}/lib/pkgconfig/xorg-server.pc)
+      exists(${X11BASE}/lib/pkgconfig/xorg-server.pc) || \
+      exists(${X11BASE}/bin/Xquartz)
 .  include "xorg.mk"
 .else
 .  include "xfree.mk"
