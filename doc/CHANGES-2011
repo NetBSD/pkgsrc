@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2203 2011/09/09 15:13:18 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2204 2011/09/09 16:51:17 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/webkit-gtk to 1.4.3 [drochner 2011-09-09]
 	Updated net/wireshark to 1.6.2 [adam 2011-09-09]
 	Updated net/vsftpd to 2.3.4 [wiz 2011-09-09]
+	Updated filesystems/perfuse to 20110909 [manu 2011-09-09]
