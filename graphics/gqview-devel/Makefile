@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/09/09 00:37:22 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2011/09/09 06:42:26 wiz Exp $
 
 DISTNAME=	gqview-2.1.5
 PKGREVISION=	8
@@ -22,6 +22,7 @@ LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
