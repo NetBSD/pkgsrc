@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2005/07/27 17:16:33 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2011/09/09 15:20:59 wiz Exp $
+
+Install configuration into examples directory, and use
+CONF_FILES for installation.
 
 --- Makefile.in.orig	2005-06-07 03:04:14.000000000 +0200
 +++ Makefile.in
