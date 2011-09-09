@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2011/06/10 09:39:43 obache Exp $
+# $NetBSD: Makefile,v 1.112 2011/09/09 13:44:24 wiz Exp $
 
 DISTNAME=	evolution-data-server-2.32.3
 PKGREVISION=	1
@@ -32,6 +32,9 @@ CONFIGURE_ENV+=		PTHREAD_LIB="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.6.2)
 .include "../../devel/pthread-sem/buildlink3.mk"
 LIBS+=		-lsemaphore
+.endif
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.*)
+BUILDLINK_TRANSFORM+=   rm:-Wl,--no-undefined
 .endif
 
 .if ${OPSYS} == "Darwin"
