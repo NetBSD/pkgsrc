@@ -5,3 +5,5 @@ GQview is a graphics file viewer. Basic features:
   - Multiple file selection for move, copy, delete, rename, drag and drop.
   - Drag and drop.
   - Ability to open images in external editors (configurable).
+
+GQview is obsolete; gqview-devel is a newer version and geeqie is a fork.
