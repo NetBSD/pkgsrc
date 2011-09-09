@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2011/04/14 12:29:17 obache Exp $
+$NetBSD: patch-aa,v 1.3 2011/09/09 11:56:19 obache Exp $
 
---- configure.in.orig	2009-12-21 13:09:10.000000000 +0000
+--- configure.in.orig	2011-09-08 18:02:23.000000000 +0000
 +++ configure.in
 @@ -391,11 +391,11 @@ if test "$sievedir" != "no"; then
  	AC_CHECK_LIB(fl,main)
@@ -16,12 +16,12 @@ $NetBSD: patch-aa,v 1.2 2011/04/14 12:29:17 obache Exp $
  			LIBS="$LIBS -lrx"
  			AC_DEFINE(ENABLE_REGEX, [],
  				  [Do we have a regex library?])
-@@ -1145,7 +1145,7 @@ dnl add perl cccdlflags when building li
- dnl libraries will be compiled as PIC if perl requires PIC objects
- dnl -- this is needed on NetBSD and Linux, but seems to cause problems on atleast Solaris --
+@@ -1146,7 +1146,7 @@ dnl libraries will be compiled as PIC if
+ dnl -- this is needed on NetBSD, FreeBSD, and Linux, but seems to
+ dnl cause problems on atleast Solaris -- 
      case "${target_os}" in
--        linux*|netbsd*)
-+        linux*|netbsd*|dragonfly*)
+-        linux*|netbsd*|freebsd*)
++        linux*|netbsd*|freebsd*|dragonfly*)
              AC_MSG_CHECKING(for perl cccdlflags needed on "${target_os}")
              eval `${PERL} -V:cccdlflags`
              PERL_CCCDLFLAGS="$cccdlflags"
