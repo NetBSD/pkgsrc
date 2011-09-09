@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2201 2011/09/09 12:43:10 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.2202 2011/09/09 13:05:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3443,3 +3443,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/tor to 0.2.2.32 [drochner 2011-09-09]
 	Updated x11/gtk2 to 2.24.6 [drochner 2011-09-09]
 	Updated www/webkit-gtk to 1.4.3 [drochner 2011-09-09]
+	Updated net/wireshark to 1.6.2 [adam 2011-09-09]
