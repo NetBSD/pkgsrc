@@ -7,3 +7,4 @@ GQview is a graphics file viewer. Basic features:
   - Ability to open images in external editors (configurable).
 
 This package is the unstable version of gqview.
+gqview is obsolete, and has been replaced by a fork, geeqie.
