@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2010/11/08 17:10:55 abs Exp $
+$NetBSD: distinfo,v 1.13 2011/09/09 15:13:09 wiz Exp $
 
-SHA1 (vsftpd-2.3.2.tar.gz) = d525974514ecf61cbbf9cb51066aa68d5a52033b
-RMD160 (vsftpd-2.3.2.tar.gz) = 27bdc9d3065390a9dc85b3ef5926ad16d3544d2d
-Size (vsftpd-2.3.2.tar.gz) = 187229 bytes
+SHA1 (vsftpd-2.3.4.tar.gz) = b774cc6b4c50e20f4fe9ca7f6aa74169ce7fe5ea
+RMD160 (vsftpd-2.3.4.tar.gz) = 4097b495b5b03833e18b1639931939c3176e498b
+Size (vsftpd-2.3.4.tar.gz) = 187043 bytes
 SHA1 (patch-aa) = ed5c8834137c28c63cf12505969e0500985d5909
 SHA1 (patch-ab) = df9252f99d06a4742713c36ce6bff8908da171f7
 SHA1 (patch-ac) = 2dcfae2eb16b2053f07eb3ee8f6d4af4b30d9799
