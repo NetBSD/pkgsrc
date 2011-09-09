@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.829 2011/08/16 23:13:34 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.830 2011/09/09 15:16:26 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7997,7 +7997,7 @@ sub checkfile($) {
 	} elsif ($basename =~ m"^MESSAGE") {
 		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
 
-	} elsif ($basename =~ m"^patch-[-A-Za-z0-9_\.]*$") {
+	} elsif ($basename =~ m"^patch-[-A-Za-z0-9_\.~]*$") {
 		$opt_check_patches and checkfile_patch($fname);
 
 	} elsif ($fname =~ m"(?:^|/)patches/manual-[^/]*$") {
