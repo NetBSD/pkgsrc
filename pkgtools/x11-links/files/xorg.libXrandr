@@ -1,7 +1,7 @@
-# $NetBSD: xorg.libXrandr,v 1.6 2010/02/18 12:32:19 obache Exp $
+# $NetBSD: xorg.libXrandr,v 1.7 2011/09/09 09:08:07 abs Exp $
 #
 include/X11/extensions/Xrandr.h
-lib/libXrandr.2.1.0.dylib
+lib/libXrandr.2.2.0.dylib
 lib/libXrandr.2.0.0.dylib
 lib/libXrandr.2.1.0.dylib
 lib/libXrandr.2.dylib
