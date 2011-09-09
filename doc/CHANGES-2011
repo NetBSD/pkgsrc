@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2197 2011/09/09 11:03:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2198 2011/09/09 11:56:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3434,3 +3434,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/gtk3 to 3.0.12 [adam 2011-09-09]
 	Updated converters/nkf to 2.12 [obache 2011-09-09]
 	Updated converters/p5-nkf to 2.12 [obache 2011-09-09]
+	Updated mail/cyrus-imapd23 to 2.3.17 [obache 2011-09-09]
