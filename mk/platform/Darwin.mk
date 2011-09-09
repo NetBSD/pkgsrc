@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.45 2011/01/04 09:53:31 adam Exp $
+# $NetBSD: Darwin.mk,v 1.46 2011/09/09 09:31:56 yyamano Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -13,6 +13,7 @@
 # Tiger		10.4.x	8.x.y	2.x (gcc 4.0, 4.0.1 from 2.2)
 # Leopard	10.5.x	9.x.y	3.x (gcc 4.0.1, 4.0.1 and 4.2.1 from 3.1)
 # Snow Leopard	10.6.x	10.x.y	3.2+ (gcc 4.0.1 and 4.2.1)
+# Lion		10.7.x	11.x.y	4.1 (llvm gcc 4.2.1)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if ! empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
