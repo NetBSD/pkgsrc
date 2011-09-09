@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2199 2011/09/09 12:07:09 abs Exp $
+$NetBSD: CHANGES-2011,v 1.2200 2011/09/09 12:09:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3436,3 +3436,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated converters/p5-nkf to 2.12 [obache 2011-09-09]
 	Updated mail/cyrus-imapd23 to 2.3.17 [obache 2011-09-09]
 	Updated pkgtools/x11-links to 0.67 [abs 2011-09-09]
+	Updated mail/cyrus-imapd24 to 2.4.11 [obache 2011-09-09]
