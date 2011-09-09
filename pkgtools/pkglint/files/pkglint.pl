@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.830 2011/09/09 15:16:26 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.831 2011/09/09 15:18:28 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1902,7 +1902,7 @@ sub get_pkg_options() {
 
 	$options = {};
 	foreach my $line (@{$lines}) {
-		if ($line->text =~ m"^([-0-9a-z_]+)(?:\s+(.*))?$") {
+		if ($line->text =~ m"^([-0-9a-z_+]+)(?:\s+(.*))?$") {
 			my ($optname, $optdescr) = ($1, $2);
 
 			$options->{$optname} = defined($optdescr)
