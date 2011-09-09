@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2010/09/15 00:59:02 obache Exp $
+$NetBSD: distinfo,v 1.9 2011/09/09 11:01:16 obache Exp $
 
-SHA1 (nkf-2.1.1.tar.gz) = ce6f15adda1a87d6534aa1799031b6b969d6996a
-RMD160 (nkf-2.1.1.tar.gz) = 06e0dbda6e90502ab4bafe4d44a9d05beed248c5
-Size (nkf-2.1.1.tar.gz) = 157459 bytes
+SHA1 (nkf-2.1.2.tar.gz) = ca301d84e57787f566c933c2a1511f600183c8f1
+RMD160 (nkf-2.1.2.tar.gz) = 91c0d413a70299246591d314d33f45e71eba51a7
+Size (nkf-2.1.2.tar.gz) = 158127 bytes
