@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.46 2011/09/09 09:31:56 yyamano Exp $
+# $NetBSD: Darwin.mk,v 1.47 2011/09/10 16:30:02 abs Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -16,8 +16,8 @@
 # Lion		10.7.x	11.x.y	4.1 (llvm gcc 4.2.1)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
-.if ! empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
-X11_TYPE?=modular
+.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+X11_TYPE?=	native
 .endif
 
 .if !defined(CPP) || ${CPP} == "cpp"
