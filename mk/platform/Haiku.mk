@@ -1,4 +1,4 @@
-# $NetBSD: Haiku.mk,v 1.4 2010/08/16 10:03:44 obache Exp $
+# $NetBSD: Haiku.mk,v 1.5 2011/09/10 16:30:02 abs Exp $
 #
 # Variable definitions for the Haiku operating system.
 
@@ -30,9 +30,6 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		/bin/useradd
-
-# no native X11
-X11_TYPE?=		modular
 
 # imake installs manpages in weird places
 # these values from /boot/common/X11/lib/X11/config/Haiku.cf

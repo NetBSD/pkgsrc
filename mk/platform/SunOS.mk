@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.39 2010/07/08 04:57:36 dholland Exp $
+# $NetBSD: SunOS.mk,v 1.40 2011/09/10 16:30:02 abs Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -26,6 +26,8 @@ ULIMIT_CMD_datasize?=	ulimit -d `${SETENV} LC_MESSAGES=C ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `${SETENV} LC_MESSAGES=C ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
+
+X11_TYPE?=		native
 
 # imake installs manpages in weird places
 .if !defined(X11_TYPE) || defined(X11_TYPE) && !empty(X11_TYPE:Mnative)

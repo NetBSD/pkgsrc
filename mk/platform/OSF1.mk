@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.30 2009/12/19 10:53:33 tnn Exp $
+# $NetBSD: OSF1.mk,v 1.31 2011/09/10 16:30:02 abs Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -41,11 +41,6 @@ IMAKE_MANINSTALL?=	maninstall catinstall
 
 # Fix broken system headers by using pkgtools/posix_headers
 FIX_SYSTEM_HEADERS?=    yes
-
-# native X11 on Tru64 is rather old and breaks many packages.
-# The modular X.org userland works rather well, apart from the server which
-# is unlikely to ever be supported due to proprietary graphics hardware.
-X11_TYPE?=		modular
 
 _OPSYS_EMULDIR.osf1=	# empty
 
