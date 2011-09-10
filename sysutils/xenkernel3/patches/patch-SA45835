@@ -1,0 +1,13 @@
+$NetBSD: patch-SA45835,v 1.1 2011/09/10 18:35:51 bouyer Exp $
+
+--- xen/include/asm-x86/x86_64/uaccess.h.orig	2008-04-25 15:03:12.000000000 +0200
++++ xen/include/asm-x86/x86_64/uaccess.h	2011-09-10 20:26:42.000000000 +0200
+@@ -8,7 +8,7 @@
+  * non-canonical address (and thus fault) before ever reaching VIRT_START.
+  */
+ #define __addr_ok(addr) \
+-    (((unsigned long)(addr) < (1UL<<48)) || \
++    (((unsigned long)(addr) < (1UL<<47)) || \
+      ((unsigned long)(addr) >= HYPERVISOR_VIRT_END))
+ 
+ #define access_ok(addr, size) (__addr_ok(addr))
