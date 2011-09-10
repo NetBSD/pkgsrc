@@ -1,0 +1,17 @@
+$NetBSD: patch-setup-py,v 1.1.2.2 2011/09/10 10:07:02 tron Exp $
+
+Honor PKGMANDIR. (The man pages are installed from the pkgsrc makefile.)
+
+--- setup.py~	2011-07-15 08:03:39.000000000 +0000
++++ setup.py
+@@ -73,8 +73,8 @@ def main():
+         ('share/roundup/cgi-bin', ['frontends/roundup.cgi']),
+     ]
+     # install man pages on POSIX platforms
+-    if os.name == 'posix':
+-        data_files.append(include('share/man/man1', '*'))
++    #if os.name == 'posix':
++    #    data_files.append(include('share/man/man1', '*'))
+ 
+     # add the templates to the data files lists
+     from roundup.init import listTemplates
