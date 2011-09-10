@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2208 2011/09/10 15:48:09 sborrill Exp $
+$NetBSD: CHANGES-2011,v 1.2209 2011/09/10 18:37:51 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3451,3 +3451,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/sun-jre6 to 6.0.27 [obache 2011-09-10]
 	Updated lang/sun-jdk6 to 6.0.27 [obache 2011-09-10]
 	Updated net/istgt to 20110907 [sborrill 2011-09-10]
+	Updated sysutils/xenkernel3 to 3.1.4nb6 [bouyer 2011-09-10]
+	Updated sysutils/xenkernel33 to 3.3.2nb8 [bouyer 2011-09-10]
