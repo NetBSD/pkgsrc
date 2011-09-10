@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2205 2011/09/09 22:02:37 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2206 2011/09/10 11:23:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3447,3 +3447,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/vsftpd to 2.3.4 [wiz 2011-09-09]
 	Updated filesystems/perfuse to 20110909 [manu 2011-09-09]
 	Updated pkgtools/nih to 0.9.1 [cheusov 2011-09-09]
+	Updated lang/python31 to 3.1.4nb1 [obache 2011-09-10]
