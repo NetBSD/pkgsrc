@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.2 2011/03/19 14:07:10 dholland Exp $
+# $NetBSD: MirBSD.mk,v 1.3 2011/09/10 16:30:02 abs Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -26,6 +26,8 @@ ROOT_GROUP?=		wheel
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+
+X11_TYPE?=		native
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/OpenBSD.cf
