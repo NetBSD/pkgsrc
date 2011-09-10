@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.39 2011/07/03 11:19:37 jym Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2011/09/10 10:07:02 tron Exp $
 
-DISTNAME=	roundup-1.4.6
-PKGREVISION=	2
+DISTNAME=	roundup-1.4.19
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/r/roundup/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://roundup.sourceforge.net/
 COMMENT=	Issue tracking system with command-line, web and email clients
+LICENSE=	mit AND zpl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -32,13 +32,13 @@ PYTHON_PATCH_SCRIPTS+=	tools/migrate-queries.py tools/pygettext.py
 
 ROUNDUPDOCDIR=	${PREFIX}/share/doc/roundup
 
-INSTALLATION_DIRS+=	${ROUNDUPDOCDIR}
+INSTALLATION_DIRS+=	${ROUNDUPDOCDIR} ${PKGMANDIR}/man1
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-admin.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-demo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-mailgw.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/roundup-server.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-admin.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-demo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-mailgw.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/share/man/man1/roundup-server.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${DESTDIR}${ROUNDUPDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.txt ${DESTDIR}${ROUNDUPDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${ROUNDUPDOCDIR}
