@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/02/14 15:43:51 grant Exp $
+$NetBSD: MESSAGE,v 1.2.66.1 2011/09/10 10:07:02 tron Exp $
 
 Information about Roundup can be found in the documentation directory:
 	${PREFIX}/share/doc/roundup
@@ -8,5 +8,8 @@ To install a new Roundup tracker, refer to the instructions in:
 	${PREFIX}/share/doc/roundup/installation.txt
 (`Basic Installation Step 1.' has already been performed by
 installing this package; work from Step 2. onwards.)
+
+If updating an existing installation, please check:
+	${PREFIX}/share/doc/roundup/upgrading.txt
 
 ===========================================================================
