@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.35 2010/07/08 04:57:36 dholland Exp $
+# $NetBSD: AIX.mk,v 1.36 2011/09/10 16:30:02 abs Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -28,6 +28,8 @@ ROOT_GROUP?=		system
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+
+X11_TYPE?=		native
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/NetBSD.cf

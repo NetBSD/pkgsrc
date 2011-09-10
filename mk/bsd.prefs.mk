@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.315 2011/09/08 20:17:15 abs Exp $
+# $NetBSD: bsd.prefs.mk,v 1.316 2011/09/10 16:30:02 abs Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -539,7 +539,7 @@ IPV6_READY=		NO
 .endif
 
 LOCALBASE?=		/usr/pkg
-X11_TYPE?=		native
+X11_TYPE?=		modular
 .if !empty(X11_TYPE:Mnative)
 .  if ${OPSYS} == "SunOS"
 # On Solaris, we default to using OpenWindows for X11.

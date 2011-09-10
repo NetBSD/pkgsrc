@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.18 2009/07/26 05:32:43 agc Exp $
+# $NetBSD: HPUX.mk,v 1.19 2011/09/10 16:30:02 abs Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -25,11 +25,6 @@ TOUCH_FLAGS?=				# touch doesn't understand -f
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
-
-# native X11 on HP-UX is rather old and breaks many packages.
-# The modular X.org userland works rather well, apart from the server which
-# is unlikely to ever be supported due to proprietary graphics hardware.
-X11_TYPE?=		modular
 
 # Fix broken system headers by using pkgtools/posix_headers
 FIX_SYSTEM_HEADERS?=	yes
