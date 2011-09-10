@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2011/07/08 08:19:27 abs Exp $
+# $NetBSD: Makefile,v 1.16 2011/09/10 16:36:26 abs Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.wikimedia.org/mediawiki/${VER}/
 
@@ -70,5 +71,4 @@ do-install:
 	  ${DESTDIR}${PREFIX}/${EGDIR}/mediawiki.conf
 
 .include "../../lang/php/phpversion.mk"
-.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
