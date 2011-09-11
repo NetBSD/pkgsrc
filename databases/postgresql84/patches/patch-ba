@@ -1,0 +1,18 @@
+$NetBSD: patch-ba,v 1.1 2011/09/11 10:53:31 marino Exp $
+
+--- src/Makefile.shlib.orig	2011-07-15 20:03:13.383961000 +0000
++++ src/Makefile.shlib
+@@ -175,6 +175,13 @@ ifeq ($(PORTNAME), bsdi)
+   endif
+ endif
+ 
++ifeq ($(PORTNAME), dragonfly)
++  LINK.shared		= $(COMPILER) -shared
++  ifdef soname
++    LINK.shared		+= -Wl,-x,-soname,$(soname)
++  endif
++endif
++
+ ifeq ($(PORTNAME), freebsd)
+   ifdef ELF_SYSTEM
+     ifdef SO_MAJOR_VERSION
