@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10543 2011/09/09 15:13:18 wiz Exp $
+$NetBSD: TODO,v 1.10544 2011/09/11 19:06:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
-	o ffmpeg-20110807.0.8.2
+	o ffmpeg-20110906.0.8.3
 	o file-5.08
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -912,6 +912,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmcs-0.7.2
 	o libmilter-8.14.5
 	o libnasl-2.3.1
+	o libnice-0.1.1
 	o libnids-1.24
 	o libnotify-0.7.1
 	o liboobs-2.32.0 [GNOME 2.32]
@@ -987,7 +988,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mu-0.9.7
 	o multitail-5.2.8
 	o munin-1.4.4
-	o mupdf-0.8.165
+	o mupdf-0.9
 	o muse-0.9.2
 	o nano-2.2.6
 	o nap-1.5.3
@@ -1129,7 +1130,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
 	o py-qt4-4.8.5
-	o py-simplejson-2.1.6
+	o py-simplejson-2.2.1
 	o py-sip-4.12.4
 	o py-sybase-0.37
 	o py-twisted-11.0.0
@@ -1353,7 +1354,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20110903
+	o x264-devel-20110910
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
