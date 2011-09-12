@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/06/09 13:47:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/09/12 22:31:58 wiz Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -85,7 +85,7 @@ share/emacs/${EMACS_VERSION}/etc/COPYING
 share/emacs/${EMACS_VERSION}/etc/DEBUG
 share/emacs/${EMACS_VERSION}/etc/DEVEL.HUMOR
 share/emacs/${EMACS_VERSION}/etc/DISTRIB
-share/emacs/${EMACS_VERSION}/etc/DOC-${EMACS_VERSION}.1
+share/emacs/${EMACS_VERSION}/etc/DOC-23.3.1
 share/emacs/${EMACS_VERSION}/etc/ERC-NEWS
 share/emacs/${EMACS_VERSION}/etc/ETAGS.EBNF
 share/emacs/${EMACS_VERSION}/etc/ETAGS.README
@@ -272,6 +272,16 @@ share/emacs/${EMACS_VERSION}/etc/future-bug
 share/emacs/${EMACS_VERSION}/etc/gnus-tut.txt
 share/emacs/${EMACS_VERSION}/etc/gnus/gnus-setup.ast
 share/emacs/${EMACS_VERSION}/etc/gnus/news-server.ast
+share/emacs/${EMACS_VERSION}/etc/grammars/README
+share/emacs/${EMACS_VERSION}/etc/grammars/bovine-grammar.el
+share/emacs/${EMACS_VERSION}/etc/grammars/c.by
+share/emacs/${EMACS_VERSION}/etc/grammars/fixes.patch
+share/emacs/${EMACS_VERSION}/etc/grammars/java-tags.wy
+share/emacs/${EMACS_VERSION}/etc/grammars/js.wy
+share/emacs/${EMACS_VERSION}/etc/grammars/make.by
+share/emacs/${EMACS_VERSION}/etc/grammars/python.wy
+share/emacs/${EMACS_VERSION}/etc/grammars/scheme.by
+share/emacs/${EMACS_VERSION}/etc/grammars/wisent-grammar.el
 share/emacs/${EMACS_VERSION}/etc/grep.txt
 share/emacs/${EMACS_VERSION}/etc/images/README
 share/emacs/${EMACS_VERSION}/etc/images/attach.pbm
