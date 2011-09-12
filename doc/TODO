@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10549 2011/09/12 21:23:05 wiz Exp $
+$NetBSD: TODO,v 1.10550 2011/09/12 21:27:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -976,7 +976,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.0.2
-	o mp3diags-1.0.09
 	o mp3splt-2.4
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.4
