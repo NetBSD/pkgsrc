@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.6 2009/09/09 13:03:38 obache Exp $
+# $NetBSD: emulator.mk,v 1.7 2011/09/12 11:34:08 joerg Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -14,9 +14,9 @@
 EMUL_DISTRO=		suse-10.0
 
 .if defined(SUSE_PKG)
-_SUSE_VERSION_REQD=	-${SUSE_VERSION_REQD}{,nb*}
+_SUSE_VERSION_REQD=	-10.0{,nb*}
 .else
-_SUSE_VERSION_REQD=	>=${SUSE_VERSION_REQD}
+_SUSE_VERSION_REQD=	>=10.0<10.1
 .endif
 
 # DEPENDS_suse-10.0.* maps Linux "modules" to SuSE package dependencies.
