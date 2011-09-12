@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2011/05/28 23:02:33 dholland Exp $
+# $NetBSD: Makefile,v 1.45 2011/09/12 10:47:11 dholland Exp $
 
-DISTNAME=		hbench-OS-1.0
-PKGNAME=		hbench-1.0
-PKGREVISION=		6
+DISTNAME=		hbench-OS-1.1
+PKGNAME=		hbench-1.1
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.eecs.harvard.edu/vino/perf/hbench/
 
@@ -15,13 +14,11 @@ DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/hbench-OS
+WRKSRC=			${WRKDIR}/HBenchOS
 OSVERSION_SPECIFIC=	YES
 BUILD_TARGET=		build
 USE_TOOLS+=		perl:run
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
-
-DIST_SUBDIR=		${PKGNAME_NOREV}
 
 GET_ARCH_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/-.*-.*$$//'
 GET_OS_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/^.*-.*-//'
