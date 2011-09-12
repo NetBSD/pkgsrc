@@ -1,0 +1,27 @@
+$NetBSD: patch-af,v 1.1 2011/09/12 21:19:26 shattered Exp $
+
+--- enemy.C.orig	1996-03-13 16:34:27.000000000 +0000
++++ enemy.C
+@@ -612,17 +612,17 @@ void _enemy::move_pipe2()
+     p ^= a;
+     int a=0, b=0, c=0, d=0;
+     if (p & U_MASK)
+-      a=enemies.make(&pipe2, (x>>SHIFT), (y>>SHIFT), 0, 0, 1);
++      a=enemies.make(&pipe_2, (x>>SHIFT), (y>>SHIFT), 0, 0, 1);
+     if (p & R_MASK)
+-      b=enemies.make(&pipe2, (x>>SHIFT), (y>>SHIFT), 0, 0, 3);
++      b=enemies.make(&pipe_2, (x>>SHIFT), (y>>SHIFT), 0, 0, 3);
+     if (p & D_MASK)
+-      c=enemies.make(&pipe2, (x>>SHIFT), (y>>SHIFT), 0, 0, 5);
++      c=enemies.make(&pipe_2, (x>>SHIFT), (y>>SHIFT), 0, 0, 5);
+     if (p & L_MASK)
+-      d=enemies.make(&pipe2, (x>>SHIFT), (y>>SHIFT), 0, 0, 7);
++      d=enemies.make(&pipe_2, (x>>SHIFT), (y>>SHIFT), 0, 0, 7);
+     manage.add_score(10);
+     state = notuse;
+ }
+-const enemy_kind pipe2 = {
++const enemy_kind pipe_2 = {
+     0,
+     &_enemy::make_pipe2,
+     &_enemy::move_pipe2,
