@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/04/02 14:47:00 taca Exp $
+$NetBSD: distinfo,v 1.5 2011/09/12 17:02:27 taca Exp $
 
-SHA1 (termtter-1.9.0.gem) = 7125818641aca71f3d2431040ca53853c6f71395
-RMD160 (termtter-1.9.0.gem) = a20c3efe51c9d22934bfc3fb7291e7dabfcccf18
-Size (termtter-1.9.0.gem) = 114688 bytes
-SHA1 (patch-lib_termtter_command.rb) = 90ded7223703c8d23bbcea64c444ca7e2c159700
+SHA1 (termtter-1.10.0.gem) = 22323a9abc698023d84737d5fcb14e5df455dfc7
+RMD160 (termtter-1.10.0.gem) = 51722672a9c9deeb0dec45b97b1b0140a84e4a5a
+Size (termtter-1.10.0.gem) = 1505792 bytes

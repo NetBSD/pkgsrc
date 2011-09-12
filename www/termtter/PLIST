@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2010/07/09 05:58:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/09/12 17:02:27 taca Exp $
 bin/termtter
-${GEM_HOME}/cache/termtter-${PKGVERSION}.gem
-${GEM_LIBDIR}/.gitignore
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
@@ -18,14 +17,17 @@ ${GEM_LIBDIR}/lib/plugins/april_fool.rb
 ${GEM_LIBDIR}/lib/plugins/ar.rb
 ${GEM_LIBDIR}/lib/plugins/async.rb
 ${GEM_LIBDIR}/lib/plugins/babelfish.rb
+${GEM_LIBDIR}/lib/plugins/basic.rb
 ${GEM_LIBDIR}/lib/plugins/bomb.rb
 ${GEM_LIBDIR}/lib/plugins/capital_update.rb
+${GEM_LIBDIR}/lib/plugins/capture.rb
 ${GEM_LIBDIR}/lib/plugins/channel.rb
 ${GEM_LIBDIR}/lib/plugins/clear.rb
 ${GEM_LIBDIR}/lib/plugins/clock.rb
 ${GEM_LIBDIR}/lib/plugins/command_plus.rb
 ${GEM_LIBDIR}/lib/plugins/confirm.rb
 ${GEM_LIBDIR}/lib/plugins/cool.rb
+${GEM_LIBDIR}/lib/plugins/copy.rb
 ${GEM_LIBDIR}/lib/plugins/countter.rb
 ${GEM_LIBDIR}/lib/plugins/crypt.rb
 ${GEM_LIBDIR}/lib/plugins/curry.rb
@@ -56,6 +58,7 @@ ${GEM_LIBDIR}/lib/plugins/dupu.rb
 ${GEM_LIBDIR}/lib/plugins/easy_post.rb
 ${GEM_LIBDIR}/lib/plugins/eject.rb
 ${GEM_LIBDIR}/lib/plugins/en2ja.rb
+${GEM_LIBDIR}/lib/plugins/encoding.rb
 ${GEM_LIBDIR}/lib/plugins/english.rb
 ${GEM_LIBDIR}/lib/plugins/erase.rb
 ${GEM_LIBDIR}/lib/plugins/erb.rb
@@ -71,6 +74,7 @@ ${GEM_LIBDIR}/lib/plugins/footer.rb
 ${GEM_LIBDIR}/lib/plugins/friends.rb
 ${GEM_LIBDIR}/lib/plugins/g.rb
 ${GEM_LIBDIR}/lib/plugins/gem_install.rb
+${GEM_LIBDIR}/lib/plugins/geo.rb
 ${GEM_LIBDIR}/lib/plugins/gist.rb
 ${GEM_LIBDIR}/lib/plugins/github-issues.rb
 ${GEM_LIBDIR}/lib/plugins/graduatter.rb
@@ -88,9 +92,20 @@ ${GEM_LIBDIR}/lib/plugins/hi.rb
 ${GEM_LIBDIR}/lib/plugins/history.rb
 ${GEM_LIBDIR}/lib/plugins/http_server.rb
 ${GEM_LIBDIR}/lib/plugins/http_server/favicon.ico
-${GEM_LIBDIR}/lib/plugins/http_server/index.html
+${GEM_LIBDIR}/lib/plugins/http_server/skin/default/index.html
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/cui/chara/miku/images/001.png
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/cui/chara/miku/images/002.png
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/cui/chara/miku/images/003.png
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/cui/chara/miku/images/004.png
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/cui/chara/miku/script.js
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/cui/core.js
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/cui/util.js
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/index.html
+${GEM_LIBDIR}/lib/plugins/http_server/skin/miku/jquery-1.4.2.min.js
+${GEM_LIBDIR}/lib/plugins/http_server/skin/sample1/index.html
 ${GEM_LIBDIR}/lib/plugins/hugeurl.rb
 ${GEM_LIBDIR}/lib/plugins/ignore.rb
+${GEM_LIBDIR}/lib/plugins/im_kayac.rb
 ${GEM_LIBDIR}/lib/plugins/irc_gw.rb
 ${GEM_LIBDIR}/lib/plugins/itunes.rb
 ${GEM_LIBDIR}/lib/plugins/jakigan.rb
@@ -106,6 +121,7 @@ ${GEM_LIBDIR}/lib/plugins/md5pass.rb
 ${GEM_LIBDIR}/lib/plugins/me.rb
 ${GEM_LIBDIR}/lib/plugins/mecab.rb
 ${GEM_LIBDIR}/lib/plugins/modify_arg_hook_sample.rb
+${GEM_LIBDIR}/lib/plugins/mongo.rb
 ${GEM_LIBDIR}/lib/plugins/msagent.rb
 ${GEM_LIBDIR}/lib/plugins/mudan_kinshi.rb
 ${GEM_LIBDIR}/lib/plugins/multi_output.rb
@@ -149,6 +165,7 @@ ${GEM_LIBDIR}/lib/plugins/screen.rb
 ${GEM_LIBDIR}/lib/plugins/search_url.rb
 ${GEM_LIBDIR}/lib/plugins/searchline.rb
 ${GEM_LIBDIR}/lib/plugins/shell.rb
+${GEM_LIBDIR}/lib/plugins/short_logger.rb
 ${GEM_LIBDIR}/lib/plugins/sl.rb
 ${GEM_LIBDIR}/lib/plugins/source.rb
 ${GEM_LIBDIR}/lib/plugins/spam.rb
@@ -158,6 +175,7 @@ ${GEM_LIBDIR}/lib/plugins/storage/status.rb
 ${GEM_LIBDIR}/lib/plugins/storage/status_mook.rb
 ${GEM_LIBDIR}/lib/plugins/story.rb
 ${GEM_LIBDIR}/lib/plugins/stream.rb
+${GEM_LIBDIR}/lib/plugins/suspend.rb
 ${GEM_LIBDIR}/lib/plugins/switch_user.rb
 ${GEM_LIBDIR}/lib/plugins/system_status.rb
 ${GEM_LIBDIR}/lib/plugins/time_signal.rb
@@ -172,6 +190,7 @@ ${GEM_LIBDIR}/lib/plugins/twitpic.rb
 ${GEM_LIBDIR}/lib/plugins/typable_id.rb
 ${GEM_LIBDIR}/lib/plugins/update_editor.rb
 ${GEM_LIBDIR}/lib/plugins/uri-open.rb
+${GEM_LIBDIR}/lib/plugins/url.rb
 ${GEM_LIBDIR}/lib/plugins/user_stream.rb
 ${GEM_LIBDIR}/lib/plugins/w3mimg.rb
 ${GEM_LIBDIR}/lib/plugins/wassr.rb
@@ -253,4 +272,5 @@ ${GEM_LIBDIR}/spec/termtter/system_extensions_spec.rb
 ${GEM_LIBDIR}/spec/termtter/task_manager_spec.rb
 ${GEM_LIBDIR}/spec/termtter/task_spec.rb
 ${GEM_LIBDIR}/spec/termtter_spec.rb
-${GEM_HOME}/specifications/termtter-${PKGVERSION}.gemspec
+${GEM_LIBDIR}/termtter.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
