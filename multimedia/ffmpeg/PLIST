@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/07/19 19:53:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/09/12 17:18:52 drochner Exp $
 bin/ffmpeg
 bin/ffprobe
 bin/ffserver
@@ -100,7 +100,6 @@ share/doc/ffmpeg/TODO
 share/doc/ffmpeg/avutil.txt
 share/doc/ffmpeg/build_system.txt
 share/doc/ffmpeg/fate.txt
-share/doc/ffmpeg/ffmpeg-mt-authorship.txt
 share/doc/ffmpeg/git-howto.txt
 share/doc/ffmpeg/issue_tracker.txt
 share/doc/ffmpeg/multithreading.txt
