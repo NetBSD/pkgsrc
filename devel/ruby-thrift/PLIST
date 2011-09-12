@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/18 02:01:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/09/12 16:04:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/InstalledFiles
+${GEM_LIBDIR}/Makefile
 ${GEM_LIBDIR}/Makefile.am
 ${GEM_LIBDIR}/Makefile.in
 ${GEM_LIBDIR}/Manifest
@@ -10,8 +12,18 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/benchmark/Benchmark.thrift
 ${GEM_LIBDIR}/benchmark/benchmark.rb
 ${GEM_LIBDIR}/benchmark/client.rb
+${GEM_LIBDIR}/benchmark/gen-rb/benchmark_constants.rb
+${GEM_LIBDIR}/benchmark/gen-rb/benchmark_service.rb
+${GEM_LIBDIR}/benchmark/gen-rb/benchmark_types.rb
 ${GEM_LIBDIR}/benchmark/server.rb
 ${GEM_LIBDIR}/benchmark/thin_server.rb
+${GEM_LIBDIR}/debug_proto_test/gen-rb/debug_proto_test_constants.rb
+${GEM_LIBDIR}/debug_proto_test/gen-rb/debug_proto_test_types.rb
+${GEM_LIBDIR}/debug_proto_test/gen-rb/empty_service.rb
+${GEM_LIBDIR}/debug_proto_test/gen-rb/inherited.rb
+${GEM_LIBDIR}/debug_proto_test/gen-rb/reverse_order_service.rb
+${GEM_LIBDIR}/debug_proto_test/gen-rb/service_for_exception_with_a_map.rb
+${GEM_LIBDIR}/debug_proto_test/gen-rb/srv.rb
 ${GEM_LIBDIR}/ext/binary_protocol_accelerated.c
 ${GEM_LIBDIR}/ext/binary_protocol_accelerated.h
 ${GEM_LIBDIR}/ext/compact_protocol.c
@@ -71,6 +83,9 @@ ${GEM_LIBDIR}/spec/base_transport_spec.rb
 ${GEM_LIBDIR}/spec/binary_protocol_accelerated_spec.rb
 ${GEM_LIBDIR}/spec/binary_protocol_spec.rb
 ${GEM_LIBDIR}/spec/binary_protocol_spec_shared.rb
+${GEM_LIBDIR}/spec/gen-rb/nonblocking_service.rb
+${GEM_LIBDIR}/spec/gen-rb/thrift_spec_constants.rb
+${GEM_LIBDIR}/spec/gen-rb/thrift_spec_types.rb
 ${GEM_LIBDIR}/spec/client_spec.rb
 ${GEM_LIBDIR}/spec/compact_protocol_spec.rb
 ${GEM_LIBDIR}/spec/exception_spec.rb
@@ -89,4 +104,5 @@ ${GEM_LIBDIR}/spec/types_spec.rb
 ${GEM_LIBDIR}/spec/union_spec.rb
 ${GEM_LIBDIR}/spec/unix_socket_spec.rb
 ${GEM_LIBDIR}/thrift.gemspec
+${GEM_LIBDIR}/tmp/${GEM_NAME}.gem
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
