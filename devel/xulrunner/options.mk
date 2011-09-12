@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2011/04/26 14:16:36 tnn Exp $
+# $NetBSD: options.mk,v 1.10 2011/09/12 09:19:06 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome pulseaudio
@@ -40,11 +40,12 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--enable-debug --enable-debug-symbols
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
-CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
+CONFIGURE_ARGS+=	--enable-install-strip
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jit)
