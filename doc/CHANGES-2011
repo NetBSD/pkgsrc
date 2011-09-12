@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2245 2011/09/12 17:03:02 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2246 2011/09/12 19:11:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3491,3 +3491,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mirror to 2.9nb3 [taca 2011-09-12]
 	Updated www/contao210-translations to 20110912 [taca 2011-09-12]
 	Updated www/termtter to 1.10.0 [taca 2011-09-12]
+	Updated misc/gaupol to 0.19.1 [wiz 2011-09-12]
