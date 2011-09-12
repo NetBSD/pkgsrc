@@ -1,0 +1,37 @@
+$NetBSD: patch-ae,v 1.1 2011/09/12 21:19:26 shattered Exp $
+
+--- enemies.h.orig	1996-04-03 21:58:50.000000000 +0000
++++ enemies.h
+@@ -62,7 +62,7 @@ extern const enemy_kind bomb2;
+ extern const enemy_kind cannon;
+ extern const enemy_kind pipe1;
+ extern const enemy_kind core;
+-extern const enemy_kind pipe2;
++extern const enemy_kind pipe_2;
+ extern const enemy_kind rock;
+ extern const enemy_kind ring;
+ extern const enemy_kind enemy_m1;
+@@ -209,10 +209,10 @@ inline void _enemy::hit_by_beam()
+         state = notuse;
+     }
+     else if (ek == &core){
+-        enemies.make(&pipe2, x>>SHIFT, y>>SHIFT, 0, 0, 3);
+-        enemies.make(&pipe2, x>>SHIFT, y>>SHIFT, 0, 0, 7);
+-        enemies.make(&pipe2, x>>SHIFT, y>>SHIFT, 0, 0, 1);
+-        enemies.make(&pipe2, x>>SHIFT, y>>SHIFT, 0, 0, 5);
++        enemies.make(&pipe_2, x>>SHIFT, y>>SHIFT, 0, 0, 3);
++        enemies.make(&pipe_2, x>>SHIFT, y>>SHIFT, 0, 0, 7);
++        enemies.make(&pipe_2, x>>SHIFT, y>>SHIFT, 0, 0, 1);
++        enemies.make(&pipe_2, x>>SHIFT, y>>SHIFT, 0, 0, 5);
+         enemies.make(&explosion, x>>SHIFT, y>>SHIFT);
+         state = notuse;
+         manage.destroyed_a_core();
+@@ -304,7 +304,7 @@ inline int _enemy::realize()
+ 
+ inline int _enemy::is_pipe()
+ {
+-    return ((state != notuse) && ((ek == &pipe1) || (ek == &pipe2)));
++    return ((state != notuse) && ((ek == &pipe1) || (ek == &pipe_2)));
+ }
+ 
+ 
