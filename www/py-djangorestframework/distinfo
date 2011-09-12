@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/12 08:21:29 adam Exp $
+
+SHA1 (djangorestframework-0.2.3.tar.gz) = 8e17862423ac1a0051bb3aa16fe556af593bfdd4
+RMD160 (djangorestframework-0.2.3.tar.gz) = 2cfb1de51759a8318cf425d9ef3c02f6f4bf9866
+Size (djangorestframework-0.2.3.tar.gz) = 75301 bytes

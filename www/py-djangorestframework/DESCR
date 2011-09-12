@@ -1,0 +1,15 @@
+Django REST framework is a lightweight REST framework for Django, that aims to
+make it easy to build well-connected, self-describing RESTful Web APIs.
+
+Features:
+* Automatically provides an awesome Django admin style browse-able
+  self-documenting API.
+* Clean, simple, views for Resources, using Django's new class based views.
+* Support for ModelResources with out-of-the-box default implementations and
+  input validation.
+* Pluggable parsers, renderers, authentication and permissions - Easy to
+  customise.
+* Content type negotiation using HTTP Accept headers.
+* Optional support for forms as input validation.
+* Modular architecture - MixIn classes can be used without requiring the
+  Resource or ModelResource classes.
