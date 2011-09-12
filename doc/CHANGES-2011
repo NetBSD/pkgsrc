@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2242 2011/09/12 16:31:15 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2243 2011/09/12 16:36:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3488,3 +3488,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ragel to 6.7 [taca 2011-09-12]
 	Updated mail/mew to 6.3nb3 [taca 2011-09-12]
 	Updated mail/proxsmtp to 1.9 [taca 2011-09-12]
+	Updated net/mirror to 2.9nb3 [taca 2011-09-12]
