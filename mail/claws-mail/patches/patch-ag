@@ -1,7 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2011/06/27 19:46:50 gls Exp $
-https://savannah.gnu.org/support/index.php?107660
+$NetBSD: patch-ag,v 1.6 2011/09/12 17:43:05 drochner Exp $
 
---- src/common/ssl.c.orig	2011-02-16 06:39:57.000000000 +0000
+--- src/common/ssl.c.orig	2011-08-27 06:58:15.000000000 +0000
 +++ src/common/ssl.c
 @@ -29,8 +29,10 @@
  #include <glib/gi18n.h>
@@ -24,14 +23,3 @@ https://savannah.gnu.org/support/index.php?107660
  #ifdef HAVE_LIBETPAN
  	mailstream_gnutls_init_not_required();
  #endif	
-@@ -269,6 +273,9 @@ gboolean ssl_init_socket_with_method(Soc
- 	r = gnutls_init(&session, GNUTLS_CLIENT);
- 	if (session == NULL || r != 0)
- 		return FALSE;
-+
-+	/* compensate for change in gnutls-2.12 */
-+	gnutls_transport_set_lowat(session, 1);
-   
- 	gnutls_set_default_priority(session);
- 	gnutls_protocol_set_priority (session, proto_prio);
-

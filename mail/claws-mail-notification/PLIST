@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/02/03 19:45:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/09/12 17:43:06 drochner Exp $
 include/notification_plugin/gtkhotkey/eggaccelerators.h
 include/notification_plugin/gtkhotkey/gtk-hotkey-error.h
 include/notification_plugin/gtkhotkey/gtk-hotkey-info.h
@@ -20,6 +20,7 @@ share/locale/hu/LC_MESSAGES/notification_plugin.mo
 share/locale/id/LC_MESSAGES/notification_plugin.mo
 share/locale/it/LC_MESSAGES/notification_plugin.mo
 share/locale/ja/LC_MESSAGES/notification_plugin.mo
+share/locale/lt/LC_MESSAGES/notification_plugin.mo
 share/locale/nl/LC_MESSAGES/notification_plugin.mo
 share/locale/pt_BR/LC_MESSAGES/notification_plugin.mo
 share/locale/ru/LC_MESSAGES/notification_plugin.mo
