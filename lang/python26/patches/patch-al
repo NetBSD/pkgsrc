@@ -1,13 +1,22 @@
-$NetBSD: patch-al,v 1.7 2011/02/05 09:34:05 hiramatsu Exp $
+$NetBSD: patch-al,v 1.8 2011/09/12 20:14:06 bsiegert Exp $
 
---- configure.orig	2010-05-25 02:27:03.000000000 +0000
+--- configure.orig	Tue May 25 02:26:39 2010
 +++ configure
+@@ -2833,7 +2833,7 @@ case $ac_sys_system/$ac_sys_release in
+   # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
+   # In addition, Stefan Krah confirms that issue #1244610 exists through
+   # OpenBSD 4.6, but is fixed in 4.7.
+-  OpenBSD/2.* | OpenBSD/3.[0123456789] | OpenBSD/4.[0123456])
++  OpenBSD/2.* | OpenBSD/3.[0123456789] | OpenBSD/4.[0123456] | MirBSD/*)
+     define_xopen_source=no
+     # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
+     # also defined. This can be overridden by defining _BSD_SOURCE
 @@ -4736,15 +4736,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
 -    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*)
-+    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*|OpenBSD*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*|OpenBSD*|MirBSD*)
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
@@ -46,25 +55,34 @@ $NetBSD: patch-al,v 1.7 2011/02/05 09:34:05 hiramatsu Exp $
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -7409,7 +7404,8 @@ then
+@@ -7409,7 +7404,9 @@ then
  				   ;;
  				esac
  		fi;;
 -	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
++	MirBSD*) LDSHARED='$(CC) -shared $(CCSHARED) ${LDFLAGS}';;
 +	NetBSD*|DragonFly*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
 +	Interix*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -7445,6 +7441,7 @@ then
+@@ -7444,7 +7441,8 @@ then
+ 		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
- 	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
+-	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
++	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*) CCSHARED="-fPIC";;
 +	Interix*) CCSHARED="";;
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -7502,6 +7499,7 @@ then
+@@ -7497,11 +7495,12 @@ then
+ 	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
+ 	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
+ 	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
+-	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*)
++	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*)
+ 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
