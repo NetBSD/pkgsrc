@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2220 2011/09/12 13:30:13 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2221 2011/09/12 13:33:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3466,3 +3466,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby2ruby to 1.3.0 [taca 2011-09-12]
 	Updated audio/py-id3 to 1.2nb1 [obache 2011-09-12]
 	Updated net/ruby-amqp to 0.8.0 [taca 2011-09-12]
+	Added devel/ruby-spruz version 0.2.13 [taca 2011-09-12]
