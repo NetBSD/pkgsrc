@@ -1,8 +1,12 @@
-$NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
+$NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
 
---- ftp.pl.orig	Fri Jun  5 05:10:27 1998
-+++ ftp.pl	Wed Apr 19 23:14:00 2000
-@@ -233,7 +233,7 @@
+* Enable deleting remote directories.
+* Proper signal handling.
+* Miscellaneous bug fixes.
+
+--- ftp.pl.orig	1998-06-05 09:10:27.000000000 +0000
++++ ftp.pl
+@@ -233,7 +233,7 @@ sub timed_open
  			}
  			else {
  				print $showfd "proxy connection failed " if $proxy;
@@ -11,7 +15,7 @@ $NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
  				return 0;
  			}
  		}
-@@ -270,6 +270,14 @@
+@@ -270,6 +270,14 @@ sub ftp'set_signals
  	$SIG{ 'PIPE' } = "ftp'ftp__sighandler";
  }
  
@@ -26,7 +30,7 @@ $NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
  # &ftp'set_namemap( function to map outgoing name,  function to map incoming )
  sub ftp'set_namemap
  {
-@@ -486,7 +494,7 @@
+@@ -486,7 +494,7 @@ sub pasv
  		return 0;
  	}
  	if( $ret == 1 ) {
@@ -35,7 +39,7 @@ $NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
  			$newhost = sprintf( "%d.%d.%d.%d", $1, $2, $3, $4 );
  			$newport = $5 * 256 + $6;
  		}
-@@ -581,6 +589,9 @@
+@@ -581,6 +589,9 @@ sub ftp'dir_close
  		return 0;
  	}
  
@@ -45,7 +49,7 @@ $NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
  	# read the close
  	#
  	$ret = &expect($timeout,
-@@ -590,8 +601,6 @@
+@@ -590,8 +601,6 @@ sub ftp'dir_close
  		$ret = 0;
  	}
  
@@ -54,7 +58,7 @@ $NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
  
  	if( ! $ret ){
  		return 0;
-@@ -708,6 +717,7 @@
+@@ -708,6 +717,7 @@ sub ftp'get
  	if( ! $service_open ){
  		return 0;
  	}
@@ -62,3 +66,34 @@ $NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
  
  	if( $loc_fname eq "" ){
  		$loc_fname = $rem_fname;
+@@ -917,10 +927,27 @@ sub delete
+ 
+ sub deldir
+ {
+-    local( $fname ) = @_;
++	local( $rem_fname ) = @_;
++	local( $ret );
++
++	if( ! $service_open ){
++		return 0;
++	}
+ 
+-    # not yet implemented
+-    # RMD
++	if( $mapunixout ){
++		$rem_fname = eval "&$mapunixout( \$rem_fname, 'f' )";
++	}
++
++	&send( "RMD $rem_fname" );
++
++	$ret = &expect( $timeout, 
++		2, 1 ); # Deleted $rem_fname
++	if( $ret == 99 ){
++		&service_closed();
++		$ret = 0;
++	}
++
++	return $ret == 1;
+ }
+ 
+ # &ftp'put( local filename, remote filename, restart where left off )
