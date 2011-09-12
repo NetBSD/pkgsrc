@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.27 2010/06/01 21:44:54 minskim Exp $
+# $NetBSD: Makefile.common,v 1.28 2011/09/12 22:31:58 wiz Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
 
-DISTNAME=	emacs-${EMACS_VERSION}
+DISTNAME=	emacs-${EMACS_VERSION}a
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -13,6 +13,8 @@ COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
 MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=	emacs-nox11-[0-9]*
