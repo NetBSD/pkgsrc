@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.4 2011/09/04 04:37:55 dholland Exp $
+$NetBSD: distinfo,v 1.5 2011/09/12 06:27:21 dholland Exp $
 
 SHA1 (moc-2.5.0-alpha3.tar.bz2) = 59251b6239ad38f3f5ba8a1f73d1e90246765ab7
 RMD160 (moc-2.5.0-alpha3.tar.bz2) = 7a603538e2080f3e182a543bc82100a09a56c2fe
 Size (moc-2.5.0-alpha3.tar.bz2) = 489824 bytes
 SHA1 (patch-aa) = bf667dadb3fb78216dcd56d5246b33d25dd5fcf0
-SHA1 (patch-ab) = 750f9a75c368788cf7d6f55e2ef44d7e41d99aa4
+SHA1 (patch-ab) = fc111fd7808dcfb7c8e25a8ba65997682012c8d9
 SHA1 (patch-ac) = 6b42e7df0dc3dfeb0a7c5e5226a28b01d2fd27c7
-SHA1 (patch-ad) = 4816d3a17e832ee1b8be76f342a4512fad9fc642
+SHA1 (patch-ad) = 44b3ede2c3d69857e84a67ede997b429cce61a29
 SHA1 (patch-ae) = f7b98f7af3843432bab24049b17c8639a0dfce59
 SHA1 (patch-af) = 0176dff0c460a12a563df10685818face3c4b3d5
 SHA1 (patch-ag) = 818df09cf6d06165cbd1c62681a3b5d84daa30bf
