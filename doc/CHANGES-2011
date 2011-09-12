@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2255 2011/09/12 21:46:22 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2256 2011/09/12 22:01:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3501,3 +3501,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/potrace to 1.10 [wiz 2011-09-12]
 	Updated net/libnice to 0.1.1 [wiz 2011-09-12]
 	Updated net/gst-plugins0.10-libnice to 0.1.1 [wiz 2011-09-12]
+	Updated devel/py-gobject-shared to 2.28.6 [wiz 2011-09-12]
