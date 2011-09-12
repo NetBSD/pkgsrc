@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2234 2011/09/12 14:51:44 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2235 2011/09/12 14:54:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3479,3 +3479,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-css-parser to 1.2.5 [taca 2011-09-12]
 	Updated databases/ruby-sequel to 3.27.0 [taca 2011-09-12]
 	Updated pkgtools/distbb to 0.41.0 [cheusov 2011-09-12]
+	Updated finance/ruby-activemerchant to 1.17.0 [taca 2011-09-12]
+	Updated finance/ruby-braintree to 2.11.0 [taca 2011-09-12]
