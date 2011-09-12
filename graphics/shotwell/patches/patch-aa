@@ -1,26 +1,24 @@
-$NetBSD: patch-aa,v 1.7 2011/07/12 19:00:57 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2011/09/12 18:15:03 drochner Exp $
 
-Remove gudev requirements. Fix m4 params and libraw configuration.
-
---- Makefile.orig	2011-06-02 19:11:21.000000000 +0000
+--- Makefile.orig	2011-08-23 18:53:10.000000000 +0000
 +++ Makefile
-@@ -264,7 +264,6 @@ EXT_PKGS = \
- 	gstreamer-0.10 \
+@@ -269,7 +269,6 @@ EXT_PKGS = \
  	gstreamer-base-0.10 \
+ 	gstreamer-pbutils-0.10 \
  	gtk+-2.0 \
 -	gudev-1.0 \
  	libexif \
  	libgphoto2 \
  	libsoup-2.4 \
-@@ -296,7 +295,6 @@ EXT_PKG_VERSIONS = \
- 	gstreamer-0.10 >= 0.10.28 \
+@@ -302,7 +301,6 @@ EXT_PKG_VERSIONS = \
  	gstreamer-base-0.10 >= 0.10.28 \
+ 	gstreamer-pbutils-0.10 >= 0.10.32 \
  	gtk+-2.0 >= 2.18.0 \
 -	gudev-1.0 >= 145 \
  	libexif >= 0.6.16 \
  	libgphoto2 >= 2.4.2 \
  	libsoup-2.4 >= 2.26.0 \
-@@ -375,7 +373,7 @@ DIST_FILES = Makefile configure chkver $
+@@ -382,7 +380,7 @@ DIST_FILES = Makefile configure chkver $
  	$(EXPANDED_HELP_FILES) $(EXPANDED_HELP_IMAGES) apport/shotwell.py $(UNIT_RESOURCES) $(UNIT_MKS) \
  	unitize.mk units.mk $(PC_INPUT) $(PLUGINS_DIST_FILES) \
  	$(EXPANDED_THUMBNAILER_SRC_FILES)
@@ -29,7 +27,7 @@ Remove gudev requirements. Fix m4 params and libraw configuration.
  
  DIST_TAR = $(PROGRAM)-$(VERSION).tar
  DIST_TAR_BZ2 = $(DIST_TAR).bz2
-@@ -420,7 +418,7 @@ CFLAGS += -DG_UDEV_API_IS_SUBJECT_TO_CHA
+@@ -427,7 +425,7 @@ CFLAGS += -DG_UDEV_API_IS_SUBJECT_TO_CHA
  # if not available.
  LIBRAW_CONFIG=./libraw-config
  
@@ -38,7 +36,7 @@ Remove gudev requirements. Fix m4 params and libraw configuration.
  	@ ./chkver min $(VALAC_VERSION) $(MIN_VALAC_VERSION) || ( echo 'Shotwell requires Vala compiler $(MIN_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 )
  	$(if $(MAX_VALAC_VERSION),\
  		@ ./chkver max $(VALAC_VERSION) $(MAX_VALAC_VERSION) || ( echo 'Shotwell cannot be built by Vala compiler $(MAX_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 ),)
-@@ -638,7 +636,6 @@ $(UNITIZE_INITS) $(UNITIZE_ENTRIES): $(U
+@@ -656,7 +654,6 @@ $(UNITIZE_INITS) $(UNITIZE_ENTRIES): $(U
  
  # EXPANDED_SRC_FILES includes UNITIZE_INITS and UNITIZE_ENTRY
  $(VALA_STAMP): $(EXPANDED_SRC_FILES) $(EXPANDED_VAPI_FILES) $(EXPANDED_SRC_HEADER_FILES)
@@ -46,7 +44,7 @@ Remove gudev requirements. Fix m4 params and libraw configuration.
  	@echo Compiling Vala code...
  	@mkdir -p $(BUILD_DIR)
  	@$(VALAC) --ccode --directory=$(BUILD_DIR) --basedir=src \
-@@ -655,10 +652,10 @@ $(EXPANDED_C_FILES): $(VALA_STAMP)
+@@ -673,10 +670,10 @@ $(EXPANDED_C_FILES): $(VALA_STAMP)
  	@
  
  $(EXPANDED_OBJ_FILES): %.o: %.c $(CONFIG_IN) Makefile
@@ -56,10 +54,10 @@ Remove gudev requirements. Fix m4 params and libraw configuration.
  $(PROGRAM): $(EXPANDED_OBJ_FILES) $(RESOURCES) $(LANG_STAMP) $(THUMBNAILER_BIN)
 -	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `$(LIBRAW_CONFIG) --libs` $(EXPORT_FLAGS) -o $@
 +	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `pkg-config --libs libraw` $(EXPORT_FLAGS) -o $@
+ 	glib-compile-schemas misc
  
  $(THUMBNAILER_BIN): $(EXPANDED_THUMBNAILER_SRC_FILES)
- 	$(VALAC) $(EXPANDED_THUMBNAILER_SRC_FILES) $(VALAFLAGS) -o $@ $(foreach pkg,$(THUMBNAILER_PKGS),--pkg=$(pkg))
-@@ -668,7 +665,6 @@ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLU
+@@ -687,7 +684,6 @@ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLU
  
  .PHONY: $(PLUGINS_DIR)
  $(PLUGINS_DIR): $(PLUGIN_VAPI) $(PLUGIN_HEADER) $(PLUGIN_DEPS)
@@ -67,7 +65,7 @@ Remove gudev requirements. Fix m4 params and libraw configuration.
  	@$(MAKE) --directory=$@ PLUGINS_VERSION="$(VERSION)" USER_VALAFLAGS="$(USER_VALAFLAGS)" \
  		PLUGIN_CFLAGS="$(PLUGIN_CFLAGS)"
  
-@@ -686,7 +682,7 @@ docs:
+@@ -705,7 +701,7 @@ docs:
  glade: lib$(PROGRAM).so
  
  lib$(PROGRAM).so: $(EXPANDED_OBJ_FILES) $(RESOURCES) $(LANG_STAMP)
