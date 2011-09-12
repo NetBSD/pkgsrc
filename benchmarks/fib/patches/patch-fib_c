@@ -1,0 +1,36 @@
+$NetBSD: patch-fib_c,v 1.1 2011/09/12 07:21:30 dholland Exp $
+
+- fix void main
+- fix wrong printf formats, caught by clang
+
+--- fib.c~	2011-09-12 07:19:12.000000000 +0000
++++ fib.c
+@@ -31,7 +31,7 @@
+ #include <stdlib.h>
+ #include <time.h>
+ 
+-void main(void);
++int main(void);
+ unsigned long fib(long);
+ 
+ unsigned long fib(x)
+@@ -44,7 +44,7 @@ long x;
+ }
+ 
+ 
+-void main()
++int main()
+ {
+  register unsigned long IMax,value;
+  double starttime, benchtime, dtime();
+@@ -59,8 +59,9 @@ void main()
+  benchtime = dtime() - starttime;
+   
+  printf("\n");
+- printf("The %02d'th Fibonacci Number is: %d\n",IMax,value);
++ printf("The %02lu'th Fibonacci Number is: %lu\n",IMax,value);
+  printf("Run Time (sec) =  %10.3lf\n\n",benchtime);
++ return 0;
+ }
+ 
+ /*****************************************************/
