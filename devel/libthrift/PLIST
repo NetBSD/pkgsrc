@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2011/08/19 12:37:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/09/12 15:51:02 taca Exp $
 bin/thrift
 include/thrift/TApplicationException.h
 include/thrift/TLogging.h
 include/thrift/TProcessor.h
 include/thrift/TReflectionLocal.h
 include/thrift/Thrift.h
-include/thrift/async/SimpleCallback.h
 include/thrift/async/TAsyncBufferProcessor.h
 include/thrift/async/TAsyncChannel.h
 include/thrift/async/TAsyncProcessor.h
@@ -47,6 +46,8 @@ include/thrift/transport/TFileTransport.h
 include/thrift/transport/THttpClient.h
 include/thrift/transport/THttpServer.h
 include/thrift/transport/THttpTransport.h
+include/thrift/transport/TSSLServerSocket.h
+include/thrift/transport/TSSLSocket.h
 include/thrift/transport/TServerSocket.h
 include/thrift/transport/TServerTransport.h
 include/thrift/transport/TShortReadTransport.h
@@ -71,6 +72,7 @@ ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_http_transport.be
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_memory_buffer.beam
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_processor.beam
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_protocol.beam
+${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_reconnecting_client.beam
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_server.beam
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_service.beam
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/ebin/thrift_socket_server.beam
@@ -93,6 +95,7 @@ ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_http_transport.erl
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_memory_buffer.erl
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_processor.erl
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_protocol.erl
+${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_reconnecting_client.erl
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_server.erl
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_service.erl
 ${PLIST.erlang}lib/erlang/lib/thrift-${PKGVERSION}/src/thrift_socket_server.erl
@@ -148,6 +151,9 @@ ${PLIST.python}${PYSITELIB}/thrift/server/THttpServer.pyo
 ${PLIST.python}${PYSITELIB}/thrift/server/TNonblockingServer.py
 ${PLIST.python}${PYSITELIB}/thrift/server/TNonblockingServer.pyc
 ${PLIST.python}${PYSITELIB}/thrift/server/TNonblockingServer.pyo
+${PLIST.python}${PYSITELIB}/thrift/server/TProcessPoolServer.py
+${PLIST.python}${PYSITELIB}/thrift/server/TProcessPoolServer.pyc
+${PLIST.python}${PYSITELIB}/thrift/server/TProcessPoolServer.pyo
 ${PLIST.python}${PYSITELIB}/thrift/server/TServer.py
 ${PLIST.python}${PYSITELIB}/thrift/server/TServer.pyc
 ${PLIST.python}${PYSITELIB}/thrift/server/TServer.pyo
@@ -157,6 +163,9 @@ ${PLIST.python}${PYSITELIB}/thrift/server/__init__.pyo
 ${PLIST.python}${PYSITELIB}/thrift/transport/THttpClient.py
 ${PLIST.python}${PYSITELIB}/thrift/transport/THttpClient.pyc
 ${PLIST.python}${PYSITELIB}/thrift/transport/THttpClient.pyo
+${PLIST.python}${PYSITELIB}/thrift/transport/TSSLSocket.py
+${PLIST.python}${PYSITELIB}/thrift/transport/TSSLSocket.pyc
+${PLIST.python}${PYSITELIB}/thrift/transport/TSSLSocket.pyo
 ${PLIST.python}${PYSITELIB}/thrift/transport/TSocket.py
 ${PLIST.python}${PYSITELIB}/thrift/transport/TSocket.pyc
 ${PLIST.python}${PYSITELIB}/thrift/transport/TSocket.pyo
@@ -166,6 +175,9 @@ ${PLIST.python}${PYSITELIB}/thrift/transport/TTransport.pyo
 ${PLIST.python}${PYSITELIB}/thrift/transport/TTwisted.py
 ${PLIST.python}${PYSITELIB}/thrift/transport/TTwisted.pyc
 ${PLIST.python}${PYSITELIB}/thrift/transport/TTwisted.pyo
+${PLIST.python}${PYSITELIB}/thrift/transport/TZlibTransport.py
+${PLIST.python}${PYSITELIB}/thrift/transport/TZlibTransport.pyc
+${PLIST.python}${PYSITELIB}/thrift/transport/TZlibTransport.pyo
 ${PLIST.python}${PYSITELIB}/thrift/transport/__init__.py
 ${PLIST.python}${PYSITELIB}/thrift/transport/__init__.pyc
 ${PLIST.python}${PYSITELIB}/thrift/transport/__init__.pyo
@@ -213,10 +225,12 @@ ${PLIST.java}share/doc/thrift/java/help-doc.html
 ${PLIST.java}share/doc/thrift/java/index-all.html
 ${PLIST.java}share/doc/thrift/java/index.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/EncodingUtils.html
+${PLIST.java}share/doc/thrift/java/org/apache/thrift/ProcessFunction.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/ShortStack.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/TApplicationException.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/TBase.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/TBaseHelper.html
+${PLIST.java}share/doc/thrift/java/org/apache/thrift/TBaseProcessor.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/TByteArrayOutputStream.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/TDeserializer.html
 ${PLIST.java}share/doc/thrift/java/org/apache/thrift/TEnum.html
@@ -341,6 +355,9 @@ ${PLIST.java}share/doc/thrift/java/overview-frame.html
 ${PLIST.java}share/doc/thrift/java/overview-summary.html
 ${PLIST.java}share/doc/thrift/java/overview-tree.html
 ${PLIST.java}share/doc/thrift/java/package-list
-${PLIST.java}share/doc/thrift/java/resources/inherit.gif
+${PLIST.java}share/doc/thrift/java/resources/background.gif
+${PLIST.java}share/doc/thrift/java/resources/tab.gif
+${PLIST.java}share/doc/thrift/java/resources/titlebar.gif
+${PLIST.java}share/doc/thrift/java/resources/titlebar_end.gif
 ${PLIST.java}share/doc/thrift/java/serialized-form.html
 ${PLIST.java}share/doc/thrift/java/stylesheet.css
