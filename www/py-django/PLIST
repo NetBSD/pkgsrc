@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/03/23 10:38:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/09/12 08:17:07 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -158,8 +158,12 @@ ${PYSITELIB}/django/conf/locale/es_AR/formats.pyc
 ${PYSITELIB}/django/conf/locale/es_AR/formats.pyo
 ${PYSITELIB}/django/conf/locale/es_MX/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/es_MX/LC_MESSAGES/django.po
-${PYSITELIB}/django/conf/locale/es_MX/__init__py
+${PYSITELIB}/django/conf/locale/es_MX/__init__.py
+${PYSITELIB}/django/conf/locale/es_MX/__init__.pyc
+${PYSITELIB}/django/conf/locale/es_MX/__init__.pyo
 ${PYSITELIB}/django/conf/locale/es_MX/formats.py
+${PYSITELIB}/django/conf/locale/es_MX/formats.pyc
+${PYSITELIB}/django/conf/locale/es_MX/formats.pyo
 ${PYSITELIB}/django/conf/locale/es_NI/__init__.py
 ${PYSITELIB}/django/conf/locale/es_NI/__init__.pyc
 ${PYSITELIB}/django/conf/locale/es_NI/__init__.pyo
@@ -2238,6 +2242,9 @@ ${PYSITELIB}/django/contrib/gis/db/backends/spatialite/base.pyo
 ${PYSITELIB}/django/contrib/gis/db/backends/spatialite/client.py
 ${PYSITELIB}/django/contrib/gis/db/backends/spatialite/client.pyc
 ${PYSITELIB}/django/contrib/gis/db/backends/spatialite/client.pyo
+${PYSITELIB}/django/contrib/gis/db/backends/spatialite/compiler.py
+${PYSITELIB}/django/contrib/gis/db/backends/spatialite/compiler.pyc
+${PYSITELIB}/django/contrib/gis/db/backends/spatialite/compiler.pyo
 ${PYSITELIB}/django/contrib/gis/db/backends/spatialite/creation.py
 ${PYSITELIB}/django/contrib/gis/db/backends/spatialite/creation.pyc
 ${PYSITELIB}/django/contrib/gis/db/backends/spatialite/creation.pyo
@@ -2700,6 +2707,7 @@ ${PYSITELIB}/django/contrib/gis/tests/data/test_poly/test_poly.shp
 ${PYSITELIB}/django/contrib/gis/tests/data/test_poly/test_poly.shx
 ${PYSITELIB}/django/contrib/gis/tests/data/test_vrt/test_vrt.csv
 ${PYSITELIB}/django/contrib/gis/tests/data/test_vrt/test_vrt.vrt
+${PYSITELIB}/django/contrib/gis/tests/data/texas.dbf
 ${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.py
 ${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.pyo
