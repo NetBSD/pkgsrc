@@ -1,0 +1,18 @@
+$NetBSD: patch-lib_argp_fmtstream_h,v 1.1 2011/09/12 04:34:29 dholland Exp $
+
+Fix up gcc/c99 inline mess.
+
+--- lib/argp-fmtstream.h~	2003-10-04 12:28:07.000000000 +0000
++++ lib/argp-fmtstream.h
+@@ -206,7 +206,11 @@ extern int __argp_fmtstream_ensure (argp
+ #endif
+ 
+ #ifndef ARGP_FS_EI
++#if defined(__GNUC__) && !defined(__GNUC_STDC_INLINE__)
+ #define ARGP_FS_EI extern inline
++#else
++#define ARGP_FS_EI inline
++#endif
+ #endif
+ 
+ ARGP_FS_EI size_t
