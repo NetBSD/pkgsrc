@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/18 19:36:39 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/09/12 14:51:03 cheusov Exp $
 bin/distbb
 bin/distbb_diff
 libexec/distbb/common
 libexec/distbb/gen_queue
 libexec/distbb/gen_weights
 libexec/distbb/make-depends
+libexec/distbb/pkg_summary2build_deps
 libexec/distbb/slave
 libexec/distbb/stage_build
 libexec/distbb/stage_checksum
 libexec/distbb/stage_gen_report
+libexec/distbb/stage_gen_report_data
 libexec/distbb/stage_init
-libexec/distbb/stage_report
+libexec/distbb/stage_send_report
 libexec/distbb/stage_summary
 libexec/distbb/stage_update_best
 libexec/distbb/stage_upload
@@ -31,3 +33,4 @@ share/doc/distbb/README
 share/doc/distbb/TODO
 share/examples/distbb/distbb.conf
 share/examples/distbb/distbb.local.mk
+share/runawk/distbb.awk
