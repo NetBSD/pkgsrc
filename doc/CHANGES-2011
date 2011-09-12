@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2244 2011/09/12 16:39:05 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2245 2011/09/12 17:03:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3490,3 +3490,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/proxsmtp to 1.9 [taca 2011-09-12]
 	Updated net/mirror to 2.9nb3 [taca 2011-09-12]
 	Updated www/contao210-translations to 20110912 [taca 2011-09-12]
+	Updated www/termtter to 1.10.0 [taca 2011-09-12]
