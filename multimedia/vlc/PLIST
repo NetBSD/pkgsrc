@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2011/06/07 13:59:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.43 2011/09/12 21:50:38 shattered Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -118,7 +118,7 @@ lib/vlc/plugins/audio_filter/libaudiobargraph_a_plugin.la
 lib/vlc/plugins/audio_filter/libchorus_flanger_plugin.la
 lib/vlc/plugins/audio_filter/libconverter_fixed_plugin.la
 lib/vlc/plugins/audio_filter/libdolby_surround_decoder_plugin.la
-lib/vlc/plugins/audio_filter/libdtstofloat32_plugin.la
+${PLIST.dts}lib/vlc/plugins/audio_filter/libdtstofloat32_plugin.la
 lib/vlc/plugins/audio_filter/libdtstospdif_plugin.la
 lib/vlc/plugins/audio_filter/libequalizer_plugin.la
 lib/vlc/plugins/audio_filter/libheadphone_channel_mixer_plugin.la
