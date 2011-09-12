@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2011/05/13 16:43:02 drochner Exp $
+# $NetBSD: Makefile,v 1.37 2011/09/12 18:18:20 drochner Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
-PYQT_VERSION=	4.8.4
+PYQT_VERSION=	4.8.5
 CATEGORIES=	x11 python
 MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
 
