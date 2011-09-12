@@ -1,20 +1,10 @@
-$NetBSD: patch-aq,v 1.3 2011/05/28 23:02:33 dholland Exp $
+$NetBSD: patch-aq,v 1.4 2011/09/12 11:15:33 dholland Exp $
 
-- handle dragonfly
 - fix parallel build
 
---- src/Makefile.orig	1997-06-27 14:50:31.000000000 +0000
+--- src/Makefile.orig	2011-09-12 10:59:10.000000000 +0000
 +++ src/Makefile
-@@ -89,7 +89,7 @@ COMPILE=$(CC) $(CFLAGS) $(CPPFLAGS) $(LD
- #####################################
- 
- # The following don't need special handling.
--freebsd netbsd openbsd sunos linux:
-+dragonfly freebsd netbsd netbsdelf openbsd sunos linux:
- 	@$(MAKE) binaries
- 
- bsdi:
-@@ -145,7 +145,7 @@ EXES=	$(BINDIR)/bw_bzero $(BINDIR)/bw_fi
+@@ -170,7 +170,7 @@ EXES=	$(BINDIR)/bw_bzero $(BINDIR)/bw_fi
  	$(BINDIR)/mhz $(BINDIR)/mhz-counter
  #	$(BINDIR)/lmdd $(BINDIR)/lat_pagefault
  
