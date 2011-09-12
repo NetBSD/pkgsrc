@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 06:35:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/09/12 11:57:49 taca Exp $
 bin/r2r_show
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
