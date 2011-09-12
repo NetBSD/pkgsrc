@@ -1,6 +1,11 @@
-$NetBSD: patch-ah,v 1.5 2006/08/12 14:51:39 darcy Exp $
+$NetBSD: patch-ah,v 1.6 2011/09/12 06:50:00 dholland Exp $
 
---- internals.c.orig	Tue Jan 12 19:59:45 1993
+- support cdrom access on BSDs
+- get function decls out of function bodies, which gcc dislikes
+- fix mismatched return statements, which clang dislikes
+- ...more (?)
+
+--- internals.c.orig	1993-01-12 18:59:45.000000000 +0000
 +++ internals.c
 @@ -22,6 +22,9 @@
  
@@ -28,6 +33,24 @@ $NetBSD: patch-ah,v 1.5 2006/08/12 14:51:39 darcy Exp $
  
  int
  cdrom_get_curtime() {
+@@ -46,7 +50,7 @@ cdrom_get_curtime() {
+ 
+ 	if (cdrom_open() == -1) {
+ 		debug_printf(1, "cdrom_get_curtime: error from cdrom_open\n");
+-		return;
++		return 0;
+ 	}
+ 
+ 	switch (cdrom_status()) {
+@@ -54,7 +58,7 @@ cdrom_get_curtime() {
+ 	case CDROM_PLAYING:
+ 	    if (cdrom_get_curmsf(&curmsf) == -1) {
+ 		debug_printf(1, "get_curtime: error reading location\n");
+-		return;
++		return 0;
+ 	    }
+ 
+ 	    if (((curtrack = cdrom_get_curtrack()) == -1) ||
 @@ -76,6 +80,170 @@ cdrom_get_curtime() {
  	}
  }

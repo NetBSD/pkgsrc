@@ -1,7 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2011/09/04 21:04:57 dholland Exp $
+$NetBSD: patch-ac,v 1.5 2011/09/12 06:42:12 dholland Exp $
 
 - needs stdlib.h
 - use valid C (string constants cannot span lines)
+- fix mismatched return statements, which clang dislikes
 
 --- tfmx.c.orig	2001-08-02 18:49:40.000000000 +0000
 +++ tfmx.c
@@ -54,3 +55,12 @@ $NetBSD: patch-ac,v 1.4 2011/09/04 21:04:57 dholland Exp $
  );
  
  }
+@@ -348,7 +347,7 @@ dump_pattern(int x)
+ 	}
+ }
+ 
+-do_debug()
++void do_debug()
+ {
+ 	char in[81];
+ 	int x,y;
