@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2005/10/03 11:18:40 joerg Exp $
+$NetBSD: distinfo,v 1.11 2011/09/12 04:46:54 dholland Exp $
 
 SHA1 (hpack-0.79/hpack79src.tar.gz) = cbfd755f1c4fcc4ecf8cd8be476db98e31dede1a
 RMD160 (hpack-0.79/hpack79src.tar.gz) = fcd1265ff858dcca3090bdede86e90da293cf3a2
 Size (hpack-0.79/hpack79src.tar.gz) = 545648 bytes
-SHA1 (patch-aa) = d39d13ee6f99eb71ac3129c24942bf02d2527e1f
+SHA1 (patch-aa) = 97cfb7de5acd8f6171a461b818d3ad4f1e8b181e
 SHA1 (patch-ab) = 48fa56d17725d2b3de87955f09d82624d14e2f56
 SHA1 (patch-ac) = cf399b72c990fc2a6583ab0abbb252075c2ceceb
 SHA1 (patch-ad) = c07f5d0ec7e2dd18d518d5eafe64ff0ef9e81a91
