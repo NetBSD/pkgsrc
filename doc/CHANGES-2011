@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2250 2011/09/12 21:27:36 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2251 2011/09/12 21:35:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3496,3 +3496,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mldonkey-gui to 3.1.0 [wiz 2011-09-12]
 	Updated mail/gmime24 to 2.4.26 [wiz 2011-09-12]
 	Updated audio/mp3diags to 1.0.09.063 [wiz 2011-09-12]
+	Updated sysutils/vcdimager-devel to 0.7.24 [wiz 2011-09-12]

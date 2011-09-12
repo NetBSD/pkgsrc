@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10550 2011/09/12 21:27:36 wiz Exp $
+$NetBSD: TODO,v 1.10551 2011/09/12 21:35:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1304,7 +1304,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o utilisp-1.14
 	o valgrind-3.6.1
 	o vbetool-1.1
-	o vcdimager-0.7.24
 	o vera-1.17
 	o veusz-1.13
 	o vfu-4.09
