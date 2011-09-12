@@ -1,7 +1,21 @@
-$NetBSD: patch-ad,v 1.2 2009/07/07 21:18:52 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2011/09/12 06:27:21 dholland Exp $
 
---- configure.orig	2008-02-25 23:38:19.000000000 +0100
+regen after patching configure.in:
+
+- use export-dynamic correctly (first hunk)
+- check for sched_get_priority_max being in -lrt
+
+--- configure.orig	2008-02-25 22:38:19.000000000 +0000
 +++ configure
+@@ -22310,7 +22310,7 @@ _ACEOF
+ 		;;
+ esac
+ 
+-LDFLAGS="$LDFLAGS -export-dynamic"
++LDFLAGS="$LDFLAGS -Wl,--export-dynamic"
+ 
+ { echo "$as_me:$LINENO: checking for ANSI C header files" >&5
+ echo $ECHO_N "checking for ANSI C header files... $ECHO_C" >&6; }
 @@ -22895,6 +22895,72 @@ if test `eval echo '${'$as_ac_var'}'` = 
  #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
  _ACEOF
