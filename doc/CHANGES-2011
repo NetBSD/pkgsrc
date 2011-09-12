@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2237 2011/09/12 16:06:16 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2238 2011/09/12 16:07:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated finance/ruby-braintree to 2.11.0 [taca 2011-09-12]
 	Updated devel/libthrift to 0.7.0 [taca 2011-09-12]
 	Updated devel/ruby-thrift to 0.7.0 [taca 2011-09-12]
+	Updated devel/ruby-thrift_client to 0.7.1 [taca 2011-09-12]
