@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2215 2011/09/12 11:48:36 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2216 2011/09/12 11:51:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3461,3 +3461,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/hoe to 2.12.3 [taca 2011-09-12]
 	Updated devel/ruby-inline to 3.10.0 [taca 2011-09-12]
 	Added devel/ruby-metaclass version 0.0.1 [taca 2011-09-12]
+	Updated devel/ruby-mocha to 0.10.0 [taca 2011-09-12]
