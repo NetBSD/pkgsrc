@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/07/12 19:00:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/09/12 18:15:03 drochner Exp $
 bin/shotwell
 bin/shotwell-video-thumbnailer
 lib/shotwell/plugins/builtin/facebook.png
@@ -6,6 +6,7 @@ lib/shotwell/plugins/builtin/flickr.png
 lib/shotwell/plugins/builtin/picasa.png
 lib/shotwell/plugins/builtin/piwigo.png
 lib/shotwell/plugins/builtin/piwigo_authentication_pane.glade
+lib/shotwell/plugins/builtin/piwigo_publishing_options_pane.glade
 lib/shotwell/plugins/builtin/shotwell-publishing-extras.so
 lib/shotwell/plugins/builtin/shotwell-publishing.so
 lib/shotwell/plugins/builtin/shotwell-transitions.so
@@ -14,7 +15,8 @@ lib/shotwell/plugins/builtin/yandex_publish_model.glade
 lib/shotwell/plugins/builtin/youtube.png
 share/applications/shotwell-viewer.desktop
 share/applications/shotwell.desktop
-share/gconf/schemas/shotwell.schemas
+share/glib-2.0/schemas/org.yorba.shotwell-extras.gschema.xml
+share/glib-2.0/schemas/org.yorba.shotwell.gschema.xml
 share/gnome/help/shotwell/C/edit-adjustments.page
 share/gnome/help/shotwell/C/edit-crop.page
 share/gnome/help/shotwell/C/edit-enhance.page
@@ -210,9 +212,11 @@ share/shotwell/ui/offline.ui
 share/shotwell/ui/photo.ui
 share/shotwell/ui/savedsearch.ui
 share/shotwell/ui/search_bar.ui
+share/shotwell/ui/search_sidebar_context.ui
 share/shotwell/ui/set_background_dialog.glade
 share/shotwell/ui/shotwell.glade
 share/shotwell/ui/shotwell.xml
-share/shotwell/ui/sidebar_default.ui
+share/shotwell/ui/sidebar_default_context.ui
+share/shotwell/ui/tag_sidebar_context.ui
 share/shotwell/ui/tags.ui
 share/shotwell/ui/trash.ui
