@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 08:07:00 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/12 13:38:16 taca Exp $
 
-DISTNAME=	diff-lcs-1.1.2
+DISTNAME=	diff-lcs-1.1.3
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
