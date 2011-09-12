@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2011/07/11 14:54:38 ryoon Exp $
+$NetBSD: patch-aa,v 1.8 2011/09/12 16:27:18 taca Exp $
+
+* Specify default icon directory for pkgsrc.
 
 --- mew-key.el.orig	2009-01-21 05:54:56.000000000 +0000
 +++ mew-key.el
