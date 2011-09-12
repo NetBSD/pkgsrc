@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/09/05 00:07:20 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2011/09/12 10:58:09 joerg Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -68,7 +68,6 @@ LICENSE=	squeezeboxserver-license
 MYSQL_VERSIONS_ACCEPTED=	51
 .include "../../mk/mysql.buildlink3.mk"
 .include "${MYSQL_PKGSRCDIR:S/-client$/-server/}/buildlink3.mk"
-BUILDLINK_API_DEPENDS.mysql-server+=	mysql-server<5.5
 
 # Audio converters
 DEPENDS+=	wavpack-[0-9]*:../../audio/wavpack
