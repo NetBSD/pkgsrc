@@ -1,10 +1,20 @@
-$NetBSD: patch-aa,v 1.1 1998/10/22 13:01:25 agc Exp $
+$NetBSD: patch-aa,v 1.2 2011/09/12 07:24:52 dholland Exp $
 
-Exit with a 0.
+- fix void main
+- exit with a 0.
 
---- flops.c	1998/10/22 12:46:57	1.1
-+++ flops.c	1998/10/22 12:47:42
-@@ -638,6 +638,7 @@
+--- flops.c.orig	2011-09-12 07:23:22.000000000 +0000
++++ flops.c
+@@ -170,7 +170,7 @@ double D3 = 0.1233153E-5;
+ double E2 = 0.48E-3;
+ double E3 = 0.411051E-6;
+ 
+-void main()
++int main()
+ {
+ 
+ #ifdef ROPT
+@@ -638,6 +638,7 @@ void main()
     printf("   MFLOPS(3)       = %10.4lf\n",T[32]);
     printf("   MFLOPS(4)       = %10.4lf\n\n",T[34]);
  
