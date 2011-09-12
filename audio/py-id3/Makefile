@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/12 12:13:28 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/12 12:06:18 obache Exp $
 
 DISTNAME=	id3-py_1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3-py/}
 
@@ -14,9 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 
-PYDISTUTILSPKG=	yes
-
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
+EGG_NAME=	${DISTNAME:S/py_//:tu}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
