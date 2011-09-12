@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:59:28 agc Exp $
+$NetBSD: distinfo,v 1.4 2011/09/12 16:30:30 taca Exp $
 
-SHA1 (proxsmtp-1.0.tar.gz) = eb733956612c1655cfd2f0ac985c0a896e73e505
-RMD160 (proxsmtp-1.0.tar.gz) = 8cb6988c8a2cd54447b53e23ca113750423c925d
-Size (proxsmtp-1.0.tar.gz) = 154743 bytes
-SHA1 (patch-aa) = 09bba87bf89e0f3a54b68fc77922052f88563579
-SHA1 (patch-ab) = c7d79e8491d9c7571a18da8a7bcdb3a9b7a93f11
+SHA1 (proxsmtp-1.9.tar.gz) = 948d3035e7331d9e5f93ec7c2e8f0e7cb3024bb1
+RMD160 (proxsmtp-1.9.tar.gz) = 6d471c524c78b54cf96e81fc8bcd75ca7dc95a6e
+Size (proxsmtp-1.9.tar.gz) = 182800 bytes
+SHA1 (patch-ab) = dd480c9d8fbe3af2f5afac3afc5dbc9f52d0332c
+SHA1 (patch-config.h.in) = 8871254abc27527bb6de5c3349db5963ffb81f3f
+SHA1 (patch-configure) = 4b86247cf8b0b81dbf0fcad1b14aaa1705e76661

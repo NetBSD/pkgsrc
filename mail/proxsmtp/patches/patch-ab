@@ -1,13 +1,38 @@
-$NetBSD: patch-ab,v 1.2 2004/12/04 20:37:47 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2011/09/12 16:30:30 taca Exp $
 
---- common/smtppass.c.orig	2004-12-01 14:09:52.000000000 -0500
+* Take care of none existence case of setresgid(2) or setresuid(2).
+
+
+--- common/smtppass.c.orig	2011-01-23 22:07:08.000000000 +0000
 +++ common/smtppass.c
-@@ -591,7 +591,7 @@ static spctx_t* init_thread(int fd)
+@@ -447,10 +447,21 @@ static void drop_privileges()
+ 		if(pw == NULL)
+ 			errx(1, "couldn't look up user: %s", g_state.user);
+ 
++#if defined(HAVE_SETRESGID) && defined(HAVE_SETRESUID)
+ 		if(setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) == -1 ||
+ 		   setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid) == -1)
+ 			err(1, "unable to switch to user: %s (uid %d, gid %d)",
+ 			    g_state.user, pw->pw_uid, pw->pw_gid);
++#else
++		if(setgid(pw->pw_gid) == -1 ||
++		   setuid(pw->pw_uid) == -1)
++		    	err(1, "unable to switch to user: %s (uid %d, gid %d)", g_state.user, pw->pw_uid, pw->pw_gid);
++            
++		/* A paranoia check */
++		if(setreuid(-1, 0) == 0)
++			err(1, "unable to completely drop privileges");
++
++#endif
+ 
+ #ifdef HAVE_LIBCAP
+ 		/*
+@@ -669,7 +680,7 @@ static spctx_t* init_thread(int fd)
                  g_unique_id++;
-         sp_unlock();    
-             
+         sp_unlock();
+ 
 -        sp_messagex(ctx, LOG_DEBUG, "processing %d on thread %x", fd, (int)pthread_self());
 +        sp_messagex(ctx, LOG_DEBUG, "processing %d on thread %p", fd, pthread_self());
-         
+ 
          /* Connect to the outgoing server ... */
          if(make_connections(ctx, fd) == -1)

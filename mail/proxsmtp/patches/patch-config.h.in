@@ -1,0 +1,19 @@
+$NetBSD: patch-config.h.in,v 1.1 2011/09/12 16:30:30 taca Exp $
+
+* Existence of setresgid(2) and setresuid(2).
+
+--- config.h.in.orig	2011-01-23 22:25:58.000000000 +0000
++++ config.h.in
+@@ -81,6 +81,12 @@
+ /* Define to 1 if you have the `setenv' function. */
+ #undef HAVE_SETENV
+ 
++/* Define to 1 if you have the `setresgid' function. */
++#undef HAVE_SETRESGID
++
++/* Define to 1 if you have the `setresuid' function. */
++#undef HAVE_SETRESUID
++
+ /* Define to 1 if you have the <stdarg.h> header file. */
+ #undef HAVE_STDARG_H
+ 
