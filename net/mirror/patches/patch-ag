@@ -1,8 +1,21 @@
-$NetBSD: patch-ag,v 1.1 2000/07/20 01:45:24 kim Exp $
+$NetBSD: patch-ag,v 1.2 2011/09/12 16:35:43 taca Exp $
 
---- dateconv.pl.orig	Fri May 29 15:04:32 1998
-+++ dateconv.pl	Wed Jul 19 21:32:52 2000
-@@ -149,5 +149,5 @@
+* Avoid to use timelocal.pl which cause obsolete warning with perl 5.14.
+* Make sure to use 4-digit year.
+
+--- dateconv.pl.orig	1998-05-29 19:04:32.000000000 +0000
++++ dateconv.pl
+@@ -47,7 +47,8 @@ sub lstime_to_standard
+ }
+ 
+ 
+-require 'timelocal.pl';
++use Time::Local;
++
+ package dateconv;
+ 
+ # Use timelocal rather than gmtime.
+@@ -149,5 +150,5 @@ sub main'time_to_standard
  
  	local( $sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst ) =
  		 gmtime( $time );
