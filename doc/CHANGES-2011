@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2238 2011/09/12 16:07:47 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2239 2011/09/12 16:09:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3484,3 +3484,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libthrift to 0.7.0 [taca 2011-09-12]
 	Updated devel/ruby-thrift to 0.7.0 [taca 2011-09-12]
 	Updated devel/ruby-thrift_client to 0.7.1 [taca 2011-09-12]
+	Updated databases/ruby-cassandra to 0.12.1 [taca 2011-09-12]
