@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2257 2011/09/12 22:01:58 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2258 2011/09/12 22:32:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3503,3 +3503,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/gst-plugins0.10-libnice to 0.1.1 [wiz 2011-09-12]
 	Updated devel/py-gobject-shared to 2.28.6 [wiz 2011-09-12]
 	Updated devel/py-gobject to 2.28.6 [wiz 2011-09-12]
+	Updated editors/emacs to 23.3a [wiz 2011-09-12]
