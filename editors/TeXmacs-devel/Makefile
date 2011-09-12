@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/07/04 22:08:01 jym Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/12 16:59:25 drochner Exp $
 
-DISTNAME=		TeXmacs-1.0.7.10-src
+DISTNAME=		TeXmacs-1.0.7.12-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/targz/
-MASTER_SITES+=		http://www.texmacs.org/Download/ftp/targz/
+MASTER_SITES=		ftp://ftp.texmacs.org/TeXmacs/tmftp/source/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.texmacs.org/
@@ -19,6 +18,8 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 # XXX workaround for bug in configure
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
+CONFIGURE_ARGS+=	--with-qt=${QTDIR}/bin
+MAKE_ENV+=		QT_QTDIR=${QTDIR}
 TEX_ACCEPTED=		teTeX3
 
 PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
@@ -67,6 +68,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/tex.buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
