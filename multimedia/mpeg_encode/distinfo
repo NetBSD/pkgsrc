@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2009/09/01 18:23:28 hasso Exp $
+$NetBSD: distinfo,v 1.8 2011/09/12 16:52:56 taca Exp $
 
 SHA1 (mpeg_encode-1.5b-src.tar.gz) = 853cd175f73b8064ce28deb256e4b81159a684ed
 RMD160 (mpeg_encode-1.5b-src.tar.gz) = 24c0a1090076630c292936639c5fb275778f6470
 Size (mpeg_encode-1.5b-src.tar.gz) = 2028724 bytes
 SHA1 (patch-aa) = 04221eb3d4cf85b206d27a2f425719ed7c4a5ec1
-SHA1 (patch-ab) = 26b7dd8004f2df43f8a4f933a5c01be53aabb299
+SHA1 (patch-ab) = 19fcf1b6ef88f3cdba29a71eb619e467fa621f4f
 SHA1 (patch-ac) = 152c0bd7737a307d1aa89ae820e219300c124085
 SHA1 (patch-ad) = 670a244680d09cb9f558a8777ec8f189145342f8
 SHA1 (patch-ae) = 414b8c45c65892b9e161c285c5c0327103f8f474
