@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2246 2011/09/12 19:11:25 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2247 2011/09/12 19:15:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3492,3 +3492,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20110912 [taca 2011-09-12]
 	Updated www/termtter to 1.10.0 [taca 2011-09-12]
 	Updated misc/gaupol to 0.19.1 [wiz 2011-09-12]
+	Updated net/mldonkey to 3.1.0 [wiz 2011-09-12]
