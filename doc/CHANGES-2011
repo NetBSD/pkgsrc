@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2210 2011/09/12 08:23:33 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2211 2011/09/12 09:46:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3455,3 +3455,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/xenkernel33 to 3.3.2nb8 [bouyer 2011-09-10]
 	Updated www/py-django to 1.3.1 [adam 2011-09-12]
 	Added www/py-djangorestframework version 0.2.3 [adam 2011-09-12]
+	Updated www/firefox36-l10n to 3.6.21 [obache 2011-09-12]
