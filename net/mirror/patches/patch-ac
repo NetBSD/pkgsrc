@@ -1,8 +1,14 @@
-$NetBSD: patch-ac,v 1.4 2000/03/26 22:33:18 kim Exp $
+$NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
 
---- mirror.pl.orig	Mon Jun  8 06:55:27 1998
-+++ mirror.pl	Sat Mar 25 02:55:39 2000
-@@ -104,7 +104,7 @@
+* Fix path for pkgsrc.
+* Use md5(1) instead of sum(1).
+* Add -f option to compress program.
+* Fix deleting remote directories.
+* Fix display of transfer direction.
+
+--- mirror.pl.orig	1998-06-08 10:55:27.000000000 +0000
++++ mirror.pl
+@@ -104,7 +104,7 @@ $load_defaults = 1;
  # Try to find the default location of various programs via
  # the users PATH then using $extra_path
  if( ! $on_win ){
@@ -11,7 +17,7 @@ $NetBSD: patch-ac,v 1.4 2000/03/26 22:33:18 kim Exp $
  }
  if( $extra_path ne '' ){
  	$ENV{ 'PATH' } .= $path_sep . $extra_path;
-@@ -159,19 +159,20 @@
+@@ -159,19 +159,20 @@ if( ! $mail_prog ){
  $rm_prog = &find_prog( 'rm' );
  
  # Generate checksums
@@ -36,7 +42,16 @@ $NetBSD: patch-ac,v 1.4 2000/03/26 22:33:18 kim Exp $
  unshift( @INC, $dir );
  
  # Debian GNU/Linux stores mirror.defaults in /etc/mirror
-@@ -1807,7 +1808,7 @@
+@@ -1022,7 +1023,7 @@ sub do_mirror
+ 		&pr_variables( "\n" );
+ 	}
+ 	elsif( $package && ! $pretty_print ){
+-		if( $get_patt ){
++		if( $get_file ){
+ 			&msg( "package=$package $site:$remote_dir -> $local_dir\n");
+ 		}
+ 		else {
+@@ -1807,7 +1808,7 @@ sub get_remote_directory_details
    			local( $f );
    			$f = $dirtmp;
  			$f =~ s/($shell_metachars)/\\$1/g;
@@ -45,7 +60,7 @@ $NetBSD: patch-ac,v 1.4 2000/03/26 22:33:18 kim Exp $
    		}
  		if( ! open( DIRTMP, $dirtmp ) ){
  			&msg( "Cannot open $dirtmp\n" );
-@@ -1845,7 +1846,7 @@
+@@ -1845,7 +1846,7 @@ sub get_remote_directory_details
    			$f = $dirtmp;
    			$dirtmp =~ s/\.($sys_compress_suffix|$gzip_suffix|$old_gzip_suffix)$//;
    			$udirtmp =~ s/\.($sys_compress_suffix|$gzip_suffix|$ol_gzip_suffix)$//;
@@ -54,7 +69,7 @@ $NetBSD: patch-ac,v 1.4 2000/03/26 22:33:18 kim Exp $
  				&msg( "Cannot uncompress directory listing\n" );
  				return 0;
  			}
-@@ -2760,7 +2761,7 @@
+@@ -2760,7 +2761,7 @@ sub transfer_file
    			local( $f ) = $src_file;
  			$f =~ s/($shell_metachars)/\\$1/g;
    			$comptemp = "$big_temp/.out$$";
@@ -63,7 +78,7 @@ $NetBSD: patch-ac,v 1.4 2000/03/26 22:33:18 kim Exp $
    			$src_file = $comptemp;
  		}
  		
-@@ -2840,10 +2841,10 @@
+@@ -2840,10 +2841,10 @@ sub transfer_file
    		# Am I doing compress to gzip conversion?
     		if( $compress_conv_patt && $src_path =~ /$compress_conv_patt/ &&
    		    $compress_suffix eq $gzip_suffix ){
@@ -76,3 +91,16 @@ $NetBSD: patch-ac,v 1.4 2000/03/26 22:33:18 kim Exp $
    		}
    		&sys( $comp );
  		$temp =~ s/\\($shell_metachars)/$1/g;
+@@ -3174,9 +3175,9 @@ sub do_delete
+ 					&msg( $log, "rmdir $cwd/$del failed: $!\n" );
+ 			}
+ 			else {
+-				&msg( $log, "delete DIR $del\n" );
+-				&ftp'delete( "$del" ) ||
+-					&msg( $log, "ftp delete DIR $del failed\n" );
++				&msg( $log, "deldir DIR $del\n" );
++				&ftp'deldir( "$del" ) ||
++					&msg( $log, "ftp deldir DIR $del failed\n" );
+ 			}
+ 		}
+ 		else {
