@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2254 2011/09/12 21:45:52 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2255 2011/09/12 21:46:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3500,3 +3500,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/guile-www to 2.32 [wiz 2011-09-12]
 	Updated graphics/potrace to 1.10 [wiz 2011-09-12]
 	Updated net/libnice to 0.1.1 [wiz 2011-09-12]
+	Updated net/gst-plugins0.10-libnice to 0.1.1 [wiz 2011-09-12]
