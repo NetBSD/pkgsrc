@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.38 2011/04/22 13:42:06 obache Exp $
+# $NetBSD: Makefile,v 1.39 2011/09/12 21:35:10 wiz Exp $
 #
 
-DISTNAME=	vcdimager-0.7.23
-PKGREVISION=	4
+DISTNAME=	vcdimager-0.7.24
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/
+MASTER_SITES=	${MASTER_SITE_GNU:=vcdimager/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vcdimager.org/
+HOMEPAGE=	http://www.gnu.org/software/vcdimager/
 COMMENT=	Mastering suite for Video CDs
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	YES
-USE_LIBTOOL=	yes
-INFO_FILES=	# PLIST
+USE_LIBTOOL=	YES
+INFO_FILES=	YES
 PKGCONFIG_OVERRIDE+= libvcdinfo.pc.in
 
 .include "../../mk/bsd.prefs.mk"
