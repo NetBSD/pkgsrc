@@ -1,7 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
+$NetBSD: patch-ac,v 1.5 2011/09/12 07:17:14 dholland Exp $
 
---- bonnie.c.orig	1996-08-28 09:23:49.000000000 -0700
-+++ bonnie.c	2011-08-14 01:33:38.000000000 -0700
+- ...
+- cope with 64-bit off_t
+
+--- bonnie.c.orig	1996-08-28 16:23:49.000000000 +0000
++++ bonnie.c
 @@ -25,8 +25,10 @@
  
  #include <unistd.h>
@@ -31,7 +34,7 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
  
  /* labels for the tests, used as an array index */
  typedef enum
-@@ -87,11 +91,12 @@
+@@ -87,11 +91,12 @@ static double delta[(int) TestCount][2];
  static double last_cpustamp = 0.0;       /* for computing delta-t */
  static double last_timestamp = 0.0;      /* for computing delta-t */
  
@@ -45,7 +48,7 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
    int    bufindex;
    int    chars[256];
    int    child;
-@@ -122,6 +127,8 @@
+@@ -122,6 +127,8 @@ main(
    for (next = 1; next < argc; next++)
      if (strcmp(argv[next], "-d") == 0)
        dir = argv[++next];
@@ -54,12 +57,12 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
      else if (strcmp(argv[next], "-s") == 0)
        size = atol(argv[++next]);
      else if (strcmp(argv[next], "-m") == 0)
-@@ -146,7 +153,12 @@
+@@ -146,7 +153,12 @@ main(
    /* size is in meg, rounded down to multiple of Chunk */
    size *= (1024 * 1024);
    size = Chunk * (size / Chunk);
 -  fprintf(stderr, "File '%s', size: %ld\n", name, size);
-+  fprintf(stderr, "File '%s', size: %qu\n", name, (u_quad_t) size);
++  fprintf(stderr, "File '%s', size: %llu\n", name, (unsigned long long) size);
 +
 +  if (!(buf = (int *) malloc(Chunk))) {
 +    fprintf(stderr, "Error allocating buffer memory: %s\n", strerror(errno));
@@ -68,7 +71,7 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
  
    /* Fill up a file, writing it a char at a time with the stdio putc() call */
    fprintf(stderr, "Writing with putc()...");
-@@ -288,6 +300,7 @@
+@@ -288,6 +300,7 @@ main(
      { /* child process */
  
        /* set up and wait for the go-ahead */
@@ -76,7 +79,7 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
        close(seek_feedback[0]);
        close(seek_control[1]);
        newfile(name, &fd, &stream, 0);
-@@ -303,7 +316,13 @@
+@@ -303,7 +316,13 @@ main(
        /* loop until we read a 0 ticket back from our parent */
        while(seek_tickets[0])
        { /* until Mom says stop */
@@ -91,16 +94,25 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
  	  ((lseek_count++ % UpdateSeek) == 0));
  	if (read(seek_control[0], seek_tickets, 1) != 1)
  	  io_error("read ticket");
-@@ -413,7 +432,7 @@
+@@ -380,7 +399,7 @@ write_html(
+   off_t  size)
+ {
+ 
+-  printf("<TR><TD>%s</TD><TD>%d</TD>", machine, size / (1024 * 1024));
++  printf("<TR><TD>%s</TD><TD>%lld</TD>", machine, (long long) (size / (1024 * 1024)));
+   printf("<TD>%d</TD><TD>%4.1f</TD><TD>%d</TD><TD>%4.1f</TD><TD>%d</TD><TD>%4.1f</TD>",
+     (int) (((double) size) / (delta[(int) Putc][Elapsed] * 1024.0)),
+     delta[(int) Putc][CPU] / delta[(int) Putc][Elapsed] * 100.0,
+@@ -413,7 +432,7 @@ report(
    printf("K/sec %%CPU K/sec %%CPU K/sec %%CPU K/sec %%CPU K/sec ");
    printf("%%CPU  /sec %%CPU\n");
  
 -  printf("%-8.8s %4d ", machine, size / (1024 * 1024));
-+  printf("%-8.8s %4qu ", machine, (u_quad_t) size / (1024 * 1024));
++  printf("%-8.8s %4llu ", machine, (unsigned long long) size / (1024 * 1024));
    printf("%5d %4.1f %5d %4.1f %5d %4.1f ",
      (int) (((double) size) / (delta[(int) Putc][Elapsed] * 1024.0)),
      delta[(int) Putc][CPU] / delta[(int) Putc][Elapsed] * 100.0,
-@@ -458,7 +477,7 @@
+@@ -458,7 +477,7 @@ static void
  usage()
  {
    fprintf(stderr,
@@ -109,7 +121,7 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
    exit(1);
  }
  
-@@ -529,7 +548,7 @@
+@@ -529,7 +548,7 @@ io_error(char * message)
  {
    char buf[Chunk];
  
@@ -118,7 +130,7 @@ $NetBSD: patch-ac,v 1.4 2011/08/14 08:35:35 mrg Exp $
    perror(buf);
    exit(1);
  }
-@@ -568,7 +587,7 @@
+@@ -568,7 +587,7 @@ doseek(
  
      /* touch a word */
      buf[((int) random() % (size/IntSize - 2)) + 1]--;
