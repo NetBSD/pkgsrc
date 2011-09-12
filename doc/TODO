@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10552 2011/09/12 21:36:56 wiz Exp $
+$NetBSD: TODO,v 1.10553 2011/09/12 21:39:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1091,7 +1091,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o posh-0.5.5
 	o postal-0.70
 	o postgresql-postgis-1.5.3
-	o potrace-1.10
 	o powwow-1.2.16
 	o prboom-2.5.0.8
 	o printproto-1.0.5
