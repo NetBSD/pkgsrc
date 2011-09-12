@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2011/05/02 12:42:20 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/12 16:19:45 taca Exp $
 
-DISTNAME=	ragel-6.6
+DISTNAME=	ragel-6.7
 CATEGORIES=	devel
 MASTER_SITES=	http://www.complang.org/ragel/
 
@@ -14,5 +14,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/ragel-guide.pdf \
+		${DESTDIR}${PREFIX}/share/doc/ragel
 
 .include "../../mk/bsd.pkg.mk"
