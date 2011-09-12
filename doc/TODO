@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10545 2011/09/12 16:09:01 taca Exp $
+$NetBSD: TODO,v 1.10546 2011/09/12 17:12:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Sigil-0.3.4 [wip]
 	o Sigil-0.4.2
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.12
 	o TiffIO-130e
 	o XaoS-3.5
 	o YoSucker-81
@@ -444,13 +443,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20110908
 	o bzr-2.2.5
-	o bzr-2.4.0
+	o bzr-2.4.1
 	o bzr-svn-1.1.0
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.17
+	o calibre-0.8.18
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
@@ -511,7 +510,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o diffstat-1.54
 	o diffutils-3.0
-	o digikam-2.0.0
+	o digikam-2.1.0
 	o dillo-3.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -553,6 +552,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emacs-23.3a
 	o emacs-muse-3.20
 	o emech-2.8.5.1
+	o emerillon-0.1.90
 	o enca-1.13
 	o encodings-1.0.4
 	o enlightenment-1.0.9
@@ -584,7 +584,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.29
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-1.16
+	o feh-1.16.1
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
@@ -593,6 +593,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
+	o firefox-6.0.2
 	o fisg-0.3.12
 	o fixesproto-5.0
 	o flashplayer-0.4.13
@@ -691,7 +692,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.10.0
 	o global-6.0
 	o glom-1.14.2 [GNOME 2.26]
-	o glpk-4.46
+	o glpk-4.47
 	o glproto-1.4.14
 	o gmime24-2.4.26
 	o gnet1-1.1.9
@@ -725,7 +726,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.1
-	o gnuchess-5.08
+	o gnuchess-6.0.1
 	o gnutls-3.0.2
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -892,7 +893,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libextractor-0.6.2
 	o libffi-3.0.10
 	o libflash-0.4.13
-	o libfolks-0.6.1
+	o libfolks-0.6.2.1
 	o libfontenc-1.1.0
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
@@ -978,6 +979,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.0.2
+	o mp3diags-1.0.09
 	o mp3splt-2.4
 	o mpeg4ip-1.6.1
 	o mpg123-1.13.4
@@ -1341,7 +1343,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wget-1.13.3
 	o whohas-0.24
 	o windowlab-1.40
-	o wine-devel-1.3.27
+	o wine-devel-1.3.28
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1477,7 +1479,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsetroot-1.1.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-274
+	o xterm-275
 	o xtraceroute-0.9.1
 	o xtrans-1.2.6
 	o xtu-1.3
