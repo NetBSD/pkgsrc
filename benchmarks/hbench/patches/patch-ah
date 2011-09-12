@@ -1,17 +1,23 @@
-$NetBSD: patch-ah,v 1.2 1998/09/23 16:56:01 agc Exp $
---- scripts/maindriver.orig	Sat Sep  5 09:24:50 1998
-+++ scripts/maindriver	Sat Sep  5 09:28:52 1998
-@@ -48,9 +48,6 @@
+$NetBSD: patch-ah,v 1.3 2011/09/12 10:47:11 dholland Exp $
+
+Make it installable (it was originally meant to be run out of its source tree)
+
+--- scripts/maindriver.orig	2003-03-19 17:54:05.000000000 +0000
++++ scripts/maindriver
+@@ -48,12 +48,6 @@ else
  fi
  
  
 -# Step 1: Discover hbench root path
 -HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`
+-if [ X${HBENCHROOT}X = XX ]; then
+-    HBENCHROOT=$PWD
+-fi
 -
+ echo Current directory is $HBENCHROOT
+ 
  # Step 2: Get run file name, check arguments, etc
- if [ $# -lt 1 ]; then
-     echo "Usage: `basename $0` <run_file>"
-@@ -94,16 +91,16 @@
+@@ -99,16 +93,16 @@ if [ X${SCRATCHDIR}X = XX ]; then
  fi 
    
  if [ X${PLAINBINDIR}X = XX ]; then
@@ -32,7 +38,7 @@ $NetBSD: patch-ah,v 1.2 1998/09/23 16:56:01 agc Exp $
  fi
  
  RESULTDIRB=${RESULTDIRBASE}/${SYSTEMNAME}
-@@ -120,10 +117,10 @@
+@@ -125,10 +119,10 @@ if [ -f $TESTFILE ]; then
      TESTS=${TESTFILE}
  elif [ -f ${TESTFILE}.test ]; then
      TESTS=${TESTFILE}.test
@@ -47,7 +53,7 @@ $NetBSD: patch-ah,v 1.2 1998/09/23 16:56:01 agc Exp $
  else
      echo "Unable to locate test file ${TESTFILE}."
      echo "Fix run file $1 and retry"
-@@ -427,9 +424,9 @@
+@@ -432,9 +426,9 @@ run_remote_test() {
  		    ;;
  	    esac
  	else
@@ -59,7 +65,7 @@ $NetBSD: patch-ah,v 1.2 1998/09/23 16:56:01 agc Exp $
  
  	    $RSH $machine -n /tmp/$1 0 $3 -s 2>> $STDERR &
  	fi
-@@ -788,12 +785,12 @@
+@@ -793,12 +787,12 @@ echo "done."
  if [ X`perl -e 'print "perltest\n";' 2>&1`X = XperltestX ]; then
      echo $ECHON "Generating summary information...${ECHOC}"
      rm -f ${RESULTDIR}/summary
