@@ -1,9 +1,12 @@
-$NetBSD: patch-an,v 1.2 2005/03/03 11:54:31 garbled Exp $
---- ./src/timing.c      Fri Jun 27 04:52:29 1997
-+++ work/hbench-OS/src/timing.c       Wed Aug 14 14:11:22 2002
-@@ -201,19 +201,24 @@
+$NetBSD: patch-an,v 1.3 2011/09/12 11:15:33 dholland Exp $
+
+Speed up the loop calibration.
+
+--- src/timing.c.orig	2011-09-12 10:54:05.000000000 +0000
++++ src/timing.c
+@@ -252,15 +252,15 @@ gen_iterations(workfn, clkmul)
  #ifdef DEBUG
- 	printf(">> %d iteration gives %f seconds\n",num,((float)rtntime)*clkmul/1000000.);
+ 	printf(">> %u iteration gives %f seconds\n",num,((float)rtntime)*clkmul/1000000.);
  #endif
 -	while ((time = ((float)rtntime)*clkmul) < 1000000.) {
 -		/* while less than one second */
@@ -15,19 +18,22 @@ $NetBSD: patch-an,v 1.2 2005/03/03 11:54:31 garbled Exp $
  			num >>= 1;
  #ifdef DEBUG
 -			printf(">> backing off\n");
-+			printf(">> backing off to %d iterations\n", num);
++			printf(">> backing off to %u iterations\n", num);
  #endif
 -			break;
 +			return num;
  		}
  #ifdef DEBUG
- 		printf(">> %d iterations gives %f seconds\n",num,((float)rtntime)*clkmul/1000000.);
- #endif
-+	}
+ 		printf(">> %u iterations gives %f seconds\n",num,((float)rtntime)*clkmul/1000000.);
+@@ -271,6 +271,11 @@ gen_iterations(workfn, clkmul)
+ 			exit(1);
+ 		}
+ 	}
 +	while (time < 1000000.) {
 +		/* while less than one second */
 +		num <<= 1;
 +		time *= 2;
- 	}
++	}
  #ifdef DEBUG
- 	printf(">> Choosing %d iterations\n",num);
+ 	printf(">> Choosing %u iterations\n", num);
+ #endif
