@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2011/07/31 17:37:00 gls Exp $
+# $NetBSD: Makefile,v 1.22 2011/09/12 18:15:03 drochner Exp $
 #
 
-DISTNAME=		shotwell-0.10.1
-PKGREVISION=	1
+DISTNAME=		shotwell-0.11.1
 CATEGORIES=		graphics
-MASTER_SITES=		http://yorba.org/download/shotwell/0.10/
+MASTER_SITES=		http://yorba.org/download/shotwell/0.11/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
@@ -22,17 +21,10 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--assume-pkgs
 CONFIGURE_ENV+=		--define=NO_CAMERA
 
-REPLACE_SH+=		minver configure libraw-config
-
-GCONF_SCHEMAS=		shotwell.schemas
-INSTALLATION_DIRS+=	share/gconf/schemas
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/misc/shotwell.schemas \
-		${DESTDIR}${PREFIX}/share/gconf/schemas
+REPLACE_SH+=		configure
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
