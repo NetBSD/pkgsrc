@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/08/12 17:07:49 taca Exp $
+$NetBSD: distinfo,v 1.5 2011/09/12 13:29:22 taca Exp $
 
-SHA1 (amqp-0.7.4.gem) = 372c55b791aa059e09086aeddcd1506a266d8fce
-RMD160 (amqp-0.7.4.gem) = dc8b6dce9738e6fa1c30f3e9ed0d4a674e420a65
-Size (amqp-0.7.4.gem) = 93184 bytes
+SHA1 (amqp-0.8.0.gem) = f57e76710ef8d3623d966b3c653ea07a5647a22e
+RMD160 (amqp-0.8.0.gem) = ab83118337a95c58404f8eb7618354da8987cc69
+Size (amqp-0.8.0.gem) = 985600 bytes

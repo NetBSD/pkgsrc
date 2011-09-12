@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2011/08/12 17:07:49 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/12 13:29:22 taca Exp $
 
-DISTNAME=	amqp-0.7.4
+DISTNAME=	amqp-0.8.0
 CATEGORIES=	net
 
 MAINTAINER=	filip@joyent.com
