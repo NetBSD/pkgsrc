@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/08/12 17:20:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/09/12 13:42:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
@@ -78,9 +78,9 @@ ${GEM_LIBDIR}/java/src/json/ext/RuntimeInfo.java
 ${GEM_LIBDIR}/java/src/json/ext/StringDecoder.java
 ${GEM_LIBDIR}/java/src/json/ext/StringEncoder.java
 ${GEM_LIBDIR}/java/src/json/ext/Utils.java
+${GEM_LIBDIR}/json-java.gemspec
 ${GEM_LIBDIR}/json.gemspec
 ${GEM_LIBDIR}/json_pure.gemspec
-${GEM_LIBDIR}/json-java.gemspec
 ${GEM_LIBDIR}/lib/json.rb
 ${GEM_LIBDIR}/lib/json/Array.xpm
 ${GEM_LIBDIR}/lib/json/FalseClass.xpm
@@ -90,8 +90,9 @@ ${GEM_LIBDIR}/lib/json/NilClass.xpm
 ${GEM_LIBDIR}/lib/json/Numeric.xpm
 ${GEM_LIBDIR}/lib/json/String.xpm
 ${GEM_LIBDIR}/lib/json/TrueClass.xpm
+${GEM_LIBDIR}/lib/json/add/complex.rb
 ${GEM_LIBDIR}/lib/json/add/core.rb
-${GEM_LIBDIR}/lib/json/add/rails.rb
+${GEM_LIBDIR}/lib/json/add/rational.rb
 ${GEM_LIBDIR}/lib/json/common.rb
 ${GEM_LIBDIR}/lib/json/editor.rb
 ${GEM_LIBDIR}/lib/json/ext.rb

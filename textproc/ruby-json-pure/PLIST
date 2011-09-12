@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/08/12 17:20:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/09/12 13:42:30 taca Exp $
 bin/edit_json.rb
 bin/prettify_json.rb
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -89,8 +89,9 @@ ${GEM_LIBDIR}/lib/json/NilClass.xpm
 ${GEM_LIBDIR}/lib/json/Numeric.xpm
 ${GEM_LIBDIR}/lib/json/String.xpm
 ${GEM_LIBDIR}/lib/json/TrueClass.xpm
+${GEM_LIBDIR}/lib/json/add/complex.rb
 ${GEM_LIBDIR}/lib/json/add/core.rb
-${GEM_LIBDIR}/lib/json/add/rails.rb
+${GEM_LIBDIR}/lib/json/add/rational.rb
 ${GEM_LIBDIR}/lib/json/common.rb
 ${GEM_LIBDIR}/lib/json/editor.rb
 ${GEM_LIBDIR}/lib/json/ext.rb
