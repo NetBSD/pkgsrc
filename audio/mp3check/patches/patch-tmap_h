@@ -1,0 +1,15 @@
+$NetBSD: patch-tmap_h,v 1.1 2011/09/12 06:33:11 dholland Exp $
+
+- C++ tweaks to appease clang
+
+--- tmap.h~	2006-09-21 21:17:07.000000000 +0000
++++ tmap.h
+@@ -54,7 +54,7 @@ class tmap: public tmap_base<K,T> {
+    // new functionality
+ 
+    /// return whether an element with key is contained or not
+-    bool contains(const K& key) const { return find(key) != tmap_base<K,T>::end(); }
++    bool contains(const K& key) const { return tmap_base<K,T>::find(key) != tmap_base<K,T>::end(); }
+    /// access element read only (const)
+ // g++ 2.95.2 does not allow this:
+ // const T& operator[](const K& key) const { const_iterator i = find(key); if(i != end()) return i->second; else throw TNotFoundException(); } // throw(TNotFoundException)
