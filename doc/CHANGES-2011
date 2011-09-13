@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2270 2011/09/13 17:59:53 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.2271 2011/09/13 22:39:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3522,3 +3522,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-base to 1.7.6.3 [gdt 2011-09-13]
 	Updated devel/scmgit-docs to 1.7.6.3 [gdt 2011-09-13]
 	Updated devel/scmgit to 1.7.6.3 [gdt 2011-09-13]
+	Removed inputmethod/ja-freewnn-dict successor inputmethod/ja-freewnn-server [mef 2011-09-13]
+	Removed inputmethod/ja-freewnn-server-bin successor inputmethod/ja-freewnn-server [mef 2011-09-13]
+	Updated inputmethod/ja-freewnn-server to 1.11alpha22 [mef 2011-09-13]
+	Updated inputmethod/ja-freewnn-lib to 1.11alpha22 [mef 2011-09-13]
+	Updated inputmethod/kinput2 to 3.1nb2 [mef 2011-09-13]
