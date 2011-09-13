@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/13 15:21:01 taca Exp $
+
+SHA1 (json-utils-1.6.0.gem) = f7c9a39508c1fd9808e3752ca28ade2f196604c2
+RMD160 (json-utils-1.6.0.gem) = cf5c5a55a579927b92a4d9296cabe226090d859d
+Size (json-utils-1.6.0.gem) = 36864 bytes
