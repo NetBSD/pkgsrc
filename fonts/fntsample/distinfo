@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/13 10:29:19 wiz Exp $
+
+SHA1 (Blocks.txt) = e1861d11aca3b2b56552e191ae02d914fd9c123a
+RMD160 (Blocks.txt) = 84ba62e0efa9089cee60a4f84e9946e392288bf3
+Size (Blocks.txt) = 7119 bytes
+SHA1 (fntsample-3.2.tar.gz) = 46e3e48ab930ad6a1296ceafd759b3175e28e5cf
+RMD160 (fntsample-3.2.tar.gz) = 921668eace359a21881d7df7ec4a1dd8d11a97d9
+Size (fntsample-3.2.tar.gz) = 174945 bytes

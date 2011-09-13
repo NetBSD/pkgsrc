@@ -1,0 +1,8 @@
+FntSample is a tool that can be used to make font samples that show coverage
+of the font and are similar in appearance to Unicode Charts.
+# Support for various font formats using FreeType library, including
+  TrueType, OpenType, and Type1.
+# Creating samples in PDF, PostScript, and SVG formats.
+# Adding outlines with Unicode block names for PDF samples.
+# Selection of code ranges to show in charts.
+# Comparing of two font files with highlighting of added glyphs.
