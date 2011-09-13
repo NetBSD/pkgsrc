@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2259 2011/09/13 03:16:52 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2260 2011/09/13 05:24:48 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-gobject to 2.28.6 [wiz 2011-09-12]
 	Updated editors/emacs to 23.3a [wiz 2011-09-12]
 	Updated www/ruby-mechanize to 2.0.1nb1 [taca 2011-09-13]
+	Updated devel/p5-Coro to 6.06 [hiramatsu 2011-09-13]
