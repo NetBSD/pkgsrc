@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:01:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/09/13 07:23:16 mef Exp $
 include/wnn/commonhd.h
 include/wnn/config.h
 include/wnn/cplib.h
@@ -7,9 +7,10 @@ include/wnn/jllib.h
 include/wnn/jslib.h
 include/wnn/msg.h
 include/wnn/rk_spclval.h
+include/wnn/wnn_config.h
 include/wnn/wnnerror.h
-lib/libjd.a
-lib/libwnn.a
+lib/libjd.la
+lib/libwnn.la
 man/ja_JP.EUC/man3/jl_bun_suu.3
 man/ja_JP.EUC/man3/jl_c_zenkouho.3
 man/ja_JP.EUC/man3/jl_close.3
@@ -176,6 +177,7 @@ share/wnn/cvt_key_tbl.kt
 share/wnn/cvt_key_tbl.mv
 share/wnn/cvt_key_tbl.vt
 share/wnn/ja_JP/hinsi.data
+share/wnn/ja_JP/jserverrc
 share/wnn/ja_JP/libwnn.msg
 share/wnn/ja_JP/rk.vi/1B_newTOUPPER
 share/wnn/ja_JP/rk.vi/2A_CTRL
