@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2267 2011/09/13 15:08:55 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2268 2011/09/13 15:16:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3516,3 +3516,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/isc-dhcpd4 to 4.2.2 [taca 2011-09-13]
 	Updated net/isc-dhclient4 to 4.2.2 [taca 2011-09-13]
 	Updated net/isc-dhcrelay4 to 4.2.2 [taca 2011-09-13]
+	Updated textproc/ruby-json-pure to 1.6.0 [taca 2011-09-13]
+	Updated textproc/ruby-json to 1.6.0 [taca 2011-09-13]
