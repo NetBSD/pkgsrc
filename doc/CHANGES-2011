@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2266 2011/09/13 14:50:43 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2267 2011/09/13 15:08:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3512,3 +3512,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/pgbuildfarm version 4_5 [wiz 2011-09-13]
 	Updated security/ruby-bcrypt to 3.0.1 [taca 2011-09-13]
 	Updated mail/sylpheed to 3.1.2 [taca 2011-09-13]
+	Updated net/isc-dhcp4 to 4.2.2 [taca 2011-09-13]
+	Updated net/isc-dhcpd4 to 4.2.2 [taca 2011-09-13]
+	Updated net/isc-dhclient4 to 4.2.2 [taca 2011-09-13]
+	Updated net/isc-dhcrelay4 to 4.2.2 [taca 2011-09-13]
