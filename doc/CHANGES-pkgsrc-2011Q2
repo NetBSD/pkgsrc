@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.33 2011/09/10 23:32:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.34 2011/09/13 20:01:58 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -104,3 +104,5 @@ devel/roundup: security update
 Pullup ticket #3520 - requested by bouyer
 sysutils/xenkernel3: security patch
 sysutils/xenkernel33: security patch
+Pullup ticket #3522 - requested by tron
+net/wireshark: security update
