@@ -1,0 +1,15 @@
+# $NetBSD: INSTALL,v 1.1 2011/09/13 07:55:31 obache Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	for f in `cd ${PREFIX}/share/wnn/ja_JP/dic && find . -type f`; do
+	   d=@WNNDICTDIR@/ja_JP/`${DIRNAME} ${f}`;
+	   ${MKDIR} ${d};
+	   ${CP} ${PREFIX}/share/wnn/ja_JP/dic/${f} ${d};
+	done
+	for i in `${FIND} @WNNDICTDIR@/ja_JP -type f \( -name \*dic -o -name  \*fzk \)`; do
+	   ${CHMOD} +w ${i};
+	   ${PREFIX}/bin/wnntouch ${i};
+	done;
+	;;
+esac
