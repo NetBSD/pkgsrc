@@ -1,15 +1,40 @@
-# $NetBSD: Makefile,v 1.8 2009/04/08 23:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/09/13 07:23:21 mef Exp $
 
-DISTNAME=	ja-FreeWnn-server-1.10
-PKGREVISION=	2
-CATEGORIES=	japanese inputmethod
+.include "../../inputmethod/ja-freewnn-lib/Makefile.common"
 
-MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-COMMENT=	Japanese/Chinese/Korean input method (Japanese server)
+PKGNAME=	ja-FreeWnn-server-1.11alpha22
 
-META_PACKAGE=	# empty
+COMMENT+=	(Japanese server)
 
-DEPENDS+=	ja-FreeWnn-server-bin>=1.10nb4:../../inputmethod/ja-freewnn-server-bin
-DEPENDS+=	ja-FreeWnn-dict>=1.10nb1:../../inputmethod/ja-freewnn-dict
+CONFIGURE_ARGS+=	--disable-libraries
+# Following two lines give equivalent to previous 1.10 version
+CONFIGURE_ARGS+=	--disable-cWnn
+CONFIGURE_ARGS+=	--disable-kWnn
 
+CONFIGURE_ARGS+=	--with-wnn-libraries=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/lib
+CONFIGURE_ARGS+=	--with-libwnn=yes
+CONFIGURE_ARGS+=	--disable-sub-bindir
+# use sbin/ instead of bin/
+CONFIGURE_ARGS+=	--disable-traditional-layout
+
+INSTALL_TARGET=	install install.man
+
+RCD_SCRIPTS=    ja_freewnn
+
+BUILD_DEFS=	FREEWNN_USER FREEWNN_GROUP IMDICTDIR
+
+FREEWNN_USER=	wnn
+FREEWNN_GROUP=	jserver
+PKG_GROUPS=	${FREEWNN_GROUP}
+PKG_USERS=	${FREEWNN_USER}:${FREEWNN_GROUP}
+
+SPECIAL_PERMS+=	bin/Wnn4/jserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
+SPECIAL_PERMS+=	bin/Wnn4/cserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
+SPECIAL_PERMS+=	bin/Wnn4/tserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
+SPECIAL_PERMS+=	bin/Wnn4/kserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4511
+
+OWN_DIRS+=		${IMDICTDIR}/wnn/ja_JP
+OWN_DIRS_PERMS+=	${IMDICTDIR}/wnn/ja_JP/usr ${FREEWNN_USER} ${FREEWNN_GROUP} ${PKGDIRMODE}
+
+.include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
