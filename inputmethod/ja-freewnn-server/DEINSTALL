@@ -1,0 +1,16 @@
+# $NetBSD: DEINSTALL,v 1.1 2011/09/13 07:55:31 obache Exp $
+
+case ${STAGE} in
+DEINSTALL)
+	for f in `cd @WNNDICTDIR@/ja_JP && find . -type f`; do
+	  if ${TEST} -f ${PREFIX}/share/wnn/ja_JP/dic/${f}; then
+	    ${RM} -f @WNNDICTDIR@/ja_JP/${f} || ${TRUE};
+	  fi
+	done
+	for d in `cd @WNNDICTDIR@/ja_JP && find -d . -type d`; do
+	  if ${TEST} ${d} != "." -a -d ${PREFIX}/share/wnn/ja_JP/dic/${d}; then
+	    ${RMDIR} @WNNDICTDIR@/ja_JP/${d} || ${TRUE};
+	  fi
+	done
+	;;
+esac
