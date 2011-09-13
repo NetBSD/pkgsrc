@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.7 2011/08/12 14:35:34 taca Exp $
+# $NetBSD: gem.mk,v 1.8 2011/09/13 03:23:04 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -17,16 +17,20 @@
 #	pattern as usual pkgsrc's one.
 #
 #	Example:
-#	    When gemspec contains "json~>1.4.6" as runtime dependency and
-#	    if you want to relax dependency to "json>=1.4.6" then use:
+#	    When gemspec contains "json~>1.4.7" as runtime dependency
+#	    (i.e. json>=1.4.7<1.5) and if you want to relax it to
+#	    "json>=1.4.6" then use:
 #
-#		OVERRIDE_GEMSPEC+= json>=1.4.7
+#		OVERRIDE_GEMSPEC+= json>=1.4.6
 #
-#		or
+#	    If you want to change depending gem to "json_pure>=1.4.6"
+#	    then use:
 #
-#		OVERRIDE_GEMSPEC+= json:json_pure>=1.4.7
+#		OVERRIDE_GEMSPEC+= json:json_pure>=1.4.6
 #
-#	    With latter case, depending gem's name will be renamed, too.
+#	    You can also remove dependency:
+#
+#		OVERRIDE_GEMSPEC+= json:
 #
 #	Default: (empty)
 #
