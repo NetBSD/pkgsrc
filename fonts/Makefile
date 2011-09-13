@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2011/08/22 16:29:46 minskim Exp $
+# $NetBSD: Makefile,v 1.204 2011/09/13 10:29:41 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -58,6 +58,7 @@ SUBDIR+=	droid-ttf
 SUBDIR+=	ec-fonts-mftraced
 SUBDIR+=	efont-unicode
 SUBDIR+=	encodings
+SUBDIR+=	fntsample
 SUBDIR+=	font-adobe-100dpi
 SUBDIR+=	font-adobe-75dpi
 SUBDIR+=	font-adobe-utopia-100dpi
