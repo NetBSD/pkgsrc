@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2261 2011/09/13 06:22:59 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2262 2011/09/13 09:17:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3507,3 +3507,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-mechanize to 2.0.1nb1 [taca 2011-09-13]
 	Updated devel/p5-Coro to 6.06 [hiramatsu 2011-09-13]
 	Updated www/firefox-l10n to 6.0.2 [obache 2011-09-13]
+	Updated x11/x11vnc to 0.9.13 [obache 2011-09-13]
