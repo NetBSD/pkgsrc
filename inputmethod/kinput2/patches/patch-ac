@@ -1,10 +1,18 @@
-$NetBSD: patch-ac,v 1.2 2010/02/15 13:41:18 obache Exp $
+$NetBSD: patch-ac,v 1.3 2011/09/13 07:28:48 mef Exp $
 
 Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
 
 --- lib/cconv.c.orig	2002-10-03 09:35:28.000000000 +0000
 +++ lib/cconv.c
-@@ -790,7 +790,7 @@ static wchar *promptsave(wchar *);
+@@ -604,6 +604,7 @@ static char	*rcsid = "$Id: cconv.c,v 10.
+ #endif
+ 
+ #include	<stdio.h>
++#include	<stdlib.h>
+ #include	<X11/Xlib.h>
+ #include	<X11/keysym.h>
+ #include	<X11/Xutil.h>
+@@ -790,7 +791,7 @@ static wchar *promptsave(wchar *);
  static int parseLine(uchar *, uchar **, int);
  static FILE *openfile(char *);
  static int doinclude(uchar *, Files *, void (*)());
@@ -13,7 +21,7 @@ Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
  static int readRuleFile(ccRule, char *);
  static int registMode(ccRule, int, uchar **);
  static int newMode(ccRule, Files *, _strbufRec *, _funcbufRec *,
-@@ -1035,8 +1035,8 @@ void (*efunc)();
+@@ -1035,8 +1036,8 @@ void (*efunc)();
  	return 0;
  }
  
@@ -24,7 +32,7 @@ Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
  uchar *line;
  int linesize;
  Files *files;
-@@ -1100,7 +1100,7 @@ char *file;
+@@ -1100,7 +1101,7 @@ char *file;
  	rule->nmode = 0;
  	rule->initialmode = -1;
  
@@ -33,7 +41,7 @@ Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
  		(void)Strcpy(tmp, line);
  		if ((argc = parseLine(tmp, argv, 20)) == 0)
  			continue;
-@@ -1269,7 +1269,7 @@ uchar **av;
+@@ -1269,7 +1270,7 @@ uchar **av;
  	cdbuf.cdbuf = NULL;
  
  	/* ルールを読んでストアする */
@@ -42,3 +50,12 @@ Avoid to conflict with getline(3) in IEEE Std 1003.1-2008.
  		/* '#' で始まる行はコメント */
  		if (*line == '\0' || *line == '\n' || *line == '#')
  			continue;
+@@ -1282,7 +1283,7 @@ uchar **av;
+ 			}
+ 
+ 			/* ルールのストア */
+-			cdp->key = inkey;
++			cdp->key = (ulong *) inkey;
+ 			cdp->mask = modmask;
+ 			cdp->context = *context ? wstrsave(srec, wrev(context)) : 0;
+ 			cdp->result = *result ? wstrsave(srec, result) : 0;

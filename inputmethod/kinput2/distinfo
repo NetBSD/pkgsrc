@@ -1,8 +1,16 @@
-$NetBSD: distinfo,v 1.5 2010/02/15 13:41:17 obache Exp $
+$NetBSD: distinfo,v 1.6 2011/09/13 07:28:48 mef Exp $
 
 SHA1 (kinput2-v3.1.tar.gz) = 48050f70e7c0cc67193ea260f8d7f6e822a02ca3
 RMD160 (kinput2-v3.1.tar.gz) = c56684769859bbee5f8238cd1af061796ff931e8
 Size (kinput2-v3.1.tar.gz) = 512177 bytes
-SHA1 (patch-aa) = debe271517550c47610a7ac128432e6e567fb6d7
+SHA1 (patch-Imakefile) = 2ec731b5ff7ef4cac3497c60b179e0f1ce0a4a05
+SHA1 (patch-aa) = 3eaca25000c756d71fcafbb09a8ad8fd15142437
 SHA1 (patch-ab) = a084421f399e753f25040fd0cba6d43a391fc15b
-SHA1 (patch-ac) = cd71af4a86102c1aedb84f64cda29ad5df2b7789
+SHA1 (patch-ac) = 83d74ddffa6ddb870b3de1755a94e1258e06f793
+SHA1 (patch-cmd_kinput2.c) = 5f8bcada8ee247d536d6cbb1ac0404de4e55b90d
+SHA1 (patch-lib_Canna.c) = 75af9e02e84281c02c7d36bc237e6c05afbb8c80
+SHA1 (patch-lib_ConvCtrl.c) = bd5dcd286bf1f1ac8153a2f51c54930d4173de56
+SHA1 (patch-lib_KIProto.c) = 8545746a50b85986cd2a727667d30ca054860962
+SHA1 (patch-lib_XimpProto.c) = 9931af45d19aea41916b1cdec933d0fea34769a6
+SHA1 (patch-lib_ctext.c) = 97093817ebf73ddc1d9ddcfb068b0c96c93e1f8e
+SHA1 (patch-lib_wnnlib.c) = 0b5e66372294f27dcbaf0b4a53da50a739b362f3
