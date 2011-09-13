@@ -1,0 +1,4 @@
+The PostgreSQL BuildFarm is a distributed build system designed to
+detect build failures of the source code of PostgreSQL on a large
+collection of platforms and configurations. This is the client
+software that enables to perform automated test builds and checks.
