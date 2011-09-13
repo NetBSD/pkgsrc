@@ -1,12 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2010/02/15 13:41:18 obache Exp $
+$NetBSD: patch-aa,v 1.3 2011/09/13 07:28:48 mef Exp $
 
 --- include/wnnlib.h.orig	2002-10-03 09:35:27.000000000 +0000
 +++ include/wnnlib.h
-@@ -28,6 +28,7 @@
- #ifndef _wnnlib_h
- #define _wnnlib_h
- 
-+#include	<config.h>
- #include	<commonhd.h>
- #include	<jllib.h>
- #include	<wnnerror.h>
+@@ -107,11 +107,11 @@ typedef struct {
+ #ifdef __STDC__
+ extern struct wnn_buf *jcOpen(char *server, char *envname,
+ 				int override, char *rcfile,
+-				void (*error)(), int (*confirm)(),
++				int (*error)(const char *), int (*confirm)(const char *),
+ 				int timeout);
+ extern struct wnn_buf *jcOpen2(char *server, char *envname,
+ 				int override, char *rcfile4, char *rcfile6,
+-				void (*error)(), int (*confirm)(),
++				int (*error)(const char *), int (*confirm)(const char *),
+ 				int timeout);
+ extern int jcClose(struct wnn_buf *wnn);
+ extern int jcIsConnect(struct wnn_buf *wnn);
