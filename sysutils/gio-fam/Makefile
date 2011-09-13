@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/30 14:36:10 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/13 08:16:12 apb Exp $
 #
 
 .include "../../devel/glib2/Makefile.common"
@@ -14,6 +14,7 @@ FAM_ACCEPTED=		fam gamin
 FAM_SERVER=		no
 
 USE_TOOLS+=		msgfmt
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--enable-fam
 
