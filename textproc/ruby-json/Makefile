@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2011/09/12 13:42:29 taca Exp $
+# $NetBSD: Makefile,v 1.14 2011/09/13 15:15:18 taca Exp $
 
-DISTNAME=	json-1.5.4
+DISTNAME=	json-1.6.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,12 +9,9 @@ COMMENT=	Native extension implementation of JSON for Ruby
 LICENSE=	ruby-license
 
 GEM_CLEANBUILD=	ext/json/ext/generator/* ext/json/ext/parser/*
-REPLACE_RUBY=	tools/fuzz.rb tools/server.rb
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -xdev -type f -print | ${XARGS} ${CHMOD} g-w
-
-REPLACE_RUBY_DIRS=	tools
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
