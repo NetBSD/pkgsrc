@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/13 10:29:19 wiz Exp $
+bin/fntsample
+bin/pdfoutline
+man/man1/fntsample.1
+man/man1/pdfoutline.1
+share/locale/uk/LC_MESSAGES/fntsample.mo
