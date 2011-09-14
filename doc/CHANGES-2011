@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2272 2011/09/14 07:11:04 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2273 2011/09/14 11:36:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3528,3 +3528,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/ja-freewnn-lib to 1.11alpha22 [mef 2011-09-13]
 	Updated inputmethod/kinput2 to 3.1nb2 [mef 2011-09-13]
 	Updated www/apache22 to 2.2.21 [taca 2011-09-14]
+	Updated filesystems/tahoe-lafs to 1.8.3nb1 [gdt 2011-09-14]
