@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/09/14 17:56:08 hans Exp $
+
+--- unique/bacon/uniquebackend-bacon.c.orig	2009-09-21 14:31:14.000000000 +0200
++++ unique/bacon/uniquebackend-bacon.c	2011-08-05 17:34:20.504049255 +0200
+@@ -186,7 +186,7 @@ find_socket_file (const gchar *name)
+ 
+   g_free (basename);
+ 
+-  basename = g_strdup_printf ("%s.%s.%d", name, token, getpid ());
++  basename = g_strdup_printf ("%s.%s.%ld", name, token, (long)getpid ());
+   
+   path = g_build_filename (tmpdir, basename, NULL);
+ 
