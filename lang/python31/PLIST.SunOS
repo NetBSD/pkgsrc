@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.3 2011/09/06 09:51:27 cheusov Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/sunaudiodev.so
+@comment $NetBSD: PLIST.SunOS,v 1.4 2011/09/14 17:09:07 hans Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.pyc
@@ -10,9 +9,6 @@ lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyo
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.pyo
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.py
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.pyc
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.pyo
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyo
