@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/07/19 18:56:46 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2011/09/14 17:26:48 hans Exp $
 
 DISTNAME=	xvidcore-1.3.2
 CATEGORIES=	multimedia
@@ -28,12 +28,12 @@ BUILD_DEPENDS+=		nasm>=0.98.39nb3:../../devel/nasm
 #BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
 .endif
 
-.if !empty(PKGSRC_COMPILER:Msunpro)
+.if !empty(PKGSRC_COMPILER:Msunpro) || ${OPSYS} == "SunOS"
 CFLAGS+=		-D__inline=inline
 SUBST_CLASSES+=		ld
 SUBST_MESSAGE.ld=	Fixing linker arguments for Solaris
 SUBST_STAGE.ld=		pre-configure
-SUBST_FILES.ld=		configure
+SUBST_FILES.ld=		build/generic/configure
 SUBST_SED.ld=		-e "s|-Wl,-soname,libxvidcore...(SHARED_EXTENSION)...(API_MAJOR)||"
 SUBST_SED.ld+=		-e "s|-Wl,--version-script=libxvidcore.ld||"
 .endif
