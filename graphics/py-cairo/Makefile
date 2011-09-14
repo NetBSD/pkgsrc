@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/02/25 09:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2011/09/14 16:55:10 hans Exp $
 #
 
 DISTNAME=		py2cairo-1.8.10
@@ -28,7 +28,8 @@ PY_PATCHPLIST=		yes
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc-2*)
+.if !empty(CC_VERSION:Mgcc-2*) || \
+    ${OPSYS} == "SunOS"
 BUILDLINK_TRANSFORM+=	rm:-std=c99
 .endif
 
