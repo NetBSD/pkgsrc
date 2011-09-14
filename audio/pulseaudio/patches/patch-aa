@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.7 2011/05/21 15:32:59 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2011/09/14 15:53:35 hans Exp $
 
 SNDDSP_GETODELAY isn't defined on NetBSD-4.x.
 ioctl() takes u_long argument on NetBSD.
 On NetBSD, use third parameter in ioctl instead of varargs.
 stat() system call has been versioned, use latest version when dlopen()ing.
 Try more typical device names.
+SOUND_PCM_* is not available on SunOS.
 
 --- src/utils/padsp.c.orig	2009-09-18 20:21:44.000000000 +0000
 +++ src/utils/padsp.c
@@ -83,9 +84,29 @@ Try more typical device names.
          r = dsp_open(flags, &_errno);
      else if (filename && mixer_cloak_enable() && strcmp(filename, "/dev/mixer") == 0)
          r = mixer_open(flags, &_errno);
-@@ -2319,19 +2343,27 @@ fail:
+@@ -2224,6 +2248,7 @@ static int dsp_ioctl(fd_info *i, unsigne
+             break;
+         }
  
- #ifdef sun
++#ifndef __sun
+         case SOUND_PCM_READ_RATE:
+             debug(DEBUG_LEVEL_NORMAL, __FILE__": SOUND_PCM_READ_RATE\n");
+ 
+@@ -2247,7 +2272,7 @@ static int dsp_ioctl(fd_info *i, unsigne
+             *(int*) argp = pa_sample_size(&i->sample_spec)*8;
+             pa_threaded_mainloop_unlock(i->mainloop);
+             break;
+-
++#endif
+         case SNDCTL_DSP_GETOPTR: {
+             count_info *info;
+ 
+@@ -2317,21 +2342,29 @@ fail:
+     return ret;
+ }
+ 
+-#ifdef sun
++#ifdef __sun
  int ioctl(int fd, int request, ...) {
 +#elif defined(__NetBSD__)
 +int ioctl(int fd, u_long request, void *_argp) {

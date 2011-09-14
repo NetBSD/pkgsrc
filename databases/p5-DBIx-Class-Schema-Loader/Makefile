@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/08/14 08:18:07 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/09/14 15:54:39 hans Exp $
 
 DISTNAME=	DBIx-Class-Schema-Loader-0.07002
 PKGNAME=	p5-${DISTNAME}
@@ -56,7 +56,7 @@ PERL5_PACKLIST=	auto/DBIx/Class/Schema/Loader/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.560
 BUILDLINK_DEPMETHOD.p5-DBI?=	build
