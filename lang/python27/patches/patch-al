@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.2 2011/06/13 11:31:13 obache Exp $
+$NetBSD: patch-al,v 1.3 2011/09/14 06:59:54 adam Exp $
 
 --- configure.orig	2011-06-11 15:46:28.000000000 +0000
 +++ configure
@@ -19,7 +19,18 @@ $NetBSD: patch-al,v 1.2 2011/06/13 11:31:13 obache Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -7648,9 +7643,9 @@ then
+@@ -5418,6 +5413,10 @@ then
+         if "$CC" -v --help 2>/dev/null |grep -- -fwrapv > /dev/null; then
+            WRAP="-fwrapv"
+         fi
++        # Clang also needs -fwrapv
++        if test "$CC" = "clang" ; then
++           WRAP="-fwrapv"
++        fi
+ 	case $ac_cv_prog_cc_g in
+ 	yes)
+ 	    if test "$Py_DEBUG" = 'true' ; then
+@@ -7648,9 +7647,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -32,7 +43,7 @@ $NetBSD: patch-al,v 1.2 2011/06/13 11:31:13 obache Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -7674,15 +7669,15 @@ then
+@@ -7674,15 +7673,15 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -52,7 +63,7 @@ $NetBSD: patch-al,v 1.2 2011/06/13 11:31:13 obache Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -7713,6 +7708,9 @@ then
+@@ -7713,6 +7712,9 @@ then
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
@@ -62,7 +73,7 @@ $NetBSD: patch-al,v 1.2 2011/06/13 11:31:13 obache Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes" ; then
  			LDSHARED='$(CC) -shared'
-@@ -7757,6 +7755,7 @@ then
+@@ -7757,6 +7759,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
  	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
@@ -70,7 +81,7 @@ $NetBSD: patch-al,v 1.2 2011/06/13 11:31:13 obache Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -7813,6 +7812,7 @@ then
+@@ -7813,6 +7816,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
