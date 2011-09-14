@@ -1,0 +1,13 @@
+$NetBSD: patch-gf,v 1.1 2011/09/14 17:53:17 hans Exp $
+
+--- kcontrol/nics/nic.cpp.orig	2007-01-15 12:31:40.000000000 +0100
++++ kcontrol/nics/nic.cpp	2011-09-08 17:03:25.739009295 +0200
+@@ -218,7 +218,7 @@ NICList* findNICs()
+ 
+          ifcopy=*ifr;
+          result=-1;  // if none of the two #ifs below matches, ensure that result!=0 so that "Unknown" is returned as result
+-#ifdef SIOCGIFHWADDR
++#if defined(SIOCGIFHWADDR) && !defined(__sun)
+          result=ioctl(sockfd,SIOCGIFHWADDR,&ifcopy);
+          if (result==0)
+          {
