@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/09/04 15:42:52 adam Exp $
+# $NetBSD: Makefile,v 1.47 2011/09/14 18:12:57 hans Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,6 +28,13 @@ INSTALLATION_DIRS+=	${QTPREFIX}/plugins/designer
 INSTALLATION_DIRS+=	${QTPREFIX}/mkspecs
 INSTALLATION_DIRS+=	${QTPREFIX}/tools/qdoc3
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
+
+PLIST_VARS+=	notSunOS SunOS
+.if ${OPSYS} == "SunOS"
+PLIST.SunOS=	yes
+.else
+PLIST.notSunOS=	yes
+.endif
 
 post-configure:
 	ln -sf ${QTPREFIX}/bin/moc ${WRKSRC}/bin/moc
