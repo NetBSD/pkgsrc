@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2011/08/23 13:06:47 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2011/09/14 15:52:57 hans Exp $
 
 BUILDLINK_TREE+=	pulseaudio
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.pulseaudio?=	../../audio/pulseaudio
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && !exists(/usr/include/sys/atomic.h)
+.if ${OPSYS} != "NetBSD" || !exists(/usr/include/sys/atomic.h)
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
