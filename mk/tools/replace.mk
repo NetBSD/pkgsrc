@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.232 2011/07/15 15:35:02 hans Exp $
+# $NetBSD: replace.mk,v 1.233 2011/09/14 15:31:23 hans Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -688,6 +688,8 @@ TOOLS_DEPENDS.pkg-config?=	pkg-config>=0.19:../../devel/pkg-config
 TOOLS_CREATE+=			pkg-config
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pkg-config=pkg-config
 TOOLS_PATH.pkg-config=		${TOOLS_PREFIX.pkg-config}/bin/pkg-config
+.  else
+AUTORECONF_ARGS+=		-I ${TOOLS_PLATFORM.pkg-config:S/\/bin\/pkg-config//}/share/aclocal
 .  endif
 .endif
 
