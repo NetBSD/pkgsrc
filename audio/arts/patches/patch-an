@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1 2011/09/14 15:44:23 hans Exp $
+
+--- mcop/iomanager.cc.orig	2007-10-08 11:47:08.000000000 +0200
++++ mcop/iomanager.cc	2011-07-26 16:34:43.213902758 +0200
+@@ -32,6 +32,9 @@
+ 
+ #ifdef HAVE_SYS_SELECT_H
+ #include <sys/select.h>		// Needed on some systems.
++#ifdef __sun
++#include <string.h>		// for memset(), used by FD_ZERO
++#endif
+ #endif
+ // WABA: NOTE!
+ // sys/select.h is needed on e.g. AIX to define "fd_set".
