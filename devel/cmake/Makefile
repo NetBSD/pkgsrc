@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2011/07/31 22:04:03 adam Exp $
+# $NetBSD: Makefile,v 1.59 2011/09/14 17:54:48 brook Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
@@ -44,9 +45,10 @@ TEST_TARGET=		test
 
 SUBST_CLASSES+=		cmake
 SUBST_STAGE.cmake=	pre-configure
-SUBST_MESSAGE.cmake=	Fixing X11 prefix.
-SUBST_FILES.cmake=	Modules/Platform/UnixPaths.cmake
-SUBST_VARS.cmake=	X11BASE
+SUBST_MESSAGE.cmake=	Fixing LOCALBASE and X11 paths.
+SUBST_FILES.cmake+=	Modules/FindX11.cmake
+SUBST_FILES.cmake+=	Modules/Platform/UnixPaths.cmake
+SUBST_VARS.cmake=	LOCALBASE X11BASE
 
 SUBST_CLASSES+=		flags
 SUBST_STAGE.flags=	pre-configure
