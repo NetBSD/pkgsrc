@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2011/09/14 17:30:04 hans Exp $
+
+--- fad-getad.c.orig	2010-04-05 19:54:05.000000000 +0200
++++ fad-getad.c	2011-07-28 20:28:17.246289360 +0200
+@@ -60,7 +60,7 @@ static const char rcsid[] _U_ =
+ #include "os-proto.h"
+ #endif
+ 
+-#ifdef AF_PACKET
++#if defined(AF_PACKET) && !defined(__sun)
+ # ifdef __Lynx__
+ /* LynxOS */
+ #  include <netpacket/if_packet.h>
