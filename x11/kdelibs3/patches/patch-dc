@@ -1,0 +1,19 @@
+$NetBSD: patch-dc,v 1.4 2011/09/14 17:55:15 hans Exp $
+
+--- kjs/operations.cpp.orig	2005-10-10 17:06:14.000000000 +0200
++++ kjs/operations.cpp	2011-09-07 15:05:55.044046847 +0200
+@@ -51,6 +51,14 @@
+ #include "operations.h"
+ #include "object.h"
+ 
++#if defined(__sun)
++#define INFINITY	(__builtin_inff())
++#define isinf(x)	__extension__( \
++			{ __typeof(x) __x_i = (x); \
++			__x_i == (__typeof(__x_i)) INFINITY || \
++			__x_i == (__typeof(__x_i)) (-INFINITY); })
++#endif
++
+ using namespace KJS;
+ 
+ bool KJS::isNaN(double d)
