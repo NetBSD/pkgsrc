@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.70 2011/05/14 16:49:45 bsiegert Exp $
+$NetBSD: patch-ab,v 1.71 2011/09/14 16:35:51 hans Exp $
 
 The last two chunks work around bugs in ksh on NetBSD.
 The problem manifests with wl and no_builtin_flag containing newlines.
 
---- configure.orig	2011-04-14 15:39:05.000000000 +0000
-+++ configure
+--- configure.orig	2009-11-16 14:14:55.000000000 +0100
++++ configure	2011-09-08 17:53:38.830895810 +0200
 @@ -5293,13 +5293,20 @@ else
      lt_cv_sys_max_cmd_len=8192;
      ;;
@@ -183,6 +183,18 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
+@@ -9522,9 +9591,9 @@ rm -f core conftest.err conftest.$ac_obj
+       no_undefined_flag=' -z defs'
+       if test "$GCC" = yes; then
+ 	wlarc='${wl}'
+-	archive_cmds='$CC -shared ${wl}-z ${wl}text ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
++	archive_cmds='$CC -shared ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
+ 	archive_expsym_cmds='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-	  $CC -shared ${wl}-z ${wl}text ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
++	  $CC -shared ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
+       else
+ 	case `$CC -V 2>&1` in
+ 	*"Compilers 5.0"*)
 @@ -10064,6 +10133,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
@@ -756,6 +768,18 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
+@@ -17255,9 +17512,9 @@ rm -f core conftest.err conftest.$ac_obj
+       no_undefined_flag_F77=' -z defs'
+       if test "$GCC" = yes; then
+ 	wlarc='${wl}'
+-	archive_cmds_F77='$CC -shared ${wl}-z ${wl}text ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
++	archive_cmds_F77='$CC -shared ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
+ 	archive_expsym_cmds_F77='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-	  $CC -shared ${wl}-z ${wl}text ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
++	  $CC -shared ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
+       else
+ 	case `$CC -V 2>&1` in
+ 	*"Compilers 5.0"*)
 @@ -17644,6 +17901,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
@@ -1023,6 +1047,18 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
+@@ -20060,9 +20404,9 @@ rm -f core conftest.err conftest.$ac_obj
+       no_undefined_flag_FC=' -z defs'
+       if test "$GCC" = yes; then
+ 	wlarc='${wl}'
+-	archive_cmds_FC='$CC -shared ${wl}-z ${wl}text ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
++	archive_cmds_FC='$CC -shared ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
+ 	archive_expsym_cmds_FC='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-	  $CC -shared ${wl}-z ${wl}text ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
++	  $CC -shared ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
+       else
+ 	case `$CC -V 2>&1` in
+ 	*"Compilers 5.0"*)
 @@ -20449,6 +20793,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
@@ -1290,6 +1326,18 @@ The problem manifests with wl and no_builtin_flag containing newlines.
        ;;
  
      openbsd*)
+@@ -22617,9 +23048,9 @@ rm -f core conftest.err conftest.$ac_obj
+       no_undefined_flag_GCJ=' -z defs'
+       if test "$GCC" = yes; then
+ 	wlarc='${wl}'
+-	archive_cmds_GCJ='$CC -shared ${wl}-z ${wl}text ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
++	archive_cmds_GCJ='$CC -shared ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags'
+ 	archive_expsym_cmds_GCJ='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+-	  $CC -shared ${wl}-z ${wl}text ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
++	  $CC -shared ${wl}-M ${wl}$lib.exp ${wl}-h ${wl}$soname -o $lib $libobjs $deplibs $compiler_flags~$RM $lib.exp'
+       else
+ 	case `$CC -V 2>&1` in
+ 	*"Compilers 5.0"*)
 @@ -23115,7 +23546,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
