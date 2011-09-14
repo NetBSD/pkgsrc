@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:44:18 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/09/14 17:23:44 hans Exp $
 #
 
 DISTNAME=		gst-python-0.10.21
@@ -27,6 +27,11 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=		yes
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gst-python.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		ac_cv_prog_cc_c99=no
+.endif
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.26
