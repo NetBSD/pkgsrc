@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2011/08/23 13:06:47 obache Exp $
+# $NetBSD: Makefile,v 1.48 2011/09/14 15:49:47 hans Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -107,7 +107,7 @@ PLIST.evdev=           yes
 .include "options.mk"
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -f
+	cd ${WRKSRC} && autoreconf -f ${AUTORECONF_ARGS}
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsndfile+=	libsndfile>=1.0.20
