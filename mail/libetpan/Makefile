@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 13:42:10 obache Exp $
+# $NetBSD: Makefile,v 1.34 2011/09/14 17:10:47 hans Exp $
 
 DISTNAME=	libetpan-1.0
 PKGREVISION=	3
@@ -23,6 +23,8 @@ SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	libetpan-config.in
 SUBST_SED.conf=		-e "s|@COMPILERFLAGS@|${COMPILER_RPATH_FLAG}|g"
 SUBST_MESSAGE.conf=	Fixing libetpan-config.
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
