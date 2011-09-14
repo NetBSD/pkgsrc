@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/04/22 13:44:38 obache Exp $
+# $NetBSD: Makefile,v 1.29 2011/09/14 17:39:22 hans Exp $
 #
 
 DISTNAME=		pinentry-0.8.1
@@ -26,6 +26,11 @@ post-install:
 .endif
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+.include "../../devel/ncurses/buildlink3.mk"
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
