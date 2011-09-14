@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.10 2011/07/19 19:53:18 drochner Exp $
+$NetBSD: patch-ac,v 1.11 2011/09/14 17:21:08 hans Exp $
 
---- Makefile.orig	2011-06-21 19:29:25.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2011-06-21 21:29:25.000000000 +0200
++++ Makefile	2011-09-12 17:54:06.075569882 +0200
+@@ -112,7 +112,7 @@ version.h .version:
+ # force version.sh to run whenever version might have changed
+ -include .version
+ 
+-DOCS = $(addprefix doc/, developer.html faq.html general.html libavfilter.html) $(HTMLPAGES) $(MANPAGES) $(PODPAGES)
++DOCS = $(MANPAGES) $(PODPAGES)
+ 
+ documentation: $(DOCS)
+ 
 @@ -152,11 +152,11 @@ install-progs: install-progs-yes $(PROGS
  
  install-data: $(DATA_FILES)
