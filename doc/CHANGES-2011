@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2277 2011/09/14 12:23:04 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2278 2011/09/14 22:25:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3534,3 +3534,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-loquacious to 1.9.0 [taca 2011-09-14]
 	Updated www/contao210-translations to 20110914 [taca 2011-09-14]
 	Updated graphics/ruby-chunky_png to 1.2.3 [taca 2011-09-14]
+	Updated databases/phpmyadmin to 3.4.5 [tron 2011-09-14]
