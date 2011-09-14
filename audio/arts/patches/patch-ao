@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2011/09/14 15:44:23 hans Exp $
+
+--- soundserver/artsplay.cc.orig	2008-02-13 10:35:22.000000000 +0100
++++ soundserver/artsplay.cc	2011-07-26 16:43:03.112490880 +0200
+@@ -25,6 +25,10 @@
+ #include "soundserver.h"
+ #include "artsversion.h"
+ 
++#ifdef __sun
++#include <limits.h>
++#endif
++
+ #include <sys/param.h>
+ #include <stdio.h>
+ #include <stdlib.h>
