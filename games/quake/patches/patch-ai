@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.9 2009/08/30 05:17:44 hasso Exp $
+$NetBSD: patch-ai,v 1.10 2011/09/14 19:19:37 marino Exp $
 
---- WinQuake/Makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
+--- WinQuake/Makefile.linuxi386.orig	1999-04-27 15:51:18.000000000 +0000
 +++ WinQuake/Makefile.linuxi386
-@@ -25,29 +25,31 @@
+@@ -25,29 +25,31 @@ ARCH=i386
  endif
  NOARCH=noarch
  
@@ -25,8 +25,9 @@ $NetBSD: patch-ai,v 1.9 2009/08/30 05:17:44 hasso Exp $
 +#CC=$(EGCS)
  
 -BASE_CFLAGS=-Dstricmp=strcasecmp
+-RELEASE_CFLAGS=$(BASE_CFLAGS) -g -mpentiumpro -O6 -ffast-math -funroll-loops \
 +BASE_CFLAGS=-Dstricmp=strcasecmp -I${X11BASE}/include ${CFLAGS}
- RELEASE_CFLAGS=$(BASE_CFLAGS) -g -mpentiumpro -O6 -ffast-math -funroll-loops \
++RELEASE_CFLAGS=$(BASE_CFLAGS) -g -mtune=pentiumpro -O6 -ffast-math -funroll-loops \
  	-fomit-frame-pointer -fexpensive-optimizations
  DEBUG_CFLAGS=$(BASE_CFLAGS) -g
 -LDFLAGS=-lm
@@ -45,7 +46,7 @@ $NetBSD: patch-ai,v 1.9 2009/08/30 05:17:44 hasso Exp $
  GLCFLAGS=-DGLQUAKE -I$(MESA_DIR)/include -I/usr/include/glide
  
  DO_CC=$(CC) $(CFLAGS) -o $@ -c $<
-@@ -57,19 +59,28 @@
+@@ -57,19 +59,28 @@ DO_GL_DEBUG_CC=$(CC) $(DEBUG_CFLAGS) $(G
  DO_X11_CC=$(CC) $(CFLAGS) $(XCFLAGS) -o $@ -c $<
  DO_X11_DEBUG_CC=$(CC) $(DEBUG_CFLAGS) $(XCFLAGS) -o $@ -c $<
  DO_O_CC=$(CC) -O $(CFLAGS) -o $@ -c $<
