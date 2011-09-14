@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2011/07/21 13:05:57 obache Exp $
+# $NetBSD: Makefile,v 1.53 2011/09/14 16:57:41 hans Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
@@ -18,6 +18,12 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/uim.pc.in
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	SunOS_LDFLAGS="-shared -mimpure-text"
+CFLAGS.SunOS+=	-std=c99 -D__EXTENSIONS__
+.endif
 
 .include "options.mk"
 
