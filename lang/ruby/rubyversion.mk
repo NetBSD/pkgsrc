@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.61 2011/08/12 15:27:44 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.62 2011/09/14 16:50:18 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -21,7 +21,7 @@ RUBY19_API_VERSION=	1.9.1
 # RUBY_VERSION_DEFAULT defines default version for Ruby related
 #	packages and user can define in mk.conf.  (1.8 or 1.9)
 #
-RUBY_VERSION_DEFAULT?=	1.8
+RUBY_VERSION_DEFAULT?=	1.9
 _RUBY_VERSION_DEFAULT=	${RUBY_VERSION_DEFAULT:S/.//}
 
 # RUBY_VERSION defines the specific Ruby's version which is supported
