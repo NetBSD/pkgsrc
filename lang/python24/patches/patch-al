@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.12 2007/06/08 14:16:16 wiz Exp $
+$NetBSD: patch-al,v 1.13 2011/09/14 17:00:20 hans Exp $
 
---- configure.orig	2006-10-17 16:03:36.000000000 +0000
-+++ configure
+--- configure.orig	2006-10-17 18:03:36.000000000 +0200
++++ configure	2011-09-07 15:37:19.069940155 +0200
 @@ -312,7 +312,7 @@ ac_includes_default="\
  # include <unistd.h>
  #endif"
@@ -31,6 +31,32 @@ $NetBSD: patch-al,v 1.12 2007/06/08 14:16:16 wiz Exp $
    # On Solaris 2.6, sys/wait.h is inconsistent in the usage
    # of union __?sigval. Reported by Stuart Bishop.
    SunOS/5.6)
+@@ -1591,10 +1595,10 @@ if test $define_xopen_source = yes
+ then
+   # On Solaris w/ g++ it appears that _XOPEN_SOURCE has to be
+   # defined precisely as g++ defines it
+-  # Furthermore, on Solaris 10, XPG6 requires the use of a C99
++  # Furthermore, on Solaris >=10, XPG6 requires the use of a C99
+   # compiler
+   case $ac_sys_system/$ac_sys_release in
+-    SunOS/5.8|SunOS/5.9|SunOS/5.10)
++    SunOS/5.8|SunOS/5.9|SunOS/5.10|SunOS/5.11)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define _XOPEN_SOURCE 500
+@@ -1614,10 +1618,10 @@ _ACEOF
+   # definition of _XOPEN_SOURCE_EXTENDED and _POSIX_C_SOURCE, or else
+   # several APIs are not declared. Since this is also needed in some
+   # cases for HP-UX, we define it globally.
+-  # except for Solaris 10, where it must not be defined,
++  # except for Solaris >=10, where it must not be defined,
+   # as it implies XPG4.2
+   case $ac_sys_system/$ac_sys_release in
+-    SunOS/5.10)
++    SunOS/5.10|SunOS/5.11)
+       ;;
+     *)
+ 
 @@ -1746,258 +1750,6 @@ fi;
  echo "$as_me:$LINENO: result: $without_gcc" >&5
  echo "${ECHO_T}$without_gcc" >&6
