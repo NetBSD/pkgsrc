@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2011/08/20 21:37:49 abs Exp $
+# $NetBSD: Makefile,v 1.75 2011/09/14 15:44:23 hans Exp $
 
 DISTNAME=	arts-1.5.10
 PKGREVISION=	4
@@ -7,6 +7,8 @@ HOMEPAGE=	http://multimedia.kde.org/
 COMMENT=	Analog Real-Time Synthesizer
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
+
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=500
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
