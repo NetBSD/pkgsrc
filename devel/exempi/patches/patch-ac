@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2011/09/14 16:08:08 hans Exp $
+
+--- exempi/xmp.h.orig	2009-02-17 05:10:40.000000000 +0100
++++ exempi/xmp.h	2011-09-13 12:42:25.542693751 +0200
+@@ -40,10 +40,7 @@
+ #define __EXEMPI_XMP_H_
+ 
+ #include <stdlib.h>
+-/* stdbool choke on Sun (bug# 14612) */
+-#if !defined(__sun)
+ #include <stdbool.h>
+-#endif
+ #include <stdint.h>
+ 
+ #include <time.h>
