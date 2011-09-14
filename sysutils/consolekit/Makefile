@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 13:42:39 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/09/14 17:40:57 hans Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
@@ -43,7 +43,7 @@ post-extract:
 	${CP} ${FILESDIR}/ck-sysdeps-netbsd.c ${WRKSRC}/src/
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -vi
+	cd ${WRKSRC} && autoreconf -vi ${AUTORECONF_ARGS}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
