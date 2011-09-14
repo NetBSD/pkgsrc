@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.24 2011/02/11 12:11:26 adam Exp $
+$NetBSD: distinfo,v 1.25 2011/09/14 17:30:04 hans Exp $
 
 SHA1 (libpcap-1.1.1.tar.gz) = 18581af5e78a40b7b2c9a6cd8ce40e7cb1cd9c63
 RMD160 (libpcap-1.1.1.tar.gz) = 760159c594cc995c9e05c0cd8637a02a3b2725e2
 Size (libpcap-1.1.1.tar.gz) = 581984 bytes
 SHA1 (patch-aa) = 2a797ffee404d1cfd38e7d739796e47c514ec5c3
 SHA1 (patch-ac) = 5ef8c530b0fc49fff223ebfc7861868c0f1a1884
+SHA1 (patch-ad) = 7f13de40a6cdaf9db68704979948450265ff961a
