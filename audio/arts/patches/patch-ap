@@ -1,0 +1,12 @@
+$NetBSD: patch-ap,v 1.1 2011/09/14 15:44:23 hans Exp $
+
+--- flow/audioiosun.cc.orig	2007-10-08 11:47:09.000000000 +0200
++++ flow/audioiosun.cc	2011-07-26 16:37:19.626654499 +0200
+@@ -63,6 +63,7 @@
+ #include <fcntl.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <iostream>
+ #include <algorithm>
