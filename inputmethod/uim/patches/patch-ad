@@ -1,0 +1,40 @@
+$NetBSD: patch-ad,v 1.1 2011/09/14 16:57:41 hans Exp $
+
+--- uim/Makefile.in.orig	2011-05-17 06:16:18.000000000 +0200
++++ uim/Makefile.in	2011-09-13 15:25:17.188833173 +0200
+@@ -166,7 +166,7 @@ libuim_custom_enabler_la_OBJECTS =  \
+ 	$(am_libuim_custom_enabler_la_OBJECTS)
+ libuim_custom_enabler_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-	$(libuim_custom_enabler_la_LDFLAGS) $(LDFLAGS) -o $@
++	$(libuim_custom_enabler_la_LDFLAGS) $(LDFLAGS) $(SunOS_LDFLAGS) -o $@
+ libuim_custom_la_DEPENDENCIES = libuim-scm.la libuim.la
+ am_libuim_custom_la_OBJECTS = libuim_custom_la-uim-custom.lo
+ libuim_custom_la_OBJECTS = $(am_libuim_custom_la_OBJECTS)
+@@ -219,7 +219,7 @@ am_libuim_lolevel_la_OBJECTS = libuim_lo
+ libuim_lolevel_la_OBJECTS = $(am_libuim_lolevel_la_OBJECTS)
+ libuim_lolevel_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-	$(libuim_lolevel_la_LDFLAGS) $(LDFLAGS) -o $@
++	$(libuim_lolevel_la_LDFLAGS) $(LDFLAGS) $(SunOS_LDFLAGS) -o $@
+ libuim_look_la_DEPENDENCIES = libuim-scm.la libuim.la \
+ 	libuim-bsdlook.la
+ am_libuim_look_la_OBJECTS = libuim_look_la-look.lo
+@@ -273,7 +273,7 @@ am_libuim_scm_la_OBJECTS = libuim_scm_la
+ libuim_scm_la_OBJECTS = $(am_libuim_scm_la_OBJECTS)
+ libuim_scm_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libuim_scm_la_CFLAGS) \
+-	$(CFLAGS) $(libuim_scm_la_LDFLAGS) $(LDFLAGS) -o $@
++	$(CFLAGS) $(libuim_scm_la_LDFLAGS) $(LDFLAGS) $(SunOS_LDFLAGS) -o $@
+ libuim_skk_la_DEPENDENCIES = libuim-scm.la libuim.la libuim-bsdlook.la
+ am_libuim_skk_la_OBJECTS = libuim_skk_la-skk.lo
+ libuim_skk_la_OBJECTS = $(am_libuim_skk_la_OBJECTS)
+@@ -382,7 +382,7 @@ LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIB
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+-	$(LDFLAGS) -o $@
++	$(LDFLAGS) $(SunOS_LDFLAGS) -o $@
+ CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ LTCXXCOMPILE = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
