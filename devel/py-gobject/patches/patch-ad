@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.3 2011/09/14 16:53:38 hans Exp $
+
+--- gi/gimodule.c.orig	2011-04-18 17:35:33.000000000 +0200
++++ gi/gimodule.c	2011-09-07 13:02:33.039179462 +0200
+@@ -62,6 +62,7 @@ _wrap_pyg_enum_register_new_gtype_and_ad
+     GEnumValue *g_enum_values;
+     GType g_type;
+     const gchar *type_name;
++    int i;
+ 
+     if (!PyArg_ParseTupleAndKeywords (args, kwargs,
+                                       "O:enum_add_make_new_gtype",
+@@ -79,7 +80,7 @@ _wrap_pyg_enum_register_new_gtype_and_ad
+     n_values = g_enum_info_get_n_values (info);
+     g_enum_values = g_new0 (GEnumValue, n_values + 1);
+ 
+-    for (int i=0; i < n_values; i++) {
++    for (i=0; i < n_values; i++) {
+         GIValueInfo *value_info;
+         GEnumValue *enum_value;
+         const gchar *name;
+@@ -149,6 +150,7 @@ _wrap_pyg_flags_register_new_gtype_and_a
+     GFlagsValue *g_flags_values;
+     GType g_type;
+     const gchar *type_name;
++    int i;
+ 
+     if (!PyArg_ParseTupleAndKeywords (args, kwargs,
+                                       "O:flags_add_make_new_gtype",
+@@ -166,7 +168,7 @@ _wrap_pyg_flags_register_new_gtype_and_a
+     n_values = g_enum_info_get_n_values (info);
+     g_flags_values = g_new0 (GFlagsValue, n_values + 1);
+ 
+-    for (int i=0; i < n_values; i++) {
++    for (i=0; i < n_values; i++) {
+         GIValueInfo *value_info;
+         GFlagsValue *flags_value;
+         const gchar *name;
