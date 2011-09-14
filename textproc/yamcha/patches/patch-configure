@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2011/09/14 17:47:38 hans Exp $
+
+--- configure.orig	2005-09-03 04:33:48.000000000 +0200
++++ configure	2011-09-13 18:13:16.246039614 +0200
+@@ -20250,11 +20250,6 @@ echo "${ECHO_T}yes" >&6
+ else
+         echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+-        if test "$host_vendor" = "sun" ; then
+-                { { echo "$as_me:$LINENO: error: \"SUN make does not work for building TinySVM. Please install GNU make\"" >&5
+-echo "$as_me: error: \"SUN make does not work for building TinySVM. Please install GNU make\"" >&2;}
+-   { (exit 1); exit 1; }; }
+-        fi
+ fi
+ 
+ if test -n "$GCC"; then
