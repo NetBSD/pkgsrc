@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/09/14 17:40:57 hans Exp $
+# $NetBSD: Makefile,v 1.15 2011/09/14 17:42:08 hans Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
@@ -52,6 +52,10 @@ post-install:
 		${DESTDIR}${PREFIX}/libexec/ck-get-x11-display-device
 	${CP} ${FILESDIR}/ck-get-x11-server-pid.FreeBSD \
 		${DESTDIR}${PREFIX}/libexec/ck-get-x11-server-pid
+.endif
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-rbac-shutdown=solaris.system.shutdown
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
