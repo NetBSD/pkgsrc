@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2011/08/05 18:06:14 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2011/09/14 15:41:36 hans Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -15,6 +15,8 @@ BUILDLINK_API_DEPENDS.perl+=	perl>=${_perl5_ver_}
 BUILDLINK_API_DEPENDS.perl+=	perl<5.16.0
 
 BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
+
+_TOOLS_USE_PKGSRC.perl=	yes
 
 FIND_PREFIX:=	PERLDIR=perl
 .include "../../mk/find-prefix.mk"
