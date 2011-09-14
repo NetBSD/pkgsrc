@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/09/14 17:43:32 hans Exp $
+
+--- src/Makefile.orig	2001-07-12 18:49:49.000000000 +0200
++++ src/Makefile	2011-07-28 20:57:29.930235807 +0200
+@@ -265,7 +265,7 @@ readproctitle.o: compile error.h readpro
+ rts: envdir envuidgid fghack matchtest multilog pgrphack \
+ readproctitle rts.tests setlock setuidgid softlimit supervise svc \
+ svok svscan svscanboot svstat tai64n tai64nlocal
+-	env - /bin/sh rts.tests 2>&1 | cat -v > rts
++	env - ${PKGSRC_SHELL} rts.tests 2>&1 | cat -v > rts
+ 
+ scan_ulong.o: compile scan.h scan_ulong.c
+ 	./compile scan_ulong.c
