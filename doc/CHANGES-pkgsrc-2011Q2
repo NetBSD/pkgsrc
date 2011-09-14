@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.34 2011/09/13 20:01:58 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q2,v 1.1.2.35 2011/09/14 18:04:18 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q2 branch:
@@ -106,3 +106,9 @@ sysutils/xenkernel3: security patch
 sysutils/xenkernel33: security patch
 Pullup ticket #3522 - requested by tron
 net/wireshark: security update
+Pullup ticket #3524 - requested by gdt
+filesystems/tahoe-lafs: security update
+Pullup ticket #3525 - requested by taca
+www/typo3: security update
+Pullup ticket #3526 - requested by taca
+www/apache22: security update
