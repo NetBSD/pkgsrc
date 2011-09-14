@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:42:31 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/09/14 16:54:31 hans Exp $
 
 DISTNAME=	gegl-0.1.6
 PKGREVISION=	1
@@ -32,6 +32,9 @@ PLIST_VARS+=	v4l
 .if ${OPSYS} == "Linux" && exists(/usr/include/linux/videodev.h)
 PLIST.v4l=	yes
 .endif
+
+CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600
+CXXFLAGS.SunOS+=	--std=c99
 
 .include "options.mk"
 

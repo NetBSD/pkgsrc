@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.5 2011/09/14 16:54:31 hans Exp $
+
+--- gegl/gegl-xml.c.orig	2011-01-24 23:03:30.000000000 +0100
++++ gegl/gegl-xml.c	2011-09-13 17:06:43.989058716 +0200
+@@ -18,7 +18,10 @@
+ #include "config.h"
+ 
+ /* For clang, remove when getting rid of using PATH_MAX */
++#ifndef __sun
+ #define _XOPEN_SOURCE 500
++#endif
++
+ 
+ #include <glib.h>
+ #include <glib-object.h>
