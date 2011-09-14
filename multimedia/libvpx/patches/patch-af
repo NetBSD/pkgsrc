@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2011/09/14 17:22:44 hans Exp $
+
+--- examples/gen_example_code.sh.orig	2011-03-04 21:40:37.000000000 +0100
++++ examples/gen_example_code.sh	2011-04-08 16:28:11.822549731 +0200
+@@ -80,6 +80,6 @@ while IFS=$'\n' read -r line; do
+             || include_block < "${template%.c}.txt" \
+             #|| echo "WARNING: failed to find text for block $block_name" >&2
+             ;;
+-        *)  echo "$line" ;;
++        *)  printf "%s\n" "$line" ;;
+     esac
+ done < "$template"
