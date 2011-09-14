@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2011/09/04 15:42:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2011/09/14 18:12:57 hans Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -195,7 +195,9 @@ qt4/mkspecs/cygwin-g++/qmake.conf
 qt4/mkspecs/cygwin-g++/qplatformdefs.h
 qt4/mkspecs/darwin-g++/qmake.conf
 qt4/mkspecs/darwin-g++/qplatformdefs.h
-qt4/mkspecs/default
+${PLIST.notSunOS}qt4/mkspecs/default
+${PLIST.SunOS}qt4/mkspecs/default/qmake.conf
+${PLIST.SunOS}qt4/mkspecs/default/qplatformdefs.h
 qt4/mkspecs/features/build_pass.prf
 qt4/mkspecs/features/dbusadaptors.prf
 qt4/mkspecs/features/dbusinterfaces.prf
