@@ -1,7 +1,33 @@
-$NetBSD: patch-al,v 1.5 2009/04/11 19:42:23 snj Exp $
+$NetBSD: patch-al,v 1.6 2011/09/14 17:06:32 hans Exp $
 
---- configure.orig	2008-12-13 06:13:52.000000000 -0800
-+++ configure	2009-03-20 14:28:16.000000000 -0700
+--- configure.orig	2011-09-07 15:28:20.710346391 +0200
++++ configure	2011-09-07 15:30:02.126868889 +0200
+@@ -2058,10 +2058,10 @@ if test $define_xopen_source = yes
+ then
+   # On Solaris w/ g++ it appears that _XOPEN_SOURCE has to be
+   # defined precisely as g++ defines it
+-  # Furthermore, on Solaris 10, XPG6 requires the use of a C99
++  # Furthermore, on Solaris >10, XPG6 requires the use of a C99
+   # compiler
+   case $ac_sys_system/$ac_sys_release in
+-    SunOS/5.8|SunOS/5.9|SunOS/5.10)
++    SunOS/5.8|SunOS/5.9|SunOS/5.10|SunOS/5.11)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define _XOPEN_SOURCE 500
+@@ -2081,10 +2081,10 @@ _ACEOF
+   # definition of _XOPEN_SOURCE_EXTENDED and _POSIX_C_SOURCE, or else
+   # several APIs are not declared. Since this is also needed in some
+   # cases for HP-UX, we define it globally.
+-  # except for Solaris 10, where it must not be defined,
++  # except for Solaris >10, where it must not be defined,
+   # as it implies XPG4.2
+   case $ac_sys_system/$ac_sys_release in
+-    SunOS/5.10)
++    SunOS/5.10|SunOS/5.11)
+       ;;
+     *)
+ 
 @@ -4014,17 +4014,18 @@ _ACEOF
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION

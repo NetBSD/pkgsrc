@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.8 2011/09/12 20:14:06 bsiegert Exp $
+$NetBSD: patch-al,v 1.9 2011/09/14 17:07:01 hans Exp $
 
---- configure.orig	Tue May 25 02:26:39 2010
-+++ configure
+--- configure.orig	2010-05-25 02:27:03.000000000 +0000
++++ configure	2011-09-06 18:58:15.336443123 +0200
 @@ -2833,7 +2833,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
@@ -11,6 +11,32 @@ $NetBSD: patch-al,v 1.8 2011/09/12 20:14:06 bsiegert Exp $
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
+@@ -2905,10 +2905,10 @@ if test $define_xopen_source = yes
+ then
+   # On Solaris w/ g++ it appears that _XOPEN_SOURCE has to be
+   # defined precisely as g++ defines it
+-  # Furthermore, on Solaris 10, XPG6 requires the use of a C99
++  # Furthermore, on Solaris >=10, XPG6 requires the use of a C99
+   # compiler
+   case $ac_sys_system/$ac_sys_release in
+-    SunOS/5.8|SunOS/5.9|SunOS/5.10)
++    SunOS/5.8|SunOS/5.9|SunOS/5.10|SunOS/5.11)
+ 
+ $as_echo "#define _XOPEN_SOURCE 500" >>confdefs.h
+ 
+@@ -2924,10 +2924,10 @@ $as_echo "#define _XOPEN_SOURCE 600" >>c
+   # definition of _XOPEN_SOURCE_EXTENDED and _POSIX_C_SOURCE, or else
+   # several APIs are not declared. Since this is also needed in some
+   # cases for HP-UX, we define it globally.
+-  # except for Solaris 10, where it must not be defined,
++  # except for Solaris >=10, where it must not be defined,
+   # as it implies XPG4.2
+   case $ac_sys_system/$ac_sys_release in
+-    SunOS/5.10)
++    SunOS/5.10|SunOS/5.11)
+       ;;
+     *)
+ 
 @@ -4736,15 +4736,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
