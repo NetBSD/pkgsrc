@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/19 11:47:15 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/09/14 17:12:18 hans Exp $
 
 SHA1 (TinySVM-0.09.tar.gz) = 9c3c36454c475180ef6646d059376f35549cad08
 RMD160 (TinySVM-0.09.tar.gz) = d44586810d4776a251cda4a08b1aa9148108c8e6
 Size (TinySVM-0.09.tar.gz) = 317636 bytes
 SHA1 (patch-aa) = bbeefe45ecf7f447eb8b6f692d035b74f01cb7a8
+SHA1 (patch-ab) = bbe7d1f0eb2abc29c80749ad3892fb333f5a76c1
