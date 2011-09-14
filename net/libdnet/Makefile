@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/02/07 05:45:17 obache Exp $
+# $NetBSD: Makefile,v 1.19 2011/09/14 17:28:19 hans Exp $
 #
 
 DISTNAME=	libdnet-1.12
@@ -33,6 +33,11 @@ BUILDLINK_DEPMETHOD.check=	build
 TEST_TARGET=	check
 .else
 CONFIGURE_ARGS+=	--without-check
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	ac_cv_dnet_linux_pf_packet=no
 .endif
 
 .include "../../mk/bsd.pkg.mk"
