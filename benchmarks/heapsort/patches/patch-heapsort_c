@@ -1,0 +1,70 @@
+$NetBSD: patch-heapsort_c,v 1.1 2011/09/14 06:58:35 dholland Exp $
+
+- use valid C
+
+--- heapsort.c.orig	2011-09-14 06:55:50.000000000 +0000
++++ heapsort.c
+@@ -57,6 +57,7 @@
+ /***********************/
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <math.h>
+ 
+ #ifdef Amiga
+@@ -73,7 +74,10 @@
+ #include <ctype.h>
+ #endif
+ 
+-double nulltime,runtime,sta,stb,dtime();
++int HSORT(long m, long n, long p);
++double dtime(void);
++
++double nulltime,runtime,sta,stb;
+ double emips,hmips,lmips,smips[21];
+ 
+ long bplong,ErrorFlag;
+@@ -81,7 +85,7 @@ long bplong,ErrorFlag;
+ long NLoops[21];
+ 
+ 
+-void main()
++int main()
+ {
+ 
+ long  i,j,k,p,imax;
+@@ -91,7 +95,7 @@ bplong = sizeof(long);
+ printf("\n   Heap Sort C Program\n");
+ printf("   Version 1.0, 04 Oct 1992\n\n");
+ 
+-printf("   Size of long (bytes): %d\n\n",bplong);
++printf("   Size of long (bytes): %ld\n\n",bplong);
+ 
+ printf("   Array Size    RunTime      Scale    MIPS\n");       
+ printf("    (bytes)       (sec)\n");
+@@ -184,6 +188,7 @@ printf("\n   Runtime is the average for 
+ printf("   High MIPS = %8.2lf\n",hmips);
+ printf("   Low  MIPS = %8.2lf\n\n",lmips);
+ 
++return 0;
+ }                                  /* End of main */
+ 
+ 
+@@ -191,7 +196,7 @@ printf("   Low  MIPS = %8.2lf\n\n",lmips
+ /*  Heap Sort Program    */
+ /*************************/
+ 
+-HSORT(m,n,p)
++int HSORT(m,n,p)
+ long m,n,p;
+ {
+ 
+@@ -204,7 +209,7 @@ long  count,ca,cb,cc,cd,ce,cf;
+ 
+ msize = m * bplong;
+ size  = m - 1;
+-base  = (long *)malloc((unsigned)msize);
++base  = malloc(msize);
+ 
+ ia = 106;
+ ic = 1283;
