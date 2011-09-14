@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/07/08 09:49:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/09/14 17:33:00 hans Exp $
 bin/afslog
 bin/compile_et
 bin/gss
@@ -43,6 +43,29 @@ include/krb5/gssapi/gssapi.h
 include/krb5/gssapi/gssapi_krb5.h
 include/krb5/gssapi/gssapi_ntlm.h
 include/krb5/gssapi/gssapi_spnego.h
+${PLIST.hcrypto}include/krb5/hcrypto/aes.h
+${PLIST.hcrypto}include/krb5/hcrypto/bn.h
+${PLIST.hcrypto}include/krb5/hcrypto/des.h
+${PLIST.hcrypto}include/krb5/hcrypto/dh.h
+${PLIST.hcrypto}include/krb5/hcrypto/dsa.h
+${PLIST.hcrypto}include/krb5/hcrypto/ec.h
+${PLIST.hcrypto}include/krb5/hcrypto/ecdh.h
+${PLIST.hcrypto}include/krb5/hcrypto/ecdsa.h
+${PLIST.hcrypto}include/krb5/hcrypto/engine.h
+${PLIST.hcrypto}include/krb5/hcrypto/evp-cc.h
+${PLIST.hcrypto}include/krb5/hcrypto/evp-hcrypto.h
+${PLIST.hcrypto}include/krb5/hcrypto/evp.h
+${PLIST.hcrypto}include/krb5/hcrypto/hmac.h
+${PLIST.hcrypto}include/krb5/hcrypto/md2.h
+${PLIST.hcrypto}include/krb5/hcrypto/md4.h
+${PLIST.hcrypto}include/krb5/hcrypto/md5.h
+${PLIST.hcrypto}include/krb5/hcrypto/pkcs12.h
+${PLIST.hcrypto}include/krb5/hcrypto/rand.h
+${PLIST.hcrypto}include/krb5/hcrypto/rc2.h
+${PLIST.hcrypto}include/krb5/hcrypto/rc4.h
+${PLIST.hcrypto}include/krb5/hcrypto/rsa.h
+${PLIST.hcrypto}include/krb5/hcrypto/sha.h
+${PLIST.hcrypto}include/krb5/hcrypto/ui.h
 include/krb5/hdb-protos.h
 include/krb5/hdb.h
 include/krb5/hdb_asn1.h

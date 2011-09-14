@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2011/07/31 21:21:01 gls Exp $
+# $NetBSD: Makefile,v 1.82 2011/09/14 17:33:00 hans Exp $
 
 DISTNAME=	heimdal-1.4
 PKGREVISION=	1
@@ -59,7 +59,8 @@ PLIST_VARS+=		afskauth hcrypto
 .if ${OPSYS} == "IRIX"
 PLIST.afskauth=		yes
 .endif
-.if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != ""
+.if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
+    ${OPSYS} == "SunOS"
 PLIST.hcrypto=		yes
 .endif
 
