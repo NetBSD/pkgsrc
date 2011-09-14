@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/06/10 09:39:56 obache Exp $
+# $NetBSD: Makefile,v 1.25 2011/09/14 17:09:47 hans Exp $
 
 DISTNAME=	akonadi-1.4.0
 PKGREVISION=	5
@@ -44,6 +44,8 @@ SUBST_STAGE.mysql=	post-patch
 SUBST_MESSAGE.mysql=	Fix mysqld path.
 SUBST_FILES.mysql=	server/CMakeLists.txt
 SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFIX}/libexec:"
+
+LDFLAGS.SunOS+=		-lsocket
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
