@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2011/09/14 17:43:32 hans Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		1
@@ -27,6 +27,8 @@ CMDDIR=			${WRKSRC}/command
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man8
 
 SUBST_FILES.djbware+=	src/error.h
+
+MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
 
 do-install:
 	(while read cmd; do \
