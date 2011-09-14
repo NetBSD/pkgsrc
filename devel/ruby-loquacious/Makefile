@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/12 16:04:22 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/14 11:59:36 taca Exp $
 
-DISTNAME=	loquacious-1.8.1
+DISTNAME=	loquacious-1.9.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
