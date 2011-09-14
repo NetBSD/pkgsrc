@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2011/09/14 18:17:51 hans Exp $
+lib/GNUstep/Frameworks/FSNode.framework/Versions/0/libFSNode.so.0
+lib/GNUstep/Frameworks/Inspector.framework/Versions/0/libInspector.so.0
+lib/GNUstep/Frameworks/Operation.framework/Versions/1/libOperation.so.1
+lib/libDBKit.so.0
+lib/libFSNode.so.0
+lib/libInspector.so.0
+lib/libOperation.so.1
