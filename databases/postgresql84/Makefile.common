@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2011/04/22 13:01:30 adam Exp $
+# $NetBSD: Makefile.common,v 1.13 2011/09/14 15:55:26 hans Exp $
 #
 # used by databases/postgresql84-adminpack/Makefile
 # used by databases/postgresql84-client/Makefile
@@ -52,6 +52,7 @@ PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql
+CONFIGURE_ARGS+=	--localedir=${PREFIX}/lib/locale
 CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
 
 CONFIGURE_ARGS+=	--enable-nls

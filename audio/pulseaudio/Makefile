@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2011/09/14 15:49:47 hans Exp $
+# $NetBSD: Makefile,v 1.49 2011/09/14 15:53:35 hans Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -71,7 +71,7 @@ CONFIGURE_ENV+=		cc_cv_tls___thread=no
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
 .endif
 
-PLIST_VARS+=		evdev hal oss
+PLIST_VARS+=		evdev hal oss sun
 PLIST_SUBST+=		PULSEAUDIO_VER=${PULSEAUDIO_VER:Q}
 
 .if ${OPSYS} == "Darwin"
@@ -82,6 +82,12 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,-z rm:-Wl,nodelete
 PLIST.hal=		yes
 PLIST.oss=		yes
 .endif
+
+.if ${OPSYS} == "SunOS"
+PLIST.sun=		yes
+.endif
+
+CFLAGS.SunOS+=		-std=c99
 
 PKG_GROUPS=             ${PULSE_GROUP}
 PKG_GROUPS+=		${PULSE_GROUP_REALTIME}

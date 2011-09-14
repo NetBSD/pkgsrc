@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/02/02 11:35:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/09/14 15:53:35 hans Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -160,6 +160,8 @@ lib/pulse-${PULSEAUDIO_VER}/modules/module-sine-source.a
 lib/pulse-${PULSEAUDIO_VER}/modules/module-sine-source.so
 lib/pulse-${PULSEAUDIO_VER}/modules/module-sine.a
 lib/pulse-${PULSEAUDIO_VER}/modules/module-sine.so
+${PLIST.sun}lib/pulse-${PULSEAUDIO_VER}/modules/module-solaris.a
+${PLIST.sun}lib/pulse-${PULSEAUDIO_VER}/modules/module-solaris.so
 lib/pulse-${PULSEAUDIO_VER}/modules/module-stream-restore.a
 lib/pulse-${PULSEAUDIO_VER}/modules/module-stream-restore.so
 lib/pulse-${PULSEAUDIO_VER}/modules/module-suspend-on-idle.a
