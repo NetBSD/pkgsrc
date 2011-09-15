@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2284 2011/09/15 14:26:49 ghen Exp $
+$NetBSD: CHANGES-2011,v 1.2285 2011/09/15 14:28:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3556,3 +3556,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/firefox36 to 3.6.22 [obache 2011-09-15]
 	Updated www/firefox36-l10n to 3.6.22 [obache 2011-09-15]
 	Updated mail/dovecot2-pigeonhole to 0.2.4 [ghen 2011-09-15]
+	Updated graphics/ruby-chunky_png to 1.2.4 [taca 2011-09-15]
