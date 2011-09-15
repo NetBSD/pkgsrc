@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10560 2011/09/15 13:59:49 wiz Exp $
+$NetBSD: TODO,v 1.10561 2011/09/15 14:29:18 taca Exp $
 
 Suggested new packages
 ======================
@@ -1293,6 +1293,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o ufoai-2.3.1
 	o uim-1.7.1
+	o umefont-ttf-0.431
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
 	o units-88 [pkg/43742]
