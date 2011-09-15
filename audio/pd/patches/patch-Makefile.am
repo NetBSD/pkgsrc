@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile.am,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+
+Fix path to documentation (installed following pksrc conventions).
+Avoid creating unnecessary(?) empty directory.
+
+--- Makefile.am.orig	2010-08-18 23:42:59.000000000 +0000
++++ Makefile.am
+@@ -37,11 +37,7 @@ endif
+ ## FIXXXME
+ ## $(pkglibdir) is used throughout the other Makefile.amS
+ ##       simply ignoring the special case for other OSs...
+-if LINUX
+-libpddir = $(pkglibdir)
+-else
+-libpddir = $(prefix)
+-endif
++libpddir = $(prefix)/share/doc/pd
+ 
+ # Symlinks don't work on Windows/MinGW but they do on Cygwin.
+ bin:
+@@ -51,6 +47,7 @@ locales:
+ 	make -C po all
+ 
+ install-data-local:
++mingw-install-data-local:
+ 	$(INSTALL) -d $(DESTDIR)$(libpddir)/startup
+ 	$(INSTALL) -d $(DESTDIR)$(libpddir)/startup/disabled
+ 
