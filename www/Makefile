@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.817 2011/09/12 08:22:36 adam Exp $
+# $NetBSD: Makefile,v 1.818 2011/09/15 09:15:34 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -552,8 +552,8 @@ SUBDIR+=	py-django-appmedia
 SUBDIR+=	py-django-classy-tags
 SUBDIR+=	py-django-cms
 SUBDIR+=	py-django-registration
-SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-django-south
+SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flup
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
