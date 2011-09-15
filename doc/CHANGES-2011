@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2280 2011/09/15 06:21:30 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2281 2011/09/15 08:43:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3537,3 +3537,18 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/phpmyadmin to 3.4.5 [tron 2011-09-14]
 	Added audio/pd version 0.43.0 [wiz 2011-09-15]
 	Updated security/p5-Mozilla-CA to 20110904 [hiramatsu 2011-09-15]
+	Added databases/postgresql91 version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-client version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-server version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-docs version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-adminpack version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-datatypes version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-dblink version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-fuzzystrmatch version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-monitoring version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-pgcrypto version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-plperl version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-plpython version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-pltcl version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-replicationtools version 9.1.0 [adam 2011-09-15]
+	Added databases/postgresql91-upgrade version 9.1.0 [adam 2011-09-15]
