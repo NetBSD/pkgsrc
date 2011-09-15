@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/09/14 12:22:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/09/15 14:27:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.infinity_test
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/lib/chunky_png.rb
 ${GEM_LIBDIR}/lib/chunky_png/canvas.rb
 ${GEM_LIBDIR}/lib/chunky_png/canvas/adam7_interlacing.rb
 ${GEM_LIBDIR}/lib/chunky_png/canvas/data_url_exporting.rb
+${GEM_LIBDIR}/lib/chunky_png/canvas/data_url_importing.rb
 ${GEM_LIBDIR}/lib/chunky_png/canvas/drawing.rb
 ${GEM_LIBDIR}/lib/chunky_png/canvas/masking.rb
 ${GEM_LIBDIR}/lib/chunky_png/canvas/operations.rb
@@ -37,6 +38,7 @@ ${GEM_LIBDIR}/lib/chunky_png/rmagick.rb
 ${GEM_LIBDIR}/lib/chunky_png/vector.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/adam7_interlacing_spec.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/data_url_exporting_spec.rb
+${GEM_LIBDIR}/spec/chunky_png/canvas/data_url_importing_spec.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/drawing_spec.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/masking_spec.rb
 ${GEM_LIBDIR}/spec/chunky_png/canvas/operations_spec.rb
