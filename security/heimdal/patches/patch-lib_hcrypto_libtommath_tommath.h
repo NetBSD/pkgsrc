@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_hcrypto_libtommath_tommath.h,v 1.1 2011/09/14 17:33:00 hans Exp $
+$NetBSD: patch-lib_hcrypto_libtommath_tommath.h,v 1.2 2011/09/15 09:32:32 wiz Exp $
 
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ lib/hcrypto/libtommath/tommath.h	29 Oct 2010 01:14:54 -0000
-@@ -0,0 +1,592 @@
+@@ -0,0 +1,588 @@
 +/* LibTomMath, multiple-precision integer library -- Tom St Denis
 + *
 + * LibTomMath is a library that provides multiple-precision
@@ -593,8 +593,8 @@ $NetBSD: patch-lib_hcrypto_libtommath_tommath.h,v 1.1 2011/09/14 17:33:00 hans E
 +
 +
 +/* $Source: /cvsroot/pkgsrc/security/heimdal/patches/Attic/patch-lib_hcrypto_libtommath_tommath.h,v $ */
-+/* $Revision: 1.1 $ */
-+/* $Date: 2011/09/14 17:33:00 $ */
++/* $Revision: 1.2 $ */
++/* $Date: 2011/09/15 09:32:32 $ */
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ lib/hcrypto/libtommath/tommath_class.h	29 Oct 2010 01:14:54 -0000
 @@ -0,0 +1,1000 @@
@@ -1594,13 +1594,9 @@ $NetBSD: patch-lib_hcrypto_libtommath_tommath.h,v 1.1 2011/09/14 17:33:00 hans E
 +#else
 +#define LTM_LAST
 +#endif
-+
-+/* $Source: /cvsroot/pkgsrc/security/heimdal/patches/Attic/patch-lib_hcrypto_libtommath_tommath.h,v $ */
-+/* $Revision: 1.1 $ */
-+/* $Date: 2011/09/14 17:33:00 $ */
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ lib/hcrypto/libtommath/tommath_superclass.h	29 Oct 2010 01:14:54 -0000
-@@ -0,0 +1,76 @@
+@@ -0,0 +1,72 @@
 +/* super class file for PK algos */
 +
 +/* default ... include all MPI */
@@ -1673,7 +1669,3 @@ $NetBSD: patch-lib_hcrypto_libtommath_tommath.h,v 1.1 2011/09/14 17:33:00 hans E
 +#endif
 +
 +#endif
-+
-+/* $Source: /cvsroot/pkgsrc/security/heimdal/patches/Attic/patch-lib_hcrypto_libtommath_tommath.h,v $ */
-+/* $Revision: 1.1 $ */
-+/* $Date: 2011/09/14 17:33:00 $ */
