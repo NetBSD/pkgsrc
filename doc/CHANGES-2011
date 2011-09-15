@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2285 2011/09/15 14:28:21 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2286 2011/09/15 14:30:04 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -2204,8 +2204,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/rss2email to 2.71 [schmonz 2011-06-09]
 	Updated lang/sun-jre6 to 6.0.26 [obache 2011-06-09]
 	Updated lang/sun-jdk6 to 6.0.26 [obache 2011-06-09]
-	Updated comms/asterisk18 to 1.8.4.2 [root 2011-06-09]
-	Updated comms/asterisk16 to 1.6.2.18 [root 2011-06-09]
+	Updated comms/asterisk18 to 1.8.4.2 [jnemeth 2011-06-09]
+	Updated comms/asterisk16 to 1.6.2.18 [jnemeth 2011-06-09]
 	Updated net/quvi to 0.2.16 [wiz 2011-06-09]
 	Updated mail/fetchmail to 6.3.20 [obache 2011-06-09]
 	Updated mail/fetchmailconf to 6.3.20 [obache 2011-06-09]
@@ -2251,7 +2251,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/ruby-actionmailer3 to 3.0.8 [taca 2011-06-11]
 	Updated devel/ruby-railties to 3.0.8 [taca 2011-06-11]
 	Updated www/ruby-rails3 to 3.0.8 [taca 2011-06-11]
-	Updated mail/sendmail to 8.14.5 [root 2011-06-11]
+	Updated mail/sendmail to 8.14.5 [jnemeth 2011-06-11]
 	Updated graphics/fotoxx to 11.06.1 [ryoon 2011-06-11]
 	Updated lang/sbcl to 1.0.49 [asau 2011-06-11]
 	Updated editors/emacs-snapshot to 24.0.50.20110608 [minskim 2011-06-11]
