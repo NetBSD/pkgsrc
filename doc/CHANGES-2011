@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2278 2011/09/14 22:25:43 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2279 2011/09/15 01:05:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3535,3 +3535,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20110914 [taca 2011-09-14]
 	Updated graphics/ruby-chunky_png to 1.2.3 [taca 2011-09-14]
 	Updated databases/phpmyadmin to 3.4.5 [tron 2011-09-14]
+	Added audio/pd version 0.43.0 [wiz 2011-09-15]
