@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2282 2011/09/15 09:05:11 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2283 2011/09/15 09:52:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3552,3 +3552,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/postgresql91-pltcl version 9.1.0 [adam 2011-09-15]
 	Added databases/postgresql91-replicationtools version 9.1.0 [adam 2011-09-15]
 	Added databases/postgresql91-upgrade version 9.1.0 [adam 2011-09-15]
+	Updated devel/xulrunner192 to 1.9.2.22 [obache 2011-09-15]
+	Updated www/firefox36 to 3.6.22 [obache 2011-09-15]
+	Updated www/firefox36-l10n to 3.6.22 [obache 2011-09-15]
