@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2011/09/14 12:22:30 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/15 14:27:13 taca Exp $
 
-DISTNAME=	chunky_png-1.2.3
+DISTNAME=	chunky_png-1.2.4
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
