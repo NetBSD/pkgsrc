@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2011/05/05 05:42:55 obache Exp $
+# $NetBSD: Makefile,v 1.458 2011/09/15 01:05:28 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -309,6 +309,7 @@ SUBDIR+=	paman
 SUBDIR+=	paprefs
 SUBDIR+=	pavucontrol
 SUBDIR+=	pavumeter
+SUBDIR+=	pd
 SUBDIR+=	picard
 SUBDIR+=	portaudio
 SUBDIR+=	portaudio-devel
