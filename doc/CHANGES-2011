@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2279 2011/09/15 01:05:40 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2280 2011/09/15 06:21:30 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/ruby-chunky_png to 1.2.3 [taca 2011-09-14]
 	Updated databases/phpmyadmin to 3.4.5 [tron 2011-09-14]
 	Added audio/pd version 0.43.0 [wiz 2011-09-15]
+	Updated security/p5-Mozilla-CA to 20110904 [hiramatsu 2011-09-15]
