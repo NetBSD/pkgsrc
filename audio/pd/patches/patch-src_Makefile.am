@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.am,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+
+Add missing libraries to linker line.
+
+--- src/Makefile.am.orig	2011-02-27 03:22:57.000000000 +0000
++++ src/Makefile.am
+@@ -6,7 +6,7 @@ pd_LDFLAGS =
+ pdsend_CFLAGS = 
+ pdreceive_CFLAGS = 
+ pd_watchdog_CFLAGS = 
+-LIBS = 
++LIBS = $(LIBOSSAUDIO) $(PTHREAD_LDFLAGS) $(PTHREAD_LIBS) -lm
+ INCLUDES = @INCLUDES@
+ 
+ SUFFIXES = .@EXTENSION@ .@SHARED_LIB@

@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+
+SHA1 (pd-0.43-0.src.tar.gz) = 9bc4377fe25d034120bd393d63fe4180c7a500bc
+RMD160 (pd-0.43-0.src.tar.gz) = 6c737e69430180187281747830e655401b803b55
+Size (pd-0.43-0.src.tar.gz) = 2194131 bytes
+SHA1 (patch-Makefile.am) = 7a8da5f1902dcfb8f49ef9c915ae96a1996bd83d
+SHA1 (patch-extra_bonk~_bonk~.c) = c394543ddc963c8398cd0cea4bdb60b23d5c6ca5
+SHA1 (patch-extra_pd~_pd~.c) = f4b6760b4434de25b34c499d9a8216c4ffe22ec8
+SHA1 (patch-extra_sigmund~_sigmund~.c) = e42d3fe3808dbff6b40aa8e0c59b929159113f03
+SHA1 (patch-src_Makefile.am) = a87c3380b0180a906c0496e743fbece772226da3
+SHA1 (patch-src_configure) = 6f86f1045081f56603cca030dfe0b501eaef7e6a
+SHA1 (patch-src_d__array.c) = 86dc633efa9f14e57cdfcfbf9a0a6bb7f36f6ca5
+SHA1 (patch-src_d__osc.c) = 82095c2b269368dde69202c6845b3103e0c00995
+SHA1 (patch-src_m__binbuf.c) = 6ee7b8b62fc8bbe4b9522e8c6323d1e0ad5f1638
+SHA1 (patch-src_s__audio__oss.c) = 6fad31cce878b2eefa19060cef3072bc6a49b70b
+SHA1 (patch-src_s__file.c) = 1577bcc0cd6fb252172410f5b52b1bac465a3779
+SHA1 (patch-src_s__loader.c) = 0bfcb810e450983775c1c7da9b95ed0e8e152316
+SHA1 (patch-src_s__stuff.h) = b0b93853e5c06d367788429d95085da941f3d25e
+SHA1 (patch-src_s__utf8.c) = d75ea717e611c01d1c00a8f99779ff1fc47a92f8
+SHA1 (patch-src_x__list.c) = 36135361c5a186a4352ed55d743683e4d6a18087
+SHA1 (patch-src_x__misc.c) = ca8704f4a8a6b904a04169577df29373665f3aa7

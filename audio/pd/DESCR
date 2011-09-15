@@ -1,0 +1,20 @@
+Pd (aka Pure Data) is a real-time graphical programming environment
+for audio, video, and graphical processing. It is the third major
+branch of the family of patcher programming languages known as Max
+(Max/FTS, ISPW Max, Max/MSP, jMax, etc.) originally developed by
+Miller Puckette and company at IRCAM. The core of Pd is written
+and maintained by Miller Puckette and includes the work of many
+developers, making the whole package very much a community effort.
+
+Pd was created to explore ideas of how to further refine the Max
+paradigm with the core ideas of allowing data to be treated in a
+more open-ended way and opening it up to applications outside of
+audio and MIDI, such as graphics and video.
+
+It is easy to extend Pd by writing object classes ("externals") or
+patches ("abstractions"). The work of many developers is already
+available as part of the standard Pd packages and the Pd developer
+community is growing rapidly. Recent developments include a system
+of abstractions for building performance environments; a library
+of objects for physical modeling; and a library of objects for
+generating and processing video in realtime.
