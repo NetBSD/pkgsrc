@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10558 2011/09/15 08:43:18 adam Exp $
+$NetBSD: TODO,v 1.10559 2011/09/15 09:49:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -457,6 +457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
+	o cdrtools-3.01alpha06
 	o celestia-1.6.0
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.0.2
@@ -486,6 +487,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o csound5-5.13
 	o cups-1.5
+	o curl-7.22.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.22
 	o cygwin_lib-1.5.24.2
@@ -510,7 +512,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o diffstat-1.54
 	o diffutils-3.0
-	o digikam-2.1.0
+	o digikam-2.1.1
 	o dillo-3.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -882,6 +884,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86dga-1.1.2
 	o libXxf86misc-1.0.3
 	o libXxf86vm-1.1.1
+	o libaudiofile-0.3.0
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.7.4
 	o libdrm-2.4.26
@@ -1065,7 +1068,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
-	o php-libawl-0.46
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1207,7 +1209,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snd-10.6
 	o snes9x-1.53
 	o snort-2.9.1
-	o solfege-3.20.1
+	o solfege-3.20.2
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.5
