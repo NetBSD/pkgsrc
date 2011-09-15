@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2281 2011/09/15 08:43:18 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2282 2011/09/15 09:05:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3509,7 +3509,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/firefox-l10n to 6.0.2 [obache 2011-09-13]
 	Updated x11/x11vnc to 0.9.13 [obache 2011-09-13]
 	Added fonts/fntsample version 3.2 [wiz 2011-09-13]
-	Added databases/pgbuildfarm version 4_5 [wiz 2011-09-13]
+	Added databases/pgbuildfarm version 4.5 [wiz 2011-09-13]
 	Updated security/ruby-bcrypt to 3.0.1 [taca 2011-09-13]
 	Updated mail/sylpheed to 3.1.2 [taca 2011-09-13]
 	Updated net/isc-dhcp4 to 4.2.2 [taca 2011-09-13]
