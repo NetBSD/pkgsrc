@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2010/09/30 08:27:52 obache Exp $
+# $NetBSD: Makefile,v 1.37 2011/09/16 05:46:24 obache Exp $
 
 DISTNAME=	mantisbt-1.1.7
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
