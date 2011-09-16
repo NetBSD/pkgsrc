@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.882 2011/08/25 13:33:01 jakllsch Exp $
+# $NetBSD: Makefile,v 1.883 2011/09/16 11:59:00 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -164,8 +164,6 @@ SUBDIR+=	gupnp-tools
 SUBDIR+=	hesiod
 SUBDIR+=	hf6to4
 SUBDIR+=	hlfl
-SUBDIR+=	hobbitclient
-SUBDIR+=	hobbitmon
 SUBDIR+=	host
 SUBDIR+=	howl
 SUBDIR+=	hping
