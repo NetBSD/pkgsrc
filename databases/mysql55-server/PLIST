@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/07/28 08:10:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/09/16 07:13:48 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -6,6 +6,7 @@ bin/myisamchk
 bin/myisamlog
 bin/myisampack
 ${PLIST.embedded}bin/mysql_client_test_embedded
+${PLIST.embedded}bin/mysql_embedded
 bin/mysql_tzinfo_to_sql
 bin/mysql_waitpid
 ${PLIST.embedded}bin/mysqltest_embedded
@@ -20,6 +21,7 @@ lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth.so
 ${PLIST.auth_socket}lib/mysql/plugin/auth_socket.so
 lib/mysql/plugin/auth_test_plugin.so
+lib/mysql/plugin/daemon_example.ini
 lib/mysql/plugin/ha_archive.so
 lib/mysql/plugin/ha_blackhole.so
 lib/mysql/plugin/ha_example.so
@@ -333,6 +335,8 @@ share/mysql/test/include/ctype_numconv.inc
 share/mysql/test/include/ctype_regex.inc
 share/mysql/test/include/ctype_utf8_table.inc
 share/mysql/test/include/ctype_utf8mb4.inc
+share/mysql/test/include/daemon_example_bad_format.ini
+share/mysql/test/include/daemon_example_bad_soname.ini
 share/mysql/test/include/ddl_i18n.check_events.inc
 share/mysql/test/include/ddl_i18n.check_sp.inc
 share/mysql/test/include/ddl_i18n.check_triggers.inc
@@ -1010,6 +1014,7 @@ share/mysql/test/r/mysql_cp932.result
 share/mysql/test/r/mysql_embedded.result
 share/mysql/test/r/mysql_locale_posix.result
 share/mysql/test/r/mysql_not_windows.result
+share/mysql/test/r/mysql_plugin.result
 share/mysql/test/r/mysql_protocols.result
 share/mysql/test/r/mysql_upgrade.result
 share/mysql/test/r/mysql_upgrade_ssl.result
@@ -3926,6 +3931,7 @@ share/mysql/test/suite/rpl/r/rpl_row_blob_innodb.result
 share/mysql/test/suite/rpl/r/rpl_row_blob_myisam.result
 share/mysql/test/suite/rpl/r/rpl_row_colSize.result
 share/mysql/test/suite/rpl/r/rpl_row_conflicts.result
+share/mysql/test/suite/rpl/r/rpl_row_corruption.result
 share/mysql/test/suite/rpl/r/rpl_row_create_table.result
 share/mysql/test/suite/rpl/r/rpl_row_delayed_ins.result
 share/mysql/test/suite/rpl/r/rpl_row_drop.result
@@ -4290,6 +4296,8 @@ share/mysql/test/suite/rpl/t/rpl_row_blob_innodb.test
 share/mysql/test/suite/rpl/t/rpl_row_blob_myisam.test
 share/mysql/test/suite/rpl/t/rpl_row_colSize.test
 share/mysql/test/suite/rpl/t/rpl_row_conflicts.test
+share/mysql/test/suite/rpl/t/rpl_row_corruption-slave.opt
+share/mysql/test/suite/rpl/t/rpl_row_corruption.test
 share/mysql/test/suite/rpl/t/rpl_row_create_table.test
 share/mysql/test/suite/rpl/t/rpl_row_delayed_ins.test
 share/mysql/test/suite/rpl/t/rpl_row_drop.test
@@ -4627,6 +4635,7 @@ share/mysql/test/suite/sys_vars/r/innodb_doublewrite_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_fast_shutdown_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_file_format_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_file_format_check_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_file_format_max_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_file_io_threads_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_file_per_table_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_flush_log_at_trx_commit_basic.result
@@ -4648,11 +4657,14 @@ share/mysql/test/suite/sys_vars/r/innodb_old_blocks_time_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_open_files_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_purge_batch_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_purge_threads_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_random_read_ahead_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_read_ahead_threshold_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_read_io_threads_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_replication_delay_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_rollback_on_timeout_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_rollback_segments_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_spin_wait_delay_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_stats_method_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_stats_on_metadata_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_stats_sample_pages_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_strict_mode_basic.result
@@ -5088,6 +5100,7 @@ share/mysql/test/suite/sys_vars/t/innodb_doublewrite_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_fast_shutdown_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_file_format_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_file_format_check_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_file_format_max_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_file_io_threads_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_file_per_table_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_flush_log_at_trx_commit_basic.test
@@ -5109,11 +5122,14 @@ share/mysql/test/suite/sys_vars/t/innodb_old_blocks_time_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_open_files_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_purge_batch_size_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_purge_threads_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_random_read_ahead_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_read_ahead_threshold_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_read_io_threads_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_replication_delay_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_rollback_on_timeout_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_rollback_segments_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_spin_wait_delay_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_stats_method_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_stats_on_metadata_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_stats_sample_pages_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_strict_mode_basic.test
@@ -5825,6 +5841,8 @@ share/mysql/test/t/mysql_delimiter_source.sql
 share/mysql/test/t/mysql_embedded.test
 share/mysql/test/t/mysql_locale_posix.test
 share/mysql/test/t/mysql_not_windows.test
+share/mysql/test/t/mysql_plugin-master.opt
+share/mysql/test/t/mysql_plugin.test
 share/mysql/test/t/mysql_protocols.test
 share/mysql/test/t/mysql_upgrade.test
 share/mysql/test/t/mysql_upgrade_ssl.test
