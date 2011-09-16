@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:28:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/09/16 15:39:29 fhajny Exp $
 bin/pbzip2
+bin/pbunzip2
+bin/pbzcat
 man/man1/pbzip2.1
 share/doc/pbzip2/COPYING
 share/doc/pbzip2/README
