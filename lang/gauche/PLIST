@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/12/16 06:58:20 enami Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/09/16 07:49:25 enami Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -46,6 +46,7 @@ lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sxml--sxpath.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sxml--tools.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/text--gettext.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/text--tr.so
+lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/text--unicode.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/util--match.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/util--queue.so
 lib/gauche-0.9/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/util--sparse.so
@@ -108,7 +109,7 @@ lib/gauche-0.9/${PKGVERSION}/include/gc_typed.h
 lib/gauche-0.9/${PKGVERSION}/include/gc_version.h
 lib/libgauche-0.9.so
 lib/libgauche-0.9.so.0
-lib/libgauche-0.9.so.0.1
+lib/libgauche-0.9.so.0.2
 man/man1/gauche-cesconv.1
 man/man1/gauche-config.1
 man/man1/gauche-install.1
@@ -116,6 +117,7 @@ man/man1/gauche-package.1
 man/man1/gosh.1
 share/aclocal/gauche.m4
 share/gauche-0.9/${PKGVERSION}/aclocal.m4
+share/gauche-0.9/${PKGVERSION}/lib/binary/ftype.scm
 share/gauche-0.9/${PKGVERSION}/lib/binary/io.scm
 share/gauche-0.9/${PKGVERSION}/lib/binary/pack.scm
 share/gauche-0.9/${PKGVERSION}/lib/cesconv
@@ -143,6 +145,7 @@ share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/cise.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/literal.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/precomp.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/stub.scm
+share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/tmodule.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/type.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/cgen/unit.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/charconv.scm
@@ -157,6 +160,7 @@ share/gauche-0.9/${PKGVERSION}/lib/gauche/experimental/lamb.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/experimental/ref.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/fcntl.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/fileutil.scm
+share/gauche-0.9/${PKGVERSION}/lib/gauche/generator.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/hashutil.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/hook.scm
 share/gauche-0.9/${PKGVERSION}/lib/gauche/interactive.scm
@@ -258,6 +262,7 @@ share/gauche-0.9/${PKGVERSION}/lib/srfi-42.scm
 share/gauche-0.9/${PKGVERSION}/lib/srfi-43.scm
 share/gauche-0.9/${PKGVERSION}/lib/srfi-5.scm
 share/gauche-0.9/${PKGVERSION}/lib/srfi-55.scm
+share/gauche-0.9/${PKGVERSION}/lib/srfi-60.scm
 share/gauche-0.9/${PKGVERSION}/lib/srfi-7.scm
 share/gauche-0.9/${PKGVERSION}/lib/srfi-9.scm
 share/gauche-0.9/${PKGVERSION}/lib/srfi-98.scm
@@ -278,6 +283,7 @@ share/gauche-0.9/${PKGVERSION}/lib/text/progress.scm
 share/gauche-0.9/${PKGVERSION}/lib/text/sql.scm
 share/gauche-0.9/${PKGVERSION}/lib/text/tr.scm
 share/gauche-0.9/${PKGVERSION}/lib/text/tree.scm
+share/gauche-0.9/${PKGVERSION}/lib/text/unicode.scm
 share/gauche-0.9/${PKGVERSION}/lib/util/combinations.scm
 share/gauche-0.9/${PKGVERSION}/lib/util/digest.scm
 share/gauche-0.9/${PKGVERSION}/lib/util/isomorph.scm
