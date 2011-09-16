@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/09/12 20:14:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2011/09/16 10:08:20 adam Exp $
 
 .include "dist.mk"
 
@@ -31,6 +31,13 @@ PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 .if ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-pth
+.endif
+
+.include "../../mk/compiler.mk"
+
+# Clang needs -fwrapv
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-fwrapv
 .endif
 
 .include "../../mk/bsd.prefs.mk"
