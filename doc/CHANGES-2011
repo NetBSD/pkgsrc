@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2294 2011/09/16 12:09:25 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2295 2011/09/16 14:28:13 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3567,3 +3567,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed net/hobbitmon successor net/xymon [obache 2011-09-16]
 	Removed net/hobbitclient successor net/xymonclient [obache 2011-09-16]
 	Removed mail/cyrus-imapd21 successor mail/cyrus-imapd [obache 2011-09-16]
+	Updated mail/dovecot2 to 2.0.15 [ghen 2011-09-16]
