@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:41 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2011/09/16 05:46:25 obache Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://www.blursoft.com/releases/
 
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.0:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
-DEPENDS+=	mysql-server>=4.1:../../databases/mysql5-server
+DEPENDS+=	mysql-server>=4.1:../../databases/mysql51-server
 
 USE_TOOLS+=	pax
 
