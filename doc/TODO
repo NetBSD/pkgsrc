@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10561 2011/09/15 14:29:18 taca Exp $
+$NetBSD: TODO,v 1.10562 2011/09/16 07:51:08 enami Exp $
 
 Suggested new packages
 ======================
@@ -663,7 +663,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
-	o gauche-0.9.2
 	o gawk-4.0.0
 	o gbdfed-1.6
 	o gcal-3.6.1
