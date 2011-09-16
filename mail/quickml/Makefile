@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/19 10:01:53 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/16 02:26:44 obache Exp $
 #
 
 DISTNAME=	quickml-0.7
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://0xcc.net/quickml/
 
