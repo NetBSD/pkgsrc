@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/09/16 11:13:32 ryoon Exp $
+
+To use the Japanese translation, you have to copy or symlink a font with
+Japanese characters to ${PREFIX}/share/lincity-ng/fonts/sans-ja_JP.ttf.
+
+===========================================================================
