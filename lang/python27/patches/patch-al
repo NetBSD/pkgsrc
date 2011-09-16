@@ -1,13 +1,22 @@
-$NetBSD: patch-al,v 1.4 2011/09/16 08:50:44 adam Exp $
+$NetBSD: patch-al,v 1.5 2011/09/16 19:17:52 bsiegert Exp $
 
---- configure.orig	2011-06-11 15:46:28.000000000 +0000
+--- configure.orig	Sat Jun 11 15:46:04 2011
 +++ configure
+@@ -3026,7 +3026,7 @@ case $ac_sys_system/$ac_sys_release in
+   # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
+   # In addition, Stefan Krah confirms that issue #1244610 exists through
+   # OpenBSD 4.6, but is fixed in 4.7.
+-  OpenBSD/2.* | OpenBSD/3.[0123456789] | OpenBSD/4.[0123456])
++  OpenBSD/2.* | OpenBSD/3.[0123456789] | OpenBSD/4.[0123456] | MirBSD/*)
+     define_xopen_source=no
+     # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
+     # also defined. This can be overridden by defining _BSD_SOURCE
 @@ -4927,15 +4927,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
 -    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*)
-+    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*|OpenBSD*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*|OpenBSD*|MirBSD*)
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
@@ -19,7 +28,7 @@ $NetBSD: patch-al,v 1.4 2011/09/16 08:50:44 adam Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
  	  ;;
      hp*|HP*)
-@@ -7648,9 +7647,9 @@ then
+@@ -7648,9 +7643,9 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -32,7 +41,7 @@ $NetBSD: patch-al,v 1.4 2011/09/16 08:50:44 adam Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -7674,15 +7673,15 @@ then
+@@ -7674,15 +7669,15 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -52,7 +61,13 @@ $NetBSD: patch-al,v 1.4 2011/09/16 08:50:44 adam Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -7713,6 +7712,9 @@ then
+@@ -7710,9 +7705,15 @@ then
+ 				   ;;
+ 				esac
+ 		fi;;
++	MirBSD*)
++		LDSHARED='$(CC) -shared $(CCSHARED)'
++		LDCXXSHARED='$(CXX) -shared $(CCSHARED)';;
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
@@ -62,15 +77,23 @@ $NetBSD: patch-al,v 1.4 2011/09/16 08:50:44 adam Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes" ; then
  			LDSHARED='$(CC) -shared'
-@@ -7757,6 +7759,7 @@ then
+@@ -7756,7 +7757,8 @@ then
+ 		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
- 	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
+-	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
++	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*) CCSHARED="-fPIC";;
 +	Interix*) CCSHARED="";;
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -7813,6 +7816,7 @@ then
+@@ -7808,11 +7810,12 @@ then
+ 	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
+ 	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
+ 	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
+-	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*)
++	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*)
+ 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
