@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/08/09 18:59:23 gls Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/16 05:46:27 obache Exp $
 
 DISTNAME=	moodle-2.1.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.moodle.org/stable21/ \
 		http://download2.moodle.org/stable21/ \

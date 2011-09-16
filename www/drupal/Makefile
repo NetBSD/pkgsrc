@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2010/10/06 07:52:47 obache Exp $
+# $NetBSD: Makefile,v 1.48 2011/09/16 05:46:26 obache Exp $
 
 DISTNAME=	drupal-5.22
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
