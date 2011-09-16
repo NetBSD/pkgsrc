@@ -1,0 +1,53 @@
+$NetBSD: patch-configure.ac,v 1.1 2011/09/16 05:18:58 minskim Exp $
+
+Compatibility for b64_ntop.  SVN Revisions 2565 and 2568.
+
+--- configure.ac.orig	2011-07-09 16:00:17.000000000 +0000
++++ configure.ac
+@@ -121,9 +121,44 @@ if test "x$found_curses" = xno; then
+     AC_MSG_ERROR("curses not found")
+ fi
+ 
++# Check for b64_ntop.
++AC_MSG_CHECKING(for b64_ntop)
++AC_TRY_LINK(
++	[
++		#include <sys/types.h>
++		#include <netinet/in.h>
++		#include <resolv.h>
++	],
++	[b64_ntop(NULL, 0, NULL, 0);],
++	found_b64_ntop=yes,
++	found_b64_ntop=no
++)
++if test "x$found_b64_ntop" = xno; then
++	AC_MSG_RESULT(no)
++
++	AC_MSG_CHECKING(for b64_ntop with -lresolv)
++	LIBS="$LIBS -lresolv"
++	AC_TRY_LINK(
++		[
++			#include <sys/types.h>
++			#include <netinet/in.h>
++			#include <resolv.h>
++		],
++		[b64_ntop(NULL, 0, NULL, 0);],
++		found_b64_ntop=yes,
++		found_b64_ntop=no
++	)
++	if test "x$found_b64_ntop" = xno; then
++		AC_MSG_RESULT(no)
++	fi
++fi
++if test "x$found_b64_ntop" = xyes; then
++	AC_DEFINE(HAVE_B64_NTOP)
++	AC_MSG_RESULT(yes)
++fi
++AM_CONDITIONAL(NO_B64_NTOP, [test "x$found_b64_ntop" = xno])
++
+ # Look for networking libraries.
+-AC_SEARCH_LIBS(b64_ntop, resolv)
+-AC_SEARCH_LIBS(__b64_ntop, resolv)
+ AC_SEARCH_LIBS(inet_ntoa, nsl)
+ AC_SEARCH_LIBS(socket, socket)
+ AC_CHECK_LIB(xnet, socket)
