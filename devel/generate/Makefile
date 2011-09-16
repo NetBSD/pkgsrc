@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/09/30 18:30:20 darcy Exp $
+# $NetBSD: Makefile,v 1.21 2011/09/16 17:21:46 darcy Exp $
 #
 
-DISTNAME=	generate-2.6
+DISTNAME=	generate-2.7
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.Vex.Net/pub/distrib/
