@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.14 2010/02/18 13:45:35 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2011/09/16 05:46:22 obache Exp $
 #
 
 DISTNAME=	adodb496a
 PKGNAME=	adodb-4.96a
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adodb/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://adodb.sourceforge.net/
-COMMENT=	Active Data Objects Data Base for php4
+COMMENT=	Active Data Objects Data Base for php
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,10 +19,7 @@ NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
 .include "../../lang/php/phpversion.mk"
-
-.if ${PHP_PKG_PREFIX} == "php5"
-.include "../../lang/php5/buildlink3.mk"
-.endif
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/adodb
