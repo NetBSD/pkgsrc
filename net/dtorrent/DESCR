@@ -3,5 +3,3 @@ ctorrent, which it is based on, high performance with minimal system
 resources and dependencies is a priority. Enhanced CTorrent adds additional
 features like dynamic adjustments and fixes several bugs in the original
 ctorrent client (obsolete and marked EOL in pkgsrc repository).
-
-More info at: http://www.rahul.net/dholmes/ctorrent/
