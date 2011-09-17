@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/17 22:44:35 minskim Exp $
+share/texmf-dist/doc/latex/showtags/showtags-doc.pdf
+share/texmf-dist/doc/latex/showtags/showtags-doc.tex
