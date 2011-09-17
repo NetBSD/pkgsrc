@@ -1,0 +1,6 @@
+Provides a command to print a number with (potentially different)
+separators every three digits in the parts either side of the decimal
+point (the point itself is also configurable). The macro is fully
+expandable and not fragile (unless one of the separators is). There is
+also a command \sepnumform, that may be used when defining \the<counter>
+macros.
