@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 11:59:49 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/09/17 14:33:45 obache Exp $
 
-SHA1 (scim-input-pad-0.1.2.tar.gz) = e3c5bceba046f627ef0db22c7ab4142f61ba38dc
-RMD160 (scim-input-pad-0.1.2.tar.gz) = 0495970fc67cfe6b215fd7aea6ec21fe4862d1f5
-Size (scim-input-pad-0.1.2.tar.gz) = 584077 bytes
+SHA1 (scim-input-pad-0.1.3.tar.gz) = 276f80c6d0f035f35324c5caa28b6ecd68dd19cf
+RMD160 (scim-input-pad-0.1.3.tar.gz) = ab58750961bfd8aa14ab9275df7a54b7a644f7be
+Size (scim-input-pad-0.1.3.tar.gz) = 1362611 bytes
+SHA1 (patch-data_Makefile.am) = 17732b2da5c9a98975db3b546e2e9d542ccf5d70
+SHA1 (patch-data_Makefile.in) = 2f2f47301266e04349c2f5ddccf9fa77125a81ab
