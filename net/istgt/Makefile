@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/09/10 15:47:20 sborrill Exp $
+# $NetBSD: Makefile,v 1.7 2011/09/17 07:01:47 obache Exp $
 #
 
 DISTNAME=		istgt-20110907
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	istgt
 
+CONFIGURE_ARGS+=	--with-configdir=${PKG_SYSCONFDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
