@@ -1,0 +1,12 @@
+$NetBSD: patch-data_Makefile.am,v 1.1 2011/09/17 14:34:51 obache Exp $
+
+--- data/Makefile.am.orig	2011-06-02 15:12:24.000000000 +0000
++++ data/Makefile.am
+@@ -117,6 +117,5 @@ EXTRA_DIST		= input-pad.png $(INPUT_PAD_
+ 
+ CLEANFILES		= *.bak scim-input-pad $(INPUT_PAD_DEST_FILES)
+ 
+-%.pad:	%.pad.in
+-	$(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; \
++%.pad:	%.pad.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po)
+ 	LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
