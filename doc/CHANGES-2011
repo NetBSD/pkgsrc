@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2299 2011/09/17 12:23:17 mef Exp $
+$NetBSD: CHANGES-2011,v 1.2300 2011/09/17 12:47:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3584,3 +3584,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/cy2-sql to 2.1.25 [obache 2011-09-17]
 	Updated security/cyrus-saslauthd to 2.1.25 [obache 2011-09-17]
 	Updated misc/elscreen to 1.4.6 [mef 2011-09-17]
+	Updated x11/xlockmore to 5.34 [ryoon 2011-09-17]
+	Updated x11/xlockmore-lite to 5.34 [ryoon 2011-09-17]
