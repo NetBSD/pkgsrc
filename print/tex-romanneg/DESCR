@@ -1,0 +1,2 @@
+Causes the page numbers in the DVI file (as defined by \count0) to be
+negative when roman pagenumbering is in effect.
