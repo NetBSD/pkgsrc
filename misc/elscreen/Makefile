@@ -1,35 +1,39 @@
-# $NetBSD: Makefile,v 1.17 2009/08/06 01:44:54 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2011/09/17 12:02:17 mef Exp $
 #
 
-DISTNAME=	elscreen-1.4.5
+DISTNAME=	elscreen-1.4.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/ \
 		ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/old/
 DISTFILES=	${DISTNAME}.tar.gz \
+		elscreen-color-theme-0.0.0.tar.gz \
 		elscreen-dired-0.1.0.tar.gz \
 		elscreen-dnd-0.0.0.tar.gz \
-		elscreen-gf-1.5.2.tar.gz \
+		elscreen-gf-1.5.3.tar.gz \
 		elscreen-goby-0.0.0.tar.gz \
-		elscreen-howm-0.1.0.tar.gz \
-		elscreen-server-0.0.1.tar.gz \
+		elscreen-howm-0.1.3.tar.gz \
+		elscreen-server-0.2.0.tar.gz \
 		elscreen-w3m-0.2.2.tar.gz \
-		elscreen-wl-0.7.0.tar.gz
+		elscreen-wl-0.8.0.tar.gz
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.morishima.net/~naoto/software/elscreen/
 COMMENT=	Window manager within Emacs
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+USE_LANGUAGES+=	c
 
 NO_BUILD=	yes
 
-EMACS_BUILDLINK=# defined
+EMACS_BUILDLINK=# empty
+
+INSTALLATION_DIRS+= ${EMACS_LISPPREFIX}/elscreen
+INSTALLATION_DIRS+= share/doc/elscreen
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/elscreen
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/elscreen
 	${INSTALL_DATA} ${WRKDIR}/*/*.el ${DESTDIR}${EMACS_LISPPREFIX}/elscreen
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/elscreen
 
