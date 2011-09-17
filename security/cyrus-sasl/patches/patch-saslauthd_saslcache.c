@@ -1,7 +1,9 @@
-$NetBSD: patch-ah,v 1.1 2006/08/11 12:51:32 taca Exp $
+$NetBSD: patch-saslauthd_saslcache.c,v 1.1 2011/09/17 11:32:02 obache Exp $
 
---- saslcache.c.orig	2003-03-29 04:59:24.000000000 +0900
-+++ saslcache.c
+* fixes build with gcc-4.
+
+--- saslauthd/saslcache.c.orig	2003-03-28 19:59:24.000000000 +0000
++++ saslauthd/saslcache.c
 @@ -137,7 +137,7 @@ int main(int argc, char **argv) {
  	}
  
