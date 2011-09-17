@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.2 2006/04/02 17:44:16 schmonz Exp $
+# $NetBSD: options.mk,v 1.3 2011/09/17 11:12:26 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucspi-ssl
-PKG_SUPPORTED_OPTIONS+=	ucspi-ssl-perl tls
+PKG_SUPPORTED_OPTIONS+=	perl tls
+PKG_OPTIONS_LEGACY_OPTS+=	ucspi-ssl-perl:perl
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mucspi-ssl-perl)
+.if !empty(PKG_OPTIONS:Mperl)
 .include "../../lang/perl5/buildlink3.mk"
 USE_TOOLS+=		perl:run
 SSL_PROGRAMS+=		sslperl
