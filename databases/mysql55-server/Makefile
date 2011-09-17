@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/07/08 09:32:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/17 11:33:35 tron Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	mysqs
 COMMENT=	MySQL 5, a free SQL database (server)
 
@@ -71,11 +72,6 @@ CFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 .endif
 
-# mysql-client includes collide with server includes
-#.include "../../databases/mysql55-client/buildlink3.mk"
-# We only need readline to placate the configure script. None of the binaries
-# are linked against -lreadline, so make this only a build-time dependency.
-BUILDLINK_DEPMETHOD.readline=	build
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
