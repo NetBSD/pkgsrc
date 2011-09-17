@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/09/17 12:02:17 mef Exp $
+${EMACS_LISPPREFIX}/elscreen/elscreen-color-theme.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen-dired.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen-dnd.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen-gf.el
