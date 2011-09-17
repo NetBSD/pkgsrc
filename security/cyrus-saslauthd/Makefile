@@ -1,38 +1,27 @@
-# $NetBSD: Makefile,v 1.40 2010/02/19 19:23:50 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2011/09/17 11:32:02 obache Exp $
 
-DISTNAME=	cyrus-sasl-2.1.23
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
-PKGREVISION=	1
-CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
-		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
 
 CONFLICTS+=	cyrus-sasl<2.1.15nb2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../security/cyrus-sasl/Makefile.common"
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/saslauthd
-EXTRACT_ELEMENTS=	${DISTNAME}/saslauthd
-EXTRACT_ELEMENTS+=	${DISTNAME}/include/md5.h
-EXTRACT_ELEMENTS+=	${DISTNAME}/include/hmac-md5.h
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://asg.web.cmu.edu/sasl/
 COMMENT=		Cyrus SASL plaintext authentication daemon
 
-GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-BUILD_TARGET=		all saslcache testsaslauthd
+BUILD_TARGET=		all saslcache
 
 SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
 BUILD_DEFS+=		SASLSOCKETDIR
 FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR:Q}
 CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR:Q}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+
+BUILD_DIRS=		saslauthd
 
 .include "options.mk"
 
@@ -46,19 +35,17 @@ INSTALLATION_DIRS=	bin
 SUBST_CLASSES+=		sysconf
 SUBST_MESSAGE.sysconf=	Fixing path to ${PKG_SYSCONFDIR}
 SUBST_STAGE.sysconf=	post-build
-SUBST_FILES.sysconf=	LDAP_SASLAUTHD saslauthd.mdoc
+SUBST_FILES.sysconf=	saslauthd/LDAP_SASLAUTHD saslauthd/saslauthd.mdoc
 SUBST_SED.sysconf=	-e "s,/usr/local/etc/,${PKG_SYSCONFDIR}/,g"
 
-post-configure:
-	${LN} -sf saslauthd.h ${WRKSRC}/config.h
-
 post-install:
-	for f in saslcache testsaslauthd; do				\
-		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
+	for f in saslcache ; do				\
+		${INSTALL_PROGRAM} ${WRKSRC}/saslauthd/$$f \
+			${DESTDIR}${PREFIX}/bin/$$f;	\
 	done
 .if !empty(PKG_OPTIONS:Mldap)
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cyrus-saslauthd
-	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD			\
+	${INSTALL_DATA} ${WRKSRC}/saslauthd/LDAP_SASLAUTHD		\
 		${DESTDIR}${PREFIX}/share/doc/cyrus-saslauthd
 .endif
 

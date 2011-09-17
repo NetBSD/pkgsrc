@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/08/12 10:16:54 obache Exp $
+# $NetBSD: Makefile,v 1.57 2011/09/17 11:32:02 obache Exp $
 
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
@@ -15,13 +15,15 @@ SASL_DBTYPE?=		berkeley
 BUILD_DEFS+=		SASL_DBTYPE
 
 .if ${SASL_DBTYPE} == "berkeley"
-USE_DB185=		no
+BDB_ACCEPTED=		db3 db4
 .  include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ENV+=	BDB_TYPE=${BDB_TYPE:Q}
+CONFIGURE_ENV+=		with_bdb=${BDB_TYPE}
 .endif
 
 CONFIGURE_ARGS+=	--with-dblib=${SASL_DBTYPE:Q}
 CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
+
+BUILD_DEFS+=		VARBASE
 
 # Support using Cyrus saslauthd (security/cyrus-saslauthd) for plaintext
 # password authentication.
@@ -29,6 +31,12 @@ CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
 CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR:Q}
 BUILD_DEFS+=		SASLSOCKETDIR
+# let not to build & install saslauthd here.
+SUBST_CLASSES+=		saslauthd
+SUBST_STAGE.saslauthd=	pre-configure
+SUBST_FILES.saslauthd=	Makefile.in
+SUBST_SED.saslauthd=	-e 's|@SASLAUTHD_TRUE@|\#|g'
+SUBST_SED.saslauthd+=	-e 's|@SASLAUTHD_FALSE@||g'
 
 # Support using the Courier authdaemond (security/courier-authlib) for
 # plaintext password authentication.
@@ -50,6 +58,9 @@ CONFIGURE_ARGS+=	--with-devrandom=${SASL_ENTROPY_SOURCE:Q}
 .endif
 BUILD_DEFS+=		SASL_ENTROPY_SOURCE
 
+# Let not to build sample codes.
+CONFIGURE_ARGS+=	--disable-sample
+
 # CYRUS_USER		username of the Cyrus administrator
 # CYRUS_GROUP		group of the Cyrus administrator
 #
@@ -69,7 +80,7 @@ MESSAGE_SUBST+=		PLUGINDIR=${PLUGINDIR:Q}
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}/doc; for file in *.fig *.html *.txt; do		\
-		${INSTALL_DATA} $$file ${DESTDIR}${DOCDIR};		\
+		${INSTALL_DATA} $${file} ${DESTDIR}${DOCDIR};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
