@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/17 22:36:38 minskim Exp $
+share/texmf-dist/doc/latex/secdot/secdot.ltx
+share/texmf-dist/doc/latex/secdot/secdot.pdf
