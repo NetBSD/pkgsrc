@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2298 2011/09/17 11:39:28 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2299 2011/09/17 12:23:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3583,3 +3583,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added security/cy2-scram version 2.1.25 [obache 2011-09-17]
 	Updated security/cy2-sql to 2.1.25 [obache 2011-09-17]
 	Updated security/cyrus-saslauthd to 2.1.25 [obache 2011-09-17]
+	Updated misc/elscreen to 1.4.6 [mef 2011-09-17]
