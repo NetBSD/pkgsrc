@@ -1,30 +1,28 @@
-# $NetBSD: Makefile.common,v 1.15 2010/02/19 20:16:40 heinz Exp $
+# $NetBSD: Makefile.common,v 1.16 2011/09/17 11:32:02 obache Exp $
 #
-# This file is currently included by:
-#
-#	security/cyrus-sasl/Makefile
-#	security/cy2-anonymous/Makefile
-#	security/cy2-crammd5/Makefile
-#	security/cy2-digestmd5/Makefile
-#	security/cy2-gssapi/Makefile
-#	security/cy2-ldapdb/Makefile
-#	security/cy2-login/Makefile
-#	security/cy2-ntlm/Makefile
-#	security/cy2-otp/Makefile
-#	security/cy2-plain/Makefile
-#	security/cy2-sql/Makefile
+# used by security/cyrus-sasl/Makefile
+# used by security/cy2-anonymous/Makefile
+# used by security/cy2-crammd5/Makefile
+# used by security/cy2-digestmd5/Makefile
+# used by security/cy2-gssapi/Makefile
+# used by security/cy2-ldapdb/Makefile
+# used by security/cy2-login/Makefile
+# used by security/cy2-ntlm/Makefile
+# used by security/cy2-otp/Makefile
+# used by security/cy2-plain/Makefile
+# used by security/cy2-scram/Makefile
+# used by security/cy2-sql/Makefile
+# used by security/cyrus-saslauthd/Makefile
 #
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.23
+DISTNAME=	cyrus-sasl-2.1.25
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
-		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/ \
-		http://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
-		http://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
+MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/ \
+		ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://asg.web.cmu.edu/sasl/
 LICENSE=	original-bsd # CMU version
 
@@ -35,7 +33,7 @@ PATCHDIR=		${.CURDIR}/../cyrus-sasl/patches
 
 .if defined(SASL_PLUGIN) && !empty(SASL_PLUGIN:M[yY][eE][sS])
 BUILDLINK_ABI_DEPENDS.cyrus-sasl+=	\
-			cyrus-sasl>=${PKGVERSION:C/nb[0-9]*$//}
+			cyrus-sasl>=${PKGVERSION_NOREV}
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.cyrus-sasl}/include/sasl
 .endif
@@ -44,7 +42,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
 USE_LIBTOOL=		yes
-MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
 
 DOCDIR=			${PREFIX}/share/doc/cyrus-sasl
 PLUGINDIR=		${PREFIX}/lib/sasl2
@@ -56,6 +53,7 @@ CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--disable-anon		# ANONYMOUS
 CONFIGURE_ARGS+=	--disable-checkapop	# CHECKAPOP
 CONFIGURE_ARGS+=	--disable-cram		# CRAM-MD5
+CONFIGURE_ARGS+=	--disable-scram		# SCRAM
 CONFIGURE_ARGS+=	--disable-digest	# DIGEST-MD5
 CONFIGURE_ARGS+=	--disable-gssapi	# GSSAPI
 CONFIGURE_ARGS+=	--disable-krb4		# KERBEROS_V4
