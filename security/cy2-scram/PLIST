@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2011/09/17 11:32:03 obache Exp $
+lib/sasl2/libscram.la
