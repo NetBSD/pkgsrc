@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2296 2011/09/16 17:23:29 darcy Exp $
+$NetBSD: CHANGES-2011,v 1.2297 2011/09/17 11:34:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed mail/cyrus-imapd21 successor mail/cyrus-imapd [obache 2011-09-16]
 	Updated mail/dovecot2 to 2.0.15 [ghen 2011-09-16]
 	Updated devel/generate to 2.7 [darcy 2011-09-16]
+	Updated databases/mysql55-server to 5.5.16nb1 [tron 2011-09-17]
