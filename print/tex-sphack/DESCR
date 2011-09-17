@@ -1,0 +1,2 @@
+Change the kernel internal \@bsphack/\@esphack so that it is also
+invisible in vertical mode.
