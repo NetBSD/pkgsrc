@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.495 2011/09/17 22:32:36 minskim Exp $
+# $NetBSD: Makefile,v 1.496 2011/09/17 23:02:23 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -519,22 +519,38 @@ SUBDIR+=	tex-rotating-doc
 SUBDIR+=	tex-ruhyphen
 SUBDIR+=	tex-sansmath
 SUBDIR+=	tex-sansmath-doc
+SUBDIR+=	tex-secdot
+SUBDIR+=	tex-secdot-doc
+SUBDIR+=	tex-section
+SUBDIR+=	tex-section-doc
 SUBDIR+=	tex-sectsty
 SUBDIR+=	tex-sectsty-doc
 SUBDIR+=	tex-selectp
+SUBDIR+=	tex-sepnum
+SUBDIR+=	tex-sepnum-doc
 SUBDIR+=	tex-setspace
+SUBDIR+=	tex-shadow
+SUBDIR+=	tex-shadow-doc
+SUBDIR+=	tex-showtags
+SUBDIR+=	tex-showtags-doc
 SUBDIR+=	tex-skak
 SUBDIR+=	tex-skak-doc
 SUBDIR+=	tex-skaknew
 SUBDIR+=	tex-skaknew-doc
 SUBDIR+=	tex-soul
 SUBDIR+=	tex-soul-doc
+SUBDIR+=	tex-sphack
+SUBDIR+=	tex-sphack-doc
 SUBDIR+=	tex-srcltx
 SUBDIR+=	tex-srcltx-doc
+SUBDIR+=	tex-statex
+SUBDIR+=	tex-statex-doc
 SUBDIR+=	tex-sttools
 SUBDIR+=	tex-sttools-doc
 SUBDIR+=	tex-subfig
 SUBDIR+=	tex-subfig-doc
+SUBDIR+=	tex-subfigmat
+SUBDIR+=	tex-subfigmat-doc
 SUBDIR+=	tex-subfigure
 SUBDIR+=	tex-subfigure-doc
 SUBDIR+=	tex-substr
