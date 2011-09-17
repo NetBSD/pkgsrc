@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2011/09/16 13:44:44 christos Exp $
+# $NetBSD: Makefile,v 1.180 2011/09/17 14:12:11 wiz Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -63,6 +63,8 @@ CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-php
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-java
+CONFIGURE_ARGS+=	--disable-gssapi
+CONFIGURE_ARGS+=	--disable-gnutls
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
@@ -126,8 +128,6 @@ OWN_DIRS_PERMS+=	${CUPS_CACHE}/rss ${REAL_ROOT_USER} ${CUPS_GROUP} 0775
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/cups.pam
