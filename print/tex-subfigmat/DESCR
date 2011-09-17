@@ -1,0 +1,3 @@
+Defines an array/matrix-type environment that is used with the subfigure
+package to automate the placement of subfigures (or tables or text). The
+subfigures are placed left-to-right, top- to-bottom.
