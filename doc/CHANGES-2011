@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2306 2011/09/17 22:47:19 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.2307 2011/09/17 23:02:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3593,3 +3593,19 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-romanneg-doc version 2011 [minskim 2011-09-17]
 	Updated security/opendnssec to 1.3.2 [pettai 2011-09-17]
 	Updated net/unbound to 1.4.13 [pettai 2011-09-17]
+	Added print/tex-secdot version 1.0 [minskim 2011-09-17]
+	Added print/tex-secdot-doc version 1.0 [minskim 2011-09-17]
+	Added print/tex-section version 2011 [minskim 2011-09-17]
+	Added print/tex-section-doc version 2011 [minskim 2011-09-17]
+	Added print/tex-sepnum version 2.0 [minskim 2011-09-17]
+	Added print/tex-sepnum-doc version 2.0 [minskim 2011-09-17]
+	Added print/tex-shadow version 1.3 [minskim 2011-09-17]
+	Added print/tex-shadow-doc version 1.3 [minskim 2011-09-17]
+	Added print/tex-showtags version 1.05 [minskim 2011-09-17]
+	Added print/tex-showtags-doc version 1.05 [minskim 2011-09-17]
+	Added print/tex-sphack version 1.0 [minskim 2011-09-17]
+	Added print/tex-sphack-doc version 1.0 [minskim 2011-09-17]
+	Added print/tex-statex version 1.6 [minskim 2011-09-17]
+	Added print/tex-statex-doc version 1.6 [minskim 2011-09-17]
+	Added print/tex-subfigmat version 1.0 [minskim 2011-09-17]
+	Added print/tex-subfigmat-doc version 1.0 [minskim 2011-09-17]
