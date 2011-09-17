@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/09/17 11:33:35 tron Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/17 12:56:17 tron Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -19,6 +19,10 @@ CMAKE_ARGS+=		-DWITH_LIBWRAP=ON
 .if !empty(PKG_OPTIONS:Membedded-server)
 CMAKE_ARGS+=		-DWITH_EMBEDDED_SERVER=ON
 PLIST.embedded=		yes
+.else
+# We only need readline to placate the configure script if we don't build
+# the embedded server as it is the only binary linked against "readline".
+BUILDLINK_DEPMETHOD.readline=	build
 .endif
 
 # ndb-cluster does not configure with cmake
