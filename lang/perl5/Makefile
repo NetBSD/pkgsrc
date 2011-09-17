@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2011/08/05 18:06:14 adam Exp $
+# $NetBSD: Makefile,v 1.174 2011/09/17 18:51:35 brook Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -313,6 +313,8 @@ SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
 post-extract:
 		cp ${FILESDIR}/Policy.sh ${WRKSRC}/Policy.sh
+		cp ${FILESDIR}/cpan-DB_File-hints-netbsd.pl \
+			${WRKSRC}/cpan/DB_File/hints/netbsd.pl
 
 pre-configure:
 	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f -exec ${RM} -f {} \;
