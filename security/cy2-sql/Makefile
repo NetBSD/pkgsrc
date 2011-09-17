@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2010/09/30 10:49:14 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/09/17 11:32:03 obache Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-sql/}
-PKGREVISION=	1
 COMMENT=	Cyrus SASL SQL authentication plugin
 SASL_PLUGIN=	yes
 
@@ -10,7 +9,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../security/cyrus-sasl/Makefile.common"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cy2-sql
-PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite
+PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite sqlite3
 PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
@@ -34,6 +33,13 @@ CONFIGURE_ARGS+=	--without-pgsql
 CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite}
 .else
 CONFIGURE_ARGS+=	--without-sqlite
+.endif
+
+.if !empty(PKG_OPTIONS:Msqlite3)
+.  include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
+.else
+CONFIGURE_ARGS+=	--without-sqlite3
 .endif
 
 CONFIGURE_ARGS+=	--enable-sql

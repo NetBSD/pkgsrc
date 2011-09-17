@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2008/04/12 22:43:09 jlam Exp $
+# $NetBSD: options.mk,v 1.12 2011/09/17 11:32:02 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-saslauthd
 PKG_SUPPORTED_OPTIONS=	pam kerberos ldap gssapi
@@ -47,4 +47,6 @@ CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
+.else
+CONFIGURE_ARGS+=	--disable-gssapi
 .endif
