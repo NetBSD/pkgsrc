@@ -1,0 +1,16 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2011/09/17 14:34:51 obache Exp $
+
+--- data/Makefile.in.orig	2011-06-02 15:08:20.000000000 +0000
++++ data/Makefile.in
+@@ -663,9 +663,8 @@ uninstall-am: uninstall-binSCRIPTS unins
+ 	uninstall-scim_input_pad_dataDATA
+ 
+ 
+-%.pad:   %.pad.in
+-    $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; \
+-    LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
++%.pad:   %.pad.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po)
++	LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
