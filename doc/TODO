@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10563 2011/09/16 11:09:28 ryoon Exp $
+$NetBSD: TODO,v 1.10564 2011/09/17 12:03:57 mef Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elm-me-2.6plalpha26
-	o elscreen-1.4.6 [pkg/43967]
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
