@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.494 2011/08/22 16:31:52 minskim Exp $
+# $NetBSD: Makefile,v 1.495 2011/09/17 22:32:36 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -512,6 +512,8 @@ SUBDIR+=	tex-realscripts
 SUBDIR+=	tex-realscripts-doc
 SUBDIR+=	tex-relsize
 SUBDIR+=	tex-resume
+SUBDIR+=	tex-romanneg
+SUBDIR+=	tex-romanneg-doc
 SUBDIR+=	tex-rotating
 SUBDIR+=	tex-rotating-doc
 SUBDIR+=	tex-ruhyphen
