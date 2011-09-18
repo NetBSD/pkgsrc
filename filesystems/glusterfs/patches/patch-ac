@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-ac,v 1.4 2011/09/18 01:36:06 manu Exp $
 NetBSD does not have EDOOFUS
---- libglusterfs/src/compat-errno.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ libglusterfs/src/compat-errno.c	2011-07-22 08:58:37.000000000 +0200
+--- libglusterfs/src/compat-errno.c.orig	2011-08-23 14:31:37.000000000 +0200
++++ libglusterfs/src/compat-errno.c	2011-09-17 15:45:29.000000000 +0200
 @@ -857,11 +857,13 @@
          /*      ENOATTR         87              / * Attribute not found */
          gf_error_to_errno_array[GF_ERROR_CODE_NOATTR] = ENOATTR;
