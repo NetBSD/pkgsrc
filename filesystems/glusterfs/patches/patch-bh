@@ -1,12 +1,12 @@
-$NetBSD: patch-bh,v 1.5 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-bh,v 1.6 2011/09/18 01:36:06 manu Exp $
 
 NetBSD's <dirent.h> does a #defiine d_ino d_fileno. Since glusterfs 
 declares structs with d_ino members, we must include <dirent.h> early
 so that d_ino get preprocessed into d_fileno conssitently.
 
 Also define proper xdr types for NetBSD.
---- rpc/rpc-lib/src/xdr-common.h.orig	2011-07-14 14:21:10.000000000 +0200
-+++ rpc/rpc-lib/src/xdr-common.h	2011-07-22 09:00:19.000000000 +0200
+--- rpc/rpc-lib/src/xdr-common.h.orig	2011-08-23 14:31:38.000000000 +0200
++++ rpc/rpc-lib/src/xdr-common.h	2011-09-17 15:45:29.000000000 +0200
 @@ -29,8 +29,13 @@
  #include <sys/types.h>
  #include <rpc/xdr.h>

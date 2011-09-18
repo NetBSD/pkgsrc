@@ -1,7 +1,7 @@
-$NetBSD: patch-bj,v 1.5 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-bj,v 1.6 2011/09/18 01:36:06 manu Exp $
 Make sure NetBSD pulls proper FUSE header
---- xlators/mount/fuse/src/fuse-bridge.h.orig	2011-07-22 09:00:37.000000000 +0200
-+++ xlators/mount/fuse/src/fuse-bridge.h	2011-07-22 09:01:05.000000000 +0200
+--- xlators/mount/fuse/src/fuse-bridge.h.orig	2011-08-23 14:31:40.000000000 +0200
++++ xlators/mount/fuse/src/fuse-bridge.h	2011-09-17 15:45:29.000000000 +0200
 @@ -54,9 +54,9 @@
  
  #include "list.h"

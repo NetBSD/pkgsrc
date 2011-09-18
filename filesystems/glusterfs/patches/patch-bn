@@ -1,9 +1,5 @@
-$NetBSD: patch-bn,v 1.5 2011/08/09 07:15:42 manu Exp $
-
-Add xdr-sizeof() to the build
-
---- rpc/rpc-lib/src/Makefile.in.orig	2011-07-14 14:21:20.000000000 +0200
-+++ rpc/rpc-lib/src/Makefile.in	2011-07-22 09:01:21.000000000 +0200
+--- rpc/rpc-lib/src/Makefile.in.orig	2011-08-23 14:31:53.000000000 +0200
++++ rpc/rpc-lib/src/Makefile.in	2011-09-17 15:45:30.000000000 +0200
 @@ -59,9 +59,9 @@
  libgfrpc_la_DEPENDENCIES =  \
  	$(top_builddir)/libglusterfs/src/libglusterfs.la
@@ -15,7 +11,7 @@ Add xdr-sizeof() to the build
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -222,9 +222,9 @@
+@@ -228,9 +228,9 @@
  target_alias = @target_alias@
  lib_LTLIBRARIES = libgfrpc.la
  libgfrpc_la_SOURCES = auth-unix.c rpcsvc-auth.c rpcsvc.c auth-null.c \
@@ -26,7 +22,7 @@ Add xdr-sizeof() to the build
  libgfrpc_la_LIBADD = $(top_builddir)/libglusterfs/src/libglusterfs.la
  noinst_HEADERS = rpcsvc.h rpc-transport.h xdr-common.h xdr-rpc.h xdr-rpcclnt.h \
  	rpc-clnt.h rpcsvc-common.h protocol-common.h
-@@ -308,8 +308,9 @@
+@@ -314,8 +314,9 @@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/auth-null.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/auth-unix.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rpc-clnt.Plo@am__quote@

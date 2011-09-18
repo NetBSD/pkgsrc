@@ -1,15 +1,5 @@
-$NetBSD: patch-br,v 1.4 2011/08/09 07:15:42 manu Exp $
-
-- Hide .attribute to glusterfs clients in order to make sure it will
-not be distributed by the cluster/dht xlator
-
-- Use mkfifo for creating fifo, as it will fail with mknod.
-
-- Use linkat(2) when linking on object that can be symlinks to 
-directories and non existing paths.
-
---- xlators/storage/posix/src/posix.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ xlators/storage/posix/src/posix.c	2011-08-03 10:05:22.000000000 +0200
+--- xlators/storage/posix/src/posix.c.orig	2011-08-23 14:31:42.000000000 +0200
++++ xlators/storage/posix/src/posix.c	2011-09-17 15:45:30.000000000 +0200
 @@ -36,8 +36,12 @@
  #ifndef GF_BSD_HOST_OS
  #include <alloca.h>
@@ -23,7 +13,7 @@ directories and non existing paths.
  #include "md5.h"
  #include "checksum.h"
  #include "dict.h"
-@@ -1229,8 +1233,13 @@
+@@ -1232,8 +1236,13 @@
                          loc->path, strerror (op_errno));
                  goto out;
          }
@@ -37,7 +27,7 @@ directories and non existing paths.
  
          if (op_ret == -1) {
                  op_errno = errno;
-@@ -2122,9 +2131,20 @@
+@@ -2125,9 +2134,20 @@
                          newparentpath, strerror (op_errno));
                  goto out;
          }
@@ -58,25 +48,3 @@ directories and non existing paths.
                  op_errno = errno;
                  gf_log (this->name, GF_LOG_ERROR,
                          "link %s to %s failed: %s",
-@@ -4313,8 +4333,21 @@
- 
-                 if ((!strcmp(real_path, base_path))
-                     && (!strcmp(entry->d_name, GF_REPLICATE_TRASH_DIR)))
-                         continue;
-+#ifdef __NetBSD__
-+		/*
-+		 * NetBSD with UFS1 backend uses backing files for
-+		 * extended attributes. They can be found in a
-+		 * .attribute file located at the root of the filesystem
-+		 * We hide it to glusterfs clients, since chaos will occur 
-+		 * when the cluster/dht xlator decides to distribute
-+		 * exended attribute backing file accross storage servers.
-+		 */ 
-+                if ((!strcmp(real_path, base_path))
-+                    && (!strcmp(entry->d_name, ".attribute")))
-+                        continue;
-+#endif /* __NetBSD__ */
- 
-                 if ((!strcmp (real_path, base_path))
-                     && (!strncmp (GF_HIDDEN_PATH, entry->d_name,
-                                   strlen(GF_HIDDEN_PATH)))) {

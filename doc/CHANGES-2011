@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2309 2011/09/18 01:21:51 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2310 2011/09/18 01:36:06 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -1579,7 +1579,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/youtube-dl to 20110329 [ryoon 2011-04-17]
 	Updated databases/sqlite3 to 3.7.6.2 [adam 2011-04-17]
 	Updated databases/sqlite3-tcl to 3.7.6.2 [adam 2011-04-17]
-	Updated filesystems/glusterfs to 31.4 [manu 2011-04-18]
+	Updated filesystems/glusterfs to 3.1.4 [manu 2011-04-18]
 	Updated devel/orc to 0.4.11nb1 [he 2011-04-18]
 	Updated www/ruby-httpclient to 2.2.0.1 [obache 2011-04-19]
 	Updated textproc/dbtoepub to 1.76.1 [roy 2011-04-19]
@@ -3617,3 +3617,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-seminar version 1.5 [minskim 2011-09-18]
 	Added print/tex-seminar-doc version 1.5 [minskim 2011-09-18]
 	Updated print/teTeX3-texmf to 3.0nb31 [minskim 2011-09-18]
+	Updated filesystems/glusterfs to 3.2.3 [manu 2011-09-18]

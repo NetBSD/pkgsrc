@@ -1,9 +1,9 @@
-$NetBSD: patch-as,v 1.6 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-as,v 1.7 2011/09/18 01:36:06 manu Exp $
 
 Add @GF_FUSE_LDADD@ to fuse.so library dependecies so that -lperfuse is
 added at configure time for NetBSD.
---- xlators/mount/fuse/src/Makefile.in.orig	2011-07-14 14:21:24.000000000 +0200
-+++ xlators/mount/fuse/src/Makefile.in	2011-07-22 09:00:00.000000000 +0200
+--- xlators/mount/fuse/src/Makefile.in.orig	2011-08-23 14:31:57.000000000 +0200
++++ xlators/mount/fuse/src/Makefile.in	2011-09-17 15:45:29.000000000 +0200
 @@ -55,9 +55,9 @@
  am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
  am__installdirs = "$(DESTDIR)$(xlatordir)"
