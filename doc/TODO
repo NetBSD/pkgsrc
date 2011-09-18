@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10567 2011/09/18 15:05:11 wiz Exp $
+$NetBSD: TODO,v 1.10568 2011/09/18 15:05:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.18
+	o calibre-0.8.19
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
@@ -469,7 +469,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cjk-lyx-1.4.4
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-1.6.16
+	o clutter-1.6.18
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compositeproto-0.4.2
@@ -897,7 +897,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
-	o libgdata-0.10.0
+	o libgdata-0.10.1
+	o libgee-0.6.2
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.0.3
 	o libgnomedb-3.1.2
@@ -921,7 +922,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librep-0.92.0
 	o libslang2-2.2.4
-	o libssh-0.5.0 [www.libssh.org]
+	o libssh-0.5.2 [www.libssh.org]
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
@@ -1073,6 +1074,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
+	o php-libawl-0.47
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1229,7 +1231,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
-	o stunnel-4.43
+	o stunnel-4.44
 	o subtitleeditor-0.33.0
 	o sudo-1.8.2
 	o supertuxkart-0.7.2
@@ -1304,6 +1306,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
+	o vala-0.14.0
 	o valgrind-3.6.1
 	o vbetool-1.1
 	o vera-1.17
@@ -1329,12 +1332,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o wdiff-1.0.0
+	o wdiff-1.0.1
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.560 [security]
 	o websvn-2.3.2
 	o weechat-0.3.5
-	o wget-1.13.3
+	o wget-1.13.4
 	o whohas-0.24
 	o windowlab-1.40
 	o wine-devel-1.3.28
