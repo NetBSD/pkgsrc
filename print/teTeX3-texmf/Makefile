@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2011/03/18 21:56:07 minskim Exp $
+# $NetBSD: Makefile,v 1.51 2011/09/18 01:21:30 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -162,6 +162,7 @@ DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
 DEPENDS+=	tex-sansmath-[0-9]*:../../print/tex-sansmath
 DEPENDS+=	tex-sectsty-[0-9]*:../../print/tex-sectsty
 DEPENDS+=	tex-selectp-[0-9]*:../../print/tex-selectp
+DEPENDS+=	tex-seminar-[0-9]*:../../print/tex-seminar
 DEPENDS+=	tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
@@ -305,7 +306,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/preprint
 	rm -rf ${WRKSRC}/doc/latex/ps[g-n]*
 	rm -rf ${WRKSRC}/doc/latex/rotating
-	rm -rf ${WRKSRC}/doc/latex/sectsty
+	rm -rf ${WRKSRC}/doc/latex/se*
 	rm -rf ${WRKSRC}/doc/latex/soul
 	rm -rf ${WRKSRC}/doc/latex/stmaryrd
 	rm -rf ${WRKSRC}/doc/latex/sub*
@@ -501,6 +502,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/rotating
 	rm -rf ${WRKSRC}/tex/latex/selectp
 	rm -rf ${WRKSRC}/tex/latex/sec*
+	rm -rf ${WRKSRC}/tex/latex/seminar
 	rm -rf ${WRKSRC}/tex/latex/set*
 	rm -rf ${WRKSRC}/tex/latex/shadow
 	rm -rf ${WRKSRC}/tex/latex/showtags
