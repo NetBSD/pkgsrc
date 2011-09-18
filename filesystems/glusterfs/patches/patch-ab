@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.6 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-ab,v 1.7 2011/09/18 01:36:06 manu Exp $
 
 NetBSD does not have AI_ADDRCONFIG. This patch has a side effect: glusterfsd
 listens on IPv6 adresses only by default. Option transport.socket.bind-address 
 in volume server-tcp must be used to listen on an IPv4 address.
 
---- rpc/rpc-lib/src/rpc-transport.h.orig	2011-07-14 14:21:10.000000000 +0200
-+++ rpc/rpc-lib/src/rpc-transport.h	2011-07-22 08:58:11.000000000 +0200
+--- rpc/rpc-lib/src/rpc-transport.h.orig	2011-08-23 14:31:38.000000000 +0200
++++ rpc/rpc-lib/src/rpc-transport.h	2011-09-17 15:45:29.000000000 +0200
 @@ -39,8 +39,12 @@
  #ifndef MAX_IOVEC
  #define MAX_IOVEC 16
@@ -19,8 +19,8 @@ in volume server-tcp must be used to listen on an IPv4 address.
   * is the last fragment for the RPC record being assemebled.
   * RPC Record marking standard defines a 32 bit value as the fragment
   * header with the MSB signifying whether the fragment is the last
---- xlators/nfs/lib/src/rpc-socket.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ xlators/nfs/lib/src/rpc-socket.c	2011-07-22 08:58:11.000000000 +0200
+--- xlators/nfs/lib/src/rpc-socket.c.orig	2011-08-23 14:31:40.000000000 +0200
++++ xlators/nfs/lib/src/rpc-socket.c	2011-09-17 15:45:29.000000000 +0200
 @@ -36,8 +36,12 @@
  #include <netdb.h>
  #include <netinet/in.h>
@@ -34,8 +34,8 @@ in volume server-tcp must be used to listen on an IPv4 address.
  nfs_rpcsvc_socket_server_get_local_socket (int addrfam, char *listenhost,
                                             uint16_t listenport,
                                             struct sockaddr *addr,
---- libglusterfs/src/common-utils.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ libglusterfs/src/common-utils.c	2011-07-22 08:58:11.000000000 +0200
+--- libglusterfs/src/common-utils.c.orig	2011-08-23 14:31:37.000000000 +0200
++++ libglusterfs/src/common-utils.c	2011-09-17 15:45:29.000000000 +0200
 @@ -48,8 +48,12 @@
  #include "stack.h"
  #include "globals.h"
