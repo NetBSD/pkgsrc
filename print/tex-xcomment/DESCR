@@ -1,0 +1,8 @@
+The package defines an environment that only typesets specified
+environments within its scope. So, for example, if you want nothing but
+the figure and table environments in your document, you can enclose the
+whole document with an xcomment environment that excludes everything
+but. This is a lot easier than excluding the chunks of text between the
+environments you want, or creating an entire document containing only
+those environments. The package was previously part of the seminar
+bundle for typesetting presentations.
