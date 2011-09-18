@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2313 2011/09/18 10:45:15 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2314 2011/09/18 11:59:05 obache Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3624,3 +3624,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-prosper-doc version 1.5 [minskim 2011-09-18]
 	Updated editors/lyx to 1.6.9nb2 [minskim 2011-09-18]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q3 branch [wiz 2011-09-18]
+	Updated audio/tunapie to 2.1.18 [obache 2011-09-18]
