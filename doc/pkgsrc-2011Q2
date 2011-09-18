@@ -74,7 +74,6 @@ The following packages are scheduled for removal before the next
 stable pkgsrc release (2011Q3). Please migrate to successors
 or alternatives.
 
-audio/tunapie
 comms/synce-dccm
 devel/newt
 emulators/doscmd
