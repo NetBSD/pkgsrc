@@ -1,11 +1,11 @@
-$NetBSD: patch-logging.c,v 1.2 2011/06/19 15:54:55 taca Exp $
+$NetBSD: patch-logging.c,v 1.3 2011/09/18 14:18:25 ryoon Exp $
 
 Make sure CODESET is actually defined, for the sake of
 old NetBSD versions
 
---- logging.c.orig	2011-02-04 22:59:42.000000000 +0000
+--- logging.c.orig	2011-08-13 17:32:04 +0000
 +++ logging.c
-@@ -619,7 +619,7 @@ send_mail(fmt, va_alist)
+@@ -573,7 +573,7 @@ send_mail(fmt, va_alist)
  	    (void) fputc(*p, mail);
      }
  
