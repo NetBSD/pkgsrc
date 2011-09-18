@@ -1,0 +1,4 @@
+2up.tex/2up.sty allows one to print a document two-up, with
+considerable flexibility as to paper size and layout.  It produces a
+standard dvi file, and does not involve an additional dvi or
+PostScript filter.  It should work with most TeX macro packages.
