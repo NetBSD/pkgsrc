@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.27 2011/06/19 15:54:55 taca Exp $
+$NetBSD: patch-af,v 1.28 2011/09/18 14:18:25 ryoon Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.27 2011/06/19 15:54:55 taca Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.in.orig	2011-05-16 17:38:07.000000000 +0000
+--- configure.in.orig	2011-08-17 13:51:59 +0000
 +++ configure.in
 @@ -326,6 +326,18 @@ AC_ARG_WITH(csops, [AS_HELP_STRING([--wi
  		;;
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.27 2011/06/19 15:54:55 taca Exp $
  AC_ARG_WITH(passwd, [AS_HELP_STRING([--without-passwd], [don't use passwd/shadow file for authentication])],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1925,7 +1937,7 @@ SUDO_MAILDIR
+@@ -1968,7 +1980,7 @@ SUDO_MAILDIR
  if test ${with_logincap-'no'} != "no"; then
      AC_CHECK_HEADERS(login_cap.h, [LOGINCAP_USAGE='[[-c class|-]] '; LCMAN=1
  	case "$OS" in
@@ -37,7 +37,7 @@ $NetBSD: patch-af,v 1.27 2011/06/19 15:54:55 taca Exp $
  	    ;;
  	esac
      ])
-@@ -2429,6 +2441,8 @@ if test ${with_kerb5-'no'} != "no"; then
+@@ -2476,6 +2488,8 @@ if test ${with_kerb5-'no'} != "no"; then
  	])
  	AUTH_OBJS="$AUTH_OBJS kerb5.o"
      fi
@@ -46,7 +46,7 @@ $NetBSD: patch-af,v 1.27 2011/06/19 15:54:55 taca Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDO_LIBS}"
      AC_CHECK_FUNCS(krb5_verify_user krb5_init_secure_context)
-@@ -2869,7 +2883,6 @@ test "$libexecdir" = '${exec_prefix}/lib
+@@ -2932,7 +2946,6 @@ test "$libexecdir" = '${exec_prefix}/lib
  test "$includedir" = '${prefix}/include' && includedir='$(prefix)/include'
  test "$datarootdir" = '${prefix}/share' && datarootdir='$(prefix)/share'
  test "$docdir" = '${datarootdir}/doc/${PACKAGE_TARNAME}' && docdir='$(datarootdir)/doc/$(PACKAGE_TARNAME)'
