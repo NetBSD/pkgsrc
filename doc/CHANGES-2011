@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2308 2011/09/18 01:01:20 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2309 2011/09/18 01:21:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3616,3 +3616,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-xcomment-doc version 1.3 [minskim 2011-09-18]
 	Added print/tex-seminar version 1.5 [minskim 2011-09-18]
 	Added print/tex-seminar-doc version 1.5 [minskim 2011-09-18]
+	Updated print/teTeX3-texmf to 3.0nb31 [minskim 2011-09-18]
