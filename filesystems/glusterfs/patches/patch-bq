@@ -1,10 +1,5 @@
-$NetBSD: patch-bq,v 1.5 2011/08/09 07:15:42 manu Exp $
-
-Make sure glusterfsd listens on the same address family as glusterd: if
-glusterd uses inet, glusterfsd should not use inet6
-
---- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-07-22 09:01:28.000000000 +0200
+--- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-08-23 14:31:40.000000000 +0200
++++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-09-17 15:45:30.000000000 +0200
 @@ -88,8 +88,52 @@
          //TODO: set timestamp
          return 0;
@@ -58,7 +53,7 @@ glusterd uses inet, glusterfsd should not use inet6
  glusterd_is_loopback_localhost (const struct sockaddr *sa, char *hostname)
  {
          GF_ASSERT (sa);
-@@ -1027,8 +1071,10 @@
+@@ -1030,8 +1074,10 @@
          int                     rdma_port = 0;
          FILE                    *file = NULL;
          gf_boolean_t            is_locked = _gf_false;
@@ -69,7 +64,7 @@ glusterd uses inet, glusterfsd should not use inet6
          GF_ASSERT (volinfo);
          GF_ASSERT (brickinfo);
  
-@@ -1107,14 +1153,19 @@
+@@ -1110,14 +1156,19 @@
          port = brickinfo->port;
          if (!port)
                  port = pmap_registry_alloc (THIS);

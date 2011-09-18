@@ -1,12 +1,7 @@
-$NetBSD: patch-bt,v 1.4 2011/08/09 07:15:42 manu Exp $
-
-Fix the io-threads xlator, which forgot to initialize its pthread
-condition and mutex.
-
---- xlators/performance/io-threads/src/io-threads.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ xlators/performance/io-threads/src/io-threads.c	2011-07-22 09:01:34.000000000 +0200
-@@ -2181,8 +2181,20 @@
-                         "out of memory");
+--- xlators/performance/io-threads/src/io-threads.c.orig	2011-08-23 14:31:41.000000000 +0200
++++ xlators/performance/io-threads/src/io-threads.c	2011-09-17 15:45:30.000000000 +0200
+@@ -2194,8 +2194,20 @@
+                         "pthread_mutex_init failed (%d)", ret);
                  goto out;
          }
  
@@ -24,5 +19,5 @@ condition and mutex.
 +
          set_stack_size (conf);
  
-         thread_count = IOT_DEFAULT_THREADS;
- 
+         if (xlator_get_volopt_info (&this->volume_options, "thread-count",
+                                     &def_val, NULL)) {

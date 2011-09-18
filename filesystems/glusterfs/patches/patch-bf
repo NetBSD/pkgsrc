@@ -1,11 +1,11 @@
-$NetBSD: patch-bf,v 1.6 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-bf,v 1.7 2011/09/18 01:36:06 manu Exp $
 
 basename() and dirname() are not supposed to be thread-safe, and NetBSD's
 implementation is not. glusterfs assume the functions are thread-safe. 
 Borrow basename() and rdirname() form glibc and make NetBSD use them.
 
---- libglusterfs/src/compat.h.orig	2011-07-14 14:21:10.000000000 +0200
-+++ libglusterfs/src/compat.h	2011-07-22 09:00:17.000000000 +0200
+--- libglusterfs/src/compat.h.orig	2011-08-23 14:31:37.000000000 +0200
++++ libglusterfs/src/compat.h	2011-09-17 15:45:29.000000000 +0200
 @@ -57,26 +57,31 @@
  #endif /* HAVE_LLISTXATTR */
  #endif /* GF_LINUX_HOST_OS */
