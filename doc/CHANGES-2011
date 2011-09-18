@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2310 2011/09/18 01:36:06 manu Exp $
+$NetBSD: CHANGES-2011,v 1.2311 2011/09/18 03:32:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3618,3 +3618,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-seminar-doc version 1.5 [minskim 2011-09-18]
 	Updated print/teTeX3-texmf to 3.0nb31 [minskim 2011-09-18]
 	Updated filesystems/glusterfs to 3.2.3 [manu 2011-09-18]
+	Updated print/tex-prosper to 1.5 [minskim 2011-09-18]
+	Added print/tex-prosper-doc version 1.5 [minskim 2011-09-18]
