@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/18 00:41:42 minskim Exp $
+share/texmf-dist/doc/latex/seminar/read-me.2e
+share/texmf-dist/doc/latex/seminar/sem-read.me
+share/texmf-dist/doc/latex/seminar/sem-user.pdf
+share/texmf-dist/doc/latex/seminar/sem-user.tex
+share/texmf-dist/doc/latex/seminar/semsamp1.tex
+share/texmf-dist/doc/latex/seminar/semsamp2.tex
+share/texmf-dist/doc/latex/seminar/tvz-code.sty
+share/texmf-dist/doc/latex/seminar/tvz-hax.sty
+share/texmf-dist/doc/latex/seminar/tvz-user.sty
