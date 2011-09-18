@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.27 2011/06/19 15:54:55 taca Exp $
+$NetBSD: patch-aa,v 1.28 2011/09/18 14:18:25 ryoon Exp $
 
 * Fix libtools's link option.
 * Prevent to install sudoers files and directory.
 * Use standard instal(8) option instead of shell wrapper.
 * Don't setuid here.
 
---- Makefile.in.orig	2011-03-29 19:25:56.000000000 +0000
+--- Makefile.in.orig	2011-08-13 17:29:18 +0000
 +++ Makefile.in
 @@ -222,7 +222,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
  	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $(DEFS) $(OPTIONS) $(srcdir)/sudo_noexec.c
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.27 2011/06/19 15:54:55 taca Exp $
  
  # Uncomment the following if you want "make distclean" to clean the parser
  @DEV@GENERATED = gram.h gram.c toke.c def_data.c def_data.h getdate
-@@ -541,43 +541,43 @@ pre-install:
+@@ -543,43 +543,43 @@ pre-install:
  	    ./visudo -c -f $(DESTDIR)$(sudoersdir)/sudoers; \
  	fi
  
