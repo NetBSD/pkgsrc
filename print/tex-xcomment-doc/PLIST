@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/18 00:29:11 minskim Exp $
+share/texmf-dist/doc/generic/xcomment/Changes
+share/texmf-dist/doc/generic/xcomment/Makefile
+share/texmf-dist/doc/generic/xcomment/README
+share/texmf-dist/doc/generic/xcomment/xcomment-doc.pdf
+share/texmf-dist/doc/generic/xcomment/xcomment-doc.tex
