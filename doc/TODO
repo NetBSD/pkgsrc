@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10566 2011/09/18 04:44:47 taca Exp $
+$NetBSD: TODO,v 1.10567 2011/09/18 15:05:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -499,6 +499,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.4.2
 	o darcs-2.4
 	o dasher-4.11
+	o davical-0.9.9.5
 	o dbench-4.0
 	o dbus-1.4.14
 	o dbus-glib-0.94
@@ -581,7 +582,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o f-spot-0.8.2
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o farsight2-0.0.29
+	o farsight2-0.0.30
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o feh-1.16.1
@@ -663,6 +664,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gawk-4.0.0
 	o gbdfed-1.6
+	o gbrainy-2.02
 	o gcal-3.6.1
 	o gcin-1.5.5
 	o gcombust-0.1.55
@@ -908,6 +910,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmatheval-1.1.6
 	o libmatroska-1.2.0
 	o libmcs-0.7.2
+	o libmicrohttpd-0.9.14
 	o libmilter-8.14.5
 	o libnasl-2.3.1
 	o libnids-1.24
@@ -1273,6 +1276,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tomboy-1.4.2 [GNOME 2.32]
 	o tomboy-1.6.0
 	o top-3.8beta1
+	o tor-0.2.2.33
 	o tpasm-1.2
 	o tpb-0.6.4
 	o tree-1.6.0
@@ -1346,7 +1350,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20110910
+	o x264-devel-20110917
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
