@@ -1,0 +1,8 @@
+A class that produces overhead slides (transparencies), with many
+facilities. The class requires availability of the fancybox package.
+Seminar is also the basis of other classes, such as prosper. In fact,
+seminar is not nowadays reckoned a good basis for a presentation --
+users are advised to use more recent classes such as powerdot or beamer,
+both of which are tuned to 21st-century presentation styles. Note that
+the seminar distribution relies on the xcomment package, which was once
+part of the bundle, but now has a separate existence.
