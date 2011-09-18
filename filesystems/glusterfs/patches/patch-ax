@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.5 2011/07/23 01:14:44 manu Exp $
+$NetBSD: patch-ax,v 1.6 2011/09/18 01:36:06 manu Exp $
 
 Do not strip binaries so that we have debug for now.
---- install-sh.orig	2011-07-14 14:21:18.000000000 +0200
-+++ install-sh	2011-07-22 09:00:03.000000000 +0200
+--- install-sh.orig	2011-08-23 14:31:51.000000000 +0200
++++ install-sh	2011-09-17 15:45:29.000000000 +0200
 @@ -120,9 +120,9 @@
          shift
          shift

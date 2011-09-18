@@ -1,9 +1,5 @@
-$NetBSD: patch-bo,v 1.3 2011/08/09 07:15:42 manu Exp $
-
-Build fix
-
---- rpc/xdr/src/cli1-xdr.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ rpc/xdr/src/cli1-xdr.c	2011-07-22 09:01:24.000000000 +0200
+--- rpc/xdr/src/cli1-xdr.c.orig	2011-08-23 14:31:38.000000000 +0200
++++ rpc/xdr/src/cli1-xdr.c	2011-09-17 15:45:30.000000000 +0200
 @@ -23,8 +23,9 @@
   * It was generated using rpcgen.
   */
