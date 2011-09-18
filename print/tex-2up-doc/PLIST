@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/18 00:25:01 minskim Exp $
+share/texmf-dist/doc/generic/2up/2up-doc.pdf
+share/texmf-dist/doc/generic/2up/2up-doc.tex
+share/texmf-dist/doc/generic/2up/Changes
+share/texmf-dist/doc/generic/2up/Makefile
+share/texmf-dist/doc/generic/2up/README
