@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2011/03/18 21:56:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.28 2011/09/18 01:21:30 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2800,14 +2800,6 @@ share/texmf-dist/doc/latex/rotfloat/examples.tex
 share/texmf-dist/doc/latex/rotfloat/rotfloat.dvi
 share/texmf-dist/doc/latex/scale/README
 share/texmf-dist/doc/latex/scale/scale.dvi
-share/texmf-dist/doc/latex/seminar/Seminar-Bugs.html
-share/texmf-dist/doc/latex/seminar/Seminar-FAQ.css
-share/texmf-dist/doc/latex/seminar/Seminar-FAQ.html
-share/texmf-dist/doc/latex/seminar/readme.pst
-share/texmf-dist/doc/latex/seminar/sem-read.me
-share/texmf-dist/doc/latex/seminar/sem-user.dvi
-share/texmf-dist/doc/latex/seminar/semsamp1.tex
-share/texmf-dist/doc/latex/seminar/semsamp2.tex
 share/texmf-dist/doc/latex/shapepar/Canflagshape.def
 share/texmf-dist/doc/latex/shapepar/Makefile.tetex
 share/texmf-dist/doc/latex/shapepar/README.shapepar
@@ -6671,23 +6663,6 @@ share/texmf-dist/tex/latex/revtex4/revtex4.cls
 share/texmf-dist/tex/latex/revtex4/rmp.rtx
 share/texmf-dist/tex/latex/rotfloat/rotfloat.sty
 share/texmf-dist/tex/latex/scale/scale.sty
-share/texmf-dist/tex/latex/seminar/2up.sty
-share/texmf-dist/tex/latex/seminar/2up.tex
-share/texmf-dist/tex/latex/seminar/npsfont.sty
-share/texmf-dist/tex/latex/seminar/sem-a4.sty
-share/texmf-dist/tex/latex/seminar/sem-page.sty
-share/texmf-dist/tex/latex/seminar/semcolor.sty
-share/texmf-dist/tex/latex/seminar/semhelv.sty
-share/texmf-dist/tex/latex/seminar/seminar.bg2
-share/texmf-dist/tex/latex/seminar/seminar.bug
-share/texmf-dist/tex/latex/seminar/seminar.cls
-share/texmf-dist/tex/latex/seminar/seminar.con
-share/texmf-dist/tex/latex/seminar/seminar.sty
-share/texmf-dist/tex/latex/seminar/semlayer.sty
-share/texmf-dist/tex/latex/seminar/semlcmss.sty
-share/texmf-dist/tex/latex/seminar/semrot.sty
-share/texmf-dist/tex/latex/seminar/slidesec.sty
-share/texmf-dist/tex/latex/seminar/xcomment.sty
 share/texmf-dist/tex/latex/shapepar/shapepar.sty
 share/texmf-dist/tex/latex/showdim/showdim.sty
 share/texmf-dist/tex/latex/showlabels/showlabels.sty
