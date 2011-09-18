@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2011/05/05 12:37:07 adam Exp $
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-.include "../../x11/qt4-libs/Makefile.common"
+# $NetBSD: Makefile,v 1.17 2011/09/18 09:01:30 adam Exp $
 
 PKGNAME=	qt4-docs-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
+.include "../../x11/qt4-libs/Makefile.common"
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST
