@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/09/18 03:51:33 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2011/09/18 14:32:59 minskim Exp $
 #
 
 DISTNAME=		lyx-1.6.9
@@ -46,8 +46,8 @@ DEPENDS+=		tex-nomencl-[0-9]*:../../print/tex-nomencl
 DEPENDS+=		tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=		tex-psnfss-[0-9]*:../../fonts/tex-psnfss
-DEPENDS+=		tex-pst-node-[0-9]*:../../print/tex-pst-node
-DEPENDS+=		tex-pstricks-[0-9]*:../../print/tex-pstricks
+DEPENDS+=		tex-pst-node-[0-9]*:../../graphics/tex-pst-node
+DEPENDS+=		tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=		tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=		tex-skak-[0-9]*:../../print/tex-skak
 DEPENDS+=		tex-subfig-[0-9]*:../../print/tex-subfig
