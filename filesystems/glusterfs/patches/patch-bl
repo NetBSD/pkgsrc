@@ -1,9 +1,5 @@
-$NetBSD: patch-bl,v 1.5 2011/08/09 07:15:42 manu Exp $
-
-#include <signal.h> for SIGTERM
-
---- glusterfsd/src/glusterfsd-mgmt.c.orig	2011-07-14 14:21:10.000000000 +0200
-+++ glusterfsd/src/glusterfsd-mgmt.c	2011-07-22 09:01:16.000000000 +0200
+--- glusterfsd/src/glusterfsd-mgmt.c.orig	2011-08-23 14:31:37.000000000 +0200
++++ glusterfsd/src/glusterfsd-mgmt.c	2011-09-17 15:45:29.000000000 +0200
 @@ -20,8 +20,9 @@
  #include <stdio.h>
  #include <sys/types.h>
