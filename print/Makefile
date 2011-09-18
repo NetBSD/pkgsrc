@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.496 2011/09/17 23:02:23 minskim Exp $
+# $NetBSD: Makefile,v 1.497 2011/09/18 01:01:21 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -128,6 +128,8 @@ SUBDIR+=	teTeX
 SUBDIR+=	teTeX3-bin
 SUBDIR+=	teTeX3-texmf
 SUBDIR+=	teTeX3-texmfsrc
+SUBDIR+=	tex-2up
+SUBDIR+=	tex-2up-doc
 SUBDIR+=	tex-IEEEtran
 SUBDIR+=	tex-IEEEtran-doc
 SUBDIR+=	tex-SIstyle
@@ -316,6 +318,7 @@ SUBDIR+=	tex-german-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-graphics
 SUBDIR+=	tex-graphics-doc
+SUBDIR+=	tex-guide-to-latex
 SUBDIR+=	tex-gustlib
 SUBDIR+=	tex-gustlib-doc
 SUBDIR+=	tex-harvard
@@ -526,6 +529,8 @@ SUBDIR+=	tex-section-doc
 SUBDIR+=	tex-sectsty
 SUBDIR+=	tex-sectsty-doc
 SUBDIR+=	tex-selectp
+SUBDIR+=	tex-seminar
+SUBDIR+=	tex-seminar-doc
 SUBDIR+=	tex-sepnum
 SUBDIR+=	tex-sepnum-doc
 SUBDIR+=	tex-setspace
@@ -617,6 +622,8 @@ SUBDIR+=	tex-xargs
 SUBDIR+=	tex-xargs-doc
 SUBDIR+=	tex-xcolor
 SUBDIR+=	tex-xcolor-doc
+SUBDIR+=	tex-xcomment
+SUBDIR+=	tex-xcomment-doc
 SUBDIR+=	tex-xdvi
 SUBDIR+=	tex-xetex
 SUBDIR+=	tex-xetex-doc
