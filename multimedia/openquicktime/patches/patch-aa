@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2006/01/03 14:10:14 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2011/09/19 04:44:19 obache Exp $
 
---- audioplugin/MP3/audioencoder/lame3.70/quantize-pvt.c.orig	2006-01-03 14:06:32.000000000 +0000
+* Fix GCC 3.4+: Don't clobber %ebx.
+* Fix GCC 4+
+
+--- audioplugin/MP3/audioencoder/lame3.70/quantize-pvt.c.orig	2001-07-27 12:53:35.000000000 +0000
 +++ audioplugin/MP3/audioencoder/lame3.70/quantize-pvt.c
 @@ -976,6 +976,7 @@ void quantize_xrpow(FLOAT8 xr[576], int 
    {
@@ -16,8 +19,9 @@ $NetBSD: patch-aa,v 1.1 2006/01/03 14:10:14 joerg Exp $
          "jnz loop1\n\n"
 +	"popl %%ebx\n"
          : /* no outputs */
-         : "t" (istep), "r" (xr), "r" (adj43asm), "r" (ix), "r" (576 / 4), "m" (rx)
+-        : "t" (istep), "r" (xr), "r" (adj43asm), "r" (ix), "r" (576 / 4), "m" (rx)
 -        : "%eax", "%ebx", "memory", "cc"
++        : "t" (istep), "r" (xr), "r" (adj43asm), "r" (ix), "r" (576 / 4), "g" (rx)
 +        : "%eax", "memory", "cc"
        );
    }
