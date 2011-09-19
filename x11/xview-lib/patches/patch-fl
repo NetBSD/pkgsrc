@@ -1,0 +1,15 @@
+$NetBSD: patch-fl,v 1.1 2011/09/19 03:45:28 dholland Exp $
+
+Fix mismatched return types, which clang dislikes.
+
+--- lib/libxview/attr/attr_cust.c~	1993-06-29 05:14:37.000000000 +0000
++++ lib/libxview/attr/attr_cust.c
+@@ -526,7 +526,7 @@ Attr_attribute  avlist[];
+ /*
+  * Public interface to customizable attributes
+  */
+-Xv_public	int
++Xv_public	void
+ #ifdef ANSI_FUNC_PROTO
+ xv_add_custom_attrs(Xv_pkg *pkg, ...)
+ #else
