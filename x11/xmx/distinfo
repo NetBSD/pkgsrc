@@ -1,22 +1,22 @@
-$NetBSD: distinfo,v 1.6 2011/07/03 20:15:58 dholland Exp $
+$NetBSD: distinfo,v 1.7 2011/09/19 07:15:52 dholland Exp $
 
 SHA1 (xmx-2.1alpha.pl7.tar.gz) = b517b20a7bfa352b12ffb7dd260d50ea6c1ec21b
 RMD160 (xmx-2.1alpha.pl7.tar.gz) = 18560824a35ffc55ce90fa63d1894362afa45405
 Size (xmx-2.1alpha.pl7.tar.gz) = 498352 bytes
 SHA1 (patch-aa) = 029b20a8630ccf99cfb95381414671d5963cd49b
-SHA1 (patch-ab) = cca7e590b5432e5fed68658ff10dd21981c0aed7
-SHA1 (patch-ac) = 2b5ecb1f621d86ff00637a7e8070b6419354a8f4
+SHA1 (patch-ab) = 542962f3f21d39ddbb8ac585934fa7ced1c7d3dd
+SHA1 (patch-ac) = 720dc25a7b45534967c3ce3363d443d949525ea6
 SHA1 (patch-ad) = 0a61fcd53dcc23cac02588a750dec829ac554376
-SHA1 (patch-ae) = 50bb4842042e9297484c6bb8986212e82d84dbd4
+SHA1 (patch-ae) = 29a67d85c02e74e8850f4b58e8c28d5332b29b95
 SHA1 (patch-af) = f495e95579f2d4c0f6f97b5933f1f420992a3968
-SHA1 (patch-ag) = ec6d1d0a6e0a96c7b40f86763b04e32e74a8f6ef
-SHA1 (patch-ah) = 913a8b122e570c1f105761ee83889e09d2e3e8dd
+SHA1 (patch-ag) = 9f20298dbccee1c4acfd7495bdf86a62bc9a665d
+SHA1 (patch-ah) = 66bbff2795d877ce9557c1819a12bba6e9e09974
 SHA1 (patch-ai) = 19ca5fa6a18639df41dbd6d6bce275a64293e3b5
 SHA1 (patch-aj) = da1ce04aa5b4c0701686bd1295880c9774634f63
 SHA1 (patch-ak) = 52080a7d9ffc0c614e998a76733cace6c29234e7
 SHA1 (patch-al) = 905f48024c4101a6678a036566684c4c8ecd858e
 SHA1 (patch-am) = 4f6b01d9d3c843af850ff79acd21be3aa0b6f5e5
-SHA1 (patch-ba) = ef2aae029305f9b5fa975805622466db418f197d
+SHA1 (patch-ba) = e7f905a5fcd776eb417c3a592f674264ff97716d
 SHA1 (patch-bb) = 595b93c221294fa5c61753c944acdf0f06d28748
 SHA1 (patch-bc) = 95653bf85c440158fe332cf114b3af22ffef5980
 SHA1 (patch-bd) = 37db161da309dd0178756d17be1c5b87c91a8f4b
@@ -82,7 +82,8 @@ SHA1 (patch-dk) = 6934d373b18fa2558156fc91c160d4e54fda6f07
 SHA1 (patch-ea) = 4fc96cc0846af3c465205f7c428a453185f15b0d
 SHA1 (patch-eb) = 66c4b8b6b3fed8c431cfb60ce6d52a9d0805ca5f
 SHA1 (patch-ec) = 9ce390570b6144471dc02fffdb0bd5ff714bddf0
-SHA1 (patch-ed) = e200f4b965fbfdb16fa4554028772cbf2693b2d0
+SHA1 (patch-ed) = 4637d40b1a149ab062f8c57730c89eb98e6b0ba1
 SHA1 (patch-ee) = 9a22f1d7312e21c07c12dbbe308b492606ff1343
-SHA1 (patch-ef) = 2b0bf5a3bb2fc25ed545d082cdf724cb0e627f8a
+SHA1 (patch-ef) = b6a6e4fefc075900a7b700e548f17f9ac1e228fc
 SHA1 (patch-eg) = fffaaddaf67708b90c44b76ac4b9a301ffef6530
+SHA1 (patch-eh) = 5ab3f93b24cdbe0cb8f5b8be9b0da22bb1ba98a5

@@ -1,15 +1,89 @@
-$NetBSD: patch-ab,v 1.2 2011/07/03 20:15:58 dholland Exp $
+$NetBSD: patch-ab,v 1.3 2011/09/19 07:15:52 dholland Exp $
 
 - use modern C
+- use isdigit() correctly
+- silence warnings about assignments within if conditions
+- fix parenthesization, caught by clang
 
---- lib/Xmc/common.c~	1998-04-01 18:51:21.000000000 -0500
-+++ lib/Xmc/common.c	2008-08-31 00:16:29.000000000 -0400
-@@ -27,6 +27,8 @@
+--- lib/Xmc/common.c.orig	1998-04-01 23:51:21.000000000 +0000
++++ lib/Xmc/common.c
+@@ -27,8 +27,14 @@
  #include <sys/select.h>
  #endif
  #include <sys/socket.h>
++#include <stdio.h>
 +#include <stdlib.h>
 +#include <string.h>
++#include <unistd.h>
++#include <ctype.h>
  #include <errno.h>
  #include <netdb.h>
++#include <arpa/inet.h>
  #include <xmc.h>
+ #include <xmclib.h>
+ #include <xmcp.h>
+@@ -103,7 +109,7 @@ Xmc_event_shift
+ {
+    XmcEventList *elp;
+ 
+-   if (elp = muxp->qhead) {
++   if ((elp = muxp->qhead) != NULL) {
+       *event = elp->event;
+       muxp->qhead = elp->next;
+       if (muxp->qhead == 0)
+@@ -212,7 +218,7 @@ Xmc_newId
+ {
+    static ulong_t id;
+ 
+-   return muxp->base | (++id << muxp->shift) & muxp->mask;
++   return muxp->base | ((++id << muxp->shift) & muxp->mask);
+ }
+ 
+ void
+@@ -642,7 +648,7 @@ Xmc_parse_display
+    if (n == 0 || n > sizeof(nbuf) - 1) 	/* sanity check */
+       return -1;
+    for (i=0; i<n; i++)
+-      if (isdigit(display[i]))
++      if (isdigit((unsigned char)display[i]))
+          nbuf[i] = display[i];
+       else
+          return -1;
+@@ -658,7 +664,7 @@ Xmc_parse_display
+          if (n == 0 || n > sizeof(nbuf) - 1)
+             return -1;
+          for (i=0; i<n; i++)
+-            if (isdigit(display[i]))
++            if (isdigit((unsigned char)display[i]))
+                nbuf[i] = display[i];
+             else
+                return -1;
+@@ -666,7 +672,7 @@ Xmc_parse_display
+          scrno = atoi(nbuf);
+       }
+ 
+-   if (n = strlen(hostbuf)) {
++   if ((n = strlen(hostbuf)) != 0) {
+       if ((cp = (char *)malloc(n + 1)) == 0)
+          return 0;
+       strcpy(cp, hostbuf);
+@@ -713,8 +719,8 @@ Xmc_host_addr
+    static ulong_t iaddr;
+    static struct hostent *hp;
+ 
+-   if (isdigit(*hostname)) {
+-      for (cp=hostname; *cp && (isdigit(*cp) || *cp == '.'); cp++);
++   if (isdigit((unsigned char)*hostname)) {
++      for (cp=hostname; *cp && (isdigit((unsigned char)*cp) || *cp == '.'); cp++);
+       if (*cp == '\0') {	/* it's an inet number */
+          if ((long)(iaddr = inet_addr(hostname)) != -1) {
+             *famp = AddrFamInternet;
+@@ -724,7 +730,7 @@ Xmc_host_addr
+          }
+       }
+    }
+-   if (hp = gethostbyname(hostname)) {
++   if ((hp = gethostbyname(hostname)) != NULL) {
+       *famp = Xmc_family_utox(hp->h_addrtype);
+       *lenp = hp->h_length;
+       *addrp = *hp->h_addr_list;
