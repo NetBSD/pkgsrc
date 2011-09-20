@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:42:37 obache Exp $
+# $NetBSD: Makefile,v 1.16 2011/09/20 16:50:54 joerg Exp $
 
 DISTNAME=	phonon-4.4.2
 PKGREVISION=	3
@@ -32,6 +32,8 @@ pre-configure:
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+
+BUILDLINK_API_DEPENDS.xine-lib+=	xine-lib>=1.1.19nb7
 BUILDLINK_ABI_DEPENDS.xine-lib?=	xine-lib>=1.1.19nb1
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
