@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/10/25 20:10:19 markd Exp $
+$NetBSD: distinfo,v 1.5 2011/09/20 16:50:54 joerg Exp $
 
 SHA1 (phonon-4.4.2.tar.bz2) = c329d924fb75a89a9de8a4d799ff4dcd7ee3302e
 RMD160 (phonon-4.4.2.tar.bz2) = aa37903f166904dd09401541df8fc268a2858606
 Size (phonon-4.4.2.tar.bz2) = 629193 bytes
+SHA1 (patch-volumefader_plugin.cpp) = 3dbe051aeb5d9785fe1bd159470474f80c64c8fd
+SHA1 (patch-xine-kequalizer_plugin.cpp) = f776a291aac1eb4ae3cf3439a6467bb7d2489ad9
