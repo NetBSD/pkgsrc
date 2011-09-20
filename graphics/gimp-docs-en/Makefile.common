@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/02/20 07:50:42 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/09/20 11:09:46 ryoon Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -33,5 +33,7 @@ USE_TOOLS+=	gmake
 
 MAKE_ENV+=	DATDIR=${PREFIX}/share
 
+pre-patch:
+	${RM} ${WRKSRC}/INSTALL
 
 .include "../../mk/bsd.pkg.mk"
