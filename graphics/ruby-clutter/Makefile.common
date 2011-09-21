@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2010/09/23 19:26:11 joerg Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/09/21 15:26:46 taca Exp $
 #
 # used by graphics/ruby-clutter-cairo/Makefile
 # used by graphics/ruby-clutter-core/Makefile
@@ -15,8 +15,6 @@ PATCHDIR=		${.CURDIR}/../../graphics/ruby-clutter/patches
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://rubyforge.org/projects/rbclutter/
 LICENSE=		gnu-lgpl-v2.1
-
-RUBY_VERSION_SUPPORTED= 18
 
 VERSION=		0.8.0
 
