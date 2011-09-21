@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/09/21 09:45:01 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/09/21 09:48:41 obache Exp $
 #
 
 DISTNAME=	mikutter.0.0.3.514
@@ -8,7 +8,7 @@ MASTER_SITES=	http://mikutter.hachune.net/bin/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mikutter.hachune.net/
-COMMENT=	Moest Twitter Client
+COMMENT=	Simply, powerfully, and moefully twitter client
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
