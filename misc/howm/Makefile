@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/25 11:04:56 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/21 21:40:20 joerg Exp $
 
 DISTNAME=	howm-1.3.9.1
 CATEGORIES=	misc
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${RUBY_PKGPREFIX}-migemo-[0-9]*:../../textproc/migemo
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}migemo-elisp-[0-9]*:../../textproc/migemo-elisp
+
+RUBY_VERSION_SUPPORTED= 18
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
