@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2319 2011/09/21 15:29:30 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2320 2011/09/21 19:34:52 bouyer Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3630,3 +3630,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pbulk-base to 0.43 [joerg 2011-09-21]
 	Updated www/ap-perl to 1.31 [obache 2011-09-21]
 	Updated www/contao210-translations to 20110920 [taca 2011-09-21]
+	Added sysutils/eventlog version 0.2.12 [bouyer 2011-09-21]
+	Updated sysutils/syslog-ng to 3.2.4 [bouyer 2011-09-21]
