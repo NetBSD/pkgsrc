@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/21 19:29:24 bouyer Exp $
+
+SHA1 (eventlog_0.2.12.tar.gz) = c5bfe4bb3ba58413e96dac86c03c7fe73e899b44
+RMD160 (eventlog_0.2.12.tar.gz) = 13931ba94681812d8a1134a155565dab525b0714
+Size (eventlog_0.2.12.tar.gz) = 310474 bytes
