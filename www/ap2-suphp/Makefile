@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/11 19:57:54 gls Exp $
+# $NetBSD: Makefile,v 1.16 2011/09/21 13:51:11 adam Exp $
 #
 
 DISTNAME=		suphp-0.7.1
@@ -37,7 +37,7 @@ SUBST_STAGE.suphp=	post-configure
 SUBST_FILES.suphp=	doc/suphp.conf-example
 SUBST_SED.suphp=	-e "s,wwwrun,${APACHE_USER},g"
 SUBST_SED.suphp+=	-e "s,/var/log/suphp.log,${VARBASE}/httpd/suphp_log,g"
-SUBST_SED.suphp+=	-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
+SUBST_SED.suphp+=	-e "s,/usr/bin/php,${PREFIX}/libexec/cgi-bin/php,g"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
