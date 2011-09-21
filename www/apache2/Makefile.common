@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2010/11/01 18:03:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.28 2011/09/21 11:06:09 obache Exp $
 
 # used by devel/apr0/Makefile
 
@@ -9,6 +9,5 @@ EXTRACT_SUFX=		.tar.bz2
 APACHE_VERSION=		2.0.64
 APR_VERSION=		0.9.19
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
-			${MASTER_SITE_APACHE:=httpd/old/} \
-			http://www.NetBSD.org/images/logos/
+			${MASTER_SITE_APACHE:=httpd/old/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
