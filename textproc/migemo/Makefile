@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/07 17:20:26 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/21 21:40:20 joerg Exp $
 
 .include "../../textproc/migemo/Makefile.common"
 
@@ -12,7 +12,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		${RUBY_PKGPREFIX}-bsearch-*:../../devel/ruby-bsearch
 DEPENDS+=		${RUBY_PKGPREFIX}-romkan-*:../../converters/ruby-romkan
 
-RUBY_VERSION_SUPPORTED= 18
 USE_TOOLS+=		autoconf automake aclocal
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-rubydir=${PREFIX}/${RUBY_VENDORLIB}
