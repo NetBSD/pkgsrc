@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2011/04/11 19:57:54 gls Exp $
+$NetBSD: distinfo,v 1.6 2011/09/21 12:54:16 adam Exp $
 
 SHA1 (suphp-0.7.1.tar.gz) = 9eb82b62b5f71c01d7d8b2510c685141b78e54f5
 RMD160 (suphp-0.7.1.tar.gz) = e5e7e71494af322c3ab33d6a35fbcf96334c098c
 Size (suphp-0.7.1.tar.gz) = 386521 bytes
+SHA1 (patch-src_SmartPtr.hpp) = 91c20832b140d6fa49ddb2a6fa9b616ff7fc565d
