@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2009/12/09 11:12:21 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/09/21 19:33:09 bouyer Exp $
 
-DISTNAME=	syslog-ng-1.6.12
+VERS=		3.2.4
+DISTNAME=	syslog-ng_${VERS}
+PKGNAME=	syslog-ng-${VERS}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/sources/1.6/src/
+MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${VERS}/source/
+WRKSRC=		${WRKDIR}/${PKGNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
@@ -11,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	pax flex
+USE_TOOLS+=	flex pkg-config gmake
 
 GNU_CONFIGURE=		YES
 RCD_SCRIPTS=		syslogng
@@ -22,23 +25,16 @@ CONFIGURE_ARGS+=	--enable-tcp-wrapper
 EGDIR=			${PREFIX}/share/examples/syslog-ng
 DOCDIR=			${PREFIX}/share/doc/syslog-ng
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
-SUBST_FILES.conf=	doc/syslog-ng.8 doc/syslog-ng.conf.5 contrib/syslog2ng
-SUBST_SED.conf=		-e "s|/etc/syslog-ng|${PKG_SYSCONFDIR}|g"
-SUBST_SED.conf+=	-e "s|/usr/bin/awk|${AWK}|g"
-SUBST_MESSAGE.conf=	Fixing configuration file paths.
-
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
-.include "../../sysutils/libol/buildlink3.mk"
+.include "../../sysutils/eventlog/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--enable-full-dynamic
 .endif
-
-BUILDLINK_API_DEPENDS.libol+=	libol>=0.3.0
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.syslog-ng
 PKG_SUPPORTED_OPTIONS=	syslogng-spoof
@@ -55,25 +51,17 @@ CONFIGURE_ARGS+=	--enable-spoof-source
 .include "../../devel/libnet11/buildlink3.mk"
 .endif
 
-pre-build:
-	cd ${WRKSRC}/doc/sgml && \
-		pax -O -zrf ${WRKSRC}/doc/sgml/syslog-ng.html.tar.gz
-
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${DOCDIR}
-INSTALLATION_DIRS+=	share/doc/html/syslog-ng
 INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.spoof ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/contrib/syslog-ng.conf.doc ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.demo ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.sample ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/syslog-ng.conf.solaris ${DESTDIR}${EGDIR}
+	for f in syslog-ng.conf.sample syslog-ng.conf.solaris syslog-ng.service\	; do \
+		${INSTALL_DATA} ${WRKSRC}/doc/examples/$${f} ${DESTDIR}${EGDIR};\
+	done
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/syslog2ng ${DESTDIR}${PREFIX}/bin
-
-	${INSTALL_DATA} ${WRKSRC}/doc/sgml/syslog-ng.html/*.html ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
