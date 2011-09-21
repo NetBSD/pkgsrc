@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/22 13:43:50 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/09/21 15:26:47 taca Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-clutter-core-${VERSION}
@@ -9,6 +9,7 @@ CATEGORIES=		graphics
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_EXTCONF_SUBDIRS=	clutter
+RUBY_VERSION_SUPPORTED= 18
 
 USE_TOOLS+=		pkg-config
 
