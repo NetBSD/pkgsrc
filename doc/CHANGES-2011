@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2315 2011/09/19 18:46:06 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.2316 2011/09/21 09:45:18 obache Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3626,3 +3626,4 @@ Changes to the packages collection and infrastructure in 2011:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q3 branch [wiz 2011-09-18]
 	Updated audio/tunapie to 2.1.18 [obache 2011-09-18]
 	Updated x11/xmx to 2.1a7nb3 [dholland 2011-09-19]
+	Updated net/mikutter to 0.0.3.514 [obache 2011-09-21]
