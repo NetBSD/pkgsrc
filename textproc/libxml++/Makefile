@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/04/22 13:42:28 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/09/21 16:07:15 joerg Exp $
 
 DISTNAME=	libxml++-2.32.0
 PKGREVISION=	1
@@ -19,6 +19,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake perl
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libxml++-2.6.pc.in
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	MMDOCTOOLDIR=${PREFIX}/share/glibmm-2.4/doctool
 
 CONFLICTS+=		libxml++2-[0-9]*
 
