@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/15 13:07:38 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/21 21:40:20 joerg Exp $
 #
 
 DISTNAME=	prime-el-1.5.1.3
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}suikyo-elisp-[0-9]*:../../textproc/suikyo-elisp
+RUBY_VERSION_SUPPORTED= 18
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
