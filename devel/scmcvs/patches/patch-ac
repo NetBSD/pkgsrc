@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2009/04/25 11:41:59 sno Exp $
+$NetBSD: patch-ac,v 1.4 2011/09/22 15:16:26 ryoon Exp $
 
 --- src/Makefile.in.orig	2008-05-07 20:12:32.000000000 +0000
-+++ src/Makefile.in	2009-04-16 06:42:20.000000000 +0000
-@@ -82,7 +82,7 @@
++++ src/Makefile.in
+@@ -82,7 +82,7 @@ am_cvs_OBJECTS = add.$(OBJEXT) admin.$(O
  	version.$(OBJEXT) vers_ts.$(OBJEXT) watch.$(OBJEXT) \
  	wrapper.$(OBJEXT) zlib.$(OBJEXT)
  cvs_OBJECTS = $(am_cvs_OBJECTS)
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.3 2009/04/25 11:41:59 sno Exp $
  binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
  SCRIPTS = $(bin_SCRIPTS)
  DEFAULT_INCLUDES = -I. -I$(top_builddir)@am__isrc@
-@@ -206,7 +206,7 @@
+@@ -206,7 +206,7 @@ with_default_ssh = @with_default_ssh@
  # some namespace hackery going on that maybe shouldn't be.  Long term fix is to
  # try and remove naming ocnflicts and fix Automake to allow particular includes
  # to be attached only to particular object files.  Short term fix is either or.
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.3 2009/04/25 11:41:59 sno Exp $
  bin_SCRIPTS = cvsbug
  
  # The cvs executable
-@@ -285,7 +285,7 @@
+@@ -285,7 +285,7 @@ cvs_SOURCES = \
  cvs_LDADD = \
  	../diff/libdiff.a \
  	../lib/libcvs.a \

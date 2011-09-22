@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2009/04/25 11:41:59 sno Exp $
+$NetBSD: patch-ab,v 1.4 2011/09/22 15:16:26 ryoon Exp $
 
 --- doc/cvs.texinfo.orig	2008-05-07 01:15:46.000000000 +0000
-+++ doc/cvs.texinfo	2009-04-16 06:39:23.000000000 +0000
-@@ -12803,6 +12803,11 @@
++++ doc/cvs.texinfo
+@@ -12803,6 +12803,11 @@ additional information and can store the
  a file, or mail it to appropriate persons, or maybe
  post it to a local newsgroup, or@dots{}  Your
  imagination is the limit!
