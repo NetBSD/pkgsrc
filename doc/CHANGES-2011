@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2320 2011/09/21 19:34:52 bouyer Exp $
+$NetBSD: CHANGES-2011,v 1.2321 2011/09/22 01:22:03 christos Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3632,3 +3632,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20110920 [taca 2011-09-21]
 	Added sysutils/eventlog version 0.2.12 [bouyer 2011-09-21]
 	Updated sysutils/syslog-ng to 3.2.4 [bouyer 2011-09-21]
+	Updated net/netatalk to 2.2.1 [christos 2011-09-21]
