@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/07/22 19:21:11 abs Exp $
+$NetBSD: patch-aa,v 1.5 2011/09/22 01:10:07 christos Exp $
 
 --- tx/TXDialog.h.orig	2006-03-23 16:39:31.000000000 +0000
 +++ tx/TXDialog.h
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.4 2006/07/22 19:21:11 abs Exp $
  
  #include "TXWindow.h"
  #include <errno.h>
-+#include <unistd.h>
++#include <sys/time.h>
  
  class TXDialog : public TXWindow, public TXDeleteWindowCallback {
  public:
