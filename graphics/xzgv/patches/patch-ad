@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1 2009/01/05 16:08:20 shattered Exp $
+$NetBSD: patch-ad,v 1.2 2011/09/22 21:20:42 shattered Exp $
 
 Proposed fix for "missing preview icons" problem, from
 http://sourceforge.net/tracker/index.php?func=detail&aid=1814712&group_id=203093&atid=984206
 
 --- src/main.c.orig	2007-09-09 00:36:21.000000000 +0000
 +++ src/main.c
-@@ -200,7 +200,7 @@ int orient_state_flip[8]   ={2,3,0,1,6,7
+@@ -201,7 +201,7 @@ int orient_state_flip[8]   ={2,3,0,1,6,7
  /* required prototypes */
  void render_pixmap(int reset_pos);
  void cb_nextprev_tagged_image(int next,int view);
@@ -14,7 +14,7 @@ http://sourceforge.net/tracker/index.php?func=detail&aid=1814712&group_id=203093
  gint pic_win_resized(GtkWidget *widget,GdkEventConfigure *event);
  void cb_scaling_double(void);
  void cb_xscaling_double(void);
-@@ -2624,7 +2624,7 @@ else
+@@ -2622,7 +2622,7 @@ return(pixmap);
  }
  
  
@@ -23,7 +23,16 @@ http://sourceforge.net/tracker/index.php?func=detail&aid=1814712&group_id=203093
  {
  static char buf[1024];
  struct clist_data_tag *datptr;
-@@ -2748,6 +2748,7 @@ for(f=0;f<IDLE_XVPIC_NUM_PER_CALL;f++)
+@@ -2638,7 +2638,7 @@ idle_xvpic_called=1;
+ 
+ /* don't do it if it would be a bad time */
+ if(idle_xvpic_blocked)
+-  return;
++  return FALSE;
+ 
+ /* freeze/thaw actually *cause* flickering for this, rather than
+  * preventing it (!), so I've not used those here.
+@@ -2746,6 +2746,7 @@ for(f=0;f<IDLE_XVPIC_NUM_PER_CALL;f++)
      *entryp=-1;
      }
    }
