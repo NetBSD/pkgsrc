@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2007/05/27 09:49:53 schmonz Exp $
+$NetBSD: patch-am,v 1.2 2011/09/22 15:16:26 ryoon Exp $
 
---- src/cvs.h.orig	2005-09-22 16:07:05.000000000 +0200
+--- src/cvs.h.orig	2006-08-25 15:48:55.000000000 +0000
 +++ src/cvs.h
 @@ -382,6 +382,7 @@ extern int really_quiet, quiet;
  extern int use_editor;
