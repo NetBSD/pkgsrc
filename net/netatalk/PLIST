@@ -1,23 +1,15 @@
-@comment $NetBSD: PLIST,v 1.21 2010/07/19 21:21:25 markd Exp $
-bin/achfile
-bin/ad
+@comment $NetBSD: PLIST,v 1.22 2011/09/22 01:20:20 christos Exp $
 bin/add_netatalk_printer
 bin/adv1tov2
 bin/aecho
-bin/afile
-bin/afpd-mtab.pl
 bin/afppasswd
-bin/apple_cp
 bin/apple_dump
-bin/apple_mv
-bin/apple_rm
 bin/asip-status.pl
 bin/binheader
 bin/cnid2_create
 bin/dbd
 bin/getzones
 bin/hqx2bin
-bin/logger_test
 bin/lp2pap.sh
 bin/macbinary
 bin/macusers
@@ -26,7 +18,6 @@ bin/nadheader
 bin/nbplkup
 bin/nbprgstr
 bin/nbpunrgstr
-bin/netacnv
 bin/netatalk-config
 bin/pap
 bin/papstatus
@@ -120,15 +111,10 @@ libexec/netatalk/uams/uams_guest.la
 ${PLIST.pam}libexec/netatalk/uams/uams_pam.la
 libexec/netatalk/uams/uams_passwd.la
 libexec/netatalk/uams/uams_randnum.la
-man/man1/achfile.1
 man/man1/ad.1
 man/man1/aecho.1
-man/man1/afile.1
 man/man1/afppasswd.1
-man/man1/apple_cp.1
 man/man1/apple_dump.1
-man/man1/apple_mv.1
-man/man1/apple_rm.1
 man/man1/asip-status.pl.1
 man/man1/dbd.1
 man/man1/getzones.1
@@ -160,7 +146,6 @@ man/man5/afpd.conf.5
 man/man5/atalkd.conf.5
 man/man5/netatalk.conf.5
 man/man5/papd.conf.5
-man/man8/afp_acls.8
 man/man8/afpd.8
 man/man8/atalkd.8
 man/man8/cnid_dbd.8
