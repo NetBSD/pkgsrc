@@ -1,13 +1,42 @@
-$NetBSD: patch-bj,v 1.4 2010/07/19 21:21:25 markd Exp $
+$NetBSD: patch-bj,v 1.5 2011/09/22 01:20:21 christos Exp $
 
---- distrib/initscripts/Makefile.in.orig	2010-02-14 17:47:12.000000000 +0000
-+++ distrib/initscripts/Makefile.in
-@@ -455,7 +455,7 @@ info: info-am
+--- distrib/initscripts/Makefile.in.orig	2011-09-06 07:41:21.000000000 -0400
++++ distrib/initscripts/Makefile.in	2011-09-21 11:28:50.000000000 -0400
+@@ -498,7 +498,7 @@
  
  info-am:
  
--install-data-am: install-sysvSCRIPTS
-+install-data-am:
+-install-data-am: install-serviceDATA install-sysvSCRIPTS
++install-data-am: install-serviceDATA
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
  
+@@ -621,23 +621,23 @@
+ @USE_TRU64_TRUE@uninstall-startup: uninstall-am
+ 
+ @USE_NETBSD_TRUE@afpd: rc.afpd.netbsd
+-@USE_NETBSD_TRUE@	cp -f $< $@
++@USE_NETBSD_TRUE@	cp -f $? $@
+ @USE_NETBSD_TRUE@	chmod a+x $@
+ 
+ @USE_NETBSD_TRUE@atalkd: rc.atalkd.netbsd
+-@USE_NETBSD_TRUE@	cp -f $< $@
++@USE_NETBSD_TRUE@	cp -f $? $@
+ @USE_NETBSD_TRUE@	chmod a+x $@
+ 
+ @USE_NETBSD_TRUE@cnid_metad: rc.cnid_metad.netbsd
+-@USE_NETBSD_TRUE@	cp -f $< $@
++@USE_NETBSD_TRUE@	cp -f $? $@
+ @USE_NETBSD_TRUE@	chmod a+x $@
+ 
+ @USE_NETBSD_TRUE@papd: rc.papd.netbsd
+-@USE_NETBSD_TRUE@	cp -f $< $@
++@USE_NETBSD_TRUE@	cp -f $? $@
+ @USE_NETBSD_TRUE@	chmod a+x $@
+ 
+ @USE_NETBSD_TRUE@timelord: rc.timelord.netbsd
+-@USE_NETBSD_TRUE@	cp -f $< $@
++@USE_NETBSD_TRUE@	cp -f $? $@
+ @USE_NETBSD_TRUE@	chmod a+x $@
+ 
+ @USE_NETBSD_TRUE@install-data-hook:

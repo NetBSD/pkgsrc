@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.77 2011/08/30 15:09:22 bouyer Exp $
+# $NetBSD: Makefile,v 1.78 2011/09/22 01:20:20 christos Exp $
 
-DISTNAME=	netatalk-2.1.5
-PKGREVISION=	2
+DISTNAME=	netatalk-2.2.1
+#PKGREVISION=	2
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
-PATCHFILES=	patch-adv1tov2.c
+#PATCHFILES=	patch-adv1tov2.c
 PATCH_SITES=	http://svn.macosforge.org/repository/macports/trunk/dports/net/netatalk/files/ \
 		http://mirror.lug.udel.edu/pub/macports/trunk/dports/net/netatalk/files/
 
@@ -41,6 +41,8 @@ BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--enable-netbsd
 CONFIGURE_ARGS+=	--enable-overwrite
 CONFIGURE_ARGS+=	--enable-timelord
+CONFIGURE_ARGS+=	--enable-ddp
+CONFIGURE_ARGS+=	--enable-quota
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
