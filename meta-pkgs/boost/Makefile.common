@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2011/03/18 07:49:44 adam Exp $
+# $NetBSD: Makefile.common,v 1.29 2011/09/22 12:53:29 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -59,9 +59,13 @@ SUBST_SED.darwin=	-e 's,-install_name ",-install_name "${PREFIX}/lib/,g'
 
 .if ${OPSYS} == "Darwin"
 # Prevent using a pkgsrc libtool in OS X because the darwin toolset needs
-# the native libtool from /usr/bin.
+# the native libtool from /Developer/usr/bin or /usr/bin.
 post-wrapper:
+.  if exists(/Developer/usr/bin/libtool)
+	ln -s /Developer/usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.  else
 	ln -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.  endif
 .endif
 
 # We can't do this at post-extract because the extract cookie will get a
