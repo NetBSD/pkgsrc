@@ -1,6 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2007/05/27 09:49:54 schmonz Exp $
+$NetBSD: patch-ba,v 1.2 2011/09/22 15:16:26 ryoon Exp $
 
---- src/cvsbug.in.orig	2005-08-26 22:30:56.000000000 +0100
+--- src/cvsbug.in.orig	2005-04-04 20:46:07.000000000 +0000
 +++ src/cvsbug.in
 @@ -109,14 +109,14 @@ elif [ -f /bin/domainname ]; then
      /usr/bin/ypcat passwd 2>/dev/null | cat - /etc/passwd | grep "^$LOGNAME:" |

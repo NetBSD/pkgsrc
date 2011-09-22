@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2007/05/27 09:49:51 schmonz Exp $
+$NetBSD: patch-ad,v 1.2 2011/09/22 15:16:26 ryoon Exp $
 
---- lib/sighandle.c.orig	2004-02-03 15:37:50.000000000 +0100
+--- lib/sighandle.c.orig	2005-04-04 20:46:06.000000000 +0000
 +++ lib/sighandle.c
 @@ -155,8 +155,10 @@ int			sig;
  	this = SIG_handlers[sig];

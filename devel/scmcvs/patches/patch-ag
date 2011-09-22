@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2007/05/27 09:49:52 schmonz Exp $
+$NetBSD: patch-ag,v 1.2 2011/09/22 15:16:26 ryoon Exp $
 
---- lib/xtime.h.orig	2005-03-04 20:05:09.000000000 +0100
+--- lib/xtime.h.orig	2005-04-04 20:46:06.000000000 +0000
 +++ lib/xtime.h
 @@ -14,6 +14,9 @@
  #ifndef XTIME_HEADER_INCLUDED
