@@ -1,6 +1,6 @@
-$NetBSD: patch-av,v 1.1 2007/05/27 09:49:54 schmonz Exp $
+$NetBSD: patch-av,v 1.2 2011/09/22 15:16:26 ryoon Exp $
 
---- configure.in.orig	2005-09-28 05:29:46.000000000 +0200
+--- configure.in.orig	2008-05-07 20:10:34.000000000 +0000
 +++ configure.in
 @@ -377,7 +377,7 @@ if test -n "$krb_h"; then
             [LDFLAGS=$hold_ldflags
