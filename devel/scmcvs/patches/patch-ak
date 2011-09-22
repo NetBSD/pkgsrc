@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2007/05/27 09:49:52 schmonz Exp $
+$NetBSD: patch-ak,v 1.2 2011/09/22 15:16:26 ryoon Exp $
 
---- src/checkout.c.orig	2005-09-24 19:56:35.000000000 +0200
+--- src/checkout.c.orig	2005-09-26 23:13:24.000000000 +0000
 +++ src/checkout.c
 @@ -194,7 +194,7 @@ checkout (argc, argv)
  	    case 'p':

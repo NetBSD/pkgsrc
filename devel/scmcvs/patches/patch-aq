@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.1 2007/05/27 09:49:53 schmonz Exp $
+$NetBSD: patch-aq,v 1.2 2011/09/22 15:16:26 ryoon Exp $
 
---- src/recurse.c.orig	2005-09-04 02:26:43.000000000 +0200
+--- src/recurse.c.orig	2008-01-28 14:55:45.000000000 +0000
 +++ src/recurse.c
 @@ -551,7 +551,7 @@ do_recursion (frame)
      if (frame->flags == R_SKIP_ALL)
