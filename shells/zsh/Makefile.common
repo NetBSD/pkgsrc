@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2011/09/20 13:58:01 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.64 2011/09/22 09:37:06 ryoon Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
@@ -29,7 +29,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_LIB:Q}
+#CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_LIB:Q}
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 # Handle any PKG_OPTIONS that this package might have.
