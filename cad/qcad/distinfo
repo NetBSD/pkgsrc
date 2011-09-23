@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2008/04/03 10:53:46 joerg Exp $
+$NetBSD: distinfo,v 1.19 2011/09/23 03:26:57 ryoon Exp $
 
 SHA1 (qcad-2.0.5.0-1-community.src.tar.gz) = aff563389d1285740f6bf7e28f93b8df0f902e0c
 RMD160 (qcad-2.0.5.0-1-community.src.tar.gz) = 85f0b6d3c1edaa0c19494436413521316e803429
@@ -12,3 +12,7 @@ SHA1 (patch-af) = a7716a53b6c61624b5fc538582a701551d30a11d
 SHA1 (patch-ag) = bc9eebab94d5c2ab8dcc7896f0a092f4a21e88e5
 SHA1 (patch-ah) = b675b0cbdc86c6135772b4171d2b4e7f1462fde7
 SHA1 (patch-ai) = 89ae38a4a4ddad3df5d28be16c246d79f51ac92a
+SHA1 (patch-dxflib_src_dl__writer.h) = d7d09dcd5569123a70e80463ed7ca48c3bd036dc
+SHA1 (patch-dxflib_src_dl__writer__ascii.cpp) = 8d35813df12fb2ed157969efdf12ff05c04d3285
+SHA1 (patch-qcadactions_src_rs__actionzoompan.cpp) = d43839c52b19a398029e111f2c7f14ded73a019f
+SHA1 (patch-qcadlib_src_information_rs__information.h) = c8e096998bddbefdd8cad8e38a9fc43f4101832c
