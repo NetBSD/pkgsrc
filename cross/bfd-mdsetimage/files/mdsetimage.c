@@ -1,4 +1,4 @@
-/* $NetBSD: mdsetimage.c,v 1.5 2006/08/24 20:18:04 kristerw Exp $ */
+/* $NetBSD: mdsetimage.c,v 1.6 2011/09/24 19:31:09 joerg Exp $ */
 /* from: NetBSD: mdsetimage.c,v 1.15 2001/03/21 23:46:48 cgd Exp $ */
 
 /*
@@ -38,7 +38,7 @@ __COPYRIGHT(
 #endif /* not lint */
 
 #ifndef lint
-__RCSID("$NetBSD: mdsetimage.c,v 1.5 2006/08/24 20:18:04 kristerw Exp $");
+__RCSID("$NetBSD: mdsetimage.c,v 1.6 2011/09/24 19:31:09 joerg Exp $");
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -50,6 +50,7 @@ __RCSID("$NetBSD: mdsetimage.c,v 1.5 2006/08/24 20:18:04 kristerw Exp $");
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 #include <bfd.h>
 
