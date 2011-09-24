@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/09 19:41:44 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/24 13:14:15 joerg Exp $
 #
 
 DISTNAME=		editres-1.0.4
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
