@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2323 2011/09/24 05:10:12 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2324 2011/09/24 16:53:56 schmonz Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/netatalk to 2.2.1 [christos 2011-09-21]
 	Updated emulators/qemu to 0.15.0nb1 [ryoon 2011-09-22]
 	Updated security/ruby-roauth to 0.0.8 [obache 2011-09-24]
+	Updated mail/getmail to 4.21.0 [schmonz 2011-09-24]
