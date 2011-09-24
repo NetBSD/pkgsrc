@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/11/10 17:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/24 13:14:15 joerg Exp $
 #
 
 DISTNAME=		beforelight-1.0.3
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
