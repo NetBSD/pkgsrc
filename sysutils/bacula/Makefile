@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2011/06/26 14:24:55 shattered Exp $
+# $NetBSD: Makefile,v 1.38 2011/09/24 12:59:34 joerg Exp $
 
 PKGREVISION=		1
 
@@ -34,6 +34,8 @@ CONF_FILES+=		${EXAMPLESDIR}/bacula-sd.conf ${PKG_SYSCONFDIR}/bacula-sd.conf
 RCD_SCRIPTS=		bacula bacula-dir bacula-sd bacula-fd
 
 REPLACE_PERL+=		src/cats/make_catalog_backup.pl.in
+
+CHECK_INTERPRETER_SKIP=	libexec/bacula/make_catalog_backup.pl
 
 .include "Makefile.common"
 
