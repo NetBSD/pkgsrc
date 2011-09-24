@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2324 2011/09/24 16:53:56 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.2325 2011/09/24 22:33:41 tron Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3636,3 +3636,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/qemu to 0.15.0nb1 [ryoon 2011-09-22]
 	Updated security/ruby-roauth to 0.0.8 [obache 2011-09-24]
 	Updated mail/getmail to 4.21.0 [schmonz 2011-09-24]
+	Updated multimedia/mediatomb to 0.12.1nb5 [tron 2011-09-24]
