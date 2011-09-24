@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/04/22 13:43:13 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/24 19:55:24 joerg Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -17,6 +17,7 @@ COMMENT=		C++ interface to Cassandra
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		perl
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
