@@ -1,4 +1,4 @@
-/* $NetBSD: read_child.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
+/* $NetBSD: read_child.c,v 1.3 2011/09/24 12:58:55 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -44,7 +44,6 @@
 char *
 read_from_child(const char *dir, const char *cmd, const char * const *argv)
 {
-	const char *error;
 	char *buf;
 	size_t buf_len, cur_len;
 	ssize_t bytes_read;
@@ -66,11 +65,10 @@ read_from_child(const char *dir, const char *cmd, const char * const *argv)
 		buf = xrealloc(buf, buf_len + 1);
 	}
 	if (bytes_read == -1) {
-		error = "read failed";
 		(void)close(fd);
 		(void)kill(child, SIGTERM);
 		(void)waitpid(child, &status, 0);
-		err(1, error);
+		err(1, "read failed");
 	}
 
 	(void)close(fd);
