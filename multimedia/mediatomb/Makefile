@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/06/10 09:39:57 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/09/24 22:33:25 tron Exp $
 
 DISTNAME=	mediatomb-0.12.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mediatomb/}
 
@@ -64,10 +64,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
-.if ${OPSYS} == "NetBSD"
-PREFER.bind=	pkgsrc	# we need the package for the lwres lib
-.include "../../net/bind97/buildlink3.mk"
-.endif
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
