@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/04/22 13:44:51 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/09/24 13:00:04 joerg Exp $
 
 MODNAME=		pspell
 PKGREVISION=		1
@@ -11,7 +11,7 @@ CONFLICTS=	php-pspell-[0-9]*
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.aspell}
 
-PHP_VERSION_REQD=	5
+PHP_VERSION_REQD=	53
 
 .include "../../lang/php/ext.mk"
 .include "../../textproc/aspell/buildlink3.mk"
