@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10570 2011/09/20 19:35:48 wiz Exp $
+$NetBSD: TODO,v 1.10571 2011/09/24 16:53:56 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -681,7 +681,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gentoo-0.19.11
-	o getmail-4.20.4
 	o gfract-0.33
 	o ghc-7.0.4
 	o ghostscript-9.04 [wip]
