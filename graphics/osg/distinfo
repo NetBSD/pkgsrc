@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/26 13:08:48 adam Exp $
+$NetBSD: distinfo,v 1.2 2011/09/24 12:58:11 joerg Exp $
 
 SHA1 (OpenSceneGraph-2.8.3.zip) = 90502e4cbd47aac1689cc39d25ab62bbe0bba9fc
 RMD160 (OpenSceneGraph-2.8.3.zip) = 40a4988f4aefff7dbb6aab5225204ae41c945277
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = 3707347bed3d597bc50ad81f0e5c974ffb60100a
 SHA1 (patch-ac) = bc35c9b0a9c7612137c66018b36b35b9897065be
 SHA1 (patch-ad) = 846f4f93104812125bffc8644948637de206bdc0
 SHA1 (patch-ae) = d882f09acac61f74a25cf3efc8f3b7b3756adae3
+SHA1 (patch-src-osgPlugins-curl-ReaderWriterCURL.cpp) = 4ece011ff1284011b7777f00b838d6673c22bd2a
