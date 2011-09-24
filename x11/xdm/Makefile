@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/07/12 11:39:57 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/09/24 13:14:16 joerg Exp $
 
 DISTNAME=	xdm-1.1.10
 CATEGORIES=	x11
@@ -59,6 +59,8 @@ CONFIGURE_ARGS+=	--with-random-device=/dev/urandom
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 CONFIGURE_ARGS+=	--with-default-vt=vt05
 .endif
+
+MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "options.mk"
 
