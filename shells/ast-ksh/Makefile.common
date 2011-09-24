@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.25 2010/05/07 12:02:43 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.26 2011/09/24 12:03:19 ryoon Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
 PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	http://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/ \
-		ftp://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/
+		ftp://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/ \
+		http://pkgs.fedoraproject.org/repo/pkgs/ksh/ast-ksh.2006-02-14.tgz/76a13bdb10a35b5ff67208cf9042a8bf/ \
+		http://pkgs.fedoraproject.org/repo/pkgs/ksh/INIT.2006-02-14.tgz/375ede1f75db451f645a140ec41b9216/
 DISTFILES=	INIT.${ASTKSH_VERSION}.tgz ast-ksh.${ASTKSH_VERSION}.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
