@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/11/09 19:10:34 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2011/09/24 13:14:16 joerg Exp $
 #
 
 DISTNAME=	xclock-1.0.4
@@ -17,6 +17,8 @@ USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV+=	APP_MAN_SUFFIX=1
 LDFLAGS+=	${BUILDLINK_LDADD.iconv}
+
+MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
