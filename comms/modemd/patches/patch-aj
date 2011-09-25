@@ -1,8 +1,13 @@
-$NetBSD: patch-aj,v 1.4 2010/12/30 09:02:52 obache Exp $
+$NetBSD: patch-aj,v 1.5 2011/09/25 19:41:11 joerg Exp $
 
 --- common/mcap.c.orig	1997-02-21 23:05:16.000000000 +0000
 +++ common/mcap.c
-@@ -48,6 +48,8 @@ static char copyright[] =
+@@ -44,10 +44,13 @@ static char copyright[] =
+ #include "osdep.h"
+ #include "cdefs.h"
+ #include "global.h"
++#include <ctype.h>
+ #include <stdio.h>
  #include "mcap.h"
  
  static void enter_modemcap PROTO ((char *));
