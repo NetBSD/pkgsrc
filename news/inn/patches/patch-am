@@ -1,0 +1,26 @@
+$NetBSD: patch-am,v 1.1 2011/09/25 14:00:09 spz Exp $
+
+remove deprecated perl features that don't do anything useful anyway
+(replicate change in INN trunk)
+
+--- ./scripts/innreport.in.orig	2010-03-24 20:10:36.000000000 +0000
++++ ./scripts/innreport.in
+@@ -672,10 +672,6 @@ if (!$NOT_DAILY && defined $output{'defa
+ # - Specified in section "inn_flow" of innreport.conf.
+ sub DateCompare {
+ 
+-  # $[ ... The index of the first element in an array, and of the first
+-  #        character in a substring. Default is 0.
+-  local $[ = 0;
+-
+   # The 2 dates are near. The range is less than a few days that's why we
+   # can cheat to determine the order. It is only important if one date
+   # is in January and the other in December.
+@@ -791,7 +787,6 @@ sub ConvDate($) {
+ 
+ # Compare 2 filenames
+ sub filenamecmp {
+-  local $[ = 0;
+   my ($la, $lb) = ($a, $b);
+   my ($ya) = $la =~ m/news-notice\.(\d+)\./o;
+   $ya += 100  if $ya < 90; # Try to pacify the year 2000 !
