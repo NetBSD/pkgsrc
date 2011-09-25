@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.23 2011/09/05 22:07:28 schmonz Exp $
+$NetBSD: patch-aa,v 1.24 2011/09/25 14:33:09 schmonz Exp $
 
 PKG_SYSCONFDIR and PKGMANDIR support, avoid GNUisms in standard utilities.
 
@@ -45,11 +45,13 @@ PKG_SYSCONFDIR and PKGMANDIR support, avoid GNUisms in standard utilities.
  extra_clean:
  	$(PERL) -Iblib/lib $(extramodules) $(tflag) ikiwiki.in -setup docwiki.setup -clean
  	rm -f *.man $(outprogs) ikiwiki.setup plugins/*.pyc
-@@ -70,7 +76,7 @@ underlay_install:
+@@ -69,8 +75,8 @@ underlay_install:
+ 	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki
  	for dir in `cd underlays && $(FIND) . -follow -type d`; do \
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
- 		for file in `$(FIND) underlays/$$dir -follow -maxdepth 1 -type f -not -name \\*.full.js -not -name \\*.full.css`; do \
+-		for file in `$(FIND) underlays/$$dir -follow -maxdepth 1 -type f -not -name \\*.full.js -not -name \\*.full.css`; do \
 -			cp -aL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir 2>/dev/null || \
++		for file in `$(FIND) underlays/$$dir -follow -maxdepth 1 -type f ! -name \\*.full.js ! -name \\*.full.css`; do \
 +			cp -pRL $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir 2>/dev/null || \
  			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
  		done; \
