@@ -1,11 +1,12 @@
-$NetBSD: patch-ar,v 1.1 2007/10/10 16:53:59 rillig Exp $
+$NetBSD: patch-ar,v 1.2 2011/09/25 19:41:11 joerg Exp $
 
 --- common/errwarn.c.orig	1996-09-10 00:12:34.000000000 +0000
 +++ common/errwarn.c	2007-10-10 16:48:18.000000000 +0000
-@@ -46,6 +46,7 @@ static char copyright[] =
+@@ -46,6 +46,8 @@ static char copyright[] =
  #include "global.h"
  #include <syslog.h>
  #include <errno.h>
++#include <stdio.h>
 +#include <stdlib.h>
  
  static void do_percentm PROTO ((char *obuf, char *ibuf));
