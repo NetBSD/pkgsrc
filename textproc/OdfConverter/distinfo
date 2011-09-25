@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/05/28 16:18:23 joerg Exp $
+$NetBSD: distinfo,v 1.5 2011/09/25 20:11:11 joerg Exp $
 
 SHA1 (OdfAddinForOffice-src-3.0.zip) = 678d98672ecca9adabe1221b1725c255f4f88fe5
 RMD160 (OdfAddinForOffice-src-3.0.zip) = ff6ddab2784ef1d54261cde15abfb7e98e30b80a
 Size (OdfAddinForOffice-src-3.0.zip) = 34547426 bytes
-SHA1 (patch-aa) = 33ed2b5d999d71b9ad1edee87328eebb5f408d57
+SHA1 (patch-aa) = 633d675ee3a2d12e99874da0c936e9c5a9b6f964
 SHA1 (patch-ab) = 1240ea11736009463bf937ccc547e5037d411626
 SHA1 (patch-ac) = 5e48d1f5a0a40912f56154bbbaaeea74819cd202
