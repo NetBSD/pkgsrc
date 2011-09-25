@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1 2011/09/25 14:00:09 spz Exp $
+
+remove deprecated perl features that don't do anything useful anyway
+(replicate change in INN trunk)
+
+--- ./scripts/innreport_inn.pm.orig	2010-03-24 20:10:36.000000000 +0000
++++ ./scripts/innreport_inn.pm
+@@ -2430,7 +2430,6 @@ sub report_unwanted_ng($) {
+ # Compare 2 dates (+hour), used with sort (arguments $a and $b)
+ sub datecmp() {
+   # ex: "May 12 06"   for May 12, 6:00am
+-  local($[) = 0;
+   # The 2 dates are near. The range is less than a few days that's why we
+   # can cheat to determine the order. It is only important if one date
+   # is in January and the other in December.
