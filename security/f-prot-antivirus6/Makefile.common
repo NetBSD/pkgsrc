@@ -1,20 +1,20 @@
-# $NetBSD: Makefile.common,v 1.2 2010/06/16 22:27:03 taca Exp $
+# $NetBSD: Makefile.common,v 1.3 2011/09/25 14:13:48 taca Exp $
 #
 # used by security/f-prot-antivirus6-ms-bin/Makefile
 # used by security/f-prot-antivirus6-fs-bin/Makefile
 # used by security/f-prot-antivirus6-ws-bin/Makefile
 #
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 CONFLICTS+=		f-prot-antivirus6-{fs,ms,ws} fprot-workstation-bin-*
 
-VERSION=		6.0.3.1
+VERSION=		6.1.0
 
 # ws, ms, fs
-FP_TYPE?=	ws
-FP_ARCH?=	${MACHINE_ARCH}
+FP_TYPE?=	ms
+FP_ARCH?=	x86.32
 FP_OPSYS?=	${OPSYS}
 
-FP_DISTNAME=	fp-${FP_OPSYS}-${FP_ARCH}-${FP_TYPE}-${VERSION}
+FP_DISTNAME=	fp-${FP_OPSYS}.${FP_ARCH}-${FP_TYPE}-${VERSION}
 PKGNAME=	f-prot-antivirus6-${FP_TYPE}-bin-${VERSION}
 
 RESTRICTED=		"Commercial product"
@@ -27,7 +27,7 @@ LICENSE=		f-prot-antivirus-license
 
 WRKSRC?=		${WRKDIR}/f-prot
 NO_BUILD=		yes
-NO_CHECKSUM=		yes
+#NO_CHECKSUM=		yes
 USE_TOOLS+=		pax
 
 DATA=			antivir.def

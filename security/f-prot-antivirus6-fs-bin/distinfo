@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2011/09/25 14:13:48 taca Exp $
+
+SHA1 (fp-NetBSD.x86.32-fs-6.1.0.tar.gz) = cdae29097fc5cd7c4d6db4d615901c4951e26c63
+RMD160 (fp-NetBSD.x86.32-fs-6.1.0.tar.gz) = 0e1f4efdd2481a444e51134df3792b9c8a9d02f8
+Size (fp-NetBSD.x86.32-fs-6.1.0.tar.gz) = 31661490 bytes
