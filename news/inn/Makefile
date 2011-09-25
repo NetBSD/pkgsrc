@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2011/08/14 14:16:34 obache Exp $
+# $NetBSD: Makefile,v 1.107 2011/09/25 13:58:31 spz Exp $
 
 DISTNAME=		inn-2.5.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -85,6 +85,7 @@ INSTALLATION_DIRS+=	etc/nntp
 INSTALLATION_DIRS+=	sbin
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${EXAMPLEDIR}
+INSTALLATION_DIRS+=	${EXAMPLEDIR}/filter
 
 MAKE_DIRS+=		${PREFIX}/bin
 MAKE_DIRS+=		${PREFIX}/sbin
@@ -95,6 +96,7 @@ INN_DIRS+=		${PREFIX}/etc/inn
 INN_DIRS+=		${INN_DATA_DIR}
 
 OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}
+OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}/filter
 OWN_DIRS+=		${EXAMPLEDIR}
 
 .for dir in ${INN_DIRS}
@@ -137,6 +139,16 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${INN_DATA_DIR}/db/${file} \
 			${INN_USER} ${INN_GROUP} 0664
 .endfor
 
+FILTERFILES=		INN.py filter_innd.py nnrpd.py nnrpd_access.py \
+			nnrpd_auth.py nnrpd_dynamic.py \
+			filter_innd.pl filter_nnrpd.pl nnrpd_access.pl \
+			nnrpd_auth.pl startup_innd.pl
+
+.for file in ${FILTERFILES}
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/filter/${file} ${INN_PATHBIN}/filter/${file} \
+			${INN_USER} ${INN_GROUP} 0664
+.endfor
+
 RCD_SCRIPTS=		innd
 
 PKG_DESTDIR_SUPPORT=	destdir
@@ -163,6 +175,9 @@ pre-install:
 	${TOUCH} ${WRKSRC}/site/${file}
 	${INSTALL_DATA} ${WRKSRC}/site/${file} ${DESTDIR}${EXAMPLEDIR}
 .endfor
+.for file in ${FILTERFILES}
+	${INSTALL_DATA} ${WRKSRC}/site/${file} ${DESTDIR}${EXAMPLEDIR}/filter
+.endfor
 
 post-install:
 .for file in cnfsstat ctlinnd makehistory innbind
@@ -170,10 +185,10 @@ post-install:
 	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/${file}	\
 				${DESTDIR}${PREFIX}/sbin
 .endfor
-	${RM} -f ${DESTDIR}${PREFIX}/sbin/inews
+	${RM} -f ${DESTDIR}${PREFIX}/bin/inews
 	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/inews	\
 			${DESTDIR}${PREFIX}/bin
-	${RM} -f ${DESTDIR}${PREFIX}/sbin/rnews
+	${RM} -f ${DESTDIR}${PREFIX}/bin/rnews
 	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews	\
 			${DESTDIR}${PREFIX}/bin
 .for file in libinn.a libstorage.a libinnhist.a
