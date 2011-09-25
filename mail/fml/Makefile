@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/03 06:59:56 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/25 19:49:25 joerg Exp $
 #
 
 DISTNAME=	fml-7.98.15-${FML_STAMP}
@@ -12,6 +12,7 @@ COMMENT=	FML mailing list server development version
 LICENSE=	gnu-gpl-v2 OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+USERGROUP_PHASE=	pre-install
 
 # development version
 FML_STAMP=	20100306
@@ -24,8 +25,8 @@ PLIST_SUBST+=	FML_STAMP=${FML_STAMP} EGDIR=${EGDIR}
 .include "../../mk/bsd.prefs.mk"
 
 FMLDIR?=		${VARBASE}/fml
-FMLGROUP?=		fml
-FMLUSER?=		fml
+FML_GROUP?=		fml
+FML_USER?=		fml
 PKG_GROUPS_VARS+=	FML_GROUP
 PKG_USERS_VARS+=	FML_USER
 
@@ -42,14 +43,14 @@ CONFS=			main.cf mime_component_filter site_default_config.cf
 .for f in ${CONFS}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-OWN_DIRS_PERMS+=	${FMLDIR} ${FMLUSER} ${FMLGROUP} 0755
+OWN_DIRS_PERMS+=	${FMLDIR} ${FML_USER} ${FML_GROUP} 0755
 
 CONFIGURE_ARGS+=	--with-sysconfdir=${PKG_SYSCONFDIR} \
 			--with-mlspooldir=${FMLDIR} \
 			--with-default-domain=example.net \
 			--with-default-hostname=mail \
-			--with-fml-owner=${FMLUSER} \
-			--with-fml-group=${FMLGROUP}
+			--with-fml-owner=${FML_USER} \
+			--with-fml-group=${FML_GROUP}
 CONFIGURE_ENV+=		ac_cv_path_GZCAT=${GZCAT:Q} \
 			ac_cv_path_PERL=${PERL5:Q}
 MAKE_ENV+=		install_root=${DESTDIR} PERL=${PERL5}
