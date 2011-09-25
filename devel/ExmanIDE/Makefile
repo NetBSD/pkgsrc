@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/02/10 19:17:34 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2011/09/25 19:41:38 joerg Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	6
@@ -31,6 +31,12 @@ SUBST_MESSAGE.py=	Fixing paths in a wrapper script.
 SUBST_STAGE.py=		post-patch
 SUBST_FILES.py=		ExmanIDE
 SUBST_SED.py=		-e 's,python \$$0\.pyw,${PYTHONBIN} ${PREFIX}/share/${PKGBASE}/ExmanIDE.pyw,g'
+
+SUBST_CLASSES+=		py2
+SUBST_MESSAGE.py2=	Fixing path in Python module.
+SUBST_STAGE.py2=	post-patch
+SUBST_FILES.py2=	ExmanIDE.pyw
+SUBST_SED.py2=		-e 's,/usr/bin/env python.*$$,${PYTHONBIN},'
 
 INSTALLATION_DIRS=	 bin share/ExmanIDE
 
