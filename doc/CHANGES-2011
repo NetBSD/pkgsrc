@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2326 2011/09/25 08:53:54 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2327 2011/09/25 14:15:01 taca Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3638,3 +3638,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/getmail to 4.21.0 [schmonz 2011-09-24]
 	Updated multimedia/mediatomb to 0.12.1nb5 [tron 2011-09-24]
 	Updated www/apache-tomcat55 to 5.5.34 [obache 2011-09-25]
+	Updated security/f-prot-antivirus6-ws-bin to 6.1.0 [taca 2011-09-25]
+	Updated security/f-prot-antivirus6-fs-bin to 6.1.0 [taca 2011-09-25]
+	Updated security/f-prot-antivirus6-ms-bin to 6.1.0 [taca 2011-09-25]
