@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2008/06/12 02:14:38 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/09/25 19:52:30 joerg Exp $
 
 SHA1 (alevt-1.6.1.tar.gz) = 0dffba71b911e79fce34a2e6aba9bf69c8a71d28
 RMD160 (alevt-1.6.1.tar.gz) = 9c38525387140610c17fc474c87896aa74cb877d
 Size (alevt-1.6.1.tar.gz) = 117731 bytes
 SHA1 (patch-aa) = 2079d6f12a27f7a17ed2ea4aa85331c93abc0b3b
 SHA1 (patch-ab) = 6761ff96fe89fd61b63b0c91ee79a07c2c9628cf
+SHA1 (patch-exp-gfx.c) = d17a8a6420a7c549170fc33820382bddd6eea510
