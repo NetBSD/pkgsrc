@@ -1,25 +1,35 @@
-$NetBSD: patch-aa,v 1.4 2010/05/28 16:18:23 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2011/09/25 20:11:11 joerg Exp $
 
 --- source/Shell/OdfConverter/Makefile.orig	2007-12-19 15:16:04.000000000 +0100
 +++ source/Shell/OdfConverter/Makefile
+@@ -54,7 +54,7 @@ OdfConverterTestStatic.exe : $(SOURCE) .
+ 		$(SOURCE)
+ 
+ main.c bundle.o : OdfConverterTestStatic.exe Makefile
+-	MONO_PATH='../../Common/OdfZipUtils$(PATHSEP)../../Common/OdfConverterLib$(PATHSEP)../../Word/Converter$(PATHSEP)../../Presentation/Converter$(PATHSEP)../../Spreadsheet/Converter' mkbundle2 -c -o main.c -oo bundle.o --deps $(MACHINE_CONFIG_FILE) OdfConverterTestStatic.exe
++	MONO_PATH='../../Common/OdfZipUtils$(PATHSEP)../../Common/OdfConverterLib$(PATHSEP)../../Word/Converter$(PATHSEP)../../Presentation/Converter$(PATHSEP)../../Spreadsheet/Converter' mkbundle -c -o main.c -oo bundle.o --deps $(MACHINE_CONFIG_FILE) OdfConverterTestStatic.exe
+ 
+ OdfConverter$(EXEEXT) : main.c bundle.o $(ZLIBDEP) Makefile
+ 	rm -f $@
 @@ -64,16 +64,16 @@ ifeq ($(OS),Darwin)
  	$(CC) -o OdfConverter -Wall `pkg-config --cflags mono` main.c \
  		`pkg-config --libs-only-L mono` -bind_at_load -all_load -lz \
  	    ../../AdditionalTools/zlib123/contrib/minizip/libzlibwapi.a \
 -		`pkg-config --libs-only-l mono` bundle.o
-+		`pkg-config --libs-only-l mono gtk+-2.0 gthread-2.0` bundle.o
++		`pkg-config --libs-only-l mono-2 gtk+-2.0 gthread-2.0` bundle.o
  else
 -	$(CC) -o OdfConverter$(EXEEXT) -Wall `pkg-config --cflags mono` main.c \
-+	$(CC) -o OdfConverter$(EXEEXT) -Wall `pkg-config --cflags mono gtk+-2.0 gthread-2.0` main.c \
++	$(CC) -o OdfConverter$(EXEEXT) -Wall `pkg-config --cflags mono-2 gtk+-2.0 gthread-2.0` main.c \
  	    $(KILLAT) \
  	    bundle.o \
  	    $(EXPORTDYNAMIC) \
  	    -Wl,--undefined=$(ZIPOPEN) -Wl,--undefined=$(UNZOPEN) \
 -	    `pkg-config --libs-only-L mono` -L../../AdditionalTools/zlib123/contrib/minizip \
 +	    -L../../AdditionalTools/zlib123/contrib/minizip \
- 	    -Wl,-Bstatic -lmono -lzlibwapi -Wl,-Bdynamic  \
+-	    -Wl,-Bstatic -lmono -lzlibwapi -Wl,-Bdynamic  \
++	    -Wl,-Bstatic -lmono-2.0 -lzlibwapi -Wl,-Bdynamic  \
 -	    `pkg-config --libs-only-l mono | sed -e "s/\-lmono //"` \
-+	    `pkg-config --libs mono gtk+-2.0 gthread-2.0 | sed -e "s/\-lmono //"` \
++	    `pkg-config --libs mono-2 gtk+-2.0 gthread-2.0 | sed -e "s/\-lmono-2.0 //"` \
  	    $(ZLIB) $(OTHERLIBS)
  endif
  ifeq ($(OS),Cygwin)
