@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2327 2011/09/25 14:15:01 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2328 2011/09/25 20:10:34 joerg Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/f-prot-antivirus6-ws-bin to 6.1.0 [taca 2011-09-25]
 	Updated security/f-prot-antivirus6-fs-bin to 6.1.0 [taca 2011-09-25]
 	Updated security/f-prot-antivirus6-ms-bin to 6.1.0 [taca 2011-09-25]
+	Updated www/py-uwsgi to 0.9.8.6 [joerg 2011-09-25]
