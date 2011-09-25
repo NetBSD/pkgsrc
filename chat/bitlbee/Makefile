@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2011/07/09 13:37:51 drochner Exp $
+# $NetBSD: Makefile,v 1.54 2011/09/25 19:07:48 joerg Exp $
 #
 
 DISTNAME=		bitlbee-3.0.3
@@ -79,5 +79,5 @@ RCD_SCRIPT_SRC.bitlbee=	${FILESDIR}/bitlbee.sh
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-#.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
