@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/16 22:27:03 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/25 14:13:49 taca Exp $
 #
 DISTNAME=		${FP_DISTNAME}
 CATEGORIES=		security
@@ -31,7 +31,11 @@ SPECIAL_PERMS+=		${FPROTDIR}/scan-mail.pl ${BINOWN} ${FPROT_GROUP} 0750
 PKG_GROUP=		${FPROT_GROUP}
 PKG_USERS=		${FPROT_USER}
 
-REPLACE_PERL+=		mailtools/scan-mail.pl
+REPLACE_PERL+=		mailtools/scan-mail.pl perl/lib/Anomy/HTMLCleaner.pm \
+			perl/lib/Anomy/Log.pm perl/lib/Anomy/MIMEStream.pm \
+			perl/lib/Anomy/Sanitizer/FProt/Client.pm \
+			perl/lib/Anomy/Sanitizer/FileTypes.pm \
+			perl/lib/Anomy/Sanitizer.pm
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Configuring default paths.
@@ -58,7 +62,7 @@ install-ms:
 		${INSTALL_PROGRAM} fp-milter fp-qmail \
 			${DESTDIR}${PREFIX}/${FPROTDIR}
 	cd ${WRKSRC}/doc/man/; \
-		${INSTALL_MAN} scan-mail.pl.8 fp-milter.8 fp-qmail.8 \
+		${INSTALL_MAN} scan-mail.pl.8 \
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${FIND} ${WRKSRC}/perl -type f -exec ${CHMOD} 0444 {} \; \
 			-name '*.orig' -exec rm -f {} \;
