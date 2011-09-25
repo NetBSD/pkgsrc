@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/12/16 22:10:25 spz Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/09/25 13:58:31 spz Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
@@ -72,17 +72,6 @@ ${INN_PATHBIN}/expireover
 ${INN_PATHBIN}/expirerm
 ${INN_PATHBIN}/fastrm
 ${INN_PATHBIN}/filechan
-${INN_PATHBIN}/filter/INN.py
-${INN_PATHBIN}/filter/filter_innd.pl
-${INN_PATHBIN}/filter/filter_innd.py
-${INN_PATHBIN}/filter/filter_nnrpd.pl
-${INN_PATHBIN}/filter/nnrpd.py
-${INN_PATHBIN}/filter/nnrpd_access.pl
-${INN_PATHBIN}/filter/nnrpd_access.py
-${INN_PATHBIN}/filter/nnrpd_auth.pl
-${INN_PATHBIN}/filter/nnrpd_auth.py
-${INN_PATHBIN}/filter/nnrpd_dynamic.py
-${INN_PATHBIN}/filter/startup_innd.pl
 ${INN_PATHBIN}/getlist
 ${INN_PATHBIN}/grephistory
 ${INN_PATHBIN}/imapfeed
@@ -285,6 +274,17 @@ share/examples/inn/cycbuff.conf
 share/examples/inn/distrib.pats
 share/examples/inn/distributions
 share/examples/inn/expire.ctl
+share/examples/inn/filter/INN.py
+share/examples/inn/filter/filter_innd.pl
+share/examples/inn/filter/filter_innd.py
+share/examples/inn/filter/filter_nnrpd.pl
+share/examples/inn/filter/nnrpd.py
+share/examples/inn/filter/nnrpd_access.pl
+share/examples/inn/filter/nnrpd_access.py
+share/examples/inn/filter/nnrpd_auth.pl
+share/examples/inn/filter/nnrpd_auth.py
+share/examples/inn/filter/nnrpd_dynamic.py
+share/examples/inn/filter/startup_innd.pl
 share/examples/inn/history
 share/examples/inn/incoming.conf
 share/examples/inn/inn.conf
