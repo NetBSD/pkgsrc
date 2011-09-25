@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/11/03 22:37:28 rillig Exp $
+$NetBSD: distinfo,v 1.7 2011/09/25 19:53:07 joerg Exp $
 
 SHA1 (dgd-1.2p4.tar.gz) = 7a42cf6534ad114ab2eca6638414d5dd5595342a
 RMD160 (dgd-1.2p4.tar.gz) = 1c6f5e8e6783ba29d8933bef2c365031e32be77f
 Size (dgd-1.2p4.tar.gz) = 472205 bytes
 SHA1 (patch-aa) = 9253e211eb82fb06ea7771e2dbd37d9c53ea1435
+SHA1 (patch-src-ed-fileio.c) = 0da31dfd142e4ad98f942029e2f1b8c4ff95dd96
