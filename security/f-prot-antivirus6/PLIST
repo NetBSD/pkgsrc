@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/06/16 22:27:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/09/25 14:13:48 taca Exp $
 bin/fpscan
 ${PLIST.scanmail}${PERL5_SUB_INSTALLVENDORLIB}/Anomy/HTMLCleaner.pm
 ${PLIST.scanmail}${PERL5_SUB_INSTALLVENDORLIB}/Anomy/Log.pm
@@ -18,8 +18,6 @@ ${FPROTDIR}/product.data
 ${PLIST.scanmail}${FPROTDIR}/scan-mail.pl
 man/man1/fpscan.1
 man/man5/f-prot.conf.5
-${PLIST.scanmail}man/man8/fp-milter.8
-${PLIST.scanmail}man/man8/fp-qmail.8
 ${PLIST.fpso}man/man8/fp.so.8
 ${PLIST.fpso}man/man8/fpmon.8
 ${PLIST.fpscand}man/man8/fpscand.8
