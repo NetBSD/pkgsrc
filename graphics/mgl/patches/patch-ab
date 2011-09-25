@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2011/04/03 11:40:08 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2011/09/25 13:52:26 ryoon Exp $
 
 --- conf/config.mk-netbsd-i386-x.orig	Sun Dec 10 02:49:30 2000
 +++ conf/config.mk-netbsd-i386-x	Wed Mar 14 06:41:48 2001
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.3 2011/04/03 11:40:08 wiz Exp $
 +
 +# nine
 +GP_DYNAMIC=y
-+PATCH_YY_BUF_SIZE=y
++@PATCH_YY_BUF_SIZE_FLAG@
  
  # mil options 
  USE_JPEG   = -DUSE_JPEG
