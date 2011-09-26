@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.3 2011/08/25 10:32:52 sbd Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.4 2011/09/26 13:06:52 abs Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -243,6 +243,8 @@ java/sun-6/lib/psfont.properties.ja.default
 java/sun-6/lib/psfontj2d.properties.default
 java/sun-6/lib/resources.jar
 java/sun-6/lib/rt.jar
+${PLIST.jce}java/sun-6/lib/security/COPYRIGHT.html
+${PLIST.jce}java/sun-6/lib/security/README.txt
 java/sun-6/lib/security/US_export_policy.jar
 java/sun-6/lib/security/blacklist
 java/sun-6/lib/security/cacerts
