@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2329 2011/09/26 14:06:53 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.2330 2011/09/26 19:35:34 ryoon Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3643,3 +3643,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/f-prot-antivirus6-ms-bin to 6.1.0 [taca 2011-09-25]
 	Updated www/py-uwsgi to 0.9.8.6 [joerg 2011-09-25]
 	Updated mail/getmail to 4.22.0 [schmonz 2011-09-26]
+	Added math/R-car version 2.0.11 [ryoon 2011-09-26]
