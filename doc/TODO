@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10571 2011/09/24 16:53:56 schmonz Exp $
+$NetBSD: TODO,v 1.10572 2011/09/26 21:49:29 taca Exp $
 
 Suggested new packages
 ======================
@@ -956,7 +956,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.6.4
+	o mathomatic-15.6.5
 	o memtester-4.2.2
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
@@ -1053,6 +1053,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o otpCalc-0.97
+	o p5-FCGI-0.74 [CVE-2011-2766]
 	o p5-PerlMagick-6.7.1.6
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ack-1.96
@@ -1093,6 +1094,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plone-4.1
 	o ploticus-2.41
 	o ploticus-examples-230
+	o png-1.5.5 [CVE-2011-3328]
 	o po4a-0.41
 	o podofo-0.9.1
 	o polsms-2.1.0
