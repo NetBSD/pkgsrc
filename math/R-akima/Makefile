@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/07/30 10:36:25 asau Exp $
+# $NetBSD: Makefile,v 1.8 2011/09/26 20:05:32 ryoon Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -10,7 +10,7 @@ COMMENT=	Linear or cubic spline interpolation for irregular gridded data
 R_PKGNAME=	akima
 R_PKGVER=	0.5-4
 
-USE_LANGUAGES=	fortran77
+USE_LANGUAGES=	fortran77 c
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
