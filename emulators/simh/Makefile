@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/06/19 13:59:52 obache Exp $
+# $NetBSD: Makefile,v 1.32 2011/09/26 19:24:10 ryoon Exp $
 #
 
 DISTNAME=	simhv38-1
@@ -30,7 +30,7 @@ BUILDLINK_TRANSFORM+=	rm:-O2
 INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
 MAKE_FILE=		makefile
-MAKE_FLAGS+=		USE_NETWORK=YES
+MAKE_FLAGS+=		USE_NETWORK=YES OSTYPE=${LOWER_OPSYS}
 
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
