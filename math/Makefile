@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2011/06/14 21:31:31 alnsn Exp $
+# $NetBSD: Makefile,v 1.220 2011/09/26 19:34:11 ryoon Exp $
 
 COMMENT=	Mathematics
 
@@ -15,6 +15,7 @@ SUBDIR+=	R-XML
 SUBDIR+=	R-abind
 SUBDIR+=	R-akima
 SUBDIR+=	R-bitops
+SUBDIR+=	R-car
 SUBDIR+=	R-chron
 SUBDIR+=	R-circular
 SUBDIR+=	R-classInt
