@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/09/27 16:21:22 bouyer Exp $
+# $NetBSD: Makefile,v 1.12 2011/09/27 16:27:07 bouyer Exp $
 
 VERS=		3.2.4
 DISTNAME=	syslog-ng_${VERS}
@@ -6,7 +6,7 @@ PKGNAME=	syslog-ng-${VERS}
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${VERS}/source/
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/syslog-ng-${VERS}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
