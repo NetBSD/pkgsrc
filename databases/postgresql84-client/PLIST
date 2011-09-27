@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/04/22 13:01:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/09/27 11:04:30 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -1313,6 +1313,7 @@ share/doc/postgresql/html/release-8-2-19.html
 share/doc/postgresql/html/release-8-2-2.html
 share/doc/postgresql/html/release-8-2-20.html
 share/doc/postgresql/html/release-8-2-21.html
+share/doc/postgresql/html/release-8-2-22.html
 share/doc/postgresql/html/release-8-2-3.html
 share/doc/postgresql/html/release-8-2-4.html
 share/doc/postgresql/html/release-8-2-5.html
@@ -1328,6 +1329,7 @@ share/doc/postgresql/html/release-8-3-12.html
 share/doc/postgresql/html/release-8-3-13.html
 share/doc/postgresql/html/release-8-3-14.html
 share/doc/postgresql/html/release-8-3-15.html
+share/doc/postgresql/html/release-8-3-16.html
 share/doc/postgresql/html/release-8-3-2.html
 share/doc/postgresql/html/release-8-3-3.html
 share/doc/postgresql/html/release-8-3-4.html
@@ -1345,6 +1347,7 @@ share/doc/postgresql/html/release-8-4-5.html
 share/doc/postgresql/html/release-8-4-6.html
 share/doc/postgresql/html/release-8-4-7.html
 share/doc/postgresql/html/release-8-4-8.html
+share/doc/postgresql/html/release-8-4-9.html
 share/doc/postgresql/html/release-8-4.html
 share/doc/postgresql/html/release.html
 share/doc/postgresql/html/resources.html
@@ -1753,6 +1756,16 @@ share/locale/ko/LC_MESSAGES/pg_resetxlog-8.4.mo
 share/locale/ko/LC_MESSAGES/pgscripts-8.4.mo
 share/locale/ko/LC_MESSAGES/psql-8.4.mo
 share/locale/nb/LC_MESSAGES/pg_config-8.4.mo
+share/locale/pl/LC_MESSAGES/ecpg-8.4.mo
+share/locale/pl/LC_MESSAGES/ecpglib6-8.4.mo
+share/locale/pl/LC_MESSAGES/initdb-8.4.mo
+share/locale/pl/LC_MESSAGES/libpq5-8.4.mo
+share/locale/pl/LC_MESSAGES/pg_config-8.4.mo
+share/locale/pl/LC_MESSAGES/pg_controldata-8.4.mo
+share/locale/pl/LC_MESSAGES/pg_ctl-8.4.mo
+share/locale/pl/LC_MESSAGES/pg_dump-8.4.mo
+share/locale/pl/LC_MESSAGES/pg_resetxlog-8.4.mo
+share/locale/pl/LC_MESSAGES/pgscripts-8.4.mo
 share/locale/pt_BR/LC_MESSAGES/ecpg-8.4.mo
 share/locale/pt_BR/LC_MESSAGES/ecpglib6-8.4.mo
 share/locale/pt_BR/LC_MESSAGES/initdb-8.4.mo
