@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/04/22 08:10:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/09/27 11:04:42 adam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.so
@@ -31,6 +31,7 @@ ${PG_SUBPREFIX}lib/postgresql/utf8_and_sjis2004.so
 ${PG_SUBPREFIX}lib/postgresql/utf8_and_uhc.so
 ${PG_SUBPREFIX}lib/postgresql/utf8_and_win.so
 ${PG_SUBPREFIX}share/examples/rc.d/pgsql
+${PG_SUBPREFIX}share/locale/cs/LC_MESSAGES/plpgsql-9.0.mo
 ${PG_SUBPREFIX}share/locale/de/LC_MESSAGES/plpgsql-9.0.mo
 ${PG_SUBPREFIX}share/locale/de/LC_MESSAGES/postgres-9.0.mo
 ${PG_SUBPREFIX}share/locale/es/LC_MESSAGES/plpgsql-9.0.mo
@@ -41,6 +42,9 @@ ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/plpgsql-9.0.mo
 ${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/plpgsql-9.0.mo
 ${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/postgres-9.0.mo
 ${PG_SUBPREFIX}share/locale/ko/LC_MESSAGES/plpgsql-9.0.mo
+${PG_SUBPREFIX}share/locale/ko/LC_MESSAGES/postgres-9.0.mo
+${PG_SUBPREFIX}share/locale/pl/LC_MESSAGES/plpgsql-9.0.mo
+${PG_SUBPREFIX}share/locale/pl/LC_MESSAGES/postgres-9.0.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/plpgsql-9.0.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/postgres-9.0.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/plpgsql-9.0.mo
@@ -88,6 +92,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Freetown
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Gaborone
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Harare
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Johannesburg
+${PG_SUBPREFIX}share/postgresql/timezone/Africa/Juba
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Kampala
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Khartoum
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Kigali
@@ -202,10 +207,12 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Juneau
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Kentucky/Louisville
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Kentucky/Monticello
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Knox_IN
+${PG_SUBPREFIX}share/postgresql/timezone/America/Kralendijk
 ${PG_SUBPREFIX}share/postgresql/timezone/America/La_Paz
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Lima
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Los_Angeles
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Louisville
+${PG_SUBPREFIX}share/postgresql/timezone/America/Lower_Princes
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Maceio
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Managua
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Manaus
