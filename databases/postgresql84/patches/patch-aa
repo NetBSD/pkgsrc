@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/07/29 06:26:18 adam Exp $
+$NetBSD: patch-aa,v 1.2 2011/09/27 11:04:30 adam Exp $
 
---- config/perl.m4.orig	2008-11-12 01:00:29.000000000 +0100
+--- config/perl.m4.orig	2011-09-22 22:03:52.000000000 +0000
 +++ config/perl.m4
-@@ -28,9 +28,7 @@ AC_DEFUN([PGAC_CHECK_PERL_CONFIGS],
+@@ -32,9 +32,7 @@ AC_DEFUN([PGAC_CHECK_PERL_CONFIGS],
  AC_DEFUN([PGAC_CHECK_PERL_EMBED_LDFLAGS],
  [AC_REQUIRE([PGAC_PATH_PERL])
  AC_MSG_CHECKING(for flags to link embedded Perl)
 -pgac_tmp1=`$PERL -MExtUtils::Embed -e ldopts`
 -pgac_tmp2=`$PERL -MConfig -e 'print $Config{ccdlflags}'`
--perl_embed_ldflags=`echo X"$pgac_tmp1" | sed "s/^X//;s%$pgac_tmp2%%"`
+-perl_embed_ldflags=`echo X"$pgac_tmp1" | sed -e "s/^X//" -e "s%$pgac_tmp2%%" -e ["s/ -arch [-a-zA-Z0-9_]*//g"]`
 +perl_embed_ldflags=`$PERL -MExtUtils::Embed -e ldopts`
  AC_SUBST(perl_embed_ldflags)dnl
  if test -z "$perl_embed_ldflags" ; then
