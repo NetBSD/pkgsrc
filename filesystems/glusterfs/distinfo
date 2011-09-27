@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2011/09/18 01:36:06 manu Exp $
+$NetBSD: distinfo,v 1.12 2011/09/27 12:45:02 manu Exp $
 
 SHA1 (glusterfs-3.2.3.tar.gz) = 7a36e496d9ac3fbf11123bb42884445334d07f06
 RMD160 (glusterfs-3.2.3.tar.gz) = 89d6a5f9c1362e1fe4d88e69465311069552d319
