@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/24 09:51:29 asau Exp $
+# $NetBSD: Makefile,v 1.16 2011/09/27 15:12:37 tez Exp $
 #
 
 DISTNAME=	libffi-3.0.9
@@ -40,6 +40,11 @@ BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 # patch-aj uses m68k_sync_icache(2)
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k)
 LIBS+=	-lm68k
+.endif
+
+# fix http://gnats.netbsd.org/42865
+.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
+CPPFLAGS += -D__PIC__
 .endif
 
 .include "../../mk/bsd.pkg.mk"
