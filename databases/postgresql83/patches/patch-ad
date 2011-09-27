@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2010/05/20 12:36:28 adam Exp $
+$NetBSD: patch-ad,v 1.5 2011/09/27 11:03:59 adam Exp $
 
 --- src/pl/plperl/GNUmakefile.orig	2010-05-20 07:51:50.000000000 +0000
 +++ src/pl/plperl/GNUmakefile
-@@ -53,9 +53,7 @@ PSQLDIR = $(bindir)
+@@ -55,9 +55,7 @@ PSQLDIR = $(bindir)
  include $(top_srcdir)/src/Makefile.shlib
  
  
