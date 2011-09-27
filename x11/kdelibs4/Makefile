@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2011/06/04 16:31:52 abs Exp $
+# $NetBSD: Makefile,v 1.27 2011/09/27 10:48:20 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -31,9 +31,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kdelibs4/applications.menu \
 CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.auth.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.auth.conf
 
-DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml
-DEPENDS+=	docbook-xsl>=1.75:../../textproc/docbook-xsl
-
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
 
 REPLACE_PERL+= \
@@ -50,8 +47,9 @@ SUBST_STAGE.kdelibsfix=		pre-configure
 SUBST_MESSAGE.kdelibsfix=	Fixing hardcoded paths.
 SUBST_FILES.kdelibsfix= \
 	kde3support/kdeui/k3sconfig.cpp \
+	kdeui/colors/kcolordialog.cpp \
 	kio/kssl/kopenssl.cpp
-SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g'
+SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g' -e 's:@X11BASE@:${X11BASE}:g'
 
 USE_TOOLS+=	flex gmake
 
@@ -72,6 +70,8 @@ BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.4
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../sysutils/strigi/buildlink3.mk"
+.include "../../textproc/docbook-xml/buildlink3.mk"
+.include "../../textproc/docbook-xsl/buildlink3.mk"
 .include "../../textproc/soprano/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
