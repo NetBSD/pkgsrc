@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10573 2011/09/27 14:48:06 wiz Exp $
+$NetBSD: TODO,v 1.10574 2011/09/27 19:54:47 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -366,6 +366,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alacarte-0.13.2
 	o album-4.06
 	o aliados-0.2.0
+	o allegro-4.4.2
 	o alsa-1.0.23
 	o alsa-lib-1.0.24.1
 	o alsa-plugins-1.0.24
