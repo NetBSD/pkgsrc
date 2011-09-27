@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2011/06/04 16:31:52 abs Exp $
+$NetBSD: distinfo,v 1.19 2011/09/27 10:48:20 markd Exp $
 
 SHA1 (kdelibs-4.5.5.tar.bz2) = 127a2b50fe31ff345e05660dd50f7c55ae78d854
 RMD160 (kdelibs-4.5.5.tar.bz2) = 7c33afa12379119fbf7d70e8895c3f2ada9a2eba
@@ -15,4 +15,5 @@ SHA1 (patch-al) = a3c48e8552ca39496134696f3d415a7b6a4db7d8
 SHA1 (patch-am) = da04e0450885dc4bca38a4e9b91822746d936639
 SHA1 (patch-an) = b5fe924970772bd8a5b420f8cc638ab8bf892c53
 SHA1 (patch-cmake_modules_FindTaglib.cmake) = 97baf0e5c9f53a17582d89ee41cb4d99fbd15424
+SHA1 (patch-kdeui_colors_kcolordialog.cpp) = f105006a778c42a93452fc4bf5d561aa62595a5c
 SHA1 (patch-khtml_khtml_part.cpp) = f8f5977b03463b6de909881178abed3ba351364c
