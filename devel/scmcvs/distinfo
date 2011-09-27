@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/09/22 15:16:26 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2011/09/27 12:43:20 ryoon Exp $
 
 SHA1 (cvs-1.11.23.tar.bz2) = a51c531eebaff2dfdcc0fb6d94c8c6e509e06d7d
 RMD160 (cvs-1.11.23.tar.bz2) = ff8c5c6777f1c12ee9134a3cf59e00c2ebaad279
@@ -26,6 +26,8 @@ SHA1 (patch-av) = f638f5bf5489c35c493885af5f7dfd7708660199
 SHA1 (patch-ay) = ec49abaa286e6be440a0efd910cf26c86835fe20
 SHA1 (patch-az) = 8000247fb946b4ac07261b1dedae4581a29476d7
 SHA1 (patch-ba) = 7153e12e5da86effd4285e147f9f534011982e07
-SHA1 (patch-lib_getline.c) = 2b21ebe8a9601723a12dfc18f124ed333c93b90b
-SHA1 (patch-lib_getline.h) = b1d41a81f63b5dea6dd5754de1dd898ae0d85fcc
+SHA1 (patch-config.h.in) = 5a9ba2d2ec2eac8e1a1b4480d5ebe62d72987559
+SHA1 (patch-configure) = a264244219f583e072a3ec7c04945eb3b8cc5221
+SHA1 (patch-lib_getline.c) = e1bb8ac852abd8a25ea3b84455d09e1b4ba728e5
+SHA1 (patch-lib_getline.h) = 1d91f3f22e4e5aad9f8941f88855d4f41ba25dfe
 SHA1 (patch-lib_xsize.h) = d16bd33322fb7e3750f425d5ea58fbc3413b910b
