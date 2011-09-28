@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2011/08/07 22:26:06 abs Exp $
+# $NetBSD: Makefile,v 1.29 2011/09/28 13:17:28 obache Exp $
 #
 
-DISTNAME=	FCGI-0.73
+DISTNAME=	FCGI-0.74
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5fcg
 CATEGORIES=	www perl5
