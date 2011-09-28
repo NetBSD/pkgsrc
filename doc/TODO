@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10575 2011/09/28 05:34:18 wiz Exp $
+$NetBSD: TODO,v 1.10576 2011/09/28 13:17:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -1058,7 +1058,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o otpCalc-0.97
-	o p5-FCGI-0.74 [CVE-2011-2766]
 	o p5-PerlMagick-6.7.1.6
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ack-1.96
