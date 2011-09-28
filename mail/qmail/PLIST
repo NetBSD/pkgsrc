@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:04:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/09/28 06:36:57 joerg Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -65,7 +65,6 @@ man/cat5/qmail-control.0
 man/cat5/qmail-header.0
 man/cat5/qmail-log.0
 man/cat5/qmail-users.0
-man/cat5/tcp-environ.0
 man/cat7/forgeries.0
 man/cat7/qmail-limits.0
 man/cat7/qmail.0
@@ -116,7 +115,6 @@ man/man5/qmail-control.5
 man/man5/qmail-header.5
 man/man5/qmail-log.5
 man/man5/qmail-users.5
-man/man5/tcp-environ.5
 man/man7/forgeries.7
 man/man7/qmail-limits.7
 man/man7/qmail.7
