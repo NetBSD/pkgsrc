@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2011/08/20 15:03:42 taca Exp $
+# $NetBSD: Makefile,v 1.25 2011/09/28 06:34:44 joerg Exp $
 
 DISTNAME=	php-extensions-${PHP_BASE_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -69,7 +69,6 @@ DEPENDS+=	php5-zlib>=${PHP_BASE_VERS}<5.3:../../archivers/php-zlib
 DEPENDS+=	php5-dbase>=${PHP_BASE_VERS}<5.3:../../databases/php-dbase
 DEPENDS+=	php5-dbx>=${PHP_BASE_VERS}<5.3:../../databases/php-dbx
 DEPENDS+=	php5-mhash>=${PHP_BASE_VERS}<5.3:../../security/php-mhash
-DEPENDS+=	php5-pspell>=${PHP_BASE_VERS}<5.3:../../textproc/php-pspell
 
 META_PACKAGE=	yes
 
