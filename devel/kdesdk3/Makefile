@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2011/07/03 02:08:08 markd Exp $
+# $NetBSD: Makefile,v 1.79 2011/09/28 19:54:07 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -108,6 +108,9 @@ post-install:
 	${RM} ${DESTDIR}${KDEDIR}/share/kde/apps/kapptemplate/admin/Makefile.in
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+
+.include "../../lang/php/phpversion.mk"
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
