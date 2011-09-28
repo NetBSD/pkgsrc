@@ -1,4 +1,4 @@
-# $NetBSD: g95.mk,v 1.2 2010/07/30 07:58:59 asau Exp $
+# $NetBSD: g95.mk,v 1.3 2011/09/28 19:31:09 markd Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -73,7 +73,8 @@ _G95BASE_DEFAULT=	${LOCALBASE}
 
 _G95_DIR=	${WRKDIR}/.g95
 _G95_VARS=	# empty
-.  if !empty(_LANGUAGES.g95:Mfortran)
+.  if !empty(_LANGUAGES.g95:Mfortran) || \
+      !empty(_LANGUAGES.g95:Mfortran77)
 PKG_FC?=	${FC}
 _G95_VARS+=	FC
 _G95_FC:=	${_G95_DIR}/bin/${PKG_FC:T}
