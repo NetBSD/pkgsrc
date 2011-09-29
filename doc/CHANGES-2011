@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2340 2011/09/29 12:14:36 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.2341 2011/09/29 20:33:28 wiz Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3701,3 +3701,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-TryCatch to 1.003000 [obache 2011-09-29]
 	Updated databases/p5-DBD-Sybase to 1.13 [obache 2011-09-29]
 	Updated www/swill to 0.3nb1 [dholland 2011-09-29]
+	Updated www/gallery2 to 2.3.1nb2 [wiz 2011-09-29]
