@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2009/07/17 06:46:41 sno Exp $
+$NetBSD: distinfo,v 1.9 2011/09/29 11:07:10 obache Exp $
 
-SHA1 (DBD-Sybase-1.09.tar.gz) = 23cad59ab7892732175336087093b1e3c2bda09a
-RMD160 (DBD-Sybase-1.09.tar.gz) = 6328d65c955956aa4c68dedf5d10aaf882ccc949
-Size (DBD-Sybase-1.09.tar.gz) = 194414 bytes
-SHA1 (patch-ac) = 17211c406ce1784da5d637fd0430a960c513704d
+SHA1 (DBD-Sybase-1.13.tar.gz) = 4426fc2173ba2650a0df0ef33aaca2ca7329e4a1
+RMD160 (DBD-Sybase-1.13.tar.gz) = 0c24ea6bf7b9931e045bc1f979e6a394a7faa93d
+Size (DBD-Sybase-1.13.tar.gz) = 198332 bytes
+SHA1 (patch-ac) = 120e01a5283ae83dd4982efdc2fc89911cba2ed7
