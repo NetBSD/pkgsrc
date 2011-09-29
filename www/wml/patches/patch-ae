@@ -1,8 +1,27 @@
-$NetBSD: patch-ae,v 1.1 2005/03/21 19:26:03 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2011/09/29 11:12:53 dholland Exp $
 
---- wml_common/Makefile.in.orig	2001-02-07 00:02:12.000000000 +0100
+- Don't try to suppress building docs of the various subdirs by
+clearing the man installation directories; it croaks with recent Perl.
+Do it in the individual subdirs instead.
+
+- Don't install File::PathConvert. (why?)
+
+--- wml_common/Makefile.in.orig	2001-02-06 23:02:12.000000000 +0000
 +++ wml_common/Makefile.in
-@@ -46,7 +46,6 @@ INITVARS = \
+@@ -27,11 +27,7 @@ mandir          = $(prefix)/man
+ PATH_PERL       = @PATH_PERL@
+ MM_INSTALL_OPTS = PREFIX=$(libdir)/perl \
+                   INSTALLPRIVLIB=@INSTALLPRIVLIB@ \
+-                  INSTALLARCHLIB=@INSTALLARCHLIB@ \
+-                  INST_MAN1DIR= \
+-                  INSTALLMAN1DIR= \
+-                  INST_MAN3DIR= \
+-                  INSTALLMAN3DIR=
++                  INSTALLARCHLIB=@INSTALLARCHLIB@
+ PERL_OPTS       = @PERL_OPTS@
+ 
+ INITVARS = \
+@@ -46,7 +42,6 @@ INITVARS = \
  
  SUBDIRS = \
       bitvector \
