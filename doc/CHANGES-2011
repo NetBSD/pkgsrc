@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2336 2011/09/29 07:48:30 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.2337 2011/09/29 08:54:06 obache Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3695,3 +3695,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-FCGI to 0.74 [obache 2011-09-28]
 	Updated lang/perl5 to 5.14.2 [adam 2011-09-29]
 	Updated x11/xview-lib to 3.2.1nb9 [dholland 2011-09-29]
+	Updated devel/p5-Scope-Upper to 0.16 [obache 2011-09-29]
