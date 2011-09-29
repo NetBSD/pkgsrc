@@ -1,0 +1,22 @@
+$NetBSD: patch-wml__common_gd_makefile_pl_in,v 1.1 2011/09/29 11:12:53 dholland Exp $
+
+Suppress building/installation of the docs correctly. Fixes build
+failure with recent Perl.
+
+--- wml_common/gd/Makefile.PL.in~	2000-03-12 16:22:30.000000000 +0000
++++ wml_common/gd/Makefile.PL.in
+@@ -13,10 +13,13 @@ WriteMakefile(
+     # Uncomment the line below if you're getting link errors
+     # having to do with missing math functions (like floor)
+     'LIBS'      =>  ["-lm @LIBPNG@"],
+-    'DEFINE'	=> '@DEFS@'
++    'DEFINE'	=> '@DEFS@',
+     # Uncomment the line below if you're using a perl compiled
+     # for fastCGI (http://www.fastcgi.com/).
+     # 'DEFINE'	=> '-DFCGI'
++    # suppress docs
++    'MAN1PODS' => { },
++    'MAN3PODS' => { }
+ );
+ 
+ sub MY::postamble{
