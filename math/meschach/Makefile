@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/12/11 17:09:51 asau Exp $
+# $NetBSD: Makefile,v 1.17 2011/09/29 20:14:46 wiz Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
@@ -18,6 +18,8 @@ MAKE_FILE=		makefile
 USE_BSD_MAKEFILE=	yes
 
 INSTALLATION_DIRS=	include/meschach lib share/meschach/tests
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 pre-patch:
 	${CP} ${FILESDIR}/makefile.in ${WRKSRC}
