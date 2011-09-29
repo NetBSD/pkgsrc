@@ -1,8 +1,23 @@
-$NetBSD: patch-ds,v 1.3 2009/12/10 20:35:58 abs Exp $
+$NetBSD: patch-ds,v 1.4 2011/09/29 07:47:56 dholland Exp $
+
+- Needs sys/param.h to define BSD if it's going to test it. I'm not
+sure if this is actually failing at the moment but it could start
+without notice.
+
+- remove union wait.
+
+- hack sigisempty().
 
 --- lib/libxview/notify/ntfy.h.orig	1993-06-29 05:18:14.000000000 +0000
 +++ lib/libxview/notify/ntfy.h
-@@ -22,6 +22,10 @@
+@@ -16,12 +16,17 @@
+ #define	NTFY_DEFINED
+ 
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <xview_private/ultrix_cpt.h>
+ #include <sys/time.h>
+ #ifdef SVR4
  #include <sys/rusage.h>
  #endif
  #include <sys/resource.h>
@@ -13,7 +28,7 @@ $NetBSD: patch-ds,v 1.3 2009/12/10 20:35:58 abs Exp $
  #include <xview/notify.h>
  
  /*
-@@ -149,7 +153,7 @@ typedef struct ntfy_condition {
+@@ -149,7 +154,7 @@ typedef struct ntfy_condition {
   */
  typedef	struct ntfy_wait3_data {
  	int	pid;			/* Process waiting for */
@@ -22,7 +37,7 @@ $NetBSD: patch-ds,v 1.3 2009/12/10 20:35:58 abs Exp $
  	union	wait status;		/* Return value from wait3 */
  #else SVR4
  	int 	status;		/* Return value from wait3 */
-@@ -184,9 +188,12 @@ extern	int ntfy_nodes_avail;	/* count of
+@@ -184,9 +189,12 @@ extern	int ntfy_nodes_avail;	/* count of
  extern	sigset_t ntfy_sigs_delayed;/* Bit mask of signals received while in
  				      critical section */
  
