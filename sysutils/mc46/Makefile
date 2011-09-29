@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:44:44 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/29 20:57:30 wiz Exp $
 
 DISTNAME=	mc-4.6.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
 		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
@@ -37,7 +37,7 @@ SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	vfs/extfs.c vfs/sfs.c
 SUBST_VARS.conf=	PKG_SYSCONFDIR
 
-.if !empty(PKG_OPTIONS:Mvfs)
+.if !empty(PKG_OPTIONS:Mmc-vfs)
 EGDIR=			${PREFIX}/share/examples/mc
 CONF_FILES+=		${EGDIR}/extfs.ini ${PKG_SYSCONFDIR}/extfs.ini
 CONF_FILES+=		${EGDIR}/sfs.ini ${PKG_SYSCONFDIR}/sfs.ini
@@ -46,7 +46,7 @@ CONF_FILES+=		${EGDIR}/sfs.ini ${PKG_SYSCONFDIR}/sfs.ini
 post-install:
 # remove dir if no extensions were installed there
 	rmdir ${DESTDIR}${PREFIX:Q}/lib/mc 2>/dev/null || ${TRUE}
-.if !empty(PKG_OPTIONS:Mvfs)
+.if !empty(PKG_OPTIONS:Mmc-vfs)
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/extfs.ini ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/sfs.ini ${DESTDIR}${EGDIR}
