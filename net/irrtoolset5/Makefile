@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/07/04 12:08:51 spz Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/29 20:48:19 spz Exp $
 #
 
 DISTNAME=		irrtoolset-5.0.0
@@ -29,7 +29,7 @@ GCC_REQD+=		3.0
 CONFIG_GUESS_OVERRIDE=	config.guess
 CONFIG_SUB_OVERRIDE=	config.sub
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*) || !empty(MACHINE_PLATFORM:MNetBSD-5\.[0-9][\._]*)
+.if ${OPSYS} == "NetBSD"
 CONFIGURE_ENV+=		LEX="${PREFIX}/bin/flex"
 .include "../../devel/flex/buildlink3.mk"
 .endif
