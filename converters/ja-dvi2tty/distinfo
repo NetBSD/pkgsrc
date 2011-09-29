@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:12:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2011/09/29 18:20:13 wiz Exp $
 
 SHA1 (ja-dvi2tty/dvi2tty5.0.tar.gz) = c7476e80626736dc9575fcd9ed25c705bce2addc
 RMD160 (ja-dvi2tty/dvi2tty5.0.tar.gz) = 0f1af2eec8f2d5134c1c5345f8dfb32aeeb0f571
@@ -9,3 +9,4 @@ Size (ja-dvi2tty/dvi2tty-ascii-jtex-patch) = 10270 bytes
 SHA1 (ja-dvi2tty/dvi2tty.c-patch) = a7c54cccc98dacc8d699f63ae99755d8e9e1b871
 RMD160 (ja-dvi2tty/dvi2tty.c-patch) = 6fa7f746347d515a80d51494d2e679d810d6c3dc
 Size (ja-dvi2tty/dvi2tty.c-patch) = 898 bytes
+SHA1 (patch-dvistuff.c) = 5c4a98380f569a7a96f2969ab84ff6dbace11370
