@@ -1,8 +1,20 @@
-$NetBSD: patch-ad,v 1.1 2002/03/20 01:52:31 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2011/09/29 09:10:42 dholland Exp $
 
---- greeter/greet.c.orig	Tue Aug 18 16:24:56 1998
-+++ greeter/greet.c	Sun Dec 23 23:45:13 2001
-@@ -122,6 +122,9 @@
+- needs pwd.h
+- ...?
+
+--- greeter/greet.c.orig	1998-08-18 09:24:56.000000000 +0000
++++ greeter/greet.c
+@@ -38,6 +38,8 @@ from the X Consortium.
+  *
+  */
+ 
++#include <pwd.h>
++
+ #include <X11/Intrinsic.h>
+ #include <X11/StringDefs.h>
+ #include <X11/Shell.h>
+@@ -122,6 +124,9 @@ struct display *d;
  
  d = (struct display *) closure;
  
@@ -12,7 +24,7 @@ $NetBSD: patch-ad,v 1.1 2002/03/20 01:52:31 wiz Exp $
  scrn = XDefaultScreenOfDisplay(dpy);
  /*
  XtSetArg (args[0], XtNwidth, (XtArgVal) &width);
-@@ -255,7 +258,7 @@
+@@ -255,7 +260,7 @@ InitGreet (d)
  		    0, 0, 0, 0,
  		    XWidthOfScreen(scrn) / 2,
  		    XHeightOfScreen(scrn) / 2);
@@ -21,7 +33,7 @@ $NetBSD: patch-ad,v 1.1 2002/03/20 01:52:31 wiz Exp $
          moveTimeout = XtAppAddTimeOut (context, d->loginmoveInterval*10000, time_test, (XtPointer) d);
  
      if (d->pingInterval)
-@@ -315,7 +318,7 @@
+@@ -315,7 +320,7 @@ Greet (d, greet)
      while (!done) {
  	    XtAppNextEvent (context, &event);
  	/* by Amit Margalit 19-Apr-1997 */
