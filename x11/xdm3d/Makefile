@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2009/02/09 16:28:44 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2011/09/29 09:10:42 dholland Exp $
 
 DISTNAME=		xdm3d-1.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -26,6 +26,15 @@ XDMDIR=${X11BASE}/lib/X11/xdm
 XDMDIR=/etc/X11/xdm
 .else
 PKG_FAIL_REASON+=	"Cannot find xdm directory."
+.endif
+
+# These hacks should probably be moved to the infrastructure
+.if ${OPSYS} == "NetBSD"
+.  if ${X11_TYPE} == "native"
+# wrong in 5.x's native X
+IMAKEOPTS+=-DHasSecureRPC=NO
+.  endif
+IMAKEOPTS+=-DHasSetUserContext=YES
 .endif
 
 do-install:
