@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/09/22 21:53:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/09/29 12:50:23 ryoon Exp $
 lib/X11/fonts/misc/sgi/Scr10.pcf.gz
 lib/X11/fonts/misc/sgi/Scr11.pcf.gz
 lib/X11/fonts/misc/sgi/Scr12.pcf.gz
@@ -21,7 +21,6 @@ lib/X11/fonts/misc/sgi/ScrB18.pcf.gz
 lib/X11/fonts/misc/sgi/ScrB7.pcf.gz
 lib/X11/fonts/misc/sgi/ScrB8.pcf.gz
 lib/X11/fonts/misc/sgi/ScrB9.pcf.gz
-lib/X11/fonts/misc/sgi/fonts.alias
 lib/X11/fonts/misc/sgi/haeberli12.pcf.gz
 lib/X11/fonts/misc/sgi/haeberli24.pcf.gz
 lib/X11/fonts/misc/sgi/haeberli36.pcf.gz
