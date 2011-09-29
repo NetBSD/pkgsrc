@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/29 20:24:15 wiz Exp $
 #
 
 DISTNAME=	bsdav-1.4
@@ -20,6 +20,8 @@ NO_CONFIGURE=		yes
 MAKE_ENV+=		DIST=${WRKSRC}
 MAKE_ENV+=		MKPICINSTALL=no
 MAKE_ENV+=		MKSTATIC=no
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 AUTO_MKDIRS=		yes
 
