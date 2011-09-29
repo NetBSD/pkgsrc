@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2011/09/27 10:48:20 markd Exp $
+# $NetBSD: Makefile,v 1.28 2011/09/29 19:31:58 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -30,6 +30,9 @@ CONF_FILES+=	${PREFIX}/share/examples/kdelibs4/applications.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/applications.menu
 CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.auth.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.auth.conf
+
+DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml
+DEPENDS+=	docbook-xsl>=1.75:../../textproc/docbook-xsl
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
 
@@ -70,8 +73,6 @@ BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.4
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../sysutils/strigi/buildlink3.mk"
-.include "../../textproc/docbook-xml/buildlink3.mk"
-.include "../../textproc/docbook-xsl/buildlink3.mk"
 .include "../../textproc/soprano/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
