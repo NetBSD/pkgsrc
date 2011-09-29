@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
+$NetBSD: patch-aa,v 1.10 2011/09/29 21:00:19 wiz Exp $
 
---- xuvmstat.c.orig	2005-09-09 15:38:48.000000000 +0200
-+++ xuvmstat.c	2010-03-04 15:51:54.000000000 +0100
-@@ -40,13 +40,13 @@
+--- xuvmstat.c.orig	2005-09-09 13:38:48.000000000 +0000
++++ xuvmstat.c
+@@ -24,6 +24,7 @@
+  * xuvmstat.c
+  */
+ 
++#include <err.h>
+ #include <errno.h>
+ #include <stdio.h>
+ #include <string.h>
+@@ -40,19 +41,19 @@
  
  #include "libcdcx.h"
  
@@ -18,7 +26,14 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
  struct timeval tv, otv;
  struct graph *gp_faults, *gp_traps, *gp_intrs, *gp_ctx;
  
-@@ -100,7 +100,7 @@
+ #define WIDTH 300
+ 
+-main(argc, argv)
++int main(argc, argv)
+ 
+ int argc;
+ char **argv;
+@@ -100,7 +101,7 @@ char **argv;
    XMapRaised(xdpy.dpy, win);
    XFlush(xdpy.dpy);
  
@@ -27,7 +42,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
    gettimeofday(&tv, NULL);
    get_uvmexp(&oexp);
    gettimeofday(&otv, NULL);
-@@ -135,8 +135,8 @@
+@@ -135,8 +136,8 @@ char **argv;
        if (retval == 0) {
          timeradd(&now, &incr, &ping);
          otv = tv;
@@ -38,7 +53,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
          gettimeofday(&tv, NULL);
          /* NEW GRAPH DATA HERE */
  
-@@ -186,7 +186,7 @@
+@@ -186,7 +187,7 @@ int was_timeout;
  
    XSetFont(xdpy->dpy, gc, fnt_fixed->fid); 
    snprintf(buf, sizeof(buf),"The UVM system manages %d %d-byte pages",
@@ -47,7 +62,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
    XDrawImageString(xdpy->dpy, win, gc, 5, get_fontheight(fnt_fixed) + y,
  		   buf, strlen(buf)); 
    y += get_fontheight(fnt_fixed) + 5;
-@@ -205,12 +205,12 @@
+@@ -205,12 +206,12 @@ int was_timeout;
        colors[4] = purple;
      }
   
@@ -66,7 +81,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
  		  vals, colors, white);
    }
  
-@@ -229,12 +229,12 @@
+@@ -229,12 +230,12 @@ int was_timeout;
        colors[4] = purple;
      } 
    
@@ -85,7 +100,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
                    vals, colors, white);
    }
  
-@@ -245,11 +245,11 @@
+@@ -245,11 +246,11 @@ int was_timeout;
      u_long vals[3];
      u_long colors[3];
  
@@ -101,7 +116,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
  		vals, colors, white);
    }
  
-@@ -260,10 +260,10 @@
+@@ -260,10 +261,10 @@ int was_timeout;
      u_long vals[2];
      u_long colors[2];
  
@@ -115,7 +130,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
  		vals, colors, white);
    }
  
-@@ -274,10 +274,10 @@
+@@ -274,10 +275,10 @@ int was_timeout;
      u_long vals[2];
      u_long colors[2];
  
@@ -129,7 +144,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
  		vals, colors, white);
    }
  
-@@ -289,15 +289,15 @@
+@@ -289,15 +290,15 @@ int was_timeout;
      if (init == 0) {
        static char *names[] = { "faults", "anon", "ancow", "obj", 
  	"copy", "zero" };
@@ -152,7 +167,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
        gp_faults = create_graph(6, "FAULTS", names, before, after, color, white);
      }  
  
-@@ -311,10 +311,10 @@
+@@ -311,10 +312,10 @@ int was_timeout;
  
      if (init == 0) {
        static char *names[] = { "traps" };
@@ -165,7 +180,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
        gp_traps = create_graph(1, "TRAPS", names, before, after, color, white);
      }  
  
-@@ -330,12 +330,12 @@
+@@ -330,12 +331,12 @@ int was_timeout;
  
      if (init == 0) {
        static char *names[] = { "intrs", "soft", "syscall" };
@@ -182,7 +197,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
        gp_intrs = create_graph(3, "INTRS", names, before, after, color, white);
      }  
  
-@@ -349,12 +349,12 @@
+@@ -349,12 +350,12 @@ int was_timeout;
  
      if (init == 0) {
        static char *names[] = { "cswtch", "swin", "swout" };
@@ -199,7 +214,7 @@ $NetBSD: patch-aa,v 1.9 2010/03/04 14:56:13 martin Exp $
        gp_ctx = create_graph(3, "SWITCH/SWAP", names, before, after, color, white);
      }  
  
-@@ -372,26 +372,31 @@
+@@ -372,26 +373,31 @@ int was_timeout;
  		   buf, strlen(buf)); 
      y += get_fontheight(fnt_fixed) + 5;
  

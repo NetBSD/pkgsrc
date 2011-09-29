@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2006/11/10 10:07:20 martin Exp $
+$NetBSD: patch-ad,v 1.2 2011/09/29 21:00:19 wiz Exp $
 
---- libcdcx.c.orig	2005-09-09 15:38:48.000000000 +0200
-+++ libcdcx.c	2006-11-10 10:58:23.000000000 +0100
-@@ -285,7 +285,7 @@
+--- libcdcx.c.orig	2005-09-09 13:38:48.000000000 +0000
++++ libcdcx.c
+@@ -31,6 +31,7 @@
+  */
+ 
+ 
++#include <err.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -285,7 +286,7 @@ struct graph *create_graph(nlines, title
  int nlines;
  char *title;
  char **names;
