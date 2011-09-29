@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/17 17:21:18 abs Exp $
+# $NetBSD: Makefile,v 1.14 2011/09/29 12:50:23 ryoon Exp $
 #
 
 DISTNAME=	sgi-fonts-1.0-457.src
@@ -12,19 +12,26 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oss.sgi.com/projects/sgi_propack/
 COMMENT=	Linux compatibility package for SGI fonts
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/sgi-fonts
-PKG_DESTDIR_SUPPORT= user-destdir
+USE_LANGUAGES=	# none
 
-USE_IMAKE=	YES
-USE_TOOLS+=	bdftopcf bzcat gtar gzip rpm2pkg
-FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc/sgi
-REQD_DIRS+=		${PREFIX}/lib/X11/fonts/misc/sgi
+USE_X11BASE=	yes
+FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/misc/sgi
 
-do-extract:
-	rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
-	cd ${WRKDIR} && bzcat sgi-fonts.tar.bz2 | ${GTAR} xf -
+USE_IMAKE=	yes
+USE_TOOLS+=	bzcat tar pax
 
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/lib/X11/fonts/misc/sgi/fonts.scale
+INSTALLATION_DIRS=	lib/X11/fonts/misc/sgi
+
+post-extract:
+	cd ${WRKDIR} && bzcat sgi-fonts.tar.bz2 | tar xf -
+
+do-install:
+	cd ${WRKSRC} && pax -rw -pm *pcf.gz \
+		${DESTDIR}${PREFIX}/lib/X11/fonts/misc/sgi
+	${INSTALL_DATA} ${WRKSRC}/Scr15.pcf \
+		${DESTDIR}${PREFIX}/lib/X11/fonts/misc/sgi
 
 .include "../../mk/bsd.pkg.mk"
