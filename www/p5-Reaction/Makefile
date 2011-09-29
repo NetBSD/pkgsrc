@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/23 11:03:41 abs Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/29 11:32:53 dholland Exp $
 
 DISTNAME=	Reaction-0.002005
 PKGNAME=	p5-Reaction-0.2.5
@@ -13,6 +13,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Reaction/.packlist
+
+REPLACE_PERL+=	script/moose_to_rclass.pl
+REPLACE_PERL+=	script/rclass_back_to_moose.pl
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.80002:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Catalyst-Component-ACCEPT_CONTEXT>=0.05:../../www/p5-Catalyst-Component-ACCEPT_CONTEXT
