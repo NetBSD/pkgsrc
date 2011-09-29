@@ -1,0 +1,14 @@
+$NetBSD: patch-fm,v 1.1 2011/09/29 07:47:56 dholland Exp $
+
+- needs sys/param.h for howmany().
+
+--- lib/libxview/notify/ntfy_fd_op.c~	1993-06-29 05:18:03.000000000 +0000
++++ lib/libxview/notify/ntfy_fd_op.c
+@@ -11,6 +11,7 @@ static char     sccsid[] = "@(#)ntfy_fd_
+  */
+ 
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <xview_private/ultrix_cpt.h>
+ 
+ /* AND op on two fds */
