@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/01/11 12:35:45 jym Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/09/29 20:33:17 wiz Exp $
 share/examples/gallery2/gallery2.conf
 share/examples/gallery2/config.php
 share/gallery2/.htaccess
@@ -6,7 +6,6 @@ share/gallery2/LICENSE
 share/gallery2/MANIFEST
 share/gallery2/README.html
 share/gallery2/bootstrap.inc
-share/gallery2/config.php
 share/gallery2/embed.php
 share/gallery2/images/g2Logo.gif
 share/gallery2/images/gallery.gif
