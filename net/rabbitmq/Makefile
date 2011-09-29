@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/21 11:47:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/29 14:00:39 fhajny Exp $
 #
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
@@ -13,27 +13,23 @@ LICENSE=		mpl-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake bash:run
 
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
 
 .include "version.mk"
 .include "../../lang/python/pyversion.mk"
 
-BUILD_DEFS+=		VARBASE
-
-.if !empty(TOOLS_PLATFORM.bash)
-RMQ_SHELL=		${TOOLS_PLATFORM.bash}
-.else
-RMQ_SHELL=		/bin/sh
-.endif
+BUILD_DEFS+=		VARBASE GNU_PROGRAM_PREFIX
 
 .include		"../../mk/bsd.prefs.mk"
 
 RMQ_USER?=		rabbitmq
 RMQ_GROUP?=		${RMQ_USER}
+RMQ_SHELL?=		${TOOLS_PATH.bash}
 RMQ_DIR?=		${VARBASE}/db/rabbitmq
 RMQ_LOG?=		${VARBASE}/log/rabbitmq
 
@@ -47,7 +43,7 @@ PKG_GECOS.${RMQ_USER}=	RabbitMQ Server User
 PKG_HOME.${RMQ_USER}=	${RMQ_DIR}
 PKG_SHELL.${RMQ_USER}=	${RMQ_SHELL}
 
-PKG_SYSCONFSUBDIR?=	${PKGBASE}
+PKG_SYSCONFSUBDIR=	${PKGBASE}
 CONF_FILES+=		${PREFIX}/share/examples/rabbitmq/rabbitmq.conf ${PKG_SYSCONFDIR}/rabbitmq.conf
 
 INSTALLATION_DIRS+=	share/examples/rabbitmq
@@ -60,26 +56,32 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	${SCRIPTS_DIR}/rabbitmqctl ${SCRIPTS_DIR}/rabbitmq-env
-SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-multi ${SCRIPTS_DIR}/rabbitmq-server
-SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}/rabbitmq|g'
+SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-server
+SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
+SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.paths+=	-e 's|erl|${PREFIX}/bin/erl|g'
 SUBST_SED.paths+=	-e 's|/bin/sh|/bin/ksh|g'
-
-SUBST_CLASSES+=		shell
-SUBST_MESSAGE.shell=	Setting Makefile shell
-SUBST_STAGE.shell=	post-patch
-SUBST_FILES.shell=	Makefile
-SUBST_SED.shell=	-e 's|@SHELL@|${RMQ_SHELL}|g'
+SUBST_SED.paths+=	-e 's|readlink|${PREFIX}/bin/${GNU_PROGRAM_PREFIX}readlink|g'
 
 MAKE_ENV+=		TARGET_DIR="${DESTDIR}${PREFIX}/lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}"
 MAKE_ENV+=		SBIN_DIR="${DESTDIR}${PREFIX}/sbin/"
 MAKE_ENV+=		MAN_DIR="${DESTDIR}${PREFIX}/man"
 MAKE_ENV+=		RMQ_VERSION=${RMQ_VERSION}
+MAKE_ENV+=		MAKE_SHELL="${RMQ_SHELL}"
+
+INSTALL_ENV+=		TARGET_DIR="${DESTDIR}${PREFIX}/lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}"
+INSTALL_ENV+=		SBIN_DIR="${DESTDIR}${PREFIX}/sbin/"
+INSTALL_ENV+=		MAN_DIR="${DESTDIR}${PREFIX}/man"
+INSTALL_ENV+=		RMQ_VERSION=${RMQ_VERSION}
+INSTALL_ENV+=		MAKE_SHELL="${RMQ_SHELL}"
+
+REPLACE_PYTHON+=	calculate-relative
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/rabbitmq.conf ${DESTDIR}${PREFIX}/share/examples/rabbitmq/rabbitmq.conf
 
 .include "../../lang/erlang/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
