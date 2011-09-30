@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/08/05 09:51:45 adam Exp $
+# $NetBSD: Makefile,v 1.10 2011/09/30 13:41:33 adam Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -50,6 +50,7 @@ FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT:Q}
 USE_TOOLS+=		gmake mktemp perl:run
 REPLACE_PERL=		script/findsmb.in
 
+BROKEN_GETTEXT_DETECTION=yes
 USE_GNU_READLINE=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
@@ -155,6 +156,7 @@ post-install:
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
