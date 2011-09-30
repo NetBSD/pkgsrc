@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/06/21 13:03:39 schnoebe Exp $
+$NetBSD: distinfo,v 1.4 2011/09/30 08:33:54 fhajny Exp $
 
 SHA1 (prosody-0.8.2.tar.gz) = a029c4e69f6daaf3320061e69c9f86390d7e845a
 RMD160 (prosody-0.8.2.tar.gz) = 908a04f5daa7733c66ab4f09fd54fb52175cb70c
 Size (prosody-0.8.2.tar.gz) = 212170 bytes
 SHA1 (patch-aa) = 241c01dbd8de2821c0988032db50b01cc61c548c
-SHA1 (patch-ab) = e8816af363cc452d43dd860f161f1735e6d2e301
+SHA1 (patch-ab) = cb48a22114e99fc1832f86067cd1ba9d8de999ac
 SHA1 (patch-ad) = 5cd22cb93895b6f60b4f910d6aab09e6f1f22712
