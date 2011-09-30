@@ -1,0 +1,40 @@
+$NetBSD: patch-bin_fsc,v 1.1 2011/09/30 07:56:14 yyamano Exp $
+
+Hardwire paths to installed files and Java binary.
+
+--- bin/fsc.orig	2011-08-29 16:44:20.000000000 +0000
++++ bin/fsc
+@@ -48,23 +48,7 @@ case "`uname`" in
+ esac
+ 
+ # Finding the root folder for this Scala distribution
+-SOURCE=$0;
+-SCRIPT=`basename "$SOURCE"`;
+-while [ -h "$SOURCE" ]; do
+-    SCRIPT=`basename "$SOURCE"`;
+-    LOOKUP=`ls -ld "$SOURCE"`;
+-    TARGET=`expr "$LOOKUP" : '.*-> \(.*\)$'`;
+-    if expr "${TARGET:-.}/" : '/.*/$' > /dev/null; then
+-        SOURCE=${TARGET:-.};
+-    else
+-        SOURCE=`dirname "$SOURCE"`/${TARGET:-.};
+-    fi;
+-done;
+-
+-# see #2092
+-SCALA_HOME=`dirname "$SOURCE"`
+-SCALA_HOME=`cd "$SCALA_HOME"; pwd -P`
+-SCALA_HOME=`cd "$SCALA_HOME"/..; pwd`
++SCALA_HOME=@SCALA_HOME@
+ 
+ # Remove spaces from SCALA_HOME on windows
+ if $cygwin; then
+@@ -150,7 +134,7 @@ if [ -z "$JAVACMD" -a -n "$JAVA_HOME" -a
+     JAVACMD="$JAVA_HOME/bin/java"
+ fi
+ 
+-"${JAVACMD:=java}" \
++"${JAVACMD:=@JAVA_HOME@/bin/java}" \
+   $JAVA_OPTS \
+   "${java_args[@]}" \
+   ${CPSELECT}${TOOL_CLASSPATH} \
