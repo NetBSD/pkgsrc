@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2011/06/06 14:41:48 schnoebe Exp $
+$NetBSD: patch-ab,v 1.3 2011/09/30 08:33:54 fhajny Exp $
 
 enable POSIX functionality by default
 set the logging paths
@@ -11,7 +11,7 @@ set up the pid files
  
  	-- Other specific functionality
 -		--"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
-+		posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
++		"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
  		--"bosh"; -- Enable BOSH clients, aka "Jabber over HTTP"
  		--"httpserver"; -- Serve static files from a directory over HTTP
  		--"groups"; -- Shared roster support
