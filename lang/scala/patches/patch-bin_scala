@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.2 2010/08/12 12:31:47 asau Exp $
+$NetBSD: patch-bin_scala,v 1.1 2011/09/30 07:56:14 yyamano Exp $
 
 Hardwire paths to installed files and Java binary.
 
---- bin/scala.orig	2010-07-13 19:48:47.000000000 +0400
-+++ bin/scala	2010-08-12 16:23:06.000000000 +0400
-@@ -14,23 +14,7 @@
+--- bin/scala.orig	2011-08-29 16:44:19.000000000 +0000
++++ bin/scala
+@@ -48,23 +48,7 @@ case "`uname`" in
  esac
  
  # Finding the root folder for this Scala distribution
@@ -29,9 +29,12 @@ Hardwire paths to installed files and Java binary.
  
  # Remove spaces from SCALA_HOME on windows
  if $cygwin; then
-@@ -80,4 +64,4 @@
+@@ -150,7 +134,7 @@ if [ -z "$JAVACMD" -a -n "$JAVA_HOME" -a
      JAVACMD="$JAVA_HOME/bin/java"
  fi
  
--exec "${JAVACMD:=java}" $JAVA_OPTS -cp "$TOOL_CLASSPATH" -Dscala.home="$SCALA_HOME" -Denv.emacs="$EMACS"  scala.tools.nsc.MainGenericRunner  "$@"
-+exec "${JAVACMD:=@JAVA_HOME@/bin/java}" $JAVA_OPTS -cp "$TOOL_CLASSPATH" -Dscala.home="$SCALA_HOME" -Denv.classpath="$CLASSPATH" -Denv.emacs="$EMACS"  scala.tools.nsc.MainGenericRunner  "$@"
+-"${JAVACMD:=java}" \
++"${JAVACMD:=@JAVA_HOME@/bin/java}" \
+   $JAVA_OPTS \
+   "${java_args[@]}" \
+   ${CPSELECT}${TOOL_CLASSPATH} \
