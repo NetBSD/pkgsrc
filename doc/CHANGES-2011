@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2343 2011/09/30 15:27:07 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2344 2011/10/01 04:33:40 schmonz Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3704,3 +3704,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/gallery2 to 2.3.1nb2 [wiz 2011-09-29]
 	Updated lang/scala to 2.9.1 [yyamano 2011-09-30]
 	Updated www/contao210-translations to 20110929 [taca 2011-09-30]
+	Updated mail/getmail to 4.22.1 [schmonz 2011-10-01]
