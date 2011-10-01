@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/22 13:42:49 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/10/01 10:52:13 shattered Exp $
 
 DISTNAME=		amarok-${VERSION}
 VERSION=		1.4.10
@@ -19,6 +19,7 @@ USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+RUBY_VERSION_REQD=	18
 
 CONFIGURE_ARGS+=	--without-nmm
 CONFIGURE_ARGS+=	--without-mas
