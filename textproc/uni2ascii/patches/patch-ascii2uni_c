@@ -1,0 +1,25 @@
+$NetBSD: patch-ascii2uni_c,v 1.1 2011/10/01 12:08:55 dholland Exp $
+
+avoid conflict with new posix getline (usage may be compatible, might
+be worth checking sometime)
+
+--- ascii2uni.c~	2009-08-05 03:08:52.000000000 +0000
++++ ascii2uni.c
+@@ -463,7 +463,7 @@ int main (int ac, char *av[])
+      fprintf(stderr,"Failed to allocate buffer for input line.\n");
+      exit(2);
+    }
+-   while ((read = getline(&lbuf, &len, infp)) != -1) {
++   while ((read = get_line(&lbuf, &len, infp)) != -1) {
+      AddNewlineP = 1;
+      LineNo++;
+      last = read - 1;
+@@ -848,7 +848,7 @@ getstr (lineptr, n, stream, terminator, 
+ }
+ 
+ int
+-getline (lineptr, n, stream)
++get_line (lineptr, n, stream)
+      char **lineptr;
+      size_t *n;
+      FILE *stream;

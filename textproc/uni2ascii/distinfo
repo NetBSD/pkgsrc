@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/17 22:27:26 morr Exp $
+$NetBSD: distinfo,v 1.2 2011/10/01 12:08:55 dholland Exp $
 
 SHA1 (uni2ascii-4.14.tar.bz2) = efe31a88499544f60a19994556e6bdea0e0f95be
 RMD160 (uni2ascii-4.14.tar.bz2) = fdd9cdd79c05d82ddfece91c384852aea5f79f0b
 Size (uni2ascii-4.14.tar.bz2) = 120087 bytes
+SHA1 (patch-ascii2uni_c) = fea75b8677d335709039b55fe1d79049f181b88e
