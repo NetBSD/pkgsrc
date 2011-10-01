@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/30 13:01:00 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/10/01 11:49:19 shattered Exp $
 
 SHA1 (mailx-12.4.tar.bz2) = b1e105adf9d36269daf317dedf68b6e4cca404a7
 RMD160 (mailx-12.4.tar.bz2) = 8244d04d0a0058fdbe9867ca503c7cda8d580154
 Size (mailx-12.4.tar.bz2) = 271482 bytes
+SHA1 (patch-aa) = 797ebb4b536f6576112bb1a0ba871298d21b0a2b
+SHA1 (patch-ab) = 604a85e40301ff38b8bf28bcca337469f784eeaf
 SHA1 (patch-ac) = cb9d4b12f26bb5f90947e1dbcb06960de8144f11
 SHA1 (patch-ae) = 257317452b39d0b609885c637242145cf4e04c4d
 SHA1 (patch-af) = 22676bcb00593de777cf897c450e14130f3f0616
