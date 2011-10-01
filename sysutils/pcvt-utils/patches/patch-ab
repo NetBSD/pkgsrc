@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2011/10/01 21:42:16 dholland Exp $
+
+- use modern C
+- use the right include files for netbsd with wscons
 
 --- kbdio/kbdio.y.orig	Mon Dec  4 13:57:07 2000
 +++ kbdio/kbdio.y
