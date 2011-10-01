@@ -1,14 +1,18 @@
-$NetBSD: patch-ab,v 1.2 2007/06/17 01:40:51 hubertf Exp $
+$NetBSD: patch-ab,v 1.3 2011/10/01 11:36:12 shattered Exp $
 
---- base/pcap-snoop.c.orig	2002-09-09 23:02:58.000000000 +0200
+--- base/pcap-snoop.c.orig	2002-09-09 21:02:58.000000000 +0000
 +++ base/pcap-snoop.c
-@@ -49,7 +49,9 @@ static char *RCSSTRING="$Id: pcap-snoop.
+@@ -48,7 +48,12 @@ static char *RCSSTRING="$Id: pcap-snoop.
  
- #include <pcap.h>
+ 
+-#include <pcap.h>
  #include <unistd.h>
 +#if !defined(__DragonFly__) && !defined(__APPLE__)
  #include <net/bpf.h>
 +#endif
++#if defined(__NetBSD__)
++#define PCAP_DONT_INCLUDE_PCAP_BPF_H
++#endif
++#include <pcap.h>
  #ifndef _WIN32
  #include <sys/param.h>
- #endif
