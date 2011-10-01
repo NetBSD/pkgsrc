@@ -1,9 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2006/12/04 04:42:03 christos Exp $
+$NetBSD: patch-ab,v 1.2 2011/10/01 22:32:11 dholland Exp $
 --- getline.c	1969-12-31 19:00:00.000000000 -0500
 +++ getline.c	2006-12-03 23:16:23.000000000 -0500
-@@ -0,0 +1,20 @@
+@@ -0,0 +1,21 @@
++#include <sys/param.h>
 +#include <stdio.h>
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) && __NetBSD_Version__ < 599001600
 +int
 +getline(char **buf, size_t *len, FILE *fp)
 +{
