@@ -1,0 +1,120 @@
+$NetBSD: patch-fed_misc_c,v 1.1 2011/10/01 21:42:16 dholland Exp $
+
+- use const for clean build
+- don't use sprintf (or perror)
+- fix wrong printf formats
+
+--- fed/misc.c.orig	1995-10-07 21:44:49.000000000 +0000
++++ fed/misc.c
+@@ -46,14 +46,15 @@
+ 
+ #include "fed.h"
+ 
+-#include <stdlib.h>
+-#include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <stdlib.h>
++#include <string.h>
++#include <err.h>
+ 
+ static unsigned char *fonttab;		/* ptr to font in core memory */
+ 
+-static char *bitmask[] = {
++static const char *bitmask[] = {
+ 		"....",			/*  0 */
+ 		"...*",			/*  1 */
+ 		"..*.",			/*  2 */
+@@ -83,22 +84,17 @@ void readfont(char *filename)
+ 	FILE *in;
+ 	struct stat sbuf, *sbp;
+ 	int ret;
+-	char buffer[1024];
+ 	
+ 	sbp = &sbuf;
+ 	
+ 	if((in = fopen(filename, "r")) == NULL)
+ 	{
+-		sprintf(buffer, "cannot open file %s for reading", filename);
+-		perror(buffer);
+-		exit(1);
++		err(1, "cannot open file %s for reading", filename);
+ 	}
+ 
+ 	if((fstat(fileno(in), sbp)) != 0)
+ 	{
+-		sprintf(buffer, "cannot fstat file %s", filename);
+-		perror(buffer);
+-		exit(1);
++		err(1, "cannot fstat file %s", filename);
+ 	}
+ 
+ 	switch(sbp->st_size)
+@@ -129,7 +125,7 @@ void readfont(char *filename)
+ 			break;
+ 			
+ 		default:
+-			fprintf(stderr,"error, file %s is no valid font file, size=%d\n",filename,sbp->st_size);
++			fprintf(stderr,"error, file %s is no valid font file, size=%lld\n",filename,(long long)sbp->st_size);
+ 			exit(1);
+ 	}			
+ 
+@@ -144,9 +140,7 @@ void readfont(char *filename)
+ 
+ 	if((ret = fread(fonttab, sizeof(*fonttab), sbp->st_size, in)) != sbp->st_size)
+ 	{
+-		sprintf(buffer,"error reading file %s, size = %d, ret = %d\n",filename,sbp->st_size, ret);
+-		perror(buffer);
+-		exit(1);
++		err(1, "error reading file %s, size = %lld, ret = %d\n",filename,(long long)sbp->st_size, ret);
+ 	}		
+ }
+ 
+@@ -156,8 +150,7 @@ void readfont(char *filename)
+ void writefont()
+ {
+ 	FILE *in, *out;
+-	int ret;
+-	char buffer[1024];
++	size_t ret;
+ 	
+ 	if((in = fopen(lfilename, "r")) != NULL)
+ 	{
+@@ -168,9 +161,7 @@ void writefont()
+ 		strcat(wfn, ".BAK");
+ 		if((out = fopen(wfn, "w")) == NULL)
+ 		{
+-			sprintf(buffer, "cannot open file %s for writing", wfn);
+-			perror(buffer);
+-			exit(1);
++			err(1, "cannot open file %s for writing", wfn);
+ 		}
+ 
+ 		while(( c = fgetc(in) ) != EOF )
+@@ -182,23 +173,19 @@ void writefont()
+ 			
+ 	if((out = fopen(lfilename, "w")) == NULL)
+ 	{
+-		sprintf(buffer, "cannot open file %s for writing", lfilename);
+-		perror(buffer);
+-		exit(1);
++		err(1, "cannot open file %s for writing", lfilename);
+ 	}
+ 
+ 	if((ret = fwrite(fonttab, sizeof(*fonttab), lfilesize, out)) != lfilesize)
+ 	{
+-		sprintf(buffer,"error writing file %s, size=%d, ret=%d\n",lfilename,lfilesize, ret);
+-		perror(buffer);
+-		exit(1);
++		err(1, "error writing file %s, size=%d, ret=%lu\n",lfilename,lfilesize, ret);
+ 	}		
+ }
+ 
+ /*---------------------------------------------------------------------------*
+  *	display a string
+  *---------------------------------------------------------------------------*/
+-void dis_cmd(char *strg)
++void dis_cmd(const char *strg)
+ {
+ 	move(22,0);
+ 	clrtoeol();

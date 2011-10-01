@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2011/10/01 21:42:16 dholland Exp $
+
+- use pkgsrc curses
 
 --- fed/Makefile.orig	Mon Dec  4 13:49:07 2000
 +++ fed/Makefile
@@ -7,6 +9,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
  SRCS=	fed.c select.c edit.c misc.c
 -LDADD=	-lncurses
 +LDADD=	-lcurses
- BINDIR=	/usr/local/bin
+-BINDIR=	/usr/local/bin
++BINDIR?=	/usr/local/bin
  
  MKMAN=	no

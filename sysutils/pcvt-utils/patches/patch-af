@@ -1,14 +1,87 @@
-$NetBSD: patch-af,v 1.2 2006/11/13 14:51:08 drochner Exp $
+$NetBSD: patch-af,v 1.3 2011/10/01 21:42:16 dholland Exp $
 
---- demo/playvt.c.orig	1997-11-01 07:49:36.000000000 +0100
+Use standard C.
+
+--- demo/playvt.c.orig	1997-11-01 06:49:36.000000000 +0000
 +++ demo/playvt.c
-@@ -42,7 +42,9 @@ static char *id =
+@@ -30,7 +30,7 @@
+  *
+  */
+ 
+-static char *id =
++const char id[] =
+ 	"@(#)playvt.c, 1.00, Last Edit-Date: [Sun Jan  1 18:32:22 1995]";
+ 
+ /*---------------------------------------------------------------------------*
+@@ -42,22 +42,21 @@ static char *id =
   *---------------------------------------------------------------------------*/
  	
  #include <stdio.h>
 +#include <string.h>
  #include <unistd.h>
 +#include <stdlib.h>
++#include <err.h>
  
- main(argc,argv)
- int argc;
+-main(argc,argv)
+-int argc;
+-char *argv[];
+-{
+-	extern int optind;
+-	extern int opterr;
+-	extern char *optarg;
++void usage(void);
+ 
++int
++main(int argc, char *argv[])
++{
+ 	int c;
+ 	FILE *fp = stdin;
+ 	volatile int i;
+ 	int delay = 0;
+-	int fflag = -1;
+-	char *filename;
++	char *filename = NULL;
+ 	
+ 	while( (c = getopt(argc, argv, "d:f:")) != -1)
+ 	{
+@@ -69,7 +68,6 @@ char *argv[];
+ 				
+ 			case 'f':
+ 				filename = optarg;
+-				fflag = 1;
+ 				break;
+ 
+ 			case '?':
+@@ -79,15 +77,11 @@ char *argv[];
+ 		}
+ 	}
+ 
+-	if(fflag == 1)
++	if(filename != NULL)
+ 	{
+ 		if((fp = fopen(filename, "r")) == NULL)
+ 		{
+-			char buffer[80];
+-			strcpy(buffer,"ERROR opening file ");
+-			strcat(buffer,filename);
+-			perror(buffer);
+-			exit(1);
++			err(1, "ERROR opening file %s", filename);
+ 		}
+ 	}
+ 			
+@@ -100,7 +94,8 @@ char *argv[];
+ }
+ 
+ 
+-usage()
++void
++usage(void)
+ {
+ 	fprintf(stderr,"\nplayvt - play a VT animation with programmable delay\n");
+ 	fprintf(stderr,"usage: playvt -f [filename] -d [delay]\n");
+@@ -108,4 +102,3 @@ usage()
+ 	fprintf(stderr,"       -d <delay>      delay between characters\n");
+ 	exit(1);
+ }
+-

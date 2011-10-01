@@ -1,8 +1,17 @@
-$NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
+$NetBSD: patch-ah,v 1.3 2011/10/01 21:42:16 dholland Exp $
 
---- fontedit/fontedit.c.orig	1995-10-07 22:44:58.000000000 +0100
+- use modern C
+- declare functions properly
+- use const for a clean build
+- use signed/unsigned consistently
+
+--- fontedit/fontedit.c.orig	1995-10-07 21:44:58.000000000 +0000
 +++ fontedit/fontedit.c
-@@ -26,20 +26,21 @@ void clear_screen();
+@@ -22,24 +22,26 @@
+  *                     - eap@bucsf.bu.edu
+  */
+ 
+-void clear_screen();
  #include <stdio.h>
  #ifdef SYSV
  #include <sys/termio.h>
@@ -18,6 +27,8 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  #endif /* __NetBSD__ || __FreeBSD__ */
  #include <signal.h>
 +#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
  
  #ifdef CURFIX
  #define CURSORON  "\033[?25h"
@@ -27,7 +38,7 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  
  #define	MAX_ROWS	10
  #define	MAX_COLS	8
-@@ -103,10 +104,10 @@ unsigned int	current_entry;
+@@ -103,33 +105,51 @@ unsigned int	current_entry;
  
  #ifdef SYSV
  struct termio old_stty, new_stty;
@@ -40,8 +51,37 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  #if defined (__NetBSD__) || defined (__FreeBSD__)
  struct termios old_stty, new_stty;
  #endif /* __NetBSD__ || __FreeBSD__ */
-@@ -123,13 +124,13 @@ interrupt()
- 	void clear_screen();
+ FILE * font_file = (FILE *)0;
+ 
++void interrupt(void);
++void command(void);
++void pad(void);
++void init_restore(void);
++void clear_screen(void);
++void save_table(FILE *);
++void get_table(FILE *);
++void build_entry(unsigned);
++void extract_entry(unsigned);
++void send_entry(unsigned);
++void print_entry(unsigned, bool);
++void highlight(unsigned, unsigned, bool);
++void draw_current(void);
++void init_restore(void);
++void help(void);
++void warning(const char *);
++void move(int, int);
++int get_key(void);
+ 
+ /*
+  * Interrupt
+  *	Exit gracefully.
+  */
+ 
+-interrupt()
++void
++interrupt(void)
+ {
+-	void clear_screen();
  #ifdef CURFIX
          printf("%s\n",CURSORON);   
 -#endif CURFIX   
@@ -57,7 +97,24 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  #if defined (__NetBSD__) || defined (__FreeBSD__)
          ioctl( 0, TIOCSETA, &old_stty );
  #endif /* __NetBSD__ || __FreeBSD__ */
-@@ -180,13 +181,13 @@ char *argv[];
+@@ -142,13 +162,10 @@ interrupt()
+  * Main
+  *	Grab input/output file and call main command processor.
+  */
+-	
+-main( argc, argv )
+-int argc;
+-char *argv[];
++
++int	
++main( int argc, char *argv[] )
+ {
+-	void command(), init_restore(), clear_screen();
+-	void save_table(), get_table(), extract_entry();
+ 
+ 	if ( argc != 2 ) {
+ 		fprintf( stderr, "usage: fontedit filename\n" );
+@@ -180,13 +197,13 @@ char *argv[];
  	}
  #ifdef CURFIX
          printf("%s\n",CURSOROFF);
@@ -74,7 +131,7 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  #if defined (__NetBSD__) || defined (__FreeBSD__)
          ioctl( 0, TIOCGETA, &old_stty );
  #endif /* __NetBSD__ || __FreeBSD__ */
-@@ -196,7 +197,7 @@ char *argv[];
+@@ -196,7 +213,7 @@ char *argv[];
  	new_stty.c_lflag &= ~ICANON;
  	new_stty.c_cc[VMIN] = 1;
  	ioctl( 0, TCSETA, &new_stty );
@@ -83,7 +140,7 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  #if defined (__NetBSD__) || defined (__FreeBSD__)
  	new_stty.c_lflag &= ~ICANON;
          new_stty.c_lflag &= ~ECHO;
-@@ -207,17 +208,17 @@ char *argv[];
+@@ -207,17 +224,17 @@ char *argv[];
  	new_stty.sg_flags |= CBREAK;               
          new_stty.sg_flags &= ~ECHO;
  	ioctl( 0, TIOCSETP, &new_stty );
@@ -104,7 +161,7 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  #if defined (__NetBSD__) || defined (__FreeBSD__)
  	ioctl( 0, TIOCSETA, &old_stty );
  #endif /* __NetBSD__ || __FreeBSD__ */
-@@ -230,7 +231,7 @@ char *argv[];
+@@ -230,7 +247,7 @@ char *argv[];
  	fclose( font_file );
  #ifdef CURFIX
          printf("%s\n",CURSORON);
@@ -113,3 +170,193 @@ $NetBSD: patch-ah,v 1.2 2006/11/13 14:51:08 drochner Exp $
  }
  
  
+@@ -243,17 +260,13 @@ char *argv[];
+  */
+ 
+ void
+-command()
++command(void)
+ {
+ 	register int c;
+ 	register int row, col;
+ 	register int i, j;
+ 	bool change, error, override;
+ 
+-	void build_entry(), extract_entry(), send_entry(), print_entry();
+-	void highlight(), draw_current(), init_restore(), help();
+-	void warning();
+-
+ 	change = false;
+ 	error = false;
+ 	override = false;
+@@ -437,7 +450,7 @@ command()
+ 
+ 
+ 
+-char *key_table[]	= {
++const char *key_table[]	= {
+ 	"\033[1~",		/* Find		*/
+ 	"\033[2~",		/* Insert	*/
+ 	"\033[3~",		/* Remove	*/
+@@ -471,7 +484,7 @@ char *key_table[]	= {
+  */
+ 
+ int
+-get_key()
++get_key(void)
+ {
+ 	register char	*p;
+ 	char	s[10];
+@@ -501,7 +514,8 @@ get_key()
+  *	Emit nulls so that the terminal can catch up.
+  */
+ 
+-pad()
++void
++pad(void)
+ {
+ 	int i;
+ 
+@@ -518,13 +532,11 @@ pad()
+  */
+ 
+ void
+-init_restore()
++init_restore(void)
+ {
+ 	register int row, col;
+-	register int i;
++	register unsigned i;
+ 	
+-	void  draw_current(), clear_screen(), print_entry();
+-
+ 	clear_screen();
+ 
+ 	for ( col = 0; col < MAX_COLS; ++col ) {
+@@ -585,7 +597,7 @@ init_restore()
+  */
+ 
+ void
+-draw_current()
++draw_current(void)
+ {
+ 	register int row, col;
+ 
+@@ -656,7 +668,7 @@ bool on;
+  */
+  
+ void
+-clear_screen()
++clear_screen(void)
+ {
+ 	printf( "\033[H\033[J" );		/* Clear screen.	*/
+ 	fflush( stdout );
+@@ -668,6 +680,7 @@ clear_screen()
+  * move
+  */
+ 
++void
+ move( y, x )
+ int y, x;
+ {
+@@ -769,11 +782,11 @@ unsigned int entry_no;
+ 
+ void
+ send_entry( entry_no )
+-int entry_no;
++unsigned entry_no;
+ {
+ 	register char *fp	= font_table[entry_no];
+ 
+-	printf( "\033P1;%d;1;0;0;0{ @%c%c%c%c%c%c%c%c/%c%c%c%c%c%c%c%c\033\\", 
++	printf( "\033P1;%u;1;0;0;0{ @%c%c%c%c%c%c%c%c/%c%c%c%c%c%c%c%c\033\\", 
+ 		entry_no,
+ 		fp[ 0], fp[ 1], fp[ 2], fp[ 3], fp[ 4], fp[ 5], fp[ 6], fp[ 7],
+ 		fp[ 8], fp[ 9], fp[10], fp[11], fp[12], fp[13], fp[14], fp[15] );
+@@ -790,9 +803,9 @@ int entry_no;
+  */
+ 
+ void
+-print_entry( entry_no, highlight )
++print_entry( entry_no, dohighlight )
+ register unsigned int entry_no;
+-bool highlight;
++bool dohighlight;
+ {
+ 
+ 	register int y, x;
+@@ -803,14 +816,14 @@ bool highlight;
+ 
+ 	move( y * 2 + TABLE_ROW, x * 2 + TABLE_COL );
+ 
+-	if ( highlight )
++	if ( dohighlight )
+ 		printf( "\033[7m" );
+ 
+ 	printf( "\033* @" );		/* select DRCS into G2	*/
+ 	printf( "\033N" );		/* select single shift	*/
+ 	printf( "%c", entry_no );	/* Draw the character	*/
+ 
+-	if ( highlight )
++	if ( dohighlight )
+ 		printf( "\033[0m" );
+ }
+ 
+@@ -822,15 +835,15 @@ bool highlight;
+  */
+ 
+ void
+-save_table( font_file )
+-FILE *font_file;
++save_table( the_font_file )
++FILE *the_font_file;
+ {
+ 	register char *fp;
+ 	register int i;
+ 
+ 	for ( i = 0; i < TOTAL_ENTRIES; ++i ) {
+ 		fp = font_table[i];
+-		fprintf( font_file, "\033P1;%d;1;0;0;0{ @%c%c%c%c%c%c%c%c/%c%c%c%c%c%c%c%c\033\\\n", 
++		fprintf( the_font_file, "\033P1;%d;1;0;0;0{ @%c%c%c%c%c%c%c%c/%c%c%c%c%c%c%c%c\033\\\n", 
+ 			i, 
+ 			fp[ 0], fp[ 1], fp[ 2], fp[ 3], fp[ 4], fp[ 5], fp[ 6], fp[ 7],
+ 			fp[ 8], fp[ 9], fp[10], fp[11], fp[12], fp[13], fp[14], fp[15] );
+@@ -845,8 +858,8 @@ FILE *font_file;
+  */
+ 
+ void
+-get_table( font_file )
+-FILE *font_file;
++get_table( the_font_file )
++FILE *the_font_file;
+ {
+ 	char	s[256];
+ 	register char	*p;
+@@ -854,7 +867,7 @@ FILE *font_file;
+ 	int i;
+ 	register int j;
+ 
+-	while( fgets( s, 255, font_file ) ) {
++	while( fgets( s, 255, the_font_file ) ) {
+ 		if ( strncmp( s, "\033P1;", 4 ) !=  0 ) 
+ 			continue;	/* Bogus line	*/
+ 		p = &s[4];
+@@ -890,7 +903,7 @@ FILE *font_file;
+  */
+  
+ void
+-help()
++help(void)
+ {
+ 	printf( "Font editor\n\n" );
+ 	printf( "F6     - Pixel on\n" );
+@@ -915,8 +928,7 @@ help()
+  */
+ 
+ void
+-warning( s )
+-char *s;
++warning( const char *s )
+ {
+ 	move( ERROR_ROW, ERROR_COL );
+ 	printf( "Warning: %s!\n", s );
