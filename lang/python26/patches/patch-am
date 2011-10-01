@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.15 2010/09/16 13:24:47 obache Exp $
+$NetBSD: patch-am,v 1.16 2011/10/01 03:11:15 dsainty Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -19,9 +19,12 @@ headers and libraries from the system.
 
 Build the 1.85 compat module all the time against the BDB version of choice.
 
---- setup.py.orig	2010-07-17 12:31:09.000000000 +0000
-+++ setup.py
-@@ -18,7 +18,7 @@ from distutils.command.install_lib impor
+Add in Debian multiarch support (retrofitted from Python 2.7.2) to
+support building the "nis" and "crypt" modules.
+
+--- setup.py	2010-07-18 00:31:09.000000000 +1200
++++ setup.py	2011-09-23 01:51:17.757519638 +1200
+@@ -18,7 +18,7 @@
  from distutils.spawn import find_executable
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -30,9 +33,32 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -355,9 +355,15 @@ class PyBuildExt(build_ext):
+@@ -354,10 +354,40 @@
+                 return platform
          return sys.platform
  
++    def add_multiarch_paths(self):
++        # Debian/Ubuntu multiarch support.
++        # https://wiki.ubuntu.com/MultiarchSpec
++        if not find_executable('dpkg-architecture'):
++            return
++        tmpfile = os.path.join(self.build_temp, 'multiarch')
++        if not os.path.exists(self.build_temp):
++            os.makedirs(self.build_temp)
++        ret = os.system(
++            'dpkg-architecture -qDEB_HOST_MULTIARCH > %s 2> /dev/null' %
++            tmpfile)
++        try:
++            if ret >> 8 == 0:
++                with open(tmpfile) as fp:
++                    multiarch_path_component = fp.readline().strip()
++                add_dir_to_list(self.compiler.library_dirs,
++                                '/usr/lib/' + multiarch_path_component)
++                add_dir_to_list(self.compiler.include_dirs,
++                                '/usr/include/' + multiarch_path_component)
++        finally:
++            os.unlink(tmpfile)
++
      def detect_modules(self):
 -        # Ensure that /usr/local is always used
 -        add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
@@ -46,10 +72,12 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 +                self.compiler.library_dirs.insert(0, libdir)
 +            if incdir not in self.compiler.include_dirs:
 +                self.compiler.include_dirs.insert(0, incdir)
++
++        self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -703,9 +709,7 @@ class PyBuildExt(build_ext):
+@@ -703,9 +733,7 @@
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -60,7 +88,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -815,172 +819,6 @@ class PyBuildExt(build_ext):
+@@ -815,172 +843,6 @@
              else:
                  raise ValueError("unknown major BerkeleyDB version", major)
  
@@ -233,7 +261,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1094,31 +932,12 @@ class PyBuildExt(build_ext):
+@@ -1094,31 +956,12 @@
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -270,7 +298,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -1131,7 +950,7 @@ class PyBuildExt(build_ext):
+@@ -1131,7 +974,7 @@
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -279,7 +307,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
                  gdbm_libs = ['gdbm']
                  if self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
                      gdbm_libs.append('gdbm_compat')
-@@ -1147,14 +966,11 @@ class PyBuildExt(build_ext):
+@@ -1147,14 +990,11 @@
                          libraries = gdbm_libs ) )
                  else:
                      missing.append('dbm')
@@ -296,7 +324,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
              else:
                  missing.append('dbm')
  
-@@ -1408,6 +1224,14 @@ class PyBuildExt(build_ext):
+@@ -1408,6 +1248,14 @@
                  )
              libraries = []
  
@@ -311,7 +339,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -2026,9 +1850,9 @@ def main():
+@@ -2026,9 +1874,9 @@
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
