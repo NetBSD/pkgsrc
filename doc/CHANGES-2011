@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2351 2011/10/02 18:18:05 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.2352 2011/10/02 22:51:25 dholland Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3756,3 +3756,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed security/nessus-core [joerg 2011-10-02]
 	Removed security/nessus-libraries [joerg 2011-10-02]
 	Removed security/nessus-plugins [joerg 2011-10-02]
+	Updated devel/nbitools to 6.3nb6 [dholland 2011-10-02]
