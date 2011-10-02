@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/02/23 10:33:47 adam Exp $
+# $NetBSD: Makefile,v 1.18 2011/10/02 15:31:22 dholland Exp $
 
 DISTNAME=	dbxml-2.5.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
@@ -19,6 +19,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/dbxml/src/python
 USE_LANGUAGES=		c c++
 NO_CONFIGURE=		yes
 PYDISTUTILSPKG=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	24
 
 SUBST_CLASSES+=		fix-path
 SUBST_STAGE.fix-path=	pre-build
