@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/03 23:46:58 tron Exp $
-lib/${MOZ_NAME}/plugins/libjavaplugin_oji.so
