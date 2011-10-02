@@ -1,0 +1,30 @@
+# $NetBSD: Makefile.common,v 1.1 2011/10/02 14:31:14 wiz Exp $
+
+PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
+CATEGORIES=		www print
+MASTER_SITES=		# empty
+DISTFILES=		# empty
+
+DEPENDS+=		opera>=7.0:../../www/opera
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	motif
+EMUL_REQD=		suse>=7.3
+
+ACRO_PLATFORM=		intellinux
+
+WRKSRC=			${WRKDIR}
+NO_CONFIGURE=		YES
+BUILD_DIRS=		# empty
+PLIST_SRC=		# empty
+
+FILES_SUBST+=		ACROREAD=${ACROREAD:Q}
+FILES_SUBST+=		ACRO_SUBDIR=${ACRO_SUBDIR:Q}
+FILES_SUBST+=		ACRO_PLATFORM=${ACRO_PLATFORM:Q}
+
+DEINSTALL_TEMPLATES+=	${PKGSRCDIR}/www/opera-acroread7/DEINSTALL
+INSTALL_TEMPLATES+=	${PKGSRCDIR}/www/opera-acroread7/INSTALL
+
+INSTALLATION_DIRS+=	${EMULDIR}/usr/lib/opera/plugins
+
+do-install:	# nothing
