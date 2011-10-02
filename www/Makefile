@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.819 2011/10/02 14:11:52 wiz Exp $
+# $NetBSD: Makefile,v 1.820 2011/10/02 14:32:32 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -232,8 +232,6 @@ SUBDIR+=	nspluginwrapper
 SUBDIR+=	nvu
 SUBDIR+=	ocsigen
 SUBDIR+=	opera
-SUBDIR+=	opera-acroread
-SUBDIR+=	opera-acroread5
 SUBDIR+=	opera-acroread7
 SUBDIR+=	opera-plugins
 SUBDIR+=	p5-Alien-GvaScript
