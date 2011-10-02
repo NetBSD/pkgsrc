@@ -1,0 +1,15 @@
+$NetBSD: patch-efltk_Fl__Int__List_h,v 1.1 2011/10/02 03:44:10 dholland Exp $
+
+- fix LP64 build
+
+--- efltk/Fl_Int_List.h~	2003-07-03 20:36:35.000000000 +0000
++++ efltk/Fl_Int_List.h
+@@ -43,7 +43,7 @@ public:
+     char *to_string(const char *separator=",");
+     void from_string(const char * s, const char * separator=",");
+ 
+-    int item(uint index) const { return (int)Fl_Ptr_List::item(index); }
++    int item(uint index) const { return (int)(intptr_t)Fl_Ptr_List::item(index); }
+     int &operator [](uint ind) const { return (int&)items[ind]; }
+ };
+ 

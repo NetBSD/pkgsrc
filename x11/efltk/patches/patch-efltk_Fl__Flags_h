@@ -1,0 +1,15 @@
+$NetBSD: patch-efltk_Fl__Flags_h,v 1.1 2011/10/02 03:44:10 dholland Exp $
+
+- fix LP64 build
+
+--- efltk/Fl_Flags.h~	2003-07-03 20:36:35.000000000 +0000
++++ efltk/Fl_Flags.h
+@@ -89,7 +89,7 @@ public:
+     Fl_Flags(long flags) : m_flags(flags) { }
+     Fl_Flags(unsigned flags) : m_flags(flags) { }
+     Fl_Flags(int flags) : m_flags(flags) { }
+-    Fl_Flags(void* flags) : m_flags((int)flags) { }
++    /*Fl_Flags(void* flags) : m_flags((int)flags) { }*/
+     Fl_Flags() : m_flags(0) { }
+ 
+     bool is_set(int flags) const { return (m_flags&flags)!=0; }
