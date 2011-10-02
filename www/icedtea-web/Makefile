@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/21 23:01:22 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/02 17:35:24 dholland Exp $
 #
 
 DISTNAME=	61e08e67b176
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		autoconf automake gmake pkg-config
+USE_TOOLS+=		autoconf automake gmake pkg-config zip
 WRKSRC=			${WRKDIR}/icedtea-web-${DISTNAME}
 
 CONFIGURE_ARGS+=	 --with-jdk-home=${PREFIX}/java/openjdk7
