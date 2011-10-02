@@ -1,0 +1,15 @@
+$NetBSD: patch-src_widgets_Fl__Text__Editor_cpp,v 1.1 2011/10/02 03:44:10 dholland Exp $
+
+- fix LP64 build
+
+--- src/widgets/Fl_Text_Editor.cpp~	2003-06-16 19:41:23.000000000 +0000
++++ src/widgets/Fl_Text_Editor.cpp
+@@ -45,7 +45,7 @@ static void cb_menu(Fl_Widget *w, void *
+ {
+     if(!menu_widget) return;
+     char *selection = 0;
+-    switch((int)d) {
++    switch((int)(intptr_t)d) {
+         case COPY:
+             selection = (char *)menu_widget->buffer()->selection_text();
+             if(*selection) {
