@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2011/08/15 09:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2011/10/02 14:11:51 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -42,7 +42,6 @@ SUBDIR+=	darwin_lib
 SUBDIR+=	dega
 SUBDIR+=	dgen
 SUBDIR+=	dosbox
-SUBDIR+=	doscmd
 SUBDIR+=	dynagen
 SUBDIR+=	dynamips
 SUBDIR+=	e-uae
@@ -72,7 +71,6 @@ SUBDIR+=	ia64sim
 SUBDIR+=	kegs
 SUBDIR+=	kenigma
 SUBDIR+=	libspectrum
-SUBDIR+=	linuxppc_lib
 SUBDIR+=	lrmi
 SUBDIR+=	m1
 SUBDIR+=	makeppf

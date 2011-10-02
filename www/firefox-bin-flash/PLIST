@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/23 22:27:15 tnn Exp $
-lib/${MOZ_NAME}/plugins/libflashplayer.so

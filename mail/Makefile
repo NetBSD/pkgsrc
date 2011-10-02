@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.413 2011/09/16 12:07:32 obache Exp $
+# $NetBSD: Makefile,v 1.414 2011/10/02 14:11:51 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -137,7 +137,6 @@ SUBDIR+=	mailfront
 SUBDIR+=	mailgraph
 SUBDIR+=	mailhops
 SUBDIR+=	mailman
-SUBDIR+=	mailscanner
 SUBDIR+=	mailserv
 SUBDIR+=	mailsync
 SUBDIR+=	mailwrapper
