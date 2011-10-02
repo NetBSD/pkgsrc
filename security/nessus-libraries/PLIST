@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:13:33 joerg Exp $
-bin/nessus-config
-include/nessus/getopt.h
-include/nessus/harglists.h
-include/nessus/libnessus.h
-include/nessus/libvers.h
-lib/libhosts_gatherer.la
-lib/libnessus.la
-man/man1/nessus-config.1
