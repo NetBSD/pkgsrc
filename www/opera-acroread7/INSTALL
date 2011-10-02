@@ -1,0 +1,9 @@
+# $NetBSD: INSTALL,v 1.1 2011/10/02 14:31:14 wiz Exp $
+
+case "${STAGE}" in
+POST-INSTALL)
+	src="${PKG_PREFIX}/@ACROREAD@/@ACRO_SUBDIR@/@ACRO_PLATFORM@/nppdf.so"
+	dest="${EMULDIR}/usr/lib/opera/plugins/nppdf.so"
+	${TEST} -f "$dest" || ${LN} -s "$src" "$dest"
+	;;
+esac
