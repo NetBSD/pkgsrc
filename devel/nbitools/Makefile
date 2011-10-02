@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2010/11/25 15:17:50 hauke Exp $
+# $NetBSD: Makefile,v 1.19 2011/10/02 22:49:49 dholland Exp $
 #
 
 DISTNAME=	nbitools-R6.3
 PKGNAME=	nbitools-6.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -21,7 +21,7 @@ MAKE_JOBS_SAFE=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=	${IMAKE_TOOLS:Nimake}
+USE_TOOLS+=	${IMAKE_TOOLS:Nimake} perl:run
 
 SUBST_CLASSES+=		nbi
 SUBST_STAGE.nbi=	pre-configure
