@@ -1,0 +1,25 @@
+$NetBSD: patch-preferences_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- Remove horrible code that tries to test for platform alignment
+requirements by crashing.
+
+--- preferences.c~	2001-12-15 11:01:38.000000000 +0000
++++ preferences.c
+@@ -130,6 +130,7 @@ int preferences_isbigendian()
+  * platforms */
+ int preferences_need32bitalign()
+ {
++#if 0 /* total bollocks - fortunately result is unused */
+    unsigned long long int test=0x0011223344556677;
+    unsigned int temp;
+    temp=*((unsigned int*)(((int)(&test))+1));
+@@ -138,6 +139,9 @@ int preferences_need32bitalign()
+     * or 0x66 (for little Endian systems) and return TRUE if
+     * it is not */
+    return (!((temp==0x11)||(temp==0x66)));
++#else
++   return 1;
++#endif
+ };
+ 
+ void preferences_setupsymlinkarea()

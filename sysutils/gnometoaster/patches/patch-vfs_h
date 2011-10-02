@@ -1,0 +1,70 @@
+$NetBSD: patch-vfs_h,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+
+--- vfs.h.orig	2001-06-04 09:38:24.000000000 +0000
++++ vfs.h
+@@ -41,11 +41,13 @@ vfs_direntry;
+  * status is 0 on success */
+ typedef void (*vfs_operationcomplete)(int status,gpointer data);
+ 
++typedef struct vfs_dirhandle vfs_dirhandle;
++
+ /* Type declarations for function pointers */
+ typedef int (*createdir_t)(gpointer fs,char *path);
+-typedef int (*opendir_t)(gpointer fs,char *path);
+-typedef char *(*readdirentry_t)(gpointer fs,int handle);
+-typedef void (*closedir_t)(gpointer fs,int handle);
++typedef vfs_dirhandle *(*opendir_t)(gpointer fs,char *path);
++typedef char *(*readdirentry_t)(gpointer fs, vfs_dirhandle *handle);
++typedef void (*closedir_t)(gpointer fs, vfs_dirhandle *handle);
+ typedef vfs_direntry *(*filestat_t)(gpointer fs,const char *path,int getfilelinks);
+ typedef char *(*getlinkdestination_t)(gpointer fs,char *path);
+ typedef int  (*symlink_t)(gpointer fs,char *linkdest,char *linkname);
+@@ -123,12 +125,12 @@ void vfs_adderrorstring(vfs_filesystem*,
+ /* Create a directory, return 0 on success */
+ int vfs_createdir (vfs_filesystem*,char* newdir);
+ /* Open a directory, returns directory handle or 0 on failure */
+-int vfs_opendir (vfs_filesystem*,char* dir);
++vfs_dirhandle *vfs_opendir (vfs_filesystem*,char* dir);
+ /* will return the full path of the next directory item or
+  * NULL if the end of the directory has been reached.
+  * caller frees string */
+-char *vfs_readdirentry(vfs_filesystem*,int handle);
+-void vfs_closedir (vfs_filesystem*,int handle);
++char *vfs_readdirentry(vfs_filesystem*,vfs_dirhandle *handle);
++void vfs_closedir (vfs_filesystem*,vfs_dirhandle *handle);
+ /* this will retrieve the file statistics of a specific file.
+  * caller frees structure.
+  * returns NULL on failure */
+@@ -269,7 +271,8 @@ vfs_filesystem *vfs_parseuri(char *uri,c
+  *
+  * This function and the  vfs_remove_recursively function below
+  * return a handle which can be used to cancel the current process */
+-int vfs_copy_recursively(vfs_filesystem*destinationfs,
++typedef struct vfs_recurse_copy_info vfs_recurse_copy_info;
++vfs_recurse_copy_info *vfs_copy_recursively(vfs_filesystem*destinationfs,
+ 			 char *destinationpath,
+ 			 vfs_filesystem*sourcefs,
+ 			 char *sourcepath,
+@@ -281,16 +284,17 @@ int vfs_copy_recursively(vfs_filesystem*
+ 			 int copy_move);
+ 
+ /* Filesystem is the destination filesystem */
+-void vfs_copy_recursively_cancel(int handle);
++void vfs_copy_recursively_cancel(vfs_recurse_copy_info *handle);
+ 
+-int vfs_remove_recursively(vfs_filesystem*fs,
++typedef struct vfs_recurse_delete_info vfs_recurse_delete_info;
++vfs_recurse_delete_info *vfs_remove_recursively(vfs_filesystem*fs,
+ 			   char*path,
+ 			   vfs_operationcomplete callback,
+ 			   gpointer data,
+ 			   int content_only);
+ 
+ /* Filesystem is the destination filesystem */
+-void vfs_remove_recursively_cancel(int handle);
++void vfs_remove_recursively_cancel(vfs_recurse_delete_info *handle);
+ 
+ int vfs_remove_recursively_blocking(vfs_filesystem*fs,
+ 				    char *path,
