@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.16 2011/03/05 11:57:08 adam Exp $
+$NetBSD: distinfo,v 1.17 2011/10/02 04:32:22 markd Exp $
 
 SHA1 (kdepimlibs-4.5.5.tar.bz2) = 436fd7897586294f327395981a714ae0695f4ee2
 RMD160 (kdepimlibs-4.5.5.tar.bz2) = 6e9e54fcf8fa2f1da1c76004a3998f9426a30f4c
 Size (kdepimlibs-4.5.5.tar.bz2) = 2674251 bytes
 SHA1 (patch-aa) = 4a90823acf9832232ea51cc1202dd88edebe5ee9
+SHA1 (patch-akonadi_CMakeLists.txt) = 01b0e467d7474312fb001af081648efa44d8278f
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c
+SHA1 (patch-kblog_CMakeLists.txt) = 183d17f2de6f5f4f2f6bd29666b2a35d22c055aa
+SHA1 (patch-qgpgme_CMakeLists.txt) = 0860963f371a008f1d006dad58ea40329c358cfd
