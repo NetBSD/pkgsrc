@@ -1,0 +1,22 @@
+$NetBSD: patch-vm_include_elfsh_h,v 1.1 2011/10/02 23:50:56 dholland Exp $
+
+- wrap decl of dprintf in the same conditional that covers the uses
+(there is no definition that I can find, so probably the package won't
+build if someone turns that conditional on; not our problem though.
+
+Note that some defs in elfsh.h are substituted by the package Makefile
+in the post-patch phase. Don't accidentally roll that change into this
+patch.
+
+--- vm/include/elfsh.h.orig	2003-08-21 01:11:02.000000000 +0000
++++ vm/include/elfsh.h
+@@ -471,7 +471,9 @@ int		vm_getdisasm(u_int index, u_int arg
+ int		vm_gethexa(u_int index, u_int argc, char **argv);
+ int		vm_getvarparams(u_int index, u_int argc, char **argv);
+ 
++#if defined(USE_LIBASM)
+ int		dprintf(int fd, char *format, ...);
++#endif
+ 
+ /* Libasm resolve handler */
+ void		do_resolve(void *data, u_int vaddr, char *, u_int);
