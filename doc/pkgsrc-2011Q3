@@ -1,0 +1,109 @@
+Statistics
+==========
+
+XXXXX packages in pkgsrc-2011Q3
+XXXXX pkgsrc Makefiles
+XXXXX distinct pkgsrc entries
+135 pkgsrc entries added since previous branch
+23 entries removed completely, 28 removed with successor
+
+
+Headline package versions
+=========================
+
+databases/mysql5-server mysql-server-5.0.92nb1
+databases/mysql51-server mysql-server-5.1.58
+databases/mysql55-server mysql-server-5.5.16nb1
+databases/postgresql84 postgresql84-8.4.9
+databases/postgresql90 postgresql90-9.0.5
+databases/postgresql91 postgresql90-9.1.1
+
+devel/scmgit scmgit-1.7.6.3
+devel/mercurial mercurial-1.9.2
+devel/subversion subversion-1.6.17
+
+editors/emacs emacs-23.3a
+editors/emacs-snapshot emacs-24.0.50.20110821
+editors/vim vim-7.2.446nb1
+
+lang/gcc44 gcc44-4.4.6
+lang/gcc45 gcc45-4.5.3
+lang/gcc46 gcc46-4.6.1nb1
+lang/clang clang-2.9nb1
+lang/perl5 perl-5.14.2
+lang/php53 php-5.3.8
+lang/python27 python27-2.7.2
+lang/python31 python31-3.1.4nb1
+lang/ruby ruby-1.9.2pl290nb1
+
+meta-pkgs/boost boost-1.46.1
+meta-pkgs/gnome-platform gnome-platform-2.32.1
+meta-pkgs/kde3 kde-3.5.10
+meta-pkgs/kde4 kde4-4.5.5
+meta-pkgs/suse113 suse-11.3
+meta-pkgs/xfce4 xfce4-4.6.1nb9
+
+misc/libreoffice3-bin libreoffice3-bin-3.3.3
+misc/openoffice3-bin openoffice3-bin-3.2.1nb1
+
+www/firefox36 firefox-3.6.22
+www/firefox firefox-6.0.2
+www/seamonkey seamonkey-2.3.2
+
+
+Notable additions
+=================
+
+www/libmicrohttpd microhttpd-0.9.9
+lang/icc11 icc11-11.1.080
+graphics/darktable darktable-0.9.2
+textproc/FlightCrew FlightCrew-0.7.1
+print/acroread9 acroread9-9.4.2
+graphics/gource gource-0.35
+www/webkit-gtk3 webkit-gtk3-1.4.3
+
+
+Notable retirals
+================
+
+net/hobbitmon, replaced by net/xymon
+
+
+Upcoming retirals
+=================
+
+The following packages are scheduled for removal before the next
+stable pkgsrc release (2011Q4). Please migrate to successors
+or alternatives.
+
+databases/postgresql83*
+
+
+
+Pkgsrc Platforms
+================
+
+AIX
+BSDOS
+Darwin/Mac OS X
+DragonFly
+FreeBSD
+FreeMiNT
+HPUX
+Haiku
+IRIX
+Interix
+Linux
+MirBSD
+NetBSD
+OSF1
+OpenBSD
+SunOS/Solaris
+UnixWare
+
+
+Thanks
+======
+
+pkgsrc release engineering: Matthias Scheler, Steven Drake, S.P.Zeidler, and Eric Schnoebelen
+pkgsrc security: OBATA Akio, Guillaume Lasmayous, Fredrik Pettai, Tim Zingelman
