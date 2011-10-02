@@ -1,0 +1,24 @@
+$NetBSD: patch-fsh_c,v 1.1 2011/10/02 03:18:39 dholland Exp $
+
+- avoid conflict with POSIX getline
+
+--- fsh.c~	1998-12-03 21:15:47.000000000 +0000
++++ fsh.c
+@@ -838,7 +838,7 @@ do_help(int argc, char **argv)
+ }
+ 
+ static char *
+-getline(char *prompt, char *input, int len)
++get_line(char *prompt, char *input, int len)
+ {
+     printf("%s", prompt); fflush(stdout);
+ 
+@@ -854,7 +854,7 @@ do_fsh(void)
+     char  input[512], **argv;
+     cmd_entry *cmd;
+ 
+-    while(getline(prompt, input, sizeof(input)) != NULL) {
++    while(get_line(prompt, input, sizeof(input)) != NULL) {
+         argc = 0;
+         argv = build_argv(input, &argc);
+         if (argv == NULL || argc == 0) {
