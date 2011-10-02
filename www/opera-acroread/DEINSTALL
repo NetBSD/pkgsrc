@@ -1,8 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2007/07/29 05:19:59 jlam Exp $
-
-case "${STAGE}" in
-DEINSTALL)
-	dest="${EMULDIR}/usr/lib/opera/plugins/nppdf.so"
-	${RM} -f "$dest"
-	;;
-esac

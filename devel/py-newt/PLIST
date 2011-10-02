@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/13 09:54:57 wiz Exp $
-${PYSITELIB}/_snackmodule.so
-${PYSITELIB}/snack.py
-${PYSITELIB}/snack.pyc
