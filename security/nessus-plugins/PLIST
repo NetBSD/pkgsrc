@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 21:21:16 joerg Exp $
-bin/nessus-build
-lib/nessus/plugins_factory/Makefile
-lib/nessus/plugins_factory/libtool
-lib/nessus/plugins_factory/nessus.tmpl
-man/man1/nessus-build.1
-man/man8/nessus-update-plugins.8
-sbin/nessus-update-plugins
-@pkgdir lib/nessus/plugins/.desc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.417 2011/09/17 11:32:49 obache Exp $
+# $NetBSD: Makefile,v 1.418 2011/10/02 18:18:06 joerg Exp $
 #
 
 COMMENT=	Security tools
@@ -114,7 +114,6 @@ SUBDIR+=	libidea
 SUBDIR+=	libident
 SUBDIR+=	libksba
 SUBDIR+=	libmcrypt
-SUBDIR+=	libnasl
 SUBDIR+=	liboauth
 SUBDIR+=	libp11
 SUBDIR+=	libpbc
@@ -148,10 +147,6 @@ SUBDIR+=	mixminion
 SUBDIR+=	mozilla-rootcerts
 SUBDIR+=	msu
 SUBDIR+=	msudir
-SUBDIR+=	nessus
-SUBDIR+=	nessus-core
-SUBDIR+=	nessus-libraries
-SUBDIR+=	nessus-plugins
 SUBDIR+=	netpgp
 SUBDIR+=	netramet
 SUBDIR+=	nettle
