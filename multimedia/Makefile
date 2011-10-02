@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.183 2011/07/13 23:43:02 jmcneill Exp $
+# $NetBSD: Makefile,v 1.184 2011/10/02 14:11:52 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
 
-SUBDIR+=	RealPlayerGold
 SUBDIR+=	acidrip
 SUBDIR+=	adobe-flash-plugin
 SUBDIR+=	adobe-flash-plugin10.1

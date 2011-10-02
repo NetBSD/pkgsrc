@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.818 2011/09/15 09:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.819 2011/10/02 14:11:52 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -129,13 +129,6 @@ SUBDIR+=	fcgi
 SUBDIR+=	fengoffice
 SUBDIR+=	ffproxy
 SUBDIR+=	firefox
-SUBDIR+=	firefox-bin
-SUBDIR+=	firefox-bin-acroread
-SUBDIR+=	firefox-bin-acroread5
-SUBDIR+=	firefox-bin-acroread7
-SUBDIR+=	firefox-bin-flash
-SUBDIR+=	firefox-bin-java
-SUBDIR+=	firefox-bin-realplayer
 SUBDIR+=	firefox-l10n
 SUBDIR+=	firefox36
 SUBDIR+=	firefox36-l10n
@@ -161,10 +154,7 @@ SUBDIR+=	icedtea-web
 SUBDIR+=	ies4linux
 SUBDIR+=	ijb
 SUBDIR+=	ikiwiki
-SUBDIR+=	instiki
 SUBDIR+=	ja-trac
-SUBDIR+=	jakarta-tomcat4
-SUBDIR+=	jakarta-tomcat5
 SUBDIR+=	jalbum
 SUBDIR+=	kahua
 SUBDIR+=	kannel
@@ -611,12 +601,8 @@ SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-webrobots
 SUBDIR+=	ruby-webunit
-SUBDIR+=	sarg
 SUBDIR+=	screws
 SUBDIR+=	seamonkey
-SUBDIR+=	seamonkey-bin
-SUBDIR+=	seamonkey-bin-flash
-SUBDIR+=	seamonkey-bin-java
 SUBDIR+=	seamonkey-l10n
 SUBDIR+=	serf
 SUBDIR+=	shibboleth-sp

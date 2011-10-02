@@ -1,9 +1,0 @@
-# $NetBSD: INSTALL,v 1.1 2007/07/30 16:15:11 jlam Exp $
-
-case "${STAGE}" in
-POST-INSTALL)
-	src="${PKG_PREFIX}/@ACROREAD@/@ACRO_SUBDIR@/@ACRO_PLATFORM@/nppdf.so"
-	dest="${PKG_PREFIX}/lib/firefox-linux/plugins/nppdf.so"
-	${TEST} -f "$dest" || ${LN} -s "$src" "$dest"
-	;;
-esac
