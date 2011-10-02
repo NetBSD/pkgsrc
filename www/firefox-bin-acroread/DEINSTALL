@@ -1,8 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2007/07/30 16:15:10 jlam Exp $
-
-case "${STAGE}" in
-DEINSTALL)
-	dest="${PKG_PREFIX}/lib/firefox-linux/plugins/nppdf.so"
-	${RM} -f "$dest"
-	;;
-esac
