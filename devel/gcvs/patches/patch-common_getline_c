@@ -1,0 +1,16 @@
+$NetBSD: patch-common_getline_c,v 1.1 2011/10/02 02:25:42 dholland Exp $
+
+hack this to match the new POSIX definition, as a sleazy way of making
+it build again.
+
+--- common/getline.c~	2002-02-18 03:45:22.000000000 +0000
++++ common/getline.c
+@@ -142,7 +142,7 @@ getstr (char **lineptr, size_t *n, FILE 
+   return ret;
+ }
+ 
+-int
++ssize_t
+ getline (char **lineptr, size_t *n, FILE *stream)
+ {
+   return getstr (lineptr, n, stream, '\n', 0);
