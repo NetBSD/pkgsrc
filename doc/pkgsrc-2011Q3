@@ -5,7 +5,7 @@ XXXXX packages in pkgsrc-2011Q3
 XXXXX pkgsrc Makefiles
 XXXXX distinct pkgsrc entries
 135 pkgsrc entries added since previous branch
-23 entries removed completely, 28 removed with successor
+28 entries removed completely, 28 removed with successor
 
 
 Headline package versions
@@ -67,6 +67,7 @@ Notable retirals
 ================
 
 net/hobbitmon, replaced by net/xymon
+security/nessus
 
 
 Upcoming retirals
