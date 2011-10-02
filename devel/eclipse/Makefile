@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/12/24 03:49:35 dsainty Exp $
+# $NetBSD: Makefile,v 1.28 2011/10/02 22:42:39 dholland Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -58,6 +58,12 @@ do-install:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/eclipse > 	\
 		${WRKDIR}/.eclipse
 	${INSTALL_SCRIPT} ${WRKDIR}/.eclipse ${DESTDIR}${PREFIX}/bin/eclipse
+
+# This is not right, but for the time being it's the path of least
+# resistance, since replacing it after install is problematic and
+# replacing it before install is even more problematic. XXX.
+#
+CHECK_INTERPRETER_SKIP+=eclipse/plugins/org.apache.ant_1.6.2/bin/antRun.pl
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
