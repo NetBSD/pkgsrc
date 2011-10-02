@@ -1,0 +1,27 @@
+$NetBSD: patch-streams_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- patch up LP64 problem
+
+--- streams.c~	2000-08-16 06:22:06.000000000 +0000
++++ streams.c
+@@ -39,7 +39,7 @@ char *streams_getstreamid(tracks_trackin
+ 	pid=getpid();
+ 	sprintf(streamid,"%#x",pid);
+ 	strcat(streamid,":");		
+-	sprintf(&streamid[strlen(streamid)],"%#x",(unsigned int)track);
++	sprintf(&streamid[strlen(streamid)],"%#lx",(uintptr_t)track);
+ #ifdef DEBUG
+ 	printf ("calculated stream id: %s\n",streamid);
+ #endif
+@@ -80,7 +80,10 @@ tracks_trackinfo *streams_getstreambyid(
+ #endif	
+ 	if (pid==getpid()) /* if local */
+ 	  {
+-		  sscanf(mempos,"%x",(unsigned int*)&track);
++		  unsigned long tmp;
++
++		  sscanf(mempos,"%lx", &tmp);
++		  track = (tracks_trackinfo *)tmp;
+ 	  }
+ 	else
+ 	  {
