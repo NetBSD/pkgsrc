@@ -1,0 +1,17 @@
+$NetBSD: patch-efltk_Fl__Widget_h,v 1.1 2011/10/02 03:44:10 dholland Exp $
+
+- fix LP64 build
+
+--- efltk/Fl_Widget.h~	2003-06-25 10:02:00.000000000 +0000
++++ efltk/Fl_Widget.h
+@@ -363,8 +363,8 @@ private:
+ public:
+     /* Define default slots */
+     DEFSLOT_O(Fl_Widget, Fl_Widget, slot_label, const char *);
+-    DEFSLOT_O(Fl_Widget, Fl_Widget, slot_active, int);
+-    DEFSLOT_O(Fl_Widget, Fl_Widget, slot_visibility, int);
++    DEFSLOT_O(Fl_Widget, Fl_Widget, slot_active, long);
++    DEFSLOT_O(Fl_Widget, Fl_Widget, slot_visibility, long);
+ 
+ 	/**
+ 	 * Change label of widget. This function redraws label also.

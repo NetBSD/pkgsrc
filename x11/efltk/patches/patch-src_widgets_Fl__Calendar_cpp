@@ -1,0 +1,22 @@
+$NetBSD: patch-src_widgets_Fl__Calendar_cpp,v 1.1 2011/10/02 03:44:10 dholland Exp $
+
+- fix LP64 build
+
+--- src/widgets/Fl_Calendar.cpp~	2003-05-30 08:46:58.000000000 +0000
++++ src/widgets/Fl_Calendar.cpp
+@@ -43,13 +43,13 @@ static const int monthChanges[4] = {
+ // Callback function for day buttons
+ void Fl_Calendar::cbDayButtonClicked(Fl_Widget *button, void *param) {
+     Fl_Calendar *c = (Fl_Calendar *)button->parent()->parent();
+-    c->dayButtonClicked((unsigned)param);
++    c->dayButtonClicked((unsigned)(uintptr_t)param);
+ }
+ 
+ // Callback function for switch buttons
+ void Fl_Calendar::cbSwitchButtonClicked(Fl_Widget *button, void *param) {
+     Fl_Calendar *c = (Fl_Calendar *)button->parent();
+-    c->switchButtonClicked((int)param);
++    c->switchButtonClicked((int)(intptr_t)param);
+ }
+ 
+ void Fl_Calendar::dayButtonClicked(unsigned day) {

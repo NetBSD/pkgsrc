@@ -1,0 +1,15 @@
+$NetBSD: patch-src_widgets_Fl__Input_cpp,v 1.1 2011/10/02 03:44:10 dholland Exp $
+
+- fix LP64 build
+
+--- src/widgets/Fl_Input.cpp~	2003-06-22 21:36:13.000000000 +0000
++++ src/widgets/Fl_Input.cpp
+@@ -59,7 +59,7 @@ static Fl_Menu_ *menu_ = &menu;
+ static void cb_menu(Fl_Widget *w, void *d)
+ {
+     if(!menu_widget) return;
+-    switch((int)d) {
++    switch((int)(intptr_t)d) {
+         case CUT:
+             menu_widget->copy(true);
+             menu_widget->cut();
