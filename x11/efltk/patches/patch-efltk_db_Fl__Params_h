@@ -1,0 +1,15 @@
+$NetBSD: patch-efltk_db_Fl__Params_h,v 1.1 2011/10/02 03:44:10 dholland Exp $
+
+- fix LP64 build
+
+--- efltk/db/Fl_Params.h~	2003-04-23 17:56:23.000000000 +0000
++++ efltk/db/Fl_Params.h
+@@ -45,7 +45,7 @@ public:
+     void       bind_clear() { m_bindParamIndexes.clear(); }
+     void       bind_add(unsigned bindIndex);
+     unsigned   bind_count() { return m_bindParamIndexes.count(); }
+-    unsigned   bind_index(unsigned ind) { return (unsigned)m_bindParamIndexes[ind]; }
++    unsigned   bind_index(unsigned ind) { return (unsigned)(uintptr_t)m_bindParamIndexes[ind]; }
+ 
+     // ASSIGNMENT OPERATORS
+     Fl_Variant& operator =(const Fl_Variant &C) {
