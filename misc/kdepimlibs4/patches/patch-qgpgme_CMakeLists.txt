@@ -1,0 +1,13 @@
+$NetBSD: patch-qgpgme_CMakeLists.txt,v 1.1 2011/10/02 04:32:22 markd Exp $
+
+--- qgpgme/CMakeLists.txt.orig	2011-09-27 09:07:25.000000000 +0000
++++ qgpgme/CMakeLists.txt
+@@ -4,6 +4,8 @@ set( _any_gpgme_found false )
+ set( _qgpgme_version 1.0.1 )
+ set( _qgpgme_soversion 1 )
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ if ( WIN32 AND GPGME_VANILLA_FOUND )
+ 
+    # on Windows, we require gpgme(-vanilla), which is thread-safe,
