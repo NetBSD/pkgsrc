@@ -1,0 +1,60 @@
+$NetBSD: patch-cddb_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix include silliness
+- fix LP64 problems
+
+--- cddb.c.orig	2001-10-28 11:41:51.000000000 +0000
++++ cddb.c
+@@ -45,10 +45,7 @@
+ #include <stdlib.h>
+ #include <sys/socket.h>
+ #include <sys/types.h>
+-#ifndef __FreeBSD__
+ # include <arpa/inet.h>
+-#else
+ # include <netinet/in.h>
+-#endif
+ #include <netdb.h>
+ #include <string.h>
+@@ -431,7 +431,7 @@ GList *cddb_serverrequest(gchar *server,
+ 		  if (result==210)
+ 		    {
+ 		       /* the first line is the corresponding cddb_key */
+-		       entry=g_list_append(entry,(gpointer)es->cddb_key);
++		       entry=g_list_append(entry,(gpointer)(intptr_t)es->cddb_key);
+ 		       /* store a response line */
+ 		       while (cddb_poll(cddb_sfd,resstr))
+ 			 entry=g_list_append(entry,g_strdup(resstr));
+@@ -458,7 +458,7 @@ GList *cddb_cachelookup(cddb_essentials 
+    while ((current!=NULL)&&(result==NULL))
+      {
+ 	GList *entry=(GList*)current->data;
+-	if ((int)entry->data==es->cddb_key)
++	if ((int)(intptr_t)entry->data==es->cddb_key)
+ 	  result=entry;
+ 	current=current->next;
+      };
+@@ -754,7 +754,7 @@ void *cddb_commthread(void *s)
+  * cancelled.
+  * data can point to additional informations passed to the callback
+  * but may otherwise safely be set to NULL */
+-int cddb_lookup(cddb_essentials *es,
++cddb_infostruct *cddb_lookup(cddb_essentials *es,
+ 		int tracknum,
+ 		cddb_datahandler callback,
+ 		gpointer data)
+@@ -786,12 +786,12 @@ int cddb_lookup(cddb_essentials *es,
+ 	pthread_mutex_unlock(&cddb_sem);
+ 
+      };
+-   return (int)info;
++   return info;
+ };
+ 
+ /* kill a cddb lookup job. this is done e.g. in tracks.c when the last reference
+  * to a track has been cleared and the track is about to be deleted */
+-void cddb_killjob(int jobid)
++void cddb_killjob(cddb_infostruct *jobid)
+ {
+    if (jobid)
+      {

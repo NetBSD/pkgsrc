@@ -1,4 +1,11 @@
-$NetBSD: patch-ac,v 1.2 2006/03/06 22:16:53 joerg Exp $
+$NetBSD: patch-ac,v 1.3 2011/10/02 01:20:55 dholland Exp $
+
+- netbsd/dragonfly/openbsd cdrom support
+- silence LP64 warnings; these seem to be ok
+
+Caution: part of the second hunk contains DEVOSSAUDIO to be
+substituted from the pkgsrc Makefile. Don't commit a presubstituted
+version of the patch by accident.
 
 --- audio_oss.c.orig	2000-12-09 11:12:15.000000000 +0000
 +++ audio_oss.c
@@ -34,3 +41,27 @@ $NetBSD: patch-ac,v 1.2 2006/03/06 22:16:53 joerg Exp $
  	     ioctl(driver->descriptor,SNDCTL_DSP_SPEED,&speed);
  	     ioctl(driver->descriptor,SNDCTL_DSP_CHANNELS,&channels);
  	     ioctl(driver->descriptor,SNDCTL_DSP_GETFMTS,&format_mask);
+@@ -73,7 +74,7 @@ int audio_oss_open(gpointer data)
+ 	      * little Endian (like all Soundblaster devices etc.) */
+ 	     if (format==AFMT_S16_LE)
+ 	       {		  
+-		  driver->data=(gpointer)piping_create_function(stdfiletrack_byteswap,		
++		  driver->data=(gpointer)(intptr_t)piping_create_function(stdfiletrack_byteswap,		
+ 								NULL,
+ 								&inp,
+ 								&driver->descriptor,
+@@ -99,11 +100,11 @@ void audio_oss_close(gpointer data)
+ 	close(driver->descriptor);
+ 	driver->descriptor=-1;
+ 	/* wait for byteswap to finish */
+-	if ((int)driver->data!=-1)
++	if ((int)(intptr_t)driver->data!=-1)
+ 	  {
+ 	     /* say good by, byteswap */
+-	     kill((int)driver->data,SIGTERM);
+-	     waitpid((int)driver->data,&status,0);
++	     kill((int)(intptr_t)driver->data,SIGTERM);
++	     waitpid((int)(intptr_t)driver->data,&status,0);
+ 	  };	     
+      };
+ };

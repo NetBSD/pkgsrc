@@ -1,0 +1,33 @@
+$NetBSD: patch-fsedit_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- add const for clean build
+
+--- fsedit.c.orig	2001-08-19 22:03:06.000000000 +0000
++++ fsedit.c
+@@ -115,7 +115,7 @@ void fsedit_genericdrop_callback(int sta
+    free(info);
+ };
+ 
+-void fsedit_genericdrop(char *itemlist,
++void fsedit_genericdrop(const char *itemlist,
+ 			char *path,
+ 			fileman_additems_donecallback donecb,
+ 			gpointer cbdata,
+@@ -165,7 +165,7 @@ void fsedit_genericdrop(char *itemlist,
+ 
+ /* drophandler now takes x and y coordinates of the pointer.
+  * Those are not required here,though */
+-int fsedit_drophandler(char *s,int x,int y,int dragtype,gpointer data)
++int fsedit_drophandler(const char *s,int x,int y,int dragtype,gpointer data)
+ {
+    fsedit_genericdrop(s,content->path,
+ 		      fsedit_dnddone,
+@@ -327,7 +327,7 @@ void fsedit_treednddone(int status,gpoin
+    updatehandlers_call(fsedit_updatehandlers);
+ };
+ 
+-int fsedit_treedrop(char *s,
++int fsedit_treedrop(const char *s,
+ 		    int x,int y,
+ 		    int dragtype,
+ 		    gpointer data)

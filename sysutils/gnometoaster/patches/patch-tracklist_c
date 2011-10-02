@@ -1,0 +1,15 @@
+$NetBSD: patch-tracklist_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- silence LP64 warning, appears ok
+
+--- tracklist.c~	2001-10-27 09:26:47.000000000 +0000
++++ tracklist.c
+@@ -111,7 +111,7 @@ int tracklist_handleinternaldrop(trackli
+ 		  p);
+ 	#endif
+ 
+-       	linetomove=(int)i->selectlistinfo->selected_lines->data;
++       	linetomove=(int)(intptr_t)i->selectlistinfo->selected_lines->data;
+ 	
+ 	/* if item was dropped outside the tracklist,simply append it */
+ 	if (p==-1)

@@ -1,0 +1,24 @@
+$NetBSD: patch-audiotrack_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- Fix LP64 problems
+
+--- audiotrack.c~	2001-10-28 11:28:09.000000000 +0000
++++ audiotrack.c
+@@ -220,7 +220,7 @@ tracks_trackinfo *audiotrack_create(char
+    tracks_trackinfo *at;
+    audiotrack_info *info;
+    char name[255];
+-   int tochandle=cdromlow_gettochandle(device);
++   cdromlow_tochandle *tochandle=cdromlow_gettochandle(device);
+ 
+    info=(audiotrack_info*)malloc(sizeof(audiotrack_info));
+    strcpy(info->device,device);
+@@ -286,7 +286,7 @@ tracks_trackinfo *audiotrack_create(char
+ ;
+ 
+ /* configure the cdda audio stream from cdrom tracktype */
+-void audiotrack_init()
++void audiotrack_init(void)
+ {
+    GtkWidget *audiotrack_prefs;
+    GtkWidget *label;

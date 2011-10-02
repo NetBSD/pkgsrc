@@ -1,0 +1,12 @@
+$NetBSD: patch-piping_h,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- silence annoying warning
+
+--- piping.h~	2001-12-15 10:49:03.000000000 +0000
++++ piping.h
+@@ -79,4 +79,4 @@ int piping_isvalid_command(char *command
+  * that couldn't get found */
+ int piping_isvalid_commandchain(char *chain,const char *message);
+ 
+-#endif PIPING_H
++#endif /* PIPING_H */

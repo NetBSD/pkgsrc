@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2011/10/02 01:20:55 dholland Exp $
+
+- netbsd/dragonfly cdrom support
+- fix LP64 problems
 
 --- cdromlow.c.orig	2001-10-27 09:23:21.000000000 +0000
 +++ cdromlow.c
@@ -56,7 +59,50 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  #elif __svr4__
  # define CD_FRAMESIZE 2048
  # define CD_FRAMESIZE_RAW 2352
-@@ -138,6 +154,11 @@ int cdromlow_hasdatatrack(int handle)
+@@ -94,15 +110,14 @@
+ 
+ #define CDROMLOW_MAXCDTEXTOUT 16384
+ 
+-typedef struct
++struct cdromlow_tochandle
+ {
+    char *cdda2wavoutput;
+    char *devicename;
+    int  filedescriptor;
+-}
+-cdromlow_tochandle;
++};
+ 
+-int cdromlow_gettochandle(const char *device)
++cdromlow_tochandle *cdromlow_gettochandle(const char *device)
+ {
+    cdromlow_tochandle *handle=(cdromlow_tochandle*)malloc(sizeof(cdromlow_tochandle));
+    /* no cd text output is generated until needed */
+@@ -112,12 +127,11 @@ int cdromlow_gettochandle(const char *de
+ #ifdef DEBUG
+    printf("cdromlow_gettochandle result is %i\n",(int)handle);
+ #endif
+-   return (int)handle;
++   return handle;
+ };
+ 
+-void cdromlow_closetochandle(int handle)
++void cdromlow_closetochandle(cdromlow_tochandle *info)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+    /* free cd text output if it was generated */
+    if (info->cdda2wavoutput)
+      free (info->cdda2wavoutput);
+@@ -130,14 +144,18 @@ void cdromlow_closetochandle(int handle)
+ /* reimplemented using direct cdrom access:
+  * does the current cd have one or more data tracks ? *
+  * returns -1 or data track of cd */
+-int cdromlow_hasdatatrack(int handle)
++int cdromlow_hasdatatrack(cdromlow_tochandle *info)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+    cdromlow_definecdromheader header;
+    cdromlow_definecdromhentry entry;
  
     int x;
     int hasdatatrack=-1;
@@ -68,7 +114,7 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  
     if (info->filedescriptor!=-1)
       {
-@@ -147,8 +168,12 @@ int cdromlow_hasdatatrack(int handle)
+@@ -147,8 +165,12 @@ int cdromlow_hasdatatrack(int handle)
  	       entry.cdromlow_tocent_track=x;
  	       entry.cdromlow_tocent_format=CDROM_LBA;
  	       ioctl(info->filedescriptor,CDROMREADTOCENTRY,&entry);
@@ -82,8 +128,25 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  #else
  		 if (entry.entry.control & CDROM_DATA_TRACK)
  #endif
-@@ -191,6 +216,11 @@ int cdromlow_trackoffset(int handle,int 
-    cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+@@ -166,9 +188,8 @@ int cdromlow_hasdatatrack(int handle)
+ ;
+ 
+ /* return number of tracks on cd,reimplemented using ioctl()s */
+-int cdromlow_tracks(int handle)
++int cdromlow_tracks(cdromlow_tochandle *info)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+    cdromlow_definecdromheader header;
+    int tracknum;
+ 
+@@ -186,16 +207,20 @@ int cdromlow_tracks(int handle)
+ ;
+ 
+ /* returns the offset of a track's starting position in LBA format */
+-int cdromlow_trackoffset(int handle,int num)
++int cdromlow_trackoffset(cdromlow_tochandle *info,int num)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
     cdromlow_definecdromhentry entry;
     int offset=-1;
 +#ifdef __NetBSD__
@@ -94,7 +157,21 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  
     if (info->filedescriptor!=-1)
       {
-@@ -223,6 +253,13 @@ int cdromlow_tracksize_sectors(int handl
+ 	/* Return offset of leadout if track > last track is requested */
+-	if (num>cdromlow_tracks(handle))
++	if (num>cdromlow_tracks(info))
+ 	  entry.cdromlow_tocent_track=CDROM_LEADOUT;
+ 	else
+ 	  entry.cdromlow_tocent_track=num;
+@@ -216,13 +241,19 @@ int cdromlow_trackoffset(int handle,int 
+ ;
+ 
+ /* return tracksize of track num in sectors (LBA) */
+-int cdromlow_tracksize_sectors(int handle,int num)
++int cdromlow_tracksize_sectors(cdromlow_tochandle *info,int num)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+    cdromlow_definecdromhentry track;
     cdromlow_definecdromhentry tracknext;
     int tracksize;
     int ok=1;
@@ -108,7 +185,42 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  
     tracksize=0;
     if (info->filedescriptor!=-1)
-@@ -278,6 +315,11 @@ int cdromlow_cddbnumber(int handle)
+@@ -232,7 +263,7 @@ int cdromlow_tracksize_sectors(int handl
+ 	if (ioctl(info->filedescriptor,CDROMREADTOCENTRY,&track)==-1)
+ 	  ok=0;
+ 
+-	if (num==cdromlow_tracks(handle))
++	if (num==cdromlow_tracks(info))
+ 	  tracknext.cdromlow_tocent_track=CDROM_LEADOUT;
+ 	else
+ 	  tracknext.cdromlow_tocent_track=num+1;
+@@ -251,14 +282,14 @@ int cdromlow_tracksize_sectors(int handl
+ ;
+ 
+ /* return tracksize for audiotrack n in bytes,reimplemented using ioctl()s */
+-int cdromlow_tracksize(int handle,int num)
++int cdromlow_tracksize(cdromlow_tochandle *handle,int num)
+ {
+    return cdromlow_tracksize_sectors(handle,num)*CD_FRAMESIZE_RAW;
+ }
+ ;
+ 
+ /* return tracksize of datatrack in bytes,reimplemented using ioctl()s */
+-int cdromlow_datatracksize(int handle,int tracknum)
++int cdromlow_datatracksize(cdromlow_tochandle *handle,int tracknum)
+ {
+    if (cdromlow_hasdatatrack(handle)!=-1)
+      return cdromlow_tracksize_sectors(handle,
+@@ -270,14 +301,17 @@ int cdromlow_datatracksize(int handle,in
+ ;
+ 
+ /* return cddb number of cdrom */
+-int cdromlow_cddbnumber(int handle)
++int cdromlow_cddbnumber(cdromlow_tochandle *info)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+-
+    cdromlow_definecdromheader header;
     cdromlow_definecdromhentry entry;
     int x,secs;
     int cddbnum=0;
@@ -120,7 +232,14 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  
     cddbnum=0;
     if (info->filedescriptor!=-1)
-@@ -317,6 +359,11 @@ cdromlow_tracktype cdromlow_gettracktype
+@@ -311,12 +345,16 @@ int cdromlow_cddbnumber(int handle)
+ ;
+ 
+ /* return the tracktype of specified track */
+-cdromlow_tracktype cdromlow_gettracktype(int handle,int num)
++cdromlow_tracktype cdromlow_gettracktype(cdromlow_tochandle *info,int num)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
     cdromlow_definecdromhentry track;
     int ok=1;
     cdromlow_tracktype result=TRACKTYPE_UNKNOWN;
@@ -132,7 +251,7 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  
     if (info->filedescriptor!=-1)
       {
-@@ -324,8 +371,12 @@ cdromlow_tracktype cdromlow_gettracktype
+@@ -324,8 +362,12 @@ cdromlow_tracktype cdromlow_gettracktype
  	track.cdromlow_tocent_format=CDROM_LBA;
  	if (ioctl(info->filedescriptor,CDROMREADTOCENTRY,&track)==-1)
  	  ok=0;
@@ -146,3 +265,57 @@ $NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
  #else
  	  if (track.entry.control & CDROM_DATA_TRACK)
  #endif
+@@ -338,9 +380,8 @@ cdromlow_tracktype cdromlow_gettracktype
+ }
+ ;
+ 
+-void cdromlow_createcdtextoutput(int handle)
++void cdromlow_createcdtextoutput(cdromlow_tochandle *info)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+    if (!info->cdda2wavoutput)
+      {
+ 	char *call=varman_getvar_copy(global_defs,
+@@ -362,13 +403,12 @@ void cdromlow_createcdtextoutput(int han
+      };
+ };
+ 
+-char *cdromlow_getcdtext(int handle, int num,const char *parse)
++char *cdromlow_getcdtext(cdromlow_tochandle *info, int num,const char *parse)
+ {
+-   cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
+    char buffer[256];
+    char *func=(char*)malloc(((parse)?strlen(parse):0)+11);
+ 
+-   cdromlow_createcdtextoutput(handle);
++   cdromlow_createcdtextoutput(info);
+      
+    strcpy(buffer,"");
+    strcpy(func,((parse)?parse:""));
+@@ -390,22 +430,22 @@ char *cdromlow_getcdtext(int handle, int
+    return (strlen(buffer)?strdup(buffer):NULL);
+ };
+ 
+-char *cdromlow_gettitle(int handle,int num)
++char *cdromlow_gettitle(cdromlow_tochandle *handle,int num)
+ {
+    return cdromlow_getcdtext(handle,num,varman_getvar(global_defs,"audiotrack_parsecdtext_title"));
+ };
+ 
+-char *cdromlow_getperformer(int handle,int num)
++char *cdromlow_getperformer(cdromlow_tochandle *handle,int num)
+ {
+    return cdromlow_getcdtext(handle,num,varman_getvar(global_defs,"audiotrack_parsecdtext_performer"));
+ };
+ 
+-char *cdromlow_getdisctitle(int handle)
++char *cdromlow_getdisctitle(cdromlow_tochandle *handle)
+ {
+    return cdromlow_getcdtext(handle,0,varman_getvar(global_defs,"audiotrack_parsecdtext_cdtitle"));
+ };
+ 
+-char *cdromlow_getdiscperformer(int handle)
++char *cdromlow_getdiscperformer(cdromlow_tochandle *handle)
+ {
+    return cdromlow_getcdtext(handle,0,varman_getvar(global_defs,"audiotrack_parsecdtext_cdperformer"));
+ };

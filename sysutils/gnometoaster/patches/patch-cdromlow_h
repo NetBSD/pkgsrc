@@ -1,0 +1,47 @@
+$NetBSD: patch-cdromlow_h,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+
+--- cdromlow.h.orig	2001-10-27 08:40:04.000000000 +0000
++++ cdromlow.h
+@@ -7,24 +7,26 @@ typedef enum 
+    TRACKTYPE_UNKNOWN
+ } cdromlow_tracktype;
+ 
++typedef struct cdromlow_tochandle cdromlow_tochandle;
++
+ /* use this function to get a handle for TOC access */
+-int cdromlow_gettochandle(const char *device);
++cdromlow_tochandle *cdromlow_gettochandle(const char *device);
+ /* use this function to free the TOC access handle */
+-void cdromlow_closetochandle(int handle);
++void cdromlow_closetochandle(cdromlow_tochandle *handle);
+ 
+-int cdromlow_hasdatatrack(int handle);
+-int cdromlow_tracks(int handle);
+-int cdromlow_tracksize_sectors(int handle,int num);
+-int cdromlow_tracksize(int handle,int num);
+-int cdromlow_datatracksize(int handle,int num);
+-int cdromlow_cddbnumber(int handle);
+-int cdromlow_trackoffset(int handle,int num);
++int cdromlow_hasdatatrack(cdromlow_tochandle *handle);
++int cdromlow_tracks(cdromlow_tochandle *handle);
++int cdromlow_tracksize_sectors(cdromlow_tochandle *handle,int num);
++int cdromlow_tracksize(cdromlow_tochandle *handle,int num);
++int cdromlow_datatracksize(cdromlow_tochandle *handle,int num);
++int cdromlow_cddbnumber(cdromlow_tochandle *handle);
++int cdromlow_trackoffset(cdromlow_tochandle *handle,int num);
+ 
+-cdromlow_tracktype cdromlow_gettracktype(int handle,int num);
++cdromlow_tracktype cdromlow_gettracktype(cdromlow_tochandle *handle,int num);
+ 
+ /* retrieve CD Text informations */
+ 
+-char *cdromlow_gettitle(int handle,int num);
+-char *cdromlow_getperformer(int handle,int num);
+-char *cdromlow_getdisctitle(int handle);
+-char *cdromlow_getdiscperformer(int handle);
++char *cdromlow_gettitle(cdromlow_tochandle *handle,int num);
++char *cdromlow_getperformer(cdromlow_tochandle *handle,int num);
++char *cdromlow_getdisctitle(cdromlow_tochandle *handle);
++char *cdromlow_getdiscperformer(cdromlow_tochandle *handle);

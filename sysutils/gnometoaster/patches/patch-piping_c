@@ -1,0 +1,15 @@
+$NetBSD: patch-piping_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix foolish pointer manipulation that breaks on LP64
+
+--- piping.c~	2001-12-15 11:07:34.000000000 +0000
++++ piping.c
+@@ -590,7 +590,7 @@ int piping_isvalid_exec(char *exec)
+ 		       char *absolute;
+ 		       char *next=strchr(current,':');
+ 		       if (!next)
+-			 next=(char*)(strlen(current)+(unsigned int)current);
++			 next = current + strlen(current);
+ 		       *next=0;
+ 		       next++;
+ 

@@ -1,0 +1,34 @@
+$NetBSD: patch-cddb_h,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+- declare functions properly
+
+--- cddb.h~	2000-08-16 06:22:06.000000000 +0000
++++ cddb.h
+@@ -67,20 +67,20 @@ typedef void (*cddb_datahandler)(cddb_in
+  * cancelled. 
+  * data can point to additional informations passed to the callback
+  * but may otherwise safely be set to NULL */
+-int cddb_lookup(cddb_essentials *es,
++cddb_infostruct *cddb_lookup(cddb_essentials *es,
+ 		int tracknum,
+ 		cddb_datahandler callback,
+ 		gpointer data);
+ /* kill a cddb lookup job. this is done e.g. in tracks.c when the last reference
+  * to a track has been cleared and the track is about to be deleted */
+-void cddb_killjob(int jobid);
++void cddb_killjob(cddb_infostruct *jobid);
+ /* The following two functions are primarily used to restart the
+  * cddb lookup process in case the server adress has been changed in
+  * the preferences setup */
+-void cddb_start_lookup();
+-void cddb_kill_lookup();
++void cddb_start_lookup(void);
++void cddb_kill_lookup(void);
+ /* control functions called by main.c to bring up/down cddb interface */
+-void cddb_init();
+-void cddb_destroy();
++void cddb_init(void);
++void cddb_destroy(void);
+ 
+ #endif // CDDB_H

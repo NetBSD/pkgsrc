@@ -1,0 +1,15 @@
+$NetBSD: patch-mp3func_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix minor LP64 problem
+
+--- mp3func.c~	2001-12-16 12:21:53.000000000 +0000
++++ mp3func.c
+@@ -245,7 +245,7 @@ unsigned int mp3func_playingtime_rawbyte
+      {	
+ 	filesize=lseek(fd,0,SEEK_END);
+ 	mp3=(unsigned char*)mmap(0,filesize,PROT_READ,MAP_PRIVATE,fd,0);
+-	if ((int)mp3!=-1)
++	if ((intptr_t)mp3!=-1)
+ 	  {	     	
+ 	     counter=0;
+ 	     do 
