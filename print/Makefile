@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.498 2011/09/18 03:32:28 minskim Exp $
+# $NetBSD: Makefile,v 1.499 2011/10/02 14:11:52 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -9,8 +9,6 @@ SUBDIR+=	LPRng-doc
 SUBDIR+=	a2ps
 SUBDIR+=	abc2ps
 SUBDIR+=	abcm2ps
-SUBDIR+=	acroread
-SUBDIR+=	acroread5
 SUBDIR+=	acroread7
 SUBDIR+=	acroread8
 SUBDIR+=	acroread9
@@ -75,7 +73,6 @@ SUBDIR+=	libspectre
 SUBDIR+=	lilypond
 SUBDIR+=	luatex
 SUBDIR+=	magicfilter
-SUBDIR+=	mgv
 SUBDIR+=	mp
 SUBDIR+=	mpage
 SUBDIR+=	mupdf
