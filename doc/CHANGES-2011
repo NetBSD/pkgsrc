@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2346 2011/10/02 01:11:47 manu Exp $
+$NetBSD: CHANGES-2011,v 1.2347 2011/10/02 01:21:16 dholland Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3707,3 +3707,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/getmail to 4.22.1 [schmonz 2011-10-01]
 	Updated sysutils/pcvt-utils to 20000611nb2 [dholland 2011-10-01]
 	Updated filesystems/glusterfs to 3.2.3nb1 [manu 2011-10-02]
+	Updated sysutils/gnometoaster to 1.0Beta5nb6 [dholland 2011-10-02]
