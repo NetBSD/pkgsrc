@@ -1,10 +1,10 @@
-$NetBSD: patch-bb,v 1.8 2011/09/18 01:36:06 manu Exp $
+$NetBSD: patch-bb,v 1.9 2011/10/02 01:11:47 manu Exp $
 
 O_DIRECTORY is defined as 0, therefore ((flags & O_DIRECTORY) == O_DIRECTORY)
 is always true even if the flag is not set.
 
---- xlators/performance/quick-read/src/quick-read.c.orig	2011-09-17 15:45:29.000000000 +0200
-+++ xlators/performance/quick-read/src/quick-read.c	2011-09-17 15:45:29.000000000 +0200
+--- xlators/performance/quick-read/src/quick-read.c.orig	2011-08-23 14:31:41.000000000 +0200
++++ xlators/performance/quick-read/src/quick-read.c	2011-10-02 02:55:29.000000000 +0200
 @@ -82,8 +82,9 @@
  qr_loc_fill (loc_t *loc, inode_t *inode, char *path)
  {
@@ -47,3 +47,14 @@ is always true even if the flag is not set.
  
          return ret;
  }
+@@ -729,9 +730,9 @@
+                 }
+         }
+         UNLOCK (&table->lock);
+ 
+-        if (content_cached && ((flags & O_DIRECTORY) == O_DIRECTORY)) {
++        if (content_cached && (flags & O_DIRECTORY)) {
+                 op_ret = -1;
+                 op_errno = ENOTDIR;
+                 gf_log (this->name, GF_LOG_WARNING,
+                         "open with O_DIRECTORY flag received on non-directory");
