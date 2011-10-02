@@ -1,0 +1,16 @@
+$NetBSD: patch-common_getline_h,v 1.1 2011/10/02 02:25:42 dholland Exp $
+
+hack this to match the new POSIX definition, as a sleazy way of making
+it build again.
+
+--- common/getline.h~	2000-02-07 03:19:42.000000000 +0000
++++ common/getline.h
+@@ -33,7 +33,7 @@ extern "C" {
+ #define __PROTO(args) ()
+ #endif  /* GCC.  */
+ 
+-int
++ssize_t
+   getline __PROTO ((char **_lineptr, size_t *_n, FILE *_stream));
+ int
+   getstr __PROTO ((char **_lineptr, size_t *_n, FILE *_stream,

@@ -1,0 +1,16 @@
+$NetBSD: patch-cvsunix_lib_getline_c,v 1.1 2011/10/02 02:25:42 dholland Exp $
+
+hack this to match the new POSIX definition, as a sleazy way of making
+it build again.
+
+--- cvsunix/lib/getline.c~	2011-10-02 02:15:27.000000000 +0000
++++ cvsunix/lib/getline.c
+@@ -153,7 +153,7 @@ getstr (lineptr, n, stream, terminator, 
+   return ret;
+ }
+ 
+-int
++ssize_t
+ getline (lineptr, n, stream)
+      char **lineptr;
+      size_t *n;
