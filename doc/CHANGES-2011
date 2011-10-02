@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2349 2011/10/02 14:13:21 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2350 2011/10/02 14:35:02 wiz Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3737,3 +3737,17 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed www/seamonkey-bin-flash [wiz 2011-10-02]
 	Removed www/seamonkey-bin-java [wiz 2011-10-02]
 	Removed x11/tkman [wiz 2011-10-02]
+	Removed comms/zaptel-netbsd [wiz 2011-10-02]
+	Removed comms/py-newt [wiz 2011-10-02]
+	Removed fonts/acroread-chsfont successor fonts/acroread9-chsfont [wiz 2011-10-02]
+	Removed fonts/acroread-chtfont successor fonts/acroread9-chtfont [wiz 2011-10-02]
+	Removed fonts/acroread-font-share successor fonts/acroread9-font-share [wiz 2011-10-02]
+	Removed fonts/acroread-jpnfont successor fonts/acroread9-jpnfont [wiz 2011-10-02]
+	Removed fonts/acroread-korfont successor fonts/acroread9-korfont [wiz 2011-10-02]
+	Removed fonts/acroread5-chsfont successor fonts/acroread9-chsfont [wiz 2011-10-02]
+	Removed fonts/acroread5-chtfont successor fonts/acroread9-chtfont [wiz 2011-10-02]
+	Removed fonts/acroread5-font-share successor fonts/acroread9-font-share [wiz 2011-10-02]
+	Removed fonts/acroread5-jpnfont successor fonts/acroread9-jpnfont [wiz 2011-10-02]
+	Removed fonts/acroread5-korfont successor fonts/acroread9-korfont [wiz 2011-10-02]
+	Removed www/opera-acroread successor www/opera-acroread7 [wiz 2011-10-02]
+	Removed www/opera-acroread5 successor www/opera-acroread7 [wiz 2011-10-02]
