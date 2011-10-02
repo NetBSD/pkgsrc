@@ -1,0 +1,15 @@
+$NetBSD: patch-datacopydlg_h,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix severe time_t abuse
+
+--- datacopydlg.h~	2001-02-12 01:02:19.000000000 +0000
++++ datacopydlg.h
+@@ -55,7 +55,7 @@ typedef struct 
+         datacopydlg_threadinfo *threads[DATACOPYDLG_MAXTHREADS];
+    
+ 	int bytessincelastmeasure;
+-	int lastmeasure;
++	time_t lastmeasure;
+ 	float currentthroughput;
+ } datacopydlg_dlginfo;
+ 	

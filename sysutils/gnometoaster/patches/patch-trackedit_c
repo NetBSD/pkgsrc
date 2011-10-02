@@ -1,0 +1,78 @@
+$NetBSD: patch-trackedit_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- silence LP64 warnings; all appear to be ok
+
+--- trackedit.c~	2001-12-15 12:19:08.000000000 +0000
++++ trackedit.c
+@@ -52,7 +52,7 @@ void trackedit_renametrack(GtkWidget *w,
+ 	c=c->next)
+      {
+ 	tracks_trackinfo *track=
+-	  tracklist_gettrack(trackedit,(int)c->data);
++	  tracklist_gettrack(trackedit,(int)(intptr_t)c->data);
+ 	/* FIXME: claim track and unclaim it when dialog gets closed */
+ 	if (track)
+ 	  forms_create(_("Rename track"),
+@@ -87,7 +87,7 @@ void trackedit_removehandler(GtkWidget *
+ 	c!=NULL;
+ 	c=trackedit->selectlistinfo->selected_lines)
+      tracklist_removetrack(trackedit,
+-			   (int)c->data);
++			   (int)(intptr_t)c->data);
+ };
+ 
+ void trackedit_streamdrop(char *s,
+@@ -97,8 +97,8 @@ void trackedit_streamdrop(char *s,
+ 			  fileman_additems_state *contdata)
+ {
+ 
+-   int dragtype=(int)generic_userdata;
+-   int pos=(int)user_data;
++   int dragtype=(int)(intptr_t)generic_userdata;
++   int pos=(int)(intptr_t)user_data;
+ 
+    tracks_trackinfo *newtrack;
+ 
+@@ -113,7 +113,7 @@ void trackedit_streamdrop(char *s,
+ #ifdef DEBUG
+ 	printf ("trackedit_streamdrop: added stream to tracklist at position %i\n",
+ 		pos);
+-#endif DEBUG
++#endif /* DEBUG */
+      }
+    else
+      {
+@@ -153,8 +153,8 @@ void trackedit_filedrop(char *s,
+ 			fileman_additems_state *contdata)
+ {
+ 
+-   int dragtype=(int)generic_userdata;
+-   int pos=(int)user_data;
++   int dragtype=(int)(intptr_t)generic_userdata;
++   int pos=(int)(intptr_t)user_data;
+ 
+    char *path=strdup(s);
+    vfs_filesystem *fs=vfs_parseuri(s,path);
+@@ -346,7 +346,7 @@ int trackedit_drophandler(const char *s,
+ 			    trackedit_dnddone,
+ 			    NULL,
+ 
+-			    (gpointer)dragtype,
++			    (gpointer)(intptr_t)dragtype,
+ 
+ 			    2,
+ 
+@@ -355,11 +355,11 @@ int trackedit_drophandler(const char *s,
+ 			    /* everything else */
+ 			    "",
+ 			    trackedit_filedrop,
+-			    (gpointer)listpos,
++			    (gpointer)(intptr_t)listpos,
+ 
+ 			    "stream:",
+ 			    trackedit_streamdrop,
+-			    (gpointer)listpos
++			    (gpointer)(intptr_t)listpos
+ 
+ 			    );
+      };
