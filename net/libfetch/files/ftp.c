@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.38 2011/08/21 16:28:27 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.39 2011/10/02 19:15:34 marino Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -619,7 +619,6 @@ static void
 ftp_closefn(void *v)
 {
 	struct ftpio *io;
-	int r;
 
 	io = (struct ftpio *)v;
 	if (io == NULL) {
@@ -635,7 +634,7 @@ ftp_closefn(void *v)
 	fetch_close(io->dconn);
 	io->dconn = NULL;
 	io->dir = -1;
-	r = ftp_chkerr(io->cconn);
+	ftp_chkerr(io->cconn);
 	fetch_cache_put(io->cconn, ftp_disconnect);
 	free(io);
 	return;
@@ -677,14 +676,13 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file, const char *op_ar
 	const char *bindaddr;
 	const char *filename;
 	int filenamelen, type;
-	int low, pasv, verbose;
+	int pasv, verbose;
 	int e, sd = -1;
 	socklen_t l;
 	char *s;
 	fetchIO *df;
 
 	/* check flags */
-	low = CHECK_FLAG('l');
 	pasv = !CHECK_FLAG('a');
 	verbose = CHECK_FLAG('v');
 
@@ -850,6 +848,7 @@ retry_mode:
 		uint16_t p;
 #if defined(IPV6_PORTRANGE) || defined(IP_PORTRANGE)
 		int arg;
+		int low = CHECK_FLAG('l');
 #endif
 		int d;
 		char hname[INET6_ADDRSTRLEN];
