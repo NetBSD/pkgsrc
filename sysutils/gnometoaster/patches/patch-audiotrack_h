@@ -1,0 +1,15 @@
+$NetBSD: patch-audiotrack_h,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+
+--- audiotrack.h~	2001-03-17 21:28:35.000000000 +0000
++++ audiotrack.h
+@@ -16,7 +16,7 @@ typedef struct 
+ 	int  cdda2wavpipe;
+ 	int  cdda2wavpid;
+ 	int  cdda2wavstatus;
+-        int  cddbrequestid;
++        cddb_infostruct *cddbrequestid;
+ } audiotrack_info;
+ 	
+ tracks_trackinfo *audiotrack_create(char *device,

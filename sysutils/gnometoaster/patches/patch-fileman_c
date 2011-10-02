@@ -1,0 +1,24 @@
+$NetBSD: patch-fileman_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+
+--- fileman.c.orig	2001-10-28 13:22:43.000000000 +0000
++++ fileman.c
+@@ -209,7 +209,7 @@ typedef struct
+    fileman_additems_continuecb cb;
+    fileman_additems_state *cbdata;
+    datacopydlg_dlginfo *progress;
+-   int copy_handle;
++   vfs_recurse_copy_info *copy_handle;
+ }
+ fileman_addfile_generic_callback_info;
+ 
+@@ -292,7 +292,7 @@ void fileman_addfile_generic(char *i,
+ 					       info,
+ 
+ 					       // can't link when moving files
+-					       ((((int)user_data==DNDSETUP_LINK)
++					       ((((int)(intptr_t)user_data==DNDSETUP_LINK)
+ 						 &&(destfs!=sourcefs))
+ 						?1:0),
+ 					       // move if called with source fs == dest fs
