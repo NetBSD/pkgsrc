@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2011/01/07 04:15:37 obache Exp $
+$NetBSD: patch-aa,v 1.10 2011/10/02 05:04:03 dholland Exp $
 
 --- mk/Linux.orig	2006-08-21 12:37:00.000000000 +0000
 +++ mk/Linux
-@@ -7,12 +7,9 @@
+@@ -7,23 +7,20 @@
  # (C) Copyright 2000-2006 by Michal Zalewski <lcamtuf@coredump.cx>
  #
  
@@ -16,7 +16,11 @@ $NetBSD: patch-aa,v 1.9 2011/01/07 04:15:37 obache Exp $
  FILE	= p0f
  TOOLS   = test/sendack test/sendack2 test/sendsyn
  
-@@ -23,7 +20,7 @@ all: $(FILE) strip	
+-all: $(FILE) strip	
++all: $(FILE) .WAIT strip
+ 	@echo ">> You can also try 'make p0fq' to compile a sample query"
+ 	@echo ">> client (see README for more information)."
+ 
  static: $(FILE)-static
  
  $(FILE): $(FILE).c
