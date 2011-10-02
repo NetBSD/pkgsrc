@@ -1,0 +1,28 @@
+$NetBSD: patch-libelfsh_debug_c,v 1.1 2011/10/02 23:50:56 dholland Exp $
+
+- LP64 fixes
+
+--- libelfsh/debug.c~	2003-08-20 21:11:03.000000000 -0400
++++ libelfsh/debug.c	2008-08-02 18:19:15.000000000 -0400
+@@ -25,16 +25,16 @@ int		elfsh_print_sectlist(elfshobj_t *ob
+       if (sctname == NULL)
+ 	sctname = "UNK";
+       data = (actual->data == NULL ? "\xFF\xFF\xFF" : actual->data);
+-      printf(" [%03u] %-15s HDRNAM: %-15s BYTES[%02X %02X %02X] P(%08X) "
+-	     "A(%08X) N(%08X) SCTIDX(%03u) HDRFOFF:%08x SZ:%08x VADDR:%08X \n",
++      printf(" [%03u] %-15s HDRNAM: %-15s BYTES[%02X %02X %02X] P(%08lX) "
++	     "A(%08lX) N(%08lX) SCTIDX(%03u) HDRFOFF:%08x SZ:%08x VADDR:%08X \n",
+ 	     index, (actual->name != NULL ? actual->name : "UNK"),
+ 	     sctname,
+ 	     (u_int) data[0],
+ 	     (u_int) data[1],
+ 	     (u_int) data[2],
+-	     (u_int) actual->prev,
+-	     (u_int) actual,
+-	     (u_int) actual->next,
++	     (u_long)(uintptr_t) actual->prev,
++	     (u_long)(uintptr_t) actual,
++	     (u_long)(uintptr_t) actual->next,
+ 	     actual->index,
+ 	     (u_int) actual->shdr->sh_offset,
+ 	     (u_int) actual->shdr->sh_size,
