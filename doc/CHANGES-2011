@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2348 2011/10/02 03:49:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2349 2011/10/02 14:13:21 wiz Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3709,3 +3709,31 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/glusterfs to 3.2.3nb1 [manu 2011-10-02]
 	Updated sysutils/gnometoaster to 1.0Beta5nb6 [dholland 2011-10-02]
 	Updated net/mikutter to 0.0.3.522 [obache 2011-10-02]
+	Removed comms/synce-dccm [wiz 2011-10-02]
+	Removed devel/newt [wiz 2011-10-02]
+	Removed emulators/doscmd successor emulators/dosbox [wiz 2011-10-02]
+	Removed emulators/linuxppc_lib [wiz 2011-10-02]
+	Removed mail/mailscanner [wiz 2011-10-02]
+	Removed misc/openoffice2 successor misc/openoffice3 [wiz 2011-10-02]
+	Removed misc/openoffice2-bin successor misc/openoffice3-bin [wiz 2011-10-02]
+	Removed multimedia/RealPlayerGold [wiz 2011-10-02]
+	Removed net/ctorrent successor net/dtorrent [wiz 2011-10-02]
+	Removed net/ntop1 successor net/ntop [wiz 2011-10-02]
+	Removed print/acroread successor print/acroread9 [wiz 2011-10-02]
+	Removed print/acroread5 successor print/acroread9 [wiz 2011-10-02]
+	Removed print/mgv [wiz 2011-10-02]
+	Removed www/firefox-bin [wiz 2011-10-02]
+	Removed www/firefox-bin-acroread [wiz 2011-10-02]
+	Removed www/firefox-bin-acroread5 [wiz 2011-10-02]
+	Removed www/firefox-bin-acroread7 [wiz 2011-10-02]
+	Removed www/firefox-bin-flash [wiz 2011-10-02]
+	Removed www/firefox-bin-java [wiz 2011-10-02]
+	Removed www/firefox-bin-realplayer [wiz 2011-10-02]
+	Removed www/instiki [wiz 2011-10-02]
+	Removed www/jakarta-tomcat4 [wiz 2011-10-02]
+	Removed www/jakarta-tomcat5 [wiz 2011-10-02]
+	Removed www/sarg [wiz 2011-10-02]
+	Removed www/seamonkey-bin [wiz 2011-10-02]
+	Removed www/seamonkey-bin-flash [wiz 2011-10-02]
+	Removed www/seamonkey-bin-java [wiz 2011-10-02]
+	Removed x11/tkman [wiz 2011-10-02]
