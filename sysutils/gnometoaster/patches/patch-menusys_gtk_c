@@ -1,0 +1,14 @@
+$NetBSD: patch-menusys_gtk_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- include missing own header file.
+
+--- menusys.gtk.c~	2002-01-05 12:02:44.000000000 +0000
++++ menusys.gtk.c
+@@ -6,6 +6,7 @@
+ 
+ #include "main.h"
+ #include "menusys.h"
++#include "helpings.h"
+ 
+ GtkWidget *menusys_buildmenu(menusys_menu *menu,gpointer data);
+ 

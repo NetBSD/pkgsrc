@@ -1,0 +1,55 @@
+$NetBSD: patch-vfs_unixtree_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- Fix LP64 problems
+
+--- vfs_unixtree.c.orig	2001-10-28 13:19:31.000000000 +0000
++++ vfs_unixtree.c
+@@ -47,7 +47,7 @@ typedef struct
+ }
+ vfs_unixtree_dirhandle;
+ 
+-int vfs_unixtree_opendir(gpointer fs,char *rpath)
++vfs_dirhandle *vfs_unixtree_opendir(gpointer fs,char *rpath)
+ {
+    DIR *handle;
+    vfs_unixtree_dirhandle *result;
+@@ -63,10 +63,10 @@ int vfs_unixtree_opendir(gpointer fs,cha
+ 	result->vhandle=NULL;
+      };
+    free(path);
+-   return (int)result;
++   return (vfs_dirhandle *)result;
+ };
+ 
+-char *vfs_unixtree_readdirentry(gpointer fs,int handle)
++char *vfs_unixtree_readdirentry(gpointer fs,vfs_dirhandle *handle)
+ {
+    struct dirent *current;
+    char *result=NULL;
+@@ -136,7 +136,7 @@ char *vfs_unixtree_readdirentry(gpointer
+    return result;
+ };
+ 
+-void vfs_unixtree_closedir(gpointer fs,int handle)
++void vfs_unixtree_closedir(gpointer fs,vfs_dirhandle *handle)
+ {
+    vfs_unixtree_dirhandle *myhandle=(vfs_unixtree_dirhandle*)handle;
+    if (myhandle->handle)
+@@ -273,7 +273,7 @@ int vfs_unixtree_dummycb(gpointer data)
+ {
+    vfs_unixtree_copyinfo *info=(vfs_unixtree_copyinfo*)data;
+    /* abuse the copyprocess field for status report here */
+-   info->callback((int)info->copyprocess,info->callback_data);
++   info->callback((int)(intptr_t)info->copyprocess,info->callback_data);
+    free(info);
+    return 0;
+ };
+@@ -286,7 +286,7 @@ void vfs_unixtree_queuecallback(vfs_oper
+ 
+    info->callback=callback;
+    info->callback_data=data;
+-   info->copyprocess=(streamcopy_state*)result;
++   info->copyprocess=(streamcopy_state*)(intptr_t)result;
+ 
+    /* add a 20 ms timeout roughly every 8th file, so's the display
+     * can be updated */

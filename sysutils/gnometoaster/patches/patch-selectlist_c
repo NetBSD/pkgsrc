@@ -1,0 +1,88 @@
+$NetBSD: patch-selectlist_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix foolish pointer manipulation that breaks on LP64
+- silence other LP64 warnings; they appear to be ok
+
+--- selectlist.c~	2001-12-16 11:38:04.000000000 +0000
++++ selectlist.c
+@@ -146,7 +146,7 @@ void selectlist_removeselection(char *s,
+    foundpos=strstr(cmpcopy,entry);
+    while (foundpos!=NULL)
+      {
+-	strcpy(foundpos,(char*)((int)foundpos+strlen(entry)-2));
++	strcpy(foundpos,foundpos+strlen(entry)-2);
+ 	foundpos=strstr(cmpcopy,entry);
+      }
+    ;
+@@ -164,8 +164,8 @@ void selectlist_select(GtkCList *clist,g
+    selectlist_clipboard_activate(info);
+ 
+    /* only mark row as selected if this has not already happened */
+-   if (g_list_find(info->selected_lines,(gpointer)row)==NULL)
+-     info->selected_lines=g_list_prepend(info->selected_lines,(gpointer)row);
++   if (g_list_find(info->selected_lines,(gpointer)(intptr_t)row)==NULL)
++     info->selected_lines=g_list_prepend(info->selected_lines,(gpointer)(intptr_t)row);
+ #ifdef DEBUG
+    printf ("selectlist_select: selected row %i\n",row);
+    printf ("selectlist.c: selectlist_select current selection:\n\"%s\"\n",
+@@ -187,7 +187,7 @@ void selectlist_unselect(GtkCList *clist
+ 	   row);
+ #endif
+    info->selected_lines=g_list_remove(info->selected_lines,
+-				      (gpointer)row);
++				      (gpointer)(intptr_t)row);
+ #ifdef DEBUG
+    printf ("selectlist.c: selectlist_unselect current selection:\n\"%s\"\n",
+ 	   selectlist_getselection(info));
+@@ -308,7 +308,7 @@ int selectlist_isselected(selectlist_inf
+    GList *i=NULL;
+    int result = 0;
+    for (i=info->selected_lines;(i!=NULL)&&(!result);i=i->next)
+-     if (row==(int)i->data)
++     if (row==(int)(intptr_t)i->data)
+        result = 1;
+    return result;
+ };
+@@ -375,7 +375,7 @@ void selectlist_modifiedselect_internal(
+ 	       gtk_clist_unselect_row(GTK_CLIST(widget), row, 0);
+ 	     break;
+ 	   case Shift:
+-	     x = ((info&&info->selected_lines)?(int)info->selected_lines->data:row);
++	     x = ((info&&info->selected_lines)?(int)(intptr_t)info->selected_lines->data:row);
+ 	     upper_bound = MAX(x,row);
+ 	     lower_bound = MIN(x,row);
+ 	     for (x = lower_bound; x<=upper_bound; ++x)
+@@ -573,7 +573,7 @@ char *selectlist_getselection(selectlist
+    /* create the selection string of all rows marked as selected */
+    for (i=info->selected_lines;i!=NULL;i=i->next)
+      {
+-	row=(int)i->data; /* get row */
++	row=(int)(intptr_t)i->data; /* get row */
+    	/* if significant_column is set to -1,a string addressed by the
+ 	 * hidden gpointer data field of the clist is taken as selection
+ 	 * information */
+@@ -607,7 +607,7 @@ void selectlist_insert(selectlist_info *
+ 	current!=NULL;
+ 	current=current->next)
+      {
+-	if ((int)current->data>=row)
++	if ((int)(intptr_t)current->data>=row)
+ 	  current->data++;
+      };
+ };
+@@ -618,13 +618,13 @@ void selectlist_remove(selectlist_info *
+    /* remove an item */
+    gtk_clist_remove(info->self,row);
+    /* remove item from selection list */
+-   info->selected_lines=g_list_remove(info->selected_lines,(gpointer)row);
++   info->selected_lines=g_list_remove(info->selected_lines,(gpointer)(intptr_t)row);
+    /* step through the list of selections */
+    for (current=info->selected_lines;
+ 	current!=NULL;
+ 	current=current->next)
+      {
+-	if ((int)current->data>row)
++	if ((int)(intptr_t)current->data>row)
+ 	  current->data--;
+      };
+ };

@@ -1,0 +1,23 @@
+$NetBSD: patch-dialog_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- silence LP64 warning, appears ok (!)
+
+--- dialog.c.orig	2002-01-05 12:02:44.000000000 +0000
++++ dialog.c
+@@ -1,6 +1,7 @@
+ /* Gnometoaster's dialog routines */
+ 
+ #include <stdlib.h>
++#include <stdint.h>
+ #include "config.h"
+ #ifdef HAVE_GNOME
+ #include <gnome.h>
+@@ -115,7 +116,7 @@ GtkWidget *dialog_question(const gchar *
+ 
+ void dialog_string_callback_ok(GtkWidget *w,dialog_question_info *info)
+ {
+-   info->cb((int)gtk_entry_get_text(GTK_ENTRY(info->entry)),
++   info->cb((int)(intptr_t)gtk_entry_get_text(GTK_ENTRY(info->entry)),
+ 	    info->data);
+    gtk_widget_destroy(info->dialog);
+    free(info);

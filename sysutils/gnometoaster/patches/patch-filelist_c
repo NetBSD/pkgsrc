@@ -1,0 +1,15 @@
+$NetBSD: patch-filelist_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- Fix LP64 problems
+
+--- filelist.c~	2002-01-05 12:02:44.000000000 +0000
++++ filelist.c
+@@ -130,7 +130,7 @@ filelist_info *filelist_create(char *pat
+    GtkWidget *column;
+    char header[1024];
+ 
+-   int dir;
++   vfs_dirhandle *dir;
+ 
+    char *file[3];
+    char fsbuf[25];

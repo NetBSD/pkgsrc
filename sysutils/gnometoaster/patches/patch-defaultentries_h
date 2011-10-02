@@ -1,0 +1,15 @@
+$NetBSD: patch-defaultentries_h,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix broken regexp-within-C-string
+
+--- defaultentries.h~	2001-12-15 11:06:42.000000000 +0000
++++ defaultentries.h
+@@ -35,7 +35,7 @@
+ #define DEFAULTENTRIES_REC_SPEED "2"
+ #define DEFAULTENTRIES_REC_INQDRIVE "rec_client -inq dev=$scsiid"
+ #define DEFAULTENTRIES_REC_SCANBUS  "cdrecord -scanbus"
+-#define DEFAULTENTRIES_REC_SBGETID  "regexp(\"[\t ]*([0-9,]*)[\t ]*[0-9]\).*Removable CD-ROM$\")"
++#define DEFAULTENTRIES_REC_SBGETID  "regexp(\"[\t ]*([0-9,]*)[\t ]*[0-9]\\).*Removable CD-ROM$\")"
+ #define DEFAULTENTRIES_REC_INQDRIVE_GETVENDOR "regexp(\"Vendor_info *: '(.*)'\")"
+ #define DEFAULTENTRIES_REC_INQDRIVE_GETMODEL "regexp(\"Identifikation *: '(.*)'\")"
+ #define DEFAULTENTRIES_REC_INQDRIVE_GETTYPE "regexp(\"Device seems to be *: (.*)\")"

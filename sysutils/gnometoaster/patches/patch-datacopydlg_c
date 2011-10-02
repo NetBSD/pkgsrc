@@ -1,0 +1,59 @@
+$NetBSD: patch-datacopydlg_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix severe time_t abuse
+
+--- datacopydlg.c~	2001-05-06 11:25:08.000000000 +0000
++++ datacopydlg.c
+@@ -57,7 +57,7 @@ void datacopydlg_restartthread(datacopyd
+ {
+    dlg->threads[threadnum]->bytesdone=0;
+    dlg->threads[threadnum]->totalsize=totalsize;
+-   time((time_t*)&dlg->threads[threadnum]->starttime);
++   dlg->threads[threadnum]->starttime = time(NULL);
+    datacopydlg_updatedisplay(dlg);
+ };
+ 
+@@ -100,14 +100,14 @@ void datacopydlg_configurethread(datacop
+ 
+ void datacopydlg_updatedisplay(datacopydlg_dlginfo *dlg)
+ {
+-   int newtime;
++   time_t newtime;
+    char buf[256];
+    int remaining;
+    gfloat done;
+    
+    int i;
+    
+-   time((time_t*)&newtime);
++   time(&newtime);
+    /* update our "threads" */
+    for (i=0;i<dlg->numthreads;i++)
+      {	     
+@@ -181,7 +181,7 @@ void datacopydlg_updatedisplay(datacopyd
+  * processed */
+ void datacopydlg_newdatablock(datacopydlg_dlginfo *dlg,int size)
+ {
+-   int newtime;
++   time_t newtime;
+    
+    int i;
+    
+@@ -195,7 +195,7 @@ void datacopydlg_newdatablock(datacopydl
+      };
+ 
+    /* keep an update interval of >1 sec. */
+-   time((time_t*)&newtime);
++   time(&newtime);
+    if (difftime(newtime,dlg->lastmeasure)>=1)
+      {
+ 	/* calculate current throughput */	
+@@ -247,7 +247,7 @@ datacopydlg_dlginfo *datacopydlg_create(
+    strcpy(dlg->title,title);
+ 
+    /* initialize throughput meter */
+-   time((time_t*)&dlg->lastmeasure);
++   time(&dlg->lastmeasure);
+    dlg->bytessincelastmeasure=0;
+    dlg->currentthroughput=0;
+    

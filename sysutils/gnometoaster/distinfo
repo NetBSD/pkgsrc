@@ -1,11 +1,38 @@
-$NetBSD: distinfo,v 1.7 2008/06/20 01:09:36 joerg Exp $
+$NetBSD: distinfo,v 1.8 2011/10/02 01:20:55 dholland Exp $
 
 SHA1 (gtoaster1.0Beta5.tgz) = c55bf7e8e532956a8907cd29cbfb98a721c5bb3a
 RMD160 (gtoaster1.0Beta5.tgz) = f8c7386497c56b8e1bf924e099ddf68cbcbd02a0
 Size (gtoaster1.0Beta5.tgz) = 781796 bytes
-SHA1 (patch-aa) = 618fc9b23d0ea9ad1be737dbb836e5ddcc8dd759
-SHA1 (patch-ab) = 8d3d500572dbfac5263f7902655ff3269db4102f
-SHA1 (patch-ac) = 8bbb117badd4430eb2fc0eb2ad130671ceb46f47
+SHA1 (patch-aa) = 6ae7c9aaf606256111c908f429761877238c4a17
+SHA1 (patch-ac) = 761bb56e22e82d7c9b82698f5c0f1147b6e4bc83
 SHA1 (patch-ad) = b8b5349fe092cbf9d8a40da272d379e5fae7ef91
 SHA1 (patch-ae) = b1a6f1f9bbaa605b9782f67dd8f6cdaf6770a438
 SHA1 (patch-af) = ca8bb1aa0b5eb267448dc8761ccfcd8428d00503
+SHA1 (patch-audiotrack_c) = 9fcd4edb86405db91e6a7b2902b344f9b92f1fbb
+SHA1 (patch-audiotrack_h) = 83757fbecfa059a4103099bf63c8544b0b7e1cff
+SHA1 (patch-cddb_c) = 18ade5a23408c0eaab0a0604b390abcd55d8ebf8
+SHA1 (patch-cddb_h) = bb49ee918f00e5f94f7733422b09a0e8a6ba22e3
+SHA1 (patch-cddrives_c) = 6f870d1c3cc7f756575dacde85a8346d886439fb
+SHA1 (patch-cdromlow_h) = 201c5578d2beaa133e3ac05fe24f639f6124736f
+SHA1 (patch-datacopydlg_c) = 03f04abc74a3604babd215c60b0ade77cec533ab
+SHA1 (patch-datacopydlg_h) = 458bd156a2c8c081caf76e845a4f1de0ff240553
+SHA1 (patch-datatrack_c) = 3b3c763229a4695154f951c7586db02119746f44
+SHA1 (patch-defaultentries_h) = c5c6748b93580f90e59bd514ffea204f14b6e08b
+SHA1 (patch-dialog_c) = 71884bf907425a5d726138b89045ed8e2a8423b2
+SHA1 (patch-filelist_c) = bf185c8dc1532668aebe1ce932eac48cf0f9ffe6
+SHA1 (patch-fileman_c) = 6427c8b101567a2eda1f7974d25b34f983374fa7
+SHA1 (patch-fsedit_c) = 142a4b98d307668ea265260c274e454746319b99
+SHA1 (patch-getdir_c) = 95acbb1e331f71002a6c59f7542238e1c317b85c
+SHA1 (patch-menusys_gtk_c) = cbadeb453ba22dfe8f488659c2655183059e5b17
+SHA1 (patch-mp3func_c) = 07f59b8925689c83e5713845e58fb20b4c6b3dc4
+SHA1 (patch-piping_c) = 3c6525e696e051c714835199de3fe7a2f167d712
+SHA1 (patch-piping_h) = eda90cd11772bcb218dcd70698333bdd266fa2ed
+SHA1 (patch-preferences_c) = 135d510c6f247bd0681d3d9c86751ee280eb0abc
+SHA1 (patch-selectlist_c) = 863472c181469eebb0582003a861207e67724090
+SHA1 (patch-stdfiletrack_c) = 61d678e82b67b14c3e9f8e53f6dc6291786a5e87
+SHA1 (patch-streams_c) = 0b6754ec345b92f8c2ff6db3d0bac6d7243ee7dd
+SHA1 (patch-trackedit_c) = 1e94fd3ccc3ccb7cd244161179b743baf74258d7
+SHA1 (patch-tracklist_c) = 72cbbf3777d1259b764d106f273ebe303cbdc80a
+SHA1 (patch-vfs_c) = 430fd869275f386c0d4729573f10cfdf8db5171e
+SHA1 (patch-vfs_h) = 85a50786f15278cc4f22a4f2eaa199651b14593e
+SHA1 (patch-vfs_unixtree_c) = 08b7c094d8928cda3ac1cc4c0d8f7460ce52a257

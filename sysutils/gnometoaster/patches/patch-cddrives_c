@@ -1,0 +1,69 @@
+$NetBSD: patch-cddrives_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+- add const for a clean build
+
+--- cddrives.c.orig	2002-01-05 12:02:40.000000000 +0000
++++ cddrives.c
+@@ -76,7 +76,7 @@ void cddrives_updatemediachangeflags()
+ 	LOCKDB;
+ 	for (x=0;x<cddrives_drives.drivecount;x++)
+ 	  {
+-	     int tochandle=0;
++	     struct cdromlow_tochandle *tochandle;
+ #ifdef DEBUG
+ 	     printf ("cddrives_updatemediachangeflags: checking drive #%i\n",x);
+ #endif
+@@ -154,7 +154,7 @@ void cddrives_destroy()
+    cddrives_disablecdchangedetection();
+ };
+ 
+-char *cddrives_dltitles[]=
++const char *cddrives_dltitles[]=
+ {
+    "",
+      N_("Drive Type"),
+@@ -529,7 +529,7 @@ void cddrives_removebutton(GtkWidget *w,
+    cddrives_cdinfo *i;
+    if (GTK_CLIST(cddrives_drives.drivelist)->selection!=NULL)
+      {
+-	sl=(int)(GTK_CLIST(cddrives_drives.drivelist)->selection)->data;
++	sl=(int)(intptr_t)(GTK_CLIST(cddrives_drives.drivelist)->selection)->data;
+ 	i=gtk_clist_get_row_data(GTK_CLIST(cddrives_drives.drivelist),sl);
+ 
+ 	LOCKDB;
+@@ -549,7 +549,7 @@ void cddrives_editbutton(GtkWidget *w,
+    cddrives_cdinfo *i;
+    if (GTK_CLIST(cddrives_drives.drivelist)->selection!=NULL)
+      {
+-	sl=(int)(GTK_CLIST(cddrives_drives.drivelist)->selection)->data;
++	sl=(int)(intptr_t)(GTK_CLIST(cddrives_drives.drivelist)->selection)->data;
+ 	i=gtk_clist_get_row_data(GTK_CLIST(cddrives_drives.drivelist),sl);
+ 
+ 	cddrives_displayform(i);
+@@ -697,7 +697,7 @@ void cddrives_init()
+ 
+ void cddrives_cdinfo_update(cddrives_cdinfo *info)
+ {
+-   int tochandle=cdromlow_gettochandle(info->device);
++   cdromlow_tochandle *tochandle=cdromlow_gettochandle(info->device);
+ 
+    int tracksoncd;
+    int trackcount;
+@@ -1040,14 +1040,14 @@ void cddrives_recorderselect_done(gint r
+ 	/* Now activate all selected recorders */
+ 	for (current=recorderlist->selection;current!=NULL;current=current->next)
+ 	  {
+-	     cddrives_cdinfo *info=gtk_clist_get_row_data(recorderlist,(int)current->data);
++	     cddrives_cdinfo *info=gtk_clist_get_row_data(recorderlist,(int)(intptr_t)current->data);
+ 	     if (info)
+ 	       info->is_active=1;
+ 	  };
+      };
+ };
+ 
+-char *cddrives_recseltitles[]=
++const char *cddrives_recseltitles[]=
+ {
+    N_("Model"),
+    N_("Manufacturer")

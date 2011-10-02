@@ -1,0 +1,140 @@
+$NetBSD: patch-vfs_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+
+--- vfs.c.orig	2001-05-06 18:44:25.000000000 +0000
++++ vfs.c
+@@ -92,7 +92,7 @@ int vfs_createdir (vfs_filesystem *fs,ch
+      return 1;
+ };
+ /* Open a directory, returns directory handle */
+-int vfs_opendir (vfs_filesystem *fs,char* dir)
++vfs_dirhandle *vfs_opendir (vfs_filesystem *fs,char* dir)
+ {
+ #ifdef DEBUG
+    printf("vfs_opendir: %s\n",dir);
+@@ -105,7 +105,7 @@ int vfs_opendir (vfs_filesystem *fs,char
+ /* will return the full path of the next directory item or
+  * NULL if the end of the directory has been reached.
+  * caller frees string */
+-char *vfs_readdirentry(vfs_filesystem *fs,int handle)
++char *vfs_readdirentry(vfs_filesystem *fs, vfs_dirhandle *handle)
+ {
+    char *result=NULL;
+    if ((fs->readdirentry)&&(handle))
+@@ -115,7 +115,7 @@ char *vfs_readdirentry(vfs_filesystem *f
+ #endif
+    return result;
+ };
+-void vfs_closedir (vfs_filesystem *fs,int handle)
++void vfs_closedir (vfs_filesystem *fs, vfs_dirhandle *handle)
+ {
+    if ((fs->closedir)&&(handle))
+      fs->closedir((gpointer)fs,handle);
+@@ -384,14 +384,14 @@ typedef struct
+    /* path of the current destination directory */
+    char *destinationpath;
+    /* directory handle for current source directory */
+-   int  sourcedir;
++   vfs_dirhandle *sourcedir;
+    /* path of current source directory.
+     * used for deleting it if the move option was set */
+    char *sourcepath;
+ }
+ vfs_dirstack;
+ 
+-typedef struct
++struct vfs_recurse_copy_info
+ {
+    /* input parameters of the initial function call (unmodified throughout
+     * the recursion) */
+@@ -419,8 +419,7 @@ typedef struct
+    /* will be set true by the cancel function.
+     * If set to true, function will exit immediately */
+    int exit_request;
+-}
+-vfs_recurse_copy_info;
++};
+ 
+ void vfs_fixdatacopydisplay(datacopydlg_dlginfo *progress,
+ 			    int progress_thread,
+@@ -546,7 +545,7 @@ void vfs_copy_recurse_callback(int resul
+      };
+ };
+ 
+-int vfs_copy_recursively(vfs_filesystem*destinationfs,
++vfs_recurse_copy_info *vfs_copy_recursively(vfs_filesystem*destinationfs,
+ 			 char *destinationpath,
+ 			 vfs_filesystem*sourcefs,
+ 			 char *sourcepath,
+@@ -631,13 +630,11 @@ int vfs_copy_recursively(vfs_filesystem*
+ 					    (gpointer)info,
+ 					    link_requested,copy_move);
+      };
+-   return (int)info;
++   return info;
+ };
+ 
+-void vfs_copy_recursively_cancel(int handle)
++void vfs_copy_recursively_cancel(vfs_recurse_copy_info *info)
+ {
+-   vfs_recurse_copy_info *info=(vfs_recurse_copy_info*)handle;
+-
+    /* Ask recursion handler to exit */
+    info->exit_request=1;
+ 
+@@ -659,7 +656,7 @@ typedef struct
+ }
+ vfs_delete_dirstack;
+ 
+-typedef struct
++struct vfs_recurse_delete_info
+ {
+    /* input parameters of the initial function call (unmodified throughout
+     * the recursion) */
+@@ -675,8 +672,7 @@ typedef struct
+    int errors;
+    vfs_operationcomplete callback;
+    gpointer data;
+-}
+-vfs_recurse_delete_info;
++};
+ 
+ /* read the directory given in path into a GList and return it */
+ GList *vfs_readdirectory(vfs_filesystem *fs,char *path)
+@@ -684,7 +680,7 @@ GList *vfs_readdirectory(vfs_filesystem 
+    GList *list=NULL;
+    char *ci;
+ 
+-   int dir=vfs_opendir(fs,path);
++   vfs_dirhandle *dir=vfs_opendir(fs,path);
+    while ((ci=vfs_readdirentry(fs,dir)))
+      list=g_list_prepend(list,ci);
+    vfs_closedir(fs,dir);
+@@ -789,7 +785,7 @@ void vfs_delete_recurse_callback(int res
+      };
+ };
+ 
+-int vfs_remove_recursively(vfs_filesystem *fs,
++vfs_recurse_delete_info *vfs_remove_recursively(vfs_filesystem *fs,
+ 			   char *path,
+ 			   vfs_operationcomplete callback,
+ 			   gpointer data,
+@@ -832,7 +828,7 @@ int vfs_remove_recursively(vfs_filesyste
+ 	free(info);
+ 	info=NULL;
+      };
+-   return (int)info;
++   return info;
+ };
+ 
+ int vfs_remove_recursively_blocking(vfs_filesystem *fs,
+@@ -840,7 +836,7 @@ int vfs_remove_recursively_blocking(vfs_
+ 				    int content_only)
+ {
+    int result=0;
+-   int dir=vfs_opendir(fs,path);
++   vfs_dirhandle *dir=vfs_opendir(fs,path);
+    char *entry;
+    while ((entry=vfs_readdirentry(fs,dir)))
+      {

@@ -1,0 +1,15 @@
+$NetBSD: patch-getdir_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- fix LP64 problems
+
+--- getdir.c~	2001-10-26 21:06:25.000000000 +0000
++++ getdir.c
+@@ -244,7 +244,7 @@ GtkWidget *getdir_tree(GtkTreeItem *host
+ {
+    GtkWidget *dirtree;
+    GtkWidget *entrytree;
+-   int dir;
++   vfs_dirhandle *dir;
+    char *newdir;
+    getdir_dirinfo *getdir_expanddirinfo;
+ 

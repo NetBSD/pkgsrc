@@ -1,0 +1,17 @@
+$NetBSD: patch-stdfiletrack_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+
+- remove private decl of standard function swab()
+
+--- stdfiletrack.c~	2001-12-16 12:22:34.000000000 +0000
++++ stdfiletrack.c
+@@ -20,10 +20,6 @@
+ #include "preferences.h"
+ #include "dependencies.h"
+ 
+-#ifndef __svr4__
+-void swab(const void *from,void *to,size_t n);
+-#endif
+-
+ #include "tracks.h"
+ #include "stdfiletrack.h"
+ #include "varman.h"
