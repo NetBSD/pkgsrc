@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2011/09/30 15:26:21 taca Exp $
+# $NetBSD: options.mk,v 1.11 2011/10/03 03:41:00 taca Exp $
 
 # Not yet ready for Contao 2.10: af ca gl id is no pt th tl zh
 #
@@ -29,7 +29,7 @@ CT_TRANSLATIONS.lt=	Contao-Lithuanian-v7.zip	# 2010/05/01
 CT_TRANSLATIONS.lv=	Contao-Latvian-v32.zip		# 2011/09/29
 CT_TRANSLATIONS.nl=	Contao-Dutch-v55.zip		# 2011/08/31
 CT_TRANSLATIONS.no=	TYPOlight-Norwegian-v11.zip	# 2009/11/16
-CT_TRANSLATIONS.pl=	Contao-Polish-v30.zip		# 2011/03/09
+CT_TRANSLATIONS.pl=	Contao-Polish-v31.zip		# 2011/10/02
 CT_TRANSLATIONS.pt=	TYPOlight-Portuguese-v7.zip	# 2009/11/01
 CT_TRANSLATIONS.rm=	Contao-Rhaeto-Romance-v4.zip	# 2011/04/22
 CT_TRANSLATIONS.ro=	Contao-Romanian-v13.zip		# 2011/08/22
