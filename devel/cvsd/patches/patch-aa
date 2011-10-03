@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2006/05/30 19:24:27 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2011/10/03 23:45:27 schnoebe Exp $
 
---- configure.ac.orig	2006-05-24 20:25:24.000000000 +0000
+Move the configuration file up a directory, no point in having
+a directory containing one file.
+
+--- configure.ac.orig	2011-06-12 10:49:35.000000000 +0000
 +++ configure.ac
-@@ -273,7 +273,7 @@ fi
+@@ -275,7 +275,7 @@ fi
  
  # where to find the configuration file
  # TODO: this should probably be fixed to be nicer

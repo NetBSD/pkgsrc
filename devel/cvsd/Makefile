@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2009/11/19 17:13:24 schnoebe Exp $
+# $NetBSD: Makefile,v 1.8 2011/10/03 23:45:27 schnoebe Exp $
 
-DISTNAME=		cvsd-1.0.16
+DISTNAME=		cvsd-1.0.22
 CATEGORIES=		devel scm
 MASTER_SITES=		http://arthurdejong.org/cvsd/
 
