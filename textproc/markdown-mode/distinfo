@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/10/25 00:00:30 minskim Exp $
+$NetBSD: distinfo,v 1.3 2011/10/03 16:59:39 minskim Exp $
 
-SHA1 (markdown-mode-1.7/markdown-mode.el) = d827d49650a494fe8bf578ea4c1fe9efaafb0a45
-RMD160 (markdown-mode-1.7/markdown-mode.el) = ed42c33d5c812a894822e964a53a97329810f09e
-Size (markdown-mode-1.7/markdown-mode.el) = 53405 bytes
+SHA1 (markdown-mode-1.8.1/markdown-mode.el) = 9593a100fa99353a6b0adf6ca545d5319f4ecb39
+RMD160 (markdown-mode-1.8.1/markdown-mode.el) = 0896a2f6d1ca5f6b2ffe5df6bbfca2b304be312f
+Size (markdown-mode-1.8.1/markdown-mode.el) = 75777 bytes
