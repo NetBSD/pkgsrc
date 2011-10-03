@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2011/08/18 18:31:10 tnn Exp $
+@comment $NetBSD: PLIST,v 1.45 2011/10/03 12:37:24 tnn Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -9,7 +9,6 @@ lib/firefox/chrome/browser/content/branding/about-logo.png
 lib/firefox/chrome/browser/content/branding/about-wordmark.png
 lib/firefox/chrome/browser/content/branding/about.png
 lib/firefox/chrome/browser/content/branding/aboutDialog.css
-lib/firefox/chrome/browser/content/branding/icon128.png
 lib/firefox/chrome/browser/content/branding/icon16.png
 lib/firefox/chrome/browser/content/branding/icon48.png
 lib/firefox/chrome/browser/content/branding/icon64.png
@@ -19,6 +18,8 @@ lib/firefox/chrome/browser/content/browser/aboutDialog.js
 lib/firefox/chrome/browser/content/browser/aboutDialog.xul
 lib/firefox/chrome/browser/content/browser/aboutHome-restore-icon-small.png
 lib/firefox/chrome/browser/content/browser/aboutHome-restore-icon.png
+lib/firefox/chrome/browser/content/browser/aboutHome-snippet1.png
+lib/firefox/chrome/browser/content/browser/aboutHome-snippet2.png
 lib/firefox/chrome/browser/content/browser/aboutHome.css
 lib/firefox/chrome/browser/content/browser/aboutHome.js
 lib/firefox/chrome/browser/content/browser/aboutHome.xhtml
@@ -48,6 +49,7 @@ lib/firefox/chrome/browser/content/browser/feeds/subscribe.xhtml
 lib/firefox/chrome/browser/content/browser/feeds/subscribe.xml
 lib/firefox/chrome/browser/content/browser/fullscreen-video.xhtml
 lib/firefox/chrome/browser/content/browser/hiddenWindow.xul
+lib/firefox/chrome/browser/content/browser/highlighter.xhtml
 lib/firefox/chrome/browser/content/browser/history/history-panel.xul
 lib/firefox/chrome/browser/content/browser/inspector.html
 lib/firefox/chrome/browser/content/browser/license.html
@@ -189,6 +191,7 @@ lib/firefox/chrome/browser/skin/classic/browser/feeds/subscribe.css
 lib/firefox/chrome/browser/skin/classic/browser/feeds/videoFeedIcon.png
 lib/firefox/chrome/browser/skin/classic/browser/feeds/videoFeedIcon16.png
 lib/firefox/chrome/browser/skin/classic/browser/fullscreen-video.css
+lib/firefox/chrome/browser/skin/classic/browser/highlighter.css
 lib/firefox/chrome/browser/skin/classic/browser/identity.png
 lib/firefox/chrome/browser/skin/classic/browser/inspector.css
 lib/firefox/chrome/browser/skin/classic/browser/monitor.png
@@ -272,7 +275,6 @@ lib/firefox/chrome/en-US/locale/browser/engineManager.dtd
 lib/firefox/chrome/en-US/locale/browser/engineManager.properties
 lib/firefox/chrome/en-US/locale/browser/feeds/subscribe.dtd
 lib/firefox/chrome/en-US/locale/browser/feeds/subscribe.properties
-lib/firefox/chrome/en-US/locale/browser/inspector.properties
 lib/firefox/chrome/en-US/locale/browser/migration/migration.dtd
 lib/firefox/chrome/en-US/locale/browser/migration/migration.properties
 lib/firefox/chrome/en-US/locale/browser/netError.dtd
@@ -371,7 +373,6 @@ lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
 lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
 lib/firefox/firefox
-lib/firefox/icons/document.png
 lib/firefox/icons/mozicon128.png
 lib/firefox/modules/AutocompletePopup.jsm
 lib/firefox/modules/HUDService.jsm
@@ -383,6 +384,7 @@ lib/firefox/modules/distribution.js
 lib/firefox/modules/domplate.jsm
 lib/firefox/modules/openLocationLastURL.jsm
 lib/firefox/modules/services-crypto/WeaveCrypto.js
+lib/firefox/modules/services-sync/async.js
 lib/firefox/modules/services-sync/constants.js
 lib/firefox/modules/services-sync/engines.js
 lib/firefox/modules/services-sync/engines/bookmarks.js
@@ -400,12 +402,12 @@ lib/firefox/modules/services-sync/jpakeclient.js
 lib/firefox/modules/services-sync/log4moz.js
 lib/firefox/modules/services-sync/main.js
 lib/firefox/modules/services-sync/notifications.js
+lib/firefox/modules/services-sync/policies.js
 lib/firefox/modules/services-sync/record.js
 lib/firefox/modules/services-sync/resource.js
 lib/firefox/modules/services-sync/service.js
 lib/firefox/modules/services-sync/status.js
 lib/firefox/modules/services-sync/util.js
-lib/firefox/modules/stylePanel.jsm
 lib/firefox/modules/tabview/AllTabs.jsm
 lib/firefox/modules/tabview/utils.jsm
 lib/firefox/removed-files
