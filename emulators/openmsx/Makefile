@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2011/06/20 09:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2011/10/03 01:13:50 dholland Exp $
 #
 
 DISTNAME=		openmsx-0.6.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmsx/}
 
@@ -26,6 +26,9 @@ post-extract:
 	${ECHO_MSG} "OPENMSX_STRIP:=true" > \
 		${WRKSRC}/build/flavour-pkgsrc.mk
 
+REPLACE_PYTHON+=	share/scripts/convert_hardwareconfig.py
+REPLACE_PYTHON+=	share/scripts/convert_hardwareconfig2.py
+
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	build/custom.mk
@@ -44,6 +47,7 @@ INSTALL_MAKE_FLAGS+=	OPENMSX_INSTALL=${DESTDIR}${PREFIX}/openmsx
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/openmsx.sh ${DESTDIR}${PREFIX}/bin/openmsx
 
+.include "../../lang/python/application.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
