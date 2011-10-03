@@ -1,0 +1,12 @@
+$NetBSD: patch-text_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Use standard headers.
+
+--- text.c~	2003-07-03 17:13:23.000000000 +0000
++++ text.c
+@@ -1,3 +1,5 @@
++#include <string.h>
++
+ #include "jcabc2ps.h"
+ #include "text.h"
+ #include "misc.h"
