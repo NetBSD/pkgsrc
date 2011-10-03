@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2358 2011/10/03 11:14:05 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2359 2011/10/03 11:14:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3770,3 +3770,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/rsync to 3.0.9 [tron 2011-10-03]
 	Added sysutils/ts version 0.7.0 [wiz 2011-10-03]
 	Added databases/py-ckanclient version 0.9 [wiz 2011-10-03]
+	Added databases/datapkg version 0.8 [wiz 2011-10-03]
