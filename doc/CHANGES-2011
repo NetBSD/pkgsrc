@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2362 2011/10/03 12:54:42 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.2363 2011/10/03 13:50:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3786,3 +3786,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/nspr to 4.8.9.3 [tnn 2011-10-03]
 	Updated devel/nss to 3.12.10.0.3 [tnn 2011-10-03]
 	Updated www/firefox-l10n to 7.0 [tnn 2011-10-03]
+	Updated fonts/umefont-ttf to 0.432 [ryoon 2011-10-03]
