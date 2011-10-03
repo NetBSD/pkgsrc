@@ -1,0 +1,12 @@
+NetBSD can run as a paravirtualised guest of Citrix XenServer using
+XEN3PAE_DOMU (i386) or XEN3_DOMU (amd64) kernels. To get full
+functionality, guest VMs must provide run-time information to the
+XenServer dom0. Failure to do so will give the message "XenServer
+Tools not installed".
+
+This package allows NetBSD to interface with XenServer to enable:
+- Memory usage logging
+- IP address reporting
+- Suspend/Resume
+- Migration
+- OS version reporting
