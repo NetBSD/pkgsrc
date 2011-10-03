@@ -1,14 +1,5 @@
-$NetBSD: distinfo,v 1.20 2009/12/20 16:12:06 tonnerre Exp $
+$NetBSD: distinfo,v 1.21 2011/10/03 16:17:08 jmmv Exp $
 
-SHA1 (coreutils-6.12.tar.gz) = 1bb297fdf8b38ca19ab5252c6179b1b2aecd020e
-RMD160 (coreutils-6.12.tar.gz) = 95b941657242cfc3f67d721e582a60a4090802ec
-Size (coreutils-6.12.tar.gz) = 9001890 bytes
-SHA1 (patch-aa) = 0bfbfe0f60576d2bb8b996df297c79ccf0806115
-SHA1 (patch-ab) = bc1e79814a6ebc177862eae1816a24e3a4a5c577
-SHA1 (patch-ac) = f30b98b85cd5f9abbcf42d7265c8cc3b400aaf2a
-SHA1 (patch-ad) = 145a88a6731fbec315037a140677f2fc763e5026
-SHA1 (patch-ag) = 3e24b8e025a151eb7bed4c778a326da5eed09ded
-SHA1 (patch-ah) = 33fe73aac79731f980fcbe1afda4c64537aff742
-SHA1 (patch-ai) = 6b05293d6d151ca28ed897c47a1dad729306b770
-SHA1 (patch-aj) = 436e0a871617a2450eac8bec2751419b05020b7d
-SHA1 (patch-ak) = d71aca9d8d7b78e994156b888e1212bac8dac63a
+SHA1 (coreutils-8.13.tar.gz) = 83b7e25661c439ecac55e99ff0dd816b9ff478a5
+RMD160 (coreutils-8.13.tar.gz) = fb24a15641581ba57482f4c1c1ecfc32752dbd9d
+Size (coreutils-8.13.tar.gz) = 11660808 bytes
