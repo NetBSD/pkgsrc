@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10579 2011/10/02 14:38:53 wiz Exp $
+$NetBSD: TODO,v 1.10580 2011/10/03 08:42:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -595,7 +595,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
-	o ffmpeg-20110925.0.7.5
+	o ffmpeg-20111001.0.7.6
 	o file-5.09
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -647,7 +647,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
 	o fossil-201109020.1.19
-	o fotoxx-11.09
+	o fotoxx-11.10
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.2.5
@@ -683,6 +683,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
 	o gdsreader-0.3.2
+	o geany-0.21
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gentoo-0.19.11
 	o gfract-0.33
@@ -742,7 +743,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gpredict-1.3
 	o gpsdrive-2.11
 	o gramofile-1.6P
-	o gramps3-3.3.0
+	o gramps3-3.3.1
 	o granulate-0.2
 	o graphviz-2.28.0
 	o grep-2.9
@@ -1393,7 +1394,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
 	o xbitmaps-1.1.1
-	o xboard-4.5.1
+	o xboard-4.5.3
 	o xcalc-1.0.4.1
 	o xcb-util-0.3.8 [NOT binary compatible to 0.3.6, so perhaps wait with update -- wiz 20110524]
 	o xcircuit-3.6.85
@@ -1479,6 +1480,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
+	o xmlstarlet-1.3.0
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
