@@ -1,32 +1,29 @@
-# $NetBSD: Makefile,v 1.38 2011/09/14 16:33:45 hans Exp $
-#
+# $NetBSD: Makefile,v 1.39 2011/10/03 11:48:11 adam Exp $
 
-DISTNAME=	libevent-2.0.10-stable
+DISTNAME=	libevent-2.0.14-stable
 PKGNAME=	${DISTNAME:S/-stable//}
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://monkey.org/~provos/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=levent/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://monkey.org/~provos/libevent/
+HOMEPAGE=	http://libevent.org/
 COMMENT=	Asynchronous event notification library
 LICENSE=	modified-bsd
 
-CONFLICTS+=	libev<3.9nb1
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-TEST_TARGET=	verify
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-LIBS.SunOS+=	-lnsl -lresolv
-CPPFLAGS.SunOS+=	-D__EXTENSIONS__
+CONFLICTS+=	libev<3.9nb1
 
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libevent_openssl.pc.in
 PKGCONFIG_OVERRIDE+=	libevent_pthreads.pc.in
 PKGCONFIG_OVERRIDE+=	libevent.pc.in
-
 REPLACE_PYTHON=		event_rpcgen.py
+TEST_TARGET=		verify
+
+LIBS.SunOS+=	-lnsl -lresolv
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 # XXX helps build, but needs more testing
 #CFLAGS.Interix+=	-Dsockaddr_storage=sockaddr_in -DNI_MAXSERV=32

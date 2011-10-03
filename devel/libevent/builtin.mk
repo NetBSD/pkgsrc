@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2009/11/13 17:31:07 drochner Exp $
+# $NetBSD: builtin.mk,v 1.11 2011/10/03 11:48:11 adam Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -27,19 +27,19 @@ MAKEVARS+=	IS_BUILTIN.libevent
 .if !defined(BUILTIN_PKG.libevent) && \
     !empty(IS_BUILTIN.libevent:M[yY][eE][sS]) && \
     empty(H_LIBEVENT:M__nonexistent__)
-.if empty(H_LIBEVENTCONFIG:M__nonexistent__)
+.  if empty(H_LIBEVENTCONFIG:M__nonexistent__)
 _BLTN_EVENT_1_4_11!= \
 	${GREP} -c 1.4.11-stable ${H_LIBEVENTCONFIG} || ${TRUE}
 _BLTN_EVENT_1_4_12!= \
 	${GREP} -c 1.4.12-stable ${H_LIBEVENTCONFIG} || ${TRUE}
-. if ${_BLTN_EVENT_1_4_12} == "1"
+.    if ${_BLTN_EVENT_1_4_12} == "1"
 BUILTIN_VERSION.libevent=	1.4.12
-. elif ${_BLTN_EVENT_1_4_11} == "1"
-BUILTIN_VERSION.libevent=       1.4.11
-. else
+.    elif ${_BLTN_EVENT_1_4_11} == "1"
+BUILTIN_VERSION.libevent=	1.4.11
+.    else
 BUILTIN_VERSION.libevent=	1.4.4
-. endif
-.else
+.    endif
+.  else
 # libevent>=1.3: bufferevent_base_set added
 _BLTN_EVENT_13!=	\
 	${GREP} -c bufferevent_base_set ${H_LIBEVENT} || ${TRUE}
@@ -72,30 +72,30 @@ _BLTN_EVENT_07b!=	\
 _BLTN_EVENT_06!=	\
 	${GREP} -c evtimer_ ${H_LIBEVENT} || ${TRUE}
 
-.  if ${_BLTN_EVENT_13} == "1"
+.    if ${_BLTN_EVENT_13} == "1"
 BUILTIN_VERSION.libevent=	1.3
-.  elif ${_BLTN_EVENT_12} == "1"
+.    elif ${_BLTN_EVENT_12} == "1"
 BUILTIN_VERSION.libevent=	1.2
-.  elif ${_BLTN_EVENT_11b} == "1"
+.    elif ${_BLTN_EVENT_11b} == "1"
 BUILTIN_VERSION.libevent=	1.1b
-.  elif ${_BLTN_EVENT_10d} == "1"
+.    elif ${_BLTN_EVENT_10d} == "1"
 BUILTIN_VERSION.libevent=	1.0d
-.  elif ${_BLTN_EVENT_10c} == "1"
+.    elif ${_BLTN_EVENT_10c} == "1"
 BUILTIN_VERSION.libevent=	1.0c
-.  elif ${_BLTN_EVENT_10} == "1"
+.    elif ${_BLTN_EVENT_10} == "1"
 BUILTIN_VERSION.libevent=	1.0
-.  elif ${_BLTN_EVENT_09} == "1"
+.    elif ${_BLTN_EVENT_09} == "1"
 BUILTIN_VERSION.libevent=	0.9
-.  elif ${_BLTN_EVENT_08} == "1"
+.    elif ${_BLTN_EVENT_08} == "1"
 BUILTIN_VERSION.libevent=	0.8
-.  elif ${_BLTN_EVENT_07b} == "1"
+.    elif ${_BLTN_EVENT_07b} == "1"
 BUILTIN_VERSION.libevent=	0.7b
-.  elif ${_BLTN_EVENT_06} == "1"
+.    elif ${_BLTN_EVENT_06} == "1"
 BUILTIN_VERSION.libevent=	0.6
-.  else
+.    else
 BUILTIN_VERSION.libevent=	0.5
+.    endif
 .  endif
-.endif
 BUILTIN_PKG.libevent=	libevent-${BUILTIN_VERSION.libevent}
 .endif
 MAKEVARS+=	BUILTIN_PKG.libevent
