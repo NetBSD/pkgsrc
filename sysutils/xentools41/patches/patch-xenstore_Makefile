@@ -1,0 +1,29 @@
+$NetBSD: patch-xenstore_Makefile,v 1.1 2011/10/03 16:58:57 sborrill Exp $
+
+Adds a target to install just the useful bits for the xenstore tools.
+
+Used by sysutils/xenstoretools only, but patch maintained here in xentools41 as
+xenstoretools shares the same distinfo.
+
+--- xenstore/Makefile.orig	2011-06-14 17:03:45.000000000 +0100
++++ xenstore/Makefile	2011-10-03 13:16:43.000000000 +0100
+@@ -111,6 +111,19 @@
+ 	$(INSTALL_DATA) xs.h $(DESTDIR)$(INCLUDEDIR)
+ 	$(INSTALL_DATA) xs_lib.h $(DESTDIR)$(INCLUDEDIR)
+ 
++.PHONY: install
++installclients: clients
++	$(INSTALL_DIR) $(DESTDIR)$(BINDIR)
++	$(INSTALL_PROG) xenstore-control $(DESTDIR)$(BINDIR)
++	$(INSTALL_PROG) xenstore $(DESTDIR)$(BINDIR)
++	set -e ; for c in $(CLIENTS) ; do \
++		ln -f $(DESTDIR)$(BINDIR)/xenstore $(DESTDIR)$(BINDIR)/$${c} ; \
++	done
++	$(INSTALL_DIR) $(DESTDIR)$(LIBDIR)
++	$(INSTALL_PROG) libxenstore.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)
++	ln -sf libxenstore.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)/libxenstore.so.$(MAJOR)
++	ln -sf libxenstore.so.$(MAJOR) $(DESTDIR)$(LIBDIR)/libxenstore.so
++
+ -include $(DEPS)
+ 
+ # never delete any intermediate files.
