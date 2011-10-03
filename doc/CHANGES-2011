@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2353 2011/10/03 03:41:46 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2354 2011/10/03 07:26:28 dholland Exp $
 
 PLEASE NOTE: THE PKGSRC FREEZE FOR 2011Q3 IS CURRENTLY ON.
 
@@ -3757,4 +3757,14 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed security/nessus-libraries [joerg 2011-10-02]
 	Removed security/nessus-plugins [joerg 2011-10-02]
 	Updated devel/nbitools to 6.3nb6 [dholland 2011-10-02]
+	Updated devel/elfsh to 0.51b3nb4 [dholland 2011-10-03]
+	Updated editors/elvis to 2.2.0nb7 [dholland 2011-10-03]
+	Updated editors/elvis-x11 to 2.2.0nb7 [dholland 2011-10-03]
+	Updated emulators/openmsx to 0.6.2nb5 [dholland 2011-10-03]
+	Updated graphics/xplot to 0.90.7.1nb6 [dholland 2011-10-03]
+	Updated graphics/xplot-devel to 0.90.8nb3 [dholland 2011-10-03]
+	Updated misc/tellico-kde3 to 1.3.6nb12 [dholland 2011-10-03]
 	Updated www/contao210-translations to 20111002 [taca 2011-10-03]
+	Updated emulators/handy_sdl to 0.5nb1 [dholland 2011-10-03]
+	Updated lang/lua to 5.1.4nb3 [dholland 2011-10-03]
+	Updated print/jcabc2ps to 20060106nb2 [dholland 2011-10-03]
