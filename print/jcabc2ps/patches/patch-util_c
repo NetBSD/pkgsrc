@@ -1,0 +1,14 @@
+$NetBSD: patch-util_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Use standard headers.
+
+--- util.c~	2011-10-03 06:32:50.000000000 +0000
++++ util.c
+@@ -8,6 +8,7 @@
+ #include <sys/stat.h>
+ #include <ctype.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "jcabc2ps.h"
+ #include "util.h"

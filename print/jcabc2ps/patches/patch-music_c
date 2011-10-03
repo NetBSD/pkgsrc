@@ -1,0 +1,14 @@
+$NetBSD: patch-music_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Use standard headers.
+
+--- music.c~	2011-10-03 06:44:38.000000000 +0000
++++ music.c
+@@ -5,6 +5,7 @@
+  */
+ 
+ #include <string.h>
++#include <stdlib.h>
+ #include <ctype.h>
+ 
+ #include "jcabc2ps.h"
