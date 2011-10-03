@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Screen_h,v 1.1 2011/10/03 04:45:40 dholland Exp $
+
+Since this wants to know about the private symbol used by Xlib.h as an
+include guard, make sure it knows about both forms.
+
+--- src/Screen.h~	2002-01-15 15:46:43.000000000 +0000
++++ src/Screen.h
+@@ -92,7 +92,7 @@ extern	void			RecalculateScreenInfo ( vo
+ extern	unsigned char	ScreenMemoryChanged;
+ extern	unsigned char	ScreenImageChanged;
+ 
+-#ifdef	_XLIB_H_
++#if defined(_XLIB_H_) || defined(_X11_XLIB_H_)
+ 
+ extern	GC				TtextTextGC;
+ extern	GC				TtextMosaicGC;
