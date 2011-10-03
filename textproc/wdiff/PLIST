@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2011/02/05 17:47:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/10/03 13:55:37 ryoon Exp $
 bin/wdiff
 info/wdiff.info
+lib/charset.alias
 man/man1/wdiff.1
 share/locale/af/LC_MESSAGES/wdiff-gnulib.mo
 share/locale/be/LC_MESSAGES/wdiff-gnulib.mo
@@ -62,6 +63,7 @@ share/locale/sv/LC_MESSAGES/wdiff.mo
 share/locale/tr/LC_MESSAGES/wdiff-gnulib.mo
 share/locale/tr/LC_MESSAGES/wdiff.mo
 share/locale/uk/LC_MESSAGES/wdiff-gnulib.mo
+share/locale/uk/LC_MESSAGES/wdiff.mo
 share/locale/vi/LC_MESSAGES/wdiff-gnulib.mo
 share/locale/vi/LC_MESSAGES/wdiff.mo
 share/locale/zh_CN/LC_MESSAGES/wdiff-gnulib.mo
