@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/04/22 16:23:57 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2011/10/03 00:52:07 dholland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.elvis
 PKG_SUPPORTED_OPTIONS=		x11
@@ -8,6 +8,7 @@ PKG_SUPPORTED_OPTIONS=		x11
 .if !empty(PKG_OPTIONS:Mx11)
 BUILDLINK_DEPMETHOD.libXt?=	build
 .  include "../../x11/libXft/buildlink3.mk"
+.  include "../../graphics/freetype2/buildlink3.mk"
 .  include "../../x11/libXpm/buildlink3.mk"
 .  include "../../x11/libXt/buildlink3.mk"
 CONFIGURE_ARGS+=		--with-x
