@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/06/15 20:56:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/03 10:54:45 adam Exp $
 bin/db5_archive
 bin/db5_checkpoint
 bin/db5_deadlock
@@ -1283,6 +1283,9 @@ share/doc/db5/api_reference/TCL/version.html
 share/doc/db5/articles/inmemory/C/InMemoryDBApplication.pdf
 share/doc/db5/articles/inmemory/C/gettingStarted.css
 share/doc/db5/articles/inmemory/C/index.html
+share/doc/db5/articles/mssgtxt/DBMessageTextReference.pdf
+share/doc/db5/articles/mssgtxt/gettingStarted.css
+share/doc/db5/articles/mssgtxt/index.html
 share/doc/db5/bdb-sql/BDB-SQL-Guide.pdf
 share/doc/db5/bdb-sql/addedpragmas.html
 share/doc/db5/bdb-sql/admin.html
@@ -4011,6 +4014,7 @@ share/doc/db5/gsg_txn/C/architectrecovery.html
 share/doc/db5/gsg_txn/C/autocommit.html
 share/doc/db5/gsg_txn/C/backuprestore.html
 share/doc/db5/gsg_txn/C/blocking_deadlocks.html
+share/doc/db5/gsg_txn/C/deadlock-pdf.jpg
 share/doc/db5/gsg_txn/C/deadlock.jpg
 share/doc/db5/gsg_txn/C/enabletxn.html
 share/doc/db5/gsg_txn/C/envopen.html
@@ -4036,8 +4040,7 @@ share/doc/db5/gsg_txn/C/readmodifywrite.html
 share/doc/db5/gsg_txn/C/recovery-intro.html
 share/doc/db5/gsg_txn/C/recovery.html
 share/doc/db5/gsg_txn/C/reversesplit.html
-share/doc/db5/gsg_txn/C/rwlocks1.jpg
-share/doc/db5/gsg_txn/C/simplelock.jpg
+share/doc/db5/gsg_txn/C/rwlocks1-pdf.jpg
 share/doc/db5/gsg_txn/C/sysfailure.html
 share/doc/db5/gsg_txn/C/txn_ccursor.html
 share/doc/db5/gsg_txn/C/txnconcurrency.html
@@ -4047,7 +4050,7 @@ share/doc/db5/gsg_txn/C/txnindices.html
 share/doc/db5/gsg_txn/C/txnnowait.html
 share/doc/db5/gsg_txn/C/usingtxns.html
 share/doc/db5/gsg_txn/C/wrapup.html
-share/doc/db5/gsg_txn/C/writeblock.jpg
+share/doc/db5/gsg_txn/C/writeblock-pdf.jpg
 share/doc/db5/gsg_txn/CXX/BerkeleyDB-Core-Cxx-Txn.pdf
 share/doc/db5/gsg_txn/CXX/abortresults.html
 share/doc/db5/gsg_txn/CXX/apireq.html
@@ -4055,6 +4058,7 @@ share/doc/db5/gsg_txn/CXX/architectrecovery.html
 share/doc/db5/gsg_txn/CXX/autocommit.html
 share/doc/db5/gsg_txn/CXX/backuprestore.html
 share/doc/db5/gsg_txn/CXX/blocking_deadlocks.html
+share/doc/db5/gsg_txn/CXX/deadlock-pdf.jpg
 share/doc/db5/gsg_txn/CXX/deadlock.jpg
 share/doc/db5/gsg_txn/CXX/enabletxn.html
 share/doc/db5/gsg_txn/CXX/envopen.html
@@ -4080,8 +4084,7 @@ share/doc/db5/gsg_txn/CXX/readmodifywrite.html
 share/doc/db5/gsg_txn/CXX/recovery-intro.html
 share/doc/db5/gsg_txn/CXX/recovery.html
 share/doc/db5/gsg_txn/CXX/reversesplit.html
-share/doc/db5/gsg_txn/CXX/rwlocks1.jpg
-share/doc/db5/gsg_txn/CXX/simplelock.jpg
+share/doc/db5/gsg_txn/CXX/rwlocks1-pdf.jpg
 share/doc/db5/gsg_txn/CXX/sysfailure.html
 share/doc/db5/gsg_txn/CXX/txn_ccursor.html
 share/doc/db5/gsg_txn/CXX/txnconcurrency.html
@@ -4091,7 +4094,7 @@ share/doc/db5/gsg_txn/CXX/txnindices.html
 share/doc/db5/gsg_txn/CXX/txnnowait.html
 share/doc/db5/gsg_txn/CXX/usingtxns.html
 share/doc/db5/gsg_txn/CXX/wrapup.html
-share/doc/db5/gsg_txn/CXX/writeblock.jpg
+share/doc/db5/gsg_txn/CXX/writeblock-pdf.jpg
 share/doc/db5/gsg_txn/JAVA/BerkeleyDB-Core-JAVA-Txn.pdf
 share/doc/db5/gsg_txn/JAVA/abortresults.html
 share/doc/db5/gsg_txn/JAVA/apireq.html
@@ -4099,6 +4102,7 @@ share/doc/db5/gsg_txn/JAVA/architectrecovery.html
 share/doc/db5/gsg_txn/JAVA/autocommit.html
 share/doc/db5/gsg_txn/JAVA/backuprestore.html
 share/doc/db5/gsg_txn/JAVA/blocking_deadlocks.html
+share/doc/db5/gsg_txn/JAVA/deadlock-pdf.jpg
 share/doc/db5/gsg_txn/JAVA/deadlock.jpg
 share/doc/db5/gsg_txn/JAVA/enabletxn.html
 share/doc/db5/gsg_txn/JAVA/envopen.html
@@ -4124,8 +4128,7 @@ share/doc/db5/gsg_txn/JAVA/readmodifywrite.html
 share/doc/db5/gsg_txn/JAVA/recovery-intro.html
 share/doc/db5/gsg_txn/JAVA/recovery.html
 share/doc/db5/gsg_txn/JAVA/reversesplit.html
-share/doc/db5/gsg_txn/JAVA/rwlocks1.jpg
-share/doc/db5/gsg_txn/JAVA/simplelock.jpg
+share/doc/db5/gsg_txn/JAVA/rwlocks1-pdf.jpg
 share/doc/db5/gsg_txn/JAVA/sysfailure.html
 share/doc/db5/gsg_txn/JAVA/txn_ccursor.html
 share/doc/db5/gsg_txn/JAVA/txnconcurrency.html
@@ -4136,7 +4139,7 @@ share/doc/db5/gsg_txn/JAVA/txnindices.html
 share/doc/db5/gsg_txn/JAVA/txnnowait.html
 share/doc/db5/gsg_txn/JAVA/usingtxns.html
 share/doc/db5/gsg_txn/JAVA/wrapup.html
-share/doc/db5/gsg_txn/JAVA/writeblock.jpg
+share/doc/db5/gsg_txn/JAVA/writeblock-pdf.jpg
 share/doc/db5/index.html
 share/doc/db5/installation/BDB_Installation.pdf
 share/doc/db5/installation/arch_bigpic.gif
