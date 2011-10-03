@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/03 11:13:21 wiz Exp $
+
+SHA1 (datapkg-0.8.tar.gz) = 9af91178eadc20da2ec169a6a38411b6cc2d2734
+RMD160 (datapkg-0.8.tar.gz) = 9f29a5fd4843612349b8af97cc7b0bdb3f3a4b97
+Size (datapkg-0.8.tar.gz) = 88366 bytes
