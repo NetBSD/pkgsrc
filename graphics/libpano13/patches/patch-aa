@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/20 20:07:29 adam Exp $
+$NetBSD: patch-aa,v 1.2 2011/10/03 09:50:36 adam Exp $
 
 --- configure.orig	2009-08-19 17:44:26.000000000 +0200
 +++ configure
-@@ -19311,7 +19311,7 @@ case "${host_os}" in
+@@ -10605,7 +10605,7 @@ case "${host_os}" in
      ;;
    *)
      PANO_WIN32_RESOURCE=
