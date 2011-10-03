@@ -1,13 +1,15 @@
-$NetBSD: patch-an,v 1.1 2005/12/27 13:47:11 joerg Exp $
+$NetBSD: patch-an,v 1.2 2011/10/03 06:59:49 dholland Exp $
 
---- include/osdefs.h.orig	2005-12-18 20:28:55.000000000 +0000
+Avoid redeclaring sys_errlist.
+
+--- include/osdefs.h.orig	1998-07-31 18:18:38.000000000 +0000
 +++ include/osdefs.h
 @@ -79,7 +79,7 @@
  # define NOINITGROUPS
  #endif
  
 -#if defined(BSDI) || defined(FREEBSD) || defined(LINUX2)
-+#if defined(BSDI) || defined(FREEBSD) || defined(LINUX2) || defined(__DragonFly__)
++#if defined(BSDI) || defined(FREEBSD) || defined(LINUX2) || defined(__NetBSD__) || defined (__OpenBSD__) || defined(__DragonFly__)
  # ifndef HAVESYSERR
  #  define HAVESYSERR
  # endif
