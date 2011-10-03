@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2011/09/21 19:30:18 bouyer Exp $
+# $NetBSD: Makefile,v 1.528 2011/10/03 11:02:48 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -388,6 +388,7 @@ SUBDIR+=	toshutils
 SUBDIR+=	tpb
 SUBDIR+=	tphdisk
 SUBDIR+=	tree
+SUBDIR+=	ts
 SUBDIR+=	ups-nut
 SUBDIR+=	ups-nut-cgi
 SUBDIR+=	ups-nut-snmp
