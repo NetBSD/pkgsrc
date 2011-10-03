@@ -1,0 +1,2 @@
+A simple and flexible batch system for a single machine. Each user uses a
+personal queue which can run several jobs in parallel.
