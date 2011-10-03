@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2365 2011/10/03 14:22:45 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2366 2011/10/03 14:30:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3802,3 +3802,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-gtk to 1.0.3 [obache 2011-10-03]
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.0.3 [obache 2011-10-03]
 	Updated x11/ruby-gnome2-vte to 1.0.3 [obache 2011-10-03]
+	Updated www/ruby-sinatra to 1.2.7 [obache 2011-10-03]
