@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/03 11:04:32 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ckanclient/__init__.py
+${PYSITELIB}/ckanclient/__init__.pyc
+${PYSITELIB}/ckanclient/__init__.pyo
+${PYSITELIB}/ckanclient/loaders/__init__.py
+${PYSITELIB}/ckanclient/loaders/__init__.pyc
+${PYSITELIB}/ckanclient/loaders/__init__.pyo
+${PYSITELIB}/ckanclient/loaders/base.py
+${PYSITELIB}/ckanclient/loaders/base.pyc
+${PYSITELIB}/ckanclient/loaders/base.pyo
+${PYSITELIB}/ckanclient/tests/__init__.py
+${PYSITELIB}/ckanclient/tests/__init__.pyc
+${PYSITELIB}/ckanclient/tests/__init__.pyo
+${PYSITELIB}/ckanclient/tests/test_ckanclient.py
+${PYSITELIB}/ckanclient/tests/test_ckanclient.pyc
+${PYSITELIB}/ckanclient/tests/test_ckanclient.pyo
