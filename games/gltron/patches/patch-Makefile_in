@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile_in,v 1.1 2011/10/03 04:05:34 dholland Exp $
+
+Cause LDFLAGS to be used instead of ignored. I'm not sure if this is
+something upstream did wrong or a bug in the archaic automake this
+package used or what. However, without this the necessary rpath for
+X11BASE doesn't get set and the native X build fails if PKG_DEVELOPER
+is on.
+
+--- Makefile.in~	2003-12-14 09:00:19.000000000 +0000
++++ Makefile.in
+@@ -132,7 +132,7 @@ gltron_DEPENDENCIES = src/game/libgame.a
+ 	nebu/audio/libaudio.a nebu/video/libvideo.a \
+ 	nebu/scripting/libscripting.a nebu/filesystem/libfilesystem.a \
+ 	nebu/base/libbase.a lua/src/liblua.a lua/src/lib/liblualib.a
+-gltron_LDFLAGS =
++gltron_LDFLAGS = $(LDFLAGS)
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir)
