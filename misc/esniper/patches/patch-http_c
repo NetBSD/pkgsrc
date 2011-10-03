@@ -1,0 +1,14 @@
+$NetBSD: patch-http_c,v 1.1 2011/10/03 02:56:53 dholland Exp $
+
+Fix build with recent curl.
+
+--- http.c~	2010-05-16 04:58:18.000000000 +0000
++++ http.c
+@@ -27,7 +27,6 @@
+ #include "http.h"
+ #include "esniper.h"
+ #include <curl/curl.h>
+-#include <curl/types.h>
+ #include <curl/easy.h>
+ #include <stdlib.h>
+ #include <string.h>
