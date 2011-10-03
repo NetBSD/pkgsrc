@@ -1,0 +1,2 @@
+This package is a subset of the xentools41 package. It contains
+just the tools to manipulate xenstore from the guest VM.
