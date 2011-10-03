@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2009/02/13 10:08:40 abs Exp $
+$NetBSD: distinfo,v 1.9 2011/10/03 04:45:40 dholland Exp $
 
 SHA1 (BASIC2.rom) = 4a7393f3a45ea309f744441c16723e2ef447a281
 RMD160 (BASIC2.rom) = 2179cda4734227556bac230346cacd805e4e03a4
@@ -15,3 +15,4 @@ SHA1 (patch-ad) = 733916029e94e65ee7702778ce344468ab3cf658
 SHA1 (patch-ae) = 00906d13e5dd9ec03f011053e7399fac581efc3d
 SHA1 (patch-af) = 62c888cc324742142d7a95c9db55067daba4dacd
 SHA1 (patch-ag) = 85f2cd6bddabfa865ab392d38c3a4db7cd2a8026
+SHA1 (patch-src_Screen_h) = f20e027cee77f37eeb08f8b0580ff30f6c2dd8ee
