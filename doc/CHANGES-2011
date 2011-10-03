@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2368 2011/10/03 16:17:08 jmmv Exp $
+$NetBSD: CHANGES-2011,v 1.2369 2011/10/03 17:00:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3806,3 +3806,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/gource to 0.37 [ryoon 2011-10-03]
 	Updated sysutils/coreutils to 8.13 [jmmv 2011-10-03]
 	Updated misc/gnuls to 8.13 [jmmv 2011-10-03]
+	Updated textproc/markdown-mode to 1.8.1 [minskim 2011-10-03]
