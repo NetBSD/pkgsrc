@@ -1,8 +1,8 @@
-$NetBSD: patch-contrib_mod_tls.c,v 1.1 2011/03/25 13:58:37 adam Exp $
+$NetBSD: patch-contrib_mod_tls.c,v 1.2 2011/10/03 11:23:31 adam Exp $
 
 --- contrib/mod_tls.c.orig	2011-03-25 13:53:45.000000000 +0000
 +++ contrib/mod_tls.c
-@@ -7217,7 +7217,7 @@ static int tls_sess_init(void) {
+@@ -7235,7 +7235,7 @@ static int tls_sess_init(void) {
    if (opts != NULL)
      tls_opts = *opts;
  
