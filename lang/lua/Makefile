@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2011/03/11 12:44:30 zafer Exp $
+# $NetBSD: Makefile,v 1.47 2011/10/03 04:29:24 dholland Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://www.lua.org/ftp/ \
 		ftp://ftp.gwdg.de/pub/languages/lua/ \
