@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/29 19:47:01 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2011/10/03 00:59:26 dholland Exp $
 #
 
 DISTNAME=	jove4.16.0.70
@@ -21,5 +21,11 @@ MAKE_FLAGS+=	NROFF=${NROFF:Q}
 
 INSTALL_MAKE_FLAGS+=	JOVEHOME=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+
+SUBST_CLASSES+=		getline
+SUBST_STAGE.getline=	pre-build # no pre-configure with NO_CONFIGURE...
+SUBST_MESSAGE.getline=	Fixing conflict with POSIX getline.
+SUBST_FILES.getline=	insert.c io.c io.h recover.c util.c util.h
+SUBST_SED.getline=	-e 's/getline/get_line/'
 
 .include "../../mk/bsd.pkg.mk"
