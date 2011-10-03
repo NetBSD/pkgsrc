@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2370 2011/10/03 17:03:01 sborrill Exp $
+$NetBSD: CHANGES-2011,v 1.2371 2011/10/03 19:52:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3809,3 +3809,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/markdown-mode to 1.8.1 [minskim 2011-10-03]
 	Added sysutils/xenstoretools 4.1.1 [sborrill 2011-10-03]
 	Added sysutils/xe-guest-utilities 6.0.0 [sborrill 2011-10-03]
+	Added archivers/ruby-xz version 0.0.1 [minskim 2011-10-03]
