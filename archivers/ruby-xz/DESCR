@@ -1,0 +1,4 @@
+ruby-xz is a basic binding for liblzma that allows you to create and
+extract XZ-compressed archives.  It can cope with big files as well as
+small ones, but doesn't offer much of the possibilities liblzma itself
+has.
