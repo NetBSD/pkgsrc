@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/03/13 05:46:55 obache Exp $
+# $NetBSD: Makefile,v 1.33 2011/10/03 05:30:07 agc Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
@@ -75,5 +75,10 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rn.1.gz
 	@${LN} -s trn ${DESTDIR}${PREFIX}/bin/rn
 	@${LN} -s trn.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rn.1
+
+SUBST_CLASSES+=		pipe2
+SUBST_STAGE.pipe2=	pre-configure
+SUBST_FILES.pipe2=	filter.c
+SUBST_SED.pipe2+=	-e 's|pipe2|trn_pipe2|g'
 
 .include "../../mk/bsd.pkg.mk"
