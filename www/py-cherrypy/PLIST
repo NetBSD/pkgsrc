@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/05 11:56:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/03 10:14:19 adam Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -85,6 +85,9 @@ ${PYSITELIB}/cherrypy/lib/cptools.pyo
 ${PYSITELIB}/cherrypy/lib/encoding.py
 ${PYSITELIB}/cherrypy/lib/encoding.pyc
 ${PYSITELIB}/cherrypy/lib/encoding.pyo
+${PYSITELIB}/cherrypy/lib/gctools.py
+${PYSITELIB}/cherrypy/lib/gctools.pyc
+${PYSITELIB}/cherrypy/lib/gctools.pyo
 ${PYSITELIB}/cherrypy/lib/http.py
 ${PYSITELIB}/cherrypy/lib/http.pyc
 ${PYSITELIB}/cherrypy/lib/http.pyo
@@ -109,9 +112,9 @@ ${PYSITELIB}/cherrypy/lib/sessions.pyo
 ${PYSITELIB}/cherrypy/lib/static.py
 ${PYSITELIB}/cherrypy/lib/static.pyc
 ${PYSITELIB}/cherrypy/lib/static.pyo
-${PYSITELIB}/cherrypy/lib/xmlrpc.py
-${PYSITELIB}/cherrypy/lib/xmlrpc.pyc
-${PYSITELIB}/cherrypy/lib/xmlrpc.pyo
+${PYSITELIB}/cherrypy/lib/xmlrpcutil.py
+${PYSITELIB}/cherrypy/lib/xmlrpcutil.pyc
+${PYSITELIB}/cherrypy/lib/xmlrpcutil.pyo
 ${PYSITELIB}/cherrypy/process/__init__.py
 ${PYSITELIB}/cherrypy/process/__init__.pyc
 ${PYSITELIB}/cherrypy/process/__init__.pyo
@@ -327,3 +330,6 @@ ${PYSITELIB}/cherrypy/wsgiserver/ssl_builtin.pyo
 ${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.py
 ${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyc
 ${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyo
+${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.py
+${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.pyc
+${PYSITELIB}/cherrypy/wsgiserver/wsgiserver2.pyo
