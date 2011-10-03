@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.820 2011/10/02 14:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.821 2011/10/03 14:23:36 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -574,7 +574,6 @@ SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-csspool
 SUBDIR+=	ruby-div
 SUBDIR+=	ruby-fcgi
-SUBDIR+=	ruby-gnome2-gtkmozembed
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-http_parser.rb
 SUBDIR+=	ruby-httpclient
