@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/03/21 08:47:12 obache Exp $
+$NetBSD: distinfo,v 1.7 2011/10/03 00:07:31 dholland Exp $
 
 SHA1 (sfio_1999.src.unix.cpio) = 6fd3a711ca8f95190c0859934f57a66d02c842a4
 RMD160 (sfio_1999.src.unix.cpio) = 379148273c9979f7a5a921a338465b7579a6ac5e
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = 6ede082aaf65b323fa6cbc51a84fd09d6d1ab7ec
 SHA1 (patch-aj) = 8e6c2c21fc4ed576679554c2e97d9eefa0f1e72a
 SHA1 (patch-ak) = 42d8dd1a5518b558f8875f9fb60f7e80b9c0fd4b
 SHA1 (patch-al) = d11738f33e3382664e8dc57501a062a0df948083
+SHA1 (patch-src_lib_sfio_Sfio__dc_sfcdio_c) = 9085c7e69de27a2ae72200015afc578d13237221
