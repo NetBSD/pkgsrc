@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/10/03 11:53:11 adam Exp $
+
+Don't build programs that won't be installed
+
+--- Makefile.in.orig	2011-09-30 07:58:24.000000000 +0000
++++ Makefile.in
+@@ -68,7 +68,7 @@ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES =
+ CONFIG_CLEAN_VPATH_FILES =
+ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgincludedir)"
+-PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
++PROGRAMS = $(bin_PROGRAMS)
+ am__memcached_SOURCES_DIST = memcached.c memcached.h hash.c hash.h \
+ 	slabs.c slabs.h items.c items.h assoc.c assoc.h thread.c \
+ 	daemon.c stats.c stats.h util.c util.h trace.h cache.h \
