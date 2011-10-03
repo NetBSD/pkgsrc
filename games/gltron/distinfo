@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2006/06/29 19:55:37 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/10/03 04:05:34 dholland Exp $
 
 SHA1 (gltron-0.70-source.tar.gz) = 267bffa75c2c9f8bb1fa8a2d2254eef8b90be1d6
 RMD160 (gltron-0.70-source.tar.gz) = 78f624cb622e9bc4847b912a6f7686949c197e54
 Size (gltron-0.70-source.tar.gz) = 2182440 bytes
+SHA1 (patch-Makefile_in) = cd8bec4eccf7b21c9891f314928904d730bfc2ce
 SHA1 (patch-aa) = ab420d8775693c0e609879659f9d5cd2b9644398
 SHA1 (patch-ab) = 3890e5b3c5c1ba27056e6f6030eac7309816bacb
 SHA1 (patch-ac) = b7b42d8bce2c320650bfc45244e98b4ad2769c84
