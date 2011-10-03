@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/01/03 15:06:38 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/03 04:37:05 dholland Exp $
 
 DISTNAME=	powwow-1.2.5
 PKGREVISION=	1
@@ -17,7 +17,7 @@ POWWOW_DIR=	${PREFIX}/share/powwow
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-build:
-	cd ${WRKSRC} && POWWOW_DIR="${POWWOW_DIR}" CFLAGS="${CFLAGS}" ./make_it
+	cd ${WRKSRC} && POWWOW_DIR=${POWWOW_DIR} CFLAGS=${CFLAGS:Q} ./make_it
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/powwow ${DESTDIR}${PREFIX}/bin

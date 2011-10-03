@@ -1,0 +1,16 @@
+$NetBSD: patch-ptr_h,v 1.1 2011/10/03 04:37:06 dholland Exp $
+
+- Avoid conflict with libc memrchr. Appears to have the same intent,
+but this is the path of least resistance.
+
+--- ptr.h~	1998-10-19 20:52:24.000000000 +0000
++++ ptr.h
+@@ -56,7 +56,7 @@ char *ptrmchrs  __P ((ptr p, char *q, in
+ char *ptrrchrs  __P ((ptr p, ptr q));
+ char *ptrmrchrs __P ((ptr p, char *q, int lenq));
+ 
+-char *memrchr   __P ((char *p, int lenp, char c));
++char *memrchrx   __P ((char *p, int lenp, char c));
+ char *memchrs   __P ((char *p, int lenp, char *q, int lenq));
+ char *memrchrs  __P ((char *p, int lenp, char *q, int lenq));
+ #ifdef _GNU_SOURCE
