@@ -1,0 +1,25 @@
+$NetBSD: patch-ptr_c,v 1.1 2011/10/03 04:37:06 dholland Exp $
+
+- Avoid conflict with libc memrchr. Appears to have the same intent,
+but this is the path of least resistance.
+
+--- ptr.c~	2000-01-13 21:49:33.000000000 +0000
++++ ptr.c
+@@ -411,7 +411,7 @@ char *ptrchr __P2 (ptr,p, char,c)
+  * find last occurrence of c in p
+  * return NULL if none found.
+  */
+-char *memrchr __P3 (char *,p, int,lenp, char,c)
++char *memrchrx __P3 (char *,p, int,lenp, char,c)
+ {
+     char *v, *s = p;
+ 
+@@ -431,7 +431,7 @@ char *memrchr __P3 (char *,p, int,lenp, 
+ char *ptrrchr __P2 (ptr,p, char,c)
+ {
+     if (p)
+-	return memrchr(ptrdata(p), ptrlen(p), c);
++	return memrchrx(ptrdata(p), ptrlen(p), c);
+     return (char*)p; /* shortcut for NULL */
+ }
+ 
