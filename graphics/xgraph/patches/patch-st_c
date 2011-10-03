@@ -1,0 +1,27 @@
+$NetBSD: patch-st_c,v 1.1 2011/10/03 01:45:22 dholland Exp $
+
+- Fix LP64 issues.
+
+--- st.c.orig	1998-05-22 12:27:04.000000000 +0000
++++ st.c
+@@ -11,6 +11,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include "copyright.h"
+ 
+ #include "st.h"
+@@ -21,9 +22,9 @@
+ #define alloc(type) (type *) malloc(sizeof(type))
+ 
+ #define ABS(x) ((x) < 0 ? -(x) : (x))
+-#define ST_NUMCMP(x,y) ((int) (x) - (int) (y))
+-#define ST_NUMHASH(x,size) (ABS((int)x)%(size))
+-#define ST_PTRHASH(x,size) ((int)((unsigned)(x)>>2)%size)
++#define ST_NUMCMP(x,y) ((intptr_t) (x) - (intptr_t) (y))
++#define ST_NUMHASH(x,size) (ABS((intptr_t)x)%(size))
++#define ST_PTRHASH(x,size) ((intptr_t)((uintptr_t)(x)>>2)%size)
+ #define EQUAL(func, x, y) \
+     ((((func) == st_numcmp) || ((func) == st_ptrcmp)) ?\
+       (ST_NUMCMP((x),(y)) == 0) : ((*func)((x), (y)) == 0))
