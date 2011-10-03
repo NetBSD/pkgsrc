@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2360 2011/10/03 11:25:10 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2361 2011/10/03 11:55:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3779,3 +3779,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3-tcl to 3.7.8 [adam 2011-10-03]
 	Updated databases/db5 to 5.2.36 [adam 2011-10-03]
 	Updated net/proftpd to 1.3.3f [adam 2011-10-03]
+	Updated devel/libevent to 2.0.14 [adam 2011-10-03]
+	Updated devel/memcached to 1.4.7 [adam 2011-10-03]
