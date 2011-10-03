@@ -1,0 +1,25 @@
+$NetBSD: patch-xe-daemon,v 1.1.1.1 2011/10/03 16:57:03 sborrill Exp $
+
+--- xe-daemon.orig	2011-09-23 15:39:33.000000000 +0100
++++ xe-daemon	2011-09-23 15:42:48.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # Copyright (C) 2009  Citrix Systems Inc.
+ #
+@@ -42,12 +42,12 @@
+     esac
+ done
+ 
+-XE_UPDATE_GUEST_ATTRS=${XE_UPDATE_GUEST_ATTRS:-/usr/sbin/xe-update-guest-attrs}
++XE_UPDATE_GUEST_ATTRS=${XE_UPDATE_GUEST_ATTRS:-@PREFIX@/sbin/xe-update-guest-attrs}
+ XE_DAEMON_RATE=${XE_DAEMON_RATE:-60}                    # run once a minute by default
+ XE_MEMORY_UPDATE_DIVISOR=${XE_MEMORY_UPDATE_DIVISOR:-2}  # update mem stats 1/2 as often by dflt
+ 
+ # Delete xenstore cache following each reboot
+-rm -rf /var/cache/xenstore
++rm -rf @VARBASE@/cache/xenstore
+ 
+ MEMORY_UPDATE_COUNTER=0
+ while true ; do 
