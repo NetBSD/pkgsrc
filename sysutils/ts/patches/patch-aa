@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/10/03 11:02:28 wiz Exp $
+
+Add DESTDIR support and fix MANDIR
+--- Makefile.orig	2011-09-01 18:02:43.000000000 +0000
++++ Makefile
+@@ -1,3 +1,4 @@
++DESTDIR?=
+ PREFIX?=/usr/local
+ GLIBCFLAGS=-D_XOPEN_SOURCE=500 -D__STRICT_ANSI__
+ CFLAGS=-pedantic -ansi -Wall -g -O0
+@@ -54,7 +55,7 @@ clean:
+ 	rm -f *.o ts
+ 
+ install: ts
+-	$(INSTALL) -d $(PREFIX)/bin
+-	$(INSTALL) ts $(PREFIX)/bin
+-	$(INSTALL) -d $(PREFIX)/share/man/man1
+-	$(INSTALL) -m 644 ts.1 $(PREFIX)/share/man/man1
++	$(INSTALL) -d $(DESTDIR)$(PREFIX)/bin
++	$(INSTALL) ts $(DESTDIR)$(PREFIX)/bin
++	$(INSTALL) -d $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
++	$(INSTALL) -m 644 ts.1 $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
