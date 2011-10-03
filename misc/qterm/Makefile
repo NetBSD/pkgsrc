@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/22 18:19:03 zafer Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/03 05:02:48 agc Exp $
 #
 
 DISTNAME=	qterm-ac-1.0
@@ -19,5 +19,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=		${PREFIX}/share/examples/qterm
 CONF_FILES=	${EGDIR}/qtermtab ${PKG_SYSCONFDIR}/qtermtab
+
+SUBST_CLASSES+=		qterm
+SUBST_STAGE.qterm=	pre-configure
+SUBST_FILES.qterm=	aux.c qterm.c qterm.h table.c
+SUBST_SED.qterm+=	-e 's|dprintf|qterm_debug_printf|g'
 
 .include "../../mk/bsd.pkg.mk"
