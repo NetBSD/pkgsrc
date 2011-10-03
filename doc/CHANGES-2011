@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2355 2011/10/03 09:37:15 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2356 2011/10/03 09:50:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3767,3 +3767,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/lua to 5.1.4nb3 [dholland 2011-10-03]
 	Updated print/jcabc2ps to 20060106nb2 [dholland 2011-10-03]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2011Q3 branch [wiz 2011-10-03]
+	Updated net/rsync to 3.0.9 [tron 2011-10-03]
