@@ -1,53 +1,34 @@
-$NetBSD: patch-aa,v 1.4 2010/02/27 20:40:52 morr Exp $
+$NetBSD: patch-aa,v 1.5 2011/10/03 11:53:11 adam Exp $
 
-Make it compile on NetBSD and Solaris. Patch taken from memcached git.
+time_t changes
 
---- util.c.orig	2009-10-23 20:38:01.000000000 +0000
-+++ util.c
-@@ -8,6 +8,10 @@
- 
- #include "memcached.h"
- 
-+/* Avoid warnings on solaris, where isspace() is an index into an array,
-+ * and gcc uses signed chars */
-+#define xisspace(c) isspace((unsigned char)c)
-+
- bool safe_strtoull(const char *str, uint64_t *out) {
-     assert(out != NULL);
-     errno = 0;
-@@ -16,7 +20,7 @@ bool safe_strtoull(const char *str, uint
-     unsigned long long ull = strtoull(str, &endptr, 10);
-     if (errno == ERANGE)
-         return false;
--    if (isspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-+    if (xisspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-         if ((long long) ull < 0) {
-             /* only check for negative signs in the uncommon case when
-              * the unsigned number is so big that it's negative as a
-@@ -39,7 +43,7 @@ bool safe_strtoll(const char *str, int64
-     long long ll = strtoll(str, &endptr, 10);
-     if (errno == ERANGE)
-         return false;
--    if (isspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-+    if (xisspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-         *out = ll;
-         return true;
-     }
-@@ -59,7 +63,7 @@ bool safe_strtoul(const char *str, uint3
-         return false;
-     }
- 
--    if (isspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-+    if (xisspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-         if ((long) l < 0) {
-             /* only check for negative signs in the uncommon case when
-              * the unsigned number is so big that it's negative as a
-@@ -83,7 +87,7 @@ bool safe_strtol(const char *str, int32_
-     long l = strtol(str, &endptr, 10);
-     if (errno == ERANGE)
-         return false;
--    if (isspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-+    if (xisspace(*endptr) || (*endptr == '\0' && endptr != str)) {
-         *out = l;
-         return true;
-     }
+--- items.c.orig	2011-08-10 15:44:52.000000000 +0000
++++ items.c
+@@ -383,9 +383,9 @@ char *do_item_cachedump(const unsigned i
+         /* Copy the key since it may not be null-terminated in the struct */
+         strncpy(key_temp, ITEM_key(it), it->nkey);
+         key_temp[it->nkey] = 0x00; /* terminate */
+-        len = snprintf(temp, sizeof(temp), "ITEM %s [%d b; %lu s]\r\n",
++        len = snprintf(temp, sizeof(temp), "ITEM %s [%d b; %jd s]\r\n",
+                        key_temp, it->nbytes - 2,
+-                       (unsigned long)it->exptime + process_started);
++                       (intmax_t)it->exptime + process_started);
+         if (bufcurr + len + 6 > memlimit)  /* 6 is END\r\n\0 */
+             break;
+         memcpy(buffer + bufcurr, temp, len);
+@@ -429,13 +429,13 @@ void do_item_stats(ADD_STAT add_stats, v
+                 continue;
+             }
+             APPEND_NUM_FMT_STAT(fmt, i, "number", "%u", sizes[i]);
+-            APPEND_NUM_FMT_STAT(fmt, i, "age", "%u", tails[i]->time);
++            APPEND_NUM_FMT_STAT(fmt, i, "age", "%jd", tails[i]->time);
+             APPEND_NUM_FMT_STAT(fmt, i, "evicted",
+                                 "%u", itemstats[i].evicted);
+             APPEND_NUM_FMT_STAT(fmt, i, "evicted_nonzero",
+                                 "%u", itemstats[i].evicted_nonzero);
+             APPEND_NUM_FMT_STAT(fmt, i, "evicted_time",
+-                                "%u", itemstats[i].evicted_time);
++                                "%jd", itemstats[i].evicted_time);
+             APPEND_NUM_FMT_STAT(fmt, i, "outofmemory",
+                                 "%u", itemstats[i].outofmemory);
+             APPEND_NUM_FMT_STAT(fmt, i, "tailrepairs",
