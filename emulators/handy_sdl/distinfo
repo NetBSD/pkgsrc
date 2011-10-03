@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/20 17:34:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/10/03 04:20:34 dholland Exp $
 
 SHA1 (handy_sdl-0.5-src.tar.bz2) = a65f18781886d19878b9b14a577e1387ed3f6f19
 RMD160 (handy_sdl-0.5-src.tar.bz2) = 5dcc9ec50dcfbe6ca418b21dcb8ad5e36b14fc97
 Size (handy_sdl-0.5-src.tar.bz2) = 209616 bytes
+SHA1 (patch-Makefile-0_95) = 6da149e49491876a698e7c40a125833840f27637
