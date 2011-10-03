@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/03 11:04:32 wiz Exp $
+
+SHA1 (ckanclient-0.9.tar.gz) = 0f39d79608d837a0ce04b8f3d93d07564b30ea92
+RMD160 (ckanclient-0.9.tar.gz) = aa9e6126827e364294c06db4498bf300f379185e
+Size (ckanclient-0.9.tar.gz) = 14399 bytes
