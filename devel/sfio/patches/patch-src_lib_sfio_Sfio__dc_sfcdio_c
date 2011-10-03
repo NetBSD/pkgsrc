@@ -1,0 +1,18 @@
+$NetBSD: patch-src_lib_sfio_Sfio__dc_sfcdio_c,v 1.1 2011/10/03 00:07:31 dholland Exp $
+
+- use standard C
+
+--- src/lib/sfio/Sfio_dc/sfdcdio.c~	1998-03-19 03:58:13.000000000 +0000
++++ src/lib/sfio/Sfio_dc/sfdcdio.c
+@@ -102,9 +102,9 @@ Sfdisc_t*	disc;
+ }
+ 
+ #if __STD_C
+-static dioexcept(Sfio_t* f, int type, Void_t* data, Sfdisc_t* disc)
++static int dioexcept(Sfio_t* f, int type, Void_t* data, Sfdisc_t* disc)
+ #else
+-static dioexcept(f,type,data,disc)
++static int dioexcept(f,type,data,disc)
+ Sfio_t*		f;
+ int		type;
+ Void_t*		data;
