@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2011/07/03 11:46:08 jym Exp $
+# $NetBSD: Makefile,v 1.27 2011/10/03 01:17:49 dholland Exp $
 
 DISTNAME=	xplot-0.90.7.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.xplot.org/xplot/
 HOMEPAGE=	http://www.xplot.org/
@@ -15,6 +15,7 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 
 REPLACE_PERL+=	tcpdump2xplot.pl
+USE_TOOLS+=	perl:run
 
 DOCFILES=	ANNOUNCE README README.tcp_plots
 # demo.? removed from interim .7.1 version
