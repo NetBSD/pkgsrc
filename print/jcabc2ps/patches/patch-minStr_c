@@ -1,0 +1,12 @@
+$NetBSD: patch-minStr_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Declare functions before calling them.
+
+--- minStr.c~	2004-05-18 20:56:52.000000000 +0000
++++ minStr.c
+@@ -1,4 +1,5 @@
+ #include "jcabc2ps.h"
++#include "memBlock.h"
+ 
+ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Make sure that a Str has at least n bytes allocated.
