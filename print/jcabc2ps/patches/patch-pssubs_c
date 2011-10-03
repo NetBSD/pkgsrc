@@ -1,0 +1,14 @@
+$NetBSD: patch-pssubs_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Use standard headers.
+
+--- pssubs.c~	2003-07-25 13:34:41.000000000 +0000
++++ pssubs.c
+@@ -4,6 +4,7 @@
+  *  See file jcabc2ps.c for details.
+  */
+ 
++#include <string.h>
+ #include <time.h>
+ 
+ #include "jcabc2ps.h"

@@ -1,0 +1,12 @@
+$NetBSD: patch-memBlock_h,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Declare functions before calling them.
+
+--- memBlock.h.orig	2011-10-03 06:37:09.000000000 +0000
++++ memBlock.h
+@@ -0,0 +1,5 @@
++void* memBlock(
++	void*  ptr,		// Block to reallocate, if any
++	size_t oldsize,	// Size of old block
++	size_t newsize,	// Min size of new block
++	char*  dsc);		// Description, for messages

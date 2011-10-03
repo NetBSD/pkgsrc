@@ -1,0 +1,14 @@
+$NetBSD: patch-jcabc2ps_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Use standard headers.
+
+--- jcabc2ps.c~	2011-10-03 06:30:36.000000000 +0000
++++ jcabc2ps.c
+@@ -32,6 +32,7 @@
+ /* Main program jcabc2ps.c */
+ 
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "jcabc2ps.h"
+ #include "subs.h"

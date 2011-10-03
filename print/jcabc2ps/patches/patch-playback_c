@@ -1,0 +1,14 @@
+$NetBSD: patch-playback_c,v 1.1 2011/10/03 06:45:31 dholland Exp $
+
+Use standard headers.
+
+--- playback.c~	2004-05-18 20:56:52.000000000 +0000
++++ playback.c
+@@ -9,6 +9,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <unistd.h>
++#include <string.h>
+ 
+ #include "jcabc2ps.h"
+ #include "util.h"
