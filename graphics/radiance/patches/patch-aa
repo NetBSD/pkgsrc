@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/04/29 05:15:14 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2011/10/03 02:53:39 dholland Exp $
 
 csh programming considered harmful.
 
@@ -22,7 +22,7 @@ because there's an rcsid in the way.
 -	source installib
 +fi
 +if [ x"$1" = xlibrary ]; then
-+	. installib
++	. ./installib
  	cp -f src/*/*.{cal,tab,hex} $ldir
  	echo ""
  	echo "Set the environment variable RAYPATH=.:$ldir"
@@ -369,7 +369,7 @@ because there's an rcsid in the way.
 -source installib
 +	;;
 +esac
-+. installib
++. ./installib
  sed 's/[ 	]*$//' > $rmake << _EOF_
  #!/bin/sh
 -exec make "SPECIAL=$special" \
