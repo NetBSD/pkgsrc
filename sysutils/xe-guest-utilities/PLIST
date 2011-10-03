@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/03 16:57:03 sborrill Exp $
+sbin/xe-daemon
+sbin/xe-update-guest-attrs
+share/examples/rc.d/xenguest
