@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile-0_95,v 1.1 2011/10/03 04:20:34 dholland Exp $
+
+Set LDFLAGS vs. LIBS properly, so the right things happen when LDFLAGS
+is set from the pkgsrc makefile.
+
+--- Makefile-0.95~	2008-11-02 23:23:50.000000000 +0000
++++ Makefile-0.95
+@@ -55,9 +55,9 @@ CPPFLAGS = -MMD -Wall -Wno-switch -Wno-n
+ #		-fomit-frame-pointer `sdl-config --cflags` -g
+ #		-fomit-frame-pointer `sdl-config --cflags` -DLOG_UNMAPPED_MEMORY_ACCESSES
+ 
+-LDFLAGS =
++LDFLAGS = -L/usr/local/lib -L/usr/lib
+ 
+-LIBS = -L/usr/local/lib -L/usr/lib `sdl-config $(SDLLIBTYPE)` -lstdc++ -lz $(GLLIB)
++LIBS = `sdl-config $(SDLLIBTYPE)` -lstdc++ -lz $(GLLIB)
+ 
+ INCS = -I./src -I./src/handy-0.95 -I./src/sdlemu -I/usr/local/include -I/usr/include
+ 
