@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/07 17:33:51 abs Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/03 00:45:47 dholland Exp $
 #
 
 DISTNAME=	ee-1.4.6.src
@@ -15,8 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE= 	no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+MAKE_FILE=	make.local
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+do-configure:
+	cd ${WRKSRC} && ./create.make
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ee ${DESTDIR}${PREFIX}/bin/easyedit

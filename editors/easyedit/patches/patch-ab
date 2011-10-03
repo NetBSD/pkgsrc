@@ -1,8 +1,20 @@
-$NetBSD: patch-ab,v 1.1 2003/07/03 07:05:10 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2011/10/03 00:45:47 dholland Exp $
 
---- create.make.orig	2001-06-28 06:39:33.000000000 +0100
+- find netbsd's terminfo
+- configure for pkgsrc
+
+--- create.make.orig	2002-09-23 04:18:30.000000000 +0000
 +++ create.make
-@@ -254,16 +254,16 @@ echo "all :	$TARGET" >> make.local
+@@ -31,7 +31,7 @@ fi
+ 
+ # test for terminfo directory (exists on SysV systems)
+ 
+-if [ -d /usr/lib/terminfo -o -d /usr/share/lib/terminfo -o -d /usr/share/terminfo ]
++if [ -d /usr/lib/terminfo -o -d /usr/share/lib/terminfo -o -d /usr/share/terminfo -o -f /usr/share/misc/terminfo.db ]
+ then
+ 	terminfo_exists=""
+ else
+@@ -267,16 +267,16 @@ echo "all :	$TARGET" >> make.local
  cat  >> make.local << EOF
  
  curses :	ee.c
