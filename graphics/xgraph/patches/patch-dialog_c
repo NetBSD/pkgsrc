@@ -1,0 +1,33 @@
+$NetBSD: patch-dialog_c,v 1.1 2011/10/03 01:45:22 dholland Exp $
+
+- fix conflict with POSIX getline
+
+--- dialog.c~	1998-05-22 12:19:06.000000000 +0000
++++ dialog.c
+@@ -32,7 +32,7 @@ static short gray_bits[] = {
+ 
+ static void make_msg_box();
+ static void del_msg_box();
+-static int getline();
++static int get_line(char **, char *);
+ 
+ 
+ #define D_VPAD	2
+@@ -702,7 +702,7 @@ xtb_frame *frame;		/* Returned frame */
+     new_info->lines = (Window *) malloc((unsigned) (sizeof(Window) * E_LINES));
+ 
+     lineptr = text;
+-    while (getline(&lineptr, line)) {
++    while (get_line(&lineptr, line)) {
+ 	if (new_info->num_lines >= new_info->alloc_lines) {
+ 	    new_info->alloc_lines *= 2;
+ 	    new_info->lines = (Window *) realloc((char *) new_info->lines,
+@@ -800,7 +800,7 @@ char *err_text;
+ 
+ 
+ 
+-static int getline(tptr, lptr)
++static int get_line(tptr, lptr)
+ char **tptr;
+ char *lptr;
+ /*
