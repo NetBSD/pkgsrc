@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10583 2011/10/03 12:54:42 tnn Exp $
+$NetBSD: TODO,v 1.10584 2011/10/03 16:17:08 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -481,7 +481,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o connect-1.96
 	o consolekit-0.4.0
 	o cook-2.31
-	o coreutils-8.9
 	o courier-0.66.1
 	o covered-0.7.9
 	o covered-current-20090802

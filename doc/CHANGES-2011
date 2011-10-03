@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2367 2011/10/03 15:26:30 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2368 2011/10/03 16:17:08 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3804,3 +3804,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/ruby-gnome2-vte to 1.0.3 [obache 2011-10-03]
 	Updated www/ruby-sinatra to 1.2.7 [obache 2011-10-03]
 	Updated graphics/gource to 0.37 [ryoon 2011-10-03]
+	Updated sysutils/coreutils to 8.13 [jmmv 2011-10-03]
+	Updated misc/gnuls to 8.13 [jmmv 2011-10-03]
