@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.12 2011/09/25 19:51:47 joerg Exp $
+#	$NetBSD: pbulk-index.mk,v 1.13 2011/10/04 11:41:20 hans Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -111,4 +111,4 @@ pbulk-index-item:
 .endif
 
 pbulk-save-wrkdir:
-	${RUN} [ ! -d ${WRKDIR} ] || cd ${WRKDIR} && tar cfz ${INTO:Q} .
+	${RUN} [ ! -d ${WRKDIR} ] || cd ${WRKDIR} && ${TAR} cfz ${INTO:Q} .
