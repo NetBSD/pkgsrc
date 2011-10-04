@@ -1,0 +1,18 @@
+$NetBSD: patch-at,v 1.1 2011/10/04 23:33:40 dsainty Exp $
+
+Multiple implementation files assume these headers are pulled in implicitly,
+so make it explicit, for those platforms that otherwise don't pull these in.
+
+--- SrcUnix/EmCommonUnix.h.orig	2010-08-08 11:47:00.281465282 +1200
++++ SrcUnix/EmCommonUnix.h	2010-08-08 11:47:20.822480203 +1200
+@@ -42,8 +42,8 @@
+ //#include <stdarg.h>
+ //#include <stddef.h>
+ //#include <stdio.h>
+-//#include <stdlib.h>
+-//#include <string.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ //#include <sys/types.h>
+ //#include <sys/socket.h>
