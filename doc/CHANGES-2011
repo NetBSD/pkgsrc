@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2384 2011/10/04 19:29:36 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2385 2011/10/04 19:30:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Renamed databases/datapkg to databases/py-datapkg [wiz 2011-01-04]
 	Updated textproc/p5-Text-CSV to 1.21 [hiramatsu 2011-10-04]
 	Updated x11/x3270 to 3.3.12ga7 «[gls 2011-10-04]
+	Updated editors/emacs-snapshot to 24.0.90.20111004 [minskim 2011-10-04]
