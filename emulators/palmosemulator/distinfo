@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2010/04/06 04:36:00 dsainty Exp $
+$NetBSD: distinfo,v 1.10 2011/10/04 23:33:40 dsainty Exp $
 
 SHA1 (palmosemulator/emulator_src_3.5.tar.gz) = 2debd7690736397d0af41f7b2d482df65391fc65
 RMD160 (palmosemulator/emulator_src_3.5.tar.gz) = fbb6761e4c43ecc9fb20d90d2ae0ec6ccf1c3f27
@@ -25,3 +25,4 @@ SHA1 (patch-ap) = 1fe9bf4a1d70230f2abb9375b9e439a3a163b4d7
 SHA1 (patch-aq) = f3d3a6bf278f71573fb7d45021305561c3dcc114
 SHA1 (patch-ar) = 50562522b9625e034b858439bd409b177f819f85
 SHA1 (patch-as) = 63d6db2db9f456193408d5e7407149fe4adf4cfb
+SHA1 (patch-at) = 40d36a2031a4b19d250b70ca0d23dc71e3db7c12
