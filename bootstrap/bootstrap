@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.170 2011/09/14 15:14:53 hans Exp $
+# $NetBSD: bootstrap,v 1.171 2011/10/04 11:37:38 hans Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -109,7 +109,7 @@ mkbinarykit_tgz()
 {
 	# in case tar was built by bootstrap
 	PATH="$prefix/bin:$PATH"; export PATH
-	cd / && tar -hzcf "${binary_gzip_kit}" .$prefix .$pkgdbdir .$etc_mk_conf
+	cd / && tar -hcf - .$prefix .$pkgdbdir .$etc_mk_conf | gzip > "${binary_gzip_kit}"
 }
 
 die()
