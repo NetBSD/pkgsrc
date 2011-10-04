@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2011/10/04 21:38:21 marino Exp $
+
+--- share/gprconfig/targetset.xml.orig	2011-10-02 15:59:24.212964661 +0200
++++ share/gprconfig/targetset.xml	2011-10-02 16:00:31.610972482 +0200
+@@ -52,8 +52,8 @@
+ 
+   <!-- x86-solaris -->
+   <targetset>
+-    <target>x86-solaris</target>
+-    <target>i.86-(pc-)?solaris.*</target>
++    <target>i.86-.*-solaris.*</target>
++    <target>x86_64-.*-solaris.*</target>
+   </targetset>
+ 
+   <!-- x86-windows (mingw) -->
