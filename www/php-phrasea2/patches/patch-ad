@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/10/04 08:01:18 manu Exp $
+
+Look for MySQL in $PREFIX
+
+--- configure.in.orig	2011-08-11 06:48:21.000000000 +0200
++++ configure.in	2011-08-11 12:04:50.000000000 +0200
+@@ -163,9 +163,9 @@
+ CPPFLAGS="$CPPFLAGS -DHAVE_CONFIG_H"
+ CFLAGS_CLEAN='$(CFLAGS)'
+ CXXFLAGS_CLEAN='$(CXXFLAGS)'
+ 
+-test "$prefix" = "NONE" && prefix="/usr/local"
++test "$prefix" = "NONE" && prefix="${PREFIX}"
+ test "$exec_prefix" = "NONE" && exec_prefix='$(prefix)'
+ 
+ PHP_SUBST(PHP_MODULES)
+ PHP_SUBST(PHP_ZEND_EX)

@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/10/04 08:01:18 manu Exp $
+
+Look for MySQL in $PREFIX
+
+--- config.m4.orig	2011-08-11 06:49:00.000000000 +0200
++++ config.m4	2011-08-11 12:10:02.000000000 +0200
+@@ -37,9 +37,9 @@
+   fi
+ 
+   dnl *************** search mysql includes dir ****************
+   AC_MSG_CHECKING([MySQL includes dir])
+-  for i in $PHP_PHRASEA2 /usr/local /usr; do
++  for i in $PHP_PHRASEA2 ${PREFIX}; do
+     if test -r $i/include/mysql/mysql.h; then
+       MYSQL_DIR=$i
+       MYSQL_INC_DIR=$i/include/mysql
+       break
