@@ -1,8 +1,18 @@
-$NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
+$NetBSD: patch-na,v 1.11 2011/10/04 10:31:37 dsainty Exp $
 
---- configure.in.orig	2009-08-24 12:42:29.000000000 +0000
-+++ configure.in
-@@ -482,9 +482,10 @@ AM_CONDITIONAL([HAVE_LIBPCI], [test "x$U
+Includes upstream patch to build on Linux systems without V4L1 support.
+
+http://cgit.freedesktop.org/hal/commit/?id=8f624253f0135ca77a893ad4e8168f51ef90d4da
+
+--- configure.in.orig	2009-08-25 00:42:29.000000000 +1200
++++ configure.in	2011-10-04 22:56:25.700308098 +1300
+@@ -479,12 +479,16 @@
+ fi 
+ AM_CONDITIONAL([HAVE_LIBPCI], [test "x$USE_LIBPCI" = "xyes"])
+ 
++AC_CHECK_HEADERS([linux/videodev.h], [have_videodev_h=yes], [])
++AM_CONDITIONAL(HAVE_V4L1, [test "x$have_videodev_h" = "xyes"])
++
  USE_LIBUSB20=no
  USE_LIBUSB=no
  LIBUSB20_LIBS=""
@@ -14,7 +24,7 @@ $NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
  	    [backend=$withval])
  if ! test -z "$with_backend" ; then
      HALD_BACKEND="$with_backend"
-@@ -493,6 +494,9 @@ else
+@@ -493,6 +497,9 @@
          *-*-solaris*)
  		   HALD_BACKEND="solaris"
  		   ;;
@@ -24,7 +34,7 @@ $NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
          *-*-freebsd* | *-*-kfreebsd*-gnu)
                     HALD_BACKEND="freebsd"
                     ;;
-@@ -508,8 +512,10 @@ AM_CONDITIONAL(HALD_COMPILE_DUMMY, [test
+@@ -508,8 +515,10 @@
  AM_CONDITIONAL(HALD_COMPILE_LINUX, [test x$HALD_BACKEND = xlinux], [Compiling for Linux])
  AM_CONDITIONAL(HALD_COMPILE_FREEBSD, [test x$HALD_BACKEND = xfreebsd], [Compiling for FreeBSD])
  AM_CONDITIONAL(HALD_COMPILE_SOLARIS, [test x$HALD_BACKEND = xsolaris], [Compiling for Solaris])
@@ -35,7 +45,7 @@ $NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
      AC_CHECK_LIB([usb20], [libusb20_dev_get_info], [USE_LIBUSB20=yes], [USE_LIBUSB20=no])
  fi
  if test "x$USE_LIBUSB20" = "xno"; then
-@@ -526,6 +532,8 @@ elif test "x$USE_LIBUSB" = "xyes"; then
+@@ -526,6 +535,8 @@
  fi
  AC_SUBST(LIBUSB20_LIBS)
  
@@ -44,7 +54,7 @@ $NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
  dnl DBUS API is subject to changes
  AC_DEFINE_UNQUOTED(DBUS_API_SUBJECT_TO_CHANGE, [], [DBUS API is subject to change])
  
-@@ -706,8 +714,8 @@ else
+@@ -706,8 +717,8 @@
  fi
  AC_MSG_RESULT($have_glib_2_14)
  
@@ -55,7 +65,7 @@ $NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
          PKG_CHECK_MODULES(VOLUME_ID, [$volume_id_module])
  	AC_SUBST(VOLUME_ID_CFLAGS)
  	AC_SUBST(VOLUME_ID_LIBS)
-@@ -718,14 +726,13 @@ esac
+@@ -718,14 +729,13 @@
  
  # blkid (util-linux-ng)
  case "$host" in
@@ -74,7 +84,7 @@ $NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
  esac
  
  # OS specific libs
-@@ -1086,6 +1093,9 @@ hald/linux/addons/Makefile
+@@ -1086,6 +1096,9 @@
  hald/solaris/Makefile
  hald/solaris/probing/Makefile
  hald/solaris/addons/Makefile
@@ -84,7 +94,7 @@ $NetBSD: patch-na,v 1.10 2011/03/30 13:05:41 obache Exp $
  hald/freebsd/Makefile
  hald/freebsd/probing/Makefile
  hald/freebsd/libprobe/Makefile
-@@ -1096,6 +1106,7 @@ libhal-storage/Makefile
+@@ -1096,6 +1109,7 @@
  tools/Makefile
  tools/freebsd/Makefile
  tools/linux/Makefile
