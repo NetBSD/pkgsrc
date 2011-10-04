@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/10/04 08:02:19 manu Exp $
+
+Look for MySQL in $PREFIX
+
+--- configure.ac.orig	2011-08-11 13:53:57.000000000 +0200
++++ configure.ac	2011-08-11 13:54:26.000000000 +0200
+@@ -19,9 +19,9 @@
+ XTRAINCPATHS="-I/usr/include/libxml2/"
+ 
+ # Checks for MySQL lib
+ AC_MSG_CHECKING([MySQL client library])
+-for i in / /usr /usr/local /opt/local; do
++for i in ${PREFIX}; do
+ 	if test -r $i/lib/libmysqlclient.a; then
+ 		MYSQL_LIBDIR=$i/lib/
+ 	elif test -r $i/lib/mysql/libmysqlclient.a; then
+ 		MYSQL_LIBDIR=$i/lib/mysql/
+@@ -38,9 +38,9 @@
+ 
+ 
+ # Checks for MySQL headers.
+ AC_MSG_CHECKING([MySQL headers])
+-for i in / /usr /usr/local /opt/local; do
++for i in ${PREFIX}; do
+ 	if test -r $i/include/mysql.h; then
+ 		MYSQL_HEADERDIR=$i/include/
+ 	elif test -r $i/include/mysql/mysql.h; then
+ 		MYSQL_HEADERDIR=$i/include/mysql/
