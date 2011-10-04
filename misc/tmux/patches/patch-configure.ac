@@ -1,6 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2011/09/16 05:18:58 minskim Exp $
+$NetBSD: patch-configure.ac,v 1.2 2011/10/04 11:55:34 ryoon Exp $
 
 Compatibility for b64_ntop.  SVN Revisions 2565 and 2568.
+Add DragonFly support, SVN 2600.
 
 --- configure.ac.orig	2011-07-09 16:00:17.000000000 +0000
 +++ configure.ac
@@ -51,3 +52,28 @@ Compatibility for b64_ntop.  SVN Revisions 2565 and 2568.
  AC_SEARCH_LIBS(inet_ntoa, nsl)
  AC_SEARCH_LIBS(socket, socket)
  AC_CHECK_LIB(xnet, socket)
+@@ -385,11 +420,15 @@ case "$host_os" in
+ 		AC_DEFINE(BROKEN_CMSG_FIRSTHDR)
+ 		PLATFORM=darwin
+ 		;;
++	*dragonfly*)
++		AC_MSG_RESULT(dragonfly)
++		PLATFORM=dragonfly
++		;;
+ 	*linux*)
+ 		AC_MSG_RESULT(linux)
+ 		PLATFORM=linux
+ 		;;
+-	*freebsd*|*dragonfly*)
++	*freebsd*)
+ 		AC_MSG_RESULT(freebsd)
+ 		PLATFORM=freebsd
+ 		;;
+@@ -421,6 +460,7 @@ esac
+ AC_SUBST(PLATFORM)
+ AM_CONDITIONAL(IS_AIX, test "x$PLATFORM" = xaix)
+ AM_CONDITIONAL(IS_DARWIN, test "x$PLATFORM" = xdarwin)
++AM_CONDITIONAL(IS_DRAGONFLY, test "x$PLATFORM" = xdragonfly)
+ AM_CONDITIONAL(IS_LINUX, test "x$PLATFORM" = xlinux)
+ AM_CONDITIONAL(IS_FREEBSD, test "x$PLATFORM" = xfreebsd)
+ AM_CONDITIONAL(IS_NETBSD, test "x$PLATFORM" = xnetbsd)
