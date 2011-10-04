@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.380 2011/10/03 11:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.381 2011/10/04 12:05:11 wiz Exp $
 #
 
 COMMENT=	Databases
@@ -15,7 +15,6 @@ SUBDIR+=	couchdb
 SUBDIR+=	csharp-mysql
 #SUBDIR+=	cstore	# not enabled at present due to its size requirements
 SUBDIR+=	datadraw
-SUBDIR+=	datapkg
 SUBDIR+=	db
 SUBDIR+=	db3
 SUBDIR+=	db4
@@ -286,6 +285,7 @@ SUBDIR+=	py-cassa
 SUBDIR+=	py-cdb
 SUBDIR+=	py-ckanclient
 SUBDIR+=	py-cx_Oracle
+SUBDIR+=	py-datapkg
 SUBDIR+=	py-elixir
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
