@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/10/04 08:02:19 manu Exp $
+
+Make sure time_t is defined, since <sys/timeb.h> uses it.
+
+--- src/phrasea_clock_t.h.orig	2011-08-11 17:00:07.000000000 +0200
++++ src/phrasea_clock_t.h	2011-08-11 17:00:18.000000000 +0200
+@@ -1,8 +1,9 @@
+ /* définition portable des structures système à dénomination variable */
+ #ifndef PHRASEA_CLOCK_T__INCLUDED
+ #define PHRASEA_CLOCK_T__INCLUDED 1
+ 
++#include <sys/types.h>
+ #include <sys/timeb.h>
+ 
+ /*
+ #ifndef PHRASEA_TIMEB
