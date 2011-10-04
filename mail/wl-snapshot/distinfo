@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/05 22:23:57 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/10/04 22:54:08 minskim Exp $
 
-SHA1 (wl-beta_2.15.6+0.20090322.orig.tar.gz) = 7bf5bec63025651d9ccf9ae49f7c96aa328858c5
-RMD160 (wl-beta_2.15.6+0.20090322.orig.tar.gz) = c7bd0be2f7c69850beebd89416228c20bae76018
-Size (wl-beta_2.15.6+0.20090322.orig.tar.gz) = 1137650 bytes
+SHA1 (wl-beta_2.15.9+0.20110420.orig.tar.gz) = af84474cf776847837886d86732d9eac79731fee
+RMD160 (wl-beta_2.15.9+0.20110420.orig.tar.gz) = 760cfc41f1da8e1edc48b6721fa69ecc35408b12
+Size (wl-beta_2.15.9+0.20110420.orig.tar.gz) = 1156180 bytes
 SHA1 (patch-aa) = ede97cce8b2574737a91941a905e067c940fb50a
 SHA1 (patch-ab) = b68648a7e9a9fba1d3d204d12a3fe647edb30f41
 SHA1 (patch-ac) = e161bbf1d5034c28b5376075a0173bd8cf967a39
