@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2378 2011/10/04 08:08:48 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2379 2011/10/04 09:00:09 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3819,3 +3819,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/phraseanet-indexer version 3.1.4 [manu 2011-10-04]
 	Added www/phraseanet version 3.1.4 [manu 2011-10-04]
 	Updated net/zeromq to 2.1.10 [obache 2011-10-04]
+	Updated misc/zyGrib to 5.0.6 [plunky 2011-10-04]
