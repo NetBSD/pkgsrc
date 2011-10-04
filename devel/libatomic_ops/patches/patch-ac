@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2008/12/22 02:47:24 jmcneill Exp $
+$NetBSD: patch-ac,v 1.2 2011/10/04 18:15:30 bsiegert Exp $
 
---- configure.ac.orig	2008-12-21 21:44:17.000000000 -0500
-+++ configure.ac	2008-12-21 21:44:24.000000000 -0500
-@@ -4,6 +4,7 @@
+--- configure.ac.orig	2011-06-15 11:41:30.000000000 +0000
++++ configure.ac
+@@ -4,6 +4,7 @@ AC_CANONICAL_TARGET([])
  AC_CONFIG_SRCDIR(src/atomic_ops.c)
  AM_INIT_AUTOMAKE
  AC_PROG_RANLIB

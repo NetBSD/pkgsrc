@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2009/01/31 20:05:57 sketch Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/04 18:15:29 bsiegert Exp $
 #
 .include "Makefile.version"
 
 DISTNAME=	libatomic_ops-${LIBATOMIC_OPS_SNAPDATE}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
+#MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bdwgc.sourceforge.net/
@@ -13,7 +14,7 @@ COMMENT=	Multi-platform library of atomic operations by Hans Boehm
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/libatomic_ops-${LIBATOMIC_OPS_VERSION}
+WRKSRC=		${WRKDIR}/libatomic_ops
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake automake autoconf autoreconf
 USE_LIBTOOL=	yes
