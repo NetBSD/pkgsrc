@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/08/27 22:05:12 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.27 2011/10/04 03:05:37 hiramatsu Exp $
 
 DISTNAME=	apel-10.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=	http://kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/apel/
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/elisp/APEL/
 COMMENT=	Portable Emacs library
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${DOCDIR} \
