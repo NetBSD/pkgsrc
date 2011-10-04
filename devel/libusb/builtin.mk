@@ -1,12 +1,15 @@
-# $NetBSD: builtin.mk,v 1.2 2011/04/21 14:46:29 hans Exp $
+# $NetBSD: builtin.mk,v 1.3 2011/10/04 14:19:47 hans Exp $
 
 BUILTIN_PKG:=	libusb
-PKGCONFIG_FILE.libusb=	/usr/bin/libusb-config
-BUILTIN_VERSION_SCRIPT.libusb=	${PKGCONFIG_FILE.libusb} --version \#
+PKGCONFIG_BASE.libusb=	/usr
+PKGCONFIG_FILE.libusb=	/usr/bin/libusb-config /usr/sfw/bin/libusb-config
+BUILTIN_VERSION_SCRIPT.libusb=	${FIND_FILES_libusb} --version \#
 .include "../../mk/buildlink3/pkgconfig-builtin.mk"
 
 .if !empty(USE_BUILTIN.libusb:M[yY][eE][sS])
-BUILDLINK_FILES.libusb=	bin/libusb-config
+LIBUSB_PREFIX=			${FIND_FILES_libusb:S/\/bin\/libusb-config//}
+BUILDLINK_FILES.libusb=		bin/libusb-config
+BUILDLINK_PASSTHRU_DIRS+=	${LIBUSB_PREFIX}/lib ${LIBUSB_PREFIX}/include
 
 .  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-libusb-pkgconfig
@@ -22,7 +25,7 @@ override-libusb-pkgconfig:
 	${RUN}						\
 	${MKDIR} ${BLKDIR_PKGCFG};			\
 	{						\
-	${ECHO} "prefix=/usr";				\
+	${ECHO} "prefix=${LIBUSB_PREFIX}";		\
 	${ECHO} "exec_prefix=\$${prefix}";		\
 	${ECHO} "libdir=\$${exec_prefix}/lib";		\
 	${ECHO} "includedir=\$${prefix}/include";	\
