@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2011/03/30 13:05:41 obache Exp $
+$NetBSD: distinfo,v 1.22 2011/10/04 10:31:37 dsainty Exp $
 
 SHA1 (hal-0.5.14.tar.bz2) = a6ec098d78112e18e2773afa5f9ed642b00c4c59
 RMD160 (hal-0.5.14.tar.bz2) = 0314dace9512bf49a62bd1556963fc60a6c9caf9
@@ -25,6 +25,7 @@ SHA1 (patch-at) = 040a018a7be5b28a0dc23dd66a0c10bbb0abc6bf
 SHA1 (patch-au) = c9e843f57b8a31f1bdc42478d450ea5606b4d7db
 SHA1 (patch-av) = 075ab5e265be4733d856a17184129d0b301bc0b8
 SHA1 (patch-ax) = 278cbf10dd288f7a4aeedd7545b325c1a82715db
-SHA1 (patch-na) = bd27a1386672df2d7805c303939854bb851d1227
+SHA1 (patch-na) = 2786db8149a55dbd5ea11419d789f420bac1993c
 SHA1 (patch-nb) = 1693b7a2faa5bee20a594f0b60b8ff6caea0efdc
 SHA1 (patch-nc) = 32453e49734902749ce24eb4364fc7f531986227
+SHA1 (patch-nd) = 877dcbafaca0cebd3fdce74c5a622721823c153b
