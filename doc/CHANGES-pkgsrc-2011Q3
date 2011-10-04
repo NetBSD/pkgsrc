@@ -1,7 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.1 2011/10/03 09:36:17 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.2 2011/10/04 23:12:30 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
 
 Created pkgsrc-2011Q3 branch [wiz 2011-10-03]
 
+Pullup ticket #3527 - requested by wiz
+graphics/pngcrush: security update
