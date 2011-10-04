@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2010/06/27 18:00:24 joerg Exp $
+# $NetBSD: options.mk,v 1.11 2011/10/04 20:55:35 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache pcre \
@@ -47,24 +47,22 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mrealip)
-CONFIGURE_ARGS+=       --with-http_realip_module
+CONFIGURE_ARGS+=	--with-http_realip_module
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=       --with-ipv6
+CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Muwsgi)
 EGFILES+=		uwsgi_params
 PLIST.uwsgi=		yes
 .else
-
-.if !empty(PKG_OPTIONS:Mpush)
+.  if !empty(PKG_OPTIONS:Mpush)
 PUSH=			nginx_http_push_module-0.692
 DISTFILES+=		${PUSH}.tar.gz
 SITES.${PUSH}.tar.gz=	http://pushmodule.slact.net/downloads/
-CONFIGURE_ARGS+=        --add-module=../${PUSH}
-.endif
-
+CONFIGURE_ARGS+=	--add-module=../${PUSH}
+.  endif
 CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
