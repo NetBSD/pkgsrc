@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2372 2011/10/04 01:53:32 schnoebe Exp $
+$NetBSD: CHANGES-2011,v 1.2373 2011/10/04 02:52:38 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3811,3 +3811,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/xe-guest-utilities 6.0.0 [sborrill 2011-10-03]
 	Added archivers/ruby-xz version 0.0.1 [minskim 2011-10-03]
 	Updated devel/cvsd to 1.0.22 [schnoebe 2011-10-03]
+	Updated textproc/p5-XML-LibXML to 1.88 [hiramatsu 2011-10-04]
