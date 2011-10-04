@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/04 07:42:35 manu Exp $
+
+SHA1 (php-fileinfo/fileinfo-1.0.4.tgz) = 60a146cf58357ab59f42061d35c0aa4bff8fb170
+RMD160 (php-fileinfo/fileinfo-1.0.4.tgz) = fedf7f72b1b2dca30f138ef31f507084d1392dbe
+Size (php-fileinfo/fileinfo-1.0.4.tgz) = 5835 bytes
