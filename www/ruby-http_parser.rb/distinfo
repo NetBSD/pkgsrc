@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/08/28 02:01:39 obache Exp $
+$NetBSD: distinfo,v 1.3 2011/10/04 12:01:02 obache Exp $
 
-SHA1 (http_parser.rb-0.5.2.gem) = dc0ff9b990c58581972bf738824d285473519bdd
-RMD160 (http_parser.rb-0.5.2.gem) = 038ec1bc52eff481f733762f2a667b5d9cc9a9ef
-Size (http_parser.rb-0.5.2.gem) = 146944 bytes
+SHA1 (http_parser.rb-0.5.3.gem) = 1ddcddfbab99975f97e104e62e790637a4b3cd6f
+RMD160 (http_parser.rb-0.5.3.gem) = b46da87b4da8fcddd2c87fe2deb667c140cb5ddb
+Size (http_parser.rb-0.5.3.gem) = 146944 bytes
