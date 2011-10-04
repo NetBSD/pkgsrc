@@ -1,13 +1,12 @@
-$NetBSD: patch-Clients_dns-sd.c,v 1.3 2011/06/03 19:30:39 shattered Exp $
+$NetBSD: patch-Clients_dns-sd.c,v 1.4 2011/10/04 14:08:48 hans Exp $
 
 --- Clients/dns-sd.c.orig	2010-05-15 00:16:11.000000000 +0000
 +++ Clients/dns-sd.c
 @@ -170,8 +170,19 @@ cl dns-sd.c -I../mDNSShared -DNOT_HAVE_G
- 	#include <netinet/in.h>		// For struct sockaddr_in()
  	#include <arpa/inet.h>		// For inet_addr()
  	#include <net/if.h>			// For if_nametoindex()
  	static const char kFilePathSep = '/';
-+#ifdef __linux__
++#if defined(__linux__) || defined(__sun)
 +	static size_t _sa_len(const struct sockaddr *addr)
 +		{
 +		if (addr->sa_family == AF_INET) return (sizeof(struct sockaddr_in));
