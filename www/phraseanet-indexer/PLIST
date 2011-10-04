@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/04 08:02:19 manu Exp $
+bin/phraseanet_indexer
