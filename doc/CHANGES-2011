@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2376 2011/10/04 07:44:11 manu Exp $
+$NetBSD: CHANGES-2011,v 1.2377 2011/10/04 08:05:36 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3815,3 +3815,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-Text-CSV_XS to 0.85 [hiramatsu 2011-10-04]
 	Updated textproc/groonga to 1.2.6 [obache 2011-10-04]
 	Added sysutils/php-fileinfo version 1.0.4 [manu 2011-10-04]
+	Added www/php-phrasea2 version 3.1.4 [manu 2011-10-04]
+	Added www/phraseanet-indexer version 3.1.4 [manu 2011-10-04]
+	Added www/phraseanet version 3.1.4 [manu 2011-10-04]
