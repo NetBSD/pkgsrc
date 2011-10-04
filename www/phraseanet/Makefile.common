@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/10/04 08:03:43 manu Exp $
+#
+
+# used by www/phraseanet/Makefile
+# used by www/php-phrasea2/Makefile
+# used by www/phraseanet-indexer/Makefile
+
+VERS=		3.1.4
+DISTNAME=	phraseanet-v3.1.4-linux
+CATEGORIES=	www multimedia
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phraseanet/}
+EXTRACT_SUFX=	.tar.gz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.phraseanet.com/
+COMMENT=	Digital asset management
+LICENSE=	gnu-gpl-v3
