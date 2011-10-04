@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2375 2011/10/04 06:36:33 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2376 2011/10/04 07:44:11 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3814,3 +3814,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-XML-LibXML to 1.88 [hiramatsu 2011-10-04]
 	Updated textproc/p5-Text-CSV_XS to 0.85 [hiramatsu 2011-10-04]
 	Updated textproc/groonga to 1.2.6 [obache 2011-10-04]
+	Added sysutils/php-fileinfo version 1.0.4 [manu 2011-10-04]
