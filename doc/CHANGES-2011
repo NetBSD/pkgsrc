@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2386 2011/10/04 19:33:47 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2387 2011/10/04 19:49:31 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3826,3 +3826,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-Text-CSV to 1.21 [hiramatsu 2011-10-04]
 	Updated x11/x3270 to 3.3.12ga7 [gls 2011-10-04]
 	Updated editors/emacs-snapshot to 24.0.90.20111004 [minskim 2011-10-04]
+	Updated sysutils/fabric to 1.2.2 [gls 2011-10-04]
