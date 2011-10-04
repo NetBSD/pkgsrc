@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.34 2011/10/04 13:07:21 hans Exp $
+# $NetBSD: tools.SunOS.mk,v 1.35 2011/10/04 13:08:42 hans Exp $
 #
 # System-supplied tools for the Solaris operating system.
 #
@@ -17,6 +17,9 @@ TOOLS_PLATFORM.bash?=		/bin/bash
 .if exists(/usr/bin/bison)
 TOOLS_PLATFORM.bison?=		/usr/bin/bison
 TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
+.elif exists(/usr/sfw/bison)
+TOOLS_PLATFORM.bison?=		/usr/sfw/bin/bison
+TOOLS_PLATFORM.bison-yacc?=	/usr/sfw/bin/bison -y
 .endif
 .if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
@@ -53,6 +56,10 @@ TOOLS_PLATFORM.echo?=		echo			# shell builtin
 TOOLS_PLATFORM.grep?=		/usr/gnu/bin/grep
 TOOLS_PLATFORM.egrep?=		/usr/gnu/bin/grep -E
 TOOLS_PLATFORM.fgrep?=		/usr/gnu/bin/fgrep
+.elif exists(/usr/sfw/bin/ggrep)
+TOOLS_PLATFORM.grep?=		/usr/sfw/bin/ggrep
+TOOLS_PLATFORM.egrep?=		/usr/sfw/bin/ggrep -E
+TOOLS_PLATFORM.fgrep?=		/usr/sfw/bin/gfgrep
 .else
 TOOLS_PLATFORM.grep?=		/usr/xpg4/bin/grep
 TOOLS_PLATFORM.egrep?=		/usr/xpg4/bin/grep -E
@@ -74,6 +81,9 @@ TOOLS_PLATFORM.find?=		/usr/bin/find
 .if exists(/usr/bin/flex)
 TOOLS_PLATFORM.flex?=		/usr/bin/flex
 TOOLS_PLATFORM.lex?=		/usr/bin/flex
+.elif exists(/usr/sfw/bin/flex)
+TOOLS_PLATFORM.flex?=		/usr/sfw/bin/flex
+TOOLS_PLATFORM.lex?=		/usr/sfw/bin/flex
 .endif
 .if exists(/usr/bin/gawk)
 TOOLS_PLATFORM.gawk?=		/usr/bin/gawk
@@ -83,6 +93,8 @@ TOOLS_PLATFORM.gm4?=		/usr/bin/gm4
 .endif
 .if exists(/usr/bin/gmake)
 TOOLS_PLATFORM.gmake?=		/usr/bin/gmake
+.elif exists(/usr/sfw/bin/gmake)
+TOOLS_PLATFORM.gmake?=		/usr/sfw/bin/gmake
 .endif
 .if exists(/usr/bin/groff)
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
@@ -97,6 +109,10 @@ TOOLS_PLATFORM.gsoelim?=	/usr/bin/gsoelim
 TOOLS_PLATFORM.bsdtar?=		/usr/bin/gtar
 TOOLS_PLATFORM.gtar?=		/usr/bin/gtar
 TOOLS_PLATFORM.tar?=		/usr/bin/gtar
+.elif exists(/usr/sfw/bin/gtar)
+TOOLS_PLATFORM.bsdtar?=		/usr/sfw/bin/gtar
+TOOLS_PLATFORM.gtar?=		/usr/sfw/bin/gtar
+TOOLS_PLATFORM.tar?=		/usr/sfw/bin/gtar
 .endif
 .if exists(/usr/bin/gzip)
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gzip -df
@@ -108,6 +124,8 @@ TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/xpg4/bin/id
 .if exists(/usr/bin/install-info)
 TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
+.elif exists(/usr/sfw/bin/install-info)
+TOOLS_PLATFORM.install-info?=	/usr/sfw/bin/install-info
 .endif
 .if exists(/usr/bin/ginstall)	# if we are using OpenSolaris
 TOOLS_PLATFORM.install?=	/usr/bin/ginstall
@@ -120,6 +138,8 @@ TOOLS_PLATFORM.m4?=		/usr/ccs/bin/m4
 TOOLS_PLATFORM.mail?=		/usr/bin/mailx
 .if exists(/usr/bin/makeinfo)
 TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
+.elif exists(/usr/sfw/bin/makeinfo)
+TOOLS_PLATFORM.makeinfo?=	/usr/sfw/bin/makeinfo
 .endif
 TOOLS_PLATFORM.mkdir?=		/usr/bin/mkdir -p
 .if exists(/usr/bin/mktemp)
@@ -148,6 +168,8 @@ TOOLS_PLATFORM.printf?=		/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 .if exists(/usr/gnu/bin/readelf)
 TOOLS_PLATFORM.readelf?=	/usr/gnu/bin/readelf
+.elif exists(/usr/sfw/bin/greadelf)
+TOOLS_PLATFORM.readelf?=	/usr/sfw/bin/greadelf
 .endif
 TOOLS_PLATFORM.rm?=		/usr/bin/rm
 TOOLS_PLATFORM.rmdir?=		/usr/bin/rmdir
@@ -174,6 +196,8 @@ TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
 .if exists(/usr/bin/texi2html)
 TOOLS_PLATFORM.texi2html?=	/usr/bin/texi2html
+.elif exists(/usr/sfw/bin/texi2html)
+TOOLS_PLATFORM.texi2html?=	/usr/sfw/bin/texi2html
 .endif
 TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/xpg4/bin/tr
