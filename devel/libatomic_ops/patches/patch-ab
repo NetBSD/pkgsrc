@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2008/12/22 02:47:24 jmcneill Exp $
+$NetBSD: patch-ab,v 1.2 2011/10/04 18:15:30 bsiegert Exp $
 
---- src/Makefile.am.orig	2006-07-11 19:29:29.000000000 -0400
-+++ src/Makefile.am	2008-12-21 21:42:31.000000000 -0500
-@@ -3,14 +3,14 @@
+--- src/Makefile.am.orig	2009-09-29 13:41:49.000000000 +0000
++++ src/Makefile.am
+@@ -3,14 +3,14 @@ SUBDIRS=atomic_ops
  AM_CFLAGS=@PICFLAG@
  
  include_HEADERS=atomic_ops.h atomic_ops_stack.h atomic_ops_malloc.h
