@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/04 12:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/04 12:04:44 wiz Exp $
 #
 
 DISTNAME=	datapkg-0.8
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/okfn-datapkg-//:C/-0-.*$//}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	http://pypi.python.org/packages/source/d/datapkg/
 
