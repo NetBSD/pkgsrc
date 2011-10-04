@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/03 19:04:02 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/10/04 21:38:21 marino Exp $
 
 SHA1 (gprbuild-aux-20101120.tar.bz2) = 84629d790c4f9479fdce6ec6e6f732fa60089afb
 RMD160 (gprbuild-aux-20101120.tar.bz2) = 560185e9733af77c4a6e9c37e510765e30b438ad
 Size (gprbuild-aux-20101120.tar.bz2) = 1470482 bytes
 SHA1 (patch-aa) = 1fe9a3055551696ad5b090b661a2ed3a3b66ddee
+SHA1 (patch-ab) = cbc34ed39826b55bc1ac41fa21fffc50f1f7cdd1
