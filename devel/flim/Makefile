@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/08/06 01:44:48 minskim Exp $
+# $NetBSD: Makefile,v 1.33 2011/10/04 03:07:53 hiramatsu Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/comp/emacsen/lisp/flim
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/elisp/FLIM/
 COMMENT=	Emacs lisp library for message representation/encoding
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
