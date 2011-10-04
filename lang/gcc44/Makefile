@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/07/14 12:52:35 hans Exp $
+# $NetBSD: Makefile,v 1.26 2011/10/04 14:06:47 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -36,11 +36,11 @@ UNLIMIT_RESOURCES+=	stacksize
 
 # Determine whether to use binutils
 .if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/bin/ld
-. if !exists(/usr/bin/gas)
-CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/bin/as
+CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
+. if !exists(/usr/sfw/bin/gas)
+CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
 . else
-CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/gas
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 .endif
 .endif
 
