@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1 2011/10/04 15:29:34 drochner Exp $
+
+--- ./config/bootstrap.shlib.orig	2011-01-03 01:01:33.000000000 +0000
++++ ./config/bootstrap.shlib
+@@ -40,10 +40,10 @@ doit ()
+     fi
+ }
+ 
+-case `set -o` in
+-*posix*) set -o posix  ;;
+-*) exec bash $0 ${1+"$@"} ;;
+-esac
++#case `set -o` in
++#*posix*) set -o posix  ;;
++#*) exec bash $0 ${1+"$@"} ;;
++#esac
+ 
+ case "${SHELL}" in
+ *[akz]sh) : ;;
