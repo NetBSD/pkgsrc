@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:02:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/04 22:54:08 minskim Exp $
 
-DISTNAME=	wl-beta_2.15.6+0.20090322.orig
+DISTNAME=	wl-beta_2.15.9+0.20110420.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/beta_//:S/+0//:S/.orig//}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/wl-beta/}
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	patch
-WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
+WRKSRC=		${WRKDIR}/wanderlust
 
 BUILD_TARGET=	all info
 INSTALL_TARGET=	install install-info
 MAKE_FLAGS+=	INFODIR=${DESTDIR}${EMACS_INFOPREFIX}
 MAKE_FLAGS+=	LISPDIR=${DESTDIR}${EMACS_LISPPREFIX}
-MAKE_FLAGS+=	EMACS=${EMACS_FLAVOR}
+MAKE_FLAGS+=	EMACS=${EMACS_BIN}
 MAKE_FLAGS+=	PIXMAPDIR=${DESTDIR}${PREFIX}/share/wl
 INFO_FILES=	yes
 
