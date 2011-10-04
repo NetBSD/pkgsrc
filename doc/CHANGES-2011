@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2381 2011/10/04 12:01:17 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2382 2011/10/04 12:06:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/zyGrib to 5.0.6 [plunky 2011-10-04]
 	Updated graphics/pngcrush to 1.7.17 [adam 2011-10-04]
 	Updated www/ruby-http_parser.rb to 0.5.3 [obache 2011-10-04]
+	Renamed databases/datapkg to databases/py-datapkg [wiz 2011-01-04]
