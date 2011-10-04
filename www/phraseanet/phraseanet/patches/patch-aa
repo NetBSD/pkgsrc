@@ -1,0 +1,16 @@
+--- ./www/login/index.php.orig	2011-09-11 07:16:52.000000000 +0200
++++ ./www/login/index.php	2011-09-11 07:18:12.000000000 +0200
+@@ -114,8 +114,13 @@
+ 														</div>'.recaptcha_get_html(GV_captcha_public_key).'</div>';
+ 		}
+ 
+ 
++if(file_exists(GV_RootPath.'config/personnalisation/sso.class.php'))
++{
++	include(GV_RootPath.'config/personnalisation/sso.class.php');
++}
++
+ $twig = new supertwig();
+ 	
+ $twig->display('login/index.twig', array(
+ 				'module_name'		=> _('Accueil'),
