@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2011/08/25 03:13:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.27 2011/10/04 19:30:01 minskim Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -935,6 +935,8 @@ share/emacs/${EMACS_VERSION}/etc/srecode/template.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/test.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/texi.srt
 share/emacs/${EMACS_VERSION}/etc/srecode/wisent.srt
+share/emacs/${EMACS_VERSION}/etc/themes/adwaita-theme.el
+share/emacs/${EMACS_VERSION}/etc/themes/deeper-blue-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/dichromacy-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/light-blue-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/manoj-dark-theme.el
@@ -944,6 +946,7 @@ share/emacs/${EMACS_VERSION}/etc/themes/tango-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tsdh-dark-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/tsdh-light-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/wheatgrass-theme.el
+share/emacs/${EMACS_VERSION}/etc/themes/whiteboard-theme.el
 share/emacs/${EMACS_VERSION}/etc/themes/wombat-theme.el
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL
 share/emacs/${EMACS_VERSION}/etc/tutorials/TUTORIAL.bg
@@ -1034,10 +1037,10 @@ share/emacs/${EMACS_VERSION}/leim/quail/hebrew.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/hebrew.elc
 share/emacs/${EMACS_VERSION}/leim/quail/indian.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/indian.elc
-share/emacs/${EMACS_VERSION}/leim/quail/ipa.el.gz
-share/emacs/${EMACS_VERSION}/leim/quail/ipa.elc
 share/emacs/${EMACS_VERSION}/leim/quail/ipa-praat.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/ipa-praat.elc
+share/emacs/${EMACS_VERSION}/leim/quail/ipa.el.gz
+share/emacs/${EMACS_VERSION}/leim/quail/ipa.elc
 share/emacs/${EMACS_VERSION}/leim/quail/japanese.el.gz
 share/emacs/${EMACS_VERSION}/leim/quail/japanese.elc
 share/emacs/${EMACS_VERSION}/leim/quail/lao.el.gz
@@ -2922,10 +2925,10 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-C.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-C.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-R.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-R.elc
-share/emacs/${EMACS_VERSION}/lisp/org/ob-awk.el.gz
-share/emacs/${EMACS_VERSION}/lisp/org/ob-awk.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-asymptote.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-asymptote.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-awk.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-awk.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-calc.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-calc.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-clojure.el.gz
@@ -2964,10 +2967,10 @@ share/emacs/${EMACS_VERSION}/lisp/org/ob-lisp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lisp.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lob.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-lob.elc
-share/emacs/${EMACS_VERSION}/lisp/org/ob-maxima.el.gz
-share/emacs/${EMACS_VERSION}/lisp/org/ob-maxima.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-matlab.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-matlab.elc
+share/emacs/${EMACS_VERSION}/lisp/org/ob-maxima.el.gz
+share/emacs/${EMACS_VERSION}/lisp/org/ob-maxima.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-mscgen.el.gz
 share/emacs/${EMACS_VERSION}/lisp/org/ob-mscgen.elc
 share/emacs/${EMACS_VERSION}/lisp/org/ob-ocaml.el.gz
@@ -3635,12 +3638,12 @@ share/emacs/${EMACS_VERSION}/lisp/url/url-dired.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-dired.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-expand.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-expand.elc
-share/emacs/${EMACS_VERSION}/lisp/url/url-future.el.gz
-share/emacs/${EMACS_VERSION}/lisp/url/url-future.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-file.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-file.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-ftp.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-ftp.elc
+share/emacs/${EMACS_VERSION}/lisp/url/url-future.el.gz
+share/emacs/${EMACS_VERSION}/lisp/url/url-future.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-gw.el.gz
 share/emacs/${EMACS_VERSION}/lisp/url/url-gw.elc
 share/emacs/${EMACS_VERSION}/lisp/url/url-handlers.el.gz
