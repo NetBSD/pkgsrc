@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/05 22:15:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/05 22:26:48 ryoon Exp $
 #
 
 DISTNAME=	openbabel-2.3.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openbabel/}
 
-MAINTAINER=	oivulf@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openbabel.org/
 COMMENT=	Chemistry file translation program
 LICENSE=	gnu-gpl-v2
