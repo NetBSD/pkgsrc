@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2011/10/05 14:21:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/10/05 14:26:51 ryoon Exp $
 bin/fotoxx
-man/man1/fotoxx.1.gz
+man/man1/fotoxx.1
 share/applications/kornelix-fotoxx.desktop
 share/doc/fotoxx/CHANGES
 share/doc/fotoxx/COPYING
