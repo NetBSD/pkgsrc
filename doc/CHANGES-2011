@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2392 2011/10/05 06:28:18 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2393 2011/10/05 07:45:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3832,3 +3832,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/cyrus-imapd23 to 2.3.18 [obache 2011-10-05]
 	Updated mail/cyrus-imapd24 to 2.4.12 [obache 2011-10-05]
 	Updated devel/p5-IO-All to 0.43 [hiramatsu 2011-10-05]
+	Added math/py-roman version 1.4.0 [obache 2011-10-05]
