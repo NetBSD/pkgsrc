@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2398 2011/10/05 09:24:03 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2399 2011/10/05 14:29:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3838,3 +3838,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-DBD-CSV to 0.33 [hiramatsu 2011-10-05]
 	Updated chat/pidgin-facebookchat to 1.27nb11 [obache 2011-10-05]
 	Updated chat/pidgin-facebookchat to 1.69 [obache 2011-10-05]
+	Updated graphics/fotoxx to 11.10 [ryoon 2011-10-05]
