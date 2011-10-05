@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/07/03 18:01:13 smb Exp $
+$NetBSD: distinfo,v 1.3 2011/10/05 08:36:42 obache Exp $
 
-SHA1 (pidgin-facebookchat-source-1.27.tar.bz2) = 63fa5d2903f8b1ff68f30b92ef7491fe931785df
-RMD160 (pidgin-facebookchat-source-1.27.tar.bz2) = 240669e33af6b27ca74a82b691c85494371e63a9
-Size (pidgin-facebookchat-source-1.27.tar.bz2) = 32284 bytes
-SHA1 (patch-aa) = 1ad35e329970bfc4333c526f9fec1b8cd42cf6de
+SHA1 (pidgin-facebookchat-source-1.69.tar.bz2) = a266e8aeb0b61fde2c5d84fcad93c0615b69a76a
+RMD160 (pidgin-facebookchat-source-1.69.tar.bz2) = a38b0576bdd9f7f61156e7720231fa7424366a45
+Size (pidgin-facebookchat-source-1.69.tar.bz2) = 50532 bytes
+SHA1 (patch-aa) = 37010d7dca5d31379f09e7b7bc1813a2ec423c1b
