@@ -1,0 +1,53 @@
+$NetBSD: patch-Makefile,v 1.1 2011/10/05 21:41:25 ryoon Exp $
+
+Libtoolize
+
+--- Makefile.orig	2010-06-30 19:58:35.000000000 +0000
++++ Makefile
+@@ -40,7 +40,7 @@ THREADLIB_mingw=
+ THREADLIB=$(THREADLIB_$(SYS))
+ SLIBS=$(THREADLIB) $(LIBS)
+ 
+-LIBRTMP=librtmp/librtmp.a
++LIBRTMP=librtmp/librtmp.la
+ INCRTMP=librtmp/rtmp_sys.h librtmp/rtmp.h librtmp/log.h librtmp/amf.h
+ 
+ EXT_posix=
+@@ -53,8 +53,9 @@ progs:	rtmpdump rtmpgw rtmpsrv rtmpsuck
+ 
+ install:	progs
+ 	-mkdir -p $(BINDIR) $(SBINDIR) $(MANDIR)/man1 $(MANDIR)/man8
+-	cp rtmpdump$(EXT) $(BINDIR)
+-	cp rtmpgw$(EXT) rtmpsrv$(EXT) rtmpsuck$(EXT) $(SBINDIR)
++	cd librtmp; $(MAKE) install $(MAKEFLAGS)
++	$(LIBTOOL) --tag=CC --mode=install $(INSTALL) rtmpdump$(EXT) $(BINDIR)
++	$(LIBTOOL) --tag=CC --mode=install $(INSTALL) rtmpgw$(EXT) rtmpsrv$(EXT) rtmpsuck$(EXT) $(SBINDIR)
+ 	cp rtmpdump.1 $(MANDIR)/man1
+ 	cp rtmpgw.8 $(MANDIR)/man8
+ 	@cd librtmp; $(MAKE) install
+@@ -72,19 +73,16 @@ $(LIBRTMP): FORCE
+ # we use both since either make will ignore the one it doesn't recognize
+ 
+ rtmpdump: rtmpdump.o $(LIBRTMP)
+-	$(CC) $(LDFLAGS) $^ $> -o $@$(EXT) $(LIBS)
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $^ $> -o $@$(EXT) $(LIBS)
+ 
+ rtmpsrv: rtmpsrv.o thread.o $(LIBRTMP)
+-	$(CC) $(LDFLAGS) $^ $> -o $@$(EXT) $(SLIBS)
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $^ $> -o $@$(EXT) $(SLIBS)
+ 
+ rtmpsuck: rtmpsuck.o thread.o $(LIBRTMP)
+-	$(CC) $(LDFLAGS) $^ $> -o $@$(EXT) $(SLIBS)
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $^ $> -o $@$(EXT) $(SLIBS)
+ 
+ rtmpgw: rtmpgw.o thread.o $(LIBRTMP)
+-	$(CC) $(LDFLAGS) $^ $> -o $@$(EXT) $(SLIBS)
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $^ $> -o $@$(EXT) $(SLIBS)
+ 
+-rtmpgw.o: rtmpgw.c $(INCRTMP) Makefile
+-rtmpdump.o: rtmpdump.c $(INCRTMP) Makefile
+-rtmpsrv.o: rtmpsrv.c $(INCRTMP) Makefile
+-rtmpsuck.o: rtmpsuck.c $(INCRTMP) Makefile
+-thread.o: thread.c thread.h
++%.lo:	%.c
++	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
