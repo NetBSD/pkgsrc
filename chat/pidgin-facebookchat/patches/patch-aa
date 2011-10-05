@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2011/10/05 08:36:42 obache Exp $
+$NetBSD: patch-aa,v 1.3 2011/10/05 09:23:44 obache Exp $
 
 * not to build&install redundant plugins.
 * pidin>=2.7.9 contains facebook.png.
 
---- Makefile.orig	2008-06-25 22:35:12.000000000 +0000
+--- Makefile.orig	2010-10-08 11:35:45.000000000 +0000
 +++ Makefile
 @@ -1,5 +1,5 @@
  #Customisable stuff here
 -LINUX32_COMPILER = i686-pc-linux-gnu-gcc
-+LINUX32_COMPILER = gcc
++LINUX32_COMPILER = ${CC}
  LINUX64_COMPILER = x86_64-pc-linux-gnu-gcc
  WIN32_COMPILER = /usr/bin/i586-mingw32-gcc
- #LINUX_ARM_COMPILER = arm-pc-linux-gnu-gcc
-@@ -19,16 +19,10 @@ DEB_PACKAGE_DIR = ./debdir
+ WIN32_WINDRES = i586-mingw32-windres
+@@ -52,16 +52,10 @@ FACEBOOK_SOURCES = \
  #Standard stuff here
  .PHONY:	all clean install sourcepackage
  
