@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2011/04/22 13:42:07 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2011/10/05 02:14:19 obache Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -19,6 +19,9 @@ pkgbase:= curl
 .  endif
 .  if !empty(PKG_BUILD_OPTIONS.curl:Mldap)
 .    include "../../databases/openldap-client/buildlink3.mk"
+.  endif
+.  if !empty(PKG_BUILD_OPTIONS.curl:Mrtmp)
+.    include "../../net/rtmpdump/buildlink3.mk"
 .  endif
 
 .include "../../devel/libidn/buildlink3.mk"
