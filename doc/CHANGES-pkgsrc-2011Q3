@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.2 2011/10/04 23:12:30 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.3 2011/10/05 09:27:44 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -7,3 +7,7 @@ Created pkgsrc-2011Q3 branch [wiz 2011-10-03]
 
 Pullup ticket #3527 - requested by wiz
 graphics/pngcrush: security update
+Pullup ticket #3528 - requested by obache
+mail/cyrus-imapd23: security update
+Pullup ticket #3529 - requested by obache
+mail/cyrus-imapd24: security update
