@@ -1,0 +1,65 @@
+$NetBSD: patch-librtmp_Makefile,v 1.1 2011/10/05 21:41:25 ryoon Exp $
+
+Libtoolize
+
+--- librtmp/Makefile.orig	2010-06-30 20:01:28.000000000 +0000
++++ librtmp/Makefile
+@@ -52,34 +52,46 @@ MANDIR=$(DESTDIR)$(mandir)
+ 
+ OBJS=rtmp.o log.o amf.o hashswf.o parseurl.o
+ 
+-all:	librtmp.a $(SO_LIB)
++all:	librtmp.la
+ 
+ clean:
+ 	rm -f *.o *.a *.so *.$(SO_EXT)
+ 
+-librtmp.a: $(OBJS)
+-	$(AR) rs $@ $?
++librtmp.la: $(OBJS)
++	${LIBTOOL} --mode=link --tag=CC \
++		${CC} -o ${.TARGET:.a=.la} \
++			${OBJS:.o=.lo} \
++			-rpath ${PREFIX}/lib
+ 
+ librtmp.$(SO_EXT): $(OBJS)
+-	$(CC) -shared -Wl,-soname,$@ $(LDFLAGS) -o $@ $^ $> $(CRYPTO_LIB)
++	${LIBTOOL} --mode=link --tag=CC \
++		${CC} -o ${.TARGET:.a=.la} \
++		${OBJS:.o=.lo} \
++		-rpath ${PREFIX}/lib \
++		-version-info 0:0
+ 	ln -sf $@ librtmp.so
+ 
+-log.o: log.c log.h Makefile
+-rtmp.o: rtmp.c rtmp.h rtmp_sys.h handshake.h dh.h log.h amf.h Makefile
+-amf.o: amf.c amf.h bytes.h log.h Makefile
+-hashswf.o: hashswf.c http.h rtmp.h rtmp_sys.h Makefile
+-parseurl.o: parseurl.c rtmp.h rtmp_sys.h log.h Makefile
++log.o:
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c log.c
++rtmp.o:
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c rtmp.c
++amf.o:
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c amf.c
++hashswf.o:
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c hashswf.c
++parseurl.o:
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c parseurl.c
+ 
+ librtmp.pc: librtmp.pc.in Makefile
+ 	sed -e "s;@prefix@;$(prefix);" -e "s;@VERSION@;$(VERSION);" \
+ 		-e "s;@CRYPTO_REQ@;$(CRYPTO_REQ);" librtmp.pc.in > $@
+ 
+-install:	install_base $(SO_INST)
++install:	install_base
+ 
+-install_base:	librtmp.a librtmp.pc
++install_base:	librtmp.la librtmp.pc
+ 	-mkdir -p $(INCDIR) $(LIBDIR)/pkgconfig $(MANDIR)/man3
+ 	cp amf.h http.h log.h rtmp.h $(INCDIR)
+-	cp librtmp.a $(LIBDIR)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} librtmp.la $(LIBDIR)
+ 	cp librtmp.pc $(LIBDIR)/pkgconfig
+ 	cp librtmp.3 $(MANDIR)/man3
+ 
