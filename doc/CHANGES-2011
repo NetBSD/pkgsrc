@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2390 2011/10/05 01:18:49 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2391 2011/10/05 01:33:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3830,3 +3830,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libatomic_ops to 20110807 [bsiegert 2011-10-04]
 	Updated mail/wl-snapshot to 2.15.9.20110420 [minskim 2011-10-04]
 	Updated mail/cyrus-imapd23 to 2.3.18 [obache 2011-10-05]
+	Updated mail/cyrus-imapd24 to 2.4.12 [obache 2011-10-05]
