@@ -1,6 +1,7 @@
-$NetBSD: patch-src_d__array.c,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+$NetBSD: patch-src_d__array.c,v 1.2 2011/10/05 20:02:48 wiz Exp $
 
 Detect endianness on NetBSD.
+https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478072
 
 --- src/d_array.c.orig	2010-07-28 20:55:17.000000000 +0000
 +++ src/d_array.c
