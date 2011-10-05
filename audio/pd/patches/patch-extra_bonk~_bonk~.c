@@ -1,18 +1,21 @@
-$NetBSD: patch-extra_bonk~_bonk~.c,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+$NetBSD: patch-extra_bonk~_bonk~.c,v 1.2 2011/10/05 20:02:48 wiz Exp $
 
 alloca.h is not portable.
+https://sourceforge.net/tracker/?func=detail&aid=3411730&group_id=55736&atid=478072
 
 --- extra/bonk~/bonk~.c.orig	2010-08-19 01:37:00.000000000 +0000
 +++ extra/bonk~/bonk~.c
-@@ -82,11 +82,7 @@ void *bonk_class;
+@@ -82,10 +82,10 @@ void *bonk_class;
  static t_class *bonk_class;
  #endif
  
 -#ifdef _WIN32
- #include <malloc.h>
+-#include <malloc.h>
 -#elif ! defined(_MSC_VER)
--#include <alloca.h>
--#endif
++#if defined(HAVE_ALLOCA_H)
+ #include <alloca.h>
++#elsif defined(HAVE_MALLOC_H)
++#include <malloc.h>
+ #endif
  
  /* ------------------------ bonk~ ----------------------------- */
- 

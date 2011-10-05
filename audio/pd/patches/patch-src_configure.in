@@ -1,0 +1,16 @@
+$NetBSD: patch-src_configure.in,v 1.1 2011/10/05 20:02:48 wiz Exp $
+
+Fix unportable test(1) construct.
+https://sourceforge.net/tracker/?func=detail&aid=3411735&group_id=55736&atid=478072
+
+--- src/configure.in.orig	2011-02-27 00:52:58.000000000 +0000
++++ src/configure.in
+@@ -292,7 +292,7 @@ then
+     then
+         fat="no"
+     fi
+-    if test "x$fat" == "xyes";
++    if test "x$fat" = "xyes";
+     then
+         MORECFLAGS="-isysroot /Developer/SDKs/MacOSX10.4u.sdk \
+             -arch i386 -arch ppc -Wno-error"

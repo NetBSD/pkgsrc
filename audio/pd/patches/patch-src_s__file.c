@@ -1,6 +1,7 @@
-$NetBSD: patch-src_s__file.c,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+$NetBSD: patch-src_s__file.c,v 1.2 2011/10/05 20:02:48 wiz Exp $
 
 File handling under NetBSD is the same as under Linux.
+https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478072
 
 --- src/s_file.c.orig	2011-03-19 22:22:27.000000000 +0000
 +++ src/s_file.c

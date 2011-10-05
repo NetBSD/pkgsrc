@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2011/10/05 20:02:48 wiz Exp $
+
+alloca.h is not portable.
+https://sourceforge.net/tracker/?func=detail&aid=3411730&group_id=55736&atid=478072
+
+--- configure.ac.orig	2011-02-02 04:42:27.000000000 +0000
++++ configure.ac
+@@ -214,7 +214,7 @@ AM_CONDITIONAL(FFTW, test x$fftw = xyes)
+ 
+ # Checks for header files.
+ AC_FUNC_ALLOCA
+-AC_CHECK_HEADERS([fcntl.h limits.h malloc.h netdb.h netinet/in.h stddef.h stdlib.h string.h sys/ioctl.h sys/param.h sys/socket.h sys/soundcard.h sys/time.h sys/timeb.h unistd.h])
++AC_CHECK_HEADERS([alloca.h fcntl.h limits.h malloc.h netdb.h netinet/in.h stddef.h stdlib.h string.h sys/ioctl.h sys/param.h sys/socket.h sys/soundcard.h sys/time.h sys/timeb.h unistd.h])
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
+ AC_TYPE_INT16_T

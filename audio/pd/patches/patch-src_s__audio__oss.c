@@ -1,7 +1,8 @@
-$NetBSD: patch-src_s__audio__oss.c,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+$NetBSD: patch-src_s__audio__oss.c,v 1.2 2011/10/05 20:02:48 wiz Exp $
 
 Use proper soundcard.h include on NetBSD and add missing argument
 to ioctl().
+https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478072
 
 --- src/s_audio_oss.c.orig	2011-03-07 01:33:39.000000000 +0000
 +++ src/s_audio_oss.c
