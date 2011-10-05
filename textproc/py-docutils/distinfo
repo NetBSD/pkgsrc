@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2010/12/02 15:00:03 wiz Exp $
+$NetBSD: distinfo,v 1.13 2011/10/05 07:47:28 obache Exp $
 
-SHA1 (docutils-0.7.tar.gz) = e82988f826844ef8d8bf28fa286a19de211349cd
-RMD160 (docutils-0.7.tar.gz) = 73c832860405c3cba655c92aacccca1582c8f905
-Size (docutils-0.7.tar.gz) = 1404131 bytes
-SHA1 (patch-aa) = 85b585b0920c56210e2e50cc6b8dbb350704658c
+SHA1 (docutils-0.8.1.tar.gz) = 5c23bf94b46d5ad786dd6f278233d1f16c3047e8
+RMD160 (docutils-0.8.1.tar.gz) = 372abf9f47af11f0e63ae11f35f7db450097d960
+Size (docutils-0.8.1.tar.gz) = 1499832 bytes
