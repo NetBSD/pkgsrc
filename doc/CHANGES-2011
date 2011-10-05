@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2394 2011/10/05 07:47:46 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2395 2011/10/05 07:53:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3834,3 +3834,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-IO-All to 0.43 [hiramatsu 2011-10-05]
 	Added math/py-roman version 1.4.0 [obache 2011-10-05]
 	Updated textproc/py-docutils to 0.8.1 [obache 2011-10-05]
+	Updated textproc/py-sphinx to 1.0.8 [obache 2011-10-05]
