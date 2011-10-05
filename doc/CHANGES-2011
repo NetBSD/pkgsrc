@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2397 2011/10/05 08:36:59 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2398 2011/10/05 09:24:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3837,3 +3837,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-sphinx to 1.0.8 [obache 2011-10-05]
 	Updated databases/p5-DBD-CSV to 0.33 [hiramatsu 2011-10-05]
 	Updated chat/pidgin-facebookchat to 1.27nb11 [obache 2011-10-05]
+	Updated chat/pidgin-facebookchat to 1.69 [obache 2011-10-05]
