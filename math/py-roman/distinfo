@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/05 07:43:12 obache Exp $
+
+SHA1 (roman-1.4.0.tar.gz) = 3d9cf0c46a4e3558785a9f7c90cd96a2d31dc9b0
+RMD160 (roman-1.4.0.tar.gz) = 9c9f1d8de8e19f6dcab02a28b2a28a1a7f3dd546
+Size (roman-1.4.0.tar.gz) = 3033 bytes
+SHA1 (patch-src_roman.py) = 3cbe70896a19b5d177b329f18dcb37a051f0305a
