@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/05 22:03:12 ryoon Exp $
+share/bodr/crystalstructures.xml
+share/bodr/dicts/blueobelisk-dictionary.xml
+share/bodr/elements.xml
+share/bodr/isotopes.xml
+share/bodr/space-groups.xml
+share/doc/bodr/AUTHORS
+share/doc/bodr/COPYING
+share/doc/bodr/ChangeLog
+share/doc/bodr/README
+share/doc/bodr/THANKS
+share/doc/bodr/biblio/crystalstructures_biblio.html
+share/doc/bodr/biblio/elements_biblio.html
+share/doc/bodr/biblio/space-groups_biblio.html
+share/pkgconfig/bodr.pc
