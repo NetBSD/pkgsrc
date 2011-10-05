@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_CMakeLists.txt,v 1.1.1.1 2011/10/05 22:15:49 ryoon Exp $
+
+Fix man path.
+
+--- doc/CMakeLists.txt.orig	2010-07-12 13:05:06.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ file(GLOB man_1 *.1)
+-install(FILES ${man_1} DESTINATION share/man/man1)
++install(FILES ${man_1} DESTINATION man/man1)
+ 
+ OPTION(BUILD_DOCS "Build Open Babel documentation" OFF)
+ IF(BUILD_DOCS)
