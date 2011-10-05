@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/07/18 09:27:25 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/05 18:11:55 marino Exp $
 #
 
 DISTNAME=	gnat-aux-${SNAPSHOT}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://downloads.dragonlace.net/src/ \
 		http://dragonlace.mirrors.ada.cx/src/
@@ -32,7 +33,8 @@ BUILD_DEPENDS+=		autoconf>=2.6:../../devel/autoconf
 
 ONLY_FOR_PLATFORM=	DragonFly-*-*        \
                   	NetBSD-[5-9]*-i386   \
-                  	NetBSD-[5-9]*-x86_64
+                  	NetBSD-[5-9]*-x86_64 \
+			SunOS-5.*-i386
 
 BLD_TARGET=		${MACHINE_ARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
 THREAD_MODEL=		posix
@@ -81,33 +83,44 @@ LINK_HEADER=		/usr/include/link_elf.h
 .endif
 
 
+.if ${OPSYS} == "SunOS"
+.if ${MACHINE_ARCH} == "i386"
+   OS_LABEL4VERS=	[Solaris]
+   BOOTSTRAP_TRIPLET=	i386-bootstrap-solaris5.11/4.6.1
+.endif
+SOL_OSV=		`expr substr ${OS_VERSION} 3 2`
+BLD_TARGET=		${MACHINE_ARCH}-aux-${LOWER_OPSYS}2.${SOL_OSV}
+BOOTSTRAP_COMPILER=	gnat-bootstrap.${MACHINE_ARCH}.solaris.tar.bz2
+.endif
+
+
 
 # Let's build this without bash
 CONFIG_SHELL=		${TOOLS_PATH.sh}
 
 
 # define some important directories and files
-WRKSRC=			${WRKDIR}/build
-GCC_WRKSRC=		${WRKDIR}/gcc-${GCC_BRANCH}-${SNAPSHOT}
+BUILDDIR=		${WRKDIR}/build
+WRKSRC=			${WRKDIR}/gcc-${GCC_BRANCH}-${SNAPSHOT}
 PKG_PREFIX=		${PREFIX}
-CONFIGURE_SCRIPT=	${GCC_WRKSRC}/configure
+CFG_SCRIPT=		${WRKSRC}/configure
 BOOTSTRAP_PREFIX=	${WRKDIR}/bootstrap
 MAN7=			fsf-funding.7 gfdl.7 gpl.7
 SMAN1=			share/man/man1
 SMAN7=			share/man/man7
 LPATH=			lib/gcc/${BLD_TARGET}/${GCC_BRANCH}.${GCC_POINT}
 LEPATH=			libexec/gcc/${BLD_TARGET}/${GCC_BRANCH}.${GCC_POINT}
-REVFILE= 		${GCC_WRKSRC}/gcc/REVISION
+REVFILE= 		${WRKSRC}/gcc/REVISION
 BASELIB=		${LOCALBASE}/lib
 
 
 
 # testing if gnatgcc, gnatlink, gnatbind and gnatmake are in standard location
 # exists function will NOT expand any variable, so it has to be hard-coded
-.if exists(/usr/pkg/bin/gnatgcc)
-.if exists(/usr/pkg/bin/gnatbind)
-.if exists(/usr/pkg/bin/gnatlink)
-.if exists(/usr/pkg/bin/gnatmake)
+.if exists(/usr/pkg/bin/gnatgcc)  || exists(/opt/ipp/pkg/bin/gnatgcc)
+.if exists(/usr/pkg/bin/gnatbind) || exists(/opt/ipp/pkg/bin/gnatbind)
+.if exists(/usr/pkg/bin/gnatlink) || exists(/opt/ipp/pkg/bin/gnatlink)
+.if exists(/usr/pkg/bin/gnatmake) || exists(/opt/ipp/pkg/bin/gnatmake)
 FULL_GNATGCC=${PREFIX}/bin/gnatgcc
 .endif #gnatmake
 .endif #gnatlink
@@ -129,7 +142,8 @@ FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:$
 #  gnat-bootstrap.i386.dragonfly.tar.bz2 \
 #  gnat-bootstrap.x86_64.dragonfly.tar.bz2 \
 #  gnat-bootstrap.i386.netbsd.tar.bz2 \
-#  gnat-bootstrap.x86_64.netbsd.tar.bz2
+#  gnat-bootstrap.x86_64.netbsd.tar.bz2 \
+#  gnat-bootstrap.i386.solaris.tar.bz2
 
 
 # establish ada-aware compiler for use
@@ -137,7 +151,7 @@ MY_CONFIGURE_ENV=	CC=${FULL_GNATGCC}
 MY_CONFIGURE_ENV+=	PATH=${FULL_PATH}
 MY_CONFIGURE_ENV+=	CONFIG_SHELL=${CONFIG_SHELL}
 MY_MAKE_ENV=		PATH=${FULL_PATH}
-MY_MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/gcc
+MY_MAKE_ENV+=		LD_LIBRARY_PATH=${BUILDDIR}/gcc
 
 
 # The standard configuration options
@@ -241,17 +255,17 @@ do-configure:
 	${SETENV} CC=${FULL_GNATGCC}
 
 	#reset timestamps
-	cd ${GCC_WRKSRC}; contrib/gcc_update --touch
-	${RM} -f ${GCC_WRKSRC}/gcc/*/*.info*
-	${TOUCH} ${GCC_WRKSRC}/gcc/cstamp-h.in
+	cd ${WRKSRC}; contrib/gcc_update --touch
+	${RM} -f ${WRKSRC}/gcc/*/*.info*
+	${TOUCH} ${WRKSRC}/gcc/cstamp-h.in
 
-	${MKDIR} ${WRKSRC}
-	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} ${CONFIG_SHELL} \
-	${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+	${MKDIR} ${BUILDDIR}
+	cd ${BUILDDIR} && ${SETENV} ${MY_CONFIGURE_ENV} \
+	${CFG_SCRIPT} ${CONFIGURE_ARGS}
 
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} all ${MAKE_ARGS}
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q} all
 
 
 do-test: build
@@ -259,24 +273,24 @@ do-test: build
 .if (${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "x86_64")
 	#NetBSD has an exremely small default stacksize of 2MB, which is insufficient
 	#for the gnat.dg testsuite (entry_queues test on AMD64 specifically)
-	cd ${WRKSRC} && \
+	cd ${BUILDDIR} && \
 	${ULIMIT_CMD_stacksize} && \
 	${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
 .else
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
 .endif
 .endif
 .if !empty(PKG_OPTIONS:Mtestcxx)
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-c++
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-target-libstdc++-v3
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-c++
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-target-libstdc++-v3
 .endif
 .if !empty(PKG_OPTIONS:Mtestgcc)
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-c
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-c
 .endif
 
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install-strip \
+	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} install-strip \
 	DESTDIR=${DESTDIR}
 
 
