@@ -1,31 +1,32 @@
-$NetBSD: patch-ab,v 1.5 2011/07/14 08:15:35 ryoon Exp $
+$NetBSD: patch-ab,v 1.6 2011/10/05 14:21:45 ryoon Exp $
 
---- zfuncs.cc.orig	2011-07-01 17:05:59.000000000 +0000
+--- zfuncs.cc.orig	2011-10-01 13:52:21.000000000 +0000
 +++ zfuncs.cc
 @@ -77,6 +77,7 @@ void zappcrash(cchar *pMess, ... )      
  
     printf("zappcrash: \n %s \n",message);                                  //  output message to stdout
  
-+#ifdef backtrace
++#ifdef __linux__
     nstack = backtrace(stacklist,nstack);                                   //  get traceback data
     stackents = backtrace_symbols(stacklist,nstack);
  
-@@ -84,12 +85,14 @@ void zappcrash(cchar *pMess, ... )      
+@@ -84,6 +85,7 @@ void zappcrash(cchar *pMess, ... )      
        printf(" %s \n",stackents[ii]);
  
     fid1 = fopen("zappcrash","w");                                          //  text file for backtrace
 +#endif
  
     fprintf(fid1,"zappcrash: \n %s \n",message);                            //  output message to text file
- 
-    cc = readlink("/proc/self/exe",progexe,300);                            //  get own program path
+    
+@@ -94,6 +96,7 @@ void zappcrash(cchar *pMess, ... )      
+    }
     progexe[cc] = 0;
  
-+#ifdef backtrace
++#ifdef __linux__
     for (ii = 0; ii < nstack; ii++)                                         //  output backtrace to text file
     {
        pfunc = 0;
-@@ -109,6 +112,7 @@ void zappcrash(cchar *pMess, ... )      
+@@ -113,6 +116,7 @@ void zappcrash(cchar *pMess, ... )      
  
        fprintf(fid1," %s %s \n",stackents[ii],pfunc);                       //  write to text file
     }
@@ -33,20 +34,3 @@ $NetBSD: patch-ab,v 1.5 2011/07/14 08:15:35 ryoon Exp $
  
     fclose(fid1);
     
-@@ -768,6 +772,7 @@ int parsefile(cchar *ppath, char **pdirk
- 
- ***************************************************************************/
- 
-+#ifdef zmondirk
- int zmondirk(cchar *action, cchar *dirk, char **file)
- {
-    struct inotify_event {
-@@ -860,7 +865,7 @@ int zmondirk(cchar *action, cchar *dirk,
-    zappcrash("zmondirk() call error");
-    return -1;
- }
--
-+#endif
- 
- /**************************************************************************
- 

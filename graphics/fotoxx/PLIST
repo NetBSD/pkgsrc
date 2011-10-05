@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2011/07/14 08:15:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/10/05 14:21:45 ryoon Exp $
 bin/fotoxx
+man/man1/fotoxx.1.gz
 share/applications/kornelix-fotoxx.desktop
 share/doc/fotoxx/CHANGES
 share/doc/fotoxx/COPYING
 share/doc/fotoxx/README
 share/doc/fotoxx/TRANSLATIONS
+share/doc/fotoxx/edit menus
 share/doc/fotoxx/fotoxx.man
 share/doc/fotoxx/freshmeat
+share/doc/fotoxx/images/DRGB.jpg
 share/doc/fotoxx/images/HDF-paint.jpg
 share/doc/fotoxx/images/HDR-adjust.jpg
 share/doc/fotoxx/images/annotate.jpg
@@ -16,7 +19,8 @@ share/doc/fotoxx/images/curve-edit.jpg
 share/doc/fotoxx/images/edit-collection.jpg
 share/doc/fotoxx/images/edit-tags.jpg
 share/doc/fotoxx/images/expand-brightness.png
-share/doc/fotoxx/images/gallery image selection.jpg
+share/doc/fotoxx/images/gallery-selection.jpg
+share/doc/fotoxx/images/gamma-curve.jpg
 share/doc/fotoxx/images/gammachart.png
 share/doc/fotoxx/images/manage-tags.jpg
 share/doc/fotoxx/images/match-colors.jpg
@@ -32,8 +36,10 @@ share/doc/fotoxx/images/select-edit.jpg
 share/doc/fotoxx/images/select-whole-image.jpg
 share/doc/fotoxx/images/sharpen.jpeg
 share/doc/fotoxx/images/show-RGB.jpg
+share/doc/fotoxx/images/slide-show.jpg
 share/doc/fotoxx/images/smart-erase.png
 share/doc/fotoxx/images/stack.png
+share/doc/fotoxx/images/straighten-image.jpg
 share/doc/fotoxx/images/tone-mapping.png
 share/doc/fotoxx/images/translate.jpg
 share/doc/fotoxx/images/trim.jpg
@@ -83,7 +89,6 @@ share/fotoxx/locales/fr/zfuncs.po
 share/fotoxx/locales/gl/fotoxx.po
 share/fotoxx/locales/gl/zfuncs.po
 share/fotoxx/locales/it/fotoxx.po
-share/fotoxx/locales/it/fotoxx.po.old
 share/fotoxx/locales/it/zfuncs.po
 share/fotoxx/locales/nl/fotoxx.po
 share/fotoxx/locales/nl/zfuncs.po
@@ -95,4 +100,3 @@ share/fotoxx/locales/sv/fotoxx.po
 share/fotoxx/locales/sv/zfuncs.po
 share/fotoxx/locales/zh_CN/fotoxx.po
 share/fotoxx/locales/zh_CN/zfuncs.po
-share/man/man1/fotoxx.1
