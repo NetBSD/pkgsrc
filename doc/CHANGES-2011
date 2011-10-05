@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2400 2011/10/05 22:05:12 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2401 2011/10/05 22:13:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3840,3 +3840,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/pidgin-facebookchat to 1.69 [obache 2011-10-05]
 	Updated graphics/fotoxx to 11.10 [ryoon 2011-10-05]
 	Added biology/bodr version 9 [ryoon 2011-10-05]
+	Added biology/chemical-mime-data version 0.1.94 [ryoon 2011-10-05]
