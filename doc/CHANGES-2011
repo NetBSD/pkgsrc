@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2402 2011/10/05 22:19:32 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2403 2011/10/05 22:22:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added biology/bodr version 9 [ryoon 2011-10-05]
 	Added biology/chemical-mime-data version 0.1.94 [ryoon 2011-10-05]
 	Added biology/gnome-chemistry-utils version 0.12.9 [ryoon 2011-10-05]
+	Added biology/openbabel version 2.3.0 [ryoon 2011-10-05]
