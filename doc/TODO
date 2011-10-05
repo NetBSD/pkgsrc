@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10586 2011/10/04 03:29:47 taca Exp $
+$NetBSD: TODO,v 1.10587 2011/10/05 14:29:37 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -645,7 +645,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
 	o fossil-201109020.1.19
-	o fotoxx-11.10
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.2.5
@@ -1358,7 +1357,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o wdiff-1.0.1
 	o webkit-gtk-1.6.1
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.560 [security]
