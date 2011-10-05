@@ -1,21 +1,23 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/10/05 20:02:48 wiz Exp $
 
 SHA1 (pd-0.43-0.src.tar.gz) = 9bc4377fe25d034120bd393d63fe4180c7a500bc
 RMD160 (pd-0.43-0.src.tar.gz) = 6c737e69430180187281747830e655401b803b55
 Size (pd-0.43-0.src.tar.gz) = 2194131 bytes
 SHA1 (patch-Makefile.am) = 7a8da5f1902dcfb8f49ef9c915ae96a1996bd83d
-SHA1 (patch-extra_bonk~_bonk~.c) = c394543ddc963c8398cd0cea4bdb60b23d5c6ca5
-SHA1 (patch-extra_pd~_pd~.c) = f4b6760b4434de25b34c499d9a8216c4ffe22ec8
-SHA1 (patch-extra_sigmund~_sigmund~.c) = e42d3fe3808dbff6b40aa8e0c59b929159113f03
+SHA1 (patch-configure.ac) = 31baa676afeea342e3634d6fc2e06b4f61ede9dd
+SHA1 (patch-extra_bonk~_bonk~.c) = 607bf2f103ec34c02c9743eb3ec29cf2f6faba53
+SHA1 (patch-extra_pd~_pd~.c) = e1c7e4f031dd5236083ba91a902e9551e1a47be0
+SHA1 (patch-extra_sigmund~_sigmund~.c) = a359a57c81ec749e161d698f5ffccac9531d1a2c
 SHA1 (patch-src_Makefile.am) = a87c3380b0180a906c0496e743fbece772226da3
-SHA1 (patch-src_configure) = 6f86f1045081f56603cca030dfe0b501eaef7e6a
-SHA1 (patch-src_d__array.c) = 86dc633efa9f14e57cdfcfbf9a0a6bb7f36f6ca5
-SHA1 (patch-src_d__osc.c) = 82095c2b269368dde69202c6845b3103e0c00995
-SHA1 (patch-src_m__binbuf.c) = 6ee7b8b62fc8bbe4b9522e8c6323d1e0ad5f1638
-SHA1 (patch-src_s__audio__oss.c) = 6fad31cce878b2eefa19060cef3072bc6a49b70b
-SHA1 (patch-src_s__file.c) = 1577bcc0cd6fb252172410f5b52b1bac465a3779
-SHA1 (patch-src_s__loader.c) = 0bfcb810e450983775c1c7da9b95ed0e8e152316
-SHA1 (patch-src_s__stuff.h) = b0b93853e5c06d367788429d95085da941f3d25e
-SHA1 (patch-src_s__utf8.c) = d75ea717e611c01d1c00a8f99779ff1fc47a92f8
-SHA1 (patch-src_x__list.c) = 36135361c5a186a4352ed55d743683e4d6a18087
-SHA1 (patch-src_x__misc.c) = ca8704f4a8a6b904a04169577df29373665f3aa7
+SHA1 (patch-src_configure) = 19d9f53db01c426b23679fd3ad6fca3ef426b52b
+SHA1 (patch-src_configure.in) = 3fc4c5f1d241e233105783ecf40375ca4ad15a36
+SHA1 (patch-src_d__array.c) = 73f62c57d4712746c18ff1227351e2fd7136e3ca
+SHA1 (patch-src_d__osc.c) = 74c4180b228ece946e9f01964ce8ed7183c2968f
+SHA1 (patch-src_m__binbuf.c) = 858e4b1a217318181ce68186a3a634bc85c79f26
+SHA1 (patch-src_s__audio__oss.c) = 8cda1221b84e99ebb480b998ea8db7002c8129dc
+SHA1 (patch-src_s__file.c) = c7eddbd9c8aafffaf37490c9f7fa635f697086b3
+SHA1 (patch-src_s__loader.c) = 5a2c0820b408c7819c9433b167d617b365d096e8
+SHA1 (patch-src_s__stuff.h) = c5ad6525b0fd24420c91fe6146e3e75bb7664fb3
+SHA1 (patch-src_s__utf8.c) = 13d82a7e8a84372b0549c5f2646698a0cb3ccdf0
+SHA1 (patch-src_x__list.c) = 4a0890f67e784c948810178306942d2677dbd8f7
+SHA1 (patch-src_x__misc.c) = 7af3fb796ef64ca401c4a4546b7bc0315ec8cb6b
