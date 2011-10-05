@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2395 2011/10/05 07:53:41 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2396 2011/10/05 08:32:17 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3835,3 +3835,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added math/py-roman version 1.4.0 [obache 2011-10-05]
 	Updated textproc/py-docutils to 0.8.1 [obache 2011-10-05]
 	Updated textproc/py-sphinx to 1.0.8 [obache 2011-10-05]
+	Updated databases/p5-DBD-CSV to 0.33 [hiramatsu 2011-10-05]
