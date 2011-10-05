@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/21 18:27:12 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/10/05 21:41:25 ryoon Exp $
 
 SHA1 (rtmpdump-2.3.tgz) = b65ce7708ae79adb51d1f43dd0b6d987076d7c42
 RMD160 (rtmpdump-2.3.tgz) = 1d48925e6567783806fa68819d6a695cd06138bc
 Size (rtmpdump-2.3.tgz) = 125103 bytes
+SHA1 (patch-Makefile) = cfc0de0ef2bb26fb1db1bdae0f90158abed29d16
+SHA1 (patch-librtmp_Makefile) = 4df3c8741198cd13d8e507b8e8033cddeb0410ae
