@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2010/12/02 15:00:03 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2011/10/05 07:47:28 obache Exp $
 
-DISTNAME=	docutils-0.7
+DISTNAME=	docutils-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docutils/}
@@ -8,16 +8,11 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docutils/}
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://docutils.sourceforge.net/
 COMMENT=	Python tool to generate documents
+LICENSE=	public-domain AND 2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG=	YES
+DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
 
-.include "../../lang/python/extension.mk"
-
-PLIST_VARS+=	std
-.if !empty(PYVERSSUFFIX:M2*[12])
-PLIST.std=	yes
-.endif
-
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
