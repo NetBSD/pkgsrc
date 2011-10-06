@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2011/10/02 01:11:47 manu Exp $
+$NetBSD: distinfo,v 1.14 2011/10/06 02:19:05 manu Exp $
 
 SHA1 (glusterfs-3.2.3.tar.gz) = 7a36e496d9ac3fbf11123bb42884445334d07f06
 RMD160 (glusterfs-3.2.3.tar.gz) = 89d6a5f9c1362e1fe4d88e69465311069552d319
@@ -14,20 +14,20 @@ SHA1 (patch-ar) = 27d0288083d06623a328e851a776095aa1f1d2df
 SHA1 (patch-as) = a2c637bf52151e85969927f281e432693ac539ba
 SHA1 (patch-ax) = 054942de06c3df60ffc0c190dd2702f77edd9ec6
 SHA1 (patch-ba) = dba2b6826b42c398fc590b91d1f58b88c7bcc7f2
-SHA1 (patch-bb) = fa3ee0b07f34bd2943f6c9f33e8db9ab24c09007
+SHA1 (patch-bb) = f7b79676322064396242b0f3e6cd81c180c7dd8e
 SHA1 (patch-be) = 72fd161c97ac384b93411e120c4f4b798e45d975
 SHA1 (patch-bf) = 0f182ccd632b5e622237bd95c9978c113f8ce531
 SHA1 (patch-bh) = d88d4e8b863f36b2c27c4f5eff2fdc235ef76fd8
 SHA1 (patch-bj) = 9b8b2374d4c197e60a1990b09be1117bf0c0a552
 SHA1 (patch-bk) = 3464ae85a444f5dc8adf2262b3bc25d88a531bb8
-SHA1 (patch-bl) = db329b07d8587fc4ed16d64dc6a81903ad5e8cae
-SHA1 (patch-bm) = 802bb652c4b149b9f634d1bf6e699dfa471ba2fb
-SHA1 (patch-bn) = 0bf22d259c60a2251956b5a1c149c08f14c267ea
-SHA1 (patch-bo) = 77a63de0f59c2a0ac7cd8c8fdeca576bda8b0e2d
-SHA1 (patch-bp) = 3e6c0d064f3e584a3c722f89021ca218c728e110
-SHA1 (patch-bq) = 3c103cdd084143f320e404ca1ba91565ceba1444
-SHA1 (patch-br) = 5940714e43f8f41500839dfe28b5970e2e0eb298
-SHA1 (patch-bs) = 94a38a15595fe4824532cebf378a8cdaa55e9acd
-SHA1 (patch-bt) = 0b6fb631c67fa6d0357de7cb7fcb1de8b7981b3c
-SHA1 (patch-bu) = b9ad1f8af84c6d296fae54281a5301dca03b3053
-SHA1 (patch-bv) = 3dc3e144b532ede41c4271e7337167456d1ce006
+SHA1 (patch-bl) = 4e61aef116ce34907f7a93beaa9ad7a3c49751a9
+SHA1 (patch-bm) = 401fe1c2bbf71474e2238c3e6c3fe5a5c614c4f5
+SHA1 (patch-bn) = 98ce48be2239f42edc4ef8e26644305f6aa0a5eb
+SHA1 (patch-bo) = be0dcdcc0acb6a5e54664372c34a28f1307fbd00
+SHA1 (patch-bp) = 77463ea7d739d532e20dbe5bd66d58c22ba0c248
+SHA1 (patch-bq) = 7a59abc6ea5966a9f99be86fe31e3507f02b932a
+SHA1 (patch-br) = e665af3542d137db7db6a186360bfe1d5564b212
+SHA1 (patch-bs) = d2f79ef19143f74f5a12187ea2dfd9e1ed92b726
+SHA1 (patch-bt) = 58f8e5ce66e6b691dd9972bd649dc18f7d5a258a
+SHA1 (patch-bu) = 006a6802958fad3950eadad456e362b7f4c2ca4a
+SHA1 (patch-bv) = 2c3b654e5858bf0948307ca6ae7048e276fca9ef
