@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/10/06 11:57:24 ryoon Exp $
+
+* Support PKG_SYSCONFDIR
+
+--- Makefile.in.orig	2011-04-27 18:00:54.000000000 +0000
++++ Makefile.in
+@@ -388,15 +388,15 @@ distclean-libtool:
+ 	-rm -f libtool config.lt
+ install-dist_sysconfDATA: $(dist_sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
++	test -z "${PREFIX}/share/examples/denemo" || $(MKDIR_P) "$(DESTDIR)${PREFIX}/share/examples/denemo"
+ 	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)${PREFIX}/share/examples/denemo'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)${PREFIX}/share/examples/denemo" || exit $$?; \
+ 	done
+ 
+ uninstall-dist_sysconfDATA:
