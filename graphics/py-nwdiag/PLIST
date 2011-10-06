@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/07 15:45:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/06 06:33:19 obache Exp $
 bin/nwdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -30,6 +30,9 @@ ${PYSITELIB}/nwdiag/elements.pyo
 ${PYSITELIB}/nwdiag/tests/test_builder.py
 ${PYSITELIB}/nwdiag/tests/test_builder.pyc
 ${PYSITELIB}/nwdiag/tests/test_builder.pyo
+${PYSITELIB}/nwdiag/tests/test_builder_errors.py
+${PYSITELIB}/nwdiag/tests/test_builder_errors.pyc
+${PYSITELIB}/nwdiag/tests/test_builder_errors.pyo
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.pyo
