@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/06/19 06:12:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/06 12:42:26 ryoon Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
 CATEGORIES=		misc
-MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.3.3/rpm/x86/
+MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.3.4/rpm/x86/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.libreoffice.org/
@@ -21,7 +21,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
 OO_BASEVER=		3.3
-OO_RELEASE=		3.3.3
+OO_RELEASE=		3.3.4
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -53,7 +53,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
-DISTNAME=		LibO_3.3.3_Linux_x86_install-rpm_en-US
+DISTNAME=		LibO_3.3.4_Linux_x86_install-rpm_en-US
 WRKSRC=			${WRKDIR}/LibO_${OO_RELEASE}rc1_Linux_x86_install-rpm_en-US
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solaris_x86_install_en-US
