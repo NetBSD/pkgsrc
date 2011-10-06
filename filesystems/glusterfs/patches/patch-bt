@@ -1,3 +1,7 @@
+$NetBSD: patch-bt,v 1.6 2011/10/06 02:19:06 manu Exp $
+
+Initialize pthread_cond_t, it hurts otherwise.
+
 --- xlators/performance/io-threads/src/io-threads.c.orig	2011-08-23 14:31:41.000000000 +0200
 +++ xlators/performance/io-threads/src/io-threads.c	2011-09-17 15:45:30.000000000 +0200
 @@ -2194,8 +2194,20 @@

@@ -1,3 +1,13 @@
+$NetBSD: patch-br,v 1.6 2011/10/06 02:19:06 manu Exp $
+
+Use linkat(2) if available so that we can make a hardlink to symlink 
+itself, instead of symlink destination, like link(2) does. This is
+required to support moving symlinks on distributed volumes, as
+glusterfsd really wants to hardlink the symlink and not its target. 
+
+If linkat(2) is inavailable, then moving a symlink on distributed
+volumes fails.
+
 --- xlators/storage/posix/src/posix.c.orig	2011-08-23 14:31:42.000000000 +0200
 +++ xlators/storage/posix/src/posix.c	2011-09-17 15:45:30.000000000 +0200
 @@ -36,8 +36,12 @@

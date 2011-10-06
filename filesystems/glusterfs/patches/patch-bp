@@ -1,3 +1,7 @@
+$NetBSD: patch-bp,v 1.7 2011/10/06 02:19:06 manu Exp $
+
+Define Linux-like umount()
+
 --- xlators/mgmt/glusterd/src/glusterd-op-sm.c.orig	2011-08-23 14:31:40.000000000 +0200
 +++ xlators/mgmt/glusterd/src/glusterd-op-sm.c	2011-09-17 15:45:30.000000000 +0200
 @@ -49,8 +49,12 @@

@@ -1,3 +1,7 @@
+$NetBSD: patch-bq,v 1.7 2011/10/06 02:19:06 manu Exp $
+
+Make sure gluseterfsd listens on the same address family as glusterd
+
 --- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-08-23 14:31:40.000000000 +0200
 +++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-09-17 15:45:30.000000000 +0200
 @@ -88,8 +88,52 @@
