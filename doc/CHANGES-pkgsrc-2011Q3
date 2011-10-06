@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.3 2011/10/05 09:27:44 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.4 2011/10/06 08:09:04 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -11,3 +11,5 @@ Pullup ticket #3528 - requested by obache
 mail/cyrus-imapd23: security update
 Pullup ticket #3529 - requested by obache
 mail/cyrus-imapd24: security update
+Pullup ticket #3530 - requested by hans
+graphics/png: build fix
