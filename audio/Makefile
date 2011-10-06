@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.458 2011/09/15 01:05:28 wiz Exp $
+# $NetBSD: Makefile,v 1.459 2011/10/06 11:53:50 ryoon Exp $
 #
 
 COMMENT=	Audio tools
@@ -32,6 +32,7 @@ SUBDIR+=	ampache
 SUBDIR+=	applerecords
 SUBDIR+=	ario
 SUBDIR+=	arts
+SUBDIR+=	aubio
 SUBDIR+=	audacious
 SUBDIR+=	audacious-plugins
 SUBDIR+=	audacity
@@ -219,6 +220,7 @@ SUBDIR+=	libsamplerate
 SUBDIR+=	libshout
 SUBDIR+=	libsidplay
 SUBDIR+=	libsidplay2
+SUBDIR+=	libsmf
 SUBDIR+=	libsndfile
 SUBDIR+=	libspiff
 SUBDIR+=	libtunepimp
