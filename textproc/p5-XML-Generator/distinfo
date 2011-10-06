@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/08/20 19:13:46 sno Exp $
+$NetBSD: distinfo,v 1.3 2011/10/06 12:13:26 hiramatsu Exp $
 
-SHA1 (XML-Generator-1.03.tar.gz) = ea2ab4c503db726f11a43bdcf20ac338e5957be6
-RMD160 (XML-Generator-1.03.tar.gz) = bb6f96b5fec2c27782399af5541b63afc0aa9538
-Size (XML-Generator-1.03.tar.gz) = 24349 bytes
+SHA1 (XML-Generator-1.04.tar.gz) = 011f29f5f433a8e234bb94605b6808f3f5869141
+RMD160 (XML-Generator-1.04.tar.gz) = 59fc3ec1704acd8d547b78a20af5d6ac4996d555
+Size (XML-Generator-1.04.tar.gz) = 24606 bytes
