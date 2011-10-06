@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/06 11:50:09 ryoon Exp $
+bin/smfsh
+include/smf.h
+lib/libsmf.la
+lib/pkgconfig/smf.pc
+man/man1/smfsh.1
