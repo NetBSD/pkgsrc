@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2011/09/19 07:15:52 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/06 15:50:37 dholland Exp $
 
 DISTNAME=	xmx-2.1alpha.pl7
 PKGNAME=	xmx-2.1a7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cs.brown.edu/pub/xmx/
+
+PATCHFILES=	xmx-jumbo-patch-20110919.gz
+PATCH_SITES=	http://www.NetBSD.org/~dholland/patchkits/xmx/
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.brown.edu/software/xmx/
