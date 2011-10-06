@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.22 2009/07/07 20:49:20 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2011/10/06 21:56:15 dholland Exp $
 #
 
 DISTNAME=		RTF-1.10
 PKGNAME=		rtf-tools-1.10
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.snake.net/software/RTF/
 EXTRACT_SUFX=		.tar.Z
+
+PATCHFILES=		rtf-tools-jumbo-patch-20111006.gz
+PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/rtf-tools/
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
@@ -26,6 +30,14 @@ SUBST_SED.rtf+=		-e 's|-DVARARGS|-DSTDARGS|g'
 SUBST_SED.rtf+=		-e 's|/usr/local|${PREFIX}|g'
 SUBST_SED.rtf+=		-e 's|/usr/man|${PREFIX}/man|'
 SUBST_SED.rtf+=		-e 's|\(LOCALBINDIR =.*\)|\1/bin|'
+
+# turn this on when hacking or debugging the package
+#WARNFLAGS=		-O2 -Wall -Wextra -Wwrite-strings -Wmissing-prototypes
+#SUBST_CLASSES+= 	warn
+#SUBST_STAGE.warn=	pre-build
+#SUBST_MESSAGE.warn=	Enabling lots of warnings.
+#SUBST_FILES.warn=	Makefile */Makefile
+#SUBST_SED.warn= 	-e '/CDEBUGFLAGS/s/-O/${WARNFLAGS}/'
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/h/standard-names ${DESTDIR}${PREFIX}/lib/rtf-tools
