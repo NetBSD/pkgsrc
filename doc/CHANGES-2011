@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2416 2011/10/06 15:38:26 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2417 2011/10/06 19:23:31 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3864,3 +3864,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/p5-Data-SimplePassword to 0.07 [hiramatsu 2011-10-06]
 	Updated textproc/p5-XML-Atom to 0.41 [hiramatsu 2011-10-06]
 	Updated net/p5-WebService-Google-Reader to 0.20 [hiramatsu 2011-10-06]
+	Updated security/p5-Crypt-DSA to 1.17 [gls 2011-10-06]
