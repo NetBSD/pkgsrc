@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2413 2011/10/06 12:46:18 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2414 2011/10/06 14:21:59 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3855,3 +3855,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-Manual to 5.9002 [hiramatsu 2011-10-06]
 	Updated www/p5-Catalyst-Devel to 1.34 [hiramatsu 2011-10-06]
 	Updated sysutils/p5-File-Remove to 1.50 [hiramatsu 2011-10-06]
+	Updated devel/netbsd-iscsi-lib to 20111006 [sborrill 2011-10-06]
+	Updated net/netbsd-iscsi-initiator to 20111006 [sborrill 2011-10-06]
+	Updated net/netbsd-iscsi-target to 20111006 [sborrill 2011-10-06]
