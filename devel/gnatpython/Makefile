@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/06 22:15:21 marino Exp $
 #
 
 DISTNAME=	gnatpython-${SNAPSHOT}
@@ -11,7 +11,7 @@ MAINTAINER= 	draco@marino.st
 HOMEPAGE=	http://forge.open-do.org/projects/gnatpython
 COMMENT=	Python package used in Ada testsuites
 LICENSE= 	gnu-gpl-v3
-SNAPSHOT=	20101207
+SNAPSHOT=	20110912
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG=		yes
