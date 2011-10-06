@@ -1,0 +1,20 @@
+aubio is a tool designed for the extraction of annotations from audio
+signals. Its features include segmenting a sound file before each of
+its attacks, performing pitch detection, tapping the beat and
+producing midi streams from live audio.
+
+Because these tasks are difficult, we thought it was important to
+gather them in a dedicated library. To increase the fun, we have made
+these algorithms work in a causal way, so as to be used in real time
+applications with as low delay as possible. Functions can be used
+offline in sound editors and software samplers, or online in audio
+effects and virtual instruments.
+
+aubio currently provides the following features:
+    - digital filters
+    - phase vocoder
+    - onset detection (several methods)
+    - pitch tracking (several methods)
+    - beat and tempo tracking
+    - mel frequency cepstrum coefficients (MFCC)
+    - transient / steady-state separation
