@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2011/08/14 08:18:04 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/06 15:16:59 hiramatsu Exp $
 
-DISTNAME=	Catalyst-Model-DBIC-Schema-0.43
+DISTNAME=	Catalyst-Model-DBIC-Schema-0.55
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -17,7 +16,7 @@ DEPENDS+=	p5-CatalystX-Component-Traits>=0.14:../../www/p5-CatalystX-Component-T
 DEPENDS+=	p5-DBIx-Class>=0.08114:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
-DEPENDS+=	p5-MooseX-NonMoose-[0-9]*:../../devel/p5-MooseX-NonMoose
+DEPENDS+=	p5-MooseX-NonMoose>=0.16:../../devel/p5-MooseX-NonMoose
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
