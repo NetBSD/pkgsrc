@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2011/08/14 20:47:05 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2011/10/06 18:00:00 drochner Exp $
 
 DISTNAME=	gpgme-1.3.1
 PKGREVISION=	1
@@ -46,12 +46,12 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 CONFIGURE_ENV+=		ac_cv_lib_pthread_pthread_create=yes
 .endif
 
+# we want the getenv_r() semantics of NetBSD-current
 BUILDLINK_API_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
 .include "../../devel/librfuncs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.0.2
 .include "../../security/libassuan2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
 .include "../../security/libgpg-error/buildlink3.mk"
-# we want the getenv_r() semantics of NetBSD-current
 .include "../../mk/bsd.pkg.mk"
 _UNWRAP_FILES=
