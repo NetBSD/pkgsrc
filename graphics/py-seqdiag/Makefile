@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/07 15:45:43 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/06 06:24:35 obache Exp $
 #
 
-DISTNAME=	seqdiag-0.3.8
+DISTNAME=	seqdiag-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/s/seqdiag/
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.7nb3:../../graphics/py-imaging
 DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=0.3.4:../../devel/py-funcparserlib
-DEPENDS+=	${PYPKGPREFIX}-blockdiag>=0.8.1:../../graphics/py-blockdiag
+DEPENDS+=	${PYPKGPREFIX}-blockdiag>=0.9.1:../../graphics/py-blockdiag
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
