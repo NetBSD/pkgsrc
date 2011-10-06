@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2414 2011/10/06 14:21:59 sborrill Exp $
+$NetBSD: CHANGES-2011,v 1.2415 2011/10/06 15:18:28 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3858,3 +3858,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/netbsd-iscsi-lib to 20111006 [sborrill 2011-10-06]
 	Updated net/netbsd-iscsi-initiator to 20111006 [sborrill 2011-10-06]
 	Updated net/netbsd-iscsi-target to 20111006 [sborrill 2011-10-06]
+	Updated converters/p5-MARC-Charset to 1.33 [hiramatsu 2011-10-06]
+	Updated devel/p5-MooseX-NonMoose to 0.22 [hiramatsu 2011-10-06]
+	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.55 [hiramatsu 2011-10-06]
