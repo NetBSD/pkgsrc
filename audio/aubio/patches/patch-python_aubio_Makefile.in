@@ -1,0 +1,18 @@
+$NetBSD: patch-python_aubio_Makefile.in,v 1.1.1.1 2011/10/06 11:45:48 ryoon Exp $
+
+--- python/aubio/Makefile.in.orig	2006-10-10 14:41:06.000000000 +0000
++++ python/aubio/Makefile.in
+@@ -61,11 +61,11 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/aubio_wrap.Plo
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) \
++LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(DEFS) \
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
++LINK = $(LIBTOOL) --mode=link --tag=CC $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = $(_aubiowrapper_la_SOURCES)
+ DIST_SOURCES = $(_aubiowrapper_la_SOURCES)
