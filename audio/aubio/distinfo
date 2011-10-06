@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/06 11:45:47 ryoon Exp $
+
+SHA1 (aubio-0.3.2.tar.gz) = 8ef7ccbf18a4fa6db712a9192acafc9c8d080978
+RMD160 (aubio-0.3.2.tar.gz) = 44e3bb8ab38aa715052466e7ae50123089914b5b
+Size (aubio-0.3.2.tar.gz) = 609006 bytes
+SHA1 (patch-python_aubio_Makefile.in) = 4d6b2bf9f6b1cc6661f4aa65f400a0c575c8aca5
+SHA1 (patch-python_aubio_bench_onset.py) = 1076258814ced4e91afcd0e5242b4de23c008211
+SHA1 (patch-python_aubio_gnuplot.py) = 7ed573a32f4443cf4a48ad32575e2d38d55889f2
+SHA1 (patch-python_aubio_plot_keyboard.py) = ae207a1f5a508b49d2815a1e3496d209b06ee351
+SHA1 (patch-python_aubio_task_beat.py) = 1413775da8b9982ab66604208f3d522eed270a90
+SHA1 (patch-python_aubio_task_notes.py) = d0c28c1d41519617a731cc7baed9105ff8453e42
+SHA1 (patch-python_aubio_task_onset.py) = 403879042e287edd332e56fd56f4255796665dd9
+SHA1 (patch-python_aubio_task_pitch.py) = ceb9d777f0ae91b261086d53f4cb24bdefb3a185
