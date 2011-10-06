@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2011/10/06 14:20:40 sborrill Exp $
+
+The maximum number of targets supported by the initiator is set at
+the time netbsd-iscsi-lib was compiled. The default maximum is 16, but
+this can be altered by setting ISCSI_INITIATOR_MAX_TARGETS in
+/etc/mk.conf. If altered, netbsd-iscsi-lib must be rebuilt.
+
+===========================================================================
