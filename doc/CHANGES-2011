@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2405 2011/10/06 06:24:49 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2406 2011/10/06 06:28:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3845,3 +3845,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added biology/openbabel version 2.3.0 [ryoon 2011-10-05]
 	Updated graphics/py-blockdiag to 0.9.2 [obache 2011-10-06]
 	Updated graphics/py-seqdiag to 0.4.1 [obache 2011-10-06]
+	Updated graphics/py-actdiag to 0.1.8 [obache 2011-10-06]
