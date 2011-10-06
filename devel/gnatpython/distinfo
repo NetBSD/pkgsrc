@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/01 20:44:47 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/10/06 22:15:21 marino Exp $
 
-SHA1 (gnatpython-20101207.tar.bz2) = e4623395ff55502f277a46f2e71e832989c26c07
-RMD160 (gnatpython-20101207.tar.bz2) = 7cc8382ec1867fd80d4e2ee9ad3e9f3abd45b3b6
-Size (gnatpython-20101207.tar.bz2) = 84745 bytes
+SHA1 (gnatpython-20110912.tar.bz2) = 6be76285900f37bf413b19a4057dee16c0678669
+RMD160 (gnatpython-20110912.tar.bz2) = 5c261cdbab484324613bcb5c17e30983974be24d
+Size (gnatpython-20110912.tar.bz2) = 72392 bytes
