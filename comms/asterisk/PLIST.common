@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.17 2009/09/05 01:44:18 jnemeth Exp $
+@comment $NetBSD: PLIST.common,v 1.18 2011/10/06 08:35:01 wiz Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -193,13 +193,6 @@ lib/asterisk/modules/res_indications.so
 lib/asterisk/modules/res_monitor.so
 lib/asterisk/modules/res_musiconhold.so
 ${PLIST.gtk}lib/asterisk/modules/pbx_gtkconsole.so
-${PLIST.zaptel}lib/asterisk/modules/app_flash.so
-${PLIST.zaptel}lib/asterisk/modules/app_meetme.so
-${PLIST.zaptel}lib/asterisk/modules/app_page.so
-${PLIST.zaptel}lib/asterisk/modules/app_zapbarge.so
-${PLIST.zaptel}lib/asterisk/modules/app_zapras.so
-${PLIST.zaptel}lib/asterisk/modules/app_zapscan.so
-${PLIST.zaptel}lib/asterisk/modules/chan_zap.so
 lib/pkgconfig/asterisk.pc
 libdata/asterisk/agi-bin/agi-test.agi
 libdata/asterisk/agi-bin/eagi-sphinx-test
