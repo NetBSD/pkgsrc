@@ -1,10 +1,39 @@
-$NetBSD: patch-ad,v 1.1 2010/07/28 16:24:20 taca Exp $
+$NetBSD: patch-ad,v 1.2 2011/10/07 12:29:42 taca Exp $
 
-Fix for CSS from repository, r507.
+* Fix for CSS from repository, r507.
+* Fix potential XSS vulnerability, r1041.
 
 --- system/modules/frontend/Frontend.php.orig	2010-04-19 10:22:31.000000000 +0000
 +++ system/modules/frontend/Frontend.php
-@@ -166,8 +166,16 @@ abstract class Frontend extends Controll
+@@ -78,7 +78,7 @@ abstract class Frontend extends Controll
+ 			return is_numeric($this->Input->get('id')) ? $this->Input->get('id') : null;
+ 		}
+ 
+-		if (!strlen($this->Environment->request))
++		if ($this->Environment->request == '')
+ 		{
+ 			return null;
+ 		}
+@@ -104,13 +104,15 @@ abstract class Frontend extends Controll
+ 			}
+ 		}
+ 
+-		// Add fragments to $_GET array
++		// DO NOT USE urldecode() HERE (XSS vulnerability)!
++
++		// Add the fragments to the $_GET array
+ 		for ($i=1; $i<count($arrFragments); $i+=2)
+ 		{
+-			$_GET[urldecode($arrFragments[$i])] = urldecode($arrFragments[$i+1]);
++			$_GET[$arrFragments[$i]] = $arrFragments[$i+1];
+ 		}
+ 
+-		return strlen($arrFragments[0]) ? urldecode($arrFragments[0]) : null;
++		return ($arrFragments[0] != '') ? $arrFragments[0] : null;
+ 	}
+ 
+ 
+@@ -166,8 +168,16 @@ abstract class Frontend extends Controll
  	protected function addToUrl($strRequest, $blnIgnoreParams=false)
  	{
  		$arrGet = $blnIgnoreParams ? array() : $_GET;

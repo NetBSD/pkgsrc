@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/09/16 05:46:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/07 12:28:11 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
