@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2423 2011/10/07 10:59:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2424 2011/10/07 11:39:50 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3875,3 +3875,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/hdf5 to 1.8.7 [alnsn 2011-10-07]
 	Added devel/hdf5++ version 1.8.7 [alnsn 2011-10-07]
 	Updated devel/py-babel to 0.9.6 [obache 2011-10-07]
+	Updated net/p5-Test-TCP to 1.13 [hiramatsu 2011-10-07]
+	Updated www/p5-WWW-Shorten to 3.02 [hiramatsu 2011-10-07]
+	Updated devel/p5-MooseX-ClassAttribute to 0.26 [hiramatsu 2011-10-07]
