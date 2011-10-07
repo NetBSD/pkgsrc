@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mydns.sh,v 1.1.1.1 2005/10/29 16:56:15 minskim Exp $
+# $NetBSD: mydns.sh,v 1.2 2011/10/07 22:37:04 shattered Exp $
 #
 # PROVIDE: mydns
 # REQUIRE: SERVERS

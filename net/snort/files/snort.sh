@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: snort.sh,v 1.1 2003/03/04 01:02:26 salo Exp $
+# $NetBSD: snort.sh,v 1.2 2011/10/07 22:37:04 shattered Exp $
 #
 
 # PROVIDE: snort

@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: moss.sh,v 1.1.1.1 2004/08/10 06:48:21 minskim Exp $
+# $NetBSD: moss.sh,v 1.2 2011/10/07 22:37:02 shattered Exp $
 #
 
 # PROVIDE: moss

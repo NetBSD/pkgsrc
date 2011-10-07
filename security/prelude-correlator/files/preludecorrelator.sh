@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: preludecorrelator.sh,v 1.1.1.1 2008/07/21 12:16:46 shannonjr Exp $
+# $NetBSD: preludecorrelator.sh,v 1.2 2011/10/07 22:37:05 shattered Exp $
 #
 
 # PROVIDE: preludecorrelator

@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cygwin_esd.sh,v 1.2 2004/10/11 21:02:53 tv Exp $
+# $NetBSD: cygwin_esd.sh,v 1.3 2011/10/07 22:37:03 shattered Exp $
 #
 # PROVIDE: cygwin_esd
 # REQUIRE: DAEMON
