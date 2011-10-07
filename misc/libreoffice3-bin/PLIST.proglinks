@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.proglinks,v 1.1.1.1 2011/06/12 09:05:30 ryoon Exp $
+@comment $NetBSD: PLIST.proglinks,v 1.2 2011/10/07 13:28:54 ryoon Exp $
 bin/scalc
 bin/sdraw
 bin/simpress
