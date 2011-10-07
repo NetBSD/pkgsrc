@@ -32,6 +32,3 @@ contemporary websites without being a programmer.
 * Accessible front and back end
 * Easy live update
 * Ajax and PHP 5
-
-Note: Live update feature would work with typolight-liveupdate PKG_OPTION
-enabled, but it might be conflict with regular pkgsrc maintainous.
