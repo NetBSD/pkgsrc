@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/08/16 07:58:55 adam Exp $
+$NetBSD: distinfo,v 1.5 2011/10/07 02:09:47 hiramatsu Exp $
 
-SHA1 (Getopt-Euclid-0.2.7.tar.gz) = 95adae22dc05cb189d1d9162f496feab5bd02108
-RMD160 (Getopt-Euclid-0.2.7.tar.gz) = 71d52a489ebf8942bc9b95a56442d7c3f2b4f322
-Size (Getopt-Euclid-0.2.7.tar.gz) = 36748 bytes
+SHA1 (Getopt-Euclid-0.3.0.tar.gz) = a9e555cf289cc13917396360a3ca37c4fe5e4aba
+RMD160 (Getopt-Euclid-0.3.0.tar.gz) = 410561cebd63967028c7e24e389b40cc2c699ae9
+Size (Getopt-Euclid-0.3.0.tar.gz) = 66691 bytes
