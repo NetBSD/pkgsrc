@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2011/02/25 09:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2011/10/07 10:45:16 alnsn Exp $
 #
 
 DISTNAME=		tables-2.2.1
 PKGNAME=		${PYPKGPREFIX}-pytables-2.2.1
+PKGREVISION=		1
 CATEGORIES=		math python
 MASTER_SITES=		http://www.pytables.org/download/pytables-2.2.1/
 
