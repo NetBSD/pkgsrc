@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/04 08:03:43 manu Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/07 03:56:19 dholland Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -8,29 +8,29 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 
-DEPENDS+=	${PHP_PKG_PREFIX}-phrasea2:../../www/php-phrasea2
-DEPENDS+=	${PHP_PKG_PREFIX}-apc:../../www/php-apc
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-dom:../../textproc/php-dom
-DEPENDS+=	${PHP_PKG_PREFIX}-exif:../../graphics/php-exif
-DEPENDS+=	${PHP_PKG_PREFIX}-fileinfo:../../sysutils/php-fileinfo
-DEPENDS+=	${PHP_PKG_PREFIX}-ftp:../../net/php-ftp
-DEPENDS+=	${PHP_PKG_PREFIX}-curl:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-gd:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-json:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-phrasea2:../../www/php-phrasea2
-DEPENDS+=	${PHP_PKG_PREFIX}-sockets:../../net/php-sockets
-DEPENDS+=	${PHP_PKG_PREFIX}-xsl:../../textproc/php-xsl
-DEPENDS+=	${PHP_PKG_PREFIX}-zip:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-memcache:../../devel/php-memcache
+DEPENDS+=	${PHP_PKG_PREFIX}-phrasea2-[0-9]*:../../www/php-phrasea2
+DEPENDS+=	${PHP_PKG_PREFIX}-apc-[0-9]*:../../www/php-apc
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-exif-[0-9]*:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-fileinfo-[0-9]*:../../sysutils/php-fileinfo
+DEPENDS+=	${PHP_PKG_PREFIX}-ftp-[0-9]*:../../net/php-ftp
+DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-phrasea2-[0-9]*:../../www/php-phrasea2
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-xsl-[0-9]*:../../textproc/php-xsl
+DEPENDS+=	${PHP_PKG_PREFIX}-zip-[0-9]*:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-memcache-[0-9]*:../../devel/php-memcache
 DEPENDS+=	phraseanet-indexer-${VERS}:../../www/phraseanet-indexer
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
-DEPENDS+=	ImageMagick:../../graphics/ImageMagick
-DEPENDS+=	p5-Image-ExifTool:../../graphics/p5-Image-ExifTool
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+DEPENDS+=	p5-Image-ExifTool-[0-9]*:../../graphics/p5-Image-ExifTool
 
 .include "../../mk/bsd.prefs.mk"
 
