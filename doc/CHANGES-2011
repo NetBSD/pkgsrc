@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2425 2011/10/07 11:48:05 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2426 2011/10/07 11:56:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3879,3 +3879,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-WWW-Shorten to 3.02 [hiramatsu 2011-10-07]
 	Updated devel/p5-MooseX-ClassAttribute to 0.26 [hiramatsu 2011-10-07]
 	Updated inputmethod/gtk-im-libthai to 0.2.0 [obache 2011-10-07]
+	Updated inputmethod/scim-thai to 0.1.2 [obache 2011-10-07]
