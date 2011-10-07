@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/05/21 11:49:00 sno Exp $
+$NetBSD: distinfo,v 1.6 2011/10/07 02:08:10 hiramatsu Exp $
 
-SHA1 (XML-Feed-0.43.tar.gz) = 04d0c175f9bbabc8ba8373d2d6b6ed338bacaab2
-RMD160 (XML-Feed-0.43.tar.gz) = c57265fe2147c804e6cd4673faba36d4a0da97b1
-Size (XML-Feed-0.43.tar.gz) = 32653 bytes
+SHA1 (XML-Feed-0.44.tar.gz) = 2039cde56bcb56f07b6552a45c01dcf22c9effb2
+RMD160 (XML-Feed-0.44.tar.gz) = c9ca5d399ddc74b2a3f1044f45b3b41a6de26c8a
+Size (XML-Feed-0.44.tar.gz) = 44971 bytes
