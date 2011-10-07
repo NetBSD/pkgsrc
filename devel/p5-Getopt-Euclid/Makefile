@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2011/08/16 07:58:55 adam Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/07 02:09:47 hiramatsu Exp $
 
-DISTNAME=	Getopt-Euclid-0.2.7
+DISTNAME=	Getopt-Euclid-0.3.0
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Getopt/}
