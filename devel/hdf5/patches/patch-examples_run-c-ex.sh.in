@@ -1,0 +1,24 @@
+$NetBSD: patch-examples_run-c-ex.sh.in,v 1.1 2011/10/07 10:38:52 alnsn Exp $
+
+Fix paths to examples.
+
+--- examples/run-c-ex.sh.in.orig	2011-05-09 16:48:00.000000000 +0000
++++ examples/run-c-ex.sh.in
+@@ -20,7 +20,7 @@
+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+ #                                                                               #
+ # This script will compile and run the c examples from source files installed   #
+-# in .../share/hdf5_examples/c using h5cc or h5pc.  The order for running       #
++# in .../share/examples/hdf5/c using h5cc or h5pc.  The order for running       #
+ # programs with RunTest in the MAIN section below is taken from the Makefile.   #
+ # The order is important since some of the test programs use data files created #
+ # by earlier test programs.  Any future additions should be placed accordingly. #
+@@ -33,7 +33,7 @@ EXIT_FAILURE=1
+  
+ # Where the tool is installed.
+ # default is relative path to installed location of the tools 
+-prefix="${prefix:-../../../}"
++prefix="${prefix:-../../../../}"
+ PARALLEL=@PARALLEL@             # Am I in parallel mode?
+ AR="@AR@"
+ RANLIB="@RANLIB@"
