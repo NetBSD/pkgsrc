@@ -1,4 +1,4 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
 # Xymon site monitoring server
 # Startup script contributed by Nathan Arthur (originally for hobbitmon)

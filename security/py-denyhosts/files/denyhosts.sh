@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: denyhosts.sh,v 1.1.1.1 2007/08/02 17:27:30 he Exp $
+# $NetBSD: denyhosts.sh,v 1.2 2011/10/07 22:37:06 shattered Exp $
 #
 # PROVIDE: denyhosts
 # REQUIRE: DAEMON

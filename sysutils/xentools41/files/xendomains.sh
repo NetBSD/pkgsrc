@@ -1,4 +1,4 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
 # PROVIDE: xendomains
 # REQUIRE: xend
