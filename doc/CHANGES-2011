@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2429 2011/10/07 13:34:29 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2430 2011/10/07 19:26:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3885,3 +3885,11 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29 to 2.9.5nb4 [taca 2011-10-07]
 	Updated www/typolight28 to 2.8.4nb5 [taca 2011-10-07]
 	Updated misc/libreoffice3-bin to 3.4.3 [ryoon 2011-10-07]
+	Updated multimedia/vlc to 1.1.2 [drochner 2011-10-07]
+	Updated multimedia/mkvtoolnix to 5.0.0 [drochner 2011-10-07]
+	Updated multimedia/libmatroska to 1.3.0 [drochner 2011-10-07]
+	Updated devel/libebmldevel/libebml to 1.2.2 [drochner 2011-10-07]
+	Updated multimedia/ffmpeg to 0.7.6 [drochner 2011-10-07]
+	Updated www/webkit-gtk to 1.6.1 [drochner 2011-10-07]
+	Updated net/tor to 0.2.2.33 [drochner 2011-10-07]
+	Updated security/gnutls to 2.12.11 [drochner 2011-10-07]
