@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2421 2011/10/07 10:45:24 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2422 2011/10/07 10:49:55 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3872,3 +3872,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-XML-LibXML-Simple to 0.91 [hiramatsu 2011-10-07]
 	Updated emulators/suse113_base to 11.3nb6 [ryoon 2011-10-07]
 	Updated devel/py-testtools to 0.9.12 [obache 2011-10-07]
+	Updated devel/hdf5 to 1.8.7 [alnsn 2011-10-07]
+	Added devel/hdf5++ version 1.8.7 [alnsn 2011-10-07]
