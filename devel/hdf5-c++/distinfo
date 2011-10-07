@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/07 10:42:18 alnsn Exp $
+
+SHA1 (hdf5-1.8.7.tar.gz) = cb8a2a353a7aabbae923029ebfb66426ddc28ff0
+RMD160 (hdf5-1.8.7.tar.gz) = 6629b3300e4bc86ced62085f4036550ce5cb9cd9
+Size (hdf5-1.8.7.tar.gz) = 7827944 bytes
+SHA1 (patch-c++_examples_Makefile.in) = 4c063e3138507a5dbf99f4c7785611a45ffcf753
+SHA1 (patch-c++_examples_run-c++-ex.sh.in) = 58c38b2ba5557cdae2c4fe1e72c6fa55e5606f1e
+SHA1 (patch-configure.in) = c08f39c3aba0ff34022d4afc26cdfd8785f504b7
+SHA1 (patch-examples_Makefile.in) = 3049b17a6656e7b9818ec69607b278b6e7dc937d
+SHA1 (patch-examples_run-c-ex.sh.in) = 744d3e6bbae1a9b496e3657db6a62fac78fcd7ed
+SHA1 (patch-hl_c++_examples_Makefile.in) = 6e651fae42365e67c281d8bc80e2c60faeddec01
+SHA1 (patch-hl_c++_examples_run-hlc++-ex.sh.in) = fba3d976adb02d80682ddc42a8ef64f6dddffa41
+SHA1 (patch-hl_examples_Makefile.in) = 2fe09e8a88eeca49db58908a6b4a3a70f01cb0b4
+SHA1 (patch-hl_examples_run-hlc-ex.sh.in) = 38c2c112439d6febb023d638d965f04bbaa45d5f
