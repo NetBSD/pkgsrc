@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/07/27 15:34:55 seb Exp $
+$NetBSD: distinfo,v 1.8 2011/10/07 11:38:37 hiramatsu Exp $
 
-SHA1 (MooseX-ClassAttribute-0.16.tar.gz) = 36c9bb636aa34888fd670ecd2dd825a6c85ccf40
-RMD160 (MooseX-ClassAttribute-0.16.tar.gz) = 7fc2e9da3d7424e4fec5798f1543ebf96caf4fab
-Size (MooseX-ClassAttribute-0.16.tar.gz) = 18781 bytes
+SHA1 (MooseX-ClassAttribute-0.26.tar.gz) = a6cdb29959dba4c9d3211f17af80847c3bcb80e0
+RMD160 (MooseX-ClassAttribute-0.26.tar.gz) = 0bb7054d01fcdac4430f423664cbf110cd9da9a4
+Size (MooseX-ClassAttribute-0.26.tar.gz) = 19050 bytes
