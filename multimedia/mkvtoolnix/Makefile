@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2011/09/16 02:26:45 obache Exp $
+# $NetBSD: Makefile,v 1.35 2011/10/07 19:09:55 drochner Exp $
 
-DISTNAME=	mkvtoolnix-4.6.0
-PKGREVISION=	2
+DISTNAME=	mkvtoolnix-5.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/
 EXTRACT_SUFX=	.tar.bz2
@@ -44,6 +43,7 @@ BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.libebml+= libebml>=1.2.2
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
