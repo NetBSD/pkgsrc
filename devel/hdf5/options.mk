@@ -1,23 +1,15 @@
-# $NetBSD: options.mk,v 1.6 2010/02/06 22:19:00 gdt Exp $
+# $NetBSD: options.mk,v 1.7 2011/10/07 10:38:50 alnsn Exp $
 
 PKG_OPTIONS_VAR=PKG_OPTIONS.hdf5
-PKG_SUPPORTED_OPTIONS=	szip cxx threads
+PKG_SUPPORTED_OPTIONS=	szip threads
 # szip is non-Free, so leave out by default
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		cxx
 
 .if !empty(PKG_OPTIONS:Mszip)
 CONFIGURE_ARGS+=	--with-szlib
 .include "../../archivers/szip/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mcxx)
-USE_LANGUAGES=		c c++
-CONFIGURE_ARGS+=	--enable-cxx
-PLIST.cxx=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mthreads)

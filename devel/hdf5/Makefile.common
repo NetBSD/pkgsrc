@@ -1,0 +1,30 @@
+# $NetBSD: Makefile.common,v 1.1 2011/10/07 10:38:50 alnsn Exp $
+# used by devel/hdf5-c++/Makefile
+
+HDF5_VER=	1.8.7
+DISTNAME=	hdf5-${HDF5_VER}
+CATEGORIES=	devel
+MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current/src/
+
+MAINTAINER=	alnsn@NetBSD.org
+HOMEPAGE=	http://www.hdfgroup.org/HDF5/
+
+LICENSE=	original-bsd
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pax tr
+GNU_CONFIGURE=		yes
+TEST_TARGET=		check
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+PATCHDIR=	${.CURDIR}/../../devel/hdf5/patches
+
+# it appears that this file is informative only and is not actually
+# used by any installed tools
+CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
+
+INSTALL_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+
+post-extract:
+	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsd
+	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsdelf

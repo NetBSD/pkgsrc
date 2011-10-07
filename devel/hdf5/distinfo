@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.26 2010/04/24 21:27:36 asau Exp $
+$NetBSD: distinfo,v 1.27 2011/10/07 10:38:50 alnsn Exp $
 
-SHA1 (hdf5-1.6.10.tar.gz) = ccac439841977ab4e460fcb4c1fc2c2692a841d7
-RMD160 (hdf5-1.6.10.tar.gz) = 7fd773f80265b5d8afc5c5765c499c22bd22f0c8
-Size (hdf5-1.6.10.tar.gz) = 7435318 bytes
-SHA1 (patch-aa) = 8e02e2b5decde21bb7d223f3870330832db399ba
-SHA1 (patch-ab) = 8bb87d50b6c54f9fb2de8f9d21fb28e326b1e55d
-SHA1 (patch-ac) = 46d224106ee34e2550cec708feffc802d6997bca
-SHA1 (patch-ad) = 0b58c169e0d12cc25fc6206fc49086a89d2836b7
-SHA1 (patch-ba) = 1ba84ee22c3307100a2c8d3df4dfb2037be8e773
-SHA1 (patch-bb) = bcfd87df515d64471f881d4d10c894d89a6bc56e
-SHA1 (patch-bc) = 54c25f32c1303ed616e94a7a28036ef033a66c40
-SHA1 (patch-bd) = d9347835a63ce9eccfa41992d1b1c6c934bca001
-SHA1 (patch-be) = cb45e1ff8af301de1be1f5c71fbf730b365576bb
-SHA1 (patch-bf) = 33ae2f49be5ff7040389a472177b95127ef6b592
+SHA1 (hdf5-1.8.7.tar.gz) = cb8a2a353a7aabbae923029ebfb66426ddc28ff0
+RMD160 (hdf5-1.8.7.tar.gz) = 6629b3300e4bc86ced62085f4036550ce5cb9cd9
+Size (hdf5-1.8.7.tar.gz) = 7827944 bytes
+SHA1 (patch-c++_examples_Makefile.in) = 4c063e3138507a5dbf99f4c7785611a45ffcf753
+SHA1 (patch-c++_examples_run-c++-ex.sh.in) = 58c38b2ba5557cdae2c4fe1e72c6fa55e5606f1e
+SHA1 (patch-configure.in) = c08f39c3aba0ff34022d4afc26cdfd8785f504b7
+SHA1 (patch-examples_Makefile.in) = 3049b17a6656e7b9818ec69607b278b6e7dc937d
+SHA1 (patch-examples_run-c-ex.sh.in) = 744d3e6bbae1a9b496e3657db6a62fac78fcd7ed
+SHA1 (patch-hl_c++_examples_Makefile.in) = 6e651fae42365e67c281d8bc80e2c60faeddec01
+SHA1 (patch-hl_c++_examples_run-hlc++-ex.sh.in) = fba3d976adb02d80682ddc42a8ef64f6dddffa41
+SHA1 (patch-hl_examples_Makefile.in) = 2fe09e8a88eeca49db58908a6b4a3a70f01cb0b4
+SHA1 (patch-hl_examples_run-hlc-ex.sh.in) = 38c2c112439d6febb023d638d965f04bbaa45d5f
