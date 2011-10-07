@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/30 12:23:09 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/10/07 02:02:39 hiramatsu Exp $
 
-SHA1 (XML-FeedPP-0.41.tar.gz) = 75eab5387e2c739b99cfc53637a2b28a4092dce4
-RMD160 (XML-FeedPP-0.41.tar.gz) = 4c6af03c844deae141f88d374e9aef4188dfb622
-Size (XML-FeedPP-0.41.tar.gz) = 40607 bytes
+SHA1 (XML-FeedPP-0.43.tar.gz) = baa2b67a152b97d888991b0a7d79faf95b29c61b
+RMD160 (XML-FeedPP-0.43.tar.gz) = 0c78906dfc3d2eb6a05f3e2545535b2c9815a0d3
+Size (XML-FeedPP-0.43.tar.gz) = 42762 bytes
