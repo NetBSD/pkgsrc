@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-#	$NetBSD: soffice,v 1.1.1.1 2011/06/12 09:05:30 ryoon Exp $
+#	$NetBSD: soffice,v 1.2 2011/10/07 13:28:54 ryoon Exp $
 #
-SOINST=@@PREFIX@@/opt/libreoffice
+SOINST=@@PREFIX@@/opt/libreoffice@@OO_BASEVER@@
 
 # make sure we can find `whoami` on solaris
 PATH=${PATH}:/usr/ucb
