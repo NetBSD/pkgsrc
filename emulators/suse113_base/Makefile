@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/08/14 14:11:05 chs Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/07 08:22:46 ryoon Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 DISTFILES+=	aaa_base-11.3-8.9.1.${SUSE_ARCH}.rpm
 DISTFILES+=	bash-4.1-8.1.${SUSE_ARCH}.rpm
