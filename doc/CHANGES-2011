@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2422 2011/10/07 10:49:55 alnsn Exp $
+$NetBSD: CHANGES-2011,v 1.2423 2011/10/07 10:59:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-testtools to 0.9.12 [obache 2011-10-07]
 	Updated devel/hdf5 to 1.8.7 [alnsn 2011-10-07]
 	Added devel/hdf5++ version 1.8.7 [alnsn 2011-10-07]
+	Updated devel/py-babel to 0.9.6 [obache 2011-10-07]
