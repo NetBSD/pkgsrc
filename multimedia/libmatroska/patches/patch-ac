@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.11 2011/03/18 12:42:14 adam Exp $
+$NetBSD: patch-ac,v 1.12 2011/10/07 19:04:46 drochner Exp $
 
---- make/linux/Makefile.orig	2011-01-29 11:48:16.000000000 +0000
+--- make/linux/Makefile.orig	2011-10-06 14:24:10.000000000 +0000
 +++ make/linux/Makefile
 @@ -16,16 +16,16 @@ prefix=/boot/home/config
  else
@@ -31,7 +31,7 @@ $NetBSD: patch-ac,v 1.11 2011/03/18 12:42:14 adam Exp $
  LIBRARY=libmatroska.a
 -LIBRARY_SO=libmatroska.so
 +LIBRARY_SO=libmatroska.la
- LIBRARY_SO_VER=libmatroska.so.3
+ LIBRARY_SO_VER=libmatroska.so.5
  
  # source-files
 @@ -92,16 +92,14 @@ lib:
