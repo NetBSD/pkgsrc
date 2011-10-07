@@ -1,11 +1,12 @@
-$NetBSD: patch-ar,v 1.1 2011/01/24 18:54:04 drochner Exp $
+$NetBSD: patch-ar,v 1.2 2011/10/07 19:13:20 drochner Exp $
 
---- modules/misc/inhibit/xdg.c.orig	2010-11-26 22:32:46.000000000 +0000
+--- modules/misc/inhibit/xdg.c.orig	2011-10-05 21:21:12.000000000 +0000
 +++ modules/misc/inhibit/xdg.c
-@@ -26,7 +26,11 @@
+@@ -26,7 +26,12 @@
  #include <vlc_plugin.h>
  #include <vlc_inhibit.h>
  #include <assert.h>
++#include <signal.h>
 +#ifdef _POSIX_SPAWN
 +# if (_POSIX_SPAWN >= 0)
  #include <spawn.h>
@@ -14,16 +15,70 @@ $NetBSD: patch-ar,v 1.1 2011/01/24 18:54:04 drochner Exp $
  #include <sys/wait.h>
  
  static int Open (vlc_object_t *);
-@@ -137,6 +141,8 @@ static void *Thread (void *data)
+@@ -46,7 +51,11 @@ struct vlc_inhibit_sys
+     vlc_thread_t thread;
+     vlc_cond_t update, inactive;
+     vlc_mutex_t lock;
++#ifdef _POSIX_SPAWN
++# if (_POSIX_SPAWN >= 0)
+     posix_spawnattr_t attr;
++# endif
++#endif
+     bool suspend, suspended;
+ };
+ 
+@@ -66,17 +75,29 @@ static int Open (vlc_object_t *obj)
+     vlc_mutex_init (&p_sys->lock);
+     vlc_cond_init (&p_sys->update);
+     vlc_cond_init (&p_sys->inactive);
++#ifdef _POSIX_SPAWN
++# if (_POSIX_SPAWN >= 0)
+     posix_spawnattr_init (&p_sys->attr);
++# endif
++#endif
+     /* Reset signal handlers to default and clear mask in the child process */
+     {
+         sigset_t set;
+ 
+         sigemptyset (&set);
++#ifdef _POSIX_SPAWN
++# if (_POSIX_SPAWN >= 0)
+         posix_spawnattr_setsigmask (&p_sys->attr, &set);
++# endif
++#endif
+         sigaddset (&set, SIGPIPE);
++#ifdef _POSIX_SPAWN
++# if (_POSIX_SPAWN >= 0)
+         posix_spawnattr_setsigdefault (&p_sys->attr, &set);
+         posix_spawnattr_setflags (&p_sys->attr, POSIX_SPAWN_SETSIGDEF
+                                               | POSIX_SPAWN_SETSIGMASK);
++# endif
++#endif
+     }
+     p_sys->suspend = false;
+     p_sys->suspended = false;
+@@ -105,7 +126,11 @@ static void Close (vlc_object_t *obj)
+ 
+     vlc_cancel (p_sys->thread);
+     vlc_join (p_sys->thread, NULL);
++#ifdef _POSIX_SPAWN
++# if (_POSIX_SPAWN >= 0)
+     posix_spawnattr_destroy (&p_sys->attr);
++# endif
++#endif
+     vlc_cond_destroy (&p_sys->inactive);
+     vlc_cond_destroy (&p_sys->update);
+     vlc_mutex_destroy (&p_sys->lock);
+@@ -151,6 +176,8 @@ static void *Thread (void *data)
          pid_t pid;
  
          vlc_mutex_unlock (&p_sys->lock);
 +#ifdef _POSIX_SPAWN
 +# if (_POSIX_SPAWN >= 0)
-         if (!posix_spawnp (&pid, "xdg-screensaver", NULL, NULL, argv, environ))
+         if (!posix_spawnp (&pid, "xdg-screensaver", NULL, &p_sys->attr,
+                            argv, environ))
          {
-             int status;
-@@ -146,6 +152,8 @@ static void *Thread (void *data)
+@@ -161,6 +188,8 @@ static void *Thread (void *data)
              while (waitpid (pid, &status, 0) == -1);
          }
          else/* We don't handle the error, but busy looping would be worse :( */
