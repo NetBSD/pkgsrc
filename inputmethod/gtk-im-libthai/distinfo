@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/03/10 13:51:27 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/10/07 11:47:50 obache Exp $
 
-SHA1 (gtk-im-libthai-0.1.5.tar.gz) = c95f4328c9007f871ff7350f70e8b9f0ee862410
-RMD160 (gtk-im-libthai-0.1.5.tar.gz) = a305ca8f0b0078fa7bff476ecc5a2278f731766b
-Size (gtk-im-libthai-0.1.5.tar.gz) = 295900 bytes
-SHA1 (patch-aa) = e2b08918d0859bdecf2bcaeb927ba3126420f224
+SHA1 (gtk-im-libthai-0.2.0.tar.gz) = ad6e2d4da2ce181ee1ba9a0b2a75f18e4dcac9b0
+RMD160 (gtk-im-libthai-0.2.0.tar.gz) = 1d8fe1bc67c311c4d76ab7596860f5b245367dbd
+Size (gtk-im-libthai-0.2.0.tar.gz) = 320566 bytes
+SHA1 (patch-aa) = f4eccb295992aefb7a8e8b442c80b988e2bfe2db
