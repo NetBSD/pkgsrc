@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2011/09/06 19:20:31 drochner Exp $
+# $NetBSD: Makefile.common,v 1.3 2011/10/07 12:17:25 drochner Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
-DISTNAME=	webkit-1.4.3
+DISTNAME=	webkit-1.6.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/
 
@@ -26,6 +26,8 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-target=x11 \
 			--with-font-backend=freetype
+CONFIGURE_ENV+= ZLIB_CFLAGS=-I${BUILDLINK_PREFIX.zlib}/include ZLIB_LIBS=-lz
+
 .include "options.mk"
 
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
@@ -42,6 +44,7 @@ BUILDLINK_DEPMETHOD.python= build
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
