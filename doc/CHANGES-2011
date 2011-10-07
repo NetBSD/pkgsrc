@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2419 2011/10/07 07:59:57 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2420 2011/10/07 08:23:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Getopt-Euclid to 0.3.0 [hiramatsu 2011-10-07]
 	Updated devel/p5-Test-Simple to 0.98 [hiramatsu 2011-10-07]
 	Updated textproc/p5-XML-LibXML-Simple to 0.91 [hiramatsu 2011-10-07]
+	Updated emulators/suse113_base to 11.3nb6 [ryoon 2011-10-07]
