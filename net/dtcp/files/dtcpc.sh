@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dtcpc.sh,v 1.4 2007/07/02 09:46:51 joerg Exp $
+# $NetBSD: dtcpc.sh,v 1.5 2011/10/07 22:37:04 shattered Exp $
 #
 
 # PROVIDE: dtcpc
