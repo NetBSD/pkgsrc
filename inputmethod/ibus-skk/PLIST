@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/12/20 13:14:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/10/07 12:13:23 obache Exp $
 bin/ibus-skk-convert-jisyo
 libexec/ibus-engine-skk
 libexec/ibus-setup-skk
@@ -20,6 +20,9 @@ share/ibus-skk/engine/nicola.pyo
 share/ibus-skk/engine/skk.py
 share/ibus-skk/engine/skk.pyc
 share/ibus-skk/engine/skk.pyo
+share/ibus-skk/engine/virtkbd.py
+share/ibus-skk/engine/virtkbd.pyc
+share/ibus-skk/engine/virtkbd.pyo
 share/ibus-skk/icons/ibus-skk.svg
 share/ibus-skk/setup/config.py
 share/ibus-skk/setup/config.pyc
