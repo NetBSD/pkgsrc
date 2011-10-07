@@ -1,26 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2010/03/10 13:51:27 obache Exp $
+$NetBSD: patch-aa,v 1.3 2011/10/07 11:47:50 obache Exp $
 
 Handled by pkgsrc package install script.
 
---- src/Makefile.in.orig	2009-12-27 05:07:04.000000000 +0000
+--- src/Makefile.in.orig	2011-06-17 09:03:07.000000000 +0000
 +++ src/Makefile.in
-@@ -542,19 +542,6 @@ uninstall-am: uninstall-moduleLTLIBRARIE
+@@ -660,9 +660,9 @@ uninstall-am: uninstall-gtk2moduleLTLIBR
+ 
  # Running this if cross compiling or if DESTDIR is set is going to
  # not work at all, so skip it.
- install-data-hook:
--	@if test -z "$(DESTDIR)" ; then \
--	  echo $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/gtk-2.0 ; \
--	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/gtk-2.0 ; \
--	  echo "gtk-query-immodules-2.0 > $(DESTDIR)$(sysconfdir)/gtk-2.0/gtk.immodules" ; \
--	  gtk-query-immodules-2.0 > $(DESTDIR)$(sysconfdir)/gtk-2.0/gtk.immodules ; \
--	else \
--	  echo "***" ; \
--	  echo "*** Warning: gtk.immodules not built" ; \
--	  echo "***" ; \
--	  echo "*** Generate this file manually on host" ; \
--	  echo "*** system using gtk-query-immodules-2.0" ; \
--	  echo "***" ; \
--        fi
+-install-data-hook: update-modules
++install-data-hook:
  
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
+-uninstall-hook: update-modules
++uninstall-hook:
+ 
+ update-modules:
+ 	@if test -z "$(DESTDIR)" ; then \
