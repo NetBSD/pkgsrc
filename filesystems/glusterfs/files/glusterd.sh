@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: glusterd.sh,v 1.7 2011/08/09 07:15:42 manu Exp $
+# $NetBSD: glusterd.sh,v 1.8 2011/10/07 22:37:03 shattered Exp $
 #
 
 # PROVIDE: glusterd

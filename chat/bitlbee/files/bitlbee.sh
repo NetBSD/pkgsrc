@@ -1,4 +1,4 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 
 # PROVIDE: bitlbee
 # REQUIRE: DAEMON

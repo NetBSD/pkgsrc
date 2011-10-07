@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: LPRng.sh,v 1.4 2006/06/21 13:50:46 jlam Exp $
+# $NetBSD: LPRng.sh,v 1.5 2011/10/07 22:37:05 shattered Exp $
 #
 # PROVIDE: LPRng lpd
 # REQUIRE: DAEMON

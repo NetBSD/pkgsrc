@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rtspd.sh,v 1.3 2001/02/04 16:55:47 tron Exp $
+# $NetBSD: rtspd.sh,v 1.4 2011/10/07 22:37:04 shattered Exp $
 #
 # PROVIDE: rtspd
 # REQUIRE: DAEMON

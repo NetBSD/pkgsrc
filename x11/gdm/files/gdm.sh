@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gdm.sh,v 1.5 2006/06/25 17:16:33 jmmv Exp $
+# $NetBSD: gdm.sh,v 1.6 2011/10/07 22:37:06 shattered Exp $
 #
 
 # PROVIDE: gdm

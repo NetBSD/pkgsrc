@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: preludemanager.sh,v 1.3 2008/10/18 13:31:12 shannonjr Exp $
+# $NetBSD: preludemanager.sh,v 1.4 2011/10/07 22:37:05 shattered Exp $
 #
 
 # PROVIDE: preludemanager
