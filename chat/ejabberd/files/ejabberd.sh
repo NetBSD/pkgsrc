@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ejabberd.sh,v 1.1.1.1 2008/03/10 08:58:32 martti Exp $
+# $NetBSD: ejabberd.sh,v 1.2 2011/10/07 22:37:03 shattered Exp $
 # $FreeBSD: ejabberd.sh.in,v 1.1 2005/08/28 15:51:48 vsevolod Exp $
 #
 # PROVIDE: ejabberd
