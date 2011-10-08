@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2432 2011/10/08 06:20:05 dsainty Exp $
+$NetBSD: CHANGES-2011,v 1.2433 2011/10/08 07:39:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3897,3 +3897,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Web-Scraper to 0.35 [hiramatsu 2011-10-08]
 	Updated databases/p5-DBIx-Class to 0.08195 [hiramatsu 2011-10-08]
 	Updated net/rtmpdump to 2.4 [dsainty 2011-10-08]
+	Updated www/webkit-gtk3 to 1.6.1 [obache 2011-10-08]
