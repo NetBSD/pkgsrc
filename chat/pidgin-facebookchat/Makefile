@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2011/06/10 09:39:48 obache Exp $
+# $NetBSD: Makefile,v 1.15.4.1 2011/10/08 11:30:51 tron Exp $
 
 VERSION=	1.27
 DISTNAME=	pidgin-facebookchat-source-${VERSION}
 PKGNAME=	pidgin-facebookchat-${VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	chat
 MASTER_SITES=	http://pidgin-facebookchat.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,9 @@ WRKSRC=		${WRKDIR}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pidgin-facebookchat/
 COMMENT=	Plugin for pidgin to support Facebook IM
+LICENSE=	gnu-gpl-v3 # or later
+
+DEPENDS+=	pidgin>=2.7.9:../../chat/pidgin
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,14 +27,9 @@ SUBST_SED.paths+=	-e 's+-I/usr/include/libpurple+-I${BUILDLINK_DIR}/include/libp
 SUBST_SED.paths+=	-e 's+/usr/share/+${DESTDIR}${PREFIX}/share/+g'
 SUBST_SED.paths+=	-e 's+/usr/lib/+${DESTDIR}${PREFIX}/lib/+g'
 
-INSTALLATION_DIRS+=	lib/purple-2 \
-			share/pixmaps/pidgin/protocols/16 \
-			share/pixmaps/pidgin/protocols/22 \
-			share/pixmaps/pidgin/protocols/48
+INSTALLATION_DIRS+=	lib/purple-2
 
-.include "../../chat/pidgin/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

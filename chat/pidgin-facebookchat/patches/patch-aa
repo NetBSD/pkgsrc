@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2008/06/23 21:00:50 smb Exp $
+$NetBSD: patch-aa,v 1.1.32.1 2011/10/08 11:30:51 tron Exp $
 
---- Makefile.orig	2008-06-23 16:53:09.000000000 -0400
-+++ Makefile	2008-06-23 16:53:37.000000000 -0400
+* not to build&install redundant plugins.
+* pidin>=2.7.9 contains facebook.png.
+
+--- Makefile.orig	2008-06-25 22:35:12.000000000 +0000
++++ Makefile
 @@ -1,5 +1,5 @@
  #Customisable stuff here
 -LINUX32_COMPILER = i686-pc-linux-gnu-gcc
@@ -9,7 +12,7 @@ $NetBSD: patch-aa,v 1.1 2008/06/23 21:00:50 smb Exp $
  LINUX64_COMPILER = x86_64-pc-linux-gnu-gcc
  WIN32_COMPILER = /usr/bin/i586-mingw32-gcc
  #LINUX_ARM_COMPILER = arm-pc-linux-gnu-gcc
-@@ -18,13 +18,10 @@
+@@ -19,16 +19,10 @@ DEB_PACKAGE_DIR = ./debdir
  #Standard stuff here
  .PHONY:	all clean install sourcepackage
  
@@ -21,6 +24,9 @@ $NetBSD: patch-aa,v 1.1 2008/06/23 21:00:50 smb Exp $
 -	cp libfacebook64.so /usr/lib64/purple-2/
 -	cp libfacebookarm.so /usr/lib/pidgin/
 -	cp libfacebookppc.so /usr/lib/purple-2/
- 	cp facebook16.png /usr/share/pixmaps/pidgin/protocols/16/facebook.png
- 	cp facebook22.png /usr/share/pixmaps/pidgin/protocols/22/facebook.png
- 	cp facebook48.png /usr/share/pixmaps/pidgin/protocols/48/facebook.png
+-	cp facebook16.png /usr/share/pixmaps/pidgin/protocols/16/facebook.png
+-	cp facebook22.png /usr/share/pixmaps/pidgin/protocols/22/facebook.png
+-	cp facebook48.png /usr/share/pixmaps/pidgin/protocols/48/facebook.png
+ 
+ installers:	pidgin-facebookchat.exe pidgin-facebookchat.deb pidgin-facebookchat.tar.bz2
+ 
