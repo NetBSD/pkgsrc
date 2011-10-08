@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2431 2011/10/08 03:56:58 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2432 2011/10/08 06:20:05 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3896,3 +3896,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-Template-Tiny to 1.12 [hiramatsu 2011-10-08]
 	Updated www/p5-Web-Scraper to 0.35 [hiramatsu 2011-10-08]
 	Updated databases/p5-DBIx-Class to 0.08195 [hiramatsu 2011-10-08]
+	Updated net/rtmpdump to 2.4 [dsainty 2011-10-08]
