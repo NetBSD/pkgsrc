@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.6 2011/10/08 11:31:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.7 2011/10/08 17:58:12 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -21,3 +21,5 @@ Pullup ticket #3533 - requested by taca
 www/contao29: security patch
 Pullup ticket #3534 - requested by dholland
 chat/pidgin-facebookchat: build fix
+Pullup ticket #3535 - requested by dholland
+audio/amarok-kde3: build fix
