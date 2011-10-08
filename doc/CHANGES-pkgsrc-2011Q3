@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.8 2011/10/08 20:41:06 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.9 2011/10/08 22:33:28 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -29,3 +29,5 @@ Pullup ticket #3537 - requested by dholland
 chat/zephyr: build fix
 Pullup ticket #3539 - requested by gls
 pkgsrc/security/p5-Crypt-DSA: security update
+Pullup ticket #3540 - requested by gls
+textproc/asciidoc: security update
