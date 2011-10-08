@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2011/07/21 13:06:02 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2011/10/08 08:02:21 abs Exp $
 
 BUILDLINK_TREE+=	gnome-vfs
 
@@ -8,6 +8,13 @@ GNOME_VFS_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.8.0
 BUILDLINK_ABI_DEPENDS.gnome-vfs+=	gnome-vfs>=2.24.4nb5
 BUILDLINK_PKGSRCDIR.gnome-vfs?=		../../sysutils/gnome-vfs
+
+pkgbase := gnome-vfs
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.gnome-vfs:Mavahi)
+.  include "../../net/avahi/buildlink3.mk"
+.endif
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
