@@ -1,0 +1,24 @@
+$NetBSD: patch-library_cc,v 1.1.2.2 2011/10/08 20:12:51 tron Exp $
+
+Fix build with newer C++ compilers.
+
+--- src/library.cc~	2008-03-05 21:31:06.000000000 +0000
++++ src/library.cc
+@@ -530,7 +530,7 @@ namespace Bmp
+         gint64 length_in_nanoseconds;
+         gst_query_parse_duration (query, &format, &length_in_nanoseconds);
+         guint64 length = length_in_nanoseconds / GST_SECOND;
+-        ttuple->row->insert (std::make_pair (attrinfo[ATTRIBUTE_TIME].id, Variant (length)));
++        ttuple->row->insert (std::make_pair (attrinfo[ATTRIBUTE_TIME].id, Bmp::DB::Variant (length)));
+       }
+       gst_query_unref (query);
+       gst_element_set_state (GST_ELEMENT (element), GST_STATE_NULL);
+@@ -921,7 +921,7 @@ namespace Bmp
+       }
+ #endif //HAVE_HAL
+ 
+-      row.insert (std::make_pair ("insert_path", Variant (string (insert_path))));
++      row.insert (std::make_pair ("insert_path", Bmp::DB::Variant (string (insert_path))));
+       row.insert (std::make_pair (attrinfo[ATTRIBUTE_NEW_ITEM].id, guint64 (1)));
+ 
+       struct stat fstat;
