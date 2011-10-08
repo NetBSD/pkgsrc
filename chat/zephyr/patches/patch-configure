@@ -1,0 +1,80 @@
+$NetBSD: patch-configure,v 1.1 2011/10/08 05:56:00 dholland Exp $
+
+Regenerate after patching aclocal.m4.
+
+--- configure.orig	2001-05-18 20:41:38.000000000 +0000
++++ configure
+@@ -3354,8 +3354,54 @@ if test "$hesiod" != yes; then
+ 	CPPFLAGS="$CPPFLAGS -I$hesiod/include"
+ 	LDFLAGS="$LDFLAGS -L$hesiod/lib"
+ fi
++echo $ac_n "checking for hes_resolve""... $ac_c" 1>&6
++echo "configure:3359: checking for hes_resolve" >&5
++if eval "test \"`echo '$''{'ac_cv_func_hes_resolve'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 3364 "configure"
++#include "confdefs.h"
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char hes_resolve(); below.  */
++#include <assert.h>
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char hes_resolve();
++
++int main() {
++
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined (__stub_hes_resolve) || defined (__stub___hes_resolve)
++choke me
++#else
++hes_resolve();
++#endif
++
++; return 0; }
++EOF
++if { (eval echo configure:3387: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_func_hes_resolve=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_func_hes_resolve=no"
++fi
++rm -f conftest*
++fi
++
++if eval "test \"`echo '$ac_cv_func_'hes_resolve`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  HESIOD_LIBS=
++else
++  echo "$ac_t""no" 1>&6
+ echo $ac_n "checking for hes_resolve in -lhesiod""... $ac_c" 1>&6
+-echo "configure:3359: checking for hes_resolve in -lhesiod" >&5
++echo "configure:3405: checking for hes_resolve in -lhesiod" >&5
+ ac_lib_var=`echo hesiod'_'hes_resolve | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -3389,13 +3435,15 @@ LIBS="$ac_save_LIBS"
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  :
++  HESIOD_LIBS="-lhesiod":
+ else
+   echo "$ac_t""no" 1>&6
+ { echo "configure: error: Hesiod library not found" 1>&2; exit 1; }
+ fi
+ 
+-	HESIOD_LIBS="-lhesiod"
++fi
++
++
+ 	cat >> confdefs.h <<\EOF
+ #define HAVE_HESIOD 1
+ EOF
