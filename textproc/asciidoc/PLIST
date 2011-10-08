@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/05/27 18:51:48 gls Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/10/08 21:13:47 gls Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -79,16 +79,11 @@ share/asciidoc/lang-ru.conf
 share/asciidoc/lang-uk.conf
 share/asciidoc/latex.conf
 share/asciidoc/slidy.conf
-share/asciidoc/stylesheets/asciidoc-manpage.css
 share/asciidoc/stylesheets/asciidoc.css
 share/asciidoc/stylesheets/docbook-xsl.css
-share/asciidoc/stylesheets/flask-manpage.css
-share/asciidoc/stylesheets/flask.css
 share/asciidoc/stylesheets/pygments.css
 share/asciidoc/stylesheets/slidy.css
 share/asciidoc/stylesheets/toc2.css
-share/asciidoc/stylesheets/volnitsky-manpage.css
-share/asciidoc/stylesheets/volnitsky.css
 share/asciidoc/stylesheets/xhtml11-quirks.css
 share/asciidoc/text.conf
 share/asciidoc/wordpress.conf
