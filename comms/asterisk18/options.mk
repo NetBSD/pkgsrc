@@ -1,22 +1,13 @@
-# $NetBSD: options.mk,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
+# $NetBSD: options.mk,v 1.4 2011/10/08 13:49:09 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
-PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
+PKG_SUPPORTED_OPTIONS=		x11 unixodbc ilbc webvmail ldap spandsp
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
 PKG_SUGGESTED_OPTIONS=		ldap
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
-
-# Asterisk now uses DAHDI, not zaptel; not implemented yet...
-#.if !empty(PKG_OPTIONS:Mzaptel)
-## zaptel only supported under NetBSD at the moment
-#.  include "../../comms/zaptel-netbsd/buildlink3.mk"
-#PLIST.zaptel=		yes
-#.else
-#MAKE_FLAGS+=		WITHOUT_ZAPTEL=1
-#.endif
+PLIST_VARS+=		x11 unixodbc ilbc webvmail ldap spandsp
 
 # gtkconsole depends on GTK 2.x
 .if !empty(PKG_OPTIONS:Mx11)
