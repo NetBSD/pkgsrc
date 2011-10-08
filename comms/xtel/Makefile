@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/12/23 11:44:26 dsainty Exp $
+# $NetBSD: Makefile,v 1.22 2011/10/08 07:04:34 dholland Exp $
 #
 
 DISTNAME=	xtel-3.3.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://pficheux.free.fr/xtel/
 COMMENT=	Minitel(r) emulator
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 USE_IMAKE=	YES
 USE_TOOLS+=	mkfontdir bdftopcf
