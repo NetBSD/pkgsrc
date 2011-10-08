@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2011/05/27 18:51:48 gls Exp $
+$NetBSD: distinfo,v 1.14 2011/10/08 21:13:47 gls Exp $
 
-SHA1 (asciidoc-8.6.5.tar.gz) = 520cbf7f8b8695a3c033c183cee5802f36d0127e
-RMD160 (asciidoc-8.6.5.tar.gz) = 9828f2a8cc6f0971b4ed829f47fc1b9ecbf1c62c
-Size (asciidoc-8.6.5.tar.gz) = 867402 bytes
+SHA1 (asciidoc-8.6.6.tar.gz) = f43f96d8599c3337baf12df18315ecc0b9e885c7
+RMD160 (asciidoc-8.6.6.tar.gz) = 8c4de9ff89d7f4357bb3547a09fb0c33f79e3e60
+Size (asciidoc-8.6.6.tar.gz) = 881704 bytes
