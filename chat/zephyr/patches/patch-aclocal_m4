@@ -1,0 +1,27 @@
+$NetBSD: patch-aclocal_m4,v 1.1.2.2 2011/10/08 20:32:16 tron Exp $
+
+Cope with hesiod in libc as well as in -lhesiod.
+
+--- aclocal.m4.orig	2001-05-18 20:41:37.000000000 +0000
++++ aclocal.m4
+@@ -273,8 +273,10 @@ if test "$hesiod" != yes; then
+ 	CPPFLAGS="$CPPFLAGS -I$hesiod/include"
+ 	LDFLAGS="$LDFLAGS -L$hesiod/lib"
+ fi
+-AC_CHECK_LIB(hesiod, hes_resolve, :,
+-	     [AC_MSG_ERROR(Hesiod library not found)])])
++AC_CHECK_FUNC(hes_resolve, HESIOD_LIBS=,
++	AC_CHECK_LIB(hesiod, hes_resolve, HESIOD_LIBS="-lhesiod":,
++	     [AC_MSG_ERROR(Hesiod library not found)]))
++])
+ 
+ AC_DEFUN(ATHENA_HESIOD,
+ [AC_ARG_WITH(hesiod,
+@@ -282,7 +284,6 @@ AC_DEFUN(ATHENA_HESIOD,
+ 	[hesiod="$withval"], [hesiod=no])
+ if test "$hesiod" != no; then
+ 	ATHENA_HESIOD_CHECK
+-	HESIOD_LIBS="-lhesiod"
+ 	AC_DEFINE(HAVE_HESIOD)
+ fi
+ AC_SUBST(HESIOD_LIBS)])
