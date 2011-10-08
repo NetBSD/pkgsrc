@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2430 2011/10/07 19:26:10 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.2431 2011/10/08 03:56:58 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3893,3 +3893,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/webkit-gtk to 1.6.1 [drochner 2011-10-07]
 	Updated net/tor to 0.2.2.33 [drochner 2011-10-07]
 	Updated security/gnutls to 2.12.11 [drochner 2011-10-07]
+	Updated textproc/p5-Template-Tiny to 1.12 [hiramatsu 2011-10-08]
+	Updated www/p5-Web-Scraper to 0.35 [hiramatsu 2011-10-08]
+	Updated databases/p5-DBIx-Class to 0.08195 [hiramatsu 2011-10-08]
