@@ -1,0 +1,16 @@
+$NetBSD: patch-acconfig_h,v 1.1 2011/10/08 06:17:40 dholland Exp $
+
+Check for HES_GETMAILHOST before using it.
+
+--- acconfig.h~	1998-12-01 16:48:27.000000000 +0000
++++ acconfig.h
+@@ -1,6 +1,9 @@
+ /* Define to compile with Hesiod support. */
+ #undef HAVE_HESIOD
+ 
++/* Define if Hesiod has hes_getmailhost. */
++#undef HAVE_HES_GETMAILHOST
++
+ /* Define to compile with Kerberos support. */
+ #undef HAVE_KRB4
+ 
