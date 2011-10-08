@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/17 13:29:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/08 14:11:22 wiz Exp $
 ${PYSITELIB}/atom/__init__.py
 ${PYSITELIB}/atom/__init__.pyc
 ${PYSITELIB}/atom/__init__.pyo
@@ -143,9 +143,21 @@ ${PYSITELIB}/gdata/apps/adminsettings/__init__.pyo
 ${PYSITELIB}/gdata/apps/adminsettings/service.py
 ${PYSITELIB}/gdata/apps/adminsettings/service.pyc
 ${PYSITELIB}/gdata/apps/adminsettings/service.pyo
+${PYSITELIB}/gdata/apps/audit/__init__.py
+${PYSITELIB}/gdata/apps/audit/__init__.pyc
+${PYSITELIB}/gdata/apps/audit/__init__.pyo
+${PYSITELIB}/gdata/apps/audit/service.py
+${PYSITELIB}/gdata/apps/audit/service.pyc
+${PYSITELIB}/gdata/apps/audit/service.pyo
 ${PYSITELIB}/gdata/apps/emailsettings/__init__.py
 ${PYSITELIB}/gdata/apps/emailsettings/__init__.pyc
 ${PYSITELIB}/gdata/apps/emailsettings/__init__.pyo
+${PYSITELIB}/gdata/apps/emailsettings/client.py
+${PYSITELIB}/gdata/apps/emailsettings/client.pyc
+${PYSITELIB}/gdata/apps/emailsettings/client.pyo
+${PYSITELIB}/gdata/apps/emailsettings/data.py
+${PYSITELIB}/gdata/apps/emailsettings/data.pyc
+${PYSITELIB}/gdata/apps/emailsettings/data.pyo
 ${PYSITELIB}/gdata/apps/emailsettings/service.py
 ${PYSITELIB}/gdata/apps/emailsettings/service.pyc
 ${PYSITELIB}/gdata/apps/emailsettings/service.pyo
@@ -161,9 +173,18 @@ ${PYSITELIB}/gdata/apps/migration/__init__.pyo
 ${PYSITELIB}/gdata/apps/migration/service.py
 ${PYSITELIB}/gdata/apps/migration/service.pyc
 ${PYSITELIB}/gdata/apps/migration/service.pyo
+${PYSITELIB}/gdata/apps/organization/__init__.py
+${PYSITELIB}/gdata/apps/organization/__init__.pyc
+${PYSITELIB}/gdata/apps/organization/__init__.pyo
+${PYSITELIB}/gdata/apps/organization/service.py
+${PYSITELIB}/gdata/apps/organization/service.pyc
+${PYSITELIB}/gdata/apps/organization/service.pyo
 ${PYSITELIB}/gdata/apps/service.py
 ${PYSITELIB}/gdata/apps/service.pyc
 ${PYSITELIB}/gdata/apps/service.pyo
+${PYSITELIB}/gdata/apps_property.py
+${PYSITELIB}/gdata/apps_property.pyc
+${PYSITELIB}/gdata/apps_property.pyo
 ${PYSITELIB}/gdata/auth.py
 ${PYSITELIB}/gdata/auth.pyc
 ${PYSITELIB}/gdata/auth.pyo
@@ -197,6 +218,9 @@ ${PYSITELIB}/gdata/books/service.pyo
 ${PYSITELIB}/gdata/calendar/__init__.py
 ${PYSITELIB}/gdata/calendar/__init__.pyc
 ${PYSITELIB}/gdata/calendar/__init__.pyo
+${PYSITELIB}/gdata/calendar/client.py
+${PYSITELIB}/gdata/calendar/client.pyc
+${PYSITELIB}/gdata/calendar/client.pyo
 ${PYSITELIB}/gdata/calendar/data.py
 ${PYSITELIB}/gdata/calendar/data.pyc
 ${PYSITELIB}/gdata/calendar/data.pyo
@@ -284,15 +308,6 @@ ${PYSITELIB}/gdata/health/__init__.pyo
 ${PYSITELIB}/gdata/health/service.py
 ${PYSITELIB}/gdata/health/service.pyc
 ${PYSITELIB}/gdata/health/service.pyo
-${PYSITELIB}/gdata/maps/__init__.py
-${PYSITELIB}/gdata/maps/__init__.pyc
-${PYSITELIB}/gdata/maps/__init__.pyo
-${PYSITELIB}/gdata/maps/client.py
-${PYSITELIB}/gdata/maps/client.pyc
-${PYSITELIB}/gdata/maps/client.pyo
-${PYSITELIB}/gdata/maps/data.py
-${PYSITELIB}/gdata/maps/data.pyc
-${PYSITELIB}/gdata/maps/data.pyo
 ${PYSITELIB}/gdata/media/__init__.py
 ${PYSITELIB}/gdata/media/__init__.pyc
 ${PYSITELIB}/gdata/media/__init__.pyo
@@ -566,6 +581,9 @@ ${PYSITELIB}/gdata/webmastertools/service.pyo
 ${PYSITELIB}/gdata/youtube/__init__.py
 ${PYSITELIB}/gdata/youtube/__init__.pyc
 ${PYSITELIB}/gdata/youtube/__init__.pyo
+${PYSITELIB}/gdata/youtube/client.py
+${PYSITELIB}/gdata/youtube/client.pyc
+${PYSITELIB}/gdata/youtube/client.pyo
 ${PYSITELIB}/gdata/youtube/data.py
 ${PYSITELIB}/gdata/youtube/data.pyc
 ${PYSITELIB}/gdata/youtube/data.pyo
