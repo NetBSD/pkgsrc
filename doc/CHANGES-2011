@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2436 2011/10/08 08:25:25 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2437 2011/10/08 10:59:57 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3873,7 +3873,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_base to 11.3nb6 [ryoon 2011-10-07]
 	Updated devel/py-testtools to 0.9.12 [obache 2011-10-07]
 	Updated devel/hdf5 to 1.8.7 [alnsn 2011-10-07]
-	Added devel/hdf5++ version 1.8.7 [alnsn 2011-10-07]
+	Added devel/hdf5-c++ version 1.8.7 [alnsn 2011-10-07]
 	Updated devel/py-babel to 0.9.6 [obache 2011-10-07]
 	Updated net/p5-Test-TCP to 1.13 [hiramatsu 2011-10-07]
 	Updated www/p5-WWW-Shorten to 3.02 [hiramatsu 2011-10-07]
