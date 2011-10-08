@@ -1,7 +1,28 @@
-$NetBSD: patch-an,v 1.1 2009/09/23 13:31:32 tnn Exp $
+$NetBSD: patch-an,v 1.1.18.1 2011/10/08 20:32:16 tron Exp $
 
---- clients/zmailnotify/zmailnotify.c.orig	1997-10-25 23:47:11.000000000 +0200
+- check for hes_getmailhost before using it
+- avoid conflict with POSIX getline
+
+--- clients/zmailnotify/zmailnotify.c.orig	1997-10-25 21:47:11.000000000 +0000
 +++ clients/zmailnotify/zmailnotify.c
+@@ -72,7 +72,7 @@ main(argc, argv)
+     int i,nbytes,retval,uselock;
+     struct passwd *pwd;
+     struct _mail mymail;
+-#ifdef HAVE_HESIOD
++#ifdef HAVE_HES_GETMAILHOST
+     struct hes_postoffice *p;
+ #endif
+ 
+@@ -104,7 +104,7 @@ main(argc, argv)
+     (void) sprintf(lockfile,"%s/.maillock",dir);
+ 	
+     host = (char *)getenv("MAILHOST");
+-#ifdef HAVE_HESIOD
++#ifdef HAVE_HES_GETMAILHOST
+     if (host == NULL) {
+ 	p = hes_getmailhost(user);
+ 	if (p != NULL && strcmp(p->po_type, "POP") == 0)
 @@ -144,7 +144,7 @@ main(argc, argv)
  	exit(1);
      }
