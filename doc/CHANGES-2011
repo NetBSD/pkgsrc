@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2433 2011/10/08 07:39:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2434 2011/10/08 08:12:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3898,3 +3898,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-DBIx-Class to 0.08195 [hiramatsu 2011-10-08]
 	Updated net/rtmpdump to 2.4 [dsainty 2011-10-08]
 	Updated www/webkit-gtk3 to 1.6.1 [obache 2011-10-08]
+	Updated www/mimetex to 1.72 [obache 2011-10-08]
