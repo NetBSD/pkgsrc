@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2.20.1 2011/10/08 11:30:51 tron Exp $
 lib/purple-2/libfacebook.so
-share/pixmaps/pidgin/protocols/16/facebook.png
-share/pixmaps/pidgin/protocols/22/facebook.png
-share/pixmaps/pidgin/protocols/48/facebook.png
