@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2009/10/29 21:53:10 tnn Exp $
+$NetBSD: distinfo,v 1.7 2011/10/08 05:56:00 dholland Exp $
 
 SHA1 (zephyr-20010518.tar.gz) = cd2fca9c2f0bfaa8e69c94813bedc87d66d3ac1c
 RMD160 (zephyr-20010518.tar.gz) = 1082db0df40e4ac1007e4b2b4f8adc15cf8a8ab0
 Size (zephyr-20010518.tar.gz) = 342259 bytes
 SHA1 (patch-aa) = f4338f0da9085e1780c52c9b2be2366b7a0f22c2
 SHA1 (patch-ab) = 61cbadf511806c1c16e489ac6d14de347b09277a
+SHA1 (patch-aclocal_m4) = 5414d637ec7de322cbf27c211345df241a914df1
 SHA1 (patch-ad) = b0f8c408afc2e7fe9a673a5f2ec562a3e34e225c
 SHA1 (patch-ae) = e0d0776b891db5b8542285899e22c886337cc6c7
 SHA1 (patch-af) = 4ebb22fa3c1b2ed351ee267be737d34d8292129c
@@ -16,3 +17,4 @@ SHA1 (patch-ak) = 7c2084aac1e4b30124c380fbc369cb6a6b41eb17
 SHA1 (patch-al) = d61151a84bb9a55c21b2d757650064390127f8c8
 SHA1 (patch-am) = 40fc00c67f78485b0d45a86ab97aa8ae662dda40
 SHA1 (patch-an) = 94556f92c2d00b4a9d26a230259e28d72b70a1f4
+SHA1 (patch-configure) = bc6604cfa9aa8f652336165e0bbe0e02686e1a88
