@@ -1,0 +1,16 @@
+$NetBSD: patch-configure_in,v 1.1.2.2 2011/10/08 20:32:17 tron Exp $
+
+Check for hes_getmailhost before trying to use it.
+
+--- configure.in~	2000-04-05 14:51:31.000000000 +0000
++++ configure.in
+@@ -85,6 +85,9 @@ AC_SUBST(SLIB)
+ 
+ ATHENA_KRB4
+ ATHENA_HESIOD
++if test "$hesiod" != "no"; then
++	AC_CHECK_FUNCS(hes_getmailhost)
++fi
+ ATHENA_REGEXP
+ ATHENA_ARES
+ ATHENA_UTIL_COM_ERR
