@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2438 2011/10/08 11:01:59 darcy Exp $
+$NetBSD: CHANGES-2011,v 1.2439 2011/10/08 14:11:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3901,3 +3901,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/mimetex to 1.72 [obache 2011-10-08]
 	Updated inputmethod/libchewing to 0.3.3 [obache 2011-10-08]
 	Updated inputmethod/scim-chewing to 0.3.4 [obache 2011-10-08]
+	Updated www/py-gdata to 2.0.14 [wiz 2011-10-08]
