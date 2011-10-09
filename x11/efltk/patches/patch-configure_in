@@ -1,4 +1,4 @@
-$NetBSD: patch-configure_in,v 1.1 2011/10/09 06:40:38 dholland Exp $
+$NetBSD: patch-configure_in,v 1.2 2011/10/09 06:48:00 dholland Exp $
 
 - use pkg-config to find libXft, not xft-config, as xft-config has
 disappeared from recent libXft. (XXX: will this break the build for
