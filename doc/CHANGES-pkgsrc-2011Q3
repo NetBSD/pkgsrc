@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.9 2011/10/08 22:33:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.10 2011/10/09 10:15:29 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -31,3 +31,13 @@ Pullup ticket #3539 - requested by gls
 pkgsrc/security/p5-Crypt-DSA: security update
 Pullup ticket #3540 - requested by gls
 textproc/asciidoc: security update
+Pullup ticket #3541 - requested by dholland
+fonts/jmk-fonts: build fix
+Pullup ticket #3542 - requested by dholland
+textproc/link-grammar: build fix
+Pullup ticket #3543 - requested by dholland
+comms/xtel: build fix
+Pullup ticket #3544 - requested by dholland
+x11/xman: build fix
+Pullup ticket #3545 - requested by dholland
+x11/x3270: build fix
