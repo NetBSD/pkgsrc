@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.6 2009/02/07 22:06:06 joerg Exp $
+$NetBSD: distinfo,v 1.6.22.1 2011/10/09 13:26:47 tron Exp $
 
 SHA1 (xtel-3.3.0.tar.gz) = 7ee5a5afa20bea46e08c346605c53cdd32d69dc9
 RMD160 (xtel-3.3.0.tar.gz) = 0ba51e9129b24db33ac96cff23ffc88d3f13b653
 Size (xtel-3.3.0.tar.gz) = 309426 bytes
-SHA1 (patch-aa) = 648ff6a6a1bffd836a28abed1f0da5e781d61d53
+SHA1 (xtel-jumbo-patch-20111008.gz) = 868afb6a47402ae4eb819fed5509733b4fafebca
+RMD160 (xtel-jumbo-patch-20111008.gz) = 4f23535a9c93347aa45dce8959e3e6aea6e3957c
+Size (xtel-jumbo-patch-20111008.gz) = 43856 bytes
 SHA1 (patch-ab) = 991cd916bbb4c20c71214d4d74a43736940fd5ce
-SHA1 (patch-ac) = 696f513b24a3b4a36e1f49f7fc72a20f1efd57cb
-SHA1 (patch-ad) = 95cd5a8c3e421d711f9fd0ad502aa33e92273e0f
-SHA1 (patch-ae) = ece76180605a5310044ff06506fd298f3dde3234
-SHA1 (patch-af) = c52f5b39da50c350ac3ce929b3f77eafdce4942c
-SHA1 (patch-ag) = 6addd47ca368ed78011162b0b843124329909fc1
-SHA1 (patch-ah) = 18f454bba7898a4d80f68215e7b6995d2ba26a71
+SHA1 (patch-ae) = 38a846ba1ece5f4267771a062d9691f24057b4e1
 SHA1 (patch-ai) = 7ee6020f7cbf0f53be43c8aa264958fc1cab6322
