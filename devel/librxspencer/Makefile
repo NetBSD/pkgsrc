@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/03/21 16:07:03 darcy Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/09 10:02:48 cheusov Exp $
 
 DISTNAME=	rxspencer-alpha3.8.g4
 PKGNAME=	librxspencer-3.8.4
 CATEGORIES=	devel
 MASTER_SITES=	http://arglist.com/regex/
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://arglist.com/regex/
 COMMENT=	POSIX API regexp library by Henry Spencer
 
