@@ -1,0 +1,37 @@
+$NetBSD: patch-modules_src_luacurl_lua-curl-0_3_0_diff,v 1.1 2011/10/09 09:09:29 dholland Exp $
+
+Patch the included patch that patches the included lua-curl to fix
+unintended references to /usr/include, and to not choke on certain
+multiline comments.
+
+Caution: this is a diff of a diff; cvs diff will give you a diff of a
+diff of a diff. If you need to update it, don't whiff, or someone will
+be miffed in a jiff, and you might even get biffed in a tiff.
+
+--- modules/src/luacurl/lua-curl-0.3.0.diff.orig	2008-10-25 15:46:06.000000000 +0000
++++ modules/src/luacurl/lua-curl-0.3.0.diff
+@@ -177,3 +177,24 @@ diff -ruN lua-curl-0.3.0-orig/Makefile l
+  
+  # Constants genereated starting from the cURL headers:
+  
++@@ -121,17 +46,18 @@
++ curl_authopt.h:$(HEADER)
++ 	$(H)cat $(HEADER) | grep "CURLAUTH_" | \
++ 		sed "s/#define *CURL/{\"/" | sed "s/ *\/\*.*\*\///" | \
+++		sed "s/ *\/\*.*$$//" |\
++ 		sed "s/ /\",/" | sed "s/$$/},/" > curl_authopt.h
++ 
++ curl_ftpauthopt.h:$(HEADER)
++-	$(H)cat /usr/include/curl/curl.h | grep -B10 '} curl_ftpauth' | \
+++	$(H)cat $(HEADER) | grep -B10 '} curl_ftpauth' | \
++ 		grep "CURLFTPAUTH_" | \
++ 		grep -v "LAST.*never use" | \
++ 		sed "s/^ *CURL//" | sed "s/^\([^,]*\),.*$$/{\"\1\",CURL\1},/" \
++ 		> curl_ftpauthopt.h
++ 
++ curl_ftpmethods.h:$(HEADER)
++-	$(H)cat /usr/include/curl/curl.h | grep -B10 '} curl_ftpmethod' | \
+++	$(H)cat $(HEADER) | grep -B10 '} curl_ftpmethod' | \
++ 		grep "CURLFTPMETHOD_" | \
++ 		grep -v "LAST.*never use" | \
++ 		sed "s/^ *CURL//" | sed "s/^\([^,]*\),.*$$/{\"\1\",CURL\1},/" \
