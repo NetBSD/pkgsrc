@@ -1,0 +1,19 @@
+$NetBSD: patch-configure_in,v 1.1 2011/10/09 06:40:38 dholland Exp $
+
+- use pkg-config to find libXft, not xft-config, as xft-config has
+disappeared from recent libXft. (XXX: will this break the build for
+really old libXft? Does this need to learn to use both?)
+
+--- configure.in~	2005-04-29 16:13:18.000000000 +0000
++++ configure.in
+@@ -147,8 +147,8 @@ fi])
+ 
+ AC_ARG_ENABLE(xft, [  --enable-xft            enable XWindow XFT extension],[if eval "test x$enable_xft = xyes"; then
+ 	AC_DEFINE(USE_XFT)
+-	LDLIBS="$LDLIBS `xft-config --libs`"
+-        CXXFLAGS="$CXXFLAGS `xft-config --cflags`"
++	LDLIBS="$LDLIBS `pkg-config --libs xft`"
++        CXXFLAGS="$CXXFLAGS `pkg-config --cflags xft`"
+ fi])
+ 
+ AC_ARG_ENABLE(debug, [  --enable-debug          compile with debug rather than optimized],[if eval "test x$enable_debug = xyes"; then
