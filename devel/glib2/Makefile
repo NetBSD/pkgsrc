@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.186 2011/08/04 23:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2011/10/09 19:40:02 jmmv Exp $
 
 .include "Makefile.common"
+.include "options.mk"
+
+PKGREVISION=		1
 
 CATEGORIES=		devel
 
