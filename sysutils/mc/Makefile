@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2011/05/07 15:49:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.83 2011/10/09 10:02:45 cheusov Exp $
 
 DISTNAME=	mc-4.7.0.10
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.midnight-commander.org/
 COMMENT=	User-friendly file manager and visual shell
 LICENSE=	gnu-gpl-v2

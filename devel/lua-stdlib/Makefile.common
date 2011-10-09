@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2009/08/12 17:17:42 minskim Exp $
+# $NetBSD: Makefile.common,v 1.4 2011/10/09 10:02:47 cheusov Exp $
 # used by devel/lua-stdlib-doc/Makefile
 # used by devel/lua-stdlib/Makefile
 
@@ -6,7 +6,7 @@ DISTNAME=		stdlib-11
 CATEGORIES=		devel
 MASTER_SITES=		http://luaforge.net/frs/download.php/3987/
 
-MAINTAINER=		cheusov@tut.by
+MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://luaforge.net/projects/stdlib/
 LICENSE=		mit
 
