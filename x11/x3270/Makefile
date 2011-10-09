@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/10/04 19:25:31 gls Exp $
+# $NetBSD: Makefile,v 1.29 2011/10/09 05:26:08 dholland Exp $
 
 DISTNAME=	suite3270-3.3.12ga7-src
 PKGNAME=	x3270-3.3.12ga7
@@ -19,6 +19,7 @@ USE_IMAKE=	yes
 USE_TOOLS+=	bdftopcf
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
+IMAKEOPTS+=		-DFontDir=${PREFIX}/lib/X11/fonts
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
