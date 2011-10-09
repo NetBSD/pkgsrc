@@ -1,0 +1,24 @@
+$NetBSD: patch-eworkpanel_workpanel_cpp,v 1.1 2011/10/09 06:52:46 dholland Exp $
+
+Fix LP64 build.
+
+--- eworkpanel/workpanel.cpp~	2005-08-29 23:20:59.000000000 +0000
++++ eworkpanel/workpanel.cpp
+@@ -113,7 +113,7 @@ int Fl_Update_Window::handle(int event) 
+ 
+ void setWorkspace(Fl_Button *, void *w)
+ {
+-	Fl_WM::set_current_workspace((int) w);
++	Fl_WM::set_current_workspace((int)(intptr_t) w);
+ }
+ 
+ void restoreRunBrowser() {
+@@ -334,7 +334,7 @@ void updateWorkspaces(Fl_Widget*,void*)
+ 
+ 	for(int n=0; n<count; n++) {
+ 		Fl_Item *i = new Fl_Item();
+-		i->callback( (Fl_Callback *) setWorkspace, (void*)n);
++		i->callback( (Fl_Callback *) setWorkspace, (void*)(intptr_t)n);
+ 		i->type(Fl_Item::RADIO);
+ 		if(n<names_count && names[n]) {
+ 			i->label(names[n]);
