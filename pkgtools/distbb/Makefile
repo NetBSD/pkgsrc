@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/09/12 14:51:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/09 10:02:45 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.41.0
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/distbb/ \
 		http://mova.org/~cheusov/pub/distbb/
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://mova.org/~cheusov/pub/distbb/
 COMMENT=	DISTributed Bulk Build tool for pkgsrc
 LICENSE=	2-clause-bsd
