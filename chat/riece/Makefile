@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/08/06 01:44:46 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2011/10/09 02:25:24 kim Exp $
 #
 
 DISTNAME=	riece-5.0.0
@@ -16,7 +16,7 @@ INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/riece \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 
 EMACS_VERSIONS_ACCEPTED= \
-		emacs23 emacs22 emacs22nox emacs21 emacs21nox \
+		emacs23 emacs23nox emacs22 emacs22nox emacs21 emacs21nox \
 		xemacs215 xemacs215nox xemacs214 xemacs214nox
 EMACS_MODULES=	base
 
