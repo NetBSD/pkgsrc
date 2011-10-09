@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2011/05/29 15:12:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/09 10:02:46 cheusov Exp $
 #
 
 DISTNAME=		sparsehash-1.10
 CATEGORIES=		devel
 MASTER_SITES=		http://google-sparsehash.googlecode.com/files/
 
-MAINTAINER=		vle@gmx.net
+MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://goog-sparsehash.sourceforge.net/
 COMMENT=		Several hash-map implementations in use at Google
 LICENSE=		modified-bsd
