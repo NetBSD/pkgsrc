@@ -1,0 +1,19 @@
+$NetBSD: patch-cn,v 1.1 2011/10/09 19:40:03 jmmv Exp $
+
+The mem-overflow test contains a declaration of an empty struct, which breaks
+on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
+test for now, pending a better fix.
+https://bugzilla.gnome.org/show_bug.cgi?id=641350
+
+--- glib/tests/Makefile.am.orig	2011-06-05 23:18:49.000000000 +0000
++++ glib/tests/Makefile.am
+@@ -66,9 +66,6 @@ hostutils_LDADD     = $(progs_ldadd)
+ TEST_PROGS         += gvariant
+ gvariant_LDADD      = $(progs_ldadd)
+ 
+-TEST_PROGS         += mem-overflow
+-mem_overflow_LDADD  = $(progs_ldadd)
+-
+ TEST_PROGS              += utf8-performance
+ utf8_performance_SOURCES = utf8-performance.c
+ utf8_performance_LDADD   = $(progs_ldadd)
