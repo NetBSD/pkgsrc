@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/10/09 03:35:26 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2011/10/09 03:53:31 dholland Exp $
 #
 
 DISTNAME=	xtel-3.3.0
@@ -21,8 +21,15 @@ MAKE_JOBS_SAFE=	no
 USE_IMAKE=	YES
 USE_TOOLS+=	mkfontdir bdftopcf
 
-FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/xtel
-REQD_DIRS=	${PREFIX}/lib/X11/fonts/xtel
+FONTDIR=	${PREFIX}/lib/X11/fonts
+FONTS_DIRS.x11=	${FONTDIR}/xtel
+REQD_DIRS=	${FONTDIR}/xtel
+
+SUBST_CLASSES+=		fontdir
+SUBST_STAGE.fontdir=	post-configure
+SUBST_MESSAGE.fontdir=	Fixing imake font directory.
+SUBST_FILES.fontdir=	fonts/Makefile
+SUBST_SED.fontdir=	's,^[^A-Z]*FONTDIR =.*,FONTDIR = '${FONTDIR:Q},
 
 INSTALLATION_DIRS=	share/examples/xtel
 INSTALL_MAKE_FLAGS=	PPPDIR=${PREFIX}/share/examples/xtel
