@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/27 22:57:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:45 cheusov Exp $
 
 PKGNAME=	heirloom-doc-${HEIRLOOM_VER}
 CATEGORIES=	sysutils
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 
 DOC_FILES=	COPYING COPYING.LGPL \
 		LICENSE LUCENT \

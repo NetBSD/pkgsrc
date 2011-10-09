@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:43:02 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/09 10:02:48 cheusov Exp $
 #
 
 DISTNAME=	xmms-nas-0.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/willem/
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	ftp://ftp.stack.nl/pub/users/willem/
 COMMENT=	XMMS output plugin for Network Audio System (NAS)
 

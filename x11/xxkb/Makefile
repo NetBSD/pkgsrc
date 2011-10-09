@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2011/05/09 13:13:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/09 10:02:44 cheusov Exp $
 
 DISTNAME=	xxkb-1.11-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xxkb/}
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 # Unfortunately home page is currently written in Russian language
 # only.  See http://pascal.tsu.ru/en/ for English translation updates.
 HOMEPAGE=	http://pascal.tsu.ru/other/xxkb/
