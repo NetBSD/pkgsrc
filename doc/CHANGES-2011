@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2440 2011/10/08 21:15:52 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2441 2011/10/09 11:00:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3903,3 +3903,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/scim-chewing to 0.3.4 [obache 2011-10-08]
 	Updated www/py-gdata to 2.0.14 [wiz 2011-10-08]
 	Updated textproc/asciidoc to 8.6.6 [gls 2011-10-08]
+	Updated sysutils/syslog-ng to 3.2.4nb2 [obache 2011-10-09]
