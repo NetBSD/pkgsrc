@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/08/17 16:05:32 taca Exp $
+# $NetBSD: Makefile,v 1.24 2011/10/09 02:55:02 kim Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
@@ -15,7 +15,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	prefix=${DESTDIR:Q}${PREFIX}
 # XXX please someone adjust paths and PLIST for XEmacs...
-EMACS_VERSIONS_ACCEPTED= emacs23 emacs22 emacs22nox emacs21 emacs21nox emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs23 emacs23nox \
+				emacs22 emacs22nox \
+				emacs21 emacs21nox \
+				emacs20
 EMACS_MODULES+=	leim
 
 .include "../../editors/emacs/modules.mk"
