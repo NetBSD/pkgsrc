@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2011/09/28 18:17:25 bouyer Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/09 10:59:31 obache Exp $
 
 VERS=		3.2.4
 DISTNAME=	syslog-ng_${VERS}
 PKGNAME=	syslog-ng-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${VERS}/source/
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
@@ -15,7 +15,8 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	flex pkg-config gmake
+USE_TOOLS+=	flex pkg-config gmake awk:run
+USE_LIBTOOL=	YES
 
 GNU_CONFIGURE=		YES
 RCD_SCRIPTS=		syslogng
@@ -23,10 +24,28 @@ PKG_SYSCONFSUBDIR=	syslog-ng
 
 CONFIGURE_ARGS+=	--enable-tcp-wrapper
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
-CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run
+CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+REPLACE_AWK+=		contrib/syslog2ng
 
 EGDIR=			${PREFIX}/share/examples/syslog-ng
 DOCDIR=			${PREFIX}/share/doc/syslog-ng
+
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
+OWN_DIRS+=	${VARBASE}/db/syslog-ng
+
+BUILD_DEFS+=	VARBASE
+
+CONF_FILES+=	${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/modules.conf
+CONF_FILES+=	${EGDIR}/scl.conf ${PKG_SYSCONFDIR}/scl.conf
+CONF_FILES+=	${EGDIR}/syslog-ng.conf ${PKG_SYSCONFDIR}/syslog-ng.conf
+
+SUBST_CLASSES+=		unamepath
+SUBST_STAGE.unamepath=	post-configure
+SUBST_FILES.unamepath=	contrib/syslog2ng
+SUBST_VARS.unamepath=	UNAME
 
 .include "../../mk/bsd.prefs.mk"
 
