@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.gnustep,v 1.2 2009/06/14 17:50:22 joerg Exp $
+@comment $NetBSD: PLIST.gnustep,v 1.3 2011/10/09 14:02:06 obache Exp $
 share/GNUstep/Local/Applications/Emacs.app/Emacs
 share/GNUstep/Local/Applications/Emacs.app/Resources/Emacs.desktop
+share/GNUstep/Local/Applications/Emacs.app/Resources/README
 share/GNUstep/Local/Applications/Emacs.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/Emacs.app/Resources/emacstiff
-share/GNUstep/Local/Applications/Emacs.app/library_paths.openapp
+share/GNUstep/Local/Applications/Emacs.app/Resources/emacs.tiff
