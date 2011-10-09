@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/05/14 19:56:05 adrianp Exp $
+$NetBSD: patch-ac,v 1.2 2011/10/09 10:59:32 obache Exp $
 
 # add NetBSD support and fix some paths
 
@@ -15,8 +15,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/05/14 19:56:05 adrianp Exp $
  	# Handle the various platforms- determine proper log device
 -	"/bin/uname -s" | getline sysname;
 -	close("/bin/uname -s");
-+	"/usr/bin/uname -s" | getline sysname;
-+	close("/usr/bin/uname -s");
++	"@UNAME@ -s" | getline sysname;
++	close("@UNAME@ -s");
  	if (sysname == "SunOS") {
  		LOGDEVTYPE="sun-streams";
 +		LOGDEVPATH="/dev/log";
