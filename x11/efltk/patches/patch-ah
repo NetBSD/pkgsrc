@@ -1,7 +1,25 @@
-$NetBSD: patch-ah,v 1.2 2006/03/08 11:29:50 joerg Exp $
+$NetBSD: patch-ah,v 1.3 2011/10/09 06:40:38 dholland Exp $
 
---- configure.orig	2006-02-18 14:10:57.000000000 +0000
+- use pkg-config to find libXft, not xft-config, as xft-config has
+disappeared from recent libXft. (XXX: will this break the build for
+really old libXft? Does this need to learn to use both?)
+
+- use proper pthreads. (warning: this change is not reflected in
+the configure.in patch)
+
+--- configure.orig	2005-04-29 16:31:42.000000000 +0000
 +++ configure
+@@ -5513,8 +5513,8 @@ if test "${enable_xft+set}" = set; then
+ #define USE_XFT 1
+ _ACEOF
+ 
+-	LDLIBS="$LDLIBS `xft-config --libs`"
+-        CXXFLAGS="$CXXFLAGS `xft-config --cflags`"
++	LDLIBS="$LDLIBS `pkg-config --libs xft`"
++        CXXFLAGS="$CXXFLAGS `pkg-config --cflags xft`"
+ fi
+ fi;
+ 
 @@ -8295,13 +8295,13 @@ if test $ac_cv_lib_c_pthread_create = ye
    \
       have_pthread=yes
