@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2011/03/09 16:28:20 drochner Exp $
+# $NetBSD: options.mk,v 1.7 2011/10/09 14:02:06 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
@@ -116,6 +116,7 @@ CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs
 MAKE_FILE=		Makefile
 APPLICATIONS_DIR=	share/GNUstep/Local/Applications
 PLIST_SRC+=		PLIST.gnustep
+CHECK_WRKREF_SKIP+=	share/GNUstep/Local/Applications/Emacs.app/Emacs
 .  endif
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-ns
