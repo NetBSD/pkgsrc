@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/24 08:49:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:47 cheusov Exp $
 #
 
 ENGINE=		pcre
@@ -7,7 +7,7 @@ ENGINE_DIR=	pcre
 .include "../../devel/lua-lrexlib/Makefile.common"
 
 COMMENT=	PCRE regexp library for Lua (lrexlib project)
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 
 DESCR_SRC+=	${.CURDIR}/DESCR
 

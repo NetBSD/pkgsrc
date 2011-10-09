@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/29 13:51:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:46 cheusov Exp $
 
 DISTNAME=	gnats-3.113.1
 PKGNAME=	send-pr-${GNATS_VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=gnats/}
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnats/
 COMMENT=	GNATS problem reporting tool
 LICENSE=	gnu-gpl-v2

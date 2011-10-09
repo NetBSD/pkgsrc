@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/07 15:43:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:44 cheusov Exp $
 #
 
 DISTNAME=		user-20110201
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		vle@gmx.net
+MAINTAINER=		cheusov@NetBSD.org
 COMMENT=		Limited NetBSD-compatible useradd/groupadd commands
 LICENSE=		2-clause-bsd
 

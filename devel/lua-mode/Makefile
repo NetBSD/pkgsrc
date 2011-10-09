@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/11 10:05:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/09 10:02:47 cheusov Exp $
 #
 
 DISTNAME=	lua-mode-20110121
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.zip
 CATEGORIES=	devel
 MASTER_SITES=	http://luaforge.net/frs/download.php/4792/
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://luaforge.net/projects/lua-mode/
 COMMENT=	Emacs major mode for editing Lua code
 

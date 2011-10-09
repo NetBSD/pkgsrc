@@ -1,4 +1,4 @@
-# $NetBSD: Makefile_drivers,v 1.1 2011/09/15 21:22:35 cheusov Exp $
+# $NetBSD: Makefile_drivers,v 1.2 2011/10/09 10:02:48 cheusov Exp $
 #
 
 DISTNAME=	libdbi-drivers-0.8.3-1
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-driver-${DRIVER}/:S/-1/.1/:S/-2/.2/}
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://libdbi-drivers.sourceforge.net/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
