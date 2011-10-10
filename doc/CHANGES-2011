@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2451 2011/10/10 12:23:02 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2452 2011/10/10 12:32:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3920,3 +3920,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.533 [obache 2011-10-10]
 	Updated mail/exim to 4.77 [adam 2011-10-10]
 	Updated mail/exim-html to 4.77 [adam 2011-10-10]
+	Updated textproc/mdocml to 1.12.0 [wiz 2011-10-10]
