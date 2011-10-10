@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2011/06/29 19:47:35 hans Exp $
+# $NetBSD: Makefile,v 1.86 2011/10/10 10:29:58 wiz Exp $
 
 DISTNAME=	nas-1.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nas/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://nas.sourceforge.net
+HOMEPAGE=	http://nas.sourceforge.net/
 COMMENT=	Network Audio System
 LICENSE=	mit # with no-advertisement clause
 
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=		gmake yacc lex
+USE_TOOLS+=		gmake yacc lex makedepend
 USE_IMAKE=		yes
 
 PKG_SYSCONFSUBDIR=	nas
