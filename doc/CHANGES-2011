@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2449 2011/10/10 10:14:59 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2450 2011/10/10 10:36:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3917,3 +3917,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-SQL-Statement to 1.33 [hiramatsu 2011-10-10]
 	Updated www/p5-WWW-Mechanize to 1.70 [hiramatsu 2011-10-10]
 	Updated www/apache22 to 2.2.21nb1 [taca 2011-10-10]
+	Updated net/mikutter to 0.0.3.533 [obache 2011-10-10]
