@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/01/09 20:32:19 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/10 21:42:13 minskim Exp $
 
-DISTNAME=	silgraphite-2.3
+DISTNAME=	silgraphite-2.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silgraphite/}
 
