@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2452 2011/10/10 12:32:06 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2453 2011/10/10 13:01:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3921,3 +3921,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/exim to 4.77 [adam 2011-10-10]
 	Updated mail/exim-html to 4.77 [adam 2011-10-10]
 	Updated textproc/mdocml to 1.12.0 [wiz 2011-10-10]
+	Updated devel/mercurial to 1.9.3 [wiz 2011-10-10]
