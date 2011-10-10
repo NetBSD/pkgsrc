@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2459 2011/10/10 19:31:52 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2460 2011/10/10 21:42:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3930,3 +3930,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao29 to 2.9.5nb5 [taca 2011-10-10]
 	Updated www/typolight28 to 2.8.4nb6 [taca 2011-10-10]
 	Updated devel/doxygen to 1.6.3nb5 [minskim 2011-10-10]
+	Updated graphics/silgraphite to 2.3.1 [minskim 2011-10-10]
+	Updated graphics/silgraphite-ft to 2.3.1 [minskim 2011-10-10]
+	Updated graphics/silgraphite-xft to 2.3.1 [minskim 2011-10-10]
