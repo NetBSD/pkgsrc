@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2457 2011/10/10 13:54:57 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2458 2011/10/10 16:36:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3926,3 +3926,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/powder to 116 [wiz 2011-10-10]
 	Added devel/tclap version 1.2.1 [adam 2011-10-10]
 	Updated sysutils/cdrtools to 3.01alpha06 [wiz 2011-10-10]
+	Updated www/contao210 to 2.10.2 [taca 2011-10-10]
+	Updated www/contao29 to 2.9.5nb5 [taca 2011-10-10]
+	Updated www/typolight28 to 2.8.4nb6 [taca 2011-10-10]
