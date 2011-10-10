@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1496 2011/10/09 11:19:37 alnsn Exp $
+# $NetBSD: Makefile,v 1.1497 2011/10/10 13:16:51 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1411,6 +1411,7 @@ SUBDIR+=	sysexits
 SUBDIR+=	tailor
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
+SUBDIR+=	tclap
 SUBDIR+=	tcllib
 SUBDIR+=	tclreadline
 SUBDIR+=	teem
