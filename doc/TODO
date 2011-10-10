@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10593 2011/10/10 13:09:42 wiz Exp $
+$NetBSD: TODO,v 1.10594 2011/10/10 13:21:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -335,7 +335,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o FlightCrew-0.7.2
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.1.6
+	o ImageMagick-6.7.2.9
 	o MAMEDiff-2.30
 	o Mesa-7.10.3
 	o MesaLib-7.11
@@ -465,7 +465,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o celestia-1.6.0
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.2.0
-	o cherokee-1.2.1
+	o cherokee-1.2.100
 	o chromium-0.9.15
 	o chrony-1.26
 	o cinepaint-0.23
@@ -474,6 +474,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.8.0
+	o clutter-gst-1.4.2
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compositeproto-0.4.2
@@ -494,6 +495,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o curl-7.22.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.22
+	o cxref-1.6d
 	o cygwin_lib-1.5.24.2
 	o damageproto-1.2.1
 	o dansguardian-2.10.0.3
@@ -516,7 +518,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o diffstat-1.54
 	o diffutils-3.2
-	o digikam-2.1.1
+	o digikam-2.2.0
 	o dillo-3.0.1
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -545,10 +547,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.20
 	o egtk-0.3.6.2
 	o eigen2-2.0.16
-	o eigen3-3.0.2
-	o ejabberd-2.1.8
+	o eigen3-3.0.3
+	o ejabberd-2.1.9
 	o ekiga-3.2.7
-	o electric-9.00
+	o electric-9.01
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
@@ -564,6 +566,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eog-3.2.0
 	o eog-plugins-3.2.0
 	o epic4-2.6
+	o epiphany-extensions-3.2.0
 	o epstool-3.08
 	o eric4-4.4.17
 	o eric5-5.1.5
@@ -593,7 +596,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
-	o ffmpeg-20111001.0.7.6
 	o file-5.09
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -675,13 +677,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdb-7.3a
 	o gdeskcal-1.01
 	o gdl-2.30.1 [GNOME 2.32]
-	o gdl-3.0.2
+	o gdl-3.2.0
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
 	o gdsreader-0.3.2
 	o geany-0.21
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o gentoo-0.19.11
+	o gentoo-0.19.12
 	o gfract-0.33
 	o ghc-7.0.4
 	o ghostscript-9.04 [wip]
@@ -693,7 +695,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.8.0 [GNOME 2.34]
 	o glade3-3.10.0
 	o glib2-2.30.0
-	o global-6.0
+	o global-6.1
 	o glom-1.14.2 [GNOME 2.26]
 	o glpk-4.47
 	o glproto-1.4.14
@@ -702,7 +704,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-3.2.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.2.8.13
+	o gnome-commander-1.2.8.14
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.2.0
@@ -777,7 +779,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o help2man-1.40.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-7.6
+	o hiawatha-7.7
 	o highlight-3.5
 	o honeyd-1.5c
 	o horde-4.0.9
@@ -787,7 +789,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o html2wml-0.4.11
 	o httping-1.5.2
 	o httptunnel-3.3
-	o hugin-2011.0.0
+	o hugin-2011.2.0
 	o hylafax-5.5.0
 	o ibus-input-pad-1.4.0 [for ibus-1.4.x]
 	o ical-2.3.2
@@ -806,6 +808,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inputproto-2.0.2
 	o inspircd-1.2.1
 	o instiki-0.13
+	o intltool-0.50.0
 	o ircservices-5.1.21
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
@@ -827,6 +830,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
 	o json-glib-0.14.0
+	o jwm-2.1.0
 	o k3b-2.0.2
 	o kadu-0.6.5
 	o kaffe-1.1.9
@@ -895,7 +899,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.7.4
 	o libdrm-2.4.26
-	o libebml-1.2.2
 	o libextractor-0.6.2
 	o libffi-3.0.10
 	o libflash-0.4.13
@@ -916,7 +919,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liblbxutil-1.1.0
 	o libltdl-2.4
 	o libmatheval-1.1.6
-	o libmatroska-1.3.0
 	o libmcs-0.7.2
 	o libmilter-8.14.5
 	o libnasl-2.3.1
@@ -943,6 +945,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxklavier-5.1
 	o licq-1.3.8
 	o lincvs-2.1.4 [now called CrossVC]
+	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
 	o lottanzb-0.5.3
@@ -973,11 +976,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o minivmac-3.0.4
 	o miredo-1.2.4
 	o mirmon-1.37
+	o mk-configure-0.21.1
 	o mkfontdir-1.0.6
 	o mkfontscale-1.0.9
 	o mknmz-wwwoffle-0.7.2
 	o mksh-40b
-	o mkvtoolnix-5.0.0
+	o mkvtoolnix-5.0.1
 	o moc-2.4.4
 	o modular-xorg-server-1.11.1
 	o molden-4.8 [after which PR 40252 can be closed]
@@ -987,10 +991,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mousetweaks-3.2.0
 	o mp3splt-2.4
 	o mpeg4ip-1.6.1
+	o mpfr-3.1.0
 	o mpg123-1.13.4
 	o mpop-1.0.24
 	o mserv-devel-0.41
 	o mtools-4.0.17
+	o mtr-0.81
 	o mu-0.9.7
 	o multitail-5.2.8
 	o munin-doc-1.4.6
@@ -1054,13 +1060,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0e
 	o openttd-1.1.3
 	o opera-11.51
-	o orc-0.4.15
+	o orc-0.4.16
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o otpCalc-0.97
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.1.6
+	o p5-PerlMagick-6.7.2.9
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1084,6 +1090,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o photopc-3.05
 	o php-jpgraph-3.0.6
 	o php-libawl-0.48
+	o phppgadmin-5.0.3
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1133,7 +1140,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
 	o py-checker-0.8.19
-	o py-cups-1.9.58
+	o py-cups-1.9.59
 	o py-dbus-0.84.0
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
@@ -1197,13 +1204,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sarg-2.2.5
 	o sawfish-1.8.2
 	o saxon-9.2
+	o sbcl-1.0.52
 	o scapy-2.2.0
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
 	o scmgit-1.7.7
-	o scmgit-base-1.7.6.4
-	o scmgit-docs-1.7.6.4
+	o scmgit-base-1.7.7
+	o scmgit-docs-1.7.7
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
@@ -1351,9 +1359,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o webkit-gtk-1.6.1
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.560 [security]
+	o webmin-1.570
 	o websvn-2.3.2
 	o weechat-0.3.5
 	o wget-1.13.4
@@ -1366,13 +1374,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmx-7
 	o worker-2.18.1
 	o wpi-firmware-1.14.2
-	o wwwoffle-2.9g
+	o wwwoffle-2.9h
 	o wxGTK28-2.8.12
 	o wxRemind-101
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111001
+	o x264-devel-20111008
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
@@ -1421,7 +1429,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-neomagic-1.2.5
 	o xf86-video-newport-0.2.3 [unpackaged]
 	o xf86-video-rendition-4.2.4
-	o xf86-video-savage-2.3.2
+	o xf86-video-savage-2.3.3
 	o xf86-video-siliconmotion-1.7.5
 	o xf86-video-sis-0.10.3
 	o xf86-video-sisusb-0.9.4
@@ -1454,7 +1462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbevd-1.1.2 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
-	o xkeyboard-config-2.4
+	o xkeyboard-config-2.4.1
 	o xkill-1.0.3
 	o xli-2006.11.10
 	o xload-1.1.0
@@ -1518,7 +1526,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.4.1
+	o zile-2.4.2
 	o zim-0.53
 	o zircon-1.18.256
 	o zlib-1.2.5
