@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10590 2011/10/09 12:52:36 schmonz Exp $
+$NetBSD: TODO,v 1.10591 2011/10/10 13:01:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -966,7 +966,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o memtester-4.2.2
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
-	o mercurial-1.9.3
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
