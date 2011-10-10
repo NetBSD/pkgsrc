@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2455 2011/10/10 13:09:42 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2456 2011/10/10 13:17:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3924,3 +3924,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mercurial to 1.9.3 [wiz 2011-10-10]
 	Updated www/libmicrohttpd to 0.9.15 [wiz 2011-10-10]
 	Updated games/powder to 116 [wiz 2011-10-10]
+	Added devel/tclap version 1.2.1 [adam 2011-10-10]
