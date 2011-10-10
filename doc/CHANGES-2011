@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2450 2011/10/10 10:36:02 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2451 2011/10/10 12:23:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3918,3 +3918,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-WWW-Mechanize to 1.70 [hiramatsu 2011-10-10]
 	Updated www/apache22 to 2.2.21nb1 [taca 2011-10-10]
 	Updated net/mikutter to 0.0.3.533 [obache 2011-10-10]
+	Updated mail/exim to 4.77 [adam 2011-10-10]
+	Updated mail/exim-html to 4.77 [adam 2011-10-10]
