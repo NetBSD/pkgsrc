@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/10/07 12:28:11 taca Exp $
+$NetBSD: distinfo,v 1.4 2011/10/10 16:32:59 taca Exp $
 
-SHA1 (contao-2.10.1.tar.gz) = f8139b1baef077f5ddb2ba5b7d3fc6b6169db147
-RMD160 (contao-2.10.1.tar.gz) = cb71bdadc9414bd03394ef71928b7fb00d3c5f0b
-Size (contao-2.10.1.tar.gz) = 4868666 bytes
-SHA1 (patch-system_modules_frontend_Frontend.php) = 9e3bc3196d93ef28ef1db842750ab40f50eb10f9
+SHA1 (contao-2.10.2.tar.gz) = 78db9e1ee385f169ac70e4c9a1e09d5bf1c6ef47
+RMD160 (contao-2.10.2.tar.gz) = d4feedfeadf93384bf3d76f8a380c0772b3a3c92
+Size (contao-2.10.2.tar.gz) = 4871543 bytes
