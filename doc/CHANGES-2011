@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2460 2011/10/10 21:42:53 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2461 2011/10/10 22:08:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3933,3 +3933,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/silgraphite to 2.3.1 [minskim 2011-10-10]
 	Updated graphics/silgraphite-ft to 2.3.1 [minskim 2011-10-10]
 	Updated graphics/silgraphite-xft to 2.3.1 [minskim 2011-10-10]
+	Added fonts/tex-cm-unicode version 0.7.0 [minskim 2011-10-10]
+	Added fonts/tex-cm-unicode-doc version 0.7.0 [minskim 2011-10-10]
