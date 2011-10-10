@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2447 2011/10/10 08:32:54 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2448 2011/10/10 09:53:31 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3913,3 +3913,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-ack to 1.96 [schmonz 2011-10-09]
 	Updated devel/glib2 to 2.28.8nb1 [jmmv 2011-10-09]
 	Updated www/py-gdata to 2.0.14nb1 [wiz 2011-10-10]
+	Updated audio/p5-Audio-Scan to 0.92 [hiramatsu 2011-10-10]
+	Updated databases/p5-SQL-Statement to 1.33 [hiramatsu 2011-10-10]
+	Updated www/p5-WWW-Mechanize to 1.70 [hiramatsu 2011-10-10]
