@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10594 2011/10/10 13:21:19 wiz Exp $
+$NetBSD: TODO,v 1.10595 2011/10/10 13:54:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
-	o cdrtools-3.01alpha06
 	o celestia-1.6.0
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.2.0
