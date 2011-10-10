@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2456 2011/10/10 13:17:31 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2457 2011/10/10 13:54:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3925,3 +3925,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/libmicrohttpd to 0.9.15 [wiz 2011-10-10]
 	Updated games/powder to 116 [wiz 2011-10-10]
 	Added devel/tclap version 1.2.1 [adam 2011-10-10]
+	Updated sysutils/cdrtools to 3.01alpha06 [wiz 2011-10-10]
