@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/10 22:07:32 minskim Exp $
+share/texmf-dist/doc/fonts/cm-unicode/Changes
+share/texmf-dist/doc/fonts/cm-unicode/FAQ
+share/texmf-dist/doc/fonts/cm-unicode/FontLog.txt
+share/texmf-dist/doc/fonts/cm-unicode/Fontmap.CMU.alias
+share/texmf-dist/doc/fonts/cm-unicode/Fontmap.CMU.otf
+share/texmf-dist/doc/fonts/cm-unicode/Fontmap.CMU.pfb
+share/texmf-dist/doc/fonts/cm-unicode/INSTALL
+share/texmf-dist/doc/fonts/cm-unicode/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/cm-unicode/OFL.txt
+share/texmf-dist/doc/fonts/cm-unicode/README
+share/texmf-dist/doc/fonts/cm-unicode/README.doc
+share/texmf-dist/doc/fonts/cm-unicode/TODO
+share/texmf-dist/doc/fonts/cm-unicode/cmunrm.pdf
+share/texmf-dist/doc/fonts/cm-unicode/cmunti.pdf
+share/texmf-dist/doc/fonts/cm-unicode/config.cmu
