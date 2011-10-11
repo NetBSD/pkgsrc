@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/07/16 21:35:11 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/10/11 03:12:55 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -348,7 +348,7 @@ libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
 libdata/asterisk/phoneprov/snom-mac.xml
-libdata/asterisk/sounds/.asterisk-core-sounds-en-gsm-1.4.21
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.21
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
 libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.21
@@ -2122,12 +2122,14 @@ sbin/astgenkey
 sbin/autosupport
 sbin/rasterisk
 sbin/safe_asterisk
+share/doc/asterisk/AST.pdf
 share/doc/asterisk/AST.txt
 share/doc/asterisk/BUGS
 share/doc/asterisk/CHANGES
 share/doc/asterisk/COPYING
 share/doc/asterisk/CREDITS
 share/doc/asterisk/ChangeLog
+share/doc/asterisk/IAX2-security.pdf
 share/doc/asterisk/IAX2-security.txt
 share/doc/asterisk/LICENSE
 share/doc/asterisk/README
@@ -2239,10 +2241,6 @@ share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
-@pkgdir libdata/asterisk/sounds/ru
-@pkgdir libdata/asterisk/sounds/fr
-@pkgdir libdata/asterisk/sounds/es
-@pkgdir libdata/asterisk/sounds/en_AU
 @pkgdir libdata/asterisk/keys
 @pkgdir libdata/asterisk/firmware/iax
 @pkgdir libdata/asterisk/documentation/thirdparty
