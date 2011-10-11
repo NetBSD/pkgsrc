@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2467 2011/10/11 19:53:49 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2468 2011/10/11 20:45:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3951,3 +3951,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit-docs to 1.7.7 [adam 2011-10-11]
 	Updated games/wesnoth to 1.8.6 [adam 2011-10-11]
 	Added misc/color-theme version 6.6.0 [minskim 2011-10-11]
+	Updated editors/zim to 0.53 [ryoon 2011-10-11]
