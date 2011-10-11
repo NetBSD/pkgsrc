@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2011/09/13 17:58:58 gdt Exp $
+# $NetBSD: Makefile.common,v 1.21 2011/10/11 12:01:24 adam Exp $
 #
 # used by devel/scmgit-base/Makefile
 # used by devel/scmgit-docs/Makefile
@@ -7,12 +7,10 @@
 
 DISTNAME=	git-${GIT_VERSION}
 CATEGORIES=	devel scm
-MASTER_SITES?=	http://www.kernel.org/pub/software/scm/git/  http://git-core.googlecode.com/files/
-# Historically .tar.bz2 has been available, but 1.7.6.3 is only .tar.gz
-#EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES?=	http://git-core.googlecode.com/files/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE?=	http://git.or.cz/
+HOMEPAGE?=	http://git-scm.com/
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
