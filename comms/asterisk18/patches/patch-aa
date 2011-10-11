@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
+$NetBSD: patch-aa,v 1.4 2011/10/11 03:12:55 jnemeth Exp $
 
---- Makefile.orig	2011-06-16 15:58:22.000000000 +0000
+--- Makefile.orig	2011-08-25 19:00:55.000000000 +0000
 +++ Makefile
 @@ -126,7 +126,7 @@ DEBUG=-g3
  
@@ -36,10 +36,10 @@ $NetBSD: patch-aa,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
  
 -datafiles: _all doc/core-en_US.xml
 +datafiles: doc/core-en_US.xml
- 	CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)$(libdir)/pkgconfig;
+ 	CFLAGS="$(_ASTCFLAGS) $(ASTCFLAGS)" build_tools/mkpkgconfig "$(DESTDIR)$(libdir)/pkgconfig";
  # Should static HTTP be installed during make samples or even with its own target ala
  # webvoicemail?  There are portions here that *could* be customized but might also be
-@@ -517,7 +512,7 @@ OLDHEADERS=$(filter-out $(NEWHEADERS),$(
+@@ -517,7 +512,7 @@ OLDHEADERS=$(filter-out $(NEWHEADERS) $(
  installdirs:
  	$(INSTALL) -d "$(DESTDIR)$(MODULES_DIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSBINDIR)"
@@ -48,31 +48,31 @@ $NetBSD: patch-aa,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
  	$(INSTALL) -d "$(DESTDIR)$(ASTVARRUNDIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/dictate"
-@@ -545,7 +540,7 @@ installdirs:
+@@ -546,7 +541,7 @@ installdirs:
  	$(INSTALL) -d "$(DESTDIR)$(AGI_DIR)"
  	$(INSTALL) -d "$(DESTDIR)$(ASTDBDIR)"
  
 -bininstall: _all installdirs $(SUBDIRS_INSTALL)
 +bininstall: installdirs $(SUBDIRS_INSTALL)
- 	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
- 	$(LN) -sf asterisk $(DESTDIR)$(ASTSBINDIR)/rasterisk
- 	$(INSTALL) -m 755 contrib/scripts/astgenkey $(DESTDIR)$(ASTSBINDIR)/
-@@ -637,21 +632,21 @@ upgrade: bininstall
+ 	$(INSTALL) -m 755 main/asterisk "$(DESTDIR)$(ASTSBINDIR)/"
+ 	$(LN) -sf asterisk "$(DESTDIR)$(ASTSBINDIR)/rasterisk"
+ 	$(INSTALL) -m 755 contrib/scripts/astgenkey "$(DESTDIR)$(ASTSBINDIR)/"
+@@ -638,21 +633,21 @@ upgrade: bininstall
  # XXX why *.adsi is installed first ?
  adsi:
  	@echo Installing adsi config files...
--	$(INSTALL) -d $(DESTDIR)$(ASTETCDIR)
-+	$(INSTALL) -d $(DESTDIR)$(ASTEXAMPLEDIR)
+-	$(INSTALL) -d "$(DESTDIR)$(ASTETCDIR)"
++	$(INSTALL) -d "$(DESTDIR)$(ASTEXAMPLEDIR)"
  	@for x in configs/*.adsi; do \
 -		dst="$(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x`" ; \
 +		dst="$(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x`" ; \
- 		if [ -f $${dst} ] ; then \
+ 		if [ -f "$${dst}" ] ; then \
  			echo "Overwriting $$x" ; \
  		else \
  			echo "Installing $$x" ; \
  		fi ; \
--		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x` ; \
-+		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x` ; \
+-		$(INSTALL) -m 644 "$$x" "$(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x`" ; \
++		$(INSTALL) -m 644 "$$x" "$(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x`" ; \
  	done
  
  samples: adsi
@@ -80,32 +80,32 @@ $NetBSD: patch-aa,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
  	@for x in configs/*.sample; do \
 -		dst="$(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x .sample`" ;	\
 +		dst="$(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x .sample`" ;	\
- 		if [ -f $${dst} ]; then \
+ 		if [ -f "$${dst}" ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
- 				if cmp -s $${dst} $$x ; then \
-@@ -679,9 +674,9 @@ samples: adsi
+ 				if cmp -s "$${dst}" "$$x" ; then \
+@@ -680,9 +675,9 @@ samples: adsi
  			-e 's|^astspooldir.*$$|astspooldir => $(ASTSPOOLDIR)|' \
  			-e 's|^astrundir.*$$|astrundir => $(ASTVARRUNDIR)|' \
  			-e 's|^astlogdir.*$$|astlogdir => $(ASTLOGDIR)|' \
--			$(DESTDIR)$(ASTCONFPATH) > $(DESTDIR)$(ASTCONFPATH).tmp ; \
--		$(INSTALL) -m 644 $(DESTDIR)$(ASTCONFPATH).tmp $(DESTDIR)$(ASTCONFPATH) ; \
--		rm -f $(DESTDIR)$(ASTCONFPATH).tmp ; \
-+			$(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf > $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp ; \
-+		$(INSTALL) -m 644 $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf ; \
-+		rm -f $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp ; \
+-			"$(DESTDIR)$(ASTCONFPATH)" > "$(DESTDIR)$(ASTCONFPATH).tmp" ; \
+-		$(INSTALL) -m 644 "$(DESTDIR)$(ASTCONFPATH).tmp" "$(DESTDIR)$(ASTCONFPATH)" ; \
+-		rm -f "$(DESTDIR)$(ASTCONFPATH).tmp" ; \
++			"$(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf" > "$(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp" ; \
++		$(INSTALL) -m 644 "$(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp" "$(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf" ; \
++		rm -f "$(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf.tmp" ; \
  	fi ; \
- 	$(INSTALL) -d $(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/INBOX
- 	build_tools/make_sample_voicemail "$(DESTDIR)$(ASTDATADIR)" "$(DESTDIR)$(ASTSPOOLDIR)"
-@@ -707,7 +702,7 @@ samples: adsi
+ 	$(INSTALL) -d "$(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/INBOX"
+ 	build_tools/make_sample_voicemail "$(DESTDIR)/$(ASTDATADIR)" "$(DESTDIR)/$(ASTSPOOLDIR)"
+@@ -708,7 +703,7 @@ samples: adsi
  webvmail:
- 	@[ -d $(DESTDIR)$(HTTP_DOCSDIR)/ ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
- 	@[ -d $(DESTDIR)$(HTTP_CGIDIR) ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
+ 	@[ -d "$(DESTDIR)$(HTTP_DOCSDIR)/" ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
+ 	@[ -d "$(DESTDIR)$(HTTP_CGIDIR)" ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
 -	$(INSTALL) -m 4755 contrib/scripts/vmail.cgi "$(DESTDIR)$(HTTP_CGIDIR)/vmail.cgi"
 +	$(INSTALL) contrib/scripts/vmail.cgi "$(DESTDIR)$(HTTP_CGIDIR)/vmail"
- 	$(INSTALL) -d $(DESTDIR)$(HTTP_DOCSDIR)/_asterisk
+ 	$(INSTALL) -d "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk"
  	for x in images/*.gif; do \
  		$(INSTALL) -m 644 $$x "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/"; \
-@@ -860,7 +855,7 @@ uninstall-all: _uninstall
+@@ -861,7 +856,7 @@ uninstall-all: _uninstall
  	rm -rf "$(DESTDIR)$(ASTVARLIBDIR)"
  	rm -rf "$(DESTDIR)$(ASTDATADIR)"
  	rm -rf "$(DESTDIR)$(ASTSPOOLDIR)"
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.3 2011/07/16 21:35:11 jnemeth Exp $
  	rm -rf "$(DESTDIR)$(ASTLOGDIR)"
  
  menuconfig: menuselect
-@@ -929,6 +924,7 @@ menuselect-tree: $(foreach dir,$(filter-
+@@ -930,6 +925,7 @@ menuselect-tree: $(foreach dir,$(filter-
  	@echo "</menu>" >> $@
  
  .PHONY: menuselect
