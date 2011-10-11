@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/07/08 11:14:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/10/11 12:01:25 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -182,11 +182,24 @@ libexec/git-core/git-verify-tag
 libexec/git-core/git-web--browse
 libexec/git-core/git-whatchanged
 libexec/git-core/git-write-tree
+libexec/git-core/mergetools/araxis
+libexec/git-core/mergetools/bc3
+libexec/git-core/mergetools/defaults
+libexec/git-core/mergetools/diffuse
+libexec/git-core/mergetools/ecmerge
+libexec/git-core/mergetools/emerge
+libexec/git-core/mergetools/kdiff3
+libexec/git-core/mergetools/kompare
+libexec/git-core/mergetools/meld
+libexec/git-core/mergetools/opendiff
+libexec/git-core/mergetools/p4merge
+libexec/git-core/mergetools/tkdiff
+libexec/git-core/mergetools/tortoisemerge
+libexec/git-core/mergetools/vim
+libexec/git-core/mergetools/xxdiff
 share/examples/scmgit/templates/description
 share/examples/scmgit/templates/hooks/applypatch-msg.sample
 share/examples/scmgit/templates/hooks/commit-msg.sample
-share/examples/scmgit/templates/hooks/post-commit.sample
-share/examples/scmgit/templates/hooks/post-receive.sample
 share/examples/scmgit/templates/hooks/post-update.sample
 share/examples/scmgit/templates/hooks/pre-applypatch.sample
 share/examples/scmgit/templates/hooks/pre-commit.sample
