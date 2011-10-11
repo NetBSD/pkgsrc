@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2011/09/22 12:53:29 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2011/10/11 10:02:08 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -9,28 +9,24 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-
-BOOST_VERSION=		1.46.1
+BOOST_VERSION=		1.47.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
 CATEGORIES=		devel
 
 .if ${BOOST_PACKAGE} == "meta-pkg"
-
-PKGNAME=		boost-${BOOST_VERSION}
-
+PKGNAME=	boost-${BOOST_VERSION}
 .else # ${BOOST_PACKAGE} != "meta-pkg"
+PKGNAME=	boost-${BOOST_PACKAGE}-${BOOST_VERSION}
 
-PKGNAME=		boost-${BOOST_PACKAGE}-${BOOST_VERSION}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boost/}
+EXTRACT_SUFX=	.tar.bz2
 
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boost/}
-EXTRACT_SUFX=		.tar.bz2
-
-MAINTAINER=		jmmv@NetBSD.org
-HOMEPAGE=		http://www.boost.org/
-COMMENT=		Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
-LICENSE=		boost-license
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://www.boost.org/
+COMMENT=	Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
+LICENSE=	boost-license
 
 CONFLICTS+=		boost<1.36.0
 
@@ -46,7 +42,7 @@ PLIST_SUBST+=		BOOST_VERSION="${BOOST_VERSION}"
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fixing prefix.
-SUBST_FILES.prefix=	Jamroot
+SUBST_FILES.prefix=	boostcpp.jam
 SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		darwin
@@ -68,14 +64,13 @@ post-wrapper:
 .  endif
 .endif
 
-# We can't do this at post-extract because the extract cookie will get a
-# future timestamp than the sources.  If this happens, print-PLIST does
-# not work.
+# We can't do this at post-extract because the extract cookie will get a future
+# timestamp than the sources.  If this happens, print-PLIST does not work.
 pre-configure:
 	cd ${WRKSRC} && ${FIND} . -type f -print | ${XARGS} ${TOUCH}
 
-# Generate a new user.hpp or use the installed one, depending on the
-# package we are building.
+# Generate a new user.hpp or use the installed one, depending on the package
+# we are building.
 .if ${BOOST_CONFIG} == "installed"
 .  include "../../devel/boost-headers/buildlink3.mk"
 do-configure:

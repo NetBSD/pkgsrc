@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/11/26 20:46:59 adam Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/11 10:02:07 adam Exp $
 
 BOOST_PACKAGE=		build
 BOOST_COMMENT=		(Boost.Build framework)
@@ -28,6 +28,8 @@ CHECK_INTERPRETER_SKIP+=share/boost-build/test/*.py
 CHECK_INTERPRETER_SKIP+=share/boost-build/nightly.sh
 CHECK_INTERPRETER_SKIP+=share/boost-build/roll.sh
 
+INSTALLATION_DIRS+=	share/boost-build
+
 .include "toolset.mk"
 
 post-extract:
@@ -40,7 +42,6 @@ do-build:
 	  ${ECHO} 'using ${BOOST_TOOLSET} ;' ; } >${WRKDIR}/site-config.jam
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/boost-build
 	cd ${WRKSRC}/tools/build/v2 && pax -r -w -p pm -s ':^./engine.*$$::' \
 		-s ':^.*\.orig$$::' . ${DESTDIR}${PREFIX}/share/boost-build
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
