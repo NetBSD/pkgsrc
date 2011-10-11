@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2011/02/24 13:36:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2011/10/11 13:15:59 adam Exp $
 @pkgdir var/run/wesnothd
 bin/wesnoth
 bin/wesnothd
@@ -141,9 +141,11 @@ share/doc/wesnoth/manual/manual.fi.html
 share/doc/wesnoth/manual/manual.fr.html
 share/doc/wesnoth/manual/manual.gl.html
 share/doc/wesnoth/manual/manual.hu.html
+share/doc/wesnoth/manual/manual.id.html
 share/doc/wesnoth/manual/manual.it.html
 share/doc/wesnoth/manual/manual.pl.html
 share/doc/wesnoth/manual/manual.pt_BR.html
+share/doc/wesnoth/manual/manual.sk.html
 share/doc/wesnoth/manual/manual.sr.html
 share/doc/wesnoth/manual/manual.sr@ijekavian.html
 share/doc/wesnoth/manual/manual.sr@ijekavianlatin.html
@@ -346,6 +348,10 @@ share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/fr/descent-i
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/hu/descent-into-darkness--overlay.png
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/it/descent-into-darkness--overlay.png
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/lt/descent-into-darkness--overlay.png
+share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/sr/descent-into-darkness--overlay.png
+share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/sr@ijekavian/descent-into-darkness--overlay.png
+share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/sr@ijekavianlatin/descent-into-darkness--overlay.png
+share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/sr@latin/descent-into-darkness--overlay.png
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/l10n/zh_CN/descent-into-darkness--overlay.png
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/makeshift-altar.png
 share/wesnoth/data/campaigns/Descent_Into_Darkness/images/misc/weakened-ice.png
@@ -1064,6 +1070,10 @@ share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/items/barrel-floating.p
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/l10n/hu/farnorth.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/l10n/it/farnorth--overlay.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/l10n/ru/farnorth--overlay.png
+share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/l10n/sr/farnorth--overlay.png
+share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/l10n/sr@ijekavian/farnorth--overlay.png
+share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/l10n/sr@ijekavianlatin/farnorth--overlay.png
+share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/l10n/sr@latin/farnorth--overlay.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/portraits/albrock.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/portraits/flartar.png
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye/images/portraits/gruu.png
@@ -8560,6 +8570,7 @@ share/wesnoth/data/gui/default/widget/window_default.cfg
 share/wesnoth/data/gui/default/window/addon_connect.cfg
 share/wesnoth/data/gui/default/window/addon_list.cfg
 share/wesnoth/data/gui/default/window/campaign_dialog.cfg
+share/wesnoth/data/gui/default/window/chat_log.cfg
 share/wesnoth/data/gui/default/window/editor_generate_map.cfg
 share/wesnoth/data/gui/default/window/editor_new_map.cfg
 share/wesnoth/data/gui/default/window/editor_resize_map.cfg
