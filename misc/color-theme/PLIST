@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/11 19:52:48 minskim Exp $
+${EMACS_LISPPREFIX}/color-theme/color-theme-autoloads.el
+${EMACS_LISPPREFIX}/color-theme/color-theme-autoloads.elc
+${EMACS_LISPPREFIX}/color-theme/color-theme-example.el
+${EMACS_LISPPREFIX}/color-theme/color-theme-example.elc
+${EMACS_LISPPREFIX}/color-theme/color-theme-library.el
+${EMACS_LISPPREFIX}/color-theme/color-theme-library.elc
+${EMACS_LISPPREFIX}/color-theme/color-theme.el
+${EMACS_LISPPREFIX}/color-theme/color-theme.elc
+${EMACS_LISPPREFIX}/color-theme/themes/color-theme-autoloads.elc
+${EMACS_LISPPREFIX}/color-theme/themes/color-theme-example.el
+${EMACS_LISPPREFIX}/color-theme/themes/color-theme-example.elc
+${EMACS_LISPPREFIX}/color-theme/themes/color-theme-library.el
+${EMACS_LISPPREFIX}/color-theme/themes/color-theme-library.elc
+${EMACS_LISPPREFIX}/color-theme/themes/color-theme.elc
