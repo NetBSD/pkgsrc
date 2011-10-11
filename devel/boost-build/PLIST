@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2011/02/24 11:05:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/10/11 10:02:07 adam Exp $
 share/boost-build/Jamroot.jam
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
@@ -247,6 +247,25 @@ share/boost-build/test/double_loading.py
 share/boost-build/test/duplicate.py
 share/boost-build/test/echo_args.jam
 share/boost-build/test/empty.jam
+share/boost-build/test/engine/README.txt
+share/boost-build/test/engine/action_status.jam
+share/boost-build/test/engine/actions_quietly.jam
+share/boost-build/test/engine/builtin_normalize_path.jam
+share/boost-build/test/engine/builtin_shell.jam
+share/boost-build/test/engine/builtin_w32_getregnames.jam
+share/boost-build/test/engine/option_d2.jam
+share/boost-build/test/engine/option_l.jam
+share/boost-build/test/engine/option_n.jam
+share/boost-build/test/engine/parallel_actions.jam
+share/boost-build/test/engine/parallel_multifile_actions_1.jam
+share/boost-build/test/engine/parallel_multifile_actions_2.jam
+share/boost-build/test/engine/rule_param.jam
+share/boost-build/test/engine/stress_var_expand.jam
+share/boost-build/test/engine/target_var.jam
+share/boost-build/test/engine/test.bat
+share/boost-build/test/engine/test.jam
+share/boost-build/test/engine/test.sh
+share/boost-build/test/engine/var_expand.jam
 share/boost-build/test/example_customization.py
 share/boost-build/test/example_gettext.py
 share/boost-build/test/example_libraries.py
@@ -315,6 +334,7 @@ share/boost-build/test/prebuilt/ext/release/a.h
 share/boost-build/test/prebuilt/hello.cpp
 share/boost-build/test/prebuilt/jamfile.jam
 share/boost-build/test/prebuilt/jamroot.jam
+share/boost-build/test/preprocessor.py
 share/boost-build/test/print.py
 share/boost-build/test/project-test1.jam
 share/boost-build/test/project-test1/dir/jamfile.jam
@@ -564,6 +584,7 @@ share/boost-build/tools/types/lib.py
 share/boost-build/tools/types/obj.jam
 share/boost-build/tools/types/obj.py
 share/boost-build/tools/types/objc.jam
+share/boost-build/tools/types/preprocessed.jam
 share/boost-build/tools/types/qt.jam
 share/boost-build/tools/types/register.jam
 share/boost-build/tools/types/rsp.jam
