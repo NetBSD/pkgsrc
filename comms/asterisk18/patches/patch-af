@@ -1,8 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2010/12/15 03:22:45 jnemeth Exp $
+$NetBSD: patch-af,v 1.2 2011/10/11 03:12:55 jnemeth Exp $
 
-Index: utils/Makefile
-===================================================================
---- utils/Makefile.orig	2010-04-22 22:10:17.000000000 +0000
+--- utils/Makefile.orig	2011-08-17 19:21:36.000000000 +0000
 +++ utils/Makefile
 @@ -41,6 +41,10 @@ ifeq ($(OSARCH),SunOS)
    UTILS:=$(filter-out muted,$(UTILS))
@@ -19,8 +17,8 @@ Index: utils/Makefile
  install:
  	for x in $(UTILS); do \
  		if [ "$$x" != "none" ]; then \
--			$(INSTALL) -m 755 $$x $(DESTDIR)$(ASTSBINDIR)/$$x; \
-+			$(BSD_INSTALL_PROGRAM) -m 755 $$x $(DESTDIR)$(ASTSBINDIR)/$$x; \
+-			$(INSTALL) -m 755 $$x "$(DESTDIR)$(ASTSBINDIR)/$$x"; \
++			$(BSD_INSTALL_PROGRAM) -m 755 $$x "$(DESTDIR)$(ASTSBINDIR)/$$x"; \
  		fi; \
  	done 
  
