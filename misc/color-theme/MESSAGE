@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/10/11 19:52:48 minskim Exp $
+
+Append the following lines to your .emacs file:
+
+  (require 'color-theme)
+
+Then you can choose your color-theme theme by issuing:
+
+  M-x color-theme-select RET
+
+===========================================================================
