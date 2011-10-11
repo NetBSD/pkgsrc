@@ -1,0 +1,25 @@
+$NetBSD: patch-bc,v 1.1 2011/10/11 20:30:00 jmcneill Exp $
+
+--- ../nsswitch/winbind_nss_netbsd.c.orig	2011-08-03 18:24:05.000000000 +0000
++++ ../nsswitch/winbind_nss_netbsd.c
+@@ -215,6 +215,7 @@ netbsdwinbind_getgroupmembership(void *n
+ {
+ 	int		*result	= va_arg(ap, int *);
+ 	const char 	*uname	= va_arg(ap, const char *);
++	gid_t		 bgid	= va_arg(ap, gid_t);
+ 	gid_t		*groups	= va_arg(ap, gid_t *);
+ 	int		 maxgrp	= va_arg(ap, int);
+ 	int		*groupc	= va_arg(ap, int *);
+@@ -234,6 +235,12 @@ netbsdwinbind_getgroupmembership(void *n
+ 	wblistv = (gid_t *)response.extra_data.data;
+ 	wblistc = response.data.num_entries;
+ 
++	if (*groupc < maxgrp)				/* add basegid */
++		groups[*groupc] = bgid;
++	else
++		*result = -1;
++	(*groupc)++;
++
+ 	for (i = 0; i < wblistc; i++) {			/* add winbind gids */
+ 		isdup = 0;				/* skip duplicates */
+ 		for (dupc = 0; dupc < MIN(maxgrp, *groupc); dupc++) {
