@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/12/03 10:16:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/10/11 09:55:31 adam Exp $
 bin/exiv2
 include/exiv2/basicio.hpp
 include/exiv2/bmpimage.hpp
@@ -7,6 +7,7 @@ include/exiv2/cr2image.hpp
 include/exiv2/crwimage.hpp
 include/exiv2/datasets.hpp
 include/exiv2/easyaccess.hpp
+include/exiv2/epsimage.hpp
 include/exiv2/error.hpp
 include/exiv2/exif.hpp
 include/exiv2/exiv2.hpp
