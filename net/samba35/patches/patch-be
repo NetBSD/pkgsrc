@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.1 2011/10/11 20:30:00 jmcneill Exp $
+
+--- ../nsswitch/pam_winbind.c.orig	2011-08-03 18:24:05.000000000 +0000
++++ ../nsswitch/pam_winbind.c
+@@ -10,6 +10,10 @@
+    <sopwith@redhat.com> (see copyright below for full details)
+ */
+ 
++#ifdef __NetBSD__
++#define NO_STATIC_MODULES
++#endif
++
+ #include "pam_winbind.h"
+ #define CONST_DISCARD(type,ptr) ((type)(void *)ptr)
+ 

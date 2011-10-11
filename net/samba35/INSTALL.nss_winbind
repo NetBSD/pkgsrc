@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL.nss_winbind,v 1.1 2011/10/11 20:30:00 jmcneill Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	ln -sf ${PREFIX}/lib/nss_winbind.so.0 /usr/lib/nss_winbind.so.0
+	;;
+esac

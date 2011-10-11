@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2011/06/15 11:45:08 adam Exp $
+$NetBSD: patch-af,v 1.4 2011/10/11 20:30:00 jmcneill Exp $
 
---- configure.orig	2011-06-14 11:18:38.000000000 +0000
+--- configure.orig	2011-08-03 18:25:14.000000000 +0000
 +++ configure
-@@ -18317,6 +18317,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
+@@ -18345,6 +18345,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
  
  			BLDSHARED="true"
  			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.3 2011/06/15 11:45:08 adam Exp $
  			CFLAGS="$CFLAGS -fno-common"
  			SHLD="\${CC}"
  			SHLIBEXT="dylib"
-@@ -18353,7 +18354,7 @@ fi
+@@ -18381,7 +18382,7 @@ fi
  $as_echo "$BLDSHARED" >&6; }
  
  saved_before_as_needed_ldflags="$LDFLAGS"
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.3 2011/06/15 11:45:08 adam Exp $
  	saved_ldflags="$LDFLAGS"
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $flags works" >&5
  $as_echo_n "checking if $flags works... " >&6; }
-@@ -25327,9 +25328,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -25355,9 +25356,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -32,7 +32,7 @@ $NetBSD: patch-af,v 1.3 2011/06/15 11:45:08 adam Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -25341,31 +25342,31 @@ else
+@@ -25369,31 +25370,31 @@ else
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -72,7 +72,7 @@ $NetBSD: patch-af,v 1.3 2011/06/15 11:45:08 adam Exp $
  _ACEOF
  
  fi
-@@ -34478,31 +34479,39 @@ case "$host_os" in
+@@ -34506,31 +34507,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
  		;;
@@ -134,3 +134,20 @@ $NetBSD: patch-af,v 1.3 2011/06/15 11:45:08 adam Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
+@@ -34728,6 +34737,16 @@ $as_echo "#define HAVE_PASSWD_PW_AGE 1" 
+ 
+ fi
+ 
++# NetBSD
++
++ac_fn_c_check_member "$LINENO" "struct passwd" "pw_class" "ac_cv_member_struct_passwd_pw_class" "#include <pwd.h>
++"
++if test "x$ac_cv_member_struct_passwd_pw_class" = x""yes; then :
++
++$as_echo "#define HAVE_PASSWD_PW_CLASS 1" >>confdefs.h
++
++fi
++
+ 
+ # AIX 4.3.x and 5.1 do not have as many members in
+ # struct secmethod_table as AIX 5.2

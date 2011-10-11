@@ -1,0 +1,16 @@
+$NetBSD: patch-ba,v 1.1 2011/10/11 20:30:00 jmcneill Exp $
+
+--- configure.in.orig	2011-08-03 18:24:05.000000000 +0000
++++ configure.in
+@@ -6239,6 +6239,11 @@ AC_CHECK_MEMBER(struct passwd.pw_age,
+ 		AC_DEFINE(HAVE_PASSWD_PW_AGE, 1, [Defined if struct passwd has pw_age field]),,
+ 		[#include <pwd.h>])
+ 
++# NetBSD
++AC_CHECK_MEMBER(struct passwd.pw_class,
++		AC_DEFINE(HAVE_PASSWD_PW_CLASS, 1, [Defined if struct passwd has pw_class field]),,
++		[#include <pwd.h>])
++
+ # AIX 4.3.x and 5.1 do not have as many members in
+ # struct secmethod_table as AIX 5.2
+ AC_CHECK_MEMBERS([struct secmethod_table.method_attrlist], , ,
