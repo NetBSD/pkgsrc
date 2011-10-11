@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2011/10/11 12:45:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.307 2011/10/11 13:04:42 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -103,6 +103,7 @@ SUBDIR+=	mono-basic
 SUBDIR+=	moscow_ml
 SUBDIR+=	mpd
 SUBDIR+=	nawk
+SUBDIR+=	newlisp
 SUBDIR+=	nhc98
 SUBDIR+=	objc
 SUBDIR+=	ocaml
