@@ -1,0 +1,7 @@
+newLISP is a Lisp-like, general-purpose scripting language. It is
+especially well-suited for applications in AI, web search, natural
+language processing, and machine learning. Because of its small
+resource requirements, newLISP is also excellent for embedded
+systems applications. Most of the functions you will ever need are
+already built in. This includes networking functions, support for
+distributed and parallel processing, and Bayesian statistics.
