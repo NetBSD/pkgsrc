@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2011/10/11 19:52:48 minskim Exp $
+
+* Adding "." to the load-path by '--eval' seems not working though I
+  don't know why.
+
+* There is no actual texinfo documents so install-info fails
+  miserably.
+
+--- Makefile.orig	2006-05-28 13:23:31.000000000 +0000
++++ Makefile
+@@ -47,7 +47,7 @@ $(AUTOLOADFILE).elc: $(AUTOLOADFILE).el
+ 
+ %.elc: %.el
+ 	@$(EMACS) $(OPTIONCOMPILE) \
+-	--eval '(setq load-path (cons "." load-path))' \
++	-L . \
+ 	-f batch-byte-compile $<
+ 
+ %.info: %.texi
+@@ -79,7 +79,7 @@ install-bin: lisp
+ 	install -m 0644 $(ALLSOURCE) $(TARGET) $(ELISPDIR)
+ 	install -m 0644 $(THEMES_FILES) $(TARGET) $(ELISPDIR)/themes
+ 
+-install: install-bin install-info
++install: install-bin #install-info
+ 
+ ## DO NOT TOUCH THIS !
+ ## HELPERS FOR MAINTAINER(S)
