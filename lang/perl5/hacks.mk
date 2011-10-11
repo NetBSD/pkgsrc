@@ -1,4 +1,7 @@
-# $NetBSD: hacks.mk,v 1.4 2010/11/02 07:54:31 wiz Exp $
+# $NetBSD: hacks.mk,v 1.5 2011/10/11 10:02:13 hauke Exp $
+
+.if !defined(PERL5_HACKS_MK)
+PERL5_HACKS_MK=	defined
 
 .include "../../mk/compiler.mk"
 
@@ -43,3 +46,22 @@ BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 PKG_HACKS+=	arm-codegen
 CFLAGS+=	-fno-cse-skip-blocks
 .endif
+
+### [ Fri Oct 11 10:00:00 UTC 2011 : hauke ]
+###
+### On m68k, gcc creates short assembler branch insns, and expects
+### the assembler to adapt them to the distance. m68k gas appears not to 
+### do that for fpu branch insns, resulting in an out-of-range FPU 
+### assembler branch instruction error in "ext/re/re_exec.c".
+###
+### As a workaround, building with "-Os" instead of "-O2" reduces 
+### the size of the object file enough to allow short branches.
+### 
+### See PR toolchain/45439.
+
+.  if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "m68k"
+PKG_HACKS+=		m68k-codegen
+BUILDLINK_TRANSFORM+=	rename:-O[0-9]*:-Os
+.  endif
+
+.endif  # PERL5_HACKS_MK
