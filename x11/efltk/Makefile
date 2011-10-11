@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/05/21 08:18:16 obache Exp $
+# $NetBSD: Makefile,v 1.21.4.1 2011/10/11 07:35:50 tron Exp $
 #
 
 DISTNAME=	efltk-2.0.5
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/efltk
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--enable-iconv

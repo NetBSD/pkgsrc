@@ -1,10 +1,18 @@
-$NetBSD: patch-src_widgets_Fl__Input_cpp,v 1.1 2011/10/02 03:44:10 dholland Exp $
+$NetBSD: patch-src_widgets_Fl__Input_cpp,v 1.1.2.1 2011/10/11 07:35:50 tron Exp $
 
 - fix LP64 build
 
---- src/widgets/Fl_Input.cpp~	2003-06-22 21:36:13.000000000 +0000
+--- src/widgets/Fl_Input.cpp.orig	2003-06-22 21:36:13.000000000 +0000
 +++ src/widgets/Fl_Input.cpp
-@@ -59,7 +59,7 @@ static Fl_Menu_ *menu_ = &menu;
+@@ -40,6 +40,7 @@
+ // For NLS stuff
+ #include "../core/fl_internal.h"
+ 
++#include <stdint.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <ctype.h>
+@@ -59,7 +60,7 @@ static Fl_Menu_ *menu_ = &menu;
  static void cb_menu(Fl_Widget *w, void *d)
  {
      if(!menu_widget) return;
