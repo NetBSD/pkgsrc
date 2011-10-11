@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/08/07 08:15:05 tron Exp $
+# $NetBSD: Makefile,v 1.19 2011/10/11 22:16:52 wiz Exp $
 
 DISTNAME=	p5-pkgsrc-Dewey-1.1
 PKGREVISION=	2
@@ -21,7 +21,7 @@ USE_LANGUAGES=		c
 
 PERL5_PACKLIST=		auto/pkgsrc/Dewey/.packlist
 
-PKG_INSTALL_FILESDIR=	../../pkgtools/pkg_install/files
+PKG_INSTALL_FILESDIR=	${PKGSRCDIR}/pkgtools/pkg_install/files
 PKG_INSTALL_FILES=	lib/dewey.c lib/dewey.h lib/defs.h
 
 do-extract:
