@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2011/10/11 20:30:00 jmcneill Exp $
+
+--- Makefile.in.orig	2011-08-03 18:24:05.000000000 +0000
++++ Makefile.in
+@@ -2552,7 +2552,7 @@ bin/winbind_krb5_locator.@SHLIBEXT@: $(B
+ bin/pam_winbind.@SHLIBEXT@: $(BINARY_PREREQS) $(PAM_WINBIND_OBJ) $(LIBTALLOC) $(LIBWBCLIENT)
+ 	@echo "Linking shared library $@"
+ 	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_WINBIND_OBJ) -lpam @INIPARSERLIBS@ \
+-		$(LIBREPLACE_LIBS) $(LIBTALLOC_LIBS) $(LIBWBCLIENT_LIBS) @SONAMEFLAG@`basename $@`
++		$(LIBS) $(LIBREPLACE_LIBS) $(LIBTALLOC_LIBS) $(LIBWBCLIENT_LIBS) @SONAMEFLAG@`basename $@`
+ 
+ ##########
+ # Plugins:
