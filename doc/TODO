@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10595 2011/10/10 13:54:57 wiz Exp $
+$NetBSD: TODO,v 1.10596 2011/10/11 10:04:29 adam Exp $
 
 Suggested new packages
 ======================
@@ -582,7 +582,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o evolution-exchange-2.32.2
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
-	o exiv2-0.22
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f-spot-0.8.2
