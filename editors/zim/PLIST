@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/15 03:08:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/11 20:44:25 ryoon Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
 ${PYSITELIB}/zim/__init__.pyo
-${PYSITELIB}/zim/_lib/__init__.py
-${PYSITELIB}/zim/_lib/__init__.pyc
-${PYSITELIB}/zim/_lib/__init__.pyo
-${PYSITELIB}/zim/_lib/xdot.py
-${PYSITELIB}/zim/_lib/xdot.pyc
-${PYSITELIB}/zim/_lib/xdot.pyo
 ${PYSITELIB}/zim/_version.py
 ${PYSITELIB}/zim/_version.pyc
 ${PYSITELIB}/zim/_version.pyo
@@ -102,6 +96,15 @@ ${PYSITELIB}/zim/gui/widgets.pyo
 ${PYSITELIB}/zim/history.py
 ${PYSITELIB}/zim/history.pyc
 ${PYSITELIB}/zim/history.pyo
+${PYSITELIB}/zim/inc/__init__.py
+${PYSITELIB}/zim/inc/__init__.pyc
+${PYSITELIB}/zim/inc/__init__.pyo
+${PYSITELIB}/zim/inc/arithmetic.py
+${PYSITELIB}/zim/inc/arithmetic.pyc
+${PYSITELIB}/zim/inc/arithmetic.pyo
+${PYSITELIB}/zim/inc/xdot.py
+${PYSITELIB}/zim/inc/xdot.pyc
+${PYSITELIB}/zim/inc/xdot.pyo
 ${PYSITELIB}/zim/index.py
 ${PYSITELIB}/zim/index.pyc
 ${PYSITELIB}/zim/index.pyo
@@ -114,6 +117,9 @@ ${PYSITELIB}/zim/parsing.pyo
 ${PYSITELIB}/zim/plugins/__init__.py
 ${PYSITELIB}/zim/plugins/__init__.pyc
 ${PYSITELIB}/zim/plugins/__init__.pyo
+${PYSITELIB}/zim/plugins/arithmetic.py
+${PYSITELIB}/zim/plugins/arithmetic.pyc
+${PYSITELIB}/zim/plugins/arithmetic.pyo
 ${PYSITELIB}/zim/plugins/attachmentbrowser.py
 ${PYSITELIB}/zim/plugins/attachmentbrowser.pyc
 ${PYSITELIB}/zim/plugins/attachmentbrowser.pyo
@@ -228,7 +234,6 @@ share/locale/es/LC_MESSAGES/zim.mo
 share/locale/et/LC_MESSAGES/zim.mo
 share/locale/fr/LC_MESSAGES/zim.mo
 share/locale/he/LC_MESSAGES/zim.mo
-share/locale/hr/LC_MESSAGES/zim.mo
 share/locale/hu/LC_MESSAGES/zim.mo
 share/locale/it/LC_MESSAGES/zim.mo
 share/locale/ja/LC_MESSAGES/zim.mo
@@ -292,6 +297,7 @@ share/zim/manual/Help/Tags.txt
 share/zim/manual/Help/Templates.txt
 share/zim/manual/Help/Wiki_Syntax.txt
 share/zim/manual/Plugins.txt
+share/zim/manual/Plugins/Arithmetic.txt
 share/zim/manual/Plugins/Calendar.txt
 share/zim/manual/Plugins/Diagram_Editor.txt
 share/zim/manual/Plugins/Diagram_Editor/diagram.png
@@ -343,6 +349,7 @@ share/zim/templates/_GNU_R_Plot.r
 share/zim/templates/_gnuplot.gnu
 share/zim/templates/_quicknote.txt
 share/zim/templates/html/Default.html
+share/zim/templates/html/Default_with_index.html
 share/zim/templates/html/Presentation.html
 share/zim/templates/html/Print.html
 share/zim/templates/html/SlideShow_(S5).html
