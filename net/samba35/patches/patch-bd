@@ -1,0 +1,15 @@
+$NetBSD: patch-bd,v 1.1 2011/10/11 20:30:00 jmcneill Exp $
+
+--- ../nsswitch/winbind_nss_linux.c.orig	2011-08-03 18:24:05.000000000 +0000
++++ ../nsswitch/winbind_nss_linux.c
+@@ -254,6 +254,10 @@ static NSS_STATUS fill_pwent(struct pass
+ 	result->pw_age = "";
+ #endif
+ 
++#if HAVE_PASSWD_PW_CLASS
++	result->pw_class = "";
++#endif
++
+ 	return NSS_STATUS_SUCCESS;
+ }
+ 
