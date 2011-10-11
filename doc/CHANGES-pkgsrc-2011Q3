@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.13 2011/10/10 19:21:52 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.14 2011/10/11 07:39:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -55,3 +55,5 @@ Pullup ticket #3548 - requested by dholland
 mail/freepops: build fix
 Pullup ticket #3549 - requested by dholland
 x11/gtkada: build fix
+Pullup ticket #3546 - requested by dholland
+x11/efltk: build fix
