@@ -1,0 +1,7 @@
+color-theme is an emacs-lisp mode for skinning your emacs.
+Features are:
+
+    * Huge and extensible theme library
+    * Easy to use
+    * Works on pretty all emacs flavours
+    * Mature source code
