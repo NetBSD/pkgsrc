@@ -1,10 +1,18 @@
-$NetBSD: patch-src_widgets_Fl__Text__Editor_cpp,v 1.1 2011/10/02 03:44:10 dholland Exp $
+$NetBSD: patch-src_widgets_Fl__Text__Editor_cpp,v 1.1.2.1 2011/10/11 07:35:50 tron Exp $
 
 - fix LP64 build
 
---- src/widgets/Fl_Text_Editor.cpp~	2003-06-16 19:41:23.000000000 +0000
+--- src/widgets/Fl_Text_Editor.cpp.orig	2003-06-16 19:41:23.000000000 +0000
 +++ src/widgets/Fl_Text_Editor.cpp
-@@ -45,7 +45,7 @@ static void cb_menu(Fl_Widget *w, void *
+@@ -26,6 +26,7 @@
+ #include <efltk/Fl.h>
+ #include <efltk/Fl_Text_Editor.h>
+ #include <efltk/Fl_Style.h>
++#include <stdint.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -45,7 +46,7 @@ static void cb_menu(Fl_Widget *w, void *
  {
      if(!menu_widget) return;
      char *selection = 0;
