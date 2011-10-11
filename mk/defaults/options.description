@@ -506,6 +506,7 @@ spamassassin-taint-checks	Enable Perl taint checks to improve security.
 spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic whitelist.
 spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
+spandsp			Enable spandsp support.
 speex			Enable speex support.
 spf			Enable Sender Policy Framework support.
 sqlite			Enable SQLite support.
