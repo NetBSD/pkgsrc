@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/09/14 15:53:35 hans Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/10/12 16:46:15 hans Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -55,7 +55,7 @@ lib/pkgconfig/libpulse.pc
 lib/pulse-${PULSEAUDIO_VER}/modules/libcli.a
 lib/pulse-${PULSEAUDIO_VER}/modules/libcli.so
 ${PLIST.oss}lib/pulse-${PULSEAUDIO_VER}/modules/liboss-util.a
-lib/pulse-${PULSEAUDIO_VER}/modules/liboss-util.so
+${PLIST.oss}lib/pulse-${PULSEAUDIO_VER}/modules/liboss-util.so
 lib/pulse-${PULSEAUDIO_VER}/modules/libprotocol-cli.a
 lib/pulse-${PULSEAUDIO_VER}/modules/libprotocol-cli.so
 lib/pulse-${PULSEAUDIO_VER}/modules/libprotocol-esound.a
