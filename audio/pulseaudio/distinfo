@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2011/09/14 15:53:35 hans Exp $
+$NetBSD: distinfo,v 1.28 2011/10/12 16:46:15 hans Exp $
 
 SHA1 (pulseaudio-0.9.21.tar.gz) = 0309c97f7e0812e243c1bb80a4b74dc26369ac22
 RMD160 (pulseaudio-0.9.21.tar.gz) = 6db0725253228b673a78cbfae4824fadce2198ed
@@ -20,5 +20,8 @@ SHA1 (patch-dc) = fe5f8e6eec89ec832d9d161fa0a201e64a841a0c
 SHA1 (patch-dd) = bfccd97ecf3be1ae9ac41a642b356743e055550f
 SHA1 (patch-de) = 3b8423a5936b8434de22fdd04ff2057dde09a2b8
 SHA1 (patch-poll_c-build-fix) = f9a2e86275431c53257c596974a6973c8034b1f0
+SHA1 (patch-src_modules_bluetooth_module-bluetooth-device.c) = 2c107e60772d53970365ab60a3d2fc52a6df2034
+SHA1 (patch-src_modules_rtp_module-rtp-recv.c) = 4119c37ac184bc6794304c50fd57e6c8a69fdd31
+SHA1 (patch-src_modules_rtp_rtp.c) = 00973c7a08f1809d35f9b61b569888bbed14ce6b
 SHA1 (patch-src_pulsecore_macro.h) = 635629d334529021d0dca2defe9c757c4cd20c5b
 SHA1 (patch-src_pulsecore_svolume_mmx.c) = ad1a1be7c1acf52c41447b2fb7d7dcd4c2da204b
