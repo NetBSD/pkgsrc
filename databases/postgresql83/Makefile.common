@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2011/09/27 11:03:59 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2011/10/12 19:43:26 hans Exp $
 #
 # used by databases/postgresql83-adminpack/Makefile
 # used by databases/postgresql83-client/Makefile
@@ -47,6 +47,8 @@ PG_TEMPLATE.IRIX=	irix5
 PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
+PKGLOCALEDIR=		share
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql
@@ -71,6 +73,7 @@ USE_LIBLTDL?=		yes
 USE_LIBLTDL?=		no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+LIBS.SunOS+=		-lintl
 
 .if !defined(META_PACKAGE)
 post-extract:
