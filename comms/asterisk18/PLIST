@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/10/11 03:12:55 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/10/12 03:21:07 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -217,7 +217,9 @@ lib/asterisk/modules/cel_manager.so
 ${PLIST.unixodbc}lib/asterisk/modules/cel_odbc.so
 lib/asterisk/modules/chan_agent.so
 lib/asterisk/modules/chan_bridge.so
+${PLIST.jabber}lib/asterisk/modules/chan_gtalk.so
 lib/asterisk/modules/chan_iax2.so
+${PLIST.jabber}lib/asterisk/modules/chan_jingle.so
 lib/asterisk/modules/chan_local.so
 lib/asterisk/modules/chan_mgcp.so
 lib/asterisk/modules/chan_multicast_rtp.so
@@ -313,6 +315,7 @@ lib/asterisk/modules/res_crypto.so
 lib/asterisk/modules/res_curl.so
 lib/asterisk/modules/res_fax.so
 ${PLIST.spandsp}lib/asterisk/modules/res_fax_spandsp.so
+${PLIST.jabber}lib/asterisk/modules/res_jabber.so
 lib/asterisk/modules/res_limit.so
 lib/asterisk/modules/res_monitor.so
 lib/asterisk/modules/res_musiconhold.so
