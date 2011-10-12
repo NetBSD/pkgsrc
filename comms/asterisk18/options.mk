@@ -1,13 +1,14 @@
-# $NetBSD: options.mk,v 1.6 2011/10/11 03:12:55 jnemeth Exp $
+# $NetBSD: options.mk,v 1.7 2011/10/12 03:21:07 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
+PKG_SUPPORTED_OPTIONS+=		jabber
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
-PKG_SUGGESTED_OPTIONS=		ldap
+PKG_SUGGESTED_OPTIONS=		ldap jabber
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
+PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap spandsp jabber
 
 # Asterisk now uses DAHDI, not zaptel; not implemented yet...
 #.if !empty(PKG_OPTIONS:Mzaptel)
@@ -56,6 +57,14 @@ CONFIGURE_ARGS+=	--with-spandsp
 PLIST.spandsp=		yes
 .else
 CONFIGURE_ARGS+=	--without-spandsp
+.endif
+
+.if !empty(PKG_OPTIONS:Mjabber)
+.  include "../../textproc/iksemel/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-iksemel=${PREFIX}
+PLIST.jabber=		yes
+.else
+CONFIGURE_ARGS+=	--without-iksemel
 .endif
 
 MAKE_FLAGS+=	GLOBAL_MAKEOPTS=${WRKSRC}/pkgsrc.makeopts
