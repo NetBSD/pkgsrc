@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2473 2011/10/12 06:41:12 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2474 2011/10/12 11:17:42 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3958,3 +3958,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Twiggy to 0.1010 [hiramatsu 2011-10-12]
 	Updated textproc/p5-Text-TabularDisplay to 1.28 [hiramatsu 2011-10-12]
 	Updated devel/p5-Class-Load to 0.11 [hiramatsu 2011-10-12]
+	Updated textproc/p5-Text-SpellChecker to 0.11 [hiramatsu 2011-10-12]
+	Updated devel/p5-Test-Exception to 0.31 [hiramatsu 2011-10-12]
+	Updated devel/p5-Variable-Magic to 0.46 [hiramatsu 2011-10-12]
