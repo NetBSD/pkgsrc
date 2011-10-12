@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2011/10/07 10:45:16 alnsn Exp $
+# $NetBSD: Makefile,v 1.91 2011/10/12 05:27:40 dholland Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	3
@@ -27,6 +27,7 @@ USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gsed gmake makeinfo perl pkg-config
 GNU_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 
 GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++ fortran77
