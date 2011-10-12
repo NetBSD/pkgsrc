@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2475 2011/10/12 11:22:36 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2476 2011/10/12 13:05:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3962,3 +3962,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-Exception to 0.31 [hiramatsu 2011-10-12]
 	Updated devel/p5-Variable-Magic to 0.46 [hiramatsu 2011-10-12]
 	Updated inputmethod/skk to 14.3 [ryoon 2011-10-12]
+	Updated www/contao210-translations to 20111012 [taca 2011-10-12]
