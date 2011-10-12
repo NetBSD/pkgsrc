@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2472 2011/10/12 03:25:01 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.2473 2011/10/12 06:41:12 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3955,3 +3955,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/bbdb to 2.35 [minskim 2011-10-12]
 	Updated comms/asterisk18 to 1.8.7.0nb1 [jnemeth 2011-10-12]
 	Added textproc/iksemel version 1.4 [jnemeth 2011-10-12]
+	Updated www/p5-Twiggy to 0.1010 [hiramatsu 2011-10-12]
+	Updated textproc/p5-Text-TabularDisplay to 1.28 [hiramatsu 2011-10-12]
+	Updated devel/p5-Class-Load to 0.11 [hiramatsu 2011-10-12]
