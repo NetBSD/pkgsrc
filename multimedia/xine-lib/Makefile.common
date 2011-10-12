@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2011/07/10 16:52:24 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.68 2011/10/12 17:30:22 hans Exp $
 #
 
 # used by audio/xine-arts/Makefile
@@ -63,6 +63,7 @@ BUILDLINK_TRANSFORM+=	"rm:-Wl,--no-undefined"
 .endif
 
 pre-configure:
+	${TOUCH} ${WRKSRC}/lib/dummy.c
 	cd ${WRKSRC} && autoheader
 	cd ${WRKSRC} && autoconf
 
