@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/02/23 08:32:41 adam Exp $
+# $NetBSD: Makefile,v 1.41 2011/10/12 17:43:14 hans Exp $
 
 DISTNAME=	xerces-c-3.1.1
 CATEGORIES=	textproc
@@ -17,17 +17,23 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE=	xerces-c.pc.in
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-curl
+CONFIGURE_ARGS+=	--without-icu
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		gnuiconv macunicode
+PLIST_VARS+=		iconv gnuiconv macunicode
 
 .if ${OPSYS} == "Darwin"
 PLIST.macunicode=	yes
+.elif ${OPSYS} == "SunOS"
+PLIST.iconv=		yes
+CONFIGURE_ARGS+=	--enable-transcoder-iconv
 .else
 PLIST.gnuiconv=		yes
+CONFIGURE_ARGS+=	--enable-transcoder-gnuiconv
+.include "../../converters/libiconv/buildlink3.mk"
 .endif
 
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
