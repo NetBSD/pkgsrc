@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2471 2011/10/12 03:22:53 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.2472 2011/10/12 03:25:01 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3935,7 +3935,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/silgraphite-xft to 2.3.1 [minskim 2011-10-10]
 	Added fonts/tex-cm-unicode version 0.7.0 [minskim 2011-10-10]
 	Added fonts/tex-cm-unicode-doc version 0.7.0 [minskim 2011-10-10]
-	Updated comms/asterisk18 to 1.8.7.0 [root 2011-10-11]
+	Updated comms/asterisk18 to 1.8.7.0 [jnemeth 2011-10-11]
 	Updated graphics/exiv2 to 0.22 [adam 2011-10-11]
 	Updated devel/boost-jam to 1.47.0 [adam 2011-10-11]
 	Updated devel/boost-headers to 1.47.0 [adam 2011-10-11]
@@ -3953,5 +3953,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added misc/color-theme version 6.6.0 [minskim 2011-10-11]
 	Updated editors/zim to 0.53 [ryoon 2011-10-11]
 	Updated misc/bbdb to 2.35 [minskim 2011-10-12]
-	Updated comms/asterisk18 to 1.8.7.0nb1 [root 2011-10-12]
-	Added textproc/iksemel version 1.4 [root 2011-10-12]
+	Updated comms/asterisk18 to 1.8.7.0nb1 [jnemeth 2011-10-12]
+	Added textproc/iksemel version 1.4 [jnemeth 2011-10-12]
