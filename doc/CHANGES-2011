@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2468 2011/10/11 20:45:16 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2469 2011/10/12 00:44:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3952,3 +3952,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/wesnoth to 1.8.6 [adam 2011-10-11]
 	Added misc/color-theme version 6.6.0 [minskim 2011-10-11]
 	Updated editors/zim to 0.53 [ryoon 2011-10-11]
+	Updated misc/bbdb to 2.35 [minskim 2011-10-12]

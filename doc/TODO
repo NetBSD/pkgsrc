@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10597 2011/10/11 13:19:32 adam Exp $
+$NetBSD: TODO,v 1.10598 2011/10/12 00:44:24 minskim Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o balance-3.54
 	o balsa-2.4.9
 	o bash-completion-1.3
-	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
