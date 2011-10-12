@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2011/09/14 15:53:35 hans Exp $
+# $NetBSD: Makefile,v 1.50 2011/10/12 16:46:15 hans Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -78,13 +78,15 @@ PLIST_SUBST+=		PULSEAUDIO_VER=${PULSEAUDIO_VER:Q}
 BUILDLINK_TRANSFORM+=	rm:-Wl,-version-script=./map-file
 BUILDLINK_TRANSFORM+=	rm:-Wl,-no-undefined
 BUILDLINK_TRANSFORM+=	rm:-Wl,-z rm:-Wl,nodelete
+.elif ${OPSYS} == "SunOS"
+PLIST.sun=		yes
+.  if ${OS_VERSION} == "5.11"
+PLIST.hal=		yes
+PLIST.oss=		yes
+.  endif
 .else
 PLIST.hal=		yes
 PLIST.oss=		yes
-.endif
-
-.if ${OPSYS} == "SunOS"
-PLIST.sun=		yes
 .endif
 
 CFLAGS.SunOS+=		-std=c99
