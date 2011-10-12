@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2479 2011/10/12 14:20:51 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2480 2011/10/12 15:55:36 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3966,3 +3966,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-mako to 0.5.0 [ryoon 2011-10-12]
 	Updated graphics/ruby-rcairo to 1.10.1 [obache 2011-10-12]
 	Updated net/mikutter to 0.0.3.540 [obache 2011-10-12]
+	Updated textproc/p5-Text-Glob to 0.09 [hiramatsu 2011-10-12]
+	Updated editors/p5-Padre to 0.90 [hiramatsu 2011-10-12]
