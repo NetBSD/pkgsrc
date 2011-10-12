@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/02/23 08:31:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/10/12 17:43:14 hans Exp $
 bin/CreateDOMDocument
 bin/DOMCount
 bin/DOMPrint
@@ -302,6 +302,7 @@ include/xercesc/util/SynchronizedStringPool.hpp
 include/xercesc/util/TransENameMap.c
 include/xercesc/util/TransENameMap.hpp
 include/xercesc/util/TransService.hpp
+${PLIST.iconv}include/xercesc/util/Transcoders/Iconv/IconvTransService.hpp
 ${PLIST.gnuiconv}include/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp
 ${PLIST.macunicode}include/xercesc/util/Transcoders/MacOSUnicodeConverter/MacOSUnicodeConverter.hpp
 include/xercesc/util/TranscodingException.hpp
