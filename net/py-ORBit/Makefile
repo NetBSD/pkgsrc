@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/04/22 13:42:33 obache Exp $
+# $NetBSD: Makefile,v 1.37 2011/10/12 17:49:33 hans Exp $
 #
 
 DISTNAME=	pyorbit-2.24.0
@@ -24,6 +24,11 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 BUILDLINK_API_DEPENDS.python26+= python26>=2.6.2nb4
 BUILDLINK_API_DEPENDS.python25+= python25>=2.5.4nb2
 BUILDLINK_API_DEPENDS.python24+= python24>=2.4.5nb4
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-std=c9x
+.endif
 
 do-test:
 	(cd ${WRKSRC}/tests/c-inproc && ${PYTHONBIN} test-c-inproc.py)
