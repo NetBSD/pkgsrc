@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2011/09/14 17:50:16 hans Exp $
+# $NetBSD: Makefile,v 1.95 2011/10/12 17:39:13 hans Exp $
 #
 
 DISTNAME=	metacity-2.34.1
@@ -34,6 +34,10 @@ CONFIGURE_ARGS+=	--disable-compositor
 .endif
 
 CFLAGS.SunOS+=		-std=c99 -D__EXTENSIONS__
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-ansi
+.endif
+
 
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
