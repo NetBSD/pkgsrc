@@ -230,6 +230,7 @@ ipa-without-thresholds	Disable thresholds support.
 irssi-perl		Enable Perl support in irssi.
 iso			Build a .iso file.
 ispell			Add spell checking support using ispell.
+jabber			Enable support for jabber/gtalk.
 jack			Enable support for the JACK audio server.
 jasper			Enable JPEG 2000 support using the jasper library.
 java			Enable Java support.
