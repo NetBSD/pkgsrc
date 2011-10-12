@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2011/04/22 13:44:29 obache Exp $
+# $NetBSD: Makefile,v 1.104 2011/10/12 17:35:15 hans Exp $
 
 DISTNAME=	wget-1.12
 PKGREVISION=	2
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl pod2man
 
 GNU_CONFIGURE=		YES
 USE_OLD_DES_API=	YES
