@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2011/09/27 11:04:42 adam Exp $
+# $NetBSD: Makefile.common,v 1.13 2011/10/12 19:45:25 hans Exp $
 #
 # used by databases/postgresql90-adminpack/Makefile
 # used by databases/postgresql90-client/Makefile
@@ -105,6 +105,7 @@ USE_LIBLTDL?=		yes
 USE_LIBLTDL?=		no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+LIBS.SunOS+=		-lintl
 
 .if !defined(META_PACKAGE)
 post-extract:
