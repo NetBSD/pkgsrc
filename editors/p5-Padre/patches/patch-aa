@@ -1,17 +1,31 @@
-$NetBSD: patch-aa,v 1.2 2010/08/20 07:01:35 sno Exp $
+$NetBSD: patch-aa,v 1.3 2011/10/12 15:51:52 hiramatsu Exp $
 
 Remove special wxPerl handling on MacOS X - pkgsrc' perl can do it self
 
---- script/padre.orig	2010-08-17 03:55:44.000000000 +0000
+--- script/padre.orig	2011-07-26 12:37:43.000000000 +0000
 +++ script/padre
-@@ -11,20 +11,6 @@ local $SIG{__DIE__} =
+@@ -11,34 +11,6 @@ local $SIG{__DIE__} =
  	? sub { print STDERR Carp::longmess "\nDIE: @_\n" . ( "-" x 80 ) . "\n" }
  	: $SIG{__DIE__};
  
 -# Must run using wxPerl on OS X.
 -if ( $^O eq 'darwin' and $^X !~ m{/wxPerl} ) {
 -	require File::Which;
--	my $perl = scalar File::Which::which('wxPerl');
+-	require File::Basename;
+-	require File::Spec;
+-
+-	my $this_perl = File::Which::which($^X) || $^X;
+-	if ( -l $this_perl ) {
+-		my $link = readlink $this_perl;
+-		$this_perl = $link if $link;
+-	}
+-
+-	my $dir = File::Basename::dirname($this_perl);
+-	my $wx_perl = File::Spec->catfile( $dir, 'wxPerl' );
+-	my $perl =
+-		  $wx_perl && -e $wx_perl && -x _
+-		? $wx_perl
+-		: File::Which::which('wxPerl');
 -	chomp($perl);
 -	if ( -e $perl ) {
 -		warn "spawning 'wxPerl' interpreter for OS X\n";
@@ -22,6 +36,6 @@ Remove special wxPerl handling on MacOS X - pkgsrc' perl can do it self
 -	exit 0;
 -}
 -
- # Handle special command line cases early, because options like --home
- # MUST be processed before the Padre.pm library is loaded.
- require Getopt::Long;
+ # Disable overlay scrollbar on Linux.
+ # Done ugly this way to satisfy Perl::Critic (grrr)
+ local $ENV{LIBOVERLAY_SCROLLBAR} = ( $^O eq 'linux' ) ? 0 : $ENV{LIBOVERLAY_SCROLLBAR};
