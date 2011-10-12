@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.22 2011/07/10 16:52:25 jmcneill Exp $
+$NetBSD: patch-ag,v 1.23 2011/10/12 17:30:22 hans Exp $
 
 --- configure.ac.orig	2010-07-25 14:37:30.000000000 +0000
 +++ configure.ac
@@ -84,3 +84,11 @@ $NetBSD: patch-ag,v 1.22 2011/07/10 16:52:25 jmcneill Exp $
       	    AC_DEFINE([HAVE_FREEBSD_CDROM], [1], 
                        [Define 1 if you have FreeBSD CD-ROM support])
  	 ;;
+@@ -2234,6 +2255,7 @@ if test "x$some_snprintf" != "xyes" -o \
+ fi
+ AC_FUNC_FSEEKO
+ AC_CHECK_HEADERS(assert.h byteswap.h malloc.h execinfo.h ucontext.h sys/mman.h sys/mixer.h libgen.h netdb.h dirent.h sys/times.h sys/ioctl.h sys/param.h alloca.h)
++AC_LIBOBJ(dummy)
+ AC_REPLACE_FUNCS(asprintf basename gettimeofday setenv strcasestr strndup strpbrk strsep strtok_r timegm unsetenv memmem)
+ 
+ AC_LIBSOURCE(hstrerror.c)
