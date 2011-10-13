@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/13 10:39:45 hans Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/13 10:43:10 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run bash:run perl chmod \
-			gmake:run makeinfo msgfmt bison flex gm4 \
+			gmake:run makeinfo bison flex gm4 \
 			sed:run unzip
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
@@ -105,7 +105,6 @@ LANGS+= objc
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-long-long
@@ -114,7 +113,6 @@ CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC_PREFIX}/include/c++/
 .if ${OPSYS} == "NetBSD"
 .include "../../devel/binutils/buildlink3.mk"
@@ -211,5 +209,4 @@ GENERATE_PLIST+=                                                        \
 .include "../../math/mpcomplex/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
