@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2488 2011/10/13 15:55:33 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2489 2011/10/13 15:57:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/FlightCrew to 0.7.2 [ryoon 2011-10-13]
 	Updated net/6tunnel to 0.11rc2 [ghen 2011-10-13]
 	Updated devel/php-libawl to 0.48 [wiz 2011-10-13]
+	Updated www/davical to 0.9.9.6 [wiz 2011-10-13]
