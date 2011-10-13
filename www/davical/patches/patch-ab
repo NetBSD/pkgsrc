@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+$NetBSD: patch-ab,v 1.2 2011/10/13 15:57:03 wiz Exp $
 
---- inc/always.php.in.orig	2010-04-01 09:21:58.000000000 +0000
+--- inc/always.php.in.orig	2011-09-25 09:04:29.000000000 +0000
 +++ inc/always.php.in
-@@ -72,7 +72,7 @@ if ( ! @include_once('AWLUtilities.php')
-   $try_paths = array(
+@@ -79,7 +79,7 @@ if ( ! @include_once('AWLUtilities.php')
          '../../awl/inc'
-       , '/usr/share/awl/inc'
+       , '/usr/share/awl/inc'        // Where it ends up on Debian
+       , '/usr/share/php/awl/inc'    // Fedora's standard for PHP libraries
 -      , '/usr/local/share/awl/inc'
 +      , '@LIBAWLPATH@/inc'
    );
    foreach( $try_paths AS $awl_include_path ) {
      if ( @file_exists($awl_include_path.'/AWLUtilities.php') ) {
-@@ -121,11 +121,11 @@ if ( @file_exists('/etc/davical/'.$_SERV
+@@ -131,11 +131,11 @@ if ( @file_exists('/etc/davical/'.$_SERV
  else if ( @file_exists('/etc/davical/config.php') ) {
    include('/etc/davical/config.php');
  }
