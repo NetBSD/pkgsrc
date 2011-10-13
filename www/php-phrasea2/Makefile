@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/04 08:01:18 manu Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/13 12:24:33 dholland Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -13,5 +13,7 @@ USE_LANGUAGES=		c c++
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 
-# url2pkg-marker (please do not remove this line.)
+# php/ext.mk changes this, set it back (XXX)
+DISTINFO_FILE=${.CURDIR}/distinfo
+
 .include "../../mk/bsd.pkg.mk"
