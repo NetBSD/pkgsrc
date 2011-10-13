@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/10/13 15:57:03 wiz Exp $
+$NetBSD: distinfo,v 1.6 2011/10/13 16:37:03 wiz Exp $
 
 SHA1 (davical-0.9.9.6.tar.gz) = e9237e187afa82b669ffc20afc5bbf71a91d1afd
 RMD160 (davical-0.9.9.6.tar.gz) = fe9cfbcd61c25126b84a91b8eec052926c14df45
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = d9c4c6729e7be6968306bdd96ed4269c0887a885
 SHA1 (patch-ac) = 74e9b103d502886736dff4fa659fb3e50bae5032
 SHA1 (patch-ad) = 7816ff4ee7440911e275f3152089760e82b5d180
 SHA1 (patch-ae) = e3f2b5c002c8289d40cd025a38c382d402fc659e
+SHA1 (patch-scripts_build-always.sh) = 528aef5225f83908786aa1ba6ee176e87db64a15
