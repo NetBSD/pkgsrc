@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+$NetBSD: patch-ad,v 1.2 2011/10/13 15:57:03 wiz Exp $
 
---- scripts/po/rebuild-translations.sh.orig	2010-03-09 02:51:21.000000000 +0000
+--- scripts/po/rebuild-translations.sh.orig	2011-09-11 11:46:40.000000000 +0000
 +++ scripts/po/rebuild-translations.sh
-@@ -11,7 +11,7 @@ POTOOLS="scripts/po"
+@@ -10,7 +10,7 @@
  PODIR="po"
  LOCALEDIR="locale"
  APPLICATION="davical"
@@ -10,4 +10,4 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
 +AWL_LOCATION="@LIBAWLPATH@"
  
  if [ ! -d "${AWL_LOCATION}" ]; then
-   AWL_LOCATION=/usr/share/awl
+   AWL_LOCATION="`find .. -type d -name 'awl-*.*'`"
