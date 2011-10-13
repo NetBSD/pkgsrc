@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2480 2011/10/12 15:55:36 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2481 2011/10/13 07:23:51 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3968,3 +3968,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/mikutter to 0.0.3.540 [obache 2011-10-12]
 	Updated textproc/p5-Text-Glob to 0.09 [hiramatsu 2011-10-12]
 	Updated editors/p5-Padre to 0.90 [hiramatsu 2011-10-12]
+	Updated devel/p5-Package-Stash to 0.33 [hiramatsu 2011-10-13]
+	Added devel/p5-Module-Runtime version 0.010 [hiramatsu 2011-10-13]
