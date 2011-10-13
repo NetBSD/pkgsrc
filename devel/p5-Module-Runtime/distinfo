@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/13 07:20:48 hiramatsu Exp $
+
+SHA1 (Module-Runtime-0.010.tar.gz) = f4b826bf672cde0b85a586d8d30f9c2f946c3705
+RMD160 (Module-Runtime-0.010.tar.gz) = 9766abd8347fd017f5ad85a18a0e1f360bf1e98d
+Size (Module-Runtime-0.010.tar.gz) = 10684 bytes
