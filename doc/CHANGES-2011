@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2486 2011/10/13 11:00:44 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2487 2011/10/13 11:42:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3975,3 +3975,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/Sigil to 0.4.2 [ryoon 2011-10-13]
 	Updated net/libvncserver to 0.9.8.1 [obache 2011-10-13]
 	Updated textproc/FlightCrew to 0.7.2 [ryoon 2011-10-13]
+	Updated net/6tunnel to 0.11rc2 [ghen 2011-10-13]
