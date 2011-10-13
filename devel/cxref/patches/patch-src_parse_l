@@ -1,0 +1,36 @@
+$NetBSD: patch-src_parse_l,v 1.1 2011/10/13 22:11:26 dholland Exp $
+
+Recognize and ignore _Pragma(), needed for -current's headers.
+
+--- src/parse.l~	2011-06-18 09:45:04.000000000 +0000
++++ src/parse.l
+@@ -14,6 +14,7 @@ IS                      ((u|U|l|L)+|([iI
+ %x CPP_INCLUDE CPP_INC_FILE CPP_INC_FLAGS
+ %x CPP_DEFINE CPP_DEFINE_ARGP CPP_DEFINE_BODY CPP_DEFINE_ARGS
+ %x GNU_LABEL GNU_VA_ARG GNU_ATTRIBUTE GNU_TYPEOF GNU_OFFSETOF
++%x C99_PRAGMA
+ 
+ %{
+ /***************************************
+@@ -83,6 +84,9 @@ static int gnu_typ_depth=0;
+ /*+ To get around the GCC __offsetof keyword, skip over matched () counted by this. +*/
+ static int gnu_offset_depth=0;
+ 
++/*+ To get around the C99 _Pragma keyword, skip over matched () counted by this. +*/
++static int c99_prag_depth=0;
++
+ /*+ If we see a comment immediately after a ',', ';', '};', '},' or ')' then push it before. +*/
+ static int push_past=0;
+ 
+@@ -311,6 +315,11 @@ static int push_past=0;
+ "_Complex"              {  }
+ "_Bool"                 { yylval="_Bool";    return(BOOL);     }
+ 
++("_Pragma") { c99_prag_depth=0; BEGIN(C99_PRAGMA); }
++<C99_PRAGMA>"("                    { c99_prag_depth++; }
++<C99_PRAGMA>[^()]+                 { }
++<C99_PRAGMA>")"                    { if(--c99_prag_depth==0) { BEGIN(INITIAL); } }
++
+  /* C language keywords. */
+ 
+ "auto"                  { yylval="auto"    ; return(AUTO);     }
