@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/12 06:40:16 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/13 07:32:04 hiramatsu Exp $
 
 DISTNAME=	Class-Load-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Load/
 COMMENT=	Provide a working (require "Class::Name") and more
 LICENSE=	${PERL5_LICENSE}
+
+DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
+DEPENDS+=	p5-Module-Runtime>=0.009:../../devel/p5-Module-Runtime
+DEPENDS+=	p5-Package-Stash>=0.32:../../devel/p5-Package-Stash
+DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
