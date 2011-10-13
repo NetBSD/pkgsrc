@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2483 2011/10/13 09:31:07 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2484 2011/10/13 10:43:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3972,3 +3972,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Module-Runtime version 0.010 [hiramatsu 2011-10-13]
 	Updated devel/p5-Class-Load to 0.11nb1 [hiramatsu 2011-10-13]
 	Updated net/youtube-dl to 20110930 [ryoon 2011-10-13]
+	Updated editors/Sigil to 0.4.2 [ryoon 2011-10-13]
