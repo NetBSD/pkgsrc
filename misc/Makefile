@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2011/10/11 19:53:50 minskim Exp $
+# $NetBSD: Makefile,v 1.364 2011/10/13 07:30:55 jnemeth Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -27,10 +27,10 @@ SUBDIR+=	celestia
 SUBDIR+=	chipmunk
 SUBDIR+=	chord
 SUBDIR+=	cksfv
+SUBDIR+=	color-theme
 SUBDIR+=	colorize
 SUBDIR+=	colorls
 SUBDIR+=	colortail
-SUBDIR+=	color-theme
 SUBDIR+=	cowsay
 SUBDIR+=	cstream
 SUBDIR+=	cuecat
