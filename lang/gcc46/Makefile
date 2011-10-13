@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/13 10:28:30 hans Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/13 10:39:45 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -39,6 +39,16 @@ UNLIMIT_RESOURCES+=	stacksize
 .include "options.mk"
 
 # Determine whether to use binutils
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		OBJDUMP=/usr/sfw/bin/gobjdump
+CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
+. if !exists(/usr/sfw/bin/gas)
+CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
+. else
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
+. endif
+.endif
+
 
 # REPLACE_AWK+=	gcc/testsuite/gcc.test-framework/test-framework.awk	\
 # 		gcc/mkmap-symver.awk					\
@@ -185,6 +195,13 @@ do-test:
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR} \
 	 && ${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
+
+.if ${OPSYS} == "SunOS" && ${OS_VERSION} != "5.11" &&
+!empty(MACHINE_ARCH:M*86*)
+post-install:
+	-${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m32
+	-${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m64
+.endif
 
 GENERATE_PLIST+=                                                        \
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print \
