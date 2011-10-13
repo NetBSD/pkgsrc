@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/13 12:53:56 hans Exp $
+# $NetBSD: Makefile,v 1.10 2011/10/13 14:30:48 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -141,8 +141,7 @@ do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR} \
 	 && ${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
 
-.if ${OPSYS} == "SunOS" && ${OS_VERSION} != "5.11" &&
-!empty(MACHINE_ARCH:M*86*)
+.if ${OPSYS} == "SunOS" && ${OS_VERSION} != "5.11" && !empty(MACHINE_ARCH:M*86*)
 post-install:
 	-${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m32
 	-${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m64
