@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2482 2011/10/13 07:43:48 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2483 2011/10/13 09:31:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3971,3 +3971,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Package-Stash to 0.33 [hiramatsu 2011-10-13]
 	Added devel/p5-Module-Runtime version 0.010 [hiramatsu 2011-10-13]
 	Updated devel/p5-Class-Load to 0.11nb1 [hiramatsu 2011-10-13]
+	Updated net/youtube-dl to 20110930 [ryoon 2011-10-13]
