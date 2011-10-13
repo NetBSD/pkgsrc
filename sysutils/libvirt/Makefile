@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/26 06:05:00 agc Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2011/10/13 17:27:59 tron Exp $
 
 DISTNAME=	libvirt-0.9.3
 CATEGORIES=	sysutils
@@ -70,6 +70,7 @@ AUTO_MKDIRS=		yes
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
