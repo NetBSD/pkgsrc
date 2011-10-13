@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10602 2011/10/13 23:41:12 wiz Exp $
+$NetBSD: TODO,v 1.10603 2011/10/13 23:42:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1163,6 +1163,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
+	o rcs-5.8
 	o rdp-1.6
 	o recordproto-1.14.1
 	o redland-1.0.14 [needs rasqal-0.9.22]
