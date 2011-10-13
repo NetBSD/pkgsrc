@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10601 2011/10/13 15:57:20 wiz Exp $
+$NetBSD: TODO,v 1.10602 2011/10/13 23:41:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,6 +395,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
+	o aria2-1.13.0
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
@@ -458,6 +459,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
+	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.2.0
 	o cherokee-1.2.100
@@ -585,7 +587,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.30
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-1.16.2
+	o feh-2.0
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
@@ -594,7 +596,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
 	o fisg-0.3.12
-	o fixesproto-5.0
+	o fixesproto-5.0 [pkg/45463]
 	o flashplayer-0.4.13
 	o flightgear-2.4
 	o flpsed-0.4.4
@@ -685,13 +687,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
-	o glade3-3.8.0 [GNOME 2.34]
+	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.0
 	o glib2-2.30.0
 	o global-6.1
 	o glom-1.14.2 [GNOME 2.26]
 	o glpk-4.47
-	o glproto-1.4.14
+	o glproto-1.4.14 [pkg/45462]
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.2.0
@@ -773,9 +775,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-7.7
-	o highlight-3.5
+	o highlight-3.6
 	o honeyd-1.5c
-	o horde-4.0.9
+	o horde-4.0.10
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -921,7 +923,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.1
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o libraw-0.14.0
+	o libraw-0.14.1
 	o librep-0.92.1b
 	o libslang2-2.2.4
 	o libssh-0.5.2 [www.libssh.org]
@@ -970,8 +972,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o miredo-1.2.4
 	o mirmon-1.37
 	o mk-configure-0.21.1
-	o mkfontdir-1.0.6
-	o mkfontscale-1.0.9
+	o mkfontdir-1.0.6 [pkg/45461]
+	o mkfontscale-1.0.9 [pkg/45460]
 	o mknmz-wwwoffle-0.7.2
 	o mksh-40b
 	o mkvtoolnix-5.0.1
@@ -1001,7 +1003,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysql-server-5.1.59
 	o nano-2.2.6
 	o nap-1.5.3
-	o nas-1.9.3
+	o nas-1.9.3 [pkg/45449]
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o nawk-20071023
 	o ncview-1.93b
@@ -1033,7 +1035,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
-	o octave-3.4.2
+	o octave-3.4.3
 	o offlineimap-6.2.0
 	o olvwm-4.5
 	o oo2c-2.1.7
@@ -1082,7 +1084,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phoon-20050629
 	o photopc-3.05
 	o php-jpgraph-3.0.6
-	o php-libawl-0.48
 	o phppgadmin-5.0.3
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1133,7 +1134,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
 	o py-checker-0.8.19
-	o py-cups-1.9.59
+	o py-cups-1.9.60
 	o py-dbus-0.84.0
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
@@ -1249,6 +1250,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o stunnel-4.44
 	o subtitleeditor-0.33.0
+	o subversion-1.7
 	o sudo-1.8.2
 	o supertuxkart-0.7.2
 	o swfdec-gnome-2.30.1
@@ -1357,7 +1359,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wget-1.13.4
 	o whohas-0.24
 	o windowlab-1.40
-	o wine-devel-1.3.29
+	o wine-devel-1.3.30
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1397,7 +1399,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xev-1.1.0
-	o xextproto-7.2.0
+	o xextproto-7.2.0 [pkg/45464]
 	o xeyes-1.1.1
 	o xf86-input-keyboard-1.6.0
 	o xf86-input-mouse-1.7.1
@@ -1482,7 +1484,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xpdf-3.03
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.1
-	o xproto-7.0.22
+	o xproto-7.0.22 [pkg/45465]
 	o xpuyopuyo-0.9.8
 	o xrandr-1.3.5
 	o xrefresh-1.0.4
@@ -1495,7 +1497,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsetroot-1.1.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-275
+	o xterm-276
 	o xtraceroute-0.9.1
 	o xtrans-1.2.6
 	o xtu-1.3
