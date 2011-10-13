@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10599 2011/10/13 10:43:31 ryoon Exp $
+$NetBSD: TODO,v 1.10600 2011/10/13 11:01:23 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -332,7 +332,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
-	o FlightCrew-0.7.2
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o ImageMagick-6.7.2.9
