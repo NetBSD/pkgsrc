@@ -32,6 +32,8 @@ drivedata: 0
  a: @SECTORS@ 0 4.2BSD 1024 8192 0
  d: @SECTORS@ 0 unused 0 0
 "
+vnddev="vnd0"
+vndmnt="${dstbase}/mnt"
 
 die() {
 	echo "fatal: $0"
@@ -59,17 +61,11 @@ fi
 
 mkdir -p "$dst" || die "couldn't create directory $dst"
 
-printf " => extracting iso image"
-isoinfo -R -f -i "$src" | while read x; do
-	dstdir="$dst/$(dirname $x)"
-	dstfile="$(basename $x)"
-	if [ -f "$dstdir" ]; then
-		rm "$dstdir"
-	fi
-	mkdir -p "$dstdir"
-	printf .
-	isoinfo -R -x "$x" -i "$src" > "${dstdir}/${dstfile}"
-done
+printf " => extracting iso image..."
+vnconfig "$vnddev" "$src"
+mkdir "$vndmnt"
+mount -r -t cd9660 "/dev/${vnddev}a" "$vndmnt"
+(cd "$vndmnt" && tar cf - .) | (cd "$dst" && tar xf -)
 printf " done.\n"
 
 if [ -f "${dst}/boot.cfg" ]; then
@@ -95,6 +91,8 @@ echo "$disklabel" | \
 disklabel -R -F "${img}" "${dstbase}/disklabel" || die "couldn't write disklabel"
 
 echo " => cleaning up"
+umount "${vndmnt}"
+vnconfig -u "${vnddev}"
 rm -rf "${dstbase}"
 
 echo " => done!"
