@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/10/13 18:43:51 jmmv Exp $
+
+Mangle some variables to ensure that the values we provide from the Makefile
+package are properly propagated.  Also allow us to inject extra flags to the
+compiler from the package.
+
+--- src/Make.common.orig	2008-08-25 13:41:57.000000000 +0000
++++ src/Make.common
+@@ -1,16 +1,16 @@
+ # Paths that can be different in each installation:
+ 
+ # Location of Boost libraries:
+-BOOST_DIR = /usr/local/include/boost_1_36_0
++BOOST_DIR = undefined
+ 
+ # Location of headers and libraries for the Tcl interpreter:
+-TCLINCLUDE_DIR = /usr/include
+-TCLLIB_DIR = /usr/lib
++TCLINCLUDE_DIR = undefined
++TCLLIB_DIR = undefined
+ TCL_LIB = tcl
+ 
+ 
+ # Common compilation options and choices:
+-CXX = g++
+-CXXFLAGS = -Wall -pedantic -W -Wshadow -O2
++CXX ?= g++
++CXXFLAGS += -Wall -pedantic -W -Wshadow -O2
+ CXXFLAGS_BOOST = -Wall -pedantic -Wno-long-long -O2
+ CXXFLAGS_TCL = -Wall -pedantic -W -Wshadow -Wno-long-long -O2

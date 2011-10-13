@@ -1,0 +1,12 @@
+Vera++ is a programmable tool for verification, analysis and
+transformation of C++ source code.
+
+Vera++ is a tool designed for programmers -- not only in the sense that
+it helps with everyday development work, but also in the sense that all
+its rules are implemented as scripts that can be modified or added by
+the user.  Thanks to this, programmers have complete freedom and control
+over what the tool does and how it works.
+
+Vera++ is mainly an engine that parses C++ source files and presents the
+result of this parsing to scripts in the form of various collections --
+the scripts are actually performing the requested tasks.
