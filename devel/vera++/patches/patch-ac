@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/10/13 18:43:51 jmmv Exp $
+
+Vera++ comes with a set of profiles to validate the syntax of files.
+However, the whole system is not designed to be installed.  Change the
+rules for the location of the profiles to something more natural: first
+attempt user overrides and, if these fail, fallback to the system
+installed files.
+
+--- src/main.cpp.orig	2008-08-25 13:41:57.000000000 +0000
++++ src/main.cpp
+@@ -5,6 +5,10 @@
+ // http://www.boost.org/LICENSE_1_0.txt)
+ //
+ 
++extern "C" {
++#include <unistd.h>
++}
++
+ #include "structures/SourceFiles.h"
+ #include "plugins/Profiles.h"
+ #include "plugins/Rules.h"
+@@ -65,15 +69,16 @@ int main(int argc, char * argv[])
+         // the directory containing the profile and rule definitions
+         // by default it is (in this order, first has highest precedence):
+         // - VERA_ROOT (if VERA_ROOT is defined)
+-        // - HOME/.vera (if HOME is defined)
+-        // - current directory
++        // - HOME/.vera (if HOME is defined and the directory exists)
++        // - the installed files for Vera in prefix/share/vera++
+ 
+-        RootDirectory::DirectoryName veraRoot(".");
++        RootDirectory::DirectoryName veraRoot(VERA_ROOT);
+         char * veraRootEnv = getenv("HOME");
+         if (veraRootEnv != NULL)
+         {
+-            veraRoot = veraRootEnv;
+-            veraRoot += "/.vera++";
++            const string homeRoot = string(veraRootEnv) + "/.vera++";
++            if (::access(homeRoot.c_str(), X_OK) != -1)
++                veraRoot = homeRoot;
+         }
+         veraRootEnv = getenv("VERA_ROOT");
+         if (veraRootEnv != NULL)
