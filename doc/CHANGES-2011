@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2485 2011/10/13 10:51:11 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2486 2011/10/13 11:00:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3974,3 +3974,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/youtube-dl to 20110930 [ryoon 2011-10-13]
 	Updated editors/Sigil to 0.4.2 [ryoon 2011-10-13]
 	Updated net/libvncserver to 0.9.8.1 [obache 2011-10-13]
+	Updated textproc/FlightCrew to 0.7.2 [ryoon 2011-10-13]
