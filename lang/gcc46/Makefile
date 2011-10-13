@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/08/22 14:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/13 10:28:30 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -107,15 +107,14 @@ CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC_PREFIX}/include/c++/
 .if ${OPSYS} == "NetBSD"
+.include "../../devel/binutils/buildlink3.mk"
+.include "../../devel/libelf/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
 CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .endif
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--disable-libquadmath --disable-libquadmath-support
-.else
-.include "../../devel/binutils/buildlink3.mk"
-.include "../../devel/libelf/buildlink3.mk"
 .endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
