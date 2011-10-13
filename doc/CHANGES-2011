@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2489 2011/10/13 15:57:20 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2490 2011/10/13 16:03:53 gson Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3978,3 +3978,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/6tunnel to 0.11rc2 [ghen 2011-10-13]
 	Updated devel/php-libawl to 0.48 [wiz 2011-10-13]
 	Updated www/davical to 0.9.9.6 [wiz 2011-10-13]
+	Updated sysutils/mkmemstick to 20111013 [gson 2011-10-13]
