@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/13 18:43:51 jmmv Exp $
+
+SHA1 (vera++-1.1.1.tar.gz) = fe3c14775b50a580d88872e0ada8602b39a2ae01
+RMD160 (vera++-1.1.1.tar.gz) = d085fe4605930c7cf18ed2e8471b1771d08511e1
+Size (vera++-1.1.1.tar.gz) = 53263 bytes
+SHA1 (patch-aa) = aada15eb28d58718e30b151bb7d148d8f9d1dc05
+SHA1 (patch-ab) = 1164e33cc69ddd87c9d4f8dc082ffdf2b7abad84
+SHA1 (patch-ac) = e23a83a69620c50c4b29711b12982a22aec536fe
