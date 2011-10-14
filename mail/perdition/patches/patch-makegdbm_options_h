@@ -1,0 +1,16 @@
+$NetBSD: patch-makegdbm_options_h,v 1.1 2011/10/14 04:42:10 dholland Exp $
+
+Fix build with recent gdbm.
+
+--- makegdbm/options.h~	2009-09-29 02:17:19.000000000 +0000
++++ makegdbm/options.h
+@@ -38,9 +38,6 @@
+ #include "config.h"
+ #endif
+ 
+-extern gdbm_error gdbm_errno;
+-extern char *gdbm_version;
+-
+ #define COPYRIGHT \
+   "(c) 1999 Horms <horms@verge.net.au>\nReleased under the GNU GPL\n"
+ 
