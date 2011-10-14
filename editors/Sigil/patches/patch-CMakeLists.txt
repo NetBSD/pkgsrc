@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2011/10/13 10:42:01 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2011/10/14 09:30:02 ryoon Exp $
 
 * Use external libraries.
 
---- CMakeLists.txt.orig	2011-08-14 05:09:54.000000000 +0000
+--- CMakeLists.txt.orig	2011-10-14 14:56:42 +0000
 +++ CMakeLists.txt
 @@ -55,10 +55,10 @@ set( NO_TEST_EXE 1 )
  
