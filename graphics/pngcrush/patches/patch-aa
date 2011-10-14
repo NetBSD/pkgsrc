@@ -1,27 +1,24 @@
-$NetBSD: patch-aa,v 1.10 2011/01/28 20:46:11 adam Exp $
+$NetBSD: patch-aa,v 1.11 2011/10/14 17:56:24 adam Exp $
 
---- Makefile.orig	2011-01-28 20:28:50.000000000 +0000
+--- Makefile.orig	2011-01-21 23:04:44.000000000 +0000
 +++ Makefile
-@@ -14,17 +14,13 @@
- #ZINC = ../../zlib
- #ZLIB = ../../zlib
+@@ -17,14 +17,10 @@ PNGLIB = ${HOME}/lib
+ ZINC = ${HOME}/include
+ ZLIB = ${HOME}/lib
  
 -CC = gcc
 -LD = gcc
  RM = rm -f
  #CFLAGS = -I. -O -Wall
- #CFLAGS = -I. -O2 -fomit-frame-pointer -Wall
  #CFLAGS = -I. -O3 -fomit-frame-pointer -Wall
- #CFLAGS = -I. -Os -fomit-frame-pointer -Wall
--CFLAGS = -I. -O3 -funroll-loops -fomit-frame-pointer -Wall -Wshadow
- #CFLAGS = -I${ZINC} -I. -O3 -fomit-frame-pointer -Wall
+-CFLAGS = -I${ZINC} -I. -g -O3 -fomit-frame-pointer -Wall
  # [note that -Wall is a gcc-specific compilation flag ("all warnings on")]
 -LDFLAGS =
  O = .o
  E =
  
-@@ -63,7 +59,7 @@ pngcrush$(O): pngcrush.c png.h pngconf.h
- 	$(CC) -c $(CFLAGS) $<
+@@ -68,7 +64,7 @@ pngcrush$(O): pngcrush.c cexcept.h
+ # 	$(CC) -c $(CFLAGS) $<
  
  $(PNGCRUSH)$(E): $(OBJS)
 -	$(LD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
