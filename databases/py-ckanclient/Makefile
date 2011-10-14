@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/14 04:57:59 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/14 05:08:53 obache Exp $
 #
 
 DISTNAME=	ckanclient-0.9
@@ -19,7 +19,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	24
 
 .include "../../lang/python/pyversion.mk"
 
-.if defined(PKPKGPREFIX) && !empty(PYPKGPREFIX:Mpy25)
+.if defined(PYPKGPREFIX) && !empty(PYPKGPREFIX:Mpy25)
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 .endif
 
