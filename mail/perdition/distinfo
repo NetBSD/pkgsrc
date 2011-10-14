@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.8 2010/06/02 12:50:03 adam Exp $
+$NetBSD: distinfo,v 1.9 2011/10/14 04:42:10 dholland Exp $
 
 SHA1 (perdition-1.18.tar.gz) = 60d76e2fca810fa1a12bebe369fc3e7d3452ebbb
 RMD160 (perdition-1.18.tar.gz) = 82065dcfb7f05d7bebcf98b72334f676d4fd5dad
 Size (perdition-1.18.tar.gz) = 602933 bytes
 SHA1 (patch-ac) = 01934fb919cc8ac7699e07e407d6e26706e98fbd
 SHA1 (patch-ag) = 3840c9b4ed6e6d286c1cbeebad7184f9ccdaac2a
+SHA1 (patch-makegdbm_options_h) = f412c826e78bc80b64cf2311b1f815c5a950a773
+SHA1 (patch-perdition_db_gdbm_perditiondb_gdbm_h) = 7cdbc04771f00c13133766d39851df03ad959b9b
