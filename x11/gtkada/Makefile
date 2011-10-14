@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2011/10/09 23:57:09 marino Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/14 14:02:17 marino Exp $
 #
 
-DISTNAME=	gtkada-2.22
+DISTNAME=	gtkada-${GTKADA_VERSION}
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://downloads.dragonlace.net/src/ \
 		http://dragonlace.mirrors.ada.cx/src/
 EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	gtkada-rm-${GTKADA_VERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	draco@marino.st
 HOMEPAGE=	http://libre.adacore.com/libre/tools/gtkada/
@@ -16,9 +18,10 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config perl makeinfo
 MAKE_JOBS_SAFE=		no
 
+GTKADA_VERSION=		2.22
 FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin:${PREFIX}/lib/pkgconfig
 MY_CONFIGURE_ENV=	PATH=${FULL_PATH}
 MY_CONFIGURE_ENV+=	CC=gnatgcc
@@ -39,7 +42,6 @@ do-configure:
 
 post-install:
 	${TOUCH} ${DESTDIR}${PREFIX}/lib/gnat/gtkada/IGNORE.ME
-	${TOUCH} ${DESTDIR}${PREFIX}/share/doc/gtkada/gtkada_rm/IGNORE.ME
 
 # gtk2 includes atk, glib and pango among others
 .include "../../x11/gtk2/buildlink3.mk"
