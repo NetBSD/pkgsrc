@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/10/09 10:59:31 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/10/14 10:52:42 obache Exp $
 
 VERS=		3.2.4
 DISTNAME=	syslog-ng_${VERS}
@@ -52,6 +52,7 @@ SUBST_VARS.unamepath=	UNAME
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../sysutils/eventlog/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
 
 .if ${OPSYS} == "SunOS"
