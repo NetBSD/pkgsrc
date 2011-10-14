@@ -1,0 +1,75 @@
+$NetBSD: patch-config_rules_mk,v 1.1 2011/10/14 01:01:55 dholland Exp $
+
+Sleazy patch to hack around incompatibility between gmake and perl.
+
+(Without this perl spews "syntax error at -e line ##, near ..." for,
+AFAICT, any line that begins with a keyword. It is because gmake is
+passing the backslashes through; sh of course preserves them within
+single quotes, so they get to perl, and perl really doesn't like what
+it apparently considers stray backslashes all over the script text.
+Naturally, you can't *not* have the backslashes, or gmake won't allow
+the thing to span multiple lines. Hurray for gmake.)
+
+--- config/rules.mk~	2011-10-14 00:17:43.000000000 +0000
++++ config/rules.mk
+@@ -740,33 +740,33 @@ ifneq (,$(filter-out OS2 WINNT,$(OS_ARCH
+ # Can't use sed because of its 4000-char line length limit, so resort to perl
+ .DEFAULT:
+ 	@$(PERL) -e '                                                         \
+-	    open(MD, "< $(DEPENDENCIES)");                                    \
+-	    while (<MD>) {                                                    \
+-		if (m@ \.*/*$< @) {                                           \
+-		    $$found = 1;                                              \
+-		    last;                                                     \
+-		}                                                             \
+-	    }                                                                 \
+-	    if ($$found) {                                                    \
+-		print "Removing stale dependency $< from $(DEPENDENCIES)\n";  \
+-		seek(MD, 0, 0);                                               \
+-		$$tmpname = "$(OBJDIR)/fix.md" . $$$$;                        \
+-		open(TMD, "> " . $$tmpname);                                  \
+-		while (<MD>) {                                                \
+-		    s@ \.*/*$< @ @;                                           \
+-		    if (!print TMD "$$_") {                                   \
+-			unlink(($$tmpname));                                  \
+-			exit(1);                                              \
+-		    }                                                         \
+-		}                                                             \
+-		close(TMD);                                                   \
+-		if (!rename($$tmpname, "$(DEPENDENCIES)")) {                  \
+-		    unlink(($$tmpname));                                      \
+-		}                                                             \
+-	    } elsif ("$<" ne "$(DEPENDENCIES)") {                             \
+-		print "$(MAKE): *** No rule to make target $<.  Stop.\n";     \
+-		exit(1);                                                      \
+-	    }'
++	 nop;  open(MD, "< $(DEPENDENCIES)");                                 \
++	 nop;  while (<MD>) {                                                 \
++	 nop;	if (m@ \.*/*$< @) {                                           \
++	 nop;	    $$found = 1;                                              \
++	 nop;	    last;                                                     \
++	 nop;	}                                                             \
++	 nop;  }                                                              \
++	 nop;  if ($$found) {                                                 \
++	 nop;	print "Removing stale dependency $< from $(DEPENDENCIES)\n";  \
++	 nop;	seek(MD, 0, 0);                                               \
++	 nop;	$$tmpname = "$(OBJDIR)/fix.md" . $$$$;                        \
++	 nop;	open(TMD, "> " . $$tmpname);                                  \
++	 nop;	while (<MD>) {                                                \
++	 nop;	    s@ \.*/*$< @ @;                                           \
++	 nop;	    if (!print TMD "$$_") {                                   \
++	 nop;		unlink(($$tmpname));                                  \
++	 nop;		exit(1);                                              \
++	 nop;	    }                                                         \
++	 nop;	}                                                             \
++	 nop;	close(TMD);                                                   \
++	 nop;	if (!rename($$tmpname, "$(DEPENDENCIES)")) {                  \
++	 nop;	    unlink(($$tmpname));                                      \
++	 nop;	}                                                             \
++	 nop;  } elsif ("$<" ne "$(DEPENDENCIES)") {                          \
++	 nop;	print "$(MAKE): *** No rule to make target $<.  Stop.\n";     \
++	 nop;	exit(1);                                                      \
++	 nop;  }'
+ endif
+ 
+ #############################################################################
