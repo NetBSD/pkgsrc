@@ -1,8 +1,19 @@
-$NetBSD: patch-bf,v 1.1.1.1 2011/02/03 18:57:15 drochner Exp $
+$NetBSD: patch-bf,v 1.2 2011/10/14 14:02:17 marino Exp $
 
---- docs/gtkada_ug/Makefile.in.orig	2011-02-02 18:47:06.000000000 +0000
+--- docs/gtkada_ug/Makefile.in.orig	2010-12-01 21:51:07.000000000 +0000
 +++ docs/gtkada_ug/Makefile.in
-@@ -17,10 +17,10 @@ all: gtkada_ug.texi gfdl.texi
+@@ -6,21 +6,16 @@ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
+ all: gtkada_ug.texi gfdl.texi
+-	echo x | tex gtkada_ug.texi
+-	texindex gtkada_ug.cp
+-	tex gtkada_ug.texi
+-	tex gtkada_ug.texi
+-	dvips gtkada_ug.dvi -o gtkada_ug.ps
+ 	perl ../texi2html -menu -monolithic gtkada_ug.texi
+ 	makeinfo --force -o gtkada_ug.info gtkada_ug.texi
+ 	makeinfo --force --no-headers --no-split -o gtkada_ug.txt gtkada_ug.texi
  	-$(RM) *.aux *.cp *.cps *.dvi *.fn *.ky *.log *.pg *.toc *.tp *.vr
  
  install:
