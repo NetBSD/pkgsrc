@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10603 2011/10/13 23:42:25 wiz Exp $
+$NetBSD: TODO,v 1.10604 2011/10/14 00:11:26 dholland Exp $
 
 Suggested new packages
 ======================
@@ -492,7 +492,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o curl-7.22.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.22
-	o cxref-1.6d
 	o cygwin_lib-1.5.24.2
 	o damageproto-1.2.1
 	o dansguardian-2.10.0.3
