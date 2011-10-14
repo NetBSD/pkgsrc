@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/09/07 23:44:27 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/10/14 01:01:55 dholland Exp $
 
 SHA1 (ldapsdk_12311998.tar.gz) = fc132cf2d7bef6f3b93486fabd73c1f7f202d04e
 RMD160 (ldapsdk_12311998.tar.gz) = d0ede32efd1e33874d5fc74c97d9d4a053709543
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 023fb7d066a3b0e9fde391e37ce14751c7816e7d
 SHA1 (patch-ae) = fe40aa1668206bd63861844fc34574c749aa22f0
 SHA1 (patch-af) = 20869b8cbc7becee026adece14b9b9a250531d8a
 SHA1 (patch-config-bsdecho.c) = a5f916c44c55a812793c25760771bff5a1400ed0
+SHA1 (patch-config_rules_mk) = 6ddd1ee99f4058eeddd3f34f6921c1573abcd125
