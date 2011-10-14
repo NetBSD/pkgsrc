@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2496 2011/10/14 06:27:57 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2497 2011/10/14 09:06:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-POE-Server-TCP to 1.16 [hiramatsu 2011-10-14]
 	Updated textproc/p5-Template-Declare to 0.45 [hiramatsu 2011-10-14]
 	Updated devel/py-pytemplate to 1.5.1nb1 [obache 2011-10-14]
+	Updated devel/coccinelle to 0.2.5 [obache 2011-10-14]
