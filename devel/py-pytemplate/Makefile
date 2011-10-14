@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/25 09:16:06 imil Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/14 06:27:42 obache Exp $
 #
 
 DISTNAME=	pytemplate-1.5.1
 PKGNAME=	py-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.bulot.org/downloads/
 
@@ -14,11 +15,13 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_LANGUAGES=			# none
 
-PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_INCOMPATIBLE=	31
 REPLACE_PYTHON=			${WRKSRC}/*.py
 
-EGDIR=				${PREFIX}/share/examples/pytemplate
+EGDIR=				${PREFIX}/share/examples/${PYPKGPREFIX}-pytemplate
+
+PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
+PRINT_PLIST_AWK+=	{ gsub(/${PYPKGPREFIX:S|/|\\/|g}/, "$${PYPKGPREFIX}") }
 
 INSTALLATION_DIRS+=		${EGDIR}
 
@@ -28,5 +31,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/threadexample.py ${DESTDIR}${EGDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
