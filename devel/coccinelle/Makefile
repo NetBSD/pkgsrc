@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/08/07 14:23:23 jym Exp $
+# $NetBSD: Makefile,v 1.10 2011/10/14 09:06:35 obache Exp $
 
-DISTNAME=	coccinelle-0.2.3
+DISTNAME=	coccinelle-0.2.5
 CATEGORIES=	devel
 MASTER_SITES=	http://coccinelle.lip6.fr/distrib/
 EXTRACT_SUFX=	.tgz
@@ -11,39 +11,37 @@ COMMENT=	Tool for writing and applying semantic patches
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-DEPENDS+=	menhir-[0-9]*:../../devel/menhir
+DEPENDS+=	menhir>=20071212:../../devel/menhir
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 HAS_CONFIGURE=	yes
-USE_TOOLS=	gmake perl
+USE_TOOLS+=	gmake perl
 REPLACE_PERL=	configure
 BUILD_TARGET=	all all.opt
 
+.include "../../lang/python/tool.mk"
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIG_SHELL=	${PERL5}
 
-PYTHON_VERSIONS_ACCEPTED=	25
-
-SUBST_CLASSES+=		python
-SUBST_FILES.python+=	pycaml/Makefile
-SUBST_SED.python+=	-e "s, python , ${PYTHONBIN} ,g"
-SUBST_STAGE.python=	post-configure
-SUBST_MESSAGE.python=	Fixing python executable name.
+PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 
 SUBST_CLASSES+=		man
-SUBST_FILES.man+=	docs/spatch.1
-SUBST_SED.man+=		-e "s,/usr/local,${PREFIX},g"
-SUBST_STAGE.man=	post-configure
-SUBST_MESSAGE.man=	Fixing path to examples in man page.
+SUBST_FILES.man+=	configure
+SUBST_SED.man+=		-e "s,$${prefix}/man,$${prefix}/${PKGMANDIR},g"
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing manpath.
 
 TEST_TARGET=	test
+
+.include "../../lang/python/tool.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.11
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
