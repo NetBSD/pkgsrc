@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.15 2011/04/22 13:45:02 obache Exp $
+# $NetBSD: Makefile,v 1.16 2011/10/14 12:30:53 obache Exp $
 #
 
 DISTNAME=	driconf-0.9.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dri.freedesktop.org/wiki/DriConf
 COMMENT=	Configuration applet for DRI drivers
+LICENSE=	gnu-gpl-v2 # or later
 
 DEPENDS+= 	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+= 	${PYPKGPREFIX}-gtk2>=2.4:../../x11/py-gtk2
 DEPENDS+= 	xdriinfo>=1.0.2:../../x11/xdriinfo
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -21,7 +23,7 @@ USE_TOOLS+=		msgfmt msgmerge xgettext
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 PYDISTUTILSPKG= 	yes
 REPLACE_PYTHON= 	*.py
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 SUBST_CLASSES+= 	fix-paths
 SUBST_FILES.fix-paths=	driconf driconf.desktop
@@ -45,6 +47,5 @@ post-install:
 
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
