@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.2 2011/07/19 18:32:13 drochner Exp $
+$NetBSD: distinfo,v 1.3 2011/10/14 17:22:06 marino Exp $
 
-SHA1 (gps-5.0.0.tar.bz2) = 913aca264a341e228b3b02e7bb8ea77b0cb96805
-RMD160 (gps-5.0.0.tar.bz2) = 67fd5e95e1e4fd1f728522395623812091b7dfda
-Size (gps-5.0.0.tar.bz2) = 9325721 bytes
-SHA1 (patch-aa) = 0f361b4be86052efb2926659a025b611e4d339eb
+SHA1 (gps-5.0.1.tar.bz2) = 5fc7fba2d80b2b405c60b0a4ecc6c4d2792a3829
+RMD160 (gps-5.0.1.tar.bz2) = 17d90cd493cca50a70ebb4118b69ebba759b964a
+Size (gps-5.0.1.tar.bz2) = 9303980 bytes
+SHA1 (patch-aa) = 4a590aa2a38797548a44e3974f3534aa36138ab0
 SHA1 (patch-ab) = 59c13a902436f3953a467b914e8b3c01443263c6
 SHA1 (patch-ac) = 4c350aa10b82aef2baaf29465ffec30942ed6c0d
-SHA1 (patch-ad) = 058f89c0fa9bf2c2d4baca8d35ce11c97086697a
-SHA1 (patch-ae) = 2847e353fdec774262adc14f80c4ba6c6a5fe283
-SHA1 (patch-af) = c3c29f06eb91a7656a8c251b1914686b4aea9723
-SHA1 (patch-ag) = b1756db403619becb790c3e0641d5e0606f4e92c
-SHA1 (patch-ah) = 8b5fb8546a6de24cc8d9ce0a5125bda03149ec06
-SHA1 (patch-ai) = 604edae7bc4fcf8e0cbd707848d79b22aca1a3df
-SHA1 (patch-aj) = eb5c2f7850468d5718ddd30d54f8f4efdb2187e5
+SHA1 (patch-ae) = 30d8f07a0115ddd6820f907806eaf41360297f67
+SHA1 (patch-af) = b54e4b5076bbdcb67953856d668c9e9bde72f3ea
+SHA1 (patch-ak) = 415e7a0017ce22fa28657dcafabc6ebc7c151582
+SHA1 (patch-al) = cf6fb268ebce1895c22686c987d24a4f031aba01
+SHA1 (patch-am) = bb0257d86161abd39d9d8a952a0a20d921d401dc
+SHA1 (patch-an) = 9a12bfd2950fe4fc06a72f5970ff125cdddb6f82
