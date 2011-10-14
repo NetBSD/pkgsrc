@@ -1,0 +1,95 @@
+$NetBSD: patch-fl_time_cpp,v 1.1.2.2 2011/10/14 20:04:56 spz Exp $
+
+Fix build on systems where the "tv_sec" member of "struct timeval" is not
+not of type "time_t", e.g. NetBSD/amd64 5.1.
+
+--- etimedate/fl_time.cpp.orig	2005-08-31 20:50:39.000000000 +0100
++++ etimedate/fl_time.cpp	2011-10-11 22:57:46.000000000 +0100
+@@ -46,6 +46,15 @@
+ }
+ #endif /* HAVE_STIME */
+ 
++static struct tm *
++my_localtime(const struct timeval *tv)
++{
++    time_t clock;
++    clock = tv->tv_sec;
++    return localtime(&clock);
++}
++
++
+ Fl_Time::Fl_Time(int x, int y, int w, int h, char *l) : Fl_Group(x, y, w, h, l)
+ {
+     int button_width = (int)(w/7);
+@@ -98,7 +107,7 @@
+     gettimeofday(&current_tv, 0);
+     display_tv.tv_sec = current_tv.tv_sec;
+     display_tv.tv_usec = current_tv.tv_usec;
+-    display_time_tm = localtime(&current_tv.tv_sec);
++    display_time_tm = my_localtime(&current_tv);
+ 
+     if(type() == FL_TIME_24HOUR) strftime(time_string, 19, "%2H:%2M", display_time_tm);
+     else strftime(time_string, 19, "%2I:%2M %p", display_time_tm);
+@@ -118,7 +127,7 @@
+         gettimeofday(&current_tv, 0);
+ 
+         display_tv.tv_sec = current_tv.tv_sec - different;
+-        display_time_tm = localtime(&display_tv.tv_sec);
++        display_time_tm = my_localtime(&display_tv);
+ 
+         if(type() == FL_TIME_24HOUR) strftime(time_string, 19, "%2H:%2M", display_time_tm);
+         else strftime(time_string, 19, "%2I:%2M %p", display_time_tm);
+@@ -132,7 +141,7 @@
+ {
+     struct tm *display_time_tm;
+ 
+-    display_time_tm = localtime(&display_tv.tv_sec);
++    display_time_tm = my_localtime(&display_tv);
+     return display_time_tm->tm_hour;
+ }
+ 
+@@ -141,7 +150,7 @@
+ {
+     struct tm *display_time_tm;
+ 
+-    display_time_tm = localtime(&display_tv.tv_sec);
++    display_time_tm = my_localtime(&display_tv);
+     return display_time_tm->tm_min;
+ }
+ 
+@@ -150,7 +159,7 @@
+ {
+     struct tm *display_time_tm;
+ 
+-    display_time_tm = localtime(&display_tv.tv_sec);
++    display_time_tm = my_localtime(&display_tv);
+ 
+     if(type() == FL_TIME_24HOUR) strftime(time_string, 19, "%2H:%2M", display_time_tm);
+     else strftime(time_string, 19, "%2I:%2M %p", display_time_tm);
+@@ -163,7 +172,7 @@
+ {
+     struct tm *display_time_tm;
+ 
+-    display_time_tm = localtime(&display_tv.tv_sec);
++    display_time_tm = my_localtime(&display_tv);
+     display_time_tm->tm_hour = value;
+     display_tv.tv_sec = mktime(display_time_tm);
+ }
+@@ -173,7 +182,7 @@
+ {
+     struct tm *display_time_tm;
+ 
+-    display_time_tm = localtime(&display_tv.tv_sec);
++    display_time_tm = my_localtime(&display_tv);
+     if(value < 0)
+     {
+         display_time_tm->tm_min = 59;
+@@ -194,7 +203,7 @@
+ void Fl_Time::settime()
+ {
+     struct tm *display_time_tm;
+-    display_time_tm = localtime(&display_tv.tv_sec);
++    display_time_tm = my_localtime(&display_tv);
+     //  return display_time_tm->tm_min;
+     time_t ct = mktime (display_time_tm);
+     if (stime(&ct)!=0)
