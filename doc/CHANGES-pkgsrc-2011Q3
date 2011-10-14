@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.15 2011/10/13 17:28:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.16 2011/10/14 20:06:34 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -59,3 +59,5 @@ Pullup ticket #3546 - requested by dholland
 x11/efltk: build fix
 Pullup ticket #3554 - requested by dholland
 sysutils/libvirt: build fix
+Pullup ticket #3547 - requested by dholland
+x11/ede: build fix
