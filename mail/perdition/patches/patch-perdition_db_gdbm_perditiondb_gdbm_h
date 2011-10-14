@@ -1,0 +1,16 @@
+$NetBSD: patch-perdition_db_gdbm_perditiondb_gdbm_h,v 1.1 2011/10/14 04:42:10 dholland Exp $
+
+Fix build with recent gdbm.
+
+--- perdition/db/gdbm/perditiondb_gdbm.h~	2009-09-29 02:17:19.000000000 +0000
++++ perdition/db/gdbm/perditiondb_gdbm.h
+@@ -30,9 +30,6 @@
+ #include <ctype.h>
+ #include <gdbm.h>
+ 
+-extern gdbm_error gdbm_errno;
+-extern char *gdbm_version;
+-
+ #ifndef PERDITIONDB_GDBM_SYSCONFDIR
+ #define PERDITIONDB_GDBM_SYSCONFDIR "/usr/local/etc/perdition"
+ #endif
