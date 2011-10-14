@@ -1,8 +1,8 @@
-$NetBSD: patch-src_ZipArchive_DirEnumerator.cpp,v 1.1 2011/10/14 09:30:02 ryoon Exp $
+$NetBSD: patch-src_ZipArchive_DirEnumerator.cpp,v 1.2 2011/10/14 09:49:06 ryoon Exp $
 
 Add DragonFly support.
 
---- src/ZipArchive/DirEnumerator.cpp.orig	2011-10-14 14:56:42 +0000
+--- src/ZipArchive/DirEnumerator.cpp.orig	2011-10-14 18:30:31 +0000
 +++ src/ZipArchive/DirEnumerator.cpp
 @@ -73,7 +73,7 @@ bool CDirEnumerator::Start(CFileFilter& 
  				if (!entry)
