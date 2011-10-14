@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2494 2011/10/14 00:34:13 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2495 2011/10/14 02:14:51 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3984,3 +3984,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cxref to 1.6d [dholland 2011-10-13]
 	Updated archivers/szip to 2.1nb2 [dholland 2011-10-13]
 	Updated pkgtools/distbb to 0.41.1 [cheusov 2011-10-14]
+	Updated devel/p5-Test-LongString to 0.15 [hiramatsu 2011-10-14]
+	Updated devel/p5-Test-POE-Server-TCP to 1.16 [hiramatsu 2011-10-14]
+	Updated textproc/p5-Template-Declare to 0.45 [hiramatsu 2011-10-14]
