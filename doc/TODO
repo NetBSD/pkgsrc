@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10604 2011/10/14 00:11:26 dholland Exp $
+$NetBSD: TODO,v 1.10605 2011/10/14 08:13:49 mef Exp $
 
 Suggested new packages
 ======================
@@ -429,7 +429,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bftpd-3.6
 	o biew-6.1.0
 	o bigreqsproto-1.1.1
-	o binutils-2.21.1
+	o binutils-2.21.1 [pkgsrc-wip]
 	o bioperl-1.5.0
 	o bitmap-1.0.5
 	o blender-2.59
@@ -523,6 +523,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doclifter-2.7
 	o doxygen-1.7.5.1
 	o dpkg-1.16.0.3
+	o dri-7.8.2 [pkgsrc-wip]
 	o dri2proto-2.6
 	o drivel-3.0.3
 	o drupal-7
@@ -686,6 +687,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
+	o gl-7.8.2 [pkgrc-wip]
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.0
 	o glib2-2.30.0
@@ -977,7 +979,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mksh-40b
 	o mkvtoolnix-5.0.1
 	o moc-2.4.4
-	o modular-xorg-server-1.11.1
+	o modular-xorg-server-1.11.1 [pkgsrc-wip]
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o moserial-2.30.0 [GNOME 2.30]
@@ -1220,6 +1222,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0.2
+	o showfont-1.0.3 [pkgsrc-wip]
 	o sign-1.0.7
 	o simage-1.7.0
 	o simulavr-0.1.2.2
