@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2492 2011/10/13 18:44:51 jmmv Exp $
+$NetBSD: CHANGES-2011,v 1.2493 2011/10/14 00:11:03 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3981,3 +3981,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/mkmemstick to 20111013 [gson 2011-10-13]
 	Updated www/davical to 0.9.9.6nb1 [wiz 2011-10-13]
 	Added devel/vera++ version 1.1.1 [jmmv 2011-10-13]
+	Updated devel/cxref to 1.6d [dholland 2011-10-13]
+	Updated archivers/szip to 2.1nb2 [dholland 2011-10-13]
