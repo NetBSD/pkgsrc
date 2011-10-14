@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/10/13 18:43:51 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2011/10/14 02:05:01 jmmv Exp $
 
 The structures/lexer directory rebuilds part of Boost.Wave by attempting to
 access the raw Boost source files.  This is not appropriate for a package,
-so just link against the installed Boost.Wave library.
+so just link against the installed Boost.Wave library.  We set LIBS_DIRS
+from our package Makefile to avoid dealing with rpaths here.
 
 --- src/Makefile.orig	2008-08-25 13:41:57.000000000 +0000
 +++ src/Makefile
@@ -12,7 +13,7 @@ so just link against the installed Boost.Wave library.
  
 -LIBS_DIRS = -L./structures/lexer -L${TCLLIB_DIR}
 -LIBS = -l${TCL_LIB} -llexer
-+LIBS_DIRS = -L${BOOSTLIB_DIR} -L${TCLLIB_DIR}
++LIBS_DIRS = undefined
 +LIBS = -l${TCL_LIB} -lboost_wave -lboost_system
  
  ALL_OBJ = ${STRUCTURES_OBJ} ${PLUGINS_OBJ}
