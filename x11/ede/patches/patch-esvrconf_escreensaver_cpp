@@ -1,0 +1,46 @@
+$NetBSD: patch-esvrconf_escreensaver_cpp,v 1.1.2.2 2011/10/14 20:04:56 spz Exp $
+
+Fix LP64 build.
+
+--- esvrconf/escreensaver.cpp~	2005-03-04 15:45:43.000000000 +0000
++++ esvrconf/escreensaver.cpp
+@@ -320,7 +320,7 @@ void writeConfiguration()
+     config.create_section("Saver");
+     config.set_section("Saver");
+     
+-    config.write("Active", saversList->item() ? (int)saversList->item()->user_data() : default_saver);
++    config.write("Active", saversList->item() ? (intptr_t)saversList->item()->user_data() : default_saver);
+ 
+     config.write("Timeout", timeoutSlider->value());
+     config.create_section("DPMS");
+@@ -357,10 +357,10 @@ void writeConfigurationSaver()
+     fprintf(config, "selected:		%d\n", 0);    
+     
+     fprintf(config, "programs:	\"%s\"	%s\n", saversList->item() ?
+-        (char*)p.screenhacks[(int)saversList->item()->user_data()]->name :
++        (char*)p.screenhacks[(intptr_t)saversList->item()->user_data()]->name :
+ 	    (char*)p.screenhacks[default_saver]->name,
+ 	saversList->item() ?    
+-	(char*)p.screenhacks[(int)saversList->item()->user_data()]->command :
++	(char*)p.screenhacks[(intptr_t)saversList->item()->user_data()]->command :
+ 	    (char*)p.screenhacks[default_saver]->command
+     );    
+     
+@@ -436,7 +436,7 @@ void fillSaversList(Fl_Input_Browser *br
+         }
+         else item = new Fl_Item(p.screenhacks[i]->name);
+ 
+-        item->user_data((void*) i);
++        item->user_data((void*)(intptr_t) i);
+ 	item->activate(p.screenhacks[i]->enabled_p);
+         browser->end();
+     }
+@@ -473,7 +473,7 @@ void startSaverPreview()
+ 
+     char cmd[4096] = {0};
+     snprintf(cmd, 4096, "%s%s -window-id 0x%X", location, 
+-	saversList->item() ? (char*)p.screenhacks[(int)saversList->item()
++	saversList->item() ? (char*)p.screenhacks[(intptr_t)saversList->item()
+ 	->user_data()]->command : 
+ 	(char*)p.screenhacks[default_saver]->command, (int)id);
+     launchPreviewSubprocess(cmd);
