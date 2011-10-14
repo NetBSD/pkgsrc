@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/03 11:04:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/14 04:23:20 dholland Exp $
 #
 
 DISTNAME=	ckanclient-0.9
@@ -14,6 +14,8 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	24 25
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
