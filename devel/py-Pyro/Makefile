@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2011/10/15 12:08:37 obache Exp $
 #
 
 DISTNAME=		Pyro-3.4
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pyro/}
 
@@ -13,8 +13,6 @@ COMMENT=		Distributed Object Technology system in Python
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
 PLIST_SUBST+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
 MAKE_ENV+=		PKGSRC="1"
 MAKE_ENV+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
@@ -33,5 +31,5 @@ post-extract:
 	${MV} wxnsc wxnsc-${PYVERSSUFFIX}; \
 	${MV} xnsc xnsc-${PYVERSSUFFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
