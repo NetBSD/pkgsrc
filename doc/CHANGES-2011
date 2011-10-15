@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2500 2011/10/14 17:57:48 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2501 2011/10/15 07:25:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3992,3 +3992,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/driconf to 0.9.1nb8 [obache 2011-10-14]
 	Added x11/sakura version 2.4.2 [ryoon 2011-10-14]
 	Updated graphics/pngcrush to 1.7.20 [adam 2011-10-14]
+	Updated devel/cmake to 2.8.6 [adam 2011-10-15]
