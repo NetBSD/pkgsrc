@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2508 2011/10/15 10:13:32 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2509 2011/10/15 10:19:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4000,3 +4000,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/py-pslib to 0.2.0nb3 [obache 2011-10-15]
 	Updated audio/py-ogg to 1.3nb3 [obache 2011-10-15]
 	Updated audio/py-mpd to 0.2.0nb1 [obache 2011-10-15]
+	Updated audio/py-mad to 0.6nb1 [obache 2011-10-15]
