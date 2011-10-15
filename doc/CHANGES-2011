@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2504 2011/10/15 08:17:07 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2505 2011/10/15 08:24:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3996,3 +3996,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/py-daap to 0.7nb2 [obache 2011-10-15]
 	Updated devel/py-unitgui to 1.4.1nb3 [obache 2011-10-15]
 	Updated devel/py-unit to 1.4.1nb2 [obache 2011-10-15]
+	Updated devel/py-kqueue to 2.0nb2 [obache 2011-10-15]
