@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/10/19 11:12:08 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/15 10:45:19 obache Exp $
 #
 
 DISTNAME=	flup-1.0.2
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.saddi.com/software/flup/dist/
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://trac.saddi.com/flup
 COMMENT=	WSGI support modules
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
