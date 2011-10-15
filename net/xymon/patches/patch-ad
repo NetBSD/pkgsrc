@@ -1,4 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2011/04/22 14:52:18 spz Exp $
+$NetBSD: patch-ad,v 1.3 2011/10/15 16:28:22 dholland Exp $
+
+- netbsd has stdint.h
+- remove stray commas
 
 --- build/Makefile.NetBSD.orig	2011-03-08 17:20:28.000000000 +0000
 +++ build/Makefile.NetBSD
@@ -11,3 +14,18 @@ $NetBSD: patch-ad,v 1.2 2011/04/22 14:52:18 spz Exp $
  
  # NETLIBS: None needed
  NETLIBS =
+@@ -10,12 +10,12 @@ NETLIBS =
+ CC= gcc
+ PKGDIR?=/usr/pkg
+ CFLAGS = -g -O2 -Wall -Wno-unused -D_REENTRANT $(LFSDEF) $(OSDEF) \
+-       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib
++       -I${PKGDIR}/include -L${PKGDIR}/lib -Wl,--rpath=${PKGDIR}/lib
+ RPATH = "-Wl,--rpath,"
+ 
+ # Compile flags for debugging
+ # CFLAGS = -g -DDEBUG -Wall -D_REENTRANT $(LFSDEF) $(OSDEF) \
+-       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib
++       -I${PKGDIR}/include -L${PKGDIR}/lib -Wl,--rpath=${PKGDIR}/lib
+ 
+ # Mail program: This must support "CMD -s SUBJECT ADDRESS" to send out a mail with a subject
+ # Typically, this will be "mail" or "mailx"
