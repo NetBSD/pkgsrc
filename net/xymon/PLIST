@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/22 14:52:18 spz Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/10/15 23:07:24 spz Exp $
 libexec/xymon/ackinfo.cgi
 libexec/xymon/acknowledge.cgi
 libexec/xymon/bb
@@ -332,6 +332,9 @@ share/xymon/web/critedit_form
 share/xymon/web/critedit_header
 share/xymon/web/critical_footer
 share/xymon/web/critical_header
+share/xymon/web/critmulti_header
+share/xymon/web/divider_footer
+share/xymon/web/divider_header
 share/xymon/web/event_footer
 share/xymon/web/event_form
 share/xymon/web/event_header
