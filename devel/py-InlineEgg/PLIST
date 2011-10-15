@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/10/15 12:03:21 obache Exp $
 share/doc/InlineEgg/README
 share/examples/InlineEgg/example1.py
 share/examples/InlineEgg/example2.py
@@ -7,6 +7,7 @@ share/examples/InlineEgg/example4.py
 share/examples/InlineEgg/example5.py
 share/examples/InlineEgg/example6.py
 share/examples/InlineEgg/xored_shell_client.py
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/inlineegg/WindowsSyscall.py
 ${PYSITELIB}/inlineegg/WindowsSyscall.pyc
 ${PYSITELIB}/inlineegg/WindowsSyscall.pyo
