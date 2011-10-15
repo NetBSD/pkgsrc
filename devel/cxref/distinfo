@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2008/11/06 17:45:46 snj Exp $
+$NetBSD: distinfo,v 1.7.24.1 2011/10/15 08:28:21 tron Exp $
 
-SHA1 (cxref-1.6b.tgz) = b036b4f744dafca3091eee51c20c71ac57017c51
-RMD160 (cxref-1.6b.tgz) = 8cb5d13b58749714b14bd57dc8085c841d7f8772
-Size (cxref-1.6b.tgz) = 393302 bytes
+SHA1 (cxref-1.6d.tgz) = b984d85da7b7fa39794932e6fe85a0657f6240bb
+RMD160 (cxref-1.6d.tgz) = 3760f2f074ec26b6702efbd38f24f0bb231488e0
+Size (cxref-1.6d.tgz) = 415744 bytes
 SHA1 (patch-aa) = 0696dc7e2c027ebbbfb6747ff36ec9f9a36b7a88
+SHA1 (patch-src_parse_l) = 38638d7ac187ddebec2fb446f38adaace3ef3712
