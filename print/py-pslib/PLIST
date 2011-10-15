@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/19 16:06:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/15 08:33:36 obache Exp $
 ${PYSITELIB}/pslib.so
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
