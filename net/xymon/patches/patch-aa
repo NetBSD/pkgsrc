@@ -1,8 +1,30 @@
-$NetBSD: patch-aa,v 1.2 2011/04/22 14:52:18 spz Exp $
+$NetBSD: patch-aa,v 1.3 2011/10/15 23:07:24 spz Exp $
 
 --- configure.server.orig	2011-03-08 17:20:28.000000000 +0000
 +++ configure.server
-@@ -507,6 +507,9 @@ fi
+@@ -17,6 +17,8 @@ do
+   To configure Xymon, the following options are available:
+      --rrdinclude DIRECTORY   : Specify location of RRDtool include files
+      --rrdlib DIRECTORY       : Specify location of RRDtool libraries
++     --pnglib DIRECTORY       : Specify location of PNG library
++     --zlib DIRECTORY         : Specify location of Z library
+      --pcreinclude DIRECTORY  : Specify location of PCRE include files
+      --pcrelib DIRECTORY      : Specify location of PCRE libraries
+      --sslinclude DIRECTORY   : Specify location of OpenSSL include files
+@@ -36,6 +38,12 @@ EOF
+ 	  "--rrdlib")
+ 	  	USERRRDLIB="$1"; shift
+ 		;;
++	  "--pnglib")
++	  	USERPNGLIB="$1"; shift
++		;;
++	  "--zlib")
++	  	USERZLIB="$1"; shift
++		;;
+ 	  "--pcreinclude")
+ 	  	USERPCREINC="$1"; shift
+ 		;;
+@@ -507,6 +515,9 @@ fi
  if test "$INSTALLETCDIR" != ""; then
  	echo "INSTALLETCDIR = $INSTALLETCDIR"   >>Makefile
  fi
