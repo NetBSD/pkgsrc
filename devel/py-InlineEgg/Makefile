@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/05/19 08:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2011/10/15 12:03:21 obache Exp $
 #
 
 DISTNAME=		InlineEgg-1.08
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://oss.corest.com/repo/
 
@@ -13,9 +13,6 @@ COMMENT=		Python module for writing inline assembler programs
 LICENSE=		inlineegg-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PY_PATCHPLIST=		YES
-PYDISTUTILSPKG=		YES
 
 PYTHON_PATCH_SCRIPTS=		examples/example1.py examples/example2.py \
 				examples/example3.py examples/example4.py \
@@ -30,5 +27,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/InlineEgg
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
