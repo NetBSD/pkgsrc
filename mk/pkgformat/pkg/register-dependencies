@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: register-dependencies,v 1.4 2007/05/28 11:07:00 martti Exp $
+# $NetBSD: register-dependencies,v 1.1 2011/10/15 00:23:09 reed Exp $
 #
 ######################################################################
 #
