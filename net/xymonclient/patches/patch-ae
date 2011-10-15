@@ -1,14 +1,31 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/02/14 16:11:11 spz Exp $
+$NetBSD: patch-ae,v 1.2 2011/10/15 23:04:51 spz Exp $
 
---- build/Makefile.NetBSD.orig	2010-02-08 23:58:57.000000000 +0000
+- netbsd has stdint.h
+- remove stray commas
+
+--- build/Makefile.NetBSD.orig	2011-03-08 17:20:28.000000000 +0000
 +++ build/Makefile.NetBSD
-@@ -10,7 +10,8 @@ NETLIBS =
+@@ -1,7 +1,7 @@
+ # Xymon compile-time settings for NetBSD systems
+ # From Emmanuel Dreyfus.
+ #
+-OSDEF = -DBSD
++OSDEF = -DBSD -DHAVE_STDINT_H
+ 
+ # NETLIBS: None needed
+ NETLIBS =
+@@ -10,12 +10,12 @@ NETLIBS =
  CC= gcc
  PKGDIR?=/usr/pkg
  CFLAGS = -g -O2 -Wall -Wno-unused -D_REENTRANT $(LFSDEF) $(OSDEF) \
 -       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib
-+       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib \
-+       -DHAVE_STDINT_H
++       -I${PKGDIR}/include -L${PKGDIR}/lib -Wl,--rpath=${PKGDIR}/lib
  RPATH = "-Wl,--rpath,"
  
  # Compile flags for debugging
+ # CFLAGS = -g -DDEBUG -Wall -D_REENTRANT $(LFSDEF) $(OSDEF) \
+-       -I${PKGDIR}/include -L${PKGDIR}/lib, -Wl,--rpath=${PKGDIR}/lib
++       -I${PKGDIR}/include -L${PKGDIR}/lib -Wl,--rpath=${PKGDIR}/lib
+ 
+ # Mail program: This must support "CMD -s SUBJECT ADDRESS" to send out a mail with a subject
+ # Typically, this will be "mail" or "mailx"
