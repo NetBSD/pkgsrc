@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2008/09/05 15:46:51 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/15 11:24:20 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/BeautifulSoup.py
 ${PYSITELIB}/BeautifulSoup.pyc
 ${PYSITELIB}/BeautifulSoup.pyo
