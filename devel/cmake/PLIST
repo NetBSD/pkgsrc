@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/07/31 22:04:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/10/15 07:24:30 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -13,8 +13,12 @@ man/man1/cmakeprops.1
 man/man1/cmakevars.1
 man/man1/cpack.1
 man/man1/ctest.1
+share/aclocal/cmake.m4
 share/cmake-${CMAKE_API}/Modules/.NoDartCoverage
 share/cmake-${CMAKE_API}/Modules/AddFileDependencies.cmake
+share/cmake-${CMAKE_API}/Modules/AutomocInfo.cmake.in
+share/cmake-${CMAKE_API}/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+share/cmake-${CMAKE_API}/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
 share/cmake-${CMAKE_API}/Modules/BundleUtilities.cmake
 share/cmake-${CMAKE_API}/Modules/CMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASM-ATTInformation.cmake
@@ -53,11 +57,13 @@ share/cmake-${CMAKE_API}/Modules/CMakeDetermineRCCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineSystem.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineVSServicePack.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeExportBuildSettings.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeFindBinUtils.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeFindCodeBlocks.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeFindEclipseCDT4.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeFindFrameworks.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeFindKDevelop3.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeFindPackageMode.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeFindWMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeFindXCode.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeForceCompiler.cmake
@@ -77,6 +83,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeParseArguments.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeParseImplicitLinkInfo.cmake
 share/cmake-${CMAKE_API}/Modules/CMakePlatformId.h.in
 share/cmake-${CMAKE_API}/Modules/CMakePrintSystemInformation.cmake
+share/cmake-${CMAKE_API}/Modules/CMakePushCheckState.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeRCCompiler.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeRCInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeSystem.cmake.in
@@ -94,8 +101,10 @@ share/cmake-${CMAKE_API}/Modules/CMakeTestGNU.c
 share/cmake-${CMAKE_API}/Modules/CMakeTestJavaCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestNMakeCLVersion.c
 share/cmake-${CMAKE_API}/Modules/CMakeTestRCCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeTestWatcomVersion.c
 share/cmake-${CMAKE_API}/Modules/CMakeUnixFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS10FindMake.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeVS11FindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS6BackwardCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS6FindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeVS71FindMake.cmake
@@ -132,6 +141,7 @@ share/cmake-${CMAKE_API}/Modules/CheckCSourceRuns.cmake
 share/cmake-${CMAKE_API}/Modules/CheckCXXCompilerFlag.cmake
 share/cmake-${CMAKE_API}/Modules/CheckCXXSourceCompiles.cmake
 share/cmake-${CMAKE_API}/Modules/CheckCXXSourceRuns.cmake
+share/cmake-${CMAKE_API}/Modules/CheckCXXSymbolExists.cmake
 share/cmake-${CMAKE_API}/Modules/CheckForPthreads.c
 share/cmake-${CMAKE_API}/Modules/CheckFortranFunctionExists.cmake
 share/cmake-${CMAKE_API}/Modules/CheckFunctionExists.c
@@ -363,9 +373,13 @@ share/cmake-${CMAKE_API}/Modules/FortranCInterface/mymodule_.c
 share/cmake-${CMAKE_API}/Modules/FortranCInterface/mysub.f
 share/cmake-${CMAKE_API}/Modules/FortranCInterface/symbol.c.in
 share/cmake-${CMAKE_API}/Modules/GNUInstallDirs.cmake
+share/cmake-${CMAKE_API}/Modules/GenerateExportHeader.cmake
 share/cmake-${CMAKE_API}/Modules/GetPrerequisites.cmake
 share/cmake-${CMAKE_API}/Modules/ITKCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/InstallRequiredSystemLibraries.cmake
+share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/CMakeLists.txt
+share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/detect.cmake
+share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/hello.f
 share/cmake-${CMAKE_API}/Modules/KDE3Macros.cmake
 share/cmake-${CMAKE_API}/Modules/MacOSXBundleInfo.plist.in
 share/cmake-${CMAKE_API}/Modules/MacOSXFrameworkInfo.plist.in
@@ -378,6 +392,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/AIX-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-GNU.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-VisualAge-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/AIX-VisualAge-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/AIX-XL-CXX.cmake
@@ -541,6 +556,9 @@ share/cmake-${CMAKE_API}/Modules/TestForSSTREAM.cxx
 share/cmake-${CMAKE_API}/Modules/TestForSTDNamespace.cmake
 share/cmake-${CMAKE_API}/Modules/TestForSTDNamespace.cxx
 share/cmake-${CMAKE_API}/Modules/UseEcos.cmake
+share/cmake-${CMAKE_API}/Modules/UseJava.cmake
+share/cmake-${CMAKE_API}/Modules/UseJavaClassFilelist.cmake
+share/cmake-${CMAKE_API}/Modules/UseJavaSymlinks.cmake
 share/cmake-${CMAKE_API}/Modules/UsePkgConfig.cmake
 share/cmake-${CMAKE_API}/Modules/UseQt4.cmake
 share/cmake-${CMAKE_API}/Modules/UseSWIG.cmake
@@ -550,7 +568,9 @@ share/cmake-${CMAKE_API}/Modules/UseVTKConfig40.cmake
 share/cmake-${CMAKE_API}/Modules/Use_wxWindows.cmake
 share/cmake-${CMAKE_API}/Modules/UsewxWidgets.cmake
 share/cmake-${CMAKE_API}/Modules/VTKCompatibility.cmake
+share/cmake-${CMAKE_API}/Modules/WriteBasicConfigVersionFile.cmake
 share/cmake-${CMAKE_API}/Modules/ecos_clean.cmake
+share/cmake-${CMAKE_API}/Modules/exportheader.cmake.in
 share/cmake-${CMAKE_API}/Modules/kde3init_dummy.cpp.in
 share/cmake-${CMAKE_API}/Modules/kde3uic.cmake
 share/cmake-${CMAKE_API}/Modules/readme.txt
