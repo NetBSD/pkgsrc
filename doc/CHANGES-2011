@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2519 2011/10/15 11:46:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2520 2011/10/15 11:59:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4010,3 +4010,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/py-beautifulsoup to 3.1.0.1nb1 [obache 2011-10-15]
 	Updated devel/py-ctypes to 1.0.2nb2 [obache 2011-10-15]
 	Updated devel/py-generate to 2.6nb2 [obache 2011-10-15]
+	Updated devel/py-checker to 0.8.14nb2 [obache 2011-10-15]
