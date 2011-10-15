@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.7 2007/11/22 09:54:41 rillig Exp $
+# $NetBSD: reduce-depends.awk,v 1.1 2011/10/15 00:23:09 reed Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.

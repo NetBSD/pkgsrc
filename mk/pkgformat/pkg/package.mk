@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.22 2011/09/08 20:17:16 abs Exp $
+# $NetBSD: package.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"

@@ -1,25 +1,25 @@
-# $NetBSD: install.mk,v 1.15 2011/09/08 20:17:16 abs Exp $
+# $NetBSD: install.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
 #
-# _flavor-check-conflicts:
+# _pkgformat-check-conflicts:
 #	Checks for conflicts between the package and installed packages.
 #
 #	XXX: Needs WRKDIR.
 #
-# _flavor-check-installed:
+# _pkgformat-check-installed:
 #	Checks if the package (or an older version of it) is already
 #	installed on the system.
 #
 #	XXX: Needs WRKDIR.
 #
-# _flavor-register:
+# _pkgformat-register:
 #	Populates the package database with the appropriate entries to
 #	register the package as being installed on the system.
 #
-# _flavor-install-clean:
+# _pkgformat-install-clean:
 #	Removes the state files from the run of an ``install'' target.
 #
 
-_flavor-check-conflicts: .PHONY error-check
+_pkgformat-check-conflicts: .PHONY error-check
 	${RUN}${RM} -f ${WRKDIR}/.CONFLICTS
 .for _conflict_ in ${CONFLICTS}
 	${RUN}								\
@@ -38,7 +38,7 @@ _flavor-check-conflicts: .PHONY error-check
 	${ECHO} "Please remove conflicts first with pkg_delete(1).";	\
 	${RM} -f ${WRKDIR}/.CONFLICTS
 
-_flavor-check-installed: .PHONY error-check
+_pkgformat-check-installed: .PHONY error-check
 	${RUN}								\
 	found="`${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} || ${TRUE}`";	\
 	${TEST} -n "$$found" || exit 0;					\
@@ -53,11 +53,11 @@ _flavor-check-installed: .PHONY error-check
 	${ECHO} "      re-linking dependencies, risking various problems."
 
 _REGISTER_DEPENDENCIES=							\
-	${PKGSRC_SETENV} PKG_DBDIR=${_PKG_DBDIR:Q}				\
+	${PKGSRC_SETENV} PKG_DBDIR=${_PKG_DBDIR:Q}			\
 		AWK=${TOOLS_AWK:Q}					\
-	${SH} ${PKGSRCDIR}/mk/flavor/pkg/register-dependencies
+	${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/register-dependencies
 
-_flavor-register: .PHONY _flavor-generate-metadata ${_RDEPENDS_FILE}
+_pkgformat-register: .PHONY _pkgformat-generate-metadata ${_RDEPENDS_FILE}
 	@${STEP_MSG} "Registering installation for ${PKGNAME}"
 	${RUN}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
 	${RUN}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}
@@ -72,4 +72,4 @@ _flavor-register: .PHONY _flavor-generate-metadata ${_RDEPENDS_FILE}
 	${RUN}${GREP} '^@pkgdir ' < ${_PKG_DBDIR}/${PKGNAME}/+CONTENTS | \
 	    while read tag dir; do ${MKDIR} ${PREFIX}/$$dir; done
 
-_flavor-install-clean: .PHONY _flavor-clean-metadata
+_pkgformat-install-clean: .PHONY _pkgformat-clean-metadata

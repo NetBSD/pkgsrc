@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.22 2010/02/24 22:53:34 joerg Exp $
+# $NetBSD: package.mk,v 1.23 2011/10/15 00:23:09 reed Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -102,7 +102,7 @@ su-package-all: ${_PACKAGE_ALL_TARGETS}
 ### package-check-installed (PRIVATE, override)
 ######################################################################
 ### package-check-installed verifies that the package is installed on
-### the system.  This should be overridden per package system flavor.
+### the system.  This should be overridden per package system format.
 ###
 .if !target(package-check-installed)
 .PHONY: package-check-installed
@@ -114,7 +114,7 @@ package-check-installed:
 ### package-create (PRIVATE, override)
 ######################################################################
 ### package-create creates the binary package.  This should be overridden
-### per package system flavor.
+### per package system format.
 ###
 .if !target(package-create)
 .PHONY: package-create

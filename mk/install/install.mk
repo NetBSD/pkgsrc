@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.62 2011/09/08 20:17:16 abs Exp $
+# $NetBSD: install.mk,v 1.63 2011/10/15 00:23:09 reed Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -171,8 +171,8 @@ release-install-localbase-lock: release-localbase-lock
 _INSTALL_ALL_TARGETS+=		acquire-install-localbase-lock
 .endif
 .if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		_flavor-check-conflicts
-_INSTALL_ALL_TARGETS+=		_flavor-check-installed
+_INSTALL_ALL_TARGETS+=		_pkgformat-check-conflicts
+_INSTALL_ALL_TARGETS+=		_pkgformat-check-installed
 .endif
 _INSTALL_ALL_TARGETS+=		install-check-umask
 .if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
@@ -204,9 +204,9 @@ _INSTALL_ALL_TARGETS+=		check-files-post
 _INSTALL_ALL_TARGETS+=		post-install-script
 .endif
 .if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		_flavor-register
+_INSTALL_ALL_TARGETS+=		_pkgformat-register
 .else
-_INSTALL_ALL_TARGETS+=		_flavor-generate-metadata
+_INSTALL_ALL_TARGETS+=		_pkgformat-generate-metadata
 .endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
 .if ${_USE_DESTDIR} != "user-destdir"
@@ -393,5 +393,5 @@ privileged-install-hook: .PHONY
 ### install-clean removes the state files for the "install" and
 ### later phases so that the "install" target may be re-invoked.
 ###
-install-clean: .PHONY package-eat-cookie check-clean _flavor-install-clean
+install-clean: .PHONY package-eat-cookie check-clean _pkgformat-install-clean
 	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install} ${_DEPENDS_PLIST}

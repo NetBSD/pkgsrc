@@ -1,15 +1,15 @@
-# $NetBSD: check.mk,v 1.13 2009/04/04 19:07:58 joerg Exp $
+# $NetBSD: check.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
 #
 
-# _flavor-check-vulnerable:
+# _pkgformat-check-vulnerable:
 #	Checks for known vulnerabilities in the package if a vulnerability
 #	file exists.
 #
 .if defined(NO_PKGTOOLS_REQD_CHECK)
-_flavor-check-vulnerable: .PHONY
+_pkgformat-check-vulnerable: .PHONY
 	${RUN}${DO_NADA}
 .else
-_flavor-check-vulnerable: .PHONY
+_pkgformat-check-vulnerable: .PHONY
 	${RUN}\
 	_PKGVULNDIR=`${_EXTRACT_PKGVULNDIR}`; \
 	vulnfile=$$_PKGVULNDIR/pkg-vulnerabilities;		\

@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.15 2008/04/03 14:07:51 joerg Exp $
+# $NetBSD: depends.mk,v 1.16 2011/10/15 00:23:08 reed Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -41,8 +41,8 @@ _REAL_DEPENDS_TARGETS+=	${_PKG_INSTALL_DEPENDS:Dpkg_install-depends}
 _REAL_DEPENDS_TARGETS+=	bootstrap-depends
 _REAL_DEPENDS_TARGETS+=	depends-message
 _REAL_DEPENDS_TARGETS+=	pre-depends-hook
-_REAL_DEPENDS_TARGETS+=	_flavor-install-dependencies
-_REAL_DEPENDS_TARGETS+=	_flavor-post-install-dependencies
+_REAL_DEPENDS_TARGETS+=	_pkgformat-install-dependencies
+_REAL_DEPENDS_TARGETS+=	_pkgformat-post-install-dependencies
 _REAL_DEPENDS_TARGETS+=	depends-cookie
 _REAL_DEPENDS_TARGETS+=	error-check
 
@@ -57,7 +57,7 @@ depends-message:
 ### pre-depends-hook (PRIVATE, override, hook)
 ######################################################################
 ### pre-depends-hook is a generic hook target that is run just before
-### dependencies are installed for _flavor-install-dependencies.
+### dependencies are installed for _pkgformat-install-dependencies.
 ###
 .PHONY: pre-depends-hook
 pre-depends-hook:

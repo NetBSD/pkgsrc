@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.46 2011/09/08 20:17:16 abs Exp $
+# $NetBSD: depends.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -27,12 +27,12 @@ _RDEPENDS_FILE=	${WRKDIR}/.rdepends
 _FULL_DEPENDS_CMD=	\
 	${AWK} '$$1 == "full" { print $$3; }' < ${_RDEPENDS_FILE}
 
-_REDUCE_DEPENDS_CMD=	${PKGSRC_SETENV} CAT=${CAT:Q}			\
+_REDUCE_DEPENDS_CMD=	${PKGSRC_SETENV} CAT=${CAT:Q}				\
 				PKG_ADMIN=${PKG_ADMIN_CMD:Q}		\
 				PWD_CMD=${PWD_CMD:Q} TEST=${TEST:Q}	\
-			${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk
+			${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-depends.awk
 
-_flavor-show-depends: .PHONY
+_pkgformat-show-depends: .PHONY
 	@case ${VARNAME:Q}"" in						\
 	BUILD_DEPENDS)	${_REDUCE_DEPENDS_CMD} ${BUILD_DEPENDS:Q} ;;	\
 	DEPENDS|*)	${_REDUCE_DEPENDS_CMD} ${DEPENDS:Q} ;;		\
@@ -41,7 +41,7 @@ _flavor-show-depends: .PHONY
 _LIST_DEPENDS_CMD=	\
 	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
-		${SH} ${PKGSRCDIR}/mk/flavor/pkg/list-dependencies \
+		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
@@ -49,13 +49,13 @@ _LIST_DEPENDS_CMD=	\
 _LIST_DEPENDS_CMD.bootstrap=	\
 	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
-		${SH} ${PKGSRCDIR}/mk/flavor/pkg/list-dependencies \
+		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} " " " "
 
 _RESOLVE_DEPENDS_CMD=	\
 	${PKGSRC_SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_INFO=${PKG_INFO:Q} \
 		_DEPENDS_FILE=${_DEPENDS_FILE:Q} \
-		${SH} ${PKGSRCDIR}/mk/flavor/pkg/resolve-dependencies \
+		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/resolve-dependencies \
 			" "${BOOTSTRAP_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
@@ -114,10 +114,10 @@ ${_DEPENDS_FILE}:
 ${_RDEPENDS_FILE}: ${_DEPENDS_FILE}
 	${RUN} ${_RESOLVE_DEPENDS_CMD} > ${.TARGET}
 
-# _flavor-install-dependencies:
+# _pkgformat-install-dependencies:
 #	Installs any missing dependencies.
 #
-_flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
+_pkgformat-install-dependencies: .PHONY ${_DEPENDS_FILE}
 	${RUN}								\
 	exec 3<&0;							\
 	${CAT} ${_DEPENDS_FILE} | 					\
@@ -126,10 +126,10 @@ _flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
 		${_DEPENDS_INSTALL_CMD} 0<&3;				\
 	done
 
-# _flavor-post-install-dependencies:
+# _pkgformat-post-install-dependencies:
 #	Targets after installing all dependencies.
 #
-_flavor-post-install-dependencies: .PHONY ${_RDEPENDS_FILE}
+_pkgformat-post-install-dependencies: .PHONY ${_RDEPENDS_FILE}
 
 ######################################################################
 ### pkg_install-depends (PUBLIC, pkgsrc/mk/depends/depends.mk)
@@ -158,21 +158,21 @@ pkg_install-depends:
 ###
 .PHONY: bootstrap-depends
 _BOOTSTRAP_DEPENDS_TARGETS+=	acquire-bootstrap-depends-lock
-_BOOTSTRAP_DEPENDS_TARGETS+=	_flavor-bootstrap-depends
+_BOOTSTRAP_DEPENDS_TARGETS+=	_pkgformat-bootstrap-depends
 _BOOTSTRAP_DEPENDS_TARGETS+=	release-bootstrap-depends-lock
 
 bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
 
-.PHONY: _flavor-bootstrap-depends
+.PHONY: _pkgformat-bootstrap-depends
 .if empty(PKG_FAIL_REASON)
-_flavor-bootstrap-depends:
+_pkgformat-bootstrap-depends:
 	${RUN}${_LIST_DEPENDS_CMD.bootstrap} | 				\
 	while read type pattern dir; do					\
 		${TEST} "$$type" = "bootstrap" || continue;		\
 		${_DEPENDS_INSTALL_CMD};				\
 	done
 .else
-_flavor-bootstrap-depends:
+_pkgformat-bootstrap-depends:
 	${RUN}${DO_NADA}
 .endif
 

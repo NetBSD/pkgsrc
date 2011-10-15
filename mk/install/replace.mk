@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.13 2011/08/01 11:00:13 apb Exp $
+# $NetBSD: replace.mk,v 1.14 2011/10/15 00:23:09 reed Exp $
 #
 # Public targets:
 #
@@ -11,19 +11,19 @@
 #	It will acquire elevated privileges just-in-time.
 #
 #
-# Private targets that must be defined by the package system flavor:
+# Private targets that must be defined by the package system format:
 #
-# _flavor-replace:
+# _pkgformat-replace:
 #	Updates a package in-place on the system (USE_DESTDIR=no).
 #
-# _flavor-destdir-replace:
+# _pkgformat-destdir-replace:
 #	Updates a package in-place on the system (USE_DESTDIR=yes).
 #
-# _flavor-undo-replace:
-#	Undoes a previous "make _flavor-replace".
+# _pkgformat-undo-replace:
+#	Undoes a previous "make _pkgformat-replace".
 
-# _flavor-destdir-undo-replace:
-#	Undoes a previous "make _flavor-destdir-replace".
+# _pkgformat-destdir-undo-replace:
+#	Undoes a previous "make _pkgformat-destdir-replace".
 
 .if ${_USE_DESTDIR} == "no"
 _REPLACE_TARGETS+=	${_PKGSRC_BUILD_TARGETS}
@@ -49,9 +49,9 @@ replace-message: .PHONY
 	@${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
 .if ${_USE_DESTDIR} == "no"
-su-replace: .PHONY _flavor-replace
+su-replace: .PHONY _pkgformat-replace
 .else
-su-replace: .PHONY _flavor-destdir-replace
+su-replace: .PHONY _pkgformat-destdir-replace
 .endif
 MAKEFLAGS.su-replace=	_UPDATE_RUNNING=yes
 MAKEFLAGS.su-replace+=	PKGNAME_REQD=${PKGNAME_REQD:Q}
@@ -67,8 +67,8 @@ undo-replace-message: .PHONY
 	@${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
 .if ${_USE_DESTDIR} == "no"
-su-undo-replace: .PHONY _flavor-undo-replace
+su-undo-replace: .PHONY _pkgformat-undo-replace
 .else
-su-undo-replace: .PHONY _flavor-destdir-undo-replace
+su-undo-replace: .PHONY _pkgformat-destdir-undo-replace
 .endif
 MAKEFLAGS.su-undo-replace=	_UPDATE_RUNNING=yes

@@ -1,4 +1,4 @@
-# $NetBSD: utility.mk,v 1.11 2008/11/29 13:54:45 rillig Exp $
+# $NetBSD: utility.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
 
 # The 'info' target can be used to display information about a package.
 .PHONY: info
