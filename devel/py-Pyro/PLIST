@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/10/15 12:08:38 obache Exp $
 bin/es${PYVERSSUFFIX}
 bin/genguid${PYVERSSUFFIX}
 bin/ns${PYVERSSUFFIX}
@@ -9,6 +9,7 @@ bin/xnsc${PYVERSSUFFIX}
 bin/wxnsc${PYVERSSUFFIX}
 bin/esd${PYVERSSUFFIX}
 bin/nsd${PYVERSSUFFIX}
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/Pyro/EventService/Clients.py
 ${PYSITELIB}/Pyro/EventService/Clients.pyc
 ${PYSITELIB}/Pyro/EventService/Clients.pyo
