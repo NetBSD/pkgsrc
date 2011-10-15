@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2011/04/22 14:52:18 spz Exp $
+$NetBSD: MESSAGE,v 1.3 2011/10/15 23:07:24 spz Exp $
 
 Please note that the
 ${SECCGIDIR}
-directory has been created with all permissions removed for security
+directory and its contents had most of their permissions removed for security
 reasons. Check what the scripts do and enable those that are useful to you
 and of acceptable security impact.
 
