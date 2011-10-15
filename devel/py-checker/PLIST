@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/15 11:59:13 obache Exp $
 bin/pychecker${PYVERSSUFFIX}
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pychecker/CodeChecks.py
 ${PYSITELIB}/pychecker/CodeChecks.pyc
 ${PYSITELIB}/pychecker/CodeChecks.pyo
