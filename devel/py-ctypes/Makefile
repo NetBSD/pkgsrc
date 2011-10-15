@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2008/09/17 16:20:21 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/15 11:40:00 obache Exp $
 
 DISTNAME=	ctypes-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctypes/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://starship.python.net/crew/theller/ctypes/
 COMMENT=	Foreign Function Interface package for Python
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYDISTUTILSPKG=	yes
 
 do-test:
 	${PYTHONBIN} ${WRKSRC}/ctypes/test/runtests.py
 
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
