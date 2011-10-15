@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2516 2011/10/15 11:11:10 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2517 2011/10/15 11:24:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/py-simpletal to 4.1nb1 [obache 2011-10-15]
 	Updated www/py-rss2gen to 1.0.0nb1 [obache 2011-10-15]
 	Updated www/py-jonpy to 0.06nb1 [obache 2011-10-15]
+	Updated www/py-beautifulsoup to 3.1.0.1nb1 [obache 2011-10-15]
