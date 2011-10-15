@@ -1,0 +1,16 @@
+$NetBSD: patch-bindings_Perl_typemap,v 1.1.2.2 2011/10/15 09:57:30 tron Exp $
+
+--- bindings/Perl/typemap.orig	2000-10-28 00:23:48.000000000 +0000
++++ bindings/Perl/typemap
+@@ -50,9 +50,9 @@ T_CHAR4
+ 
+ T_RESULT
+ 	if ($var < 0) {
+-		sv_setsv($arg, &sv_no);
++		sv_setsv($arg, &PL_sv_no);
+ 		self->errnop = $var;
+ 	} else
+-		sv_setsv($arg, &sv_yes);
++		sv_setsv($arg, &PL_sv_yes);
+ T_PTROBJ
+ 	sv_setref_pv($arg, \"${ntype}\", (void*)$var);
