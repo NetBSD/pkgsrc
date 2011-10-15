@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/22 17:34:20 spz Exp $
+# $NetBSD: Makefile,v 1.10 2011/10/15 16:28:22 dholland Exp $
 #
 
 DISTNAME=		xymon-4.3.2
@@ -98,8 +98,8 @@ CONFIGURE_ARGS+=	"--server"
 
 CONFIGURE_ENV+=		USERFPING=${PREFIX.fping}/sbin/fping
 CONFIGURE_ENV+=		USEXYMONPING=n
-CONFIGURE_ENV+=		RRDINC=${BUILDLINK_PREFIX.rrdtool}/include
-CONFIGURE_ENV+=		RRDLIB=${BUILDLINK_PREFIX.rrdtool}/lib/librrd.a
+CONFIGURE_ENV+=		USERRRDINC=${BUILDLINK_PREFIX.rrdtool}/include
+CONFIGURE_ENV+=		USERRRDLIB=${BUILDLINK_PREFIX.rrdtool}/lib/librrd.a
 CONFIGURE_ENV+=		PNGLIB=${BUILDLINK_PREFIX.png}/lib/libpng.a
 CONFIGURE_ENV+=		ENABLESSL=y
 CONFIGURE_ENV+=		OSSLINC=${BUILDLINK_PREFIX.openssl}/include
