@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/01/16 09:18:30 obache Exp $
+$NetBSD: distinfo,v 1.7.22.1 2011/10/15 08:26:00 tron Exp $
 
-SHA1 (szip-2.1nb1/szip-2.1.tar.gz) = 6bb0e494adce0bc4a5f0360460ee29041dedd7b4
-RMD160 (szip-2.1nb1/szip-2.1.tar.gz) = dfb3e60871f171eafc84fe502a2b836de8be7ffe
-Size (szip-2.1nb1/szip-2.1.tar.gz) = 395864 bytes
+SHA1 (szip-2.1nb2/szip-2.1.tar.gz) = fe133444a7e3ab41a48fb61f90ac7d9a473443d1
+RMD160 (szip-2.1nb2/szip-2.1.tar.gz) = 8b36e034e7b48d436973ade7043a42ea899697b6
+Size (szip-2.1nb2/szip-2.1.tar.gz) = 383219 bytes
 SHA1 (patch-aa) = 5ce7e2507ca8731fe06145c1334f031ee24277dc
