@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2521 2011/10/15 12:03:36 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2522 2011/10/15 12:09:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4012,3 +4012,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-generate to 2.6nb2 [obache 2011-10-15]
 	Updated devel/py-checker to 0.8.14nb2 [obache 2011-10-15]
 	Updated devel/py-InlineEgg to 1.08nb2 [obache 2011-10-15]
+	Updated devel/py-Pyro to 3.4nb3 [obache 2011-10-15]
