@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/21 17:51:37 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/15 11:01:59 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/PyRSS2Gen.py
 ${PYSITELIB}/PyRSS2Gen.pyc
 ${PYSITELIB}/PyRSS2Gen.pyo
