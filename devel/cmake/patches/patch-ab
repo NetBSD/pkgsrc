@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.10 2011/02/22 15:05:33 adam Exp $
+$NetBSD: patch-ab,v 1.11 2011/10/15 07:24:31 adam Exp $
 
---- Modules/FindPythonInterp.cmake.orig	2011-02-15 17:47:27.000000000 +0000
+--- Modules/FindPythonInterp.cmake.orig	2011-10-04 16:09:24.000000000 +0000
 +++ Modules/FindPythonInterp.cmake
-@@ -20,11 +20,18 @@
- # (To distribute this file outside of CMake, substitute the full
- #  License text for the above reference.)
+@@ -29,11 +29,18 @@
+ # Search for the current active python version first
+ find_program(PYTHON_EXECUTABLE NAMES python)
  
 +# for pkgsrc: force Python version (set in pyversion.mk)
 +IF(DEFINED PYVERSSUFFIX)
@@ -20,5 +20,5 @@ $NetBSD: patch-ab,v 1.10 2011/02/22 15:05:33 adam Exp $
 -  2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0 1.6 1.5)
 +  ${_VERSIONS})
  
- # Run first with the Python version in the executable
- foreach(_CURRENT_VERSION ${_Python_VERSIONS})
+ # Search for newest python version if python executable isn't found
+ if(NOT PYTHON_EXECUTABLE)
