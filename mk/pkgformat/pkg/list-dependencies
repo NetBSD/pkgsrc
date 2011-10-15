@@ -43,7 +43,7 @@ set -e
 trap "exit 1" USR1
 
 reduce_depends() {
-	${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk "$1" \
+	${AWK} -f ${PKGSRCDIR}/mk/pkgformat/pkg/reduce-depends.awk "$1" \
 	|| kill -USR1 $$
 }
 

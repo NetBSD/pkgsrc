@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.21 2011/09/08 20:17:16 abs Exp $
+# $NetBSD: bin-install.mk,v 1.22 2011/10/15 00:23:09 reed Exp $
 #
 
 # This file provides the following targets:
@@ -24,7 +24,7 @@
 #	any version of this package will do, but when installing
 #	dependencies, a special version may be needed.
 
-# XXX: This file contains implementation details from the "pkg" flavor,
+# XXX: This file contains implementation details from the "pkg" format,
 # for example the All/ directory and the @cwd.
 
 # List of sites carrying binary pkgs. Variables "rel" and "arch" are

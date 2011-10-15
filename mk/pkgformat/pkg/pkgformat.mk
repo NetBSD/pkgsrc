@@ -1,4 +1,4 @@
-# $NetBSD: flavor.mk,v 1.3 2007/10/31 12:07:13 rillig Exp $
+# $NetBSD: pkgformat.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
 #
 # This Makefile fragment provides variable and target overrides that are
 # specific to the pkgsrc native package format.
