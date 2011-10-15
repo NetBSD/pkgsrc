@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2010/06/19 13:29:23 wiz Exp $
+$NetBSD: distinfo,v 1.24.12.1 2011/10/15 09:57:30 tron Exp $
 
 SHA1 (pilot-link-0.12.5.tar.bz2) = b822466333ba58bbb32d7cfe5c547f4e7a78bdee
 RMD160 (pilot-link-0.12.5.tar.bz2) = 806c87b9849d37fc5f88b453fb0842504be71a76
@@ -9,3 +9,5 @@ SHA1 (patch-ad) = 7ba7abed09cfff3687184d380bdff0ffd07ebd6f
 SHA1 (patch-ae) = 6877da137820152b8e3dfa883a0d5ba85396dee4
 SHA1 (patch-ag) = e9f9b3fe47502f35c1087007455c98f0eb8fb843
 SHA1 (patch-ah) = 1badec208c42e1b1569ffc3c2fc4cba4270be67b
+SHA1 (patch-bindings_Perl_Pilot.xs) = c8ba3cd93e9c41500da2275d15f7abb93894eba6
+SHA1 (patch-bindings_Perl_typemap) = 5aa9290376cfe9f47fd5f8c0e5cc52d780d42704
