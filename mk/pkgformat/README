@@ -1,17 +1,23 @@
-$NetBSD: README,v 1.8 2011/06/01 07:44:40 dholland Exp $
+$NetBSD: README,v 1.1 2011/10/15 00:23:09 reed Exp $
 
 = Introduction =
 
-A package flavor is a packaging system that is supported by pkgsrc.
+A package format is a packaging system that is supported by pkgsrc.
 Currently, there is only one (the native pkgsrc tools), but maybe we can
 support RPM, dpkg or the Solaris native packages someday. It can also be
 used to test new variants of the packaging tools.
+
+NOTE: The Google Summer of Code 2011 project includes rpm and debian
+http://addpackageforma.sourceforge.net/
+
+The PKG_FORMAT variable is used to select the format. The default
+format is ``pkg''.
 
 = Interface =
 
 == Variables usable at load-time ==
 
-A package system flavor must define the following variables so that they
+A package system format must define the following variables so that they
 can be used when loading Makefiles. (That is, no references to undefined
 variables.)
 
@@ -47,23 +53,17 @@ XXX: Why isn't this variable in the previous list?
 
 The following make targets must be implemented:
 
-* _flavor-check-vulnerable
-* _flavor-deinstall
-* _flavor-show-depends
-* _flavor-install-dependencies
+* _pkgformat-check-vulnerable
+* _pkgformat-deinstall
+* _pkgformat-show-depends
+* _pkgformat-install-dependencies
 * bootstrap-depends
-* _flavor-register
+* _pkgformat-register
 * tarup (XXX: This doesn't sound like a target that should be defined
   here.)
 * tarup-pkg
 * package-install
-* _flavor-replace
-* _flavor-destdir-replace
-* _flavor-undo-replace
+* _pkgformat-replace
+* _pkgformat-destdir-replace
+* _pkgformat-undo-replace
 
-= Bugs =
-
-The name "flavor" is badly chosen, especially since flavor is such a
-broad term that OpenBSD ports collection has implemented something
-entirely different using the same name. (This happened before pkgsrc
-chose to use this word, though, so no blame attaches to them.)
