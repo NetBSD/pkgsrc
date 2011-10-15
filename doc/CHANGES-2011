@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2513 2011/10/15 10:54:39 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2514 2011/10/15 11:02:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4005,3 +4005,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/py-libmtag to 0.3.0nb1 [obache 2011-10-15]
 	Updated audio/py-cddb to 1.4nb2 [obache 2011-10-15]
 	Updated www/py-simpletal to 4.1nb1 [obache 2011-10-15]
+	Updated www/py-rss2gen to 1.0.0 [obache 2011-10-15]
