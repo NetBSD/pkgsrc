@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1978 2011/09/08 20:17:15 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1979 2011/10/15 00:23:07 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -61,7 +61,7 @@ PKG_FAIL_REASON+=	"Circular dependency detected"
 
 .include "features/features.mk"
 
-.include "flavor/bsd.flavor-vars.mk"
+.include "pkgformat/bsd.pkgformat-vars.mk"
 .include "check/bsd.check-vars.mk"
 .include "depends/bsd.depends-vars.mk"
 .include "fetch/bsd.fetch-vars.mk"
@@ -576,7 +576,7 @@ ${.CURDIR}/${WRKDIR_BASENAME}:
 	fi
 .endif
 
-.include "flavor/bsd.flavor.mk"
+.include "pkgformat/bsd.pkgformat.mk"
 
 .include "depends/bsd.depends.mk"
 .include "check/bsd.check.mk"

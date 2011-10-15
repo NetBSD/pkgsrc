@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.36 2010/12/02 11:15:10 reed Exp $
+# $NetBSD: metadata.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -236,7 +236,7 @@ ${_MESSAGE_FILE}: ${MESSAGE_SRC}
 # PKGSRC_MESSAGE_RECIPIENTS.
 #
 .PHONY: install-display-message
-_flavor-register: install-display-message
+_pkgformat-register: install-display-message
 install-display-message: ${_MESSAGE_FILE}
 	@${STEP_MSG} "Please note the following:"
 	@${ECHO_MSG} ""
@@ -382,9 +382,9 @@ ${_CONTENTS_FILE}: ${_CONTENTS_TARGETS}
 	${RUN}${PKG_CREATE} ${_PKG_ARGS_INSTALL} -O ${PKGFILE:T} > ${.TARGET}
 
 ######################################################################
-### _flavor-generate-metadata (PRIVATE)
+### _pkgformat-generate-metadata (PRIVATE)
 ######################################################################
-### _flavor-generate-metadata is a convenience target for generating
+### _pkgformat-generate-metadata is a convenience target for generating
 ### all of the pkgsrc binary package meta-data files.  It populates
 ### ${PKG_DB_TMPDIR} with the following files:
 ###
@@ -400,16 +400,16 @@ ${_CONTENTS_FILE}: ${_CONTENTS_TARGETS}
 ###
 ### See the targets above for descriptions of each of those files.
 ###
-.PHONY: _flavor-generate-metadata
-_flavor-generate-metadata: ${_METADATA_TARGETS}
+.PHONY: _pkgformat-generate-metadata
+_pkgformat-generate-metadata: ${_METADATA_TARGETS}
 
 ######################################################################
-### _flavor-clean-metadata (PRIVATE)
+### _pkgformat-clean-metadata (PRIVATE)
 ######################################################################
-### _flavor-clean-metadata is a convenience target for removing the
+### _pkgformat-clean-metadata is a convenience target for removing the
 ### package meta-data files.  This is essentially the reverse action
-### of _flavor-generate-metadata.
+### of _pkgformat-generate-metadata.
 ###
-.PHONY: _flavor-clean-metadata
-_flavor-clean-metadata:
+.PHONY: _pkgformat-clean-metadata
+_pkgformat-clean-metadata:
 	${RUN}${RM} -f ${_METADATA_TARGETS}
