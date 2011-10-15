@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/06/03 13:39:44 fhajny Exp $
+# $NetBSD: options.mk,v 1.4.4.1 2011/10/15 09:27:23 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
 PKG_SUPPORTED_OPTIONS=	csharp java erlang python perl php ruby
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--without-erlang
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+=	--with-py
+CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ARGS+=	--enable-gen-py
 PLIST.python=		yes
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
@@ -53,7 +53,7 @@ PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 .include "../../lang/python/extension.mk"
 CONFIGURE_ENV+=		PY_PREFIX=${BUILDLINK_PREFIX.${PYPACKAGE}}
 .else
-CONFIGURE_ARGS+=	--without-py
+CONFIGURE_ARGS+=	--without-python
 .endif
 
 .if !empty(PKG_OPTIONS:Mperl)
