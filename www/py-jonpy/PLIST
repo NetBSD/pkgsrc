@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/10/15 11:10:57 obache Exp $
 ${PYSITELIB}/jon/__init__.py
 ${PYSITELIB}/jon/__init__.pyc
 ${PYSITELIB}/jon/__init__.pyo
@@ -35,3 +35,4 @@ ${PYSITELIB}/jon/wt/rowaccess.pyo
 ${PYSITELIB}/jon/wt/textblock.py
 ${PYSITELIB}/jon/wt/textblock.pyc
 ${PYSITELIB}/jon/wt/textblock.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
