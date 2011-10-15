@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.17 2011/10/15 08:29:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.18 2011/10/15 10:06:50 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -65,3 +65,13 @@ Pullup ticket #3555 - requested by dholland
 archivers/szip: build fix
 Pullup ticket #3556 - requested by dholland
 devel/cxref: build fix
+Pullup ticket #3557 - requested by dholland
+devel/libthrift: build fix
+Pullup ticket #3558 - requested by dholland
+databases/py-mssql: build fix
+Pullup ticket #3559 - requested by dholland
+mail/perdition-gdbm: build fix
+Pullup ticket #3560 - requested by dholland
+comms/p5-pilot-link: build fix
+Pullup ticket #3561 - requested by obache
+mail/cyrus-imapd: build fix
