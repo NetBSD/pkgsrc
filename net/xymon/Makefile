@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/10/15 16:28:22 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2011/10/15 16:37:47 spz Exp $
 #
 
 DISTNAME=		xymon-4.3.2
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
-MAINTAINER=		spz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/xymon/
 COMMENT=		Network services monitor a la Big Brother
 LICENSE=		gnu-gpl-v2
