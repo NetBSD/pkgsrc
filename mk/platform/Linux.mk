@@ -1,9 +1,9 @@
-# $NetBSD: Linux.mk,v 1.43 2011/08/22 15:17:53 cheusov Exp $
+# $NetBSD: Linux.mk,v 1.44 2011/10/15 03:15:37 sbd Exp $
 #
 # Variable definitions for the Linux operating system.
 
 ECHO_N?=	${ECHO} -n
-.if !defined(X11_TYPE) || ${X11_TYPE} == "native"
+.if defined(X11_TYPE) && ${X11_TYPE} == "native"
 IMAKE_MAKE?=	${GMAKE}	# program which gets invoked by imake
 IMAKE_TOOLS=		gmake	# extra tools required when we use imake
 .endif
