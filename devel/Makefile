@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1499 2011/10/13 18:44:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.1500 2011/10/15 17:40:34 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -900,6 +900,7 @@ SUBDIR+=	p5-OOTools
 SUBDIR+=	p5-Object-Declare
 SUBDIR+=	p5-Object-Event
 SUBDIR+=	p5-Object-InsideOut
+SUBDIR+=	p5-Object-Pluggable
 SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-Object-Signature
 SUBDIR+=	p5-PAR
@@ -909,6 +910,7 @@ SUBDIR+=	p5-POE
 SUBDIR+=	p5-POE-Component-Cron
 SUBDIR+=	p5-POE-Component-Pluggable
 SUBDIR+=	p5-POE-Component-Schedule
+SUBDIR+=	p5-POE-Component-Syndicator
 SUBDIR+=	p5-POE-Test-Loops
 SUBDIR+=	p5-PPI
 SUBDIR+=	p5-PPI-PowerToys
