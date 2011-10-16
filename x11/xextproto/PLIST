@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/09/10 19:25:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/10/16 17:05:38 cheusov Exp $
 include/X11/extensions/EVI.h
 include/X11/extensions/EVIproto.h
 include/X11/extensions/ag.h
@@ -33,11 +33,13 @@ include/X11/extensions/xtestext1const.h
 include/X11/extensions/xtestext1proto.h
 include/X11/extensions/xtestproto.h
 lib/pkgconfig/xextproto.pc
-share/doc/xextproto/appgroup.xml
+share/doc/xextproto/appendix.xml
+share/doc/xextproto/appgrp.xml
 share/doc/xextproto/dbe.xml
 share/doc/xextproto/dpms.xml
 share/doc/xextproto/evi.xml
 share/doc/xextproto/geproto.xml
+share/doc/xextproto/lbx.xml
 share/doc/xextproto/multibuf.xml
 share/doc/xextproto/security.xml
 share/doc/xextproto/shape.xml
