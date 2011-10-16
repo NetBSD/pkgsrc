@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2534 2011/10/16 07:28:03 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2535 2011/10/16 07:39:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4029,3 +4029,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-usb to 0.4.2nb1 [obache 2011-10-16]
 	Updated devel/py-kjbuckets to 2.2nb2 [obache 2011-10-16]
 	Updated textproc/py-yaml to 3.08nb1 [obache 2011-10-16]
+	Added net/libquvi-scripts version 0.4.0 [ryoon 2011-10-16]
+	Added net/libquvi version 0.4.0 [ryoon 2011-10-16]
+	Updated net/quvi to 0.4.0 [ryoon 2011-10-16]
