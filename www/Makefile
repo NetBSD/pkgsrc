@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.823 2011/10/16 05:39:32 manu Exp $
+# $NetBSD: Makefile,v 1.824 2011/10/16 09:22:23 hiramatsu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -316,6 +316,7 @@ SUBDIR+=	p5-Catalyst-Plugin-Session-Store-FastMmap
 SUBDIR+=	p5-Catalyst-Plugin-Session-Store-File
 SUBDIR+=	p5-Catalyst-Plugin-StackTrace
 SUBDIR+=	p5-Catalyst-Plugin-Static-Simple
+SUBDIR+=	p5-Catalyst-Plugin-StatusMessage
 SUBDIR+=	p5-Catalyst-Runtime
 SUBDIR+=	p5-Catalyst-View-Excel-Template-Plus
 SUBDIR+=	p5-Catalyst-View-JSON
