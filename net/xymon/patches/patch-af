@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.2 2011/04/22 14:52:18 spz Exp $
+$NetBSD: patch-af,v 1.3 2011/10/16 15:19:09 spz Exp $
+
+xymonclient starts from rc.d, don't start it via xymon also
 
 --- xymond/etcfiles/tasks.cfg.DIST.orig	2011-03-08 17:20:28.000000000 +0000
 +++ xymond/etcfiles/tasks.cfg.DIST

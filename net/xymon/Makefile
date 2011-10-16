@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2011/10/15 23:07:24 spz Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/16 15:19:08 spz Exp $
 #
 
 DISTNAME=		xymon-4.3.5
-PKGNAME=		xymon-4.3.5
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
@@ -94,21 +94,14 @@ MESSAGE_SUBST+=		SECCGIDIR=${SECCGIDIR}
 EVAL_PREFIX+=		PREFIX.fping=fping
 
 CONFIGURE_ARGS+=	"--server"
-CONFIGURE_ARGS+=	"--rrdinclude ${BUILDLINK_PREFIX.rrdtool}/include"
-CONFIGURE_ARGS+=	"--rrdlib ${BUILDLINK_PREFIX.rrdtool}/lib/librrd.a"
-CONFIGURE_ARGS+=	"--pnglib ${BUILDLINK_PREFIX.png}/lib/libpng.a"
-CONFIGURE_ARGS+=	"--pcreinclude ${BUILDLINK_PREFIX.pcre}/include"
-CONFIGURE_ARGS+=	"--pcrelib ${BUILDLINK_PREFIX.pcre}/lib"
-CONFIGURE_ARGS+=	"--sslinclude ${BUILDLINK_PREFIX.openssl}/include"
-CONFIGURE_ARGS+=	"--ssllib ${BUILDLINK_PREFIX.openssl}/lib"
-CONFIGURE_ARGS+=	"--ldapinclude ${BUILDLINK_PREFIX.openldap-client}/include"
-CONFIGURE_ARGS+=	"--ldaplib ${BUILDLINK_PREFIX.openldap-client}/lib"
-CONFIGURE_ARGS+=	"--fping ${PREFIX.fping}/sbin/fping"
+CONFIGURE_ARGS+=	"--rrdinclude" "${BUILDLINK_PREFIX.rrdtool}/include"
+CONFIGURE_ARGS+=	"--rrdlib" "${BUILDLINK_PREFIX.rrdtool}/lib"
+CONFIGURE_ARGS+=	"--pngconfig" "${BUILDLINK_PREFIX.png}/bin/libpng-config"
+CONFIGURE_ARGS+=	"--pcreinclude" "${BUILDLINK_PREFIX.pcre}/include"
+CONFIGURE_ARGS+=	"--pcrelib" "${BUILDLINK_PREFIX.pcre}/lib"
+CONFIGURE_ARGS+=	"--fping" "${PREFIX.fping}/sbin/fping"
 
 CONFIGURE_ENV+=		USEXYMONPING=n
-CONFIGURE_ENV+=		ENABLESSL=y
-CONFIGURE_ENV+=		ENABLELDAP=y
-CONFIGURE_ENV+=		ENABLELDAPSSL=y
 CONFIGURE_ENV+=		XYMONHOSTNAME=${XYMONSERVERNAME:Q}
 CONFIGURE_ENV+=		XYMONHOSTIP=${XYMONSERVERIP:Q}
 CONFIGURE_ENV+=		XYMONUSER=${XYMONUSER:Q}
@@ -205,9 +198,8 @@ post-install:
 	chmod 0644 ${DESTDIR}${EXAMPLEDIR}/www/menu/${file}
 .endfor
 
+.include "options.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
-.include "../../databases/openldap-client/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/apache.mk"
