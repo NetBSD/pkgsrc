@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10607 2011/10/16 13:44:47 wiz Exp $
+$NetBSD: TODO,v 1.10608 2011/10/16 17:06:00 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -1403,7 +1403,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xev-1.1.0
-	o xextproto-7.2.0 [pkg/45464]
 	o xeyes-1.1.1
 	o xf86-input-keyboard-1.6.0
 	o xf86-input-mouse-1.7.1
