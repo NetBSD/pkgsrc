@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2526 2011/10/15 17:42:25 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2527 2011/10/16 03:47:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4019,3 +4019,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Starman to 0.2014 [hiramatsu 2011-10-15]
 	Added devel/p5-Object-Pluggable version 1.29 [hiramatsu 2011-10-15]
 	Added devel/p5-POE-Component-Syndicator version 0.06 [hiramatsu 2011-10-15]
+	Updated net/py-libdnet to 1.12nb1 [obache 2011-10-16]
