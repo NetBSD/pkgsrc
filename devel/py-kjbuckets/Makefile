@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2009/03/05 18:51:29 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2011/10/16 07:08:44 obache Exp $
 #
 
 DISTNAME=	gadfly-1.0.0
 PKGNAME=	${PYPKGPREFIX}-kjbuckets-2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gadfly/}
 
@@ -17,15 +17,16 @@ EXTRACT_ELEMENTS=	${DISTNAME}/kjbuckets
 EXTRACT_ELEMENTS+=	${DISTNAME}/doc/kjbuckets.txt
 WRKSRC=			${WRKDIR}/${DISTNAME}/kjbuckets
 
-PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 
 KJBDOCDIR=	${PREFIX}/share/doc/${PYPKGPREFIX}-kjbuckets
+
+EGG_NAME=	kjbuckets-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS=	${KJBDOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/kjbuckets.txt ${DESTDIR}${KJBDOCDIR}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
