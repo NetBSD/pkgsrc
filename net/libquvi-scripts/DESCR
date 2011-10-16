@@ -1,0 +1,7 @@
+The quvi is a command line tool for parsing video download links. It
+supports Youtube and other similar video websites.  libquvi is a
+library for parsing video download links with C API. It is written in
+C and intended to be a cross-platform library.
+You can see the list of supported sites from 'quvi --support'.
+
+This package contains lua scripts for libquvi.
