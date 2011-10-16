@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/10/16 05:36:35 manu Exp $
+
+GNU cp(1) has a -d flag to copy symlinks instead of their targets. This
+flag does not exists with NetBSD cp(1) but it is the default behavior
+if -R is used, both with GNU cp(1) and NetBSD cp(1)
+
+--- SOPE/NGCards/GNUmakefile.postamble.orig	2011-10-15 09:13:26.000000000 +0200
++++ SOPE/NGCards/GNUmakefile.postamble	2011-10-15 09:13:36.000000000 +0200
+@@ -7,5 +7,5 @@
+ 
+ after-install :: mappings-dir
+ 	cp NGCards.xmap $(MAPDIR)
+ 	-mkdir -p $(GNUSTEP_LIBRARY)/Libraries/Resources/NGCards
+-	cp -dpR TimeZones $(GNUSTEP_LIBRARY)/Libraries/Resources/NGCards
++	cp -pR TimeZones $(GNUSTEP_LIBRARY)/Libraries/Resources/NGCards
