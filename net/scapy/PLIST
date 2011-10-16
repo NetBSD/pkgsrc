@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2011/02/25 15:43:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/10/16 04:16:49 obache Exp $
 bin/UTscapy
 bin/scapy
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/scapy/__init__.py
 ${PYSITELIB}/scapy/__init__.pyc
 ${PYSITELIB}/scapy/__init__.pyo
