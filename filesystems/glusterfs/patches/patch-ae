@@ -1,14 +1,18 @@
-$NetBSD: patch-ae,v 1.7 2011/09/18 01:36:06 manu Exp $
+$NetBSD: patch-ae,v 1.8 2011/10/16 05:45:19 manu Exp $
 
 On NetBSD use libperfuse(3), rename umount2(2) as unmount(2), and skip
 inexistant /etc/mtab management.
+
+Include <signal.h> for sigprocmask(2)
+
 --- contrib/fuse-lib/mount.c.orig	2011-08-23 14:31:36.000000000 +0200
-+++ contrib/fuse-lib/mount.c	2011-09-17 15:45:29.000000000 +0200
-@@ -19,16 +19,23 @@
++++ contrib/fuse-lib/mount.c	2011-10-14 15:15:40.000000000 +0200
+@@ -19,16 +19,24 @@
  #include <limits.h>
  #include <fcntl.h>
  #include <errno.h>
  #include <dirent.h>
++#include <signal.h>
 +#ifndef __NetBSD__
  #include <mntent.h>
 +#endif /* __NetBSD__ */
@@ -28,7 +32,7 @@ inexistant /etc/mtab management.
  #define MALLOC(size) malloc (size)
  #define FREE(ptr) free (ptr)
  #define GFFUSE_LOGERR(...) fprintf (stderr, ## __VA_ARGS__)
-@@ -57,8 +64,9 @@
+@@ -57,8 +65,9 @@
   * - s/free/FREE/, s/malloc/MALLOC/
   * - there are some other minor things
   */
@@ -38,7 +42,7 @@ inexistant /etc/mtab management.
  mtab_needs_update (const char *mnt)
  {
          int res;
-@@ -90,8 +98,11 @@
+@@ -90,8 +99,11 @@
          }
  
          return 1;
