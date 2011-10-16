@@ -1,0 +1,23 @@
+$NetBSD: patch-bw,v 1.1 2011/10/16 05:45:19 manu Exp $
+
+usleep(3) shall not be called with argument higher than 1s
+
+--- libglusterfs/src/timer.c.orig	2011-10-14 15:06:12.000000000 +0200
++++ libglusterfs/src/timer.c	2011-10-14 15:18:16.000000000 +0200
+@@ -136,6 +136,7 @@
+ gf_timer_proc (void *ctx)
+ {
+         gf_timer_registry_t *reg = NULL;
++	const struct timespec sleepts = {.tv_sec = 1, .tv_nsec = 0, };
+ 
+         if (ctx == NULL)
+         {
+@@ -178,7 +179,7 @@
+                         else
+                                 break;
+                 }
+-                usleep (1000000);
++                nanosleep (&sleepts, NULL);
+         }
+ 
+         pthread_mutex_lock (&reg->lock);
