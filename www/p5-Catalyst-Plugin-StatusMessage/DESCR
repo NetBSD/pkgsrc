@@ -1,0 +1,16 @@
+The purpose of this plugin is to pass "status message" between screens
+through the following mechanisms:
+
+- Stores messages in the "$c->session" so that the application is
+  free to redirect to the appropriate URL after an action is taken.
+
+- Associates a random 8-digit "token" with each messages, so it's
+  completely unambiguous what message should be shown in each
+  window/tab.
+
+- Only requires that the token (not the full message) be included in
+  the redirect URL.
+
+- Automatically removes the message after the first time it is
+  displayed.  That way, if users hit refresh in their browsers they
+  only see the messages the first time.
