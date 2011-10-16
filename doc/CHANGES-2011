@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2529 2011/10/16 04:17:04 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2530 2011/10/16 05:39:32 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4022,3 +4022,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-libdnet to 1.12nb1 [obache 2011-10-16]
 	Updated net/py-libpcap to 0.6.2nb1 [obache 2011-10-16]
 	Updated net/scapy to 2.1.1nb1 [obache 2011-10-16]
+	Added devel/libmemcached version 0.53 [manu 2011-10-16]
+	Added devel/SOPE version 2.0.0b1 [manu 2011-10-16]
+	Added www/SOGo version 2.0.0b1 [manu 2011-10-16]
