@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2542 2011/10/16 17:06:00 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2543 2011/10/16 17:57:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -3772,7 +3772,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/py-ckanclient version 0.9 [wiz 2011-10-03]
 	Added databases/datapkg version 0.8 [wiz 2011-10-03]
 	Updated graphics/libpano13 to 2.9.18 [adam 2011-10-03]
-	Updated graphics/vigra to 1.8.0 [adam 2011-10-03]
 	Updated www/py-cherrypy to 3.2.1 [adam 2011-10-03]
 	Updated databases/sqlite3 to 3.7.8 [adam 2011-10-03]
 	Updated databases/sqlite3-docs to 3.7.8 [adam 2011-10-03]
@@ -4045,3 +4044,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/p5-MIME-Charset to 1.009.1 [hiramatsu 2011-10-16]
 	Updated www/p5-URI-Fetch to 0.09 [hiramatsu 2011-10-16]
 	Updated x11/xextproto to 7.2.0 [cheusov 2011-10-16]
+	Updated graphics/vigra to 1.8.0 [adam 2011-10-16]
