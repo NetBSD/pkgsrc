@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/10/16 05:36:35 manu Exp $
+
+You will need to make SOGo accessible through your HTTP server.
+If you are running Apache then you may add the following lines to httpd.conf:
+
+        Include ${PKG_SYSCONFDIR}/SOGo.conf
+
+===========================================================================
