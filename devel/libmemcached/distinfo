@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/16 05:33:56 manu Exp $
+
+SHA1 (libmemcached-0.53.tar.gz) = 52e0422a8916814b7c416d1671018e9aab50e9cc
+RMD160 (libmemcached-0.53.tar.gz) = 82b5ee6b72ebb5127c4c9c32484ac0ab0c6e8310
+Size (libmemcached-0.53.tar.gz) = 940481 bytes
