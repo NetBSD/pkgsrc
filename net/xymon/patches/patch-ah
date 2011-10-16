@@ -1,6 +1,11 @@
-$NetBSD: patch-ah,v 1.1 2011/04/22 14:52:18 spz Exp $
+$NetBSD: patch-ah,v 1.2 2011/10/16 15:19:09 spz Exp $
 
---- xymonnet/Makefile.orig	2011-03-08 17:20:28.000000000 +0000
+the c-ares dependencies are being difficult, manipulate it into working
+
+use a variable for the path to net-snmp-config, for cases with nonstandard
+locations
+
+--- xymonnet/Makefile.orig	2011-08-19 11:26:58.000000000 +0000
 +++ xymonnet/Makefile
 @@ -59,6 +59,8 @@ c-ares/configure: c-ares-$(ARESVER).tar.
  	mv c-ares-$(ARESVER) c-ares
@@ -11,3 +16,16 @@ $NetBSD: patch-ah,v 1.1 2011/04/22 14:52:18 spz Exp $
  
  beastat: $(BEASTATOBJS) ../lib/libxymon.a
  	$(CC) $(CFLAGS) -o $@ $(RPATHOPT) $(BEASTATOBJS) ../lib/libxymon.a $(PCRELIBS) $(NETLIBS) $(LIBRTDEF)
+@@ -72,10 +74,10 @@ contest: contest.c httptest.o dns.o dns2
+ 
+ 
+ xymon-snmpcollect: xymon-snmpcollect.o $(LIBOBJS)
+-	$(CC) $(LDFLAGS) -o $@ xymon-snmpcollect.o `net-snmp-config --libs` ../lib/libxymon.a $(SSLLIBS) $(NETLIBS) $(LIBRTDEF)
++	$(CC) $(LDFLAGS) -o $@ xymon-snmpcollect.o `${SNMPCONFIG} --libs` ../lib/libxymon.a $(SSLLIBS) $(NETLIBS) $(LIBRTDEF)
+ 
+ xymon-snmpcollect.o: xymon-snmpcollect.c
+-	$(CC) $(CFLAGS) -I. `net-snmp-config --cflags` -c -o $@ xymon-snmpcollect.c
++	$(CC) $(CFLAGS) -I. `${SNMPCONFIG} --cflags` -c -o $@ xymon-snmpcollect.c
+ 
+ ################################################
+ # Default compilation rules
