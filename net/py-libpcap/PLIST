@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/10 13:51:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/16 04:06:52 obache Exp $
 ${PYSITELIB}/_pcapmodule.so
 ${PYSITELIB}/pcap.py
 ${PYSITELIB}/pcap.pyc
 ${PYSITELIB}/pcap.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
