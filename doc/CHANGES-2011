@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2536 2011/10/16 07:56:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2537 2011/10/16 09:24:44 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4033,3 +4033,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/libquvi version 0.4.0 [ryoon 2011-10-16]
 	Updated net/quvi to 0.4.0 [ryoon 2011-10-16]
 	Updated textproc/py-HappyDoc to 2.1nb2 [obache 2011-10-16]
+	Updated databases/p5-CatalystX-CRUD to 0.52 [hiramatsu 2011-10-16]
+	Updated textproc/p5-Text-FindIndent to 0.10 [hiramatsu 2011-10-16]
+	Added www/p5-Catalyst-Plugin-StatusMessage version 0.003000 [hiramatsu 2011-10-16]
