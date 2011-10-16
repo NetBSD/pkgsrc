@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/08/13 11:23:36 imil Exp $
+# $NetBSD: Makefile,v 1.17 2011/10/16 09:26:36 imil Exp $
 #
 
-DISTNAME=		pkgin-0.4.3
+DISTNAME=		pkgin-0.5.1
 CATEGORIES=		pkgtools
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -32,6 +32,8 @@ SUBST_SED.path+=	-e "s|/usr/pkg|${PREFIX}|g"
 
 GNU_CONFIGURE=		yes
 USE_FEATURES=		nbcompat
+
+DEPENDS+=		pkg_install>=20110215:../../pkgtools/pkg_install
 
 .include "../../mk/bsd.prefs.mk"
 
