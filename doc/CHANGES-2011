@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2530 2011/10/16 05:39:32 manu Exp $
+$NetBSD: CHANGES-2011,v 1.2531 2011/10/16 06:31:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4025,3 +4025,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/libmemcached version 0.53 [manu 2011-10-16]
 	Added devel/SOPE version 2.0.0b1 [manu 2011-10-16]
 	Added www/SOGo version 2.0.0b1 [manu 2011-10-16]
+	Updated devel/py-quixote to 2.6nb1 [obache 2011-10-16]
