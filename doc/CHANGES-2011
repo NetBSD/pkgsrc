@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2540 2011/10/16 13:57:01 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2541 2011/10/16 16:24:12 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4041,3 +4041,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-IPC-Cmd to 0.72 [hiramatsu 2011-10-16]
 	Updated www/p5-Test-WWW-Mechanize to 1.34 [hiramatsu 2011-10-16]
 	Updated textproc/p5-String-RewritePrefix to 0.006 [hiramatsu 2011-10-16]
+	Updated databases/p5-DBD-Mock to 1.43 [hiramatsu 2011-10-16]
+	Updated mail/p5-MIME-Charset to 1.009.1 [hiramatsu 2011-10-16]
+	Updated www/p5-URI-Fetch to 0.09 [hiramatsu 2011-10-16]
