@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.884 2011/10/02 14:11:52 wiz Exp $
+# $NetBSD: Makefile,v 1.885 2011/10/16 07:33:24 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -226,7 +226,8 @@ SUBDIR+=	libmms
 SUBDIR+=	libnice
 SUBDIR+=	libnids
 SUBDIR+=	libnipper
-SUBDIR+=	libpcap
+SUBDIR+=	libquvi
+SUBDIR+=	libquvi-scripts
 SUBDIR+=	libradius
 SUBDIR+=	libsoup24
 SUBDIR+=	libsscript
