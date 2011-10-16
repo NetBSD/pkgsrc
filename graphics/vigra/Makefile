@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2011/05/02 12:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/16 17:47:49 adam Exp $
 
-DISTNAME=	vigra-1.7.1-src
+DISTNAME=	vigra-1.8.0-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
 
@@ -29,6 +28,7 @@ SUBST_FILES.python+=	config/vigra-config.in
 # Update when PYTHON_VERSION_DEFAULT changes!
 SUBST_SED.python+=	-e 's,/usr/bin/env.*python,${PREFIX}/bin/python2.6,'
 SUBST_MESSAGE.python=	Fixing path to python.
+
 # Package doesn't need dependency, only packages using the script,
 # usually during configure, so don't depend on python.
 CHECK_INTERPRETER_SKIP=	bin/vigra-config
@@ -36,6 +36,7 @@ CHECK_INTERPRETER_SKIP=	bin/vigra-config
 .include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
