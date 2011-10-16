@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/10/16 07:19:33 obache Exp $
+# $NetBSD: Makefile,v 1.30 2011/10/16 07:23:48 obache Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -13,7 +13,6 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
@@ -39,7 +38,6 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Tools/scripts/idle \
 		${DESTDIR}${PREFIX}/bin/idle${PYVERSSUFFIX}
-	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 
 .include "../../lang/python/srcdist.mk"
 .include "../../lang/python/application.mk"
