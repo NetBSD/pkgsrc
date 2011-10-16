@@ -1,0 +1,12 @@
+SOGo is fully supported and trusted groupware server with a focus
+on scalability and open standards. SOGo is released under the GNU
+GPL/LGPL v2 and above.
+
+SOGo provides a rich AJAX-based Web interface and supports multiple
+native clients through the use of standard protocols such as CalDAV,
+CardDAV and GroupDAV.
+
+SOGo is the missing component of your infrastructure; it sits in
+the middle of your servers to offer your users an uniform and
+complete interface to access their information. It has been deployed
+in production environments where thousands of users are involved.
