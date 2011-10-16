@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/01 21:42:57 sno Exp $
+$NetBSD: distinfo,v 1.4 2011/10/16 09:18:28 hiramatsu Exp $
 
-SHA1 (Text-FindIndent-0.09.tar.gz) = 58e913b71993f53f5d47a69d91dc91dd62a8021c
-RMD160 (Text-FindIndent-0.09.tar.gz) = bdec3beb14aee8320f5d650d542d37b61a03092c
-Size (Text-FindIndent-0.09.tar.gz) = 34511 bytes
+SHA1 (Text-FindIndent-0.10.tar.gz) = 0fe646d5786fa38253589f292bd0e5e58649b798
+RMD160 (Text-FindIndent-0.10.tar.gz) = 66267e9761bf7f7d3481894ed09a6260be5445f2
+Size (Text-FindIndent-0.10.tar.gz) = 34541 bytes
