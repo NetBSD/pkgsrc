@@ -1,22 +1,33 @@
-$NetBSD: patch-aa,v 1.3 2011/10/15 23:07:24 spz Exp $
+$NetBSD: patch-aa,v 1.4 2011/10/16 15:19:08 spz Exp $
+
+add extra options for cases where PREFIX is not in a standard location
+
+add INSTALLEXADIR for some pkgsrc magic
 
 --- configure.server.orig	2011-03-08 17:20:28.000000000 +0000
 +++ configure.server
-@@ -17,6 +17,8 @@ do
+@@ -17,12 +17,15 @@ do
    To configure Xymon, the following options are available:
       --rrdinclude DIRECTORY   : Specify location of RRDtool include files
       --rrdlib DIRECTORY       : Specify location of RRDtool libraries
-+     --pnglib DIRECTORY       : Specify location of PNG library
++     --pngconfig PROGRAM      : Specify location of libpng-config program
 +     --zlib DIRECTORY         : Specify location of Z library
       --pcreinclude DIRECTORY  : Specify location of PCRE include files
       --pcrelib DIRECTORY      : Specify location of PCRE libraries
       --sslinclude DIRECTORY   : Specify location of OpenSSL include files
-@@ -36,6 +38,12 @@ EOF
+      --ssllib DIRECTORY       : Specify location of OpenSSL libraries
+      --ldapinclude DIRECTORY  : Specify location of OpenLDAP include files
+      --ldaplib DIRECTORY      : Specify location of OpenLDAP libraries
++     --snmpconfig PROGRAM     : Specify location of net-snmp-config program
+      --fping FILENAME         : Specify location of the Fping program
+ 
+   The script will search a number of standard directories for
+@@ -36,6 +39,12 @@ EOF
  	  "--rrdlib")
  	  	USERRRDLIB="$1"; shift
  		;;
-+	  "--pnglib")
-+	  	USERPNGLIB="$1"; shift
++	  "--pngconfig")
++	  	USERPNGCONFIG="$1"; shift
 +		;;
 +	  "--zlib")
 +	  	USERZLIB="$1"; shift
@@ -24,7 +35,39 @@ $NetBSD: patch-aa,v 1.3 2011/10/15 23:07:24 spz Exp $
  	  "--pcreinclude")
  	  	USERPCREINC="$1"; shift
  		;;
-@@ -507,6 +515,9 @@ fi
+@@ -54,6 +63,9 @@ EOF
+ 	  "--ldaplib")
+ 	  	USERLDAPLIB="$1"; shift
+ 		;;
++	  "--snmpconfig")
++	  	USERSNMPCONFIG="$1"; shift
++		;;
+ 	  "--fping")
+ 	  	USERFPING="$1"; shift
+ 		;;
+@@ -393,11 +405,11 @@ then
+ fi
+ echo ""; echo ""
+ 
+-echo "# Toplevel Makefile for Xymon"    > Makefile
++echo "# Toplevel Makefile for Xymon"     > Makefile
+ 
+ echo "BUILDTOPDIR=\`pwd\`"               >>Makefile
+ echo ""                                  >>Makefile
+-echo "# configure settings for Xymon"   >>Makefile
++echo "# configure settings for Xymon"    >>Makefile
+ echo "#"                                 >>Makefile
+ echo "# Toplevel dir"                    >>Makefile
+ echo "XYMONTOPDIR = $XYMONTOPDIR"        >>Makefile
+@@ -477,6 +489,7 @@ echo "LIBRTDEF = $LIBRTDEF"             
+ echo ""                                  >>Makefile
+ echo "# Net-SNMP settings"               >>Makefile
+ echo "DOSNMP = $DOSNMP"                  >>Makefile
++echo "SNMPCONFIG = $SNMPCONFIG"          >>Makefile
+ echo ""                                  >>Makefile
+ 
+ echo "# Large File Support settings"     >>Makefile
+@@ -507,6 +520,9 @@ fi
  if test "$INSTALLETCDIR" != ""; then
  	echo "INSTALLETCDIR = $INSTALLETCDIR"   >>Makefile
  fi
