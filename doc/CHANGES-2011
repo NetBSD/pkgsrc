@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2545 2011/10/17 02:10:31 schnoebe Exp $
+$NetBSD: CHANGES-2011,v 1.2546 2011/10/17 03:49:58 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4046,8 +4046,9 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/xextproto to 7.2.0 [cheusov 2011-10-16]
 	Updated graphics/vigra to 1.8.0 [adam 2011-10-16]
 	Updated www/ruby-httpclient to 2.2.2 [obache 2011-10-17]
-	Updated devel/poco to 1.4.2p1 [schnoebelen 2011-10-17]
-	Updated databases/poco-data to 1.4.2p1 [schnoebelen 2011-10-17]
-	Updated databases/poco-data-sqlite to 1.4.2p1 [schnoebelen 2011-10-17]
-	Updated databases/poco-data-mysql to 1.4.2p1 [schnoebelen 2011-10-17]
-	Updated databases/poco-data-odbc to 1.4.2p1 [schnoebelen 2011-10-17]
+	Updated devel/poco to 1.4.2p1 [schnoebe 2011-10-17]
+	Updated databases/poco-data to 1.4.2p1 [schnoebe 2011-10-17]
+	Updated databases/poco-data-sqlite to 1.4.2p1 [schnoebe 2011-10-17]
+	Updated databases/poco-data-mysql to 1.4.2p1 [schnoebe 2011-10-17]
+	Updated databases/poco-data-odbc to 1.4.2p1 [schnoebe 2011-10-17]
+	Updated net/py-twisted to 11.0.0 [schnoebe 2011-10-17]
