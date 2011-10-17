@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2543 2011/10/16 17:57:28 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2544 2011/10/17 01:44:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4045,3 +4045,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-URI-Fetch to 0.09 [hiramatsu 2011-10-16]
 	Updated x11/xextproto to 7.2.0 [cheusov 2011-10-16]
 	Updated graphics/vigra to 1.8.0 [adam 2011-10-16]
+	Updated www/ruby-httpclient to 2.2.2 [obache 2011-10-17]
