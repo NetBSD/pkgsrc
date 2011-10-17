@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2010/06/30 04:58:30 spz Exp $
+# $NetBSD: Makefile,v 1.44 2011/10/17 20:14:50 spz Exp $
 
 DISTNAME=		irrd2.3.9
 PKGNAME=		irrd-2.3.9
@@ -37,11 +37,8 @@ PKG_GECOS.${IRRD_USER}=	IRRd user
 RCD_SCRIPTS+=		irrd
 
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--enable-thread
-#PTHREAD_OPTS+=		require
 
-PTHREAD_AUTO_VARS=	yes
-.include "../../mk/pthread.buildlink3.mk"
+.include "options.mk"
 
 REPLACE_PERL+=		programs/irrdcacher/irrdcacher
 REPLACE_PERL+=		programs/irrdcacher/ripe2rpsl

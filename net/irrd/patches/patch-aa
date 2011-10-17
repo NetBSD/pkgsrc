@@ -1,38 +1,51 @@
-$NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
+$NetBSD: patch-aa,v 1.9 2011/10/17 20:14:50 spz Exp $
 
 --- configure.in.orig	2006-09-12 17:40:57.000000000 +0000
 +++ configure.in
-@@ -11,23 +11,23 @@ dnl initializing defaults
- dnl I've seen a report that pthread support is shaky in FreeBSD 2.x releases
- case "${host_os}" in
+@@ -13,7 +13,7 @@ case "${host_os}" in
      freebsd2* )
--	disable_thread=yes
-+	enable_thread=no
+ 	disable_thread=yes
      ;;
 -    solaris*|linux*|freebsd* )
--	disable_thread=no
 +    solaris*|linux*|freebsd*|dragonfly*|netbsd* )
-+	enable_thread=yes
+ 	disable_thread=no
      ;;
      * ) 
--	disable_thread=yes
-+	enable_thread=no
+@@ -21,17 +21,22 @@ case "${host_os}" in
      ;;
  esac
  
- AC_ARG_ENABLE(thread,
- [  --disable-thread        disable thread always],
+-AC_ARG_ENABLE(thread,
+-[  --disable-thread        disable thread always],
 -[disable_thread=yes],)
-+[enable_thread=no],)
- 
- AC_ARG_ENABLE(thread,
- [  --enable-thread         enable thread (on non-solaris platform)],
+-
+-AC_ARG_ENABLE(thread,
+-[  --enable-thread         enable thread (on non-solaris platform)],
 -[disable_thread=no],)
-+[enable_thread=yes],)
+-
+-AC_ARG_ENABLE(wall,
+-[  --disable-wall          disable -Wall option always],
+-[disable_wall=yes],)
++AC_ARG_ENABLE([thread],
++AS_HELP_STRING([--enable-thread],[enable thread (on non-solaris platform)]))
++
++AC_ARG_ENABLE([thread],
++AS_HELP_STRING([--disable-thread],[disable thread always]))
++
++AS_IF([test "x$enable_thread" = "xyes"], [
++    disable_thread=no
++])
++AS_IF([test "x$enable_thread" = "xno"], [
++    disable_thread=yes
++])
++
++
++AC_ARG_ENABLE([wall],
++AS_HELP_STRING([--disable-wall],[disable -Wall option always]))
  
- AC_ARG_ENABLE(wall,
- [  --disable-wall          disable -Wall option always],
-@@ -52,7 +52,7 @@ MODULES=""
+ pwd=`pwd`
+ pwd=`basename $pwd`
+@@ -52,7 +57,7 @@ MODULES=""
  
  EXTRA_INCLUDE_DIRS=""
  EXTRA_LIBS=""
@@ -41,7 +54,16 @@ $NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
  dnl defining FUNCPROTO ensures that struct library uses portotype
  dnl we don't expect non-ANSI (K&R) C compilers to be used
  dnl Some compiles may define __STDC__ by itself which makes it enable, 
-@@ -83,7 +83,7 @@ fi
+@@ -66,7 +71,7 @@ dnl    CFLAGS="-g -O"
+ dnl fi
+ 
+ AC_MSG_CHECKING(for -Wall option)
+-if test "$disable_wall" = yes; then
++if test "x$enable_wall" = "xno"; then
+    if test "$GCC" != "yes"; then
+ dnl shut up SUN WorkShop Compilers
+        CFLAGS="$CFLAGS -w"
+@@ -83,7 +88,7 @@ fi
  QUANTIFY="quantify"
  PURIFY="purify"
  
@@ -50,7 +72,7 @@ $NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
  if test -f "$1" >/dev/null 2>&1; then
    ifelse([$2], , :, [$2])
    ifelse([$3], , , [else $3])
-@@ -109,28 +109,34 @@ dnl	fi
+@@ -109,33 +114,17 @@ dnl	fi
  esac
  
  case "${host_os}" in
@@ -71,61 +93,95 @@ $NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
 -    linux* )
 +    solaris*|freebsd*|dragonfly*|netbsd*|openbsd*|linux* )
  	CRYPT_LIB="-lcrypt"
-+	case "${host_os}" in
-+	    freebsd*|dragonfly*|openbsd* )
-+		if test "$enable_thread" = yes; then
-+		    LDFLAGS="$LDFLAGS $(PTHREAD_LDFLAGS)"
-+		    THREAD_CFLAGS="$(PTHREAD_CFLAGS)"
-+		    LIBS="$LIBS $(PTHREAD_LIBS)"
-+		fi
-+		ac_pthrlib="c_r"
-+	    ;;
-+	    netbsd* )
-+		if test "$enable_thread" = yes; then
-+		    LDFLAGS="$LDFLAGS $(PTHREAD_LDFLAGS)"
-+		    THREAD_CFLAGS="$(PTHREAD_CFLAGS)"
-+		    LIBS="$LIBS $(PTHREAD_LIBS)"
-+		fi
-+	    ;;
-+	esac
      ;;
      osf* )
  	if test $CC = "cc" ; then
-            CPPFLAGS="$CPPFLAGS -taso -pthread"
+-           CPPFLAGS="$CPPFLAGS -taso -pthread"
++            CPPFLAGS="$CPPFLAGS -taso"
          fi
 -        if test "$disable_thread" != yes; then
-+        if test "$enable_thead" = yes; then
- 		LDFLAGS="$LDFLAGS -lc_r"
-                 THREAD_CFLAGS="-D_THREAD_SAFE"
- 	fi
-@@ -153,7 +159,7 @@ fi
+-		LDFLAGS="$LDFLAGS -lc_r"
+-                THREAD_CFLAGS="-D_THREAD_SAFE"
+-	fi
+         CPPFLAGS="$CPPFLAGS -L/usr/shlib"
+-        ac_pthrlib="pthreads"
+     ;;
+ 
+ esac
+@@ -153,34 +142,44 @@ fi
  AC_SUBST(MAKEDEPCLEAN)
  
  dnl Checks for pthread libraries. (linux has pthread.h only, so ...)
 -if test "$disable_thread" = yes; then
-+if test "$enable_thread" != yes; then
-   AC_MSG_CHECKING(for thread support)
-   AC_MSG_RESULT(disabled)
- else
-@@ -167,7 +173,7 @@ fi
- AC_MSG_CHECKING(for thread support)
- if test "$pthread" = yes; then
-   AC_MSG_RESULT(yes)
+-  AC_MSG_CHECKING(for thread support)
+-  AC_MSG_RESULT(disabled)
+-else
+-  if test ! -n "$ac_pthrlib"; then 
+-    ac_pthrlib="pthread"
+-  fi;
+-  AC_CHECK_LIB($ac_pthrlib, pthread_create, [
+-    AC_CHECK_HEADERS(pthread.h, [pthread="yes"])])
+-fi
+-
+-AC_MSG_CHECKING(for thread support)
+-if test "$pthread" = yes; then
+-  AC_MSG_RESULT(yes)
 -  AC_DEFINE(HAVE_LIBPTHREAD)
-+  AC_DEFINE([HAVE_LIBPTHREAD],[],[Define if you have pthread library (-lpthread)])
-   CFLAGS="$CFLAGS $THREAD_CFLAGS"
-   CPPFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS $CPPFLAGS"
-   QUANTIFY="$QUANTIFY -threads=yes -max-threads=80"
-@@ -176,7 +182,7 @@ if test "$pthread" = yes; then
-   LIBS="$LIBS $THREADLIBS"
- dnl at least FreeBSD 3.1 doesn't have this
-   AC_CHECK_LIB($ac_pthrlib, pthread_attr_setscope, 
+-  CFLAGS="$CFLAGS $THREAD_CFLAGS"
+-  CPPFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS $CPPFLAGS"
+-  QUANTIFY="$QUANTIFY -threads=yes -max-threads=80"
+-  PURIFY="$PURIFY -threads=yes -max-threads=80"
+-  THREADLIBS="-l$ac_pthrlib"
+-  LIBS="$LIBS $THREADLIBS"
+-dnl at least FreeBSD 3.1 doesn't have this
+-  AC_CHECK_LIB($ac_pthrlib, pthread_attr_setscope, 
 -	       AC_DEFINE(HAVE_PTHREAD_ATTR_SETSCOPE))
-+	       AC_DEFINE([HAVE_PTHREAD_ATTR_SETSCOPE],[],[Define if you have pthread_attr_setscope]))
-   AC_CHECK_FUNCS(thr_setconcurrency)
- else
-   AC_MSG_RESULT(no)
-@@ -231,13 +237,13 @@ AC_PATH_PROG(SENDMAIL_PATH,sendmail,no,$
+-  AC_CHECK_FUNCS(thr_setconcurrency)
+-else
+-  AC_MSG_RESULT(no)
+-fi
++AS_IF([test "x$disable_thread" = "xyes"],[
++    AC_MSG_CHECKING(for thread support)
++    AC_MSG_RESULT(disabled)
++],[
++    case "${host_os}" in
++        osf*)
++	    THREAD_CFLAGS="-D_THREAD_SAFE"
++	;;
++	*)
++	    THREAD_CFLAGS="$PTHREAD_CFLAGS"
++    esac
++
++    ac_pthrlib="$PTHREAD_LIBS"
++    if test ! -n "$ac_pthrlib"; then
++	ac_pthrlib="pthread"
++    fi
++
++    THREADLIBS="$PTHREAD_LIBS"
++    AC_CHECK_LIB($ac_pthrlib, pthread_create, [
++	AC_CHECK_HEADERS(pthread.h, [pthread="yes"])])
++
++    AC_MSG_CHECKING(for thread support)
++    if test "$pthread" = yes; then
++        AC_MSG_RESULT(yes)
++        AC_DEFINE([HAVE_LIBPTHREAD],[],[Define if you have pthread library (-lpthread)])
++        CFLAGS="$CFLAGS $THREAD_CFLAGS"
++        CPPFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS $CPPFLAGS"
++        QUANTIFY="$QUANTIFY -threads=yes -max-threads=80"
++        PURIFY="$PURIFY -threads=yes -max-threads=80"
++        LIBS="$LIBS $THREADLIBS"
++        dnl at least FreeBSD 3.1 doesn't have this
++        AC_CHECK_LIB($ac_pthrlib, pthread_attr_setscope, 
++	   AC_DEFINE([HAVE_PTHREAD_ATTR_SETSCOPE],[],[Define if you have pthread_attr_setscope]))
++        AC_CHECK_FUNCS(thr_setconcurrency)
++    else
++        AC_MSG_RESULT(no)
++    fi
++])
+ 
+ dnl Checks for various functions
+ 
+@@ -231,13 +230,13 @@ AC_PATH_PROG(SENDMAIL_PATH,sendmail,no,$
  if test $SENDMAIL_PATH = no; then
      SENDMAIL_PATH=""
  else
@@ -141,7 +197,7 @@ $NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
  fi
  
  dnl Prefer GPG, second choice PGP version 5
-@@ -287,7 +293,7 @@ else
+@@ -287,7 +286,7 @@ else
  	PGPS_PATH=""
  	PGPV_PATH=""
  	PGPDIR=gpg
@@ -150,7 +206,7 @@ $NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
  fi
  AC_SUBST(PGP)
  AC_SUBST(PGPDIR)
-@@ -300,19 +306,19 @@ AC_PATH_PROG(GZIP_PATH,gzip,no)
+@@ -300,19 +299,19 @@ AC_PATH_PROG(GZIP_PATH,gzip,no)
  if test $GZIP_PATH = no; then
      GZIP_PATH=""
  else
@@ -173,7 +229,7 @@ $NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
  fi
  AC_SUBST(SENDMAIL_PATH)
  AC_SUBST(MAIL_PATH)
-@@ -340,11 +346,11 @@ AC_STRUCT_TM
+@@ -340,11 +339,11 @@ AC_STRUCT_TM
  dnl u_char, u_int, u_short, and u_long
  AC_MSG_CHECKING([u_char, u_int, u_short, and u_long])
    AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <sys/types.h>]], [[
@@ -187,7 +243,7 @@ $NetBSD: patch-aa,v 1.8 2010/02/23 20:37:06 spz Exp $
  
  dnl Checks for library functions.
  AC_CHECK_FUNCS(localtime_r strtok_r gethostbyname_r gethostbyaddr_r)
-@@ -358,12 +364,12 @@ AC_CHECK_FUNCS(mkdtemp)
+@@ -358,12 +357,12 @@ AC_CHECK_FUNCS(mkdtemp)
  AC_CHECK_FUNCS(snprintf)
  AC_CHECK_FUNCS(dirname basename)
  
