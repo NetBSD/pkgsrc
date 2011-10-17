@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10608 2011/10/16 17:06:00 cheusov Exp $
+$NetBSD: TODO,v 1.10609 2011/10/17 02:50:07 mef Exp $
 
 Suggested new packages
 ======================
@@ -303,7 +303,7 @@ Suggested new packages
 	(but not quite working for) Potlatch2 of OpenStreetMap.
 
 	Missing xorg packages
-	font-bitstream-speedo, oclock, xstdcmap, constype, xedit, xfs,
+	font-bitstream-speedo, oclock, xstdcmap, constype, xedit
 	libWindowsWM, libXfontcache, util-macros, viewres, windowswmproto,
 	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
 	xf86-input-fpit, xf86-input-hyperpen, xf86-input-penmount,
@@ -429,7 +429,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bftpd-3.6
 	o biew-6.1.0
 	o bigreqsproto-1.1.1
-	o binutils-2.21.1 [pkgsrc-wip]
+	o binutils-2.21.1 [wip]
 	o bioperl-1.5.0
 	o bitmap-1.0.5
 	o blender-2.59
@@ -523,7 +523,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doclifter-2.7
 	o doxygen-1.7.5.1
 	o dpkg-1.16.0.3
-	o dri-7.8.2 [pkgsrc-wip]
+	o dri-7.8.2 [wip]
 	o dri2proto-2.6
 	o drivel-3.0.3
 	o drupal-7
@@ -980,7 +980,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mksh-40b
 	o mkvtoolnix-5.0.1
 	o moc-2.4.4
-	o modular-xorg-server-1.11.1 [pkgsrc-wip]
+	o modular-xorg-server-1.11.1 [wip]
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o moserial-2.30.0 [GNOME 2.30]
@@ -1223,7 +1223,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0.2
-	o showfont-1.0.3 [pkgsrc-wip]
+	o showfont-1.0.3 [wip]
 	o sign-1.0.7
 	o simage-1.7.0
 	o simulavr-0.1.2.2
@@ -1445,6 +1445,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xfe-1.32.4
 	o xfontsel-1.0.3
 	o xforms-1.0.93sp1
+	o xfs-1.1.1 [wip]
 	o xfstt-1.8
 	o xgamma-1.0.4
 	o xhippo-3.5
