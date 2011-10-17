@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2550 2011/10/17 10:35:01 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2551 2011/10/17 14:54:35 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4060,3 +4060,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-Text-Diff-HTML to 0.07 [hiramatsu 2011-10-17]
 	Updated www/p5-URI to 1.59 [hiramatsu 2011-10-17]
 	Updated net/p5-Net-Amazon-S3 to 0.54 [hiramatsu 2011-10-17]
+	Updated textproc/p5-Feed-Find to 0.07 [hiramatsu 2011-10-17]
+	Updated devel/p5-XSLoader to 0.15 [hiramatsu 2011-10-17]
+	Updated www/p5-Template-Toolkit-Simple to 0.13 [hiramatsu 2011-10-17]
