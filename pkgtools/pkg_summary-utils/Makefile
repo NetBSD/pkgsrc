@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/09 10:02:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2011/10/17 05:45:54 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-0.56.1
 CATEGORIES=	pkgtools
@@ -53,6 +53,7 @@ MAKE_ENV+=	DISTDIR=${DISTDIR}
 MAKE_ENV+=	PKGSRCDIR=${PKGSRCDIR}
 MAKE_ENV+=	PKG_SUFX=${PKG_SUFX}
 MAKE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 AUTO_MKDIRS=	yes
 
