@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.4 2011/10/17 21:43:27 shattered Exp $
+
+getaddrinfo(3) returns non-zero on error.
+
+--- src/resolver.c.orig	2010-10-04 06:23:26.000000000 +0000
++++ src/resolver.c
+@@ -283,7 +283,7 @@ int open_connection(mpg123_string *host,
+ #endif
+ 	addrcount = getaddrinfo(host->p, port->p, &hints, &addrlist);
+ 
+-	if(addrcount <0)
++	if(addrcount != 0)
+ 	{
+ 		error3("Resolving %s:%s: %s", host->p, port->p, gai_strerror(addrcount));
+ 		return -1;
