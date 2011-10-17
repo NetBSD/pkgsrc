@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/17 08:44:32 obache Exp $
+include/dbm.h
+include/ndbm.h
+lib/libgdbm_compat.la
