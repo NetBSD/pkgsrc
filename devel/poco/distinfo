@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/10/17 02:10:31 schnoebe Exp $
+$NetBSD: distinfo,v 1.5 2011/10/17 07:56:57 sbd Exp $
 
 SHA1 (poco-1.4.2p1-all.tar.gz) = ef1bc69812179b7856c88aa4b5c157747c0a0e48
 RMD160 (poco-1.4.2p1-all.tar.gz) = 8288c10e3e96de26f56296da0bbbebff58b8b424
@@ -13,3 +13,4 @@ SHA1 (patch-af) = 50a86be83634ede278f7a8463423e2f88a1741a7
 SHA1 (patch-ag) = 945a594376393462e1cc0f881532d2294adf5816
 SHA1 (patch-ah) = f8debbf7b416fc562f5af321be739e0d4481a130
 SHA1 (patch-ai) = 9feef00a05372578d957c68b53657e6468f65f6a
+SHA1 (patch-build_config_Linux) = ba79d12efeea09e0e24e0d95a457dcbce265cd75
