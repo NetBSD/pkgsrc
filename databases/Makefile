@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2011/10/04 12:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.382 2011/10/17 08:45:33 obache Exp $
 #
 
 COMMENT=	Databases
@@ -24,6 +24,7 @@ SUBDIR+=	dbh
 SUBDIR+=	edb
 SUBDIR+=	freetds
 SUBDIR+=	gdbm
+SUBDIR+=	gdbm_compat
 SUBDIR+=	gdbm_primitive
 SUBDIR+=	geneweb
 SUBDIR+=	gigabase
