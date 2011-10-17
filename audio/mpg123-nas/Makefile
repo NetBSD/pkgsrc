@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/03/14 14:47:36 martin Exp $
-
+# $NetBSD: Makefile,v 1.24 2011/10/17 19:45:56 shattered Exp $
 
 MPG123_MODULE=	nas
+
+PKGREVISION=	1
 
 NOT_FOR_COMPILER=	sunpro
 ONLY_FOR_PLATFORM=	DragonFly-*-* FreeBSD-*-* Linux-*-* NetBSD-*-* \
