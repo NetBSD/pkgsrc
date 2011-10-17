@@ -1,19 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2011/03/23 08:10:33 obache Exp $
+$NetBSD: patch-ad,v 1.3 2011/10/17 08:47:52 obache Exp $
 
-* Recent OpemPAM define `OPENPAM', not `_OPENPAM'.
 * Remove needless assignment, it break strict-aliasing
 
---- common/subr.c.orig	2006-11-07 00:22:37.000000000 +0000
+--- common/subr.c.orig	2011-08-24 07:53:32.000000000 +0000
 +++ common/subr.c
-@@ -66,7 +66,7 @@
- # define LOGERR(...) warnx(__VA_ARGS__)
- #else /* !PAM_AF_DEFS */
- # include <security/pam_appl.h>
--# ifdef _OPENPAM
-+# if defined(_OPENPAM) || defined(OPENPAM)
- #  include <security/pam_mod_misc.h>
- #  include <security/openpam.h>
- # endif
 @@ -181,7 +181,6 @@ my_getnameinfo(addr, addrlen, buf, bufle
  
  		sockaddr = (struct sockaddr *)&sa;

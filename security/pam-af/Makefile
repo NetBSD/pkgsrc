@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/08/23 13:06:53 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/17 08:47:51 obache Exp $
 
-DISTNAME=	pam_af-1.0.1
+DISTNAME=	pam_af-1.0.2
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://mbsd.msk.ru/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-.include "../../databases/gdbm/buildlink3.mk"
+.include "../../databases/gdbm_compat/buildlink3.mk"
 .endif
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

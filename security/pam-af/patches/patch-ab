@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2011/01/25 09:07:58 obache Exp $
+$NetBSD: patch-ab,v 1.3 2011/10/17 08:47:51 obache Exp $
 
 * LOG_AUTHPRIV is not in Solaris, use LOG_AUTH instead.
-* Recent OpemPAM define `OPENPAM', not `_OPENPAM'.
 
---- pam_af.c.orig	2006-11-07 00:05:53.000000000 +0000
+--- pam_af.c.orig	2011-08-24 07:53:32.000000000 +0000
 +++ pam_af.c
 @@ -41,6 +41,9 @@
  #include <fcntl.h>
@@ -15,12 +14,3 @@ $NetBSD: patch-ab,v 1.2 2011/01/25 09:07:58 obache Exp $
  #include <assert.h>
  #include <ndbm.h>
  
-@@ -53,7 +56,7 @@
- 
- #include <security/pam_appl.h>
- #include <security/pam_modules.h>
--#ifdef _OPENPAM
-+#if defined(_OPENPAM) || defined(OPENPAM)
- # include <security/openpam.h>
- # include <security/pam_mod_misc.h>
- #endif
