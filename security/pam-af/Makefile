@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/17 08:47:51 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/10/17 09:38:25 obache Exp $
 
 DISTNAME=	pam_af-1.0.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -12,6 +12,16 @@ COMMENT=	Anti-bruteforce PAM module
 LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+SUBST_CLASSES+=		pkgvar
+SUBST_STAGE.pkgvar=	post-configure
+SUBST_MESSAGE.pkgvar=	replace hard-coded paths
+SUBST_FILES.pkgvar=	common/pam_af.h
+SUBST_SED.pkgvar=	-e 's|/var/|${VARBASE}/|g'
+SUBST_SED.pkgvar+=	-e 's|/etc/|${PKG_SYSCONFDIR}/|g'
+
+BUILD_DEFS+=	VARBASE
+MAKE_DIRS+=	${VARBASE}/db
 
 .include "../../mk/bsd.prefs.mk"
 
