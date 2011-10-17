@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/16 12:17:44 taca Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/17 11:50:05 obache Exp $
 
 MODNAME=		perl
 PKGMODNAME=		perl
@@ -11,7 +11,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-perl=${PREFIX}
 
-PHP_VERSION_REQD=	52
+PHP_VERSIONS_ACCEPTED=	52
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/php/ext.mk"
