@@ -1,0 +1,4 @@
+GNU `dbm' is a library of functions implementing a hashed database
+on a disk file.  The software was written by Philip A. Nelson.
+
+This is the optional dbm and ndbm API compatibility library and headers.
