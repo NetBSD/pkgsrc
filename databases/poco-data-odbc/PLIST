@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/06 06:02:52 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/17 02:10:31 schnoebe Exp $
 include/Poco/Data/ODBC/Binder.h
 include/Poco/Data/ODBC/ConnectionHandle.h
 include/Poco/Data/ODBC/Connector.h
@@ -16,7 +16,7 @@ include/Poco/Data/ODBC/Parameter.h
 include/Poco/Data/ODBC/Preparation.h
 include/Poco/Data/ODBC/SessionImpl.h
 include/Poco/Data/ODBC/Utility.h
-lib/libPocoODBC.so
-lib/libPocoODBC.so.10
-lib/libPocoODBCd.so
-lib/libPocoODBCd.so.10
+lib/libPocoDataODBC.so
+lib/libPocoDataODBC.so.11
+lib/libPocoDataODBCd.so
+lib/libPocoDataODBCd.so.11
