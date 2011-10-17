@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/02/22 15:10:44 he Exp $
+$NetBSD: distinfo,v 1.7 2011/10/17 10:32:54 hiramatsu Exp $
 
-SHA1 (Net-Amazon-S3-0.50.tar.gz) = f7944ba9e0c25d4a119d5efeb0cf2101ff953b79
-RMD160 (Net-Amazon-S3-0.50.tar.gz) = 8aee6fc36135b748b81474c2d6cdbd4c95818eb7
-Size (Net-Amazon-S3-0.50.tar.gz) = 34609 bytes
+SHA1 (Net-Amazon-S3-0.54.tar.gz) = d198c3f02f6e02122cd0db18ec7546795854fa9a
+RMD160 (Net-Amazon-S3-0.54.tar.gz) = 65f9ec8033865814c40788b814e228fa2af8adf4
+Size (Net-Amazon-S3-0.54.tar.gz) = 35570 bytes
