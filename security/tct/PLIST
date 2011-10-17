@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:13:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/10/17 19:32:24 shattered Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/body_init.pl
 ${PERL5_SUB_INSTALLVENDORLIB}/bsd.pl
 ${PERL5_SUB_INSTALLVENDORLIB}/chk_binaries.pl
@@ -47,8 +47,8 @@ tct/bin/grave-robber
 tct/bin/icat
 tct/bin/ils
 tct/bin/ils2mac
-tct/bin/lazarus
 tct/bin/lastcomm
+tct/bin/lazarus
 tct/bin/mactime
 tct/bin/major_minor
 tct/bin/md5
