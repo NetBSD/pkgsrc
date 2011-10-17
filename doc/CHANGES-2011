@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2546 2011/10/17 03:49:58 schnoebe Exp $
+$NetBSD: CHANGES-2011,v 1.2547 2011/10/17 08:44:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/poco-data-mysql to 1.4.2p1 [schnoebe 2011-10-17]
 	Updated databases/poco-data-odbc to 1.4.2p1 [schnoebe 2011-10-17]
 	Updated net/py-twisted to 11.0.0 [schnoebe 2011-10-17]
+	Added databases/gdbm_compat version 1.9.1 [obache 2011-10-17]
