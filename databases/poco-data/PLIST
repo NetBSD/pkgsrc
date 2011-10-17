@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/06 06:00:08 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/17 02:10:31 schnoebe Exp $
 include/Poco/Data/AbstractPreparation.h
 include/Poco/Data/AbstractBinding.h
 include/Poco/Data/AbstractBinder.h
@@ -30,7 +30,7 @@ include/Poco/Data/SessionPool.h
 include/Poco/Data/Statement.h
 include/Poco/Data/StatementImpl.h
 include/Poco/Data/TypeHandler.h
-lib/libPocoDatad.so.10
-lib/libPocoData.so.10
+lib/libPocoDatad.so.11
+lib/libPocoData.so.11
 lib/libPocoDatad.so
 lib/libPocoData.so

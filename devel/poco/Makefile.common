@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/10/16 08:18:52 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/10/17 02:10:31 schnoebe Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -6,7 +6,7 @@
 # used by databases/poco-data-mysql/Makefile
 # used by databases/poco-data-odbc/Makefile
 
-POCO_VERSION=1.4.0
+POCO_VERSION=1.4.2p1
 
 DISTNAME=	poco-${POCO_VERSION}-all
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poco/}
@@ -37,4 +37,5 @@ CONFIGURE_ARGS+=	--config=FreeBSD
 .if ${OPSYS} == "NetBSD"
 # NetBSD doesn't have fenv.h. We should add one.
 CONFIGURE_ARGS+=	--no-fpenvironment
+CONFIGURE_ARGS+=	--no-shaedmemory
 .endif
