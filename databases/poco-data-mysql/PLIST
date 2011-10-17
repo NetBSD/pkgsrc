@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/06 06:02:02 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/17 02:10:31 schnoebe Exp $
 include/Poco/Data/MySQL/MySQLException.h
 include/Poco/Data/MySQL/Connector.h
 include/Poco/Data/MySQL/Binder.h
@@ -9,7 +9,7 @@ include/Poco/Data/MySQL/MySQLStatementImpl.h
 include/Poco/Data/MySQL/SessionHandle.h
 include/Poco/Data/MySQL/SessionImpl.h
 include/Poco/Data/MySQL/StatementExecutor.h
-lib/libPocoMySQLd.so.10
-lib/libPocoMySQL.so.10
-lib/libPocoMySQLd.so
-lib/libPocoMySQL.so
+lib/libPocoDataMySQLd.so.11
+lib/libPocoDataMySQL.so.11
+lib/libPocoDataMySQLd.so
+lib/libPocoDataMySQL.so

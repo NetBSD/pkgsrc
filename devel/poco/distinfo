@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.3 2011/10/16 08:18:52 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/10/17 02:10:31 schnoebe Exp $
 
-SHA1 (poco-1.4.0-all.tar.gz) = 6e7dbf895d76227047974ba7b3390d5452a0a7c7
-RMD160 (poco-1.4.0-all.tar.gz) = ee3ddbe0311b7aaca61046e964ef6550e52634d5
-Size (poco-1.4.0-all.tar.gz) = 3858463 bytes
+SHA1 (poco-1.4.2p1-all.tar.gz) = ef1bc69812179b7856c88aa4b5c157747c0a0e48
+RMD160 (poco-1.4.2p1-all.tar.gz) = 8288c10e3e96de26f56296da0bbbebff58b8b424
+Size (poco-1.4.2p1-all.tar.gz) = 3922854 bytes
 SHA1 (patch-Foundation_include_Poco_Platform.h) = a7d81c20902af7e23ce8a10eb90fc1a98d7cc412
 SHA1 (patch-aa) = be1c72c9c63b65e8d4211abab9dd036255ed6233
 SHA1 (patch-ab) = 0709ba35fe938f7efc94650dde4afd84c427de0f
 SHA1 (patch-ac) = e3ee4b43e458f1ab1227aa029a00fcebf5f53541
-SHA1 (patch-ad) = cb9ec4df286227121f7f93a5695a18c1c1665317
+SHA1 (patch-ad) = f6eeb9dc9b3a85525f264edbd1587bc4f124b9e1
 SHA1 (patch-ae) = a13a01901b3df6df7d5e5ad7a0639086b0897566
-SHA1 (patch-af) = 6d76f0b116e4b1f5333940737c9a9df80178441f
+SHA1 (patch-af) = 50a86be83634ede278f7a8463423e2f88a1741a7
 SHA1 (patch-ag) = 945a594376393462e1cc0f881532d2294adf5816
 SHA1 (patch-ah) = f8debbf7b416fc562f5af321be739e0d4481a130
 SHA1 (patch-ai) = 9feef00a05372578d957c68b53657e6468f65f6a
