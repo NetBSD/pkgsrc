@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2548 2011/10/17 08:48:06 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2549 2011/10/17 08:55:15 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4054,3 +4054,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-twisted to 11.0.0 [schnoebe 2011-10-17]
 	Added databases/gdbm_compat version 1.9.1 [obache 2011-10-17]
 	Updated security/pam-af to 1.0.2 [obache 2011-10-17]
+	Updated sysutils/p5-Sys-SigAction to 0.15 [hiramatsu 2011-10-17]
+	Updated www/p5-CGI-Compile to 0.15 [hiramatsu 2011-10-17]
+	Updated misc/p5-Locale-Maketext-Lexicon to 0.91 [hiramatsu 2011-10-17]
