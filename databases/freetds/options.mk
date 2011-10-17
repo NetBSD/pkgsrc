@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.6 2011/08/19 07:54:04 adam Exp $
+# $NetBSD: options.mk,v 1.7 2011/10/17 03:44:54 sbd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freetds
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc tls
 PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
 PKG_OPTIONS_GROUP.tls=		gnutls openssl
 PKG_SUPPORTED_OPTIONS=		kerberos
+PKG_SUGGESTED_OPTIONS=		openssl
 
 .include "../../mk/bsd.options.mk"
 
