@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/06/03 01:44:39 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/17 01:43:56 obache Exp $
 #
 
-DISTNAME=	httpclient-2.2.1
+DISTNAME=	httpclient-2.2.2
 CATEGORIES=	www
 
 MAINTAINER=	obache@NetBSD.org
@@ -13,9 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-# error with ruby18
-RUBY_BUILD_RDOC=	no
-RUBY_BUILD_RI=		no
+# OK with ruby-1.9 buitin one, but not with ruby18's one.
+RUBY_RDOC_REQD=	2.5.8
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
