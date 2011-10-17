@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/03/30 10:29:22 martin Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/17 19:45:56 shattered Exp $
 #
 
 MPG123_MODULE=	oss
+
+PKGREVISION=	1
 # this is builtin with ../mpg123 on all other architectures
 ONLY_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* SunOS-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*

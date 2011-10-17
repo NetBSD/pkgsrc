@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2011/09/14 15:46:49 hans Exp $
+# $NetBSD: Makefile,v 1.51 2011/10/17 19:45:55 shattered Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
+PKGREVISION=	1
 COMMENT=	MPEG layer 1, 2, and 3 audio player
 
 PKGCONFIG_OVERRIDE+=	libmpg123.pc.in
