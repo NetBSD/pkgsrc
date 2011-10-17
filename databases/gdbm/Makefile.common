@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2011/10/17 08:40:15 obache Exp $
+#
+# used by databases/gdbm/Makefile
+# used by databases/gdbm_compat/Makefile
+
+DISTNAME=	gdbm-1.9.1
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_GNU:=gdbm/}
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/gdbm/gdbm.html
+COMMENT=	The GNU database manager
+LICENSE=	gnu-gpl-v3
+
+DISTINFO_FILE=	${.CURDIR}/../../databases/gdbm/distinfo
+PATCHDIR=	${.CURDIR}/../../databases/gdbm/patches
+
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
