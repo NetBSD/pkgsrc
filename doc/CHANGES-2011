@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2562 2011/10/18 13:25:31 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2563 2011/10/18 14:58:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added chat/p5-IRC-Util version 0.12 [hiramatsu 2011-10-18]
 	Updated www/p5-Squatting to 0.81 [hiramatsu 2011-10-18]
 	Updated www/typo3 to 4.5.7 [taca 2011-10-18]
+	Updated databases/phpmyadmin to 3.4.6 [tron 2011-10-18]
