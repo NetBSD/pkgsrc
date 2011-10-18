@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/19 01:10:17 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/18 12:58:38 heinz Exp $
 #
 
 DISTNAME=		sudoku-1.0.1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://www.laurasia.com.au/downloads/
 COMMENT=		Commandline version of sudoku board game
+LICENSE=		public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
