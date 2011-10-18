@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2007/08/08 19:50:55 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2011/10/18 23:25:50 minskim Exp $
 
---- lgrind.c.orig	2007-08-08 19:31:25.000000000 +0000
-+++ lgrind.c
+--- source/lgrind.c.orig	2007-08-08 19:31:25.000000000 +0000
++++ source/lgrind.c
 @@ -70,7 +70,6 @@ static char Version[] =
  #include <stdlib.h>
  #include <ctype.h>
