@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2570 2011/10/18 22:40:51 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2571 2011/10/18 23:26:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4085,3 +4085,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-glossaries-doc version 3.01 [minskim 2011-10-18]
 	Updated editors/emacs-snapshot to 24.0.90.20111012 [minskim 2011-10-18]
 	Updated print/tex-foiltex to 2.1.4anb4 [minskim 2011-10-18]
+	Updated print/lgrind to 3.5nb9 [minskim 2011-10-18]
