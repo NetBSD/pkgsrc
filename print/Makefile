@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2011/10/02 14:11:52 wiz Exp $
+# $NetBSD: Makefile,v 1.500 2011/10/18 20:33:42 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -595,6 +595,7 @@ SUBDIR+=	tex-type1cm-doc
 SUBDIR+=	tex-typehtml
 SUBDIR+=	tex-typehtml-doc
 SUBDIR+=	tex-ucs
+SUBDIR+=	tex-ucs-doc
 SUBDIR+=	tex-ukrhyph
 SUBDIR+=	tex-ukrhyph-doc
 SUBDIR+=	tex-ulem
