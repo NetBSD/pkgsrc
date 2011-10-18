@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2011/10/18 17:56:16 hans Exp $
+
+--- gcc/Makefile.in.orig	2004-06-17 15:56:58.000000000 -0600
++++ gcc/Makefile.in
+@@ -1944,6 +1944,7 @@ c-omp.o : c-omp.c $(CONFIG_H) $(SYSTEM_H
+ # Language-independent files.
+ 
+ DRIVER_DEFINES = \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG) $(exec_prefix)/lib\"" \
+   -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
+   -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
+   -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
