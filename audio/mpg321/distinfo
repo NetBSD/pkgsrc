@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/05/19 18:25:19 drochner Exp $
+$NetBSD: distinfo,v 1.6 2011/10/18 11:13:56 ryoon Exp $
 
-SHA1 (mpg321-0.2.10.tar.gz) = 90268d0d187ddd7625d143b95791cb39a1630b79
-RMD160 (mpg321-0.2.10.tar.gz) = c0867e6ca7c0a5e2ff006e0c3aa866d2fde529ba
-Size (mpg321-0.2.10.tar.gz) = 113449 bytes
-SHA1 (patch-aa) = d91d4af6219517fcb95da37b1a7abc05a3e312b2
-SHA1 (patch-ab) = b409e5feb618bed1a85d17df22e01cebfa62e8b1
+SHA1 (mpg321-0.2.13-4.tar.gz) = 08ca707bbf1ff88d401ff2a3625fb242d445bfd2
+RMD160 (mpg321-0.2.13-4.tar.gz) = 5c1d50de0bae66381702ed3f238bfdc0f7b8f2d2
+Size (mpg321-0.2.13-4.tar.gz) = 144542 bytes
+SHA1 (patch-ab) = 3ec9382e50e03e25522a961aa52c29660a8564f9
