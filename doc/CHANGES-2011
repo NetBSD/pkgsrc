@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2552 2011/10/17 23:41:04 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.2553 2011/10/18 00:47:05 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4064,3 +4064,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-XSLoader to 0.15 [hiramatsu 2011-10-17]
 	Updated www/p5-Template-Toolkit-Simple to 0.13 [hiramatsu 2011-10-17]
 	Updated comms/asterisk18 to 1.8.7.1 [jnemeth 2011-10-17]
+	Added security/qca2-gnupg version 2.0.0beta3 [schnoebe 2011-10-18]
