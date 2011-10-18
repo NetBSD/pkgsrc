@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2557 2011/10/18 09:47:12 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2558 2011/10/18 10:28:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-Text-Diff to 1.41 [hiramatsu 2011-10-18]
 	Updated devel/p5-Devel-Declare to 0.006007 [hiramatsu 2011-10-18]
 	Updated databases/p5-DBICx-MapMaker to 0.03 [hiramatsu 2011-10-18]
+	Updated mail/msmtp to 1.4.25 [ryoon 2011-10-18]
