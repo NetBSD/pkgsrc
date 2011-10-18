@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/08/18 12:21:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.20.2.1 2011/10/18 21:37:53 sbd Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -779,6 +779,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swfupload/plugins/swfupload.swfobject.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swfupload/swfupload.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swfupload/swfupload.swf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/LICENSE
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/LICENSE.TYPO3v4-Exception
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/README
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/VERSION
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/swiftmailer/classes/Swift.php
