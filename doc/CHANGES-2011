@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2555 2011/10/18 01:06:47 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2556 2011/10/18 09:13:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4067,3 +4067,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added security/qca2-gnupg version 2.0.0beta3 [schnoebe 2011-10-18]
 	Updated security/p5-Digest-CRC to 0.17 [obache 2011-10-18]
 	Updated security/p5-Digest-SHA1 to 2.13nb3 [obache 2011-10-18]
+	Updated net/mikutter to 0.0.3.549 [obache 2011-10-18]
