@@ -1,49 +1,25 @@
-# $NetBSD: Makefile,v 1.4 2009/07/22 09:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/18 21:32:43 minskim Exp $
 
 DISTNAME=	glossaries
-PKGNAME=	tex-${DISTNAME}-1.02
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
-EXTRACT_SUFX=	.zip
+PKGNAME=	tex-${DISTNAME}-3.01
+TEXLIVE_REV=	22100
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://www.ctan.org/tex-archive/help/Catalogue/entries/glossaries.html
-COMMENT=	Macros for creation of glossaries
+COMMENT=	Create glossaries and lists of acronyms
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-DEPENDS+=	tex-xkeyval>=2.5f:../../print/tex-xkeyval
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_TOOLS+=	perl:run
+REPLACE_PERL=	bin/makeglossaries
 
-REPLACE_PERL=	scripts/makeglossaries
+INSTALLATION_DIRS+=	bin
 
-INSTALLATION_DIRS=	bin
+TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
-.include "../../print/teTeX/module.mk"
+.include "../../print/texlive/package.mk"
 
-do-build:
-	cd ${WRKSRC} && latex glossaries.ins
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/makeglossaries \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/glossaries
-	${INSTALL_DATA} ${WRKSRC}/doc/glossaries.pdf \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/doc/latex/glossaries
-	${INSTALL_DATA_DIR} \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries
-	${INSTALL_DATA} ${WRKSRC}/glossaries.sty \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries
-	${INSTALL_DATA} ${WRKSRC}/glossary-hypernav.sty \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries
-	${INSTALL_DATA} ${WRKSRC}/glossary-list.sty \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries
-	${INSTALL_DATA} ${WRKSRC}/glossary-long.sty \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries
-	${INSTALL_DATA} ${WRKSRC}/glossary-super.sty \
-		${DESTDIR}${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries
+post-extract:
+	${MKDIR} ${WRKSRC}/bin
+	${MV} ${WRKSRC}/texmf-dist/scripts/glossaries/makeglossaries \
+		${WRKSRC}/bin/
+	${RM} -rf ${WRKSRC}/texmf-dist/scripts
 
 .include "../../mk/bsd.pkg.mk"
