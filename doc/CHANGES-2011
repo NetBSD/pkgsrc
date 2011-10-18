@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2560 2011/10/18 11:16:22 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2561 2011/10/18 12:03:41 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4074,3 +4074,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/msmtp to 1.4.25 [ryoon 2011-10-18]
 	Updated net/ntop to 4.1.0 [adam 2011-10-18]
 	Updated audio/mpg321 to 0.2.13.4 [ryoon 2011-10-18]
+	Added chat/p5-IRC-Util version 0.12 [hiramatsu 2011-10-18]
+	Updated www/p5-Squatting to 0.81 [hiramatsu 2011-10-18]
