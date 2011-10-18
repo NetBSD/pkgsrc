@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/07/18 17:17:06 sno Exp $
+$NetBSD: distinfo,v 1.4 2011/10/18 09:45:05 hiramatsu Exp $
 
-SHA1 (Text-Diff-1.37.tar.gz) = c9c3209656cb2aa5132561c3535ac00772a158ee
-RMD160 (Text-Diff-1.37.tar.gz) = 3f72d946eaddcd6d109428007fc50f303b31e091
-Size (Text-Diff-1.37.tar.gz) = 26480 bytes
+SHA1 (Text-Diff-1.41.tar.gz) = a3fbfc834ea198281ffa7eedb596742e76ba3ba0
+RMD160 (Text-Diff-1.41.tar.gz) = 7af64c98eca6b5e6d852bf2bea209f2a0651c989
+Size (Text-Diff-1.41.tar.gz) = 27813 bytes
