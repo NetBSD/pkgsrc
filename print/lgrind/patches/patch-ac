@@ -1,12 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2006/04/07 03:01:36 minskim Exp $
---- lgrindef.5.orig	Tue Mar  9 13:22:25 1999
-+++ lgrindef.5	Tue Mar  9 13:23:12 1999
+$NetBSD: patch-ac,v 1.3 2011/10/18 23:25:50 minskim Exp $
+
+--- source/lgrindef.5.orig	Tue Mar  9 13:22:25 1999
++++ source/lgrindef.5	Tue Mar  9 13:23:12 1999
 @@ -17,7 +17,7 @@
  This man page is not yet much outdated, but might be soon except somebody
  asks me to work on it. Consider the LaTeX docs the real docs.
  .SH SYNOPSIS
 -.B /usr/TeX/texmf/tex/latex/lgrind/lgrindef
-+.B @LOCALTEXMFPREFIX@/tex/latex/lgrind/lgrindef
++.B @PREFIX@/share/texmf-dist/tex/latex/lgrind/lgrindef
  .SH DESCRIPTION
  .IX  "lgrindef file"  ""  "\fLlgrindef\fP \(em LGrind language definitions"
  .B lgrindef
@@ -16,8 +17,8 @@ $NetBSD: patch-ac,v 1.2 2006/04/07 03:01:36 minskim Exp $
  .SH FILES
 -.ta \w'/usr/TeX/texmf/tex/latex/lgrind/lgrindef   'u
 -\fB/usr/TeX/texmf/tex/latex/lgrind/lgrindef\fR	file containing terminal descriptions
-+.ta \w'@LOCALTEXMFPREFIX@/tex/latex/lgrind/lgrindef   'u
-+\fB@LOCALTEXMFPREFIX@/tex/latex/lgrind/lgrindef\fR	file containing terminal descriptions
++.ta \w'@PREFIX@/share/texmf-dist/tex/latex/lgrind/lgrindef   'u
++\fB@PREFIX@/share/texmf-dist/tex/latex/lgrind/lgrindef\fR	file containing terminal descriptions
  .SH "SEE ALSO"
  .BR latex (1),
  .BR lgrind (1),

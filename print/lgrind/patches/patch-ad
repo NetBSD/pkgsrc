@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2002/08/27 03:00:13 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.3 2011/10/18 23:25:50 minskim Exp $
 
 Add Verilog and Verilog-A
 
---- ../lgrindef.orig	Tue Aug  4 09:01:00 1998
-+++ ../lgrindef	Mon Aug 26 22:54:31 2002
+--- lgrindef.orig	Tue Aug  4 09:01:00 1998
++++ lgrindef	Mon Aug 26 22:54:31 2002
 @@ -685,4 +685,75 @@
  tk_popup tkwait toplevel trace unknown unset update uplevel upvar while winfo wm:
  

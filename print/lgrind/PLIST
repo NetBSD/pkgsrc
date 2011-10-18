@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/10/18 23:25:50 minskim Exp $
 bin/lgrind
-${PKG_LOCALTEXMFPREFIX}/tex/latex/lgrind/lgrindef
-${PKG_LOCALTEXMFPREFIX}/doc/latex/lgrind/lgrind.dvi
-${PKG_LOCALTEXMFPREFIX}/tex/latex/lgrind/lgrind.sty
 man/man1/lgrind.1
 man/man5/lgrindef.5
+share/texmf-dist/doc/latex/lgrind/lgrind.pdf
+share/texmf-dist/tex/latex/lgrind/lgrindef
+share/texmf-dist/tex/latex/lgrind/lgrind.sty

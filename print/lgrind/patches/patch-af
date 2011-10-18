@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2007/08/08 19:50:55 joerg Exp $
+$NetBSD: patch-af,v 1.2 2011/10/18 23:25:50 minskim Exp $
 
---- regexp.c.orig	2007-08-08 19:31:27.000000000 +0000
-+++ regexp.c
+--- source/regexp.c.orig	2007-08-08 19:31:27.000000000 +0000
++++ source/regexp.c
 @@ -23,7 +23,7 @@ static char Version[] =
  
  
