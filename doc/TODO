@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10609 2011/10/17 02:50:07 mef Exp $
+$NetBSD: TODO,v 1.10610 2011/10/18 10:34:06 adam Exp $
 
 Suggested new packages
 ======================
@@ -1024,7 +1024,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o notification-daemon-0.7.0
 	o ns-3.11
 	o ns-plugger-common-5.1.3
-	o ntop-4.1
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
