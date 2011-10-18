@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/16 10:28:47 cegger Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2011/10/18 21:38:07 sbd Exp $
 #
 
 VERSION=	4.1.1
@@ -18,7 +18,7 @@ LICENSE=        gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-[5-9].99.*-x86_64 NetBSD-[5-9].99.*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
 
 WRKSRC=		${WRKDIR}/xen-${VERSION}
 
