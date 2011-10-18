@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2011/06/10 09:40:03 obache Exp $
+# $NetBSD: Makefile,v 1.33 2011/10/18 16:14:44 drochner Exp $
 
-DISTNAME=	midori-0.3.6
-PKGREVISION=	1
+DISTNAME=	midori-0.4.1
 CATEGORIES=	www
-MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.3/
+MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.4/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.twotoasts.de/index.php?/pages/midori_summary.html
@@ -16,7 +15,6 @@ USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--disable-vala
 
 CHECK_PORTABILITY_SKIP+= win32/x86-mingw32-opensuse/install.sh
 
@@ -70,4 +68,5 @@ BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
