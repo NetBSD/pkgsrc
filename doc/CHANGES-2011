@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2556 2011/10/18 09:13:22 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2557 2011/10/18 09:47:12 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4068,3 +4068,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/p5-Digest-CRC to 0.17 [obache 2011-10-18]
 	Updated security/p5-Digest-SHA1 to 2.13nb3 [obache 2011-10-18]
 	Updated net/mikutter to 0.0.3.549 [obache 2011-10-18]
+	Updated textproc/p5-Text-Diff to 1.41 [hiramatsu 2011-10-18]
+	Updated devel/p5-Devel-Declare to 0.006007 [hiramatsu 2011-10-18]
+	Updated databases/p5-DBICx-MapMaker to 0.03 [hiramatsu 2011-10-18]
