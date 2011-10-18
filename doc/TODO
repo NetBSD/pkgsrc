@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10610 2011/10/18 10:34:06 adam Exp $
+$NetBSD: TODO,v 1.10611 2011/10/18 10:36:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -349,7 +349,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-6.4.3
+	o abcm2ps-6.5.1
 	o abcmidi-20110913
 	o accerciser-1.12.2 [GNOME 2.32]
 	o acme-091 [pkg/44771]
@@ -468,6 +468,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clamav-0.97.3
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.8.0
@@ -533,7 +534,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvtm-0.7
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
-	o echinus-0.4.7
+	o echinus-0.4.9
 	o eclipse-3.2.0
 	o ed-1.5
 	o ede-2.0
@@ -690,7 +691,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gl-7.8.2 [pkgrc-wip]
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
-	o glib2-2.30.0
+	o glib2-2.30.1
 	o global-6.1
 	o glom-1.14.2 [GNOME 2.26]
 	o glpk-4.47
@@ -749,7 +750,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13a
 	o gthumb-2.12.4
 	o gtick-0.4.2
-	o gtk3-3.2.0
+	o gtk3-3.2.1
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
@@ -990,7 +991,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
 	o mpg123-1.13.4
-	o mpop-1.0.24
+	o mpop-1.0.25
 	o mserv-devel-0.41
 	o mtools-4.0.17
 	o mu-0.9.7
@@ -1240,6 +1241,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.5
+	o sox-14.3.2
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o srp_client-1.7.5
@@ -1445,7 +1447,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xfontsel-1.0.3
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
-	o xfstt-1.8
+	o xfstt-1.8 [pkg/45478]
 	o xgamma-1.0.4
 	o xhippo-3.5
 	o xhost-1.0.4
