@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2010/08/25 08:02:21 manu Exp $
+@comment $NetBSD: PLIST.Linux,v 1.1.10.1 2011/10/18 09:39:51 tron Exp $
 bin/fusermount
+bin/ulockmgr_server
