@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/18 00:46:58 schnoebe Exp $
+qt4/plugins/crypto/libqca-gnupg.la
