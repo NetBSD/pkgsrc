@@ -1,13 +1,20 @@
-$NetBSD: patch-ac,v 1.8 2010/07/22 21:10:52 adam Exp $
+$NetBSD: patch-ac,v 1.9 2011/10/18 10:33:06 adam Exp $
 
---- initialize.c.orig	2010-07-20 20:46:07.000000000 +0000
+--- initialize.c.orig	2011-03-03 21:00:04.000000000 +0000
 +++ initialize.c
-@@ -365,7 +365,7 @@ void initCounters(void) {
+@@ -343,6 +343,7 @@ void initCounters(void) {
  
    setDomainName();
  
--#ifdef INET6
 +#if 0
    _in6addr_linklocal_allnodes.s6_addr[0] = 0xff;
    _in6addr_linklocal_allnodes.s6_addr[1] = 0x02;
    _in6addr_linklocal_allnodes.s6_addr[2] = 0x00;
+@@ -359,6 +360,7 @@ void initCounters(void) {
+   _in6addr_linklocal_allnodes.s6_addr[13] = 0x00;
+   _in6addr_linklocal_allnodes.s6_addr[14] = 0x00;
+   _in6addr_linklocal_allnodes.s6_addr[15] = 0x01;
++#endif
+ 
+   memset(myGlobals.transTimeHash, 0, sizeof(myGlobals.transTimeHash));
+   memset(myGlobals.dummyEthAddress, 0, LEN_ETHERNET_ADDRESS);

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/02/11 11:12:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/10/18 10:33:06 adam Exp $
 bin/ntop
 lib/libcpacketPlugin-${PKGVERSION}.so
 lib/libcpacketPlugin.so
@@ -92,6 +92,7 @@ share/ntop/html/emulex.gif
 share/ntop/html/error.gif
 share/ntop/html/expanded.gif
 share/ntop/html/external.png
+share/ntop/html/facebook.gif
 share/ntop/html/faq.html
 share/ntop/html/favicon.ico
 share/ntop/html/fback.png
@@ -127,6 +128,7 @@ share/ntop/html/jscalendar/calendar.js
 share/ntop/html/jscalendar/lang/calendar-en.js
 share/ntop/html/json2.js
 share/ntop/html/line-bottom.png
+share/ntop/html/linkedin.gif
 share/ntop/html/lock.png
 share/ntop/html/mail.gif
 share/ntop/html/major.gif
@@ -152,6 +154,7 @@ share/ntop/html/router.gif
 share/ntop/html/rrdAlarmConfig.js
 share/ntop/html/seagate.gif
 share/ntop/html/skype.gif
+share/ntop/html/skype.png
 share/ntop/html/sorterScript.js
 share/ntop/html/sorterStyle.css
 share/ntop/html/spacer.gif
@@ -396,6 +399,7 @@ share/ntop/html/style.css
 share/ntop/html/switch.gif
 share/ntop/html/theme.css
 share/ntop/html/theme.js
+share/ntop/html/twitter.png
 share/ntop/html/upload.gif
 share/ntop/html/url.gif
 share/ntop/html/user.gif
@@ -405,6 +409,7 @@ share/ntop/html/warning.gif
 share/ntop/html/web.gif
 share/ntop/html/wheel.gif
 share/ntop/html/white_bg.gif
+share/ntop/html/youtube.gif
 share/ntop/html/zoom.js
 share/ntop/ntop/GeoIPASNum.dat
 share/ntop/ntop/GeoLiteCity.dat
