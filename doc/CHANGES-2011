@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2565 2011/10/18 20:33:42 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2566 2011/10/18 20:46:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4080,3 +4080,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/phpmyadmin to 3.4.6 [tron 2011-10-18]
 	Updated print/tex-ucs to 20041710nb5 [minskim 2011-10-18]
 	Added print/tex-ucs-doc version 20041710 [minskim 2011-10-18]
+	Updated print/tex-resume to 20010823nb1 [minskim 2011-10-18]
