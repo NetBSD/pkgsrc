@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/06/16 13:40:06 cegger Exp $
+# $NetBSD: Makefile,v 1.10.4.1 2011/10/18 21:38:07 sbd Exp $
 #
 VERSION=		4.1.1
 DISTNAME=		xen-${VERSION}
@@ -24,6 +24,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # XXX add version check: Xen requires dev86 >= 0.16.14
 BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 BUILD_DEPENDS+= ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+.if !exists(/usr/bin/iasl)
+BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
+.endif
 
 PKG_SYSCONFSUBDIR=	xen
 
