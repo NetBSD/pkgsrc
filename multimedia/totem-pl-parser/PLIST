@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/10/22 20:05:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/10/18 16:07:43 drochner Exp $
 include/totem-pl-parser/1/plparser/totem-disc.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-builtins.h
 include/totem-pl-parser/1/plparser/totem-pl-parser-features.h
@@ -24,9 +24,9 @@ share/gtk-doc/html/totem-pl-parser/right.png
 share/gtk-doc/html/totem-pl-parser/style.css
 share/gtk-doc/html/totem-pl-parser/totem-pl-parser-TotemDisc.html
 share/gtk-doc/html/totem-pl-parser/totem-pl-parser-TotemPlPlaylistIter.html
-share/gtk-doc/html/totem-pl-parser/totem-pl-parser.devhelp
 share/gtk-doc/html/totem-pl-parser/totem-pl-parser.devhelp2
 share/gtk-doc/html/totem-pl-parser/up.png
+share/locale/af/LC_MESSAGES/totem-pl-parser.mo
 share/locale/am/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ar/LC_MESSAGES/totem-pl-parser.mo
 share/locale/as/LC_MESSAGES/totem-pl-parser.mo
