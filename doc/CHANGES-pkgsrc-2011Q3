@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.19 2011/10/18 09:41:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.20 2011/10/18 21:39:44 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -77,3 +77,11 @@ Pullup ticket #3561 - requested by obache
 mail/cyrus-imapd: build fix
 Pullup ticket #3566 - requested by sbd
 filesystems/fuse: packaging fix
+Pullup ticket #3565 - requested by obache
+net/net-snmp build fix
+Pullup ticket #3568 - requested by taca
+www/typo3 security update
+Pullup ticket #3569 - requested by tron
+databases/phpmyadmin security update
+Pullup ticket #3570 - requested by bouyer
+sysutils/xenkernel41 build fix
