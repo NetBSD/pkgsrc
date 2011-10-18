@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/11 09:37:19 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/10/18 11:58:42 hiramatsu Exp $
 
-SHA1 (Squatting-0.70.tar.gz) = 988726c346ae53ccc5e81d5f651d0532d62e126a
-RMD160 (Squatting-0.70.tar.gz) = fb892a637b93ef2f388cd4e1699e518f8f8d6a8b
-Size (Squatting-0.70.tar.gz) = 114840 bytes
+SHA1 (Squatting-0.81.tar.gz) = af8fb15ff7021d73efe2c1ffc04fb75d57523ca3
+RMD160 (Squatting-0.81.tar.gz) = 68b5bf93ab1f50566e0380e7e69db1c90a44898d
+Size (Squatting-0.81.tar.gz) = 109322 bytes
