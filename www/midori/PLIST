@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2011/06/09 11:02:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/10/18 16:14:44 drochner Exp $
 bin/midori
+include/midori-0.4/extensions/history-list.h
 lib/midori/libadblock.so
 lib/midori/libaddons.so
 lib/midori/libcolorful-tabs.so
@@ -7,6 +8,7 @@ lib/midori/libcookie-manager.so
 lib/midori/libcopy-tabs.so
 lib/midori/libfeed-panel.so
 lib/midori/libformhistory.so
+lib/midori/libhistory-list.so
 lib/midori/libmouse-gestures.so
 lib/midori/libshortcuts.so
 lib/midori/libstatus-clock.so
@@ -15,6 +17,7 @@ lib/midori/libtab-panel.so
 lib/midori/libtabs-minimized.so
 lib/midori/libtoolbar-editor.so
 lib/midori/libweb-cache.so
+share/applications/midori-private.desktop
 share/applications/midori.desktop
 share/doc/midori/AUTHORS
 share/doc/midori/COPYING
@@ -85,5 +88,6 @@ share/midori/res/autosuggestcontrol.css
 share/midori/res/autosuggestcontrol.js
 share/midori/res/error.html
 share/midori/res/logo-shade.png
-share/midori/res/mootools.js
 share/midori/res/speeddial-head.html
+share/vala/vapi/history-list.deps
+share/vala/vapi/history-list.vapi
