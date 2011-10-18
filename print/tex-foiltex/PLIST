@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:01 joerg Exp $
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/fltfonts.def
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/foil17.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/foil20.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/foil25.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/foil30.clo
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/foils.cls
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/foils.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/foiltex/foilshrt.clo
+@comment $NetBSD: PLIST,v 1.3 2011/10/18 22:40:33 minskim Exp $
+share/texmf-dist/tex/latex/foiltex/fltfonts.def
+share/texmf-dist/tex/latex/foiltex/foil17.clo
+share/texmf-dist/tex/latex/foiltex/foil20.clo
+share/texmf-dist/tex/latex/foiltex/foil25.clo
+share/texmf-dist/tex/latex/foiltex/foil30.clo
+share/texmf-dist/tex/latex/foiltex/foils.cls
+share/texmf-dist/tex/latex/foiltex/foils.sty
+share/texmf-dist/tex/latex/foiltex/foilshrt.clo
