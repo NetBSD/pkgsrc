@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.2 2011/05/27 10:55:25 adam Exp $
+$NetBSD: patch-ao,v 1.2.4.1 2011/10/18 21:37:43 sbd Exp $
 
---- agent/mibgroup/if-mib/data_access/interface_sysctl.c.orig	2011-04-27 11:24:58.000000000 +0000
+--- agent/mibgroup/if-mib/data_access/interface_sysctl.c.orig	2010-07-21 19:24:11 +0000
 +++ agent/mibgroup/if-mib/data_access/interface_sysctl.c
 @@ -49,7 +49,11 @@
  #   define ARCH_PROMISC_FLAG IFF_PROMISC
@@ -14,7 +14,23 @@ $NetBSD: patch-ao,v 1.2 2011/05/27 10:55:25 adam Exp $
  
  /* sa_len roundup macro. */
  #define ROUNDUP(a) \
-@@ -472,7 +476,11 @@ netsnmp_arch_interface_container_load(ne
+@@ -183,6 +187,7 @@ netsnmp_sysctl_ifmedia_to_speed(int medi
+ #endif
+             }
+             break;
++#ifdef IFM_TOKEN
+         case IFM_TOKEN:
+             switch (IFM_SUBTYPE(media)) {
+                 case IFM_TOK_STP4:
+@@ -204,6 +209,7 @@ netsnmp_sysctl_ifmedia_to_speed(int medi
+ #endif
+             }
+             break;
++#endif
+ #ifdef IFM_ATM
+         case IFM_ATM:
+             switch (IFM_SUBTYPE(media)) {
+@@ -472,7 +478,11 @@ netsnmp_arch_interface_container_load(ne
                              NETSNMP_INTERFACE_FLAGS_HAS_DROPS |
                              NETSNMP_INTERFACE_FLAGS_HAS_MCAST_PKTS;
  
