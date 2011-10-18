@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10611 2011/10/18 10:36:03 wiz Exp $
+$NetBSD: TODO,v 1.10612 2011/10/18 11:32:04 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -193,10 +193,6 @@ Suggested new packages
 
 	FreeVRRPd [pkg/30113]
 	VRRP (Virtual Router Redundancy Protocol) implementation daemon
-
-	Algol 68 Genie [pkg/30695]
-	http://www.xs4all.nl/~jmvdveer/algol.html
-	Algol 68 interpreter
 
 	SystemC class library [pkg/30707]
 	http://www.systemc.org/
