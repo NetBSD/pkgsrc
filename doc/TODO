@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10613 2011/10/18 16:15:19 taca Exp $
+$NetBSD: TODO,v 1.10614 2011/10/18 17:34:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -570,7 +570,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eterm-0.9.6
 	o eukleides-1.5.4
 	o evieext-1.1.1
-	o evince-3.2.0
+	o evince-3.2.1
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-exchange-2.32.2
@@ -798,7 +798,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imake-1.0.4
 	o imapsync-1.452
 	o imp-5.0.13
-	o ingo-2.0.5
+	o ingo-2.0.6
 	o inputproto-2.0.2
 	o inspircd-1.2.1
 	o instiki-0.13
@@ -929,9 +929,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtcl-nothread-8.5.1
-	o libtool-2.4
-	o libtool-base-2.4
-	o libtool-info-2.4
+	o libtool-2.4.2
+	o libtool-base-2.4.2
+	o libtool-info-2.4.2
 	o libupnp-1.6.9 [break API/ABI compatibility]
 	o libusb-1.0
 	o libv4l-0.8.5
