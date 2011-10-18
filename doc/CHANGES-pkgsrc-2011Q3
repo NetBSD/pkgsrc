@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.18 2011/10/15 10:06:50 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.19 2011/10/18 09:41:11 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -75,3 +75,5 @@ Pullup ticket #3560 - requested by dholland
 comms/p5-pilot-link: build fix
 Pullup ticket #3561 - requested by obache
 mail/cyrus-imapd: build fix
+Pullup ticket #3566 - requested by sbd
+filesystems/fuse: packaging fix
