@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.19 2010/11/17 15:46:21 dholland Exp $
+$NetBSD: patch-ab,v 1.20 2011/10/18 22:34:06 sbd Exp $
 
 --- configure.orig	2010-01-26 16:01:10.000000000 +0000
 +++ configure
@@ -24,6 +24,15 @@ $NetBSD: patch-ab,v 1.19 2010/11/17 15:46:21 dholland Exp $
  
  
  
+@@ -2835,7 +2842,7 @@ case "${host_os}" in
+   *linux* )
+     case "${host_cpu}" in
+       powerpc64 | s390x | x86_64 )
+-        LIBPOSTFIX="64"
++        LIBPOSTFIX=""
+         ;;
+     esac
+     ;;
 @@ -6850,6 +6857,9 @@ test -n "$RC" || RC="false"
  	    ;;
  	*-sgi-irix* )
@@ -104,7 +113,7 @@ $NetBSD: patch-ab,v 1.19 2010/11/17 15:46:21 dholland Exp $
  		sincos(PI/2.0,&sinx,&cosx);
  		assert(sinx>0.9999999);
  		assert(sinx<1.0000001);
-@@ -38777,7 +38791,7 @@ else
+@@ -38777,7 +38789,7 @@ else
      use_gv_tcl="Yes"
    fi
    if test "x$use_gd" != "xYes"; then
