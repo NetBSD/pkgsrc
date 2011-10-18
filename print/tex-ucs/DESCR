@@ -1,2 +1,5 @@
-This package contains support for using UTF-8 as input encoding in
-LaTeX documents.
+This bundle provides the ucs package, and utf8x.def, together with a
+large number of support files. The utf8x.def definition file for use
+with inputenc covers a wider range of Unicode characters than does
+utf8.def in the LaTeX distribution. The ucs package provides facilities
+for efficient use of large sets of Unicode characters.
