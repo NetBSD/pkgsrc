@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:02 joerg Exp $
-${PKG_LOCALTEXMFPREFIX}/tex/latex/resume/res.cls
+@comment $NetBSD: PLIST,v 1.3 2011/10/18 20:46:07 minskim Exp $
+share/texmf-dist/tex/latex/resume/res.cls
