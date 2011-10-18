@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2010/11/17 15:46:21 dholland Exp $
+$NetBSD: patch-aa,v 1.14 2011/10/18 22:34:06 sbd Exp $
 
 --- configure.ac.orig	2010-01-26 16:00:29.000000000 +0000
 +++ configure.ac
@@ -31,6 +31,15 @@ $NetBSD: patch-aa,v 1.13 2010/11/17 15:46:21 dholland Exp $
  	fi
  	;;
  esac
+@@ -101,7 +112,7 @@ case "${host_os}" in
+   *linux* )
+     case "${host_cpu}" in
+       powerpc64 | s390x | x86_64 )
+-        LIBPOSTFIX="64"
++        LIBPOSTFIX=""
+         ;;
+     esac
+     ;;
 @@ -802,7 +813,7 @@ else
  		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
                          LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
