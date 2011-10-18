@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2559 2011/10/18 10:34:05 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2560 2011/10/18 11:16:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4073,3 +4073,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-DBICx-MapMaker to 0.03 [hiramatsu 2011-10-18]
 	Updated mail/msmtp to 1.4.25 [ryoon 2011-10-18]
 	Updated net/ntop to 4.1.0 [adam 2011-10-18]
+	Updated audio/mpg321 to 0.2.13.4 [ryoon 2011-10-18]
