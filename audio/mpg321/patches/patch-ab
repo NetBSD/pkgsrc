@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2010/05/19 18:25:19 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2011/10/18 11:13:56 ryoon Exp $
 
---- ao.c.orig	2010-05-19 15:45:33.000000000 +0000
+--- ao.c.orig	2011-10-01 09:50:12.000000000 +0000
 +++ ao.c
-@@ -229,6 +229,7 @@ void open_ao_playdevice(struct mad_heade
+@@ -234,6 +234,7 @@ void open_ao_playdevice(struct mad_heade
             and restore it afterwards */
          signal(SIGINT, SIG_DFL);
          
