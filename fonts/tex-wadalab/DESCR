@@ -1,0 +1,5 @@
+These are font bundles for the Japanese Wadalab fonts which work with
+the CJK package. All subfonts now have glyph names compliant to the
+Adobe Glyph List, making ToUnicode CMaps in PDF documents (created
+automatically by dvipdfmx) work correctly. All font bundles now contain
+virtual Unicode subfonts.
