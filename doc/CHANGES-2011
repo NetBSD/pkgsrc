@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2583 2011/10/19 22:14:35 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2584 2011/10/19 22:20:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4105,3 +4105,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-garuda-c90 version 2011 [minskim 2011-10-19]
 	Added fonts/tex-norasi-c90 version 2011 [minskim 2011-10-19]
 	Added print/tex-thailatex version 0.4.5 [minskim 2011-10-19]
+	Added fonts/tex-wadalab version 2011 [minskim 2011-10-19]
+	Added fonts/tex-wadalab-doc version 2011 [minskim 2011-10-19]
