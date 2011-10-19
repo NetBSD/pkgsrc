@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.20 2011/10/18 21:39:44 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.21 2011/10/19 13:50:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -85,3 +85,9 @@ Pullup ticket #3569 - requested by tron
 databases/phpmyadmin security update
 Pullup ticket #3570 - requested by bouyer
 sysutils/xenkernel41 build fix
+Pullup ticket #3563 - requested by obache
+multimedia/gnash: build fix
+Pullup ticket #3564 - requested by obache
+pkgsrc/devel/poco: build fix
+Pullup ticket #3571 - requested by sbd
+devel/poco: build fix
