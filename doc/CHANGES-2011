@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2574 2011/10/19 18:34:07 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2575 2011/10/19 18:42:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4091,3 +4091,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Plack to 0.9984 [hiramatsu 2011-10-19]
 	Updated net/youtube-dl to 20111019 [ryoon 2011-10-19]
 	Updated mail/mew to 6.4 [ryoon 2011-10-19]
+	Removed fonts/ec-fonts-mftraced [minskim 2011-10-19]
