@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/07/21 13:05:59 obache Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2011/10/19 12:41:35 tron Exp $
 #
 
 DISTNAME=		gnash-${VER}
@@ -24,6 +24,8 @@ INSTALL_TARGET=		install install-plugin
 
 # /bin/sh finds a syntax error without line number
 CONFIG_SHELL=		${TOOLS_BASH}
+CONFIGURE_ARGS+=	--with-boost-incl=${BUILDLINK_PREFIX.boost-headers}/include
+CONFIGURE_ARGS+=	--with-boost-lib=${BUILDLINK_PREFIX.boost-libs}/lib
 
 EGDIR=			${PREFIX}/share/examples/gnash
 INSTALLATION_DIRS=	${EGDIR}
