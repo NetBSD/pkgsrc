@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2576 2011/10/19 18:47:00 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2577 2011/10/19 19:29:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4093,3 +4093,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/mew to 6.4 [ryoon 2011-10-19]
 	Removed fonts/ec-fonts-mftraced [minskim 2011-10-19]
 	Updated emulators/qemu to 0.15.1 [ryoon 2011-10-19]
+	Updated textproc/latex2html to 2008nb1 [minskim 2011-10-19]
