@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 20:11:45 minskim Exp $
+share/texmf-dist/fonts/sfd/ttf2pk/Big5.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/EUC.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/HKSCS.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/KS-HLaTeX.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/SJIS.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/UBg5plus.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/UBig5.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/UGB.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/UGBK.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/UJIS.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/UKS-HLaTeX.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/UKS.sfd
+share/texmf-dist/fonts/sfd/ttf2pk/Unicode.sfd
+share/texmf/fonts/enc/ttf2pk/base/T1-WGL4.enc
+share/texmf/ttf2pk/VPS.rpl
+share/texmf/ttf2pk/ttf2pk.cfg
