@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2584 2011/10/19 22:20:31 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2585 2011/10/19 22:53:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4107,3 +4107,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-thailatex version 0.4.5 [minskim 2011-10-19]
 	Added fonts/tex-wadalab version 2011 [minskim 2011-10-19]
 	Added fonts/tex-wadalab-doc version 2011 [minskim 2011-10-19]
+	Added print/tex-cjkutils version 4.8.2 [minskim 2011-10-19]
+	Added print/tex-cjkutils-doc version 4.8.2 [minskim 2011-10-19]
+	Added print/cjkutils version 4.8.2 [minskim 2011-10-19]
