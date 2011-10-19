@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2577 2011/10/19 19:29:10 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2578 2011/10/19 20:12:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4094,3 +4094,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed fonts/ec-fonts-mftraced [minskim 2011-10-19]
 	Updated emulators/qemu to 0.15.1 [ryoon 2011-10-19]
 	Updated textproc/latex2html to 2008nb1 [minskim 2011-10-19]
+	Added fonts/tex-ttfutils version 2011 [minskim 2011-10-19]
+	Added fonts/tex-ttfutils-doc version 2011 [minskim 2011-10-19]
