@@ -1,0 +1,7 @@
+CJK is a macro package for LaTeX, providing simultaneous support for
+various Asian scripts in many encodings (including Unicode): Chinese
+(both traditional and simplified), Japanese, Korean, and Thai. A
+special add-on feature is an interface to the Emacs editor
+(cjk-enc.el) which gives simultaneous, easy-to-use support to a bunch
+of other scripts in addition to the above: Cyrillic, Greek,
+Latin-based scripts, Russian, and Vietnamese.
