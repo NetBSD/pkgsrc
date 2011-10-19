@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/09 10:02:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/19 15:04:37 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.16.0
@@ -22,8 +22,6 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		test
-
-MAKE_ENV=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 DOCDIR=			share/doc/lmdbg
 DOCFILES=		README NEWS ChangeLog
