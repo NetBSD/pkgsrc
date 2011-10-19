@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2011/02/06 18:54:50 schnoebe Exp $
+# $NetBSD: Makefile.common,v 1.3.6.1 2011/10/19 13:17:20 tron Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--unbundled
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD)
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--config=FreeBSD
 .endif
 

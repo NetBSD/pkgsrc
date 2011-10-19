@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/06 06:08:07 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2.6.1 2011/10/19 13:17:20 tron Exp $
 #
 
 PKGNAME=	poco-${POCO_VERSION}
@@ -17,6 +17,10 @@ CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.pcre}/include
 CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.openssl}/include
+
+# remove pach backup files.
+pre-install:
+	${RM} -f ${WRKSRC}/Foundation/include/Poco/Platform.h.orig
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
