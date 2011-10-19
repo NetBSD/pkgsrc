@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 22:19:40 minskim Exp $
+share/texmf-dist/doc/fonts/wadalab/README
+share/texmf-dist/doc/fonts/wadalab/dgj/README
+share/texmf-dist/doc/fonts/wadalab/dmj/README
+share/texmf-dist/doc/fonts/wadalab/mc2j/README
+share/texmf-dist/doc/fonts/wadalab/mcj/README
+share/texmf-dist/doc/fonts/wadalab/mr2j/README
+share/texmf-dist/doc/fonts/wadalab/mrj/README
+share/texmf-dist/doc/fonts/wadalab/wadalab-sampler.pdf
+share/texmf-dist/doc/fonts/wadalab/wadalab-sampler.tex
