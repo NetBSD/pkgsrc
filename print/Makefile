@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2011/10/19 22:53:34 minskim Exp $
+# $NetBSD: Makefile,v 1.504 2011/10/19 23:43:56 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -221,6 +221,8 @@ SUBDIR+=	tex-circle
 SUBDIR+=	tex-circle-doc
 SUBDIR+=	tex-cite
 SUBDIR+=	tex-cite-doc
+SUBDIR+=	tex-cjk
+SUBDIR+=	tex-cjk-doc
 SUBDIR+=	tex-cjkutils
 SUBDIR+=	tex-cjkutils-doc
 SUBDIR+=	tex-collection-basic
