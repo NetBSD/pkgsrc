@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2011/09/12 16:27:18 taca Exp $
+# $NetBSD: Makefile,v 1.84 2011/10/19 18:32:50 ryoon Exp $
 
-DISTNAME=	mew-6.3
+DISTNAME=	mew-6.4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mew.org/Release/
 
@@ -25,8 +24,6 @@ GNU_CONFIGURE=	yes
 EMACS_VERSIONS_ACCEPTED=	emacs23 emacs23nox emacs22 emacs22nox emacs21 emacs21nox
 EMACS_MODULES+=			base
 
-MEW_CONTRIB_DIR=${EMACS_LISPPREFIX}/mew/contrib
-
 MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=	prefix=${PREFIX:Q}
 MAKE_FLAGS+=	exec_prefix=${PREFIX:Q}
@@ -48,9 +45,6 @@ post-configure:
 	${MV} ${WRKSRC}/mew-key.el ${WRKSRC}/mew-key.el.1
 	${SED} -e 's|@ICONDIR@|${EMACS_ETCPREFIX}/mew|g' \
 		${WRKSRC}/mew-key.el.1 > ${WRKSRC}/mew-key.el
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/contrib/* ${DESTDIR}${MEW_CONTRIB_DIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
