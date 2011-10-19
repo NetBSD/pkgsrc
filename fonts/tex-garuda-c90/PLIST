@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 22:07:09 minskim Exp $
+share/texmf-dist/dvips/garuda-c90/config.garuda-c90
+share/texmf-dist/fonts/map/dvips/garuda-c90/garuda-c90.map
+share/texmf-dist/fonts/tfm/public/garuda-c90/fgdb8z.tfm
+share/texmf-dist/fonts/tfm/public/garuda-c90/fgdbo8z.tfm
+share/texmf-dist/fonts/tfm/public/garuda-c90/fgdo8z.tfm
+share/texmf-dist/fonts/tfm/public/garuda-c90/fgdr8z.tfm
