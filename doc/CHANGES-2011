@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2578 2011/10/19 20:12:56 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2579 2011/10/19 21:40:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4096,3 +4096,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/latex2html to 2008nb1 [minskim 2011-10-19]
 	Added fonts/tex-ttfutils version 2011 [minskim 2011-10-19]
 	Added fonts/tex-ttfutils-doc version 2011 [minskim 2011-10-19]
+	Added fonts/tex-uhc version 2011 [minskim 2011-10-19]
+	Added fonts/tex-uhc-doc version 2011 [minskim 2011-10-19]
