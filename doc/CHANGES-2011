@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2572 2011/10/19 08:11:59 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2573 2011/10/19 18:27:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-DBICx-TestDatabase to 0.04 [hiramatsu 2011-10-19]
 	Updated devel/p5-Log-Any to 0.14 [hiramatsu 2011-10-19]
 	Updated www/p5-Plack to 0.9984 [hiramatsu 2011-10-19]
+	Updated net/youtube-dl to 20111019 [ryoon 2011-10-19]
