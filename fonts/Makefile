@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2011/10/19 22:03:48 minskim Exp $
+# $NetBSD: Makefile,v 1.212 2011/10/19 22:10:15 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -213,6 +213,7 @@ SUBDIR+=	tex-fourier
 SUBDIR+=	tex-fourier-doc
 SUBDIR+=	tex-fpl
 SUBDIR+=	tex-fpl-doc
+SUBDIR+=	tex-garuda-c90
 SUBDIR+=	tex-glyphlist
 SUBDIR+=	tex-helvetic
 SUBDIR+=	tex-kotex-base
@@ -236,6 +237,7 @@ SUBDIR+=	tex-mflogo
 SUBDIR+=	tex-mflogo-doc
 SUBDIR+=	tex-mfware
 SUBDIR+=	tex-ncntrsbk
+SUBDIR+=	tex-norasi-c90
 SUBDIR+=	tex-ocr-b
 SUBDIR+=	tex-ocr-b-doc
 SUBDIR+=	tex-palatino
