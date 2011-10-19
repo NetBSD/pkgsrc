@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/04/22 13:42:08 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/10/19 06:50:03 obache Exp $
 
 BUILDLINK_TREE+=	libkexiv2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkexiv2
 LIBKEXIV2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkexiv2+=	libkexiv2>=0.1.1
-BUILDLINK_ABI_DEPENDS.libkexiv2+=	libkexiv2>=0.1.9nb7
+BUILDLINK_ABI_DEPENDS.libkexiv2+=	libkexiv2>=0.1.9nb8
 BUILDLINK_PKGSRCDIR.libkexiv2?=	../../graphics/libkexiv2
 
 .include "../../graphics/exiv2/buildlink3.mk"
