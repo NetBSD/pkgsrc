@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2579 2011/10/19 21:40:22 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2580 2011/10/19 21:44:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4098,3 +4098,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/tex-ttfutils-doc version 2011 [minskim 2011-10-19]
 	Added fonts/tex-uhc version 2011 [minskim 2011-10-19]
 	Added fonts/tex-uhc-doc version 2011 [minskim 2011-10-19]
+	Removed fonts/tex-uhc-fonts-base [minskim 2011-10-19]
+	Removed fonts/tex-uhc-fonts-extra [minskim 2011-10-19]
