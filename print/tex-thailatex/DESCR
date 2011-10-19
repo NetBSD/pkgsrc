@@ -1,0 +1,3 @@
+ThaiLaTeX enables typesetting Thai with standard LaTeX document classes.
+It is designed to become a part of babel, and may be used as such after
+a (small) patch to babel itself.
