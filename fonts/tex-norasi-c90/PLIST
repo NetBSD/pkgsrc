@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 22:08:50 minskim Exp $
+share/texmf-dist/dvips/norasi-c90/config.norasi-c90
+share/texmf-dist/fonts/map/dvips/norasi-c90/norasi-c90.map
+share/texmf-dist/fonts/tfm/public/norasi-c90/ftnb8z.tfm
+share/texmf-dist/fonts/tfm/public/norasi-c90/ftnbi8z.tfm
+share/texmf-dist/fonts/tfm/public/norasi-c90/ftni8z.tfm
+share/texmf-dist/fonts/tfm/public/norasi-c90/ftnr8z.tfm
