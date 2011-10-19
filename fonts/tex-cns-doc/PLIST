@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/19 22:02:38 minskim Exp $
+share/texmf-dist/doc/fonts/cns/cns40-1/README
+share/texmf-dist/doc/fonts/cns/cns40-2/README
+share/texmf-dist/doc/fonts/cns/cns40-3/README
+share/texmf-dist/doc/fonts/cns/cns40-4/README
+share/texmf-dist/doc/fonts/cns/cns40-5/README
+share/texmf-dist/doc/fonts/cns/cns40-6/README
+share/texmf-dist/doc/fonts/cns/cns40-7/README
+share/texmf-dist/doc/fonts/cns/cns40-b5/README
