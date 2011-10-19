@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2008/10/25 05:27:58 kefren Exp $
-lib/libmono-profiler-logging.la
+@comment $NetBSD: PLIST.Linux,v 1.2 2011/10/19 02:48:24 sbd Exp $
+bin/mono-sgen
+bin/mono-sgen-gdb.py
+lib/libmonosgen-2.0.la
+lib/mono/2.0/mcs.exe.so
+lib/mono/2.0/mscorlib.dll.so
+lib/pkgconfig/monosgen-2.pc
