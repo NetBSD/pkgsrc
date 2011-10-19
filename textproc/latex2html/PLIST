@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/10/19 19:28:49 minskim Exp $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
@@ -333,14 +333,14 @@ share/latex2html/versions/table.pl
 share/latex2html/versions/techexpl.pl
 share/latex2html/versions/unicode.pl
 share/latex2html/versions/utf8.pl
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/frames.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/heqn.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/hthtml.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/html.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/htmllist.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/justify.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/latin9.def
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/ldump.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/techexplHTML.tex
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/url.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/verbatimfiles.sty
+share/texmf-dist/tex/latex/html/frames.sty
+share/texmf-dist/tex/latex/html/heqn.sty
+share/texmf-dist/tex/latex/html/hthtml.sty
+share/texmf-dist/tex/latex/html/html.sty
+share/texmf-dist/tex/latex/html/htmllist.sty
+share/texmf-dist/tex/latex/html/justify.sty
+share/texmf-dist/tex/latex/html/latin9.def
+share/texmf-dist/tex/latex/html/ldump.sty
+share/texmf-dist/tex/latex/html/techexplHTML.tex
+share/texmf-dist/tex/latex/html/url.sty
+share/texmf-dist/tex/latex/html/verbatimfiles.sty
