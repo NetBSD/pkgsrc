@@ -1,0 +1,34 @@
+$NetBSD: patch-build_config_Linux,v 1.1.2.2 2011/10/19 13:47:08 tron Exp $
+
+# Build a full set of shared library search paths, rather than
+# *assuming* everything is under PREFIX.
+
+--- build/config/Linux.orig	2010-12-16 05:43:24.000000000 +0000
++++ build/config/Linux
+@@ -21,6 +21,8 @@ LINK    = $(CXX)
+ LIB     = ar -cr
+ RANLIB  = ranlib
+ SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
++SHLIBFLAGS = $(LDFLAGS) -Wl,-R$(POCO_PREFIX)/lib \
++		$(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
+ SHLIBLN = $(POCO_BASE)/build/script/shlibln
+ STRIP   = strip
+ DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
+@@ -44,7 +46,7 @@ CFLAGS64        =
+ CXXFLAGS        = -Wall -Wno-sign-compare
+ CXXFLAGS32      =
+ CXXFLAGS64      =
+-LINKFLAGS       =
++LINKFLAGS       = $(LDFLAGS)
+ LINKFLAGS32     =
+ LINKFLAGS64     =
+ STATICOPT_CC    =
+@@ -52,7 +54,7 @@ STATICOPT_CXX   =
+ STATICOPT_LINK  = -static
+ SHAREDOPT_CC    = -fPIC
+ SHAREDOPT_CXX   = -fPIC
+-SHAREDOPT_LINK  = -Wl,-rpath,$(LIBPATH)
++SHAREDOPT_LINK  = -Wl,-rpath,$(POCO_PREFIX)/lib -L$(LIBPATH)
+ DEBUGOPT_CC     = -g -D_DEBUG
+ DEBUGOPT_CXX    = -g -D_DEBUG
+ DEBUGOPT_LINK   = -g
