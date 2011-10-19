@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2011/04/23 17:29:39 tron Exp $
+# $NetBSD: Makefile,v 1.65 2011/10/19 01:29:59 sbd Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -60,7 +60,7 @@ INSTALL_MAKE_FLAGS+=	texmf=${DESTDIR}${PREFIX}/share/texmf
 INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-INSTALLATION_DIRS+=	info share/texmf/fmtutil
+INSTALLATION_DIRS+=	${PKGINFODIR} share/texmf/fmtutil
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
 
