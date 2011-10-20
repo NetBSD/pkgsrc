@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2586 2011/10/19 23:43:55 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2587 2011/10/20 01:04:56 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4112,3 +4112,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/cjkutils version 4.8.2 [minskim 2011-10-19]
 	Added print/tex-cjk version 4.8.2 [minskim 2011-10-19]
 	Added print/tex-cjk-doc version 4.8.2 [minskim 2011-10-19]
+	Updated sysutils/p5-SSH-Batch to 0.028 [hiramatsu 2011-10-20]
+	Updated www/p5-Jemplate to 0.261 [hiramatsu 2011-10-20]
