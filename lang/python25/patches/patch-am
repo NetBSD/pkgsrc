@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.7 2011/06/04 05:08:20 obache Exp $
+$NetBSD: patch-am,v 1.7.4.1 2011/10/20 03:59:44 tron Exp $
 
 --- setup.py.orig	2008-10-16 18:58:19.000000000 +0000
 +++ setup.py
@@ -350,8 +350,14 @@ $NetBSD: patch-am,v 1.7 2011/06/04 05:08:20 obache Exp $
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -884,11 +670,6 @@ class PyBuildExt(build_ext):
-                 exts.append( Extension('dbm', ['dbmmodule.c'],
+@@ -881,15 +667,13 @@ class PyBuildExt(build_ext):
+                     ndbm_libs = ['ndbm']
+                 else:
+                     ndbm_libs = []
+-                exts.append( Extension('dbm', ['dbmmodule.c'],
++
++                if not self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
++                    exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
 -            elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
@@ -359,10 +365,13 @@ $NetBSD: patch-am,v 1.7 2011/06/04 05:08:20 obache Exp $
 -                exts.append( Extension('dbm', ['dbmmodule.c'],
 -                                       define_macros=[('HAVE_GDBM_NDBM_H',None)],
 -                                       libraries = ['gdbm'] ) )
-             elif db_incs is not None:
+-            elif db_incs is not None:
++
++            if not module_enabled(exts, 'dbm'):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         library_dirs=dblib_dir,
-@@ -899,9 +680,9 @@ class PyBuildExt(build_ext):
+                                        runtime_library_dirs=dblib_dir,
+@@ -899,9 +683,9 @@ class PyBuildExt(build_ext):
                                         libraries=dblibs))
  
          # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
@@ -375,7 +384,7 @@ $NetBSD: patch-am,v 1.7 2011/06/04 05:08:20 obache Exp $
  
          # Unix-only modules
          if platform not in ['mac', 'win32']:
-@@ -1536,8 +1317,8 @@ def main():
+@@ -1536,8 +1320,8 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
