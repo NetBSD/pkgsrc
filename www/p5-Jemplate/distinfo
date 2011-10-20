@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/09/16 15:01:52 seb Exp $
+$NetBSD: distinfo,v 1.6 2011/10/20 01:04:12 hiramatsu Exp $
 
-SHA1 (Jemplate-0.23.tar.gz) = 74c505e0e8461d37c6ab946d86bd78e9a6f2d7f2
-RMD160 (Jemplate-0.23.tar.gz) = 19c78872ad1472f755ea6a838e0ac1d9972f9edd
-Size (Jemplate-0.23.tar.gz) = 403683 bytes
+SHA1 (Jemplate-0.261.tar.gz) = e0a0b4df2fd9b018dfeb8089e8cf16abb04ff66e
+RMD160 (Jemplate-0.261.tar.gz) = 80fd58eaf821b772eb11bce3fed609c582f19175
+Size (Jemplate-0.261.tar.gz) = 251573 bytes
