@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2589 2011/10/20 11:29:08 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2590 2011/10/20 12:29:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4116,3 +4116,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Jemplate to 0.261 [hiramatsu 2011-10-20]
 	Updated devel/gettext to 0.18.1.1nb1 [adam 2011-10-20]
 	Added fonts/uni-vga version 1 [wiz 2011-10-20]
+	Updated lang/sun-jre6 to 6.0.29 [obache 2011-10-20]
+	Updated lang/sun-jdk6 to 6.0.29 [obache 2011-10-20]
