@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.6 2009/09/19 09:30:41 obache Exp $
+$NetBSD: patch-am,v 1.6.18.1 2011/10/20 03:59:44 tron Exp $
 
 --- setup.py.orig	2006-10-08 17:41:25.000000000 +0000
 +++ setup.py
@@ -261,25 +261,37 @@ $NetBSD: patch-am,v 1.6 2009/09/19 09:30:41 obache Exp $
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -689,11 +574,13 @@
-                 exts.append( Extension('dbm', ['dbmmodule.c'],
+@@ -686,16 +571,21 @@
+                     ndbm_libs = ['ndbm']
+                 else:
+                     ndbm_libs = []
+-                exts.append( Extension('dbm', ['dbmmodule.c'],
++                if not self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
++                    exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
 -            elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
 -                  and find_file("gdbm/ndbm.h", inc_dirs, []) is not None):
-+            elif find_file("ndbm.h", db_incs, []) is not None:
-                 exts.append( Extension('dbm', ['dbmmodule.c'],
+-                exts.append( Extension('dbm', ['dbmmodule.c'],
 -                                       define_macros=[('HAVE_GDBM_NDBM_H',None)],
 -                                       libraries = ['gdbm'] ) )
+-            elif db_incs is not None:
+-                exts.append( Extension('dbm', ['dbmmodule.c'],
++
++            if not module_enabled(exts, 'dbm'):
++                if find_file("ndbm.h", db_incs, []) is not None:
++                    exts.append( Extension('dbm', ['dbmmodule.c'],
 +                                       library_dirs=dblib_dir,
 +                                       runtime_library_dirs=dblib_dir,
 +                                       include_dirs=db_incs,
 +                                       define_macros=[('HAVE_NDBM_H',None)],
 +                                       libraries=dblibs))
-             elif db_incs is not None:
-                 exts.append( Extension('dbm', ['dbmmodule.c'],
++                elif db_incs is not None:
++                    exts.append( Extension('dbm', ['dbmmodule.c'],
                                         library_dirs=dblib_dir,
-@@ -1224,8 +1111,8 @@
+                                        runtime_library_dirs=dblib_dir,
+                                        include_dirs=db_incs,
+@@ -1224,8 +1114,8 @@
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
