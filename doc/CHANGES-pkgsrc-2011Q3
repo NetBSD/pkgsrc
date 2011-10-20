@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.22 2011/10/20 01:50:00 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.23 2011/10/20 04:01:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -93,3 +93,10 @@ Pullup ticket #3571 - requested by sbd
 devel/poco: build fix
 Pullup ticket #3567 - requested by obache
 multimedia/vlc: security patch
+Pullup ticket #3572 - requested by sbd
+lang/python24: build fix
+lang/python25: build fix
+lang/python26: build fix
+lang/python27: build fix
+lang/python31: build fix
+security/cyrus-sasl: build fix
