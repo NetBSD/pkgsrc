@@ -1,6 +1,6 @@
-$NetBSD: patch-Zend_zend__builtin__functions.c,v 1.1 2011/10/20 13:32:20 taca Exp $
+$NetBSD: patch-Zend_zend__builtin__functions.c,v 1.2 2011/10/20 14:30:55 taca Exp $
 
-* Fix for 2011-3379 from r317183 from PHP's repository.
+* Fix for CVE-2011-3379 from r317183 from PHP's repository.
 
 --- Zend/zend_builtin_functions.c.orig	2011-08-08 14:54:50.000000000 +0000
 +++ Zend/zend_builtin_functions.c
