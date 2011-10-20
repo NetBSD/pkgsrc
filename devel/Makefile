@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1501 2011/10/16 05:39:32 manu Exp $
+# $NetBSD: Makefile,v 1.1502 2011/10/20 15:09:23 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1300,6 +1300,7 @@ SUBDIR+=	ruby-eventmachine
 SUBDIR+=	ruby-extlib
 SUBDIR+=	ruby-facade
 SUBDIR+=	ruby-ffi
+SUBDIR+=	ruby-fiddle
 SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-gemcutter
 SUBDIR+=	ruby-getopt
