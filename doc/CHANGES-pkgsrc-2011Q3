@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.21 2011/10/19 13:50:49 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.22 2011/10/20 01:50:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -91,3 +91,5 @@ Pullup ticket #3564 - requested by obache
 pkgsrc/devel/poco: build fix
 Pullup ticket #3571 - requested by sbd
 devel/poco: build fix
+Pullup ticket #3567 - requested by obache
+multimedia/vlc: security patch
