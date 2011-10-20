@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/20 15:08:12 taca Exp $
+${RUBY_VENDORLIB}/fiddle.rb
+${RUBY_VENDORLIB}/fiddle/closure.rb
+${RUBY_VENDORLIB}/fiddle/function.rb
+${RUBY_VENDORARCHLIB}/fiddle.${RUBY_DLEXT}
