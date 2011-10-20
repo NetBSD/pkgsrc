@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2591 2011/10/20 13:26:14 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2592 2011/10/20 13:33:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4119,3 +4119,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/sun-jre6 to 6.0.29 [obache 2011-10-20]
 	Updated lang/sun-jdk6 to 6.0.29 [obache 2011-10-20]
 	Updated net/aria2 to 1.13.0 [ryoon 2011-10-20]
+	Updated lang/php53 to 5.3.8nb1 [taca 2011-10-20]
