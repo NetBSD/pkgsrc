@@ -1,14 +1,16 @@
-# $NetBSD: Makefile.common,v 1.20 2010/09/10 03:24:42 taca Exp $
+# $NetBSD: Makefile.common,v 1.21 2011/10/20 15:13:24 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
 # used by devel/ruby-curses/Makefile
 # used by devel/ruby-readline/Makefile
 # used by devel/ruby-mode/Makefile
+# used by devel/ruby-fiddle/Makefile
 # used by lang/ruby18/Makefile
 # used by lang/ruby18-base/Makefile
 # used by lang/ruby19/Makefile
 # used by lang/ruby19-base/Makefile
+# used by textproc/ruby-psych/Makefile
 # used by x11/ruby-tk/Makefile
 
 LICENSE=	gnu-gpl-v2
