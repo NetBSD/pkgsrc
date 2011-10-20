@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2011/04/12 17:41:28 adam Exp $
+# $NetBSD: Makefile,v 1.80 2011/10/20 10:22:51 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Tools for providing messages in different languages
 LICENSE=	gnu-gpl-v2
@@ -30,13 +32,10 @@ USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
 do-install:
 	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/projects && ${MAKE} install DESTDIR=${DESTDIR}
-	cd ${WRKSRC}/gettext-tools/misc && ${MAKE} install DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/src && ${MAKE} install-tcl install-exec-local DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-runtime && ${MAKE} install-gettextsrcDATA DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/intl && ${MAKE} install-exec install-data DESTDIR=${DESTDIR}
-	cd ${WRKSRC}/gettext-tools/po && ${MAKE} installdirs-data install-data DESTDIR=${DESTDIR}
-	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/autopoint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/gettextize.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	cd ${WRKSRC}/gettext-tools/po && ${MAKE} installdirs-data DESTDIR=${DESTDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-asprintf/buildlink3.mk"
