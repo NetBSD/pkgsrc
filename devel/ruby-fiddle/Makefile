@@ -1,0 +1,23 @@
+# $NetBSD: Makefile,v 1.1.1.1 2011/10/20 15:08:12 taca Exp $
+#
+
+DISTNAME=		${RUBY_DISTNAME}
+PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_SUFFIX}
+RUBY_EXTNAME=		fiddle
+CATEGORIES=		devel ruby
+MASTER_SITES=		${MASTER_SITE_RUBY}
+
+MAINTAINER=		taca@NetBSD.org
+HOMEPAGE=		${RUBY_HOMEPAGE}
+COMMENT=		Ruby fiddle library to wrap libffi
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_RUBY_EXTCONF=	yes
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/fiddle
+WRKSRC=			${RUBY_WRKSRC}/ext/fiddle
+
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
+.include "../../devel/libffi/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
