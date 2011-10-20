@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2011/09/10 11:23:12 obache Exp $
+$NetBSD: patch-am,v 1.2.2.1 2011/10/20 03:59:45 tron Exp $
 
 --- setup.py.orig	2011-06-11 15:48:52.000000000 +0000
 +++ setup.py
@@ -41,7 +41,36 @@ $NetBSD: patch-am,v 1.2 2011/09/10 11:23:12 obache Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -1315,6 +1319,14 @@ class PyBuildExt(build_ext):
+@@ -1054,13 +1058,15 @@ class PyBuildExt(build_ext):
+                             ndbm_libs = ['ndbm']
+                         else:
+                             ndbm_libs = []
+-                        print("building dbm using ndbm")
+-                        dbmext = Extension('_dbm', ['_dbmmodule.c'],
++                        if not self.compiler.find_library_file(lib_dirs,
++                                                                    'gdbm'):
++                            print("building dbm using ndbm")
++                            dbmext = Extension('_dbm', ['_dbmmodule.c'],
+                                            define_macros=[
+                                                ('HAVE_NDBM_H',None),
+                                                ],
+                                            libraries=ndbm_libs)
+-                        break
++                            break
+ 
+                 elif cand == "gdbm":
+                     if self.compiler.find_library_file(lib_dirs, 'gdbm'):
+@@ -1085,7 +1091,8 @@ class PyBuildExt(build_ext):
+                                     ],
+                                 libraries = gdbm_libs)
+                             break
+-                elif cand == "bdb":
++
++                if cand == "bdb" and dbmext is None:
+                     if db_incs is not None:
+                         print("building dbm using bdb")
+                         dbmext = Extension('_dbm', ['_dbmmodule.c'],
+@@ -1315,6 +1322,14 @@ class PyBuildExt(build_ext):
              macros = dict()
              libraries = []
  
@@ -56,7 +85,7 @@ $NetBSD: patch-am,v 1.2 2011/09/10 11:23:12 obache Exp $
          else:                                   # Linux and other unices
              macros = dict()
              libraries = ['rt']
-@@ -1831,8 +1843,8 @@ def main():
+@@ -1831,8 +1846,8 @@ def main():
            # called unless there's at least one extension module defined.
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
