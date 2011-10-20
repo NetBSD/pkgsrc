@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2011/04/12 17:41:28 adam Exp $
-bin/autopoint
-bin/gettextize
+@comment $NetBSD: PLIST,v 1.14 2011/10/20 10:22:51 adam Exp $
 lib/gettext/hostname
 lib/gettext/project-id
 lib/gettext/urlget
 lib/gettext/user-email
-man/man1/autopoint.1
-man/man1/gettextize.1
 share/gettext/ABOUT-NLS
-share/gettext/archive.dir.tar.gz
 share/gettext/config.rpath
 share/gettext/intl/COPYING.LIB-2.0
 share/gettext/intl/COPYING.LIB-2.1
@@ -76,15 +71,6 @@ share/gettext/intl/version.c
 share/gettext/intl/wprintf-parse.h
 share/gettext/intl/xsize.h
 share/gettext/msgunfmt.tcl
-share/gettext/po/Makefile.in.in
-share/gettext/po/Makevars.template
-share/gettext/po/Rules-quot
-share/gettext/po/boldquot.sed
-share/gettext/po/en@boldquot.header
-share/gettext/po/en@quot.header
-share/gettext/po/insert-header.sin
-share/gettext/po/quot.sed
-share/gettext/po/remove-potcdate.sin
 share/gettext/projects/GNOME/team-address
 share/gettext/projects/GNOME/teams.html
 share/gettext/projects/GNOME/teams.url
