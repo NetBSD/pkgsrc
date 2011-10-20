@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/16 17:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/20 11:32:11 wiz Exp $
 #
 
 DISTNAME=	tamsyn-font-1.6
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 FONTDIR=		${PREFIX}/lib/X11/fonts/tamsyn-font
 FONTS_DIRS.x11+=	${FONTDIR}
-OWN_DIRS=		${FONTDIR}
 
 INSTALLATION_DIRS=	${FONTDIR} share/doc/tamsyn-font
 
