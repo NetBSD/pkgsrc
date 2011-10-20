@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/20 11:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/20 11:30:10 wiz Exp $
 #
 
 DISTNAME=	uni-vga
@@ -17,7 +17,6 @@ USE_TOOLS+=		bdftopcf gzip
 
 FONTDIR=		${PREFIX}/lib/X11/fonts/uni-vga
 FONTS_DIRS.x11+=	${FONTDIR}
-OWN_DIRS=		${FONTDIR}
 WRKSRC=			${WRKDIR}/uni_vga
 
 INSTALLATION_DIRS=	${FONTDIR}
