@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2011/09/17 11:32:02 obache Exp $
+# $NetBSD: Makefile,v 1.57.2.1 2011/10/20 03:59:45 tron Exp $
 
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-.if exists(/usr/include/ndbm.h)
+.if exists(/usr/include/ndbm.h) && ${OPSYS} != "Linux"
 SASL_DBTYPE?=		ndbm
 .else
 SASL_DBTYPE?=		berkeley

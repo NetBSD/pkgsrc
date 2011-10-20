@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.16 2011/10/01 03:11:15 dsainty Exp $
+$NetBSD: patch-am,v 1.16.2.1 2011/10/20 03:59:44 tron Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -298,8 +298,14 @@ support building the "nis" and "crypt" modules.
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -1131,7 +974,7 @@
-                 exts.append( Extension('dbm', ['dbmmodule.c'],
+@@ -1128,10 +971,12 @@
+                     ndbm_libs = ['ndbm']
+                 else:
+                     ndbm_libs = []
+-                exts.append( Extension('dbm', ['dbmmodule.c'],
++		# Don't use gdbm_compat!
++		if not self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
++		    exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
 -            elif self.compiler.find_library_file(lib_dirs, 'gdbm'):
@@ -307,12 +313,13 @@ support building the "nis" and "crypt" modules.
                  gdbm_libs = ['gdbm']
                  if self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
                      gdbm_libs.append('gdbm_compat')
-@@ -1147,14 +990,11 @@
+@@ -1147,14 +990,12 @@
                          libraries = gdbm_libs ) )
                  else:
                      missing.append('dbm')
 -            elif db_incs is not None:
-+            elif 1==1:
++
++            if not module_enabled(exts, 'dbm'):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
 -                                       library_dirs=dblib_dir,
 -                                       runtime_library_dirs=dblib_dir,
