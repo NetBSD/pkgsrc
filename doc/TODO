@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10615 2011/10/18 22:33:20 taca Exp $
+$NetBSD: TODO,v 1.10616 2011/10/20 01:25:02 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1639,8 +1639,7 @@ Suggested cleanups in pkgsrc
 	  example, x11/kbproto/builtin.mk and x11/libXrender/builtin.mk
 	  almost look the same.
 
-	o Replace inclusions of print/teTeX/module.mk and
-	  mk/tex.buildlink3.mk (pulling in a lot of tex packages)
-	  with (build) dependencies on the appropriate split tex
-	  packages. In case styles are used, look for
+	o Replace inclusion mk/tex.buildlink3.mk (pulling in a lot of
+	  tex packages) with (build) dependencies on the appropriate
+	  split tex packages. In case styles are used, look for
 	  \RequirePackage{...}.
