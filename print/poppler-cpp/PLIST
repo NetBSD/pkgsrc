@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2011/10/20 16:32:57 drochner Exp $
+include/poppler/cpp/poppler-document.h
+include/poppler/cpp/poppler-embedded-file.h
+include/poppler/cpp/poppler-font.h
+include/poppler/cpp/poppler-global.h
+include/poppler/cpp/poppler-image.h
+include/poppler/cpp/poppler-page-renderer.h
+include/poppler/cpp/poppler-page-transition.h
+include/poppler/cpp/poppler-page.h
+include/poppler/cpp/poppler-rectangle.h
+include/poppler/cpp/poppler-toc.h
+include/poppler/cpp/poppler-version.h
+lib/libpoppler-cpp.la
+lib/pkgconfig/poppler-cpp.pc
