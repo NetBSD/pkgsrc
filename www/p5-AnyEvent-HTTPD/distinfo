@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/04 11:57:24 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/10/21 21:09:10 hiramatsu Exp $
 
-SHA1 (AnyEvent-HTTPD-0.84.tar.gz) = 2dac7810ba502e672276e9e1a26f00a4e17773d1
-RMD160 (AnyEvent-HTTPD-0.84.tar.gz) = 63461c8651dce25716065461f289cb53535ee315
-Size (AnyEvent-HTTPD-0.84.tar.gz) = 33597 bytes
+SHA1 (AnyEvent-HTTPD-0.93.tar.gz) = 78ebb0c8e2a6d06e25a516c37a61f6ca31a6ec82
+RMD160 (AnyEvent-HTTPD-0.93.tar.gz) = 2586cd2739ccdaba57d4458c611b57c712892bca
+Size (AnyEvent-HTTPD-0.93.tar.gz) = 40226 bytes
