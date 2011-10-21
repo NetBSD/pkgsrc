@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2593 2011/10/20 15:14:56 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2594 2011/10/21 04:05:20 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4123,3 +4123,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/ruby-fiddle version 1.9.2pl290 [taca 2011-10-20]
 	Added textproc/ruby-psych version 1.9.2pl290 [taca 2011-10-20]
 	Updated lang/ruby19 to 1.9.2pl290nb1 [taca 2011-10-20]
+	Updated textproc/p5-Regexp-Common to 2011041701 [hiramatsu 2011-10-21]
+	Updated databases/p5-DBIx-Class-Fixtures to 1.001013 [hiramatsu 2011-10-21]
+	Updated www/p5-Dancer to 1.3072 [hiramatsu 2011-10-21]
