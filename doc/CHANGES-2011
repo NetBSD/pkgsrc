@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2601 2011/10/21 16:03:35 chs Exp $
+$NetBSD: CHANGES-2011,v 1.2602 2011/10/21 18:31:13 cegger Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4136,3 +4136,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/abcmidi to 20111019 [ryoon 2011-10-21]
 	Updated emulators/suse113_openssl to 11.3nb5 [chs 2011-10-21]
 	Updated emulators/suse113_qt4 to 11.3nb1 [chs 2011-10-21]
+	Updated sysutils/xenkernel41 to 4.1.2 [cegger 2011-10-21]
+	Updated sysutils/xentools41 to 4.1.2 [cegger 2011-10-21]
