@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2599 2011/10/21 13:33:01 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2600 2011/10/21 16:02:57 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4134,3 +4134,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/abcm2ps to 6.5.2 [ryoon 2011-10-21]
 	Added devel/lettuce version 0.1.33 [reed 2011-10-21]
 	Updated audio/abcmidi to 20111019 [ryoon 2011-10-21]
+	Updated emulators/suse113_openssl to 11.3nb5 [chs 2011-10-21]
