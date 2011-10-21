@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.1 2011/02/16 19:19:28 shattered Exp $
+$NetBSD: patch-ai,v 1.2 2011/10/21 19:37:29 ryoon Exp $
 
 Highlight folded header lines properly (PR 36612)
 
---- states/hl/mail.st.orig	2003-03-05 08:26:33.000000000 +0100
-+++ states/hl/mail.st	2007-07-05 09:08:04.000000000 +0200
+--- states/hl/mail.st.orig	2009-01-11 19:21:13.000000000 +0000
++++ states/hl/mail.st
 @@ -27,7 +27,7 @@ state mail_header extends Highlight
    END {
      comment_face (true);
