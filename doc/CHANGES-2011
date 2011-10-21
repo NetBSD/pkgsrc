@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2594 2011/10/21 04:05:20 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2595 2011/10/21 07:15:26 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4126,3 +4126,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/p5-Regexp-Common to 2011041701 [hiramatsu 2011-10-21]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001013 [hiramatsu 2011-10-21]
 	Updated www/p5-Dancer to 1.3072 [hiramatsu 2011-10-21]
+	Updated devel/p5-Module-CoreList to 2.57 [hiramatsu 2011-10-21]
+	Updated devel/p5-MooseX-Getopt to 0.37 [hiramatsu 2011-10-21]
+	Updated www/p5-Pod-POM-Web to 1.17 [hiramatsu 2011-10-21]
