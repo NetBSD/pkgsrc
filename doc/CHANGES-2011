@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2603 2011/10/21 19:38:28 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2604 2011/10/21 20:57:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4139,3 +4139,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/xenkernel41 to 4.1.2 [cegger 2011-10-21]
 	Updated sysutils/xentools41 to 4.1.2 [cegger 2011-10-21]
 	Updated print/enscript to 1.6.5.2 [ryoon 2011-10-21]
+	Updated audio/libmp3splt to 0.7 [ryoon 2011-10-21]
+	Updated audio/mp3splt to 2.4 [ryoon 2011-10-21]
+	Updated audio/mp3splt-gtk to 0.7 [ryoon 2011-10-21]
