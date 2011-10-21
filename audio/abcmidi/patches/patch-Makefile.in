@@ -1,0 +1,39 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/10/21 13:31:55 ryoon Exp $
+
+--- /usr/tmp/audio/abcmidi/work/abcmidi/Makefile.in.orig	2011-08-19 16:20:25.000000000 +0000
++++ /usr/tmp/audio/abcmidi/work/abcmidi/Makefile.in
+@@ -50,7 +50,7 @@ VPATH = @srcdir@
+ bindir = @bindir@
+ libdir = @libdir@
+ datadir = @datarootdir@
+-docdir = @prefix@/doc
++docdir = @prefix@/share/doc/abcmidi
+ mandir=@mandir@/man1
+ 
+ binaries=abc2midi midi2abc abc2abc mftext yaps midicopy abcmatch
+@@ -140,17 +140,17 @@ clean :
+ 	rm *.o ${binaries}
+ 
+ install: abc2midi midi2abc abc2abc mftext midicopy yaps abcmatch
+-	test -d $(DESTDIR)${prefix}/${bindir} || mkdir -p $(DESTDIR)${prefix}/${bindir}
+-	$(INSTALL) -m 755 ${binaries} $(DESTDIR)${prefix}/${bindir}
++	test -d $(DESTDIR)/${bindir} || mkdir -p $(DESTDIR)/${bindir}
++	$(INSTALL) -m 755 ${binaries} $(DESTDIR)/${bindir}
+ 
+ 	# install documentation
+ 	test -d $(DESTDIR)${PREFIX}/share/doc/abcmidi || mkdir -p $(DESTDIR)${prefix}/${docdir}
+-	$(INSTALL) -m 644 doc/*.txt $(DESTDIR)${prefix}/${docdir}
+-	$(INSTALL) -m 644 doc/AUTHORS $(DESTDIR)${prefix}/${docdir}
+-	$(INSTALL) -m 644 doc/CHANGES $(DESTDIR)${prefix}/${docdir}
+-	$(INSTALL) -m 644 VERSION $(DESTDIR)${prefix}/${docdir}
++	$(INSTALL) -m 644 doc/*.txt $(DESTDIR)/${docdir}
++	$(INSTALL) -m 644 doc/AUTHORS $(DESTDIR)/${docdir}
++	$(INSTALL) -m 644 doc/CHANGES $(DESTDIR)/${docdir}
++	$(INSTALL) -m 644 VERSION $(DESTDIR)/${docdir}
+ 
+ 	# install manpages
+-	test -d $(DESTDIR)${prefix}/${mandir} || mkdir -p $(DESTDIR)${prefix}/${mandir};
+-	$(INSTALL) -m 644 doc/*.1 $(DESTDIR)${prefix}/${mandir}
++	test -d $(DESTDIR)/${mandir} || mkdir -p $(DESTDIR)/${mandir};
++	$(INSTALL) -m 644 doc/*.1 $(DESTDIR)/${mandir}
+ 
