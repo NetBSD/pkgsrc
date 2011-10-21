@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10622 2011/10/21 20:58:08 ryoon Exp $
+$NetBSD: TODO,v 1.10623 2011/10/21 21:28:40 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -944,7 +944,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o luit-1.1.0
 	o lwm-1.2.2
 	o lyx-2.0.0
-	o lzip-1.12
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
