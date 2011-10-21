@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2598 2011/10/21 12:39:35 reed Exp $
+$NetBSD: CHANGES-2011,v 1.2599 2011/10/21 13:33:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4133,3 +4133,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-Rose-DB to 0.764 [hiramatsu 2011-10-21]
 	Updated print/abcm2ps to 6.5.2 [ryoon 2011-10-21]
 	Added devel/lettuce version 0.1.33 [reed 2011-10-21]
+	Updated audio/abcmidi to 20111019 [ryoon 2011-10-21]
