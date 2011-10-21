@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/21 21:41:09 ryoon Exp $
+
+SHA1 (zutils-0.9.tar.gz) = 69ecf5632c73fc67d5387e0b4e2f429d960e2648
+RMD160 (zutils-0.9.tar.gz) = 59187ba1fa821e3d8314f036f0c39f287b5db595
+Size (zutils-0.9.tar.gz) = 66382 bytes
