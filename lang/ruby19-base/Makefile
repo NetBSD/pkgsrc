@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/09/04 17:02:39 taca Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/21 03:09:48 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -122,6 +122,7 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
 	${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
+	${RM} -f ${WRKSRC}/ext/psych/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
 
