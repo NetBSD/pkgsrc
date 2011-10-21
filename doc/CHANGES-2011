@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2605 2011/10/21 21:10:33 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2606 2011/10/21 21:28:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4144,3 +4144,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/mp3splt-gtk to 0.7 [ryoon 2011-10-21]
 	Updated www/p5-AnyEvent-HTTPD to 0.93 [hiramatsu 2011-10-21]
 	Updated security/p5-Authen-Htpasswd to 0.171 [hiramatsu 2011-10-21]
+	Updated archivers/lzip to 1.12 [ryoon 2011-10-21]
