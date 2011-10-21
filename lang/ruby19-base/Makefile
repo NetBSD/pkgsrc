@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/10/21 03:09:48 taca Exp $
+# $NetBSD: Makefile,v 1.15 2011/10/21 05:24:13 obache Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -88,7 +88,7 @@ CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 #
 # work around for getaddrinfo(3)
 #
-.if ${OPSYS} == "Linux" || (${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.[6-9]))
+.if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.[6-9])
 CONFIGURE_ARGS+=	--enable-wide-getaddrinfo
 .endif
 
