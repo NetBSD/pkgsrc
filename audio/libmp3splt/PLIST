@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2010/11/30 19:16:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/10/21 20:51:50 ryoon Exp $
 include/libmp3splt/mp3splt.h
 lib/libmp3splt.la
 lib/libmp3splt/libsplt_mp3.la
 lib/libmp3splt/libsplt_ogg.la
 share/aclocal/mp3splt.m4
-share/locale/de/LC_MESSAGES/libmp3splt.mo
-share/locale/fr/LC_MESSAGES/libmp3splt.mo
+share/locale/cs/LC_MESSAGES/libmp3splt.mo
+share/locale/de_DE/LC_MESSAGES/libmp3splt.mo
+share/locale/es/LC_MESSAGES/libmp3splt.mo
+share/locale/fr_FR/LC_MESSAGES/libmp3splt.mo
