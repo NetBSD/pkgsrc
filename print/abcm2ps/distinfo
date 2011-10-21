@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2011/05/13 12:45:13 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2011/10/21 12:35:17 ryoon Exp $
 
-SHA1 (abcm2ps-6.3.4.tar.gz) = 27b46f8f877123e2aa11b421c0f06f46f6f0354d
-RMD160 (abcm2ps-6.3.4.tar.gz) = 477ccd02a1356206f030c436d75478884066f7d8
-Size (abcm2ps-6.3.4.tar.gz) = 283186 bytes
+SHA1 (abcm2ps-6.5.2.tar.gz) = 77263988f064791cfe5943f225ba03d0e095b986
+RMD160 (abcm2ps-6.5.2.tar.gz) = 9f2994c476dd960a788ba7015ce79f60a28fe0b9
+Size (abcm2ps-6.5.2.tar.gz) = 295183 bytes
 SHA1 (patch-aa) = 707ece683628fe24245840d9c019f83779dc3699
