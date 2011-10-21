@@ -1,14 +1,6 @@
-$NetBSD: distinfo,v 1.10 2011/02/16 19:19:28 shattered Exp $
+$NetBSD: distinfo,v 1.11 2011/10/21 19:37:28 ryoon Exp $
 
-SHA1 (enscript-1.6.4.tar.gz) = 9dd7128a508d4c9671659b9520028d12add50cfa
-RMD160 (enscript-1.6.4.tar.gz) = 9050728f14500f0360c5a4e258cba0646694bfeb
-Size (enscript-1.6.4.tar.gz) = 1036734 bytes
-SHA1 (patch-aa) = 0b095dbb1681b121a417bd7b3fb2dff351fcfa86
-SHA1 (patch-ab) = 67cf45f43ad282174b5bbaf8c60be3448c76f235
-SHA1 (patch-ac) = d43a55bfde2afe9bf49ab8cdd6bf7b2205d3952b
-SHA1 (patch-ad) = 31e461f8b2647699a2847445703745a07994e571
-SHA1 (patch-ae) = 311ee615f231adbeece251606617065d306249ac
-SHA1 (patch-af) = ae3f6a37dab2ac1b5d95288555eeef5a25660547
-SHA1 (patch-ag) = aab78f9f1c9bc35f45d44498f0eec7c3ad82e33c
-SHA1 (patch-ah) = 6188dec56487a211b7028fdaf40e88aa14bccaf1
-SHA1 (patch-ai) = 141be819aa31212fe6edaf22e003a44864ff5fcb
+SHA1 (enscript-1.6.5.2.tar.gz) = b6d08e72e8e75e7c8a72c75a55c8de3bdebcf22c
+RMD160 (enscript-1.6.5.2.tar.gz) = 065f516bbeec8d2fd5f60b2e869312d7eb1b8a69
+Size (enscript-1.6.5.2.tar.gz) = 1318283 bytes
+SHA1 (patch-ai) = e0f5d63126f1d8c78f01d30f1dee6c890aabae4d
