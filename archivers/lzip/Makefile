@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/01/24 23:59:33 zafer Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/21 21:26:47 ryoon Exp $
 #
 
-DISTNAME=	lzip-1.7
+DISTNAME=	lzip-1.12
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/
 
