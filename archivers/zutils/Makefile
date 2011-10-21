@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/21 21:41:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/21 21:43:29 ryoon Exp $
 #
 
 DISTNAME=	zutils-0.9
@@ -11,6 +11,8 @@ COMMENT=	Utilities able to deal with any combination of compressed and non-compr
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		lzip<1.12
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
