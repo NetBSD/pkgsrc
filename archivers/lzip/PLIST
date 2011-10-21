@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/15 08:36:48 wiz Exp $
-bin/lzdiff
-bin/lzgrep
+@comment $NetBSD: PLIST,v 1.2 2011/10/21 21:26:47 ryoon Exp $
 bin/lzip
 bin/lziprecover
 info/lzip.info
-man/man1/lzdiff.1
-man/man1/lzgrep.1
 man/man1/lzip.1
 man/man1/lziprecover.1
