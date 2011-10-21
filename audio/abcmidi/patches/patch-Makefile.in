@@ -1,4 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.1 2011/10/21 13:31:55 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2011/10/21 14:50:09 ryoon Exp $
+
+* Fix double prefix problem
+* Adjust docdir
 
 --- /usr/tmp/audio/abcmidi/work/abcmidi/Makefile.in.orig	2011-08-19 16:20:25.000000000 +0000
 +++ /usr/tmp/audio/abcmidi/work/abcmidi/Makefile.in
