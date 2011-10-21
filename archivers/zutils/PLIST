@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/21 21:41:09 ryoon Exp $
+bin/zcat
+bin/zcmp
+bin/zdiff
+bin/zegrep
+bin/zfgrep
+bin/zgrep
+bin/ztest
+bin/zutils
+info/zutils.info
+man/man1/zcat.1
+man/man1/zcmp.1
+man/man1/zdiff.1
+man/man1/zgrep.1
+man/man1/ztest.1
