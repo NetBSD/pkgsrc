@@ -1,0 +1,4 @@
+Lettuce is a simple behaviour-driven development (BDD) tool based
+on Cucumber. The features of the system (to be tested) are defined
+in a natural language with scenarios describing the features. Steps
+are written in python.
