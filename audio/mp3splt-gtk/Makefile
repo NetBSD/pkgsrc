@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:42:56 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/21 20:56:00 ryoon Exp $
 #
 
-DISTNAME=		mp3splt-gtk-0.6
-PKGREVISION=		2
+DISTNAME=		mp3splt-gtk-0.7
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mp3splt/}
 
@@ -14,8 +13,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=	 	yes
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		pkg-config msgfmt gmake
 USE_DIRS+=		xdg-1.1
+
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--enable-gstreamer
 CONFIGURE_ARGS+=	--disable-audacious
