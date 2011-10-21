@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/30 19:23:55 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/10/21 20:56:00 ryoon Exp $
 
-SHA1 (mp3splt-gtk-0.6.tar.gz) = 19834f40a67502a78638896bf922bea1cc1a933d
-RMD160 (mp3splt-gtk-0.6.tar.gz) = be6ac738a6bec7b3c96692a12920685e169e6438
-Size (mp3splt-gtk-0.6.tar.gz) = 312767 bytes
+SHA1 (mp3splt-gtk-0.7.tar.gz) = 06b0d86342a24426905ce355e3fcc417249ec4ee
+RMD160 (mp3splt-gtk-0.7.tar.gz) = 34af2506fca171b2c8650b931a508751a2cb1e2f
+Size (mp3splt-gtk-0.7.tar.gz) = 849473 bytes
