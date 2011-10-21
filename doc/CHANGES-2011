@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2596 2011/10/21 10:08:50 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2597 2011/10/21 12:36:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4131,3 +4131,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Pod-POM-Web to 1.17 [hiramatsu 2011-10-21]
 	Added devel/p5-Data-Integer version 0.004 [hiramatsu 2011-10-21]
 	Updated databases/p5-Rose-DB to 0.764 [hiramatsu 2011-10-21]
+	Updated print/abcm2ps to 6.5.2 [ryoon 2011-10-21]
