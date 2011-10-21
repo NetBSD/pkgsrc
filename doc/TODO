@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10623 2011/10/21 21:28:40 ryoon Exp $
+$NetBSD: TODO,v 1.10624 2011/10/21 23:30:47 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -965,7 +965,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o minivmac-3.0.4
 	o miredo-1.2.4
 	o mirmon-1.37
-	o mk-configure-0.21.1
 	o mkfontdir-1.0.6 [pkg/45461]
 	o mkfontscale-1.0.9 [pkg/45460]
 	o mknmz-wwwoffle-0.7.2
