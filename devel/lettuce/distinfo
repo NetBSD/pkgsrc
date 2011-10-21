@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/21 12:35:30 reed Exp $
+
+SHA1 (lettuce-0.1.33.tar.gz) = f13d5513f97cb993d595f86644593de63b1e71d7
+RMD160 (lettuce-0.1.33.tar.gz) = 1aa99e2719399aeb17d1a7b2d6ed0988938dd8a8
+Size (lettuce-0.1.33.tar.gz) = 72212 bytes
