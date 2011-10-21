@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1502 2011/10/20 15:09:23 taca Exp $
+# $NetBSD: Makefile,v 1.1503 2011/10/21 10:06:57 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -615,6 +615,7 @@ SUBDIR+=	p5-Data-Dump-Streamer
 SUBDIR+=	p5-Data-Dumper-Concise
 SUBDIR+=	p5-Data-Dumper-Names
 SUBDIR+=	p5-Data-Hierarchy
+SUBDIR+=	p5-Data-Integer
 SUBDIR+=	p5-Data-OptList
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Pageset
