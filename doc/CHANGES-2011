@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2600 2011/10/21 16:02:57 chs Exp $
+$NetBSD: CHANGES-2011,v 1.2601 2011/10/21 16:03:35 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/lettuce version 0.1.33 [reed 2011-10-21]
 	Updated audio/abcmidi to 20111019 [ryoon 2011-10-21]
 	Updated emulators/suse113_openssl to 11.3nb5 [chs 2011-10-21]
+	Updated emulators/suse113_qt4 to 11.3nb1 [chs 2011-10-21]
