@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2602 2011/10/21 18:31:13 cegger Exp $
+$NetBSD: CHANGES-2011,v 1.2603 2011/10/21 19:38:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4138,3 +4138,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/suse113_qt4 to 11.3nb1 [chs 2011-10-21]
 	Updated sysutils/xenkernel41 to 4.1.2 [cegger 2011-10-21]
 	Updated sysutils/xentools41 to 4.1.2 [cegger 2011-10-21]
+	Updated print/enscript to 1.6.5.2 [ryoon 2011-10-21]
