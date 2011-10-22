@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2608 2011/10/21 23:30:47 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2609 2011/10/22 01:41:27 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4147,3 +4147,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/lzip to 1.12 [ryoon 2011-10-21]
 	Added archivers/zutils version 0.9 [ryoon 2011-10-21]
 	Updated devel/mk-configure to 0.21.2 [cheusov 2011-10-21]
+	Updated devel/p5-Tie-Cache-LRU to 20110205 [hiramatsu 2011-10-22]
+	Updated www/p5-Tatsumaki to 0.1013 [hiramatsu 2011-10-22]
+	Updated mail/p5-Mail-ListDetector to 1.04 [hiramatsu 2011-10-22]
