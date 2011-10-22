@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10628 2011/10/22 13:44:45 gls Exp $
+$NetBSD: TODO,v 1.10629 2011/10/22 15:08:10 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -330,7 +330,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.2.9
 	o MAMEDiff-2.30
 	o Mesa-7.10.3
 	o MesaLib-7.11
@@ -1049,7 +1048,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.5
 	o otpCalc-0.97
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.2.9
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
