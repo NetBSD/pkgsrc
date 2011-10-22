@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2615 2011/10/22 13:44:45 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2616 2011/10/22 13:51:44 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4157,3 +4157,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/moodle to 2.1.2 [gls 2011-10-23]
 	Updated devel/libgee to 0.6.2.1 [gls 2011-10-23]
 	Updated graphics/libraw to 0.14.2 [gls 2011-10-23]
+	Updated graphics/shotwell to 0.11.5 [gls 2011-10-23]
