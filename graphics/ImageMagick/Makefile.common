@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.90 2011/05/11 11:38:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.91 2011/10/22 14:55:51 ryoon Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 
-IM_MAJOR_VER=		6.6.9
-IM_MINOR_VER=		8
+IM_MAJOR_VER=		6.7.3
+IM_MINOR_VER=		1
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)

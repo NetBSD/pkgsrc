@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2011/05/11 11:38:48 adam Exp $
+# $NetBSD: Makefile,v 1.170 2011/10/22 14:55:51 ryoon Exp $
 
 .include "Makefile.common"
 
@@ -49,7 +49,7 @@ CONF_FILES+=	${EGDIR}/log.xml ${PKG_SYSCONFDIR}/log.xml
 CONF_FILES+=	${EGDIR}/magic.xml ${PKG_SYSCONFDIR}/magic.xml
 CONF_FILES+=	${EGDIR}/mime.xml ${PKG_SYSCONFDIR}/mime.xml
 CONF_FILES+=	${EGDIR}/policy.xml ${PKG_SYSCONFDIR}/policy.xml
-CONF_FILES+=	${EGDIR}/sRGB.icm ${PKG_SYSCONFDIR}/sRGB.icm
+CONF_FILES+=	${EGDIR}/sRGB.icc ${PKG_SYSCONFDIR}/sRGB.icc
 CONF_FILES+=	${EGDIR}/thresholds.xml ${PKG_SYSCONFDIR}/thresholds.xml
 CONF_FILES+=	${EGDIR}/type-dejavu.xml ${PKG_SYSCONFDIR}/type-dejavu.xml
 CONF_FILES+=	${EGDIR}/type-ghostscript.xml ${PKG_SYSCONFDIR}/type-ghostscript.xml
