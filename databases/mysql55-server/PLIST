@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/09/16 07:13:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/10/22 10:32:37 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -663,6 +663,7 @@ share/mysql/test/r/archive_bitfield.result
 share/mysql/test/r/archive_debug.result
 share/mysql/test/r/archive_gis.result
 share/mysql/test/r/archive_plugin.result
+share/mysql/test/r/auth_rpl.result
 share/mysql/test/r/auto_increment.result
 share/mysql/test/r/backup.result
 share/mysql/test/r/bench_count_distinct.result
@@ -1332,7 +1333,6 @@ share/mysql/test/std_data/bug48449.frm
 share/mysql/test/std_data/bug49823.CSM
 share/mysql/test/std_data/bug49823.CSV
 share/mysql/test/std_data/bug49823.frm
-share/mysql/test/std_data/bug57108.cnf
 share/mysql/test/std_data/cacert.pem
 share/mysql/test/std_data/charset_utf8.txt
 share/mysql/test/std_data/checkDBI_DBD-mysql.pl
@@ -2950,8 +2950,10 @@ share/mysql/test/suite/innodb/r/innodb_bug57904.result
 share/mysql/test/suite/innodb/r/innodb_bug59307.result
 share/mysql/test/suite/innodb/r/innodb_bug59410.result
 share/mysql/test/suite/innodb/r/innodb_bug59641.result
+share/mysql/test/suite/innodb/r/innodb_bug59733.result
 share/mysql/test/suite/innodb/r/innodb_bug60049.result
 share/mysql/test/suite/innodb/r/innodb_bug60196.result
+share/mysql/test/suite/innodb/r/innodb_corrupt_bit.result
 share/mysql/test/suite/innodb/r/innodb_file_format.result
 share/mysql/test/suite/innodb/r/innodb_gis.result
 share/mysql/test/suite/innodb/r/innodb_index_large_prefix.result
@@ -3049,10 +3051,12 @@ share/mysql/test/suite/innodb/t/innodb_bug57904.test
 share/mysql/test/suite/innodb/t/innodb_bug59307.test
 share/mysql/test/suite/innodb/t/innodb_bug59410.test
 share/mysql/test/suite/innodb/t/innodb_bug59641.test
+share/mysql/test/suite/innodb/t/innodb_bug59733.test
 share/mysql/test/suite/innodb/t/innodb_bug60049-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60049.test
 share/mysql/test/suite/innodb/t/innodb_bug60196-master.opt
 share/mysql/test/suite/innodb/t/innodb_bug60196.test
+share/mysql/test/suite/innodb/t/innodb_corrupt_bit.test
 share/mysql/test/suite/innodb/t/innodb_file_format.test
 share/mysql/test/suite/innodb/t/innodb_gis.test
 share/mysql/test/suite/innodb/t/innodb_index_large_prefix.test
@@ -4478,6 +4482,7 @@ share/mysql/test/suite/stress/t/ddl_csv.test
 share/mysql/test/suite/stress/t/ddl_innodb.test
 share/mysql/test/suite/stress/t/ddl_memory.test
 share/mysql/test/suite/stress/t/ddl_myisam.test
+share/mysql/test/suite/stress/t/wrapper.test
 share/mysql/test/suite/sys_vars/inc/autocommit_func2.inc
 share/mysql/test/suite/sys_vars/inc/binlog_cache_size_basic.inc
 share/mysql/test/suite/sys_vars/inc/binlog_stmt_cache_size_basic.inc
@@ -4640,8 +4645,10 @@ share/mysql/test/suite/sys_vars/r/innodb_file_io_threads_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_file_per_table_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_flush_log_at_trx_commit_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_flush_method_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_force_load_corrupted_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_force_recovery_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_io_capacity_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_large_prefix_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_lock_wait_timeout_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_locks_unsafe_for_binlog_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_log_buffer_size_basic.result
@@ -5105,8 +5112,10 @@ share/mysql/test/suite/sys_vars/t/innodb_file_io_threads_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_file_per_table_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_flush_log_at_trx_commit_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_flush_method_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_force_load_corrupted_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_force_recovery_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_io_capacity_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_large_prefix_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_lock_wait_timeout_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_locks_unsafe_for_binlog_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_log_buffer_size_basic.test
@@ -5294,6 +5303,7 @@ share/mysql/test/suite/sys_vars/t/pfs_max_thread_classes_basic.test
 share/mysql/test/suite/sys_vars/t/pfs_max_thread_instances_basic-master.opt
 share/mysql/test/suite/sys_vars/t/pfs_max_thread_instances_basic.test
 share/mysql/test/suite/sys_vars/t/pid_file_basic.test
+share/mysql/test/suite/sys_vars/t/plugin_dir_basic-master.opt
 share/mysql/test/suite/sys_vars/t/plugin_dir_basic.test
 share/mysql/test/suite/sys_vars/t/port_basic.test
 share/mysql/test/suite/sys_vars/t/preload_buffer_size_basic.test
@@ -5476,6 +5486,9 @@ share/mysql/test/t/archive_debug.test
 share/mysql/test/t/archive_gis.test
 share/mysql/test/t/archive_plugin-master.opt
 share/mysql/test/t/archive_plugin.test
+share/mysql/test/t/auth_rpl-master.opt
+share/mysql/test/t/auth_rpl-slave.opt
+share/mysql/test/t/auth_rpl.test
 share/mysql/test/t/auto_increment.test
 share/mysql/test/t/bench_count_distinct.test
 share/mysql/test/t/bigint.test
