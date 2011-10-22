@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/24 11:37:09 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/10/22 01:39:58 hiramatsu Exp $
 
-SHA1 (Tatsumaki-0.1010.tar.gz) = 098ebf51924b455784d76a91c99050c95c8c336d
-RMD160 (Tatsumaki-0.1010.tar.gz) = 4d3e72e3a05c2058b303be6d6acb00bd2aca56a2
-Size (Tatsumaki-0.1010.tar.gz) = 100348 bytes
+SHA1 (Tatsumaki-0.1013.tar.gz) = e229281df3015b956e888eb3b1f62a99be36f98b
+RMD160 (Tatsumaki-0.1013.tar.gz) = 3fd11e80deb87b9da90926d1e4979dc30e8056d0
+Size (Tatsumaki-0.1013.tar.gz) = 103044 bytes
