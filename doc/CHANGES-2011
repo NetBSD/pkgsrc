@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2619 2011/10/22 17:54:56 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2620 2011/10/22 18:38:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4175,3 +4175,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/transcode to 1.1.5nb8 [ryoon 2011-10-22]
 	Updated net/kismet to 2008.05.01nb9 [ryoon 2011-10-22]
 	Updated www/squid31 to 3.1.16 [tron 2011-10-22]
+	Updated net/clive to 2.3.1.1nb2 [wiz 2011-10-22]
