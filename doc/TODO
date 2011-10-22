@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10630 2011/10/22 17:54:56 tron Exp $
+$NetBSD: TODO,v 1.10631 2011/10/22 18:09:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,12 +339,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.13
+	o TeXmacs-1.0.7.14
 	o TiffIO-130e
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o accerciser-1.12.2 [GNOME 2.32]
+	o accerciser-3.2.1
 	o acme-091 [pkg/44771]
 	o acpica-utils-20110623
 	o acr-0.5.2
@@ -367,7 +368,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amsn-0.98.4
 	o angband-3.2
 	o anjuta-2.32.1.1 [GNOME 2.32]
-	o anjuta-3.0.3
+	o anjuta-3.2.1
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
@@ -399,7 +400,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
 	o asymptote-2.13
-	o at-spi-2.2.0
+	o at-spi-2.2.1
 	o aterm-1.0.1
 	o atk-2.2.0
 	o audacious-plugins-2.4.4
@@ -424,7 +425,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o binutils-2.21.1 [wip]
 	o bioperl-1.5.0
 	o bitmap-1.0.5
-	o blender-2.59
+	o blender-2.60
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -442,19 +443,20 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.21
+	o calibre-0.8.22 [pkg/45493]
+	o calibre-0.8.23
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
-	o cdialog-1.1.20110707
+	o cdialog-1.1.20111020
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.2.0
-	o cherokee-1.2.100
+	o cheese-3.2.1
+	o cherokee-1.2.101
 	o chromium-0.9.15
 	o chrony-1.26
 	o cinepaint-0.23
@@ -463,7 +465,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clamav-0.97.3
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-1.8.0
+	o clutter-1.8.2
 	o clutter-gst-1.4.2
 	o colorize-0.3.4
 	o colortail-0.3.3
@@ -511,7 +513,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.4.1
-	o dnsmasq-2.58
+	o dnsmasq-2.59
 	o dnstracer-1.9
 	o doclifter-2.7
 	o doxygen-1.7.5.1
@@ -558,6 +560,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epstool-3.08
 	o eric4-4.4.17
 	o eric5-5.1.5
+	o erlang-14.04
 	o esh-0.8.5
 	o espeak-1.40
 	o et-2.60
@@ -632,10 +635,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
-	o fossil-201109020.1.19
+	o fossil-1.20
 	o fox-1.6.41
 	o frama-c-20110201
-	o freeciv-2.2.5
+	o freeciv-2.3.0
 	o freeglut-2.4.0
 	o freenet-0.7
 	o freesci-0.6.4
@@ -689,25 +692,25 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glproto-1.4.14 [pkg/45462]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.2.0
+	o gnome-3.2.1
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-commander-1.2.8.14
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
-	o gnome-games-3.2.0
+	o gnome-games-3.2.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.2.0
+	o gnome-keyring-3.2.1
 	o gnome-mag-0.16.3
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
 	o gnome-packagekit-2.32.0 [GNOME 2.32]
-	o gnome-packagekit-3.2.0
+	o gnome-packagekit-3.2.1
 	o gnome-pilot-2.32.1 [GNOME 2.32]
 	o gnome-pilot-conduits-2.32.1 [GNOME 2.32]
 	o gnome-power-manager-2.32.0 [GNOME 2.32]
-	o gnome-power-manager-3.2.0
+	o gnome-power-manager-3.2.1
 	o gnome-session-2.32.1 [GNOME 2.32, wants DeviceKit-power]
 	o gnome-subtitles-1.2
 	o gnome-system-monitor-2.28.2
@@ -741,6 +744,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13a
 	o gthumb-2.12.4
 	o gtick-0.4.2
+	o gtk2-2.24.7
 	o gtk3-3.2.1
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
@@ -764,7 +768,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o haskell-mode-1.45
 	o hatari-1.5.0
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
-	o hdf5-1.8.7
 	o help2man-1.40.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
@@ -792,7 +795,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
 	o imapsync-1.452
-	o imp-5.0.13
+	o imp-5.0.14
 	o ingo-2.0.6
 	o inputproto-2.0.2
 	o inspircd-1.2.1
@@ -848,7 +851,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o krusader-2.0
 	o ktorrent-4.1.2
 	o ktorrent3-3.3.4
-	o lapack-3.3.0
+	o lapack-3.3.1
 	o latd-1.21
 	o latex2rtf-1.9.19
 	o lbdb-0.38
@@ -856,7 +859,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ldapsdk-6.0.7
 	o leafnode-1.11.8
 	o level9-4.1
-	o lftp-4.3.2
+	o lftp-4.3.3
 	o lgeneral-1.2.2
 	o libAppleWM-1.4.1
 	o libFS-1.0.3 [pkg/45468]
@@ -891,7 +894,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libextractor-0.6.2
 	o libffi-3.0.10
 	o libflash-0.4.13
-	o libfolks-0.6.3.2
+	o libfolks-0.6.4.1
 	o libfontenc-1.1.0
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
@@ -973,10 +976,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o monit-5.1.1
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
-	o mousetweaks-3.2.0
+	o mousetweaks-3.2.1
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
 	o mpg123-1.13.4
+	o mpich-1.4.1p1
 	o mpop-1.0.25
 	o mserv-devel-0.41
 	o mtools-4.0.17
@@ -1014,7 +1018,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-17.0
+	o nut-17.2
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1062,6 +1066,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pbzip2-1.1.5
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
+	o pcre-8.20
 	o pdfjam-2.08
 	o pdmenu-1.2.87
 	o pen-0.17.3
@@ -1101,6 +1106,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o printproto-1.0.5
 	o profit-2.5.3
 	o projclock-0.9
+	o proxsmtp-1.10
 	o psmisc-21.9
 	o pstoedit-3.60
 	o ptlib-2.8.0 [pkg/42941]
@@ -1197,11 +1203,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o seahorse-2.32.0 [GNOME 2.32]
-	o seahorse-3.2.0
+	o seahorse-3.2.1
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
-	o sessreg-1.0.6
+	o sessreg-1.0.7
 	o setxkbmap-1.2.0
 	o sharity-3.7
 	o sharity-light-1.3
@@ -1301,7 +1307,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o txt2man-1.5.6
 	o uae-0.8.29
 	o ubs-0.20
-	o ucarp-1.5.1
+	o ucarp-1.5.2 [pkg/45508]
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o ufoai-2.3.1
@@ -1326,9 +1332,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vifm-0.5
 	o vile-9.8
 	o vim-7.3
-	o vinagre-3.2.0
+	o vinagre-3.2.1
 	o vino-2.32.2 [GNOME 2.32]
-	o vino-3.2.0
+	o vino-3.2.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
@@ -1348,7 +1354,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wget-1.13.4
 	o whohas-0.24
 	o windowlab-1.40
-	o wine-devel-1.3.30
+	o wine-devel-1.3.31
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
