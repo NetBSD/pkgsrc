@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: snmptrapd.sh,v 1.4 2006/05/12 19:52:33 adam Exp $
+# $NetBSD: snmptrapd.sh,v 1.5 2011/10/22 07:33:34 shattered Exp $
 #
 # PROVIDE: snmptrapd
 # REQUIRE: DAEMON
@@ -9,11 +9,12 @@ if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
+: ${snmptrapd_flags:="-Ls 1"}	# log using syslog w/ facility LOG_LOCAL1
+
 name="snmptrapd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-snmptrapd_flags="-Ls 1"	# log using syslog w/ facility LOG_LOCAL1
 command_args="-p ${pidfile}"
 
 if [ -f @PKG_SYSCONFDIR@/snmptrapd.conf ]; then
