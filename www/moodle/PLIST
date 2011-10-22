@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/08/09 18:59:23 gls Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/22 11:05:30 gls Exp $
 share/examples/moodle/moodle.conf
 share/moodle/COPYING.txt
 share/moodle/README.txt
@@ -190,6 +190,7 @@ share/moodle/admin/user/user_bulk_forcepasswordchange.php
 share/moodle/admin/user/user_bulk_forms.php
 share/moodle/admin/user/user_bulk_message.php
 share/moodle/admin/user/user_message_form.php
+share/moodle/admin/webservice/documentation.php
 share/moodle/admin/webservice/forms.php
 share/moodle/admin/webservice/lib.php
 share/moodle/admin/webservice/protocols.php
@@ -1419,6 +1420,7 @@ share/moodle/install/lang/ast/install.php
 share/moodle/install/lang/ast/langconfig.php
 share/moodle/install/lang/ast/moodle.php
 share/moodle/install/lang/az/admin.php
+share/moodle/install/lang/az/error.php
 share/moodle/install/lang/az/langconfig.php
 share/moodle/install/lang/be/langconfig.php
 share/moodle/install/lang/be/moodle.php
@@ -1428,6 +1430,7 @@ share/moodle/install/lang/bg/install.php
 share/moodle/install/lang/bg/langconfig.php
 share/moodle/install/lang/bg/moodle.php
 share/moodle/install/lang/bn/admin.php
+share/moodle/install/lang/bn/error.php
 share/moodle/install/lang/bn/install.php
 share/moodle/install/lang/bn/langconfig.php
 share/moodle/install/lang/bn/moodle.php
@@ -1479,6 +1482,7 @@ share/moodle/install/lang/en/install.php
 share/moodle/install/lang/en/langconfig.php
 share/moodle/install/lang/en/moodle.php
 share/moodle/install/lang/en_kids/langconfig.php
+share/moodle/install/lang/en_us/install.php
 share/moodle/install/lang/en_us/langconfig.php
 share/moodle/install/lang/es/admin.php
 share/moodle/install/lang/es/error.php
@@ -1591,6 +1595,7 @@ share/moodle/install/lang/lo/admin.php
 share/moodle/install/lang/lo/install.php
 share/moodle/install/lang/lo/langconfig.php
 share/moodle/install/lang/lo/moodle.php
+share/moodle/install/lang/lt/admin.php
 share/moodle/install/lang/lt/langconfig.php
 share/moodle/install/lang/lt/moodle.php
 share/moodle/install/lang/lv/admin.php
@@ -1622,7 +1627,9 @@ share/moodle/install/lang/mr/error.php
 share/moodle/install/lang/mr/install.php
 share/moodle/install/lang/mr/langconfig.php
 share/moodle/install/lang/mr/moodle.php
+share/moodle/install/lang/ms/admin.php
 share/moodle/install/lang/ms/langconfig.php
+share/moodle/install/lang/ms/moodle.php
 share/moodle/install/lang/my/langconfig.php
 share/moodle/install/lang/nl/admin.php
 share/moodle/install/lang/nl/error.php
@@ -1654,6 +1661,7 @@ share/moodle/install/lang/pt_br/error.php
 share/moodle/install/lang/pt_br/install.php
 share/moodle/install/lang/pt_br/langconfig.php
 share/moodle/install/lang/pt_br/moodle.php
+share/moodle/install/lang/rm_surs/langconfig.php
 share/moodle/install/lang/ro/admin.php
 share/moodle/install/lang/ro/error.php
 share/moodle/install/lang/ro/install.php
@@ -3193,6 +3201,7 @@ share/moodle/lib/simpletest/testeventslib.php
 share/moodle/lib/simpletest/testexternallib.php
 share/moodle/lib/simpletest/testfilelib.php
 share/moodle/lib/simpletest/testfilterconfig.php
+share/moodle/lib/simpletest/testformslib.php
 share/moodle/lib/simpletest/testgradelib.php
 share/moodle/lib/simpletest/testhtmlpurifier.php
 share/moodle/lib/simpletest/testhtmlwriter.php
@@ -5996,6 +6005,7 @@ share/moodle/mod/chat/gui_ajax/theme/bubble/input.png
 share/moodle/mod/chat/gui_ajax/theme/bubble/vertical.png
 share/moodle/mod/chat/gui_ajax/theme/compact/chat.css
 share/moodle/mod/chat/gui_ajax/theme/compact/config.php
+share/moodle/mod/chat/gui_ajax/theme/compact/input.png
 share/moodle/mod/chat/gui_basic/index.php
 share/moodle/mod/chat/gui_header_js/chatinput.php
 share/moodle/mod/chat/gui_header_js/chatmsg.php
@@ -6666,6 +6676,7 @@ share/moodle/mod/url/styles.css
 share/moodle/mod/url/version.php
 share/moodle/mod/url/view.php
 share/moodle/mod/wiki/README
+share/moodle/mod/wiki/admin.php
 share/moodle/mod/wiki/backup/moodle1/lib.php
 share/moodle/mod/wiki/backup/moodle2/backup_wiki_activity_task.class.php
 share/moodle/mod/wiki/backup/moodle2/backup_wiki_settingslib.php
@@ -7377,6 +7388,7 @@ share/moodle/question/format.php
 share/moodle/question/format/README.txt
 share/moodle/question/format/aiken/format.php
 share/moodle/question/format/aiken/lang/en/qformat_aiken.php
+share/moodle/question/format/aiken/simpletest/fixtures/questions.aiken.txt
 share/moodle/question/format/blackboard/format.php
 share/moodle/question/format/blackboard/lang/en/qformat_blackboard.php
 share/moodle/question/format/blackboard_six/format.php
@@ -7386,6 +7398,7 @@ share/moodle/question/format/examview/lang/en/qformat_examview.php
 share/moodle/question/format/gift/examples.txt
 share/moodle/question/format/gift/format.php
 share/moodle/question/format/gift/lang/en/qformat_gift.php
+share/moodle/question/format/gift/simpletest/fixtures/questions.gift.txt
 share/moodle/question/format/gift/simpletest/testgiftformat.php
 share/moodle/question/format/learnwise/format.php
 share/moodle/question/format/learnwise/lang/en/qformat_learnwise.php
@@ -7492,7 +7505,9 @@ share/moodle/question/type/description/pix/icon.gif
 share/moodle/question/type/description/question.php
 share/moodle/question/type/description/questiontype.php
 share/moodle/question/type/description/renderer.php
+share/moodle/question/type/description/simpletest/helper.php
 share/moodle/question/type/description/simpletest/testquestiontype.php
+share/moodle/question/type/description/simpletest/testwalkthrough.php
 share/moodle/question/type/description/version.php
 share/moodle/question/type/edit_question_form.php
 share/moodle/question/type/essay/backup/moodle1/lib.php
@@ -7530,6 +7545,7 @@ share/moodle/question/type/match/renderer.php
 share/moodle/question/type/match/simpletest/testquestion.php
 share/moodle/question/type/match/simpletest/testquestiontype.php
 share/moodle/question/type/match/simpletest/testwalkthrough.php
+share/moodle/question/type/match/styles.css
 share/moodle/question/type/match/version.php
 share/moodle/question/type/missingtype/edit_missingtype_form.php
 share/moodle/question/type/missingtype/lang/en/qtype_missingtype.php
@@ -7664,6 +7680,7 @@ share/moodle/rating/lib.php
 share/moodle/rating/module.js
 share/moodle/rating/rate.php
 share/moodle/rating/rate_ajax.php
+share/moodle/rating/simpletest/testrating.php
 share/moodle/repository/README.txt
 share/moodle/repository/alfresco/db/access.php
 share/moodle/repository/alfresco/lang/en/repository_alfresco.php
@@ -8304,6 +8321,7 @@ share/moodle/theme/formal_white/style/calendar.css
 share/moodle/theme/formal_white/style/core.css
 share/moodle/theme/formal_white/style/course.css
 share/moodle/theme/formal_white/style/formal_white.css
+share/moodle/theme/formal_white/style/forum.css
 share/moodle/theme/formal_white/style/frame.css
 share/moodle/theme/formal_white/style/menu.css
 share/moodle/theme/formal_white/style/pagelayout.css
@@ -8615,6 +8633,7 @@ share/moodle/user/externallib.php
 share/moodle/user/files.php
 share/moodle/user/filesedit.php
 share/moodle/user/filesedit_form.php
+share/moodle/user/filters/checkbox.php
 share/moodle/user/filters/cohort.php
 share/moodle/user/filters/courserole.php
 share/moodle/user/filters/date.php
