@@ -1,0 +1,14 @@
+$NetBSD: patch-as,v 1.1.2.2 2011/10/22 07:01:25 sbd Exp $
+
+--- ext/standard/php_crypt_r.c.orig	2011-10-06 05:25:16.000000000 +0000
++++ ext/standard/php_crypt_r.c
+@@ -94,7 +94,8 @@ void _crypt_extended_init_r(void)
+ 	if (!initialized) {
+ #ifdef PHP_WIN32
+ 		InterlockedIncrement(&initialized);
+-#elif (defined(__GNUC__) && !defined(__hpux) && (__GNUC__ > 4 || \
++#elif (defined(__GNUC__) && (defined(__amd64__) || defined(__alpha__) || \
++    defined(__i386__) || defined(__powerpc__)) && (__GNUC__ > 4 || \
+     (__GNUC__ == 4 && (__GNUC_MINOR__ > 1 || (__GNUC_MINOR__ == 1 && __GNUC_PATCHLEVEL__ > 1)))))
+ 		__sync_fetch_and_add(&initialized, 1);
+ #elif defined(HAVE_ATOMIC_H) /* Solaris 10 defines atomic API within */
