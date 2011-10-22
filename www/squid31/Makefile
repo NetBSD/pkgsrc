@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2011/08/30 23:02:57 tron Exp $
+# $NetBSD: Makefile,v 1.34 2011/10/22 17:54:25 tron Exp $
 
-DISTNAME=	squid-3.1.15
+DISTNAME=	squid-3.1.16
 PKGNAME=	${DISTNAME}	# Necessary for "pkgsrc/www/squid/options.mk"
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/3.1/ \
