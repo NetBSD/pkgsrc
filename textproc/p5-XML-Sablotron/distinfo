@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2010/09/19 11:20:37 wiz Exp $
+$NetBSD: distinfo,v 1.3.10.1 2011/10/22 07:02:02 sbd Exp $
 
 SHA1 (XML-Sablotron-1.01.tar.gz) = 0a7b688b20300f95993e0c1f56761eb0d504772a
 RMD160 (XML-Sablotron-1.01.tar.gz) = e4a4a9ca520ed9096ea0fced2fe4d43f227e0953
 Size (XML-Sablotron-1.01.tar.gz) = 53023 bytes
+SHA1 (patch-DOM_DOM_xsh) = c9ea56c62f143b20ea671f1c17561fc608e01740
+SHA1 (patch-Processor_Processor_h) = de8ca228c4249e7e00805dcc323b2383315b7b53

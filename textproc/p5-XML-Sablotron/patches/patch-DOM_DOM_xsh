@@ -1,0 +1,13 @@
+$NetBSD: patch-DOM_DOM_xsh,v 1.1.2.2 2011/10/22 07:02:03 sbd Exp $
+
+--- DOM/DOM.xsh~	2003-02-24 14:01:12.000000000 +0000
++++ DOM/DOM.xsh
+@@ -635,7 +635,7 @@ xql_ns(object, expr, nsmap, ...)
+          i = 0;
+          hv_iterinit(maph);
+          while (he = hv_iternext(maph)) {
+-             int l;
++             ssize_t l;
+              if (++nsnum > 10 * mapsize) {
+                  mapsize++;
+                  nsarr = realloc(nsarr, (10*2*mapsize + 1) * sizeof(char*));
