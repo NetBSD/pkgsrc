@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.23 2011/10/20 04:01:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.24 2011/10/22 07:04:31 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -100,3 +100,7 @@ lang/python26: build fix
 lang/python27: build fix
 lang/python31: build fix
 security/cyrus-sasl: build fix
+Pullup ticket #3573 - requested by taca
+lang/php53 security update
+Pullup ticket #3574 - requested by dholland
+textproc/p5-XML-Sablotron build fix
