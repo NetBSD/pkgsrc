@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2616 2011/10/22 13:51:44 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2617 2011/10/22 15:06:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4158,3 +4158,19 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libgee to 0.6.2.1 [gls 2011-10-23]
 	Updated graphics/libraw to 0.14.2 [gls 2011-10-23]
 	Updated graphics/shotwell to 0.11.5 [gls 2011-10-23]
+	Updated graphics/ImageMagick to 6.7.3.1 [ryoon 2011-10-22]
+	Updated chat/spectrum to 1.4.7nb4 [ryoon 2011-10-22]
+	Updated graphics/autotrace to 0.31.1nb18 [ryoon 2011-10-22]
+	Updated graphics/dx to 4.4.4nb10 [ryoon 2011-10-22]
+	Updated graphics/p5-PerlMagick to 6.7.3.1nb2 [ryoon 2011-10-22]
+	Updated graphics/pstoedit to 3.50nb4 [ryoon 2011-10-22]
+	Updated graphics/ruby-RMagick to 2.13.1nb4 [ryoon 2011-10-22]
+	Updated graphics/tango-icon-theme to 0.8.90nb5 [ryoon 2011-10-22]
+	Updated misc/calibre to 0.8.2nb2 [ryoon 2011-10-22]
+	Updated misc/koffice to 1.6.3nb26 [ryoon 2011-10-22]
+	Updated multimedia/dvdauthor to 0.7.0nb1 [ryoon 2011-10-22]
+	Updated multimedia/fuppes to 0.640nb10 [ryoon 2011-10-22]
+	Updated multimedia/xine-lib to 1.1.19nb8 [ryoon 2011-10-22]
+	Updated security/libfprint to 0.0.6nb11 [ryoon 2011-10-22]
+	Updated multimedia/transcode to 1.1.5nb8 [ryoon 2011-10-22]
+	Updated net/kismet to 2008.05.01nb9 [ryoon 2011-10-22]
