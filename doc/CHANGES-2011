@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2609 2011/10/22 01:41:27 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2610 2011/10/22 08:52:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4150,3 +4150,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Tie-Cache-LRU to 20110205 [hiramatsu 2011-10-22]
 	Updated www/p5-Tatsumaki to 0.1013 [hiramatsu 2011-10-22]
 	Updated mail/p5-Mail-ListDetector to 1.04 [hiramatsu 2011-10-22]
+	Updated fonts/liberation-ttf to 1.07.1 [ryoon 2011-10-22]
