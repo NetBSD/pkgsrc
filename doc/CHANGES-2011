@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2611 2011/10/22 10:01:15 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2612 2011/10/22 10:33:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4152,3 +4152,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/p5-Mail-ListDetector to 1.04 [hiramatsu 2011-10-22]
 	Updated fonts/liberation-ttf to 1.07.1 [ryoon 2011-10-22]
 	Updated devel/libmaa to 1.3.1 [cheusov 2011-10-22]
+	Updated databases/mysql55-client to 5.5.17 [adam 2011-10-22]
+	Updated databases/mysql55-server to 5.5.17 [adam 2011-10-22]
