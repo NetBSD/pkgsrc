@@ -1,0 +1,184 @@
+$NetBSD: patch-Processor_Processor_h,v 1.1.2.2 2011/10/22 07:02:03 sbd Exp $
+
+--- Processor/Processor.h.orig	2004-06-04 13:20:40.000000000 +0000
++++ Processor/Processor.h
+@@ -119,7 +119,7 @@ MessageHandlerMakeCodeStub(void *userDat
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs(sv_2mortal(newSViv(severity)));
+     XPUSHs(sv_2mortal(newSViv(facility)));
+     XPUSHs(sv_2mortal(newSViv(code)));
+@@ -167,7 +167,7 @@ MessageHandlerLogStub(void *userData, vo
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs(sv_2mortal(newSViv(code)));
+     XPUSHs(sv_2mortal(newSViv(level)));
+     foo = fields;
+@@ -215,7 +215,7 @@ MessageHandlerErrorStub(void *userData, 
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs(sv_2mortal(newSViv(code)));
+     XPUSHs(sv_2mortal(newSViv(level)));
+     foo = fields;
+@@ -250,7 +250,7 @@ int SchemeHandlerGetAllStub(void *userDa
+   GV *gv;
+   unsigned long ret = 0;
+   SV *value;
+-  unsigned int len;
++  size_t len;
+ 
+   wrapper = (SV*)userData;
+ 
+@@ -270,7 +270,7 @@ int SchemeHandlerGetAllStub(void *userDa
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs(sv_2mortal(newSVpv((char*) scheme, strlen(scheme))));
+     XPUSHs(sv_2mortal(newSVpv((char*) rest, strlen(rest))));
+ 
+@@ -337,7 +337,7 @@ int SchemeHandlerOpenStub(void *userData
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs(sv_2mortal(newSVpv((char*) scheme, strlen(scheme))));
+     XPUSHs(sv_2mortal(newSVpv((char*) rest, strlen(rest))));
+ 
+@@ -375,7 +375,7 @@ int SchemeHandlerGetStub(void *userData,
+   GV *gv;
+   unsigned long ret = 0;
+   SV *value;
+-  unsigned int len;
++  size_t len;
+ 
+   wrapper = (SV*)userData;
+ 
+@@ -395,7 +395,7 @@ int SchemeHandlerGetStub(void *userData,
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs((SV*)handle);
+     XPUSHs(sv_2mortal(newSViv(*byteCount)));
+     PUTBACK;
+@@ -453,7 +453,7 @@ int SchemeHandlerPutStub(void *userData,
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs((SV*) handle);
+     XPUSHs(sv_2mortal(newSVpv((char*) buffer, *byteCount)));
+     PUTBACK;
+@@ -506,7 +506,7 @@ int SchemeHandlerCloseStub(void *userDat
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs((SV*) handle);
+ 
+     PUTBACK;
+@@ -553,7 +553,7 @@ void SAXHandlerStartDocumentStub(void* u
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         PUTBACK;
+         
+@@ -593,7 +593,7 @@ void SAXHandlerStartElementStub(void* us
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         XPUSHs(sv_2mortal(newSVpv((char*) name, strlen(name))));
+         att = (char**)atts;
+@@ -639,7 +639,7 @@ void SAXHandlerEndElementStub(void* user
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         XPUSHs(sv_2mortal(newSVpv((char*) name, strlen(name))));
+ 
+@@ -680,7 +680,7 @@ void SAXHandlerStartNamespaceStub(void* 
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         XPUSHs(sv_2mortal(newSVpv((char*) prefix, strlen(prefix))));
+         XPUSHs(sv_2mortal(newSVpv((char*) uri, strlen(uri))));
+@@ -722,7 +722,7 @@ void SAXHandlerEndNamespaceStub(void* us
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         XPUSHs(sv_2mortal(newSVpv((char*) prefix, strlen(prefix))));
+ 
+@@ -763,7 +763,7 @@ void SAXHandlerCommentStub(void* userDat
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         XPUSHs(sv_2mortal(newSVpv((char*) contents, strlen(contents))));
+ 
+@@ -804,7 +804,7 @@ void SAXHandlerPIStub(void* userData, vo
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         XPUSHs(sv_2mortal(newSVpv((char*) target, strlen(target))));
+         XPUSHs(sv_2mortal(newSVpv((char*) contents, strlen(contents))));
+@@ -846,7 +846,7 @@ void SAXHandlerCharactersStub(void* user
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         XPUSHs(sv_2mortal(newSVpv((char*) contents, length)));
+ 
+@@ -886,7 +886,7 @@ void SAXHandlerEndDocumentStub(void* use
+         if (processor_obj) 
+             XPUSHs(processor_obj);
+         else
+-            XPUSHs(&sv_undef);
++            XPUSHs(&PL_sv_undef);
+ 
+         PUTBACK;
+         
+@@ -931,7 +931,7 @@ MiscHandlerDocumentInfoStub(void* userDa
+     if (processor_obj) 
+       XPUSHs(processor_obj);
+     else
+-      XPUSHs(&sv_undef);
++      XPUSHs(&PL_sv_undef);
+     XPUSHs(sv_2mortal(newSVpv((char*) contentType, strlen(contentType))));
+     XPUSHs(sv_2mortal(newSVpv((char*) encoding, strlen(encoding))));
+ 
