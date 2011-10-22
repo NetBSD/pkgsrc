@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10627 2011/10/22 11:36:00 gls Exp $
+$NetBSD: TODO,v 1.10628 2011/10/22 13:44:45 gls Exp $
 
 Suggested new packages
 ======================
@@ -917,7 +917,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.12.1
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o libraw-0.14.1
 	o librep-0.92.1b
 	o libslang2-2.2.4
 	o libssh-0.5.2 [www.libssh.org]
