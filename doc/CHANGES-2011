@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2624 2011/10/23 13:32:53 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2625 2011/10/23 18:07:24 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4180,3 +4180,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated finance/gnucash to 2.4.8 [wiz 2011-10-23]
 	Updated devel/cutter to 1.1.9 [obache 2011-10-23]
 	Updated net/mikutter to 0.0.3.556 [obache 2011-10-23]
+	Updated x11/xfontsel to 1.0.2nb2 [dholland 2011-10-23]
