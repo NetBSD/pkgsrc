@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2011/04/30 19:10:12 abs Exp $
+# $NetBSD: Makefile,v 1.23 2011/10/23 11:39:04 shattered Exp $
 #
 
 DISTNAME=	munin_${VER}
 VER=		1.3.2
 PKGNAME=	munin-node-${VER}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 
@@ -62,20 +62,17 @@ REPLACE_PERL+=	node/node.d/*.in
 STATEDIR?=	${VARBASE}/munin/plugin-state
 MUNIN_RUN?=	${VARBASE}/run/munin
 
-MAKE_DIRS=	${VARBASE}/munin
-MAKE_DIRS+=	${VARBASE}/run/munin
-MAKE_DIRS+=	${VARBASE}/log/munin
-MAKE_DIRS+=	${STATEDIR}
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/plugins
 
-OWN_DIRS=	${VARBASE}/munin
-OWN_DIRS+=	${VARBASE}/run/munin
+OWN_DIRS+=	${VARBASE}/munin
+OWN_DIRS+=	${MUNIN_RUN}
 OWN_DIRS+=	${VARBASE}/log/munin
-OWN_DIRS+=	${VARBASE}/munin/plugin-state
+OWN_DIRS+=	${STATEDIR}
 
 OWN_DIRS_PERMS+=${VARBASE}/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
-OWN_DIRS_PERMS+=${VARBASE}/run/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
+OWN_DIRS_PERMS+=${MUNIN_RUN} ${MUNIN_USER} ${MUNIN_GROUP} 0755
 OWN_DIRS_PERMS+=${VARBASE}/log/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
-OWN_DIRS_PERMS+=${VARBASE}/munin/plugin-state ${MUNIN_USER} ${MUNIN_GROUP} 0775
+OWN_DIRS_PERMS+=${STATEDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0775
 
 INSTALL_TARGET=	install-node install-node-plugins
 
