@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2011/08/20 08:07:48 obache Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2011/10/23 16:08:46 tron Exp $
 
-DISTNAME=	ldns-1.6.10
-PKGREVISION=	1
+DISTNAME=	ldns-1.6.11
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
