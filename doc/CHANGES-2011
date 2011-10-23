@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2621 2011/10/22 19:49:00 he Exp $
+$NetBSD: CHANGES-2011,v 1.2622 2011/10/23 08:05:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4177,3 +4177,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/squid31 to 3.1.16 [tron 2011-10-22]
 	Updated net/clive to 2.3.1.1nb2 [wiz 2011-10-22]
 	Updated net/ldns to 1.6.11 [he 2011-10-22]
+	Updated finance/gnucash to 2.4.8 [wiz 2011-10-23]
