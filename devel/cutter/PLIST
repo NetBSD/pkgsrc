@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/08/02 12:15:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/23 13:16:36 obache Exp $
 bin/cut-diff
 bin/cutter
 include/cutter/cppcutter.h
@@ -178,7 +178,6 @@ share/gtk-doc/html/cutter/cutter-Test-Utilities.html
 share/gtk-doc/html/cutter/cutter-Types-for-GLib-support.html
 share/gtk-doc/html/cutter/cutter-Types.html
 share/gtk-doc/html/cutter/cutter-Version-Information.html
-share/gtk-doc/html/cutter/cutter.devhelp
 share/gtk-doc/html/cutter/cutter.devhelp2
 share/gtk-doc/html/cutter/cutter.html
 share/gtk-doc/html/cutter/dark-circle.png
@@ -257,22 +256,17 @@ share/gtk-doc/html/cutter/ja/cppcut-assertions.xml
 share/gtk-doc/html/cutter/ja/cppcut-macros.xml
 share/gtk-doc/html/cutter/ja/cppcutter.xml
 share/gtk-doc/html/cutter/ja/cut-assertions.xml
-share/gtk-doc/html/cutter/ja/cut-colorize-differ.xml
 share/gtk-doc/html/cutter/ja/cut-config.xml
 share/gtk-doc/html/cutter/ja/cut-console-diff-writer.xml
 share/gtk-doc/html/cutter/ja/cut-console.xml
-share/gtk-doc/html/cutter/ja/cut-diff-writer.xml
 share/gtk-doc/html/cutter/ja/cut-diff.html
-share/gtk-doc/html/cutter/ja/cut-differ.xml
 share/gtk-doc/html/cutter/ja/cut-experimental.xml
 share/gtk-doc/html/cutter/ja/cut-features.xml
 share/gtk-doc/html/cutter/ja/cut-helper.xml
 share/gtk-doc/html/cutter/ja/cut-multi-process.xml
-share/gtk-doc/html/cutter/ja/cut-readable-differ.xml
 share/gtk-doc/html/cutter/ja/cut-string-diff-writer.xml
 share/gtk-doc/html/cutter/ja/cut-test-utils.xml
 share/gtk-doc/html/cutter/ja/cut-types.xml
-share/gtk-doc/html/cutter/ja/cut-unified-differ.xml
 share/gtk-doc/html/cutter/ja/cut-version.xml
 share/gtk-doc/html/cutter/ja/cutter-Assertion-Utilities-for-GEnum-and-GFlags.html
 share/gtk-doc/html/cutter/ja/cutter-Assertion-Utilities-for-GError.html
@@ -304,7 +298,6 @@ share/gtk-doc/html/cutter/ja/cutter-Test-Utilities.html
 share/gtk-doc/html/cutter/ja/cutter-Types-for-GLib-support.html
 share/gtk-doc/html/cutter/ja/cutter-Types.html
 share/gtk-doc/html/cutter/ja/cutter-Version-Information.html
-share/gtk-doc/html/cutter/ja/cutter.devhelp
 share/gtk-doc/html/cutter/ja/cutter.devhelp2
 share/gtk-doc/html/cutter/ja/cutter.html
 share/gtk-doc/html/cutter/ja/cutter.xml
@@ -315,7 +308,6 @@ share/gtk-doc/html/cutter/ja/gcut-assertions-helper.xml
 share/gtk-doc/html/cutter/ja/gcut-assertions.xml
 share/gtk-doc/html/cutter/ja/gcut-data-helper.xml
 share/gtk-doc/html/cutter/ja/gcut-data.xml
-share/gtk-doc/html/cutter/ja/gcut-dynamic-data.xml
 share/gtk-doc/html/cutter/ja/gcut-egg.xml
 share/gtk-doc/html/cutter/ja/gcut-enum.xml
 share/gtk-doc/html/cutter/ja/gcut-error.xml
