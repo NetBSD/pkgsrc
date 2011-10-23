@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2011/05/15 23:38:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2011/10/23 08:04:54 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -636,6 +636,7 @@ share/gnucash/accounts/zh_CN/acctchrt_spouseretire.gnucash-xea
 share/gnucash/checks/deluxe.chk
 share/gnucash/checks/liberty.chk
 share/gnucash/checks/quicken.chk
+share/gnucash/checks/quicken_check_21.chk
 share/gnucash/checks/quicken_wallet.chk
 share/gnucash/checks/voucher.chk
 share/gnucash/doc/AUTHORS
