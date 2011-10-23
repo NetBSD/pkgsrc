@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2623 2011/10/23 13:16:51 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2624 2011/10/23 13:32:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4179,3 +4179,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ldns to 1.6.11 [he 2011-10-22]
 	Updated finance/gnucash to 2.4.8 [wiz 2011-10-23]
 	Updated devel/cutter to 1.1.9 [obache 2011-10-23]
+	Updated net/mikutter to 0.0.3.556 [obache 2011-10-23]
