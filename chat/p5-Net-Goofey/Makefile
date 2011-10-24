@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/08/06 13:09:38 adam Exp $
+# $NetBSD: Makefile,v 1.17 2011/10/24 05:23:58 hiramatsu Exp $
 
 DISTNAME=	Net-Goofey-1.5
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=	http://notdoneliving.net/code/Net-Goofey/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://notdoneliving.net/code/
 COMMENT=	Perl module for communicating with a Goofey server
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
