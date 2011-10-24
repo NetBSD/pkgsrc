@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2630 2011/10/24 10:01:10 imil Exp $
+$NetBSD: CHANGES-2011,v 1.2631 2011/10/24 15:25:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4187,3 +4187,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Scope-Upper to 0.18 [hiramatsu 2011-10-24]
 	Updated databases/p5-DBIx-Connector to 0.47 [hiramatsu 2011-10-24]
 	Updated pkgtools/pkgin to 0.5.2 [imil 2011-10-24]
+	Updated net/wget to 1.13.4 [ryoon 2011-10-24]
