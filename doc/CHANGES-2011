@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2632 2011/10/24 17:20:05 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2633 2011/10/24 20:42:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4189,3 +4189,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkgin to 0.5.2 [imil 2011-10-24]
 	Updated net/wget to 1.13.4 [ryoon 2011-10-24]
 	Updated graphics/libraw to 0.13.8 [gls 2011-10-24]
+	Updated editors/emacs-snapshot to 24.0.90.20111019 [minskim 2011-10-24]
