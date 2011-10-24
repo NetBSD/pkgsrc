@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/08/14 08:18:07 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/24 09:36:01 hiramatsu Exp $
 #
 
-DISTNAME=	DBIx-Connector-0.40
+DISTNAME=	DBIx-Connector-0.47
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
