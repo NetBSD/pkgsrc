@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1504 2011/10/21 12:39:35 reed Exp $
+# $NetBSD: Makefile,v 1.1505 2011/10/24 06:43:22 sbd Exp $
 #
 
 COMMENT=	Development utilities
@@ -952,6 +952,7 @@ SUBDIR+=	p5-Perl-Critic
 SUBDIR+=	p5-Perl-MinimumVersion
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-Perl-Version
+SUBDIR+=	p5-Perl4-CoreLibs
 SUBDIR+=	p5-Perl6-Export
 SUBDIR+=	p5-Perl6-Export-Attrs
 SUBDIR+=	p5-Perl6-Junction
