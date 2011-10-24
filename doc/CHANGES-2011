@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2628 2011/10/24 07:15:15 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2629 2011/10/24 09:36:44 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4184,3 +4184,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/mit-krb5 to 1.8.4nb1 [tez 2011-10-23]
 	Added devel/p5-Perl4-CoreLibs version 0.003 [sbd 2011-10-24]
 	Updated databases/phpmyadmin to 3.4.7 [tron 2011-10-24]
+	Updated devel/p5-Scope-Upper to 0.18 [hiramatsu 2011-10-24]
+	Updated databases/p5-DBIx-Connector to 0.47 [hiramatsu 2011-10-24]
