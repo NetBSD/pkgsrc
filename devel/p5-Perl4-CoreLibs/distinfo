@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/24 06:41:15 sbd Exp $
+
+SHA1 (Perl4-CoreLibs-0.003.tar.gz) = ad4c5a9fa8da4f461dc774e5c53136a55413ef2f
+RMD160 (Perl4-CoreLibs-0.003.tar.gz) = cfa1962b78157d1545e25e388c6d72b62a08925d
+Size (Perl4-CoreLibs-0.003.tar.gz) = 53629 bytes
