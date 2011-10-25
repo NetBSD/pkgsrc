@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/02/02 13:48:06 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2011/10/25 08:00:00 ryoon Exp $
 
-SHA1 (gcal-3.6.tar.gz) = 8aae14b37b1bf1aa752a99608a5909baf5aa30db
-RMD160 (gcal-3.6.tar.gz) = 5751ceaee44f3b7ecb5ce8f036e65c2895189958
-Size (gcal-3.6.tar.gz) = 2672720 bytes
+SHA1 (gcal-3.6.1.tar.gz) = ad5b9507ce2aa794f4827ed0fcedc7676a293ae1
+RMD160 (gcal-3.6.1.tar.gz) = 43e31e819340a6e8efdac0f751f4479e7f193119
+Size (gcal-3.6.1.tar.gz) = 2912631 bytes
