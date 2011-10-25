@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2634 2011/10/24 21:07:16 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2635 2011/10/25 01:40:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4191,3 +4191,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/libraw to 0.13.8 [gls 2011-10-24]
 	Updated editors/emacs-snapshot to 24.0.90.20111019 [minskim 2011-10-24]
 	Updated www/py-cherrypy to 3.2.2 [gls 2011-10-24]
+	Updated x11/xorg-cf-files [mef 2011-10-25]
