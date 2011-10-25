@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10638 2011/10/25 08:12:22 mef Exp $
+$NetBSD: TODO,v 1.10639 2011/10/25 16:29:37 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -321,7 +321,6 @@ Suggested package updates
 =========================
 For possible perl packages updates, see http://www.pkgbox.org/p2c/
 
-	o 9base-20060125
 	o CSP-0.34
 	o Canna-3.7p3
 	o Chinput-3.0.1
