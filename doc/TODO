@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10636 2011/10/25 07:46:35 mef Exp $
+$NetBSD: TODO,v 1.10637 2011/10/25 08:05:11 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -659,7 +659,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gawk-4.0.0
 	o gbdfed-1.6
 	o gbrainy-2.03
-	o gcal-3.6.1
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-9.5
