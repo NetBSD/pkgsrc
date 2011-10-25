@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2645 2011/10/25 08:55:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2646 2011/10/25 09:05:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-mecab to 0.98nb1 [obache 2011-10-25]
 	Updated filesystems/perfuse to 20111025 [manu 2011-10-25]
 	Updated math/py-Numeric to 24.2nb1 [obache 2011-10-25]
+	Updated math/py-numarray to 1.5.2nb1 [obache 2011-10-25]
