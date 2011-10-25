@@ -1,13 +1,13 @@
-$NetBSD: patch-bb,v 1.1 2005/12/06 18:50:36 rillig Exp $
+$NetBSD: patch-bb,v 1.2 2011/10/25 16:28:17 ryoon Exp $
 
---- lib9/dirfwstat.c.orig	Mon Nov 14 11:22:41 2005
-+++ lib9/dirfwstat.c	Tue Dec  6 19:43:49 2005
+--- lib9/dirfwstat.c.orig	2010-06-04 10:46:05.000000000 +0000
++++ lib9/dirfwstat.c
 @@ -4,7 +4,7 @@
  #include <sys/time.h>
  #include <sys/stat.h>
  
--#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__OpenBSD__) || defined(__NetBSD__)
+-#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__OpenBSD__) || defined(__linux__)
++#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__OpenBSD__) || defined(__linux__) || defined(__NetBSD__)
  /* do nothing -- futimes exists and is fine */
  
  #elif defined(__SunOS5_9__)
