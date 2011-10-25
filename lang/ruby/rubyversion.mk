@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.62 2011/09/14 16:50:18 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.63 2011/10/25 06:01:09 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -36,7 +36,7 @@ RUBY_VERSION?=		${RUBY18_VERSION}
 .  elif ${RUBY_VERSION_REQD} == "19"
 RUBY_VERSION?=		${RUBY19_VERSION}
 .  else
-RUBY_VERSION?=		${RUBY18_VERSION}
+RUBY_VERSION?=		${_RUBY_VERSION_DEFAULT}
 PKG_FAIL_REASON+=	"Unknown value for ${RUBY_VERSION_REQD}"
 .  endif
 .else
@@ -45,7 +45,7 @@ RUBY_VERSION?=		${RUBY18_VERSION}
 .  elif ${RUBY_VERSION_DEFAULT} == "1.9"
 RUBY_VERSION?=		${RUBY19_VERSION}
 .  else
-RUBY_VERSION?=		${RUBY18_VERSION}
+RUBY_VERSION?=		${_RUBY_VERSION_DEFAULT}
 .  endif
 .endif
 
