@@ -1,0 +1,15 @@
+$NetBSD: patch-sbin_rt-attributes-viewer,v 1.1 2011/10/25 19:38:10 spz Exp $
+
+perl 5.14 qw() in for* fixes
+
+--- sbin/rt-attributes-viewer.orig	2011-04-14 01:10:12.000000000 +0000
++++ sbin/rt-attributes-viewer
+@@ -103,7 +103,7 @@ unless ( $attr->id ) {
+ }
+ 
+ my %res = ();
+-$res{$_} = $attr->$_() foreach qw(ObjectType ObjectId Name Description Content ContentType);
++$res{$_} = $attr->$_() foreach ( qw(ObjectType ObjectId Name Description Content ContentType) );
+ 
+ use Data::Dumper;
+ print "Content of attribute #$id: ". Dumper( \%res );
