@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10635 2011/10/25 04:30:07 taca Exp $
+$NetBSD: TODO,v 1.10636 2011/10/25 07:46:35 mef Exp $
 
 Suggested new packages
 ======================
@@ -592,7 +592,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
 	o fisg-0.3.12
-	o fixesproto-5.0 [pkg/45463]
 	o flashplayer-0.4.13
 	o flightgear-2.4
 	o flpsed-0.4.4
@@ -690,7 +689,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-6.1
 	o glom-1.14.2 [GNOME 2.26]
 	o glpk-4.47
-	o glproto-1.4.14 [pkg/45462]
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.2.1
@@ -966,8 +964,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o minivmac-3.0.4
 	o miredo-1.2.4
 	o mirmon-1.37
-	o mkfontdir-1.0.6 [pkg/45461]
-	o mkfontscale-1.0.9 [pkg/45460]
 	o mknmz-wwwoffle-0.7.2
 	o mksh-40b
 	o mkvtoolnix-5.0.1
