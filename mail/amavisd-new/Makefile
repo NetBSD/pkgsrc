@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/24 07:19:35 kefren Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/25 20:33:07 spz Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -9,12 +9,12 @@ MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirror.cedratnet.com/amavisd-new/ \
 		http://mirror.omroep.nl/amavisd-new/
 
-MAINTAINER=	jdunn@aquezada.com
+MAINTAINER=	spz@NetBSD.org
 HOMEPAGE=	http://www.ijs.si/software/amavisd/
 COMMENT=	Daemonized interface between MTA and content checkers
 LICENSE=	gnu-gpl-v2
 
-VERSION=	2.6.4
+VERSION=	2.7.0
 PATCHLEVEL=	# empty
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -54,6 +54,7 @@ MESSAGE_SRC=		${PKGDIR}/MESSAGE
 
 PKG_GROUPS_VARS+=	AMAVIS_GROUP
 PKG_USERS_VARS+=	AMAVIS_USER
+BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		AMAVIS_DIR AMAVIS_QUARANTINE
 FILES_SUBST+=		AMAVIS_USER=${AMAVIS_USER}
 FILES_SUBST+=		AMAVIS_GROUP=${AMAVIS_GROUP}
@@ -133,6 +134,5 @@ do-install:
 	done
 	${INSTALL_DATA} ${WRKSRC}/amavisd.conf ${DESTDIR}${EGDIR}/amavisd.conf-minimal
 	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-default ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-sample ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
