@@ -1,0 +1,18 @@
+$NetBSD: patch-bx,v 1.1 2011/10/25 08:34:28 manu Exp $
+
+glusterfs may need lots of data, raise the limit and hope there's enough
+ram ...
+
+--- glusterfsd/src/glusterfsd.c.orig	2011-08-23 14:31:37.000000000 +0200
++++ glusterfsd/src/glusterfsd.c	2011-10-19 15:28:44.000000000 +0200
+@@ -1008,6 +1008,10 @@
+         lim.rlim_cur = RLIM_INFINITY;
+         lim.rlim_max = RLIM_INFINITY;
+         setrlimit (RLIMIT_CORE, &lim);
++	if (getrlimit(RLIMIT_DATA, &lim) == 0) {
++		lim.rlim_cur = lim.rlim_max;
++		setrlimit(RLIMIT_DATA, &lim);
++	}
+ 
+         return 0;
+ }
