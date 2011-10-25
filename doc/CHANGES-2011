@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2641 2011/10/25 08:12:22 mef Exp $
+$NetBSD: CHANGES-2011,v 1.2642 2011/10/25 08:30:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4201,3 +4201,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/wget to 1.13.4nb1 [tron 2011-10-25]
 	Updated time/gcal to 3.6.1 [ryoon 2011-10-25]
 	Updated x11/libFS to 1.0.3 [mef 2011-10-25]
+	Updated textproc/py-textile to 2.1.5 [obache 2011-10-25]
