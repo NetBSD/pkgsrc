@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/12 13:56:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/25 08:37:00 obache Exp $
 ${PYSITELIB}/MeCab.py
 ${PYSITELIB}/MeCab.pyc
-${PYSITELIB}/_MeCab.so
 ${PYSITELIB}/MeCab.pyo
+${PYSITELIB}/_MeCab.so
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
