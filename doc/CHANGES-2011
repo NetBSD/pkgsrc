@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2650 2011/10/25 14:31:53 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2651 2011/10/25 16:29:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/py-gnuplot to 1.8nb1 [obache 2011-10-25]
 	Updated graphics/py-piddle to 1.0.15nb3 [obache 2011-10-25]
 	Updated mail/postfix to 2.8.6 [taca 2011-10-25]
+	Updated sysutils/9base to 20100604 [ryoon 2011-10-25]
