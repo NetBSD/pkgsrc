@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2647 2011/10/25 09:15:00 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2648 2011/10/25 09:24:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4208,3 +4208,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/py-numarray to 1.5.2nb1 [obache 2011-10-25]
 	Updated www/p5-CGI-Application to 4.50 [hiramatsu 2011-10-25]
 	Updated www/p5-AnyEvent-HTTP to 2.13 [hiramatsu 2011-10-25]
+	Updated graphics/py-gnuplot to 1.8nb1 [obache 2011-10-25]
