@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10633 2011/10/24 15:25:56 ryoon Exp $
+$NetBSD: TODO,v 1.10634 2011/10/25 01:40:18 mef Exp $
 
 Suggested new packages
 ======================
@@ -1471,7 +1471,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmp-3.4.1
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorg-cf-files-1.0.4 [pkg/45471]
 	o xorg-util-macros-1.10.1 [pkg/43891]
 	o xorg-util-macros-1.15.0
 	o xorp-1.8.4
