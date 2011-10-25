@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:37 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2011/10/25 09:05:27 obache Exp $
 #
 
 DISTNAME=	numarray-1.5.2
 PKGNAME=	${PYPKGPREFIX}-numarray-1.5.2
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -11,8 +12,6 @@ HOMEPAGE=	http://www.stsci.edu/resources/software_hardware/numarray
 COMMENT=	Array manipulation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYDISTUTILSPKG=		yes
 
 PLIST_VARS+=	blas
 .if exists(/System/Library/Frameworks/vecLib.framework/Headers)
@@ -23,5 +22,5 @@ PLIST.blas=	yes
 do-test:
 	(cd ${WRKSRC}/Lib && ${PYTHONBIN} testall.py)
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
