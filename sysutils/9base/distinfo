@@ -1,33 +1,10 @@
-$NetBSD: distinfo,v 1.5 2011/08/04 11:37:58 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/10/25 16:28:17 ryoon Exp $
 
-SHA1 (9base-20051114.tar.gz) = 27fb8879677dbb83a9f2f24a3be7cc96d97ea244
-RMD160 (9base-20051114.tar.gz) = 59223d40e2c761ed80f3eb73afcc046b4d6e921b
-Size (9base-20051114.tar.gz) = 248172 bytes
-SHA1 (patch-aa) = c3aba45d46d6a5dd4544d89b4e734b86b163f7b1
-SHA1 (patch-ab) = 9a5733206b91bd18f084419ca228c39ae2398a90
-SHA1 (patch-ac) = 24a7e16710bceca65aa7caa8e49e08be09c0bf62
-SHA1 (patch-ad) = 17218711e3982d462935c2435159cde733ac7591
-SHA1 (patch-ae) = bf00af00e983b92b50413b8bd7985283b1da31f3
-SHA1 (patch-af) = 58dc3ee3496aa37c007dff4e2e89f27066985dc1
-SHA1 (patch-ag) = 9b98850e7120e2becfdb27b296e3d100fa2d9aa8
-SHA1 (patch-ah) = ae54a800a4a73e1a2da2cbb6cc0e55002445e173
-SHA1 (patch-ai) = 9251d8493ea6741e23a3041cd675d78dec549021
-SHA1 (patch-aj) = c944ea4a093d1b6e979fbc21c3981e4a5705b481
-SHA1 (patch-ak) = 41cc2d936fd7d1a46fb1cd51e61b62dfe7cfff6d
-SHA1 (patch-al) = 36069d4831d24d617c11c0fc4a668a68222f720f
-SHA1 (patch-am) = ac229974863415e06c2f137eb7ba99ddac94d8e9
-SHA1 (patch-an) = c48b6f24aa1d31c31d01450771dbf851e020d3ac
-SHA1 (patch-ao) = b764a9176a4d3db3f73718a831b88074b34e3974
-SHA1 (patch-ap) = f0af754044732828c8b720e9df4c30898098eb5a
-SHA1 (patch-aq) = d96b45504957af2f9872b04bcaaf92d31b1059c4
-SHA1 (patch-ar) = b1eb60766952dd983b8b72c6198c4a45119e0b53
-SHA1 (patch-as) = 997dc92229699c0e3a51a753b0b2480d517c64ca
-SHA1 (patch-at) = 32d0da68f18b56e8774f90e5f0090ef8c5aed84a
-SHA1 (patch-au) = d412607f5d49b5e72e24de91da2dec63dd1f3437
-SHA1 (patch-av) = 6553a9e7260d879a04ae1c0c873c2706130dba9e
-SHA1 (patch-awk-proctab.c) = e74887d26b32335af1b1d50a1f0e1493a58fbfd4
-SHA1 (patch-awk-proto.h) = 55991e304df7d891e0a4e811131437d02d585cad
-SHA1 (patch-awk-run.c) = 969be20828a9aca566c1f6b79e122f66dfb27572
-SHA1 (patch-ba) = 97aff6df9b6971ee5ddfeb9a88fcaf383a9a9bbb
-SHA1 (patch-bb) = a7b5b80ed7125f66d845c74d21d8de41b10d112a
-SHA1 (patch-bc) = 46debf24eab8dcef0768aef88aee0029b2f316ec
+SHA1 (9base-6.tar.gz) = f349d696859db9a0ff9823cb053f54cf7501ec42
+RMD160 (9base-6.tar.gz) = 7a3686ac1630c52810eebca91b2e49a935dd0812
+Size (9base-6.tar.gz) = 1045868 bytes
+SHA1 (patch-ed_ed.c) = c9f3c08efc2cf2e15922b4f359da4915ec967d48
+SHA1 (patch-lib9_dirfwstat.c) = 4e277a72fc2552c177ade11f5ee14570a2b2650f
+SHA1 (patch-lib9_dirread.c) = a2e06bdb794a67f8b454e18f377f32e87098c70a
+SHA1 (patch-lib9_u.h) = d1ab4bfc119b4308176f990f7ef001c940610aed
+SHA1 (patch-rc_Makefile) = 20b65f190fd96cd31870b01b98dfa09e87a8f3d2
