@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/02/02 13:48:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/10/25 08:00:00 ryoon Exp $
 bin/gcal
 bin/gcal2txt
 bin/tcal
@@ -78,6 +78,7 @@ share/locale/da/LC_MESSAGES/gcal.mo
 share/locale/de/LC_MESSAGES/gcal.mo
 share/locale/es/LC_MESSAGES/gcal.mo
 share/locale/fr/LC_MESSAGES/gcal.mo
+share/locale/it/LC_MESSAGES/gcal.mo
 share/locale/lt/LC_MESSAGES/gcal.mo
 share/locale/nl/LC_MESSAGES/gcal.mo
 share/locale/pl/LC_MESSAGES/gcal.mo
