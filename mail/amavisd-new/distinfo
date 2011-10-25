@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/12/24 07:19:35 kefren Exp $
+$NetBSD: distinfo,v 1.4 2011/10/25 20:33:07 spz Exp $
 
-SHA1 (amavisd-new-2.6.4.tar.gz) = 993b7ca839ce038fd13f65351950f0ef03d99ff9
-RMD160 (amavisd-new-2.6.4.tar.gz) = 010dd9bf49a3c7553996c49553fd0fa84ca7bdab
-Size (amavisd-new-2.6.4.tar.gz) = 947596 bytes
+SHA1 (amavisd-new-2.7.0.tar.gz) = b4ba0a4e9d3fbbfc6a790e81837a8b7eb9480f47
+RMD160 (amavisd-new-2.7.0.tar.gz) = b869dd41cfd56b1855a42edc285276016f663c5c
+Size (amavisd-new-2.7.0.tar.gz) = 941811 bytes
 SHA1 (patch-aa) = d8bc17da9b1d3ef883331d462ee06d534f5ff5b0
