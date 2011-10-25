@@ -1,17 +1,19 @@
-$NetBSD: patch-av,v 1.1 2006/06/21 19:34:45 joerg Exp $
+$NetBSD: patch-lib9_dirread.c,v 1.1 2011/10/25 16:28:17 ryoon Exp $
 
---- lib9/dirread.c.orig	2006-06-21 17:11:56.000000000 +0000
+* DragonFly support
+
+--- lib9/dirread.c.orig	2010-06-04 10:46:05.000000000 +0000
 +++ lib9/dirread.c
-@@ -18,7 +18,7 @@ mygetdents(int fd, struct dirent *buf, i
- 	nn = getdirentries(fd, (void*)buf, n, &off);
- 	return nn;
+@@ -25,7 +25,7 @@ mygetdents(int fd, struct dirent *buf, i
+ 	long off;
+ 	return getdirentries(fd, (void*)buf, n, &off);
  }
--#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
-+#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+-#elif defined(__sun__) || defined(__NetBSD__)
++#elif defined(__sun__) || defined(__NetBSD__) || defined(__DragonFly__)
  static int
  mygetdents(int fd, struct dirent *buf, int n)
  {
-@@ -44,14 +44,22 @@ countde(char *p, int n)
+@@ -50,14 +50,22 @@ countde(char *p, int n)
  	m = 0;
  	while(p < e){
  		de = (struct dirent*)p;
@@ -34,7 +36,7 @@ $NetBSD: patch-av,v 1.1 2006/06/21 19:34:45 joerg Exp $
  	}
  	return m;
  }
-@@ -91,7 +99,11 @@ dirpackage(int fd, char *buf, int n, Dir
+@@ -97,7 +105,11 @@ dirpackage(int fd, char *buf, int n, Dir
  				stat(de->d_name, &st);
  			nstr += _p9dir(&lst, &st, de->d_name, nil, nil, nil);
  		}
@@ -46,7 +48,7 @@ $NetBSD: patch-av,v 1.1 2006/06/21 19:34:45 joerg Exp $
  	}
  
  	d = malloc(sizeof(Dir)*n+nstr);
-@@ -113,7 +125,11 @@ dirpackage(int fd, char *buf, int n, Dir
+@@ -119,7 +131,11 @@ dirpackage(int fd, char *buf, int n, Dir
  				stat(de->d_name, &st);
  			_p9dir(&lst, &st, de->d_name, &d[m++], &str, estr);
  		}
