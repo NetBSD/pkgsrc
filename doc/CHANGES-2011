@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2649 2011/10/25 09:36:31 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2650 2011/10/25 14:31:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4210,3 +4210,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-AnyEvent-HTTP to 2.13 [hiramatsu 2011-10-25]
 	Updated graphics/py-gnuplot to 1.8nb1 [obache 2011-10-25]
 	Updated graphics/py-piddle to 1.0.15nb3 [obache 2011-10-25]
+	Updated mail/postfix to 2.8.6 [taca 2011-10-25]
