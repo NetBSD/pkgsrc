@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/12/15 16:41:12 joerg Exp $
+$NetBSD: distinfo,v 1.5 2011/10/25 09:24:21 obache Exp $
 
 SHA1 (gnuplot-py-1.8.tar.gz) = 1fab2850cd1881f4ede1f7978a8746af2aff9bb2
 RMD160 (gnuplot-py-1.8.tar.gz) = 0a06385a38e8b34d60d95e37b5d0a13dc682d520
 Size (gnuplot-py-1.8.tar.gz) = 118828 bytes
-SHA1 (patch-aa) = df880a26ede4e6ff83ec293f8914a96aca16b88a
