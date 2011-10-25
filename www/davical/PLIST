@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/13 15:57:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/25 07:33:54 wiz Exp $
 share/davical/dba/appuser_permissions.txt
 share/davical/dba/base-data.sql
 share/davical/dba/better_perms.sql
@@ -60,7 +60,6 @@ share/davical/htdocs/setup.php
 share/davical/htdocs/tools.php
 share/davical/htdocs/tz.php
 share/davical/htdocs/upgrade.php
-share/davical/htdocs/well-known.php
 share/davical/inc/AtomFeed.php
 share/davical/inc/CalDAVRequest.php
 share/davical/inc/DAVPrincipal.php
@@ -75,6 +74,7 @@ share/davical/inc/RRule.php
 share/davical/inc/WritableCollection.php
 share/davical/inc/always.php.in
 share/davical/inc/auth-functions.php
+share/davical/inc/autodiscover-handler.php
 share/davical/inc/caldav-ACL.php
 share/davical/inc/caldav-BIND.php
 share/davical/inc/caldav-DELETE.php
@@ -126,9 +126,11 @@ share/davical/inc/tz/expand.php
 share/davical/inc/tz/get.php
 share/davical/inc/tz/list.php
 share/davical/inc/ui/collection-edit.php
+share/davical/inc/ui/external-browse.php
 share/davical/inc/ui/principal-browse.php
 share/davical/inc/ui/principal-edit.php
 share/davical/inc/vcard.php
+share/davical/inc/well-known.php
 share/davical/po/de.po
 share/davical/po/de.values
 share/davical/po/es_AR.po
@@ -281,6 +283,7 @@ share/doc/davical/api/davical/iSchedule/_inc---iSchedule.php.html
 share/doc/davical/api/davical/iSchedule/iSchedule.html
 share/doc/davical/api/davical/ldap/_inc---drivers_imap_pam.php.html
 share/doc/davical/api/davical/ldap/_inc---drivers_ldap.php.html
+share/doc/davical/api/davical/ldap/_inc---drivers_rimap.php.html
 share/doc/davical/api/davical/ldap/_inc---drivers_squid_pam.php.html
 share/doc/davical/api/davical/ldap/imapPamDrivers.html
 share/doc/davical/api/davical/ldap/ldapDrivers.html
@@ -289,6 +292,11 @@ share/doc/davical/api/davical/logging/_inc---log_caldav_action.php.html
 share/doc/davical/api/davical/propfind/_inc---caldav-PROPFIND.php.html
 share/doc/davical/api/davical/pwauth/_inc---drivers_pwauth_pam.php.html
 share/doc/davical/api/davical/pwauth/pwauthPamDrivers.html
+share/doc/davical/api/davical/tzservice/_htdocs---tz.php.html
+share/doc/davical/api/davical/tzservice/_inc---tz---capabilities.php.html
+share/doc/davical/api/davical/tzservice/_inc---tz---expand.php.html
+share/doc/davical/api/davical/tzservice/_inc---tz---get.php.html
+share/doc/davical/api/davical/tzservice/_inc---tz---list.php.html
 share/doc/davical/api/elementindex.html
 share/doc/davical/api/elementindex_awl.html
 share/doc/davical/api/elementindex_davical.html
