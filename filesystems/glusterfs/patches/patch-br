@@ -1,4 +1,4 @@
-$NetBSD: patch-br,v 1.6 2011/10/06 02:19:06 manu Exp $
+$NetBSD: patch-br,v 1.7 2011/10/25 09:23:37 manu Exp $
 
 Use linkat(2) if available so that we can make a hardlink to symlink 
 itself, instead of symlink destination, like link(2) does. This is
@@ -8,8 +8,11 @@ glusterfsd really wants to hardlink the symlink and not its target.
 If linkat(2) is inavailable, then moving a symlink on distributed
 volumes fails.
 
---- xlators/storage/posix/src/posix.c.orig	2011-08-23 14:31:42.000000000 +0200
-+++ xlators/storage/posix/src/posix.c	2011-09-17 15:45:30.000000000 +0200
+Also pull upstreampatch that fix inode generation so that values 
+are reliable
+
+--- xlators/storage/posix/src/posix.c.orig	2011-10-25 11:01:33.000000000 +0200
++++ xlators/storage/posix/src/posix.c	2011-10-25 10:54:29.000000000 +0200
 @@ -36,8 +36,12 @@
  #ifndef GF_BSD_HOST_OS
  #include <alloca.h>
@@ -23,7 +26,53 @@ volumes fails.
  #include "md5.h"
  #include "checksum.h"
  #include "dict.h"
-@@ -1232,8 +1236,13 @@
+@@ -244,8 +248,23 @@
+ 
+         return ret;
+ }
+ 
++void
++posix_fill_ino_from_gfid (xlator_t *this, struct iatt *buf)
++{
++        uint64_t temp_ino = 0;
++        int j = 0;
++        int i = 0;
++
++        /* consider least significant 8 bytes of value out of gfid */
++        for (i = 15; i > (15 - 8); i--) {
++                temp_ino += buf->ia_gfid[i] << j;
++                j += 8;
++        }
++
++        buf->ia_ino = temp_ino;
++}
+ 
+ int
+ posix_lstat_with_gfid (xlator_t *this, const char *path, struct iatt *stbuf_p)
+ {
+@@ -265,8 +284,10 @@
+         ret = posix_fill_gfid_path (this, path, &stbuf);
+         if (ret)
+                 gf_log_callingfn (this->name, GF_LOG_DEBUG, "failed to get gfid");
+ 
++        posix_fill_ino_from_gfid (this, &stbuf);
++
+         if (stbuf_p)
+                 *stbuf_p = stbuf;
+ out:
+         return ret;
+@@ -292,8 +313,10 @@
+         ret = posix_fill_gfid_fd (this, fd, &stbuf);
+         if (ret)
+                 gf_log_callingfn (this->name, GF_LOG_DEBUG, "failed to get gfid");
+ 
++        posix_fill_ino_from_gfid (this, &stbuf);
++
+         if (stbuf_p)
+                 *stbuf_p = stbuf;
+ 
+ out:
+@@ -1232,8 +1255,13 @@
                          loc->path, strerror (op_errno));
                  goto out;
          }
@@ -37,7 +86,7 @@ volumes fails.
  
          if (op_ret == -1) {
                  op_errno = errno;
-@@ -2125,9 +2134,20 @@
+@@ -2125,9 +2153,20 @@
                          newparentpath, strerror (op_errno));
                  goto out;
          }
@@ -58,3 +107,13 @@ volumes fails.
                  op_errno = errno;
                  gf_log (this->name, GF_LOG_ERROR,
                          "link %s to %s failed: %s",
+@@ -4381,8 +4420,9 @@
+                 list_for_each_entry (tmp_entry, &entries.list, list) {
+                         strcpy (entry_path + real_path_len + 1,
+                                 tmp_entry->d_name);
+                         posix_lstat_with_gfid (this, entry_path, &stbuf);
++                        tmp_entry->d_ino = stbuf.ia_ino;
+                         tmp_entry->d_stat = stbuf;
+                 }
+         }
+ 
