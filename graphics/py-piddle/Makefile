@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/25 09:36:15 obache Exp $
 
 DISTNAME=	piddle-1.0.15
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=piddle/}
@@ -12,9 +12,7 @@ COMMENT=	Python Plug In Drawing, Does Little Else
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG=	# defined
+USE_LANGUAGES=	# empty
 
-NO_CONFIGURE=	YES
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
