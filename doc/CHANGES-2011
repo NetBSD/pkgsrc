@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2636 2011/10/25 07:32:31 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.2637 2011/10/25 07:34:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4193,3 +4193,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/py-cherrypy to 3.2.2 [gls 2011-10-24]
 	Updated x11/xorg-cf-files [mef 2011-10-25]
 	Updated devel/php-libawl to 0.49 [wiz 2011-10-25]
+	Updated www/davical to 0.9.9.7 [wiz 2011-10-25]
