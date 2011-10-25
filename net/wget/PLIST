@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2011/10/24 15:22:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/10/25 07:50:33 tron Exp $
 bin/wget
 info/wget.info
-lib/charset.alias
 man/man1/wget.1
 share/examples/wget/wgetrc
 share/locale/be/LC_MESSAGES/wget.mo
