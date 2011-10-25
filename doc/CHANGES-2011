@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2638 2011/10/25 07:46:35 mef Exp $
+$NetBSD: CHANGES-2011,v 1.2639 2011/10/25 07:51:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4198,3 +4198,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/mkfontdir to 1.0.6 [mef 2011-10-25]
 	Updated x11/glproto 1.4.14 [mef 2011-10-25]
 	Updated x11/fixproto 5.0 [mef 2011-10-25]
+	Updated net/wget to 1.13.4nb1 [tron 2011-10-25]
