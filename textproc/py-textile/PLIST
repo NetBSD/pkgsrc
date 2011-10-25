@@ -1,4 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 23:22:43 minskim Exp $
-${PYSITELIB}/textile.py
-${PYSITELIB}/textile.pyc
-${PYSITELIB}/textile.pyo
+@comment $NetBSD: PLIST,v 1.2 2011/10/25 08:30:10 obache Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/textile/__init__.py
+${PYSITELIB}/textile/__init__.pyc
+${PYSITELIB}/textile/__init__.pyo
+${PYSITELIB}/textile/functions.py
+${PYSITELIB}/textile/functions.pyc
+${PYSITELIB}/textile/functions.pyo
+${PYSITELIB}/textile/tests/__init__.py
+${PYSITELIB}/textile/tests/__init__.pyc
+${PYSITELIB}/textile/tests/__init__.pyo
+${PYSITELIB}/textile/textilefactory.py
+${PYSITELIB}/textile/textilefactory.pyc
+${PYSITELIB}/textile/textilefactory.pyo
+${PYSITELIB}/textile/tools/__init__.py
+${PYSITELIB}/textile/tools/__init__.pyc
+${PYSITELIB}/textile/tools/__init__.pyo
+${PYSITELIB}/textile/tools/imagesize.py
+${PYSITELIB}/textile/tools/imagesize.pyc
+${PYSITELIB}/textile/tools/imagesize.pyo
+${PYSITELIB}/textile/tools/sanitizer.py
+${PYSITELIB}/textile/tools/sanitizer.pyc
+${PYSITELIB}/textile/tools/sanitizer.pyo
