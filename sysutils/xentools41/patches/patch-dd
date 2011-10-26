@@ -1,0 +1,11 @@
+$NetBSD: patch-dd,v 1.3 2011/10/26 13:39:49 bouyer Exp $
+
+--- ../tools/examples/Makefile.orig	2011-10-20 19:05:41.000000000 +0200
++++ ../tools/examples/Makefile	2011-10-26 13:55:46.000000000 +0200
+@@ -1,5 +1,6 @@
+ XEN_ROOT = $(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
++XEN_CONFIG_DIR=${EGDIR}
+ 
+ # Init scripts.
+ XEND_INITD = init.d/xend
