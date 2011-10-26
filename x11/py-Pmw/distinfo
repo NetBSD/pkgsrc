@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/10/07 17:44:27 perry Exp $
+$NetBSD: distinfo,v 1.5 2011/10/26 13:10:08 obache Exp $
 
-SHA1 (Pmw.1.2.tar.gz) = 6d85cafd45f3e9c012425aa42fe92ea30bb5db14
-RMD160 (Pmw.1.2.tar.gz) = b312e32146e677e633a434661a10f9496fe36c6f
-Size (Pmw.1.2.tar.gz) = 396404 bytes
+SHA1 (Pmw.1.3.2.tar.gz) = e2d8dd6eed7378acf8723c860107a12d7e808227
+RMD160 (Pmw.1.3.2.tar.gz) = ad3fca73405a8c8a7e2ec81096b00665e2937964
+Size (Pmw.1.3.2.tar.gz) = 399262 bytes
