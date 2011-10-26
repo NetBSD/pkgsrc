@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2657 2011/10/26 19:28:32 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2658 2011/10/26 20:34:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4217,3 +4217,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/py-docutils to 0.8.1nb1 [gls 2011-10-26]
 	Updated graphics/freetype2 to 2.4.7 [tez 2011-10-26]
 	Updated print/podofo to 0.9.1 [gls 2011-10-26]
+	Added graphics/tex-epstopdf version 2.16 [minskim 2011-10-26]
+	Added graphics/tex-epstopdf-doc version 2.16 [minskim 2011-10-26]
