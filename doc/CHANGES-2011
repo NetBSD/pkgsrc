@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2658 2011/10/26 20:34:03 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2659 2011/10/26 21:45:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/podofo to 0.9.1 [gls 2011-10-26]
 	Added graphics/tex-epstopdf version 2.16 [minskim 2011-10-26]
 	Added graphics/tex-epstopdf-doc version 2.16 [minskim 2011-10-26]
+	Updated devel/doxygen to 1.6.3nb6 [minskim 2011-10-26]
