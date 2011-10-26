@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/05/26 05:06:34 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/26 21:53:54 minskim Exp $
 
 DISTNAME=	oberdiek.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2009
-PKGREVISION=	1
-TEXLIVE_REV=	18100
+PKGNAME=	tex-${DISTNAME:S/./-/}-2011
+TEXLIVE_REV=	22180
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-oberdiek
