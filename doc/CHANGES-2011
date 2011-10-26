@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2653 2011/10/26 13:10:27 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2654 2011/10/26 17:56:24 tez Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/postfix to 2.8.6 [taca 2011-10-25]
 	Updated sysutils/9base to 20100604 [ryoon 2011-10-25]
 	Updated x11/py-Pmw to 1.3.2 [obache 2011-10-26]
+	Updated security/clamav to 0.97.3 [tez 2011-10-26]
