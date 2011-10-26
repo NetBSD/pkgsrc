@@ -1,0 +1,10 @@
+Epstopdf is a Perl script that converts an EPS file to an 'encapsulated'
+PDF file (a single page file whose media box is the same as the original
+EPS's bounding box). The resulting file suitable for inclusion by PDFTeX
+as an image. The script is adapted to run both on Windows and on
+Unix-alike systems. The script makes use of Ghostscript for the actual
+conversion to PDF. It assumes Ghostscript version 6.51 or later, and (by
+default) suppresses its automatic rotation of pages where most of the
+text is not horizontal. LaTeX users may make use of the epstopdf
+package, which will run the epstopdf script "on the fly", thus giving
+the illusion that PDFLaTeX is accepting EPS graphic files.
