@@ -1,8 +1,20 @@
-$NetBSD: patch-ab,v 1.6 2011/07/28 06:25:14 mrg Exp $
+$NetBSD: patch-ab,v 1.7 2011/10/26 06:57:30 mrg Exp $
 
 --- src/cpus/cpu_sh_instr.cc.orig	2010-02-14 01:33:54.000000000 -0800
-+++ src/cpus/cpu_sh_instr.cc	2011-07-26 17:55:15.000000000 -0700
-@@ -3378,6 +3378,11 @@
++++ src/cpus/cpu_sh_instr.cc	2011-10-25 23:18:56.000000000 -0700
+@@ -3336,6 +3336,11 @@
+ 			case 0x09:	/*  SHLR2 Rn  */
+ 				ic->f = instr(shlr2_rn);
+ 				break;
++			case 0x0a:	/*  LDS Rn,MACH */
++				ic->f = instr(mov_rm_rn);
++				ic->arg[0] = (size_t)&cpu->cd.sh.r[r8];
++				ic->arg[1] = (size_t)&cpu->cd.sh.mach;
++				break;
+ 			case 0x0b:	/*  JSR @Rn  */
+ 				if (cpu->machine->show_trace_tree)
+ 					ic->f = instr(jsr_rn_trace);
+@@ -3378,6 +3383,11 @@
  			case 0x19:	/*  SHLR8 Rn  */
  				ic->f = instr(shlr8_rn);
  				break;
