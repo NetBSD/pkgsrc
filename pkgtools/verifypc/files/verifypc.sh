@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.6 2011/06/12 20:28:33 dholland Exp $
+# $NetBSD: verifypc.sh,v 1.7 2011/10/26 08:03:35 sbd Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -128,7 +128,7 @@ main() {
     # the loop in search_file_in_depends finds the most restrictive spec
     # first, which used to be done by sorting but is now done with 
     # reduce-depends.)
-    SORTED_DEPS=$(awk -f ../../mk/flavor/pkg/reduce-depends.awk \
+    SORTED_DEPS=$(awk -f ../../mk/pkgformat/pkg/reduce-depends.awk \
 	"$(${MAKE} show-vars VARNAMES='BUILD_DEPENDS DEPENDS')")
 
     error=0
