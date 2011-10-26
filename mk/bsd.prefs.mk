@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.317 2011/10/15 00:23:08 reed Exp $
+# $NetBSD: bsd.prefs.mk,v 1.318 2011/10/26 16:01:14 hans Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -277,7 +277,7 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 .  endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
-LOWER_OPSYS_VERSUFFIX=	2
+LOWER_OPSYS_VERSUFFIX=	2.${OS_VERSION:C/5.//}
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS:=		${OPSYS:tl}
