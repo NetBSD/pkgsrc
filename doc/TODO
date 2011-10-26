@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10639 2011/10/25 16:29:37 ryoon Exp $
+$NetBSD: TODO,v 1.10640 2011/10/26 19:28:32 gls Exp $
 
 Suggested new packages
 ======================
@@ -1086,7 +1086,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ploticus-2.41
 	o ploticus-examples-230
 	o po4a-0.41
-	o podofo-0.9.1
 	o polkit-qt-0.99.0
 	o polsms-2.1.0
 	o poppass-4.0.14
