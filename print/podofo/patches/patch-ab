@@ -1,8 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2011/05/02 11:53:51 shattered Exp $
+$NetBSD: patch-ab,v 1.2 2011/10/26 19:28:00 gls Exp $
 
---- CMakeLists.txt.orig	2008-12-30 12:16:23.000000000 +0000
+Make LUA optional (PR/43054). Make sure man pages are installed
+at the right place.
+
+--- CMakeLists.txt.orig	2011-04-26 18:02:47.000000000 +0000
 +++ CMakeLists.txt
-@@ -269,7 +269,9 @@ ELSE(DEFINED JPEG_RUNTIME_COMPATIBLE)
+@@ -407,7 +407,9 @@ ELSE(DEFINED JPEG_RUNTIME_COMPATIBLE)
  	ENDIF(NOT WIN32)
  ENDIF(DEFINED JPEG_RUNTIME_COMPATIBLE)
  
@@ -12,4 +15,13 @@ $NetBSD: patch-ab,v 1.1 2011/05/02 11:53:51 shattered Exp $
 +ENDIF(DEFINED LUA_ENABLED)
  IF(LUA_FOUND)
  	# If we have lua, we can build podofoimpose.
- 	MESSAGE("Lua found - PoDoFoImpose will be built with Lua support")
+ 	MESSAGE("Lua found - PoDoFoImpose and PoDoFoColor will be built with Lua support")
+@@ -485,7 +487,7 @@ SET(PODOFO_LIB
+ #
+ # Setup directories we will need
+ #
+-SET(MANDIR "share/man/")
++SET(MANDIR "man/")
+ 
+ # Create the config file. It'll be appended to as the subdirs run though
+ # then dependency information will be written to it at the end of the
