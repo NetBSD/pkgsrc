@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/26 05:06:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/10/26 21:53:54 minskim Exp $
+bin/pdfatfi
+share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
+share/texmf-dist/scripts/oberdiek/luacolor-pre065.lua
 share/texmf-dist/scripts/oberdiek/luacolor.lua
 share/texmf-dist/scripts/oberdiek/magicnum.lua
+share/texmf-dist/scripts/oberdiek/oberdiek.luacolor-pre065.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.luacolor.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.magicnum.lua
 share/texmf-dist/scripts/oberdiek/oberdiek.pdftexcmds.lua
-share/texmf-dist/scripts/oberdiek/pdfatfi.pl
 share/texmf-dist/scripts/oberdiek/pdftexcmds.lua
 share/texmf-dist/tex/generic/oberdiek/alphalph.sty
 share/texmf-dist/tex/generic/oberdiek/atbegshi.sty
@@ -14,10 +17,12 @@ share/texmf-dist/tex/generic/oberdiek/bitset.sty
 share/texmf-dist/tex/generic/oberdiek/catchfile.sty
 share/texmf-dist/tex/generic/oberdiek/embedfile.sty
 share/texmf-dist/tex/generic/oberdiek/engord.sty
+share/texmf-dist/tex/generic/oberdiek/eolgrab.sty
 share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-share/texmf-dist/tex/generic/oberdiek/hologo-test-spacefactor.tex
-share/texmf-dist/tex/generic/oberdiek/hologo-test1.tex
+share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+share/texmf-dist/tex/generic/oberdiek/hobsub.sty
 share/texmf-dist/tex/generic/oberdiek/hologo.sty
 share/texmf-dist/tex/generic/oberdiek/hyphsubst.sty
 share/texmf-dist/tex/generic/oberdiek/iflang.sty
@@ -31,12 +36,14 @@ share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 share/texmf-dist/tex/generic/oberdiek/luatex-loader.sty
 share/texmf-dist/tex/generic/oberdiek/luatex.sty
 share/texmf-dist/tex/generic/oberdiek/magicnum.sty
-share/texmf-dist/tex/generic/oberdiek/pagegrid.sty
+share/texmf-dist/tex/generic/oberdiek/mleftright.sty
 share/texmf-dist/tex/generic/oberdiek/pdfcol.sty
 share/texmf-dist/tex/generic/oberdiek/pdfcrypt.sty
 share/texmf-dist/tex/generic/oberdiek/pdfescape.sty
 share/texmf-dist/tex/generic/oberdiek/pdfrender.sty
 share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+share/texmf-dist/tex/generic/oberdiek/protecteddef.sty
+share/texmf-dist/tex/generic/oberdiek/rotchiffre.sty
 share/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 share/texmf-dist/tex/generic/oberdiek/se-ascii.def
 share/texmf-dist/tex/generic/oberdiek/se-clean7bit.def
@@ -89,8 +96,9 @@ share/texmf-dist/tex/latex/oberdiek/accsupp.sty
 share/texmf-dist/tex/latex/oberdiek/aliascnt.sty
 share/texmf-dist/tex/latex/oberdiek/askinclude.sty
 share/texmf-dist/tex/latex/oberdiek/atenddvi.sty
-share/texmf-dist/tex/latex/oberdiek/atfidvips.def
-share/texmf-dist/tex/latex/oberdiek/atfipdftex.def
+share/texmf-dist/tex/latex/oberdiek/atfi-dvipdfmx.def
+share/texmf-dist/tex/latex/oberdiek/atfi-dvips.def
+share/texmf-dist/tex/latex/oberdiek/atfi-pdftex.def
 share/texmf-dist/tex/latex/oberdiek/attachfile2.sty
 share/texmf-dist/tex/latex/oberdiek/atveryend.sty
 share/texmf-dist/tex/latex/oberdiek/auxhook.sty
@@ -119,6 +127,7 @@ share/texmf-dist/tex/latex/oberdiek/flags.sty
 share/texmf-dist/tex/latex/oberdiek/grfext.sty
 share/texmf-dist/tex/latex/oberdiek/grffile.sty
 share/texmf-dist/tex/latex/oberdiek/holtxdoc.sty
+share/texmf-dist/tex/latex/oberdiek/hopatch.sty
 share/texmf-dist/tex/latex/oberdiek/hycolor.sty
 share/texmf-dist/tex/latex/oberdiek/hypbmsec.sty
 share/texmf-dist/tex/latex/oberdiek/hypcap.sty
@@ -139,6 +148,7 @@ share/texmf-dist/tex/latex/oberdiek/letltxmacro.sty
 share/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
 share/texmf-dist/tex/latex/oberdiek/luacolor.sty
 share/texmf-dist/tex/latex/oberdiek/makerobust.sty
+share/texmf-dist/tex/latex/oberdiek/pagegrid.sty
 share/texmf-dist/tex/latex/oberdiek/pagesel.sty
 share/texmf-dist/tex/latex/oberdiek/pdfcolfoot.sty
 share/texmf-dist/tex/latex/oberdiek/pdfcolmk.sty
@@ -191,12 +201,14 @@ share/texmf-dist/tex/latex/oberdiek/x-mac-centeuro.def
 share/texmf-dist/tex/latex/oberdiek/x-mac-cyrillic.def
 share/texmf-dist/tex/latex/oberdiek/x-mac-roman.def
 share/texmf-dist/tex/latex/oberdiek/x-nextstep.def
+share/texmf-dist/tex/latex/oberdiek/x-verbatim.def
 share/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty
 share/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
 share/texmf-dist/tex/latex/oberdiek/zref-abspos.sty
 share/texmf-dist/tex/latex/oberdiek/zref-base.sty
 share/texmf-dist/tex/latex/oberdiek/zref-counter.sty
 share/texmf-dist/tex/latex/oberdiek/zref-dotfill.sty
+share/texmf-dist/tex/latex/oberdiek/zref-env.sty
 share/texmf-dist/tex/latex/oberdiek/zref-hyperref.sty
 share/texmf-dist/tex/latex/oberdiek/zref-lastpage.sty
 share/texmf-dist/tex/latex/oberdiek/zref-marks.sty

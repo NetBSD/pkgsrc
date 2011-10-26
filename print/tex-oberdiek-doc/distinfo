@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/05/26 05:06:34 minskim Exp $
+$NetBSD: distinfo,v 1.4 2011/10/26 21:53:54 minskim Exp $
 
-SHA1 (tex-oberdiek-18100/oberdiek.doc.tar.xz) = 44087b3103c0ee2a9279c728d4a37d8712e4260a
-RMD160 (tex-oberdiek-18100/oberdiek.doc.tar.xz) = 840a2a7455bae20e70634bb4cd429e9ef89deb40
-Size (tex-oberdiek-18100/oberdiek.doc.tar.xz) = 20649924 bytes
+SHA1 (tex-oberdiek-22180/oberdiek.doc.tar.xz) = e9ea3eed490fc409b2c1585af0c0a9c5014a5602
+RMD160 (tex-oberdiek-22180/oberdiek.doc.tar.xz) = 389c6efe084b55e0fa690ef6c0a5659ef6ea551e
+Size (tex-oberdiek-22180/oberdiek.doc.tar.xz) = 22064260 bytes
