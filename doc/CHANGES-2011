@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2652 2011/10/25 17:29:13 darcy Exp $
+$NetBSD: CHANGES-2011,v 1.2653 2011/10/26 13:10:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4212,3 +4212,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/py-piddle to 1.0.15nb3 [obache 2011-10-25]
 	Updated mail/postfix to 2.8.6 [taca 2011-10-25]
 	Updated sysutils/9base to 20100604 [ryoon 2011-10-25]
+	Updated x11/py-Pmw to 1.3.2 [obache 2011-10-26]
