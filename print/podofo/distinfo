@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/05/02 11:53:51 shattered Exp $
+$NetBSD: distinfo,v 1.3 2011/10/26 19:28:00 gls Exp $
 
-SHA1 (podofo-0.7.0.tar.gz) = bd9862770c99f5790e6be53a57c77c5d4796d841
-RMD160 (podofo-0.7.0.tar.gz) = 37721670a706da614b61ec9620fb1ef46aaff4ae
-Size (podofo-0.7.0.tar.gz) = 1117023 bytes
+SHA1 (podofo-0.9.1.tar.gz) = d04c26b93dcf5f82a8dd90e02df6de95fb98ef47
+RMD160 (podofo-0.9.1.tar.gz) = 4d65f78cf4929eda44b5f27d518d104380e58160
+Size (podofo-0.9.1.tar.gz) = 1080079 bytes
 SHA1 (patch-aa) = 7d3bb709d86ad13b21120d41223a4d84c5d9215d
-SHA1 (patch-ab) = 1f3284b7721862165941578b3710504f818c60e4
+SHA1 (patch-ab) = 86ef3d5f6fced669cbeeae95890c046489467e69
