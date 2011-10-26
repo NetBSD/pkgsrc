@@ -1,33 +1,25 @@
-# $NetBSD: Makefile,v 1.27 2009/07/22 09:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2011/10/26 13:10:08 obache Exp $
 #
 
-DISTNAME=	Pmw.1.2
-PKGNAME=	${PYPKGPREFIX}-Pmw-1.2
-PKGREVISION=	1
+DISTNAME=	Pmw.1.3.2
+EGG_NAME=	${DISTNAME:S/./-/}
+PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmw/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pmw.sourceforge.net/
 COMMENT=	Python meta widgets
+LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	blt>=2.4i:../../x11/blt
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+USE_LANGUAGES=	# empty
 
-WRKSRC=		${WRKDIR}/Pmw
+PYSETUPSUBDIR=	src
 
-NO_BUILD=	yes
-
-do-install:
-	(cd ${WRKDIR}; ${FIND} Pmw -type d -print | \
-	    ${SED} -e 's,^,${DESTDIR}${PREFIX}/${PYSITELIB}/,' | ${XARGS} -n 1 ${INSTALL_DATA_DIR})
-	(cd ${WRKDIR}; for f in `${FIND} Pmw -type f -print`; do \
-	    ${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/${PYSITELIB}/$$f; done)
-	(cd ${DESTDIR}${PREFIX}; ${FIND} ${PYSITELIB}/Pmw \
-		-type f -print >>${PLIST_SRC})
-
-.include "../../lang/python/extension.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
-.include "../../x11/blt/buildlink3.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
