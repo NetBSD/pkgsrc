@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/27 17:14:37 minskim Exp $
+share/texmf-dist/tex/latex/preview/prauctex.cfg
+share/texmf-dist/tex/latex/preview/prauctex.def
+share/texmf-dist/tex/latex/preview/prcounters.def
+share/texmf-dist/tex/latex/preview/preview.sty
+share/texmf-dist/tex/latex/preview/prfootnotes.def
+share/texmf-dist/tex/latex/preview/prlyx.def
+share/texmf-dist/tex/latex/preview/prshowbox.def
+share/texmf-dist/tex/latex/preview/prshowlabels.def
+share/texmf-dist/tex/latex/preview/prtightpage.def
+share/texmf-dist/tex/latex/preview/prtracingall.def
