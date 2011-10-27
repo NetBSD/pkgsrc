@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/08/25 23:07:00 seb Exp $
+$NetBSD: distinfo,v 1.3 2011/10/27 12:23:47 hiramatsu Exp $
 
-SHA1 (Starlet-0.10.tar.gz) = 2e9bcc0383dfdbc5445b7eeb4c3705326cde3f3a
-RMD160 (Starlet-0.10.tar.gz) = 7d13a54211f0e6b648e16a7f8216fc1a4540249e
-Size (Starlet-0.10.tar.gz) = 23411 bytes
+SHA1 (Starlet-0.13.tar.gz) = 52b1fea3010d0a92c9a213977678d5e98619490f
+RMD160 (Starlet-0.13.tar.gz) = 9826f15c27f962c877176e7d91ae64d51bb8af50
+Size (Starlet-0.13.tar.gz) = 24502 bytes
