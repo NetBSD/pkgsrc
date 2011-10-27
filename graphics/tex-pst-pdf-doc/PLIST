@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/27 18:25:17 minskim Exp $
+share/texmf-dist/doc/latex/pst-pdf/CHANGES
+share/texmf-dist/doc/latex/pst-pdf/README
+share/texmf-dist/doc/latex/pst-pdf/pst-pdf-DE.pdf
+share/texmf-dist/doc/latex/pst-pdf/pst-pdf-example1.pdf
+share/texmf-dist/doc/latex/pst-pdf/pst-pdf-example1.tex
+share/texmf-dist/doc/latex/pst-pdf/pst-pdf-example2.pdf
+share/texmf-dist/doc/latex/pst-pdf/pst-pdf-example2.tex
+share/texmf-dist/doc/latex/pst-pdf/pst-pdf.pdf
