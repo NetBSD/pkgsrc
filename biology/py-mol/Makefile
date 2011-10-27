@@ -1,50 +1,43 @@
-# $NetBSD: Makefile,v 1.6 2011/01/13 13:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/27 14:03:17 obache Exp $
 
-DISTNAME=	pymol-0_98-src
-PKGNAME=	${PYPKGPREFIX}-mol-0.98
-PKGREVISION=	6
+DISTNAME=	pymol-v1.4.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
+EGG_NAME=	pymol-1.4.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
-EXTRACT_SUFX=	.tgz
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pymol.sourceforge.net/
+HOMEPAGE=	http://www.pymol.org/
 COMMENT=	Molecular Visualization System
+
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-Pmw-[0-9]*:../../x11/py-Pmw
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/pymol-0.98
-PYDISTUTILSPKG=	yes
-PYSETUP=	setup.py
+WRKSRC=		${WRKDIR}/pymol
 
 CONFLICTS=	pymol-[0-9]*
 
+USE_LANGUAGES=	c c++
+
 REPLACE_PYTHON=	test/cyg test/run test/show test/win.py
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+# not used
+CHECK_PORTABILITY_SKIP+=	setup/*
 
 INSTALLATION_DIRS=	bin
 
 post-install:
-	cd ${WRKSRC} && env ${MAKE_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} setup2.py
-	${INSTALL_SCRIPT} ${WRKSRC}/pymol.com ${DESTDIR}${PREFIX}/bin/pymol
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} setup2.py install
+	${INSTALL_SCRIPT} ${WRKSRC}/pymol ${DESTDIR}${PREFIX}/bin/pymol
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
-.include "../../x11/py-Pmw/buildlink3.mk"
-
-# Note that the website claims this package needs "freeglut", which
-# would mean:
-#  .include "../../graphics/freeglut/buildlink3.mk"
-# However, the package seems to link with "glut" and not with "freeglut",
-# and no other pkgsrc packages seem to use freeglut.
-
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
