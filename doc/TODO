@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10642 2011/10/27 21:10:30 wiz Exp $
+$NetBSD: TODO,v 1.10643 2011/10/27 21:17:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,6 +329,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
+	o ImageMagick-6.7.3.2
 	o MAMEDiff-2.30
 	o Mesa-7.10.3
 	o MesaLib-7.11
@@ -577,7 +578,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o f-spot-0.8.2
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o farsight2-0.0.30
+	o farsight2-0.0.31
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o feh-2.0
@@ -1046,6 +1047,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.5
 	o otpCalc-0.97
 	o p5-Net-SNMP-5.7.1
+	o p5-PerlMagick-6.7.3.2
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1359,7 +1361,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111008
+	o x264-devel-20111022
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
