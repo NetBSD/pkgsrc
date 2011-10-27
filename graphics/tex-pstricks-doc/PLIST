@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/17 18:12:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/27 18:01:55 minskim Exp $
 share/texmf-dist/doc/generic/pstricks/Changes
 share/texmf-dist/doc/generic/pstricks/Changes.dvips
 share/texmf-dist/doc/generic/pstricks/Changes.generic
 share/texmf-dist/doc/generic/pstricks/Changes.latex
+share/texmf-dist/doc/generic/pstricks/Makefile
 share/texmf-dist/doc/generic/pstricks/PSTricks.bib
+share/texmf-dist/doc/generic/pstricks/README
 share/texmf-dist/doc/generic/pstricks/ctandir.sty
 share/texmf-dist/doc/generic/pstricks/images/flowers.eps
 share/texmf-dist/doc/generic/pstricks/images/tiger.eps
@@ -11,8 +13,8 @@ share/texmf-dist/doc/generic/pstricks/images/tiger.pdf
 share/texmf-dist/doc/generic/pstricks/pst-doc.cls
 share/texmf-dist/doc/generic/pstricks/pst-doc.ist
 share/texmf-dist/doc/generic/pstricks/pst-doc.pdf
-share/texmf-dist/doc/generic/pstricks/pst-docfull.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news.sty
+share/texmf-dist/doc/generic/pstricks/pst-news.tex
 share/texmf-dist/doc/generic/pstricks/pst-news05.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news05.tex
 share/texmf-dist/doc/generic/pstricks/pst-news06.pdf
@@ -23,6 +25,8 @@ share/texmf-dist/doc/generic/pstricks/pst-news09.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news09.tex
 share/texmf-dist/doc/generic/pstricks/pst-news10.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news10.tex
+share/texmf-dist/doc/generic/pstricks/pst-news11.pdf
+share/texmf-dist/doc/generic/pstricks/pst-news11.tex
 share/texmf-dist/doc/generic/pstricks/pst-quickref.pdf
 share/texmf-dist/doc/generic/pstricks/pst-user.pdf
 share/texmf-dist/doc/generic/pstricks/pst-user.tgz
