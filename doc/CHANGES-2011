@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2680 2011/10/27 23:06:20 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2681 2011/10/27 23:24:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4252,3 +4252,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/teTeX to 3.0nb10 [minskim 2011-10-27]
 	Updated misc/calibre to 0.8.24 [gls 2011-10-27]
 	Removed print/texlive-pdftools [minskim 2011-10-27]
+	Added devel/tex-etoolbox version 2.1 [minskim 2011-10-27]
+	Added devel/tex-etoolbox-doc version 2.1 [minskim 2011-10-27]
