@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2011/10/27 17:21:39 minskim Exp $
+# $NetBSD: Makefile,v 1.508 2011/10/27 18:44:14 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -667,6 +667,7 @@ SUBDIR+=	xpdf-korean
 SUBDIR+=	xpdf-latin2
 SUBDIR+=	xpdf-thai
 SUBDIR+=	xpdf-turkish
+SUBDIR+=	xpdfopen
 SUBDIR+=	xpp
 SUBDIR+=	yup
 
