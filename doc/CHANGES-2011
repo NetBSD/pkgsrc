@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2678 2011/10/27 19:42:14 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2679 2011/10/27 20:41:28 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4250,3 +4250,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/teTeX3-texmf to 3.0nb32 [minskim 2011-10-27]
 	Updated print/teTeX3-bin to 3.0nb49 [minskim 2011-10-27]
 	Updated print/teTeX to 3.0nb10 [minskim 2011-10-27]
+	Updated misc/calibre to 0.8.24 [gls 2011-10-27]
