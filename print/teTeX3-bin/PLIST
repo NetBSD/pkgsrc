@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.23 2010/06/17 00:44:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/10/27 19:39:34 minskim Exp $
 bin/fdf2tan
 bin/fdf2tex
 bin/lamed
 bin/makempy
-bin/pdfcrop
 bin/texdoc
 bin/texdoctk
 bin/texexec
