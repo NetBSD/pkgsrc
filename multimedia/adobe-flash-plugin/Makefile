@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.7 2011/10/27 11:46:20 abs Exp $
+# $NetBSD: Makefile,v 1.8 2011/10/27 11:47:49 abs Exp $
 
-PKGREVISION=	1
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://download.macromedia.com/pub/labs/flashplayer10/
 MASTER_SITES+=	ftp://ftp.dvo.ru/pub/Gentoo/distfiles/
@@ -29,10 +28,6 @@ EMUL_MODULES.linux=	compat gtk2 x11
 EMUL_REQD=		suse>=10.0
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-DEPENDS+=		libflashsupport-[0-9]*:../../multimedia/libflashsupport
-.endif
 
 # Defaults so lintpkgsrc is happy
 FLASH_VERS=		10.0.0.525
