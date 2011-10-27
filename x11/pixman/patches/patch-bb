@@ -1,0 +1,12 @@
+$NetBSD: patch-bb,v 1.1 2011/10/27 16:52:51 drochner Exp $
+
+--- pixman/pixman-private.h.orig	2011-07-04 20:22:40.000000000 +0000
++++ pixman/pixman-private.h
+@@ -595,6 +595,7 @@ _pixman_iter_get_scanline_noop (pixman_i
+ #define FAST_PATH_ROTATE_90_TRANSFORM		(1 << 21)
+ #define FAST_PATH_ROTATE_180_TRANSFORM		(1 << 22)
+ #define FAST_PATH_ROTATE_270_TRANSFORM		(1 << 23)
++#define FAST_PATH_NEEDS_WORKAROUND		(1 << 24)
+ 
+ #define FAST_PATH_PAD_REPEAT						\
+     (FAST_PATH_NO_NONE_REPEAT		|				\
