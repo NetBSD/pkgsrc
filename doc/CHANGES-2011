@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2662 2011/10/27 01:29:25 mspo Exp $
+$NetBSD: CHANGES-2011,v 1.2663 2011/10/27 02:37:20 tez Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4225,3 +4225,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-Output to 1.01 [hiramatsu 2011-10-27]
 	Updated textproc/p5-Pod-Spell-CommonMistakes to 1.000 [hiramatsu 2011-10-27]
 	Updated www/p5-Mojolicious to 2.11 [mspo 2011-10-27]
+	Updated print/xpdf to 3.03 [tez 2011-10-27]
