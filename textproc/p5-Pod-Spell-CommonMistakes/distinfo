@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/31 07:34:31 sno Exp $
+$NetBSD: distinfo,v 1.2 2011/10/27 01:15:07 hiramatsu Exp $
 
-SHA1 (Pod-Spell-CommonMistakes-0.01.tar.gz) = eb69ba88646b9bfeae6f0bcbbdb318ac5b3251a6
-RMD160 (Pod-Spell-CommonMistakes-0.01.tar.gz) = 61ad7e96151c558197f2c226b2a37282055e47e5
-Size (Pod-Spell-CommonMistakes-0.01.tar.gz) = 19332 bytes
+SHA1 (Pod-Spell-CommonMistakes-1.000.tar.gz) = 32373e2611e0f7f735cd051edc216a769e5f0cd9
+RMD160 (Pod-Spell-CommonMistakes-1.000.tar.gz) = 6afa0b495b672096b660e6626c477eccd6218c8f
+Size (Pod-Spell-CommonMistakes-1.000.tar.gz) = 24598 bytes
