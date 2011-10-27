@@ -1,0 +1,2 @@
+This package provides Fabrice Popineau's pdfclose/pdfopen commands to
+control Acrobat Reader, xpdf and evince.
