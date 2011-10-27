@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2660 2011/10/26 21:54:20 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2661 2011/10/27 01:15:50 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4222,3 +4222,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/doxygen to 1.6.3nb6 [minskim 2011-10-26]
 	Updated print/tex-oberdiek to 2011 [minskim 2011-10-26]
 	Updated print/tex-oberdiek-doc to 2011 [minskim 2011-10-26]
+	Updated devel/p5-Test-Output to 1.01 [hiramatsu 2011-10-27]
+	Updated textproc/p5-Pod-Spell-CommonMistakes to 1.000 [hiramatsu 2011-10-27]
