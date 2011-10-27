@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/27 18:24:57 minskim Exp $
+
+SHA1 (tex-pst-pdf-15878/pst-pdf.tar.xz) = 8448ff53ef5a4d2fd03f011b0e4bbea9183054dd
+RMD160 (tex-pst-pdf-15878/pst-pdf.tar.xz) = e24702d1604374ca29c8533735408b6d8b655105
+Size (tex-pst-pdf-15878/pst-pdf.tar.xz) = 7036 bytes
+SHA1 (patch-bin_ps4pdf) = eaac6f08c2f29005a5076b3873407a7b180563cd
