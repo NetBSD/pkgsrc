@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2011/10/26 11:08:37 cheusov Exp $
+# $NetBSD: builtin.mk,v 1.4 2011/10/27 04:23:50 joerg Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -6,11 +6,6 @@ BUILTIN_FIND_FILES_VAR:=	H_ARCHIVE
 BUILTIN_FIND_FILES.H_ARCHIVE=	/usr/include/archive.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
-
-.if ${OPSYS} == SunOS
-# workaround for pkg/45491
-CONFIGURE_ENV+=	ac_cv_header_ext2fs_ext2_fs_h=no
-.endif
 
 ###
 ### Determine if there is a built-in implementation of the package and
