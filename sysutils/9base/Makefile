@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/10/26 11:31:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/27 09:58:44 ryoon Exp $
 #
 
 DISTNAME=	9base-6
@@ -30,7 +30,7 @@ LDFLAGS+= -static
 .endif
 
 #XXX see http://gnats.netbsd.org/43228
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.0*) || !empty(MACHINE_PLATFORM:MNetBSD-5.1*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.[0-8]*)
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
 
