@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2671 2011/10/27 18:03:08 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2672 2011/10/27 18:07:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4240,3 +4240,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-environ-doc version 0.2 [minskim 2011-10-27]
 	Updated graphics/tex-pstricks to 2.23 [minskim 2011-10-27]
 	Updated graphics/tex-pstricks-doc to 2.23 [minskim 2011-10-27]
+	Added graphics/tex-pdfcrop version 1.32 [minskim 2011-10-27]
+	Added graphics/tex-pdfcrop-doc version 1.32 [minskim 2011-10-27]
