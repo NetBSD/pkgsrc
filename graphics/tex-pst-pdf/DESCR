@@ -1,0 +1,8 @@
+The package pst-pdf simplifies the use of graphics from PSTricks and
+other PostScript code in PDF documents. As in building a bibliography
+with BibTEX additional external programmes are being invoked. In this
+case they are used to create a PDF file (\PDFcontainer) that will
+contain all this graphics material. In the final document this contents
+will be inserted instead of the original PostScript code. The package
+works with pstricks and requires a recent version of the preview
+package.
