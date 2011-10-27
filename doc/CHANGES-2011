@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2661 2011/10/27 01:15:50 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2662 2011/10/27 01:29:25 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4224,3 +4224,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-oberdiek-doc to 2011 [minskim 2011-10-26]
 	Updated devel/p5-Test-Output to 1.01 [hiramatsu 2011-10-27]
 	Updated textproc/p5-Pod-Spell-CommonMistakes to 1.000 [hiramatsu 2011-10-27]
+	Updated www/p5-Mojolicious to 2.11 [mspo 2011-10-27]
