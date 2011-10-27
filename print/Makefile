@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.505 2011/10/27 03:41:25 jnemeth Exp $
+# $NetBSD: Makefile,v 1.506 2011/10/27 17:16:37 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -505,6 +505,8 @@ SUBDIR+=	tex-polytable
 SUBDIR+=	tex-polytable-doc
 SUBDIR+=	tex-preprint
 SUBDIR+=	tex-preprint-doc
+SUBDIR+=	tex-preview
+SUBDIR+=	tex-preview-doc
 SUBDIR+=	tex-printlen
 SUBDIR+=	tex-printlen-doc
 SUBDIR+=	tex-prosper
