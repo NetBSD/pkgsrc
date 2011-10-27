@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2666 2011/10/27 11:00:08 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2667 2011/10/27 12:24:28 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4231,3 +4231,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/djvulibre-tools to 3.5.24 [ryoon 2011-10-27]
 	Updated graphics/djview4 to 4.8 [ryoon 2011-10-27]
 	Updated graphics/kdegraphics4 to 4.5.5nb6 [ryoon 2011-10-27]
+	Updated devel/p5-Parallel-Prefork to 0.11nb1 [hiramatsu 2011-10-27]
+	Updated www/p5-Starlet to 0.13 [hiramatsu 2011-10-27]
