@@ -1,0 +1,6 @@
+The package provides the \collect@body command (as in amsmath), as well
+as a \long version \Collect@Body, for collecting the body text of an
+environment. These commands are used to define a new author interface to
+creating new environments. For example: \NewEnviron{test} wraps the
+entire environment body in square brackets, doing the right thing in
+ignoring leading and trailing spaces.
