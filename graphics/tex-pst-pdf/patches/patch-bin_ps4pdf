@@ -1,0 +1,30 @@
+$NetBSD: patch-bin_ps4pdf,v 1.1.1.1 2011/10/27 18:24:57 minskim Exp $
+
+--- bin/ps4pdf.orig	2008-08-08 14:55:48.000000000 -0700
++++ bin/ps4pdf	2011-10-27 11:15:07.000000000 -0700
+@@ -115,19 +115,19 @@
+ 
+ # jobname von TeX: Verzeichnisse entfernen, evtl. vorhandene Extension
+ # entfernen.
+-job=`echo "x$1" | sed 's@x@@; s@.*/@@; s@\.[^.]*$@@'`
++job=`echo "x$1" | @SED@ 's@x@@; s@.*/@@; s@\.[^.]*$@@'`
+ 
+ setupTmpDir
+-myexec latex \
++myexec @LATEX@ \
+     "\AtBeginDocument{\RequirePackage{pst-pdf}} \input{$file}"
+-test -f "$job.dvi" && myexec dvips -o "$job-pics.ps" "$job.dvi"
+-test -f "$job-pics.ps" && myexec ps2pdf \
++test -f "$job.dvi" && myexec @DVIPS@ -o "$job-pics.ps" "$job.dvi"
++test -f "$job-pics.ps" && myexec @PS2PDF@ \
+   "$ps2pdf_opts" "$job-pics.ps" "$job-pics.pdf"
+ if $crop; then
+-  myexec pdfcrop "$job-pics.pdf" "$job-pics-crop.pdf" 
++  myexec @PDFCROP@ "$job-pics.pdf" "$job-pics-crop.pdf" 
+   mv "$job-pics-crop.pdf" "$job-pics.pdf"
+ fi
+-myexec pdflatex \
++myexec @PDFLATEX@ \
+     "\AtBeginDocument{\RequirePackage{pst-pdf}} \input{$file}"
+ true
+ cleanup
