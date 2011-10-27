@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2010/02/18 15:23:24 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2011/10/27 19:41:40 minskim Exp $
 
 DISTNAME=	teTeX-3.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	print meta-pkgs
 MASTER_SITES=	# empty
 
@@ -15,11 +15,11 @@ DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	gsftopkk-[0-9]*:../../fonts/gsftopkk
 DEPENDS+=	ps2pkm-[0-9]*:../../fonts/ps2pkm
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
-DEPENDS+=	teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
+DEPENDS+=	teTeX-bin>=3.0nb49:../../print/teTeX3-bin
+DEPENDS+=	teTeX-texmf>=3.0nb32:../../print/teTeX3-texmf
 DEPENDS+=	tex-a2ping-[0-9]*:../../graphics/tex-a2ping
+DEPENDS+=	tex-pdftools-[0-9]*:../../print/tex-pdftools
 DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
-DEPENDS+=	texlive-pdftools-[0-9]*:../../print/texlive-pdftools
 DEPENDS+=	xdvik-[0-9]*:../../print/xdvik
 
 META_PACKAGE=	yes
