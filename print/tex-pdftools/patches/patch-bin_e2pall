@@ -1,0 +1,13 @@
+$NetBSD: patch-bin_e2pall,v 1.1.1.1 2011/10/27 19:03:24 minskim Exp $
+
+--- bin/e2pall.orig	2008-03-03 18:51:04.000000000 +0000
++++ bin/e2pall
+@@ -27,7 +27,7 @@
+ 
+ # EDIT these two lines for your system....
+ 
+-$Eps2PdfCom = "epstopdf";
++$Eps2PdfCom = "@EPSTOPDF@";
+ $ThisFunCom = "e2pall";
+ 
+ $fname=$ARGV[0];
