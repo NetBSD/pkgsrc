@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/27 23:22:19 minskim Exp $
+share/texmf-dist/doc/latex/etoolbox/README
+share/texmf-dist/doc/latex/etoolbox/etoolbox.pdf
+share/texmf-dist/doc/latex/etoolbox/etoolbox.tex
