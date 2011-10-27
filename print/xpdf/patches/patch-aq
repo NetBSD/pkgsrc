@@ -1,10 +1,10 @@
-$NetBSD: patch-aq,v 1.3 2008/04/20 15:48:12 tonnerre Exp $
+$NetBSD: patch-aq,v 1.4 2011/10/27 02:35:41 tez Exp $
 
 Fix arbitrary code execution with embedded fonts (CVE-2008-1693).
 
---- xpdf/Object.h.orig	2007-02-27 22:05:52.000000000 +0000
-+++ xpdf/Object.h
-@@ -68,17 +68,18 @@ enum ObjType {
+--- xpdf/Object.h.orig	2011-08-15 16:08:53.000000000 -0500
++++ xpdf/Object.h	2011-10-26 20:48:41.411023600 -0500
+@@ -68,17 +68,18 @@
  //------------------------------------------------------------------------
  
  #ifdef DEBUG_MEM
@@ -27,7 +27,7 @@ Fix arbitrary code execution with embedded fonts (CVE-2008-1693).
  
    // Initialize an object.
    Object *initBool(GBool boolnA)
-@@ -220,16 +221,16 @@ private:
+@@ -220,16 +221,16 @@
  #include "Array.h"
  
  inline int Object::arrayGetLength()
@@ -48,7 +48,7 @@ Fix arbitrary code execution with embedded fonts (CVE-2008-1693).
  
  //------------------------------------------------------------------------
  // Dict accessors.
-@@ -238,31 +239,31 @@ inline Object *Object::arrayGetNF(int i,
+@@ -238,31 +239,31 @@
  #include "Dict.h"
  
  inline int Object::dictGetLength()
@@ -59,18 +59,18 @@ Fix arbitrary code execution with embedded fonts (CVE-2008-1693).
 -  { dict->add(key, val); }
 +  { if (type == objDict) dict->add(key, val); }
  
- inline GBool Object::dictIs(char *dictType)
+ inline GBool Object::dictIs(const char *dictType)
 -  { return dict->is(dictType); }
 +  { return (type == objDict) && dict->is(dictType); }
  
- inline GBool Object::isDict(char *dictType)
+ inline GBool Object::isDict(const char *dictType)
    { return type == objDict && dictIs(dictType); }
  
- inline Object *Object::dictLookup(char *key, Object *obj)
--  { return dict->lookup(key, obj); }
-+  { if (type != objDict) return obj->initNull(); return dict->lookup(key, obj); }
+ inline Object *Object::dictLookup(const char *key, Object *obj, int recursion)
+-  { return dict->lookup(key, obj, recursion); }
++  { if (type != objDict) return obj->initNull(); return dict->lookup(key, obj, recursion); }
  
- inline Object *Object::dictLookupNF(char *key, Object *obj)
+ inline Object *Object::dictLookupNF(const char *key, Object *obj)
 -  { return dict->lookupNF(key, obj); }
 +  { if (type != objDict) return obj->initNull(); return dict->lookupNF(key, obj); }
  
@@ -88,7 +88,7 @@ Fix arbitrary code execution with embedded fonts (CVE-2008-1693).
  
  //------------------------------------------------------------------------
  // Stream accessors.
-@@ -271,33 +272,33 @@ inline Object *Object::dictGetValNF(int 
+@@ -271,33 +272,33 @@
  #include "Stream.h"
  
  inline GBool Object::streamIs(char *dictType)
