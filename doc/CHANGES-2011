@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2676 2011/10/27 19:30:42 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2677 2011/10/27 19:40:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-pdftools version 0.82 [minskim 2011-10-27]
 	Added print/tex-pdftools-doc version 0.82 [minskim 2011-10-27]
 	Updated print/teTeX3-texmf to 3.0nb32 [minskim 2011-10-27]
+	Updated print/teTeX3-bin to 3.0nb49 [minskim 2011-10-27]
