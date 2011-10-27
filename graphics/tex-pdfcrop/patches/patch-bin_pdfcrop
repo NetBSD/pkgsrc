@@ -1,0 +1,12 @@
+$NetBSD: patch-bin_pdfcrop,v 1.1.1.1 2011/10/27 18:05:13 minskim Exp $
+
+--- bin/pdfcrop.orig	2011-10-27 17:31:01.000000000 +0000
++++ bin/pdfcrop
+@@ -118,6 +118,7 @@ $archname = 'unknown' unless defined $Co
+ # get Ghostscript command name
+ $::opt_gscmd = '';
+ sub find_ghostscript () {
++    $::opt_gscmd = "@GHOSTSCRIPT@";
+     return if $::opt_gscmd;
+     my $system = 'unix';
+     $system = "dos" if $^O =~ /dos/i;
