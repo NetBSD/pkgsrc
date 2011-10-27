@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2668 2011/10/27 14:03:51 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2669 2011/10/27 17:16:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4234,3 +4234,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Parallel-Prefork to 0.11nb1 [hiramatsu 2011-10-27]
 	Updated www/p5-Starlet to 0.13 [hiramatsu 2011-10-27]
 	Updated biology/py-mol to 1.4.1 [obache 2011-10-27]
+	Added print/tex-preview version 11.86 [minskim 2011-10-27]
+	Added print/tex-preview-doc version 11.86 [minskim 2011-10-27]
