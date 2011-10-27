@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/17 18:12:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/27 18:01:55 minskim Exp $
 share/texmf-dist/dvips/pstricks/pst-algparser.pro
 share/texmf-dist/dvips/pstricks/pst-dots.pro
 share/texmf-dist/dvips/pstricks/pst-dots97.pro
+share/texmf-dist/dvips/pstricks/pst-tools.pro
 share/texmf-dist/dvips/pstricks/pstricks.pro
 share/texmf-dist/dvips/pstricks/pstricks97.pro
 share/texmf-dist/tex/generic/pstricks/config/Changes
