@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2674 2011/10/27 18:44:14 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2675 2011/10/27 19:05:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4245,3 +4245,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/tex-pst-pdf version 1.1v [minskim 2011-10-27]
 	Added graphics/tex-pst-pdf-doc version 1.1v [minskim 2011-10-27]
 	Added print/xpdfopen version 0.82 [minskim 2011-10-27]
+	Added print/tex-pdftools version 0.82 [minskim 2011-10-27]
+	Added print/tex-pdftools-doc version 0.82 [minskim 2011-10-27]
