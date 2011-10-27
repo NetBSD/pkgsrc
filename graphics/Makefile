@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2011/10/27 18:07:20 minskim Exp $
+# $NetBSD: Makefile,v 1.615 2011/10/27 18:26:58 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -460,6 +460,8 @@ SUBDIR+=	tex-pst-node
 SUBDIR+=	tex-pst-node-doc
 SUBDIR+=	tex-pst-osci
 SUBDIR+=	tex-pst-osci-doc
+SUBDIR+=	tex-pst-pdf
+SUBDIR+=	tex-pst-pdf-doc
 SUBDIR+=	tex-pst-plot
 SUBDIR+=	tex-pst-plot-doc
 SUBDIR+=	tex-pst-poly
