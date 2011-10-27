@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/03 23:37:33 minskim Exp $
-bin/e2pall
-bin/epstopdf
-bin/pdfatfi
-bin/pdfclose
-bin/pdfopen
-bin/ps4pdf
-man/man1/e2pall.1
-man/man1/epstopdf.1
