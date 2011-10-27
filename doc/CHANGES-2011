@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2669 2011/10/27 17:16:37 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2670 2011/10/27 17:21:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4236,3 +4236,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated biology/py-mol to 1.4.1 [obache 2011-10-27]
 	Added print/tex-preview version 11.86 [minskim 2011-10-27]
 	Added print/tex-preview-doc version 11.86 [minskim 2011-10-27]
+	Added print/tex-environ version 0.2 [minskim 2011-10-27]
+	Added print/tex-environ-doc version 0.2 [minskim 2011-10-27]
