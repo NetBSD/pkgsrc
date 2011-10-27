@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/10/27 11:46:20 abs Exp $
+# $NetBSD: Makefile,v 1.12 2011/10/27 11:48:36 abs Exp $
 
 PKGNAME=		adobe-flash-plugin-${FLASH_VERSION:S/r/./}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
 
@@ -38,10 +38,6 @@ CONFLICTS=		ns-flash-[0-9]*
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
 .include "options.mk"
-
-.if ${OPSYS} != "Linux"
-DEPENDS+=		libflashsupport-[0-9]*:../../multimedia/libflashsupport
-.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${NS_PLUGINS_DIR}
