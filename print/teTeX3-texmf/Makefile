@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2011/09/18 01:21:30 minskim Exp $
+# $NetBSD: Makefile,v 1.52 2011/10/27 19:30:07 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -131,6 +131,7 @@ DEPENDS+=	tex-picinpar-[0-9]*:../../print/tex-picinpar
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
+DEPENDS+=	tex-preview-[0-9]*:../../print/tex-preview
 DEPENDS+=	tex-printlen-[0-9]*:../../print/tex-printlen
 DEPENDS+=	tex-psgo-[0-9]*:../../graphics/tex-psgo
 DEPENDS+=	tex-pst-3d-[0-9]*:../../graphics/tex-pst-3d
@@ -303,7 +304,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/p[c-g]*
 	rm -rf ${WRKSRC}/doc/latex/picinpar
 	rm -rf ${WRKSRC}/doc/latex/placeins
-	rm -rf ${WRKSRC}/doc/latex/preprint
+	rm -rf ${WRKSRC}/doc/latex/pre*
 	rm -rf ${WRKSRC}/doc/latex/ps[g-n]*
 	rm -rf ${WRKSRC}/doc/latex/rotating
 	rm -rf ${WRKSRC}/doc/latex/se*
@@ -493,7 +494,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/p[c-g]*
 	rm -rf ${WRKSRC}/tex/latex/picinpar
 	rm -rf ${WRKSRC}/tex/latex/placeins
-	rm -rf ${WRKSRC}/tex/latex/preprint
+	rm -rf ${WRKSRC}/tex/latex/pre*
 	rm -rf ${WRKSRC}/tex/latex/psl*
 	rm -rf ${WRKSRC}/tex/latex/pstricks
 	rm -rf ${WRKSRC}/tex/latex/psn*
