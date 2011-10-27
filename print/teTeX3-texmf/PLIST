@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2011/09/18 01:21:30 minskim Exp $
+@comment $NetBSD: PLIST,v 1.29 2011/10/27 19:30:07 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2771,8 +2771,6 @@ share/texmf-dist/doc/latex/platex/polski.dvi
 share/texmf-dist/doc/latex/platex/r22.mps
 share/texmf-dist/doc/latex/platex/readme.txt
 share/texmf-dist/doc/latex/platex/tstlatex.tex
-share/texmf-dist/doc/latex/preview/README
-share/texmf-dist/doc/latex/preview/preview.dvi
 share/texmf-dist/doc/latex/program/program-demo.tex
 share/texmf-dist/doc/latex/program/program.txt
 share/texmf-dist/doc/latex/ps4pdf/4-10-8.inl
@@ -6616,16 +6614,6 @@ share/texmf-dist/tex/latex/platex/plprefix.sty
 share/texmf-dist/tex/latex/platex/polski.sty
 share/texmf-dist/tex/latex/platex/qxenc.def
 share/texmf-dist/tex/latex/portland/portland.sty
-share/texmf-dist/tex/latex/preview/prauctex.cfg
-share/texmf-dist/tex/latex/preview/prauctex.def
-share/texmf-dist/tex/latex/preview/prcounters.def
-share/texmf-dist/tex/latex/preview/preview.sty
-share/texmf-dist/tex/latex/preview/prfootnotes.def
-share/texmf-dist/tex/latex/preview/prlyx.def
-share/texmf-dist/tex/latex/preview/prshowbox.def
-share/texmf-dist/tex/latex/preview/prshowlabels.def
-share/texmf-dist/tex/latex/preview/prtightpage.def
-share/texmf-dist/tex/latex/preview/prtracingall.def
 share/texmf-dist/tex/latex/program/program.sty
 share/texmf-dist/tex/latex/ps4pdf/ps4pdf.sty
 share/texmf-dist/tex/latex/psboxit/psboxit.sty
