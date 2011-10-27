@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/10/22 15:00:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2011/10/27 20:40:02 gls Exp $
 #
 
-DISTNAME=	calibre-0.8.2
-PKGREVISION=	2
+DISTNAME=	calibre-0.8.24
 CATEGORIES=	misc
 MASTER_SITES=	http://status.calibre-ebook.com/dist/src/ \
 		http://calibre-ebook.googlecode.com/files/
@@ -23,19 +22,24 @@ DEPENDS+=	${PYPKGPREFIX}-ClientForm-[0-9]*:../../www/py-ClientForm
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.7:../../textproc/py-cssutils
+# Let's depend on the ones we have in pkgsrc instead of the bundled ones.
+DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
+DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 SPECIAL_PERMS+=	bin/calibre-mount-helper ${SETUID_ROOT_PERMS}
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config pax
 PYTHON_VERSIONS_ACCEPTED=	27
 PYDISTUTILSPKG=	yes
 PYSETUPOPTARGS=	# empty
 PYSETUPINSTALLARGS=	--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}
 WRKSRC=		${WRKDIR}/calibre
+
 INSTALLATION_DIRS=	share/applications
 INSTALLATION_DIRS=	share/icons
+INSTALLATION_DIRS=	share/calibre/recipes
 
 FIX_PYTHON+=	recipes/180.recipe
 FIX_PYTHON+=	recipes/24sata.recipe
@@ -46,7 +50,6 @@ FIX_PYTHON+=	recipes/accountancyage.recipe
 FIX_PYTHON+=	recipes/adevarul.recipe
 FIX_PYTHON+=	recipes/adnkronos.recipe
 FIX_PYTHON+=	recipes/ajc.recipe
-FIX_PYTHON+=	recipes/ambito.recipe
 FIX_PYTHON+=	recipes/apcom.recipe
 FIX_PYTHON+=	recipes/arcamax.recipe
 FIX_PYTHON+=	recipes/asia_one.recipe
@@ -66,8 +69,6 @@ FIX_PYTHON+=	recipes/boortz.recipe
 FIX_PYTHON+=	recipes/borba.recipe
 FIX_PYTHON+=	recipes/brand_eins.recipe
 FIX_PYTHON+=	recipes/bucataras.recipe
-FIX_PYTHON+=	recipes/buenosaireseconomico.recipe
-FIX_PYTHON+=	recipes/business_week.recipe
 FIX_PYTHON+=	recipes/calgary_herald.recipe
 FIX_PYTHON+=	recipes/capital.recipe
 FIX_PYTHON+=	recipes/catavencu.recipe
@@ -89,7 +90,6 @@ FIX_PYTHON+=	recipes/cotidianul.recipe
 FIX_PYTHON+=	recipes/courrierinternational.recipe
 FIX_PYTHON+=	recipes/craigslist.recipe
 FIX_PYTHON+=	recipes/credit_slips.recipe
-FIX_PYTHON+=	recipes/criticadigital.recipe
 FIX_PYTHON+=	recipes/csid.recipe
 FIX_PYTHON+=	recipes/curierulnational.recipe
 FIX_PYTHON+=	recipes/daily_telegraph.recipe
@@ -105,15 +105,16 @@ FIX_PYTHON+=	recipes/di.recipe
 FIX_PYTHON+=	recipes/diagonales.recipe
 FIX_PYTHON+=	recipes/diario_cordoba.recipe
 FIX_PYTHON+=	recipes/digital_arts.recipe
-FIX_PYTHON+=	recipes/dilemaveche.recipe
 FIX_PYTHON+=	recipes/discover_magazine.recipe
 FIX_PYTHON+=	recipes/divahair.recipe
 FIX_PYTHON+=	recipes/dn_se.recipe
 FIX_PYTHON+=	recipes/dnevni_avaz.recipe
 FIX_PYTHON+=	recipes/dnevnik_cro.recipe
+FIX_PYTHON+=	recipes/dnevnik_mk.recipe
 FIX_PYTHON+=	recipes/eclicto.recipe
 FIX_PYTHON+=	recipes/ecogeek.recipe
 FIX_PYTHON+=	recipes/economist.recipe
+FIX_PYTHON+=	recipes/economist_free.recipe
 FIX_PYTHON+=	recipes/ecuisine.recipe
 FIX_PYTHON+=	recipes/editor_and_publisher.recipe
 FIX_PYTHON+=	recipes/edmonton_journal.recipe
@@ -126,7 +127,6 @@ FIX_PYTHON+=	recipes/el_pais_uy.recipe
 FIX_PYTHON+=	recipes/el_periodico.recipe
 FIX_PYTHON+=	recipes/el_publico.recipe
 FIX_PYTHON+=	recipes/elargentino.recipe
-FIX_PYTHON+=	recipes/elcronista.recipe
 FIX_PYTHON+=	recipes/ele.recipe
 FIX_PYTHON+=	recipes/elperiodico_catalan.recipe
 FIX_PYTHON+=	recipes/elperiodico_spanish.recipe
@@ -142,7 +142,6 @@ FIX_PYTHON+=	recipes/fan_graphs.recipe
 FIX_PYTHON+=	recipes/fastcompany.recipe
 FIX_PYTHON+=	recipes/felicia.recipe
 FIX_PYTHON+=	recipes/fhmro.recipe
-FIX_PYTHON+=	recipes/financial_times.recipe
 FIX_PYTHON+=	recipes/financiarul.recipe
 FIX_PYTHON+=	recipes/fr_online.recipe
 FIX_PYTHON+=	recipes/frazpc.recipe
@@ -156,12 +155,14 @@ FIX_PYTHON+=	recipes/gazeta_pomorska.recipe
 FIX_PYTHON+=	recipes/globe_and_mail.recipe
 FIX_PYTHON+=	recipes/go4it.recipe
 FIX_PYTHON+=	recipes/go_comics.recipe
+FIX_PYTHON+=	recipes/gosc_niedzielny.recipe
 FIX_PYTHON+=	recipes/granma.recipe
 FIX_PYTHON+=	recipes/gsp.recipe
 FIX_PYTHON+=	recipes/guardian.recipe
 FIX_PYTHON+=	recipes/gva_be.recipe
 FIX_PYTHON+=	recipes/h2.recipe
 FIX_PYTHON+=	recipes/h3.recipe
+FIX_PYTHON+=	recipes/hackernews.recipe
 FIX_PYTHON+=	recipes/heraldo.recipe
 FIX_PYTHON+=	recipes/histmag.recipe
 FIX_PYTHON+=	recipes/historiaro.recipe
@@ -169,13 +170,11 @@ FIX_PYTHON+=	recipes/hitro.recipe
 FIX_PYTHON+=	recipes/hln.recipe
 FIX_PYTHON+=	recipes/hln_be.recipe
 FIX_PYTHON+=	recipes/hola.recipe
-FIX_PYTHON+=	recipes/honvedelem.recipe
 FIX_PYTHON+=	recipes/hotcity.recipe
 FIX_PYTHON+=	recipes/hotnews.recipe
 FIX_PYTHON+=	recipes/houston_chronicle.recipe
 FIX_PYTHON+=	recipes/hoy.recipe
 FIX_PYTHON+=	recipes/hrt.recipe
-FIX_PYTHON+=	recipes/huntechnet.recipe
 FIX_PYTHON+=	recipes/ieco.recipe
 FIX_PYTHON+=	recipes/il_giornale.recipe
 FIX_PYTHON+=	recipes/il_messaggero.recipe
@@ -188,14 +187,12 @@ FIX_PYTHON+=	recipes/interia_fakty.recipe
 FIX_PYTHON+=	recipes/interia_sport.recipe
 FIX_PYTHON+=	recipes/intrefete.recipe
 FIX_PYTHON+=	recipes/jakarta_post.recipe
-FIX_PYTHON+=	recipes/japan_times.recipe
 FIX_PYTHON+=	recipes/javalobby.recipe
 FIX_PYTHON+=	recipes/jb_online.recipe
 FIX_PYTHON+=	recipes/joelonsoftware.recipe
 FIX_PYTHON+=	recipes/journalgazette.recipe
 FIX_PYTHON+=	recipes/jurnalulnational.recipe
 FIX_PYTHON+=	recipes/jutarnji.recipe
-FIX_PYTHON+=	recipes/juventudrebelde.recipe
 FIX_PYTHON+=	recipes/juventudrebelde_english.recipe
 FIX_PYTHON+=	recipes/kamikaze.recipe
 FIX_PYTHON+=	recipes/kellog_faculty.recipe
@@ -209,7 +206,6 @@ FIX_PYTHON+=	recipes/l_espresso.recipe
 FIX_PYTHON+=	recipes/la_cuarta.recipe
 FIX_PYTHON+=	recipes/la_diaria.recipe
 FIX_PYTHON+=	recipes/la_gazzeta_dello_sport.recipe
-FIX_PYTHON+=	recipes/la_republica.recipe
 FIX_PYTHON+=	recipes/la_stampa.recipe
 FIX_PYTHON+=	recipes/lalibre_be.recipe
 FIX_PYTHON+=	recipes/lameuse_be.recipe
@@ -239,7 +235,6 @@ FIX_PYTHON+=	recipes/mac_world.recipe
 FIX_PYTHON+=	recipes/mac_world_uk.recipe
 FIX_PYTHON+=	recipes/macleans.recipe
 FIX_PYTHON+=	recipes/malaysian_mirror.recipe
-FIX_PYTHON+=	recipes/marca.recipe
 FIX_PYTHON+=	recipes/mayra.recipe
 FIX_PYTHON+=	recipes/mediafax.recipe
 FIX_PYTHON+=	recipes/mediaindonesia.recipe
@@ -284,6 +279,7 @@ FIX_PYTHON+=	recipes/onionavclub.recipe
 FIX_PYTHON+=	recipes/osnews_pl.recipe
 FIX_PYTHON+=	recipes/ottawa_citizen.recipe
 FIX_PYTHON+=	recipes/outlook_india.recipe
+FIX_PYTHON+=	recipes/pagina_12_print_ed.recipe
 FIX_PYTHON+=	recipes/panorama.recipe
 FIX_PYTHON+=	recipes/pc_advisor.recipe
 FIX_PYTHON+=	recipes/pc_lab.recipe
@@ -293,7 +289,7 @@ FIX_PYTHON+=	recipes/pcworld_hu.recipe
 FIX_PYTHON+=	recipes/pcworldro.recipe
 FIX_PYTHON+=	recipes/people_us_mashup.recipe
 FIX_PYTHON+=	recipes/phd_comics.recipe
-FIX_PYTHON+=	recipes/philly.recipe
+FIX_PYTHON+=	recipes/plus_info.recipe
 FIX_PYTHON+=	recipes/pobjeda.recipe
 FIX_PYTHON+=	recipes/politico.recipe
 FIX_PYTHON+=	recipes/polityka.recipe
@@ -322,7 +318,6 @@ FIX_PYTHON+=	recipes/rmf24_opinie.recipe
 FIX_PYTHON+=	recipes/romanialibera.recipe
 FIX_PYTHON+=	recipes/rstones.recipe
 FIX_PYTHON+=	recipes/rts.recipe
-FIX_PYTHON+=	recipes/runa.recipe
 FIX_PYTHON+=	recipes/salon.recipe
 FIX_PYTHON+=	recipes/san_fran_chronicle.recipe
 FIX_PYTHON+=	recipes/sanjosemercurynews.recipe
@@ -343,11 +338,11 @@ FIX_PYTHON+=	recipes/slashdot.recipe
 FIX_PYTHON+=	recipes/slate.recipe
 FIX_PYTHON+=	recipes/smashing.recipe
 FIX_PYTHON+=	recipes/socialdiva.recipe
-FIX_PYTHON+=	recipes/spiegel_int.recipe
 FIX_PYTHON+=	recipes/spiegelde.recipe
 FIX_PYTHON+=	recipes/st_petersburg_times.recipe
 FIX_PYTHON+=	recipes/stackoverflow.recipe
 FIX_PYTHON+=	recipes/standardmoney.recipe
+FIX_PYTHON+=	recipes/stiintasitehnica.recipe
 FIX_PYTHON+=	recipes/superbebe.recipe
 FIX_PYTHON+=	recipes/svd_se.recipe
 FIX_PYTHON+=	recipes/swiatkindle.recipe
@@ -376,7 +371,6 @@ FIX_PYTHON+=	recipes/trombon.recipe
 FIX_PYTHON+=	recipes/tuttosport.recipe
 FIX_PYTHON+=	recipes/tvmania.recipe
 FIX_PYTHON+=	recipes/tweakers.recipe
-FIX_PYTHON+=	recipes/twitchfilms.recipe
 FIX_PYTHON+=	recipes/tyzden.recipe
 FIX_PYTHON+=	recipes/uncrate.recipe
 FIX_PYTHON+=	recipes/unica.recipe
@@ -384,6 +378,7 @@ FIX_PYTHON+=	recipes/upi.recipe
 FIX_PYTHON+=	recipes/usatoday.recipe
 FIX_PYTHON+=	recipes/usnews.recipe
 FIX_PYTHON+=	recipes/utne.recipe
+FIX_PYTHON+=	recipes/utrinski.recipe
 FIX_PYTHON+=	recipes/vancouver_provice.recipe
 FIX_PYTHON+=	recipes/vancouver_sun.recipe
 FIX_PYTHON+=	recipes/vecernji_list.recipe
@@ -417,6 +412,7 @@ FIX_PYTHON+=	setup/check.py
 FIX_PYTHON+=	setup/commands.py
 FIX_PYTHON+=	setup/extensions.py
 FIX_PYTHON+=	setup/gui.py
+FIX_PYTHON+=	setup/install.py
 FIX_PYTHON+=	setup/installer/__init__.py
 FIX_PYTHON+=	setup/installer/linux/__init__.py
 FIX_PYTHON+=	setup/installer/linux/freeze.py
@@ -430,13 +426,24 @@ FIX_PYTHON+=	setup/installer/windows/freeze.py
 FIX_PYTHON+=	setup/installer/windows/site.py
 FIX_PYTHON+=	setup/installer/windows/wix.py
 FIX_PYTHON+=	setup/publish.py
-FIX_PYTHON+=	setup/pygettext.py
 FIX_PYTHON+=	setup/pypi.py
 FIX_PYTHON+=	setup/resources.py
 FIX_PYTHON+=	setup/server.py
 FIX_PYTHON+=	setup/translations.py
 FIX_PYTHON+=	setup/upload.py
 FIX_PYTHON+=	src/calibre/customize/zipplugin.py
+FIX_PYTHON+=	src/calibre/db/__init__.py
+FIX_PYTHON+=	src/calibre/db/backend.py
+FIX_PYTHON+=	src/calibre/db/cache.py
+FIX_PYTHON+=	src/calibre/db/errors.py
+FIX_PYTHON+=	src/calibre/db/fields.py
+FIX_PYTHON+=	src/calibre/db/locking.py
+FIX_PYTHON+=	src/calibre/db/schema_upgrades.py
+FIX_PYTHON+=	src/calibre/db/tables.py
+FIX_PYTHON+=	src/calibre/db/tests/__init__.py
+FIX_PYTHON+=	src/calibre/db/tests/base.py
+FIX_PYTHON+=	src/calibre/db/tests/reading.py
+FIX_PYTHON+=	src/calibre/db/view.py
 FIX_PYTHON+=	src/calibre/debug.py
 FIX_PYTHON+=	src/calibre/devices/android/__init__.py
 FIX_PYTHON+=	src/calibre/devices/eslick/__init__.py
@@ -448,6 +455,8 @@ FIX_PYTHON+=	src/calibre/devices/kobo/__init__.py
 FIX_PYTHON+=	src/calibre/devices/kobo/driver.py
 FIX_PYTHON+=	src/calibre/devices/misc.py
 FIX_PYTHON+=	src/calibre/devices/prs505/sony_cache.py
+FIX_PYTHON+=	src/calibre/devices/prst1/__init__.py
+FIX_PYTHON+=	src/calibre/devices/prst1/driver.py
 FIX_PYTHON+=	src/calibre/devices/teclast/__init__.py
 FIX_PYTHON+=	src/calibre/devices/udisks.py
 FIX_PYTHON+=	src/calibre/ebooks/chm/__init__.py
@@ -457,6 +466,9 @@ FIX_PYTHON+=	src/calibre/ebooks/compression/palmdoc.py
 FIX_PYTHON+=	src/calibre/ebooks/conversion/config.py
 FIX_PYTHON+=	src/calibre/ebooks/conversion/preprocess.py
 FIX_PYTHON+=	src/calibre/ebooks/conversion/utils.py
+FIX_PYTHON+=	src/calibre/ebooks/djvu/__init__.py
+FIX_PYTHON+=	src/calibre/ebooks/djvu/djvu.py
+FIX_PYTHON+=	src/calibre/ebooks/djvu/djvubzzdec.py
 FIX_PYTHON+=	src/calibre/ebooks/epub/fix/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/epub/fix/container.py
 FIX_PYTHON+=	src/calibre/ebooks/epub/fix/epubcheck.py
@@ -466,6 +478,7 @@ FIX_PYTHON+=	src/calibre/ebooks/epub/output.py
 FIX_PYTHON+=	src/calibre/ebooks/epub/periodical.py
 FIX_PYTHON+=	src/calibre/ebooks/html/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/html/input.py
+FIX_PYTHON+=	src/calibre/ebooks/html/to_zip.py
 FIX_PYTHON+=	src/calibre/ebooks/iterator/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/lit/input.py
 FIX_PYTHON+=	src/calibre/ebooks/lit/output.py
@@ -473,8 +486,11 @@ FIX_PYTHON+=	src/calibre/ebooks/lrf/html/table_as_image.py
 FIX_PYTHON+=	src/calibre/ebooks/lrf/input.py
 FIX_PYTHON+=	src/calibre/ebooks/lrf/output.py
 FIX_PYTHON+=	src/calibre/ebooks/lrf/pylrs/pylrf.py
-FIX_PYTHON+=	src/calibre/ebooks/markdown/markdown.py
-FIX_PYTHON+=	src/calibre/ebooks/markdown/mdx_tables.py
+FIX_PYTHON+=	src/calibre/ebooks/markdown/extensions/def_list.py
+FIX_PYTHON+=	src/calibre/ebooks/markdown/extensions/extra.py
+FIX_PYTHON+=	src/calibre/ebooks/markdown/extensions/fenced_code.py
+FIX_PYTHON+=	src/calibre/ebooks/markdown/extensions/tables.py
+FIX_PYTHON+=	src/calibre/ebooks/markdown/extensions/wikilinks.py
 FIX_PYTHON+=	src/calibre/ebooks/metadata/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/metadata/archive.py
 FIX_PYTHON+=	src/calibre/ebooks/metadata/book/__init__.py
@@ -506,6 +522,11 @@ FIX_PYTHON+=	src/calibre/ebooks/mobi/debug.py
 FIX_PYTHON+=	src/calibre/ebooks/mobi/huffcdic.py
 FIX_PYTHON+=	src/calibre/ebooks/mobi/langcodes.py
 FIX_PYTHON+=	src/calibre/ebooks/mobi/output.py
+FIX_PYTHON+=	src/calibre/ebooks/mobi/utils.py
+FIX_PYTHON+=	src/calibre/ebooks/mobi/writer2/__init__.py
+FIX_PYTHON+=	src/calibre/ebooks/mobi/writer2/indexer.py
+FIX_PYTHON+=	src/calibre/ebooks/mobi/writer2/main.py
+FIX_PYTHON+=	src/calibre/ebooks/mobi/writer2/serializer.py
 FIX_PYTHON+=	src/calibre/ebooks/odt/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/oeb/transforms/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/oeb/transforms/cover.py
@@ -519,6 +540,7 @@ FIX_PYTHON+=	src/calibre/ebooks/oeb/transforms/rescale.py
 FIX_PYTHON+=	src/calibre/ebooks/oeb/transforms/structure.py
 FIX_PYTHON+=	src/calibre/ebooks/pdf/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/pdf/reflow.py
+FIX_PYTHON+=	src/calibre/ebooks/readability/readability.py
 FIX_PYTHON+=	src/calibre/ebooks/rtf/preprocess.py
 FIX_PYTHON+=	src/calibre/ebooks/rtf2xml/ParseRtf.py
 FIX_PYTHON+=	src/calibre/ebooks/rtf2xml/check_encoding.py
@@ -541,10 +563,13 @@ FIX_PYTHON+=	src/calibre/gui2/actions/fetch_news.py
 FIX_PYTHON+=	src/calibre/gui2/actions/help.py
 FIX_PYTHON+=	src/calibre/gui2/actions/next_match.py
 FIX_PYTHON+=	src/calibre/gui2/actions/open.py
+FIX_PYTHON+=	src/calibre/gui2/actions/plugin_updates.py
 FIX_PYTHON+=	src/calibre/gui2/actions/preferences.py
+FIX_PYTHON+=	src/calibre/gui2/actions/random.py
 FIX_PYTHON+=	src/calibre/gui2/actions/restart.py
 FIX_PYTHON+=	src/calibre/gui2/actions/save_to_disk.py
 FIX_PYTHON+=	src/calibre/gui2/actions/show_book_details.py
+FIX_PYTHON+=	src/calibre/gui2/actions/show_quickview.py
 FIX_PYTHON+=	src/calibre/gui2/actions/similar_books.py
 FIX_PYTHON+=	src/calibre/gui2/actions/tweak_epub.py
 FIX_PYTHON+=	src/calibre/gui2/actions/view.py
@@ -586,15 +611,20 @@ FIX_PYTHON+=	src/calibre/gui2/dialogs/delete_matching_from_device.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/drm_error.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/edit_authors_dialog.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/message_box.py
+FIX_PYTHON+=	src/calibre/gui2/dialogs/plugin_updater.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/progress.py
+FIX_PYTHON+=	src/calibre/gui2/dialogs/quickview.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/restore_library.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/select_formats.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/template_dialog.py
+FIX_PYTHON+=	src/calibre/gui2/dialogs/template_line_editor.py
 FIX_PYTHON+=	src/calibre/gui2/dialogs/tweak_epub.py
 FIX_PYTHON+=	src/calibre/gui2/dnd.py
 FIX_PYTHON+=	src/calibre/gui2/email.py
 FIX_PYTHON+=	src/calibre/gui2/init.py
 FIX_PYTHON+=	src/calibre/gui2/jobs.py
+FIX_PYTHON+=	src/calibre/gui2/keyboard.py
+FIX_PYTHON+=	src/calibre/gui2/languages.py
 FIX_PYTHON+=	src/calibre/gui2/layout.py
 FIX_PYTHON+=	src/calibre/gui2/library/__init__.py
 FIX_PYTHON+=	src/calibre/gui2/library/delegates.py
@@ -610,12 +640,14 @@ FIX_PYTHON+=	src/calibre/gui2/notify.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/__init__.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/adding.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/behavior.py
+FIX_PYTHON+=	src/calibre/gui2/preferences/coloring.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/columns.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/conversion.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/device_debug.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/device_user_defined.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/emailp.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/history.py
+FIX_PYTHON+=	src/calibre/gui2/preferences/keyboard.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/look_feel.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/main.py
 FIX_PYTHON+=	src/calibre/gui2/preferences/metadata_sources.py
@@ -633,7 +665,10 @@ FIX_PYTHON+=	src/calibre/gui2/preferences/tweaks.py
 FIX_PYTHON+=	src/calibre/gui2/progress_indicator/__init__.py
 FIX_PYTHON+=	src/calibre/gui2/search_box.py
 FIX_PYTHON+=	src/calibre/gui2/shortcuts.py
-FIX_PYTHON+=	src/calibre/gui2/tag_view.py
+FIX_PYTHON+=	src/calibre/gui2/tag_browser/__init__.py
+FIX_PYTHON+=	src/calibre/gui2/tag_browser/model.py
+FIX_PYTHON+=	src/calibre/gui2/tag_browser/ui.py
+FIX_PYTHON+=	src/calibre/gui2/tag_browser/view.py
 FIX_PYTHON+=	src/calibre/gui2/threaded_jobs.py
 FIX_PYTHON+=	src/calibre/gui2/throbber.py
 FIX_PYTHON+=	src/calibre/gui2/tools.py
@@ -651,6 +686,7 @@ FIX_PYTHON+=	src/calibre/library/add_to_library.py
 FIX_PYTHON+=	src/calibre/library/caches.py
 FIX_PYTHON+=	src/calibre/library/check_library.py
 FIX_PYTHON+=	src/calibre/library/cli.py
+FIX_PYTHON+=	src/calibre/library/coloring.py
 FIX_PYTHON+=	src/calibre/library/comments.py
 FIX_PYTHON+=	src/calibre/library/custom_columns.py
 FIX_PYTHON+=	src/calibre/library/move.py
@@ -659,6 +695,7 @@ FIX_PYTHON+=	src/calibre/library/restore.py
 FIX_PYTHON+=	src/calibre/library/save_to_disk.py
 FIX_PYTHON+=	src/calibre/library/schema_upgrades.py
 FIX_PYTHON+=	src/calibre/library/server/__init__.py
+FIX_PYTHON+=	src/calibre/library/server/ajax.py
 FIX_PYTHON+=	src/calibre/library/server/base.py
 FIX_PYTHON+=	src/calibre/library/server/browse.py
 FIX_PYTHON+=	src/calibre/library/server/cache.py
@@ -677,6 +714,8 @@ FIX_PYTHON+=	src/calibre/manual/plugin_examples/interface_demo/__init__.py
 FIX_PYTHON+=	src/calibre/manual/plugin_examples/interface_demo/config.py
 FIX_PYTHON+=	src/calibre/manual/plugin_examples/interface_demo/main.py
 FIX_PYTHON+=	src/calibre/manual/plugin_examples/interface_demo/ui.py
+FIX_PYTHON+=	src/calibre/manual/template_ref_generate.py
+FIX_PYTHON+=	src/calibre/test_build.py
 FIX_PYTHON+=	src/calibre/trac/bzr_commit_plugin.py
 FIX_PYTHON+=	src/calibre/translations/msgfmt.py
 FIX_PYTHON+=	src/calibre/utils/__init__.py
@@ -690,6 +729,7 @@ FIX_PYTHON+=	src/calibre/utils/icu.py
 FIX_PYTHON+=	src/calibre/utils/ipc/__init__.py
 FIX_PYTHON+=	src/calibre/utils/ipc/job.py
 FIX_PYTHON+=	src/calibre/utils/ipc/launch.py
+FIX_PYTHON+=	src/calibre/utils/ipc/proxy.py
 FIX_PYTHON+=	src/calibre/utils/ipc/server.py
 FIX_PYTHON+=	src/calibre/utils/ipc/worker.py
 FIX_PYTHON+=	src/calibre/utils/localization.py
@@ -726,7 +766,11 @@ FIX_PYTHON+=	src/calibre/web/feeds/recipes/collection.py
 FIX_PYTHON+=	src/calibre/web/feeds/recipes/model.py
 FIX_PYTHON+=	src/calibre/web/feeds/templates.py
 FIX_PYTHON+=	src/calibre/web/fetch/simple.py
-FIX_PYTHON+=	src/cherrypy/cherryd
+FIX_PYTHON+=	src/calibre/web/jsbrowser/__init__.py
+FIX_PYTHON+=	src/calibre/web/jsbrowser/browser.py
+FIX_PYTHON+=	src/calibre/web/jsbrowser/forms.py
+FIX_PYTHON+=	src/calibre/web/jsbrowser/login.py
+FIX_PYTHON+=	src/calibre/web/jsbrowser/test.py
 FIX_PYTHON+=	src/templite/__init__.py
 
 SUBST_CLASSES+=		prefix
@@ -735,11 +779,33 @@ SUBST_MESSAGE.prefix=	Fixing path to QMAKE
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	setup/build_environment.py
 
+# This is a real mess
+# This one is for /usr/bin/env python (or even /usr/bin/env Python)
+# XXX There are probably more efficient ways to creat the FIX_PYTHON list.
 SUBST_CLASSES+=		path
-SUBST_SED.path=		-e "s,\#! */usr/bin/env  *python[0-9.]*,\#!${PYTHONBIN},"
+SUBST_SED.path=		-e "s,\#! */usr/bin/env *[Pp]ython[0-9.]*,\#!${PYTHONBIN},"
 SUBST_MESSAGE.path=	Fixing path to python.
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	setup/install.py ${FIX_PYTHON}
+
+# These ones are for replacing python[0-9*] with PYTHONBIN
+REPLACE_PYTHON+=	recipes/animal_politico.recipe
+REPLACE_PYTHON+=	recipes/kompiutierra.recipe
+REPLACE_PYTHON+=	recipes/trouw.recipe
+REPLACE_PYTHON+=	src/calibre/ebooks/markdown/extensions/codehilite.py
+REPLACE_PYTHON+=	src/calibre/ebooks/markdown/extensions/headerid.py
+REPLACE_PYTHON+=	src/calibre/ebooks/markdown/extensions/meta.py
+REPLACE_PYTHON+=	src/calibre/ebooks/metadata/odt.py
+REPLACE_PYTHON+=	src/calibre/utils/smartypants.py
+REPLACE_PYTHON+=	src/calibre/utils/wordcount.py
+REPLACE_PYTHON+=	src/odf/element.py
+REPLACE_PYTHON+=	src/odf/elementtypes.py
+REPLACE_PYTHON+=	src/odf/load.py
+REPLACE_PYTHON+=	src/odf/manifest.py
+REPLACE_PYTHON+=	src/odf/odf2xhtml.py
+REPLACE_PYTHON+=	src/odf/odfmanifest.py
+REPLACE_PYTHON+=	src/odf/thumbnail.py
+REPLACE_PYTHON+=	src/odf/userfield.py
 
 MAKE_ENV+=		FC_INC_DIR=${BUILDLINK_PREFIX.fontconfig}/include/fontconfig
 MAKE_ENV+=		FC_LIB_DIR=${BUILDLINK_PREFIX.fontconfig}/lib
@@ -747,13 +813,24 @@ MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 #MAKE_ENV+=		XDG_UTILS_DEBUG_LEVEL=100
 
+# Let's depend on the ones we have in pkgsrc instead of the bundled ones.
+pre-configure:
+	cd ${WRKSRC} && rm -rf src/cherrypy src/pyPdf
+
+post-install:
+	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
+	    ${DESTDIR}${PREFIX}/share/calibre/recipes
+	cd ${WRKSRC} && pax -wr -pma Changelog* README \
+	    COPYRIGHT INSTALL LICENSE.* \
+	    ${DESTDIR}${PREFIX}/share/doc/calibre
+
 .include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/chmlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=6.3.5
+BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=6.5.9
 .include "../../graphics/ImageMagick/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.6
 .include "../../graphics/py-imaging/buildlink3.mk"
@@ -766,18 +843,21 @@ _PYSETUPTOOLSINSTALLARGS=	# empty
 _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
 #.include "../../lang/python/extension.mk"
 .include "../../print/podofo/buildlink3.mk"
+# ??? BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.8.2
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
-BUILDLINK_API_DEPENDS.poppler-qt4+=	poppler-qt4>=0.10.6
+BUILDLINK_API_DEPENDS.poppler-qt4+=	poppler-qt4>=0.12.0
 .include "../../print/poppler-qt4/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../sysutils/py-dbus/buildlink3.mk"
-.include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-qt4+=	${PYPKGPREFIX}-qt4>=4.5.1
+BUILDLINK_API_DEPENDS.py-qt4+=	${PYPKGPREFIX}-qt4>=4.7.0
 .include "../../x11/py-qt4/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.5.1
+BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.7.0
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
