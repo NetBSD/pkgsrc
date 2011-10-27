@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2664 2011/10/27 07:58:58 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2665 2011/10/27 10:38:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4227,3 +4227,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Mojolicious to 2.11 [mspo 2011-10-27]
 	Updated print/xpdf to 3.03 [tez 2011-10-27]
 	Added devel/p5-Class-Accessor-Lite version 0.05 [hiramatsu 2011-10-27]
+	Updated graphics/djvulibre-lib to 3.5.24 [ryoon 2011-10-27]
+	Updated graphics/djvulibre-tools to 3.5.24 [ryoon 2011-10-27]
+	Updated graphics/djview4 to 4.8 [ryoon 2011-10-27]
