@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2011/10/26 20:34:03 minskim Exp $
+# $NetBSD: Makefile,v 1.614 2011/10/27 18:07:20 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -424,6 +424,8 @@ SUBDIR+=	tex-metapost
 SUBDIR+=	tex-metapost-doc
 SUBDIR+=	tex-mptopdf
 SUBDIR+=	tex-mptopdf-doc
+SUBDIR+=	tex-pdfcrop
+SUBDIR+=	tex-pdfcrop-doc
 SUBDIR+=	tex-psgo
 SUBDIR+=	tex-psgo-doc
 SUBDIR+=	tex-pst-2dplot
