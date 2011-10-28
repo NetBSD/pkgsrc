@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/10/25 08:30:10 obache Exp $
+$NetBSD: distinfo,v 1.5 2011/10/28 02:15:10 obache Exp $
 
 SHA1 (textile-2.1.5.tar.gz) = 16a4930fc3ef1afa3360e63af382258cc881a341
 RMD160 (textile-2.1.5.tar.gz) = ed4163df4b7e586de23c054fc243f7631c7962c3
 Size (textile-2.1.5.tar.gz) = 16541 bytes
+SHA1 (patch-textile_tests_____init____.py) = 71c27bd218a82b80b18d0198c5c1d2996c447e0a
