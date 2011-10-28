@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2684 2011/10/28 09:14:59 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2685 2011/10/28 09:22:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4254,7 +4254,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed print/texlive-pdftools [minskim 2011-10-27]
 	Added devel/tex-etoolbox version 2.1 [minskim 2011-10-27]
 	Added devel/tex-etoolbox-doc version 2.1 [minskim 2011-10-27]
-	Updated chat/spectrum version 1.4.8 [schnoebe 2011-10-27]
+	Updated chat/spectrum to 1.4.8 [schnoebe 2011-10-27]
 	Updated www/p5-Rose-HTML-Objects to 0.611 [hiramatsu 2011-10-28]
 	Updated textproc/p5-Pod-Simple to 3.19 [hiramatsu 2011-10-28]
 	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.09 [hiramatsu 2011-10-28]
