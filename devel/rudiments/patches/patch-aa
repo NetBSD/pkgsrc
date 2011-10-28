@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.4 2006/04/19 17:20:59 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2011/10/28 11:23:22 fhajny Exp $
 
---- configure.orig	2006-01-30 06:06:28.000000000 +0000
+--- configure.orig	2011-08-03 10:33:54.000000000 +0000
 +++ configure
-@@ -29751,7 +29751,7 @@ mlockall(0);
+@@ -22414,7 +22414,7 @@ mlockall(0);
+   return 0;
+ }
  _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>conftest.er1
-+  (eval $ac_link) 2>conftest.er1
-   ac_status=$?
-   grep -v '^ *+' conftest.er1 >conftest.err
-   rm -f conftest.er1
-@@ -29919,7 +29919,7 @@ munlockall();
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+ 
+ $as_echo "#define RUDIMENTS_HAVE_MLOCKALL 1" >>confdefs.h
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -22504,7 +22504,7 @@ munlockall();
+   return 0;
+ }
  _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>conftest.er1
-+  (eval $ac_link) 2>conftest.er1
-   ac_status=$?
-   grep -v '^ *+' conftest.er1 >conftest.err
-   rm -f conftest.er1
+-if ac_fn_cxx_try_compile "$LINENO"; then :
++if ac_fn_cxx_try_link "$LINENO"; then :
+ 
+ $as_echo "#define RUDIMENTS_HAVE_MUNLOCKALL 1" >>confdefs.h
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
