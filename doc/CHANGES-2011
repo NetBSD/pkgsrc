@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2681 2011/10/27 23:24:33 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2682 2011/10/28 00:45:32 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4254,3 +4254,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed print/texlive-pdftools [minskim 2011-10-27]
 	Added devel/tex-etoolbox version 2.1 [minskim 2011-10-27]
 	Added devel/tex-etoolbox-doc version 2.1 [minskim 2011-10-27]
+	Updated chat/spectrum version 1.4.8 [schnoebe 2011-10-27]
