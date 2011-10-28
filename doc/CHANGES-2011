@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2686 2011/10/28 12:02:45 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2687 2011/10/28 13:09:51 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4260,3 +4260,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.09 [hiramatsu 2011-10-28]
 	Added lang/p5-Switch version 2.16 [obache 2011-10-28]
 	Added databases/p5-Redis version 1.904 [obache 2011-10-28]
+	Updated net/Transmission to 2.42 [tnn 2011-10-28]
