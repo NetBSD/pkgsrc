@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2694 2011/10/28 21:40:24 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2695 2011/10/28 23:30:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/groonga to 1.2.7 [obache 2011-10-28]
 	Updated misc/logsurfer to 1.8 [tez 2011-10-28]
 	Added graphics/viewnior version 1.1 [ryoon 2011-10-28]
+	Added textproc/pdfgrep version 1.2 [ryoon 2011-10-28]
