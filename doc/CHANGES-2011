@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2691 2011/10/28 17:00:06 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2692 2011/10/28 17:14:30 tez Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4265,3 +4265,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/libvpx to 0.9.7.1 [ryoon 2011-10-28]
 	Updated games/onscripter to 20111025 [ryoon 2011-10-28]
 	Updated textproc/groonga to 1.2.7 [obache 2011-10-28]
+	Updated misc/logsurfer t0 1.8 [tez 2011-10-28]
