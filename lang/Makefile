@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2011/10/11 13:04:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.308 2011/10/28 09:16:00 obache Exp $
 #
 
 COMMENT=	Programming languages
@@ -115,6 +115,7 @@ SUBDIR+=	openjdk7
 SUBDIR+=	openjdk7-bin
 SUBDIR+=	ossp-js
 SUBDIR+=	p2c
+SUBDIR+=	p5-Switch
 SUBDIR+=	parrot
 SUBDIR+=	pcc
 SUBDIR+=	pcc-current
