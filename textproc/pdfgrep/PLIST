@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 22:00:13 ryoon Exp $
+bin/pdfgrep
+man/man1/pdfgrep.1
