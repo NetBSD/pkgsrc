@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:49:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/10/28 11:23:21 fhajny Exp $
 bin/rudiments-config
 include/rudiments/character.h
 include/rudiments/charstring.h
@@ -141,6 +141,8 @@ include/rudiments/private/serversocket.h
 include/rudiments/private/serversocketincludes.h
 include/rudiments/private/serviceentry.h
 include/rudiments/private/serviceentryincludes.h
+include/rudiments/private/shadowentry.h
+include/rudiments/private/shadowentryincludes.h
 include/rudiments/private/sharedmemory.h
 include/rudiments/private/sharedmemoryincludes.h
 ${PLIST.shm}include/rudiments/private/shmfile.h
@@ -163,6 +165,7 @@ include/rudiments/private/unixsocketutil.h
 include/rudiments/private/unixsocketutilincludes.h
 include/rudiments/private/variablebuffer.h
 include/rudiments/private/variablebufferincludes.h
+include/rudiments/private/winsock.h
 include/rudiments/private/xmldom.h
 include/rudiments/private/xmldomincludes.h
 include/rudiments/private/xmldomnode.h
@@ -182,6 +185,7 @@ include/rudiments/serialportprofile.h
 include/rudiments/server.h
 include/rudiments/serversocket.h
 include/rudiments/serviceentry.h
+include/rudiments/shadowentry.h
 include/rudiments/sharedmemory.h
 ${PLIST.shm}include/rudiments/shmfile.h
 include/rudiments/signalclasses.h
@@ -197,6 +201,7 @@ include/rudiments/xmldomnode.h
 include/rudiments/xmlsax.h
 lib/librudiments.la
 lib/pkgconfig/rudiments.pc
+man/man1/rudiments-config.1
 share/doc/rudiments/classes/character.h.html
 share/doc/rudiments/classes/charstring.h.html
 share/doc/rudiments/classes/chat.h.html
