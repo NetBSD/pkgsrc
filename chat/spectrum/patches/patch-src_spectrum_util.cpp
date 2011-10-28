@@ -1,7 +1,8 @@
-$NetBSD: patch-src_spectrum_util.cpp,v 1.1 2011/10/28 00:27:58 schnoebe Exp $
+$NetBSD: patch-src_spectrum_util.cpp,v 1.2 2011/10/28 17:34:07 schnoebe Exp $
 
-revise the memory usage statistics handling to work only on FreeBSD
-(where it was designed.)
+# revise the memory usage statistics handling to work only on FreeBSD
+# (where it was designed.)
+# pushed upstream as http://spectrum.im/issues/232
 
 --- src/spectrum_util.cpp.orig	2011-06-11 13:17:44.000000000 +0000
 +++ src/spectrum_util.cpp
