@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10643 2011/10/27 21:17:12 wiz Exp $
+$NetBSD: TODO,v 1.10644 2011/10/28 11:24:08 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1178,7 +1178,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-gnome2-1.0.3
-	o rudiments-0.34
 	o rxvt-unicode-9.10
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.2
