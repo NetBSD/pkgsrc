@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2683 2011/10/28 01:14:00 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2684 2011/10/28 09:14:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4258,3 +4258,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Rose-HTML-Objects to 0.611 [hiramatsu 2011-10-28]
 	Updated textproc/p5-Pod-Simple to 3.19 [hiramatsu 2011-10-28]
 	Updated devel/p5-MooseX-SemiAffordanceAccessor to 0.09 [hiramatsu 2011-10-28]
+	Added lang/p5-Switch version 2.16 [obache 2011-10-28]
