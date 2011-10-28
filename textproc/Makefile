@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.596 2011/10/20 15:11:02 taca Exp $
+# $NetBSD: Makefile,v 1.597 2011/10/28 22:01:04 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -451,6 +451,7 @@ SUBDIR+=	p5-native-hyperestraier
 SUBDIR+=	p5-podlators
 SUBDIR+=	p5-yamcha
 SUBDIR+=	par
+SUBDIR+=	pdfgrep
 SUBDIR+=	pear-Console_Table
 SUBDIR+=	pear-File_Find
 SUBDIR+=	php-dom
