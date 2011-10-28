@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2011/10/17 08:45:33 obache Exp $
+# $NetBSD: Makefile,v 1.383 2011/10/28 12:03:41 obache Exp $
 #
 
 COMMENT=	Databases
@@ -166,6 +166,7 @@ SUBDIR+=	p5-ORLite
 SUBDIR+=	p5-ORLite-Migrate
 SUBDIR+=	p5-Palm
 SUBDIR+=	p5-RRD-Simple
+SUBDIR+=	p5-Redis
 SUBDIR+=	p5-Rose-DB
 SUBDIR+=	p5-Rose-DB-Object
 SUBDIR+=	p5-Rose-DBx-AutoReconnect
