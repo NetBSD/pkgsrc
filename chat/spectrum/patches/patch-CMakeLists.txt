@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/02/07 06:31:22 schnoebe Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2011/10/28 00:27:58 schnoebe Exp $
 
 #
 # change man path to be configurable to PKGSRC standards.
@@ -6,7 +6,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/02/07 06:31:22 schnoebe Exp $
 
 --- CMakeLists.txt.orig	2010-07-13 17:38:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -395,11 +398,11 @@ INSTALL(FILES
+@@ -176,11 +176,11 @@ INSTALL(FILES
  
  INSTALL(FILES
      ${CMAKE_CURRENT_SOURCE_DIR}/man/spectrumctl.8
