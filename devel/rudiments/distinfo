@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2006/04/19 17:20:59 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/10/28 11:23:21 fhajny Exp $
 
-SHA1 (rudiments-0.29.tar.gz) = f84c785dfc9fc9fc0645812b52a71b9e94e151b0
-RMD160 (rudiments-0.29.tar.gz) = 197bafb41a7607d2a20fb3f78aa3a5f99ee01b36
-Size (rudiments-0.29.tar.gz) = 605753 bytes
-SHA1 (patch-aa) = de5602b4536727a64fd2eb1fd5ab882b316ebcc0
+SHA1 (rudiments-0.34.tar.gz) = 90800a3538e0fa669c9d075600252a3f2d027a60
+RMD160 (rudiments-0.34.tar.gz) = 27e18698149a81f856c5dd152fe825b891506d20
+Size (rudiments-0.34.tar.gz) = 770725 bytes
+SHA1 (patch-aa) = 34b4b02c5b5dc4992d173f7f8478f1f38a0c53e8
