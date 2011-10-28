@@ -1,22 +1,25 @@
-$NetBSD: patch-aj,v 1.2 2010/10/29 21:51:22 spz Exp $
+$NetBSD: patch-aj,v 1.3 2011/10/28 06:16:12 spz Exp $
 
---- ./sample.cf.orig	Wed Aug 27 09:00:31 1997
-+++ ./sample.cf	Tue Jun  8 10:55:13 1999
-@@ -7,5 +7,5 @@
+--- sample.cf.orig	1997-08-27 15:00:31.000000000 +0000
++++ sample.cf
+@@ -6,7 +6,7 @@
+ 
  # $whereami -- What machine am I running on?
  #
 -$whereami = "example.com";
 +$whereami = "@HOSTNAME@";
  
  # $whoami -- Who do users send requests to me as?
-@@ -17,5 +17,5 @@
+ #
+@@ -16,13 +16,22 @@ $whoami = "Majordomo\@$whereami";
+ #
  $whoami_owner = "Majordomo-Owner\@$whereami";
  
 -# $homedir -- Where can I find my extra .pl files, like majordomo.pl?
 +# $homedir -- Where can I find my lists?
  # the environment variable HOME is set by the wrapper
  #
-@@ -23,5 +23,14 @@
+ if ( defined $ENV{"HOME"}) {
       $homedir = $ENV{"HOME"};
  } else {
 -     $homedir = "/usr/test/majordomo";
@@ -32,7 +35,9 @@ $NetBSD: patch-aj,v 1.2 2010/10/29 21:51:22 spz Exp $
 +     $bindir = "@PREFIX@/libexec/majordomo";
  }
  
-@@ -33,8 +42,8 @@
+ # $listdir -- Where are the mailing lists?
+@@ -32,10 +41,10 @@ $listdir = "$homedir/lists";
+ # $digest_work_dir -- the parent directory for digest's queue area
  # Each list must have a subdirectory under this directory in order for
  # digest to work. E.G. The bblisa list would use:
 -# 	/usr/local/mail/digest/bblisa
@@ -43,7 +48,9 @@ $NetBSD: patch-aj,v 1.2 2010/10/29 21:51:22 spz Exp $
 +$digest_work_dir = "$homedir/digests";
  
  # $log -- Where do I write my log?
-@@ -46,6 +55,6 @@
+ #
+@@ -45,8 +54,8 @@ $log = "$homedir/Log";
+ #                      usually /usr/lib/sendmail, but some newer BSD systems
  #                      seem to prefer /usr/sbin/sendmail
  #
 -$sendmail_command = "/usr/lib/sendmail";
@@ -52,14 +59,18 @@ $NetBSD: patch-aj,v 1.2 2010/10/29 21:51:22 spz Exp $
 +$sendmail_command = "/usr/sbin/sendmail";
  
  # $mailer -- What program and args do I use to send mail to the list?
-@@ -69,5 +78,5 @@
+ # $bounce_mailer -- What is used to send mail anywhere else?
+@@ -68,7 +77,7 @@ $bounce_mailer = "$sendmail_command -oi 
+ #
  # To use TLB and use no outgoing alias:
  # if ($main'program_name eq 'mj_resend' && $opt_l eq 'test-list') {
 -#   $mailer = "/usr/local/majordomo/tlb /usr/local/lists/${opt_l}.tlb";
 +#   $mailer = "@HOME@/tlb @HOME@/lists/${opt_l}.tlb";
  # }
  #
-@@ -128,6 +137,6 @@
+ # To use a different Sendmail queue for this list's mail:
+@@ -127,15 +136,15 @@ $no_true_x400 = 0;
+ # Majordomo will look for "get" and "index" files related to $list in
  # directory "$filedir/$list$filedir_suffix", so set $filedir and
  # $filedir_suffix appropriately.  For instance, to look in
 -# /usr/local/mail/files/$list, use:
@@ -68,7 +79,7 @@ $NetBSD: patch-aj,v 1.2 2010/10/29 21:51:22 spz Exp $
 +#   $filedir = "@HOME@/mail/files";
  #   $filedir_suffix = "";		# empty string
  # or to look in $listdir/$list.archive, use:
-@@ -135,6 +144,6 @@
+ #   $filedir = "$listdir";
  #   $filedir_suffix = ".archive";
  
 -$filedir = "$listdir";
@@ -77,10 +88,13 @@ $NetBSD: patch-aj,v 1.2 2010/10/29 21:51:22 spz Exp $
 +$filedir_suffix = "";
  
  # What command should I use to process an "index" request?
-@@ -191,5 +200,5 @@
+ #
+@@ -190,7 +199,7 @@ die "Perl version $] too old\n" if ($] <
+ # majordomo has r/w permission to.
  # Uses the environment variable TMPDIR, since that's pretty common
  #
 -$TMPDIR = $ENV{'TMPDIR'} || "/usr/tmp";
 +$TMPDIR = $ENV{'TMPDIR'} || "@TMPDIR@";
  
  # Tune how long set_lock tries to obtain a lock before giving up. Each
+ # attempt waits 1 to 10 seconds before trying again and waittime is
