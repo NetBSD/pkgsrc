@@ -1,4 +1,4 @@
-# $NetBSD: vars.mk,v 1.4 2008/01/29 16:41:36 tnn Exp $
+# $NetBSD: vars.mk,v 1.5 2011/10/28 07:41:52 obache Exp $
 #
 # This Makefile fragment exposes several Perl configuration variables
 # to the package Makefiles.  The variables are only defined if the
@@ -8,7 +8,7 @@
 
 _PERL5_VARS=	INSTALLARCHLIB INSTALLSCRIPT				\
 		INSTALLVENDORBIN INSTALLVENDORSCRIPT			\
-		INSTALLVENDORLIB INSTALLVENDORARCH			\
+		INSTALLVENDORARCH INSTALLVENDORLIB			\
 		INSTALLVENDORMAN1DIR INSTALLVENDORMAN3DIR
 
 .if defined(PERL5) && exists(${PERL5:Q})
@@ -37,5 +37,8 @@ PERL5_SUB_${_var_}:=	${_PERL5_VARS_OUT:M${_var_:tl}=*:S/^${_var_:tl}=${_PERL5_PR
 PERL5_${_var_}?=	${PREFIX}/${PERL5_SUB_${_var_}}
 MAKEVARS+=		PERL5_SUB_${_var_}
 PLIST_SUBST+=		PERL5_SUB_${_var_}=${PERL5_SUB_${_var_}:Q}
+PRINT_PLIST_AWK+=	/^${PERL5_SUB_${_var_}:S|/|\\/|g}/ \
+			{ gsub(/${PERL5_SUB_${_var_}:S|/|\\/|g}/, \
+			  "$${PERL5_SUB_${_var_}}") }
 .  endfor
 .endif	# PERL5
