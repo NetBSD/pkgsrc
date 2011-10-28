@@ -1,0 +1,2 @@
+Perl binding for Redis database which is in-memory hash store with support for
+scalars, arrays and sets and disk persistence.
