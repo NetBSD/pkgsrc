@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2687 2011/10/28 13:09:51 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.2688 2011/10/28 13:50:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4261,3 +4261,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added lang/p5-Switch version 2.16 [obache 2011-10-28]
 	Added databases/p5-Redis version 1.904 [obache 2011-10-28]
 	Updated net/Transmission to 2.42 [tnn 2011-10-28]
+	Added graphics/libwebp version 0.1.3 [ryoon 2011-10-28]
