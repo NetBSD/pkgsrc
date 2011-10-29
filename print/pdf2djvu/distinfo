@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/29 14:30:51 ryoon Exp $
+
+SHA1 (pdf2djvu_0.7.7.tar.gz) = 978bf1f65e3000ba59a9db022507228a5086e0b5
+RMD160 (pdf2djvu_0.7.7.tar.gz) = b3008632bc6fa057c9cf4ce661bf5f2e4d3c38ea
+Size (pdf2djvu_0.7.7.tar.gz) = 246893 bytes
