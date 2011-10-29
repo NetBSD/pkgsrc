@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2709 2011/10/29 13:22:34 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2710 2011/10/29 14:26:12 imil Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/pstreams version 0.7.0 [ryoon 2011-10-29]
 	Updated fonts/py-fonttools to 2.3 [obache 2011-10-29]
 	Updated comms/py-gammu to 1.26.1nb1 [obache 2011-10-29]
+	Updated pkgtools/pkgin to 0.5.2.1 [imil 2011-10-29]
