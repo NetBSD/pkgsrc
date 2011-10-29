@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/29 10:39:31 ryoon Exp $
+include/pstreams/pstream.h

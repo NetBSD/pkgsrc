@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2011/10/29 10:39:31 ryoon Exp $
+
+* disable documents generation
+* BSD install does not support -v option
+
+--- Makefile.orig	2010-05-12 15:45:21.000000000 +0000
++++ Makefile
+@@ -29,7 +29,7 @@ CXXFLAGS=$(CFLAGS) -std=c++98 -Woverload
+ prefix = /usr/local
+ includedir = $(prefix)/include
+ INSTALL = install
+-INSTALL_DATA = $(INSTALL) -p -v -m 0644
++INSTALL_DATA = $(INSTALL) -p -m 0644
+ 
+ SOURCES = pstream.h
+ GENERATED_FILES = ChangeLog MANIFEST
+@@ -40,7 +40,7 @@ DIST_FILES = $(SOURCES) $(GENERATED_FILE
+ 
+ VERS = 0.7.0
+ 
+-all: docs $(GENERATED_FILES)
++all: $(GENERATED_FILES)
+ 
+ check: pstreams.wout run_tests
+ 
