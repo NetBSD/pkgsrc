@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2699 2011/10/29 05:53:25 kefren Exp $
+$NetBSD: CHANGES-2011,v 1.2700 2011/10/29 06:15:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4272,3 +4272,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/py-psyco to 1.6nb1 [obache 2011-10-29]
 	Updated lang/py-basicproperty to 0.6.3anb3 [obache 2011-10-29]
 	Updated lang/mono to 2.10.6 [kefren 2011-10-29]
+	Updated security/py-crack to 0.01nb2 [obache 2011-10-29]
