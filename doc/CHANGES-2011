@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2696 2011/10/29 02:18:33 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2697 2011/10/29 04:26:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4269,3 +4269,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/viewnior version 1.1 [ryoon 2011-10-28]
 	Added textproc/pdfgrep version 1.2 [ryoon 2011-10-28]
 	Updated www/ruby-httpclient to 2.2.3 [obache 2011-10-29]
+	Updated lang/py-psyco to 1.6nb1 [obache 2011-10-29]
