@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2009/09/05 22:11:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/10/29 07:48:47 obache Exp $
 bin/duplicity
 bin/rdiffdir
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/duplicity/GnuPGInterface.py
 ${PYSITELIB}/duplicity/GnuPGInterface.pyc
 ${PYSITELIB}/duplicity/GnuPGInterface.pyo
@@ -26,6 +27,15 @@ ${PYSITELIB}/duplicity/backends/cloudfilesbackend.pyo
 ${PYSITELIB}/duplicity/backends/ftpbackend.py
 ${PYSITELIB}/duplicity/backends/ftpbackend.pyc
 ${PYSITELIB}/duplicity/backends/ftpbackend.pyo
+${PYSITELIB}/duplicity/backends/ftpsbackend.py
+${PYSITELIB}/duplicity/backends/ftpsbackend.pyc
+${PYSITELIB}/duplicity/backends/ftpsbackend.pyo
+${PYSITELIB}/duplicity/backends/gdocsbackend.py
+${PYSITELIB}/duplicity/backends/gdocsbackend.pyc
+${PYSITELIB}/duplicity/backends/gdocsbackend.pyo
+${PYSITELIB}/duplicity/backends/giobackend.py
+${PYSITELIB}/duplicity/backends/giobackend.pyc
+${PYSITELIB}/duplicity/backends/giobackend.pyo
 ${PYSITELIB}/duplicity/backends/hsibackend.py
 ${PYSITELIB}/duplicity/backends/hsibackend.pyc
 ${PYSITELIB}/duplicity/backends/hsibackend.pyo
@@ -44,6 +54,9 @@ ${PYSITELIB}/duplicity/backends/sshbackend.pyo
 ${PYSITELIB}/duplicity/backends/tahoebackend.py
 ${PYSITELIB}/duplicity/backends/tahoebackend.pyc
 ${PYSITELIB}/duplicity/backends/tahoebackend.pyo
+${PYSITELIB}/duplicity/backends/u1backend.py
+${PYSITELIB}/duplicity/backends/u1backend.pyc
+${PYSITELIB}/duplicity/backends/u1backend.pyo
 ${PYSITELIB}/duplicity/backends/webdavbackend.py
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyc
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyo
@@ -133,7 +146,26 @@ share/doc/${PKGNAME}/LOG-README
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/REPO-README
 share/doc/${PKGNAME}/tarfile-LICENSE
+share/locale/bg/LC_MESSAGES/duplicity.mo
+share/locale/de/LC_MESSAGES/duplicity.mo
+share/locale/el/LC_MESSAGES/duplicity.mo
+share/locale/en_AU/LC_MESSAGES/duplicity.mo
 share/locale/en_GB/LC_MESSAGES/duplicity.mo
 share/locale/eo/LC_MESSAGES/duplicity.mo
+share/locale/es/LC_MESSAGES/duplicity.mo
+share/locale/fr/LC_MESSAGES/duplicity.mo
+share/locale/he/LC_MESSAGES/duplicity.mo
+share/locale/id/LC_MESSAGES/duplicity.mo
 share/locale/io/LC_MESSAGES/duplicity.mo
+share/locale/it/LC_MESSAGES/duplicity.mo
+share/locale/oc/LC_MESSAGES/duplicity.mo
+share/locale/pl/LC_MESSAGES/duplicity.mo
+share/locale/pt/LC_MESSAGES/duplicity.mo
+share/locale/pt_BR/LC_MESSAGES/duplicity.mo
+share/locale/ru/LC_MESSAGES/duplicity.mo
+share/locale/sl/LC_MESSAGES/duplicity.mo
+share/locale/sq/LC_MESSAGES/duplicity.mo
+share/locale/sv/LC_MESSAGES/duplicity.mo
+share/locale/tr/LC_MESSAGES/duplicity.mo
+share/locale/ug/LC_MESSAGES/duplicity.mo
 share/locale/zh_CN/LC_MESSAGES/duplicity.mo
