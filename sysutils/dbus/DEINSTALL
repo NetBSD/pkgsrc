@@ -1,0 +1,20 @@
+# $NetBSD: DEINSTALL,v 1.1 2011/10/29 13:26:59 marino Exp $
+
+# DEINSTALL is used rather than @pkgdir because the automatic directory
+# deletion mechanism makes dbus services remove these directories first,
+# and thus "Directory disappeared" messages will likely appear under @pkgdir
+
+case ${STAGE} in
+POST-DEINSTALL)
+	CYCLE="@PREFIX@/share/dbus-1/system-services \
+	       @PREFIX@/share/dbus-1/services \
+	       @PREFIX@/libexec/dbus-1"
+	for dbuspath in ${CYCLE}; do
+	  if [ -d ${dbuspath} ]; then
+	    if [ -n `${LS} -A ${$dbuspath}` ]; then
+	      ${RMDIR} ${dbuspath}
+	    fi
+	  fi
+	done
+	;;
+esac
