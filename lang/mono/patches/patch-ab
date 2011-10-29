@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.27 2011/04/25 14:01:40 kefren Exp $
---- configure.orig	2011-02-23 21:34:00.000000000 +0200
-+++ configure	2011-04-25 12:37:59.000000000 +0300
-@@ -3123,7 +3123,7 @@
+$NetBSD: patch-ab,v 1.28 2011/10/29 05:47:54 kefren Exp $
+--- configure.orig	2011-09-15 20:12:44.000000000 +0300
++++ configure	2011-10-28 17:51:31.000000000 +0300
+@@ -3834,7 +3834,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		host_win32=yes
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
 -			if test "x$host" == "x$build"; then
 +			if test "x$host" = "x$build"; then
  
- cat >>confdefs.h <<\_ACEOF
- #define TARGET_WIN32 1
-@@ -3171,12 +3171,15 @@
+ $as_echo "#define TARGET_WIN32 1" >>confdefs.h
+ 
+@@ -3876,12 +3876,15 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.27 2011/04/25 14:01:40 kefren Exp $
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -3192,7 +3195,8 @@
+@@ -3897,7 +3900,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -37,18 +37,8 @@ $NetBSD: patch-ab,v 1.27 2011/04/25 14:01:40 kefren Exp $
 +		libmono_cflags="$libmono_cflags -D_REENTRANT"
  		need_link_unlink=yes
  
- cat >>confdefs.h <<\_ACEOF
-@@ -28838,6 +28842,9 @@
- /* end confdefs.h.  */
- $ac_includes_default
- #include <$ac_header>
-+#ifdef __DragonFly__
-+#error extattr
-+#endif
- _ACEOF
- rm -f conftest.$ac_objext
- if { (ac_try="$ac_compile"
-@@ -39018,7 +39025,7 @@
+ $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
+@@ -22821,7 +22825,7 @@ LIBC="libc.so.6"
  INTL="libc.so.6"
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
@@ -57,7 +47,7 @@ $NetBSD: patch-ab,v 1.27 2011/04/25 14:01:40 kefren Exp $
  
  sizeof_register="SIZEOF_VOID_P"
  
-@@ -39646,10 +39653,12 @@
+@@ -23379,10 +23383,12 @@ case "$host" in
  	X11="libX11.dylib"
  	;;
       *-*-*netbsd*)
