@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2706 2011/10/29 08:27:52 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2707 2011/10/29 10:41:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/duplicity to 0.6.16 [obache 2011-10-29]
 	Updated security/py-cryptkit to 0.9nb2 [obache 2011-10-29]
 	Updated security/pyca to 0.6.6.20031118 [obache 2011-10-29]
+	Added devel/pstreams version 0.7.0 [ryoon 2011-10-29]
