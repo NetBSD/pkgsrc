@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2700 2011/10/29 06:15:29 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2701 2011/10/29 06:22:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4273,3 +4273,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/py-basicproperty to 0.6.3anb3 [obache 2011-10-29]
 	Updated lang/mono to 2.10.6 [kefren 2011-10-29]
 	Updated security/py-crack to 0.01nb2 [obache 2011-10-29]
+	Updated security/py-tlslite to 0.3.8nb1 [obache 2011-10-29]
