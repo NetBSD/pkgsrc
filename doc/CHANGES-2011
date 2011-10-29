@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2702 2011/10/29 06:31:43 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2703 2011/10/29 06:40:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4275,3 +4275,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/py-crack to 0.01nb2 [obache 2011-10-29]
 	Updated security/py-tlslite to 0.3.8nb1 [obache 2011-10-29]
 	Updated security/py-mcrypt to 1.1nb2 [obache 2011-10-29]
+	Updated security/py-gnupg to 0.3.2nb2 [obache 2011-10-29]
