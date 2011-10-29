@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2708 2011/10/29 11:40:46 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2709 2011/10/29 13:22:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4281,3 +4281,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/pyca to 0.6.6.20031118 [obache 2011-10-29]
 	Added devel/pstreams version 0.7.0 [ryoon 2011-10-29]
 	Updated fonts/py-fonttools to 2.3 [obache 2011-10-29]
+	Updated comms/py-gammu to 1.26.1nb1 [obache 2011-10-29]
