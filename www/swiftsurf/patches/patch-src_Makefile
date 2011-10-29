@@ -1,0 +1,20 @@
+$NetBSD: patch-src_Makefile,v 1.1 2011/10/29 15:38:47 dholland Exp $
+
+--- src/Makefile~	2002-02-25 18:27:15.000000000 +0000
++++ src/Makefile
+@@ -18,13 +18,13 @@ byte: swift
+ 
+ swift: $(OBJS-SWIFT)
+ 	$(OCAMLLINK) -custom -o swift unix.cma str.cma \
+-	$(OBJS-SWIFT) -cclib -lunix -cclib -lstr
++	$(OBJS-SWIFT) -cclib -lunix
+ 
+ nat: swift.opt
+ 
+ swift.opt: $(OBJS-SWIFT-NAT)
+ 	$(OCAMLOPTLINK) -o swift.opt unix.cmxa str.cmxa \
+-	$(OBJS-SWIFT-NAT) -cclib -lunix -cclib -lstr
++	$(OBJS-SWIFT-NAT) -cclib -lunix
+ 
+ conflex.ml: conflex.mll
+ confpars.mli confpars.ml: confpars.mly
