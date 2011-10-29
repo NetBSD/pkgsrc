@@ -1,7 +1,7 @@
-$NetBSD: patch-tools_libxl_libxl_create.c,v 1.1 2011/10/29 10:20:52 jmcneill Exp $
+$NetBSD: patch-libxl_libxl_create.c,v 1.1 2011/10/29 14:16:53 jmcneill Exp $
 
---- tools/libxl/libxl_create.c.orig	2011-10-20 17:05:42.000000000 +0000
-+++ tools/libxl/libxl_create.c
+--- libxl/libxl_create.c.orig	2011-10-20 17:05:42.000000000 +0000
++++ libxl/libxl_create.c
 @@ -171,7 +171,7 @@ int libxl__domain_build(libxl_ctx *ctx, 
          vments[2] = "image/ostype";
          vments[3] = "hvm";
