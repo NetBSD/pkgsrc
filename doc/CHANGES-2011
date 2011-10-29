@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2698 2011/10/29 05:02:43 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2699 2011/10/29 05:53:25 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4271,3 +4271,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-httpclient to 2.2.3 [obache 2011-10-29]
 	Updated lang/py-psyco to 1.6nb1 [obache 2011-10-29]
 	Updated lang/py-basicproperty to 0.6.3anb3 [obache 2011-10-29]
+	Updated lang/mono to 2.10.6 [kefren 2011-10-29]
