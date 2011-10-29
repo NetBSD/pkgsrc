@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/29 05:02:28 obache Exp $
 #
 
 DISTNAME=	basicproperty-0.6.3a
 PKGNAME=	${PYPKGPREFIX}-basicproperty-0.6.3a
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=basicproperty/}
 
@@ -13,12 +13,7 @@ COMMENT=	Python RDBMS wrapper for various databases
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_ENV+=		MANDIR=${PREFIX}/man
-MAKE_ENV+=		BINDIR=${PREFIX}/bin
-USE_TOOLS+=		gmake
+USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
