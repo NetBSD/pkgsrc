@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/12 11:29:52 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/29 06:15:12 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pycrack.so
