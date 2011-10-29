@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/20 18:10:54 augustss Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/29 06:31:21 obache Exp $
 ${PYSITELIB}/mcrypt.so
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
