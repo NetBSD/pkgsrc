@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2011/02/22 08:52:01 obache Exp $
-@pkgdir lib/python${PY_VER_SUFFIX}/test/data
-@pkgdir lib/python${PY_VER_SUFFIX}/lib-old
