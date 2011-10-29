@@ -1,12 +1,12 @@
-$NetBSD: patch-ba,v 1.7 2008/02/13 14:16:43 kefren Exp $
---- mono/cil/Makefile.in.orig	2008-02-05 14:11:27.000000000 +0200
-+++ mono/cil/Makefile.in	2008-02-05 14:11:40.000000000 +0200
-@@ -427,7 +427,7 @@
+$NetBSD: patch-ba,v 1.8 2011/10/29 05:47:54 kefren Exp $
+--- mono/cil/Makefile.in.orig	2011-09-15 20:12:39.000000000 +0300
++++ mono/cil/Makefile.in	2011-10-28 15:43:18.000000000 +0300
+@@ -506,7 +506,7 @@ uninstall-am: uninstall-defDATA uninstal
  	uninstall-xmlDATA
  
  opcode.def: make-opcodes-def.pl cil-opcodes.xml
 -	perl $(srcdir)/make-opcodes-def.pl $(srcdir)/cil-opcodes.xml $@.tmp
 +	$(PERL) $(srcdir)/make-opcodes-def.pl $(srcdir)/cil-opcodes.xml $@.tmp
  	mv $@.tmp $@
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
