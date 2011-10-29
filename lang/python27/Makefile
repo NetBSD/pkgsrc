@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/10/29 13:45:50 marino Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/29 14:40:00 obache Exp $
 
 .include "dist.mk"
 
@@ -52,6 +52,7 @@ PLIST_SRC=	${.CURDIR}/../../lang/python27/PLIST.common
 .if exists(${.CURDIR}/../../lang/python27/PLIST.${OPSYS})
 PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.${OPSYS}
 .endif
+PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 PRIVILEGED_STAGES+=	clean
