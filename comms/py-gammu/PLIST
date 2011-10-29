@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/10/29 13:22:16 obache Exp $
 ${PYSITELIB}/gammu/Data.py
 ${PYSITELIB}/gammu/Data.pyc
 ${PYSITELIB}/gammu/Data.pyo
@@ -9,3 +9,4 @@ ${PYSITELIB}/gammu/__init__.py
 ${PYSITELIB}/gammu/__init__.pyc
 ${PYSITELIB}/gammu/__init__.pyo
 ${PYSITELIB}/gammu/_gammu.so
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
