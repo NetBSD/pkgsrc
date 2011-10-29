@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2011/10/27 23:05:22 minskim Exp $
+# $NetBSD: Makefile,v 1.511 2011/10/29 14:32:43 ryoon Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -85,6 +85,7 @@ SUBDIR+=	p5-PostScript-MailLabels
 SUBDIR+=	p5-PostScript-Simple
 SUBDIR+=	papersize
 SUBDIR+=	pcps
+SUBDIR+=	pdf2djvu
 SUBDIR+=	pdfjam
 SUBDIR+=	pdflib
 SUBDIR+=	pdflib-lite
