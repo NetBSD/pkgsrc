@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.4 2010/12/01 16:49:13 kefren Exp $
---- data/config.in.orig	2010-11-12 12:24:41.000000000 +0200
-+++ data/config.in	2010-12-01 18:00:19.000000000 +0200
-@@ -17,7 +17,7 @@
- 	<dllmap dll="sqlite3" target="@SQLITE3@" os="!windows"/>
+$NetBSD: patch-al,v 1.5 2011/10/29 05:47:54 kefren Exp $
+--- data/config.in.orig	2011-08-26 04:06:38.000000000 +0300
++++ data/config.in	2011-10-28 15:54:35.000000000 +0300
+@@ -18,7 +18,7 @@
  	<dllmap dll="libX11" target="@X11@" os="!windows" />
  	<dllmap dll="libcairo-2.dll" target="libcairo.so.2" os="!windows"/>
+ 	<dllmap dll="libcairo-2.dll" target="libcairo.2.dylib" os="osx"/>
 -	<dllmap dll="libcups" target="libcups.so.2" os="!windows"/>
 +	<dllmap dll="libcups" target="libcups.so" os="!windows"/>
  	<dllmap dll="libcups" target="libcups.dylib" os="osx"/>
