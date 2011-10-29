@@ -1,0 +1,19 @@
+# $NetBSD: DEINSTALL,v 1.1 2011/10/29 13:45:49 marino Exp $
+
+# DEINSTALL is used rather than @pkgdir because the automatic directory
+# deletion mechanism makes python packages remove these directories first,
+# and thus "Directory disappeared" messages will likely appear under @pkgdir
+
+case ${STAGE} in
+POST-DEINSTALL)
+	CYCLE="@PREFIX@/lib/python@PY_VER_SUFFIX@/test/data \
+	       @PREFIX@/lib/python@PY_VER_SUFFIX@/lib-old"
+	for genpath in ${CYCLE}; do
+	  if [ -d ${genpath} ]; then
+	    if [ -n `${LS} -A ${$genpath}` ]; then
+	      ${RMDIR} ${genpath}
+	    fi
+	  fi
+	done
+	;;
+esac
