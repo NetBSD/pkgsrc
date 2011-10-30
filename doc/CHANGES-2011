@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2716 2011/10/30 12:08:29 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2717 2011/10/30 13:31:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4289,3 +4289,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/perfuse to 20111030 [manu 2011-10-30]
 	Updated security/py-amkCrypto to 2.0.1nb5 [obache 2011-10-30]
 	Updated net/bittornado to 0.3.18nb4 [obache 2011-10-30]
+	Updated security/py-crypto to 2.4 [obache 2011-10-30]
