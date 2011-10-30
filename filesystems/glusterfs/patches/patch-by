@@ -1,0 +1,458 @@
+$NetBSD: patch-by,v 1.1 2011/10/30 05:07:15 manu Exp $
+
+Pull inode generation fix from upstream
+
+
+--- xlators/cluster/afr/src/afr-common.c.orig	2011-08-23 14:31:39.000000000 +0200
++++ xlators/cluster/afr/src/afr-common.c	2011-10-29 10:13:59.000000000 +0200
+@@ -891,12 +891,9 @@
+ 
+                 first_up_child = afr_first_up_child (priv);
+ 
+                 if (child_index == first_up_child) {
+-                        local->cont.lookup.ino =
+-                                afr_itransform (buf->ia_ino,
+-                                                priv->child_count,
+-                                                first_up_child);
++                        local->cont.lookup.ino = buf->ia_ino;
+                 }
+ 
+                 if (local->success_count == 0) {
+                         if (local->op_errno != ESTALE)
+@@ -919,11 +916,10 @@
+                         uuid_copy (local->loc.gfid, buf->ia_gfid);
+                         uuid_copy (local->loc.pargfid,
+                                    postparent->ia_gfid);
+ 
+-                        lookup_buf->ia_ino = afr_itransform (buf->ia_ino,
+-                                                             priv->child_count,
+-                                                             child_index);
++                        lookup_buf->ia_ino = buf->ia_ino;
++
+                         if (priv->read_child >= 0) {
+                                 afr_set_read_child (this,
+                                                     local->cont.lookup.inode,
+                                                     priv->read_child);
+@@ -1014,12 +1010,9 @@
+ 
+                 first_up_child = afr_first_up_child (priv);
+ 
+                 if (child_index == first_up_child) {
+-                        local->cont.lookup.ino =
+-                                afr_itransform (buf->ia_ino,
+-                                                priv->child_count,
+-                                                first_up_child);
++                        local->cont.lookup.ino = buf->ia_ino;
+                 }
+ 
+                 /* in case of revalidate, we need to send stat of the
+                  * child whose stat was sent during the first lookup.
+@@ -1039,11 +1032,9 @@
+                         local->cont.lookup.postparent          = *postparent;
+ 
+                         *lookup_buf = *buf;
+ 
+-                        lookup_buf->ia_ino = afr_itransform (buf->ia_ino,
+-                                                             priv->child_count,
+-                                                             child_index);
++                        lookup_buf->ia_ino = buf->ia_ino;
+ 
+                         if (priv->read_child >= 0) {
+                                 afr_set_read_child (this,
+                                                     local->cont.lookup.inode,
+@@ -1581,11 +1572,8 @@
+ 
+         call_count = afr_frame_return (frame);
+ 
+         if (call_count == 0) {
+-                local->cont.fsync.prebuf.ia_ino  = local->cont.fsync.ino;
+-                local->cont.fsync.postbuf.ia_ino = local->cont.fsync.ino;
+-
+                 AFR_STACK_UNWIND (fsync, frame, local->op_ret, local->op_errno,
+                                   &local->cont.fsync.prebuf,
+                                   &local->cont.fsync.postbuf);
+         }
+--- xlators/cluster/afr/src/afr-dir-read.c.orig	2011-08-23 14:31:39.000000000 +0200
++++ xlators/cluster/afr/src/afr-dir-read.c	2011-10-29 10:14:22.000000000 +0200
+@@ -494,12 +494,8 @@
+         if (op_ret == -1)
+                 goto out;
+ 
+         list_for_each_entry_safe (entry, tmp, &entries->list, list) {
+-                entry->d_ino = afr_itransform (entry->d_ino,
+-                                               priv->child_count,
+-                                               child_index);
+-
+                 if ((local->fd->inode == local->fd->inode->table->root)
+                     && !strcmp (entry->d_name, GF_REPLICATE_TRASH_DIR)) {
+                         list_del_init (&entry->list);
+                         GF_FREE (entry);
+@@ -519,9 +515,8 @@
+ {
+         afr_private_t *  priv        = NULL;
+         afr_local_t *    local       = NULL;
+         xlator_t **      children    = NULL;
+-        ino_t            inum        = 0;
+         int              call_child  = 0;
+         int              first_call_child  = 0;
+         int              ret         = 0;
+         gf_dirent_t *    entry       = NULL;
+@@ -581,15 +576,8 @@
+         }
+ 
+         if (op_ret != -1) {
+                 list_for_each_entry_safe (entry, tmp, &entries->list, list) {
+-                        inum = afr_itransform (entry->d_ino, priv->child_count,
+-                                               call_child);
+-                        entry->d_ino = inum;
+-                        inum  = afr_itransform (entry->d_stat.ia_ino,
+-                                                priv->child_count, call_child);
+-                        entry->d_stat.ia_ino = inum;
+-
+                         if ((local->fd->inode == local->fd->inode->table->root)
+                             && !strcmp (entry->d_name, GF_REPLICATE_TRASH_DIR)) {
+                                 list_del_init (&entry->list);
+                                 GF_FREE (entry);
+--- xlators/cluster/afr/src/afr-dir-write.c.orig	2011-08-23 14:31:39.000000000 +0200
++++ xlators/cluster/afr/src/afr-dir-write.c	2011-10-28 06:50:34.000000000 +0200
+@@ -100,13 +100,8 @@
+                 } else {
+                         unwind_buf = &local->cont.create.buf;
+                 }
+ 
+-                unwind_buf->ia_ino = local->cont.create.ino;
+-
+-                local->cont.create.preparent.ia_ino  = local->cont.create.parent_ino;
+-                local->cont.create.postparent.ia_ino = local->cont.create.parent_ino;
+-
+                 AFR_STACK_UNWIND (create, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   local->cont.create.fd,
+                                   local->cont.create.inode,
+@@ -173,13 +168,8 @@
+ 
+                         if (local->success_count == 0) {
+                                 local->cont.create.buf        = *buf;
+ 
+-                                local->cont.create.ino =
+-                                        afr_itransform (buf->ia_ino,
+-                                                        priv->child_count,
+-                                                        child_index);
+-
+                                 if (priv->read_child >= 0) {
+                                         afr_set_read_child (this, inode,
+                                                             priv->read_child);
+                                 } else {
+@@ -187,15 +177,8 @@
+                                                             local->read_child_index);
+                                 }
+                         }
+ 
+-                        if (child_index == local->first_up_child) {
+-                                local->cont.create.ino =
+-                                        afr_itransform (buf->ia_ino,
+-                                                        priv->child_count,
+-                                                        local->first_up_child);
+-                        }
+-
+                         if (child_index == local->read_child_index) {
+                                 local->cont.create.read_child_buf = *buf;
+                                 local->cont.create.preparent      = *preparent;
+                                 local->cont.create.postparent     = *postparent;
+@@ -381,13 +364,8 @@
+                 } else {
+                         unwind_buf = &local->cont.mknod.buf;
+                 }
+ 
+-                unwind_buf->ia_ino = local->cont.mknod.ino;
+-
+-                local->cont.mknod.preparent.ia_ino  = local->cont.mknod.parent_ino;
+-                local->cont.mknod.postparent.ia_ino = local->cont.mknod.parent_ino;
+-
+                 AFR_STACK_UNWIND (mknod, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   local->cont.mknod.inode,
+                                   unwind_buf, &local->cont.mknod.preparent,
+@@ -423,12 +401,8 @@
+                         local->op_ret = op_ret;
+ 
+                         if (local->success_count == 0){
+                                 local->cont.mknod.buf   = *buf;
+-                                local->cont.mknod.ino   =
+-                                        afr_itransform (buf->ia_ino,
+-                                                        priv->child_count,
+-                                                        child_index);
+ 
+                                 if (priv->read_child >= 0) {
+                                         afr_set_read_child (this, inode,
+                                                             priv->read_child);
+@@ -437,15 +411,8 @@
+                                                             local->read_child_index);
+                                 }
+                         }
+ 
+-                        if (child_index == local->first_up_child) {
+-                                local->cont.mknod.ino =
+-                                        afr_itransform (buf->ia_ino,
+-                                                        priv->child_count,
+-                                                        local->first_up_child);
+-                        }
+-
+                         if (child_index == local->read_child_index) {
+                                 local->cont.mknod.read_child_buf = *buf;
+                                 local->cont.mknod.preparent      = *preparent;
+                                 local->cont.mknod.postparent     = *postparent;
+@@ -624,13 +591,8 @@
+                 } else {
+                         unwind_buf = &local->cont.mkdir.buf;
+                 }
+ 
+-                unwind_buf->ia_ino = local->cont.mkdir.ino;
+-
+-                local->cont.mkdir.preparent.ia_ino  = local->cont.mkdir.parent_ino;
+-                local->cont.mkdir.postparent.ia_ino = local->cont.mkdir.parent_ino;
+-
+                 AFR_STACK_UNWIND (mkdir, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   local->cont.mkdir.inode,
+                                   unwind_buf, &local->cont.mkdir.preparent,
+@@ -667,13 +629,8 @@
+ 
+                         if (local->success_count == 0) {
+                                 local->cont.mkdir.buf   = *buf;
+ 
+-                                local->cont.mkdir.ino =
+-                                        afr_itransform (buf->ia_ino,
+-                                                        priv->child_count,
+-                                                        child_index);
+-
+                                 if (priv->read_child >= 0) {
+                                         afr_set_read_child (this, inode,
+                                                             priv->read_child);
+                                 } else {
+@@ -681,15 +638,8 @@
+                                                             local->read_child_index);
+                                 }
+                         }
+ 
+-                        if (child_index == local->first_up_child) {
+-                                local->cont.mkdir.ino =
+-                                        afr_itransform (buf->ia_ino,
+-                                                        priv->child_count,
+-                                                        local->first_up_child);
+-                        }
+-
+                         if (child_index == local->read_child_index) {
+                                 local->cont.mkdir.read_child_buf = *buf;
+                                 local->cont.mkdir.preparent      = *preparent;
+                                 local->cont.mkdir.postparent     = *postparent;
+@@ -869,13 +819,8 @@
+                 } else {
+                         unwind_buf = &local->cont.link.buf;
+                 }
+ 
+-                unwind_buf->ia_ino = local->cont.link.ino;
+-
+-                local->cont.link.preparent.ia_ino  = local->cont.link.parent_ino;
+-                local->cont.link.postparent.ia_ino = local->cont.link.parent_ino;
+-
+                 AFR_STACK_UNWIND (link, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   local->cont.link.inode,
+                                   unwind_buf, &local->cont.link.preparent,
+@@ -1099,13 +1044,8 @@
+                 } else {
+                         unwind_buf = &local->cont.symlink.buf;
+                 }
+ 
+-                unwind_buf->ia_ino = local->cont.symlink.ino;
+-
+-                local->cont.symlink.preparent.ia_ino  = local->cont.symlink.parent_ino;
+-                local->cont.symlink.postparent.ia_ino = local->cont.symlink.parent_ino;
+-
+                 AFR_STACK_UNWIND (symlink, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   local->cont.symlink.inode,
+                                   unwind_buf, &local->cont.symlink.preparent,
+@@ -1141,11 +1081,8 @@
+                         local->op_ret   = op_ret;
+ 
+                         if (local->success_count == 0) {
+                                 local->cont.symlink.buf        = *buf;
+-                                local->cont.symlink.ino =
+-                                        afr_itransform (buf->ia_ino, priv->child_count,
+-                                                        child_index);
+ 
+                                 if (priv->read_child >= 0) {
+                                         afr_set_read_child (this, inode,
+                                                             priv->read_child);
+@@ -1154,15 +1091,8 @@
+                                                             local->read_child_index);
+                                 }
+                         }
+ 
+-                        if (child_index == local->first_up_child) {
+-                                local->cont.symlink.ino =
+-                                        afr_itransform (buf->ia_ino,
+-                                                        priv->child_count,
+-                                                        local->first_up_child);
+-                        }
+-
+                         if (child_index == local->read_child_index) {
+                                 local->cont.symlink.read_child_buf = *buf;
+                                 local->cont.symlink.preparent      = *preparent;
+                                 local->cont.symlink.postparent     = *postparent;
+@@ -1341,15 +1271,8 @@
+                 } else {
+                         unwind_buf = &local->cont.rename.buf;
+                 }
+ 
+-                unwind_buf->ia_ino = local->cont.rename.ino;
+-
+-                local->cont.rename.preoldparent.ia_ino  = local->cont.rename.oldparent_ino;
+-                local->cont.rename.postoldparent.ia_ino = local->cont.rename.oldparent_ino;
+-                local->cont.rename.prenewparent.ia_ino  = local->cont.rename.newparent_ino;
+-                local->cont.rename.postnewparent.ia_ino = local->cont.rename.newparent_ino;
+-
+                 AFR_STACK_UNWIND (rename, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   unwind_buf,
+                                   &local->cont.rename.preoldparent,
+@@ -1558,11 +1481,8 @@
+         }
+         UNLOCK (&frame->lock);
+ 
+         if (main_frame) {
+-                local->cont.unlink.preparent.ia_ino  = local->cont.unlink.parent_ino;
+-                local->cont.unlink.postparent.ia_ino = local->cont.unlink.parent_ino;
+-
+                 AFR_STACK_UNWIND (unlink, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   &local->cont.unlink.preparent,
+                                   &local->cont.unlink.postparent);
+@@ -1758,11 +1678,8 @@
+         }
+         UNLOCK (&frame->lock);
+ 
+         if (main_frame) {
+-                local->cont.rmdir.preparent.ia_ino  = local->cont.rmdir.parent_ino;
+-                local->cont.rmdir.postparent.ia_ino = local->cont.rmdir.parent_ino;
+-
+                 AFR_STACK_UNWIND (rmdir, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   &local->cont.rmdir.preparent,
+                                   &local->cont.rmdir.postparent);
+--- xlators/cluster/afr/src/afr-inode-read.c.orig	2011-08-23 14:31:39.000000000 +0200
++++ xlators/cluster/afr/src/afr-inode-read.c	2011-10-28 06:50:34.000000000 +0200
+@@ -222,11 +222,8 @@
+         }
+ 
+ out:
+         if (unwind) {
+-                if (buf)
+-                        buf->ia_ino = local->cont.stat.ino;
+-
+                 AFR_STACK_UNWIND (stat, frame, op_ret, op_errno, buf);
+         }
+ 
+         return 0;
+@@ -344,11 +341,8 @@
+         }
+ 
+ out:
+         if (unwind) {
+-                if (buf)
+-                        buf->ia_ino = local->cont.fstat.ino;
+-
+                 AFR_STACK_UNWIND (fstat, frame, op_ret, op_errno, buf);
+         }
+ 
+         return 0;
+@@ -469,11 +463,8 @@
+         }
+ 
+ out:
+         if (unwind) {
+-                if (sbuf)
+-                        sbuf->ia_ino = local->cont.readlink.ino;
+-
+                 AFR_STACK_UNWIND (readlink, frame, op_ret, op_errno, buf, sbuf);
+         }
+ 
+         return 0;
+@@ -876,11 +867,8 @@
+         }
+ 
+ out:
+         if (unwind) {
+-                if (buf && local)
+-                        buf->ia_ino = local->cont.readv.ino;
+-
+                 AFR_STACK_UNWIND (readv, frame, op_ret, op_errno,
+                                   vector, count, buf, iobref);
+         }
+ 
+--- xlators/cluster/afr/src/afr-inode-write.c.orig	2011-08-23 14:31:39.000000000 +0200
++++ xlators/cluster/afr/src/afr-inode-write.c	2011-10-28 06:50:34.000000000 +0200
+@@ -65,11 +65,8 @@
+         }
+         UNLOCK (&frame->lock);
+ 
+         if (main_frame) {
+-                local->cont.writev.prebuf.ia_ino  = local->cont.writev.ino;
+-                local->cont.writev.postbuf.ia_ino = local->cont.writev.ino;
+-
+                 AFR_STACK_UNWIND (writev, main_frame,
+                                   local->op_ret, local->op_errno,
+                                   &local->cont.writev.prebuf,
+                                   &local->cont.writev.postbuf);
+@@ -320,11 +317,8 @@
+         }
+         UNLOCK (&frame->lock);
+ 
+         if (main_frame) {
+-                local->cont.truncate.prebuf.ia_ino  = local->cont.truncate.ino;
+-                local->cont.truncate.postbuf.ia_ino = local->cont.truncate.ino;
+-
+                 AFR_STACK_UNWIND (truncate, main_frame, local->op_ret,
+                                   local->op_errno,
+                                   &local->cont.truncate.prebuf,
+                                   &local->cont.truncate.postbuf);
+@@ -531,11 +525,8 @@
+         }
+         UNLOCK (&frame->lock);
+ 
+         if (main_frame) {
+-                local->cont.ftruncate.prebuf.ia_ino  = local->cont.ftruncate.ino;
+-                local->cont.ftruncate.postbuf.ia_ino = local->cont.ftruncate.ino;
+-
+                 AFR_STACK_UNWIND (ftruncate, main_frame, local->op_ret,
+                                   local->op_errno,
+                                   &local->cont.ftruncate.prebuf,
+                                   &local->cont.ftruncate.postbuf);
+@@ -780,11 +771,8 @@
+         }
+         UNLOCK (&frame->lock);
+ 
+         if (main_frame) {
+-                local->cont.setattr.preop_buf.ia_ino  = local->cont.setattr.ino;
+-                local->cont.setattr.postop_buf.ia_ino = local->cont.setattr.ino;
+-
+                 AFR_STACK_UNWIND (setattr, main_frame, local->op_ret,
+                                   local->op_errno,
+                                   &local->cont.setattr.preop_buf,
+                                   &local->cont.setattr.postop_buf);
+@@ -990,13 +978,8 @@
+         }
+         UNLOCK (&frame->lock);
+ 
+         if (main_frame) {
+-                local->cont.fsetattr.preop_buf.ia_ino  =
+-                        local->cont.fsetattr.ino;
+-                local->cont.fsetattr.postop_buf.ia_ino =
+-                        local->cont.fsetattr.ino;
+-
+                 AFR_STACK_UNWIND (fsetattr, main_frame, local->op_ret,
+                                   local->op_errno,
+                                   &local->cont.fsetattr.preop_buf,
+                                   &local->cont.fsetattr.postop_buf);
