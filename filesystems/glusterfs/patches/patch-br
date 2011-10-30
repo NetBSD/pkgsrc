@@ -1,4 +1,4 @@
-$NetBSD: patch-br,v 1.7 2011/10/25 09:23:37 manu Exp $
+$NetBSD: patch-br,v 1.8 2011/10/30 05:07:15 manu Exp $
 
 Use linkat(2) if available so that we can make a hardlink to symlink 
 itself, instead of symlink destination, like link(2) does. This is
@@ -11,8 +11,8 @@ volumes fails.
 Also pull upstreampatch that fix inode generation so that values 
 are reliable
 
---- xlators/storage/posix/src/posix.c.orig	2011-10-25 11:01:33.000000000 +0200
-+++ xlators/storage/posix/src/posix.c	2011-10-25 10:54:29.000000000 +0200
+--- xlators/storage/posix/src/posix.c.orig	2011-08-23 14:31:42.000000000 +0200
++++ xlators/storage/posix/src/posix.c	2011-10-28 14:59:13.000000000 +0200
 @@ -36,8 +36,12 @@
  #ifndef GF_BSD_HOST_OS
  #include <alloca.h>
@@ -40,7 +40,7 @@ are reliable
 +
 +        /* consider least significant 8 bytes of value out of gfid */
 +        for (i = 15; i > (15 - 8); i--) {
-+                temp_ino += buf->ia_gfid[i] << j;
++                temp_ino += (uint64_t)(buf->ia_gfid[i]) << j;
 +                j += 8;
 +        }
 +
@@ -107,12 +107,23 @@ are reliable
                  op_errno = errno;
                  gf_log (this->name, GF_LOG_ERROR,
                          "link %s to %s failed: %s",
-@@ -4381,8 +4420,9 @@
-                 list_for_each_entry (tmp_entry, &entries.list, list) {
-                         strcpy (entry_path + real_path_len + 1,
-                                 tmp_entry->d_name);
-                         posix_lstat_with_gfid (this, entry_path, &stbuf);
-+                        tmp_entry->d_ino = stbuf.ia_ino;
+@@ -4376,13 +4415,15 @@
+ 
+         /* pick ENOENT to indicate EOF */
+         op_errno = errno;
+ 
+-        if (whichop == GF_FOP_READDIRP) {
+-                list_for_each_entry (tmp_entry, &entries.list, list) {
+-                        strcpy (entry_path + real_path_len + 1,
+-                                tmp_entry->d_name);
+-                        posix_lstat_with_gfid (this, entry_path, &stbuf);
++        list_for_each_entry (tmp_entry, &entries.list, list) {
++                strcpy (entry_path + real_path_len + 1,
++                        tmp_entry->d_name);
++                posix_lstat_with_gfid (this, entry_path, &stbuf);
++                tmp_entry->d_ino = stbuf.ia_ino;
++
++                if (whichop == GF_FOP_READDIRP) {
                          tmp_entry->d_stat = stbuf;
                  }
          }
