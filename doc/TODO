@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10644 2011/10/28 11:24:08 fhajny Exp $
+$NetBSD: TODO,v 1.10645 2011/10/30 21:47:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.3.2
+	o ImageMagick-6.7.3.3
 	o MAMEDiff-2.30
 	o Mesa-7.10.3
 	o MesaLib-7.11
@@ -385,7 +385,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-tomcat6-6.0.33
 	o apache-tomcat7-7.0.20
 	o applewmproto-1.4.2
-	o appres-1.0.3
+	o appres-1.0.3 [pkg/45526]
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
@@ -741,7 +741,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13a
 	o gthumb-2.14.0
 	o gtick-0.4.2
-	o gtk2-2.24.7
 	o gtk3-3.2.1
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
@@ -886,7 +885,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libaudiofile-0.3.1
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.7.4
-	o libdrm-2.4.26
+	o libcdio-0.83
+	o libdrm-2.4.27
 	o libextractor-0.6.2
 	o libffi-3.0.10
 	o libflash-0.4.13
@@ -920,7 +920,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh-0.5.2 [www.libssh.org]
 	o libssh2-1.2.7
 	o libstree-0.4.3pre2 [pkg/43748]
-	o libtasn1-2.10
 	o libtcl-nothread-8.5.1
 	o libtool-2.4.2
 	o libtool-base-2.4.2
@@ -1047,7 +1046,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.5
 	o otpCalc-0.97
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.3.2
+	o p5-PerlMagick-6.7.3.3
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1091,7 +1090,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o polkit-qt-0.99.0
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.18.0
+	o poppler-0.18.1
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1126,6 +1125,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
+	o py-gstreamer0.10-0.10.22
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-m2crypto-0.20.2
@@ -1190,6 +1190,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
+	o scmgit-1.7.7.1
+	o scmgit-base-1.7.7.1
+	o scmgit-docs-1.7.7.1
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
@@ -1360,7 +1363,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111022
+	o x264-devel-20111029
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
