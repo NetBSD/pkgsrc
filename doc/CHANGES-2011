@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2718 2011/10/30 19:59:02 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.2719 2011/10/30 20:10:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4292,3 +4292,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/py-crypto to 2.4 [obache 2011-10-30]
 	Added x11/xicc version 0.1 [jakllsch 2011-10-30]
 	Added x11/xcalib version 0.8 [jakllsch 2011-10-30]
+	Updated editors/emacs-snapshot to 24.0.90.20111026 [minskim 2011-10-30]
