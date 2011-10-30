@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2713 2011/10/29 20:27:15 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2714 2011/10/30 05:28:13 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4286,3 +4286,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/pdf2djvu version 0.7.7 [ryoon 2011-10-29]
 	Updated textproc/p5-Pod-Readme to 0.11 [hiramatsu 2011-10-29]
 	Updated devel/p5-Module-ScanDeps to 1.04 [hiramatsu 2011-10-29]
+	Updated filesystems/perfuse to 20111030 [manu 2011-10-30]
