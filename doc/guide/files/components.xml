@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.42 2011/02/02 10:25:36 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.43 2011/10/30 22:07:19 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -541,8 +541,23 @@ monitor_file(...)
 	    procedures not possible with @exec commands in
 	    <filename>PLIST</filename>. See &man.pkg.add.1; and
 	    &man.pkg.create.1; for more information.  See also <xref
-	    linkend="files-and-dirs-outside-prefix" />.</para>
-	  </listitem>
+	    linkend="files-and-dirs-outside-prefix" />.
+	    Please note that you can modify variables in it easily by using
+	    <varname>FILES_SUBST</varname> in the package's
+	    <filename>Makefile</filename>:</para>
+
+<programlisting>
+FILES_SUBST+=  SOMEVAR="somevalue"
+</programlisting>
+
+	    <para>replaces "@SOMEVAR@" with <quote>somevalue</quote> in the
+	    <filename>INSTALL</filename>.  By default, substitution is
+	    performed for <varname>PREFIX</varname>,
+	    <varname>LOCALBASE</varname>, <varname>X11BASE</varname>,
+	    <varname>VARBASE</varname>, and a few others, type
+	    <command>make help topic=FILES_SUBST</command> for a
+	    complete list.</para>
+ 	  </listitem>
 	</varlistentry>
 
 	<varlistentry>
@@ -554,7 +569,9 @@ monitor_file(...)
 	    around the package's installation, since all pkg_delete knows is how to
 	    delete the files created in the original distribution.
 	    See &man.pkg.delete.1;
-	    and &man.pkg.create.1; for more information.</para>
+	    and &man.pkg.create.1; for more information.
+	    The same methods to replace variables can be used as for
+	    the <filename>INSTALL</filename> file.</para>
 	  </listitem>
 	</varlistentry>
 
