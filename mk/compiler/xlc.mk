@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.24 2009/06/02 22:28:52 joerg Exp $
+# $NetBSD: xlc.mk,v 1.25 2011/10/30 22:04:39 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -50,7 +50,7 @@ COMPILER_XLC_MK=	defined
 .if !defined(XLCBASE)
 .  if exists(/usr/vacpp/README)
 XLCBASE=	/usr/vacpp
-.  elif exists(/usr/vac/README)
+.  elif exists(/usr/vac/README) || exists(/usr/vac/README.c)
 XLCBASE=	/usr/vac
 .  elif exists(/opt/ibmcmp/vacpp/6.0/README)
 XLCBASE=	/opt/ibmcmp/vacpp/6.0
