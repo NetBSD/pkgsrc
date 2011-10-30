@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/10/30 16:21:11 shattered Exp $
+
+--- plugins/vnc/vinagre-vnc-listener-dialog.c.orig	2010-09-28 12:08:14.000000000 +0000
++++ plugins/vnc/vinagre-vnc-listener-dialog.c
+@@ -20,6 +20,8 @@
+ 
+ #include <config.h>
+ 
++#include <sys/types.h>
++
+ #include <net/if.h>
+ #include <arpa/inet.h>
+ #include <netinet/in.h>
