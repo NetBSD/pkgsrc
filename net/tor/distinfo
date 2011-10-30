@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.50 2011/10/06 18:06:15 drochner Exp $
+$NetBSD: distinfo,v 1.51 2011/10/30 17:49:18 drochner Exp $
 
-SHA1 (tor-0.2.2.33.tar.gz) = 2bbeb73cf866cc2701c0d28d3438e8626c1e8cca
-RMD160 (tor-0.2.2.33.tar.gz) = 7b47c08a4ecfa0864f28d5beb3ab26b5292f3170
-Size (tor-0.2.2.33.tar.gz) = 2719888 bytes
+SHA1 (tor-0.2.2.34.tar.gz) = 81d777d07d01513da483bcd27dc92bc36112e771
+RMD160 (tor-0.2.2.34.tar.gz) = 3cbf6f00ab88010ed2f916526c4acef9a8514c37
+Size (tor-0.2.2.34.tar.gz) = 2752710 bytes
 SHA1 (patch-aa) = 5b89228dc37c459c48f24616933a5673a5a0a0d1
