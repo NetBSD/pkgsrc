@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.17 2011/01/09 19:59:48 spz Exp $
+$NetBSD: distinfo,v 1.18 2011/10/30 22:03:42 spz Exp $
 
 SHA1 (MHonArc-2.6.18.tar.bz2) = 4990889d13cc3f4a2e1c284c55db5abb64e7072e
 RMD160 (MHonArc-2.6.18.tar.bz2) = 4cf0d8e67050cc573ef81f826938a6c096ff0e93
 Size (MHonArc-2.6.18.tar.bz2) = 1546854 bytes
+SHA1 (patch-lib_mhamain.pl) = d0257ba20bd0625d17ccf47795377e3467e2b24c
+SHA1 (patch-lib_mhopt.pl) = bf6ba47810dfa58318887ae936b3de2f32bd934d
+SHA1 (patch-lib_mhtxthtml.pl) = bfd6420fd9e0ffdbf1f781441f8c1b8b71ef94e7
+SHA1 (patch-lib_readmail.pl) = acd2aede2dbc533abe409fbfa381332697065cbe
