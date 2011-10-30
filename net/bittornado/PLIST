@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/10/30 12:07:50 obache Exp $
 bin/bt-t-make.py
 bin/btcompletedir.py
 bin/btcopyannounce.py
@@ -12,6 +12,7 @@ bin/btrename.py
 bin/btsethttpseeds.py
 bin/btshowmetainfo.py
 bin/bttrack.py
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/BitTornado/BT1/Choker.py
 ${PYSITELIB}/BitTornado/BT1/Choker.pyc
 ${PYSITELIB}/BitTornado/BT1/Choker.pyo
