@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10645 2011/10/30 21:47:03 wiz Exp $
+$NetBSD: TODO,v 1.10646 2011/10/30 22:38:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,7 +416,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
-	o bdftopcf-1.0.3
+	o bdftopcf-1.0.3 [pkg/45536]
 	o beforelight-1.0.4
 	o benchfft-3.1
 	o bftpd-3.6
@@ -597,11 +597,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fltk2-2.0pre8323
 	o fluidsynth-1.1.5
 	o fluxbox-1.3.1
-	o font-adobe-100dpi-1.0.3
-	o font-adobe-75dpi-1.0.3
-	o font-adobe-utopia-100dpi-1.0.4
-	o font-adobe-utopia-75dpi-1.0.4
-	o font-adobe-utopia-type1-1.0.4
+	o font-adobe-100dpi-1.0.3 [pkg/45537]
+	o font-adobe-75dpi-1.0.3 [pkg/45537]
+	o font-adobe-utopia-100dpi-1.0.4 [pkg/45537]
+	o font-adobe-utopia-75dpi-1.0.4 [pkg/45537]
+	o font-adobe-utopia-type1-1.0.4 [pkg/45537]
 	o font-alias-1.0.3
 	o font-arabic-misc-1.0.3
 	o font-bh-100dpi-1.0.3
@@ -629,7 +629,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-screen-cyrillic-1.0.4
 	o font-sony-misc-1.0.3
 	o font-sun-misc-1.0.3
-	o font-util-1.2.0
+	o font-util-1.2.0 [pkg/45537]
 	o font-winitzki-cyrillic-1.0.3
 	o font-xfree86-type1-1.0.4
 	o fontsproto-2.1.1
@@ -1130,7 +1130,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
+	o py-qt4-4.8.6
 	o py-simplejson-2.2.1
+	o py-sip-4.13
 	o py-sybase-0.37
 	o py-twisted-11.0.0
 	o py-urwid-1.0.0
@@ -1270,6 +1272,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tellico-2.3.4
 	o tesseract-3.00
 	o tetrinetx-1.40c
+	o texlive-tetex-20110705
 	o texmaker-3.1 [pkg/45521]
 	o tfmxplay-1.1.6
 	o thunderbird-7.0
