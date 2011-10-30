@@ -4670,20 +4670,37 @@ monitor_file(...)
 <a name="components.optional.bin"></a>11.5.1. Files affecting the binary package</h3></div></div></div>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="filename">INSTALL</code></span></dt>
-<dd><p>This shell script is invoked twice by <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>.
+<dd>
+<p>This shell script is invoked twice by <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>.
 	    First time after package extraction and before files are
 	    moved in place, the second time after the files to install
 	    are moved in place. This can be used to do any custom
 	    procedures not possible with @exec commands in
 	    <code class="filename">PLIST</code>. See <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> and
-	    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.  See also <a class="xref" href="#files-and-dirs-outside-prefix" title="15.1. Files and directories outside the installation prefix">Section 15.1, &#8220;Files and directories outside the installation prefix&#8221;</a>.</p></dd>
+	    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.  See also <a class="xref" href="#files-and-dirs-outside-prefix" title="15.1. Files and directories outside the installation prefix">Section 15.1, &#8220;Files and directories outside the installation prefix&#8221;</a>.
+	    Please note that you can modify variables in it easily by using
+	    <code class="varname">FILES_SUBST</code> in the package's
+	    <code class="filename">Makefile</code>:</p>
+<pre class="programlisting">
+FILES_SUBST+=  SOMEVAR="somevalue"
+</pre>
+<p>replaces "@SOMEVAR@" with <span class="quote">&#8220;<span class="quote">somevalue</span>&#8221;</span> in the
+	    <code class="filename">INSTALL</code>.  By default, substitution is
+	    performed for <code class="varname">PREFIX</code>,
+	    <code class="varname">LOCALBASE</code>, <code class="varname">X11BASE</code>,
+	    <code class="varname">VARBASE</code>, and a few others, type
+	    <span class="command"><strong>make help topic=FILES_SUBST</strong></span> for a
+	    complete list.</p>
+</dd>
 <dt><span class="term"><code class="filename">DEINSTALL</code></span></dt>
 <dd><p>This script is executed before and after any files are removed.  It is
 	    this script's responsibility to clean up any additional messy details
 	    around the package's installation, since all pkg_delete knows is how to
 	    delete the files created in the original distribution.
 	    See <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
-	    and <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.</p></dd>
+	    and <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.
+	    The same methods to replace variables can be used as for
+	    the <code class="filename">INSTALL</code> file.</p></dd>
 <dt><span class="term"><code class="filename">MESSAGE</code></span></dt>
 <dd>
 <p>This file is displayed after installation of the package.
@@ -7496,15 +7513,12 @@ to define the tools needed.</p>
 <div class="sect1" title="18.2. Tools needed by packages">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="package-tools"></a>18.2. Tools needed by packages</h2></div></div></div>
-<p>In the following examples, the :pkgsrc means to use the pkgsrc version
-and not the native version for a build dependency.
-And the :run means that it is used for a
-run-time dependencies also (and becomes a DEPENDS).
+<p>In the following examples, the :run means that it is needed at
+run-time (and becomes a DEPENDS).
 The default is a build dependency which can be set with
 :build. (So in this example, it is the same as gmake:build
 and pkg-config:build.)</p>
 <pre class="programlisting">
-USE_TOOLS+=     mktemp:pkgsrc
 USE_TOOLS+=     gmake perl:run pkg-config
 </pre>
 <p>When using the tools framework, a
@@ -7537,7 +7551,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229333723"></a><dl>
+<a name="id1168229307687"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7554,7 +7568,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question" title="18.4.1.">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168229333726"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168229307690"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7564,7 +7578,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.2.">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168229333735"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168229307700"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7575,7 +7589,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question" title="18.4.3.">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168229333744"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168229307708"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9550,7 +9564,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset" title="Frequently Asked Questions">
-<a name="id1168229338136"></a><dl>
+<a name="id1168229312100"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9593,7 +9607,7 @@ do?</a>
 <tbody>
 <tr class="question" title="22.1.">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168229338139"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168229312104"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9609,7 +9623,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.2.">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168229338172"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168229312137"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9627,7 +9641,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.3.">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168229338210"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168229312209"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9645,7 +9659,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.4.">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168229338244"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168229312243"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9658,7 +9672,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.5.">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168229338263"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168229312261"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9674,7 +9688,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.6.">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168229338289"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168229312288"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9698,7 +9712,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.7.">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168229338390"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168229312355"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9723,7 +9737,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.8.">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168229338422"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168229312386"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9771,7 +9785,7 @@ do?</a>
 </tr>
 <tr class="question" title="22.9.">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168229338475"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168229312508"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
