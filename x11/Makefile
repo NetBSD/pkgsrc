@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.639 2011/10/14 16:30:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.640 2011/10/30 19:59:02 jakllsch Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -386,6 +386,7 @@ SUBDIR+=	xbindkeys
 SUBDIR+=	xbindkeys-tk
 SUBDIR+=	xbitmaps
 SUBDIR+=	xcalc
+SUBDIR+=	xcalib
 SUBDIR+=	xcb
 SUBDIR+=	xcb-proto
 SUBDIR+=	xcb-util
@@ -482,6 +483,7 @@ SUBDIR+=	xglobe
 SUBDIR+=	xgrk
 SUBDIR+=	xhangglider
 SUBDIR+=	xhost
+SUBDIR+=	xicc
 SUBDIR+=	xineramaproto
 SUBDIR+=	xinit
 SUBDIR+=	xinput
