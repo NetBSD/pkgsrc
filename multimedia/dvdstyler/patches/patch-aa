@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2011/10/30 17:45:44 drochner Exp $
+
+--- src/mediatrc_ffmpeg.cpp.orig	2010-10-10 15:55:37.000000000 +0000
++++ src/mediatrc_ffmpeg.cpp
+@@ -2551,7 +2551,7 @@ bool wxFfmpegMediaTranscoder::DoVideoOut
+ 			} else
+ 				big_picture.quality = (int) ost->st->quality;
+ 			if (!me_threshold)
+-				big_picture.pict_type = 0;
++				big_picture.pict_type = AV_PICTURE_TYPE_NONE;
+ //			big_picture.pts = AV_NOPTS_VALUE;
+ 			big_picture.pts= ost->sync_opts;
+ //			big_picture.pts= av_rescale(ost->sync_opts, AV_TIME_BASE*(int64_t)enc->time_base.num, enc->time_base.den);
