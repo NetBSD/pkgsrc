@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/12/17 19:02:05 abs Exp $
+@comment $NetBSD: PLIST,v 1.5.16.1 2011/10/30 08:55:32 tron Exp $
 bin/labltk
 bin/ocamlbrowser
 lib/ocaml/labltk/balloon.cmi
@@ -165,7 +165,6 @@ lib/ocaml/labltk/labltk.cma
 lib/ocaml/labltk/labltk.cmi
 lib/ocaml/labltk/labltktop
 lib/ocaml/labltk/liblabltk.a
-lib/ocaml/labltk/libtkanim.a
 lib/ocaml/labltk/listbox.cmi
 lib/ocaml/labltk/listbox.mli
 lib/ocaml/labltk/menu.cmi
@@ -208,9 +207,6 @@ lib/ocaml/labltk/textvariable.mli
 lib/ocaml/labltk/timer.cmi
 lib/ocaml/labltk/timer.mli
 lib/ocaml/labltk/tk.cmi
-lib/ocaml/labltk/tkanim.cma
-lib/ocaml/labltk/tkanim.cmi
-lib/ocaml/labltk/tkanim.mli
 lib/ocaml/labltk/tkcompiler
 lib/ocaml/labltk/tkthread.cmi
 lib/ocaml/labltk/tkthread.cmo
@@ -228,4 +224,3 @@ lib/ocaml/labltk/winfo.mli
 lib/ocaml/labltk/wm.cmi
 lib/ocaml/labltk/wm.mli
 lib/ocaml/stublibs/dlllabltk.so
-lib/ocaml/stublibs/dlltkanim.so
