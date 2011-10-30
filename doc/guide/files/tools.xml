@@ -1,4 +1,4 @@
-<!-- $NetBSD: tools.xml,v 1.5 2007/03/08 16:00:16 rillig Exp $ -->
+<!-- $NetBSD: tools.xml,v 1.6 2011/10/30 22:08:17 wiz Exp $ -->
 
 <chapter id="tools">
 <title>Tools needed for building or running</title>
@@ -46,16 +46,13 @@ to define the tools needed.</para>
 <sect1 id="package-tools">
 <title>Tools needed by packages</title>
 
-<para>In the following examples, the :pkgsrc means to use the pkgsrc version
-and not the native version for a build dependency.
-And the :run means that it is used for a
-run-time dependencies also (and becomes a DEPENDS).
+<para>In the following examples, the :run means that it is needed at
+run-time (and becomes a DEPENDS).
 The default is a build dependency which can be set with
 :build. (So in this example, it is the same as gmake:build
 and pkg-config:build.)</para>
 
 <programlisting>
-USE_TOOLS+=     mktemp:pkgsrc
 USE_TOOLS+=     gmake perl:run pkg-config
 </programlisting>
 
