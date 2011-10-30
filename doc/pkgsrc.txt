@@ -4033,7 +4033,15 @@ INSTALL
     files to install are moved in place. This can be used to do any custom
     procedures not possible with @exec commands in PLIST. See pkg_add(1) and
     pkg_create(1) for more information. See also Section 15.1, "Files and
-    directories outside the installation prefix".
+    directories outside the installation prefix". Please note that you can
+    modify variables in it easily by using FILES_SUBST in the package's
+    Makefile:
+
+    FILES_SUBST+=  SOMEVAR="somevalue"
+
+    replaces "@SOMEVAR@" with "somevalue" in the INSTALL. By default,
+    substitution is performed for PREFIX, LOCALBASE, X11BASE, VARBASE, and a
+    few others, type make help topic=FILES_SUBST for a complete list.
 
 DEINSTALL
 
@@ -4041,7 +4049,8 @@ DEINSTALL
     script's responsibility to clean up any additional messy details around the
     package's installation, since all pkg_delete knows is how to delete the
     files created in the original distribution. See pkg_delete(1) and
-    pkg_create(1) for more information.
+    pkg_create(1) for more information. The same methods to replace variables
+    can be used as for the INSTALL file.
 
 MESSAGE
 
@@ -6329,13 +6338,11 @@ be used to define the tools needed.
 
 18.2. Tools needed by packages
 
-In the following examples, the :pkgsrc means to use the pkgsrc version and not
-the native version for a build dependency. And the :run means that it is used
-for a run-time dependencies also (and becomes a DEPENDS). The default is a
-build dependency which can be set with :build. (So in this example, it is the
-same as gmake:build and pkg-config:build.)
+In the following examples, the :run means that it is needed at run-time (and
+becomes a DEPENDS). The default is a build dependency which can be set with
+:build. (So in this example, it is the same as gmake:build and
+pkg-config:build.)
 
-USE_TOOLS+=     mktemp:pkgsrc
 USE_TOOLS+=     gmake perl:run pkg-config
 
 When using the tools framework, a TOOLS_PATH.foo variable is defined which
