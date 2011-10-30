@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/12/05 17:13:09 gls Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/10/30 13:30:36 obache Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.so
 ${PYSITELIB}/Crypto/Cipher/ARC2.so
 ${PYSITELIB}/Crypto/Cipher/ARC4.so
@@ -25,7 +25,16 @@ ${PYSITELIB}/Crypto/Hash/RIPEMD160.so
 ${PYSITELIB}/Crypto/Hash/SHA.py
 ${PYSITELIB}/Crypto/Hash/SHA.pyc
 ${PYSITELIB}/Crypto/Hash/SHA.pyo
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA224.py
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA224.pyc
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA224.pyo
 ${PYSITELIB}/Crypto/Hash/SHA256.so
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA384.py
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA384.pyc
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA384.pyo
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA512.py
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA512.pyc
+${PLIST.py25}${PYSITELIB}/Crypto/Hash/SHA512.pyo
 ${PYSITELIB}/Crypto/Hash/__init__.py
 ${PYSITELIB}/Crypto/Hash/__init__.pyc
 ${PYSITELIB}/Crypto/Hash/__init__.pyo
@@ -84,9 +93,9 @@ ${PYSITELIB}/Crypto/Random/OSRNG/__init__.pyo
 ${PYSITELIB}/Crypto/Random/OSRNG/fallback.py
 ${PYSITELIB}/Crypto/Random/OSRNG/fallback.pyc
 ${PYSITELIB}/Crypto/Random/OSRNG/fallback.pyo
-${PYSITELIB}/Crypto/Random/OSRNG/nt.py
-${PYSITELIB}/Crypto/Random/OSRNG/nt.pyc
-${PYSITELIB}/Crypto/Random/OSRNG/nt.pyo
+${PLIST.py2x}${PYSITELIB}/Crypto/Random/OSRNG/nt.py
+${PLIST.py2x}${PYSITELIB}/Crypto/Random/OSRNG/nt.pyc
+${PLIST.py2x}${PYSITELIB}/Crypto/Random/OSRNG/nt.pyo
 ${PYSITELIB}/Crypto/Random/OSRNG/posix.py
 ${PYSITELIB}/Crypto/Random/OSRNG/posix.pyc
 ${PYSITELIB}/Crypto/Random/OSRNG/posix.pyo
@@ -156,12 +165,24 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_RIPEMD.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA224.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA224.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA224.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA256.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA256.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA256.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA384.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA384.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA384.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA512.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA512.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA512.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyo
+${PYSITELIB}/Crypto/SelfTest/Protocol/test_AllOrNothing.py
+${PYSITELIB}/Crypto/SelfTest/Protocol/test_AllOrNothing.pyc
+${PYSITELIB}/Crypto/SelfTest/Protocol/test_AllOrNothing.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_chaffing.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_chaffing.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_chaffing.pyo
@@ -259,9 +280,12 @@ ${PYSITELIB}/Crypto/Util/asn1.pyo
 ${PYSITELIB}/Crypto/Util/number.py
 ${PYSITELIB}/Crypto/Util/number.pyc
 ${PYSITELIB}/Crypto/Util/number.pyo
-${PYSITELIB}/Crypto/Util/python_compat.py
-${PYSITELIB}/Crypto/Util/python_compat.pyc
-${PYSITELIB}/Crypto/Util/python_compat.pyo
+${PLIST.py2x}${PYSITELIB}/Crypto/Util/py21compat.py
+${PLIST.py2x}${PYSITELIB}/Crypto/Util/py21compat.pyc
+${PLIST.py2x}${PYSITELIB}/Crypto/Util/py21compat.pyo
+${PYSITELIB}/Crypto/Util/py3compat.py
+${PYSITELIB}/Crypto/Util/py3compat.pyc
+${PYSITELIB}/Crypto/Util/py3compat.pyo
 ${PYSITELIB}/Crypto/Util/randpool.py
 ${PYSITELIB}/Crypto/Util/randpool.pyc
 ${PYSITELIB}/Crypto/Util/randpool.pyo
