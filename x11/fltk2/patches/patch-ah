@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2011/10/30 11:13:12 marino Exp $
+
+--- src/filename_list.cxx.orig	2007-06-01 13:13:08.000000000 +0000
++++ src/filename_list.cxx
+@@ -31,6 +31,7 @@
+ #include <ctype.h>
+ #include <string.h>
+ #include <stdio.h>
++#include <sys/param.h>
+ #include <fltk/string.h>
+ #include <fltk/utf.h>
+ #include <fltk/filename.h>
+@@ -64,7 +65,8 @@ int fltk::filename_list(const char *d, d
+   int n = scandir(d, list, 0, sort);
+ #elif defined(__linux) || defined (__FreeBSD__) || defined (__NetBSD__)
+   int n = scandir(d, list, 0, (int(*)(const void*,const void*))sort);
+-#elif defined(__hpux) || defined(__CYGWIN__)
++#elif defined(__hpux) || defined(__CYGWIN__) \
++  || (defined(__DragonFly__) && (__DragonFly_version >= 200901))
+   // HP-UX, Cygwin define the comparison function like this:
+   int n = scandir(d, list, 0, (int(*)(const dirent **, const dirent **))sort);
+ #elif defined(__osf__) || defined(__sgi)
