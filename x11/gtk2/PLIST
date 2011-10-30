@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2011/09/06 19:29:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.79 2011/10/30 18:11:24 drochner Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -429,7 +429,6 @@ share/gtk-doc/html/gdk/gdk-Testing.html
 share/gtk-doc/html/gdk/gdk-Threads.html
 share/gtk-doc/html/gdk/gdk-Visuals.html
 share/gtk-doc/html/gdk/gdk-Windows.html
-share/gtk-doc/html/gdk/gdk-X-Window-System-Interaction.html
 share/gtk-doc/html/gdk/gdk.devhelp2
 share/gtk-doc/html/gdk/gobbler.png
 share/gtk-doc/html/gdk/gumby.png
