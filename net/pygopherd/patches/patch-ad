@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/09/30 17:27:30 recht Exp $
+$NetBSD: patch-ad,v 1.2 2011/10/31 08:45:08 obache Exp $
 
 --- setup.py.orig	2003-08-23 18:31:00.000000000 +0200
 +++ setup.py	2003-08-28 20:40:53.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/09/30 17:27:30 recht Exp $
        packages = ['pygopherd', 'pygopherd.handlers', 'pygopherd.protocols'],
        scripts = ['bin/pygopherd'],
 -      data_files = [ ('/etc/pygopherd', ['conf/pygopherd.conf',
-+      data_files = [ ('%%EXAMPLEDIR%%', ['conf/pygopherd.conf',
++      data_files = [ ('@EXAMPLEDIR@', ['conf/pygopherd.conf',
                                           'conf/mime.types'] ) ],
        license = pygopherd.version.license
  )
