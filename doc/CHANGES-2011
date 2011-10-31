@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2719 2011/10/30 20:10:40 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2720 2011/10/31 05:52:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4293,3 +4293,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added x11/xicc version 0.1 [jakllsch 2011-10-30]
 	Added x11/xcalib version 0.8 [jakllsch 2011-10-30]
 	Updated editors/emacs-snapshot to 24.0.90.20111026 [minskim 2011-10-30]
+	Updated lang/ruby19-base to 1.9.2pl290nb3 [taca 2011-10-31]
