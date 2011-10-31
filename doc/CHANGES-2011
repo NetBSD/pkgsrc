@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2728 2011/10/31 19:42:47 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2729 2011/10/31 22:25:55 brook Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4303,3 +4303,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/yaz to 4.1.6nb3 [sbd 2011-10-31]
 	Updated devel/elf to 0.5.3nb3 [sbd 2011-10-31]
 	Updated lang/gcc46 to 4.6.2 [sbd 2011-10-31]
+	Added biology/primer3 version 2.2.3 [brook 2011-10-31]
