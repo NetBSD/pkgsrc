@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.4 2011/10/18 21:59:18 sbd Exp $
+$NetBSD: patch-am,v 1.5 2011/10/31 04:17:24 sbd Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -233,7 +233,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1113,31 +951,12 @@ class PyBuildExt(build_ext):
+@@ -1113,35 +951,40 @@ class PyBuildExt(build_ext):
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -270,26 +270,44 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
-@@ -1160,13 +979,15 @@ class PyBuildExt(build_ext):
-                             ndbm_libs = ['ndbm']
-                         else:
-                             ndbm_libs = []
--                        print "building dbm using ndbm"
--                        dbmext = Extension('dbm', ['dbmmodule.c'],
-+                        if not self.compiler.find_library_file(lib_dirs,
-+                                                                    'gdbm'):
-+                            print "building dbm using ndbm"
-+                            dbmext = Extension('dbm', ['dbmmodule.c'],
-                                            define_macros=[
-                                                ('HAVE_NDBM_H',None),
-                                                ],
-                                            libraries=ndbm_libs)
--                        break
+         if platform not in ['cygwin']:
++
++            ## Top half based on find_file
++            def find_ndbm_h(dirs):
++                ret = None
++                if sys.platform == 'darwin':
++                    sysroot = macosx_sdk_root()
++                for dir in dirs:
++                    f = os.path.join(dir, 'ndbm.h')
++                    if sys.platform == 'darwin' and is_macosx_sdk_path(dir):
++                        f = os.path.join(sysroot, dir[1:], filename)
++                    if not os.path.exists(f): continue
++
++                    ret = 'True'
++                    input = text_file.TextFile(f)
++                    while 1:
++                        line = input.readline()
++                        if not line: break
++                        if re.search('This file is part of GDBM', line):
++                            ret = None
 +                            break
- 
-                 elif cand == "gdbm":
-                     if self.compiler.find_library_file(lib_dirs, 'gdbm'):
-@@ -1192,19 +1013,16 @@ class PyBuildExt(build_ext):
++                    input.close()
++                    break
++                return ret
++
+             config_args = [arg.strip("'")
+                            for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
+             dbm_args = [arg for arg in config_args
+@@ -1153,7 +996,7 @@ class PyBuildExt(build_ext):
+             dbmext = None
+             for cand in dbm_order:
+                 if cand == "ndbm":
+-                    if find_file("ndbm.h", inc_dirs, []) is not None:
++                    if find_ndbm_h(inc_dirs) is not None:
+                         # Some systems have -lndbm, others don't
+                         if self.compiler.find_library_file(lib_dirs,
+                                                                'ndbm'):
+@@ -1192,19 +1035,16 @@ class PyBuildExt(build_ext):
                                      ],
                                  libraries = gdbm_libs)
                              break
@@ -319,7 +337,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -2066,9 +1884,9 @@ def main():
+@@ -2066,9 +1906,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
