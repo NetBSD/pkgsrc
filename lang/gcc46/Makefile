@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/10/18 17:56:15 hans Exp $
+# $NetBSD: Makefile,v 1.12 2011/10/31 19:37:31 sbd Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
-PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run bash:run chmod gmake:run makeinfo sed:run
 
-GCC_VERSION=		4.6.1
+GCC_VERSION=		4.6.2
 
 GCC_SUBPREFIX=		gcc46
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
