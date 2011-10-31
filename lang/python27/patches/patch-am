@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2011/10/31 04:17:24 sbd Exp $
+$NetBSD: patch-am,v 1.6 2011/10/31 06:49:59 sbd Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -307,11 +307,10 @@ Build the 1.85 compat module all the time against the BDB version of choice.
                          # Some systems have -lndbm, others don't
                          if self.compiler.find_library_file(lib_dirs,
                                                                 'ndbm'):
-@@ -1192,19 +1035,16 @@ class PyBuildExt(build_ext):
-                                     ],
+@@ -1193,18 +1036,14 @@ class PyBuildExt(build_ext):
                                  libraries = gdbm_libs)
                              break
--                elif cand == "bdb":
+                 elif cand == "bdb":
 -                    if db_incs is not None:
 -                        print "building dbm using bdb"
 -                        dbmext = Extension('dbm', ['dbmmodule.c'],
@@ -324,8 +323,6 @@ Build the 1.85 compat module all the time against the BDB version of choice.
 -                                               ],
 -                                           libraries=dblibs)
 -                        break
-+
-+                if cand == "bdb" and dbmext is None:
 +		    print "building dbm using bdb"
 +		    dbmext = Extension('dbm', ['dbmmodule.c'],
 +				       define_macros=[
@@ -337,7 +334,7 @@ Build the 1.85 compat module all the time against the BDB version of choice.
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -2066,9 +1906,9 @@ def main():
+@@ -2066,9 +1905,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
