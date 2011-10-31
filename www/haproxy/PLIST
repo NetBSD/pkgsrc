@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/31 10:49:31 morr Exp $
+man/man1/haproxy.1
+sbin/haproxy
+share/doc/haproxy/architecture.txt
+share/doc/haproxy/configuration.txt
+share/doc/haproxy/haproxy-en.txt
+share/doc/haproxy/haproxy-fr.txt
+share/examples/haproxy/haproxy.cfg
+share/examples/rc.d/haproxy
