@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2727 2011/10/31 19:37:46 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2728 2011/10/31 19:42:47 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4300,4 +4300,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-soappy to 0.11.6nb1 [obache 2011-10-31]
 	Updated net/py-dns to 1.9.4nb1 [obache 2011-10-31]
 	Updated emulators/suse113_krb5 to 11.3nb4 [chs 2011-10-31]
+	Updated net/yaz to 4.1.6nb3 [sbd 2011-10-31]
+	Updated devel/elf to 0.5.3nb3 [sbd 2011-10-31]
 	Updated lang/gcc46 to 4.6.2 [sbd 2011-10-31]
