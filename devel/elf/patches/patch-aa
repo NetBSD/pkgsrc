@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/05/04 20:38:07 salo Exp $
+$NetBSD: patch-aa,v 1.2 2011/10/31 19:21:47 sbd Exp $
 
 --- src/Makefile.in.orig	2002-12-19 11:20:51.000000000 +0100
 +++ src/Makefile.in	2003-05-04 22:12:37.000000000 +0200
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,5 @@
 -CC=gcc
+-CFLAGS=@CFLAGS@
 +CC=@CC@
- CFLAGS=@CFLAGS@
++CFLAGS=@CFLAGS@ @LDFLAGS@
  INC=-I../include
  INSDIR=@prefix@/bin
+ LIBS=@LIBS@
