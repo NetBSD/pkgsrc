@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/04/22 13:44:20 obache Exp $
+# $NetBSD: Makefile,v 1.30 2011/10/31 09:28:35 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -9,7 +9,8 @@ PKGREVISION=	11
 
 COMMENT+=	(GTK+ GUI)
 
-DEPENDS+=	bittorrent>=4.4.0:../../net/bittorrent
+DEPENDS+=	bittorrent>=${PKGVERSION_NOREV}:../../net/bittorrent
+DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.6:../../x11/py-gtk2
 
 PYTHON_PATCH_SCRIPTS= bittorrent maketorrent
 
@@ -18,7 +19,7 @@ CONFLICTS+=	bittornado-gui-[0-9]*
 ICONS_DIR=		share/pixmaps/BitTorrent-${PKGVERSION:C/nb.*//}/icons
 INSTALLATION_DIRS=	bin ${ICONS_DIR} ${ICONS_DIR}/default ${ICONS_DIR}/old
 
-do-build:	# empty
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bittorrent ${DESTDIR}${PREFIX}/bin
@@ -29,5 +30,4 @@ do-install:
 	  ${DESTDIR}${PREFIX}/${ICONS_DIR}/old
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
