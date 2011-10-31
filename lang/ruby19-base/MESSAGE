@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2011/10/31 05:51:18 taca Exp $
 
 Note that this is a minimal package.
 
@@ -8,7 +8,9 @@ libraries, some of which are provided as separate packages:
 
 	databases/ruby-gdbm:		GDBM module
 	devel/ruby-curses:		Curses module
+	devel/ruby-fiddle:		Fiddle module
 	devel/ruby-readline:		readline module
+	textproc/ruby-psych:		Psych module
 	x11/ruby-tk:			Tk modules
 
 ===========================================================================
