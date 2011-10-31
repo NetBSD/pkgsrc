@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.17 2011/10/18 21:59:18 sbd Exp $
+$NetBSD: patch-am,v 1.18 2011/10/31 06:50:54 sbd Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -261,7 +261,7 @@ support building the "nis" and "crypt" modules.
          # The sqlite interface
          sqlite_setup_debug = False   # verbose debug prints from this script?
  
-@@ -1094,31 +956,12 @@
+@@ -1094,35 +956,40 @@
          # we do not build this one.  Otherwise this build will pick up
          # the more recent berkeleydb's db.h file first in the include path
          # when attempting to compile and it will fail.
@@ -298,14 +298,37 @@ support building the "nis" and "crypt" modules.
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -1128,10 +971,12 @@
+-            if find_file("ndbm.h", inc_dirs, []) is not None:
++
++            ## Top half based on find_file
++            def find_ndbm_h(dirs):
++                ret = None
++                if sys.platform == 'darwin':
++                    sysroot = macosx_sdk_root()
++                for dir in dirs:
++                    f = os.path.join(dir, 'ndbm.h')
++                    if sys.platform == 'darwin' and is_macosx_sdk_path(dir):
++                        f = os.path.join(sysroot, dir[1:], filename)
++                    if not os.path.exists(f): continue
++
++                    ret = 'True'
++                    input = text_file.TextFile(f)
++                    while 1:
++                        line = input.readline()
++                        if not line: break
++                        if re.search('This file is part of GDBM', line):
++                            ret = None
++                            break
++                    input.close()
++                    break
++                return ret
++
++            if find_ndbm_h(inc_dirs) is not None:
+                 # Some systems have -lndbm, others don't
+                 if self.compiler.find_library_file(lib_dirs, 'ndbm'):
                      ndbm_libs = ['ndbm']
-                 else:
-                     ndbm_libs = []
--                exts.append( Extension('dbm', ['dbmmodule.c'],
-+		# Don't use gdbm_compat!
-+		if not self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
-+		    exts.append( Extension('dbm', ['dbmmodule.c'],
+@@ -1131,7 +998,7 @@
+                 exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
 -            elif self.compiler.find_library_file(lib_dirs, 'gdbm'):
@@ -313,7 +336,7 @@ support building the "nis" and "crypt" modules.
                  gdbm_libs = ['gdbm']
                  if self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
                      gdbm_libs.append('gdbm_compat')
-@@ -1147,14 +990,12 @@
+@@ -1147,14 +1014,12 @@
                          libraries = gdbm_libs ) )
                  else:
                      missing.append('dbm')
@@ -331,7 +354,7 @@ support building the "nis" and "crypt" modules.
              else:
                  missing.append('dbm')
  
-@@ -1408,6 +1248,14 @@
+@@ -1408,6 +1273,14 @@
                  )
              libraries = []
  
@@ -346,7 +369,7 @@ support building the "nis" and "crypt" modules.
          else:                                   # Linux and other unices
              macros = dict(
                  HAVE_SEM_OPEN=1,
-@@ -2026,9 +1874,9 @@
+@@ -2026,9 +1899,9 @@
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
