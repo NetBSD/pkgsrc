@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2724 2011/10/31 11:57:15 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2725 2011/10/31 12:41:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4298,3 +4298,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-GeoIP to 1.2.7 [obache 2011-10-31]
 	Updated www/haproxy to 1.4.18 [morr 2011-10-31]
 	Updated net/py-soappy to 0.11.6nb1 [obache 2011-10-31]
+	Updated net/py-dns to 1.9.4nb1 [obache 2011-10-31]
