@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/10/05 22:29:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2011/10/31 21:28:03 brook Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -26,6 +26,7 @@ SUBDIR+=	nut
 SUBDIR+=	openbabel
 SUBDIR+=	pdbalign
 SUBDIR+=	phylip
+SUBDIR+=	primer3
 SUBDIR+=	profit
 SUBDIR+=	puzzle
 SUBDIR+=	py-mol
