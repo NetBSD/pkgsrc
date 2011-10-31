@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2725 2011/10/31 12:41:26 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2726 2011/10/31 14:00:55 chs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4299,3 +4299,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/haproxy to 1.4.18 [morr 2011-10-31]
 	Updated net/py-soappy to 0.11.6nb1 [obache 2011-10-31]
 	Updated net/py-dns to 1.9.4nb1 [obache 2011-10-31]
+	Updated emulators/suse113_krb5 to 11.3nb4 [chs 2011-10-31]
