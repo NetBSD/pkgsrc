@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/10 10:46:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/31 11:55:51 reed Exp $
 
 DISTNAME=	pcc-1.0.0
 CATEGORIES=	lang
@@ -14,6 +14,7 @@ COMMENT=	Portable C compiler
 
 ONLY_FOR_PLATFORM=	NetBSD-*-arm* NetBSD-*-i386 NetBSD-*-mips* \
 			NetBSD-*-powerpc NetBSD-*-sparc64 NetBSD-*-vax \
+			NetBSD-*-x86_64 \
 			OpenBSD-*-i386 OpenBSD-*-vax \
 			OpenBSD-*-powerpc OpenBSD-*-sparc64 \
 			DragonFly-*-i386 \
