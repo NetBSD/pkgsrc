@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/14 14:20:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/10/31 08:45:08 obache Exp $
 bin/pygopherd
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pygopherd/GopherExceptions.py
 ${PYSITELIB}/pygopherd/GopherExceptions.pyc
 ${PYSITELIB}/pygopherd/GopherExceptions.pyo

@@ -1,31 +1,31 @@
-$NetBSD: patch-ab,v 1.2 2004/01/24 19:44:00 recht Exp $
+$NetBSD: patch-ab,v 1.3 2011/10/31 08:45:08 obache Exp $
 
---- doc/pygopherd.8.orig	2004-01-24 20:21:51.000000000 +0100
-+++ doc/pygopherd.8	2004-01-24 20:22:45.000000000 +0100
-@@ -180,7 +180,7 @@
+--- doc/pygopherd.8.orig	2005-09-22 13:00:21.000000000 +0000
++++ doc/pygopherd.8
+@@ -180,7 +180,7 @@ distribution includes two files of inter
  \fIconf/pygopherd.conf\fR and
  \fIconf/mime.types\fR.  Debian users will find
  the configuration file pre-installed in
 -\fI/etc/pygopherd/pygopherd.conf\fR and the
-+\fI%%PREFIX%%/etc/pygopherd/pygopherd.conf\fR and the
++\fI@PKG_SYSCONFDIR@/pygopherd.conf\fR and the
  \fImime.types\fR file provided by the system
  already.
  .PP
-@@ -242,7 +242,7 @@
+@@ -242,7 +242,7 @@ Some systems will use \fBpython\fR or
  \fBpython2.2\fR.
  .PP
  Next, proceed to configuration.  Make sure that the
 -\fI/etc/pygopherd/pygopherd.conf\fR file
-+\fI%%PREFIX%%/etc/pygopherd/pygopherd.conf\fR file
++\fI@PKG_SYSCONFDIR@/pygopherd.conf\fR file
  names valid users (\fIsetuid\fR and
  \fIsetgid\fR options) and a valid document
  root (\fIroot\fR option).
-@@ -287,7 +287,7 @@
+@@ -287,7 +287,7 @@ installation step necessary.
  .SH "CONFIGURATION"
  .PP
  \fBPyGopherd\fR is regulated by a configuratoin file normally
 -stored in \fI/etc/pygopherd/pygopherd.conf\fR.
-+stored in \fI%%PREFIX%%/etc/pygopherd/pygopherd.conf\fR.
++stored in \fI@PKG_SYSCONFDIR@/pygopherd.conf\fR.
  You can specify an alternate configuration file on the command
  line.  The \fBPyGopherd\fR distribution ships
  with a sample \fIpygopherd.conf\fR file that

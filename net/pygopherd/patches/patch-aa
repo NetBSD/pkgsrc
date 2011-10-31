@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/30 17:27:29 recht Exp $
+$NetBSD: patch-aa,v 1.2 2011/10/31 08:45:08 obache Exp $
 
 --- bin/pygopherd.orig	2003-08-23 18:31:54.000000000 +0200
 +++ bin/pygopherd	2003-08-28 20:39:34.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/30 17:27:29 recht Exp $
  import sys
  
 -conffile = '/etc/pygopherd/pygopherd.conf'
-+conffile = '%%PREFIX%%/etc/pygopherd/pygopherd.conf'
++conffile = '@PKG_SYSCONFDIR@/pygopherd.conf'
  if len(sys.argv) > 1:
      conffile = sys.argv[1]
  

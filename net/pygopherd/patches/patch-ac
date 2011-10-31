@@ -1,13 +1,40 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/09/30 17:27:30 recht Exp $
+$NetBSD: patch-ac,v 1.2 2011/10/31 08:45:08 obache Exp $
 
---- conf/pygopherd.conf.orig	2003-08-23 23:31:03.000000000 +0200
-+++ conf/pygopherd.conf	2003-08-28 20:40:35.000000000 +0200
-@@ -119,7 +119,7 @@
+--- conf/pygopherd.conf.orig	2006-09-11 14:10:13.000000000 +0000
++++ conf/pygopherd.conf
+@@ -16,7 +16,7 @@ detach = yes
+ # If you want gopherd to write a PID file, set this to the location
+ # where you want it.  Otherwise, comment out this line.
+ 
+-pidfile = /var/run/pygopherd.pid
++pidfile = @VARBASE@/run/pygopherd.pid
+ 
+ ##################################################
+ # Network
+@@ -110,8 +110,8 @@ usechroot = yes
+ ## starting pygopherd as root.  Comment out if you don't want this
+ ## functionality.  NOTE: DO NOT RUN AS ROOT UNLESS YOU USE THESE!  BAD BAD BAD!
+ 
+-setuid = gopher
+-setgid = gopher
++setuid = @GOPHER_USER@
++setgid = @GOPHER_GROUP@
+ 
+ ##################################################
+ # Filesystem and MIME
+@@ -119,13 +119,13 @@ setgid = gopher
+ 
+ # Where the documents are stored.
+ 
+-root = /var/gopher
++root = @RUNTIMEDIR@
+ 
+ # Location of a file to use to figure out MIME types.  You can
  # specify multiple files here -- just separate them with a colon.
  # ALL of them that are found will be read.
  
 -mimetypes = ./conf/mime.types:/etc/pygopherd/mime.types:/etc/mime.types
-+mimetypes = ./conf/mime.types:%%PREFIX%%/etc/pygopherd/mime.types:/etc/mime.types
++mimetypes = ./conf/mime.types:@PKG_SYSCONFDIR@/mime.types:/etc/mime.types
  
  # Encodings.  You can use the default with the following syntax.  The
  # mimetypex.encodings_map is {'.Z': 'compress', '.gz': 'gzip'}.

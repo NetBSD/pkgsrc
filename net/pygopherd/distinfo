@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2009/08/14 14:20:51 joerg Exp $
+$NetBSD: distinfo,v 1.5 2011/10/31 08:45:08 obache Exp $
 
 SHA1 (pygopherd_2.0.16.tar.gz) = 1851105d7bb2eda055c0a399168cf1799bd5e453
 RMD160 (pygopherd_2.0.16.tar.gz) = 3b99e7a2474c8e6a90cf987c59ab877d165c07c9
 Size (pygopherd_2.0.16.tar.gz) = 255475 bytes
-SHA1 (patch-aa) = c6843f58f104fa93454f152c7b077d28b2d6f5ad
-SHA1 (patch-ab) = 89bf03853edf358550beace11274e4ff6e20b148
-SHA1 (patch-ac) = 5dcb518e8405f57877dcc7d5f1d894f61a351432
-SHA1 (patch-ad) = 09fab9dae45edf043483cb8f7314cc946683674d
+SHA1 (patch-aa) = 5baa1dac1d4ae5728ea83355efe8bbe3f9df153f
+SHA1 (patch-ab) = 41fd7ded966d943511cc45436f630722fa8a8336
+SHA1 (patch-ac) = 5e93805b2f731073b614caa30361fce18958b2a3
+SHA1 (patch-ad) = d2dd4c57a2bc11c44a813c67cbc38caf0d5d5cc2
