@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/07/18 16:10:32 gson Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/10/31 12:41:11 obache Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -251,3 +251,4 @@ ${PYSITELIB}/dns/version.pyo
 ${PYSITELIB}/dns/zone.py
 ${PYSITELIB}/dns/zone.pyc
 ${PYSITELIB}/dns/zone.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
