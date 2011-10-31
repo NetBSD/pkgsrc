@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.8 2011/10/18 21:59:18 sbd Exp $
+$NetBSD: patch-am,v 1.9 2011/10/31 06:50:54 sbd Exp $
 
 --- setup.py.orig	2008-10-16 18:58:19.000000000 +0000
 +++ setup.py
@@ -41,7 +41,7 @@ $NetBSD: patch-am,v 1.8 2011/10/18 21:59:18 sbd Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -609,269 +613,51 @@ class PyBuildExt(build_ext):
+@@ -609,273 +613,79 @@ class PyBuildExt(build_ext):
          # a release.  Most open source OSes come with one or more
          # versions of BerkeleyDB already installed.
  
@@ -350,14 +350,37 @@ $NetBSD: patch-am,v 1.8 2011/10/18 21:59:18 sbd Exp $
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -881,15 +667,13 @@ class PyBuildExt(build_ext):
-                     ndbm_libs = ['ndbm']
-                 else:
-                     ndbm_libs = []
--                exts.append( Extension('dbm', ['dbmmodule.c'],
+-            if find_file("ndbm.h", inc_dirs, []) is not None:
 +
-+                if not self.compiler.find_library_file(lib_dirs, 'gdbm_compat'):
-+                    exts.append( Extension('dbm', ['dbmmodule.c'],
++            ## Top half based on find_file
++            def find_ndbm_h(dirs):
++                ret = None
++                if sys.platform == 'darwin':
++                    sysroot = macosx_sdk_root()
++                for dir in dirs:
++                    f = os.path.join(dir, 'ndbm.h')
++                    if sys.platform == 'darwin' and is_macosx_sdk_path(dir):
++                        f = os.path.join(sysroot, dir[1:], filename)
++                    if not os.path.exists(f): continue
++
++                    ret = 'True'
++                    input = text_file.TextFile(f)
++                    while 1:
++                        line = input.readline()
++                        if not line: break
++                        if re.search('This file is part of GDBM', line):
++                            ret = None
++                            break
++                    input.close()
++                    break
++                return ret
++
++            if find_ndbm_h(inc_dirs) is not None:
+                 # Some systems have -lndbm, others don't
+                 if self.compiler.find_library_file(lib_dirs, 'ndbm'):
+                     ndbm_libs = ['ndbm']
+@@ -884,12 +694,8 @@ class PyBuildExt(build_ext):
+                 exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
 -            elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
@@ -371,7 +394,7 @@ $NetBSD: patch-am,v 1.8 2011/10/18 21:59:18 sbd Exp $
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         library_dirs=dblib_dir,
                                         runtime_library_dirs=dblib_dir,
-@@ -899,9 +683,9 @@ class PyBuildExt(build_ext):
+@@ -899,9 +705,9 @@ class PyBuildExt(build_ext):
                                         libraries=dblibs))
  
          # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
@@ -384,7 +407,7 @@ $NetBSD: patch-am,v 1.8 2011/10/18 21:59:18 sbd Exp $
  
          # Unix-only modules
          if platform not in ['mac', 'win32']:
-@@ -1536,8 +1320,8 @@ def main():
+@@ -1536,8 +1342,8 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
