@@ -1,0 +1,24 @@
+Primer3 is a widely used program for designing PCR primers (PCR =
+"Polymerase Chain Reaction").  PCR is an essential and ubiquitous tool
+in genetics and molecular biology.  Primer3 can also design
+hybridization probes and sequencing primers.
+
+Primer3 picks primers for PCR reactions, considering as criteria: o
+
+- oligonucleotide melting temperature, size, GC content, and
+  primer-dimer possibilities,
+- PCR product size,
+- positional constraints within the source (template) sequence,
+- possibilities for ectopic priming (amplifying the wrong sequence), and
+- many other constraints.
+
+All of these criteria are user-specifiable as constraints, and some
+are specifiable as terms in an objective function that characterizes
+an optimal primer pair.
+
+Whitehead Institute for Biomedical Research provides a basic web-based
+front end to primer3 named primer3web at http://fokker.wi.mit.edu/
+
+Wageningen University Laboratory of Bioinformatics provides a enhanced
+web-based front end to primer3 named primer3plus at
+http://www.bioinformatics.nl/cgi-bin/primer3plus/primer3plus.cgi
