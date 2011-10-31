@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2721 2011/10/31 08:45:44 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2722 2011/10/31 09:09:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4295,3 +4295,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/emacs-snapshot to 24.0.90.20111026 [minskim 2011-10-30]
 	Updated lang/ruby19-base to 1.9.2pl290nb3 [taca 2011-10-31]
 	Updated net/pygopherd to 2.0.16nb2 [obache 2011-10-31]
+	Updated net/py-GeoIP to 1.2.7 [obache 2011-10-31]
