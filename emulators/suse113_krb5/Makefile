@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2011/04/09 14:58:10 chs Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/31 14:00:30 chs Exp $
 
 DISTNAME=	suse_krb5-${SUSE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
-DISTFILES=	krb5-1.8.1-5.7.1.${SUSE_ARCH}.rpm		\
+DISTFILES=	krb5-1.8.1-5.11.1.${SUSE_ARCH}.rpm		\
 		libcom_err2-1.41.11-1.11.${SUSE_ARCH}.rpm
 
 MAINTAINER=	chs@NetBSD.org
