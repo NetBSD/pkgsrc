@@ -1,7 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2011/01/03 01:45:00 obache Exp $
+$NetBSD: patch-ah,v 1.5 2011/11/01 12:59:17 marino Exp $
 
 * correct location for usb headers on DragonFly BSD
   https://sourceforge.net/apps/trac/smartmontools/ticket/141
+* pkg/40628: Override functionality conditions based on FreeBSD
 
 --- os_freebsd.cpp.orig	2010-10-14 18:46:33.000000000 +0000
 +++ os_freebsd.cpp
@@ -15,3 +16,39 @@ $NetBSD: patch-ah,v 1.4 2011/01/03 01:45:00 obache Exp $
  #else
  #include <dev/usb/usb.h>
  #include <dev/usb/usbhid.h>
+@@ -316,7 +319,7 @@ bool freebsd_ata_device::ata_pass_throug
+     unsigned const char normal_lo=0x4f, normal_hi=0xc2;
+     unsigned const char failed_lo=0xf4, failed_hi=0x2c;
+ 
+-#if (FREEBSDVER < 502000)
++#if (FREEBSDVER < 502000) && !defined(__DragonFly__)
+     printwarning(NO_RETURN,NULL);
+ #endif
+ 
+@@ -1018,7 +1021,7 @@ bool freebsd_scsi_device::scsi_pass_thro
+ 
+   if (cam_send_ccb(m_camdev,ccb) < 0) {
+     warn("error sending SCSI ccb");
+-#if (FREEBSDVER > 500000)
++#if (FREEBSDVER > 500000) || defined(__DragonFly__)
+     cam_error_print(m_camdev,ccb,CAM_ESF_ALL,CAM_EPF_ALL,stderr);
+ #endif
+     cam_freeccb(ccb);
+@@ -1026,7 +1029,7 @@ bool freebsd_scsi_device::scsi_pass_thro
+   }
+ 
+   if (((ccb->ccb_h.status & CAM_STATUS_MASK) != CAM_REQ_CMP) && ((ccb->ccb_h.status & CAM_STATUS_MASK) != CAM_SCSI_STATUS_ERROR)) {
+-#if (FREEBSDVER > 500000)
++#if (FREEBSDVER > 500000) || defined(__DragonFly__)
+     cam_error_print(m_camdev,ccb,CAM_ESF_ALL,CAM_EPF_ALL,stderr);
+ #endif
+     cam_freeccb(ccb);
+@@ -1501,7 +1504,7 @@ bool freebsd_smart_interface::scan_smart
+ }
+ 
+ 
+-#if (FREEBSDVER < 800000) // without this build fail on FreeBSD 8
++#if (FREEBSDVER < 800000) || defined(__DragonFly__) // without this build fail on FreeBSD 8
+ static char done[USB_MAX_DEVICES];
+ 
+ static int usbdevinfo(int f, int a, int rec, int busno, unsigned short & vendor_id,
