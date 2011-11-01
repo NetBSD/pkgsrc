@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10648 2011/10/31 19:37:46 sbd Exp $
+$NetBSD: TODO,v 1.10649 2011/11/01 15:10:28 taca Exp $
 
 Suggested new packages
 ======================
@@ -520,7 +520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dri-7.8.2 [wip]
 	o dri2proto-2.6
 	o drivel-3.0.3
-	o drupal-7
+	o drupal-7.9
 	o dspam-3.10.0
 	o dvdisaster-0.72.2
 	o dvdstyler-2.0.0
@@ -1248,7 +1248,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stunnel-4.45
 	o subtitleeditor-0.33.0
 	o subversion-1.7.1
-	o sudo-1.8.3
+	o sudo-1.8.3p1
 	o supertuxkart-0.7.2
 	o swfdec-gnome-2.30.1
 	o sympa-6.1.6
