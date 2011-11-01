@@ -1,0 +1,7 @@
+CUPS-PDF is a PDF writer backend for CUPS.
+
+It is designed to produce PDF files in a heterogeneous network by providing a
+PDF printer on the central fileserver. It will convert files printed to its
+queue in CUPS to PDF and put them in a per-user-based directory structure.
+It can execute post-processing scripts, e.g. to allow mailing the results
+to the user.
