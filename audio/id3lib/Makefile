@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/05/20 21:12:13 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2011/11/01 15:11:18 hans Exp $
 #
 
 DISTNAME=	id3lib-3.8.3
@@ -18,6 +18,14 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 CPPFLAGS+=-DID3_NEED_WCHAR_TEMPLATE
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*)
+.  include "../../mk/compiler.mk"
+.  if !empty(CC_VERSION:Mgcc-4.[6-9].*)
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -std=c99
+.  endif
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
