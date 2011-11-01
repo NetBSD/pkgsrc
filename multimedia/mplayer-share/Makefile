@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2011/08/23 13:06:51 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/11/01 06:11:56 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=	mplayer-share-${MPLAYER_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Documentation used by mplayer and gmplayer
 
 DEPENDS+=	mplayer-fonts-[0-9]*:../../fonts/mplayer-fonts
