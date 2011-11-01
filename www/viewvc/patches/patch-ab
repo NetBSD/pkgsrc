@@ -1,73 +1,52 @@
-$NetBSD: patch-ab,v 1.2 2008/10/21 20:46:28 adrianp Exp $
+$NetBSD: patch-ab,v 1.3 2011/11/01 21:08:55 scottr Exp $
 
---- viewvc.conf.dist.orig	2008-02-25 20:47:24.000000000 +0000
-+++ viewvc.conf.dist
-@@ -105,6 +105,7 @@ cvs_roots = cvs: /home/cvsroot
- default_root = cvs
- 
- # uncomment if the RCS binaries are not on the standard path
-+rcs_path = @RCS_PREFIX@/bin/
- #rcs_path = /usr/bin/
- 
- # ViewVC can use CVSNT (www.cvsnt.org) instead of the RCS 
-@@ -125,7 +126,8 @@ default_root = cvs
- use_rcsparse = 0
- 
- # uncomment if the svn command-line utilities are not on the standard path
--#svn_path = /usr/bin/
-+#svn_path = @PREFIX@/bin/
-+svn_path = @PREFIX@/bin/
- 
- #
- # This is a pathname to a MIME types file to help viewvc to guess the
-@@ -135,7 +137,7 @@ use_rcsparse = 0
- # uncomment this option and point it at a MIME type file.
- #
- # For example, you can use the mime.types from apache here:
--#mime_types_file = /usr/local/apache/conf/mime.types
+--- conf/viewvc.conf.dist.orig	2011-04-20 09:56:39.000000000 -0500
++++ conf/viewvc.conf.dist	2011-10-31 21:43:19.000000000 -0500
+@@ -186,6 +186,7 @@
+ ##                    /usr/local/apache2/conf/mime.types
+ ##
+ #mime_types_files = mimetypes.conf
 +#mime_types_file = @PREFIX@/etc/httpd/mime.types
  
- # This address is shown in the footer of the generated pages. 
- # It must be replaced with the address of the local repository maintainer.
-@@ -495,14 +497,14 @@ highlight_line_numbers = 1
- highlight_convert_tabs = 2
+ ## address: The address of the local repository maintainer.  (This
+ ## option is provided only as a convenience for ViewVC installations
+@@ -280,6 +281,7 @@
+ ## rcs_dir = /usr/bin/
+ ##
+ #rcs_dir =
++rcs_dir = @RCS_PREFIX@/bin/
  
- # use php to colorize .php and .inc files?
--use_php = 0
-+use_php = @PHP_OPT@
+ ## cvsnt: Location of cvsnt program.  ViewVC can use CVSNT (www.cvsnt.org)
+ ## instead of the RCS utilities to retrieve information from CVS
+@@ -302,6 +304,7 @@
+ ## svn = /usr/bin/svn
+ ##
+ #svn =
++svn = @PREFIX@/bin/
  
- # path to php executable
- # (This should be set to the path of a PHP CLI executable, not the path
- # to a CGI executable. If you use a CGI executable, you may see "no input file
- # specified" or "force-cgi-redirect" errors instead of colorized source. The
- # output of "php -v" tells you whether an given executable is CLI or CGI.)
--php_exe_path = php
-+php_exe_path = @PREFIX@/bin/php
- # php_exe_path = /usr/local/bin/php
- # php_exe_path = C:\Program Files\php\cli\php.exe
+ ## diff: Location of the GNU diff program, used for showing file
+ ## version differences.
+@@ -317,7 +320,7 @@
+ ## Example:
+ ## cvsgraph = /usr/local/bin/cvsgraph
+ ##
+-#cvsgraph =
++cvsgraph = @PREFIX@/bin/
  
-@@ -510,20 +512,20 @@ php_exe_path = php
- # Use CvsGraph. See http://www.akhphd.au.dk/~bertho/cvsgraph/ for
- # documentation and download. 
- #
--use_cvsgraph = 0
+ 
+ ##---------------------------------------------------------------------------
+@@ -622,12 +625,14 @@
+ ## use_cvsgraph: Use CvsGraph to offer visual graphs of CVS revision history.
+ ##
+ #use_cvsgraph = 0
 +use_cvsgraph = @CVSGRAPH_OPT@
- # use_cvsgraph = 1
  
- #
- # if the cvsgraph program is not on the path, set this value
- #
--cvsgraph_path =
--# cvsgraph_path = /usr/local/bin/
-+cvsgraph_path = @PREFIX@/bin/
-+# cvsgraph_path = @PREFIX@/bin/
- 
- #
- # Location of the customized cvsgraph configuration file.  
- # You will need an absolute pathname here:
- #
--cvsgraph_conf = cvsgraph.conf
+ ## cvsgraph_conf: Location of the customized cvsgraph configuration file.
+ ## May be specified as an absolute path or as a path relative to this
+ ## configuration file.
+ ##
+ #cvsgraph_conf = cvsgraph.conf
 +cvsgraph_conf = @PREFIX@/@VIEWVCDIR@/cvsgraph.conf
  
- #
- # Set to enable regular expression search of all files in a directory
+ ## use_re_search: Enable regular expression search of files in a directory.
+ ##
