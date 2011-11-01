@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2011/04/22 13:43:30 obache Exp $
+# $NetBSD: Makefile,v 1.92 2011/11/01 06:11:54 sbd Exp $
 
 DISTNAME=		vice-2.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vice-emu:Q}/
 MASTER_SITES+=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/emulators/VICE/
