@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2011/01/13 13:36:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2011/11/01 06:02:31 sbd Exp $
 
 BUILDLINK_TREE+=	dbus-qt3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dbus-qt3
 DBUS_QT3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dbus-qt3+=	dbus-qt3>=0.70
-BUILDLINK_ABI_DEPENDS.dbus-qt3?=	dbus-qt3>=0.70nb4
+BUILDLINK_ABI_DEPENDS.dbus-qt3?=	dbus-qt3>=0.70nb5
 BUILDLINK_PKGSRCDIR.dbus-qt3?=	../../sysutils/dbus-qt3
 
 .include "../../sysutils/dbus/buildlink3.mk"

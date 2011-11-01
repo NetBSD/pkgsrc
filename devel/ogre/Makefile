@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2011/01/13 13:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2011/11/01 06:01:01 sbd Exp $
 #
 
 DISTNAME=	ogre-v1-6-3
 PKGNAME=	ogre-1.6.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogre/}
 EXTRACT_SUFX=	.tar.bz2

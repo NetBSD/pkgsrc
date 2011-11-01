@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2011/04/22 13:43:22 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/01 06:01:03 sbd Exp $
 #
 
 DISTNAME=		winpdb-1.4.6
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		devel python
 MASTER_SITES=		http://winpdb.googlecode.com/files/
 

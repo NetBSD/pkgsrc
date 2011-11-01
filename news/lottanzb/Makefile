@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/06/14 10:51:08 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/01 06:02:23 sbd Exp $
 
 DISTNAME=	lottanzb-0.4.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	news
 MASTER_SITES=	http://www.lottanzb.org/releases/
 

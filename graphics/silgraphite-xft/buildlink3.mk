@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/04/26 10:13:31 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2011/11/01 06:01:47 sbd Exp $
 
 BUILDLINK_TREE+=	silgraphite-xft
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	silgraphite-xft
 SILGRAPHITE_XFT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.silgraphite-xft+=	silgraphite-xft>=2.3
+BUILDLINK_ABI_DEPENDS.silgraphite-xft?=	silgraphite-xft>=2.3.1nb1
 BUILDLINK_PKGSRCDIR.silgraphite-xft?=	../../graphics/silgraphite-xft
 
 .include "../../graphics/silgraphite-ft/buildlink3.mk"

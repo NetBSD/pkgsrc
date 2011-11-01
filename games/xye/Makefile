@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/01/13 13:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/01 06:01:23 sbd Exp $
 #
 
 DISTNAME=	xye-0.9.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITE_SOURCEFORGE_NEW= http://downloads.sourceforge.net/project/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_NEW:=xye/xye/0.9.1/}

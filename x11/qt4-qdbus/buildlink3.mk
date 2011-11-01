@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2011/04/22 13:42:36 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2011/11/01 06:03:07 sbd Exp $
 
 BUILDLINK_TREE+=	qt4-qdbus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt4-qdbus
 QT4_QDBUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt4-qdbus+=	qt4-qdbus>=4.3.2
-BUILDLINK_ABI_DEPENDS.qt4-qdbus?=	qt4-qdbus>=4.7.2nb1
+BUILDLINK_ABI_DEPENDS.qt4-qdbus?=	qt4-qdbus>=4.7.4nb2
 BUILDLINK_PKGSRCDIR.qt4-qdbus?=	../../x11/qt4-qdbus
 
 .include "../../x11/qt4-libs/buildlink3.mk"

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2011/04/22 13:43:59 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/11/01 06:01:56 sbd Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/sablevm-classpath/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/classpath/classpath-gui/}
-PKGREVISION=	8
+PKGREVISION=	9
 COMMENT+=	(GUI libraries)
 
 DEPENDS+=	sablevm-classpath>=1.13nb1:../../lang/sablevm-classpath

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/04/22 13:43:42 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/01 06:01:27 sbd Exp $
 #
 
 DISTNAME=	clutter-box2d-0.10.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://source.clutter-project.org/sources/clutter-box2d/0.10/
 

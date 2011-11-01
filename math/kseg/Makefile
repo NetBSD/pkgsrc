@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/01/13 13:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/01 06:02:02 sbd Exp $
 #
 
 DISTNAME=	kseg-0.403
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	http://www.mit.edu/~ibaran/
 

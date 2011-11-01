@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/07/21 13:05:54 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/11/01 06:01:16 sbd Exp $
 #
 
 DISTNAME=	gamazons-0.83
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	games
 MASTER_SITES=	http://www.yorgalily.org/gamazons/src/
 

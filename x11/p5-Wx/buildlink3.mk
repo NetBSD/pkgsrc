@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2011/04/22 13:42:07 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2011/11/01 06:03:04 sbd Exp $
 
 BUILDLINK_TREE+=        p5-Wx
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=        p5-Wx
 P5_WX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.p5-Wx+=  p5-Wx>=0.91
-BUILDLINK_ABI_DEPENDS.p5-Wx?=    p5-Wx>=0.98nb4
+BUILDLINK_ABI_DEPENDS.p5-Wx?=    p5-Wx>=0.98nb6
 BUILDLINK_PKGSRCDIR.p5-Wx?=    ../../x11/p5-Wx
 BUILDLINK_INCDIRS.p5-Wx?=      ${PERL5_SUB_INSTALLVENDORARCH}/auto/Wx
 

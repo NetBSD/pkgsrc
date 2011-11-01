@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2011/04/22 13:43:08 obache Exp $
+# $NetBSD: Makefile,v 1.73 2011/11/01 06:00:48 sbd Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 OWNER=		tron@NetBSD.org
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 

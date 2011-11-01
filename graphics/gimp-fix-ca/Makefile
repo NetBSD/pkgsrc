@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2011/04/22 13:43:45 obache Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/01 06:01:34 sbd Exp $
 #
 
 DISTNAME=		gimp-fix-ca-3.0.1
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		graphics
 MASTER_SITES=		http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file=
 EXTRACT_SUFX=		.c

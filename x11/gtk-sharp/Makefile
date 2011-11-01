@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2011/06/10 09:40:03 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/11/01 06:02:52 sbd Exp $
 #
 
 DISTNAME=		gtk-sharp-2.12.10
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-sharp/2.12/}
 EXTRACT_SUFX=		.tar.bz2

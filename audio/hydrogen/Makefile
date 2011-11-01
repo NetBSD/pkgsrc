@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2011/07/30 21:01:17 schnoebe Exp $
+# $NetBSD: Makefile,v 1.22 2011/11/01 06:00:38 sbd Exp $
 
 DISTNAME=	hydrogen-0.9.4.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hydrogen/}
 

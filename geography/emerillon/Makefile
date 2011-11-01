@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/06/10 09:39:55 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/01 06:01:23 sbd Exp $
 #
 
 DISTNAME=	emerillon-0.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/emerillon/0.1/}
 EXTRACT_SUFX=	.tar.bz2

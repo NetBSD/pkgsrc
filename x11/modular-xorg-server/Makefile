@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2011/02/28 14:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2011/11/01 06:03:04 sbd Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2

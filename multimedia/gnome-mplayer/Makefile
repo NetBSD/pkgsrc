@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/08/23 13:06:51 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/01 06:02:11 sbd Exp $
 #
 
 DISTNAME=	gnome-mplayer-1.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gnome-mplayer.googlecode.com/files/
 

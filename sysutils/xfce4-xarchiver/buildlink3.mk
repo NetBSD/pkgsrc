@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2011/04/22 13:42:13 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2011/11/01 06:02:37 sbd Exp $
 
 BUILDLINK_TREE+=	xfce4-xarchiver
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-xarchiver
 XFCE4_XARCHIVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-xarchiver+=	xfce4-xarchiver>=0.5.2nb1
-BUILDLINK_ABI_DEPENDS.xfce4-xarchiver?=	xfce4-xarchiver>=0.5.2nb7
+BUILDLINK_ABI_DEPENDS.xfce4-xarchiver?=	xfce4-xarchiver>=0.5.2nb8
 BUILDLINK_PKGSRCDIR.xfce4-xarchiver?=	../../sysutils/xfce4-xarchiver
 
 .include "../../x11/libxfce4gui/buildlink3.mk"
