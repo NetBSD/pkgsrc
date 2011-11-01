@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2011/11/01 21:08:55 scottr Exp $
+
+If you are upgrading from a previous version of viewvc, you must update
+your configuration. For more information, check the ViewVC FAQ:
+
+  http://www.viewvc.org/faq.html
+
+===========================================================================

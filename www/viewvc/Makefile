@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2010/12/25 15:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/01 21:08:55 scottr Exp $
 #
 
-DISTNAME=	viewvc-1.0.12
+DISTNAME=	viewvc-1.1.11
 CATEGORIES=	devel www
-MASTER_SITES=	# http://viewvc.tigris.org/files/documents/3330/47621/
+MASTER_SITES=	# http://viewvc.tigris.org/files/documents/3330/49022/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.viewvc.org/
@@ -35,7 +35,8 @@ CONF_FILES+=	${PREFIX}/share/examples/viewvc/cvsgraph.conf \
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_MESSAGE.conf=	Fixing configuration files.
-SUBST_FILES.conf=	viewvc.conf.dist
+SUBST_FILES.conf=	conf/viewvc.conf.dist
+SUBST_FILES.conf+=	conf/cvsgraph.conf.dist
 SUBST_SED.conf=		-e "s|@VIEWVCDIR@|${VIEWVCDIR}|g"
 SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.conf+=	-e "s|@PHP_OPT@|${PHP_OPT}|g"
@@ -56,9 +57,9 @@ do-install:
 		${PYTHONBIN} \
 		viewvc-install --prefix=${PREFIX}/${VIEWVCDIR} --destdir=${DESTDIR})
 
-	${INSTALL_DATA} ${WRKSRC}/viewvc.conf.dist \
+	${INSTALL_DATA} ${WRKSRC}/conf/viewvc.conf.dist \
 		${DESTDIR}${PREFIX}/share/examples/viewvc/viewvc.conf
-	${INSTALL_DATA} ${WRKSRC}/cvsgraph.conf.dist \
+	${INSTALL_DATA} ${WRKSRC}/conf/cvsgraph.conf.dist \
 		${DESTDIR}${PREFIX}/share/examples/viewvc/cvsgraph.conf
 
 post-install:
