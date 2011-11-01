@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2011/04/22 13:43:52 obache Exp $
+# $NetBSD: Makefile,v 1.60 2011/11/01 06:01:47 sbd Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.17
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 

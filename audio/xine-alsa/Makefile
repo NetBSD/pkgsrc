@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/25 20:24:41 markd Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/01 06:03:14 sbd Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,6 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/alsa/}
+PKGREVISION=	1
 CATEGORIES=	audio
 COMMENT=	The ALSA output plugin for xine-lib
 

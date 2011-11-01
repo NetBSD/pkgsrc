@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2011/10/19 06:13:02 obache Exp $
+# $NetBSD: Makefile,v 1.18 2011/11/01 06:02:07 sbd Exp $
 
 #DISTNAME=	kdepim-runtime-${_KDE_VERSION}
 DISTNAME=	kdepim-runtime-4.4.9
 MASTER_SITES=	${MASTER_SITE_KDE:=kdepim-4.4.9/src/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 COMMENT=	Runtime requirements for the KDE PIM tools
 

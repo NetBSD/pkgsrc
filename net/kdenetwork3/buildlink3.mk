@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2011/08/23 13:06:52 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2011/11/01 06:02:19 sbd Exp $
 
 BUILDLINK_TREE+=	kdenetwork
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdenetwork
 KDENETWORK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdenetwork+=	kdenetwork>=3.5.0nb1
-BUILDLINK_ABI_DEPENDS.kdenetwork?=	kdenetwork>=3.5.10nb12
+BUILDLINK_ABI_DEPENDS.kdenetwork?=	kdenetwork>=3.5.10nb13
 BUILDLINK_PKGSRCDIR.kdenetwork?=	../../net/kdenetwork3
 
 .include "../../converters/uulib/buildlink3.mk"

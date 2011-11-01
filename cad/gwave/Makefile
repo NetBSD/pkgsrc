@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2011/09/29 18:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2011/11/01 06:00:44 sbd Exp $
 #
 
 DISTNAME=	gwave2-20090213
 PKGNAME=	${DISTNAME:S/gwave2/gwave/}
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwave/}
 

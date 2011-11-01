@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/22 13:42:13 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/01 06:02:37 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	0.5.2
 
 DISTNAME=	xarchiver-${XFCE4_VERSION}
 PKGNAME=	xfce4-xarchiver-${XFCE4_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xarchiver/}
 COMMENT=	Xfce archiver handler

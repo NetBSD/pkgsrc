@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2011/08/14 12:59:50 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/01 06:01:42 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/GraphicsMagick/Makefile.common"
 
 PKGNAME=	p5-GraphicsMagick-${DISTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.graphicsmagick.org/perl.html

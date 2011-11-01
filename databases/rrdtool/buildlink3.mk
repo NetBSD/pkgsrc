@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2011/04/22 13:42:02 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2011/11/01 06:00:52 sbd Exp $
 
 BUILDLINK_TREE+=	rrdtool
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rrdtool
 RRDTOOL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rrdtool+=	rrdtool>=1.3.9
-BUILDLINK_ABI_DEPENDS.rrdtool?=	rrdtool>=1.4.5nb2
+BUILDLINK_ABI_DEPENDS.rrdtool?=	rrdtool>=1.4.5nb5
 BUILDLINK_PKGSRCDIR.rrdtool?=	../../databases/rrdtool
 
 .include "../../devel/gettext-lib/buildlink3.mk"

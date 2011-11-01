@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2011/01/13 13:36:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2011/11/01 06:03:04 sbd Exp $
 
 BUILDLINK_TREE+=	paragui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	paragui
 PARAGUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.paragui+=	paragui>=1.0.4nb3
-BUILDLINK_ABI_DEPENDS.paragui+=	paragui>=1.0.4nb17
+BUILDLINK_ABI_DEPENDS.paragui+=	paragui>=1.0.4nb18
 BUILDLINK_PKGSRCDIR.paragui?=	../../x11/paragui
 
 .include "../../devel/SDL/buildlink3.mk"

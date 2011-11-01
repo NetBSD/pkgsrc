@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2011/07/21 13:05:56 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/01 06:01:52 sbd Exp $
 #
 
 DISTNAME=	im-ja-1.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://im-ja.sourceforge.net/
 

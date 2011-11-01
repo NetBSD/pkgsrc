@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2011/10/20 16:32:57 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2011/11/01 06:02:27 sbd Exp $
 
 BUILDLINK_TREE+=	poppler
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poppler
 POPPLER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.5.1
-BUILDLINK_ABI_DEPENDS.poppler+=	poppler>=0.16.3
+BUILDLINK_ABI_DEPENDS.poppler+=	poppler>=0.16.7
 BUILDLINK_PKGSRCDIR.poppler?=	../../print/poppler
 
 pkgbase := poppler

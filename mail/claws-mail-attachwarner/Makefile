@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2011/09/12 17:43:05 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2011/11/01 06:01:57 sbd Exp $
 #
 
 DISTNAME=	attachwarner-0.2.22
 PKGNAME=	claws-mail-attachwarner-0.2.22
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 

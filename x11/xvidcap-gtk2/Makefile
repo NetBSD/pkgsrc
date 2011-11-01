@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/04/22 13:45:17 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/01 06:03:13 sbd Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../x11/xvidcap/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-gtk2-/}
-PKGREVISION=		11
+PKGREVISION=		12
 COMMENT=		Capture X display to individual frames or MPEG video (GTK2 version)
 
 CONFLICTS+=		xvidcap<1.1.3nb3

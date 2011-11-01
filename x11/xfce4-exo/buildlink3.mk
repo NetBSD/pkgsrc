@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2011/04/22 13:42:16 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2011/11/01 06:03:11 sbd Exp $
 
 BUILDLINK_TREE+=	xfce4-exo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-exo
 XFCE4_EXO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-exo+=	xfce4-exo>=0.3.100
-BUILDLINK_ABI_DEPENDS.xfce4-exo?=	xfce4-exo>=0.3.101nb6
+BUILDLINK_ABI_DEPENDS.xfce4-exo?=	xfce4-exo>=0.3.101nb8
 BUILDLINK_PKGSRCDIR.xfce4-exo?=	../../x11/xfce4-exo
 
 pkgbase := xfce4-exo

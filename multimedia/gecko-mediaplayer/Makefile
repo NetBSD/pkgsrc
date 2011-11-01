@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/07/21 13:05:59 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/01 06:02:11 sbd Exp $
 #
 
 DISTNAME=	gecko-mediaplayer-1.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://gecko-mediaplayer.googlecode.com/files/
 

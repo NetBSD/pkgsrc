@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2011/04/22 13:42:18 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/01 06:01:28 sbd Exp $
 #
 
 DISTNAME=	clutter-0.8.8
 PKGNAME=	${DISTNAME:S/clutter/clutter08/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/clutter/0.8/
 

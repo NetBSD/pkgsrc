@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2011/04/22 13:43:49 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/11/01 06:01:38 sbd Exp $
 
 DISTNAME=		koverartist-0.5
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		graphics kde
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.tar.bz2

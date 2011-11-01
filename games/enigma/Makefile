@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2011/04/22 13:43:35 obache Exp $
+# $NetBSD: Makefile,v 1.26 2011/11/01 06:01:15 sbd Exp $
 
 DISTNAME=	enigma-1.01-r1914
 PKGNAME=	${DISTNAME:S/-r/./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://download.berlios.de/enigma-game/
 

@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2011/01/31 16:55:28 drochner Exp $
+# $NetBSD: Makefile,v 1.55 2011/11/01 06:02:27 sbd Exp $
 #
+
+PKGREVISION=		1
 
 .include "../../print/poppler/Makefile.common"
 

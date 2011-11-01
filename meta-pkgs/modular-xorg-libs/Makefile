@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/01/19 18:12:20 tron Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/01 06:02:03 sbd Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-libs-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 DISTFILES=	# empty

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2011/08/26 13:14:58 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2011/11/01 06:00:46 sbd Exp $
 
 BUILDLINK_TREE+=	libpurple
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpurple
 LIBPURPLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpurple+=	libpurple>=2.7.9
-BUILDLINK_ABI_DEPENDS.libpurple+=	libpurple>=2.7.11nb2
+BUILDLINK_ABI_DEPENDS.libpurple+=	libpurple>=2.10.0
 BUILDLINK_PKGSRCDIR.libpurple?=	../../chat/libpurple
 
 pkgbase := libpurple
