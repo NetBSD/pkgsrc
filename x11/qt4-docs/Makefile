@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/09/18 09:01:30 adam Exp $
+# $NetBSD: Makefile,v 1.18 2011/11/01 06:03:07 sbd Exp $
 
 PKGNAME=	qt4-docs-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
 .include "../../x11/qt4-libs/Makefile.common"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:46 obache Exp $
+# $NetBSD: Makefile,v 1.28 2011/11/01 06:01:35 sbd Exp $
 #
 
 DISTNAME=	libmng-1.0.10
 PKGNAME=	${DISTNAME:S/libmng/gmngview/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmng/}
 

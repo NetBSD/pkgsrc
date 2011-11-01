@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2011/04/15 08:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.42 2011/11/01 06:02:27 sbd Exp $
 
 DISTNAME=	reportlab-2.5
 DISTFILES=	${DEFAULT_DISTFILES} pfbfer.zip
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	http://www.reportlab.com/ftp/
 SITES.pfbfer.zip=	http://www.reportlab.com/ftp/fonts/

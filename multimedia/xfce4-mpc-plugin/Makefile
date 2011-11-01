@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/22 13:42:22 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/01 06:02:16 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.3.2
 
 DISTNAME=	xfce4-mpc-plugin-${XFCE4_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	multimedia
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-mpc-plugin/
 EXTRACT_SUFX=	.tar.gz

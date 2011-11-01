@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2011/07/28 04:34:06 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/01 06:02:27 sbd Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	web2c-2011
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz

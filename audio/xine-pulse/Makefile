@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/23 13:06:47 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/01 06:03:14 sbd Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/pulse/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 COMMENT=	The PulseAudio output plugin for xine-lib
 
