@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2011/04/22 13:42:52 obache Exp $
+# $NetBSD: Makefile,v 1.19 2011/11/01 06:00:36 sbd Exp $
 #
 
 DISTNAME=	glurp-0.11.6
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glurp/}
 

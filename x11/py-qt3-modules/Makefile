@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/01/13 13:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2011/11/01 06:03:05 sbd Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../x11/py-qt3-base/Makefile.common"
 
 PKGNAME=		${PYPKGPREFIX}-qt3-modules-${PYQT_VERSION}
-PKGREVISION=		7
+PKGREVISION=		8
 
 COMMENT=		Various Python modules for Qt3
 

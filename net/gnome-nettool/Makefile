@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2011/04/22 13:44:22 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/01 06:02:18 sbd Exp $
 #
 
 DISTNAME=	gnome-nettool-2.26.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-nettool/2.26/}
 EXTRACT_SUFX=	.tar.bz2

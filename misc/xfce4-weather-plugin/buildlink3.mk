@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2011/04/22 13:42:17 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2011/11/01 06:02:09 sbd Exp $
 
 BUILDLINK_TREE+=	xfce4-weather-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-weather-plugin
 XFCE4_WEATHER_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-weather-plugin+=	xfce4-weather-plugin>=0.6.2
-BUILDLINK_ABI_DEPENDS.xfce4-weather-plugin?=	xfce4-weather-plugin>=0.6.2nb7
+BUILDLINK_ABI_DEPENDS.xfce4-weather-plugin?=	xfce4-weather-plugin>=0.6.2nb8
 BUILDLINK_PKGSRCDIR.xfce4-weather-plugin?=	../../misc/xfce4-weather-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"
