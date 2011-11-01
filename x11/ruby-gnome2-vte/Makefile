@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/06/12 11:43:35 obache Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/01 06:03:09 sbd Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-vte-${VERSION}
 COMMENT=		Ruby binding of vte
+PKGREVISION=		1
 CATEGORIES=		x11
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-vte-[0-9]*

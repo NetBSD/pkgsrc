@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2011/01/13 13:36:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2011/11/01 06:03:04 sbd Exp $
 
 BUILDLINK_TREE+=	openmotif
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openmotif
 OPENMOTIF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openmotif+=	openmotif>=2.3.1
-BUILDLINK_ABI_DEPENDS.openmotif?=	openmotif>=2.3.1nb5
+BUILDLINK_ABI_DEPENDS.openmotif?=	openmotif>=2.3.1nb6
 BUILDLINK_PKGSRCDIR.openmotif?=	../../x11/openmotif
 
 .include "../../mk/jpeg.buildlink3.mk"
