@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/09/05 02:07:51 dholland Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/01 11:39:59 bsiegert Exp $
 
 Config fixes.
 Destdir support.
@@ -19,7 +19,7 @@ Destdir support.
  # If your cpp is too fussy, make tools/clprepro and use this:
  # CPP=../../src/tools/clprepro -Dunix
 -CPP=/lib/cpp -P -Dunix
-+CPP=cpp -P -C -Dunix
++CPP?=cpp -P -C -Dunix
  
  # The directory where public executables will be installed
 -BINDIR=/usr/local/bin
