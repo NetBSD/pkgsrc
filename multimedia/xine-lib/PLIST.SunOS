@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.SunOS,v 1.7 2011/09/14 17:25:32 hans Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.8 2011/11/01 13:57:28 hans Exp $
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_sun.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_sun.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.so
+${PLIST.oss}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.a
+${PLIST.oss}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.so
