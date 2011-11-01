@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2011/11/01 19:10:15 marino Exp $
+
+--- session.c.orig	2006-01-08 05:58:08.000000000 +0000
++++ session.c
+@@ -40,7 +40,7 @@
+ #define	ASYNC_MODE	FNDELAY
+ #elif	O_ASYNC
+ #define	ASYNC_MODE	O_ASYNC
+-#elif
++#else
+ #error the fcntl argument to turn ON/OFF non-blocking I/O is unknown
+ #endif
+ 
