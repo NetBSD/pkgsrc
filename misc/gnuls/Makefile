@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/10/03 16:17:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2011/11/01 16:16:01 jmmv Exp $
 #
 
 .include "../../sysutils/coreutils/Makefile.common"
@@ -12,7 +12,8 @@ CONFLICTS=	coreutils-[0-9]* linuxls-[0-9]*
 
 do-build:
 	${RUN} cd ${WRKSRC}/lib && ${BUILD_MAKE_CMD} all
-	${RUN} cd ${WRKSRC}/src && ${BUILD_MAKE_CMD} version.h dircolors ls
+	${RUN} cd ${WRKSRC}/src && ${BUILD_MAKE_CMD} version.h
+	${RUN} cd ${WRKSRC}/src && ${BUILD_MAKE_CMD} dircolors ls
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
