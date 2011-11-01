@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2011/11/01 13:50:04 roy Exp $
+
+SHA1 (cups-pdf_2.6.1.tar.gz) = 6806f0004dfed5216625ab60cfe307ded23c2f6a
+RMD160 (cups-pdf_2.6.1.tar.gz) = ebb7ed5192ff91201e2ef9d87d8f24c1c7a393cc
+Size (cups-pdf_2.6.1.tar.gz) = 33315 bytes
