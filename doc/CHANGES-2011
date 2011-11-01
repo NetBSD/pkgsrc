@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2731 2011/11/01 00:08:04 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2732 2011/11/01 05:57:59 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added biology/primer3 version 2.2.3 [brook 2011-10-31]
 	Moved www/haproxy to net/haproxy [morr 2011-10-31]
 	Updated pkgtools/bootstrap-mk-files to 20090807nb3 [sbd 2011-11-01]
+	Updated graphics/freetype2 to 2.4.7nb2 [sbd 2011-11-01]
