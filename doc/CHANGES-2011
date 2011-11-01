@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2735 2011/11/01 10:18:38 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2736 2011/11/01 10:55:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4310,3 +4310,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/libarchive to 2.8.4nb1 [sbd 2011-11-01]
 	Updated textproc/rasqal to 0.9.21nb3 [sbd 2011-11-01]
 	Updated net/py-adns to 1.2.1nb1 [obache 2011-11-01]
+	Updated net/py-spreadmodule to 1.4nb3 [obache 2011-11-01]
