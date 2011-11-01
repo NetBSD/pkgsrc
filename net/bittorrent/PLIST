@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/01/30 13:31:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/11/01 11:21:59 obache Exp $
 bin/bittorrent-console
 bin/bittorrent-curses
 bin/bittorrent-tracker
@@ -7,6 +7,7 @@ bin/launchmany-console
 bin/launchmany-curses
 bin/maketorrent-console
 bin/torrentinfo-console
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/BitTorrent/BeautifulSupe.py
 ${PYSITELIB}/BitTorrent/BeautifulSupe.pyc
 ${PYSITELIB}/BitTorrent/BeautifulSupe.pyo
