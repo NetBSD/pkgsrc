@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/09/18 09:01:31 adam Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/01 06:03:07 sbd Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-mysql-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	QT mysql driver
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include

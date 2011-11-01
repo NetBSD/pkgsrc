@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/09/09 09:41:46 abs Exp $
+# $NetBSD: Makefile,v 1.19 2011/11/01 06:03:12 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	0.4.2
 
 DISTNAME=	Terminal-${XFCE4_VERSION}
 PKGNAME=	xfce4-terminal-${XFCE4_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 COMMENT=	Xfce terminal emulator
 

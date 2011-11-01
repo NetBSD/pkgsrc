@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/04/22 13:42:18 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/11/01 06:02:43 sbd Exp $
 
 BUILDLINK_TREE+=	openbox
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openbox
 OPENBOX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openbox+=	openbox>=3.1
-BUILDLINK_ABI_DEPENDS.openbox+=	openbox>=3.4.11.2nb4
+BUILDLINK_ABI_DEPENDS.openbox+=	openbox>=3.5.0nb1
 BUILDLINK_PKGSRCDIR.openbox?=	../../wm/openbox
 
 .include "../../converters/libiconv/buildlink3.mk"

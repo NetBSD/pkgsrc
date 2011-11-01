@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/04/22 13:44:17 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/01 06:02:13 sbd Exp $
 #
 
 DISTNAME=	mlt-0.5.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.sourceforge.net/project/mlt/mlt/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2011/10/28 14:06:11 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/01 06:00:42 sbd Exp $
 
 DISTNAME=	pymol-v1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
 EGG_NAME=	pymol-1.4.0
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tar.bz2
