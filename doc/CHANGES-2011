@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2740 2011/11/01 15:07:17 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2741 2011/11/01 15:10:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4315,3 +4315,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-METAR to 0.18 [obache 2011-11-01]
 	Added print/cups-pdf version 2.6.1 [roy 2011-11-01]
 	Updated www/contao210-translations to 20111022 [taca 2011-11-01]
+	Updated security/sudo to 1.7.8p1 [taca 2011-11-01]
