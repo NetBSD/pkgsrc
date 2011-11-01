@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2011/09/14 15:45:30 hans Exp $
+# $NetBSD: Makefile,v 1.37 2011/11/01 06:00:35 sbd Exp $
 #
 
 BMP_ENABLE_ENCODERS=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
-PKGREVISION=		12
+PKGREVISION=		13
 
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2011/06/14 10:48:30 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/01 06:03:05 sbd Exp $
 #
 
 DISTNAME=	kiwi-1.9.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/kiwi/1.9/}
 
