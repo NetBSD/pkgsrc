@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2007/10/18 09:32:43 obache Exp $
+$NetBSD: distinfo,v 1.11 2011/11/01 19:10:15 marino Exp $
 
 SHA1 (trafshow-5.2.3.tgz) = 1c68f603f12357e932c83de850366c9b46e53d89
 RMD160 (trafshow-5.2.3.tgz) = f1ae068f898160f16ae9b3cb5f9d73ae3aece6cb
 Size (trafshow-5.2.3.tgz) = 142615 bytes
+SHA1 (patch-ai) = 6cfa14ad753bfd2b85e0e8c8cd8d8c25a697d6dd
