@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/10/27 11:48:36 abs Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/01 19:18:19 abs Exp $
 
-PKGNAME=		adobe-flash-plugin-${FLASH_VERSION:S/r/./}
-PKGREVISION=		3
+DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
+PKGNAME=		adobe-${DISTNAME:C/-release.*//}
+PKGREVISION=		4
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
 
@@ -11,14 +12,14 @@ COMMENT=		Adobe Flash Player Browser plugin
 LICENSE=		flash-license
 
 RESTRICTED=		Redistribution not permitted
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NOT_FOR_PLATFORM=	NetBSD-*-[0-4]* NetBSD-*-5.[0-9].*
+NOT_FOR_PLATFORM=	NetBSD-[0-4]*-* NetBSD-5.[0-9].*-*
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
@@ -31,7 +32,6 @@ EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl
 EMUL_REQD=		suse>=11.3
 
 FLASH_VERSION=		10.3.183.7
-DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
 
 CONFLICTS=		ns-flash-[0-9]*
 
