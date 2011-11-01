@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2011/09/18 09:01:30 adam Exp $
+$NetBSD: distinfo,v 1.65 2011/11/01 15:52:23 hans Exp $
 
 SHA1 (qt4/qt-everywhere-opensource-src-4.7.4.tar.gz) = af9016aa924a577f7b06ffd28c9773b56d74c939
 RMD160 (qt4/qt-everywhere-opensource-src-4.7.4.tar.gz) = 3e47b09663a89973b1c8628506c995dfc2a5387c
@@ -46,7 +46,7 @@ SHA1 (patch-cg) = c5948cea47fb4134c626415b0b2c36660beea64a
 SHA1 (patch-ch) = 8efaa05e564022710ff978b59581c017bbece979
 SHA1 (patch-ci) = a2ac5703503afcdb2a87f80a8ba373c8ff7a2697
 SHA1 (patch-cj) = 49fd8ae10c5fc026101355596b91fcf3e1701b9d
-SHA1 (patch-src_3rdparty_webkit_JavaScriptCore_wtf_MathExtras.h) = a70438f480eb731b43784e97212469c1f1835478
+SHA1 (patch-src_3rdparty_webkit_JavaScriptCore_wtf_MathExtras.h) = 6485889496bd6e23466a4ae3c938a9e1592e1989
 SHA1 (patch-src_3rdparty_webkit_WebCore_WebCore.pro) = 41fbce9872c2d6b4977772d88391b1194ec37b2e
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 87c48f97ba2026f4bb553aa0b855bc1b1f653abf
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = e05f420bd532a8964d293e4bad848636dc716d0f
