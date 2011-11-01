@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2011/09/14 15:44:23 hans Exp $
+# $NetBSD: Makefile,v 1.76 2011/11/01 16:18:54 hans Exp $
 
 DISTNAME=	arts-1.5.10
 PKGREVISION=	4
@@ -8,7 +8,14 @@ COMMENT=	Analog Real-Time Synthesizer
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
+.if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
+    !empty(CC_VERSION:Mgcc-4.[6-9].*)
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -std=c99
+.else
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=500
+.endif
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
