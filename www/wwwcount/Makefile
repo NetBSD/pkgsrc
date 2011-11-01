@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/06/27 19:16:03 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/01 13:45:06 hans Exp $
 
 DISTNAME=	wwwcount2.5
 PKGNAME=	wwwcount-2.5
@@ -30,10 +30,10 @@ SUBST_FILES.destdir=	Config.tmpl
 SUBST_SED.destdir=	-e s,=\"${PREFIX},=\"${DESTDIR}${PREFIX},
 
 pre-configure:
-	cd ${WRKSRC}; yes "" | PREFIX=${PREFIX} PKG_SYSCONFDIR=${PKG_SYSCONFDIR} VARBASE=${VARBASE} ./Count-config
+	cd ${WRKSRC}; PREFIX=${PREFIX} PKG_SYSCONFDIR=${PKG_SYSCONFDIR} VARBASE=${VARBASE} ./Count-config < /dev/null
 
 do-install:
-	cd ${WRKSRC}; yes "" | ./Count-install
+	cd ${WRKSRC}; ./Count-install < /dev/null
 	${INSTALL_DATA} ${FILESDIR}/wwwcount.conf ${DESTDIR}${PREFIX}/share/examples
 	${INSTALL_PROGRAM} ${WRKSRC}/utils/extdgts/extdgts ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/utils/mkstrip/mkstrip ${DESTDIR}${PREFIX}/bin
