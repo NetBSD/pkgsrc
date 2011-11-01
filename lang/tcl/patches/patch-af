@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.23 2007/10/13 11:41:45 adam Exp $
+$NetBSD: patch-af,v 1.24 2011/11/01 20:08:12 bsiegert Exp $
 
---- unix/tcl.m4.orig	2007-09-21 19:07:02.000000000 +0200
+--- unix/tcl.m4.orig	Wed Feb  6 15:38:03 2008
 +++ unix/tcl.m4
 @@ -1033,6 +1033,7 @@ AC_DEFUN([SC_CONFIG_CFLAGS], [
      # Step 3: set configuration options based on system name and version.
@@ -72,7 +72,7 @@ $NetBSD: patch-af,v 1.23 2007/10/13 11:41:45 adam Exp $
  	    ;;
  	GNU*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -1447,23 +1475,26 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1447,17 +1475,18 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[[1-2]].*)
@@ -93,6 +93,7 @@ $NetBSD: patch-af,v 1.23 2007/10/13 11:41:45 adam Exp $
  		AC_CACHE_CHECK([for ELF], tcl_cv_ld_elf, [
  		    AC_EGREP_CPP(yes, [
  #ifdef __ELF__
+@@ -1464,6 +1493,8 @@ dnl AC_CHECK_TOOL(AR, ar)
  	yes
  #endif
  		    ], tcl_cv_ld_elf=yes, tcl_cv_ld_elf=no)])
@@ -101,6 +102,15 @@ $NetBSD: patch-af,v 1.23 2007/10/13 11:41:45 adam Exp $
  		if test $tcl_cv_ld_elf = yes; then
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
  		else
+@@ -1486,7 +1517,7 @@ dnl AC_CHECK_TOOL(AR, ar)
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	OpenBSD-*)
++	OpenBSD-*|MirBSD-*)
+ 	    case `arch -s` in
+ 	    m88k|vax)
+ 		SHLIB_CFLAGS=""
 @@ -1534,7 +1565,7 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
@@ -120,6 +130,15 @@ $NetBSD: patch-af,v 1.23 2007/10/13 11:41:45 adam Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
+@@ -2091,7 +2125,7 @@ dnl # preprocessing tests use only CPPFL
+ 		    ;;
+ 		IRIX*)
+ 		    ;;
+-		NetBSD-*|FreeBSD-*|OpenBSD-*)
++		NetBSD-*|FreeBSD-*|OpenBSD-*|MirBSD-*)
+ 		    ;;
+ 		Darwin-*)
+ 		    ;;
 @@ -2117,8 +2151,8 @@ dnl # preprocessing tests use only CPPFL
  
      if test "${SHARED_BUILD}" = "1" && test "${SHLIB_SUFFIX}" != "" ; then
@@ -130,17 +149,4 @@ $NetBSD: patch-af,v 1.23 2007/10/13 11:41:45 adam Exp $
 +        INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE:C/\.so.*/.la/) $(LIB_INSTALL_DIR)/$(LIB_FILE)'
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
- 
-@@ -2148,10 +2182,10 @@ dnl        esac
- 
-     # Stub lib does not depend on shared/static configuration
-     if test "$RANLIB" = "" ; then
--        MAKE_STUB_LIB='${STLIB_LD} [$]@ ${STUB_LIB_OBJS}'
-+        MAKE_STUB_LIB='${STLIB_LD} -o [$]@ ${STUB_LIB_OBJS}'
-         INSTALL_STUB_LIB='$(INSTALL_LIBRARY) $(STUB_LIB_FILE) $(LIB_INSTALL_DIR)/$(STUB_LIB_FILE)'
-     else
--        MAKE_STUB_LIB='${STLIB_LD} [$]@ ${STUB_LIB_OBJS} ; ${RANLIB} [$]@'
-+        MAKE_STUB_LIB='${STLIB_LD} -o [$]@ ${STUB_LIB_OBJS} ; ${RANLIB} [$]@'
-         INSTALL_STUB_LIB='$(INSTALL_LIBRARY) $(STUB_LIB_FILE) $(LIB_INSTALL_DIR)/$(STUB_LIB_FILE) ; (cd $(LIB_INSTALL_DIR) ; $(RANLIB) $(STUB_LIB_FILE))'
-     fi
  
