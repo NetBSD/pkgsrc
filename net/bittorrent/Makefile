@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.41 2011/01/01 12:34:14 obache Exp $
+# $NetBSD: Makefile,v 1.42 2011/11/01 11:21:59 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/BitT/bitt/}
-PKGREVISION=	4
-
-PYDISTUTILSPKG=	yes
+PKGREVISION=	5
 
 CONFLICTS+=	bittornado-[0-9]*
 CONFLICTS+=	BitTornado-[0-9]*
+
+DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
 
 USE_TOOLS+=	msgfmt xgettext msgmerge
 
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 
 .if ${PYVERSSUFFIX} != "2.4"
 SUBST_CLASSES+=         sha
@@ -37,5 +37,4 @@ SUBST_FILES.sha+=	torrentinfo-console.py
 SUBST_SED.sha=		-e "s/^from sha import .*/from hashlib import sha1 as sha/"
 .endif
 
-.include "../../devel/py-cursespanel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
