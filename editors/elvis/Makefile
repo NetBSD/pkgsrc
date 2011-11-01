@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/03 00:52:07 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/01 06:11:53 sbd Exp $
 
 # This section contains variables that might be overridden.
 PKGNAME?=	${PKGNAME_BASE}
@@ -7,7 +7,7 @@ COMMENT?=	vi clone with regex-search, hex-edit, HTML/LaTeX preview
 # Normal package Makefile contents follow.
 DISTNAME=	elvis-2.2_0
 PKGNAME_BASE=	${DISTNAME:S/_/./}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
 
