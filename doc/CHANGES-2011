@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2737 2011/11/01 11:22:15 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2738 2011/11/01 12:09:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-adns to 1.2.1nb1 [obache 2011-11-01]
 	Updated net/py-spreadmodule to 1.4nb3 [obache 2011-11-01]
 	Updated net/bittorrent to 4.4.0nb5 [obache 2011-11-01]
+	Updated net/py-METAR to 0.18 [obache 2011-11-01]
