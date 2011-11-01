@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.617 2011/10/28 21:16:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.618 2011/11/01 16:45:11 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -179,6 +179,7 @@ SUBDIR+=	goocanvas
 SUBDIR+=	goocanvasmm
 SUBDIR+=	gource
 SUBDIR+=	gphoto2
+SUBDIR+=	gpicview
 SUBDIR+=	gqview
 SUBDIR+=	gqview-devel
 SUBDIR+=	grap
