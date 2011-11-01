@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/02/19 19:22:33 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2011/11/01 14:47:09 bsiegert Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -40,12 +40,18 @@ PKG_SUPPORTED_OPTIONS=	db inet6
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
+.if ${OPSYS} != "MirBSD"
+LIBS+=		-lcrypt
+.endif
+
 .if !empty(PKG_OPTIONS:Mdb)
 BDB_ACCEPTED=	db2
 CFLAGS+=	-DUSE_DB
-MAKE_ENV+=	LIBS=${BDB_LIBS:Q}
+LIBS+=		${BDB_LIBS}
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
+
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 .if !empty(PKG_OPTIONS:Minet6)
 MAKE_ENV+=	CFLAGS_INET6=-DINET6
