@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2734 2011/11/01 06:56:47 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2735 2011/11/01 10:18:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/freetype2 to 2.4.7nb2 [sbd 2011-11-01]
 	Updated archivers/libarchive to 2.8.4nb1 [sbd 2011-11-01]
 	Updated textproc/rasqal to 0.9.21nb3 [sbd 2011-11-01]
+	Updated net/py-adns to 1.2.1nb1 [obache 2011-11-01]
