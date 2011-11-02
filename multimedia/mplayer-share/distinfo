@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.73 2011/10/24 13:06:05 jmcneill Exp $
+$NetBSD: distinfo,v 1.74 2011/11/02 16:35:14 drochner Exp $
 
 SHA1 (mplayer/mplayer-20100913.tar.bz2) = 6fd3acb29fa8455636bcd86f9f333da4763daa6d
 RMD160 (mplayer/mplayer-20100913.tar.bz2) = 79085d4ebdb824fc34f7bc128070ef11e874897d
@@ -12,6 +12,7 @@ SHA1 (patch-ag) = bef25568c913dcb8535afa51976ce7c94a6af5a2
 SHA1 (patch-ah) = dcfc26ec1422581a03ab200cb95926f6fd896d5b
 SHA1 (patch-an) = 3e72fb86abe7ab572f12a4fef002edb623ab6fae
 SHA1 (patch-ar) = df7e7cdc6fb8187bbcf0b285afc14d275a51e17a
+SHA1 (patch-as) = e353a1437101f661e012ce37004d8920913725cd
 SHA1 (patch-libao2_ao_sun.c) = 14eedc06f70dd949da1fb84078877e7cf259eff1
 SHA1 (patch-stream_dvb_tune.c) = b663830ff64ab31488684b1a324da50ab52d68cc
 SHA1 (patch-stream_dvbin.h) = 56f6e71fcdf6bf3afccbdbc8682834c806114677
