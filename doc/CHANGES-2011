@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2747 2011/11/02 12:51:39 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2748 2011/11/02 14:45:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4322,3 +4322,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/wireshark to 1.6.3 [tron 2011-11-02]
 	Updated net/py-IP to 0.75 [obache 2011-11-02]
 	Updated net/py-zsi to 2.0nb1 [obache 2011-11-02]
+	Updated net/p5-SOAP-Lite to 0.714 [adam 2011-11-02]
