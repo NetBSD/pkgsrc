@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2743 2011/11/01 21:10:16 scottr Exp $
+$NetBSD: CHANGES-2011,v 1.2744 2011/11/02 01:13:18 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4318,3 +4318,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/sudo to 1.7.8p1 [taca 2011-11-01]
 	Added graphics/gpicview version 0.2.2 [ryoon 2011-11-01]
 	Updated www/viewvc to 1.1.11 [scottr 2011-11-01]
+	Updated net/ucarp to 1.5.2 [hubertf 2011-11-02]
