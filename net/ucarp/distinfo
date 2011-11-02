@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/01/13 18:42:48 wiz Exp $
+$NetBSD: distinfo,v 1.4 2011/11/02 01:13:04 hubertf Exp $
 
-SHA1 (ucarp-1.1.tar.bz2) = 7f9409e3e42a77b9931ae738a5821af8f9b92ca4
-RMD160 (ucarp-1.1.tar.bz2) = a730330cf0d6c25c6f4f60459b61fcf96b904345
-Size (ucarp-1.1.tar.bz2) = 153690 bytes
+SHA1 (ucarp-1.5.2.tar.bz2) = 0326fa7460eacd23b59216878524487265051cba
+RMD160 (ucarp-1.5.2.tar.bz2) = 83f54644abddf4b27f1b829c2a3a0fc98861027b
+Size (ucarp-1.5.2.tar.bz2) = 315414 bytes
+SHA1 (patch-aa) = ef0d7b65f6a964607a695c7a33891d45fd116569
