@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2011/08/27 15:47:43 schnoebe Exp $
+$NetBSD: patch-ai,v 1.4.2.1 2011/11/02 22:55:24 tron Exp $
 
 Quite messages from perl 5.14.1, this is very old code.
 
@@ -24,15 +24,17 @@ Quite messages from perl 5.14.1, this is very old code.
  
  # Despite not having a place to send the remains of the body,
  # it would be nice to send a message to root or postmaster, at least...
-@@ -92,6 +92,7 @@ require "$cf";
+@@ -92,8 +92,8 @@ require "$cf";
  
  chdir($homedir) || die("Can't chdir(\"$homedir\"): $!");
  
 +unshift(@INC, $bindir);
  unshift(@INC, $homedir);
- require "ctime.pl";  # For logging purposes
+-require "ctime.pl";  # For logging purposes
  require "majordomo.pl";
-@@ -316,7 +317,7 @@ $is_admin_header .= "\$taboo = \"\";\n};
+ require "majordomo_version.pl";
+ require "config_parse.pl";
+@@ -316,7 +316,7 @@ $is_admin_header .= "\$taboo = \"\";\n};
  if (! defined($admin_body)) {
      &bitch("resend:  \$admin_body not defined in $cf !!\n" .
  	   "Majordomo will only catch \"subscribe\" and \"unsubscribe\" in\n" .
@@ -41,7 +43,7 @@ Quite messages from perl 5.14.1, this is very old code.
      @admin_body = ('/^subject:\s*subscribe\b/i' ,
  		      '/^subject:\s*unsubscribe\b/i');
  } else {
-@@ -747,12 +748,20 @@ sub parse_header {
+@@ -747,12 +747,20 @@ sub parse_header {
  
      # add new header fields
      print OUT "Sender: $sender\n";
