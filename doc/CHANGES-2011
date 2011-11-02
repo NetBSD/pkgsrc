@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2749 2011/11/02 20:22:15 shattered Exp $
+$NetBSD: CHANGES-2011,v 1.2750 2011/11/02 22:07:59 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4324,3 +4324,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-zsi to 2.0nb1 [obache 2011-11-02]
 	Updated net/p5-SOAP-Lite to 0.714 [adam 2011-11-02]
 	Updated graphics/rayshade to 4.0.6 [shattered 2011-11-02]
+	Updated sysutils/fabric to 1.2.3 [gls 2011-11-02]
