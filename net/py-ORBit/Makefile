@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2011/10/12 17:49:33 hans Exp $
+# $NetBSD: Makefile,v 1.38 2011/11/02 12:32:47 obache Exp $
 #
 
 DISTNAME=	pyorbit-2.24.0
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for ORBit2
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
