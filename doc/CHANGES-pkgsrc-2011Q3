@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.28 2011/10/30 08:56:20 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.29 2011/11/02 09:24:04 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -119,3 +119,5 @@ Pullup ticket #3580 - requested by dholland
 www/swiftsurf: build fix
 Pullup ticket #3581 - requested by dholland
 x11/labltk: build fix
+Pullup ticket #3582 - requested by tron
+net/wireshark security update
