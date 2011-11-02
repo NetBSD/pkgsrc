@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1 2011/11/02 21:13:29 marino Exp $
+
+--- ../FreeBSD/sql/schema.mysql.pre	2011-10-16 00:52:55.000000000 +0000
++++ sql/schema.mysql.pre
+@@ -104,7 +104,7 @@ CREATE TABLE port_dependencies (
+ 	port_dependency_id SERIAL PRIMARY KEY,
+ 	build_port_id INTEGER REFERENCES build_port(build_port_id) ON UPDATE CASCADE ON DELETE CASCADE,
+ 	port_id INTEGER REFERENCES ports(port_id) ON UPDATE CASCADE ON DELETE CASCADE,
+-	dependency_type ENUM('UNKNOWN', 'EXTRACT_DEPENDS', 'PATCH_DEPENDS', 'FETCH_DEPENDS', 'BUILD_DEPENDS', 'LIB_DEPENDS', 'DEPENDS', 'RUN_DEPENDS') DEFAULT 'UNKNOWN'
++	dependency_type ENUM('UNKNOWN', 'BOOTSTRAP_DEPENDS', 'EXTRACT_DEPENDS', 'PATCH_DEPENDS', 'FETCH_DEPENDS', 'BUILD_DEPENDS', 'LIB_DEPENDS', 'DEPENDS', 'RUN_DEPENDS') DEFAULT 'UNKNOWN'
+ );
+ CREATE INDEX port_dependencies_build_port_id_idx ON port_dependencies(build_port_id);
+ CREATE INDEX port_dependencies_port_id_idx ON port_dependencies(port_id);
