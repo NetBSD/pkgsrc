@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2011/07/04 14:42:56 tez Exp $
+# $NetBSD: Makefile,v 1.158 2011/11/02 22:51:07 jnemeth Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -48,7 +48,7 @@ CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--install_prefix=${DESTDIR}
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	shared threads no-fips
+CONFIGURE_ARGS+=	shared no-fips
 
 .if ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "sparc"
