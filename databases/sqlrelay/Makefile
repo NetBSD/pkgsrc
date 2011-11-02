@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2011/06/10 21:57:06 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/11/02 13:59:29 fhajny Exp $
 
-DISTNAME=		sqlrelay-0.37
-PKGREVISION=		4
+DISTNAME=		sqlrelay-0.43
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sqlrelay.sourceforge.net/
 COMMENT=		Enables pooling and sharing of database connections
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,19 +17,20 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--disable-oracle
-CONFIGURE_ARGS+=	--disable-sybase
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--disable-db2
-CONFIGURE_ARGS+=	--disable-interbase
-CONFIGURE_ARGS+=	--disable-mdbtools
-CONFIGURE_ARGS+=	--disable-msql
-CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	--disable-zope
-CONFIGURE_ARGS+=	--disable-ruby
+CONFIGURE_ARGS+=	--disable-erlang
+CONFIGURE_ARGS+=	--disable-firebird
 CONFIGURE_ARGS+=	--disable-java
+CONFIGURE_ARGS+=	--disable-mdbtools
+CONFIGURE_ARGS+=	--disable-oracle
 CONFIGURE_ARGS+=	--disable-php
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-ruby
+CONFIGURE_ARGS+=	--disable-sybase
 CONFIGURE_ARGS+=	--disable-tcl
-CONFIGURE_ARGS+=	--disable-gtk
+CONFIGURE_ARGS+=	--disable-zope
+CONFIGURE_ARGS+=	--with-rudiments-prefix=${BUILDLINK_PREFIX.rudiments}
 MAKE_ENV+=		EXAMPLESDIR=${EGDIR:Q}
 
 PKG_SYSCONFSUBDIR=	sqlrelay
@@ -39,13 +40,25 @@ CONF_FILES+=		${EGDIR}/sqlrelay.conf.example \
 			${PKG_SYSCONFDIR}/sqlrelay.conf
 CONF_FILES+=		${EGDIR}/sqlrelay.dtd \
 			${PKG_SYSCONFDIR}/sqlrelay.dtd
+CONF_FILES+=		${EGDIR}/sqlrelay \
+			${PKG_SYSCONFDIR}/sqlrelay
 
 INSTALLATION_DIRS=	${PREFIX}/share/examples/rc.d
+
+SQLR_DATA?=		${VARBASE}/sqlrelay
+OWN_DIRS+=		${SQLR_DATA}
+OWN_DIRS+=		${SQLR_DATA}/tmp
+OWN_DIRS+=		${SQLR_DATA}/tmp/ipc
+OWN_DIRS+=		${SQLR_DATA}/tmp/pids
+OWN_DIRS+=		${SQLR_DATA}/tmp/sockets
 
 RCD_SCRIPTS+=		sqlrelay
 RCD_SCRIPT_SRC.sqlrelay=	${WRKSRC}/init/netbsd/rc.d/sqlrelay
 
 .include "options.mk"
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/init/netbsd/sqlrelay ${DESTDIR}${EGDIR}/sqlrelay
 
 .include "../../devel/rudiments/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
