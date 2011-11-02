@@ -1,0 +1,237 @@
+$NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
+
+--- ../FreeBSD/lib/Tinderbox/MakeCache.pm	2011-10-16 00:52:55.000000000 +0000
++++ lib/Tinderbox/MakeCache.pm
+@@ -31,14 +31,14 @@ use strict;
+ 
+ # a list of variables that we pull from the port Makefile
+ our @makeTargets = (
+-        'PKGNAME',         'IGNORE',
+-        'NO_PACKAGE',      'FORBIDDEN',
++        'PKGNAME',         '_CBBH',
+         'EXTRACT_DEPENDS', 'PATCH_DEPENDS',
+         'FETCH_DEPENDS',   'BUILD_DEPENDS',
+         'LIB_DEPENDS',     'RUN_DEPENDS',
+         'TEST_DEPENDS',    'MAINTAINER',
+-        'COMMENT',         'PORTNAME',
+-        'DISTFILES',
++        'COMMENT',         'PKGBASE',
++        'DISTFILES',       'BOOTSTRAP_DEPENDS',
++        'DEPENDS'
+ );
+ 
+ # Create a new cache object
+@@ -48,6 +48,7 @@ sub new {
+                 CACHE   => undef,
+                 SEEN    => undef,
+                 BASEDIR => shift,
++                OPTFILE => shift,
+         }, $name;
+ 
+         $self;
+@@ -60,13 +61,18 @@ sub _execMake {
+         my $self = shift;
+         my $port = shift;
+         my @ret;
+-        my $tmp;
++        my $target;
++        my $tmp = '';
+ 
+         return if ($self->{SEEN}->{$port} eq 1);
+ 
+-        $tmp = '-V ' . join(' -V ', @makeTargets);
++        foreach $target (@makeTargets) {
++                $tmp .= "-V '\${" . $target . "}' ";		
++        }
+         my $dir = $self->{BASEDIR} . '/' . $port;
+-        @ret = split("\n", `cd $dir && make $tmp`);
++        my $customOptions = $self->_package_options ($dir);
++        my $nativeOptions = $self->_native_preferences ();
++        @ret = split("\n", `cd $dir && bmake $customOptions $nativeOptions $tmp`);
+ 
+         foreach $tmp (@makeTargets) {
+                 $self->{CACHE}->{$port}{$tmp} = shift @ret;
+@@ -74,6 +80,66 @@ sub _execMake {
+         $self->{SEEN}->{$port} = 1;
+ }
+ 
++# Get option variable name and requested options
++sub _package_options {
++        my $self = shift;
++        my $dir  = shift;
++        unless (-e $self->{OPTFILE}) {
++                return "";
++        }
++        my @data = split("\n", 
++           `cd $dir && bmake -V '\${PKGNAME}' -V '\${PKG_OPTIONS_VAR}'`);
++        my $pkname = $data[0];
++        my $optvar = $data[1];
++        $pkname =~ s/nb[0-9]+$//;
++        my $instruction = `grep ^$pkname: $self->{OPTFILE}`;
++        unless ($instruction) {
++                return "";
++        }
++        my @customSet = split(/:/, $instruction);
++        unless (scalar (@customSet) >= 3) {
++                return "";
++        }
++        return $optvar . '="' . $customSet[2] . '"';
++}
++
++# Recreate a trim function
++sub _trim {
++        my $self = shift;
++        my $string = shift;
++        $string =~ s/^\s+//;
++        $string =~ s/\s+$//;
++        return $string;
++}
++
++# Figure out if we want to avoid built-in dependencies or not
++sub _native_preferences {
++        my $self = shift;
++        my $moremk = $self->{OPTFILE};
++        $moremk =~ s!/?[^/]*/*$!!;
++        $moremk .= '/more_mk.conf';
++        unless (-e $moremk) {
++                return "";
++        }
++        my @worker;
++        my $result = "";
++        my $ppkgsrc=`grep PREFER_PKGSRC $moremk`;
++        my $pnative=`grep PREFER_NATIVE $moremk`;
++        if ($ppkgsrc) {
++            @worker = split(/=/, $ppkgsrc);
++            if (scalar (@worker) >= 2) {
++                    $result = 'PREFER_PKGSRC="' . $self->_trim($worker[1]) . '" ';
++            }
++        }
++        if ($pnative) {
++            @worker = split(/=/, $pnative);
++            if (scalar (@worker) >= 2) {
++                $result .= 'PREFER_NATIVE="' . $self->_trim($worker[1]) . '"';
++            }
++        }
++        return $result;
++}
++
+ # Internal function for returning a port variable
+ sub _getVariable {
+         my $self = shift;
+@@ -90,16 +156,28 @@ sub _getList {
+         my $port = shift;
+         my $item = shift;
+         my @deps;
++        my $found;
+ 
+         $self->_execMake($port);
+         foreach my $dep (split(/\s+/, $self->{CACHE}->{$port}{$item})) {
++                $dep =~ s/^\s+//;
++                $dep =~ s/\s+$//;
+                 my ($d, $ddir) = split(/:/, $dep);
+-                if (!defined($ddir) || $item eq 'DEPENDS') {
++                if (!defined($ddir)) {
+                         $ddir = $d;
+                 }
+                 $ddir =~ s|^$self->{BASEDIR}/||;
++                $ddir =~ s|^\.\.\/\.\.\/||;
+                 if ($ddir) {
+-                        push @deps, $ddir;
++                        $found = 0;
++                        foreach my $storedep (@deps) {
++                                if ($storedep eq $ddir) {
++                                        $found = 1;
++                                }
++                        }
++                        if (!$found) {
++                                push @deps, $ddir;
++                        }
+                 }
+         }
+         return @deps;
+@@ -109,7 +187,7 @@ sub _getList {
+ sub Name {
+         my $self = shift;
+         my $port = shift;
+-        return $self->_getVariable($port, 'PORTNAME');
++        return $self->_getVariable($port, 'PKGBASE');
+ }
+ 
+ # Package name
+@@ -133,6 +211,20 @@ sub Maintainer {
+         return $self->_getVariable($port, 'MAINTAINER');
+ }
+ 
++# Bootstrap dependencies
++sub BootstrapDepends {
++        my $self = shift;
++        my $port = shift;
++        return $self->_getList($port, 'BOOTSTRAP_DEPENDS');
++}
++
++# Buildlink3 dependencies
++sub Buildlink3Depends {
++        my $self = shift;
++        my $port = shift;
++        return $self->_getList($port, 'DEPENDS');
++}
++
+ # Extract dependencies
+ sub ExtractDepends {
+         my $self = shift;
+@@ -189,8 +281,8 @@ sub IgnoreList {
+ 
+         my $n = 0;
+         $self->_execMake($port);
+-        foreach my $var ('NO_PACKAGE', 'IGNORE', 'FORBIDDEN') {
+-                $n++ if ($self->{CACHE}->{$port}{$var} ne "");
++        foreach my $var ('_CBBH') {
++                $n++ if ($self->{CACHE}->{$port}{$var} ne "yes");
+         }
+         return $n eq 0 ? "" : $self->PkgName($port);
+ }
+@@ -206,6 +298,28 @@ sub FetchDependsList {
+         return grep { !$uniq{$_}++ } @deps;
+ }
+ 
++sub BootstrapDependsList {
++        my $self = shift;
++        my $port = shift;
++
++        my @deps;
++        push(@deps, $self->BootstrapDepends($port));
++
++        my %uniq;
++        return grep { !$uniq{$_}++ } @deps;
++}
++
++sub Buildlink3DependsList {
++        my $self = shift;
++        my $port = shift;
++
++        my @deps;
++        push(@deps, $self->Buildlink3Depends($port));
++
++        my %uniq;
++        return grep { !$uniq{$_}++ } @deps;
++}
++
+ sub ExtractDependsList {
+         my $self = shift;
+         my $port = shift;
+@@ -250,6 +364,7 @@ sub BuildDependsList {
+         push(@deps, $self->FetchDepends($port));
+         push(@deps, $self->BuildDepends($port));
+         push(@deps, $self->LibDepends($port));
++        push(@deps, $self->Buildlink3Depends($port));
+ 
+         my %uniq;
+         return grep { !$uniq{$_}++ } @deps;
+@@ -263,6 +378,7 @@ sub RunDependsList {
+         my @deps;
+         push(@deps, $self->LibDepends($port));
+         push(@deps, $self->RunDepends($port));
++        push(@deps, $self->Buildlink3Depends($port));
+ 
+         my %uniq;
+         return grep { !$uniq{$_}++ } @deps;

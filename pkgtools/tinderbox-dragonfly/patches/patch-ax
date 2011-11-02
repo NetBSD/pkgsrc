@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1 2011/11/02 21:13:29 marino Exp $
+
+--- ../FreeBSD/sql/schema.pgsql.pre	2011-10-16 00:52:55.000000000 +0000
++++ sql/schema.pgsql.pre
+@@ -101,7 +101,7 @@ CREATE TABLE port_dependencies (
+ 	port_dependency_id SERIAL PRIMARY KEY,
+ 	build_port_id INTEGER REFERENCES build_ports(build_port_id) ON UPDATE CASCADE ON DELETE CASCADE,
+ 	port_id INTEGER REFERENCES ports(port_id) ON UPDATE CASCADE ON DELETE CASCADE,
+-	dependency_type VARCHAR(16) CHECK (dependency_type IN ('UNKNOWN', 'EXTRACT_DEPENDS', 'PATCH_DEPENDS', 'FETCH_DEPENDS', 'BUILD_DEPENDS', 'LIB_DEPENDS', 'DEPENDS', 'RUN_DEPENDS')) DEFAULT 'UNKNOWN'
++	dependency_type VARCHAR(18) CHECK (dependency_type IN ('UNKNOWN', 'BOOTSTRAP_DEPENDS', 'EXTRACT_DEPENDS', 'PATCH_DEPENDS', 'FETCH_DEPENDS', 'BUILD_DEPENDS', 'LIB_DEPENDS', 'DEPENDS', 'RUN_DEPENDS')) DEFAULT 'UNKNOWN'
+ );
+ CREATE INDEX port_dependencies_build_port_id_idx ON port_dependencies(build_port_id);
+ CREATE INDEX port_dependencies_port_id_idx ON port_dependencies(port_id);

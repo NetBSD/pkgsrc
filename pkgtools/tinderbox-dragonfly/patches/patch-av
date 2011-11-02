@@ -1,0 +1,88 @@
+$NetBSD: patch-av,v 1.1 2011/11/02 21:13:28 marino Exp $
+
+--- ../FreeBSD/lib/makemake	2011-10-16 00:52:55.000000000 +0000
++++ lib/makemake
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/pkg/bin/perl
+ #-
+ # Copyright (c) 2004-2005 FreeBSD GNOME Team <freebsd-gnome@FreeBSD.org>
+ # All rights reserved.
+@@ -135,11 +135,11 @@ if (!scalar(@ARGV)) {
+ my (
+         %pkgdir,   %pkgdeps,  %pkgedeps, %pkgpdeps, %pkgfdeps,
+         %pkgbdeps, %pkgrdeps, @duds,     $portbase, $makecache,
+-        %pkgtdeps,
++        %pkgtdeps, %pkgsdeps,
+ );
+ 
+ $portbase  = $ENV{'PORTSDIR'};
+-$makecache = new Tinderbox::MakeCache($portbase, $ENV{'PKGSUFFIX'});
++$makecache = new Tinderbox::MakeCache($portbase, $ENV{'OPTNFILE'});
+ 
+ while (scalar(@PORTS)) {
+         my $port    = shift @PORTS;
+@@ -162,14 +162,15 @@ while (scalar(@PORTS)) {
+         $pkgname = $makecache->PkgName($portdir);
+ 
+         # Create a list of duds (ports that will not be attempted because they
+-        # are marked IGNORE or FORBIDDEN).
++        # are marked _CBBH (aka not for this platform) ).
+         if (!$noduds) {
+                 my $dudpkg = $makecache->IgnoreList($portdir);
+                 push @duds, $dudpkg if ($dudpkg);
+         }
+ 
+-        my (@edeps, @pdeps, @fdeps, @bdeps, @rdeps, @tdeps) = ();
++        my (@sdeps, @edeps, @pdeps, @fdeps, @bdeps, @rdeps, @tdeps) = ();
+         $pkgdeps{$portdir}  = [];
++        $pkgsdeps{$portdir} = [];
+         $pkgedeps{$portdir} = [];
+         $pkgpdeps{$portdir} = [];
+         $pkgfdeps{$portdir} = [];
+@@ -177,6 +178,7 @@ while (scalar(@PORTS)) {
+         $pkgrdeps{$portdir} = [];
+         $pkgtdeps{$portdir} = [];
+         $pkgdir{$portdir}   = $pkgname;
++        push @sdeps, $makecache->BootstrapDependsList($portdir); 
+         push @edeps, $makecache->ExtractDependsList($portdir);
+         push @pdeps, $makecache->PatchDependsList($portdir);
+         push @fdeps, $makecache->FetchDependsList($portdir);
+@@ -184,6 +186,7 @@ while (scalar(@PORTS)) {
+         push @rdeps, $makecache->RunDependsList($portdir);
+         push @tdeps, $makecache->TestDependsList($portdir);
+ 
++        findRunDepends(\@sdeps, \%pkgsdeps, $portdir, $makecache, \@PORTS);
+         findRunDepends(\@edeps, \%pkgedeps, $portdir, $makecache, \@PORTS);
+         findRunDepends(\@pdeps, \%pkgpdeps, $portdir, $makecache, \@PORTS);
+         findRunDepends(\@fdeps, \%pkgfdeps, $portdir, $makecache, \@PORTS);
+@@ -192,6 +195,7 @@ while (scalar(@PORTS)) {
+         findRunDepends(\@tdeps, \%pkgtdeps, $portdir, $makecache, \@PORTS);
+ 
+         foreach my $depport (
++                @{$pkgsdeps{$portdir}},
+                 @{$pkgedeps{$portdir}}, @{$pkgpdeps{$portdir}},
+                 @{$pkgfdeps{$portdir}}, @{$pkgbdeps{$portdir}},
+                 @{$pkgrdeps{$portdir}}, @{$pkgtdeps{$portdir}},
+@@ -216,6 +220,7 @@ cleanup($ds, 1, "Failed to open $builddi
+ foreach my $key (keys %pkgdir) {
+         my $pname    = $pkgdir{$key} . $ENV{'PKGSUFFIX'};
+         my $pkgnames = makeList(\%pkgdir, 1, $makecache, @{$pkgdeps{$key}});
++        my $sdeplst  = makeList(\%pkgdir, 1, $makecache, @{$pkgsdeps{$key}});
+         my $edeplst  = makeList(\%pkgdir, 1, $makecache, @{$pkgedeps{$key}});
+         my $pdeplst  = makeList(\%pkgdir, 1, $makecache, @{$pkgpdeps{$key}});
+         my $fdeplst  = makeList(\%pkgdir, 1, $makecache, @{$pkgfdeps{$key}});
+@@ -229,9 +234,10 @@ foreach my $key (keys %pkgdir) {
+         printf MK "\t@%s %s %s %s %s %s ",
+             tinderLoc($pb, 'scripts', 'lib/portbuild'), $BUILD_NAME, $JAIL_NAME,
+             $PORTSTREE_NAME, $ENV{'PORTBUILD_ARGS'};
+-        printf MK "\"%s\" \"%s\" \"%s\" \"%s\" \"%s\" \"%s\" ", $edeplst, $pdeplst,
+-            $fdeplst, $bdeplst, $rdeplst, $tdeplst;
+-        printf MK "%s /usr/ports/%s\n", $pname, $key;
++        printf MK "\"%s\" \"%s\" \"%s\" \"%s\" \"%s\" \"%s\" \"%s\" ",
++            $edeplst, $pdeplst, $fdeplst, $bdeplst, $rdeplst, $tdeplst,
++            $sdeplst;
++        printf MK "%s /usr/pkgsrc/%s\n", $pname, $key;
+ }
+ 
+ close(MK);
