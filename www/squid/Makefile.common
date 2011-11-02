@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2008/09/15 17:31:54 taca Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/11/02 19:42:21 dholland Exp $
 #
 # used by www/squidGuard/Makefile
-# used by www/squid/Makefile.common
+# used by www/squid/Makefile.squid
 
 SQUID_DATADIR=	${VARBASE}/squid
 LOGDIR?=	${SQUID_DATADIR}/logs
