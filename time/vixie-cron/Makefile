@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/03/08 18:44:19 reed Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/02 23:47:37 sbd Exp $
 
 DISTNAME=		cron_4.1
 PKGNAME=		vixie-cron-4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils time
 MASTER_SITES=		ftp://ftp.isc.org/isc/cron/
 EXTRACT_SUFX=		.shar
