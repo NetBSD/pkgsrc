@@ -3,19 +3,19 @@ $NetbBSD$
 Fix for CVE-2010-3702
 from http://www.openbsd.org/cgi-bin/cvsweb/ports/textproc/xpdf/patches/patch-xpdf_Gfx_cc.diff?r1=1.3;r2=1.4
 
---- xpdf/Gfx.cc.orig	2010-10-13 14:50:46.467717900 -0500
-+++ xpdf/Gfx.cc	2010-10-13 15:01:30.882241300 -0500
-@@ -443,6 +443,7 @@
- 
-   xref = xrefA;
+--- xpdf/Gfx.cc.orig	2011-08-15 16:08:53.000000000 -0500
++++ xpdf/Gfx.cc	2011-10-26 20:58:54.318613900 -0500
+@@ -469,6 +469,7 @@
+   doc = docA;
+   xref = doc->getXRef();
    subPage = gFalse;
 +  parser = NULL;
    printCommands = globalParams->getPrintCommands();
  
    // start the resource stack
-@@ -485,6 +486,7 @@
- 
-   xref = xrefA;
+@@ -516,6 +517,7 @@
+   doc = docA;
+   xref = doc->getXRef();
    subPage = gTrue;
 +  parser = NULL;
    printCommands = globalParams->getPrintCommands();
