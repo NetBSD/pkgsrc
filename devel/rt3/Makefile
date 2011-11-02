@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2011/04/16 09:41:19 spz Exp $
+# $NetBSD: Makefile,v 1.47.4.1 2011/11/02 22:52:22 tron Exp $
 
 DISTNAME=		rt-3.8.10
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
