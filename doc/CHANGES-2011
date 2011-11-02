@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2750 2011/11/02 22:07:59 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2751 2011/11/02 23:14:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4325,3 +4325,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/p5-SOAP-Lite to 0.714 [adam 2011-11-02]
 	Updated graphics/rayshade to 4.0.6 [shattered 2011-11-02]
 	Updated sysutils/fabric to 1.2.3 [gls 2011-11-02]
+	Updated devel/mercurial to 2.0 [wiz 2011-11-02]
