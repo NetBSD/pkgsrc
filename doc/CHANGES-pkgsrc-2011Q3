@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.29 2011/11/02 09:24:04 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.30 2011/11/02 20:59:20 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -121,3 +121,13 @@ Pullup ticket #3581 - requested by dholland
 x11/labltk: build fix
 Pullup ticket #3582 - requested by tron
 net/wireshark security update
+Pullup ticket #3583 - requested by drochner
+net/tor: security update
+Pullup ticket #3584 - requested by tez
+misc/logsurfer: security update
+Pullup ticket #3585 - requested by tez
+security/clamav: security update
+Pullup ticket #3586 - requested by tez
+graphics/freetype2: security update
+Pullup ticket #3587 - requested by tez
+print/xpdf: security update
