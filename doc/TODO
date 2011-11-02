@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10650 2011/11/01 21:10:16 scottr Exp $
+$NetBSD: TODO,v 1.10651 2011/11/02 20:22:15 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o raptor-2.0.3
 	o rasqal-0.9.27 [needs raptor-2.0.0]
 	o rat-4.2.25
-	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8
 	o rdp-1.6
