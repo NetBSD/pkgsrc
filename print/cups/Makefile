@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2011/09/17 14:12:11 wiz Exp $
+# $NetBSD: Makefile,v 1.181 2011/11/02 23:44:43 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -76,8 +76,9 @@ PLIST_VARS+=		notmac
 PLIST.notmac=		yes
 .endif
 
-# CUPS_USER	username of the CUPS administrator
-# CUPS_GROUP	group of the CUPS administrator
+# CUPS_USER		user to run filter and CGI programs as
+# CUPS_GROUP		group to run filter and CGI programs as
+# CUPS_SYSTEM_GROUPS	group for system administration
 #
 CUPS_USER?=		lp
 CUPS_GROUP?=		lp
