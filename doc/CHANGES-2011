@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2748 2011/11/02 14:45:28 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2749 2011/11/02 20:22:15 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4323,3 +4323,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/py-IP to 0.75 [obache 2011-11-02]
 	Updated net/py-zsi to 2.0nb1 [obache 2011-11-02]
 	Updated net/p5-SOAP-Lite to 0.714 [adam 2011-11-02]
+	Updated graphics/rayshade to 4.0.6 [shattered 2011-11-02]
