@@ -1,0 +1,22 @@
+$NetBSD: patch-share_html_Helpers_CalPopup.html,v 1.1.2.2 2011/11/02 22:52:22 tron Exp $
+
+perl 5.14 qw() in for* fixes
+
+--- share/html/Helpers/CalPopup.html.orig	2011-04-14 00:32:21.000000000 +0000
++++ share/html/Helpers/CalPopup.html
+@@ -95,12 +95,12 @@ my @today = localtime(time());
+ 
+ my @weekdays;
+ push @weekdays, loc($_)
+-  for qw(Sun Mon Tue Wed Thu Fri Sat);
++  for ( qw(Sun Mon Tue Wed Thu Fri Sat) );
+ 
+ my @months;
+ push @months, loc($_)
+-  for qw(January February March April May June July August
+-         September October November December);
++  for ( qw(January February March April May June July August
++         September October November December) );
+ 
+ unless ($DisplayedYear) {
+     $DisplayedMonth = $today[4] + 1;
