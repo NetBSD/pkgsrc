@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2009/09/09 14:38:58 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/11/02 13:59:29 fhajny Exp $
 
-SHA1 (sqlrelay-0.37.tar.gz) = cec442357f6644c8ac7f066fe974a25c9f315022
-RMD160 (sqlrelay-0.37.tar.gz) = 2cad89fe72d6700857280e385ab03c69cd584648
-Size (sqlrelay-0.37.tar.gz) = 1668069 bytes
-SHA1 (patch-aa) = 0684b3382e64569ed222cb19df6e5a1a4a143061
-SHA1 (patch-ab) = c05dbc72d1077237efd1d01e48403a7caa38eff9
-SHA1 (patch-ac) = 58c456142b9026bd9f41460f5a602aec61fc70cb
+SHA1 (sqlrelay-0.43.tar.gz) = f645332ff0dd14edd2e44643cda651d7c1c59abe
+RMD160 (sqlrelay-0.43.tar.gz) = 88638f122467c859db2fc5c8fbf983416c7f05bd
+Size (sqlrelay-0.43.tar.gz) = 1743456 bytes
+SHA1 (patch-ac) = e69292a2674083ffd10424e73760a0810fd629d8
 SHA1 (patch-ad) = a7e7047bcaf28de96a2baab527e4b1f607deb7c6
+SHA1 (patch-init__netbsd__rc.d__sqlrelay.in) = b10de222c99ab03a541c9a6a3929928c6936d0f4
+SHA1 (patch-src__listener__sqlrlistener.h) = 11f977c48b8e0a01779357475373af738c81d7f3
