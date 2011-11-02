@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/02/02 11:34:52 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/11/02 10:58:33 obache Exp $
 
-SHA1 (IPy-0.70.tar.gz) = 8d5ddf7b599508a5a563b99242770493b159317a
-RMD160 (IPy-0.70.tar.gz) = 352625191ba14905ccfe0d112828bccf18e18f4f
-Size (IPy-0.70.tar.gz) = 22341 bytes
+SHA1 (IPy-0.75.tar.gz) = 256529ba640345d301c440b21e808abbebe0a6bc
+RMD160 (IPy-0.75.tar.gz) = f31b64d62d77a37b5fb66bb6bf047258426c7bed
+Size (IPy-0.75.tar.gz) = 28459 bytes
