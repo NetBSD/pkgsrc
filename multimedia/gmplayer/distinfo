@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2011/10/24 13:34:45 obache Exp $
+$NetBSD: distinfo,v 1.76 2011/11/02 16:35:15 drochner Exp $
 
 SHA1 (mplayer/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (mplayer/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -72,6 +72,7 @@ SHA1 (patch-ag) = bef25568c913dcb8535afa51976ce7c94a6af5a2
 SHA1 (patch-ah) = dcfc26ec1422581a03ab200cb95926f6fd896d5b
 SHA1 (patch-an) = 3e72fb86abe7ab572f12a4fef002edb623ab6fae
 SHA1 (patch-ar) = df7e7cdc6fb8187bbcf0b285afc14d275a51e17a
+SHA1 (patch-as) = e353a1437101f661e012ce37004d8920913725cd
 SHA1 (patch-libao2_ao_sun.c) = 14eedc06f70dd949da1fb84078877e7cf259eff1
 SHA1 (patch-stream_dvb_tune.c) = b663830ff64ab31488684b1a324da50ab52d68cc
 SHA1 (patch-stream_dvbin.h) = 56f6e71fcdf6bf3afccbdbc8682834c806114677
