@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2009/11/13 23:12:02 christos Exp $
+$NetBSD: patch-aa,v 1.7.16.1 2011/11/02 20:54:05 tron Exp $
 
---- Makefile.in.orig	2005-08-17 05:34:30.000000000 +0000
-+++ Makefile.in
+--- Makefile.in.orig	2011-08-15 16:08:52.000000000 -0500
++++ Makefile.in	2011-10-26 19:45:47.941835500 -0500
 @@ -13,6 +13,7 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.7 2009/11/13 23:12:02 christos Exp $
  
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -37,69 +38,69 @@
+@@ -37,77 +38,77 @@
  	cd @UP_DIR@splash; $(MAKE)
  	cd @UP_DIR@xpdf; $(MAKE) xpdf$(EXE)
  
@@ -37,6 +37,12 @@ $NetBSD: patch-aa,v 1.7 2009/11/13 23:12:02 christos Exp $
 -	cd @UP_DIR@fofi; $(MAKE)
 -	cd @UP_DIR@splash; $(MAKE)
 -	cd @UP_DIR@xpdf; $(MAKE) pdffonts$(EXE)
+-
+-pdfdetach:
+-	cd goo; $(MAKE)
+-	cd @UP_DIR@fofi; $(MAKE)
+-	cd @UP_DIR@splash; $(MAKE)
+-	cd @UP_DIR@xpdf; $(MAKE) pdfdetach$(EXE)
 -
 -pdftoppm:
 -	cd goo; $(MAKE)
@@ -73,6 +79,12 @@ $NetBSD: patch-aa,v 1.7 2009/11/13 23:12:02 christos Exp $
 +#	cd @UP_DIR@splash; $(MAKE)
 +#	cd @UP_DIR@xpdf; $(MAKE) pdffonts$(EXE)
 +#
++#pdfdetach:
++#	cd goo; $(MAKE)
++#	cd @UP_DIR@fofi; $(MAKE)
++#	cd @UP_DIR@splash; $(MAKE)
++#	cd @UP_DIR@xpdf; $(MAKE) pdfdetach$(EXE)
++#
 +#pdftoppm:
 +#	cd goo; $(MAKE)
 +#	cd @UP_DIR@fofi; $(MAKE)
@@ -94,12 +106,14 @@ $NetBSD: patch-aa,v 1.7 2009/11/13 23:12:02 christos Exp $
 -	$(INSTALL_PROGRAM) xpdf/pdftotext$(EXE) $(DESTDIR)@bindir@/pdftotext$(EXE)
 -	$(INSTALL_PROGRAM) xpdf/pdfinfo$(EXE) $(DESTDIR)@bindir@/pdfinfo$(EXE)
 -	$(INSTALL_PROGRAM) xpdf/pdffonts$(EXE) $(DESTDIR)@bindir@/pdffonts$(EXE)
+-	$(INSTALL_PROGRAM) xpdf/pdfdetach$(EXE) $(DESTDIR)@bindir@/pdfdetach$(EXE)
 -@X@	$(INSTALL_PROGRAM) xpdf/pdftoppm$(EXE) $(DESTDIR)@bindir@/pdftoppm$(EXE)
 -	$(INSTALL_PROGRAM) xpdf/pdfimages$(EXE) $(DESTDIR)@bindir@/pdfimages$(EXE)
 +#	$(INSTALL_PROGRAM) xpdf/pdftops$(EXE) $(DESTDIR)@bindir@/pdftops$(EXE)
 +#	$(INSTALL_PROGRAM) xpdf/pdftotext$(EXE) $(DESTDIR)@bindir@/pdftotext$(EXE)
 +#	$(INSTALL_PROGRAM) xpdf/pdfinfo$(EXE) $(DESTDIR)@bindir@/pdfinfo$(EXE)
 +#	$(INSTALL_PROGRAM) xpdf/pdffonts$(EXE) $(DESTDIR)@bindir@/pdffonts$(EXE)
++#	$(INSTALL_PROGRAM) xpdf/pdfdetach$(EXE) $(DESTDIR)@bindir@/pdfdetach$(EXE)
 +#@X@	$(INSTALL_PROGRAM) xpdf/pdftoppm$(EXE) $(DESTDIR)@bindir@/pdftoppm$(EXE)
 +#	$(INSTALL_PROGRAM) xpdf/pdfimages$(EXE) $(DESTDIR)@bindir@/pdfimages$(EXE)
  	-mkdir -p $(DESTDIR)@mandir@/man1
@@ -108,12 +122,14 @@ $NetBSD: patch-aa,v 1.7 2009/11/13 23:12:02 christos Exp $
 -	$(INSTALL_DATA) $(srcdir)/doc/pdftotext.1 $(DESTDIR)@mandir@/man1/pdftotext.1
 -	$(INSTALL_DATA) $(srcdir)/doc/pdfinfo.1 $(DESTDIR)@mandir@/man1/pdfinfo.1
 -	$(INSTALL_DATA) $(srcdir)/doc/pdffonts.1 $(DESTDIR)@mandir@/man1/pdffonts.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfdetach.1 $(DESTDIR)@mandir@/man1/pdfdetach.1
 -@X@	$(INSTALL_DATA) $(srcdir)/doc/pdftoppm.1 $(DESTDIR)@mandir@/man1/pdftoppm.1
 -	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 $(DESTDIR)@mandir@/man1/pdfimages.1
 +#	$(INSTALL_DATA) $(srcdir)/doc/pdftops.1 $(DESTDIR)@mandir@/man1/pdftops.1
 +#	$(INSTALL_DATA) $(srcdir)/doc/pdftotext.1 $(DESTDIR)@mandir@/man1/pdftotext.1
 +#	$(INSTALL_DATA) $(srcdir)/doc/pdfinfo.1 $(DESTDIR)@mandir@/man1/pdfinfo.1
 +#	$(INSTALL_DATA) $(srcdir)/doc/pdffonts.1 $(DESTDIR)@mandir@/man1/pdffonts.1
++#	$(INSTALL_DATA) $(srcdir)/doc/pdfdetach.1 $(DESTDIR)@mandir@/man1/pdfdetach.1
 +#@X@	$(INSTALL_DATA) $(srcdir)/doc/pdftoppm.1 $(DESTDIR)@mandir@/man1/pdftoppm.1
 +#	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 $(DESTDIR)@mandir@/man1/pdfimages.1
  	-mkdir -p $(DESTDIR)@mandir@/man5

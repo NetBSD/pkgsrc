@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2010/12/23 04:44:41 obache Exp $
+$NetBSD: patch-ak,v 1.5.8.1 2011/11/02 20:54:05 tron Exp $
 
---- doc/xpdfrc.5.orig	2007-02-27 22:05:51.000000000 +0000
-+++ doc/xpdfrc.5
-@@ -7,7 +7,7 @@ All of the Xpdf tools read a single conf
+--- doc/xpdfrc.5.orig	2011-08-15 16:08:53.000000000 -0500
++++ doc/xpdfrc.5	2011-10-26 19:56:33.796211600 -0500
+@@ -7,7 +7,7 @@
  .I .xpdfrc
  file in your home directory, it will be read.  Otherwise, a
  system-wide configuration file will be read from
@@ -11,57 +11,60 @@ $NetBSD: patch-ak,v 1.5 2010/12/23 04:44:41 obache Exp $
  if it exists.  (This is its default location; depending on build
  options, it may be placed elsewhere.)  On Win32 systems, the
  .I xpdfrc
-@@ -544,28 +544,31 @@ The following is a sample xpdfrc file.
+@@ -588,32 +588,32 @@
  .nf
  
  # from the Thai support package
 -nameToUnicode /usr/local/share/xpdf/Thai.nameToUnicode
-+nameToUnicode @PREFIX@/share/xpdf/thai/Thai.nameToUnicode
-+unicodeMap    TIS-620 @PREFIX@/share/xpdf/thai/TIS-620.unicodeMap
++nameToUnicode @PREFIX@/share/xpdf/Thai.nameToUnicode
  
  # from the Japanese support package
 -cidToUnicode Adobe-Japan1 /usr/local/share/xpdf/Adobe-Japan1.cidToUnicode
 -unicodeMap   JISX0208     /usr/local/share/xpdf/JISX0208.unicodeMap
 -cMapDir      Adobe-Japan1 /usr/local/share/xpdf/cmap/Adobe-Japan1
-+cidToUnicode Adobe-Japan1 @PREFIX@/share/xpdf/japanese/Adobe-Japan1.cidToUnicode
-+unicodeMap   ISO-2022-JP  @PREFIX@/share/xpdf/japanese/ISO-2022-JP.unicodeMap
-+unicodeMap   EUC-JP       @PREFIX@/share/xpdf/japanese/EUC-JP.unicodeMap
-+unicodeMap   Shift-JIS    @PREFIX@/share/xpdf/japanese/Shift-JIS.unicodeMap
-+cMapDir      Adobe-Japan1 @PREFIX@/share/xpdf/japanese/CMap/Adobe-Japan1
++cidToUnicode Adobe-Japan1 @PREFIX@/share/xpdf/Adobe-Japan1.cidToUnicode
++unicodeMap   JISX0208     @PREFIX@/share/xpdf/JISX0208.unicodeMap
++cMapDir      Adobe-Japan1 @PREFIX@/share/xpdf/cmap/Adobe-Japan1
  
  # use the Base-14 Type 1 fonts from ghostscript
--displayFontT1 Times-Roman           /usr/local/share/ghostscript/fonts/n021003l.pfb
--displayFontT1 Times-Italic          /usr/local/share/ghostscript/fonts/n021023l.pfb
--displayFontT1 Times-Bold            /usr/local/share/ghostscript/fonts/n021004l.pfb
--displayFontT1 Times-BoldItalic      /usr/local/share/ghostscript/fonts/n021024l.pfb
--displayFontT1 Helvetica             /usr/local/share/ghostscript/fonts/n019003l.pfb
--displayFontT1 Helvetica-Oblique     /usr/local/share/ghostscript/fonts/n019023l.pfb
--displayFontT1 Helvetica-Bold        /usr/local/share/ghostscript/fonts/n019004l.pfb
--displayFontT1 Helvetica-BoldOblique /usr/local/share/ghostscript/fonts/n019024l.pfb
--displayFontT1 Courier               /usr/local/share/ghostscript/fonts/n022003l.pfb
--displayFontT1 Courier-Oblique       /usr/local/share/ghostscript/fonts/n022023l.pfb
--displayFontT1 Courier-Bold          /usr/local/share/ghostscript/fonts/n022004l.pfb
--displayFontT1 Courier-BoldOblique   /usr/local/share/ghostscript/fonts/n022024l.pfb
--displayFontT1 Symbol                /usr/local/share/ghostscript/fonts/s050000l.pfb
--displayFontT1 ZapfDingbats          /usr/local/share/ghostscript/fonts/d050000l.pfb
-+displayFontT1 Times-Roman           @PREFIX@/share/fonts/urw/n021003l.pfb
-+displayFontT1 Times-Italic          @PREFIX@/share/fonts/urw/n021023l.pfb
-+displayFontT1 Times-Bold            @PREFIX@/share/fonts/urw/n021004l.pfb
-+displayFontT1 Times-BoldItalic      @PREFIX@/share/fonts/urw/n021024l.pfb
-+displayFontT1 Helvetica             @PREFIX@/share/fonts/urw/n019003l.pfb
-+displayFontT1 Helvetica-Oblique     @PREFIX@/share/fonts/urw/n019023l.pfb
-+displayFontT1 Helvetica-Bold        @PREFIX@/share/fonts/urw/n019004l.pfb
-+displayFontT1 Helvetica-BoldOblique @PREFIX@/share/fonts/urw/n019024l.pfb
-+displayFontT1 Courier               @PREFIX@/share/fonts/urw/n022003l.pfb
-+displayFontT1 Courier-Oblique       @PREFIX@/share/fonts/urw/n022023l.pfb
-+displayFontT1 Courier-Bold          @PREFIX@/share/fonts/urw/n022004l.pfb
-+displayFontT1 Courier-BoldOblique   @PREFIX@/share/fonts/urw/n022024l.pfb
-+displayFontT1 Symbol                @PREFIX@/share/fonts/urw/s050000l.pfb
-+displayFontT1 ZapfDingbats          @PREFIX@/share/fonts/urw/d050000l.pfb
+-fontFile Times-Roman           /usr/local/share/ghostscript/fonts/n021003l.pfb
+-fontFile Times-Italic          /usr/local/share/ghostscript/fonts/n021023l.pfb
+-fontFile Times-Bold            /usr/local/share/ghostscript/fonts/n021004l.pfb
+-fontFile Times-BoldItalic      /usr/local/share/ghostscript/fonts/n021024l.pfb
+-fontFile Helvetica             /usr/local/share/ghostscript/fonts/n019003l.pfb
+-fontFile Helvetica-Oblique     /usr/local/share/ghostscript/fonts/n019023l.pfb
+-fontFile Helvetica-Bold        /usr/local/share/ghostscript/fonts/n019004l.pfb
+-fontFile Helvetica-BoldOblique /usr/local/share/ghostscript/fonts/n019024l.pfb
+-fontFile Courier               /usr/local/share/ghostscript/fonts/n022003l.pfb
+-fontFile Courier-Oblique       /usr/local/share/ghostscript/fonts/n022023l.pfb
+-fontFile Courier-Bold          /usr/local/share/ghostscript/fonts/n022004l.pfb
+-fontFile Courier-BoldOblique   /usr/local/share/ghostscript/fonts/n022024l.pfb
+-fontFile Symbol                /usr/local/share/ghostscript/fonts/s050000l.pfb
+-fontFile ZapfDingbats          /usr/local/share/ghostscript/fonts/d050000l.pfb
++fontFile Times-Roman           @PREFIX@/share/ghostscript/fonts/n021003l.pfb
++fontFile Times-Italic          @PREFIX@/share/ghostscript/fonts/n021023l.pfb
++fontFile Times-Bold            @PREFIX@/share/ghostscript/fonts/n021004l.pfb
++fontFile Times-BoldItalic      @PREFIX@/share/ghostscript/fonts/n021024l.pfb
++fontFile Helvetica             @PREFIX@/share/ghostscript/fonts/n019003l.pfb
++fontFile Helvetica-Oblique     @PREFIX@/share/ghostscript/fonts/n019023l.pfb
++fontFile Helvetica-Bold        @PREFIX@/share/ghostscript/fonts/n019004l.pfb
++fontFile Helvetica-BoldOblique @PREFIX@/share/ghostscript/fonts/n019024l.pfb
++fontFile Courier               @PREFIX@/share/ghostscript/fonts/n022003l.pfb
++fontFile Courier-Oblique       @PREFIX@/share/ghostscript/fonts/n022023l.pfb
++fontFile Courier-Bold          @PREFIX@/share/ghostscript/fonts/n022004l.pfb
++fontFile Courier-BoldOblique   @PREFIX@/share/ghostscript/fonts/n022024l.pfb
++fontFile Symbol                @PREFIX@/share/ghostscript/fonts/s050000l.pfb
++fontFile ZapfDingbats          @PREFIX@/share/ghostscript/fonts/d050000l.pfb
  
  # use the Bakoma Type 1 fonts
- # (this assumes they happen to be installed in /usr/local/fonts/bakoma)
-@@ -596,7 +599,7 @@ urlCommand      "netscape -remote 'openU
+-# (this assumes they happen to be installed in /usr/local/fonts/bakoma)
+-fontDir /usr/local/fonts/bakoma
++# (this assumes they happen to be installed in @PREFIX@/fonts/bakoma)
++fontDir @PREFIX@/fonts/bakoma
+ 
+ # set some PostScript options
+ psPaperSize          letter
+@@ -641,7 +641,7 @@
  .fi
  .SH FILES
  .TP

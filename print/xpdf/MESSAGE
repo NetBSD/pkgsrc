@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.4.2.2 2011/11/02 20:54:05 tron Exp $
+
+Upgrading from Xpdf 3.02 (and earlier)
+--------------------------------------
+
+The font configuration system has been changed.  Previous versions
+used mostly separate commands to configure fonts for display and for
+PostScript output.  As of 3.03, configuration options that make sense
+for both display and PS output have been unified.
+
+The following xpdfrc commands have been removed:
+* displayFontT1, displayFontTT: replaced with fontFile
+* displayNamedCIDFontT1, displayNamedCIDFontTT: replaced with fontFile
+* displayCIDFontT1, displayCIDFontTT: replaced with fontFileCC
+* psFont: replaced with psResidentFont
+* psNamedFont16: replaced with psResidentFont16
+* psFont16: replaced with psResidentFontCC
+
+See the xpdfrc(5) man page for more information on the new commands.
+
+===========================================================================
