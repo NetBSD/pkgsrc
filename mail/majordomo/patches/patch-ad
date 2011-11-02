@@ -1,10 +1,20 @@
-$NetBSD: patch-ad,v 1.2 2011/01/29 19:39:14 spz Exp $
+$NetBSD: patch-ad,v 1.2.6.1 2011/11/02 22:55:24 tron Exp $
 
 avoid the wrapper + -C trap
 
 --- config-test.orig	1997-08-27 15:17:13.000000000 +0000
 +++ config-test
-@@ -117,7 +117,7 @@ wellokay
+@@ -7,8 +7,7 @@
+ # execute this by cd to your majordomo dir, then 'wrapper config-test'
+ #
+ 
+-@requires = ( "ctime.pl",
+-	     "majordomo_version.pl",
++@requires = ( "majordomo_version.pl",
+ 	     "majordomo.pl",
+ 	     "shlock.pl",
+ 	     "config_parse.pl",
+@@ -117,7 +116,7 @@ wellokay
  print "\n\tNon obvious things that cause headaches:\n\n";
  &header('');
  
@@ -13,7 +23,7 @@ avoid the wrapper + -C trap
  
  if (eval "require '$cf'") { 
      &good("'require'd $cf okay.");    
-@@ -125,6 +125,7 @@ if (eval "require '$cf'") { 
+@@ -125,6 +124,7 @@ if (eval "require '$cf'") { 
      &bad("something's wrong with $cf: $@");
  }
  
@@ -21,7 +31,7 @@ avoid the wrapper + -C trap
  foreach (@requires) {
      if (require $_) {
  	&good("found $_ okay.");
-@@ -286,7 +287,7 @@ print "Checking to see if there are new 
+@@ -286,7 +286,7 @@ print "Checking to see if there are new 
  print "your majordomo.cf file...";
  
  open($cf, $cf) || &bad("Couldn't open $cf for reading, $!");
