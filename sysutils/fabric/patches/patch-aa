@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2011/03/08 21:29:34 gls Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/02 22:05:42 gls Exp $
 
 Disable setuptools usage
 
---- setup.py.orig	2011-03-05 06:37:11.000000000 +0000
+--- setup.py.orig	2011-10-23 22:35:20.000000000 +0000
 +++ setup.py
-@@ -35,7 +35,7 @@ setup(
+@@ -38,7 +38,7 @@ setup(
      packages=find_packages(),
      test_suite='nose.collector',
      tests_require=['nose', 'fudge'],
--    install_requires=['pycrypto >= 1.9', 'paramiko >=1.7.6'],
-+#    install_requires=['pycrypto >= 1.9', 'paramiko >=1.7.6'],
+-    install_requires=['pycrypto >= 1.9, < 2.4', 'paramiko >=1.7.6'],
++#    install_requires=['pycrypto >= 1.9, < 2.4', 'paramiko >=1.7.6'],
      entry_points={
          'console_scripts': [
              'fab = fabric.main:main',
