@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/07/12 11:27:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2011/11/02 23:14:33 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -96,6 +96,39 @@ ${PYSITELIB}/hgext/interhg.pyo
 ${PYSITELIB}/hgext/keyword.py
 ${PYSITELIB}/hgext/keyword.pyc
 ${PYSITELIB}/hgext/keyword.pyo
+${PYSITELIB}/hgext/largefiles/__init__.py
+${PYSITELIB}/hgext/largefiles/__init__.pyc
+${PYSITELIB}/hgext/largefiles/__init__.pyo
+${PYSITELIB}/hgext/largefiles/basestore.py
+${PYSITELIB}/hgext/largefiles/basestore.pyc
+${PYSITELIB}/hgext/largefiles/basestore.pyo
+${PYSITELIB}/hgext/largefiles/lfcommands.py
+${PYSITELIB}/hgext/largefiles/lfcommands.pyc
+${PYSITELIB}/hgext/largefiles/lfcommands.pyo
+${PYSITELIB}/hgext/largefiles/lfutil.py
+${PYSITELIB}/hgext/largefiles/lfutil.pyc
+${PYSITELIB}/hgext/largefiles/lfutil.pyo
+${PYSITELIB}/hgext/largefiles/localstore.py
+${PYSITELIB}/hgext/largefiles/localstore.pyc
+${PYSITELIB}/hgext/largefiles/localstore.pyo
+${PYSITELIB}/hgext/largefiles/overrides.py
+${PYSITELIB}/hgext/largefiles/overrides.pyc
+${PYSITELIB}/hgext/largefiles/overrides.pyo
+${PYSITELIB}/hgext/largefiles/proto.py
+${PYSITELIB}/hgext/largefiles/proto.pyc
+${PYSITELIB}/hgext/largefiles/proto.pyo
+${PYSITELIB}/hgext/largefiles/remotestore.py
+${PYSITELIB}/hgext/largefiles/remotestore.pyc
+${PYSITELIB}/hgext/largefiles/remotestore.pyo
+${PYSITELIB}/hgext/largefiles/reposetup.py
+${PYSITELIB}/hgext/largefiles/reposetup.pyc
+${PYSITELIB}/hgext/largefiles/reposetup.pyo
+${PYSITELIB}/hgext/largefiles/uisetup.py
+${PYSITELIB}/hgext/largefiles/uisetup.pyc
+${PYSITELIB}/hgext/largefiles/uisetup.pyo
+${PYSITELIB}/hgext/largefiles/wirestore.py
+${PYSITELIB}/hgext/largefiles/wirestore.pyc
+${PYSITELIB}/hgext/largefiles/wirestore.pyo
 ${PYSITELIB}/hgext/mq.py
 ${PYSITELIB}/hgext/mq.pyc
 ${PYSITELIB}/hgext/mq.pyo
@@ -490,6 +523,7 @@ ${PYSITELIB}/mercurial/templates/gitweb/search.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/shortlog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/summary.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/tags.tmpl
+${PYSITELIB}/mercurial/templates/map-cmdline.bisect
 ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
