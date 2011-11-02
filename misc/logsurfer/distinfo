@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2009/01/18 11:01:56 shattered Exp $
+$NetBSD: distinfo,v 1.6.22.1 2011/11/02 20:10:23 tron Exp $
 
-SHA1 (logsurfer+-1.7.tar.gz) = 9fe9b2356c34fe691a8b0c66514d8cbe3c3b33fa
-RMD160 (logsurfer+-1.7.tar.gz) = ad68651d5b87e0bba76871cd5f30ed94d861513b
-Size (logsurfer+-1.7.tar.gz) = 198289 bytes
+SHA1 (logsurfer-1.8.tar.gz) = 8fb732b16f0a0725492d73dd099662eeff0b9362
+RMD160 (logsurfer-1.8.tar.gz) = 1e3d10d018ce5ee7ee941601b6abbca8efd2ed3b
+Size (logsurfer-1.8.tar.gz) = 197433 bytes
 SHA1 (patch-aa) = 4c4f4e2f8093d38b08c5a119e9c84ba32b7a7648
 SHA1 (patch-ab) = e1cabe243a690d9166dc8e0d5ac4861b37e1e980
+SHA1 (patch-ac) = 1a2c0e4769512e6088c9fb8370a9b2f3dd0a2406
