@@ -1,0 +1,37 @@
+$NetBSD: patch-init__netbsd__rc.d__sqlrelay.in,v 1.1 2011/11/02 13:59:29 fhajny Exp $
+
+--- init/netbsd/rc.d/sqlrelay.in.orig	2007-05-29 20:09:18.000000000 +0000
++++ init/netbsd/rc.d/sqlrelay.in
+@@ -31,7 +31,7 @@ cleanup(){
+         if ( test -r "$i" )
+         then
+             PID=`cat $i`
+-            if ( test -z "`ps -p $PID | egrep -E 'sqlr-cachemana|sqlr-connectio|sqlr-listener'`" )
++            if ( test -z "`ps -p $PID | egrep -E 'sqlr-cachemana|sqlr-connectio|sqlr-listener|sqlr-scaler'`" )
+             then
+                 echo "$PID is not sqlr! removing pidfile ..."
+                 rm $i
+@@ -42,9 +42,9 @@ cleanup(){
+ 
+ start(){
+     echo -n $"Starting SQL Relay: "
+-    if ( test -r "/etc/sqlrelay" ); then
++    if ( test -r "@sysconfdir@/sqlrelay" ); then
+         launched=0
+-        for connid in `grep -v ^# /etc/sqlrelay`; do
++        for connid in `grep -v ^# @sysconfdir@/sqlrelay`; do
+             echo
+             echo -n $"Launching instance with id '${connid}':"
+             sqlr-start -id ${connid} 0<&- 1>&- 2>&-
+@@ -69,9 +69,9 @@ start(){
+ 
+ stop(){
+     echo -n $"Stopping SQL Relay: "
+-    if ( test -r "/etc/sqlrelay" ); then
++    if ( test -r "@sysconfdir@/sqlrelay" ); then
+         launched=0
+-        for connid in `grep -v ^# /etc/sqlrelay`; do
++        for connid in `grep -v ^# @sysconfdir@/sqlrelay`; do
+             echo
+             echo -n $"Launching instance with id '${connid}':"
+             sqlr-stop ${connid} 0<&- 1>&- 2>&-
