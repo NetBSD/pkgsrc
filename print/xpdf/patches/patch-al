@@ -1,17 +1,18 @@
-$NetBSD: patch-al,v 1.3 2010/06/13 08:56:04 spz Exp $
+$NetBSD: patch-al,v 1.3.12.1 2011/11/02 20:54:05 tron Exp $
 
---- xpdf/GlobalParams.cc.orig	2005-08-17 05:34:31.000000000 +0000
-+++ xpdf/GlobalParams.cc
-@@ -106,11 +106,12 @@ static char *displayFontDirs[] = {
+--- xpdf/GlobalParams.cc.orig	2011-08-15 16:08:53.000000000 -0500
++++ xpdf/GlobalParams.cc	2011-10-26 20:15:39.959345400 -0500
+@@ -110,11 +110,13 @@
  };
  #else
- static char *displayFontDirs[] = {
+ static const char *displayFontDirs[] = {
 -  "/usr/share/ghostscript/fonts",
 +  PREFIX"/share/ghostscript/fonts",
    "/usr/local/share/ghostscript/fonts",
 -  "/usr/share/fonts/default/Type1",
 -  "/usr/share/fonts/default/ghostscript",
 -  "/usr/share/fonts/type1/gsfonts",
++  PREFIX"/share/fonts/X11/Type1",
 +  "/usr/X11R6/lib/X11/fonts/Type1",
 +  "/usr/X11R7/lib/X11/fonts/Type1",
 +  PREFIX"/xorg/lib/X11/fonts/Type1",
