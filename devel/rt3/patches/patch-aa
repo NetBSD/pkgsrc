@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2008/08/23 23:58:29 tonnerre Exp $
+$NetBSD: patch-aa,v 1.2.28.1 2011/11/02 22:52:22 tron Exp $
 
 Adds the pkgsrc layout.
 
---- config.layout.orig	2004-01-02 23:55:55.000000000 +0100
+--- config.layout.orig	2011-04-14 00:32:21.000000000 +0000
 +++ config.layout
-@@ -81,6 +81,28 @@
+@@ -114,6 +114,28 @@
    customlibdir:		${customdir}/local/lib
  </Layout>
  
