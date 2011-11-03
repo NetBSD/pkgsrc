@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/03 04:49:46 obache Exp $
+
+SHA1 (SOAP-Transport-TCP-0.715.tar.gz) = ba7a63ae893d4b454340060ce35010ba6d34f962
+RMD160 (SOAP-Transport-TCP-0.715.tar.gz) = 3fbeb74625781c679ef486180ed55132160d4a57
+Size (SOAP-Transport-TCP-0.715.tar.gz) = 44554 bytes
