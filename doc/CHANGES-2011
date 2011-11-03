@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2756 2011/11/03 01:34:51 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2757 2011/11/03 04:50:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4332,3 +4332,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated games/gbrainy to 2.05 [wiz 2011-11-03]
 	Added print/tex-supertabular version 4.1a [minskim 2011-11-03]
 	Added print/tex-supertabular-doc version 4.1a [minskim 2011-11-03]
+	Added net/p5-SOAP-Transport-TCP version 0.715 [obache 2011-11-03]
