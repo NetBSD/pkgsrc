@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/07/12 13:44:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/11/03 00:52:20 wiz Exp $
 bin/gbrainy
 lib/gbrainy/gbrainy.Core.dll
 lib/gbrainy/gbrainy.Core.dll.config
@@ -415,6 +415,7 @@ share/locale/da/LC_MESSAGES/gbrainy.mo
 share/locale/de/LC_MESSAGES/gbrainy.mo
 share/locale/el/LC_MESSAGES/gbrainy.mo
 share/locale/en_GB/LC_MESSAGES/gbrainy.mo
+share/locale/eo/LC_MESSAGES/gbrainy.mo
 share/locale/es/LC_MESSAGES/gbrainy.mo
 share/locale/eu/LC_MESSAGES/gbrainy.mo
 share/locale/fi/LC_MESSAGES/gbrainy.mo
