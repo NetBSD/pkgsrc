@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/07/13 14:45:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/11/03 00:22:23 wiz Exp $
 bin/diffuse
 man/it/man1/diffuse.1
 man/man1/diffuse.1
@@ -26,6 +26,7 @@ share/diffuse/syntax/patch.syntax
 share/diffuse/syntax/perl.syntax
 share/diffuse/syntax/php.syntax
 share/diffuse/syntax/python.syntax
+share/diffuse/syntax/r.syntax
 share/diffuse/syntax/ruby.syntax
 share/diffuse/syntax/sql.syntax
 share/diffuse/syntax/tcl.syntax
