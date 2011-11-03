@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/08/23 13:06:48 obache Exp $
+# $NetBSD: Makefile,v 1.29 2011/11/03 12:21:41 obache Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-0
@@ -15,11 +15,20 @@ EVAL_PREFIX+=	GDBMDIR=gdbm
 
 USE_TOOLS+=	patch
 
-EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/gdbmmodule.c
+.include "../../lang/python/pyversion.mk"
+.if !empty(PYPKGPREFIX:Mpy3?)
+GDBM_MODNAME=	_gdbm
+.else
+GDBM_MODNAME=	gdbm
+.endif
+
+EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/${GDBM_MODNAME}module.c
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 
 PY_SETUP_SUBST+= GDBMPREFIX=${GDBMDIR}
+PY_SETUP_SUBST+= GDBM_MODNAME=${GDBM_MODNAME}
+PLIST_SUBST+=	GDBM_MODNAME=${GDBM_MODNAME}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
