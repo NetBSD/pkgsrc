@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10651 2011/11/02 20:22:15 shattered Exp $
+$NetBSD: TODO,v 1.10652 2011/11/03 00:51:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.8.2
-	o clutter-gst-1.4.2
+	o clutter-gst-1.4.4
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compositeproto-0.4.2
@@ -565,6 +565,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
+	o etm-881
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evince-3.2.1
@@ -596,42 +597,42 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fltk-1.3.0 [pkgsrc-wip]
 	o fltk2-2.0pre8323
 	o fluidsynth-1.1.5
-	o fluxbox-1.3.1
+	o fluxbox-1.3.2
 	o font-adobe-100dpi-1.0.3 [pkg/45537]
 	o font-adobe-75dpi-1.0.3 [pkg/45537]
 	o font-adobe-utopia-100dpi-1.0.4 [pkg/45537]
 	o font-adobe-utopia-75dpi-1.0.4 [pkg/45537]
 	o font-adobe-utopia-type1-1.0.4 [pkg/45537]
 	o font-alias-1.0.3
-	o font-arabic-misc-1.0.3
-	o font-bh-100dpi-1.0.3
-	o font-bh-75dpi-1.0.3
-	o font-bh-lucidatypewriter-100dpi-1.0.3
-	o font-bh-lucidatypewriter-75dpi-1.0.3
-	o font-bh-ttf-1.0.3
-	o font-bh-type1-1.0.3
-	o font-bitstream-100dpi-1.0.3
-	o font-bitstream-75dpi-1.0.3
-	o font-bitstream-type1-1.0.3
-	o font-cronyx-cyrillic-1.0.3
-	o font-cursor-misc-1.0.3
-	o font-daewoo-misc-1.0.3
-	o font-dec-misc-1.0.3
-	o font-ibm-type1-1.0.3
-	o font-isas-misc-1.0.3
-	o font-jis-misc-1.0.3
-	o font-micro-misc-1.0.3
-	o font-misc-cyrillic-1.0.3
-	o font-misc-ethiopic-1.0.3
-	o font-misc-meltho-1.0.3
-	o font-misc-misc-1.1.2
-	o font-mutt-misc-1.0.3
-	o font-screen-cyrillic-1.0.4
-	o font-sony-misc-1.0.3
-	o font-sun-misc-1.0.3
+	o font-arabic-misc-1.0.3 [pkg/45549]
+	o font-bh-100dpi-1.0.3 [pkg/45549]
+	o font-bh-75dpi-1.0.3 [pkg/45549]
+	o font-bh-lucidatypewriter-100dpi-1.0.3 [pkg/45549]
+	o font-bh-lucidatypewriter-75dpi-1.0.3 [pkg/45549]
+	o font-bh-ttf-1.0.3 [pkg/45549]
+	o font-bh-type1-1.0.3 [pkg/45549]
+	o font-bitstream-100dpi-1.0.3 [pkg/45549]
+	o font-bitstream-75dpi-1.0.3 [pkg/45549]
+	o font-bitstream-type1-1.0.3 [pkg/45549]
+	o font-cronyx-cyrillic-1.0.3 [pkg/45549]
+	o font-cursor-misc-1.0.3 [pkg/45549]
+	o font-daewoo-misc-1.0.3 [pkg/45549]
+	o font-dec-misc-1.0.3 [pkg/45549]
+	o font-ibm-type1-1.0.3 [pkg/45549]
+	o font-isas-misc-1.0.3 [pkg/45549]
+	o font-jis-misc-1.0.3 [pkg/45549]
+	o font-micro-misc-1.0.3 [pkg/45549]
+	o font-misc-cyrillic-1.0.3 [pkg/45549]
+	o font-misc-ethiopic-1.0.3 [pkg/45549]
+	o font-misc-meltho-1.0.3 [pkg/45549]
+	o font-misc-misc-1.1.2 [pkg/45549]
+	o font-mutt-misc-1.0.3 [pkg/45549]
+	o font-screen-cyrillic-1.0.4 [pkg/45549]
+	o font-sony-misc-1.0.3 [pkg/45549]
+	o font-sun-misc-1.0.3 [pkg/45549]
 	o font-util-1.2.0 [pkg/45537]
-	o font-winitzki-cyrillic-1.0.3
-	o font-xfree86-type1-1.0.4
+	o font-winitzki-cyrillic-1.0.3 [pkg/45549]
+	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontsproto-2.1.1
 	o fossil-1.20
 	o fox-1.6.41
@@ -656,8 +657,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gawk-4.0.0
 	o gbdfed-1.6
-	o gbrainy-2.04
+	o gbrainy-2.05
 	o gcal-3.6.1
+	o gcc44-4.4.7
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-9.5
@@ -768,7 +770,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o help2man-1.40.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-7.7
+	o hiawatha-7.8
 	o highlight-3.6
 	o honeyd-1.5c
 	o horde-4.0.10
@@ -828,7 +830,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbibtex-0.2.2
 	o kbiff-4.0
 	o kdbg-2.5.1
-	o kde4-4.7
+	o kde4-4.7.3
 	o kdenlive-0.8
 	o kdevelop-4.2.3
 	o kdiff3-0.9.96
@@ -939,7 +941,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lmms-0.4.5
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
-	o ltris-1.0.17
+	o ltris-1.0.18
 	o luit-1.1.0
 	o lwm-1.2.2
 	o lyx-2.0.0
@@ -1015,7 +1017,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-17.2
+	o nut-17.3
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1079,7 +1081,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pim6sd-20040824a
 	o pinfo-0.6.9
 	o pingus-0.7.4
-	o pioneers-0.12.3.1
+	o pioneers-0.12.5
 	o pircbot-1.4.6
 	o pkg-config-0.26
 	o pks-0.9.6
@@ -1272,7 +1274,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.4
-	o tesseract-3.00
+	o tesseract-3.01
 	o tetrinetx-1.40c
 	o texlive-tetex-20110705
 	o texmaker-3.1 [pkg/45521]
@@ -1387,7 +1389,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xconsole-1.0.4
 	o xcursorgen-1.0.4
 	o xdesktopwaves-1.3
-	o xdm-1.1.11
+	o xdm-1.1.11 [pkg/45554]
 	o xdpyinfo-1.2.0
 	o xdriinfo-1.0.4
 	o xemacs-current-21.5.31
@@ -1402,7 +1404,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-apm-1.2.3
 	o xf86-video-ark-0.7.3
 	o xf86-video-ast-0.91.10
-	o xf86-video-ati-6.14.2
+	o xf86-video-ati-6.14.3
 	o xf86-video-chips-1.2.4
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
@@ -1458,7 +1460,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xlsatoms-1.1.0 [unpackaged]
 	o xlsclients-1.1.2
 	o xm7-1020s
-	o xmag-1.0.4
+	o xmag-1.0.4 [pkg/45551]
 	o xman-1.1.2
 	o xmbdfed-4.6
 	o xmcd-3.3.2
