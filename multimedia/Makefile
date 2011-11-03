@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2011/10/02 14:11:52 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2011/11/03 18:17:11 abs Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -6,6 +6,7 @@ COMMENT=	Multimedia utilities
 SUBDIR+=	acidrip
 SUBDIR+=	adobe-flash-plugin
 SUBDIR+=	adobe-flash-plugin10.1
+SUBDIR+=	adobe-flash-plugin11
 SUBDIR+=	alevt
 SUBDIR+=	avidemux
 SUBDIR+=	bsdav
