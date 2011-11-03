@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2759 2011/11/03 17:26:05 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2760 2011/11/03 18:18:36 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/scmgit to 1.7.7.2 [adam 2011-11-03]
 	Updated devel/scmgit-base to 1.7.7.2 [adam 2011-11-03]
 	Updated devel/scmgit-docs to 1.7.7.2 [adam 2011-11-03]
+	Added multimedia/adobe-flash-plugin11 version 11.0.1.152 [abs 2011-11-03]
