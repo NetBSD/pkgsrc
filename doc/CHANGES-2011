@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2753 2011/11/02 23:47:53 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2754 2011/11/03 00:22:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4328,3 +4328,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mercurial to 2.0 [wiz 2011-11-02]
 	Updated print/cups-pdf to 2.6.1nb1 [dholland 2011-11-02]
 	Updated time/vixie-cron to 4.1nb2 [sbd 2011-11-02]
+	Updated devel/diffuse to 0.4.6 [wiz 2011-11-03]
