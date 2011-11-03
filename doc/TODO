@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10653 2011/11/03 00:52:31 wiz Exp $
+$NetBSD: TODO,v 1.10654 2011/11/03 01:38:25 taca Exp $
 
 Suggested new packages
 ======================
@@ -1186,6 +1186,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rxvt-unicode-9.10
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.2
+	o samba-3.5.12
 	o samba-3.6.1
 	o sarg-2.2.5
 	o sawfish-1.8.2
