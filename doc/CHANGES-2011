@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2757 2011/11/03 04:50:22 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2758 2011/11/03 06:05:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4333,3 +4333,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-supertabular version 4.1a [minskim 2011-11-03]
 	Added print/tex-supertabular-doc version 4.1a [minskim 2011-11-03]
 	Added net/p5-SOAP-Transport-TCP version 0.715 [obache 2011-11-03]
+	Added graphics/qiviewer version 0.5.0 [ryoon 2011-11-03]
