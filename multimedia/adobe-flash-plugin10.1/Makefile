@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2011/11/01 19:18:19 abs Exp $
+# $NetBSD: Makefile,v 1.14 2011/11/03 18:16:51 abs Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.adobe.com/
+HOMEPAGE=		http://www.adobe.com/products/flashplayer.html
 COMMENT=		Adobe Flash Player Browser plugin
 LICENSE=		flash-license
 
