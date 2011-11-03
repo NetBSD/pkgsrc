@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/03 01:33:45 minskim Exp $
+share/texmf-dist/doc/latex/supertabular/CATALOG
+share/texmf-dist/doc/latex/supertabular/ChangeLog
+share/texmf-dist/doc/latex/supertabular/MANIFEST
+share/texmf-dist/doc/latex/supertabular/README
+share/texmf-dist/doc/latex/supertabular/supertabular.pdf
