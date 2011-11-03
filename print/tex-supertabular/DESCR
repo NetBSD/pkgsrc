@@ -1,0 +1,3 @@
+Generally longtable is a little easier to use and more flexible, but
+supertabular has its place, since it will work in a few situations where
+longtable won't.
