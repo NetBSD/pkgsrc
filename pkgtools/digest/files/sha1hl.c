@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.7 2007/09/21 18:44:37 joerg Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.8 2011/11/04 23:58:14 cheusov Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -33,7 +33,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.7 2007/09/21 18:44:37 joerg Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.8 2011/11/04 23:58:14 cheusov Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #ifndef _DIAGASSERT
@@ -70,7 +70,7 @@ SHA1File(char *filename, char *buf)
     uint8_t buffer[BUFSIZ];
     SHA1_CTX ctx;
     int fd, oerrno;
-    size_t num;
+    ssize_t num;
 
     _DIAGASSERT(filename != NULL);
     /* XXX: buf may be NULL ? */
