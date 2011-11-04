@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/07/30 17:06:33 tron Exp $
+# $NetBSD: Makefile,v 1.40 2011/11/04 18:15:30 hans Exp $
 
 DISTNAME=	libtorrent-0.12.9
 CATEGORIES=	net
@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
-GCC_REQD+=		3.3
+GCC_REQD+=		4.2.1
 
 .include "../../mk/bsd.prefs.mk"
 
