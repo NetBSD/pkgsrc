@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2011/11/05 22:54:44 marino Exp $
+
+--- lib/cpp/src/transport/TSSLSocket.h.orig	2011-08-11 13:18:59.000000000 +0000
++++ lib/cpp/src/transport/TSSLSocket.h
+@@ -23,6 +23,7 @@
+ #include <string>
+ #include <boost/shared_ptr.hpp>
+ #include <openssl/ssl.h>
++#include <sys/socket.h>
+ #include "concurrency/Mutex.h"
+ #include "TSocket.h"
+ 

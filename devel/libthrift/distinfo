@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/09/12 15:51:02 taca Exp $
+$NetBSD: distinfo,v 1.6 2011/11/05 22:54:43 marino Exp $
 
 SHA1 (thrift-0.7.0.tar.gz) = b8f6877bc75878984355da4efe171ad99ff05b6a
 RMD160 (thrift-0.7.0.tar.gz) = d9db8ff077347134101cd017e086511c4317b052
 Size (thrift-0.7.0.tar.gz) = 2248326 bytes
+SHA1 (patch-ac) = 84032447dc90b7071d8f54fc56dd30584fbc8116
 SHA1 (patch-lib__rb__setup.rb) = 4e08bb4c0828306ee2391f5d5760e74a5df30a73
 SHA1 (patch-lib_erl_Makefile.in) = 74bfbc9f191f685cb175801a495ae4af0eaa6e69
