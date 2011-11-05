@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/05 13:35:34 minskim Exp $
+share/texmf-dist/tex/latex/csquotes/csq-compat.def
+share/texmf-dist/tex/latex/csquotes/csquotes.cfg
+share/texmf-dist/tex/latex/csquotes/csquotes.def
+share/texmf-dist/tex/latex/csquotes/csquotes.sty
