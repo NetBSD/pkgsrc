@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/05 15:53:45 ryoon Exp $
+share/nanoblogger/default/styles/nb_rusted.css
+share/nanoblogger/default/styles/nb_spring.css
+share/nanoblogger/default/styles/nb_steelblue.css
+share/nanoblogger/default/templates/category_inc_archive.htm
+share/nanoblogger/default/templates/category_inc_entry.htm
+share/nanoblogger/docs/examples/nanoblogger.bash_completion
+share/nanoblogger/docs/nanoblogger_de.html
+share/nanoblogger/docs/nanoblogger_fr.html
+share/nanoblogger/lang/de/help.txt
+share/nanoblogger/lang/de/messages.lang
+share/nanoblogger/lang/de/plugins.lang
+share/nanoblogger/lang/de/templates.lang
+share/nanoblogger/lang/es/help.txt
+share/nanoblogger/lang/es/messages.lang
+share/nanoblogger/lang/es/plugins.lang
+share/nanoblogger/lang/es/templates.lang
+share/nanoblogger/lang/fr/help.txt
+share/nanoblogger/lang/fr/messages.lang
+share/nanoblogger/lang/fr/plugins.lang
+share/nanoblogger/lang/fr/templates.lang
+share/nanoblogger/lang/tr/help.txt
+share/nanoblogger/lang/tr/messages.lang
+share/nanoblogger/lang/tr/plugins.lang
+share/nanoblogger/lang/tr/templates.lang
+share/nanoblogger/plugins/001_mymood.off
+share/nanoblogger/plugins/archive/category/include_listings.sh
+share/nanoblogger/plugins/archive/master_fullindex.off
+share/nanoblogger/plugins/entry/format/autotag-p.sh
+share/nanoblogger/plugins/entry/z0_excerpt.off
+share/nanoblogger/plugins/file_links.sh
+share/nanoblogger/plugins/fortune.sh
+share/nanoblogger/plugins/page/format/autopbr.sh
+share/nanoblogger/plugins/page/page_links.off
+share/nanoblogger/plugins/rss.sh
+share/nanoblogger/plugins/shortcode/yahoobuzz.sh
+share/nanoblogger/plugins/shortcode/youtube.sh
+share/nanoblogger/plugins/z001_articles_text.off
+@pkgdir share/nanoblogger/plugins/page/mod
+@pkgdir share/nanoblogger/plugins/entry/mod
