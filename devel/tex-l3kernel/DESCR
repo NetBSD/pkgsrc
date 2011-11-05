@@ -1,0 +1,9 @@
+The l3kernel bundle provides an implementation of the LaTeX3
+programmers' interface, as a set of packages that run under LaTeX 2e.
+The interface provides the foundation on which the LaTeX3 kernel and
+other future code are built: it is an API for TeX programmers. The
+packages are set up so that the LaTeX3 conventions can be used with
+regular LaTeX 2e packages. All the files of the bundle are also
+available in the Subversion (SVN) repository of the LaTeX3 Project. The
+bundle on CTAN is based on a snapshot of the SVN repository on
+2011-10-09.
