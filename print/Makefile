@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.513 2011/11/03 01:34:51 minskim Exp $
+# $NetBSD: Makefile,v 1.514 2011/11/05 13:30:43 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -188,6 +188,8 @@ SUBDIR+=	tex-block
 SUBDIR+=	tex-block-doc
 SUBDIR+=	tex-bold-extra
 SUBDIR+=	tex-bold-extra-doc
+SUBDIR+=	tex-booktabs
+SUBDIR+=	tex-booktabs-doc
 SUBDIR+=	tex-boxedminipage
 SUBDIR+=	tex-boxedminipage-doc
 SUBDIR+=	tex-braket
