@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2773 2011/11/05 23:01:43 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2774 2011/11/05 23:21:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4361,3 +4361,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/p5-RPC-XML to 0.76 [hiramatsu 2011-11-05]
 	Updated www/p5-Squatting-On-PSGI to 0.06 [hiramatsu 2011-11-05]
 	Updated security/p5-Net-OpenSSH to 0.52 [hiramatsu 2011-11-05]
+	Updated chat/ysm to 2.9.9.1 [wiz 2011-11-05]
