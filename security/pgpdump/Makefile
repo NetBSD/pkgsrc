@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2009/09/14 22:56:53 zafer Exp $
+# $NetBSD: Makefile,v 1.21 2011/11/05 09:17:04 sbd Exp $
 #
 
 DISTNAME=	pgpdump-0.26
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.mew.org/~kazu/proj/pgpdump/
 
@@ -19,4 +20,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/pgpdump
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
