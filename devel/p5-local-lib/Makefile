@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2011/08/14 12:26:49 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/05 13:30:44 hiramatsu Exp $
 #
 
-DISTNAME=	local-lib-1.006007
-PKGNAME=	p5-${DISTNAME:S/006007/6.7/}
-PKGREVISION=	2
+DISTNAME=	local-lib-1.008004
+PKGNAME=	p5-${DISTNAME:S/008004/8.4/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=lib/}
 
