@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/11 10:28:17 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/11/05 23:00:34 hiramatsu Exp $
 
-SHA1 (Squatting-On-PSGI-0.04.tar.gz) = 3a97ec5bdfe03ff8f926183a089cd24be67e67c0
-RMD160 (Squatting-On-PSGI-0.04.tar.gz) = 8a1d9b49f8a5b55e1fd86e4353c2e340cd515e13
-Size (Squatting-On-PSGI-0.04.tar.gz) = 42097 bytes
+SHA1 (Squatting-On-PSGI-0.06.tar.gz) = 29cd22a00d8f7fd2698a39ed2af3b32f1686d582
+RMD160 (Squatting-On-PSGI-0.06.tar.gz) = 1bf4d4474cb750627f59bb09ebc84e75bdf7dcee
+Size (Squatting-On-PSGI-0.06.tar.gz) = 45774 bytes
