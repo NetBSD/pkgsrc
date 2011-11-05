@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 15:59:14 agc Exp $
+$NetBSD: distinfo,v 1.7 2011/11/05 23:21:21 wiz Exp $
 
-SHA1 (ysmv7_2_8_1.tgz) = 10c31ffcda73874b79d69b3fca56fcf3ede1e369
-RMD160 (ysmv7_2_8_1.tgz) = 280e0c8fa56c34e6897d6d2549cf96fdc410c82a
-Size (ysmv7_2_8_1.tgz) = 192755 bytes
-SHA1 (patch-aa) = c66f04c4816a6dcc3de4a0ddd777c54283168f24
+SHA1 (ysmv7_2_9_9_1.tar.gz) = e81fc181018200a9bb85ea6ecd02fbdb869b3b09
+RMD160 (ysmv7_2_9_9_1.tar.gz) = 5f2c26ee9e287edec293b3f6032409e29571f229
+Size (ysmv7_2_9_9_1.tar.gz) = 305420 bytes
+SHA1 (patch-configure) = cfaf3d68be5144bd0fb819be682816698a778e7c
