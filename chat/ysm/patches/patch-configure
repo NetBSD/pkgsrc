@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2011/11/05 23:21:21 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2011-11-05 23:15:54.000000000 +0000
++++ configure
+@@ -4250,7 +4250,7 @@ fi
+ 
+ # final checks
+ 
+-if test "$vl_cv_lib_readline" == "no"; then
++if test "$vl_cv_lib_readline" = "no"; then
+ 	# are we using getline instead? do we have threads?
+ 	if test "$pthread_libs"; then
+ 		CMDOBJS="cmdline/getline.o $CMDOBJS"
