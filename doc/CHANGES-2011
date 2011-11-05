@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2764 2011/11/05 13:33:13 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2765 2011/11/05 13:38:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4344,3 +4344,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-booktabs-doc version 1.61803 [minskim 2011-11-05]
 	Updated mail/p5-Email-MIME to 1.910 [hiramatsu 2011-11-05]
 	Updated devel/p5-local-lib to 1.8.4 [hiramatsu 2011-11-05]
+	Added print/tex-csquotes version 5.1d [minskim 2011-11-05]
+	Added print/tex-csquotes-doc version 5.1d [minskim 2011-11-05]
