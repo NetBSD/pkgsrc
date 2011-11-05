@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2766 2011/11/05 15:46:13 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2767 2011/11/05 15:57:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4348,3 +4348,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-csquotes-doc version 5.1d [minskim 2011-11-05]
 	Added devel/tex-l3kernel version 0.2900 [minskim 2011-11-05]
 	Added devel/tex-l3kernel-doc version 0.2900 [minskim 2011-11-05]
+	Added www/nanoblogger version 3.4.2 [ryoon 2011-11-05]
+	Added www/nanoblogger-extra version 3.4.2 [ryoon 2011-11-05]
