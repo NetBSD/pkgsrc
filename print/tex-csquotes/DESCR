@@ -1,0 +1,12 @@
+This package provides advanced facilities for inline and display
+quotations. It is designed for a wide range of tasks ranging from the
+most simple applications to the more complex demands of formal
+quotations. The facilities include commands, environments, and
+user-definable 'smart quotes' which dynamically adjust to their context.
+Quotation marks are switched automatically if quotations are nested and
+they can be adjusted to the current language if the babel package is
+available. There are additional facilities designed to cope with the
+more specific demands of academic writing, especially in the humanities
+and the social sciences. All quote styles as well as the optional active
+quotes are freely configurable. The package is dependent on e-TeX, and
+requires the author's etoolbox package.
