@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2772 2011/11/05 20:27:19 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2773 2011/11/05 23:01:43 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4359,3 +4359,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/sqlite3-tcl to 3.7.9 [adam 2011-11-05]
 	Updated www/p5-Catalyst-Plugin-AutoRestart to 0.94 [hiramatsu 2011-11-05]
 	Updated net/p5-RPC-XML to 0.76 [hiramatsu 2011-11-05]
+	Updated www/p5-Squatting-On-PSGI to 0.06 [hiramatsu 2011-11-05]
+	Updated security/p5-Net-OpenSSH to 0.52 [hiramatsu 2011-11-05]
