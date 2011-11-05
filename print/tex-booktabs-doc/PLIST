@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/05 13:28:10 minskim Exp $
+share/texmf-dist/doc/latex/booktabs/COPYING
+share/texmf-dist/doc/latex/booktabs/README
+share/texmf-dist/doc/latex/booktabs/booktabs.pdf
