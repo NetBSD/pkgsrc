@@ -1,0 +1,11 @@
+The bundle holds prototype implementations of concepts for a LaTeX
+designer interface, to be used with the experimental LaTeX kernel as
+programming tools and kernel support. Packages provided in this release
+are: - l3keys2e, which makes the facilities of the kernel module l3keys
+available for use by LaTeX 2e packages; - xfrac, which provides flexible
+split-level fractions; - xparse, which provides a high-level interface
+for declaring document commands; and - xtemplate, which provides a means
+of defining generic functions using a key-value syntax. All the files of
+the bundle are also available in the Subversion (SVN) repository of the
+LaTeX3 Project. The bundle on CTAN is based on a snapshot of the SVN
+repository on 2011- 10-09.
