@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/03/11 12:57:46 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/05 08:07:12 sbd Exp $
 
 DISTNAME=	xylib-0.8
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xylib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,5 +18,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
