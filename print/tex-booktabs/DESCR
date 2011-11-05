@@ -1,0 +1,4 @@
+The package enhances the quality of tables in LaTeX, providing extra
+commands as well as behind-the-scenes optimisation. Guidelines are given
+as to what constitutes a good table in this context. From version 1.61,
+the package offers longtable compatibility.
