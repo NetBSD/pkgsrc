@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/05 15:44:38 minskim Exp $
+share/texmf-dist/makeindex/l3kernel/l3doc.ist
+share/texmf-dist/tex/latex/l3kernel/expl3.sty
+share/texmf-dist/tex/latex/l3kernel/l3basics.sty
+share/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
+share/texmf-dist/tex/latex/l3kernel/l3box.sty
+share/texmf-dist/tex/latex/l3kernel/l3clist.sty
+share/texmf-dist/tex/latex/l3kernel/l3coffins.sty
+share/texmf-dist/tex/latex/l3kernel/l3color.sty
+share/texmf-dist/tex/latex/l3kernel/l3doc.cls
+share/texmf-dist/tex/latex/l3kernel/l3expan.sty
+share/texmf-dist/tex/latex/l3kernel/l3file.sty
+share/texmf-dist/tex/latex/l3kernel/l3fp.sty
+share/texmf-dist/tex/latex/l3kernel/l3int.sty
+share/texmf-dist/tex/latex/l3kernel/l3io.sty
+share/texmf-dist/tex/latex/l3kernel/l3keys.sty
+share/texmf-dist/tex/latex/l3kernel/l3luatex.sty
+share/texmf-dist/tex/latex/l3kernel/l3msg.sty
+share/texmf-dist/tex/latex/l3kernel/l3names.sty
+share/texmf-dist/tex/latex/l3kernel/l3prg.sty
+share/texmf-dist/tex/latex/l3kernel/l3prop.sty
+share/texmf-dist/tex/latex/l3kernel/l3quark.sty
+share/texmf-dist/tex/latex/l3kernel/l3seq.sty
+share/texmf-dist/tex/latex/l3kernel/l3skip.sty
+share/texmf-dist/tex/latex/l3kernel/l3tl.sty
+share/texmf-dist/tex/latex/l3kernel/l3token.sty
