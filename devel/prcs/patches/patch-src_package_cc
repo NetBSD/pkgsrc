@@ -1,0 +1,24 @@
+$NetBSD: patch-src_package_cc,v 1.1 2011/11/05 23:27:16 dholland Exp $
+
+Fix an LP64 problem.
+
+--- src/package.cc~	2004-05-10 00:40:55.000000000 +0000
++++ src/package.cc
+@@ -212,7 +212,7 @@ static PrVoidError package_project(const
+ 	    close(pipefd[PIPE_READ_FD]);
+ 	    close(pipefd[PIPE_WRITE_FD]);
+ 
+-	    execl(gzip_command.path(), "-", "-f", NULL);
++	    execl(gzip_command.path(), "-", "-f", (char *)NULL);
+ 	    abort_child(gzip_command.path());
+ 	} else {
+ 	    dup2(pipefd[PIPE_WRITE_FD], outfd);
+@@ -326,7 +326,7 @@ PrPrcsExitStatusError unpackage_command(
+ 	    close(zipinpipefd[PIPE_READ_FD]);
+ 	    close(zipinpipefd[PIPE_WRITE_FD]);
+ 
+-	    execl(gzip_command.path(), "-", "-d","-f", NULL);
++	    execl(gzip_command.path(), "-", "-d","-f", (char *)NULL);
+ 	    abort_child(gzip_command.path());
+ 	} else if((writepid = fork()) < 0) {
+ 	    pthrow prcserror << "Fork failed, can't compress data" << perror;
