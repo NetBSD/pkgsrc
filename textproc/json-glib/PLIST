@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2010/10/16 13:34:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/11/05 15:56:47 drochner Exp $
 include/json-glib-1.0/json-glib/json-builder.h
 include/json-glib-1.0/json-glib/json-enum-types.h
 include/json-glib-1.0/json-glib/json-generator.h
 include/json-glib-1.0/json-glib/json-glib.h
 include/json-glib-1.0/json-glib/json-gobject.h
+include/json-glib-1.0/json-glib/json-gvariant.h
 include/json-glib-1.0/json-glib/json-parser.h
+include/json-glib-1.0/json-glib/json-path.h
 include/json-glib-1.0/json-glib/json-reader.h
 include/json-glib-1.0/json-glib/json-types.h
 include/json-glib-1.0/json-glib/json-version.h
@@ -13,6 +15,7 @@ lib/pkgconfig/json-glib-1.0.pc
 share/gtk-doc/html/json-glib/JsonBuilder.html
 share/gtk-doc/html/json-glib/JsonGenerator.html
 share/gtk-doc/html/json-glib/JsonParser.html
+share/gtk-doc/html/json-glib/JsonPath.html
 share/gtk-doc/html/json-glib/JsonReader.html
 share/gtk-doc/html/json-glib/annotation-glossary.html
 share/gtk-doc/html/json-glib/ch01.html
@@ -29,16 +32,17 @@ share/gtk-doc/html/json-glib/ix04.html
 share/gtk-doc/html/json-glib/ix05.html
 share/gtk-doc/html/json-glib/ix06.html
 share/gtk-doc/html/json-glib/ix07.html
+share/gtk-doc/html/json-glib/ix08.html
 share/gtk-doc/html/json-glib/json-advanced.html
 share/gtk-doc/html/json-glib/json-base.html
 share/gtk-doc/html/json-glib/json-glib-Boxed-Types-Serialization.html
 share/gtk-doc/html/json-glib/json-glib-GObject-Serialization.html
 share/gtk-doc/html/json-glib/json-glib-JSON-Array.html
+share/gtk-doc/html/json-glib/json-glib-JSON-GVariant-Integration.html
 share/gtk-doc/html/json-glib/json-glib-JSON-Node.html
 share/gtk-doc/html/json-glib/json-glib-JSON-Object.html
 share/gtk-doc/html/json-glib/json-glib-Serializable-Interface.html
 share/gtk-doc/html/json-glib/json-glib-Versioning-information.html
-share/gtk-doc/html/json-glib/json-glib.devhelp
 share/gtk-doc/html/json-glib/json-glib.devhelp2
 share/gtk-doc/html/json-glib/json-glib.html
 share/gtk-doc/html/json-glib/json-streams.html
@@ -48,3 +52,4 @@ share/gtk-doc/html/json-glib/license.html
 share/gtk-doc/html/json-glib/right.png
 share/gtk-doc/html/json-glib/style.css
 share/gtk-doc/html/json-glib/up.png
+share/locale/pl/LC_MESSAGES/json-glib-1.0.mo
