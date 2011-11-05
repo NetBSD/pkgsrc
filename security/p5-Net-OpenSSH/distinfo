@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2010/12/02 12:26:19 wiz Exp $
+$NetBSD: distinfo,v 1.10 2011/11/05 23:01:07 hiramatsu Exp $
 
-SHA1 (Net-OpenSSH-0.50.tar.gz) = 0c9ea18cba33f0de346a99226a81333dc0122a06
-RMD160 (Net-OpenSSH-0.50.tar.gz) = c3086debbc29b6acd61095bc533e09d99be8f7e0
-Size (Net-OpenSSH-0.50.tar.gz) = 38787 bytes
+SHA1 (Net-OpenSSH-0.52.tar.gz) = a86485b1ce47c9ad6689aa688ebbbfe029e6eed8
+RMD160 (Net-OpenSSH-0.52.tar.gz) = bbf896d4f33d86158dddfb536315078b245353ab
+Size (Net-OpenSSH-0.52.tar.gz) = 45704 bytes
