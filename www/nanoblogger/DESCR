@@ -1,0 +1,4 @@
+NanoBlogger is a small weblog engine written in Bash for the command
+line.  It uses common UNIX tools such as cat, grep, and sed to
+create static HTML content. It's free to use and modify under the
+GNU General Public License.
