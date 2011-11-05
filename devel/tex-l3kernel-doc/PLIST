@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/05 15:44:49 minskim Exp $
+share/texmf-dist/doc/latex/l3kernel/README
+share/texmf-dist/doc/latex/l3kernel/expl3.pdf
+share/texmf-dist/doc/latex/l3kernel/interface3.pdf
+share/texmf-dist/doc/latex/l3kernel/interface3.tex
+share/texmf-dist/doc/latex/l3kernel/l3styleguide.pdf
+share/texmf-dist/doc/latex/l3kernel/l3styleguide.tex
+share/texmf-dist/doc/latex/l3kernel/l3syntax-changes.pdf
+share/texmf-dist/doc/latex/l3kernel/l3syntax-changes.tex
+share/texmf-dist/doc/latex/l3kernel/source3.pdf
+share/texmf-dist/doc/latex/l3kernel/source3.tex
+share/texmf-dist/doc/latex/l3kernel/source3body.tex
