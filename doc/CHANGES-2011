@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2770 2011/11/05 18:34:47 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2771 2011/11/05 19:10:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4354,3 +4354,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/tex-l3packages-doc version 0.2900 [minskim 2011-11-05]
 	Updated editors/emacs-snapshot to 24.0.91.20111104 [minskim 2011-11-05]
 	Updated print/tex-oberdiek to 2011nb1 [minskim 2011-11-05]
+	Updated databases/sqlite3 to 3.7.9 [adam 2011-11-05]
+	Updated databases/sqlite3-docs to 3.7.9 [adam 2011-11-05]
+	Updated databases/sqlite3-tcl to 3.7.9 [adam 2011-11-05]
