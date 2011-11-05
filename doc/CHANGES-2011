@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2765 2011/11/05 13:38:48 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2766 2011/11/05 15:46:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4346,3 +4346,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-local-lib to 1.8.4 [hiramatsu 2011-11-05]
 	Added print/tex-csquotes version 5.1d [minskim 2011-11-05]
 	Added print/tex-csquotes-doc version 5.1d [minskim 2011-11-05]
+	Added devel/tex-l3kernel version 0.2900 [minskim 2011-11-05]
+	Added devel/tex-l3kernel-doc version 0.2900 [minskim 2011-11-05]
