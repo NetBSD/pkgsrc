@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2011/11/06 08:43:29 minskim Exp $
+$NetBSD: patch-aa,v 1.8 2011/11/06 09:20:41 minskim Exp $
 
 --- Makefile.in.orig	2011-06-16 14:01:09.000000000 +0000
 +++ Makefile.in
@@ -16,6 +16,15 @@ $NetBSD: patch-aa,v 1.7 2011/11/06 08:43:29 minskim Exp $
  
  sh_scripts = \
  	allcm \
+@@ -226,7 +224,7 @@ all_scripts = $(lua_scripts) $(perl_scri
+ @WIN32_TRUE@@WIN32_WRAP_TRUE@wrappers = $(all_scripts:=.exe)
+ @WIN32_TRUE@@WIN32_WRAP_TRUE@runscript = $(top_srcdir)/../../texk/texlive/w32_wrapper/runscript.exe
+ texmfdir = ${prefix}/$(scriptsdir)
+-dist_texmf_SCRIPTS = $(perl_scripts:=.pl) $(shell_scripts:=.sh)
++dist_texmf_SCRIPTS =
+ @WIN32_FALSE@dist_bin_SCRIPTS = $(sh_scripts)
+ CLEANFILES = $(nodist_bin_SCRIPTS)
+ dist_man1_MANS = \
 @@ -235,7 +233,6 @@ dist_man1_MANS = \
  	allneeded.man \
  	dvi2fax.man \
