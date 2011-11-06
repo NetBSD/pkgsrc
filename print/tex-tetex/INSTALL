@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL,v 1.1 2011/11/06 08:43:28 minskim Exp $
+
+case "${STAGE}" in
+POST-INSTALL)
+	@UPDMAP_SYS@
+	;;
+esac

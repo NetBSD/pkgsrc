@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2009/09/20 03:33:43 minskim Exp $
+$NetBSD: patch-bin_updmap-sys,v 1.1 2011/11/06 08:43:28 minskim Exp $
 
---- updmap-sys.orig	2006-01-17 13:41:51.000000000 -0800
-+++ updmap-sys
+--- bin/updmap-sys.orig	2011-05-20 09:20:02.000000000 +0000
++++ bin/updmap-sys
 @@ -20,11 +20,11 @@ export PATH
  # hack around a bug in zsh:
  test -n "${ZSH_VERSION+set}" && alias -g '${1+"$@"}'='"$@"'
