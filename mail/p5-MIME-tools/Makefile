@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/11/06 21:35:30 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2011/11/06 21:46:34 wiz Exp $
 
 DISTNAME=	MIME-tools-5.502
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	p5-File-Temp>=0.18:../../devel/p5-File-Temp
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-MIME-Base64>=3.03:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
+# missing dependency in Makefile, see
+# https://rt.cpan.org/Public/Bug/Display.html?id=72223
 DEPENDS+=	p5-Convert-BinHex-[0-9]*:../../converters/p5-Convert-BinHex
 # actually, test dependency
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
