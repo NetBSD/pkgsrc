@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/15 15:41:29 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/11/06 02:44:14 hiramatsu Exp $
 
-SHA1 (Net-Dict-2.07.tar.gz) = e96735711be9704b83f165470813bd23f1be7ca5
-RMD160 (Net-Dict-2.07.tar.gz) = 417d440c7278e6ebb5a778e5483dc409846aaa70
-Size (Net-Dict-2.07.tar.gz) = 30284 bytes
-SHA1 (patch-aa) = ed579c715c33e158d51bbf0cfd03021eaed476e7
+SHA1 (Net-Dict-2.08.tar.gz) = f8e77206f7c84534ebcb7cd4e6a0472f82acdf54
+RMD160 (Net-Dict-2.08.tar.gz) = c2cd03424866b6f96d6c1c9bfe226335d680cfb5
+Size (Net-Dict-2.08.tar.gz) = 32777 bytes
+SHA1 (patch-aa) = 7a9f201147c9ad8f202556258adbf8b34f781e86
