@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/11/06 11:49:50 marino Exp $
+# $NetBSD: Makefile,v 1.33 2011/11/06 17:30:06 wiz Exp $
 #
 
 DISTNAME=		skype_static-1.4.0.118-oss
@@ -14,7 +14,6 @@ HOMEPAGE=		http://www.skype.com/
 COMMENT=		P2P VoIP software
 LICENSE=		skype-license
 
-BROKEN=			'${DISTNAME}${EXTRACT_SUFX}' no longer available from Skype.com 
 RESTRICTED=		Complex terms for redistribution.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
