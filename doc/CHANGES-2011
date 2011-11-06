@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2778 2011/11/06 07:45:03 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2779 2011/11/06 07:59:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4369,3 +4369,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-CGI-PSGI to 0.15 [hiramatsu 2011-11-06]
 	Updated devel/p5-Module-Install-RTx to 0.29 [hiramatsu 2011-11-06]
 	Updated net/ruby-addressable to 2.2.6nb1 [obache 2011-11-06]
+	Updated net/mikutter to 0.0.4.571 [obache 2011-11-06]
