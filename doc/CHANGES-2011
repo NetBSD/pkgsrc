@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2780 2011/11/06 08:38:41 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2781 2011/11/06 08:45:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4371,3 +4371,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ruby-addressable to 2.2.6nb1 [obache 2011-11-06]
 	Updated net/mikutter to 0.0.4.571 [obache 2011-11-06]
 	Added print/tex-texlive.infra version 2011 [minskim 2011-11-06]
+	Updated print/tex-tetex to 3.0.24482 [minskim 2011-11-06]
+	Updated print/tex-tetex-doc to 3.0.24482 [minskim 2011-11-06]
+	Updated print/texlive-tetex to 2011 [minskim 2011-11-06]
