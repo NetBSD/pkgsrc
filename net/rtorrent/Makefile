@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2011/11/04 18:15:30 hans Exp $
+# $NetBSD: Makefile,v 1.45 2011/11/06 13:42:21 tron Exp $
 
 DISTNAME=	rtorrent-0.8.9
 PKGREVISION=	2
@@ -17,7 +17,6 @@ USE_LIBTOOL=		yes
 USE_NCURSES=		yes # chgat
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-GCC_REQD+=		4.2.1
 
 .include "../../mk/pthread.buildlink3.mk"
 LDFLAGS+=	${PTHREAD_LDFLAGS}
