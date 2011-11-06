@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2779 2011/11/06 07:59:28 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2780 2011/11/06 08:38:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4370,3 +4370,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Module-Install-RTx to 0.29 [hiramatsu 2011-11-06]
 	Updated net/ruby-addressable to 2.2.6nb1 [obache 2011-11-06]
 	Updated net/mikutter to 0.0.4.571 [obache 2011-11-06]
+	Added print/tex-texlive.infra version 2011 [minskim 2011-11-06]
