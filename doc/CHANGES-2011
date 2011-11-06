@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2782 2011/11/06 08:46:37 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2783 2011/11/06 08:48:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4375,3 +4375,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-tetex-doc to 3.0.24482 [minskim 2011-11-06]
 	Updated print/texlive-tetex to 2011 [minskim 2011-11-06]
 	Updated print/teTeX3-texmf to 3.0nb33 [minskim 2011-11-06]
+	Updated print/tex-glossaries to 3.01nb1 [minskim 2011-11-06]
