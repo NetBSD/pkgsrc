@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2008/09/05 02:07:51 dholland Exp $
+$NetBSD: distinfo,v 1.6.28.1 2011/11/06 20:31:01 spz Exp $
 
 SHA1 (cl74unix.tar.gz) = feae4a53af78b6c500a03c618dc11444e8b5dc47
 RMD160 (cl74unix.tar.gz) = a00a8de15e042080041076fcf3ad2592d9deb469
@@ -24,3 +24,4 @@ SHA1 (patch-ar) = aba9a829916af887d1115b51a57b449aced8535f
 SHA1 (patch-as) = 5d462ae1a1bf72ae1a0f19ff73d4b1b4226dbb32
 SHA1 (patch-at) = 83c69c1635a0c8f038bcd23d00acc4dc406c0684
 SHA1 (patch-au) = 4fe5ac20d7526e782143874b0ce9c7367716dbce
+SHA1 (patch-yacc_main_c) = 37171cb256ffc85faf4505525ec950d3e31e002c
