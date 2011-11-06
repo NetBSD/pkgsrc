@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2011/10/27 19:30:07 minskim Exp $
+# $NetBSD: Makefile,v 1.53 2011/11/06 08:46:11 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -27,6 +27,7 @@ DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 DEPENDS+=	tex-bibtopic-[0-9]*:../../print/tex-bibtopic
 DEPENDS+=	tex-block-[0-9]*:../../print/tex-block
 DEPENDS+=	tex-bold-extra-[0-9]*:../../print/tex-bold-extra
+DEPENDS+=	tex-booktabs-[0-9]*:../../print/tex-booktabs
 DEPENDS+=	tex-boxedminipage-[0-9]*:../../print/tex-boxedminipage
 DEPENDS+=	tex-braket-[0-9]*:../../print/tex-braket
 DEPENDS+=	tex-breakcites-[0-9]*:../../print/tex-breakcites
@@ -169,6 +170,7 @@ DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 DEPENDS+=	tex-subfigure-[0-9]*:../../print/tex-subfigure
 DEPENDS+=	tex-subfig-[0-9]*:../../print/tex-subfig
+DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 DEPENDS+=	tex-tabls-[0-9]*:../../print/tex-tabls
 DEPENDS+=	tex-t2-[0-9]*:../../print/tex-t2
 DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
@@ -242,7 +244,7 @@ TEX_MIXEDMAP_FILES+=	ccpl.map
 TEX_MIXEDMAP_FILES+=	vnr.map
 
 .include "../../print/kpathsea/texmf.mk"
-.include "../../print/texlive-tetex/map.mk"
+.include "../../print/tex-tetex/map.mk"
 
 post-extract:
 	rm -f ${WRKSRC}/ls-R
@@ -277,6 +279,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/base
 	rm -rf ${WRKSRC}/doc/latex/be*
 	rm -rf ${WRKSRC}/doc/latex/bibtopic
+	rm -rf ${WRKSRC}/doc/latex/booktabs
 	rm -rf ${WRKSRC}/doc/latex/ca*
 	rm -rf ${WRKSRC}/doc/latex/changebar
 	rm -rf ${WRKSRC}/doc/latex/c[v-z]*
@@ -310,7 +313,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/se*
 	rm -rf ${WRKSRC}/doc/latex/soul
 	rm -rf ${WRKSRC}/doc/latex/stmaryrd
-	rm -rf ${WRKSRC}/doc/latex/sub*
+	rm -rf ${WRKSRC}/doc/latex/su*
 	rm -rf ${WRKSRC}/doc/latex/ti*
 	rm -rf ${WRKSRC}/doc/latex/toc*
 	rm -rf ${WRKSRC}/doc/latex/tools
@@ -449,7 +452,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/base
 	rm -rf ${WRKSRC}/tex/latex/be*
 	rm -rf ${WRKSRC}/tex/latex/bibtopic
-	rm -rf ${WRKSRC}/tex/latex/bo[a-np-z]*
+	rm -rf ${WRKSRC}/tex/latex/bo*
 	rm -rf ${WRKSRC}/tex/latex/ca[m-z]*
 	rm -rf ${WRKSRC}/tex/latex/carlisle
 	rm -rf ${WRKSRC}/tex/latex/changebar
@@ -509,7 +512,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/showtags
 	rm -rf ${WRKSRC}/tex/latex/soul
 	rm -rf ${WRKSRC}/tex/latex/stmaryrd
-	rm -rf ${WRKSRC}/tex/latex/sub*
+	rm -rf ${WRKSRC}/tex/latex/su*
 	rm -rf ${WRKSRC}/tex/latex/t2
 	rm -rf ${WRKSRC}/tex/latex/tabls
 	rm -rf ${WRKSRC}/tex/latex/threeparttable

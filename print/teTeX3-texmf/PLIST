@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2011/10/27 19:30:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.30 2011/11/06 08:46:11 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2603,8 +2603,6 @@ share/texmf-dist/doc/latex/bbold/bbold.dvi
 share/texmf-dist/doc/latex/bibunits/00Readme
 share/texmf-dist/doc/latex/bibunits/bibtexall
 share/texmf-dist/doc/latex/bibunits/bibunits.dvi
-share/texmf-dist/doc/latex/booktabs/COPYING
-share/texmf-dist/doc/latex/booktabs/booktabs.dvi
 share/texmf-dist/doc/latex/ccaption/README
 share/texmf-dist/doc/latex/ccaption/ccaption.dvi
 share/texmf-dist/doc/latex/ccfonts/ccfonts.dvi
@@ -2819,10 +2817,6 @@ share/texmf-dist/doc/latex/sidecap/sidecap.dvi
 share/texmf-dist/doc/latex/slashbox/slashbox.dvi
 share/texmf-dist/doc/latex/slashbox/slashbox.tex
 share/texmf-dist/doc/latex/stdclsdv/stdclsdv.dvi
-share/texmf-dist/doc/latex/supertab/CATALOG
-share/texmf-dist/doc/latex/supertab/MANIFEST
-share/texmf-dist/doc/latex/supertab/README
-share/texmf-dist/doc/latex/supertab/supertabular.dvi
 share/texmf-dist/doc/latex/tex-refs/about.html
 share/texmf-dist/doc/latex/tex-refs/appendices.html
 share/texmf-dist/doc/latex/tex-refs/bibtex-bib-files.html
@@ -6334,7 +6328,6 @@ share/texmf-dist/tex/latex/bbm/ubbmtt.fd
 share/texmf-dist/tex/latex/bbold/Ubbold.fd
 share/texmf-dist/tex/latex/bbold/bbold.sty
 share/texmf-dist/tex/latex/bibunits/bibunits.sty
-share/texmf-dist/tex/latex/booktabs/booktabs.sty
 share/texmf-dist/tex/latex/calrsfs/calrsfs.sty
 share/texmf-dist/tex/latex/ccaption/ccaption.sty
 share/texmf-dist/tex/latex/ccfonts/ccfonts.sty
@@ -6657,7 +6650,6 @@ share/texmf-dist/tex/latex/showlabels/showlabels.sty
 share/texmf-dist/tex/latex/sidecap/sidecap.sty
 share/texmf-dist/tex/latex/slashbox/slashbox.sty
 share/texmf-dist/tex/latex/stdclsdv/stdclsdv.sty
-share/texmf-dist/tex/latex/supertabular/supertabular.sty
 share/texmf-dist/tex/latex/texmacs/TeXmacs.sty
 share/texmf-dist/tex/latex/textfit/textfit.sty
 share/texmf-dist/tex/latex/textmerg/textmerg.sty
