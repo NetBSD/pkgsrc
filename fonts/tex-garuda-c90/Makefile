@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/19 22:07:09 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/06 08:43:29 minskim Exp $
 
 DISTNAME=	garuda-c90
 PKGNAME=	tex-${DISTNAME}-2011
+PKGREVISION=	1
 TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org

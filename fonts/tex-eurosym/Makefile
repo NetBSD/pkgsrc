@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/11 02:16:39 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/06 08:43:31 minskim Exp $
 
 DISTNAME=	eurosym
 PKGNAME=	tex-${DISTNAME}-1.4
+PKGREVISION=	1
 CATEGORIES=	fonts
 DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}-20090910
 TEXLIVE_REV=	17265

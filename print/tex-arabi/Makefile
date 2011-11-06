@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/11/12 16:57:12 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/06 08:43:31 minskim Exp $
 
 DISTNAME=	arabi
 PKGNAME=	tex-${DISTNAME}-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	20072
 
 MAINTAINER=	kamelderouiche@yahoo.com

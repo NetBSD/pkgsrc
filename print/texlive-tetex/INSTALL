@@ -1,7 +1,0 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
-
-case "${STAGE}" in
-POST-INSTALL)
-	@UPDMAP_SYS@
-	;;
-esac
