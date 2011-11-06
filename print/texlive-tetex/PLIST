@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/09/13 04:08:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/11/06 08:43:28 minskim Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -20,8 +20,6 @@ bin/texconfig
 bin/texconfig-dialog
 bin/texconfig-sys
 bin/texlinks
-bin/updmap
-bin/updmap-sys
 man/man1/allcm.1
 man/man1/allec.1
 man/man1/allneeded.1
@@ -34,7 +32,6 @@ man/man1/kpsepath.1
 man/man1/kpsetool.1
 man/man1/kpsewhere.1
 man/man1/kpsexpand.1
-man/man1/mkjobtexmf.1
 man/man1/mktexfmt.1
 man/man1/ps2frag.1
 man/man1/pslatex.1
@@ -45,10 +42,7 @@ man/man1/texconfig.1
 man/man1/texdoctk.1
 man/man1/texlinks.1
 man/man1/thumbpdf.1
-man/man1/updmap-sys.1
-man/man1/updmap.1
 man/man5/fmtutil.cnf.5
-man/man5/updmap.cfg.5
 share/texmf/texconfig/README
 share/texmf/texconfig/g/generic
 share/texmf/texconfig/generic
@@ -57,4 +51,3 @@ share/texmf/texconfig/tcfmgr.map
 share/texmf/texconfig/v/vt100
 share/texmf/texconfig/x/xterm
 share/texmf/web2c/fmtutil.cnf
-share/texmf/web2c/updmap.cfg
