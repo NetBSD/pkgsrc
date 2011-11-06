@@ -1,23 +1,12 @@
-$NetBSD: patch-aa,v 1.31 2011/10/05 16:23:39 hans Exp $
-
-It's -Wl, not Wl.
+$NetBSD: patch-aa,v 1.32 2011/11/06 23:53:46 wiz Exp $
 
 Don't install compat links to libpng. Programs should use
 the pkg-config or libpng-config scripts to get the correct png library
 name.
 
---- Makefile.in.orig	2011-01-06 13:02:45.000000000 +0000
+--- Makefile.in.orig	2011-11-03 03:43:00.000000000 +0000
 +++ Makefile.in
-@@ -43,7 +43,7 @@ host_triplet = @host@
- check_PROGRAMS = pngtest$(EXEEXT) pngvalid$(EXEEXT)
- 
- #   Versioned symbols and restricted exports
--@HAVE_LD_VERSION_SCRIPT_TRUE@@HAVE_SOLARIS_LD_TRUE@am__append_1 = -Wl,-M Wl,libpng.vers
-+@HAVE_LD_VERSION_SCRIPT_TRUE@@HAVE_SOLARIS_LD_TRUE@am__append_1 = -Wl,-M -Wl,libpng.vers
- @HAVE_LD_VERSION_SCRIPT_TRUE@@HAVE_SOLARIS_LD_FALSE@am__append_2 = -Wl,--version-script=libpng.vers
- #   Only restricted exports when possible
- @HAVE_LD_VERSION_SCRIPT_FALSE@am__append_3 = -export-symbols libpng.sym
-@@ -1342,14 +1342,6 @@ install-data-hook:
+@@ -1356,14 +1356,6 @@ install-data-hook:
  install-exec-hook:
  	cd $(DESTDIR)$(bindir); rm -f libpng-config
  	cd $(DESTDIR)$(bindir); $(LN_S) $(PNGLIB_BASENAME)-config libpng-config
