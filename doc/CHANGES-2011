@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2787 2011/11/06 22:27:52 mishka Exp $
+$NetBSD: CHANGES-2011,v 1.2788 2011/11/06 23:53:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4380,3 +4380,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/bootstrap-mk-files to 20111106 [tcort 2011-11-06]
 	Updated mail/p5-MIME-tools to 5.502nb1 [wiz 2011-11-06]
 	Updated math/R-combinat to 0.0.8 [mishka 2011-11-06]
+	Updated graphics/png to 1.5.6 [wiz 2011-11-06]
