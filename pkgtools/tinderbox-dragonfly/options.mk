@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2011/11/02 21:13:17 marino Exp $
+# $NetBSD: options.mk,v 1.2 2011/11/06 19:51:13 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tbox-dfly
 PKG_SUPPORTED_OPTIONS=	pgsql mysql webui anybody lsof emailer
@@ -32,7 +32,7 @@ PLIST.WEBUI=	yes
 .if !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	p5-DBD-postgresql>=2.12:../../databases/p5-DBD-postgresql
 .if !empty(PKG_OPTIONS:Mwebui)
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_pgsql:../../databases/pear-MDB2_Driver_pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_pgsql-[0-9]*:../../databases/pear-MDB2_Driver_pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.1:../../databases/php-pgsql
 .endif
 .endif
