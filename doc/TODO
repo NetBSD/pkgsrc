@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10657 2011/11/06 12:55:22 bsiegert Exp $
+$NetBSD: TODO,v 1.10658 2011/11/06 23:47:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,10 +437,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20110908
 	o bzr-2.2.5
-	o bzr-2.4.1
+	o bzr-2.4.2
 	o bzr-svn-1.1.0
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
+	o caff-1.1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
@@ -482,6 +483,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o crossfire-client-gtk2-1.60.0
 	o cryptopp-5.6.0
 	o csound5-5.13
+	o cue-20100426 [pkg/45557]
 	o cups-1.5
 	o curl-7.22.0
 	o cvs2p4-2.5.5 [schmonz]
@@ -582,7 +584,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.31
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-2.0
+	o feh-2.1
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
@@ -819,7 +821,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jools-1.0
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
-	o json-glib-0.14.0
 	o jwm-2.1.0
 	o k3b-2.0.2
 	o kadu-0.6.5
@@ -834,7 +835,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdevelop-4.2.3
 	o kdiff3-0.9.96
 	o kdrill-6.5
-	o kid3-2.0
+	o kid3-2.0.1
 	o kile-2.1
 	o kipi-plugins-2.0.0
 	o kismet-2011.01r1
@@ -910,6 +911,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
 	o libmemcached-1.0.2
+	o libmicrohttpd-0.9.16
 	o libmilter-8.14.5
 	o libnasl-2.3.1
 	o libnids-1.24
@@ -953,7 +955,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.6.5
+	o mathomatic-15.7.0
 	o memtester-4.2.2
 	o merb-builder-0.9.13
 	o merb-parts-0.9.13
@@ -970,6 +972,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkvtoolnix-5.0.1
 	o moc-2.4.4
 	o modular-xorg-server-1.11.1 [wip]
+	o modular-xorg-server-1.11.2
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o moserial-2.30.0 [GNOME 2.30]
@@ -1062,7 +1065,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pari-galdata-2.2 [pkg/38117]
 	o patch-2.6.1
 	o patchutils-0.3.2
-	o pbzip2-1.1.5
+	o pbzip2-1.1.6
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
 	o pcre-8.20
@@ -1090,6 +1093,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plone-4.1
 	o ploticus-2.41
 	o ploticus-examples-230
+	o png-1.5.6
 	o po4a-0.41
 	o polkit-qt-0.99.0
 	o polsms-2.1.0
@@ -1111,7 +1115,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ptlib-2.8.3
 	o puf-1.0.0
 	o pulseaudio-1.0
-	o puppet-2.7.3
+	o puppet-2.7.6
 	o pure-ftpd-1.0.32
 	o putty-0.61
 	o puzzle-9173
@@ -1188,6 +1192,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o samba-3.5.12
 	o samba-3.6.1
+	o samba35-3.5.12
 	o sarg-2.2.5
 	o sawfish-1.8.2
 	o saxon-9.2
@@ -1329,6 +1334,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
+	o viewvc-1.1.12
 	o vifm-0.5
 	o vile-9.8
 	o vim-7.3
@@ -1366,7 +1372,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111029
+	o x264-devel-20111106
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
@@ -1504,6 +1510,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwud-1.0.3
 	o xzip-182
 	o yafc-1.1
+	o yasm-1.2.0
 	o yaz-4.1.7
 	o yodl-2.14.3
 	o yorick-2.1.05
