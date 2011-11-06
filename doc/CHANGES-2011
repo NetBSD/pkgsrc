@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2784 2011/11/06 19:32:29 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.2785 2011/11/06 21:01:30 tcort Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4377,3 +4377,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/teTeX3-texmf to 3.0nb33 [minskim 2011-11-06]
 	Updated print/tex-glossaries to 3.01nb1 [minskim 2011-11-06]
 	Updated lang/caml-light to 0.74nb2 [dholland 2011-11-06]
+	Updated pkgtools/bootstrap-mk-files to 20111106 [tcort 2011-11-06]
