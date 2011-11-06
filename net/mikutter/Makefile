@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2011/10/23 13:32:27 obache Exp $
+# $NetBSD: Makefile,v 1.27 2011/11/06 07:49:38 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.3.556
+DISTNAME=	mikutter.0.0.4.571
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -18,14 +18,14 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.5.1:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4.0:../../security/ruby-hmac
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk-[0-9]*:../../x11/ruby-gnome2-gtk
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=1.0.0:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.3.6:../../security/ruby-oauth
 # need included escape.rb
 #DEPENDS+=	${RUBY_PKGPREFIX}-escape-[0-9]*:../../textproc/ruby-escape
 DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3.1:../../devel/ruby-memoize
 DEPENDS+=	${RUBY_PKGPREFIX}-bsearch>=1.5:../../devel/ruby-bsearch
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.2.6:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.2.6nb1:../../net/ruby-addressable
 # notif-send
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 

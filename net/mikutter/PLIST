@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/07/30 02:00:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/11/06 07:49:38 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -9,23 +9,36 @@ share/mikutter/core/addon/bitly/test.bitly.rb
 share/mikutter/core/addon/bugreport.rb
 share/mikutter/core/addon/change_account.rb
 share/mikutter/core/addon/contextmenu.rb
+share/mikutter/core/addon/directmessage/directmessage.rb
+share/mikutter/core/addon/directmessage/dmlistview.rb
+share/mikutter/core/addon/directmessage/sender.rb
+share/mikutter/core/addon/directmessage/userlist.rb
 share/mikutter/core/addon/extract.rb
 share/mikutter/core/addon/followingcontrol.rb
 share/mikutter/core/addon/friend_timeline.rb
 share/mikutter/core/addon/libnotify/libnotify.rb
-share/mikutter/core/addon/list.rb
+share/mikutter/core/addon/list/list.rb
+share/mikutter/core/addon/list/liststream.rb
 share/mikutter/core/addon/mentions.rb
 share/mikutter/core/addon/notify.rb
-share/mikutter/core/addon/openimg.rb
+share/mikutter/core/addon/openimg/openimg.rb
+share/mikutter/core/addon/openimg/pattern_file.json
 share/mikutter/core/addon/profile.rb
 share/mikutter/core/addon/proxy/proxy.rb
 share/mikutter/core/addon/search.rb
 share/mikutter/core/addon/set_input.rb
 share/mikutter/core/addon/set_view.rb
-share/mikutter/core/addon/settings.rb
+share/mikutter/core/addon/settings/basic_settings.rb
+share/mikutter/core/addon/settings/builder.rb
+share/mikutter/core/addon/settings/listener.rb
+share/mikutter/core/addon/settings/select.rb
+share/mikutter/core/addon/settings/settings.rb
+share/mikutter/core/addon/settings/test_listener.rb
 share/mikutter/core/addon/shortcutkey.rb
 share/mikutter/core/addon/smartthread.rb
 share/mikutter/core/addon/streaming.rb
+share/mikutter/core/addon/tco/tco.rb
+share/mikutter/core/addon/tco/test_tco.rb
 share/mikutter/core/autotag.rb
 share/mikutter/core/chi.rb
 share/mikutter/core/config.rb
@@ -38,9 +51,12 @@ share/mikutter/core/initialize.rb
 share/mikutter/core/lib/lazy.rb
 share/mikutter/core/lib/miku/escape.rb
 share/mikutter/core/lib/piapro.rb
+share/mikutter/core/lib/reserver.rb
+share/mikutter/core/lib/test_unit_extensions.rb
 share/mikutter/core/lib/timelimitedqueue.rb
 share/mikutter/core/lib/timelimitedqueue/test/test_timelimitedqueue.rb
 share/mikutter/core/lib/timelimitedqueue/timelimitedqueue.rb
+share/mikutter/core/lib/uithreadonly.rb
 share/mikutter/core/lib/weakstorage.rb
 share/mikutter/core/message.rb
 share/mikutter/core/messageconverters.rb
@@ -60,6 +76,7 @@ share/mikutter/core/miku/primitive.rb
 share/mikutter/core/miku/symbol.rb
 share/mikutter/core/miku/symboltable.rb
 share/mikutter/core/miku/yamlisp.rb
+share/mikutter/core/miquire.rb
 share/mikutter/core/mui/cairo_cell_renderer_message.rb
 share/mikutter/core/mui/cairo_coordinate_module.rb
 share/mikutter/core/mui/cairo_icon_over_button.rb
@@ -89,9 +106,9 @@ share/mikutter/core/mui/gtk_skin.rb
 share/mikutter/core/mui/gtk_timeline_utils.rb
 share/mikutter/core/mui/gtk_userlist.rb
 share/mikutter/core/mui/gtk_webicon.rb
+share/mikutter/core/plugin.rb
 share/mikutter/core/plugin/ChangeLog
 share/mikutter/core/plugin/gui.rb
-share/mikutter/core/plugin/plugin.rb
 share/mikutter/core/plugin/template
 share/mikutter/core/post.rb
 share/mikutter/core/retriever.rb
@@ -135,12 +152,15 @@ share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e0000496.au
 share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e00008c6.au
 share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
+share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
 share/mikutter/core/test/test_cairo_textselector.rb
 share/mikutter/core/test/test_entity.rb
 share/mikutter/core/test/test_message.rb
 share/mikutter/core/test/test_messageconverters.rb
+share/mikutter/core/test/test_miquire.rb
 share/mikutter/core/test/test_plugin.rb
+share/mikutter/core/test/test_post.rb
 share/mikutter/core/test/test_retriever.rb
 share/mikutter/core/test/test_user.rb
 share/mikutter/core/test/test_utils.rb
@@ -153,4 +173,3 @@ share/mikutter/core/utils.rb
 share/mikutter/core/watch.rb
 share/mikutter/mikutter.rb
 share/mikutter/plugin/WHATSTHIS
-@pkgdir share/mikutter/core/hatsunelisp
