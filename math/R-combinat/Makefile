@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/12/11 19:27:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/06 22:24:45 mishka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -8,7 +8,7 @@ HOMEPAGE=	${R_HOMEPAGE_BASE}/combinat/
 COMMENT=	Routines for combinatorics
 
 R_PKGNAME=	combinat
-R_PKGVER=	0.0-7
+R_PKGVER=	0.0-8
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
