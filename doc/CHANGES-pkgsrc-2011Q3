@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.31 2011/11/02 22:58:26 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.32 2011/11/06 20:33:04 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -137,3 +137,7 @@ Pullup ticket #3589 - requested by spz
 devel/rt3: fix compatibility with "lang/perl5"
 Pullup ticket #3590 - requested by spz
 mail/majordomo: fix compatibility with "lang/perl5"
+Pullup ticket #3591 - requested by tron
+www/squid31: security update
+Pullup ticket #3592 - requested by dholland
+lang/caml-light: security patch
