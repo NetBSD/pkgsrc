@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2775 2011/11/06 00:55:00 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.2776 2011/11/06 02:46:18 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4363,3 +4363,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/p5-Net-OpenSSH to 0.52 [hiramatsu 2011-11-05]
 	Updated chat/ysm to 2.9.9.1 [wiz 2011-11-05]
 	Updated devel/mr to 1.06 [schmonz 2011-11-06]
+	Updated devel/p5-MooseX-LazyRequire to 0.07 [hiramatsu 2011-11-06]
+	Updated textproc/p5-Net-Dict to 2.08 [hiramatsu 2011-11-06]
+	Updated www/p5-CGI-PSGI to 0.15 [hiramatsu 2011-11-06]
+	Updated devel/p5-Module-Install-RTx to 0.29 [hiramatsu 2011-11-06]
