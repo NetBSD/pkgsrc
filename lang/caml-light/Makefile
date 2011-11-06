@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/06/30 00:07:18 joerg Exp $
+# $NetBSD: Makefile,v 1.11.20.1 2011/11/06 20:31:01 spz Exp $
 #
 
 DISTNAME=		cl74unix
 PKGNAME=		caml-light-0.74
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.inria.fr/lang/caml-light/
 
