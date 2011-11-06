@@ -1,46 +1,48 @@
-$NetBSD: patch-aa,v 1.6 2010/09/13 04:08:32 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2011/11/06 08:43:29 minskim Exp $
 
---- Makefile.in.orig	2010-06-06 18:04:05.000000000 +0000
+--- Makefile.in.orig	2011-06-16 14:01:09.000000000 +0000
 +++ Makefile.in
-@@ -196,7 +196,6 @@ dist_bin_SCRIPTS = \
- 	kpsetool \
- 	kpsewhere \
- 	ps2frag \
--	ps4pdf \
- 	pslatex \
- 	rubibtex \
- 	rumakeindex \
-@@ -211,14 +210,8 @@ dist_man1_MANS = \
- 	allcm.man \
- 	allec.man \
+@@ -195,11 +195,9 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ ACLOCAL_AMFLAGS = -I ../../m4
+-perl_scripts = \
+-	updmap
++perl_scripts =
+ 
+-shell_scripts = \
+-	updmap-sys
++shell_scripts =
+ 
+ sh_scripts = \
+ 	allcm \
+@@ -235,7 +233,6 @@ dist_man1_MANS = \
  	allneeded.man \
--	context/ctxtools.man \
--	context/mptopdf.man \
--	context/pstopdf.man \
--	context/texexec.man \
--	context/texmfstart.man \
  	dvi2fax.man \
  	dvired.man \
 -	e2pall.man \
  	fmtutil.man \
  	fontinst.man \
  	kpsetool.man \
-@@ -238,12 +231,12 @@ dist_man5_MANS = \
- 	fmtutil.cnf.5 \
- 	updmap.cfg.5
+@@ -247,14 +244,12 @@ dist_man1_MANS = \
+ 	texconfig.man \
+ 	texdoctk.man \
+ 	texlinks.man \
+-	thumbpdf.man \
+-	updmap.man
++	thumbpdf.man
  
--tetexdocdir = ${prefix}/texmf/doc/tetex
-+tetexdocdir = ${prefix}/texmf
- dist_tetexdoc_DATA = \
- 	doc/TETEXDOC.pdf \
- 	doc/teTeX-FAQ
+ dist_man5_MANS = \
+-	fmtutil.cnf.5 \
+-	updmap.cfg.5
++	fmtutil.cnf.5
  
 -texconfdir = ${prefix}
 +texconfdir = ${prefix}/share
  nobase_dist_texconf_DATA = \
  	texmf/texconfig/README \
  	texmf/texconfig/g/generic \
-@@ -251,7 +244,7 @@ nobase_dist_texconf_DATA = \
+@@ -262,7 +257,7 @@ nobase_dist_texconf_DATA = \
  	texmf/texconfig/v/vt100 \
  	texmf/texconfig/x/xterm
  
@@ -49,14 +51,22 @@ $NetBSD: patch-aa,v 1.6 2010/09/13 04:08:32 minskim Exp $
  dist_texconfig_SCRIPTS = tcfmgr
  dist_texconfig_DATA = tcfmgr.map
  web2cdir = ${prefix}/texmf/web2c
-@@ -754,8 +747,8 @@ info: info-am
+@@ -275,8 +270,7 @@ bin_links = \
  
- info-am:
+ man1_links = $(bin_links) \
+ 	fmtutil:fmtutil-sys \
+-	texconfig:texconfig-sys \
+-	updmap:updmap-sys
++	texconfig:texconfig-sys
  
--install-data-am: install-dist_tetexdocDATA install-dist_texconfigDATA \
--	install-dist_texconfigSCRIPTS install-dist_web2cDATA \
-+install-data-am: install-dist_texconfigDATA \
-+	install-dist_texconfigSCRIPTS \
- 	install-man install-nobase_dist_texconfDATA
+ EXTRA_DIST = README.texdoctk old-fontinst.bat old-updmap
+ run_texlinks = $(DESTDIR)$(bindir)/texlinks -v \
+@@ -810,7 +804,7 @@ info-am:
+ 
+ install-data-am: install-dist_texconfigDATA \
+ 	install-dist_texconfigSCRIPTS install-dist_texmfSCRIPTS \
+-	install-dist_web2cDATA install-man \
++	install-man \
+ 	install-nobase_dist_texconfDATA
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook

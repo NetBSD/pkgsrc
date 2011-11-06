@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/11/09 19:01:42 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2011/11/06 08:43:31 minskim Exp $
 
 DISTNAME=	chemarrow
 PKGNAME=	tex-${DISTNAME}-0.9
+PKGREVISION=	1
 TEXLIVE_REV=	17146
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

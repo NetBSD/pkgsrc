@@ -1,0 +1,74 @@
+$NetBSD: patch-bin_updmap,v 1.1 2011/11/06 08:43:28 minskim Exp $
+
+--- bin/updmap.orig	2011-06-17 23:45:54.000000000 +0000
++++ bin/updmap
+@@ -8,7 +8,7 @@
+ 
+ BEGIN {
+   $^W=1;
+-  chomp($TEXMFROOT = `kpsewhich -var-value=TEXMFROOT`);
++  chomp($TEXMFROOT = `@KPSEWHICH@ -var-value=TEXMFROOT`);
+   unshift (@INC, "$TEXMFROOT/tlpkg");
+ }
+ 
+@@ -453,7 +453,7 @@ sub locateWeb2c {
+   my @files = @_;
+   return @files if ($#files < 0);
+ 
+-  @files = split (/\n/, `kpsewhich --format="web2c files" @files`);
++  @files = split (/\n/, `@KPSEWHICH@ --format="web2c files" @files`);
+   if (wantarray) {
+     return @files;
+   }
+@@ -470,7 +470,7 @@ sub locateMap {
+   my @maps = @_;
+   return @maps if ($#maps < 0);
+ 
+-  my @files = `kpsewhich --format=map @maps`;
++  my @files = `@KPSEWHICH@ --format=map @maps`;
+   chomp @files;
+ 
+   foreach my $map (@maps) {
+@@ -672,7 +672,7 @@ sub setupOutputDir {
+     my $tf;
+     # Try TEXMFVAR tree. Use it if variable is set and $rel can
+     # be written.
+-    chomp($tf = `kpsewhich --var-value=TEXMFVAR`);
++    chomp($tf = `@KPSEWHICH@ --var-value=TEXMFVAR`);
+     if ($tf) {
+       &mkdirhier("$tf/$rel");
+       if (! -w "$tf/$rel") {
+@@ -697,13 +697,13 @@ sub setupDestDir {
+ #
+ sub setupCfgFile {
+   if (! $cnfFile) {
+-    my $tf = `kpsewhich --var-value=TEXMFCONFIG`;
++    my $tf = `@KPSEWHICH@ --var-value=TEXMFCONFIG`;
+     chomp($tf);
+     if ($tf && ! -f "$tf/web2c/$cnfFileShort") {
+       &mkdirhier("$tf/web2c") if (! -d "$tf/web2c");
+       if (-d "$tf/web2c" && -w "$tf/web2c") {
+         unlink "$tf/web2c/$cnfFileShort";
+-        my $original_cfg=`kpsewhich updmap.cfg`;
++        my $original_cfg=`@KPSEWHICH@ updmap.cfg`;
+         chomp($original_cfg);
+         print("copy $original_cfg => $tf/web2c/$cnfFileShort\n") if !$quiet;
+         $newcnf="$tf/web2c/$cnfFileShort";
+@@ -839,7 +839,7 @@ sub mkMaps {
+   $cache=1;
+ 
+   if (! $dry_run) {
+-    my $TEXMFVAR = `kpsewhich --var-value=TEXMFVAR`;
++    my $TEXMFVAR = `@KPSEWHICH@ --var-value=TEXMFVAR`;
+     chomp($TEXMFVAR);
+     $logfile = "$TEXMFVAR/web2c/updmap.log";
+     mkdirhier "$TEXMFVAR/web2c";
+@@ -1072,7 +1072,7 @@ sub initVars {
+   $cnfFile = "";
+   $cnfFileShort = "updmap.cfg";
+   $outputdir = "";
+-  chomp($TEXMFMAIN =`kpsewhich --var-value=TEXMFMAIN`);
++  chomp($TEXMFMAIN =`@KPSEWHICH@ --var-value=TEXMFMAIN`);
+ 
+   @psADOBE = (
+        's/ URWGothicL-Demi / AvantGarde-Demi /',
