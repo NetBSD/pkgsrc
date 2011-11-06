@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/15 00:24:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/06 08:43:28 minskim Exp $
+man/man1/updmap-sys.1
+man/man1/updmap.1
+man/man5/updmap.cfg.5
 share/texmf/doc/tetex/TETEXDOC.pdf
 share/texmf/doc/tetex/teTeX-FAQ

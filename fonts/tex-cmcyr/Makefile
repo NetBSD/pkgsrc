@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/13 05:29:31 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/06 08:43:29 minskim Exp $
 
 DISTNAME=	cmcyr
 PKGNAME=	tex-${DISTNAME}-2009
+PKGREVISION=	1
 TEXLIVE_REV=	16696
 DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
 
