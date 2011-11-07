@@ -1,15 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/07/18 19:06:02 drochner Exp $
+$NetBSD: distinfo,v 1.3 2011/11/07 12:04:34 drochner Exp $
 
-SHA1 (boxbackup-0.10.tgz) = 60bee707c6bb59f471546ae83ad0b89625228ded
-RMD160 (boxbackup-0.10.tgz) = 26f906f37a3b095026ddf12c9284e16515ceb752
-Size (boxbackup-0.10.tgz) = 842450 bytes
-SHA1 (patch-aa) = 65a0144403f79858bcfb4d66d7186cda26f63078
-SHA1 (patch-ab) = dfa44b4a6ad7b016794edc666b8a7e8fa9808af3
-SHA1 (patch-ac) = ddd8e76ad509901f067f63352323a22ce03f4b10
-SHA1 (patch-ad) = 96acb9c93f082078d9641fc32ac6865b99915028
-SHA1 (patch-ae) = f757fe795f9a82c74928b75eb53e9ee9093bcd34
-SHA1 (patch-af) = 2268c52473c12bd31b0bd1cf60849446d61b00a9
-SHA1 (patch-ag) = 9db7ff785d78fac5318c9b6f91aa2e42f1debf66
-SHA1 (patch-ah) = f010964a4d06a8f724fdf3695e8e854d845c6446
-SHA1 (patch-ai) = 106c5b57765e203b7a912e5c20341004ae4d6b67
-SHA1 (patch-aj) = 7b413d31d711492edad876d87897ded2fabde0d3
+SHA1 (boxbackup-0.11.1.tgz) = 254253dbfc8cbfc2e5272d1e3589d4d73ccf3597
+RMD160 (boxbackup-0.11.1.tgz) = 17553b3ff06d19f353dbadc0166b7dceaa11c271
+Size (boxbackup-0.11.1.tgz) = 1863270 bytes
