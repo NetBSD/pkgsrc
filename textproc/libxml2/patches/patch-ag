@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.8 2009/11/15 12:48:25 drochner Exp $
+$NetBSD: patch-ag,v 1.8.16.1 2011/11/07 22:28:09 tron Exp $
 
---- encoding.c.orig	2009-09-24 17:31:59.000000000 +0200
+--- encoding.c.orig	2010-11-04 16:40:06.000000000 +0000
 +++ encoding.c
-@@ -1376,6 +1376,9 @@ xmlInitCharEncodingHandlers(void) {
+@@ -1429,6 +1429,9 @@ xmlInitCharEncodingHandlers(void) {
      xmlRegisterCharEncodingHandlersISO8859x ();
  #endif
  #endif
@@ -12,3 +12,21 @@ $NetBSD: patch-ag,v 1.8 2009/11/15 12:48:25 drochner Exp $
  
  }
  
+@@ -1928,7 +1931,7 @@ xmlCharEncFirstLineInt(xmlCharEncodingHa
+     if (in == NULL) return(-1);
+ 
+     /* calculate space available */
+-    written = out->size - out->use;
++    written = out->size - out->use - 1; /* count '\0' */
+     toconv = in->use;
+     /*
+      * echo '<?xml version="1.0" encoding="UCS4"?>' | wc -c => 38
+@@ -2059,7 +2062,7 @@ xmlCharEncInFunc(xmlCharEncodingHandler 
+     toconv = in->use;
+     if (toconv == 0)
+         return (0);
+-    written = out->size - out->use;
++    written = out->size - out->use - 1; /* count '\0' */
+     if (toconv * 2 >= written) {
+         xmlBufferGrow(out, out->size + toconv * 2);
+         written = out->size - out->use - 1;
