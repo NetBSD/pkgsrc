@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2789 2011/11/07 03:45:18 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.2790 2011/11/07 08:28:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4382,3 +4382,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/R-combinat to 0.0.8 [mishka 2011-11-06]
 	Updated graphics/png to 1.5.6 [wiz 2011-11-06]
 	Updated www/ikiwiki to 3.20111106 [schmonz 2011-11-07]
+	Updated print/kpathsea to 6.0.1nb1 [minskim 2011-11-07]
