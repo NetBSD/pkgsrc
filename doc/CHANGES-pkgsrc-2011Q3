@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.32 2011/11/06 20:33:04 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.33 2011/11/07 22:29:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -141,3 +141,5 @@ Pullup ticket #3591 - requested by tron
 www/squid31: security update
 Pullup ticket #3592 - requested by dholland
 lang/caml-light: security patch
+Pullup ticket #3593 - requested by spz
+textproc/libxml2: security patch
