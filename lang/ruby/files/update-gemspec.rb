@@ -1,7 +1,7 @@
 #!/usr/pkg/bin/ruby
 # -*- coding: utf-8 -*-
 #
-# $NetBSD: update-gemspec.rb,v 1.2 2011/09/13 03:18:29 taca Exp $
+# $NetBSD: update-gemspec.rb,v 1.3 2011/11/07 11:56:25 taca Exp $
 #
 # Copyright (c) 2011 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,9 +36,15 @@
 # This is a quick and dirty tool which updates gemspec file:
 #
 require 'rubygems'
-require 'yaml'
 require 'fileutils'
 require 'optparse'
+
+begin
+  # Since newer rubygems load psych instead of syck, don't load yaml directly.
+  Gem.load_yaml
+rescue NoMethodError
+  # Older rubygems don't have load_yaml() and don't know about psych.
+end
 
 class GemSpecUpdater
   OrigSuffix = '.orig_gemspec'
