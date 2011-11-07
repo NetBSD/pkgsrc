@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.13 2011/09/14 17:21:08 hans Exp $
+$NetBSD: patch-configure,v 1.14 2011/11/07 10:43:35 drochner Exp $
 
---- configure.orig	2011-06-21 21:29:25.000000000 +0200
-+++ configure	2011-09-12 17:35:52.888456457 +0200
-@@ -2404,6 +2404,10 @@ case $target_os in
+--- configure.orig	2011-11-04 21:30:00.000000000 +0000
++++ configure
+@@ -2412,6 +2412,10 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -13,7 +13,7 @@ $NetBSD: patch-configure,v 1.13 2011/09/14 17:21:08 hans Exp $
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          ;;
-@@ -2627,10 +2631,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -2637,10 +2641,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -30,7 +30,7 @@ $NetBSD: patch-configure,v 1.13 2011/09/14 17:21:08 hans Exp $
  
  if enabled alpha; then
  
-@@ -2963,7 +2970,7 @@ else
+@@ -2974,7 +2981,7 @@ else
  fi
  enabled sdl && add_cflags $sdl_cflags && add_extralibs $sdl_libs
  
@@ -39,7 +39,7 @@ $NetBSD: patch-configure,v 1.13 2011/09/14 17:21:08 hans Exp $
  
  check_header linux/fb.h
  check_header linux/videodev.h
-@@ -3049,6 +3056,7 @@ check_ldflags -Wl,--warn-common
+@@ -3060,6 +3067,7 @@ check_ldflags -Wl,--warn-common
  check_ldflags -Wl,-rpath-link,libpostproc -Wl,-rpath-link,libswscale -Wl,-rpath-link,libavfilter -Wl,-rpath-link,libavdevice -Wl,-rpath-link,libavformat -Wl,-rpath-link,libavcodec -Wl,-rpath-link,libavutil
  test_ldflags -Wl,-Bsymbolic && append SHFLAGS -Wl,-Bsymbolic
  
@@ -47,7 +47,7 @@ $NetBSD: patch-configure,v 1.13 2011/09/14 17:21:08 hans Exp $
  echo "X{};" > $TMPV
  if test_ldflags -Wl,--version-script,$TMPV; then
      append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
-@@ -3061,6 +3069,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
+@@ -3072,6 +3080,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
  void ff_foo(void) {}
  EOF
  fi
@@ -55,12 +55,3 @@ $NetBSD: patch-configure,v 1.13 2011/09/14 17:21:08 hans Exp $
  
  if enabled small; then
      add_cflags $size_cflags
-@@ -3148,7 +3157,7 @@ check_deps $CONFIG_LIST       \
- 
- enabled asm || { arch=c; disable $ARCH_LIST $ARCH_EXT_LIST; }
- 
--if test $target_os == "haiku"; then
-+if test $target_os = "haiku"; then
-     disable memalign
-     disable posix_memalign
- fi
