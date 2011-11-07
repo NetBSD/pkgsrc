@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2794 2011/11/07 15:37:05 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2795 2011/11/07 20:27:30 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4400,3 +4400,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Software-License to 0.103.004 [hiramatsu 2011-11-07]
 	Updated www/p5-CSS to 1.09 [hiramatsu 2011-11-07]
 	Updated mail/postfix to 2.8.7 [taca 2011-11-07]
+	Updated pkgtools/pkgfind to 20111022 [shattered 2011-11-07]
