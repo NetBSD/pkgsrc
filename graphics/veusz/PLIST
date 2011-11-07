@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/07/12 19:08:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/11/07 18:00:25 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -104,12 +104,18 @@ ${PYSITELIB}/veusz/document/doc.pyo
 ${PYSITELIB}/veusz/document/emf_export.py
 ${PYSITELIB}/veusz/document/emf_export.pyc
 ${PYSITELIB}/veusz/document/emf_export.pyo
+${PYSITELIB}/veusz/document/export.py
+${PYSITELIB}/veusz/document/export.pyc
+${PYSITELIB}/veusz/document/export.pyo
 ${PYSITELIB}/veusz/document/mime.py
 ${PYSITELIB}/veusz/document/mime.pyc
 ${PYSITELIB}/veusz/document/mime.pyo
 ${PYSITELIB}/veusz/document/operations.py
 ${PYSITELIB}/veusz/document/operations.pyc
 ${PYSITELIB}/veusz/document/operations.pyo
+${PYSITELIB}/veusz/document/painthelper.py
+${PYSITELIB}/veusz/document/painthelper.pyc
+${PYSITELIB}/veusz/document/painthelper.pyo
 ${PYSITELIB}/veusz/document/readcsv.py
 ${PYSITELIB}/veusz/document/readcsv.pyc
 ${PYSITELIB}/veusz/document/readcsv.pyo
@@ -332,6 +338,9 @@ ${PYSITELIB}/veusz/widgets/root.pyo
 ${PYSITELIB}/veusz/widgets/shape.py
 ${PYSITELIB}/veusz/widgets/shape.pyc
 ${PYSITELIB}/veusz/widgets/shape.pyo
+${PYSITELIB}/veusz/widgets/ternary.py
+${PYSITELIB}/veusz/widgets/ternary.pyc
+${PYSITELIB}/veusz/widgets/ternary.pyo
 ${PYSITELIB}/veusz/widgets/textlabel.py
 ${PYSITELIB}/veusz/widgets/textlabel.pyc
 ${PYSITELIB}/veusz/widgets/textlabel.pyo
@@ -371,6 +380,7 @@ ${PYSITELIB}/veusz/windows/icons/button_page.svg
 ${PYSITELIB}/veusz/windows/icons/button_polar.svg
 ${PYSITELIB}/veusz/windows/icons/button_polygon.svg
 ${PYSITELIB}/veusz/windows/icons/button_rect.svg
+${PYSITELIB}/veusz/windows/icons/button_ternary.svg
 ${PYSITELIB}/veusz/windows/icons/button_vectorfield.svg
 ${PYSITELIB}/veusz/windows/icons/button_xy.svg
 ${PYSITELIB}/veusz/windows/icons/downarrow.png
