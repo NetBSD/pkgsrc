@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/29 02:32:55 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/07 08:29:13 minskim Exp $
 share/texmf/web2c/amiga-pl.tcx
-share/texmf/web2c/context.cnf
 share/texmf/web2c/cp1250cs.tcx
 share/texmf/web2c/cp1250pl.tcx
 share/texmf/web2c/cp1250t1.tcx
