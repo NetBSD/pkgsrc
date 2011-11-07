@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2011/11/06 13:42:21 tron Exp $
+# $NetBSD: Makefile,v 1.46 2011/11/07 13:10:31 hans Exp $
 
 DISTNAME=	rtorrent-0.8.9
 PKGREVISION=	2
@@ -17,6 +17,15 @@ USE_LIBTOOL=		yes
 USE_NCURSES=		yes # chgat
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_ARCH} == "alpha" || \
+    ${MACHINE_ARCH} == "i386" || \
+    ${MACHINE_ARCH} == "x86_64"
+GCC_REQD+=		3.3
+.else
+GCC_REQD+=		4.2.1
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 LDFLAGS+=	${PTHREAD_LDFLAGS}
