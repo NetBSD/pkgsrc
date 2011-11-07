@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.17 2011/04/28 11:16:35 hans Exp $
+@comment $NetBSD: PLIST.common,v 1.18 2011/11/07 11:03:05 drochner Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -20,11 +20,10 @@ include/gphoto2/gphoto2-version.h
 include/gphoto2/gphoto2-widget.h
 include/gphoto2/gphoto2.h
 lib/libgphoto2.la
-lib/libgphoto2/print-camera-list
-lib/libgphoto2_port.la
 lib/libgphoto2/${PKGVERSION}/adc65.la
 lib/libgphoto2/${PKGVERSION}/agfa_cl20.la
 lib/libgphoto2/${PKGVERSION}/aox.la
+lib/libgphoto2/${PKGVERSION}/ax203.la
 lib/libgphoto2/${PKGVERSION}/barbie.la
 lib/libgphoto2/${PKGVERSION}/canon.la
 lib/libgphoto2/${PKGVERSION}/casio_qv.la
@@ -42,6 +41,7 @@ lib/libgphoto2/${PKGVERSION}/iclick.la
 lib/libgphoto2/${PKGVERSION}/jamcam.la
 lib/libgphoto2/${PKGVERSION}/jd11.la
 lib/libgphoto2/${PKGVERSION}/jl2005a.la
+lib/libgphoto2/${PKGVERSION}/jl2005c.la
 lib/libgphoto2/${PKGVERSION}/kodak_dc120.la
 lib/libgphoto2/${PKGVERSION}/kodak_dc210.la
 lib/libgphoto2/${PKGVERSION}/kodak_dc240.la
@@ -76,23 +76,28 @@ lib/libgphoto2/${PKGVERSION}/sony_dscf55.la
 lib/libgphoto2/${PKGVERSION}/soundvision.la
 lib/libgphoto2/${PKGVERSION}/spca50x.la
 lib/libgphoto2/${PKGVERSION}/sq905.la
+lib/libgphoto2/${PKGVERSION}/st2205.la
 lib/libgphoto2/${PKGVERSION}/stv0674.la
 lib/libgphoto2/${PKGVERSION}/stv0680.la
 lib/libgphoto2/${PKGVERSION}/sx330z.la
 lib/libgphoto2/${PKGVERSION}/topfield.la
 lib/libgphoto2/${PKGVERSION}/toshiba_pdrm11.la
+lib/libgphoto2/print-camera-list
+lib/libgphoto2_port.la
 lib/libgphoto2_port/0.8.0/disk.la
 lib/libgphoto2_port/0.8.0/ptpip.la
 lib/libgphoto2_port/0.8.0/serial.la
 lib/libgphoto2_port/0.8.0/usb.la
+lib/libgphoto2_port/0.8.0/usbdiskdirect.la
+lib/libgphoto2_port/0.8.0/usbscsi.la
 lib/pkgconfig/libgphoto2.pc
 lib/pkgconfig/libgphoto2_port.pc
 man/man3/libgphoto2.3
 man/man3/libgphoto2_port.3
-share/doc/libgphoto2/AUTHORS
 share/doc/libgphoto2/ABOUT-NLS
-share/doc/libgphoto2/ChangeLog
+share/doc/libgphoto2/AUTHORS
 share/doc/libgphoto2/COPYING
+share/doc/libgphoto2/ChangeLog
 share/doc/libgphoto2/NEWS
 share/doc/libgphoto2/README
 share/doc/libgphoto2/README.packaging
@@ -103,6 +108,8 @@ share/doc/libgphoto2/camlibs/README.913D
 share/doc/libgphoto2/camlibs/README.adc65
 share/doc/libgphoto2/camlibs/README.agfa-cl20
 share/doc/libgphoto2/camlibs/README.aox
+share/doc/libgphoto2/camlibs/README.ax203
+share/doc/libgphoto2/camlibs/README.ax203-compression
 share/doc/libgphoto2/camlibs/README.canon
 share/doc/libgphoto2/camlibs/README.clicksmart310
 share/doc/libgphoto2/camlibs/README.enigma13
@@ -110,6 +117,7 @@ share/doc/libgphoto2/camlibs/README.gsmart300
 share/doc/libgphoto2/camlibs/README.iclick
 share/doc/libgphoto2/camlibs/README.jamcam
 share/doc/libgphoto2/camlibs/README.jl2005a
+share/doc/libgphoto2/camlibs/README.jl2005bcd-compression
 share/doc/libgphoto2/camlibs/README.jl2005c
 share/doc/libgphoto2/camlibs/README.konica
 share/doc/libgphoto2/camlibs/README.largan-lmini
@@ -129,6 +137,8 @@ share/doc/libgphoto2/camlibs/README.sonydscf1
 share/doc/libgphoto2/camlibs/README.soundvision
 share/doc/libgphoto2/camlibs/README.spca50x
 share/doc/libgphoto2/camlibs/README.sq905
+share/doc/libgphoto2/camlibs/README.st2205
+share/doc/libgphoto2/camlibs/README.st2205-compression
 share/doc/libgphoto2/camlibs/README.toshiba-pdrm11
 share/doc/libgphoto2_port/AUTHORS
 share/doc/libgphoto2_port/NEWS
