@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2011/07/28 04:25:06 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2011/11/07 08:27:35 minskim Exp $
 
 Set paths to texmf trees for pkgsrc.
 
@@ -39,7 +39,60 @@ Set paths to texmf trees for pkgsrc.
  
  % On some systems, there will be a system tree which contains all the font
  % files that may be created as well as the formats.  For example
-@@ -442,7 +442,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+@@ -303,6 +303,10 @@ BSTINPUTS = .;$TEXMF/bibtex/{bst,csf}//
+ MLBIBINPUTS = .;$TEXMF/bibtex/bib/{mlbib,}//
+ MLBSTINPUTS = .;$TEXMF/bibtex/{mlbst,bst}//
+ 
++% .ris and .bltxml bibliography formats.
++RISINPUTS = .;$TEXMF/bibtex/ris//
++BLTXMLINPUTS = .;$TEXMF/bibtex/bltxml//
++
+ % MFT style files.
+ MFTINPUTS = .;$TEXMF/mft//
+ 
+@@ -368,11 +372,13 @@ MPSUPPORT = .;$TEXMF/metapost/support
+ MIMELIBDIR = $TEXMFROOT/etc
+ MAILCAPLIBDIR = $TEXMFROOT/etc
+ 
+-% Default settings for fontconfig library, used by Windows versions of
+-% xetex/xdvipdfmx.  On Unixish systems, fontconfig ignores this.
+-FONTCONFIG_FILE=fonts.conf
+-FONTCONFIG_PATH=$TEXMFSYSVAR/fonts/conf
+-FC_CACHEDIR=$TEXMFSYSVAR/fonts/cache
++% Default settings for the fontconfig library as used by the Windows
++% versions of xetex/xdvipdfmx.  On Unixish systems, fontconfig ignores
++% this.  ConTeXT MkIV (all platforms) also use these values.
++% 
++FONTCONFIG_FILE = fonts.conf
++FONTCONFIG_PATH = $TEXMFSYSVAR/fonts/conf
++FC_CACHEDIR = $TEXMFSYSVAR/fonts/cache
+ 
+ % TeX documentation and source files, for use with texdoc and kpsewhich.
+ TEXDOCS = $TEXMF/doc//
+@@ -407,10 +413,19 @@ TW_INIPATH = $TW_LIBPATH
+ % would allow command execution.
+ DVIPDFMXINPUTS = $TEXMF/dvipdfmx
+ 
+-% Find scripts that are distributed/installed in the texmf tree.
+-
+ % Lua needs to look in TEXINPUTS for lua scripts distributed with packages.
+-LUAINPUTS = .;$TEXMF/scripts/{$progname,$engine,}/{lua,}//;$TEXINPUTS
++% 
++% But we can't simply use $TEXINPUTS, since then if TEXINPUTS is set in
++% the environment with a colon, say, TEXINPUTS=/some/dir:, the intended
++% default expansion of TEXINPUTS will not happen and .lua files under
++% the /tex/ will not be found.
++% 
++% So, duplicate the TEXINPUTS.*lualatex values as LUAINPUTS.*lualatex.
++% The default LUAINPUTS sufficess for luatex and dviluatex.
++%
++LUAINPUTS.lualatex = .;$TEXMF/scripts/{$progname,$engine,}/{lua,}//;$TEXMF/tex/{lualatex,latex,luatex,generic,}//
++LUAINPUTS.dvilualatex = .;$TEXMF/scripts/{$progname,$engine,}/{lua,}//;$TEXMF/tex/{lualatex,latex,luatex,generic,}//
++LUAINPUTS = .;$TEXMF/scripts/{$progname,$engine,}/{lua,}//;$TEXMF/tex/{luatex,plain,generic,}//
+ 
+ % Lua needs to look for binary lua libraries distributed with packages.
+ CLUAINPUTS = .;$SELFAUTOLOC/lib/{$progname,$engine,}/lua//
+@@ -442,7 +457,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
  % 
  % For security reasons, it is better not to include . in this path.
  %
