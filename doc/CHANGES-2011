@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2792 2011/11/07 12:37:52 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.2793 2011/11/07 15:14:24 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4397,3 +4397,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/ffmpeg to 0.7.7 [drochner 2011-11-07]
 	Updated multimedia/libdvbpsi to 0.2.2 [drochner 2011-11-07]
 	Updated textproc/json-glib to 0.14.2 [drochner 2011-11-07]
+	Updated devel/p5-Software-License to 0.103.004 [hiramatsu 2011-11-07]
+	Updated www/p5-CSS to 1.09 [hiramatsu 2011-11-07]
