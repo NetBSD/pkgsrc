@@ -29,7 +29,9 @@
  * pancake@phreaker.net ** changes 2004/09/14
  *
  * -C search in comments
+ * -D print DESCR file (if any) to stdout
  * -c case sensitive
+ * -P search in PLIST entries
  * -q quiet, don't output comment
  * -x exact matches
  */
@@ -65,11 +67,13 @@ static int		checkskip(const struct dirent *);
 static int		partialmatch(const char *, const char *);
 static int		exactmatch(const char *, const char *);
 static void		usage(void);
+static void		print_file(const char*);
+static int		find_plist_entry(const char *, const char *);
 
 static int		(*match)(const char *, const char *);
 
 static const char	*search;
-static int		cflag, qflag;
+static int		cflag, dflag, pflag, qflag;
 
 int
 main(int argc, char *argv[])
@@ -86,10 +90,13 @@ main(int argc, char *argv[])
 
 	cflag = qflag = 0;
 
-	while ((ch = getopt(argc, argv, "Ccn:Mqx")) != -1) {
+	while ((ch = getopt(argc, argv, "CDcn:MPqx")) != -1) {
 		switch (ch) {
 		case 'C':	/* search in comments */
 			search = "COMMENT";
+			break;
+		case 'D':	/* print DESCR file to stdout */
+			dflag = 1;
 			break;
 		case 'c':	/* case sensitive */
 			cflag = 1;
@@ -99,6 +106,9 @@ main(int argc, char *argv[])
 			break;
 		case 'M':	/* search for maintainer */
 			search = "MAINTAINER";
+			break;
+		case 'P':	/* search in PLIST file */
+			pflag = 1;
 			break;
 		case 'q':	/* quiet, don't output comment */
 			qflag = 1;
@@ -130,7 +140,7 @@ static void
 pkgfind(const char *path, const char *pkg, int count)
 {
 	struct dirent **cat, **list = NULL;
-	int ncat, nlist, i, j;
+	int ncat, nlist, i, j, plistfound = 0;
 	char tmp[PATH_MAX];
 	char *text = NULL;
 	struct stat sb;
@@ -166,16 +176,20 @@ pkgfind(const char *path, const char *pkg, int count)
 					if (getstring(tmp, search, &text) == 0)
 						continue;
 				}
+			} else if (pflag) {
+				(void)strncat(tmp, "/PLIST", sizeof(tmp));
+				plistfound = find_plist_entry(tmp, pkg);
+				text = "";
 			} else {
 				text = list[j]->d_name;
 			}
-			if ((*match)(text, pkg)) {
+			if (plistfound || (*match)(text, pkg)) {
 				showpkg(path, cat[i]->d_name, list[j]->d_name);
 				if (count != 0 && --count < 1) {
 					i = ncat;
 					break;
 				}
-			}
+			}  
 			free(list[j]);
 		}
 		free(cat[i]);
@@ -187,11 +201,14 @@ pkgfind(const char *path, const char *pkg, int count)
 static void
 showpkg(const char *path, const char *cat, const char *pkg)
 {
-	char *mk, *comment = NULL;
-	size_t len;
+	char *mk, *desc, *comment = NULL;
+	size_t len, desclen;
 
 	len = strlen(path) + strlen(cat) + strlen(pkg) +
 	   strlen("Makefile") + 3 + 1;
+
+	desclen = strlen(path) + strlen(cat) + strlen(pkg) +
+		  strlen("DESCR") + 4;
 
 	if (!qflag) {
 		if ((mk = malloc(len)) == NULL)
@@ -212,6 +229,62 @@ showpkg(const char *path, const char *cat, const char *pkg)
 		(void)printf("%s/%s: %s\n", cat, pkg, comment);
 	else
 		(void)printf("%s/%s\n", cat, pkg);
+
+	if (dflag) {
+	    if ((desc = malloc(len)) == NULL) {
+		err(EXIT_FAILURE, "malloc");
+	    }
+	    (void) snprintf(desc, desclen, "%s/%s/%s/DESCR", path, cat, pkg);
+	    print_file(desc);
+	    free(desc);
+	}
+}
+
+static void
+print_file(const char *file)
+{
+	FILE*	fp;
+	char	data[BUFSIZ+1];
+	ssize_t nread = 0;
+
+	if ( (fp = fopen(file, "r")) == NULL ) {
+	    warnx("Couldn't open %s for reading\n", file);
+	    return;
+	}
+	while ((nread = fread(data, 1, BUFSIZ, fp))) {
+	    data[nread] = 0;
+	    fprintf(stdout, "%s", data);
+	}
+	if (ferror(fp)) {
+	    warnx("Couldn't finish reading %s\n", file);
+	} else {
+	    fprintf(stdout, "\n");
+	}
+	fclose(fp);
+}
+
+static int
+find_plist_entry(const char *file, const char *string)
+{
+	char line[BUFSIZ];
+	FILE *fp;
+	int found = 0;;
+
+	if ((fp = fopen(file, "r")) == NULL) {
+	    return 0;
+	}
+	while (fgets(line, BUFSIZ, fp) != NULL) {
+	    if ((*match)(line, string)) { 
+		found = 1;
+		break; 
+	    }
+	}
+	if (ferror(fp)) {
+	    warnx("Couldn't finish reading %s\n", file);
+	}
+	fclose(fp);
+
+	return found;
 }
 
 static int
@@ -287,7 +360,7 @@ exactmatch(const char *s, const char *find)
 static void
 usage(void)
 {
-	(void)fprintf(stderr, "Usage: %s [-CcMqx] [-n number] keyword [...]\n",
+	(void)fprintf(stderr, "Usage: %s [-CcMPqxD] [-n number] keyword [...]\n",
 	    getprogname());
 	exit(EXIT_FAILURE);
 }
