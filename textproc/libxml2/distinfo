@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.83 2011/06/06 12:09:01 drochner Exp $
+$NetBSD: distinfo,v 1.83.4.1 2011/11/07 22:28:09 tron Exp $
 
 SHA1 (libxml2-2.7.8.tar.gz) = 859dd535edbb851cc15b64740ee06551a7a17d40
 RMD160 (libxml2-2.7.8.tar.gz) = 30709622cfe3e2175e73d6701b7e19a25ab5ac47
@@ -8,7 +8,9 @@ SHA1 (patch-ab) = e1cb25ae1b2219af91d11f0ccdbb12912d50488a
 SHA1 (patch-ac) = 264c75cf9fff5319105b971c122cdf5fc103c04e
 SHA1 (patch-ad) = cd45da492b02cce9983c46762839f68b8b1e0177
 SHA1 (patch-ae) = b8d8e0275cab3caafd98275ac22b63951fc4b5fd
-SHA1 (patch-ag) = 30ec5c8daece4aba75a02bbc13db5373542dea7b
+SHA1 (patch-ag) = ab4aeeb8ca696b88285274760ab3ef08800773a0
 SHA1 (patch-aj) = 24eb4a08ea4c40be6d75a72cd0bb5280514f73d4
-SHA1 (patch-ak) = 73796d55e21d6b7dae79ac1a2abee4bc64116dbc
+SHA1 (patch-ak) = 5e0e9807d7ae0bc93a5583a61bb88a49ec1751e8
 SHA1 (patch-al) = e5be144291a46c1b5e9720ac9d02c1fb00c6ea20
+SHA1 (patch-include_libxml_xpath.h) = 3fc74551a7843668cf9ffee19b1f20ccb674e153
+SHA1 (patch-xpointer.c) = fa720fd515bab3f99bb11bf56320b3ad8e5fb211
