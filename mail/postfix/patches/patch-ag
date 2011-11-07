@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.31 2011/03/22 09:37:27 taca Exp $
+$NetBSD: patch-ag,v 1.32 2011/11/07 15:36:07 taca Exp $
 
 Only define HAS_DB if it hasn't been defined.
 Add support for NetBSD 5.x and DragonFly BSD.
 Handle closefrom() on FreeBSD.
 
---- src/util/sys_defs.h.orig	2009-11-14 23:32:37.000000000 +0000
+--- src/util/sys_defs.h.orig	2011-11-02 23:46:22.000000000 +0000
 +++ src/util/sys_defs.h
-@@ -29,8 +29,8 @@
-     || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
+@@ -30,8 +30,8 @@
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
+     || defined(OPENBSD5) \
      || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
 -    || defined(NETBSD4) \
 -    || defined(EKKOBSD1)
@@ -17,7 +17,7 @@ Handle closefrom() on FreeBSD.
  #define SUPPORTED
  #include <sys/types.h>
  #include <sys/param.h>
-@@ -43,7 +43,9 @@
+@@ -44,7 +44,9 @@
  #define DEF_MAILBOX_LOCK "flock, dotlock"
  #define HAS_SUN_LEN
  #define HAS_FSYNC
@@ -27,7 +27,7 @@ Handle closefrom() on FreeBSD.
  #define HAS_SA_LEN
  #define DEF_DB_TYPE	"hash"
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104250000)
-@@ -163,9 +166,19 @@
+@@ -165,9 +167,19 @@
  #define HAS_FUTIMES
  #endif
  
@@ -47,7 +47,7 @@ Handle closefrom() on FreeBSD.
      || defined(USAGI_LIBINET6)
  #ifndef NO_IPV6
  # define HAS_IPV6
-@@ -174,14 +187,16 @@
+@@ -176,14 +188,16 @@
  
  #if (defined(__FreeBSD_version) && __FreeBSD_version >= 300000) \
      || (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 103000000) \
