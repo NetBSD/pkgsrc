@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/10/28 16:59:43 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/11/08 15:42:27 taca Exp $
 #
 
 DISTNAME=	groonga-1.2.7
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/ruby/rubyversion.mk"
-DEPENDS+=	${RUBY_BASE}>=${RUBY_REQD}:../../lang/${RUBY_BASE}
+DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:../../lang/${RUBY_BASE}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
