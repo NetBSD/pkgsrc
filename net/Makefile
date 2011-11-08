@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.891 2011/11/08 20:36:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.892 2011/11/08 20:40:19 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -148,6 +148,7 @@ SUBDIR+=	gnome-vfs-smb
 SUBDIR+=	gnugk
 SUBDIR+=	gofish
 SUBDIR+=	gopher
+SUBDIR+=	grake
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
 SUBDIR+=	gst-plugins0.10-libnice
