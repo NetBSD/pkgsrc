@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2804 2011/11/08 12:17:21 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2805 2011/11/08 12:41:57 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4415,3 +4415,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed www/typolight28-translations [taca 2011-11-07]
 	Removed www/typolight28-example [taca 2011-11-07]
 	Removed www/typolight28 [taca 2011-11-07]
+	Updated lang/moscow_ml to 2.01nb1 [dholland 2011-11-08]
