@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2010/09/23 02:28:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/11/08 15:37:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/GPL

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/08/12 16:25:03 taca Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/08 15:37:33 taca Exp $
 
 DISTNAME=	ruby-debug-0.10.4
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	devel
 

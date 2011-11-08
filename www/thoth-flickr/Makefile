@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/08/13 00:33:58 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/08 15:37:35 taca Exp $
 
 DISTNAME=	thoth_flickr-0.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

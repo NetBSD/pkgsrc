@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2011/05/28 16:32:10 bad Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/11/08 15:37:33 taca Exp $
 bin/rdebug
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/ChangeLog
