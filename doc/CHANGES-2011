@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2802 2011/11/08 11:40:34 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2803 2011/11/08 12:14:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4409,3 +4409,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/abcmidi to 20111021 [ryoon 2011-11-08]
 	Added textproc/coccigrep version 1.6 [ryoon 2011-11-08]
 	Updated fonts/umefont-ttf to 0.433 [ryoon 2011-11-08]
+	Updated www/contao210 to 2.10.3 [taca 2011-11-08]
+	Updated www/contao210-example to 2.10.3 [taca 2011-11-08]
+	Updated www/contao210-translations to 20111103 [taca 2011-11-08]
