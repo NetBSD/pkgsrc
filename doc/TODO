@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10660 2011/11/08 10:51:19 ryoon Exp $
+$NetBSD: TODO,v 1.10661 2011/11/08 13:30:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -349,6 +349,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o acme-091 [pkg/44771]
 	o acpica-utils-20110623
 	o acr-0.5.2
+	o acroread9-9.4.6
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
@@ -432,7 +433,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.10.0
-	o bouml-4.22.2
+	o bouml-4.22.2 [pkg/45574]
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20110908
@@ -509,7 +510,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dhid-5.3
 	o diffstat-1.54
 	o diffutils-3.2
-	o digikam-2.2.0
+	o digikam-2.3.0
 	o dillo-3.0.1
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -567,7 +568,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
-	o etm-881
+	o etm-882
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evince-3.2.1
@@ -584,10 +585,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.31
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-2.1
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
+	o ffmpeg-20111105.0.8.6
 	o file-5.09
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -637,6 +638,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontsproto-2.1.1
 	o fossil-1.20
+	o fotoxx-11.11.1
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.3.0
@@ -695,7 +697,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-3.2.1
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
-	o gnome-commander-1.2.8.14
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.2.1
@@ -774,7 +775,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-7.8
 	o highlight-3.6
 	o honeyd-1.5c
-	o horde-4.0.10
+	o horde-4.0.11
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -831,7 +832,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbiff-4.0
 	o kdbg-2.5.1
 	o kde4-4.7.3
-	o kdenlive-0.8
+	o kdenlive-0.8.2
 	o kdevelop-4.2.3
 	o kdiff3-0.9.96
 	o kdrill-6.5
@@ -841,12 +842,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kismet-2011.01r1
 	o kmess-1.5.1
 	o kmp-0.5
-	o kmymoney2-4.5
-	o knights-2.3.2
+	o kmymoney2-4.6.1
+	o knights-2.4.0
 	o kodos-2.4.5
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-3.0.10
+	o kronolith-3.0.11
 	o krusader-2.0
 	o ktorrent-4.1.2
 	o ktorrent3-3.3.4
@@ -1019,13 +1020,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p2
 	o nulib2-220
-	o nut-17.3
+	o nut-17.4
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
 	o ocaml-3.12.1
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
+	o ocp-0.1.21
 	o ocsigen-1.1.0 [pkg/40761]
 	o octave-3.4.3
 	o offlineimap-6.2.0
@@ -1085,6 +1087,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pingus-0.7.4
 	o pioneers-0.12.5
 	o pircbot-1.4.6
+	o pixman-0.24.0
 	o pkg-config-0.26
 	o pks-0.9.6
 	o planner-0.14.5
@@ -1137,9 +1140,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
-	o py-qt4-4.8.6
 	o py-simplejson-2.2.1
-	o py-sip-4.13
 	o py-sybase-0.37
 	o py-twisted-11.0.0
 	o py-urwid-1.0.0
@@ -1247,7 +1248,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
-	o stunnel-4.45
+	o stunnel-4.46
 	o subtitleeditor-0.33.0
 	o subversion-1.7.1
 	o sudo-1.8.3p1
@@ -1304,7 +1305,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o turba-3.0.9
+	o turba-3.0.10
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o twm-1.0.7
@@ -1320,6 +1321,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
 	o units-88 [pkg/43742]
+	o unrealircd-3.2.9
 	o ups-nut-2.6.2
 	o upx-3.07
 	o uriparser-0.7.5
@@ -1329,7 +1331,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o valgrind-3.6.1
 	o vbetool-1.1
 	o vera-1.17
-	o veusz-1.13
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
