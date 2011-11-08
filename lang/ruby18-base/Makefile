@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2011/10/21 05:24:13 obache Exp $
+# $NetBSD: Makefile,v 1.66 2011/11/08 15:20:36 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
+PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_FULL}
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby 1.8 based release minimum package
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
-RUBY_VERSION=	${RUBY18_VERSION}
+RUBY_VERSION_SUPPORTED=	18
 
 CONFLICTS=	${RUBY_PKGPREFIX}-dbm-[0-9]* \
 		${RUBY_PKGPREFIX}-digest-[0-9]* \
@@ -112,7 +112,6 @@ FIX_PERM=		${RUBY_ARCHLIB}/digest.h ${RUBY_ARCHLIB}/dl.h \
 			${RUBY_ARCHLIB}/dlconfig.h
 
 pre-configure:
-	${ECHO} >> ${WRKSRC}/version.h		# workaround for no EOL.
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
