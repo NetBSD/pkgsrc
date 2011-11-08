@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.18 2011/10/31 06:50:54 sbd Exp $
+$NetBSD: patch-am,v 1.19 2011/11/08 07:30:08 sbd Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -308,7 +308,7 @@ support building the "nis" and "crypt" modules.
 +                for dir in dirs:
 +                    f = os.path.join(dir, 'ndbm.h')
 +                    if sys.platform == 'darwin' and is_macosx_sdk_path(dir):
-+                        f = os.path.join(sysroot, dir[1:], filename)
++                        f = os.path.join(sysroot, dir[1:], 'ndbm.h')
 +                    if not os.path.exists(f): continue
 +
 +                    ret = 'True'
