@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/09/10 06:20:13 taca Exp $
+# $NetBSD: Makefile,v 1.26 2011/11/08 16:35:36 taca Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils
 EXTRACT_ELEMENTS=	${DISTNAME}/utils/rd-mode.el
 RUBY_RD_VERSION=	0.6.22
-RUBY_VERSION=		${RUBY18_VERSION}
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
 
