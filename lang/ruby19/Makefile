@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/10/20 15:12:36 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/08 15:23:38 taca Exp $
 #
 
 DISTNAME=	# empty
-PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION_SUFFIX}
-PKGREVISION=	1
+PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION_FULL}
+PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,15 +15,15 @@ LICENSE=	gnu-gpl-v2 OR ruby-license
 
 META_PACKAGE=		yes
 
-DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION_SUFFIX}:../../lang/${RUBY_NAME}-base
-DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION_SUFFIX}:../../databases/ruby-gdbm
-DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION_SUFFIX}:../../devel/ruby-curses
-DEPENDS+= ${RUBY_PKGPREFIX}-fiddle>=${RUBY_VERSION_SUFFIX}:../../devel/ruby-fiddle
-DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION_SUFFIX}:../../devel/ruby-readline
-DEPENDS+= ${RUBY_PKGPREFIX}-psych>=${RUBY_VERSION_SUFFIX}:../../textproc/ruby-psych
-DEPENDS+= ${RUBY_PKGPREFIX}-tk>=${RUBY_VERSION_SUFFIX}:../../x11/ruby-tk
+DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION_FULL}:../../lang/${RUBY_NAME}-base
+DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION_FULL}:../../databases/ruby-gdbm
+DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION_FULL}:../../devel/ruby-curses
+DEPENDS+= ${RUBY_PKGPREFIX}-fiddle>=${RUBY_VERSION_FULL}:../../devel/ruby-fiddle
+DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION_FULL}:../../devel/ruby-readline
+DEPENDS+= ${RUBY_PKGPREFIX}-psych>=${RUBY_VERSION_FULL}:../../textproc/ruby-psych
+DEPENDS+= ${RUBY_PKGPREFIX}-tk>=${RUBY_VERSION_FULL}:../../x11/ruby-tk
 
-RUBY_VERSION=	${RUBY19_VERSION}
+RUBY_VERSION_SUPPORTED=	19
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/Makefile.common"
