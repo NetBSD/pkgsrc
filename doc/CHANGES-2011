@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2798 2011/11/08 09:09:08 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2799 2011/11/08 10:52:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4405,3 +4405,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-ConfigFromFile to 0.03 [hiramatsu 2011-11-08]
 	Updated wm/wmakerconf to 2.11nb18 [tron 2011-11-08]
 	Updated net/ruby-tweetstream to 1.0.5 [obache 2011-11-08]
+	Added time/abclock version 1.0d [ryoon 2011-11-08]
