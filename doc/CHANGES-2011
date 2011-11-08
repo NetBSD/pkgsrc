@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2795 2011/11/07 20:27:30 shattered Exp $
+$NetBSD: CHANGES-2011,v 1.2796 2011/11/08 07:58:48 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4401,3 +4401,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-CSS to 1.09 [hiramatsu 2011-11-07]
 	Updated mail/postfix to 2.8.7 [taca 2011-11-07]
 	Updated pkgtools/pkgfind to 20111022 [shattered 2011-11-07]
+	Added devel/p5-Clone-Fast version 0.92 [hiramatsu 2011-11-08]
+	Updated devel/p5-MooseX-ConfigFromFile to 0.03 [hiramatsu 2011-11-08]
