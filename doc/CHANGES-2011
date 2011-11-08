@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2815 2011/11/08 20:42:19 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2816 2011/11/08 20:43:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4451,3 +4451,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/umph version 0.2.0 [ryoon 2011-11-08]
 	Added net/gcap version 0.1.1 [ryoon 2011-11-08]
 	Updated cross/avrdude to 5.10nb2 [minskim 2011-11-08]
+	Added net/grake version 0.1.0 [ryoon 2011-11-08]
