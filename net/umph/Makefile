@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/08 20:29:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/08 20:33:21 ryoon Exp $
 #
 
 DISTNAME=	umph-0.2.0
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	p5-Getopt-ArgvFile>=1.11:../../devel/p5-Getopt-ArgvFile
 DEPENDS+=	p5-XML-DOM>=1.44:../../textproc/p5-XML-DOM
 DEPENDS+=	p5-version>=0.77:../../devel/p5-version
-DEPENDS+=	p5-Umph-Prompt>=0.1.0:../../wip/p5-Umph-Prompt
+DEPENDS+=	p5-Umph-Prompt>=0.1.0:../../net/p5-Umph-Prompt
 
 PERL5_PACKLIST=	auto/umph/.packlist
 USE_LANGUAGES=	# none
