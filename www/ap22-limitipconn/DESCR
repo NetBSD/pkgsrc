@@ -1,0 +1,3 @@
+Apache 2.0 C module to limit the maximum number of simultaneous
+connections per IP address. Allows inclusion and exclusion of files
+based on MIME type.
