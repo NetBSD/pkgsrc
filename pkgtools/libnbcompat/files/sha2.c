@@ -1,4 +1,4 @@
-/* $NetBSD: sha2.c,v 1.7 2007/07/18 14:09:55 joerg Exp $ */
+/* $NetBSD: sha2.c,v 1.8 2011/11/08 18:20:03 joerg Exp $ */
 /*	$KAME: sha2.c,v 1.9 2003/07/20 00:28:38 itojun Exp $	*/
 
 /*
@@ -171,9 +171,9 @@ typedef uint64_t sha2_word64;	/* Exactly 8 bytes */
  * only.
  */
 static void SHA512_Last(SHA512_CTX*);
-void SHA256_Transform(SHA256_CTX*, const sha2_word32*);
-void SHA384_Transform(SHA384_CTX*, const sha2_word64*);
-void SHA512_Transform(SHA512_CTX*, const sha2_word64*);
+static void SHA256_Transform(SHA256_CTX*, const sha2_word32*);
+static void SHA384_Transform(SHA384_CTX*, const sha2_word64*);
+static void SHA512_Transform(SHA512_CTX*, const sha2_word64*);
 
 
 /*** SHA-XYZ INITIAL HASH VALUES AND CONSTANTS ************************/
