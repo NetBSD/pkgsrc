@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/08/18 12:50:14 taca Exp $
+# $NetBSD: Makefile,v 1.17 2011/11/08 15:37:34 taca Exp $
 
 DISTNAME=	RedCloth-4.2.8
+PKGREVISION=	1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc
 
