@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2805 2011/11/08 12:41:57 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.2806 2011/11/08 15:30:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4416,3 +4416,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed www/typolight28-example [taca 2011-11-07]
 	Removed www/typolight28 [taca 2011-11-07]
 	Updated lang/moscow_ml to 2.01nb1 [dholland 2011-11-08]
+	Updated lang/ruby18 to 1.8.7.352nb1 [taca 2011-11-08]
+	Updated lang/ruby19-base to 1.9.2pl290nb4 [taca 2011-11-08]
+	Updated lang/ruby19 to 1.9.2pl290nb2 [taca 2011-11-08]
+	Updated misc/rubygems to 1.8.10nb1 [taca 2011-11-08]
