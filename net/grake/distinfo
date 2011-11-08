@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/08 20:39:18 ryoon Exp $
+
+SHA1 (grake-0.1.0.tar.gz) = b7b513aba480dca31c1c82bb9abd8e4b8288ac8c
+RMD160 (grake-0.1.0.tar.gz) = 51c7dba4fdd9a5b2d6c2370baec190c4f48c9b55
+Size (grake-0.1.0.tar.gz) = 19336 bytes
