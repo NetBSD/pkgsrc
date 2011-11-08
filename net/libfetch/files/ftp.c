@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.39 2011/10/02 19:15:34 marino Exp $	*/
+/*	$NetBSD: ftp.c,v 1.40 2011/11/08 18:02:27 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -325,7 +325,8 @@ ftp_cwd(conn_t *conn, const char *path, int subdir)
 	} else if (strcmp(conn->ftp_home, "/") == 0) {
 		dst = strdup(path - 1);
 	} else {
-		asprintf(&dst, "%s/%s", conn->ftp_home, path);
+		if (asprintf(&dst, "%s/%s", conn->ftp_home, path) == -1)
+			dst = NULL;
 	}
 	if (dst == NULL) {
 		fetch_syserr();
