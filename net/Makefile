@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.892 2011/11/08 20:40:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.893 2011/11/08 23:54:20 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -126,7 +126,6 @@ SUBDIR+=	freewais-sf
 SUBDIR+=	ftplibpp
 SUBDIR+=	ftpproxy
 SUBDIR+=	gated
-SUBDIR+=	gcap
 SUBDIR+=	gethost
 SUBDIR+=	gift
 SUBDIR+=	gift-fasttrack
@@ -148,7 +147,6 @@ SUBDIR+=	gnome-vfs-smb
 SUBDIR+=	gnugk
 SUBDIR+=	gofish
 SUBDIR+=	gopher
-SUBDIR+=	grake
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
 SUBDIR+=	gst-plugins0.10-libnice
@@ -423,7 +421,10 @@ SUBDIR+=	p5-Umph-Prompt
 SUBDIR+=	p5-WebService-Google-Reader
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-eBay-API
+SUBDIR+=	p5-gcap
+SUBDIR+=	p5-grake
 SUBDIR+=	p5-ispman
+SUBDIR+=	p5-umph
 SUBDIR+=	packit
 SUBDIR+=	parpd
 SUBDIR+=	partysip
@@ -603,7 +604,6 @@ SUBDIR+=	ucspi-tcp
 SUBDIR+=	udns
 SUBDIR+=	udpcast
 SUBDIR+=	udptunnel
-SUBDIR+=	umph
 SUBDIR+=	unbound
 SUBDIR+=	unfs3
 SUBDIR+=	unison
