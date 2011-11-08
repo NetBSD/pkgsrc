@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.30 2011/06/16 15:14:31 taca Exp $
+# $NetBSD: modules.mk,v 1.31 2011/11/08 15:15:59 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -11,7 +11,7 @@ _RUBY_MODULE_MK=	# defined
 PKGNAME?=	${RUBY_PKGPREFIX}-${DISTNAME}
 
 .if defined(NO_BUILD) && empty(NO_BUILD:M[Nn][Oo])
-DEPENDS+= ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
+DEPENDS+= ruby${RUBY_VER}-base>=${RUBY_VERSION}:../../lang/${RUBY_BASE}
 .else
 .include "../../lang/ruby/buildlink3.mk"
 .endif
