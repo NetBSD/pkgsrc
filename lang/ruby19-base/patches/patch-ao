@@ -1,9 +1,19 @@
-$NetBSD: patch-ao,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+$NetBSD: patch-ao,v 1.2 2011/11/08 15:22:45 taca Exp $
 
-Add install_root option for pkgsrc's rubygems support.
+* Add install_root option for pkgsrc's rubygems support.
+* Avoid to use Gem::RequirePathsBuilder.
 
 --- lib/rubygems/installer.rb.orig	2010-04-22 08:24:42.000000000 +0000
 +++ lib/rubygems/installer.rb
+@@ -40,7 +40,7 @@ class Gem::Installer
+ 
+   include Gem::UserInteraction
+ 
+-  include Gem::RequirePathsBuilder
++# include Gem::RequirePathsBuilder
+ 
+   ##
+   # The directory a gem's executables will be installed into
 @@ -84,6 +84,9 @@ class Gem::Installer
    #          for a signed-gems-only policy.
    # :ignore_dependencies:: Don't raise if a dependency is missing.
@@ -34,6 +44,15 @@ Add install_root option for pkgsrc's rubygems support.
      @bin_dir             = options[:bin_dir]
      @development         = options[:development]
      @source_index        = options[:source_index]
+@@ -198,7 +207,7 @@ class Gem::Installer
+     build_extensions
+     write_spec
+ 
+-    write_require_paths_file_if_needed
++#   write_require_paths_file_if_needed
+ 
+     # HACK remove?  Isn't this done in multiple places?
+     cached_gem = File.join @gem_home, "cache", @gem.split(/\//).pop
 @@ -289,7 +298,11 @@ class Gem::Installer
      # If the user has asked for the gem to be installed in a directory that is
      # the system gem directory, then use the system bin directory, else create

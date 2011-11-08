@@ -16,4 +16,4 @@ Features of Ruby are shown below.
   + Highly Portable (works on many UNIX machines, and on DOS,
     Windows, Mac, BeOS etc.)
 
-This package is Ruby 1.9 based release.
+This package is Ruby 1.9.2 release minimum base package.
