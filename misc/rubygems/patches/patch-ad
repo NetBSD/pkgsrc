@@ -1,22 +1,10 @@
-$NetBSD: patch-ad,v 1.9 2011/08/12 15:50:44 taca Exp $
+$NetBSD: patch-ad,v 1.10 2011/11/08 15:26:12 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
-* Disable Gem::QUICKLOADER_SUCKAGE while Ruby 1.9.2's rubygems generates
-  .require_paths file.
 
---- lib/rubygems/installer.rb.orig	2011-05-31 21:55:13.000000000 +0000
+--- lib/rubygems/installer.rb.orig	2011-08-26 00:30:44.000000000 +0000
 +++ lib/rubygems/installer.rb
-@@ -39,7 +39,8 @@ class Gem::Installer
- 
-   include Gem::UserInteraction
- 
--  include Gem::RequirePathsBuilder if Gem::QUICKLOADER_SUCKAGE
-+  # For gem based package compatibility, generate .require_paths file.
-+  include Gem::RequirePathsBuilder # if Gem::QUICKLOADER_SUCKAGE
- 
-   attr_reader :gem
- 
-@@ -85,6 +86,9 @@ class Gem::Installer
+@@ -85,6 +85,9 @@ class Gem::Installer
    #          for a signed-gems-only policy.
    # :ignore_dependencies:: Don't raise if a dependency is missing.
    # :install_dir:: The directory to install the gem into.
@@ -26,17 +14,7 @@ $NetBSD: patch-ad,v 1.9 2011/08/12 15:50:44 taca Exp $
    # :format_executable:: Format the executable the same as the ruby executable.
    #                      If your ruby is ruby18, foo_exec will be installed as
    #                      foo_exec18.
-@@ -195,7 +199,8 @@ class Gem::Installer
-     generate_bin
-     write_spec
- 
--    write_require_paths_file_if_needed if Gem::QUICKLOADER_SUCKAGE
-+    # For gem based package compatibility, generate .require_paths file.
-+    write_require_paths_file_if_needed # if Gem::QUICKLOADER_SUCKAGE
- 
-     cache_file = spec.cache_file
-     FileUtils.cp gem, cache_file unless File.exist? cache_file
-@@ -283,7 +288,11 @@ class Gem::Installer
+@@ -283,7 +286,11 @@ class Gem::Installer
      # If the user has asked for the gem to be installed in a directory that is
      # the system gem directory, then use the system bin directory, else create
      # (or use) a new bin dir under the gem_home.
@@ -49,7 +27,7 @@ $NetBSD: patch-ad,v 1.9 2011/08/12 15:50:44 taca Exp $
  
      Dir.mkdir bindir unless File.exist? bindir
      raise Gem::FilePermissionError.new(bindir) unless File.writable? bindir
-@@ -416,6 +425,7 @@ class Gem::Installer
+@@ -416,6 +423,7 @@ class Gem::Installer
        :exec_format  => false,
        :force        => false,
        :install_dir  => Gem.dir,
@@ -57,7 +35,7 @@ $NetBSD: patch-ad,v 1.9 2011/08/12 15:50:44 taca Exp $
      }.merge options
  
      @env_shebang         = options[:env_shebang]
-@@ -427,6 +437,11 @@ class Gem::Installer
+@@ -427,6 +435,11 @@ class Gem::Installer
      @wrappers            = options[:wrappers]
      @bin_dir             = options[:bin_dir]
      @development         = options[:development]
