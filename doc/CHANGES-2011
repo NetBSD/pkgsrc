@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2803 2011/11/08 12:14:23 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2804 2011/11/08 12:17:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4412,3 +4412,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210 to 2.10.3 [taca 2011-11-08]
 	Updated www/contao210-example to 2.10.3 [taca 2011-11-08]
 	Updated www/contao210-translations to 20111103 [taca 2011-11-08]
+	Removed www/typolight28-translations [taca 2011-11-07]
+	Removed www/typolight28-example [taca 2011-11-07]
+	Removed www/typolight28 [taca 2011-11-07]
