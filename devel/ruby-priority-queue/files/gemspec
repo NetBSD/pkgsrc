@@ -1,0 +1,73 @@
+--- !ruby/object:Gem::Specification
+name: PriorityQueue
+version: !ruby/object:Gem::Version
+  version: 0.1.2
+platform: ruby
+authors:
+- Brian Schroeder
+autorequire: priority_queue.rb
+bindir: bin
+cert_chain: 
+date: 2005-10-29 22:00:00.000000000 +00:00
+dependencies: []
+description: ! 'This is a fibonacci-heap priority-queue implementation. That means  insert:
+  O(1) decrease_priority: Amortized O(1) delete_min:        Amortized O(log n) This
+  project is different from K. Kodamas PQueue in that it allows a decrease key operation.  That
+  makes PriorityQueue usable for algorithms like dijkstras shortest path algorithm,
+  while PQueue is more suitable for Heapsort and the like.'
+email: priority_queue@brian-schroeder.de
+executables: []
+extensions:
+- ext/priority_queue/extconf.rb
+extra_rdoc_files: []
+files:
+- Makefile
+- README
+- compare_comments.rb
+- CHANGELOG
+- setup.rb
+- doc
+- ext
+- lib
+- test
+- benchmark
+- doc/compare_big.gp
+- doc/compare_big.png
+- doc/compare_small.gp
+- doc/compare_small.png
+- doc/results.csv
+- doc/c-vs-rb.png
+- ext/priority_queue
+- ext/priority_queue/extconf.rb
+- ext/priority_queue/priority_queue.c
+- lib/priority_queue.rb
+- lib/priority_queue
+- lib/priority_queue/c_priority_queue.rb
+- lib/priority_queue/poor_priority_queue.rb
+- lib/priority_queue/ruby_priority_queue.rb
+- test/priority_queue_test.rb
+- benchmark/dijkstra.rb
+homepage: http://ruby.brian-schroeder.de/priority_queue
+licenses: 
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>'
+    - !ruby/object:Gem::Version
+      version: 0.0.0
+  version: 
+required_rubygems_version: 
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.11
+signing_key: 
+specification_version: 1
+summary: This is a fibonacci-heap priority-queue implementation
+test_files:
+- test/priority_queue_test.rb
+
