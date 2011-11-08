@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2816 2011/11/08 20:43:19 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2817 2011/11/08 21:52:50 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4452,3 +4452,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/gcap version 0.1.1 [ryoon 2011-11-08]
 	Updated cross/avrdude to 5.10nb2 [minskim 2011-11-08]
 	Added net/grake version 0.1.0 [ryoon 2011-11-08]
+	Updated lang/sbcl to 1.0.53 [asau 2011-11-08]
