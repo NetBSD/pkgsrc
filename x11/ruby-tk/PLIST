@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/09/10 03:35:58 taca Exp $
-${RUBY_VENDORARCHLIB}/tcltklib.${RUBY_DLEXT}
-${RUBY_VENDORARCHLIB}/tkutil.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.12 2011/11/08 15:24:59 taca Exp $
 ${RUBY_VENDORLIB}/multi-tk.rb
 ${RUBY_VENDORLIB}/remote-tk.rb
 ${RUBY_VENDORLIB}/tcltk.rb
@@ -337,6 +335,8 @@ ${RUBY_VENDORLIB}/tkscrollbox.rb
 ${RUBY_VENDORLIB}/tktext.rb
 ${RUBY_VENDORLIB}/tkvirtevent.rb
 ${RUBY_VENDORLIB}/tkwinpkg.rb
+${RUBY_VENDORARCHLIB}/tcltklib.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/tkutil.${RUBY_DLEXT}
 ${RUBY_EG}/tk/24hr_clock.rb
 ${RUBY_EG}/tk/binding_sample.rb
 ${RUBY_EG}/tk/bindtag_sample.rb
