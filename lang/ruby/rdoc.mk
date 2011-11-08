@@ -1,4 +1,4 @@
-# $NetBSD: rdoc.mk,v 1.7 2011/09/04 17:04:18 taca Exp $
+# $NetBSD: rdoc.mk,v 1.8 2011/11/08 15:19:34 taca Exp $
 
 .if !defined(_RUBY_RDOC_MK)
 _RUBY_RDOC_MK=	# defined
@@ -9,8 +9,9 @@ _RUBY_RDOC_MK=	# defined
 # RUBY_RDOC_REQD
 #	Specify later version of rdoc.  Ruby base packages contain:
 #
-#		ruby18-base: rdoc 1.0.1 - 20041108
-#		ruby19-base: rdoc 2.5.8
+#		ruby18-base:	rdoc 1.0.1 - 20041108
+#		ruby19-base:	rdoc 2.5.8
+#		ruby193-base:	rdoc 3.9.4
 #
 #	If a package has a trouble with these version, please specify the
 #	version of rdoc to RDOC_REQD.
@@ -25,6 +26,7 @@ RUBY_RDOC_VERSION=	3.9.4
 
 RUBY18_RDOC_VERS=	1.0.1
 RUBY19_RDOC_VERS=	2.5.8
+RUBY193_RDOC_VERS=	3.9.4
 
 _RDOC_REQD_MAJOR=	${RUBY_RDOC_REQD:C/\.[0-9\.]+$//}
 _RDOC_REQD_MINORS=	${RUBY_RDOC_REQD:C/^([0-9]+)\.*//}
@@ -32,9 +34,14 @@ _RDOC_REQD_MINORS=	${RUBY_RDOC_REQD:C/^([0-9]+)\.*//}
 . if ${RUBY_VER} == "18"
 _RUBY_RDOC_MAJOR=	${RUBY18_RDOC_VERS:C/\.[0-9\.]+$//}
 _RUBY_RDOC_MINORS=	${RUBY18_RDOC_VERS:C/^([0-9]+)\.*//}
-. else
+. elif ${RUBY_VER} == "19"
 _RUBY_RDOC_MAJOR=	${RUBY19_RDOC_VERS:C/\.[0-9\.]+$//}
 _RUBY_RDOC_MINORS=	${RUBY19_RDOC_VERS:C/^([0-9]+)\.*//}
+.elif ${RUBY_VER} == "193"
+_RUBY_RDOC_MAJOR=	${RUBY193_RDOC_VERS:C/\.[0-9\.]+$//}
+_RUBY_RDOC_MINORS=	${RUBY193_RDOC_VERS:C/^([0-9]+)\.*//}
+.else
+PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 . endif
 
 _RUBY_RDOC_REQD=	NO
