@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2806 2011/11/08 15:30:04 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2807 2011/11/08 15:40:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4420,3 +4420,20 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby19-base to 1.9.2pl290nb4 [taca 2011-11-08]
 	Updated lang/ruby19 to 1.9.2pl290nb2 [taca 2011-11-08]
 	Updated misc/rubygems to 1.8.10nb1 [taca 2011-11-08]
+	Updated comms/ruby-termios to 0.9.6nb2 [taca 2011-11-08]
+	Updated databases/ruby-odbc to 0.99994nb2 [taca 2011-11-08]
+	Updated devel/ruby-debug to 0.10.4nb3 [taca 2011-11-08]
+	Updated devel/ruby-ffi to 1.0.9 [taca 2011-11-08]
+	Updated devel/ruby-metaid to 1.0nb1 [taca 2011-11-08]
+	Updated devel/ruby-parsetree to 3.0.7nb1 [taca 2011-11-08]
+	Updated devel/ruby-rbtree to 0.3.0nb2 [taca 2011-11-08]
+	Updated devel/ruby-thrift to 0.7.0nb1 [taca 2011-11-08]
+	Updated graphics/ruby-RMagick to 2.13.1nb5 [taca 2011-11-08]
+	Updated mail/ruby-tmail to 1.2.7.1nb2 [taca 2011-11-08]
+	Updated textproc/ruby-json to 1.6.0nb1 [taca 2011-11-08]
+	Updated textproc/ruby-oniguruma to 1.1.0nb2 [taca 2011-11-08]
+	Updated textproc/ruby-redcloth to 4.2.8nb1 [taca 2011-11-08]
+	Updated www/mongrel to 1.1.5nb3 [taca 2011-11-08]
+	Updated www/ruby-patron to 0.4.16nb1 [taca 2011-11-08]
+	Updated www/thoth-delicious to 0.1.0nb2 [taca 2011-11-08]
+	Updated www/thoth-flickr to 0.1.0nb2 [taca 2011-11-08]
