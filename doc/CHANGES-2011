@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2810 2011/11/08 16:38:24 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2811 2011/11/08 16:46:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4446,3 +4446,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added x11/ruby-tk version 1.9.3p0 [taca 2011-11-08]
 	Added lang/ruby193 version 1.9.3p0 [taca 2011-11-08]
 	Updated devel/ruby-mode to 1.9.3p0 [taca 2011-11-08]
+	Updated time/ruby-tzinfo to 0.3.31 [taca 2011-11-08]
