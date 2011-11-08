@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/11/08 10:49:35 ryoon Exp $
+
+--- Makefile.orig	2003-08-27 15:57:57.000000000 +0200
++++ Makefile
+@@ -1,26 +1,17 @@
+ 
+ .SUFFIXES:
+ 
+-CC = gcc
++CC ?= gcc
+ 
+-OPT = -s -Wall
+-
+-XLIBDIR = -L/usr/X11/lib -L/usr/X11R6/lib -L/usr/X11R5/lib -L/usr/X11R4/lib \
+-	-L/usr/lib/X11 -L/usr/lib/X11R6 -L/usr/lib/X11R5 -L/usr/lib/X11R4
+-
+-XINCLUDEDIR = -I/usr/X11/include -I/usr/X11R6/include -I/usr/X11R5/include -I/usr/X11R4/include \
+-	-I/usr/include/X11 -I/usr/include/X11R6 -I/usr/include/X11R5 -I/usr/include/X11R4 \
+-	-I/usr/local/X11/include -I/usr/local/X11R6/include -I/usr/local/X11R5/include -I/usr/local/X11R4/include \
+-	-I/usr/local/include/X11 -I/usr/local/include/X11R6 -I/usr/local/include/X11R5 -I/usr/local/include/X11R4 \
+-	-I/usr/X386/include -I/usr/x386/include -I/usr/XFree86/include/X11 -I/usr/local/x11r5/include
++OPT = $(CFLAGS) -Wall
+ 
+ all: abclock abc_img
+ 
+ abclock: abclock.o abclib.o
+-	$(CC) $(XLIBDIR) $(OPT) -o abclock abclock.o abclib.o -lX11
++	$(CC) $(LDFLAGS) $(OPT) -o abclock abclock.o abclib.o -lX11
+ 
+ abc_img: abc_img.o abclib.o
+-	$(CC) $(OPT) -o abc_img abc_img.o abclib.o
++	$(CC) $(LDFLAGS) $(OPT) -o abc_img abc_img.o abclib.o
+ 
+ abclib.o: abclib.c abclib.h
+ 	$(CC) -c $(OPT) -o abclib.o abclib.c
