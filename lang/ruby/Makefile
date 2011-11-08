@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2011/06/16 15:17:59 taca Exp $
+# $NetBSD: Makefile,v 1.50 2011/11/08 15:20:12 taca Exp $
 
 DISTNAME=	# empty
-PKGNAME=	ruby-${RUBY_VERSION_SUFFIX}
+PKGNAME=	ruby-${RUBY_VERSION_FULL}
 PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
@@ -23,9 +23,9 @@ NO_BUILD=	yes
 DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../../lang/${RUBY_PKGPREFIX}-base
 
 RUBY_COMMANDS=	erb irb ruby testrb
-.if ${RUBY_VER} == ${RUBY18_VERSION}
+.if ${RUBY_VER} == "18"
 RUBY_COMMANDS+=	h2rb
-.elif ${RUBY_VER} == ${RUBY19_VERSION}
+.elif ${RUBY_VER} == "19" || ${RUBY_VER} == "193"
 RUBY_COMMANDS+=	gem rake
 .endif
 
