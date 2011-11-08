@@ -1,0 +1,6 @@
+This a meta package including Ruby 1.9.3 full release.
+
+It includes ruby193-base, ruby193-gdbm, ruby193-curses, ruby193-fiddle,
+ruby193-readline and ruby193-tk package.
+
+No package should depend on this package directly.
