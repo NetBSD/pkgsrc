@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2011/08/12 15:50:44 taca Exp $
+$NetBSD: patch-ab,v 1.14 2011/11/08 15:26:12 taca Exp $
 
 Add install_root option for pkgsrc's rubygems support.
 
---- lib/rubygems/dependency_installer.rb.orig	2011-05-18 23:36:37.000000000 +0000
+--- lib/rubygems/dependency_installer.rb.orig	2011-08-26 00:30:44.000000000 +0000
 +++ lib/rubygems/dependency_installer.rb
 @@ -38,6 +38,7 @@ class Gem::DependencyInstaller
    # :format_executable:: See Gem::Installer#initialize.
@@ -12,7 +12,7 @@ Add install_root option for pkgsrc's rubygems support.
    # :prerelease:: Allow prerelease versions.  See #install.
    # :security_policy:: See Gem::Installer::new and Gem::Security.
    # :user_install:: See Gem::Installer.new
-@@ -45,11 +46,15 @@ class Gem::DependencyInstaller
+@@ -45,11 +46,14 @@ class Gem::DependencyInstaller
  
    def initialize(options = {})
      if options[:install_dir] then
@@ -26,11 +26,10 @@ Add install_root option for pkgsrc's rubygems support.
        Gem::Specification.dirs = @gem_home
        Gem.ensure_gem_subdirectories @gem_home
 -      options[:install_dir] = @gem_home # FIX: because we suck and reuse below
-+#     options[:install_dir] = @gem_home # FIX: because we suck and reuse below
      end
  
      options = DEFAULT_OPTIONS.merge options
-@@ -69,7 +74,12 @@ class Gem::DependencyInstaller
+@@ -69,7 +73,12 @@ class Gem::DependencyInstaller
      @installed_gems = []
  
      @install_dir = options[:install_dir] || Gem.dir
@@ -44,7 +43,7 @@ Add install_root option for pkgsrc's rubygems support.
  
      # Set with any errors that SpecFetcher finds while search through
      # gemspecs for a dep
-@@ -290,6 +300,7 @@ class Gem::DependencyInstaller
+@@ -290,6 +299,7 @@ class Gem::DependencyInstaller
                                  :format_executable   => @format_executable,
                                  :ignore_dependencies => @ignore_dependencies,
                                  :install_dir         => @install_dir,
