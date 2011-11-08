@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.8 2011/10/31 06:50:53 sbd Exp $
+$NetBSD: patch-am,v 1.9 2011/11/08 07:30:08 sbd Exp $
 
 --- setup.py.orig	2006-10-08 17:41:25.000000000 +0000
 +++ setup.py
@@ -271,7 +271,7 @@ $NetBSD: patch-am,v 1.8 2011/10/31 06:50:53 sbd Exp $
 +                for dir in dirs:
 +                    f = os.path.join(dir, 'ndbm.h')
 +                    if sys.platform == 'darwin' and is_macosx_sdk_path(dir):
-+                        f = os.path.join(sysroot, dir[1:], filename)
++                        f = os.path.join(sysroot, dir[1:], 'ndbm.h')
 +                    if not os.path.exists(f): continue
 +
 +                    ret = 'True'
