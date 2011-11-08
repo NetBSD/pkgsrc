@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/12 01:32:55 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/08 15:44:14 taca Exp $
 
 DISTNAME=	lockfile-${VERS}
 CATEGORIES=	devel
@@ -11,6 +11,7 @@ LICENSE=	ruby-license
 VERS=		1.4.3
 
 pre-configure:
+	${CP} ${FILESDIR}/gemspec ${GEM_SPECFILE}
 	cd ${WRKSRC} && \
 	${RM} -f bin/rlock-${VERS} lib/lockfile-${VERS}.rb
 
