@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/09/13 15:15:18 taca Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/08 15:37:34 taca Exp $
 
 DISTNAME=	json-1.6.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/11/08 15:37:34 taca Exp $
 bin/mongrel_rails
 ${GEM_HOME}/cache/mongrel-${PKGVERSION}.gem
-${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/LICENSE
