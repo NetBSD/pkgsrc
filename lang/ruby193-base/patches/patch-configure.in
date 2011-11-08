@@ -1,0 +1,62 @@
+$NetBSD: patch-configure.in,v 1.1.1.1 2011/11/08 16:10:51 taca Exp $
+
+* Adding Interix support.
+* Ignore doxygen.
+
+--- configure.in.orig	2011-10-09 13:17:20.000000000 +0000
++++ configure.in
+@@ -1111,6 +1111,8 @@ main()
+ 		],
+ [superux*], [	ac_cv_func_setitimer=no
+ 		],
++[interix*], [	LIBS="-lm $LIBS"
++		ac_cv_func_getpgrp_void=yes],
+ [	LIBS="-lm $LIBS"])
+ AC_CHECK_LIB(crypt, crypt)
+ AC_CHECK_LIB(dl, dlopen)	# Dynamic linking for SunOS/Solaris and SYSV
+@@ -2051,7 +2053,9 @@ if test "$with_dln_a_out" != yes; then
+ 			rb_cv_dlopen=yes],
+ 	[interix*], [	: ${LDSHARED='$(CC) -shared'}
+ 			XLDFLAGS="$XLDFLAGS -Wl,-E"
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280))'
+ 			LIBPATHFLAG=" -L%1\$-s"
++			RPATHFLAG=' -Wl,-R%1$-s'
+ 			rb_cv_dlopen=yes],
+ 	[freebsd*|dragonfly*], [
+ 			: ${LDSHARED='$(CC) -shared'}
+@@ -2420,7 +2424,12 @@ AS_CASE("$enable_shared", [yes], [
+ 	LIBRUBY_ALIASES='lib$(RUBY_BASE_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
+ 	],
+     [interix*], [
+-	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG_SHARED='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
+ 	])
+ ], [
+   LIBRUBYARG_SHARED=
+@@ -2465,11 +2474,7 @@ if test "$install_doc" != no; then
+     else
+ 	RDOCTARGET="nodoc"
+     fi
+-    if test "$install_capi" != no -a -n "$DOXYGEN"; then
+-	CAPITARGET="capi"
+-    else
+-	CAPITARGET="nodoc"
+-    fi
++    CAPITARGET="nodoc"
+ else
+     RDOCTARGET="nodoc"
+     CAPITARGET="nodoc"
+@@ -3023,7 +3028,7 @@ AC_CONFIG_FILES(Makefile, [{
+     }],
+ [EXEEXT='$EXEEXT' gnumake='$gnumake'])
+ 
+-ruby_pc="${RUBY_BASE_NAME}-${MAJOR}.${MINOR}.pc"
++ruby_pc="${RUBY_BASE_NAME}-${RUBY_PROGRAM_VERSION}.pc"
+ AC_SUBST(ruby_pc)
+ AC_SUBST(exec, [exec])
+ 
