@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2807 2011/11/08 15:40:03 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2808 2011/11/08 15:47:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4437,3 +4437,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-patron to 0.4.16nb1 [taca 2011-11-08]
 	Updated www/thoth-delicious to 0.1.0nb2 [taca 2011-11-08]
 	Updated www/thoth-flickr to 0.1.0nb2 [taca 2011-11-08]
+	Updated devel/ruby-priority-queue to 0.1.2nb4 [taca 2011-11-08]
