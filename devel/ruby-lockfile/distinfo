@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/12 01:32:55 taca Exp $
+$NetBSD: distinfo,v 1.2 2011/11/08 15:44:14 taca Exp $
 
 SHA1 (lockfile-1.4.3.gem) = 828710234b7ccc87744e9386749b8e2d0657ff41
 RMD160 (lockfile-1.4.3.gem) = fe2ffc3f245b2af75c581038af85e72f79d0cfcf
 Size (lockfile-1.4.3.gem) = 19456 bytes
-SHA1 (patch-aa) = 6c23bca342e07ea2ac3fd618613bb4142d4f765c
