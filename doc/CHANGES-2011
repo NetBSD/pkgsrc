@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2812 2011/11/08 20:23:09 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2813 2011/11/08 20:31:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4448,3 +4448,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-mode to 1.9.3p0 [taca 2011-11-08]
 	Updated time/ruby-tzinfo to 0.3.31 [taca 2011-11-08]
 	Added net/p5-Umph-Prompt version 0.1.0 [ryoon 2011-11-08]
+	Added net/umph version 0.2.0 [ryoon 2011-11-08]
