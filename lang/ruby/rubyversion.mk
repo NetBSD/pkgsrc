@@ -1,4 +1,196 @@
-# $NetBSD: rubyversion.mk,v 1.63 2011/10/25 06:01:09 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.64 2011/11/08 15:18:31 taca Exp $
+#
+
+# This file determines which Ruby version is used as a dependency for
+# a package.
+#
+#
+# === User-settable variables ===
+#
+# RUBY_VERSION_DEFAULT
+#	The preferered Ruby version to use.
+#
+#		Possible values: 18 192 193
+#		Compatible values: 1.9(= 192) 19(= 192)
+#		Default: 192
+#
+# RUBY_BUILD_RDOC
+#	Build rdoc of this package and so that install formated
+#	documentation.  It is also used in each package.
+#
+#		Possible values: Yes No
+#		Default: Yes
+#
+# RUBY_BUILD_RI
+#	Build ri format of this package so that ri command would be
+#	display class/module definitions.  It is also used in each package.
+#
+#		Possible values: Yes No
+#		Default: Yes
+#
+#
+# === Package-settable variables ===
+#
+# RUBY_VERSION_SUPPORTED
+#	The Ruby versions that are acceptable for the package.
+#
+#		Possible values: 18 192 193
+#		Compatible values: 19 (= 192)
+#		Default: 192
+#
+# RUBY_VERSION_REQD
+#	The Ruby versions force to build (for pbluk).
+#
+# RUBY_NOVERSION
+#	If "Yes", the package dosen't depend on any version of Ruby, such
+#	as editing mode for emacs.  In this case, package's name would begin
+#	with "ruby-".  Otherwise, the package's name is begin with
+#	${RUBY_PKGPREFIX}; "ruby18", "ruby19" and "ruby193".
+#
+#		Possible values: Yes No
+#		Default: No
+#
+# RUBY_DYNAMIC_DIRS
+#	Build dynamic PLIST from directories.
+#
+#	Default: (empty)
+#
+# RUBY_ENCODING_ARG
+#
+#	Optional encoding argument for shbang line.
+#
+#	Default: (empty)
+#
+# === Defined variables ===
+#
+# RUBY_VER
+#	Really selected version of ruby.  For compatibility, RUBY_VER
+#	would not set to 192 but 19.
+#
+#		Possible values: 18 19 193
+#
+#	Use this variable in pkgsrc's Makefile
+#
+# RUBY_PKGPREFIX
+#	Prefix part for ruby based packages.  It is recommended that to
+#	use RUBY_PKGPREFIX with ruby related packages since you can supply
+#	different binary packages as each version of Ruby.
+#
+# RUBY_ABI_VERSION
+#	Ruby's ABI version.
+#
+# RUBY_DLEXT
+#	Suffix of extention library.
+#
+# RUBY_SLEXT
+#	Suffix of shared library.
+#
+# RUBY
+#	Full path of ruby command.
+#
+# RDOC
+#	Full path of rdoc command.
+#
+# RUBY_NAME
+#	Name of ruby command.
+#
+# RUBYGEM_NAME
+#	Name of gem command.
+#
+# RAKE_NAME
+#	Name of rake command.
+#
+# RUBY_SUFFIX
+#	Extra string for each ruby commands; ruby, irb and so on.
+#
+# RUBY_VERSION
+#	Version of real Ruby's version excluding patchlevel.
+#
+# RUBY_VERSION_FULL
+#	Version of Ruby including patchlevel.
+#	
+# RUBY_BASE
+#	Name of ruby base package's name.
+#
+# RUBY_SRCDIR
+#	Directory of base ruby package.
+#
+# RUBY_SHLIBVER
+#	Suffix of libruby shared library's version.
+#
+# RUBY_SHLIB
+#	String after libruby shared library.
+#
+# RUBY_SHLIBALIAS
+#	Symblic link with libruby shared library with major version only.
+#
+# RUBY_STATICLIB
+#	Name of libruby static library.
+#
+# RUBY_VER_DIR
+#	Name of version directory under each library (and more) directories.
+#
+# RUBY_ARCH
+#	Name of architecture-dependent directory name.
+#
+# RUBY_INC
+#	machine independent include directory of ruby.
+#
+# RUBY_ARCHINC
+#	machine dependent include directory of ruby.
+#
+# RUBY_LIB_BASE
+#	common relative path of ruby's library.
+#
+# RUBY_LIB
+#	version specific relative path of ruby's library.
+#
+# RUBY_ARCHLIB
+#	version specific and machine dependent relative path of ruby's library.
+#
+# RUBY_SITELIB_BASE
+#	common site local directory.
+#
+# RUBY_SITELIB
+#	version specific site local directory.
+#
+# RUBY_SITEARCHLIB
+#	version specific and machine dependent site local directory.
+#
+# RUBY_VENDORLIB_BASE
+#	common vendor (pkgsrc) directory.
+#
+# RUBY_VENDORLIB
+#	version specific vendor local directory.
+#
+# RUBY_VENDORARCHLIB
+#	version specific and machine dependent vendor local directory.
+#
+# RUBY_DOC
+#	version specific document direcotry.
+#
+# RUBY_EG
+#	version specific examples direcotry.
+#
+# RUBY_GEM_BASE
+#	common GEM directory.
+#	
+# GEM_HOME
+#	version specific GEM directory.
+#
+# RUBY_RIDIR
+#	common ri directory.
+#
+# RUBY_BASERIDIR
+#	version specific ri directory.
+#
+# RUBY_SYSRIDIR
+#	version specific system ri directory.
+#
+# RUBY_SITERIDIR
+#	version specific site ri directory.
+#
+# Keywords: ruby
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -9,72 +201,65 @@ _RUBYVERSION_MK=	# defined
 # current supported Ruby's version
 RUBY18_VERSION=		1.8.7
 RUBY19_VERSION=		1.9.2
+RUBY193_VERSION=	1.9.3
 
 # patch
 RUBY18_PATCHLEVEL=	pl352
 RUBY19_PATCHLEVEL=	pl290
+RUBY193_PATCHLEVEL=	p0
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
 RUBY19_API_VERSION=	1.9.1
+RUBY193_API_VERSION=	1.9.1
 
-# RUBY_VERSION_DEFAULT defines default version for Ruby related
-#	packages and user can define in mk.conf.  (1.8 or 1.9)
 #
-RUBY_VERSION_DEFAULT?=	1.9
-_RUBY_VERSION_DEFAULT=	${RUBY_VERSION_DEFAULT:S/.//}
+RUBY_VERSION_DEFAULT?=	19
 
-# RUBY_VERSION defines the specific Ruby's version which is supported
-#	by the package.  It should be defined by packages whose distfiles
-#	are contained by Ruby's release distribution.
-#
-#	Default value is set to ${RUBY_VERSION_DEFAULT}
-#
+RUBY_VERSION_SUPPORTED?= 18 192 193
+RUBY_VER?=		${RUBY_VERSION_DEFAULT}
+
+# If package support only one version, use it.
+.if ${RUBY_VERSION_SUPPORTED:[\#]} == 1
+RUBY_VER=	${RUBY_VERSION_SUPPORTED}
+.endif
+
 .if defined(RUBY_VERSION_REQD)
-.  if ${RUBY_VERSION_REQD} == "18"
-RUBY_VERSION?=		${RUBY18_VERSION}
-.  elif ${RUBY_VERSION_REQD} == "19"
-RUBY_VERSION?=		${RUBY19_VERSION}
-.  else
-RUBY_VERSION?=		${_RUBY_VERSION_DEFAULT}
-PKG_FAIL_REASON+=	"Unknown value for ${RUBY_VERSION_REQD}"
+. for rv in ${RUBY_VERSION_SUPPORTED}
+.  if ${rv} == ${RUBY_VERSION_REQD}
+RUBY_VER=	${rv}
 .  endif
-.else
-.  if ${RUBY_VERSION_DEFAULT} == "1.8"
-RUBY_VERSION?=		${RUBY18_VERSION}
-.  elif ${RUBY_VERSION_DEFAULT} == "1.9"
-RUBY_VERSION?=		${RUBY19_VERSION}
-.  else
-RUBY_VERSION?=		${_RUBY_VERSION_DEFAULT}
-.  endif
+. endfor
 .endif
 
-RUBY_PATCH_LEVEL=	${RUBY${RUBY_VER}_PATCHLEVEL}
+# For backward compatibility
+.if ${RUBY_VER} == "1.9" || ${RUBY_VER} == "192"
+RUBY_VER=	19
+.elif  ${RUBY_VER} == "1.8"
+RUBY_VER=	18
+.endif
 
-.if ${RUBY_VERSION} == ${RUBY18_VERSION}
-RUBY_API_VERSION=	${RUBY18_API_VERSION}
-RUBY_VERSION_SUFFIX=	${RUBY_VERSION}${RUBY_PATCH_LEVEL:S/pl/./}
-RUBY_ABI_VERSION=	${RUBY_VERSION_SUFFIX}
-.elif ${RUBY_VERSION} == ${RUBY19_VERSION}
-RUBY_API_VERSION=	${RUBY19_API_VERSION}
-RUBY_VERSION_SUFFIX=	${RUBY_VERSION}${RUBY_PATCH_LEVEL}
+.if ${RUBY_VER} == "18"
+RUBY_VERSION=		${RUBY18_VERSION}
+RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL:S/pl/./}
+RUBY_ABI_VERSION=	${RUBY18_API_VERSION}
+.elif ${RUBY_VER} == "19"
+RUBY_VERSION=		${RUBY19_VERSION}
+RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL}
 RUBY_ABI_VERSION=	${RUBY19_API_VERSION}
+.elif ${RUBY_VER} == "193"
+RUBY_VERSION=		${RUBY193_VERSION}
+RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+.else
+PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
 .endif
 
-#
+RUBY_PATCHLEVEL=	${RUBY${RUBY_VER}_PATCHLEVEL}
+RUBY_API_VERSION=	${RUBY${RUBY_VER}_API_VERSION}
+
 # Variable assignment for multi-ruby packages
-MULTI+=	RUBY_VERSION_REQD=${RUBY_VERSION_REQD:U${_RUBY_VERSION_DEFAULT}}
-
-# RUBY_VERSION_SUPPORTED defines the list of ${RUBY_VER} which is
-#	supported by the package.  It should be defined by the packages
-#	for specific Ruby versions.
-#
-RUBY_VERSION_SUPPORTED?= 18 19
-
-# RUBY_VERSION_LIST defines the list of ${RUBY_VER} which is known to
-#	this framework.
-#
-RUBY_VERSION_LIST= 18 19
+MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 
 # RUBY_NOVERSION should be set to "Yes" if the package dosen't depend on
 #	any specific version of ruby command.  In this case, package's
@@ -90,88 +275,42 @@ RUBY_NOVERSION?=	No
 # is defined from version of Ruby.  It should not be used in packages'
 # Makefile.
 #
-_RUBY_VER=		${RUBY_VERSION:C/(-.*)//}
-_RUBY_VER_MAJOR=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
-_RUBY_VER_MINOR=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
-_RUBY_VER_TEENY=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
+_RUBY_VER_MAJOR=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
+_RUBY_VER_MINOR=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
+_RUBY_VER_TEENY=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
 
-# RUBY_VER defines Ruby base release.
-#
-RUBY_VER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+_RUBY_API_MAJOR=	${RUBY_API_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1\2/}
+_RUBY_API_MINOR=	${RUBY_API_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
 
-# RUBY_API_TEENY is used by shared library version after Ruby 1.9.1
-#
-.if ${RUBY_VER} == "19"
-RUBY_API_TEENY=		1
-.else
-RUBY_API_TEENY=		${_RUBY_VER_TEENY}
-.endif
+RUBY_SUFFIX=		${RUBY_VER}
 
-# RUBY_REQD		Minimum required Ruby's version
-#
-RUBY_REQD?=		${RUBY_VERSION}
-
-# RUBY_SUFFIX is appended to Ruby's commands; ruby, irb and so on.
-#
-RUBY_SUFFIX?=		${RUBY_VER}
-
-# RUBY_NAME defines executable's name of Ruby itself.
-#
-RUBY_NAME?=		ruby${RUBY_SUFFIX}
-
-# Optional encoding argument for shbang line
-RUBY_ENCODING_ARG?=
-
-# Name of gem and rake command
+RUBY_NAME=		ruby${RUBY_SUFFIX}
 RUBYGEM_NAME=		gem${RUBY_SUFFIX}
 RAKE_NAME=		rake${RUBY_SUFFIX}
 
-# RUBY_BASE is base of ruby package's name
-#
+RUBY_ENCODING_ARG?=
+
 RUBY_BASE=		ruby${RUBY_VER}-base
 
-# RUBY_PKGPREFIX is prefix part for ruby based packages.
-#
 RUBY_PKGPREFIX?=	${RUBY_NAME}
 
-# RUBY_VER_DIR is used as part of  Ruby's library directories.
-#
-#.if ${RUBY_VER} == "18"
-RUBY_VER_DIR?=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
-#.else
-#RUBY_VER_DIR?=		${RUBY_VERSION}
-#.endif
-
-RUBY_SITE_SUBDIR?=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
-
-# Simple check for package availability with Ruby's version.
-#
-.if empty(RUBY_VERSION_SUPPORTED:M${RUBY_VER})
-PKG_FAIL_REASON+= "This package isn't supported by ${RUBY_NAME}."
+.if ${RUBY_VER} == "18" || ${RUBY_VER} == "19"
+RUBY_VER_DIR=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
+.else
+RUBY_VER_DIR=		${RUBY_VERSION}
 .endif
 
-# RUBY_NOVERSION specifies that package dosen't depends on any
-# version of Ruby.
-#
 .if empty(RUBY_NOVERSION:M[nN][oO])
 RUBY_SUFFIX=
 RUBY_NAME=		ruby
 .endif
 
-# Build rdoc
-RUBY_BUILD_RDOC?=	YES
+RUBY_BUILD_RDOC?=	Yes
+RUBY_BUILD_RI?=		Yes
 
-# Build ri, index for ri command
-RUBY_BUILD_RI?=		YES
-
-# RUBY related command's full pathname.
-#
 RUBY?=			${PREFIX}/bin/${RUBY_NAME}
 RDOC?=			${PREFIX}/bin/rdoc${RUBY_VER}
 
-#
-# RUBY_ARCH is used as architecture-dependent directory name.
-#
 RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 
 #
@@ -183,12 +322,12 @@ RUBY_SHLIBALIAS?=	@comment
 RUBY_STATICLIB?=	${RUBY_VER}-static.a
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
-RUBY_SHLIBVER=		${RUBY_VER}.${RUBY_API_TEENY}
-_RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${RUBY_VER}
+RUBY_SHLIBVER=		${_RUBY_API_MAJOR}.${_RUBY_API_MINOR}
+_RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_API_MAJOR}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 RUBY_SHLIBVER=		${RUBY_VER}
 .elif ${OPSYS} == "OpenBSD"
-RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${RUBY_API_TEENY}
+RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
 .elif ${OPSYS} == "Darwin"
 RUBY_SHLIB=		${RUBY_VER}.${RUBY_SHLIBVER}.${RUBY_SLEXT}
 .if ${RUBY_VER} == "18"
@@ -201,18 +340,14 @@ RUBY_STATICLIB=		${RUBY_VER}.${RUBY_API_VERSION}-static.a
 _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 .elif ${OPSYS} == "SunOS"
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}
- _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${RUBY_API_TEENY}
+ _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${_RUBY_API_MINOR}
 .endif
 
 .if !empty(_RUBY_SHLIBALIAS)
 RUBY_SHLIBALIAS=	lib/libruby${_RUBY_SHLIBALIAS}
 .endif
 
-#
-# RUBY_DLEXT is suffix of extention library.
-# RUBY_SLEXT is suffix of shared library.
-#
-.if ${OPSYS} == "Darwin"
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
 RUBY_DLEXT=	bundle
 RUBY_SLEXT=	dylib
 .else
@@ -223,9 +358,7 @@ RUBY_SLEXT=	so
 #
 # Use pthread library with Ruby
 #
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-9].*)
-RUBY_USE_PTHREAD?=	no
-.elif !empty(MACHINE_PLATFORM:MDarwin-9.*-powerpc)
+.if !empty(MACHINE_PLATFORM:MDarwin-9.*-powerpc)
 # Workaround for Ruby Bug #193
 # http://redmine.ruby-lang.org/issues/show/193
 RUBY_USE_PTHREAD?=	no
@@ -235,14 +368,8 @@ PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
 .endif
 
-#
-# Dynamic PLIST directories
-#
 RUBY_DYNAMIC_DIRS?=	# empty
 
-#
-# source directory
-#
 RUBY_SRCDIR?=	${_PKGSRC_TOPDIR}/lang/${RUBY_BASE}
 
 #
@@ -263,14 +390,8 @@ RUBY_VENDORARCHLIB?=	${RUBY_VENDORLIB}/${RUBY_ARCH}
 RUBY_DOC?=		share/doc/${RUBY_NAME}
 RUBY_EG?=		share/examples/${RUBY_NAME}
 
-# RUBY_GEM_BASE
-#	The base path of the gem repository.
-#
-RUBY_GEM_BASE?=		${RUBY_LIB_BASE}/gems
 
-# GEM_HOME
-#	The path of the gem repository.
-#
+RUBY_GEM_BASE?=		${RUBY_LIB_BASE}/gems
 GEM_HOME?=		${RUBY_GEM_BASE}/${RUBY_VER_DIR}
 
 #
@@ -285,20 +406,22 @@ RUBY_SITERIDIR?=	${RUBY_BASERIDIR}/site
 # MAKE_ENV
 #
 MAKE_ENV+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
-			RUBY_VERSION=${RUBY_VERSION:Q} \
 			RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
 
-MAKEFLAGS+=		RUBY_VERSION=${RUBY_VERSION:Q} \
-			RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
+MAKEFLAGS+=		RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
 
 #
 # PLIST
 #
-PLIST_VARS+=		ruby18 ruby19
+PLIST_VARS+=		ruby18 ruby19 ruby192 ruby193
 .if ${RUBY_VER} == "18"
 PLIST.ruby18=		yes
 .elif ${RUBY_VER} == "19"
 PLIST.ruby19=		yes
+PLIST.ruby192=		yes
+.elif ${RUBY_VER} == "193"
+PLIST.ruby19=		yes
+PLIST.ruby193=		yes
 .endif
 
 PLIST_RUBY_DIRS=	RUBY_INC=${RUBY_INC:Q} RUBY_ARCHINC=${RUBY_ARCHINC:Q} \
