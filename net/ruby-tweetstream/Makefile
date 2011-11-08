@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 07:38:56 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/08 09:08:21 obache Exp $
 
-DISTNAME=	tweetstream-1.0.4
+DISTNAME=	tweetstream-1.0.5
 CATEGORIES=	net
 
 MAINTAINER=	obache@NetBSD.org

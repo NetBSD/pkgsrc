@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/26 10:58:00 obache Exp $
-${GEM_HOME}/cache/tweetstream-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.2 2011/11/08 09:08:21 obache Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/RELEASE_NOTES.rdoc
@@ -24,4 +25,4 @@ ${GEM_LIBDIR}/spec/tweetstream/hash_spec.rb
 ${GEM_LIBDIR}/spec/tweetstream/parser_spec.rb
 ${GEM_LIBDIR}/spec/tweetstream/status_spec.rb
 ${GEM_LIBDIR}/spec/tweetstream_spec.rb
-${GEM_HOME}/specifications/tweetstream-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
