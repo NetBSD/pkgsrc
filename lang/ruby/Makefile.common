@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2011/10/20 15:13:24 taca Exp $
+# $NetBSD: Makefile.common,v 1.22 2011/11/08 15:19:55 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -13,11 +13,18 @@
 # used by textproc/ruby-psych/Makefile
 # used by x11/ruby-tk/Makefile
 
-LICENSE=	gnu-gpl-v2
+# Ruby's license
+.if ${RUBY_VER} == "18" ||  ${RUBY_VER} == "19"
+LICENSE=		gnu-gpl-v2 OR ruby-license
+.else
+LICENSE=		2-clause-bsd OR ruby-license
+.endif
 
 #
 # Ruby distribution sites.
 #
+RUBY_SITE_SUBDIR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
+
 MASTER_SITE_RUBY?= \
 	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://www.ibiblio.org/pub/languages/ruby/${RUBY_SITE_SUBDIR}/ \
@@ -39,20 +46,22 @@ RUBY_DISTINFO_FILE=	${RUBY_SRCDIR}/distinfo
 RUBY_HOMEPAGE=		http://www.ruby-lang.org/en/
 
 # common default
-_RUBY_PATCH_LEVEL=	${RUBY_PATCH_LEVEL:S/pl/p/:S/pre/preview/}
+_RUBY_PATCHLEVEL=	${RUBY_PATCHLEVEL:S/pl/p/:S/pre/preview/}
 
-.if !empty(_RUBY_PATCH_LEVEL)
-RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-${_RUBY_PATCH_LEVEL}
+.if !empty(_RUBY_PATCHLEVEL)
+RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-${_RUBY_PATCHLEVEL}
 .else
 RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
 .endif
+
 RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
 EXTRACT_SUFX=		.tar.bz2
 STRIP?=			strip
 
 #
-# PLIST substitution
+# substitutions
 #
+MESSAGE_SUBST+=		RUBY_DISTNAME=${RUBY_DISTNAME}
 PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 			RUBY_SHLIBMAJOR=${RUBY_SHLIBMAJOR:Q} \
 			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
