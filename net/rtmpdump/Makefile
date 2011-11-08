@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2011/10/08 06:09:33 dsainty Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/08 19:29:09 ryoon Exp $
 #
 
 DISTNAME=	rtmpdump-2.4
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://rtmpdump.mplayerhq.hu/download/
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://rtmpdump.mplayerhq.hu/
 COMMENT=	Tools for handling RTMP stream
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
