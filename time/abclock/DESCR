@@ -1,0 +1,11 @@
+Digital clocks are nice for telling exactly what time it is, but, unlike an
+analogue clock, they don't give a spatial representation of time. They don't
+show where time is coming from or going to.
+
+On the other hand, a bitmap representation of a mechanical clock doesn't tell
+time very accurately if the bitmap is very small. And curves and oblique lines
+don't look very nice in a small, low-resolution bitmap.
+
+So, this is something different: an analogue clock that isn't tied to the
+design of the mechanical clock, but instead uses the natural properties of
+bitmaps: straight lines and rectangles.
