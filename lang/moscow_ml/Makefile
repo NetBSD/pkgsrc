@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2008/04/28 10:16:57 tnn Exp $
+# $NetBSD: Makefile,v 1.28.32.1 2011/11/08 21:58:07 tron Exp $
 
 DISTNAME=	mos201src
 PKGNAME=	moscow_ml-2.01
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.itu.dk/people/sestoft/mosml/
 
