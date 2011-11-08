@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2800 2011/11/08 11:04:57 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2801 2011/11/08 11:16:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4407,3 +4407,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ruby-tweetstream to 1.0.5 [obache 2011-11-08]
 	Added time/abclock version 1.0d [ryoon 2011-11-08]
 	Updated audio/abcmidi to 20111021 [ryoon 2011-11-08]
+	Added textproc/coccigrep version 1.6 [ryoon 2011-11-08]
