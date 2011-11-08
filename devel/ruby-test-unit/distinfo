@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/08/17 13:28:21 taca Exp $
+$NetBSD: distinfo,v 1.6 2011/11/08 15:45:43 taca Exp $
 
 SHA1 (test-unit-2.3.2.gem) = aeda648c442a1d1fb60a5c4c586a7e1ea36e3159
 RMD160 (test-unit-2.3.2.gem) = 39ac0c3c6cad82cfaf6488d319bc5f6d5aa9b657
 Size (test-unit-2.3.2.gem) = 94720 bytes
-SHA1 (patch-aa) = db5ae252f41f1b445daffcf952eebf5bee9e9888
