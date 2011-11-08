@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2011/02/21 16:01:18 taca Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/08 15:37:34 taca Exp $
 
 DISTNAME=	tmail-1.2.7.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 
 MAINTAINER=	taca@NetBSD.org
