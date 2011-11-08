@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.8 2011/09/13 03:23:04 taca Exp $
+# $NetBSD: gem.mk,v 1.9 2011/11/08 15:19:22 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -6,9 +6,14 @@
 # Package-settable variables:
 #
 # RUBYGEMS_REQD
-#	Minimum version of required rubygems.  Ruby 1.9.2 coms with
-#	rubygems version 1.3.7.  If newer version of rubygems is
-#	resuiqred, set RUBYGEMS_REQD to minimum version.
+#	Minimum version of required rubygems.  Ruby base packages contain:
+#
+#		ruby18-base:	none
+#		ruby19-base:	1.3.7
+#		ruby193-base:	1.8.11
+#
+#	If newer version of rubygems is resuiqred, set RUBYGEMS_REQD to
+#	minimum version.
 #
 #	Default: not defined
 #
@@ -94,6 +99,9 @@ GEM_BUILD?=	gemspec
 
 OVERRIDE_GEMSPEC?=	# default is empty
 
+RUBYGEM_LANG?=	en_US.UTF-8
+RUBYGEM_ENV?=	LANG=${RUBYGEM_LANG} LC_CTYPE=${RUBYGEM_LANG}
+
 .if !empty(OVERRIDE_GEMSPEC)
 UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
 .endif
@@ -122,15 +130,43 @@ USE_TOOLS+=		expr
 # build tool.
 #
 
-.if defined(RUBYGEMS_REQD)
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=${RUBYGEMS_REQD}:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=${RUBYGEMS_REQD}:../../misc/rubygems
-.else
-. if ${RUBY_VER} == "18"
+.if ${RUBY_VER} == "18"
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.1.0:../../misc/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
+.else # !ruby18
+. if defined(RUBYGEMS_REQD)
+
+RUBY19_RUBYGEMS_VERS=	1.3.7
+RUBY193_RUBYGEMS_VERS=	1.8.11
+
+_RUBYGEMS_REQD_MAJOR=	${RUBYGEMS_REQD:C/\.[0-9\.]+$//}
+_RUBYGEMS_REQD_MINORS=	${RUBYGEMS_REQD:C/^([0-9]+)\.*//}
+
+.  if ${RUBY_VER} == "19"
+_RUBYGEMS_MAJOR=	${RUBY19_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
+_RUBYGEMS_MINORS=	${RUBY19_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
+.  elif ${RUBY_VER} == "193"
+_RUBYGEMS_MAJOR=	${RUBY193_RUBYGEMS_VERS:C/\.[0-9\.]+$//}
+_RUBYGEMS_MINORS=	${RUBY193_RUBYGEMS_VERS:C/^([0-9]+)\.*//}
+.  else
+PKG_FAIL_REASON+= "Unknown Ruby version specified: ${RUBY_VER}."
+.  endif
+
+_RUBYGEMS_REQD=	NO
+
+.  if ${_RUBYGEMS_REQD_MAJOR} > ${_RUBYGEMS_MAJOR}
+_RUBYGEMS_REQD=	YES
+.  elif ${_RUBYGEMS_REQD_MAJOR} == ${_RUBYGEMS_MAJOR}
+.   if !empty(_RUBYGEMS_MINORS) && ${_RUBYGEMS_REQD_MINORS} > ${_RUBYGEMS_MINORS}
+_RUBYGEMS_REQD=	YES
+.   endif
+.  endif
+
+.  if empty(_RUBYGEMS_REQD:M[nN][oO])
+DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=${RUBYGEMS_REQD}:../../misc/rubygems
+.  endif
 . endif
-.endif
+.endif # !ruby18
 
 CATEGORIES+=	ruby
 MASTER_SITES?=	http://rubygems.org/gems/ http://gems.rubyforge.org/gems/
@@ -201,10 +237,11 @@ post-extract: gem-extract
 .if !target(gem-extract)
 gem-extract: fake-home
 .  for _gem_ in ${DISTFILES:M*.gem}
-	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} \
+	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
 		${RUBYGEM} unpack ${RUBYGEM_INSTALL_ROOT_OPTION} \
 			${_DISTDIR:Q}/${_gem_:Q}
-	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} TZ=UTC \
+	${RUN} cd ${WRKDIR} && \
+		${SETENV} ${MAKE_ENV} TZ=UTC ${RUBYGEM_ENV} \
 		${RUBYGEM} spec ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
 .  endfor
 .endif
@@ -239,7 +276,7 @@ gem-build: _gem-${GEM_BUILD}-build
 
 .PHONY: _gem-gemspec-build
 _gem-gemspec-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
 		${RUBYGEM} build ${GEM_SPECFILE}
 	${RUN} ${TEST} -f ${WRKSRC}/${GEM_NAME}.gem || \
 		${FAIL_MSG} "Build of ${GEM_NAME}.gem failed."
@@ -277,8 +314,8 @@ RUBYGEM_INSTALL_ROOT_OPTION=	--install-root ${RUBYGEM_INSTALL_ROOT}
 .PHONY: _gem-build-install-root
 _gem-build-install-root:
 	@${STEP_MSG} "Installing gem into installation root"
-	${RUN} ${SETENV} ${MAKE_ENV} ${RUBYGEM} install ${RUBYGEM_OPTIONS} \
-		${_RUBYGEM_OPTIONS}
+	${RUN} ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
+		${RUBYGEM} install ${RUBYGEM_OPTIONS} ${_RUBYGEM_OPTIONS}
 
 # The ``gem'' command doesn't exit with a non-zero result even if the
 # install of the gem failed, so we do the check and return the proper exit
