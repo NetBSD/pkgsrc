@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.888 2011/11/03 04:51:53 obache Exp $
+# $NetBSD: Makefile,v 1.889 2011/11/08 20:22:06 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -417,6 +417,7 @@ SUBDIR+=	p5-SOAP-Transport-TCP
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Test-DNS
 SUBDIR+=	p5-Test-TCP
+SUBDIR+=	p5-Umph-Prompt
 SUBDIR+=	p5-WebService-Google-Reader
 SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-eBay-API
