@@ -1,4 +1,0 @@
-umph is a command line tool for parsing video links from Youtube
-feeds, such as playlists, favorites and uploads. The parsed video
-links are printed to the standard output each separated with a
-newline.
