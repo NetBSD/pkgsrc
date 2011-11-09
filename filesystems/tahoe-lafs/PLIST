@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/02/01 02:05:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/11/09 00:30:12 gdt Exp $
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -12,6 +12,9 @@ ${PYSITELIB}/allmydata/_auto_deps.pyo
 ${PYSITELIB}/allmydata/_version.py
 ${PYSITELIB}/allmydata/_version.pyc
 ${PYSITELIB}/allmydata/_version.pyo
+${PYSITELIB}/allmydata/blacklist.py
+${PYSITELIB}/allmydata/blacklist.pyc
+${PYSITELIB}/allmydata/blacklist.pyo
 ${PYSITELIB}/allmydata/check_results.py
 ${PYSITELIB}/allmydata/check_results.pyc
 ${PYSITELIB}/allmydata/check_results.pyo
@@ -36,6 +39,9 @@ ${PYSITELIB}/allmydata/frontends/__init__.pyo
 ${PYSITELIB}/allmydata/frontends/auth.py
 ${PYSITELIB}/allmydata/frontends/auth.pyc
 ${PYSITELIB}/allmydata/frontends/auth.pyo
+${PYSITELIB}/allmydata/frontends/drop_upload.py
+${PYSITELIB}/allmydata/frontends/drop_upload.pyc
+${PYSITELIB}/allmydata/frontends/drop_upload.pyo
 ${PYSITELIB}/allmydata/frontends/ftpd.py
 ${PYSITELIB}/allmydata/frontends/ftpd.pyc
 ${PYSITELIB}/allmydata/frontends/ftpd.pyo
@@ -228,9 +234,9 @@ ${PYSITELIB}/allmydata/scripts/tahoe_mv.pyo
 ${PYSITELIB}/allmydata/scripts/tahoe_put.py
 ${PYSITELIB}/allmydata/scripts/tahoe_put.pyc
 ${PYSITELIB}/allmydata/scripts/tahoe_put.pyo
-${PYSITELIB}/allmydata/scripts/tahoe_rm.py
-${PYSITELIB}/allmydata/scripts/tahoe_rm.pyc
-${PYSITELIB}/allmydata/scripts/tahoe_rm.pyo
+${PYSITELIB}/allmydata/scripts/tahoe_unlink.py
+${PYSITELIB}/allmydata/scripts/tahoe_unlink.pyc
+${PYSITELIB}/allmydata/scripts/tahoe_unlink.pyo
 ${PYSITELIB}/allmydata/scripts/tahoe_webopen.py
 ${PYSITELIB}/allmydata/scripts/tahoe_webopen.pyc
 ${PYSITELIB}/allmydata/scripts/tahoe_webopen.pyo
@@ -294,7 +300,6 @@ ${PYSITELIB}/allmydata/test/common_util.pyo
 ${PYSITELIB}/allmydata/test/common_web.py
 ${PYSITELIB}/allmydata/test/common_web.pyc
 ${PYSITELIB}/allmydata/test/common_web.pyo
-${PYSITELIB}/allmydata/test/figleaf.excludes
 ${PYSITELIB}/allmydata/test/no_network.py
 ${PYSITELIB}/allmydata/test/no_network.pyc
 ${PYSITELIB}/allmydata/test/no_network.pyo
@@ -328,6 +333,9 @@ ${PYSITELIB}/allmydata/test/test_dirnode.pyo
 ${PYSITELIB}/allmydata/test/test_download.py
 ${PYSITELIB}/allmydata/test/test_download.pyc
 ${PYSITELIB}/allmydata/test/test_download.pyo
+${PYSITELIB}/allmydata/test/test_drop_upload.py
+${PYSITELIB}/allmydata/test/test_drop_upload.pyc
+${PYSITELIB}/allmydata/test/test_drop_upload.pyo
 ${PYSITELIB}/allmydata/test/test_encode.py
 ${PYSITELIB}/allmydata/test/test_encode.pyc
 ${PYSITELIB}/allmydata/test/test_encode.pyo
@@ -349,6 +357,9 @@ ${PYSITELIB}/allmydata/test/test_hung_server.pyo
 ${PYSITELIB}/allmydata/test/test_immutable.py
 ${PYSITELIB}/allmydata/test/test_immutable.pyc
 ${PYSITELIB}/allmydata/test/test_immutable.pyo
+${PYSITELIB}/allmydata/test/test_import.py
+${PYSITELIB}/allmydata/test/test_import.pyc
+${PYSITELIB}/allmydata/test/test_import.pyo
 ${PYSITELIB}/allmydata/test/test_introducer.py
 ${PYSITELIB}/allmydata/test/test_introducer.pyc
 ${PYSITELIB}/allmydata/test/test_introducer.pyo
@@ -454,6 +465,9 @@ ${PYSITELIB}/allmydata/util/dictutil.pyo
 ${PYSITELIB}/allmydata/util/encodingutil.py
 ${PYSITELIB}/allmydata/util/encodingutil.pyc
 ${PYSITELIB}/allmydata/util/encodingutil.pyo
+${PYSITELIB}/allmydata/util/fake_inotify.py
+${PYSITELIB}/allmydata/util/fake_inotify.pyc
+${PYSITELIB}/allmydata/util/fake_inotify.pyo
 ${PYSITELIB}/allmydata/util/fileutil.py
 ${PYSITELIB}/allmydata/util/fileutil.pyc
 ${PYSITELIB}/allmydata/util/fileutil.pyo
@@ -537,7 +551,9 @@ ${PYSITELIB}/allmydata/web/directory.py
 ${PYSITELIB}/allmydata/web/directory.pyc
 ${PYSITELIB}/allmydata/web/directory.pyo
 ${PYSITELIB}/allmydata/web/directory.xhtml
+${PYSITELIB}/allmydata/web/download-status-timeline.xhtml
 ${PYSITELIB}/allmydata/web/download-status.xhtml
+${PYSITELIB}/allmydata/web/download_status_timeline.js
 ${PYSITELIB}/allmydata/web/filenode.py
 ${PYSITELIB}/allmydata/web/filenode.pyc
 ${PYSITELIB}/allmydata/web/filenode.pyo
@@ -550,12 +566,14 @@ ${PYSITELIB}/allmydata/web/introducer.xhtml
 ${PYSITELIB}/allmydata/web/introweb.py
 ${PYSITELIB}/allmydata/web/introweb.pyc
 ${PYSITELIB}/allmydata/web/introweb.pyo
+${PYSITELIB}/allmydata/web/jquery-1.6.1.min.js
 ${PYSITELIB}/allmydata/web/literal-check-results.xhtml
 ${PYSITELIB}/allmydata/web/manifest.xhtml
 ${PYSITELIB}/allmydata/web/map-update-status.xhtml
 ${PYSITELIB}/allmydata/web/operations.py
 ${PYSITELIB}/allmydata/web/operations.pyc
 ${PYSITELIB}/allmydata/web/operations.pyo
+${PYSITELIB}/allmydata/web/protovis-3.3.1.min.js
 ${PYSITELIB}/allmydata/web/provisioning.xhtml
 ${PYSITELIB}/allmydata/web/publish-status.xhtml
 ${PYSITELIB}/allmydata/web/reliability.py
