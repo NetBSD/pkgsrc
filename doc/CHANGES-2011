@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2820 2011/11/09 01:23:42 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.2821 2011/11/09 18:29:12 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4461,3 +4461,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/p5-umph version 0.2.0 [ryoon 2011-11-08]
 	Updated filesystems/tahoe-lafs to 1.9.0 [gdt 2011-11-09]
 	Updated geography/viking to 1.2.2 [gdt 2011-11-09]
+	Updated x11/xdm to 1.1.11 [cheusov 2011-11-09]
