@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/08/08 21:37:52 gls Exp $
+$NetBSD: distinfo,v 1.7 2011/11/09 21:34:38 gls Exp $
 
-SHA1 (capistrano-2.8.0.gem) = 7c6b8d638419f5d89499a81adf2258deefc89f89
-RMD160 (capistrano-2.8.0.gem) = 85a17153a2b8d1a99aacc22899a850577d03c9df
-Size (capistrano-2.8.0.gem) = 116736 bytes
+SHA1 (capistrano-2.9.0.gem) = dfa9adaa18312d878058b059d7559a66038bbae9
+RMD160 (capistrano-2.9.0.gem) = b9ba7bc6754c3a780c158f17e3b561874c042b07
+Size (capistrano-2.9.0.gem) = 118784 bytes

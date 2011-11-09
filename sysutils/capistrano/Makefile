@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2011/08/12 17:13:38 taca Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/09 21:34:38 gls Exp $
 
-DISTNAME=	capistrano-2.8.0
-PKGREVISION=	1
+DISTNAME=	capistrano-2.9.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
