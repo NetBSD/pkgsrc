@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2011/08/08 21:37:52 gls Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/11/09 21:34:38 gls Exp $
 bin/cap
 bin/capify
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rvmrc
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.mdown
@@ -99,6 +100,7 @@ ${GEM_LIBDIR}/test/deploy/scm/darcs_test.rb
 ${GEM_LIBDIR}/test/deploy/scm/git_test.rb
 ${GEM_LIBDIR}/test/deploy/scm/mercurial_test.rb
 ${GEM_LIBDIR}/test/deploy/scm/none_test.rb
+${GEM_LIBDIR}/test/deploy/scm/perforce_test.rb
 ${GEM_LIBDIR}/test/deploy/scm/subversion_test.rb
 ${GEM_LIBDIR}/test/deploy/strategy/copy_test.rb
 ${GEM_LIBDIR}/test/extensions_test.rb
