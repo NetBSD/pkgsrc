@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10662 2011/11/08 21:52:50 asau Exp $
+$NetBSD: TODO,v 1.10663 2011/11/09 18:29:12 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -1391,7 +1391,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xconsole-1.0.4
 	o xcursorgen-1.0.4
 	o xdesktopwaves-1.3
-	o xdm-1.1.11 [pkg/45554]
 	o xdpyinfo-1.2.0
 	o xdriinfo-1.0.4
 	o xemacs-current-21.5.31
