@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2822 2011/11/09 20:59:50 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2823 2011/11/09 21:29:42 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated geography/viking to 1.2.2 [gdt 2011-11-09]
 	Updated x11/xdm to 1.1.11 [cheusov 2011-11-09]
 	Updated graphics/shotwell to 0.11.6 [gls 2011-11-09]
+	Updated devel/ruby-highline to 1.6.5 [gls 2011-11-09]
