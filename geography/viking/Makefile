@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2011/11/09 01:23:13 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2011/11/09 01:28:03 gdt Exp $
 #
 
 DISTNAME=		viking-1.2.2
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}
 
@@ -27,7 +28,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-#.include "../../geography/gpsd/buildlink3.mk"
+.include "../../geography/gpsd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
