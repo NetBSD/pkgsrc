@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2011/09/14 11:36:17 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/09 00:30:12 gdt Exp $
 #
 
-VERSION=	1.8.3
+VERSION=	1.9.0
 DISTNAME=	allmydata-tahoe-${VERSION}
 EGG_NAME=	allmydata_tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	filesystems
-MASTER_SITES=	http://tahoe-lafs.org/source/tahoe-lafs/releases/
+MASTER_SITES=	https://tahoe-lafs.org/source/tahoe-lafs/releases/
+#for beta, add
+#MASTER_SITES+=		http://tahoe-lafs.org/source/tahoe-lafs/tarballs/
 EXTRACT_SUFX=	.tar.bz2
+FETCH_USING=	curl
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://tahoe-lafs.org/
@@ -45,9 +47,9 @@ DEPENDS+=	${PYPKGPREFIX}-nevow-[0-9]*:../../www/py-nevow
 
 # Distfile has files mode 600, which leads to root-owned 600 files in
 # the binary package.
-#post-extract:
-#	${ECHO} "Fixing distfile contents to be world readable:"
-#	chmod -R +r ${WRKSRC}
+post-extract:
+	${ECHO} "Fixing distfile contents to be world readable:"
+	chmod -R +r ${WRKSRC}
 
 REPLACE_PYTHON+= src/allmydata/reliability.py
 REPLACE_PYTHON+= src/allmydata/storage/shares.py
