@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/11/06 17:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2011/11/09 15:28:36 wiz Exp $
 #
 
 DISTNAME=		skype_static-1.4.0.118-oss
@@ -19,6 +19,10 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+FETCH_MESSAGE=	"The skype distfile is not generally available, or freely"
+FETCH_MESSAGE+=	"distributable. If you cannot find it then this package is not"
+FETCH_MESSAGE+=	"of much use."
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
