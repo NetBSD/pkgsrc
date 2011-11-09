@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/06/17 15:34:02 taca Exp $
+$NetBSD: distinfo,v 1.5 2011/11/09 21:29:09 gls Exp $
 
-SHA1 (highline-1.6.2.gem) = 74a4a67ec7e9a9cc87c636a81d262808272369b8
-RMD160 (highline-1.6.2.gem) = 9d4669fabdf3a6254cacd12a204e2430a15efd5c
-Size (highline-1.6.2.gem) = 56320 bytes
+SHA1 (highline-1.6.5.gem) = 6962d4ad136f768d8fc1a2e4fa3ae4c00ec424e5
+RMD160 (highline-1.6.5.gem) = e79f8ff0d7c002d6535ba3807ea388f0e173ff10
+Size (highline-1.6.5.gem) = 66560 bytes
