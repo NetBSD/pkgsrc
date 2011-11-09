@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2011/11/07 12:04:34 drochner Exp $
+$NetBSD: distinfo,v 1.4 2011/11/09 18:38:02 drochner Exp $
 
 SHA1 (boxbackup-0.11.1.tgz) = 254253dbfc8cbfc2e5272d1e3589d4d73ccf3597
 RMD160 (boxbackup-0.11.1.tgz) = 17553b3ff06d19f353dbadc0166b7dceaa11c271
 Size (boxbackup-0.11.1.tgz) = 1863270 bytes
+SHA1 (patch-aa) = d6c76bce9a706ee05a19705c80f367519316667f
+SHA1 (patch-ab) = c94b950a59f4d01b9e4dfb3b74d93b52ff264ed0
