@@ -33,10 +33,12 @@
  *
  */
 
-#ifndef __SHA2_H__
-#define __SHA2_H__
+#ifndef NBCOMPAT_SHA2_H_
+#define NBCOMPAT_SHA2_H_
 
 #include <nbcompat/types.h>
+
+#if defined(HAVE_NBCOMPAT_SHA2)
 
 #ifdef __cplusplus
 extern "C" {
@@ -116,5 +118,8 @@ char *SHA512_File(char *, char *);
 }
 #endif /* __cplusplus */
 
-#endif /* __SHA2_H__ */
+#else /* HAVE_NBCOMPAT_SHA2 */
+#include <sha2.h>
+#endif /* HAVE_NBCOMPAT_SHA2 */
 
+#endif /* NBCOMPAT_SHA2_H_ */
