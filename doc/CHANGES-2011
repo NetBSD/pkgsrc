@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2826 2011/11/10 06:29:58 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2827 2011/11/10 09:48:06 is Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4416,6 +4416,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed www/typolight28-example [taca 2011-11-07]
 	Removed www/typolight28 [taca 2011-11-07]
 	Updated lang/moscow_ml to 2.01nb1 [dholland 2011-11-08]
+	Added www/ap22-limitipconn version 0.22nb1 [is 2011-11-08]
 	Updated lang/ruby18 to 1.8.7.352nb1 [taca 2011-11-08]
 	Updated lang/ruby19-base to 1.9.2pl290nb4 [taca 2011-11-08]
 	Updated lang/ruby19 to 1.9.2pl290nb2 [taca 2011-11-08]
