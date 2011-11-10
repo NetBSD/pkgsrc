@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2827 2011/11/10 09:48:06 is Exp $
+$NetBSD: CHANGES-2011,v 1.2828 2011/11/10 10:01:02 is Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -154,6 +154,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/x11-links to 0.62 [jmcneill 2011-01-18]
 	Added multimedia/libva version 1.0.6 [jmcneill 2011-01-18]
 	Added multimedia/hwdecode-demos version 0.9.4 [jmcneill 2011-01-18]
+	Updated net/icsi-finger to 1.0.27nb4 [is 2011-01-18]
 	Updated devel/global to 5.9.3 [uebayasi 2011-01-19]
 	Updated multimedia/mplayer to 1.0rc20100913nb4 [tron 2011-01-19]
 	Updated pkgtools/pkgin to 0.3.3.3 [imil 2011-01-19]
@@ -4469,3 +4470,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Module-Install-XSUtil to 0.42 [hiramatsu 2011-11-10]
 	Updated www/p5-Plack-Middleware-Session to 0.14 [hiramatsu 2011-11-10]
 	Updated net/libvncserver to 0.9.8.2 [obache 2011-11-10]
+	Updated net/icsi-finger to 1.0.27nb5 [is 2011-11-10]
