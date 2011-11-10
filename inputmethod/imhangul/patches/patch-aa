@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2008/12/20 23:00:27 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2011/11/10 10:51:34 obache Exp $
 
---- Makefile.in.orig	2008-12-20 05:59:15.000000000 -0800
+--- Makefile.in.orig	2011-05-22 08:20:36.000000000 +0000
 +++ Makefile.in
-@@ -815,19 +815,19 @@ uninstall-info: uninstall-info-recursive
+@@ -940,19 +940,19 @@ uninstall-am: uninstall-moduleLTLIBRARIE
  
  
  install-data-hook:
