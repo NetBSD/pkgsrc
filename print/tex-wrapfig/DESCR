@@ -1,5 +1,3 @@
 Allows figures or tables to have text wrapped around them. Does not work
 in combination with list environments, but can be used in a parbox or
-minipage, and in twocolumn format. Supports the float package. Note that
-most of the package documentation is contained in the package file
-itself (after the \endinput command at the end of the package proper).
+minipage, and in twocolumn format. Supports the float package.

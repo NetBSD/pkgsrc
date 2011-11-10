@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 19:08:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/10 21:18:37 minskim Exp $
 
 DISTNAME=	wrapfig
 PKGNAME=	tex-${DISTNAME}-3.6
-TEXLIVE_REV=	15878
+PKGREVISION=	1
+TEXLIVE_REV=	22048
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX package to produce figures which text can flow around
