@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 19:08:19 minskim Exp $
+$NetBSD: distinfo,v 1.2 2011/11/10 21:18:37 minskim Exp $
 
-SHA1 (tex-wrapfig-15878/wrapfig.tar.xz) = cd52cb83296655032b5d5b8d0ba2ae29e2d342a1
-RMD160 (tex-wrapfig-15878/wrapfig.tar.xz) = 8951c41a6507190c0a729678e7dd7e52dcb43a86
-Size (tex-wrapfig-15878/wrapfig.tar.xz) = 9392 bytes
+SHA1 (tex-wrapfig-22048/wrapfig.tar.xz) = 9f8d3d7736c5c09c771af275380b71e2861d87a0
+RMD160 (tex-wrapfig-22048/wrapfig.tar.xz) = 5e40ee5d372df55c5d6ade2ed175608b0cf4009b
+Size (tex-wrapfig-22048/wrapfig.tar.xz) = 9344 bytes
