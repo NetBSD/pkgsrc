@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2825 2011/11/10 04:42:42 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2826 2011/11/10 06:29:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4467,3 +4467,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/capistrano to 2.9.0 [gls 2011-11-09]
 	Updated devel/p5-Module-Install-XSUtil to 0.42 [hiramatsu 2011-11-10]
 	Updated www/p5-Plack-Middleware-Session to 0.14 [hiramatsu 2011-11-10]
+	Updated net/libvncserver to 0.9.8.2 [obache 2011-11-10]
