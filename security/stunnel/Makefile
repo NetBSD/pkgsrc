@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2011/08/25 07:20:44 tron Exp $
+# $NetBSD: Makefile,v 1.74 2011/11/10 21:01:39 ryoon Exp $
 
-DISTNAME=		stunnel-4.42
+DISTNAME=		stunnel-4.46
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.stunnel.org/stunnel/
 
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-cert-dir=${SSLCERTS:Q}
 CONFIGURE_ARGS+=	--with-pem-dir=${SSLCERTS:Q}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
+
+.include "../../mk/bsd.prefs.mk"
 
 STUNNEL_USER?=		stunnel
 STUNNEL_GROUP?=		stunnel
