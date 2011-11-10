@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2835 2011/11/10 21:03:12 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2836 2011/11/10 21:19:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4478,3 +4478,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/maildrop to 2.5.4 [adam 2011-11-10]
 	Updated misc/libreoffice3-bin to 3.4.4 [ryoon 2011-11-10]
 	Updated security/stunnel to 4.46 [ryoon 2011-11-10]
+	Updated print/tex-wrapfig to 3.6nb1 [minskim 2011-11-10]
+	Updated print/tex-wrapfig-doc to 3.6nb1 [minskim 2011-11-10]
