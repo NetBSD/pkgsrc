@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/02/11 17:16:03 is Exp $
+# $NetBSD: Makefile,v 1.17 2011/11/10 09:59:53 is Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.27
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.icsi.berkeley.edu/pub/ai/stolcke/software/
 EXTRACT_SUFX=	.tar.Z
