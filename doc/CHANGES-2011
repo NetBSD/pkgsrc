@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2824 2011/11/09 21:34:59 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2825 2011/11/10 04:42:42 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4465,3 +4465,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/shotwell to 0.11.6 [gls 2011-11-09]
 	Updated devel/ruby-highline to 1.6.5 [gls 2011-11-09]
 	Updated sysutils/capistrano to 2.9.0 [gls 2011-11-09]
+	Updated devel/p5-Module-Install-XSUtil to 0.42 [hiramatsu 2011-11-10]
+	Updated www/p5-Plack-Middleware-Session to 0.14 [hiramatsu 2011-11-10]
