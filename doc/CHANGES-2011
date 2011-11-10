@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2831 2011/11/10 10:51:59 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2832 2011/11/10 10:56:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/libhangul to 0.1.0 [obache 2011-11-10]
 	Updated inputmethod/nabi to 0.99.9 [obache 2011-11-10]
 	Updated inputmethod/imhangul to 2.0.0 [obache 2011-11-10]
+	Updated inputmethod/ibus-hangul to 1.3.2 [obache 2011-11-10]
