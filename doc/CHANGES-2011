@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2829 2011/11/10 10:40:28 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2830 2011/11/10 10:47:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4472,3 +4472,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/libvncserver to 0.9.8.2 [obache 2011-11-10]
 	Updated net/icsi-finger to 1.0.27nb5 [is 2011-11-10]
 	Updated inputmethod/libhangul to 0.1.0 [obache 2011-11-10]
+	Updated inputmethod/nabi to 0.99.9 [obache 2011-11-10]
