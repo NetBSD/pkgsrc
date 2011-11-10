@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2011/04/22 13:43:54 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/10 10:56:17 obache Exp $
 #
 
-DISTNAME=	ibus-hangul-1.3.1
-PKGREVISION=	1
+DISTNAME=	ibus-hangul-1.3.2
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://code.googlecode.com/p/ibus/
+HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	Hangul engine for IBus input platform
 LICENSE=	gnu-gpl-v2
 
@@ -25,7 +24,7 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../inputmethod/ibus/bad-env-usage.mk"
 
-BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.0.12
+BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.1.0
 .include "../../inputmethod/libhangul/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../lang/python/application.mk"

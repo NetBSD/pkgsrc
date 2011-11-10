@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2011/02/27 09:14:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/11/10 10:56:17 obache Exp $
+lib/ibus-hangul/setup/hangul_keyboard_list
 libexec/ibus-engine-hangul
 libexec/ibus-setup-hangul
 share/ibus-hangul/data/symbol.txt
@@ -7,7 +8,6 @@ share/ibus-hangul/icons/ibus-hangul.svg
 share/ibus-hangul/setup/config.py
 share/ibus-hangul/setup/config.pyc
 share/ibus-hangul/setup/config.pyo
-share/ibus-hangul/setup/hangul_keyboard_list
 share/ibus-hangul/setup/keycapturedialog.py
 share/ibus-hangul/setup/keycapturedialog.pyc
 share/ibus-hangul/setup/keycapturedialog.pyo
