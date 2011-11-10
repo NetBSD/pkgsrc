@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/01 06:02:37 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/10 22:05:03 ryoon Exp $
 #
 
 DISTNAME=	FlightCrew-0.7.2-Code
@@ -30,6 +30,13 @@ SUBST_MESSAGE.fix-damaged=	fixing
 SUBST_FILES.fix-damaged=	src/FlightCrew/tests/misc_tests/ConvertUtf8PathToBoostPath_test.cpp
 SUBST_SED.fix-damaged+=		-e "2,2s/^/\//" # commented-out
 SUBST_SED.fix-damaged+=		-e "1,1d" # deleted
+
+SUBST_CLASSES+=		d2u
+SUBST_STAGE.d2u=	post-extract
+SUBST_MESSAGE.d2u=	Removing CR end-of-line markers.
+SUBST_FILES.d2u=	CMakeLists.txt
+SUBST_FILES.d2u+=	src/FlightCrew/tests/CMakeLists.txt
+SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
 
 .include "../../mk/compiler.mk"
 # GCC 4.4 and above needs this
