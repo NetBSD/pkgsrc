@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2010/07/13 12:56:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/11/10 09:41:36 abs Exp $
 include/gtkspell-2.0/gtkspell/gtkspell.h
 lib/libgtkspell.la
 lib/pkgconfig/gtkspell-2.0.pc
 share/gtk-doc/html/gtkspell/chapter-tutorial.html
 share/gtk-doc/html/gtkspell/gtkspell-gtkspell.html
-share/gtk-doc/html/gtkspell/gtkspell.devhelp
 share/gtk-doc/html/gtkspell/gtkspell.devhelp2
 share/gtk-doc/html/gtkspell/home.png
 share/gtk-doc/html/gtkspell/index.html
