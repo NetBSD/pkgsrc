@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/01/10 03:07:09 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/11 22:41:35 joerg Exp $
 
 --- Makefile.orig	Sun Nov 24 12:41:26 1996
 +++ Makefile	Mon Jan 10 03:56:02 2000
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.3 2000/01/10 03:07:09 wiz Exp $
  DT	=	dt
  # where to install the executable
 -BINDIR	=	/usr/local/bin
-+BINDIR	=	${PREFIX}/bin
++BINDIR	=	${DESTDIR}${PREFIX}/bin
  
  all:		$(DT)
 @@ -14,5 +14,5 @@
