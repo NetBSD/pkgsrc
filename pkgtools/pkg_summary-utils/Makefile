@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2011/10/19 21:29:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/11 10:56:02 cheusov Exp $
 
-DISTNAME=	pkg_summary-utils-0.56.1
+DISTNAME=	pkg_summary-utils-0.56.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/psu/ \
 		http://www.mova.org/~cheusov/pub/pkg_summary-utils/
@@ -43,7 +43,8 @@ CONF_FILES=	${EGDIR}/pkg_digger.conf ${PKG_SYSCONFDIR}/pkg_digger.conf
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
-REPLACE_FILES.runawk=	get_processed_pkgs.in pkg_*.in XB2bin_summary.in direct_deps.in
+REPLACE_FILES.runawk=	get_processed_pkgs.in pkg_*.in XB2bin_summary.in \
+	direct_deps.in summary2multi_variants.in
 
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
 MAKE_ENV+=	EGDIR=${EGDIR}
