@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2838 2011/11/11 07:48:05 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2839 2011/11/11 08:34:58 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4487,3 +4487,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTML-TreeBuilder-XPath to 0.14 [hiramatsu 2011-11-11]
 	Updated mail/p5-Email-Abstract to 3.004 [hiramatsu 2011-11-11]
 	Updated textproc/p5-Encode to 2.44 [hiramatsu 2011-11-11]
+	Updated www/p5-CGI-Session to 4.48 [hiramatsu 2011-11-11]
+	Updated devel/p5-Module-Load to 0.22 [hiramatsu 2011-11-11]
+	Updated devel/p5-MooseX-Types to 0.30 [hiramatsu 2011-11-11]
+	Updated net/p5-Net-Daemon to 0.48 [hiramatsu 2011-11-11]
+	Updated devel/p5-MooseX-Declare to 0.35 [hiramatsu 2011-11-11]
