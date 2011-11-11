@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2836 2011/11/10 21:19:22 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.2837 2011/11/11 04:34:41 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4480,3 +4480,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/stunnel to 4.46 [ryoon 2011-11-10]
 	Updated print/tex-wrapfig to 3.6nb1 [minskim 2011-11-10]
 	Updated print/tex-wrapfig-doc to 3.6nb1 [minskim 2011-11-10]
+	Updated net/p5-Net-MAC to 2.103622 [hiramatsu 2011-11-11]
+	Updated www/p5-Plack-Middleware-ReverseProxy to 0.11 [hiramatsu 2011-11-11]
+	Updated textproc/p5-Filter to 1.39 [hiramatsu 2011-11-11]
