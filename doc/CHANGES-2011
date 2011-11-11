@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2843 2011/11/11 11:10:54 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2844 2011/11/11 11:17:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4496,3 +4496,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Compress-Raw-Zlib to 2.040 [trevor 2011-11-11]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.040 [trevor 2011-11-11]
 	Updated devel/p5-IO-Compress to 2.040 [trevor 2011-11-11]
+	Updated archivers/p5-Archive-Tar to 1.80 [trevor 2011-11-11]
