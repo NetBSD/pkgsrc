@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/08/20 15:24:59 jwise Exp $
+# $NetBSD: Makefile,v 1.36 2011/11/11 19:16:27 joerg Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclx/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tclx.sourceforge.net/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/tcl/Makefile.version"
 .include "../../x11/tk/Makefile.version"
@@ -45,7 +47,8 @@ CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR=${PKGSRC_TCL_SRC_DIR:Q} \
 MAKE_ENV+=		GTAR=${GTAR:Q} CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} \
 			SHAREMODE=${SHAREMODE:Q} SHAREOWN=${SHAREOWN:Q} \
 			SHAREGRP=${SHAREGRP:Q} \
-			TCLX_PREFIX=${BUILDLINK_PREFIX.tcl-tclX}
+			TCLX_PREFIX=${BUILDLINK_PREFIX.tcl-tclX} \
+			INSTALL_ROOT=${DESTDIR}
 
 FILESDIR=	${.CURDIR}/../../lang/tcl-tclX/files
 PATCHDIR=	${.CURDIR}/../../lang/tcl-tclX/patches
@@ -80,8 +83,8 @@ post-build:
 	cd ${WRKSRC}/../tk/unix && ${MAKE_ENV} ${MAKE} buildhelp
 
 post-install:
-	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type f -print | ${XARGS} ${CHMOD} ${DOCMODE}
+	${FIND} ${DESTDIR}${PREFIX}/lib/tcl/tclX8.3/help -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${PREFIX}/lib/tcl/tclX8.3/help -type f -print | ${XARGS} ${CHMOD} ${DOCMODE}
 
 # 	@${RM} ${PREFIX}/${PKGMANDIR}/man3/TkX_Main.3
 # 	@${RM} ${PREFIX}/${PKGMANDIR}/man3/Tkx_Init.3
