@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10665 2011/11/10 21:03:12 ryoon Exp $
+$NetBSD: TODO,v 1.10666 2011/11/11 03:37:41 mef Exp $
 
 Suggested new packages
 ======================
@@ -975,8 +975,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mksh-40b
 	o mkvtoolnix-5.0.1
 	o moc-2.4.4
-	o modular-xorg-server-1.11.1 [wip]
-	o modular-xorg-server-1.11.2
+	o modular-xorg-server-1.11.2 [wip]
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o moserial-2.30.0 [GNOME 2.30]
