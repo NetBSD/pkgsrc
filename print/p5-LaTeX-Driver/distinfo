@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/05/27 06:23:16 sno Exp $
+$NetBSD: distinfo,v 1.3 2011/11/11 11:37:08 sno Exp $
 
-SHA1 (LaTeX-Driver-0.08.tar.gz) = e8a7fd36539f5aabc46322d5ce128eec06840470
-RMD160 (LaTeX-Driver-0.08.tar.gz) = 6c627b2d178322aed895f45b20ac96e0658712f7
-Size (LaTeX-Driver-0.08.tar.gz) = 30601 bytes
-SHA1 (patch-aa) = 9dfd950d0206e97c1eb03a3d1e65a95683652790
+SHA1 (LaTeX-Driver-0.10.tar.gz) = a1c6049befda5495b3096ea2603c6dc0aab1fa2f
+RMD160 (LaTeX-Driver-0.10.tar.gz) = 07c07f634ca0627651f4da971b057694f1e3c36a
+Size (LaTeX-Driver-0.10.tar.gz) = 30666 bytes
+SHA1 (patch-aa) = 141b618ea03267e565952f8f45f67f9dfb13f3bf
