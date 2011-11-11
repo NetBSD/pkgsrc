@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2010/11/13 21:09:02 shattered Exp $
+# $NetBSD: Makefile,v 1.36 2011/11/11 23:43:43 joerg Exp $
 
 DISTNAME=	gated-3-5-11
 PKGNAME=	gated-3.5.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://www.funet.fi/pub/unix/tcpip/gated/
 
@@ -10,6 +10,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gated.org/
 COMMENT=	Routing protocol daemon
 LICENSE=	gated-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+SPECIAL_PERMS+=		bin/gdc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4510 \
+			bin/ospf_monitor ${SETUID_ROOT_PERMS}
 
 RESTRICTED=		Required license from Merit
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -26,6 +31,7 @@ RCD_SCRIPT_SRC.gated=	${FILESDIR}/gated
 
 BUILD_TARGET=	gated
 
+INSTALL_MAKE_FLAGS=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 sbin share/doc/gated
 
 post-extract:
@@ -42,11 +48,10 @@ do-configure:
 		${RM} -f Config
 
 post-install:
-	${CHMOD} -w ${PREFIX}/bin/gdc ${PREFIX}/bin/ospf_monitor
-	cd ${WRKSRC}/doc && pax -rw . ${PREFIX}/share/doc/gated
-	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/gated
-	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/gated
-	${FIND} ${PREFIX}/share/doc/gated -type f -print | \
+	cd ${WRKSRC}/doc && pax -rw . ${DESTDIR}${PREFIX}/share/doc/gated
+	${CHOWN} -R ${SHAREOWN} ${DESTDIR}${PREFIX}/share/doc/gated
+	${CHGRP} -R ${SHAREGRP} ${DESTDIR}${PREFIX}/share/doc/gated
+	${FIND} ${DESTDIR}${PREFIX}/share/doc/gated -type f -print | \
 	${XARGS} ${CHMOD} -x
 
 .include "../../mk/bsd.pkg.mk"
