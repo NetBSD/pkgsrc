@@ -1,0 +1,13 @@
+$NetBSD: patch-inst-Makefile.in,v 1.1 2011/11/11 18:48:24 joerg Exp $
+
+--- inst/Makefile.in.orig	2011-11-11 17:14:02.000000000 +0000
++++ inst/Makefile.in
+@@ -55,7 +54,7 @@ unbuild:
+ install: build version_txt
+ 	${PYTHON} "${BASE_DIR}/setup.py" ${DISTUTILS_OPTS} install \
+ 	   --home="${PREFIX}" ${BUILD_FLAGS} ${INSTALL_FLAGS}
+-	[ -f ${PREFIX}/bin/python ] || ${LN} ${PYTHON} ${PREFIX}/bin/python
++	[ -f ${DESTDIR}${PREFIX}/bin/python ] || ${LN} ${PYTHON} ${DESTDIR}${PREFIX}/bin/python
+ 	@echo
+ 	@echo Zope binaries installed successfully.
+ 	@echo Now run \'${PREFIX}/bin/mkzopeinstance.py\'
