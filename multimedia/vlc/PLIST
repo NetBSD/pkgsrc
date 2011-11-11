@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2011/11/11 22:41:41 marino Exp $
+@comment $NetBSD: PLIST,v 1.46 2011/11/11 23:32:38 joerg Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -101,16 +101,10 @@ lib/vlc/plugins/access/libaccess_mms_plugin.la
 lib/vlc/plugins/access/libaccess_oss_plugin.la
 lib/vlc/plugins/access/libaccess_tcp_plugin.la
 lib/vlc/plugins/access/libaccess_udp_plugin.la
-lib/vlc/plugins/access/libcdda_plugin.a
-lib/vlc/plugins/access/libcdda_plugin.la
-lib/vlc/plugins/access/libcdda_plugin.so
 lib/vlc/plugins/access/libdvdnav_plugin.la
 lib/vlc/plugins/access/libdvdread_plugin.la
 lib/vlc/plugins/access/libfilesystem_plugin.la
 lib/vlc/plugins/access/librtp_plugin.la
-lib/vlc/plugins/access/libvcd_plugin.a
-lib/vlc/plugins/access/libvcd_plugin.la
-lib/vlc/plugins/access/libvcd_plugin.so
 ${PLIST.x11}lib/vlc/plugins/access/libxcb_screen_plugin.la
 lib/vlc/plugins/access/libzip_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_dummy_plugin.la
