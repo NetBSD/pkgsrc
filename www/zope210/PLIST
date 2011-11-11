@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/05/14 02:56:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/11/11 18:46:58 joerg Exp $
 ${ZOPE_DOC_BASE}/zeo/README.txt
 ${ZOPE_DOC_BASE}/zeo/ZopeREADME.txt
 ${ZOPE_DOC_BASE}/zeo/cache.txt
@@ -727,6 +727,7 @@ ${ZOPE_BASE}/lib/python/OFS/subscribers.py
 ${ZOPE_BASE}/lib/python/OFS/subscribers.pyc
 ${ZOPE_BASE}/lib/python/OFS/tests/__init__.py
 ${ZOPE_BASE}/lib/python/OFS/tests/__init__.pyc
+${ZOPE_BASE}/lib/python/OFS/tests/export.xml
 ${ZOPE_BASE}/lib/python/OFS/tests/mime.types-1
 ${ZOPE_BASE}/lib/python/OFS/tests/mime.types-2
 ${ZOPE_BASE}/lib/python/OFS/tests/test.gif
@@ -1851,6 +1852,8 @@ ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/__init__.pyc
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/dtml/addTemporaryFolder.dtml
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/dtml/mountfail.dtml
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/help/TemporaryFolder.stx
+${ZOPE_BASE}/lib/python/Products/TemporaryFolder/mount.py
+${ZOPE_BASE}/lib/python/Products/TemporaryFolder/mount.pyc
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/patchfs.py
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/patchfs.pyc
 ${ZOPE_BASE}/lib/python/Products/TemporaryFolder/www/tempfolder.gif
