@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2840 2011/11/11 10:56:17 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.2841 2011/11/11 10:58:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4493,3 +4493,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/p5-Net-Daemon to 0.48 [hiramatsu 2011-11-11]
 	Updated devel/p5-MooseX-Declare to 0.35 [hiramatsu 2011-11-11]
 	Updated pkgtools/pkg_summary-utils to 0.56.2 [cheusov 2011-11-11]
+	Updated devel/p5-Compress-Raw-Zlib to 2.040 [trevor 2011-11-11]
