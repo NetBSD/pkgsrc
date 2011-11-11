@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2846 2011/11/11 11:37:20 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2847 2011/11/11 22:56:54 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4499,3 +4499,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated archivers/p5-Archive-Tar to 1.80 [trevor 2011-11-11]
 	Updated time/p5-Time-HiRes to 1.9724 [trevor 2011-11-11]
 	Updated print/p5-LaTeX-Driver to 0.10 [trevor 2011-11-11]
+	Updated textproc/p5-Convert-PEM to 0.08 [hiramatsu 2011-11-11]
+	Updated devel/p5-MooseX-MethodAttributes to 0.25 [hiramatsu 2011-11-11]
+	Updated www/p5-CSS-Squish to 0.10 [hiramatsu 2011-11-11]
+	Updated www/p5-Test-WWW-Mechanize-Catalyst to 0.56 [hiramatsu 2011-11-11]
