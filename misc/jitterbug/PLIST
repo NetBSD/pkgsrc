@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:07:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/11/11 18:43:43 joerg Exp $
 ${JB_USER}/config/footer.html
 @exec if [ ! -d %D/${JB_DATADIR} ]; then ${MKDIR} %D/${JB_DATADIR}; fi
 @exec if [ ! -f %D/${JB_DATADIR}/footer.html ]; then /bin/cp -p %D/%F %D/${JB_DATADIR}/footer.html; fi
@@ -13,8 +13,6 @@ ${JB_USER}/config/reportform.html
 ${JB_USER}/config/users
 @exec if [ ! -f %D/${JB_DATADIR}/users ]; then /bin/cp -p %D/%F %D/${JB_DATADIR}/users; fi
 ${JB_USER}/config/jitterbug.config
-@exec if [ ! -d %D/etc/jitterbug/${JB_PACKAGE} ]; then ${MKDIR} %D/etc/jitterbug/${JB_PACKAGE}; fi
-@exec if [ ! -f %D/etc/jitterbug/${JB_PACKAGE} ]; then /bin/cp -p %D/%F %D/etc/jitterbug/${JB_PACKAGE}; fi
 etc/jitterbug/${JB_PACKAGE}
 @exec if [ ! -f %D/etc/jitterbug/${JB_PACKAGE}.private ]; then /bin/cp -p %D/%F %D/etc/jitterbug/${JB_PACKAGE}.private; fi
 etc/jitterbug/${JB_PACKAGE}.private

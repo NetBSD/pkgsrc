@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/12/31 07:57:14 obache Exp $
+# $NetBSD: Makefile,v 1.34 2011/11/11 18:43:43 joerg Exp $
 
 DISTNAME=	jitterbug-1.6.2
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://jitterbug.samba.org/pub/jitterbug/
 MAINTAINER=	wennmach@NetBSD.org
 HOMEPAGE=	http://jitterbug.samba.org/
 COMMENT=	Web-oriented bug-tracking tool
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
 CONFIGDIR=	${WRKDIR}/${PKGNAME_NOREV}/config
@@ -43,6 +45,8 @@ PKG_USERS=		${JB_USER}:${JB_GROUP}
 
 PKG_GROUPS_VARS+=	JB_GROUP
 PKG_USERS_VARS+=	JB_USER
+
+USERGROUP_PHASE=	pre-install
 
 GNU_CONFIGURE=	yes
 
@@ -148,63 +152,64 @@ pre-install:
 			> ${WRKDIR}/httpd.conf
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${JB_CONFIGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/${JB_DATADIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${JB_CONFIGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${CONFIGDIR}/footer.html ${PREFIX}/${JB_CONFIGDIR}
-	[ -f ${PREFIX}/${JB_DATADIR}/footer.html ] ||                         \
+		${CONFIGDIR}/footer.html ${DESTDIR}${PREFIX}/${JB_CONFIGDIR}
+	[ -f ${DESTDIR}${PREFIX}/${JB_DATADIR}/footer.html ] ||               \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${CONFIGDIR}/footer.html ${PREFIX}/${JB_DATADIR}
+		${CONFIGDIR}/footer.html ${DESTDIR}${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${CONFIGDIR}/guest.prefs ${PREFIX}/${JB_CONFIGDIR}
-	[ -f ${PREFIX}/${JB_DATADIR}/guest.prefs ] ||                         \
+		${CONFIGDIR}/guest.prefs ${DESTDIR}${PREFIX}/${JB_CONFIGDIR}
+	[ -f ${DESTDIR}${PREFIX}/${JB_DATADIR}/guest.prefs ] ||               \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${CONFIGDIR}/guest.prefs ${PREFIX}/${JB_DATADIR}
+		${CONFIGDIR}/guest.prefs ${DESTDIR}${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${CONFIGDIR}/guestintro.html ${PREFIX}/${JB_CONFIGDIR}
-	[ -f ${PREFIX}/${JB_DATADIR}/guestintro.html ] ||                     \
+		${CONFIGDIR}/guestintro.html ${DESTDIR}${PREFIX}/${JB_CONFIGDIR}
+	[ -f ${DESTDIR}${PREFIX}/${JB_DATADIR}/guestintro.html ] ||           \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${CONFIGDIR}/guestintro.html ${PREFIX}/${JB_DATADIR}
+		${CONFIGDIR}/guestintro.html ${DESTDIR}${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${CONFIGDIR}/intro.html ${PREFIX}/${JB_CONFIGDIR}
-	[ -f ${PREFIX}/${JB_DATADIR}/intro.html ] ||                          \
+		${CONFIGDIR}/intro.html ${DESTDIR}${PREFIX}/${JB_CONFIGDIR}
+	[ -f ${DESTDIR}${PREFIX}/${JB_DATADIR}/intro.html ] ||                \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${CONFIGDIR}/intro.html ${PREFIX}/${JB_DATADIR}
+		${CONFIGDIR}/intro.html ${DESTDIR}${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${CONFIGDIR}/reportform.html ${PREFIX}/${JB_CONFIGDIR}
-	[ -f ${PREFIX}/${JB_DATADIR}/reportform.html ] ||                     \
+		${CONFIGDIR}/reportform.html ${DESTDIR}${PREFIX}/${JB_CONFIGDIR}
+	[ -f ${DESTDIR}${PREFIX}/${JB_DATADIR}/reportform.html ] ||           \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${CONFIGDIR}/reportform.html ${PREFIX}/${JB_DATADIR}
+		${CONFIGDIR}/reportform.html ${DESTDIR}${PREFIX}/${JB_DATADIR}
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${CONFIGDIR}/users ${PREFIX}/${JB_CONFIGDIR}
-	[ -f ${PREFIX}/${JB_DATADIR}/users ] ||                               \
+		${CONFIGDIR}/users ${DESTDIR}${PREFIX}/${JB_CONFIGDIR}
+	[ -f ${DESTDIR}${PREFIX}/${JB_DATADIR}/users ] ||                     \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${CONFIGDIR}/users ${PREFIX}/${JB_DATADIR}
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/${CGIBINDIR}
-	${INSTALL} -c -o ${ROOT_USER} -g nobody -m 4710                               \
-		${WRKSRC}/jitterbug ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}
-	${LN} -f ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE} ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
-	${CHOWN} ${ROOT_USER} ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
-	${CHGRP} nobody ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
-	${CHMOD} 4710 ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/${JB_USER}/bin
+		${CONFIGDIR}/users ${DESTDIR}${PREFIX}/${JB_DATADIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${CGIBINDIR}
+	${INSTALL} -c -o ${ROOT_USER} -g nobody -m 4710                       \
+		${WRKSRC}/jitterbug ${DESTDIR}${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}
+	${LN} -f ${DESTDIR}${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}               \
+	         ${DESTDIR}${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
+	${CHOWN} ${ROOT_USER} ${DESTDIR}${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
+	${CHGRP} nobody ${DESTDIR}${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
+	${CHMOD} 4710 ${DESTDIR}${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${JB_USER}/bin
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 755                     \
-		${WRKSRC}/new_message ${PREFIX}/${JB_USER}/bin
+		${WRKSRC}/new_message ${DESTDIR}${PREFIX}/${JB_USER}/bin
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${WRKSRC}/jitterbug ${PREFIX}/${JB_USER}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/${JB_USER}/etc
-	[ -f ${PREFIX}/${JB_USER}/etc ] ||                                    \
+		${WRKSRC}/jitterbug ${DESTDIR}${PREFIX}/${JB_USER}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${JB_USER}/etc
+	[ -f ${DESTDIR}${PREFIX}/${JB_USER}/etc ] ||                          \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 755             \
-		${WRKDIR}/jitterbug.auth ${PREFIX}/${JB_USER}/etc
-	${INSTALL_DATA_DIR} ${PREFIX}/${JB_USER}/doc
+		${WRKDIR}/jitterbug.auth ${DESTDIR}${PREFIX}/${JB_USER}/etc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${WRKDIR}/NEWPACKAGE ${PREFIX}/${JB_USER}/doc
+		${WRKDIR}/NEWPACKAGE ${DESTDIR}${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${DOCSDIR}/CONFIG.txt ${PREFIX}/${JB_USER}/doc
+		${DOCSDIR}/CONFIG.txt ${DESTDIR}${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${DOCSDIR}/INSTALL ${PREFIX}/${JB_USER}/doc
+		${DOCSDIR}/INSTALL ${DESTDIR}${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${DOCSDIR}/JitterBug.txt ${PREFIX}/${JB_USER}/doc
+		${DOCSDIR}/JitterBug.txt ${DESTDIR}${PREFIX}/${JB_USER}/doc
 	@${SED}                                                               \
 		-e 's|@JB_EMAIL@|${JB_EMAIL}|g'                               \
 		-e 's|@JB_DATADIR@|${JB_DATADIR}|g'                           \
@@ -212,20 +217,20 @@ do-install:
 		-e 's|@JB_GROUPID@|${JB_GROUPID}|g'                           \
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 		<${FILESDIR}/jitterbug.config                                 \
-		>${PREFIX}/${JB_CONFIGDIR}/jitterbug.config
-	${CHOWN} -R ${JB_USER} ${PREFIX}/${JB_USER}
-	${CHGRP} -R ${JB_GROUP} ${PREFIX}/${JB_USER}
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/jitterbug
-	[ -f ${PREFIX}/etc/jitterbug/${JB_PACKAGE} ] ||                       \
+		>${DESTDIR}${PREFIX}/${JB_CONFIGDIR}/jitterbug.config
+	${CHOWN} -R ${JB_USER} ${DESTDIR}${PREFIX}/${JB_USER}
+	${CHGRP} -R ${JB_GROUP} ${DESTDIR}${PREFIX}/${JB_USER}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/etc/jitterbug
+	[ -f ${DESTDIR}${PREFIX}/etc/jitterbug/${JB_PACKAGE} ] ||             \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${PREFIX}/${JB_CONFIGDIR}/jitterbug.config                    \
-		${PREFIX}/etc/jitterbug/${JB_PACKAGE}
-	[ -f ${PREFIX}/etc/jitterbug/${JB_PACKAGE}.private ] ||               \
+		${DESTDIR}${PREFIX}/${JB_CONFIGDIR}/jitterbug.config          \
+		${DESTDIR}${PREFIX}/etc/jitterbug/${JB_PACKAGE}
+	[ -f ${DESTDIR}${PREFIX}/etc/jitterbug/${JB_PACKAGE}.private ] ||     \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
-		${PREFIX}/${JB_CONFIGDIR}/jitterbug.config                    \
-		${PREFIX}/etc/jitterbug/${JB_PACKAGE}.private
+		${DESTDIR}${PREFIX}/${JB_CONFIGDIR}/jitterbug.config          \
+		${DESTDIR}${PREFIX}/etc/jitterbug/${JB_PACKAGE}.private
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644        	      \
 		${WRKDIR}/httpd.conf			                      \
-		${PREFIX}/etc/jitterbug/httpd.conf.add
+		${DESTDIR}${PREFIX}/etc/jitterbug/httpd.conf.add
 
 .include "../../mk/bsd.pkg.mk"
