@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/07/20 10:35:18 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/11 22:39:27 alnsn Exp $
 
 ICC_MAJOR_VERSION=	11.1
 ICC_MINOR_VERSION=	080
@@ -11,9 +11,9 @@ EXTRACT_ELEMENTS=	${ICC_EXTRACT_RPMS}
 MASTER_SITES=# empty
 
 MAINTAINER=		alnsn@NetBSD.org
-HOMEPAGE_COMMERCIAL=	http://www.intel.com/cd/software/products/asmo-na/eng/compilers/277618.htm
+HOMEPAGE_COMMERCIAL=	http://software.intel.com/en-us/articles/intel-compilers/
 HOMEPAGE_NONCOMMERCIAL=	http://software.intel.com/en-us/articles/non-commercial-software-development/
-HOMEPAGE=		${HOMEPAGE_COMMERCIAL}
+HOMEPAGE=		${HOMEPAGE_NONCOMMERCIAL}
 COMMENT=		Intel C++ Compiler for Linux
 LICENSE=		intel-icc11-license
 
