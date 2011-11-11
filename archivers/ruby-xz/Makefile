@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/07 20:05:34 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/11 19:15:49 joerg Exp $
 
 DISTNAME=	ruby-xz-0.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -13,6 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	xz-[0-9]*:../../archivers/xz
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi-[0-9]*:../../devel/ruby-ffi
 LICENSE=	mit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_VERSION_REQD=	19
 RUBYGEMS_REQD=		1.8.10
