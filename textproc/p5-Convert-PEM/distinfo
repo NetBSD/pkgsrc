@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/02/15 00:50:33 heinz Exp $
+$NetBSD: distinfo,v 1.4 2011/11/11 22:49:47 hiramatsu Exp $
 
-SHA1 (Convert-PEM-0.07.tar.gz) = 4b95c21a34b6e9c5545f93555582b11f183846e4
-RMD160 (Convert-PEM-0.07.tar.gz) = 569e28c9c037e55323edab28b3028d307291fa79
-Size (Convert-PEM-0.07.tar.gz) = 20836 bytes
+SHA1 (Convert-PEM-0.08.tar.gz) = eaee6c317cb8d4002604dacea45ea0d3349398f5
+RMD160 (Convert-PEM-0.08.tar.gz) = 9bb9713bc5dde93422ff05089d849dc51ad7191b
+Size (Convert-PEM-0.08.tar.gz) = 54089 bytes
