@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.32 2010/11/27 07:21:27 obache Exp $
+$NetBSD: distinfo,v 1.33 2011/11/11 18:45:46 joerg Exp $
 
 SHA1 (zsh-4.2.7.tar.bz2) = 64c598cd48b78dff9d29341ea0cd904e7aa49541
 RMD160 (zsh-4.2.7.tar.bz2) = 454339205c78393cbb9460aa10f37fa341a40b59
 Size (zsh-4.2.7.tar.bz2) = 2303693 bytes
 SHA1 (patch-ab) = b446fd8138f18113c17cee43cd11a5f458b1db40
-SHA1 (patch-ac) = c80876a222ff9584bc53ec807ee2a8bc2b003cd1
+SHA1 (patch-ac) = 816e41ff44a643fe53f73c63cb35b0cf363430e7
 SHA1 (patch-ae) = ac77147eebfebcd042f93a71bb13f9c0be8de211
 SHA1 (patch-ba) = 6cfee12c6fc4ddb07709e07f4f39e3b1ad6c9f16
 SHA1 (patch-bb) = ed3fb8a9e439ea5de6db81bdf9b8c59eb95070e0
