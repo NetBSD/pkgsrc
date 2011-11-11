@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/12/12 20:42:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/11/11 22:41:35 joerg Exp $
 #
 
 DISTNAME=	dt-1.1.7
@@ -9,7 +9,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Virtual consoles for NetBSD/mac68k (and macppc?)
 
-NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+PKG_DESTDIR_SUPPORT=	destdir
+
 ONLY_FOR_PLATFORM=	NetBSD-*-m68k
 
 WRKSRC=		${WRKDIR}/dt
@@ -18,9 +19,10 @@ CPPFLAGS+=	-D${DT_LAYOUT}_LAYOUT
 
 DTDOCSDIR=	${PREFIX}/share/doc/dt
 
+INSTALLATION_DIRS=	bin ${DTDOCSDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DTDOCSDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} README dt.html example.dtrc ${DTDOCSDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} README dt.html example.dtrc ${DESTDIR}${DTDOCSDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
