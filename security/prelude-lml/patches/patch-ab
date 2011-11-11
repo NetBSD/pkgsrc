@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2009/08/23 19:49:28 hasso Exp $
+$NetBSD: patch-ab,v 1.5 2011/11/11 18:58:14 joerg Exp $
 
 --- Makefile.in.orig	2007-08-08 09:48:58.000000000 -0600
 +++ Makefile.in
@@ -29,8 +29,8 @@ $NetBSD: patch-ab,v 1.4 2009/08/23 19:49:28 hasso Exp $
 -        else                                                                                             	\
 -		$(INSTALL) -m 600 $(top_srcdir)/plugins.rules $(DESTDIR)$(configdir)/;				\
 -        fi
-+	$(BSD_INSTALL_DATA) $(top_srcdir)/prelude-lml.conf @EGDIR@
-+	$(BSD_INSTALL_DATA) $(top_srcdir)/plugins.rules @EGDIR@
++	$(BSD_INSTALL_DATA) $(top_srcdir)/prelude-lml.conf ${DESTDIR}@EGDIR@
++	$(BSD_INSTALL_DATA) $(top_srcdir)/plugins.rules ${DESTDIR}@EGDIR@
  
  uninstall-local:
 -	rm -f $(DESTDIR)$(configdir)/prelude-lml.conf;	\
