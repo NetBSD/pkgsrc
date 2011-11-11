@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/02/22 20:50:14 sno Exp $
+$NetBSD: distinfo,v 1.4 2011/11/11 22:53:28 hiramatsu Exp $
 
-SHA1 (CSS-Squish-0.09.tar.gz) = 6dcb5a7b6545b1c1ef6dfbdb6dd52bf08a7382c6
-RMD160 (CSS-Squish-0.09.tar.gz) = 3fec9e23f94ba3029b7f4495bbc311ea6aed9f94
-Size (CSS-Squish-0.09.tar.gz) = 8331 bytes
+SHA1 (CSS-Squish-0.10.tar.gz) = 194e8bed7d958375b97c0b3b95910e9f19b2916d
+RMD160 (CSS-Squish-0.10.tar.gz) = 9db6b834078d209797e4b570fc8df2258f13643a
+Size (CSS-Squish-0.10.tar.gz) = 8646 bytes
