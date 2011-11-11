@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/07 16:38:49 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/11/11 07:45:55 hiramatsu Exp $
 
-SHA1 (HTML-TreeBuilder-XPath-0.11.tar.gz) = 14792206267f0d89f2e26644fdd7bc76925b57f1
-RMD160 (HTML-TreeBuilder-XPath-0.11.tar.gz) = 5e2956fcac4663c7929e28e1faa731ecd54c4972
-Size (HTML-TreeBuilder-XPath-0.11.tar.gz) = 10125 bytes
+SHA1 (HTML-TreeBuilder-XPath-0.14.tar.gz) = 5fd840b1d337a96a33c76d1789ba1b749fa2210c
+RMD160 (HTML-TreeBuilder-XPath-0.14.tar.gz) = 0d32cb3e3b57b233c5b1311adc2585da50c4381e
+Size (HTML-TreeBuilder-XPath-0.14.tar.gz) = 10486 bytes
