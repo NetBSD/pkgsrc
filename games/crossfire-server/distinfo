@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/08/20 15:32:48 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/11/11 00:21:17 joerg Exp $
 
 SHA1 (crossfire-1.11.0.arch.tar.gz) = 29a3ea7cfd5df4dc5a375f5b4302aebb4d609964
 RMD160 (crossfire-1.11.0.arch.tar.gz) = 8fa48ef33a83f1ed158a957db664a9deed96e1fc
@@ -15,4 +15,5 @@ SHA1 (patch-ae) = 1c9d973c932d5c6ee6ee642611d64850e05e3985
 SHA1 (patch-crossedit_png.c) = 4802c077285b47c7afc5acc7128020d6f54087ab
 SHA1 (patch-server-c_misc.c) = 203ef2baf2ef37406b6f88093646a8f69212892b
 SHA1 (patch-server-c_wiz.c) = 1f44d16218c842cc3f51213841e9276ca0b76715
+SHA1 (patch-server-plugins.c) = 4225fa60b44dff86e993315e85385c6c9102e81c
 SHA1 (patch-socket-metaserver.c) = f08f319322455d5f1309eb4e87741fa99bda5acb
