@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/04/22 13:44:38 obache Exp $
+# $NetBSD: Makefile,v 1.30 2011/11/11 18:58:13 joerg Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.15
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-lml/
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://www.prelude-ids.org/
 COMMENT=		Log analyzer monitoring your logfile and received syslog messages
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,7 +41,6 @@ PKG_USERS=		${PRELUDE_USER}:${PRELUDE_GROUP}
 
 EGDIR=			${PREFIX}/share/examples/prelude-lml
 REQD_DIRS=		${EGDIR} ${PKG_SYSCONFDIR}/ruleset
-MAKE_DIRS+=		${VARBASE}/prelude-lml
 MAKE_DIRS_PERMS+=	${VARBASE}/prelude-lml	${PRELUDE_USER} ${PRELUDE_GROUP} 0700
 
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
@@ -160,8 +161,7 @@ post-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${CC} ${CFLAGS} -o run-prelude-lml run-prelude-lml.c
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-lml ${PREFIX}/sbin/run-prelude-lml
-	${CHOWN} -R ${PRELUDE_USER}:${PRELUDE_GROUP} ${PRELUDE_HOME}
+	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-lml ${DESTDIR}${PREFIX}/sbin/run-prelude-lml
 
 .include "../../security/libprelude/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
