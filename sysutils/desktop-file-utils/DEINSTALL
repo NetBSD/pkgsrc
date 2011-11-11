@@ -1,9 +1,10 @@
-# $NetBSD: DEINSTALL,v 1.1 2006/06/15 20:40:16 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2011/11/11 22:36:43 marino Exp $
 
 APPLICATIONS_PATH="@APPLICATIONS_PATH@"
 
 case ${STAGE} in
 POST-DEINSTALL)
 	${RM} -f ${APPLICATIONS_PATH}/mimeinfo.cache
+	${RMDIR} ${APPLICATIONS_PATH} 2>/dev/null || true
 	;;
 esac
