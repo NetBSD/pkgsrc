@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2845 2011/11/11 11:25:51 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2846 2011/11/11 11:37:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4498,3 +4498,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-IO-Compress to 2.040 [trevor 2011-11-11]
 	Updated archivers/p5-Archive-Tar to 1.80 [trevor 2011-11-11]
 	Updated time/p5-Time-HiRes to 1.9724 [trevor 2011-11-11]
+	Updated print/p5-LaTeX-Driver to 0.10 [trevor 2011-11-11]
