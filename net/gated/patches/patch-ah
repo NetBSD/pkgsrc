@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2001/10/25 20:16:55 agc Exp $
+$NetBSD: patch-ah,v 1.2 2011/11/11 23:43:43 joerg Exp $
 
---- src/util/Makefile.template.orig	Tue Sep 15 17:48:41 1998
-+++ src/util/Makefile.template	Thu Oct 25 20:56:31 2001
-@@ -203,7 +203,7 @@
+--- src/util/Makefile.template.orig	1998-09-15 16:48:41.000000000 +0000
++++ src/util/Makefile.template
+@@ -203,7 +203,7 @@ make-start:	true
  make-end:	true
  	@echo "Make ended at `${DATE}`"
  
@@ -11,3 +11,29 @@ $NetBSD: patch-ah,v 1.1 2001/10/25 20:16:55 agc Exp $
  
  
  #	Rebuild Makefile
+@@ -450,7 +450,7 @@ install-man::	inst-man ${O_MANS}
+ 	MANDIR=${MANDIR} ./inst-man -${MANTYPE} ${O_MANS}
+ 
+ ${DESTDIR}${BINDIR}/${OSPF_MONITOR}:	${OSPF_MONITOR}
+-	${INSTALL} ${INSTALLFLAGS} -o ${OSPFM_USER} -m ${OSPFM_MODE} ${OSPF_MONITOR} ${DESTDIR}${BINDIR}/${OSPF_MONITOR}
++	${INSTALL} ${INSTALLFLAGS} ${OSPF_MONITOR} ${DESTDIR}${BINDIR}/${OSPF_MONITOR}
+ 
+ @END:	PROTO_OSPF
+ 
+@@ -479,15 +479,7 @@ install-man::	inst-man ${G_MANS}
+ 	MANDIR=${MANDIR} ./inst-man -${MANTYPE} ${G_MANS}
+ 
+ ${DESTDIR}${BINDIR}/${GDC}:	${GDC}
+-	-@${TOUCH} /tmp/$$ ; ${CHGRP} ${GDC_GROUP} /tmp/$$ \
+-			     && ${CHOWN} ${GDC_USER} /tmp/$$ ; \
+-		if [ $$? -eq 0 ]; then \
+-	       	   MODES="-m ${GDC_MODE} -o ${GDC_USER} -g ${GDC_GROUP}" ; \
+-		else \
+-			MODES= ; \
+-		fi ; \
+-		( set -x ; ${INSTALL} ${INSTALLFLAGS} $${MODES} ${GDC} ${DESTDIR}${BINDIR}/${GDC} ) ; \
+-		${RM} -f /tmp/$$
++	${INSTALL} ${INSTALLFLAGS} ${GDC} ${DESTDIR}${BINDIR}/${GDC}
+ 
+ 
+ #
