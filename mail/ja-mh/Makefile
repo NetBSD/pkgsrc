@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/12/25 13:55:12 taca Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/11 09:18:31 sbd Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
@@ -15,6 +15,8 @@ PATCHFILES=	mh-6.8.4-JP-3.05-20030114.patch.gz \
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://media.laic.u-hyogo.ac.jp/%7Ehayashi/internet/mh-plus.html
 COMMENT=	Rand MH mail handling system + Japanese patches
+
+NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 DEPENDS+=	ja-less>=332:../../misc/ja-less
 
