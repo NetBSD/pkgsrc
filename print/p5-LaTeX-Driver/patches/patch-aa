@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/05/17 10:20:36 sno Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/11 11:37:08 sno Exp $
 
 Do not prompt for pkgsrc provided utils
 
---- Makefile.PL.orig	2007-10-16 21:36:07.000000000 +0000
-+++ Makefile.PL	2009-05-17 10:03:54.000000000 +0000
-@@ -39,14 +39,14 @@
+--- Makefile.PL.orig	2011-09-18 09:27:31.000000000 +0000
++++ Makefile.PL
+@@ -39,14 +39,14 @@ EOF
  
  #------------------------------------------------------------------------
  
@@ -27,12 +27,12 @@ Do not prompt for pkgsrc provided utils
  
  if (!$LATEX and !$PDFLATEX) {
      my $continue = ttprompt('You don\'t seem to have LaTeX installed.  Continue anyway?', 'N');
-@@ -65,7 +65,7 @@
+@@ -65,7 +65,7 @@ fix_path_assignment(catfile('lib','LaTeX
  #------------------------------------------------------------------------
  
  my %opts = (
--    'NAME'	       => 'LaTeX-Driver',
-+    'NAME'	       => 'LaTeX::Driver',
-     'VERSION_FROM' => 'lib/LaTeX/Driver.pm',
+-    'NAME'         => 'LaTeX-Driver',
++    'NAME'         => 'LaTeX::Driver',
+     'VERSION'      => $MODVERSION,
      'EXE_FILES'    => [ 'scripts/latex2dvi', 'scripts/latex2pdf', 'scripts/latex2ps' ],
      'PMLIBDIRS'    => [ 'lib' ], 
