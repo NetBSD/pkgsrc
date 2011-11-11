@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/05/14 02:58:08 taca Exp $
+# $NetBSD: Makefile,v 1.7 2011/11/11 18:48:24 joerg Exp $
 #
 
 DISTNAME=	Zope-${ZOPE211_VERSION}-final
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope, the Z Object Publishing Environment
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 PYTHON_VERSIONS_ACCEPTED=	24
@@ -20,6 +22,12 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${ZOPE_DIR} --with-python=${PYTHONBIN} --quiet
 BUILD_TARGET=	build version_txt
 MAKE_FILE=	makefile
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${_USE_DESTDIR} != "no"
+INSTALL_MAKE_FLAGS=	INSTALL_FLAGS=--root=${DESTDIR:Q}
+.endif
 
 INSTALLATION_DIRS=	${ZOPE_DOC_DIR}/zeo ${ZOPE_DOC_DIR}/zope
 OWN_DIRS+=		${ZOPE_PRODUCTS_DIR}
@@ -74,15 +82,15 @@ post-build:
 
 pre-install:
 	${FIND} ${WRKSRC} \( -name '*.orig' -o -name svn-commit.tmp \) \
-		-print0 | ${XARGS} -0 -- ${RM}
+		-print | ${XARGS} -- ${RM}
 
 post-install:
-	cd ${WRKSRC}/doc/ZEO; pax -rw *.txt ${ZOPE_DOC_DIR}/zeo
-	cd ${WRKSRC}/doc; pax -rw *.txt ${ZOPE_DOC_DIR}/zope
-	${FIND} ${ZOPE_DIR} ${ZOPE_DOC_DIR} -type f -print0 \
-		| ${XARGS} -0 -- ${CHMOD} a-w+r
-	${FIND} ${ZOPE_DIR} -type f -name '*.pyc' -print0 | \
-		${XARGS} -0 -- ${CHMOD} a-x
+	cd ${WRKSRC}/doc/ZEO; pax -rw *.txt ${DESTDIR}${ZOPE_DOC_DIR}/zeo
+	cd ${WRKSRC}/doc; pax -rw *.txt ${DESTDIR}${ZOPE_DOC_DIR}/zope
+	${FIND} ${DESTDIR}${ZOPE_DIR} ${DESTDIR}${ZOPE_DOC_DIR} -type f -print \
+		| ${XARGS} -- ${CHMOD} a-w+r
+	${FIND} ${DESTDIR}${ZOPE_DIR} -type f -name '*.pyc' -print | \
+		${XARGS} -- ${CHMOD} a-x
 
 .include "../../www/zope/Makefile.common"
 .include "../../www/zope/replace.mk"

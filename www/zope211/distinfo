@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/05/14 02:58:09 taca Exp $
+$NetBSD: distinfo,v 1.6 2011/11/11 18:48:24 joerg Exp $
 
 SHA1 (Zope-2.11.8-final.tgz) = 0d06b6c4842f00db7c4b900f9f3860e911276a46
 RMD160 (Zope-2.11.8-final.tgz) = 64cedf8576296fa1722af9bd17df5e074a8b2fce
@@ -12,4 +12,5 @@ SHA1 (patch-af) = 3b352c8bd6cc8f7360025d3d27267a0319cd6b17
 SHA1 (patch-ag) = dffc88b9d087e01bf853441c4a9064a9184a310f
 SHA1 (patch-ah) = 360c8f69e1f23a9f0dec666d509e03e4ef55d93b
 SHA1 (patch-ai) = 1b08b88cbd9e8950c1c24a85ddceff273a175892
+SHA1 (patch-inst-Makefile.in) = f0ab14a78fe2f19317eedc3e046f063c5df1ef8e
 SHA1 (patch-lib_python_mechanize___firefox3cookiejar.py) = 21e5350bf364b6df919251c08dfc66a72c356ac6

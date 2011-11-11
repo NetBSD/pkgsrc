@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/05/14 02:54:39 taca Exp $
+# $NetBSD: Makefile,v 1.24 2011/11/11 18:48:24 joerg Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-${ZOPE29_VERSION}-final
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope ${ZOPE29_VERSION}, the Z Object Publishing Environment
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_TOOLS+=	pax
@@ -22,6 +24,12 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${ZOPE_DIR} --with-python=${PYTHONBIN}
 BUILD_TARGET=	build version_txt
 MAKE_FILE=	makefile
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${_USE_DESTDIR} != "no"
+INSTALL_MAKE_FLAGS=	INSTALL_FLAGS=--root=${DESTDIR:Q}
+.endif
 
 INSTALLATION_DIRS=	${ZOPE_DOC_DIR}/zeo ${ZOPE_DOC_DIR}/zope
 OWN_DIRS+=		${ZOPE_PRODUCTS_DIR}
@@ -69,15 +77,15 @@ post-build:
 	cd ${WRKSRC}; ${PY_COMPILE_ALL} .
 
 pre-install:
-	${FIND} ${WRKSRC} -name '*.orig' -print0 | ${XARGS} -0 -- ${RM}
+	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} -- ${RM}
 
 post-install:
-	cd ${WRKSRC}/doc/ZEO; pax -rw *.txt ${ZOPE_DOC_DIR}/zeo
-	cd ${WRKSRC}/doc; pax -rw *.txt ${ZOPE_DOC_DIR}/zope
-	${FIND} ${ZOPE_DIR} ${ZOPE_DOC_DIR} -type f -print0 \
-		| ${XARGS} -0 -- ${CHMOD} a-w+r
-	${FIND} ${ZOPE_DIR} -type f -name '*.pyc' -print0 | \
-		${XARGS} -0 -- ${CHMOD} a-x
+	cd ${WRKSRC}/doc/ZEO; pax -rw *.txt ${DESTDIR}${ZOPE_DOC_DIR}/zeo
+	cd ${WRKSRC}/doc; pax -rw *.txt ${DESTDIR}${ZOPE_DOC_DIR}/zope
+	${FIND} ${DESTDIR}${ZOPE_DIR} ${DESTDIR}${ZOPE_DOC_DIR} -type f -print \
+		| ${XARGS} -- ${CHMOD} a-w+r
+	${FIND} ${DESTDIR}${ZOPE_DIR} -type f -name '*.pyc' -print | \
+		${XARGS} -- ${CHMOD} a-x
 
 .include "../../www/zope/Makefile.common"
 .include "../../www/zope/replace.mk"
