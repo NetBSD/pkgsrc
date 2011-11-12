@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/09/06 21:08:09 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/11/12 09:05:21 ryoon Exp $
 Acrobat9/Adobe/Reader9/Browser/HowTo/ENU/Browser_Plugin_HowTo.txt
 Acrobat9/Adobe/Reader9/Browser/install_browser_plugin
 Acrobat9/Adobe/Reader9/Browser/intellinux/nppdf.so
@@ -86,8 +86,6 @@ Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libWRServices.so.3.1
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libadobelinguistic.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libadobelinguistic.so.3.2.0
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libahclient.so
-Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libauthplay.so
-Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libauthplay.so.0.0.0
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libcrypto.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libcrypto.so.0
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libcrypto.so.0.9.8
@@ -96,7 +94,6 @@ Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libcurl.so.3
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libcurl.so.3.0.0
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libeggtrayicon.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libextendscript.so
-Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libflashsupport.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libicucnv.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libicucnv.so.36
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libicucnv.so.36.0

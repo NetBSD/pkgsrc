@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/09/06 21:08:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/12 09:05:21 ryoon Exp $
 
 DISTNAME=	acroread9	# overridden below
-PKGNAME=	acroread9-9.4.2
+PKGNAME=	acroread9-9.4.6
 CATEGORIES=	print
-MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.4.2/enu/
+MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.4.6/enu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
@@ -28,7 +28,7 @@ EMUL_REQD=		suse>=10.0
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
-DISTNAME=	AdbeRdr9.4.2-1_i486linux_enu
+DISTNAME=	AdbeRdr9.4.6-1_i486linux_enu
 EXTRACT_SUFX=	.tar.bz2
 PLATFORM=	intellinux
 PLIST_SRC=	PLIST
