@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/11/03 14:32:04 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2011/11/12 01:24:05 hiramatsu Exp $
 
-SHA1 (CGI-ProgressBar-0.04.tar.gz) = aa56655da232d3e92d4b9a5c8d1d4fb57155c884
-RMD160 (CGI-ProgressBar-0.04.tar.gz) = 9db6f8037dae0bed282985f26facba26721c0971
-Size (CGI-ProgressBar-0.04.tar.gz) = 8652 bytes
+SHA1 (CGI-ProgressBar-0.05.tar.gz) = 97fc95abd2a7a5abb3801ff45cbd350be2daf25d
+RMD160 (CGI-ProgressBar-0.05.tar.gz) = be4cba59e064ea4a9a09938c5ac0f1c4a4dac87f
+Size (CGI-ProgressBar-0.05.tar.gz) = 8730 bytes
