@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/04/13 17:05:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/11/12 00:40:34 dholland Exp $
 ${PLIST.server}bin/libgtop_daemon2
 ${PLIST.server}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
@@ -89,7 +89,6 @@ share/gtk-doc/html/libgtop/libgtop-union.html
 share/gtk-doc/html/libgtop/libgtop-version.html
 share/gtk-doc/html/libgtop/libgtop-white-paper-overview.html
 share/gtk-doc/html/libgtop/libgtop-white-paper.html
-share/gtk-doc/html/libgtop/libgtop.devhelp
 share/gtk-doc/html/libgtop/libgtop.devhelp2
 share/gtk-doc/html/libgtop/right.png
 share/gtk-doc/html/libgtop/style.css
