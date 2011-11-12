@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2850 2011/11/12 02:15:29 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.2851 2011/11/12 02:26:53 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4511,3 +4511,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00011 [hiramatsu 2011-11-12]
 	Updated www/p5-Plack-Middleware-Header to 0.04 [hiramatsu 2011-11-12]
 	Updated www/p5-CGI-ProgressBar to 0.05 [hiramatsu 2011-11-12]
+	Added devel/p5-MooseX-MarkAsMethods version 0.14 [hiramatsu 2011-11-12]
+	Updated devel/p5-Test-Inter to 1.03 [hiramatsu 2011-11-12]
