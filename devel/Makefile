@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1511 2011/11/08 07:56:44 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.1512 2011/11/12 00:47:57 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -843,6 +843,7 @@ SUBDIR+=	p5-Module-Find
 SUBDIR+=	p5-Module-Install
 SUBDIR+=	p5-Module-Install-PadrePlugin
 SUBDIR+=	p5-Module-Install-RTx
+SUBDIR+=	p5-Module-Install-ReadmeFromPod
 SUBDIR+=	p5-Module-Install-Substitute
 SUBDIR+=	p5-Module-Install-XSUtil
 SUBDIR+=	p5-Module-Load
