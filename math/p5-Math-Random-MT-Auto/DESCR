@@ -1,0 +1,5 @@
+This module provides pseudorandom number generators (PRNGs) that are
+based on the Mersenne Twister algorithm.  There is a functional
+interface to a standalone PRNG, and an OO interface (based on the
+inside-out object model as implemented by the Object::InsideOut
+module) for generating multiple PRNG objects.
