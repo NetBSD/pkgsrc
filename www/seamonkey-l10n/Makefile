@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/08/19 10:10:01 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/12 16:42:12 tnn Exp $
 #
 
-SM_VER=		2.3
+SM_VER=		2.5b4
 PKGNAME=	seamonkey-l10n-${SM_VER}
 DISTNAME=	# empty
 CATEGORIES=	www
