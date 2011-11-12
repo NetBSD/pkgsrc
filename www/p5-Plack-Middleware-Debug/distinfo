@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/04 16:22:27 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/11/12 02:56:21 hiramatsu Exp $
 
-SHA1 (Plack-Middleware-Debug-0.09.tar.gz) = 72dc3ab85ab11b73a4efc621133491d114586e75
-RMD160 (Plack-Middleware-Debug-0.09.tar.gz) = c3f72387c9fe65e3a2a35954cec9dbc1c339376e
-Size (Plack-Middleware-Debug-0.09.tar.gz) = 71025 bytes
+SHA1 (Plack-Middleware-Debug-0.14.tar.gz) = 46872074f66515f207b4f176051a28ef687656ac
+RMD160 (Plack-Middleware-Debug-0.14.tar.gz) = 59699f62fc9e6d0efce31584bb5281e4c9a04ea1
+Size (Plack-Middleware-Debug-0.14.tar.gz) = 73285 bytes
