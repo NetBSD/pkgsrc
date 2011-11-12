@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42.2.1 2011/10/10 18:00:06 tron Exp $
+$NetBSD: distinfo,v 1.42.2.2 2011/11/12 04:25:37 sbd Exp $
 
 SHA1 (httpd-2.2.21.tar.bz2) = c02f9b05da9a7e316ff37d9053dc76a57ba51cb4
 RMD160 (httpd-2.2.21.tar.bz2) = 6464a03d78ab858b1288ea9eef4cd5f73b60a9f1
@@ -17,3 +17,4 @@ SHA1 (patch-aw) = ca53d67beeb2c2c4d9adb04d3d79e24a8c427fd4
 SHA1 (patch-lock.c) = 770ca03f1cb4421879bd5baa5a7c30cc91acb6e1
 SHA1 (patch-repos.c) = 0e0361b91d4b0fe6c7c55a12fdfd2e6aacc710e1
 SHA1 (patch-server_protocol.c) = 5361b5218d4f2aa22ea79e4ba6534ca0252c6e4e
+SHA1 (patch-server_util.c) = b63f73e2a482facd188eecb0864fc612d1b7b3a5
