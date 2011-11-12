@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/12 00:46:18 hiramatsu Exp $
+
+SHA1 (Module-Install-ReadmeFromPod-0.12.tar.gz) = 72ce21f52bf57ffee7bf67f60b0bc65e5e99392b
+RMD160 (Module-Install-ReadmeFromPod-0.12.tar.gz) = 6b37e3b83020a62d9722d43b1f14378de2710d10
+Size (Module-Install-ReadmeFromPod-0.12.tar.gz) = 27938 bytes
