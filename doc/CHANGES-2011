@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2848 2011/11/12 00:49:38 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2849 2011/11/12 01:25:20 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4505,3 +4505,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Test-WWW-Mechanize-Catalyst to 0.56 [hiramatsu 2011-11-11]
 	Updated textproc/p5-CAM-PDF to 1.55 [hiramatsu 2011-11-12]
 	Added devel/p5-Module-Install-ReadmeFromPod version 0.12 [hiramatsu 2011-11-12]
+	Updated devel/p5-Module-Refresh to 0.17 [hiramatsu 2011-11-12]
+	Updated mail/p5-Email-Sender to 0.110001 [hiramatsu 2011-11-12]
+	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00011 [hiramatsu 2011-11-12]
+	Updated www/p5-Plack-Middleware-Header to 0.04 [hiramatsu 2011-11-12]
+	Updated www/p5-CGI-ProgressBar to 0.05 [hiramatsu 2011-11-12]
