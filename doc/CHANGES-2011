@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2849 2011/11/12 01:25:20 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2850 2011/11/12 02:15:29 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4503,6 +4503,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-MethodAttributes to 0.25 [hiramatsu 2011-11-11]
 	Updated www/p5-CSS-Squish to 0.10 [hiramatsu 2011-11-11]
 	Updated www/p5-Test-WWW-Mechanize-Catalyst to 0.56 [hiramatsu 2011-11-11]
+	Updated sysutils/libgtop to 2.28.3nb2 [dholland 2011-11-12]
 	Updated textproc/p5-CAM-PDF to 1.55 [hiramatsu 2011-11-12]
 	Added devel/p5-Module-Install-ReadmeFromPod version 0.12 [hiramatsu 2011-11-12]
 	Updated devel/p5-Module-Refresh to 0.17 [hiramatsu 2011-11-12]
