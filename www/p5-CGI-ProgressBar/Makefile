@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2011/08/14 16:05:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/11/12 01:24:05 hiramatsu Exp $
 #
 
-DISTNAME=	CGI-ProgressBar-0.04
+DISTNAME=	CGI-ProgressBar-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/L/LG/LGODDARD/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/L/LG/LGODDARD/
+HOMEPAGE=	http://search.cpan.org/dist/CGI-ProgressBar/
 COMMENT=	CGI.pm sub-class with a progress bar object
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
