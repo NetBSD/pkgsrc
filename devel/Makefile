@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1512 2011/11/12 00:47:57 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.1513 2011/11/12 02:25:07 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -871,6 +871,7 @@ SUBDIR+=	p5-MooseX-FollowPBP
 SUBDIR+=	p5-MooseX-Getopt
 SUBDIR+=	p5-MooseX-InsideOut
 SUBDIR+=	p5-MooseX-LazyRequire
+SUBDIR+=	p5-MooseX-MarkAsMethods
 SUBDIR+=	p5-MooseX-Meta-TypeConstraint-ForceCoercion
 SUBDIR+=	p5-MooseX-Method-Signatures
 SUBDIR+=	p5-MooseX-MethodAttributes
