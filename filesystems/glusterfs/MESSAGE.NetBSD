@@ -1,17 +1,32 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.11 2011/10/10 15:03:29 sborrill Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.12 2011/11/12 06:01:28 manu Exp $
 
-In order to use mount -t glusterfs, please install this link
-	ln -s ${PREFIX}/sbin/mount.glusterfs /sbin/mount_glusterfs
+*** GlusterFS clients ***
+You need a kernel with the following options (not present in netbsd-5 GENERIC)
+	file-system     PUFFS  
+	pseudo-device   putter
+	pseudo-device   pud
 
-glusterfs clients need the following in /etc/sysctl.conf in order to
-avoid hangs on I/O operations:
+This is required in /etc/sysctl.conf in order to avoid hangs on I/O operations:
 	kern.sbmax=4194304
 	net.inet.tcp.sendbuf_max=1048576
 	net.inet.tcp.recvbuf_max=1048576
 
+In order to use mount -t glusterfs, please install this link
+	ln -s ${PREFIX}/sbin/mount.glusterfs /sbin/mount_glusterfs
+
+*** GlusterFS servers ***
 glusterfs servers will need extended attributes in exported filesystems.
-The required attributes can be initialized by running
-	${PREFIX}/etc/glusterfs/xattr-init.sh
+On netbsd-5 branch, this means UFS1 and a kernel with the following options:
+	options		UFS_EXTATTR             
+	options		UFS_EXTATTR_AUTOSTART   
+	options		UFS_EXTATTR_AUTOCREATE=1024
+
+On NetBSD-current, UFS_EXTATTR_AUTOSTART and UFS_EXTATTR_AUTOCREATE are not 
+options anymore, but you need to mount the filesystem with -o extattr
+
+You will also need to create theses directories on exported filesystems' roots:
+	.attribute/system
+	.attribute/user
 
 ===========================================================================
