@@ -1,0 +1,3 @@
+Module::Install::ReadmeFromPod is a Module::Install extension that
+generates a "README" file automatically from an indicated file
+containing POD, whenever the author runs "Makefile.PL".
