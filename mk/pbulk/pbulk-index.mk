@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.13 2011/10/04 11:41:20 hans Exp $
+#	$NetBSD: pbulk-index.mk,v 1.14 2011/11/12 15:21:53 dholland Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -32,7 +32,7 @@ _PBULK_MULTI_DEFAULT.python=	PYTHON_VERSION_DEFAULT
 
 _PBULK_MULTI_LIST.ruby=		RUBY_VERSION_SUPPORTED
 _PBULK_MULTI_VAR.ruby=		RUBY_VERSION_REQD
-_PBULK_MULTI_DEFAULT.ruby=	_RUBY_VERSION_DEFAULT
+_PBULK_MULTI_DEFAULT.ruby=	RUBY_VERSION_DEFAULT
 
 .PHONY: pbulk-index pbulk-index-item
 
