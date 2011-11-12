@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2011/10/22 18:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2011/11/12 17:24:42 wiz Exp $
 #
 
 DISTNAME=	clive-2.3.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://clive.googlecode.com/files/
 
@@ -11,7 +11,8 @@ HOMEPAGE=	http://clive.sourceforge.net/
 COMMENT=	Command line video extraction tool for user-uploaded video hosts
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	quvi>=0.2.17:../../net/quvi
+DEPENDS+=	quvi>=0.4.0:../../net/quvi
+DEPENDS+=	libquvi-scripts>=0.4.0:../../net/libquvi-scripts
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	p5-JSON-XS>=2.3:../../converters/p5-JSON-XS
 DEPENDS+=	p5-Getopt-ArgvFile>=1.11:../../devel/p5-Getopt-ArgvFile
