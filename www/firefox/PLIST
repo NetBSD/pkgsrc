@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.45 2011/10/03 12:37:24 tnn Exp $
+@comment $NetBSD: PLIST,v 1.46 2011/11/12 12:45:04 tnn Exp $
 bin/firefox
-lib/firefox/README.txt
 lib/firefox/application.ini
 lib/firefox/blocklist.xml
 lib/firefox/chrome.manifest
@@ -43,13 +42,13 @@ lib/firefox/chrome/browser/content/browser/browser.js
 lib/firefox/chrome/browser/content/browser/browser.xul
 lib/firefox/chrome/browser/content/browser/certerror/aboutCertError.css
 lib/firefox/chrome/browser/content/browser/certerror/aboutCertError.xhtml
+lib/firefox/chrome/browser/content/browser/content.js
 lib/firefox/chrome/browser/content/browser/feeds/subscribe.css
 lib/firefox/chrome/browser/content/browser/feeds/subscribe.js
 lib/firefox/chrome/browser/content/browser/feeds/subscribe.xhtml
 lib/firefox/chrome/browser/content/browser/feeds/subscribe.xml
 lib/firefox/chrome/browser/content/browser/fullscreen-video.xhtml
 lib/firefox/chrome/browser/content/browser/hiddenWindow.xul
-lib/firefox/chrome/browser/content/browser/highlighter.xhtml
 lib/firefox/chrome/browser/content/browser/history/history-panel.xul
 lib/firefox/chrome/browser/content/browser/inspector.html
 lib/firefox/chrome/browser/content/browser/license.html
@@ -58,6 +57,8 @@ lib/firefox/chrome/browser/content/browser/migration/migration.xul
 lib/firefox/chrome/browser/content/browser/nsContextMenu.js
 lib/firefox/chrome/browser/content/browser/openLocation.js
 lib/firefox/chrome/browser/content/browser/openLocation.xul
+lib/firefox/chrome/browser/content/browser/orion.css
+lib/firefox/chrome/browser/content/browser/orion.js
 lib/firefox/chrome/browser/content/browser/pageinfo/feeds.js
 lib/firefox/chrome/browser/content/browser/pageinfo/feeds.xml
 lib/firefox/chrome/browser/content/browser/pageinfo/pageInfo.css
@@ -191,7 +192,6 @@ lib/firefox/chrome/browser/skin/classic/browser/feeds/subscribe.css
 lib/firefox/chrome/browser/skin/classic/browser/feeds/videoFeedIcon.png
 lib/firefox/chrome/browser/skin/classic/browser/feeds/videoFeedIcon16.png
 lib/firefox/chrome/browser/skin/classic/browser/fullscreen-video.css
-lib/firefox/chrome/browser/skin/classic/browser/highlighter.css
 lib/firefox/chrome/browser/skin/classic/browser/identity.png
 lib/firefox/chrome/browser/skin/classic/browser/inspector.css
 lib/firefox/chrome/browser/skin/classic/browser/monitor.png
@@ -202,6 +202,7 @@ lib/firefox/chrome/browser/skin/classic/browser/pageInfo.png
 lib/firefox/chrome/browser/skin/classic/browser/places/bookmarksMenu.png
 lib/firefox/chrome/browser/skin/classic/browser/places/bookmarksToolbar.png
 lib/firefox/chrome/browser/skin/classic/browser/places/calendar.png
+lib/firefox/chrome/browser/skin/classic/browser/places/downloads.png
 lib/firefox/chrome/browser/skin/classic/browser/places/editBookmarkOverlay.css
 lib/firefox/chrome/browser/skin/classic/browser/places/livemark-item.png
 lib/firefox/chrome/browser/skin/classic/browser/places/organizer.css
@@ -248,7 +249,6 @@ lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tab-overflow-border.p
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tab.png
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tabDragIndicator.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/edit-light.png
-lib/firefox/chrome/browser/skin/classic/browser/tabview/new-tab.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/search.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/stack-expander.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/tabview.css
@@ -382,6 +382,7 @@ lib/firefox/modules/PlacesUIUtils.jsm
 lib/firefox/modules/PropertyPanel.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/domplate.jsm
+lib/firefox/modules/gcli.jsm
 lib/firefox/modules/openLocationLastURL.jsm
 lib/firefox/modules/services-crypto/WeaveCrypto.js
 lib/firefox/modules/services-sync/async.js
@@ -405,9 +406,13 @@ lib/firefox/modules/services-sync/notifications.js
 lib/firefox/modules/services-sync/policies.js
 lib/firefox/modules/services-sync/record.js
 lib/firefox/modules/services-sync/resource.js
+lib/firefox/modules/services-sync/rest.js
 lib/firefox/modules/services-sync/service.js
 lib/firefox/modules/services-sync/status.js
 lib/firefox/modules/services-sync/util.js
+lib/firefox/modules/source-editor-orion.jsm
+lib/firefox/modules/source-editor-textarea.jsm
+lib/firefox/modules/source-editor.jsm
 lib/firefox/modules/tabview/AllTabs.jsm
 lib/firefox/modules/tabview/utils.jsm
 lib/firefox/removed-files
@@ -416,6 +421,7 @@ lib/firefox/searchplugins/amazondotcom.xml
 lib/firefox/searchplugins/bing.xml
 lib/firefox/searchplugins/eBay.xml
 lib/firefox/searchplugins/google.xml
+lib/firefox/searchplugins/twitter.xml
 lib/firefox/searchplugins/wikipedia.xml
 lib/firefox/searchplugins/yahoo.xml
 lib/firefox/updater.ini
