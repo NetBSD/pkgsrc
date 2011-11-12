@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2854 2011/11/12 09:06:37 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2855 2011/11/12 13:01:41 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4521,3 +4521,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/p5-MARC-XML to 0.93 [hiramatsu 2011-11-12]
 	Added math/p5-Math-Random-MT-Auto version 6.16 [hiramatsu 2011-11-12]
 	Updated print/acroread9 to 9.4.6 [ryoon 2011-11-12]
+	Updated devel/xulrunner to 8.0 [tnn 2011-11-12]
+	Updated www/firefox to 8.0 [tnn 2011-11-12]
+	Updated devel/nss to 3.12.11.0 [tnn 2011-11-12]
