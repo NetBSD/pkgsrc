@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2011/08/31 21:12:17 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2011/11/12 20:40:16 mspo Exp $
 #
 
-DISTNAME=	varnish-2.1.5
-PKGREVISION=	2
+DISTNAME=	varnish-3.0.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
@@ -19,7 +19,6 @@ USE_TOOLS+=	autoconf pkg-config gmake
 BUILD_DEFS+=	VARBASE
 
 EGDIR=			${PREFIX}/share/examples/varnish
-PKG_SYSCONFSUBDIR=	varnish
 CONF_FILES=		${EGDIR}/default.vcl ${PKG_SYSCONFDIR}/default.vcl
 
 VRNUSER?=		varnish
@@ -38,10 +37,14 @@ PKG_HOME.${VRNUSER}=	${VRNDIR}
 PKG_SHELL.${VRNUSER}=	${SH}
 PKG_GECOS.${VRNUSER}=	Varnish daemon user
 
-RCD_SCRIPTS=            varnishd varnishlog varnishncsa
+RCD_SCRIPTS=		varnishd varnishlog varnishncsa
+PYTHON_FOR_BUILD_ONLY=	yes
+
+REPLACE_PYTHON+=	lib/libvcl/generate.py
+REPLACE_PYTHON+=	lib/libvmod_std/vmod.py
 
 .include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
+BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
