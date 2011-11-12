@@ -1,0 +1,15 @@
+$NetBSD: patch-etc__Makefile.in,v 1.1 2011/11/12 20:40:16 mspo Exp $
+
+Put config file in examples
+
+--- etc/Makefile.in.orig	2011-07-02 21:50:03.000000000 +0000
++++ etc/Makefile.in
+@@ -220,7 +220,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-varnishconfdir = @varnishconfdir@
++varnishconfdir = @prefix@/share/examples/@PACKAGE@
+ EXTRA_DIST = zope-plone.vcl
+ DISTCLEANFILES = default.vcl
+ dist_varnishconf_DATA = default.vcl
