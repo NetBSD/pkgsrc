@@ -1,0 +1,160 @@
+--- !ruby/object:Gem::Specification
+name: activerecord-odbc-adapter
+version: !ruby/object:Gem::Version
+  version: '2.0'
+platform: ruby
+authors:
+- Carl Blakeley
+autorequire: odbc_adapter
+bindir: bin
+cert_chain: []
+date: 2008-04-22 22:00:00.000000000 +00:00
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: activerecord
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: 2.0.2
+    version: 
+  version_requirement: 
+description: 
+email: cblakeley@openlinksw.co.uk
+executables: []
+extensions: []
+extra_rdoc_files:
+- README
+- COPYING
+files:
+- lib/active_record
+- lib/active_record/connection_adapters
+- lib/active_record/connection_adapters/odbc_adapter.rb
+- lib/active_record/vendor
+- lib/active_record/vendor/odbcext_oracle.rb
+- lib/active_record/vendor/odbcext_informix.rb
+- lib/active_record/vendor/odbcext_progress89.rb
+- lib/active_record/vendor/odbcext_microsoftsqlserver_col.rb
+- lib/active_record/vendor/odbcext_informix_col.rb
+- lib/active_record/vendor/odbcext_sqlanywhere.rb
+- lib/active_record/vendor/odbcext_postgresql.rb
+- lib/active_record/vendor/odbcext_sybase_col.rb
+- lib/active_record/vendor/odbcext_mysql.rb
+- lib/active_record/vendor/odbcext_db2.rb
+- lib/active_record/vendor/odbcext_progress.rb
+- lib/active_record/vendor/odbcext_microsoftsqlserver.rb
+- lib/active_record/vendor/odbcext_ingres.rb
+- lib/active_record/vendor/odbcext_sqlanywhere_col.rb
+- lib/active_record/vendor/odbcext_virtuoso.rb
+- lib/active_record/vendor/odbcext_sybase.rb
+- lib/odbc_adapter.rb
+- test/connections
+- test/connections/native_odbc
+- test/connections/native_odbc/connection.rb
+- test/fixtures
+- test/fixtures/db_definitions
+- test/fixtures/db_definitions/db22.drop.sql
+- test/fixtures/db_definitions/progress2.drop.sql
+- test/fixtures/db_definitions/ingres2.sql
+- test/fixtures/db_definitions/oracle_odbc.drop.sql
+- test/fixtures/db_definitions/mysql2.sql
+- test/fixtures/db_definitions/virtuoso.sql
+- test/fixtures/db_definitions/virtuoso2.drop.sql
+- test/fixtures/db_definitions/postgresql2.sql
+- test/fixtures/db_definitions/db2.drop.sql
+- test/fixtures/db_definitions/informix2.sql
+- test/fixtures/db_definitions/postgresql2.drop.sql
+- test/fixtures/db_definitions/progress2.sql
+- test/fixtures/db_definitions/mysql.drop.sql
+- test/fixtures/db_definitions/sybase2.sql
+- test/fixtures/db_definitions/sybase.sql
+- test/fixtures/db_definitions/mysql.sql
+- test/fixtures/db_definitions/sqlserver2.sql
+- test/fixtures/db_definitions/oracle_odbc2.drop.sql
+- test/fixtures/db_definitions/sqlserver.drop.sql
+- test/fixtures/db_definitions/virtuoso2.sql
+- test/fixtures/db_definitions/db2.sql
+- test/fixtures/db_definitions/ingres.sql
+- test/fixtures/db_definitions/oracle_odbc.sql
+- test/fixtures/db_definitions/progress.drop.sql
+- test/fixtures/db_definitions/sqlserver.sql
+- test/fixtures/db_definitions/sybase.drop.sql
+- test/fixtures/db_definitions/postgresql.sql
+- test/fixtures/db_definitions/informix2.drop.sql
+- test/fixtures/db_definitions/mysql2.drop.sql
+- test/fixtures/db_definitions/progress.sql
+- test/fixtures/db_definitions/sqlserver2.drop.sql
+- test/fixtures/db_definitions/virtuoso.drop.sql
+- test/fixtures/db_definitions/informix.drop.sql
+- test/fixtures/db_definitions/db22.sql
+- test/fixtures/db_definitions/sybase2.drop.sql
+- test/fixtures/db_definitions/informix.sql
+- test/fixtures/db_definitions/postgresql.drop.sql
+- test/fixtures/db_definitions/ingres2.drop.sql
+- test/fixtures/db_definitions/oracle_odbc2.sql
+- test/fixtures/db_definitions/ingres.drop.sql
+- support/pack_odbc.rb
+- support/odbc_rails.diff
+- support/lib
+- support/lib/active_record
+- support/lib/active_record/connection_adapters
+- support/lib/active_record/connection_adapters/abstract
+- support/lib/active_record/connection_adapters/abstract/schema_definitions.rb
+- support/rake_fixes
+- support/rake_fixes/databases.dif
+- support/rake_fixes/README
+- support/rake
+- support/rake/rails_plugin_package_task.rb
+- support/test
+- support/test/migration_test.rb
+- support/test/base_test.rb
+- AUTHORS
+- ChangeLog
+- COPYING
+- LICENSE
+- NEWS
+- README
+homepage: http://odbc-rails.rubyforge.org
+licenses: 
+post_install_message: 
+rdoc_options:
+- --title
+- OpenLink ODBC Adapter for Ruby on Rails
+- --line-numbers
+- --inline-source
+- --main
+- README
+- --exclude
+- lib/odbc_adapter.rb
+- --exclude
+- pack_odbc.rb
+- --exclude
+- vendor
+- --exclude
+- support
+- --exclude
+- test
+- --include
+- active_record/connection_adapters/*.rb
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+  version: 
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.11
+signing_key: 
+specification_version: 2
+summary: ODBC Data Adapter for ActiveRecord
+test_files: []
+
