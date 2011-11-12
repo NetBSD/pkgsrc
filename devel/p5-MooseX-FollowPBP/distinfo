@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/07/27 17:44:20 seb Exp $
+$NetBSD: distinfo,v 1.3 2011/11/12 02:55:08 hiramatsu Exp $
 
-SHA1 (MooseX-FollowPBP-0.04.tar.gz) = 9ee064a0861b4dfc178aff10e7c68c7b3ab061ea
-RMD160 (MooseX-FollowPBP-0.04.tar.gz) = d76963f456373aa3650c9ee739dbaf92d1f36772
-Size (MooseX-FollowPBP-0.04.tar.gz) = 8920 bytes
+SHA1 (MooseX-FollowPBP-0.05.tar.gz) = 49aefec0be8bc96cf31307c99744e60064ea7cac
+RMD160 (MooseX-FollowPBP-0.05.tar.gz) = 8c2382e22b404c1561cbc10fa67794d7b5e7ad9f
+Size (MooseX-FollowPBP-0.05.tar.gz) = 9517 bytes
