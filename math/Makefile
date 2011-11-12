@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2011/10/05 07:46:12 obache Exp $
+# $NetBSD: Makefile,v 1.222 2011/11/12 07:53:17 hiramatsu Exp $
 
 COMMENT=	Mathematics
 
@@ -142,6 +142,7 @@ SUBDIR+=	p5-Math-MatrixReal
 SUBDIR+=	p5-Math-Pari
 SUBDIR+=	p5-Math-Random
 SUBDIR+=	p5-Math-Random-MT
+SUBDIR+=	p5-Math-Random-MT-Auto
 SUBDIR+=	p5-Math-Random-MT-Perl
 SUBDIR+=	p5-Math-Round
 SUBDIR+=	p5-Math-VecStat
