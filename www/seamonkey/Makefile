@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2011/11/01 06:11:58 sbd Exp $
+# $NetBSD: Makefile,v 1.55 2011/11/12 16:41:43 tnn Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER}
-SM_VER=		2.3.2
-PKGREVISION=	1
+SM_VER=		2.5b4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +12,7 @@ MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
 
-WRKSRC=		${WRKDIR}/comm-release
+WRKSRC=		${WRKDIR}/comm-beta
 MOZILLA_DIR=	mozilla/
 
 CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
@@ -22,6 +21,9 @@ CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 CONFIGURE_ARGS+=	--enable-application=suite
 
 ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
+
+# XXX tnn
+MAKE_JOBS_SAFE=		no
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
