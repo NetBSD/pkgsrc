@@ -1,8 +1,8 @@
-$NetBSD: patch-aa-toplevel,v 1.3 2011/08/19 10:10:01 tnn Exp $
+$NetBSD: patch-aa-toplevel,v 1.4 2011/11/12 16:41:43 tnn Exp $
 
---- configure.in.orig	2011-08-14 01:09:28.000000000 +0000
+--- configure.in.orig	2011-11-07 20:53:31.000000000 +0000
 +++ configure.in
-@@ -1974,7 +1974,7 @@ ld.])
+@@ -1950,7 +1950,7 @@ ld.])
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa-toplevel,v 1.3 2011/08/19 10:10:01 tnn Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1982,6 +1982,9 @@ ld.])
+@@ -1958,6 +1958,9 @@ ld.])
      if test ! "$GNU_CC"; then
  	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
      fi
@@ -21,7 +21,7 @@ $NetBSD: patch-aa-toplevel,v 1.3 2011/08/19 10:10:01 tnn Exp $
      ;; 
  
  ia64*-hpux*)
-@@ -3222,6 +3225,9 @@ dnl ====================================
+@@ -3198,6 +3201,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,13 +31,3 @@ $NetBSD: patch-aa-toplevel,v 1.3 2011/08/19 10:10:01 tnn Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -7304,7 +7310,8 @@ rm -f confdefs.h.save
- mv confdefs.h confdefs.h.save
- egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
- AC_OUTPUT_MAKE_DEFS()
--MOZ_DEFINES=$DEFS
-+# nbsed broken. PR bin/42261
-+MOZ_DEFINES="$DEFS`awk 'BEGIN {while(x<1000){printf " ";x++}}'`"
- AC_SUBST(MOZ_DEFINES)
- rm -f confdefs.h
- mv confdefs.h.save confdefs.h

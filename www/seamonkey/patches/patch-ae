@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.5 2011/08/19 10:10:01 tnn Exp $
+$NetBSD: patch-ae,v 1.6 2011/11/12 16:41:43 tnn Exp $
 
---- mozilla/nsprpub/pr/src/misc/prnetdb.c.orig	2011-08-11 21:41:20.000000000 +0000
+--- mozilla/nsprpub/pr/src/misc/prnetdb.c.orig	2011-09-22 20:20:37.000000000 +0000
 +++ mozilla/nsprpub/pr/src/misc/prnetdb.c
 @@ -105,7 +105,7 @@ PRLock *_pr_dnsLock = NULL;
          || defined(AIX4_3_PLUS) || (defined(AIX) && defined(_THREAD_SAFE)) \
@@ -43,7 +43,7 @@ $NetBSD: patch-ae,v 1.5 2011/08/19 10:10:01 tnn Exp $
 +
          rv = GETADDRINFO(hostname, NULL, &hints, &res);
  #ifdef AI_ADDRCONFIG
-         if (rv == EAI_BADFLAGS) {
+         if (rv == EAI_BADFLAGS && (hints.ai_flags & AI_ADDRCONFIG)) {
 @@ -2083,6 +2093,11 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
              rv = GETADDRINFO(hostname, NULL, &hints, &res);
          }

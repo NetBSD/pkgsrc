@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2011/08/19 10:10:01 tnn Exp $
+$NetBSD: patch-aa,v 1.6 2011/11/12 16:41:43 tnn Exp $
 
---- mozilla/configure.in.orig	2011-08-11 21:40:51.000000000 +0000
+--- mozilla/configure.in.orig	2011-11-07 21:07:43.000000000 +0000
 +++ mozilla/configure.in
-@@ -2063,7 +2063,7 @@ case "$target" in
+@@ -2137,7 +2137,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2011/08/19 10:10:01 tnn Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2071,6 +2071,9 @@ case "$target" in
+@@ -2145,6 +2145,9 @@ case "$target" in
      if test ! "$GNU_CC"; then
  	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
      fi
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.5 2011/08/19 10:10:01 tnn Exp $
      ;; 
  
  ia64*-hpux*)
-@@ -3277,6 +3280,9 @@ dnl ====================================
+@@ -3312,6 +3315,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.5 2011/08/19 10:10:01 tnn Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4593,6 +4599,14 @@ if test -n "$YASM"; then
+@@ -4520,6 +4526,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -46,17 +46,16 @@ $NetBSD: patch-aa,v 1.5 2011/08/19 10:10:01 tnn Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -9200,7 +9214,8 @@ rm -f confdefs.h.save
- mv confdefs.h confdefs.h.save
- egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
- AC_OUTPUT_MAKE_DEFS()
--MOZ_DEFINES=$DEFS
-+# nbsed broken. PR bin/42261
-+MOZ_DEFINES="$DEFS`awk 'BEGIN {while(x<1000){printf " ";x++}}'`"
- AC_SUBST(MOZ_DEFINES)
- rm -f confdefs.h
- mv confdefs.h.save confdefs.h
-@@ -9307,6 +9322,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -7439,7 +7453,7 @@ else
+   *-mingw*)
+     AC_DEFINE(MOZ_MEMORY_WINDOWS)
+     AC_MSG_CHECKING([for VC2005/2008++ CRT source])
+-    if test "$CC_VERSION" == "14.00.50727.762" -o "$CC_VERSION" == "15.00.30729.01"; then
++    if test "$CC_VERSION" = "14.00.50727.762" -o "$CC_VERSION" = "15.00.30729.01"; then
+       if test -z "$WIN32_CRT_SRC_DIR" -a -n "$VCINSTALLDIR"; then
+         WIN32_CRT_SRC_DIR="$VCINSTALLDIR\crt\src"
+       fi
+@@ -9516,6 +9530,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
