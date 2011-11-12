@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2851 2011/11/12 02:26:53 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2852 2011/11/12 02:59:22 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4513,3 +4513,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-CGI-ProgressBar to 0.05 [hiramatsu 2011-11-12]
 	Added devel/p5-MooseX-MarkAsMethods version 0.14 [hiramatsu 2011-11-12]
 	Updated devel/p5-Test-Inter to 1.03 [hiramatsu 2011-11-12]
+	Updated devel/p5-MooseX-FollowPBP to 0.05 [hiramatsu 2011-11-12]
+	Updated math/p5-Number-Compare to 0.03 [hiramatsu 2011-11-12]
+	Updated www/p5-Plack-Middleware-Debug to 0.14 [hiramatsu 2011-11-12]
+	Updated devel/p5-Object-InsideOut to 3.84 [hiramatsu 2011-11-12]
+	Updated www/p5-CGI-Emulate-PSGI to 0.14 [hiramatsu 2011-11-12]
