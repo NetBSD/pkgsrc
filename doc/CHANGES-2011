@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2855 2011/11/12 13:01:41 tnn Exp $
+$NetBSD: CHANGES-2011,v 1.2856 2011/11/12 17:24:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4524,3 +4524,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/xulrunner to 8.0 [tnn 2011-11-12]
 	Updated www/firefox to 8.0 [tnn 2011-11-12]
 	Updated devel/nss to 3.12.11.0 [tnn 2011-11-12]
+	Updated net/clive to 2.3.1.1nb3 [wiz 2011-11-12]
