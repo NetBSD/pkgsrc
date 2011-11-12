@@ -1,0 +1,17 @@
+$NetBSD: patch-ax,v 1.1 2011/11/12 19:14:07 cheusov Exp $
+Fix for clang
+--- nawk/main.c.orig	2004-12-19 02:23:10.000000000 +0000
++++ nawk/main.c
+@@ -66,8 +66,11 @@ int	mb_cur_max;	/* MB_CUR_MAX, for accel
+ 
+ extern const char badopen[];
+ 
+-int main(int argc, unsigned char *argv[], unsigned char *envp[])
++int main(int argc, char **argv_, char **envp_)
+ {
++	unsigned char **argv = (unsigned char **)argv_;
++	unsigned char **envp = (unsigned char **)envp_;
++
+ 	unsigned char *fs = NULL;
+ 	char label[MAXLABEL+1];	/* Space for the catalogue label */
+ 
