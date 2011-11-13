@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/13 23:05:32 joerg Exp $
+
+SHA1 (sqlalchemy-migrate-0.7.2.tar.gz) = d88f0159e3f58fed8c50ba83f0b19559b0524cb5
+RMD160 (sqlalchemy-migrate-0.7.2.tar.gz) = e4c596b590e543081f78feab54599024b5b9b3e8
+Size (sqlalchemy-migrate-0.7.2.tar.gz) = 105862 bytes
