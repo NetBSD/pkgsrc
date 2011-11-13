@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/08/19 14:39:10 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/11/13 17:00:33 tnn Exp $
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/alerts/notificationNames.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/autoconfig/autoconfig.properties
@@ -115,7 +115,6 @@ lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/regionNames.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/search/search.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/security/caps.properties
-lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/storage.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/global/tree.dtd
@@ -310,6 +309,10 @@ lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/mozapps/handling/handling.dtd
@@ -458,7 +461,6 @@ lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/regionNames.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/search/search.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/security/caps.properties
-lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/storage.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/global/tree.dtd
@@ -653,6 +655,10 @@ lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/mozapps/handling/handling.dtd
@@ -801,7 +807,6 @@ lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/l
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/regionNames.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/search/search.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/security/caps.properties
-lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/storage.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/global/tree.dtd
@@ -996,6 +1001,10 @@ lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/l
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/mozapps/handling/handling.dtd
@@ -1144,7 +1153,6 @@ lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/regionNames.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/search/search.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/security/caps.properties
-lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/storage.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/global/tree.dtd
@@ -1339,6 +1347,10 @@ lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/mozapps/handling/handling.dtd
@@ -1487,7 +1499,6 @@ lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/regionNames.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/search/search.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/security/caps.properties
-lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/storage.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/global/tree.dtd
@@ -1682,6 +1693,10 @@ lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/mozapps/handling/handling.dtd
@@ -1830,7 +1845,6 @@ lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/regionNames.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/search/search.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/security/caps.properties
-lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/storage.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/global/tree.dtd
@@ -2025,6 +2039,10 @@ lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/mozapps/handling/handling.dtd
@@ -2173,7 +2191,6 @@ lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/regionNames.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/search/search.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/security/caps.properties
-lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/storage.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/global/tree.dtd
@@ -2368,6 +2385,10 @@ lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/mozapps/handling/handling.dtd
@@ -2516,7 +2537,6 @@ lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/regionNames.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/search/search.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/security/caps.properties
-lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/storage.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/global/tree.dtd
@@ -2711,6 +2731,10 @@ lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/mozapps/handling/handling.dtd
@@ -2859,7 +2883,6 @@ lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/regionNames.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/search/search.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/security/caps.properties
-lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/storage.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/global/tree.dtd
@@ -3054,6 +3077,10 @@ lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/mozapps/handling/handling.dtd
@@ -3202,7 +3229,6 @@ lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/l
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/regionNames.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/search/search.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/security/caps.properties
-lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/storage.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/global/tree.dtd
@@ -3397,6 +3423,10 @@ lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/l
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/mozapps/handling/handling.dtd
@@ -3545,7 +3575,6 @@ lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/l
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/regionNames.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/search/search.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/security/caps.properties
-lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/storage.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/global/tree.dtd
@@ -3740,6 +3769,10 @@ lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/l
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/mozapps/handling/handling.dtd
@@ -3888,7 +3921,6 @@ lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/l
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/regionNames.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/search/search.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/security/caps.properties
-lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/storage.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/global/tree.dtd
@@ -4083,6 +4115,10 @@ lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/l
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/mozapps/handling/handling.dtd
@@ -4231,7 +4267,6 @@ lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/l
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/regionNames.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/search/search.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/security/caps.properties
-lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/storage.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/global/tree.dtd
@@ -4426,6 +4461,10 @@ lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/l
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/mozapps/handling/handling.dtd
@@ -4574,7 +4613,6 @@ lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/regionNames.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/search/search.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/security/caps.properties
-lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/storage.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/global/tree.dtd
@@ -4769,6 +4807,10 @@ lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/mozapps/handling/handling.dtd
@@ -4917,7 +4959,6 @@ lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/regionNames.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/search/search.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/security/caps.properties
-lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/storage.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/global/tree.dtd
@@ -5112,6 +5153,10 @@ lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/mozapps/handling/handling.dtd
@@ -5260,7 +5305,6 @@ lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/regionNames.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/search/search.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/security/caps.properties
-lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/storage.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/global/tree.dtd
@@ -5455,6 +5499,10 @@ lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/mozapps/handling/handling.dtd
@@ -5603,7 +5651,6 @@ lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/regionNames.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/search/search.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/security/caps.properties
-lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/storage.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/global/tree.dtd
@@ -5798,6 +5845,10 @@ lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/mozapps/handling/handling.dtd
@@ -5946,7 +5997,6 @@ lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/l
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/regionNames.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/search/search.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/security/caps.properties
-lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/storage.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/global/tree.dtd
@@ -6141,6 +6191,10 @@ lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/l
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/mozapps/handling/handling.dtd
@@ -6289,7 +6343,6 @@ lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/l
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/regionNames.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/search/search.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/security/caps.properties
-lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/storage.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/global/tree.dtd
@@ -6484,6 +6537,10 @@ lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/l
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/mozapps/handling/handling.dtd
@@ -6632,7 +6689,6 @@ lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/regionNames.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/search/search.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/security/caps.properties
-lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/storage.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/global/tree.dtd
@@ -6827,6 +6883,10 @@ lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/mozapps/handling/handling.dtd
@@ -6975,7 +7035,6 @@ lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/regionNames.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/search/search.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/security/caps.properties
-lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/storage.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/global/tree.dtd
@@ -7170,6 +7229,10 @@ lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/mozapps/handling/handling.dtd
@@ -7318,7 +7381,6 @@ lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/regionNames.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/search/search.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/security/caps.properties
-lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/storage.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/global/tree.dtd
@@ -7513,6 +7575,10 @@ lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/mozapps/handling/handling.dtd
@@ -7661,7 +7727,6 @@ lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/regionNames.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/search/search.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/security/caps.properties
-lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/storage.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/global/tree.dtd
@@ -7856,6 +7921,10 @@ lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/mozapps/handling/handling.dtd
@@ -8004,7 +8073,6 @@ lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/regionNames.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/search/search.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/security/caps.properties
-lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/storage.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/global/tree.dtd
@@ -8199,6 +8267,10 @@ lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/mozapps/handling/handling.dtd
@@ -8347,7 +8419,6 @@ lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/regionNames.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/search/search.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/security/caps.properties
-lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/storage.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/global/tree.dtd
@@ -8542,6 +8613,10 @@ lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/mozapps/handling/handling.dtd
@@ -8690,7 +8765,6 @@ lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/regionNames.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/search/search.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/security/caps.properties
-lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/storage.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/global/tree.dtd
@@ -8885,6 +8959,10 @@ lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/mozapps/handling/handling.dtd
@@ -9033,7 +9111,6 @@ lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/regionNames.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/search/search.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/security/caps.properties
-lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/storage.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/global/tree.dtd
@@ -9228,6 +9305,10 @@ lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/mozapps/handling/handling.dtd
@@ -9376,7 +9457,6 @@ lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/l
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/regionNames.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/search/search.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/security/caps.properties
-lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/storage.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/global/tree.dtd
@@ -9571,6 +9651,10 @@ lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/l
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/mozapps/handling/handling.dtd
@@ -9719,7 +9803,6 @@ lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/regionNames.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/search/search.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/security/caps.properties
-lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/storage.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/global/tree.dtd
@@ -9914,6 +9997,10 @@ lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/mozapps/handling/handling.dtd
@@ -10062,7 +10149,6 @@ lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/l
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/regionNames.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/search/search.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/security/caps.properties
-lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/storage.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/global/tree.dtd
@@ -10257,6 +10343,10 @@ lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/l
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/mozapps/handling/handling.dtd
@@ -10405,7 +10495,6 @@ lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/l
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/regionNames.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/search/search.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/security/caps.properties
-lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/storage.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/global/tree.dtd
@@ -10600,6 +10689,10 @@ lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/l
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/mozapps/handling/handling.dtd
@@ -10748,7 +10841,6 @@ lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/l
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/regionNames.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/search/search.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/security/caps.properties
-lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/storage.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/global/tree.dtd
@@ -10943,6 +11035,10 @@ lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/l
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/mozapps/handling/handling.dtd
@@ -11091,7 +11187,6 @@ lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/regionNames.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/search/search.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/security/caps.properties
-lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/storage.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/global/tree.dtd
@@ -11286,6 +11381,10 @@ lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/mozapps/handling/handling.dtd
@@ -11434,7 +11533,6 @@ lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/regionNames.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/search/search.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/security/caps.properties
-lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/storage.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/global/tree.dtd
@@ -11629,6 +11727,10 @@ lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/mozapps/handling/handling.dtd
@@ -11777,7 +11879,6 @@ lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/regionNames.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/search/search.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/security/caps.properties
-lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/storage.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/global/tree.dtd
@@ -11972,6 +12073,10 @@ lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/mozapps/handling/handling.dtd
@@ -12120,7 +12225,6 @@ lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/regionNames.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/search/search.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/security/caps.properties
-lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/storage.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/global/tree.dtd
@@ -12315,6 +12419,10 @@ lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/mozapps/handling/handling.dtd
@@ -12463,7 +12571,6 @@ lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/regionNames.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/search/search.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/security/caps.properties
-lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/storage.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/global/tree.dtd
@@ -12658,6 +12765,10 @@ lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/mozapps/handling/handling.dtd
@@ -12806,7 +12917,6 @@ lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/regionNames.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/search/search.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/security/caps.properties
-lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/storage.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/global/tree.dtd
@@ -13001,6 +13111,10 @@ lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/mozapps/handling/handling.dtd
@@ -13149,7 +13263,6 @@ lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/l
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/regionNames.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/search/search.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/security/caps.properties
-lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/storage.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/global/tree.dtd
@@ -13344,6 +13457,10 @@ lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/l
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/mozapps/handling/handling.dtd
@@ -13492,7 +13609,6 @@ lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/l
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/regionNames.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/search/search.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/security/caps.properties
-lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/storage.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/global/tree.dtd
@@ -13687,6 +13803,10 @@ lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/l
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/mozapps/handling/handling.dtd
@@ -13835,7 +13955,6 @@ lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/regionNames.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/search/search.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/security/caps.properties
-lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/storage.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/global/tree.dtd
@@ -14030,6 +14149,10 @@ lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/mozapps/handling/handling.dtd
@@ -14178,7 +14301,6 @@ lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/regionNames.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/search/search.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/security/caps.properties
-lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/storage.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/global/tree.dtd
@@ -14373,6 +14495,10 @@ lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/mozapps/handling/handling.dtd
@@ -14521,7 +14647,6 @@ lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/regionNames.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/search/search.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/security/caps.properties
-lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/storage.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/global/tree.dtd
@@ -14716,6 +14841,10 @@ lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/mozapps/handling/handling.dtd
@@ -14864,7 +14993,6 @@ lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/l
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/regionNames.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/search/search.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/security/caps.properties
-lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/storage.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/global/tree.dtd
@@ -15059,6 +15187,10 @@ lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/l
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/mozapps/handling/handling.dtd
@@ -15207,7 +15339,6 @@ lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/l
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/regionNames.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/search/search.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/security/caps.properties
-lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/storage.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/svg/svg.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/textcontext.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/global/tree.dtd
@@ -15402,6 +15533,10 @@ lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/l
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/blocklist.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/extensions.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/extensions.properties
+lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/newaddon.dtd
+lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/newaddon.properties
+lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/selectAddons.dtd
+lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/selectAddons.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/update.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/extensions/update.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/mozapps/handling/handling.dtd
