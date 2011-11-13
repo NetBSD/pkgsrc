@@ -1,0 +1,3 @@
+The ``decorator'' module aims to simplify the usage of decorators
+in Python code for the average programmer and to popularize decorators
+by showing various non-trivial examples.
