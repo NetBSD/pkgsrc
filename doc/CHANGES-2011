@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2869 2011/11/13 15:49:12 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2870 2011/11/13 15:53:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4548,3 +4548,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby19-base to 1.9.2pl290nb5 [taca 2011-11-14]
 	Updated lang/ruby193-base to 1.9.3p0nb1 [taca 2011-11-14]
 	Updated www/contao210-translations to 20111108 [taca 2011-11-14]
+	Updated www/geeklog to 1.8.1 [taca 2011-11-14]
