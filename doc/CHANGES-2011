@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2872 2011/11/13 15:58:21 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2873 2011/11/13 16:02:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4551,3 +4551,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/geeklog to 1.8.1 [taca 2011-11-14]
 	Updated misc/rubygems to 1.8.11 [taca 2011-11-14]
 	Updated devel/ruby-rdoc to 3.11 [taca 2011-11-14]
+	Updated mail/getmail to 4.22.2 [schmonz 2011-11-13]
