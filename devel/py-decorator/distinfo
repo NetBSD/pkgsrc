@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/13 22:58:28 joerg Exp $
+
+SHA1 (decorator-3.3.2.tar.gz) = 56925abc3c4dcd95016ebdbc40e38d1a6a2ad644
+RMD160 (decorator-3.3.2.tar.gz) = 21c2e2feef997a42781dc17a20092b570325a121
+Size (decorator-3.3.2.tar.gz) = 28506 bytes
