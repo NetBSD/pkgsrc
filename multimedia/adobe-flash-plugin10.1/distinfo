@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/09/04 19:50:04 tnn Exp $
+$NetBSD: distinfo,v 1.6.2.1 2011/11/13 02:01:28 sbd Exp $
 
-SHA1 (flash-plugin-10.3.183.7-release.i386.rpm) = 7ad5f80e8d2a94773645948d54d5350c4745f9c4
-RMD160 (flash-plugin-10.3.183.7-release.i386.rpm) = 914484cb463eae2c0fb81237be77a695bd36e1b1
-Size (flash-plugin-10.3.183.7-release.i386.rpm) = 5450066 bytes
+SHA1 (flash-plugin-10.3.183.11-release.i386.rpm) = c62d921373d8cd8ffa25632cf749b14f0baddb4c
+RMD160 (flash-plugin-10.3.183.11-release.i386.rpm) = 9427c796b30b131a6bf3dff914d5c17861f245b0
+Size (flash-plugin-10.3.183.11-release.i386.rpm) = 5450222 bytes

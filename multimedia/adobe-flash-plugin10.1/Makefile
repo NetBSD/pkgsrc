@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2011/09/12 23:35:15 abs Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2011/11/13 02:01:28 sbd Exp $
 
-PKGNAME=		adobe-flash-plugin-${FLASH_VERSION:S/r/./}
-PKGREVISION=		1
+DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
+PKGNAME=		adobe-${DISTNAME:C/-release.*//}
 CATEGORIES=		multimedia www
-MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
+MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/pdc/${FLASH_VERSION}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.adobe.com/
@@ -30,8 +30,7 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl
 EMUL_REQD=		suse>=11.3
 
-FLASH_VERSION=		10.3.183.7
-DISTNAME=		flash-plugin-${FLASH_VERSION}-release.i386
+FLASH_VERSION=		10.3.183.11
 
 CONFLICTS=		ns-flash-[0-9]*
 
