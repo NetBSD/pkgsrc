@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1516 2011/11/13 12:28:30 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.1517 2011/11/13 22:58:51 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -1215,6 +1215,8 @@ SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-argparse
 SUBDIR+=	py-at-spi
 SUBDIR+=	py-babel
+SUBDIR+=	py-buildbot
+SUBDIR+=	py-buildbot-slave
 SUBDIR+=	py-checker
 SUBDIR+=	py-cheetah
 SUBDIR+=	py-compizconfig
@@ -1224,6 +1226,7 @@ SUBDIR+=	py-curses
 SUBDIR+=	py-cursespanel
 SUBDIR+=	py-cython
 SUBDIR+=	py-darcsver
+SUBDIR+=	py-decorator
 SUBDIR+=	py-dulwich
 SUBDIR+=	py-expect
 SUBDIR+=	py-fann
