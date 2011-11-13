@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2862 2011/11/13 09:08:25 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2863 2011/11/13 09:10:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4536,3 +4536,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Moved chat/p5-IRC-Util to chat/p5-IRC-Utils [hiramatsu 2011-11-13]
 	Updated inputmethod/scim to 1.4.11 [obache 2011-11-13]
 	Updated games/scummvm to 1.4.0 [adam 2011-11-13]
+	Updated databases/phpmyadmin to 3.4.7.1 [tron 2011-11-13]
