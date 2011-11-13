@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2875 2011/11/13 16:13:35 gls Exp $
+$NetBSD: CHANGES-2011,v 1.2876 2011/11/13 17:04:00 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4554,3 +4554,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/getmail to 4.22.2 [schmonz 2011-11-13]
 	Updated misc/calibre to 0.8.26 [gls 2011-11-13]
 	Updated devel/libgee to 0.6.3 [gls 2011-11-13]
+	Updated www/seamonkey to 2.5b4 [tnn 2011-11-13]
+	Updated www/seamonkey-l10n to 2.5b4 [tnn 2011-11-13]
+	Updated mail/thunderbird to 8.0 [tnn 2011-11-13]
+	Updated mail/thunderbird-l10n to 8.0 [tnn 2011-11-13]
