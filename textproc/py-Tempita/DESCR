@@ -1,3 +1,3 @@
 Tempita is a small templating language for text substitution. It is
-meant for projects that require a bit more power than string.Tempalte or
+meant for projects that require a bit more power than string.Template or
 % substitution.
