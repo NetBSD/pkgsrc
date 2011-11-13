@@ -1,4 +1,4 @@
-# $NetBSD: import.mk,v 1.3 2011/11/13 22:52:43 joerg Exp $
+# $NetBSD: import.mk,v 1.4 2011/11/13 23:04:41 joerg Exp $
 #
 
 # import:
@@ -42,6 +42,11 @@ _IMPORT_ERRORS+=	"[import.mk] You must set CATEGORY."
 .endif
 .if exists(${.CURDIR}/TODO)
 _IMPORT_ERRORS+=	"[import.mk] Don't import packages that have something TODO."
+.endif
+.if exists(${PKGSRCDIR}/${CATEGORY:Unonexistent}/${PKGPATH:T}/Makefile)
+_IMPORT_REMOVE_BEFORE_UPDATE=yes
+.else
+_IMPORT_REMOVE_BEFORE_UPDATE=no
 .endif
 .if ${_EXPERIMENTAL:U""} != "yes"
 _IMPORT_ERRORS+=	"[import.mk] The \"import\" target is experimental."
@@ -87,7 +92,12 @@ _import-add-change:
 	${RUN} cd ${PKGSRCDIR}/doc && cvs commit			\
 		-m "Imported ${CATEGORY}/${PKGPATH:T}${_IMPORT_FROM}."	\
 		${_IMPORT_CHANGES:T}
+.if ${_IMPORT_REMOVE_BEFORE_UPDATE} == "yes"
+	@${STEP_MSG} "Removing local copy."
+	${RUN} cd ${PKGSRCDIR}/${CATEGORY}/${PKGPATH:T} && rm -f *
+.endif
 	@${STEP_MSG} "Loading the new package from CVS."
+	${RUN} cd ${PKGSRCDIR}/${CATEGORY}/${PKGPATH:T} && rm -f *
 	${RUN} cd ${PKGSRCDIR}/${CATEGORY} && cvs update Makefile ${PKGPATH:T}
 	@${STEP_MSG} "Adding the package to the category Makefile."
 	${RUN} cd ${PKGSRCDIR}/${CATEGORY} && (pkglint -F >/dev/null || ${TRUE}) && pkglint -q
