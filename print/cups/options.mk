@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.12 2011/01/03 05:58:49 adam Exp $
+# $NetBSD: options.mk,v 1.13 2011/11/13 21:49:17 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
 PKG_OPTIONS_GROUP.pdftops=	ghostscript poppler
-PKG_SUPPORTED_OPTIONS=	acl dbus dnssd kerberos libusb pam slp tcpwrappers threads
+PKG_SUPPORTED_OPTIONS=	acl dbus dnssd kerberos libusb pam slp tcpwrappers
 PKG_SUGGESTED_OPTIONS=	dbus dnssd kerberos libusb poppler slp
 PKG_OPTIONS_LEGACY_OPTS+=	xpdf:poppler gs:ghostscript
 
@@ -88,11 +88,4 @@ CONFIGURE_ARGS+=	--disable-slp
 CONFIGURE_ARGS+=	--enable-tcp-wrappers
 .else
 CONFIGURE_ARGS+=	--disable-tcp-wrappers
-.endif
-
-.if !empty(PKG_OPTIONS:Mthreads)
-.  include "../../mk/pthread.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-threads
-.else
-CONFIGURE_ARGS+=	--disable-threads
 .endif

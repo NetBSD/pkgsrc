@@ -1,18 +1,9 @@
-$NetBSD: patch-ai,v 1.18 2010/05/25 08:52:59 wiz Exp $
+$NetBSD: patch-ai,v 1.19 2011/11/13 21:49:17 sbd Exp $
 
 Don't create directories, do that with OWN_DIRS and OWN_DIRS_PERMS
 
 --- notifier/Makefile.orig	2009-04-12 23:04:51.000000000 +0000
 +++ notifier/Makefile
-@@ -54,7 +54,7 @@ clean:
- # Install all targets...
- #
- 
--install:	all install-data install-headers install-libs install-exec
-+install:	all install-data install-headers install-libs install-exec install-dirs
- 
- 
- #
 @@ -62,6 +62,8 @@ install:	all install-data install-header
  #
  
