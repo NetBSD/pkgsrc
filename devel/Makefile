@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1515 2011/11/13 09:35:57 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.1516 2011/11/13 12:28:30 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -808,6 +808,7 @@ SUBDIR+=	p5-LEOCHARRE-Dir
 SUBDIR+=	p5-Lexical-Persistence
 SUBDIR+=	p5-Lexical-SealRequireHints
 SUBDIR+=	p5-List-MoreUtils
+SUBDIR+=	p5-List-UtilsBy
 SUBDIR+=	p5-Locale-Msgfmt
 SUBDIR+=	p5-Locale-PO
 SUBDIR+=	p5-Log-Agent
