@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 14:52:51 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/13 06:14:40 hiramatsu Exp $
 
-DISTNAME=	Server-Starter-0.07
+DISTNAME=	Server-Starter-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Server/}
 
@@ -18,6 +17,8 @@ PERL5_PACKLIST= auto/Server/Starter/.packlist
 
 BUILD_DEPENDS+=	p5-Test-TCP>=0.11:../../net/p5-Test-TCP
 DEPENDS+=	p5-Proc-Wait3-[0-9]*:../../devel/p5-Proc-Wait3
+DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-Scope-Guard-[0-9]*:../../devel/p5-Scope-Guard
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
