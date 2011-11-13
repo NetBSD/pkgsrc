@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2865 2011/11/13 12:31:25 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2866 2011/11/13 13:08:37 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4541,3 +4541,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-View-TT to 0.37 [hiramatsu 2011-11-13]
 	Added devel/p5-List-UtilsBy version 0.07 [hiramatsu 2011-11-13]
 	Updated security/p5-Module-Signature to 0.68 [hiramatsu 2011-11-13]
+	Added textproc/p5-String-CamelCase version 0.02 [hiramatsu 2011-11-13]
+	Updated textproc/p5-Lingua-EN-Inflect-Phrase to 0.10 [hiramatsu 2011-11-13]
