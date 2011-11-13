@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/09/05 11:32:02 sno Exp $
+$NetBSD: distinfo,v 1.8 2011/11/13 09:36:31 hiramatsu Exp $
 
-SHA1 (Catalyst-View-TT-0.35.tar.gz) = 3ab10ead8410a780209b8ac454f829f6b46e5508
-RMD160 (Catalyst-View-TT-0.35.tar.gz) = 48b316176232dab7e5424c2d3e19575271cf9c2b
-Size (Catalyst-View-TT-0.35.tar.gz) = 45037 bytes
+SHA1 (Catalyst-View-TT-0.37.tar.gz) = 4b5e3915803be4633d90c19785eeafd24d04f0fc
+RMD160 (Catalyst-View-TT-0.37.tar.gz) = 271683ab6d2e60e3bccb4f9301ca79261a40ee7c
+Size (Catalyst-View-TT-0.37.tar.gz) = 43254 bytes
