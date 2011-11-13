@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/06/10 09:39:55 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/13 04:42:08 obache Exp $
 #
 
 DISTNAME=	ibus-pinyin-1.3.11
@@ -38,6 +38,7 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--disable-db-android
 CONFIGURE_ARGS+=	--enable-db-open-phrase
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
 .include "options.mk"
 
