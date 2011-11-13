@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2883 2011/11/13 23:06:48 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.2884 2011/11/13 23:07:17 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4563,3 +4563,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/py-decorator version 3.3.2 [2011-11-13]
 	Added databases/py-sqlalchemy-migrate version 0.7.2 [2011-11-13 ]
 	Added devel/py-buildbot version 0.8.5 [2011-11-13 ]
+	Added devel/py-buildbot-slave version 0.8.5 [2011-11-13 ]
