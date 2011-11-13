@@ -1,4 +1,4 @@
-# $NetBSD: import.mk,v 1.1 2009/07/26 21:36:38 rillig Exp $
+# $NetBSD: import.mk,v 1.2 2011/11/13 22:28:03 joerg Exp $
 #
 
 # import:
@@ -44,7 +44,7 @@ _IMPORT_ERRORS+=	"[import.mk] Don't import packages that have something TODO."
 .if exists(${PKGSRCDIR}/${CATEGORY:Unonexistent}/${PKGPATH:T}/Makefile)
 _IMPORT_ERRORS+=	"[import.mk] The package ${CATEGORY}/${PKGPATH:T} already exists."
 .endif
-.if ${_EXPERIMENTAL} != "yes"
+.if ${_EXPERIMENTAL:U""} != "yes"
 _IMPORT_ERRORS+=	"[import.mk] The \"import\" target is experimental."
 .endif
 
