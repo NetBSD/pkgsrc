@@ -1,4 +1,4 @@
-# $NetBSD: import.mk,v 1.2 2011/11/13 22:28:03 joerg Exp $
+# $NetBSD: import.mk,v 1.3 2011/11/13 22:52:43 joerg Exp $
 #
 
 # import:
@@ -28,8 +28,10 @@
 _IMPORT_ERRORS=		# none
 
 _IMPORT_FROM=		# nothing but a leading space
-.if defined(FROM) && !empty(FROM)
+.if defined(FROM)
+.  if !empty(FROM)
 _IMPORT_FROM+=		from ${FROM}
+.  endif
 .elif !empty(PKGPATH:Mwip/*)
 _IMPORT_FROM+=		from pkgsrc-wip
 .else
@@ -40,9 +42,6 @@ _IMPORT_ERRORS+=	"[import.mk] You must set CATEGORY."
 .endif
 .if exists(${.CURDIR}/TODO)
 _IMPORT_ERRORS+=	"[import.mk] Don't import packages that have something TODO."
-.endif
-.if exists(${PKGSRCDIR}/${CATEGORY:Unonexistent}/${PKGPATH:T}/Makefile)
-_IMPORT_ERRORS+=	"[import.mk] The package ${CATEGORY}/${PKGPATH:T} already exists."
 .endif
 .if ${_EXPERIMENTAL:U""} != "yes"
 _IMPORT_ERRORS+=	"[import.mk] The \"import\" target is experimental."
@@ -76,8 +75,7 @@ _import-import:
 	cvs -d cvs.netbsd.org:/cvsroot import				\
 		-m "$$import_msg"					\
 		pkgsrc/${CATEGORY}/${PKGPATH:T}				\
-		TNF pkgsrc-base;					\
-	${RM} -f "$$import_msg"
+		TNF pkgsrc-base
 
 _import-add-change:
 	@${STEP_MSG} "Adding CHANGES entry."
