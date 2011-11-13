@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/20 21:36:32 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2011/11/13 04:49:25 hiramatsu Exp $
 
-SHA1 (HTML-RewriteAttributes-0.03.tar.gz) = de1a91417cef97727f6201f7d986ed07df71bae5
-RMD160 (HTML-RewriteAttributes-0.03.tar.gz) = 8531a2b4cfcc52abaad8605925f7ae87126ff0d9
-Size (HTML-RewriteAttributes-0.03.tar.gz) = 18148 bytes
+SHA1 (HTML-RewriteAttributes-0.04.tar.gz) = 5437de2a4e76e64a72216deecdf8eaa451bc8a21
+RMD160 (HTML-RewriteAttributes-0.04.tar.gz) = 67dff0a3e28abfa74d34a8053127997cfb195e1f
+Size (HTML-RewriteAttributes-0.04.tar.gz) = 22677 bytes
