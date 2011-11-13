@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2861 2011/11/13 07:52:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2862 2011/11/13 09:08:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4535,3 +4535,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-CatalystX-CRUD-YUI to 0.025 [hiramatsu 2011-11-13]
 	Moved chat/p5-IRC-Util to chat/p5-IRC-Utils [hiramatsu 2011-11-13]
 	Updated inputmethod/scim to 1.4.11 [obache 2011-11-13]
+	Updated games/scummvm to 1.4.0 [adam 2011-11-13]
