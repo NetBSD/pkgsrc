@@ -1,4 +1,4 @@
-# $NetBSD: import.mk,v 1.4 2011/11/13 23:04:41 joerg Exp $
+# $NetBSD: import.mk,v 1.5 2011/11/13 23:09:17 joerg Exp $
 #
 
 # import:
@@ -37,6 +37,7 @@ _IMPORT_FROM+=		from pkgsrc-wip
 .else
 _IMPORT_ERRORS+=	"[import.mk] You must set FROM."
 .endif
+CATEGORY?=	${CATEGORIES:[1]}
 .if ${CATEGORY:U} == ""
 _IMPORT_ERRORS+=	"[import.mk] You must set CATEGORY."
 .endif
