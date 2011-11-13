@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
+$NetBSD: patch-bb,v 1.2 2011/11/13 07:52:02 obache Exp $
 
---- extras/gtk2_immodule/gtkimcontextscim.cpp.orig	2008-11-02 06:43:15.000000000 +0000
+--- extras/gtk2_immodule/gtkimcontextscim.cpp.orig	2010-07-26 22:11:42.000000000 +0000
 +++ extras/gtk2_immodule/gtkimcontextscim.cpp
-@@ -274,11 +274,11 @@ static int                              
+@@ -282,11 +282,11 @@ static int                              
  static FrontEndHotkeyMatcher                            _frontend_hotkey_matcher;
  static IMEngineHotkeyMatcher                            _imengine_hotkey_matcher;
  
@@ -17,7 +17,7 @@ $NetBSD: patch-bb,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
  
  static GtkIMContextSCIM                                *_focused_ic                 = 0;
  static GtkWidget                                       *_focused_widget             = 0;
-@@ -296,8 +296,8 @@ static bool                             
+@@ -304,8 +304,8 @@ static bool                             
  static int                                              _instance_count             = 0;
  static int                                              _context_count              = 0;
  
@@ -28,15 +28,15 @@ $NetBSD: patch-bb,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
  
  static PanelClient                                      _panel_client;
  
-@@ -310,6 +310,7 @@ static bool                             
+@@ -318,6 +318,7 @@ static bool                             
  static bool                                             _shared_input_method        = false;
- static bool                                             _use_key_snooper            = true;
+ static bool                                             _use_key_snooper            = false;
  
 +#if 0
  // A hack to shutdown the immodule cleanly even if im_module_exit () is not called when exiting.
  class FinalizeHandler
  {
-@@ -324,6 +325,7 @@ public:
+@@ -334,6 +335,7 @@ public:
  };
  
  static FinalizeHandler                                  _finalize_handler;
@@ -44,7 +44,7 @@ $NetBSD: patch-bb,v 1.1.1.1 2009/11/24 11:46:01 obache Exp $
  
  /* Function Implementations */
  
-@@ -436,6 +438,7 @@ gtk_im_context_scim_register_type (GType
+@@ -446,6 +448,7 @@ gtk_im_context_scim_register_type (GType
          sizeof               (GtkIMContextSCIM),
          0,
          (GtkObjectInitFunc)  gtk_im_context_scim_init,
