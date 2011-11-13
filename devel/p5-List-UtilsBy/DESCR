@@ -1,0 +1,4 @@
+This module provides a number of list utility functions, all of which
+take an initial code block to control their behaviour. They are
+variations on similar core perl or "List::Util" functions of similar
+names, but which use the block to control their behaviour.
