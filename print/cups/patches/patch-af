@@ -1,14 +1,11 @@
-$NetBSD: patch-af,v 1.20 2010/06/05 23:03:15 sbd Exp $
+$NetBSD: patch-af,v 1.21 2011/11/13 21:49:17 sbd Exp $
 
 * Remove unneeded $(LIBTOOL), it's now in $(INSTALL_BIN).
 
-* Add usb-hybrid.c for
-usb-backend-both-usblp-and-libusb.dpatch by  <till.kamppeter@gmail.com>
-
---- backend/Makefile.orig	2010-06-05 02:08:34.225590281 +0000
+--- backend/Makefile.orig	2011-05-04 04:28:00.000000000 +0000
 +++ backend/Makefile
-@@ -84,7 +84,7 @@ install-data:
- install-exec:
+@@ -89,7 +89,7 @@ install-exec:	$(INSTALLXPC)
+ 	echo Installing backends in $(SERVERBIN)/backend
  	$(INSTALL_DIR) -m 755 $(SERVERBIN)/backend
  	for file in $(RBACKENDS); do \
 -		$(LIBTOOL) $(INSTALL_BIN) -m 700 $$file $(SERVERBIN)/backend; \
@@ -16,12 +13,3 @@ usb-backend-both-usblp-and-libusb.dpatch by  <till.kamppeter@gmail.com>
  	done
  	for file in $(UBACKENDS); do \
  		$(INSTALL_BIN) $$file $(SERVERBIN)/backend; \
-@@ -267,7 +267,7 @@ usb:	usb.o ../cups/$(LIBCUPS) libbackend
- 	echo Linking $@...
- 	$(CC) $(LDFLAGS) -o usb usb.o libbackend.a $(LIBUSB) \
- 		$(BACKLIBS) $(LIBS)
--usb.o:	usb.c usb-darwin.c usb-libusb.c usb-unix.c
-+usb.o:	usb.c usb-darwin.c usb-hybrid.c usb-libusb.c usb-unix.c
- 
- 
- #
