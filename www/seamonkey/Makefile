@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2011/11/12 16:41:43 tnn Exp $
+# $NetBSD: Makefile,v 1.56 2011/11/13 17:02:20 tnn Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
@@ -21,9 +21,6 @@ CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 CONFIGURE_ARGS+=	--enable-application=suite
 
 ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
-
-# XXX tnn
-MAKE_JOBS_SAFE=		no
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
