@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/11/01 06:01:54 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/13 07:57:56 obache Exp $
 #
 
 DISTNAME=		scim-chewing-0.3.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://chewing.csie.net/download/scim/
 EXTRACT_SUFX=		.tar.bz2
