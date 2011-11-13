@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10669 2011/11/13 16:08:57 gls Exp $
+$NetBSD: TODO,v 1.10670 2011/11/13 17:04:00 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1278,7 +1278,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texlive-tetex-20110705
 	o texmaker-3.1 [pkg/45521]
 	o tfmxplay-1.1.6
-	o thunderbird-7.0
 	o tig-0.18
 	o tightvnc-2.0.95
 	o tile-0.7.4
