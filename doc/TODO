@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10671 2011/11/13 21:49:32 sbd Exp $
+$NetBSD: TODO,v 1.10672 2011/11/13 23:51:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.3.3
+	o ImageMagick-6.7.3.6
 	o MAMEDiff-2.30
 	o Mesa-7.10.3
 	o MesaLib-7.11
@@ -516,6 +516,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnsmasq-2.59
 	o dnstracer-1.9
 	o doclifter-2.7
+	o dovecot-2.0.15
 	o doxygen-1.7.5.1
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
@@ -660,6 +661,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gated-3.6
 	o gawk-4.0.0
 	o gbdfed-1.6
+	o gbrainy-2.06
 	o gcal-3.6.1
 	o gcc44-4.4.7
 	o gcin-1.5.5
@@ -722,7 +724,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
-	o gnutls-3.0.7
+	o gnutls-3.0.8
 	o gobject-introspection-1.30.0
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -744,7 +746,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13a
 	o gthumb-2.14.0
 	o gtick-0.4.2
-	o gtk3-3.2.1
+	o gtk2-2.24.8
+	o gtk3-3.2.2
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
@@ -757,7 +760,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-2.0.3
 	o guile-gtk-2.0
 	o gupnp-0.16.1
-	o gupnp-igd-0.1.11
+	o gupnp-igd-0.2.1
 	o gutenprint-5.2.7
 	o gvfs-1.6.7
 	o gworkspace-0.9.0
@@ -771,7 +774,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o help2man-1.40.4
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-7.8
+	o hiawatha-7.8.1
 	o highlight-3.6
 	o honeyd-1.5c
 	o horde-4.0.11
@@ -811,6 +814,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
+	o jamvm-1.5.4 [pkg/45604]
 	o java-db3-3.87
 	o java-lang-spec-3.0
 	o javacc-5.0
@@ -1010,6 +1014,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newt-0.52.12
 	o ng-1.4.4
 	o nginx-1.0.6 [pkg/45317]
+	o nginx-1.0.9 [pkg/45612]
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
 	o notification-daemon-0.7.0
@@ -1053,7 +1058,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.5
 	o otpCalc-0.97
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.3.3
+	o p5-PerlMagick-6.7.3.6
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1146,6 +1151,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qbrew-0.3.9
 	o qnetwalk-1.3
 	o qpopper-4.0.14
+	o qt4-qscintilla-2.6
 	o quagga-0.99.20
 	o qvplay-0.95
 	o radiance-3.7.2
@@ -1198,6 +1204,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
+	o scmgit-base-1.7.7.3
+	o scmgit-docs-1.7.7.3
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
@@ -1222,7 +1230,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o singularity-0.30b
 	o sitescooper-3.1.2
 	o sjeng-11.2
-	o skipstone-1.0.1
 	o skype-2.1.0.47
 	o smproxy-1.0.3
 	o smtpfeed-1.20
