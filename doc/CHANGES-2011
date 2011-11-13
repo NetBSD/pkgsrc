@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2873 2011/11/13 16:02:14 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.2874 2011/11/13 16:08:57 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4552,3 +4552,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/rubygems to 1.8.11 [taca 2011-11-14]
 	Updated devel/ruby-rdoc to 3.11 [taca 2011-11-14]
 	Updated mail/getmail to 4.22.2 [schmonz 2011-11-13]
+	Updated misc/calibre to 0.8.26 [gls 2011-11-13]

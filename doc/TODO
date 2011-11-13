@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10668 2011/11/12 13:01:40 tnn Exp $
+$NetBSD: TODO,v 1.10669 2011/11/13 16:08:57 gls Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o caff-1.1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.25
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
