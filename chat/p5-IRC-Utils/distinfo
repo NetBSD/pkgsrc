@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/18 11:57:47 hiramatsu Exp $
+$NetBSD: distinfo,v 1.1.1.1 2011/11/13 07:24:09 hiramatsu Exp $
 
 SHA1 (IRC-Utils-0.12.tar.gz) = 909c8fc2e8edf25d3055bb5aa29b703ffc2a5266
 RMD160 (IRC-Utils-0.12.tar.gz) = 1fcb0ae050863d2cfaf18b2937010b4090212355
