@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2858 2011/11/13 04:50:22 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2859 2011/11/13 06:16:35 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4529,3 +4529,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.11 [abs 2011-11-12]
 	Added devel/p5-Data-Section-Simple version 0.03 [hiramatsu 2011-11-13]
 	Updated www/p5-HTML-RewriteAttributes to 0.04 [hiramatsu 2011-11-13]
+	Updated devel/p5-Parse-Method-Signatures to 1.003014 [hiramatsu 2011-11-13]
+	Updated misc/p5-Locale-US to 2.112150 [hiramatsu 2011-11-13]
+	Updated sysutils/p5-Server-Starter to 0.11 [hiramatsu 2011-11-13]
+	Updated www/p5-CatalystX-CRUD-YUI to 0.025 [hiramatsu 2011-11-13]
