@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2011/06/15 15:22:41 taca Exp $
+$NetBSD: distinfo,v 1.19 2011/11/13 15:52:24 taca Exp $
 
-SHA1 (geeklog-1.8.0.tar.gz) = 672fbc66d947bda15a4b315dc8cd93f8ddbeee94
-RMD160 (geeklog-1.8.0.tar.gz) = ce9fb03b25585b296912bce6cba198b103fc16de
-Size (geeklog-1.8.0.tar.gz) = 5590904 bytes
+SHA1 (geeklog-1.8.1.tar.gz) = 08ae7cc267c11d8339e2138d532be930372f8cb7
+RMD160 (geeklog-1.8.1.tar.gz) = 603cfa78629e8533ab5a5a52bd13704443e268ca
+Size (geeklog-1.8.1.tar.gz) = 5600740 bytes
 SHA1 (patch-aa) = 61cc381e4c3def555806ed4589446f466f6f8368
 SHA1 (patch-aj) = 1152a6f8478373d40125ae311c4030f6e2ef4bd7
 SHA1 (patch-ak) = 387f14ace88c0390a2647453a08491500b099c78
