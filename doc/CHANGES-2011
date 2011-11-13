@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2863 2011/11/13 09:10:42 tron Exp $
+$NetBSD: CHANGES-2011,v 1.2864 2011/11/13 09:37:34 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4537,3 +4537,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/scim to 1.4.11 [obache 2011-11-13]
 	Updated games/scummvm to 1.4.0 [adam 2011-11-13]
 	Updated databases/phpmyadmin to 3.4.7.1 [tron 2011-11-13]
+	Added devel/p5-MooseX-ChainedAccessors version 0.02 [hiramatsu 2011-11-13]
+	Updated www/p5-Catalyst-View-TT to 0.37 [hiramatsu 2011-11-13]
