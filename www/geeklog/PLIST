@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/06/15 15:22:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/11/13 15:52:24 taca Exp $
 ${GL_DOC}/README
 ${GL_EG}/db-config.php
 ${GL_EG}/geeklog.conf
@@ -368,6 +368,8 @@ ${GEEKLOG_BASE}/plugins/spamx/configuration_validation.php
 ${GEEKLOG_BASE}/plugins/spamx/functions.inc
 ${GEEKLOG_BASE}/plugins/spamx/install_defaults.php
 ${GEEKLOG_BASE}/plugins/spamx/install_updates.php
+${GEEKLOG_BASE}/plugins/spamx/language/dutch.php
+${GEEKLOG_BASE}/plugins/spamx/language/dutch_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/english.php
 ${GEEKLOG_BASE}/plugins/spamx/language/english_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/estonian.php
