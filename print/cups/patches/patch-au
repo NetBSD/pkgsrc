@@ -1,10 +1,10 @@
-$NetBSD: patch-au,v 1.13 2011/01/19 17:09:20 drochner Exp $
+$NetBSD: patch-au,v 1.14 2011/11/13 21:49:17 sbd Exp $
 
---- scheduler/printers.c.orig	2010-09-22 18:35:07.000000000 +0000
+--- scheduler/printers.c.orig	2011-06-15 00:46:13.000000000 +0000
 +++ scheduler/printers.c
-@@ -81,6 +81,9 @@
- #  include <sys/vfs.h>
- #endif /* HAVE_SYS_VFS_H */
+@@ -80,6 +80,9 @@
+ #  include <asl.h>
+ #endif /* __APPLE__ */
  
 +#if defined(HAVE_STATVFS) && defined(__NetBSD__)
 +#undef HAVE_STATFS
