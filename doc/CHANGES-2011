@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2881 2011/11/13 22:59:34 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.2882 2011/11/13 23:05:43 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/cups to 1.5.0 [sbd 2011-11-13]
 	Added textproc/py-Tempita version 0.4 [2011-11-13]
 	Added devel/py-decorator version 3.3.2 [2011-11-13]
+	Added databases/py-sqlalchemy-migrate version 0.7.2 [2011-11-13 ]
