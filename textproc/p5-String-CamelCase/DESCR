@@ -1,0 +1,3 @@
+This module exports two functions.
+- camelize : convert from under_score text to CamelCase one
+- decamelize : convert from CamelCase text to under_score one
