@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2880 2011/11/13 22:58:39 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.2881 2011/11/13 22:59:34 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4559,6 +4559,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/thunderbird to 8.0 [tnn 2011-11-13]
 	Updated mail/thunderbird-l10n to 8.0 [tnn 2011-11-13]
 	Updated print/cups to 1.5.0 [sbd 2011-11-13]
-	Added textproc/py-Tempita version 0.4 [2011-11-13 ]
-	Added textproc/py-decorator version 3.3.2 [2011-11-13 ]
-	Added devel/py-decorator version 3.3.2 [2011-11-13 ]
+	Added textproc/py-Tempita version 0.4 [2011-11-13]
+	Added devel/py-decorator version 3.3.2 [2011-11-13]
