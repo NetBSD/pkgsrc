@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.36 2011/11/13 02:02:44 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.37 2011/11/13 11:08:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -151,3 +151,5 @@ Pullup ticket #3598 - requested by dholland
 math/ess build fix
 Pullup ticket #3600 - requested by abs
 multimedia/adobe-flash-plugin10.1 security update
+Pullup ticket #3595 - requested by dholland
+security/qca-tls: build fix:
