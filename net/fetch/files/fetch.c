@@ -669,11 +669,11 @@ fetch(char *URL, const char *path)
 					goto failure;
 				}
 				if (fchown(fd, sb.st_uid, sb.st_gid) == -1) {
-					warn("%s: mkstemp failed", tmppath);
+					warn("%s: fchown failed", tmppath);
 					goto failure;
 				}
 				if (fchmod(fd, sb.st_mode & ALLPERMS) == -1) {
-					warn("%s: mkstemp failed", tmppath);
+					warn("%s: fchmod failed", tmppath);
 					goto failure;
 				}
 				of = fdopen(fd, "w");
