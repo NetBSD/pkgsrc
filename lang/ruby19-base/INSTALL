@@ -1,6 +1,5 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2010/09/12 03:50:06 taca Exp $
+# $NetBSD: INSTALL,v 1.2 2011/11/13 15:45:24 taca Exp $
 
-DATE="@DATE@"
 PREFIX="@PREFIX@"
 RUBY_SITERIDIR="${PREFIX}/@RUBY_SITERIDIR@"
 rid="${RUBY_SITERIDIR}/created.rid"
@@ -12,4 +11,3 @@ POST-INSTALL)
 	fi
 	;;
 esac
-exit
