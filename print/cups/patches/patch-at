@@ -1,18 +1,9 @@
-$NetBSD: patch-at,v 1.11 2010/05/25 08:52:59 wiz Exp $
+$NetBSD: patch-at,v 1.12 2011/11/13 21:49:17 sbd Exp $
 
 Don't create directories, do that with OWN_DIRS and OWN_DIRS_PERMS
 
 --- scheduler/Makefile.orig	2009-05-26 23:27:06.000000000 +0000
 +++ scheduler/Makefile
-@@ -127,7 +127,7 @@ depend:
- # Install all targets...
- #
- 
--install:	all install-data install-headers install-libs install-exec
-+install:	all install-headers install-libs install-exec install-dirs
- 
- 
- #
 @@ -135,6 +135,8 @@ install:	all install-data install-header
  #
  

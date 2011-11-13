@@ -1,20 +1,19 @@
-$NetBSD: distinfo,v 1.85 2011/11/13 21:06:30 sbd Exp $
+$NetBSD: distinfo,v 1.86 2011/11/13 21:49:17 sbd Exp $
 
-SHA1 (cups-1.4.8-source.tar.bz2) = 9167f556e78e0bc075f1eb2f695d79cc1f334007
-RMD160 (cups-1.4.8-source.tar.bz2) = ee80e8d0b56dc0e2edf2a9aa9a43c4b92619f741
-Size (cups-1.4.8-source.tar.bz2) = 4547162 bytes
-SHA1 (patch-ab) = 8269ed7f24bcd5b16c143353443d4689fef082b2
+SHA1 (cups-1.5.0-source.tar.bz2) = 628f549867751e373fc20c7558fec422f9eb942b
+RMD160 (cups-1.5.0-source.tar.bz2) = e7be9b6b44428561609c59abaea8fa31a11aefff
+Size (cups-1.5.0-source.tar.bz2) = 4090210 bytes
 SHA1 (patch-ac) = d99dfa6e71efdc5f069c2c3e73e1b29beebf5c9b
-SHA1 (patch-ad) = 40c7f9d14619fec77255783d918c79c24ead6631
+SHA1 (patch-ad) = a8d6610c4057ae98d98435ba577606e3c2bfb4b9
 SHA1 (patch-ae) = 7806067b36fa1c98763cf51a14941665f590b816
-SHA1 (patch-af) = c05f7739d65c7b81cc712cbf6008d53568601f6a
+SHA1 (patch-af) = 025f198dd491a55ffc460d03d3ad23a100fe5271
 SHA1 (patch-ag) = 680c1c7fb44d8153b5825252d2e297a5196ca98e
 SHA1 (patch-ah) = c4dae009ac5d2dec52fec609bfa38f282fb8e75c
-SHA1 (patch-ai) = fae5b2b5e54ea947d92c89c0bdcdd86c7e3bad12
+SHA1 (patch-ai) = 13725f3b4e0016acf5ead79cadb9626d1f2ce58e
 SHA1 (patch-an) = 231c871e31db279e8aeafba71506f93330e0a971
 SHA1 (patch-ao) = 7fe50080b9a6fd4dac186020f9351ef6000373c7
-SHA1 (patch-at) = aee1f0e8cbcd9e2dbcfa9af3fb675ea7ce1ce622
-SHA1 (patch-au) = e4e976ccb4d7782e31f5b0e3ed175359bf95ba42
-SHA1 (patch-config-scripts_cups-gssapi.m4) = a027a1c5a444c3ef39f892f2592fbbb16586087b
+SHA1 (patch-at) = bbda891ed0820e23fe7f6fe3dd5326eeda5b3b2e
+SHA1 (patch-au) = 6d9b086f2e043bc87d07e3657e46e8cf2fbfeb59
+SHA1 (patch-config-scripts_cups-gssapi.m4) = a3505afd30f0864e3022d8f65c810b9614d82cf4
 SHA1 (patch-filter_image-gif.c) = 2269cbf7e42ec80ba91c27eda4871884775f4b7a
 SHA1 (patch-scheduler_dirsvc.c) = 62c6b47522a60b9f8042421e4a9d25a5dfa47c47

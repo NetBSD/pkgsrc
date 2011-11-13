@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2011/11/13 21:06:30 sbd Exp $
+# $NetBSD: Makefile,v 1.184 2011/11/13 21:49:17 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,9 +6,8 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
-BASE_VERS=	1.4.8
+BASE_VERS=	1.5.0
 DIST_VERS=	${BASE_VERS}
-PKGREVISION=	2
 
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -33,7 +32,6 @@ USE_LANGUAGES=		c c++	# pdftops is a C++ application
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		aclocal autoconf automake gmake
 USE_LIBTOOL=		yes
-INSTALL_TARGET=		installcups
 # patch-a[jkl] were added for 2.60
 AUTOCONF_REQD=		2.60
 
@@ -143,7 +141,7 @@ SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
 SUBST_STAGE.piefix=	post-patch
 .endif
 
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR} ${CUPS_CONFDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
 pre-configure:
@@ -161,12 +159,11 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
-	set -e; cd ${WRKSRC}/conf; for file in cupsd.conf snmp.conf ; do \
-		${INSTALL_DATA} $${file} ${DESTDIR}${EGDIR}/$${file};	\
+	${RUN} for file in cupsd.conf snmp.conf ; do			\
+		${MV} -f ${DESTDIR}${CUPS_CONFDIR}/$${file}		\
+			${DESTDIR}${EGDIR}/$${file};			\
 	done
-	set -e; cd ${WRKSRC}/conf; for file in mime.convs mime.types; do \
-		${INSTALL_DATA} $${file} ${DESTDIR}${MIMEDIR}/$${file};	\
-	done
+	${RM} -f ${DESTDIR}${CUPS_CONFDIR}/cupsd.conf.default
 .if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${DESTDIR}${EGDIR}
 .endif
@@ -175,6 +172,7 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
