@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2860 2011/11/13 07:30:50 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2861 2011/11/13 07:52:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4534,3 +4534,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/p5-Server-Starter to 0.11 [hiramatsu 2011-11-13]
 	Updated www/p5-CatalystX-CRUD-YUI to 0.025 [hiramatsu 2011-11-13]
 	Moved chat/p5-IRC-Util to chat/p5-IRC-Utils [hiramatsu 2011-11-13]
+	Updated inputmethod/scim to 1.4.11 [obache 2011-11-13]
