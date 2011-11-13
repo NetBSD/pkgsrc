@@ -1,0 +1,3 @@
+The BuildBot is a system to automate the compile/test cycle required by
+most software projects to validate code changes. This package contains
+the buildslave.
