@@ -1,0 +1,3 @@
+This module is a simpler version of the excellent Data::Section. If
+you want more functionalities such as merging data sections or
+changing header patterns, use Data::Section instead.
