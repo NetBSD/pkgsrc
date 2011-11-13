@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2866 2011/11/13 13:08:37 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2867 2011/11/13 13:47:10 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4543,3 +4543,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/p5-Module-Signature to 0.68 [hiramatsu 2011-11-13]
 	Added textproc/p5-String-CamelCase version 0.02 [hiramatsu 2011-11-13]
 	Updated textproc/p5-Lingua-EN-Inflect-Phrase to 0.10 [hiramatsu 2011-11-13]
+	Removed www/skipstone [ghen 2011-11-13]
