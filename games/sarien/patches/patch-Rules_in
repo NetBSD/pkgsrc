@@ -1,0 +1,20 @@
+$NetBSD: patch-Rules_in,v 1.1 2011/11/14 02:13:50 dholland Exp $
+
+- fix lib creation rule (apparently does not work with some gmake
+versions as it has been failing in Linux bulk builds)
+
+--- Rules.in~	2001-09-06 12:41:36.000000000 +0000
++++ Rules.in
+@@ -52,7 +52,10 @@ depend:       
+ 	@$(CC) $(CFLAGS) $(XCFLAGS) -M $(OBJS:.o=.c) $(XDEPS:.o=.c) >$@
+ 
+ $(OBJS): $(MAKEFILE)
++
++ALWAYS: ;
+ 
+-$(LIB): $(LIB)($(OBJS) $(XOBJS))
++$(LIB): $(OBJS) $(XOBJS) ALWAYS
++	$(AR) -cruv $(LIB) $(OBJS) $(XOBJS)
+ 	$(RANLIB) $(LIB)
+ 
+ subdist:
