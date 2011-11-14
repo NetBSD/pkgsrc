@@ -1,15 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
+$NetBSD: patch-aj,v 1.2 2011/11/14 02:00:20 marino Exp $
 
 --- ../FreeBSD/lib/buildscript	2011-10-16 00:52:55.000000000 +0000
 +++ lib/buildscript
-@@ -1,6 +1,6 @@
- #!/bin/sh
- 
--# usage: $0 DIRNAME PHASE ED PD FD BD RD TD [PLISTCHECK]
-+# usage: $0 DIRNAME PHASE ED PD FD BD RD TD SD [PLISTCHECK]
- #   PHASE is 1 (checksum) or 2 (package)
- 
- cleanup() {
 @@ -8,7 +8,7 @@ cleanup() {
  
    if [ -e ${dir}/.keep ]; then
@@ -36,7 +28,44 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
  }
  
  del_pkg() {
-@@ -91,6 +92,37 @@ del_pkg() {
+@@ -58,6 +59,8 @@ del_pkg() {
+   if [ ! -z "${pkgs}" ]; then
+     recursion=1
+     dellist=""
++    locklist=""
++    recursion_virgin=1
+     while [ $recursion -eq 1 ]; do
+       unset delpkg nextpkg
+       recursion=0
+@@ -72,6 +75,27 @@ del_pkg() {
+         fi
+       done
+       pkgs="${nextpkg}"
++      # Apparently pkgsrc packages can remain installed and in the /var
++      # database even after pkg_delete -f command.  This could send the
++      # script into an infinite recursion loop because Tinderbox doesn't
++      # think that can happen.  To recover from this, if we find a repeating
++      # recursion pattern with an empty delete pattern, bail out.
++      if [ -z "${delpkg}" ]; then
++        if [ "${recursion}" -eq 1 ]; then
++          if [ "${recursion_virgin}" -eq 1 ]; then
++            locklist="${pkgs}"
++            recursion_virgin=0
++          else
++            if [ "${pkgs}" = "${locklist}" ]; then
++              delpkg="${pkgs}"
++              pkgs=""
++              recursion=0
++            fi
++          fi
++        fi
++      else
++        recursion_virgin=1
++      fi
+       if [ "$dellist" != "" -a "$dellist" = "$delpkg" ]; then
+         echo "deleted list =\""$dellist"\", packages to delete ="\"$delpkg\" #"
+         echo "The following packages were left behind (perhaps your dependency list is incomplete):"
+@@ -91,6 +115,37 @@ del_pkg() {
      done
    fi
    find /var/db/pkg -type f -empty -delete
@@ -74,12 +103,12 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
  }
  
  dir=$1
-@@ -102,37 +134,46 @@ FD=$5
+@@ -102,35 +157,42 @@ FD=$5
  BD=$6
  RD=$7
  TD=$8
 -PLISTCHECK=$9
-+SD=$9
++pkgname=$9
 +PLISTCHECK=${10}
  
  L=$(echo ${LOCALBASE} | sed 's,^/,,')
@@ -89,7 +118,6 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
 +
 +cd $dir || exit 1
 +
-+pkgname=`bmake -V '\${PKGNAME}'`
 +INFO_OPTVAR=`bmake -V '\${PKG_OPTIONS_VAR}'`
 +get_package_options `bmake -V '\${DISTNAME}'`
 +
@@ -131,11 +159,8 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
 -  fi
    echo "End Configuration."
  
-+  echo "BOOTSTRAP_DEPENDS=${SD}"
    echo "FETCH_DEPENDS=${FD}"
-   echo "PATCH_DEPENDS=${PD}"
-   echo "EXTRACT_DEPENDS=${ED}"
-@@ -165,19 +206,20 @@ if [ $phase = 1 ]; then
+@@ -165,6 +227,7 @@ if [ $phase = 1 ]; then
  ./${L}/share/xml
  ./${L}/etc/gconf
  ./var/db/fontconfig
@@ -143,10 +168,8 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
  EOF
  
    # Record a "pristine" mtree.
-   mtree -X /tmp/mtree.preexclude -xcn -k uid,gid,mode -p / > /tmp/mtree.pristine
- 
--  add_pkg $FD
-+  add_pkg $SD $FD
+@@ -173,11 +236,11 @@ EOF
+   add_pkg $FD
  
    cd $dir || exit 1
 -  pkgname=$(make package-name)
@@ -159,7 +182,7 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
      cat /tmp/make.log1
      echo "0" > /tmp/status
    else
-@@ -186,15 +228,27 @@ EOF
+@@ -186,36 +249,41 @@ EOF
  
  else
  
@@ -191,7 +214,12 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
    cat /tmp/make.log2
    del_pkg ${ED}
  
-@@ -207,15 +261,13 @@ else
+-  # Fetch depends still need to be here for 'make extract' since that target
+-  # always reruns 'make fetch' due to the lack of fetch cookie (and no place
+-  # to put it since WRKDIR isn't created by 'make fetch')
+-  del_pkg $FD
+-
+   echo "================================================================"
    echo "====================<phase 3: make patch>===================="
    add_pkg ${PD}
    cd $dir
@@ -208,16 +236,16 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
    # Files we do not care about changing between pre-build and post-cleanup
    cat > /tmp/mtree.buildexclude <<EOF
  ./var/log/*
-@@ -247,7 +299,7 @@ EOF
+@@ -247,7 +315,7 @@ EOF
    fi
  
    cd $dir
 -  portdir=$(echo ${dir} | sed -e 's|^/usr/ports/||' -e 'y/\//_/')
-+  portdir=$(echo ${dir} | sed -e 's|^/usr/pkg/||' -e 'y/\//_/')
++  portdir=$(echo ${dir} | sed -e 's|^/usr/pkgsrc/||' -e 'y/\//_/')
  
    if [ -f .sleepme ]; then
        set > /tmp/.set_${portdir}
-@@ -259,32 +311,32 @@ EOF
+@@ -259,32 +327,32 @@ EOF
        rm -f /tmp/.set_${portdir}
    fi
  
@@ -271,7 +299,7 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
  
    echo "================================================================"
    echo "====================<phase 6: make install>===================="
-@@ -306,7 +358,7 @@ EOF
+@@ -306,7 +374,7 @@ EOF
    mtree -X /tmp/mtree.exclude -xcn -k uid,gid,mode -p / > /tmp/mtree
  
    cd $dir
@@ -280,11 +308,12 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
      cat /tmp/make.log6
      echo "0" > /tmp/status
    else
-@@ -316,14 +368,14 @@ EOF
+@@ -316,14 +384,15 @@ EOF
    echo "================================================================"
    echo "====================<phase 7: make package>===================="
    cd $dir
 -  if /pnohang $TIMEOUT /tmp/make.log7 ${pkgname} make package; then
++  echo "Starting make process for ${pkgname}"
 +  if /pnohang $TIMEOUT /tmp/make.log7 ${pkgname} bmake package; then
        echo "0" > /tmp/status
    else
@@ -297,7 +326,7 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
    du -skx / | awk '{print $1}' > /tmp/size
    del_pkg ${pkgname}
  
-@@ -349,8 +401,10 @@ EOF
+@@ -349,14 +418,18 @@ EOF
        echo "================================================================"
    fi
  
@@ -309,18 +338,39 @@ $NetBSD: patch-aj,v 1.1 2011/11/02 21:13:23 marino Exp $
    echo "=== Checking filesystem state"
  
    if [ -s /tmp/list4 ]; then
-@@ -374,8 +428,8 @@ EOF
+     echo "list of extra files and directories in / (not present before this port was installed but present after it was deinstalled)"
+     cat /tmp/list4
+-    touch /tmp/leftovers
++    # Files left over here are okay as long as they are gone by list 6
++    # Just list them for informational purposes, but don't act on it.
++    # touch /tmp/leftovers
+   fi
+   if [ -s /tmp/list5 ]; then
+     echo "list of files present before this port was installed but missing after it was deinstalled)"
+@@ -373,9 +446,10 @@ EOF
+   fi
  
    # BUILD_DEPENDS need to be present at install-time, e.g. gmake
++  # FETCH_DEPENDS contains the digests which is needed throught the process
    # Concatenate and remove duplicates
 -  BRD=$(echo $BD $RD | tr ' ' '\n' | sort -u | tr '\n' ' ')
 -  del_pkg ${BRD}
-+  BRSD=$(echo $BD $RD $SD | tr ' ' '\n' | sort -u | tr '\n' ' ')
-+  del_pkg ${BRSD}
++  BRFD=$(echo $BD $RD $FD | tr ' ' '\n' | sort -u | tr '\n' ' ')
++  del_pkg ${BRFD}
    cd /var/db/pkg
    if [ $(echo $(echo * | wc -c)) != 2 ]; then
      echo "leftover packages:" *
-@@ -430,7 +484,7 @@ EOF
+@@ -395,9 +469,6 @@ EOF
+       grep ' missing$' /tmp/list3 > /tmp/list5
+       grep -vE ' (extra|missing)$' /tmp/list3 > /tmp/list6
+       if [ -n "${PLISTCHECK}" ]; then
+-	  if grep -vqE "(${L})/etc/" /tmp/list4; then
+-	      #echo "1" > /tmp/status
+-	  fi
+ 	  if [ -s /tmp/list5 ]; then
+ 	      #echo "1" > /tmp/status
+ 	  fi
+@@ -430,7 +501,7 @@ EOF
  
    if [ -e ${dir}/.keep ]; then
      cd ${dir}

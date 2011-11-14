@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2011/11/02 21:13:12 marino Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/14 02:00:19 marino Exp $
 #
 
 DISTNAME=	tinderbox-dragonfly-${TBOX_VERSION}
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://tinderbox.marcuscom.com/
 DISTFILES=	tinderbox-${TBOX_VERSION}.tar.gz
@@ -31,6 +32,11 @@ MAN_FILES=		${MAN_FILES_cmd:sh}
 INSTALLATION_DIRS+=	tinderbox/scripts
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths+=	contrib/bulk/add_all_packages.sh
+SUBST_SED.paths+=	-e 's,@TINROOT@,${PREFIX}/tinderbox,g'
+SUBST_STAGE.paths=	post-patch
+
 .include "options.mk"
 
 post-extract:
@@ -39,6 +45,10 @@ post-extract:
 	mv ${WRKSRC}/webui ${TRASH}
 .endif
 	mv ${WRKSRC}/etc/rc.d ${TRASH}
+	${MKDIR} ${WRKSRC}/contrib/bulk
+	${CP} ${FILESDIR}/add_all_packages.sh.in \
+		${WRKSRC}/contrib/bulk/add_all_packages.sh
+	chmod 755 ${WRKSRC}/contrib/bulk/*
 
 post-patch:
 .if !empty(PKG_OPTIONS:Manybody)
@@ -54,7 +64,7 @@ do-install:
 	mv ${WRKSRC}/man ${TRASH}
 	cd ${WRKSRC}; for dossier in .version *; do \
 		${TEST} ! -f "$$dossier" || \
-		${INSTALL} "$$dossier" ${DESTDIR}${PREFIX}/tinderbox/scripts; \
+		${CP} "$$dossier" ${DESTDIR}${PREFIX}/tinderbox/scripts; \
 		${TEST} ! -d "$$dossier" || \
 		${CP} -R "$$dossier" ${DESTDIR}${PREFIX}/tinderbox/scripts; \
 	done
