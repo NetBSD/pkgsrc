@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.4 2009/04/29 05:15:14 dholland Exp $
+$NetBSD: patch-al,v 1.5 2011/11/14 02:35:25 dholland Exp $
 
---- src/rt/Rmakefile.orig	2004-10-27 19:23:48.000000000 -0400
-+++ src/rt/Rmakefile	2005-02-16 18:10:40.000000000 -0500
+--- src/rt/Rmakefile.orig	2004-10-27 23:23:48.000000000 +0000
++++ src/rt/Rmakefile
 @@ -5,9 +5,8 @@
  
  OPT = -O
@@ -13,7 +13,7 @@ $NetBSD: patch-al,v 1.4 2009/04/29 05:15:14 dholland Exp $
  MLIB = -lm
  LINT = lint
  LINTFLAGS = -DBSD
-@@ -16,21 +15,21 @@
+@@ -16,21 +15,21 @@ LINTFLAGS = -DBSD
  # The following are user-definable:
  #
  DESTDIR = .
@@ -39,7 +39,7 @@ $NetBSD: patch-al,v 1.4 2009/04/29 05:15:14 dholland Exp $
  
  #
  # Device drivers for rvu (see also devtable.c):
-@@ -130,12 +129,12 @@
+@@ -130,12 +129,12 @@ $(DEVDIR)/aed:	aed.o colortab.o tty.o de
  devmain.o tty.o editline.o $(LIBS)
  
  $(RLIB):	$(ROBJS) Version.o
@@ -56,7 +56,7 @@ $NetBSD: patch-al,v 1.4 2009/04/29 05:15:14 dholland Exp $
  
  #
  # Special compiles:
-@@ -159,7 +158,7 @@
+@@ -159,7 +158,7 @@ dielectric.o:	dielectric.c source.h
  # end of dispersion compiles.
  
  devcomm.o:	devcomm.c
@@ -65,3 +65,16 @@ $NetBSD: patch-al,v 1.4 2009/04/29 05:15:14 dholland Exp $
  
  aed.o:	aed.c
  	$(CC) $(CFLAGS) -Daed_init=dinit -c aed.c
+@@ -168,9 +167,9 @@ aed.o:	aed.c
+ # Version module:
+ #
+ 
+-Version.c:	VERSION $(RSRC) $(HEADERS)
+-	( cat VERSION ; date ; whoami ; hostname ) > Version.c
+-	ed - Version.c < verscript.ed
++#Version.c:	VERSION $(RSRC) $(HEADERS)
++#	( cat VERSION ; date ; whoami ; hostname ) > Version.c
++#	ed - Version.c < verscript.ed
+ 
+ #
+ # Include dependencies:
