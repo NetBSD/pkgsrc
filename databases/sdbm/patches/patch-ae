@@ -1,10 +1,21 @@
-$NetBSD: patch-ae,v 1.1 2000/09/26 03:47:11 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 2011/11/14 01:41:08 dholland Exp $
 
---- dbu.c.orig	Mon Sep 25 23:27:21 2000
+- Use standard includes instead of own declarations
+
+--- dbu.c.orig	2011-11-14 01:43:27.000000000 +0000
 +++ dbu.c
-@@ -1,4 +1,5 @@
+@@ -1,4 +1,6 @@
  #include <stdio.h>
 +#include <stdlib.h>
++#include <string.h>
  #include <sys/file.h>
  #ifdef SDBM
  #include "sdbm.h"
+@@ -12,7 +14,6 @@
+ #endif
+ 
+ extern int	getopt();
+-extern char	*strchr();
+ extern void	oops();
+ 
+ char *progname;
