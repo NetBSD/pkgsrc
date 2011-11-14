@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2887 2011/11/14 08:32:51 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2888 2011/11/14 09:42:27 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4566,3 +4566,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/py-buildbot-slave version 0.8.5 [joerg 2011-11-13]
 	Added textproc/p5-String-ToIdentifier-EN version 0.05 [hiramatsu 2011-11-14]
 	Updated chat/p5-POE-Component-IRC to 6.75 [hiramatsu 2011-11-14]
+	Updated net/p5-Nmap-Parser to 1.210 [hiramatsu 2011-11-14]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07012 [hiramatsu 2011-11-14]
+	Updated devel/p5-MooseX-Singleton to 0.27 [hiramatsu 2011-11-14]
+	Updated www/p5-Plack-Middleware-Deflater to 0.05 [hiramatsu 2011-11-14]
+	Updated www/p5-HTML-Template-Pro to 0.9506 [hiramatsu 2011-11-14]
