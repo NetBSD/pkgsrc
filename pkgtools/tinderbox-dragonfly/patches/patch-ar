@@ -1,4 +1,4 @@
-$NetBSD: patch-ar,v 1.1 2011/11/02 21:13:25 marino Exp $
+$NetBSD: patch-ar,v 1.2 2011/11/14 02:00:20 marino Exp $
 
 --- ../FreeBSD/README	2011-10-30 17:11:08.876006000 +0000
 +++ README
@@ -300,6 +300,17 @@ $NetBSD: patch-ar,v 1.1 2011/11/02 21:13:25 marino Exp $
     -cleanpackages  removes all packages already built fors the        
                     specified Build                                    
     -updateports    updates the Build's PortsTree (NOTE: dangerous if  
+@@ -452,8 +444,8 @@
+    -fetch-original ignores the distfile cache, and fetches all        
+                    distfiles from their respective sources            
+    -nolog          disables log analysis code                         
+-   -onceonly       only performs one build pass (i.e. tinderbuild     
+-                   Phase 1)                                           
++   -twice          Performs a second build pass (tinderbuild Phase 1)
++                   after a build failure.
+    -norebuild      do not force a rebuild of packages specified on    
+                    the command line                                   
+ 
 @@ -472,23 +464,23 @@
  
     To update existing Jails:
