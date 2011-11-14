@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/14 19:38:24 ryoon Exp $
+include/ALACAudioTypes.h
+include/ALACBitUtilities.h
+include/ALACDecoder.h
+include/ALACEncoder.h
+include/EndianPortable.h
+include/aglib.h
+include/dplib.h
+include/matrixlib.h
+lib/libalac.la

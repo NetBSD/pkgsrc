@@ -1,0 +1,109 @@
+$NetBSD: patch-makefile,v 1.1.1.1 2011/11/14 19:38:24 ryoon Exp $
+
+* Libtoolized
+* Add all and install target
+
+--- makefile.orig	2011-11-13 08:20:10.000000000 +0000
++++ makefile
+@@ -31,50 +31,78 @@ $(SRCDIR)/matrix_dec.c \
+ $(SRCDIR)/matrix_enc.c
+ 
+ OBJS = \
+-EndianPortable.o \
+-ALACBitUtilities.o \
+-ALACDecoder.o \
+-ALACEncoder.o \
+-ag_dec.o \
+-ag_enc.o \
+-dp_dec.o \
+-dp_enc.o \
+-matrix_dec.o \
+-matrix_enc.o
++EndianPortable.lo \
++ALACBitUtilities.lo \
++ALACDecoder.lo \
++ALACEncoder.lo \
++ag_dec.lo \
++ag_enc.lo \
++dp_dec.lo \
++dp_enc.lo \
++matrix_dec.lo \
++matrix_enc.lo
++
++all:	libalac.la
++
++libalac.la:	$(OBJS)
++	${LIBTOOL} --mode=link --tag=CC \
++	${CC} -o libalac.la $(OBJS) \
++	-rpath ${PREFIX}/lib \
+ 
+-libalac.a:	$(OBJS)
+-	ar rcs libalac.a $(OBJS)
+-
+-EndianPortable.o : EndianPortable.c
++EndianPortable.lo : EndianPortable.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) EndianPortable.c
+ 
+-ALACBitUtilities.o : ALACBitUtilities.c
++ALACBitUtilities.lo : ALACBitUtilities.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) ALACBitUtilities.c
+ 
+-ALACDecoder.o : ALACDecoder.cpp
++ALACDecoder.lo : ALACDecoder.cpp
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) ALACDecoder.cpp
+ 
+-ALACEncoder.o : ALACEncoder.cpp
++ALACEncoder.lo : ALACEncoder.cpp
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) ALACEncoder.cpp
+ 
+-ag_dec.o : ag_dec.c
++ag_dec.lo : ag_dec.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) ag_dec.c
+ 
+-ag_enc.o : ag_enc.c
++ag_enc.lo : ag_enc.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) ag_enc.c
+ 
+-dp_dec.o : dp_dec.c
++dp_dec.lo : dp_dec.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) dp_dec.c
+ 
+-dp_enc.o : dp_enc.c
++dp_enc.lo : dp_enc.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) dp_enc.c
+ 
+-matrix_dec.o : matrix_dec.c
++matrix_dec.lo : matrix_dec.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) matrix_dec.c
+ 
+-matrix_enc.o : matrix_enc.c
++matrix_enc.lo : matrix_enc.c
++	${LIBTOOL} --mode=compile --tag=CC \
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) matrix_enc.c
+ 		
+ clean:
+ 	-rm $(OBJS) libalac.a
+ 
++install:
++	${BSD_INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libalac.la \
++		${DESTDIR}${PREFIX}/lib
++	${BSD_INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} ALACAudioTypes.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} ALACBitUtilities.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} ALACDecoder.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} ALACEncoder.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} EndianPortable.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} aglib.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} dplib.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} matrixlib.h ${DESTDIR}${PREFIX}/include
++
