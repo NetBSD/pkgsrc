@@ -1,11 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2010/07/31 21:37:25 dholland Exp $
+$NetBSD: patch-ab,v 1.6 2011/11/14 04:19:30 sbd Exp $
 
 don't let it roll its own uintptr_t, because it gets it wrong. 
 
---- src/regex.c.orig	2006-06-03 01:04:53.000000000 +0000
+--- src/regex.c.orig	2002-04-08 08:19:50.000000000 +0000
 +++ src/regex.c
-@@ -297,7 +297,7 @@ init_syntax_once ()
- # endif /* emacs */
+@@ -298,7 +298,7 @@ init_syntax_once ()
  
  /* Integer type for pointers.  */
  # if !defined _LIBC
