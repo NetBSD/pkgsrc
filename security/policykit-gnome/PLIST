@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/06/13 22:45:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/11/14 12:51:51 dholland Exp $
 bin/polkit-gnome-authorization
 bin/polkit-gnome-example
 include/PolicyKit/polkit-gnome/polkit-gnome-action.h
@@ -34,7 +34,6 @@ share/gtk-doc/html/polkit-gnome/polkit-gnome-example-screenshot.png
 share/gtk-doc/html/polkit-gnome/polkit-gnome-polkit-gnome-action.html
 share/gtk-doc/html/polkit-gnome/polkit-gnome-polkit-gnome-context.html
 share/gtk-doc/html/polkit-gnome/polkit-gnome-polkit-gnome-toggle-action.html
-share/gtk-doc/html/polkit-gnome/polkit-gnome.devhelp
 share/gtk-doc/html/polkit-gnome/polkit-gnome.devhelp2
 share/gtk-doc/html/polkit-gnome/ref-auth-daemon.html
 share/gtk-doc/html/polkit-gnome/ref-core.html
