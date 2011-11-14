@@ -1,0 +1,6 @@
+This module provides a utility method, "to_identifier" for converting
+an arbitrary string into a readable representation using the ASCII
+subset of "\w" for use as an identifier in a computer program. The
+intent is to make unique identifier names from which the content of
+the original string can be easily inferred by a human just by reading
+the identifier.
