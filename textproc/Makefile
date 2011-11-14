@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2011/11/13 22:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.601 2011/11/14 08:09:23 hiramatsu Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -322,6 +322,7 @@ SUBDIR+=	p5-String-CamelCase
 SUBDIR+=	p5-String-Koremutake
 SUBDIR+=	p5-String-RewritePrefix
 SUBDIR+=	p5-String-ShellQuote
+SUBDIR+=	p5-String-ToIdentifier-EN
 SUBDIR+=	p5-Syntax-Highlight-Engine-Kate
 SUBDIR+=	p5-Template-Declare
 SUBDIR+=	p5-Template-Plugin-Autoformat
