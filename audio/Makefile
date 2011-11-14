@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.459 2011/10/06 11:53:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.460 2011/11/14 19:47:13 ryoon Exp $
 #
 
 COMMENT=	Audio tools
@@ -8,6 +8,7 @@ SUBDIR+=	SDL_sound
 SUBDIR+=	abcde
 SUBDIR+=	abcmidi
 SUBDIR+=	adplug
+SUBDIR+=	alacconvert
 SUBDIR+=	akode
 SUBDIR+=	akode-plugins-alsa
 SUBDIR+=	akode-plugins-ffmpeg
@@ -184,6 +185,7 @@ SUBDIR+=	kmp
 SUBDIR+=	ladspa
 SUBDIR+=	lame
 SUBDIR+=	liba52
+SUBDIR+=	libalac
 SUBDIR+=	libao
 SUBDIR+=	libao-alsa
 SUBDIR+=	libao-arts
