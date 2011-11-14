@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2886 2011/11/14 08:18:31 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2887 2011/11/14 08:32:51 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4559,10 +4559,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/thunderbird to 8.0 [tnn 2011-11-13]
 	Updated mail/thunderbird-l10n to 8.0 [tnn 2011-11-13]
 	Updated print/cups to 1.5.0 [sbd 2011-11-13]
-	Added textproc/py-Tempita version 0.4 [2011-11-13]
-	Added devel/py-decorator version 3.3.2 [2011-11-13]
-	Added databases/py-sqlalchemy-migrate version 0.7.2 [2011-11-13]
-	Added devel/py-buildbot version 0.8.5 [2011-11-13]
-	Added devel/py-buildbot-slave version 0.8.5 [2011-11-13]
+	Added textproc/py-Tempita version 0.4 [joerg 2011-11-13]
+	Added devel/py-decorator version 3.3.2 [joerg 2011-11-13]
+	Added databases/py-sqlalchemy-migrate version 0.7.2 [joerg 2011-11-13]
+	Added devel/py-buildbot version 0.8.5 [joerg 2011-11-13]
+	Added devel/py-buildbot-slave version 0.8.5 [joerg 2011-11-13]
 	Added textproc/p5-String-ToIdentifier-EN version 0.05 [hiramatsu 2011-11-14]
 	Updated chat/p5-POE-Component-IRC to 6.75 [hiramatsu 2011-11-14]
