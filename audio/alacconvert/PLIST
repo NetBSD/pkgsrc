@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/14 19:43:21 ryoon Exp $
+bin/alacconvert

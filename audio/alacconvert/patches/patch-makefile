@@ -1,0 +1,39 @@
+$NetBSD: patch-makefile,v 1.1.1.1 2011/11/14 19:43:21 ryoon Exp $
+
+* Dynamically linked to libalac
+* Add install target
+
+--- makefile.orig	2011-11-13 08:20:10.000000000 +0000
++++ makefile
+@@ -5,9 +5,9 @@ LFLAGS = -Wall -L$(CODECDIR) -lalac
+ CC = g++
+ 
+ SRCDIR = .
+-CODECDIR = ../codec
++CODECDIR = ${PREFIX}/lib
+ OBJDIR = ./obj
+-INCLUDES = ../codec
++INCLUDES = ${PREFIX}/include
+ 
+ HEADERS = \
+ $(SRCDIR)/CAFFileALAC.h \
+@@ -29,8 +29,7 @@ main.o \
+ CAFFileALAC.o 
+ 
+ alacconvert:	$(OBJS)
+-	(cd $(CODECDIR); $(MAKE))
+-	$(CC) $(LFLAGS) $(OBJS) -o alacconvert
++	$(CC)  -Wl,-R ${PREFIX}/lib $(LFLAGS) $(OBJS) -o alacconvert
+ 
+ main.o : main.cpp
+ 	$(CC) -I $(INCLUDES) $(CFLAGS) main.cpp
+@@ -41,6 +40,9 @@ CAFFileALAC.o : CAFFileALAC.cpp
+ clean:
+ 	-rm $(OBJS) alacconvert
+ 	
++install:
++	${BSD_INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} alacconvert ${DESTDIR}${PREFIX}/bin
+ 
+ 
+ 
