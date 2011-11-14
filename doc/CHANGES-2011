@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2888 2011/11/14 09:42:27 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2889 2011/11/14 19:41:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4571,3 +4571,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-Singleton to 0.27 [hiramatsu 2011-11-14]
 	Updated www/p5-Plack-Middleware-Deflater to 0.05 [hiramatsu 2011-11-14]
 	Updated www/p5-HTML-Template-Pro to 0.9506 [hiramatsu 2011-11-14]
+	Added audio/libalac version 0.0.20111026 [ryoon 2011-11-14]
