@@ -1,0 +1,33 @@
+$NetBSD: patch-Makefile,v 1.1 2011/11/14 23:52:26 dholland Exp $
+
+Honor PKGMANDIR.
+
+--- Makefile~	2000-12-17 17:08:52.000000000 +0000
++++ Makefile
+@@ -7,6 +7,7 @@ SHELL		= /bin/sh
+ CFLAGS		= -O2 -Wall # -g -DDEBUG
+ LDFLAGS		= # -g
+ DEST		= /usr/local
++PKGMANDIR	= man
+ OBJS		= ywho.o xdr.o
+ SRCS		= ywho.c xdr.c
+ LIBS		= -lrpcsvc #-lsocket -lnsl
+@@ -37,12 +38,12 @@ depend:		
+ 
+ install.man:	
+ 		rm -f \
+-		    $(DEST)/man/man1/ywho.1 \
+-		    $(DEST)/man/man1/yusers.1 \
+-		    $(DEST)/man/man1/yuptime.1
+-		install -m 0444 ywho.man $(DEST)/man/man1/ywho.1
+-		ln -s ywho.1 $(DEST)/man/man1/yusers.1
+-		ln -s ywho.1 $(DEST)/man/man1/yuptime.1
++		    $(DEST)/$(PKGMANDIR)/man1/ywho.1 \
++		    $(DEST)/$(PKGMANDIR)/man1/yusers.1 \
++		    $(DEST)/$(PKGMANDIR)/man1/yuptime.1
++		install -m 0444 ywho.man $(DEST)/$(PKGMANDIR)/man1/ywho.1
++		ln -s ywho.1 $(DEST)/$(PKGMANDIR)/man1/yusers.1
++		ln -s ywho.1 $(DEST)/$(PKGMANDIR)/man1/yuptime.1
+ 
+ tar:		ywho.tar.gz
+ 
