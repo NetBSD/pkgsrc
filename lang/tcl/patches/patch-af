@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.24 2011/11/01 20:08:12 bsiegert Exp $
+$NetBSD: patch-af,v 1.25 2011/11/14 01:31:18 marino Exp $
 
---- unix/tcl.m4.orig	Wed Feb  6 15:38:03 2008
+--- unix/tcl.m4.orig	2008-02-06 15:38:26.000000000 +0000
 +++ unix/tcl.m4
 @@ -1033,6 +1033,7 @@ AC_DEFUN([SC_CONFIG_CFLAGS], [
      # Step 3: set configuration options based on system name and version.
@@ -72,7 +72,7 @@ $NetBSD: patch-af,v 1.24 2011/11/01 20:08:12 bsiegert Exp $
  	    ;;
  	GNU*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -1447,17 +1475,18 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1447,23 +1475,26 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[[1-2]].*)
@@ -93,7 +93,6 @@ $NetBSD: patch-af,v 1.24 2011/11/01 20:08:12 bsiegert Exp $
  		AC_CACHE_CHECK([for ELF], tcl_cv_ld_elf, [
  		    AC_EGREP_CPP(yes, [
  #ifdef __ELF__
-@@ -1464,6 +1493,8 @@ dnl AC_CHECK_TOOL(AR, ar)
  	yes
  #endif
  		    ], tcl_cv_ld_elf=yes, tcl_cv_ld_elf=no)])
@@ -120,7 +119,20 @@ $NetBSD: patch-af,v 1.24 2011/11/01 20:08:12 bsiegert Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -1933,6 +1964,9 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1558,6 +1589,12 @@ dnl AC_CHECK_TOOL(AR, ar)
+ 	    	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
+ 	    	TCL_LIB_VERSIONS_OK=nodots
+ 		;;
++	    DragonFly-*)
++		# "nodots" required to confirm to pkgsrc lang/tcl PLIST   
++		UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++		TCL_LIB_VERSIONS_OK=nodots	    	
++		;;
+ 	    esac
+ 	    ;;
+ 	Darwin-*)
+@@ -1933,6 +1970,9 @@ dnl AC_CHECK_TOOL(AR, ar)
  		CC_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -130,7 +142,7 @@ $NetBSD: patch-af,v 1.24 2011/11/01 20:08:12 bsiegert Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -2091,7 +2125,7 @@ dnl # preprocessing tests use only CPPFL
+@@ -2091,7 +2131,7 @@ dnl # preprocessing tests use only CPPFL
  		    ;;
  		IRIX*)
  		    ;;
@@ -139,7 +151,7 @@ $NetBSD: patch-af,v 1.24 2011/11/01 20:08:12 bsiegert Exp $
  		    ;;
  		Darwin-*)
  		    ;;
-@@ -2117,8 +2151,8 @@ dnl # preprocessing tests use only CPPFL
+@@ -2117,8 +2157,8 @@ dnl # preprocessing tests use only CPPFL
  
      if test "${SHARED_BUILD}" = "1" && test "${SHLIB_SUFFIX}" != "" ; then
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
