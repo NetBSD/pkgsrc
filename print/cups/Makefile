@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2011/11/13 21:49:17 sbd Exp $
+# $NetBSD: Makefile,v 1.185 2011/11/14 01:23:26 sbd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -160,10 +160,9 @@ post-install:
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
 	${RUN} for file in cupsd.conf snmp.conf ; do			\
-		${MV} -f ${DESTDIR}${CUPS_CONFDIR}/$${file}		\
+		${INSTALL_DATA} ${WRKSRC}/conf/$${file}			\
 			${DESTDIR}${EGDIR}/$${file};			\
 	done
-	${RM} -f ${DESTDIR}${CUPS_CONFDIR}/cupsd.conf.default
 .if !empty(PKG_OPTIONS:Mpam)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${DESTDIR}${EGDIR}
 .endif
