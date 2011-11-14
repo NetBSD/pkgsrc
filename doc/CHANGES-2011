@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2885 2011/11/13 23:15:30 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.2886 2011/11/14 08:18:31 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4564,3 +4564,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/py-sqlalchemy-migrate version 0.7.2 [2011-11-13]
 	Added devel/py-buildbot version 0.8.5 [2011-11-13]
 	Added devel/py-buildbot-slave version 0.8.5 [2011-11-13]
+	Added textproc/p5-String-ToIdentifier-EN version 0.05 [hiramatsu 2011-11-14]
+	Updated chat/p5-POE-Component-IRC to 6.75 [hiramatsu 2011-11-14]
