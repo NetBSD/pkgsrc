@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/18 02:05:14 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2011/11/14 09:41:07 hiramatsu Exp $
 
-SHA1 (HTML-Template-Pro-0.9504.tar.gz) = 20348b89e46eaed8dc28aa51091f471a74735723
-RMD160 (HTML-Template-Pro-0.9504.tar.gz) = e824bc02e377898312b887706e2f1561d9b9824b
-Size (HTML-Template-Pro-0.9504.tar.gz) = 170666 bytes
+SHA1 (HTML-Template-Pro-0.9506.tar.gz) = feaafd1cfd0593d22ed39d544b7c3888b4e905ee
+RMD160 (HTML-Template-Pro-0.9506.tar.gz) = db22bb03237ec81d4fcf520ab09b771e539cbbe0
+Size (HTML-Template-Pro-0.9506.tar.gz) = 170749 bytes
