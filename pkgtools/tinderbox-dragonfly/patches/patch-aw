@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
+$NetBSD: patch-aw,v 1.2 2011/11/14 02:00:20 marino Exp $
 
 --- ../FreeBSD/lib/Tinderbox/MakeCache.pm	2011-10-16 00:52:55.000000000 +0000
 +++ lib/Tinderbox/MakeCache.pm
@@ -29,12 +29,13 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
          }, $name;
  
          $self;
-@@ -60,13 +61,18 @@ sub _execMake {
+@@ -60,20 +61,94 @@ sub _execMake {
          my $self = shift;
          my $port = shift;
          my @ret;
 -        my $tmp;
 +        my $target;
++        my $deptype;
 +        my $tmp = '';
  
          return if ($self->{SEEN}->{$port} eq 1);
@@ -50,8 +51,13 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
 +        @ret = split("\n", `cd $dir && bmake $customOptions $nativeOptions $tmp`);
  
          foreach $tmp (@makeTargets) {
-                 $self->{CACHE}->{$port}{$tmp} = shift @ret;
-@@ -74,6 +80,66 @@ sub _execMake {
+-                $self->{CACHE}->{$port}{$tmp} = shift @ret;
++                $deptype = $tmp;
++                if (${tmp} eq "BOOTSTRAP_DEPENDS") {
++                        $deptype = "FETCH_DEPENDS";
++                }
++                $self->{CACHE}->{$port}{$deptype} = shift @ret;
+         }
          $self->{SEEN}->{$port} = 1;
  }
  
@@ -100,6 +106,7 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
 +        my $result = "";
 +        my $ppkgsrc=`grep PREFER_PKGSRC $moremk`;
 +        my $pnative=`grep PREFER_NATIVE $moremk`;
++        my $develop=`grep PKG_DEVELOPER $moremk`;
 +        if ($ppkgsrc) {
 +            @worker = split(/=/, $ppkgsrc);
 +            if (scalar (@worker) >= 2) {
@@ -112,13 +119,16 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
 +                $result .= 'PREFER_NATIVE="' . $self->_trim($worker[1]) . '"';
 +            }
 +        }
++        if ($develop) {
++            $result .= 'PKG_DEVELOPER=yes';
++        }
 +        return $result;
 +}
 +
  # Internal function for returning a port variable
  sub _getVariable {
          my $self = shift;
-@@ -90,16 +156,28 @@ sub _getList {
+@@ -90,16 +165,28 @@ sub _getList {
          my $port = shift;
          my $item = shift;
          my @deps;
@@ -149,7 +159,7 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
                  }
          }
          return @deps;
-@@ -109,7 +187,7 @@ sub _getList {
+@@ -109,7 +196,7 @@ sub _getList {
  sub Name {
          my $self = shift;
          my $port = shift;
@@ -158,17 +168,10 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
  }
  
  # Package name
-@@ -133,6 +211,20 @@ sub Maintainer {
+@@ -133,6 +220,13 @@ sub Maintainer {
          return $self->_getVariable($port, 'MAINTAINER');
  }
  
-+# Bootstrap dependencies
-+sub BootstrapDepends {
-+        my $self = shift;
-+        my $port = shift;
-+        return $self->_getList($port, 'BOOTSTRAP_DEPENDS');
-+}
-+
 +# Buildlink3 dependencies
 +sub Buildlink3Depends {
 +        my $self = shift;
@@ -179,7 +182,7 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
  # Extract dependencies
  sub ExtractDepends {
          my $self = shift;
-@@ -189,8 +281,8 @@ sub IgnoreList {
+@@ -189,8 +283,8 @@ sub IgnoreList {
  
          my $n = 0;
          $self->_execMake($port);
@@ -190,21 +193,10 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
          }
          return $n eq 0 ? "" : $self->PkgName($port);
  }
-@@ -206,6 +298,28 @@ sub FetchDependsList {
+@@ -206,6 +300,17 @@ sub FetchDependsList {
          return grep { !$uniq{$_}++ } @deps;
  }
  
-+sub BootstrapDependsList {
-+        my $self = shift;
-+        my $port = shift;
-+
-+        my @deps;
-+        push(@deps, $self->BootstrapDepends($port));
-+
-+        my %uniq;
-+        return grep { !$uniq{$_}++ } @deps;
-+}
-+
 +sub Buildlink3DependsList {
 +        my $self = shift;
 +        my $port = shift;
@@ -219,7 +211,7 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
  sub ExtractDependsList {
          my $self = shift;
          my $port = shift;
-@@ -250,6 +364,7 @@ sub BuildDependsList {
+@@ -250,6 +355,7 @@ sub BuildDependsList {
          push(@deps, $self->FetchDepends($port));
          push(@deps, $self->BuildDepends($port));
          push(@deps, $self->LibDepends($port));
@@ -227,7 +219,7 @@ $NetBSD: patch-aw,v 1.1 2011/11/02 21:13:29 marino Exp $
  
          my %uniq;
          return grep { !$uniq{$_}++ } @deps;
-@@ -263,6 +378,7 @@ sub RunDependsList {
+@@ -263,6 +369,7 @@ sub RunDependsList {
          my @deps;
          push(@deps, $self->LibDepends($port));
          push(@deps, $self->RunDepends($port));

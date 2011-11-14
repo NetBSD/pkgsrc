@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.1 2011/11/02 21:13:17 marino Exp $
+$NetBSD: distinfo,v 1.2 2011/11/14 02:00:19 marino Exp $
 
 SHA1 (tinderbox-3.4.tar.gz) = bcabfc7544945b9e832fa573fd13a48005e2a598
 RMD160 (tinderbox-3.4.tar.gz) = 4783292e3d89f9ded643d57c1f0055b5fc53e3a9
 Size (tinderbox-3.4.tar.gz) = 147218 bytes
-SHA1 (patch-aa) = 2366cdbe2d7348100d667d2ae931b18691b7adb1
+SHA1 (patch-aa) = 13f228c8f4b1e1df590f7e0a9687dd219d6b08a5
 SHA1 (patch-ab) = bead83362c0dbba1b71d11a076efb439fe3ac545
 SHA1 (patch-ac) = 7f62eacc4bea13a4fa36f6d84dab8750ca842366
 SHA1 (patch-ad) = 12c92ac0aeaf04260151d2e9e305cb6594cc3107
 SHA1 (patch-ae) = 57443a64d043d6549f19c99b431ea45ad29ba41e
 SHA1 (patch-ag) = 9f83f30fab9efe424c197d3f9fe8d7b3c3b924bc
-SHA1 (patch-ai) = 471bdd94cba0596e641b24d8804c398e11b5cfae
-SHA1 (patch-aj) = 32700b042db1de7b383cf63cae104079189f7168
+SHA1 (patch-ah) = ddfdb143e7eee5e838b8ab9affbf6992016f05f1
+SHA1 (patch-ai) = 19ec42335fbc37eed602222b20e8e21a20434baf
+SHA1 (patch-aj) = 5a6565b6844f6dbd7bb0dcd5aba74d722ae2e61b
 SHA1 (patch-ak) = af511026851a0faa893d461c4de44895d0d04410
 SHA1 (patch-al) = 0418a6aacc1ce7071a859bf69e8a29e47b64e197
 SHA1 (patch-am) = 26c9b09e99254d6d12e907876e191822ec3354f2
@@ -18,14 +19,12 @@ SHA1 (patch-an) = f91e604e1487f99374fc3119475ab775cf8257de
 SHA1 (patch-ao) = b8635fa0fb158855a1f20d29f9251e045e2b9357
 SHA1 (patch-ap) = 6dc77ea10efb8bdf26f4fc2330f89b70cba8aaab
 SHA1 (patch-aq) = 7cc9e2f723d192038d196da94fdfd8c569559458
-SHA1 (patch-ar) = 180883fba82d0b63e8d14b8922a67b1c09fa77f9
-SHA1 (patch-as) = 4a00ba9699ba47ec664fcadc3876ae7b8c75f05f
+SHA1 (patch-ar) = c57b04957c9ba3a140a623972d5e18e130f8dbc8
+SHA1 (patch-as) = 3cbee34e564ce7b46e17e04422770acee877e0dd
 SHA1 (patch-at) = f46d54fab4f94e0b6778d26ac84ce933f734c6d5
 SHA1 (patch-au) = 27e654af19184d3a5a9028442b80556417bd45c8
-SHA1 (patch-av) = d7ea402be9159a2763a15a05cbcd5789332e0a81
-SHA1 (patch-aw) = a7b10a8e9587469dfd21169c1bc37096a5424e35
-SHA1 (patch-ax) = 72b88ffe0d48e39d04ef5fc7e0adc3b00bc12446
-SHA1 (patch-ay) = cf3d2bb09746f9d88e243d488411a394534d85d1
+SHA1 (patch-av) = 806b9d4538f13d54b023b9630b74f3b859a65f67
+SHA1 (patch-aw) = 77446405f7c969d2b7b43e234bd7bcde533ed4a2
 SHA1 (patch-az) = 91526a66f47d53357703b2739c1384d4012e7c6c
 SHA1 (patch-ba) = 636adea0d3fb22132e2a6d81fd016a9560017aca
 SHA1 (patch-bb) = 7a007428deeea2f243cebcc84a42e0c5fbebc9a7

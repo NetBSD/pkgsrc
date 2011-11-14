@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.1 2011/11/02 21:13:27 marino Exp $
+$NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
 
 --- ../FreeBSD/lib/tc_command.pl	2011-10-16 00:52:55.000000000 +0000
 +++ lib/tc_command.pl
@@ -32,7 +32,7 @@ $NetBSD: patch-as,v 1.1 2011/11/02 21:13:27 marino Exp $
                  help => "Get stored dependencies for a given port and build",
                  usage =>
 -                    "-b <build name> -d <port directory> [-t EXTRACT_DEPENDS|PATCH_DEPENDS|FETCH_DEPENDS|BUILD_DEPENDS|LIB_DEPENDS|RUN_DEPENDS|TEST_DEPENDS]",
-+                    "-b <build name> -d <port directory> [-t BOOTSTRAP_DEPENDS|EXTRACT_DEPENDS|PATCH_DEPENDS|FETCH_DEPENDS|BUILD_DEPENDS|LIB_DEPENDS|RUN_DEPENDS|TEST_DEPENDS|DEPENDS]",
++                    "-b <build name> -d <port directory> [-t EXTRACT_DEPENDS|PATCH_DEPENDS|FETCH_DEPENDS|BUILD_DEPENDS|LIB_DEPENDS|RUN_DEPENDS|TEST_DEPENDS|DEPENDS]",
                  optstr => 'b:d:t:',
          },
 +        "getDependencyCascades" => {
@@ -100,16 +100,15 @@ $NetBSD: patch-as,v 1.1 2011/11/02 21:13:27 marino Exp $
          my @bports = ();
  
          if (!$opts->{'d'}) {
-@@ -1524,6 +1531,8 @@ sub addPortToOneBuild {
+@@ -1524,6 +1531,7 @@ sub addPortToOneBuild {
                                  LIB_DEPENDS     => 'LibDepends',
                                  RUN_DEPENDS     => 'RunDepends',
                                  TEST_DEPENDS    => 'TestDepends',
-+                                BOOTSTRAP_DEPENDS => 'BootstrapDepends',
-+                                DEPENDS           => 'Buildlink3Depends',
++                                DEPENDS         => 'Buildlink3Depends',
                          );
  
                          $ds->clearDependenciesForPort($pCls, $build, undef);
-@@ -1548,7 +1557,6 @@ sub addPortToOneBuild {
+@@ -1548,7 +1556,6 @@ sub addPortToOneBuild {
                                  }
                          }
                  }
@@ -117,7 +116,7 @@ $NetBSD: patch-as,v 1.1 2011/11/02 21:13:27 marino Exp $
          }
  }
  
-@@ -1600,7 +1608,7 @@ sub addBuildPortsQueueEntry {
+@@ -1600,7 +1607,7 @@ sub addBuildPortsQueueEntry {
                      $ds->addBuildPortsQueueEntry($build, $portdir, $priority,
                          $user_id);
                  if (!$rc) {
@@ -126,16 +125,15 @@ $NetBSD: patch-as,v 1.1 2011/11/02 21:13:27 marino Exp $
                                      . $portdir
                                      . " to the datastore: "
                                      . $ds->getError()
-@@ -1720,6 +1728,8 @@ sub getDependenciesForPort {
+@@ -1720,6 +1727,7 @@ sub getDependenciesForPort {
                  LIB_DEPENDS     => 4,
                  RUN_DEPENDS     => 5,
                  TEST_DEPEND     => 6,
-+                BOOTSTRAP_DEPENDS => 7,
-+                DEPENDS           => 8,
++                DEPENDS         => 7,
          );
  
          if (!$opts->{'b'} || !$opts->{'d'}) {
-@@ -1773,6 +1783,50 @@ sub getDependenciesForPort {
+@@ -1773,6 +1781,50 @@ sub getDependenciesForPort {
                  );
          }
  }
