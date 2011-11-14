@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2009/07/22 20:57:47 wiz Exp $
+$NetBSD: distinfo,v 1.8 2011/11/14 02:44:40 dholland Exp $
 
 SHA1 (tesseract-2.00.deu.tar.gz) = d8d89e2681421a144f3a1ec61ee0c530686f5096
 RMD160 (tesseract-2.00.deu.tar.gz) = c7e6755e94084114fb1a1be8e9308c8dddd2fdda
@@ -21,3 +21,4 @@ Size (tesseract-2.00.spa.tar.gz) = 1365863 bytes
 SHA1 (tesseract-2.04.tar.gz) = 850c42c92a4471c5f41d4384c57045e812fde26a
 RMD160 (tesseract-2.04.tar.gz) = 826718ddf491c8b925b02c343d4a4992fd4631d8
 Size (tesseract-2.04.tar.gz) = 1118386 bytes
+SHA1 (patch-viewer_svutil_cpp) = f6cbf71cc5c3c0e58ba8db72bc840dd61274f23e
