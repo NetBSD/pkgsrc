@@ -1,6 +1,6 @@
-# $NetBSD: INSTALL,v 1.2 2011/11/13 15:45:24 taca Exp $
+# $NetBSD: INSTALL,v 1.3 2011/11/14 03:20:30 taca Exp $
 
-PREFIX="@PREFIX@"
+DATE="@DATE@"
 RUBY_SITERIDIR="${PREFIX}/@RUBY_SITERIDIR@"
 rid="${RUBY_SITERIDIR}/created.rid"
 
