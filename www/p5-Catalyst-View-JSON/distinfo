@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/09/21 05:48:28 sno Exp $
+$NetBSD: distinfo,v 1.7 2011/11/15 09:10:35 hiramatsu Exp $
 
-SHA1 (Catalyst-View-JSON-0.31.tar.gz) = f7f11f0fdfc738abb5f3d3991fb904b494692d40
-RMD160 (Catalyst-View-JSON-0.31.tar.gz) = 224977653ed75d44633ebcbaec8c60196cb395e4
-Size (Catalyst-View-JSON-0.31.tar.gz) = 26573 bytes
+SHA1 (Catalyst-View-JSON-0.33.tar.gz) = 0809911f5c9ab7e63369f30cf197b3a30fa30593
+RMD160 (Catalyst-View-JSON-0.33.tar.gz) = f7bc5864e0c30e72de0b8155dfd59b89edcac96a
+Size (Catalyst-View-JSON-0.33.tar.gz) = 26777 bytes
