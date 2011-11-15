@@ -1,0 +1,4 @@
+This module provides helper functions for developers of lexical pragmas.
+These can be used both in older versions of perl (from 5.8.1), which have
+limited support for lexical pragmas, and in the most recent versions,
+which have improved support.
