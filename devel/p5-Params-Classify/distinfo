@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/08/31 20:27:29 sno Exp $
+$NetBSD: distinfo,v 1.3 2011/11/15 19:12:38 sno Exp $
 
-SHA1 (Params-Classify-0.011.tar.gz) = 41bb5bd9e887802fcba5328e7e9de6bf47e7c464
-RMD160 (Params-Classify-0.011.tar.gz) = a9a4e4aed3d09caa2dd092f4b0f4e2d55ee3f994
-Size (Params-Classify-0.011.tar.gz) = 17413 bytes
+SHA1 (Params-Classify-0.013.tar.gz) = 00bcfc849ca40a2136366760641ff5650dd7950f
+RMD160 (Params-Classify-0.013.tar.gz) = 2e971e5358080f11a20af0c4a8015d5ad932d888
+Size (Params-Classify-0.013.tar.gz) = 21014 bytes
