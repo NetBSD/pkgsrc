@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2908 2011/11/15 16:06:56 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2909 2011/11/15 16:47:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/pngcrush to 1.7.21 [adam 2011-11-15]
 	Updated devel/p5-Devel-Declare to 0.006008 [sno 2011-11-15]
 	Added devel/p5-B-Hooks-OP-Check-EntersubForCV version 0.08 [sno 2011-11-15]
+	Added devel/p5-Devel-BeginLift version 0.001003 [sno 2011-11-15]
