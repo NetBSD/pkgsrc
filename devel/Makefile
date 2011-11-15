@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1522 2011/11/15 14:25:54 sno Exp $
+# $NetBSD: Makefile,v 1.1523 2011/11/15 16:06:34 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -516,6 +516,7 @@ SUBDIR+=	p5-B-Compiling
 SUBDIR+=	p5-B-Hooks-EndOfScope
 SUBDIR+=	p5-B-Hooks-OP-Annotation
 SUBDIR+=	p5-B-Hooks-OP-Check
+SUBDIR+=	p5-B-Hooks-OP-Check-EntersubForCV
 SUBDIR+=	p5-B-Hooks-OP-Check-StashChange
 SUBDIR+=	p5-B-Hooks-OP-PPAddr
 SUBDIR+=	p5-B-Hooks-Parser
