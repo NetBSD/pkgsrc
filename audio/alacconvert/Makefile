@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/14 19:43:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/15 10:04:13 wiz Exp $
 #
 
 DISTNAME=	libalac-r3
@@ -19,5 +19,5 @@ USE_LANGUAGES=	c c++
 MAKE_FILE=	makefile
 BUILD_TARGET=	alacconvert
 
-.include "../../wip/libalac/buildlink3.mk"
+.include "../../audio/libalac/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
