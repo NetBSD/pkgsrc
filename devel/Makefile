@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1524 2011/11/15 16:46:50 sno Exp $
+# $NetBSD: Makefile,v 1.1525 2011/11/15 16:58:23 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -604,6 +604,7 @@ SUBDIR+=	p5-Config-INI
 SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Config-Std
 SUBDIR+=	p5-Config-Tiny
+SUBDIR+=	p5-Const-Fast
 SUBDIR+=	p5-Context-Preserve
 SUBDIR+=	p5-Contextual-Return
 SUBDIR+=	p5-Coro
