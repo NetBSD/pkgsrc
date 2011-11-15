@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2912 2011/11/15 19:12:50 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2913 2011/11/15 19:15:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4603,3 +4603,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Const-Fast version 0.008 [sno 2011-11-15]
 	Added devel/p5-Method-Signatures version 20111020 [sno 2011-11-15]
 	Updated devel/p5-Params-Classify to 0.013 [sno 2011-11-15]
+	Updated devel/p5-Module-Runtime to 0.011 [sno 2011-11-15]
