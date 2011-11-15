@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2890 2011/11/14 19:45:14 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2891 2011/11/15 06:45:13 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4573,3 +4573,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTML-Template-Pro to 0.9506 [hiramatsu 2011-11-14]
 	Added audio/libalac version 0.0.20111026 [ryoon 2011-11-14]
 	Added audio/alacconvert version 0.0.20111026 [ryoon 2011-11-14]
+	Added www/p5-HTTP-Server-EV version 0.2 [hiramatsu 2011-11-15]
+	Updated security/p5-GnuPG-Interface to 0.44 [hiramatsu 2011-11-15]
