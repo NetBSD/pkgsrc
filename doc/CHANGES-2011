@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2895 2011/11/15 11:53:20 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2896 2011/11/15 12:16:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4583,3 +4583,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated chat/ircII to 20111115 [mrg 2011-11-15]
 	Updated time/p5-DateTime-Format-W3CDTF to 0.06 [trevor 2011-11-15]
 	Added devel/p5-System-Command version 1.05 [trevor 2011-11-15]
+	Added devel/p5-Git-Repository version 1.22 [trevor 2011-11-15]
