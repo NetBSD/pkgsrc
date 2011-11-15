@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1519 2011/11/15 12:15:40 sno Exp $
+# $NetBSD: Makefile,v 1.1520 2011/11/15 13:14:17 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -1099,6 +1099,7 @@ SUBDIR+=	p5-Test-SubCalls
 SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-TempDir
 SUBDIR+=	p5-Test-Tester
+SUBDIR+=	p5-Test-TinyMocker
 SUBDIR+=	p5-Test-Trap
 SUBDIR+=	p5-Test-Unit
 SUBDIR+=	p5-Test-UseAllModules
