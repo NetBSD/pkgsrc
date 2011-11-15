@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2892 2011/11/15 09:30:48 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2893 2011/11/15 09:42:16 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4580,3 +4580,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-Method-Signatures to 0.37 [hiramatsu 2011-11-15]
 	Updated www/p5-Catalyst-View-JSON to 0.33 [hiramatsu 2011-11-15]
 	Updated www/p5-HTML-TableExtract to 2.11 [hiramatsu 2011-11-15]
+	Updated chat/ircII to 20111115 [mrg 2011-11-15]
