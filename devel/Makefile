@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1525 2011/11/15 16:58:23 sno Exp $
+# $NetBSD: Makefile,v 1.1526 2011/11/15 18:06:23 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -837,6 +837,7 @@ SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
 SUBDIR+=	p5-Memoize-Memcached
 SUBDIR+=	p5-MetaCPAN-API
+SUBDIR+=	p5-Method-Signatures
 SUBDIR+=	p5-Method-Signatures-Simple
 SUBDIR+=	p5-Mixin-ExtraFields
 SUBDIR+=	p5-Mixin-ExtraFields-Param
