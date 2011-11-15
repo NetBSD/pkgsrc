@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2904 2011/11/15 14:24:59 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2905 2011/11/15 14:35:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4592,3 +4592,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/parrot to 3.8.0 [he 2011-11-15]
 	Added devel/p5-MetaCPAN-API version 0.34 [sno 2011-11-15]
 	Added devel/p5-Devel-Pragma version 0.54 [sno 2011-11-15]
+	Updated net/isc-dhcp4 to 4.2.3 [taca 2011-11-15]
+	Updated net/isc-dhclient4 to 4.2.3 [taca 2011-11-15]
+	Updated net/isc-dhcrelay4 to 4.2.3 [taca 2011-11-15]
+	Updated net/isc-dhcpd4 to 4.2.3 [taca 2011-11-15]
