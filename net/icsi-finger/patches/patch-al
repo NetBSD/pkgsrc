@@ -1,8 +1,19 @@
-$NetBSD: patch-al,v 1.1 2011/01/18 12:28:25 is Exp $
+$NetBSD: patch-al,v 1.2 2011/11/15 00:11:07 dholland Exp $
+
+- 64-bit time_t fixes
+- use standard includes
 
 --- lib/os.c.orig	1996-07-18 23:31:32.000000000 +0000
 +++ lib/os.c
-@@ -1137,3 +1137,15 @@ same_hostip (host1, host2)
+@@ -28,6 +28,7 @@ static char *rcsid = "$Id: os.c,v 1.63 1
+ #include "../config.h"
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/param.h>
+@@ -1137,3 +1138,15 @@ same_hostip (host1, host2)
      return (addr1 == addr2);
  }
  

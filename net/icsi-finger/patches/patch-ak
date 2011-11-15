@@ -1,8 +1,22 @@
-$NetBSD: patch-ak,v 1.1 2011/01/18 12:28:25 is Exp $
+$NetBSD: patch-ak,v 1.2 2011/11/15 00:11:07 dholland Exp $
+
+- use standard includes
+- 64-bit time_t fixes
+- remove union wait
 
 --- src/in.fingerd.c.orig	1996-01-10 19:26:24.000000000 +0000
 +++ src/in.fingerd.c
-@@ -805,12 +805,12 @@ finger_users (user, options, stream)
+@@ -33,9 +33,7 @@ static char *rcsid = "$Id: in.fingerd.c,
+ #include <sys/types.h>
+ #include <fcntl.h>
+ #include <sys/file.h>
+-#ifndef X_OK
+ #include <unistd.h>
+-#endif
+ #include <sys/stat.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+@@ -805,12 +803,12 @@ finger_users (user, options, stream)
  	  fprintf (stream, "%s (%s) seen at %s on %s",
  		   upackets[i]->real_name, upackets[i]->name,
  		   strip_hostname (upackets[i]->host),
@@ -17,7 +31,7 @@ $NetBSD: patch-ak,v 1.1 2011/01/18 12:28:25 is Exp $
      }
    else
      {
-@@ -1262,7 +1262,7 @@ show_unlogged_packet (packet, stream)
+@@ -1262,7 +1260,7 @@ show_unlogged_packet (packet, stream)
  
    /* In SunOS4 getpwnam() seems to call ctime(), so we move this call down
     * here to be sure the intended result doesn't get overwritten. */
@@ -26,3 +40,18 @@ $NetBSD: patch-ak,v 1.1 2011/01/18 12:28:25 is Exp $
    the_time[strlen(the_time) - 1] = '\0';	/* delete newline */
  
    if (*(packet->real_name))
+@@ -1406,14 +1404,7 @@ run_target_script(script, target, cd, in
+   char *arg;
+ {
+   int pid;
+-#ifdef SYSV
+   int status;
+-#else
+-#ifndef WEXITSTATUS
+-# define WEXITSTATUS(w) ((w).w_retcode)
+-#endif
+-  union wait status;
+-#endif
+ 
+   if (access (script, X_OK) >= 0)
+     {
