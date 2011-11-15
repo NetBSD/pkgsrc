@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2917 2011/11/15 19:43:40 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2918 2011/11/15 20:45:07 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4608,3 +4608,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-Class-Load-XS version 0.02 [sno 2011-11-15]
 	Updated devel/p5-App-Cmd to 0.312 [sno 2011-11-15]
 	Updated devel/p5-Git-CPAN-Patch to 0.7.0 [sno 2011-11-15]
+	Updated x11/xf86-video-intel to 2.7.1nb5 [jakllsch 2011-11-15]
