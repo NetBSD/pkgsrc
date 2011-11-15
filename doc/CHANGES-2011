@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2896 2011/11/15 12:16:13 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2897 2011/11/15 12:49:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated time/p5-DateTime-Format-W3CDTF to 0.06 [trevor 2011-11-15]
 	Added devel/p5-System-Command version 1.05 [trevor 2011-11-15]
 	Added devel/p5-Git-Repository version 1.22 [trevor 2011-11-15]
+	Updated devel/p5-Any-Moose to 0.18 [trevor 2011-11-15]
