@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.831 2011/11/15 06:43:41 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.832 2011/11/15 12:58:15 sno Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -399,6 +399,7 @@ SUBDIR+=	p5-HTTP-Server-Simple-Mason
 SUBDIR+=	p5-HTTP-Server-Simple-PSGI
 SUBDIR+=	p5-HTTP-Server-Simple-Recorder
 SUBDIR+=	p5-HTTP-Server-Simple-Static
+SUBDIR+=	p5-HTTP-Tiny
 SUBDIR+=	p5-HTTPD-User-Manage
 SUBDIR+=	p5-Handel
 SUBDIR+=	p5-I18N-AcceptLanguage
