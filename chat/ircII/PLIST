@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:28:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2011/11/15 09:41:40 mrg Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
 bin/ircflush
-bin/ircio
-bin/wserv
+libexec/ircio
+libexec/wserv
 man/man1/irc.1
 man/man1/ircII.1
 man/man1/ircbug.1
