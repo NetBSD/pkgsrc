@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/10/13 07:42:44 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/15 19:26:56 sno Exp $
 
-DISTNAME=	Class-Load-0.11
+DISTNAME=	Class-Load-0.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
@@ -12,9 +11,11 @@ COMMENT=	Provide a working (require "Class::Name") and more
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
-DEPENDS+=	p5-Module-Runtime>=0.009:../../devel/p5-Module-Runtime
+DEPENDS+=	p5-Module-Runtime>=0.011:../../devel/p5-Module-Runtime
 DEPENDS+=	p5-Package-Stash>=0.32:../../devel/p5-Package-Stash
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
