@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/08/25 12:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2011/11/15 20:26:04 shattered Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -9,6 +9,8 @@ MASTER_SITES=		# no known-good site; default to pkgsrc distfile mirrors
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Cross-compile environment for iX86 Linux, libc v6
+
+NOT_FOR_PLATFORM=	*-*-x86_64
 
 BUILD_DEPENDS+=		rpm-[0-9]*:../../misc/rpm
 
