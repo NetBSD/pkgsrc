@@ -1,0 +1,5 @@
+Asynchronous HTTP server using EV event loop.
+
+It doesn't load files received in the POST request in memory as most
+of CGI modules does, but stores them directly to tmp files, so it's
+useful for handling large files without using a lot of memory.
