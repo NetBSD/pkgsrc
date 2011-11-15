@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2898 2011/11/15 12:58:36 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2899 2011/11/15 12:59:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4493,12 +4493,12 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/p5-Net-Daemon to 0.48 [hiramatsu 2011-11-11]
 	Updated devel/p5-MooseX-Declare to 0.35 [hiramatsu 2011-11-11]
 	Updated pkgtools/pkg_summary-utils to 0.56.2 [cheusov 2011-11-11]
-	Updated devel/p5-Compress-Raw-Zlib to 2.040 [trevor 2011-11-11]
-	Updated devel/p5-Compress-Raw-Bzip2 to 2.040 [trevor 2011-11-11]
-	Updated devel/p5-IO-Compress to 2.040 [trevor 2011-11-11]
-	Updated archivers/p5-Archive-Tar to 1.80 [trevor 2011-11-11]
-	Updated time/p5-Time-HiRes to 1.9724 [trevor 2011-11-11]
-	Updated print/p5-LaTeX-Driver to 0.10 [trevor 2011-11-11]
+	Updated devel/p5-Compress-Raw-Zlib to 2.040 [sno 2011-11-11]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.040 [sno 2011-11-11]
+	Updated devel/p5-IO-Compress to 2.040 [sno 2011-11-11]
+	Updated archivers/p5-Archive-Tar to 1.80 [sno 2011-11-11]
+	Updated time/p5-Time-HiRes to 1.9724 [sno 2011-11-11]
+	Updated print/p5-LaTeX-Driver to 0.10 [sno 2011-11-11]
 	Updated textproc/p5-Convert-PEM to 0.08 [hiramatsu 2011-11-11]
 	Updated devel/p5-MooseX-MethodAttributes to 0.25 [hiramatsu 2011-11-11]
 	Updated www/p5-CSS-Squish to 0.10 [hiramatsu 2011-11-11]
@@ -4581,8 +4581,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-View-JSON to 0.33 [hiramatsu 2011-11-15]
 	Updated www/p5-HTML-TableExtract to 2.11 [hiramatsu 2011-11-15]
 	Updated chat/ircII to 20111115 [mrg 2011-11-15]
-	Updated time/p5-DateTime-Format-W3CDTF to 0.06 [trevor 2011-11-15]
-	Added devel/p5-System-Command version 1.05 [trevor 2011-11-15]
-	Added devel/p5-Git-Repository version 1.22 [trevor 2011-11-15]
-	Updated devel/p5-Any-Moose to 0.18 [trevor 2011-11-15]
-	Added www/p5-HTTP-Tiny version 0.016 [trevor 2011-11-15]
+	Updated time/p5-DateTime-Format-W3CDTF to 0.06 [sno 2011-11-15]
+	Added devel/p5-System-Command version 1.05 [sno 2011-11-15]
+	Added devel/p5-Git-Repository version 1.22 [sno 2011-11-15]
+	Updated devel/p5-Any-Moose to 0.18 [sno 2011-11-15]
+	Added www/p5-HTTP-Tiny version 0.016 [sno 2011-11-15]
