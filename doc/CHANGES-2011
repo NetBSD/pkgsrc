@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2907 2011/11/15 15:34:48 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2908 2011/11/15 16:06:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4598,3 +4598,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/isc-dhcpd4 to 4.2.3 [taca 2011-11-15]
 	Updated graphics/pngcrush to 1.7.21 [adam 2011-11-15]
 	Updated devel/p5-Devel-Declare to 0.006008 [sno 2011-11-15]
+	Added devel/p5-B-Hooks-OP-Check-EntersubForCV version 0.08 [sno 2011-11-15]
