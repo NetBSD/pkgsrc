@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2901 2011/11/15 13:14:35 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2902 2011/11/15 13:44:54 he Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/p5-HTTP-Tiny version 0.016 [sno 2011-11-15]
 	Updated net/icsi-finger to 1.0.27nb5 [is 2011-11-15]
 	Added devel/p5-Test-TinyMocker version 0.03 [sno 2011-11-15]
+	Updated lang/parrot to 3.8.0 [he 2011-11-15]
