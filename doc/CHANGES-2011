@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2905 2011/11/15 14:35:27 taca Exp $
+$NetBSD: CHANGES-2011,v 1.2906 2011/11/15 14:48:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4596,3 +4596,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/isc-dhclient4 to 4.2.3 [taca 2011-11-15]
 	Updated net/isc-dhcrelay4 to 4.2.3 [taca 2011-11-15]
 	Updated net/isc-dhcpd4 to 4.2.3 [taca 2011-11-15]
+	Updated graphics/pngcrush to 1.7.21 [adam 2011-11-15]
