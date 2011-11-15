@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2893 2011/11/15 09:42:16 mrg Exp $
+$NetBSD: CHANGES-2011,v 1.2894 2011/11/15 11:32:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4581,3 +4581,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-View-JSON to 0.33 [hiramatsu 2011-11-15]
 	Updated www/p5-HTML-TableExtract to 2.11 [hiramatsu 2011-11-15]
 	Updated chat/ircII to 20111115 [mrg 2011-11-15]
+	Updated time/p5-DateTime-Format-W3CDTF to 0.06 [trevor 2011-11-15]
