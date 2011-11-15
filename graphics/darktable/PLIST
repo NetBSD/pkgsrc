@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/25 14:42:53 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/11/15 21:19:02 jakllsch Exp $
 bin/darktable
 bin/darktable-cltest
 bin/darktable-faster
@@ -76,6 +76,7 @@ lib/darktable/views/liblighttable.so
 man/man1/darktable.1
 share/applications/darktable.desktop
 share/darktable/darktable.gtkrc
+share/darktable/gdb_commands
 share/darktable/kernels/atrous.cl
 share/darktable/kernels/basic.cl
 share/darktable/kernels/blendop.cl
@@ -88,6 +89,7 @@ share/darktable/kernels/sharpen.cl
 share/darktable/pixmaps/plugins/darkroom/anlfyeni.png
 share/darktable/pixmaps/plugins/darkroom/atrous.png
 share/darktable/pixmaps/plugins/darkroom/basecurve.png
+share/darktable/pixmaps/plugins/darkroom/bilateral.png
 share/darktable/pixmaps/plugins/darkroom/bloom.png
 share/darktable/pixmaps/plugins/darkroom/borders.png
 share/darktable/pixmaps/plugins/darkroom/cacorrect.png
@@ -106,6 +108,7 @@ share/darktable/pixmaps/plugins/darkroom/grain.png
 share/darktable/pixmaps/plugins/darkroom/highlights.png
 share/darktable/pixmaps/plugins/darkroom/highpass.png
 share/darktable/pixmaps/plugins/darkroom/hotpixels.png
+share/darktable/pixmaps/plugins/darkroom/invert.png
 share/darktable/pixmaps/plugins/darkroom/lens.png
 share/darktable/pixmaps/plugins/darkroom/lowlight.png
 share/darktable/pixmaps/plugins/darkroom/lowpass.png
@@ -120,7 +123,6 @@ share/darktable/pixmaps/plugins/darkroom/sharpen.png
 share/darktable/pixmaps/plugins/darkroom/soften.png
 share/darktable/pixmaps/plugins/darkroom/splittoning.png
 share/darktable/pixmaps/plugins/darkroom/spots.png
-share/darktable/pixmaps/plugins/darkroom/stuckpixels.png
 share/darktable/pixmaps/plugins/darkroom/temperature.png
 share/darktable/pixmaps/plugins/darkroom/template.png
 share/darktable/pixmaps/plugins/darkroom/tonecurve.png
@@ -149,12 +151,9 @@ share/icons/hicolor/scalable/apps/darktable.svg
 share/locale/ca/LC_MESSAGES/darktable.mo
 share/locale/de/LC_MESSAGES/darktable.mo
 share/locale/fi/LC_MESSAGES/darktable.mo
-share/locale/fr/LC_MESSAGES/darktable.mo
 share/locale/gl/LC_MESSAGES/darktable.mo
-share/locale/it/LC_MESSAGES/darktable.mo
 share/locale/ja/LC_MESSAGES/darktable.mo
 share/locale/nl/LC_MESSAGES/darktable.mo
-share/locale/pl/LC_MESSAGES/darktable.mo
 share/locale/ro/LC_MESSAGES/darktable.mo
 share/locale/ru/LC_MESSAGES/darktable.mo
 share/locale/sq/LC_MESSAGES/darktable.mo
