@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2891 2011/11/15 06:45:13 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2892 2011/11/15 09:30:48 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4575,3 +4575,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Added audio/alacconvert version 0.0.20111026 [ryoon 2011-11-14]
 	Added www/p5-HTTP-Server-EV version 0.2 [hiramatsu 2011-11-15]
 	Updated security/p5-GnuPG-Interface to 0.44 [hiramatsu 2011-11-15]
+	Updated databases/p5-Rose-DB-Object to 0.796 [hiramatsu 2011-11-15]
+	Updated devel/p5-ShipIt to 0.55 [hiramatsu 2011-11-15]
+	Updated devel/p5-MooseX-Method-Signatures to 0.37 [hiramatsu 2011-11-15]
+	Updated www/p5-Catalyst-View-JSON to 0.33 [hiramatsu 2011-11-15]
+	Updated www/p5-HTML-TableExtract to 2.11 [hiramatsu 2011-11-15]
