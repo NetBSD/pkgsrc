@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2011/11/15 13:44:30 he Exp $
+# $NetBSD: Makefile,v 1.50 2011/11/16 14:32:53 he Exp $
 #
 
 VERSION=		3.8.0
@@ -58,6 +58,30 @@ REPLACE_INTERPRETER+=	parrot
 REPLACE.parrot.old=	.*parrot[^[:space:]]*
 REPLACE.parrot.new=	${PREFIX}/bin/parrot
 REPLACE_FILES.parrot+= 	tools/dev/pbc_to_exe.pir
+
+REPLACE_INTERPRETER+=	parrot-nqp
+REPLACE.parrot-nqp.old=	.*parrot-nqp[^[:space:]]*
+REPLACE.parrot-nqp.new= ${PREFIX}/bin/parrot-nqp
+REPLACE_FILES.parrot-nqp+= compilers/data_json/JSON.nqp
+
+REPLACE_INTERPRETER+=	nqp
+REPLACE.nqp.old=	.*nqp[^[:space:]]*
+REPLACE.nqp.new=	${PREFIX}/bin/parrot-nqp
+REPLACE_FILES.nqp+=	runtime/parrot/library/YAML/Tiny.pm
+
+# These have been reported to parrot, Git tracking issue #201
+CHECK_WRKREF_SKIP+=	bin/ops2c
+CHECK_WRKREF_SKIP+=	bin/parrot
+CHECK_WRKREF_SKIP+=	bin/parrot-nqp
+CHECK_WRKREF_SKIP+=	bin/parrot-prove
+CHECK_WRKREF_SKIP+=	bin/parrot_config
+CHECK_WRKREF_SKIP+=	bin/parrot_nci_thunk_gen
+CHECK_WRKREF_SKIP+=	bin/pbc_merge
+CHECK_WRKREF_SKIP+=	bin/pbc_to_exe
+CHECK_WRKREF_SKIP+=	bin/winxed
+CHECK_WRKREF_SKIP+=	lib/parrot/${PKGVERSION}/include/config.fpmc
+CHECK_WRKREF_SKIP+=	lib/parrot/${PKGVERSION}/parrot_config.o
+CHECK_WRKREF_SKIP+=	lib/parrot/${PKGVERSION}/tools/lib/Parrot/Config/Generated.pm
 
 # Does relink internally, so allow local rpath entries
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${WRKSRC}
