@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2920 2011/11/15 21:20:33 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.2921 2011/11/16 00:38:30 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4611,3 +4611,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/xf86-video-intel to 2.7.1nb5 [jakllsch 2011-11-15]
 	Updated pkgtools/nih to 0.10.0 [cheusov 2011-11-15]
 	Updated graphics/darktable to 0.9.3 [jakllsch 2011-11-15]
+	Updated multimedia/ffmpeg to 20111104.0.7.7nb1 [sbd 2011-11-16]
+	Updated multimedia/ffplay to 0.7.7nb1 [sbd 2011-11-16]
