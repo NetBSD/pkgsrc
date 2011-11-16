@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2011/04/22 13:43:40 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/11/16 08:23:48 sbd Exp $
 
 DISTNAME=	xscorch-0.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.xscorch.org/releases/
 
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-gnome
 
 .include "../../audio/libmikmod/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
