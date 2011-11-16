@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2928 2011/11/16 07:39:56 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2929 2011/11/16 08:00:42 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4621,3 +4621,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added converters/p5-Convert-Color version 0.08 [hiramatsu 2011-11-16]
 	Updated security/opensc to 0.11.13nb3 [sbd 2011-11-16]
 	Updated security/gnupg2 to 2.0.18nb2 [sbd 2011-11-16]
+	Updated devel/p5-Test-Fatal to 0.008 [sno 2011-11-16]
