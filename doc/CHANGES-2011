@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2933 2011/11/16 08:18:05 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2934 2011/11/16 08:24:37 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4630,3 +4630,13 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-ExtUtils-ParseXS to 3.05 [sno 2011-11-16]
 	Updated devel/p5-File-chdir to 0.1006 [sno 2011-11-16]
 	Updated devel/p5-File-pushd to 1.001 [sno 2011-11-16]
+	Updated audio/libsmf to 1.3nb1 [sbd 2011-11-16]
+	Updated databases/sqlrelay to 0.43nb1 [sbd 2011-11-16]
+	Updated devel/omake to 0.9.8.6.0rc1nb1 [sbd 2011-11-16]
+	Updated emulators/or1ksim to 0.2.0rc2nb1 [sbd 2011-11-16]
+	Updated games/teg to 0.11.1nb22 [sbd 2011-11-16]
+	Updated games/xscorch to 0.2.0nb4 [sbd 2011-11-16]
+	Updated lang/lush to 1.2.1nb1 [sbd 2011-11-16]
+	Updated net/ntp4 to 4.2.4p8nb2 [sbd 2011-11-16]
+	Updated security/gnupg to 1.4.11nb2 [sbd 2011-11-16]
+	Updated security/gnutls to 2.12.14nb1 [sbd 2011-11-16]
