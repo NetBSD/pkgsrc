@@ -1,28 +1,33 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/10/29 04:24:27 agc Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/16 03:53:11 sbd Exp $
 
---- Makefile	2009/10/29 04:05:47	1.1
-+++ Makefile	2009/10/29 04:06:22
-@@ -1,12 +1,12 @@
+Respect any CFLAGS from the environment, use LDFLAGS and install to
+${PREFIX}/bin using ${BSD_INSTALL_PROGRAM}
+
+--- Makefile.orig	2009-08-12 07:57:55.000000000 +0000
++++ Makefile
+@@ -1,12 +1,13 @@
  #CC = gcc
  ##CFLAGS = -O3
- CFLAGS = -O2 -Wall
+-CFLAGS = -O2 -Wall
 -BIN_DIR = ${DESTDIR}/usr/bin
++CFLAGS ?= -O2
++CFLAGS += -Wall
 +BIN_DIR = ${DESTDIR}${PREFIX}/bin
  
  all: dmg2img vfdecrypt 
  
  dmg2img: dmg2img.c dmg2img.h mntcmd.h gpt.h dmg2img.o base64.o adc.o 
 -	$(CC) -s -o dmg2img dmg2img.o base64.o adc.o -L. -lz -lbz2
-+	$(CC) -o dmg2img dmg2img.o base64.o adc.o -L. -lz -lbz2
++	$(CC) $(LDFLAGS) -o dmg2img dmg2img.o base64.o adc.o -L. -lz -lbz2
  
  dmg2img.o: dmg2img.c dmg2img.h
  	$(CC) $(CFLAGS) -c dmg2img.c
-@@ -18,11 +18,12 @@
+@@ -18,11 +19,12 @@ adc.o: adc.c adc.h
  	$(CC) $(CFLAGS) -c adc.c
  
  vfdecrypt: vfdecrypt.c
 -	$(CC) $(CFLAGS) -s -o vfdecrypt vfdecrypt.c -lcrypto
-+	$(CC) $(CFLAGS) -o vfdecrypt vfdecrypt.c -lcrypto
++	$(CC) $(CFLAGS) $(LDFLAGS) -o vfdecrypt vfdecrypt.c -lcrypto
  
  install: dmg2img vfdecrypt
  	mkdir -p ${BIN_DIR}
