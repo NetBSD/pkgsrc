@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2011/08/12 06:14:27 mrg Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2011/11/16 00:35:07 sbd Exp $
 
 BUILDLINK_TREE+=	ffmpeg
 
@@ -34,7 +34,9 @@ pkgbase := ffmpeg
 .  include "../../multimedia/libvpx/buildlink3.mk"
 .endif
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .endif # FFMPEG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ffmpeg
