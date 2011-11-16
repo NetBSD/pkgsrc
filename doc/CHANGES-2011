@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2932 2011/11/16 08:14:57 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2933 2011/11/16 08:18:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4629,3 +4629,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTTP-Body to 1.14 [hiramatsu 2011-11-16]
 	Updated devel/p5-ExtUtils-ParseXS to 3.05 [sno 2011-11-16]
 	Updated devel/p5-File-chdir to 0.1006 [sno 2011-11-16]
+	Updated devel/p5-File-pushd to 1.001 [sno 2011-11-16]
