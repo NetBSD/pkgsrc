@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.13 2010/11/07 12:21:10 obache Exp $
+$NetBSD: patch-ac,v 1.13.8.1 2011/11/16 21:06:50 sbd Exp $
 
 portability fix.
 
 --- configure.in.orig	2010-04-13 21:57:34.000000000 +0000
 +++ configure.in
-@@ -331,7 +331,7 @@ AC_ARG_WITH(modules,
-     if test x"$withval" != x; then
-       modules_list=`echo "$withval" | sed -e 's/:/ /g'`;
-       for amodule in $modules_list; do
--        if test x"$amodule" == xmod_dso ; then
-+        if test x"$amodule" = xmod_dso ; then
-           AC_MSG_ERROR([use --enable-dso instead of --with-modules=mod_dso for DSO support])
-         fi
-       done
+@@ -348,7 +348,7 @@ AC_ARG_WITH(modules,
+       if test x"$withval" != xno; then
+         modules_list=`echo "$withval" | sed -e 's/:/ /g'`;
+         for amodule in $modules_list; do
+-          if test x"$amodule" == xmod_dso ; then
++          if test x"$amodule" = xmod_dso ; then
+             AC_MSG_ERROR([use --enable-dso instead of --with-modules=mod_dso for DSO support])
+           fi
+         done

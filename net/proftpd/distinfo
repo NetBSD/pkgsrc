@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.37 2011/05/20 11:15:01 adam Exp $
+$NetBSD: distinfo,v 1.37.4.1 2011/11/16 21:06:50 sbd Exp $
 
-SHA1 (proftpd-1.3.3e.tar.bz2) = b347aa72d12e41fe8f43e8d91a7a4eeaac6f472f
-RMD160 (proftpd-1.3.3e.tar.bz2) = 12eef0bd466cdb1dbdd342cda8e93c1cb619dd07
-Size (proftpd-1.3.3e.tar.bz2) = 4180369 bytes
+SHA1 (proftpd-1.3.3g.tar.bz2) = 70489c2b32c87b3637fd0cf2520773c5229f4ae3
+RMD160 (proftpd-1.3.3g.tar.bz2) = 29bdade06f63ace05811e809b0a3600ea6ed61fe
+Size (proftpd-1.3.3g.tar.bz2) = 4204504 bytes
 SHA1 (patch-aa) = a684d275e0b872f9d7d57b8b4d5e97a630a48eaf
-SHA1 (patch-ab) = 9567cb34dab7feee696cddea4dba7930e500460e
-SHA1 (patch-ac) = d1ba5ec4265337c648da2f76460694a5a7a2dd10
-SHA1 (patch-contrib_mod_tls.c) = 1258e147e27976d06d8a85aef6a13cd50552c0f8
+SHA1 (patch-ab) = 322b94a3c327da55891fbe2590f24c1d3bd751bc
+SHA1 (patch-ac) = d1727a21411f4c2947f0a482ad407fe05ac20b53
+SHA1 (patch-contrib_mod_tls.c) = d82a58fa51572787679a17d1d1c56a219eefcb77
