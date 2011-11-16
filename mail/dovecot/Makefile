@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.158 2011/06/14 09:37:17 tron Exp $
+# $NetBSD: Makefile,v 1.159 2011/11/16 04:18:25 sbd Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
 SIEVE_VERSION=		0.1.19
 MANAGESIEVE_VERSION=	0.11.13
 DISTNAME=		dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/${DOVECOT_VERSION}/
 DOVECOT_SIEVE_SITES=	http://www.rename-it.nl/dovecot/${DOVECOT_VERSION}/
@@ -83,5 +83,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert.sh ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/lib/liblib.a ${DESTDIR}${PREFIX}/lib/dovecot
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
