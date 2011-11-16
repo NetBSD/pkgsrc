@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2926 2011/11/16 06:32:39 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2927 2011/11/16 07:25:27 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4619,3 +4619,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/milter-manager to 1.8.1 [obache 2011-11-16]
 	Added devel/p5-MooseX-Aliases version 0.10 [hiramatsu 2011-11-16]
 	Added converters/p5-Convert-Color version 0.08 [hiramatsu 2011-11-16]
+	Updated security/opensc to 0.11.13nb3 [sbd 2011-11-16]
