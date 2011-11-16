@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2934 2011/11/16 08:24:37 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2935 2011/11/16 08:28:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4640,3 +4640,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ntp4 to 4.2.4p8nb2 [sbd 2011-11-16]
 	Updated security/gnupg to 1.4.11nb2 [sbd 2011-11-16]
 	Updated security/gnutls to 2.12.14nb1 [sbd 2011-11-16]
+	Updated chat/ircII to 20111115nb2 [tron 2011-11-16]
