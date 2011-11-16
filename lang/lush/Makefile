@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/01/16 16:35:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/16 08:23:48 sbd Exp $
 
 DISTNAME=	lush-1.2.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lush/}
 
@@ -25,6 +26,7 @@ post-install:
 .include "../../math/lapack/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

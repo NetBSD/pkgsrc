@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2011/11/02 13:59:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.22 2011/11/16 08:23:48 sbd Exp $
 
 DISTNAME=		sqlrelay-0.43
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 
@@ -60,5 +61,6 @@ RCD_SCRIPT_SRC.sqlrelay=	${WRKSRC}/init/netbsd/rc.d/sqlrelay
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/init/netbsd/sqlrelay ${DESTDIR}${EGDIR}/sqlrelay
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/rudiments/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
