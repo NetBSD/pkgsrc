@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2010/02/21 13:34:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/11/16 19:48:30 drochner Exp $
+include/gstreamer-0.10/gst/pygst.h
+include/gstreamer-0.10/gst/pygstexception.h
+include/gstreamer-0.10/gst/pygstminiobject.h
+include/gstreamer-0.10/gst/pygstvalue.h
 lib/gstreamer-0.10/libgstpython.la
 lib/pkgconfig/gst-python-0.10.pc
 ${PYSITELIB}/gst-0.10/gst/__init__.py
