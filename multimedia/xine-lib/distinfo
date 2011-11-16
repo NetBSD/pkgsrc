@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.74 2011/10/12 17:30:22 hans Exp $
+$NetBSD: distinfo,v 1.75 2011/11/16 19:45:37 drochner Exp $
 
-SHA1 (xine-lib-1.1.19.tar.bz2) = 5afcc28c5cf2bdaab99d951960f6587797e1e5a0
-RMD160 (xine-lib-1.1.19.tar.bz2) = 84999c43d3cc115c3bda4b2e06089dc827c646cc
-Size (xine-lib-1.1.19.tar.bz2) = 7531642 bytes
+SHA1 (xine-lib-1.1.20.tar.bz2) = 60ce1cea9bf7a6b7d8c60141593a8ed0c54f9445
+RMD160 (xine-lib-1.1.20.tar.bz2) = c531b74142ad92b7fe2956c69fd1398e7c8cb1fb
+Size (xine-lib-1.1.20.tar.bz2) = 7585795 bytes
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ag) = 96a2bab961ca90d7e3c1d67b6aa09388f9478d35
 SHA1 (patch-aj) = 4215c3bc37cf636e563a509f9a391081ed8e773b
 SHA1 (patch-ak) = 987700e6526b5112ac66bd6a8f9ee41f338c3508
 SHA1 (patch-ao) = 2682548a181803bc2d79f79d76828b6b3ba0e4fa
-SHA1 (patch-ap) = f22810c78ac0d1bb7e958ed92fd2ad8a7f889d92
+SHA1 (patch-ap) = d82c27dd5bd21dbaeb7b981eb36b36f580a2d30c
 SHA1 (patch-as) = a0a93a256589e87a66eef31494441aa1b200f834
-SHA1 (patch-be) = 966d057b118728ff509fd4e7f8005ab5b00b5633
+SHA1 (patch-be) = 6d03de71811bd03295621d04d3166625f4f4f079
 SHA1 (patch-bg) = f072486eb8441b8bed2c825380aa04d99bc70cc1
 SHA1 (patch-cb) = db4ff27418e05e97bf30b554beecc24d6e578d15
 SHA1 (patch-cd) = a080c745d08ded46db7c1173fe55350c1eb9ff33
@@ -19,7 +19,6 @@ SHA1 (patch-db) = 3ad4ca6f43a379b251211477972cd6d34b1f821a
 SHA1 (patch-dc) = 11c4212029e67f22796e57706b42400a0dbcac3a
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
 SHA1 (patch-ga) = c4770b6be12bbc4dd72f8299f3b0bbf92546cc68
-SHA1 (patch-gb) = 569539c868711a004740f40d1c48d30eb9e0399f
 SHA1 (patch-input_dvb.c) = 37aa191dca0df058dc09477624ff76dbc3a2f9b9
 SHA1 (patch-src-demuxers-demux_qt.c) = 2942911c09c0580c6017474af2a14f5b1f193c1d
 SHA1 (patch-src-post-audio-stretch.c) = bc083541c410e8b8c2b5c23bc7b2b0ae312272a5
