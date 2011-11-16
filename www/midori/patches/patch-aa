@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2011/04/08 20:02:13 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2011/11/16 19:56:36 drochner Exp $
 
---- wscript.orig	2011-03-13 22:03:35.000000000 +0000
+--- wscript.orig	2011-11-10 23:21:06.000000000 +0000
 +++ wscript
-@@ -407,7 +407,7 @@ def build (bld):
+@@ -439,7 +439,7 @@ def build (bld):
              'AUTHORS COPYING ChangeLog EXPAT README data/faq.html data/faq.css')
  
      # Install default configuration
@@ -11,19 +11,12 @@ $NetBSD: patch-aa,v 1.6 2011/04/08 20:02:13 drochner Exp $
  
      if bld.env['INTLTOOL']:
          obj = bld.new_task_gen ('intltool_po')
-@@ -481,13 +481,13 @@ def build (bld):
-                 if os.path.exists (source):
-                     bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + \
-                                        '/extensions/' + folder, source)
--        elif Options.platform == 'linux':
-+        elif 1:
-             extensions = os.listdir ('data/extensions')
+@@ -511,7 +511,7 @@ def build (bld):
              for extension in extensions:
-                 folder = 'lib' + extension + '.so'
                  source = 'data/extensions/' + extension +  '/config'
                  if os.path.exists (source):
 -                    bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + \
 +                    bld.install_files ('${DESTDIR}${PREFIX}/share/examples/' + APPNAME + \
-                                        '/extensions/' + folder, source)
+                                        '/extensions/' + extension, source)
  
      if Options.commands['check'] or bld.env['tests']:
