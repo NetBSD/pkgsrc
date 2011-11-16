@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2011/05/27 10:05:52 kivinen Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/16 07:25:15 sbd Exp $
 
 COMMENT=		Smart Card drivers and middleware
 LICENSE=		gnu-lgpl-v2.1
 
 .include "../../security/opensc/Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -19,5 +19,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/opensc.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
