@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/09/01 05:36:00 sno Exp $
+$NetBSD: distinfo,v 1.4 2011/11/16 08:14:45 sno Exp $
 
-SHA1 (File-chdir-0.1004.tar.gz) = b1cfbdf7a25c8a718b0510cb8fc0f0107791b56c
-RMD160 (File-chdir-0.1004.tar.gz) = 12b4619a7952f4de0709ad452ffff9dcf213ce2b
-Size (File-chdir-0.1004.tar.gz) = 43097 bytes
+SHA1 (File-chdir-0.1006.tar.gz) = e1379a748c46d7f97fb48f062e202cc4ddef3bc1
+RMD160 (File-chdir-0.1006.tar.gz) = 6eb492ab17af769176ec5956e020bb6d0ccd60f8
+Size (File-chdir-0.1006.tar.gz) = 21188 bytes
