@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2009/04/01 19:05:03 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/16 19:31:56 gdt Exp $
 #
 
-DISTNAME=		etcmanage-0.6.1
+DISTNAME=		etcmanage-0.8
 CATEGORIES=		sysutils
-MASTER_SITES=		http://acert.ir.bbn.com/downloads/etcmanage/
+MASTER_SITES=		http://www.ir.bbn.com/~gdt/etcmanage/
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://acert.ir.bbn.com/downloads/etcmanage/
+HOMEPAGE=		http://www.ir.bbn.com/~gdt/etcmanage/
 COMMENT=		Automatically manage files in /etc
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
