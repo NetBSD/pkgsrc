@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2923 2011/11/16 04:18:41 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2924 2011/11/16 06:00:56 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4615,3 +4615,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/ffplay to 0.7.7nb1 [sbd 2011-11-16]
 	Updated sysutils/dmg2img to 1.6.1nb2 [sbd 2011-11-16]
 	Updated mail/dovecot to 1.2.17nb3 [sbd 2011-11-16]
+	Updated games/freeciv-server to 2.2.2nb2 [sbd 2011-11-16]
