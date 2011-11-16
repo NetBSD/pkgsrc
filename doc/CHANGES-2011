@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2929 2011/11/16 08:00:42 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2930 2011/11/16 08:08:10 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4622,3 +4622,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/opensc to 0.11.13nb3 [sbd 2011-11-16]
 	Updated security/gnupg2 to 2.0.18nb2 [sbd 2011-11-16]
 	Updated devel/p5-Test-Fatal to 0.008 [sno 2011-11-16]
+	Updated databases/p5-DBIx-SearchBuilder to 1.61 [hiramatsu 2011-11-16]
+	Updated devel/p5-Class-XSAccessor to 1.12 [hiramatsu 2011-11-16]
+	Updated devel/p5-Module-Starter to 1.580 [hiramatsu 2011-11-16]
+	Updated www/p5-Plack-App-Proxy to 0.19 [hiramatsu 2011-11-16]
+	Updated www/p5-HTTP-Body to 1.14 [hiramatsu 2011-11-16]
