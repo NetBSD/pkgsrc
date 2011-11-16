@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2011/09/12 17:18:52 drochner Exp $
+# $NetBSD: Makefile.common,v 1.12.2.1 2011/11/16 21:07:03 sbd Exp $
 # used by multimedia/ffplay/Makefile
 # used by multimedia/ffmpeg/Makefile
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.ffmpeg.org/releases/ \
 		http://irkmaffia.com/~ahoka/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
-DISTVERSION=	0.7.4
+DISTVERSION=	0.7.7
 PREV_PKGPATH=	multimedia/ffmpeg-devel
 PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg/patches
 
