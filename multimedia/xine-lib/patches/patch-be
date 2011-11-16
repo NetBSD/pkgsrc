@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.9 2009/02/19 12:58:03 drochner Exp $
+$NetBSD: patch-be,v 1.10 2011/11/16 19:45:37 drochner Exp $
 
---- src/audio_out/Makefile.in.orig	2009-02-10 19:34:49.000000000 +0100
+--- src/audio_out/Makefile.in.orig	2011-11-13 01:37:24.000000000 +0000
 +++ src/audio_out/Makefile.in
-@@ -419,6 +419,7 @@ OBJDUMP = @OBJDUMP@
+@@ -458,6 +458,7 @@ OBJDUMP = @OBJDUMP@
  OBJEXT = @OBJEXT@
  OPENGL_CFLAGS = @OPENGL_CFLAGS@
  OPENGL_LIBS = @OPENGL_LIBS@
@@ -10,12 +10,12 @@ $NetBSD: patch-be,v 1.9 2009/02/19 12:58:03 drochner Exp $
  OTOOL = @OTOOL@
  OTOOL64 = @OTOOL64@
  PACKAGE = @PACKAGE@
-@@ -615,7 +616,7 @@ xineplug_ao_out_file_la_LIBADD = $(XINE_
+@@ -662,7 +663,7 @@ xineplug_ao_out_file_la_SOURCES = audio_
+ xineplug_ao_out_file_la_LIBADD = $(XINE_LIB) $(LTLIBINTL)
  xineplug_ao_out_file_la_CFLAGS = $(VISIBILITY_FLAG)
- xineplug_ao_out_file_la_LDFLAGS = -avoid-version -module
  xineplug_ao_out_oss_la_SOURCES = audio_oss_out.c
 -xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB) $(LTLIBINTL)
 +xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB) $(LTLIBINTL) $(OSS_LIBS)
  xineplug_ao_out_oss_la_CFLAGS = $(VISIBILITY_FLAG)
- xineplug_ao_out_oss_la_LDFLAGS = -avoid-version -module
  xineplug_ao_out_alsa_la_SOURCES = audio_alsa_out.c
+ xineplug_ao_out_alsa_la_LIBADD = $(XINE_LIB) $(ALSA_LIBS) $(PTHREAD_LIBS) $(LTLIBINTL)
