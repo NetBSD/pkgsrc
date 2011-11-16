@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/23 08:03:18 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/16 01:33:16 sbd Exp $
 #
 
 DISTNAME=	libdlna-0.2.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://libdlna.geexbox.org/releases/
 EXTRACT_SUFX=	.tar.bz2
