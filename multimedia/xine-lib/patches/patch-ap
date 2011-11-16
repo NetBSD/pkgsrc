@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.9 2010/04/13 15:09:40 drochner Exp $
+$NetBSD: patch-ap,v 1.10 2011/11/16 19:45:37 drochner Exp $
 
---- src/dxr3/Makefile.am.orig	2010-02-24 01:18:20.000000000 +0000
+--- src/dxr3/Makefile.am.orig	2011-10-04 21:42:53.000000000 +0000
 +++ src/dxr3/Makefile.am
 @@ -17,6 +17,9 @@ endif
  if HAVE_LIBRTE
@@ -19,5 +19,5 @@ $NetBSD: patch-ap,v 1.9 2010/04/13 15:09:40 drochner Exp $
 -xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm
 +xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_xinerama) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm
  xineplug_vo_out_dxr3_la_CFLAGS = $(VISIBILITY_FLAG) $(AM_CFLAGS)
- xineplug_vo_out_dxr3_la_LDFLAGS = -avoid-version -module
+ xineplug_vo_out_dxr3_la_LDFLAGS = $(xineplug_ldflags)
  
