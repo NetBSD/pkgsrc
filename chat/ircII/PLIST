@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/11/15 09:41:40 mrg Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/11/16 08:28:29 tron Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -238,6 +238,7 @@ share/irc/help/note/wall${GZSUFFIX}
 share/irc/help/note/wallops${GZSUFFIX}
 share/irc/help/notice${GZSUFFIX}
 share/irc/help/notify${GZSUFFIX}
+share/irc/help/nuser${GZSUFFIX}
 share/irc/help/on/action${GZSUFFIX}
 share/irc/help/on/channel_nick${GZSUFFIX}
 share/irc/help/on/channel_signoff${GZSUFFIX}
