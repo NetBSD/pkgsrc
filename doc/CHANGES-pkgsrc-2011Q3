@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.38 2011/11/13 20:43:18 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.39 2011/11/16 21:08:18 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -155,3 +155,7 @@ Pullup ticket #3595 - requested by dholland
 security/qca-tls: build fix:
 Pullup ticket #3602 - requested by tron
 databases/phpmyadmin security update
+Pullup ticket #3603 - requested by obache
+net/proftpd security update
+Pullup ticket #3604 - requested by drochner
+multimedia/ffmpeg security update
