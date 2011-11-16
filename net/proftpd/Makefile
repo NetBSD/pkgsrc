@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2011/10/03 11:23:31 adam Exp $
+# $NetBSD: Makefile,v 1.65 2011/11/16 09:05:03 obache Exp $
 
-DISTNAME=	proftpd-1.3.3f
+DISTNAME=	proftpd-1.3.3g
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
