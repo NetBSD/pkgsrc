@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/04/26 15:39:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/11/16 06:07:42 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-report-statistics
@@ -195,6 +195,7 @@ share/doc/milter-manager/ja/install.html
 share/doc/milter-manager/ja/introduction.html
 share/doc/milter-manager/ja/left.png
 share/doc/milter-manager/ja/libmilter-compatible.xml
+share/doc/milter-manager/ja/log-list.html
 share/doc/milter-manager/ja/manager.xml
 share/doc/milter-manager/ja/mfapi.xml
 share/doc/milter-manager/ja/mfdef.xml
@@ -239,7 +240,6 @@ share/doc/milter-manager/ja/milter-manager-process-launcher.xml
 share/doc/milter-manager/ja/milter-manager-reply-decoder.xml
 share/doc/milter-manager/ja/milter-manager-reply-encoder.xml
 share/doc/milter-manager/ja/milter-manager-reply-protocol.xml
-share/doc/milter-manager/ja/milter-manager.devhelp
 share/doc/milter-manager/ja/milter-manager.devhelp2
 share/doc/milter-manager/ja/milter-manager.html
 share/doc/milter-manager/ja/milter-manager.xml
@@ -288,11 +288,11 @@ share/doc/milter-manager/ja/upgrade-options-on-ubuntu.html
 share/doc/milter-manager/ja/upgrade.html
 share/doc/milter-manager/ja/users.html
 share/doc/milter-manager/left.png
+share/doc/milter-manager/log-list.html
 share/doc/milter-manager/milter-manager-admin-ja.png
 share/doc/milter-manager/milter-manager-admin.png
 share/doc/milter-manager/milter-manager-log-analyzer-graphs.png
 share/doc/milter-manager/milter-manager-log-analyzer.html
-share/doc/milter-manager/milter-manager.devhelp
 share/doc/milter-manager/milter-manager.devhelp2
 share/doc/milter-manager/milter-manager.html
 share/doc/milter-manager/milter-performance-check.html
