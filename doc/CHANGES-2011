@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2943 2011/11/16 11:15:29 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2944 2011/11/16 19:33:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4649,3 +4649,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/generator-cbiere to 0.35r4nb2 [sbd 2011-11-16]
 	Updated devel/p5-Storable to 2.30 [sno 2011-11-16]
 	Added fonts/roboto-fonts version 20111115 [ryoon 2011-11-16]
+	Updated sysutils/etcmanage to 0.8 [gdt 2011-11-16]
