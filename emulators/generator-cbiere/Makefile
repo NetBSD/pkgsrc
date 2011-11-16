@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2011/04/22 13:43:29 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/11/16 09:22:25 sbd Exp $
 #
 
 DISTNAME=	generator-0.35-cbiere-r4
 PKGNAME=	generator-cbiere-0.35r4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.squish.net/generator/cbiere/generator/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,6 +39,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/main/generator-gtk \
 		${DESTDIR}${PREFIX}/bin/generator-cbiere-gtk
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
