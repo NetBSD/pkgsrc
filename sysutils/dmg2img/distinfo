@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/29 04:24:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2011/11/16 03:53:11 sbd Exp $
 
 SHA1 (dmg2img-1.6.1.tar.gz) = 92d27819a79757b2d847b7c7b872431e02c37704
 RMD160 (dmg2img-1.6.1.tar.gz) = fe9afa6b92ac743166e704a6c49183247f3b3c58
 Size (dmg2img-1.6.1.tar.gz) = 38025 bytes
-SHA1 (patch-aa) = 8a5c3e3d758ed938e50694f581d66c8160e7d217
+SHA1 (patch-aa) = 3dee9a84b3a456febf73e53f37ec4b5c924ee17e
