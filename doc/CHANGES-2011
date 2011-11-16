@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2936 2011/11/16 08:31:50 sno Exp $
+$NetBSD: CHANGES-2011,v 1.2937 2011/11/16 08:38:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4642,3 +4642,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/gnutls to 2.12.14nb1 [sbd 2011-11-16]
 	Updated chat/ircII to 20111115nb2 [tron 2011-11-16]
 	Updated textproc/p5-YAML to 0.77 [sno 2011-11-16]
+	Updated textproc/p5-YAML-LibYAML to 0.37 [sno 2011-11-16]
