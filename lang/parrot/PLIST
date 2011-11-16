@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2011/08/26 08:30:30 he Exp $
+@comment $NetBSD: PLIST,v 1.28 2011/11/16 14:32:53 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -193,6 +193,7 @@ lib/parrot/${PKGVERSION}/dynext/math_ops.so
 lib/parrot/${PKGVERSION}/dynext/obscure_ops.so
 lib/parrot/${PKGVERSION}/dynext/os.so
 lib/parrot/${PKGVERSION}/dynext/rational.so
+lib/parrot/${PKGVERSION}/dynext/select.so
 lib/parrot/${PKGVERSION}/dynext/sys_ops.so
 lib/parrot/${PKGVERSION}/dynext/trans_ops.so
 lib/parrot/${PKGVERSION}/include/call_bits.pasm
@@ -441,7 +442,6 @@ lib/parrot/${PKGVERSION}/library/pcre.pbc
 lib/parrot/${PKGVERSION}/library/pcre.pir
 lib/parrot/${PKGVERSION}/library/postgres.declarations
 lib/parrot/${PKGVERSION}/library/postgres.pir
-lib/parrot/${PKGVERSION}/library/random_lib.pir
 lib/parrot/${PKGVERSION}/library/uuid.pbc
 lib/parrot/${PKGVERSION}/library/uuid.pir
 lib/parrot/${PKGVERSION}/library/yaml_dumper.pir
@@ -541,7 +541,6 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/SearchOps.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Harness.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/PGE.pm
-lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/PIR_PGE.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Pod.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Pod/Utils.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Test/Util.pm
@@ -550,7 +549,6 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/Vtable.pm
 share/doc/parrot/${PKGVERSION}/CREDITS
 share/doc/parrot/${PKGVERSION}/DONORS.pod
 share/doc/parrot/${PKGVERSION}/LICENSE
-share/doc/parrot/${PKGVERSION}/NEWS
 share/doc/parrot/${PKGVERSION}/PBC_COMPAT
 share/doc/parrot/${PKGVERSION}/PLATFORMS
 share/doc/parrot/${PKGVERSION}/README
