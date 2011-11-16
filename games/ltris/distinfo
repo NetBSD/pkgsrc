@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2011/06/09 17:08:00 drochner Exp $
+$NetBSD: distinfo,v 1.7 2011/11/16 20:02:30 drochner Exp $
 
-SHA1 (ltris-1.0.16.tar.gz) = 08785fc962ed83678b955f61a9a87a0215938123
-RMD160 (ltris-1.0.16.tar.gz) = 2b72c06954e6ff2d786f09993d996dde39c1d3a6
-Size (ltris-1.0.16.tar.gz) = 855146 bytes
+SHA1 (ltris-1.0.18.tar.gz) = 0197231b2dd5e2adb7aa68cec2ce1edf0867694c
+RMD160 (ltris-1.0.18.tar.gz) = 4a628146bb0d72eaa9b2f7710aacd2573a1e90af
+Size (ltris-1.0.18.tar.gz) = 856016 bytes
 SHA1 (patch-aa) = 951a8dba5a263338be2ff46d7faddc8216aa8345
 SHA1 (patch-ab) = 1b06b8a065fa6b4231a3b8d49f6111b37033e5aa
