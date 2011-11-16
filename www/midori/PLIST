@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/10/18 16:14:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/11/16 19:56:36 drochner Exp $
 bin/midori
 include/midori-0.4/extensions/history-list.h
 lib/midori/libadblock.so
@@ -26,7 +26,7 @@ share/doc/midori/EXPAT
 share/doc/midori/README
 share/doc/midori/faq.css
 share/doc/midori/faq.html
-share/examples/midori/extensions/libadblock.so/config
+share/examples/midori/extensions/adblock/config
 share/examples/midori/search
 share/icons/hicolor/16x16/apps/midori.png
 share/icons/hicolor/16x16/categories/extension.png
@@ -86,8 +86,9 @@ share/locale/zh_CN/LC_MESSAGES/midori.mo
 share/locale/zh_TW/LC_MESSAGES/midori.mo
 share/midori/res/autosuggestcontrol.css
 share/midori/res/autosuggestcontrol.js
+share/midori/res/close.png
 share/midori/res/error.html
 share/midori/res/logo-shade.png
-share/midori/res/speeddial-head.html
+share/midori/res/speeddial-head-0.4.2.html
 share/vala/vapi/history-list.deps
 share/vala/vapi/history-list.vapi

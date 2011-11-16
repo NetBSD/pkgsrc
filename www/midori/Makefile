@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2011/11/01 06:02:47 sbd Exp $
+# $NetBSD: Makefile,v 1.35 2011/11/16 19:56:36 drochner Exp $
 
-DISTNAME=	midori-0.4.1
-PKGREVISION=	1
+DISTNAME=	midori-0.4.2
 CATEGORIES=	www
 MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.4/
 
@@ -34,9 +33,9 @@ CONF_FILES=		${EGDIR}/search ${PKG_SYSCONFDIR}/xdg/midori/search
 
 .include "../../mk/bsd.prefs.mk"
 
-OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/midori/extensions/libadblock.so
-CONF_FILES+=	${EGDIR}/extensions/libadblock.so/config \
-		${PKG_SYSCONFDIR}/xdg/midori/extensions/libadblock.so/config
+OWN_DIRS+=	${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock
+CONF_FILES+=	${EGDIR}/extensions/adblock/config \
+		${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock/config
 
 # XXX stupid hack. python has a marshal.h that gets included before
 # the local marshal.h
