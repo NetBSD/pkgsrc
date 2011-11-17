@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2958 2011/11/17 19:28:10 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2959 2011/11/17 20:48:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4676,3 +4676,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkg_summary-utils to 0.56.3 [cheusov 2011-11-17]
 	Updated fonts/droid-ttf to 20111115 [ryoon 2011-11-17]
 	Updated fonts/roboto-fonts to 20111115a [ryoon 2011-11-17]
+	Updated fonts/motoya-fonts to 20111115 [ryoon 2011-11-17]
