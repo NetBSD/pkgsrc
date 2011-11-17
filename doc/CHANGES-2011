@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2954 2011/11/17 18:17:14 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2955 2011/11/17 18:18:01 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTML-Selector-XPath to 0.11 [hiramatsu 2011-11-17]
 	Updated filesystems/perfuse to 20111117 [manu 2011-11-17]
 	Updated fonts/linux-libertine-ttf to 5.1.3 [ryoon 2011-11-17]
+	Updated devel/libftdi to 0.19 [jakllsch 2011-11-17]
