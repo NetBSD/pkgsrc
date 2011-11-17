@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10672 2011/11/13 23:51:05 wiz Exp $
+$NetBSD: TODO,v 1.10673 2011/11/17 08:11:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7.14
 	o TiffIO-130e
 	o XaoS-3.5
 	o YoSucker-81
@@ -400,7 +399,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
 	o asymptote-2.13
-	o at-spi-2.2.1
+	o at-spi-2.2.3
 	o aterm-1.0.1
 	o atk-2.2.0
 	o audacious-plugins-2.4.4
@@ -454,7 +453,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o celestia-1.6.0
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
-	o cheese-3.2.1
+	o cheese-3.2.2
 	o cherokee-1.2.101
 	o chromium-0.9.15
 	o chrony-1.26
@@ -669,6 +668,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcompris-9.5
 	o gcpio-2.10
 	o gdb-7.3a
+	o gdbm-1.10
 	o gdeskcal-1.01
 	o gdl-2.30.1 [GNOME 2.32]
 	o gdl-3.2.0
@@ -689,7 +689,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gl-7.8.2 [pkgrc-wip]
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
-	o glib2-2.30.1
+	o glib2-2.30.2
 	o global-6.1
 	o glom-1.14.2 [GNOME 2.26]
 	o glpk-4.47
@@ -702,7 +702,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.2.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
-	o gnome-keyring-3.2.1
+	o gnome-keyring-3.2.2
 	o gnome-mag-0.16.3
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
@@ -753,7 +753,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-vnc-0.4.3
 	o gtkmm-3.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.27
+	o gtkwave-3.3.28
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -764,6 +764,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gutenprint-5.2.7
 	o gvfs-1.6.7
 	o gworkspace-0.9.0
+	o gxine-0.5.906
 	o gzip-1.4
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
@@ -897,14 +898,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libextractor-0.6.2
 	o libffi-3.0.10
 	o libflash-0.4.13
-	o libfolks-0.6.4.1
+	o libfolks-0.6.5
 	o libfontenc-1.1.0
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.10.1
+	o libgee-0.6.3
 	o libgiigic-1.1.2
-	o libgnome-keyring-3.0.3
+	o libgnome-keyring-3.2.2
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.2.0
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
@@ -946,7 +948,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lmms-0.4.5
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
-	o ltris-1.0.18
 	o luit-1.1.0
 	o lwm-1.2.2
 	o lyx-2.0.0
@@ -967,7 +968,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
-	o mined-2011.17
+	o mined-2011.19
 	o minivmac-3.0.4
 	o miredo-1.2.4
 	o mirmon-1.37
@@ -1138,7 +1139,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
-	o py-gstreamer0.10-0.10.22
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-m2crypto-0.20.2
@@ -1159,14 +1159,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o raine-0.51.8
 	o randrproto-1.3.2
 	o rapidsvn-0.12
-	o raptor-2.0.3
+	o raptor-2.0.5
 	o rasqal-0.9.27 [needs raptor-2.0.0]
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8
 	o rdp-1.6
 	o recordproto-1.14.1
-	o redland-1.0.14 [needs rasqal-0.9.22]
+	o redland-1.0.14.1 [needs rasqal-0.9.22]
 	o remind-3.1.10
 	o rendercheck-1.4
 	o renderproto-0.11.1
@@ -1213,7 +1213,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o seahorse-2.32.0 [GNOME 2.32]
-	o seahorse-3.2.1
+	o seahorse-3.2.2
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1298,7 +1298,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.4.2 [GNOME 2.32]
-	o tomboy-1.6.0
+	o tomboy-1.8.3
 	o top-3.8beta1
 	o tor-0.2.2.33
 	o tpasm-1.2
@@ -1340,9 +1340,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vifm-0.5
 	o vile-9.8
 	o vim-7.3
-	o vinagre-3.2.1
+	o vinagre-3.2.2
 	o vino-2.32.2 [GNOME 2.32]
-	o vino-3.2.1
+	o vino-3.2.2
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
