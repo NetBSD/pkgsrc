@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2011/11/16 14:32:53 he Exp $
+# $NetBSD: Makefile,v 1.51 2011/11/17 08:24:11 sbd Exp $
 #
 
 VERSION=		3.8.0
 RTYPE=			devel
 DISTNAME=		parrot-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${RTYPE}/${VERSION}/
 
@@ -79,9 +80,9 @@ CHECK_WRKREF_SKIP+=	bin/parrot_nci_thunk_gen
 CHECK_WRKREF_SKIP+=	bin/pbc_merge
 CHECK_WRKREF_SKIP+=	bin/pbc_to_exe
 CHECK_WRKREF_SKIP+=	bin/winxed
-CHECK_WRKREF_SKIP+=	lib/parrot/${PKGVERSION}/include/config.fpmc
-CHECK_WRKREF_SKIP+=	lib/parrot/${PKGVERSION}/parrot_config.o
-CHECK_WRKREF_SKIP+=	lib/parrot/${PKGVERSION}/tools/lib/Parrot/Config/Generated.pm
+CHECK_WRKREF_SKIP+=	lib/parrot/${VERSION}/include/config.fpmc
+CHECK_WRKREF_SKIP+=	lib/parrot/${VERSION}/parrot_config.o
+CHECK_WRKREF_SKIP+=	lib/parrot/${VERSION}/tools/lib/Parrot/Config/Generated.pm
 
 # Does relink internally, so allow local rpath entries
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${WRKSRC}
@@ -91,4 +92,5 @@ pre-install:
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
