@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.30 2011/10/04 14:15:35 hans Exp $
+# $NetBSD: builtin.mk,v 1.31 2011/11/17 13:03:19 obache Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -104,6 +104,7 @@ BUILTIN_VERSION.openssl=	0.9.7h
 BUILTIN_PKG.openssl=	openssl-${BUILTIN_VERSION.openssl}
 .endif
 MAKEVARS+=	BUILTIN_PKG.openssl
+MAKEVARS+=	BUILTIN_VERSION.openssl
 
 .if !defined(BUILTIN_OPENSSL_HAS_THREADS) && \
     !empty(IS_BUILTIN.openssl:M[yY][eE][sS]) && \
