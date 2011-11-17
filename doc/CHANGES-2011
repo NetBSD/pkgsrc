@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2950 2011/11/17 11:13:19 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2951 2011/11/17 12:44:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4664,3 +4664,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTTP-Parser to 0.06 [hiramatsu 2011-11-17]
 	Updated www/p5-HTTP-Parser-XS to 0.14 [hiramatsu 2011-11-17]
 	Updated fonts/vlgothic-ttf to 20110722 [ryoon 2011-11-17]
+	Updated databases/phpldapadmin to 1.2.2 [obache 2011-11-17]
