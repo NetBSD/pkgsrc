@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2948 2011/11/17 08:24:23 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2949 2011/11/17 09:12:03 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4658,3 +4658,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTML-StickyQuery to 0.13 [hiramatsu 2011-11-17]
 	Updated mail/dovecot2 to 2.0.16 [ghen 2011-11-17]
 	Updated lang/parrot to 3.8.0nb1 [sbd 2011-11-17]
+	Updated databases/p5-Jifty-DBI to 0.72 [hiramatsu 2011-11-17]
+	Updated devel/p5-Log-Report to 0.94 [hiramatsu 2011-11-17]
+	Updated net/p5-DNS-ZoneParse to 1.10 [hiramatsu 2011-11-17]
+	Updated www/p5-HTTP-Parser to 0.06 [hiramatsu 2011-11-17]
+	Updated www/p5-HTTP-Parser-XS to 0.14 [hiramatsu 2011-11-17]
