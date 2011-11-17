@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/16 11:14:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/17 19:26:42 ryoon Exp $
 lib/X11/fonts/TTF/Roboto-Bold.ttf
 lib/X11/fonts/TTF/Roboto-BoldCondensed.ttf
 lib/X11/fonts/TTF/Roboto-BoldCondensedItalic.ttf
@@ -7,3 +7,4 @@ lib/X11/fonts/TTF/Roboto-Condensed.ttf
 lib/X11/fonts/TTF/Roboto-CondensedItalic.ttf
 lib/X11/fonts/TTF/Roboto-Italic.ttf
 lib/X11/fonts/TTF/Roboto-Regular.ttf
+share/doc/roboto-fonts/NOTICE
