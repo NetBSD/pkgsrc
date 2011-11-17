@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/14 19:38:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/17 19:43:11 ryoon Exp $
 #
 
 DISTNAME=	libalac-r3
 PKGNAME=	libalac-0.0.20111026
 CATEGORIES=	audio
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
