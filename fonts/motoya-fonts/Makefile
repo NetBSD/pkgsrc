@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/27 19:00:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/17 20:47:13 ryoon Exp $
 #
 
-DISTNAME=	motoya-al-fonts-20100921
-PKGNAME=	${DISTNAME:S/-al//}
+DISTNAME=	motoya-fonts-20111115
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_FREEBSD_LOCAL:=hrs/}
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://android.git.kernel.org/?p=platform/frameworks/base.git;a=tree;f=data/fonts
+HOMEPAGE=	http://source.android.com/
 COMMENT=	Motoya L Cider W3 and L Mulberry W3 fonts
 LICENSE=	apache-2.0
 
@@ -29,8 +28,7 @@ INSTALLATION_DIRS=	lib/X11/fonts/TTF \
 INSTALL_FONTS=	MTLc3m.ttf \
 		MTLmr3m.ttf
 
-INSTALL_DOCS=	NOTICE \
-		newsrelease20100921.pdf
+INSTALL_DOCS=	NOTICE
 
 do-install:
 .for f in ${INSTALL_FONTS}
