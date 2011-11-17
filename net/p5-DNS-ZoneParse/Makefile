@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2011/08/14 14:14:41 obache Exp $
+# $NetBSD: Makefile,v 1.19 2011/11/17 09:10:13 hiramatsu Exp $
 #
 
-DISTNAME=	DNS-ZoneParse-1.00
+DISTNAME=	DNS-ZoneParse-1.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 SVR4_PKGNAME=	p5dzp
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DNS/}
@@ -11,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DNS/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DNS-ZoneParse/
 COMMENT=	Perl5 module for parsing DNS zone files
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
