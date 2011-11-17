@@ -1,4 +1,4 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.3 2011/11/15 21:19:02 jakllsch Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.4 2011/11/17 08:12:40 wiz Exp $
 
 Various thing to possibly improve portability.
 
@@ -19,7 +19,7 @@ Various thing to possibly improve portability.
  		else()
 -			set(MARCH "-mtune=generic")
 +			MESSAGE("-- Checking for -mtune=generic support")
-+			CHECK_C_COMPILER_FLAG("-mtuen=generic" MTUNEGENERIC)
++			CHECK_C_COMPILER_FLAG("-mtune=generic" MTUNEGENERIC)
 +			if (MTUNEGENERIC)
 +				set(MARCH "-mtune=generic")
 +			endif()
@@ -28,7 +28,7 @@ Various thing to possibly improve portability.
  else()
 - 	set(MARCH "-mtune=generic")
 +	MESSAGE("-- Checking for -mtune=generic support")
-+	CHECK_C_COMPILER_FLAG("-mtuen=generic" MTUNEGENERIC)
++	CHECK_C_COMPILER_FLAG("-mtune=generic" MTUNEGENERIC)
 +	if (MTUNEGENERIC)
 +		set(MARCH "-mtune=generic")
 +	endif()
