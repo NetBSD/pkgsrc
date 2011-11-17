@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.39 2011/11/16 21:08:18 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.40 2011/11/17 01:27:31 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -159,3 +159,9 @@ Pullup ticket #3603 - requested by obache
 net/proftpd security update
 Pullup ticket #3604 - requested by drochner
 multimedia/ffmpeg security update
+Pullup ticket #3605 - requested by spz
+net/bind98 security update
+Pullup ticket #3606 - requested by spz
+net/bind97 security update
+Pullup ticket #3607 - requested by spz
+net/bind96 security update
