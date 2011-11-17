@@ -1,4 +1,4 @@
-MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR} INSTALL=${INSTALL}
 
 do-configure:
 	set -e; cd ${WRKSRC}; \
