@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2955 2011/11/17 18:18:01 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.2956 2011/11/17 18:48:02 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4673,3 +4673,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/perfuse to 20111117 [manu 2011-11-17]
 	Updated fonts/linux-libertine-ttf to 5.1.3 [ryoon 2011-11-17]
 	Updated devel/libftdi to 0.19 [jakllsch 2011-11-17]
+	Updated pkgtools/pkg_summary-utils to 0.56.3 [cheusov 2011-11-17]
