@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/16 11:14:10 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2011/11/17 19:26:42 ryoon Exp $
 
-SHA1 (roboto-fonts-20111115.tar.bz2) = 4dd989bf9498ce8b499b7e7da12cb5c5a2f51890
-RMD160 (roboto-fonts-20111115.tar.bz2) = 804f0d34c2134e7bc86792abcbfc1268b94372aa
-Size (roboto-fonts-20111115.tar.bz2) = 283138 bytes
+SHA1 (roboto-fonts-20111115a.tar.bz2) = 155d5683b966aafa864a8357ced1b8aa7e72811e
+RMD160 (roboto-fonts-20111115a.tar.bz2) = 4e9bc2f452f082d673d077b4fa29aa6d7a9e72da
+Size (roboto-fonts-20111115a.tar.bz2) = 287416 bytes
