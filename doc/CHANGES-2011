@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2952 2011/11/17 14:16:10 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2953 2011/11/17 15:27:22 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4670,3 +4670,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/p5-Crypt-OpenPGP to 1.06 [hiramatsu 2011-11-17]
 	Updated www/p5-Plack-Middleware-File-Sass to 0.03 [hiramatsu 2011-11-17]
 	Updated www/p5-HTML-Selector-XPath to 0.11 [hiramatsu 2011-11-17]
+	Updated filesystems/perfuse to 20111117 [manu 2011-11-17]
