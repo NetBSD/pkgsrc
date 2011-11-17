@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2946 2011/11/17 08:06:38 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2947 2011/11/17 08:13:40 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4656,3 +4656,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Net-FastCGI to 0.13 [hiramatsu 2011-11-17]
 	Updated security/p5-Crypt-RIPEMD160 to 0.05 [hiramatsu 2011-11-17]
 	Updated www/p5-HTML-StickyQuery to 0.13 [hiramatsu 2011-11-17]
+	Updated mail/dovecot2 to 2.0.16 [ghen 2011-11-17]
