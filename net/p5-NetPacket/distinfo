@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/09/01 20:58:08 sno Exp $
+$NetBSD: distinfo,v 1.5 2011/11/17 14:13:04 hiramatsu Exp $
 
-SHA1 (NetPacket-0.43.1.tar.gz) = b75f134e20d7e3daedda0343057c39c4ed0d6291
-RMD160 (NetPacket-0.43.1.tar.gz) = 5b319b902c27009835544e279c00d10a49c19129
-Size (NetPacket-0.43.1.tar.gz) = 23428 bytes
+SHA1 (NetPacket-1.3.0.tar.gz) = 120d94953534fc49fa8b2cc140452a719481b283
+RMD160 (NetPacket-1.3.0.tar.gz) = 7c7577a15588211a685330da957093dd624f57f3
+Size (NetPacket-1.3.0.tar.gz) = 28112 bytes
