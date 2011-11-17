@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/11 10:56:02 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/11/17 18:47:42 cheusov Exp $
 bin/cvs_checksum
 bin/pkg_assignments2pkgpath
 bin/pkg_bin_summary
@@ -24,6 +24,7 @@ bin/pkg_update_src_summary
 bin/pkg_update_summary
 libexec/psu/XB2bin_summary
 libexec/psu/direct_deps
+libexec/psu/enrich_summary
 libexec/psu/get_processed_pkgs
 libexec/psu/summary2multi_variants
 man/man1/cvs_checksum.1
