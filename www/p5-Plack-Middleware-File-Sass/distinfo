@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/09 04:25:16 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/11/17 14:14:39 hiramatsu Exp $
 
-SHA1 (Plack-Middleware-File-Sass-0.01.tar.gz) = c8134e60f3241a7b71c0ba729cce3dcc6641ef04
-RMD160 (Plack-Middleware-File-Sass-0.01.tar.gz) = 5385bb0fee43f10a0e13c94dba16ffcf11b44b04
-Size (Plack-Middleware-File-Sass-0.01.tar.gz) = 19198 bytes
+SHA1 (Plack-Middleware-File-Sass-0.03.tar.gz) = b4d06401396ee3b7b4aeee0318cb96594eef0d54
+RMD160 (Plack-Middleware-File-Sass-0.03.tar.gz) = 216e9e7779c67929f5d50e2492a8c263329739be
+Size (Plack-Middleware-File-Sass-0.03.tar.gz) = 22853 bytes
