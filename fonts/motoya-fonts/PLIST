@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/27 19:00:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/17 20:47:13 ryoon Exp $
 lib/X11/fonts/TTF/MTLc3m.ttf
 lib/X11/fonts/TTF/MTLmr3m.ttf
 share/doc/motoya-fonts/NOTICE
-share/doc/motoya-fonts/newsrelease${PKGVERSION}.pdf

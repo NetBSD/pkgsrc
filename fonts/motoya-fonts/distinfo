@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/27 19:00:50 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2011/11/17 20:47:13 ryoon Exp $
 
-SHA1 (motoya-al-fonts-20100921.tar.bz2) = e5b1501ec09118539beae17e3492fd6fb32052ad
-RMD160 (motoya-al-fonts-20100921.tar.bz2) = 7c514c8ddfb1aeac756386ed7953683f31dfe5af
-Size (motoya-al-fonts-20100921.tar.bz2) = 2933997 bytes
+SHA1 (motoya-fonts-20111115.tar.bz2) = 7c47234136f1babbd4505cc4fde21be264c413f6
+RMD160 (motoya-fonts-20111115.tar.bz2) = 9cb3a19d5945d25adf088cd6e0b5b8229f5add12
+Size (motoya-fonts-20111115.tar.bz2) = 2816729 bytes
