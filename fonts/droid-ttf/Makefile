@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/25 13:37:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/17 19:16:08 ryoon Exp $
 #
 
-DISTNAME=	droid-fonts-20100923
+DISTNAME=	droid-fonts-20111115
 PKGNAME=	${DISTNAME:S/fonts/ttf/}
 CATEGORIES=	fonts
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -26,12 +26,21 @@ FONTS_DIRS.ttf=	${FONTDIR}
 INSTALLATION_DIRS=	lib/X11/fonts/TTF \
 			${DOCSDIR}
 
-INSTALL_FONTS=	DroidSans-Bold.ttf \
+INSTALL_FONTS=	DroidKufi-Bold.ttf \
+		DroidKufi-Regular.ttf \
+		DroidNaskh-Bold.ttf \
+		DroidNaskh-Regular.ttf \
+		DroidSans-Bold.ttf \
 		DroidSans.ttf \
-		DroidSansArabic.ttf \
+		DroidSansArmenian.ttf \
+		DroidSansEthiopic-Bold.ttf \
+		DroidSansEthiopic-Regular.ttf \
 		DroidSansFallback.ttf \
+		DroidSansFallbackFull.ttf \
 		DroidSansFallbackLegacy.ttf \
-		DroidSansHebrew.ttf \
+		DroidSansGeorgian.ttf \
+		DroidSansHebrew-Bold.ttf \
+		DroidSansHebrew-Regular.ttf \
 		DroidSansJapanese.ttf \
 		DroidSansMono.ttf \
 		DroidSansThai.ttf \
@@ -39,8 +48,7 @@ INSTALL_FONTS=	DroidSans-Bold.ttf \
 		DroidSerif-BoldItalic.ttf \
 		DroidSerif-Italic.ttf \
 		DroidSerif-Regular.ttf
-INSTALL_DOCS=	NOTICE \
-		README.txt
+INSTALL_DOCS=	NOTICE
 
 do-install:
 .for filename in ${INSTALL_FONTS}
