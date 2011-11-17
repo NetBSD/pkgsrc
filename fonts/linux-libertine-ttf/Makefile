@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/17 18:16:03 ryoon Exp $
 #
 
-DISTNAME=	LinLibertineTTF-2.1.0
-PKGNAME=	${DISTNAME:S/LinLibertineTTF/linux-libertine-ttf/}
+DISTNAME=	LinLibertineTTF_5.1.3_2011_06_21
+PKGNAME=	${DISTNAME:S/LinLibertineTTF_/linux-libertine-ttf-/:C/_[^_].*$//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linuxlibertine/}
 EXTRACT_SUFX=	.tgz
@@ -10,10 +10,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linuxlibertine.sourceforge.net/
 COMMENT=	Free TrueType font family
+#LICENSE=	gnu-gpl-v2 OR SIL OPEN FONT LICENSE Version 1.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/LinLibertineTTF
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -27,7 +28,9 @@ do-install:
 	cd ${WRKSRC} && for f in *.ttf ; do \
 		${INSTALL_DATA} $$f ${DESTDIR}${FONTDIR}/$$f; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/Readme ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/gpl.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/GPL.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/OFL.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"

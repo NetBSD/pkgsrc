@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/06 14:32:18 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/11/17 18:16:03 ryoon Exp $
 
-SHA1 (LinLibertineTTF-2.1.0.tgz) = f3a96cd8c917d8b75c79768de9ee06534efa1afb
-RMD160 (LinLibertineTTF-2.1.0.tgz) = e453aa0a334dccc3ab7f716cdae191e1d6fa7b79
-Size (LinLibertineTTF-2.1.0.tgz) = 2512967 bytes
+SHA1 (LinLibertineTTF_5.1.3_2011_06_21.tgz) = c9276e02b31a09999bb782c2a19207e6c86a3062
+RMD160 (LinLibertineTTF_5.1.3_2011_06_21.tgz) = 5ec2af6b8b0e64a43e9283bfbd3ad7dd718770e9
+Size (LinLibertineTTF_5.1.3_2011_06_21.tgz) = 15350516 bytes
