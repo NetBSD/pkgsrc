@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:36 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/11/17 08:04:22 hiramatsu Exp $
 
-SHA1 (HTML-StickyQuery-0.12.tar.gz) = 0f239ff9e343538fa634fc28121212b01cffc3b5
-RMD160 (HTML-StickyQuery-0.12.tar.gz) = a79ef78e295d8e0c02a9ac55f88d65355344e139
-Size (HTML-StickyQuery-0.12.tar.gz) = 6248 bytes
+SHA1 (HTML-StickyQuery-0.13.tar.gz) = 640a7dc9ad881fc245b9a9119c7d852f59606ca8
+RMD160 (HTML-StickyQuery-0.13.tar.gz) = 2f5a474696c35877e396877df374e9346937f71d
+Size (HTML-StickyQuery-0.13.tar.gz) = 28978 bytes
