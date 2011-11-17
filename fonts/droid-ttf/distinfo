@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/25 13:37:00 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2011/11/17 19:16:08 ryoon Exp $
 
-SHA1 (droid-fonts-20100923.tar.bz2) = 29c4de9cf4621dbb0319ff5b7aac2d0a6de8851f
-RMD160 (droid-fonts-20100923.tar.bz2) = 533cbe7aa608b696f42fc51c4b238c1518c016b2
-Size (droid-fonts-20100923.tar.bz2) = 4217900 bytes
+SHA1 (droid-fonts-20111115.tar.bz2) = 92bbcfc0e10a007d3ce98aa86e24316aa1962fa3
+RMD160 (droid-fonts-20111115.tar.bz2) = e4f8a16231b6523b597bad248279c6ee86575785
+Size (droid-fonts-20111115.tar.bz2) = 7099213 bytes
