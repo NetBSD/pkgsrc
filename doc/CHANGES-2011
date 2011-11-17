@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2945 2011/11/17 06:20:58 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2946 2011/11/17 08:06:38 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4651,3 +4651,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Added fonts/roboto-fonts version 20111115 [ryoon 2011-11-16]
 	Updated sysutils/etcmanage to 0.8 [gdt 2011-11-16]
 	Updated multimedia/gst-plugins0.10-good to 0.10.30nb1 [sbd 2011-11-17]
+	Updated textproc/p5-Text-Sass to 0.93 [hiramatsu 2011-11-17]
+	Updated math/p5-Spreadsheet-Read to 0.45 [hiramatsu 2011-11-17]
+	Updated www/p5-Net-FastCGI to 0.13 [hiramatsu 2011-11-17]
+	Updated security/p5-Crypt-RIPEMD160 to 0.05 [hiramatsu 2011-11-17]
+	Updated www/p5-HTML-StickyQuery to 0.13 [hiramatsu 2011-11-17]
