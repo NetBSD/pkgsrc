@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/16 11:14:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/17 19:26:42 ryoon Exp $
 #
 
-DISTNAME=	roboto-fonts-20111115
+DISTNAME=	roboto-fonts-20111115a
 CATEGORIES=	fonts
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -20,7 +20,8 @@ NO_BUILD=	yes
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF
+INSTALLATION_DIRS=	lib/X11/fonts/TTF \
+			${PREFIX}/share/doc/${PKGBASE}
 
 INSTALL_FONTS=	Roboto-Bold.ttf \
 		Roboto-BoldCondensed.ttf \
@@ -35,5 +36,6 @@ do-install:
 .for i in ${INSTALL_FONTS}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${FONTDIR}
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/NOTICE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
