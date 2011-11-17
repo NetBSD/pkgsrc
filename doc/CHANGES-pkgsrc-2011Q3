@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.40 2011/11/17 01:27:31 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.41 2011/11/17 21:52:28 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -165,3 +165,5 @@ Pullup ticket #3606 - requested by spz
 net/bind97 security update
 Pullup ticket #3607 - requested by spz
 net/bind96 security update
+Pullup ticket #3608 - requested by obache
+databases/phpldapadmin security fix
