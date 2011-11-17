@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2944 2011/11/16 19:33:05 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.2945 2011/11/17 06:20:58 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4650,3 +4650,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Storable to 2.30 [sno 2011-11-16]
 	Added fonts/roboto-fonts version 20111115 [ryoon 2011-11-16]
 	Updated sysutils/etcmanage to 0.8 [gdt 2011-11-16]
+	Updated multimedia/gst-plugins0.10-good to 0.10.30nb1 [sbd 2011-11-17]
