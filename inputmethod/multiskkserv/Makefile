@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/03/07 08:52:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/17 19:37:51 ryoon Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
 PKGNAME=	${DISTNAME:S/-ac//}
 CATEGORIES=	inputmethod japanese
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
