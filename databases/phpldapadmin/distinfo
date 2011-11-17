@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2011/06/17 15:40:33 taca Exp $
+$NetBSD: distinfo,v 1.11 2011/11/17 12:44:02 obache Exp $
 
-SHA1 (phpldapadmin-1.2.1.1.tgz) = f30d76205891fbd01fab468af1f8430597983787
-RMD160 (phpldapadmin-1.2.1.1.tgz) = c78bd0f056f7f5f8b150360e6ee0ef3f37d6560c
-Size (phpldapadmin-1.2.1.1.tgz) = 1468961 bytes
+SHA1 (phpldapadmin-1.2.2.tgz) = 2904923eb25173d108b556c70fb3d42cd6e0e289
+RMD160 (phpldapadmin-1.2.2.tgz) = dd93d9558c9780b014f066d070b496e2804b9565
+Size (phpldapadmin-1.2.2.tgz) = 1415565 bytes
