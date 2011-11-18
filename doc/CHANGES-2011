@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2964 2011/11/18 08:29:43 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2965 2011/11/18 08:31:25 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4688,3 +4688,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/yamcha to 0.33nb1 [sbd 2011-11-18]
 	Added devel/p5-MooseX-Daemonize version 0.13 [hiramatsu 2011-11-18]
 	Updated net/p5-SNMP-Info to 2.06 [hiramatsu 2011-11-18]
+	Updated audio/sox to 14.3.1nb2 [sbd 2011-11-18]
