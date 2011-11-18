@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/07/22 21:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2011/11/18 08:06:09 sbd Exp $
 
 DISTNAME=	nasm-2.07
 CATEGORIES=	devel lang
@@ -18,6 +18,7 @@ AUTO_MKDIRS=		yes
 USE_TOOLS+=		gmake makeinfo perl
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		NO
 
 INFO_FILES=		yes
 BUILD_TARGET=		everything
