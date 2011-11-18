@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/09/17 22:35:25 pettai Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/18 21:42:45 pettai Exp $
 #
 
-DISTNAME=	opendnssec-1.3.2
+DISTNAME=	opendnssec-1.3.3
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	ldns>=1.6.9:../../net/ldns
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.52:../../net/ruby-dnsruby
+DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.53:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -23,6 +23,7 @@ USE_TOOLS+=	bash gmake
 CONFIG_SHELL=	${BASH}
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+RUBY_VERSION_SUPPORTED=	18
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
