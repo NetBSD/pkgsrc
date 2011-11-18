@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2959 2011/11/17 20:48:03 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2960 2011/11/18 00:17:07 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4677,3 +4677,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/droid-ttf to 20111115 [ryoon 2011-11-17]
 	Updated fonts/roboto-fonts to 20111115a [ryoon 2011-11-17]
 	Updated fonts/motoya-fonts to 20111115 [ryoon 2011-11-17]
+	Updated devel/p5-Test-SharedFork to 0.18 [hiramatsu 2011-11-18]
+	Updated devel/p5-Data-Peek to 0.36 [hiramatsu 2011-11-18]
+	Updated mail/p5-Email-Valid to 0.185 [hiramatsu 2011-11-18]
+	Updated www/p5-Catalyst-Action-RenderView to 0.16 [hiramatsu 2011-11-18]
+	Updated www/p5-Continuity to 1.5 [hiramatsu 2011-11-18]
