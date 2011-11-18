@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2960 2011/11/18 00:17:07 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2961 2011/11/18 03:27:32 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4682,3 +4682,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/p5-Email-Valid to 0.185 [hiramatsu 2011-11-18]
 	Updated www/p5-Catalyst-Action-RenderView to 0.16 [hiramatsu 2011-11-18]
 	Updated www/p5-Continuity to 1.5 [hiramatsu 2011-11-18]
+	Added devel/p5-MooseX-SetOnce version 0.200001 [hiramatsu 2011-11-18]
+	Updated security/p5-Crypt-Eksblowfish to 0.009 [hiramatsu 2011-11-18]
