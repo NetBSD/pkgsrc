@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10674 2011/11/18 22:00:02 ryoon Exp $
+$NetBSD: TODO,v 1.10675 2011/11/18 22:47:47 pettai Exp $
 
 Suggested new packages
 ======================
@@ -862,7 +862,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ldapsdk-6.0.7
 	o leafnode-1.11.8
 	o level9-4.1
-	o lftp-4.3.3
 	o lgeneral-1.2.2
 	o libAppleWM-1.4.1
 	o libICE-1.0.7
