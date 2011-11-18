@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10673 2011/11/17 08:11:30 wiz Exp $
+$NetBSD: TODO,v 1.10674 2011/11/18 22:00:02 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o horde-4.0.11
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
-	o html2ps-1.0b5
 	o html2wml-0.4.11
 	o httping-1.5.2
 	o httptunnel-3.3
