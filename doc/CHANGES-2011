@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2961 2011/11/18 03:27:32 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2962 2011/11/18 04:02:07 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Continuity to 1.5 [hiramatsu 2011-11-18]
 	Added devel/p5-MooseX-SetOnce version 0.200001 [hiramatsu 2011-11-18]
 	Updated security/p5-Crypt-Eksblowfish to 0.009 [hiramatsu 2011-11-18]
+	Updated net/mldonkey to 3.1.0nb2 [sbd 2011-11-18]
