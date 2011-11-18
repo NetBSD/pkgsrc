@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/11 09:12:24 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/11/18 00:15:56 hiramatsu Exp $
 
-SHA1 (Continuity-1.1.1.tar.gz) = 1f9d69077507be5b41bab28ad719babd6e0298f5
-RMD160 (Continuity-1.1.1.tar.gz) = 006fa8e89ef64de08325a68d22d3617b0a19e78f
-Size (Continuity-1.1.1.tar.gz) = 80766 bytes
+SHA1 (Continuity-1.5.tar.gz) = 60e762d6efe3c5090db2127576aeba197af0b780
+RMD160 (Continuity-1.5.tar.gz) = 51fc4acf4cb110290c46be7281effa850e40039a
+Size (Continuity-1.5.tar.gz) = 73870 bytes
