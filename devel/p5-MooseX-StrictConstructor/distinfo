@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/09/23 22:20:29 sno Exp $
+$NetBSD: distinfo,v 1.5 2011/11/18 13:20:55 hiramatsu Exp $
 
-SHA1 (MooseX-StrictConstructor-0.11.tar.gz) = a75eb6edaae069683a496250eedd6231b6ed5046
-RMD160 (MooseX-StrictConstructor-0.11.tar.gz) = 470aa742ec3431d6c74cfc7fce1f69f6bd150a24
-Size (MooseX-StrictConstructor-0.11.tar.gz) = 10378 bytes
+SHA1 (MooseX-StrictConstructor-0.16.tar.gz) = 42f15291eea08a1f5c02fa2bf4a534452518d778
+RMD160 (MooseX-StrictConstructor-0.16.tar.gz) = ab68222c47023e9cea1423e3a5154b3c99418fb8
+Size (MooseX-StrictConstructor-0.16.tar.gz) = 10765 bytes
