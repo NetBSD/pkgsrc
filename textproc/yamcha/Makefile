@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/18 04:42:22 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/18 09:01:27 obache Exp $
 #
 
 .include "Makefile.common"
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	perl:run gzip:run gawk
+USE_TOOLS+=	perl:run gzip:run
 
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_PATH.gzip:Q}
 CONFIGURE_ARGS+=	--with-perl5=${PERL5:Q}
