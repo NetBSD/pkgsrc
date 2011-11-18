@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2967 2011/11/18 13:23:42 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2968 2011/11/18 19:54:02 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4693,3 +4693,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-StrictConstructor to 0.16 [hiramatsu 2011-11-18]
 	Updated www/p5-HTML-FormFu to 0.09005 [hiramatsu 2011-11-18]
 	Updated devel/p5-Test-Warn to 0.23 [hiramatsu 2011-11-18]
+	Updated wm/evilwm to 1.1.0 [sketch 2011-11-18]
