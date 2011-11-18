@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2011/11/18 21:44:00 ryoon Exp $
+$NetBSD: patch-aa,v 1.8 2011/11/18 21:59:01 ryoon Exp $
 
 --- install.orig	2005-03-03 12:25:29.000000000 +0000
 +++ install
@@ -181,7 +181,7 @@ $NetBSD: patch-aa,v 1.7 2011/11/18 21:44:00 ryoon Exp $
  undef $/;
  open(HTML2PS,"html2ps") || die "*** Error opening html2ps\n";
 -($code = <HTML2PS>) =~ s|\$globrc=.*|\$globrc='$glob${dirsep}html2psrc';|;
-+($code = <HTML2PS>) =~ s|\$globrc=.*|\$globrc='$iprefix${dirsep}${sharedir}${dirsep}html2psrc';|;
++($code = <HTML2PS>) =~ s|\$globrc=.*|\$globrc='$iprefix${dirsep}${sharedir}${dirsep}html2ps${dirsep}html2psrc';|;
  $code =~ s/exec \S+/exec $^X/;
 -$code =~ s|\$ug=.*|\$ug='$html${dirsep}html2ps.html';|;
 +$code =~ s|\$ug=.*|\$ug='$iprefix${dirsep}${sharedir}${dirsep}html2ps.html';|;
