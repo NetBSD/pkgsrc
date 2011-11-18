@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2971 2011/11/18 21:45:17 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2972 2011/11/18 22:00:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4697,3 +4697,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ruby-dnsruby to 1.53 [pettai 2011-11-18]
 	Updated chat/bitlbee to 3.0.3nb2 [tonio 2011-11-18]
 	Updated print/html2ps to 1.0b4nb6 [ryoon 2011-11-18]
+	Updated print/html2ps to 1.0b7 [ryoon 2011-11-18]
