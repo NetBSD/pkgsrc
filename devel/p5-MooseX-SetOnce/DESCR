@@ -1,0 +1,2 @@
+The 'SetOnce' attribute lets your class have attributes that are not
+lazy and not set, but that cannot be altered once set.
