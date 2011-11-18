@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2969 2011/11/18 20:14:07 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.2970 2011/11/18 21:08:07 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4695,3 +4695,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-Warn to 0.23 [hiramatsu 2011-11-18]
 	Updated wm/evilwm to 1.1.0 [sketch 2011-11-18]
 	Updated net/ruby-dnsruby to 1.53 [pettai 2011-11-18]
+	Updated chat/bitlbee to 3.0.3nb2 [tonio 2011-11-18]
