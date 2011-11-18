@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1529 2011/11/18 03:25:47 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.1530 2011/11/18 08:27:59 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -877,6 +877,7 @@ SUBDIR+=	p5-MooseX-Attributes-Curried
 SUBDIR+=	p5-MooseX-ChainedAccessors
 SUBDIR+=	p5-MooseX-ClassAttribute
 SUBDIR+=	p5-MooseX-ConfigFromFile
+SUBDIR+=	p5-MooseX-Daemonize
 SUBDIR+=	p5-MooseX-Declare
 SUBDIR+=	p5-MooseX-Emulate-Class-Accessor-Fast
 SUBDIR+=	p5-MooseX-FollowPBP
