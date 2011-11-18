@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 16:05:53 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/18 13:21:41 hiramatsu Exp $
 #
 
-DISTNAME=		HTML-FormFu-0.08002
+DISTNAME=		HTML-FormFu-0.09005
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
@@ -17,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Captcha-reCAPTCHA>=0.93:../../www/p5-Captcha-reCAPTCHA
 DEPENDS+=	p5-Class-Accessor-Chained-[0-9]*:../../devel/p5-Class-Accessor-Chained
-#DEPENDS+=	p5-Class-C3-[0-9]*:../../devel/p5-Class-C3
 DEPENDS+=	p5-Clone>=0.31:../../devel/p5-Clone
 DEPENDS+=	p5-Config-Any>=0.18:../../devel/p5-Config-Any
 DEPENDS+=	p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
@@ -38,6 +36,10 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	{perl>=5.10.0,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	{perl>=5.7.3,p5-Locale-Maketext-[0-9]*}:../../misc/p5-Locale-Maketext
 DEPENDS+=	{perl>=5.10.0,p5-Module-Pluggable-[0-9]*}:../../devel/p5-Module-Pluggable
+DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
+DEPENDS+=	p5-MooseX-ChainedAccessors>=0.02:../../devel/p5-MooseX-ChainedAccessors
+DEPENDS+=	p5-MooseX-Aliases-[0-9]*:../../devel/p5-MooseX-Aliases
+DEPENDS+=	p5-MooseX-SetOnce-[0-9]*:../../devel/p5-MooseX-SetOnce
 DEPENDS+=	p5-Number-Format-[0-9]*:../../textproc/p5-Number-Format
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
