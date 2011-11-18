@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.common,v 1.70 2011/11/17 13:26:44 obache Exp $
+# $NetBSD: Makefile.common,v 1.71 2011/11/18 07:27:43 obache Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-arts/Makefile
 # used by audio/xine-esound/Makefile
 # used by audio/xine-pulse/Makefile
+# used by multimedia/xine-v4l/Makefile
+# used by multimedia/xine-v4l2/Makefile
 
 DISTNAME=		xine-lib-1.1.20
 XINE_PKGNAME=		xine-lib-1.1.20
