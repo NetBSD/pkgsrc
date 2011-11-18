@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 07:37:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/11/18 20:13:37 pettai Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/DNSSEC
 ${GEM_LIBDIR}/EVENTMACHINE
@@ -27,7 +27,6 @@ ${GEM_LIBDIR}/lib/Dnsruby/SingleResolver.rb
 ${GEM_LIBDIR}/lib/Dnsruby/TheLog.rb
 ${GEM_LIBDIR}/lib/Dnsruby/code_mapper.rb
 ${GEM_LIBDIR}/lib/Dnsruby/dnssec.rb
-${GEM_LIBDIR}/lib/Dnsruby/iana_ports.rb
 ${GEM_LIBDIR}/lib/Dnsruby/ipv4.rb
 ${GEM_LIBDIR}/lib/Dnsruby/ipv6.rb
 ${GEM_LIBDIR}/lib/Dnsruby/key_cache.rb
