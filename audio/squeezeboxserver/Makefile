@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/09/12 10:58:09 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2011/11/18 02:38:01 joerg Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -50,6 +50,8 @@ MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.logitechsqueezebox.com/
 COMMENT=	Server for the family of networked audio players by Logitech
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_SUFX=	.tgz
 
@@ -124,8 +126,6 @@ DEPENDS+=	p5-XML-Simple>=2.15:../../textproc/p5-XML-Simple
 
 # Optional
 #DEPENDS+=	p5-Locale-Hebrew-[0-9]*:../../somewhere/p5-Locale-Hebrew
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL=	slimserver.pl scanner.pl
 
