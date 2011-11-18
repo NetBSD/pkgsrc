@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2968 2011/11/18 19:54:02 sketch Exp $
+$NetBSD: CHANGES-2011,v 1.2969 2011/11/18 20:14:07 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4694,3 +4694,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTML-FormFu to 0.09005 [hiramatsu 2011-11-18]
 	Updated devel/p5-Test-Warn to 0.23 [hiramatsu 2011-11-18]
 	Updated wm/evilwm to 1.1.0 [sketch 2011-11-18]
+	Updated net/ruby-dnsruby to 1.53 [pettai 2011-11-18]
