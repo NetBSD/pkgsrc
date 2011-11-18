@@ -1,18 +1,19 @@
-$NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
+$NetBSD: patch-aa,v 1.7 2011/11/18 21:44:00 ryoon Exp $
 
 --- install.orig	2005-03-03 12:25:29.000000000 +0000
 +++ install
-@@ -17,7 +17,8 @@ if(-e '/dev/null') {
+@@ -17,7 +17,9 @@ if(-e '/dev/null') {
      $pathsep = ':';
      $dirsep = '/';
      $sys = 'unix';
 -    $prefix = '/usr/local';
 +    $prefix = $ARGV[0];
 +    $mandir = $ARGV[1];
++    $iprefix = $ARGV[2];
  } elsif (-e 'nul') {
      $pathsep = ';';
      $dirsep = '\\';
-@@ -57,8 +58,8 @@ where the abovementioned packages are. Y
+@@ -57,8 +59,8 @@ where the abovementioned packages are. Y
  the directories where the files should be placed.
  EOD
  
@@ -23,7 +24,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
  
  print "\n";
  for $req (@perl) {
-@@ -134,19 +135,22 @@ if(@reqpath) {
+@@ -134,19 +136,22 @@ if(@reqpath) {
  
  chop ($cd = `pwd`);
  
@@ -58,7 +59,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
  
  if($def) {
      $bindir = "$prefix${dirsep}bin";
-@@ -159,9 +163,9 @@ if($def) {
+@@ -159,9 +164,9 @@ if($def) {
  &makedir($bindir,$def);
  
  if($def) {
@@ -70,7 +71,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
       "\nEnter the the directory where the global configuration file for\n"
      ."html2ps should be put");
      $glob =~ s|/$||g;
-@@ -174,7 +178,7 @@ if(-f "$glob${dirsep}html2psrc") {
+@@ -174,7 +179,7 @@ if(-f "$glob${dirsep}html2psrc") {
  }
  
  if($def) {
@@ -79,7 +80,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
  } else {
      &getval($man1, "$prefix${dirsep}man${dirsep}man1",
       "\nEnter the directory for the html2ps manual page");
-@@ -183,7 +187,7 @@ if($def) {
+@@ -183,7 +188,7 @@ if($def) {
  &makedir($man1,$def);
  
  if($def) {
@@ -88,7 +89,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
  } else {
      &getval($man5, "$prefix${dirsep}man${dirsep}man5",
       "\nEnter the directory for the manual page describing the configuration\n"
-@@ -198,7 +202,7 @@ $cophy = 1;
+@@ -198,7 +203,7 @@ $cophy = 1;
  if($exist{'TeX'}) {
      $hfile = "";
      ($texdir = $dir{'TeX'}) =~ s|/bin$||;
@@ -97,7 +98,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
          "lib/inputs","lib/tex/macros","lib/tex/inputs") {
          if(-f "$texdir/$_/ushyph1.tex") {
              $hyph = "$texdir/$_";
-@@ -212,15 +216,15 @@ if($exist{'TeX'}) {
+@@ -212,15 +217,15 @@ if($exist{'TeX'}) {
          }
      }
      if($hfile) {
@@ -121,7 +122,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
      } else {
          &getval($hfile, "", "$ht I cannot find the pattern\nfile for English "
           ."in your TeX installation. (It should be called\n'hyphen.tex', "
-@@ -236,9 +240,9 @@ if($exist{'TeX'}) {
+@@ -236,9 +241,9 @@ if($exist{'TeX'}) {
      }
      if(!$hfile) {
          if($def) {
@@ -133,7 +134,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
               "\nOK, I will use the supplied pattern file for English. Enter "
              ."the directory\nwhere this file should be put");
              &fixdir($hyph);
-@@ -246,9 +250,9 @@ if($exist{'TeX'}) {
+@@ -246,9 +251,9 @@ if($exist{'TeX'}) {
      }
  } else {
      if($def) {
@@ -145,7 +146,7 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
       ."included with html2ps (see the documentation how to install pattern\n"
       ."files for other languages). Enter the directory where this file\n"
       ."should be put");
-@@ -260,20 +264,21 @@ if($cophy) {
+@@ -260,20 +265,21 @@ if($cophy) {
  }
  
  if($def) {
@@ -175,7 +176,19 @@ $NetBSD: patch-aa,v 1.6 2010/05/06 09:17:27 sbd Exp $
  if($format !~ /^other$/i) {
      $paper .= "    type: $format;";
  } else {
-@@ -431,7 +436,7 @@ sub inst {
+@@ -292,9 +298,9 @@ close RC;
+ 
+ undef $/;
+ open(HTML2PS,"html2ps") || die "*** Error opening html2ps\n";
+-($code = <HTML2PS>) =~ s|\$globrc=.*|\$globrc='$glob${dirsep}html2psrc';|;
++($code = <HTML2PS>) =~ s|\$globrc=.*|\$globrc='$iprefix${dirsep}${sharedir}${dirsep}html2psrc';|;
+ $code =~ s/exec \S+/exec $^X/;
+-$code =~ s|\$ug=.*|\$ug='$html${dirsep}html2ps.html';|;
++$code =~ s|\$ug=.*|\$ug='$iprefix${dirsep}${sharedir}${dirsep}html2ps.html';|;
+ close HTML2PS;
+ open(HTML2PS,">html2ps") || die "*** Error opening html2ps\n";
+ print HTML2PS $code;
+@@ -431,7 +437,7 @@ sub inst {
      copy $from => $_[0].$dirsep.$_[1] or die "*** Cannot write to $_[0]\n";
  }
  sub goodprefix {

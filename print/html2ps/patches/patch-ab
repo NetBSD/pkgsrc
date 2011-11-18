@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.2 2005/07/08 19:23:28 hubertf Exp $
+$NetBSD: patch-ab,v 1.3 2011/11/18 21:44:00 ryoon Exp $
 
 This patch adds option "-C H" to include headers (only) in output.
 The patch was sent from the html2ps author Jan Karrman <jan@it.uu.se>
 to hubertf@NetBSD.org upon request for such a feature.  - HF
 
 
---- html2ps.orig	2005-02-25 14:40:42.000000000 +0100
+--- html2ps.orig	2005-02-25 13:40:42.000000000 +0000
 +++ html2ps
 @@ -521,7 +521,7 @@ $below=$opt_W=~/b/;
  $layer=$opt_W=~/L/;
