@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10676 2011/11/19 15:42:56 taca Exp $
+$NetBSD: TODO,v 1.10677 2011/11/19 17:16:06 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-transform-0.6.0
 	o apache-maven-3.0
 	o apache-tomcat6-6.0.33
-	o apache-tomcat7-7.0.20
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
 	o apsfilter-7.2.8
