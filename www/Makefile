@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.833 2011/11/17 04:29:58 jnemeth Exp $
+# $NetBSD: Makefile,v 1.834 2011/11/19 17:45:37 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -74,6 +74,7 @@ SUBDIR+=	apache
 SUBDIR+=	apache-roller
 SUBDIR+=	apache-tomcat55
 SUBDIR+=	apache-tomcat6
+SUBDIR+=	apache-tomcat7
 SUBDIR+=	apache2
 SUBDIR+=	apache22
 SUBDIR+=	apachetop
