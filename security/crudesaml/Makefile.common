@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2010/06/05 20:36:30 manu Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/11/19 17:22:37 manu Exp $
 #
 # used by security/cy2-saml/Makefile
 # used by security/pam-saml/Makefile
 
-DISTNAME=	crudesaml-1.1
+DISTNAME=	crudesaml-1.2
 CATEGORIES=	security
 MASTER_SITES=	http://ftp.espci.fr/pub/crudesaml/
 
