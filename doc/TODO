@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10677 2011/11/19 17:16:06 ryoon Exp $
+$NetBSD: TODO,v 1.10678 2011/11/19 17:41:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -435,7 +435,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20110908
 	o bzr-2.2.5
-	o bzr-2.4.2
+	o bzr-2.4.2 [pkgsrc-wip]
 	o bzr-svn-1.1.0
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
@@ -694,7 +694,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glpk-4.47
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.2.1
+	o gnome-3.2.2
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
@@ -745,7 +745,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13a
 	o gthumb-2.14.0
 	o gtick-0.4.2
-	o gtk2-2.24.8
 	o gtk3-3.2.2
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
@@ -1052,7 +1051,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0e
 	o openttd-1.1.3
 	o opera-11.51
-	o orc-0.4.16
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
@@ -1415,7 +1413,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-glide-1.0.3
 	o xf86-video-glint-1.2.6
 	o xf86-video-i128-1.3.4
-	o xf86-video-intel-2.15.0
+	o xf86-video-intel-2.17.0
 	o xf86-video-mach64-6.9.0
 	o xf86-video-mga-1.4.13
 	o xf86-video-neomagic-1.2.5
