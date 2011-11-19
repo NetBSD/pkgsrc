@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10675 2011/11/18 22:47:47 pettai Exp $
+$NetBSD: TODO,v 1.10676 2011/11/19 15:42:56 taca Exp $
 
 Suggested new packages
 ======================
@@ -994,8 +994,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o munin-server-1.4.6
 	o mupdf-0.9
 	o muse-0.9.2
-	o mysql-client-5.1.59
-	o mysql-server-5.1.59
+	o mysql-client-5.1.60
+	o mysql-client-5.5.18
+	o mysql-server-5.1.60
+	o mysql-server-5.5.18
 	o nano-2.2.6
 	o nap-1.5.3
 	o nas-1.9.3 [pkg/45449]
@@ -1352,6 +1354,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
+	o wdiff-1.1.0
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.560 [security]
 	o webmin-1.570
