@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.44.2.1 2011/11/02 20:37:12 tron Exp $
+$NetBSD: distinfo,v 1.44.2.2 2011/11/19 11:24:07 tron Exp $
 
-SHA1 (freetype-2.4.7.tar.bz2) = e1b2356ebbc6d39d813797572b1e5d8a2635e969
-RMD160 (freetype-2.4.7.tar.bz2) = 48abfcd4546cbd6626796ab121252e804ddcc6d8
-Size (freetype-2.4.7.tar.bz2) = 1490543 bytes
+SHA1 (freetype-2.4.8.tar.bz2) = 1634cef894460ab98dd37eadfcdd055ffda9a27c
+RMD160 (freetype-2.4.8.tar.bz2) = ae0e68a8a84a201ed133e964ee56c0cc0de84521
+Size (freetype-2.4.8.tar.bz2) = 1492568 bytes
 SHA1 (patch-aa) = 85bf9979802e04345a9f5ac3ada2cac9520dabcb
 SHA1 (patch-ab) = cb8c9552e2db1e1f3da3d20971c22f174e343162
