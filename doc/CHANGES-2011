@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2979 2011/11/19 17:22:37 manu Exp $
+$NetBSD: CHANGES-2011,v 1.2980 2011/11/19 17:30:50 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4714,3 +4714,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-rails3 to 3.0.11 [taca 2011-11-19]
 	Added www/apache-tomcat7 version 7.0.22 [ryoon 2011-11-19]
 	Updated security/crudesaml to 1.2 [manu 2011-11-19]
+	Updated misc/stellarium to 0.11.1 [jakllsch 2011-11-19]
