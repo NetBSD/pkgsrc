@@ -9,6 +9,26 @@ tree and NetBSD's pkgsrc packages using `pkgsrc/devel/distcc'
 Note that this current setup is not intended for build builds as it might
 confuse the buildbuild system.
 
+Terminology:
+------------
+
+There are multiple terminologies in use for cross building.  In pkgsrc, we use
+
+  build platform: the system on which you are doing the compilation of packages
+
+  target platform: the system on which you will run the packages
+
+(An alternative terminology is that used by autoconf:
+
+  build: as above
+  host: as "target", above
+  target: the architecture that the cross-built compiler produces code for
+
+pkgsrc chooses the more simple build/target terms because the Canadian
+Cross situation is not common in pkgsrc.  Partially because of the
+potential for confusion with autoconf's terminology, we avoid the word
+"host".
+
 Target machine setup:
 ---------------------
 1) install `pkgsrc/devel/distcc' package.
