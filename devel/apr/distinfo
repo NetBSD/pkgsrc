@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.32 2011/05/22 22:41:00 tron Exp $
+$NetBSD: distinfo,v 1.33 2011/11/19 21:16:22 alnsn Exp $
 
 SHA1 (apr-1.4.5.tar.bz2) = 517de5e3cc1e3be810d9bc95508ab66bb8ebe7cb
 RMD160 (apr-1.4.5.tar.bz2) = d2a966c1b143416cd3655cf849cb5d3cb1ca2c5f
 Size (apr-1.4.5.tar.bz2) = 754763 bytes
+SHA1 (patch-atomic_unix_ia32.c) = c51d5810ceb8438b04d7945a476fef96ea57a76a
+SHA1 (patch-test_testatomic.c) = 0905b0001e0d06b9c96beb1c32ee9ce9382f233f
