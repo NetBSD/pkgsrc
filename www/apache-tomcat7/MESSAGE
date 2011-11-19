@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/11/19 17:11:10 ryoon Exp $
+
+The ${PREFIX}/share/tomcat/webapps directory will be mercilessly mangled
+in updates, so pick a different directory for your own local appBase
+(in ${PREFIX}/share/tomcat/conf/server.xml). You have been warned. :)
+
+===========================================================================
