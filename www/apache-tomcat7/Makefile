@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/19 17:11:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/19 17:13:09 ryoon Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-7/v${TOMCAT_VER}/bin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tomcat.apache.org/
 COMMENT=	Implementation of Java Servlet and JavaServer Pages technologies
+LICENSE=	apache-2.0
 
 CONFLICTS+=	jakarta-tomcat55-[0-9]*
 CONFLICTS+=	jakarta-tomcat-[0-9]*
