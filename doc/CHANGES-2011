@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2975 2011/11/19 03:29:45 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2976 2011/11/19 12:01:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-PatchReader to 0.9.6 [hiramatsu 2011-11-19]
 	Updated www/p5-HTTP-Proxy to 0.25 [hiramatsu 2011-11-19]
 	Updated www/p5-LWP-Online to 1.08 [hiramatsu 2011-11-19]
+	Updated net/wireshark to 1.6.4 [tron 2011-11-19]
