@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/08/19 18:48:25 sno Exp $
+$NetBSD: distinfo,v 1.5 2011/11/19 03:28:23 hiramatsu Exp $
 
-SHA1 (HTTP-Proxy-0.24.tar.gz) = 7c6db7dc2004d5b1fb80507fc0446ca01f2fa8ba
-RMD160 (HTTP-Proxy-0.24.tar.gz) = 07493d4e2bc40d261eebdd072d4faeb35cee03ef
-Size (HTTP-Proxy-0.24.tar.gz) = 70018 bytes
+SHA1 (HTTP-Proxy-0.25.tar.gz) = 75b671b25f8cf70cb7999e8c477b81f72e5f1014
+RMD160 (HTTP-Proxy-0.25.tar.gz) = d0a4eb4230d2851e02e805f855abe1c7f3c160ae
+Size (HTTP-Proxy-0.25.tar.gz) = 86808 bytes
