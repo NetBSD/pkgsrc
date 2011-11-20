@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- ar/ar.c	2011/11/18 20:41:01	1.1
++++ ar/ar.c	2011/11/18 20:41:58
+@@ -370,7 +370,7 @@
+ 		    opt, bsdar->mode);
+ }
+ 
+-static const char *ar_usagemsg = "\
++static const char ar_usagemsg[] = "\
+ Usage: %s <command> [options] archive file...\n\
+   Manage archives.\n\n\
+   Where <command> is one of:\n\
+@@ -404,13 +404,13 @@
+ ";
+ 
+ static void
+-bsdar_usage()
++bsdar_usage(void)
+ {
+ 	(void) fprintf(stderr, ar_usagemsg, ELFTC_GETPROGNAME());
+ 	exit(EXIT_FAILURE);
+ }
+ 
+-static const char *ranlib_usagemsg = "\
++static const char ranlib_usagemsg[] = "\
+ Usage: %s [options] archive...\n\
+   Update or create archive symbol tables.\n\n\
+   Options:\n\
+@@ -420,14 +420,14 @@
+ ";
+ 
+ static void
+-ranlib_usage()
++ranlib_usage(void)
+ {
+ 	(void)fprintf(stderr, ranlib_usagemsg, ELFTC_GETPROGNAME());
+ 	exit(EXIT_FAILURE);
+ }
+ 
+ static void
+-bsdar_version()
++bsdar_version(void)
+ {
+ 	(void)printf("%s (%s, %s)\n", ELFTC_GETPROGNAME(), archive_version(),
+ 	    elftc_version());
