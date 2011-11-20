@@ -1,0 +1,33 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- elfcopy/main.c	2011/11/18 21:25:47	1.1
++++ elfcopy/main.c	2011/11/18 21:26:31
+@@ -1259,7 +1259,7 @@
+ 		errx(EXIT_FAILURE, "unrecognized OSABI %s", abi);
+ }
+ 
+-static const char *elfcopy_usagemsg = "\
++static const char elfcopy_usagemsg[] = "\
+ Usage: %s [options] infile [outfile]\n\
+   Transform an ELF object.\n\n\
+   Options:\n\
+@@ -1338,7 +1338,7 @@
+ 	exit(EXIT_FAILURE);
+ }
+ 
+-static const char *mcs_usagemsg = "\
++static const char mcs_usagemsg[] = "\
+ Usage: %s [options] file...\n\
+   Manipulate the comment section in an ELF object.\n\n\
+   Options:\n\
+@@ -1357,7 +1357,7 @@
+ 	exit(EXIT_FAILURE);
+ }
+ 
+-static const char *strip_usagemsg = "\
++static const char strip_usagemsg[] = "\
+ Usage: %s [options] file...\n\
+   Discard information from ELF objects.\n\n\
+   Options:\n\

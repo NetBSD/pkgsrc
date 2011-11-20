@@ -1,0 +1,10 @@
+A BSD-licensed implementation of compilation tools (nm, ar, as, ld,
+etc.) for the ELF object format.
+
+This release contains BSD-licensed implementations of the "libdwarf"
+and "libelf" libraries, and of the "addr2line", "ar", "brandelf",
+"c++filt", "elfcopy", "elfdump", "findtextrel", "mcs", "nm", "ranlib",
+"readelf", "size", "strings" and "strip" program development
+utilities. The release also contains API and utility reference
+documentation (300+ manual entries in all), and contains test suites
+for some of these released utilities and libraries.
