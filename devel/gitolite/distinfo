@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/20 19:11:49 ryoon Exp $
+
+SHA1 (sitaramc-gitolite-v2.2-0-g15b17d7.tar.gz) = 395f66b984073af9de43598e25ff9f828bd65f7c
+RMD160 (sitaramc-gitolite-v2.2-0-g15b17d7.tar.gz) = 7b8963cdb309e99d9ddffacc8877286a736ab16c
+Size (sitaramc-gitolite-v2.2-0-g15b17d7.tar.gz) = 240960 bytes
+SHA1 (patch-contrib_adc_watch) = bab42eb263900466aaa106a09d2bf3180be204ea
+SHA1 (patch-src_gl-system-install) = 849d8a7b350f5e6ef4e35b35cdfd1cbcf05c964d
