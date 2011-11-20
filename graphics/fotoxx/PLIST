@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2011/10/05 14:26:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/11/20 00:00:28 ryoon Exp $
 bin/fotoxx
 man/man1/fotoxx.1
 share/applications/kornelix-fotoxx.desktop
-share/doc/fotoxx/CHANGES
-share/doc/fotoxx/COPYING
 share/doc/fotoxx/README
-share/doc/fotoxx/TRANSLATIONS
-share/doc/fotoxx/edit menus
+share/doc/fotoxx/changelog
+share/doc/fotoxx/copyright
+share/doc/fotoxx/edit-menus
 share/doc/fotoxx/fotoxx.man
-share/doc/fotoxx/freshmeat
 share/doc/fotoxx/images/DRGB.jpg
 share/doc/fotoxx/images/HDF-paint.jpg
 share/doc/fotoxx/images/HDR-adjust.jpg
@@ -16,12 +14,12 @@ share/doc/fotoxx/images/annotate.jpg
 share/doc/fotoxx/images/bright-ramp.jpg
 share/doc/fotoxx/images/brightness-color.jpg
 share/doc/fotoxx/images/curve-edit.jpg
-share/doc/fotoxx/images/edit-collection.jpg
 share/doc/fotoxx/images/edit-tags.jpg
 share/doc/fotoxx/images/expand-brightness.png
 share/doc/fotoxx/images/gallery-selection.jpg
 share/doc/fotoxx/images/gamma-curve.jpg
 share/doc/fotoxx/images/gammachart.png
+share/doc/fotoxx/images/manage-collections.jpg
 share/doc/fotoxx/images/manage-tags.jpg
 share/doc/fotoxx/images/match-colors.jpg
 share/doc/fotoxx/images/navigation.jpeg
@@ -45,10 +43,10 @@ share/doc/fotoxx/images/translate.jpg
 share/doc/fotoxx/images/trim.jpg
 share/doc/fotoxx/images/unbend.png
 share/doc/fotoxx/images/watermark.jpg
+share/doc/fotoxx/translations
 share/doc/fotoxx/userguide-changes.txt
 share/doc/fotoxx/userguide-en.html
 share/doc/fotoxx/userguide-it.html
-share/fotoxx/data/desktop
 share/fotoxx/icons/arrow.png
 share/fotoxx/icons/busy.png
 share/fotoxx/icons/drag.png
