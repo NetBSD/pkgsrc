@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- strings/strings.c	2011/11/18 21:48:54	1.1
++++ strings/strings.c	2011/11/18 21:49:07
+@@ -426,7 +426,7 @@
+ 	return (RETURN_OK);
+ }
+ 
+-static const char *usagemsg = "\
++static const char usagemsg[] = "\
+ Usage: %s [options] [file...]\n\
+   Print contiguous sequences of printable characters.\n\n\
+   Options:\n\
