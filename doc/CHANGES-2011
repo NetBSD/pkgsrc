@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2982 2011/11/20 05:40:42 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2983 2011/11/20 06:27:49 agc Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4717,3 +4717,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated misc/stellarium to 0.11.1 [jakllsch 2011-11-19]
 	Updated graphics/fotoxx to 11.11.1 [ryoon 2011-11-20]
 	Updated math/cln to 1.3.2nb1 [sbd 2011-11-20]
+	Added devel/elftoolchain version 0.5.1 [agc 2011-11-19]
