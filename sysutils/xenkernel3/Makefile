@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/09/10 18:35:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.22 2011/11/20 03:48:10 jym Exp $
 #
 
 VERSION=	3.1.4
@@ -15,6 +15,7 @@ COMMENT=	Xen3 Kernel
 ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386 Linux-2.[46]*-x86_64 NetBSD-*-x86_64
 CONFLICTS=	xenkernel30-[0-9]*
 
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/xen-${VERSION}
 
@@ -53,6 +54,9 @@ PLIST_SRC=		PLIST
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+= 	xen3-kernel
+XENKERNELDIR=		${PREFIX}/xen3-kernel
+
+MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE} XEN_TARGET_X86_PAE=n debug=n xen
@@ -70,11 +74,15 @@ do-build:
 .endif
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/xen.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen.gz
-	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen-debug.gz
+	${INSTALL_DATA} ${WRKDIR}/xen.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen-debug.gz
 .if  ${MACHINE_ARCH} == "i386"
-	${INSTALL_DATA} ${WRKDIR}/xen-PAE.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen-PAE.gz
-	${INSTALL_DATA} ${WRKDIR}/xen-PAE-debug.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen-PAE-debug.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-PAE.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen-PAE.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-PAE-debug.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen-PAE-debug.gz
 .endif
 
 .include "../../lang/python/application.mk"
