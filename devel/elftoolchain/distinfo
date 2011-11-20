@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+SHA1 (elftoolchain-0.5.1.tar.bz2) = 333cfce857ca220177d0a5d111d40afca1eea0c7
+RMD160 (elftoolchain-0.5.1.tar.bz2) = 4be0adf8349c764474810e23cfb022c655002d77
+Size (elftoolchain-0.5.1.tar.bz2) = 5008332 bytes
+SHA1 (patch-aa) = e3588a6580ece7159b109e01730f144703aeda1d
+SHA1 (patch-ab) = 7ed42bdf24917a01e42580958d29078c7143168c
+SHA1 (patch-ac) = c681369aa0dd87a1b2fa5ede647f267a4c132e87
+SHA1 (patch-ad) = 22a254add215d7fa18b32e17e30c92d451c2cecd
+SHA1 (patch-ae) = 19f04351c82e4ab421582a2d5b2761308aeff53d
+SHA1 (patch-af) = 8de41e29969295b668deee22d6bbb761a586059a
+SHA1 (patch-ag) = adbf0b3ba6121bc9b3351cf2f79863a8bafc13d8
+SHA1 (patch-ah) = 1c1d31443566994f48d3b7e9ab2385bd4c07d55e
+SHA1 (patch-ai) = 37e8a01421c926b995f7a5cd32c77df7b18bd28f
+SHA1 (patch-aj) = 1656ff3c1a9dd9fe27af122d9cbe605092a40925
+SHA1 (patch-ak) = 699aeca92ce35f57988b6135c6b7f3a8f533825f
+SHA1 (patch-al) = 1ca5bb02b4bf8b4d0820747c3398d1f5f317c66c
+SHA1 (patch-am) = 286bd77aef36812b60fb29218368573b74ac892e
+SHA1 (patch-an) = 6de919bb0cf3f406c9b5addcf868c57d5d71403e

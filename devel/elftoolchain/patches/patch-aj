@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- readelf/readelf.c	2011/11/18 21:46:36	1.1
++++ readelf/readelf.c	2011/11/18 21:47:04
+@@ -6580,7 +6580,7 @@
+ 	exit(EXIT_SUCCESS);
+ }
+ 
+-static const char *usagemsg = "\
++static const char usagemsg[] = "\
+ Usage: %s [options] file...\n\
+   Display information about ELF objects and ar(1) archives.\n\n\
+   Options:\n\

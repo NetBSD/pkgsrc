@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- elfdump/elfdump.c	2011/11/18 21:28:48	1.1
++++ elfdump/elfdump.c	2011/11/18 21:29:03
+@@ -2736,7 +2736,7 @@
+ 	PRT("\nelf checksum: %#lx\n", gelf_checksum(ed->elf));
+ }
+ 
+-static const char *usagemsg = "\
++static const char usagemsg[] = "\
+ Usage: %s [options] file...\n\
+   Display information about ELF objects and ar(1) archives.\n\n\
+   Options:\n\

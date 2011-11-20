@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- cxxfilt/cxxfilt.c	2011/11/18 21:24:38	1.1
++++ cxxfilt/cxxfilt.c	2011/11/18 21:24:54
+@@ -71,7 +71,7 @@
+ 	{"gnu-v3", ELFTC_DEM_GNU3}
+ };
+ 
+-static const char *usagemsg = "\
++static const char usagemsg[] = "\
+ Usage: %s [options] [encoded-names...]\n\
+   Translate C++ symbol names to human-readable form.\n\n\
+   Options:\n\
