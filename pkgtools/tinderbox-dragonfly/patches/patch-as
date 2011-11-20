@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
+$NetBSD: patch-as,v 1.3 2011/11/20 16:20:24 marino Exp $
 
---- ../FreeBSD/lib/tc_command.pl	2011-10-16 00:52:55.000000000 +0000
+--- ../FreeBSD/lib/tc_command.pl	2011-11-20 13:05:28.355724000 +0000
 +++ lib/tc_command.pl
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl
@@ -12,7 +12,7 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
                  help =>
                      "Add a jail to the datastore (do NOT call this directly; use createJail instead)",
                  usage =>
--                    "-j <jail name> -u CSUP|CVSUP|LFTP|USER|NONE -t <jail tag> [-d <jail description>] [-m <src mount source>] [-a <arch>]",
+-                    "-j <jail name> -u CSUP|CVSUP|LFTP|SVN|USER|NONE -t <jail tag> [-d <jail description>] [-m <src mount source>] [-a <arch>]",
 +                    "-j <jail name> -u GIT|RELEASE|SNAPSHOT|USER|NONE -t <jail tag> [-d <jail description>] [-m <src mount source>] [-a <arch>]",
                  optstr => 'm:j:t:u:d:a:',
          },
@@ -20,7 +20,7 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
                  func => \&addPortsTree,
                  help => "Add a portstree to the datastore",
                  usage =>
--                    "-p <portstree name> -u CSUP|CVSUP|USER|NONE [-d <portstree description>] [-m <ports mount source>] [-w <CVSweb URL>]",
+-                    "-p <portstree name> -u CSUP|CVSUP|SVN|USER|NONE [-d <portstree description>] [-m <ports mount source>] [-w <CVSweb URL>]",
 -                optstr => 'm:p:u:d:w:',
 +                    "-p <portstree name> [-t <cvs tag>] [-d <portstree description>] [-m <ports mount source>] [-w <CVSweb URL>]",
 +                optstr => 'm:p:u:t:d:w:',
@@ -49,8 +49,8 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
          "createJail" => {
                  help => "Create a new jail",
                  usage =>
--                    "-j <jailname> -u CSUP|CVSUP|LFTP|USER|NONE [-t <tag>] [-d <description>] [-C] [-H <updatehost>] [-m <mountsrc>] [-I] [-a <arch>]",
--                optstr => 'j:t:d:CH:m:u:Ia:',
+-                    "-j <jailname> -u CSUP|CVSUP|LFTP|SVN|USER|NONE [-t <tag>] [-d <description>] [-C] [-P <protocol>] [-H <updatehost>] [-D <updatehostdirectory>] [-m <mountsrc>] [-I] [-a <arch>]",
+-                optstr => 'j:t:d:CP:H:D:m:u:Ia:',
 +                    "-j <jailname> -u GIT|RELEASE|SNAPSHOT|USER|NONE -t <tag> [-d <description>] [-H <updatehost>] [-m <mountsrc>] [-I]",
 +                optstr => 'j:t:d:H:m:u:I:',
          },
@@ -58,8 +58,8 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
          "createPortsTree" => {
                  help => "Create a new portstree",
                  usage =>
--                    "-p <portstreename> -u CSUP|CVSUP|USER|NONE [-d <description>] [-C] [-H <updatehost>] [-m <mountsrc>] [-w <cvsweburl>] [-I]",
--                optstr => 'p:d:CH:Im:u:w:',
+-                    "-p <portstreename> -u CSUP|CVSUP|SVN|USER|NONE [-d <description>] [-C] [-P <protocol>] [-H <updatehost>] [-D <updatehostdirectory>] [-m <mountsrc>] [-w <cvsweburl>] [-I]",
+-                optstr => 'p:d:CP:H:Im:u:w:',
 +                    "-p <portstreename> [-t <cvs tag>] [-d <description>] [-C] [-H <updatehost>] [-m <mountsrc>] [-w <cvsweburl>] [-I]",
 +                optstr => 'p:t:d:CH:Im:u:w:',
          },
@@ -91,24 +91,70 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
          },
  
          "copyBuild" => {
-@@ -1489,7 +1496,7 @@ sub addPortsTree {
+@@ -1489,8 +1496,18 @@ sub addPortsTree {
  sub addPortToOneBuild {
          my $build = $ds->getBuildByName($opts->{'b'});
          my $makecache =
 -            new Tinderbox::MakeCache($ENV{'PORTSDIR'}, $ENV{'PKGSUFFIX'});
 +            new Tinderbox::MakeCache($ENV{'PORTSDIR'}, $ENV{'OPTNFILE'});
          my @bports = ();
++        my %oper_hash = (
++            EXTRACT_DEPENDS => 'ExtractDepends',
++            PATCH_DEPENDS   => 'PatchDepends',
++            FETCH_DEPENDS   => 'FetchDepends',
++            BUILD_DEPENDS   => 'BuildDepends',
++            LIB_DEPENDS     => 'LibDepends',
++            RUN_DEPENDS     => 'RunDepends',
++            TEST_DEPENDS    => 'TestDepends',
++            DEPENDS         => 'Buildlink3Depends',
++        );
  
          if (!$opts->{'d'}) {
-@@ -1524,6 +1531,7 @@ sub addPortToOneBuild {
-                                 LIB_DEPENDS     => 'LibDepends',
-                                 RUN_DEPENDS     => 'RunDepends',
-                                 TEST_DEPENDS    => 'TestDepends',
-+                                DEPENDS         => 'Buildlink3Depends',
-                         );
+                 foreach my $port ($ds->getPortsForBuild($build)) {
+@@ -1502,7 +1519,25 @@ sub addPortToOneBuild {
+ 
+         if ($opts->{'R'}) {
+                 foreach my $pdir (@bports) {
+-                        addPorts($pdir, $build, $makecache, undef);
++                        my $pCls = addPorts($pdir, $build, $makecache, undef);
++                        $ds->clearDependenciesForPort($pCls, $build, undef);
++                        foreach my $deptype (keys %oper_hash) {
++                                my $oper = $oper_hash{$deptype};
++                                foreach my $dn ($makecache->$oper($pdir)) {
++                                        my $dep = $ds->getPortByDirectory($dn);
++                                        next if (!defined($dep));
++                                        if (
++                                                !$ds->addDependencyForPort(
++                                                        $pCls,    $build,
++                                                        $deptype, $dep
++                                                )
++                                            )
++                                        {
++                                                warn "WARN: Failed to add $deptype entry for $pdir: "
++                                                    . $ds->getError() . "\n";
++                                        }
++                                }
++                        }
+                 }
+         } else {
+                 my @deps = @bports;
+@@ -1516,15 +1551,6 @@ sub addPortToOneBuild {
+                 }
+                 foreach my $port (keys %seen) {
+                         my $pCls      = $seen{$port};
+-                        my %oper_hash = (
+-                                EXTRACT_DEPENDS => 'ExtractDepends',
+-                                PATCH_DEPENDS   => 'PatchDepends',
+-                                FETCH_DEPENDS   => 'FetchDepends',
+-                                BUILD_DEPENDS   => 'BuildDepends',
+-                                LIB_DEPENDS     => 'LibDepends',
+-                                RUN_DEPENDS     => 'RunDepends',
+-                                TEST_DEPENDS    => 'TestDepends',
+-                        );
  
                          $ds->clearDependenciesForPort($pCls, $build, undef);
-@@ -1548,7 +1556,6 @@ sub addPortToOneBuild {
+ 
+@@ -1548,7 +1574,6 @@ sub addPortToOneBuild {
                                  }
                          }
                  }
@@ -116,7 +162,7 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
          }
  }
  
-@@ -1600,7 +1607,7 @@ sub addBuildPortsQueueEntry {
+@@ -1600,7 +1625,7 @@ sub addBuildPortsQueueEntry {
                      $ds->addBuildPortsQueueEntry($build, $portdir, $priority,
                          $user_id);
                  if (!$rc) {
@@ -125,7 +171,7 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
                                      . $portdir
                                      . " to the datastore: "
                                      . $ds->getError()
-@@ -1720,6 +1727,7 @@ sub getDependenciesForPort {
+@@ -1720,6 +1745,7 @@ sub getDependenciesForPort {
                  LIB_DEPENDS     => 4,
                  RUN_DEPENDS     => 5,
                  TEST_DEPEND     => 6,
@@ -133,7 +179,7 @@ $NetBSD: patch-as,v 1.2 2011/11/14 02:00:20 marino Exp $
          );
  
          if (!$opts->{'b'} || !$opts->{'d'}) {
-@@ -1773,6 +1781,50 @@ sub getDependenciesForPort {
+@@ -1773,6 +1799,50 @@ sub getDependenciesForPort {
                  );
          }
  }
