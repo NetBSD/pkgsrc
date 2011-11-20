@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.i386,v 1.1 2011/11/20 03:48:10 jym Exp $
+
+The Xen hypervisor is installed under the following locations:
+	${XENKERNELDIR}/xen.gz		 (standard hypervisor)
+	${XENKERNELDIR}/xen-debug.gz	 (debug hypervisor)
+	${XENKERNELDIR}/xen-PAE.gz	 (PAE standard hypervisor)
+	${XENKERNELDIR}/xen-PAE-debug.gz (PAE debug hypervisor)
+===========================================================================
