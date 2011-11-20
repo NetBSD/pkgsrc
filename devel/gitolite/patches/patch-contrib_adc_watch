@@ -1,0 +1,22 @@
+$NetBSD: patch-contrib_adc_watch,v 1.1.1.1 2011/11/20 19:11:49 ryoon Exp $
+
+* Improve portability
+
+--- contrib/adc/watch.orig	2011-11-16 00:23:56.000000000 +0000
++++ contrib/adc/watch
+@@ -75,11 +75,11 @@ cd $GL_REPO_BASE_ABS/$repo.git
+ grep "^$GL_USER $identarg$" gl-watchers > /dev/null
+ found=$?
+ 
+-[ $found -eq 0 -a $cmd == "add" ] && die "There is already a watch \"$identarg\" for user $GL_USER"
+-[ $found -ne 0 -a $cmd == "remove" ] && die "No watch \"$identarg\" found for user $GL_USER"
++[ $found -eq 0 -a $cmd = "add" ] && die "There is already a watch \"$identarg\" for user $GL_USER"
++[ $found -ne 0 -a $cmd = "remove" ] && die "No watch \"$identarg\" found for user $GL_USER"
+ 
+-[ $cmd == "add" ] && echo "$GL_USER $identarg" >> gl-watchers && { echo "Added a watch \"$identarg\" for user $GL_USER"; exit 0; }
++[ $cmd = "add" ] && echo "$GL_USER $identarg" >> gl-watchers && { echo "Added a watch \"$identarg\" for user $GL_USER"; exit 0; }
+ 
+-[ $cmd == "remove" ] && sed -i -e "/^$GL_USER $identarg$/d" gl-watchers && { echo "Removed a watch \"$identarg\" for user $GL_USER"; exit 0; }
++[ $cmd = "remove" ] && sed -i -e "/^$GL_USER $identarg$/d" gl-watchers && { echo "Removed a watch \"$identarg\" for user $GL_USER"; exit 0; }
+ 
+ die "16 cores, 320GB of RAM, 4TB of disk, and you give me a command I am not programmed to do. Humans..."
