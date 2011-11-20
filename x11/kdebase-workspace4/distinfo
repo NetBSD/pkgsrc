@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2011/01/23 07:55:16 markd Exp $
+$NetBSD: distinfo,v 1.17.6.1 2011/11/20 08:39:14 tron Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -30,3 +30,4 @@ SHA1 (patch-cb) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
 SHA1 (patch-cc) = f0c92eb5edc2690008d028652820cad77bf50b07
 SHA1 (patch-cd) = c9e7b32b39b8191f5f54a799bdfa7009136429f9
 SHA1 (patch-ce) = b02c04dae0005bec33a13ecf09254d35a0e4cd0b
+SHA1 (patch-kcheckpass_checkpass_pam.c) = 7c897fe7fa078a7027a08de5de5ad4c17369f0df
