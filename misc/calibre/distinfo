@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2011/11/13 16:08:32 gls Exp $
+$NetBSD: distinfo,v 1.7 2011/11/20 20:04:14 gls Exp $
 
-SHA1 (calibre-0.8.26.tar.gz) = 0840c720935968d6349768a26239193d5b5a0720
-RMD160 (calibre-0.8.26.tar.gz) = b1700bb3c395d51fd942893a8f25737a01ed7eb4
-Size (calibre-0.8.26.tar.gz) = 37784724 bytes
+SHA1 (calibre-0.8.27.tar.gz) = 378b656c68e3776dcbf95c7db93b6e71cd6fb229
+RMD160 (calibre-0.8.27.tar.gz) = b3bd6b0fae2fbd5c8a445cbe359553f6d958e234
+Size (calibre-0.8.27.tar.gz) = 37872270 bytes
 SHA1 (patch-src_calibre_ebooks_pdf_images.cpp) = 950f0302f3c387fb9b4ee41cd96d7c5103b7ad45
 SHA1 (patch-src_calibre_linux_py) = 0f4b9c09d2a6de22ca0044895e1ab35184ae7d72

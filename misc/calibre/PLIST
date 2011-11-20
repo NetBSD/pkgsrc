@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/11/13 16:08:32 gls Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/11/20 20:04:14 gls Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1007,6 +1007,7 @@ lib/calibre/calibre/utils/sigil.py
 lib/calibre/calibre/utils/smartypants.py
 lib/calibre/calibre/utils/smtp.py
 lib/calibre/calibre/utils/smtplib.py
+lib/calibre/calibre/utils/soupparser.py
 lib/calibre/calibre/utils/terminfo.py
 lib/calibre/calibre/utils/text2int.py
 lib/calibre/calibre/utils/threadpool.py
@@ -1437,12 +1438,16 @@ share/calibre/recipes/berliner_zeitung.recipe
 share/calibre/recipes/berlingske_dk.recipe
 share/calibre/recipes/beta.recipe
 share/calibre/recipes/beta_en.recipe
+share/calibre/recipes/biamag.recipe
+share/calibre/recipes/biamag_en.recipe
+share/calibre/recipes/bianet.recipe
 share/calibre/recipes/big_oven.recipe
 share/calibre/recipes/big_picture.recipe
 share/calibre/recipes/biggovernment.recipe
 share/calibre/recipes/bighollywood.recipe
 share/calibre/recipes/bild_de.recipe
 share/calibre/recipes/billorielly.recipe
+share/calibre/recipes/birgun_gazetesi.recipe
 share/calibre/recipes/bitacora.recipe
 share/calibre/recipes/biz_portal.recipe
 share/calibre/recipes/blic.recipe
@@ -1707,6 +1712,7 @@ share/calibre/recipes/forbes.recipe
 share/calibre/recipes/forbes_india.recipe
 share/calibre/recipes/foreign_policy.recipe
 share/calibre/recipes/foreignaffairs.recipe
+share/calibre/recipes/formulaas.recipe
 share/calibre/recipes/foxnews.recipe
 share/calibre/recipes/fr_online.recipe
 share/calibre/recipes/frandroid.recipe
@@ -1834,6 +1840,7 @@ share/calibre/recipes/infobae.recipe
 share/calibre/recipes/infomotori.recipe
 share/calibre/recipes/information_dk.recipe
 share/calibre/recipes/infoworld.recipe
+share/calibre/recipes/infra_pl.recipe
 share/calibre/recipes/inquirer_net.recipe
 share/calibre/recipes/instapaper.recipe
 share/calibre/recipes/intelligencer.recipe
@@ -1848,6 +1855,7 @@ share/calibre/recipes/irish_times.recipe
 share/calibre/recipes/izvestia.recipe
 share/calibre/recipes/jakarta_post.recipe
 share/calibre/recipes/jalopnik.recipe
+share/calibre/recipes/japan_news.recipe
 share/calibre/recipes/japan_times.recipe
 share/calibre/recipes/javalobby.recipe
 share/calibre/recipes/jb_online.recipe
@@ -2258,6 +2266,7 @@ share/calibre/recipes/snopes.recipe
 share/calibre/recipes/socialdiva.recipe
 share/calibre/recipes/soldiers.recipe
 share/calibre/recipes/spektrum.recipe
+share/calibre/recipes/spiders_web_pl.recipe
 share/calibre/recipes/spiegel_int.recipe
 share/calibre/recipes/spiegelde.recipe
 share/calibre/recipes/spin_magazine.recipe
