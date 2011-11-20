@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- addr2line/addr2line.c	2011/11/18 20:38:58	1.1
++++ addr2line/addr2line.c	2011/11/18 20:39:27
+@@ -57,7 +57,7 @@
+ static char unknown[] = { '?', '?', '\0' };
+ static Dwarf_Addr section_base;
+ 
+-static const char *usagemsg = "\
++static const char usagemsg[] = "\
+ Usage: %s [options] hexaddress...\n\
+   Map program addresses to source file names and line numbers.\n\n\
+   Options:\n\
