@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2980 2011/11/19 17:30:50 jakllsch Exp $
+$NetBSD: CHANGES-2011,v 1.2981 2011/11/20 00:01:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4715,3 +4715,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/apache-tomcat7 version 7.0.22 [ryoon 2011-11-19]
 	Updated security/crudesaml to 1.2 [manu 2011-11-19]
 	Updated misc/stellarium to 0.11.1 [jakllsch 2011-11-19]
+	Updated graphics/fotoxx to 11.11.1 [ryoon 2011-11-20]
