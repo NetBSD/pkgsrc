@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/10/13 22:34:56 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2011/11/20 00:57:38 marino Exp $
 
 DISTNAME=	szip-2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.hdfgroup.org/lib-external/szip/2.1/src/
 
@@ -19,8 +19,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# pkgrevisions 0, 1, 2 all have different distfiles, but 3 might not
-DIST_SUBDIR=		${PKGNAME_NOREV}nb2
+# pkgrevisions 0, 1, 2 and 3 all have different distfiles
+DIST_SUBDIR=		${PKGNAME_NOREV}nb3
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
