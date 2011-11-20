@@ -10,7 +10,7 @@ Features:
 * Message (ICQ-style) and Chat (AIM-style) modes
 * Drag and drop to send to multiple contacts
 * Full Unicode support
-* Secure connections (with psi-ssl plugin)
+* Secure connections
 * Saving contact list locally, and server sync on login
 * Icon Themes
 * Agent registration and searching
@@ -19,6 +19,6 @@ Features:
 * Auto-away after a configurable amount of time
 * Tray/dock icon for KDE/GNOME environments
 * Language plugins
-* OpenPGP integration (via GnuPG)
+* OpenPGP integration (via GnuPG via security/qca2-gnupg)
 * Groupchat invites / private-messaging
 * File transfer
