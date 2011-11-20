@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/14 02:00:19 marino Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/11/20 16:20:24 marino Exp $
 man/man1/tc-configCcache.1
 man/man1/tc-configDistfile.1
 man/man1/tc-configGet.1
@@ -19,6 +19,8 @@ tinderbox/scripts/contrib/hooks/make-jobs-safe/make-jobs-safe.sh
 tinderbox/scripts/contrib/hooks/mass-build-pgsql/README.txt
 tinderbox/scripts/contrib/hooks/mass-build-pgsql/mass-build-pgsql.sh
 tinderbox/scripts/contrib/bulk/add_all_packages.sh
+tinderbox/scripts/contrib/bulk/bulkbuild.sh
+tinderbox/scripts/contrib/bulk/bulk_hook_1.sh
 tinderbox/scripts/etc/env/.keep_me
 tinderbox/scripts/lib/Tinderbox/Build.pm
 tinderbox/scripts/lib/Tinderbox/BuildPortsQueue.pm
@@ -73,6 +75,7 @@ tinderbox/scripts/upgrade/mig_mysql_tinderbox-3.2.2_to_3.2.3.sql
 tinderbox/scripts/upgrade/mig_mysql_tinderbox-3.2.3_to_3.2.4.sql
 tinderbox/scripts/upgrade/mig_mysql_tinderbox-3.2.4_to_3.2.5.sql
 tinderbox/scripts/upgrade/mig_mysql_tinderbox-3.2.5_to_3.2.6.sql
+tinderbox/scripts/upgrade/mig_mysql_tinderbox-3.2.6_to_3.3.sql
 tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.0_to_3.1.sql
 tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.1_to_3.2.sql
 tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.2_to_3.2.1.sql
@@ -81,6 +84,7 @@ tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.2.2_to_3.2.3.sql
 tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.2.3_to_3.2.4.sql
 tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.2.4_to_3.2.5.sql
 tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.2.5_to_3.2.6.sql
+tinderbox/scripts/upgrade/mig_pgsql_tinderbox-3.2.6_to_3.3.sql
 tinderbox/scripts/upgrade/order.lst
 tinderbox/scripts/upgrade/user_permissions.map
 ${PLIST.WEBUI}tinderbox/scripts/webui/core/Build.php
