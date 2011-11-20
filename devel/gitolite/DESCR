@@ -1,0 +1,18 @@
+Gitolite is an SSH-based gatekeeper providing access control for
+a server that hosts many git repositories. Without gitolite, each
+developer needing to push to one of the repositories hosted would
+need a user account on that server; gitolite lets you do that just
+using SSH public keys tied to a single, common, user that hosts
+all the repositories.
+
+Gitolite can restrict who can read (clone/fetch) from or write
+(push) to a repository, and who can push to what branch or tag -
+an important issue in corporate environments. Other features include:
+
+* access control by branch-name or by modified file/directory;
+* per-developer "personal namespace" prefixes;
+* simple but powerful configuration file syntax (with validation);
+* config files (and authority for maintaining them) can be split;
+* easy integration with gitweb;
+* comprehensive logging;
+* easy migration from gitosis.
