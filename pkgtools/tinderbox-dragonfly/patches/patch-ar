@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.2 2011/11/14 02:00:20 marino Exp $
+$NetBSD: patch-ar,v 1.3 2011/11/20 16:20:24 marino Exp $
 
---- ../FreeBSD/README	2011-10-30 17:11:08.876006000 +0000
+--- ../FreeBSD/README	2011-11-20 13:18:28.333065000 +0000
 +++ README
 @@ -2,23 +2,30 @@
  
@@ -57,8 +57,8 @@ $NetBSD: patch-ar,v 1.2 2011/11/14 02:00:20 marino Exp $
 -   Recent FreeBSD (development happens on 9-CURRENT only, but
 -   Tinderbox is known to work on RELENG_7 and RELENG_8 too), Perl 5.8
 -   or later (lang/perl5.8), and either MySQL 4.1 or later
--   (databases/mysql41-server) or PostgreSQL 7.4 or later
--   (databases/postgres74-server).
+-   (databases/mysql41-server) or PostgreSQL 8.2 or later
+-   (databases/postgresql82-server).
 +   Recent DragonFly, Perl 5.8 or later (lang/perl5), and either 
 +   MySQL 5.0 or later (databases/mysql51-server) or 
 +   PostgreSQL 8.4 or later (databases/postgres84-server).
@@ -69,9 +69,9 @@ $NetBSD: patch-ar,v 1.2 2011/11/14 02:00:20 marino Exp $
 +   (databases/p5-DBD-mysql). If PostgreSQL is used, the Pg Perl
 +   module must also be installed (databases/p5-DBD-postgresql).
  
--   Please note, however, that is is recommended that either MySQL 5.0
--   or PostgreSQL 8.1 (or later) be used. There are currently no plans
--   to make this a requirement, but it may happen in the future.
+-     Note: Please note, however, that is is recommended that for
+-     MySQL version 5.0 or later be used. There are currently no plans
+-     to make this a requirement, but it may happen in the future.
 -
 -   PHP 4.x is now EOL, so the web front-end (found in the webui/
 -   subdirectory) requires PHP 5 (lang/php5), PEAR::MDB2_Driver_mysql
@@ -546,15 +546,6 @@ $NetBSD: patch-ar,v 1.2 2011/11/14 02:00:20 marino Exp $
  
      2. Install dependencies into the jail (Chapter 2).
  
-@@ -919,7 +936,7 @@
- 
-  # mkdir ${pb}
-  # cd ${pb} && \
--         fetch -o - path_to_tinderbox-3.3.tar.gz | \
-+         fetch -o - path_to_tinderbox-3.4.tar.gz | \
-          tar xvf -
- 
-     4. Now we need to leave the jail, and on the host system chroot
 @@ -938,7 +955,6 @@
   tinderd_enable="YES"
   tinderd_chroot="${jail_dir}"
