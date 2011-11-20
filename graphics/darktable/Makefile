@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/11/15 21:19:02 jakllsch Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/20 01:16:23 dholland Exp $
 
 DISTNAME=	darktable-0.9.3
 CATEGORIES=	graphics
@@ -24,6 +24,12 @@ CMAKE_ARGS+=	-DUSE_OPENCL=OFF
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DBINARY_PACKAGE_BUILD=Yes
 CMAKE_ARGS+=	-Wno-dev
+
+SUBST_CLASSES+=		gtkpath
+SUBST_FILES.gtkpath=	cmake/modules/FindGTK2.cmake
+SUBST_SED.gtkpath=	-e 's|@PREFIX@|${BUILDLINK_PREFIX.gtk2}|'
+SUBST_STAGE.gtkpath=	pre-configure
+SUBST_MESSAGE.gtkpath=	Setting path to gtk2.
 
 CONFIGURE_DIRS= pkgsrc_build
 CMAKE_ARG_PATH= ..
