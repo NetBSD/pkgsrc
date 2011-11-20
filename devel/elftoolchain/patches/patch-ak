@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+cast through void pointer first
+
+--- size/size.c	2011/11/18 21:47:50	1.1
++++ size/size.c	2011/11/18 21:48:08
+@@ -194,7 +194,7 @@
+ 	argc -= optind;
+ 	argv += optind;
+ 
+-	files = (argc == 0) ? default_args : (const char **) argv;
++	files = (argc == 0) ? default_args : (const char **)(const void **)argv;
+ 
+ 	while ((fn = *files) != NULL) {
+ 		rc = handle_elf(fn);

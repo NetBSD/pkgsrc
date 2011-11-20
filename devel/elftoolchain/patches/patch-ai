@@ -1,0 +1,36 @@
+$NetBSD: patch-ai,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- nm/nm.c	2011/11/18 21:31:02	1.1
++++ nm/nm.c	2011/11/18 21:45:38
+@@ -855,9 +855,9 @@
+ 
+ 	if (nm_opts.demangle_type < 0 ||
+ 	    elftc_demangle(name, dem, sizeof(dem), nm_opts.demangle_type) < 0)
+-		printf(format, name);
++		printf((strcmp(format, "%s") == 0) ? "%s" : "%-20s|", name);
+ 	else
+-		printf(format, dem);
++		printf((strcmp(format, "%s") == 0) ? "%s" : "%-20s|", dem);
+ }
+ 
+ static void
+@@ -1355,7 +1355,7 @@
+ process_sym:
+ 
+ 	p_data.list_num = get_sym(elf, &list_head, shnum, dynndx, strndx,
+-	    type_table, (const char **)sec_table, shnum);
++	    type_table, (const char **)(const void **)sec_table, shnum);
+ 
+ 	if (p_data.list_num == 0)
+ 		goto next_cmd;
+@@ -1363,7 +1363,7 @@
+ 	p_data.headp = &list_head;
+ 	p_data.sh_num = shnum;
+ 	p_data.t_table = type_table;
+-	p_data.s_table = (const char **)sec_table;
++	p_data.s_table = (const char **)(const void **)sec_table;
+ 	p_data.filename = filename;
+ 	p_data.objname = objname;
+ 

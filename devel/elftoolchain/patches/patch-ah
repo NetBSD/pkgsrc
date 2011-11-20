@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2011/11/20 06:25:18 agc Exp $
+
+Fix warning for printf format messages with gcc 4.5 and -Wformat=2
+
+--- findtextrel/findtextrel.c	2011/11/18 21:29:57	1.1
++++ findtextrel/findtextrel.c	2011/11/18 21:30:11
+@@ -47,7 +47,7 @@
+ 	{NULL, 0, NULL, 0}
+ };
+ 
+-static const char *usagemsg = "\
++static const char usagemsg[] = "\
+ Usage: %s [options] [files...]\n\
+   Show text relocations present in position independent code.\n\n\
+   Options:\n\
