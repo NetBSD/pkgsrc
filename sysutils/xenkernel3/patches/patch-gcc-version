@@ -1,0 +1,14 @@
+$NetBSD: patch-gcc-version,v 1.1 2011/11/20 03:43:30 jym Exp $
+Improve the pattern matching a bit for compiler version. Otherwise we
+get garbage in the match, and sed will choke on it.
+--- ./xen/Makefile.orig	2008-04-25 13:03:12.000000000 +0000
++++ ./xen/Makefile
+@@ -115,7 +115,7 @@ include/xen/compile.h: include/xen/compi
+ 	    -e 's/@@whoami@@/$(USER)/g' \
+ 	    -e 's/@@domain@@/$(shell ([ -x /bin/dnsdomainname ] && /bin/dnsdomainname) || ([ -x /bin/domainname ] && /bin/domainname || echo [unknown]))/g' \
+ 	    -e 's/@@hostname@@/$(shell hostname)/g' \
+-	    -e 's!@@compiler@@!$(shell $(CC) $(CFLAGS) -v 2>&1 | grep -i "gcc.*version")!g' \
++	    -e 's!@@compiler@@!$(shell $(CC) $(CFLAGS) -v 2>&1 | grep -i "gcc.* version ")!g' \
+ 	    -e 's/@@version@@/$(XEN_VERSION)/g' \
+ 	    -e 's/@@subversion@@/$(XEN_SUBVERSION)/g' \
+ 	    -e 's/@@extraversion@@/$(XEN_EXTRAVERSION)/g' \
