@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2987 2011/11/20 19:13:28 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.2988 2011/11/20 20:05:56 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/R-sp to 0.9.91 [markd 2011-11-20]
 	Updated math/R-geoR to 1.6.36 [markd 2011-11-20]
 	Added devel/gitolite version 2.2 [ryoon 2011-11-20]
+	Updated misc/calibre to 0.8.27 [gls 2011-11-20]
