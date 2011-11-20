@@ -1,8 +1,18 @@
-$NetBSD: patch-ad,v 1.1 2006/07/03 13:58:31 tron Exp $
+$NetBSD: patch-ad,v 1.2 2011/11/20 17:46:34 marino Exp $
 
---- daaplib/include/daap/tagoutput.h.orig	2006-07-03 10:56:28.000000000 +0100
-+++ daaplib/include/daap/tagoutput.h	2006-07-03 10:39:27.000000000 +0100
-@@ -98,9 +98,7 @@
+--- daaplib/include/daap/tagoutput.h.orig	2011-11-20 17:12:14.246503000 +0000
++++ daaplib/include/daap/tagoutput.h
+@@ -25,6 +25,9 @@
+ 	
+ 	#include <daap/basic.h>
+ 	#include <string>
++	#if defined(__DragonFly__)
++	#include <string.h>
++	#endif
+ 	#include <vector>
+ 	#include <assert.h>
+ 
+@@ -98,9 +101,7 @@
  			return( func( *this ));
  		}
  			
@@ -13,7 +23,7 @@ $NetBSD: patch-ad,v 1.1 2006/07/03 13:58:31 tron Exp $
  		
  	protected:
  		typedef std::vector<u8>  DataInt8;
-@@ -125,4 +123,8 @@
+@@ -125,4 +126,8 @@
  		TagOutput( const TagOutput& );
  		TagOutput& operator = ( const TagOutput& );
  	};
