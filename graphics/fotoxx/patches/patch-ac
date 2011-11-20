@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2011/10/05 14:21:45 ryoon Exp $
+$NetBSD: patch-ac,v 1.8 2011/11/20 00:00:28 ryoon Exp $
 
---- zfuncs.h.orig	2011-10-01 13:52:21.000000000 +0000
+--- zfuncs.h.orig	2011-11-05 05:30:36.000000000 +0000
 +++ zfuncs.h
-@@ -34,7 +34,12 @@
+@@ -36,7 +36,12 @@
  #include <pthread.h>
  #include <errno.h>
  #include <signal.h>
@@ -13,5 +13,5 @@ $NetBSD: patch-ac,v 1.7 2011/10/05 14:21:45 ryoon Exp $
 +#include <sys/wait.h>
 +#endif
  #include <locale.h>
- #include <sys/resource.h>
  
+ #define  int8   char                                                       //  number types
