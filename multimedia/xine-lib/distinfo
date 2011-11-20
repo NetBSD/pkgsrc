@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2011/11/16 19:45:37 drochner Exp $
+$NetBSD: distinfo,v 1.76 2011/11/20 11:43:36 marino Exp $
 
 SHA1 (xine-lib-1.1.20.tar.bz2) = 60ce1cea9bf7a6b7d8c60141593a8ed0c54f9445
 RMD160 (xine-lib-1.1.20.tar.bz2) = c531b74142ad92b7fe2956c69fd1398e7c8cb1fb
@@ -20,6 +20,7 @@ SHA1 (patch-dc) = 11c4212029e67f22796e57706b42400a0dbcac3a
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
 SHA1 (patch-ga) = c4770b6be12bbc4dd72f8299f3b0bbf92546cc68
 SHA1 (patch-input_dvb.c) = 37aa191dca0df058dc09477624ff76dbc3a2f9b9
+SHA1 (patch-src-audio_out-audio_file_out.c) = 2b09abc82bc0b023ed9feaa5d77dd14db73f30df
 SHA1 (patch-src-demuxers-demux_qt.c) = 2942911c09c0580c6017474af2a14f5b1f193c1d
 SHA1 (patch-src-post-audio-stretch.c) = bc083541c410e8b8c2b5c23bc7b2b0ae312272a5
 SHA1 (patch-src-post-audio-upmix.c) = ab01e157b42b8dd99622a17b5a8ecdb464ee694e
