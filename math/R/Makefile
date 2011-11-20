@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.117 2011/11/01 06:02:01 sbd Exp $
+# $NetBSD: Makefile,v 1.118 2011/11/20 04:57:02 markd Exp $
 
-DISTNAME=		R-2.11.1
-PKGREVISION=		4
+DISTNAME=		R-2.14.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.R-project.org/
 COMMENT=		Statistical language for data analysis and graphics
+LICENSE=		gnu-gpl-v2
 
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
@@ -116,7 +116,6 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 INSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 PRINT_PLIST_AWK+=	/^lib\/R\/doc\/html\/packages.html$$/ { next; }
-PRINT_PLIST_AWK+=	/^lib\/R\/doc\/html\/search\/index.txt$$/ { next; }
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
