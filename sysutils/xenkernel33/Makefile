@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/09/10 18:35:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.16 2011/11/20 03:21:37 jym Exp $
 #
 
 VERSION=	3.3.2
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.gz
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
 COMMENT=	Xen 3.3.2 Kernel
+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -43,6 +45,9 @@ SUBST_FILES.py2+=	xen/tools/compat-build-header.py
 SUBST_SED.py2=		-e "s,/usr/bin/env python,${PYTHONBIN},g"
 
 INSTALLATION_DIRS=	xen3-kernel
+XENKERNELDIR=		${PREFIX}/${INSTALLATION_DIRS}
+
+MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 
 do-build:
 	cd ${WRKSRC} && ${GMAKE} debug=n xen
@@ -51,8 +56,10 @@ do-build:
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/xen.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen.gz
-	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen-debug.gz
+	${INSTALL_DATA} ${WRKDIR}/xen.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen-debug.gz
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
