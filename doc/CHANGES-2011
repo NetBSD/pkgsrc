@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2984 2011/11/20 09:02:45 obache Exp $
+$NetBSD: CHANGES-2011,v 1.2985 2011/11/20 09:03:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/cln to 1.3.2nb1 [sbd 2011-11-20]
 	Added devel/elftoolchain version 0.5.1 [agc 2011-11-19]
 	Updated net/mikutter to 0.0.4.592 [obache 2011-11-20]
+	Updated graphics/ruby-rcairo to 1.10.2 [obache 2011-11-20]
