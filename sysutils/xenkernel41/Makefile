@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/21 18:26:58 cegger Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/20 03:12:44 jym Exp $
 #
 
 VERSION=	4.1.2
@@ -34,6 +34,9 @@ MAKE_ENV+=	PYTHON=${PYTHONBIN:Q}
 MAKE_ENV+=	OCAML_TOOLS=no
 
 INSTALLATION_DIRS=	xen41-kernel
+XENKERNELDIR=		${PREFIX}/${INSTALLATION_DIRS}
+
+MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 
 do-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} debug=n xen
@@ -43,8 +46,10 @@ do-build:
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/xen.gz ${DESTDIR}${PREFIX}/${INSTALLATION_DIRS}/xen.gz
-	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz ${DESTDIR}${PREFIX}/${INSTALLATION_DIRS}/xen-debug.gz
+	${INSTALL_DATA} ${WRKDIR}/xen.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz \
+	    ${DESTDIR}${XENKERNELDIR}/xen-debug.gz
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
