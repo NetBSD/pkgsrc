@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/09/05 11:24:54 sno Exp $
+$NetBSD: distinfo,v 1.6 2011/11/21 08:45:58 hiramatsu Exp $
 
-SHA1 (Catalyst-Model-Adaptor-0.09.tar.gz) = 40c197762bbbd4d798042952ea89f899d26832dc
-RMD160 (Catalyst-Model-Adaptor-0.09.tar.gz) = fa7ce66a4f06126c49bef35f1e974bdf7b5b679f
-Size (Catalyst-Model-Adaptor-0.09.tar.gz) = 24936 bytes
+SHA1 (Catalyst-Model-Adaptor-0.10.tar.gz) = 48d67efa3789d919a9a8266fe10b5b100ed3f077
+RMD160 (Catalyst-Model-Adaptor-0.10.tar.gz) = 5bd74eff32ee23ed1f4c2a4a417f573f5c39c1b6
+Size (Catalyst-Model-Adaptor-0.10.tar.gz) = 26948 bytes
