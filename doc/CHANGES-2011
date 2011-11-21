@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2989 2011/11/20 22:09:47 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.2990 2011/11/21 03:58:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4726,3 +4726,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/gitolite version 2.2 [ryoon 2011-11-20]
 	Updated misc/calibre to 0.8.27 [gls 2011-11-20]
 	Updated graphics/ImageMagick to 6.7.3.1nb2 [sbd 2011-11-20]
+	Updated mail/getmail to 4.23.0 [schmonz 2011-11-21]
