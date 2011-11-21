@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2011/05/18 09:39:57 drochner Exp $
+# $NetBSD: Makefile.common,v 1.30 2011/11/21 00:43:48 marino Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faac/Makefile
@@ -32,6 +32,7 @@ GST_PLUGINS0.10_VER=	0.10.22
 		neon \
 		real \
 		sdl \
+		shm \
 		soundtouch \
 		swfdec \
 		theoradec \
