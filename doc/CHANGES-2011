@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2995 2011/11/21 17:07:18 adam Exp $
+$NetBSD: CHANGES-2011,v 1.2996 2011/11/21 17:25:04 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4739,3 +4739,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-Types-Structured to 0.28 [hiramatsu 2011-11-21]
 	Updated databases/mysql55-client to 5.5.18 [adam 2011-11-21]
 	Updated databases/mysql55-server to 5.5.18 [adam 2011-11-21]
+	Updated pkgtools/nih to 0.10.0nb1 [cheusov 2011-11-21]
