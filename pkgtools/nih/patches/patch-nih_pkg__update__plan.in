@@ -1,0 +1,13 @@
+$NetBSD: patch-nih_pkg__update__plan.in,v 1.1 2011/11/21 17:24:31 cheusov Exp $
+
+--- nih/pkg_update_plan.in.orig	2011-11-15 21:06:14.000000000 +0000
++++ nih/pkg_update_plan.in
+@@ -564,7 +564,7 @@ BEGIN {
+ 		}
+ 
+ 		generate_plan(planfn)
+-		if (!resolve("dcu") && !resolve("lL"))
++		if (!resolve("dcu") && !resolve("l"))
+ 			break
+ 
+ 		if (ex)
