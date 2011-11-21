@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10680 2011/11/21 13:23:33 wiz Exp $
+$NetBSD: TODO,v 1.10681 2011/11/21 17:07:18 adam Exp $
 
 Suggested new packages
 ======================
@@ -998,9 +998,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mupdf-0.9
 	o muse-0.9.2
 	o mysql-client-5.1.60
-	o mysql-client-5.5.18
 	o mysql-server-5.1.60
-	o mysql-server-5.5.18
 	o nano-2.2.6
 	o nap-1.5.3
 	o nas-1.9.3 [pkg/45449]
