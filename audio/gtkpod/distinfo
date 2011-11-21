@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2009/02/15 09:43:38 wiz Exp $
+$NetBSD: distinfo,v 1.11 2011/11/21 19:48:08 shattered Exp $
 
-SHA1 (gtkpod-0.99.14.tar.gz) = 92977420c0b54e85ddc80fbe2e99cd4a5e4e81b9
-RMD160 (gtkpod-0.99.14.tar.gz) = ec4806918310b3071c33d461af3a354b5826a84c
-Size (gtkpod-0.99.14.tar.gz) = 1856919 bytes
+SHA1 (gtkpod-1.0.0.tar.gz) = 77b768663458069a414c59b7aad285020c93a035
+RMD160 (gtkpod-1.0.0.tar.gz) = 271e9aeb25493b89933f203ebce4c004ce0da573
+Size (gtkpod-1.0.0.tar.gz) = 1899869 bytes
 SHA1 (patch-bi) = 664a807d14318fd205a89dacc3084212cc9c6d5e
 SHA1 (patch-bj) = 6caafe347a5d4cdb6cdfa48d72121272d75e8a80
