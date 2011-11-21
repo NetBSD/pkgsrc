@@ -1,0 +1,14 @@
+p5-strictures provides "strictures" directive.
+
+  use strictures 1;
+
+is equivalent to
+
+  use strict;
+  use warnings FATAL => 'all';
+
+except when called from a file where $0 matches:
+
+  /^x?t\/.*(?:load|compile|coverage|use_ok).*\.t$/
+
+and when either '.git' or '.svn' is present in the current directory
