@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2011/11/12 12:56:27 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2011/11/21 21:33:13 seanb Exp $
 #
 
 .include "../../devel/xulrunner/dist.mk"
@@ -87,7 +87,7 @@ post-build:
 	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr";		\
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr"			\
 	    "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr"		\
-	    "-lplds4 -lplc4 -lnspr4 -pthread"			\
+	    "-lplds4 -lplc4 -lnspr4 "${BUILDLINK_LIBS.pthread:Q};	\
 	) > ${WRKDIR}/nspr.pc
 
 INSTALLATION_DIRS+=	lib/pkgconfig
