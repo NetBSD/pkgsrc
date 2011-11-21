@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/11/21 19:39:13 shattered Exp $
+bin/ipod-read-sysinfo-extended
 include/gpod-1.0/gpod/itdb.h
 lib/libgpod.la
 lib/pkgconfig/libgpod-1.0.pc
+lib/pkgconfig/libgpod-sharp.pc
 share/gtk-doc/html/libgpod/ch01.html
 share/gtk-doc/html/libgpod/home.png
 share/gtk-doc/html/libgpod/index.html
