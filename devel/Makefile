@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1533 2011/11/21 06:13:46 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.1534 2011/11/21 14:37:48 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -869,6 +869,7 @@ SUBDIR+=	p5-Module-Starter-PBP
 SUBDIR+=	p5-Module-Util
 SUBDIR+=	p5-Module-Versions
 SUBDIR+=	p5-Module-Versions-Report
+SUBDIR+=	p5-Moo
 SUBDIR+=	p5-Moose
 SUBDIR+=	p5-Moose-Autobox
 SUBDIR+=	p5-Moose-Policy
