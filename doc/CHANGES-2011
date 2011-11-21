@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2994 2011/11/21 14:42:35 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2995 2011/11/21 17:07:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4737,3 +4737,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Plack-Middleware-Auth-Digest to 0.04 [hiramatsu 2011-11-21]
 	Added devel/p5-Moo version 0.009012 [hiramatsu 2011-11-21]
 	Updated devel/p5-MooseX-Types-Structured to 0.28 [hiramatsu 2011-11-21]
+	Updated databases/mysql55-client to 5.5.18 [adam 2011-11-21]
+	Updated databases/mysql55-server to 5.5.18 [adam 2011-11-21]
