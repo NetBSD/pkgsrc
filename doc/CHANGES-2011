@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2992 2011/11/21 08:14:14 ghen Exp $
+$NetBSD: CHANGES-2011,v 1.2993 2011/11/21 08:48:15 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4730,3 +4730,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-strictures version 1.002002 [hiramatsu 2011-11-21]
 	Updated devel/p5-Object-Signature to 1.07 [hiramatsu 2011-11-21]
 	Updated mail/dovecot2-pigeonhole to 0.2.5 [ghen 2011-11-21]
+	Updated devel/p5-Devel-PPPort to 3.20 [hiramatsu 2011-11-21]
+	Updated net/p5-Data-Stream-Bulk to 0.08 [hiramatsu 2011-11-21]
+	Updated www/p5-Catalyst-Model-Adaptor to 0.10 [hiramatsu 2011-11-21]
+	Updated www/p5-HTML-FillInForm to 2.1 [hiramatsu 2011-11-21]
+	Updated www/p5-Plack-Middleware-Auth-Digest to 0.04 [hiramatsu 2011-11-21]
