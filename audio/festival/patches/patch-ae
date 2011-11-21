@@ -1,22 +1,13 @@
-$NetBSD: patch-ae,v 1.5 2007/08/30 09:15:53 rillig Exp $
+$NetBSD: patch-ae,v 1.6 2011/11/21 01:35:29 marino Exp $
 
---- speech_tools/include/EST_math.h.orig	2004-04-30 18:56:49.000000000 +0200
-+++ speech_tools/include/EST_math.h	2007-08-30 10:51:43.000000000 +0200
-@@ -46,6 +46,7 @@
- extern "C" int isnan(double);
+--- speech_tools/include/EST_math.h.orig	2011-11-20 22:34:00.490181000 +0000
++++ speech_tools/include/EST_math.h
+@@ -111,6 +111,15 @@ extern "C" {
+ 
  #endif
  
-+#include <cmath>
- #include <math.h>
- #include <limits.h>
- #include <float.h>
-@@ -94,6 +95,16 @@ extern "C" {
- #define isnanf(X) isnan(X)
- #endif
- 
-+/* If isnan is a macro, assume it is C99 type-variadic. */
-+#if defined(__DragonFly__) && defined(isnan)
-+#define isnanf(X) isnan(X)
++#if defined(__DragonFly__)
++#define isnanf(X) __isnanf(X)
 +#endif
 +
 +/* The g++-3.3.6 <cmath> header undefines the macro isnan, but shouldn't. */
@@ -24,6 +15,6 @@ $NetBSD: patch-ae,v 1.5 2007/08/30 09:15:53 rillig Exp $
 +#define isnan(X) __fpmacro_unary_floating(isnan, (X))
 +#endif
 +
- /* FreeBSD *and other 4.4 based systems require anything, isnanf is defined */
- #if defined(__FreeBSD__)
- 
+ /* Cygwin (at least cygwin 1.7 with gcc 4.3.4) */ 
+ #if defined(__CYGWIN__)
+ #if __GNUG__ > 3

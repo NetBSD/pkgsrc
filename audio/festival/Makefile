@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.60 2009/01/10 00:28:57 jnemeth Exp $
+# $NetBSD: Makefile,v 1.61 2011/11/21 01:35:29 marino Exp $
 
-DISTNAME=	festival-1.95-beta
-PKGNAME=	festival-1.95beta
-PKGREVISION=	1
+DISTNAME=	festival-2.1-release
+PKGNAME=	festival-2.1
 CATEGORIES=	audio
-MASTER_SITES=	http://festvox.org/packed/festival/1.95/
+MASTER_SITES=	http://festvox.org/packed/festival/2.1/
 DISTFILES=	${DISTNAME}.tar.gz \
-		speech_tools-1.2.95-beta.tar.gz
+		speech_tools-2.1-release.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
 COMMENT=	Advanced multi-lingual speech synthesis system
+LICENSE=	original-bsd	
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pax
+USE_TOOLS+=	gmake pax perl
 MAKE_JOBS_SAFE=	no
+REPLACE_PERL=	festival/examples/festival_client.pl
 
 SPEECHTOOLS=	${WRKSRC}/speech_tools
 FESTIVAL=	${WRKSRC}/festival
-
 FHOME=		${PREFIX}/share/festival
 
 GNU_CONFIGURE=		yes
@@ -30,32 +30,23 @@ CONFIG_GUESS_OVERRIDE=	${SPEECHTOOLS}/config.guess ${FESTIVAL}/config.guess
 CONFIG_SUB_OVERRIDE=	${SPEECHTOOLS}/config.sub ${FESTIVAL}/config.sub
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*)
-GCC_REQD+=	3.3.6
-USE_PKGSRC_GCC= yes
-.endif
-
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 PKG_COMPILER?=		suncc
 .else
 PKG_COMPILER_cmd=	case "${CC_VERSION}" in				\
-			gcc-2.6.*)	${ECHO} gcc26;;			\
 			gcc-2.7.*)	${ECHO} gcc27;;			\
 			gcc-2.8.*)	${ECHO} gcc28;;			\
 			gcc-2.95.*)	${ECHO} gcc295;;		\
-			gcc-3.3.*)	${ECHO} gcc32;;			\
-			gcc-3.4.*)	${ECHO} gcc32;;			\
+			gcc-2.96.*)	${ECHO} gcc296;;		\
+			gcc-3.0.*)	${ECHO} gcc30;;			\
+			gcc-3.1.*)	${ECHO} gcc31;;			\
+			gcc-3.2.*)	${ECHO} gcc32;;			\
 			egcs*)		${ECHO} egcs;;			\
-			*)		${ECHO} ;;			\
+			*)		${ECHO} gcc;;			\
 			esac
 PKG_COMPILER=		${PKG_COMPILER_cmd:sh}
-.endif
-
-.if empty(PKG_COMPILER)
-PKG_FAIL_REASON+=	"${CC_VERSION} is not currently supported."
 .endif
 
 MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS:Q}				\
@@ -73,8 +64,6 @@ MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS:Q}				\
 		GCC28_CXX=${CXX:Q}					\
 		GCC27_CC=${CC:Q}					\
 		GCC27_CXX=${CXX:Q}					\
-		GCC26_CC=${CC:Q}					\
-		GCC26_CXX=${CXX:Q}					\
 		CC=${CC:Q}						\
 		CXX=${CXX:Q}
 
@@ -83,8 +72,8 @@ INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1
 post-patch:
 	${CP} ${FILESDIR}/top-Makefile ${WRKSRC}/Makefile
 .if exists(${FILESDIR}/unknown_${OPSYS}.mak)
-	${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${SPEECHTOOLS}/config/systems/unknown_${OPSYS}.mak
-	${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${FESTIVAL}/config/systems/unknown_${OPSYS}.mak
+	${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${SPEECHTOOLS}/config/systems
+	${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${FESTIVAL}/config/systems
 .endif
 
 do-install:
