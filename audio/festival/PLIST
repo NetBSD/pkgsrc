@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:32:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/11/21 01:35:29 marino Exp $
 bin/festival
 bin/festival_client
 libexec/audsp
@@ -31,6 +31,8 @@ share/festival/examples/make_utts
 share/festival/examples/make_utts.sh
 share/festival/examples/powmeanstd
 share/festival/examples/powmeanstd.sh
+share/festival/examples/run-festival-script
+share/festival/examples/run-festival-script.sh
 share/festival/examples/saytime
 share/festival/examples/saytime.sh
 share/festival/examples/scfg_parse_text
@@ -135,5 +137,6 @@ share/festival/lib/tobi_rules.scm
 share/festival/lib/token.scm
 share/festival/lib/tokenpos.scm
 share/festival/lib/tts.scm
+share/festival/lib/unilex_phones.scm
 share/festival/lib/voices.scm
 share/festival/lib/web.scm
