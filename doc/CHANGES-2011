@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2991 2011/11/21 06:15:25 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.2992 2011/11/21 08:14:14 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4729,3 +4729,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/getmail to 4.23.0 [schmonz 2011-11-21]
 	Added devel/p5-strictures version 1.002002 [hiramatsu 2011-11-21]
 	Updated devel/p5-Object-Signature to 1.07 [hiramatsu 2011-11-21]
+	Updated mail/dovecot2-pigeonhole to 0.2.5 [ghen 2011-11-21]
