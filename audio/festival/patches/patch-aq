@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1 2011/11/21 01:35:30 marino Exp $
+
+--- speech_tools/audio/linux_sound.cc.orig	2009-04-29 17:06:36.000000000 +0000
++++ speech_tools/audio/linux_sound.cc
+@@ -863,8 +863,10 @@ int record_linux_wave(EST_Wave &inwave,
+ 
+ #else /* not supported */
+ 
++#if !defined(SUPPORT_LINUX16) && !defined(SUPPORT_FREEBSD16)
+ int freebsd16_supported = FALSE;
+ int linux16_supported = FALSE;
++#endif
+ 
+ int play_linux_wave(EST_Wave &inwave, EST_Option &al)
+ {
