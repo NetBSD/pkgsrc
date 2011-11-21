@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/03/07 10:35:44 agc Exp $
+$NetBSD: patch-aa,v 1.5 2011/11/21 01:35:29 marino Exp $
 
---- speech_tools/config/system.sh	2005/01/10 09:00:19	1.1
-+++ speech_tools/config/system.sh	2005/01/10 09:02:26
-@@ -46,7 +46,7 @@
+--- speech_tools/config/system.sh.orig	2002-12-27 18:39:26.000000000 +0000
++++ speech_tools/config/system.sh
+@@ -46,7 +46,7 @@ OSTYPE=`uname -s |
  	sed -e '/^\([^_]*\).*/s//\1/' -e '/\//s///g'`
  
  # CPU, downcased, /s and some uninteresting details eliminated
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2005/03/07 10:35:44 agc Exp $
  	tr ABCDEFGHIJKLMNOPQRSTUVWXYZ/ abcdefghijklmnopqrstuvwxyz_ | 
  	sed -e 's/i[0-9]86/ix86/' \
  	    -e 's/sun4/sparc/' \
-@@ -56,7 +56,7 @@
+@@ -56,7 +56,7 @@ MACHINETYPE=`{ mach || uname -m || echo
  	    `
  
  # OR revision, only take first two numbers.

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/03/07 11:32:09 agc Exp $
+$NetBSD: patch-ac,v 1.5 2011/11/21 01:35:29 marino Exp $
 
---- festival/examples/Makefile	2005/03/07 11:05:22	1.1
-+++ festival/examples/Makefile	2005/03/07 11:05:45
-@@ -55,7 +55,7 @@
+--- festival/examples/Makefile.orig	2008-11-23 21:07:52.000000000 +0000
++++ festival/examples/Makefile
+@@ -55,7 +55,7 @@ include $(TOP)/config/common_make_rules
  $(ALL) : % : %.sh
  	rm -f $@
  	@echo "#!/bin/sh" >$@

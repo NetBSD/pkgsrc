@@ -1,15 +1,13 @@
-$NetBSD: distinfo,v 1.15 2007/09/02 11:02:57 joerg Exp $
+$NetBSD: distinfo,v 1.16 2011/11/21 01:35:29 marino Exp $
 
-SHA1 (festival-1.95-beta.tar.gz) = 7bbf841b07a09cfe1ab17db23c2ebc12ea3d854b
-RMD160 (festival-1.95-beta.tar.gz) = 7f7cce6ab170ab1e83911ed92408576fff32cbd6
-Size (festival-1.95-beta.tar.gz) = 707573 bytes
-SHA1 (speech_tools-1.2.95-beta.tar.gz) = 5f0533a1b06c56f06e382d752b920ee62a5e8312
-RMD160 (speech_tools-1.2.95-beta.tar.gz) = 874b9e6d35bf8a59aeacd3d5b149e24e2a490008
-Size (speech_tools-1.2.95-beta.tar.gz) = 1281274 bytes
-SHA1 (patch-aa) = 016faac0fbd2291f349b3710aefdc4df736af0d8
-SHA1 (patch-ab) = 23e55253b22df5b8d2bc44b08f6757c90c1f13a8
-SHA1 (patch-ac) = c0a3fbd4e98ef941ef78c1ae800ef33a5153e8f9
-SHA1 (patch-ad) = b035df9c711d0f7ee1a31b663bc44c94bd904304
-SHA1 (patch-ae) = 2a0449f50e9a339767c02cc92045dd5467927ed3
-SHA1 (patch-af) = 372b65486dd9078058433461a18c6bcc8b019df8
-SHA1 (patch-ag) = baa40149e3a7213175739e9075faa97691e33b6f
+SHA1 (festival-2.1-release.tar.gz) = f0c5a4282667898c584516e3605742835f59cb77
+RMD160 (festival-2.1-release.tar.gz) = b3c646ecc532e4e05f846db06bbab12a13ec1d6b
+Size (festival-2.1-release.tar.gz) = 787313 bytes
+SHA1 (speech_tools-2.1-release.tar.gz) = bbf43b259de8bb91e0c5e8a1defc6e45a10e60f9
+RMD160 (speech_tools-2.1-release.tar.gz) = 59831fbe607f05308f339a3cfb3af53d7337328b
+Size (speech_tools-2.1-release.tar.gz) = 1681999 bytes
+SHA1 (patch-aa) = 053713a156c277fd47ff4e687b3623bf0061dd89
+SHA1 (patch-ab) = 7f22ea2a89caf72dcb18818eb98bdb54911d5e7c
+SHA1 (patch-ac) = 9ffe5f44dc50d9ab5161b9ca107956e799fff463
+SHA1 (patch-ae) = 9d630d198f829979508b90416ddb0f56d721b422
+SHA1 (patch-aq) = 81109b22e5db0f733fa2a3d8e7cdef1cdcbe0185
