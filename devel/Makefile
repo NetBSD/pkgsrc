@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1532 2011/11/20 19:15:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.1533 2011/11/21 06:13:46 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -1176,6 +1176,7 @@ SUBDIR+=	p5-pip
 SUBDIR+=	p5-prefork
 SUBDIR+=	p5-sapnwrfc
 SUBDIR+=	p5-signatures
+SUBDIR+=	p5-strictures
 SUBDIR+=	p5-subversion
 SUBDIR+=	p5-version
 SUBDIR+=	palmpower
