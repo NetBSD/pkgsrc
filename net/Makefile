@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.893 2011/11/08 23:54:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.894 2011/11/22 22:19:01 tez Exp $
 #
 
 COMMENT=	Networking tools
@@ -51,6 +51,7 @@ SUBDIR+=	bsddip
 SUBDIR+=	btget
 SUBDIR+=	btpd
 SUBDIR+=	bug-buddy
+SUBDIR+=	cacti
 SUBDIR+=	cdpd
 SUBDIR+=	cftp
 SUBDIR+=	chksniff
