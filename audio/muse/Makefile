@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/11/22 16:38:28 marino Exp $
+# $NetBSD: Makefile,v 1.35 2011/11/22 20:50:53 wiz Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -11,6 +11,7 @@ MASTER_SITES=	ftp://ftp.dyne.org/muse/releases/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://muse.dyne.org/
 COMMENT=	Multiple Streaming Engine
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,15 +32,6 @@ SUBST_STAGE.dsp=	post-patch
 SUBST_FILES.dsp=	src/jmixer.cpp src/libmpeg/fileplayer.cc
 SUBST_SED.dsp=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.dsp=	Fixing hardcoded audio device.
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "DragonFly"
-SUBST_CLASSES+=		iostream
-SUBST_STAGE.iostream=	post-patch
-SUBST_FILES.iostream=	src/libmpeg/fileplayer.cc src/libmpeg/mpegtoraw.cc
-SUBST_SED.iostream=	-e 's,<iostream.h>,<iostream>,'
-SUBST_MESSAGE.iostream=	Fixing old iostream headers includes
-.endif
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
