@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.107 2011/11/20 14:03:40 shattered Exp $
+# $NetBSD: Makefile,v 1.108 2011/11/22 18:40:27 shattered Exp $
 
 DISTNAME=	curl-7.21.7
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/
 EXTRACT_SUFX=	.tar.bz2
-FETCH_USING=	ftp
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://curl.haxx.se/
