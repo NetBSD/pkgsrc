@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2005/12/11 23:44:40 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2011/11/22 16:38:28 marino Exp $
 
 --- src/jmixer.cpp.orig	2004-04-09 17:50:43.000000000 +0000
 +++ src/jmixer.cpp
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/11 23:44:40 joerg Exp $
  /* this is the function selecting files for the scandir
     on freebsd systems you should change the following line to:
     int selector(struct dirent *dir) {    */
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__)
 +int selector(struct dirent *dir) {
 +#else
  int selector(const struct dirent *dir) {
