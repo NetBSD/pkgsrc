@@ -1,9 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2008/01/14 02:04:41 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2011/11/22 20:02:48 joerg Exp $
 
 Sunpro has problems with a non-const const_reverse_iterator.
 
---- src/Screen.cc.orig	2005-10-18 10:07:22.000000000 +0200
-+++ src/Screen.cc	2007-12-05 16:25:38.677507000 +0100
+--- src/Screen.cc.orig	2005-10-18 08:07:22.000000000 +0000
++++ src/Screen.cc
+@@ -47,7 +47,7 @@
+ #include <assert.h>
+ #include <ctype.h>
+ #include <dirent.h>
+-
++#include <string.h>
+ 
+ static bool running = true;
+ static int anotherWMRunning(Display *, XErrorEvent *) {
 @@ -492,8 +492,8 @@ void BScreen::setCurrentWorkspace(unsign
  
      // withdraw windows in reverse order to minimize the number of
