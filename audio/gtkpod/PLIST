@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:32:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/11/22 18:37:03 shattered Exp $
 bin/gtkpod
 man/man1/gtkpod.1
 share/applications/gtkpod.desktop
@@ -83,6 +83,7 @@ share/icons/hicolor/32x32/apps/gtkpod.png
 share/icons/hicolor/48x48/apps/gtkpod.png
 share/icons/hicolor/64x64/apps/gtkpod.png
 share/icons/hicolor/scalable/apps/gtkpod.svg
+share/locale/ca/LC_MESSAGES/gtkpod.mo
 share/locale/de/LC_MESSAGES/gtkpod.mo
 share/locale/es/LC_MESSAGES/gtkpod.mo
 share/locale/fr/LC_MESSAGES/gtkpod.mo
