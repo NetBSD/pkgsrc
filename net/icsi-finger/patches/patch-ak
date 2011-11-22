@@ -1,9 +1,4 @@
-$NetBSD: patch-ak,v 1.3 2011/11/15 13:04:46 is Exp $
-
-- use standard includes
-- 64-bit time_t fixes
-- remove union wait
-- replace mktemp() by mkstemp()
+$NetBSD: patch-ak,v 1.4 2011/11/22 09:04:49 is Exp $
 
 --- src/in.fingerd.c.orig	1996-01-10 19:26:24.000000000 +0000
 +++ src/in.fingerd.c
@@ -32,7 +27,15 @@ $NetBSD: patch-ak,v 1.3 2011/11/15 13:04:46 is Exp $
      }
    else
      {
-@@ -1262,7 +1260,7 @@ show_unlogged_packet (packet, stream)
+@@ -888,7 +886,6 @@ finger_clients (user, options, stream)
+       else
+ 	{
+ 	  status = "";
+-	  idle_time = "";
+ 	}
+     
+ 
+@@ -1262,7 +1259,7 @@ show_unlogged_packet (packet, stream)
  
    /* In SunOS4 getpwnam() seems to call ctime(), so we move this call down
     * here to be sure the intended result doesn't get overwritten. */
@@ -41,7 +44,7 @@ $NetBSD: patch-ak,v 1.3 2011/11/15 13:04:46 is Exp $
    the_time[strlen(the_time) - 1] = '\0';	/* delete newline */
  
    if (*(packet->real_name))
-@@ -1406,14 +1404,7 @@ run_target_script(script, target, cd, in
+@@ -1406,14 +1403,7 @@ run_target_script(script, target, cd, in
    char *arg;
  {
    int pid;
@@ -56,7 +59,7 @@ $NetBSD: patch-ak,v 1.3 2011/11/15 13:04:46 is Exp $
  
    if (access (script, X_OK) >= 0)
      {
-@@ -1528,6 +1519,7 @@ maybe_user_script (entry, stream, packet
+@@ -1528,6 +1518,7 @@ maybe_user_script (entry, stream, packet
    FILE *long_output;
    int result;
    extern char *mktemp();
@@ -64,7 +67,7 @@ $NetBSD: patch-ak,v 1.3 2011/11/15 13:04:46 is Exp $
  
  #ifndef FINGERRC
    return (0);
-@@ -1571,8 +1563,9 @@ maybe_user_script (entry, stream, packet
+@@ -1571,8 +1562,9 @@ maybe_user_script (entry, stream, packet
    /* Collect regular long finger output in file */
    strcpy (temp_file, TEMPFILE);
    
