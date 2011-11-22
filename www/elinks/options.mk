@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.11 2010/04/01 09:32:13 obache Exp $
+# $NetBSD: options.mk,v 1.12 2011/11/22 14:09:49 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp javascript finger gopher
 PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-exmode expat
 PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec
 PKG_SUPPORTED_OPTIONS+=	kerberos
+PKG_SUPPORTED_OPTIONS+=        python
 PKG_OPTIONS_GROUP.tls=	gnutls ssl
 PKG_OPTIONS_GROUP.malloc=	boehm-gc elinks-fastmem
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
@@ -133,4 +134,11 @@ CONFIGURE_ARGS+=	--with-gssapi
 .  include "../../mk/krb5.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-gssapi
+.endif
+
+.if !empty(PKG_OPTIONS:Mpython)
+.include "../../lang/python/pyversion.mk"
+CONFIGURE_ARGS+=       --with-python=${PYTHONBIN}
+.else
+CONFIGURE_ARGS+=       --without-python
 .endif
