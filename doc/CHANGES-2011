@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.2999 2011/11/22 03:40:37 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3000 2011/11/22 07:08:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-Types-Common to 0.001003 [hiramatsu 2011-11-22]
 	Updated www/p5-CGI to 3.58 [hiramatsu 2011-11-22]
 	Updated www/p5-HTTP-Lite to 2.3 [hiramatsu 2011-11-22]
+	Updated devel/p5-Mouse to 0.97 [sno 2011-11-22]
