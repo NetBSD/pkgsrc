@@ -1,7 +1,17 @@
-$NetBSD: distinfo,v 1.3 2009/06/05 09:49:53 hasso Exp $
+$NetBSD: distinfo,v 1.4 2011/11/22 20:07:20 joerg Exp $
 
 SHA1 (synergy-1.2.7.tar.gz) = 5964460892fd9e9cb55c5bfe4e781f2bc08d0b76
 RMD160 (synergy-1.2.7.tar.gz) = 6bdbe5adbc13c2f49afcb99ccaa20b96a12c2bcf
 Size (synergy-1.2.7.tar.gz) = 707319 bytes
-SHA1 (patch-aa) = 20747abe2f447adb5967a767ee5ec9d9f09c8fb4
-SHA1 (patch-ab) = 2a4b8c368f0733f0c6e9d60b42660e459a2a55c1
+SHA1 (patch-aa) = 5a48140c7622195a716eededae2d1ee0f6fa4e85
+SHA1 (patch-ab) = 011deedba1d2a793ff4add4196c8a10708e864f5
+SHA1 (patch-lib-arch-CArchDaemonUnix.cpp) = 1d11d87f9a388ba68403ff74d4fcd5fa180a919e
+SHA1 (patch-lib_arch_CMultibyte.cpp) = 66cc7cd1e327a1bfd519cb003835914221cbb369
+SHA1 (patch-lib_base_CStringUtil.cpp) = 8f803bcab5a37bd4bf5a918fe3333338bd7d22c2
+SHA1 (patch-lib_client_CClient.cpp) = afa4dc5089da155756a5ea4772be216256f71663
+SHA1 (patch-lib_client_CServerProxy.cpp) = d6692bebbb6c71684cd320822859701b96fb7efc
+SHA1 (patch-lib_net_CTCPSocket.cpp) = 609768fa601c76e6431c222ab66e7aabf59bab49
+SHA1 (patch-lib_server_CServer.cpp) = eefe1004a9dd7216c0496f9e9b46cfa0fa2f13f3
+SHA1 (patch-lib_synergy_CPacketStreamFilter.cpp) = 614734a5a276950ff688e4d3a9c3e7ae66fed743
+SHA1 (patch-lib_synergy_IKeyState.cpp) = fb6a64639156f56bb353ed598835cb5badb3a1f2
+SHA1 (patch-lib_synergy_IPrimaryScreen.cpp) = 3a04d64a8270ed2da265213bacdf32c72ad01fcc
