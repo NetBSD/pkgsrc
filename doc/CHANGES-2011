@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3000 2011/11/22 07:08:09 sno Exp $
+$NetBSD: CHANGES-2011,v 1.3001 2011/11/22 09:07:37 is Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4587,7 +4587,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Any-Moose to 0.18 [sno 2011-11-15]
 	Added www/p5-HTTP-Tiny version 0.016 [sno 2011-11-15]
 	Added www/p5-HTTP-Tiny version 0.016 [sno 2011-11-15]
-	Updated net/icsi-finger to 1.0.27nb5 [is 2011-11-15]
+	Updated net/icsi-finger to 1.0.27nb6 [is 2011-11-15]
 	Added devel/p5-Test-TinyMocker version 0.03 [sno 2011-11-15]
 	Updated lang/parrot to 3.8.0 [he 2011-11-15]
 	Added devel/p5-MetaCPAN-API version 0.34 [sno 2011-11-15]
@@ -4748,3 +4748,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-CGI to 3.58 [hiramatsu 2011-11-22]
 	Updated www/p5-HTTP-Lite to 2.3 [hiramatsu 2011-11-22]
 	Updated devel/p5-Mouse to 0.97 [sno 2011-11-22]
+	Updated net/icsi-finger to 1.0.27nb7 [is 2011-11-22]
