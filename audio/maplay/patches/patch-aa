@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2009/07/07 15:25:39 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2011/11/22 20:57:35 wiz Exp $
 
---- Makefile	2002/06/27 15:41:29	1.1
-+++ Makefile	2002/06/27 15:41:40
-@@ -39,7 +39,7 @@
+--- Makefile.orig	1994-06-23 12:14:46.000000000 +0000
++++ Makefile
+@@ -39,7 +39,7 @@ OBJS = maplay.o ibitstream.o header.o sc
  
  .SUFFIXES:	.cc
  
@@ -11,13 +11,13 @@ $NetBSD: patch-aa,v 1.4 2009/07/07 15:25:39 joerg Exp $
  		@./configuration.sh
  
  all:		maplay
-@@ -47,6 +47,9 @@
- maplay:		$(OBJS)
+@@ -48,6 +48,9 @@ maplay:		$(OBJS)
  		$(COMPILER) $(CFLAGS) $(OBJS) -o $@ $(LIBRARIES) -lm
  		-strip $@
-+
+ 
 +install: all
 +		${INSTALL} -s -c -m 755 maplay ${DESTDIR}${PREFIX}/bin
- 
++
  .cc.o:
  		$(COMPILER) -c $(CFLAGS) $(INCLUDEDIRS) $*.cc -o $@
+ 
