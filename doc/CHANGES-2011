@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3005 2011/11/22 19:28:40 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3006 2011/11/22 19:35:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4755,3 +4755,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Devel-Checklib to 0.95 [hiramatsu 2011-11-22]
 	Updated net/nmap to 5.51.5 [pettai 2011-11-22]
 	Updated net/gupnp to 0.13.3nb4 [minskim 2011-11-22]
+	Updated biology/gnome-chemistry-utils to 0.12.10 [ryoon 2011-11-22]
