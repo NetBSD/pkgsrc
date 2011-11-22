@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2008/05/24 15:59:27 obache Exp $
+$NetBSD: distinfo,v 1.9 2011/11/22 18:11:14 joerg Exp $
 
 SHA1 (xfreecell-1.0.5b.tgz) = b0453b09ea2211822a5f03f532097c9eb14db2a6
 RMD160 (xfreecell-1.0.5b.tgz) = 2629217bf29734bb25b30ca8aaec62ae19d0ff6f
@@ -7,4 +7,10 @@ SHA1 (patch-aa) = d5235b5a34df4ea12c249d680cc6e674f1c50626
 SHA1 (patch-ab) = a34285fa7e8564d18d91cdb23affd1afb5cd8938
 SHA1 (patch-ac) = f2fb8f2db71c4051eb28352f02a0fed09f69f97f
 SHA1 (patch-ad) = cfdf8f50b5bba32ea8a1bc048e89e0594e85c072
-SHA1 (patch-ae) = b1d9a7cf0a9a692c4ec04379b3153e41268f0315
+SHA1 (patch-ae) = cbdf88cf997d8f4dfd683dc0e0d10a46d3ec848b
+SHA1 (patch-card.cpp) = 7a1f8f07d1a9cdba4427771ab3e7553ae667d7df
+SHA1 (patch-freecell.cpp) = 298cc7c3c65b9371ed65a1e987a5d5c790e2ee73
+SHA1 (patch-option.cpp) = 31cc65ae105f5fa3885717a4ff99341a864978dc
+SHA1 (patch-widget_font.cpp) = 968f4142220d7470819e8ead79e00195ba2837dd
+SHA1 (patch-widget_scrollbar.cpp) = 006e69e6dcb96448fd04d21d049f113fde756cc3
+SHA1 (patch-widget_util.cpp) = 5ea757fee16555cec98b6ba0d983fde22c2345c1
