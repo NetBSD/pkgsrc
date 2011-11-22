@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/01 06:00:37 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/22 16:23:52 marino Exp $
 #
 
 DISTNAME=	gmpc-tagedit-0.20.0
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS=	gmake intltool pkg-config
+USE_TOOLS=	gmake intltool pkg-config msgfmt
 
 .include "../../audio/gmpc/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
