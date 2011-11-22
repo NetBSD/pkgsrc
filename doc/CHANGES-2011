@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3002 2011/11/22 09:53:48 is Exp $
+$NetBSD: CHANGES-2011,v 1.3003 2011/11/22 11:19:27 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4750,3 +4750,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Mouse to 0.97 [sno 2011-11-22]
 	Updated net/icsi-finger to 1.0.27nb7 [is 2011-11-22]
 	Updated net/icsi-finger to 1.0.28 [is 2011-11-22]
+	Updated databases/p5-SQL-Translator to 0.11010 [hiramatsu 2011-11-22]
+	Updated graphics/p5-GD-SecurityImage to 1.71 [hiramatsu 2011-11-22]
+	Updated devel/p5-Devel-Checklib to 0.95 [hiramatsu 2011-11-22]
