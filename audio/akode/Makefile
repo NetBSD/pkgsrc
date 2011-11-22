@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/22 10:54:15 marino Exp $
 #
 
 PKGNAME=		akode-2.0.2
-PKGREVISION=		2
+PKGREVISION=		3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Simple audio decoding framework (base package)
