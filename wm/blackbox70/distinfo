@@ -1,9 +1,15 @@
-$NetBSD: distinfo,v 1.3 2011/09/24 13:01:28 joerg Exp $
+$NetBSD: distinfo,v 1.4 2011/11/22 20:02:48 joerg Exp $
 
 SHA1 (blackbox-0.70.1.tar.gz) = f0ab7e4b44ae6ee4c2a2136651afc567c47fe2cd
 RMD160 (blackbox-0.70.1.tar.gz) = ab80c43d42dbfac23c9f981885f25a42c66f51a6
 Size (blackbox-0.70.1.tar.gz) = 650400 bytes
-SHA1 (patch-aa) = 24a333e964dea6c0707df681ce14153ef158b305
+SHA1 (patch-aa) = 36e90d9a54329009c1d1fd9788ebe349858578b3
 SHA1 (patch-ab) = 30633230592a0b81002bdddbb1128694acde9d10
-SHA1 (patch-ac) = f4ad9466b09f01bc90c1cd0bc036ce6c397e6609
+SHA1 (patch-ac) = 5f7132230ab4c53bf5042a274592bae45c6a15ed
+SHA1 (patch-lib-Resource.cc) = 8ac7fee379aa940f85c7800572be5ee3bb4202c5
 SHA1 (patch-lib-Util.hh) = b0bbf923ee06d200666ce96b6bf5ad648b361fd8
+SHA1 (patch-lib-XDG.cc) = 55422803fd20b8f100816a204de7af22f00ba51c
+SHA1 (patch-src-BlackboxResource.cc) = 66d022f7a91f2054c45c3f38a0fe98da4ddce3de
+SHA1 (patch-src-ScreenResource.cc) = ec09befadf9e92bd9e9543f7e9b472639bf6e8d5
+SHA1 (patch-src-main.cc) = 1b004b5860473300afc02fa50d6fc89523ab1b59
+SHA1 (patch-util-bsetroot.cc) = 87b3e5aab03facfce88286f25df14580c39582c6
