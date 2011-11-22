@@ -1,0 +1,14 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2011/11/22 19:17:19 yyamano Exp $
+
+Make this build with symlinked pkgsrc directory.
+
+--- GNUmakefile.orig	2011-03-25 16:27:18.000000000 +0000
++++ GNUmakefile
+@@ -1,6 +1,6 @@
+ include srcdir.mk
+ 
+-BLDDIR = $(CURDIR)
++BLDDIR = $(shell pwd)
+ SUBDIR =
+ 
+ export SRCDIR
