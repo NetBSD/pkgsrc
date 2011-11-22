@@ -1,8 +1,17 @@
-$NetBSD: patch-al,v 1.2 2004/01/18 13:59:25 mrauch Exp $
+$NetBSD: patch-al,v 1.3 2011/11/22 20:57:35 wiz Exp $
 
---- subband_layer_1.cc.orig	1994-06-23 14:14:36.000000000 +0200
+--- subband_layer_1.cc.orig	1994-06-23 12:14:36.000000000 +0000
 +++ subband_layer_1.cc
-@@ -86,7 +86,7 @@ void SubbandLayer1::read_scalefactor (Ib
+@@ -67,7 +67,7 @@ SubbandLayer1::SubbandLayer1 (uint32 sub
+ void SubbandLayer1::read_allocation (Ibitstream *stream, Header *, Crc16 *crc)
+ {
+   if ((allocation = stream->get_bits (4)) == 15)
+-    cerr << "WARNING: stream contains an illegal allocation!\n";	// MPEG-stream is corrupted!
++    std::cerr << "WARNING: stream contains an illegal allocation!\n";	// MPEG-stream is corrupted!
+   if (crc)
+     crc->add_bits (allocation, 4);
+   if (allocation)
+@@ -86,14 +86,14 @@ void SubbandLayer1::read_scalefactor (Ib
  }
  
  
@@ -11,7 +20,15 @@ $NetBSD: patch-al,v 1.2 2004/01/18 13:59:25 mrauch Exp $
  {
    if (allocation)
    {
-@@ -105,10 +105,10 @@ bool SubbandLayer1::read_sampledata (Ibi
+     sample = real (stream->get_bits (samplelength));
+ #ifdef DEBUG
+     if (sample == (1 << samplelength) - 1)
+-	cerr << "WARNING: stream contains an illegal subband sample!\n";  // MPEG-stream is corrupted!
++	std::cerr << "WARNING: stream contains an illegal subband sample!\n";  // MPEG-stream is corrupted!
+ #endif
+   }
+   if (++samplenumber == 12)
+@@ -105,15 +105,15 @@ bool SubbandLayer1::read_sampledata (Ibi
  }
  
  
@@ -24,6 +41,12 @@ $NetBSD: patch-al,v 1.2 2004/01/18 13:59:25 mrauch Exp $
    {
      register real scaled_sample = (sample * factor + offset) * scalefactor;
  #ifdef DEBUG
+     if (scaled_sample < -1.0 || scaled_sample > 1.0)
+-      cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
++      std::cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
+       // this should never occur
+ #endif
+     filter1->input_sample (scaled_sample, subbandnumber);
 @@ -142,7 +142,7 @@ void SubbandLayer1IntensityStereo::read_
  }
  
@@ -33,7 +56,14 @@ $NetBSD: patch-al,v 1.2 2004/01/18 13:59:25 mrauch Exp $
  	SynthesisFilter *filter1, SynthesisFilter *filter2)
  {
    if (allocation)
-@@ -160,7 +160,7 @@ bool SubbandLayer1IntensityStereo::put_n
+@@ -154,18 +154,18 @@ bool SubbandLayer1IntensityStereo::put_n
+ 		    sample2 = sample * channel2_scalefactor;
+ #ifdef DEBUG
+       if (sample1 < -1.0 || sample1 > 1.0 || sample2 < -1.0 || sample2 > 1.0)
+-	cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
++	std::cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
+ 	// this should never occur
+ #endif
        filter1->input_sample (sample1, subbandnumber);
        filter2->input_sample (sample2, subbandnumber);
      }
@@ -42,7 +72,31 @@ $NetBSD: patch-al,v 1.2 2004/01/18 13:59:25 mrauch Exp $
      {
        register real sample1 = sample * scalefactor;
  #ifdef DEBUG
-@@ -231,9 +231,9 @@ void SubbandLayer1Stereo::read_scalefact
+       if (sample1 < -1.0 || sample1 > 1.0)
+-	cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
++	std::cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
+ 	// this should never occur
+ #endif
+       filter1->input_sample (sample1, subbandnumber);
+@@ -175,7 +175,7 @@ bool SubbandLayer1IntensityStereo::put_n
+       register real sample2 = sample * channel2_scalefactor;
+ #ifdef DEBUG
+       if (sample2 < -1.0 || sample2 > 1.0)
+-	cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
++	std::cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
+ 	// this should never occur
+ #endif
+       filter1->input_sample (sample2, subbandnumber);
+@@ -206,7 +206,7 @@ void SubbandLayer1Stereo::read_allocatio
+     crc->add_bits (channel2_allocation, 4);
+   }
+   if (allocation == 15 || channel2_allocation == 15)
+-    cerr << "WARNING: stream contains an illegal allocation!\n";	// MPEG-stream is corrupted!
++    std::cerr << "WARNING: stream contains an illegal allocation!\n";	// MPEG-stream is corrupted!
+   if (allocation)
+   {
+     samplelength = allocation + 1;
+@@ -231,32 +231,32 @@ void SubbandLayer1Stereo::read_scalefact
  }
  
  
@@ -54,7 +108,13 @@ $NetBSD: patch-al,v 1.2 2004/01/18 13:59:25 mrauch Exp $
    if (channel2_allocation)
    {
      channel2_sample = real (stream->get_bits (channel2_samplelength));
-@@ -246,11 +246,11 @@ bool SubbandLayer1Stereo::read_sampledat
+ #ifdef DEBUG
+     if (channel2_sample == (1 << channel2_samplelength) - 1)
+-	cerr << "WARNING: stream contains an illegal subband sample!\n";  // MPEG-stream is corrupted!
++	std::cerr << "WARNING: stream contains an illegal subband sample!\n";  // MPEG-stream is corrupted!
+ #endif
+   }
+   return returnvalue;
  }
  
  
@@ -68,3 +128,10 @@ $NetBSD: patch-al,v 1.2 2004/01/18 13:59:25 mrauch Exp $
    {
      register float sample2 = (channel2_sample * channel2_factor + channel2_offset) *
  			     channel2_scalefactor;
+ #ifdef DEBUG
+     if (sample2 < -1.0 || sample2 > 1.0)
+-      cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
++      std::cerr << "WARNING: rescaled subband sample is not in [-1.0, 1.0]\n";
+       // this should never occur
+ #endif
+     if (channels == both)

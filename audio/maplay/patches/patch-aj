@@ -1,8 +1,17 @@
-$NetBSD: patch-aj,v 1.1 2002/06/27 15:52:19 agc Exp $
+$NetBSD: patch-aj,v 1.2 2011/11/22 20:57:35 wiz Exp $
 
---- obuffer.h	2002/06/27 15:41:04	1.1
-+++ obuffer.h	2002/06/27 15:41:40
-@@ -123,20 +123,20 @@
+--- obuffer.h.orig	1994-06-23 12:14:40.000000000 +0000
++++ obuffer.h
+@@ -27,7 +27,7 @@
+ #ifndef OBUFFER_H
+ #define OBUFFER_H
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include "all.h"
+@@ -123,20 +123,20 @@ private:
  
  public:
  #ifdef ULAW
@@ -27,7 +36,7 @@ $NetBSD: patch-aj,v 1.1 2002/06/27 15:52:19 agc Exp $
  	// returnvalue == False: no 16-bit output possible (class unsuitable)
  #endif
  };
-@@ -159,7 +159,27 @@
+@@ -159,7 +159,27 @@ public:
    void	append (uint32 channel, int16 value);
    void	write_buffer (int dummy);
  
