@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/01/31 23:22:47 pettai Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/11/22 12:18:07 pettai Exp $
 bin/ncat
 bin/nmap
 bin/nping
@@ -216,6 +216,7 @@ share/nmap/scripts/ntp-monlist.nse
 share/nmap/scripts/oracle-brute.nse
 share/nmap/scripts/oracle-enum-users.nse
 share/nmap/scripts/oracle-sid-brute.nse
+share/nmap/scripts/ovs-agent-version.nse
 share/nmap/scripts/p2p-conficker.nse
 share/nmap/scripts/path-mtu.nse
 share/nmap/scripts/pgsql-brute.nse
