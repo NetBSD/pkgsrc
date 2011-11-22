@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3007 2011/11/22 19:47:59 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3008 2011/11/22 22:53:28 tez Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4757,3 +4757,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/gupnp to 0.13.3nb4 [minskim 2011-11-22]
 	Updated biology/gnome-chemistry-utils to 0.12.10 [ryoon 2011-11-22]
 	Updated print/diffpdf to 1.5.0 [ryoon 2011-11-22]
+	Added net/cacti version 0.8.7h [tez 2011-11-22]
