@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2009/02/09 17:04:49 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/22 20:07:20 joerg Exp $
 
---- lib/platform/CXWindowsScreen.cpp.orig	2009-02-09 17:47:55.000000000 +0100
+--- lib/platform/CXWindowsScreen.cpp.orig	2005-12-15 05:46:20.000000000 +0000
 +++ lib/platform/CXWindowsScreen.cpp
-@@ -923,7 +923,7 @@ CXWindowsScreen::openIM()
+@@ -25,6 +25,7 @@
+ #include "CStringUtil.h"
+ #include "IEventQueue.h"
+ #include "TMethodEventJob.h"
++#include <cstdlib>
+ #include <cstring>
+ #if X_DISPLAY_MISSING
+ #	error X11 is required to build synergy
+@@ -923,7 +924,7 @@ CXWindowsScreen::openIM()
  	// find the appropriate style.  synergy supports XIMPreeditNothing
  	// only at the moment.
  	XIMStyles* styles;
@@ -11,7 +19,7 @@ $NetBSD: patch-aa,v 1.1 2009/02/09 17:04:49 joerg Exp $
  		styles == NULL) {
  		LOG((CLOG_WARN "cannot get IM styles"));
  		XCloseIM(im);
-@@ -946,7 +946,7 @@ CXWindowsScreen::openIM()
+@@ -946,7 +947,7 @@ CXWindowsScreen::openIM()
  	}
  
  	// create an input context for the style and tell it about our window
@@ -20,7 +28,7 @@ $NetBSD: patch-aa,v 1.1 2009/02/09 17:04:49 joerg Exp $
  	if (ic == NULL) {
  		LOG((CLOG_WARN "cannot create IC"));
  		XCloseIM(im);
-@@ -955,7 +955,7 @@ CXWindowsScreen::openIM()
+@@ -955,7 +956,7 @@ CXWindowsScreen::openIM()
  
  	// find out the events we must select for and do so
  	unsigned long mask;
