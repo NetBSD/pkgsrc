@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2009/06/05 09:49:53 hasso Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/22 20:07:20 joerg Exp $
 
---- lib/arch/CArchNetworkBSD.cpp.orig	2009-06-05 12:09:52 +0300
-+++ lib/arch/CArchNetworkBSD.cpp	2009-06-05 12:11:02 +0300
-@@ -50,6 +50,8 @@
- #if HAVE_ALLOCA_H
- #	define freea(x_)
- #else
-+#	undef alloca
-+#	undef freea
- #	define alloca(x_) malloc(x_)
- #	define freea(x_) free(x_)
- #endif
+--- lib/arch/CArchNetworkBSD.cpp.orig	2011-11-22 19:34:07.000000000 +0000
++++ lib/arch/CArchNetworkBSD.cpp
+@@ -28,6 +28,7 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #if HAVE_POLL
+ #	include <poll.h>
