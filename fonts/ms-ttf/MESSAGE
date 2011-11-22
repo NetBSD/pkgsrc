@@ -1,14 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/06/19 13:57:30 minskim Exp $
+$NetBSD: MESSAGE,v 1.3 2011/11/22 18:02:07 shattered Exp $
 
-After installing ${PKGNAME} you must run the following commands
-to use these TrueType fonts with your X server:
-
-# mkfontscale ${PREFIX}/lib/X11/fonts/TTF
-# mkfontdir ${PREFIX}/lib/X11/fonts/TTF		#
-# fc-cache -v					# [1]
-
-You must also configure your X server to use the new fonts. Add
+You must configure your X server to use the new fonts. Add
 these to your /etc/X11/XF86Config. Make sure the TTF and Type1
 font settings are the first FontPath lines.
 
@@ -25,5 +18,4 @@ Section "Module"
 	...
 EndSection
 
-[1] Install pkgsrc/fonts/fontconfig
 ===========================================================================
