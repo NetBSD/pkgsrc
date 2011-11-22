@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:17 agc Exp $
+$NetBSD: distinfo,v 1.3 2011/11/22 18:04:58 joerg Exp $
 
 SHA1 (libargparse-0.1.0000.tar.gz) = 5574468f84618677f6a7f46547c49fede109cb7c
 RMD160 (libargparse-0.1.0000.tar.gz) = 64d0a53a0f7d65c7f6864704761dc92a7ac31451
 Size (libargparse-0.1.0000.tar.gz) = 113175 bytes
+SHA1 (patch-argparse.cpp) = a928b2e317ea3a3b9d33cf937134a4b078df827f
