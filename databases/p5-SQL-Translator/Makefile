@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/08/14 08:18:11 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/11/22 11:17:47 hiramatsu Exp $
 
-DISTNAME=	SQL-Translator-0.11006
+DISTNAME=	SQL-Translator-0.11010
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	databases perl5
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/J/JR/JROBINSON/}
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
@@ -20,6 +19,7 @@ DEPENDS+=	p5-Class-MakeMethods-[0-9]*:../../devel/p5-Class-MakeMethods
 DEPENDS+=	p5-Digest-SHA1>=2.0:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-File-ShareDir>=1.0:../../devel/p5-File-ShareDir
 DEPENDS+=	p5-IO-stringy>=2.110:../../devel/p5-IO-stringy
+DEPENDS+=	p5-Moo>=0.009007:../../devel/p5-Moo
 DEPENDS+=	p5-Parse-RecDescent>=1.962.2:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-XML-Writer>=0.500:../../textproc/p5-XML-Writer
 
