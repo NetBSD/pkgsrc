@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2011/11/22 16:38:28 marino Exp $
+$NetBSD: distinfo,v 1.11 2011/11/22 20:50:53 wiz Exp $
 
 SHA1 (MuSE-0.9.tar.gz) = c73dfe6cf5a8da3430864a76d0bc8d9f2cb7d118
 RMD160 (MuSE-0.9.tar.gz) = 53eb653a0488ae3a5ef9486d8b2a9006fdba619d
@@ -11,3 +11,5 @@ SHA1 (patch-ae) = 54d5cd059c72ecd2b60d1ac188540c29343322f7
 SHA1 (patch-af) = 20b68a9758ec109b3dec37b5898076a0cff5bfcc
 SHA1 (patch-ag) = 65515e3a2e8947a1ac1b01e5585a1ca04513bd70
 SHA1 (patch-ah) = 458d747f30e7767f53bc5dd890da1dd9e94cabfa
+SHA1 (patch-src_libmpeg_fileplayer.cc) = 2100250fb8c0dd7ee1d0a1a4549888d30b47334d
+SHA1 (patch-src_libmpeg_mpegtoraw.cc) = 9b9eaf8006f78855454af9baa03726e3352b2e9d
