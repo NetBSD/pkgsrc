@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2011/11/16 00:35:07 sbd Exp $
+# $NetBSD: Makefile,v 1.76 2011/11/22 10:51:35 marino Exp $
 
 # XXX This is release 0.7.7 but we had date-based pkgnames before.
 PKGNAME=	ffmpeg-20111104.${DISTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
