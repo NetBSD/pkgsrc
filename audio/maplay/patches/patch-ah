@@ -1,8 +1,4 @@
-$NetBSD: patch-ah,v 1.3 2011/08/29 00:04:07 dholland Exp $
-
-- avoid assorted name conflicts
-- support NetBSD and FreeBSD
-- main() needs a return type
+$NetBSD: patch-ah,v 1.4 2011/11/22 16:37:01 marino Exp $
 
 --- maplay.cc.orig	1994-06-23 12:14:36.000000000 +0000
 +++ maplay.cc
@@ -39,25 +35,29 @@ $NetBSD: patch-ah,v 1.3 2011/08/29 00:04:07 dholland Exp $
  
    if (argc < 2 || !strncmp (argv[1], "-h", 2))
    {
-@@ -146,6 +146,9 @@ usage:
+@@ -146,6 +146,12 @@ usage:
  #ifdef Solaris
  	    "SPARC Solaris 2.x"
  #else
 +#ifdef __FreeBSD__
 +	    "FreeBSD"
 +#else
++#ifdef __DragonFly__
++	    "DragonFly"
++#else
  #ifdef LINUX
  	    "Linux"
  #else
-@@ -159,6 +162,7 @@ usage:
+@@ -159,6 +165,8 @@ usage:
  #endif
  #endif
  #endif
 +#endif
++#endif
  	    " version)\n"
  	    "@(#) Copyright (C) 1993, 1994 Tobias Bading (bading@cs.tu-berlin.de)\n"
  	    "@(#) Berlin University of Technology\n"
-@@ -180,10 +184,10 @@ usage:
+@@ -180,10 +188,10 @@ usage:
  	  stdout_mode = True;
  	  break;
  	case 'l':
@@ -70,7 +70,7 @@ $NetBSD: patch-ah,v 1.3 2011/08/29 00:04:07 dholland Exp $
  	  break;
  #ifdef SPARC
  	case 'u':
-@@ -250,7 +254,7 @@ usage:
+@@ -250,7 +258,7 @@ usage:
    // get info from header of first frame:
    layer = header->layer ();
    if ((mode = header->mode ()) == single_channel)
@@ -79,7 +79,7 @@ $NetBSD: patch-ah,v 1.3 2011/08/29 00:04:07 dholland Exp $
    sample_frequency = header->sample_frequency ();
  
    // create filter(s):
-@@ -319,6 +323,17 @@ usage:
+@@ -319,6 +327,17 @@ usage:
        Exit (0);
    }
  #else
@@ -97,7 +97,7 @@ $NetBSD: patch-ah,v 1.3 2011/08/29 00:04:07 dholland Exp $
  //#ifdef your_machine
  //  {
  //    if (mode == single_channel || which_channels != both)
-@@ -333,6 +348,7 @@ usage:
+@@ -333,6 +352,7 @@ usage:
      Exit (0);
    }
  //#endif	// !your_machine
