@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2011/11/21 17:24:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2011/11/22 21:03:07 cheusov Exp $
 
 DISTNAME=	pkgnih-0.10.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/pkgnih/nih/}
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/nih/ \
@@ -51,6 +51,10 @@ DEPENDS+=	tnftp-[0-9]*:../../net/tnftp
 .endif
 
 MAKE_ENV+= FTP=${FTP_CMD:Q}
+
+.if ${OPSYS} =="SunOS" #&& empty(OS_VERSION:M5.11*)
+REPLACE_SH+=	nih/nih.in nih/pkg_status.in
+.endif
 
 .include "../../devel/mk-configure/configure.mk"
 
