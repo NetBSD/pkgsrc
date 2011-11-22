@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.4 2011/11/22 09:04:49 is Exp $
+$NetBSD: patch-ak,v 1.5 2011/11/22 09:44:18 is Exp $
 
---- src/in.fingerd.c.orig	1996-01-10 19:26:24.000000000 +0000
+--- src/in.fingerd.c.orig	1999-03-29 06:05:30.000000000 +0000
 +++ src/in.fingerd.c
 @@ -33,9 +33,7 @@ static char *rcsid = "$Id: in.fingerd.c,
  #include <sys/types.h>
@@ -12,22 +12,16 @@ $NetBSD: patch-ak,v 1.4 2011/11/22 09:04:49 is Exp $
  #include <sys/stat.h>
  #include <netinet/in.h>
  #include <arpa/inet.h>
-@@ -805,12 +803,12 @@ finger_users (user, options, stream)
- 	  fprintf (stream, "%s (%s) seen at %s on %s",
- 		   upackets[i]->real_name, upackets[i]->name,
+@@ -811,7 +809,7 @@ finger_users (user, options, stream)
+ 	  /* don't print trailing \n from ctime() */
+ 	  fprintf(stream, " seen at %s on %.24s",
  		   strip_hostname (upackets[i]->host),
 -		   ctime (&upackets[i]->idle_time));
 +		   ctime32 (&upackets[i]->idle_time));
- 	else
- 	  fprintf (stream, "%s seen at %s on %s",
- 		   upackets[i]->name,
- 		   strip_hostname (upackets[i]->host),
--		   ctime (&upackets[i]->idle_time));
-+		   ctime32 (&upackets[i]->idle_time));
-     }
-   else
-     {
-@@ -888,7 +886,6 @@ finger_clients (user, options, stream)
+ 
+ 	  if (*(upackets[i]->ttyloc))
+ 	    fprintf(stream, " from %s",
+@@ -897,7 +895,6 @@ finger_clients (user, options, stream)
        else
  	{
  	  status = "";
@@ -35,7 +29,7 @@ $NetBSD: patch-ak,v 1.4 2011/11/22 09:04:49 is Exp $
  	}
      
  
-@@ -1262,7 +1259,7 @@ show_unlogged_packet (packet, stream)
+@@ -1271,7 +1268,7 @@ show_unlogged_packet (packet, stream)
  
    /* In SunOS4 getpwnam() seems to call ctime(), so we move this call down
     * here to be sure the intended result doesn't get overwritten. */
@@ -44,7 +38,7 @@ $NetBSD: patch-ak,v 1.4 2011/11/22 09:04:49 is Exp $
    the_time[strlen(the_time) - 1] = '\0';	/* delete newline */
  
    if (*(packet->real_name))
-@@ -1406,14 +1403,7 @@ run_target_script(script, target, cd, in
+@@ -1415,14 +1412,7 @@ run_target_script(script, target, cd, in
    char *arg;
  {
    int pid;
@@ -59,7 +53,7 @@ $NetBSD: patch-ak,v 1.4 2011/11/22 09:04:49 is Exp $
  
    if (access (script, X_OK) >= 0)
      {
-@@ -1528,6 +1518,7 @@ maybe_user_script (entry, stream, packet
+@@ -1537,6 +1527,7 @@ maybe_user_script (entry, stream, packet
    FILE *long_output;
    int result;
    extern char *mktemp();
@@ -67,7 +61,7 @@ $NetBSD: patch-ak,v 1.4 2011/11/22 09:04:49 is Exp $
  
  #ifndef FINGERRC
    return (0);
-@@ -1571,8 +1562,9 @@ maybe_user_script (entry, stream, packet
+@@ -1580,8 +1571,9 @@ maybe_user_script (entry, stream, packet
    /* Collect regular long finger output in file */
    strcpy (temp_file, TEMPFILE);
    
