@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3001 2011/11/22 09:07:37 is Exp $
+$NetBSD: CHANGES-2011,v 1.3002 2011/11/22 09:53:48 is Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4749,3 +4749,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTTP-Lite to 2.3 [hiramatsu 2011-11-22]
 	Updated devel/p5-Mouse to 0.97 [sno 2011-11-22]
 	Updated net/icsi-finger to 1.0.27nb7 [is 2011-11-22]
+	Updated net/icsi-finger to 1.0.28 [is 2011-11-22]
