@@ -1,0 +1,47 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/11/22 22:23:13 tez Exp $
+
+cacti is now installed.
+
+To get cacti up and running asap, you have to complete these steps:
+
+- Install & Configure mysql-server
+
+- Add a cacti database and cactiuser user to mysql
+
+	mysql> CREATE DATABASE cacti;
+	mysql> GRANT ALL PRIVILEGES ON cacti.* TO 'cactiuser'@'localhost'
+	    -> IDENTIFIED BY 'cactiuser';
+
+- Add the cacti database layout (${CACTIDIR}/cacti.sql) to mysql
+
+	shell> mysql [-p] cacti < ${CACTIDIR}/cacti.sql
+
+- Add a symlink from ${CACTIDIR}/scripts/local_memory.pl to the appropriate
+  *_memory.pl script (or create one if none for your OS exists)
+
+	shell> ln -s ${CACTIDIR}/scripts/netbsd_memory.pl \
+			${CACTIDIR}/scripts/local_memory.pl
+
+- Install & Configure an apache webserver
+
+- If you have not already done so, add these lines to enable php extensions
+  required by cacti in ${PKG_SYSCONFBASE}/etc/php.ini
+
+	extension=mysql.so
+	extension=snmp.so
+	extension=sockets.so
+
+- Append this to apache's httpd.conf and restart apache
+
+	Include etc/httpd/httpd-cacti.conf
+
+- Add the following lines to ${CACTI_USER}'s crontab
+
+# Invoke poller.php to collect snmp-statistics
+*/5 * * * * ${PREFIX}/bin/php ${CACTIDIR}/poller.php > ${CACTI_LOGDIR}/poller.log 2>&1
+
+Please read the included README (${CACTIDIR}/docs/README) file,
+for more information about configuring and starting cacti.
+
+===========================================================================
