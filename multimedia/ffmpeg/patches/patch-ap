@@ -1,0 +1,19 @@
+$NetBSD: patch-ap,v 1.1 2011/11/22 10:51:35 marino Exp $
+
+--- libavutil/common.h.orig	2011-09-07 13:34:40.000000000 +0000
++++ libavutil/common.h
+@@ -37,6 +37,14 @@
+ #include "attributes.h"
+ #include "libavutil/avconfig.h"
+ 
++#if defined(__DragonFly__)
++#if defined(__cplusplus)
++#undef _STDINT_H_
++#define __STDC_CONSTANT_MACROS
++#include <stdint.h>
++#endif
++#endif
++
+ #if AV_HAVE_BIGENDIAN
+ #   define AV_NE(be, le) (be)
+ #else
