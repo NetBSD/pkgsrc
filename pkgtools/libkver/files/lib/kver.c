@@ -1,4 +1,7 @@
-/*	$NetBSD: kver.c,v 1.9 2006/08/11 14:44:29 taca Exp $	*/
+/*	$NetBSD: kver.c,v 1.10 2011/11/22 18:13:09 joerg Exp $	*/
+
+#define sysctl _sysctl
+#define uname _uname
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -11,6 +14,10 @@
 #include <err.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <unistd.h>
+
+#undef sysctl
+#undef uname
 
 #define KVER_VERSION_FMT "NetBSD %s (LIBKVER) #0: Tue Jan 19 00:00:00 UTC 2038 root@localhost:/sys/arch/%s/compile/LIBKVER"
 
