@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:14:55 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/11/22 20:03:56 joerg Exp $
 
 SHA1 (ptimetracker-1.7.3.tar.gz) = f5a3fddab046b36d3c96a4f8572ec3f0509883f1
 RMD160 (ptimetracker-1.7.3.tar.gz) = ab1d0cfe90ee715d005b002ab8bc20e47b040862
 Size (ptimetracker-1.7.3.tar.gz) = 36992 bytes
+SHA1 (patch-src-sucker.cc) = 7fa071ff585354e3c3c5174b4b3379e782b12e3f
+SHA1 (patch-src-sucker.hh) = de174699ebae69842bb1e9e61bf7031b18f5626c
+SHA1 (patch-src-weeport.cc) = 48506b9339df00e986c30f9d935ee00971428b60
+SHA1 (patch-src-weeport.hh) = 2376e84a07837f56f3fbcd3c03ef629a03b63264
+SHA1 (patch-src-widgets.hh) = a3a2ceab676bddb4ab3c113b337b86d4444dcb98
