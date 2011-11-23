@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3022 2011/11/23 19:14:47 gls Exp $
+$NetBSD: CHANGES-2011,v 1.3023 2011/11/23 21:29:40 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed devel/libscsi [wiz 2011-11-23]
 	Updated security/py-crypto to 2.4.1 [gls 2011-11-23]
 	Updated sysutils/fabric to 1.2.4 [gls 2011-11-23]
+	Updated graphics/wxsvg to 1.1.4 [gls 2011-11-23]
