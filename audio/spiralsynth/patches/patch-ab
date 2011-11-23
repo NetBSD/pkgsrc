@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2004/11/25 17:24:27 ben Exp $
+$NetBSD: patch-ab,v 1.5 2011/11/23 08:32:10 marino Exp $
 
---- SpiralInfo.C.orig	Sun Jun  2 08:44:31 2002
+--- SpiralInfo.C.orig	2002-06-02 15:44:31.000000000 +0000
 +++ SpiralInfo.C
-@@ -22,7 +22,7 @@
+@@ -16,13 +16,13 @@
+  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+ 
+-#include <iostream.h>
+-#include <fstream.h>
++#include <iostream>
++#include <fstream>
+ #include <stdlib.h>
  
  #include "SpiralSound/SpiralInfo.h"
  

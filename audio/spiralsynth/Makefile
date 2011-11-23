@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2011/01/13 13:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2011/11/23 08:32:10 marino Exp $
 #
 
 DISTNAME=		SpiralSynth-2.0.0
 PKGNAME=		spiralsynth-2.0.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio
 MASTER_SITES=		http://www.pawfal.org/Software/SpiralSynth/dload/
 
@@ -14,7 +14,7 @@ COMMENT=		Polyphonic analogue softsynth
 # only runs correctly on little-endian machines
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
-			*-*-vax
+			*-*-vax *-*-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
