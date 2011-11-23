@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/04 11:43:24 seb Exp $
+$NetBSD: distinfo,v 1.2 2011/11/23 11:08:17 hiramatsu Exp $
 
-SHA1 (Object-Event-1.21.tar.gz) = 5834ec42ea44e41e4c577c26ed856fa0bd985b42
-RMD160 (Object-Event-1.21.tar.gz) = e274c526960c37f8fdc0690b342002a0b28a3dfa
-Size (Object-Event-1.21.tar.gz) = 15183 bytes
+SHA1 (Object-Event-1.23.tar.gz) = 15c881e6e2a090268e32c2592bb6d2d21e7feda7
+RMD160 (Object-Event-1.23.tar.gz) = 0a3ba17a502d5cce2e40c9ce683b2677658acf71
+Size (Object-Event-1.23.tar.gz) = 15740 bytes
