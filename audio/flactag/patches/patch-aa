@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/07/27 13:51:12 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/23 00:42:00 marino Exp $
 
---- UTF8Tag.cc.orig	2008-12-16 12:20:56.000000000 +0100
+--- UTF8Tag.cc.orig	2008-12-16 11:20:56.000000000 +0000
 +++ UTF8Tag.cc
-@@ -71,7 +71,7 @@ void CUTF8Tag::Convert()
+@@ -71,7 +71,11 @@ void CUTF8Tag::Convert()
  		memset(Out,0,m_UTF8Value.length()*4);
  		size_t OutLeft=m_UTF8Value.length()*4;
  		
--		char *InBuff=In;
++#if defined(__DragonFly__)
+ 		char *InBuff=In;
++#else
 +		const char *InBuff=In;
++#endif
  		char *OutBuff=Out;
  		
  		iconv_t Convert=iconv_open(Codeset,"UTF-8");
