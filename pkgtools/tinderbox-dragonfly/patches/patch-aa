@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/23 00:54:34 marino Exp $
 
 --- ../FreeBSD/lib/tc_command.sh	2011-11-20 13:11:37.088510000 +0000
 +++ lib/tc_command.sh
@@ -70,12 +70,12 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
 -		if [ -z "${updateArch}" ]; then
 -		    updateArch=$(uname -p)
 -		fi
+-
+-		updateCmd="/usr/local/bin/lftp"
 +		updateCmd=/usr/bin/fetch
 +		iso_image="dfly-${updateArch}-${5}_REL.iso.bz2"
 +		iso_server=${4}
  
--		updateCmd="/usr/local/bin/lftp"
--
 -		if [ ! -x "${updateCmd}" ]; then
 -		    echo "ERROR: ${2} ${3}: ${updateCmd} missing"
 +		commandTreeChecks ${updateCmd} ${2} ${3}
@@ -397,7 +397,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
 +	    echo "ERROR: extract world failed - see ${jailBase}/world.tmp"
 +	    buildJailCleanup 1 ${jailName} ${J_SRCDIR}
 +	    return 1
- 	fi
++	fi
 +	DFVERS=`awk '/^#define __DragonFly_version/ {print $3}' < ${J_TMPDIR}/usr/include/sys/param.h`
 +	MAJOR=`echo $DFVERS | awk '{print substr($0,1,1)}'`
 +	MINOR=`echo $DFVERS | awk '{print substr($0,2,3)}' | sed 's/0*//'`
@@ -405,7 +405,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
 +	    fakebranch="BRANCH=\"RELEASE_${MAJOR}_${MINOR}\""
 +	else
 +	    fakebranch="BRANCH=\"DEVELOPMENT_${MAJOR}_${MINOR}\""
-+	fi
+ 	fi
 +	mkdir -p ${jailBase}/src/sys/sys ${jailBase}/src/sys/conf
 +	echo ${fakebranch} > ${jailBase}/src/sys/conf/newvers.sh
 +	cp ${J_TMPDIR}/usr/include/sys/param.h ${jailBase}/src/sys/sys
@@ -452,7 +452,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
          rc=$?
          execute_hook "postJailBuild" "JAIL=${jailName} DESTDIR=${J_TMPDIR} JAIL_ARCH=${jailArch} MY_ARCH=${myArch} JAIL_OBJDIR=${JAIL_OBJDIR} SRCBASE=${SRCBASE} PB=${pb} RC=${rc}"
          if [ ${rc} -ne 0 ]; then
-@@ -829,21 +877,80 @@ buildJail () {
+@@ -829,21 +877,91 @@ buildJail () {
          # Make a complete distribution
          echo "${jailName}: making distribution"
  
@@ -468,6 +468,17 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
          if [ $? -ne 0 ]; then
  	    echo "ERROR: distribution failed - see ${jailBase}/distribution.tmp"
  	    buildJailCleanup 1 ${jailName} ${J_SRCDIR}
++	    return 1
++	fi
++
++        # Make upgrade required to link device drivers (e.g. <dev/video/...)
++        echo "${jailName}: making world upgrade"
++
++        cd ${SRCBASE} && env DESTDIR=${J_TMPDIR} \
++            make upgrade > ${jailBase}/upgrade.tmp 2>&1
++        if [ $? -ne 0 ]; then
++	    echo "ERROR: world upgrade failed - see ${jailBase}/upgrade.tmp"
++	    buildJailCleanup 1 ${jailName} ${J_SRCDIR}
 +	    return 1
  	fi
 +
@@ -541,7 +552,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      MTREE_DIR=${SRCBASE}/etc/mtree
      mtree -deU -f ${MTREE_DIR}/BSD.root.dist \
-@@ -855,11 +962,8 @@ buildJail () {
+@@ -855,11 +973,8 @@ buildJail () {
      mtree -deU -f ${MTREE_DIR}/BSD.local.dist \
  	  -p ${J_TMPDIR}/usr/local >/dev/null 2>&1
  
@@ -553,16 +564,16 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
      # Create the jail tarball
      echo "${jailName}: creating tarball"
      jailDir=$(tinderLoc jail ${jailName})
-@@ -873,7 +977,7 @@ buildJail () {
+@@ -873,7 +988,7 @@ buildJail () {
      fi
  
      # Move new logfiles into place
 -    for logfile in world distribution
-+    for logfile in world distribution pkgsrc
++    for logfile in world distribution pkgsrc upgrade
      do
  	rm -f ${jailBase}/${logfile}.log
  	mv -f ${jailBase}/${logfile}.tmp ${jailBase}/${logfile}.log 2>/dev/null
-@@ -927,29 +1031,25 @@ createJail () {
+@@ -927,29 +1042,25 @@ createJail () {
      jailArch=$(uname -m)
      mountSrc=""
      init=1
@@ -598,7 +609,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	?)	return 1;;
  
  	esac
-@@ -963,7 +1063,7 @@ createJail () {
+@@ -963,7 +1074,7 @@ createJail () {
  
      valid=$(echo ${jailName} | awk '{if (/^[[:digit:]]/) {print;}}')
      if [ -z "${valid}" ]; then
@@ -607,7 +618,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	return 1
      fi
  
-@@ -977,10 +1077,20 @@ createJail () {
+@@ -977,10 +1088,20 @@ createJail () {
  	return 1
      fi
  
@@ -630,7 +641,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      echo -n "${jailName}: adding to datastore... "
  
-@@ -1091,28 +1201,25 @@ createPortsTree () {
+@@ -1091,28 +1212,25 @@ createPortsTree () {
      init=1
      mountSrc=""
      portsTreeName=""
@@ -662,7 +673,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	?)	return 1;;
  
  	esac
-@@ -1134,10 +1241,15 @@ createPortsTree () {
+@@ -1134,10 +1252,15 @@ createPortsTree () {
  	return 1
      fi
  
@@ -680,7 +691,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      # add portstree to datastore
      echo -n "${portsTreeName}: adding to datastore... "
-@@ -1214,7 +1326,7 @@ enterBuild () {
+@@ -1214,7 +1337,7 @@ enterBuild () {
      fi
  
      sleepName=$(echo ${portDir} | sed -e 'y/\//_/')
@@ -689,7 +700,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      if [ ! -d ${portFullDir} ]; then
  	echo "enterBuild: Build environment does not exist yet, sleeping."
-@@ -1238,7 +1350,7 @@ enterBuild () {
+@@ -1238,7 +1361,7 @@ enterBuild () {
  	sleep 15
      done
  
@@ -698,7 +709,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
      cp $(tinderLoc scripts lib/enterbuild) ${buildRoot}/root
      chroot ${buildRoot} /root/enterbuild ${portDir}
      rm -f ${buildRoot}/tmp/.sleep_${sleepName}
-@@ -1325,7 +1437,6 @@ makeBuild () {
+@@ -1325,7 +1448,6 @@ makeBuild () {
  resetBuild () {
      # set up defaults
      build=""
@@ -706,7 +717,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
      cleandistfiles="0"
  
      # argument handling
-@@ -1334,7 +1445,6 @@ resetBuild () {
+@@ -1334,7 +1456,6 @@ resetBuild () {
  	case "${arg}" in
  
  	b)	build="${OPTARG}";;
@@ -714,7 +725,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	?)	exit 1;;
  
  	esac
-@@ -1490,22 +1600,23 @@ tinderbuild_setup () {
+@@ -1490,22 +1611,23 @@ tinderbuild_setup () {
      echo "tinderbuild: Finalizing chroot environment"
  
      # Mount ports/
@@ -743,7 +754,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      # Mount /dev, since we're going to be chrooting shortly
      mount -t devfs devfs ${buildRoot}/dev >/dev/null 2>&1
-@@ -1522,12 +1633,6 @@ tinderbuild_setup () {
+@@ -1522,12 +1644,6 @@ tinderbuild_setup () {
  	tinderbuild_cleanup 1
      fi
  
@@ -756,7 +767,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
      # Handle the distfile cache
      if [ -n "${DISTFILE_CACHE}" ]; then
  	if ! requestMount -t builddistcache -b ${build} \
-@@ -1557,7 +1662,7 @@ tinderbuild_setup () {
+@@ -1557,7 +1673,7 @@ tinderbuild_setup () {
  	mkdir -p ${ccacheDir} $(tinderLoc buildccache ${build})
  
  	if ! requestMount -t buildccache -b ${build} \
@@ -765,7 +776,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	    echo "tinderbuild: cannot mount ccache"
  	    tinderbuild_cleanup 1
  	fi
-@@ -1574,8 +1679,7 @@ tinderbuild_setup () {
+@@ -1574,8 +1690,7 @@ tinderbuild_setup () {
  
  	mkdir -p ${optionsDir} $(tinderLoc buildoptions ${build})
  
@@ -775,7 +786,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	    echo "tinderbuild: cannot mount options"
  	    tinderbuild_cleanup 1
  	fi
-@@ -1658,10 +1762,9 @@ tinderbuild () {
+@@ -1658,10 +1773,9 @@ tinderbuild () {
      cleanpackages=0
      init=0
      jobs=1
@@ -787,7 +798,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
      pbargs=""
      skipmake=0
      updateports=0
-@@ -1708,9 +1811,8 @@ tinderbuild () {
+@@ -1708,9 +1822,8 @@ tinderbuild () {
  	x-fetch-original)	pbargs="${pbargs} -fetch-original";;
  	x-noclean)		pbargs="${pbargs} -noclean";;
  	x-nolog)		pbargs="${pbargs} -nolog";;
@@ -798,7 +809,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
  	-*)			return 1;;
  	*)			ports="${ports} $1";;
-@@ -1836,7 +1938,8 @@ tinderbuild () {
+@@ -1836,7 +1949,8 @@ tinderbuild () {
  		echo "tinderbuild: cannot mount portstree: ${portstree}"
  		exit 1
  	    fi
@@ -808,7 +819,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  		$(tinderLoc scripts lib/makemake) ${noduds} ${build} ${ports}
  	)
  	if [ $? -ne 0 ]; then
-@@ -1855,10 +1958,6 @@ tinderbuild () {
+@@ -1855,10 +1969,6 @@ tinderbuild () {
  
      # Set up the chrooted environment
      osmajor=$(echo ${jail} | sed -E -e 's|(^[[:digit:]]+).*$|\1|')
@@ -819,7 +830,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      tinderbuild_setup
  
-@@ -1866,7 +1965,7 @@ tinderbuild () {
+@@ -1866,7 +1976,7 @@ tinderbuild () {
      ${tc} updateBuildStatus -b ${build} -s PORTBUILD
      tinderbuild_phase 0 ${jobs} ${pkgDir}
      error=$?
@@ -828,7 +839,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	if [ ${error} -ne 0 ] ; then
  	    tinderbuild_setup
  	fi
-@@ -1885,21 +1984,46 @@ init () {
+@@ -1885,21 +1995,46 @@ init () {
  	mkdir -p ${pb}/${dir}
      done
  
@@ -855,19 +866,19 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
 +	echo "Server format: (http|ftp)://(host)/path_to_iso-images_directory"
 +    else
 +	echo "Server format: (http|ftp)://(host)/path_to_snapshots_directory"
-+    fi
+     fi
 +    read -p "Enter a default ISO server for DragonFly [${_defaultDragonHost}]: " dragonhost
 +    if [ -z "${dragonhost}" ]; then
 +	dragonhost=${_defaultDragonHost}
-     fi
- 
++    fi
++
 +    read -p "Enter a default Git server for DragonFly [${_defaultGitSrcHost}]: " gitsrchost
 +    if [ -z "${gitsrchost}" ]; then
 +	gitsrchost=${_defaultGitSrcHost}
 +    fi
 +
 +    # Git Update type for Git is limited to git://, so we won't ask
-+
+ 
      globalenv=$(tinderLoc scripts etc/env)/GLOBAL
      echo "export defaultUpdateHost=${host}" >> ${globalenv}
 -    echo "export defaultUpdateType=${type}" >> ${globalenv}
@@ -881,7 +892,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      return 0
  }
-@@ -1948,7 +2072,8 @@ addPortToBuild () {
+@@ -1948,7 +2083,8 @@ addPortToBuild () {
      buildenv ${jail} ${portsTree} ${build}
      buildenvNoHost ${build}
  
@@ -891,7 +902,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
      if [ -z "${portDir}" ]; then
  	${tc} addPortToOneBuild -b ${build} ${norecurse}
      else
-@@ -1958,36 +2083,7 @@ addPortToBuild () {
+@@ -1958,36 +2094,7 @@ addPortToBuild () {
          fi
          ${tc} addPortToOneBuild -b ${build} -d ${portDir} ${norecurse}
      fi
@@ -929,7 +940,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      if [ -n "${save_SRCBASE}" ]; then
  	export SRCBASE=${save_SRCBASE}
-@@ -2174,10 +2270,7 @@ copyBuild () {
+@@ -2174,10 +2281,7 @@ copyBuild () {
  		if [ ! -d ${destOptionsDir} ]; then
  		    mkdir -p ${destOptionsDir}
  		fi
@@ -941,7 +952,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  	    else
  		echo "copyBuild: not copying OPTIONS to ${dest} since it has no OPTIONS directory"
  	    fi
-@@ -2293,13 +2386,13 @@ tbcleanup () {
+@@ -2293,13 +2397,13 @@ tbcleanup () {
  	pathFound=0
          for portstree in ${portstrees} ; do
  	    path=$(tinderLoc portstree ${portstree})
@@ -958,7 +969,7 @@ $NetBSD: patch-aa,v 1.3 2011/11/20 16:20:24 marino Exp $
  		    if [ -f "${distinfo}" ]; then
  			for df in $(grep '^MD5' ${distinfo} | awk -F '[\(\)]' '{print $2}'); do
  			    if ! grep -q "^${df}\$" ${disttmp}; then
-@@ -2383,7 +2476,7 @@ tbcleanup () {
+@@ -2383,7 +2487,7 @@ tbcleanup () {
  	    fi
  
  	    path=$(tinderLoc portstree ${portstree})
