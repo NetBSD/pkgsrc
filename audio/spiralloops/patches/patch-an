@@ -1,7 +1,16 @@
-$NetBSD: patch-an,v 1.1 2003/12/19 16:37:54 ben Exp $
+$NetBSD: patch-an,v 1.2 2011/11/23 08:20:38 marino Exp $
 
---- GUI/Widgets/Fl_Loop.C.orig	2001-04-19 13:48:10.000000000 -0700
+--- GUI/Widgets/Fl_Loop.C.orig	2001-04-19 20:48:10.000000000 +0000
 +++ GUI/Widgets/Fl_Loop.C
+@@ -17,7 +17,7 @@
+ */ 
+ 
+ #include "Fl_Loop.h"
+-#include <iostream.h>
++#include <iostream>
+ #include <FL/fl_draw.H>
+ #include <FL/x.H>
+ #include <math.h>
 @@ -30,7 +30,7 @@ static const float RADCONV = 0.017453292
  static const int   INDW = 3; // indicator width
  static const int   UPDATECYCLES = 4;

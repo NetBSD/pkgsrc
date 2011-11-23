@@ -1,10 +1,16 @@
-$NetBSD: patch-ar,v 1.1 2007/09/29 11:38:22 rillig Exp $
+$NetBSD: patch-ar,v 1.2 2011/11/23 08:20:38 marino Exp $
 
-g++ 4 enforces cleaner code.
-
---- SpiralSound/Sample.h.orig	2001-04-19 22:48:13.000000000 +0200
-+++ SpiralSound/Sample.h	2007-09-29 13:36:09.000000000 +0200
-@@ -63,13 +63,13 @@ public:
+--- SpiralSound/Sample.h.orig	2001-04-19 20:48:13.000000000 +0000
++++ SpiralSound/Sample.h
+@@ -21,6 +21,7 @@
+ 
+ #include <assert.h>
+ #include <iostream>
++#include <string.h>
+ #include "SpiralInfo.h"
+ 
+ static const unsigned short UMAX_LEV  = 65535;
+@@ -63,13 +64,13 @@ public:
  	void Shrink(int Length);
  	void CropTo(int NewLength);
  
@@ -20,7 +26,7 @@ g++ 4 enforces cleaner code.
  	{	
  		assert(i>=0 && i<m_Length);
  		// clip
-@@ -79,7 +79,7 @@ public:
+@@ -79,7 +80,7 @@ public:
  		m_Data[i]=(short)v;
  	}	
  	
