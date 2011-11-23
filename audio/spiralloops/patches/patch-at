@@ -1,0 +1,15 @@
+$NetBSD: patch-at,v 1.1 2011/11/23 08:20:38 marino Exp $
+
+--- GUI/Widgets/Fl_Trigger.h.orig	2001-04-19 20:48:10.000000000 +0000
++++ GUI/Widgets/Fl_Trigger.h
+@@ -19,7 +19,9 @@
+ 
+ #include <FL/Fl.H>
+ #include <FL/Fl_Widget.H>
+-#include <iostream.h>
++#include <iostream>
++using std::istream;
++using std::ostream;
+ 
+ #ifndef TRIGGERWIDGET
+ #define TRIGGERWIDGET
