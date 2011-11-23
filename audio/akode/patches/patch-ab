@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/23 23:25:36 joerg Exp $
 
---- akode/plugins/sun_sink/sun_sink.cpp.orig	2008-12-06 21:32:50 +0200
-+++ akode/plugins/sun_sink/sun_sink.cpp	2008-12-06 21:39:31 +0200
-@@ -20,13 +20,14 @@
+--- akode/plugins/sun_sink/sun_sink.cpp.orig	2005-10-28 08:57:18.000000000 +0000
++++ akode/plugins/sun_sink/sun_sink.cpp
+@@ -20,13 +20,15 @@
  
  #include <config.h>
  
@@ -13,13 +13,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
 -#include <sys/ioctl.h>
  #include <errno.h>
  #include <fcntl.h>
++#include <stdlib.h>
 +#include <string.h>
  #include <unistd.h>
 -#include <alloca.h>
  
  #include <audioframe.h>
  #include "sun_sink.h"
-@@ -97,7 +98,7 @@ int SunSink::setAudioConfiguration(const
+@@ -97,7 +99,7 @@ int SunSink::setAudioConfiguration(const
  {
      d->config = *config;
  
