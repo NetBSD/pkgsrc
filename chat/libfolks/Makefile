@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:42:20 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/23 19:27:38 marino Exp $
 #
 
 DISTNAME=	folks-0.4.2
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 USE_PKGLOCALEDIR= yes
 
 PKGCONFIG_OVERRIDE+=	backends/telepathy/lib/folks-telepathy.pc.in
