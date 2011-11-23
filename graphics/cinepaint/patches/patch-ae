@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2008/11/10 19:04:45 adam Exp $
+$NetBSD: patch-ae,v 1.4 2011/11/23 23:30:30 joerg Exp $
 
---- plug-ins/icc_examin/icc_examin/threads.cpp.orig	2008-11-10 19:06:22.000000000 +0100
+--- plug-ins/icc_examin/icc_examin/threads.cpp.orig	2007-03-07 20:07:32.000000000 +0000
 +++ plug-ins/icc_examin/icc_examin/threads.cpp
 @@ -58,10 +58,12 @@ int fl_create_thread(Fl_Thread& t, void 
    ret = pthread_attr_getstacksize( &tattr,  &size );

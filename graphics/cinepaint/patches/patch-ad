@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2008/11/10 19:04:45 adam Exp $
+$NetBSD: patch-ad,v 1.6 2011/11/23 23:30:30 joerg Exp $
 
---- app/app_procs.c.orig	2007-01-16 09:43:41.000000000 +0100
+--- app/app_procs.c.orig	2007-01-16 08:43:41.000000000 +0000
 +++ app/app_procs.c
 @@ -73,6 +73,7 @@
  #include "brush.h"
