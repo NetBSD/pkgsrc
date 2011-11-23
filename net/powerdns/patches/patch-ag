@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2008/09/18 13:04:30 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2011/11/23 23:32:17 joerg Exp $
 
---- pdns/receiver.cc.orig	2008-09-18 14:51:59.000000000 +0200
+--- pdns/receiver.cc.orig	2008-08-07 07:02:53.000000000 +0000
 +++ pdns/receiver.cc
 @@ -566,8 +566,8 @@ int main(int argc, char **argv)
      if(!arg().mustDo("daemon"))
