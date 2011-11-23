@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3017 2011/11/23 11:45:46 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3018 2011/11/23 13:10:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4781,3 +4781,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Object-Event to 1.23 [hiramatsu 2011-11-23]
 	Updated net/p5-NetAddr-IP to 4.058 [hiramatsu 2011-11-23]
 	Moved devel/p5-Devel-Checklib to devel/p5-Devel-CheckLib [hiramatsu 2011-11-23]
+	Updated multimedia/mediainfo to 0.7.51 [adam 2011-11-23]
