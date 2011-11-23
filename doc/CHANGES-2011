@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3014 2011/11/23 07:52:14 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3015 2011/11/23 11:02:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4774,3 +4774,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/termtter to 1.10.0nb1 [taca 2011-11-23]
 	Updated www/contao210-translations to 20111120 [taca 2011-11-23]
 	Updated sysutils/ipa to 2.1.1 [obache 2011-11-23]
+	Updated graphics/mypaint to 1.0.0 [ryoon 2011-11-23]
