@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/07/08 14:15:07 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2011/11/23 00:36:54 marino Exp $
 
 DISTNAME=	xmradio-1.2
 PKGREVISION=	3
@@ -15,7 +15,8 @@ DEPENDS+=	sox>=12.16:../../audio/sox
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.[5-9]*-* \
-			NetBSD-[2-9]*.*-*
+			NetBSD-[2-9]*.*-* \
+			DragonFly-*-*
 
 USE_IMAKE=	YES
 
