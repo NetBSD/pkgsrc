@@ -1,10 +1,16 @@
-$NetBSD: patch-ar,v 1.1 2007/09/29 11:40:46 rillig Exp $
+$NetBSD: patch-ar,v 1.2 2011/11/23 08:32:10 marino Exp $
 
-g++ 4 enforces cleaner code.
-
---- SpiralSound/Sample.h.orig	2002-06-02 12:28:26.000000000 +0200
-+++ SpiralSound/Sample.h	2007-09-29 13:39:21.000000000 +0200
-@@ -66,7 +66,7 @@ public:
+--- SpiralSound/Sample.h.orig	2002-06-02 10:28:26.000000000 +0000
++++ SpiralSound/Sample.h
+@@ -22,6 +22,7 @@
+ #include <assert.h>
+ #include <limits.h>
+ #include <iostream>
++#include <string.h>
+ #include "SpiralInfo.h"
+ 
+ //#define DEBUG
+@@ -66,7 +67,7 @@ public:
  	void CropTo(int NewLength);
  	bool IsEmpty() const { return m_IsEmpty; }
  
@@ -13,7 +19,7 @@ g++ 4 enforces cleaner code.
  	{		
  		#ifdef DEBUG
  			assert(i>=0 && i<m_Length);
-@@ -75,7 +75,7 @@ public:
+@@ -75,7 +76,7 @@ public:
  	}
  
  	// Linear interpolated
@@ -22,7 +28,7 @@ g++ 4 enforces cleaner code.
  	{		
  		int ii=(int)i;
  		
-@@ -89,7 +89,7 @@ public:
+@@ -89,7 +90,7 @@ public:
  	}
  
  
@@ -31,7 +37,7 @@ g++ 4 enforces cleaner code.
  	{	
  		m_IsEmpty=false;
  		#ifdef DEBUG
-@@ -98,7 +98,7 @@ public:
+@@ -98,7 +99,7 @@ public:
  		m_Data[i]=v;
  	}	
  	
