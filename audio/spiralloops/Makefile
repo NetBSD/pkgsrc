@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2011/01/13 13:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2011/11/23 08:20:38 marino Exp $
 #
 
 DISTNAME=		SpiralLoops-2.0.0
 PKGNAME=		spiralloops-2.0.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		audio
 MASTER_SITES=		http://www.pawfal.org/Software/SpiralLoops/dload/
 
@@ -14,7 +14,7 @@ COMMENT=		Loop based sampler
 # only runs correctly on little-endian machines
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
-			*-*-vax
+			*-*-vax *-*-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

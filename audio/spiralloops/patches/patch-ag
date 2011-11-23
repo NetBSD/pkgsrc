@@ -1,10 +1,13 @@
-$NetBSD: patch-ag,v 1.1 2003/12/19 16:37:54 ben Exp $
+$NetBSD: patch-ag,v 1.2 2011/11/23 08:20:38 marino Exp $
 
---- SpiralSound/Sample.C.orig	2001-04-19 13:48:13.000000000 -0700
+--- SpiralSound/Sample.C.orig	2001-04-19 20:48:13.000000000 +0000
 +++ SpiralSound/Sample.C
-@@ -20,7 +20,7 @@
+@@ -18,9 +18,9 @@
+ 
+ #include <string.h>
  #include "Sample.h"
- #include "iostream.h"
+-#include "iostream.h"
++#include <iostream>
  
 -Sample::Sample(int Len=0) :
 +Sample::Sample(int Len) :
