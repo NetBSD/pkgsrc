@@ -1,25 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2008/12/15 15:37:56 is Exp $
+$NetBSD: patch-aa,v 1.6 2011/11/23 16:25:07 is Exp $
 
 --- lib/error.c.orig	1998-04-04 22:38:04.000000000 +0000
 +++ lib/error.c
-@@ -44,7 +44,7 @@ char *progname = NULL;
- 
- jmp_buf top_level;
- 
--static FILE *errlog = stderr;
-+static FILE *errlog = NULL;
- 
- /* **************************************************************** */
- /*								    */
-@@ -93,6 +93,8 @@ handle_error (severity, format, arg1, ar
-      int severity;
-      char *format, *arg1, *arg2, *arg3;
- {
-+  if (errlog == NULL)
-+    errlog = stderr;
- #ifdef USE_SYSLOG
-   if (errlog == LOG_SYS)
-     {
 @@ -143,13 +145,16 @@ file_error (severity, filename)
       int severity;
       char *filename;
