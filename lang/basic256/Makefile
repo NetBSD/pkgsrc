@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/23 01:19:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/23 08:12:57 ryoon Exp $
 #
 
 DISTNAME=	basic256_0.9.6.66
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.basic256.org/
-COMMENT=	TODO: Short description of the package
+COMMENT=	BASIC language with traditional control structures
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
