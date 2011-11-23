@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2005/01/17 13:38:37 adam Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/23 23:30:30 joerg Exp $
 
---- plug-ins/hdr/fromrad.h.orig	2005-01-17 13:36:50.000000000 +0000
+--- plug-ins/hdr/fromrad.h.orig	2004-11-19 06:52:27.000000000 +0000
 +++ plug-ins/hdr/fromrad.h
 @@ -27,10 +27,9 @@
  #define  MAXELEN 0x7fff 
