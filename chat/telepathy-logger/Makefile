@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/09/01 13:09:32 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/23 19:30:08 marino Exp $
 #
 
 DISTNAME=	telepathy-logger-0.2.7
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool
+USE_TOOLS+=	pkg-config gmake intltool msgfmt
 
 PKGCONFIG_OVERRIDE+=	extensions/tpl-extensions.pc.in
 PKGCONFIG_OVERRIDE+=	telepathy-logger/telepathy-logger-0.1.pc.in
