@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/08/08 21:04:26 gls Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/11/23 19:14:09 gls Exp $
 bin/fab
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
