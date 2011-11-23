@@ -1,0 +1,6 @@
+Skype is a free program that uses P2P technology to bring affordable
+and high-quality voice communications to people all over the world.
+
+This package is specifically for Skype 2.1.x, as from 2.2.x Skype started
+to use the inotify(7) system call which is not available on some other
+systems' Linux emulations.
