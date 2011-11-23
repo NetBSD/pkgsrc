@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2011/11/02 22:05:42 gls Exp $
+$NetBSD: patch-aa,v 1.5 2011/11/23 19:14:09 gls Exp $
 
 Disable setuptools usage
 
@@ -8,7 +8,7 @@ Disable setuptools usage
      packages=find_packages(),
      test_suite='nose.collector',
      tests_require=['nose', 'fudge'],
--    install_requires=['pycrypto >= 1.9, < 2.4', 'paramiko >=1.7.6'],
+-    install_requires=['pycrypto >= 1.9, != 2.4', 'paramiko >=1.7.6'],
 +#    install_requires=['pycrypto >= 1.9, < 2.4', 'paramiko >=1.7.6'],
      entry_points={
          'console_scripts': [
