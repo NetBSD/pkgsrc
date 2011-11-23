@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2011/05/04 16:27:42 hans Exp $
+# $NetBSD: Makefile,v 1.21 2011/11/23 13:30:30 hubertf Exp $
 #
 
 DISTNAME=	rfc-3.2
 PKGNAME=	rfcutil-3.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.dewn.com/rfc/
 EXTRACT_SUFX=	#
