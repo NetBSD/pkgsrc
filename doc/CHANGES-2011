@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3011 2011/11/23 02:13:45 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3012 2011/11/23 05:38:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4761,3 +4761,14 @@ Changes to the packages collection and infrastructure in 2011:
 	Added lang/basic256 version 0.9.6.66 [ryoon 2011-11-23]
 	Updated editors/emacs-snapshot to 24.0.91.20111121 [minskim 2011-11-23]
 	Updated pkgtools/pkg_summary-utils to 0.56.3nb2 [minskim 2011-11-23]
+	Updated databases/ruby-cassandra to 0.12.1nb1 [taca 2011-11-23]
+	Updated databases/ruby-dm-serializer to 1.1.0nb2 [taca 2011-11-23]
+	Updated databases/ruby-dm-types to 1.1.0nb2 [taca 2011-11-23]
+	Updated devel/rubyforge to 2.0.4nb1 [taca 2011-11-23]
+	Updated net/ruby-tweetstream to 1.0.5nb1 [taca 2011-11-23]
+	Updated net/ruby-rubytter to 1.4.2nb1 [taca 2011-11-23]
+	Updated net/mikutter to 0.0.4.592nb1 [taca 2011-11-23]
+	Updated security/ruby-twitter_oauth to 0.4.3nb1 [taca 2011-11-23]
+	Updated www/thoth to 0.2.1nb2 [taca 2011-11-23]
+	Updated www/thoth-delicious to 0.1.0nb3 [taca 2011-11-23]
+	Updated www/termtter to 1.10.0nb1 [taca 2011-11-23]
