@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3015 2011/11/23 11:02:04 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3016 2011/11/23 11:09:58 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4775,3 +4775,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20111120 [taca 2011-11-23]
 	Updated sysutils/ipa to 2.1.1 [obache 2011-11-23]
 	Updated graphics/mypaint to 1.0.0 [ryoon 2011-11-23]
+	Updated www/p5-FCGI-Client to 0.08 [hiramatsu 2011-11-23]
+	Updated devel/p5-Test-POE-Client-TCP to 1.10 [hiramatsu 2011-11-23]
+	Updated devel/p5-IO-AIO to 4.11 [hiramatsu 2011-11-23]
+	Updated devel/p5-Object-Event to 1.23 [hiramatsu 2011-11-23]
+	Updated net/p5-NetAddr-IP to 4.058 [hiramatsu 2011-11-23]
