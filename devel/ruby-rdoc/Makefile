@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/19 00:48:24 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/23 05:21:03 taca Exp $
 
 DISTNAME=	rdoc-${RUBY_RDOC_VERSION}
 CATEGORIES=	devel
@@ -8,8 +8,14 @@ HOMEPAGE=	http://docs.seattlerb.org/rdoc
 COMMENT=	produces HTML and command-line documentation for Ruby projects
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
+RUBY_JSON_REQD=	1.4
 MAKE_ENV+=	RUBYLIB=${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_LIBDIR}/lib
 
-.include "../../lang/ruby/rdoc.mk"
+pre-configure:
+	${FIND} ${WRKSRC}/lib/rdoc/generator/template/darkfish/images \
+		-type f -exec ${CHMOD} -x {} \;
+
 .include "../../lang/ruby/gem.mk"
+.include "../../lang/ruby/rdoc.mk"
+.include "../../lang/ruby/json.mk"
 .include "../../mk/bsd.pkg.mk"
