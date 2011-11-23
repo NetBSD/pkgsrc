@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2011/11/17 12:59:14 drochner Exp $
+# $NetBSD: Makefile,v 1.64 2011/11/23 15:40:27 joerg Exp $
 
 DISTNAME=	gthumb-2.12.4
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool msgfmt pkg-config gmake
+USE_TOOLS+=		intltool msgfmt pkg-config gmake bison
 GNU_CONFIGURE=		yes
 
 GCONF_SCHEMAS+=	gthumb.schemas
