@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/02/21 14:44:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/11/23 06:01:21 taca Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -852,9 +852,6 @@ ${RUBY_EG}/webrick/hello.rb
 ${RUBY_EG}/webrick/httpd.rb
 ${RUBY_EG}/webrick/httpproxy.rb
 ${RUBY_EG}/webrick/httpsd.rb
-${GEM_HOME}/specifications/minitest-1.6.0.gemspec
-${GEM_HOME}/specifications/rake-0.8.7.gemspec
-${GEM_HOME}/specifications/rdoc-2.5.8.gemspec
 @pkgdir ${RUBY_SITEARCHLIB}
 @pkgdir ${RUBY_VENDORARCHLIB}
 @pkgdir ${GEM_HOME}/cache
