@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2011/05/04 16:27:42 hans Exp $
+$NetBSD: distinfo,v 1.6 2011/11/23 13:30:30 hubertf Exp $
 
 SHA1 (rfc-3.2) = 1dd1b8f90d0e24fcd8447ff563ca6c47931a826c
 RMD160 (rfc-3.2) = 40c8bfb3baa4bee7060cc69cd908395df19d678b
 Size (rfc-3.2) = 15308 bytes
+SHA1 (patch-aa) = 00d83c095cf6e79a16a0a6615552280465df07d0
