@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10683 2011/11/22 23:17:02 wiz Exp $
+$NetBSD: TODO,v 1.10684 2011/11/23 07:52:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -806,7 +806,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inspircd-1.2.1
 	o instiki-0.13
 	o intltool-0.50.0
-	o ipa-2.1.1 [pkg/45630]
 	o ircservices-5.1.21
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
