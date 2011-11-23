@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3019 2011/11/23 16:27:01 is Exp $
+$NetBSD: CHANGES-2011,v 1.3020 2011/11/23 19:00:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4783,3 +4783,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Moved devel/p5-Devel-Checklib to devel/p5-Devel-CheckLib [hiramatsu 2011-11-23]
 	Updated multimedia/mediainfo to 0.7.51 [adam 2011-11-23]
 	Updated net/icsi-finger to 1.0.29 [is 2011-11-23]
+	Removed audio/tosha successor sysutils/cdrtools [wiz 2011-11-23]
+	Removed audio/cdd successor sysutils/cdrtools [wiz 2011-11-23]
+	Removed devel/libscsi [wiz 2011-11-23]
