@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/20 11:30:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/23 15:39:57 joerg Exp $
 #
 
 DISTNAME=	uni-vga
@@ -22,8 +22,8 @@ WRKSRC=			${WRKDIR}/uni_vga
 INSTALLATION_DIRS=	${FONTDIR}
 
 do-build:
-	bdftopcf -o ${WRKSRC}/u_vga16.pcf ${WRKSRC}/u_vga16.bdf
-	gzip -9 ${WRKSRC}/u_vga16.pcf
+	${TOOLS_PATH.bdftopcf} -o ${WRKSRC}/u_vga16.pcf ${WRKSRC}/u_vga16.bdf
+	${TOOLS_PATH.gzip} -9 ${WRKSRC}/u_vga16.pcf
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/u_vga16.pcf.gz ${DESTDIR}${FONTDIR}
