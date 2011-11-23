@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2010/10/16 11:43:30 tonnerre Exp $
+$NetBSD: distinfo,v 1.4 2011/11/23 15:39:21 joerg Exp $
 
 SHA1 (libcassandra-20101010.tar.gz) = 457dcf1fd24ad310c63eefb3b532f58835f326ef
 RMD160 (libcassandra-20101010.tar.gz) = e3e05861d1c1173d2492d49442aa68ee429d7b8f
 Size (libcassandra-20101010.tar.gz) = 873233 bytes
 SHA1 (patch-aa) = 387ea4e5ceb65c63e0a8d894035c9ae0fee2b792
+SHA1 (patch-libgenthrift_Cassandra.cpp) = b8ab38d7e28f98ad84d0f2cd3459d564a8decfc7
+SHA1 (patch-libgenthrift_Cassandra.h) = 02511eef6232f15e7e1f5c0ef2211c02f2ee5868
