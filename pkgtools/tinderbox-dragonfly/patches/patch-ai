@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
+$NetBSD: patch-ai,v 1.4 2011/11/23 00:54:34 marino Exp $
 
 --- ../FreeBSD/lib/portbuild	2011-10-16 00:52:55.000000000 +0000
 +++ lib/portbuild
@@ -85,7 +85,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  
  total_size=$(${tc} getPortTotalSize -d ${portdir} -b ${build})
  execute_hook "prePortBuild" "PACKAGE_NAME=${pkgname} BUILD=${build} JAIL=${jail} PORTSTREE=${portstree} CHROOT=${chroot} PORTDIR=${portdir} PB=${pb} TOTAL_SIZE=${total_size}"
-@@ -167,7 +167,7 @@ if [ -f ${dudsfile} ]; then
+@@ -167,20 +167,21 @@ if [ -f ${dudsfile} ]; then
      if grep -qxF ${pkgname} ${dudsfile}; then
          echo "skipping ${pkgname} (found in duds)"
  	${tc} updatePortStatus -d ${portdir} -b ${build} \
@@ -93,8 +93,10 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
 +		-L -s DUD -v ${pkgname} -r arch
  	mark_failed ${tc} ${build} ${pkgname} ${portdir}
  	execute_hook "postPortBuild" "PACKAGE_NAME=${pkgname} BUILD=${build} JAIL=${jail} PORTSTREE=${portstree} CHROOT=${chroot} STATUS=DUD PORTDIR=${portdir} PB=${pb} FAIL_REASON=dud TOTAL_SIZE=0"
-         exit 1
-@@ -175,12 +175,12 @@ if [ -f ${dudsfile} ]; then
+-        exit 1
++	# exit with success, we need all the ports to fire on the above hook
++        exit 0
+     fi
  fi
  
  # directories to clean
@@ -108,7 +110,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  
  # reset mtrees for plist checking
  mtree -deU -f ${chroot}/etc/mtree/BSD.root.dist \
-@@ -190,17 +190,48 @@ mtree -deU -f ${chroot}/etc/mtree/BSD.va
+@@ -190,17 +191,48 @@ mtree -deU -f ${chroot}/etc/mtree/BSD.va
  mtree -deU -f ${chroot}/etc/mtree/BSD.usr.dist \
        -p ${chroot}/usr >/dev/null 2>&1
  
@@ -162,7 +164,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
      mkdir -p ${chroot}/compat/linux/proc
      mount -t linprocfs linprocfs ${chroot}/compat/linux/proc
  fi
-@@ -251,8 +282,10 @@ if [ x"${CCACHE_ENABLED}" = x"1" ]; then
+@@ -251,8 +283,10 @@ if [ x"${CCACHE_ENABLED}" = x"1" ]; then
      export PATH=/opt:${PATH}
  fi
  
@@ -175,7 +177,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  fi
  
  echo "building $pkgname in $chroot"
-@@ -264,11 +297,7 @@ packages=$(tinderLoc packages ${build})
+@@ -264,11 +298,7 @@ packages=$(tinderLoc packages ${build})
  major_version=$(echo ${jail} | sed -E -e 's|(^[[:digit:]]+).*$|\1|')
  
  if [ -n "${DISTFILE_CACHE}" ]; then
@@ -188,7 +190,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  fi
  
  if [ -n "${DISTFILE_URI}" ]; then
-@@ -282,7 +311,7 @@ mkdir -p ${chroot}/tmp/depends ${chroot}
+@@ -282,7 +312,7 @@ mkdir -p ${chroot}/tmp/depends ${chroot}
  echo "building ${pkgname} in directory ${chroot}" | \
      tee ${chroot}/tmp/${pkgname}.log
  
@@ -197,7 +199,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  
  # Don't build in a world-writable standard directory because some ports
  # hardcode this path and try to load things from it at runtime, which is
-@@ -294,7 +323,7 @@ if [ x"${CCACHE_ENABLED}" ]; then
+@@ -294,7 +324,7 @@ if [ x"${CCACHE_ENABLED}" ]; then
      unset CCACHE_DISABLE
  fi
  
@@ -206,7 +208,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  ldconfig_dirs=""
  for i in ${_ldconfig_dirs}; do
      if [ -d ${chroot}/${i} ]; then
-@@ -302,9 +331,6 @@ for i in ${_ldconfig_dirs}; do
+@@ -302,13 +332,11 @@ for i in ${_ldconfig_dirs}; do
      fi
  done
  chroot ${chroot} /sbin/ldconfig ${ldconfig_dirs}
@@ -216,16 +218,39 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  
  set x $ED $FD $PD $BD $RD $TD
  shift 1
-@@ -337,7 +363,7 @@ if [ $? -ne 0 ]; then
+ 
++MISSINGDEP=
+ cd ${chroot}/tmp/depends
+ while [ $# -gt 0 ]; do
+ 
+@@ -324,6 +352,7 @@ while [ $# -gt 0 ]; do
+ 
+     if [ ! -f $1 ]; then
+ 	echo "skipping package $1 for ${pkgname} since it is missing"
++	MISSINGDEP=$1
+     fi
+ 
+     shift
+@@ -337,13 +366,17 @@ if [ $? -ne 0 ]; then
      exit 1
  fi
  
 -chroot ${chroot} /buildscript ${dirname} 1 "$ED" "$PD" "$FD" "$BD" "$RD" "$TD" "${plistcheck}" 2>&1 | tee -a ${chroot}/tmp/${pkgname}.log
++if [ -z "${MISSINGDEP}" ]; then
 +chroot ${chroot} /buildscript ${dirname} 1 "$ED" "$PD" "$FD" "$BD" "$RD" "$TD" "${pkgname}" "${plistcheck}" 2>&1 | tee -a ${chroot}/tmp/${pkgname}.log
  if [ -f ${chroot}/tmp/status ]; then
      error=$(cat ${chroot}/tmp/status)
  else
-@@ -351,14 +377,7 @@ errorsDir=$(tinderLoc builderrors ${buil
+     error=255
+ fi
+ execute_hook "postPortChecksum" "PACKAGE_NAME=${pkgname} BUILD=${build} JAIL=${jail} PORTSTREE=${portstree} CHROOT=${chroot} PORTDIR=${portdir} ERROR=${error} PB=${pb} TOTAL_SIZE=${total_size}"
++else
++    error=200
++fi
+ 
+ last_version=$(${tc} getPortLastBuiltVersion -d ${portdir} -b ${build})
+ logsDir=$(tinderLoc buildlogs ${build})
+@@ -351,14 +384,7 @@ errorsDir=$(tinderLoc builderrors ${buil
  
  if [ "${error}" = "0" ]; then
      ln -sf ${pkgname}.log2 ${chroot}/tmp/make.log
@@ -241,7 +266,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  
      grep pnohang ${chroot}/tmp/${pkgname}.log2
      cat ${chroot}/tmp/${pkgname}.log2 >> ${chroot}/tmp/${pkgname}.log
-@@ -372,6 +391,7 @@ if [ "${error}" = "0" ]; then
+@@ -372,6 +398,7 @@ if [ "${error}" = "0" ]; then
          cp ${chroot}/tmp/${pkgname}.log ${logsDir}/${pkgname}.log
      fi
      if [ -n "${logdir}" ]; then
@@ -249,7 +274,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  	if [ ${docopy} -eq 1 ]; then
  	    cp ${logsDir}/${pkgname}.log${lext} ${logdir}/${pkgname}.log${lext}
  	else
-@@ -388,6 +408,7 @@ if [ "${error}" = "0" ]; then
+@@ -388,6 +415,7 @@ if [ "${error}" = "0" ]; then
  	cp ${chroot}/tmp/work.tbz ${workDir}/${pkgname}.tbz
      fi
  
@@ -257,7 +282,7 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
      if [ "${error}" = "0" ]; then
          if [ ! -z "${last_version}" ]; then
  	    oldpkgs=$(find ${packages} -name "${last_version}${PKGSUFFIX}")
-@@ -400,8 +421,8 @@ if [ "${error}" = "0" ]; then
+@@ -400,8 +428,8 @@ if [ "${error}" = "0" ]; then
  		tar --unlink -C ${packages} -xvf -
  	[ -f ${packages}/All/${pkgname}${PKGSUFFIX} ] && \
  		touch ${packages}/All/${pkgname}${PKGSUFFIX}
@@ -268,7 +293,22 @@ $NetBSD: patch-ai,v 1.3 2011/11/20 16:20:24 marino Exp $
  	    status="BROKEN"
  	elif [ -f ${chroot}/tmp/leftovers ]; then
  	    status="LEFTOVERS"
-@@ -476,5 +497,5 @@ else
+@@ -469,12 +497,19 @@ else
+     if [ ${old_size} -gt ${total_size} ]; then
+ 	total_size=${old_size}
+     fi
++
++    PORTSTATUS=FAIL
++    if [ "${error}" = "200" ]; then
++       PORTSTATUS=DEPEND
++       reason="-r depend_package -p ${MISSINGDEP}"
++       reasonenv="FAIL_REASON=depend"
++    fi
+     ${tc} updatePortStatus -d ${portdir} -b ${build} \
+-		-L -s FAIL -v ${pkgname} ${reason} -t ${total_size}
++		-L -s ${PORTSTATUS} -v ${pkgname} ${reason} -t ${total_size}
+     mark_failed ${tc} ${build} ${pkgname} ${portdir}
+     ${tc} sendBuildErrorMail -d ${portdir} -b ${build} -p ${pkgname} -x ${lext}
      execute_hook "postPortBuild" "PACKAGE_NAME=${pkgname} BUILD=${build} JAIL=${jail} PORTSTREE=${portstree} CHROOT=${chroot} STATUS=FAIL PORTDIR=${portdir} PB=${pb} ${reasonenv} TOTAL_SIZE=${total_size}"
  fi
  
