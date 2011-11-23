@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10684 2011/11/23 07:52:14 obache Exp $
+$NetBSD: TODO,v 1.10685 2011/11/23 23:13:11 abs Exp $
 
 Suggested new packages
 ======================
@@ -1232,7 +1232,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o singularity-0.30b
 	o sitescooper-3.1.2
 	o sjeng-11.2
-	o skype-2.1.0.47
 	o smproxy-1.0.3
 	o smtpfeed-1.20
 	o snd-10.6

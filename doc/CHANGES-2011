@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3024 2011/11/23 21:31:15 gls Exp $
+$NetBSD: CHANGES-2011,v 1.3025 2011/11/23 23:13:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4790,3 +4790,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/fabric to 1.2.4 [gls 2011-11-23]
 	Updated graphics/wxsvg to 1.1.4 [gls 2011-11-23]
 	Updated multimedia/dvdstyler to 1.8.2.1nb4 [gls 2011-11-23]
+	Added net/skype21 version 2.1.0.81 [abs 2011-11-23]
+	Moved net/skype to net/skype1 [abs 2011-11-23]
