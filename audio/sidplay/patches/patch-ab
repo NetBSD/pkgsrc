@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.7 2011/11/23 19:17:07 marino Exp $
+
+--- sid2wav.cpp.orig	2002-03-11 10:42:10.000000000 +0000
++++ sid2wav.cpp
+@@ -18,9 +18,9 @@
+ //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ //
+ 
+-#include <iostream.h>
+-#include <iomanip.h>
+-#include <fstream.h>
++#include <iostream>
++#include <iomanip>
++#include <fstream>
+ #include <string.h>
+ 
+ #include <stdlib.h>
+@@ -39,6 +39,8 @@
+ #include <sidplay/fformat.h>
+ #include <sidplay/myendian.h>
+ 
++using namespace std;
++
+ const char s2w_version[] = "1.8";
+ 
+ struct wav_hdr                  // little endian
