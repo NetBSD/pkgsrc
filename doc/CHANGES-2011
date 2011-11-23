@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3020 2011/11/23 19:00:10 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3021 2011/11/23 19:09:25 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4786,3 +4786,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed audio/tosha successor sysutils/cdrtools [wiz 2011-11-23]
 	Removed audio/cdd successor sysutils/cdrtools [wiz 2011-11-23]
 	Removed devel/libscsi [wiz 2011-11-23]
+	Updated security/py-crypto to 2.4.1 [gls 2011-11-23]
