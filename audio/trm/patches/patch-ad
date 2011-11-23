@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2011/11/23 19:15:08 marino Exp $
+
+--- mbid3.cpp.orig	2002-10-02 09:02:56.000000000 +0000
++++ mbid3.cpp
+@@ -6,6 +6,9 @@
+ #ifdef HAVE_LIBID3
+ 
+ #include <stdio.h>
++#if defined (__DragonFly__)
++#include <string.h>
++#endif
+ #include "mbid3.h"
+ 
+ #define DB Debug_v("%s:%d", __FILE__, __LINE__);
