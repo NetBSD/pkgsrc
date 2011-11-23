@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3025 2011/11/23 23:13:11 abs Exp $
+$NetBSD: CHANGES-2011,v 1.3026 2011/11/23 23:35:25 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4792,3 +4792,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/dvdstyler to 1.8.2.1nb4 [gls 2011-11-23]
 	Added net/skype21 version 2.1.0.81 [abs 2011-11-23]
 	Moved net/skype to net/skype1 [abs 2011-11-23]
+	Updated textproc/libplist to 1.4 [shattered 2011-11-23]
