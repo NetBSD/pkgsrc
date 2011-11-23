@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.3 2008/11/10 19:04:45 adam Exp $
+$NetBSD: patch-af,v 1.4 2011/11/23 23:30:30 joerg Exp $
 
---- plug-ins/icc_examin/icc_examin/icc_helfer_fltk.cpp.orig	2008-11-10 19:18:58.000000000 +0100
+--- plug-ins/icc_examin/icc_examin/icc_helfer_fltk.cpp.orig	2007-04-21 09:24:09.000000000 +0000
 +++ plug-ins/icc_examin/icc_examin/icc_helfer_fltk.cpp
 @@ -226,7 +226,7 @@ namespace icc_examin_ns {
  
