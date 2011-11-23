@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2008/09/18 13:04:30 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2011/11/23 23:32:17 joerg Exp $
 
---- pdns/backends/bind/zone2sql.cc.orig	2008-09-18 14:27:23.000000000 +0200
+--- pdns/backends/bind/zone2sql.cc.orig	2007-04-21 13:56:36.000000000 +0000
 +++ pdns/backends/bind/zone2sql.cc
 @@ -302,7 +302,7 @@ int main(int argc, char **argv)
      cerr<<"\nFatal error: "<<ae.reason<<endl;

@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2008/09/18 13:04:30 joerg Exp $
+$NetBSD: patch-af,v 1.2 2011/11/23 23:32:17 joerg Exp $
 
---- pdns/tcpreceiver.cc.orig	2008-09-18 14:49:07.000000000 +0200
+--- pdns/tcpreceiver.cc.orig	2007-04-21 13:56:36.000000000 +0000
 +++ pdns/tcpreceiver.cc
 @@ -322,7 +322,7 @@ void *TCPNameserver::doConnection(void *
      s_P = 0; // on next call, backend will be recycled
