@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3010 2011/11/23 02:02:49 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3011 2011/11/23 02:13:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4759,4 +4759,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/diffpdf to 1.5.0 [ryoon 2011-11-22]
 	Added net/cacti version 0.8.7h [tez 2011-11-22]
 	Added lang/basic256 version 0.9.6.66 [ryoon 2011-11-23]
-	Updated editors/emacs-snapshot to 24.0.91.20111121 [msk 2011-11-23]
+	Updated editors/emacs-snapshot to 24.0.91.20111121 [minskim 2011-11-23]
+	Updated pkgtools/pkg_summary-utils to 0.56.3nb2 [minskim 2011-11-23]
