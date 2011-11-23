@@ -1,0 +1,14 @@
+$NetBSD: patch-bd,v 1.1 2011/11/23 22:34:58 marino Exp $
+
+--- lib-src/soundtouch/source/example/SoundStretch/WavFile.cpp.orig	2006-11-15 04:12:11.000000000 +0000
++++ lib-src/soundtouch/source/example/SoundStretch/WavFile.cpp
+@@ -50,6 +50,9 @@
+ #include <string>
+ #include <assert.h>
+ #include <limits.h>
++#if defined (__DragonFly__)
++#include <string.h>
++#endif
+ 
+ #include "WavFile.h"
+ 
