@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/21 18:51:37 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/23 23:33:18 shattered Exp $
 #
 
-DISTNAME=	libplist-1.3
+DISTNAME=	libplist-1.4
 CATEGORIES=	textproc
-MASTER_SITES=	http://github.com/downloads/JonathanBeck/libplist/
+MASTER_SITES=	http://www.libimobiledevice.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
