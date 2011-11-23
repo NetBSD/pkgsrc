@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.5 2011/11/23 19:17:07 marino Exp $
+
+--- sidcon.cpp.orig	2002-02-19 19:48:37.000000000 +0000
++++ sidcon.cpp
+@@ -25,12 +25,14 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <iostream.h>
+-#include <iomanip.h>
++#include <iostream>
++#include <iomanip>
+ 
+ #include <sidplay/sidtune.h>
+ #include <sidplay/fformat.h>
+ 
++using namespace std;
++
+ static bool toPSID = true,
+     toSIDPLAY = false,
+     checkOnly = false,
