@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/05/04 11:16:23 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2011/11/23 11:00:55 ryoon Exp $
 
-SHA1 (mypaint-0.9.1.tar.bz2) = b2fe2e311619a4c4815cd698abd41e99b6692b43
-RMD160 (mypaint-0.9.1.tar.bz2) = 16bd0492b567822b5ea4d6e3153e73436828a728
-Size (mypaint-0.9.1.tar.bz2) = 5542866 bytes
+SHA1 (mypaint-1.0.0.tar.bz2) = 5f9221304bb8becd642b00d94af947edf1e18844
+RMD160 (mypaint-1.0.0.tar.bz2) = 6d3ff0f5c16e18b006f6449e9591067bd29ed3c5
+Size (mypaint-1.0.0.tar.bz2) = 36748957 bytes
 SHA1 (patch-SConstruct) = d524789a7053976d06d3d4389869b82c456522bf
