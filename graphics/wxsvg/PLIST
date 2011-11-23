@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/01/11 15:47:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/11/23 21:29:14 gls Exp $
 bin/svgview
 include/wxSVG/Animated.h
 include/wxSVG/CSSStyleDeclaration.h
@@ -158,6 +158,7 @@ include/wxSVG/SVGStylable.h
 include/wxSVG/SVGStyleElement.h
 include/wxSVG/SVGSwitchElement.h
 include/wxSVG/SVGSymbolElement.h
+include/wxSVG/SVGTBreakElement.h
 include/wxSVG/SVGTRefElement.h
 include/wxSVG/SVGTSpanElement.h
 include/wxSVG/SVGTests.h
@@ -180,6 +181,7 @@ include/wxSVG/SVGZoomAndPan.h
 include/wxSVG/SVGZoomEvent.h
 include/wxSVG/String_wxsvg.h
 include/wxSVG/ViewCSS.h
+include/wxSVG/imagsvg.h
 include/wxSVG/mediadec_ffmpeg.h
 include/wxSVG/svg.h
 include/wxSVG/svgctrl.h
