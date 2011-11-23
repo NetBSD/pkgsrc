@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.7 2008/12/08 12:26:57 ghen Exp $
+$NetBSD: distinfo,v 1.8 2011/11/23 23:32:17 joerg Exp $
 
 SHA1 (pdns-2.9.21.2/pdns-2.9.21.2.tar.gz) = 9088361071ddb6c2bd32eb90c6c166736e8a229d
 RMD160 (pdns-2.9.21.2/pdns-2.9.21.2.tar.gz) = e28a31c6816a382502124726a5fe9ac66dd2df94
 Size (pdns-2.9.21.2/pdns-2.9.21.2.tar.gz) = 1008111 bytes
-SHA1 (patch-aa) = 034845af3a9b66f57e482e3b43e43b61c17f51ab
-SHA1 (patch-ab) = d47887faff80330122ccf1cfd047c11e114c1153
-SHA1 (patch-ac) = 14c743d41ccb35ee2b47d1692b8812abd360494e
-SHA1 (patch-ad) = 19e80581f7962602ed9e3ccfdb3efcc170afaad6
-SHA1 (patch-ae) = a94cd5c45c0bff80b7736dc545248b44978cf70d
-SHA1 (patch-af) = 75c9a106a5d97cae0a010407f5f97753f63e7abb
-SHA1 (patch-ag) = 28335941b5a92a5889b294a949cefd1173be2401
-SHA1 (patch-ah) = a28bfc9395900e73195f90dd6d9f2c1210a639b4
+SHA1 (patch-aa) = 267582a8fd78ce826f99c819d3d8d590c8b4fdf4
+SHA1 (patch-ab) = f54ace6ff60162e50119eb11bcb2f5db5e1ea480
+SHA1 (patch-ac) = 22ba9d28dc5a499a4ed1a1f67ebaec239d11eb4b
+SHA1 (patch-ad) = a7ed0be1a9bd4e8978d1b23ea0755c03893b7f73
+SHA1 (patch-ae) = 3797190c3e5bec9bcfa48288895125411e2a180e
+SHA1 (patch-af) = c7a3e88a4d8eae098e2370bd91e91d9876ee4fd6
+SHA1 (patch-ag) = 5639c080e166457b1a170ce3017987b05bdf51fc
+SHA1 (patch-ah) = 385b397e9bab8a730827d9fad6cb4029065df627
+SHA1 (patch-pdns_dynmessenger.cc) = df89ba91abc96319b323fc19b413b127112f4afb
+SHA1 (patch-pdns_misc.hh) = ca3109fdf0bc8faf60c95b1fe5985eda065993d9

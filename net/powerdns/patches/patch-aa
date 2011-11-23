@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/08/13 09:34:21 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/23 23:32:17 joerg Exp $
 
---- pdns/Makefile.in.orig	2006-03-15 19:33:23.000000000 +0100
+--- pdns/Makefile.in.orig	2008-08-07 07:04:53.000000000 +0000
 +++ pdns/Makefile.in
-@@ -729,12 +729,12 @@ distclean-libtool:
+@@ -796,12 +796,12 @@ distclean-libtool:
  uninstall-info-am:
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)

@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2008/09/18 13:04:30 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2011/11/23 23:32:17 joerg Exp $
 
---- pdns/dnspacket.cc.orig	2008-09-18 14:28:48.000000000 +0200
+--- pdns/dnspacket.cc.orig	2007-04-21 13:56:36.000000000 +0000
 +++ pdns/dnspacket.cc
 @@ -320,7 +320,7 @@ void DNSPacket::wrapup(void)
        }
