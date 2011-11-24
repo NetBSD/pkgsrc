@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2008/07/29 19:30:35 tnn Exp $
+$NetBSD: patch-ac,v 1.2 2011/11/24 13:32:20 joerg Exp $
 
---- src/OBPager.cc.orig	2004-09-01 16:23:44.000000000 +0200
+--- src/OBPager.cc.orig	2004-09-01 14:23:44.000000000 +0000
 +++ src/OBPager.cc
-@@ -1096,7 +1096,7 @@ void OBPager::gotoDesktop(int newDesktop
+@@ -22,7 +22,8 @@
+ 
+ #include <string>
+ #include <sstream>
+-
++#include <stdlib.h>
++#include <memory>
+ 
+ // We need to work with these properties
+ 
+@@ -1096,7 +1097,7 @@ void OBPager::gotoDesktop(int newDesktop
  	event.xclient.format = 32;
  	event.xclient.data.l[0] = newDesktop;
  	
