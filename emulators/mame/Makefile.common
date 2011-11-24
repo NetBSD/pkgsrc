@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/08/22 21:40:25 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/11/24 07:40:01 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -22,7 +22,7 @@ WRKSRC=			${WRKDIR}
 
 # separate distinfos though, so don't forget 'make mdi' when
 # adding or changing patches
-PATCHDIR=		${.CURDIR}/../../emulators/mame/patches
+#PATCHDIR=		${.CURDIR}/../../emulators/mame/patches
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
