@@ -1,7 +1,23 @@
-$NetBSD: distinfo,v 1.7 2011/06/20 09:28:06 wiz Exp $
+$NetBSD: distinfo,v 1.8 2011/11/24 14:12:21 joerg Exp $
 
 SHA1 (openmsx-0.6.2.tar.gz) = b9e2f1bf13f193618f35c0fd6820c2bd44088870
 RMD160 (openmsx-0.6.2.tar.gz) = b800499248ee43de8007042d4dd0a4523f464833
 Size (openmsx-0.6.2.tar.gz) = 1934469 bytes
 SHA1 (patch-aa) = aadad14af76af2dc97dbb3f0ab4b1b5bda4be8c1
+SHA1 (patch-src_commands_Completer.cc) = b5ef6c2d59aef5d927691a638d01512fffc4a44f
+SHA1 (patch-src_events_Socket.cc) = b64d9620bf88a0515612e5a60a87e26442b85752
+SHA1 (patch-src_fdc_TC8566AF.cc) = 418121aff79791fc4b3b8f4062014ebb6529d5ad
+SHA1 (patch-src_file_Date.cc) = 885ae3934fc9ab0d15c99c620a8b94703f3383eb
+SHA1 (patch-src_file_FileBase.cc) = 606ca7ed75dc8ac55e02b1c89e97a39480cb2044
+SHA1 (patch-src_file_GZFileAdapter.cc) = 6b3c691684d7d95a78f9247be0661a4b4b07af36
+SHA1 (patch-src_file_ZipFileAdapter.cc) = 1534647f8c40a44aa80cc41949609f9a855680ce
+SHA1 (patch-src_input_RecordedCommand.hh) = 700ccad99b5b8e23ec54ca5bc0d98081b049d9ee
+SHA1 (patch-src_memory_Ram.cc) = d87340931ad048417fa791c9830b95197593f326
+SHA1 (patch-src_sound_Y8950Adpcm.cc) = 564c0ea4f3783ff6873b45a7bc0b0405f5cc6160
+SHA1 (patch-src_sound_YMF262.cc) = b07afcbe7dd2ced71a7e914283a9580529d8f54e
+SHA1 (patch-src_video_MemoryOps.cc) = 145cf13cbeb8148d0e22eea202c9085a4b501419
 SHA1 (patch-src_video_ScreenShotSaver.cc) = 84175620949c2f781565bdc5e2e864b24afd4549
+SHA1 (patch-src_video_VDP.cc) = 464bb75e38d02dda36b05febf6060f79347f36b0
+SHA1 (patch-src_video_VDPVRAM.cc) = 6fd50b6d977317ca08fe6957d8f91b67381e1a6e
+SHA1 (patch-src_video_v9990_V9990.cc) = 0b6f80332b5c1f64c9812c54f1e4d1864fdde612
+SHA1 (patch-src_video_v9990_V9990VRAM.cc) = 124a0cd55f3d9e763ac8a4775f7dd8859cfe6bbb
