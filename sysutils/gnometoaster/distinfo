@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/10/02 01:20:55 dholland Exp $
+$NetBSD: distinfo,v 1.9 2011/11/24 13:34:29 joerg Exp $
 
 SHA1 (gtoaster1.0Beta5.tgz) = c55bf7e8e532956a8907cd29cbfb98a721c5bb3a
 RMD160 (gtoaster1.0Beta5.tgz) = f8c7386497c56b8e1bf924e099ddf68cbcbd02a0
@@ -30,7 +30,7 @@ SHA1 (patch-piping_h) = eda90cd11772bcb218dcd70698333bdd266fa2ed
 SHA1 (patch-preferences_c) = 135d510c6f247bd0681d3d9c86751ee280eb0abc
 SHA1 (patch-selectlist_c) = 863472c181469eebb0582003a861207e67724090
 SHA1 (patch-stdfiletrack_c) = 61d678e82b67b14c3e9f8e53f6dc6291786a5e87
-SHA1 (patch-streams_c) = 0b6754ec345b92f8c2ff6db3d0bac6d7243ee7dd
+SHA1 (patch-streams_c) = 7bc7c8c77484c88ae8ba85e0b403508b40dc18c2
 SHA1 (patch-trackedit_c) = 1e94fd3ccc3ccb7cd244161179b743baf74258d7
 SHA1 (patch-tracklist_c) = 72cbbf3777d1259b764d106f273ebe303cbdc80a
 SHA1 (patch-vfs_c) = 430fd869275f386c0d4729573f10cfdf8db5171e
