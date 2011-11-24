@@ -1,8 +1,17 @@
-$NetBSD: patch-da,v 1.5 2011/01/19 16:43:38 jmmv Exp $
+$NetBSD: patch-da,v 1.6 2011/11/24 20:36:48 marino Exp $
 
---- configure.orig	2010-09-28 09:37:06.000000000 +0000
+--- configure.orig	2011-03-25 14:54:05.000000000 +0000
 +++ configure
-@@ -12094,7 +12094,7 @@ $as_echo "$libgtop_sysdeps_dir" >&6; }
+@@ -13055,7 +13055,7 @@ $as_echo_n "checking for libgtop sysdeps
+ 	  libgtop_need_server=yes
+ 	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server2 && chmod 2755 $(bindir)/libgtop_server2'
+ 	  ;;
+-	freebsd*|kfreebsd*)
++	freebsd*|kfreebsd*|dragonfly*)
+ 	  libgtop_sysdeps_dir=freebsd
+ 	  libgtop_use_machine_h=yes
+ 	  libgtop_need_server=yes
+@@ -13129,7 +13129,7 @@ $as_echo "$libgtop_sysdeps_dir" >&6; }
  
  
  	case "$host_os" in
