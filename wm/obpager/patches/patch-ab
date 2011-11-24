@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/06/20 18:09:24 tnn Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/24 13:32:20 joerg Exp $
 
---- src/main.cc.orig	2007-06-20 19:54:23.000000000 +0200
+--- src/main.cc.orig	2004-09-01 14:23:44.000000000 +0000
 +++ src/main.cc
-@@ -26,6 +26,7 @@
+@@ -26,6 +26,8 @@
  
  #include <sys/types.h>
  #include <unistd.h>
 +#include <errno.h>
++#include <stdlib.h>
  
  
  // Include the headers for the pager class and also the spiffy custom exception class
