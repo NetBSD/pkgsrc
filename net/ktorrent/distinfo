@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2010/03/20 21:53:06 wiz Exp $
+$NetBSD: distinfo,v 1.14 2011/11/24 13:40:52 joerg Exp $
 
 SHA1 (ktorrent-3.3.tar.bz2) = 0c39e8963790f3bb9420389101fdd5d12f3e0c10
 RMD160 (ktorrent-3.3.tar.bz2) = 3e1405ca4e6049635b2fc82b3cb616cec5fe1bea
 Size (ktorrent-3.3.tar.bz2) = 2745995 bytes
+SHA1 (patch-libbtcore_dht_rpcserver.cpp) = 00b5c9799cb55cde27d54f5d27dd7c9882b2668c
