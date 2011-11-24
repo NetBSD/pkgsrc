@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2011/11/24 01:15:41 marino Exp $
+$NetBSD: patch-ae,v 1.1 2011/11/24 01:15:41 marino Exp $
 
---- tcp.h.orig	2007-01-12 07:12:10.000000000 +0000
-+++ tcp.h
-@@ -100,7 +100,11 @@ private:
+--- basictcp.h.orig	2008-05-26 09:41:40.000000000 +0000
++++ basictcp.h
+@@ -89,7 +89,11 @@ private:
  
  #ifdef USE_SSL
  #ifdef USE_OPENSSL
