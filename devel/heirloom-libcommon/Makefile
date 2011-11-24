@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/24 21:02:42 cheusov Exp $
 
 PKGNAME=	heirloom-libcommon-${HEIRLOOM_VER}
 CATEGORIES=	devel
@@ -11,14 +11,13 @@ INSTALLATION_DIRS+=	include/heirloom lib
 
 HEADERS_DIR=	${PREFIX}/include/heirloom
 
-HEADERS=	_alloca.h _malloc.h _utmpx.h alloca.h asciitype.h atoll.h \
+HEADERS=	_alloca.h _malloc.h alloca.h asciitype.h atoll.h \
 		blank.h getdir.h iblok.h malloc.h mbtowi.h memalign.h \
 		msgselect.h oblok.h pathconf.h pfmt.h regexp.h regexpr.h \
-		sfile.h sigset.h utmpx.h
+		sfile.h sigset.h
 
 PLIST_SUBST+=	NO_ALLOCA_H=
 PLIST_SUBST+=	NOMALLOC_H=
-PLIST_SUBST+=	NOUTMPX_H=
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 
@@ -27,7 +26,6 @@ DESCR_SRC+=	${.CURDIR}/DESCR
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PLIST_SUBST+=	"NO_ALLOCA_H=@comment "
 PLIST_SUBST+=	"NOMALLOC_H=@comment "
-PLIST_SUBST+=	"NOUTMPX_H=@comment "
 .endif
 
 do-install:
