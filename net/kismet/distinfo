@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/01/13 14:08:07 obache Exp $
+$NetBSD: distinfo,v 1.7 2011/11/24 13:43:11 joerg Exp $
 
 SHA1 (kismet-2008-05-R1.tar.gz) = 8355aeb0374a39549dfdc0c73160125eadd7c6e2
 RMD160 (kismet-2008-05-R1.tar.gz) = 5613207b45f85fa72d146009434df984f721ccdc
@@ -9,3 +9,4 @@ SHA1 (patch-ae) = eaaf5c5498a38d7b2a6121defdf879622f430003
 SHA1 (patch-af) = e4e176998e78a657178b3e14e614adf27b517eb6
 SHA1 (patch-ag) = cb1e1eaf07ae40128fbe9760c95cfdecc200d22c
 SHA1 (patch-ah) = 67dfa5a2aedb1b651671863177baace4a65c6f26
+SHA1 (patch-panelfront.cc) = 5a09a92598c8ffb7851b74fe87577a997f69e4f6
