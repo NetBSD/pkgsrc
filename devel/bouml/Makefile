@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2011/11/01 06:00:53 sbd Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/24 08:22:52 obache Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
 PKGNAME=		bouml-${BOUMLVERSION}
-PKGREVISION=		4
 CATEGORIES=		devel
-MASTER_SITES=		http://bouml.free.fr/
+MASTER_SITES=		http://bouml.free.fr/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bouml.free.fr/
@@ -14,7 +13,7 @@ LICENSE=                gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BOUMLVERSION=		4.16.4
+BOUMLVERSION=		4.22.2
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pax

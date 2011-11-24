@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/06 18:29:21 sno Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/11/24 08:22:52 obache Exp $
 bin/bouml
 bin/projectControl
 bin/projectSynchro
@@ -229,6 +229,7 @@ lib/bouml/bouml
 lib/bouml/browsersort
 lib/bouml/cpp_generator
 lib/bouml/cpp_reverse
+lib/bouml/cpp_roundtrip
 lib/bouml/cpp_util
 lib/bouml/cpp_utilities/1024.bodies
 lib/bouml/cpp_utilities/1152.bodies
@@ -652,6 +653,7 @@ lib/bouml/empty/java_imports
 lib/bouml/empty/python_imports
 lib/bouml/empty/stereotypes
 lib/bouml/empty/tools
+lib/bouml/es.lang
 lib/bouml/file_control
 lib/bouml/fr.lang
 lib/bouml/genpro/1024.bodies
@@ -941,7 +943,6 @@ lib/bouml/html/stereotypes
 lib/bouml/html/tools
 lib/bouml/idl_generator
 lib/bouml/irose
-lib/bouml/it.lang
 lib/bouml/ixmi2
 lib/bouml/java_catalog
 lib/bouml/java_generator
@@ -952,6 +953,7 @@ lib/bouml/php_reverse
 lib/bouml/plug_out_upgrade
 lib/bouml/projectControl
 lib/bouml/projectSynchro
+lib/bouml/pt_br.lang
 lib/bouml/python_generator
 lib/bouml/rose/1024.bodies
 lib/bouml/rose/1152.bodies
@@ -1933,11 +1935,13 @@ lib/bouml/xmi2import/129794.diagram
 lib/bouml/xmi2import/129920.bodies
 lib/bouml/xmi2import/130050.bodies
 lib/bouml/xmi2import/130176.bodies
+lib/bouml/xmi2import/130306.bodies
 lib/bouml/xmi2import/130432.bodies
 lib/bouml/xmi2import/130434.diagram
 lib/bouml/xmi2import/130562.bodies
 lib/bouml/xmi2import/130688.bodies
 lib/bouml/xmi2import/130944.bodies
+lib/bouml/xmi2import/131074.bodies
 lib/bouml/xmi2import/131200.bodies
 lib/bouml/xmi2import/131456.bodies
 lib/bouml/xmi2import/131712.bodies

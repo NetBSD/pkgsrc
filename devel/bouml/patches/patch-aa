@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2009/12/06 18:29:22 sno Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/24 08:22:52 obache Exp $
 
---- Makefile.orig	2009-10-21 16:57:57.000000000 +0200
-+++ Makefile	2009-12-01 22:26:17.000000000 +0100
+--- Makefile.orig	2009-12-26 10:00:56.000000000 +0000
++++ Makefile
 @@ -1,24 +1,24 @@
  # The directory where all the bouml files will be installed, you
  # can change it for instance because you don't have root permission
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.3 2009/12/06 18:29:22 sno Exp $
  
  # for packaging purpose, useless by default
  # DESTDIR = 
-@@ -26,8 +26,6 @@
+@@ -26,8 +26,6 @@ BOUML_ICONS_PREFIX_DIR = /usr/share/icon
  # uncomment if needed
  # MAKE = make
  
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.3 2009/12/06 18:29:22 sno Exp $
  SRC_DIRS = src \
  	src/CppGenerator \
  	src/CppReverse \
-@@ -103,26 +101,26 @@
+@@ -105,26 +103,26 @@ clean:
  	for i in $(SRC_DIRS) $(PLUGOUT_DIRS); do if [ -d $$i ]; then (cd $$i ; $(MAKE) clean; rm -f Makefile; ) || exit 1 ; fi; done
  
  install:
@@ -77,7 +77,7 @@ $NetBSD: patch-aa,v 1.3 2009/12/06 18:29:22 sno Exp $
  	echo "#!/bin/sh" >$(DESTDIR)$(BOUML_DIR)/bouml
  	echo "PATH=$(BOUML_LIB):$$"PATH >>$(DESTDIR)$(BOUML_DIR)/bouml
  	echo "BOUML_LIB_DIR=$(BOUML_LIB)" >>$(DESTDIR)$(BOUML_DIR)/bouml
-@@ -134,7 +132,7 @@
+@@ -136,7 +134,7 @@ install:
  	cd $(DESTDIR)$(BOUML_DIR) ; rm -f projectSynchro ; ln -s $(BOUML_LIB)/projectSynchro
  	if test -n "$(BOUML_DESKTOP_DIR)" ; \
  	then \
