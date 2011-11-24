@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10685 2011/11/23 23:13:11 abs Exp $
+$NetBSD: TODO,v 1.10686 2011/11/24 07:40:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -957,7 +957,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mailscanner-4.74
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.144
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
