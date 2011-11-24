@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.7 2008/08/25 19:35:30 bjs Exp $
+$NetBSD: patch-ab,v 1.8 2011/11/24 20:40:12 marino Exp $
 
---- iozone.c.orig	2008-07-17 11:07:10.000000000 -0400
+--- iozone.c.orig	2008-07-17 15:07:10.000000000 +0000
 +++ iozone.c
+@@ -57,7 +57,7 @@
+ #include <Windows.h>
+ int errno;
+ #else
+-#if defined(linux)
++#if defined(linux) || defined(__DragonFly__)
+ #include <errno.h>
+ #else
+ extern  int errno;   /* imported for errors */
 @@ -263,7 +263,7 @@ THISVERSION,
  #if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__APPLE__) && !defined(__DragonFly__)
  #include <malloc.h>
@@ -11,3 +20,65 @@ $NetBSD: patch-ab,v 1.7 2008/08/25 19:35:30 bjs Exp $
  #include <stdlib.h>
  #include <string.h>
  #endif
+@@ -412,6 +412,9 @@ struct piovec piov[PVECMAX];
+ struct iovec piov[PVECMAX];
+ #define piov_base iov_base
+ #define piov_len iov_len
++#if defined (__DragonFly__)
++#define DFLY_VECTOR_OFFSET
++#endif
+ #endif
+ 
+ #endif
+@@ -6534,7 +6537,11 @@ long long *data2;
+ 	if(odsync)
+ 		file_flags |= O_DSYNC;
+ #endif
+-#if defined(_HPUX_SOURCE) || defined(linux) || defined(freebsd) || defined(__DragonFly__)
++#if defined (__DragonFly__)
++	if(read_sync)
++		file_flags |= O_SYNC;
++#endif
++#if defined(_HPUX_SOURCE) || defined(linux) || defined(freebsd)
+ 	if(read_sync)
+ 		file_flags |=O_RSYNC|O_SYNC;
+ #endif
+@@ -9652,7 +9659,11 @@ long long *data1, *data2;
+ 		open_flags |=O_DIRECTIO;
+ #endif
+ #endif
+-#if defined(_HPUX_SOURCE) || defined(linux) || defined(freebsd) || defined(__DragonFly__)
++#if defined (__DragonFly__)
++	if(read_sync)
++		open_flags |= O_SYNC;
++#endif
++#if defined(_HPUX_SOURCE) || defined(linux) || defined(freebsd)
+ 	if(read_sync)
+ 		open_flags |=O_RSYNC|O_SYNC;
+ #endif
+@@ -9865,6 +9876,7 @@ long long *data1,*data2;
+ 	off64_t filebytes64,i;
+ 	off64_t numrecs64;
+ 	int fd,ltest;
++	int wval;
+ #ifdef VXFS
+ 	int test_foo = 0;
+ #endif
+@@ -10007,7 +10019,7 @@ long long *data1,*data2;
+ 					purgeit(piov[xx].piov_base,reclen);
+ 			}
+ 			if(pwritev(fd, piov,numvecs
+-#ifdef PER_VECTOR_OFFSET
++#if defined(PER_VECTOR_OFFSET) || defined(DFLY_VECTOR_OFFSET)
+ 				, list_off[0]
+ #endif
+ 				) != (reclen*numvecs))
+@@ -10310,7 +10322,7 @@ long long *data1,*data2;
+ 				   purgeit(piov[xx].piov_base,reclen);
+ 			}
+ 			if(preadv(fd, piov, numvecs
+-#ifdef PERVECTOR_OFFSET
++#if defined(PERVECTOR_OFFSET) || defined(DFLY_VECTOR_OFFSET)
+ 				, list_off[0]
+ #endif
+ 				) != (numvecs * reclen))
