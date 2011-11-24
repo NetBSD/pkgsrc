@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2008/02/14 18:05:24 adam Exp $
+$NetBSD: distinfo,v 1.10 2011/11/24 14:16:18 joerg Exp $
 
 SHA1 (kmysqladmin-0.7.2.tar.gz) = b184c5f9ffcc872c49f048b939327448e0a82ae7
 RMD160 (kmysqladmin-0.7.2.tar.gz) = 0993b8969888618395efa5b671a9a0f9d44e9d5a
 Size (kmysqladmin-0.7.2.tar.gz) = 1294472 bytes
 SHA1 (patch-af) = bb36a6402d9ba28a73c01203fe282f93ccd654ae
+SHA1 (patch-kmysqladmin_helpers_stringlist.h) = dfc52b884016db2cabf65a936db780ab1ffb5163
