@@ -1,0 +1,4 @@
+== soap4r-spox
+
+This is a modified version of the soap4r library to work on Ruby versions
+>= 1.9. The official version can be found {here}[http://dev.ctor.org/soap4r].
