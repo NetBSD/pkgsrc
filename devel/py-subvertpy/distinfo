@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/07/22 14:54:45 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/11/24 21:52:25 cheusov Exp $
 
-SHA1 (subvertpy-0.8.2.tar.gz) = 8a8a02f3a20f3047dec54c02e0d109f32b9228f8
-RMD160 (subvertpy-0.8.2.tar.gz) = 2370c8a7cec822ef125b2e020aa64f5e3446ff2d
-Size (subvertpy-0.8.2.tar.gz) = 99374 bytes
+SHA1 (subvertpy-0.8.9.tar.gz) = 6c1a0907255483e7a76d544c7cc12bfc31d4314c
+RMD160 (subvertpy-0.8.9.tar.gz) = 54fcfd1522d4b3c6ba614e6dbcaf5f35672b0240
+Size (subvertpy-0.8.9.tar.gz) = 103473 bytes
