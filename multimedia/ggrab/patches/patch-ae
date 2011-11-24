@@ -1,8 +1,16 @@
-$NetBSD: patch-ae,v 1.2 2006/08/06 20:49:52 mjl Exp $
+$NetBSD: patch-ae,v 1.3 2011/11/24 13:44:35 joerg Exp $
 
---- sserver.cpp.orig	2003-03-07 20:22:13.000000000 +0100
-+++ sserver.cpp	2006-08-06 22:45:30.000000000 +0200
-@@ -52,7 +52,7 @@
+--- sserver.cpp.orig	2003-03-07 19:22:13.000000000 +0000
++++ sserver.cpp
+@@ -18,6 +18,7 @@ program: sserver version 0.03 by Axel Bu
+ 
+ #include <stdlib.h>
+ #include <netdb.h>
++#include <limits.h>
+ #include <iostream>
+ #include <unistd.h>
+ #include <string.h>
+@@ -52,7 +53,7 @@ int main(int argc, char * argv[])
  	char a_grabname[256];
  	char a_vpid[20];
  	char a_apid[20];
@@ -11,7 +19,7 @@ $NetBSD: patch-ae,v 1.2 2006/08/06 20:49:52 mjl Exp $
  	char a_path[256]="";
  	char a_host[256];
  	int	i,n;
-@@ -169,10 +169,10 @@
+@@ -169,10 +170,10 @@ int main(int argc, char * argv[])
  						sprintf(a_vpid,"0x%03x",recdata.vpid);	
  						sprintf(a_apid,"0x%03x",recdata.apid);
  
@@ -24,7 +32,7 @@ $NetBSD: patch-ae,v 1.2 2006/08/06 20:49:52 mjl Exp $
  						}
  
  						if (strlen(recdata.channelname) > 0)
-@@ -185,8 +185,8 @@
+@@ -185,8 +186,8 @@ int main(int argc, char * argv[])
  								}
  							} while (*p_act);
  								
@@ -35,7 +43,7 @@ $NetBSD: patch-ae,v 1.2 2006/08/06 20:49:52 mjl Exp $
  						}
  
  						if (strlen(recdata.epgtitle) > 0)
-@@ -206,13 +206,13 @@
+@@ -206,13 +207,13 @@ int main(int argc, char * argv[])
  								}
  							} while (*p_act++);
  							
