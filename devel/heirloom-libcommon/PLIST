@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/28 08:45:14 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/24 21:02:42 cheusov Exp $
 include/heirloom/_alloca.h
 include/heirloom/_malloc.h
-include/heirloom/_utmpx.h
 ${NO_ALLOCA_H}include/heirloom/alloca.h
 include/heirloom/asciitype.h
 include/heirloom/atoll.h
@@ -19,5 +18,4 @@ include/heirloom/regexp.h
 include/heirloom/regexpr.h
 include/heirloom/sfile.h
 include/heirloom/sigset.h
-${NOUTMPX_H}include/heirloom/utmpx.h
 lib/libheirloomcommon.a
