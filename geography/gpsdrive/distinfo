@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/07/03 21:42:24 jym Exp $
+$NetBSD: distinfo,v 1.5 2011/11/24 14:06:04 joerg Exp $
 
 SHA1 (gpsdrive-1.31.tar.gz) = 296a06d264c5fbb077c91f3529b4e6f122423f05
 RMD160 (gpsdrive-1.31.tar.gz) = 56ea8fb9355e0381d55aeb691757c59c9e332406
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 78e21378bc10d4a1098827d25308f59432b180f1
 SHA1 (patch-ad) = 05d6be6ba7bd37b4b0599092ace2d5db7825c01d
 SHA1 (patch-ae) = 5ab12f3f1f94a84acac0bc47fb4ad5a3bb75b7b6
 SHA1 (patch-af) = ba047381fcf07b3797c73199f85536b2a7efb61e
+SHA1 (patch-src_garmin__application.cpp) = 8b682f5545e67ff2906cec9fc44cbf601b0bd399

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2007/03/17 15:34:13 rillig Exp $
+$NetBSD: distinfo,v 1.5 2011/11/24 14:05:09 joerg Exp $
 
 SHA1 (gpspoint-2.030521.tar.gz) = b65466fae17e35bed019869d66515acc388b3242
 RMD160 (gpspoint-2.030521.tar.gz) = a1be4a5230488965533254a82cf0f57fe7abbfb8
@@ -9,3 +9,5 @@ SHA1 (patch-ac) = 3ecc288bf3072c65ecf40d0b34fbccade0014f9a
 SHA1 (patch-ad) = b75ea9f79ecb22ed84d75e386c58df7f8836d448
 SHA1 (patch-ae) = 36808a9b9e211adc3c4edbb8f0bf926601274b7b
 SHA1 (patch-af) = a1ccd4d1cc9e75ef457cfbe91a8bfc7e64a1409f
+SHA1 (patch-src_main.cpp) = 3dfa8a01679360c0041367c4ba95b4bab643bfe0
+SHA1 (patch-src_posixserial.cpp) = 6240b852ccbc86f9e337aefa960bb7cdb7d39176
