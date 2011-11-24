@@ -1,11 +1,12 @@
-$NetBSD: patch-ad,v 1.1 2004/02/29 11:10:36 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2011/11/24 13:32:56 joerg Exp $
 
---- src/regexx.hh.orig	2001-03-13 15:42:21.000000000 +0100
+--- src/regexx.hh.orig	2001-03-13 14:42:21.000000000 +0000
 +++ src/regexx.hh
-@@ -29,10 +29,13 @@
+@@ -29,10 +29,14 @@
  #ifndef REGEXX_HH
  #define REGEXX_HH
  
++#include <cstdlib>
 +#include <iostream>
  #include <string>
  #include <vector>
@@ -16,7 +17,7 @@ $NetBSD: patch-ad,v 1.1 2004/02/29 11:10:36 jmmv Exp $
  namespace regexx {
  
    /** Class to store atoms.
-@@ -566,7 +569,7 @@ namespace regexx {
+@@ -566,7 +570,7 @@ namespace regexx {
    }
  
    inline const std::string&
@@ -25,7 +26,7 @@ $NetBSD: patch-ad,v 1.1 2004/02/29 11:10:36 jmmv Exp $
      throw(CompileException)
    {
      exec(_flags&~nomatch);
-@@ -580,7 +583,7 @@ namespace regexx {
+@@ -580,7 +584,7 @@ namespace regexx {
    inline const std::string&
    Regexx::replacef(const std::string& _expr,
  		   std::string (*_func)(const RegexxMatch&),
@@ -34,7 +35,7 @@ $NetBSD: patch-ad,v 1.1 2004/02/29 11:10:36 jmmv Exp $
      throw(CompileException)
    {
      expr(_expr);
-@@ -590,7 +593,7 @@ namespace regexx {
+@@ -590,7 +594,7 @@ namespace regexx {
    inline const std::string&
    Regexx::replacef(const std::string& _str, const std::string& _expr,
  		   std::string (*_func)(const RegexxMatch&),
