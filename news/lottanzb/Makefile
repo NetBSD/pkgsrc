@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2011/11/01 06:02:23 sbd Exp $
+# $NetBSD: Makefile,v 1.16 2011/11/24 13:38:15 joerg Exp $
 
 DISTNAME=	lottanzb-0.4.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	news
 MASTER_SITES=	http://www.lottanzb.org/releases/
 
@@ -21,6 +21,8 @@ USE_TOOLS+=		intltool msgfmt pkg-config
 PYTHON_VERSIONS_ACCEPTED=	27 26 25
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c6:../../devel/py-setuptools
 INSTALLATION_DIRS+=	${PYSITELIB}
+
+REPLACE_PYTHON=	lottanzb/postprocessor.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
