@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3028 2011/11/24 07:43:27 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3029 2011/11/24 08:23:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4795,3 +4795,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/libplist to 1.4 [shattered 2011-11-23]
 	Updated emulators/mame to 0.144 [wiz 2011-11-24]
 	Updated emulators/mess to 0.144 [wiz 2011-11-24]
+	Updated devel/bouml to 4.22.2 [obache 2011-11-24]
