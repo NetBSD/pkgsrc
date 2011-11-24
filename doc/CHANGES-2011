@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3031 2011/11/24 14:22:37 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3032 2011/11/24 16:19:56 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4798,3 +4798,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/bouml to 4.22.2 [obache 2011-11-24]
 	Added net/ruby-soap4r version 2.0.3 [taca 2011-11-24]
 	Updated www/ruby-rack to 1.2.4 [taca 2011-11-24]
+	Updated www/p5-Catalyst-Action-REST to 0.91 [hiramatsu 2011-11-24]
+	Updated devel/p5-ExtUtils-Manifest to 1.60 [hiramatsu 2011-11-24]
+	Updated devel/p5-Rose-Object to 0.859 [hiramatsu 2011-11-24]
