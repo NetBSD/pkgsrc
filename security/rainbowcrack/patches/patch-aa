@@ -1,9 +1,12 @@
 --- src/Public.cpp.orig	2008-06-02 16:30:03 +0300
 +++ src/Public.cpp	2008-06-02 16:31:17 +0300
-@@ -16,6 +16,10 @@
+--- src/Public.cpp.orig	2011-11-24 03:07:17.000000000 +0000
++++ src/Public.cpp
+@@ -16,6 +16,11 @@
  	#include <sys/param.h>
  	#include <sys/sysctl.h>
  	#include <unistd.h>
++	#include <string.h>
 +	#ifdef __DragonFly__
 +	#include <vm/vm_param.h>
 +	#include <sys/vmmeter.h>
