@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10687 2011/11/24 07:43:27 wiz Exp $
+$NetBSD: TODO,v 1.10688 2011/11/24 08:23:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.10.0
-	o bouml-4.22.2 [pkg/45574]
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20110908
