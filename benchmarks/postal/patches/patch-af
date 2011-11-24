@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2011/11/24 01:15:41 marino Exp $
+
+--- bhm.cpp.orig	2008-05-26 09:43:52.000000000 +0000
++++ bhm.cpp
+@@ -13,6 +13,9 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
++#if defined (__NetBSD__)
++#include <netinet/in_systm.h>
++#endif
+ #include <netinet/ip.h>
+ 
+ #include "postal.h"
