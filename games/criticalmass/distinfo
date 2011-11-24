@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.9 2011/06/20 09:30:03 wiz Exp $
+$NetBSD: distinfo,v 1.10 2011/11/24 14:09:47 joerg Exp $
 
 SHA1 (CriticalMass-1.0.2.tar.bz2) = d2d1f35183e9fbed76fd8da2a948745a4c89f20b
 RMD160 (CriticalMass-1.0.2.tar.bz2) = 6c0b6988f6a52c4b19fbca2525b1daec0202693d
 Size (CriticalMass-1.0.2.tar.bz2) = 5122126 bytes
 SHA1 (patch-aa) = a5caa2facea22cd5e7d208540626ed2163d81f18
 SHA1 (patch-game_main.cpp) = 9dbf9b3de9de4ce97b0ed99ab4f4c983159124c0
+SHA1 (patch-tinyxml_tinyxml.cpp) = e25526fff0121795c1a54089b87ede52eb86f124
+SHA1 (patch-tinyxml_tinyxmlparser.cpp) = 236ff1cbd6fe83045df28022a6b02f9f65da4ee8
+SHA1 (patch-utils_ResourceManager.cpp) = a491869a5b6a99e281bb5de88c7c86ad5996fa00
+SHA1 (patch-utils_Value.hpp) = e5b6700167a6fc3dd1275cda4b17cab85d68d22d
+SHA1 (patch-utils_zStream.cpp) = b94b48862bbcfbdfbe84d7d1e6bf8133921d80aa
+SHA1 (patch-utils_zStreamBufferImplZLib.cpp) = ad7a4bc3d6a36274d2a71e0d6201b20461274b89
 SHA1 (patch-utilssdl_PNG.cpp) = bf46226338a75c50c25f273f8b6cd956eb7d656c
