@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2004/03/17 07:35:23 soren Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/24 14:17:05 joerg Exp $
 
---- gsmlib/gsm_unix_serial.cc.orig	2004-03-17 07:51:52.000000000 +0100
-+++ gsmlib/gsm_unix_serial.cc	2004-03-17 07:51:57.000000000 +0100
-@@ -26,6 +26,7 @@
+--- gsmlib/gsm_unix_serial.cc.orig	2002-09-22 11:51:10.000000000 +0000
++++ gsmlib/gsm_unix_serial.cc
+@@ -26,6 +26,8 @@
  #include <sys/ioctl.h>
  #include <signal.h>
  #include <pthread.h>
 +#include <assert.h>
++#include <string.h>
  
  using namespace std;
  using namespace gsmlib;
