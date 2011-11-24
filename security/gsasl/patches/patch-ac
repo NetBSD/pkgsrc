@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2011/11/24 09:04:18 marino Exp $
+
+--- lib/gl/gss-extra.c.orig	2010-12-14 12:57:08.000000000 +0000
++++ lib/gl/gss-extra.c
+@@ -33,16 +33,6 @@
+ /* Get malloc, free. */
+ #include <stdlib.h>
+ 
+-#ifndef HAVE_GSS_C_NT_HOSTBASED_SERVICE
+-
+-/* MIT Kerberos for Windows version 3.2.2 lacks this. */
+-static gss_OID_desc tmp = {
+-  10,
+-  (void *)"\x2a\x86\x48\x86\xf7\x12\x01\x02\x01\x04"
+-};
+-gss_OID GSS_C_NT_HOSTBASED_SERVICE = &tmp;
+-
+-#endif
+ 
+ #ifndef HAVE_GSS_OID_EQUAL
+ 
