@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2005/10/19 15:27:19 adam Exp $
+$NetBSD: patch-aa,v 1.8 2011/11/24 20:40:12 marino Exp $
 
---- makefile.orig	2005-09-13 17:26:54.000000000 +0000
+--- makefile.orig	2008-07-17 15:07:10.000000000 +0000
 +++ makefile
-@@ -69,6 +69,7 @@ all:  
+@@ -75,6 +75,7 @@ all:
  	@echo "        ->   UWIN                 (32bit)   <-"
  	@echo "        ->   Windows (95/98/NT)   (32bit)   <-"
  	@echo ""
@@ -10,3 +10,16 @@ $NetBSD: patch-aa,v 1.7 2005/10/19 15:27:19 adam Exp $
  
  clean:
  	rm -f *.o iozone fileop
+@@ -712,6 +713,12 @@ fileop_bsdi.o:	fileop.c
+ 	@echo ""
+ 	$(CC) -c -O $(CFLAGS) fileop.c -o fileop_bsdi.o
+ 
++fileop_dragonfly.o:	fileop.c
++	@echo ""
++	@echo "Building fileop for DragonFly"
++	@echo ""
++	$(CC) -c -O $(CFLAGS) fileop.c -o fileop_dragonfly.o
++
+ fileop_freebsd.o:	fileop.c
+ 	@echo ""
+ 	@echo "Building fileop for FreeBSD"
