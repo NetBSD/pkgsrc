@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2005/03/14 15:02:14 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/24 01:15:41 marino Exp $
 
---- postal.cpp.orig	Tue Jan 14 12:33:27 2003
-+++ postal.cpp	Sat Mar 12 00:24:43 2005
-@@ -11,6 +11,15 @@
- #include "postal.h"
- #include "logit.h"
+--- postal.cpp.orig	2007-01-14 04:40:23.000000000 +0000
++++ postal.cpp
+@@ -16,6 +16,15 @@
+ GCRY_THREAD_OPTION_PTHREAD_IMPL;
+ #endif
  
 +#ifdef __NetBSD__
 +# include <sys/param.h>
@@ -17,14 +17,14 @@ $NetBSD: patch-aa,v 1.1 2005/03/14 15:02:14 rillig Exp $
 +
  void usage()
  {
-   printf("Usage: postal [-m maximum-message-size] [-p processes] [-l local-address]\n"
-@@ -112,7 +121,9 @@ int main(int argc, char **argv)
-   }
+   printf("Usage: postal [-m maximum-message-size] [-M minimum-message-size] [-t threads]\n"
+@@ -152,7 +161,9 @@ int main(int argc, char **argv)
    struct sigaction sa;
+   sa.sa_sigaction = NULL;
    sa.sa_handler = SIG_IGN;
 +#ifdef HAVE_STRUCT_SIGACTION_SA_SIGACTION
-   sa.sa_sigaction = NULL;
-+#endif
    sa.sa_flags = 0;
++#endif
    if(sigaction(SIGPIPE, &sa, NULL))
    {
+     printf("Can't block SIGPIPE.\n");

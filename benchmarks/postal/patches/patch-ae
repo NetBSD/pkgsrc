@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2011/11/24 01:15:41 marino Exp $
+
+--- basictcp.h.orig	2008-05-26 09:41:40.000000000 +0000
++++ basictcp.h
+@@ -89,7 +89,11 @@ private:
+ 
+ #ifdef USE_SSL
+ #ifdef USE_OPENSSL
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+   SSL_METHOD *m_sslMeth;
++#else
++  const SSL_METHOD *m_sslMeth;
++#endif
+   SSL_CTX* m_sslCtx;
+   SSL *m_ssl;
+ #else
