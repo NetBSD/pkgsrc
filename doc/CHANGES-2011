@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3032 2011/11/24 16:19:56 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3033 2011/11/24 20:08:47 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4801,3 +4801,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-Action-REST to 0.91 [hiramatsu 2011-11-24]
 	Updated devel/p5-ExtUtils-Manifest to 1.60 [hiramatsu 2011-11-24]
 	Updated devel/p5-Rose-Object to 0.859 [hiramatsu 2011-11-24]
+	Updated x11/x3270 to 3.3.12ga7nb1 [gls 2011-11-24]
