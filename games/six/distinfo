@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.3 2007/09/27 23:09:38 rillig Exp $
+$NetBSD: distinfo,v 1.4 2011/11/24 14:07:12 joerg Exp $
 
 SHA1 (six-0.5.3.tar.gz) = 4e6281ea0bd420e941909206df381a283e77d149
 RMD160 (six-0.5.3.tar.gz) = 3894ebdabe368a918efd4359ba9e2ed7e0d32279
 Size (six-0.5.3.tar.gz) = 883013 bytes
 SHA1 (patch-batchh) = 2b46c2f8df4cdb046464bf0faf25f735df43b411
 SHA1 (patch-lssolvecpp) = 7d4e6a82104fc55294ec4538c194c9af7f5a45ce
+SHA1 (patch-six_carrier.h) = 8dec63519690149c6764744c236e8727e54909be
+SHA1 (patch-six_hexgame.cpp) = 8583f5d034ed3cce5e3ed0ef3d416564ea2611c9
+SHA1 (patch-six_main.cpp) = ce1014045ab1ddb26eb654fbf682b65b2c4f60d5
