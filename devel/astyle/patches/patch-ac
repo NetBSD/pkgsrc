@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2006/01/02 18:05:11 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2011/11/24 14:14:15 joerg Exp $
 
---- astyle_main.cpp.orig	2006-01-02 17:58:40.000000000 +0000
+--- astyle_main.cpp.orig	2001-01-20 17:02:14.000000000 +0000
 +++ astyle_main.cpp
-@@ -149,7 +149,7 @@ void error(const char *why, const char* 
+@@ -29,6 +29,8 @@
+ #include <fstream>
+ #include <string>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ 
+ #define IS_OPTION(arg,op)          ((arg).compare(op)==0)
+@@ -149,7 +151,7 @@ void error(const char *why, const char* 
      exit(1);
  }
  

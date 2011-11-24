@@ -1,9 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2006/01/02 17:20:18 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/24 14:14:58 joerg Exp $
 
---- src/connection_base.cxx.orig	2006-01-02 17:01:56.000000000 +0000
+--- src/connection_base.cxx.orig	2005-06-28 08:53:14.000000000 +0000
 +++ src/connection_base.cxx
-@@ -21,6 +21,7 @@
+@@ -19,8 +19,10 @@
+ 
+ #include <algorithm>
  #include <cstdio>
++#include <cstring>
  #include <ctime>
  #include <stdexcept>
 +#include <sys/time.h>
