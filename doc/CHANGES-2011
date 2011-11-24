@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3027 2011/11/24 07:40:12 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3028 2011/11/24 07:43:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4794,3 +4794,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Moved net/skype to net/skype1 [abs 2011-11-23]
 	Updated textproc/libplist to 1.4 [shattered 2011-11-23]
 	Updated emulators/mame to 0.144 [wiz 2011-11-24]
+	Updated emulators/mess to 0.144 [wiz 2011-11-24]
