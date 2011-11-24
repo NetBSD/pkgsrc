@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/04/15 04:04:13 reed Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/24 14:01:46 joerg Exp $
 
---- src/FileManager.cpp.orig	2008-07-08 15:06:19.000000000 -0500
-+++ src/FileManager.cpp	2008-07-08 15:06:54.000000000 -0500
-@@ -20,6 +20,8 @@
+--- src/FileManager.cpp.orig	2007-06-26 13:51:15.000000000 +0000
++++ src/FileManager.cpp
+@@ -20,6 +20,8 @@ Copyright 2006 Bartek Kostrzewa
  // gimmage: FileManager.cpp
  
  // we make extensive use of get_current_dir_name() from Glib
@@ -11,3 +11,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/04/15 04:04:13 reed Exp $
  
  #include "FileManager.h"
  #include "defines.h"
+@@ -30,6 +32,7 @@ extern "C" {
+ #include <libintl.h>
+ // #include <unistd.h>
+ #include <sys/stat.h>
++#include <string.h>
+ }
+ 
+ FileManager::FileManager() {}

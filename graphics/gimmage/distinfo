@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/15 04:04:13 reed Exp $
+$NetBSD: distinfo,v 1.2 2011/11/24 14:01:46 joerg Exp $
 
 SHA1 (gimmage-0.2.3.tar.gz) = 732dee063553b787b65a0a5bd3d207bdb5d01df1
 RMD160 (gimmage-0.2.3.tar.gz) = d3fd105390e21548cf9c83b199681b53616f3640
 Size (gimmage-0.2.3.tar.gz) = 193777 bytes
-SHA1 (patch-aa) = f8a37d59d2b9311a352dee931afe4290d1950720
+SHA1 (patch-aa) = dc247e0eeeab9a102a02a47b89197a7762072403
