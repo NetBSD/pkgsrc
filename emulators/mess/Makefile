@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/11/01 06:03:14 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/24 07:43:15 wiz Exp $
 #
 
-DISTNAME=		mess0143s
+DISTNAME=		mess0144s
 PKGNAME=		${DISTNAME:S/0/-0./:S/s$//}
-PKGREVISION=		1
 MASTER_SITES=		http://www.mess.org/_media/downloads:
 DISTFILES=		${DISTNAME:S/mess/mame/}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
