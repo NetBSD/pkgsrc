@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.3 2010/06/13 22:44:40 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/24 13:57:21 joerg Exp $
 
 Not compatible with png-1.4.
 
 --- CompareArgs.cpp.orig	2007-03-16 06:17:17.000000000 +0000
 +++ CompareArgs.cpp
-@@ -35,8 +35,6 @@ static const char *usage =
+@@ -17,6 +17,8 @@ if not, write to the Free Software Found
+ #include "CompareArgs.h"
+ #include "RGBAImage.h"
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ static const char* copyright = 
+ "PerceptualDiff version 1.0, Copyright (C) 2006 Yangli Hector Yee\n\
+@@ -35,8 +37,6 @@ static const char *usage =
  \t-gamma g       : Value to convert rgb into linear space (default 2.2)\n\
  \t-luminance l   : White luminance (default 100.0 cdm^-2)\n\
  \t-output o.ppm  : Write difference to the file o.ppm\n\
@@ -13,7 +22,7 @@ Not compatible with png-1.4.
  \n";
  
  CompareArgs::CompareArgs()
-@@ -69,26 +67,18 @@ bool CompareArgs::Parse_Args(int argc, c
+@@ -69,26 +69,18 @@ bool CompareArgs::Parse_Args(int argc, c
  		if (i == 1) {
  			ImgA = RGBAImage::ReadTiff(argv[1]);
  			if (!ImgA) {
