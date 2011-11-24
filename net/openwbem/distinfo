@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2010/02/11 22:46:18 joerg Exp $
+$NetBSD: distinfo,v 1.4 2011/11/24 13:40:05 joerg Exp $
 
 SHA1 (openwbem-3.2.2.tar.gz) = 3272e5cbcfb2a864cccf71e15e0da0f6623420bb
 RMD160 (openwbem-3.2.2.tar.gz) = 31ce8c80d47ff7539315e3978b8c1c493bd17f35
@@ -8,3 +8,8 @@ SHA1 (patch-ab) = c83f632376f12d7378b1f013a0db5d4ae63f15bf
 SHA1 (patch-ac) = ea2f928b13eaef464e133b0e510fa4b8cfee95b9
 SHA1 (patch-ad) = e8b7c3a3b7fbab6052a9e866c8a1c9f1653db590
 SHA1 (patch-ae) = a9d923bdf6e52acff83588605f2913b196c92038
+SHA1 (patch-src_cim_OW__CIMDateTime.cpp) = 186db29470cbe526c4e18aca13604ab578b3bad3
+SHA1 (patch-src_common_OW__LogMessagePatternFormatter.cpp) = 8566874493e1c5def31dd0e27d42b65c6f3f3ff8
+SHA1 (patch-src_common_OW__PosixFile.cpp) = 865435218984a3106229cb74e72af1d6b29625db
+SHA1 (patch-src_common_OW__StackTrace.cpp) = 14e3dbdaea069c5ae47d9e06f7e337dd74110b88
+SHA1 (patch-src_common_socket_OW__SocketAddress.cpp) = 64af2ecb1f5164bacef823d5769a52c513470db1
