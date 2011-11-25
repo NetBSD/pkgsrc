@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/20 06:25:17 agc Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/25 21:39:07 joerg Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 CATEGORIES=	devel
@@ -14,6 +14,8 @@ CONFLICTS=	libelf-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 USE_BSD_MAKEFILE=	yes
 MAKE_ENV+=		${BSD_MAKE_ENV}
