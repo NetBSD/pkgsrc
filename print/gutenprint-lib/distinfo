@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/05/05 23:39:24 gdt Exp $
+$NetBSD: distinfo,v 1.11 2011/11/25 22:17:07 joerg Exp $
 
 SHA1 (gutenprint-5.2.7.tar.bz2) = e49c259607dc6372d4f6316a26fb146715c437c8
 RMD160 (gutenprint-5.2.7.tar.bz2) = 63c6dbc136ac7095c06accf48979a379a923b7de
 Size (gutenprint-5.2.7.tar.bz2) = 5498414 bytes
 SHA1 (patch-aa) = 42ed47e6f577b6bf562d05f9685f8ff77dc45f88
+SHA1 (patch-src_cups_commandtocanon.c) = 3c71c0dff780dabbf50d818478f51df0fe069a5a
+SHA1 (patch-src_cups_commandtoepson.c) = fa07ef366537ae2f39b3327e0a9bab309c44e52d
