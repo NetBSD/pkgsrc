@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2008/06/20 01:09:19 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/11/25 21:51:13 joerg Exp $
 
 SHA1 (BillardGL-1.75.tar.gz) = b1e3c044a500cf1331ae392c861f8d8402f1806e
 RMD160 (BillardGL-1.75.tar.gz) = 11586d3c887367e3137e2d498e9ff729156cf233
 Size (BillardGL-1.75.tar.gz) = 736295 bytes
 SHA1 (patch-aa) = 91430100e61cbb2ab0e3f61510397575b1aa393c
 SHA1 (patch-ab) = 14f29c68ab5f365fa14218af41e651e19c23b273
+SHA1 (patch-src_bmp.cpp) = 0d165eee15ca59256b5b86062a57fba791ff8ccb
