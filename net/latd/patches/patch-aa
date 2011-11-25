@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2003/10/21 20:55:42 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/25 22:14:17 joerg Exp $
 
---- clientsession.cc.orig	2003-10-20 19:12:16.000000000 +0200
-+++ clientsession.cc	2003-10-20 19:12:36.000000000 +0200
-@@ -23,6 +23,7 @@
+--- clientsession.cc.orig	2003-04-04 11:48:32.000000000 +0000
++++ clientsession.cc
+@@ -23,6 +23,8 @@
  #include <string>
  #include <map>
  #include <strstream>
 +#include <assert.h>
++#include <cstring>
  
  #include "lat.h"
  #include "utils.h"
