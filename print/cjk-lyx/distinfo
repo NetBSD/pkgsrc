@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2007/10/13 18:12:40 rillig Exp $
+$NetBSD: distinfo,v 1.9 2011/11/25 22:16:26 joerg Exp $
 
 SHA1 (lyx-1.2.0.tar.gz) = 56db850f316c18e00c4b10946216b6eb25107dab
 RMD160 (lyx-1.2.0.tar.gz) = e21eeb53517bf994938f2d89e7be585da9ff8cd3
@@ -21,3 +21,9 @@ SHA1 (patch-al) = a441f0925619fcc674d83c24e90d041047a71ad7
 SHA1 (patch-am) = 88120d6a4705f9bcdac2e675dd74b83c9e270082
 SHA1 (patch-an) = b39ef6b367a1e47e072d48181aa29a0b8cbcec13
 SHA1 (patch-ao) = 663016706d09b7ac8d34efab2c71d4c46e2757cd
+SHA1 (patch-src_frontends_controllers_helper__funcs.h) = 03b1f40d5ad9c686dd58b2170aa50bc18a7dedae
+SHA1 (patch-src_frontends_xforms_FormMathsMatrix.C) = 63e1003ebc15be07556ff2f0fcc6aa26ee207fd6
+SHA1 (patch-src_mathed_math__xdata.C) = e0d51e11a5fa2c2a29e5ce95ed0b4dd11abd5c0a
+SHA1 (patch-src_support_LSubstring.C) = 51d8d547681c26fbee6f6f04a10e4b4ff8864417
+SHA1 (patch-src_support_forkedcontr.C) = d2068c100e7e068fc21f51a4789beb735cf2332b
+SHA1 (patch-src_support_lstrings.h) = 846087a2c5e6759ee3086d295ba3bb93e56df3ad
