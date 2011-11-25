@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/11/11 08:29:06 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/25 13:30:12 joerg Exp $
 
 DISTNAME=	se
 PKGNAME=	SmartEiffel-2.0
@@ -11,7 +11,8 @@ HOMEPAGE=	http://smarteiffel.loria.fr/
 COMMENT=	The GNU Eiffel Compiler
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-NOT_FOR_BULK_PLATFORM=	Linux-*-*
+
+BROKEN=		Infinite loop in the installer
 
 WRKSRC=		${WRKDIR}/SmartEiffel
 USE_TOOLS+=	pax
