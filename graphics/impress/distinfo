@@ -1,9 +1,18 @@
-$NetBSD: distinfo,v 1.6 2007/08/08 19:41:49 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/11/25 21:57:36 joerg Exp $
 
 SHA1 (imp1.1b9.tar.gz) = 73d3ce69d2d31af0b8e6bfb3825ebcd2f519024c
 RMD160 (imp1.1b9.tar.gz) = 2f0d49d90baa1c92edf564bf163147679c4cbaf4
 Size (imp1.1b9.tar.gz) = 1334533 bytes
 SHA1 (patch-aa) = a872102d3b3205b6e8e4d44839b150e94aa6fd8a
 SHA1 (patch-ab) = f6e71dbd213cfdc447535bc25325c9417a99c498
-SHA1 (patch-ac) = bedff4ed0d84f482fe765b775a2c2ac58eacdba3
-SHA1 (patch-ad) = e929f3994e292d508a665d3c25d34b4f21c5fd60
+SHA1 (patch-ac) = ea5784b8da9276076aa76f98bc61445d70fafb54
+SHA1 (patch-ad) = c9c1e3533423efa3484543ca16aca80362134373
+SHA1 (patch-font3d_build.h) = b0ea326fad30e5b96eb2b9e0d376969cec5de90f
+SHA1 (patch-font3d_font3d.cc) = 99b0a41b0347e3ed94ecdcc3519c987ff8d5ea6a
+SHA1 (patch-font3d_font3d.h) = 42f74e7bb4c67de08f67b3f8bd37a732f23f7ad4
+SHA1 (patch-font3d_geometry.cc) = a4449a16aa3f4175c0460aedde60c152458c264b
+SHA1 (patch-font3d_geometry.h) = 09d0c66e0e568fc4f33d37c54d30cdc376e7acb5
+SHA1 (patch-font3d_vector.h) = 2be02ddcf448a6a5fcad69a3a7d70c5da629fc6d
+SHA1 (patch-pstoedit__3.21_src_drvtk.cpp) = 7d6b3ffea8fab4bc35a8561f42545d944669a3a1
+SHA1 (patch-pstoedit__3.21_src_drvtk.h) = 39395b97d9ced63930732ae6912692d1243a34b9
+SHA1 (patch-src_drvtk.cpp) = 24bc80930f3870930ff06ffbed68eaab086faa9b
