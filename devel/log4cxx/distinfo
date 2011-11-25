@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/31 17:27:43 reed Exp $
+$NetBSD: distinfo,v 1.2 2011/11/25 21:45:51 joerg Exp $
 
 SHA1 (apache-log4cxx-0.10.0.tar.gz) = d79c053e8ac90f66c5e873b712bb359fd42b648d
 RMD160 (apache-log4cxx-0.10.0.tar.gz) = 6df384e5c746c3c6903efae6c9f0d64e4f07a5ad
 Size (apache-log4cxx-0.10.0.tar.gz) = 1667425 bytes
+SHA1 (patch-src_examples_cpp_console.cpp) = 203b987f6a324c906c9ca5a19113190bdb3bfb79
+SHA1 (patch-src_main_cpp_inputstreamreader.cpp) = a4540a7154a11d12928829eac76c44fbcabc41bb
+SHA1 (patch-src_main_cpp_socketoutputstream.cpp) = ebfd51ed3cb86f2995571ba70a82fba5c2ddb7ce
