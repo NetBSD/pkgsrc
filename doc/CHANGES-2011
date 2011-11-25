@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3035 2011/11/25 08:16:58 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3036 2011/11/25 09:28:10 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4811,3 +4811,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-HTML-TreeBuilder-LibXML to 0.13 [hiramatsu 2011-11-25]
 	Updated devel/p5-Regexp-Assemble to 0.35 [hiramatsu 2011-11-25]
 	Updated devel/p5-Regexp-Parser to 0.21 [hiramatsu 2011-11-25]
+	Updated devel/py-subvertpy to 0.8.9 [cheusov 2011-11-25]
