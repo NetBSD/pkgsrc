@@ -1,8 +1,29 @@
-$NetBSD: patch-ad,v 1.1 2003/10/21 20:55:42 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2011/11/25 22:14:17 joerg Exp $
 
---- latcp.cc.orig	2003-10-20 19:32:10.000000000 +0200
-+++ latcp.cc	2003-10-20 19:32:39.000000000 +0200
-@@ -773,10 +773,10 @@
+--- latcp.cc.orig	2003-04-08 13:08:34.000000000 +0000
++++ latcp.cc
+@@ -44,9 +44,10 @@
+ #include <queue>
+ #include <map>
+ #include <string>
+-#include <algo.h>
++#include <algorithm>
+ #include <iterator>
+ #include <string>
++#include <iostream>
+ #include <strstream>
+ 
+ #include "lat.h"
+@@ -54,6 +55,8 @@
+ #include "utils.h"
+ #include "dn_endian.h"
+ 
++using std::cout;
++
+ static int latcp_socket;
+ 
+ static void make_upper(char *str);
+@@ -773,10 +776,10 @@ void start_latd(int argc, char *argv[])
  	latd_bin = "/usr/sbin/latd";
  	latd_path = "/usr/sbin";
      }
