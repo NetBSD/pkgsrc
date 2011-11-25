@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.3 2007/10/10 22:17:32 rillig Exp $
+$NetBSD: distinfo,v 1.4 2011/11/25 21:56:46 joerg Exp $
 
 SHA1 (f4l-0.2.1.tar.bz2) = cae8077e5c6a87a406c78b615fdb69e78a30d330
 RMD160 (f4l-0.2.1.tar.bz2) = 318a6c222466637b6f8d7fe955caacb0d1ee35f5
 Size (f4l-0.2.1.tar.bz2) = 1502767 bytes
 SHA1 (patch-aa) = da7d819893dbbb48ffdb45f14fc72573a59c99bb
 SHA1 (patch-ab) = 443ac912b4563cd36d30542d502f4c4a63e68c40
+SHA1 (patch-src_f4lmdoc.cpp) = abcd735a46aad8e947bba08c525eb065efef1007
+SHA1 (patch-src_flagStonePort_transform-cxx-bsd_transform_FSVector.h) = 3d1973ec3e709cc92eaf325946368bdd92c51a06
