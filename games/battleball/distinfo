@@ -1,14 +1,26 @@
-$NetBSD: distinfo,v 1.6 2008/06/21 18:12:42 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/11/25 21:50:31 joerg Exp $
 
 SHA1 (battleball.21.src.tar.gz) = 5bc651d513d378d449c117488ef54af5f3381072
 RMD160 (battleball.21.src.tar.gz) = 8bc3ad8767c274135bc3f9d8bf95d8b6518c3542
 Size (battleball.21.src.tar.gz) = 102001 bytes
-SHA1 (patch-aa) = 96728a9548fb46fcc84e75ed57a074613a1e81d2
+SHA1 (patch-aa) = 2edf7330113a768c210b78f88a17a1bc25b9d189
 SHA1 (patch-ab) = 477a8860a8f65a10b163846f184c39e7916712ff
 SHA1 (patch-ac) = 2c192f32eb0d732ad88d934e68321ee21a90ae4f
-SHA1 (patch-ad) = 6257ea75af46d4ff29e9c4f1532470c3808c78fa
+SHA1 (patch-ad) = 687db97474d6aa4be7fb031221b83156adb5f36b
 SHA1 (patch-ae) = b0e027ab0a08b334f3a099af43ceca0b2cb06600
 SHA1 (patch-af) = 4df474c2c33c6585c66b0fac818fbfa07f425e96
 SHA1 (patch-ag) = 49db8de772d6540459b7681d0976a1ba2d0ca48a
-SHA1 (patch-ah) = cc38a241b74f32fbc04e79faedd0f9a9bf023418
+SHA1 (patch-ah) = 9d65a69ce553dbb4f749e68b19f63ed8822c4afb
 SHA1 (patch-ai) = 6a281ab5775b768df0554600c0329f7b24564c45
+SHA1 (patch-bb_bbgfxtarget.C) = 2e70faa565da1766abeb1f0dcce6458067c90816
+SHA1 (patch-bb_gob.h) = 978fe42cc2e5f174d3a0820aaaf3f7fb3216e8e6
+SHA1 (patch-bb_player.C) = 5772874c77a94e0ceb5eab39e6d3a64c2756ae32
+SHA1 (patch-lib3d_ang3d.h) = 79ad88d4d7d7b9125ca7fd9de812f7fdaf708212
+SHA1 (patch-lib3d_dimension.C) = a1c91280a35322ebc27cdf55f244da2a1d21bf3b
+SHA1 (patch-lib3d_dimentable.h) = 7687d43c782acf83ee263b2c9252372a96d2876c
+SHA1 (patch-lib3d_fastpts.h) = 4aa042b1d97ecc3a62964c94a829494b702948ec
+SHA1 (patch-lib3d_pt2d.h) = ff4fd959650125a9d12d627db0823f95a3a91ceb
+SHA1 (patch-lib3d_pt3d.h) = d4e82dfa78de4bd088f3a7864c056fd73dc72228
+SHA1 (patch-lib3d_region3d.C) = bd6cd34c8e586bdd2f7d215607991da8ec7b87bc
+SHA1 (patch-lib3d_region3d.h) = 7b9d5f59082765a6421e29e4bca0e6b214f26c0b
+SHA1 (patch-lib3d_xform.C) = e41040bdb52cbdb33781828215decd3883abb382
