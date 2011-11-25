@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2008/07/27 17:16:37 joerg Exp $
+$NetBSD: distinfo,v 1.12 2011/11/25 22:15:18 joerg Exp $
 
 SHA1 (LPRng-3.8.28.tgz) = f4373004adb1439819600701bb98517137daf1fc
 RMD160 (LPRng-3.8.28.tgz) = f0460d7fa7d1ea0ce6b49fcb656905fdda3d0d41
@@ -13,3 +13,5 @@ SHA1 (patch-ag) = bc84154636da3b331076b1051c1e70a9f65c858b
 SHA1 (patch-ah) = 3c1b75ed1db210cd3d9033f59ecb43176b158a39
 SHA1 (patch-ai) = 5b5f91911970f7033e22b67e0a5775102de9e313
 SHA1 (patch-aj) = d0e6974244893a1519a4da570a6dd6a10174379f
+SHA1 (patch-src_common_lpbanner.c) = 0e745092cf4222a3b2bf2e13f495fd4c7711bb2e
+SHA1 (patch-src_common_plp__snprintf.c) = 83d6c12818fafae53fda4b34c7ba5364166c6303
