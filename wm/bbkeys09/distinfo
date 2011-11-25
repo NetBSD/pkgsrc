@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.1 2006/08/20 23:07:18 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2011/11/25 22:21:27 joerg Exp $
 
 SHA1 (bbkeys-0.9.0.tar.gz) = b406f47f298fe83df6be89d2437dae2cee007439
 RMD160 (bbkeys-0.9.0.tar.gz) = a42506693da977bed17d56ee0c1e5d0440464ac6
 Size (bbkeys-0.9.0.tar.gz) = 199146 bytes
 SHA1 (patch-aa) = b0c79c06d3e7897a63c43ee09ccbf7e05eedffe8
+SHA1 (patch-src_Config.cpp) = 4f4a575931dc1b0c9f5d871f5d42e75d868bdfa4
+SHA1 (patch-src_KeyClient.cpp) = b4fc5930eb0f5ad0821aac73c5806b11f0f4a12e
+SHA1 (patch-src_Netclient.cpp) = e40c8ea01b551f8713e22142309a3e8a40097380
+SHA1 (patch-src_actions.cc) = 0af59ca4be45cb5020da71837a794d2f34a6df24
+SHA1 (patch-src_main.cpp) = 3a54f4f8c2d0731619b7306573d31e3369a524c5
