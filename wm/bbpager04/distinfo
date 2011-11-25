@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1 2006/08/20 23:07:18 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2011/11/25 22:22:05 joerg Exp $
 
 SHA1 (bbpager-0.4.1beta1.tar.gz) = 272b826c3fce722c7334b5b6f32a37c0d82529e2
 RMD160 (bbpager-0.4.1beta1.tar.gz) = 3ee093f21ed45028caff3ffa06c759babd44e0c9
 Size (bbpager-0.4.1beta1.tar.gz) = 163099 bytes
 SHA1 (patch-aa) = b82d730bb85d59df9cfc916865935b6f13988bc4
 SHA1 (patch-ab) = 0086f41b642bc8770d19995302701748823386c3
+SHA1 (patch-src_Baseresource.cxx) = 7006a4d1a6fd703b13a4171701b2d2e69200a5dd
+SHA1 (patch-src_main.cxx) = c0f7db4d3e6ccff5fd39ac15ece795cc30d6648d
+SHA1 (patch-src_resource.cxx) = 219d895eb25b92aa2902ef763039a9d4e6fe873b
