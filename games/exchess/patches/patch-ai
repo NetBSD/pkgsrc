@@ -1,8 +1,17 @@
-$NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
+$NetBSD: patch-ai,v 1.2 2011/11/25 21:52:33 joerg Exp $
 
---- exmove.cpp.orig	Sat Feb 14 04:16:56 2004
-+++ exmove.cpp	Sat Feb 14 04:19:15 2004
-@@ -52,8 +52,8 @@
+--- exmove.cpp.orig	2000-04-01 07:46:42.000000000 +0000
++++ exmove.cpp
+@@ -8,7 +8,7 @@
+ #include "const.h"
+ #include "funct.h"
+ #include "hash.h"
+-#include "iostream.h"
++#include <iostream>
+ 
+ /* Hash code variables */
+ extern hash_rec *hash_table;    // pointer to hash_table
+@@ -52,8 +52,8 @@ int exec_move(position *p, move emove, i
                  { return 0; }
                p->sq[5] = p->sq[7];
                p->sq[7] = empty;
@@ -13,7 +22,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
                p->has_castled[1] = 1;
                /* update piece list */ 
                for(pi=1;pi<=p->plist[p->wtm][ROOK][0];pi++)
-@@ -69,8 +69,8 @@
+@@ -69,8 +69,8 @@ int exec_move(position *p, move emove, i
                  { return 0; }
                p->sq[3] = p->sq[0];
                p->sq[0] = empty;
@@ -24,7 +33,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
                p->has_castled[1] = 1;
                /* update piece list */
                for(pi=1;pi<=p->plist[p->wtm][ROOK][0];pi++)
-@@ -86,8 +86,8 @@
+@@ -86,8 +86,8 @@ int exec_move(position *p, move emove, i
                  { return 0; }
                p->sq[61] = p->sq[63];
                p->sq[63] = empty;
@@ -35,7 +44,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
                p->has_castled[0] = 1;
                /* update piece list */
                for(pi=1;pi<=p->plist[p->wtm][ROOK][0];pi++)
-@@ -103,8 +103,8 @@
+@@ -103,8 +103,8 @@ int exec_move(position *p, move emove, i
                  { return 0; }
                p->sq[59] = p->sq[56];
                p->sq[56] = empty;
@@ -46,7 +55,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
                p->has_castled[0] = 1;
                /* update piece list */
                for(pi=1;pi<=p->plist[p->wtm][ROOK][0];pi++)
-@@ -125,7 +125,7 @@
+@@ -125,7 +125,7 @@ int exec_move(position *p, move emove, i
  
    if(p->sq[emove.b.to].type) {
     // Remove hashcode for the target square 
@@ -55,7 +64,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
     // Remove piece from piece list
     for(pi=1;pi<=p->plist[p->wtm^1][p->sq[emove.b.to].type][0];pi++)
      if(p->plist[p->wtm^1][p->sq[emove.b.to].type][pi] == emove.b.to) {
-@@ -143,8 +143,8 @@
+@@ -143,8 +143,8 @@ int exec_move(position *p, move emove, i
    // Move the new piece to the target square
    p->sq[emove.b.to] = p->sq[emove.b.from];
    // Update the hash code to reflect the move
@@ -66,7 +75,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
    // Original square is now empty
    p->sq[emove.b.from] = empty;
  
-@@ -152,7 +152,7 @@
+@@ -152,7 +152,7 @@ int exec_move(position *p, move emove, i
    if(emove.b.type&EP) {
      if(p->wtm) {
        p->sq[emove.b.to-8] = empty;
@@ -75,7 +84,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
        // Update piece lists 
        for(pi=1;pi<=p->plist[p->wtm^1][PAWN][0];pi++)
          if(p->plist[BLACK][PAWN][pi] == emove.b.to-8) {
-@@ -163,7 +163,7 @@
+@@ -163,7 +163,7 @@ int exec_move(position *p, move emove, i
          }
      } else {
        p->sq[emove.b.to+8] = empty;
@@ -84,7 +93,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
        // Update piece lists
        for(pi=1;pi<=p->plist[p->wtm^1][PAWN][0];pi++)
         if(p->plist[WHITE][PAWN][pi] == emove.b.to+8) {
-@@ -189,7 +189,7 @@
+@@ -189,7 +189,7 @@ int exec_move(position *p, move emove, i
    // if the move is a promotion, promote it
    if(emove.b.type&PROMOTE) {
      // Remove the pawn from the hash code
@@ -93,7 +102,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
      // Change the piece type to the promoted piece
      p->sq[emove.b.to].type = emove.b.promote;
      // Add the new piece to the piece lists
-@@ -206,7 +206,7 @@
+@@ -206,7 +206,7 @@ int exec_move(position *p, move emove, i
      // adjust material score
      p->material += value[emove.b.promote] - value[PAWN];
      // add piece to hash code 
@@ -102,7 +111,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
      // adjust total piece count
      p->pieces[p->wtm]++;
    }
-@@ -214,11 +214,11 @@
+@@ -214,11 +214,11 @@ int exec_move(position *p, move emove, i
    // update position characteristics
    p->wtm = p->wtm^1;
    p->material = -p->material;
@@ -117,7 +126,7 @@ $NetBSD: patch-ai,v 1.1 2004/02/14 04:31:56 kristerw Exp $
  
    // if move is a pawn push 2 spaces, set en passant flag
    if((emove.b.type&PAWN_PUSH2) && 
-@@ -235,8 +235,8 @@
+@@ -235,8 +235,8 @@ int exec_move(position *p, move emove, i
    p->last = emove;
  
    // update hash code for en-passant and castling status

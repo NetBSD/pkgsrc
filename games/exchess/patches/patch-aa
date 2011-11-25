@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/25 08:40:00 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/25 21:52:33 joerg Exp $
 
---- book.cpp.orig	Sun Apr 30 09:56:26 2000
+--- book.cpp.orig	2000-04-30 09:56:26.000000000 +0000
 +++ book.cpp
-@@ -52,7 +52,7 @@
+@@ -12,12 +12,14 @@
+ #include "const.h"
+ #include <stdio.h>
+ #include <string.h>
+-#include <iostream.h>
+-#include <iomanip.h>
+-#include <fstream.h>
++#include <iostream>
++#include <iomanip>
++#include <fstream>
+ #include <math.h>
+ #include <time.h>
+ 
++using namespace std;
++
+ /* variables for book learning */
+ book_rec learn_book[100];          // book learning array
+ int learn_count = 0;               // number of book moves played
+@@ -52,7 +54,7 @@ void build_book(position ipos)
    char outbook[100];
    position temp_pos;                 // temporary position
    move bmove;                        // book move under consideration
@@ -11,7 +29,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/10/25 08:40:00 jlam Exp $
    int i = -1, j = 0, k = 0, p;       // loop variables
    int count = 0, thresh, LINE_DEPTH; // control variables
  
-@@ -245,7 +245,7 @@
+@@ -245,7 +247,7 @@ int find_record(position p, move m, int 
  {
    file_pos = 0;
    int jump = int(file_size/2);
