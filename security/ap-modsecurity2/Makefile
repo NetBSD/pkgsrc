@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/04/22 14:40:45 obache Exp $
+# $NetBSD: Makefile,v 1.19 2011/11/25 22:18:11 joerg Exp $
 
 DISTNAME=	modsecurity-apache_2.5.13
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
@@ -14,7 +14,7 @@ COMMENT=	Intrusion detection and prevention engine for web applications
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 APACHE_MODULE=		yes
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache22
 USE_APR=		yes
 USE_LANGUAGES=		c++ c
 
