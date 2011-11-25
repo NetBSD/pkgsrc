@@ -1,8 +1,27 @@
-$NetBSD: patch-ad,v 1.2 2004/02/14 04:31:56 kristerw Exp $
+$NetBSD: patch-ad,v 1.3 2011/11/25 21:52:33 joerg Exp $
 
---- main.cpp.orig	2000-04-01 07:46:20.000000000 +0200
-+++ main.cpp	2004-02-14 04:58:19.000000000 +0100
-@@ -17,6 +17,7 @@
+--- main.cpp.orig	2000-04-01 07:46:20.000000000 +0000
++++ main.cpp
+@@ -3,20 +3,23 @@
+ 
+ /*  Main functions controlling program */
+ 
+-#include <iostream.h>
+-#include <iomanip.h>
++#include <iostream>
++#include <iomanip>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <math.h>
+ #include <stdio.h>
+ #include <signal.h>
+-#include <fstream.h>
++#include <fstream>
+ 
+ #include "define.h"
+ 
++using namespace std;
++
  #if UNIX
   #include <sys/types.h>
   #include <sys/time.h>
@@ -10,7 +29,7 @@ $NetBSD: patch-ad,v 1.2 2004/02/14 04:31:56 kristerw Exp $
  #else
   #include <windows.h>
   #include <time.h>
-@@ -56,7 +57,7 @@
+@@ -56,7 +59,7 @@ position reset_pos;
  extern int ponder, last_ponder, learn_count, learned;
  extern unsigned long TAB_SIZE, PAWN_SIZE;
  
@@ -19,7 +38,7 @@ $NetBSD: patch-ad,v 1.2 2004/02/14 04:31:56 kristerw Exp $
  char exec_path[100];
  
  // performance function
-@@ -93,16 +94,7 @@
+@@ -93,16 +96,7 @@ int main(int argc, char *argv[])
    learn_count = 0; learned = 0; learn_bk = 1; shout_book = 0;
  
  
@@ -37,7 +56,7 @@ $NetBSD: patch-ad,v 1.2 2004/02/14 04:31:56 kristerw Exp $
  
   /* initializing hash tables, check tables, scoring parameters,
      and the random number seed and tablebases */
-@@ -117,7 +109,7 @@
+@@ -117,7 +111,7 @@ int main(int argc, char *argv[])
       if(li < 10) sprintf(lfile, "run_log.00%i", li);
       else if(li < 100) sprintf(lfile, "run_log.0%i", li);
       else sprintf(lfile, "run_log.%i", li);
