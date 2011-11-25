@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2006/01/02 21:40:00 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/25 22:20:59 joerg Exp $
 
---- windowmanager.cc.orig	2006-01-02 21:33:19.000000000 +0000
+--- windowmanager.cc.orig	2003-05-15 01:44:12.000000000 +0000
 +++ windowmanager.cc
-@@ -625,7 +625,7 @@ void WindowManager::handleKeyPressEvent(
+@@ -6,6 +6,7 @@
+  */
+  
+ #include "aewm.hh"
++#include <cstring>
+ 
+ WindowManager* wm;
+ 
+@@ -625,7 +626,7 @@ void WindowManager::handleKeyPressEvent(
   	{
                  if( (unsigned)current_desktop != ks - XK_1 )
  		{
