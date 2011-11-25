@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/21 21:27:37 sno Exp $
+$NetBSD: distinfo,v 1.3 2011/11/25 08:14:54 hiramatsu Exp $
 
-SHA1 (HTML-TreeBuilder-LibXML-0.12.tar.gz) = 67b8af92ef4933623e17f428a00dfe99331b577a
-RMD160 (HTML-TreeBuilder-LibXML-0.12.tar.gz) = c440ca1dad3d96baefdbd11a541a96817447d7d3
-Size (HTML-TreeBuilder-LibXML-0.12.tar.gz) = 24471 bytes
+SHA1 (HTML-TreeBuilder-LibXML-0.13.tar.gz) = 79c87415ef5cbb63e32a5bd538d009776752f84d
+RMD160 (HTML-TreeBuilder-LibXML-0.13.tar.gz) = a6419cb1fcf62f31fe7bccffcbb89a79ce87f31f
+Size (HTML-TreeBuilder-LibXML-0.13.tar.gz) = 24825 bytes
