@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3036 2011/11/25 09:28:10 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.3037 2011/11/25 11:46:00 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4812,3 +4812,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Regexp-Assemble to 0.35 [hiramatsu 2011-11-25]
 	Updated devel/p5-Regexp-Parser to 0.21 [hiramatsu 2011-11-25]
 	Updated devel/py-subvertpy to 0.8.9 [cheusov 2011-11-25]
+	Updated devel/p5-Path-Class to 0.24 [hiramatsu 2011-11-25]
+	Updated devel/p5-Path-Class-File-Stat to 0.03 [hiramatsu 2011-11-25]
+	Updated www/p5-HTTP-OAI to 3.27 [hiramatsu 2011-11-25]
+	Updated devel/p5-Test-Differences to 0.610 [hiramatsu 2011-11-25]
