@@ -1,8 +1,17 @@
-$NetBSD: patch-ag,v 1.1 2007/01/27 10:33:25 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2011/11/25 22:14:17 joerg Exp $
 
 --- services.h.orig	2002-10-14 14:33:46.000000000 +0000
 +++ services.h
-@@ -71,7 +71,7 @@ class LATServices
+@@ -12,6 +12,8 @@
+     GNU General Public License for more details.
+ ******************************************************************************/
+ 
++#include <cstring>
++
+ class LATServices
+ {
+  public:
+@@ -71,7 +73,7 @@ class LATServices
        const std::string get_ident() { return ident; }
        bool         is_available();
        bool         remove_node(const std::string &node);
