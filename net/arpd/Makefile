@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2011/11/25 22:10:48 joerg Exp $
 #
 
 DISTNAME=	arpd
@@ -18,6 +18,13 @@ MAKE_ENV+=	BINDIR=${PREFIX}/sbin
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
 
 INSTALLATION_DIRS=	sbin share/doc ${PREFIX}/etc
+
+.include "../../mk/bsd.prefs.mk"
+
+# Bogus warning from GCC 4.5
+.if ${OPSYS} == "NetBSD"
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.endif
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/arpd.README
