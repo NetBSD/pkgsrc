@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2011/03/16 11:40:27 obache Exp $
+$NetBSD: distinfo,v 1.7 2011/11/25 21:54:14 joerg Exp $
 
 SHA1 (ivan-0.50.tar.gz) = e4c5ae2b9bdfd59a0ed3c87a504043df12b0f1a4
 RMD160 (ivan-0.50.tar.gz) = 7e84340cd8fdfbdaaf7fde730fc0a76b137e2e91
 Size (ivan-0.50.tar.gz) = 803651 bytes
+SHA1 (patch-FeLib_Source_festring.cpp) = f45e5a3228f168888ecb5f645f463a2b8a3d903a
+SHA1 (patch-FeLib_Source_fetime.cpp) = f941686fedd9603f1d89c0edb205caceef4b27ba
 SHA1 (patch-aa) = a52f3945a79e12cc72d30d9609c4bf390809a5bd
 SHA1 (patch-ab) = 63f215564ee0922d1daa5240b5a3b3b4afc5db24
 SHA1 (patch-ac) = 42150fb33cbc0136bd702ab5cb26dcbc9d7c717c
