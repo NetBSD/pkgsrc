@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/20 01:26:58 marino Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/25 22:45:00 joerg Exp $
 #
 
 DISTNAME=	adplug-2.1
@@ -20,18 +20,6 @@ USE_LANGUAGES=	c c++
 INFO_FILES=	yes
 
 PKGCONFIG_OVERRIDE+=	adplug.pc.in
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
-USE_TOOLS+=	perl
-.endif
-
-post-extract:
-.if ${OPSYS} == "DragonFly"
-	perl -i -pe "s/<string>/<strings.h>/" ${WRKSRC}/src/rol.h
-	perl -i -pe "s/<string>/<string.h>/"  ${WRKSRC}/src/player.h
-.endif
 
 .include "../../devel/libbinio/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
