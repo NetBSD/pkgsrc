@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/11/18 15:02:50 he Exp $
+$NetBSD: distinfo,v 1.3 2011/11/25 05:52:39 hiramatsu Exp $
 
-SHA1 (Net-Z3950-ZOOM-1.25.tar.gz) = b553f6018b0c117e9f59fe882e379d57f60e7ee0
-RMD160 (Net-Z3950-ZOOM-1.25.tar.gz) = 05c82d52c1a6d61a1f7a4cd29a38fc4b4392177b
-Size (Net-Z3950-ZOOM-1.25.tar.gz) = 67810 bytes
+SHA1 (Net-Z3950-ZOOM-1.28.tar.gz) = c0a1c22cfcaefe6b8a64a67ead0a920da5866f5c
+RMD160 (Net-Z3950-ZOOM-1.28.tar.gz) = cc3afd8c5495e962544f91437038e80f1dd4d9a9
+Size (Net-Z3950-ZOOM-1.28.tar.gz) = 66800 bytes
