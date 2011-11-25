@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/11/01 06:02:42 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2011/11/25 22:23:52 joerg Exp $
 #
 
 DISTNAME=		jwm-2.0.1
@@ -14,11 +14,13 @@ COMMENT=		Lightweight window manager with virtual desktops
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=		pkg-config
+
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+.if ${X11_TYPE} != "native" || exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 CONFIGURE_ARGS+=	--enable-xinerama
 # XXX maybe set some build variable about that
 .endif
