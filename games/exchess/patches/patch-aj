@@ -1,8 +1,29 @@
-$NetBSD: patch-aj,v 1.1 2004/02/14 04:31:56 kristerw Exp $
+$NetBSD: patch-aj,v 1.2 2011/11/25 21:52:33 joerg Exp $
 
---- search.cpp.orig	Sat Feb 14 04:30:46 2004
-+++ search.cpp	Sat Feb 14 04:32:41 2004
-@@ -181,7 +181,7 @@
+--- search.cpp.orig	2000-04-30 09:56:56.000000000 +0000
++++ search.cpp
+@@ -4,7 +4,7 @@
+ /* Search Functions */
+ #define TIME_FLAG 123456
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include <stdio.h>
+ 
+ #if DEBUG
+@@ -12,7 +12,10 @@
+  #include <stdlib.h>
+ #endif
+ 
+-#include <fstream.h>
++#include <fstream>
++
++using namespace std;
++
+ #include "define.h"
+ #include "chess.h"
+ #include "const.h"
+@@ -181,7 +184,7 @@ move search(position p, int time_limit, 
    last_depth = 1;
  
    // adjusting hash code for game stage
@@ -11,7 +32,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 04:31:56 kristerw Exp $
  
    // initialize history table
    for(int i = 0; i < 64; i++)
-@@ -261,7 +261,7 @@
+@@ -261,7 +264,7 @@ move search(position p, int time_limit, 
    }
  
    // adjusting hash code for game stage
@@ -20,7 +41,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 04:31:56 kristerw Exp $
  
    if(!xboard && !ALLEG && post) {
     cout << "\nnode_count = " << node_count
-@@ -423,7 +423,7 @@
+@@ -423,7 +426,7 @@ outfile << space_string << "->Ply: " << 
   if(ply) {
    // add hash code for this position to position list
    p_list[turn+ply-1] = sp[ply].hcode;
@@ -29,7 +50,7 @@ $NetBSD: patch-aj,v 1.1 2004/02/14 04:31:56 kristerw Exp $
  
    // fifty move rule
    if(sp[ply].fifty >= 100) return(0);
-@@ -470,8 +470,8 @@
+@@ -470,8 +473,8 @@ outfile << space_string << "->Ply: " << 
     {
       node_count++;
       sp[ply+1] = sp[ply]; sp[ply+1].wtm ^= 1;
