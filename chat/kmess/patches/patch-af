@@ -1,14 +1,12 @@
-$NetBSD: patch-af,v 1.1 2011/11/23 22:36:27 marino Exp $
+$NetBSD: patch-af,v 1.2 2011/11/25 21:33:11 joerg Exp $
 
 --- kmess/crypt/sha1.cpp.orig	2004-05-21 02:00:44.000000000 +0000
 +++ kmess/crypt/sha1.cpp
-@@ -37,6 +37,9 @@
+@@ -37,6 +37,7 @@
  
  #include <stdio.h>
  #include <sys/stat.h>
-+#if defined (__DragonFly__)
 +#include <string.h>
-+#endif
  
  Sha1::Sha1()
  {
