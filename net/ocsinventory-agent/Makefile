@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 14:14:40 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/25 23:15:19 hubertf Exp $
 #
 VERS=			1.1.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 DISTNAME=		Ocsinventory-Agent-${VERS}
 PKGNAME=		ocsinventory-agent-${VERS}
 CATEGORIES=		net
@@ -58,6 +58,9 @@ PERL5_PACKLIST=		auto/Ocsinventory/Agent/.packlist
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/lib/Ocsinventory/Agent/Backend/OS/BSD/Pcictl
+
+post-patch:
+	${FIND} ${WRKSRC} -perm 0 -print | ${XARGS} ${CHMOD} +rw
 
 post-build:
 	for file in ocsinventory-agent.cfg modules.conf; do \
