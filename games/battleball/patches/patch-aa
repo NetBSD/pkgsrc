@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.4 2002/10/20 12:59:08 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2011/11/25 21:50:31 joerg Exp $
 
---- lib3d/gfxtarget.h.orig	Fri Sep  3 04:25:19 1999
+--- lib3d/gfxtarget.h.orig	1999-09-03 02:25:19.000000000 +0000
 +++ lib3d/gfxtarget.h
-@@ -72,7 +72,14 @@ struct gfxTarget {
+@@ -7,7 +7,7 @@
+ #define _GFXTARGET_H
+ #include <stdlib.h>
+ #include <string.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+ 
+@@ -19,6 +19,7 @@
+ #include "general.h"
+ #include "pt2d.h"
+ 
++using namespace std;
+ 
+ struct gfxTarget {
+   Display       *disp;   // X Display
+@@ -72,7 +73,14 @@ struct gfxTarget {
      XFillRectangle(disp,win,gc,(int)p.x,(int)p.y,(int)sz.x,(int)sz.y);
    }
    void  ResizeWindow(const pt2d& sz) {
