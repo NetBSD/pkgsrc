@@ -1,8 +1,16 @@
-$NetBSD: patch-ag,v 1.1 2008/07/21 02:55:34 dholland Exp $
+$NetBSD: patch-ag,v 1.2 2011/11/25 22:18:54 joerg Exp $
 
---- src/blob.cc~	2008-07-20 22:00:41.000000000 -0400
-+++ src/blob.cc	2008-07-20 22:00:56.000000000 -0400
-@@ -503,7 +503,7 @@ void
+--- src/blob.cc.orig	2004-12-16 05:12:38.000000000 +0000
++++ src/blob.cc
+@@ -21,6 +21,7 @@
+ 
+ #include "config.h"
+ 
++#include <inttypes.h>
+ #include <stdlib.h>  // atoi
+ 
+ #include <iostream>
+@@ -503,7 +504,7 @@ void
  blob::print()
  {
  	ENTRY_TRACE(__FILE__,__LINE__);
