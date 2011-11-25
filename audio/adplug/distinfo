@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/09/12 05:08:53 dholland Exp $
+$NetBSD: distinfo,v 1.4 2011/11/25 21:29:31 joerg Exp $
 
 SHA1 (adplug-2.1.tar.bz2) = 49dd798467f194ece1863f18019912f8089cb9df
 RMD160 (adplug-2.1.tar.bz2) = 8788c174507fe39d3415f36e1ac60df6b84c889f
 Size (adplug-2.1.tar.bz2) = 730686 bytes
 SHA1 (patch-adplugdb_adplugdb_cpp) = 06471351d5b263e515b115960ec0e3d3564dbd16
 SHA1 (patch-src_fmopl_c) = 39001c766492684323fb6b7f1f87b519ee084943
+SHA1 (patch-src_player.h) = a1bf12c872a244d56fa0cd776ecd22cc5af3bca4
