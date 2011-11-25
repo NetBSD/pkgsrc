@@ -1,5 +1,6 @@
 lib/clisp/dynmod/lib-pari.so
 lib/clisp/dynmod/pari.lisp
+lib/clisp/pari/README
 lib/clisp/pari/Makefile
 lib/clisp/pari/cpari.o
 lib/clisp/pari/link.sh
