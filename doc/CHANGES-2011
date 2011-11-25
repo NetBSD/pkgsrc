@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3037 2011/11/25 11:46:00 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3038 2011/11/25 13:30:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4816,3 +4816,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Path-Class-File-Stat to 0.03 [hiramatsu 2011-11-25]
 	Updated www/p5-HTTP-OAI to 3.27 [hiramatsu 2011-11-25]
 	Updated devel/p5-Test-Differences to 0.610 [hiramatsu 2011-11-25]
+	Updated www/py-mechanize to 0.1.11nb1 [obache 2011-11-25]
