@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2008/05/10 16:19:16 obache Exp $
+$NetBSD: patch-ab,v 1.3 2011/11/25 22:25:31 joerg Exp $
 
 --- src/FbTk/FbPixmap.cc.orig	2006-03-25 11:47:10.000000000 +0000
 +++ src/FbTk/FbPixmap.cc
@@ -7,3 +7,7 @@ $NetBSD: patch-ab,v 1.2 2008/05/10 16:19:16 obache Exp $
 +#include <stdio.h>
 +
  #include "FbPixmap.hh"
+@@ -32,2 +34,3 @@
+ #include <string>
++#include <cstring>
+ 
