@@ -1,5 +1,12 @@
-$NetBSD: distinfo,v 1.5 2007/11/17 11:40:59 rillig Exp $
+$NetBSD: distinfo,v 1.6 2011/11/25 22:11:44 joerg Exp $
 
 SHA1 (jigdo-0.7.3.tar.bz2) = 7b83c35af71f908b31b9aa55b0dda9dfb4d224f0
 RMD160 (jigdo-0.7.3.tar.bz2) = 545b4abbcb0a02636072e5acadeba7d99f59365f
 Size (jigdo-0.7.3.tar.bz2) = 644670 bytes
+SHA1 (patch-src_compat.hh) = 41a7a5e01453a9e2ababfa8862934b479d068484
+SHA1 (patch-src_gtk_gtk-single-url.cc) = ea2a2515fd5feef3e911e0ab1e794538be243341
+SHA1 (patch-src_gtk_jigdo.cc) = 46867a3f83cd45134f6b91766a9b6721bb5b342a
+SHA1 (patch-src_recursedir.cc) = b9b67ef698496470a7e36e95590f4fb8d0c86f8a
+SHA1 (patch-src_util_configfile.cc) = 1f280ba31a7ecba1b177f4c113df1b5cfb11b40d
+SHA1 (patch-src_util_md5sum.hh) = 9b18b5d619dc12fd0b6dd8ace6477c4c1f78f83a
+SHA1 (patch-src_util_string-utf.cc) = cef7c75d953b926ad9fc87e9051aa99084d034f4
