@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3033 2011/11/24 20:08:47 gls Exp $
+$NetBSD: CHANGES-2011,v 1.3034 2011/11/25 05:56:43 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4802,3 +4802,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-ExtUtils-Manifest to 1.60 [hiramatsu 2011-11-24]
 	Updated devel/p5-Rose-Object to 0.859 [hiramatsu 2011-11-24]
 	Updated x11/x3270 to 3.3.12ga7nb1 [gls 2011-11-24]
+	Updated net/p5-Net-Z3950-ZOOM to 1.28 [hiramatsu 2011-11-25]
+	Updated devel/p5-Curses-UI to 0.9609 [hiramatsu 2011-11-25]
+	Updated www/p5-FCGI-ProcManager to 0.24 [hiramatsu 2011-11-25]
+	Updated devel/p5-Method-Signatures-Simple to 1.02 [hiramatsu 2011-11-25]
+	Updated www/p5-POE-Filter-HTTP-Parser to 1.06 [hiramatsu 2011-11-25]
