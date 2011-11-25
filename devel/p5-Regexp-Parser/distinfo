@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/15 15:14:51 he Exp $
+$NetBSD: distinfo,v 1.2 2011/11/25 08:15:48 hiramatsu Exp $
 
-SHA1 (Regexp-Parser-0.20.tar.gz) = 46c45e9a95c2d3f6869094705ad8c1731d04c787
-RMD160 (Regexp-Parser-0.20.tar.gz) = 810c484258b35ee282bcac65653dd719fddfbf94
-Size (Regexp-Parser-0.20.tar.gz) = 40388 bytes
+SHA1 (Regexp-Parser-0.21.tar.gz) = 1c90f5163835fb41528f015e9083b10c0c49d966
+RMD160 (Regexp-Parser-0.21.tar.gz) = 4aacf9165c930704d1499b12497ff67854d4d5f9
+Size (Regexp-Parser-0.21.tar.gz) = 40739 bytes
