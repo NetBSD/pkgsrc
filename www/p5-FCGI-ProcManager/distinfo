@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/08/19 19:11:48 sno Exp $
+$NetBSD: distinfo,v 1.4 2011/11/25 05:54:24 hiramatsu Exp $
 
-SHA1 (FCGI-ProcManager-0.19.tar.gz) = 720dafcf593339bc1582fccf3ac0a391a010b4bb
-RMD160 (FCGI-ProcManager-0.19.tar.gz) = db5a2d073ab47ad516e52f36a04ad46c0e76e277
-Size (FCGI-ProcManager-0.19.tar.gz) = 18489 bytes
+SHA1 (FCGI-ProcManager-0.24.tar.gz) = 3037648fbe76ca9a58c9e6fce68a6b661b8bba93
+RMD160 (FCGI-ProcManager-0.24.tar.gz) = e6d1892ad642fb1d73aa35baf6afdd3013cbdd93
+Size (FCGI-ProcManager-0.24.tar.gz) = 21564 bytes
