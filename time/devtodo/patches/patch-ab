@@ -1,10 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2008/03/05 18:30:59 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2011/11/25 22:19:24 joerg Exp $
 
---- src/todoterm.cc.orig	2007-06-28 09:04:36.000000000 -0400
+--- src/todoterm.cc.orig	2007-06-28 13:04:36.000000000 +0000
 +++ src/todoterm.cc
-@@ -5,8 +5,9 @@
+@@ -4,9 +4,11 @@
+ #ifdef USETERMCAP
  #include <iostream>
  #include <string>
++#include <cstdlib>
  #include <stdexcept>
 -#include <curses.h>
 -#include <term.h>
