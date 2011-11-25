@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2009/02/17 19:13:46 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/11/25 21:48:02 joerg Exp $
 
 SHA1 (nqc-2.3.r1.tar.gz) = 40adcd87c12fc23c600899a6a704620ef2208488
 RMD160 (nqc-2.3.r1.tar.gz) = 2f7a435a99cb207814a8f357b701b1cc1fee2964
@@ -6,3 +6,17 @@ Size (nqc-2.3.r1.tar.gz) = 193028 bytes
 SHA1 (patch-aa) = 0682d30f8c98e6b152e7227d5526a79bff91707b
 SHA1 (patch-ab) = 6fbe6b629ac170475cfeffb8848ba8337d4a13cd
 SHA1 (patch-ac) = d189cbbae24c2aba43aab100c4bb19c2ee24b89f
+SHA1 (patch-compiler_AsmStmt.h) = 93c11a7d8b76f5bf7dd29e92cdbe2c4568c357e4
+SHA1 (patch-compiler_Bytecode.h) = 36f638117dab8e6651b0a55c2a2610f48394b885
+SHA1 (patch-compiler_CallStmt.h) = ce72aabda32fa11ab15807787e93ce3be173f1c9
+SHA1 (patch-compiler_Compiler.h) = f1680a3e90b8d254aabe38451b3c79e629148640
+SHA1 (patch-compiler_Expr.h) = 8fc39474b9f4477dc15bfd1a2e7f0367e580095c
+SHA1 (patch-compiler_FunctionDef.h) = f63bfe971ed91b81c906c7491321ce3a8c1bb047
+SHA1 (patch-compiler_Mapping.h) = 2cd220e46748e5ca55b510c5b891071e15bbaf3c
+SHA1 (patch-compiler_PreProc.h) = cc959faca2496e17d24627e2ec491d9fbc23d7dd
+SHA1 (patch-compiler_Program.h) = fbc57643c0323c17535060515d23ebfc7cc6cacc
+SHA1 (patch-compiler_Scope.h) = 3f2c98fd77e0c93570bdb5bcf01d9239961abca9
+SHA1 (patch-compiler_ScopeStmt.h) = 0010a6625cfc8fcf1f6bdf37743d060b021918dd
+SHA1 (patch-compiler_Stmt.h) = f011a9b77f8a5b660334746925748eddee43ea32
+SHA1 (patch-compiler_SwitchStmt.h) = 924861787d5b162aa006ab2dcc9ec2cd13079a55
+SHA1 (patch-nqc_CmdLine.h) = 608ebff1017d20e016637f2b71f51a32fe0b3c48
