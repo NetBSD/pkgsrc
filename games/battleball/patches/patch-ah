@@ -1,7 +1,20 @@
-$NetBSD: patch-ah,v 1.1 2008/06/21 18:12:42 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2011/11/25 21:50:31 joerg Exp $
 
---- lib3d/bsppanel3d.C.orig	2008-06-21 12:05:40.000000000 +0000
+--- lib3d/bsppanel3d.C.orig	1999-09-03 02:25:19.000000000 +0000
 +++ lib3d/bsppanel3d.C
+@@ -3,10 +3,10 @@
+ // it under the terms of the GNU General Public License v2 or later.
+ 
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include "bsppanel3d.h"
+ 
+-
++using namespace std;
+ 
+ /***************************************************************************/
+ bspPanel3d::bspPanel3d(const Polygon3f& poly, fastPts& pts,
 @@ -42,7 +42,7 @@ Polygon3f bspPanel3d::asPolygon3f(pt3d p
    }
  
