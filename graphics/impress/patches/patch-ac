@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2006/04/22 17:45:38 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2011/11/25 21:57:36 joerg Exp $
 
---- font3d/build.cc.orig	2006-04-22 17:41:01.000000000 +0000
+--- font3d/build.cc.orig	2000-07-16 02:37:31.000000000 +0000
 +++ font3d/build.cc
+@@ -29,7 +29,7 @@
+ //==============================================================================================
+ 
+ #include <stdlib.h>
+-#include <fstream.h>
++#include <fstream>
+ 
+ #include "vector.h"
+ #include "truetype.h"
 @@ -367,7 +367,7 @@ void PolygonizeContour(TTFont&   font,
           }
        }
