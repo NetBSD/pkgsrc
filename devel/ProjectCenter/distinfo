@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2011/04/07 02:23:06 rh Exp $
+$NetBSD: distinfo,v 1.10 2011/11/25 21:35:55 joerg Exp $
 
 SHA1 (ProjectCenter-0.6.0.tar.gz) = 13aec7d91b0c0b4b46c37c7581a84a1a1e984414
 RMD160 (ProjectCenter-0.6.0.tar.gz) = 83c25345d10896b865b038e8b3578ca86696dd2a
 Size (ProjectCenter-0.6.0.tar.gz) = 498146 bytes
+SHA1 (patch-Modules_Debuggers_ProjectCenter_PTYView.m) = c791dc5524c7d7dbbadeb1c55b617a8a4a52ebd3
