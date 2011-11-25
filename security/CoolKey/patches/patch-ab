@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/25 22:17:49 joerg Exp $
 
---- src/coolkey/machdep.cpp.orig	2007-02-13 17:46:28.000000000 -0700
+--- src/coolkey/machdep.cpp.orig	2007-02-14 00:46:28.000000000 +0000
 +++ src/coolkey/machdep.cpp
 @@ -17,6 +17,8 @@
   * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
@@ -11,7 +11,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
  #include "machdep.h"
  #include "mypkcs11.h"
  #include "PKCS11Exception.h"
-@@ -185,12 +187,20 @@ void OSSleep(int time) 
+@@ -32,6 +34,8 @@
+ #include <sys/time.h>
+ #include <sys/stat.h>
+ #include <sys/mman.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <pthread.h>
+ #endif
+ 
+@@ -185,12 +189,20 @@ void OSSleep(int time) 
  #define MAP_INHERIT 0
  #endif
  
@@ -34,7 +43,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
  #endif
  
  struct SHMemData {
-@@ -208,11 +218,6 @@ SHMemData::~SHMemData() { 
+@@ -208,11 +220,6 @@ SHMemData::~SHMemData() { 
  #ifdef FULL_CLEANUP
  	flock(fd,LOCK_EX);
  	unsigned long ref = --(*(unsigned long *)addr); 
@@ -46,7 +55,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
  	flock(fd, LOCK_UN);
  #endif
  	munmap(addr,size+RESERVED_OFFSET);
-@@ -225,6 +230,73 @@ SHMemData::~SHMemData() { 
+@@ -225,6 +232,73 @@ SHMemData::~SHMemData() { 
      }
  }
  
@@ -120,7 +129,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
  SHMem::SHMem(): shmemData(0) {}
  
  SHMem *
-@@ -248,7 +320,7 @@ SHMem::initSegment(const char *name, int
+@@ -248,7 +322,7 @@ SHMem::initSegment(const char *name, int
  	return NULL;
      }
      int mask = umask(0);
@@ -129,7 +138,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
      umask(mask);
      if ((ret == -1) && (errno != EEXIST)) {
  	delete shmemData;
-@@ -264,21 +336,16 @@ SHMem::initSegment(const char *name, int
+@@ -264,21 +338,16 @@ SHMem::initSegment(const char *name, int
      shmemData->path[sizeof(MEMSEGPATH)-1] = '/';
      strcpy(&shmemData->path[sizeof(MEMSEGPATH)],name);
  
@@ -157,7 +166,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:33:02 shannonjr Exp $
  
  	buf = (char *)calloc(1,len);
  	if (!buf) {
-@@ -289,8 +356,22 @@ SHMem::initSegment(const char *name, int
+@@ -289,8 +358,22 @@ SHMem::initSegment(const char *name, int
  	    delete shmemData;
  	    return NULL;
  	}
