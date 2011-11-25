@@ -1,16 +1,24 @@
-$NetBSD: patch-ab,v 1.3 2007/10/10 16:53:58 rillig Exp $
+$NetBSD: patch-ab,v 1.4 2011/11/25 21:34:34 joerg Exp $
 
 --- common/ttio.c.orig	1997-02-21 23:06:09.000000000 +0000
-+++ common/ttio.c	2007-10-10 16:48:38.000000000 +0000
-@@ -51,6 +51,7 @@ static char copyright[] =
++++ common/ttio.c
+@@ -45,12 +45,15 @@ static char copyright[] =
+ #include "osdep.h"
+ #include "cdefs.h"
+ #include "global.h"
++#include <ctype.h>
+ #include <stdio.h>
+ #include <fcntl.h>
+ #include <syslog.h>
  #include "mcap.h"
  #include "ttio.h"
  #include <pwd.h>
 +#include <stdlib.h>
++#include <util.h>
  
  static void dectl PROTO ((char *, int, char *, int, char *));
  
-@@ -73,6 +74,16 @@ int ttsetup (name)
+@@ -73,6 +76,16 @@ int ttsetup (name)
      {
        if (chown (nbuf, pw -> pw_uid, pw -> pw_gid) < 0)
  	warn ("Can't set owner on %s: %m", nbuf);
@@ -27,3 +35,51 @@ $NetBSD: patch-ab,v 1.3 2007/10/10 16:53:58 rillig Exp $
      }
  
    /* Open the terminal device. */
+@@ -131,20 +144,19 @@ int ttsetup (name)
+   return fd;
+ }
+ 
+-void ttnormal (fd)
++void ttnormal (int fd)
+ {
+   NORMAL_TTY (ts);
+   PUT_TTY_STATE (fd, ts);
+ }
+ 
+-void tthupcl (fd)
++void tthupcl (int fd)
+ {
+   HUPCL_TTY (ts);
+   PUT_TTY_STATE (fd, ts);
+ }
+ 
+-void redirect_std (fd)
+-     int fd;
++void redirect_std (int fd)
+ {
+   int i;
+ 
+@@ -203,10 +215,8 @@ static int tteof = 0;
+ 
+ /* Match the specified string with input from the specified tty.
+    Return nonzero if input matches, zero if not. */
+-ttmatch (ANSI_DECL (int) tty, ANSI_DECL (int) timeout, VA_DOTDOTDOT)
+-     KandR (int tty;)
+-     KandR (int timeout;)
+-     va_dcl
++int
++ttmatch (int tty, int timeout, ...)
+ {
+   TIME entry, now, to;
+   int cur, curmatch, next;
+@@ -316,9 +326,7 @@ ttmatch (ANSI_DECL (int) tty, ANSI_DECL 
+ }
+ 
+ /* Read a connect speed from standard in... */
+-ttread_connect_speed (tty, timeout)
+-     int tty;
+-     int timeout;
++int ttread_connect_speed (int tty, int timeout)
+ {
+   TIME entry, now, to;
+   int status;
