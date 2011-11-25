@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/02/14 18:45:12 joerg Exp $
+$NetBSD: distinfo,v 1.7 2011/11/25 22:20:28 joerg Exp $
 
 SHA1 (3ddesktop-0.2.9.tar.gz) = 33ff86b559d0c0407ef4c6c989a9fcbf804f7e5f
 RMD160 (3ddesktop-0.2.9.tar.gz) = 86ca9d9df57a83d2f4719ce45708e129bdc75fb4
@@ -6,3 +6,4 @@ Size (3ddesktop-0.2.9.tar.gz) = 182278 bytes
 SHA1 (patch-aa) = bf6d06462cb2b0e48f15296a7238980dec0e8e17
 SHA1 (patch-ab) = e078b55d2a0fc7344f59dcbddd25644b31f8f201
 SHA1 (patch-ad) = 3e24c98b58b27e2e7384bb96ece20cb604dd900f
+SHA1 (patch-config.cpp) = e3352c5b93aa574b5de8d77b4c56d1fbf65f7ecf
