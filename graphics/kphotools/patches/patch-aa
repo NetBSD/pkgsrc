@@ -1,19 +1,20 @@
-$NetBSD: patch-aa,v 1.2 2005/03/16 20:03:57 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2011/11/25 21:58:42 joerg Exp $
 
 c++-2.95.3 does not know vector::at().
 
---- src/GalleryThrd.cpp.orig	Sat Jun 12 17:14:01 2004
-+++ src/GalleryThrd.cpp	Wed Mar 16 20:11:05 2005
-@@ -19,7 +19,7 @@
+--- src/GalleryThrd.cpp.orig	2004-06-12 15:14:01.000000000 +0000
++++ src/GalleryThrd.cpp
+@@ -19,7 +19,8 @@
   ***************************************************************************/
  #include <qdir.h> 
  #include "GalleryThrd.h"
 -
++#include <cstdlib>
 +#include <pkgsrc_fixes.h>
   
  void GalleryThrd::run()
  {
-@@ -105,14 +105,14 @@ void GalleryThrd::begin()
+@@ -105,14 +106,14 @@ void GalleryThrd::begin()
  	for(uint i = 0; i<files;i++)
  	{
  		//try loading image
@@ -30,21 +31,21 @@ c++-2.95.3 does not know vector::at().
  			//load sizes of the current image
  			orig_height = imlib_image_get_height();
  			orig_width = imlib_image_get_width();
-@@ -305,7 +305,7 @@ void GalleryThrd::doCreateWebsite(uint f
+@@ -305,7 +306,7 @@ void GalleryThrd::doCreateWebsite(uint f
  		if(strFiles[i][0] == 'f')//if is file copy it
  		{
  			strFiles[i].remove(0,1);
 -			system("cp /usr/share/kphotools/styles/"+m_strStyle+"/"+strFiles[i]+"  "+m_strLocation+"/"+strFiles[i]);
-+			system("cp @kphotoolsdir@/styles/"+m_strStyle+"/"+strFiles[i]+"  "+m_strLocation+"/"+strFiles[i]);
++			system("cp /usr/pkg/share/kde/apps/kphotools/styles/"+m_strStyle+"/"+strFiles[i]+"  "+m_strLocation+"/"+strFiles[i]);
  		}else if(strFiles[i][0] == 'd')//if is dir create it
  		{
  			strFiles[i].remove(0,1);
-@@ -319,7 +319,7 @@ void GalleryThrd::doCreateWebsite(uint f
+@@ -319,7 +320,7 @@ void GalleryThrd::doCreateWebsite(uint f
  QStringList GalleryThrd::readConfig()
  {
  	//load configuration for style
 -	QFile* pFile = new QFile("/usr/share/kphotools/styles/"+m_strStyle+"/config");
-+	QFile* pFile = new QFile("@kphotoolsdir@/styles/"+m_strStyle+"/config");
++	QFile* pFile = new QFile("/usr/pkg/share/kde/apps/kphotools/styles/"+m_strStyle+"/config");
  	pFile->open(IO_ReadOnly);
  	QStringList strList;
  	QString strLine = "";
