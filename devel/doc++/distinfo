@@ -1,7 +1,21 @@
-$NetBSD: distinfo,v 1.6 2007/03/09 12:56:53 rillig Exp $
+$NetBSD: distinfo,v 1.7 2011/11/25 21:38:09 joerg Exp $
 
 SHA1 (doc++-3.4.10.tar.gz) = 2102e99152ab91d80d7977fa5e13dd6f6043b2c8
 RMD160 (doc++-3.4.10.tar.gz) = 85b14d32e2932ceb465f1bab16eb8389cd22d72d
 Size (doc++-3.4.10.tar.gz) = 408887 bytes
 SHA1 (patch-aa) = d71fd3064b9795ed1c82044c2b42f34f166f0061
 SHA1 (patch-docify) = e38383e7be4c7d2c224c90f97317d0bdbe98685f
+SHA1 (patch-src_comment.ll) = 1f402293b1eb5ad9b776fb26e1a37a4ffa0b4f9b
+SHA1 (patch-src_cpp.ll) = ca9b97fd2b9ab9552b56cd679111d1d7bed01648
+SHA1 (patch-src_datahashtable.h) = d746bfe674d751edaea9c148784b5ba96a95a65e
+SHA1 (patch-src_doc.ll) = 010251cda95ca5afb19d40293f523023eb70d1bd
+SHA1 (patch-src_doc2dbsgml.ll) = 988fe3bb63d002bf431e96dbb0a4afbb4c6084a8
+SHA1 (patch-src_doc2dbxml.ll) = 20e3e1cf750b5abd7ad2f27439090f5cd716fce4
+SHA1 (patch-src_doc2tex.ll) = 3215a67b145772e99bf071788e4acd75df8b68a5
+SHA1 (patch-src_html.cc) = 5d350abe9197b91a1f4b0f09272a2dfc066538c3
+SHA1 (patch-src_java.ll) = b6f3afb5de5c29d20b6b69582ae1fc71f31a61c9
+SHA1 (patch-src_main.cc) = a78300cea46ddb1edfafd09f6b15277beeed512e
+SHA1 (patch-src_nametable.cc) = 7d2976d12520572a6bc5a118f435f7446a560eaf
+SHA1 (patch-src_nametable.h) = da6cfcd23e69f069e238d5e03a5af69176e15792
+SHA1 (patch-src_php.ll) = b118886c8d0d9915dc18b41ebcaccc94b6a926d2
+SHA1 (patch-src_tex2gif.cc) = 10f4500735c58a9d733f904e119ed0edb428006e
