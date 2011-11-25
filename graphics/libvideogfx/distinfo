@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/08/05 18:21:13 wiz Exp $
+$NetBSD: distinfo,v 1.7 2011/11/25 21:59:26 joerg Exp $
 
 SHA1 (libvideogfx-1.0.3.tar.gz) = 1f78e185a05bf063a5f2c9ea4afae1a2d2715b89
 RMD160 (libvideogfx-1.0.3.tar.gz) = db64375cc2e298b2cd0c7ff95401b913d4cc5236
@@ -11,3 +11,5 @@ SHA1 (patch-ae) = 979c2c53fb28e5b98c9de0be73c46b2f3415e240
 SHA1 (patch-af) = 9d439e6cd14be344dd4ca39e2a319ee9b6b990d1
 SHA1 (patch-ag) = f089e49bc735fb107013760cc77a0cd323f8caf2
 SHA1 (patch-libvideogfx_graphics_fileio_png.cc) = d2f0d228b5f3f2a9478709ef9228dd1fa5d62a55
+SHA1 (patch-libvideogfx_graphics_fileio_png.hh) = 9c2a64f38f4941e796bbb7338aeedbbc4aabf708
+SHA1 (patch-libvideogfx_utility_math.cc) = 5f64829688f1cfaa68e8d5083417248a32bb2c3c
