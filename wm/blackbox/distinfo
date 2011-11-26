@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2006/01/02 21:47:43 joerg Exp $
+$NetBSD: distinfo,v 1.12 2011/11/26 17:22:25 joerg Exp $
 
 SHA1 (blackbox-0.65.0.tar.gz) = 903a35526b1c29912ca500b7f8c205368e60fc38
 RMD160 (blackbox-0.65.0.tar.gz) = d88d9c5d9375274da149c77d3c63bb9c92470f26
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 6081da04f0dbab0f711523114e130c176a0f1f05
 SHA1 (patch-ac) = 5f249a2e6d75e5d88605d6d8a1675d003b1cb52f
 SHA1 (patch-ad) = 0906aa36c45b1e9ebd8c10e166ac1ba8e345fd9e
 SHA1 (patch-ae) = 0e919952cd5209e787807548ca7ce45c5ed03497
+SHA1 (patch-src_Image.cc) = fa9ad93eae4fa6e21b8e9f2811298e87a4901c15
