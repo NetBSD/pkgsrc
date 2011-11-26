@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3042 2011/11/26 09:17:41 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.3043 2011/11/26 09:18:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4839,3 +4839,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/wwwoffle to 2.9anb2 [sbd 2011-11-26]
 	Updated devel/exempi to 2.1.1nb2 [sbd 2011-11-26]
 	Updated multimedia/mediainfo to 0.7.51nb1 [sbd 2011-11-26]
+	Updated www/py-mechanize to 0.2.5 [obache 2011-11-26]
