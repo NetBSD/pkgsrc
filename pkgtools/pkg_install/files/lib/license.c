@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.21 2011/06/29 03:16:27 taca Exp $	*/
+/*	$NetBSD: license.c,v 1.22 2011/11/26 19:19:42 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -68,7 +68,8 @@ const char *default_acceptable_licenses =
     "info-zip "
     "boost-license "
     "mplusfont "
-    "cc-by-sa-v3.0";
+    "cc-by-sa-v3.0 "
+    "gnu-agpl-v3";
 
 #ifdef DEBUG
 static size_t hash_collisions;
