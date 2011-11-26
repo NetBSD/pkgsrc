@@ -1,18 +1,20 @@
-$NetBSD: patch-ac,v 1.5 2006/03/23 17:36:16 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2011/11/26 17:16:36 marino Exp $
 
 --- drivers.c.orig	2000-05-05 00:34:29.000000000 +0000
 +++ drivers.c
-@@ -24,6 +24,9 @@
+@@ -24,6 +24,11 @@
  /* For FreeBSD */
  #ifdef USE_KVM
  #include<net/if.h>
 +#if defined(__DragonFly__)
++#define _KERNEL_STRUCTURES
 +#include <net/if_var.h>
++#undef _KERNEL_STRUCTURES
 +#endif
  #include<kvm.h>
  #include<nlist.h>
  
-@@ -37,6 +40,14 @@ int kvm_test(void);
+@@ -37,6 +42,14 @@ int kvm_test(void);
  int kvm_updateStats(void);
  #endif /* USE_KVM */
  
@@ -27,7 +29,7 @@ $NetBSD: patch-ac,v 1.5 2006/03/23 17:36:16 joerg Exp $
  
  #ifdef USE_LINUX_PPP
  #include<net/ppp_defs.h>
-@@ -57,7 +68,7 @@ static struct ifpppstatsreq ppp_stats_re
+@@ -57,7 +70,7 @@ static struct ifpppstatsreq ppp_stats_re
  #define ACCOUNT_IN_FOUND        1
  #define ACCOUNT_OUT_FOUND       2
  
@@ -36,7 +38,7 @@ $NetBSD: patch-ac,v 1.5 2006/03/23 17:36:16 joerg Exp $
  extern char *in_rule_string, *out_rule_string, *device;
  extern unsigned long totalbytes_in, totalbytes_out, lastbytes_in, lastbytes_out;
  extern unsigned long totalpackets_in, totalpackets_out, lastpackets_in, lastpackets_out;
-@@ -104,6 +115,9 @@ static struct drivers_struct {
+@@ -104,6 +117,9 @@ static struct drivers_struct {
  #ifdef USE_KVM
   {"kmem",kvm_updateStats, kvm_test},
  #endif
@@ -46,7 +48,7 @@ $NetBSD: patch-ac,v 1.5 2006/03/23 17:36:16 joerg Exp $
   {NULL, NULL}
  };
  
-@@ -445,7 +459,7 @@ int kvm_test(void) {
+@@ -445,7 +461,7 @@ int kvm_test(void) {
    if (((kvmfd = kvm_open(NULL, NULL, NULL, O_RDONLY, buffer)) == NULL) ||
        (kvm_nlist(kvmfd, symbols) < 0) ||
        kvm_read(kvmfd, (unsigned long)symbols[0].n_value, &ifnet_savedaddr, sizeof(unsigned long)) == -1 ) return False;
@@ -55,7 +57,7 @@ $NetBSD: patch-ac,v 1.5 2006/03/23 17:36:16 joerg Exp $
    fprintf(stderr, "wmnet: using kmem driver to monitor %s\n", device);
    return True;
  }
-@@ -457,7 +471,7 @@ int kvm_updateStats(void) {
+@@ -457,7 +473,7 @@ int kvm_updateStats(void) {
   int flag = 0;
   while (ifnet_addr && flag != (ACCOUNT_IN_FOUND|ACCOUNT_OUT_FOUND)) {
    kvm_read(kvmfd, ifnet_addr, buffer, sizeof(struct ifnet));
@@ -64,7 +66,7 @@ $NetBSD: patch-ac,v 1.5 2006/03/23 17:36:16 joerg Exp $
    snprintf(devname, 15, "%s", ifnet->if_xname);
  #else
    kvm_read(kvmfd, (unsigned long)ifnet->if_name, devname, 15);
-@@ -487,7 +501,7 @@ int kvm_updateStats(void) {
+@@ -487,7 +503,7 @@ int kvm_updateStats(void) {
          flag = (ACCOUNT_IN_FOUND|ACCOUNT_OUT_FOUND);
  
    } else {
@@ -73,7 +75,7 @@ $NetBSD: patch-ac,v 1.5 2006/03/23 17:36:16 joerg Exp $
          ifnet_addr = (unsigned long)ifnet->if_list.tqe_next;
  #else
          ifnet_addr = (unsigned long)ifnet->if_next;
-@@ -502,8 +516,119 @@ int kvm_updateStats(void) {
+@@ -502,8 +518,119 @@ int kvm_updateStats(void) {
  }
  
  
