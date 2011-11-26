@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3040 2011/11/26 04:40:41 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.3041 2011/11/26 06:08:58 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4837,3 +4837,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/sudo to 1.7.8p1nb1 [sbd 2011-11-26]
 	Updated sysutils/radmind to 1.14.1nb1 [sbd 2011-11-26]
 	Updated www/wwwoffle to 2.9anb2 [sbd 2011-11-26]
+	Updated devel/exempi to 2.1.1nb2 [sbd 2011-11-26]
