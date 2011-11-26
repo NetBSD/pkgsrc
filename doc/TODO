@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10689 2011/11/25 14:04:53 wiz Exp $
+$NetBSD: TODO,v 1.10690 2011/11/26 09:18:42 obache Exp $
 
 Suggested new packages
 ======================
@@ -1141,7 +1141,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-m2crypto-0.20.2
-	o py-mechanize-0.2.5
 	o py-mxDateTime-3.2.0
 	o py-simplejson-2.2.1
 	o py-sybase-0.37
