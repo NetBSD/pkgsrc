@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/11/25 21:39:07 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/26 15:50:27 dholland Exp $
 
 DISTNAME=	elftoolchain-0.5.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elftoolchain/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.bz2
