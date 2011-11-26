@@ -1,12 +1,16 @@
-$NetBSD: distinfo,v 1.7 2006/06/02 18:30:14 joerg Exp $
+$NetBSD: distinfo,v 1.8 2011/11/26 17:16:53 joerg Exp $
 
 SHA1 (colortail-0.3.0.tar.gz) = 5c55a9b0550868129d8ede133f6b34fa5356c5ce
 RMD160 (colortail-0.3.0.tar.gz) = 9141fff0a26ec653b39f580749336cbd16c92492
 Size (colortail-0.3.0.tar.gz) = 54329 bytes
-SHA1 (patch-aa) = 4db6ef6d231c98914c572f320700f67ae09101a7
-SHA1 (patch-ab) = ad48e7a58417f114be2f7f91b106e25d30bb76d4
+SHA1 (patch-ColorTail.cc) = ff028051f92db984179fdf87465716a338910a5d
+SHA1 (patch-Info.cc) = d6f3670381c030ac44df516a049f419ee6692031
+SHA1 (patch-Usage.cc) = c1739c04c2d51a9bd5b1019f009f4cf52d2feafa
+SHA1 (patch-aa) = b7e930ed1de83b9bba507fb5b3f7b9a500132257
+SHA1 (patch-ab) = 927b8b6ef439cbf4d3d3e67b3f7c0a82b8df6584
 SHA1 (patch-ac) = fed43fd42497b951dd237f86ef08337f76fef494
-SHA1 (patch-ad) = ed3a9bdcd7f20a231823aad0010dd929103e9fb1
-SHA1 (patch-ae) = 09aaf9aebad66b0b220387f0b230fb615f8bef08
-SHA1 (patch-af) = 00fc20aa9508db7c3894a8cab0d5f75ed6a4a967
+SHA1 (patch-ad) = 96a95b7ab3435465bca767a90645a0bc07a9d226
+SHA1 (patch-ae) = 0c04839a28e2e4523cf058a03ee3a9ee87c904ee
+SHA1 (patch-af) = d580a043185160cc26f78b9da849534b0c9ed58d
 SHA1 (patch-ag) = 29222baff0953c1c78255092426926061ccd92c5
+SHA1 (patch-main.cc) = 7e1ca6ef30e7962e3850179a3f59bf9db5aba1ac
