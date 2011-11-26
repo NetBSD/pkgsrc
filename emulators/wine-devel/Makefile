@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/11/01 06:11:54 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2011/11/26 15:39:31 hans Exp $
 
 DISTNAME=	wine-1.3.26
 PKGREVISION=	1
@@ -23,6 +23,7 @@ USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		bison flex gmake mktemp
+FLEX_REQD=		2.5.33
 GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES=	datasize
 
