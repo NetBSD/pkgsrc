@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/26 15:50:27 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/26 19:59:58 dholland Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -20,6 +20,7 @@ MAKE_JOBS_SAFE=	no
 
 USE_BSD_MAKEFILE=	yes
 MAKE_ENV+=		${BSD_MAKE_ENV}
+MAKE_FLAGS+=		MKPROFILE=yes
 
 INSTALLATION_DIRS=	bin lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/cat1 ${PKGMANDIR}/html1
