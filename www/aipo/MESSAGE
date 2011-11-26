@@ -1,0 +1,78 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/11/26 19:29:05 ryoon Exp $
+
+To use aipo, you will need to perform the following steps.
+
+1. Install postgresq server, for example postgresql84-server,
+   and enable it.
+
+	# cd databases/postgresql84-server
+	# make install
+	and follow MESSAGE in databases/postgresql84-server directory.
+
+2. Install apache tomcat server, for example apache-tomcat7
+
+	# cd www/apache-tomcat7
+	# make install
+
+3. Start postgresql server, for example
+
+	# ${RCD_SCRIPTS_DIR}/pgsql start
+
+4. Add postgresql user, aipo_pgsql
+
+	$ sudo -u pgsql createuser aipo_pgsql
+	Shall the new role be a superuser? (y/n) y
+
+5. Set password to aipo_pgsql user
+
+	$ sudo -u pgsql psql template1
+	psql (8.4.9)
+	Type "help" for help.
+
+	template1=# alter user aipo_pgsql with password 'aipo_db_password';
+	ALTER ROLE
+	template1=# \q
+
+6. Create database fot Aipo
+
+	$ sudo -u pgsql createdb org001 -O aipo_pgsql -U aipo_pgsql
+
+7. Check created database
+
+	$ sudo -u pgsql psql -l
+                             List of databases
+   Name    |   Owner    | Encoding  | Collation | Ctype | Access privileges
+-----------+------------+-----------+-----------+-------+-------------------
+ org001    | aipo_pgsql | SQL_ASCII | C         | C     |
+(snip)
+
+8. Initialize Aipo database and inser sample data.
+
+	$ sudo -u pgsql psql -U aipo_pgsql -d org001 -p 5432 -f \
+		${PREFIX}/share/aipo/webapps/aipo/WEB-INF/sql/org001.sql
+	$ sudo -u pgsql psql -U aipo_pgsql -d org001 -p 5432 -f \
+		${PREFIX}/share/aipo/webapps/aipo/WEB-INF/sql/sample.sql
+
+9. Unlimit database
+
+	$ sudo -u pgsql psql -U aipo_pgsql -d org001 -p 5432 \
+		-c "UPDATE AIPO_LICENSE SET LIMIT_USERS=0"
+
+10. Set Aipo location to apache tomcat
+	$ sudo vi ${PREFIX}/share/tomcat/conf/server.xml
+	Add
+	<Context path="/aipo" docBase="${PREFIX}/share/aipo/webapps/aipo" debug="
+0" reloadable="true">
+        </Context>
+	in <Host> tag
+
+11. Regenerate securityTokenKey.txt files.
+
+	$ sudo cat /dev/urandom | tr -dc "a-z0-9" | fold -w 64 | head -n 1 \
+		> ${PREFIX}/share/aipo/webapps/aipo/WEB-INF/conf/securityTokenKey.txt
+	$ sudo cp ${PREFIX}/share/aipo/webapps/aipo/WEB-INF/conf/securityTokenKey.txt \
+		${PREFIX}/share/aipo/webapps/ROOT/WEB-INF/classes/aipo/securityTokenKey.txt
+
+12. Start apache tomcat and access http://localhost/aipo/portal
+===========================================================================
