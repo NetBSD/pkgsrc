@@ -1,14 +1,18 @@
-$NetBSD: patch-ab,v 1.2 2006/06/02 18:30:14 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2011/11/26 17:16:53 joerg Exp $
 
---- CfgFileParser.h.old	Wed Jun 21 12:55:57 2000
-+++ CfgFileParser.h	Wed Jun 21 12:56:09 2000
-@@ -24,7 +24,9 @@
+--- CfgFileParser.h.orig	1999-08-03 19:40:52.000000000 +0000
++++ CfgFileParser.h
+@@ -24,8 +24,12 @@
  #include "config.h"
  
  #include <sys/types.h>
 +#if !defined(__NetBSD__) && !defined(__DragonFly__)
  #include <regex.h>
+-#include <fstream.h>
 +#endif
- #include <fstream.h>
++#include <fstream>
++
++using namespace std;
  
  #ifdef HAVE_GNUREGEX_H
+ # include <gnuregex.h>

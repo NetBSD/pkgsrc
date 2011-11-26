@@ -1,17 +1,28 @@
-$NetBSD: patch-af,v 1.1 2004/01/11 21:22:41 jschauma Exp $
+$NetBSD: patch-af,v 1.2 2011/11/26 17:16:53 joerg Exp $
 
---- OptionsParser.cc.orig	2004-01-11 16:15:24.000000000 -0500
-+++ OptionsParser.cc	2004-01-11 16:15:42.000000000 -0500
-@@ -18,7 +18,7 @@
+--- OptionsParser.cc.orig	1999-08-04 23:23:39.000000000 +0000
++++ OptionsParser.cc
+@@ -17,8 +17,8 @@
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
  
- #include <iostream.h>
+-#include <iostream.h>
 -#include <strstream.h>
++#include <iostream>
 +#include <strstream>
  #include <string.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -130,7 +130,7 @@
+@@ -27,6 +27,8 @@
+ #include "Info.h"
+ #include "Usage.h"
+ 
++using namespace std;
++
+ // methods for class Options
+ 
+ Options::Options()
+@@ -130,7 +132,7 @@ Options* OptionsParser::parse(int argc, 
  	    int loop = 1;
  	    while (loop)
  	    {

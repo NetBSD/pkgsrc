@@ -1,9 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2004/05/23 23:28:29 danw Exp $
+$NetBSD: patch-ad,v 1.3 2011/11/26 17:16:53 joerg Exp $
 
---- CfgFileParser.cc.orig	Tue Aug  3 15:40:44 1999
+--- CfgFileParser.cc.orig	1999-08-03 19:40:44.000000000 +0000
 +++ CfgFileParser.cc
-@@ -23,7 +23,11 @@
- #include <fstream.h>
+@@ -20,10 +20,14 @@
+ #include "CfgFileParser.h"
+ 
+ #include <stdio.h>
+-#include <fstream.h>
++#include <fstream>
  #include <assert.h>
  #include <string.h>
 -#include <malloc.h>

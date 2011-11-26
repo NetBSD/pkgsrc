@@ -1,17 +1,18 @@
-$NetBSD: patch-ae,v 1.1 2004/01/11 21:22:41 jschauma Exp $
+$NetBSD: patch-ae,v 1.2 2011/11/26 17:16:53 joerg Exp $
 
---- Colorizer.cc.orig	2004-01-11 16:15:16.000000000 -0500
-+++ Colorizer.cc	2004-01-11 16:15:46.000000000 -0500
-@@ -23,7 +23,7 @@
+--- Colorizer.cc.orig	1999-08-03 19:41:17.000000000 +0000
++++ Colorizer.cc
+@@ -23,7 +23,8 @@
  
  #include <assert.h>
  #include <stdio.h>
 -#include <strstream.h>
 +#include <strstream>
++#include <cstring>
  
  
  Colorizer::Colorizer()
-@@ -111,7 +111,7 @@
+@@ -111,7 +112,7 @@ char* Colorizer::colorize(char *str)
     ListIterator<SearchData*> itr(*m_items_list);
  
     // will contain the new string
@@ -20,7 +21,7 @@ $NetBSD: patch-ae,v 1.1 2004/01/11 21:22:41 jschauma Exp $
     
     SearchData *current;
     int i = 0;
-@@ -172,7 +172,7 @@
+@@ -172,7 +173,7 @@ char* Colorizer::colorize(char *str)
  	    }
  
  	    // write ansi reset str and a newline
@@ -29,7 +30,7 @@ $NetBSD: patch-ae,v 1.1 2004/01/11 21:22:41 jschauma Exp $
  	    // return the new string
  	    return newstr.str();
  	 }
-@@ -187,12 +187,12 @@
+@@ -187,12 +188,12 @@ char* Colorizer::colorize(char *str)
        // check if str ends in '\n'
        if (str[strlen(str)] == '\n')
        {
@@ -44,7 +45,7 @@ $NetBSD: patch-ae,v 1.1 2004/01/11 21:22:41 jschauma Exp $
        }
  
        // return the new string
-@@ -240,7 +240,7 @@
+@@ -240,7 +241,7 @@ char* Colorizer::colorize(char *str)
        
        // write newline and null
        //newstr << endl << ends;
