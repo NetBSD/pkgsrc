@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2011/11/26 19:01:15 hans Exp $
+# $NetBSD: Makefile,v 1.80 2011/11/26 23:11:37 hans Exp $
 
 DISTNAME=	make-3.82
 PKGNAME=	g${DISTNAME}
@@ -25,7 +25,6 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
@@ -40,6 +39,8 @@ PLIST.gmake=		yes
 .endif
 
 PLIST_SRC=		${PKGDIR}/PLIST
+
+.include "options.mk"
 
 .if ${OPSYS} == "MirBSD"
 # workaround for broken strndup
