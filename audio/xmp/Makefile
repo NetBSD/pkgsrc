@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2011/08/23 13:06:47 obache Exp $
+# $NetBSD: Makefile,v 1.28 2011/11/26 21:10:03 shattered Exp $
 
-DISTNAME=	xmp-3.3.0
-PKGREVISION=	2
+DISTNAME=	xmp-3.4.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmp/}
 
