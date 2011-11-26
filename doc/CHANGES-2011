@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3044 2011/11/26 11:50:49 adam Exp $
+$NetBSD: CHANGES-2011,v 1.3045 2011/11/26 15:06:43 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4571,6 +4571,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-MooseX-Singleton to 0.27 [hiramatsu 2011-11-14]
 	Updated www/p5-Plack-Middleware-Deflater to 0.05 [hiramatsu 2011-11-14]
 	Updated www/p5-HTML-Template-Pro to 0.9506 [hiramatsu 2011-11-14]
+	Updated security/policykit-gnome to 0.9.2nb9 [dholland 2011-11-14]
 	Added audio/libalac version 0.0.20111026 [ryoon 2011-11-14]
 	Added audio/alacconvert version 0.0.20111026 [ryoon 2011-11-14]
 	Added www/p5-HTTP-Server-EV version 0.2 [hiramatsu 2011-11-15]
@@ -4712,6 +4713,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/ruby-actionmailer3 to 3.0.11 [taca 2011-11-19]
 	Updated devel/ruby-railties to 3.0.11 [taca 2011-11-19]
 	Updated www/ruby-rails3 to 3.0.11 [taca 2011-11-19]
+	Updated sysutils/libgksu to 2.0.7nb10 [dholland 2011-11-19]
 	Added www/apache-tomcat7 version 7.0.22 [ryoon 2011-11-19]
 	Updated security/crudesaml to 1.2 [manu 2011-11-19]
 	Updated misc/stellarium to 0.11.1 [jakllsch 2011-11-19]
