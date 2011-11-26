@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/04/08 23:02:08 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/26 21:12:15 joerg Exp $
 #
 
 DISTNAME=		xrmap-2.29
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		geography
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ COMMENT=		Earth map viewer - complete
 
 META_PACKAGE=		# empty
 
-DEPENDS+=	xrmap-base-2.29nb1:../../geography/xrmap-base
+DEPENDS+=	xrmap-base-2.29{,nb*}:../../geography/xrmap-base
 DEPENDS+=	xrmap-data>=0:../../geography/xrmap-data
 DEPENDS+=	xrmap-factbook_text>=2002:../../geography/xrmap-factbook_text
 DEPENDS+=	xrmap-factbook_html>=2002:../../geography/xrmap-factbook_html
