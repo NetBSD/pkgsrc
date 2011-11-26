@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/07/07 05:51:28 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2011/11/26 17:11:24 joerg Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -26,8 +26,9 @@ EGDIR=			${PREFIX}/share/examples/ldapsdk
 MAKE_ENV+=	MOZILLA_CLIENT=1
 MAKE_ENV+=	NO_MDUPDATE=1
 MAKE_ENV+=	MOZ_LDAP_SDK=1
-MAKE_FILE=	directory/ldapsdk.mk
+MAKE_FILE=	${WRKSRC}/directory/ldapsdk.mk
 BUILD_TARGET=	build
+BUILD_DIRS=	config .
 
 AUTO_MKDIRS=			yes
 
