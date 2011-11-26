@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2011/08/18 05:03:10 dholland Exp $
+$NetBSD: patch-ae,v 1.2 2011/11/26 23:53:10 sbd Exp $
 
 DESTDIR support.
 
---- unix/unix.mak~	1999-03-06 22:43:28.000000000 +0000
+--- unix/unix.mak.orig	1999-03-06 22:43:28.000000000 +0000
 +++ unix/unix.mak
 @@ -19,7 +19,7 @@ SHELL      = /bin/sh
  BUILDERS   = Makefile
@@ -13,7 +13,14 @@ DESTDIR support.
  	@echo '#####################################################' > exitmsg
  	@echo '## TinyFugue installation successful.' >> exitmsg
  	@echo "## You can safely delete everything in `cd ..; pwd`". >> exitmsg
-@@ -64,43 +64,43 @@ TF tf$(X):     $(OBJS) $(BUILDERS)
+@@ -58,49 +58,49 @@ regexp.o: $(BUILDERS) config.h
+ 	mv regexp/regexp.o .
+ 
+ TF tf$(X):     $(OBJS) $(BUILDERS)
+-	$(CC) $(CFLAGS) -o tf$(X) $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o tf$(X) $(OBJS) $(LIBS)
+ #	@# Some stupid linkers return ok status even if they fail.
+ 	@test -f tf$(X)
  #	@# ULTRIX's sh errors here if strip isn't found, despite "true".
  	-test -z "$(STRIP)" || $(STRIP) tf$(X) || true
  

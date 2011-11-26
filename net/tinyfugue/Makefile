@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2011/08/18 05:03:10 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2011/11/26 23:53:10 sbd Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net games
 MASTER_SITES=	ftp://laurel.actlab.utexas.edu/pub/tinyfugue/ \
 		${MASTER_SITE_SOURCEFORGE:=tinyfugue/}
@@ -31,5 +31,6 @@ SUBST_FILES.fix-paths=		unix/Config
 SUBST_SED.fix-paths=		-e 's,@DESTDIR@,'${DESTDIR}',g'
 
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
