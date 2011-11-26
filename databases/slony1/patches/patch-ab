@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2010/04/15 07:55:32 adam Exp $
+$NetBSD: patch-ab,v 1.3 2011/11/26 11:49:51 adam Exp $
 
---- tools/start_slon.sh.orig	2010-04-15 09:45:28.000000000 +0000
+--- tools/start_slon.sh.orig	2011-10-11 20:20:52.000000000 +0000
 +++ tools/start_slon.sh
 @@ -16,7 +16,7 @@ test -r "$SLON_CONF" || (echo "No slon c
  
- PID_LINE=`grep pid_file $SLON_CONF | cut -d "#" -f 1 | grep "^[:space:]*pid_file='.*'"`
+ PID_LINE=`grep pid_file $SLON_CONF | cut -d "#" -f 1 | grep "^[[:space:]]*pid_file='.*'"`
  PID_FILE=`echo $PID_LINE | cut -d "=" -f 2 | cut -d "'" -f 2`
 -if [ "x$PID_FILE" == "x" ]; then
 +if [ "x$PID_FILE" = "x" ]; then
