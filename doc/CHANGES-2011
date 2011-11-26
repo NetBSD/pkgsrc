@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3039 2011/11/25 21:26:42 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.3040 2011/11/26 04:40:41 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4818,3 +4818,22 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-Differences to 0.610 [hiramatsu 2011-11-25]
 	Updated www/py-mechanize to 0.1.11nb1 [obache 2011-11-25]
 	Updated security/botan to 1.8.13 [joerg 2011-11-25]
+	Updated archivers/nulib2 to 2.0.3nb1 [sbd 2011-11-26]
+	Updated audio/xmms to 1.2.11nb2 [sbd 2011-11-26]
+	Updated converters/odt2txt to 0.4nb1 [sbd 2011-11-26]
+	Updated cross/avr-binutils to 2.19.1nb1 [sbd 2011-11-26]
+	Updated devel/ccache to 3.1.4nb1 [sbd 2011-11-26]
+	Updated devel/darts to 0.32nb1 [sbd 2011-11-26]
+	Updated devel/libnjb to 2.2.6nb1 [sbd 2011-11-26]
+	Updated devel/snappy to 1.0.1nb1 [sbd 2011-11-26]
+	Updated devel/tla to 1.3.5nb1 [sbd 2011-11-26]
+	Updated geography/cmconvert to 1.9.5nb1 [sbd 2011-11-26]
+	Updated geography/xrmap-base to 2.29nb2 [sbd 2011-11-26]
+	Updated mail/mutt-devel to 1.5.21nb3 [sbd 2011-11-26]
+	Updated net/lopster to 1.2.2nb4 [sbd 2011-11-26]
+	Updated net/wget to 1.13.4nb2 [sbd 2011-11-26]
+	Updated security/mcrypt to 2.6.8nb2 [sbd 2011-11-26]
+	Updated security/stunnel to 4.46nb1 [sbd 2011-11-26]
+	Updated security/sudo to 1.7.8p1nb1 [sbd 2011-11-26]
+	Updated sysutils/radmind to 1.14.1nb1 [sbd 2011-11-26]
+	Updated www/wwwoffle to 2.9anb2 [sbd 2011-11-26]
