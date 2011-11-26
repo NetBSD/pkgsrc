@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3043 2011/11/26 09:18:42 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3044 2011/11/26 11:50:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4840,3 +4840,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/exempi to 2.1.1nb2 [sbd 2011-11-26]
 	Updated multimedia/mediainfo to 0.7.51nb1 [sbd 2011-11-26]
 	Updated www/py-mechanize to 0.2.5 [obache 2011-11-26]
+	Updated databases/slony1 to 2.1.0 [adam 2011-11-26]
