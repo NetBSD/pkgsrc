@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/11/13 21:08:58 shattered Exp $
+# $NetBSD: Makefile,v 1.19 2011/11/26 13:03:36 obache Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
@@ -8,8 +8,9 @@ CATEGORIES=	mail
 MASTER_SITES=	http://software.complete.org/offlineimap/static/download_area/${_OFFLINEIMAP_VER}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://software.complete.org/software/projects/show/offlineimap
+HOMEPAGE=	http://offlineimap.org/
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support
+LICENSE=	python-software-foundation AND gnu-gpl-v2 # or later
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
