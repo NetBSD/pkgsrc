@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.132 2011/11/01 15:09:17 taca Exp $
+# $NetBSD: Makefile,v 1.133 2011/11/26 04:40:23 sbd Exp $
 #
 
 DISTNAME=		sudo-1.7.8p1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -53,4 +54,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sudoers ${DESTDIR}${PREFIX}/${EGDIR}/sudoers
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
