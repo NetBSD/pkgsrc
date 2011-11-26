@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2011/11/22 18:40:27 shattered Exp $
+# $NetBSD: Makefile,v 1.109 2011/11/26 04:40:11 sbd Exp $
 
 DISTNAME=	wget-1.13.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
@@ -29,5 +29,6 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "options.mk"
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
