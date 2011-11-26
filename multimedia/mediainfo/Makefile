@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/11/23 13:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/26 09:17:30 sbd Exp $
 
 DISTNAME=	MediaInfo_CLI_0.7.51_GNU_FromSource
 PKGNAME=	mediainfo-0.7.51
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mediainfo/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,10 +25,11 @@ INSTALLATION_DIRS=	bin
 do-configure:
 
 do-build:
-	cd ${WRKSRC} && ./CLI_Compile.sh
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./CLI_Compile.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/MediaInfo/Project/GNU/CLI/mediainfo \
 	    ${DESTDIR}${PREFIX}/bin/mediainfo
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
