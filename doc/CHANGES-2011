@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3050 2011/11/26 22:28:44 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.3051 2011/11/26 23:53:21 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4848,3 +4848,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/aipo version 6.02 [ryoon 2011-11-26]
 	Updated audio/xmp to 3.4.1 [shattered 2011-11-26]
 	Updated multimedia/ffmpeg to 20111104.0.7.7nb3 [dholland 2011-11-26]
+	Updated net/tinyfugue to 4.0s1nb8 [sbd 2011-11-26]
