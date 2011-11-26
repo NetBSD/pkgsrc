@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3048 2011/11/26 19:30:57 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3049 2011/11/26 21:10:52 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/elftoolchain to 0.5.1nb1 [dholland 2011-11-26]
 	Updated pkgtools/pkglint to 4.104 [ryoon 2011-11-26]
 	Added www/aipo version 6.02 [ryoon 2011-11-26]
+	Updated audio/xmp to 3.4.1 [shattered 2011-11-26]
