@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/08/29 08:31:20 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/26 04:39:39 sbd Exp $
 
 DISTNAME=	darts-0.32
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://chasen.org/~taku/software/darts/src/
 
@@ -34,4 +35,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${EXAMPLESDIR}
 .endfor
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
