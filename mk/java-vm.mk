@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.81 2011/10/03 10:02:56 yyamano Exp $
+# $NetBSD: java-vm.mk,v 1.82 2011/11/26 18:25:43 ryoon Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -26,10 +26,10 @@
 #
 # USE_JAVA2
 #	When the package needs a Java 2 implementation, this variable
-#	should be set to "yes". It can also be set to "1.4", "1.5",
-#	or "6" require an even more recent implementation.
+#	should be set to "yes". It can also be set to "1.4", "1.5", "6"
+#	or "7" require an even more recent implementation.
 #
-#	Possible values: yes no 1.4 1.5 6
+#	Possible values: yes no 1.4 1.5 6 7
 #	Default value: no
 #
 # PKG_JVMS_ACCEPTED
