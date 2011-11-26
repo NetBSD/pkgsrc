@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2002/11/21 16:18:16 tron Exp $
+$NetBSD: patch-aa,v 1.5 2011/11/26 17:19:13 marino Exp $
 
 --- src/wterm.h.orig	Sun Mar  5 12:22:32 2000
 +++ src/wterm.h	Thu Nov 21 17:13:53 2002
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.4 2002/11/21 16:18:16 tron Exp $
  # ifdef HAVE_UTMPX_H		/* means we're on Solaris (or Irix?) */
  #  undef WTMP_FILENAME
 -#  define WTMP_FILENAME		WTMPX_FILE
-+#  ifdef __NetBSD__
++#  if defined(__NetBSD__) || defined(__DragonFly__)
 +#   define WTMP_FILENAME	_PATH_WTMPX
 +#  else
 +#   define WTMP_FILENAME	WTMPX_FILE
