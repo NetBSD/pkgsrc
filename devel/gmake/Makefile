@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2011/07/09 16:25:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.79 2011/11/26 19:01:15 hans Exp $
 
 DISTNAME=	make-3.82
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,6 +25,7 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
@@ -39,19 +40,6 @@ PLIST.gmake=		yes
 .endif
 
 PLIST_SRC=		${PKGDIR}/PLIST
-
-GMAKE_LOCALE?=		yes
-BUILD_DEFS+=		GMAKE_LOCALE
-MAKEFLAGS+=		GMAKE_LOCALE=${GMAKE_LOCALE:Q}
-.if !empty(GMAKE_LOCALE:M[yY][eE][sS])
-USE_PKGLOCALEDIR=		yes
-PLIST_SRC+=			${PKGDIR}/PLIST.locale
-USE_TOOLS+=			msgfmt
-.  include "../../devel/gettext-lib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-libintl
-CONFIGURE_ARGS+=	--without-libiconv
-.endif
 
 .if ${OPSYS} == "MirBSD"
 # workaround for broken strndup
