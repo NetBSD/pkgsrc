@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/09/03 21:45:03 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/26 04:39:19 sbd Exp $
 #
 
 DISTNAME=	nulibdist-203
 PKGNAME=	nulib2-2.0.3
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.nulib.com/downloads/
 
@@ -25,4 +26,5 @@ CONFIGURE_ARGS+=--cache-file=${WRKDIR}/config.cache
 
 CFLAGS+=	-D__unix__
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

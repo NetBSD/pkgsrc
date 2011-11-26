@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2010/03/08 13:49:40 is Exp $
+# $NetBSD: Makefile,v 1.75 2011/11/26 04:40:31 sbd Exp $
 
 DISTNAME=	wwwoffle-2.9a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/
 EXTRACT_SUFX=	.tgz
@@ -89,4 +89,5 @@ finish:
 	${SETENV} CONFDIR="${PKG_SYSCONFDIR}" PKG_PREFIX="${PREFIX}" \
 		${SH} INSTALL _ POST-INSTALL
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
