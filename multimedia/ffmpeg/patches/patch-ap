@@ -1,15 +1,18 @@
-$NetBSD: patch-ap,v 1.1 2011/11/22 10:51:35 marino Exp $
+$NetBSD: patch-ap,v 1.2 2011/11/26 22:28:12 dholland Exp $
 
 --- libavutil/common.h.orig	2011-09-07 13:34:40.000000000 +0000
 +++ libavutil/common.h
-@@ -37,6 +37,14 @@
+@@ -37,6 +37,17 @@
  #include "attributes.h"
  #include "libavutil/avconfig.h"
  
-+#if defined(__DragonFly__)
++#if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__cplusplus)
 +#undef _STDINT_H_
++#undef _SYS_STDINT_H_
++#ifndef __STDC_CONSTANT_MACROS
 +#define __STDC_CONSTANT_MACROS
++#endif
 +#include <stdint.h>
 +#endif
 +#endif
