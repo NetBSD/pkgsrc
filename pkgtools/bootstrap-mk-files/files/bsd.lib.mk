@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.lib.mk,v 1.4 2009/12/30 12:35:33 abs Exp $
+#	$NetBSD: bsd.lib.mk,v 1.5 2011/11/26 15:54:44 dholland Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -392,8 +392,11 @@ lib${LIB}.so.${SHLIB_FULLVERSION}: ${SOLIB} ${DPADD} \
 	    ${SHLIB_LDENDFILE}
 .endif
 .if ${OBJECT_FMT} == "ELF"
+.if defined(SHLIB_FULLVERSION) && defined(SHLIB_MAJOR) && \
+    "${SHLIB_FULLVERSION}" != "${SHLIB_MAJOR}"
 	ln -sf lib${LIB}.so.${SHLIB_FULLVERSION} lib${LIB}.so.${SHLIB_MAJOR}.tmp
 	mv -f lib${LIB}.so.${SHLIB_MAJOR}.tmp lib${LIB}.so.${SHLIB_MAJOR}
+.endif
 	ln -sf lib${LIB}.so.${SHLIB_FULLVERSION} lib${LIB}.so.tmp
 	mv -f lib${LIB}.so.tmp lib${LIB}.so
 .endif
