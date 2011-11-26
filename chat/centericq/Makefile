@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2011/04/22 13:43:05 obache Exp $
+# $NetBSD: Makefile,v 1.75 2011/11/26 17:21:15 marino Exp $
 #
 
 DISTNAME=	centericq-4.21.0
@@ -27,6 +27,8 @@ INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
 INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
 INCOMPAT_CURSES+=	NetBSD-2.*-* NetBSD-3.*-*	# see PR 29060
 INCOMPAT_CURSES+=	NetBSD-4.*-*
+
+NOT_FOR_PLATFORM+=	DragonFly-2.1[0-9]-* DragonFly-[3-9].*-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
