@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2010/12/14 16:27:29 hauke Exp $
+# $NetBSD: Makefile,v 1.28 2011/11/26 04:40:27 sbd Exp $
 #
 
 DISTNAME=	radmind-1.14.1
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radmind/}
 
@@ -32,5 +32,6 @@ OWN_DIRS_PERMS+=	${RADMINDDIR}/postapply ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 07
 OWN_DIRS_PERMS+=	${RADMINDDIR}/cert ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 RCD_SCRIPTS=		radmind
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

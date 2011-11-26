@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2011/11/10 21:01:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2011/11/26 04:40:19 sbd Exp $
 
 DISTNAME=		stunnel-4.46
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.stunnel.org/stunnel/
 
@@ -56,5 +57,6 @@ SUBST_SED.stunnel+=	-e 's|setgid = nogroup|setgid = ${STUNNEL_GROUP}|'
 
 .include "options.mk"
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
