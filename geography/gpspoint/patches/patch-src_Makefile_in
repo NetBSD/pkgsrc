@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile_in,v 1.1 2011/11/26 16:06:17 dholland Exp $
+
+Fix parallel build.
+
+--- src/Makefile.in~	2003-05-21 09:10:47.000000000 +0000
++++ src/Makefile.in
+@@ -566,7 +566,7 @@ distdir: $(DISTFILES)
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(SCRIPTS) $(HEADERS) \
++all-am: Makefile $(LTLIBRARIES) .WAIT $(PROGRAMS) $(SCRIPTS) $(HEADERS) \
+ 		libgpspoint_config.h
+ install-binPROGRAMS: install-libLTLIBRARIES
+ 
