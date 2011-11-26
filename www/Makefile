@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.834 2011/11/19 17:45:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.835 2011/11/26 19:30:19 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -6,6 +6,7 @@ COMMENT=	Packages related to the World Wide Web
 SUBDIR+=	SOGo
 SUBDIR+=	SpeedyCGI
 SUBDIR+=	adzap
+SUBDIR+=	aipo
 SUBDIR+=	album
 SUBDIR+=	album_themes
 SUBDIR+=	amaya
