@@ -1,8 +1,19 @@
-$NetBSD: patch-bo,v 1.5 2009/05/19 23:44:55 asau Exp $
+$NetBSD: patch-bo,v 1.6 2011/11/27 00:28:29 marino Exp $
 
---- src/host.c.orig	2004-01-14 19:50:55.000000000 +0100
-+++ src/host.c	2007-10-14 13:31:44.000000000 +0200
-@@ -978,7 +978,7 @@ iflist(alp, np)
+--- src/host.c.orig	2005-08-22 15:13:17.000000000 +0000
++++ src/host.c
+@@ -217,9 +217,8 @@ static char rcsid[] =
+ 
+ #include <stdio.h>
+ 
+-#ifdef	SYSVSTR
+ #include <string.h>
+-#else
++#ifndef SYSVSTR
+ #include <strings.h>
+ #endif
+ #include <ctype.h>
+@@ -984,7 +983,7 @@ iflist(alp, np)
  #ifdef OSIOCGIFCONF
  #if defined(IMA_RS6K) || defined(IMA_RS6KMP) || defined(IMA_SP2MPI) \
  			|| defined(IMA_AIX4SP2) || defined(IMA_AIX5SP2) \
@@ -11,7 +22,7 @@ $NetBSD: patch-bo,v 1.5 2009/05/19 23:44:55 asau Exp $
  		SIOCGIFCONF
  #else
  		OSIOCGIFCONF
-@@ -992,7 +992,7 @@ iflist(alp, np)
+@@ -998,7 +997,7 @@ iflist(alp, np)
  	}
  
  	for (cp = sif.ifc_ifcu.ifcu_buf;
@@ -20,7 +31,7 @@ $NetBSD: patch-bo,v 1.5 2009/05/19 23:44:55 asau Exp $
  			cp += sizeof(*reqp) - sizeof(struct sockaddr) + SIZ(reqp->ifr_addr))
  	{
  		reqp = (struct ifreq*)cp;
-@@ -1005,7 +1005,11 @@ iflist(alp, np)
+@@ -1011,7 +1010,11 @@ iflist(alp, np)
  		}
  		/* On some FreeBSD systems: */
  		/* if (IFF_UP & req.ifr_flags) { */

@@ -1,16 +1,17 @@
-$NetBSD: patch-ax,v 1.7 2008/01/31 21:06:22 is Exp $
+$NetBSD: patch-ax,v 1.8 2011/11/27 00:28:29 marino Exp $
 
---- lib/pvmgetarch.orig	2004-02-03 20:12:05.000000000 +0000
-+++ lib/pvmgetarch	2008-01-31 14:49:48.000000000 +0000
-@@ -78,6 +78,7 @@
+--- lib/pvmgetarch.orig	2007-11-29 21:17:02.000000000 +0000
++++ lib/pvmgetarch
+@@ -78,6 +78,8 @@ if [ -f /bin/uname -o -f /usr/bin/uname
  	Linux,m68k )            ARCH=LINUXATARI ;;
  	BSD/OS,i[3456]86 )      ARCH=BSD386 ;;
  	FreeBSD,i[3456]86 )     ARCH=FREEBSD ;;
 +	DragonFly,i[3456]86 )   ARCH=DRAGONFLY ;;
++	DragonFly,x86_64 )	ARCH=DRAGONFLY ;;
  	FreeBSD,alpha )         ARCH=FREEBSD ;;
  	SUPER-UX,SX-3 )         ARCH=SX3 ;;
  	uts,* )                 ARCH=UTS2 ;;
-@@ -87,6 +88,37 @@
+@@ -87,6 +89,37 @@ if [ -f /bin/uname -o -f /usr/bin/uname
  	CYGWIN*,i[3456]86 )     ARCH=CYGWIN ;;
  	Darwin,* )              ARCH=DARWIN ;;
  	Rhapsody,"Power Macintosh" )    ARCH=MACOSX ;;
@@ -48,7 +49,7 @@ $NetBSD: patch-ax,v 1.7 2008/01/31 21:06:22 is Exp $
  	esac
  fi
  
-@@ -135,27 +167,7 @@
+@@ -135,27 +168,7 @@ if [ "$ARCH" = UNKNOWN ]; then
  	if [ -f /dynix ]; then ARCH=SYMM; fi
  	if [ -f /bin/titan ]; then ARCH=TITN; fi
  
