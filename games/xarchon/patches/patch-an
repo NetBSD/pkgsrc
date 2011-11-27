@@ -1,8 +1,16 @@
-$NetBSD: patch-an,v 1.1 2006/04/28 16:23:55 joerg Exp $
+$NetBSD: patch-an,v 1.2 2011/11/27 19:42:25 joerg Exp $
 
---- src/Genetic.hpp.orig	2006-04-28 16:16:16.000000000 +0000
+--- src/Genetic.hpp.orig	2002-01-09 18:34:33.000000000 +0000
 +++ src/Genetic.hpp
-@@ -216,9 +216,9 @@ public:
+@@ -1,6 +1,7 @@
+ #ifndef GENETIC_HPP
+ #define GENETIC_HPP
+ 
++#include <cstdlib>
+ #include <list>
+ using namespace std;
+ 
+@@ -216,9 +217,9 @@ public:
    virtual Genetic_Operator<T> *Choose_Operator(void)
    {
      int max=(int)total_op_weight;
@@ -15,7 +23,7 @@ $NetBSD: patch-an,v 1.1 2006/04/28 16:23:55 joerg Exp $
      int r=rand()%max;
      int count=0;
      for (iter=start;iter!=end;iter++) {
-@@ -249,7 +249,7 @@ public:
+@@ -249,7 +250,7 @@ public:
      Genetic_Population<T> *newpop=new Genetic_Population<T>(p->size);
      int cur_size=0;
      while (cur_size<newpop->size) {
@@ -24,7 +32,7 @@ $NetBSD: patch-an,v 1.1 2006/04/28 16:23:55 joerg Exp $
        if ( (cur_size+op->NumOfResults())>newpop->size)
  	continue;
        for (i=0;i<op->NumOfOperands();i++) {
-@@ -264,7 +264,7 @@ public:
+@@ -264,7 +265,7 @@ public:
  	cur_size++;
        }
      }
