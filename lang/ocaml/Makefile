@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2011/08/08 07:31:52 obache Exp $
+# $NetBSD: Makefile,v 1.73 2011/11/27 19:11:59 marino Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -50,6 +50,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.prof
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
+      !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
       !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
 .  endif
