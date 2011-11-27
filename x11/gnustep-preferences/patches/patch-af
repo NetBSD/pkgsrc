@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2011/11/27 11:17:19 marino Exp $
+
+--- Modules/Keyboard/Keyboard.m.orig	2002-06-08 08:29:36.000000000 +0000
++++ Modules/Keyboard/Keyboard.m
+@@ -34,6 +34,9 @@ static const char rcsid[] =
+ # include "Config.h"
+ #endif
+ 
++#import <Foundation/NSDictionary.h>
++#import <Foundation/Foundation.h>
++
+ #import <AppKit/NSButton.h>
+ #import <AppKit/NSNibLoading.h>
+ #import <AppKit/NSOpenPanel.h>
