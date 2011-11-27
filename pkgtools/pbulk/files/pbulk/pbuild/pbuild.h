@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.h,v 1.5 2008/09/14 18:59:02 joerg Exp $ */
+/* $NetBSD: pbuild.h,v 1.6 2011/11/27 19:53:30 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -82,6 +82,7 @@ struct dependency_list {
 struct build_job {
 	/** The package name, including the version number. */
 	char *pkgname;
+	size_t pkgname_len;
 
 	/**
 	 * Pointers into the output from pbulk-resolve. The lines
