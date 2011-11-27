@@ -1,0 +1,13 @@
+$NetBSD: patch-Configure,v 1.1 2011/11/27 19:47:50 joerg Exp $
+
+--- Configure.orig	2011-11-27 18:47:43.000000000 +0000
++++ Configure
+@@ -4799,7 +4799,7 @@ esac
+ libpth=''
+ for xxx in $dlist
+ do
+-    if $test -d $xxx; then
++    if $test -d $xxx -o "$xxx" = "$PREFIX/lib"; then
+ 		case " $libpth " in
+ 		*" $xxx "*) ;;
+ 		*) libpth="$libpth $xxx";;
