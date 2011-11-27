@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2009/06/08 15:37:50 joerg Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/11/27 19:53:30 joerg Exp $
 
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
@@ -10,4 +10,3 @@ HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 FILESDIR=	${.CURDIR}/../../pkgtools/pbulk/files
 
 WRKSRC=		${WRKDIR}/pbulk
-MAKE_JOBS_SAFE=	no
