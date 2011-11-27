@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-aj,v 1.2 2011/11/27 19:43:33 joerg Exp $
 
---- cmn/game.cpp.orig	2003-11-22 11:25:45.000000000 -0800
-+++ cmn/game.cpp	2003-11-22 11:26:04.000000000 -0800
-@@ -34,7 +34,8 @@
+--- cmn/game.cpp.orig	2003-03-22 22:20:00.000000000 +0000
++++ cmn/game.cpp
+@@ -34,13 +34,14 @@ extern "C" {
  }
  
  #if X11
@@ -12,3 +12,10 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
  #endif
  #if WIN32
  #include <strstrea.h>
+ #endif
+ 
+-#include <iomanip.h>
++#include <iomanip>
+ 
+ #include "utils.h"
+ #include "coord.h"

@@ -1,12 +1,14 @@
-$NetBSD: patch-ap,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-ap,v 1.2 2011/11/27 19:43:33 joerg Exp $
 
---- x11/panel.cpp.orig	2003-11-27 15:23:40.000000000 -0800
-+++ x11/panel.cpp	2003-11-27 15:24:00.000000000 -0800
-@@ -32,7 +32,8 @@
+--- x11/panel.cpp.orig	2003-03-22 20:50:44.000000000 +0000
++++ x11/panel.cpp
+@@ -31,8 +31,9 @@ extern "C" {
+ #include <X11/Xutil.h>
  #include <X11/keysym.h>
  }
- #include <iostream.h>
+-#include <iostream.h>
 -#include <strstream.h>
++#include <iostream>
 +#include <strstream>
 +using namespace std;
  
