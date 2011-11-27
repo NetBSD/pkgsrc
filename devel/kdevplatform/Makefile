@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:00:57 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2011/11/27 05:43:24 sbd Exp $
 #
 
 DISTNAME=	kdevplatform-1.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.1.1/src/}
 EXTRACT_SUFX=	.tar.bz2
