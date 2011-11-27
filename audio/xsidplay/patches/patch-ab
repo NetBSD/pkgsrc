@@ -1,18 +1,16 @@
-$NetBSD: patch-ab,v 1.9 2011/11/23 22:32:59 marino Exp $
+$NetBSD: patch-ab,v 1.10 2011/11/27 11:51:17 marino Exp $
 
 --- src/songlendb/File.cpp.orig	2002-03-03 18:00:03.000000000 +0000
 +++ src/songlendb/File.cpp
-@@ -27,6 +27,9 @@
+@@ -27,6 +27,7 @@
  #ifdef XSID_HAVE_NOTHROW
  #include <new>
  #endif
-+#if defined (__DragonFly__)
 +#include <string.h>
-+#endif
  using namespace std;
  
  #include "File.h"
-@@ -126,7 +129,7 @@ bool SongLengthFile::init(const char* fi
+@@ -126,7 +127,7 @@ bool SongLengthFile::init(const char* fi
      streampos fileLen = myIn.tellg();
  #endif
  #ifdef XSID_HAVE_NOTHROW
