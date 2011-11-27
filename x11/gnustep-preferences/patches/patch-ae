@@ -1,12 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2008/12/28 07:56:38 adam Exp $
+$NetBSD: patch-ae,v 1.2 2011/11/27 11:17:19 marino Exp $
 
---- Modules/PrefsApp/PrefsApp.m.orig	2008-12-28 08:41:52.000000000 +0100
+--- Modules/PrefsApp/PrefsApp.m.orig	2002-06-08 08:29:36.000000000 +0000
 +++ Modules/PrefsApp/PrefsApp.m
-@@ -37,6 +37,7 @@ static const char rcsid[] = 
+@@ -37,6 +37,8 @@ static const char rcsid[] =
  #import <Foundation/NSDebug.h>
  #import <Foundation/NSUserDefaults.h>
  #import <Foundation/NSValue.h>
 +#import <Foundation/NSEnumerator.h>
++#import <Foundation/NSDictionary.h>
  
  #import <AppKit/NSButton.h>
  #import <AppKit/NSNibLoading.h>
