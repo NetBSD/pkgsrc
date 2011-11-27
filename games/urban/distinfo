@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2010/02/14 22:04:01 joerg Exp $
+$NetBSD: distinfo,v 1.9 2011/11/27 19:40:50 joerg Exp $
 
 SHA1 (urban-1.5.3.tar.gz) = 3450988a83fa969df0148e4cdce179c033fa0868
 RMD160 (urban-1.5.3.tar.gz) = 55c3aab336f16936139601f50dda4854470f38fb
@@ -7,7 +7,7 @@ SHA1 (sound.tar.gz) = 828f93e1ac6ee43cb82fcd6290a62ba94d7ba18b
 RMD160 (sound.tar.gz) = 250815b664b9e3f8415c9850eeb00dce09e3006f
 Size (sound.tar.gz) = 8116030 bytes
 SHA1 (patch-aa) = eed2cef240eaf0bee47208918e27b65b6cd897f4
-SHA1 (patch-ab) = 52f943c7740e05de2f57a6e874d30cf11d5ac5f5
+SHA1 (patch-ab) = 575bccbfaf8533fcf7c8481e9106558a165a4011
 SHA1 (patch-ac) = 6c6d978ef899fbed49d598c4fde8e65d9ec4d8d9
 SHA1 (patch-ad) = 6b877d79f6f5d2c26f8072979a5d0285f1448ff5
 SHA1 (patch-ae) = 637883461b08a002fc75bb49ae18298f1d35bd79
@@ -15,3 +15,4 @@ SHA1 (patch-af) = c1aad1d42792113e56e60a6a2a572d33aad1000b
 SHA1 (patch-ag) = 181df221bf1f8ba7ee649315257d47e832b19b1a
 SHA1 (patch-ah) = e11a947ef03677dec035e30dfb06dcf24eb03cf6
 SHA1 (patch-ai) = 622526ee3063af3c87a8e0e8fbf10ced0cebbe70
+SHA1 (patch-src_objects_tank.cc) = f56fa0039798dfcc256fff5a27591167cfa4fb5d
