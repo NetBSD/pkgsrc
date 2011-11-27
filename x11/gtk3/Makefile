@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2011/11/01 06:02:53 sbd Exp $
+# $NetBSD: Makefile,v 1.11 2011/11/27 11:26:21 obache Exp $
 
 DISTNAME=	gtk+-3.0.12
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/3.0/ \
 		${MASTER_SITE_GNOME:=sources/gtk+/3.0/}
@@ -77,6 +77,8 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 
 .include "options.mk"
+
+.include "../../devel/glib2/schemas.mk"
 
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.24.0
 .include "../../devel/pango/buildlink3.mk"
