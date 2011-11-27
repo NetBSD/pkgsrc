@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3052 2011/11/27 02:28:58 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3053 2011/11/27 03:49:15 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4850,3 +4850,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/ffmpeg to 20111104.0.7.7nb3 [dholland 2011-11-26]
 	Updated net/tinyfugue to 4.0s1nb8 [sbd 2011-11-26]
 	Updated net/mikutter to 0.0.4.603 [obache 2011-11-27]
+	Updated security/libssh to 0.11nb3 [sbd 2011-11-27]
