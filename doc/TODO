@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10695 2011/11/27 13:32:44 cheusov Exp $
+$NetBSD: TODO,v 1.10696 2011/11/27 13:39:41 cheusov Exp $
 
 Suggested new packages
 ======================
@@ -435,7 +435,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bugzilla-3.6
 	o bwbasic-2.50 [pkg/42846]
 	o byacc-20110908
-	o bzr-svn-1.1.0
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
 	o caff-1.1.4
