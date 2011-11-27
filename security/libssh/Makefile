@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/17 12:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/27 03:49:03 sbd Exp $
 #
 # This package currently exists as a dependency for the hydra package but
 # the later versions of it are not supported by hydra.
@@ -6,7 +6,7 @@
 #
 
 DISTNAME=	libssh-0.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.0xbadc0de.be/libssh/
 EXTRACT_SUFX=	.tgz
@@ -27,5 +27,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/API.html ${DESTDIR}${PREFIX}/share/doc/libssh
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/libssh
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
