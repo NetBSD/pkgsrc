@@ -1,0 +1,53 @@
+$NetBSD: patch-ac,v 1.1 2011/11/27 13:24:58 drochner Exp $
+
+--- scidavis/src/ApplicationWindow.cpp.orig	2011-11-27 12:07:35.000000000 +0000
++++ scidavis/src/ApplicationWindow.cpp
+@@ -135,7 +135,9 @@
+ #include <QVarLengthArray>
+ #include <QList>
+ #include <QUrl>
++#if 0
+ #include <QAssistantClient>
++#endif
+ #include <QStatusBar>
+ #include <QToolButton>
+ #include <QSignalMapper>
+@@ -277,7 +279,9 @@ void ApplicationWindow::init()
+ 	createLanguagesList();
+ 	insertTranslatedStrings();
+ 
++#if 0
+ 	assistant = new QAssistantClient( QString(), this );
++#endif
+ 
+ 	actionNextWindow = new QAction(QIcon(QPixmap(":/next.xpm")), tr("&Next","next window"), this);
+ 	actionNextWindow->setShortcut( tr("F5","next window shortcut") );
+@@ -8198,6 +8202,7 @@ void ApplicationWindow::showStandAloneHe
+ 		exit(0);
+ 	}
+ 
++#if 0
+ 	QFileInfo fi(helpPath);
+ 	QString profilePath = QString(fi.dirPath(true)+"/scidavis.adp");
+ 	if (!QFile(profilePath).exists())
+@@ -8214,10 +8219,12 @@ void ApplicationWindow::showStandAloneHe
+ 	assist->setArguments( cmdLst );
+ 	assist->showPage(helpPath);
+ 	connect(assist, SIGNAL(assistantClosed()), qApp, SLOT(quit()) );
++#endif
+ }
+ 
+ void ApplicationWindow::showHelp()
+ {
++#if 0
+ 	QFile helpFile(helpFilePath);
+ 	if (!helpFile.exists())
+ 	{
+@@ -8243,6 +8250,7 @@ void ApplicationWindow::showHelp()
+ 	QStringList cmdLst = QStringList() << "-profile" << profilePath;
+ 	assistant->setArguments( cmdLst );
+ 	assistant->showPage(helpFilePath);
++#endif
+ }
+ 
+ void ApplicationWindow::showPlotWizard()
