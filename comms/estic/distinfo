@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2008/01/06 18:39:38 rillig Exp $
+$NetBSD: distinfo,v 1.11 2011/11/27 19:36:09 joerg Exp $
 
 SHA1 (estic-1.60-sources.zip) = ce66a6d52faaf6adba492bb3f74e49eab608d0c3
 RMD160 (estic-1.60-sources.zip) = be071c72ab881c815dc9a0847f2b09914bdeb2ed
@@ -6,6 +6,8 @@ Size (estic-1.60-sources.zip) = 892311 bytes
 SHA1 (estic-1.61-patch-from-1.60.zip) = b58cf388e2eb60685402a84cc260d88dc7c1820f
 RMD160 (estic-1.61-patch-from-1.60.zip) = d450161014f353892d72b5ddb87f9d6560ee8c1d
 Size (estic-1.61-patch-from-1.60.zip) = 1017 bytes
+SHA1 (patch-.._spunk_coll.cc) = 5500da1f5332475b5e07a2da53d6b7936a8b4f2d
+SHA1 (patch-.._spunk_machine.h) = fefb7b832d11347dea8011094ee22214b102b7e7
 SHA1 (patch-aa) = d94d170ac16a95f96730d64ca77be18446515fd7
 SHA1 (patch-ab) = 1ee3659e221e07796f4581bd191145c8cc6673a1
 SHA1 (patch-ac) = 2dd445fc1b14bc58d361fed4d6e2366a060b5203
@@ -18,7 +20,7 @@ SHA1 (patch-ai) = d7fdcc29f357a9a8b0790e2491f577160d05db34
 SHA1 (patch-aj) = afaa7e22e01fc698418fb6543fe8e7f81feab106
 SHA1 (patch-ak) = 197a2dccb3433c8d48e2eb3b9a846e3992cd6b7c
 SHA1 (patch-al) = 2d813b690b07e390f4ec6718ef6add7320800807
-SHA1 (patch-am) = 4ff962e488ac6bd45f55127a6d1b2488db82081e
+SHA1 (patch-am) = 497dc20fc2a6d5164fdc41100d840cfb202672a7
 SHA1 (patch-an) = 087a21d344336e2190c3e76b16670551686cd7c0
 SHA1 (patch-ao) = a6385f7d356d1422695a382b33db4fb150e14d7a
 SHA1 (patch-ap) = 1aee1dead27df8b62ba560dad19fe083fe8d6204
