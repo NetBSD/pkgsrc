@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2011/11/27 00:25:05 marino Exp $
+
+--- Makefile.in.orig	2001-08-21 09:44:03.000000000 +0000
++++ Makefile.in
+@@ -102,7 +102,7 @@ libcdread_la_OBJECTS =  cdread.lo cdconf
+ server.lo playlist.lo filter.lo
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link --tag=CC $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+ DIST_COMMON =  README AUTHORS COPYING ChangeLog INSTALL Makefile.am \
+ Makefile.in NEWS TODO acinclude.m4 aclocal.m4 config.guess config.sub \
+ configure configure.in install-sh ltconfig ltmain.sh missing \
