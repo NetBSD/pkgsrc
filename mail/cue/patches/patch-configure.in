@@ -1,0 +1,51 @@
+$NetBSD: patch-configure.in,v 1.1 2011/11/27 13:05:33 obache Exp $
+
+* Prevent extra -O from being added to optimizer flags.
+* Assume that DragonFly's getaddrinfo works.
+* Fix an error with --enable-ipv6.
+
+--- configure.in.orig	2009-12-16 05:51:12.000000000 +0000
++++ configure.in
+@@ -35,7 +35,7 @@ netbsd*)
+ 	;;
+ esac
+ 
+-OPTS="-O"
++OPTS=""
+ CFLAGS=""
+ 
+ # AC_PREFIX_PKG(VARIABLE, HEADER, LIBRARY, PATH [, IF-TRUE [, IF FALSE ] ])
+@@ -98,7 +98,7 @@ AC_ARG_ENABLE(ipv6,
+        ;;
+   esac ],
+ 
+-  AC_TRY_RUN([ /* AF_INET6 avalable check */
++[ AC_TRY_RUN([ /* AF_INET6 avalable check */
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ main()
+@@ -117,7 +117,7 @@ main()
+   ipv6=no,
+   AC_MSG_RESULT(no)
+   ipv6=no
+-))
++)])
+ 
+ ipv6type=unknown
+ ipv6lib=none
+@@ -319,6 +319,7 @@ buggygetaddrinfo=yes,
+ AC_MSG_RESULT(buggy)
+ buggygetaddrinfo=yes)
+ 
++if test ${OPSYS} != "DragonFly"; then
+ if test "$buggygetaddrinfo" = "yes"; then
+ 	if test "$ipv6" = "yes"; then
+ 		echo 'Fatal: You must get working getaddrinfo() function.'
+@@ -326,6 +327,7 @@ if test "$buggygetaddrinfo" = "yes"; the
+ 		exit 1
+ 	fi
+ fi
++fi
+ 
+ # IDEA
+ AC_MSG_CHECKING(if --enable-idea option is specified)
