@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2011/11/27 00:25:05 marino Exp $
+
+--- fileinfo.c.orig	2001-07-21 00:35:41.000000000 +0000
++++ fileinfo.c
+@@ -27,6 +27,7 @@
+ 
+ #include <gtk/gtk.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ 
