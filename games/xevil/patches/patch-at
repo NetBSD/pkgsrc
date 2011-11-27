@@ -1,12 +1,14 @@
-$NetBSD: patch-at,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-at,v 1.2 2011/11/27 19:43:33 joerg Exp $
 
---- x11/serverping.cpp.orig	2003-11-27 15:33:36.000000000 -0800
-+++ x11/serverping.cpp	2003-11-27 15:33:48.000000000 -0800
-@@ -26,7 +26,8 @@
+--- x11/serverping.cpp.orig	2003-03-22 21:55:12.000000000 +0000
++++ x11/serverping.cpp
+@@ -25,8 +25,9 @@
+ // code and should be reasonably easy to compile on Windows.
  
  
- #include <iostream.h>
+-#include <iostream.h>
 -#include <strstream.h>
++#include <iostream>
 +#include <strstream>
 +using namespace std;
  #include "utils.h"
