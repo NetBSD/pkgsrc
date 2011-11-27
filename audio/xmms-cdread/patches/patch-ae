@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 2011/11/27 00:25:05 marino Exp $
+
+--- server.c.orig	2011-11-26 18:44:22.642361000 +0000
++++ server.c
+@@ -282,7 +282,11 @@ read_line(struct cddb_req *req)
+ 		if (r < 0) {
+ 			req->rest[0] = 0;
+ 			if (errno == EAGAIN) {
++#if defined(__DragonFly__)
++				errno = ETIMEDOUT;
++#else
+ 				errno = ETIME;
++#endif
+ 				if (++rtr < READ_TIMEOUT) {
+ 					xmms_usleep(READ_USEC);
+ 					continue;
+@@ -312,7 +316,11 @@ write_line(gint sock, gchar *l)
+ 		gint w = write(sock, p, strlen(p));
+ 		if (w < 0) {
+ 			if (errno == EAGAIN) {
++#if defined(__DragonFly__)
++				errno = ETIMEDOUT;
++#else
+ 				errno = ETIME;
++#endif
+ 				if (++rtr < READ_TIMEOUT) {
+ 					xmms_usleep(READ_USEC);
+ 					continue;
