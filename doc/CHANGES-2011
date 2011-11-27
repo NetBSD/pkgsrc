@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3063 2011/11/27 14:20:46 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.3064 2011/11/27 18:53:09 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4862,3 +4862,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/bzr-explorer to 1.2.1nb1 [cheusov 2011-11-27]
 	Updated devel/qbzr to 0.21.1nb1 [cheusov 2011-11-27]
 	Updated devel/bzr-gtk to 0.100.0 [cheusov 2011-11-27]
+	Updated lang/runawk to 1.4.0 [cheusov 2011-11-27]
