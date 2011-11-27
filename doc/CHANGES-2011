@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3055 2011/11/27 08:10:24 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.3056 2011/11/27 11:26:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4853,3 +4853,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/libssh to 0.11nb3 [sbd 2011-11-27]
 	Updated www/serf to 0.3.0nb2 [sbd 2011-11-27]
 	Updated multimedia/mediatomb to 0.12.1nb7 [sbd 2011-11-27]
+	Updated x11/gtk3 to 3.0.12nb2 [obache 2011-11-27]
