@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2008/08/17 23:50:06 dholland Exp $
+$NetBSD: distinfo,v 1.8 2011/11/27 19:43:33 joerg Exp $
 
 SHA1 (xevilsrc2.02r2.zip) = e9a262daffc7ee5c06196dc94cf35c199be86bbc
 RMD160 (xevilsrc2.02r2.zip) = dca82298ac2dfe66e4e92a02731bb6851563b67e
@@ -11,15 +11,20 @@ SHA1 (patch-af) = 4d1e6e7cfa7c1b4423ac9edc8f3ece68dbab9b79
 SHA1 (patch-ag) = c826c7ee631b3661ca78fe243b6aeb1ff37d73e2
 SHA1 (patch-ah) = b78acf6e01bd555024eb1a6a5d80ab8c393de4c5
 SHA1 (patch-ai) = 8579f4f6594ff2d01c35c2becc7cf395a5195550
-SHA1 (patch-aj) = e7ec143b757de6f07693bc6e192f6d9e913ce252
-SHA1 (patch-ak) = 28afd60df44748a759fbce3a989d3b44b5cf63f4
+SHA1 (patch-aj) = 78214c3bf9d643f9f8ade8c24944eea6b976ea6c
+SHA1 (patch-ak) = a83854de16104e124213e3990597555c21533411
 SHA1 (patch-al) = 2530864b88b66b5c45b0996cb65269899b115e3f
 SHA1 (patch-am) = 9250c6c734b22f1edf63040e2c70579917593f59
 SHA1 (patch-an) = 4325b3ff1f32a9b09b540bcc0b482acdf8e96237
-SHA1 (patch-ao) = 6ded6c8cc125765928b363dda435c14a3f58fd1c
-SHA1 (patch-ap) = a4e4ab0655c218c18d195964ed65db2e1487c895
+SHA1 (patch-ao) = 85f4b0f2238ea1cbfe3ed16a9cd58ed2c64a0da1
+SHA1 (patch-ap) = 7fb4d991f629ee5f36718a047ce4667c563fd95b
 SHA1 (patch-aq) = 2a781bd3118bda38244f7b7a0bb1a202a90c3983
 SHA1 (patch-ar) = 8be1ce3f1ed2bd55dfc77042fa5f62fc6b036903
-SHA1 (patch-as) = 8220ca95a190cc40eab516a8f3bc47491a4c9874
-SHA1 (patch-at) = 308f449ad894daba7da6ad6e6c2239e2d713b660
+SHA1 (patch-as) = 4c4e4ef0e626b8f04a120c996ec155cacf0c0ddf
+SHA1 (patch-at) = 79eeea82adaa8727cb5104068168cd9c0ffff621
 SHA1 (patch-au) = f1092ff4228d4bb6f13e6aeb0ea70a5b4b9635b6
+SHA1 (patch-cmn_game.h) = 47db702d729158290118cf75a0c437362f9af1c3
+SHA1 (patch-cmn_streams.cpp) = bb32e15807cc5ff2289df2e1dc1c1661c8949ad4
+SHA1 (patch-cmn_world.cpp) = 7bae7dfe426bf7dcf06906d62cd60c50efe98d4f
+SHA1 (patch-x11_main.cpp) = 425c3be3de05666293e47ce37ec9ff255c456c25
+SHA1 (patch-x11_xdata.cpp) = 0942dda395ca3bf1038a900e985a27b3e655d484
