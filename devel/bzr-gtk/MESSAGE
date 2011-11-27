@@ -1,7 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/08/26 01:20:25 epg Exp $
+$NetBSD: MESSAGE,v 1.2 2011/11/27 14:20:18 cheusov Exp $
 
 bzr-gtk requires x11/py-gnome2-desktop to show syntax highlighted diffs.
-Nautilus integration is not yet supported.
 
 ===========================================================================
