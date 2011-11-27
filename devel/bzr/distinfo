@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.37 2010/12/04 01:21:06 gdt Exp $
+$NetBSD: distinfo,v 1.38 2011/11/27 13:31:23 cheusov Exp $
 
-SHA1 (bzr-2.1.1.tar.gz) = f8628ef1a9e9b7a397a8d673cef677e5449f6e95
-RMD160 (bzr-2.1.1.tar.gz) = a1c6e91907954d2bbaa117eafccaa69d70d0c337
-Size (bzr-2.1.1.tar.gz) = 6786377 bytes
-SHA1 (patch-aa) = 8eda90885b3127525330cd3432538fb2b4df98c1
-SHA1 (patch-ab) = ea67de3b217fb5106b17d129a84f9024a60890e2
+SHA1 (bzr-2.4.2.tar.gz) = 3663b862dc8fb9729f9aae2427cbab2af9c901ad
+RMD160 (bzr-2.4.2.tar.gz) = 47ecfd1651d10aeea28c0dff3124c637dbbb93ab
+Size (bzr-2.4.2.tar.gz) = 7528721 bytes
+SHA1 (patch-ab) = 2de173e9703e8651cbf5a414c596c697268b27fe
