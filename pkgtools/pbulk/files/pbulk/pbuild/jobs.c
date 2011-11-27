@@ -1,7 +1,7 @@
-/* $NetBSD: jobs.c,v 1.12 2010/05/05 00:07:07 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.13 2011/11/27 19:53:30 joerg Exp $ */
 
 /*-
- * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2007, 2009, 2011 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * This code was developed as part of Google's Summer of Code 2007 program.
@@ -56,7 +56,7 @@ SLIST_HEAD(buildhash, build_job);
 
 static void build_tree(void);
 static void mark_initial(void);
-static struct buildhash *get_hash_chain(const char *);
+static struct buildhash *get_hash_chain(const char *, size_t);
 static void hash_entries(void);
 static void add_to_build_list(struct build_job *);
 
@@ -109,22 +109,24 @@ find_content(struct build_job *job, const char *prefix)
 	return NULL;
 }
 
-static char *
-pkgname_dup(const char *line)
+static int
+pkgname_dup(struct build_job *job, const char *line)
 {
 	const char *pkgname;
 	char *pkgname_end;
 	size_t pkgname_len;
 
 	if (strncmp(line, "PKGNAME=", 8) != 0)
-		return NULL;
+		return 0;
 	pkgname = line + 8;
 	pkgname_end = strchr(pkgname, '\n');
 	pkgname_len = pkgname_end - pkgname;
 	if (pkgname_end == NULL || pkgname_len < 4 ||
 	    strcspn(pkgname, " \t\n") != pkgname_len)
-		return NULL;
-	return xstrndup(pkgname, pkgname_len);
+		return 0;
+	job->pkgname = xstrndup(pkgname, pkgname_len);
+	job->pkgname_len = pkgname_len;
+	return 1;
 }
 
 static const char *
@@ -215,7 +217,7 @@ init_jobs(const char *scan_output, const char *success_file, const char *error_f
 	}
 
 	input_iter = input;
-	while ((jobs[len_jobs].pkgname = pkgname_dup(input_iter)) != NULL) {
+	while (pkgname_dup(&jobs[len_jobs], input_iter)) {
 		jobs[len_jobs].begin = input_iter;
 		jobs[len_jobs].end = pbulk_item_end(input_iter);
 		jobs[len_jobs].state = JOB_INIT;
@@ -262,9 +264,9 @@ mark_initial_state(int fd, enum job_state state, const char *type)
 
 	while (*input_iter != '\0') {
 		len = strcspn(input_iter, "\n");
-		SLIST_FOREACH(iter, get_hash_chain(input_iter), hash_link) {
-			if (strncmp(iter->pkgname, input_iter, len) == 0 &&
-			    iter->pkgname[len] == '\0')
+		SLIST_FOREACH(iter, get_hash_chain(input_iter, len), hash_link) {
+			if (iter->pkgname_len == len &&
+			    strncmp(iter->pkgname, input_iter, len) == 0)
 				break;
 		}
 		if (iter == NULL)
@@ -274,7 +276,7 @@ mark_initial_state(int fd, enum job_state state, const char *type)
 
 		input_iter = strchr(input_iter, '\n');
 		if (input_iter == NULL)
-			errx(1, "Invalid input");		
+			errx(1, "Invalid input");
 		++input_iter;
 	}
 	free(input);
@@ -340,9 +342,9 @@ build_tree(void)
 		depends += strspn(depends, " \t");
 
 		while ((len = strcspn(depends, " \t\n")) != 0) {
-			SLIST_FOREACH(iter, get_hash_chain(depends), hash_link) {
-				if (strncmp(iter->pkgname, depends, len) == 0 &&
-				    iter->pkgname[len] == '\0')
+			SLIST_FOREACH(iter, get_hash_chain(depends, len), hash_link) {
+				if (iter->pkgname_len == len &&
+				    strncmp(iter->pkgname, depends, len) == 0)
 					break;
 			}
 			if (iter == NULL)
@@ -530,7 +532,15 @@ finish_build(const char *report_file)
 }
 
 #define	HASH_SIZE 4096
-#define	HASH_ITEM(x) (((unsigned char)(x)[0] + (unsigned char)(x)[1] * 257 + (unsigned char)(x)[1] * 65537) & (HASH_SIZE - 1))
+
+static size_t
+hash_item(const char *s, size_t len)
+{
+	size_t h = 5381;
+	while (len--)
+		h = h * 33 + *s++;
+	return h & (HASH_SIZE - 1);
+}
 
 static struct buildhash hash_table[HASH_SIZE];
 
@@ -543,13 +553,13 @@ hash_entries(void)
 		SLIST_INIT(&hash_table[i]);
 
 	for (i = 0; i < len_jobs; ++i) {
-		hash = HASH_ITEM(jobs[i].pkgname);
+		hash = hash_item(jobs[i].pkgname, jobs[i].pkgname_len);
 		SLIST_INSERT_HEAD(&hash_table[hash], &jobs[i], hash_link);
 	}
 }
 
 static struct buildhash *
-get_hash_chain(const char *pkgname)
+get_hash_chain(const char *pkgname, size_t len)
 {
-	return &hash_table[HASH_ITEM(pkgname)];
+	return &hash_table[hash_item(pkgname, len)];
 }
