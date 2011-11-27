@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/20 21:42:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/27 18:52:53 cheusov Exp $
 bin/alt_getopt
 bin/alt_getopt.sh
 bin/runawk
@@ -36,6 +36,7 @@ share/examples/runawk/demo_heapsort4
 share/examples/runawk/demo_heapsort4.in
 share/examples/runawk/demo_ini
 share/examples/runawk/demo_ini.in
+share/examples/runawk/demo_io
 share/examples/runawk/demo_minmax
 share/examples/runawk/demo_modinfo
 share/examples/runawk/demo_multisub
@@ -49,6 +50,7 @@ share/examples/runawk/demo_readfile.in
 share/examples/runawk/demo_runcmd
 share/examples/runawk/demo_shquote
 share/examples/runawk/demo_shquote.in
+share/examples/runawk/demo_splitre
 share/examples/runawk/demo_str2regexp
 share/examples/runawk/demo_tmpfile
 share/examples/runawk/demo_tokenre
@@ -82,6 +84,7 @@ share/runawk/has_suffix.awk
 share/runawk/heapsort.awk
 share/runawk/ini.awk
 share/runawk/init_getopt.awk
+share/runawk/io.awk
 share/runawk/isnum.awk
 share/runawk/match_br.awk
 share/runawk/max.awk
