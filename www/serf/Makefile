@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/01/17 12:02:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2011/11/27 05:42:50 sbd Exp $
 #
 
 DISTNAME=	serf-0.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://serf.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,5 +23,6 @@ TEST_TARGET=		check
 
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
