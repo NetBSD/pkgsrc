@@ -1,7 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2011/09/04 23:10:30 dholland Exp $
-
-- support more OSes
-- avoid gross linker abuse 
+$NetBSD: patch-ab,v 1.3 2011/11/27 00:25:05 marino Exp $
 
 --- cdread.c.orig	2001-08-18 11:29:43.000000000 +0000
 +++ cdread.c
@@ -33,3 +30,13 @@ $NetBSD: patch-ab,v 1.2 2011/09/04 23:10:30 dholland Exp $
  static void
  cd_init(void)
  {
+@@ -742,7 +745,8 @@ get_volume(gint *l, gint *r)
+ static void
+ set_volume(gint l, gint r)
+ {
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && \
++   (defined(__FreeBSD__) || defined(__DragonFly__))
+ 	struct ioc_vol vol;
+ #else
+ 	struct cdrom_volctrl vol;
