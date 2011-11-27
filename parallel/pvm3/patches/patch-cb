@@ -1,0 +1,15 @@
+$NetBSD: patch-cb,v 1.1 2011/11/27 00:28:29 marino Exp $
+
+--- src/ddpro.c.orig	2004-01-14 18:50:55.000000000 +0000
++++ src/ddpro.c
+@@ -411,9 +411,8 @@ static char rcsid[] =
+ #include <netdb.h>
+ #endif
+ 
+-#ifdef	SYSVSTR
+ #include <string.h>
+-#else
++#ifndef SYSVSTR
+ #include <strings.h>
+ #endif
+ 
