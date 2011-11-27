@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.176 2011/10/16 20:43:56 wiz Exp $
+# $NetBSD: Makefile,v 1.177 2011/11/27 19:47:50 joerg Exp $
 
 .include "license.mk"
 .include "Makefile.common"
 
 COMMENT=	Practical Extraction and Report Language
-PKGREVISION=	1
+PKGREVISION=	2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -279,10 +279,10 @@ SUBST_SED.rm=	-e "s!^rm_try='/.*/\\.tools/bin/rm -f!rm_try='/bin/rm -f!"
 
 # Replace our perl as the interpreter
 REPLACE_PERL+=		lib/File/DosGlob.pm
-REPLACE_PERL+=		lib/version.pm
-REPLACE_PERL+=		cpan/bignum/lib/Math/BigFloat/Trace.pm
-REPLACE_PERL+=		cpan/bignum/lib/Math/BigInt/Trace.pm
 REPLACE_PERL+=		lib/unicore/mktables
+REPLACE_PERL+=		lib/version.pm
+REPLACE_PERL+=		dist/bignum/lib/Math/BigFloat/Trace.pm
+REPLACE_PERL+=		dist/bignum/lib/Math/BigInt/Trace.pm
 
 # And replace a perl interpreter during the pre-install stage
 # I think this may be a bootstrap script, so can't use REPLACE_PERL
