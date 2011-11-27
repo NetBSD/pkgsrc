@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.73 2011/11/27 19:11:59 marino Exp $
+# $NetBSD: Makefile,v 1.74 2011/11/27 19:46:00 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PKGREVISION=		3
+PKGREVISION=		4
 
 CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ARGS+=	-cc ${CC}
@@ -69,6 +69,17 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 .if ${OPSYS} == "SunOS"
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
+
+.if ${OPSYS} == "NetBSD"
+EXTRA_RT_LIBS=	-lcurses
+.else
+EXTRA_RT_LIBS=
+.endif
+
+SUBST_CLASSES+=		extra-rt-libs
+SUBST_FILES.extra-rt-libs=	bytecomp/bytelink.ml
+SUBST_SED.extra-rt-libs+=	-e 's,@EXTRA_RT_LIBS@,${EXTRA_RT_LIBS},g'
+SUBST_STAGE.extra-rt-libs=	pre-configure
 
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
