@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2007/06/21 12:38:27 markd Exp $
+$NetBSD: patch-aa,v 1.5 2011/11/27 14:20:42 drochner Exp $
 
 --- configure.orig	2001-03-26 17:23:02.000000000 +1200
 +++ configure
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.4 2007/06/21 12:38:27 markd Exp $
 +double s;
  int main() {
 - double s = sin(1.5); 
-+ s = sin(1.5); 
++ s = sin(s); 
  ; return 0; }
  EOF
  if { (eval echo configure:3443: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
