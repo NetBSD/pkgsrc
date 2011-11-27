@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/04/16 18:18:28 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/27 19:40:50 joerg Exp $
 
---- src/credits/credits.cc.orig	2004-04-16 19:33:15.000000000 +0200
-+++ src/credits/credits.cc	2004-04-16 19:35:57.000000000 +0200
-@@ -72,50 +72,46 @@
+--- src/credits/credits.cc.orig	1999-06-11 12:25:40.000000000 +0000
++++ src/credits/credits.cc
+@@ -33,6 +33,7 @@
+ 
+ *****************************************************************************/
+ 
++#include <algorithm>
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
+@@ -72,50 +73,46 @@ struct CreditsInfo {
          int erase_title;
  } _ci[] = {
  {"PROGRAMMING",
@@ -81,3 +89,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/16 18:18:28 xtraeme Exp $
  
  
  uchar lightmap[256 * 256] = {};
+@@ -141,7 +138,7 @@ static void InitLightmap() {
+                         	nz = 0;
+ 
+ 			lightmap[x + y * 256] =
+-                        	(uchar)(255 <? nz * 191 + nz * nz * nz * nz * nz * nz * nz * nz * nz * 64);
++                        	(uchar)std::min(255.0f, nz * 191 + nz * nz * nz * nz * nz * nz * nz * nz * nz * 64);
+ 		}
+ }
+ 
