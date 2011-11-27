@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/19 06:12:59 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/11/27 19:38:32 joerg Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -18,6 +18,9 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl
+
+# libthrift is not clean
+BUILDLINK_TRANSFORM+=	rm:-Wundef
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
