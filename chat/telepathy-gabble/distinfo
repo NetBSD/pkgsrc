@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.11 2011/07/04 07:08:24 obache Exp $
+$NetBSD: distinfo,v 1.12 2011/11/27 19:35:27 joerg Exp $
 
 SHA1 (telepathy-gabble-0.11.10.tar.gz) = 26ca4e8a98b01b78007f88caea56b08ae5070fdd
 RMD160 (telepathy-gabble-0.11.10.tar.gz) = b4906a01b8cc6e6630e1707e97250bcdefeac9c4
 Size (telepathy-gabble-0.11.10.tar.gz) = 3443486 bytes
+SHA1 (patch-lib_ext_wocky_tests_wocky-test-sasl-auth-server.c) = f53a0b3247df5a5dcf90809a9495966ff26c6c3f
+SHA1 (patch-lib_ext_wocky_wocky_wocky-openssl.c) = 31dd925561791d542918e09c4a0ec81683a74c9e
