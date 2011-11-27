@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.24 2011/03/19 09:44:17 wiz Exp $
+# $Id: pkg_tarup,v 1.25 2011/11/27 00:10:38 agc Exp $
 #
 # Tar up installed package
 #
@@ -136,7 +136,7 @@ create_package()
 	# It's kind of silly to jump through hoops to get stuff with spaces
 	# here, since we have no way to pass it to pkg_create, but maybe someone
 	# will care enough to fix the rest of this.
-	PKG_PREFIX=`pkg_info -qp "${PKG}" | ${HEAD} -1 | ${SED} -e's/^@cwd[[:space:]]*//'`
+	PKG_PREFIX=`pkg_info -K ${PKG_DBDIR} -qp "${PKG}" | ${HEAD} -1 | ${SED} -e's/^@cwd[[:space:]]*//'`
 
 	PKG_ARGS="${PKG_ARGS} -v"
 	PKG_ARGS="${PKG_ARGS} -f \"${PLIST}\""
@@ -164,7 +164,7 @@ add_to_list()
 	IFS="
 "
 	# Get expanded name, and escape quotes
-	for rPKG in `pkg_info -e "$1" | ${SED} -e's/\"/\\\"/g'` ; do
+	for rPKG in `pkg_info -K ${PKG_DBDIR} -e "$1" | ${SED} -e's/\"/\\\"/g'` ; do
 		if [ -z "$rPKG" -o -f "${PKG_DBDIR}/${rPKG}" ] ; then
 			${ECHO} "Error: package $1 not found"
 			usage
@@ -220,7 +220,7 @@ add_all_deps_to_list()
 	oIFS="$IFS"
 	IFS="
 "
-	for f in `pkg_info -qf "$1" | ${GREP} @pkgdep | ${SED} -e's/^@pkgdep[[:space:]]*//' ` ; do
+	for f in `pkg_info -K ${PKG_DBDIR} -qf "$1" | ${GREP} @pkgdep | ${SED} -e's/^@pkgdep[[:space:]]*//' ` ; do
 		add_to_list "$f"
 		add_all_deps_to_list "$f"
 	done
