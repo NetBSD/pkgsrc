@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2008/07/14 23:01:32 christos Exp $
+$NetBSD: patch-ah,v 1.5 2011/11/27 14:17:41 drochner Exp $
 
---- Makefile.in.orig	2008-05-04 00:30:46.000000000 -0400
-+++ Makefile.in	2008-06-28 16:21:12.000000000 -0400
-@@ -245,8 +245,7 @@
+--- Makefile.in.orig	2010-03-12 14:45:02.000000000 +0000
++++ Makefile.in
+@@ -288,8 +288,7 @@ SUBDIRS = bindings bitmaps \
               include \
               tools \
               clients \
@@ -11,4 +11,4 @@ $NetBSD: patch-ah,v 1.4 2008/07/14 23:01:32 christos Exp $
 +             doc
  
  AUTOMAKE_OPTIONS = 1.4
- all: all-recursive
+ ACLOCAL_AMFLAGS = -I .
