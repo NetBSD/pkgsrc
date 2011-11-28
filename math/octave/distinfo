@@ -1,16 +1,13 @@
-$NetBSD: distinfo,v 1.29 2011/09/12 08:31:39 obache Exp $
+$NetBSD: distinfo,v 1.30 2011/11/28 22:51:27 drochner Exp $
 
 SHA1 (octave-3.2.4.tar.bz2) = 7de078564027108f3436f3ba7bf5993a6b411a67
 RMD160 (octave-3.2.4.tar.bz2) = 6dcdea7ef2431b8427da5e6b9d2113e0e5736f43
 Size (octave-3.2.4.tar.bz2) = 12080959 bytes
 SHA1 (patch-ab) = 55983c073f773c8f5aa6147a65f03e0351c6ece4
-SHA1 (patch-ac) = fa39afe6f033e0be57ffde20d49b845c0243f91d
-SHA1 (patch-ad) = fc1fa488273878595fdef9ee1c2fcf9a4262e9e3
-SHA1 (patch-af) = b6b7c7a2c220997126769163fb1347ed7f5bfcb8
-SHA1 (patch-ag) = ec0fac7a105b8099cc0fdfa8e4ad002af66ddf0e
+SHA1 (patch-ag) = a895678883a337f2f2c6b10f6ddda3c89f240a33
 SHA1 (patch-ah) = a2c6e3c6cb4c4570647edb4f484f514d75dda3ba
 SHA1 (patch-ai) = d7b4841238f7358bea50dd1b1b22cd94ab2af229
 SHA1 (patch-ak) = 98aa84ac66fac0b7b0dcdb69e911dc9d42fd6673
-SHA1 (patch-an) = 4ce4be6b91fb61e76fe8a85d5120721d562b475a
+SHA1 (patch-an) = 6d5b4e7bdd4ff73a0607dba7561d1a7a899c5930
 SHA1 (patch-ao) = 80be57d904d48cc48d8f3da0a3883309a343d084
 SHA1 (patch-src_DLD-FUNCTIONS_urlwrite.cc) = bb731c16a1ee1aa174c7cb8f0f479ed3787ecb07

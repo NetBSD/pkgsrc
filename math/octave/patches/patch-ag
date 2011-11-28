@@ -1,67 +1,20 @@
-$NetBSD: patch-ag,v 1.9 2010/04/24 20:58:36 asau Exp $
+$NetBSD: patch-ag,v 1.10 2011/11/28 22:51:28 drochner Exp $
 
---- src/Makefile.in.orig	2009-06-03 16:32:49.000000000 +0400
-+++ src/Makefile.in	2010-02-21 13:57:25.000000000 +0300
-@@ -240,7 +240,7 @@
+--- src/Makefile.in.orig	2009-06-03 12:32:49.000000000 +0000
++++ src/Makefile.in
+@@ -299,13 +299,13 @@ endif
  
- EXTRAS := ov-base-int.cc ov-base-mat.cc ov-base-diag.cc ov-base-scalar.cc graphics-props.cc
+ OCTINTERP_LINK_DEPS = \
+   -L../liboctave $(LIBOCTAVE) -L../libcruft $(LIBCRUFT) $(LIBS) $(FLIBS) \
+-  $(X11_LIBS) $(OPENGL_LIBS) $(CARBON_LIBS)
++  $(X11_LIBS) $(OPENGL_LIBS) $(CARBON_LIBS) $(RLD_FLAG)
  
--EXTRA_OBJECTS := oct-errno.o octave.o builtins.o ops.o
-+EXTRA_OBJECTS := oct-errno.o builtins.o ops.o
+ OCT_LINK_DEPS = \
+   -L../libcruft $(LIBCRUFT) -L../liboctave $(LIBOCTAVE) \
+   -L. $(LIBOCTINTERP) $(CHOLMOD_LIBS) $(UMFPACK_LIBS) $(AMD_LIBS) \
+    $(CAMD_LIBS) $(COLAMD_LIBS) $(CCOLAMD_LIBS) $(CXSPARSE_LIBS) $(BLAS_LIBS) \
+-   $(FFTW_LIBS) $(QRUPDATE_LIBS) $(ARPACK_LIBS) $(LIBS) $(FLIBS)
++   $(FFTW_LIBS) $(QRUPDATE_LIBS) $(ARPACK_LIBS) $(LIBS) $(FLIBS) $(RLD_FLAG)
  
- INCLUDES_FOR_INSTALL := $(INCLUDES) $(EXTRAS) $(BUILT_EXTRAS)
- 
-@@ -357,8 +357,9 @@
- 
- $(LIBPRE)octinterp.$(LIBEXT): $(OBJECTS) $(XERBLA)
- 	rm -f $@
--	$(TEMPLATE_AR) $(TEMPLATE_ARFLAGS) $@ $^
--	$(RANLIB) $@
-+	${LIBTOOL} --mode=link ${CC} -o liboctinterp.$(LIBEXT) \
-+		$(OBJECTS:.o=.lo) $(XERBLA:.o=.lo) -rpath ${PREFIX}/lib \
-+		-version-number ${version:3.2.%=3:2:%} $(OCTINTERP_LINK_DEPS)
- 
- $(SHLPRE)octinterp.$(SHLEXT_VER): $(SHLPRE)octinterp.$(SHLEXT)
- 	rm -f $@
-@@ -366,9 +367,10 @@
- 
- $(SHLPRE)octinterp.$(SHLEXT): $(PICOBJ) $(PIC_XERBLA)
- 	rm -f $@
--	$(SH_LD) $(SH_LDFLAGS) $(SONAME_FLAGS) -o $@ $^ $(OCTINTERP_LINK_DEPS)
-+	${LIBTOOL} --mode=link $(SH_LD) $(SH_LDFLAGS) $(SONAME_FLAGS) -o $@ $^ $(OCTINTERP_LINK_DEPS)
- 
- octave$(EXEEXT): $(LIBRARIES) main.o $(DLD_STATIC_OBJ)
-+	${LIBTOOL} --mode=link \
- 	$(LD_CXX) $(CPPFLAGS) $(ALL_CXXFLAGS) $(RDYNAMIC_FLAG) \
- 	$(ALL_LDFLAGS) -o $@ \
- 	main.o $(DLD_STATIC_OBJ) \
-@@ -460,6 +462,7 @@
- install-bin:
- 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
- 	rm -f $(DESTDIR)$(bindir)/octave$(EXEEXT)
-+	${LIBTOOL} --mode=install \
- 	$(INSTALL_PROGRAM) octave$(EXEEXT) $(DESTDIR)$(bindir)/octave-$(version)$(EXEEXT)
- 	cd $(DESTDIR)$(bindir) ; $(LN_S) octave-$(version)$(EXEEXT) octave$(EXEEXT)
- .PHONY: install-bin
-@@ -470,7 +473,8 @@
- 	if [ -n "$(OCT_FILES)" ]; then \
- 	  xfiles="$(OCT_FILES)"; \
- 	  for f in $$xfiles; do \
--	    $(INSTALL_PROGRAM) $$f $(DESTDIR)$(octfiledir)/$$f; \
-+	    ${LIBTOOL} --mode=install \
-+	    $(BSD_INSTALL_LIB) $$f $(DESTDIR)$(octfiledir)/$$f; \
- 	  done; \
- 	fi
- .PHONY: install-oct
-@@ -479,9 +483,8 @@
- 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
- 	if $(STATIC_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(LIBEXT); \
--	  $(INSTALL_DATA) $(LIBPRE)octinterp.$(LIBEXT) \
--	    $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(LIBEXT); \
--	  $(RANLIB) $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(LIBEXT); \
-+	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} liboctinterp.$(LIBEXT) \
-+		${DESTDIR}${PREFIX}/lib; \
- 	fi
- 	if $(SHARED_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/$(SHLLIBPRE)octinterp.$(SHLLIB_VER); \
+ BUILT_DISTFILES = DOCSTRINGS oct-gperf.h parse.cc lex.cc y.tab.h \
+ 	$(OPT_HANDLERS) $(BUILT_EXTRAS)

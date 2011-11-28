@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/07/19 00:33:10 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/11/28 22:51:27 drochner Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -756,9 +756,15 @@ include/${PKGNAME}/octave/xpow.h
 include/${PKGNAME}/octave/zfstream.h
 info/liboctave.info
 info/octave.info
-lib/libcruft.la
-lib/liboctave.la
-lib/liboctinterp.la
+lib/${PKGNAME}/libcruft.a
+lib/${PKGNAME}/libcruft.so
+lib/${PKGNAME}/libcruft.so.${PKGVERSION}
+lib/${PKGNAME}/liboctave.a
+lib/${PKGNAME}/liboctave.so
+lib/${PKGNAME}/liboctave.so.${PKGVERSION}
+lib/${PKGNAME}/liboctinterp.a
+lib/${PKGNAME}/liboctinterp.so
+lib/${PKGNAME}/liboctinterp.so.${PKGVERSION}
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/PKG_ADD
@@ -847,6 +853,7 @@ share/octave/${PKGVERSION}/doc/refcard-a4.ps
 share/octave/${PKGVERSION}/doc/refcard-legal.ps
 share/octave/${PKGVERSION}/doc/refcard-letter.ps
 share/octave/${PKGVERSION}/etc/NEWS
+share/octave/${PKGVERSION}/etc/doc-cache
 share/octave/${PKGVERSION}/imagelib/default.img
 share/octave/${PKGVERSION}/imagelib/octave-sombrero.png
 share/octave/${PKGVERSION}/m/audio/lin2mu.m
@@ -1773,4 +1780,3 @@ share/octave/site/m/startup/octaverc
 @pkgdir libexec/octave/api-v37/site/exec/${MACHINE_GNU_PLATFORM}
 @pkgdir libexec/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
 @pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/${PKGNAME}
