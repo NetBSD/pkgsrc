@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10705 2011/11/28 16:39:42 wiz Exp $
+$NetBSD: TODO,v 1.10706 2011/11/28 16:46:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocaml-3.12.1
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
-	o ocp-0.1.21
 	o ocsigen-1.1.0 [pkg/40761]
 	o octave-3.4.3
 	o offlineimap-6.2.0
@@ -1283,7 +1282,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tellico-2.3.4
 	o tesseract-3.01
 	o tetrinetx-1.40c
-	o texlive-tetex-20110705
 	o texmaker-3.1 [pkg/45521]
 	o tfmxplay-1.1.6
 	o tig-0.18
