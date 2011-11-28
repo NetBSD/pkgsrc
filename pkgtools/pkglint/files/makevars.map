@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.215 2011/11/26 18:38:05 ryoon Exp $
+# $NetBSD: makevars.map,v 1.216 2011/11/28 16:50:18 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -475,7 +475,7 @@ MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 51 55 } [m:s]
 MYSQL_VERSION_DEFAULT	Version [$user]
 NM			ShellCommand [$system]
 NONBINMODE		FileMode [$system]
-NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$package]
+NOT_FOR_COMPILER	List of { ccache ccc clang distcc f2c gcc icc hp ido mipspro mipspro-ucode pcc sunpro xlc } [$package]
 NOT_FOR_PLATFORM	InternalList of PlatformTriple [$package_list]
 NOT_FOR_UNPRIVILEGED	YesNo [$package]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
