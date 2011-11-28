@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2006/09/07 08:46:20 wennmach Exp $
+$NetBSD: patch-aa,v 1.7 2011/11/28 19:33:13 marino Exp $
 
---- appl/bsd/encrypt.c.orig	2001-09-09 22:27:22.000000000 +0200
-+++ appl/bsd/encrypt.c	2006-09-07 10:19:23.000000000 +0200
-@@ -63,7 +63,6 @@
+--- appl/bsd/encrypt.c.orig	2001-09-09 20:27:22.000000000 +0000
++++ appl/bsd/encrypt.c
+@@ -63,12 +63,15 @@ RCSID("$Id: encrypt.c,v 1.6 2001/09/09 2
  			 *((c)++)=(unsigned char)(((l)    )&0xff))
  
  /* This has some uglies in it but it works - even over sockets. */
@@ -10,3 +10,24 @@ $NetBSD: patch-aa,v 1.6 2006/09/07 08:46:20 wennmach Exp $
  int des_rw_mode=DES_PCBC_MODE;
  int LEFT_JUSTIFIED = 0;
  
+ int
++#if defined(__DragonFly__) || defined (__FreeBSD__)
++bsd_des_enc_read(int fd, char *buf, int len, des_key_schedule sched, des_cblock *iv)
++#else
+ bsd_des_enc_read(int fd, char *buf, int len, struct des_ks_struct *sched, des_cblock *iv)
++#endif
+ {
+   /* data to be unencrypted */
+   int net_num=0;
+@@ -213,7 +216,11 @@ bsd_des_enc_read(int fd, char *buf, int
+ }
+ 
+ int
++#if defined(__DragonFly__) || defined (__FreeBSD__)
++bsd_des_enc_write(int fd, char *buf, int len, des_key_schedule sched, des_cblock *iv)
++#else
+ bsd_des_enc_write(int fd, char *buf, int len, struct des_ks_struct *sched, des_cblock *iv)
++#endif
+ {
+   long rnum;
+   int i,j,k,outnum;
