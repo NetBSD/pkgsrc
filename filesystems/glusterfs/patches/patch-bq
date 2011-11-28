@@ -1,9 +1,9 @@
-$NetBSD: patch-bq,v 1.7 2011/10/06 02:19:06 manu Exp $
+$NetBSD: patch-bq,v 1.8 2011/11/28 08:42:39 manu Exp $
 
 Make sure gluseterfsd listens on the same address family as glusterd
 
---- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-08-23 14:31:40.000000000 +0200
-+++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-09-17 15:45:30.000000000 +0200
+--- xlators/mgmt/glusterd/src/glusterd-utils.c.orig	2011-11-27 07:38:16.000000000 +0100
++++ xlators/mgmt/glusterd/src/glusterd-utils.c	2011-11-27 07:38:16.000000000 +0100
 @@ -88,8 +88,52 @@
          //TODO: set timestamp
          return 0;
@@ -57,7 +57,7 @@ Make sure gluseterfsd listens on the same address family as glusterd
  glusterd_is_loopback_localhost (const struct sockaddr *sa, char *hostname)
  {
          GF_ASSERT (sa);
-@@ -1030,8 +1074,10 @@
+@@ -1032,8 +1076,10 @@
          int                     rdma_port = 0;
          FILE                    *file = NULL;
          gf_boolean_t            is_locked = _gf_false;
@@ -68,7 +68,7 @@ Make sure gluseterfsd listens on the same address family as glusterd
          GF_ASSERT (volinfo);
          GF_ASSERT (brickinfo);
  
-@@ -1110,14 +1156,19 @@
+@@ -1112,14 +1158,19 @@
          port = brickinfo->port;
          if (!port)
                  port = pmap_registry_alloc (THIS);
