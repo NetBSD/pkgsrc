@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2009/08/19 04:04:40 yyamano Exp $
+# $NetBSD: Makefile,v 1.26 2011/11/28 11:03:51 wiz Exp $
 
 DISTNAME=	frotz-2.43
 PKGREVISION=	3
 CATEGORIES=	games
-# The maintainer has asked us to use the mirrors instead of www.cs.csubak.edu.
-#MASTER_SITES=	http://www.cs.csubak.edu/~dgriffi/frotz/files/
-MASTER_SITES=	ftp://ftp.ifarchive.org/if-archive/infocom/interpreters/frotz/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=frotz/} \
+		ftp://ftp.ifarchive.org/if-archive/infocom/interpreters/frotz/
 
 MAINTAINER=	seebs@plethora.net
-HOMEPAGE=	http://www.cs.csubak.edu/~dgriffi/proj/frotz/
+HOMEPAGE=	http://frotz.sourceforge.net/
 COMMENT=	Curses-based interpreter for Infocom-compatible games
 
 PKG_DESTDIR_SUPPORT=	user-destdir
