@@ -1,4 +1,4 @@
-$NetBSD: patch-bx,v 1.1 2011/10/25 08:34:28 manu Exp $
+$NetBSD: patch-bx,v 1.2 2011/11/28 08:42:39 manu Exp $
 
 glusterfs may need lots of data, raise the limit and hope there's enough
 ram ...
