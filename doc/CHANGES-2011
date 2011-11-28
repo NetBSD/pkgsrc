@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3070 2011/11/28 15:04:19 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3071 2011/11/28 15:05:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4872,3 +4872,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-Most to 0.25 [hiramatsu 2011-11-28]
 	Updated www/p5-CGI-Application-Plugin-ValidateRM to 2.4 [hiramatsu 2011-11-28]
 	Updated www/libmicrohttpd to 0.9.17 [wiz 2011-11-28]
+	Updated www/links to 2.4 [wiz 2011-11-28]
