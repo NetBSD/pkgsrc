@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/07 19:46:23 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/28 00:06:18 wiz Exp $
 #
 
 DISTNAME=	xtu-1.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://core.de/~coto/projects/xtu/
 
-MAINTAINER=	sketch@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://core.de/~coto/projects/xtu/
 COMMENT=	Small configurable X11 analog clock
 

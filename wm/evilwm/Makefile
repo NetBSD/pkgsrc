@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2011/11/18 19:52:52 sketch Exp $
+# $NetBSD: Makefile,v 1.31 2011/11/28 00:06:18 wiz Exp $
 #
 
 DISTNAME=	evilwm-1.1.0
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.6809.org.uk/evilwm/
 
-MAINTAINER=	sketch@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.6809.org.uk/evilwm/
 COMMENT=	Minimalist Window Manager for X
 
