@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.2 2011/10/08 06:17:40 dholland Exp $
+$NetBSD: patch-an,v 1.3 2011/11/28 19:42:39 marino Exp $
 
 - check for hes_getmailhost before using it
 - avoid conflict with POSIX getline
@@ -32,7 +32,21 @@ $NetBSD: patch-an,v 1.2 2011/10/08 06:17:40 dholland Exp $
  	(*response != '+')) {
  	fprintf(stderr,"%s: %s\n",prog,response);
  	exit(1);
-@@ -498,7 +498,7 @@ pop_command(fmt, va_alist)
+@@ -460,7 +460,12 @@ char *host;
+     strcpy(host_save, hp->h_name);
+     rem = krb_sendauth(authopts, s, ticket, "pop", host_save, (char *)0,
+ 		       0, (MSG_DAT *) 0, (CREDENTIALS *) 0,
+-		       (bit_64 *) 0, (struct sockaddr_in *)0,
++#if defined(__DragonFly__) || defined (__FreeBSD__)
++		       (DES_key_schedule) {0},
++#else
++		       (bit_64 *) 0,
++#endif
++		       (struct sockaddr_in *)0,
+ 		       (struct sockaddr_in *)0,"ZMAIL0.0");
+     free(host_save);
+     free(ticket);
+@@ -498,7 +503,7 @@ pop_command(fmt, va_alist)
  
      if (putline(buf, Errmsg, sfo) == NOTOK) return(NOTOK);
  
@@ -41,7 +55,7 @@ $NetBSD: patch-an,v 1.2 2011/10/08 06:17:40 dholland Exp $
  	(void) strcpy(Errmsg, buf);
  	return(NOTOK);
      }
-@@ -519,7 +519,7 @@ int *nmsgs, *nbytes;
+@@ -519,7 +524,7 @@ int *nmsgs, *nbytes;
  
      if (putline("STAT", Errmsg, sfo) == NOTOK) return(NOTOK);
  
@@ -50,7 +64,7 @@ $NetBSD: patch-an,v 1.2 2011/10/08 06:17:40 dholland Exp $
  	(void) strcpy(Errmsg, buf);
  	return(NOTOK);
      }
-@@ -546,7 +546,7 @@ int (*action)();
+@@ -546,7 +551,7 @@ int (*action)();
  #endif
      if (putline(buf, Errmsg, sfo) == NOTOK) return(NOTOK);
  
@@ -59,7 +73,7 @@ $NetBSD: patch-an,v 1.2 2011/10/08 06:17:40 dholland Exp $
  	(void) strcpy(Errmsg, buf);
  	return(NOTOK);
      }
-@@ -565,7 +565,7 @@ int (*action)();
+@@ -565,7 +570,7 @@ int (*action)();
      }
  }
  
@@ -68,7 +82,7 @@ $NetBSD: patch-an,v 1.2 2011/10/08 06:17:40 dholland Exp $
  char *buf;
  register int n;
  FILE *f;
-@@ -595,7 +595,7 @@ char *buf;
+@@ -595,7 +600,7 @@ char *buf;
  register int n;
  FILE *f;
  {
@@ -77,7 +91,7 @@ $NetBSD: patch-an,v 1.2 2011/10/08 06:17:40 dholland Exp $
      if (*buf == '.') {
  	if (*(buf+1) == '\0') {
  	    return (DONE);
-@@ -605,7 +605,7 @@ FILE *f;
+@@ -605,7 +610,7 @@ FILE *f;
      } else if (*buf == '\0') {
        /* suck up all future lines, since this is after all only for headers */
  	while(! ((buf[0]=='.') && (buf[1] == '\0')) ) {

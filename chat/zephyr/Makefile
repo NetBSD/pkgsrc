@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/08/16 09:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2011/11/28 19:42:39 marino Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -21,7 +21,6 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV
 CPPFLAGS.NetBSD+=	-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV/ss
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-krb4
-CONFIGURE_ARGS+=	--with-hesiod
 CONFIGURE_ARGS+=	--with-ares
 
 ZEPHYR_DOCDIR=	${PREFIX}/share/doc/zephyr
@@ -43,6 +42,17 @@ SUBST_SED.mandir=	-e 's,$${prefix}/man,@mandir@,g'
 
 .if ${OPSYS} == "NetBSD"
 BUILDLINK_TRANSFORM+=	l:ss:ss:roken:crypt
+.endif
+
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
+CFLAGS+=		-DHAVE_STRERROR
+SUBST_CLASSES+=		FreeFly
+SUBST_STAGE.FreeFly=	post-patch
+SUBST_MESSAGE.FreeFly=	Replacing libdes with libcrypt + libcrypto
+SUBST_FILES.FreeFly=	aclocal.m4 configure
+SUBST_SED.FreeFly=	-e 's,-lkrb -ldes,-lkrb -lcrypt -lcrypto,g'
+.else
+CONFIGURE_ARGS+=	--with-hesiod
 .endif
 
 pre-install:
