@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/13 11:49:42 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/11/28 15:29:32 drochner Exp $
 
 SHA1 (scribus-1.3.9.tar.bz2) = 86bc4db2d8fbb91fe94f8535327991e9128c5862
 RMD160 (scribus-1.3.9.tar.bz2) = 63e1d3f7f723843e9d1c787e1405b57a15f08fcc
@@ -6,6 +6,8 @@ Size (scribus-1.3.9.tar.bz2) = 35729860 bytes
 SHA1 (patch-ag) = 906fa6305015ec3b2589350d338cf2dcb30d5c58
 SHA1 (patch-ah) = a4d23dadf00793b4f3d981d75545337d52ecc6d6
 SHA1 (patch-ai) = 8b00cfd03dfdeec6ba3c2573a3c48b55b32ac918
+SHA1 (patch-aj) = 1f607bcb5d8e722c7f559445bda04cb664cc6ed1
+SHA1 (patch-ak) = c3f7652d1893930465e2da2891a3b4b684cc00c2
 SHA1 (patch-ba) = c7e7a2157d0b5e22971764d4870e72db5f3f5c63
 SHA1 (patch-bb) = 4d8a0a38ace1241c870de049489b25cded4d97cb
 SHA1 (patch-bc) = 309d33b5bd69f2092a298b48c657ba77c0edb8bb
