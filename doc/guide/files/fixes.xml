@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.105 2011/05/29 15:15:07 kano Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.106 2011/11/28 23:42:58 minskim Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1770,7 +1770,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
       trees that need database update.</para>
       <para>If your package also installs font map files that need
       to be registered using <command>updmap</command>,
-      include <filename>../../print/texlive-tetex/map.mk</filename> and
+      include <filename>../../print/tex-tetex/map.mk</filename> and
       set <varname>TEX_MAP_FILES</varname> and/or
       <varname>TEX_MIXEDMAP_FILES</varname> to the list of all
       such font map files.  Then <command>updmap</command> will
@@ -1781,7 +1781,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 
       <listitem><para>Make sure that none of <filename>ls-R</filename>
       databases are included in <filename>PLIST</filename>, as
-      they will be removed only by the teTeX-bin package.</para>
+      they will be removed only by the kpathsea package.</para>
       </listitem>
     </orderedlist>
   </sect2>
