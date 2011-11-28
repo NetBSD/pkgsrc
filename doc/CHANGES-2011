@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3074 2011/11/28 16:37:07 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3075 2011/11/28 16:39:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/links-gui to 2.4 [wiz 2011-11-28]
 	Updated misc/gaupol to 0.19.2 [wiz 2011-11-28]
 	Updated security/caff to 1.1.4 [wiz 2011-11-28]
+	Updated devel/pcre to 8.20 [wiz 2011-11-28]
