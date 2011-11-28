@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10698 2011/11/28 11:07:34 wiz Exp $
+$NetBSD: TODO,v 1.10699 2011/11/28 12:35:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,6 +343,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
+	o abcm2ps-6.5.13
+	o abcmidi-20111118
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.2.1
 	o acme-091 [pkg/44771]
@@ -426,6 +428,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bioperl-1.5.0
 	o bitmap-1.0.5
 	o blender-2.60a
+	o bluefish-2.2.0
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -440,6 +443,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o caff-1.1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o calibre-0.8.28
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
@@ -586,7 +590,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
-	o ffmpeg-20111121.0.7.8
 	o ffmpeg-20111121.0.8.7
 	o file-5.09
 	o fillets-ng-0.7.4
@@ -657,6 +660,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
+	o gaupol-0.19.2
 	o gawk-4.0.0
 	o gbdfed-1.6
 	o gbrainy-2.06
@@ -854,6 +858,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o krusader-2.0
 	o ktorrent-4.1.3
 	o ktorrent3-3.3.4
+	o lame-3.99.2
 	o lapack-3.3.1
 	o latd-1.21
 	o latex2rtf-1.9.19
@@ -990,6 +995,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpich-1.4.1p1
 	o mpop-1.0.25
 	o mserv-devel-0.41
+	o msmtp-1.4.26
 	o mtools-4.0.17
 	o mu-0.9.7
 	o multitail-5.2.8
@@ -1252,6 +1258,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
+	o stunnel-4.48
 	o subtitleeditor-0.33.0
 	o subversion-1.7.1
 	o sudo-1.8.3p1
@@ -1337,7 +1344,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
 	o viewvc-1.1.12
-	o vifm-0.5
+	o vifm-0.7.1
 	o vile-9.8
 	o vim-7.3
 	o vinagre-3.2.2
