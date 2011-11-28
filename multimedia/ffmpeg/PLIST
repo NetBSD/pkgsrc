@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/09/12 17:18:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/11/28 11:00:28 drochner Exp $
 bin/ffmpeg
 bin/ffprobe
 bin/ffserver
@@ -60,7 +60,7 @@ include/libswscale/swscale.h
 lib/libavcodec.a
 lib/libavcodec.so
 lib/libavcodec.so.52
-lib/libavcodec.so.52.122.0
+lib/libavcodec.so.52.123.0
 lib/libavdevice.a
 lib/libavdevice.so
 lib/libavdevice.so.52
@@ -72,7 +72,7 @@ lib/libavfilter.so.1.80.0
 lib/libavformat.a
 lib/libavformat.so
 lib/libavformat.so.52
-lib/libavformat.so.52.110.0
+lib/libavformat.so.52.111.0
 lib/libavutil.a
 lib/libavutil.so
 lib/libavutil.so.50
