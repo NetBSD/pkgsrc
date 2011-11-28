@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3072 2011/11/28 15:06:05 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3073 2011/11/28 16:32:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4874,3 +4874,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/libmicrohttpd to 0.9.17 [wiz 2011-11-28]
 	Updated www/links to 2.4 [wiz 2011-11-28]
 	Updated www/links-gui to 2.4 [wiz 2011-11-28]
+	Updated misc/gaupol to 0.19.2 [wiz 2011-11-28]
