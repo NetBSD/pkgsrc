@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/22 18:07:09 zafer Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/28 00:06:18 wiz Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
-MAINTAINER=	sketch@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spork.qfe3.net/apachetop/
 COMMENT=	Real time apache log display
 
