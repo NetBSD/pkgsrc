@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2011/11/01 06:11:55 sbd Exp $
+# $NetBSD: Makefile,v 1.93 2011/11/28 22:51:27 drochner Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.octave.org/pub/octave/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +24,6 @@ BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_GNU_READLINE=	yes
-USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gsed gmake makeinfo perl pkg-config
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
@@ -35,9 +34,8 @@ USE_LANGUAGES=		c c++ fortran77
 # needed for loading of shared objects such as those in the
 # octave-forge package or user written ones compiled with mkoctfile
 CONFIGURE_ARGS+=	--enable-dl
-# shared libraries are handled automatically in pkgsrc
 CONFIGURE_ARGS+=	--enable-static
-CONFIGURE_ARGS+=	--disable-shared
+CONFIGURE_ARGS+=	--enable-shared
 
 # trick pkgsrc into real gsed, needed for "mkf77def"
 TOOLS_PLATFORM.gsed=	#empty
