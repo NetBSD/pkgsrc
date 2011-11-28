@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2011/11/28 15:29:32 drochner Exp $
+
+--- scribus/util_printer.cpp.orig	2007-10-24 23:09:51.000000000 +0000
++++ scribus/util_printer.cpp
+@@ -9,6 +9,7 @@ for which a new license (GPL+exception) 
+ 
+ #if defined( HAVE_CUPS )
+  #include <cups/cups.h>
++ #include <cups/ppd.h>
+ #elif defined(_WIN32)
+  #include <windows.h>
+  #include <winspool.h>
