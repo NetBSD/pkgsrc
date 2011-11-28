@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/08/23 13:06:48 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/28 22:55:02 marino Exp $
 #
 
 CLISP_MODULE=	gdbm
@@ -16,5 +16,6 @@ MAKE_JOBS_SAFE=	no
 
 .include "../../lang/clisp/module.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
