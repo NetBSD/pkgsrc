@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3066 2011/11/28 08:33:16 manu Exp $
+$NetBSD: CHANGES-2011,v 1.3067 2011/11/28 08:42:38 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4865,3 +4865,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/runawk to 1.4.0 [cheusov 2011-11-27]
 	Updated pkgtools/pbulk-base to 0.44 [joerg 2011-11-27]
 	Updated filesystems/perfuse to 20111128 [manu 2011-11-28]
+	Updated filesystems/glusterfs to 3.2.5 [manu 2011-11-28]
