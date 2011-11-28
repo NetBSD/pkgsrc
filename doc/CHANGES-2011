@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3065 2011/11/27 19:53:53 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.3066 2011/11/28 08:33:16 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4864,3 +4864,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/bzr-gtk to 0.100.0 [cheusov 2011-11-27]
 	Updated lang/runawk to 1.4.0 [cheusov 2011-11-27]
 	Updated pkgtools/pbulk-base to 0.44 [joerg 2011-11-27]
+	Updated filesystems/perfuse to 20111128 [manu 2011-11-28]
