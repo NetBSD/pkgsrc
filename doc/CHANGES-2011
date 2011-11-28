@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3076 2011/11/28 16:46:44 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3077 2011/11/28 16:50:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4878,3 +4878,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/caff to 1.1.4 [wiz 2011-11-28]
 	Updated devel/pcre to 8.20 [wiz 2011-11-28]
 	Updated audio/ocp to 0.1.21 [wiz 2011-11-28]
+	Updated pkgtools/pkglint to 4.105 [wiz 2011-11-28]
