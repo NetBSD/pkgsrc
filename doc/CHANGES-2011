@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3068 2011/11/28 11:00:42 adam Exp $
+$NetBSD: CHANGES-2011,v 1.3069 2011/11/28 13:06:23 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4868,3 +4868,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated filesystems/glusterfs to 3.2.5 [manu 2011-11-28]
 	Updated textproc/py-sphinx to 1.1.2 [adam 2011-11-28]
 	Updated databases/py-ldap to 2.4.6 [adam 2011-11-28]
+	Updated net/p5-Net-Twitter to 3.18001 [hiramatsu 2011-11-28]
+	Updated devel/p5-Test-Most to 0.25 [hiramatsu 2011-11-28]
+	Updated www/p5-CGI-Application-Plugin-ValidateRM to 2.4 [hiramatsu 2011-11-28]
