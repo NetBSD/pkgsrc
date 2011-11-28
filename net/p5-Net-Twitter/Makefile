@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2011/08/14 14:14:47 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/11/28 13:04:54 hiramatsu Exp $
 #
 
-DISTNAME=	Net-Twitter-3.13008
+DISTNAME=	Net-Twitter-3.18001
 PKGNAME=	p5-${DISTNAME}
-#PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
@@ -22,8 +20,8 @@ DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-JSON-Any>=1.21:../../converters/p5-JSON-Any
 DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
-#DEPENDS+=	p5-MooseX-AttributeHelpers-[0-9]*:../../devel/p5-MooseX-AttributeHelpers
 DEPENDS+=	p5-MooseX-MultiInitArg-[0-9]*:../../devel/p5-MooseX-MultiInitArg
+DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Net-OAuth>=0.20:../../net/p5-Net-OAuth
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
