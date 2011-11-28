@@ -1,0 +1,18 @@
+$NetBSD: patch-am,v 1.4 2011/11/28 15:26:26 drochner Exp $
+
+protect against CVE-2011-4122
+
+--- helpers/basic_auth/PAM/pam_auth.c.orig	2011-10-13 08:30:05.000000000 +0000
++++ helpers/basic_auth/PAM/pam_auth.c
+@@ -196,6 +196,11 @@ start:
+         exit(1);
+     }
+ 
++    if (strchr(service, '/')) {
++	fprintf(stderr, "Illegal service '%s'\n", service);
++	exit(1);
++    }
++
+     while (fgets(buf, BUFSIZE, stdin)) {
+         user = buf;
+         password_buf = strchr(buf, '\n');
