@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/07/28 08:37:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/11/28 10:58:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -81,6 +81,9 @@ ${PYSITELIB}/ldap/schema/subentry.pyo
 ${PYSITELIB}/ldap/schema/tokenizer.py
 ${PYSITELIB}/ldap/schema/tokenizer.pyc
 ${PYSITELIB}/ldap/schema/tokenizer.pyo
+${PYSITELIB}/ldap/syncrepl.py
+${PYSITELIB}/ldap/syncrepl.pyc
+${PYSITELIB}/ldap/syncrepl.pyo
 ${PYSITELIB}/ldapurl.py
 ${PYSITELIB}/ldapurl.pyc
 ${PYSITELIB}/ldapurl.pyo
@@ -99,13 +102,16 @@ share/doc/py-ldap/Demo/matchedvalues.py
 share/doc/py-ldap/Demo/ms_ad_bind.py
 share/doc/py-ldap/Demo/options.py
 share/doc/py-ldap/Demo/page_control.py
+share/doc/py-ldap/Demo/paged_search_ext_s.py
 share/doc/py-ldap/Demo/passwd_ext_op.py
 share/doc/py-ldap/Demo/pickle_ldapobject.py
 share/doc/py-ldap/Demo/pyasn1/README
 share/doc/py-ldap/Demo/pyasn1/dds.py
+share/doc/py-ldap/Demo/pyasn1/ppolicy.py
 share/doc/py-ldap/Demo/pyasn1/psearch.py
 share/doc/py-ldap/Demo/pyasn1/readentrycontrol.py
 share/doc/py-ldap/Demo/pyasn1/sessiontrack.py
+share/doc/py-ldap/Demo/pyasn1/syncrepl.py
 share/doc/py-ldap/Demo/reconnect.py
 share/doc/py-ldap/Demo/rename.py
 share/doc/py-ldap/Demo/resiter.py
