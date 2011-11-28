@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3067 2011/11/28 08:42:38 manu Exp $
+$NetBSD: CHANGES-2011,v 1.3068 2011/11/28 11:00:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4866,3 +4866,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pbulk-base to 0.44 [joerg 2011-11-27]
 	Updated filesystems/perfuse to 20111128 [manu 2011-11-28]
 	Updated filesystems/glusterfs to 3.2.5 [manu 2011-11-28]
+	Updated textproc/py-sphinx to 1.1.2 [adam 2011-11-28]
+	Updated databases/py-ldap to 2.4.6 [adam 2011-11-28]
