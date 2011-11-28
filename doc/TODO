@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10704 2011/11/28 16:37:07 wiz Exp $
+$NetBSD: TODO,v 1.10705 2011/11/28 16:39:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1076,7 +1076,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pbzip2-1.1.6
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
-	o pcre-8.20
 	o pdfjam-2.08
 	o pdmenu-1.2.87
 	o pen-0.17.3
