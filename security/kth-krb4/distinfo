@@ -1,14 +1,24 @@
-$NetBSD: distinfo,v 1.13 2011/03/24 05:38:01 obache Exp $
+$NetBSD: distinfo,v 1.14 2011/11/28 19:33:13 marino Exp $
 
 SHA1 (krb4-1.2.2.tar.gz) = 41379763161d0b94646adb8847b83f92e5c985a4
 RMD160 (krb4-1.2.2.tar.gz) = 585f19767c610c31ca5be59d8cf61724739969f1
 Size (krb4-1.2.2.tar.gz) = 1876603 bytes
-SHA1 (patch-aa) = 0585d1b3a0242c013dbe09b61c28049cbae0cb92
+SHA1 (patch-aa) = 7e5978bc3e4b5c6d65cb00a092b1fa9f06e062e8
 SHA1 (patch-ab) = 94e4abdeeb0263eac7207fac120e10d190fb0f30
 SHA1 (patch-ac) = 8e3f1ea92fdb45c1d48c5f1719dcf3eb0ed2a52d
 SHA1 (patch-ad) = 48ebf93893662ecc10e56e0653351f80359b12b0
 SHA1 (patch-ae) = 654d92268a6c693d566acde1a7c881dc6dea2166
 SHA1 (patch-ah) = 5d09fc774b0d35070036aebd1339b32ed38137de
 SHA1 (patch-ai) = dc9db52ff819cc08753e8fe98397187df1dd0310
+SHA1 (patch-appl_ftp_ftpd_ftpcmd.y) = bdc54dd4e955b0202afd4fcd45ef6c9a08e8863d
+SHA1 (patch-appl_ftp_ftpd_pathnames.h) = b55d56593aaff44b0ffd5f89fe46eccce53e5f50
 SHA1 (patch-cf_Makefile.am.common) = 259477799fd5c473ec6561c1046dd5977eb58cdb
+SHA1 (patch-lib_kadm_kadm_cli_wrap.c) = c99ab4c066e03b7545b36089588ab7b6b3043d9d
+SHA1 (patch-lib_krb_krb-protos.h) = 44721a1a231cc6794b298962cb1e5078fb0c5770
+SHA1 (patch-lib_krb_krb_check_auth.c) = dd8b1724ba8448f0478bb1eee1477deebc985955
+SHA1 (patch-lib_krb_mk_priv.c) = 7e55c4927021850f7f4a59ee18139d54cc9b97a1
+SHA1 (patch-lib_krb_rd_priv.c) = f2d9956089a07ffa74634e0397c71ff099134441
+SHA1 (patch-lib_krb_recvauth.c) = 036dc80a0dd452d3d323b44734b39826c8d8806c
+SHA1 (patch-lib_krb_sendauth.c) = 1beb1514eae8876eae0efd758a38f1e6055942f7
+SHA1 (patch-lib_krb_solaris_compat.c) = a12a1f2338a8cf750945d8295cc2fbdd621d7d4e
 SHA1 (patch-lib_roken_Makefile.in) = 2d29e181a45ba5618f409fe41ecd0c1e7e6b895b

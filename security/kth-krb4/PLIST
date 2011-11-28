@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/03/24 05:38:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/11/28 19:33:13 marino Exp $
 bin/afslog
 bin/compile_et
 bin/k4ftp
@@ -51,27 +51,27 @@ include/kerberosIV/krb_db.h
 include/kerberosIV/krb_err.h
 include/kerberosIV/krb_log.h
 include/kerberosIV/ktypes.h
-include/kerberosIV/md4.h
-include/kerberosIV/md5.h
+${PLIST.wantdes}include/kerberosIV/md4.h
+${PLIST.wantdes}include/kerberosIV/md5.h
 include/kerberosIV/otp.h
 include/kerberosIV/parse_bytes.h
 include/kerberosIV/parse_time.h
 include/kerberosIV/parse_units.h
 include/kerberosIV/prot.h
 include/kerberosIV/protos.h
-include/kerberosIV/rc4.h
+${PLIST.wantdes}include/kerberosIV/rc4.h
 include/kerberosIV/resolve.h
 include/kerberosIV/roken-common.h
 include/kerberosIV/roken.h
 include/kerberosIV/rtbl.h
-include/kerberosIV/sha.h
+${PLIST.wantdes}include/kerberosIV/sha.h
 include/kerberosIV/sl.h
 include/kerberosIV/ss/ss.h
 include/kerberosIV/xdbm.h
 info/kth-krb.info
 lib/libacl.la
 lib/libcom_err.la
-lib/libdes.la
+${PLIST.wantdes}lib/libdes.la
 lib/libeditline.la
 lib/libkadm.la
 lib/libkafs.la
@@ -125,7 +125,7 @@ man/man1/tenletxr.1
 man/man1/xnlock.1
 man/man3/acl_check.3
 man/man3/arg_printusage.3
-man/man3/des_crypt.3
+${PLIST.wantdes}man/man3/des_crypt.3
 man/man3/editline.3
 man/man3/getarg.3
 man/man3/k_afs_cell_of_file.3
