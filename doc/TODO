@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10696 2011/11/27 13:39:41 cheusov Exp $
+$NetBSD: TODO,v 1.10697 2011/11/28 10:57:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -1310,7 +1310,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o txt2man-1.5.6
 	o uae-0.8.29
 	o ubs-0.20
-	o ucarp-1.5.2 [pkg/45508]
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o ufoai-2.3.1
