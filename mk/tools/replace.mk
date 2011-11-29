@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.235 2011/11/29 16:51:58 hans Exp $
+# $NetBSD: replace.mk,v 1.236 2011/11/29 18:00:56 hans Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -878,7 +878,7 @@ _TOOLS.perl=			perl perldoc pod2html pod2man
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mlang/perl5)
 MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.{_t_}:M[yY][eE][sS])
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		perl>=${PERL5_REQD}:../../lang/perl5
 TOOLS_CREATE+=			${_t_}
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=perl
