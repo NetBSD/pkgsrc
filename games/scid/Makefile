@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/07/03 17:02:22 mspo Exp $
+# $NetBSD: Makefile,v 1.11 2011/11/29 06:18:59 sbd Exp $
 #
 
 DISTNAME=		scid-3.6.1
@@ -17,8 +17,12 @@ HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
+# Make the LINK command CXX and the LDFLAGS.
+LINK=			${CXX} ${LDFLAGS}
+
 CONFIGURE_ENV+=		TCLCONFIG_SH=${TCLCONFIG_SH:Q}
 CONFIGURE_ARGS+=	BINDIR=${PREFIX}/bin SHAREDIR=${PREFIX}/share/scid
+CONFIGURE_ARGS+=	COMPILE=${CXX:Q} OPTIMIZE=${CFLAGS:Q} LINK=${LINK:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths to tcl.h and tk.h.
