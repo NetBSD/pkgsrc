@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/11/20 02:08:10 markd Exp $
+# $NetBSD: Makefile,v 1.31 2011/11/29 18:12:12 hans Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	8
@@ -55,6 +55,7 @@ SUBST_FILES.kdelibsfix= \
 SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g' -e 's:@X11BASE@:${X11BASE}:g'
 
 USE_TOOLS+=	flex gmake
+PLIST_VARS+=	PLIST.kgrantpty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -62,6 +63,12 @@ USE_TOOLS+=	flex gmake
 # make sure zone.tab is installed
 DEPENDS+=		zonetab-[0-9]*:../../time/zonetab
 .endif
+
+.if ${OPSYS} == "SunOS"
+PLIST.kgrantpty=	yes
+.endif
+
+LDFLAGS.SunOS+=	-lintl
 
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../meta-pkgs/kde4/kde4.mk"
