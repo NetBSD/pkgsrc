@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/08/17 22:57:04 darcy Exp $
+$NetBSD: distinfo,v 1.3 2011/11/29 18:16:56 darcy Exp $
 
-SHA1 (web.py-0.23.tar.gz) = 8fb015343d2511479f32fd94024614f588ca361c
-RMD160 (web.py-0.23.tar.gz) = 444df9ab2357f0bfd857c73673026c93b79ac801
-Size (web.py-0.23.tar.gz) = 60890 bytes
+SHA1 (web.py-0.36.tar.gz) = 15492e921dd5ee8ec6044c912e02561f7aa4d283
+RMD160 (web.py-0.36.tar.gz) = 0d8fb464fe47e705d65c485ff135840649dd19f2
+Size (web.py-0.36.tar.gz) = 87951 bytes
