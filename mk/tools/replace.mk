@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.234 2011/11/29 16:13:08 hans Exp $
+# $NetBSD: replace.mk,v 1.235 2011/11/29 16:51:58 hans Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -872,7 +872,7 @@ TOOLS_VALUE_GNU.yacc=		${TOOLS_CMDLINE.yacc}
 # These tools are all supplied by the lang/perl5 package if there is
 # no native tool available.
 #
-_TOOLS.perl=			perl pod2man
+_TOOLS.perl=			perl perldoc pod2html pod2man
 
 .for _t_ in ${_TOOLS.perl}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
