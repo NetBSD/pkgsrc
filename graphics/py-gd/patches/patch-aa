@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2005/12/19 16:01:34 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2011/11/29 16:26:57 darcy Exp $
+
+To work with PNG files instead of GIF.
 
 --- gdmodule.c.orig	2005-12-19 15:53:23.000000000 +0000
 +++ gdmodule.c
