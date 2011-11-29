@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2006/01/10 14:33:26 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2011/11/29 06:17:57 sbd Exp $
 
---- Makefile.rules.orig	2005-01-12 14:34:18.000000000 +0100
+Honor CFLAGS and LDFLAGS from pkgsrc.
+
+--- Makefile.rules.orig	2005-01-12 13:34:18.000000000 +0000
 +++ Makefile.rules
 @@ -2,9 +2,9 @@
  SDL_CONFIG=sdl-config
@@ -15,7 +17,7 @@ $NetBSD: patch-aa,v 1.2 2006/01/10 14:33:26 jmmv Exp $
  
  OBJECTS=\
  	 ppc_disasm.o\
-@@ -89,10 +89,10 @@ release: default
+@@ -89,22 +89,22 @@ release: default
  profiler:	default
  
  gcube:  $(OBJECTS) gcube.o
@@ -27,4 +29,20 @@ $NetBSD: patch-aa,v 1.2 2006/01/10 14:33:26 jmmv Exp $
 +	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ $(LIBS)
  
  bin2dol:	bin2dol.c general.o
- 	$(CC) $(CFLAGS) $^ -o $@
+-	$(CC) $(CFLAGS) $^ -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+ 
+ tplx: tplx.o general.o
+-	$(CC) $(CFLAGS) $^ -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+ 
+ thpview: thpview.o general.o jpeg_tools.o
+-	$(CC) $(CFLAGS) `$(SDL_CONFIG) --cflags` $^ -o $@ -ljpeg `$(SDL_CONFIG) --libs`
++	$(CC) $(CFLAGS) $(LDFLAGS) `$(SDL_CONFIG) --cflags` $^ -o $@ -ljpeg `$(SDL_CONFIG) --libs`
+ 
+ isopack: isopack.o general.o
+-	$(CC) $(CFLAGS) $^ -o $@ -lz
++	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lz
+ 
+ ppc_disasm.o: ppc_disasm.c
+ 	$(CC) -g -c -o $@ $<
