@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/13 23:00:36 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/29 06:11:53 sbd Exp $
 
---- Makefile.orig	2003-08-22 19:53:29.000000000 -0500
+Honor CC, CFLAGS and LDFLAGS from pkgsrc.
+
+--- Makefile.orig	2003-08-23 00:53:29.000000000 +0000
 +++ Makefile
 @@ -16,10 +16,10 @@ ZLIB    = -lz
  UNIX    = -DUNIX
@@ -15,3 +17,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/13 23:00:36 minskim Exp $
  DESTDIR	= /usr/local/bin
  MANDIR	= /usr/local/man/man1
  DOCDIR	= /usr/local/doc/atasm
+@@ -37,7 +37,7 @@ setparse.o: symbol.h
+ inc_path.o: inc_path.h inc_path.c
+ 
+ prog : $(OBJS)
+-	$(CC) -o atasm $(OBJS) $(L)
++	$(CC) $(LDFLAGS) -o atasm $(OBJS) $(L)
+   
+ clean:  
+ 	rm -f *.rej *.o *~ atasm atasm.1 atasm.exe

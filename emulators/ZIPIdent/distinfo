@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2007/02/26 00:01:30 wiz Exp $
+$NetBSD: distinfo,v 1.6 2011/11/29 06:15:50 sbd Exp $
 
 SHA1 (zident28.zip) = a530170234564665a179b31da2c634387f03d114
 RMD160 (zident28.zip) = f712115c1fc9001d2819f450c788e8e99be5bbdb
 Size (zident28.zip) = 148166 bytes
-SHA1 (patch-aa) = 2718a0187b02e57001d9f6f8e9b3b5c1760daea6
+SHA1 (patch-aa) = 284252031c5def43e58d7ae3a9f43d1fc72c9f7d
 SHA1 (patch-ab) = 67ad17076bff44fc854a7f0b076283b4f3c135de

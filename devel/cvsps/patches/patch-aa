@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2008/02/03 15:56:57 tnn Exp $
+$NetBSD: patch-aa,v 1.6 2011/11/29 06:12:51 sbd Exp $
 
---- Makefile.orig	2005-05-26 05:39:40.000000000 +0200
+--- Makefile.orig	2005-05-26 03:39:40.000000000 +0000
 +++ Makefile
 @@ -3,7 +3,7 @@ MINOR=1
  CC?=gcc
@@ -11,7 +11,12 @@ $NetBSD: patch-aa,v 1.5 2008/02/03 15:56:57 tnn Exp $
  OBJS=\
  	cbtcommon/debug.o\
  	cbtcommon/hash.o\
-@@ -25,9 +25,9 @@ cvsps: $(OBJS)
+@@ -21,13 +21,13 @@ OBJS=\
+ all: cvsps
+ 
+ cvsps: $(OBJS)
+-	$(CC) -o cvsps $(OBJS) -lz
++	$(CC) $(LDFLAGS) -o cvsps $(OBJS) -lz
  
  install:
  	[ -d $(prefix)/bin ] || mkdir -p $(prefix)/bin
