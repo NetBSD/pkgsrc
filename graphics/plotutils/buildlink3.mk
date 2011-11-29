@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2011/02/08 13:08:06 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2011/11/29 17:55:07 drochner Exp $
 
 BUILDLINK_TREE+=	plotutils
 
@@ -17,7 +17,6 @@ pkgbase := plotutils
 .if !empty(PKG_BUILD_OPTIONS.plotutils:Mx11)
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .endif
 .endif # PLOTUTILS_BUILDLINK3_MK
