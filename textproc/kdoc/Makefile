@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/02/28 14:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2011/11/29 18:32:41 hans Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
@@ -11,7 +11,7 @@ COMMENT=	C++ and IDL Class Documentation Tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pod2man
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
