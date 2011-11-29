@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2007/09/10 09:06:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2011/11/29 06:15:00 sbd Exp $
 
 SHA1 (rbuild29.zip) = fa389315072c721b097116db91ca3c41d30028c8
 RMD160 (rbuild29.zip) = 5a9640a3ec9d179df640e51ea71d4a00cf52142f
 Size (rbuild29.zip) = 110641 bytes
-SHA1 (patch-aa) = c7d5a9c16c2da0a97d30c2e21d99827b3ab8f2a6
+SHA1 (patch-aa) = 9c129cdef08805166cc2bed0d5992d357d2f8523
 SHA1 (patch-ab) = 1fbc4887a532d1f956875589baa8a2e0211070fc
 SHA1 (patch-ac) = 484bd715983c109f41f1d01e7150266e7c2ca4d1
