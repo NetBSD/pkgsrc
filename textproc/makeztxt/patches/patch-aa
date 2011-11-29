@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2001/02/19 15:14:59 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/29 06:21:41 sbd Exp $
 
---- Makefile.orig	Fri Feb 16 20:23:19 2001
-+++ Makefile	Fri Feb 16 20:23:21 2001
-@@ -7,8 +7,9 @@
+--- Makefile.orig	2001-02-14 22:27:15.000000000 +0000
++++ Makefile
+@@ -7,8 +7,9 @@ VERSION	= 1.40b
  LIBS	= -lz -lztxt
  INCLUDE	= -I../common -I.
  
@@ -14,8 +14,12 @@ $NetBSD: patch-aa,v 1.1 2001/02/19 15:14:59 wiz Exp $
  
  # If you're compiling on a Sun (with gcc), you'll need this
  #CFLAGS	+= -fpack-struct
-@@ -32,11 +33,11 @@
- 	$(CC) -Llibztxt -o makeztxt $(OBJS) $(LIBS)
+@@ -29,14 +30,14 @@ all: makeztxt
+ 	$(CC) $(CFLAGS) -c $<
+ 
+ makeztxt: $(OBJS) libztxt
+-	$(CC) -Llibztxt -o makeztxt $(OBJS) $(LIBS)
++	$(CC) $(LDFLAGS) -Llibztxt -o makeztxt $(OBJS) $(LIBS)
  
  libztxt::
 -	+make -C libztxt all
