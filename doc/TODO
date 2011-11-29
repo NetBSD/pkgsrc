@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10709 2011/11/29 17:13:53 wiz Exp $
+$NetBSD: TODO,v 1.10710 2011/11/29 17:16:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -549,7 +549,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elm-me-2.6plalpha26
-	o emacs-23.3b
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
