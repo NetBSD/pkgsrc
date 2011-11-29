@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2009/10/29 22:37:18 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2011/11/29 17:49:57 hans Exp $
 
 --- Makefile.orig	2001-01-04 22:22:16.000000000 +0100
 +++ Makefile
@@ -12,12 +12,10 @@ $NetBSD: patch-aa,v 1.3 2009/10/29 22:37:18 tnn Exp $
 +DOCDIR=$(PREFIX)/share/doc/$(PACKAGE)
  
  check:
--	perl -e 'eval "use Term::ANSIColor; 1" || die "Module not found!\n";'
--	pod2html $(PACKAGE) > $(PACKAGE).html
+ 	perl -e 'eval "use Term::ANSIColor; 1" || die "Module not found!\n";'
+ 	pod2html $(PACKAGE) > $(PACKAGE).html
 -	pod2man  $(PACKAGE) | gzip - > $(PACKAGE).1.gz
-+	${LOCALBASE}/bin/perl -e 'eval "use Term::ANSIColor; 1" || die "Module not found!\n";'
-+	${LOCALBASE}/bin/pod2html $(PACKAGE) > $(PACKAGE).html
-+	${LOCALBASE}/bin/pod2man  $(PACKAGE) > $(PACKAGE).1
++	pod2man  $(PACKAGE) > $(PACKAGE).1
  	#
  	# Checks finished. Everything looks fine
  	#
