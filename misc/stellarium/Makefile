@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2011/11/19 17:30:36 jakllsch Exp $
+# $NetBSD: Makefile,v 1.48 2011/11/29 18:21:03 hans Exp $
 
 DISTNAME=	stellarium-0.11.1
 CATEGORIES=	misc
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt perl
+USE_TOOLS+=		gmake msgfmt perl pod2man
 
 CMAKE_ARGS+= -D FreeType2_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CMAKE_ARGS+= -D FreeType2_LIBRARIES:PATH=${BUILDLINK_PREFIX.freetype2}/lib
