@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3089 2011/11/29 22:25:04 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.3090 2011/11/29 23:04:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4898,3 +4898,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-kotex-dev to 0.3 [minskim 2011-11-29]
 	Updated print/tex-kotex-dev-doc to 0.3 [minskim 2011-11-29]
 	Updated security/pam-tacplus to 1.3.5 [pettai 2011-11-29]
+	Updated graphics/graphviz to 2.26.3nb5 [wiz 2011-11-29]
