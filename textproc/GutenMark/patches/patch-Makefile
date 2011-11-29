@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2011/11/29 06:21:02 sbd Exp $
+
+Honor CFLAGS and LDFLAGS from pkgsrc.
+
+--- Makefile.orig	2009-05-10 12:11:21.000000000 +0000
++++ Makefile
+@@ -257,7 +257,7 @@ snapshot2: source-snapshot all-archs2
+ # and I guess you'll want to substitute "gcc" for "cc".  The reason it's 
+ # set to "cc" rather than directly to "gcc" is for the benefit of MacOS-X. 
+ GutenMark: $(SOURCES) AutoMark.h
+-	${CC} ${ARCH32} -O3 -Wall -funsigned-char \
++	${CC} ${CFLAGS} ${LDFLAGS} ${ARCH32} -O3 -Wall -funsigned-char \
+ 		-o GutenMark $(SOURCES) -lz
+ 	strip $@
+ 	./GutenMark bldhb10.txt bldhb10.html

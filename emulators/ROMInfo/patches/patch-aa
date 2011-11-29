@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2005/03/14 16:20:58 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2011/11/29 06:24:03 sbd Exp $
 
---- makefile.orig	2005-02-24 23:39:06.000000000 +0100
+--- makefile.orig	2005-02-24 09:39:06.000000000 +0000
 +++ makefile
 @@ -3,7 +3,7 @@
  #
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.2 2005/03/14 16:20:58 wiz Exp $
  	@echo Linking $@...
 -	$(LD) $(OBJS) $(LIBS) -o $@
 -	$(UPX) $@
-+	$(CC) $(OBJS) $(LIBS) -o $@ -ldatlib -lm -lz
++	$(CC) $(LDFLAGS) $(OBJS) $(LIBS) -o $@ -ldatlib -lm -lz
  
  #
  # Complete removal of built objects
