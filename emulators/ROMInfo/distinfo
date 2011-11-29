@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2007/02/26 00:01:18 wiz Exp $
+$NetBSD: distinfo,v 1.6 2011/11/29 06:24:02 sbd Exp $
 
 SHA1 (rinfo27.zip) = f6ef7ac9ce30d92e646f040ee82f264ef71f59c0
 RMD160 (rinfo27.zip) = c61b42578d35e815be50e7c9077e1e728d2d72f5
 Size (rinfo27.zip) = 140306 bytes
-SHA1 (patch-aa) = 5006204b7b458068be13f0258eddf739a984f23a
+SHA1 (patch-aa) = e2a586daa96d03fcad4bec08e76b9e01c30fdb61
 SHA1 (patch-ab) = c8667dc5c0ba3085e14b56b88d1693a5a8abf329
