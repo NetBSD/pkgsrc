@@ -1,30 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/10 23:46:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/29 21:16:00 minskim Exp $
 share/texmf-dist/bibtex/bst/kotex/euc/halpha.bst
-share/texmf-dist/fonts/cmap/kotex/Adobe-Korea1-0
-share/texmf-dist/fonts/cmap/kotex/Adobe-Korea1-1
-share/texmf-dist/fonts/cmap/kotex/Adobe-Korea1-2
-share/texmf-dist/fonts/cmap/kotex/Adobe-Korea1-UCS2
-share/texmf-dist/fonts/cmap/kotex/KSC-EUC-H
-share/texmf-dist/fonts/cmap/kotex/KSC-EUC-V
-share/texmf-dist/fonts/cmap/kotex/KSC-H
-share/texmf-dist/fonts/cmap/kotex/KSC-Johab-H
-share/texmf-dist/fonts/cmap/kotex/KSC-Johab-V
-share/texmf-dist/fonts/cmap/kotex/KSC-V
-share/texmf-dist/fonts/cmap/kotex/KSCms-UHC-H
-share/texmf-dist/fonts/cmap/kotex/KSCms-UHC-HW-H
-share/texmf-dist/fonts/cmap/kotex/KSCms-UHC-HW-V
-share/texmf-dist/fonts/cmap/kotex/KSCms-UHC-UCS2
-share/texmf-dist/fonts/cmap/kotex/KSCms-UHC-V
-share/texmf-dist/fonts/cmap/kotex/KSCpc-EUC-H
-share/texmf-dist/fonts/cmap/kotex/KSCpc-EUC-UCS2
-share/texmf-dist/fonts/cmap/kotex/KSCpc-EUC-UCS2C
-share/texmf-dist/fonts/cmap/kotex/KSCpc-EUC-V
-share/texmf-dist/fonts/cmap/kotex/UniKS-UCS2-H
-share/texmf-dist/fonts/cmap/kotex/UniKS-UCS2-V
-share/texmf-dist/fonts/cmap/kotex/UniKS-UTF16-H
-share/texmf-dist/fonts/cmap/kotex/UniKS-UTF16-V
-share/texmf-dist/fonts/cmap/kotex/UniKS-UTF8-H
-share/texmf-dist/fonts/cmap/kotex/UniKS-UTF8-V
 share/texmf-dist/fonts/sfd/kotex/UCS2.sfd
 share/texmf-dist/fonts/sfd/kotex/UKS-UCS2.sfd
 share/texmf-dist/makeindex/kotex/euc/hglo.ist
