@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.22 2011/09/22 01:20:20 christos Exp $
+@comment $NetBSD: PLIST,v 1.23 2011/11/29 19:26:28 bouyer Exp $
 bin/add_netatalk_printer
 bin/adv1tov2
 bin/aecho
+bin/afpldaptest
 bin/afppasswd
 bin/apple_dump
 bin/asip-status.pl
@@ -49,6 +50,7 @@ include/atalk/nbp.h
 include/atalk/netddp.h
 include/atalk/pap.h
 include/atalk/paths.h
+include/atalk/queue.h
 include/atalk/rtmp.h
 include/atalk/server_child.h
 include/atalk/server_ipc.h
@@ -113,6 +115,7 @@ libexec/netatalk/uams/uams_passwd.la
 libexec/netatalk/uams/uams_randnum.la
 man/man1/ad.1
 man/man1/aecho.1
+man/man1/afpldaptest.1
 man/man1/afppasswd.1
 man/man1/apple_dump.1
 man/man1/asip-status.pl.1
@@ -120,6 +123,7 @@ man/man1/dbd.1
 man/man1/getzones.1
 man/man1/hqx2bin.1
 man/man1/macbinary.1
+man/man1/macusers.1
 man/man1/megatron.1
 man/man1/nbp.1
 man/man1/nbplkup.1
@@ -142,6 +146,7 @@ man/man5/AppleVolumes.default.5
 man/man5/AppleVolumes.system.5
 man/man5/afp_ldap.conf.5
 man/man5/afp_signature.conf.5
+man/man5/afp_voluuid.conf.5
 man/man5/afpd.conf.5
 man/man5/atalkd.conf.5
 man/man5/netatalk.conf.5

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
+$NetBSD: patch-aa,v 1.23 2011/11/29 19:26:28 bouyer Exp $
 
---- configure.orig	2011-09-06 07:41:25.000000000 -0400
-+++ configure	2011-09-21 10:55:42.000000000 -0400
+--- configure.orig	2011-09-06 13:41:25.000000000 +0200
++++ configure	2011-11-29 18:59:56.000000000 +0100
 @@ -1,60 +1,81 @@
  #! /bin/sh
  # Guess values for system-dependent variables and create Makefiles.
@@ -39515,7 +39515,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -        [ -n "$atalk_libname" ] || { { echo "$as_me:$LINENO: error: internal error, atalk_libname undefined" >&5
 -echo "$as_me: error: internal error, atalk_libname undefined" >&2;}
 -   { (exit 1); exit 1; }; }
- 
+-
 -	if test "x$zeroconf" != "xno"; then
 -		savedcppflags="$CPPFLAGS"
 -		savedldflags="$LDFLAGS"
@@ -39525,13 +39525,6 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -		else
 -			zeroconf_dir="$zeroconf"
 -		fi
-+netatalk_cv_admin_group=yes
-+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for administrative group support" >&5
-+$as_echo_n "checking for administrative group support... " >&6; }
-+# Check whether --enable-admin-group was given.
-+if test "${enable_admin_group+set}" = set; then :
-+  enableval=$enable_admin_group;
-+        if test x"$enableval" = x"no"; then
  
 -    # mDNS support using Avahi
 -    if test "${ac_cv_header_avahi_client_client_h+set}" = set; then
@@ -39576,19 +39569,25 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -else
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
-+$as_echo "#define ADMIN_GRP 0" >>confdefs.h
++netatalk_cv_admin_group=yes
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for administrative group support" >&5
++$as_echo_n "checking for administrative group support... " >&6; }
++# Check whether --enable-admin-group was given.
++if test "${enable_admin_group+set}" = set; then :
++  enableval=$enable_admin_group;
++        if test x"$enableval" = x"no"; then
  
 -	ac_header_compiler=no
 -fi
-+		netatalk_cv_admin_group=no
-+		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-+$as_echo "no" >&6; }
-+	else
++$as_echo "#define ADMIN_GRP 0" >>confdefs.h
  
 -rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 -{ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
 -echo "${ECHO_T}$ac_header_compiler" >&6; }
-+$as_echo "#define ADMIN_GRP 1" >>confdefs.h
++		netatalk_cv_admin_group=no
++		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++	else
  
 -# Is the header present?
 -{ echo "$as_me:$LINENO: checking avahi-client/client.h presence" >&5
@@ -39618,6 +39617,8 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -	 test ! -s conftest.err
 -       }; then
 -  ac_header_preproc=yes
++$as_echo "#define ADMIN_GRP 1" >>confdefs.h
++
 +		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 +$as_echo "yes" >&6; }
 +        fi
@@ -39705,7 +39706,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  /* end confdefs.h.  */
  
  /* Override any GCC internal prototype to avoid an error.
-@@ -28490,4215 +13833,2927 @@
+@@ -28490,4215 +13833,2919 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -40415,9 +40416,6 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +if test "${enable_largefile+set}" = set; then :
 +  enableval=$enable_largefile;
 +fi
-+
-+if test "$enable_largefile" != no; then
-+            wx_largefile=no
  
 -		if test x"$ac_cv_header_security_pam_appl_h" = x"no" -a x"$ac_cv_header_pam_pam_appl_h" = x"no"; then
 -			pam_found=no
@@ -40426,6 +40424,9 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -echo $ECHO_N "checking for pam_set_item in -lpam... $ECHO_C" >&6; }
 -if test "${ac_cv_lib_pam_pam_set_item+set}" = set; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
++if test "$enable_largefile" != no; then
++            wx_largefile=no
++
 +    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for _FILE_OFFSET_BITS value needed for large files" >&5
 +$as_echo_n "checking for _FILE_OFFSET_BITS value needed for large files... " >&6; }
 +if test "${ac_cv_sys_file_offset_bits+set}" = set; then :
@@ -40489,18 +40490,18 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -sed 's/^/| /' conftest.$ac_ext >&5
 -
 -	ac_cv_lib_pam_pam_set_item=no
--fi
--
++  ac_cv_sys_file_offset_bits=no
+ fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 
 -rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
 -      conftest$ac_exeext conftest.$ac_ext
 -LIBS=$ac_check_lib_save_LIBS
-+  ac_cv_sys_file_offset_bits=no
- fi
+-fi
 -{ echo "$as_me:$LINENO: result: $ac_cv_lib_pam_pam_set_item" >&5
 -echo "${ECHO_T}$ac_cv_lib_pam_pam_set_item" >&6; }
 -if test $ac_cv_lib_pam_pam_set_item = yes; then
-+rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
- 
+-
 -				PAM_LIBS="$PAM_LDFLAGS -lpam"
 -				pam_found="yes"
  
@@ -40513,9 +40514,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -		LDFLAGS="$savedLDFLAGS"
 -		LIBS="$savedLIBS"
 -	fi
-+    if test "$ac_cv_sys_file_offset_bits" != no; then
-+        wx_largefile=yes
- 
+-
 -	netatalk_cv_install_pam=yes
 -	if test x"$pam_found" = "xyes" -a "x$PAMDIR" = "xNONE"; then
 -		{ echo "$as_me:$LINENO: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&5
@@ -40550,10 +40549,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -           PAM_PASSWORD="pam_unix.so use_authtok"
 -           PAM_SESSION=pam_unix.so
 -        fi
-+cat >>confdefs.h <<_ACEOF
-+#define _FILE_OFFSET_BITS $ac_cv_sys_file_offset_bits
-+_ACEOF
- 
+-
 -        if test "x$PAM_DIRECTIVE" != "xrequired" ; then
 -            { echo "$as_me:$LINENO: result: yes ($PAM_DIRECTIVE $PAM_AUTH)" >&5
 -echo "${ECHO_T}yes ($PAM_DIRECTIVE $PAM_AUTH)" >&6; }
@@ -40562,8 +40558,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -echo "${ECHO_T}no (using defaut pam_unix.so)" >&6; }
 -        fi
 -	fi
-+    fi
- 
+-
 -	{ echo "$as_me:$LINENO: checking whether to enable PAM support" >&5
 -echo $ECHO_N "checking whether to enable PAM support... $ECHO_C" >&6; }
 -	if test "x$pam_found" = "xno"; then
@@ -40580,20 +40575,51 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -	else
 -		{ echo "$as_me:$LINENO: result: yes" >&5
 -echo "${ECHO_T}yes" >&6; }
-+    if test "x$wx_largefile" != "xyes"; then
- 
+-
 -	use_pam_so=yes
 -	compile_pam=yes
 -	netatalk_cv_use_pam=yes
++    if test "$ac_cv_sys_file_offset_bits" != no; then
++        wx_largefile=yes
+ 
+-cat >>confdefs.h <<\_ACEOF
+-#define USE_PAM 1
++cat >>confdefs.h <<_ACEOF
++#define _FILE_OFFSET_BITS $ac_cv_sys_file_offset_bits
+ _ACEOF
+ 
++    fi
+ 
+-	fi
+-
+-
+-  ac_new_flags=""
+-  for i in $PAM_LIBS; do
+-    case $i in
+-    -L/usr/lib|-L/usr/lib/|-L/usr|-L/usr/) ;;
+-    *) ac_new_flags="$ac_new_flags $i" ;;
+-    esac
+-  done
+-  PAM_LIBS=$ac_new_flags
+-
+-
+-  ac_new_flags=""
+-  for i in $PAM_CFLAGS; do
+-    case $i in
+-    -I/usr/include|-I/usr/include/) ;;
+-    *) ac_new_flags="$ac_new_flags $i" ;;
+-    esac
+-  done
+-  PAM_CFLAGS=$ac_new_flags
+-
++    if test "x$wx_largefile" != "xyes"; then
+ 
 +    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for _LARGE_FILES value needed for large files" >&5
 +$as_echo_n "checking for _LARGE_FILES value needed for large files... " >&6; }
 +if test "${ac_cv_sys_large_files+set}" = set; then :
 +  $as_echo_n "(cached) " >&6
 +else
  
--cat >>confdefs.h <<\_ACEOF
--#define USE_PAM 1
--_ACEOF
 +          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 +/* end confdefs.h.  */
 +#define _LARGE_FILES 1
@@ -40616,20 +40642,11 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +fi
 +rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  
--	fi
  
 +fi
 +{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_sys_large_files" >&5
 +$as_echo "$ac_cv_sys_large_files" >&6; }
  
--  ac_new_flags=""
--  for i in $PAM_LIBS; do
--    case $i in
--    -L/usr/lib|-L/usr/lib/|-L/usr|-L/usr/) ;;
--    *) ac_new_flags="$ac_new_flags $i" ;;
--    esac
--  done
--  PAM_LIBS=$ac_new_flags
 +    if test "$ac_cv_sys_large_files" != no; then
 +        wx_largefile=yes
  
@@ -40637,94 +40654,24 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +#define _LARGE_FILES $ac_cv_sys_large_files
 +_ACEOF
  
--  ac_new_flags=""
--  for i in $PAM_CFLAGS; do
--    case $i in
--    -I/usr/include|-I/usr/include/) ;;
--    *) ac_new_flags="$ac_new_flags $i" ;;
--    esac
--  done
--  PAM_CFLAGS=$ac_new_flags
-+    fi
-+
 +    fi
  
- 
-+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for 64 bit off_t" >&5
-+$as_echo_n "checking for 64 bit off_t... " >&6; }
-+if test "${netatalk_cv_SIZEOF_OFF_T+set}" = set; then :
-+  $as_echo_n "(cached) " >&6
-+else
- 
-+    if test "$cross_compiling" = yes; then :
-+  netatalk_cv_SIZEOF_OFF_T=cross
-+else
-+  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-+/* end confdefs.h.  */
-+#include <stdio.h>
-+#include <stdlib.h>
-+#include <sys/stat.h>
-+main() { exit((sizeof(off_t) == 8) ? 0 : 1); }
-+_ACEOF
-+if ac_fn_c_try_run "$LINENO"; then :
-+  netatalk_cv_SIZEOF_OFF_T=yes
-+else
-+  netatalk_cv_SIZEOF_OFF_T=no
-+fi
-+rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
-+  conftest.$ac_objext conftest.beam conftest.$ac_ext
-+fi
- 
-+fi
-+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $netatalk_cv_SIZEOF_OFF_T" >&5
-+$as_echo "$netatalk_cv_SIZEOF_OFF_T" >&6; }
- 
-+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking if large file support is available" >&5
-+$as_echo_n "checking if large file support is available... " >&6; }
-+    if test "x$netatalk_cv_SIZEOF_OFF_T" != "xno"; then
- 
-+$as_echo "#define HAVE_LARGEFILE_SUPPORT /**/" >>confdefs.h
- 
-+	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-+$as_echo "yes" >&6; }
-+        :
-+    else
-+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-+$as_echo "no" >&6; }
-+        as_fn_error "AFP 3.x support requires Large File Support." "$LINENO" 5
 +    fi
-+fi
- 
- 
- 
-+        savedcflags="$CFLAGS"
-+        savedldflags="$LDFLAGS"
-+	ICONV_CFLAGS=""
-+	ICONV_LIBS=""
  
 -netatalk_cv_use_shadowpw=no
  
 -# Check whether --with-shadow was given.
 -if test "${with_shadow+set}" = set; then
 -  withval=$with_shadow; netatalk_cv_use_shadowpw="$withval"
-+# Check whether --with-libiconv was given.
-+if test "${with_libiconv+set}" = set; then :
-+  withval=$with_libiconv;  case "$withval" in
-+	  no)
-+	    ;;
-+	  yes)
-+	    ;;
-+	  *)
-+	    ICONV_CFLAGS="-I$withval/include"
-+	    ICONV_LIBS="-L$withval/$atalk_libname"
-+	    ;;
-+	  esac
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for 64 bit off_t" >&5
++$as_echo_n "checking for 64 bit off_t... " >&6; }
++if test "${netatalk_cv_SIZEOF_OFF_T+set}" = set; then :
++  $as_echo_n "(cached) " >&6
  else
 -  netatalk_cv_use_shadowpw=auto
-+  withval="no"
- 
- fi
- 
+-
+-fi
+-
  
 -if test "x$netatalk_cv_use_shadowpw" != "xno"; then
 -    if test "${ac_cv_header_shadow_h+set}" = set; then
@@ -40735,7 +40682,9 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -fi
 -{ echo "$as_me:$LINENO: result: $ac_cv_header_shadow_h" >&5
 -echo "${ECHO_T}$ac_cv_header_shadow_h" >&6; }
--else
++    if test "$cross_compiling" = yes; then :
++  netatalk_cv_SIZEOF_OFF_T=cross
+ else
 -  # Is the header compilable?
 -{ echo "$as_me:$LINENO: checking shadow.h usability" >&5
 -echo $ECHO_N "checking shadow.h usability... $ECHO_C" >&6; }
@@ -40744,10 +40693,15 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
 -cat >>conftest.$ac_ext <<_ACEOF
--/* end confdefs.h.  */
++  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
 -$ac_includes_default
 -#include <shadow.h>
--_ACEOF
++#include <stdio.h>
++#include <stdlib.h>
++#include <sys/stat.h>
++main() { exit((sizeof(off_t) == 8) ? 0 : 1); }
+ _ACEOF
 -rm -f conftest.$ac_objext
 -if { (ac_try="$ac_compile"
 -case "(($ac_try" in
@@ -40766,23 +40720,28 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -	 test ! -s conftest.err
 -       } && test -s conftest.$ac_objext; then
 -  ac_header_compiler=yes
--else
++if ac_fn_c_try_run "$LINENO"; then :
++  netatalk_cv_SIZEOF_OFF_T=yes
+ else
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
--
++  netatalk_cv_SIZEOF_OFF_T=no
++fi
++rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
++  conftest.$ac_objext conftest.beam conftest.$ac_ext
++fi
+ 
 -	ac_header_compiler=no
--fi
-+	CFLAGS="$ICONV_CFLAGS $CFLAGS"
-+        LDFLAGS="$LDFLAGS $ICONV_LIBS -liconv"
+ fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $netatalk_cv_SIZEOF_OFF_T" >&5
++$as_echo "$netatalk_cv_SIZEOF_OFF_T" >&6; }
  
 -rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
 -{ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
 -echo "${ECHO_T}$ac_header_compiler" >&6; }
-+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libiconv" >&5
-+$as_echo_n "checking for libiconv... " >&6; }
-+if test "${netatalk_cv_iconv+set}" = set; then :
-+  $as_echo_n "(cached) " >&6
-+else
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking if large file support is available" >&5
++$as_echo_n "checking if large file support is available... " >&6; }
++    if test "x$netatalk_cv_SIZEOF_OFF_T" != "xno"; then
  
 -# Is the header present?
 -{ echo "$as_me:$LINENO: checking shadow.h presence" >&5
@@ -40792,8 +40751,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
 -cat >>conftest.$ac_ext <<_ACEOF
-+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
+-/* end confdefs.h.  */
 -#include <shadow.h>
 -_ACEOF
 -if { (ac_try="$ac_cpp conftest.$ac_ext"
@@ -40816,18 +40774,22 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -else
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
++$as_echo "#define HAVE_LARGEFILE_SUPPORT /**/" >>confdefs.h
  
 -  ac_header_preproc=no
--fi
-+#include <stdlib.h>
-+#include <iconv.h>
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++        :
++    else
++        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++        as_fn_error "AFP 3.x support requires Large File Support." "$LINENO" 5
++    fi
+ fi
  
 -rm -f conftest.err conftest.$ac_ext
 -{ echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
 -echo "${ECHO_T}$ac_header_preproc" >&6; }
-+int
-+main ()
-+{
  
 -# So?  What about this header?
 -case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
@@ -40851,9 +40813,6 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -echo "$as_me: WARNING: shadow.h: proceeding with the preprocessor's result" >&2;}
 -    { echo "$as_me:$LINENO: WARNING: shadow.h: in the future, the compiler will take precedence" >&5
 -echo "$as_me: WARNING: shadow.h: in the future, the compiler will take precedence" >&2;}
-+	iconv_t cd = iconv_open("","");
-+        iconv(cd,NULL,NULL,NULL,NULL);
-+        iconv_close(cd);
  
 -    ;;
 -esac
@@ -40861,6 +40820,77 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -echo $ECHO_N "checking for shadow.h... $ECHO_C" >&6; }
 -if test "${ac_cv_header_shadow_h+set}" = set; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
++        savedcflags="$CFLAGS"
++        savedldflags="$LDFLAGS"
++	ICONV_CFLAGS=""
++	ICONV_LIBS=""
++
++
++# Check whether --with-libiconv was given.
++if test "${with_libiconv+set}" = set; then :
++  withval=$with_libiconv;  case "$withval" in
++	  no)
++	    ;;
++	  yes)
++	    ;;
++	  *)
++	    ICONV_CFLAGS="-I$withval/include"
++	    ICONV_LIBS="-L$withval/$atalk_libname"
++	    ;;
++	  esac
+ else
+-  ac_cv_header_shadow_h=$ac_header_preproc
+-fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_header_shadow_h" >&5
+-echo "${ECHO_T}$ac_cv_header_shadow_h" >&6; }
++  withval="no"
+ 
+ fi
+ 
+ 
+-    if test x"$ac_cv_header_shadow_h" = x"yes"; then
+-	netatalk_cv_use_shadowpw=yes
++	CFLAGS="$ICONV_CFLAGS $CFLAGS"
++        LDFLAGS="$LDFLAGS $ICONV_LIBS -liconv"
+ 
+-cat >>confdefs.h <<\_ACEOF
+-#define SHADOWPW 1
+-_ACEOF
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libiconv" >&5
++$as_echo_n "checking for libiconv... " >&6; }
++if test "${netatalk_cv_iconv+set}" = set; then :
++  $as_echo_n "(cached) " >&6
++else
+ 
+-    else
+-      if test "x$shadowpw" = "xyes"; then
+-        { { echo "$as_me:$LINENO: error: shadow support not available" >&5
+-echo "$as_me: error: shadow support not available" >&2;}
+-   { (exit 1); exit 1; }; }
+-      else
+-       	netatalk_cv_use_shadowpw=no
+-      fi
+-    fi
+-fi
++          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
+ 
+-{ echo "$as_me:$LINENO: checking whether shadow support should be enabled" >&5
+-echo $ECHO_N "checking whether shadow support should be enabled... $ECHO_C" >&6; }
+-if test "x$netatalk_cv_use_shadowpw" = "xyes"; then
+-	{ echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6; }
++#include <stdlib.h>
++#include <iconv.h>
++
++int
++main ()
++{
++
++	iconv_t cd = iconv_open("","");
++        iconv(cd,NULL,NULL,NULL,NULL);
++        iconv_close(cd);
++
 +  ;
 +  return 0;
 +}
@@ -40868,12 +40898,10 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +if ac_fn_c_try_link "$LINENO"; then :
 +  netatalk_cv_iconv=yes
  else
--  ac_cv_header_shadow_h=$ac_header_preproc
+-	{ echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6; }
 +  netatalk_cv_iconv=no
- fi
--{ echo "$as_me:$LINENO: result: $ac_cv_header_shadow_h" >&5
--echo "${ECHO_T}$ac_cv_header_shadow_h" >&6; }
--
++fi
 +rm -f core conftest.err conftest.$ac_objext \
 +    conftest$ac_exeext conftest.$ac_ext
  fi
@@ -40892,51 +40920,6 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +	    fi
 +	fi
  
--    if test x"$ac_cv_header_shadow_h" = x"yes"; then
--	netatalk_cv_use_shadowpw=yes
- 
--cat >>confdefs.h <<\_ACEOF
--#define SHADOWPW 1
--_ACEOF
- 
--    else
--      if test "x$shadowpw" = "xyes"; then
--        { { echo "$as_me:$LINENO: error: shadow support not available" >&5
--echo "$as_me: error: shadow support not available" >&2;}
--   { (exit 1); exit 1; }; }
--      else
--       	netatalk_cv_use_shadowpw=no
--      fi
--    fi
--fi
-+  ac_new_flags=""
-+  for i in $ICONV_CFLAGS; do
-+    case $i in
-+    -I/usr/include|-I/usr/include/) ;;
-+    *) ac_new_flags="$ac_new_flags $i" ;;
-+    esac
-+  done
-+  ICONV_CFLAGS=$ac_new_flags
- 
--{ echo "$as_me:$LINENO: checking whether shadow support should be enabled" >&5
--echo $ECHO_N "checking whether shadow support should be enabled... $ECHO_C" >&6; }
--if test "x$netatalk_cv_use_shadowpw" = "xyes"; then
--	{ echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6; }
--else
--	{ echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6; }
--fi
- 
-+  ac_new_flags=""
-+  for i in $ICONV_LIBS; do
-+    case $i in
-+    -L/usr/lib|-L/usr/lib/|-L/usr|-L/usr/) ;;
-+    *) ac_new_flags="$ac_new_flags $i" ;;
-+    esac
-+  done
-+  ICONV_LIBS=$ac_new_flags
- 
  
 -netatalk_cv_use_shellcheck=yes
 -{ echo "$as_me:$LINENO: checking whether checking for a valid shell should be enabled" >&5
@@ -40949,6 +40932,14 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -cat >>confdefs.h <<\_ACEOF
 -#define DISABLE_SHELLCHECK 1
 -_ACEOF
++  ac_new_flags=""
++  for i in $ICONV_CFLAGS; do
++    case $i in
++    -I/usr/include|-I/usr/include/) ;;
++    *) ac_new_flags="$ac_new_flags $i" ;;
++    esac
++  done
++  ICONV_CFLAGS=$ac_new_flags
  
 -		{ echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6; }
@@ -40958,15 +40949,38 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -echo "${ECHO_T}yes" >&6; }
 -	fi
  
+-else
++  ac_new_flags=""
++  for i in $ICONV_LIBS; do
++    case $i in
++    -L/usr/lib|-L/usr/lib/|-L/usr|-L/usr/) ;;
++    *) ac_new_flags="$ac_new_flags $i" ;;
++    esac
++  done
++  ICONV_LIBS=$ac_new_flags
+ 
+-		{ echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6; }
+ 
+ 
+-fi
+ 
+ 
 +	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for working iconv" >&5
 +$as_echo_n "checking for working iconv... " >&6; }
 +if test "${netatalk_cv_HAVE_USABLE_ICONV+set}" = set; then :
 +  $as_echo_n "(cached) " >&6
- else
++else
  
--		{ echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6; }
--
+-	check=maybe
+-	# Check whether --enable-tcp-wrappers was given.
+-if test "${enable_tcp_wrappers+set}" = set; then
+-  enableval=$enable_tcp_wrappers;
+-			if test "x$enableval" = "xno"; then
+-				wrapcheck=no
+-			else
+-				wrapcheck=yes
+-			fi
 +		if test "$cross_compiling" = yes; then :
 +  netatalk_cv_HAVE_USABLE_ICONV=cross
 +else
@@ -40988,33 +41002,13 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +fi
 +rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
 +  conftest.$ac_objext conftest.beam conftest.$ac_ext
- fi
- 
 +fi
+ 
+ fi
 +{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $netatalk_cv_HAVE_USABLE_ICONV" >&5
 +$as_echo "$netatalk_cv_HAVE_USABLE_ICONV" >&6; }
  
 +	if test x"$netatalk_cv_HAVE_USABLE_ICONV" = x"yes"; then
- 
--	check=maybe
--	# Check whether --enable-tcp-wrappers was given.
--if test "${enable_tcp_wrappers+set}" = set; then
--  enableval=$enable_tcp_wrappers;
--			if test "x$enableval" = "xno"; then
--				wrapcheck=no
--			else
--				wrapcheck=yes
--			fi
--
-+$as_echo "#define HAVE_USABLE_ICONV 1" >>confdefs.h
- 
--fi
-+	fi
- 
-+  	if test x"$netatalk_cv_HAVE_USABLE_ICONV" = x"yes"; then
-+    		if test "${am_cv_proto_iconv+set}" = set; then :
-+  $as_echo_n "(cached) " >&6
-+else
  
 -	enable=no
 -	netatalk_cv_tcpwrap=no
@@ -41027,6 +41021,15 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
 -cat >>conftest.$ac_ext <<_ACEOF
++$as_echo "#define HAVE_USABLE_ICONV 1" >>confdefs.h
++
++	fi
++
++  	if test x"$netatalk_cv_HAVE_USABLE_ICONV" = x"yes"; then
++    		if test "${am_cv_proto_iconv+set}" = set; then :
++  $as_echo_n "(cached) " >&6
++else
++
 +      		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
 - int allow_severity = 0; int deny_severity = 0;
@@ -41133,13 +41136,8 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  else
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
--
--	netatalk_cv_tcpwrap=no
--fi
--
--rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
--      conftest$ac_exeext conftest.$ac_ext
  
+-	netatalk_cv_tcpwrap=no
 +		if test "$cross_compiling" = yes; then :
 +  netatalk_cv_HAVEUCS2INTERNAL=cross
 +else
@@ -41152,13 +41150,18 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +       if (cd == 0 || cd == (iconv_t)-1) return -1;
 +       return 0;
 +}
- 
++
 +_ACEOF
 +if ac_fn_c_try_run "$LINENO"; then :
 +  netatalk_cv_HAVE_UCS2INTERNAL=yes
 +else
 +  netatalk_cv_HAVE_UCS2INTERNAL=no
-+fi
+ fi
+-
+-rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+-      conftest$ac_exeext conftest.$ac_ext
+-
+-
 +rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
 +  conftest.$ac_objext conftest.beam conftest.$ac_ext
  fi
@@ -41582,10 +41585,6 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +$as_echo_n "checking default DID scheme... " >&6; }
  
 -        	if test "x$CUPS_CONFIG" != x; then
--
--cat >>confdefs.h <<\_ACEOF
--#define HAVE_CUPS 1
--_ACEOF
 +# Check whether --with-cnid-default-backend was given.
 +if test "${with_cnid_default_backend+set}" = set; then :
 +  withval=$with_cnid_default_backend;
@@ -41598,18 +41597,21 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +$as_echo "$DEFAULT_CNID_SCHEME" >&6; }
 +        fi
  
+-cat >>confdefs.h <<\_ACEOF
+-#define HAVE_CUPS 1
+-_ACEOF
++else
+ 
 -	                CUPS_CFLAGS="`$CUPS_CONFIG --cflags`"
 -        	        CUPS_LDFLAGS="`$CUPS_CONFIG --ldflags`"
 -                	CUPS_LIBS="`$CUPS_CONFIG --libs`"
 -			CUPS_VERSION="`$CUPS_CONFIG --version`"
-+else
++        { $as_echo "$as_me:${as_lineno-$LINENO}: result: $DEFAULT_CNID_SCHEME" >&5
++$as_echo "$DEFAULT_CNID_SCHEME" >&6; }
  
 -cat >>confdefs.h <<_ACEOF
 -#define CUPS_API_VERSION "`$CUPS_CONFIG --api-version`"
 -_ACEOF
-+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: $DEFAULT_CNID_SCHEME" >&5
-+$as_echo "$DEFAULT_CNID_SCHEME" >&6; }
- 
 +fi
  
  
@@ -41634,11 +41636,15 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +$as_echo "yes" >&6; }
 +    fi
  
+ 
 -			{ echo "$as_me:$LINENO: checking CUPS version" >&5
 -echo $ECHO_N "checking CUPS version... $ECHO_C" >&6; }
 -                	{ echo "$as_me:$LINENO: result: $CUPS_VERSION" >&5
 -echo "${ECHO_T}$CUPS_VERSION" >&6; }
 -			netatalk_cv_use_cups=yes
++cat >>confdefs.h <<_ACEOF
++#define DEFAULT_CNID_SCHEME "$DEFAULT_CNID_SCHEME"
++_ACEOF
  
 -			if test x"$netatalk_cv_HAVE_USABLE_ICONV" = x"no" ; then
 -				{ echo "$as_me:$LINENO: WARNING: *** Warning: iconv not found on your system, using simple ascii mapping***" >&5
@@ -41651,9 +41657,6 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -   { (exit 1); exit 1; }; }
 -	        fi
 -	fi
-+cat >>confdefs.h <<_ACEOF
-+#define DEFAULT_CNID_SCHEME "$DEFAULT_CNID_SCHEME"
-+_ACEOF
  
 -	{ echo "$as_me:$LINENO: checking whether CUPS support can be enabled" >&5
 -echo $ECHO_N "checking whether CUPS support can be enabled... $ECHO_C" >&6; }
@@ -41661,15 +41664,15 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -echo "${ECHO_T}$netatalk_cv_use_cups" >&6; }
  
  
- 
--# Check whether --with-spooldir was given.
--if test "${with_spooldir+set}" = set; then
--  withval=$with_spooldir;
 +    if test "x$bdb_required" = "xyes"; then
 +	bdb_required=yes
 +    else
 +	bdb_required=no
 +    fi
+ 
+-# Check whether --with-spooldir was given.
+-if test "${with_spooldir+set}" = set; then
+-  withval=$with_spooldir;
  
 -	        if test "$withval" = "no"; then
 -        	       if test x"$spool_required" = x"yes"; then
@@ -41681,6 +41684,10 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -cat >>confdefs.h <<\_ACEOF
 -#define DISABLE_SPOOL 1
 -_ACEOF
++	# Check whether --enable-quota was given.
++if test "${enable_quota+set}" = set; then :
++  enableval=$enable_quota;
++fi
  
 -                	       { echo "$as_me:$LINENO: result: spool disabled" >&5
 -echo "${ECHO_T}spool disabled" >&6; }
@@ -41694,11 +41701,6 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -	                { echo "$as_me:$LINENO: result: spool set to default" >&5
 -echo "${ECHO_T}spool set to default" >&6; }
 -        	fi
-+	# Check whether --enable-quota was given.
-+if test "${enable_quota+set}" = set; then :
-+  enableval=$enable_quota;
-+fi
-+
  
 +	if test x$enable_quota != xno; then
 +	QUOTA_LIBS=""
@@ -41751,43 +41753,13 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 -	 if test x"$spool_required" = x"yes"; then
 -  USE_SPOOLDIR_TRUE=
 -  USE_SPOOLDIR_FALSE='#'
- else
+-else
 -  USE_SPOOLDIR_TRUE='#'
 -  USE_SPOOLDIR_FALSE=
--fi
- 
-+		QUOTA_LIBS=""
-+		netatalk_cv_quotasupport="no"
- 
-+$as_echo "#define NO_QUOTA_SUPPORT 1" >>confdefs.h
- 
- 
--{ echo "$as_me:$LINENO: checking to see if we can add '__attribute__((unused))' to CFLAGS" >&5
--echo $ECHO_N "checking to see if we can add '__attribute__((unused))' to CFLAGS... $ECHO_C" >&6; }
--if test x$GCC != x ; then
--  CFLAGS="-D_U_=\"__attribute__((unused))\" $CFLAGS"
--  { echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6; }
--else
--  CFLAGS="-D_U_=\"\" $CFLAGS"
--  { echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6; }
  fi
  
 +done
  
--{ echo "$as_me:$LINENO: checking whether to use Filesystem Hierarchy Standard (FHS) compatibility" >&5
--echo $ECHO_N "checking whether to use Filesystem Hierarchy Standard (FHS) compatibility... $ECHO_C" >&6; }
--# Check whether --enable-fhs was given.
--if test "${enable_fhs+set}" = set; then
--  enableval=$enable_fhs;
--	if test "$enableval" = "yes"; then
--		uams_path="${libdir}/netatalk"
--		sysconfdir="/etc"
--		PKGCONFDIR=${sysconfdir}/netatalk
--		SERVERTEXT="${PKGCONFDIR}/msg"
--		use_pam_so=yes
--		mandir="/usr/share/man"
 +	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for getfsquota in -lquota" >&5
 +$as_echo_n "checking for getfsquota in -lquota... " >&6; }
 +if test "${ac_cv_lib_quota_getfsquota+set}" = set; then :
@@ -41798,8 +41770,13 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 +/* end confdefs.h.  */
  
--cat >>confdefs.h <<\_ACEOF
--#define FHS_COMPATIBILITY 1
+-
+-{ echo "$as_me:$LINENO: checking to see if we can add '__attribute__((unused))' to CFLAGS" >&5
+-echo $ECHO_N "checking to see if we can add '__attribute__((unused))' to CFLAGS... $ECHO_C" >&6; }
+-if test x$GCC != x ; then
+-  CFLAGS="-D_U_=\"__attribute__((unused))\" $CFLAGS"
+-  { echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6; }
 +/* Override any GCC internal prototype to avoid an error.
 +   Use char because int might match the return type of a GCC
 +   builtin and then its argument prototype would still apply.  */
@@ -41814,12 +41791,15 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +  ;
 +  return 0;
 +}
- _ACEOF
++_ACEOF
 +if ac_fn_c_try_link "$LINENO"; then :
 +  ac_cv_lib_quota_getfsquota=yes
-+else
+ else
+-  CFLAGS="-D_U_=\"\" $CFLAGS"
+-  { echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6; }
 +  ac_cv_lib_quota_getfsquota=no
-+fi
+ fi
 +rm -f core conftest.err conftest.$ac_objext \
 +    conftest$ac_exeext conftest.$ac_ext
 +LIBS=$ac_check_lib_save_LIBS
@@ -41828,9 +41808,25 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
 +$as_echo "$ac_cv_lib_quota_getfsquota" >&6; }
 +if test "x$ac_cv_lib_quota_getfsquota" = x""yes; then :
 +  QUOTA_LIBS="-lquota -lprop -lrpcsvc"
-+
+ 
 +$as_echo "#define HAVE_LIBQUOTA 1" >>confdefs.h
-+
+ 
+-{ echo "$as_me:$LINENO: checking whether to use Filesystem Hierarchy Standard (FHS) compatibility" >&5
+-echo $ECHO_N "checking whether to use Filesystem Hierarchy Standard (FHS) compatibility... $ECHO_C" >&6; }
+-# Check whether --enable-fhs was given.
+-if test "${enable_fhs+set}" = set; then
+-  enableval=$enable_fhs;
+-	if test "$enableval" = "yes"; then
+-		uams_path="${libdir}/netatalk"
+-		sysconfdir="/etc"
+-		PKGCONFDIR=${sysconfdir}/netatalk
+-		SERVERTEXT="${PKGCONFDIR}/msg"
+-		use_pam_so=yes
+-		mandir="/usr/share/man"
+-
+-cat >>confdefs.h <<\_ACEOF
+-#define FHS_COMPATIBILITY 1
+-_ACEOF
 +fi
  
 -		{ echo "$as_me:$LINENO: result: yes" >&5
@@ -46013,7 +46009,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
-@@ -32706,1254 +16761,1024 @@
+@@ -32706,1254 +16753,1024 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -48069,7 +48065,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  /* end confdefs.h.  */
  
  /* Override any GCC internal prototype to avoid an error.
-@@ -33962,104 +17787,89 @@
+@@ -33962,104 +17779,89 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -48237,7 +48233,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
-@@ -34067,98 +17877,196 @@
+@@ -34067,98 +17869,196 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -48503,7 +48499,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
-@@ -34166,95 +18074,139 @@
+@@ -34166,95 +18066,139 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -48711,7 +48707,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
-@@ -34262,98 +18214,41 @@
+@@ -34262,98 +18206,41 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -48831,7 +48827,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
-@@ -34361,296 +18256,215 @@
+@@ -34361,296 +18248,215 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -49275,7 +49271,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
-@@ -34658,57 +18472,70 @@
+@@ -34658,57 +18464,70 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -49384,7 +49380,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  _ACEOF
  
  else
-@@ -34716,97 +18543,91 @@
+@@ -34716,97 +18535,91 @@
  fi
  done
  
@@ -49553,7 +49549,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  _ACEOF
  
  else
-@@ -34818,24 +18639,18 @@
+@@ -34818,24 +18631,18 @@
  
    *freebsd4* | *dragonfly* )
  
@@ -49584,7 +49580,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  /* end confdefs.h.  */
  
  /* Override any GCC internal prototype to avoid an error.
-@@ -34860,3156 +18675,3111 @@
+@@ -34860,3156 +18667,3111 @@
      ac_res=-l$ac_lib
      LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
    fi
@@ -55451,7 +55447,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
   ;;
      "default":C) chmod a+x distrib/config/netatalk-config contrib/shell_utils/apple_*
   ;;
-@@ -38018,11 +21788,13 @@
+@@ -38018,11 +21780,13 @@
  done # for ac_tag
  
  
@@ -55467,7 +55463,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  
  # configure is writing to config.log, and then calls config.status.
  # config.status does its own redirection, appending to config.log.
-@@ -38042,108 +21814,112 @@
+@@ -38042,108 +21806,112 @@
    exec 5>>config.log
    # Use ||, not &&, to avoid exiting from the if with $? = 1, which
    # would make configure fail if this is the last instruction.
@@ -55655,7 +55651,7 @@ $NetBSD: patch-aa,v 1.22 2011/09/22 01:20:20 christos Exp $
  	uams_using_options=""
  	if test x"$netatalk_cv_use_pam" != x"no"; then
          	uams_using_options="PAM"
-@@ -38152,76 +21928,76 @@
+@@ -38152,76 +21920,76 @@
          	uams_using_options="$uams_using_options SHADOW"
  	fi
  	if test "x$neta_cv_compile_dhx" = "xyes"; then
