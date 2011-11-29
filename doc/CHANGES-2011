@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3087 2011/11/29 20:57:49 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3088 2011/11/29 21:21:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4890,3 +4890,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/lame to 3.99.3 [wiz 2011-11-29]
 	Updated misc/dialog to 1.1.20111020 [wiz 2011-11-29]
 	Updated games/gbrainy to 2.06 [wiz 2011-11-29]
+	Updated fonts/tex-kotex-base to 0.3 [minskim 2011-11-29]
+	Updated fonts/tex-kotex-base-doc to 0.3 [minskim 2011-11-29]
+	Updated print/tex-kotex-utils to 0.3 [minskim 2011-11-29]
+	Updated print/tex-kotex to 0.3 [minskim 2011-11-29]
+	Updated print/tex-kotex-doc to 0.3 [minskim 2011-11-29]
+	Updated print/tex-kotex-dev to 0.3 [minskim 2011-11-29]
+	Updated print/tex-kotex-dev-doc to 0.3 [minskim 2011-11-29]
