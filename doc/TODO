@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10706 2011/11/28 16:46:45 wiz Exp $
+$NetBSD: TODO,v 1.10707 2011/11/29 09:48:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -799,6 +799,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
+	o imap-uw-2007f
 	o imapsync-1.452
 	o imp-5.0.15
 	o ingo-2.0.6
