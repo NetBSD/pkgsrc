@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2011/09/14 17:00:20 hans Exp $
+# $NetBSD: Makefile,v 1.59 2011/11/29 18:47:42 hans Exp $
 
 .include "dist.mk"
 
@@ -160,6 +160,10 @@ post-install:
 post-install:
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython2.4.sl \
 		${DESTDIR}${PREFIX}/lib/libpython2.4.sl.1.0
+.endif
+
+.if ${OPSYS} == "SunOS" && ${OS_VERSION} != "5.11"
+PREFER.openssl=		pkgsrc
 .endif
 
 USE_GNU_READLINE=	# defined
