@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3080 2011/11/29 17:13:53 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3081 2011/11/29 17:16:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4883,3 +4883,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/p5-JavaScript-Value-Escape version 0.06 [hiramatsu 2011-11-29]
 	Updated www/py-beautifulsoup to 3.2.0 [darcy 2011-11-29]
 	Updated devel/yasm to 1.2.0 [wiz 2011-11-29]
+	Updated editors/emacs to 23.3b [wiz 2011-11-29]
