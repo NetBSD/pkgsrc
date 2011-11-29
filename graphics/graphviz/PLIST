@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2010/11/17 15:46:21 dholland Exp $
+@comment $NetBSD: PLIST,v 1.38 2011/11/29 23:04:20 wiz Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -437,7 +437,6 @@ share/graphviz/lefty/tree.lefty
 @pkgdir share/graphviz/smyrna
 @pkgdir share/graphviz/examples
 @pkgdir share/graphviz/demo/pathplan_data
-@pkgdir lib/lua/5.1
 @pkgdir lib/graphviz/sharp
 @pkgdir lib/graphviz/ruby
 @pkgdir lib/graphviz/python25
