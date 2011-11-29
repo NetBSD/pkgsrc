@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/07/28 04:45:53 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/29 17:55:07 drochner Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvik-22.84.16
@@ -67,7 +67,6 @@ XDVI_PAPERSIZE=	a4
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 
