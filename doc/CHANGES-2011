@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3082 2011/11/29 18:18:33 darcy Exp $
+$NetBSD: CHANGES-2011,v 1.3083 2011/11/29 19:27:33 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4885,3 +4885,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/yasm to 1.2.0 [wiz 2011-11-29]
 	Updated editors/emacs to 23.3b [wiz 2011-11-29]
 	Updated www/py-webpy to 0.36 [darcy 2011-11-29]
+	Updated net/netatalk to 2.2.1nb1 [bouyer 2011-11-29]
