@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.172 2011/11/29 15:06:20 hans Exp $
+# $NetBSD: bootstrap,v 1.173 2011/11/29 17:06:45 hans Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -666,7 +666,7 @@ SunOS)
 	fi
 	root_group=root
 	need_bsd_install=yes
-	if [ -x "/usr/gnu/bin/awk" -o -x "/usr/bin/nawk" ]; then
+	if [ -x "/usr/gnu/bin/awk" ]; then
 		need_awk=no
 	else
 		need_awk=yes
