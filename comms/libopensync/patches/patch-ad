@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.1 2007/12/11 13:35:37 yyamano Exp $
+$NetBSD: patch-ad,v 1.2 2011/11/29 15:12:08 hans Exp $
 
 --- tools/osynctest.c.orig	2007-03-27 20:49:19.000000000 +0900
 +++ tools/osynctest.c
-@@ -212,7 +212,7 @@ void modify_data(OSyncMember *member, co
+@@ -81,8 +81,6 @@ double writetime;
+ double _second()     /* note that some compilers like AIX xlf do not require the trailing  '_' */
+ {
+     struct timeval tp;
+-    int rtn;
+-    rtn=gettimeofday(&tp, NULL);
+ 
+     return ((double)tp.tv_sec+(1.e-6)*tp.tv_usec);
+ }
+@@ -212,7 +210,7 @@ void modify_data(OSyncMember *member, co
  
  	const char *de = NULL;
  	while ((de = g_dir_read_name(dir))) {
