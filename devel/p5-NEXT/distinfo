@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/06/14 23:36:42 sno Exp $
+$NetBSD: distinfo,v 1.4 2011/11/29 10:38:04 hiramatsu Exp $
 
-SHA1 (NEXT-0.64.tar.gz) = 21a6f8f4017b3c3ec003fa7c91c29d8f8c03acdb
-RMD160 (NEXT-0.64.tar.gz) = a8214c41a89a0c089c03986ea169d797147358b7
-Size (NEXT-0.64.tar.gz) = 10305 bytes
+SHA1 (NEXT-0.65.tar.gz) = 015afd504d3ae0a50f47dc6a0af8b9be6fd2a466
+RMD160 (NEXT-0.65.tar.gz) = aac3f52c07ea83b88dc83ef0da15303be85598a8
+Size (NEXT-0.65.tar.gz) = 10174 bytes
