@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/02/11 22:59:49 abs Exp $
+# $NetBSD: Makefile,v 1.36 2011/11/29 18:31:26 hans Exp $
 
 DISTNAME=	rconfig-0.47
 CATEGORIES=	sysutils
@@ -15,6 +15,6 @@ DEPENDS+=	shmux-[0-9]*:../../sysutils/shmux
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pod2man pod2html
 
 .include "../../mk/bsd.pkg.mk"
