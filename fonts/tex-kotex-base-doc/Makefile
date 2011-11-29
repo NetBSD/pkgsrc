@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/01/12 15:18:11 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/29 20:35:32 minskim Exp $
 
 DISTNAME=	kotex-base.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.2
-MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/texlive/2010/archive/
-DIST_SUBDIR=	${PKGNAME:S/-doc//}
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.3
+MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/texlive/2011/archive/
+DIST_SUBDIR=	${PKGNAME:S/-doc//}-${TEXLIVE_REV}
 TEXLIVE_REV=	1
 
 MAINTAINER=	minskim@NetBSD.org
