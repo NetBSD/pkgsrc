@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.233 2011/09/14 15:31:23 hans Exp $
+# $NetBSD: replace.mk,v 1.234 2011/11/29 16:13:08 hans Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -668,18 +668,6 @@ TOOLS_PATH.pax=			${TOOLS_PREFIX.pax}/bin/${NBPAX_PROGRAM_PREFIX}pax
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.perl) && !empty(_USE_TOOLS:Mperl)
-.  if !empty(PKGPATH:Mlang/perl5)
-MAKEFLAGS+=			TOOLS_IGNORE.perl=
-.  elif !empty(_TOOLS_USE_PKGSRC.perl:M[yY][eE][sS])
-.    include "../../lang/perl5/version.mk"
-TOOLS_DEPENDS.perl?=		perl>=${PERL5_REQD}:../../lang/perl5
-TOOLS_CREATE+=			perl
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.perl=perl
-TOOLS_PATH.perl=		${TOOLS_PREFIX.perl}/bin/perl
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.pkg-config) && !empty(_USE_TOOLS:Mpkg-config)
 .  if !empty(PKGPATH:Mdevel/pkg-config)
 MAKEFLAGS+=			TOOLS_IGNORE.pkg-config=
@@ -690,18 +678,6 @@ TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pkg-config=pkg-config
 TOOLS_PATH.pkg-config=		${TOOLS_PREFIX.pkg-config}/bin/pkg-config
 .  else
 AUTORECONF_ARGS+=		-I ${TOOLS_PLATFORM.pkg-config:S/\/bin\/pkg-config//}/share/aclocal
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.pod2man) && !empty(_USE_TOOLS:Mpod2man)
-.  if !empty(PKGPATH:Mlang/perl5)
-MAKEFLAGS+=			TOOLS_IGNORE.pod2man=
-.  elif !empty(_TOOLS_USE_PKGSRC.pod2man:M[yY][eE][sS])
-.    include "../../lang/perl5/version.mk"
-TOOLS_DEPENDS.pod2man?=		perl>=${PERL5_REQD}:../../lang/perl5
-TOOLS_CREATE+=			pod2man
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pod2man=perl
-TOOLS_PATH.pod2man=		${TOOLS_PREFIX.pod2man}/bin/pod2man
 .  endif
 .endif
 
@@ -892,6 +868,24 @@ TOOLS_VALUE_GNU.yacc=		${TOOLS_CMDLINE.yacc}
 .endif
 
 ######################################################################
+
+# These tools are all supplied by the lang/perl5 package if there is
+# no native tool available.
+#
+_TOOLS.perl=			perl pod2man
+
+.for _t_ in ${_TOOLS.perl}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mlang/perl5)
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.{_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=		perl>=${PERL5_REQD}:../../lang/perl5
+TOOLS_CREATE+=			${_t_}
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=perl
+TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.    endif
+.  endif
+.endfor
 
 # These tools are all supplied by the sysutils/coreutils package if
 # there is no native tool available.
