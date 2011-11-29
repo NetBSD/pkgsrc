@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:32:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/11/29 20:26:48 wiz Exp $
 bin/lame
 ${PLIST.gtk}bin/mp3x
 include/lame/lame.h
 lib/libmp3lame.la
 man/man1/lame.1
-share/doc/lame/basic.html
+share/doc/lame/about.html
+share/doc/lame/abr.html
+share/doc/lame/cbr.html
+share/doc/lame/contact.html
 share/doc/lame/contributors.html
-share/doc/lame/examples.html
+share/doc/lame/detailed.html
 share/doc/lame/history.html
-share/doc/lame/id3.html
 share/doc/lame/index.html
-share/doc/lame/lame.css
-share/doc/lame/modes.html
-share/doc/lame/node6.html
-share/doc/lame/switchs.html
+share/doc/lame/introduction.html
+share/doc/lame/links.html
+share/doc/lame/list.html
+share/doc/lame/ms_stereo.html
+share/doc/lame/usage.html
+share/doc/lame/vbr.html
