@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3081 2011/11/29 17:16:07 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3082 2011/11/29 18:18:33 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4884,3 +4884,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/py-beautifulsoup to 3.2.0 [darcy 2011-11-29]
 	Updated devel/yasm to 1.2.0 [wiz 2011-11-29]
 	Updated editors/emacs to 23.3b [wiz 2011-11-29]
+	Updated www/py-webpy to 0.36 [darcy 2011-11-29]
