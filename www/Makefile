@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.835 2011/11/26 19:30:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.836 2011/11/29 10:40:46 hiramatsu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -406,6 +406,7 @@ SUBDIR+=	p5-HTTP-Tiny
 SUBDIR+=	p5-HTTPD-User-Manage
 SUBDIR+=	p5-Handel
 SUBDIR+=	p5-I18N-AcceptLanguage
+SUBDIR+=	p5-JavaScript-Value-Escape
 SUBDIR+=	p5-Jemplate
 SUBDIR+=	p5-Kwiki
 SUBDIR+=	p5-Kwiki-Archive-Cvs
