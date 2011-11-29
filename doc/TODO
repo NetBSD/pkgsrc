@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10710 2011/11/29 17:16:07 wiz Exp $
+$NetBSD: TODO,v 1.10711 2011/11/29 19:39:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -891,7 +891,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86dga-1.1.2
 	o libXxf86misc-1.0.3
 	o libXxf86vm-1.1.1
-	o libaudiofile-0.3.1
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.7.4
 	o libcdio-0.83
