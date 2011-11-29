@@ -1,0 +1,42 @@
+$NetBSD: patch-configure,v 1.1 2011/11/29 19:39:30 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2011-11-29 18:37:26.000000000 +0000
++++ configure
+@@ -15241,7 +15241,7 @@ else
+   enable_coverage=no
+ fi
+ 
+- if test "$enable_coverage" == "yes"; then
++ if test "$enable_coverage" = "yes"; then
+   ENABLE_COVERAGE_TRUE=
+   ENABLE_COVERAGE_FALSE='#'
+ else
+@@ -15250,7 +15250,7 @@ else
+ fi
+ 
+ 
+-if test "$enable_coverage" == "yes"; then :
++if test "$enable_coverage" = "yes"; then :
+   COVERAGE_CFLAGS="-fprofile-arcs -ftest-coverage"
+ 	COVERAGE_LIBS="-lgcov"
+ 
+@@ -15354,7 +15354,7 @@ else
+   enable_valgrind=no
+ fi
+ 
+- if test "$enable_valgrind" == "yes"; then
++ if test "$enable_valgrind" = "yes"; then
+   ENABLE_VALGRIND_TRUE=
+   ENABLE_VALGRIND_FALSE='#'
+ else
+@@ -15363,7 +15363,7 @@ else
+ fi
+ 
+ 
+-if test "$enable_valgrind" == "yes"; then :
++if test "$enable_valgrind" = "yes"; then :
+   # Extract the first word of "valgrind", so it can be a program name with args.
+ set dummy valgrind; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5

@@ -1,16 +1,18 @@
-$NetBSD: patch-af,v 1.1 2010/04/12 19:04:58 drochner Exp $
+$NetBSD: patch-af,v 1.2 2011/11/29 19:39:30 wiz Exp $
 
---- libaudiofile/util.h.orig	2010-01-26 19:55:15.000000000 +0000
+see Ubuntu bug 327018
+
+--- libaudiofile/util.h.orig	2011-05-31 18:04:50.000000000 +0000
 +++ libaudiofile/util.h
-@@ -55,9 +55,9 @@ _Track *_af_filehandle_get_track (AFfile
+@@ -54,9 +54,9 @@ bool _af_pv_getptr (AUpvlist pvlist, int
  
- bool _af_unique_ids (int *ids, int nids, char *idname, int iderr);
+ bool _af_unique_ids (const int *ids, int nids, const char *idname, int iderr);
  
--float _af_format_frame_size (_AudioFormat *format, bool stretch3to4);
-+double _af_format_frame_size (_AudioFormat *format, bool stretch3to4);
- int _af_format_frame_size_uncompressed (_AudioFormat *format, bool stretch3to4);
--float _af_format_sample_size (_AudioFormat *format, bool stretch3to4);
-+double _af_format_sample_size (_AudioFormat *format, bool stretch3to4);
- int _af_format_sample_size_uncompressed (_AudioFormat *format, bool stretch3to4);
+-float _af_format_frame_size (const AudioFormat *format, bool stretch3to4);
++double _af_format_frame_size (const AudioFormat *format, bool stretch3to4);
+ int _af_format_frame_size_uncompressed (const AudioFormat *format, bool stretch3to4);
+-float _af_format_sample_size (const AudioFormat *format, bool stretch3to4);
++double _af_format_sample_size (const AudioFormat *format, bool stretch3to4);
+ int _af_format_sample_size_uncompressed (const AudioFormat *format, bool stretch3to4);
  
- status _af_set_sample_format (_AudioFormat *f, int sampleFormat, int sampleWidth);
+ status _af_set_sample_format (AudioFormat *f, int sampleFormat, int sampleWidth);
