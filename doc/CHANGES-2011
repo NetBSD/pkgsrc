@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3078 2011/11/29 10:42:05 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3079 2011/11/29 17:03:04 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/pkglint to 4.105 [wiz 2011-11-28]
 	Updated devel/p5-NEXT to 0.65 [hiramatsu 2011-11-29]
 	Added www/p5-JavaScript-Value-Escape version 0.06 [hiramatsu 2011-11-29]
+	Updated www/py-beautifulsoup to 3.2.0 [darcy 2011-11-29]
