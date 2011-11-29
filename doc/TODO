@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10708 2011/11/29 16:51:54 wiz Exp $
+$NetBSD: TODO,v 1.10709 2011/11/29 17:13:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1517,7 +1517,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xzip-182
 	o yabause-0.9.11 [pkg/45670]
 	o yafc-1.1
-	o yasm-1.2.0
 	o yaz-4.1.7
 	o yodl-2.14.3
 	o yorick-2.1.05
