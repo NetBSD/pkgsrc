@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/29 18:26:09 hans Exp $
 #
 
 DISTNAME=	parallel-20110522
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pod2man pod2html
 
 REPLACE_PERL+=	src/parallel src/niceload src/sem src/sem.pod src/sql
 
