@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/19 23:01:53 minskim Exp $
-share/texmf-dist/fonts/fea/kotex-dev/luatexko/luakodefault.fea
+@comment $NetBSD: PLIST,v 1.3 2011/11/29 21:20:59 minskim Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/kotex-dev/xetexko/jamo-pua.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/kotex-dev/xetexko/jamo-pua.tec
+share/texmf-dist/tex/latex/kotex-dev/hangulhook.sty
 share/texmf-dist/tex/latex/kotex-dev/xoblivoir/memhangul-x.sty
 share/texmf-dist/tex/latex/kotex-dev/xoblivoir/memucs-interword-x.sty
 share/texmf-dist/tex/latex/kotex-dev/xoblivoir/oblivoir-xlua.cls
@@ -12,16 +12,17 @@ share/texmf-dist/tex/latex/kotex-dev/xoblivoir/xob-dotemph.sty
 share/texmf-dist/tex/latex/kotex-dev/xoblivoir/xob-paralist.sty
 share/texmf-dist/tex/latex/kotex-dev/xoblivoir/xoblivoir.cls
 share/texmf-dist/tex/lualatex/kotex-dev/luatexko/luatexko.sty
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/compathanjatohanja.lua
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/hangulnormalize.lua
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/ksc5601.lua
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexko-core.tex
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexko-doc.tex
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexko.lua
 share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexko.tex
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-common.lua
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-cp949.lua
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-findfile.lua
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-font.lua
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-input.lua
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-mplib.lua
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-mplib.tex
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-node.lua
-share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexplainko-outuni.lua
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexkomplib.lua
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/luatexkomplib.tex
+share/texmf-dist/tex/luatex/kotex-dev/luatexko/uhc2utf8.lua
+share/texmf-dist/tex/xelatex/kotex-dev/xetexko/hanjahook.sty
 share/texmf-dist/tex/xelatex/kotex-dev/xetexko/xetexko-dotemph.sty
 share/texmf-dist/tex/xelatex/kotex-dev/xetexko/xetexko-font.sty
 share/texmf-dist/tex/xelatex/kotex-dev/xetexko/xetexko-hanging.sty
