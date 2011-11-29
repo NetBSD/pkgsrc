@@ -1,0 +1,36 @@
+--- kmines/Makefile.in.orig	2008-08-20 17:43:06.000000000 +0200
++++ kmines/Makefile.in	2011-11-02 12:54:17.713830056 +0100
+@@ -849,28 +849,28 @@ install-data-local:
+ 
+ install-exec-hook:
+ 	@(test x$(HIGHSCORE_DIRECTORY) != x \
+-        && ((chown $(highscore_user):$(highscore_group) $(DESTBIN)) \
++        && ( (chown $(highscore_user):$(highscore_group) $(DESTBIN)) \
+ 	|| echo "Error: Could not install the game with correct permissions !!" \
+ 	)) || true
+ 
+ 	@(test x$(HIGHSCORE_DIRECTORY) != x \
+-		&& ((mkdir -p $(DESTHIGHSCORES) && chown $(highscore_user):$(highscore_group) $(DESTHIGHSCORES) \
++		&& ( (mkdir -p $(DESTHIGHSCORES) && chown $(highscore_user):$(highscore_group) $(DESTHIGHSCORES) \
+ 		&& chmod 750 $(DESTHIGHSCORES)) \
+ 	|| echo "Error: Could not create the highscore directory with correct permissions !!" \
+ 	)) || true
+ 
+ 	@(test x$(HIGHSCORE_DIRECTORY) != x \
+-        && ((chown $(highscore_user):$(highscore_group) $(DESTBIN)) \
++        && ( (chown $(highscore_user):$(highscore_group) $(DESTBIN)) \
+ 	|| echo "Error: Could not install the game with correct permissions !!" \
+ 	)) || true
+ 
+ 	@(test ${setgid} = true \
+-        && ((chmod 2755  $(DESTBIN)) \
++        && ( (chmod 2755  $(DESTBIN)) \
+ 	|| echo "Error: Could not install the game with correct permissions !!" \
+ 	)) || true
+ 
+ 	@(test x$(HIGHSCORE_DIRECTORY) != x \
+-        && ((touch $(DESTSCORES) && chown $(highscore_user):$(highscore_group) $(DESTSCORES) \
++        && ( (touch $(DESTSCORES) && chown $(highscore_user):$(highscore_group) $(DESTSCORES) \
+ 	&& chmod 0660 $(DESTSCORES)) \
+ 	|| echo "Error: Could not create system-wide highscore file with correct permissions !!" \
+ 	)) || true
