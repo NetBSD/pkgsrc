@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2010/12/14 18:12:40 asau Exp $
+# $NetBSD: Makefile,v 1.60 2011/11/29 18:26:51 darcy Exp $
 
 DISTNAME=	f2c-20100903	# see notes below
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -17,7 +18,7 @@ WRKSRC=		${WRKDIR}/f2c
 BUILD_DIRS=	src
 USE_BSD_MAKEFILE=	yes
 MAKE_ENV+=		MKCATPAGES=no
-INSTALLATION_DIRS=	bin share/doc/f2c ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin include share/doc/f2c ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -46,6 +47,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/f2c ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/f2c-f77 ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/f2c.1t ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/f2c.1
+	${INSTALL_DATA} ${WRKSRC}/f2c.h ${DESTDIR}${PREFIX}/include/f2c.h
 .for f in changes f2c.ps f2c.pdf
 	${INSTALL_DATA} ${WRKSRC}/$f ${DESTDIR}${PREFIX}/share/doc/f2c/$f
 .endfor
