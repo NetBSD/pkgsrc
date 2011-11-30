@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:42:57 obache Exp $
+# $NetBSD: Makefile,v 1.24 2011/11/30 14:47:14 wiz Exp $
 
 DISTNAME=	normalize-0.7.7
 PKGREVISION=	1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://normalize.nongnu.org/
 COMMENT=	Audio file volume normalizer (wav,mp3,ogg)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,9 +18,15 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-audiofile
+CONFIGURE_ARGS+=	--with-audiofile-prefix=${BUILDLINK_PREFIX.libaudiofile}
+CONFIGURE_ARGS+=	--disable-audiofiletest
 CONFIGURE_ARGS+=	--with-mad
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.libaudiofile}/include
+LDFLAGS+=		-L${BUILDLINK_PREFIX.libaudiofile}/lib
+LDFLAGS+=		${LINKER_RPATH_FLAG}${BUILDLINK_PREFIX.libaudiofile}/lib -laudiofile
 
-REPLACE_PERL=		src/normalize-mp3
+# is a generated file which doesn't exist when REPLACE_PERL happens
+#REPLACE_PERL=		src/normalize-mp3
 
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
