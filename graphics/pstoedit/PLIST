@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/04/13 06:53:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/11/30 21:07:20 wiz Exp $
 bin/pstoedit
 include/pstoedit/base64writer.h
 include/pstoedit/cppcomp.h
@@ -26,6 +26,7 @@ share/doc/html/pstoedit/changelog.htm
 share/doc/html/pstoedit/index.htm
 share/doc/html/pstoedit/pstoedit.htm
 share/doc/pstoedit/readme.txt
+share/pstoedit/drvhpgl.pencolors
 share/pstoedit/examplefigmap.fmp
 share/pstoedit/latex2e.fmp
 share/pstoedit/mpost.fmp
