@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.896 2011/11/24 13:03:12 taca Exp $
+# $NetBSD: Makefile,v 1.897 2011/11/30 23:50:30 pettai Exp $
 #
 
 COMMENT=	Networking tools
@@ -567,6 +567,7 @@ SUBDIR+=	synergy
 SUBDIR+=	synergy1.2
 SUBDIR+=	sysmon
 SUBDIR+=	tacacs
+SUBDIR+=	tacacs-shrubbery
 SUBDIR+=	tcl-scotty
 SUBDIR+=	tcpdmerge
 SUBDIR+=	tcpdpriv
