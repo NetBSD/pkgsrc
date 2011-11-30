@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2011/11/30 08:29:36 tron Exp $
+# $NetBSD: Makefile,v 1.48 2011/11/30 08:52:02 tron Exp $
 
 DISTNAME=		audiofile-0.3.1
 PKGNAME=		lib${DISTNAME}
@@ -22,8 +22,10 @@ DOCDIR=			${PREFIX}/share/doc/libaudiofile
 
 INSTALLATION_DIRS=	${DOCDIR}
 
+# g++ 4.1.3 complains about conversions from "double" to various integer types.
+# As these look harmless and are accepted by g++ 4.2.1 (Mac OS X) and
+# 4.5.3 (NetBSD 5.99.*) we just ignore them.
 .include "../../mk/compiler.mk"
-
 .if !empty(CC_VERSION:Mgcc-4.1.*)
 BUILDLINK_TRANSFORM+=	rm:-Werror
 .endif
