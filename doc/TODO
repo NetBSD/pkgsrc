@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10721 2011/11/30 21:07:30 wiz Exp $
+$NetBSD: TODO,v 1.10722 2011/11/30 21:22:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1279,7 +1279,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tig-0.18
 	o tightvnc-2.0.95
 	o tile-0.7.4
-	o tin-2.0.0
 	o tinc-1.0.16
 	o tinyproxy-1.8.3
 	o tk-8.5.11
