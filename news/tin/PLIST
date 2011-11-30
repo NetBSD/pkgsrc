@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/07/22 10:00:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/11/30 21:22:41 wiz Exp $
 bin/metamutt
 bin/opt-case.pl
 bin/rtin
@@ -15,11 +15,11 @@ man/man1/w2r.pl.1
 man/man5/mmdf.5
 man/man5/tin.5
 share/doc/tin/WHATSNEW
+share/locale/da/LC_MESSAGES/tin.mo
 share/locale/de/LC_MESSAGES/tin.mo
 share/locale/en_GB/LC_MESSAGES/tin.mo
 share/locale/et/LC_MESSAGES/tin.mo
 share/locale/fr/LC_MESSAGES/tin.mo
 share/locale/ru/LC_MESSAGES/tin.mo
-share/locale/rw/LC_MESSAGES/tin.mo
 share/locale/sv/LC_MESSAGES/tin.mo
 share/locale/tr/LC_MESSAGES/tin.mo
