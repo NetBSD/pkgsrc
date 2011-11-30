@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.2 2011/11/30 14:30:57 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2011/11/30 20:52:46 wiz Exp $
 
 Fix unportable test(1) construct.
+Accepted by upstream, will be in next release.
 
 --- configure.orig	2011-11-29 18:15:23.000000000 +0000
 +++ configure
