@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2011/03/01 04:12:45 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2011/11/30 04:29:10 minskim Exp $
 
---- configure.in.orig	2010-06-02 16:53:45.000000000 +0000
+--- configure.in.orig	2011-11-28 09:24:08.000000000 +0000
 +++ configure.in
-@@ -403,6 +403,14 @@ case "${canonical}" in
+@@ -438,6 +438,14 @@ case "${canonical}" in
        sparc64-*)        machine=sparc ;;
      esac
    ;;
@@ -17,14 +17,3 @@ $NetBSD: patch-aa,v 1.2 2011/03/01 04:12:45 minskim Exp $
  
    ## FreeBSD kernel + glibc based userland
    *-*-kfreebsd*gnu* )
-@@ -1527,9 +1535,9 @@ if test "${HAVE_NS}" = yes; then
-   window_system=nextstep
-   with_xft=no
-   # set up packaging dirs
-+  if test "${EN_NS_SELF_CONTAINED}" = yes; then
-   exec_prefix=${ns_appbindir}
-   libexecdir=${ns_appbindir}/libexec
--  if test "${EN_NS_SELF_CONTAINED}" = yes; then
-      prefix=${ns_appresdir}
-   fi
-   ns_frag=$srcdir/src/ns.mk
