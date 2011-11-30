@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2010/04/13 06:53:20 obache Exp $
+$NetBSD: patch-ac,v 1.7 2011/11/30 21:07:20 wiz Exp $
 
 Avoid this:
 
@@ -7,14 +7,14 @@ Avoid this:
 
 on alpha (and probably others)
 
---- configure.orig	2009-08-13 08:18:46.000000000 +0000
+--- configure.orig	2011-08-27 15:27:42.000000000 +0000
 +++ configure
-@@ -18160,7 +18160,7 @@ $as_echo "GNU on RiscOS" >&6; }
-     { $as_echo "$as_me:$LINENO: result: GNU" >&5
+@@ -16859,7 +16859,7 @@ $as_echo "GNU on RiscOS" >&6; }
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: GNU" >&5
  $as_echo "GNU" >&6; }
  #   need to disable long long warning here because of ImageMagick using it
 -    SPECIAL_CXXFLAGS="-DBUGGYGPP -pedantic -Wall -Wwrite-strings -Wcast-qual -Wpointer-arith -Wno-long-long "
 +    SPECIAL_CXXFLAGS="-DBUGGYGPP -Wall -Wwrite-strings -Wcast-qual -Wpointer-arith -Wno-long-long "
    fi
-   CXXFLAGS="-g"
  elif test `echo "$CXX" | egrep -c 'xlC$'` -eq 1; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: AIX xlC" >&5
