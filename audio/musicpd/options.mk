@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.17 2011/11/30 12:01:58 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2011/11/30 13:53:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	audiofile bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms mikmod modplug musepack musicpd-lastfm ogg shout sqlite3 wavpack zziplib
+PKG_SUPPORTED_OPTIONS=	audiofile bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libwildmidi mikmod modplug musepack musicpd-lastfm ogg shout sqlite3 wavpack zziplib
 PKG_SUGGESTED_OPTIONS=	audiofile curl faad flac id3 libao musepack ogg
 
 PKG_OPTIONS_LEGACY_OPTS=	libmikmod:mikmod
@@ -103,10 +103,18 @@ CONFIGURE_ARGS+=	--enable-ao
 CONFIGURE_ARGS+=	--disable-ao
 .endif
 
-.if !empty(PKG_OPTIONS:Mmusicpd-lastfm)
-CONFIGURE_ARGS+=	--enable-lastfm
+.if !empty(PKG_OPTIONS:Mlibmms)
+.  include "../../net/libmms/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-mms
 .else
-CONFIGURE_ARGS+=	--disable-lastfm
+CONFIGURE_ARGS+=	--disable-mms
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibwildmidi)
+.  include "../../audio/libwildmidi/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-wildmidi
+.else
+CONFIGURE_ARGS+=	--disable-wildmidi
 .endif
 
 .if !empty(PKG_OPTIONS:Mmikmod)
@@ -123,19 +131,18 @@ CONFIGURE_ARGS+=	--enable-modplug
 CONFIGURE_ARGS+=	--disable-modplug
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibmms)
-.  include "../../net/libmms/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-mms
-.else
-CONFIGURE_ARGS+=	--disable-mms
-.endif
-
 .if !empty(PKG_OPTIONS:Mmusepack)
 .  include "../../audio/libmpcdec/buildlink3.mk"
 CONFIGURE_ENV+=		mpcdec_prefix=${BUILDLINK_PREFIX.libmpcdec}
 CONFIGURE_ARGS+=	--enable-mpc
 .else
 CONFIGURE_ARGS+=	--disable-mpc
+.endif
+
+.if !empty(PKG_OPTIONS:Mmusicpd-lastfm)
+CONFIGURE_ARGS+=	--enable-lastfm
+.else
+CONFIGURE_ARGS+=	--disable-lastfm
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
