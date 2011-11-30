@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2008/06/04 22:10:11 tonnerre Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/30 10:13:38 he Exp $
+
+Don't use /tmp for temporary files, use . instead.
 
 --- lib/Locale/Po4a/Po.pm.orig	2005-12-09 18:24:46.000000000 +0100
 +++ lib/Locale/Po4a/Po.pm
