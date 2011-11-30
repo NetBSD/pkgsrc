@@ -1,10 +1,28 @@
-$NetBSD: patch-configure,v 1.1 2011/11/29 19:39:30 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2011/11/30 14:30:57 wiz Exp $
 
 Fix unportable test(1) construct.
 
---- configure.orig	2011-11-29 18:37:26.000000000 +0000
+--- configure.orig	2011-11-29 18:15:23.000000000 +0000
 +++ configure
-@@ -15241,7 +15241,7 @@ else
+@@ -15246,7 +15246,7 @@ else
+   enable_werror=no
+ fi
+ 
+- if test "$enable_werror" == "yes"; then
++ if test "$enable_werror" = "yes"; then
+   ENABLE_WERROR_TRUE=
+   ENABLE_WERROR_FALSE='#'
+ else
+@@ -15255,7 +15255,7 @@ else
+ fi
+ 
+ 
+-if test "$enable_werror" == "yes"; then :
++if test "$enable_werror" = "yes"; then :
+   WERROR_CFLAGS="-Werror"
+ 
+ fi
+@@ -15267,7 +15267,7 @@ else
    enable_coverage=no
  fi
  
@@ -13,7 +31,7 @@ Fix unportable test(1) construct.
    ENABLE_COVERAGE_TRUE=
    ENABLE_COVERAGE_FALSE='#'
  else
-@@ -15250,7 +15250,7 @@ else
+@@ -15276,7 +15276,7 @@ else
  fi
  
  
@@ -22,7 +40,7 @@ Fix unportable test(1) construct.
    COVERAGE_CFLAGS="-fprofile-arcs -ftest-coverage"
  	COVERAGE_LIBS="-lgcov"
  
-@@ -15354,7 +15354,7 @@ else
+@@ -15380,7 +15380,7 @@ else
    enable_valgrind=no
  fi
  
@@ -31,7 +49,7 @@ Fix unportable test(1) construct.
    ENABLE_VALGRIND_TRUE=
    ENABLE_VALGRIND_FALSE='#'
  else
-@@ -15363,7 +15363,7 @@ else
+@@ -15389,7 +15389,7 @@ else
  fi
  
  
