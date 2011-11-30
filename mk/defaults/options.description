@@ -466,6 +466,7 @@ quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
 readline		Enable use of GNU readline library.
 rsaref			Use RSAREF library.
+rtmp			Enable rtmp:// support using rtmpdump.
 rtree			Enable R-tree support.
 ruby			Enable Ruby support.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
