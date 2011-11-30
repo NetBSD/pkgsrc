@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10720 2011/11/30 20:57:56 wiz Exp $
+$NetBSD: TODO,v 1.10721 2011/11/30 21:07:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o projclock-0.9
 	o proxsmtp-1.10
 	o psmisc-21.9
-	o pstoedit-3.60
 	o ptlib-2.8.0 [pkg/42941]
 	o ptlib-2.8.3
 	o puf-1.0.0

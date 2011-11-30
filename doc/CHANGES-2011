@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3106 2011/11/30 21:05:41 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3107 2011/11/30 21:07:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4919,3 +4919,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/curl to 7.23.1 [wiz 2011-11-30]
 	Updated security/libtasn1 to 2.11 [wiz 2011-11-30]
 	Updated www/emacs-w3m-snapshot to 1.4.394.20100524nb2 [minskim 2011-11-30]
+	Updated graphics/pstoedit to 3.60 [wiz 2011-11-30]
