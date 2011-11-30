@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/11/16 06:07:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/11/30 10:51:31 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-report-statistics
@@ -262,8 +262,6 @@ share/doc/milter-manager/ja/milter-version.xml
 share/doc/milter-manager/ja/milter-writer.xml
 share/doc/milter-manager/ja/mta-and-milter-manager-and-child-milter-ja.png
 share/doc/milter-manager/ja/mta-and-milter-manager-and-child-milter.png
-share/doc/milter-manager/ja/news.html
-share/doc/milter-manager/ja/readme.html
 share/doc/milter-manager/ja/reverse-dictionary.html
 share/doc/milter-manager/ja/right.png
 share/doc/milter-manager/ja/ruby-milter-configuration.html
