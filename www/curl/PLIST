@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2011/06/28 10:11:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.34 2011/11/30 20:56:08 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -83,6 +83,7 @@ share/examples/curl/curlgtk.c
 share/examples/curl/curlx.c
 share/examples/curl/debug.c
 share/examples/curl/evhiperfifo.c
+share/examples/curl/externalsocket.c
 share/examples/curl/fileupload.c
 share/examples/curl/fopen.c
 share/examples/curl/ftp-wildcard.c
@@ -110,6 +111,9 @@ share/examples/curl/opensslthreadlock.c
 share/examples/curl/persistant.c
 share/examples/curl/post-callback.c
 share/examples/curl/postit2.c
+share/examples/curl/progressfunc.c
+share/examples/curl/resolve.c
+share/examples/curl/rtsp.c
 share/examples/curl/sampleconv.c
 share/examples/curl/sendrecv.c
 share/examples/curl/sepheaders.c
