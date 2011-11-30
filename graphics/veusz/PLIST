@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/11/07 18:00:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/11/30 10:59:13 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -137,6 +137,44 @@ ${PYSITELIB}/veusz/embed.pyo
 ${PYSITELIB}/veusz/embed_remote.py
 ${PYSITELIB}/veusz/embed_remote.pyc
 ${PYSITELIB}/veusz/embed_remote.pyo
+${PYSITELIB}/veusz/examples/bar_labels.dat
+${PYSITELIB}/veusz/examples/bar_labels.vsz
+${PYSITELIB}/veusz/examples/barplots.vsz
+${PYSITELIB}/veusz/examples/boxplot.vsz
+${PYSITELIB}/veusz/examples/coloredpoints.vsz
+${PYSITELIB}/veusz/examples/contour.vsz
+${PYSITELIB}/veusz/examples/dataset_operations.vsz
+${PYSITELIB}/veusz/examples/datebar.dat
+${PYSITELIB}/veusz/examples/datebar.vsz
+${PYSITELIB}/veusz/examples/embedexample.py
+${PYSITELIB}/veusz/examples/example_csv.csv
+${PYSITELIB}/veusz/examples/example_csv.vsz
+${PYSITELIB}/veusz/examples/example_import.vsz
+${PYSITELIB}/veusz/examples/example_import_1.dat
+${PYSITELIB}/veusz/examples/example_import_2.dat
+${PYSITELIB}/veusz/examples/fit.vsz
+${PYSITELIB}/veusz/examples/functions.vsz
+${PYSITELIB}/veusz/examples/histo.vsz
+${PYSITELIB}/veusz/examples/inside.vsz
+${PYSITELIB}/veusz/examples/isolatedaxes.vsz
+${PYSITELIB}/veusz/examples/labels.dat
+${PYSITELIB}/veusz/examples/labels.vsz
+${PYSITELIB}/veusz/examples/linked_datasets.vsz
+${PYSITELIB}/veusz/examples/mandelbrot.vsz
+${PYSITELIB}/veusz/examples/markerspolygon.vsz
+${PYSITELIB}/veusz/examples/multiaxes.vsz
+${PYSITELIB}/veusz/examples/multixy.vsz
+${PYSITELIB}/veusz/examples/polar.vsz
+${PYSITELIB}/veusz/examples/profile.vsz
+${PYSITELIB}/veusz/examples/shapes.vsz
+${PYSITELIB}/veusz/examples/sin.vsz
+${PYSITELIB}/veusz/examples/sin_byhand.vsz
+${PYSITELIB}/veusz/examples/spectrum.vsz
+${PYSITELIB}/veusz/examples/stackedxy.vsz
+${PYSITELIB}/veusz/examples/starchart.vsz
+${PYSITELIB}/veusz/examples/ternary.vsz
+${PYSITELIB}/veusz/examples/tutorialdata.csv
+${PYSITELIB}/veusz/examples/vectorfield.vsz
 ${PYSITELIB}/veusz/helpers/__init__.py
 ${PYSITELIB}/veusz/helpers/__init__.pyc
 ${PYSITELIB}/veusz/helpers/__init__.pyo
@@ -220,6 +258,9 @@ ${PYSITELIB}/veusz/utils/__init__.pyo
 ${PYSITELIB}/veusz/utils/action.py
 ${PYSITELIB}/veusz/utils/action.pyc
 ${PYSITELIB}/veusz/utils/action.pyo
+${PYSITELIB}/veusz/utils/colormap.py
+${PYSITELIB}/veusz/utils/colormap.pyc
+${PYSITELIB}/veusz/utils/colormap.pyo
 ${PYSITELIB}/veusz/utils/dates.py
 ${PYSITELIB}/veusz/utils/dates.pyc
 ${PYSITELIB}/veusz/utils/dates.pyo
@@ -283,7 +324,6 @@ ${PYSITELIB}/veusz/widgets/contour.pyo
 ${PYSITELIB}/veusz/widgets/controlgraph.py
 ${PYSITELIB}/veusz/widgets/controlgraph.pyc
 ${PYSITELIB}/veusz/widgets/controlgraph.pyo
-${PYSITELIB}/veusz/widgets/data/colormaps.dat
 ${PYSITELIB}/veusz/widgets/fit.py
 ${PYSITELIB}/veusz/widgets/fit.pyc
 ${PYSITELIB}/veusz/widgets/fit.pyo
@@ -402,6 +442,7 @@ ${PYSITELIB}/veusz/windows/icons/error_linevert.svg
 ${PYSITELIB}/veusz/windows/icons/error_linevertbar.svg
 ${PYSITELIB}/veusz/windows/icons/error_none.svg
 ${PYSITELIB}/veusz/windows/icons/kde-application-exit.svg
+${PYSITELIB}/veusz/windows/icons/kde-clipboard.svg
 ${PYSITELIB}/veusz/windows/icons/kde-dataset-new-veuszedit.svg
 ${PYSITELIB}/veusz/windows/icons/kde-dataset2d-new-veuszedit.svg
 ${PYSITELIB}/veusz/windows/icons/kde-document-export.svg
@@ -485,6 +526,9 @@ ${PYSITELIB}/veusz/windows/simplewindow.pyo
 ${PYSITELIB}/veusz/windows/treeeditwindow.py
 ${PYSITELIB}/veusz/windows/treeeditwindow.pyc
 ${PYSITELIB}/veusz/windows/treeeditwindow.pyo
+${PYSITELIB}/veusz/windows/tutorial.py
+${PYSITELIB}/veusz/windows/tutorial.pyc
+${PYSITELIB}/veusz/windows/tutorial.pyo
 ${PYSITELIB}/veusz/windows/widgettree.py
 ${PYSITELIB}/veusz/windows/widgettree.pyc
 ${PYSITELIB}/veusz/windows/widgettree.pyo
