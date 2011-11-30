@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3093 2011/11/30 10:40:03 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3094 2011/11/30 10:51:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4902,3 +4902,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/emacs-snapshot to 24.0.91.20111128 [msk 2011-11-30]
 	Updated textproc/po4a to 0.23nb8 [he 2011-11-30]
 	Updated textproc/groonga to 1.2.8 [obache 2011-11-30]
+	Updated mail/milter-manager to 1.8.2 [obache 2011-11-30]
