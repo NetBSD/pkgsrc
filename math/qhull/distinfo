@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/19 18:00:54 drochner Exp $
+$NetBSD: distinfo,v 1.2 2011/11/30 10:55:49 drochner Exp $
 
 SHA1 (qhull-2003.1.tar.gz) = 2e783b5e45cecc053b1dc08c682b871dfbb59dd2
 RMD160 (qhull-2003.1.tar.gz) = 6c82ad27601f9aa12498e3bc08f06c7b777a5f4d
 Size (qhull-2003.1.tar.gz) = 724313 bytes
+SHA1 (patch-aa) = 5ad003e5dd81c41ed402b3b1c390a153640cce4e
