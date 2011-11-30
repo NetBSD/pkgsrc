@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3102 2011/11/30 20:44:03 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3103 2011/11/30 20:53:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4915,3 +4915,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/libaudiofile to 0.3.2 [wiz 2011-11-30]
 	Updated games/puzzles to 9306 [wiz 2011-11-30]
 	Updated devel/libidn to 1.23 [wiz 2011-11-30]
+	Updated audio/libaudiofile to 0.3.2nb1 [wiz 2011-11-30]
