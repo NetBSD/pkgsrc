@@ -1,0 +1,5 @@
+pam-krb5 is a Kerberos v5 PAM module for either MIT Kerberos or Heimdal.
+It supports ticket refreshing by screen savers, configurable
+authorization handling, authentication of non-local accounts for network
+services, password changing, and password expiration, as well as all the
+standard expected PAM features.
