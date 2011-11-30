@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3100 2011/11/30 14:31:06 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3101 2011/11/30 20:41:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4913,3 +4913,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added audio/libwildmidi version 0.2.3.4 [wiz 2011-11-30]
 	Updated www/lynx to 2.8.7nb4 [wiz 2011-11-30]
 	Updated audio/libaudiofile to 0.3.2 [wiz 2011-11-30]
+	Updated games/puzzles to 9306 [wiz 2011-11-30]
