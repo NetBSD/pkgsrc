@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2011/04/14 17:55:43 drochner Exp $
+$NetBSD: distinfo,v 1.34 2011/11/30 12:02:25 wiz Exp $
 
 SHA1 (mpd-0.16.2.tar.bz2) = ce0b8cd473f8acb45c06d73f41c18fc4dabbe440
 RMD160 (mpd-0.16.2.tar.bz2) = 74e63fe4514eb8309bf2b2e4e4012566e14b6262
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = b0879896541d220300c105a0b2a94b53d62203cc
 SHA1 (patch-ac) = 08cb6ce7a7ca6e2c56d19d9d5487944dbba66c91
 SHA1 (patch-ad) = 0a836d2ca10143eb1472560d97769c367e42aea6
 SHA1 (patch-ae) = dfc4ca455ef606baf56cb2513e5471f6c16385dc
+SHA1 (patch-src_decoder_audiofile__decoder__plugin.c) = 6734eae169da69ac3447252da65394e08afbee3d
