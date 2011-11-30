@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3092 2011/11/30 10:14:10 he Exp $
+$NetBSD: CHANGES-2011,v 1.3093 2011/11/30 10:40:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4901,3 +4901,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/graphviz to 2.26.3nb5 [wiz 2011-11-29]
 	Updated editors/emacs-snapshot to 24.0.91.20111128 [msk 2011-11-30]
 	Updated textproc/po4a to 0.23nb8 [he 2011-11-30]
+	Updated textproc/groonga to 1.2.8 [obache 2011-11-30]
