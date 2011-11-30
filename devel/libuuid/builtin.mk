@@ -1,8 +1,9 @@
-# $NetBSD: builtin.mk,v 1.2 2011/11/30 07:57:09 sbd Exp $
+# $NetBSD: builtin.mk,v 1.3 2011/11/30 08:04:20 sbd Exp $
 
 BUILTIN_PKG:=	libuuid
 
-BUILTIN_FIND_FILES_VAR=		H_UUID
+BUILTIN_FIND_FILES_VAR=		UUID_PC H_UUID
+BUILTIN_FIND_FILES.UUID_PC=	/usr/lib/pkgconfig/uuid.pc
 BUILTIN_FIND_FILES.H_UUID=	/usr/include/uuid/uuid.h
 BUILTIN_FIND_GREP.H_UUID=	uuid_generate
 BUILTIN_FIND_LIBS:=		uuid
@@ -28,7 +29,11 @@ MAKEVARS+=	IS_BUILTIN.libuuid
 ###
 .if !defined(BUILTIN_PKG.libuuid) && \
     !empty(IS_BUILTIN.libuuid:M[yY][eE][sS])
+.  if empty(UUID_PC:M__nonexistent__)
+BUILTIN_PKG.libuuid!=	${SED} -n -e 's/Version: //p' ${UUID_PC}
+.  else
 BUILTIN_PKG.libuuid=	libuuid-2.18	# whatever, as long as it is big enough
+.  endif
 .endif
 
 ###
@@ -71,11 +76,17 @@ BUILDLINK_TARGETS+=	libuuid-fake-pc
 libuuid-fake-pc:
 	${RUN}						\
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\
-	{	${ECHO} "Name: uuid";				\
-		${ECHO} "Description: Universally unique id library"; \
-		${ECHO} "Version: ${BUILTIN_VERSION.libuuid}";	\
-		${ECHO} "Libs: -L/usr/lib -luuid"		\
-		${ECHO} "Cflags: -I/usr/include";		\
-	} >${BUILDLINK_DIR}/lib/pkgconfig/uuid.pc
+	src=${UUID_PC};					\
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/uuid.pc;	\
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{	${ECHO} "Name: uuid";				\
+			${ECHO} "Description: Universally unique id library"; \
+			${ECHO} "Version: ${BUILTIN_VERSION.libuuid}";	\
+			${ECHO} "Libs: -L/usr/lib -luuid"		\
+			${ECHO} "Cflags: -I/usr/include";		\
+		} >$${dst} ;\
+	fi
 .  endif
 .endif # CHECK_BUILTIN.libuuid
