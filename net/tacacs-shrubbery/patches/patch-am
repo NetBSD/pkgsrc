@@ -1,0 +1,61 @@
+$NetBSD: patch-am,v 1.1.1.1 2011/11/30 23:47:29 pettai Exp $
+
+Properly handle PAM support header file on MacOS prior to 10.6;
+added patch for PAM support for pap.
+(http://www.shrubbery.net/pipermail/tac_plus/2008-October/000282.html)
+
+--- pwlib.c.orig	2011-11-30 18:02:45.000000000 +0100
++++ pwlib.c	2011-11-30 18:02:54.000000000 +0100
+@@ -31,7 +31,7 @@
+ #endif
+ 
+ #if HAVE_PAM
+-# ifdef __APPLE__	/* MacOS X */
++# ifdef PAM-PAM	/* MacOS X prior to 10.6 */
+ #  include <pam/pam_appl.h>
+ # else
+ #  include <security/pam_appl.h>
+@@ -50,6 +50,9 @@
+ #endif
+ static int passwd_file_verify(char *, char *, struct authen_data *, char *);
+ 
++// Global password variable for pap PAM support
++static char *predef_passwd;
++
+ /* Adjust data->status depending on whether a user has expired or not */
+ void
+ set_expiration_status(char *exp_date, struct authen_data *data)
+@@ -490,10 +493,13 @@
+ 		report(LOG_DEBUG, "%s %s: PAM_PROMPT_ECHO_OFF", session.peer,
+ 		       session.port);
+ 
+-	    send_authen_reply(TAC_PLUS_AUTHEN_STATUS_GETPASS,
+-			      (char *)pmpp[i]->msg,
+-			      pmpp[i]->msg ? strlen(pmpp[i]->msg) : 0,
+-			      NULL, 0, TAC_PLUS_AUTHEN_FLAG_NOECHO);
++	    if (strcmp(predef_passwd, "") != 0) {
++		prpp[i]->resp = predef_passwd;
++	    } else {
++		send_authen_reply(TAC_PLUS_AUTHEN_STATUS_GETPASS,
++		(char *)pmpp[i]->msg,
++		pmpp[i]->msg ? strlen(pmpp[i]->msg) : 0,
++		NULL, 0, TAC_PLUS_AUTHEN_FLAG_NOECHO);
+ 	    reply = get_authen_continue();
+ 	    if (!reply) {
+ 		/* Typically due to a premature connection close */
+@@ -513,6 +519,7 @@
+ 	    prpp[i]->resp[acp->user_msg_len] = '\0';
+ 
+ 	    free(reply);
++	    }
+ 	    break;
+ 	case PAM_PROMPT_ECHO_ON:
+ 	    if (debug & DEBUG_PASSWD_FLAG)
+@@ -588,6 +595,7 @@
+     int			pam_flag;
+     struct pam_conv	conv = { pam_tacacs, NULL };
+     pam_handle_t	*pamh = NULL;
++    predef_passwd = passwd;
+ 
+     if (debug & DEBUG_PASSWD_FLAG)
+ 	report(LOG_DEBUG, "pam_verify %s %s", user, passwd);

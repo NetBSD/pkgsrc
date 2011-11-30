@@ -1,0 +1,26 @@
+$NetBSD: patch-al,v 1.1.1.1 2011/11/30 23:47:29 pettai Exp $
+
+Also compile on systems that do not have PAM
+
+--- config.c.orig	2009-04-19 12:39:42.000000000 +0200
++++ config.c	2009-04-19 12:41:16.000000000 +0200
+@@ -65,7 +65,9 @@
+ 				skey |
+ 				cleartext <password> |
+ 				des <password> |
++#ifdef HAVE_PAM
+ 				PAM |
++#endif
+ 				nopassword
+ 
+    <user_attr>		:=	name	= <string> |
+@@ -79,6 +81,9 @@
+ #endif
+ 				pap	= cleartext <string> |
+ 				pap	= des <string> |
++#ifdef HAVE_PAM
++				pap	= PAM |
++#endif
+ 				opap	= cleartext <string> |
+ 				global	= cleartext <string> |
+ 				msg	= <string>
