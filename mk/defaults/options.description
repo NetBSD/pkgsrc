@@ -151,6 +151,7 @@ finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
 firefox3		Use firefox3 as gecko rendering engine.
 flac			Enable FLAC support.
+fluidsynth		Enable MIDI support using fluidsynth.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
 ftp			Enable File Transfer Protocol (FTP) support.
@@ -314,6 +315,7 @@ libgcrypt		Use GNU cryptographic library.
 libgpod			Enable libgpod support.
 libiconv-cp932		Add supplemental support for CP932.
 liblqr			Enable liblqr (liquid rescale) support.
+libmms			Enable streaming from mms:// URLS using libmms.
 libmp4v2		Enable libmp4v2 (MP4) support.
 libmtp			Enable MTP via libmtp support.
 libofx			Enable OFX support.
@@ -384,6 +386,7 @@ mrtg-snmpv3		Enable SNMPv3 support.
 mstats			Enable memory statistics.
 musepack		Enable the portable Musepack decoder library.
 musicbrainz		Enable musicbrainz support.
+musicpd-lastfm		Enable Last.FM support in musicpd.
 mutt-compressed-mbox	Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
@@ -616,3 +619,4 @@ zenmap			Enable nmap GUI frontend.
 ziplinks		Compress data before transmitting it between servers.
 zlib			Enable support for zlib compression.
 zsh-multibyte		Enable multibyte support in Zsh.
+zziplib			Enable zip support using zziplib.
