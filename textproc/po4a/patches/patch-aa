@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/13 18:21:56 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/30 10:13:38 he Exp $
+
+Produce uncompressed man pages.
 
 --- Build.PL.orig	2005-12-09 17:24:46.000000000 +0000
 +++ Build.PL
