@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2011/11/30 23:47:29 pettai Exp $
+
+Handle IRIX the same way as Solaris
+
+--- do_acct.c.orig	2011-11-30 17:58:18.000000000 +0100
++++ do_acct.c	2011-11-30 17:58:28.000000000 +0100
+@@ -223,7 +223,7 @@
+     else
+ 	memcpy(entry.ut_name, name, sizeof(entry.ut_name));
+ 
+-#ifndef SOLARIS
++#if !defined(SOLARIS) && !defined(__sgi)
+     if (strlen(host) < sizeof entry.ut_host)
+ 	strcpy(entry.ut_host, host);
+     else
