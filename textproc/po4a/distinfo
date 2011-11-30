@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2008/06/04 22:10:11 tonnerre Exp $
+$NetBSD: distinfo,v 1.3 2011/11/30 10:13:38 he Exp $
 
 SHA1 (po4a-0.23.tar.gz) = 749a7823c976befc6a84d443ef7225bd41477b59
 RMD160 (po4a-0.23.tar.gz) = 79174c0ed576ac793495be7addb407d919f3daf9
 Size (po4a-0.23.tar.gz) = 736399 bytes
-SHA1 (patch-aa) = 501a5fc0265d06285c13f3501793ad2a92c95081
-SHA1 (patch-ab) = 3c3745e57464e8ed2c5389f2490bbb28d400026d
+SHA1 (patch-aa) = 53d0746c859a6e4b55bdeff4b39e181f129281dc
+SHA1 (patch-ab) = 34295892323d9f86a9789c87aef0201422bea07a
+SHA1 (patch-ac) = e97f3c54bd2f07ead841a58cf90d0e948f7beeab

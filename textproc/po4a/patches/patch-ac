@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1 2011/11/30 10:13:38 he Exp $
+
+Import some fixes from newer po4a to make newer perl happy.
+
+--- po4a.orig	2005-12-09 17:24:46.000000000 +0000
++++ po4a
+@@ -420,10 +420,10 @@ sub parse_config_options {
+             if (! defined $lang) {
+                 $lang = "global";
+             }
+-            if (! defined ${%$options}{$lang}) {
+-                ${%$options}{$lang} = $opt;
++            if (! defined $options->{$lang}) {
++                $options->{$lang} = $opt;
+             } else {
+-                ${%$options}{$lang} .= " $opt";
++                $options->{$lang} .= " $opt";
+             }
+         } else {
+             last;
+@@ -518,7 +518,7 @@ while (<CONFIG>) {
+ 	my %options;
+ 	if (defined $aliases{$1}) {
+ 	    $document{$main}{'format'} = $aliases{$1}{"module"};
+-	    if (defined %{$aliases{$1}{"options"}}) {
++	    if (defined $aliases{$1}{"options"}) {
+ 		%options = %{$aliases{$1}{"options"}};
+ 	    }
+ 	}
