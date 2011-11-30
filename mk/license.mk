@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.45 2011/11/29 14:49:19 ryoon Exp $
+# $NetBSD: license.mk,v 1.46 2011/11/30 23:55:33 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -66,11 +66,17 @@
 #	The list of licenses that will be the default value of
 #	ACCEPTABLE_LICENSES.  Adapting the longstanding policy of Open
 #	Source or Free licenses not requiring tags, it should contain
-#	all licenses that are Open Source or Free, so as to provide
+#	almost all licenses that are Open Source or Free, so as to provide
 #	the most expansive default that almost all people find
 #	acceptable.  (Many people will want to add more licenses to
 #	ACCEPTABLE_LICENSES; the point is to have a default that very
 #	few people want to shrink.)
+#
+#	As an exception to the Open Source or Free policy, the board
+#	of The NetBSD Foundation has decided that licenses that
+#	trigger obligations from use (rather than redistribution),
+#	such as the Affero GPL, should not be in
+#	DEFAULT_ACCEPTABLE_LICENSES.
 #
 #	Licenses not formally approved as Free or Open Source may be
 #	added if they have terms that would obviously be approved if
@@ -119,8 +125,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	isc \
 	boost-license \
 	mplusfont \
-	cc-by-sa-v3.0 \
-	gnu-agpl-v3
+	cc-by-sa-v3.0
 
 # not approved by OSI, derived from BSD
 DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
