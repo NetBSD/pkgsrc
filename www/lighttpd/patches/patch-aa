@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.11 2011/11/30 11:13:59 drochner Exp $
+
+CVE-2011-4362
+
+--- src/http_auth.c.orig	2011-04-24 15:44:59.000000000 +0000
++++ src/http_auth.c
+@@ -95,7 +95,7 @@ static unsigned char * base64_decode(buf
+ 	ch = in[0];
+ 	/* run through the whole string, converting as we go */
+ 	for (i = 0; i < in_len; i++) {
+-		ch = in[i];
++		ch = (unsigned char) in[i];
+ 
+ 		if (ch == '\0') break;
+ 
