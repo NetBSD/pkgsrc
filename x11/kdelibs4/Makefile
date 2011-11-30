@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/11/29 18:12:12 hans Exp $
+# $NetBSD: Makefile,v 1.32 2011/11/30 09:21:39 wiz Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	8
@@ -55,7 +55,7 @@ SUBST_FILES.kdelibsfix= \
 SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g' -e 's:@X11BASE@:${X11BASE}:g'
 
 USE_TOOLS+=	flex gmake
-PLIST_VARS+=	PLIST.kgrantpty
+PLIST_VARS+=	kgrantpty
 
 .include "../../mk/bsd.prefs.mk"
 
