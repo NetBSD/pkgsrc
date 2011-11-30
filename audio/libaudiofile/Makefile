@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/11/29 19:39:30 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2011/11/30 08:29:36 tron Exp $
 
 DISTNAME=		audiofile-0.3.1
 PKGNAME=		lib${DISTNAME}
@@ -21,6 +21,12 @@ PKGCONFIG_OVERRIDE=	audiofile.pc.in
 DOCDIR=			${PREFIX}/share/doc/libaudiofile
 
 INSTALLATION_DIRS=	${DOCDIR}
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-4.1.*)
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.endif
 
 post-install:
 	cd ${WRKSRC}/docs; ${INSTALL_DATA} af* sf* ${DESTDIR}${DOCDIR}
