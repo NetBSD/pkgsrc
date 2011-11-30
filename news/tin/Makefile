@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2011/06/10 21:57:09 obache Exp $
+# $NetBSD: Makefile,v 1.46 2011/11/30 21:22:41 wiz Exp $
 #
 
-DISTNAME=	tin-1.9.4
-PKGREVISION=	3
+DISTNAME=	tin-2.0.0
 CATEGORIES=	news
-MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/unstable/ \
-		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/unstable/
+MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/ \
+		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
