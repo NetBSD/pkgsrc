@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.419 2011/10/18 01:52:40 dholland Exp $
+# $NetBSD: Makefile,v 1.420 2011/11/30 23:24:35 pettai Exp $
 #
 
 COMMENT=	Security tools
@@ -241,6 +241,7 @@ SUBDIR+=	pakemon
 SUBDIR+=	pam-af
 SUBDIR+=	pam-dbm
 SUBDIR+=	pam-fprint
+SUBDIR+=	pam-krb5
 SUBDIR+=	pam-ldap
 SUBDIR+=	pam-mkhomedir
 SUBDIR+=	pam-mysql
