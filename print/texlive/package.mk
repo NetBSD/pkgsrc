@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.11 2011/11/06 08:43:28 minskim Exp $
+# $NetBSD: package.mk,v 1.12 2011/11/30 19:15:46 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -133,15 +133,6 @@ _texlive-install:
 
 .if empty(TEX_TEXMF_DIRS) || ${TEX_TEXMF_DIRS} != "none"
 .  include "../../print/kpathsea/texmf.mk"
-.endif
-.if !empty(TEX_FORMATS) || !empty(TEX_FORMAT_NAMES)
-.  include "../../print/texlive-tetex/format.mk"
-.endif
-.if !empty(TEX_HYPHEN_DAT) || !empty(TEX_HYPHEN_DEF)
-.  include "../../print/texlive-tetex/hyphen.mk"
-.endif
-.if !empty(TEX_MAP_FILES) || !empty(TEX_MIXEDMAP_FILES)
-.  include "../../print/tex-tetex/map.mk"
 .endif
 
 post-extract: _texlive-set-permission _texlive-info _texlive-man
