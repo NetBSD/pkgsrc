@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2011/09/08 20:11:53 wiz Exp $
+$NetBSD: distinfo,v 1.9 2011/11/30 20:41:19 wiz Exp $
 
-SHA1 (puzzles-r9179.tar.gz) = 86ca61acc1d4cc95e43aceae98a81d0996d9798e
-RMD160 (puzzles-r9179.tar.gz) = 178c3de5c47d7ddbc64bd2aab22c5266cfde2e2b
-Size (puzzles-r9179.tar.gz) = 2974938 bytes
+SHA1 (puzzles-r9306.tar.gz) = b9498db2b4dba6f098df66964a93660c222cfe1c
+RMD160 (puzzles-r9306.tar.gz) = 8f089b739b20dd7d19a18593f9d46109961052a3
+Size (puzzles-r9306.tar.gz) = 2975146 bytes
 SHA1 (patch-aa) = 3bd234ab30d8d2f53c5ea0775fac6a68e920d33f
