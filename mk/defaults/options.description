@@ -326,6 +326,7 @@ libssh2 	 	Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
 libusb			Enable USB access.
 libvisual		Enable libvisual (audio visualisation) support.
+libwildmidi		Enable MIDI support using libwildmidi.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libxml2			Use the libxml2 library for XML support.
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
