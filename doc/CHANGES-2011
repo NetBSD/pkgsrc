@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3095 2011/11/30 11:10:16 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.3096 2011/11/30 11:59:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4908,3 +4908,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/openmotif to 2.3.3 [drochner 2011-11-30]
 	Updated textproc/groonga to 1.2.8 [obache 2011-11-30]
 	Updated mail/milter-manager to 1.8.2 [obache 2011-11-30]
+	Updated audio/libaudiofile to 0.3.1nb1 [wiz 2011-11-30]
