@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3096 2011/11/30 11:59:49 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3097 2011/11/30 12:08:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/groonga to 1.2.8 [obache 2011-11-30]
 	Updated mail/milter-manager to 1.8.2 [obache 2011-11-30]
 	Updated audio/libaudiofile to 0.3.1nb1 [wiz 2011-11-30]
+	Updated emulators/yabause to 0.9.11 [wiz 2011-11-30]
