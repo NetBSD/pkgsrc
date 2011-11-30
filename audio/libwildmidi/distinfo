@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/30 13:47:15 wiz Exp $
+
+SHA1 (wildmidi-0.2.3.4.tar.gz) = 99ffeb54980a29c5aa44f4cb152ad37acbe877bc
+RMD160 (wildmidi-0.2.3.4.tar.gz) = 50b4102f0b305ca0afd7649957a3a94343dbf2d6
+Size (wildmidi-0.2.3.4.tar.gz) = 348971 bytes
+SHA1 (patch-src_Makefile.in) = c04041123a882bda5b0029f70e69fda17b381638
+SHA1 (patch-src_wildmidi.c) = 572136a5476461db9be6f89a0523e812feeb39b7

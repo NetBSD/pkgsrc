@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1.1.1 2011/11/30 13:47:16 wiz Exp $
+
+Link against libossaudio where necessary.
+
+--- src/Makefile.in.orig	2010-07-30 04:36:20.000000000 +0000
++++ src/Makefile.in
+@@ -227,7 +227,7 @@ libWildMidi_la_LDFLAGS = -version-info $
+ libWildMidi_la_LIBADD = -lm -lc
+ wildmidi_libs = ./libWildMidi.la
+ wildmidi_SOURCES = wildmidi.c
+-wildmidi_LDADD = $(AUDDR) $(LDFLAGS) -L./ -lWildMidi
++wildmidi_LDADD = $(AUDDR) $(LDFLAGS) -L./ -lWildMidi $(LIBOSSAUDIO)
+ wildmidi_DEPENDENCIES = ./libWildMidi.la
+ all: all-am
+ 
