@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/12/01 16:35:13 is Exp $
+
+--- documentation/Makefile.orig	2011-01-05 23:00:33.000000000 +0000
++++ documentation/Makefile
+@@ -92,11 +92,6 @@ install: $(MANPAGES)
+ 	  $(INSTALL_DATA) fltk.pdf $(DESTDIR)$(docdir); \
+ 	fi
+ 	echo "Installing man pages in $(DESTDIR)$(mandir) ..."
+-	-$(INSTALL_DIR) $(DESTDIR)$(mandir)/cat1
+-	$(INSTALL_MAN) $(SRC_DOCDIR)/fluid.$(CAT1EXT) $(DESTDIR)$(mandir)/cat1
+-	$(INSTALL_MAN) $(SRC_DOCDIR)/fltk-config.$(CAT1EXT) $(DESTDIR)$(mandir)/cat1
+-	-$(INSTALL_DIR) $(DESTDIR)$(mandir)/cat3
+-	$(INSTALL_MAN) $(SRC_DOCDIR)/fltk.$(CAT3EXT) $(DESTDIR)$(mandir)/cat3
+ 	-$(INSTALL_DIR) $(DESTDIR)$(mandir)/man1
+ 	$(INSTALL_MAN) $(SRC_DOCDIR)/fluid.man $(DESTDIR)$(mandir)/man1/fluid.1
+ 	$(INSTALL_MAN) $(SRC_DOCDIR)/fltk-config.man $(DESTDIR)$(mandir)/man1/fltk-config.1
