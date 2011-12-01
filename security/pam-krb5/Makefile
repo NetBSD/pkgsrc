@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/01 16:04:01 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/01 16:05:18 wiz Exp $
 #
 
 DISTNAME=	pam-krb5-4.4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.eyrie.org/~eagle/software/pam-krb5/
-COMMENT=	Very flexable kerberos module for the PAM framework
+COMMENT=	Very flexible kerberos module for the PAM framework
 LICENSE=	original-bsd OR gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
