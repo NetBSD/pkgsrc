@@ -1,4 +1,10 @@
-$NetBSD: patch-ab,v 1.3 2006/01/04 17:00:32 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2011/12/01 04:05:41 dholland Exp $
+
+Caution: the extra cpp checking (the three hunks containing "Should be
+one line") is manually hacked and not reflected in configure.in; do
+not regenerate configure with autoconf without merging it. This
+checking is required because somewhere between gcc 4.1 and 4.5 cpp
+started doing regrettable things with backslash-escaped newlines.
 
 --- configure.orig	2000-06-12 20:05:56.000000000 +0000
 +++ configure
@@ -48,7 +54,65 @@ $NetBSD: patch-ab,v 1.3 2006/01/04 17:00:32 joerg Exp $
        *-nextstep* )             opsys=nextstep ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
-@@ -3823,6 +3837,53 @@ else
+@@ -1916,15 +1930,21 @@ else
+   CPP="${CC-cc} -E"
+   # On the NeXT, cc -E runs the code through the compiler's parser,
+   # not just through cpp.
++  # And, gcc 4.5? and up does not preserve escaped newlines, which is
++  # fatal for preprocessing makefiles.
+   cat > conftest.$ac_ext <<EOF
+ #line 1921 "configure"
+ #include "confdefs.h"
+ #include <assert.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp conftest.$ac_ext >conftest2.out 2>conftest.out"
+ { (eval echo configure:1927: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
++    grep -L "Should  *be one line" conftest2.out \
++    `
+ if test -z "$ac_err"; then
+   :
+ else
+@@ -1938,10 +1958,14 @@ else
+ #include "confdefs.h"
+ #include <assert.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp conftest.$ac_ext >conftest2.out 2>conftest.out"
+ { (eval echo configure:1944: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
++    grep -L "Should  *be one line" conftest2.out \
++    `
+ if test -z "$ac_err"; then
+   :
+ else
+@@ -1955,10 +1979,14 @@ else
+ #include "confdefs.h"
+ #include <assert.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp conftest.$ac_ext >conftest2.out 2>conftest.out"
+ { (eval echo configure:1961: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
++    grep -L "Should  *be one line" conftest2.out \
++    `
+ if test -z "$ac_err"; then
+   :
+ else
+@@ -3823,6 +3851,53 @@ else
    echo "$ac_t""no" 1>&6
  fi
  
@@ -102,7 +166,7 @@ $NetBSD: patch-ab,v 1.3 2006/01/04 17:00:32 joerg Exp $
    LIBS="$OLDLIBS"
  fi
  
-@@ -4906,6 +4967,64 @@ EOF
+@@ -4906,6 +4981,64 @@ EOF
  
  fi
  
@@ -167,7 +231,7 @@ $NetBSD: patch-ab,v 1.3 2006/01/04 17:00:32 joerg Exp $
  # Set up the CFLAGS for real compilation, so we can substitute it.
  CFLAGS="$REAL_CFLAGS"
  
-@@ -5211,6 +5330,7 @@ s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
+@@ -5211,6 +5346,7 @@ s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
  s%@INSTALL_DATA@%$INSTALL_DATA%g
  s%@YACC@%$YACC%g
  s%@SET_MAKE@%$SET_MAKE%g
