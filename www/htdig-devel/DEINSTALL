@@ -1,0 +1,11 @@
+#!@SH@
+#
+# $NetBSD: DEINSTALL,v 1.1 2011/12/01 09:56:39 wiz Exp $
+
+case "${STAGE}" in
+DEINSTALL)
+	${RM} -f ${PREFIX}/share/htdig/common/root2word.db
+	${RM} -f ${PREFIX}/share/htdig/common/synonyms.db
+	${RM} -f ${PREFIX}/share/htdig/common/word2root.db
+	;;
+esac
