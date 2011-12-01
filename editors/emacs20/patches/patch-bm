@@ -1,8 +1,8 @@
-$NetBSD: patch-bm,v 1.2 2011/12/01 04:51:30 dholland Exp $
+$NetBSD: patch-bm,v 1.3 2011/12/01 05:07:23 dholland Exp $
 
---- ./src/alloc.c.orig	Thu Sep 16 00:20:15 1999
-+++ ./src/alloc.c	Tue Sep 26 11:54:24 2000
-@@ -53,12 +53,13 @@
+--- src/alloc.c.orig	1999-09-16 07:20:15.000000000 +0000
++++ src/alloc.c
+@@ -53,12 +53,13 @@ extern char *sbrk ();
  
  #if defined (__STDC__) && __STDC__
  #include <stddef.h>
@@ -17,3 +17,13 @@ $NetBSD: patch-bm,v 1.2 2011/12/01 04:51:30 dholland Exp $
  #endif /* !defined(DOUG_LEA_MALLOC) */
  
  #define max(A,B) ((A) > (B) ? (A) : (B))
+@@ -420,6 +421,9 @@ emacs_blocked_malloc (size)
+ 
+   BLOCK_INPUT;
+   __malloc_hook = old_malloc_hook;
++#ifdef __GNUC__
++  __asm __volatile("":::"memory");
++#endif
+ #ifdef DOUG_LEA_MALLOC
+     mallopt (M_TOP_PAD, malloc_hysteresis * 4096);
+ #else
