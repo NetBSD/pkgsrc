@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/11/30 21:05:13 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2011/12/01 17:53:58 minskim Exp $
 
-DISTNAME=	w3m-el-snapshot_1.4.394+0.20100524.orig
+DISTNAME=	w3m-el-snapshot_1.4.442+0.20110729.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/w3m-el-snapshot_/emacs-w3m-/:S/+0//:S/.orig//}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/w3m-el-snapshot/}
 
