@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3112 2011/12/01 09:56:09 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3113 2011/12/01 09:56:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4925,3 +4925,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/tacacs-shrubbery version 4.0.4.20 [pettai 2011-12-01]
 	Updated www/ikiwiki to 3.20111107 [schmonz 2011-12-01]
 	Updated www/htdig to 3.1.6nb6 [wiz 2011-12-01]
+	Updated www/htdig-devel to 3.2.0b6nb1 [wiz 2011-12-01]
