@@ -1,0 +1,88 @@
+$NetBSD: patch-ag,v 1.1.1.1 2011/12/01 16:35:13 is Exp $
+
+--- src/Makefile.orig	2009-07-02 09:42:17.000000000 +0000
++++ src/Makefile
+@@ -208,6 +208,10 @@ $(LIBNAME): $(OBJECTS)
+ 	$(LIBCOMMAND) $@ $(OBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk.la: $(OBJECTS)
++	echo $(CXX) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(OBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 $(LDLIBS)
++
+ libfltk.so.1.3: $(OBJECTS)
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(OBJECTS)
+@@ -244,6 +248,10 @@ $(FLLIBNAME): $(FLOBJECTS)
+ 	$(LIBCOMMAND) $@ $(FLOBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk_forms.la: $(FLOBJECTS)
++	echo $(CXX) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(FLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 $(LDLIBS)
++
+ libfltk_forms.so.1.3: $(FLOBJECTS) libfltk.so.1.3
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(FLOBJECTS) -L. -lfltk
+@@ -280,6 +288,10 @@ $(GLLIBNAME): $(GLOBJECTS)
+ 	$(LIBCOMMAND) $@ $(GLOBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk_gl.la: $(GLOBJECTS)
++	echo $(CXX) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(GLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 $(LDLIBS)
++
+ libfltk_gl.so.1.3: $(GLOBJECTS) libfltk.so.1.3
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(GLOBJECTS) -L. -lfltk
+@@ -316,6 +328,10 @@ $(IMGLIBNAME): $(IMGOBJECTS)
+ 	$(LIBCOMMAND) $@ $(IMGOBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk_images.la: $(IMGOBJECTS)
++	echo $(CXX) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(IMGOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 $(LDLIBS)
++
+ libfltk_images.so.1.3: $(IMGOBJECTS) libfltk.so.1.3
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(IMGOBJECTS) -L. $(IMAGELIBS) -lfltk
+@@ -504,6 +520,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(RANLIB) $(DESTDIR)$(libdir)/$(GLLIBBASENAME); \
+ 	fi
+ 	$(RANLIB) $(DESTDIR)$(libdir)/$(IMGLIBBASENAME)
++	if test x$(DSONAME) = xlibfltk.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(DSONAME) = xlibfltk.so.1.3; then\
+ 		$(RM) $(DESTDIR)$(libdir)/libfltk.so*;\
+ 		$(INSTALL_LIB) libfltk.so.1.3 $(DESTDIR)$(libdir); \
+@@ -523,6 +542,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(RM) $(DESTDIR)$(libdir)/libfltk_s.a;\
+ 		$(INSTALL_LIB) libfltk_s.a $(DESTDIR)$(libdir); \
+ 	fi
++	if test x$(FLDSONAME) = xlibfltk_forms.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk_forms.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(DSONAME) = xcygfltknox-1.3.dll; then\
+ 		$(RM) $(DESTDIR)$(bindir)/$(DSONAME);\
+ 		$(INSTALL_LIB) $(DSONAME) $(DESTDIR)$(bindir); \
+@@ -540,6 +562,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(INSTALL_LIB) libfltk_forms.so.1.3 $(DESTDIR)$(libdir); \
+ 		$(LN) libfltk_forms.so.1.3 $(DESTDIR)$(libdir)/libfltk_forms.so;\
+ 	fi
++	if test x$(GLDSONAME) = xlibfltk_gl.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk_gl.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(FLDSONAME) = xlibfltk_forms.sl.1.3; then\
+ 		$(RM) $(DESTDIR)$(libdir)/libfltk_forms.sl*;\
+ 		$(INSTALL_LIB) libfltk_forms.sl.1.3 $(DESTDIR)$(libdir); \
+@@ -597,6 +622,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(RM) $(DESTDIR)$(libdir)/libfltk_gl.dll.a;\
+ 		$(INSTALL_LIB) libfltk_gl.dll.a $(DESTDIR)$(libdir); \
+ 	fi
++	if test x$(IMGDSONAME) = xlibfltk_images.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk_images.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(IMGDSONAME) = xlibfltk_images.so.1.3; then\
+ 		$(RM) $(DESTDIR)$(libdir)/libfltk_images.so*;\
+ 		$(INSTALL_LIB) libfltk_images.so.1.3 $(DESTDIR)$(libdir); \

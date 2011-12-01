@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/12/01 16:35:13 is Exp $
+
+--- makeinclude.in.orig	2010-12-23 14:24:29.000000000 +0000
++++ makeinclude.in
+@@ -147,19 +147,19 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
+ 
+ .o$(EXEEXT):
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(LDFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
+ 
+ .c.o:
+ 	echo Compiling $<...
+-	$(CC) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CC) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CFLAGS) -c $< -o $@
+ 
+ .cxx.o:
+ 	echo Compiling $<...
+-	$(CXX) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CXXFLAGS) -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CXX) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CXXFLAGS) -c $< -o $@
+ 	
+ .mm.o:
+ 	echo Compiling $<...
+-	$(CXX) -I.. $(ARCHFLAGS) $(CXXFLAGS) -x objective-c++ -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CXX) -I.. $(ARCHFLAGS) $(CXXFLAGS) -x objective-c++ -c $< -o $@
+ 
+ 
+ .man.0 .man.1 .man.3 .man.6:

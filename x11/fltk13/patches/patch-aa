@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/12/01 16:35:12 is Exp $
+
+--- Makefile.orig	2011-02-15 15:29:03.000000000 +0000
++++ Makefile
+@@ -27,7 +27,7 @@
+ 
+ include makeinclude
+ 
+-DIRS = $(IMAGEDIRS) src $(CAIRODIR) fluid test documentation
++DIRS = $(IMAGEDIRS) src $(CAIRODIR) fluid documentation
+ 
+ all: makeinclude fltk-config
+ 	for dir in $(DIRS); do\
+@@ -35,6 +35,14 @@ all: makeinclude fltk-config
+ 		(cd $$dir; $(MAKE) $(MFLAGS)) || exit 1;\
+ 	done
+ 
++test: makeinclude
++	dir=test;\
++	echo "=== making $$dir ===";\
++	if test ! -f $$dir/makedepend; then\
++		touch $$dir/makedepend;\
++	fi;\
++	(cd $$dir; $(MAKE) $(MFLAGS)) || break;\
++
+ install: makeinclude
+ 	-mkdir -p $(DESTDIR)$(bindir)
+ 	$(RM) $(DESTDIR)$(bindir)/fltk-config
