@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3117 2011/12/01 20:54:18 gls Exp $
+$NetBSD: CHANGES-2011,v 1.3118 2011/12/01 21:14:46 gls Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4930,3 +4930,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added x11/fltk13 version 1.3.0nb5 [is 2011-12-01]
 	Updated www/emacs-w3m-snapshot to 1.4.442.20110729 [msk 2011-12-01]
 	Updated www/py-clearsilver to 0.10.5nb1 [gls 2011-12-01]
+	Updated net/p5-Net-Libdnet to 0.96 [gls 2011-12-01]
