@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2011/12/01 04:05:40 dholland Exp $
+$NetBSD: distinfo,v 1.20 2011/12/01 04:51:30 dholland Exp $
 
 SHA1 (emacs-20.7-mule-4.1b-elc.tar.gz) = 3894fb2b81bb326545f6ccc3bf0a8405c23004ff
 RMD160 (emacs-20.7-mule-4.1b-elc.tar.gz) = c675b31dafaa4321a453af9d87eddf051ee71b1f
@@ -47,7 +47,7 @@ SHA1 (patch-bi) = d97512603b313ee730687e3b5680d45002ade51c
 SHA1 (patch-bj) = 6dba88723ee632b67fcf6a2dd2918e69034837e2
 SHA1 (patch-bk) = 7582e915a5bd9778259961e7fa842d5cdce3e85c
 SHA1 (patch-bl) = f2cd03713d7cdb6cb41119569031249d7d708b13
-SHA1 (patch-bm) = 148b3148587a31ec7a0674c5c1a359e8f09d952f
+SHA1 (patch-bm) = 792c692e23bfcbd154214152f90511e3e750b56d
 SHA1 (patch-bn) = 247c04ae1accf3bc6b07b22767eb3cf2cdb55013
 SHA1 (patch-bo) = f9b8b73af91a445dbf50f9e862b84c7abc2b730e
 SHA1 (patch-bp) = 9091134cf50e17ce58976c3193666e716345a124
@@ -62,7 +62,6 @@ SHA1 (patch-bx) = 27713e1812240f9ed137aa793cbb5a4fa2cad33b
 SHA1 (patch-by) = a383206a32e902c448a1b529cf1eefc485f5beab
 SHA1 (patch-bz) = c395a2acb2aa1e2c1582f6bb46a32bcfa4661b85
 SHA1 (patch-ca) = e9c9929ea5f16ac9f4bec09f2bf8e4e28578702d
-SHA1 (patch-cb) = a7e3926f4b8a107e004b731f2064493e7d436cd4
 SHA1 (patch-cc) = 2b474603b922383b6d239e7e2e14f144bd52df6b
 SHA1 (patch-cd) = 22b29708e0730275984dc2d8e7a304932d6b66fb
 SHA1 (patch-ce) = df4d2a5639a72d2c719662496f17db35686f4ac2
