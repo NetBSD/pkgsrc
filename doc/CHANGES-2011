@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3109 2011/12/01 00:05:05 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.3110 2011/12/01 00:05:39 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/pstoedit to 3.60 [wiz 2011-11-30]
 	Updated news/tin to 2.0.0 [wiz 2011-11-30]
 	Added security/pam-krb5 version 4.4 [pettai 2011-12-01]
+	Added net/tacacs-shrubbery version 4.0.4.20 [pettai 2011-12-01]
