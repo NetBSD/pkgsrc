@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3113 2011/12/01 09:56:48 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3114 2011/12/01 10:48:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ikiwiki to 3.20111107 [schmonz 2011-12-01]
 	Updated www/htdig to 3.1.6nb6 [wiz 2011-12-01]
 	Updated www/htdig-devel to 3.2.0b6nb1 [wiz 2011-12-01]
+	Updated devel/SDL to 1.2.14nb4 [wiz 2011-12-01]
