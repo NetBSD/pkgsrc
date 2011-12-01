@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/07 09:31:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/01 17:53:58 minskim Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
+${EMACS_LISPPREFIX}/w3m/bookmark-w3m.el
+${EMACS_LISPPREFIX}/w3m/bookmark-w3m.elc
 ${EMACS_LISPPREFIX}/w3m/mew-shimbun.el
 ${PLIST.mew}${EMACS_LISPPREFIX}/w3m/mew-shimbun.elc
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
