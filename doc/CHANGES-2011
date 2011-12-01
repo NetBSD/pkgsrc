@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3111 2011/12/01 04:02:36 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.3112 2011/12/01 09:56:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4924,3 +4924,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added security/pam-krb5 version 4.4 [pettai 2011-12-01]
 	Added net/tacacs-shrubbery version 4.0.4.20 [pettai 2011-12-01]
 	Updated www/ikiwiki to 3.20111107 [schmonz 2011-12-01]
+	Updated www/htdig to 3.1.6nb6 [wiz 2011-12-01]
