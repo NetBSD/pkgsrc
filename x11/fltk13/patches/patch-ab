@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/12/01 16:35:12 is Exp $
+
+--- configure.in.orig	2011-03-06 16:54:58.000000000 +0000
++++ configure.in
+@@ -187,6 +187,7 @@ AC_SUBST(IMGLIBNAME)
+ AC_SUBST(CAIROLIBNAME)
+ AC_SUBST(LIBEXT)
+ AC_SUBST(LIBNAME)
++AC_SUBST(LIBTOOL)
+ AC_SUBST(LINKFLTK)
+ AC_SUBST(LINKFLTKFORMS)
+ AC_SUBST(LINKFLTKGL)
+@@ -215,6 +216,15 @@ fi
+ AC_ARG_ENABLE(gl, [  --enable-gl             turn on OpenGL support [default=yes]])
+ 
+ AC_ARG_ENABLE(shared, [  --enable-shared         turn on shared libraries [default=no]])
++AC_ARG_ENABLE(libtool, [  --enable-libtool=LIBTOOL_PATH
++                          turn on building with libtool [default=no]],[
++if eval "test x$enable_libtool != xno"; then
++    LIBTOOL="$enable_libtool"
++    enable_shared=no
++else
++    LIBTOOL=""
++fi])
++
+ if test x$enable_shared = xyes; then
+     PICFLAG=1
+     SHAREDSUFFIX=""
+@@ -353,6 +363,21 @@ else
+     LINKSHARED="$LINKFLTKCAIRO ../lib/libfltk_images.a ../lib/libfltk_forms.a ../lib/libfltk.a"
+ fi
+ 
++if test "x$LIBTOOL" != "x"; then
++    LINKFLTK="../src/libfltk.la"
++    if test "x$LINKFLTKGL" != "x"; then    
++        LINKFLTKGL="../src/libfltk_gl.la"    
++    fi    
++    if test "x$LINKFLTKIMG" != "x"; then    
++        LINKFLTKIMG="../src/libfltk_images.la"    
++    fi
++    LINKSHARED="-lfltk_images -lfltk_forms -lfltk"
++    DSONAME="libfltk.la"
++    FLDSONAME="libfltk_forms.la"
++    GLDSONAME="libfltk_gl.la"
++    IMGDSONAME="libfltk_images.la"
++fi
++  
+ AC_SUBST(DSOCOMMAND)
+ AC_SUBST(DSOFLAGS)
+ AC_SUBST(DSOLINK)
