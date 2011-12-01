@@ -100,6 +100,7 @@ dkim-milter-arlib	ar(3) support for dkim-milter.
 dkim-stats		dkim-stats(8) support for dkim-milter.
 dnsrbl			Enable DNS Real-time Blackhole List support.
 dnssd			Enable DNS Service Discovery Protocol support.
+dnssec			Enable DNSSEC validation. 
 doc			Include the documentation.
 drac			Enable DRAC support.
 dri			Enable Direct Rendering support.
@@ -543,6 +544,8 @@ sybase			Enable Sybase/MS SQL Server support.
 syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
 syslogng-spoof		Spoof the original source address of forwarded packets.
+tacacs-shrubbery-acls-support	Enable ACL support.
+tacacs-shrubbery-drop-root-privileges	Drop root privileges, and run as a non-root user.
 tcl			Enable Tcl scripting support.
 tcpwrappers		Enable tcpwrappers support.
 terminfo		Use terminfo.
