@@ -544,6 +544,7 @@ sybase			Enable Sybase/MS SQL Server support.
 syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
 syslogng-spoof		Spoof the original source address of forwarded packets.
+szip			Enable szip compression.
 tacacs-shrubbery-acls-support	Enable ACL support.
 tacacs-shrubbery-drop-root-privileges	Drop root privileges, and run as a non-root user.
 tcl			Enable Tcl scripting support.
