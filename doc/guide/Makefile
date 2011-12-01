@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2011/04/09 08:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2011/12/01 22:23:33 minskim Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
-DISTFILES=		htdocs-share-20071010.tar.gz
+DISTFILES=		htdocs-share-20111201.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/
