@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2009/12/17 19:35:03 abs Exp $
+# $NetBSD: Makefile,v 1.38 2011/12/01 09:55:58 wiz Exp $
 
 DISTNAME=	htdig-3.1.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.htdig.org/files/ \
 		http://www.it.htdig.org/files/ \
