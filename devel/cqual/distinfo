@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2008/07/27 20:10:42 dholland Exp $
+$NetBSD: distinfo,v 1.11 2011/12/02 20:50:32 marino Exp $
 
 SHA1 (cqual-0.991.tar.gz) = f559af6947465ca242f19c1f499c7cb004e713e4
 RMD160 (cqual-0.991.tar.gz) = e3837a11c75f750196ec4be7f991ec519c1260f6
@@ -24,3 +24,4 @@ SHA1 (patch-cb) = 568df77eefeea982d9a7faa638c6be12a54fa284
 SHA1 (patch-cc) = f30adeec491d999b63e1ad5abd2b34c287608e5e
 SHA1 (patch-cd) = 1d9b0197b13f2414054d47e4a6ae3bf8920463bf
 SHA1 (patch-ce) = f9079f2c306bad8c9c0539759c4541b8bee7cda4
+SHA1 (patch-src_expr.c) = a9f2d4696c263a1ade40d0fac5ea655b3978fb20
