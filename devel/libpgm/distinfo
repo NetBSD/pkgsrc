@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+SHA1 (libpgm-5.1.118.tar.bz2) = 76888874a938c26870096105249990c5fdfa9ec2
+RMD160 (libpgm-5.1.118.tar.bz2) = 8aad83459f5dbf671a0283082e672470c9361415
+Size (libpgm-5.1.118.tar.bz2) = 857603 bytes
+SHA1 (patch-aa) = bb62107b225c4e64b487103c4075caf6f57df42c
+SHA1 (patch-ab) = d9e7df1aec7aa1549f5d673b245c317c3b36d555
+SHA1 (patch-ac) = 3db002ebaea19663f43fa6ef878143dcbf963ad9
+SHA1 (patch-ad) = 1fd867b09bcae181209b2f371be21a779c7aa167
+SHA1 (patch-ae) = d316915cf7ba35ce9cc66ad88000d599ce538590
+SHA1 (patch-af) = 97e127fc4584ea20e5503b4b811cca5198212eb6
+SHA1 (patch-ag) = 00d3ebc68736c5c34e7d8559de523945447cfadf
