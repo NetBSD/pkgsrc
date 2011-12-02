@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/04/20 18:50:01 hans Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/02 20:47:49 marino Exp $
 #
 
 CLISP_MODULE=	wildcard
@@ -18,4 +18,5 @@ post-extract:
 	(cd ${WRKSRC} && cp -p src/gllib/alloca.in.h src/gllib/alloca.h)
 
 .include "../../lang/clisp/module.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
