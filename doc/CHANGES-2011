@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3133 2011/12/02 15:33:18 hauke Exp $
+$NetBSD: CHANGES-2011,v 1.3134 2011/12/02 22:46:03 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4949,3 +4949,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/mysql51-server to 5.1.60 [adam 2011-12-02]
 	Updated lang/clang to 3.0 [adam 2011-12-02]
 	Updated benchmarks/iozone to 3.397 [hauke 2011-12-02]
+	Updated devel/lmdbg to 0.17.0 [cheusov 2011-12-02]
