@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/09 18:56:31 asau Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/02 20:49:10 marino Exp $
 #
 
 CLISP_MODULE=	zlib
@@ -17,4 +17,5 @@ MAKE_JOBS_SAFE=	no
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
