@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+bin/multicaster
+bin/multicatcher
+bin/rtt
+bin/rttcatcher
+bin/trFilelist
