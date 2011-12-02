@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+
+Get rid of some minor lint
+
+--- multicatcher.c	2011/11/30 21:06:19	1.1
++++ multicatcher.c	2011/11/30 21:06:59
+@@ -121,7 +121,7 @@
+     exit(BAD_EXIT);
+   }
+   
+-  fprintf(stderr, "my_pid= %lu\n", getpid());
++  fprintf(stderr, "my_pid= %lu\n", (unsigned long)getpid());
+ 
+   if (!backup_suffix) default_suffix();
+   get_tmp_suffix();  /* get a unique tmp_name for the tmp file */

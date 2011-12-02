@@ -1,0 +1,4 @@
+mrsync is a tool to transfer files from a master to many remote
+machines in LAN using Unix multicast sockets.  It dynamically adjusts
+its transfer speed to ease on the network and to leave no one behind.
+4 hours for 140GB to 100 targets in 1Gbit LAN

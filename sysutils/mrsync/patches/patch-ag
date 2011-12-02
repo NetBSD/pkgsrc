@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+
+Define a function which is not there
+
+--- file_operations.c	2011/11/30 21:09:26	1.1
++++ file_operations.c	2011/11/30 21:11:00
+@@ -95,6 +95,12 @@
+   return;
+ }
+ 
++static char *
++tmpnam_r(char *s)
++{
++	return s ? tmpnam(s) : NULL;
++}
++
+ void get_tmp_suffix()
+ {
+   /* this is called once in each multicatcher */
