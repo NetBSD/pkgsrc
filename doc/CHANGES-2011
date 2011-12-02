@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3120 2011/12/02 05:25:06 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3121 2011/12/02 05:27:22 agc Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4934,3 +4934,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/p5-Digest to 1.17 [he 2011-12-01]
 	Updated devel/p5-Path-Dispatcher to 1.04 [hiramatsu 2011-12-02]
 	Updated devel/p5-Path-Dispatcher-Declarative to 0.03 [hiramatsu 2011-12-02]
+	Added devel/libpgm version 5.1.118 [agc 2011-12-01]
