@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/11/26 10:18:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2011/12/02 22:45:47 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.16.0
-PKGREVISION=	2
+DISTNAME=	lmdbg-0.17.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
@@ -26,6 +25,8 @@ TEST_TARGET=		test
 
 DOCDIR=			share/doc/lmdbg
 DOCFILES=		README NEWS ChangeLog
+
+REPLACE_SH=		scripts/lmdbg*.in tests/test.sh
 
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
