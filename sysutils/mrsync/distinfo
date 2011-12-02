@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+
+SHA1 (mrsync.20090219.zip) = 841e3b93bf513d08042f1610109fdf68143e62a1
+RMD160 (mrsync.20090219.zip) = 868402646862ed133416cd661360bd40e335e474
+Size (mrsync.20090219.zip) = 97238 bytes
+SHA1 (patch-aa) = 9e7a2b8d46a89977dcc80b9b33ae7f49ff1e6bda
+SHA1 (patch-ab) = de8495d0bf72e0298f45e916b0db5cce0659bcf4
+SHA1 (patch-ac) = e0b48d09591a8e33d2b55f2784b5314b62da275f
+SHA1 (patch-ad) = dc0630875c95f802b16679e005083170d40d3f73
+SHA1 (patch-ae) = 2018659a8373af5d2078d34c717871fa6f5d786a
+SHA1 (patch-af) = 1921ad7e3b1e3582226ac3cecc204de68fbae52e
+SHA1 (patch-ag) = b565b6fcdcabbbe5864ec971d2282d85d429337e
+SHA1 (patch-ah) = 53c422965f4e4e5a2b511c32db19408a7d065743

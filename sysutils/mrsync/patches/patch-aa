@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+
+Generalise this for every platform
+
+--- Makefile.linux	2011/11/30 20:31:57	1.1
++++ Makefile.linux	2011/11/30 20:32:48
+@@ -5,13 +5,13 @@
+ SUNFLAG  =                                        # -D_SUN on Solaris machines 
+ IPV6FLAG =                                         # -DIPV6 for IPv6
+ DEBUG    =                                          # -g -ggdb
+-CC       = gcc-2.95.3.ren                           # 32-bit compiler
++CC       = cc                           # 32-bit compiler
+ CFLAGS   = -O ${DEBUG} -Wall ${SUNFLAG} ${IPV6FLAG} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+ #LIBS     = -lsocket  # for Solaris
+ LIBS     = # there is no special lib needed, unless your system put the lib in non-standard place
+ 
+ # The directory to install mrsync and others in.
+-bindir   = /usr/local/bin
++bindir   = ${DESTDIR}${PREFIX}/bin
+ 
+ # ----- end of system dependent section -------
+ 
+@@ -38,32 +38,36 @@
+ # multicasting
+ ${OBJ1}:	main.h proto.h
+ 
+-multicaster:	multicaster.o global.o setup_socket.o set_mcast.o \
++MULTICASTEROBJS=	multicaster.o global.o setup_socket.o set_mcast.o \
+ 		parse_synclist.o \
+ 		sends.o complaints.o backup.o \
+ 		timing.o signal.o id_map.o
+-		${CC} ${CFLAGS} -o $@ $^  ${LIBS}
++multicaster:	${MULTICASTEROBJS}
++		${CC} ${CFLAGS} -o $@ ${MULTICASTEROBJS}  ${LIBS}
+ 
+-multicatcher:	multicatcher.o global.o setup_socket.o set_catcher_mcast.o \
++MULTICATCHEROBJS=	multicatcher.o global.o setup_socket.o set_catcher_mcast.o \
+ 		page_reader.o complaint_sender.o \
+ 		file_operations.o signal.o timing.o 
+-		${CC} ${CFLAGS} -o $@ $^  ${LIBS}
++multicatcher:	${MULTICATCHEROBJS}
++		${CC} ${CFLAGS} -o $@ ${MULTICATCHEROBJS}  ${LIBS}
+ 
+ # for rtt and rttcatcher
+ ${OBJ4}:	rttmain.h rttproto.h
+ 
+-rtt:		rtt.o setup_socket.o set_mcast.o \
++RTTOBJS=		rtt.o setup_socket.o set_mcast.o \
+ 		rttsends.o rttcomplaints.o timing.o signal.o
+-		${CC} ${CFLAGS} -o $@ $^  ${LIBS}
++rtt:		${RTTOBJS}
++		${CC} ${CFLAGS} -o $@ ${RTTOBJS}  ${LIBS}
+ 
+-rttcatcher:	rttcatcher.o setup_socket.o set_catcher_mcast.o \
++RTTCATCHEROBJS=	rttcatcher.o setup_socket.o set_catcher_mcast.o \
+ 		rttpage_reader.o rttcomplaint_sender.o rttmissings.o \
+ 		signal.o timing.o
+-		${CC} ${CFLAGS} -o $@ $^  ${LIBS}
++rttcatcher:	${RTTCATCHEROBJS}
++		${CC} ${CFLAGS} -o $@ ${RTTCATCHEROBJS}  ${LIBS}
+ 
+ # misc
+ trFilelist:	trFilelist.o
+-		${CC} ${CFLAGS} -o $@ $^  ${LIBS}
++		${CC} ${CFLAGS} -o $@ trFilelist.o  ${LIBS}
+ 
+ # to clean up 
+ clean:

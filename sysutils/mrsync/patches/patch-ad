@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+
+get the right headers
+
+--- sends.c	2011/11/30 20:38:41	1.1
++++ sends.c	2011/11/30 20:39:07
+@@ -35,10 +35,10 @@
+ 
+ #include "main.h"
+ #include <net/if.h>
+-#ifdef _SUN
+-#include <sys/sockio.h>  /* define SIOCGIFADDR */
+-#else
++#ifdef _linux__
+ #include <linux/sockios.h>
++#else
++#include <sys/sockio.h>  /* define SIOCGIFADDR */
+ #endif
+ 
+ extern char *      my_MCAST_ADDR;  /* defined in multicaster.c */

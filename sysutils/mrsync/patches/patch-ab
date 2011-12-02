@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+
+get the right prototypes
+
+--- setup_socket.c	2011/11/30 20:33:53	1.1
++++ setup_socket.c	2011/11/30 20:34:13
+@@ -36,10 +36,12 @@
+ 
+ */
+ 
+-#include        <sys/socket.h>
+ #include        <sys/types.h>
++#include        <sys/socket.h>
++#include        <sys/select.h>
+ #include        <sys/un.h>
+ #include        <stdio.h>
++#include        <string.h>
+ #include        <stdlib.h>
+ #include	<netinet/in.h>	/* sockaddr_in{} and other Internet defns */
+ #include	<arpa/inet.h>	/* inet(3) functions */
