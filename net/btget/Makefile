@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2011/04/22 13:44:20 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/12/02 07:47:53 sbd Exp $
 #
 
 DISTNAME=		libbt-1.05
 PKGNAME=		${DISTNAME:S/libbt/btget/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libbt/}
 
@@ -27,6 +27,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/btlist.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/btlist.1
 	${INSTALL_MAN} ${WRKSRC}/man/btcheck.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/btcheck.1
 
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
