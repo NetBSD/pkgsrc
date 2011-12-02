@@ -1,0 +1,33 @@
+$NetBSD: patch-scripts-snarf-check-and-output-texi,v 1.1 2011/12/02 13:59:35 joerg Exp $
+
+Extended backport of 445f31fc06d338f0cafda188d0287f935c2edc3c to fix
+build with GCC 4.4 and higher.
+
+--- scripts/snarf-check-and-output-texi.orig	2011-11-28 12:39:23.000000000 +0000
++++ scripts/snarf-check-and-output-texi
+@@ -266,6 +266,25 @@ exec ${GUILE-guile} -l $0 -c "(apply $ma
+       (set! *file* file)
+       (set! *line* line))
+ 
++     ;; newer gccs like to throw around more location markers into the
++     ;; preprocessed source; these (hash . hash) bits are what they translate to
++     ;; in snarfy terms.
++     (('location ('string . file) ('int . line) ('hash . 'hash))
++      (set! *file* file)
++      (set! *line* line))
++
++     (('location ('string . file) ('int . line) ('hash . 'hash) ('int . line2) ('string . file2))
++      (set! *file* file)
++      (set! *line* line))
++
++     (('location ('hash . 'hash) ('string . file) ('int . line) ('hash . 'hash))
++      (set! *file* file)
++      (set! *line* line))
++
++     (('location ('hash . 'hash) ('int . line) ('string . file) ('string . file2) ('int . line2) ('hash . 'hash) ('int . line3) ('string . file3))
++      (set! *file* file)
++      (set! *line* line))
++
+      (('arglist rest ...)
+       (set! *args* (do-arglist rest)))
+ 
