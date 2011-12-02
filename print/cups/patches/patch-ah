@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.19 2011/11/29 15:46:25 hans Exp $
+$NetBSD: patch-ah,v 1.20 2011/12/02 14:14:58 hans Exp $
 
 Some builds of gcc seem to support this for compiling but then fail during
 linking with undefined reference to `__stack_chk_fail_local'
@@ -12,7 +12,7 @@ linking with undefined reference to `__stack_chk_fail_local'
 -	AC_TRY_LINK(,,
 +	AC_TRY_LINK(, [return 0;],
  		OPTIM="$OPTIM -fstack-protector"
-+		LIBS="$LIBS -lssp_nonshared"
++		LIBS="$LIBS $LIBS_SSP"
  		AC_MSG_RESULT(yes),
  		AC_MSG_RESULT(no))
  	CFLAGS="$OLDCFLAGS"
