@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2011/10/30 18:05:28 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2011/12/02 08:53:08 sbd Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Lightweight Directory Access Protocol server suite
 
 CONFLICTS+=		openldap<2.3.23nb1
@@ -71,4 +71,8 @@ MESSAGE_SUBST+=		CHMOD=${CHMOD}
 
 CONF_FILES_PERMS+=	${EGDIR}/DB_CONFIG ${OPENLDAP_VARDIR}/openldap-data/DB_CONFIG ${OPENLDAP_FILEPERMS}
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+.include "../../devel/libuuid/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
