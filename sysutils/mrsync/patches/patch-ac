@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/12/02 05:40:00 agc Exp $
+
+get the right headers for BSD
+
+--- set_mcast.c	2011/11/30 20:37:22	1.1
++++ set_mcast.c	2011/11/30 20:37:50
+@@ -27,10 +27,10 @@
+ 
+ #include	"main.h"
+ #include	<net/if.h>
+-#ifdef _SUN
+-#include <sys/sockio.h>  /* define SIOCGIFADDR */
+-#else
++#ifdef __linux__
+ #include <linux/sockios.h>
++#else
++#include <sys/sockio.h>  /* define SIOCGIFADDR */
+ #endif
+ 
+ #define SA      struct sockaddr
