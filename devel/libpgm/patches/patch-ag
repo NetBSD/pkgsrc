@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+quick and dirty script to make version.c, gets around python dependency
+
+--- /dev/null	2011-12-01 18:44:19.000000000 -0800
++++ mkversion	2011-12-01 18:32:59.000000000 -0800
+@@ -0,0 +1,23 @@
++#! /bin/sh
++
++d=`date +%Y-%m-%d`
++t=`date +%H:%M:%S`
++os=`uname -s`
++mach=`uname -m`
++cat >> version.c << EOF
++#include <impl/framework.h>
++#include <pgm/version.h>
++
++/* globals */
++
++const unsigned pgm_major_version = 5;
++const unsigned pgm_minor_version = 1;
++const unsigned pgm_micro_version = 118;
++const char* pgm_build_date = "${d}";
++const char* pgm_build_time = "${t}";
++const char* pgm_build_system = "${os}";
++const char* pgm_build_machine = "${mach}";
++const char* pgm_build_revision = "1369";
++
++/* eof */
++EOF
