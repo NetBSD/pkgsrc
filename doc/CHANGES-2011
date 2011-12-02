@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3128 2011/12/02 12:14:30 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3129 2011/12/02 12:35:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Plack-Middleware-ConsoleLogger to 0.04 [hiramatsu 2011-12-02]
 	Updated devel/p5-Test-Aggregate to 0.364 [hiramatsu 2011-12-02]
 	Updated devel/mercurial to 2.0.1 [wiz 2011-12-02]
+	Updated mail/msmtp to 1.4.26 [ryoon 2011-12-02]
