@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2010/12/30 07:41:27 obache Exp $
+# $NetBSD: Makefile,v 1.42 2011/12/02 15:31:44 hauke Exp $
 
-DISTNAME=	iozone3_308
-PKGNAME=	iozone-3.308
+DISTNAME=	iozone3_397
+PKGNAME=	iozone-3.397
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.iozone.org/src/current/
 EXTRACT_SUFX=	.tar
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/current
 MAKE_FILE=		makefile
-USE_TOOLS+=		tee
+USE_TOOLS+=		tee perl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,7 +40,11 @@ BUILD_TARGET=		${OPSYS}
 BUILD_TARGET=		generic
 .endif
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+REPLACE_PERL =		iozone_visualizer.pl report.pl
+
+EGDIR =			share/examples/IOzone
+DOCDIR =		share/doc/IOzone
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR} ${DOCDIR}
 
 .include "options.mk"
 
@@ -50,12 +54,24 @@ IOZONE_TEST_ARGS+=		-T -t4
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${DESTDIR}${PREFIX}/bin
+.for bb in fileop iozone pit_server
+	${INSTALL_PROGRAM} ${WRKSRC}/${bb} ${DESTDIR}${PREFIX}/bin
+.endfor
+	${INSTALL_SCRIPT} ${WRKSRC}/iozone_visualizer.pl \
+		${DESTDIR}${PREFIX}/bin/iozone_visualizer
+	${INSTALL_SCRIPT} ${WRKSRC}/report.pl \
+		${DESTDIR}${PREFIX}/bin/iozone_report
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/docs/iozone.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/IOzone
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/Iozone_ps.gz \
-		${DESTDIR}${PREFIX}/share/doc/IOzone
+.for dd in IOzone_msword_98.pdf Iozone_ps.gz Run_rules.doc
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/${dd} \
+		${DESTDIR}${PREFIX}/${DOCDIR}/
+.endfor
+.for ee in Generate_Graphs Gnuplot.txt client_list gengnuplot.sh \
+	gnu3d.dem gnuplot.dem gnuplotps.dem read_telemetry write_telemetry
+	${INSTALL_DATA} ${WRKSRC}/${ee} \
+		${DESTDIR}${PREFIX}/${EGDIR}/
+.endfor
 
 benchmark:
 	cd ${WRKSRC}; ./iozone ${IOZONE_TEST_ARGS} | ${TEE} iozone.out
