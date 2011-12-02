@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.8 2011/11/24 20:40:12 marino Exp $
+$NetBSD: patch-aa,v 1.9 2011/12/02 15:31:44 hauke Exp $
 
---- makefile.orig	2008-07-17 15:07:10.000000000 +0000
+--- makefile.orig	2011-05-06 15:39:00.000000000 +0000
 +++ makefile
-@@ -75,6 +75,7 @@ all:
+@@ -81,6 +81,7 @@ all:  
  	@echo "        ->   UWIN                 (32bit)   <-"
  	@echo "        ->   Windows (95/98/NT)   (32bit)   <-"
  	@echo ""
 +	@false
  
  clean:
- 	rm -f *.o iozone fileop
-@@ -712,6 +713,12 @@ fileop_bsdi.o:	fileop.c
+ 	rm -f *.o iozone fileop pit_server
+@@ -792,6 +793,12 @@ fileop_bsdi.o:	fileop.c
  	@echo ""
  	$(CC) -c -O $(CFLAGS) fileop.c -o fileop_bsdi.o
  
