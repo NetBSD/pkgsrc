@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/20 18:57:22 hans Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/02 20:47:04 marino Exp $
 #
 
 CLISP_MODULE=	syscalls
@@ -18,5 +18,6 @@ MAKE_JOBS_SAFE=	no
 
 post-patch:
 	(cd ${WRKSRC} && ${CP} -p src/gllib/mbrtowc.c modules/syscalls/gllib)
-	
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
