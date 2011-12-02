@@ -1,6 +1,21 @@
-@comment $NetBSD: PLIST,v 1.9 2011/05/13 08:00:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/12/02 12:33:53 ryoon Exp $
 bin/msmtp
 info/msmtp.info
 man/man1/msmtp.1
 share/examples/msmtp/msmtprc-user.example
 share/locale/de/LC_MESSAGES/msmtp.mo
+${PLIST.scripts}share/msmtp/find_alias/find_alias_for_msmtp.sh
+${PLIST.scripts}share/msmtp/msmtp-gnome-tool/README
+${PLIST.scripts}share/msmtp/msmtp-gnome-tool/msmtp-gnome-tool.py
+${PLIST.scripts}share/msmtp/msmtpq/README.msmtpq
+${PLIST.scripts}share/msmtp/msmtpq/msmtp-queue
+${PLIST.scripts}share/msmtp/msmtpq/msmtpq
+${PLIST.scripts}share/msmtp/msmtpqueue/ChangeLog
+${PLIST.scripts}share/msmtp/msmtpqueue/README
+${PLIST.scripts}share/msmtp/msmtpqueue/msmtp-enqueue.sh
+${PLIST.scripts}share/msmtp/msmtpqueue/msmtp-listqueue.sh
+${PLIST.scripts}share/msmtp/msmtpqueue/msmtp-runqueue.sh
+${PLIST.scripts}share/msmtp/set_sendmail/set_sendmail.conf
+${PLIST.scripts}share/msmtp/set_sendmail/set_sendmail.sh
+${PLIST.scripts}share/msmtp/vim/README
+${PLIST.scripts}share/msmtp/vim/msmtp.vim
