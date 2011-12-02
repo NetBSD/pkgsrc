@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+Add a def we don't have
+
+--- gsi.c	2011/12/02 01:43:37	1.1
++++ gsi.c	2011/12/02 01:43:54
+@@ -23,6 +23,9 @@
+ #include <stdio.h>
+ #ifndef _WIN32
+ #	include <netdb.h>
++#      ifndef AI_ADDRCONFIG
++#              define AI_ADDRCONFIG  0x20
++#      endif
+ #endif
+ #include <impl/i18n.h>
+ #include <impl/framework.h>

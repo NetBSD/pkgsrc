@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+include header for n_time (for BE defs) on *BSD
+
+--- include/pgm/packet.h	2011/12/02 00:47:05	1.1
++++ include/pgm/packet.h	2011/12/02 00:52:34
+@@ -28,6 +28,9 @@
+ #ifndef _WIN32
+ #	include <sys/socket.h>
+ #	include <netinet/in.h>
++#	if (defined(BSD) && BSD >= 199506)
++#		include <netinet/in_systm.h>
++#	endif
+ #	include <netinet/ip.h>
+ #endif
+ #include <pgm/types.h>

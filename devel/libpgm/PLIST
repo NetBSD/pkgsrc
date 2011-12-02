@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+include/pgm-5.1/pgm/atomic.h
+include/pgm-5.1/pgm/engine.h
+include/pgm-5.1/pgm/error.h
+include/pgm-5.1/pgm/gsi.h
+include/pgm-5.1/pgm/if.h
+include/pgm-5.1/pgm/in.h
+include/pgm-5.1/pgm/list.h
+include/pgm-5.1/pgm/macros.h
+include/pgm-5.1/pgm/mem.h
+include/pgm-5.1/pgm/messages.h
+include/pgm-5.1/pgm/msgv.h
+include/pgm-5.1/pgm/packet.h
+include/pgm-5.1/pgm/pgm.h
+include/pgm-5.1/pgm/skbuff.h
+include/pgm-5.1/pgm/socket.h
+include/pgm-5.1/pgm/time.h
+include/pgm-5.1/pgm/tsi.h
+include/pgm-5.1/pgm/types.h
+include/pgm-5.1/pgm/version.h
+include/pgm-5.1/pgm/winint.h
+include/pgm-5.1/pgm/wininttypes.h
+include/pgm-5.1/pgm/zinttypes.h
+lib/libpgm.la
+lib/pkgconfig/openpgm-5.1.pc

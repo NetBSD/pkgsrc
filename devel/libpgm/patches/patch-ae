@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+Add a header we don't have
+
+--- getnodeaddr.c	2011/12/02 01:42:24	1.1
++++ getnodeaddr.c	2011/12/02 01:42:45
+@@ -22,6 +22,9 @@
+ #include <errno.h>
+ #ifndef _WIN32
+ #	include <netdb.h>
++#      ifndef AI_ADDRCONFIG
++#              define AI_ADDRCONFIG  0x20
++#      endif
+ #endif
+ #include <impl/i18n.h>
+ #include <impl/framework.h>
