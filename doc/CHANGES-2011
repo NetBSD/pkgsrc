@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3125 2011/12/02 08:47:31 sborrill Exp $
+$NetBSD: CHANGES-2011,v 1.3126 2011/12/02 08:53:19 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4939,3 +4939,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/apr to 1.4.5nb3 [sbd 2011-12-02]
 	Updated net/btget to 1.05nb5 [sbd 2011-12-02]
 	Updated net/istgt to 20111008 [sborrill 2011-12-02]
+	Updated databases/openldap-server to 2.4.24nb2 [sbd 2011-12-02]
