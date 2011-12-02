@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2010/09/18 12:11:36 obache Exp $
+$NetBSD: patch-ac,v 1.3 2011/12/02 20:52:50 marino Exp $
 
 Get socklen_t defined correctly.
 
@@ -9,7 +9,7 @@ Get socklen_t defined correctly.
  #elif defined(SOCKLEN_T)
  # define SOAP_SOCKLEN_T SOCKLEN_T
 -#elif defined(__socklen_t_defined) || defined(_SOCKLEN_T) || defined(CYGWIN) || defined(FREEBSD) || defined(__FreeBSD__) || defined(OPENBSD) || defined(__QNX__) || defined(QNX) || defined(OS390) || defined(HP_UX)
-+#elif defined(__socklen_t_defined) || defined(_SOCKLEN_T) || defined(CYGWIN) || defined(FREEBSD) || defined(__FreeBSD__) || defined(OPENBSD) || defined(__QNX__) || defined(QNX) || defined(OS390) || defined(HP_UX) || defined(__NetBSD__) || defined(__OpenBSD__)
++#elif defined(__socklen_t_defined) || defined(_SOCKLEN_T) || defined(CYGWIN) || defined(FREEBSD) || defined(__FreeBSD__) || defined(OPENBSD) || defined(__QNX__) || defined(QNX) || defined(OS390) || defined(HP_UX) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
  # define SOAP_SOCKLEN_T socklen_t
  #elif defined(IRIX) || defined(WIN32) || defined(__APPLE__) || defined(SUN_OS) || defined(OPENSERVER) || defined(TRU64) || defined(VXWORKS)
  # define SOAP_SOCKLEN_T int
