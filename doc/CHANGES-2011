@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3131 2011/12/02 14:36:22 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3132 2011/12/02 14:44:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4945,3 +4945,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/mercurial to 2.0.1 [wiz 2011-12-02]
 	Updated mail/msmtp to 1.4.26 [ryoon 2011-12-02]
 	Updated www/dillo to 3.0.1 [is 2011-12-02]
+	Updated databases/mysql51-client to 5.1.60 [adam 2011-12-02]
+	Updated databases/mysql51-server to 5.1.60 [adam 2011-12-02]
+	Updated lang/clang to 3.0 [adam 2011-12-02]
