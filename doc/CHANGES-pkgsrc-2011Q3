@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.44 2011/11/20 14:42:53 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.45 2011/12/02 07:53:22 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -179,3 +179,5 @@ Pullup ticket #3613 - requested by markd
 x11/kdelibs4: security patch
 Pullup ticket #3614 - requested by markd
 misc/kdeutils4: security patch
+Pullup ticket #3615 - requested by tron
+comms/kermit: build fix
