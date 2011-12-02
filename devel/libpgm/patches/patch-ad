@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+Add a missing definition
+
+--- if.c	2011/12/02 01:37:24	1.1
++++ if.c	2011/12/02 01:41:17
+@@ -30,6 +30,9 @@
+ #	include <sys/types.h>
+ #	include <sys/socket.h>
+ #	include <netdb.h>		/* _GNU_SOURCE for EAI_NODATA */
++#	ifndef AI_ADDRCONFIG
++#		define AI_ADDRCONFIG  0x20
++#	endif
+ #endif
+ #include <impl/i18n.h>
+ #include <impl/framework.h>
