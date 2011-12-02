@@ -1,4 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:33:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/12/02 15:31:44 hauke Exp $
+bin/fileop
 bin/iozone
+bin/iozone_report
+bin/iozone_visualizer
+bin/pit_server
 man/man1/iozone.1
+share/doc/IOzone/IOzone_msword_98.pdf
 share/doc/IOzone/Iozone_ps.gz
+share/doc/IOzone/Run_rules.doc
+share/examples/IOzone/Generate_Graphs
+share/examples/IOzone/Gnuplot.txt
+share/examples/IOzone/client_list
+share/examples/IOzone/gengnuplot.sh
+share/examples/IOzone/gnu3d.dem
+share/examples/IOzone/gnuplot.dem
+share/examples/IOzone/gnuplotps.dem
+share/examples/IOzone/read_telemetry
+share/examples/IOzone/write_telemetry
