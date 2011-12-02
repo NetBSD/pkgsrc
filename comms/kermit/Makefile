@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2011/08/25 14:54:06 hans Exp $
+# $NetBSD: Makefile,v 1.77.2.1 2011/12/02 07:47:16 spz Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
@@ -39,8 +39,14 @@ LIBS+=		-ltermcap
 .endfor
 
 .if ${OPSYS} == "Darwin"
-.  if empty(OS_VERSION:M[0-6]\.*)
-BUILD_TARGET_OPSYS=	macosx103
+.  if !empty(OS_VERSION:M??.*)
+BUILD_TARGET_OPSYS=	macosx10.6
+.  elif !empty(OS_VERSION:M9.*)
+BUILD_TARGET_OPSYS=	macosx10.5
+.  elif !empty(OS_VERSION:M8.*)
+BUILD_TARGET_OPSYS=	macosx10.4
+.  elif empty(OS_VERSION:M7.*)
+BUILD_TARGET_OPSYS=	macosx103.9
 .  else
 BUILD_TARGET_OPSYS=	macosx10
 .  endif
