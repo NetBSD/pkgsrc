@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2011/05/07 16:54:56 adam Exp $
+# $NetBSD: Makefile,v 1.11 2011/12/02 14:42:12 adam Exp $
 
-DISTNAME=	clang-2.9
-PKGREVISION=	1
+DISTNAME=	clang-3.0
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-DISTFILES=	llvm-${PKGVERSION_NOREV}.tgz clang-${PKGVERSION_NOREV}.tgz
+DISTFILES=	llvm-${PKGVERSION_NOREV}.tar.gz clang-${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
@@ -13,7 +12,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}
+WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		chown perl:build gmake
@@ -46,6 +45,6 @@ SUBST_FILES.perl=	tools/llvm-config/llvm-config.in.in
 SUBST_SED.perl=		-e 's,@PERL@,${PERL5},'
 
 post-extract:
-	mv ${WRKDIR}/clang-${PKGVERSION_NOREV} ${WRKSRC}/tools/clang
+	mv ${WRKDIR}/clang-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
 
 .include "../../mk/bsd.pkg.mk"
