@@ -1,13 +1,10 @@
-LMDBG is a collection of small tools for collecting and analyzing logs
-of malloc/realloc/memalign/free etc. function calls. Unlike many
-others, LMDBG does not provide any way to detect overruns of the
-boundaries of malloc() memory allocations, as this is not the
-goal. Like most other malloc debuggers, LMDBG allows detecting memory
-leaks. Unlike some others LMDBG generates full stacktraces and
-separates the logging process from analysis, thus allowing you to
-analyze application on a per-module basis. Simple but powerful tools
+LMDBG is a collection of small tools for collecting and analyzing logs of
+malloc/realloc/memalign/free etc.  function calls.  LMDBG generates full
+stacktraces and separates the logging process from analysis, thus allowing
+you to analyze application on a per-module basis.  Simple but powerful tools
 for analisis are also provided.
 
+lmdbg        - Meta tool, all in one.
 lmdbg-run    - Creates malloc/realloc/free/memalign/... logs
 lmdbg-sym    - Converts addresses to 'file.c:NUM func_name'
 lmdbg-leak   - Checks for memory leaks
