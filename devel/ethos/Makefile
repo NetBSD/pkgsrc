@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/01 06:00:55 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/02 20:51:28 marino Exp $
 #
 
 DISTNAME=	ethos-0.2.2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 PKGCONFIG_OVERRIDE+=	ethos-ui.pc.in
 PKGCONFIG_OVERRIDE+=	ethos.pc.in
