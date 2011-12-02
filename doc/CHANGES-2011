@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3134 2011/12/02 22:46:03 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.3135 2011/12/02 23:39:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4950,3 +4950,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/clang to 3.0 [adam 2011-12-02]
 	Updated benchmarks/iozone to 3.397 [hauke 2011-12-02]
 	Updated devel/lmdbg to 0.17.0 [cheusov 2011-12-02]
+	Updated databases/phpmyadmin to 3.4.8 [tron 2011-12-02]
