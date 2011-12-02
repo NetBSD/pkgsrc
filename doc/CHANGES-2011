@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3129 2011/12/02 12:35:00 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3130 2011/12/02 13:10:15 is Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4944,3 +4944,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-Aggregate to 0.364 [hiramatsu 2011-12-02]
 	Updated devel/mercurial to 2.0.1 [wiz 2011-12-02]
 	Updated mail/msmtp to 1.4.26 [ryoon 2011-12-02]
+	Updated www/dillo to 3.0.1nb2 [is 2011-12-02]
