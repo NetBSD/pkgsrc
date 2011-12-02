@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/09/10 15:47:20 sborrill Exp $
+$NetBSD: distinfo,v 1.6 2011/12/02 08:46:18 sborrill Exp $
 
-SHA1 (istgt-20110907.tar.gz) = a9a43ba63c6d937336da87b85f69640f8a164033
-RMD160 (istgt-20110907.tar.gz) = 2c01d89b74fd5ffc9902a7195abbc75e9fb8dca7
-Size (istgt-20110907.tar.gz) = 231731 bytes
-SHA1 (patch-Makefile.in) = 5018e0aa16eb80fcb76140d59b6db117e86ff0f8
+SHA1 (istgt-20111008.tar.gz) = aa7bc47365763bddf82b4fcdffd659b2cb38a77c
+RMD160 (istgt-20111008.tar.gz) = 53600cff38ae715edee533914eb5b91a6df8846e
+Size (istgt-20111008.tar.gz) = 235227 bytes
