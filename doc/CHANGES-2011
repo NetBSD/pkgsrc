@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3122 2011/12/02 05:41:49 agc Exp $
+$NetBSD: CHANGES-2011,v 1.3123 2011/12/02 07:13:39 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4936,3 +4936,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Path-Dispatcher-Declarative to 0.03 [hiramatsu 2011-12-02]
 	Added devel/libpgm version 5.1.118 [agc 2011-12-01]
 	Added sysutils/mrsync version 20090219 [agc 2011-12-01]
+	Updated devel/apr to 1.4.5nb3 [sbd 2011-12-02]
