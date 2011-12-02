@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/02/14 20:19:25 snj Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/12/02 13:06:31 is Exp $
 bin/dillo
 bin/dpid
 bin/dpidc
@@ -10,6 +10,7 @@ lib/dillo/dpi/file/file.dpi
 lib/dillo/dpi/ftp/ftp.filter.dpi
 lib/dillo/dpi/hello/hello.filter.dpi
 lib/dillo/dpi/https/https.filter.dpi
+lib/dillo/dpi/vsource/vsource.filter.dpi
 man/man1/dillo.1
 share/doc/dillo/Cache.txt
 share/doc/dillo/Cookies.txt
