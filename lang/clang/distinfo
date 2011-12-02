@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.8 2011/05/07 16:54:56 adam Exp $
+$NetBSD: distinfo,v 1.9 2011/12/02 14:42:12 adam Exp $
 
-SHA1 (clang-2.9.tgz) = 5fd3b5cec050ec12858c1602b23cf096282ad4a4
-RMD160 (clang-2.9.tgz) = 4ab79cbd0e2ad25a2272e6ee2fbbf546818dbd73
-Size (clang-2.9.tgz) = 6243772 bytes
-SHA1 (llvm-2.9.tgz) = 500f587f840199ac53c4fc7572839d08fa9d9123
-RMD160 (llvm-2.9.tgz) = caeaa067fda1eb34196b356a087645f83731cfb7
-Size (llvm-2.9.tgz) = 9574781 bytes
+SHA1 (clang-3.0.tar.gz) = 1fa11f07f957bd9c9de003d1b5a7a9ba1e0055e4
+RMD160 (clang-3.0.tar.gz) = 640b309116db4357627c0b81ebba5dab824d9eeb
+Size (clang-3.0.tar.gz) = 7240578 bytes
+SHA1 (llvm-3.0.tar.gz) = b683e7294fcf69887c0d709025d4640f5dca755b
+RMD160 (llvm-3.0.tar.gz) = 85211cafbed1c5d838ac54669017b5298613f975
+Size (llvm-3.0.tar.gz) = 10350539 bytes
 SHA1 (patch-ab) = 140ac84d513cf20c9eb30a9e8e2f6b87bdd074fe
 SHA1 (patch-ac) = 252f6a1f2cb79fed19668310c72d1079b47eca3c
 SHA1 (patch-ad) = 4cd7223d1660a4e8d81b33b6c99efbb680664164
-SHA1 (patch-tools_clang_lib_AST_DumpXML.cpp) = d41863bf349f59f7e784fad0c7a5dfc28398e22c
-SHA1 (patch-tools_clang_lib_CodeGen_CodeGenModule.cpp) = 3075e531c550a663de5c3a2a61bc64a9bc664728
