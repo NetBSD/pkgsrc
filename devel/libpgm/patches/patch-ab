@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+Quick portability hack
+
+--- include/impl/sockaddr.h	2011/12/02 00:54:52	1.1
++++ include/impl/sockaddr.h	2011/12/02 01:02:03
+@@ -34,7 +34,7 @@
+ #	include <sys/socket.h>
+ #	include <netdb.h>
+ #endif
+-#ifdef __APPLE__
++#if defined(__APPLE__) || defined(__NetBSD__)
+ #	include <pgm/in.h>
+ #endif
+ #include <pgm/types.h>

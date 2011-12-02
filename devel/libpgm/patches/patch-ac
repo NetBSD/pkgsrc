@@ -1,0 +1,59 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/12/02 05:25:12 agc Exp $
+
+configure defines HAVE_GETTIMEOFDAY, not CONFIG_HAVE_GETTIMEOFDAY
+
+--- time.c	2011/12/02 01:03:43	1.1
++++ time.c	2011/12/02 01:36:01
+@@ -75,7 +75,7 @@
+ #	include <sys/timeb.h>
+ static pgm_time_t		pgm_ftime_update (void);
+ #endif
+-#ifdef CONFIG_HAVE_GETTIMEOFDAY
++#ifdef HAVE_GETTIMEOFDAY
+ #	include <sys/time.h>
+ static pgm_time_t		pgm_gettimeofday_update (void);
+ #endif
+@@ -295,7 +295,7 @@
+ 		break;
+ #endif
+ 
+-#ifdef CONFIG_HAVE_GETTIMEOFDAY
++#ifdef HAVE_GETTIMEOFDAY
+ #	ifndef _WIN32
+ 	default:
+ #	endif
+@@ -377,6 +377,7 @@
+ 		if (0 == sysctlbyname ("hw.clockrate", &clockrate, &len, NULL, 0)) {
+ 			tsc_mhz = (uint_fast32_t)(clockrate * 1000);
+ 		}
++#elif defined(__NetBSD__)
+ #elif defined(KSTAT_DATA_INT32)
+ /* ref: http://developers.sun.com/solaris/articles/kstatc.html */
+ 		kstat_ctl_t* kc;
+@@ -443,7 +444,7 @@
+ #	endif
+ 	   )
+ 	{
+-#	if defined( CONFIG_HAVE_GETTIMEOFDAY )
++#	if defined( HAVE_GETTIMEOFDAY )
+ 		rel_offset = pgm_gettimeofday_update() - pgm_time_update_now();
+ #	elif defined( CONFIG_HAVE_FTIME )
+ 		rel_offset = pgm_ftime_update() - pgm_time_update_now();
+@@ -511,7 +512,7 @@
+ 	return retval;
+ }
+ 
+-#ifdef CONFIG_HAVE_GETTIMEOFDAY
++#ifdef HAVE_GETTIMEOFDAY
+ static
+ pgm_time_t
+ pgm_gettimeofday_update (void)
+@@ -527,7 +528,7 @@
+ 	else
+ 		return last = now;
+ }
+-#endif /* CONFIG_HAVE_GETTIMEOFDAY */
++#endif /* HAVE_GETTIMEOFDAY */
+ 
+ #ifdef CONFIG_HAVE_CLOCK_GETTIME
+ static
