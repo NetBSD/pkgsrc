@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/09 18:59:48 asau Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/02 20:45:27 marino Exp $
 #
 
 CLISP_MODULE=	pcre
@@ -17,6 +17,6 @@ MAKE_JOBS_SAFE=	no
 
 
 .include "../../lang/clisp/module.mk"
-
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
