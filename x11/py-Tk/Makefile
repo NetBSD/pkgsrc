@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2011/07/12 11:25:31 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2011/12/03 00:02:17 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
@@ -10,6 +10,8 @@ HOMEPAGE=	http://wiki.python.org/moin/TkInter
 COMMENT=	Tkinter -- Python interface to Tcl/Tk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_tkinter.c \
 			${PYSUBDIR}/Modules/tkappinit.c
