@@ -1,0 +1,33 @@
+--- gcc/ada/mlib-prj.adb
++++ gcc/ada/mlib-prj.adb
+@@ -341,6 +341,11 @@ package body MLib.Prj is
+ 
+       Foreign_Sources : Boolean;
+ 
++      Rpath_Disabled : Boolean := False;
++      --  If -R is passed through the library options for the linker, it will
++      --  prevent the implemented libraries portion of the rpath switch from
++      --  being built, even if the linker is capable of supporting rpath.
++
+       Rpath : String_Access := null;
+       --  Allocated only if Path Option is supported
+ 
+@@ -790,7 +795,7 @@ package body MLib.Prj is
+             Opts.Table (Opts.Last) :=
+               new String'("-L" & Name_Buffer (1 .. Name_Len));
+ 
+-            if Path_Option /= null then
++            if not Rpath_Disabled and then Path_Option /= null then
+                Add_Rpath (Name_Buffer (1 .. Name_Len));
+             end if;
+ 
+@@ -1285,6 +1290,9 @@ package body MLib.Prj is
+                      Opts.Increment_Last;
+                      Opts.Table (Opts.Last) :=
+                        new String'(Name_Buffer (1 .. Name_Len));
++                     if Name_Len = 2 and then Name_Buffer (1 .. 2) = "-R" then
++                        Rpath_Disabled := True;
++                     end if;
+                   end if;
+ 
+                   Current := Element.Next;
