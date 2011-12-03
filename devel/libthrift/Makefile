@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/10/19 06:12:59 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/12/03 21:56:20 cheusov Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
@@ -30,6 +30,7 @@ pre-build:
 
 .include "options.mk"
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
