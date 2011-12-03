@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/01 06:00:56 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/03 22:07:30 marino Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
@@ -16,26 +16,20 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake sed perl awk
+USE_TOOLS+=		gmake sed perl awk pkg-config
 
 GPS_VERSION=		5.0.1
-FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin:${PREFIX}/lib/pkgconfig
-MY_CONFIGURE_ENV=	PATH=${FULL_PATH}
 MY_CONFIGURE_ENV+=	CC=gnatgcc
+MY_CONFIGURE_ENV+=	PYTHON=${PREFIX}/bin/python${PYVERSSUFFIX}
 APP=			${PREFIX}/lib/gnat
-TPLS=			${PREFIX}/share/gps/templates
 
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--with-gmp=${PREFIX}
 
-do-wrapper:
-	# Disable problematic wrappers
-	@${ECHO} "###  Pkgsrc wrappers disabled  ###"
-
-post-patch:
-	perl -i -pe "s/set dummy python;/set dummy python${PYVERSSUFFIX};/" \
-	${WRKSRC}/gnatlib/configure 
+post-wrapper:
+	${RM} -rf ${WRKDIR}/.wrapper/bin
+	${RM} -rf ${WRKDIR}/.gcc/bin
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MY_CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
