@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2011/11/23 23:29:45 joerg Exp $
+$NetBSD: distinfo,v 1.11 2011/12/03 20:17:47 cheusov Exp $
 
 SHA1 (asc/asc-source-1.16.4.0.tar.bz2) = 338081823943e08848325e6f2126e5c533517ae9
 RMD160 (asc/asc-source-1.16.4.0.tar.bz2) = a4de675628875cc36f30b39d1fb1ef3ac879e369
@@ -12,7 +12,7 @@ Size (asc/machine_wars.mp3) = 2905989 bytes
 SHA1 (asc/time_to_strike.mp3) = 76abf03155d9a21584f30c20370db0a93449c78a
 RMD160 (asc/time_to_strike.mp3) = a402a00e490f7aca0871b52165d63f3bde3b3bff
 Size (asc/time_to_strike.mp3) = 3242969 bytes
-SHA1 (patch-source_ASCStringHelpers.h) = e13e259fb2ce8ca674692b928e536594f243c0be
+SHA1 (patch-source_ASCStringHelpers.h) = 21caf558907c4eaafe88d714520b014a1c19f57b
 SHA1 (patch-source_Property.cpp) = a8a8e154f8aa5a884cb9fe0e74c806dcaf3020b2
 SHA1 (patch-source_password.cpp) = fa56110a045e111f772f09b9e9998d84a76e7d5a
 SHA1 (patch-source_strtmesg.cpp) = 3aa86f7e739983294a86c9ab5a8c0c4a6007c449
