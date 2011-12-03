@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/12/03 09:22:37 sbd Exp $
+
+--- Makefile.in.orig	2007-09-21 23:32:51.000000000 +0000
++++ Makefile.in
+@@ -56,7 +56,7 @@ bindir = $(exec_prefix)/bin
+ 
+ EXEEXT= @EXEEXT@
+ 
+-DEFS = -I. -I$(srcdir) -I$(top_srcdir) $(CFLAGS)
++DEFS = -I. -I$(srcdir) -I$(top_srcdir) $(CFLAGS) $(LDFLAGS)
+ 
+ SNAPBASE  = skktools-`$(DATE) '+%Y%m%d'`
+ TARGETS = skkdic-expr$(EXEEXT) skkdic-sort$(EXEEXT) skkdic-count$(EXEEXT) @SKKDIC_EXPR2@
