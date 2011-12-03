@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/06/16 09:03:11 adam Exp $
+# $NetBSD: Makefile,v 1.17 2011/12/03 00:02:14 joerg Exp $
 
 DISTNAME=	psycopg2-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
