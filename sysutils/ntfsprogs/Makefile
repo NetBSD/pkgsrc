@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:36 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2011/12/03 03:40:45 sbd Exp $
 
 DISTNAME=	ntfsprogs-2.0.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-ntfs/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,4 +22,5 @@ CONFIGURE_ARGS+=	--disable-gnome-vfs
 
 GCC_REQD+=	2.96
 
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
