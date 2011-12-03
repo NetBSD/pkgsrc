@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2011/12/03 07:30:48 marino Exp $
+
+--- sax/sax.gpr.orig	2011-10-08 19:18:44.000000000 +0000
++++ sax/sax.gpr
+@@ -9,6 +9,7 @@ project Sax is
+    for Object_Dir  use "obj/" & Project'Library_Kind;
+    for Library_Dir use "lib/" & Project'Library_Kind;
+    for Library_Version use "lib" & Project'Library_Name & ".so." & Shared.Version;
++   for Library_Options use ("-R");
+ 
+    package Builder  renames Shared.Builder;
+    package Compiler renames Shared.Compiler;
