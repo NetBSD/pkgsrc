@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10724 2011/12/02 14:44:02 adam Exp $
+$NetBSD: TODO,v 1.10725 2011/12/03 08:41:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.28
+	o calibre-0.8.29
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
@@ -457,7 +457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cherokee-1.2.101
 	o chromium-0.9.15
 	o chrony-1.26
-	o cinepaint-0.23
+	o cinepaint-1.0
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o clamav-0.97.3
@@ -465,6 +465,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.8.2
 	o clutter-gst-1.4.4
+	o cmus-2.4.3
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compositeproto-0.4.2
@@ -636,6 +637,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontsproto-2.1.1
 	o fossil-1.20
+	o fotoxx-11.12.1
 	o fox-1.6.41
 	o frama-c-20110201
 	o freeciv-2.3.0
@@ -937,7 +939,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxkbfile-1.0.7
 	o libxklavier-5.1
 	o licq-1.3.8
-	o liferea-1.6.7
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -969,7 +970,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o miredo-1.2.4
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mksh-40b
 	o mkvtoolnix-5.1.0
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
@@ -1135,9 +1135,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-simplejson-2.2.1
 	o py-sybase-0.37
 	o py-twisted-11.0.0
-	o py-urwid-1.0.0
+	o py-urwid-1.0.1
 	o python-3.2
 	o qbrew-0.3.9
+	o qemu-1.0
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt4-qscintilla-2.6
@@ -1317,11 +1318,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.14.0
+	o vala-0.14.1
 	o valgrind-3.6.1
 	o vbetool-1.1
 	o vera-1.17
-	o veusz-1.14
 	o vfu-4.09
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
@@ -1352,7 +1352,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weechat-0.3.6
 	o whohas-0.29
 	o windowlab-1.40
-	o wine-devel-1.3.33
+	o wine-devel-1.3.34
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1460,7 +1460,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
-	o xmlstarlet-1.3.0
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
