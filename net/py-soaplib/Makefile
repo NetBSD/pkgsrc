@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2011/12/03 00:02:16 joerg Exp $
 #
 
 DISTNAME=	soaplib-0.8-20000621
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.pythonware.com/products/soap/index.htm
 COMMENT=	Implementation of the SOAP 1.1 protocol
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes

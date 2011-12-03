@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/10/15 08:33:36 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/12/03 00:02:16 joerg Exp $
 #
 
 DISTNAME=		python-pslib_0.2.0.orig
@@ -12,6 +12,8 @@ HOMEPAGE=		http://pslib.sourceforge.net/
 COMMENT=		Python bindings for pslib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 WRKSRC=		${WRKDIR}/python-pslib-0.2.0
 
