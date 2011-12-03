@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/03/10 16:13:31 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/03 00:02:15 joerg Exp $
 #
 
 VER=		1.0
@@ -11,6 +11,8 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.clapper.org/software/python/sendmail-admin/
 COMMENT=	Mailqs and rmmq, two scripts that ease Sendmail administration
 LICENSE=	2-clause-bsd
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 USE_LANGUAGES=	# none
 
