@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3141 2011/12/03 14:51:50 cheusov Exp $
+$NetBSD: CHANGES-2011,v 1.3142 2011/12/04 02:26:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4957,3 +4957,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/nmh to 1.3nb1 [sbd 2011-12-03]
 	Updated news/suck to 4.3.2nb6 [sbd 2011-12-03]
 	Updated pkgtools/pkg_summary-utils to 0.56.4 [cheusov 2011-12-03]
+	Updated www/contao210-translations to 20111129 [taca 2011-12-04]
