@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 12:24:37 obache Exp $
+share/cmake-2.8/Modules/CMakeVersion.cmake
+share/cmake-2.8/Modules/DateTimeFormat.cmake
+share/cmake-2.8/Modules/ManageEnvironment.cmake
+share/cmake-2.8/Modules/ManageMaintainerTargets.cmake
+share/cmake-2.8/Modules/ManageMessage.cmake
+share/cmake-2.8/Modules/ManageRelease.cmake
+share/cmake-2.8/Modules/ManageReleaseOnFedora.cmake
+share/cmake-2.8/Modules/ManageSourceVersionControl.cmake
+share/cmake-2.8/Modules/ManageString.cmake
+share/cmake-2.8/Modules/ManageTranslation.cmake
+share/cmake-2.8/Modules/ManageUninstall.cmake
+share/cmake-2.8/Modules/ManageVariable.cmake
+share/cmake-2.8/Modules/ManageVersion.cmake
+share/cmake-2.8/Modules/PackRPM.cmake
+share/cmake-2.8/Modules/PackSource.cmake
+share/cmake-2.8/Modules/UseDoxygen.cmake
+share/cmake-2.8/Modules/UseGConf.cmake
+share/cmake-2.8/Modules/cmake_uninstall.cmake.in
