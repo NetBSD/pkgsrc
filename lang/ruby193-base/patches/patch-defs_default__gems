@@ -1,0 +1,15 @@
+$NetBSD: patch-defs_default__gems,v 1.1 2011/12/04 02:31:54 taca Exp $
+
+Add suffix to default gem's executables files.
+
+--- defs/default_gems.orig	2011-07-30 14:19:11.000000000 +0000
++++ defs/default_gems
+@@ -1,6 +1,6 @@
+ # gem		versioning file			[executable files under bin]
+-rake		lib/rake/version.rb		[rake]
+-rdoc		lib/rdoc.rb			[rdoc ri]
++rake		lib/rake/version.rb		[rake193]
++rdoc		lib/rdoc.rb			[rdoc193 ri193]
+ minitest	lib/minitest/unit.rb
+ json		ext/json/lib/json/version.rb
+ io-console	ext/io/console/io-console.gemspec
