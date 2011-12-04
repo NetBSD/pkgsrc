@@ -1,0 +1,36 @@
+$NetBSD: patch-configure.ac,v 1.1 2011/12/04 23:17:30 marino Exp $
+
+--- configure.ac.orig	2011-12-04 22:15:27.922631000 +0000
++++ configure.ac
+@@ -91,6 +91,10 @@ case $target_os in
+     gm_platform="linux"
+     ;;
+ 
++  DragonFly* | dragonfly* )
++    gm_platform="freebsd"
++    ;;
++
+   FreeBSD* | freebsd* | kfreebsd* | NetBSD* | netbsd* )
+     gm_platform="freebsd"
+     ;;
+@@ -109,7 +113,7 @@ case $target_os in
+     ;;
+ 
+   *)
+-    AC_MSG_ERROR([Only Linux, FreeBSD, NetBSD, Solaris and Mac OS X are supported. Please contact the author to know how you can add more OS types.])
++    AC_MSG_ERROR([Only Linux, DragonFly, FreeBSD, NetBSD, Solaris and Mac OS X are supported. Please contact the author to know how you can add more OS types.])
+     ;;
+ esac
+ AC_MSG_RESULT([yes])
+@@ -129,6 +133,11 @@ case $target_os in
+     ARCH_OPAL_LIBS="-lpt -lopal -ldl -lpthread"
+     ;;
+ 
++  DragonFly* | dragonfly* )
++    ARCH_PTLIB_CFLAGS="-DPTRACING -DNDEBUG -Os -g"
++    ARCH_OPAL_LIBS="-lpt -lopal -lpthread"
++    ;;
++
+   FreeBSD* | freebsd* | NetBSD* | netbsd* )
+     ARCH_PTLIB_CFLAGS="-DPTRACING -DNDEBUG -Os -g"
+     ARCH_OPAL_LIBS="-lpt -lopal -lpthread"
