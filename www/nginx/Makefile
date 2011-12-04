@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2011/11/20 12:37:14 shattered Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/04 14:41:01 shattered Exp $
 
-DISTNAME=		nginx-1.0.4
+DISTNAME=		nginx-1.0.10
 CATEGORIES=		www
+MASTER_SITES=		http://nginx.org/download/
 DISTFILES=		${DEFAULT_DISTFILES}
-MASTER_SITES=		http://sysoev.ru/nginx/
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://nginx.net/
+HOMEPAGE=		http://nginx.org/
 COMMENT=		Lightweight HTTP server and mail proxy server
 LICENSE=		2-clause-bsd
 
