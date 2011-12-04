@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2011/12/04 13:10:39 obache Exp $
+
+* test(1) portability fix.
+
+--- configure.orig	2011-12-04 12:45:32.000000000 +0000
++++ configure
+@@ -18626,7 +18626,7 @@ if test "${with_gtk_version+set}" = set;
+ 
+ fi
+ 
+-if test "x$gtk_version" == "x3" || test "x$gtk_version" == "xgtk-3" || test "x$gtk_version" == "xgtk3"; then :
++if test "x$gtk_version" = "x3" || test "x$gtk_version" = "xgtk-3" || test "x$gtk_version" = "xgtk3"; then :
+   gtk_version="gtk+-3.0"
+ else
+   gtk_version="gtk+-2.0 >= 2.12"
