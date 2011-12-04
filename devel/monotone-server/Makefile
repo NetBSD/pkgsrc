@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2011/04/03 08:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2011/12/04 23:37:14 riz Exp $
 #
 
 DISTNAME=	monotone-1.0
@@ -85,7 +85,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKDIR}/monotone-server.7 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/monotone-server.7
-	${INSTALL_DATA} ${WRKSRC}/contrib/get_passphrase_from_file.lua \
+	${INSTALL_DATA} ${WRKSRC}/extra/mtn-hooks/get_passphrase_from_file.lua \
 		${DESTDIR}${EXAMPLEDIR}/monotonerc
 	${INSTALL_DATA} ${WRKDIR}/read-permissions \
 		${DESTDIR}${EXAMPLEDIR}/read-permissions
