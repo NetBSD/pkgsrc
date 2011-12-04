@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
+$NetBSD: patch-aw,v 1.4 2011/12/04 21:55:01 marino Exp $
 
 --- ../FreeBSD/lib/Tinderbox/MakeCache.pm	2011-10-16 00:52:55.000000000 +0000
 +++ lib/Tinderbox/MakeCache.pm
@@ -129,7 +129,7 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
  # Internal function for returning a port variable
  sub _getVariable {
          my $self = shift;
-@@ -90,16 +166,28 @@ sub _getList {
+@@ -90,16 +166,30 @@ sub _getList {
          my $port = shift;
          my $item = shift;
          my @deps;
@@ -137,15 +137,19 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
  
          $self->_execMake($port);
          foreach my $dep (split(/\s+/, $self->{CACHE}->{$port}{$item})) {
-+                $dep =~ s/^\s+//;
-+                $dep =~ s/\s+$//;
-                 my ($d, $ddir) = split(/:/, $dep);
+-                my ($d, $ddir) = split(/:/, $dep);
 -                if (!defined($ddir) || $item eq 'DEPENDS') {
++                my ($d, $ddir) = split(/:/, $self->_trim($dep));
 +                if (!defined($ddir)) {
                          $ddir = $d;
                  }
-                 $ddir =~ s|^$self->{BASEDIR}/||;
-+                $ddir =~ s|^\.\.\/\.\.\/||;
+-                $ddir =~ s|^$self->{BASEDIR}/||;
++                if ($d =~ /^{perl>=?5.+,.+}$/) {
++                        $ddir = "lang/perl5"
++                } else {
++                        $ddir =~ s|^$self->{BASEDIR}/||;
++                        $ddir =~ s|^\.\.\/\.\.\/||;
++                }
                  if ($ddir) {
 -                        push @deps, $ddir;
 +                        $found = 0;
@@ -160,7 +164,7 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
                  }
          }
          return @deps;
-@@ -109,7 +197,7 @@ sub _getList {
+@@ -109,7 +199,7 @@ sub _getList {
  sub Name {
          my $self = shift;
          my $port = shift;
@@ -169,7 +173,7 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
  }
  
  # Package name
-@@ -133,6 +221,13 @@ sub Maintainer {
+@@ -133,6 +223,13 @@ sub Maintainer {
          return $self->_getVariable($port, 'MAINTAINER');
  }
  
@@ -183,7 +187,7 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
  # Extract dependencies
  sub ExtractDepends {
          my $self = shift;
-@@ -189,8 +284,8 @@ sub IgnoreList {
+@@ -189,8 +286,8 @@ sub IgnoreList {
  
          my $n = 0;
          $self->_execMake($port);
@@ -194,7 +198,7 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
          }
          return $n eq 0 ? "" : $self->PkgName($port);
  }
-@@ -206,6 +301,17 @@ sub FetchDependsList {
+@@ -206,6 +303,17 @@ sub FetchDependsList {
          return grep { !$uniq{$_}++ } @deps;
  }
  
@@ -212,7 +216,7 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
  sub ExtractDependsList {
          my $self = shift;
          my $port = shift;
-@@ -250,6 +356,7 @@ sub BuildDependsList {
+@@ -250,6 +358,7 @@ sub BuildDependsList {
          push(@deps, $self->FetchDepends($port));
          push(@deps, $self->BuildDepends($port));
          push(@deps, $self->LibDepends($port));
@@ -220,7 +224,7 @@ $NetBSD: patch-aw,v 1.3 2011/11/20 16:20:24 marino Exp $
  
          my %uniq;
          return grep { !$uniq{$_}++ } @deps;
-@@ -263,6 +370,7 @@ sub RunDependsList {
+@@ -263,6 +372,7 @@ sub RunDependsList {
          my @deps;
          push(@deps, $self->LibDepends($port));
          push(@deps, $self->RunDepends($port));
