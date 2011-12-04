@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 02:22:26 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/04 13:10:39 obache Exp $
 libexec/ibus-engine-unikey
 libexec/ibus-setup-unikey
 share/ibus-unikey/icons/ibus-unikey.png
-share/ibus-unikey/setup/setup-macro.glade
-share/ibus-unikey/setup/setup-main.glade
+share/ibus-unikey/ui/setup-macro.ui
+share/ibus-unikey/ui/setup-main.ui
 share/ibus/component/unikey.xml
 share/locale/vi/LC_MESSAGES/ibus-unikey.mo
