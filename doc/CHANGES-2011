@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3142 2011/12/04 02:26:02 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3143 2011/12/04 02:32:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4958,3 +4958,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated news/suck to 4.3.2nb6 [sbd 2011-12-03]
 	Updated pkgtools/pkg_summary-utils to 0.56.4 [cheusov 2011-12-03]
 	Updated www/contao210-translations to 20111129 [taca 2011-12-04]
+	Updated lang/ruby193-base to 1.9.3p0nb2 [taca 2011-12-04]
