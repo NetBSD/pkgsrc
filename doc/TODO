@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10726 2011/12/04 02:23:15 taca Exp $
+$NetBSD: TODO,v 1.10727 2011/12/04 14:42:29 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1009,8 +1009,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newmail-1.0.2
 	o newt-0.52.12
 	o ng-1.4.4
-	o nginx-1.0.6 [pkg/45317]
-	o nginx-1.0.9 [pkg/45612]
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
 	o notification-daemon-0.7.0
