@@ -1,0 +1,21 @@
+$NetBSD: patch-configure.ac,v 1.1 2011/12/04 21:59:37 marino Exp $
+
+--- configure.ac.orig	2009-09-21 00:25:59.000000000 +0000
++++ configure.ac
+@@ -232,6 +232,16 @@ case "$target_os" in
+ 		   AC_CHECK_FUNC([swab], [AC_DEFINE([USE_SYSTEM_SWAB], [], [Use system swab()] )] )
+                    ;;
+ 
++  dragonfly*)      OSTYPE=DragonFly ;
++                   OS_TAG="P_DRAGONFLY" ;
++                   if test "x$OSRELEASE" = "x"; then
++                     OSRELEASE="`sysctl -n kern.osreldate`" ;
++                   fi
++                   need_pragma=yes ;
++		   AC_DEFINE(P_PTHREADS, 1, "PThreads found")
++		   AC_CHECK_FUNC([swab], [AC_DEFINE([USE_SYSTEM_SWAB], [], [Use system swab()] )] )
++		   ;;
++
+   freebsd*|kfreebsd*)       OSTYPE=FreeBSD ;
+ 		   OS_TAG="P_FREEBSD" ;
+                    if test "x$OSRELEASE" = "x"; then
