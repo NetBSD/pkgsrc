@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/11/01 06:01:51 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/04 12:40:42 obache Exp $
 #
 
-DISTNAME=	ibus-chewing-1.3.9.2-Source
+DISTNAME=	ibus-chewing-1.3.10-Source
 PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	3
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -14,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BUILD_DEPENDS+=		cmake-fedora-[0-9]*:../../devel/cmake-fedora
 BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 
 USE_CMAKE=		yes
@@ -30,6 +30,9 @@ STRIP_CMD.no=	${CAT}
 
 GCONF_SCHEMAS=	ibus-chewing.schemas
 CMAKE_ARGS+=	-DGCONF_SCHEMAS_INSTALLED_DIR=${GCONF_SCHEMAS_DIR}
+
+post-extract:
+	find ${WRKDIR} -type d -name PaxHeader | xargs rm -rf
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
