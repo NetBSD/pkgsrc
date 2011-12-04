@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2011/02/28 11:02:46 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2011/12/04 21:08:21 sbd Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -20,6 +20,16 @@ BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/:S/^-l$//}
 BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
 BUILDLINK_INCDIRS.ncurses+=	include/ncurses
+
+# Many packages will prefer ncursesw over ncurses if its available (say as
+# a native library), so unless this file is being included by ncursesw
+# disable ncursesw autoconf detection and if that doesn't work pretend we
+# are ncursesw. 
+#
+.  if empty(BUILDLINK_TREE:Mncursesw)
+CONFIGURE_ENV+=			ac_cv_lib_ncursesw_initscr=no
+BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILDLINK_LIBNAME.ncurses}
+.  endif
 
 .PHONY: buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 buildlink-ncurses-curses-h:
