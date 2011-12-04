@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3144 2011/12/04 12:25:02 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3145 2011/12/04 12:40:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4960,3 +4960,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/contao210-translations to 20111129 [taca 2011-12-04]
 	Updated lang/ruby193-base to 1.9.3p0nb2 [taca 2011-12-04]
 	Added devel/cmake-fedora version 0.8.1 [obache 2011-12-04]
+	Updated inputmethod/ibus-chewing to 1.3.10 [obache 2011-12-04]
