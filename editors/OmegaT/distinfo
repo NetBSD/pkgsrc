@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/04 20:33:55 ryoon Exp $
+
+SHA1 (OmegaT_2.5.0_04_Beta_Source.zip) = fe091a73cea59d62ae499079654895fedd32d390
+RMD160 (OmegaT_2.5.0_04_Beta_Source.zip) = 85d1afdd9e31b0f56bccc3cffe24d4baa1776b36
+Size (OmegaT_2.5.0_04_Beta_Source.zip) = 28269832 bytes
+SHA1 (patch-src_org_omegat_util_StaticUtils.java) = 5eb80e221b1461ef132bc913e13171606ab35ac9
