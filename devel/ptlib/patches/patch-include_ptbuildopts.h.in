@@ -1,0 +1,12 @@
+$NetBSD: patch-include_ptbuildopts.h.in,v 1.1 2011/12/04 21:59:37 marino Exp $
+
+--- include/ptbuildopts.h.in.orig	2009-09-21 00:25:53.000000000 +0000
++++ include/ptbuildopts.h.in
+@@ -43,6 +43,7 @@
+ //
+ 
+ #undef    P_LINUX
++#undef    P_DRAGONFLY
+ #undef    P_FREEBSD
+ #undef    P_OPENBSD
+ #undef    P_NETBSD
