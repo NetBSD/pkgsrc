@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.145 2011/05/15 03:10:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.146 2011/12/04 20:35:25 ryoon Exp $
 #
 
 COMMENT=	Editors
 
+SUBDIR+=	OmegaT
 SUBDIR+=	Sigil
 SUBDIR+=	TeXmacs
 SUBDIR+=	TeXmacs-devel
