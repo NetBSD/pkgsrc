@@ -1,0 +1,13 @@
+#!/bin/sh
+# $FreeBSD: ports/editors/omegaT/files/omegaT.sh.in,v 1.2 2008/11/10 07:37:37 daichi Exp $
+# $NetBSD: OmegaT.in,v 1.1.1.1 2011/12/04 20:33:55 ryoon Exp $
+
+## If the preferences files is not available
+## create a sample one
+##
+if [ ! -f ${HOME}/.omegat/omegat.prefs ] ; then
+  mkdir -m 755 ${HOME}/.omegat
+  cp "@OMEGATDIR@/omegat.prefs" ${HOME}/.omegat && chmod 644 ${HOME}/.omegat/omegat.prefs
+fi
+
+@JAVA_HOME@bin/java -jar "@OMEGATDIR@/OmegaT.jar" "$@"

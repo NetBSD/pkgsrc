@@ -1,0 +1,23 @@
+OmegaT is a free translation memory application written in Java. It is
+a tool intended for professional translators. It does not translate
+for you! (Software that does this is called "machine translation", and
+you will have to look elsewhere for it.) OmegaT has the following
+features:
+
+    * Fuzzy matching
+    * Match propagation
+    * Simultaneous processing of multiple-file projects
+    * Simultaneous use of multiple translation memories
+    * External glossaries with recognition of inflected forms
+    * Document file formats include:
+      XHTML and HTML
+      Microsoft Office 2007 XML
+      OpenOffice.org/StarOffice
+      XLIFF (Okapi)
+      MediaWiki (Wikipedia)
+      Plain text
+    * Unicode (UTF-8) support: can be used with non-Latin alphabets
+    * Support for right-to-left languages
+    * Integral spelling checker
+    * Compatible with other translation memory applications (TMX)
+    * Interface to Google Translate
