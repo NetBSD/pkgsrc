@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3146 2011/12/04 13:10:56 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3147 2011/12/04 13:28:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4962,3 +4962,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/cmake-fedora version 0.8.1 [obache 2011-12-04]
 	Updated inputmethod/ibus-chewing to 1.3.10 [obache 2011-12-04]
 	Updated inputmethod/ibus-unikey to 0.6.0 [obache 2011-12-04]
+	Updated inputmethod/ibus-table-chinese to 1.3.5 [obache 2011-12-04]
