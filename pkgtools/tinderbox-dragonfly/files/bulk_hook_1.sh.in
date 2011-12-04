@@ -26,9 +26,11 @@ if [ -n "${QLIST}" ]; then
 	${PB}/scripts/tc rmBuildPortsQueueEntry -b ${BUILD} -d ${PORTDIR}
 fi
 
-SPORTDIR=`echo ${PORTDIR} | sed "s|/|\\\\\\/|"`
-sed "/^${SPORTDIR}\$/d" ${BULKTMP}/bulk_${BUILD}.queue > ${BULKTMP}/bulk_${BUILD}.queue.tmp
-mv ${BULKTMP}/bulk_${BUILD}.queue.tmp ${BULKTMP}/bulk_${BUILD}.queue
+SPORTDIR=`echo ${PORTDIR} | sed "s|/|\\\\\\/|g"`
+if [ -n "${SPORTDIR}" ]; then
+	sed "/^${SPORTDIR}\$/d" ${BULKTMP}/bulk_${BUILD}.queue > ${BULKTMP}/bulk_${BUILD}.queue.tmp
+	mv ${BULKTMP}/bulk_${BUILD}.queue.tmp ${BULKTMP}/bulk_${BUILD}.queue
+fi
 
 if [ -f ${BULKTMP}/bulk_${BUILD}.active ]; then
    ACTIVEPORT=`cat ${BULKTMP}/bulk_${BUILD}.active`
