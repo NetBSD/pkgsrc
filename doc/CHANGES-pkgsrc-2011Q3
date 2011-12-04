@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.48 2011/12/04 07:19:12 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.49 2011/12/04 22:24:00 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -187,3 +187,7 @@ Pullup ticket #3619 - requested by spz
 security/p5-Digest security update
 Pullup ticket #3618 - requested by tron
 databases/phpmyadmin: security update
+Pullup ticket #3621 - requested by gls
+net/p5-Net-Libdnet build fix/update
+Pullup ticket #3622 - requested by gls
+www/py-clearsilver security fix
