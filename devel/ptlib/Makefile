@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/06/27 11:14:50 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/12/04 21:59:36 marino Exp $
 
 DISTNAME=	ptlib-2.6.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--enable-vxml
 CONFIGURE_ARGS+=	--enable-xmlrpc
 CONFIGURE_ARGS+=	--enable-soap
 CONFIGURE_ARGS+=	--enable-oss
-CONFIGURE_ARGS+=	--enable-v4l2
 CONFIGURE_ARGS+=	--enable-opal
 CONFIGURE_ARGS+=	--enable-openldap
 #CONFIGURE_ARGS+=	--enable-openssl
@@ -41,6 +40,15 @@ CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-avc
 CONFIGURE_ARGS+=	--disable-dc
 PTHREAD_OPTS+=		require
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	video4l2
+
+.if ${OPSYS} != "DragonFly"
+CONFIGURE_ARGS+=	--enable-v4l2
+PLIST.video4l2=		yes
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/version.h ${DESTDIR}${PREFIX}/share/ptlib
