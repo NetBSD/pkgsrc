@@ -1,0 +1,36 @@
+$NetBSD: patch-configure,v 1.1 2011/12/04 23:17:30 marino Exp $
+
+--- configure.orig	2011-12-04 22:20:18.931590000 +0000
++++ configure
+@@ -15361,6 +15361,10 @@ case $target_os in
+     gm_platform="linux"
+     ;;
+ 
++  DragonFly* | dragonfly* )
++    gm_platform="freebsd"
++    ;;
++
+   FreeBSD* | freebsd* | kfreebsd* | NetBSD* | netbsd* )
+     gm_platform="freebsd"
+     ;;
+@@ -15551,7 +15555,7 @@ CC="$lt_save_CC"
+     ;;
+ 
+   *)
+-    as_fn_error "Only Linux, FreeBSD, NetBSD, Solaris and Mac OS X are supported. Please contact the author to know how you can add more OS types." "$LINENO" 5
++    as_fn_error "Only Linux, DragonFly, FreeBSD, NetBSD, Solaris and Mac OS X are supported. Please contact the author to know how you can add more OS types." "$LINENO" 5
+     ;;
+ esac
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -15578,6 +15582,11 @@ case $target_os in
+     ARCH_OPAL_LIBS="-lpt -lopal -ldl -lpthread"
+     ;;
+ 
++  DragonFly* | dragonfly* )
++    ARCH_PTLIB_CFLAGS="-DPTRACING -DNDEBUG -Os -g"
++    ARCH_OPAL_LIBS="-lpt -lopal -lpthread"
++    ;;
++
+   FreeBSD* | freebsd* | NetBSD* | netbsd* )
+     ARCH_PTLIB_CFLAGS="-DPTRACING -DNDEBUG -Os -g"
+     ARCH_OPAL_LIBS="-lpt -lopal -lpthread"
