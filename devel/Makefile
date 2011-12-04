@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1537 2011/12/02 05:26:11 agc Exp $
+# $NetBSD: Makefile,v 1.1538 2011/12/04 12:27:32 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -106,6 +106,7 @@ SUBDIR+=	clisp-syscalls
 SUBDIR+=	clisp-wildcard
 SUBDIR+=	clisp-zlib
 SUBDIR+=	cmake
+SUBDIR+=	cmake-fedora
 SUBDIR+=	cmake-mode
 SUBDIR+=	cmph
 SUBDIR+=	coccinelle
