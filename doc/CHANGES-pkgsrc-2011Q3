@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.47 2011/12/04 01:54:10 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.48 2011/12/04 07:19:12 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -185,3 +185,5 @@ Pullup ticket #3617 - requested by dholland
 editors/emacs20: bug fix patch
 Pullup ticket #3619 - requested by spz
 security/p5-Digest security update
+Pullup ticket #3618 - requested by tron
+databases/phpmyadmin: security update
