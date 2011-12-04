@@ -44,7 +44,9 @@ PORTS=`/usr/bin/find -s * -type d -maxdepth 1 -depth 1`
 
 COUNTER=0
 for PORT in ${PORTS}; do
-  COUNTER=`expr ${COUNTER} + 1`
-  printf "%05d ${BUILD} ${PORT}\n" ${COUNTER}
-  ${PB}/scripts/tc addPort -b ${BUILD} -d ${PORT} -R
+  if [ -f ${PORT}/Makefile ]; then
+    COUNTER=`expr ${COUNTER} + 1`
+    printf "%05d ${BUILD} ${PORT}\n" ${COUNTER}
+    ${PB}/scripts/tc addPort -b ${BUILD} -d ${PORT} -R
+  fi
 done
