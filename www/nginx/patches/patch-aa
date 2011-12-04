@@ -1,9 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2010/01/23 16:32:11 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2011/12/04 14:41:01 shattered Exp $
 
 This patch provides config file adapted to pkgsrc settings.
---- conf/nginx.conf.orig	2008-02-28 22:44:16.000000000 +0200
+
+--- conf/nginx.conf.orig	2011-06-27 15:47:51.000000000 +0000
 +++ conf/nginx.conf
-@@ -2,12 +2,13 @@
+@@ -1,28 +1,29 @@
+ 
 -#user  nobody;
 +user   %%NGINX_USER%%  %%NGINX_GROUP%%;
  worker_processes  1;
@@ -23,7 +25,7 @@ This patch provides config file adapted to pkgsrc settings.
 +    # After increasing this value You probably should increase limit
 +    # of file descriptors (for example in start_precmd in startup script)
      worker_connections  1024;
-@@ -15,14 +14,14 @@
+ }
  
  
  http {
@@ -34,13 +36,13 @@ This patch provides config file adapted to pkgsrc settings.
      #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
      #                  '$status $body_bytes_sent "$http_referer" '
      #                  '"$http_user_agent" "$http_x_forwarded_for"';
-
+ 
 -    #access_log  logs/access.log  main;
 +    #access_log  %%NGINX_LOGDIR%%/access.log  main;
  
      sendfile        on;
      #tcp_nopush     on;
-@@ -38,10 +37,10 @@
+@@ -38,10 +39,10 @@ http {
  
          #charset koi8-r;
  
@@ -53,7 +55,7 @@ This patch provides config file adapted to pkgsrc settings.
              index  index.html index.htm;
          }
  
-@@ -51,7 +50,7 @@
+@@ -51,7 +52,7 @@ http {
          #
          error_page   500 502 503 504  /50x.html;
          location = /50x.html {
@@ -62,7 +64,7 @@ This patch provides config file adapted to pkgsrc settings.
          }
  
          # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-@@ -67,7 +66,7 @@
+@@ -67,7 +68,7 @@ http {
          #    fastcgi_pass   127.0.0.1:9000;
          #    fastcgi_index  index.php;
          #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
@@ -71,7 +73,7 @@ This patch provides config file adapted to pkgsrc settings.
          #}
  
          # deny access to .htaccess files, if Apache's document root
-@@ -87,7 +86,7 @@
+@@ -87,7 +88,7 @@ http {
      #    server_name  somename  alias  another.alias;
  
      #    location / {
@@ -80,7 +82,7 @@ This patch provides config file adapted to pkgsrc settings.
      #        index  index.html index.htm;
      #    }
      #}
-@@ -110,7 +109,7 @@
+@@ -110,7 +111,7 @@ http {
      #    ssl_prefer_server_ciphers   on;
  
      #    location / {
