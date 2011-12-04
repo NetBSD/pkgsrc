@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2011/08/14 12:26:25 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/12/04 20:52:25 gls Exp $
 #
 
-DISTNAME=		PAR-1.002
+DISTNAME=		PAR-1.005
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=PAR/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=PAR/RSCHUPP/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/PAR/
