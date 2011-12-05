@@ -1,0 +1,17 @@
+$NetBSD: patch-plugins_configure.ac,v 1.1.2.2 2011/12/05 20:08:05 tron Exp $
+
+--- plugins/configure.ac.orig	2009-09-22 00:57:56.000000000 +0000
++++ plugins/configure.ac
+@@ -236,9 +236,9 @@ PKG_CHECK_MODULES([LIBAVCODEC],
+                                          HAVE_H264_DECODER=yes
+                                          ;;
+                                      * ) 
+-                                         AC_CHECK_LIB(avcodec, h263p_encoder, [HAVE_H263P=yes], [HAVE_H263P=no])
+-                                         AC_CHECK_LIB(avcodec, mpeg4_encoder, [HAVE_MPEG4=yes], [HAVE_MPEG4=no])
+-                                         AC_CHECK_LIB(avcodec, h264_decoder, [HAVE_H264_DECODER=yes], [HAVE_H264_DECODER=no])
++                                         AC_CHECK_LIB(avcodec, ff_h263p_encoder, [HAVE_H263P=yes], [HAVE_H263P=no])
++                                         AC_CHECK_LIB(avcodec, ff_mpeg4_encoder, [HAVE_MPEG4=yes], [HAVE_MPEG4=no])
++                                         AC_CHECK_LIB(avcodec, ff_h264_decoder, [HAVE_H264_DECODER=yes], [HAVE_H264_DECODER=no])
+                                          ;;
+                    esac
+                    AC_SUBST(HAVE_H263P)
