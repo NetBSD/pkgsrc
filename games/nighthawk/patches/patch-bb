@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.5 2007/08/08 20:40:20 joerg Exp $
+$NetBSD: patch-bb,v 1.6 2011/12/05 22:44:47 joerg Exp $
 
 --- src_sound/dsp_mixxer.c.orig	1998-06-22 10:41:31.000000000 +0000
 +++ src_sound/dsp_mixxer.c
@@ -63,3 +63,35 @@ $NetBSD: patch-bb,v 1.5 2007/08/08 20:40:20 joerg Exp $
      dsp_dealloc_bufs();
    }
    else
+@@ -301,13 +301,13 @@ void DAC0816_channel_mixxer(int chan_no,
+ 
+   for(sample_no = 0;sample_no < mix_buffer_size;sample_no++)
+   {
+-    if(chmix[chan_no].funkctrl & 0x2)
+ #pragma pack(1)
++    if(chmix[chan_no].funkctrl & 0x2)
+       sam = *((sDB *)chmix[chan_no].sample_addr +
+             (unsigned long)chmix[chan_no].sample_ptr);
+-#pragma pack()
+     else
+       sam = 0;
++#pragma pack()
+ 
+ #ifdef DIGITAL_ECHOING
+     sam_reverb = *(chmix[chan_no].echo_buffer +
+@@ -363,13 +363,13 @@ void DAC1616_channel_mixxer(int chan_no,
+   shift_t = 8 + shift_table[funk_info.no_active_channels];
+   for(sample_no = 0;sample_no < mix_buffer_size;sample_no++)
+   {
+-    if(chmix[chan_no].funkctrl & 0x2)
+ #pragma pack(1)
++    if(chmix[chan_no].funkctrl & 0x2)
+       sam = *((sDW *)chmix[chan_no].sample_addr +
+             (unsigned long)chmix[chan_no].sample_ptr);
+-#pragma pack()
+     else
+       sam = 0;
++#pragma pack()
+ #ifdef DIGITAL_ECHOING
+     sam_reverb = *(chmix[chan_no].echo_buffer +
+                  ((chmix[chan_no].echo_ptr - echo_rpos) & echo_mask));

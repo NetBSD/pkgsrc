@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2007/08/08 20:40:20 joerg Exp $
+$NetBSD: distinfo,v 1.11 2011/12/05 22:44:47 joerg Exp $
 
 SHA1 (nighthawk-2.1.tgz) = 117cd7d2c496a0d9e44b1b6d02523ad1cb0de1bf
 RMD160 (nighthawk-2.1.tgz) = 3973ff63c4525de65ae4dd3803d355c102968997
@@ -16,5 +16,5 @@ SHA1 (patch-ag) = be5419e9cbd1f2af3a41f2dc37db792e299f8625
 SHA1 (patch-ah) = 5734f92db807cb44da1494bb51eab9fd18d9fec8
 SHA1 (patch-ai) = 72d47ae02b1e5f1a5f04094c03d00471370a3092
 SHA1 (patch-ba) = 3bf82814d23305a686317ea36ff03698d65157ee
-SHA1 (patch-bb) = 783951fb4532aa66466ef8e820e3964fd6326aa6
+SHA1 (patch-bb) = 3c6bc506fb7cf52d6b03da5d6c2281f5ea135e0b
 SHA1 (patch-bc) = 8bbcd9bd7bcde579a9b7ddb26ef60ffc05362b7e
