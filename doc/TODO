@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10727 2011/12/04 14:42:29 shattered Exp $
+$NetBSD: TODO,v 1.10728 2011/12/05 10:23:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.3.6
+	o ImageMagick-6.7.3.10
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -338,6 +338,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
+	o SDL_gfx-2.0.23
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o XaoS-3.5
@@ -407,6 +408,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.4.4
 	o audacity-1.3.13
 	o autoconvert-0.3.16
+	o autogen-5.13
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.11
@@ -426,6 +428,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o binutils-2.21.1 [wip]
 	o binutils-2.22
 	o bioperl-1.5.0
+	o bitlbee-3.0.4
 	o bitmap-1.0.5
 	o blender-2.60a
 	o bluefish-2.2.0
@@ -451,6 +454,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
+	o cfitsio-3290
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.2.2
@@ -504,7 +508,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dejagnu-1.5
 	o delegate-9.9.7
 	o dhid-5.3
-	o diffpdf-1.5.1
+	o diffpdf-1.6.0
 	o diffstat-1.54
 	o diffutils-3.2
 	o digikam-2.3.0
@@ -516,7 +520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnstracer-1.9
 	o doclifter-2.7
 	o dovecot-2.0.15
-	o doxygen-1.7.5.1
+	o doxygen-1.7.6
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
 	o dri2proto-2.6
@@ -560,7 +564,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
 	o eric4-4.4.17
-	o eric5-5.1.5
+	o eric5-5.1.7
 	o erlang-14.04
 	o esh-0.8.5
 	o espeak-1.40
@@ -744,7 +748,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gss-1.0.2
 	o gssdp-0.10.0
 	o gtexinfo-4.13a
-	o gthumb-2.14.0
+	o gthumb-2.14.1
 	o gtick-0.4.2
 	o gtk3-3.2.2
 	o gtk-gnutella-0.97.1
@@ -761,6 +765,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gupnp-0.16.1
 	o gupnp-igd-0.2.1
 	o gutenprint-5.2.7
+	o gv-3.7.3
 	o gvfs-1.6.7
 	o gworkspace-0.9.0
 	o gxine-0.5.906
@@ -822,6 +827,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jed-0.99-18
+	o jhead-2.93
 	o john-1.7.9
 	o jools-1.0
 	o jpilot-1.8.0
@@ -850,6 +856,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o knights-2.4.0
 	o kodos-2.4.5
 	o koffice-l10n-de-2.0.2
+	o konversation-1.4
 	o kphotobook-0.0.7
 	o kronolith-3.0.12
 	o krusader-2.0
@@ -979,6 +986,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
+	o mp3diags-1.1.09
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
 	o mpg123-1.13.4
@@ -986,6 +994,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpop-1.0.25
 	o mserv-devel-0.41
 	o mtools-4.0.17
+	o mtr-0.82
 	o mu-0.9.7
 	o multitail-5.2.8
 	o munin-doc-1.4.6
@@ -1036,7 +1045,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opendkim-2.4.2
 	o opengrok-0.10
 	o openh323-1.19.1
-	o openldap-client-2.4.27
+	o openldap-client-2.4.28
 	o openmortal-0.7.1
 	o openmsx-0.8.1
 	o openoffice3-3.3
@@ -1050,7 +1059,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ortp-0.16.5
 	o otpCalc-0.97
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.3.6
+	o p5-PerlMagick-6.7.3.10
 	o p5-Search-Xapian-1.2.2.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1124,6 +1133,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.19
 	o py-cups-1.9.60
 	o py-dbus-0.84.0
+	o py-feedparser-5.1
 	o py-game-1.9.1
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
@@ -1155,7 +1165,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rcs-5.8
 	o rdp-1.6
 	o recordproto-1.14.1
-	o redland-1.0.14.1 [needs rasqal-0.9.22]
+	o redland-1.0.15 [needs rasqal-0.9.22]
 	o remind-3.1.10
 	o rendercheck-1.4
 	o renderproto-0.11.1
@@ -1237,6 +1247,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o star-1.5.1
 	o statist-1.3.0
 	o stlport-4.6.2
+	o stow-2.1.0
 	o strace-4.5.16
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
@@ -1364,7 +1375,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111126
+	o x264-devel-20111203
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
