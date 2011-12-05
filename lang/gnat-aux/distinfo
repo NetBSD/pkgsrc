@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/12/03 07:28:18 marino Exp $
+$NetBSD: distinfo,v 1.7 2011/12/05 07:52:25 marino Exp $
 
 SHA1 (gnat-aux-20110627.tar.bz2) = 598d2c21c3bbd1e2cada2ca98331107af3deb608
 RMD160 (gnat-aux-20110627.tar.bz2) = 84b05832457568fef9355279214caeacca9c74ba
@@ -21,4 +21,4 @@ Size (gnat-bootstrap.i386.solaris.tar.bz2) = 43247034 bytes
 SHA1 (patch-aa) = 8a6199bb91fa1051db7af154e6995c116da71e63
 SHA1 (patch-ab) = 76cff68f5f697ed5aacd41d06bbb4d9a805e9d91
 SHA1 (patch-ac) = f8a73fc95b9119ae75b64a5578b94be6dbccb837
-SHA1 (patch-ad) = b72ac305a11f40d77f76a8a1b579a93742123079
+SHA1 (patch-ad) = 989e84c2b7c41698a07894298f7fb8a8459de5e7

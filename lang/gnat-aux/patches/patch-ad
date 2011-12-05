@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 2011/12/05 07:52:25 marino Exp $
+
 --- gcc/ada/mlib-prj.adb
 +++ gcc/ada/mlib-prj.adb
 @@ -341,6 +341,11 @@ package body MLib.Prj is
