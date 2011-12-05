@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/09/12 21:19:26 shattered Exp $
+$NetBSD: distinfo,v 1.10 2011/12/05 22:48:03 joerg Exp $
 
 SHA1 (xkobo-1.11.tar.gz) = 6ac1c0fe86b7fa524eb86f40b89e86ee6cbe3c5d
 RMD160 (xkobo-1.11.tar.gz) = 874ed89a6ed7da56f41b3867cf2cc45f0bcf9683
@@ -9,3 +9,5 @@ SHA1 (patch-ac) = 59794fcdf0b6af8076e0309fdfb0449b35441ea6
 SHA1 (patch-ad) = 64f7bf27f5005fca02c0e0c5fc1c30210829750c
 SHA1 (patch-ae) = 48fb06d8089250a697d28df73638d364e98ab269
 SHA1 (patch-af) = 6557a35bc96e3967fd4c05d39f8054288dca76eb
+SHA1 (patch-scenes.C) = 905a740848ab4b9cea901f8ee48016d3fb2fb3c9
+SHA1 (patch-scenes.h) = 368ebaa483a04411896a606670ff38d651a1a6f5
