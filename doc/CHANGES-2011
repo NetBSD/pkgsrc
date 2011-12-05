@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3170 2011/12/05 19:44:56 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3171 2011/12/05 23:02:32 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5002,3 +5002,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/libquvi-scripts to 0.4.2 [ryoon 2011-12-05]
 	Updated net/quvi to 0.4.1 [ryoon 2011-12-05]
 	Updated net/libquvi to 0.4.0nb1 [ryoon 2011-12-05]
+	Updated lang/sbcl to 1.0.54 [asau 2011-12-05]
