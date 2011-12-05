@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.26 2011/04/05 16:57:49 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2011/12/05 10:46:07 wiz Exp $
 #
 
-DISTNAME=	jhead-2.90
+DISTNAME=	jhead-2.93
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sentex.net/~mwandel/jhead/
 COMMENT=	Extract EXIF header from JPEG image
+LICENSE=	public-domain
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -17,7 +18,6 @@ MAKE_FILE=	makefile
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/html/jhead
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/jhead
 	${INSTALL_PROGRAM} ${WRKSRC}/jhead ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/jhead.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/usage.html \
