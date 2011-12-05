@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3168 2011/12/05 17:52:56 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.3169 2011/12/05 19:12:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4998,3 +4998,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added sysutils/efreet version 1.1.0 [joerg 2011-12-05]
 	Added sysutils/edbus version 1.1.0 [joerg 2011-12-05]
 	Updated net/quagga to 0.99.20 [gdt 2011-12-05]
+	Updated fonts/umefont-ttf to 0.434 [ryoon 2011-12-05]
