@@ -1,4 +1,4 @@
-$NetBSD
+$NetBSD: patch-ac,v 1.2 2011/12/05 07:52:25 marino Exp $
 
 --- gcc/ada/gcc-interface/Makefile.in.orig	2011-07-15 08:07:01.000000000 +0200
 +++ gcc/ada/gcc-interface/Makefile.in	2011-10-03 07:29:02.918353281 +0200
