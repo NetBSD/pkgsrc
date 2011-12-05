@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2011/09/03 21:59:18 dholland Exp $
+$NetBSD: distinfo,v 1.5 2011/12/05 22:44:08 joerg Exp $
 
 SHA1 (uisp-20040311.tar.bz2) = 8e4c1e05d2f9a962b8969fc76d8b448c9e0751d4
 RMD160 (uisp-20040311.tar.bz2) = 4f45d375e942376a2508232cf787f94ab7f8995b
 Size (uisp-20040311.tar.bz2) = 142973 bytes
 SHA1 (patch-aa) = 60d42fc897b8c77c8396823fd9b26b95adb68a77
+SHA1 (patch-src_MotIntl.C) = 456a47463f81da901c78822dc26e9e7683ac5b61
+SHA1 (patch-src_Stk500.C) = a2881e5e0591dc2efb58fa9bd6b84b8327f54b0e
 SHA1 (patch-src_avr_h) = f5ac07e1a8e3865e7c6bd3af86a1777bb068b5fd
 SHA1 (patch-src_dapa_c) = bc3fd2ecde373af2a2a3864f07efedd1177ecca0
