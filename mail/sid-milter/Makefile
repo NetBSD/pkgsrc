@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/12 22:42:55 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/05 08:07:52 pettai Exp $
 #
 
 DISTNAME=	sid-milter-1.0.0
@@ -13,7 +13,6 @@ LICENSE=	sendmail-open-source-license
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
-DEPENDS+=	sendmail>=8.13.0:../../mail/sendmail
 
 USE_BUILTIN.libmilter=	NO
 USE_TOOLS+=		gm4
