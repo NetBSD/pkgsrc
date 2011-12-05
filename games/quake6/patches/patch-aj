@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2002/01/10 16:43:29 skrll Exp $
+$NetBSD: patch-aj,v 1.2 2011/12/05 22:46:12 joerg Exp $
 
---- uquake/net_udp.c.orig	Mon Jan 10 16:59:39 2000
+--- uquake/net_udp.c.orig	2000-01-10 16:59:39.000000000 +0000
 +++ uquake/net_udp.c
-@@ -32,12 +32,17 @@
+@@ -32,12 +32,17 @@ Foundation, Inc., 59 Temple Place - Suit
  #include <sys/param.h>
  #include <sys/ioctl.h>
  #include <errno.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-aj,v 1.1 2002/01/10 16:43:29 skrll Exp $
  #if defined(sgi) && defined(sa_family)
  /* Get rid of problematic SGI #def */
  #undef sa_family
-@@ -62,6 +67,91 @@
+@@ -62,6 +67,91 @@ static unsigned long myAddr;
  #include "net_udp.h"
  
  //=============================================================================
@@ -112,7 +112,7 @@ $NetBSD: patch-aj,v 1.1 2002/01/10 16:43:29 skrll Exp $
  
  int UDP_Init (void)
  {
-@@ -74,9 +164,18 @@
+@@ -74,9 +164,18 @@ int UDP_Init (void)
  		return -1;
  
  	// determine my name & address
@@ -131,7 +131,7 @@ $NetBSD: patch-aj,v 1.1 2002/01/10 16:43:29 skrll Exp $
  
  	// if the quake hostname isn't set, set it to the machine name
  	if (Q_strcmp(hostname.string, "UNNAMED") == 0)
-@@ -137,25 +236,45 @@
+@@ -137,25 +236,45 @@ void UDP_Listen (qboolean state)
  
  int UDP_OpenSocket (int port)
  {
@@ -141,7 +141,7 @@ $NetBSD: patch-aj,v 1.1 2002/01/10 16:43:29 skrll Exp $
  	int newsocket;
 -	struct sockaddr_in address;
  	qboolean _true = true;
-+	const int false = 0;
++	const int wrong = 0;
  
 -	if ((newsocket = socket (PF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1)
 +	snprintf(pbuf, sizeof(pbuf), "%d", port);
@@ -166,8 +166,8 @@ $NetBSD: patch-aj,v 1.1 2002/01/10 16:43:29 skrll Exp $
 -	address.sin_port = htons(port);
 -	if( bind (newsocket, (void *)&address, sizeof(address)) == -1)
 +#ifdef IPV6_BINDV6ONLY
-+	if (setsockopt(newsocket, IPPROTO_IPV6, IPV6_BINDV6ONLY, &false,
-+	    sizeof(false)) < 0) {
++	if (setsockopt(newsocket, IPPROTO_IPV6, IPV6_BINDV6ONLY, &wrong,
++	    sizeof(wrong)) < 0) {
 +		/* I don't care */
 +	}
 +#endif
