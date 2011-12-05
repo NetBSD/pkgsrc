@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.3 2011/09/14 16:07:07 hans Exp $
+$NetBSD: patch-aa,v 1.4 2011/12/05 17:14:52 joerg Exp $
 
---- src/lib/eina_cpu.c.orig	2009-11-09 17:20:58.000000000 +0100
-+++ src/lib/eina_cpu.c	2011-09-13 15:58:16.607177765 +0200
+--- src/lib/eina_cpu.c.orig	2011-04-05 08:41:54.000000000 +0000
++++ src/lib/eina_cpu.c
 @@ -24,7 +24,7 @@
  # ifdef _WIN32
  #  define WIN32_LEAN_AND_MEAN
  #  include <windows.h>
--# elif defined (__SUNPRO_C)
-+# elif defined (__sun)
+-# elif defined (__SUNPRO_C) || defined(__GNU__)
++# elif defined (__sun) || defined(__GNU__)
  #  include <unistd.h>
- # elif defined (__FreeBSD__) || defined (__OpenBSD__) || defined (__NetBSD__) || defined (__DragonFly__) || defined (__MacOSX__) || ( defined (__MACH__) && defined (__APPLE__))
- #  include <unistd.h>
-@@ -133,7 +133,7 @@ EAPI int eina_cpu_count(void)
+ # elif defined (__FreeBSD__) || defined (__OpenBSD__) || \
+    defined (__NetBSD__) || defined (__DragonFly__) || defined (__MacOSX__) || \
+@@ -140,7 +140,7 @@ EAPI int eina_cpu_count(void)
     GetSystemInfo(&sysinfo);
     return sysinfo.dwNumberOfProcessors;
  
--# elif defined (__SUNPRO_C)
-+# elif defined (__sun)
+-# elif defined (__SUNPRO_C) || defined(__GNU__)
++# elif defined (__sun) || defined(__GNU__)
     /*
      * _SC_NPROCESSORS_ONLN: number of processors that are online, that
                              is available when sysconf is called. The number
