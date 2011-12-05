@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/04/22 13:43:18 obache Exp $
+# $NetBSD: Makefile,v 1.40 2011/12/05 22:15:05 sbd Exp $
 #
 
 DISTNAME=	gdb-5.3
@@ -30,6 +30,13 @@ CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 .if ${OPSYS} == "SunOS"
 # Work around a bug in gdb's configure
 CONFIGURE_ENV+=		ac_cv_header_curses_h=yes
+.elif ${OPSYS} == "Linux"
+USE_TOOLS+=		aclocal autoheader autoconf
+
+pre-configure:
+	${RUN} cd ${WRKSRC}/gdb/gdbserver &&				\
+	aclocal && autoheader && autoconf
+
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
