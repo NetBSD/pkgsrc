@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3167 2011/12/05 17:42:54 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.3168 2011/12/05 17:52:56 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4997,3 +4997,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/edje version 1.1.0 [joerg 2011-12-05]
 	Added sysutils/efreet version 1.1.0 [joerg 2011-12-05]
 	Added sysutils/edbus version 1.1.0 [joerg 2011-12-05]
+	Updated net/quagga to 0.99.20 [gdt 2011-12-05]
