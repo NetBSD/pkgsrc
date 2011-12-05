@@ -1,9 +1,10 @@
-$NetBSD: patch-ah,v 1.2 2011/08/01 09:30:33 adam Exp $
+$NetBSD: patch-ah,v 1.3 2011/12/05 08:10:18 adam Exp $
 
 --- src/getsdir.h.orig	2009-12-12 15:47:47.000000000 +0000
 +++ src/getsdir.h
-@@ -25,7 +25,11 @@
+@@ -25,7 +25,12 @@
  #include <dirent.h>
++#include <limits.h>
  
  typedef struct dirEntry {		/* structure of data item */
 +#ifdef NAME_MAX
