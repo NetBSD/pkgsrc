@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2011/12/05 19:36:18 sbd Exp $
+$NetBSD: distinfo,v 1.16 2011/12/05 22:05:29 sbd Exp $
 
 SHA1 (gdb-5.3.tar.gz) = 24a6c9da6e89b1b82b7508f27f94098d989ff662
 RMD160 (gdb-5.3.tar.gz) = 3f88dc11115de08708c50c73b10acaf00ed25e96
@@ -24,8 +24,6 @@ SHA1 (patch-as) = 77a2f8eb5e1f076cba915c80113cfe5bf617efaf
 SHA1 (patch-bfd_po_Make-in) = 9e09652c95dbea0d7017102546c4e959abc199da
 SHA1 (patch-gdb_Makefile.in) = 229c14522ddf8f5ddfdd414d77be1ddefc5635db
 SHA1 (patch-gdb_doc_Makefile.in) = 44f1fc8db2f37dae1ba0db3ae1192ec8ef47f4a3
-SHA1 (patch-gdb_gdbserver_Makefile.in) = 00e0015600847401ecd4471afd53c7e5030e1f15
-SHA1 (patch-gdb_gdbserver_gdbreplay.c) = cc19d75e78561d9ec2eb036435087d43b1af4cc7
 SHA1 (patch-mmalloc_Makefile.in) = 1c45f0b326b838d442979e4ada45c0e5fc2da1c5
 SHA1 (patch-ob) = 52c017dfa9f535edc9520144efa8ef04a8020832
 SHA1 (patch-opcodes_po_Make-in) = c4f9d3d19a52acab6c18454b1ff95c9e1302c5bf
