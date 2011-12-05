@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.4 2010/06/24 22:51:00 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.5 2011/12/05 22:54:22 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -25,6 +25,5 @@ netbsd)
 	;;
 esac
 
-AC_DEFINE([HAVE_CONFIG_H], [], [Include config.h])
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
