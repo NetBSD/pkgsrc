@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3154 2011/12/05 03:34:31 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.3155 2011/12/05 09:57:47 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4970,3 +4970,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added emulators/cmdpack version 1.02 [wiz 2011-12-05]
 	Removed emulators/uips successor emulators/cmdpack [wiz 2011-12-05]
 	Updated devel/g-wrap to 1.9.14 [gdt 2011-12-05]
+	Added security/oath-toolkit version 1.10.2 [pettai 2011-12-05]
