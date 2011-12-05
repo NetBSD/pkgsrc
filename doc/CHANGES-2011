@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3161 2011/12/05 17:20:31 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.3162 2011/12/05 17:22:52 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4978,3 +4978,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/eina to 1.1.0 [joerg 2011-12-05]
 	Updated lang/embryo to 1.1.0 [joerg 2011-12-05]
 	Updated devel/eet to 1.5.0 [joerg 2011-12-05]
+	Added devel/ecore version 1.1.0 [joerg 2011-12-05]
