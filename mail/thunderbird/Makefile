@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2011/11/17 00:25:35 dholland Exp $
+# $NetBSD: Makefile,v 1.78 2011/12/05 13:20:36 dholland Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
@@ -16,8 +16,6 @@ USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/comm-release
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	PLIST
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
