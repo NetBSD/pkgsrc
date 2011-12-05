@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/01/22 21:27:21 wiz Exp $
+$NetBSD: distinfo,v 1.7 2011/12/05 22:46:12 joerg Exp $
 
 SHA1 (quake-v6-bsd-kame.tar.gz) = 09d58eef39f3d8a6b7b7287c88fc66d4dd3feb0b
 RMD160 (quake-v6-bsd-kame.tar.gz) = 1844e193b62886c452a65c5c5780f58d19684109
@@ -12,4 +12,5 @@ SHA1 (patch-af) = 3dd7bf9a44a4e087e09e758b53c69406e1468121
 SHA1 (patch-ag) = d7821ab0e335b4e35e9721797b1cd5aa1ab8ee45
 SHA1 (patch-ah) = cba95c90176666b302288ff4e9dc1d292c512a2b
 SHA1 (patch-ai) = 0d1864f671a8db635564c4ff734c278d9a3989c9
-SHA1 (patch-aj) = a754b5c78c5e81d4103276332f4a0bb3160770aa
+SHA1 (patch-aj) = 42fca68c85c65fa3edaec20638f318f9d914c424
+SHA1 (patch-aj.diff) = 3fe79f648669d43e5610a3ddeb478adaf355b538
