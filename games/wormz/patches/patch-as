@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1 2004/02/18 23:09:03 kristerw Exp $
+$NetBSD: patch-as,v 1.2 2011/12/05 22:47:14 joerg Exp $
 
---- XVision/View.cc.orig	Wed Feb 18 23:29:22 2004
-+++ XVision/View.cc	Wed Feb 18 23:30:49 2004
-@@ -56,7 +56,7 @@
+--- XVision/View.cc.orig	1997-11-01 11:50:51.000000000 +0000
++++ XVision/View.cc
+@@ -56,7 +56,7 @@ void View::Deselect()
    Redraw();
  }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-as,v 1.1 2004/02/18 23:09:03 kristerw Exp $
  {
    if (Enabled == _Enabled)
      return;
-@@ -214,7 +214,7 @@
+@@ -214,7 +214,7 @@ void View::SetOrigin(const Point& newori
      Area.Origin = neworigin;
  }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-as,v 1.1 2004/02/18 23:09:03 kristerw Exp $
  {
    if (Area.Size == newsize)
      return;
-@@ -234,7 +234,7 @@
+@@ -234,7 +234,7 @@ void View::SetSize(const Point& newsize,
      Area.Size = newsize;
  }
  
@@ -29,3 +29,21 @@ $NetBSD: patch-as,v 1.1 2004/02/18 23:09:03 kristerw Exp $
  {
    if (_hidden == Hidden)
      return;
+@@ -317,7 +317,7 @@ bool SelectableView::HandleEvent(Event& 
+   return TRUE;
+ }
+ 
+-inline const int View::GetX() const
++const int View::GetX() const
+ {
+   int X = Area.Origin.X;
+   if (parent)
+@@ -325,7 +325,7 @@ inline const int View::GetX() const
+   return X;
+ }
+ 
+-inline const int View::GetY() const
++const int View::GetY() const
+ {
+   int Y = Area.Origin.Y;
+   if (parent)
