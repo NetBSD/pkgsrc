@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10728 2011/12/05 10:23:49 wiz Exp $
+$NetBSD: TODO,v 1.10729 2011/12/05 10:43:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -994,7 +994,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpop-1.0.25
 	o mserv-devel-0.41
 	o mtools-4.0.17
-	o mtr-0.82
 	o mu-0.9.7
 	o multitail-5.2.8
 	o munin-doc-1.4.6
