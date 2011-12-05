@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3151 2011/12/04 21:45:20 gls Exp $
+$NetBSD: CHANGES-2011,v 1.3152 2011/12/05 01:16:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4967,3 +4967,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added editors/OmegaT version 2.5.0.04 [ryoon 2011-12-04]
 	Updated devel/p5-PAR to 1.005 [gls 2011-12-04]
 	Updated sysutils/fabric to 1.2.5 [gls 2011-12-04]
+	Added emulators/cmdpack version 1.02 [wiz 2011-12-05]
