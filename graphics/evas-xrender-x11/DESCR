@@ -1,5 +1,0 @@
-Evas is a clean display canvas API for several target display systems
-that can draw anti-aliased text, smooth super and sub-sampled scaled
-images, alpha-blend objects, and more.
-
-This is the Xrender X11 rendering backend of Evas.

@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.10 2011/05/09 13:06:29 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.11 2011/12/05 17:33:32 joerg Exp $
 # used by graphics/evas-png/Makefile
 
-DISTNAME=	evas-0.9.9.063
+EVAS_VERSION=	1.1.0
+DISTNAME=	evas-${EVAS_VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
+MASTER_SITES=	http://download.enlightenment.org/releases/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	yazzy@yazzy.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -19,7 +21,7 @@ USE_TOOLS+=	gmake pkg-config
 
 .for mod in software-ddraw software-16-ddraw direct3d software-16-wince \
 	software-xlib software-16-x11 software-xcb directfb sdl \
-	sdl-primitive fb buffer software-qtopia gl-x11 quartz gl-glew \
+	sdl-primitive fb buffer software-qtopia gl-xlib quartz gl-glew \
 	xrender-x11 xrender-xcb glitz-x11
 .  if defined(EVAS_ENGINES) && !empty(EVAS_ENGINES:M${mod})
 CONFIGURE_ARGS+=	--enable-${mod}
@@ -42,7 +44,7 @@ CONFIGURE_ARGS+=	--disable-image-loader-${mod}
 CONFIGURE_ARGS+=	--enable-cpu-altivec
 .endif
 
-MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}
+MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}-1.1.0
 PLIST_SUBST=	MODULE_ARCH=${MODULE_ARCH}
 PRINT_PLIST_AWK+=        { gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 
