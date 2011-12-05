@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3158 2011/12/05 10:46:17 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3159 2011/12/05 17:15:24 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4975,3 +4975,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Removed www/htdig-devel successor www/htdig [wiz 2011-12-05]
 	Updated net/mtr to 0.82 [wiz 2011-12-05]
 	Updated graphics/jhead to 2.93 [wiz 2011-12-05]
+	Updated devel/eina to 1.1.0 [joerg 2011-12-05]
