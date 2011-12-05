@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3164 2011/12/05 17:33:34 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.3165 2011/12/05 17:35:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4994,3 +4994,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/evas-svg to 1.1.0 [joerg 2011-12-05]
 	Updated graphics/evas-tiff to 1.1.0 [joerg 2011-12-05]
 	Updated graphics/evas-xpm to 1.1.0 [joerg 2011-12-05]
+	Added graphics/edje version 1.1.0 [joerg 2011-12-05]
