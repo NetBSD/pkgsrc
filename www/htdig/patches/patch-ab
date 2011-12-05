@@ -1,23 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2002/03/09 21:48:12 fredb Exp $
+$NetBSD: patch-ab,v 1.3 2011/12/05 10:18:17 wiz Exp $
 
---- Makefile.in.orig	Thu Jan 31 17:47:14 2002
-+++ Makefile.in
-@@ -26,8 +26,7 @@
- top_builddir= .
- include Makefile.config
- 
--DIRS=		db/dist \
--		htlib htcommon htfuzzy htdig \
-+DIRS=		htlib htcommon htfuzzy htdig \
- 		htsearch htmerge htnotify
- INSTALLDIRS=	htfuzzy htdig \
- 		htsearch htmerge htnotify
-@@ -93,7 +92,7 @@
- 	done && test -z "$$fail"
- 	@echo ""
- 	@echo "Installing default configuration files..."
--	@if [ ! -f $(INSTALL_ROOT)$(DEFAULT_CONFIG_FILE) ]; then sed -e s%\@DATABASE_DIR\@%$(DATABASE_DIR)% -e s%\@IMAGEDIR\@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/htdig.conf >$(INSTALL_ROOT)$(DEFAULT_CONFIG_FILE); echo $(INSTALL_ROOT)$(DEFAULT_CONFIG_FILE);fi
-+	@if [ ! -f $(INSTALL_ROOT)$(SEARCH_DIR)/htdig.conf ]; then sed -e s%\@DATABASE_DIR\@%$(DATABASE_DIR)% -e s%\@IMAGEDIR\@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/htdig.conf >$(INSTALL_ROOT)$(SEARCH_DIR)/htdig.conf; echo $(INSTALL_ROOT)$(DEFAULT_CONFIG_FILE);fi
- 	@if [ ! -f $(INSTALL_ROOT)$(SEARCH_DIR)/$(SEARCH_FORM) ]; then sed -e s%\@IMAGEDIR\@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/search.html >$(INSTALL_ROOT)$(SEARCH_DIR)/$(SEARCH_FORM); echo $(INSTALL_ROOT)$(SEARCH_DIR)/$(SEARCH_FORM);fi
- 	@for i in $(COMMONHTML); do \
- 		if [ ! -f $(INSTALL_ROOT)$(COMMON_DIR)/$$i ]; then sed -e s%\@IMAGEDIR\@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/$$i >$(INSTALL_ROOT)$(COMMON_DIR)/$$i; echo $(INSTALL_ROOT)$(COMMON_DIR)/$$i;fi; \
+--- htsearch/Display.cc.orig	2009-01-17 10:05:37.000000000 +0100
++++ htsearch/Display.cc
+@@ -1541,7 +1541,7 @@ Display::buildMatchList()
+ // seconds in a 365 days year). The formula gives less weight
+ // as the distance between the date document and the current time
+ // increases (the absolute value is for documents with future date)
+-#define DATE_FACTOR(df, n, dd) ((df) * 100 / (1+(double)(abs((n) - (dd)) / 31536000)))
++#define DATE_FACTOR(df, n, dd) ((df) * 100 / (1+(double)(abs((int)((n) - (dd))) / 31536000)))
+ 	    date_score =  DATE_FACTOR(date_factor, now, thisRef->DocTime());
+ 	    score += date_score;
+         }

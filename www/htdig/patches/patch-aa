@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/06/14 19:23:30 adam Exp $
+$NetBSD: patch-aa,v 1.4 2011/12/05 10:18:17 wiz Exp $
 
 --- htsearch/Collection.h.orig	2006-06-14 21:30:31.000000000 +0200
 +++ htsearch/Collection.h

@@ -1,14 +1,23 @@
-$NetBSD: patch-af,v 1.1 2005/03/20 20:34:27 salo Exp $
+$NetBSD: patch-af,v 1.2 2011/12/05 10:18:17 wiz Exp $
 
---- htsearch/htsearch.cc.orig	2002-02-01 00:47:18.000000000 +0100
-+++ htsearch/htsearch.cc	2005-03-20 21:15:02.000000000 +0100
-@@ -145,8 +145,7 @@
-     if (access(configFile, R_OK) < 0)
-     {
- 	if (filenameok) filenamemsg << " '" << configFile.get() << "'";
--	reportError(form("Unable to read configuration file%s",
--			 filenamemsg.get()));
-+	reportError(form("Unable to read configuration file."));
-     }
-     config.Read(configFile);
+--- htsearch/htsearch.cc.orig	2004-05-28 22:15:24.000000000 +0900
++++ htsearch/htsearch.cc
+@@ -68,7 +68,7 @@ StringList              collectionList; 
+ // reconised word prefixes (for field-restricted search and per-word fuzzy
+ // algorithms) in *descending* alphabetical order.
+ // Don't use a dictionary structure, as setup time outweights saving.
+-struct {char *name; unsigned int flag; } colonPrefix [] =
++static struct {char *name; unsigned int flag; } colonPrefix [] =
+ {
+     { "url",     FLAG_URL },
+     { "title",   FLAG_TITLE },
+@@ -211,8 +211,7 @@ main(int ac, char **av)
+ 	}
+ 	if (access((char*)configFile, R_OK) < 0)
+ 	{
+-	    reportError(form("Unable to read configuration file '%s'",
+-			     configFile.get()));
++	    reportError(form("Unable to read configuration file."));
+ 	}
+ 	config->Read(configFile);
  

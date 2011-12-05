@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: DEINSTALL,v 1.4 2011/12/01 09:55:58 wiz Exp $
+# $NetBSD: DEINSTALL,v 1.5 2011/12/05 10:18:16 wiz Exp $
 
 case "${STAGE}" in
 DEINSTALL)

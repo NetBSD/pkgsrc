@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2011/11/01 06:03:01 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2011/12/05 10:18:16 wiz Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 
@@ -12,7 +12,7 @@ CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=off
 CMAKE_ARGS+=	-DLIBLZMA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.xz}/include
 CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.so
 
-DEPENDS+=	htdig>=3.2.0:../../www/htdig-devel
+DEPENDS+=	htdig>=3.2.0:../../www/htdig
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
 
 USE_TOOLS+=		gmake
