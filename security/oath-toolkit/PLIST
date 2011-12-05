@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/05 09:51:20 pettai Exp $
+bin/oathtool
+include/liboath/oath.h
+lib/liboath.la
+lib/pkgconfig/liboath.pc
+lib/security/pam_oath.a
+lib/security/pam_oath.so
+man/man1/oathtool.1
+share/gtk-doc/html/liboath/api-index-1-10-0.html
+share/gtk-doc/html/liboath/api-index-1-4-0.html
+share/gtk-doc/html/liboath/api-index-1-6-0.html
+share/gtk-doc/html/liboath/api-index-1-8-0.html
+share/gtk-doc/html/liboath/api-index-full.html
+share/gtk-doc/html/liboath/ch01.html
+share/gtk-doc/html/liboath/home.png
+share/gtk-doc/html/liboath/index.html
+share/gtk-doc/html/liboath/index.sgml
+share/gtk-doc/html/liboath/left.png
+share/gtk-doc/html/liboath/liboath-oath.html
+share/gtk-doc/html/liboath/liboath.devhelp
+share/gtk-doc/html/liboath/liboath.devhelp2
+share/gtk-doc/html/liboath/right.png
+share/gtk-doc/html/liboath/style.css
+share/gtk-doc/html/liboath/up.png
