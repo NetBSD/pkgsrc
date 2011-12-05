@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/08/31 13:20:13 gdt Exp $
+# $NetBSD: options.mk,v 1.4 2011/12/05 17:52:37 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quagga
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -43,6 +43,8 @@ CONFIGURE_ARGS+=	--disable-vtysh
 ### Include Opaque LSA support in OSPF (RFC2370).
 ###
 .if !empty(PKG_OPTIONS:Mquagga-ospf-opaque-lsa)
-CONFIGURE_ARGS+=	--enable-opaque-lsa
+# opaque-lsa is now the upstream default.
 PLIST_CAT+=		${PKGDIR}/PLIST.opaquelsa
+.else
+CONFIGURE_ARGS+=	--disable-opaque-lsa
 .endif
