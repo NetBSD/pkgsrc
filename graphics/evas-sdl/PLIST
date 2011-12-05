@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/09 15:33:08 joerg Exp $
-include/Evas_Engine_SDL.h
+@comment $NetBSD: PLIST,v 1.5 2011/12/05 17:33:33 joerg Exp $
+include/evas-1/Evas_Engine_SDL.h
 lib/evas/modules/engines/software_sdl/${MODULE_ARCH}/module.la
 lib/pkgconfig/evas-software-sdl.pc

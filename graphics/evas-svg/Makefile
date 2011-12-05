@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:01:31 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2011/12/05 17:33:33 joerg Exp $
 
-PKGNAME=	${DISTNAME:S/evas/evas-svg/}
-PKGREVISION=	7
+PKGNAME=	evas-svg-${EVAS_VERSION}
 
 COMMENT=	Evas SVG image loader
 
@@ -14,6 +13,7 @@ MAKE_FLAGS+=	module_la_LIBADD="\$${EINA_LIBS} \$${evas_image_loader_svg_libs} ${
 		module_la_DEPENDENCIES=
 
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
