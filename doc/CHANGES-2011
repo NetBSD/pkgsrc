@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3153 2011/12/05 01:17:46 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3154 2011/12/05 03:34:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4969,3 +4969,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/fabric to 1.2.5 [gls 2011-12-04]
 	Added emulators/cmdpack version 1.02 [wiz 2011-12-05]
 	Removed emulators/uips successor emulators/cmdpack [wiz 2011-12-05]
+	Updated devel/g-wrap to 1.9.14 [gdt 2011-12-05]
