@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2011/08/07 02:40:32 jnemeth Exp $
+# $NetBSD: Makefile,v 1.34 2011/12/05 04:18:32 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
 DISTNAME=	asterisk-1.6.2.19
-PKGREVISION=	1
+PKGREVISION=	2
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -236,6 +236,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/voicemail_odbc_postgresql.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/tex/asterisk.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
