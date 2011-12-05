@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 10:40:54 agc Exp $
+$NetBSD: patch-ad,v 1.3 2011/12/05 22:48:59 joerg Exp $
 
 Fix PR 5746 by Benjamin Lorenz <lorenz@ps.uni-sb.de>.
 
---- misc.h.BAK	Sun Jul 12 17:00:39 1998
-+++ misc.h	Sun Jul 12 17:00:53 1998
-@@ -24,7 +24,7 @@
+--- misc.h.orig	1998-03-07 21:36:05.000000000 +0000
++++ misc.h
+@@ -24,7 +24,7 @@ long random(void);
  
  #ifndef linux
  #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX)
@@ -13,3 +13,11 @@ Fix PR 5746 by Benjamin Lorenz <lorenz@ps.uni-sb.de>.
  #else
  int srandom(unsigned int);
  #endif	/* BSD4_4 */
+@@ -97,7 +97,6 @@ void HelpInit(Widget top);
+ void GetDefaultWH(int *w, int *h);
+ char *GetDefaultRC(void);
+ void SetIconImage(Widget w);
+-void main(int argc, char *argv[]);
+ 
+ /* misc.c */
+ Widget GetToplevel(Widget w);
