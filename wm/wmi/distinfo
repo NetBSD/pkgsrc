@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2007/12/10 13:25:03 obache Exp $
+$NetBSD: distinfo,v 1.7 2011/12/05 22:56:58 joerg Exp $
 
 SHA1 (wmi-10.tar.gz) = 46fbafc5d896863f5e22c2d7c77244b21fbd5d35
 RMD160 (wmi-10.tar.gz) = 49ba3c481c6149a815c89d9de5f3233ede25edeb
@@ -6,3 +6,8 @@ Size (wmi-10.tar.gz) = 193148 bytes
 SHA1 (patch-ab) = d0112ad98f1812aa9be96f0531670a02d01de71f
 SHA1 (patch-ac) = cc10b19adf1867926a4bc15de12f64172d3ddcae
 SHA1 (patch-ad) = 91cab093a6111b05652a614b6f160a28617279b3
+SHA1 (patch-src_action.cpp) = ee9d8eccbed2b3a4974a2b7e9a6f65b1fd3d57ab
+SHA1 (patch-src_logger.cpp) = b755296c5e3e719b6e093a973d4827484a508a7b
+SHA1 (patch-src_main.cpp) = f54f951aee73cad73286a5791563025c9cbfb183
+SHA1 (patch-src_util.cpp) = 53a037bdd1e0d482396e66bda0563bfbe1cba406
+SHA1 (patch-src_wmiremote.cpp) = 1a3aae0e0679e7ee3dde5e3bf9760b626d54763f
