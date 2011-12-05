@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/05 17:41:22 joerg Exp $
+
+SHA1 (e_dbus-1.1.0.tar.bz2) = 470ff956279fe8e26f86df5dff14d649e533550b
+RMD160 (e_dbus-1.1.0.tar.bz2) = 6e2390a3432a09ff07e6fe6080b2a7fd83dce7e9
+Size (e_dbus-1.1.0.tar.bz2) = 404269 bytes
