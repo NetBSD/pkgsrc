@@ -1,0 +1,171 @@
+$NetBSD: patch-plugins_configure,v 1.1.2.2 2011/12/05 20:08:05 tron Exp $
+
+--- plugins/configure.orig	2009-09-22 00:57:56.000000000 +0000
++++ plugins/configure
+@@ -9651,9 +9651,9 @@ echo "$as_me: libavcodec stack align hac
+                                          HAVE_H264_DECODER=yes
+                                          ;;
+                                      * )
+-                                         { echo "$as_me:$LINENO: checking for h263p_encoder in -lavcodec" >&5
+-echo $ECHO_N "checking for h263p_encoder in -lavcodec... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_avcodec_h263p_encoder+set}" = set; then
++                                         { echo "$as_me:$LINENO: checking for ff_h263p_encoder in -lavcodec" >&5
++echo $ECHO_N "checking for ff_h263p_encoder in -lavcodec... $ECHO_C" >&6; }
++if test "${ac_cv_lib_avcodec_ff_h263p_encoder+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -9671,11 +9671,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char h263p_encoder ();
++char ff_h263p_encoder ();
+ int
+ main ()
+ {
+-return h263p_encoder ();
++return ff_h263p_encoder ();
+   ;
+   return 0;
+ }
+@@ -9698,29 +9698,29 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  ac_cv_lib_avcodec_h263p_encoder=yes
++  ac_cv_lib_avcodec_ff_h263p_encoder=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_avcodec_h263p_encoder=no
++	ac_cv_lib_avcodec_ff_h263p_encoder=no
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_lib_avcodec_h263p_encoder" >&5
+-echo "${ECHO_T}$ac_cv_lib_avcodec_h263p_encoder" >&6; }
+-if test $ac_cv_lib_avcodec_h263p_encoder = yes; then
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_avcodec_ff_h263p_encoder" >&5
++echo "${ECHO_T}$ac_cv_lib_avcodec_ff_h263p_encoder" >&6; }
++if test $ac_cv_lib_avcodec_ff_h263p_encoder = yes; then
+   HAVE_H263P=yes
+ else
+   HAVE_H263P=no
+ fi
+ 
+-                                         { echo "$as_me:$LINENO: checking for mpeg4_encoder in -lavcodec" >&5
+-echo $ECHO_N "checking for mpeg4_encoder in -lavcodec... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_avcodec_mpeg4_encoder+set}" = set; then
++                                         { echo "$as_me:$LINENO: checking for ff_mpeg4_encoder in -lavcodec" >&5
++echo $ECHO_N "checking for ff_mpeg4_encoder in -lavcodec... $ECHO_C" >&6; }
++if test "${ac_cv_lib_avcodec_ff_mpeg4_encoder+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -9738,11 +9738,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char mpeg4_encoder ();
++char ff_mpeg4_encoder ();
+ int
+ main ()
+ {
+-return mpeg4_encoder ();
++return ff_mpeg4_encoder ();
+   ;
+   return 0;
+ }
+@@ -9765,29 +9765,29 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  ac_cv_lib_avcodec_mpeg4_encoder=yes
++  ac_cv_lib_avcodec_ff_mpeg4_encoder=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_avcodec_mpeg4_encoder=no
++	ac_cv_lib_avcodec_ff_mpeg4_encoder=no
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_lib_avcodec_mpeg4_encoder" >&5
+-echo "${ECHO_T}$ac_cv_lib_avcodec_mpeg4_encoder" >&6; }
+-if test $ac_cv_lib_avcodec_mpeg4_encoder = yes; then
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_avcodec_ff_mpeg4_encoder" >&5
++echo "${ECHO_T}$ac_cv_lib_avcodec_ff_mpeg4_encoder" >&6; }
++if test $ac_cv_lib_avcodec_ff_mpeg4_encoder = yes; then
+   HAVE_MPEG4=yes
+ else
+   HAVE_MPEG4=no
+ fi
+ 
+-                                         { echo "$as_me:$LINENO: checking for h264_decoder in -lavcodec" >&5
+-echo $ECHO_N "checking for h264_decoder in -lavcodec... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_avcodec_h264_decoder+set}" = set; then
++                                         { echo "$as_me:$LINENO: checking for ff_h264_decoder in -lavcodec" >&5
++echo $ECHO_N "checking for ff_h264_decoder in -lavcodec... $ECHO_C" >&6; }
++if test "${ac_cv_lib_avcodec_ff_h264_decoder+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -9805,11 +9805,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char h264_decoder ();
++char ff_h264_decoder ();
+ int
+ main ()
+ {
+-return h264_decoder ();
++return ff_h264_decoder ();
+   ;
+   return 0;
+ }
+@@ -9832,21 +9832,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  ac_cv_lib_avcodec_h264_decoder=yes
++  ac_cv_lib_avcodec_ff_h264_decoder=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_avcodec_h264_decoder=no
++	ac_cv_lib_avcodec_ff_h264_decoder=no
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_lib_avcodec_h264_decoder" >&5
+-echo "${ECHO_T}$ac_cv_lib_avcodec_h264_decoder" >&6; }
+-if test $ac_cv_lib_avcodec_h264_decoder = yes; then
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_avcodec_ff_h264_decoder" >&5
++echo "${ECHO_T}$ac_cv_lib_avcodec_ff_h264_decoder" >&6; }
++if test $ac_cv_lib_avcodec_ff_h264_decoder = yes; then
+   HAVE_H264_DECODER=yes
+ else
+   HAVE_H264_DECODER=no
+@@ -10729,7 +10729,7 @@ echo "${ECHO_T}no" >&6; }
+               { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+               case "$target_os" in
+-                freebsd*|openbsd*|netbsd*|darwin*)
++                dragonfly*|freebsd*|openbsd*|netbsd*|darwin*)
+                   { echo "$as_me:$LINENO: checking for dlopen in -lc" >&5
+ echo $ECHO_N "checking for dlopen in -lc... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_c_dlopen+set}" = set; then

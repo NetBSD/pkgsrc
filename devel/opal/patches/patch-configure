@@ -1,0 +1,30 @@
+$NetBSD: patch-configure,v 1.1.2.2 2011/12/05 20:08:05 tron Exp $
+
+--- configure.orig	2009-09-22 00:58:43.000000000 +0000
++++ configure
+@@ -4650,6 +4650,7 @@ echo "$as_me: WARNING: \"CPU $target_cpu
+ esac
+ case "$target_os" in
+   linux*)             OSTYPE=linux;        ;;
++  dragonfly* )        OSTYPE=DragonFly;    ;;
+   freebsd* )          OSTYPE=FreeBSD;      ;;
+   openbsd* )          OSTYPE=OpenBSD;      ;;
+   netbsd* )           OSTYPE=NetBSD;       ;;
+@@ -4900,7 +4901,7 @@ STDCCFLAGS="$STDCCFLAGS -D__MACOSX__"
+           HAVE_RANLIB=yes
+         ;;
+ 
+-        freebsd*|openbsd*|netbsd*)
++        dragonfly*|freebsd*|openbsd*|netbsd*)
+           SHAREDLIBEXT=so
+           SHARED_CFLAGS="-fPIC"
+ 
+@@ -7135,7 +7136,7 @@ echo "${ECHO_T}no" >&6; }
+               { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+               case "$target_os" in
+-                freebsd*|openbsd*|netbsd*|darwin*)
++                dragonfly*|freebsd*|openbsd*|netbsd*|darwin*)
+                   { echo "$as_me:$LINENO: checking for dlopen in -lc" >&5
+ echo $ECHO_N "checking for dlopen in -lc... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_c_dlopen+set}" = set; then

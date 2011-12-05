@@ -1,0 +1,21 @@
+$NetBSD: patch-configure.ac,v 1.1.2.2 2011/12/05 20:08:05 tron Exp $
+
+--- configure.ac.orig	2009-09-22 00:58:43.000000000 +0000
++++ configure.ac
+@@ -178,6 +178,7 @@ case "$target_cpu" in
+ esac
+ case "$target_os" in
+   linux*)             OSTYPE=linux;        ;;
++  dragonfly* )        OSTYPE=DragonFly;    ;;
+   freebsd* )          OSTYPE=FreeBSD;      ;;
+   openbsd* )          OSTYPE=OpenBSD;      ;;
+   netbsd* )           OSTYPE=NetBSD;       ;;
+@@ -231,7 +232,7 @@ STDCCFLAGS="$STDCCFLAGS -D__MACOSX__"
+           HAVE_RANLIB=yes
+         ;;
+ 
+-        freebsd*|openbsd*|netbsd*)
++        dragonfly*|freebsd*|openbsd*|netbsd*)
+           SHAREDLIBEXT=so
+           SHARED_CFLAGS="-fPIC"
+           OPAL_DETERMINE_LIBNAMES(DEBUG)
