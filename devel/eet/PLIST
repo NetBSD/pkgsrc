@@ -1,5 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/22 01:21:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/05 17:20:14 joerg Exp $
 bin/eet
-include/Eet.h
+include/eet-1/Eet.h
 lib/libeet.la
 lib/pkgconfig/eet.pc
+share/doc/eet/AUTHORS
+share/doc/eet/COPYING
+share/eet/examples/eet-basic.c
+share/eet/examples/eet-data-cipher_decipher.c
+share/eet/examples/eet-data-file_descriptor_01.c
+share/eet/examples/eet-data-file_descriptor_02.c
+share/eet/examples/eet-data-nested.c
+share/eet/examples/eet-data-simple.c
+share/eet/examples/eet-file.c
