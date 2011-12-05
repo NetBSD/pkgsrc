@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/09 15:33:08 joerg Exp $
-include/Evas_Engine_XRender_X11.h
-lib/evas/modules/engines/xrender_x11/${MODULE_ARCH}/module.la
-lib/pkgconfig/evas-xrender-x11.pc
