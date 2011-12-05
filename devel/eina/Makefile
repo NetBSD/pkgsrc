@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2009/12/16 19:52:58 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/12/05 17:14:52 joerg Exp $
 #
 
-DISTNAME=	eina-0.9.9.063
+DISTNAME=	eina-1.1.0
 CATEGORIES=	devel
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
+MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	yazzy@yazzy.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Data types library
 
@@ -17,6 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE=	eina-0.pc.in
+PKGCONFIG_OVERRIDE=	eina.pc.in
 
 .include "../../mk/bsd.pkg.mk"
