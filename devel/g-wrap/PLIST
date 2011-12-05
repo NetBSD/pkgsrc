@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:48:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/12/05 03:34:10 gdt Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/12/05 03:34:10 gdt Exp $
 bin/g-wrap-config
 include/g-wrap-wct.h
 include/g-wrap/core-runtime.h
@@ -7,11 +8,12 @@ include/g-wrap/guile-compatibility.h
 include/g-wrap/guile-runtime.h
 include/g-wrap/guile-wct.h
 info/g-wrap.info
-lib/g-wrap/modules/libgw-guile-standard.la
 lib/g-wrap/modules/libgw-guile-gw-glib.la
+lib/g-wrap/modules/libgw-guile-standard.la
 lib/libgwrap-core-runtime.la
 lib/libgwrap-guile-runtime.la
 lib/pkgconfig/g-wrap-2.0-guile.pc
+man/man1/g-wrap-config.1
 share/aclocal/g-wrap.m4
 share/guile/site/g-wrap.scm
 share/guile/site/g-wrap/c-codegen.scm
@@ -21,8 +23,8 @@ share/guile/site/g-wrap/config.scm
 share/guile/site/g-wrap/enumeration.scm
 share/guile/site/g-wrap/guile.scm
 share/guile/site/g-wrap/guile/ws/standard.scm
-share/guile/site/g-wrap/gw-glib.scm
 share/guile/site/g-wrap/gw-glib-spec.scm
+share/guile/site/g-wrap/gw-glib.scm
 share/guile/site/g-wrap/gw-standard-spec.scm
 share/guile/site/g-wrap/gw-wct-spec.scm
 share/guile/site/g-wrap/gw-wct.scm
