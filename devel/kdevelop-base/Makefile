@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2011/12/02 07:13:50 sbd Exp $
+# $NetBSD: Makefile,v 1.96 2011/12/05 10:18:16 wiz Exp $
 
 DISTNAME=	kdevelop_3.5.5.orig
 PKGNAME=	kdevelop-base-3.5.5
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel kde
 MASTER_SITES=	http://download.opensuse.org/repositories/home:/amilcarlucas/xUbuntu_6.06/
 EXTRACT_SUFX=	.tar.gz
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/kdevelop-3.5.5
 DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		doxygen>=1.3.5:../../devel/doxygen
 DEPENDS+=		graphviz>=1.10nb1:../../graphics/graphviz
-DEPENDS+=		htdig>=3.2.0:../../www/htdig-devel
+DEPENDS+=		htdig>=3.2.0:../../www/htdig
 DEPENDS+=		a2ps>=4.12:../../print/a2ps
 DEPENDS+=		kdelibdocs>=3.2:../../x11/kdelibdocs3
 DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs

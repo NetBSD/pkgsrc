@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/12/18 04:05:28 grant Exp $
+$NetBSD: MESSAGE,v 1.5 2011/12/05 10:18:17 wiz Exp $
 
 The sample ${PREFIX}/bin/rundig script may be run to create a database
 in the newly created empty directory, ${DBDIR}. A sample search

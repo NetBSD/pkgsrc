@@ -1,50 +1,45 @@
-# $NetBSD: Makefile,v 1.38 2011/12/01 09:55:58 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2011/12/05 10:18:17 wiz Exp $
 
-DISTNAME=	htdig-3.1.6
-PKGREVISION=	6
+DISTNAME=	htdig-3.2.0b6
+PKGREVISION=	1
 CATEGORIES=	www databases
-MASTER_SITES=	http://www.htdig.org/files/ \
-		http://www.it.htdig.org/files/ \
-		ftp://www.it.htdig.org/pub/htdig/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htdig/} \
+		http://www.htdig.org/files/ \
+		http://www.it.htdig.org/files/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 
-USE_LANGUAGES=	c c++
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
-		--with-common-dir=${PREFIX}/share/htdig/common \
-		--with-config-dir=${PKG_SYSCONFDIR:Q} \
-		--with-database-dir=${DBDIR:Q} \
-		--with-image-dir=${PREFIX}/share/examples/htdig \
-		--with-search-dir=${PREFIX}/share/examples/htdig
-MAKE_ENV+=	INSTALL_ROOT=${DESTDIR:Q}
-CONFIGURE_ENV+=	PDF_PARSER="${PREFIX}/bin/acroread"
-CXXFLAGS+=	-Wno-deprecated
-CPPFLAGS+=	${CXXFLAGS}
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin
+CONFIGURE_ARGS+=	--with-common-dir=${PREFIX}/share/htdig/common
+CONFIGURE_ARGS+=	--with-config-dir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-database-dir=${DBDIR:Q}
+CONFIGURE_ARGS+=	--with-image-dir=${PREFIX}/share/examples/htdig
+CONFIGURE_ARGS+=	--with-search-dir=${PREFIX}/share/examples/htdig
+CONFIGURE_ENV+=		PDF_PARSER="${LOCALBASE}/bin/acroread"
+CXXFLAGS+=		-Wno-deprecated
 
 PKG_SYSCONFSUBDIR=	htdig
-
-BUILD_DEFS+=	VARBASE
 
 DBDIR?=		${VARBASE}/db/htdig
 MESSAGE_SUBST+=	DBDIR=${DBDIR}
 OWN_DIRS+=	${DBDIR}
 
+CONF_FILES+=	${PREFIX}/share/examples/htdig/HtFileType-magic.mime \
+		${PKG_SYSCONFDIR}/HtFileType-magic.mime
+CONF_FILES+=	${PREFIX}/share/examples/htdig/cookies.txt \
+		${PKG_SYSCONFDIR}/cookies.txt
 CONF_FILES+=	${PREFIX}/share/examples/htdig/htdig.conf \
 		${PKG_SYSCONFDIR}/htdig.conf
+CONF_FILES+=	${PREFIX}/share/examples/htdig/mime.types \
+		${PKG_SYSCONFDIR}/mime.types
 
-EXTRACT_OPTS+=		-x
-EXTRACT_ELEMENTS=	${DISTNAME}/db*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-.include "../../databases/db/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-
-post-patch:
-	${TOUCH} ${WRKSRC}/configure
-
 .include "../../mk/bsd.pkg.mk"
