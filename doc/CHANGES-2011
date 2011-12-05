@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3163 2011/12/05 17:24:46 joerg Exp $
+$NetBSD: CHANGES-2011,v 1.3164 2011/12/05 17:33:34 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -4980,3 +4980,17 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/eet to 1.5.0 [joerg 2011-12-05]
 	Added devel/ecore version 1.1.0 [joerg 2011-12-05]
 	Removed graphics/evas-xrender-x11 [joerg 2011-12-05]
+	Updated graphics/evas to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-buffer to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-edb to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-eet to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-gif to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-jpeg to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-pmaps to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-png to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-sdl to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-sdl-16 to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-software-x11 to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-svg to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-tiff to 1.1.0 [joerg 2011-12-05]
+	Updated graphics/evas-xpm to 1.1.0 [joerg 2011-12-05]
