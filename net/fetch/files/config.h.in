@@ -1,8 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* Include config.h */
-#undef HAVE_CONFIG_H
-
 /* Define to 1 if you have the <err.h> header file. */
 #undef HAVE_ERR_H
 

@@ -4,5 +4,6 @@
 
 PROG=		fetch
 LDADD+=		-lfetch @LIBS@
+CPPFLAGS+=	-DHAVE_CONFIG_H
 
 .include <bsd.prog.mk>

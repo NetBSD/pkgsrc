@@ -3798,8 +3798,6 @@ $as_echo "#define PREFER_GETPASS /**/" >>confdefs.h
 esac
 
 
-$as_echo "#define HAVE_CONFIG_H /**/" >>confdefs.h
-
 ac_config_files="$ac_config_files Makefile"
 
 cat >confcache <<\_ACEOF
@@ -3880,8 +3878,6 @@ rm -f confcache
 test "x$prefix" = xNONE && prefix=$ac_default_prefix
 # Let make expand exec_prefix.
 test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
-
-DEFS=-DHAVE_CONFIG_H
 
 ac_libobjs=
 ac_ltlibobjs=
