@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/07 18:01:43 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2011/12/05 22:55:36 joerg Exp $
 
 SHA1 (putty-0.60-2009-09-06.tar.gz) = d7e22f692e8a427d0d00835de7cf6b5a22b9d4dc
 RMD160 (putty-0.60-2009-09-06.tar.gz) = 178e4748e31a71336d886b754091a32acce1f298
@@ -8,3 +8,4 @@ SHA1 (patch-ak) = 2ca42d1ea913505d7d265a3fde71e09aa292d75f
 SHA1 (patch-al) = dd8d49697806d9087b9691c3bb48fe32b70a77e1
 SHA1 (patch-am) = 4dc40f37310f8bcebee3e41bb684c89bae9323e3
 SHA1 (patch-an) = 8411855d0a21b0ddb490384990003a3cfc58edcf
+SHA1 (patch-ldisc.c) = 73ff2705b004d13e5f828d89bf2d34a6756639a9
