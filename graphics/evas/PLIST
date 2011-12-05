@@ -1,7 +1,32 @@
-@comment $NetBSD: PLIST,v 1.6 2010/01/09 15:33:07 joerg Exp $
-include/Evas.h
+@comment $NetBSD: PLIST,v 1.7 2011/12/05 17:33:32 joerg Exp $
+include/evas-1/Evas.h
 lib/evas/modules/engines/software_generic/${MODULE_ARCH}/module.la
+lib/evas/modules/loaders/bmp/${MODULE_ARCH}/module.la
+lib/evas/modules/loaders/generic/${MODULE_ARCH}/module.la
+lib/evas/modules/loaders/ico/${MODULE_ARCH}/module.la
+lib/evas/modules/loaders/psd/${MODULE_ARCH}/module.la
+lib/evas/modules/loaders/tga/${MODULE_ARCH}/module.la
+lib/evas/modules/loaders/wbmp/${MODULE_ARCH}/module.la
 lib/libevas.la
 lib/pkgconfig/evas.pc
+share/doc/evas/AUTHORS
+share/doc/evas/COPYING
+share/evas/examples/aspect.edc
+share/evas/examples/cube1.png
+share/evas/examples/enlightenment.png
+share/evas/examples/evas-aspect-hints.c
+share/evas/examples/evas-box.c
+share/evas/examples/evas-buffer-simple.c
+share/evas/examples/evas-events.c
+share/evas/examples/evas-hints.c
+share/evas/examples/evas-images.c
+share/evas/examples/evas-images2.c
+share/evas/examples/evas-init-shutdown.c
+share/evas/examples/evas-map-utils.c
+share/evas/examples/evas-object-manipulation.c
+share/evas/examples/evas-smart-object.c
+share/evas/examples/evas-stacking.c
+share/evas/examples/evas-text.c
+share/evas/examples/im1.png
+share/evas/examples/red.png
 @pkgdir lib/evas/modules/savers
-@pkgdir lib/evas/modules/loaders
