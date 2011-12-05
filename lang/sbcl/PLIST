@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/06/11 19:24:10 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/12/05 23:02:18 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/Makefile
@@ -80,6 +80,8 @@ lib/sbcl/sb-cltl2/tests.fasl
 lib/sbcl/sb-cltl2/tests.lisp
 lib/sbcl/sb-concurrency/.cvsignore
 lib/sbcl/sb-concurrency/Makefile
+lib/sbcl/sb-concurrency/gate.fasl
+lib/sbcl/sb-concurrency/gate.lisp
 lib/sbcl/sb-concurrency/mailbox.fasl
 lib/sbcl/sb-concurrency/mailbox.lisp
 lib/sbcl/sb-concurrency/package.fasl
@@ -92,6 +94,8 @@ lib/sbcl/sb-concurrency/sb-concurrency.texinfo
 lib/sbcl/sb-concurrency/test-passed
 lib/sbcl/sb-concurrency/tests/package.fasl
 lib/sbcl/sb-concurrency/tests/package.lisp
+lib/sbcl/sb-concurrency/tests/test-gate.fasl
+lib/sbcl/sb-concurrency/tests/test-gate.lisp
 lib/sbcl/sb-concurrency/tests/test-mailbox.fasl
 lib/sbcl/sb-concurrency/tests/test-mailbox.lisp
 lib/sbcl/sb-concurrency/tests/test-queue.fasl
