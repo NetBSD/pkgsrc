@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2007/10/02 19:03:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2011/12/06 19:47:32 joerg Exp $
 
 SHA1 (steghide-0.5.1.tar.gz) = a6d204744fabfe5751ab5e2d889ac373c0b0a30c
 RMD160 (steghide-0.5.1.tar.gz) = e17507444b8bb91e6e29d46ec02fa39f7f2f44e8
@@ -14,3 +14,4 @@ SHA1 (patch-ah) = c19a9ae3976147704c7e0b45f437c12ecd850c77
 SHA1 (patch-ai) = 9ae6443ee9a997a859456a712327cc7d17ede0f4
 SHA1 (patch-aj) = 36039401484d85cec20bc157b29f55e219a762b3
 SHA1 (patch-ak) = 404abb1935208b9eba9711677e1514154486543b
+SHA1 (patch-src_Graph.cc) = 211d2607ccb5b9c4de0a91497a14376d89e0fe63
