@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/04/26 00:44:09 reed Exp $
+$NetBSD: distinfo,v 1.4 2011/12/06 19:51:07 joerg Exp $
 
 SHA1 (nget-0.27.1.tar.gz) = 80e348dcb65fcb26cbe037598e676f4770cd7ad1
 RMD160 (nget-0.27.1.tar.gz) = b90e3d6e2a33e630144a090f68f9bdd818f5e1bd
 Size (nget-0.27.1.tar.gz) = 490164 bytes
+SHA1 (patch-cache.h) = 2b8d07aa2a423e2143bf1482592d192c6378e309
+SHA1 (patch-nget.cc) = 94b36db92f6fd34d76b33c47173c2db430f418d7
+SHA1 (patch-stlhelp.h) = 92851f32b0a2ec402d97b3322d662aea6572dc9d
