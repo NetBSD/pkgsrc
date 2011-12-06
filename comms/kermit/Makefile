@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2011/11/20 12:01:50 tron Exp $
+# $NetBSD: Makefile,v 1.79 2011/12/06 01:19:15 sbd Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
@@ -21,6 +22,8 @@ MAKE_ENV+=	KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
 MAKE_FILE=	makefile
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
+KFLAGS+=	${BUILDLINK_CPPFLAGS}
+LIBS+=		${BUILDLINK_LDFLAGS}
 
 .include "options.mk"
 
@@ -38,6 +41,8 @@ LIBS+=		-ltermcap
 .  endif
 .endfor
 
+.include "../../mk/curses.buildlink3.mk"
+
 .if ${OPSYS} == "Darwin"
 .  if !empty(OS_VERSION:M??.*)
 BUILD_TARGET_OPSYS=	macosx10.6
@@ -52,6 +57,12 @@ BUILD_TARGET_OPSYS=	macosx10
 .  endif
 .elif ${OPSYS} == "Linux"
 BUILD_TARGET_OPSYS=	linux
+MAKE_ENV+=	HAVE_LIBCURSES=-l${BUILDLINK_LIBNAME.curses}
+.  if ${CURSES_TYPE} == "ncurses"
+MAKE_ENV+=	HAVE_CURSES=-DCK_NCURSES
+.  else
+MAKE_ENV+=	HAVE_CURSES=-DCK_NCURSES
+.  endif
 .elif ${OPSYS} == "SunOS"
 BUILD_TARGET_OPSYS=	solaris11g
 .else
