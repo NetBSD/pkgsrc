@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/11/16 01:33:16 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2011/12/06 01:21:35 marino Exp $
 #
 
 DISTNAME=		opal-3.6.6
@@ -29,8 +29,6 @@ CONFIGURE_ARGS+=	--enable-h264
 CONFIGURE_ARGS+=	--disable-ffmpeg-h263
 CONFIGURE_ARGS+=	--disable-localgsm
 CONFIGURE_ARGS+=	--disable-localspeex
-
-CFLAGS+=		-D__STDC_CONSTANT_MACROS
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
