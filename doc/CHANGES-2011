@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3174 2011/12/06 07:07:45 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3175 2011/12/06 09:58:00 manu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5007,3 +5007,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/kermit to 9.0.302nb1 [sbd 2011-12-06]
 	Updated www/p5-Dancer to 1.3080 [hiramatsu 2011-12-06]
 	Updated devel/p5-Date-Manip to 6.25 [hiramatsu 2011-12-06]
+	Updated www/ap2-auth-mellon to 0.4.0nb1 [manu 2011-12-06]

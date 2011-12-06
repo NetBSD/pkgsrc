@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.10 2011/05/07 05:15:21 manu Exp $
+$NetBSD: distinfo,v 1.11 2011/12/06 09:58:01 manu Exp $
 
-SHA1 (mod_auth_mellon-0.3.0.tar.gz) = 658dda51652f491552f2ecc84572ed7750f914ff
-RMD160 (mod_auth_mellon-0.3.0.tar.gz) = 69237b1ec266018a86e7134a4662b491af3c261e
-Size (mod_auth_mellon-0.3.0.tar.gz) = 92252 bytes
-SHA1 (patch-ac) = 7976528d9c77b8e30accf60edc958db53ac5e8fb
-SHA1 (patch-ad) = a1bebae20bfbb99bd71d68de19901eaef6c52dbd
-SHA1 (patch-ae) = d51040b6d827940a2c3cf8928dee175efa946e37
-SHA1 (patch-af) = 0803665a14df8582ac20d950a070f73d794b08ea
-SHA1 (patch-ag) = c1ef8704268d99b01d1e96fc2da9be74a7726b9d
-SHA1 (patch-ah) = 6287c038aee79e66539dda12ff447dfd5d9529bf
+SHA1 (mod_auth_mellon-0.4.0.tar.gz) = d09f7bbefe32c2eaa624612584eab1ea8e89820a
+RMD160 (mod_auth_mellon-0.4.0.tar.gz) = 92ef003ae22c43ef81d22f5027486244e76e3d3f
+Size (mod_auth_mellon-0.4.0.tar.gz) = 103708 bytes
+SHA1 (patch-ai) = a7a4f729301bff79cb39d441f9fa48993cdc2899
