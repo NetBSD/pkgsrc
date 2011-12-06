@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3183 2011/12/06 20:16:35 gls Exp $
+$NetBSD: CHANGES-2011,v 1.3184 2011/12/06 20:40:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5016,3 +5016,18 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated editors/emacs-snapshot to 24.0.92.20111206 [msk 2011-12-06]
 	Updated www/moodle to 2.1.3 [gls 2011-12-06]
 	Updated misc/calibre to 0.8.29 [gls 2011-12-06]
+	Updated databases/postgresql91 to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-client to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-server to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-docs to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-adminpack to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-datatypes to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-dblink to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-fuzzystrmatch to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-monitoring to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-pgcrypto to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-plperl to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-plpython to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-pltcl to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-replicationtools to 9.1.2 [adam 2011-12-06]
+	Updated databases/postgresql91-upgrade to 9.1.2 [adam 2011-12-06]
