@@ -80,6 +80,10 @@
 #define	EX_IOERR	74
 #endif
 
+#ifndef TCSASOFT
+#define TCSASOFT	0
+#endif
+
 #define MINBUFSIZE	4096
 
 /* Option flags */
