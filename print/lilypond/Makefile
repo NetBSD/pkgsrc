@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2011/11/01 06:02:25 sbd Exp $
+# $NetBSD: Makefile,v 1.73 2011/12/06 01:23:58 marino Exp $
 #
 
 DISTNAME=	lilypond-2.14.2
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison flex gmake gs:run makeinfo perl pkg-config msgfmt
+USE_TOOLS+=		bison gmake gs:run makeinfo perl pkg-config msgfmt
 USE_TOOLS+=		texi2html
 MAKE_FILE=		GNUmakefile
 
@@ -41,6 +41,13 @@ PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
 # 1.7 coredumps when generating eps files
 DEPENDS+=	potrace>=1.8:../../graphics/potrace
+
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ENV+= LEX="${PREFIX}/bin/flex"
+.include "../../devel/flex/buildlink3.mk"
+.else
+USE_TOOLS+= lex
+.endif
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
