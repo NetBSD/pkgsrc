@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3172 2011/12/06 00:19:18 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.3173 2011/12/06 01:19:27 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5004,3 +5004,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/libquvi to 0.4.0nb1 [ryoon 2011-12-05]
 	Updated lang/sbcl to 1.0.54 [asau 2011-12-05]
 	Updated lang/ocaml to 3.12.0nb5 [sbd 2011-12-06]
+	Updated comms/kermit to 9.0.302nb1 [sbd 2011-12-06]
