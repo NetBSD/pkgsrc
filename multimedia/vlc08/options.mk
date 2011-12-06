@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2009/03/13 20:11:23 kefren Exp $
+# $NetBSD: options.mk,v 1.5 2011/12/06 22:01:06 sborrill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		skins wxwidgets faad arts esound sdl x11
-PKG_SUGGESTED_OPTIONS=		wxwidgets faad x11 sdl
+PKG_SUPPORTED_OPTIONS=		skins wxwidgets faad arts esound sdl x11 x264
+PKG_SUGGESTED_OPTIONS=		wxwidgets faad x11 sdl x264
 
 .include "../../mk/bsd.options.mk"
 
@@ -37,6 +37,14 @@ PLIST.arts=		yes
 .include "../../audio/arts/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-arts
+.endif
+
+.if !empty(PKG_OPTIONS:Mx264)
+CONFIGURE_ARGS+=	--enable-x264
+PLIST.x264=		yes
+.include "../../multimedia/x264-devel/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-x264
 .endif
 
 .if !empty(PKG_OPTIONS:Mesound)
