@@ -1,7 +1,15 @@
-$NetBSD: patch-aa,v 1.9 2011/08/25 14:54:06 hans Exp $
+$NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
 
---- makefile.orig	2011-08-21 17:12:07.000000000 +0200
-+++ makefile	2011-08-25 16:36:42.000000000 +0200
+* Get K5LIB, K5INC, SSLLIB and SSLINC from pkgsrc.
+* s/-lgssapi/-lgssapi_krb5/ on netbsd+krb5* 
+* Add $(LIBS) to link command on solaris2xg+openssl+zlib+pam+shadow
+* s@$(K5INC)/krb5@$(K5INC)/kerberosv5/ on solaris9g+krb5+ssl
+* On linux get HAVE_LIBCURSES and HAVE_CURSES from pkgsrc (with the 
+  curses include and library pathes coming from BUILDLINK_*FLAGS).
+
+
+--- makefile.orig	2011-08-21 15:12:07.000000000 +0000
++++ makefile
 @@ -824,12 +824,12 @@ manroot = $(prefix)
  
  K4LIB=-L/usr/kerberos/lib
@@ -55,3 +63,26 @@ $NetBSD: patch-aa,v 1.9 2011/08/25 14:54:06 hans Exp $
  	"LIBS= $(SSLLIB) $(K5LIB) -lz -lssl -ltermlib -lsocket -lnsl -lm \
  	-lresolv -lcrypto \
  	$$GSSAPILIB -lkrb5 -lcom_err -lk5crypto $$DES_LIB $(LIBS)"
+@@ -6095,22 +6095,6 @@ linux:
+ 	if test `grep openpty /usr/include/pty.h | wc -l` -gt 0; \
+ 	then HAVE_OPENPTY='-DHAVE_OPENPTY'; \
+ 	else HAVE_OPENPTY=''; fi ; \
+-	HAVE_LIBCURSES=''; \
+-	if test -f /usr/lib64/libncurses.so || \
+-	   test -f /usr/lib/libncurses.a  || \
+-	   test -f /usr/lib/libncurses.so; then \
+-	  HAVE_LIBCURSES='-lncurses'; \
+-	else if test -f /usr/lib64/libcurses.so || \
+-	   test -f /usr/lib/libcurses.a || \
+-	   test -f /usr/lib/libcurses.so; then \
+-	     HAVE_LIBCURSES='-lcurses'; fi; fi; \
+-	HAVE_CURSES=''; \
+-	if test -n '$$HAVE_LIBCURSES'; then \
+-	  if test -f /usr/include/ncurses.h; then \
+-	    HAVE_CURSES='-DCK_NCURSES  -I/usr/include/ncurses'; \
+-	  else if test -f /usr/include/curses.h; then \
+-	    HAVE_CURSES='-DCK_CURSES'; \
+-	fi; fi; fi; \
+ 	if test -f /usr/include/baudboy.h || test -f /usr/include/ttylock.h; \
+ 	then HAVE_LOCKDEV='-DHAVE_LOCKDEV' ; \
+ 	else HAVE_LOCKDEV='' ; fi ; \
