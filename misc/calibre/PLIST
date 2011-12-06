@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/11/20 20:04:14 gls Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/12/06 20:16:16 gls Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -684,6 +684,7 @@ lib/calibre/calibre/gui2/dialogs/tweak_epub_ui.py
 lib/calibre/calibre/gui2/dialogs/user_profiles.py
 lib/calibre/calibre/gui2/dialogs/user_profiles_ui.py
 lib/calibre/calibre/gui2/dnd.py
+lib/calibre/calibre/gui2/duplicates.py
 lib/calibre/calibre/gui2/ebook_download.py
 lib/calibre/calibre/gui2/email.py
 lib/calibre/calibre/gui2/filename_pattern_ui.py
@@ -820,6 +821,7 @@ lib/calibre/calibre/gui2/store/stores/gutenberg_plugin.py
 lib/calibre/calibre/gui2/store/stores/kobo_plugin.py
 lib/calibre/calibre/gui2/store/stores/legimi_plugin.py
 lib/calibre/calibre/gui2/store/stores/libri_de_plugin.py
+lib/calibre/calibre/gui2/store/stores/litres_plugin.py
 lib/calibre/calibre/gui2/store/stores/manybooks_plugin.py
 lib/calibre/calibre/gui2/store/stores/mobileread/__init__.py
 lib/calibre/calibre/gui2/store/stores/mobileread/adv_search_builder.py
@@ -1533,6 +1535,7 @@ share/calibre/recipes/corriere_della_sera_it.recipe
 share/calibre/recipes/corriere_dello_sport.recipe
 share/calibre/recipes/cosmopolitan.recipe
 share/calibre/recipes/cosmopolitan_de.recipe
+share/calibre/recipes/cosmopolitan_uk.recipe
 share/calibre/recipes/cotidianul.recipe
 share/calibre/recipes/counterpunch.recipe
 share/calibre/recipes/courrier.recipe
@@ -1551,6 +1554,7 @@ share/calibre/recipes/dagens_industri.recipe
 share/calibre/recipes/daily_mail.recipe
 share/calibre/recipes/daily_mirror.recipe
 share/calibre/recipes/daily_telegraph.recipe
+share/calibre/recipes/daily_writing_tips.recipe
 share/calibre/recipes/dailyreckoning.recipe
 share/calibre/recipes/dailytportal.recipe
 share/calibre/recipes/dallas.recipe
@@ -1735,11 +1739,13 @@ share/calibre/recipes/gamespot.recipe
 share/calibre/recipes/gandul.recipe
 share/calibre/recipes/gawker.recipe
 share/calibre/recipes/gazeta-prawna-calibre-v1.recipe
+share/calibre/recipes/gazeta_pl_szczecin.recipe
 share/calibre/recipes/gazeta_pomorska.recipe
 share/calibre/recipes/gazeta_wyborcza.recipe
 share/calibre/recipes/geek_poke.recipe
 share/calibre/recipes/german_gov.recipe
 share/calibre/recipes/gildia_pl.recipe
+share/calibre/recipes/givemesomethingtoread.recipe
 share/calibre/recipes/gizmodo.recipe
 share/calibre/recipes/glamour.recipe
 share/calibre/recipes/glas_srpske.recipe
@@ -1764,6 +1770,7 @@ share/calibre/recipes/greenlinux_pl.recipe
 share/calibre/recipes/greensboro_news_and_record.recipe
 share/calibre/recipes/grrm.recipe
 share/calibre/recipes/gry_online_pl.recipe
+share/calibre/recipes/gs24_pl.recipe
 share/calibre/recipes/gsp.recipe
 share/calibre/recipes/guardian.recipe
 share/calibre/recipes/gulfnews.recipe
@@ -1943,6 +1950,7 @@ share/calibre/recipes/lenta_ru.recipe
 share/calibre/recipes/lepoint.recipe
 share/calibre/recipes/lescienze.recipe
 share/calibre/recipes/lesoir_be.recipe
+share/calibre/recipes/letsgetcritical.recipe
 share/calibre/recipes/levante.recipe
 share/calibre/recipes/lexpress.recipe
 share/calibre/recipes/liberation.recipe
@@ -2255,6 +2263,7 @@ share/calibre/recipes/sizinti_derigisi.recipe
 share/calibre/recipes/skai.recipe
 share/calibre/recipes/skeptic.recipe
 share/calibre/recipes/skeptical_enquirer.recipe
+share/calibre/recipes/skylife.recipe
 share/calibre/recipes/slashdot.recipe
 share/calibre/recipes/slate.recipe
 share/calibre/recipes/slovo.recipe
@@ -2304,6 +2313,7 @@ share/calibre/recipes/taz.recipe
 share/calibre/recipes/taz_rss.recipe
 share/calibre/recipes/tech_world.recipe
 share/calibre/recipes/techcrunch.recipe
+share/calibre/recipes/techdirt.recipe
 share/calibre/recipes/technology_review.recipe
 share/calibre/recipes/technology_review_de.recipe
 share/calibre/recipes/techtarget.recipe
@@ -2387,6 +2397,7 @@ share/calibre/recipes/utne.recipe
 share/calibre/recipes/utrinski.recipe
 share/calibre/recipes/vancouver_provice.recipe
 share/calibre/recipes/vancouver_sun.recipe
+share/calibre/recipes/vanityfair.recipe
 share/calibre/recipes/variety.recipe
 share/calibre/recipes/vecernji_list.recipe
 share/calibre/recipes/vedomosti.recipe
@@ -2428,6 +2439,7 @@ share/calibre/recipes/wired_uk.recipe
 share/calibre/recipes/wnp.recipe
 share/calibre/recipes/words_without_borders.recipe
 share/calibre/recipes/workers_world.recipe
+share/calibre/recipes/worldcrunch.recipe
 share/calibre/recipes/wow.recipe
 share/calibre/recipes/woz_die.recipe
 share/calibre/recipes/wprost.recipe
