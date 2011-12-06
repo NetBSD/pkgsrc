@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2010/12/23 12:36:02 fhajny Exp $
+$NetBSD: patch-ac,v 1.5 2011/12/06 05:54:06 yyamano Exp $
 
 --- config/Darwin.mk.orig	2008-03-02 23:10:49.000000000 +0000
 +++ config/Darwin.mk
-@@ -43,13 +43,13 @@
+@@ -43,13 +43,14 @@
  # Just ripped from Linux config
  #
  
@@ -10,17 +10,17 @@ $NetBSD: patch-ac,v 1.4 2010/12/23 12:36:02 fhajny Exp $
 +CC = gcc
  CCC = g++
 -CFLAGS +=  -Wall -Wno-format -MMD
--OS_CFLAGS = -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DDARWIN
 +CFLAGS +=  -Wall -Wno-format -MMD -no-cpp-precomp -fno-common -pipe
-+OS_CFLAGS = -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DDARWIN
+ OS_CFLAGS = -DXP_UNIX -DSVR4 -DSYSV -D_BSD_SOURCE -DPOSIX_SOURCE -DDARWIN
++INTERP_CFLAGS+= `pkg-config --cflags-only-I nspr`
  
  RANLIB = ranlib
 -MKSHLIB = $(CC) -dynamiclib $(XMKSHLIBOPTS) -framework System
-+MKSHLIB = $(CC) -dynamiclib $(XMKSHLIBOPTS) -framework System -lm -lplds4 -lplc4 -lnspr4 $(LDFLAGS)
++MKSHLIB = $(CC) -dynamiclib $(XMKSHLIBOPTS) -framework System -lm `pkg-config --libs nspr` $(LDFLAGS)
  
  SO_SUFFIX = dylib
  
-@@ -59,7 +59,6 @@ SO_SUFFIX = dylib
+@@ -59,7 +60,6 @@ SO_SUFFIX = dylib
  CPU_ARCH = $(shell uname -m)
  ifeq (86,$(findstring 86,$(CPU_ARCH)))
  CPU_ARCH = x86
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.4 2010/12/23 12:36:02 fhajny Exp $
  endif
  GFX_ARCH = x
  
-@@ -67,14 +66,6 @@ OS_LIBS = -lc -framework System
+@@ -67,14 +67,6 @@ OS_LIBS = -lc -framework System
  
  ASFLAGS += -x assembler-with-cpp
  
