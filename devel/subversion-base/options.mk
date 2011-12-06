@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.10 2009/06/02 15:34:44 gdt Exp $
+# $NetBSD: options.mk,v 1.11 2011/12/06 02:02:10 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.subversion
 PKG_SUPPORTED_OPTIONS=	apr1 serf sasl
+.include "../../mk/bsd.prefs.mk"
+.if !defined(PKG_APACHE_DEFAULT) || empty(PKG_APACHE_DEFAULT:Mapache2)
 PKG_SUGGESTED_OPTIONS=	apr1
+.endif
 
 # Note that this file is included as part of several packages.
 # Therefore this file defines options and includes some but not all of
