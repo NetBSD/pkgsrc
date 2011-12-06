@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/04/06 11:13:32 obache Exp $
+$NetBSD: distinfo,v 1.7 2011/12/06 11:21:11 obache Exp $
 
-SHA1 (libthai-0.1.15.tar.gz) = 55495b950b212b1d78874f50e80adc093cc7712c
-RMD160 (libthai-0.1.15.tar.gz) = 15ae2787318b7508c415688094f11912c7b5cc1a
-Size (libthai-0.1.15.tar.gz) = 509691 bytes
+SHA1 (libthai-0.1.16.tar.gz) = 74e3feb9b27684cd8d7d415e3f3a1195775acf1e
+RMD160 (libthai-0.1.16.tar.gz) = 1b466ae43354648ae814d2f35d8433888b08bd57
+Size (libthai-0.1.16.tar.gz) = 531066 bytes

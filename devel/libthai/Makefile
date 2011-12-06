@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/04/06 11:13:32 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/06 11:21:11 obache Exp $
 #
 
-DISTNAME=	libthai-0.1.15
+DISTNAME=	libthai-0.1.16
 CATEGORIES=	devel
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
 		ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
@@ -20,6 +20,8 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	libthai.pc.in
 
 CONFIGURE_ARGS+=	--disable-doxygen-doc
+
+TEST_TARGET=	check
 
 .include "../../devel/libdatrie/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
