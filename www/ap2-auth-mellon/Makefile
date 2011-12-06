@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2011/05/07 05:15:21 manu Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/06 09:58:01 manu Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
-DISTNAME=	mod_auth_mellon-0.3.0
-PKGREVISION=	3
+DISTNAME=	mod_auth_mellon-0.4.0
+PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	http://modmellon.googlecode.com/files/
 
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config
+CFLAGS+=	-DLASSO_SERVER_LOAD_METADATA_FLAG_DEFAULT=0
 
 APACHE_MODULE=	YES
 APACHE_MODULE_NAME=	auth_mellon_module
@@ -25,10 +26,10 @@ PKG_APACHE_ACCEPTED=	apache22
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
 SUBST_CLASSES+=		pthflags
-SUBST_MESSAGES=		Convert -pthread flag to apxs style
+SUBST_MESSAGES=		Remove -pthread flag
 SUBST_STAGE.pthflags=	post-configure
 SUBST_FILES.pthflags=	Makefile
-SUBST_SED.pthflags=	-e 's| -pthread | ${"${PTHREAD_CFLAGS:M-pthread}":?-Wc,-pthread:} ${"${PTHREAD_LDFLAGS:M-pthread}":?-Wl,-pthread:} |g'
+SUBST_SED.pthflags=	-e 's| -pthread | |g'
 
 INSTALLATION_DIRS+=	lib/httpd
 
@@ -39,6 +40,7 @@ do-install:
 	      -n auth_mellon  mod_auth_mellon.la
 
 .include "../../security/lasso/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
