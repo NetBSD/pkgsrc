@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2010/12/27 23:09:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.22 2011/12/06 05:22:38 yyamano Exp $
 
 DISTNAME=	js-1.8.0-rc1
 PKGNAME=	spidermonkey-1.8.0rc1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=js/}
 
@@ -50,7 +50,9 @@ PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
 
 post-extract:
 	${CP} ${FILESDIR}/pkgsrc.mk ${WRKSRC}/config
+.if ${OPSYS} == "SunOS"
 	${CP} ${FILESDIR}/opensolaris.mk ${WRKSRC}/config/${BUILDDIRPREFIX}.mk
+.endif
 	${RM} ${WRKSRC}/lock_SunOS.s
 
 do-install:
