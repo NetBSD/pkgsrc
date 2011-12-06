@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2011/11/29 14:51:37 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2011/12/06 12:41:02 ryoon Exp $
 
 To use aipo, you will need to perform the following steps.
 
-1. Install postgresq server, for example postgresql84-server,
+1. Install postgresql server, for example postgresql84-server,
    and enable it.
 
 	# cd databases/postgresql84-server
