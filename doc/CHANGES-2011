@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3176 2011/12/06 11:07:08 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3177 2011/12/06 11:21:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5009,3 +5009,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Date-Manip to 6.25 [hiramatsu 2011-12-06]
 	Updated www/ap2-auth-mellon to 0.4.0nb1 [manu 2011-12-06]
 	Updated devel/libdatrie to 0.2.5 [obache 2011-12-06]
+	Updated devel/libthai to 0.1.16 [obache 2011-12-06]
