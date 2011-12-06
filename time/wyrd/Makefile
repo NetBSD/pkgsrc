@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/07/13 20:57:50 tonnerre Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/06 00:19:25 sbd Exp $
 #
 
 DISTNAME=		wyrd-1.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		time
 MASTER_SITES=		http://www.eecs.umich.edu/~pelzlpj/wyrd/
 
