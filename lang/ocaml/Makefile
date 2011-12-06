@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.74 2011/11/27 19:46:00 joerg Exp $
+# $NetBSD: Makefile,v 1.75 2011/12/06 00:19:07 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PKGREVISION=		4
+PKGREVISION=		5
 
 CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ARGS+=	-cc ${CC}
@@ -84,4 +84,5 @@ SUBST_STAGE.extra-rt-libs=	pre-configure
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
