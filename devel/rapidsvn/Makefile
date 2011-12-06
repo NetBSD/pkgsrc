@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2011/12/02 07:13:49 sbd Exp $
+# $NetBSD: Makefile,v 1.54 2011/12/06 23:40:07 marino Exp $
 
-DISTNAME=		rapidsvn-0.10.0-1
+DISTNAME=		rapidsvn-0.12.0-1
 PKGNAME=		${DISTNAME:S/-1$/.1/}
-PKGREVISION=		12
 CATEGORIES=		devel x11 scm
-MASTER_SITES=		http://rapidsvn.org/download/release/0.10/
+MASTER_SITES=		http://rapidsvn.org/download/release/0.12/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rapidsvn.tigris.org/
@@ -13,9 +12,7 @@ LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=	${WRKDIR}/rapidsvn-0.10.0
-
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
