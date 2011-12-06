@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/10/13 16:01:06 gson Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/06 16:13:42 gson Exp $
 #
 
-DISTNAME=	mkmemstick-20111013
+DISTNAME=	mkmemstick-20111206
 CATEGORIES=	sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none
