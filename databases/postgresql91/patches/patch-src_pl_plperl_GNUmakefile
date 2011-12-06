@@ -1,21 +1,21 @@
-$NetBSD: patch-src_pl_plperl_GNUmakefile,v 1.1.1.1 2011/09/15 08:27:39 adam Exp $
+$NetBSD: patch-src_pl_plperl_GNUmakefile,v 1.2 2011/12/06 20:37:33 adam Exp $
 
---- src/pl/plperl/GNUmakefile.orig	2011-09-08 21:13:27.000000000 +0000
+--- src/pl/plperl/GNUmakefile.orig	2011-12-01 21:47:20.000000000 +0000
 +++ src/pl/plperl/GNUmakefile
-@@ -57,7 +57,6 @@ PSQLDIR = $(bindir)
+@@ -60,7 +60,6 @@ XSUBPPDIR = $(shell $(PERL) -e 'use List
  
  include $(top_srcdir)/src/Makefile.shlib
  
--plperl.o: perlchunks.h plperl_opmask.h
+-plperl.o: perlchunks.h plperl_opmask.h plperl_helpers.h
  
  plperl_opmask.h: plperl_opmask.pl
  	@if [ x"$(perl_privlibexp)" = x"" ]; then echo "configure switch --with-perl was not specified."; exit 1; fi
-@@ -67,7 +66,7 @@ perlchunks.h: $(PERLCHUNKS)
+@@ -70,7 +69,7 @@ perlchunks.h: $(PERLCHUNKS)
  	@if [ x"$(perl_privlibexp)" = x"" ]; then echo "configure switch --with-perl was not specified."; exit 1; fi
  	$(PERL) $(srcdir)/text2macro.pl --strip='^(\#.*|\s*)$$' $^ > $@
  
 -all: all-lib
-+all: perlchunks.h plperl_opmask.h all-lib
++all: perlchunks.h plperl_opmask.h plperl_helpers.h all-lib
  
  SPI.c: SPI.xs
  	@if [ x"$(perl_privlibexp)" = x"" ]; then echo "configure switch --with-perl was not specified."; exit 1; fi
