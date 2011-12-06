@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2007/11/30 19:35:12 rillig Exp $
+$NetBSD: patch-ad,v 1.2 2011/12/06 19:48:47 joerg Exp $
 
 --- xpp.h.orig	2004-12-06 17:59:35.000000000 +0000
-+++ xpp.h	2007-11-30 19:24:17.000000000 +0000
-@@ -177,7 +177,7 @@ public:
++++ xpp.h
+@@ -36,6 +36,7 @@
+ #include <cups/cups.h>
+ #include <cups/ipp.h>
+ #include <cups/language.h>
++#include <cups/ppd.h>
+ #include <FL/Fl.H>
+ #include <FL/Fl_Window.H>
+ #include <FL/Fl_Box.H>
+@@ -177,7 +178,7 @@ public:
     */
  
    int /* O - index of the record of the given option in the array */
