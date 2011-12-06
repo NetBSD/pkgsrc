@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.36 2009/04/01 12:07:08 joerg Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.37 2011/12/06 19:08:31 marino Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -31,7 +31,7 @@ TOOLS_PLATFORM.false?=		/usr/bin/false
 TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
-TOOLS_PLATFORM.flex?=		/usr/bin/lex
+TOOLS_PLATFORM.flex?=		/usr/bin/flex
 TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
