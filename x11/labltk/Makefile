@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/08/08 07:31:52 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/12/06 00:19:26 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	lib/ocaml/stublibs
@@ -7,7 +7,7 @@ MAKE_JOBS_SAFE=		no
 .include "../../lang/ocaml/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/ocaml/labltk/}
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		Tk bindings for ocaml
 

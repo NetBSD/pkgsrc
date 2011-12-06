@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/02/14 20:51:23 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/12/06 00:19:22 sbd Exp $
 #
 
 DISTNAME=		equeue-2.1.3
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 

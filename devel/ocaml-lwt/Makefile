@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/01/30 19:10:25 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2011/12/06 00:19:23 sbd Exp $
 #
 
 DISTNAME=	lwt-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ocsigen.org/download/
 
