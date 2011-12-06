@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2011/01/20 09:46:56 adam Exp $
+$NetBSD: patch-aa,v 1.8 2011/12/06 19:46:36 joerg Exp $
 
 --- makefile.orig	2008-10-13 21:35:17.000000000 +0000
 +++ makefile
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.7 2011/01/20 09:46:56 adam Exp $
  	@echo ""
  	@echo "(c) Initializing run (should be silent, no errors expected)"
 -	$(BINDIR)/lout -x -s $(LOUTLIBDIR)/$(LIBINCL)/init
-+	$(BINDIR)/lout -D $(LIBDIR)/$(LIBDATA) -H $(LIBDIR)/$(LIBHYPH) -I $(LIBDIR)/$(LIBINCL) -x -s $(LOUTLIBDIR)/$(LIBINCL)/init
++	$(BINDIR)/lout -D ${DESTDIR}$(LIBDIR)/$(LIBDATA) -H ${DESTDIR}$(LIBDIR)/$(LIBHYPH) -I ${DESTDIR}$(LIBDIR)/$(LIBINCL) -x -s ${DESTDIR}$(LOUTLIBDIR)/$(LIBINCL)/init
  	@echo ""
  	@echo "(d) Changing mode of files just created by initializing run"
  	chmod 644 $(LOUTLIBDIR)/$(LIBDATA)/*

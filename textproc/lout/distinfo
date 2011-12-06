@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2011/01/20 09:46:55 adam Exp $
+$NetBSD: distinfo,v 1.8 2011/12/06 19:46:36 joerg Exp $
 
 SHA1 (lout-3.38.tar.gz) = 2c4aec500dc27a00298f8265b9249d74d97e5466
 RMD160 (lout-3.38.tar.gz) = 8835b223f67b383bdbb1d4105a28e002745d4dbb
 Size (lout-3.38.tar.gz) = 2147395 bytes
-SHA1 (patch-aa) = c65595b70cb78d83ea58ff7eb7e05c8602f5a5bc
+SHA1 (patch-aa) = f106d318d6eed24c78c5d342ca78c55559767d37
