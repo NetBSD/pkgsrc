@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2011/12/05 10:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2011/12/06 08:12:40 marino Exp $
 
 DISTNAME=	kdevelop_3.5.5.orig
 PKGNAME=	kdevelop-base-3.5.5
@@ -31,6 +31,7 @@ CONFLICTS+=	kdevelop<=1.3
 BDB_ACCEPTED=		db4 db5
 USE_LANGUAGES=		c c++ fortran77
 USE_TOOLS+=		msgfmt perl:run
+MAKE_JOBS_SAFE=		no
 
 REPLACE_PERL+=		kdevprj2kdevelop
 REPLACE_PERL+=		doc/tools/index-python
