@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3175 2011/12/06 09:58:00 manu Exp $
+$NetBSD: CHANGES-2011,v 1.3176 2011/12/06 11:07:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Dancer to 1.3080 [hiramatsu 2011-12-06]
 	Updated devel/p5-Date-Manip to 6.25 [hiramatsu 2011-12-06]
 	Updated www/ap2-auth-mellon to 0.4.0nb1 [manu 2011-12-06]
+	Updated devel/libdatrie to 0.2.5 [obache 2011-12-06]
