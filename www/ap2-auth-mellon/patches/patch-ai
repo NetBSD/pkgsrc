@@ -1,0 +1,310 @@
+$NetBSD: patch-ai,v 1.1 2011/12/06 09:58:01 manu Exp $
+
+Honour MellonProbeDiscoveryIdP order when sending probes (from upstream)
+
+--- auth_mellon.h.orig	2011-05-18 12:39:00.000000000 +0200
++++ auth_mellon.h	2011-12-06 09:54:08.000000000 +0100
+@@ -209,9 +209,9 @@
+ 
+     /* IdP discovery service */
+     const char *discovery_url;
+     int probe_discovery_timeout;
+-    apr_hash_t *probe_discovery_idp;
++    apr_table_t *probe_discovery_idp;
+ 
+     /* The configuration record we "inherit" the lasso server object from. */
+     struct am_dir_cfg_rec *inherit_server_from;
+     /* Mutex to prevent us from creating several lasso server objects. */
+--- auth_mellon_config.c.orig	2011-05-18 12:39:00.000000000 +0200
++++ auth_mellon_config.c	2011-12-06 09:54:08.000000000 +0100
+@@ -76,8 +76,9 @@
+  * the MellonPostCount configuration directive if you change this.
+  */
+ static const int post_count = 100;
+ 
++#if unused
+ /* This function handles configuration directives which set a 
+  * multivalued string slot in the module configuration (the destination
+  * strucure is a hash).
+  *
+@@ -85,9 +86,8 @@
+  *  cmd_parms *cmd       The command structure for this configuration
+  *                       directive.
+  *  void *struct_ptr     Pointer to the current directory configuration.
+  *                       NULL if we are not in a directory configuration.
+- *                       This value isn't used by this function.
+  *  const char *key      The string argument following this configuration
+  *                       directive in the configuraion file.
+  *  const char *value    Optional value to be stored in the hash.
+  *
+@@ -116,8 +116,49 @@
+     apr_hash_set(*hash, apr_pstrdup(pconf, key), APR_HASH_KEY_STRING, value);
+ 
+     return NULL;
+ }
++#endif /* unused */
++
++/* This function handles configuration directives which set a 
++ * multivalued string slot in the module configuration (the destination
++ * strucure is a table).
++ *
++ * Parameters:
++ *  cmd_parms *cmd       The command structure for this configuration
++ *                       directive.
++ *  void *struct_ptr     Pointer to the current directory configuration.
++ *                       NULL if we are not in a directory configuration.
++ *  const char *key      The string argument following this configuration
++ *                       directive in the configuraion file.
++ *  const char *value    Optional value to be stored in the hash.
++ *
++ * Returns:
++ *  NULL on success or an error string on failure.
++ */
++static const char *am_set_table_string_slot(cmd_parms *cmd,
++                                          void *struct_ptr,
++                                          const char *key,
++                                          const char *value)
++{
++    server_rec *s = cmd->server;
++    apr_pool_t *pconf = s->process->pconf;
++    am_dir_cfg_rec *cfg = (am_dir_cfg_rec *)struct_ptr;
++    int offset;
++    apr_table_t **table;
++
++    /*
++     * If no value is given, we just store the key in the hash.
++     */
++    if (value == NULL || *value == '\0')
++        value = key;
++
++    offset = (int)(long)cmd->info;
++    table = (apr_table_t **)((char *)cfg + offset);
++    apr_table_set(*table, apr_pstrdup(pconf, key), value);
++
++    return NULL;
++}
+ 
+ /* This function handles configuration directives which set a file
+  * slot in the module configuration. If lasso is recent enough, it
+  * attempts to read the file immediatly.
+@@ -1008,9 +1049,9 @@
+         "Default is 1s"
+         ),
+     AP_INIT_TAKE12(
+         "MellonProbeDiscoveryIdP",
+-        am_set_hash_string_slot,
++        am_set_table_string_slot,
+         (void *)APR_OFFSETOF(am_dir_cfg_rec, probe_discovery_idp),
+         OR_AUTHCFG,
+         "An IdP that can be used for IdP probe discovery."
+         ),
+@@ -1097,9 +1138,9 @@
+     dir->idp_ignore = NULL;
+     dir->login_path = default_login_path;
+     dir->discovery_url = NULL;
+     dir->probe_discovery_timeout = -1; /* -1 means no probe discovery */
+-    dir->probe_discovery_idp = apr_hash_make(p);
++    dir->probe_discovery_idp = apr_table_make(p, 0);
+ 
+     dir->sp_org_name = apr_hash_make(p);
+     dir->sp_org_display_name = apr_hash_make(p);
+     dir->sp_org_url = apr_hash_make(p);
+@@ -1292,12 +1333,12 @@
+                            (add_cfg->probe_discovery_timeout != -1 ?
+                             add_cfg->probe_discovery_timeout :
+                             base_cfg->probe_discovery_timeout);
+ 
+-    new_cfg->probe_discovery_idp = apr_hash_copy(p,
+-                      (apr_hash_count(add_cfg->probe_discovery_idp) > 0) ?
+-                       add_cfg->probe_discovery_idp : 
+-                       base_cfg->probe_discovery_idp);
++    new_cfg->probe_discovery_idp = apr_table_copy(p,
++                           (!apr_is_empty_table(add_cfg->probe_discovery_idp)) ?
++                            add_cfg->probe_discovery_idp : 
++                            base_cfg->probe_discovery_idp);
+ 
+ 
+     if (cfg_can_inherit_lasso_server(add_cfg)) {
+         new_cfg->inherit_server_from = base_cfg->inherit_server_from;
+--- auth_mellon_handler.c.orig	2011-05-18 12:39:00.000000000 +0200
++++ auth_mellon_handler.c	2011-12-06 10:40:20.000000000 +0100
+@@ -2572,8 +2572,40 @@
+ 
+     return am_send_authn_request(r, idp, return_to, is_passive);
+ }
+ 
++/* This function probes an URL (HTTP GET)
++ *
++ * Parameters:
++ *  request_rec *r       The request.
++ *  const char *url      The URL
++ *  int timeout          Timeout in seconds
++ *
++ * Returns:
++ *  OK on success, or an error if any of the steps fail.
++ */
++static int am_probe_url(request_rec *r, const char *url, int timeout)
++{
++    void *dontcare;
++    apr_size_t len;
++    long status;
++    int error;
++
++    status = 0;
++    if ((error = am_httpclient_get(r, url, &dontcare, &len, 
++                                   timeout, &status)) != OK)
++        return error;
++
++    if (status != HTTP_OK) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r,
++                      "Probe on \"%s\" returned HTTP %ld",
++                      url, status);
++        return status;
++    }
++
++    return OK;
++}
++
+ /* This function handles requests to the probe discovery handler
+  *
+  * Parameters:
+  *  request_rec *r       The request.
+@@ -2583,11 +2615,10 @@
+  */
+ static int am_handle_probe_discovery(request_rec *r) {
+     am_dir_cfg_rec *cfg = am_get_dir_cfg(r);
+     LassoServer *server;
+-    const char *idp = NULL;
++    const char *disco_idp = NULL;
+     int timeout;
+-    GHashTableIter iter;
+     char *return_to;
+     char *idp_param;
+     char *redirect_url;
+     int ret;
+@@ -2644,82 +2675,77 @@
+ 
+     /*
+      * Proceed with built-in IdP discovery. 
+      *
+-     * Send probes for all configured IdP to check availability.
+-     * The first to answer is chosen, but the list of usable
+-     * IdP can be restricted in configuration.
++     * First try sending probes to IdP configured for discovery.
++     * Second send probes for all configured IdP
++     * The first to answer is chosen.
++     * If none answer, use the first configured IdP
+      */
+-    g_hash_table_iter_init(&iter, server->providers);
+-    while (g_hash_table_iter_next(&iter, (void**)&idp, NULL)) {
+-        void *dontcare;
+-        const char *ping_url;
+-        apr_size_t len;
+-        long status;
+-
+-        ping_url = idp;
+-
+-        /*
+-         * If a list of IdP was given for probe discovery, 
+-         * skip any IdP that does not match.
+-         */
+-        if (apr_hash_count(cfg->probe_discovery_idp) != 0) {
+-            char *value = apr_hash_get(cfg->probe_discovery_idp,
+-                                       idp, APR_HASH_KEY_STRING);
+-
+-            if (value == NULL) {
+-                /* idp not in list, try the next one */
+-                continue;
+-            } else {
+-                /* idp in list, use the value as the ping url */
+-                ping_url = value;
++    if (!apr_is_empty_table(cfg->probe_discovery_idp)) {
++        const apr_array_header_t *header;
++        apr_table_entry_t *elts;
++        const char *url;
++        const char *idp;
++        int i;
++
++        header = apr_table_elts(cfg->probe_discovery_idp);
++        elts = (apr_table_entry_t *)header->elts;
++
++        for (i = 0; i < header->nelts; i++) { 
++            idp = elts[i].key;
++            url = elts[i].val;
++
++            if (am_probe_url(r, url, timeout) == OK) {
++                disco_idp = idp;
++                break;
+             }
+         }
+-
+-        status = 0;
+-        if (am_httpclient_get(r, ping_url, &dontcare, &len, 
+-                              timeout, &status) != OK)
+-            continue;
+-
+-        if (status != HTTP_OK) {
+-	    ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r,
+-			  "Cannot probe %s: \"%s\" returned HTTP %ld",
+-			  idp, ping_url, status);
+-            continue;
++    } else {
++        GList *iter;
++        GList *idp_list;
++        const char *idp;
++
++        idp_list = g_hash_table_get_keys(server->providers);
++        for (iter = idp_list; iter != NULL; iter = iter->next) {
++            idp = iter->data;
++    
++            if (am_probe_url(r, idp, timeout) == OK) {
++                disco_idp = idp;
++                break;
++            }
+         }
+-
+-        /* We got some succes */
+-        ap_log_rerror(APLOG_MARK, APLOG_INFO, 0, r,
+-                      "probeDiscovery using %s", idp);
+-        break;
++        g_list_free(idp_list);
+     }
+ 
+     /* 
+      * On failure, try default
+      */
+-    if (idp == NULL) {
+-        idp = am_first_idp(r);
+-        if (idp == NULL) {
++    if (disco_idp == NULL) {
++        disco_idp = am_first_idp(r);
++        if (disco_idp == NULL) {
+             ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, 
+                           "probeDiscovery found no usable IdP.");
+             return HTTP_INTERNAL_SERVER_ERROR;
+         } else {
+             ap_log_rerror(APLOG_MARK, APLOG_WARNING, 0, r, "probeDiscovery "
+-                          "failed, trying default IdP %s", idp); 
++                          "failed, trying default IdP %s", disco_idp); 
+         }
++    } else {
++        ap_log_rerror(APLOG_MARK, APLOG_INFO, 0, r,
++                      "probeDiscovery using %s", disco_idp);
+     }
+ 
+     redirect_url = apr_psprintf(r->pool, "%s%s%s=%s", return_to, 
+                                 strchr(return_to, '?') ? "&" : "?",
+                                 am_urlencode(r->pool, idp_param), 
+-                                am_urlencode(r->pool, idp));
++                                am_urlencode(r->pool, disco_idp));
+ 
+     apr_table_setn(r->headers_out, "Location", redirect_url);
+ 
+     return HTTP_SEE_OTHER;
+ }
+ 
+-
+ /* This function takes a request for an endpoint and passes it on to the
+  * correct handler function.
+  *
+  * Parameters:
