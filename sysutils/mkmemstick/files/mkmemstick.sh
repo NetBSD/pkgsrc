@@ -32,13 +32,54 @@ drivedata: 0
  a: @SECTORS@ 0 4.2BSD 1024 8192 0
  d: @SECTORS@ 0 unused 0 0
 "
-vnddev="vnd0"
-vndmnt="${dstbase}/mnt"
-
 die() {
 	echo "fatal: $0"
 	exit 2
 }
+
+next_avail ()
+{
+	local dev="$1"
+	local N=$(( ${#dev} + 1 ))
+	local unit units
+
+	units=$(
+		sysctl -n hw.disknames		|
+			tr ' ' '\012'		|
+			grep '^'"${dev}"'[0-9]'	|
+			sort -n -k 1.$N			)
+
+	test -z "${units}" && {
+		test -e "/dev/${dev}0a" || {
+			echo >&2 "No ${dev}s available!"
+			return 1
+		}
+		echo "${dev}0"
+		return
+	}
+
+	N=0
+	for unit in ${units}
+	do
+		if [ "${unit}" = "${dev}${N}" ]
+		then
+			N=$(( N + 1 ))
+		else
+			echo "${dev}${N}"
+			return
+		fi
+	done
+
+	test -e /dev/"${dev}${N}a" || {
+		echo >&2 "All ${dev}s in use"
+		return 1
+	}
+
+	echo "${dev}${N}"
+}
+
+vnddev=$(next_avail vnd)
+vndmnt="${dstbase}/mnt"
 
 if [ -z "$img" ]; then
 	echo "usage: $0 source.iso memdisk.img"
@@ -62,7 +103,7 @@ fi
 mkdir -p "$dst" || die "couldn't create directory $dst"
 
 printf " => extracting iso image..."
-vnconfig "$vnddev" "$src"
+vnconfig "$vnddev" "$src" || die "couldn't configure vnd device $vnddev"
 mkdir "$vndmnt"
 mount -r -t cd9660 "/dev/${vnddev}a" "$vndmnt"
 (cd "$vndmnt" && tar cf - .) | (cd "$dst" && tar xf -)
