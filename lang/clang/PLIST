@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/12/02 14:42:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/06 20:03:54 adam Exp $
 bin/bugpoint
 bin/c-index-test
 bin/clang
@@ -865,7 +865,6 @@ lib/clang/${PKGVERSION}/include/wmmintrin.h
 lib/clang/${PKGVERSION}/include/x86intrin.h
 lib/clang/${PKGVERSION}/include/xmmintrin.h
 lib/libEnhancedDisassembly.a
-lib/libEnhancedDisassembly.so
 lib/libLLVMARMAsmParser.a
 lib/libLLVMARMAsmPrinter.a
 lib/libLLVMARMCodeGen.a
