@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/10/02 13:15:56 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2011/12/06 19:55:43 joerg Exp $
 
---- mapit.c.orig	Fri Mar 13 20:38:03 1998
+--- mapit.c.orig	1998-03-13 19:38:03.000000000 +0000
 +++ mapit.c
-@@ -229,6 +229,7 @@
+@@ -148,8 +148,8 @@
+ 
+   fix parse_status to handle retreat with mutilple alternate destinations
+ */
+-#ifdef MACINTOSH
+ #include <stdlib.h>
++#ifdef MACINTOSH
+ #include <console.h>
+ #include <Files.h>
+ #endif
+@@ -229,6 +229,7 @@ main(argc,argv)
    char *p0,*p1;                 /* and character pointers */
    int started;                  /* is a map already started? */
    int report;                   /* type of report */
@@ -10,7 +20,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/10/02 13:15:56 wiz Exp $
  
    extern char *optarg;          /* used by getopt() */
    extern int optind;
-@@ -318,8 +319,8 @@
+@@ -318,8 +319,8 @@ main(argc,argv)
      }
  
    if (new_borders) {            /* We'll need a temporary file */
@@ -21,7 +31,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/10/02 13:15:56 wiz Exp $
        fprintf(stderr, "Unable to open file..\n");
    }   
     
-@@ -511,7 +512,7 @@
+@@ -511,7 +512,7 @@ main(argc,argv)
  	else
  	  ownerlist[i+1] = ownerlist[i];
      
@@ -30,3 +40,72 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/10/02 13:15:56 wiz Exp $
        fprintf(stderr,"Unable to reopen file.\n");
      else {
        while(fgets(line, BUFSIZ, nstdout))
+@@ -592,8 +593,7 @@ parse_movement()
+   int error;                    /* true if a syntax (or malloc) error */
+ 
+   for (i=0; i<unitcount; ++i) {
+-    if (free(units[i].country) == 0)
+-    ;
++    free(units[i].country);
+   }
+   unitcount = 0;
+ 
+@@ -824,8 +824,7 @@ parse_movement()
+           p0 = NULL;            /* couldn't find unit type */
+           p1 = p2;              /* assume no nationality either */
+         } else {
+-          if (free(p2) == 0)
+-          ;
++          free(p2);
+         }
+       }
+ 
+@@ -948,16 +947,14 @@ parse_movement()
+     fprintf(nstdout,"OrderReport\n");
+     for (i = 0; i<ordernum; i++) {
+       fprintf(nstdout,"(%s) WriteOrder\n",orders[i]);
+-      if (free(orders[i]) == 0)
+-      ;
++      free(orders[i]);
+     }
+   }
+ 
+   if (graphicnum>0) {
+     for (i = 0; i<graphicnum; i++) {
+       fprintf(nstdout,"%s\n",graphics[i]);
+-      if (free(graphics[i]) == 0)
+-      ;
++      free(graphics[i]);
+     }
+   }
+ }
+@@ -1461,8 +1458,7 @@ parse_start(report)
+   int error;                    /* true if a syntax (or malloc) error */
+ 
+   for (i=0; i<unitcount; ++i) {
+-    if (free(units[i].country) == 0)
+-    ;
++    free(units[i].country);
+   }
+   unitcount = 0;
+ 
+@@ -1600,8 +1596,7 @@ parse_start(report)
+     fprintf(nstdout,"OrderReport\n");
+     for (i = 0; i<ordernum; i++) {
+       fprintf(nstdout,"(%s) WriteOrder\n",orders[i]);
+-      if (free(orders[i]) == 0)
+-      ;
++      free(orders[i]);
+     }
+   }
+ }
+@@ -1703,8 +1698,7 @@ drawnew()
+     if (units[i].loc>0)
+       fprintf(nstdout,"( %c %s) WriteOrder\n",
+              units[i].type,map[units[i].loc].nick);
+-    if (free(units[i].country) == 0)
+-    ;
++    free(units[i].country);
+   }
+   unitcount= 0;
+ }
