@@ -1,0 +1,14 @@
+$NetBSD: patch-src_locale_Makefile.in,v 1.1 2011/12/06 23:40:08 marino Exp $
+
+--- src/locale/Makefile.in.orig	2009-10-20 07:19:08.000000000 +0000
++++ src/locale/Makefile.in
+@@ -191,8 +191,7 @@ RAPIDSVN_LANGUAGES = de fr it_IT pt_BR r
+ #On OS/X we dont seem to have msgfmt installed by default
+ #so we are going to use the python version instead
+ #(TODO check for msgfmt, then python)
+-#MSGFMT=msgfmt
+-MSGFMT = python $(top_srcdir)/tools/msgfmt.py
++MSGFMT=msgfmt
+ all: all-am
+ 
+ .SUFFIXES:
