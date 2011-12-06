@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/01/30 18:25:11 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2011/12/06 00:19:22 sbd Exp $
 #
 
 DISTNAME=		ocaml-mysql-1.0.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		databases
 MASTER_SITES=		http://raevnos.pennmush.org/code/ocaml-mysql/
 
