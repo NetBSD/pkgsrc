@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3178 2011/12/06 11:41:18 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3179 2011/12/06 12:42:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5011,3 +5011,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/libdatrie to 0.2.5 [obache 2011-12-06]
 	Updated devel/libthai to 0.1.16 [obache 2011-12-06]
 	Updated inputmethod/gtk-im-libthai to 0.2.1 [obache 2011-12-06]
+	Updated www/aipo to 6.02nb2 [ryoon 2011-12-06]
