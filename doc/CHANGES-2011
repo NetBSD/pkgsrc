@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3180 2011/12/06 16:14:41 gson Exp $
+$NetBSD: CHANGES-2011,v 1.3181 2011/12/06 17:14:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5013,3 +5013,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated inputmethod/gtk-im-libthai to 0.2.1 [obache 2011-12-06]
 	Updated www/aipo to 6.02nb2 [ryoon 2011-12-06]
 	Updated sysutils/mkmemstick to 20111206 [gson 2011-12-06]
+	Updated editors/emacs-snapshot to 24.0.92.20111206 [msk 2011-12-06]
