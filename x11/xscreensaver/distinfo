@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.60 2011/06/09 12:03:07 drochner Exp $
+$NetBSD: distinfo,v 1.61 2011/12/07 20:09:19 drochner Exp $
 
-SHA1 (xscreensaver-5.14.tar.gz) = bfa37a9e7b2e93f54922191bb93dbc70c2f73772
-RMD160 (xscreensaver-5.14.tar.gz) = f3f832cf34781c68a4716298e0e5f3ad4f095106
-Size (xscreensaver-5.14.tar.gz) = 5925175 bytes
+SHA1 (xscreensaver-5.15.tar.gz) = b5ce7caa19f4d57c3bac83377a36dddbe7095052
+RMD160 (xscreensaver-5.15.tar.gz) = 58c7d4fae709b6500001df53e8ce27c48ae8a5b9
+Size (xscreensaver-5.15.tar.gz) = 5977594 bytes
 SHA1 (patch-aa) = 6dbc44a362e0fc7142ed3135674a8fb6ed5a9979
 SHA1 (patch-ab) = a4abfe0b769d528fda56968801c49e622d2c3424
 SHA1 (patch-ac) = 3bd2652cb0eabaffe4494e9aca8fe2df9f9e0388
