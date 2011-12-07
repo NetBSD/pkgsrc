@@ -1,19 +1,19 @@
-$NetBSD: patch-srcpro,v 1.2 2011/06/16 15:21:34 adam Exp $
+$NetBSD: patch-srcpro,v 1.3 2011/12/07 13:36:16 drochner Exp $
 
---- src/src.pro.orig	2011-04-15 10:48:51.000000000 +0000
+--- src/src.pro.orig	2009-03-22 16:41:05.000000000 +0100
 +++ src/src.pro
-@@ -216,11 +216,11 @@ contains(QWT_CONFIG, QwtWidgets) {
+@@ -216,9 +216,10 @@ contains(CONFIG, QwtWidgets) {
+ # Install directives
  
- target.path    = $${QWT_INSTALL_LIBS}
- 
--doc.files      = $${QWT_ROOT}/doc/html 
--unix:doc.files += $${QWT_ROOT}/doc/man
+ headers.files  = $$HEADERS
+-doc.files      = $${QWT_ROOT}/doc/html $${QWT_ROOT}/doc/qwt-5.2.0.qch
+-unix {
+-    doc.files      += $${QWT_ROOT}/doc/man
+-}
 +doc.files      = $${QWT_ROOT}/doc/html/*
-+man.files      = $${QWT_ROOT}/doc/man/*
- doc.path       = $${QWT_INSTALL_DOCS}
++man.files	= $${QWT_ROOT}/doc/man/*
  
--INSTALLS       = target doc
-+INSTALLS       = target doc man
- 
- CONFIG(lib_bundle) {
- 
+ INSTALLS       = target headers doc
++unix {
++	INSTALLS += man
++}
