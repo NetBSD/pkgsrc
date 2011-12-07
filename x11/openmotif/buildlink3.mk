@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2011/12/07 16:58:54 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2011/12/07 17:01:58 drochner Exp $
 
 BUILDLINK_TREE+=	openmotif
 
@@ -11,14 +11,13 @@ BUILDLINK_PKGSRCDIR.openmotif?=	../../x11/openmotif
 
 _MOTIFBASE=	${BUILDLINK_PREFIX.openmotif}
 MOTIFLIB=	${COMPILER_RPATH_FLAG}${_MOTIFBASE}/lib \
-		-L${_MOTIFBASE}/lib -lXm -lXp
+		-L${_MOTIFBASE}/lib -lXm
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
