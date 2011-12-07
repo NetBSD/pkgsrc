@@ -1,17 +1,15 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 22:06:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/12/07 16:19:33 drochner Exp $
 bin/xephem
 lib/X11/app-defaults/XEphem
 man/man1/xephem.1
 share/xephem/auxil/HAReyfigs.csf
 share/xephem/auxil/README
-share/xephem/auxil/SOHO_512_20030809_0719_eit_304.gif
+share/xephem/auxil/SOHO_512_20090703_1900_eit_171.gif
 share/xephem/auxil/analemma.plt
 share/xephem/auxil/annotation.ano
 share/xephem/auxil/astorb2edb.pl
 share/xephem/auxil/classicfigs.csf
 share/xephem/auxil/dearth.gif
-share/xephem/auxil/eyepieces.epl
-share/xephem/auxil/eyepieces.eyp
 share/xephem/auxil/favorites.fav
 share/xephem/auxil/jupiter.1020
 share/xephem/auxil/jupiter.9910
