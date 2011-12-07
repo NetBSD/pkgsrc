@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3187 2011/12/07 00:32:17 jym Exp $
+$NetBSD: CHANGES-2011,v 1.3188 2011/12/07 04:35:47 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5034,3 +5034,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/racket to 5.2 [asau 2011-12-06]
 	Updated lang/racket-textual to 5.2 [asau 2011-12-06]
 	Added benchmarks/phoronix-test-suite version 3.4.0 [jym 2011-12-07]
+	Updated mail/p5-Mail-IMAPClient to 3.30 [hiramatsu 2011-12-07]
+	Updated www/p5-Captcha-reCAPTCHA-Mailhide to 0.94 [hiramatsu 2011-12-07]
