@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/07 15:43:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/07 13:27:14 obache Exp $
 bin/actdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,9 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/actdiag/DiagramDraw.py
 ${PYSITELIB}/actdiag/DiagramDraw.pyc
 ${PYSITELIB}/actdiag/DiagramDraw.pyo
-${PYSITELIB}/actdiag/DiagramMetrix.py
-${PYSITELIB}/actdiag/DiagramMetrix.pyc
-${PYSITELIB}/actdiag/DiagramMetrix.pyo
+${PYSITELIB}/actdiag/DiagramMetrics.py
+${PYSITELIB}/actdiag/DiagramMetrics.pyc
+${PYSITELIB}/actdiag/DiagramMetrics.pyo
 ${PYSITELIB}/actdiag/__init__.py
 ${PYSITELIB}/actdiag/__init__.pyc
 ${PYSITELIB}/actdiag/__init__.pyo
@@ -30,9 +30,15 @@ ${PYSITELIB}/actdiag/elements.pyo
 ${PYSITELIB}/actdiag/tests/test_pep8.py
 ${PYSITELIB}/actdiag/tests/test_pep8.pyc
 ${PYSITELIB}/actdiag/tests/test_pep8.pyo
+${PYSITELIB}/actdiag/utils/__init__.py
+${PYSITELIB}/actdiag/utils/__init__.pyc
+${PYSITELIB}/actdiag/utils/__init__.pyo
+${PYSITELIB}/actdiag/utils/rst/__init__.py
+${PYSITELIB}/actdiag/utils/rst/__init__.pyc
+${PYSITELIB}/actdiag/utils/rst/__init__.pyo
+${PYSITELIB}/actdiag/utils/rst/directives.py
+${PYSITELIB}/actdiag/utils/rst/directives.pyc
+${PYSITELIB}/actdiag/utils/rst/directives.pyo
 ${PYSITELIB}/actdiag_sphinxhelper.py
 ${PYSITELIB}/actdiag_sphinxhelper.pyc
 ${PYSITELIB}/actdiag_sphinxhelper.pyo
-${PYSITELIB}/sphinxcontrib_actdiag.py
-${PYSITELIB}/sphinxcontrib_actdiag.pyc
-${PYSITELIB}/sphinxcontrib_actdiag.pyo
