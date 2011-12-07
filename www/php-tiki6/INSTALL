@@ -1,0 +1,15 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2011/12/07 13:29:39 ryoon Exp $
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+TIKIDIR="@PREFIX@/@TIKIDIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	cd ${TIKIDIR} &&
+		${CHOWN} -R ${WWWOWN} ${TIKIDIR} &&
+		${CHGRP} -R ${WWWGRP} ${TIKIDIR}
+	;;
+esac
