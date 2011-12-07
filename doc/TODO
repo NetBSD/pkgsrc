@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10732 2011/12/06 20:16:36 gls Exp $
+$NetBSD: TODO,v 1.10733 2011/12/07 14:07:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -434,6 +434,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bluefish-2.2.0
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o bochs-2.5
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
@@ -510,8 +511,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o diffpdf-1.6.0
 	o diffstat-1.54
 	o diffutils-3.2
-	o digikam-2.3.0
-	o dillo-3.0.1
+	o digikam-2.4.0
+	o dillo-3.0.2
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.4.1
@@ -541,8 +542,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o efax-gtk-3.2.8
 	o eggdrop-1.6.21
 	o egtk-0.3.6.2
-	o eigen2-2.0.16
-	o eigen3-3.0.3
+	o eigen2-2.0.17
+	o eigen3-3.0.4
 	o ejabberd-2.1.9
 	o ekiga-3.2.7
 	o electric-9.01
@@ -550,7 +551,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elm-me-2.6plalpha26
+	o elm-me-2.5plalpha27
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
@@ -571,6 +572,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o etach-1.4.1
 	o eterm-0.9.6
 	o etm-882
+	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evieext-1.1.1
 	o evince-3.2.1
@@ -643,7 +645,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fotoxx-11.12.1
 	o fox-1.6.41
 	o frama-c-20110201
-	o freeciv-2.3.0
+	o freeciv-2.3.1
 	o freeglut-2.4.0
 	o freenet-0.7
 	o freesci-0.6.4
@@ -701,6 +703,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-3.2.2
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-color-manager-2.32.0 [GNOME 2.32]
+	o gnome-commander-1.2.8.15
 	o gnome-devel-docs-2.30.0 [GNOME 2.30]
 	o gnome-disk-utility-2.32.0 [GNOME 2.32]
 	o gnome-games-3.2.1
@@ -847,7 +850,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kid3-2.0.1
 	o kile-2.1
 	o kipi-plugins-2.0.0
-	o kismet-2011.01r1
+	o kismet-2011.03r2 [pkg/45692]
 	o kmess-1.5.1
 	o kmp-0.5
 	o kmymoney2-4.6.1
@@ -897,7 +900,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.7.4
 	o libcdio-0.83
-	o libdrm-2.4.27
+	o libdrm-2.4.28
 	o libextractor-0.6.3
 	o libffi-3.0.10
 	o libflash-0.4.13
@@ -984,7 +987,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
-	o mp3diags-1.1.09
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
 	o mpg123-1.13.4
@@ -1050,7 +1052,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0d [pkg/44717]
 	o openssl-1.0.0e
 	o openttd-1.1.3
-	o opera-11.51
+	o opera-11.60
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
@@ -1100,7 +1102,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o polkit-qt-0.99.0
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.18.1
+	o poppler-0.18.2
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1149,6 +1151,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qpopper-4.0.14
 	o qt4-qscintilla-2.6
 	o qvplay-0.95
+	o qwt-6.0.0
 	o radiance-3.7.2
 	o rails-3.0.7
 	o raine-0.51.8
@@ -1230,6 +1233,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snd-10.6
 	o snes9x-1.53
 	o snort-2.9.1
+	o socat-1.7.2.0
 	o solfege-3.20.4
 	o sope-4.6
 	o sound-juicer-2.32.0
@@ -1243,7 +1247,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o star-1.5.1
 	o statist-1.3.0
 	o stlport-4.6.2
-	o stow-2.1.0
+	o stow-2.1.1
 	o strace-4.5.16
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
@@ -1324,7 +1328,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
-	o vala-0.14.1
+	o vala-0.15.0
 	o valgrind-3.6.1
 	o vbetool-1.1
 	o vera-1.17
@@ -1505,6 +1509,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwpe-1.5.30a
 	o xwud-1.0.3
 	o xzip-182
+	o yabause-0.9.11.1
 	o yafc-1.1
 	o yaz-4.1.7
 	o yodl-2.14.3
