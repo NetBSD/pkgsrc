@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2011/12/06 19:46:36 joerg Exp $
+$NetBSD: patch-aa,v 1.9 2011/12/07 02:10:31 dholland Exp $
 
 --- makefile.orig	2008-10-13 21:35:17.000000000 +0000
 +++ makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.8 2011/12/06 19:46:36 joerg Exp $
  # TRACING = -g
  
 -PREFIX	= /home/jeff
-+PREFIX	= ${DESTDIR}/usr/pkg
++PREFIX	= ${DESTDIR}@PREFIX@
  BINDIR	= $(PREFIX)/bin
 -LOUTLIBDIR	= $(PREFIX)/lout.lib
 -LOUTDOCDIR	= $(PREFIX)/lout.doc
