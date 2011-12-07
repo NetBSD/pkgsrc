@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.50 2011/12/05 20:09:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.51 2011/12/07 08:34:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -193,3 +193,7 @@ Pullup ticket #3622 - requested by gls
 www/py-clearsilver security fix
 Pullup ticket #3623 - requested by dholland
 devel/opal: build fix
+Pullup ticket #3624 - requested by dholland
+graphics/xart: build fix
+Pullup ticket #3625 - requested by gls
+devel/p5-PAR: security update
