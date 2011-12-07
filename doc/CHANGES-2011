@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3192 2011/12/07 13:27:29 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3193 2011/12/07 13:31:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5040,3 +5040,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/py-blockdiag to 1.1.1 [obache 2011-12-07]
 	Updated graphics/py-seqdiag to 0.7.1 [obache 2011-12-07]
 	Updated graphics/py-actdiag to 0.3.0 [obache 2011-12-07]
+	Added www/php-tiki6 version 6.4 [ryoon 2011-12-07]
