@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2005/12/30 15:16:21 joerg Exp $
+$NetBSD: patch-an,v 1.2 2011/12/07 16:05:59 roy Exp $
 
 --- canuum/canna.c.orig	2005-12-30 14:56:11.000000000 +0000
 +++ canuum/canna.c
@@ -11,3 +11,12 @@ $NetBSD: patch-an,v 1.1 2005/12/30 15:16:21 joerg Exp $
  static int maxmodelen;
  static int maxwidth = 0;
  
+@@ -1268,7 +1266,7 @@
+   cannakeyentry(key_end,   CANNA_KEY_End);
+ #endif
+ 
+-  resetterm();
++  reset_shell_mode();
+ #endif
+ 
+   if (terminalname = malloc(strlen(term) + 1)) {

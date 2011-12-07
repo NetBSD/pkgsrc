@@ -1,0 +1,30 @@
+$NetBSD: patch-ap,v 1.1 2011/12/07 16:05:59 roy Exp $
+
+--- canuum/termio.c.orig	2011-12-07 13:20:41.000000000 +0000
++++ canuum/termio.c		2011-12-07 15:58:50.000000000 +0000
+@@ -175,7 +175,6 @@
+ void
+ closeTermData ()
+ {
+-  resetterm ();
+   reset_shell_mode ();
+ }
+ 
+@@ -195,7 +194,7 @@
+ set_scroll_region (start, end)
+      int start, end;
+ {
+-  tputs (tparm (change_scroll_region, start, end), 1, putchar);
++  tputs (tparm (change_scroll_region, start, end, 0, 0, 0, 0, 0, 0, 0), 1, putchar);
+ }
+ 
+ void
+@@ -223,7 +222,7 @@
+ throw_cur_raw (col, row)
+      int col, row;
+ {
+-  tputs (tparm (cursor_address, row, col), 1, putchar);
++  tputs (tparm (cursor_address, row, col, 0, 0, 0, 0, 0, 0, 0), 1, putchar);
+ }
+ 
+ void
