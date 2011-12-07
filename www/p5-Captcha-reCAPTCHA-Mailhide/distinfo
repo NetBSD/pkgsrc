@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/25 02:31:06 heinz Exp $
+$NetBSD: distinfo,v 1.2 2011/12/07 04:34:28 hiramatsu Exp $
 
-SHA1 (Captcha-reCAPTCHA-Mailhide-0.93.tar.gz) = 530d8c19f5f4614d00692934dfb22266cec51ae5
-RMD160 (Captcha-reCAPTCHA-Mailhide-0.93.tar.gz) = 28309242c9ff367399a616f4d526b463469e814c
-Size (Captcha-reCAPTCHA-Mailhide-0.93.tar.gz) = 7054 bytes
+SHA1 (Captcha-reCAPTCHA-Mailhide-0.94.tar.gz) = 9cc693f8573782cab80477f4b64043123daeb58e
+RMD160 (Captcha-reCAPTCHA-Mailhide-0.94.tar.gz) = a4930628bf5ad5d0379707064f7a0c725c3f1da4
+Size (Captcha-reCAPTCHA-Mailhide-0.94.tar.gz) = 7474 bytes
