@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/12/07 00:30:16 jym Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/07 00:34:26 jym Exp $
 #
 
 DISTNAME=	phoronix-test-suite-${PTS_VERSION}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	php>=${PHP_BASE_VERS}<5.4:../../lang/php53
 DEPENDS+=	php53-curl>=${PHP_BASE_VERS}<5.4:../../www/php-curl
-DEPENDS+=	php53-dom>=${PHP_BASE_VERS}<5.4:../../www/php-curl
+DEPENDS+=	php53-dom>=${PHP_BASE_VERS}<5.4:../../textproc/php-dom
 DEPENDS+=	php53-gd>=${PHP_BASE_VERS}<5.4:../../graphics/php-gd
 DEPENDS+=	php53-json>=${PHP_BASE_VERS}<5.4:../../textproc/php-json
 DEPENDS+=	php53-pcntl>=${PHP_BASE_VERS}<5.4:../../devel/php-pcntl
