@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10733 2011/12/07 14:07:06 wiz Exp $
+$NetBSD: TODO,v 1.10734 2011/12/07 16:13:18 taca Exp $
 
 Suggested new packages
 ======================
@@ -1242,6 +1242,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o srp_client-1.7.5
+	o squid-3.1.18
 	o ssh-askpass-1.2.4.1
 	o ssmtp-2.64
 	o star-1.5.1
@@ -1253,7 +1254,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o stunnel-4.48
 	o subtitleeditor-0.33.0
-	o subversion-1.7.1
+	o subversion-1.7.2
 	o sudo-1.8.3p1
 	o supertuxkart-0.7.3
 	o suse-12.1
