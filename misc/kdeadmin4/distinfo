@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2011/01/23 07:55:13 markd Exp $
+$NetBSD: distinfo,v 1.14 2011/12/07 07:53:24 marino Exp $
 
 SHA1 (kdeadmin-4.5.5.tar.bz2) = 798dcc0e572315dc5db8afa2e6c467293cbf5d98
 RMD160 (kdeadmin-4.5.5.tar.bz2) = 5479595bf70896bbbd5d516aa7fd6b28cc12f9c5
 Size (kdeadmin-4.5.5.tar.bz2) = 1204817 bytes
+SHA1 (patch-kuser_CMakeLists.txt) = f8bea7481739cd2e762d62193025aa8b9faa593f
