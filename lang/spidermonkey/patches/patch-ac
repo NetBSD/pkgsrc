@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2011/12/06 05:54:06 yyamano Exp $
+$NetBSD: patch-ac,v 1.6 2011/12/07 05:16:28 yyamano Exp $
 
 --- config/Darwin.mk.orig	2008-03-02 23:10:49.000000000 +0000
 +++ config/Darwin.mk
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.5 2011/12/06 05:54:06 yyamano Exp $
  endif
  GFX_ARCH = x
  
-@@ -67,14 +67,6 @@ OS_LIBS = -lc -framework System
+@@ -67,17 +67,12 @@ OS_LIBS = -lc -framework System
  
  ASFLAGS += -x assembler-with-cpp
  
@@ -43,3 +43,9 @@ $NetBSD: patch-ac,v 1.5 2011/12/06 05:54:06 yyamano Exp $
  # Use the editline library to provide line-editing support.
  JS_EDITLINE = 1
  
+ # Don't allow Makefile.ref to use libmath
+ NO_LIBM = 1
+ 
++OS_CFLAGS += -DHAVE_VA_COPY -DVA_COPY=va_copy
++OS_CFLAGS += -DPIC -fPIC -DJS_HAVE_LONG_LONG -DHAVE_INTTYPES_H
++
