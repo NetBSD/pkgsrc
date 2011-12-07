@@ -1,30 +1,23 @@
-$NetBSD: patch-pri,v 1.4 2011/06/20 12:43:00 drochner Exp $
+$NetBSD: patch-pri,v 1.5 2011/12/07 13:36:16 drochner Exp $
 
---- qwtconfig.pri.orig	2011-04-15 10:48:51.000000000 +0000
+--- qwtconfig.pri.orig	2010-04-11 09:55:06.000000000 +0000
 +++ qwtconfig.pri
-@@ -19,14 +19,14 @@ QWT_VERSION      = $${QWT_VER_MAJ}.$${QW
- QWT_INSTALL_PREFIX = $$[QT_INSTALL_PREFIX]
+@@ -8,7 +8,7 @@ VER_PAT      = 1
+ VERSION      = $${VER_MAJ}.$${VER_MIN}.$${VER_PAT}
  
  unix {
--    QWT_INSTALL_PREFIX    = /usr/local/qwt-$$QWT_VERSION
-+    QWT_INSTALL_PREFIX    = $$(PREFIX)
+-    INSTALLBASE    = /usr/local/qwt-5.2.1
++    INSTALLBASE    = $$(PREFIX)
  }
  
  win32 {
-     QWT_INSTALL_PREFIX    = C:/Qwt-$$QWT_VERSION
- }
+@@ -17,7 +17,8 @@ win32 {
  
--QWT_INSTALL_DOCS      = $${QWT_INSTALL_PREFIX}/doc
-+QWT_INSTALL_DOCS      = $${QWT_INSTALL_PREFIX}/share/doc/qwt
- QWT_INSTALL_HEADERS   = $${QWT_INSTALL_PREFIX}/include
- QWT_INSTALL_LIBS      = $${QWT_INSTALL_PREFIX}/lib
- 
-@@ -34,7 +34,7 @@ QWT_INSTALL_LIBS      = $${QWT_INSTALL_P
- # Designer plugin
- ######################################################################
- 
--QWT_INSTALL_PLUGINS   = $${QWT_INSTALL_PREFIX}/plugins/designer
-+QWT_INSTALL_PLUGINS   = $${QWT_INSTALL_PREFIX}/qt4/plugins/designer
- # QWT_INSTALL_PLUGINS   = $${QT_INSTALL_PREFIX}/plugins/designer
+ target.path    = $$INSTALLBASE/lib
+ headers.path   = $$INSTALLBASE/include
+-doc.path       = $$INSTALLBASE/doc
++doc.path       = $$INSTALLBASE/share/doc/qwt
++man.path       = $$INSTALLBASE/${PKGMANDIR}
  
  ######################################################################
+ # qmake internal options
