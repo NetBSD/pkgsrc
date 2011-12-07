@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/10/06 06:28:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/07 13:27:14 obache Exp $
 #
 
-DISTNAME=	actdiag-0.1.8
+DISTNAME=	actdiag-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/a/actdiag/
@@ -11,9 +11,7 @@ HOMEPAGE=	http://blockdiag.com/actdiag/build/html/
 COMMENT=	Simple activity-diagram image generator
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.7nb3:../../graphics/py-imaging
-DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=0.3.4:../../devel/py-funcparserlib
-DEPENDS+=	${PYPKGPREFIX}-blockdiag>=0.8.1:../../graphics/py-blockdiag
+DEPENDS+=	${PYPKGPREFIX}-blockdiag>=1.1.0:../../graphics/py-blockdiag
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
