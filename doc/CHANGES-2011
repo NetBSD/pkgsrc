@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3194 2011/12/07 13:43:45 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3195 2011/12/07 16:02:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5042,3 +5042,18 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/py-actdiag to 0.3.0 [obache 2011-12-07]
 	Added www/php-tiki6 version 6.4 [ryoon 2011-12-07]
 	Updated graphics/py-nwdiag to 0.7.0 [obache 2011-12-07]
+	Updated databases/postgresql90 to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-client to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-server to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-docs to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-adminpack to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-datatypes to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-dblink to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-fuzzystrmatch to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-monitoring to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-pgcrypto to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-plperl to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-plpython to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-pltcl to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-replicationtools to 9.0.6 [adam 2011-12-07]
+	Updated databases/postgresql90-upgrade to 9.0.6 [adam 2011-12-07]
