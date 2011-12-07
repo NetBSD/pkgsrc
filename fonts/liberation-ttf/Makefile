@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2011/11/22 18:05:06 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/07 10:30:32 joerg Exp $
 #
 
 DISTNAME=	liberation-fonts-ttf-1.07.1
 PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-fonts//}
 CATEGORIES=	fonts
-MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/
+MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/ \
+		${MASTER_SITE_LOCAL}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
 COMMENT=	TrueType fonts from RedHat
 LICENSE=	gnu-gpl-v2 # with some exception
-
-FETCH_USING=	curl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
