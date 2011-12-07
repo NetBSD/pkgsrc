@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/12/16 19:16:58 zafer Exp $
+$NetBSD: patch-aa,v 1.3 2011/12/07 19:49:01 drochner Exp $
 
---- src/Makefile.in.orig	2009-12-05 20:03:51.000000000 +0100
+--- src/Makefile.in.orig	2011-04-11 02:37:07.000000000 +0000
 +++ src/Makefile.in
 @@ -4,7 +4,7 @@
  #---------------------------------------------------------------------------
@@ -20,8 +20,8 @@ $NetBSD: patch-aa,v 1.2 2009/12/16 19:16:58 zafer Exp $
  ELFDIR = @ELFDIR@# Location of elf objects
  VERSION_SCRIPT	= $(SRCDIR)/slang.ver
  
-@@ -87,11 +87,11 @@ INSTALL_ELFLIB_TARGET	= @INSTALL_ELFLIB_
- CONFIG_H		= config.h
+@@ -87,11 +87,11 @@ CONFIG_H		= config.h
+ TERMINFO_INC		= terminfo/@TERMINFO_LAYOUT@.inc
  ALL_CFLAGS		= $(CFLAGS) -Dunix $(THIS_LIB_DEFINES)
  ALL_ELF_CFLAGS		= $(ELF_CFLAGS) -Dunix $(THIS_LIB_DEFINES)
 -COMPILE_CMD		= $(CC) -c $(ALL_CFLAGS)
@@ -46,16 +46,16 @@ $NetBSD: patch-aa,v 1.2 2009/12/16 19:16:58 zafer Exp $
  
  $(OBJDIR_NORMAL_LIB): $(OBJDIR) $(CONFIG_H) $(OBJS)
 -	-$(RM) $(OBJDIR_NORMAL_LIB)
--	cd $(OBJDIR); $(AR_CR) $(NORMAL_LIB) $(OFILES)
+-	cd $(OBJDIR) && $(AR_CR) $(NORMAL_LIB) $(OFILES)
 -	$(RANLIB) $(OBJDIR_NORMAL_LIB)
 +	cd $(OBJDIR); $(LIBTOOL) --mode=link $(LIBTOOL_FLAGS) \
-+		$(CC) -o $(NORMAL_LIB) $(OFILES:.o=.lo) \
-+			$(LIBTOOL_LDFLAGS) -rpath $(PREFIX)/lib \
-+			$(DL_LIB) -lm -ltermcap -version-info 2:1
++	    $(CC) -o $(NORMAL_LIB) $(OFILES:.o=.lo) \
++	    $(LIBTOOL_LDFLAGS) -rpath $(PREFIX)/lib \
++	    $(DL_LIB) -lm -ltermcap -version-info 2:1
  	@echo ""
  	@echo $(NORMAL_LIB) created in $(OBJDIR)
  
-@@ -186,10 +186,9 @@ install-docs: $(DEST_DOCDIR)
+@@ -187,10 +187,9 @@ install-docs: $(DEST_DOCDIR)
  		echo $(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
  		$(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
  	done
@@ -68,7 +68,7 @@ $NetBSD: patch-aa,v 1.2 2009/12/16 19:16:58 zafer Exp $
  install-elf-and-links:
  	-$(RM) $(DEST_LIBDIR)/$(ELFLIB)
  	-$(RM) $(DEST_LIBDIR)/$(ELFLIB_MAJOR)
-@@ -207,9 +206,9 @@ install-elf-cygwin:
+@@ -208,9 +207,9 @@ install-elf-cygwin:
  	$(INSTALL_DATA) $(ELFDIR_DLL_LIB) $(DEST_LIBDIR)/
  	$(MKINSDIR) $(DEST_BINDIR)
  	$(INSTALL) $(ELFDIR_ELF_LIB) $(DEST_BINDIR)/
