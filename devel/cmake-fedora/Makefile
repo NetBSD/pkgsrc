@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/04 12:24:37 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/07 10:21:29 joerg Exp $
 #
 
 DISTNAME=	cmake-fedora-0.8.1-modules-only
 PKGNAME=	${DISTNAME:S/-modules-only//}
 CATEGORIES=	devel
-MASTER_SITES=	https://fedorahosted.org/releases/c/m/cmake-fedora/
+MASTER_SITES=	https://fedorahosted.org/releases/c/m/cmake-fedora/ \
+		${MASTER_SITE_LOCAL}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	https://fedorahosted.org/cmake-fedora/
