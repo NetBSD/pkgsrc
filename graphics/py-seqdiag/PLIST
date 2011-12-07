@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/07 15:45:43 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/07 13:21:10 obache Exp $
 bin/seqdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,9 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/seqdiag/DiagramDraw.py
 ${PYSITELIB}/seqdiag/DiagramDraw.pyc
 ${PYSITELIB}/seqdiag/DiagramDraw.pyo
-${PYSITELIB}/seqdiag/DiagramMetrix.py
-${PYSITELIB}/seqdiag/DiagramMetrix.pyc
-${PYSITELIB}/seqdiag/DiagramMetrix.pyo
+${PYSITELIB}/seqdiag/DiagramMetrics.py
+${PYSITELIB}/seqdiag/DiagramMetrics.pyc
+${PYSITELIB}/seqdiag/DiagramMetrics.pyo
 ${PYSITELIB}/seqdiag/__init__.py
 ${PYSITELIB}/seqdiag/__init__.pyc
 ${PYSITELIB}/seqdiag/__init__.pyo
@@ -27,12 +27,27 @@ ${PYSITELIB}/seqdiag/diagparser.pyo
 ${PYSITELIB}/seqdiag/elements.py
 ${PYSITELIB}/seqdiag/elements.pyc
 ${PYSITELIB}/seqdiag/elements.pyo
+${PYSITELIB}/seqdiag/tests/test_builder.py
+${PYSITELIB}/seqdiag/tests/test_builder.pyc
+${PYSITELIB}/seqdiag/tests/test_builder.pyo
+${PYSITELIB}/seqdiag/tests/test_generate_diagram.py
+${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyc
+${PYSITELIB}/seqdiag/tests/test_generate_diagram.pyo
 ${PYSITELIB}/seqdiag/tests/test_pep8.py
 ${PYSITELIB}/seqdiag/tests/test_pep8.pyc
 ${PYSITELIB}/seqdiag/tests/test_pep8.pyo
+${PYSITELIB}/seqdiag/tests/utils.py
+${PYSITELIB}/seqdiag/tests/utils.pyc
+${PYSITELIB}/seqdiag/tests/utils.pyo
+${PYSITELIB}/seqdiag/utils/__init__.py
+${PYSITELIB}/seqdiag/utils/__init__.pyc
+${PYSITELIB}/seqdiag/utils/__init__.pyo
+${PYSITELIB}/seqdiag/utils/rst/__init__.py
+${PYSITELIB}/seqdiag/utils/rst/__init__.pyc
+${PYSITELIB}/seqdiag/utils/rst/__init__.pyo
+${PYSITELIB}/seqdiag/utils/rst/directives.py
+${PYSITELIB}/seqdiag/utils/rst/directives.pyc
+${PYSITELIB}/seqdiag/utils/rst/directives.pyo
 ${PYSITELIB}/seqdiag_sphinxhelper.py
 ${PYSITELIB}/seqdiag_sphinxhelper.pyc
 ${PYSITELIB}/seqdiag_sphinxhelper.pyo
-${PYSITELIB}/sphinxcontrib_seqdiag.py
-${PYSITELIB}/sphinxcontrib_seqdiag.pyc
-${PYSITELIB}/sphinxcontrib_seqdiag.pyo
