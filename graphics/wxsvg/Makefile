@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/11/23 21:29:14 gls Exp $
+# $NetBSD: Makefile,v 1.24 2011/12/07 18:31:05 drochner Exp $
 #
 
 DISTNAME=	wxsvg-1.1.4
@@ -16,10 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config autoconf automake
-
-pre-configure:
-	(cd ${WRKSRC} && ./autogen.sh)
+USE_TOOLS+=		gmake pkg-config
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
