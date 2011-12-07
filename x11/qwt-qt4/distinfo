@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2011/12/07 13:36:16 drochner Exp $
+$NetBSD: distinfo,v 1.6 2011/12/07 16:05:09 drochner Exp $
 
-SHA1 (qwt-5.2.1.tar.bz2) = 89de7a90b7eddad2989470627baa19d59e348df1
-RMD160 (qwt-5.2.1.tar.bz2) = 28e07ea12323a5217118a38e1a7d730a8ce50fee
-Size (qwt-5.2.1.tar.bz2) = 1926453 bytes
-SHA1 (patch-pri) = 13b2c9d496796a233ea41f8a2b104e3d7e127685
+SHA1 (qwt-5.2.2.tar.bz2) = 77de405c5f9867a001f0e0a668154023faccb0a0
+RMD160 (qwt-5.2.2.tar.bz2) = 74df9ac3bfa56a06979b5298287f0dd359f2bc69
+Size (qwt-5.2.2.tar.bz2) = 2083193 bytes
+SHA1 (patch-pri) = 4ccf8b5088da336398542e947d43480bfe874945
 SHA1 (patch-srcpro) = 14311e4ee2a64ea0afc5932e974b3555d6f9e3b2
