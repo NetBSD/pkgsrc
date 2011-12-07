@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2009/07/07 17:57:22 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2011/12/07 16:19:33 drochner Exp $
 
-DISTNAME=	xephem-3.7.3
+DISTNAME=	xephem-3.7.5
 CATEGORIES=	x11
-MASTER_SITES=	http://www.clearskyinstitute.com/xephem/
+MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
+		http://97.74.56.125/free/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
@@ -61,7 +62,6 @@ do-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
