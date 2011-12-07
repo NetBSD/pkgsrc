@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2004/09/24 14:08:36 tv Exp $
+$NetBSD: patch-ac,v 1.2 2011/12/07 16:13:51 drochner Exp $
 
---- configure.in.orig	2004-01-30 04:26:03.000000000 -0500
+--- configure.in.orig	2011-11-13 16:53:45.000000000 +0000
 +++ configure.in
-@@ -563,29 +563,12 @@ if test "$EMXOS2" = yes; then
+@@ -164,29 +164,12 @@ if test "$EMXOS2" = yes; then
  
  else
  
@@ -32,10 +32,10 @@ $NetBSD: patch-ac,v 1.1 2004/09/24 14:08:36 tv Exp $
          ],
          [
            if test $ID = no ; then
-@@ -602,27 +585,8 @@ else
+@@ -203,27 +186,8 @@ else
    AC_ARG_WITH(group,
          [  --with-group=privoxy         Set group for privoxy],
-         [ 
+         [
 -                if test "x$withval" != "xyes"; then
 -                  if test $BGROUPS = no ; then
 -                    AC_MSG_ERROR(There is no 'groups' program on this system)
