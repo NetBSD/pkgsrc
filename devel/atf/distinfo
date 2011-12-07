@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2011/06/14 13:55:15 jmmv Exp $
+$NetBSD: distinfo,v 1.15 2011/12/07 17:23:04 bsiegert Exp $
 
 SHA1 (atf-0.14.tar.gz) = 657639873383a4fcc192a551c0fee3763f85454d
 RMD160 (atf-0.14.tar.gz) = 8340c75d85f8973ecb4634794fa9de38b08f0ad1
 Size (atf-0.14.tar.gz) = 617893 bytes
+SHA1 (patch-atf-c_detail_process__test.c) = 0d3033d5b913709adcaed3f0005d1c2976f668ba
