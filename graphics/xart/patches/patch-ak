@@ -1,8 +1,17 @@
-$NetBSD: patch-ak,v 1.1 2006/08/09 17:13:58 darcy Exp $
+$NetBSD: patch-ak,v 1.1.46.1 2011/12/07 08:30:51 tron Exp $
 
---- xpaint.h.orig	1998-04-13 00:27:17.000000000 -0400
+--- xpaint.h.orig	1998-04-13 04:27:17.000000000 +0000
 +++ xpaint.h
-@@ -45,8 +45,6 @@
+@@ -19,6 +19,8 @@
+ #include <sys/param.h>
+ #endif
+ 
++#include <stdio.h>
++
+ #ifndef MIN
+ #define MIN(a,b)	(((a) < (b)) ? (a) : (b))
+ #endif
+@@ -45,8 +47,6 @@
  #define NULL 0
  #endif				/* AIXV3 */
  
