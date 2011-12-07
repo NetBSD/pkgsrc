@@ -1,88 +1,124 @@
-$NetBSD: patch-ae,v 1.4 2010/08/09 12:21:48 drochner Exp $
+$NetBSD: patch-ae,v 1.5 2011/12/07 19:49:01 drochner Exp $
 
---- modules/Makefile.in.orig	2009-12-05 19:03:51.000000000 +0000
+--- modules/Makefile.in.orig	2011-04-11 02:37:07.000000000 +0000
 +++ modules/Makefile.in
 @@ -1,4 +1,5 @@
  # -*- sh -*-
 +MODULE_LIBTOOL_FLAGS=--tag=disable-static
  MODULES = slsmg-module.so termios-module.so select-module.so fcntl-module.so \
-   varray-module.so socket-module.so rand-module.so fork-module.so @PCRE_MODULE@ @PNG_MODULE@ \
-   @ICONV_MODULE@ @ONIG_MODULE@ @ZLIB_MODULE@ @SYSCONF_MODULE@
-@@ -75,9 +76,10 @@ DEST_HELPDIR	= $(DESTDIR)$(HELP_DIR)
+   varray-module.so socket-module.so rand-module.so fork-module.so \
+   csv-module.so @PCRE_MODULE@ @PNG_MODULE@ \
+@@ -77,8 +78,9 @@ DEST_HELPDIR	= $(DESTDIR)$(HELP_DIR)
  #---------------------------------------------------------------------------
  RPATH = @RPATH@
  
 -LIBS = $(LDFLAGS) $(RPATH) $(SLANG_LIB) $(DL_LIB) @M_LIB@
 +LIBS = $(LDFLAGS) -module -avoid-version -rpath $(PREFIX)/lib $(SLANG_LIB) $(DL_LIB) @M_LIB@
- #LIBS = $(RPATH) $(DL_LIB) @M_LIB@
- INCS = $(SLANG_INC)
-+CC_SHARED:=${LIBTOOL} --mode=link ${MODULE_LIBTOOL_FLAGS} ${CC} 
- 
+ INCS = $(SLANG_SRCINC)
++CC_SHARED:=${LIBTOOL} --mode=link ${MODULE_LIBTOOL_FLAGS} ${CC}
+ #---------------------------------------------------------------------------
  all: $(MODULES)
  
-@@ -85,43 +87,58 @@ config.h: ../src/config.h
- 	cp ../src/config.h .
- 
- slsmg-module.so: slsmg-module.c config.h
--	$(CC_SHARED) $(INCS) slsmg-module.c -o slsmg-module.so $(LIBS)
+@@ -87,62 +89,62 @@ config.h: ../src/config.h
+ $(OBJDIR):
+ 	-$(MKINSDIR) $(OBJDIR)
+ #
+-slsmg-module.so: $(OBJDIR) $(OBJDIR)/slsmg-module.so
+-$(OBJDIR)/slsmg-module.so: slsmg-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/slsmg-module.c -o slsmg-module.so $(LIBS)
+-rand-module.so: $(OBJDIR) $(OBJDIR)/rand-module.so
+-$(OBJDIR)/rand-module.so: rand-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/rand-module.c -o rand-module.so $(LIBS)
+-newt-module.so: $(OBJDIR) $(OBJDIR)/newt-module.so
+-$(OBJDIR)/newt-module.so: newt-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/newt-module.c -o newt-module.so -lnewt $(LIBS)
+-termios-module.so: $(OBJDIR) $(OBJDIR)/termios-module.so
+-$(OBJDIR)/termios-module.so: termios-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/termios-module.c -o termios-module.so $(LIBS)
+-select-module.so: $(OBJDIR) $(OBJDIR)/select-module.so
+-$(OBJDIR)/select-module.so: select-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/select-module.c -o select-module.so $(LIBS)
+-fcntl-module.so: $(OBJDIR) $(OBJDIR)/fcntl-module.so
+-$(OBJDIR)/fcntl-module.so: fcntl-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/fcntl-module.c -o fcntl-module.so $(LIBS)
+-varray-module.so: $(OBJDIR) $(OBJDIR)/varray-module.so
+-$(OBJDIR)/varray-module.so: varray-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/varray-module.c -o varray-module.so $(LIBS)
+-pcre-module.so: $(OBJDIR) $(OBJDIR)/pcre-module.so
+-$(OBJDIR)/pcre-module.so: pcre-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(PCRE_INC) $(SRCDIR)/pcre-module.c -o pcre-module.so $(PCRE_LIB) $(LIBS)
+-onig-module.so: $(OBJDIR) $(OBJDIR)/onig-module.so
+-$(OBJDIR)/onig-module.so: onig-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(ONIG_INC) $(SRCDIR)/onig-module.c -o onig-module.so $(ONIG_LIB) $(LIBS)
+-png-module.so: $(OBJDIR) $(OBJDIR)/png-module.so
+-$(OBJDIR)/png-module.so: png-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(PNG_INC) $(SRCDIR)/png-module.c -o png-module.so $(PNG_LIB) $(LIBS)
+-socket-module.so: $(OBJDIR) $(OBJDIR)/socket-module.so
+-$(OBJDIR)/socket-module.so: socket-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/socket-module.c -o socket-module.so $(SOCKET_LIBS) $(LIBS)
+-iconv-module.so: $(OBJDIR) $(OBJDIR)/iconv-module.so
+-$(OBJDIR)/iconv-module.so: iconv-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(ICONV_INC) $(SRCDIR)/iconv-module.c -o iconv-module.so $(ICONV_LIB) $(LIBS)
+-zlib-module.so: $(OBJDIR) $(OBJDIR)/zlib-module.so
+-$(OBJDIR)/zlib-module.so: zlib-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(ZLIB_INC) $(SRCDIR)/zlib-module.c -o zlib-module.so $(ZLIB_LIB) $(LIBS)
+-fork-module.so: $(OBJDIR) $(OBJDIR)/fork-module.so
+-$(OBJDIR)/fork-module.so: fork-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/fork-module.c -o fork-module.so $(LIBS)
+-sysconf-module.so: $(OBJDIR) $(OBJDIR)/sysconf-module.so
+-$(OBJDIR)/sysconf-module.so: sysconf-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/sysconf-module.c -o sysconf-module.so $(LIBS)
+-csv-module.so: $(OBJDIR) $(OBJDIR)/csv-module.so
+-$(OBJDIR)/csv-module.so: csv-module.c config.h
+-	cd $(OBJDIR) && $(CC_SHARED) $(INCS) $(SRCDIR)/csv-module.c -o csv-module.so $(LIBS)
++slsmg-module.so: slsmg-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) slsmg-module.c
 +	$(CC_SHARED) $(INCS) slsmg-module.lo -o slsmg-module.la $(LIBS)
- rand-module.so: rand-module.c config.h
--	$(CC_SHARED) $(INCS) rand-module.c -o rand-module.so $(LIBS)
++rand-module.so: rand-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) rand-module.c
 +	$(CC_SHARED) $(INCS) rand-module.lo -o rand-module.la $(LIBS)
- newt-module.so: newt-module.c config.h
--	$(CC_SHARED) $(INCS) newt-module.c -o newt-module.so -lnewt $(LIBS)
++newt-module.so: newt-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) newt-module.c
-+	$(CC_SHARED) $(INCS) newt-module.lo -o newt-module.la -lnewt $(LIBS)
- termios-module.so: termios-module.c config.h
--	$(CC_SHARED) $(INCS) termios-module.c -o termios-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) newt-module.lo -o newt-module.la $(LIBS)
++termios-module.so: termios-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) termios-module.c
 +	$(CC_SHARED) $(INCS) termios-module.lo -o termios-module.la $(LIBS)
- select-module.so: select-module.c config.h
--	$(CC_SHARED) $(INCS) select-module.c -o select-module.so $(LIBS)
++select-module.so: select-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) select-module.c
 +	$(CC_SHARED) $(INCS) select-module.lo -o select-module.la $(LIBS)
- fcntl-module.so: fcntl-module.c config.h
--	$(CC_SHARED) $(INCS) fcntl-module.c -o fcntl-module.so $(LIBS)
++fcntl-module.so: fcntl-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) fcntl-module.c
 +	$(CC_SHARED) $(INCS) fcntl-module.lo -o fcntl-module.la $(LIBS)
- varray-module.so: varray-module.c config.h
--	$(CC_SHARED) $(INCS) varray-module.c -o varray-module.so $(LIBS)
++varray-module.so: varray-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) varray-module.c
 +	$(CC_SHARED) $(INCS) varray-module.lo -o varray-module.la $(LIBS)
- pcre-module.so: pcre-module.c config.h
--	$(CC_SHARED) $(INCS) $(PCRE_INC) pcre-module.c -o pcre-module.so $(PCRE_LIB) $(LIBS)
-+	${LIBTOOL} --mode=compile ${CC} -c $(INCS) $(PCRE_INC) pcre-module.c
-+	$(CC_SHARED) $(INCS) $(PCRE_INC) pcre-module.lo -o pcre-module.la $(PCRE_LIB) $(LIBS)
- onig-module.so: onig-module.c config.h
--	$(CC_SHARED) $(INCS) $(ONIG_INC) onig-module.c -o onig-module.so $(ONIG_LIB) $(LIBS)
-+	${LIBTOOL} --mode=compile ${CC} -c $(INCS) $(ONIG_INC) onig-module.c
-+	$(CC_SHARED) $(INCS) $(ONIG_INC) onig-module.lo -o onig-module.la $(ONIG_LIB) $(LIBS)
- png-module.so: png-module.c config.h
--	$(CC_SHARED) $(INCS) $(PNG_INC) png-module.c -o png-module.so $(PNG_LIB) $(LIBS)
-+	${LIBTOOL} --mode=compile ${CC} -c $(INCS) $(PNG_INC) png-module.c
-+	$(CC_SHARED) $(INCS) $(PNG_INC) png-module.lo -o png-module.la $(PNG_LIB) $(LIBS)
- socket-module.so: socket-module.c config.h
--	$(CC_SHARED) $(INCS) socket-module.c -o socket-module.so $(SOCKET_LIBS) $(LIBS)
++pcre-module.so: pcre-module.c config.h
++	${LIBTOOL} --mode=compile ${CC} -c $(INCS) pcre-module.c
++	$(CC_SHARED) $(INCS) pcre-module.lo -o pcre-module.la $(LIBS)
++onig-module.so: onig-module.c config.h
++	${LIBTOOL} --mode=compile ${CC} -c $(INCS) onig-module.c
++	$(CC_SHARED) $(INCS) onig-module.lo -o onig-module.la $(LIBS)
++png-module.so: png-module.c config.h
++	${LIBTOOL} --mode=compile ${CC} -c $(INCS) png-module.c
++	$(CC_SHARED) $(INCS) png-module.lo -o png-module.la $(LIBS)
++socket-module.so: socket-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) socket-module.c
-+	$(CC_SHARED) $(INCS) socket-module.lo -o socket-module.la $(SOCKET_LIBS) $(LIBS)
- iconv-module.so: iconv-module.c config.h
--	$(CC_SHARED) $(INCS) $(ICONV_INC) iconv-module.c -o iconv-module.so $(ICONV_LIB) $(LIBS)
-+	${LIBTOOL} --mode=compile ${CC} -c $(INCS) $(ICONV_INC) iconv-module.c
-+	$(CC_SHARED) $(INCS) $(ICONV_INC) iconv-module.lo -o iconv-module.la $(ICONV_LIB) $(LIBS)
- zlib-module.so: zlib-module.c config.h
--	$(CC_SHARED) $(INCS) $(ZLIB_INC) zlib-module.c -o zlib-module.so $(ZLIB_LIB) $(LIBS)
-+	${LIBTOOL} --mode=compile ${CC} -c $(INCS) $(ZLIB_INC) zlib-module.c
-+	$(CC_SHARED) $(INCS) $(ZLIB_INC) zlib-module.lo -o zlib-module.la $(ZLIB_LIB) $(LIBS)
- fork-module.so: fork-module.c config.h
--	$(CC_SHARED) $(INCS) fork-module.c -o fork-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) socket-module.lo -o socket-module.la $(LIBS)
++iconv-module.so: iconv-module.c config.h
++	${LIBTOOL} --mode=compile ${CC} -c $(INCS) iconv-module.c
++	$(CC_SHARED) $(INCS) iconv-module.lo -o iconv-module.la $(LIBS)
++zlib-module.so: zlib-module.c config.h
++	${LIBTOOL} --mode=compile ${CC} -c $(INCS) zlib-module.c
++	$(CC_SHARED) $(INCS) zlib-module.lo -o zlib-module.la $(LIBS)
++fork-module.so: fork-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) fork-module.c
 +	$(CC_SHARED) $(INCS) fork-module.lo -o fork-module.la $(LIBS)
- sysconf-module.so: sysconf-module.c config.h
--	$(CC_SHARED) $(INCS) sysconf-module.c -o sysconf-module.so $(LIBS)
++sysconf-module.so: sysconf-module.c config.h
 +	${LIBTOOL} --mode=compile ${CC} -c $(INCS) sysconf-module.c
 +	$(CC_SHARED) $(INCS) sysconf-module.lo -o sysconf-module.la $(LIBS)
++csv-module.so: csv-module.c config.h
++	${LIBTOOL} --mode=compile ${CC} -c $(INCS) csv-module.c
++	$(CC_SHARED) $(INCS) csv-module.lo -o csv-module.la $(LIBS)
  
  # Note that Windows/Cygwin modules need execute permissions
  install: all
@@ -90,8 +126,8 @@ $NetBSD: patch-ae,v 1.4 2010/08/09 12:21:48 drochner Exp $
 -	@for i in $(MODULES); \
 +	@for i in $(MODULES:.so=.la); \
  	do \
- 		echo $(INSTALL_MODULE) $$i $(DEST_MODULEDIR); \
--		$(INSTALL_MODULE) $$i $(DEST_MODULEDIR); \
+ 		echo $(INSTALL_MODULE) $(OBJDIR)/$$i $(DEST_MODULEDIR); \
+-		$(INSTALL_MODULE) $(OBJDIR)/$$i $(DEST_MODULEDIR); \
 +		$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $$i $(DEST_MODULEDIR); \
  	done
  	-$(MKINSDIR) $(DEST_SLSH_DIR)
