@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2005/08/26 08:32:13 adam Exp $
+$NetBSD: patch-aa,v 1.9 2011/12/07 15:18:51 joerg Exp $
 
 --- Makefile.in.orig	2004-03-04 20:33:56.000000000 +0000
 +++ Makefile.in
@@ -48,3 +48,33 @@ $NetBSD: patch-aa,v 1.8 2005/08/26 08:32:13 adam Exp $
  
  #
  # special rules for scanner/parser
+@@ -210,26 +210,11 @@ YACC_VAL=@YACC@
+ LEX_VAL=@LEX@
+ 
+ filt_parser.c: filt_parser.y filter.h
+-	if test "${YACC_VAL}" = "bison -y" ; then \
+-		@YACC@ -vd -p filtyy -o filt_parser.c $(srcdir)/filt_parser.y ;\
+-		cp filt_parser.c flex_bison ;\
+-		cp filt_parser.h flex_bison ;\
+-	else \
+-		echo "Could not find BISON on this system";\
+-		echo "Copying the BISON output files generated at our place" ;\
+-		cp flex_bison/filt_parser.c . ;\
+-		cp flex_bison/filt_parser.h . ;\
+-	fi
++	@YACC@ -vd -p filtyy -o filt_parser.c $(srcdir)/filt_parser.y
+ 
+ filt_scanner.c: filt_scanner.l filter.h filt_parser.h
+-	if test ${LEX_VAL} = "flex" ; then \
+-		@LEX@ -t -Pfiltyy $(srcdir)/filt_scanner.l > filt_scanner.c ;\
+-		cp filt_scanner.c flex_bison ;\
+-	else \
+-		echo "Could not find FLEX on this system" ;\
+-		echo "Copying the FLEX output files generated at our place" ;\
+-		cp flex_bison/filt_scanner.c . ;\
+-	fi
++	@LEX@ -t -Pfiltyy $(srcdir)/filt_scanner.l > filt_scanner.c
++	cp filt_scanner.c flex_bison
+ 
+ # filt_parser.h created as a side effect of running yacc...
+ filt_parser.h: filt_parser.c
