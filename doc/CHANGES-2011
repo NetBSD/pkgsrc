@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3186 2011/12/06 22:21:41 asau Exp $
+$NetBSD: CHANGES-2011,v 1.3187 2011/12/07 00:32:17 jym Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5033,3 +5033,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/postgresql91-upgrade to 9.1.2 [adam 2011-12-06]
 	Updated lang/racket to 5.2 [asau 2011-12-06]
 	Updated lang/racket-textual to 5.2 [asau 2011-12-06]
+	Added benchmarks/phoronix-test-suite version 3.4.0 [jym 2011-12-07]
