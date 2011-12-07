@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3190 2011/12/07 13:12:29 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3191 2011/12/07 13:21:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5038,3 +5038,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Captcha-reCAPTCHA-Mailhide to 0.94 [hiramatsu 2011-12-07]
 	Added devel/py-ordereddict version 1.1 [obache 2011-12-07]
 	Updated graphics/py-blockdiag to 1.1.1 [obache 2011-12-07]
+	Updated graphics/py-seqdiag to 0.7.1 [obache 2011-12-07]
