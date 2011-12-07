@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2011/12/04 18:42:02 markd Exp $
+# $NetBSD: Makefile,v 1.120 2011/12/07 10:18:23 joerg Exp $
 
 DISTNAME=		R-2.14.0
 CATEGORIES=		math
@@ -18,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
+USE_TOOLS+=		pkg-config
 USE_GNU_READLINE=	yes		# uses callback interface
 USE_GNU_ICONV=		yes		# latin1 support, iconvlist
 USE_LANGUAGES=		c c++ fortran
