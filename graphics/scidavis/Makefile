@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:01:46 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2011/12/07 15:55:28 drochner Exp $
 #
 
 DISTNAME=	scidavis-0.2.4
@@ -26,6 +26,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../math/muparser/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qwt+= qwt<6
 .include "../../x11/qwt-qt4/buildlink3.mk"
 .include "../../x11/qwtplot3d-qt4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
