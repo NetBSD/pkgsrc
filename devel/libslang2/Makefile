@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2011/06/10 10:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2011/12/07 19:49:00 drochner Exp $
 #
 
-DISTNAME=	slang-2.2.2
+DISTNAME=	slang-2.2.4
 PKGNAME=	lib${DISTNAME:slang%=slang2%}
-PKGREVISION=	2
 SVR4_PKGNAME=	lslan
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v2.2/ \
@@ -53,7 +52,7 @@ REPLACE.slsh.old=	/usr/bin/env\ slsh
 REPLACE.slsh.new=	${PREFIX}/bin/slsh
 REPLACE_FILES.slsh=	slsh/scripts/jpegsize slsh/scripts/lsrpm \
 			slsh/scripts/sldb slsh/scripts/slprof \
-			slsh/scripts/svnsh
+			slsh/scripts/svnsh slsh/scripts/slstkchk
 
 USE_FEATURES=		# empty (used in options.mk)
 .include "options.mk"
