@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2011/10/12 19:45:25 hans Exp $
+# $NetBSD: Makefile.common,v 1.14 2011/12/07 16:00:41 adam Exp $
 #
 # used by databases/postgresql90-adminpack/Makefile
 # used by databases/postgresql90-client/Makefile
@@ -23,7 +23,7 @@
 
 .include "../../databases/postgresql90/Makefile.mirrors"
 
-DISTNAME=	postgresql-9.0.5
+DISTNAME=	postgresql-9.0.6
 CATEGORIES=	databases
 MASTER_SITES=	${PGSQL_MIRRORS:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
