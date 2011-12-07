@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opengl,v 1.1 2010/05/08 16:53:06 tez Exp $
+@comment $NetBSD: PLIST.opengl,v 1.2 2011/12/07 20:09:19 drochner Exp $
 bin/xscreensaver-gl-helper
 libexec/xscreensaver/antinspect
 libexec/xscreensaver/antmaze
@@ -14,6 +14,7 @@ libexec/xscreensaver/bubble3d
 libexec/xscreensaver/cage
 libexec/xscreensaver/carousel
 libexec/xscreensaver/circuit
+libexec/xscreensaver/companioncube
 libexec/xscreensaver/config/antinspect.xml
 libexec/xscreensaver/config/antmaze.xml
 libexec/xscreensaver/config/antspotlight.xml
@@ -28,6 +29,7 @@ libexec/xscreensaver/config/bubble3d.xml
 libexec/xscreensaver/config/cage.xml
 libexec/xscreensaver/config/carousel.xml
 libexec/xscreensaver/config/circuit.xml
+libexec/xscreensaver/config/companioncube.xml
 libexec/xscreensaver/config/crackberg.xml
 libexec/xscreensaver/config/cube21.xml
 libexec/xscreensaver/config/cubenetic.xml
@@ -36,6 +38,7 @@ libexec/xscreensaver/config/cubicgrid.xml
 libexec/xscreensaver/config/dangerball.xml
 libexec/xscreensaver/config/endgame.xml
 libexec/xscreensaver/config/engine.xml
+libexec/xscreensaver/config/extrusion.xml
 libexec/xscreensaver/config/flipflop.xml
 libexec/xscreensaver/config/flipscreen3d.xml
 libexec/xscreensaver/config/fliptext.xml
@@ -54,6 +57,7 @@ libexec/xscreensaver/config/glschool.xml
 libexec/xscreensaver/config/glslideshow.xml
 libexec/xscreensaver/config/glsnake.xml
 libexec/xscreensaver/config/gltext.xml
+libexec/xscreensaver/config/hilbert.xml
 libexec/xscreensaver/config/hypertorus.xml
 libexec/xscreensaver/config/hypnowheel.xml
 libexec/xscreensaver/config/jigglypuff.xml
@@ -94,6 +98,7 @@ libexec/xscreensaver/config/surfaces.xml
 libexec/xscreensaver/config/tangram.xml
 libexec/xscreensaver/config/timetunnel.xml
 libexec/xscreensaver/config/topblock.xml
+libexec/xscreensaver/config/tronbit.xml
 libexec/xscreensaver/config/voronoi.xml
 libexec/xscreensaver/crackberg
 libexec/xscreensaver/cube21
@@ -122,6 +127,7 @@ libexec/xscreensaver/glschool
 libexec/xscreensaver/glslideshow
 libexec/xscreensaver/glsnake
 libexec/xscreensaver/gltext
+libexec/xscreensaver/hilbert
 libexec/xscreensaver/hypertorus
 libexec/xscreensaver/hypnowheel
 libexec/xscreensaver/jigglypuff
@@ -162,6 +168,7 @@ libexec/xscreensaver/surfaces
 libexec/xscreensaver/tangram
 libexec/xscreensaver/timetunnel
 libexec/xscreensaver/topblock
+libexec/xscreensaver/tronbit
 libexec/xscreensaver/voronoi
 man/man6/antinspect.6
 man/man6/antmaze.6
@@ -177,6 +184,7 @@ man/man6/bubble3d.6
 man/man6/cage.6
 man/man6/carousel.6
 man/man6/circuit.6
+man/man6/companioncube.6
 man/man6/crackberg.6
 man/man6/cube21.6
 man/man6/cubenetic.6
@@ -204,6 +212,7 @@ man/man6/glschool.6
 man/man6/glslideshow.6
 man/man6/glsnake.6
 man/man6/gltext.6
+man/man6/hilbert.6
 man/man6/hypertorus.6
 man/man6/hypnowheel.6
 man/man6/jigglypuff.6
@@ -244,5 +253,6 @@ man/man6/surfaces.6
 man/man6/tangram.6
 man/man6/timetunnel.6
 man/man6/topblock.6
+man/man6/tronbit.6
 man/man6/voronoi.6
 man/man6/xscreensaver-gl-helper.6
