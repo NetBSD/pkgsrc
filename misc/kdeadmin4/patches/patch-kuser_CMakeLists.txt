@@ -1,0 +1,32 @@
+$NetBSD: patch-kuser_CMakeLists.txt,v 1.1 2011/12/07 07:53:24 marino Exp $
+
+--- kuser/CMakeLists.txt.orig	2008-12-04 08:35:50.000000000 +0000
++++ kuser/CMakeLists.txt
+@@ -3,6 +3,7 @@ project(kuser)
+ find_package(KdepimLibs REQUIRED)
+ 
+ include(CheckFunctionExists)
++include(CheckLibraryExists)
+ 
+ include(TestBigEndian)
+ 
+@@ -26,6 +27,7 @@ check_include_files(crypt.h HAVE_CRYPT_H
+ check_include_files(sys/stat.h HAVE_SYS_STAT_H)
+ check_include_files(unistd.h HAVE_UNISTD_H)
+ check_include_files(paths.h HAVE_PATHS_H)
++check_library_exists(crypt crypt "" HAVE_CRYPT_LIBRARY)
+ 
+ set(CMAKE_REQUIRED_INCLUDES pwd.h)
+ check_function_exists(fgetpwent HAVE_FGETPWENT)
+@@ -72,9 +74,9 @@ kde4_add_ui_files(kuser_SRCS ku_filesset
+ kde4_add_executable(kuser ${kuser_SRCS})
+ 
+ target_link_libraries(kuser ${KDE4_KIO_LIBS} ${KDE4_KLDAP_LIBS} kntlm)
+-if(HAVE_CRYPT_H)
++if(HAVE_CRYPT_LIBRARY)
+ 	target_link_libraries(kuser crypt)
+-endif(HAVE_CRYPT_H)
++endif(HAVE_CRYPT_LIBRARY)
+ 
+ install(TARGETS kuser ${INSTALL_TARGETS_DEFAULT_ARGS})
+ 
