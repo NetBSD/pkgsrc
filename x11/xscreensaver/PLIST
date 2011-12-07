@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2010/05/08 16:53:06 tez Exp $
+@comment $NetBSD: PLIST,v 1.38 2011/12/07 20:09:19 drochner Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -57,7 +57,6 @@ libexec/xscreensaver/config/drift.xml
 libexec/xscreensaver/config/epicycle.xml
 libexec/xscreensaver/config/eruption.xml
 libexec/xscreensaver/config/euler2d.xml
-libexec/xscreensaver/config/extrusion.xml
 libexec/xscreensaver/config/fadeplot.xml
 libexec/xscreensaver/config/fiberlamp.xml
 libexec/xscreensaver/config/fireworkx.xml
