@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+$NetBSD: patch-ab,v 1.2 2011/12/07 15:22:59 joerg Exp $
 
---- ../Config.mk.orig	2008-08-07 10:56:22.000000000 +0200
+--- ../Config.mk.orig	2009-08-06 13:17:07.000000000 +0000
 +++ ../Config.mk
-@@ -84,7 +84,7 @@ QEMU_REMOTE=http://xenbits.xensource.com
+@@ -66,7 +66,7 @@ CFLAGS += -Wall -Wstrict-prototypes
+ 
+ # -Wunused-value makes GCC 4.x too aggressive for my taste: ignoring the
+ # result of any casted expression causes a warning.
+-CFLAGS += -Wno-unused-value
++CFLAGS += -Wno-unused-value -Wno-switch
+ 
+ HOSTCFLAGS += $(call cc-option,$(HOSTCC),-Wdeclaration-after-statement,)
+ CFLAGS     += $(call cc-option,$(CC),-Wdeclaration-after-statement,)
+@@ -90,7 +90,7 @@ QEMU_REMOTE=http://xenbits.xensource.com
  
  # Specify which qemu-dm to use. This may be `ioemu' to use the old
  # Mercurial in-tree version, or a local directory, or a git URL.
