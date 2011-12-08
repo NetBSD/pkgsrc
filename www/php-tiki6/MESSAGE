@@ -1,32 +1,34 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/12/07 13:29:39 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2011/12/08 20:35:25 ryoon Exp $
 
 To use tiki with Apache 2.2, you will need to perform the following steps.
 
-1. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
+1. Install www/apache22 and www/ap-php
+
+2. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
    If your machine are located in Tokyo, Japan, you should get the following.
-   
+
 	# cat ${PREFIX}/etc/php.ini | grep date.timezone
 	date.timezone ="Asia/Tokyo"
 
-2. Install MySQL database server.
+3. Install MySQL database server.
 
 	# cd databases/mysql51-server
 	# make install
 
-3. Start MySQL server, and setup MySQL server
+4. Start MySQL server, and setup MySQL server
 
 	# ${RCD_SCRIPTS_DIR}/mysqld start
 	And see messages.
 
-4. Add MySQL user, tiki
+5. Add MySQL user, tiki
 
 	$ mysql -u root -p
 	Enter password: YOUR_MYSQL_ROOT_PASSWORD
 	> create user tiki identified by 'tiki_user_password';
 	> quit
 
-5. Create database for tiki
+6. Create database for tiki
 
 	$ mysql -u root -p
 	Enter password: YOUR_MYSQL_ROOT_PASSWORD
@@ -35,14 +37,14 @@ To use tiki with Apache 2.2, you will need to perform the following steps.
 	on tiki.* to tiki@localhost identified by 'tiki_password';
 	> quit
 
-6. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=gd.so
 	extension=xmlrpc.so
 	extension=mysqli.so
 	extension=iconv.so
 
-7. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
 
 	DocumentRoot "${PREFIX}/share/tiki6"
 	LoadModule php5_module lib/httpd/mod_php5.so
@@ -52,7 +54,7 @@ To use tiki with Apache 2.2, you will need to perform the following steps.
 		Allow from All
 	</Directory>
 
-8. Access http://localhost/tiki-install.php
+9. Access http://localhost/tiki-install.php
    And setup with the following information.
 
 	database name:	tiki
