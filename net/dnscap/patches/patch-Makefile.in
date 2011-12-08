@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/12/08 07:39:00 agc Exp $
+
+DESTDIR
+don't rename old binaries
+install man page into correct directory
+
+--- Makefile.in	2011/12/07 20:36:41	1.1
++++ Makefile.in	2011/12/07 20:37:44
+@@ -45,11 +45,9 @@
+ all: ${prog} ${prog}.cat1
+ 
+ install: all
+-	mkdir -p ${bindir} ${mandir}
+-	if [ -f ${bindir}/${prog} ]; then \
+-		mv -f ${bindir}/${prog} ${bindir}/${prog}.old; fi
+-	cp ${prog} ${bindir}
+-	cp ${prog}.cat1 /usr/local/man/cat1/${prog}.1
++	mkdir -p ${DESTDIR}${bindir} ${DESTDIR}${mandir}/man1
++	cp ${prog} ${DESTDIR}${bindir}
++	cp ${prog}.1 ${DESTDIR}${prefix}/man/man1/${prog}.1
+ 
+ .c.o:
+ 	${CC} ${CFLAGS} -c $<

@@ -1,0 +1,16 @@
+dnscap is a network capture utility designed specifically for DNS
+traffic.  It produces binary data in pcap(3) format.  This utility is
+similar to tcpdump(1), but has a number of features tailored to DNS
+transactions and protocol options.
+
+OARC likes to use dnscap for DITL data collections.  Some of its
+features include:
+
++ Understands both IPv4 and IPv6
++ Captures UDP, TCP, and IP fragments.
++ Collect only queries, responses, or both (-s option)
++ Collect for only certain source/destination addresses (-a -z -A -Z
+  options)
++ Periodically creates new pcap files (-t option)
++ Spawns an upload script after closing a pcap file (-k option)
++ Will start and stop collecting at specific times (-B -E options)
