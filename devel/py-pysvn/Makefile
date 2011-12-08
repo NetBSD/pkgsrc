@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/12/02 07:13:49 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/08 20:45:42 marino Exp $
 #
 
 VERS=			1.7.2
@@ -27,6 +27,12 @@ PY_PATCHPLIST=		yes
 TESTDIR=		Tests
 
 BUILD_DIRS=		${PSVNSRC}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+BUILDLINK_TRANSFORM+=	rm:-lresolv
+.endif
 
 .include "../../lang/python/pyversion.mk"
 
