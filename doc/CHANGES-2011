@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3205 2011/12/08 20:37:34 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3206 2011/12/08 22:53:51 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5071,3 +5071,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/jenkins version 1.424.1 [ryoon 2011-12-08]
 	Updated security/stunnel to 4.50 [jym 2011-12-08]
 	Updated www/php-tiki6 to 6.4nb1 [ryoon 2011-12-08]
+	Updated lang/perl5 to 5.14.2nb3 [hiramatsu 2011-12-08]
