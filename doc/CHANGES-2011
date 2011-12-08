@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3201 2011/12/08 12:53:36 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3202 2011/12/08 12:59:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5067,3 +5067,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added net/dnscap version 134 [agc 2011-12-07]
 	Updated www/ruby-httpclient to 2.2.4 [obache 2011-12-08]
 	Updated audio/py-ao to 0.82nb1 [obache 2011-12-08]
+	Updated audio/py-id3lib to 0.5.1nb2 [obache 2011-12-08]
