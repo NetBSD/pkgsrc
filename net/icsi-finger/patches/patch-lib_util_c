@@ -1,0 +1,23 @@
+$NetBSD: patch-lib_util_c,v 1.1.2.2 2011/12/08 04:01:09 sbd Exp $
+
+- use standard headers
+
+--- lib/util.c~	1997-10-19 00:06:56.000000000 +0000
++++ lib/util.c
+@@ -26,6 +26,7 @@ static char *rcsid = "$Id: util.c,v 1.27
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
+ #include <sys/types.h>
+@@ -239,8 +240,6 @@ memory_error_and_abort (nbytes)
+   handle_error(FATAL, "(re)alloc error. Cannot allocate %d bytes.", nbytes);
+ }
+   
+-extern char *malloc(), *realloc();
+-
+ void *
+ xmalloc (nbytes)
+      int nbytes;

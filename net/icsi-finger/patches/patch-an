@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.2.2 2011/12/08 04:01:09 sbd Exp $
+
+--- src/packet2ascii.c.orig	1994-01-11 02:14:49.000000000 +0000
++++ src/packet2ascii.c
+@@ -101,7 +101,7 @@ char *
+ parse_time(line, sep, buffer, lineno, name)
+ 	char *line;
+ 	char sep;
+-	time_t *buffer;
++	int32_t *buffer;
+ 	int lineno;
+ 	char *name;
+ {
