@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.37 2011/12/06 19:08:31 marino Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.38 2011/12/08 20:38:39 marino Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -9,9 +9,9 @@ TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.bsdtar?=		/usr/bin/bsdtar
 .endif
 TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
-TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
 TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
+TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
 TOOLS_PLATFORM.chmod?=		/bin/chmod
 TOOLS_PLATFORM.chown?=		/usr/sbin/chown
@@ -66,6 +66,7 @@ TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
+TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
@@ -90,4 +91,5 @@ TOOLS_PLATFORM.true?=		/usr/bin/true
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
