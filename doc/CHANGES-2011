@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3199 2011/12/08 07:41:04 agc Exp $
+$NetBSD: CHANGES-2011,v 1.3200 2011/12/08 12:08:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5065,3 +5065,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Package-Stash-XS to 0.25 [hiramatsu 2011-12-08]
 	Updated devel/p5-Readonly to 1.03nb4 [hiramatsu 2011-12-08]
 	Added net/dnscap version 134 [agc 2011-12-07]
+	Updated www/ruby-httpclient to 2.2.4 [obache 2011-12-08]
