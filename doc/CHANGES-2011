@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3198 2011/12/08 02:18:08 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3199 2011/12/08 07:41:04 agc Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5064,3 +5064,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-Authentication-Credential-HTTP to 1.013 [hiramatsu 2011-12-08]
 	Updated devel/p5-Package-Stash-XS to 0.25 [hiramatsu 2011-12-08]
 	Updated devel/p5-Readonly to 1.03nb4 [hiramatsu 2011-12-08]
+	Added net/dnscap version 134 [agc 2011-12-07]
