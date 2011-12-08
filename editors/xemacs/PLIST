@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/12/16 17:45:12 hauke Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/12/08 20:43:28 marino Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -675,7 +675,7 @@ lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/isc4-1.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/linux.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/mach-bsd4-3.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/mingw32.h
-lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/${LOWER_OPSYS}.h
+lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/netbsd.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/newsos5.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/nextstep.h
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s/openbsd.h
