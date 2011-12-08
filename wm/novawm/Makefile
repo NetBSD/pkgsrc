@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2011/12/08 01:38:51 dholland Exp $
 #
 
 DISTNAME=	NovaWM-0.8_alpha
@@ -16,6 +16,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+
+post-extract:
+	chmod u+w ${WRKSRC}/.xvpics
+	chmod u+w ${WRKSRC}/novawm_dmgr/xpm/.xvpics
+	chmod u+w ${WRKSRC}/src/xpm/.xvpics
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
