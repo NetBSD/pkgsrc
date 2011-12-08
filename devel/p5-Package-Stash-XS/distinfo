@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/16 20:57:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2011/12/08 00:40:09 hiramatsu Exp $
 
-SHA1 (Package-Stash-XS-0.23.tar.gz) = 9e38a497a0e6689a4745d9c00e0a40801e19ed60
-RMD160 (Package-Stash-XS-0.23.tar.gz) = b9733847de2da15acadf8e38beddad9d8210f252
-Size (Package-Stash-XS-0.23.tar.gz) = 66634 bytes
+SHA1 (Package-Stash-XS-0.25.tar.gz) = e4b131c03792108a87289289bc9ab75ea555c2e1
+RMD160 (Package-Stash-XS-0.25.tar.gz) = 32af99cfadf90f26e791479da32f65a882b84091
+Size (Package-Stash-XS-0.25.tar.gz) = 67155 bytes
