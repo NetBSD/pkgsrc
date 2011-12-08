@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/07 13:29:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/08 03:01:48 joerg Exp $
 #
 
 DISTNAME=	tiki-6.4
@@ -13,6 +13,8 @@ COMMENT=	Tiki Wiki CMS Groupware web-based application
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PHP_VERSIONS_ACCEPTED=		53
 
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.3.8:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.8:../../databases/php-mysqli
