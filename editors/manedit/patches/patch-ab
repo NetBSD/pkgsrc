@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2007/10/14 07:49:54 rillig Exp $
+$NetBSD: patch-ab,v 1.6 2011/12/08 06:49:41 marino Exp $
 
 --- config.h.orig	Mon Dec 30 00:43:48 2002
 +++ config.h	Mon Dec 30 00:42:47 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/14 07:49:54 rillig Exp $
   *	%p = optional parameters
   */
 -#if !defined(__FreeBSD__)
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
  #define MEDIT_CMD_MANPAGE_TO_OUTPUT	(PREFIX "/bin/man %p %f")
  #else
  #define MEDIT_CMD_MANPAGE_TO_OUTPUT	(PREFIX "/bin/manwrap %p %f")

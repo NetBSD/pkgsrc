@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2007/10/14 07:49:54 rillig Exp $
+$NetBSD: patch-ad,v 1.5 2011/12/08 06:49:42 marino Exp $
 
 --- prefcb.c.orig	Mon Dec 30 00:47:35 2002
 +++ prefcb.c	Mon Dec 30 00:47:46 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.4 2007/10/14 07:49:54 rillig Exp $
  	PDialogAddPromptWithBrowse(
  	    NULL, "Path:",
 -#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined (__NetBSD__)
++#if defined(__FreeBSD__) || defined (__NetBSD__) || defined(__DragonFly__)
  	    "/usr/share/man",
  #else
  	    "/usr/man",
