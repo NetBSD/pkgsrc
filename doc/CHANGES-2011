@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3196 2011/12/07 22:58:34 tron Exp $
+$NetBSD: CHANGES-2011,v 1.3197 2011/12/08 00:41:48 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5058,3 +5058,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/postgresql90-replicationtools to 9.0.6 [adam 2011-12-07]
 	Updated databases/postgresql90-upgrade to 9.0.6 [adam 2011-12-07]
 	Updated www/apache22 to 2.2.21nb4 [tron 2011-12-07]
+	Updated devel/p5-IO-Multiplex to 1.13 [hiramatsu 2011-12-08]
+	Updated devel/p5-Test-Base to 0.60 [hiramatsu 2011-12-08]
+	Updated devel/p5-UNIVERSAL-can to 1.20110617 [hiramatsu 2011-12-08]
+	Updated www/p5-Catalyst-Authentication-Credential-HTTP to 1.013 [hiramatsu 2011-12-08]
+	Updated devel/p5-Package-Stash-XS to 0.25 [hiramatsu 2011-12-08]
