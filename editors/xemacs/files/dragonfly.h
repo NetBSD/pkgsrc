@@ -35,8 +35,7 @@
 #define LD_SWITCH_SYSTEM
 
 #ifdef DFLY_CRT_USRLIB
-#define START_FILES pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/gcc41/crtbegin.o
-#define LIB_STANDARD -L/usr/lib/gcc41 -lgcc -lc -lgcc /usr/lib/gcc41/crtend.o /usr/lib/crtn.o
+#define ORDINARY_LINK
 #else
 #define START_FILES pre-crt0.o /usr/lib/gcc41/crt1.o /usr/lib/gcc41/crti.o /usr/lib/gcc41/crtbegin.o
 #define LIB_STANDARD -L/usr/lib/gcc41 -lgcc -lc -lgcc /usr/lib/gcc41/crtend.o /usr/lib/gcc41/crtn.o
