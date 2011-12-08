@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/08 14:09:25 ryoon Exp $
+
+SHA1 (jenkins-1.424.1/jenkins.war) = 15fcdfb00c06df1d8c1067aeeac5655486a6d3a1
+RMD160 (jenkins-1.424.1/jenkins.war) = d3defc491b5ded198c7b1907c59345b3b5d734b2
+Size (jenkins-1.424.1/jenkins.war) = 41656012 bytes

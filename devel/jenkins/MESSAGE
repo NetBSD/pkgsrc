@@ -1,0 +1,31 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/12/08 14:09:25 ryoon Exp $
+
+To use jenkins with apache tomcat, you will need to perform the following
+steps. Of cource you can run jenkins with builtin winstone web server.
+
+1. Install apache tomcat server, for example apache-tomcat7
+
+	# cd www/apache-tomcat7
+	# make install
+
+2. Set jenkins location to apache tomcat
+	$ sudo vi ${PREFIX}/share/tomcat/conf/server.xml
+	Add
+	<Context path="/jenkins" docBase="${PREFIX}/share/jenkins"
+		debug="0" reloadable="true">
+	</Context>
+	in <Host> tag
+
+3. Set URI Encoding as UTF-8
+	$ vi ${PREFIX}/share/tomcat/conf/server.xml
+	You should have
+	URIEncoding="UTF-8"
+	in <Connector/> tag. For example, you should have the following
+	lines.
+	<Connector port="8080" protocol="HTTP/1.1"
+		connectionTimeout="20000"
+		redirectPort="8443" URIEncoding="UTF-8"/>
+
+4. Start apache tomcat and access http://localhost:8080/jenkins/
+===========================================================================
