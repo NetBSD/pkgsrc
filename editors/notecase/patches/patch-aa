@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2011/12/08 20:41:47 marino Exp $
 
 --- src/callbacks.cpp.orig	2007-11-12 15:41:56.000000000 +0100
 +++ src/callbacks.cpp
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
  #include "ExecuteFile.h"
  
 -#if defined (__FreeBSD__) || defined (__APPLE__)
-+#if defined (__FreeBSD__) || defined (__APPLE__) || defined (__NetBSD__)
++#if defined (__FreeBSD__) || defined (__APPLE__) || defined (__NetBSD__) || defined (__DragonFly__)
   #include <libgen.h>		//basename
  #endif
  
