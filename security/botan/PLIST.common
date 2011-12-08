@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2011/11/25 21:25:26 joerg Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2011/12/08 03:01:03 jmmv Exp $
 bin/botan-config
 include/botan/adler32.h
 include/botan/aes.h
@@ -94,7 +94,6 @@ include/botan/emsa2.h
 include/botan/emsa3.h
 include/botan/emsa4.h
 include/botan/emsa_raw.h
-${PLIST.x86_64}include/botan/eng_amd64.h
 include/botan/engine.h
 include/botan/entropy_src.h
 include/botan/es_dev.h
@@ -206,7 +205,6 @@ include/botan/seed.h
 include/botan/selftest.h
 include/botan/serpent.h
 include/botan/sha160.h
-${PLIST.x86_64}include/botan/sha1_amd64.h
 include/botan/sha2_32.h
 include/botan/sha2_64.h
 include/botan/signed_obj.h
