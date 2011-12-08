@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/08 07:39:00 agc Exp $
+bin/dnscap
+man/man1/dnscap.1
