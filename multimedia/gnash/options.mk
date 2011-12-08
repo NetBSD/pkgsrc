@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2011/09/19 14:50:36 obache Exp $
+# $NetBSD: options.mk,v 1.16 2011/12/08 10:39:13 obache Exp $
 #
 
 #
@@ -29,9 +29,9 @@ PLIST.gtk=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mkde)
-BUILDLINK_DEPMETHOD.xulrunner=	build
-.include "../../devel/xulrunner/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-npapi-incl=${BUILDLINK_PREFIX.xulrunner}/include/xulrunner
+BUILDLINK_DEPMETHOD.xulrunner192=	build
+.include "../../devel/xulrunner192/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-npapi-incl=${BUILDLINK_PREFIX.xulrunner192}/include/xulrunner192
 CONFIGURE_ARGS+=	--with-npapi-install=system
 CONFIGURE_ARGS+=	--with-npapi-plugindir=${PREFIX}/lib/netscape/plugins
 PLIST.plugin=		yes
