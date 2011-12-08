@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1541 2011/12/08 06:55:15 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1542 2011/12/08 14:09:45 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -283,6 +283,7 @@ SUBDIR+=	jam
 SUBDIR+=	java-subversion
 SUBDIR+=	javacc
 SUBDIR+=	javadeps
+SUBDIR+=	jenkins
 SUBDIR+=	jflex
 SUBDIR+=	js2-mode
 SUBDIR+=	kdbg
