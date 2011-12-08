@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/08 07:39:00 agc Exp $
+
+SHA1 (dnscap-134.tar.gz) = a94265a850014ca2ad2bb545b7b7417161d4dc7f
+RMD160 (dnscap-134.tar.gz) = 9860df237b053199cdec4ea2d1be714f392c8489
+Size (dnscap-134.tar.gz) = 91682 bytes
+SHA1 (patch-Makefile.in) = ddfc02984cf2f092b9356421300a48ee5c59e43b
