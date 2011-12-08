@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3203 2011/12/08 14:11:53 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3204 2011/12/08 19:39:36 jym Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5069,3 +5069,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/py-ao to 0.82nb1 [obache 2011-12-08]
 	Updated audio/py-id3lib to 0.5.1nb2 [obache 2011-12-08]
 	Added devel/jenkins version 1.424.1 [ryoon 2011-12-08]
+	Updated security/stunnel to 4.50 [jym 2011-12-08]
