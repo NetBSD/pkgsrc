@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3206 2011/12/08 22:53:51 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3207 2011/12/08 22:54:31 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5072,3 +5072,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/stunnel to 4.50 [jym 2011-12-08]
 	Updated www/php-tiki6 to 6.4nb1 [ryoon 2011-12-08]
 	Updated lang/perl5 to 5.14.2nb3 [hiramatsu 2011-12-08]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.59nb2 [hiramatsu 2011-12-08]
