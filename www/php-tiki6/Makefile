@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/12/08 03:01:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/08 20:35:25 ryoon Exp $
 #
 
 DISTNAME=	tiki-6.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/tiki-/tiki6-/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tikiwiki/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,12 +15,10 @@ LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PHP_VERSIONS_ACCEPTED=		53
-
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.3.8:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.8:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.8:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.3.8:../../net/php-xmlrpc
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.2.0:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.2.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.2.0:../../net/php-xmlrpc
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
