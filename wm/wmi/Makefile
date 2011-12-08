@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/11/01 06:02:44 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/08 22:13:14 dholland Exp $
 #
 
 DISTNAME=	wmi-10
@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	http://www.suckless.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.suckless.org/wiki/wmii/download
+HOMEPAGE=	http://wmi.suckless.org/
 COMMENT=	Minimalist, flexible and highly customizable window manager
 
 USE_LANGUAGES=	c c++
