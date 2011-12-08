@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/03/07 07:02:06 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2011/12/08 08:20:39 marino Exp $
 
 --- CMakeLists.txt.orig	2010-11-21 09:54:19.000000000 +0000
 +++ CMakeLists.txt
@@ -7,10 +7,10 @@ $NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/03/07 07:02:06 ryoon Exp $
  endif(${CMAKE_SYSTEM_NAME} STREQUAL Linux)
  
 -if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD)
-+if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD OR ${CMAKE_SYSTEM_NAME} STREQUAL NetBSD)
++if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD OR ${CMAKE_SYSTEM_NAME} STREQUAL NetBSD OR ${CMAKE_SYSTEM_NAME} STREQUAL DragonFly)
   set (QGT_L10N_DIRECTORY ${CMAKE_INSTALL_PREFIX}/share/qgoogletranslator/l10n)
 -endif(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD)
-+endif(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++endif(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
  
  
  ADD_DEFINITIONS(${QT_DEFINITIONS})
@@ -19,7 +19,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/03/07 07:02:06 ryoon Exp $
  
  # install for freebsd
 -if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD)
-+if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD OR ${CMAKE_SYSTEM_NAME} STREQUAL NetBSD)
++if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD OR ${CMAKE_SYSTEM_NAME} STREQUAL NetBSD OR ${CMAKE_SYSTEM_NAME} STREQUAL DragonFly)
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/qgoogletranslator.desktop ${CMAKE_CURRENT_BINARY_DIR}/qgoogletranslator.desktop COPYONLY)
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/artwork/icons/eyeworld_icon.png ${CMAKE_CURRENT_BINARY_DIR}/qgoogletranslator.png COPYONLY)
   install(TARGETS qgoogletranslator DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
