@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.51 2011/12/07 08:34:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.52 2011/12/08 04:02:11 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -197,3 +197,7 @@ Pullup ticket #3624 - requested by dholland
 graphics/xart: build fix
 Pullup ticket #3625 - requested by gls
 devel/p5-PAR: security update
+Pullup ticket #3616 - requested by is
+net/icsi-finger security update
+Pullup ticket #3626 - requested by tron
+www/apache22 security update
