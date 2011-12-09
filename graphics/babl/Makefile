@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2011/02/28 14:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/09 17:43:53 adam Exp $
 
-DISTNAME=	babl-0.1.4
+DISTNAME=	babl-0.1.6
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/babl/0.1/ \
 		http://ftp.gwdg.de/pub/misc/grafik/gimp/babl/0.1/
