@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3208 2011/12/09 01:32:40 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.3209 2011/12/09 02:12:19 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5075,3 +5075,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-ExtUtils-MakeMaker to 6.59nb2 [hiramatsu 2011-12-08]
 	Updated finance/xinvest to 2.6.9nb3 [dholland 2011-12-09]
 	Updated wm/bmpanel2 to 2.1pre1nb2 [dholland 2011-12-09]
+	Updated devel/p5-Test-CheckManifest to 1.24 [hiramatsu 2011-12-09]
+	Updated devel/p5-boolean to 0.28 [hiramatsu 2011-12-09]
+	Updated devel/p5-Coro to 6.07 [hiramatsu 2011-12-09]
+	Updated www/p5-Catalyst-Controller-HTML-FormFu to 0.09003 [hiramatsu 2011-12-09]
