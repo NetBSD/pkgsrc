@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2009/05/30 00:20:42 zafer Exp $
+# $NetBSD: Makefile,v 1.20 2011/12/09 14:36:34 drochner Exp $
 #
 
 DISTNAME=	catclock
 PKGNAME=	catclock-0.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.zip

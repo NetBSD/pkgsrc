@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2010/01/29 23:24:15 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2011/12/09 14:36:34 drochner Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 DISTFILES=		imaze-sounds.tar imaze1.3.tar.Z

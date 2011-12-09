@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2011/11/23 00:36:54 marino Exp $
+# $NetBSD: Makefile,v 1.30 2011/12/09 14:36:33 drochner Exp $
 
 DISTNAME=	xmradio-1.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://core.de/~coto/radio/
 
