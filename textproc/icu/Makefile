@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2011/07/25 10:16:54 adam Exp $
+# $NetBSD: Makefile,v 1.66 2011/12/09 16:11:54 drochner Exp $
 
 DISTNAME=	icu4c-4_8_1-src
 PKGNAME=	icu-4.8.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.icu-project.org/files/icu4c/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
