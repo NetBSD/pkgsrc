@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/01 06:02:41 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/09 00:15:36 dholland Exp $
 #
 
 DISTNAME=	bmpanel2-2.1pre1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://bmpanel2.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/bmpanel2/
-COMMENT=	TODO: Short description of the package
+COMMENT=	NETWM-compatible panel for X11
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
