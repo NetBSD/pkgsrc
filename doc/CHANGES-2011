@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3207 2011/12/08 22:54:31 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3208 2011/12/09 01:32:40 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5073,3 +5073,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/php-tiki6 to 6.4nb1 [ryoon 2011-12-08]
 	Updated lang/perl5 to 5.14.2nb3 [hiramatsu 2011-12-08]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.59nb2 [hiramatsu 2011-12-08]
+	Updated finance/xinvest to 2.6.9nb3 [dholland 2011-12-09]
+	Updated wm/bmpanel2 to 2.1pre1nb2 [dholland 2011-12-09]
