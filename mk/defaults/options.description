@@ -534,7 +534,7 @@ squid-unlinkd		Enable use of unlinkd.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
 streamtuner-local	Enable local metadata support.
-streamtuner-xiph	Enable the Xiph plugin	.
+streamtuner-xiph	Enable the Xiph plugin.
 suexec			Enable suEXEC support in Apache web server.
 suhosin			Enable suhosin security enhancements for PHP.
 sun-jre-jce		Use unlimited strength cryptography extension.
