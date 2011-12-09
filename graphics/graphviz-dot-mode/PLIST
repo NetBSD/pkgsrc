@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/09 21:53:44 minskim Exp $
+${EMACS_LISPPREFIX}/graphviz-dot-mode.el
+${EMACS_LISPPREFIX}/graphviz-dot-mode.elc
