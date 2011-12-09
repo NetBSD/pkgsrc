@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3209 2011/12/09 02:12:19 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3210 2011/12/09 07:00:51 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5079,3 +5079,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-boolean to 0.28 [hiramatsu 2011-12-09]
 	Updated devel/p5-Coro to 6.07 [hiramatsu 2011-12-09]
 	Updated www/p5-Catalyst-Controller-HTML-FormFu to 0.09003 [hiramatsu 2011-12-09]
+	Updated devel/p5-pip to 1.19 [hiramatsu 2011-12-09]
+	Updated www/p5-Catalyst-Controller-FormBuilder to 0.06 [hiramatsu 2011-12-09]
+	Updated devel/p5-IO-All to 0.44 [hiramatsu 2011-12-09]
