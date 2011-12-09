@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/02/15 17:11:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/12/09 17:45:13 adam Exp $
 bin/gegl
 include/gegl-0.1/gegl-buffer-backend.h
 include/gegl-0.1/gegl-buffer-iterator.h
@@ -6,6 +6,7 @@ include/gegl-0.1/gegl-buffer.h
 include/gegl-0.1/gegl-chant.h
 include/gegl-0.1/gegl-color.h
 include/gegl-0.1/gegl-curve.h
+include/gegl-0.1/gegl-enums.h
 include/gegl-0.1/gegl-lookup.h
 include/gegl-0.1/gegl-matrix.h
 include/gegl-0.1/gegl-paramspecs.h
@@ -31,7 +32,6 @@ include/gegl-0.1/operation/gegl-operation-sink.h
 include/gegl-0.1/operation/gegl-operation-source.h
 include/gegl-0.1/operation/gegl-operation-temporal.h
 include/gegl-0.1/operation/gegl-operation.h
-lib/gegl-0.1/add-noise.la
 lib/gegl-0.1/add.la
 lib/gegl-0.1/affine.la
 lib/gegl-0.1/bilateral-filter.la
@@ -53,6 +53,7 @@ lib/gegl-0.1/crop.la
 lib/gegl-0.1/darken.la
 lib/gegl-0.1/difference-of-gaussians.la
 lib/gegl-0.1/difference.la
+lib/gegl-0.1/display.la
 lib/gegl-0.1/divide.la
 lib/gegl-0.1/dropshadow.la
 lib/gegl-0.1/dst-atop.la
@@ -60,9 +61,12 @@ lib/gegl-0.1/dst-in.la
 lib/gegl-0.1/dst-out.la
 lib/gegl-0.1/dst-over.la
 lib/gegl-0.1/dst.la
+lib/gegl-0.1/edge-laplace.la
+lib/gegl-0.1/edge-sobel.la
 lib/gegl-0.1/exclusion.la
 lib/gegl-0.1/exp-combine.la
 lib/gegl-0.1/exr-load.la
+lib/gegl-0.1/exr-save.la
 lib/gegl-0.1/fattal02.la
 lib/gegl-0.1/fractal-explorer.la
 lib/gegl-0.1/gamma.la
@@ -76,18 +80,21 @@ lib/gegl-0.1/introspect.la
 lib/gegl-0.1/invert.la
 lib/gegl-0.1/jp2-load.la
 lib/gegl-0.1/jpg-load.la
+lib/gegl-0.1/jpg-save.la
 lib/gegl-0.1/layer.la
 lib/gegl-0.1/levels.la
 lib/gegl-0.1/lighten.la
 lib/gegl-0.1/load.la
 lib/gegl-0.1/magick-load.la
 lib/gegl-0.1/mantiuk06.la
-lib/gegl-0.1/map_absolute.la
+lib/gegl-0.1/map-absolute.la
+lib/gegl-0.1/map-relative.la
 lib/gegl-0.1/mblur.la
 lib/gegl-0.1/mirrors.la
 lib/gegl-0.1/mono-mixer.la
 lib/gegl-0.1/motion-blur.la
 lib/gegl-0.1/multiply.la
+lib/gegl-0.1/noise-reduction.la
 lib/gegl-0.1/noise.la
 lib/gegl-0.1/nop.la
 lib/gegl-0.1/opacity.la
@@ -134,6 +141,7 @@ ${PLIST.v4l}lib/gegl-0.1/v4l.la
 lib/gegl-0.1/value-invert.la
 lib/gegl-0.1/vector-fill.la
 lib/gegl-0.1/vector-stroke.la
+lib/gegl-0.1/vignette.la
 lib/gegl-0.1/weighted-blend.la
 lib/gegl-0.1/whitebalance.la
 lib/gegl-0.1/write-buffer.la
