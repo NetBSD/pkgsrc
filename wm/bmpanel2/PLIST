@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/18 15:30:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/09 01:23:07 dholland Exp $
 bin/bmpanel2
 bin/bmpanel2cfg
 ${PYSITELIB}/bmpanel2.py
@@ -329,3 +329,4 @@ share/bmpanel2/themes/xsocam/tb_tile_idle_img.png
 share/bmpanel2/themes/xsocam/tb_tile_pressed_img.png
 share/bmpanel2/themes/xsocam/theme
 share/bmpanel2/themes/xsocam/tile_img.png
+share/man/man1/bmpanel2.1.gz
