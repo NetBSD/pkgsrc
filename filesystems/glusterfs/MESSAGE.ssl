@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.ssl,v 1.1 2011/12/09 16:57:44 manu Exp $
+
+The following paths are used for SSL key, certificate and CA:
+	${PKG_SYSCONFDIR}/openssl/private/gluster.key
+	${PKG_SYSCONFDIR}/openssl/certs/gluster.crt
+	${PKG_SYSCONFDIR}/openssl/certs/gluster-ca.crt
+
+===========================================================================
