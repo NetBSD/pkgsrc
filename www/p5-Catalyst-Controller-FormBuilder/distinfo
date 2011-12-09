@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/19 22:41:30 sno Exp $
+$NetBSD: distinfo,v 1.3 2011/12/09 06:58:23 hiramatsu Exp $
 
-SHA1 (Catalyst-Controller-FormBuilder-0.05.tar.gz) = b9d98622d4a0f0cab9cd3c88908a1bd7a252200e
-RMD160 (Catalyst-Controller-FormBuilder-0.05.tar.gz) = 11cf2edab81bcdf570f1a4869b99e163db556000
-Size (Catalyst-Controller-FormBuilder-0.05.tar.gz) = 32000 bytes
+SHA1 (Catalyst-Controller-FormBuilder-0.06.tar.gz) = 8a4dfeaeac5ada38a581a5cb74c3605051136276
+RMD160 (Catalyst-Controller-FormBuilder-0.06.tar.gz) = d8335d56d3e75d19bda75121971b68d434b2c268
+Size (Catalyst-Controller-FormBuilder-0.06.tar.gz) = 35669 bytes
