@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2009/07/07 20:46:04 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2011/12/09 14:36:36 drochner Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.linuxbyte.net/Chinese/dictionary/
 DIST_SUBDIR=	${PKGNAME_NOREV}
