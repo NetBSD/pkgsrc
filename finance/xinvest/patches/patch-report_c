@@ -1,0 +1,22 @@
+$NetBSD: patch-report_c,v 1.1 2011/12/09 00:48:45 dholland Exp $
+
+Fix build without xprint.
+
+--- report.c~	2004-05-01 18:57:42.000000000 +0000
++++ report.c
+@@ -1536,6 +1536,7 @@ void reportDestroy(Widget w, Widget clie
+ 
+ void reportPageCB(Widget w, Widget client, XtPointer call)
+ {
++#ifdef XPRINT
+ 	Widget				drawing = (Widget)client;
+ 	XmPrintShellCallbackStruct	*cbp = (XmPrintShellCallbackStruct *)call;
+ 	int				i = 0;
+@@ -1565,6 +1566,7 @@ void reportPageCB(Widget w, Widget clien
+ 	}
+ 
+ 	per = &Global[0];
++#endif /* XPRINT */
+ }
+ 
+ void reportPrintOk(Widget w, Widget client, XtPointer call)

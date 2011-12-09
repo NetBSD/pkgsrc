@@ -1,0 +1,22 @@
+$NetBSD: patch-xinvest_c,v 1.1 2011/12/09 00:48:45 dholland Exp $
+
+Fix build without xprint.
+
+--- xinvest.c~	2004-05-01 18:57:42.000000000 +0000
++++ xinvest.c
+@@ -1652,6 +1652,7 @@ int main (int argc, char **argv)
+ 
+ void PageCB(Widget w, XtPointer client, XtPointer call)
+ {
++#ifdef XPRINT
+ 	XmPrintShellCallbackStruct *cbp = (XmPrintShellCallbackStruct *)call;
+ 
+ 	per = &Global[1];
+@@ -1659,6 +1660,7 @@ void PageCB(Widget w, XtPointer client, 
+ 	per = &Global[0];
+ 
+ 	cbp->last_page = True;
++#endif
+ }
+ 
+ void PrintCB(Widget w, XtPointer client, XtPointer call)
