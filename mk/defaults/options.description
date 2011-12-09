@@ -1,7 +1,7 @@
 aalib			Enable aalib support.
 abook			Enable abook support.
 acl			Enable POSIX ACL support.
-ads			Enable Windows's Active Directory support.
+ads			Enable Windows Active Directory support.
 agg			Enable agg support.
 alsa			Enable ALSA support.
 amtterm-gamt		Build amtterm GUI version (gamt).
@@ -501,8 +501,8 @@ smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
 sndfile			Enable sndfile support.
 snmp			Enable SNMP support.
-snort-flexresp		Flexible Responses on hostile connection attempts.
-snort-flexresp2		NEW Flexible Responses on hostile connection attempts.
+snort-flexresp		Flexible responses on hostile connection attempts.
+snort-flexresp2		Newer flexible responses on hostile connection attempts.
 snort-prelude		Enable support for the Prelude Hybrid IDS system.
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
