@@ -1,3 +1,3 @@
-pcb is a printed circuit board layout too.  It includes connectivity driven
+pcb is a printed circuit board layout tool.  It includes connectivity driven
 layout (rat lines), a layout versus netlist check, design rule checker as well
 as industry standard RS274-X (Gerber) photoplot export.
