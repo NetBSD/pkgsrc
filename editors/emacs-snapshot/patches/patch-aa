@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2011/11/30 04:29:10 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2011/12/09 01:35:08 marino Exp $
 
---- configure.in.orig	2011-11-28 09:24:08.000000000 +0000
+--- configure.in.orig	2011-12-06 08:31:42.000000000 +0000
 +++ configure.in
-@@ -438,6 +438,14 @@ case "${canonical}" in
+@@ -441,6 +441,14 @@ case "${canonical}" in
        sparc64-*)        machine=sparc ;;
      esac
    ;;
@@ -17,3 +17,23 @@ $NetBSD: patch-aa,v 1.3 2011/11/30 04:29:10 minskim Exp $
  
    ## FreeBSD kernel + glibc based userland
    *-*-kfreebsd*gnu* )
+@@ -956,6 +964,8 @@ case "$opsys" in
+ 
+   freebsd) LIBS_SYSTEM="-lutil" ;;
+ 
++  dragonfly) LIBS_SYSTEM="-ltermlib" ;;
++
+   hpux*) LIBS_SYSTEM="-l:libdld.sl" ;;
+ 
+   sol2*) LIBS_SYSTEM="-lsocket -lnsl" ;;
+@@ -1010,6 +1020,10 @@ case $opsys in
+     LIB_STANDARD=-lc
+     START_FILES='pre-crt0.o $(CRT_DIR)/crt0.o'
+     ;;
++  dragonfly )
++    LIB_STANDARD=-lc
++    START_FILES='$(CRT_DIR)/crt1.o'
++    ;;
+   dnl NB this may be adjusted below.
+   netbsd | openbsd )
+     LIB_STANDARD='-lgcc -lc -lgcc $(CRT_DIR)/crtend.o'
