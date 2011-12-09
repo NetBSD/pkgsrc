@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3211 2011/12/09 11:52:12 adam Exp $
+$NetBSD: CHANGES-2011,v 1.3212 2011/12/09 12:43:14 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5083,3 +5083,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-Controller-FormBuilder to 0.06 [hiramatsu 2011-12-09]
 	Updated devel/p5-IO-All to 0.44 [hiramatsu 2011-12-09]
 	Updated graphics/pngcrush to 1.7.22 [adam 2011-12-09]
+	Updated cad/pcb to 20110918 [dmcmahill 2011-12-09]
