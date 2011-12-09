@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2010/07/30 10:36:31 asau Exp $
+# $NetBSD: Makefile,v 1.36 2011/12/09 14:36:35 drochner Exp $
 
 DISTNAME=		xmgr-4.1.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		math
 MASTER_SITES=		ftp://plasma-gate.weizmann.ac.il/pub/xmgr4/src/
 
