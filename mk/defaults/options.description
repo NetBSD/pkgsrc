@@ -100,7 +100,7 @@ dkim-milter-arlib	ar(3) support for dkim-milter.
 dkim-stats		dkim-stats(8) support for dkim-milter.
 dnsrbl			Enable DNS Real-time Blackhole List support.
 dnssd			Enable DNS Service Discovery Protocol support.
-dnssec			Enable DNSSEC validation. 
+dnssec			Enable DNSSEC validation.
 doc			Include the documentation.
 drac			Enable DRAC support.
 dri			Enable Direct Rendering support.
@@ -323,7 +323,7 @@ libofx			Enable OFX support.
 libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
 libspiff		Use libspiff for XML shareable playlist support.
-libssh2 	 	Use libssh2 for SSHv2 protocol support.
+libssh2			Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
 libusb			Enable USB access.
 libvisual		Enable libvisual (audio visualisation) support.
