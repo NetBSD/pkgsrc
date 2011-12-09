@@ -1,0 +1,25 @@
+$NetBSD: patch-ca,v 1.1 2011/12/09 16:57:44 manu Exp $
+
+Fix race condition, pulled from upstream
+http://review.gluster.com/#change,77
+
+--- glusterfsd/src/glusterfsd-mgmt.c.orig	2011-12-02 03:08:11.000000000 +0100
++++ glusterfsd/src/glusterfsd-mgmt.c	2011-12-03 04:02:52.000000000 +0100
+@@ -889,13 +889,13 @@
+                 gf_log ("", GF_LOG_WARNING, "failed to register callback function");
+                 goto out;
+         }
+ 
+-        ret = rpc_clnt_start (rpc);
+-        if (ret)
+-                goto out;
+-
++        /* This value should be set before doing the 'rpc_clnt_start()' as
++           the notify function uses this variable */
+         ctx->mgmt = rpc;
++
++        ret = rpc_clnt_start (rpc);
+ out:
+         return ret;
+ }
+ 

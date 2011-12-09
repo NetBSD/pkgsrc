@@ -1,4 +1,4 @@
-$NetBSD: patch-br,v 1.9 2011/11/28 08:42:39 manu Exp $
+$NetBSD: patch-br,v 1.10 2011/12/09 16:57:44 manu Exp $
 
 Use linkat(2) if available so that we can make a hardlink to symlink 
 itself, instead of symlink destination, like link(2) does. This is
@@ -8,10 +8,12 @@ glusterfsd really wants to hardlink the symlink and not its target.
 If linkat(2) is inavailable, then moving a symlink on distributed
 volumes fails.
 
-Correctly cas gfid when producing inode to avoid it getting garbled
+Correctly cast gfid when producing inode to avoid it getting garbled
+
+Ignore .attribute because chaos occurs if it gets distributed
 
 --- xlators/storage/posix/src/posix.c.orig	2011-11-14 14:46:03.000000000 +0100
-+++ xlators/storage/posix/src/posix.c	2011-11-27 10:09:03.000000000 +0100
++++ xlators/storage/posix/src/posix.c	2011-12-09 03:45:17.000000000 +0100
 @@ -36,8 +36,12 @@
  #ifndef GF_BSD_HOST_OS
  #include <alloca.h>
@@ -71,7 +73,30 @@ Correctly cas gfid when producing inode to avoid it getting garbled
                  op_errno = errno;
                  gf_log (this->name, GF_LOG_ERROR,
                          "link %s to %s failed: %s",
-@@ -4455,14 +4475,15 @@
+@@ -4329,8 +4349,22 @@
+                 if ((!strcmp (real_path, base_path))
+                     && (!strcmp (entry->d_name, GF_REPLICATE_TRASH_DIR)))
+                         continue;
+ 
++#ifdef __NetBSD__
++		/*
++		 * NetBSD with UFS1 backend uses backing files for
++		 * extended attributes. They can be found in a
++		 * .attribute file located at the root of the filesystem
++		 * We hide it to glusterfs clients, since chaos will occur 
++		 * when the cluster/dht xlator decides to distribute
++		 * exended attribute backing file accross storage servers.
++		 */ 
++	        if ((!strcmp(real_path, base_path))
++	            && (!strcmp(entry->d_name, ".attribute")))
++	                continue;
++#endif /* __NetBSD__ */
++
+                 if ((!strcmp (real_path, base_path))
+                     && (!strncmp (GF_HIDDEN_PATH, entry->d_name,
+                                   strlen (GF_HIDDEN_PATH)))) {
+                         snprintf (hidden_path, PATH_MAX, "%s/%s", real_path,
+@@ -4455,14 +4489,15 @@
  
          /* pick ENOENT to indicate EOF */
          op_errno = errno;
