@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/12/09 00:15:36 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/09 01:23:07 dholland Exp $
 #
 
 DISTNAME=	bmpanel2-2.1pre1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bmpanel2.googlecode.com/files/
 
@@ -14,7 +14,7 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gzip
 
 PY_PATCHPLIST=	yes
 REPLACE_PYTHON=	extra/py/bmpanel2.py
@@ -24,6 +24,8 @@ SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"
 SUBST_FILES.prefix=	xdg.c
 SUBST_STAGE.prefix=	post-extract
 SUBST_MESSAGE.prefix=	Fixing path to themes.
+
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
