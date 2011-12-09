@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.621 2011/12/05 17:35:46 joerg Exp $
+# $NetBSD: Makefile,v 1.622 2011/12/09 21:56:39 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -184,6 +184,7 @@ SUBDIR+=	gqview
 SUBDIR+=	gqview-devel
 SUBDIR+=	grap
 SUBDIR+=	graphviz
+SUBDIR+=	graphviz-dot-mode
 SUBDIR+=	gri
 SUBDIR+=	gst-plugins0.10-cairo
 SUBDIR+=	gst-plugins0.10-jpeg
