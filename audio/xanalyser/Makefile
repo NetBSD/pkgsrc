@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2009/07/08 14:06:22 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2011/12/09 14:36:33 drochner Exp $
 #
 
 DISTNAME=	xanalyser-1.24
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://arvin.schnell-web.net/xanalyser/
 EXTRACT_SUFX=	.tar.bz2
