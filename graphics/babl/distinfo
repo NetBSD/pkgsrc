@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2011/02/10 07:41:25 adam Exp $
+$NetBSD: distinfo,v 1.9 2011/12/09 17:43:53 adam Exp $
 
-SHA1 (babl-0.1.4.tar.bz2) = 9f7186e5d968a4c9d81a63b20836b163f56df616
-RMD160 (babl-0.1.4.tar.bz2) = 8ef928258867945712ca2e1549acc90e4407f8fd
-Size (babl-0.1.4.tar.bz2) = 423645 bytes
+SHA1 (babl-0.1.6.tar.bz2) = 3178ec9f988efe895d00e2d432ad9b6ec10211e9
+RMD160 (babl-0.1.6.tar.bz2) = 69f1493909ad571b89385b61636ed9f6ba16dd85
+Size (babl-0.1.6.tar.bz2) = 462712 bytes
 SHA1 (patch-ab) = 1fc18c1767277f92c0c65a1e27a72e4636eb406b
