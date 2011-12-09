@@ -1,0 +1,3 @@
+The graphviz-dot-mode will do font locking, indentation, preview of
+graphs and eases compilation/error location.  There is support for
+both GNU Emacs and XEmacs.
