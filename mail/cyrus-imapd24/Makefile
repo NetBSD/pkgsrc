@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/12/07 20:39:19 sbd Exp $
+# $NetBSD: Makefile,v 1.15 2011/12/09 02:16:13 sbd Exp $
 
 DISTNAME=	cyrus-imapd-2.4.12
 CATEGORIES=	mail
@@ -56,12 +56,6 @@ CONFIGURE_ARGS+=	--enable-replication
 COMERRBASE?=		/usr
 .endif
 .if defined(COMERRBASE)
-# As com_err is a library the PREFER_* user variables should be honored.
-#
-BUILTIN_PKG:=   com_err
-.include "../../mk/buildlink3/bsd.builtin.mk"
-.endif
-.if defined(PREFER.com_err) && ${PREFER.com_err} != "pkgsrc"
 .  if exists(${COMERRBASE}/include/krb5/com_err.h)
 CPPFLAGS+=		-I${COMERRBASE}/include/krb5
 .  endif
