@@ -10,7 +10,7 @@ amule-alcc		Build aMule LinkCreator for console.
 amule-cas		Build C aMule Statistics.
 amule-cmd		Build aMule command line client.
 amule-daemon		Build aMule daemon version.
-amule-ed2k		Bulid aMule ed2k links handler.
+amule-ed2k		Build aMule ed2k links handler.
 amule-gui		Build aMule remote GUI.
 amule-monolithic	Build monolithic aMule app.
 amule-webserver		Build aMule WebServer.
@@ -363,7 +363,7 @@ mitshm			Enable MIT-SHM X extension support.
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
 mng			Enable mng (Multiple-image Network Graphics) support.
-modperl			Use modperl to improve speed of Perl scripts in Apache
+modperl			Use modperl to improve speed of Perl scripts in Apache.
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
