@@ -1,0 +1,17 @@
+$NetBSD: patch-cb,v 1.1 2011/12/09 16:57:44 manu Exp $
+
+Workaround SIGSEGV caused by race conditions when starting glusterd
+
+--- libglusterfs/src/list.h.orig	2011-12-03 08:24:04.000000000 +0100
++++ libglusterfs/src/list.h	2011-12-03 08:41:06.000000000 +0100
+@@ -94,9 +94,9 @@
+ 
+ static inline int
+ list_empty (struct list_head *head)
+ {
+-	return (head->next == head);
++	return (!(head->next) || (head->next == head));
+ }
+ 
+ 
+ static inline void
