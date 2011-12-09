@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.3 2011/12/09 16:11:54 drochner Exp $
+
+Ticket #8984
+
+--- common/uloc.c.orig	2011-07-19 21:16:28.000000000 +0000
++++ common/uloc.c
+@@ -1797,7 +1797,7 @@ _canonicalize(const char* localeID,
+                 int32_t variantLen = _deleteVariant(variant, uprv_min(variantSize, (nameCapacity-len)), variantToCompare, n);
+                 len -= variantLen;
+                 if (variantLen > 0) {
+-                    if (name[len-1] == '_') { /* delete trailing '_' */
++                    if (len > 0 && name[len-1] == '_') { /* delete trailing '_' */
+                         --len;
+                     }
+                     addKeyword = VARIANT_MAP[j].keyword;
+@@ -1805,7 +1805,7 @@ _canonicalize(const char* localeID,
+                     break;
+                 }
+             }
+-            if (name[len-1] == '_') { /* delete trailing '_' */
++            if (len > 0 && len <= nameCapacity && name[len-1] == '_') { /* delete trailing '_' */
+                 --len;
+             }
+         }
