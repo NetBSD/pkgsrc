@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2010/03/05 13:57:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/12/10 13:00:56 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
 ${PYSITELIB}/mutagen/__init__.pyo
