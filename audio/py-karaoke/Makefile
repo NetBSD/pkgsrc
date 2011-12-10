@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2011/11/01 06:00:40 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2011/12/10 14:17:37 obache Exp $
 #
 
 DISTNAME=	pykaraoke-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pykaraoke/}
 EXTRACT_SUFX=	.zip
@@ -15,10 +15,11 @@ LICENSE=	gnu-lgpl-v2.1
 
 # for .kar files, untested for lack of files
 #DEPENDS+=	timidity-[0-9]*:../../audio/timidity
+DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
+DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
+DEPENDS+=	${PYPKGPREFIX}-Numeric-[0-9]*:../../math/py-Numeric
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYDISTUTILSPKG=	yes
 
 REPLACE_PYTHON+=	performer_prompt.py
 REPLACE_PYTHON+=	pycdg.py
@@ -36,11 +37,8 @@ REPLACE_PYTHON+=	pykaraoke_mini.py
 # supposedly needed, but I couldn't find out why
 #.include "../../audio/SDL_mixer/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
-.include "../../audio/py-mutagen/buildlink3.mk"
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
