@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3217 2011/12/10 14:18:41 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3218 2011/12/10 14:43:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5090,3 +5090,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added graphics/graphviz-dot-mode version 0.3.7 [minskim 2011-12-09]
 	Updated audio/py-mutagen to 1.20nb1 [obache 2011-12-10]
 	Updated audio/py-karaoke to 0.7.2nb7 [obache 2011-12-10]
+	Updated devel/py-game to 1.8.1nb10 [obache 2011-12-10]
