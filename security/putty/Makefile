@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:44:38 obache Exp $
+# $NetBSD: Makefile,v 1.22 2011/12/10 20:50:51 cheusov Exp $
 #
 
 DISTNAME=	putty-0.60
@@ -42,6 +42,9 @@ CFLAGS+=	-DOMIT_UTMP
 .if !exists(/dev/ptmx)
 CFLAGS+=	-DBSD_PTYS
 .endif
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
+CFLAGS.SunOS+=	-DBSD_COMP
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
