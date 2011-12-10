@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2011/11/01 06:01:11 sbd Exp $
+# $NetBSD: Makefile,v 1.53 2011/12/10 17:50:23 marino Exp $
 
 DISTNAME=	kmymoney2-1.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=  .tar.bz2
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake msgfmt perl pkg-config bash
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+MAKE_JOBS_SAFE=		NO
 CONFIG_SHELL=		${BASH}
 SHLIBTOOL_OVERRIDE=	# empty
 

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2011/05/16 21:29:04 shattered Exp $
+$NetBSD: distinfo,v 1.13 2011/12/10 17:50:23 marino Exp $
 
 SHA1 (kmymoney2-1.0.5.tar.bz2) = dc496bb95353f0254125faa1de37b1431af06f1e
 RMD160 (kmymoney2-1.0.5.tar.bz2) = 14a468b54335bd753cae0bc531ca648275cd1bfd
@@ -9,4 +9,5 @@ SHA1 (patch-ad) = a9c0796d239fa3143018bd6ed1f2d568acf219ec
 SHA1 (patch-ae) = 3466df88f68535549172e253ad24142ef1149360
 SHA1 (patch-af) = 9228789b4d601a22d77fe7b41e04fa08a068040c
 SHA1 (patch-ag) = a52dd21ff8c88b3729783d664094c1be00a454d4
-SHA1 (patch-ah) = b300dd6ff582b1d1db9e32dd0cc3785e5449bfff
+SHA1 (patch-ah) = d876606dd311f4729d8c3ca262f3e131cc862bf4
+SHA1 (patch-kmymoney2_mymoney_mymoneymoney.cpp) = 55f5cb63772299d92e7cd7ca6f825ff3c2dc9285
