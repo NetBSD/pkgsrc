@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.12 2011/11/30 19:15:46 minskim Exp $
+# $NetBSD: package.mk,v 1.13 2011/12/10 19:17:00 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -116,9 +116,9 @@ _texlive-install:
 	fi
 	if [ -d ${WRKSRC}/info ]; then \
 		${FIND} ${WRKSRC}/info -name \*.orig -exec ${RM} {} \; ; \
-		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/info; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PKGINFODIR}; \
 		for script in ${WRKSRC}/info/*; do \
-			${INSTALL_DATA} $$script ${DESTDIR}${PREFIX}/info; \
+			${INSTALL_DATA} $$script ${DESTDIR}${PREFIX}/${PKGINFODIR}; \
 		done; \
 	fi
 	if [ -d ${WRKSRC}/man ]; then \
