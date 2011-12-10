@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.3 2009/09/02 10:05:52 wiz Exp $
+$NetBSD: patch-ah,v 1.4 2011/12/10 17:50:23 marino Exp $
 
---- acinclude.m4.orig	2009-05-28 06:44:50.000000000 -0400
-+++ acinclude.m4	2009-05-28 06:45:18.000000000 -0400
+--- acinclude.m4.orig	2010-05-10 19:24:51.000000000 +0000
++++ acinclude.m4
 @@ -612,7 +612,7 @@ AC_DEFUN([KDE_SUBST_PROGRAMS],
          KDE_FIND_PATH(xmllint, XMLLINT, [${prefix}/bin ${exec_prefix}/bin], [XMLLINT=""])
  
@@ -11,3 +11,25 @@ $NetBSD: patch-ah,v 1.3 2009/09/02 10:05:52 wiz Exp $
              test -n "$KDEDIR" && kde_sharedirs="$KDEDIR/share $kde_sharedirs"
              AC_FIND_FILE(apps/ksgmltools2/customization/kde-chunk.xsl, $kde_sharedirs, KDE_XSL_STYLESHEET)
  	    if test "$KDE_XSL_STYLESHEET" = "NO"; then
+@@ -12173,6 +12173,7 @@ AC_DEFUN([AC_SQLITE3], [
+     rm -rf qt-sqlite3-0.2
+     gunzip -c `dirname -- ${0}`/23011-qt-sqlite3-0.2.tar.gz | tar -xf -
+     cd qt-sqlite3-0.2
++    sed -i s/QTDIR/\(QTDIR\)/ sqlite3/sqlite3.pro
+     ${ac_qmake} QMAKE=${ac_qmake}
+     SQLITE3=qt-sqlite3-0.2
+     sed -i s/^install:.*$// Makefile
+@@ -12197,11 +12198,11 @@ install:
+ 	if test ! x$SQLITE3 = x; then \
+ 	  if test "x\$(DESTDIR)" = "x" -a "${prefix:0-5}" = "_inst"; then \
+ 	    /bin/sh ../$ac_aux_dir/mkinstalldirs \`dirname ${prefix}${LIBSQLITE3}\`; \
+-	    ${INSTALL} sqldrivers/libqsqlite3.so ${prefix}${LIBSQLITE3}; \
++	    ${INSTALL} sqldrivers/.libs/libqsqlite3.so ${prefix}${LIBSQLITE3}; \
+ 	    chmod 755 ${prefix}${LIBSQLITE3}; \
+ 	  else \
+ 	    /bin/sh ../$ac_aux_dir/mkinstalldirs \`dirname \$(DESTDIR)${LIBSQLITE3}\`; \
+-	    ${INSTALL} sqldrivers/libqsqlite3.so \$(DESTDIR)${LIBSQLITE3}; \
++	    ${INSTALL} sqldrivers/.libs/libqsqlite3.so \$(DESTDIR)${LIBSQLITE3}; \
+ 	    chmod 755 \$(DESTDIR)${LIBSQLITE3}; \
+ 	  fi \
+ 	fi
