@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/10 13:28:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2011/12/10 14:36:38 cheusov Exp $
 #
 
 DISTNAME=	htop-0.9
@@ -19,8 +19,6 @@ USE_TOOLS+=	autoreconf autoconf automake
 USE_LIBTOOL=	yes
 
 ONLY_FOR_PLATFORM=     Linux-*-* FreeBSD-*-* NetBSD-*-*
-
-.include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=		ac_cv_file__proc_stat=yes ac_cv_file__proc_meminfo=yes
 
