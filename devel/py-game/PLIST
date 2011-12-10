@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/12/10 14:43:37 obache Exp $
 ${PYINC}/pygame/bitmask.h
 ${PYINC}/pygame/fastevents.h
 ${PYINC}/pygame/ffmovie.h
@@ -9,6 +9,7 @@ ${PYINC}/pygame/pygame.h
 ${PYINC}/pygame/pygamedocs.h
 ${PYINC}/pygame/scrap.h
 ${PYINC}/pygame/surface.h
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pygame/__init__.py
 ${PYSITELIB}/pygame/__init__.pyc
 ${PYSITELIB}/pygame/__init__.pyo

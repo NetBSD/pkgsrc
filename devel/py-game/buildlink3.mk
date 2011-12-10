@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2011/11/01 23:18:23 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2011/12/10 14:43:37 obache Exp $
 
 BUILDLINK_TREE+=	${PYPKGPREFIX}-game
 
@@ -15,7 +15,6 @@ BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-game?=	../../devel/py-game
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
-.include "../../math/py-numpy/buildlink3.mk"
 .endif # PY_GAME_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-${PYPKGPREFIX}-game
