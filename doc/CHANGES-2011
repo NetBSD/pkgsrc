@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3215 2011/12/09 21:56:38 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3216 2011/12/10 13:07:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5088,3 +5088,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/babl to 0.1.6 [adam 2011-12-09]
 	Updated graphics/gegl to 0.1.8 [adam 2011-12-09]
 	Added graphics/graphviz-dot-mode version 0.3.7 [minskim 2011-12-09]
+	Updated audio/py-mutagen to 1.20nb1 [obache 2011-12-10]
