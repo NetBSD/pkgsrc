@@ -1,18 +1,18 @@
-$NetBSD: patch-ab,v 1.7 2011/01/22 21:18:16 minskim Exp $
+$NetBSD: patch-ab,v 1.8 2011/12/11 20:30:24 minskim Exp $
 
---- texmf/tex/generic/config/language.def.orig	2011-01-14 03:13:16.000000000 +0000
+--- texmf/tex/generic/config/language.def.orig	2011-08-05 02:26:43.000000000 +0000
 +++ texmf/tex/generic/config/language.def
-@@ -28,145 +28,6 @@
+@@ -28,146 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
 -% from dehyph-exptl:
--\addlanguage{german-x-2009-06-19}{dehypht-x-2009-06-19.tex}{}{2}{2}
--\addlanguage{german-x-latest}{dehypht-x-2009-06-19.tex}{}{2}{2}
--\addlanguage{ngerman-x-2009-06-19}{dehyphn-x-2009-06-19.tex}{}{2}{2}
--\addlanguage{ngerman-x-latest}{dehyphn-x-2009-06-19.tex}{}{2}{2}
+-\addlanguage{german-x-2011-07-01}{dehypht-x-2011-07-01.tex}{}{2}{2}
+-\addlanguage{german-x-latest}{dehypht-x-2011-07-01.tex}{}{2}{2}
+-\addlanguage{ngerman-x-2011-07-01}{dehyphn-x-2011-07-01.tex}{}{2}{2}
+-\addlanguage{ngerman-x-latest}{dehyphn-x-2011-07-01.tex}{}{2}{2}
 -% from hyphen-afrikaans:
--\addlanguage{afrikaans}{loadhyph-af.tex}{}{2}{2}
+-\addlanguage{afrikaans}{loadhyph-af.tex}{}{1}{2}
 -% from hyphen-ancientgreek:
 -\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
 -\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.7 2011/01/22 21:18:16 minskim Exp $
 -% from hyphen-catalan:
 -\addlanguage{catalan}{loadhyph-ca.tex}{}{2}{2}
 -% from hyphen-chinese:
--\addlanguage{pinyin}{loadhyph-zh-latn.tex}{}{1}{1}
+-\addlanguage{pinyin}{loadhyph-zh-latn-pinyin.tex}{}{1}{1}
 -% from hyphen-coptic:
 -\addlanguage{coptic}{loadhyph-cop.tex}{}{1}{1}
 -% from hyphen-croatian:
@@ -125,6 +125,7 @@ $NetBSD: patch-ab,v 1.7 2011/01/22 21:18:16 minskim Exp $
 -\addlanguage{sanskrit}{loadhyph-sa.tex}{}{1}{5}
 -% from hyphen-serbian:
 -\addlanguage{serbian}{loadhyph-sr-latn.tex}{}{2}{2}
+-\addlanguage{serbianc}{loadhyph-sr-cyrl.tex}{}{2}{2}
 -% from hyphen-slovak:
 -\addlanguage{slovak}{loadhyph-sk.tex}{}{2}{3}
 -% from hyphen-slovenian:
