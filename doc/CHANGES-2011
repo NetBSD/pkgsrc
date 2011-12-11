@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3224 2011/12/11 14:37:56 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3225 2011/12/11 19:53:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5100,3 +5100,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/isc-dhclient4 to 4.2.3p1 [taca 2011-12-11]
 	Updated net/isc-dhcpd4 to 4.2.3p1 [taca 2011-12-11]
 	Updated net/isc-dhcrelay4 to 4.2.3p1 [taca 2011-12-11]
+	Updated print/tex-etex-doc to 2.1.22198 [msk 2011-12-11]
