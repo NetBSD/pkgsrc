@@ -1,21 +1,23 @@
-# $NetBSD: Makefile.common,v 1.12 2011/11/15 14:33:38 taca Exp $
+# $NetBSD: Makefile.common,v 1.13 2011/12/11 14:36:11 taca Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
 # used by net/isc-dhclient4/Makefile
 # used by net/isc-dhcrelay4/Makefile
 
-DISTNAME=		dhcp-4.2.3
+DISTNAME=		dhcp-${VERSION}
 DHVER=			${DISTNAME:S/dhcp-//:S/-P/p/}
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/${DISTNAME}/ \
-			http://ftp.isc.org/isc/dhcp/${DISTNAME}/
+MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/${VERSION}/ \
+			http://ftp.isc.org/isc/dhcp/${VERSION}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.isc.org/sw/dhcp
 LICENSE=		isc
 
 CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
+
+VERSION=		4.2.3-P1
 
 .include "../../mk/bsd.prefs.mk"
 
