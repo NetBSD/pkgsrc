@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/05/26 22:38:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/11 20:00:58 minskim Exp $
 share/texmf-dist/tex/latex/latexconfig/color.cfg
 share/texmf-dist/tex/latex/latexconfig/dvilualatex.ini
 share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -9,6 +9,7 @@ share/texmf-dist/tex/latex/latexconfig/lualatex-patch-kernel.tex
 share/texmf-dist/tex/latex/latexconfig/lualatex-reset-codes.tex
 share/texmf-dist/tex/latex/latexconfig/lualatex.ini
 share/texmf-dist/tex/latex/latexconfig/lualatexiniconfig.tex
+share/texmf-dist/tex/latex/latexconfig/lualatexquotejobname.lua
 share/texmf-dist/tex/latex/latexconfig/lualatexquotejobname.tex
 share/texmf-dist/tex/latex/latexconfig/mllatex.ini
 share/texmf-dist/tex/latex/latexconfig/pdflatex.ini
