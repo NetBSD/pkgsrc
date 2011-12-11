@@ -1,15 +1,16 @@
-$NetBSD: patch-ak,v 1.4 2010/10/30 23:48:36 spz Exp $
+$NetBSD: patch-ak,v 1.5 2011/12/11 11:53:23 marino Exp $
 
 add necessary headers
 make it use getpwnam to find uid and gid to set to instead of hardwiring these
 
 --- wrapper.c.orig	1997-08-27 15:01:12.000000000 +0000
 +++ wrapper.c
-@@ -15,11 +15,16 @@ static char rcs_header[] = "$Header: /so
+@@ -15,11 +15,17 @@ static char rcs_header[] = "$Header: /so
  
  #include <stdio.h>
  #include <sysexits.h>
 +#include <pwd.h>
++#include <errno.h>
  
 -#if defined(sun) && defined(sparc)
 +#if (defined(sun) && defined(sparc)) || defined(__NetBSD__)
@@ -23,7 +24,7 @@ make it use getpwnam to find uid and gid to set to instead of hardwiring these
  
  #ifndef STRCHR
  #  include <string.h>
-@@ -65,6 +70,9 @@ main(argc, argv, env)
+@@ -65,6 +71,9 @@ main(argc, argv, env)
  {
      char * prog;
      int e, i;
@@ -33,13 +34,20 @@ make it use getpwnam to find uid and gid to set to instead of hardwiring these
  
      if (argc < 2) {
  	fprintf(stderr, "USAGE: %s program [<arg> ...]\n", argv[0]);
-@@ -123,7 +131,17 @@ main(argc, argv, env)
+@@ -115,7 +124,6 @@ main(argc, argv, env)
+     int groups[] =  { POSIX_GID, 0 };
+     if (setgroups(1, groups) == -1) {
+ #endif
+-	extern int errno;
+ 
+ 	fprintf(stderr, "%s: error setgroups failed errno %d", argv[0],
+ 		errno);
+@@ -123,7 +131,16 @@ main(argc, argv, env)
  }
  #endif
  	  
 +#ifdef MAJORDOMO_USER
 +    if ((majordomuser = getpwnam(MAJORDOMO_USER)) == NULL) {
-+	extern int errno;
  
 +	fprintf(stderr, "%s: error user %s not found, errno %d", argv[0],
 +		MAJORDOMO_USER, errno);
@@ -51,7 +59,7 @@ make it use getpwnam to find uid and gid to set to instead of hardwiring these
  #ifdef POSIX_GID
      setgid(POSIX_GID);
  #else
-@@ -135,6 +153,7 @@ main(argc, argv, env)
+@@ -135,6 +152,7 @@ main(argc, argv, env)
  #else
      setuid(geteuid());
  #endif
