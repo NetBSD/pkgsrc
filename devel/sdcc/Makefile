@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2011/03/11 11:36:28 obache Exp $
+# $NetBSD: Makefile,v 1.42 2011/12/11 14:24:38 dholland Exp $
 
 DISTNAME=	sdcc-src-2.8.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	gputils-[0-9]*:../../devel/gputils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=	c c++
 
