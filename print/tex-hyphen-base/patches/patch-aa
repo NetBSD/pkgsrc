@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.7 2011/01/22 21:18:16 minskim Exp $
+$NetBSD: patch-aa,v 1.8 2011/12/11 20:30:24 minskim Exp $
 
---- texmf/tex/generic/config/language.dat.orig	2011-01-14 03:13:12.000000000 +0000
+--- texmf/tex/generic/config/language.dat.orig	2011-08-05 02:26:40.000000000 +0000
 +++ texmf/tex/generic/config/language.dat
-@@ -57,142 +57,3 @@ english		hyphen.tex  % do not change!
+@@ -57,143 +57,3 @@ english		hyphen.tex  % do not change!
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
 -% from dehyph-exptl:
--german-x-2009-06-19 dehypht-x-2009-06-19.tex
+-german-x-2011-07-01 dehypht-x-2011-07-01.tex
 -=german-x-latest
--ngerman-x-2009-06-19 dehyphn-x-2009-06-19.tex
+-ngerman-x-2011-07-01 dehyphn-x-2011-07-01.tex
 -=ngerman-x-latest
 -% from hyphen-afrikaans:
 -afrikaans loadhyph-af.tex
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.7 2011/01/22 21:18:16 minskim Exp $
 -% from hyphen-catalan:
 -catalan loadhyph-ca.tex
 -% from hyphen-chinese:
--pinyin loadhyph-zh-latn.tex
+-pinyin loadhyph-zh-latn-pinyin.tex
 -% from hyphen-coptic:
 -coptic loadhyph-cop.tex
 -% from hyphen-croatian:
@@ -125,6 +125,7 @@ $NetBSD: patch-aa,v 1.7 2011/01/22 21:18:16 minskim Exp $
 -sanskrit loadhyph-sa.tex
 -% from hyphen-serbian:
 -serbian loadhyph-sr-latn.tex
+-serbianc loadhyph-sr-cyrl.tex
 -% from hyphen-slovak:
 -slovak loadhyph-sk.tex
 -% from hyphen-slovenian:
