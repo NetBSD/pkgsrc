@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3220 2011/12/11 12:39:43 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3221 2011/12/11 13:21:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5093,3 +5093,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/py-game to 1.8.1nb10 [obache 2011-12-10]
 	Updated net/mikutter to 0.0.4.609 [obache 2011-12-11]
 	Updated audio/picard to 0.16 [obache 2011-12-11]
+	Updated www/php-tiki6 to 6.4nb2 [ryoon 2011-12-11]
