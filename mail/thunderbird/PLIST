@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2011/11/13 16:59:58 tnn Exp $
+@comment $NetBSD: PLIST,v 1.36 2011/12/11 11:55:12 marino Exp $
 bin/thunderbird
 ${PLIST.jit}include/thunderbird/Allocator.h
 ${PLIST.jit}include/thunderbird/Assembler.h
@@ -252,7 +252,7 @@ include/thunderbird/md/_irix64.cfg
 include/thunderbird/md/_linux.cfg
 include/thunderbird/md/_ncr.cfg
 include/thunderbird/md/_nec.cfg
-include/thunderbird/md/_${LOWER_OPSYS}.cfg
+include/thunderbird/md/_netbsd.cfg
 include/thunderbird/md/_nextstep.cfg
 include/thunderbird/md/_nto.cfg
 include/thunderbird/md/_openbsd.cfg
@@ -2508,7 +2508,7 @@ include/thunderbird/nspr/md/_irix64.cfg
 include/thunderbird/nspr/md/_linux.cfg
 include/thunderbird/nspr/md/_ncr.cfg
 include/thunderbird/nspr/md/_nec.cfg
-include/thunderbird/nspr/md/_${LOWER_OPSYS}.cfg
+include/thunderbird/nspr/md/_netbsd.cfg
 include/thunderbird/nspr/md/_nextstep.cfg
 include/thunderbird/nspr/md/_nto.cfg
 include/thunderbird/nspr/md/_openbsd.cfg
