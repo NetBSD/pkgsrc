@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2011/12/07 10:18:23 joerg Exp $
+# $NetBSD: Makefile,v 1.121 2011/12/11 18:41:47 markd Exp $
 
 DISTNAME=		R-2.14.0
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -91,6 +92,11 @@ CONFIGURE_ENV+=		R_PAPERSIZE=${R_PAPERSIZE:Q}
 # These macros are used during the build, so strip off the -o,-g flags.
 INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
+
+# to build NEWS.pdf
+BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
+BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ae
 
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
 BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
