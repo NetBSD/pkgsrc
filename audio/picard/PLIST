@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2011/08/06 19:29:37 gls Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/12/11 12:39:27 obache Exp $
 bin/picard
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/picard/__init__.py
 ${PYSITELIB}/picard/__init__.pyc
 ${PYSITELIB}/picard/__init__.pyo
+${PYSITELIB}/picard/acoustid.py
+${PYSITELIB}/picard/acoustid.pyc
+${PYSITELIB}/picard/acoustid.pyo
+${PYSITELIB}/picard/acoustidmanager.py
+${PYSITELIB}/picard/acoustidmanager.pyc
+${PYSITELIB}/picard/acoustidmanager.pyo
 ${PYSITELIB}/picard/album.py
 ${PYSITELIB}/picard/album.pyc
 ${PYSITELIB}/picard/album.pyo
@@ -83,9 +90,6 @@ ${PYSITELIB}/picard/musicdns/ofa.so
 ${PYSITELIB}/picard/parsefilename.py
 ${PYSITELIB}/picard/parsefilename.pyc
 ${PYSITELIB}/picard/parsefilename.pyo
-${PYSITELIB}/picard/playlist.py
-${PYSITELIB}/picard/playlist.pyc
-${PYSITELIB}/picard/playlist.pyo
 ${PYSITELIB}/picard/plugin.py
 ${PYSITELIB}/picard/plugin.pyc
 ${PYSITELIB}/picard/plugin.pyo
@@ -155,6 +159,9 @@ ${PYSITELIB}/picard/ui/options/cover.pyo
 ${PYSITELIB}/picard/ui/options/dialog.py
 ${PYSITELIB}/picard/ui/options/dialog.pyc
 ${PYSITELIB}/picard/ui/options/dialog.pyo
+${PYSITELIB}/picard/ui/options/fingerprinting.py
+${PYSITELIB}/picard/ui/options/fingerprinting.pyc
+${PYSITELIB}/picard/ui/options/fingerprinting.pyo
 ${PYSITELIB}/picard/ui/options/folksonomy.py
 ${PYSITELIB}/picard/ui/options/folksonomy.pyc
 ${PYSITELIB}/picard/ui/options/folksonomy.pyo
@@ -233,6 +240,9 @@ ${PYSITELIB}/picard/ui/ui_options_cdlookup_select.pyo
 ${PYSITELIB}/picard/ui/ui_options_cover.py
 ${PYSITELIB}/picard/ui/ui_options_cover.pyc
 ${PYSITELIB}/picard/ui/ui_options_cover.pyo
+${PYSITELIB}/picard/ui/ui_options_fingerprinting.py
+${PYSITELIB}/picard/ui/ui_options_fingerprinting.pyc
+${PYSITELIB}/picard/ui/ui_options_fingerprinting.pyo
 ${PYSITELIB}/picard/ui/ui_options_folksonomy.py
 ${PYSITELIB}/picard/ui/ui_options_folksonomy.pyc
 ${PYSITELIB}/picard/ui/ui_options_folksonomy.pyo
