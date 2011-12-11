@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2011/09/24 12:03:19 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.27 2011/12/11 12:00:34 marino Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -34,6 +34,15 @@ MAKE_FLAGS+=	CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
 
 .if ${OPSYS} == "NetBSD"
 PDKSH=		/bin/ksh
+.endif
+
+# Link with libm to fix sfcvt link error - 
+# this is kind of a hack - 
+# better would be to fix the 'meta makefile' to pass this
+# or to use the ksh-provided math routines.
+
+.if ${OPSYS} == "DragonFly"
+KSH93_MAKEFLAGS+=	CCFLAGS=-lm
 .endif
 
 PKG_SHELL=	bin/ksh93
