@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3219 2011/12/11 09:23:26 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3220 2011/12/11 12:39:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5092,3 +5092,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated audio/py-karaoke to 0.7.2nb7 [obache 2011-12-10]
 	Updated devel/py-game to 1.8.1nb10 [obache 2011-12-10]
 	Updated net/mikutter to 0.0.4.609 [obache 2011-12-11]
+	Updated audio/picard to 0.16 [obache 2011-12-11]
