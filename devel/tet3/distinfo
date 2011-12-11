@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2010/07/12 02:46:37 dholland Exp $
+$NetBSD: distinfo,v 1.7 2011/12/11 11:57:08 marino Exp $
 
 SHA1 (tet3.7-unsup.src.tgz) = 43a3720d0472b6d3261b1b1cd7fa5192a2911b73
 RMD160 (tet3.7-unsup.src.tgz) = 7e266fc77e2a01ece7cd1b041d3ee28426d1bd3d
@@ -13,3 +13,4 @@ SHA1 (patch-ai) = 256d4903ec91f4a4ffe147accb5d7e80740e6c46
 SHA1 (patch-aj) = 28bd55c8a55d60cbf4e2b2456c488090782babc5
 SHA1 (patch-ak) = a907e0492849aec9a23eef2167aecb92e4ca589a
 SHA1 (patch-al) = 840feab081b56a1f44f3c5094f5962b9700350e5
+SHA1 (patch-src_scripts_tet_start.sh) = 3b3ae5806c88b3f795a51ed1b057df4134f1961c
