@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2011/12/08 20:35:25 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2011/12/11 13:01:50 ryoon Exp $
 
 To use tiki with Apache 2.2, you will need to perform the following steps.
 
@@ -49,7 +49,7 @@ To use tiki with Apache 2.2, you will need to perform the following steps.
 	DocumentRoot "${PREFIX}/share/tiki6"
 	LoadModule php5_module lib/httpd/mod_php5.so
 	AddType application/x-httpd-php .php
-	<Directory /usr/pkg/share/tiki6 >
+	<Directory ${PREFIX}/share/tiki6 >
 		Options All
 		Allow from All
 	</Directory>
