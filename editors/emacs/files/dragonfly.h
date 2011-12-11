@@ -43,13 +43,9 @@ Boston, MA 02111-1307, USA.  */
 #undef BSD_PGRPS
 #define GETPGRP_NO_ARG
 
-#ifdef DFLY_CRT_USRLIB
-#define START_FILES pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/gcc41/crtbegin.o
-#define LIB_STANDARD -L/usr/lib/gcc41 -lgcc -lc -lgcc /usr/lib/gcc41/crtend.o /usr/lib/crtn.o
-#else
-#define START_FILES pre-crt0.o /usr/lib/gcc41/crt1.o /usr/lib/gcc41/crti.o /usr/lib/gcc41/crtbegin.o
-#define LIB_STANDARD -L/usr/lib/gcc41 -lgcc -lc -lgcc /usr/lib/gcc41/crtend.o /usr/lib/gcc41/crtn.o
-#endif
+#define ORDINARY_LINK
+#define START_FILES
+#define LIB_STANDARD -lc
 
 #define LD_SWITCH_SYSTEM_1
 #define UNEXEC unexelf.o
