@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2011/12/11 18:41:47 markd Exp $
+# $NetBSD: Makefile,v 1.122 2011/12/11 21:10:05 dholland Exp $
 
 DISTNAME=		R-2.14.0
 PKGREVISION=		1
@@ -96,7 +96,7 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 # to build NEWS.pdf
 BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
-BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ae
+BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
 
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
 BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
