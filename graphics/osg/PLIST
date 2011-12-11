@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/11 11:59:06 marino Exp $
 bin/osgarchive
 bin/osgconv
 bin/osgfilecache
@@ -553,6 +553,7 @@ lib/osgPlugins-${PKGVERSION}/osgdb_dot.so
 lib/osgPlugins-${PKGVERSION}/osgdb_dw.so
 lib/osgPlugins-${PKGVERSION}/osgdb_dxf.so
 lib/osgPlugins-${PKGVERSION}/osgdb_exr.so
+lib/osgPlugins-${PKGVERSION}/osgdb_ffmpeg.so
 lib/osgPlugins-${PKGVERSION}/osgdb_geo.so
 lib/osgPlugins-${PKGVERSION}/osgdb_gif.so
 lib/osgPlugins-${PKGVERSION}/osgdb_glsl.so
