@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2011/08/06 19:29:37 gls Exp $
+$NetBSD: distinfo,v 1.6 2011/12/11 12:39:27 obache Exp $
 
-SHA1 (picard-0.15.1.tar.gz) = 91b461430add978f0b07ae738ce1b9de616998f4
-RMD160 (picard-0.15.1.tar.gz) = 195902699349d27af268180f45312a4d3ce1ac80
-Size (picard-0.15.1.tar.gz) = 1549887 bytes
+SHA1 (picard-0.16.tar.gz) = 274071410550ee29051bb0137d72602921a015f9
+RMD160 (picard-0.16.tar.gz) = 375610cfd8ff03825e22af726730fa85c7cb54fd
+Size (picard-0.16.tar.gz) = 1828595 bytes
 SHA1 (patch-aa) = b045a8e14f88bb242974a31d9390fd48351fd452
