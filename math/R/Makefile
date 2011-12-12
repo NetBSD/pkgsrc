@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2011/12/11 21:10:05 dholland Exp $
+# $NetBSD: Makefile,v 1.123 2011/12/12 06:49:26 dholland Exp $
 
 DISTNAME=		R-2.14.0
 PKGREVISION=		1
@@ -96,7 +96,24 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 # to build NEWS.pdf
 BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
+BUILD_DEPENDS+=		tex-ae-[0-9]*:../../fonts/tex-ae
 BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
+BUILD_DEPENDS+=		tex-tools-[0-9]*:../../print/tex-tools
+BUILD_DEPENDS+=		tex-url-[0-9]*:../../print/tex-url
+BUILD_DEPENDS+=		tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+BUILD_DEPENDS+=		tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+BUILD_DEPENDS+=		tex-cm-[0-9]*:../../fonts/tex-cm
+BUILD_DEPENDS+=		tex-cm-super-[0-9]*:../../fonts/tex-cm-super
+BUILD_DEPENDS+=		tex-fontname-[0-9]*:../../fonts/tex-fontname
+BUILD_DEPENDS+=		tex-graphics-[0-9]*:../../print/tex-graphics
+BUILD_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
+BUILD_DEPENDS+=		tex-ifluatex-[0-9]*:../../print/tex-ifluatex
+BUILD_DEPENDS+=		tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
+BUILD_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
+BUILD_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
+BUILD_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
+
 
 BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
 BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
