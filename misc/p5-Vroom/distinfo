@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/08/04 22:08:39 seb Exp $
+$NetBSD: distinfo,v 1.3 2011/12/12 03:59:08 hiramatsu Exp $
 
-SHA1 (Vroom-0.23.tar.gz) = 9ba6452e813f9a4ea353c15d8b93907b97980007
-RMD160 (Vroom-0.23.tar.gz) = d04943da5f39266bf06a355c9e6b057edb7f7a1e
-Size (Vroom-0.23.tar.gz) = 28999 bytes
+SHA1 (Vroom-0.26.tar.gz) = 4a9c1d07b0d79c49e32af1c33675eefd74212b47
+RMD160 (Vroom-0.26.tar.gz) = 6aaa3f27d7fb06372585ca7e1706ce4cf1203e5c
+Size (Vroom-0.26.tar.gz) = 42888 bytes
