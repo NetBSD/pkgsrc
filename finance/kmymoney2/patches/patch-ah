@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2011/12/10 17:50:23 marino Exp $
+$NetBSD: patch-ah,v 1.5 2011/12/12 05:03:42 dholland Exp $
 
 --- acinclude.m4.orig	2010-05-10 19:24:51.000000000 +0000
 +++ acinclude.m4
@@ -11,11 +11,12 @@ $NetBSD: patch-ah,v 1.4 2011/12/10 17:50:23 marino Exp $
              test -n "$KDEDIR" && kde_sharedirs="$KDEDIR/share $kde_sharedirs"
              AC_FIND_FILE(apps/ksgmltools2/customization/kde-chunk.xsl, $kde_sharedirs, KDE_XSL_STYLESHEET)
  	    if test "$KDE_XSL_STYLESHEET" = "NO"; then
-@@ -12173,6 +12173,7 @@ AC_DEFUN([AC_SQLITE3], [
+@@ -12173,6 +12173,8 @@ AC_DEFUN([AC_SQLITE3], [
      rm -rf qt-sqlite3-0.2
      gunzip -c `dirname -- ${0}`/23011-qt-sqlite3-0.2.tar.gz | tar -xf -
      cd qt-sqlite3-0.2
-+    sed -i s/QTDIR/\(QTDIR\)/ sqlite3/sqlite3.pro
++    sed s/QTDIR/\(QTDIR\)/ < sqlite3/sqlite3.pro > sqlite3/sqlite3.pro.new
++    mv -f sqlite3/sqlite3.pro.new sqlite3/sqlite3.pro
      ${ac_qmake} QMAKE=${ac_qmake}
      SQLITE3=qt-sqlite3-0.2
      sed -i s/^install:.*$// Makefile
