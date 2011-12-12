@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2011/11/21 03:57:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.106 2011/12/12 13:45:18 schmonz Exp $
 
-DISTNAME=	getmail-4.23.0
+DISTNAME=	getmail-4.24.0
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE}old-versions/
 
