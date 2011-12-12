@@ -1,0 +1,35 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/12/12 17:39:09 ryoon Exp $
+
+To use OrangeHRM, you will need to perform the following steps.
+
+1. To use MySQL server, install databases/mysql51-server and enable it.
+
+	# ${RCD_SCRIPTS_DIR}/mysqld start
+
+2. Install apache httpd server, for example www/apache22 and www/ap-php.
+
+3. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	DocumentRoot "${PREFIX}/share/orangehrm"
+	LoadModule php5_module lib/httpd/mod_php5.so
+	AddType application/x-httpd-php .php
+	<Directory ${PREFIX}/share/orangehrm>
+		Options All
+		Allow from All
+		AllowOverride All
+	</Directory>
+
+4. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+
+	extension=mysql.so
+	extension=pdo.so
+	extension=pdo_mysql.so
+
+5. Start apache httpd.
+
+	# ${RCD_SCRIPTS_DIR}/apache start
+
+6. Access http://localhost/index.php and setup.
+   In detail, please read http://localhost/INSTALL.html .
+===========================================================================
