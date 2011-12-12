@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/12/07 13:12:08 obache Exp $
+$NetBSD: distinfo,v 1.6 2011/12/12 11:33:27 obache Exp $
 
 SHA1 (blockdiag-1.1.1.tar.gz) = d5c2942019f7c837531e44dc7384225993ecd497
 RMD160 (blockdiag-1.1.1.tar.gz) = d2e8689ef092a24b6681753995b33709c871b8a0
 Size (blockdiag-1.1.1.tar.gz) = 128625 bytes
+SHA1 (patch-src_blockdiag_tests_test__rst__directives.py) = 52c467a3223b42b651e8e9c93582c3b0f0c706d3
+SHA1 (patch-src_blockdiag_tests_test__utils__fontmap.py) = 430e7322ebc8ac9080274a8bd888f1bf05e70570
+SHA1 (patch-src_blockdiag_tests_utils.py) = bf965de7cd031c3729cd8d91ce9b006a52fe07b0
