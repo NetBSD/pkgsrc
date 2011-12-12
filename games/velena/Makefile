@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/05/28 22:41:43 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2011/12/12 07:11:06 marino Exp $
 #
 
 DISTNAME=	veleng10
@@ -17,6 +17,7 @@ RESTRICTED=		You must not charge a fee for this software nor for any derived wor
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+NOT_FOR_PLATFORM=	DragonFly-*-x86_64    # Can't build 32-bit binaries
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_OPTS_ZIP=	-LLaqo
