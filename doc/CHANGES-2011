@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3230 2011/12/12 07:33:25 jnemeth Exp $
+$NetBSD: CHANGES-2011,v 1.3231 2011/12/12 07:33:42 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5108,3 +5108,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-POEx-Types version 1.100910 [hiramatsu 2011-12-12]
 	Updated misc/p5-Vroom to 0.26 [hiramatsu 2011-12-12]
 	Updated comms/asterisk18 to 1.8.7.2 [jnemeth 2011-12-12]
+	Updated comms/asterisk16 to 1.6.2.21 [jnemeth 2011-12-12]
