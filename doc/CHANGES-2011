@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3228 2011/12/11 20:45:13 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3229 2011/12/12 04:00:11 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5105,3 +5105,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-dvips to 2011 [minskim 2011-12-11]
 	Updated print/tex-dvips-doc to 2011 [minskim 2011-12-11]
 	Updated print/tex-hyphen-base to 2011 [minskim 2011-12-11]
+	Added devel/p5-POEx-Types version 1.100910 [hiramatsu 2011-12-12]
+	Updated misc/p5-Vroom to 0.26 [hiramatsu 2011-12-12]
