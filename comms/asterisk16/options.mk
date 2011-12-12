@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2011/10/11 03:15:50 jnemeth Exp $
+# $NetBSD: options.mk,v 1.12 2011/12/12 05:05:34 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap
@@ -44,9 +44,9 @@ CONFIGURE_ARGS+=	--without-odbc
 .if !empty(PKG_OPTIONS:Milbc)
 DISTFILES+=		rfc3951.txt
 SITES.rfc3951.txt=	http://www.ietf.org/rfc/
-DISTFILES+=		extract-cfile.awk
-SITES.extract-cfile.awk=	http://www.ilbcfreeware.org/documentation/
-USE_TOOLS+=		awk
+DISTFILES+=		extract-cfile.txt
+SITES.extract-cfile.txt=	http://www.ilbcfreeware.org/documentation/
+USE_TOOLS+=		awk tr
 PLIST.ilbc=		yes
 .endif
 
@@ -72,8 +72,8 @@ post-configure:
 post-extract:
 .if !empty(PKG_OPTIONS:Milbc)
 	cp ${DISTDIR}/${DIST_SUBDIR}/rfc3951.txt ${WRKSRC}/codecs/ilbc
-	cp ${DISTDIR}/${DIST_SUBDIR}/extract-cfile.awk ${WRKSRC}/codecs/ilbc
-	cd ${WRKSRC}/codecs/ilbc && ${AWK} -f extract-cfile.awk < rfc3951.txt
+	cp ${DISTDIR}/${DIST_SUBDIR}/extract-cfile.txt ${WRKSRC}/codecs/ilbc
+	cd ${WRKSRC}/codecs/ilbc && ${TR} -d '\r' < extract-cfile.txt | ${AWK} -f - rfc3951.txt
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebvmail)
