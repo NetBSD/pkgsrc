@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/05/20 11:35:50 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/12/12 07:12:52 marino Exp $
 #
 # used by graphics/eog-plugins/Makefile
 # used by graphics/eog-plugins-map/Makefile
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DISTINFO_FILE=	${.CURDIR}/../../graphics/eog-plugins/distinfo
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config gmake gsed
+USE_TOOLS+=	intltool pkg-config gmake gsed msgfmt
 # XXX pkgsrc tries to trick us into using NetBSD's sed
 _TOOLS_USE_PKGSRC.gsed=yes
 
