@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/12/07 13:12:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/12 11:33:27 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -345,3 +345,4 @@ ${PYSITELIB}/blockdiag/utils/uuid.pyo
 ${PYSITELIB}/blockdiag_sphinxhelper.py
 ${PYSITELIB}/blockdiag_sphinxhelper.pyc
 ${PYSITELIB}/blockdiag_sphinxhelper.pyo
+man/man1/blockdiag.1
