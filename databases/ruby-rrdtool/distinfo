@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/13 15:28:57 taca Exp $
+
+SHA1 (rrdtool-1.4.5.tar.gz) = 56638e8aedd5d5522152e86746e382b75dc48c35
+RMD160 (rrdtool-1.4.5.tar.gz) = 9c45c3be7bcb8e17260055a33e936f307884914f
+Size (rrdtool-1.4.5.tar.gz) = 1348713 bytes
