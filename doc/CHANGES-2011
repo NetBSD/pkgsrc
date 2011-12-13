@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3239 2011/12/13 15:30:36 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3240 2011/12/13 15:34:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/p5-Catalyst-Authentication-Store-DBIx-Class to 0.1503 [hiramatsu 2011-12-13]
 	Updated devel/p5-Proc-Simple to 1.30 [hiramatsu 2011-12-13]
 	Added databases/ruby-rrdtool version 1.4.5 [taca 2011-12-13]
+	Updated textproc/ruby-rdtool to 0.6.31 [taca 2011-12-13]
