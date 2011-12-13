@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2011/03/23 16:51:23 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/13 15:58:20 taca Exp $
 
-DISTNAME=	rails-${RUBY_RAILS2_VERSION}
+DISTNAME=	rails-${RUBY_RAILS_VERSION}
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	Framework for developing database-backed web applications
 LICENSE=	mit
-
-USE_RAKE=	YES
-RUBY_RAILS=	2
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
@@ -19,6 +16,8 @@ DEPENDS+=	${RUBY_ACTIVERESOURCE_DEPENDS}
 
 CONFLICTS+=	ruby[1-9][0-9]-rails-[0-9]* rails-[0-9]*
 
+RUBY_RAILS_SUPPORTED=	2
+USE_RAKE=		YES
 REPLACE_RUBY_DIRS=	bin
 REPLACE_RUBY_PAT=	*
 
