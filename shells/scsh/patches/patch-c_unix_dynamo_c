@@ -1,0 +1,14 @@
+$NetBSD: patch-c_unix_dynamo_c,v 1.1 2011/12/13 07:11:13 dholland Exp $
+
+Use standard headers.
+
+--- c/unix/dynamo.c~	2001-01-22 12:48:00.000000000 +0000
++++ c/unix/dynamo.c
+@@ -4,6 +4,7 @@
+  */
+ 
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include "sysdep.h"
+ #include "scheme48.h"
