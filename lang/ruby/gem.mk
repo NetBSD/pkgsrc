@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.9 2011/11/08 15:19:22 taca Exp $
+# $NetBSD: gem.mk,v 1.10 2011/12/13 15:47:06 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -110,14 +110,14 @@ UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
 USE_RAKE=		YES
 .endif
 
-.if defined(RUBY_RAILS)
+.if defined(RUBY_RAILS_SUPPORTED)
 USE_TOOLS+=		expr
 .endif
 
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
 
-.if defined(RUBY_RAILS)
+.if defined(RUBY_RAILS_SUPPORTED)
 .include "../../lang/ruby/rails.mk"
 .endif
 
