@@ -1,0 +1,33 @@
+$NetBSD: patch-scsh_network1_c,v 1.1 2011/12/13 07:11:13 dholland Exp $
+
+Use socklen_t appropriately.
+
+--- scsh/network1.c~	2006-03-02 21:46:15.000000000 +0000
++++ scsh/network1.c
+@@ -409,7 +409,7 @@ s48_value scheme_getsockopt (s48_value s
+ 			     s48_value optname)
+ {
+   int optval;
+-  size_t optlen=sizeof(optval);
++  socklen_t optlen=sizeof(optval);
+   
+   if (getsockopt(s48_extract_fixnum (s),
+ 		 s48_extract_fixnum (level),
+@@ -426,7 +426,7 @@ s48_value scheme_getsockopt_linger (s48_
+ 				    s48_value optname)
+ {
+   struct linger optval;
+-  size_t optlen=sizeof(optval);
++  socklen_t optlen=sizeof(optval);
+   
+   if (getsockopt(s48_extract_fixnum (s),
+ 		 s48_extract_fixnum (level),
+@@ -444,7 +444,7 @@ s48_value scheme_getsockopt_timeout (s48
+ 				     s48_value optname)
+ {
+   struct timeval optval;
+-  size_t optlen=sizeof(optval);
++  socklen_t optlen=sizeof(optval);
+   
+   if (getsockopt(s48_extract_fixnum (s),
+ 		 s48_extract_fixnum (level),
