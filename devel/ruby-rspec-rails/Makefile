@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/18 04:03:39 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/13 15:55:20 taca Exp $
 
 DISTNAME=	rspec-rails-2.6.1
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-rspec>=2.6.0<2.7:../../devel/ruby-rspec
 
-RUBY_RAILS=	3
+RUBY_RAILS_SUPPORTED=	3 31
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
