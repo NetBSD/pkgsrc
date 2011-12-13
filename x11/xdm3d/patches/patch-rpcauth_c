@@ -1,0 +1,24 @@
+$NetBSD: patch-rpcauth_c,v 1.1 2011/12/13 04:40:31 dholland Exp $
+
+When imake works properly, this file isn't built unless Secure RPC is
+present. When it doesn't work properly, we have to resort to buildlink
+hacks and it gets built whether we like it or not, so make it come out
+empty in that case.
+
+--- rpcauth.c~	1997-08-22 09:41:57.000000000 +0000
++++ rpcauth.c
+@@ -38,6 +38,8 @@ from the X Consortium.
+  * generate SecureRPC authorization records
+  */
+ 
++#ifdef SECURE_RPC
++
+ # include   <X11/Xos.h>
+ # include   <rpc/rpc.h>
+ # include   <rpc/key_prot.h>
+@@ -88,3 +90,5 @@ SecureRPCGetAuth (namelen, name)
+     memmove( new->data, key, new->data_length);
+     return new;
+ }
++
++#endif /* SECURE_RPC */
