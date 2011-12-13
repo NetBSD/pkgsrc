@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/12/06 00:19:23 sbd Exp $
+# $NetBSD: Makefile,v 1.34 2011/12/13 07:15:05 dholland Exp $
 #
 
 DISTNAME=	coq-8.3pl1
@@ -31,7 +31,8 @@ PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
-      !empty(MACHINE_PLATFORM:MFreeBSD-*-*)
+      !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
 .  endif
 .endif
