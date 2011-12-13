@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3243 2011/12/13 16:25:29 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3244 2011/12/13 21:46:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5129,3 +5129,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-actionpack3 to 3.0.11nb1 [taca 2011-12-13]
 	Updated devel/ruby-i18n to 0.6.0 [taca 2011-12-13]
 	Updated databases/ruby-sequel to 3.29.0 [taca 2011-12-13]
+	Updated converters/qrencode to 3.2.0 [ryoon 2011-12-13]
