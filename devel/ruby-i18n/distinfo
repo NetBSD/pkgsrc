@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/12/04 04:00:24 taca Exp $
+$NetBSD: distinfo,v 1.4 2011/12/13 16:09:56 taca Exp $
 
-SHA1 (i18n-0.5.0.gem) = 74ec4aeb2c46d6d59864e5fceecd3cd496963a3f
-RMD160 (i18n-0.5.0.gem) = 6ecd50e863056b17a979960e0602015e094dd02f
-Size (i18n-0.5.0.gem) = 60416 bytes
+SHA1 (i18n-0.6.0.gem) = 4e89fd360ed28ee0678c133160e66bde6d2a116e
+RMD160 (i18n-0.6.0.gem) = 96eca9782b922f27721d0f83d39caf0ee2645f4a
+Size (i18n-0.6.0.gem) = 60928 bytes
