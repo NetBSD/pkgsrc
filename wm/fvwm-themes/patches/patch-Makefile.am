@@ -1,9 +1,19 @@
-$NetBSD: patch-Makefile.am,v 1.1 2011/07/09 14:20:53 wiz Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2011/12/13 04:56:10 dholland Exp $
 
-Use destdir fake version at install target:
+- Use destdir fake version at install target.
+- Fix missing DESTDIR in mkinstalldirs invocation.
 
---- work/fvwm-themes-0.6.2/Makefile.am.orig	2002-12-06 02:01:37.000000000 +0000
+--- Makefile.am.orig	2002-12-06 02:01:37.000000000 +0000
 +++ Makefile.am
+@@ -18,7 +18,7 @@ install-data-local:
+ 	RUN_UPDATEMENU=@RUN_UPDATEMENU@
+ 	UPDATE_MENU=@UPDATE_MENU@
+ 
+-	$(mkinstalldirs) $(FT_DATADIR)
++	$(mkinstalldirs) $(DESTDIR)$(FT_DATADIR)
+ 	for dir in $(FT_DATA_SUBDIRS); do \
+ 		chmod -R o-w,go+rX $$dir 2>/dev/null || true; \
+ 		rm -rf "$(DESTDIR)$(FT_DATADIR)/$$dir"; \
 @@ -33,10 +33,10 @@ install-data-local:
  	mv -f $(DESTDIR)$(SETTINGS_FILE).tmp $(DESTDIR)$(SETTINGS_FILE)
  
