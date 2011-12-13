@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1543 2011/12/12 03:58:34 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.1544 2011/12/13 00:30:08 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -1068,6 +1068,7 @@ SUBDIR+=	p5-Test-Aggregate
 SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
 SUBDIR+=	p5-Test-Base
+SUBDIR+=	p5-Test-CPAN-Meta-YAML
 SUBDIR+=	p5-Test-CheckManifest
 SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-ClassAPI
