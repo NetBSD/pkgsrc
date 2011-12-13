@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/07/20 19:08:14 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2011/12/13 21:44:36 ryoon Exp $
 
-SHA1 (qrencode-3.1.1.tar.gz) = c3eb6c44553daa612a9bcf413d3cab7c46241373
-RMD160 (qrencode-3.1.1.tar.gz) = 22c832c363f3ed38d3a44479ab8599c79a665f72
-Size (qrencode-3.1.1.tar.gz) = 377838 bytes
-SHA1 (patch-aa) = b369fd6bd0a47c5fe2464d270e0ed5819069fa63
-SHA1 (patch-libqrencode.pc.in) = 7255323ce05e7d573cc96d0b535285283a6c975b
+SHA1 (qrencode-3.2.0.tar.gz) = 1c9cf02cc8e79dddc7238cad64b0bf3c48e94210
+RMD160 (qrencode-3.2.0.tar.gz) = ebf131f37b963b4295f8b052eeb33556a5db6cda
+Size (qrencode-3.2.0.tar.gz) = 423280 bytes
