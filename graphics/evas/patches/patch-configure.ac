@@ -1,0 +1,12 @@
+$NetBSD: patch-configure.ac,v 1.1 2011/12/13 20:03:26 marino Exp $
+
+--- configure.ac.orig	2011-11-17 03:25:24.000000000 +0000
++++ configure.ac
+@@ -569,6 +569,7 @@ if test "x${want_evas_cserve}" = "xyes"
+    AC_LINK_IFELSE(
+       [AC_LANG_PROGRAM(
+          [[
++#include <sys/stat.h>
+ #include <sys/types.h>
+ #include <sys/mman.h>
+ #include <fcntl.h>
