@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3236 2011/12/13 00:33:07 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3237 2011/12/13 12:16:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5115,3 +5115,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added misc/php-orangehrm version 2.6.11.2 [ryoon 2011-12-12]
 	Added devel/p5-Test-CPAN-Meta-YAML version 0.17 [hiramatsu 2011-12-13]
 	Updated net/p5-Net-CIDR-Lite to 0.21 [hiramatsu 2011-12-13]
+	Updated databases/mysql55-client to 5.5.19 [adam 2011-12-13]
+	Updated databases/mysql55-server to 5.5.19 [adam 2011-12-13]
