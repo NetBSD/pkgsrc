@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/05/19 08:59:36 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2011/12/13 06:14:47 dholland Exp $
 #
 
 DISTNAME=	cs113ins
@@ -22,11 +22,20 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 
-USE_TOOLS+=	pax gtar unzip
+USE_TOOLS+=	pax gtar
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+UNZIP_CMD?=	unzip
+.else
+USE_TOOLS+=	unzip
+.endif
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	cd ${WRKDIR:Q} && {					\
-			${UNZIP_CMD} -x ${DOWNLOADED_DISTFILE}		\
+			${UNZIP_CMD} ${DOWNLOADED_DISTFILE}		\
 			|| ${TEST} -f InstallerData/Installer.zip;	\
 		}
 NO_BUILD=	yes
@@ -49,7 +58,7 @@ SUBST_SED.cs+=		-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_SED.cs+=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 
 post-extract:
-	cd ${WRKDIR} && ${UNZIP_CMD} -x InstallerData/Installer.zip
+	cd ${WRKDIR} && ${UNZIP_CMD} InstallerData/Installer.zip
 	${CP} ${FILESDIR:Q}/csched.sh ${WRKDIR:Q}
 
 do-install:
