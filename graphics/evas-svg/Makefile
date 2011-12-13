@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/12/05 17:33:33 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2011/12/13 20:04:33 marino Exp $
 
 PKGNAME=	evas-svg-${EVAS_VERSION}
 
@@ -17,4 +17,5 @@ MAKE_FLAGS+=	module_la_LIBADD="\$${EINA_LIBS} \$${evas_image_loader_svg_libs} ${
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
