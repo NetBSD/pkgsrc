@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2011/03/19 03:58:20 obache Exp $
+$NetBSD: distinfo,v 1.15 2011/12/13 07:11:13 dholland Exp $
 
 SHA1 (scsh-0.6.7.tar.gz) = a1eaf0d0593e14914824898a0c3ec166429affd7
 RMD160 (scsh-0.6.7.tar.gz) = f017c5a157cd1a3ad5daeaecba43ce84784c7e51
@@ -10,3 +10,6 @@ SHA1 (patch-ad) = 46825c2742f8c3f41ce6300411841fde6fa63de0
 SHA1 (patch-ae) = 3838934816cf23f1975d15f3dfd3ce8fae10ee40
 SHA1 (patch-af) = faddb025c3bada2d321b693217104dc986a8a90f
 SHA1 (patch-ag) = efd04134ee52795c1538a31ad6052da8fd8946ae
+SHA1 (patch-c_unix_dynamo_c) = eef2ef3319c74b2a1e858ea3a4bcc41ad2af882a
+SHA1 (patch-c_unix_socket_c) = d493a22df14f6f171076eb4756aa344eb4c258f9
+SHA1 (patch-scsh_network1_c) = 26283f75b7303ec42ed50c15019c0c2ad08e8ece

@@ -1,0 +1,23 @@
+$NetBSD: patch-c_unix_socket_c,v 1.1 2011/12/13 07:11:13 dholland Exp $
+
+Use standard headers.
+
+--- c/unix/socket.c~	2003-06-25 08:19:34.000000000 +0000
++++ c/unix/socket.c
+@@ -12,6 +12,7 @@
+ #include <fcntl.h>
+ #include <netdb.h>
+ #include <unistd.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <netinet/in.h>
+ 
+@@ -390,7 +391,7 @@ s48_get_host_name(void)
+     char	*tmp;
+ 
+     mbuff_len += 256; /* Initial guess */
+-    tmp = (char *) realloc(mbuff, mbuff_len);
++    tmp = realloc(mbuff, mbuff_len);
+ 
+     if (tmp == NULL) {
+       free(mbuff);
