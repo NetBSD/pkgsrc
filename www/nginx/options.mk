@@ -1,13 +1,17 @@
-# $NetBSD: options.mk,v 1.11 2011/10/04 20:55:35 shattered Exp $
+# $NetBSD: options.mk,v 1.12 2011/12/13 22:00:47 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache pcre \
-			push realip ssl sub uwsgi
+			push realip ssl sub uwsgi image-filter upload debug
 PKG_SUGGESTED_OPTIONS=	pcre ssl
 
 PLIST_VARS+=		uwsgi
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--with-debug
+.endif
 
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
@@ -58,11 +62,33 @@ CONFIGURE_ARGS+=	--with-ipv6
 EGFILES+=		uwsgi_params
 PLIST.uwsgi=		yes
 .else
-.  if !empty(PKG_OPTIONS:Mpush)
-PUSH=			nginx_http_push_module-0.692
-DISTFILES+=		${PUSH}.tar.gz
-SITES.${PUSH}.tar.gz=	http://pushmodule.slact.net/downloads/
-CONFIGURE_ARGS+=	--add-module=../${PUSH}
-.  endif
 CONFIGURE_ARGS+=	--without-http_uwsgi_module
+.endif
+
+.if !empty(PKG_OPTIONS:Mpush)
+CONFIGURE_ARGS+=	--add-module=../${PUSH}
+.endif
+.if !empty(PKG_OPTIONS:Mpush) || make(makesum)
+PUSH=			nginx_http_push_module-0.692
+PUSH_DISTFILE=		${PUSH}.tar.gz
+SITES.${PUSH_DISTFILE}=	http://pushmodule.slact.net/downloads/
+
+DISTFILES+=		${PUSH_DISTFILE}
+.endif
+
+.if !empty(PKG_OPTIONS:Mupload)
+CONFIGURE_ARGS+=	--add-module=../${NGX_UPLOAD}
+.endif
+
+.if !empty(PKG_OPTIONS:Mupload) || make(makesum)
+DISTFILES+=		${NGX_UPLOAD_DISTFILE}
+
+NGX_UPLOAD=		nginx_upload_module-2.2.0
+NGX_UPLOAD_DISTFILE=	${NGX_UPLOAD}.tar.gz
+SITES.${NGX_UPLOAD_DISTFILE}=	http://www.grid.net.ru/nginx/download/
+.endif
+
+.if !empty(PKG_OPTIONS:Mimage-filter)
+.include "../../graphics/gd/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-http_image_filter_module
 .endif
