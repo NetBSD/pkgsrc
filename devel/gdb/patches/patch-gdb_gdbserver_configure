@@ -1,0 +1,13 @@
+$NetBSD: patch-gdb_gdbserver_configure,v 1.1 2011/12/13 06:58:08 sbd Exp $
+
+--- gdb/gdbserver/configure.orig	2002-07-24 21:30:46.000000000 +0000
++++ gdb/gdbserver/configure
+@@ -1105,7 +1105,7 @@ EOF
+ fi
+ 
+ 
+-for ac_hdr in sgtty.h termio.h termios.h sys/reg.h string.h 		 proc_service.h sys/procfs.h thread_db.h linux/elf.h unistd.h
++for ac_hdr in sgtty.h termio.h termios.h sys/reg.h string.h stdlib.h	 proc_service.h sys/procfs.h thread_db.h linux/elf.h unistd.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
