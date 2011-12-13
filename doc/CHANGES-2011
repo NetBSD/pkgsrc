@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3238 2011/12/13 12:32:32 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3239 2011/12/13 15:30:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5122,3 +5122,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/p5-Image-ExifTool to 8.65 [hiramatsu 2011-12-13]
 	Updated www/p5-Catalyst-Authentication-Store-DBIx-Class to 0.1503 [hiramatsu 2011-12-13]
 	Updated devel/p5-Proc-Simple to 1.30 [hiramatsu 2011-12-13]
+	Added databases/ruby-rrdtool version 1.4.5 [taca 2011-12-13]
