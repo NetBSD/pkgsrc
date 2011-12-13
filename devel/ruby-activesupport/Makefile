@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2011/03/23 14:27:14 taca Exp $
+# $NetBSD: Makefile,v 1.26 2011/12/13 15:50:49 taca Exp $
 
-DISTNAME=	activesupport-${RUBY_RAILS2_VERSION}
+DISTNAME=	activesupport-${RUBY_RAILS_VERSION}
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	http://rubyforge.org/projects/activesupport/
 COMMENT=	Collection of classes and extensions for Rails
 LICENSE=	mit
 
-RUBY_RAILS=	2
+RUBY_RAILS_SUPPORTED=	2
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
