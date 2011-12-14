@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3253 2011/12/14 16:28:30 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3254 2011/12/14 16:37:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5143,3 +5143,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-activemodel to 3.0.11nb2 [taca 2011-12-14]
 	Added databases/ruby-arel20 version 2.0.10 [taca 2011-12-14]
 	Updated databases/ruby-arel to 2.2.1 [taca 2011-12-14]
+	Added www/ruby-rack-mount06 version 0.6.14 [taca 2011-12-14]
+	Added www/ruby-rack-test05 version 0.5.7 [taca 2011-12-14]
