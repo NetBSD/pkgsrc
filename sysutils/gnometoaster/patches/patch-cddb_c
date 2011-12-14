@@ -1,11 +1,11 @@
-$NetBSD: patch-cddb_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
+$NetBSD: patch-cddb_c,v 1.2 2011/12/14 02:54:27 sbd Exp $
 
 - fix include silliness
 - fix LP64 problems
 
 --- cddb.c.orig	2001-10-28 11:41:51.000000000 +0000
 +++ cddb.c
-@@ -45,10 +45,7 @@
+@@ -45,11 +45,8 @@
  #include <stdlib.h>
  #include <sys/socket.h>
  #include <sys/types.h>
@@ -16,7 +16,8 @@ $NetBSD: patch-cddb_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
 -#endif
  #include <netdb.h>
  #include <string.h>
-@@ -431,7 +431,7 @@ GList *cddb_serverrequest(gchar *server,
+ #include <unistd.h>
+@@ -431,7 +428,7 @@ GList *cddb_serverrequest(gchar *server,
  		  if (result==210)
  		    {
  		       /* the first line is the corresponding cddb_key */
@@ -25,7 +26,7 @@ $NetBSD: patch-cddb_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
  		       /* store a response line */
  		       while (cddb_poll(cddb_sfd,resstr))
  			 entry=g_list_append(entry,g_strdup(resstr));
-@@ -458,7 +458,7 @@ GList *cddb_cachelookup(cddb_essentials 
+@@ -458,7 +455,7 @@ GList *cddb_cachelookup(cddb_essentials
     while ((current!=NULL)&&(result==NULL))
       {
  	GList *entry=(GList*)current->data;
@@ -34,7 +35,7 @@ $NetBSD: patch-cddb_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
  	  result=entry;
  	current=current->next;
       };
-@@ -754,7 +754,7 @@ void *cddb_commthread(void *s)
+@@ -754,7 +751,7 @@ void *cddb_commthread(void *s)
   * cancelled.
   * data can point to additional informations passed to the callback
   * but may otherwise safely be set to NULL */
@@ -43,7 +44,7 @@ $NetBSD: patch-cddb_c,v 1.1 2011/10/02 01:20:55 dholland Exp $
  		int tracknum,
  		cddb_datahandler callback,
  		gpointer data)
-@@ -786,12 +786,12 @@ int cddb_lookup(cddb_essentials *es,
+@@ -786,12 +783,12 @@ int cddb_lookup(cddb_essentials *es,
  	pthread_mutex_unlock(&cddb_sem);
  
       };
