@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2011/12/14 07:30:42 agc Exp $
+
+Patch from Gregor Riepl, brought over from NetBSD sources - patch
+for building on Darwin
+
+--- include/iscsi.h	2011/12/14 03:16:24	1.1
++++ include/iscsi.h	2011/12/14 03:16:40
+@@ -31,6 +31,8 @@
+ #ifndef ISCSI_H_
+ #define ISCSI_H_	1
+ 
++#include <inttypes.h>
++
+ enum {
+ 	ISCSI_MAXSOCK = 8
+ };
