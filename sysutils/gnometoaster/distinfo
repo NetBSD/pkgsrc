@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/11/24 13:34:29 joerg Exp $
+$NetBSD: distinfo,v 1.10 2011/12/14 02:54:27 sbd Exp $
 
 SHA1 (gtoaster1.0Beta5.tgz) = c55bf7e8e532956a8907cd29cbfb98a721c5bb3a
 RMD160 (gtoaster1.0Beta5.tgz) = f8c7386497c56b8e1bf924e099ddf68cbcbd02a0
@@ -10,7 +10,7 @@ SHA1 (patch-ae) = b1a6f1f9bbaa605b9782f67dd8f6cdaf6770a438
 SHA1 (patch-af) = ca8bb1aa0b5eb267448dc8761ccfcd8428d00503
 SHA1 (patch-audiotrack_c) = 9fcd4edb86405db91e6a7b2902b344f9b92f1fbb
 SHA1 (patch-audiotrack_h) = 83757fbecfa059a4103099bf63c8544b0b7e1cff
-SHA1 (patch-cddb_c) = 18ade5a23408c0eaab0a0604b390abcd55d8ebf8
+SHA1 (patch-cddb_c) = 701da519a05b8ded311570fce628ed1328b2f59b
 SHA1 (patch-cddb_h) = bb49ee918f00e5f94f7733422b09a0e8a6ba22e3
 SHA1 (patch-cddrives_c) = 6f870d1c3cc7f756575dacde85a8346d886439fb
 SHA1 (patch-cdromlow_h) = 201c5578d2beaa133e3ac05fe24f639f6124736f
