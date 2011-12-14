@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/14 03:12:16 hiramatsu Exp $
+
+SHA1 (MooseX-CompileTime-Traits-1.102570.tar.gz) = 4b9e5edca076255a19b17f72b0c5368913d3ead0
+RMD160 (MooseX-CompileTime-Traits-1.102570.tar.gz) = 49e0ddc01d83371a4c8dbd20f12d27999f5c85cb
+Size (MooseX-CompileTime-Traits-1.102570.tar.gz) = 9931 bytes
