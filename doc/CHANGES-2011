@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3246 2011/12/14 09:06:06 pettai Exp $
+$NetBSD: CHANGES-2011,v 1.3247 2011/12/14 11:03:16 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5133,3 +5133,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/p5-MooseX-CompileTime-Traits version 1.102570 [hiramatsu 2011-12-14]
 	Updated devel/p5-Test-Weaken to 3.006.000 [hiramatsu 2011-12-14]
 	Updated security/oath-toolkit to 1.10.4 [pettai 2011-12-14]
+	Updated devel/p5-Test-File-Contents to 0.20 [hiramatsu 2011-12-14]
+	Updated devel/p5-namespace-autoclean to 0.13 [hiramatsu 2011-12-14]
+	Updated www/p5-Catalyst-Engine-PSGI to 0.13 [hiramatsu 2011-12-14]
