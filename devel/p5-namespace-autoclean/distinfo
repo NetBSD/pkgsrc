@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/08/23 09:27:29 abs Exp $
+$NetBSD: distinfo,v 1.5 2011/12/14 11:02:00 hiramatsu Exp $
 
-SHA1 (namespace-autoclean-0.12.tar.gz) = 73f00f38e51f4806146656d36fa11fa62ecb31c7
-RMD160 (namespace-autoclean-0.12.tar.gz) = 2f12ff66056b455eaa7d820a901608f162e9e302
-Size (namespace-autoclean-0.12.tar.gz) = 12768 bytes
+SHA1 (namespace-autoclean-0.13.tar.gz) = 85a82fc0ade63dd46d438968a4c1a8c38f2b172f
+RMD160 (namespace-autoclean-0.13.tar.gz) = c3e8e5979ac3aae520236b2f328fa44c3506d106
+Size (namespace-autoclean-0.13.tar.gz) = 12954 bytes
