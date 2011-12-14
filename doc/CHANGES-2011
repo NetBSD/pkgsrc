@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3252 2011/12/14 16:26:07 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3253 2011/12/14 16:28:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5142,3 +5142,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/ruby-i18n_05 version 0.5.0 [taca 2011-12-14]
 	Updated devel/ruby-activemodel to 3.0.11nb2 [taca 2011-12-14]
 	Added databases/ruby-arel20 version 2.0.10 [taca 2011-12-14]
+	Updated databases/ruby-arel to 2.2.1 [taca 2011-12-14]
