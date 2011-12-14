@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3255 2011/12/14 16:49:40 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3256 2011/12/14 16:59:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5147,3 +5147,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/ruby-rack-test05 version 0.5.7 [taca 2011-12-14]
 	Updated www/ruby-rack-mount to 0.8.3 [taca 2011-12-14]
 	Updated www/ruby-rack-test to 0.6.1 [taca 2011-12-14]
+	Added converters/ruby-unf_ext version 0.0.4 [taca 2011-12-14]
+	Added converters/ruby-unf version 0.0.4 [taca 2011-12-14]
