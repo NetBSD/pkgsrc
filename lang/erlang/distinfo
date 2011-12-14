@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2011/05/26 20:19:43 asau Exp $
+$NetBSD: distinfo,v 1.25 2011/12/14 11:08:50 hans Exp $
 
 SHA1 (erlang/otp_src_R14B03.tar.gz) = 109812114ef7c2855ade14b90813a870c89f6d43
 RMD160 (erlang/otp_src_R14B03.tar.gz) = 468736a53b2e74ab0cd0f706751b5b03cbfa87cd
@@ -8,3 +8,4 @@ SHA1 (patch-ai) = e0b05313bb5198b339ff0c8d277cbe62a13d0c94
 SHA1 (patch-am) = 273390e10f5bb3a8e858f5f831c7f5afded068bf
 SHA1 (patch-ao) = a4ee17b0a81415d541cb55d76b3c1ecc3148c2c2
 SHA1 (patch-ay) = 7d1a7f79e8c3ea909b2f4476d9ff271ed1318234
+SHA1 (patch-erts_emulator_drivers_common_inet_drv.c) = 57cd06da314895166f331a9aecc2fac02715d3e5
