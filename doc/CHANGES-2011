@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3257 2011/12/14 17:01:46 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3258 2011/12/14 17:06:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5150,3 +5150,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added converters/ruby-unf_ext version 0.0.4 [taca 2011-12-14]
 	Added converters/ruby-unf version 0.0.4 [taca 2011-12-14]
 	Updated archivers/ruby-zip to 0.9.5 [taca 2011-12-14]
+	Updated devel/ruby-ffi to 1.0.11 [taca 2011-12-14]
+	Updated devel/ruby-gemcutter to 0.7.1 [taca 2011-12-14]
+	Updated devel/ruby-highline to 1.6.8 [taca 2011-12-14]
