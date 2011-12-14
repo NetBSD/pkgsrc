@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/06/11 02:43:54 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/14 16:46:53 taca Exp $
 
-DISTNAME=	rack-mount-0.6.14
+DISTNAME=	rack-mount-0.8.3
 CATEGORIES=	www
 
-# Note: www/ruby-actionpack3 needs ruby-rack-mount<0.7.
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/josh/rack-mount
 COMMENT=	Stackable dynamic tree based Rack router
