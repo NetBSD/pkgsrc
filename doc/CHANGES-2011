@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3258 2011/12/14 17:06:06 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3259 2011/12/14 19:34:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5153,3 +5153,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-ffi to 1.0.11 [taca 2011-12-14]
 	Updated devel/ruby-gemcutter to 0.7.1 [taca 2011-12-14]
 	Updated devel/ruby-highline to 1.6.8 [taca 2011-12-14]
+	Updated print/web2c to 2011nb2 [minskim 2011-12-14]
