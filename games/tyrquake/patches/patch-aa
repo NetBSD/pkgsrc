@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/03/09 23:20:01 snj Exp $
+$NetBSD: patch-aa,v 1.2 2011/12/14 00:12:38 marino Exp $
 
---- Makefile.orig	2010-03-07 13:13:21.000000000 -0800
-+++ Makefile	2010-03-07 13:13:51.000000000 -0800
+--- Makefile.orig	2009-07-05 05:43:49.000000000 +0000
++++ Makefile
+@@ -37,7 +37,7 @@ ifneq (,$(findstring MINGW32,$(SYSNAME))
+ HOST_OS = WIN32
+ TOPDIR := $(shell pwd -W)
+ else
+-ifneq (,$(findstring $(SYSNAME),FreeBSD NetBSD OpenBSD))
++ifneq (,$(findstring $(SYSNAME),FreeBSD NetBSD OpenBSD DragonFly))
+ HOST_OS = UNIX
+ UNIX = bsd
+ TOPDIR := $(shell pwd)
 @@ -611,11 +611,11 @@ tyr-glquake.exe:	$(patsubst %,$(NQGLDIR)
  
  # Unix
