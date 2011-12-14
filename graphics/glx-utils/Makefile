@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/08/23 02:31:50 dsainty Exp $
+# $NetBSD: Makefile,v 1.9 2011/12/14 00:16:13 marino Exp $
 
 DISTNAME=	MesaDemos-${MESA_VERSION}
 PKGNAME=	glx-utils-${MESA_VERSION}
@@ -12,6 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MESA_PATCHFILES=	# don't track Mesa patchlevels
 
 INSTALLATION_DIRS=	bin
+LDFLAGS+=		-lX11	# ld 2.22 wants each library explicitly
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
