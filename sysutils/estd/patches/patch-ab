@@ -1,48 +1,52 @@
-$NetBSD: patch-ab,v 1.7 2011/03/16 05:09:16 macallan Exp $
+$NetBSD: patch-ab,v 1.8 2011/12/14 21:44:32 macallan Exp $
 
---- estd.c.orig	2011-03-16 04:50:26.000000000 +0000
+--- estd.c.orig	2009-10-20 16:18:28.000000000 +0000
 +++ estd.c
-@@ -55,7 +55,8 @@
+@@ -55,7 +55,9 @@
  #define TECH_EST 1
  #define TECH_POWERNOW 2
  #define TECH_ACPI 3
 -#define TECH_MAX 3
 +#define TECH_INTREPID 4
-+#define TECH_MAX 4
++#define TECH_LOONGSON 5
++#define TECH_MAX 5
  
  /* this is ugly, but... <shrug> */
  #define MAX_FREQS 32
-@@ -116,20 +117,23 @@ int             ndomains;
+@@ -116,20 +118,26 @@ int             ndomains;
   static size_t cp_time_size = sizeof(cp_time[0]) * CPUSTATES;
  #endif
  
 -static char	*techdesc[4] = {"Unknown",
-+static char	*techdesc[5] = {"Unknown",
++static char	*techdesc[6] = {"Unknown",
  				"Enhanced SpeedStep",
  				"PowerNow",
 -				"ACPI P-States"
 +				"ACPI P-States",
-+				"Intrepid"
++				"Intrepid",
++				"Loongson"
  				};
 -static char	*freqctl[4] = {	"",	
-+static char	*freqctl[5] = {	"",	
++static char	*freqctl[6] = {	"",	
  				"machdep.est.frequency.available",
  				"machdep.powernow.frequency.available",
 -				"hw.acpi.cpu.px_dom0.available"
 +				"hw.acpi.cpu.px_dom0.available",
-+				"machdep.intrepid.frequency.available"
++				"machdep.intrepid.frequency.available",
++				"machdep.loongson.frequency.available"
  				};
 -static char	*setctl[4] = {	"",
-+static char	*setctl[5] = {	"",
++static char	*setctl[6] = {	"",
  				"machdep.est.frequency.target",
  				"machdep.powernow.frequency.target",
 -				"hw.acpi.cpu.px_dom0.select"
 +				"hw.acpi.cpu.px_dom0.select",
-+				"machdep.intrepid.frequency.target"
++				"machdep.intrepid.frequency.target",
++				"machdep.loongson.frequency.target"
  				};
  
  void
-@@ -400,6 +404,10 @@ main(int argc, char *argv[])
+@@ -400,6 +408,13 @@ main(int argc, char *argv[])
  			break;
  		case 'P':
  			tech = TECH_POWERNOW;
@@ -50,6 +54,9 @@ $NetBSD: patch-ab,v 1.7 2011/03/16 05:09:16 macallan Exp $
 +		case 'I':
 +			tech = TECH_INTREPID;
 +			break;
++                case 'L':
++                        tech = TECH_LOONGSON;
++                        break;
  		case 'a':
  			strategy = AGGRESSIVE;
  			break;
