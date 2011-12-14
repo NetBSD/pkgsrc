@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
+$NetBSD: patch-ao,v 1.3 2011/12/14 03:21:52 sbd Exp $
 
---- configure.orig	Thu May 16 10:03:58 1996
+--- configure.orig	1996-05-16 08:03:58.000000000 +0000
 +++ configure
-@@ -1468,6 +1664,8 @@ else
+@@ -1468,6 +1468,8 @@ else
    d=""
  fi
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
-@@ -1478,8 +1676,8 @@ if test "$d" != "" ; then 
+@@ -1478,8 +1480,8 @@ if test "$d" != "" ; then
  		echo "can't find tcl.h in $d/include"
  		exit 1
  	fi
@@ -22,7 +22,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  		$d/lib/libtcl.so \
  		$d/lib/libtcl.a"
  	V_LIB_TCL=FAIL
-@@ -1493,7 +1691,7 @@ if test "$d" != "" ; then 
+@@ -1493,7 +1495,7 @@ if test "$d" != "" ; then
  		echo "can't find libtcl.a in $d/lib"
  		exit 1
  	fi
@@ -31,14 +31,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  		$d/lib/tcl"
  	V_LIBRARY_TCL=FAIL
  	for dir in $places; do
-@@ -1513,23 +1711,26 @@ else
- #include <tcl.h>
- EOF
- ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
- { (eval echo configure:1517: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
- ac_err=`grep -v '^ *+' conftest.out`
- if test -z "$ac_err"; then
-   rm -rf conftest*
+@@ -1520,16 +1522,19 @@ if test -z "$ac_err"; then
    V_INCLUDE_TCL=""
  else
    echo "$ac_err" >&5
@@ -61,7 +54,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  			$x_includes/tk \
  			$x_includes \
  			/usr/local/include \
-@@ -1546,81 +1747,43 @@ rm -f conftest*
+@@ -1546,81 +1551,43 @@ rm -f conftest*
  			exit 1
  		fi
  	fi
@@ -176,7 +169,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  		/usr/local/lib/tcl \
  		/usr/lib/tcl \
  		/usr/lib/tk/tcl \
-@@ -1651,6 +1814,8 @@ else
+@@ -1651,6 +1618,8 @@ else
    d=""
  fi
  
@@ -185,7 +178,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
-@@ -1661,8 +1826,8 @@ if test "$d" != "" ; then 
+@@ -1661,8 +1630,8 @@ if test "$d" != "" ; then
  		echo "can't find tk.h in $d/include"
  		exit 1
  	fi
@@ -196,7 +189,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  		$d/lib/libtk.so \
  		$d/lib/libtk.a"
  	V_LIB_TK=FAIL
-@@ -1676,7 +1841,7 @@ if test "$d" != "" ; then 
+@@ -1676,7 +1645,7 @@ if test "$d" != "" ; then
  		echo "can't find libtk.a in $d/lib"
  		exit 1
  	fi
@@ -205,7 +198,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  		$d/lib/tk"
  	V_LIBRARY_TK=FAIL
  	for dir in $places; do
-@@ -1712,15 +1879,16 @@ rm -f conftest*
+@@ -1712,15 +1681,16 @@ rm -f conftest*
  		V_INCLUDE_TK=""
  		places="\
  			$prefix/include \
@@ -225,7 +218,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  			"
  		for dir in $places; do
  			if test -r $dir/tk.h ; then
-@@ -1733,82 +1901,47 @@ rm -f conftest*
+@@ -1733,82 +1703,47 @@ rm -f conftest*
  			exit 1
  		fi
  	fi
@@ -345,7 +338,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  		/usr/local/lib/tk \
  		/usr/lib/tk \
  		/usr/lib/tk/tk \
-@@ -1872,22 +2005,93 @@ if test "$d" != "" ; then
+@@ -1872,22 +1807,93 @@ if test "$d" != "" ; then
  		exit 1
  	fi
  else
@@ -454,7 +447,7 @@ $NetBSD: patch-ao,v 1.2 2010/01/25 21:07:48 is Exp $
  		echo "configure: can't find gsm library ... you can get it at"
  		echo "   http://www.cs.tu-berlin.de/~jutta/toast.html"
  		exit 1
-@@ -2040,7 +2251,9 @@ sparc-sun-sunos*)
+@@ -2040,7 +2046,9 @@ sparc-sun-sunos*)
  	;;
  *-*-netbsd*)
  	V_TARCMD="tar -h -c -f"
