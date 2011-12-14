@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.21 2011/11/11 18:45:46 joerg Exp $
+$NetBSD: distinfo,v 1.22 2011/12/14 11:09:33 wiz Exp $
 
 SHA1 (zsh-4.3.12.tar.bz2) = 8fd7a6d841770c8b12cf3ae8229dd857ecdbad93
 RMD160 (zsh-4.3.12.tar.bz2) = 83f2a0f3e590722262e5725df97d924b1fd4ee84
 Size (zsh-4.3.12.tar.bz2) = 2917959 bytes
+SHA1 (patch-Completion_X_Command___mplayer) = 95a421f80a845dab6430a52f8155ecb02b8d5c14
 SHA1 (patch-ab) = 577a98385f258cbc47ff49d0b4bc6cc9134e864a
 SHA1 (patch-ac) = 23c086e61120f9c533e4a3a53e44c5b6b48b1352
 SHA1 (patch-af) = cedd6fb7369b0fc9debbaab29aaf40c25c587123
