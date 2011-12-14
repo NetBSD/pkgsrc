@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3247 2011/12/14 11:03:16 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3248 2011/12/14 11:09:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5136,3 +5136,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-File-Contents to 0.20 [hiramatsu 2011-12-14]
 	Updated devel/p5-namespace-autoclean to 0.13 [hiramatsu 2011-12-14]
 	Updated www/p5-Catalyst-Engine-PSGI to 0.13 [hiramatsu 2011-12-14]
+	Updated shells/zsh-current to 4.3.12nb1 [wiz 2011-12-14]
