@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/03/16 05:09:16 macallan Exp $
+# $NetBSD: Makefile,v 1.19 2011/12/14 21:44:32 macallan Exp $
 
 DISTNAME=	estd-r7
 PKGNAME=	estd-0.7
@@ -16,7 +16,8 @@ INSTALLATION_DIRS=	share/examples/rc.d
 
 ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 \
 			NetBSD-[4-9]*-x86_64 DragonFly-*-i386 \
-			NetBSD-5.99.*-powerpc
+			NetBSD-5.99.*-powerpc \
+			NetBSD-5.99.*-mips64el
 
 RCD_SCRIPTS=		estd
 RCD_SCRIPT_SRC.estd=	${WRKSRC}/estd.sh
