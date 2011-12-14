@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2011/08/12 16:30:00 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/14 17:04:15 taca Exp $
 
-DISTNAME=	gemcutter-0.7.0
+DISTNAME=	gemcutter-0.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
