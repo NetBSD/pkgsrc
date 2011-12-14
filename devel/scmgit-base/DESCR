@@ -7,3 +7,7 @@ GIT falls in the category of distributed version control software, similar
 to e.g. GNU Arch or Monotone (or, in the commercial world, BitKeeper). Every
 GIT working directory is a full-fledged repository with full revision tracking
 capabilities, not dependent on network access to a central server.
+
+This package contains only the program itself, and not the man pages.
+It also optionally contains a TK-based repository browser and python
+bindings.
