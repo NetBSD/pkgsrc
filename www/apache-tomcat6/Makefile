@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/09/24 16:20:57 spz Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2011/12/14 07:20:13 tron Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-6/v${TOMCAT_VER}/bin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tomcat.apache.org/
 COMMENT=	Implementation of Java Servlet and JavaServer Pages technologies
+LICENSE=	apache-2.0
 
 CONFLICTS+=	jakarta-tomcat55-[0-9]*
 CONFLICTS+=	jakarta-tomcat-[0-9]*
@@ -22,7 +23,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-TOMCAT_VER=		6.0.33
+TOMCAT_VER=		6.0.35
 TOMCAT_HOME=		${PREFIX}/share/tomcat
 EGDIR=			${PREFIX}/share/examples/tomcat
 DOCDIR=			${PREFIX}/share/doc/tomcat
