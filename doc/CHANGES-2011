@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3265 2011/12/14 20:53:33 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3266 2011/12/14 20:56:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5164,3 +5164,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-xetex to 2011 [minskim 2011-12-14]
 	Updated print/tex-xetex-doc to 2011 [minskim 2011-12-14]
 	Added www/php-concrete5 version 5.4.2.2 [ryoon 2011-12-14]
+	Updated editors/emacs-snapshot to 24.0.92.20111213 [minskim 2011-12-14]
