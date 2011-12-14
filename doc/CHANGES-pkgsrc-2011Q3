@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.52 2011/12/08 04:02:11 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.53 2011/12/14 02:45:07 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -201,3 +201,7 @@ Pullup ticket #3616 - requested by is
 net/icsi-finger security update
 Pullup ticket #3626 - requested by tron
 www/apache22 security update
+Pullup ticket #3630 - requested by spz
+security/openpam security patch
+Pullup ticket #3631 - requested by spz
+www/apache22 security patch
