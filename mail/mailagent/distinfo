@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/03/06 03:47:26 dholland Exp $
+$NetBSD: distinfo,v 1.5 2011/12/14 03:03:47 sbd Exp $
 
 SHA1 (mailagent-3.0.73.tar.gz) = c8a0329d79c98cb25bb53c79f06fcd63df58c418
 RMD160 (mailagent-3.0.73.tar.gz) = 70b2804fdd0602a20cb5a9f3391d460f47972570
@@ -8,10 +8,10 @@ SHA1 (patch-ab) = 06234ca205484e24dc175d828c6ecc82d4dc3342
 SHA1 (patch-ac) = 2431b92220a17eb8125eb31fabbd4a0827a150b3
 SHA1 (patch-ad) = d3e3e39c41219f8cbcff506046e2f00c0d659792
 SHA1 (patch-ae) = 9ba2345d2446321d7777bad4be74e8e8012529be
-SHA1 (patch-ag) = 2b7a56038d697f70f6aff2bd3538609a649f389d
-SHA1 (patch-ah) = 3c147f73ed410fe810b303da0be53d53f3ee5aa5
-SHA1 (patch-ai) = 5567148613abb872caff6b9869a4593f2ebdd5ec
-SHA1 (patch-aj) = cf12ed5cbc336c365cffde62476fe7c19e348766
-SHA1 (patch-ak) = b5f64263fda76827a1ed68b16f48f8970de3dd19
-SHA1 (patch-al) = db3f6453b5bc324587b967109dcc0e971ae51ac2
-SHA1 (patch-am) = e3857d6b364a3a22b9e82abb2c30297010a48a57
+SHA1 (patch-agent_edusers.SH) = 25896f576297e33814f59b30bbacb6c375c12a27
+SHA1 (patch-agent_magent.sh) = 39d4e9d6d848f2f51435bab13bb2f27fa391741f
+SHA1 (patch-agent_maildist.SH) = 7b94e87042aa416f6469d2b7cb0d1743db0eefba
+SHA1 (patch-agent_mailhelp.SH) = 0868f72362df49d169a5b45a226befb731cb0d49
+SHA1 (patch-agent_maillist.SH) = 811a179309462561202761e01eec56d3251417c2
+SHA1 (patch-agent_mailpatch.SH) = f25433d766c4acc8d7ffd41697cd217b82bb3cba
+SHA1 (patch-agent_package.SH) = 166319557ec0d6de3667e58010d10800e96da9dd
