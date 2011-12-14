@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/14 11:55:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/14 13:07:38 fhajny Exp $
 #
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
@@ -63,8 +63,11 @@ SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
 SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.paths+=	-e 's|erl|${PREFIX}/bin/erl|g'
-SUBST_SED.paths+=	-e 's|/bin/sh|/bin/ksh|g'
 SUBST_SED.paths+=	-e 's|readlink|${PREFIX}/bin/${GNU_PROGRAM_PREFIX}readlink|g'
+
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmqctl
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-env
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-server
 
 MAKE_ENV+=		TARGET_DIR="${DESTDIR}${PREFIX}/lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}"
 MAKE_ENV+=		SBIN_DIR="${DESTDIR}${PREFIX}/sbin/"
