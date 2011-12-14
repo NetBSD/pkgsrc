@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/10 05:40:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/14 17:04:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/gemcutter/version.rb
 ${GEM_LIBDIR}/lib/rubygems/commands/migrate_command.rb
 ${GEM_LIBDIR}/lib/rubygems/commands/tumble_command.rb
 ${GEM_LIBDIR}/lib/rubygems/commands/webhook_command.rb
