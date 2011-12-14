@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/02/15 07:03:11 spz Exp $
+@comment $NetBSD: PLIST,v 1.5.6.1 2011/12/14 07:20:13 tron Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -29,7 +29,7 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-3.3.1.jar
+share/tomcat/lib/ecj-3.7.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
