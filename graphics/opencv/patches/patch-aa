@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2010/12/06 16:55:23 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2011/12/14 18:27:22 marino Exp $
 
 NetBSD doesn't have expl(3) yet.
 https://code.ros.org/trac/opencv/ticket/736
@@ -10,7 +10,7 @@ https://code.ros.org/trac/opencv/ticket/736
  static CV_IMPLEMENT_QSORT_EX( icvSortFloat, float, CV_CMP_FLOAT, float)
  
 -#if ANDROID
-+#if defined(ANDROID) || defined(__NetBSD__)
++#if defined(ANDROID) || defined(__DragonFly__) || defined(__NetBSD__)
  #define expl(x) exp(x)
  #endif
  

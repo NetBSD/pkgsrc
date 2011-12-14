@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/01/24 14:37:51 wiz Exp $
+$NetBSD: distinfo,v 1.8 2011/12/14 18:27:22 marino Exp $
 
 SHA1 (OpenCV-2.2.0.tar.bz2) = 984ed71672d50391d0617fce2ef58e7590ec0fd7
 RMD160 (OpenCV-2.2.0.tar.bz2) = 57aedb7678964f43af3f1c838a8266c7b4869b01
 Size (OpenCV-2.2.0.tar.bz2) = 19800873 bytes
-SHA1 (patch-aa) = 58ac9aef394eedaf0be9afd725820b1acf54cd36
+SHA1 (patch-CMakeLists.txt) = 3c58828d9122105942820320a44f54e93effa33a
+SHA1 (patch-aa) = 3a95649075b2ca94d39ced3c00da6a90b5834881
 SHA1 (patch-ab) = 66936658e5ec12c479c29388916edd399c7feca6
