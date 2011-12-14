@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/12/13 15:53:03 taca Exp $
+# $NetBSD: Makefile,v 1.9 2011/12/14 16:21:53 taca Exp $
 
 DISTNAME=	activemodel-${RUBY_RAILS_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=2.1.2:../../textproc/ruby-builder
-DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.5.0:../../devel/ruby-i18n
+DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.5.0:../../devel/ruby-i18n_05
 
 RUBY_RAILS_SUPPORTED=	3
 
