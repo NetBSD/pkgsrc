@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2011/12/14 18:25:53 marino Exp $
+
+--- configure.orig	2010-09-09 22:06:13.000000000 +0000
++++ configure
+@@ -21493,7 +21493,7 @@ case "$host_os" in
+         ;;
+     esac
+   ;;
+-  freebsd* | netbsd* | openbsd*)
++  dragonfly* | freebsd* | netbsd* | openbsd*)
+     if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
+       objfmt='BSD-a.out'
+     else
