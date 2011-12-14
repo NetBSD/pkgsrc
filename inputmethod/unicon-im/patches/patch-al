@@ -1,4 +1,4 @@
-$NetBSD: patck-al,v 1.1 2007/03/24 16:04:56 joerg Exp $
+$NetBSD: patch-al,v 1.1 2011/12/14 18:31:48 marino Exp $
 
 --- server/TLS_TcpipMain.cpp.orig	2000-06-14 04:00:01.000000000 +0000
 +++ server/TLS_TcpipMain.cpp
