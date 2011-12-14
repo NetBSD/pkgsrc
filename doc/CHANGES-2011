@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3254 2011/12/14 16:37:24 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3255 2011/12/14 16:49:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5145,3 +5145,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-arel to 2.2.1 [taca 2011-12-14]
 	Added www/ruby-rack-mount06 version 0.6.14 [taca 2011-12-14]
 	Added www/ruby-rack-test05 version 0.5.7 [taca 2011-12-14]
+	Updated www/ruby-rack-mount to 0.8.3 [taca 2011-12-14]
+	Updated www/ruby-rack-test to 0.6.1 [taca 2011-12-14]
