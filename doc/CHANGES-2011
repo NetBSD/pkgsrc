@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3261 2011/12/14 19:48:53 morr Exp $
+$NetBSD: CHANGES-2011,v 1.3262 2011/12/14 19:54:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5157,3 +5157,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-pdftex to 1.40.11nb5 [minskim 2011-12-14]
 	Updated print/tex-pdftex-doc to 1.40.11nb3 [minskim 2011-12-14]
 	Updated www/wordpress to 3.3 [morr 2011-12-14]
+	Updated print/tex-luatex to 0.70.1 [minskim 2011-12-14]
+	Updated print/tex-luatex-doc to 0.70.1 [minskim 2011-12-14]
