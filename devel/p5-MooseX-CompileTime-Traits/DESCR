@@ -1,0 +1,3 @@
+MooseX::CompileTime::Traits allows role application at compile time via use
+statements. What this class does is provide an import method that will apply
+each of the roles (along with any arguments for parameterized roles).
