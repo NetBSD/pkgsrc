@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/08 15:37:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/12/14 17:03:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/LICENSE
@@ -319,7 +319,9 @@ ${GEM_LIBDIR}/lib/ffi/managedstruct.rb
 ${GEM_LIBDIR}/lib/ffi/memorypointer.rb
 ${GEM_LIBDIR}/lib/ffi/platform.rb
 ${GEM_LIBDIR}/lib/ffi/platform/i386-darwin/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-freebsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-linux/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/i386-netbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-openbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/i386-windows/types.conf
@@ -328,6 +330,8 @@ ${GEM_LIBDIR}/lib/ffi/platform/powerpc-darwin/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparc-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/sparcv9-solaris/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-darwin/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-freebsd/types.conf
+${GEM_LIBDIR}/lib/ffi/platform/x86_64-netbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-linux/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-openbsd/types.conf
 ${GEM_LIBDIR}/lib/ffi/platform/x86_64-solaris/types.conf
@@ -385,4 +389,5 @@ ${GEM_LIBDIR}/tasks/setup.rb
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/svn.rake
 ${GEM_LIBDIR}/tasks/test.rake
+${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
