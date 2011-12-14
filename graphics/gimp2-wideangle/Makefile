@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/11/01 06:01:34 sbd Exp $
+# $NetBSD: Makefile,v 1.33 2011/12/14 00:15:24 marino Exp $
 #
 
 DISTNAME=	wideangle
@@ -20,6 +20,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}
 
 LINK_PTHREAD=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+LINK_PTHREAD+=	-lm    # Tack on, explicit for binutils 2.22 linker
 
 do-build:
 	(cd ${WRKSRC} && LIBS=${LINK_PTHREAD:Q} gimptool-2.0 --build wideangle.c)
