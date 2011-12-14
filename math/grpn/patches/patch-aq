@@ -1,18 +1,21 @@
-$NetBSD: patch-aq,v 1.1 2005/10/07 12:31:25 rillig Exp $
+$NetBSD: patch-aq,v 1.2 2011/12/14 02:57:37 sbd Exp $
 
 The patches patch-al upto patch-aq add the physical constants k, q, e0,
 mu0, and c.
 
---- CHANGES.orig	Thu Apr  4 05:37:30 2002
-+++ CHANGES	Fri Oct  7 14:24:25 2005
-@@ -29,3 +29,10 @@ v1.1.1
- 
+--- CHANGES.orig	2011-05-10 16:59:30.000000000 +0000
++++ CHANGES
+@@ -30,6 +30,13 @@ v1.1.1
  v1.1.2
     Add db10 and db20 commands.
-+
+ 
 +v1.1.2nb1
 +   Add k,q,e0,mu0, and c commands for Boltzmann's constant
 +   (Joules/Kelvin), electron charge (coulomb), free space
 +   permitivitty (Farads/meter), free space permeability
 +	(Henries/meter), and the speed of light in a vacuum 
 +	(meters/second).
++
+ v1.1.3
+    Added deg, rad, pol and rect commands.
+ 
