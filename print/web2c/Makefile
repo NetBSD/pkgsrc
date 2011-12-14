@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2011/11/01 06:02:27 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2011/12/14 19:33:40 minskim Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	web2c-2011
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -57,8 +57,4 @@ INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/texk/web2c
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/ptexenc/buildlink3.mk"
-
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pdftex.1
-
 .include "../../mk/bsd.pkg.mk"
