@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3259 2011/12/14 19:34:16 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3260 2011/12/14 19:43:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5154,3 +5154,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-gemcutter to 0.7.1 [taca 2011-12-14]
 	Updated devel/ruby-highline to 1.6.8 [taca 2011-12-14]
 	Updated print/web2c to 2011nb2 [minskim 2011-12-14]
+	Updated print/tex-pdftex to 1.40.11nb5 [minskim 2011-12-14]
+	Updated print/tex-pdftex-doc to 1.40.11nb3 [minskim 2011-12-14]
