@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3250 2011/12/14 16:19:59 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3251 2011/12/14 16:22:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5140,3 +5140,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/SOPE to 2.0.0b3 [manu 2011-12-14]
 	Updated www/SOGo to 2.0.0b3 [manu 2011-12-14]
 	Added devel/ruby-i18n_05 version 0.5.0 [taca 2011-12-14]
+	Updated devel/ruby-activemodel to 3.0.11nb2 [taca 2011-12-14]
