@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/02/01 01:51:50 joerg Exp $
+$NetBSD: distinfo,v 1.5 2011/12/14 03:14:13 sbd Exp $
 
 SHA1 (ubs-0.17.tar.gz) = f0f67d437e4c5c7026b2f05d1aaff53688eb3253
 RMD160 (ubs-0.17.tar.gz) = 4e0e46bb8346f0c86989b0b33973000bbb86f1aa
 Size (ubs-0.17.tar.gz) = 372222 bytes
-SHA1 (patch-aa) = 466b0809dfc5df30bc77282e6ea2caa6f8d46ab7
+SHA1 (patch-aa) = 4f8d8085a8925ffe866f2d8cec72232f6da70811
 SHA1 (patch-ab) = 88d06fca850e7bf2d38ad587021e4352c96cc89b
 SHA1 (patch-ac) = af22e0ca907b22eedb86e79ce2e81e4fb87283e9
