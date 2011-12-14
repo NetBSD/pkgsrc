@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3244 2011/12/13 21:46:35 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3245 2011/12/14 03:15:29 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5130,3 +5130,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-i18n to 0.6.0 [taca 2011-12-13]
 	Updated databases/ruby-sequel to 3.29.0 [taca 2011-12-13]
 	Updated converters/qrencode to 3.2.0 [ryoon 2011-12-13]
+	Added devel/p5-MooseX-CompileTime-Traits version 1.102570 [hiramatsu 2011-12-14]
+	Updated devel/p5-Test-Weaken to 3.006.000 [hiramatsu 2011-12-14]
