@@ -1,4 +1,4 @@
-# $NetBSD: json.mk,v 1.1 2011/11/23 05:18:58 taca Exp $
+# $NetBSD: json.mk,v 1.2 2011/12/14 13:13:18 taca Exp $
 
 # This file handles appropriate dependency to ruby-json pacakge.
 #
@@ -23,7 +23,7 @@ _RUBY_JSON_MK=	# defined
 RUBY_JSON_TYPE?= json
 
 .if empty(RUBY_JSON_REQD)
-.warning "No needs to include ../../lang/ruby/json.mk"
+WARNINGS+= "[lang/ruby/json.mk] No needs to include ../../lang/ruby/json.mk"
 .else # !empty(RUBY_JSON_REQD)
 
 .include "../../lang/ruby/rubyversion.mk"
