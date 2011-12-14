@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2008/02/18 18:22:18 jlam Exp $
+$NetBSD: distinfo,v 1.7.34.1 2011/12/14 02:42:40 sbd Exp $
 
 SHA1 (openpam-20071221.tar.gz) = 43d41fa4a86199077c4fe193c52c59365f4c317e
 RMD160 (openpam-20071221.tar.gz) = cd8f7e94984693b0f892f226bfed6a3f9b24ec72
 Size (openpam-20071221.tar.gz) = 396932 bytes
-SHA1 (patch-ab) = 8ade188799693e6d7c28f27faf060c645c5d97c5
+SHA1 (patch-ab) = 2405cccb175e58914e36a26ac8aa896a1334b145
 SHA1 (patch-ac) = 72fb5ffb67edf9892e6c2db5485fdf51ea4b50ce
 SHA1 (patch-ad) = 08b0dbd2d84c4239ea898f137d2f0ed7f7476d74
 SHA1 (patch-ae) = 4f31bdde2cca94377c4e3ac8e4d42512764b3fac

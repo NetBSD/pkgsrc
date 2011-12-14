@@ -1,6 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2008/02/18 18:22:18 jlam Exp $
+$NetBSD: patch-ab,v 1.3.34.1 2011/12/14 02:42:40 sbd Exp $
 
---- lib/openpam_configure.c.orig	2007-12-21 06:36:24.000000000 -0500
+- pkgsrcification
+- prevention of CVE-2011-4122 taken from NetBSD src
+
+--- lib/openpam_configure.c.orig	2007-12-21 11:36:24.000000000 +0000
 +++ lib/openpam_configure.c
 @@ -70,7 +70,7 @@ static int
  match_word(const char *str, const char *word)
@@ -47,3 +50,16 @@ $NetBSD: patch-ab,v 1.3 2008/02/18 18:22:18 jlam Exp $
  	NULL
  };
  
+@@ -285,6 +287,12 @@ openpam_load_chain(pam_handle_t *pamh,
+ 	size_t len;
+ 	int r;
+ 
++	/* Don't allow an escape from policy_path. */
++	if (strchr(service, '/') != NULL) {
++		openpam_log(PAM_LOG_ERROR, "illegal service \"%s\"", service);
++		return (-PAM_SYSTEM_ERR);
++	}
++
+ 	for (path = openpam_policy_path; *path != NULL; ++path) {
+ 		len = strlen(*path);
+ 		if ((*path)[len - 1] == '/') {
