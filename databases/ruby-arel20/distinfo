@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/14 16:24:28 taca Exp $
+
+SHA1 (arel-2.0.10.gem) = 758e4172108a517d91c526dcab90355a7d07c527
+RMD160 (arel-2.0.10.gem) = dcecd53974a9a8f976c9946a6938d8c09baf27c5
+Size (arel-2.0.10.gem) = 36864 bytes
