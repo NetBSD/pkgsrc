@@ -1,0 +1,15 @@
+$NetBSD: patch-plugins-src__rabbitmq-erlang-client__Makefile,v 1.1 2011/12/14 11:55:20 fhajny Exp $
+
+Drop dependency on gsed.
+--- plugins-src/rabbitmq-erlang-client/Makefile.orig	2011-11-08 16:55:55.000000000 +0000
++++ plugins-src/rabbitmq-erlang-client/Makefile
+@@ -39,7 +39,8 @@ distribution: documentation source_tarba
+ 
+ %.app: %.app.in $(SOURCES) $(BROKER_DIR)/generate_app
+ 	escript  $(BROKER_DIR)/generate_app $< $@ $(SOURCE_DIR)
+-	sed -i.save 's/%%VSN%%/$(VERSION)/' $@ && rm $@.save
++	sed 's/%%VSN%%/$(VERSION)/' $@ > $@.tmp && \
++		mv $@.tmp $@
+ 
+ ###############################################################################
+ ##  Dialyzer

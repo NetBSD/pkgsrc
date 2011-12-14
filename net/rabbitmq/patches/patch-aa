@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.3 2011/09/29 14:00:39 fhajny Exp $
+$NetBSD: patch-aa,v 1.4 2011/12/14 11:55:20 fhajny Exp $
 
-Fix shell and add Python 2.7.
---- Makefile.orig	2011-02-03 12:47:36.000000000 +0000
+Support for Python 2.7, drop dependency on gsed.
+--- Makefile.orig	2011-11-08 16:55:55.000000000 +0000
 +++ Makefile
 @@ -1,3 +1,4 @@
 +SHELL=$(MAKE_SHELL)
  TMPDIR ?= /tmp
  
  RABBITMQ_NODENAME ?= rabbit
-@@ -24,6 +25,9 @@ USAGES_ERL=$(foreach XML, $(USAGES_XML),
+@@ -26,6 +27,9 @@ QC_TRIALS ?= 100
  ifeq ($(shell python -c 'import simplejson' 2>/dev/null && echo yes),yes)
  PYTHON=python
  else
@@ -18,7 +18,7 @@ Fix shell and add Python 2.7.
  ifeq ($(shell python2.6 -c 'import simplejson' 2>/dev/null && echo yes),yes)
  PYTHON=python2.6
  else
-@@ -35,6 +39,7 @@ PYTHON=python
+@@ -37,6 +41,7 @@ PYTHON=python
  endif
  endif
  endif
@@ -26,3 +26,14 @@ Fix shell and add Python 2.7.
  
  BASIC_PLT=basic.plt
  RABBIT_PLT=rabbit.plt
+@@ -252,7 +257,9 @@ srcdist: distclean
+ 	cp README.in $(TARGET_SRC_DIR)/README
+ 	elinks -dump -no-references -no-numbering $(WEB_URL)build-server.html \
+ 		>> $(TARGET_SRC_DIR)/README
+-	sed -i.save 's/%%VSN%%/$(VERSION)/' $(TARGET_SRC_DIR)/ebin/rabbit_app.in && rm -f $(TARGET_SRC_DIR)/ebin/rabbit_app.in.save
++	sed 's/%%VSN%%/$(VERSION)/' $(TARGET_SRC_DIR)/ebin/rabbit_app.in \
++		> $(TARGET_SRC_DIR)/ebin/rabbit_app.in.tmp && \
++		mv $(TARGET_SRC_DIR)/ebin/rabbit_app.in.tmp $(TARGET_SRC_DIR)/ebin/rabbit_app.in
+ 
+ 	cp -r $(AMQP_CODEGEN_DIR)/* $(TARGET_SRC_DIR)/codegen/
+ 	cp codegen.py Makefile generate_app generate_deps calculate-relative $(TARGET_SRC_DIR)

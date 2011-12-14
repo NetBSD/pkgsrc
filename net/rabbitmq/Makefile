@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/29 14:00:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/14 11:55:20 fhajny Exp $
 #
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
@@ -13,9 +13,10 @@ LICENSE=		mpl-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake bash:run
+USE_TOOLS+=		bash:run coreutils gmake unzip
 
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
@@ -44,7 +45,7 @@ PKG_HOME.${RMQ_USER}=	${RMQ_DIR}
 PKG_SHELL.${RMQ_USER}=	${RMQ_SHELL}
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
-CONF_FILES+=		${PREFIX}/share/examples/rabbitmq/rabbitmq.conf ${PKG_SYSCONFDIR}/rabbitmq.conf
+CONF_FILES+=		${PREFIX}/share/examples/rabbitmq/rabbitmq-env.conf ${PKG_SYSCONFDIR}/rabbitmq-env.conf
 
 INSTALLATION_DIRS+=	share/examples/rabbitmq
 
@@ -56,7 +57,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	${SCRIPTS_DIR}/rabbitmqctl ${SCRIPTS_DIR}/rabbitmq-env
-SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-server
+SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-plugins ${SCRIPTS_DIR}/rabbitmq-server
 SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
@@ -80,7 +81,7 @@ INSTALL_ENV+=		MAKE_SHELL="${RMQ_SHELL}"
 REPLACE_PYTHON+=	calculate-relative
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/rabbitmq.conf ${DESTDIR}${PREFIX}/share/examples/rabbitmq/rabbitmq.conf
+	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf ${DESTDIR}${PREFIX}/share/examples/rabbitmq/rabbitmq-env.conf
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../lang/python/application.mk"
