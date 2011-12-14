@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3263 2011/12/14 20:15:09 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3264 2011/12/14 20:28:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5161,3 +5161,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated print/tex-luatex-doc to 0.70.1 [minskim 2011-12-14]
 	Updated print/tex-latex to 2011 [minskim 2011-12-14]
 	Updated print/tex-latex-doc to 2011 [minskim 2011-12-14]
+	Updated print/tex-xetex to 2011 [minskim 2011-12-14]
+	Updated print/tex-xetex-doc to 2011 [minskim 2011-12-14]
