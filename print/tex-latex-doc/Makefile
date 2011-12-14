@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2010/12/25 02:44:49 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/14 20:14:26 minskim Exp $
 
 DISTNAME=	latex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2010
-TEXLIVE_REV=	20256
+PKGNAME=	tex-${DISTNAME:S/./-/}-2011
+TEXLIVE_REV=	23639
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-latex
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	teTeX-texmf<=3.0nb22
 
