@@ -1,4 +1,4 @@
-$NetBSD: patch-gdb_gdbserver_configure.in,v 1.2 2011/12/13 06:58:08 sbd Exp $
+$NetBSD: patch-gdb_gdbserver_configure.in,v 1.3 2011/12/14 02:29:30 sbd Exp $
 
 If <stdlib.h> is needed and its wrapped with HAVE_STDDLIB_H  it must be
 tested for by autoconf!
@@ -10,7 +10,7 @@ tested for by autoconf!
  AC_HEADER_STDC
  
 -AC_CHECK_HEADERS(sgtty.h termio.h termios.h sys/reg.h string.h dnl
-+AC_CHECK_HEADERS(sgtty.h termio.h termios.h sys/reg.h string.h stdlib.h dnl
++AC_CHECK_HEADERS(sgtty.h termio.h termios.h sys/reg.h string.h dnl stdlib.h
  		 proc_service.h sys/procfs.h thread_db.h linux/elf.h unistd.h)
  
  . ${srcdir}/configure.srv
