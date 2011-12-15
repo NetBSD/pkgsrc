@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3272 2011/12/15 12:46:26 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3273 2011/12/15 12:59:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5179,3 +5179,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/typo3 to 4.5.8 [taca 2011-12-15]
 	Renamed www/typo3 to www/typo3_45 [taca 2011-12-15]
 	Updated www/typo3_45 to 4.5.8nb1 [taca 2011-12-15]
+	Added www/typo3_46 version 4.6.1 [taca 2011-12-15]
