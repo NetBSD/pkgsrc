@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/11/08 15:37:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/12/15 15:08:08 taca Exp $
 bin/parse_tree_abc
 bin/parse_tree_audit
 bin/parse_tree_deps
@@ -19,7 +19,6 @@ ${GEM_LIBDIR}/lib/gauntlet_parsetree.rb
 ${GEM_LIBDIR}/lib/parse_tree.rb
 ${GEM_LIBDIR}/lib/parse_tree_extensions.rb
 ${GEM_LIBDIR}/lib/unified_ruby.rb
-${GEM_LIBDIR}/test/pt_testcase.rb
 ${GEM_LIBDIR}/test/something.rb
 ${GEM_LIBDIR}/test/test_parse_tree.rb
 ${GEM_LIBDIR}/test/test_parse_tree_extensions.rb
