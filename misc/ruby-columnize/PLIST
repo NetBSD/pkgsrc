@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/08/12 16:55:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/15 15:40:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/AUTHORS
@@ -6,7 +6,7 @@ ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Makefile
 ${GEM_LIBDIR}/NEWS
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/columnize.gemspec
 ${GEM_LIBDIR}/lib/Makefile
@@ -14,4 +14,5 @@ ${GEM_LIBDIR}/lib/columnize.rb
 ${GEM_LIBDIR}/lib/version.rb
 ${GEM_LIBDIR}/test/test-columnize.rb
 ${GEM_LIBDIR}/test/test-hashparm.rb
+${GEM_LIBDIR}/test/test-issue3.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
