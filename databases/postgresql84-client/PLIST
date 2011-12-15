@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2011/09/27 11:04:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2011/12/15 17:16:13 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -1314,6 +1314,7 @@ share/doc/postgresql/html/release-8-2-2.html
 share/doc/postgresql/html/release-8-2-20.html
 share/doc/postgresql/html/release-8-2-21.html
 share/doc/postgresql/html/release-8-2-22.html
+share/doc/postgresql/html/release-8-2-23.html
 share/doc/postgresql/html/release-8-2-3.html
 share/doc/postgresql/html/release-8-2-4.html
 share/doc/postgresql/html/release-8-2-5.html
@@ -1330,6 +1331,7 @@ share/doc/postgresql/html/release-8-3-13.html
 share/doc/postgresql/html/release-8-3-14.html
 share/doc/postgresql/html/release-8-3-15.html
 share/doc/postgresql/html/release-8-3-16.html
+share/doc/postgresql/html/release-8-3-17.html
 share/doc/postgresql/html/release-8-3-2.html
 share/doc/postgresql/html/release-8-3-3.html
 share/doc/postgresql/html/release-8-3-4.html
@@ -1340,6 +1342,7 @@ share/doc/postgresql/html/release-8-3-8.html
 share/doc/postgresql/html/release-8-3-9.html
 share/doc/postgresql/html/release-8-3.html
 share/doc/postgresql/html/release-8-4-1.html
+share/doc/postgresql/html/release-8-4-10.html
 share/doc/postgresql/html/release-8-4-2.html
 share/doc/postgresql/html/release-8-4-3.html
 share/doc/postgresql/html/release-8-4-4.html
@@ -1766,6 +1769,7 @@ share/locale/pl/LC_MESSAGES/pg_ctl-8.4.mo
 share/locale/pl/LC_MESSAGES/pg_dump-8.4.mo
 share/locale/pl/LC_MESSAGES/pg_resetxlog-8.4.mo
 share/locale/pl/LC_MESSAGES/pgscripts-8.4.mo
+share/locale/pl/LC_MESSAGES/psql-8.4.mo
 share/locale/pt_BR/LC_MESSAGES/ecpg-8.4.mo
 share/locale/pt_BR/LC_MESSAGES/ecpglib6-8.4.mo
 share/locale/pt_BR/LC_MESSAGES/initdb-8.4.mo
