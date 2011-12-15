@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2011/08/17 13:30:09 taca Exp $
+# $NetBSD: Makefile,v 1.8 2011/12/15 15:40:14 taca Exp $
 
-DISTNAME=	bundler-1.0.18
+DISTNAME=	bundler-1.0.21
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
