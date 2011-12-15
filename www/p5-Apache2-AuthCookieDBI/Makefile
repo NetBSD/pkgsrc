@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/08/14 16:05:43 obache Exp $
+# $NetBSD: Makefile,v 1.8 2011/12/15 05:54:43 hiramatsu Exp $
 #
 
-DISTNAME=	Apache2-AuthCookieDBI-2.05
+DISTNAME=	Apache2-AuthCookieDBI-2.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache2/}
 
@@ -15,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Apache2-AuthCookie>=3.08:../../www/p5-Apache2-AuthCookie
-DEPENDS+=	p5-Apache-DBI>=0.91:../../databases/p5-Apache-DBI
+DEPENDS+=	p5-DBI>=1.40:../../databases/p5-DBI
 DEPENDS+=	p5-Date-Calc-[0-9]*:../../devel/p5-Date-Calc
 
 CONFLICTS+=	p5-Apache-AuthCookieDBI-[0-9]*
