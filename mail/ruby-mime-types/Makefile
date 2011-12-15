@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/09/10 07:00:49 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/15 15:39:35 taca Exp $
 
-DISTNAME=	mime-types-1.16
+DISTNAME=	mime-types-1.17.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

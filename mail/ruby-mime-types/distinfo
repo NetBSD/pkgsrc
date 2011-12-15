@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 07:00:49 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/12/15 15:39:35 taca Exp $
 
-SHA1 (mime-types-1.16.gem) = dc9c8d0eca668c18c21302b439645c20327da3ab
-RMD160 (mime-types-1.16.gem) = 051bba2db6c6f1690a928f7c7c7364c6e8160912
-Size (mime-types-1.16.gem) = 47104 bytes
+SHA1 (mime-types-1.17.2.gem) = e727d94de8c89a4f81ea3c0ef5218ddb9288cf3a
+RMD160 (mime-types-1.17.2.gem) = 0dacf9b73eac9f9903e94f5d1a21334d867c40bb
+Size (mime-types-1.17.2.gem) = 52224 bytes
