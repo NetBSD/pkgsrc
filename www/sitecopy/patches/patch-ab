@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2011/12/15 15:24:05 drochner Exp $
+
+--- configure.orig	2011-03-19 14:55:03.000000000 +0000
++++ configure
+@@ -8456,7 +8456,7 @@ fi
+ echo "${ECHO_T}$ne_cv_lib_neon" >&6; }
+     if test "$ne_cv_lib_neon" = "yes"; then
+        ne_cv_lib_neonver=no
+-       for v in 24 25 26 27 28; do
++       for v in 24 25 26 27 28 29; do
+           case $ne_libver in
+           0.$v.*) ne_cv_lib_neonver=yes ;;
+           esac
