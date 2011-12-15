@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/04/28 18:24:53 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2011/12/15 18:53:51 marino Exp $
 
 --- configure.orig	2006-01-04 19:37:46.000000000 +0800
 +++ configure
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.2 2006/04/28 18:24:53 joerg Exp $
  echo "includedir=\$(DESTDIR)$includedir" >> config.mak
  
 -echo "LDFLAGS=$GTKLDFLAGS" >> config.mak
-+echo "LDFLAGS=$GTKLDFLAGS -L$x11base/lib -Wl,-R$x11base/lib" >> config.mak
++echo "LDFLAGS=$GTKLDFLAGS -L$x11base/lib -Wl,-R$x11base/lib -lX11" >> config.mak
  echo "GCIN_VERSION=$GCIN_VERSION" >> config.mak
  echo "GCIN_TABLE_DIR=\$(datadir_r)/gcin/table" >> config.mak
  echo "GCIN_TABLE_DIR_i=\$(datadir)/gcin/table" >> config.mak
