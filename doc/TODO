@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10740 2011/12/15 14:20:21 taca Exp $
+$NetBSD: TODO,v 1.10741 2011/12/15 15:49:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.5.13
-	o abcmidi-20111118
+	o abcmidi-20111211
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.2.1
 	o acme-091 [pkg/44771]
@@ -446,6 +446,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o calibre-0.8.30
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
@@ -508,7 +509,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dejagnu-1.5
 	o delegate-9.9.7
 	o dhid-5.3
-	o diffpdf-1.6.0
+	o diffpdf-1.6.1
 	o diffstat-1.54
 	o diffutils-3.2
 	o digikam-2.4.1
@@ -520,7 +521,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnstracer-1.9
 	o doclifter-2.7
 	o dovecot-2.0.15
-	o doxygen-1.7.6
+	o doxygen-1.7.6.1
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
 	o dri2proto-2.6
@@ -565,7 +566,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epstool-3.08
 	o eric4-4.4.17
 	o eric5-5.1.7
-	o erlang-14.04
+	o erlang-15b
 	o esh-0.8.5
 	o espeak-1.40
 	o et-2.60
@@ -593,6 +594,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o festival-1.96
 	o fetchyahoo-2.14.0
 	o ffmpeg-20111121.0.8.7
+	o ffmpeg-20121212.0.9
 	o file-5.09
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -728,7 +730,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
-	o gnutls-3.0.8
+	o gnutls-3.0.9
 	o gobject-introspection-1.30.0
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -782,7 +784,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hiawatha-7.8.1
 	o highlight-3.6
 	o honeyd-1.5c
-	o horde-4.0.12
+	o horde-4.0.13
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
@@ -804,8 +806,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imake-1.0.4
 	o imap-uw-2007f
 	o imapsync-1.452
-	o imp-5.0.15
-	o ingo-2.0.6
+	o imp-5.0.16
+	o ingo-2.0.7
 	o inputproto-2.0.2
 	o inspircd-1.2.1
 	o instiki-0.13
@@ -841,7 +843,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbiff-4.0
 	o kdbg-2.5.1
 	o kde4-4.7.4
-	o kdenlive-0.8.2
+	o kdenlive-0.8.2.1
 	o kdevelop-4.2.3
 	o kdiff3-0.9.96
 	o kdrill-6.5
@@ -857,7 +859,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o koffice-l10n-de-2.0.2
 	o konversation-1.4
 	o kphotobook-0.0.7
-	o kronolith-3.0.12
+	o kronolith-3.0.13
 	o krusader-2.0
 	o ktorrent-4.1.3
 	o ktorrent3-3.3.4
@@ -908,7 +910,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.10.1
-	o libgee-0.6.3
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.2.2
 	o libgnomedb-3.1.2
@@ -945,6 +946,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxkbfile-1.0.7
 	o libxklavier-5.1
 	o licq-1.3.8
+	o liferea-1.8.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -981,6 +983,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.11.2 [wip]
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
+	o mono-2.10.7
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
@@ -1005,7 +1008,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nawk-20071023
 	o ncview-1.93b
 	o ne-2.01
-	o neon-0.29.6
 	o nessus-4.4.1
 	o net-snmp-5.7.1
 	o netatalk-2.2.1
@@ -1031,7 +1033,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
 	o octave-3.4.3
-	o offlineimap-6.4.2
+	o offlineimap-6.4.2 [pkg/45712]
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
@@ -1070,6 +1072,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pbzip2-1.1.6
 	o pcal-4.8
 	o pcmanfm-0.5.2 [pkg/42451]
+	o pcre-8.21
 	o pdfjam-2.08
 	o pdmenu-1.2.87
 	o pen-0.17.3
@@ -1092,7 +1095,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o planner-0.14.5
 	o plone-3.2.3 [should make plone-32?]
 	o plone-3.3.4
-	o plone-4.1
+	o plone-4.1.3
 	o ploticus-2.41
 	o ploticus-examples-230
 	o po4a-0.41
@@ -1117,7 +1120,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pulseaudio-1.0
 	o puppet-2.7.6
 	o pure-ftpd-1.0.35
-	o putty-0.61
+	o putty-0.62
 	o puzzle-9173
 	o pv-1.1.4
 	o pwlib-1.11.1
@@ -1198,8 +1201,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
-	o scmgit-base-1.7.7.4
-	o scmgit-docs-1.7.7.4
+	o scmgit-base-1.7.8
+	o scmgit-docs-1.7.8
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
@@ -1364,6 +1367,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
+	o wordpress-3.3
 	o worker-2.18.1
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9h
@@ -1372,7 +1376,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111203
+	o x264-devel-20111210
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
