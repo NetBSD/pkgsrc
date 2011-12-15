@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.6 2011/06/19 03:35:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/12/15 15:59:34 taca Exp $
 bin/bluecloth
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
-${GEM_LIBDIR}/History.md
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/LICENSE.discount
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/bluecloth
+${GEM_LIBDIR}/bluecloth.1.pod
 ${GEM_LIBDIR}/ext/Csio.c
 ${GEM_LIBDIR}/ext/VERSION
 ${GEM_LIBDIR}/ext/amalloc.h
@@ -35,6 +37,7 @@ ${GEM_LIBDIR}/ext/xml.c
 ${GEM_LIBDIR}/ext/xmlpage.c
 ${GEM_LIBDIR}/lib/bluecloth.rb
 ${GEM_LIBDIR}/lib/bluecloth_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/man/man1/bluecloth.1
 ${GEM_LIBDIR}/spec/bluecloth/101_changes_spec.rb
 ${GEM_LIBDIR}/spec/bluecloth/TEMPLATE
 ${GEM_LIBDIR}/spec/bluecloth/autolinks_spec.rb
