@@ -1,15 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/12 16:33:05 taca Exp $
-${GEM_HOME}/cache/polyglot-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.3 2011/12/15 15:09:30 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/polyglot.rb
 ${GEM_LIBDIR}/lib/polyglot/version.rb
-${GEM_LIBDIR}/script/txt2html
-${GEM_LIBDIR}/website/index.html
-${GEM_LIBDIR}/website/index.txt
-${GEM_LIBDIR}/website/javascripts/rounded_corners_lite.inc.js
-${GEM_LIBDIR}/website/stylesheets/screen.css
-${GEM_LIBDIR}/website/template.rhtml
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
