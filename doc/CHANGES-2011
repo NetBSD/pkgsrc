@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3282 2011/12/15 15:00:20 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3283 2011/12/15 15:03:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5194,3 +5194,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated mail/ruby-mail to 2.3.0 [taca 2011-12-15]
 	Updated www/ruby-erubis to 2.7.0 [taca 2011-12-15]
 	Updated www/ruby-rack to 1.3.5 [taca 2011-12-15]
+	Updated databases/ruby-sequel to 3.30.0 [taca 2011-12-15]
+	Updated databases/ruby-pg to 0.12.0 [taca 2011-12-15]
