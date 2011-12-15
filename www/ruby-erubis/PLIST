@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/15 14:29:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/15 14:57:37 taca Exp $
 bin/erubis
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES.txt
@@ -33,9 +33,11 @@ ${GEM_LIBDIR}/doc-api/classes/Erubis/CGenerator.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/CommandOptionError.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Context.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Converter.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/CppGenerator.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/DeleteIndentEnhancer.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/DeleteIndentEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Ec.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/Ecpp.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Ejava.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Ejavascript.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Engine.html
@@ -47,6 +49,7 @@ ${GEM_LIBDIR}/doc-api/classes/Erubis/ErubisError.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/Eruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/EscapeEnhancer.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/EscapedEc.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/EscapedEcpp.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/EscapedEjava.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/EscapedEjavascript.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/EscapedEperl.html
@@ -79,6 +82,7 @@ ${GEM_LIBDIR}/doc-api/classes/Erubis/OptimizedXmlEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PI.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PI/Converter.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PI/Ec.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/PI/Ecpp.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PI/Ejava.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PI/Ejavascript.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PI/Engine.html
@@ -91,6 +95,8 @@ ${GEM_LIBDIR}/doc-api/classes/Erubis/PercentLineEnhancer.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PercentLineEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PerlGenerator.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PhpGenerator.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/PrefixedLineEnhancer.html
+${GEM_LIBDIR}/doc-api/classes/Erubis/PrefixedLineEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PreprocessingEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PreprocessingHelper.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/PrintEnabledEnhancer.html
@@ -112,11 +118,13 @@ ${GEM_LIBDIR}/doc-api/classes/Erubis/StringIOEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/TinyEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/XmlEruby.html
 ${GEM_LIBDIR}/doc-api/classes/Erubis/XmlHelper.html
+${GEM_LIBDIR}/doc-api/classes/Kernel.html
 ${GEM_LIBDIR}/doc-api/created.rid
 ${GEM_LIBDIR}/doc-api/files/README_txt.html
 ${GEM_LIBDIR}/doc-api/files/erubis/context_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/converter_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/engine/ec_rb.html
+${GEM_LIBDIR}/doc-api/files/erubis/engine/ecpp_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/engine/ejava_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/engine/ejavascript_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/engine/enhanced_rb.html
@@ -137,6 +145,7 @@ ${GEM_LIBDIR}/doc-api/files/erubis/local-setting_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/main_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/preprocessing_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis/tiny_rb.html
+${GEM_LIBDIR}/doc-api/files/erubis/util_rb.html
 ${GEM_LIBDIR}/doc-api/files/erubis_rb.html
 ${GEM_LIBDIR}/doc-api/fr_class_index.html
 ${GEM_LIBDIR}/doc-api/fr_file_index.html
@@ -147,6 +156,7 @@ ${GEM_LIBDIR}/doc/docstyle.css
 ${GEM_LIBDIR}/doc/users-guide.html
 ${GEM_LIBDIR}/examples/basic/Makefile
 ${GEM_LIBDIR}/examples/basic/example.ec
+${GEM_LIBDIR}/examples/basic/example.ecpp
 ${GEM_LIBDIR}/examples/basic/example.ejava
 ${GEM_LIBDIR}/examples/basic/example.ejs
 ${GEM_LIBDIR}/examples/basic/example.eperl
@@ -166,6 +176,7 @@ ${GEM_LIBDIR}/lib/erubis/context.rb
 ${GEM_LIBDIR}/lib/erubis/converter.rb
 ${GEM_LIBDIR}/lib/erubis/engine.rb
 ${GEM_LIBDIR}/lib/erubis/engine/ec.rb
+${GEM_LIBDIR}/lib/erubis/engine/ecpp.rb
 ${GEM_LIBDIR}/lib/erubis/engine/ejava.rb
 ${GEM_LIBDIR}/lib/erubis/engine/ejavascript.rb
 ${GEM_LIBDIR}/lib/erubis/engine/enhanced.rb
@@ -185,6 +196,7 @@ ${GEM_LIBDIR}/lib/erubis/local-setting.rb
 ${GEM_LIBDIR}/lib/erubis/main.rb
 ${GEM_LIBDIR}/lib/erubis/preprocessing.rb
 ${GEM_LIBDIR}/lib/erubis/tiny.rb
+${GEM_LIBDIR}/lib/erubis/util.rb
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/assert-text-equal.rb
 ${GEM_LIBDIR}/test/data/users-guide/Example.ejava
@@ -192,12 +204,15 @@ ${GEM_LIBDIR}/test/data/users-guide/array_example.result
 ${GEM_LIBDIR}/test/data/users-guide/arraybuffer_example.result
 ${GEM_LIBDIR}/test/data/users-guide/bipattern-example.rhtml
 ${GEM_LIBDIR}/test/data/users-guide/bipattern_example.result
+${GEM_LIBDIR}/test/data/users-guide/bufvar-example.rb
+${GEM_LIBDIR}/test/data/users-guide/bufvar-example.result
 ${GEM_LIBDIR}/test/data/users-guide/context.rb
 ${GEM_LIBDIR}/test/data/users-guide/context.yaml
 ${GEM_LIBDIR}/test/data/users-guide/def_method.rb
 ${GEM_LIBDIR}/test/data/users-guide/def_method.result
 ${GEM_LIBDIR}/test/data/users-guide/escape_example.result
 ${GEM_LIBDIR}/test/data/users-guide/example.ec
+${GEM_LIBDIR}/test/data/users-guide/example.ecpp
 ${GEM_LIBDIR}/test/data/users-guide/example.ejs
 ${GEM_LIBDIR}/test/data/users-guide/example.eperl
 ${GEM_LIBDIR}/test/data/users-guide/example.ephp
@@ -255,6 +270,8 @@ ${GEM_LIBDIR}/test/data/users-guide/example_perl.result
 ${GEM_LIBDIR}/test/data/users-guide/example_php.result
 ${GEM_LIBDIR}/test/data/users-guide/example_scheme.result
 ${GEM_LIBDIR}/test/data/users-guide/example_scheme_display.result
+${GEM_LIBDIR}/test/data/users-guide/fasteruby-example.rb
+${GEM_LIBDIR}/test/data/users-guide/fasteruby-example.result
 ${GEM_LIBDIR}/test/data/users-guide/fasteruby.rb
 ${GEM_LIBDIR}/test/data/users-guide/fasteruby.result
 ${GEM_LIBDIR}/test/data/users-guide/fasteruby.rhtml
@@ -279,6 +296,9 @@ ${GEM_LIBDIR}/test/data/users-guide/notext-php.result
 ${GEM_LIBDIR}/test/data/users-guide/notext_example.result
 ${GEM_LIBDIR}/test/data/users-guide/percentline-example.rhtml
 ${GEM_LIBDIR}/test/data/users-guide/percentline_example.result
+${GEM_LIBDIR}/test/data/users-guide/prefixedline-example.rb
+${GEM_LIBDIR}/test/data/users-guide/prefixedline-example.rhtml
+${GEM_LIBDIR}/test/data/users-guide/prefixedline_example.result
 ${GEM_LIBDIR}/test/data/users-guide/printenable_example.result
 ${GEM_LIBDIR}/test/data/users-guide/printenabled-example.eruby
 ${GEM_LIBDIR}/test/data/users-guide/printenabled-example.rb
@@ -294,6 +314,7 @@ ${GEM_LIBDIR}/test/data/users-guide/template2.rhtml
 ${GEM_LIBDIR}/test/test-engines.rb
 ${GEM_LIBDIR}/test/test-enhancers.rb
 ${GEM_LIBDIR}/test/test-erubis.rb
+${GEM_LIBDIR}/test/test-index-cgi.rb
 ${GEM_LIBDIR}/test/test-main.rb
 ${GEM_LIBDIR}/test/test-users-guide.rb
 ${GEM_LIBDIR}/test/test.rb
