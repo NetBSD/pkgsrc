@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2011/10/18 13:24:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/12/15 12:33:47 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -2077,6 +2077,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-proxy.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-sapdb.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-sqlanywhere.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-sqlite.inc.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-sqlite3.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-sqlitepo.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-sybase.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-sybase_ase.inc.php
@@ -2105,6 +2106,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/lang/adodb-sv.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/lang/adodb-uk1251.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/lang/adodb_th.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/license.txt
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pear/Auth/Container/ADOdb.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pear/readme.Auth.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-db2.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-informix.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-mssql.inc.php
@@ -7417,6 +7420,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_list.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_rte.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_table.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_tsconfig.php
+${TYPO3DIR}/${SITEDIR}/_.htaccess
 ${TYPO3DIR}/${SITEDIR}/INSTALL.txt
 ${TYPO3DIR}/${SITEDIR}/README.txt
 ${TYPO3DIR}/${SITEDIR}/RELEASE_NOTES.txt
@@ -7437,13 +7441,13 @@ ${TYPO3DIR}/${SITEDIR}/uploads/index.html
 ${TYPO3DIR}/${SITEDIR}/uploads/media/index.html
 ${TYPO3DIR}/${SITEDIR}/uploads/pics/index.html
 ${TYPO3DIR}/${SITEDIR}/uploads/tf/index.html
-@pkgdir share/typo3/www/uploads/tf
-@pkgdir share/typo3/www/uploads/pics
-@pkgdir share/typo3/www/uploads/media
-@pkgdir share/typo3/www/typo3temp
-@pkgdir share/typo3/www/typo3conf/l10n
-@pkgdir share/typo3/www/typo3conf/ext
-@pkgdir share/typo3/www/fileadmin/user_upload/_temp_
+@pkgdir ${TYPO3DIR}/${SITEDIR}/uploads/tf
+@pkgdir ${TYPO3DIR}/${SITEDIR}/uploads/pics
+@pkgdir ${TYPO3DIR}/${SITEDIR}/uploads/media
+@pkgdir ${TYPO3DIR}/${SITEDIR}/typo3temp
+@pkgdir ${TYPO3DIR}/${SITEDIR}/typo3conf/l10n
+@pkgdir ${TYPO3DIR}/${SITEDIR}/typo3conf/ext
+@pkgdir ${TYPO3DIR}/${SITEDIR}/fileadmin/user_upload/_temp_
 @pkgdir share/typo3/typo3_src-${PKGVERSION}/typo3/sysext/t3editor/res/jslib/tx_tstemplateinfo
 @pkgdir share/typo3/typo3_src-${PKGVERSION}/typo3/sysext/extbase/Resources/Scripts
 @pkgdir share/typo3/typo3_src-${PKGVERSION}/typo3/sysext/extbase/Configuration
