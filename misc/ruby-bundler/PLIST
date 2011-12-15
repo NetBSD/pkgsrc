@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2011/08/17 13:30:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/12/15 15:40:14 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/ISSUES.md
 ${GEM_LIBDIR}/LICENSE
@@ -19,6 +20,7 @@ ${GEM_LIBDIR}/lib/bundler/deployment.rb
 ${GEM_LIBDIR}/lib/bundler/dsl.rb
 ${GEM_LIBDIR}/lib/bundler/environment.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helper.rb
+${GEM_LIBDIR}/lib/bundler/gem_installer.rb
 ${GEM_LIBDIR}/lib/bundler/gem_tasks.rb
 ${GEM_LIBDIR}/lib/bundler/graph.rb
 ${GEM_LIBDIR}/lib/bundler/index.rb
@@ -99,6 +101,7 @@ ${GEM_LIBDIR}/man/bundle-update.ronn
 ${GEM_LIBDIR}/man/bundle.ronn
 ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/index.txt
+${GEM_LIBDIR}/spec/bundler/gem_helper_spec.rb
 ${GEM_LIBDIR}/spec/cache/gems_spec.rb
 ${GEM_LIBDIR}/spec/cache/git_spec.rb
 ${GEM_LIBDIR}/spec/cache/path_spec.rb
@@ -127,7 +130,6 @@ ${GEM_LIBDIR}/spec/other/config_spec.rb
 ${GEM_LIBDIR}/spec/other/console_spec.rb
 ${GEM_LIBDIR}/spec/other/exec_spec.rb
 ${GEM_LIBDIR}/spec/other/ext_spec.rb
-${GEM_LIBDIR}/spec/other/gem_helper_spec.rb
 ${GEM_LIBDIR}/spec/other/help_spec.rb
 ${GEM_LIBDIR}/spec/other/init_spec.rb
 ${GEM_LIBDIR}/spec/other/newgem_spec.rb
