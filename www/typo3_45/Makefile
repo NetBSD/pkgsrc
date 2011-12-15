@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/15 12:36:38 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/15 12:45:49 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	typo3-${VER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://typo3.com/
-COMMENT=	The typo3 content management system
+COMMENT=	The TYPO3 content management system LTS release.
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
