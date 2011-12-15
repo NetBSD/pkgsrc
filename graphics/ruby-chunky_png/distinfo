@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/09/15 14:27:13 taca Exp $
+$NetBSD: distinfo,v 1.5 2011/12/15 15:37:19 taca Exp $
 
-SHA1 (chunky_png-1.2.4.gem) = 0dbfaf49b7a92e2d7cf3e608566a20f8d200a3b7
-RMD160 (chunky_png-1.2.4.gem) = 9ae8e8621dc6eccbe6ca2b6679d56de82f71f35c
-Size (chunky_png-1.2.4.gem) = 322560 bytes
+SHA1 (chunky_png-1.2.5.gem) = af51131a4b8495c7c53c5126df491f25ce726af2
+RMD160 (chunky_png-1.2.5.gem) = 467faec7918b88a85f7c8e31f3ac51ae8bab3b49
+Size (chunky_png-1.2.5.gem) = 322560 bytes
