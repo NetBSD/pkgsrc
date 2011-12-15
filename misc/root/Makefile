@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/12/14 15:01:41 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2011/12/15 18:51:43 dholland Exp $
 
 DISTNAME=		root_v5.26.00b.source
 PKGNAME=		root-5.26
@@ -28,12 +28,15 @@ INSTALLATION_DIRS=	bin
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	${LOWER_OPSYS}
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}/man1
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 CONFIGURE_ARGS+=	--enable-soversion
 CONFIGURE_ARGS+=	--disable-builtin-pcre
 CONFIGURE_ARGS+=	--disable-builtin-freetype
 # clarens needs xmlrpc-c, the pkgsrc version is incompatible
 CONFIGURE_ARGS+=	--disable-clarens
+
+CONFIGURE_ARGS+=	--with-x11-libdir=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--with-xpm-libdir=${BUILDLINK_PREFIX.libXpm}/lib
 
 # option, requires libxml2
 CONFIGURE_ARGS+=	--disable-xml
@@ -60,4 +63,5 @@ post-extract:
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

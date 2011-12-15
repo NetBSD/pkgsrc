@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
+$NetBSD: patch-am,v 1.5 2011/12/15 18:51:43 dholland Exp $
 
 --- configure.orig	2010-02-11 13:21:10.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          /usr/lib /usr/X11R6/lib /usr/lib/X11 /usr/openwin/lib \
          /usr/local/lib /usr/local/lib/X11 /usr/local/X11R6/lib \
 -        /usr/X11/lib /usr/lib/X11R5
-+        /usr/X11/lib /usr/lib/X11R5 ${LOCALBASE}/lib
++        /usr/X11/lib /usr/lib/X11R5 ${X11BASE}/lib
      x11libdir=$found_dir
  
      if test "x$found_lib" = "x" ; then
@@ -16,7 +16,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          /usr/include /usr/X11R6/include /usr/include/X11 /usr/openwin/include \
          /usr/local/include /usr/local/include/X11 /usr/local/X11R6/include \
 -        /usr/X11/include /usr/include/X11R5
-+        /usr/X11/include /usr/include/X11R5 ${LOCALBASE}/include
++        /usr/X11/include /usr/include/X11R5 ${X11BASE}/include
  
      if test "x$found_dir" = "x" ; then
          result "`basename $0`: X11 headers (package x11-devel) MUST be installed"
@@ -25,7 +25,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          /usr/include /usr/X11R6/include /usr/include/X11 /usr/openwin/include \
          /usr/local/include /usr/local/include/X11 /usr/local/X11R6/include \
 -        /usr/X11/include /usr/include/X11R5
-+        /usr/X11/include /usr/include/X11R5 ${LOCALBASE}/include
++        /usr/X11/include /usr/include/X11R5 ${X11BASE}/include
  
      if test "x$found_dir" = "x" ; then
          result "`basename $0`: Xft headers (libxft-devel) MUST be installed"
@@ -34,7 +34,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          /usr/include /usr/X11R6/include /usr/include/X11 /usr/openwin/include \
          /usr/local/include /usr/local/include/X11 /usr/local/X11R6/include \
 -        /usr/X11/include /usr/include/X11R5
-+        /usr/X11/include /usr/include/X11R5 ${LOCALBASE}/include
++        /usr/X11/include /usr/include/X11R5 ${X11BASE}/include
  
      if test "x$found_dir" = "x" ; then
          result "`basename $0`: X11/extensions/shape.h header (xorg-x11-proto-devel) MUST be installed"
@@ -43,7 +43,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          $XPM $XPM/lib /usr/local/lib /usr/lib /usr/lib/X11 \
          /usr/local/lib/X11 /usr/X11R6/lib /usr/local/X11R6/lib \
 -        /usr/X11/lib
-+        /usr/X11/lib ${LOCALBASE}/lib
++        /usr/X11/lib ${X11BASE}/lib
      xpmlib=$found_lib
      xpmlibdir=$found_dir
  
@@ -52,7 +52,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          /usr/local/lib /usr/lib /usr/lib/X11 \
          /usr/local/lib/X11 /usr/X11R6/lib /usr/local/X11R6/lib \
 -        /usr/X11/lib
-+        /usr/X11/lib ${LOCALBASE}/lib
++        /usr/X11/lib ${X11BASE}/lib
  
      if test "x$found_lib" = "x" ; then
          result "`basename $0`: libXft (libxft-devel) MUST be installed"
@@ -61,7 +61,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          /usr/local/lib /usr/lib /usr/lib/X11 \
          /usr/local/lib/X11 /usr/X11R6/lib /usr/local/X11R6/lib \
 -        /usr/X11/lib
-+        /usr/X11/lib ${LOCALBASE}/lib
++        /usr/X11/lib ${X11BASE}/lib
  
      if test "x$found_lib" = "x" ; then
          result "`basename $0`: libXext (libXext-devel) MUST be installed"
@@ -79,7 +79,7 @@ $NetBSD: patch-am,v 1.4 2010/02/26 10:56:38 drochner Exp $
          /usr/X11/lib /usr/lib/Mesa /usr/local/lib/Mesa /usr/Mesa/lib \
          /usr/local/Mesa/lib /usr/Mesa /usr/local/Mesa /opt/Mesa \
 -        /opt/Mesa/lib /opt/graphics/OpenGL/lib"
-+        /opt/Mesa/lib /opt/graphics/OpenGL/lib ${LOCALBASE}/lib"
++        /opt/Mesa/lib /opt/graphics/OpenGL/lib ${X11BASE}/lib ${LOCALBASE}/lib"
  
      keep=$opengllibdir
      check_library "libGL libMesaGL" "$enable_shared" \
