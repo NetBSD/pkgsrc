@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2011/06/11 02:49:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/12/15 14:56:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/Dependencies.txt
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO.rdoc
@@ -10,9 +12,12 @@ ${GEM_LIBDIR}/lib/mail/attachments_list.rb
 ${GEM_LIBDIR}/lib/mail/body.rb
 ${GEM_LIBDIR}/lib/mail/configuration.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/nil.rb
+${GEM_LIBDIR}/lib/mail/core_extensions/object.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/shellwords.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/smtp.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/string.rb
+${GEM_LIBDIR}/lib/mail/core_extensions/string/access.rb
+${GEM_LIBDIR}/lib/mail/core_extensions/string/multibyte.rb
 ${GEM_LIBDIR}/lib/mail/elements.rb
 ${GEM_LIBDIR}/lib/mail/elements/address.rb
 ${GEM_LIBDIR}/lib/mail/elements/address_list.rb
@@ -76,8 +81,14 @@ ${GEM_LIBDIR}/lib/mail/fields/subject_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/to_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/unstructured_field.rb
 ${GEM_LIBDIR}/lib/mail/header.rb
+${GEM_LIBDIR}/lib/mail/indifferent_hash.rb
 ${GEM_LIBDIR}/lib/mail/mail.rb
 ${GEM_LIBDIR}/lib/mail/message.rb
+${GEM_LIBDIR}/lib/mail/multibyte.rb
+${GEM_LIBDIR}/lib/mail/multibyte/chars.rb
+${GEM_LIBDIR}/lib/mail/multibyte/exceptions.rb
+${GEM_LIBDIR}/lib/mail/multibyte/unicode.rb
+${GEM_LIBDIR}/lib/mail/multibyte/utils.rb
 ${GEM_LIBDIR}/lib/mail/network.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/file_delivery.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/sendmail.rb
