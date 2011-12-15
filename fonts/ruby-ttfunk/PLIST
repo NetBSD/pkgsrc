@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 14:13:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/15 15:36:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/GPLv2
+${GEM_LIBDIR}/GPLv3
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/data/fonts/DejaVuSans.ttf
 ${GEM_LIBDIR}/data/fonts/comicsans.ttf
