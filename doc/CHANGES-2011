@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3291 2011/12/15 16:12:52 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3292 2011/12/15 16:21:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5230,3 +5230,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/fengoffice to 1.7.5nb2 [taca 2011-12-15]
 	Updated textproc/ruby-json to 1.6.3 [taca 2011-12-15]
 	Updated textproc/ruby-json-pure to 1.6.3 [taca 2011-12-15]
+	Updated textproc/ruby-json-utils to 1.6.1 [taca 2011-12-15]
+	Updated textproc/ruby-redcloth to 4.2.9 [taca 2011-12-15]
+	Updated textproc/ruby-will-paginate to 3.0.2 [taca 2011-12-15]
