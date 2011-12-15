@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2011/09/12 14:53:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/12/15 15:35:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/braintree.gemspec
 ${GEM_LIBDIR}/lib/braintree.rb
 ${GEM_LIBDIR}/lib/braintree/add_on.rb
+${GEM_LIBDIR}/lib/braintree/add_on_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/address.rb
 ${GEM_LIBDIR}/lib/braintree/address/country_names.rb
 ${GEM_LIBDIR}/lib/braintree/address_gateway.rb
@@ -19,6 +21,7 @@ ${GEM_LIBDIR}/lib/braintree/customer_search.rb
 ${GEM_LIBDIR}/lib/braintree/descriptor.rb
 ${GEM_LIBDIR}/lib/braintree/digest.rb
 ${GEM_LIBDIR}/lib/braintree/discount.rb
+${GEM_LIBDIR}/lib/braintree/discount_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/error_codes.rb
 ${GEM_LIBDIR}/lib/braintree/error_result.rb
 ${GEM_LIBDIR}/lib/braintree/errors.rb
@@ -26,6 +29,8 @@ ${GEM_LIBDIR}/lib/braintree/exceptions.rb
 ${GEM_LIBDIR}/lib/braintree/gateway.rb
 ${GEM_LIBDIR}/lib/braintree/http.rb
 ${GEM_LIBDIR}/lib/braintree/modification.rb
+${GEM_LIBDIR}/lib/braintree/plan.rb
+${GEM_LIBDIR}/lib/braintree/plan_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/resource_collection.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch.rb
 ${GEM_LIBDIR}/lib/braintree/settlement_batch_summary.rb
@@ -59,13 +64,16 @@ ${GEM_LIBDIR}/lib/ssl/sandbox_braintreegateway_com.ca.crt
 ${GEM_LIBDIR}/lib/ssl/securetrust_ca.crt
 ${GEM_LIBDIR}/lib/ssl/www_braintreegateway_com.ca.crt
 ${GEM_LIBDIR}/spec/hacks/tcp_socket.rb
+${GEM_LIBDIR}/spec/integration/braintree/add_on_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/address_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/advanced_search_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/credit_card_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/customer_search_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/customer_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/discount_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/error_codes_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/http_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/plan_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/settlement_batch_summary_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/subscription_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/test/transaction_amounts_spec.rb
@@ -85,6 +93,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/digest_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/error_result_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/errors_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/http_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/modification_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_spec.rb
