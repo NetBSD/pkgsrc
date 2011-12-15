@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/08/12 15:50:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/12/15 14:40:47 taca Exp $
 bin/gem${RUBY_VER}.new
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
@@ -82,6 +82,7 @@ ${RUBY_VENDORLIB}/rubygems/server.rb
 ${RUBY_VENDORLIB}/rubygems/source_index.rb
 ${RUBY_VENDORLIB}/rubygems/spec_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/specification.rb
+${RUBY_VENDORLIB}/rubygems/syck_hack.rb
 ${RUBY_VENDORLIB}/rubygems/test_case.rb
 ${RUBY_VENDORLIB}/rubygems/test_utilities.rb
 ${RUBY_VENDORLIB}/rubygems/text.rb
