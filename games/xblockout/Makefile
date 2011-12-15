@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/06/25 11:32:09 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/15 04:18:16 dholland Exp $
 #
 
 DISTNAME=	xbl-1.1.6
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www710.univ-lyon1.fr/~exco/XBL/
 
@@ -19,13 +20,6 @@ USE_GAMESGROUP=	yes
 # libXext is not needed
 BUILDLINK_TRANSFORM+=	rm:-lXext
 INSTALLATION_DIRS=	bin lib/X11/app-defaults
-
-USERGROUP_PHASE=	configure
-
-SUBST_CLASSES+=		gamegid
-SUBST_STAGE.gamegid=	pre-configure
-SUBST_FILES.gamegid=	Makefile.in
-SUBST_SED.gamegid=	-e 's/@GROUP_GID@/GROUP_GID=${PKG_GID.${GAMES_GROUP}}/g'
 
 SPECIAL_PERMS+=		bin/xbl ${SETGID_GAMES_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/lib/X11/xbl ${GAMEDIR_PERMS}

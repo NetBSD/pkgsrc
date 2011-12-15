@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/06/25 11:32:10 obache Exp $
+$NetBSD: distinfo,v 1.5 2011/12/15 04:18:16 dholland Exp $
 
 SHA1 (xbl-1.1.6.tar.gz) = 05b368c20fd16a99346540a5352a011b56926ef3
 RMD160 (xbl-1.1.6.tar.gz) = 4e726544b0e9f2b9481e1e216658fc4412dfbd1c
@@ -6,3 +6,4 @@ Size (xbl-1.1.6.tar.gz) = 136504 bytes
 SHA1 (patch-aa) = cc0984980d8a5a5baeac7442e8f9a54f6909b4d8
 SHA1 (patch-ab) = c006a72d511f01011666e1caf5173ba1f03b3494
 SHA1 (patch-ac) = 5ff43d789bec5d98dc88352c57ae0f40378b0427
+SHA1 (patch-score_c) = 3045e65c8fbc9938929e7b1d8e2822510afc43c7

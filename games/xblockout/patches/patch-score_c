@@ -1,0 +1,18 @@
+$NetBSD: patch-score_c,v 1.1 2011/12/15 04:18:16 dholland Exp $
+
+Don't compile in the games gid.
+
+XXX: this game runs all the time with elevated privs; it should be
+XXX: taught toggle setgid only when needed.
+
+--- score.c~	2003-08-30 21:23:11.000000000 +0000
++++ score.c
+@@ -306,7 +306,7 @@ int addscore(int x, int y, int z, int p,
+ 	fd = creat(buf,(mode_t)0644) ;
+       else
+ 	fd = creat(buf,(mode_t)0664) ;
+-      chown( buf,0,GROUP_GID ) ;
++      chown( buf,0, getegid() ) ;
+     }
+ #else
+   {
