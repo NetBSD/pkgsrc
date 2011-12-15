@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/06/18 01:51:40 taca Exp $
+$NetBSD: distinfo,v 1.4 2011/12/15 15:08:49 taca Exp $
 
-SHA1 (pathname2-1.6.4.gem) = 6bec48276d8ea949a43fc639fadea5d630c78d31
-RMD160 (pathname2-1.6.4.gem) = 0d9188ad65f78f28620882e4bad2170121735785
-Size (pathname2-1.6.4.gem) = 22016 bytes
+SHA1 (pathname2-1.6.5.gem) = 70a40a083e48a4b3872ed4cb4d852a477b0f518d
+RMD160 (pathname2-1.6.5.gem) = 069281c79aee7211f5e05c5ed49c96f0fe4115bc
+Size (pathname2-1.6.5.gem) = 22016 bytes
