@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/11/01 06:01:19 sbd Exp $
+# $NetBSD: Makefile,v 1.41 2011/12/15 05:05:02 dholland Exp $
 
 DISTNAME=	openttd-1.0.5-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--man-dir=${PKGMANDIR}/man6
 CONFIGURE_ARGS+=	--menu-dir=share/applications
 CONFIGURE_ARGS+=	--personal-dir=.openttd
 CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
+CONFIGURE_ARGS+=	--with-lzo2=${BUILDLINK_PREFIX.lzo}/lib/liblzo2.so
 
 .include "../../mk/bsd.prefs.mk"
 
