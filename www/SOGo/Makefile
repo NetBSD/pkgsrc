@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/14 15:02:24 manu Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/15 05:37:31 dholland Exp $
 #
 
 DISTNAME=	SOGo-2.0.0b3
@@ -62,7 +62,7 @@ pre-install:
 .include "../../devel/SOPE/buildlink3.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	zip:../../archivers/zip
+DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 
 .include "../../mk/bsd.pkg.mk"
