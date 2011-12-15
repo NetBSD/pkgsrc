@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/15 14:17:30 taca Exp $
+
+SHA1 (mail-2.2.19.gem) = d117d132cf6f28f914ee32eb1343d6ffcdca49ea
+RMD160 (mail-2.2.19.gem) = 374f7b373090ab1d25fa0fb7434fd692fae11a13
+Size (mail-2.2.19.gem) = 104960 bytes
