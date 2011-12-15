@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 01:32:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/15 15:06:45 taca Exp $
 bin/rlock${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/bin/rlock
 ${GEM_LIBDIR}/doc/rlock.help
-${GEM_LIBDIR}/gemspec.rb
-${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/lockfile.rb
-${GEM_LIBDIR}/rlock
+${GEM_LIBDIR}/lockfile.gemspec
+${GEM_LIBDIR}/rakefile
+${GEM_LIBDIR}/readme.erb
 ${GEM_LIBDIR}/samples/a.rb
 ${GEM_LIBDIR}/samples/lock
 ${GEM_LIBDIR}/samples/lock.sh
