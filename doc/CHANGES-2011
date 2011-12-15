@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3268 2011/12/15 05:33:42 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.3269 2011/12/15 05:56:32 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5172,3 +5172,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-Test-Pod-Spelling-CommonMistakes to 1.000 [hiramatsu 2011-12-15]
 	Updated www/p5-Apache2-AuthCookie to 3.18 [hiramatsu 2011-12-15]
 	Updated games/xblockout to 1.1.6nb1 [dholland 2011-12-15]
+	Updated misc/p5-Locale-Codes to 3.20 [hiramatsu 2011-12-15]
+	Updated devel/p5-Test-Harness to 3.23 [hiramatsu 2011-12-15]
+	Updated net/p5-Net-GitHub to 0.30 [hiramatsu 2011-12-15]
+	Updated www/p5-Apache2-AuthCookieDBI to 2.14 [hiramatsu 2011-12-15]
