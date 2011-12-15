@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3276 2011/12/15 14:31:50 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3277 2011/12/15 14:34:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added mail/ruby-mail22 version 2.2.19 [taca 2011-12-15]
 	Added www/ruby-rack12 version 1.2.4 [taca 2011-12-15]
 	Renamed www/erubis to www/ruby-erubis [taca 2011-12-15]
+	Added www/ruby-erubis26 version 2.6.6 [taca 2011-12-15]
