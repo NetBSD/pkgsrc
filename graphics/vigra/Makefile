@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/10/16 17:47:49 adam Exp $
+# $NetBSD: Makefile,v 1.14 2011/12/15 08:33:44 marino Exp $
 
 DISTNAME=	vigra-1.8.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -34,6 +34,9 @@ SUBST_MESSAGE.python=	Fixing path to python.
 CHECK_INTERPRETER_SKIP=	bin/vigra-config
 
 .include "options.mk"
+
+post-patch:
+	${RM} ${WRKSRC}/include/vigra/*.orig
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
