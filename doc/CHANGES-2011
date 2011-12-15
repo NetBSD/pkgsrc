@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3288 2011/12/15 15:46:12 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3289 2011/12/15 16:03:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5222,3 +5222,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/ruby-net-ping to 1.5.2 [taca 2011-12-15]
 	Updated net/ruby-snmp to 1.1.0 [taca 2011-12-15]
 	Updated print/ruby-pdf-reader to 0.10.1 [taca 2011-12-15]
+	Updated sysutils/ruby-facter to 1.6.4 [taca 2011-12-15]
+	Updated textproc/ruby-bluecloth to 2.2.0 [taca 2011-12-15]
+	Updated textproc/ruby-coderay to 1.0.4 [taca 2011-12-15]
+	Updated textproc/ruby-haml to 3.1.4 [taca 2011-12-15]
+	Updated textproc/ruby-hpricot to 0.8.5 [taca 2011-12-15]
