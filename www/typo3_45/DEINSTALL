@@ -1,0 +1,24 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2011/12/15 12:36:38 taca Exp $
+
+TYPO3_DIR="@PREFIX@/@TYPO3DIR@"
+TYPO3_SITEDIR="${TYPO3_DIR}/@SITEDIR@"
+TYPO3_SUBDIRS="uploads/tf uploads/pics uploads/media uploads typo3temp \
+	typo3conf/l10n typo3conf/ext typo3conf \
+	fileadmin/user_upload/_temp_ fileadmin/user_upload fileadmin/_temp_ \
+	fileadmin ${DIR}"
+
+case ${STAGE} in
+DEINSTALL)
+	(
+	cd ${TYPO3_SITEDIR}
+	${RM} -f typo3conf/ENABLE_INSTALL_TOOL
+	${RM} -f typo3conf/temp*.php
+	${RM} -fr typo3temp/*
+	for d in ${TYPO3_SUBDIRS}; do
+		test -d $d && ${RMDIR} $d 2>/dev/null
+	done
+	)
+	${RMDIR} ${TYPO3_SITEDIR} 2>/dev/null
+	${RMDIR} ${TYPO3_DIR} 2>/dev/null
+	;;
+esac

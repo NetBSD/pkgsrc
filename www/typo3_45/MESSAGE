@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/12/15 12:36:38 taca Exp $
+
+If you update from old release (4.2.3 or before), you will need to create
+a new encryption key.
+
+(1) Upgrade to the new TYPO3 version.
+(2) Clear the configuration cache
+(3) Open the install tool and choose menu 1 ("Basic Configuration").
+(4) Scroll to the bottom of the page and click on the button
+    "Generate random key".
+(5) Submit the form by clicking on "Update localconf.php".
+(6) Clear the configuration and page cache again.
+
+===========================================================================
