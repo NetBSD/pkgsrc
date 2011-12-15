@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2011/06/19 03:38:21 taca Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/15 16:02:33 taca Exp $
 
-DISTNAME=	hpricot-0.8.4
+DISTNAME=	hpricot-0.8.5
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
