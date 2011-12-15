@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3294 2011/12/15 17:19:46 adam Exp $
+$NetBSD: CHANGES-2011,v 1.3295 2011/12/15 17:31:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5243,3 +5243,10 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/postgresql84-plperl to 8.4.10 [adam 2011-12-15]
 	Updated databases/postgresql84-plpython to 8.4.10 [adam 2011-12-15]
 	Updated databases/postgresql84-pltcl to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql83 to 8.3.17 [adam 2011-12-15]
+	Updated databases/postgresql83-client to 8.3.17 [adam 2011-12-15]
+	Updated databases/postgresql83-server to 8.3.17 [adam 2011-12-15]
+	Updated databases/postgresql83-adminpack to 8.3.17 [adam 2011-12-15]
+	Updated databases/postgresql83-plperl to 8.3.17 [adam 2011-12-15]
+	Updated databases/postgresql83-plpython to 8.3.17 [adam 2011-12-15]
+	Updated databases/postgresql83-pltcl to 8.3.17 [adam 2011-12-15]
