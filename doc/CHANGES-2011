@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3293 2011/12/15 17:16:37 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3294 2011/12/15 17:19:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5234,3 +5234,12 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/ruby-redcloth to 4.2.9 [taca 2011-12-15]
 	Updated textproc/ruby-will-paginate to 3.0.2 [taca 2011-12-15]
 	Updated graphics/png to 1.5.7 [wiz 2011-12-15]
+	Updated databases/postgresql84 to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-client to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-server to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-adminpack to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-dblink to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-pgcrypto to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-plperl to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-plpython to 8.4.10 [adam 2011-12-15]
+	Updated databases/postgresql84-pltcl to 8.4.10 [adam 2011-12-15]
