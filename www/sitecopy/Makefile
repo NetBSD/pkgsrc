@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2011/04/22 13:45:00 obache Exp $
+# $NetBSD: Makefile,v 1.45 2011/12/15 15:24:05 drochner Exp $
 
 DISTNAME=		sitecopy-0.16.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		http://www.manyfish.co.uk/sitecopy/
 
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-included-neon
+#CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--with-libxml2
 
 # The build process doesn't correctly find the header for GNU fnmatch, which
@@ -32,7 +32,7 @@ pre-build:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/neon/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
