@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/08/12 17:24:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/12/15 16:20:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/lib/will_paginate/array.rb
 ${GEM_LIBDIR}/lib/will_paginate/collection.rb
 ${GEM_LIBDIR}/lib/will_paginate/core_ext.rb
 ${GEM_LIBDIR}/lib/will_paginate/data_mapper.rb
+${GEM_LIBDIR}/lib/will_paginate/deprecation.rb
 ${GEM_LIBDIR}/lib/will_paginate/i18n.rb
 ${GEM_LIBDIR}/lib/will_paginate/locale/en.yml
 ${GEM_LIBDIR}/lib/will_paginate/page_number.rb
