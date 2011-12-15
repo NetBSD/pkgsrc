@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/08/12 16:33:05 taca Exp $
+$NetBSD: distinfo,v 1.4 2011/12/15 15:09:30 taca Exp $
 
-SHA1 (polyglot-0.3.2.gem) = 6526d326a248252f9856238cfd5d9be4fca41756
-RMD160 (polyglot-0.3.2.gem) = 7b7aeee43761438fc712dc7d54334ab08043a97a
-Size (polyglot-0.3.2.gem) = 15872 bytes
+SHA1 (polyglot-0.3.3.gem) = 5ae5a65dd058a5c9a02f1fe02707031dd0d3c8a8
+RMD160 (polyglot-0.3.3.gem) = a8353d3e63477ab3d803e5eeede6c2d39c874e81
+Size (polyglot-0.3.3.gem) = 6656 bytes
