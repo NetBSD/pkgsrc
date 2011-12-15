@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/06/06 18:27:34 minskim Exp $
+$NetBSD: distinfo,v 1.3 2011/12/15 15:42:14 taca Exp $
 
-SHA1 (snmp-1.0.3.gem) = d9017f7fc093a388330c2c118b3ffde2e75eef2c
-RMD160 (snmp-1.0.3.gem) = 69c237a997b6a60be5a3e43932067964fbc113cd
-Size (snmp-1.0.3.gem) = 167424 bytes
+SHA1 (snmp-1.1.0.gem) = 8462b0e9818102135562b0d675b23450d4eba002
+RMD160 (snmp-1.1.0.gem) = 7c62984839f106633525eea9d3538dfaff5cf327
+Size (snmp-1.1.0.gem) = 203776 bytes
