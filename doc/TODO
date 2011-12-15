@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10738 2011/12/10 09:56:51 wiz Exp $
+$NetBSD: TODO,v 1.10739 2011/12/15 02:17:22 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1174,7 +1174,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
-	o root-5.24.00 [needs newer f2c]
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
 	o rox-session-0.29
