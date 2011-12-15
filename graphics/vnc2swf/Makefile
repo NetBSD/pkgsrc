@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/12/15 08:34:32 marino Exp $
+# $NetBSD: Makefile,v 1.16 2011/12/15 09:14:18 obache Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.fast.prefs.mk"
 
 DEPENDS+=		x11vnc-[0-9]*:../../x11/x11vnc
-.if ${X11BASE} == ${LOCALBASE} || !exists(${X11BASE}/bin/xwininfo)
+.if ${X11_TYPE} == "modular" || !exists(${X11BASE}/bin/xwininfo)
 DEPENDS+=		xwininfo-[0-9]*:../../x11/xwininfo
 .endif
 
