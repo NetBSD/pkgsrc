@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3280 2011/12/15 14:45:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3281 2011/12/15 14:53:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5188,3 +5188,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-actionpack3 to 3.0.11nb2 [taca 2011-12-15]
 	Updated misc/rubygems to 1.8.12 [taca 2011-12-15]
 	Added misc/ruby-sprockets version 2.0.3 [taca 2011-12-15]
+	Added net/ruby-amq-protocol version 0.8.4 [taca 2011-12-15]
+	Added net/ruby-amq-client version 0.8.7 [taca 2011-12-15]
+	Updated net/ruby-amqp to 0.8.4 [taca 2011-12-15]
