@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/15 14:29:47 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/15 14:57:37 taca Exp $
 
-DISTNAME=	erubis-2.6.6
+DISTNAME=	erubis-2.7.0
 CATEGORIES=	www
 
-# Note: www/ruby-actionpack3 needs erubis<2.7.
-MAINTAINER=	minskim@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kuwata-lab.com/erubis/
-COMMENT=	Fast, secure, and extensible implementation of eRuby
+COMMENT=	Fast and extensible eRuby implementation which supports multi-language
 LICENSE=	mit
-
-DEPENDS+=	${RUBY_PKGPREFIX}-abstract>=1.0.0:../../devel/ruby-abstract
 
 CONFLICTS+=	ruby[1-9][0-9]-erubis-[0-9]* erubis-[0-9]*
 
