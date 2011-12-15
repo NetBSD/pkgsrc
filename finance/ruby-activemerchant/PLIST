@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/09/12 14:52:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2011/12/15 15:34:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -94,6 +94,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage/sage_core.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage/sage_virtual_check.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sallie_mae.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/samurai.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_net.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay_au.rb
@@ -105,6 +106,8 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/trans_first.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/transax.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/trust_commerce.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/usa_epay.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/usa_epay_advanced.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/usa_epay_transaction.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/verifi.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/viaklix.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/wirecard.rb
@@ -128,6 +131,10 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/directebanking.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/directebanking/helper.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/directebanking/notification.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/directebanking/return.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/integrations/dwolla.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/integrations/dwolla/helper.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/integrations/dwolla/notification.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/integrations/dwolla/return.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/e_payment_plans.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/e_payment_plans/helper.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/e_payment_plans/notification.rb
@@ -178,18 +185,8 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/world_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/world_pay/helper.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/world_pay/notification.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/response.rb
-${GEM_LIBDIR}/lib/active_merchant/common.rb
-${GEM_LIBDIR}/lib/active_merchant/common/connection.rb
-${GEM_LIBDIR}/lib/active_merchant/common/country.rb
-${GEM_LIBDIR}/lib/active_merchant/common/error.rb
-${GEM_LIBDIR}/lib/active_merchant/common/post_data.rb
-${GEM_LIBDIR}/lib/active_merchant/common/posts_data.rb
-${GEM_LIBDIR}/lib/active_merchant/common/requires_parameters.rb
-${GEM_LIBDIR}/lib/active_merchant/common/utils.rb
-${GEM_LIBDIR}/lib/active_merchant/common/validateable.rb
 ${GEM_LIBDIR}/lib/active_merchant/version.rb
 ${GEM_LIBDIR}/lib/activemerchant.rb
-${GEM_LIBDIR}/lib/certs/cacert.pem
 ${GEM_LIBDIR}/lib/support/gateway_support.rb
 ${GEM_LIBDIR}/lib/support/outbound_hosts.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
