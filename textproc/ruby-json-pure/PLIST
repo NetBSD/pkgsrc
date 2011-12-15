@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2011/09/13 15:14:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/12/15 16:11:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/COPYING-json-jruby
@@ -10,6 +12,7 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/.keep
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/GeneratorBenchmarkComparison.log
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/GeneratorBenchmarkExt#generator_fast-autocorrelation.dat
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/GeneratorBenchmarkExt#generator_fast.dat
@@ -41,6 +44,7 @@ ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkRails.log
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkYAML#parser-autocorrelation.dat
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkYAML#parser.dat
 ${GEM_LIBDIR}/benchmarks/data-p4-3GHz-ruby18/ParserBenchmarkYAML.log
+${GEM_LIBDIR}/benchmarks/data/.keep
 ${GEM_LIBDIR}/benchmarks/generator2_benchmark.rb
 ${GEM_LIBDIR}/benchmarks/generator_benchmark.rb
 ${GEM_LIBDIR}/benchmarks/ohai.json
@@ -50,6 +54,8 @@ ${GEM_LIBDIR}/benchmarks/parser_benchmark.rb
 ${GEM_LIBDIR}/data/example.json
 ${GEM_LIBDIR}/data/index.html
 ${GEM_LIBDIR}/data/prototype.js
+${GEM_LIBDIR}/diagrams/.keep
+${GEM_LIBDIR}/ext/json/ext/fbuffer/fbuffer.h
 ${GEM_LIBDIR}/ext/json/ext/generator/extconf.rb
 ${GEM_LIBDIR}/ext/json/ext/generator/generator.c
 ${GEM_LIBDIR}/ext/json/ext/generator/generator.h
@@ -77,11 +83,13 @@ ${GEM_LIBDIR}/json-java.gemspec
 ${GEM_LIBDIR}/json.gemspec
 ${GEM_LIBDIR}/json_pure.gemspec
 ${GEM_LIBDIR}/lib/json.rb
+${GEM_LIBDIR}/lib/json/add/bigdecimal.rb
 ${GEM_LIBDIR}/lib/json/add/complex.rb
 ${GEM_LIBDIR}/lib/json/add/core.rb
 ${GEM_LIBDIR}/lib/json/add/date.rb
 ${GEM_LIBDIR}/lib/json/add/date_time.rb
 ${GEM_LIBDIR}/lib/json/add/exception.rb
+${GEM_LIBDIR}/lib/json/add/ostruct.rb
 ${GEM_LIBDIR}/lib/json/add/range.rb
 ${GEM_LIBDIR}/lib/json/add/rational.rb
 ${GEM_LIBDIR}/lib/json/add/regexp.rb
@@ -90,6 +98,7 @@ ${GEM_LIBDIR}/lib/json/add/symbol.rb
 ${GEM_LIBDIR}/lib/json/add/time.rb
 ${GEM_LIBDIR}/lib/json/common.rb
 ${GEM_LIBDIR}/lib/json/ext.rb
+${GEM_LIBDIR}/lib/json/ext/.keep
 ${GEM_LIBDIR}/lib/json/pure.rb
 ${GEM_LIBDIR}/lib/json/pure/generator.rb
 ${GEM_LIBDIR}/lib/json/pure/parser.rb
