@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2011/11/01 06:01:48 sbd Exp $
+# $NetBSD: Makefile,v 1.48 2011/12/15 18:52:35 marino Exp $
 #
 
 DISTNAME=	xzgv-0.9.1
@@ -16,6 +16,7 @@ USE_X11BASE=		yes
 USE_TOOLS+=		gmake makeinfo pkg-config gawk
 INFO_FILES=		yes
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1
+LDFLAGS+=		-lm -lX11	# explicitly list for ld v2.22
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xzgv ${DESTDIR}${PREFIX}/bin
