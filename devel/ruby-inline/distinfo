@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2011/09/14 11:58:57 taca Exp $
+$NetBSD: distinfo,v 1.8 2011/12/15 15:04:43 taca Exp $
 
-SHA1 (RubyInline-3.10.1.gem) = c93ab5cf8f6941cde5f5ec0ef6162f24d8bf0b34
-RMD160 (RubyInline-3.10.1.gem) = 087021a02ce2df09897b838daab13af85a1a8be5
-Size (RubyInline-3.10.1.gem) = 28672 bytes
+SHA1 (RubyInline-3.11.0.gem) = cde9813ea4f10a8d5d2a932cd3ed757bef434b88
+RMD160 (RubyInline-3.11.0.gem) = f9e82adeb44aadd395978a674c3de9f6e4fcaaab
+Size (RubyInline-3.11.0.gem) = 28672 bytes
