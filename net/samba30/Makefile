@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/15 22:23:23 asau Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/15 22:59:28 asau Exp $
 
-.include "Makefile.mirrors"
+.include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
 PKGREVISION=		7
@@ -21,6 +21,9 @@ MAKE_JOBS_SAFE=		NO
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+FILESDIR=		${PKGDIR}/../samba/files
+DESCR_SRC=		${PKGDIR}/../samba/DESCR
+MESSAGE_SRC=		${PKGDIR}/../samba/MESSAGE
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		VARBASE
@@ -67,7 +70,7 @@ USE_GNU_READLINE=	yes
 .include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
-.include "options.mk"
+.include "../../net/samba/options.mk"
 
 # Only Linux supports mount.cifs for mounting a CIFS share into the
 # filesystem.
