@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3273 2011/12/15 12:59:51 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3274 2011/12/15 14:13:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5180,3 +5180,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Renamed www/typo3 to www/typo3_45 [taca 2011-12-15]
 	Updated www/typo3_45 to 4.5.8nb1 [taca 2011-12-15]
 	Added www/typo3_46 version 4.6.1 [taca 2011-12-15]
+	Added devel/ruby-hike version 1.2.1 [taca 2011-12-15]
