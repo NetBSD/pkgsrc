@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/12 17:30:51 taca Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/16 13:42:20 taca Exp $
 
-DISTNAME=	webrobots-0.0.11
+DISTNAME=	webrobots-0.0.12
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

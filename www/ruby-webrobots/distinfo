@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/12 17:30:51 taca Exp $
+$NetBSD: distinfo,v 1.2 2011/12/16 13:42:20 taca Exp $
 
-SHA1 (webrobots-0.0.11.gem) = 42f8d4c5b36c1de8b007d5d88613c190aca798fc
-RMD160 (webrobots-0.0.11.gem) = e951757e1366be259debea9e04141127446a14a2
-Size (webrobots-0.0.11.gem) = 16384 bytes
+SHA1 (webrobots-0.0.12.gem) = 24ef2e244dec92ec8860c461ae9ea43c2194191e
+RMD160 (webrobots-0.0.12.gem) = 979fc835e1795355cdffef1328f5b3a1302bfb36
+Size (webrobots-0.0.12.gem) = 16384 bytes
