@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2010/03/08 13:38:24 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/16 12:43:09 taca Exp $
 bin/thin
-${GEM_HOME}/cache/thin-${PKGVERSION}.gem
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
-${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/benchmark/abc
@@ -137,4 +136,4 @@ ${GEM_LIBDIR}/tasks/rdoc.rake
 ${GEM_LIBDIR}/tasks/site.rake
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/stats.rake
-${GEM_HOME}/specifications/thin-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
