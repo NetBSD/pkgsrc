@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2011/12/16 00:50:46 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/12/16 01:07:23 gdt Exp $
 ${PYSITELIB}/fuse.py
 ${PYSITELIB}/fuse.pyc
 ${PYSITELIB}/fuse.pyo
-${PYSITELIB}/fuse_python-${PKGVERSION}-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/fuse_python-${PKGVERSION}-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/fuse_python-${PKGVERSION}-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/fuse_python-${PKGVERSION}-py2.6.egg-info/top_level.txt
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/fuseparts/__init__.py
 ${PYSITELIB}/fuseparts/__init__.pyc
 ${PYSITELIB}/fuseparts/__init__.pyo
