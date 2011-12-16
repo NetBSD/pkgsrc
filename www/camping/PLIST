@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 10:51:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/12/16 13:26:10 taca Exp $
 bin/camping
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -40,7 +40,12 @@ ${GEM_LIBDIR}/lib/camping/reloader.rb
 ${GEM_LIBDIR}/lib/camping/server.rb
 ${GEM_LIBDIR}/lib/camping/session.rb
 ${GEM_LIBDIR}/lib/camping/template.rb
+${GEM_LIBDIR}/test/app_cookies.rb
+${GEM_LIBDIR}/test/app_file.rb
+${GEM_LIBDIR}/test/app_helpers.rb
+${GEM_LIBDIR}/test/app_inline_templates.rb
 ${GEM_LIBDIR}/test/app_markup.rb
+${GEM_LIBDIR}/test/app_partials.rb
 ${GEM_LIBDIR}/test/app_route_generating.rb
 ${GEM_LIBDIR}/test/app_sessions.rb
 ${GEM_LIBDIR}/test/app_simple.rb
