@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.4 2005/11/14 08:05:27 jlam Exp $
+$NetBSD: patch-ak,v 1.5 2011/12/16 11:05:24 asau Exp $
 
---- pam_smbpass/general.h.orig	2005-10-12 13:03:29.000000000 -0400
-+++ pam_smbpass/general.h
-@@ -1,8 +1,4 @@
--#ifndef LINUX
--/* This is only needed by modules in the Sun implementation. */
- #include <security/pam_appl.h>
--#endif  /* LINUX */
--
- #include <security/pam_modules.h>
- 
- #ifndef PAM_AUTHTOK_RECOVER_ERR  
+--- intl/lang_tdb.c.orig	2010-01-14 10:12:10.000000000 +0000
++++ intl/lang_tdb.c
+@@ -139,7 +139,7 @@ bool lang_tdb_init(const char *lang)
+ 		goto done;
+ 	}
+ 	
+-	if (asprintf(&path, "%s%s.tdb", lock_path("lang_"), lang) == -1) {
++	if (asprintf(&path, "%s%s.tdb", state_path("lang_"), lang) == -1) {
+ 		DEBUG(0, ("asprintf failed\n"));
+ 		goto done;
+ 	}

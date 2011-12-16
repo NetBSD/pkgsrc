@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.9 2008/04/03 20:19:42 jlam Exp $
+$NetBSD: patch-ae,v 1.10 2011/12/16 11:05:24 asau Exp $
 
---- auth/pampass.c.orig	2005-10-12 13:03:28.000000000 -0400
+--- auth/pampass.c.orig	2010-01-14 10:12:10.000000000 +0000
 +++ auth/pampass.c
-@@ -43,6 +43,10 @@
- 
- #include <security/pam_appl.h>
+@@ -46,6 +46,10 @@
+ #include <pam/pam_appl.h>
+ #endif
  
 +#if defined(PAM_AUTHTOK_RECOVERY_ERR) && !defined(PAM_AUTHTOK_RECOVER_ERR)
 +#define PAM_AUTHTOK_RECOVER_ERR PAM_AUTHTOK_RECOVERY_ERR

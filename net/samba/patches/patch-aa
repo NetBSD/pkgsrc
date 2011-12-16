@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.33 2009/10/04 16:58:38 taca Exp $
+$NetBSD: patch-aa,v 1.34 2011/12/16 11:05:24 asau Exp $
 
---- nsswitch/pam_winbind.c.orig	2009-09-30 21:21:56.000000000 +0900
-+++ nsswitch/pam_winbind.c
-@@ -1295,6 +1295,8 @@ static char *_pam_delete(register char *
- 	return NULL;
- }
- 
-+PAM_EXTERN int pam_sm_close_session(pam_handle_t *, int, int, const char **);
-+
- /*
-  * obtain a password from the user
-  */
+Avoid an infinite loop in the configure script after 
+"checking for replacing readdir using getdirentries()..."
+
+--- ../lib/replace/test/os2_delete.c.orig	2011-07-24 20:04:44.000000000 +0000
++++ ../lib/replace/test/os2_delete.c	2011-08-01 08:09:59.000000000 +0000
+@@ -116,6 +116,7 @@
+ 	while (1) {
+ 		int n = os2_delete(d);
+ 		if (n == 0) break;
++		if (test_readdir_os2_delete_ret != 0) break; /* if FAILED */
+ 		total_deleted += n;
+ 	}
+ 	closedir(d);
