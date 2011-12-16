@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/13 00:31:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/16 13:57:15 taca Exp $
 bin/sass
 bin/sass-convert
+bin/scss
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING
@@ -113,6 +114,8 @@ ${GEM_LIBDIR}/lib/sass/util.rb
 ${GEM_LIBDIR}/lib/sass/util/subset_map.rb
 ${GEM_LIBDIR}/lib/sass/version.rb
 ${GEM_LIBDIR}/rails/init.rb
+${GEM_LIBDIR}/test/Gemfile
+${GEM_LIBDIR}/test/Gemfile.lock
 ${GEM_LIBDIR}/test/sass/cache_test.rb
 ${GEM_LIBDIR}/test/sass/callbacks_test.rb
 ${GEM_LIBDIR}/test/sass/conversion_test.rb
@@ -174,6 +177,7 @@ ${GEM_LIBDIR}/test/sass/templates/bork1.sass
 ${GEM_LIBDIR}/test/sass/templates/bork2.sass
 ${GEM_LIBDIR}/test/sass/templates/bork3.sass
 ${GEM_LIBDIR}/test/sass/templates/bork4.sass
+${GEM_LIBDIR}/test/sass/templates/bork5.sass
 ${GEM_LIBDIR}/test/sass/templates/compact.sass
 ${GEM_LIBDIR}/test/sass/templates/complex.sass
 ${GEM_LIBDIR}/test/sass/templates/compressed.sass
@@ -194,6 +198,7 @@ ${GEM_LIBDIR}/test/sass/templates/nested_bork1.sass
 ${GEM_LIBDIR}/test/sass/templates/nested_bork2.sass
 ${GEM_LIBDIR}/test/sass/templates/nested_bork3.sass
 ${GEM_LIBDIR}/test/sass/templates/nested_bork4.sass
+${GEM_LIBDIR}/test/sass/templates/nested_bork5.sass
 ${GEM_LIBDIR}/test/sass/templates/nested_import.sass
 ${GEM_LIBDIR}/test/sass/templates/nested_mixin_bork.sass
 ${GEM_LIBDIR}/test/sass/templates/options.sass
