@@ -1,18 +1,27 @@
-# $NetBSD: egg.mk,v 1.12 2011/12/16 12:41:05 gdt Exp $
+# $NetBSD: egg.mk,v 1.13 2011/12/16 12:57:17 gdt Exp $
 #
 # Common logic to handle Python Eggs
 #
 .include "../../mk/bsd.fast.prefs.mk"
 
 # This file should be included to package python "distributions" which
-# use setuptools to create an egg.  The presence of egg-info in a
-# package does not indicate that the package is an egg - distributions
-# that use distutils should use distutils.mk.
+# use setuptools to create an egg.  Some distributions use distutils,
+# which creates an egg-info file; those should use distutils.mk
 
 EGG_NAME?=	${DISTNAME}
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
+
+# True eggs always have an egg-info directory, and thus there is no
+# PLIST conditional (as in distutils.mk for old versions of python).
+# Note that we substitute EGG_INFODIR rather than EGG_FILE, because
+# the egg information in an egg comprises multiple files in an
+# egg-info directory.
+
+# XXX The PLIST substitution of EGG_NAME does not appear to be
+# necessary.  Either it should be removed or a comment added
+# explaining why it is necessary.
 
 PLIST_SUBST+=	EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
