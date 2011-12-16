@@ -1,7 +1,9 @@
-$NetBSD: patch-bv,v 1.2 2007/02/11 18:39:04 tron Exp $
+$NetBSD: patch-am,v 1.9 2011/12/16 11:05:24 asau Exp $
 
---- lib/util_pw.c.orig	2006-04-20 03:29:23.000000000 +0100
-+++ lib/util_pw.c	2007-02-11 17:57:22.000000000 +0000
+Add support for "passwd expand gecos".
+
+--- lib/util_pw.c.orig	2010-01-14 10:12:10.000000000 +0000
++++ lib/util_pw.c
 @@ -4,6 +4,7 @@
     Safe versions of getpw* calls
  
@@ -10,7 +12,12 @@ $NetBSD: patch-bv,v 1.2 2007/02/11 18:39:04 tron Exp $
     
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
-@@ -25,6 +26,7 @@
+@@ -21,9 +22,12 @@
+ 
+ #include "includes.h"
+ 
++static char *passwd_expand_gecos(const struct passwd *);
++
  struct passwd *tcopy_passwd(TALLOC_CTX *mem_ctx, const struct passwd *from) 
  {
  	struct passwd *ret = TALLOC_P(mem_ctx, struct passwd);
@@ -18,7 +25,7 @@ $NetBSD: patch-bv,v 1.2 2007/02/11 18:39:04 tron Exp $
  	if (!ret) {
  		return NULL;
  	}
-@@ -32,7 +34,10 @@
+@@ -31,7 +35,10 @@ struct passwd *tcopy_passwd(TALLOC_CTX *
  	ret->pw_passwd = talloc_strdup(ret, from->pw_passwd);
  	ret->pw_uid = from->pw_uid;
  	ret->pw_gid = from->pw_gid;
@@ -30,7 +37,7 @@ $NetBSD: patch-bv,v 1.2 2007/02/11 18:39:04 tron Exp $
  	ret->pw_dir = talloc_strdup(ret, from->pw_dir);
  	ret->pw_shell = talloc_strdup(ret, from->pw_shell);
  	return ret;
-@@ -126,3 +131,38 @@
+@@ -85,3 +92,38 @@ struct passwd *getpwuid_alloc(TALLOC_CTX
  
  	return tcopy_passwd(mem_ctx, temp);
  }
@@ -40,7 +47,7 @@ $NetBSD: patch-bv,v 1.2 2007/02/11 18:39:04 tron Exp $
 + Expand any `&' characters in pw_gecos with a capitalized pw_name.
 +****************************************************************/
 +
-+char *passwd_expand_gecos(const struct passwd *pw)
++static char *passwd_expand_gecos(const struct passwd *pw)
 +{
 +	char	*p, *bp, *buf;
 +	size_t	 ac, buflen;
