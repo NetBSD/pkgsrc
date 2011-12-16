@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3314 2011/12/16 15:30:16 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3315 2011/12/16 15:37:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5296,3 +5296,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-data_objects to 0.10.7 [taca 2011-12-16]
 	Updated databases/ruby-do_sqlite3 to 0.10.7 [taca 2011-12-16]
 	Added www/ruby-rack-protection version 1.1.4 [taca 2011-12-16]
+	Updated www/ruby-sinatra to 1.3.1 [taca 2011-12-16]
