@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:30:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/16 14:48:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -8,11 +8,11 @@ ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/dm-validations.gemspec
 ${GEM_LIBDIR}/lib/dm-validations.rb
 ${GEM_LIBDIR}/lib/dm-validations/auto_validate.rb
+${GEM_LIBDIR}/lib/dm-validations/context.rb
 ${GEM_LIBDIR}/lib/dm-validations/contextual_validators.rb
 ${GEM_LIBDIR}/lib/dm-validations/exceptions.rb
 ${GEM_LIBDIR}/lib/dm-validations/formats/email.rb
 ${GEM_LIBDIR}/lib/dm-validations/formats/url.rb
-${GEM_LIBDIR}/lib/dm-validations/support/context.rb
 ${GEM_LIBDIR}/lib/dm-validations/support/object.rb
 ${GEM_LIBDIR}/lib/dm-validations/support/ordered_hash.rb
 ${GEM_LIBDIR}/lib/dm-validations/validation_errors.rb
@@ -45,6 +45,7 @@ ${GEM_LIBDIR}/spec/fixtures/g3_concert.rb
 ${GEM_LIBDIR}/spec/fixtures/jabberwock.rb
 ${GEM_LIBDIR}/spec/fixtures/kayak.rb
 ${GEM_LIBDIR}/spec/fixtures/lernean_hydra.rb
+${GEM_LIBDIR}/spec/fixtures/llama_spaceship.rb
 ${GEM_LIBDIR}/spec/fixtures/mathematical_function.rb
 ${GEM_LIBDIR}/spec/fixtures/memory_object.rb
 ${GEM_LIBDIR}/spec/fixtures/mittelschnauzer.rb
@@ -82,6 +83,7 @@ ${GEM_LIBDIR}/spec/integration/confirmation_validator/confirmation_validator_spe
 ${GEM_LIBDIR}/spec/integration/confirmation_validator/spec_helper.rb
 ${GEM_LIBDIR}/spec/integration/datamapper_models/association_validation_spec.rb
 ${GEM_LIBDIR}/spec/integration/datamapper_models/inheritance_spec.rb
+${GEM_LIBDIR}/spec/integration/dirty_attributes/dirty_attributes_spec.rb
 ${GEM_LIBDIR}/spec/integration/duplicated_validations/duplicated_validations_spec.rb
 ${GEM_LIBDIR}/spec/integration/duplicated_validations/spec_helper.rb
 ${GEM_LIBDIR}/spec/integration/format_validator/email_format_validator_spec.rb
@@ -142,6 +144,7 @@ ${GEM_LIBDIR}/spec/unit/validation_errors/emptiness_spec.rb
 ${GEM_LIBDIR}/spec/unit/validation_errors/enumerable_spec.rb
 ${GEM_LIBDIR}/spec/unit/validation_errors/reading_spec.rb
 ${GEM_LIBDIR}/spec/unit/validation_errors/respond_to_spec.rb
+${GEM_LIBDIR}/spec/unit/validators/within_validator_spec.rb
 ${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
 ${GEM_LIBDIR}/tasks/yardstick.rake
