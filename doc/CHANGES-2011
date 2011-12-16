@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3298 2011/12/16 00:51:16 gdt Exp $
+$NetBSD: CHANGES-2011,v 1.3299 2011/12/16 06:14:40 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5254,3 +5254,8 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated graphics/tex-metapost to 1.212 [minskim 2011-12-15]
 	Updated graphics/tex-metapost-doc to 1.212 [minskim 2011-12-15]
 	Updated filesystems/py-fuse-bindings to 0.2.1 [gdt 2011-12-16]
+	Updated net/p5-Net-Jifty to 0.14 [hiramatsu 2011-12-16]
+	Updated devel/p5-Test-Mock-LWP to 0.06 [hiramatsu 2011-12-16]
+	Updated devel/p5-UNIVERSAL-isa to 1.20110614 [hiramatsu 2011-12-16]
+	Updated www/p5-Catalyst-Plugin-Authorization-Roles to 0.09 [hiramatsu 2011-12-16]
+	Updated devel/p5-version to 0.9500 [hiramatsu 2011-12-16]
