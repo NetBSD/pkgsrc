@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.1 2011/12/09 16:57:44 manu Exp $
+$NetBSD: patch-ca,v 1.2 2011/12/16 05:40:46 manu Exp $
 
 Fix race condition, pulled from upstream
 http://review.gluster.com/#change,77
