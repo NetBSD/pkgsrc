@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/06/19 08:24:26 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/12/16 14:33:59 taca Exp $
 
-SHA1 (dm-constraints-1.1.0.gem) = ec8f1d112840defeda47d11cbbb445288fe49133
-RMD160 (dm-constraints-1.1.0.gem) = 2812510845be69f8c96e0c8b6e3178012c8feaec
-Size (dm-constraints-1.1.0.gem) = 14336 bytes
+SHA1 (dm-constraints-1.2.0.gem) = fdbcb5f6269b2e99c6b588415dc13d0afc453177
+RMD160 (dm-constraints-1.2.0.gem) = 09d392727415684bd26a3e282e90e3fd6e1d107f
+Size (dm-constraints-1.2.0.gem) = 14848 bytes
