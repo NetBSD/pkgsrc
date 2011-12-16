@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3308 2011/12/16 13:22:59 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3309 2011/12/16 13:32:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5277,3 +5277,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/drupal7 version 7.10 [taca 2011-12-16]
 	Updated www/ruby-innate to 2011.10 [taca 2011-12-16]
 	Updated www/ramaze to 2011.10.23 [taca 2011-12-16]
+	Updated www/camping to 2.1.467 [taca 2011-12-16]
+	Updated www/ruby-liquid to 2.3.0 [taca 2011-12-16]
+	Updated www/ruby-net-http-digest_auth to 1.2 [taca 2011-12-16]
+	Updated www/ruby-net-http-persistent to 2.3.2 [taca 2011-12-16]
