@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3323 2011/12/16 23:23:59 asau Exp $
+$NetBSD: CHANGES-2011,v 1.3324 2011/12/16 23:44:32 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5312,3 +5312,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/samba to 3.6.1 [asau 2011-12-16]
 	Updated math/aamath to 0.3nb2 [sbd 2011-12-16]
 	Updated net/samba35 to 3.5.12 [asau 2011-12-16]
+	Updated devel/monotone to 1.0nb5 [sbd 2011-12-16]
