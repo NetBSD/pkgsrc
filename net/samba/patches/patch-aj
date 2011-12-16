@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.5 2011/12/16 11:05:24 asau Exp $
+
+--- smbd/dir.c.orig	2010-12-05 20:59:48.000000000 +0000
++++ smbd/dir.c
+@@ -193,7 +193,7 @@ static struct dptr_struct *dptr_get(stru
+ 					      dptr->wcard, dptr->attr))) {
+ 					DEBUG(4,("dptr_get: Failed to open %s (%s)\n",dptr->path,
+ 						strerror(errno)));
+-					return False;
++					return NULL;
+ 				}
+ 			}
+ 			DLIST_PROMOTE(sconn->smb1.searches.dirptrs,dptr);
