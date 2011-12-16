@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/10/14 08:22:35 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/12/16 16:49:26 hans Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -17,9 +17,13 @@ USE_LIBTOOL=		yes
 OWN_DIRS=		${PREFIX:Q}/lib/mecab/dic
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
 USE_TOOLS+=		gmake
+.  if !empty(CC_VERSION:Mgcc-4.[6-9].*)
+CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600 -std=c99
+.  endif
 .endif
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
