@@ -1,39 +1,81 @@
---- !ruby/object:Gem::Specification
+--- !ruby/object:Gem::Specification 
 name: test-unit
-version: !ruby/object:Gem::Version
-  version: 2.3.2
+version: !ruby/object:Gem::Version 
+  hash: 25
   prerelease: 
-  segments:
+  segments: 
   - 2
+  - 4
   - 3
-  - 2
-  hash: 7
+  version: 2.4.3
 platform: ruby
-authors:
+authors: 
 - Kouhei Sutou
 - Haruka Yoshihara
 autorequire: 
 bindir: bin
 cert_chain: []
-date: 2011-08-15 00:00:00.000000000 Z
-dependencies: []
-description: ! 'Ruby 1.9.x bundles minitest not Test::Unit. Test::Unit
 
+date: 2011-12-11 00:00:00 Z
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  version_requirements: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  name: rake
+  prerelease: false
+  type: :development
+  requirement: *id001
+- !ruby/object:Gem::Dependency 
+  version_requirements: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  name: yard
+  prerelease: false
+  type: :development
+  requirement: *id002
+- !ruby/object:Gem::Dependency 
+  version_requirements: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  name: jeweler
+  prerelease: false
+  type: :development
+  requirement: *id003
+description: |
+  Ruby 1.9.x bundles minitest not Test::Unit. Test::Unit
   bundled in Ruby 1.8.x had not been improved but unbundled
-
   Test::Unit (test-unit 2) will be improved actively.
 
-'
-email:
+email: 
 - kou@cozmixng.org
 - yoshihara@clear-code.com
-executables:
+executables: 
 - testrb2
 extensions: []
-extra_rdoc_files:
+
+extra_rdoc_files: 
 - README.textile
 - TODO
-files:
+files: 
 - COPYING
 - GPL
 - PSFL
@@ -91,96 +133,69 @@ files:
 - sample/test_adder.rb
 - sample/test_subtracter.rb
 - sample/test_user.rb
-- test/testunit-test-util.rb
-- test/test-testcase.rb
-- test/ui/test_testrunmediator.rb
-- test/ui/test_tap.rb
-- test/test_testresult.rb
-- test/test-pending.rb
-- test/test-emacs-runner.rb
-- test/test-fixture.rb
-- test/test-attribute.rb
-- test/test_failure.rb
-- test/test-data.rb
-- test/test_testsuite.rb
-- test/collector/test_objectspace.rb
 - test/collector/test-descendant.rb
-- test/collector/test_dir.rb
 - test/collector/test-load.rb
+- test/collector/test_dir.rb
+- test/collector/test_objectspace.rb
+- test/fixtures/plus.csv
 - test/run-test.rb
 - test/test-assertions.rb
+- test/test-attribute.rb
+- test/test-color-scheme.rb
+- test/test-color.rb
+- test/test-data.rb
+- test/test-diff.rb
+- test/test-emacs-runner.rb
+- test/test-fixture.rb
+- test/test-notification.rb
+- test/test-omission.rb
+- test/test-pending.rb
 - test/test-priority.rb
+- test/test-testcase.rb
+- test/test_error.rb
+- test/test_failure.rb
+- test/test_testresult.rb
+- test/test_testsuite.rb
+- test/testunit-test-util.rb
+- test/ui/test_tap.rb
+- test/ui/test_testrunmediator.rb
+- test/util/test-method-owner-finder.rb
+- test/util/test-output.rb
 - test/util/test_backtracefilter.rb
 - test/util/test_observable.rb
 - test/util/test_procwrapper.rb
-- test/util/test-method-owner-finder.rb
-- test/util/test-output.rb
-- test/test_error.rb
-- test/test-diff.rb
-- test/test-notification.rb
-- test/test-color-scheme.rb
-- test/test-omission.rb
-- test/test-color.rb
 homepage: http://test-unit.rubyforge.org/
-licenses:
+licenses: 
 - Ruby's and PSFL (lib/test/unit/diff.rb)
 post_install_message: 
 rdoc_options: []
-require_paths:
+
+require_paths: 
 - lib
-required_ruby_version: !ruby/object:Gem::Requirement
+required_ruby_version: !ruby/object:Gem::Requirement 
   none: false
-  requirements:
-  - - ! '>='
-    - !ruby/object:Gem::Version
-      version: '0'
-      segments:
-      - 0
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
       hash: 3
-required_rubygems_version: !ruby/object:Gem::Requirement
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
   none: false
-  requirements:
-  - - ! '>='
-    - !ruby/object:Gem::Version
-      version: '0'
-      segments:
-      - 0
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
       hash: 3
+      segments: 
+      - 0
+      version: "0"
 requirements: []
+
 rubyforge_project: test-unit
-rubygems_version: 1.8.11
+rubygems_version: 1.8.10
 signing_key: 
 specification_version: 3
 summary: test-unit 2 - Improved version of Test::Unit bundled in Ruby 1.8.x.
-test_files:
-- test/testunit-test-util.rb
-- test/test-testcase.rb
-- test/ui/test_testrunmediator.rb
-- test/ui/test_tap.rb
-- test/test_testresult.rb
-- test/test-pending.rb
-- test/test-emacs-runner.rb
-- test/test-fixture.rb
-- test/test-attribute.rb
-- test/test_failure.rb
-- test/test-data.rb
-- test/test_testsuite.rb
-- test/collector/test_objectspace.rb
-- test/collector/test-descendant.rb
-- test/collector/test_dir.rb
-- test/collector/test-load.rb
-- test/run-test.rb
-- test/test-assertions.rb
-- test/test-priority.rb
-- test/util/test_backtracefilter.rb
-- test/util/test_observable.rb
-- test/util/test_procwrapper.rb
-- test/util/test-method-owner-finder.rb
-- test/util/test-output.rb
-- test/test_error.rb
-- test/test-diff.rb
-- test/test-notification.rb
-- test/test-color-scheme.rb
-- test/test-omission.rb
-- test/test-color.rb
+test_files: []
 
