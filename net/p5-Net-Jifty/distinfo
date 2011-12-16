@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/09/09 21:14:00 seb Exp $
+$NetBSD: distinfo,v 1.5 2011/12/16 06:11:42 hiramatsu Exp $
 
-SHA1 (Net-Jifty-0.12.tar.gz) = b2142f8f4e0d1161b86828ed744a66196a8996bc
-RMD160 (Net-Jifty-0.12.tar.gz) = 48ad38744c6c77d481b2b6a432f44bca2e54d7aa
-Size (Net-Jifty-0.12.tar.gz) = 33823 bytes
+SHA1 (Net-Jifty-0.14.tar.gz) = 3f32a54b04d1b1f54e1f390294e288658b7383fd
+RMD160 (Net-Jifty-0.14.tar.gz) = e5c208a1cf22459ebfd238715afe545807c53ca0
+Size (Net-Jifty-0.14.tar.gz) = 37362 bytes
