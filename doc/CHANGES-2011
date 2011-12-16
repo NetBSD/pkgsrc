@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3319 2011/12/16 17:52:00 drochner Exp $
+$NetBSD: CHANGES-2011,v 1.3320 2011/12/16 22:33:13 asau Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5308,3 +5308,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated cad/gtkwave to 3.3.28 [drochner 2011-12-16]
 	Updated devel/pcre to 8.21 [drochner 2011-12-16]
 	Updated www/neon to 0.29.6 [drochner 2011-12-16]
+	Updated net/samba to 3.6.1 [asau 2011-12-16]
+	Updated net/samba to 3.6.1 [asau 2011-12-16]
