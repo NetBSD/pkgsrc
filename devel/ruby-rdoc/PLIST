@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2011/11/13 15:57:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/16 11:48:33 taca Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/DEVELOPERS.rdoc
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/LEGAL.rdoc
 ${GEM_LIBDIR}/LICENSE.rdoc
