@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:21:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/16 14:31:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.document
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/lib/dm-core/associations/many_to_one.rb
 ${GEM_LIBDIR}/lib/dm-core/associations/one_to_many.rb
 ${GEM_LIBDIR}/lib/dm-core/associations/one_to_one.rb
 ${GEM_LIBDIR}/lib/dm-core/associations/relationship.rb
+${GEM_LIBDIR}/lib/dm-core/backwards.rb
 ${GEM_LIBDIR}/lib/dm-core/collection.rb
 ${GEM_LIBDIR}/lib/dm-core/core_ext/kernel.rb
 ${GEM_LIBDIR}/lib/dm-core/core_ext/pathname.rb
@@ -59,13 +60,13 @@ ${GEM_LIBDIR}/lib/dm-core/query/sort.rb
 ${GEM_LIBDIR}/lib/dm-core/relationship_set.rb
 ${GEM_LIBDIR}/lib/dm-core/repository.rb
 ${GEM_LIBDIR}/lib/dm-core/resource.rb
-${GEM_LIBDIR}/lib/dm-core/resource/state.rb
-${GEM_LIBDIR}/lib/dm-core/resource/state/clean.rb
-${GEM_LIBDIR}/lib/dm-core/resource/state/deleted.rb
-${GEM_LIBDIR}/lib/dm-core/resource/state/dirty.rb
-${GEM_LIBDIR}/lib/dm-core/resource/state/immutable.rb
-${GEM_LIBDIR}/lib/dm-core/resource/state/persisted.rb
-${GEM_LIBDIR}/lib/dm-core/resource/state/transient.rb
+${GEM_LIBDIR}/lib/dm-core/resource/persistence_state.rb
+${GEM_LIBDIR}/lib/dm-core/resource/persistence_state/clean.rb
+${GEM_LIBDIR}/lib/dm-core/resource/persistence_state/deleted.rb
+${GEM_LIBDIR}/lib/dm-core/resource/persistence_state/dirty.rb
+${GEM_LIBDIR}/lib/dm-core/resource/persistence_state/immutable.rb
+${GEM_LIBDIR}/lib/dm-core/resource/persistence_state/persisted.rb
+${GEM_LIBDIR}/lib/dm-core/resource/persistence_state/transient.rb
 ${GEM_LIBDIR}/lib/dm-core/spec/lib/adapter_helpers.rb
 ${GEM_LIBDIR}/lib/dm-core/spec/lib/collection_helpers.rb
 ${GEM_LIBDIR}/lib/dm-core/spec/lib/counter_adapter.rb
@@ -92,7 +93,6 @@ ${GEM_LIBDIR}/lib/dm-core/support/ext/string.rb
 ${GEM_LIBDIR}/lib/dm-core/support/ext/try_dup.rb
 ${GEM_LIBDIR}/lib/dm-core/support/hook.rb
 ${GEM_LIBDIR}/lib/dm-core/support/inflections.rb
-${GEM_LIBDIR}/lib/dm-core/support/inflector.rb
 ${GEM_LIBDIR}/lib/dm-core/support/inflector/inflections.rb
 ${GEM_LIBDIR}/lib/dm-core/support/inflector/methods.rb
 ${GEM_LIBDIR}/lib/dm-core/support/lazy_array.rb
