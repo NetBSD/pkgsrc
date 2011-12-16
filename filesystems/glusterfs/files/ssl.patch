@@ -1,10 +1,84 @@
-$NetBSD: ssl.patch,v 1.1 2011/12/09 16:57:44 manu Exp $
+$NetBSD: ssl.patch,v 1.2 2011/12/16 05:40:46 manu Exp $
 
 SSL support pulled from not yet committed upstream patch
 http://review.gluster.com/#change,362
 
---- rpc/rpc-transport/socket/src/Makefile.am.orig	2011-11-14 14:46:00.000000000 +0100
-+++ rpc/rpc-transport/socket/src/Makefile.am	2011-12-03 06:46:39.000000000 +0100
+--- ./xlators/performance/write-behind/src/write-behind.c.orig	2011-11-14 14:46:02.000000000 +0100
++++ ./xlators/performance/write-behind/src/write-behind.c	2011-12-15 03:22:43.000000000 +0100
+@@ -371,8 +371,13 @@
+ 
+         local = frame->local;
+         winds = &local->winds;
+ 
++        /*
++         * I don't know how we get here without "local" being valid, but we
++         * do sometimes during disconnect processing.
++         */
++        GF_VALIDATE_OR_GOTO (this->name, local, out);
+         file = local->file;
+         GF_VALIDATE_OR_GOTO (this->name, file, out);
+ 
+         LOCK (&file->lock);
+--- ./xlators/mgmt/glusterd/src/glusterd-volgen.c.orig	2011-11-14 14:46:02.000000000 +0100
++++ ./xlators/mgmt/glusterd/src/glusterd-volgen.c	2011-12-14 20:47:10.000000000 +0100
+@@ -187,8 +187,12 @@
+ 
+         {VKEY_FEATURES_QUOTA,                    "features/marker",           "quota", "off", NO_DOC, OPT_FLAG_FORCE},
+         {VKEY_FEATURES_LIMIT_USAGE,              "features/quota",            "limit-set", NULL, NO_DOC, 0},
+         {"features.quota-timeout",               "features/quota",            "timeout", "0", DOC, 0},
++        { "server.ssl",                          "protocol/server",           
++"transport.socket.ssl-enabled", NULL, NO_DOC, 0},
++        { "client.ssl",                          "protocol/client",           
++"transport.socket.ssl-enabled", NULL, NO_DOC, 0},
+         {NULL,                                                                }
+ };
+ 
+ 
+--- ./xlators/mgmt/glusterd/src/glusterd.c.orig	2011-12-15 03:16:25.000000000 +0100
++++ ./xlators/mgmt/glusterd/src/glusterd.c	2011-12-15 03:17:31.000000000 +0100
+@@ -691,16 +691,21 @@
+         ret = configure_syncdaemon (conf);
+         if (ret)
+                 goto out;
+ 
+-        ret = glusterd_restore ();
+-        if (ret < 0)
+-                goto out;
+ 
+         glusterd_friend_sm_init ();
+         glusterd_op_sm_init ();
+         glusterd_opinfo_init ();
+ 
++        /*
++         * This uses some of the fields initialized in glusterd_*_init, so
++         * do it *after* those.
++         */
++        ret = glusterd_restore ();
++        if (ret < 0)
++                goto out;
++
+         ret = glusterd_handle_upgrade_downgrade (this->options, conf);
+         if (ret)
+                 goto out;
+ 
+--- ./xlators/protocol/server/src/server3_1-fops.c.orig	2011-11-14 14:46:03.000000000 +0100
++++ ./xlators/protocol/server/src/server3_1-fops.c	2011-12-14 20:47:10.000000000 +0100
+@@ -3129,8 +3129,13 @@
+                 goto out;
+         }
+ 
+         conn = req->trans->xl_private;
++        if (!conn) {
++                /* Handshake is not complete yet. */
++                req->rpc_err = SYSTEM_ERR;
++                goto out;
++        }
+         gf_fd_put (conn->fdtable, args.fd);
+ 
+         server_submit_reply (NULL, req, &rsp, NULL, 0, NULL,
+                              xdr_serialize_common_rsp);
+--- ./rpc/rpc-transport/socket/src/Makefile.am.orig	2011-11-14 14:46:00.000000000 +0100
++++ ./rpc/rpc-transport/socket/src/Makefile.am	2011-12-14 20:47:10.000000000 +0100
 @@ -2,9 +2,9 @@
  
  rpctransport_LTLIBRARIES = socket.la
@@ -16,8 +90,8 @@ http://review.gluster.com/#change,362
  socket_la_SOURCES = socket.c name.c
  socket_la_LIBADD = $(top_builddir)/libglusterfs/src/libglusterfs.la
  
---- rpc/rpc-transport/socket/src/Makefile.in.orig	2011-11-14 14:46:14.000000000 +0100
-+++ rpc/rpc-transport/socket/src/Makefile.in	2011-12-03 06:46:39.000000000 +0100
+--- ./rpc/rpc-transport/socket/src/Makefile.in.orig	2011-11-14 14:46:14.000000000 +0100
++++ ./rpc/rpc-transport/socket/src/Makefile.in	2011-12-14 20:47:10.000000000 +0100
 @@ -226,9 +226,9 @@
  target_alias = @target_alias@
  noinst_HEADERS = socket.h name.h
@@ -29,15 +103,15 @@ http://review.gluster.com/#change,362
  socket_la_LIBADD = $(top_builddir)/libglusterfs/src/libglusterfs.la
  AM_CFLAGS = -fPIC -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -Wall -D$(GF_HOST_OS)\
  	-I$(top_srcdir)/libglusterfs/src -I$(top_srcdir)/rpc/rpc-lib/src/ \
---- rpc/rpc-transport/socket/src/socket.c.orig	2011-12-07 02:20:01.000000000 +0100
-+++ rpc/rpc-transport/socket/src/socket.c	2011-12-07 02:19:21.000000000 +0100
-@@ -42,12 +42,36 @@
+--- ./rpc/rpc-transport/socket/src/socket.c.orig	2011-12-14 20:46:23.000000000 +0100
++++ ./rpc/rpc-transport/socket/src/socket.c	2011-12-15 03:31:03.000000000 +0100
+@@ -42,12 +42,35 @@
  #include <fcntl.h>
  #include <errno.h>
  #include <netinet/tcp.h>
  #include <rpc/xdr.h>
+-
 +#include <sys/ioctl.h>
- 
  #define GF_LOG_ERRNO(errno) ((errno == ENOTCONN) ? GF_LOG_DEBUG : GF_LOG_ERROR)
  #define SA(ptr) ((struct sockaddr *)ptr)
  
@@ -47,6 +121,7 @@ http://review.gluster.com/#change,362
 +#define SSL_CA_LIST_OPT     "transport.socket.ssl-ca-list"
 +#define OWN_THREAD_OPT      "transport.socket.own-thread"
 +
++/* TBD: do automake substitutions etc. (ick) to set these. */
 +#if !defined(DEFAULT_CERT_PATH)
 +#define DEFAULT_CERT_PATH   "/etc/ssl/glusterfs.pem"
 +#endif
@@ -63,12 +138,11 @@ http://review.gluster.com/#change,362
 +
 +typedef int SSL_unary_func (SSL *);
 +typedef int SSL_trinary_func (SSL *, void *, int);
-+
  
  #define __socket_proto_reset_pending(priv) do {                 \
                  memset (&priv->incoming.frag.vector, 0,         \
                          sizeof (priv->incoming.frag.vector));   \
-@@ -132,11 +156,143 @@
+@@ -132,11 +155,158 @@
                  }                                                       \
                  __socket_proto_update_priv_after_read (priv, ret, bytes_read); \
          }
@@ -102,9 +176,24 @@ http://review.gluster.com/#change,362
 +
 +	for (;;) {
 +		if (buf) {
++                        if (priv->connected == -1) {
++                                /*
++                                 * Fields in the SSL structure (especially
++                                 * the BIO pointers) are not valid at this
++                                 * point, so we'll segfault if we pass them
++                                 * to SSL_read/SSL_write.
++                                 */
++                                gf_log(this->name,GF_LOG_INFO,
++                                       "lost connection in %s", __func__);
++                                break;
++                        }
 +			r = func(priv->ssl_ssl,buf,len);
 +		}
 +		else {
++                        /*
++                         * We actually need these functions to get to
++                         * priv->connected == 1.
++                         */
 +			r = ((SSL_unary_func *)func)(priv->ssl_ssl);
 +		}
 +		switch (SSL_get_error(priv->ssl_ssl,r)) {
@@ -213,7 +302,7 @@ http://review.gluster.com/#change,362
   * return value:
   *   0 = success (completed)
   *  -1 = error
-@@ -167,19 +323,43 @@
+@@ -167,19 +337,43 @@
          if (bytes != NULL) {
                  *bytes = 0;
          }
@@ -221,11 +310,11 @@ http://review.gluster.com/#change,362
 -        while (opcount) {
 +        while (opcount > 0) {
 +                if (opvector->iov_len == 0) {
-+                        gf_log(this->name,GF_LOG_WARNING,
++                        gf_log(this->name,GF_LOG_DEBUG,
 +                               "would have passed zero length to read/write");
 +                        ++opvector;
 +                        --opcount;
-+                        break;
++                        continue;
 +                }
                  if (write) {
 -                        ret = writev (sock, opvector, opcount);
@@ -260,7 +349,7 @@ http://review.gluster.com/#change,362
                                  /* done for now */
                                  break;
                          }
-@@ -201,8 +381,11 @@
+@@ -201,8 +395,11 @@
  
                          gf_log (this->name, GF_LOG_WARNING,
                                  "%s failed (%s)", write ? "writev" : "readv",
@@ -272,13 +361,13 @@ http://review.gluster.com/#change,362
                          break;
                  }
  
-@@ -212,8 +395,19 @@
+@@ -212,8 +409,19 @@
  
                  moved = 0;
  
                  while (moved < ret) {
 +                        if (!opcount) {
-+                                gf_log(this->name,GF_LOG_WARNING,
++                                gf_log(this->name,GF_LOG_DEBUG,
 +                                       "ran out of iov, moved %d/%d",
 +                                       moved, ret);
 +                                goto ran_out;
@@ -292,7 +381,7 @@ http://review.gluster.com/#change,362
                                  moved += opvector[0].iov_len;
                                  opvector++;
                                  opcount--;
-@@ -221,15 +415,13 @@
+@@ -221,15 +429,13 @@
                                  opvector[0].iov_len -= (ret - moved);
                                  opvector[0].iov_base += (ret - moved);
                                  moved += (ret - moved);
@@ -310,7 +399,7 @@ http://review.gluster.com/#change,362
                  *pending_vector = opvector;
  
          if (pending_count)
-@@ -287,8 +479,22 @@
+@@ -287,8 +493,22 @@
                          gf_log (this->name, GF_LOG_DEBUG,
                                  "shutdown() returned %d. %s",
                                  ret, strerror (errno));
@@ -333,7 +422,7 @@ http://review.gluster.com/#change,362
  
  out:
          return ret;
-@@ -364,9 +570,8 @@
+@@ -364,9 +584,8 @@
  
          return ret;
  }
@@ -343,7 +432,7 @@ http://review.gluster.com/#change,362
  __socket_nodelay (int fd)
  {
          int     on = 1;
-@@ -620,11 +825,13 @@
+@@ -620,11 +839,13 @@
  }
  
  
@@ -359,7 +448,7 @@ http://review.gluster.com/#change,362
          ret = __socket_writev (this, entry->pending_vector,
                                 entry->pending_count,
                                 &entry->pending_vector,
-@@ -633,8 +840,20 @@
+@@ -633,8 +854,20 @@
          if (ret == 0) {
                  /* current entry was completely written */
                  GF_ASSERT (entry->pending_count == 0);
@@ -380,7 +469,7 @@ http://review.gluster.com/#change,362
  
          return ret;
  }
-@@ -655,15 +874,15 @@
+@@ -655,15 +888,15 @@
          while (!list_empty (&priv->ioq)) {
                  /* pick next entry */
                  entry = priv->ioq_next;
@@ -398,7 +487,7 @@ http://review.gluster.com/#change,362
                  priv->idx = event_select_on (this->ctx->event_pool,
                                               priv->sock, priv->idx, -1, 0);
          }
-@@ -1645,9 +1864,8 @@
+@@ -1645,9 +1878,8 @@
  
          if (pollin != NULL) {
                  ret = rpc_transport_notify (this, RPC_TRANSPORT_MSG_RECEIVED,
@@ -408,7 +497,18 @@ http://review.gluster.com/#change,362
          }
  
          return ret;
-@@ -1730,11 +1948,11 @@
+@@ -1668,9 +1900,9 @@
+         priv = this->private;
+ 
+         pthread_mutex_lock (&priv->lock);
+         {
+-                if (priv->connected)
++                if (priv->connected != 0)
+                         goto unlock;
+ 
+                 ret = __socket_connect_finish (priv->sock);
+ 
+@@ -1730,11 +1962,11 @@
  int
  socket_event_handler (int fd, int idx, void *data,
                        int poll_in, int poll_out, int poll_err)
@@ -422,7 +522,7 @@ http://review.gluster.com/#change,362
          this = data;
          GF_VALIDATE_OR_GOTO ("socket", this, out);
          GF_VALIDATE_OR_GOTO ("socket", this->private, out);
-@@ -1742,18 +1960,15 @@
+@@ -1742,18 +1974,15 @@
  
          THIS = this->xl;
          priv = this->private;
@@ -437,12 +537,12 @@ http://review.gluster.com/#change,362
 -        if (!priv->connected) {
 -                ret = socket_connect_finish (this);
 -        }
-+	ret = priv->connected ? 0 : socket_connect_finish(this);
++	ret = (priv->connected == 1) ? 0 : socket_connect_finish(this);
  
          if (!ret && poll_out) {
                  ret = socket_event_poll_out (this);
          }
-@@ -1767,15 +1982,114 @@
+@@ -1767,15 +1996,114 @@
                  gf_log ("transport", ((ret >= 0) ? GF_LOG_INFO : GF_LOG_DEBUG),
                          "disconnecting now");
                  socket_event_poll_err (this);
@@ -468,7 +568,7 @@ http://review.gluster.com/#change,362
 +
 +	orig_gen = ++(priv->socket_gen);
 +
-+        if (!priv->connected) {
++        if (priv->connected == 0) {
 +		THIS = this->xl;
 +                ret = socket_connect_finish (this);
 +        }
@@ -559,7 +659,7 @@ http://review.gluster.com/#change,362
  socket_server_event_handler (int fd, int idx, void *data,
                               int poll_in, int poll_out, int poll_err)
  {
-@@ -1812,21 +2126,8 @@
+@@ -1812,21 +2140,8 @@
                                          priv->sock, strerror (errno));
                                  goto unlock;
                          }
@@ -581,22 +681,22 @@ http://review.gluster.com/#change,362
                                  ret = __socket_nodelay (new_sock);
                                  if (ret == -1) {
                                          gf_log (this->name, GF_LOG_WARNING,
-@@ -1871,9 +2172,13 @@
+@@ -1871,9 +2186,13 @@
                                  goto unlock;
                          }
  
                          get_transport_identifiers (new_trans);
 -                        socket_init (new_trans);
 +                        ret = socket_init (new_trans);
-+			if (ret != 0) {
-+				close(new_sock);
-+				goto unlock;
-+			}
++                        if (ret != 0) {
++                                close(new_sock);
++                                goto unlock;
++                        }
                          new_trans->ops = this->ops;
                          new_trans->init = this->init;
                          new_trans->fini = this->fini;
                          new_trans->ctx  = ctx;
-@@ -1882,22 +2187,63 @@
+@@ -1882,22 +2201,63 @@
                          new_trans->notify = this->notify;
                          new_trans->listener = this;
                          new_priv = new_trans->private;
@@ -668,32 +768,32 @@ http://review.gluster.com/#change,362
                          pthread_mutex_unlock (&new_priv->lock);
                          if (ret == -1) {
                                  gf_log ("", GF_LOG_WARNING,
-@@ -1984,8 +2330,24 @@
+@@ -1984,8 +2344,24 @@
  
          if (port > 0)
                  ((struct sockaddr_in *) (&sockaddr))->sin_port = htons (port);
  
-+	if (ntohs(((struct sockaddr_in *) (&sockaddr))->sin_port) == 
-+	     GF_DEFAULT_SOCKET_LISTEN_PORT) {
-+		if (priv->use_ssl) {
-+			gf_log(this->name,GF_LOG_DEBUG,
-+			       "disabling SSL for portmapper connection");
-+			priv->use_ssl = _gf_false;
-+		}
-+	}
-+	else {
-+		if (priv->ssl_enabled && !priv->use_ssl) {
-+			gf_log(this->name,GF_LOG_DEBUG,
-+			       "re-enabling SSL for I/O connection");
-+			priv->use_ssl = _gf_true;
-+		}
-+	}
++        if (ntohs(((struct sockaddr_in *) (&sockaddr))->sin_port) == 
++             GF_DEFAULT_SOCKET_LISTEN_PORT) {
++        	if (priv->use_ssl) {
++        		gf_log(this->name,GF_LOG_DEBUG,
++        		       "disabling SSL for portmapper connection");
++        		priv->use_ssl = _gf_false;
++        	}
++        }
++        else {
++        	if (priv->ssl_enabled && !priv->use_ssl) {
++        		gf_log(this->name,GF_LOG_DEBUG,
++        		       "re-enabling SSL for I/O connection");
++        		priv->use_ssl = _gf_true;
++        	}
++        }
 +
          pthread_mutex_lock (&priv->lock);
          {
                  if (priv->sock != -1) {
                          gf_log (this->name, GF_LOG_TRACE,
-@@ -2034,21 +2396,8 @@
+@@ -2034,21 +2410,8 @@
                                          strerror (errno));
                          }
                  }
@@ -715,14 +815,12 @@ http://review.gluster.com/#change,362
                          ret = __socket_keepalive (priv->sock,
                                                    priv->keepaliveintvl,
                                                    priv->keepaliveidle);
-@@ -2082,19 +2431,58 @@
+@@ -2082,19 +2445,58 @@
                          priv->sock = -1;
                          goto unlock;
                  }
  
 -                priv->connected = 0;
--
--                rpc_transport_ref (this);
 +		if (priv->use_ssl) {
 +			ret = ssl_setup_connection(this,0);
 +			if (ret < 0) {
@@ -773,6 +871,8 @@ http://review.gluster.com/#change,362
 +			}
 +		}
  
+-                rpc_transport_ref (this);
+-
 -                priv->idx = event_register (ctx->event_pool, priv->sock,
 -                                            socket_event_handler, this, 1, 1);
 -                if (priv->idx == -1) {
@@ -784,7 +884,7 @@ http://review.gluster.com/#change,362
  unlock:
          pthread_mutex_unlock (&priv->lock);
  
-@@ -2258,8 +2646,9 @@
+@@ -2258,8 +2660,9 @@
          char              need_poll_out = 0;
          char              need_append = 1;
          struct ioq       *entry = NULL;
@@ -794,7 +894,7 @@ http://review.gluster.com/#change,362
          GF_VALIDATE_OR_GOTO ("socket", this, out);
          GF_VALIDATE_OR_GOTO ("socket", this->private, out);
  
-@@ -2283,23 +2672,33 @@
+@@ -2283,23 +2686,33 @@
                  if (!entry)
                          goto unlock;
  
@@ -834,7 +934,7 @@ http://review.gluster.com/#change,362
                          priv->idx = event_select_on (ctx->event_pool,
                                                       priv->sock,
                                                       priv->idx, -1, 1);
-@@ -2321,8 +2720,9 @@
+@@ -2321,8 +2734,9 @@
          char              need_poll_out = 0;
          char              need_append = 1;
          struct ioq       *entry = NULL;
@@ -844,7 +944,7 @@ http://review.gluster.com/#change,362
          GF_VALIDATE_OR_GOTO ("socket", this, out);
          GF_VALIDATE_OR_GOTO ("socket", this->private, out);
  
-@@ -2339,35 +2739,46 @@
+@@ -2339,35 +2753,46 @@
                                  priv->submit_log = 1;
                          }
                          goto unlock;
@@ -898,7 +998,7 @@ http://review.gluster.com/#change,362
          pthread_mutex_unlock (&priv->lock);
  
  out:
-@@ -2513,8 +2924,9 @@
+@@ -2513,8 +2938,9 @@
          uint64_t          windowsize = GF_DEFAULT_SOCKET_WINDOW_SIZE;
          char             *optstr = NULL;
          uint32_t          keepalive = 0;
@@ -908,7 +1008,7 @@ http://review.gluster.com/#change,362
          if (this->private) {
                  gf_log_callingfn (this->name, GF_LOG_ERROR,
                                    "double init attempted");
-@@ -2627,12 +3039,131 @@
+@@ -2627,12 +3053,131 @@
                  priv->backlog = backlog;
          }
  
@@ -1041,7 +1141,7 @@ http://review.gluster.com/#change,362
  
  
  void
-@@ -2656,8 +3187,17 @@
+@@ -2656,8 +3201,17 @@
                  gf_log (this->name, GF_LOG_TRACE,
                          "transport %p destroyed", this);
  
@@ -1059,11 +1159,14 @@ http://review.gluster.com/#change,362
          }
  
          this->private = NULL;
-@@ -2731,6 +3271,18 @@
+@@ -2731,6 +3285,21 @@
          },
          { .key   = {"transport.socket.listen-backlog"},
            .type  = GF_OPTION_TYPE_INT
          },
++	{ .key   = {SSL_ENABLED_OPT},
++	  .type  = GF_OPTION_TYPE_BOOL
++	},
 +	{ .key   = {SSL_OWN_CERT_OPT},
 +	  .type  = GF_OPTION_TYPE_STR
 +	},
@@ -1078,8 +1181,8 @@ http://review.gluster.com/#change,362
 +	},
          { .key = {NULL} }
  };
---- rpc/rpc-transport/socket/src/socket.h.orig	2011-11-14 14:46:00.000000000 +0100
-+++ rpc/rpc-transport/socket/src/socket.h	2011-12-03 06:46:39.000000000 +0100
+--- ./rpc/rpc-transport/socket/src/socket.h.orig	2011-11-14 14:46:00.000000000 +0100
++++ ./rpc/rpc-transport/socket/src/socket.h	2011-12-14 20:47:10.000000000 +0100
 @@ -19,8 +19,10 @@
  
  #ifndef _SOCKET_H
@@ -1091,7 +1194,19 @@ http://review.gluster.com/#change,362
  #ifndef _CONFIG_H
  #define _CONFIG_H
  #include "config.h"
-@@ -192,8 +194,22 @@
+@@ -143,9 +145,10 @@
+ 
+ typedef struct {
+         int32_t                sock;
+         int32_t                idx;
+-        unsigned char          connected; // -1 = not connected. 0 = in progress. 1 = connected
++        // -1 = not connected. 0 = in progress. 1 = connected
++        unsigned char          connected; 
+         char                   bio;
+         char                   connect_finish_log;
+         char                   submit_log;
+         union {
+@@ -192,8 +195,22 @@
          int                    keepalive;
          int                    keepaliveidle;
          int                    keepaliveintvl;
@@ -1114,18 +1229,3 @@ http://review.gluster.com/#change,362
  
  
  #endif
---- xlators/mgmt/glusterd/src/glusterd-volgen.c.orig	2011-11-14 14:46:02.000000000 +0100
-+++ xlators/mgmt/glusterd/src/glusterd-volgen.c	2011-12-03 06:46:39.000000000 +0100
-@@ -187,8 +187,12 @@
- 
-         {VKEY_FEATURES_QUOTA,                    "features/marker",           "quota", "off", NO_DOC, OPT_FLAG_FORCE},
-         {VKEY_FEATURES_LIMIT_USAGE,              "features/quota",            "limit-set", NULL, NO_DOC, 0},
-         {"features.quota-timeout",               "features/quota",            "timeout", "0", DOC, 0},
-+        { "server.ssl",                          "protocol/server",           
-+"transport.socket.ssl-enabled", NULL, NO_DOC, 0},
-+        { "client.ssl",                          "protocol/client",           
-+"transport.socket.ssl-enabled", NULL, NO_DOC, 0},
-         {NULL,                                                                }
- };
- 
- 
