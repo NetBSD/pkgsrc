@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.11 2010/07/23 22:44:46 gdt Exp $
+# $NetBSD: egg.mk,v 1.12 2011/12/16 12:41:05 gdt Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -6,7 +6,8 @@
 
 # This file should be included to package python "distributions" which
 # use setuptools to create an egg.  The presence of egg-info in a
-# package does not indicate that the package is an egg.
+# package does not indicate that the package is an egg - distributions
+# that use distutils should use distutils.mk.
 
 EGG_NAME?=	${DISTNAME}
 
