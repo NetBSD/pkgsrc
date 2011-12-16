@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/06/19 08:44:37 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/12/16 15:16:01 taca Exp $
 
-SHA1 (do_sqlite3-0.10.6.gem) = 739b283502aa90d5fe36f26ba88b78bfd18daf58
-RMD160 (do_sqlite3-0.10.6.gem) = 5abb1dd2483d2d53979a1d33e028ef9ebd553c98
-Size (do_sqlite3-0.10.6.gem) = 22016 bytes
+SHA1 (do_sqlite3-0.10.7.gem) = 328cd77ffc1fb2d953600b9df7eaf3618f57aa56
+RMD160 (do_sqlite3-0.10.7.gem) = c1c745eb4ccd30319ca37976b598ab9215cd9f1f
+Size (do_sqlite3-0.10.7.gem) = 22016 bytes
