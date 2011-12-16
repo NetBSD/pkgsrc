@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2011/10/03 14:30:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/16 15:36:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -21,19 +22,19 @@ ${GEM_LIBDIR}/lib/sinatra/images/404.png
 ${GEM_LIBDIR}/lib/sinatra/images/500.png
 ${GEM_LIBDIR}/lib/sinatra/main.rb
 ${GEM_LIBDIR}/lib/sinatra/showexceptions.rb
+${GEM_LIBDIR}/lib/sinatra/version.rb
 ${GEM_LIBDIR}/sinatra.gemspec
 ${GEM_LIBDIR}/test/base_test.rb
 ${GEM_LIBDIR}/test/builder_test.rb
 ${GEM_LIBDIR}/test/coffee_test.rb
 ${GEM_LIBDIR}/test/contest.rb
+${GEM_LIBDIR}/test/creole_test.rb
 ${GEM_LIBDIR}/test/delegator_test.rb
 ${GEM_LIBDIR}/test/encoding_test.rb
 ${GEM_LIBDIR}/test/erb_test.rb
-${GEM_LIBDIR}/test/erubis_test.rb
 ${GEM_LIBDIR}/test/extensions_test.rb
 ${GEM_LIBDIR}/test/filter_test.rb
 ${GEM_LIBDIR}/test/haml_test.rb
-${GEM_LIBDIR}/test/hello.mab
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/helpers_test.rb
 ${GEM_LIBDIR}/test/less_test.rb
@@ -47,6 +48,7 @@ ${GEM_LIBDIR}/test/public/favicon.ico
 ${GEM_LIBDIR}/test/rack_test.rb
 ${GEM_LIBDIR}/test/radius_test.rb
 ${GEM_LIBDIR}/test/rdoc_test.rb
+${GEM_LIBDIR}/test/readme_test.rb
 ${GEM_LIBDIR}/test/request_test.rb
 ${GEM_LIBDIR}/test/response_test.rb
 ${GEM_LIBDIR}/test/result_test.rb
@@ -59,6 +61,7 @@ ${GEM_LIBDIR}/test/settings_test.rb
 ${GEM_LIBDIR}/test/sinatra_test.rb
 ${GEM_LIBDIR}/test/slim_test.rb
 ${GEM_LIBDIR}/test/static_test.rb
+${GEM_LIBDIR}/test/streaming_test.rb
 ${GEM_LIBDIR}/test/templates_test.rb
 ${GEM_LIBDIR}/test/textile_test.rb
 ${GEM_LIBDIR}/test/views/a/in_a.str
@@ -67,15 +70,14 @@ ${GEM_LIBDIR}/test/views/b/in_b.str
 ${GEM_LIBDIR}/test/views/calc.html.erb
 ${GEM_LIBDIR}/test/views/error.builder
 ${GEM_LIBDIR}/test/views/error.erb
-${GEM_LIBDIR}/test/views/error.erubis
 ${GEM_LIBDIR}/test/views/error.haml
 ${GEM_LIBDIR}/test/views/error.sass
 ${GEM_LIBDIR}/test/views/explicitly_nested.str
 ${GEM_LIBDIR}/test/views/foo/hello.test
 ${GEM_LIBDIR}/test/views/hello.builder
 ${GEM_LIBDIR}/test/views/hello.coffee
+${GEM_LIBDIR}/test/views/hello.creole
 ${GEM_LIBDIR}/test/views/hello.erb
-${GEM_LIBDIR}/test/views/hello.erubis
 ${GEM_LIBDIR}/test/views/hello.haml
 ${GEM_LIBDIR}/test/views/hello.less
 ${GEM_LIBDIR}/test/views/hello.liquid
@@ -92,7 +94,6 @@ ${GEM_LIBDIR}/test/views/hello.test
 ${GEM_LIBDIR}/test/views/hello.textile
 ${GEM_LIBDIR}/test/views/layout2.builder
 ${GEM_LIBDIR}/test/views/layout2.erb
-${GEM_LIBDIR}/test/views/layout2.erubis
 ${GEM_LIBDIR}/test/views/layout2.haml
 ${GEM_LIBDIR}/test/views/layout2.liquid
 ${GEM_LIBDIR}/test/views/layout2.mab
