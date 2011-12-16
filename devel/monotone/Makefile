@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2011/11/25 21:26:14 joerg Exp $
+# $NetBSD: Makefile,v 1.73 2011/12/16 23:44:21 sbd Exp $
 #
 
 DISTNAME=	monotone-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel scm
 MASTER_SITES=	http://monotone.ca/downloads/1.0/
 EXTRACT_SUFX=	.tar.bz2
@@ -59,6 +59,7 @@ BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.6
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../security/botan/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
