@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2011/12/16 10:51:18 obache Exp $
+
+* Need to requirement of math library for atan2(3).
+  http://code.google.com/p/ibus-handwrite/issues/detail?id=19
+
+--- configure.ac.orig	2011-03-25 05:28:26.000000000 +0000
++++ configure.ac
+@@ -66,6 +66,8 @@ GETTEXT_PACKAGE="$PACKAGE_NAME"
+ AC_SUBST(GETTEXT_PACKAGE)
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Define to the read-only architecture-independent data directory.])
+ 
++AC_SEARCH_LIBS([atan2], [m])
++
+ AS_IF([test "x${enable_zinnia}" = "xyes"],
+ 	[
+ 		AC_CHECK_LIB(zinnia,[zinnia_recognizer_open],[],[have_zinnia=no])
