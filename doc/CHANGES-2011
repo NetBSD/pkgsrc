@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3299 2011/12/16 06:14:40 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3300 2011/12/16 11:30:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5259,3 +5259,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/p5-UNIVERSAL-isa to 1.20110614 [hiramatsu 2011-12-16]
 	Updated www/p5-Catalyst-Plugin-Authorization-Roles to 0.09 [hiramatsu 2011-12-16]
 	Updated devel/p5-version to 0.9500 [hiramatsu 2011-12-16]
+	Updated www/typo3_45 to 4.5.9 [taca 2011-12-16]
+	Updated www/typo3_46 to 4.6.2 [taca 2011-12-16]
