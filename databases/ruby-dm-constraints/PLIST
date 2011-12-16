@@ -1,22 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:24:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/16 14:33:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/abstract_adapter.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/do_adapter.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/extension.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/mysql_adapter.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/oracle_adapter.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/postgres_adapter.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/sqlite_adapter.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/adapters/sqlserver_adapter.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/migrations/model.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/migrations/relationship.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/migrations/singleton_methods.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/relationship/many_to_many.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/relationship/one_to_many.rb
+${GEM_LIBDIR}/lib/data_mapper/constraints/resource.rb
 ${GEM_LIBDIR}/dm-constraints.gemspec
 ${GEM_LIBDIR}/lib/dm-constraints.rb
-${GEM_LIBDIR}/lib/dm-constraints/adapters/dm-abstract-adapter.rb
-${GEM_LIBDIR}/lib/dm-constraints/adapters/dm-do-adapter.rb
-${GEM_LIBDIR}/lib/dm-constraints/adapters/dm-mysql-adapter.rb
-${GEM_LIBDIR}/lib/dm-constraints/adapters/dm-oracle-adapter.rb
-${GEM_LIBDIR}/lib/dm-constraints/adapters/dm-postgres-adapter.rb
-${GEM_LIBDIR}/lib/dm-constraints/adapters/dm-sqlite-adapter.rb
-${GEM_LIBDIR}/lib/dm-constraints/adapters/dm-sqlserver-adapter.rb
-${GEM_LIBDIR}/lib/dm-constraints/delete_constraint.rb
-${GEM_LIBDIR}/lib/dm-constraints/migrations.rb
-${GEM_LIBDIR}/lib/dm-constraints/relationships.rb
 ${GEM_LIBDIR}/spec/integration/constraints_spec.rb
 ${GEM_LIBDIR}/spec/isolated/require_after_setup_spec.rb
 ${GEM_LIBDIR}/spec/isolated/require_before_setup_spec.rb
