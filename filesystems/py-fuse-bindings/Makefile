@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/12/16 01:07:23 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/16 12:51:56 gdt Exp $
 #
 
 VERSION=		0.2.1
@@ -26,7 +26,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/example/xmp.py \
 		${DESTDIR}${PREFIX}/share/examples/fuse-python/
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
