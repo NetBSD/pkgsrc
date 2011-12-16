@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/19 08:26:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/16 14:35:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/db/migrations/1_create_people_table.rb
 ${GEM_LIBDIR}/db/migrations/2_add_dob_to_people.rb
 ${GEM_LIBDIR}/db/migrations/config.rb
 ${GEM_LIBDIR}/dm-migrations.gemspec
+${GEM_LIBDIR}/examples/Rakefile
 ${GEM_LIBDIR}/examples/sample_migration.rb
 ${GEM_LIBDIR}/examples/sample_migration_spec.rb
 ${GEM_LIBDIR}/lib/dm-migrations.rb

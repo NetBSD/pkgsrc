@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/06/19 08:26:09 taca Exp $
+$NetBSD: distinfo,v 1.3 2011/12/16 14:35:37 taca Exp $
 
-SHA1 (dm-migrations-1.1.0.gem) = 8d8e63f23992a4729ecaaca4e0bb1efe153224b1
-RMD160 (dm-migrations-1.1.0.gem) = b6dcc91e61455f005a95c365c1d6519418513809
-Size (dm-migrations-1.1.0.gem) = 33792 bytes
+SHA1 (dm-migrations-1.2.0.gem) = 38b259e5dec2aa4179f0d93bc2554eba3c712f9b
+RMD160 (dm-migrations-1.2.0.gem) = bd3d76ee5bb11132ce4ff2b1ead57ceb172520a3
+Size (dm-migrations-1.2.0.gem) = 35840 bytes
