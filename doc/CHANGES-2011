@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3297 2011/12/15 22:36:15 minskim Exp $
+$NetBSD: CHANGES-2011,v 1.3298 2011/12/16 00:51:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added www/jetty7 version 7.5.4.20111024 [ryoon 2011-12-15]
 	Updated graphics/tex-metapost to 1.212 [minskim 2011-12-15]
 	Updated graphics/tex-metapost-doc to 1.212 [minskim 2011-12-15]
+	Updated filesystems/py-fuse-bindings to 0.2.1 [gdt 2011-12-16]
