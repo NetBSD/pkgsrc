@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3310 2011/12/16 13:44:02 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3311 2011/12/16 13:58:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ruby-net-http-digest_auth to 1.2 [taca 2011-12-16]
 	Updated www/ruby-net-http-persistent to 2.3.2 [taca 2011-12-16]
 	Updated www/ruby-webrobots to 0.0.12 [taca 2011-12-16]
+	Updated www/ruby-sass to 3.1.11 [taca 2011-12-16]
