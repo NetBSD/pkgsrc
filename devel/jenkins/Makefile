@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/08 14:09:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/16 17:08:35 ryoon Exp $
 #
 
 DISTNAME=	jenkins
@@ -35,4 +35,5 @@ do-install:
 	${UNZIP_CMD} -d ${DESTDIR}${PREFIX}/share/jenkins ${WRKSRC}/jenkins.war
 	${INSTALL_DATA} ${WRKSRC}/jenkins.war ${DESTDIR}${PREFIX}/share/jenkins
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
