@@ -1,31 +1,32 @@
-$NetBSD: patch-am,v 1.9 2011/12/16 11:05:24 asau Exp $
+$NetBSD: patch-am,v 1.10 2011/12/16 22:32:06 asau Exp $
 
 Add support for "passwd expand gecos".
 
---- lib/util_pw.c.orig	2010-01-14 10:12:10.000000000 +0000
-+++ lib/util_pw.c
-@@ -4,6 +4,7 @@
-    Safe versions of getpw* calls
- 
+--- ../lib/util/util_pw.c.orig	2011-10-18 22:48:48.000000000 +0400
++++ ../lib/util/util_pw.c	2011-12-16 19:54:39.000000000 +0400
+@@ -6,6 +6,7 @@
+    Copyright (C) Andrew Tridgell 1992-1998
+    Copyright (C) Jeremy Allison  1998-2005
     Copyright (C) Andrew Bartlett 2002
-+   Copyright (C) Luke Mewburn 2004
-    
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-@@ -21,9 +22,12 @@
++   Copyright (C) Luke Mewburn    2004
+    Copyright (C) Timur Bakeyev        2005
+    Copyright (C) Bjoern Jacke    2006-2007
  
- #include "includes.h"
+@@ -71,10 +72,13 @@
+ 	return getgrgid(gid);
+ }
  
 +static char *passwd_expand_gecos(const struct passwd *);
 +
- struct passwd *tcopy_passwd(TALLOC_CTX *mem_ctx, const struct passwd *from) 
+ struct passwd *tcopy_passwd(TALLOC_CTX *mem_ctx,
+ 			    const struct passwd *from)
  {
- 	struct passwd *ret = TALLOC_P(mem_ctx, struct passwd);
+ 	struct passwd *ret = talloc_zero(mem_ctx, struct passwd);
 +	char *gecos;
- 	if (!ret) {
+ 
+ 	if (ret == NULL)
  		return NULL;
- 	}
-@@ -31,7 +35,10 @@ struct passwd *tcopy_passwd(TALLOC_CTX *
+@@ -83,7 +87,10 @@
  	ret->pw_passwd = talloc_strdup(ret, from->pw_passwd);
  	ret->pw_uid = from->pw_uid;
  	ret->pw_gid = from->pw_gid;
@@ -36,12 +37,11 @@ Add support for "passwd expand gecos".
 +		SAFE_FREE(gecos);
  	ret->pw_dir = talloc_strdup(ret, from->pw_dir);
  	ret->pw_shell = talloc_strdup(ret, from->pw_shell);
- 	return ret;
-@@ -85,3 +92,38 @@ struct passwd *getpwuid_alloc(TALLOC_CTX
  
+@@ -108,6 +115,41 @@
  	return tcopy_passwd(mem_ctx, temp);
  }
-+
+ 
 +
 +/****************************************************************
 + Expand any `&' characters in pw_gecos with a capitalized pw_name.
@@ -76,3 +76,7 @@ Add support for "passwd expand gecos".
 +	}
 +	return buf;
 +}
++
+ /****************************************************************************
+  talloc'ed version of getpwuid.
+ ****************************************************************************/
