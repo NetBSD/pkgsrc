@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/10/13 11:33:47 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/12/16 13:26:10 taca Exp $
 
-DISTNAME=	camping-2.1
+DISTNAME=	camping-2.1.467
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
