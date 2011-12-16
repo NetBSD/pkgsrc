@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3318 2011/12/16 17:04:57 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3319 2011/12/16 17:52:00 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5304,3 +5304,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/ruby-rspec to 2.7.0 [taca 2011-12-16]
 	Updated devel/ruby-rspec-rails to 2.7.0 [taca 2011-12-16]
 	Updated www/jetty7 to 7.5.4.20111024nb1 [ryoon 2011-12-16]
+	Updated sysutils/gnome-commander to 1.2.8.15 [drochner 2011-12-16]
+	Updated cad/gtkwave to 3.3.28 [drochner 2011-12-16]
+	Updated devel/pcre to 8.21 [drochner 2011-12-16]
+	Updated www/neon to 0.29.6 [drochner 2011-12-16]
