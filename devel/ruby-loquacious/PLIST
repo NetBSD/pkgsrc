@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2011/09/14 11:59:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/16 11:46:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
@@ -16,7 +17,6 @@ ${GEM_LIBDIR}/spec/configuration_spec.rb
 ${GEM_LIBDIR}/spec/help_spec.rb
 ${GEM_LIBDIR}/spec/iterator_spec.rb
 ${GEM_LIBDIR}/spec/loquacious_spec.rb
-${GEM_LIBDIR}/spec/spec.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/string_spec.rb
 ${GEM_LIBDIR}/version.txt
