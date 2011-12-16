@@ -1,0 +1,75 @@
+$NetBSD: patch-ce,v 1.1 2011/12/16 05:40:46 manu Exp $
+
+Fetch secondary groups using sysctl(2) instead of /proc, to avoid
+deadlocks
+
+--- xlators/mount/fuse/src/fuse-helpers.c.orig	2011-11-14 14:46:02.000000000 +0100
++++ xlators/mount/fuse/src/fuse-helpers.c	2011-12-15 10:49:52.000000000 +0100
+@@ -17,8 +17,11 @@
+    <http://www.gnu.org/licenses/>.
+ */
+ 
+ #include "fuse-bridge.h"
++#ifdef __NetBSD__
++#include <sys/sysctl.h>	/* for sysctl(2) */
++#endif /* __NetBSD__ */
+ 
+ xlator_t *
+ fuse_state_subvol (fuse_state_t *state)
+ {
+@@ -134,10 +137,10 @@
+         return state;
+ }
+ 
+ 
+-void
+-frame_fill_groups (call_frame_t *frame)
++static void
++frame_fill_groups_proc (call_frame_t *frame)
+ {
+         char         filename[128];
+         char         line[128];
+         char        *ptr = NULL;
+@@ -184,8 +187,42 @@
+                 fclose (fp);
+         return;
+ }
+ 
++#ifdef __NetBSD__
++static void
++frame_fill_groups_sysctl (call_frame_t *frame)
++{
++	int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, frame->root->pid };
++	size_t namelen = sizeof(name) / sizeof(*name);
++	struct kinfo_proc kp;
++	size_t kplen = sizeof(kp);
++	int i, ngroups;
++
++	if (sysctl(name, namelen, &kp, &kplen, NULL, 0) != 0)
++		return;
++
++	ngroups = MIN(kp.kp_eproc.e_ucred.cr_ngroups, GF_REQUEST_MAXGROUPS);
++
++	for (i = 0; i < ngroups; i++)
++		frame->root->groups[i] = kp.kp_eproc.e_ucred.cr_groups[i];
++	frame->root->ngrps = ngroups;
++
++
++	return;
++}
++#endif /* __NetBSD__ */
++
++void
++frame_fill_groups (call_frame_t *frame)
++{
++#if defined(linux)
++	frame_fill_groups_proc(frame);
++#elif defined(__NetBSD__)
++	frame_fill_groups_sysctl(frame);
++#endif
++	return;
++}
+ 
+ call_frame_t *
+ get_call_frame_for_req (fuse_state_t *state)
+ {
