@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/15 12:36:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/16 11:26:29 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -3867,6 +3867,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/lang/locallang_tsfe.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/lang/locallang_tsparser.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/lang/locallang_view_help.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/lang/locallang_wizards.xml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/classes/class.tx_linkvalidator_processor.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/classes/linktype/class.tx_linkvalidator_linktype_abstract.php
@@ -7424,6 +7425,7 @@ ${TYPO3DIR}/${SITEDIR}/_.htaccess
 ${TYPO3DIR}/${SITEDIR}/INSTALL.txt
 ${TYPO3DIR}/${SITEDIR}/README.txt
 ${TYPO3DIR}/${SITEDIR}/RELEASE_NOTES.txt
+${TYPO3DIR}/${SITEDIR}/_.htaccess
 ${TYPO3DIR}/${SITEDIR}/clear.gif
 ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/.htaccess
 ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/index.html
