@@ -1,0 +1,31 @@
+$NetBSD: patch-cc,v 1.1 2011/12/16 05:40:46 manu Exp $
+
+Fix from upstram: http://review.gluster.com/#change,784
+
+--- xlators/protocol/client/src/client3_1-fops.c.orig	2011-11-14 14:46:02.000000000 +0100
++++ xlators/protocol/client/src/client3_1-fops.c	2011-12-14 15:56:06.000000000 +0100
+@@ -3613,14 +3613,21 @@
+         ret = client_submit_vec_request (this, &req, frame, conf->fops, GFS3_OP_WRITE,
+                                          client3_1_writev_cbk,
+                                          args->vector, args->count,
+                                          args->iobref, xdr_from_writev_req);
+-        if (ret)
+-                goto unwind;
++        if (ret) {
++                /*
++                 * If the lower layers fail to submit a request, they'll also
++                 * do the unwind for us (see rpc_clnt_submit), so don't unwind
++                 * here in such cases.
++                 */
++                gf_log (this->name, GF_LOG_WARNING,
++                        "failed to send the fop: %s", strerror (op_errno));
++        }
+ 
+         return 0;
++
+ unwind:
+-        gf_log (this->name, GF_LOG_WARNING, "failed to send the fop: %s", strerror (op_errno));
+         STACK_UNWIND_STRICT (writev, frame, -1, op_errno, NULL, NULL);
+         return 0;
+ }
+ 
