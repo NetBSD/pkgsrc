@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.ko,v 1.1 2009/01/21 14:03:44 taca Exp $
-${DRUPAL_BASE}/LICENSE.ko.txt
-${DRUPAL_BASE}/README.ko.txt
-${DRUPAL_BASE}/STATUS.ko.txt
-${DRUPAL_BASE}/modules/system/translations/ko.ko.po
