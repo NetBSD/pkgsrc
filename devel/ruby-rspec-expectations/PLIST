@@ -1,16 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/18 03:46:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/16 15:56:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.document
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Guardfile
-${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/cucumber.yml
-${GEM_LIBDIR}/features/.nav
-${GEM_LIBDIR}/features/Changelog.md
 ${GEM_LIBDIR}/features/README.markdown
 ${GEM_LIBDIR}/features/Upgrade.md
 ${GEM_LIBDIR}/features/built_in_matchers/README.md
@@ -43,13 +33,13 @@ ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/test_frameworks/test_unit.feature
 ${GEM_LIBDIR}/lib/rspec-expectations.rb
 ${GEM_LIBDIR}/lib/rspec/expectations.rb
-${GEM_LIBDIR}/lib/rspec/expectations/backward_compatibility.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/deprecation.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/differ.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/errors.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/extensions.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/extensions/array.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/extensions/kernel.rb
+${GEM_LIBDIR}/lib/rspec/expectations/extensions/object.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/fail_with.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/handler.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/version.rb
@@ -69,7 +59,7 @@ ${GEM_LIBDIR}/lib/rspec/matchers/eql.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/equal.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/errors.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/exist.rb
-${GEM_LIBDIR}/lib/rspec/matchers/extensions/instance_exec.rb
+${GEM_LIBDIR}/lib/rspec/matchers/extensions/instance_eval_with_args.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/generated_descriptions.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/has.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/have.rb
@@ -84,7 +74,6 @@ ${GEM_LIBDIR}/lib/rspec/matchers/raise_error.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/respond_to.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/satisfy.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/throw_symbol.rb
-${GEM_LIBDIR}/rspec-expectations.gemspec
 ${GEM_LIBDIR}/spec/rspec/expectations/differ_spec.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/extensions/kernel_spec.rb
 ${GEM_LIBDIR}/spec/rspec/expectations/fail_with_spec.rb
@@ -120,5 +109,4 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/support/classes.rb
 ${GEM_LIBDIR}/spec/support/matchers.rb
 ${GEM_LIBDIR}/spec/support/ruby_version.rb
-${GEM_LIBDIR}/specs.watchr
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
