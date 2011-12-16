@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1547 2011/12/16 12:23:25 taca Exp $
+# $NetBSD: Makefile,v 1.1548 2011/12/16 12:33:29 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1383,6 +1383,7 @@ SUBDIR+=	ruby-posix-spawn
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties
+SUBDIR+=	ruby-railties31
 SUBDIR+=	ruby-rbtree
 SUBDIR+=	ruby-rbx-require-relative
 SUBDIR+=	ruby-rcov
