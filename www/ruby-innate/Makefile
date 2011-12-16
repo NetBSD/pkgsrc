@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2011/06/19 03:55:11 taca Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/16 13:18:37 taca Exp $
 
-DISTNAME=	innate-2011.04
+DISTNAME=	innate-2011.10
 CATEGORIES=	devel
 
 MAINTAINER=	filip@joyent.com
