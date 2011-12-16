@@ -1,24 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/18 03:47:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/16 15:57:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.autotest
-${GEM_LIBDIR}/.document
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Guardfile
-${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/autotest/discover.rb
-${GEM_LIBDIR}/cucumber.yml
-${GEM_LIBDIR}/features/.nav
-${GEM_LIBDIR}/features/Changelog.md
 ${GEM_LIBDIR}/features/README.markdown
+${GEM_LIBDIR}/features/Scope.md
 ${GEM_LIBDIR}/features/Upgrade.md
+${GEM_LIBDIR}/features/argument_matchers/README.md
+${GEM_LIBDIR}/features/argument_matchers/explicit.feature
+${GEM_LIBDIR}/features/argument_matchers/general_matchers.feature
+${GEM_LIBDIR}/features/argument_matchers/type_matchers.feature
 ${GEM_LIBDIR}/features/message_expectations/README.md
 ${GEM_LIBDIR}/features/message_expectations/any_instance.feature
 ${GEM_LIBDIR}/features/message_expectations/block_local_expectations.feature.pending
 ${GEM_LIBDIR}/features/message_expectations/expect_message.feature
+${GEM_LIBDIR}/features/message_expectations/receive_counts.feature
 ${GEM_LIBDIR}/features/message_expectations/warn_when_expectation_is_set_on_nil.feature
 ${GEM_LIBDIR}/features/method_stubs/README.md
 ${GEM_LIBDIR}/features/method_stubs/any_instance.feature
@@ -33,6 +27,12 @@ ${GEM_LIBDIR}/features/step_definitions/additional_cli_steps.rb
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/lib/rspec/mocks.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance.rb
+${GEM_LIBDIR}/lib/rspec/mocks/any_instance/chain.rb
+${GEM_LIBDIR}/lib/rspec/mocks/any_instance/expectation_chain.rb
+${GEM_LIBDIR}/lib/rspec/mocks/any_instance/message_chains.rb
+${GEM_LIBDIR}/lib/rspec/mocks/any_instance/recorder.rb
+${GEM_LIBDIR}/lib/rspec/mocks/any_instance/stub_chain.rb
+${GEM_LIBDIR}/lib/rspec/mocks/any_instance/stub_chain_chain.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/argument_expectation.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/argument_matchers.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/error_generator.rb
@@ -53,8 +53,8 @@ ${GEM_LIBDIR}/lib/rspec/mocks/spec_methods.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/standalone.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/version.rb
 ${GEM_LIBDIR}/lib/spec/mocks.rb
-${GEM_LIBDIR}/rspec-mocks.gemspec
 ${GEM_LIBDIR}/spec/rspec/mocks/and_yield_spec.rb
+${GEM_LIBDIR}/spec/rspec/mocks/any_instance/message_chains_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/any_instance_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/any_number_of_times_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/argument_expectation_spec.rb
@@ -97,5 +97,4 @@ ${GEM_LIBDIR}/spec/rspec/mocks/to_ary_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks/twice_counts_spec.rb
 ${GEM_LIBDIR}/spec/rspec/mocks_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/specs.watchr
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
