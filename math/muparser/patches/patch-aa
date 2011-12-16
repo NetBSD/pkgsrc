@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/12/11 19:53:57 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2011/12/16 17:16:11 marino Exp $
 
---- configure.orig	2009-02-11 20:06:56.000000000 +0100
+--- configure.orig	2010-09-04 13:01:39.000000000 +0000
 +++ configure
-@@ -5075,7 +5075,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6; 
+@@ -6733,7 +6733,7 @@ $as_echo "$bakefile_cv_gcc31" >&6; }
              SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
          fi
  
@@ -11,3 +11,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/12/11 19:53:57 drochner Exp $
              PIC_FLAG="-dynamic -fPIC"
          fi
          if test "x$XLCC" = "xyes"; then
+@@ -7301,6 +7301,7 @@ EOF
+       ;;
+ 
+       powerpc-apple-macos* | \
++      *-*-dragonfly* | \
+       *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+@@ -7343,7 +7344,7 @@ EOF
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
+-      *-*-k*bsd*-gnu | *-*-mirbsd* )
++      *-*-dragonfly* | *-*-k*bsd*-gnu | *-*-mirbsd* )
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
+         else
