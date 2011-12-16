@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/03/24 19:43:28 asau Exp $
+# $NetBSD: Makefile,v 1.20 2011/12/16 12:54:41 drochner Exp $
 #
 
 DISTNAME=		lsh-2.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.lysator.liu.se/~nisse/archive/ \
 			ftp://ftp.lysator.liu.se/pub/security/lsh/
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gm4 bash:run
 REPLACE_BASH+=		src/lcp
-CONFIGURE_ARGS+=	--disable-openssl --disable-pam
+CONFIGURE_ARGS+=	--disable-openssl --disable-pam --disable-kerberos
 INFO_FILES=		yes
 
 # lcp test depends on /bin/bash and thus fails, others work
