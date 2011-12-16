@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: jetty.sh,v 1.1.1.1 2011/12/15 22:19:11 ryoon Exp $
+# $NetBSD: jetty.sh,v 1.2 2011/12/16 17:03:28 ryoon Exp $
 #
 # PROVIDE: jetty
 # REQUIRE: DAEMON
@@ -54,7 +54,7 @@ export CLASSPATH
 
 jetty_precmd()
 {
-	if [ ! -d @VARBASE@/run/tomcat ]; then
+	if [ ! -d @VARBASE@/run/jetty ]; then
 		@MKDIR@ ${JETTY_RUN}
 		@CHMOD@ 0750 ${JETTY_RUN}
 		@CHOWN@ ${jetty_user}:${jetty_group} ${JETTY_RUN}
@@ -75,7 +75,7 @@ jetty_stop()
 }
 
 
-tomcat_run()
+jetty_run()
 {
 	cd ${JETTY_HOME}/logs
 	@SU@ ${jetty_user} -c "${command} run"
@@ -87,5 +87,5 @@ then
 	run_rc_command "$1"
 else
 	echo -n ' ${name}'
-	exec ${command} ${tomcat_flags} ${command_args}
+	exec ${command} ${jetty_flags} ${command_args}
 fi
