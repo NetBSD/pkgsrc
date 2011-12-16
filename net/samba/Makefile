@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.205 2011/12/16 11:05:24 asau Exp $
+# $NetBSD: Makefile,v 1.206 2011/12/16 22:32:06 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
@@ -12,7 +11,7 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	3.5.11
+VERSION=	3.6.1
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -141,9 +140,9 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/include
 	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/js
 	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/gpext
-	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/idmap
+	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/nss_info
 	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/pdb
-	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/rpc
+	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/perfcount
 	set -e ; cd ${WRKDIR}/${DISTNAME}/docs/registry; for f in *.reg; do \
 		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${DOCDIR}/$${f}; \
 	done
