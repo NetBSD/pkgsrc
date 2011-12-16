@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/10/11 20:30:00 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/12/16 23:21:45 asau Exp $
 bin/eventlogadm
 bin/findsmb
 bin/ldbadd
@@ -148,6 +148,7 @@ man/man8/tdbtool.8
 man/man8/umount.cifs.8
 man/man8/vfs_acl_tdb.8
 man/man8/vfs_acl_xattr.8
+man/man8/vfs_aio_fork.8
 man/man8/vfs_audit.8
 man/man8/vfs_cacheprime.8
 man/man8/vfs_cap.8
