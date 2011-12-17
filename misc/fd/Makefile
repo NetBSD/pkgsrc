@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2011/04/08 11:34:44 obache Exp $
+# $NetBSD: Makefile,v 1.28 2011/12/17 10:16:12 sbd Exp $
 #
 
 DISTNAME=	FD-3.00j
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	misc shells
 MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 
@@ -51,4 +52,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/_fdrc ${DESTDIR}${EXAMPLESDIR}/${FD_CONFIG}
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
