@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/21 04:59:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/17 06:25:16 taca Exp $
 bin/kramdown
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -38,7 +38,9 @@ ${GEM_LIBDIR}/lib/kramdown/converter/base.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/html.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/kramdown.rb
 ${GEM_LIBDIR}/lib/kramdown/converter/latex.rb
+${GEM_LIBDIR}/lib/kramdown/converter/toc.rb
 ${GEM_LIBDIR}/lib/kramdown/document.rb
+${GEM_LIBDIR}/lib/kramdown/element.rb
 ${GEM_LIBDIR}/lib/kramdown/error.rb
 ${GEM_LIBDIR}/lib/kramdown/options.rb
 ${GEM_LIBDIR}/lib/kramdown/parser.rb
@@ -226,9 +228,11 @@ ${GEM_LIBDIR}/test/testcases/block/09_html/markdown_attr.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/not_parsed.html
 ${GEM_LIBDIR}/test/testcases/block/09_html/not_parsed.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_raw.html
+${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_raw.htmlinput
 ${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_raw.options
 ${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_raw.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_span.html
+${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_span.htmlinput
 ${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_span.options
 ${GEM_LIBDIR}/test/testcases/block/09_html/parse_as_span.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/parse_block_html.html
