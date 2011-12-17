@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2011/11/16 09:05:03 obache Exp $
+# $NetBSD: Makefile,v 1.66 2011/12/17 10:16:28 sbd Exp $
 
 DISTNAME=	proftpd-1.3.3g
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
@@ -62,4 +63,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/proftpd
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
