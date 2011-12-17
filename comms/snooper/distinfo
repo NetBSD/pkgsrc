@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2009/12/17 21:43:16 abs Exp $
+$NetBSD: distinfo,v 1.8 2011/12/17 10:15:00 sbd Exp $
 
 SHA1 (snooper-19991202.tar.gz) = d6aba20cd14449d7b126f393cdb219fd627b7777
 RMD160 (snooper-19991202.tar.gz) = 52d61dea95cac246afd5815bc32f31448f9c757b
 Size (snooper-19991202.tar.gz) = 38239 bytes
 SHA1 (patch-aa) = eb458977300b991f100b2f48a87add2a3dd4d7cb
 SHA1 (patch-ab) = 4c6fb6ec3825b8c47006fc0817c13caf9a817091
-SHA1 (patch-ac) = b8d9af5de5fb5b73a2f3a6a5679028c5145048a5
+SHA1 (patch-ac) = efa5c1db00cf19cf55890e004052fc06a7cd64dd
