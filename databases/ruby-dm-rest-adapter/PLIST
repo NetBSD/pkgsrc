@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/17 17:31:17 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/dm-rest-adapter.gemspec
+${GEM_LIBDIR}/lib/dm-rest-adapter.rb
+${GEM_LIBDIR}/lib/dm-rest-adapter/adapter.rb
+${GEM_LIBDIR}/lib/dm-rest-adapter/connection.rb
+${GEM_LIBDIR}/lib/dm-rest-adapter/exceptions.rb
+${GEM_LIBDIR}/lib/dm-rest-adapter/formats.rb
+${GEM_LIBDIR}/lib/dm-rest-adapter/spec/setup.rb
+${GEM_LIBDIR}/spec/fixtures/book.rb
+${GEM_LIBDIR}/spec/fixtures/difficult_book.rb
+${GEM_LIBDIR}/spec/rcov.opts
+${GEM_LIBDIR}/spec/semipublic/connection_spec.rb
+${GEM_LIBDIR}/spec/semipublic/rest_adapter_spec.rb
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/tasks/spec.rake
+${GEM_LIBDIR}/tasks/yard.rake
+${GEM_LIBDIR}/tasks/yardstick.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
