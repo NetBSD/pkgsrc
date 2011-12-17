@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/17 17:34:53 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/dm-active_model.gemspec
+${GEM_LIBDIR}/lib/dm-active_model.rb
+${GEM_LIBDIR}/lib/dm-active_model/version.rb
+${GEM_LIBDIR}/spec/amo_interface_compliance_spec.rb
+${GEM_LIBDIR}/spec/amo_validation_compliance_spec.rb
+${GEM_LIBDIR}/spec/dm-active_model_spec.rb
+${GEM_LIBDIR}/spec/lib/amo_lint_extensions.rb
+${GEM_LIBDIR}/spec/rcov.opts
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_LIBDIR}/tasks/changelog.rake
+${GEM_LIBDIR}/tasks/spec.rake
+${GEM_LIBDIR}/tasks/yard.rake
+${GEM_LIBDIR}/tasks/yardstick.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
