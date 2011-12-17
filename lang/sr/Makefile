@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/08/03 09:30:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.21 2011/12/17 19:01:24 marino Exp $
 #
 
 DISTNAME=		sr233
@@ -12,6 +12,7 @@ MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/sr/
 COMMENT=		The SR language compiler and run time system
 
+NOT_FOR_PLATFORM=	*-*-x86_64  # site: "doesn't run on 64-bit/AMD64"
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
