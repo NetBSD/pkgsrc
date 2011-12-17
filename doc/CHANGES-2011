@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3333 2011/12/17 15:07:24 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3334 2011/12/17 15:11:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5354,3 +5354,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/npapi-sdk version 0.27 [obache 2011-12-17]
 	Updated devel/cfitsio to 3.290 [wiz 2011-12-17]
 	Updated emulators/yabause to 0.9.11.1 [wiz 2011-12-17]
+	Updated emulators/fuse to 1.0.0.1a [wiz 2011-12-17]
