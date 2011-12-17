@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2011/11/16 08:28:29 tron Exp $
+# $NetBSD: Makefile,v 1.59 2011/12/17 23:42:40 sbd Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		chat
 MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/ \
 			http://ircii.warped.com/pub/ircII/
@@ -63,4 +63,5 @@ post-install:
 	${SETENV} PATH=${PATH:Q} PKG_VERBOSE=${PKG_VERBOSE:Q}		\
 	${SH} ${PKGSRCDIR}/mk/plist/doc-compress ${DOC_COMPRESS_ARGS}
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
