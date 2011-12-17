@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3329 2011/12/17 12:15:00 hiramatsu Exp $
+$NetBSD: CHANGES-2011,v 1.3330 2011/12/17 13:12:50 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5349,3 +5349,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/pinentry to 0.8.1nb2 [sbd 2011-12-17]
 	Updated www/p5-Mojolicious to 2.37 [hiramatsu 2011-12-17]
 	Updated www/p5-Dancer to 1.3090 [hiramatsu 2011-12-17]
+	Updated www/emacs-w3m to 1.4.4nb2 [hiramatsu 2011-12-17]
+	Updated www/emacs-w3m-snapshot to 1.4.442.20110729nb1 [hiramatsu 2011-12-17]
