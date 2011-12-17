@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2011/09/14 17:39:22 hans Exp $
+# $NetBSD: Makefile,v 1.30 2011/12/17 10:16:40 sbd Exp $
 #
 
 DISTNAME=		pinentry-0.8.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 
@@ -27,12 +27,9 @@ post-install:
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-.include "../../devel/ncurses/buildlink3.mk"
-.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
