@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3328 2011/12/17 10:22:30 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.3329 2011/12/17 12:15:00 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5347,3 +5347,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/tinyfugue to 4.0s1nb9 [sbd 2011-12-17]
 	Updated security/mit-krb5-appl to 1.0.1nb2 [sbd 2011-12-17]
 	Updated security/pinentry to 0.8.1nb2 [sbd 2011-12-17]
+	Updated www/p5-Mojolicious to 2.37 [hiramatsu 2011-12-17]
+	Updated www/p5-Dancer to 1.3090 [hiramatsu 2011-12-17]
