@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3338 2011/12/17 17:13:58 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3339 2011/12/17 17:42:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5360,3 +5360,25 @@ Changes to the packages collection and infrastructure in 2011:
 	Added devel/ruby-randexp version 0.1.6 [taca 2011-12-17]
 	Added databases/ruby-do_mysql version 0.10.7 [taca 2011-12-17]
 	Added databases/ruby-do_postgres version 0.10.7 [taca 2011-12-17]
+	Added databases/ruby-dm-adjust version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-do-adapter version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-ar-finders version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-cli version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-ferret-adapter version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-is-list version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-is-nested_set version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-is-remixable version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-is-searchable version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-is-state_machine version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-is-tree version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-is-versioned version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-mysql-adapter version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-observer version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-postgres-adapter version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-rest-adapter version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-sqlite-adapter version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-sweatshop version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-tags version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-yaml-adapter version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-active_model version 1.2.0 [taca 2011-12-17]
+	Added databases/ruby-dm-rails version 1.2.0 [taca 2011-12-17]
