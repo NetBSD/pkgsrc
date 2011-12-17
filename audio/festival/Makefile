@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2011/11/21 01:35:29 marino Exp $
+# $NetBSD: Makefile,v 1.62 2011/12/17 10:14:40 sbd Exp $
 
 DISTNAME=	festival-2.1-release
 PKGNAME=	festival-2.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://festvox.org/packed/festival/2.1/
 DISTFILES=	${DISTNAME}.tar.gz \
@@ -28,6 +29,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${SPEECHTOOLS}/configure
 CONFIG_GUESS_OVERRIDE=	${SPEECHTOOLS}/config.guess ${FESTIVAL}/config.guess
 CONFIG_SUB_OVERRIDE=	${SPEECHTOOLS}/config.sub ${FESTIVAL}/config.sub
+
+MAKE_ENV+=	BUILDLINK_CPPFLAGS=${BUILDLINK_CPPFLAGS:Q}
+MAKE_ENV+=	BUILDLINK_LDFLAGS=${BUILDLINK_LDFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
@@ -109,4 +113,5 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/festival_client.1
 
 .include "../../audio/nas/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
