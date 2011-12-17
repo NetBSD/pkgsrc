@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2011/12/03 09:25:45 sbd Exp $
+# $NetBSD: Makefile,v 1.73 2011/12/17 10:16:00 sbd Exp $
 
 DISTNAME=		nmh-1.3
-PKGREVISION=		1
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
 
@@ -113,4 +113,5 @@ CONFIGURE_ARGS+=	--with-ndbm='gdbm_compat -lgdbm'
 CONFIGURE_ARGS+=	--with-ndbmheader=ndbm.h
 .endif
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
