@@ -1,0 +1,4 @@
+A PostgreSQL driver for DataObjects.
+
+This driver implements the DataObjects API for the PostgreSQL relational
+database.
