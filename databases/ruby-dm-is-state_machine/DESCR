@@ -1,0 +1,13 @@
+DataMapper plugin that adds state machine functionality to your models.
+
+== Why is this plugin useful?
+
+Your DataMapper resource might benefit from a state machine if it:
+
+* has different "modes" of operation
+* has discrete behaviors
+* especially if the behaviors are mutually exclusive
+
+And you want a clean, high-level way of describing these modes / behaviors
+and how the resource moves between them.  This plugin allows you to
+declaratively describe the states and transitions involved.
