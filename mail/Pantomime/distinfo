@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/11/25 22:00:32 joerg Exp $
+$NetBSD: distinfo,v 1.9 2011/12/17 16:13:43 marino Exp $
 
 SHA1 (Pantomime-1.2.0pre3.tar.gz) = beddf538d239513bdd46f67db04e9b4d4bd7441c
 RMD160 (Pantomime-1.2.0pre3.tar.gz) = 25c397080f0826d7b266e018246658707e9bbd00
 Size (Pantomime-1.2.0pre3.tar.gz) = 441478 bytes
 SHA1 (patch-Framework_Pantomime_NSString+Extensions.m) = 10eb49fb504535e2f0ad8345284c330332f356bc
+SHA1 (patch-Framework_Pantomine_CWParser.m) = 7aedb8ee39f45a1a5cbf5121bc9a2b956a5ed2f6
 SHA1 (patch-ab) = 0691970542c20876c709a07c33842948bfd536f6
