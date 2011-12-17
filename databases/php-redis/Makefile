@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/06/29 03:03:31 taca Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/17 13:46:27 obache Exp $
 #
 
 MODNAME=	redis
 PECL_VERSION=	2.1.3
+PECL_LEGACY_VERSION_SCHEME=	yes
 PECL_DISTNAME=	nicolasff-phpredis-${PECL_VERSION}-0-g43bc590
 CATEGORIES=	databases
 MASTER_SITES=	http://download.github.com/
