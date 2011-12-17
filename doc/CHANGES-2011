@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3325 2011/12/17 05:47:49 manu Exp $
+$NetBSD: CHANGES-2011,v 1.3326 2011/12/17 06:29:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5314,3 +5314,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated net/samba35 to 3.5.12 [asau 2011-12-16]
 	Updated devel/monotone to 1.0nb5 [sbd 2011-12-16]
 	Updated filesystems/perfuse to 20111217 [manu 2011-12-17]
+	Updated textproc/ruby-kramdown to 0.13.4 [taca 2011-12-17]
