@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/03/12 16:46:05 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/17 23:43:43 sbd Exp $
 #
 
 DISTNAME=	zkt-1.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zkt/}
 
@@ -49,4 +50,5 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/zkt/README.logging
 
 #.include "../../net/bind96/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
