@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2009/06/30 00:07:23 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2011/12/17 23:42:59 sbd Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.ssh.com/pub/ssh/
 
@@ -104,5 +104,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR:Q}${EGDIR:Q}
 .endfor
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
