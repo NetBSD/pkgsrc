@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2011/12/17 17:16:49 taca Exp $
+# $NetBSD: Makefile,v 1.389 2011/12/17 17:41:17 taca Exp $
 #
 
 COMMENT=	Databases
@@ -329,17 +329,39 @@ SUBDIR+=	ruby-dbd-pg
 SUBDIR+=	ruby-dbd-sqlite
 SUBDIR+=	ruby-dbd-sqlite3
 SUBDIR+=	ruby-dbi
+SUBDIR+=	ruby-dm-active_model
+SUBDIR+=	ruby-dm-adjust
 SUBDIR+=	ruby-dm-aggregates
+SUBDIR+=	ruby-dm-ar-finders
+SUBDIR+=	ruby-dm-cli
 SUBDIR+=	ruby-dm-constraints
 SUBDIR+=	ruby-dm-core
+SUBDIR+=	ruby-dm-do-adapter
+SUBDIR+=	ruby-dm-ferret-adapter
+SUBDIR+=	ruby-dm-is-list
+SUBDIR+=	ruby-dm-is-nested_set
+SUBDIR+=	ruby-dm-is-remixable
+SUBDIR+=	ruby-dm-is-searchable
+SUBDIR+=	ruby-dm-is-state_machine
+SUBDIR+=	ruby-dm-is-tree
+SUBDIR+=	ruby-dm-is-versioned
 SUBDIR+=	ruby-dm-migrations
+SUBDIR+=	ruby-dm-mysql-adapter
+SUBDIR+=	ruby-dm-observer
+SUBDIR+=	ruby-dm-postgres-adapter
+SUBDIR+=	ruby-dm-rest-adapter
 SUBDIR+=	ruby-dm-serializer
+SUBDIR+=	ruby-dm-sqlite-adapter
+SUBDIR+=	ruby-dm-sweatshop
+SUBDIR+=	ruby-dm-tags
 SUBDIR+=	ruby-dm-timestamps
 SUBDIR+=	ruby-dm-transactions
 SUBDIR+=	ruby-dm-types
 SUBDIR+=	ruby-dm-validations
+SUBDIR+=	ruby-dm-yaml-adapter
 SUBDIR+=	ruby-do_mysql
 SUBDIR+=	ruby-do_postgres
+SUBDIR+=	ruby-dm-rails
 SUBDIR+=	ruby-do_sqlite3
 SUBDIR+=	ruby-gdbm
 SUBDIR+=	ruby-ldap
