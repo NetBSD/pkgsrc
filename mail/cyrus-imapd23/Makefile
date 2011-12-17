@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/12/09 02:16:13 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/17 07:29:49 sbd Exp $
 
 DISTNAME=	cyrus-imapd-2.3.18
 CATEGORIES=	mail
@@ -54,18 +54,6 @@ CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--enable-replication
 
 .include "options.mk"
-
-.if exists(/usr/bin/compile_et)
-COMERRBASE?=		/usr
-.endif
-.if defined(COMERRBASE)
-.  if exists(${COMERRBASE}/include/krb5/com_err.h)
-CPPFLAGS+=		-I${COMERRBASE}/include/krb5
-.  endif
-CONFIGURE_ENV+=		COMPILE_ET=${COMERRBASE}/bin/compile_et
-.else
-CONFIGURE_ARGS+=	--with-com-err=yes
-.endif
 
 MAKE_ENV+=		PERL=${PERL5:Q}
 
