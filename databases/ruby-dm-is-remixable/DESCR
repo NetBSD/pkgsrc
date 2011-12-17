@@ -1,0 +1,2 @@
+DataMapper::Is::Remixable allows you to create re-usable chunks of relational
+data, its kind of like multiple inheritance for models.
