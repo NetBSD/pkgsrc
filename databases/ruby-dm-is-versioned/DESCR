@@ -1,0 +1,8 @@
+DataMapper plugin enabling <b>simple</b> versioning of models.
+
+When a model is versioned, and updated, instead of the previous version being
+lost in the mists of time, it is saved in a subsidiary table, so that it can
+be restored later if needed.
+
+Please Note!  this gem behaves differently to how AR's :acts_as_versioned
+works.  There is currently no multi version storage possible.
