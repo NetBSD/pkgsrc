@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2011/04/08 11:34:45 obache Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2011/12/17 10:16:13 sbd Exp $
 
 * honor PKGMANDIR
 * let not to take __LANGDIR__ from ${LANG}
@@ -20,3 +20,12 @@ $NetBSD: patch-Makefile.in,v 1.1 2011/04/08 11:34:45 obache Exp $
  IPKWDIR	= ./ipk.work
  IPKTDIR	= ./ipk.tmp
  DEPDIR	= ./depend.tmp
+@@ -191,7 +191,7 @@ TOBJ	= tstring$(OBJ) troman$(OBJ) tkconv
+ ALLOC	=
+ DEBUG	=
+ 
+-LDFLAGS	= __TERMLIBS__ __REGLIBS__ __SOCKETLIBS__ __OTHERLIBS__ $(ALLOC)
++LDFLAGS	+= __TERMLIBS__ __REGLIBS__ __SOCKETLIBS__ __OTHERLIBS__ $(ALLOC)
+ CFLAGS	= -D__OSTYPE__=1 __CCOPTIONS__ $(DEBUG)
+ HOSTCFLAGS = -D__OSTYPE__=1 __HOSTCCOPTIONS__
+ SLDFLAGS = __REGLIBS__ __OTHERLIBS__ $(ALLOC)
