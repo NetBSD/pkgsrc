@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2010/03/14 17:55:28 martin Exp $
+# $NetBSD: Makefile,v 1.17 2011/12/17 10:14:44 sbd Exp $
 #
 
 DISTNAME=	liveice
 PKGNAME=	liveice-0.20001121
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://star.arm.ac.uk/~spm/software/
 
@@ -37,5 +37,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/liveice
 .endfor
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

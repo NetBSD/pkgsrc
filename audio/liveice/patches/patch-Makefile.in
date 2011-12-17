@@ -1,0 +1,12 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/12/17 10:14:44 sbd Exp $
+
+--- Makefile.in.orig	2000-05-23 18:08:10.000000000 +0000
++++ Makefile.in
+@@ -1,6 +1,6 @@
+ CC = @CC@
+ CFLAGS = @CFLAGS@
+-LDFLAGS = @LIBS@ 
++LDFLAGS = @LDFLAGS@ @LIBS@ 
+ SHELL=/bin/sh
+ 
+ srcdir = @srcdir@
