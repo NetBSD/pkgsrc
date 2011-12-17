@@ -1,18 +1,18 @@
-$NetBSD: patch-ab,v 1.5 2010/12/04 21:15:00 adam Exp $
+$NetBSD: patch-ab,v 1.6 2011/12/17 13:50:39 drochner Exp $
 
 Build eggsmclient-osx.c (required on Mac OS X).
 
---- copy-n-paste/Makefile.in.orig	2010-12-04 09:03:37.000000000 +0000
+--- copy-n-paste/Makefile.in.orig	2011-12-04 18:42:50.000000000 +0000
 +++ copy-n-paste/Makefile.in
-@@ -53,6 +53,7 @@ am__DEPENDENCIES_1 =
- libeggsmclient_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+@@ -54,6 +54,7 @@ libeggsmclient_la_DEPENDENCIES = $(am__D
+ 	$(am__DEPENDENCIES_1)
  am_libeggsmclient_la_OBJECTS = libeggsmclient_la-eggdesktopfile.lo \
  	libeggsmclient_la-eggsmclient.lo \
 +	libeggsmclient_la-eggsmclient-osx.lo \
  	libeggsmclient_la-eggsmclient-xsmp.lo
  libeggsmclient_la_OBJECTS = $(am_libeggsmclient_la_OBJECTS)
  AM_V_lt = $(am__v_lt_$(V))
-@@ -288,6 +289,7 @@ libeggsmclient_la_SOURCES = eggdesktopfi
+@@ -305,6 +306,7 @@ libeggsmclient_la_SOURCES = eggdesktopfi
  			    eggdesktopfile.c \
  			    eggsmclient.h \
  			    eggsmclient.c \
@@ -20,7 +20,7 @@ Build eggsmclient-osx.c (required on Mac OS X).
  			    eggsmclient-private.h \
  			    eggsmclient-xsmp.c
  
-@@ -344,6 +346,7 @@ distclean-compile:
+@@ -361,6 +363,7 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggdesktopfile.Plo@am__quote@
@@ -28,7 +28,7 @@ Build eggsmclient-osx.c (required on Mac OS X).
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggsmclient-xsmp.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libeggsmclient_la-eggsmclient.Plo@am__quote@
  
-@@ -387,6 +390,14 @@ libeggsmclient_la-eggsmclient.lo: eggsmc
+@@ -404,6 +407,14 @@ libeggsmclient_la-eggsmclient.lo: eggsmc
  @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
  @am__fastdepCC_FALSE@	$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libeggsmclient_la_CFLAGS) $(CFLAGS) -c -o libeggsmclient_la-eggsmclient.lo `test -f 'eggsmclient.c' || echo '$(srcdir)/'`eggsmclient.c
  
