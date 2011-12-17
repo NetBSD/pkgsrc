@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10743 2011/12/16 22:33:13 asau Exp $
+$NetBSD: TODO,v 1.10744 2011/12/17 06:54:41 taca Exp $
 
 Suggested new packages
 ======================
@@ -525,7 +525,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dri2proto-2.6
 	o drivel-3.0.3
 	o dropbear-2011.054
-	o drupal-7.10
 	o dspam-3.10.0
 	o dvdisaster-0.72.2
 	o dvdstyler-2.0.0
