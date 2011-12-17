@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2011/08/01 09:30:33 adam Exp $
+# $NetBSD: Makefile,v 1.60 2011/12/17 10:14:56 sbd Exp $
 
 DISTNAME=	minicom-2.5
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://alioth.debian.org/frs/download.php/3487/
 
@@ -43,4 +44,5 @@ SUBST_VARS.minicom=	PREFIX GKERMIT_PREFIX LRZSZ_PREFIX
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
