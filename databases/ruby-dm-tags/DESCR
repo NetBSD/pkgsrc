@@ -1,0 +1,15 @@
+This package brings tagging to DataMapper.  It is inspired by Acts As Taggable
+On by Michael Bleigh, github's mbleigh.  Props to him for the contextual
+tagging based on Acts As Taggable on Steroids.
+
+== Features and Problems
+
+=== Features
+
+* Contextual tagging using Model.has_tags_on (see below for usage)
+* Traditional 'tags-only' tagging using Model.has_tags
+
+=== Problems
+
+* None known yet, but this is very alpha software.  Sorry if it misbehaves.
+  Please send me a github message if you find a bug.
