@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2011/06/19 15:57:10 taca Exp $
+$NetBSD: distinfo,v 1.9 2011/12/17 18:23:36 taca Exp $
 
-SHA1 (pear/Log-1.12.6.tgz) = e6e8c57d0aad815ecd3536c0098512163a01a0a7
-RMD160 (pear/Log-1.12.6.tgz) = 4df5e050a41c8870ced118f94995f48cfa1e13f0
-Size (pear/Log-1.12.6.tgz) = 46868 bytes
+SHA1 (pear/Log-1.12.7.tgz) = 5b7da5c35e540bc446d0d799baaabf741deea8b3
+RMD160 (pear/Log-1.12.7.tgz) = 7bce5ab93fad45abbc6fbe56773a4929d960d518
+Size (pear/Log-1.12.7.tgz) = 46898 bytes
