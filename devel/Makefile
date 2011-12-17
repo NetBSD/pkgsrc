@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1548 2011/12/16 12:33:29 taca Exp $
+# $NetBSD: Makefile,v 1.1549 2011/12/17 14:13:42 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -466,6 +466,7 @@ SUBDIR+=	netbsd-iscsi-lib
 SUBDIR+=	netcdf
 SUBDIR+=	newfile
 SUBDIR+=	noweb
+SUBDIR+=	npapi-sdk
 SUBDIR+=	nqc
 SUBDIR+=	nsis
 SUBDIR+=	nspr
