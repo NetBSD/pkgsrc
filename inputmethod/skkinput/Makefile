@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/12/08 11:52:41 obache Exp $
+# $NetBSD: Makefile,v 1.16 2011/12/17 00:54:11 marino Exp $
 
 DISTNAME=	skkinput-2.06.4
 CATEGORIES=	japanese inputmethod
@@ -18,6 +18,14 @@ USE_IMAKE=	YES
 DOCSDIR=	share/doc/${PKGBASE}
 
 INSTALLATION_DIRS=	${DOCSDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+PLIST_SUBST+=	CATMAN=man1
+.else
+PLIST_SUBST+=	CATMAN=cat1
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.jis	${DESTDIR}${PREFIX}/${DOCSDIR}
