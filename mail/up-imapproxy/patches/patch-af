@@ -1,8 +1,17 @@
-$NetBSD: patch-af,v 1.2 2006/05/10 12:25:09 adrianp Exp $
+$NetBSD: patch-af,v 1.3 2011/12/17 10:16:08 sbd Exp $
 
---- Makefile.in.orig	2005-08-31 17:32:23.000000000 +0100
-+++ Makefile.in	2006-05-09 18:32:51.000000000 +0100
-@@ -79,8 +79,8 @@
+--- Makefile.in.orig	2007-01-30 15:23:46.000000000 +0000
++++ Makefile.in
+@@ -69,7 +69,7 @@ $(XYD_BIN): $(XYD_OBJ)
+ 	$(CC) -o $@ $(XYD_OBJ) $(LDFLAGS) $(XYD_LIB)
+ 
+ $(TAT_BIN): $(TAT_OBJ)
+-	$(CC) -o $@ $(TAT_OBJ) $(TAT_LIB)
++	$(CC) -o $@ $(TAT_OBJ) $(LDFLAGS) $(TAT_LIB)
+ 
+ clean:
+ 	rm -f ./src/core  $(XYD_OBJ) $(TAT_OBJ) $(XYD_BIN) $(TAT_BIN)
+@@ -79,8 +79,8 @@ distclean: clean
  
  install: $(XYD_BIN) $(TAT_BIN)
  	mkdir -p $(EBIN)
