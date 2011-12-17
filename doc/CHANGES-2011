@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3344 2011/12/17 18:24:10 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3345 2011/12/17 23:46:51 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5388,3 +5388,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/ruby-acts-as-versioned to 0.6.0 [taca 2011-12-17]
 	Updated www/contao210 to 2.10.3nb1 [taca 2011-12-17]
 	Updated sysutils/pear-Log to 1.12.7 [taca 2011-12-17]
+	Updated chat/ircII to 20111115nb3 [sbd 2011-12-17]
+	Updated security/ssh2 to 3.2.9.1nb8 [sbd 2011-12-17]
+	Updated security/zkt to 1.0nb1 [sbd 2011-12-17]
