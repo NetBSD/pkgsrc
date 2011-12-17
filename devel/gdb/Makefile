@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2011/12/14 02:29:30 sbd Exp $
+# $NetBSD: Makefile,v 1.43 2011/12/17 10:15:08 sbd Exp $
 #
 
 DISTNAME=	gdb-5.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
@@ -39,5 +39,6 @@ pre-configure:
 
 .endif
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
