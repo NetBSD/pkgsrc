@@ -1,0 +1,1 @@
+This is a DataMapper plugin for Ferret.
