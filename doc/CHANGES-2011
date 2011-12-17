@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3334 2011/12/17 15:11:37 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3335 2011/12/17 15:27:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5355,3 +5355,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/cfitsio to 3.290 [wiz 2011-12-17]
 	Updated emulators/yabause to 0.9.11.1 [wiz 2011-12-17]
 	Updated emulators/fuse to 1.0.0.1a [wiz 2011-12-17]
+	Updated lang/pear to 1.9.4nb1 [taca 2011-12-17]
