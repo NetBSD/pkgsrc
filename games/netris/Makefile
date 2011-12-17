@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2011/12/17 10:15:44 sbd Exp $
 #
 
 DISTNAME=		netris-0.52
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.netris.org/pub/netris/
 
@@ -20,6 +20,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
+CONFIGURE_ARGS+=	--cextra ${CFLAGS:Q}
+CONFIGURE_ARGS+=	--lextra ${LDFLAGS:Q}
 
 .include "options.mk"
 
@@ -32,4 +34,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/netris
 	${INSTALL_DATA} ${WRKSRC}/robot_desc ${DESTDIR}${PREFIX}/share/doc/netris
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
