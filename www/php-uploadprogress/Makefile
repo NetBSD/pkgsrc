@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/11 07:32:17 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/17 13:46:29 obache Exp $
 #
 
 MODNAME=		uploadprogress
 PECL_VERSION=		1.0.1
-PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=		www
 
 MAINTAINER=		mbowie@buzmo.com
