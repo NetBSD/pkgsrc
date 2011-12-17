@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2011/11/08 12:11:42 taca Exp $
+# $NetBSD: Makefile,v 1.6 2011/12/17 18:20:01 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 
@@ -14,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,mysqli}>=5.2.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.2.0:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.2.0:../../net/php-soap
 
