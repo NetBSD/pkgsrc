@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/17 14:11:07 obache Exp $
+include/npapi-sdk/npapi.h
+include/npapi-sdk/npfunctions.h
+include/npapi-sdk/npruntime.h
+include/npapi-sdk/nptypes.h
+lib/pkgconfig/npapi-sdk.pc
