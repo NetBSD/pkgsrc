@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2011/11/01 06:02:00 sbd Exp $
+# $NetBSD: Makefile,v 1.59 2011/12/17 12:51:47 marino Exp $
 #
 
 DISTNAME=	mail-notification-5.4
@@ -17,6 +17,7 @@ HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./jb configure
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
+LDFLAGS+=		-lX11
 
 CONFIGURE_ARGS=		prefix="${PREFIX}" destdir="${DESTDIR}" sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	cc="${CC}" cflags="${CFLAGS}" cppflags="${CPPFLAGS}" ldflags="${LDFLAGS}"
