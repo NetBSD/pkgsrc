@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2011/01/13 13:39:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2011/12/17 13:46:28 obache Exp $
 
 MODNAME=		pdflib
 PKGMODNAME=		pdf
 PECL_VERSION=		2.1.8
 PKGREVISION=		1
+PECL_LEGACY_VERSION_SCHEME=	yes
 CATEGORIES+=		print
 COMMENT=		PHP extension for PDFlib on-the-fly PDF generation
 
