@@ -1,0 +1,2 @@
+This plugin makes datamapper compliant with active_model conventions and thus
+compatible with rails3.
