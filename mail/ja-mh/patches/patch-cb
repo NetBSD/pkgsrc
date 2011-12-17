@@ -1,0 +1,13 @@
+$NetBSD: patch-cb,v 1.1 2011/12/17 12:50:57 marino Exp $
+
+--- support/pop/popwrd.c.orig	1999-02-09 11:30:00.000000000 +0000
++++ support/pop/popwrd.c
+@@ -24,8 +24,6 @@ struct passwd *getpwnam();
+ static char  temp[] = "ptmp";
+ static char  home[BUFSIZ];
+ 
+-extern int errno;
+-
+ char   *crypt (), *getpass (), *tail ();
+ time_t	time ();
+ 
