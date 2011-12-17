@@ -1,0 +1,4 @@
+DataMapper plugin enabling easy creation of tree structures from your DM models.
+
+This requires a foreign key property for your model, which by default would be
+called :parent_id.
