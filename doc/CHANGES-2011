@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3336 2011/12/17 15:29:26 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3337 2011/12/17 17:09:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated emulators/fuse to 1.0.0.1a [wiz 2011-12-17]
 	Updated lang/pear to 1.9.4nb1 [taca 2011-12-17]
 	Updated www/ruby-sass to 3.1.12 [taca 2011-12-17]
+	Added devel/ruby-randexp version 0.1.6 [taca 2011-12-17]
