@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/17 17:55:54 taca Exp $
+${GEM_HOME}/cache/acts_as_versioned-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/RUNNING_UNIT_TESTS
+${GEM_LIBDIR}/lib/acts_as_versioned.rb
+${GEM_LIBDIR}/test/abstract_unit.rb
+${GEM_LIBDIR}/test/database.yml
+${GEM_LIBDIR}/test/fixtures/locked_pages.yml
+${GEM_LIBDIR}/test/fixtures/locked_pages_revisions.yml
+${GEM_LIBDIR}/test/fixtures/migrations/1_add_versioned_tables.rb
+${GEM_LIBDIR}/test/fixtures/page.rb
+${GEM_LIBDIR}/test/fixtures/page_versions.yml
+${GEM_LIBDIR}/test/fixtures/pages.yml
+${GEM_LIBDIR}/test/fixtures/widget.rb
+${GEM_LIBDIR}/test/migration_test.rb
+${GEM_LIBDIR}/test/schema.rb
+${GEM_LIBDIR}/test/versioned_test.rb
+${GEM_HOME}/specifications/acts_as_versioned-${PKGVERSION}.gemspec
