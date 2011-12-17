@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/11/22 14:16:47 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/12/17 13:58:28 drochner Exp $
 bin/ufraw
 bin/ufraw-batch
 lib/gimp/2.0/plug-ins/ufraw-gimp
@@ -23,4 +23,5 @@ share/locale/sr/LC_MESSAGES/ufraw.mo
 share/locale/sr@latin/LC_MESSAGES/ufraw.mo
 share/locale/sv/LC_MESSAGES/ufraw.mo
 share/locale/zh_CN/LC_MESSAGES/ufraw.mo
+share/locale/zh_TW/LC_MESSAGES/ufraw.mo
 share/pixmaps/ufraw.png
