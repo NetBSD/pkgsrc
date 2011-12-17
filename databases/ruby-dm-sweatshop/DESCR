@@ -1,0 +1,9 @@
+dm-sweatshop is a model factory for DataMapper.  It makes it easy & painless
+to crank out complex pseudo random models -- useful for tests and seed data.
+Production Goals:
+
+* Easy generation of random models with data that fits the application domain.
+* Simple syntax for declaring and generating model patterns.
+* Add context to model patterns, allowing grouping and
+* Effortlessly generate or fill in associations for creating complex models
+  with few lines of code.
