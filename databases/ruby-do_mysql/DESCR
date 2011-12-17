@@ -1,0 +1,3 @@
+A MySQL driver for DataObjects.
+
+This driver implements the DataObjects API for the MySQL relational database.
