@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/07/06 09:45:45 obache Exp $
+# $NetBSD: options.mk,v 1.4 2011/12/17 07:29:49 sbd Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
@@ -28,10 +28,10 @@ CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
 CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
-COMERRBASE=		${KRB5BASE}
 .else
 CONFIGURE_ARGS+=	--without-krb
 CONFIGURE_ARGS+=	--disable-gssapi
+CONFIGURE_ARGS+=	--with-com-err=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
