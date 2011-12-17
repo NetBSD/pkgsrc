@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2010/02/04 17:29:59 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2011/12/17 10:16:16 sbd Exp $
 #
 
 DISTNAME=	sci-0.5.6
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://linuxparts.com/
 
@@ -23,4 +24,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/share/examples/sci ; \
 	   done
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
