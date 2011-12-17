@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2011/11/25 21:25:26 joerg Exp $
+$NetBSD: distinfo,v 1.11 2011/12/17 16:09:46 marino Exp $
 
 SHA1 (Botan-1.8.13.tgz) = 7453abcff8539059b813acfb3f87ab8b74f8b03c
 RMD160 (Botan-1.8.13.tgz) = 0e0972493e693e72df1c1a66838948fcede5eec1
@@ -6,3 +6,5 @@ Size (Botan-1.8.13.tgz) = 3043024 bytes
 SHA1 (patch-ab) = a53a3e23722d8f478c5a6c5ecf1df08d74fd21c0
 SHA1 (patch-ac) = 4f98ff086983b27ed17d048486a8afced47e7970
 SHA1 (patch-ak) = 7bf66c1faa84971b490be96efefac0ef44f97b70
+SHA1 (patch-src_entropy_unix_procs_info.txt) = c2685db5fbd16a67b008b738730518858265ebc0
+SHA1 (patch-src_hash_sha1_amd64_info.txt) = d83a7b88b5860a596607e529b29090afa16dcda7

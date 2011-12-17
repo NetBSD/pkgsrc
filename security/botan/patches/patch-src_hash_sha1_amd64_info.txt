@@ -1,0 +1,12 @@
+$NetBSD: patch-src_hash_sha1_amd64_info.txt,v 1.1 2011/12/17 16:09:46 marino Exp $
+
+--- src/hash/sha1_amd64/info.txt.orig	2011-07-08 19:47:40.000000000 +0000
++++ src/hash/sha1_amd64/info.txt
+@@ -22,6 +22,7 @@ icc
+ # ELF systems
+ <os>
+ linux
++dragonfly
+ netbsd
+ openbsd
+ solaris
