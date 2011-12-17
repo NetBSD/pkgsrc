@@ -1,0 +1,17 @@
+DataMapper plugin allowing the creation of nested sets from data models.
+Provides all the same functionality as dm-is-tree, plus tons more! Read on.
+
+== What is a nested set?
+
+Nested set is a clever model for storing hierarchical data in a flat table.
+Instead of (only) storing the id of the parent on each node, a nested set puts
+all nodes in a clever structure (see Example below). That is what makes it
+possible to get the all of the descendants (not only immediate children),
+ancestors, or siblings, in one single query to the database.
+
+The only downside to nested sets (compared to trees] is that the queries it
+takes to know these things, and to move nodes around in the tree are rather
+complex. That is what this plugin takes care of (+ lots of other neat stuff)!
+
+Nested sets are a good choice for most kinds of ordered trees with more than
+two levels of nesting. Very good for menus, categories, and threaded posts.
