@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2011/11/01 06:01:57 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2011/12/17 12:45:17 marino Exp $
 #
 
 SQUEAK_VERSION=	3.11.3.2135
 
-DISTNAME=	Squeak-$(SQUEAK_VERSION)-src
-PKGNAME=	squeak-vm-$(SQUEAK_VERSION:C/-/./)
+DISTNAME=	Squeak-${SQUEAK_VERSION}-src
+PKGNAME=	squeak-vm-${SQUEAK_VERSION:C/-/./}
 PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.squeak.org/3.10/unix-linux/ \
@@ -13,6 +13,7 @@ MASTER_SITES=	http://ftp.squeak.org/3.10/unix-linux/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://squeakvm.org/unix/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,13 +24,12 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS=	gzip
 
-CONFIGURE_DIRS=	$(WRKSRC)/build
+CONFIGURE_DIRS=	${WRKSRC}/build
 CMAKE_ARG_PATH=	../unix
 #CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=TRUE	# debug
-CMAKE_ARGS+=	-DPKGMANDIR=$(PKGMANDIR)
-CMAKE_ARGS+=	-DVM_HOST=$(MACHINE_GNU_PLATFORM:Q) -DVM_VERSION=$(SQUEAK_VERSION)
-CMAKE_ARGS+=	-DLIBOSSAUDIO=$(LIBOSSAUDIO) -DDEVOSSAUDIO=$(DEVOSSAUDIO)
-#CFLAGS=		-g -fomit-frame-pointer
+CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
+CMAKE_ARGS+=	-DVM_HOST=${MACHINE_GNU_PLATFORM:Q} -DVM_VERSION=${SQUEAK_VERSION}
+CMAKE_ARGS+=	-DDEVOSSAUDIO=${DEVOSSAUDIO}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,12 +38,19 @@ CMAKE_ARGS+=	-DLIBOSSAUDIO=$(LIBOSSAUDIO) -DDEVOSSAUDIO=$(DEVOSSAUDIO)
 BUILDLINK_TRANSFORM+=	rm:-luuid
 .endif
 
-PLIST_SUBST=	SQUEAK_VERSION=$(SQUEAK_VERSION)
+PLIST_SUBST=	SQUEAK_VERSION=${SQUEAK_VERSION}
 
 .include "options.mk"
 
+PLIST_VARS+=	oss
+
+.if $(OPSYS) != "DragonFly"
+PLIST.oss=	yes
+CMAKE_ARGS+=	-DLIBOSSAUDIO=${LIBOSSAUDIO}
+.endif
+
 pre-configure:
-	$(MKDIR) $(CONFIGURE_DIRS)
+	${MKDIR} ${CONFIGURE_DIRS}
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
