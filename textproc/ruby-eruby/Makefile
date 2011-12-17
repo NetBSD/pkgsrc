@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/02/21 16:01:20 taca Exp $
+# $NetBSD: Makefile,v 1.27 2011/12/17 07:22:23 taca Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGREVISION=	8
@@ -11,9 +11,6 @@ COMMENT=	Interprets Ruby code embedded in a text file
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Need to update encoding processing.
-RUBY_VERSION_SUPPORTED= 18
 
 # manual page conflicts.
 CONFLICTS+=	ruby[1-9][0-9]-eruby-*
