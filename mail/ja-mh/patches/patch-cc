@@ -1,0 +1,20 @@
+$NetBSD: patch-cc,v 1.1 2011/12/17 12:50:57 marino Exp $
+
+--- miscellany/less-177/os.c.orig	2011-12-17 08:02:11.467641000 +0000
++++ miscellany/less-177/os.c
+@@ -13,6 +13,7 @@
+ #include <stdio.h>
+ #include <signal.h>
+ #include <setjmp.h>
++#include <errno.h>
+ #include "less.h"
+ 
+ /*
+@@ -98,7 +99,6 @@ get_time()
+ 
+ extern char *sys_errlist[];
+ extern int sys_nerr;
+-extern int errno;
+ 
+ 	public char *
+ errno_message(filename)
