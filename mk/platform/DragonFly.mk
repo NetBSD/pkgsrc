@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.40 2011/09/10 16:30:02 abs Exp $
+# $NetBSD: DragonFly.mk,v 1.41 2011/12/17 16:20:01 marino Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -52,7 +52,7 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 .endif
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
-_OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
+_OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type
