@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/12/17 10:15:24 sbd Exp $
+
+--- Makefile.in.orig	2011-12-07 18:58:54.029182514 +0000
++++ Makefile.in
+@@ -25,7 +25,7 @@ DIST= README $(SRCS) gate.h config.h.in
+     Makefile.in gate.1.C gate.help CHANGES
+ 
+ gate: $(OBJS)
+-	$(CC) -o gate $(CFLAGS) $(OBJS) $(LIBS)
++	$(CC) -o gate $(CFLAGS) $(LDFLAGS) $(OBJS) $(LIBS)
+ 
+ main.o: main.c gate.h config.h
+ util.o: util.c gate.h config.h

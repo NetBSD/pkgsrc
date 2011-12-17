@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/10/02 22:55:25 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/17 10:15:24 sbd Exp $
 #
 
 DISTNAME=		gate-2.06
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		http://www.unixpapa.com/software/
 
@@ -23,4 +24,5 @@ SUBST_MESSAGE.getline=	Fixing conflict with POSIX getline.
 SUBST_FILES.getline=	gate.h line.c main.c spel.c subs.c
 SUBST_SED.getline=	-e 's/getline/get_line/'
 
+.include	"../../mk/termcap.buildlink3.mk"
 .include	"../../mk/bsd.pkg.mk"
