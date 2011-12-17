@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3339 2011/12/17 17:42:12 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3340 2011/12/17 17:48:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5382,3 +5382,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Added databases/ruby-dm-yaml-adapter version 1.2.0 [taca 2011-12-17]
 	Added databases/ruby-dm-active_model version 1.2.0 [taca 2011-12-17]
 	Added databases/ruby-dm-rails version 1.2.0 [taca 2011-12-17]
+	Updated devel/ruby-activesupport31 to 3.1.3nb1 [taca 2011-12-17]
