@@ -1,0 +1,6 @@
+A DataMapper search plugin api to search for resources from one repository and
+load from another.
+
+Typically a full text search adapter that can only produce partial resources is
+searched and the resulting resource collection is then loaded from your default
+repository.
