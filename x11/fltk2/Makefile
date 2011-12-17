@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/11/01 06:02:49 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/17 00:56:06 marino Exp $
 
 VERS=		6129
 PKGREVISION=	6
@@ -24,6 +24,7 @@ PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
+LDFLAGS+=		-lfontconfig -lXrender -lfreetype
 
 .include "options.mk"
 
