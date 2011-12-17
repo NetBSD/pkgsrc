@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:26:53 taca Exp $
+
+SHA1 (dm-is-state_machine-1.2.0.gem) = 68283fe6314ecd2c6c5c0e6dc6d309e17c39db6e
+RMD160 (dm-is-state_machine-1.2.0.gem) = b52f20bb7952d79c991c4c6bff20a19a24e19372
+Size (dm-is-state_machine-1.2.0.gem) = 14336 bytes
