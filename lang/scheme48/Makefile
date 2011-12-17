@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/07/03 12:40:20 jym Exp $
+# $NetBSD: Makefile,v 1.34 2011/12/17 19:02:11 marino Exp $
 
 DISTNAME=		scheme48-1.8
 CATEGORIES=		lang
@@ -7,7 +7,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://s48.org/
-COMMENT=		The Scheme Underground's implementation of R5RS
+COMMENT=		The Scheme Underground implementation of R5RS
 
 NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
 
@@ -28,6 +28,15 @@ REPLACE_INTERPRETER+=	scheme
 REPLACE.scheme.old=	.*/bin/env scheme-srfi-7
 REPLACE.scheme.new=	${PREFIX}/bin/scheme-srfi-7
 REPLACE_FILES.scheme=	build/scheme48-config.in
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "DragonFly"
+SUBST_CLASSES+= 	pthr
+SUBST_STAGE.pthr=	post-patch
+SUBST_FILES.pthr=	configure
+SUBST_MESSAGE.pthr=	Hardcoding -pthread in CFLAGS and LDFLAGS
+SUBST_SED.pthr= 	-e 's,pthreads_done=\"no\",pthreads_done=\"yes\"; CFLAGS=\"$$CFLAGS -pthread\"; LDFLAGS=\"$$LDFLAGS -pthread\",'
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
