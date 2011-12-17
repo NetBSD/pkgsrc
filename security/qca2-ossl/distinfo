@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/12/30 15:13:28 stacktic Exp $
+$NetBSD: distinfo,v 1.3 2011/12/17 12:46:51 marino Exp $
 
 SHA1 (qca-ossl-2.0.0-beta3.tar.bz2) = dd925e8732ff76f24f9f90f4094abaf2f0ac27bf
 RMD160 (qca-ossl-2.0.0-beta3.tar.bz2) = c979c3c3427eb45e8866e28746f83966e8bcf3c2
 Size (qca-ossl-2.0.0-beta3.tar.bz2) = 49188 bytes
-SHA1 (patch-aa) = 30059ab5aa0a71382da68159fc7779a7a2663c7d
+SHA1 (patch-aa) = 56daba9dd5ea2c545c63b9971fa78941d3d6ec12
