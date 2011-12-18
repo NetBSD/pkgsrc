@@ -1,0 +1,33 @@
+$NetBSD: patch-decl_c,v 1.1 2011/12/18 16:54:09 dholland Exp $
+
+- add missing casts to make printf calls correct
+
+--- decl.c~	1991-04-24 20:30:43.000000000 +0000
++++ decl.c
+@@ -816,7 +816,7 @@ void handle_nameof()
+         sl2->value = sl->value;
+         if (debug > 0)
+             fprintf(outf, "symbol %s gets \"%s\" -> \"%s\"\n",
+-                          sp->name, sl2->s, sl2->value);
++                          sp->name, sl2->s, (char *)sl2->value);
+     }
+     strlist_empty(&nameoflist);
+ }
+@@ -973,7 +973,7 @@ enum meaningkind kind, namekind;
+             sl = strlist_cifind(sym->symbolnames, curctx->sym->name);
+             if (sl) {
+                 if (debug > 2)
+-                    fprintf(outf, "found \"%s\"\n", sl->value);
++                    fprintf(outf, "found \"%s\"\n", (char *)sl->value);
+                 name = (char *)sl->value;
+                 wasaliased = 1;
+             }
+@@ -984,7 +984,7 @@ enum meaningkind kind, namekind;
+             sl = strlist_find(sym->symbolnames, "");
+             if (sl) {
+                 if (debug > 2)
+-                    fprintf(outf, "found \"%s\"\n", sl->value);
++                    fprintf(outf, "found \"%s\"\n", (char *)sl->value);
+                 name = (char *)sl->value;
+                 wasaliased = 1;
+             }

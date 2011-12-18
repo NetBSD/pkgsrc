@@ -1,0 +1,15 @@
+$NetBSD: patch-expr_c,v 1.1 2011/12/18 16:54:09 dholland Exp $
+
+- fix wrong printf format
+
+--- expr.c~	1991-04-24 20:30:45.000000000 +0000
++++ expr.c
+@@ -207,7 +207,7 @@ Type *type;
+ 
+             case TK_REAL:
+                 if (ord_type(val.type)->kind == TK_INTEGER) {
+-                    sprintf(buf, "%d.0", val.i);
++                    sprintf(buf, "%ld.0", val.i);
+                     val.s = stralloc(buf);
+                     val.type = tp_real;
+                     return val;
