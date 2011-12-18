@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.57 2010/11/01 18:03:04 adam Exp $
+$NetBSD: distinfo,v 1.58 2011/12/18 09:13:11 obache Exp $
 
+SHA1 (CVE-2011-3192-2.0.64-byterange-fixes.patch) = ffc6c0bb3089efca2705767eb20804ddab2dfb1a
+RMD160 (CVE-2011-3192-2.0.64-byterange-fixes.patch) = dbe5f78ccff12222d99805d7ea045b968e6ef72f
+Size (CVE-2011-3192-2.0.64-byterange-fixes.patch) = 19920 bytes
 SHA1 (httpd-2.0.64.tar.bz2) = eeabe0fb428d9f11ce00559ff163740c6ceabf1c
 RMD160 (httpd-2.0.64.tar.bz2) = 6a4bfe4dfc4119a70cabbec2e0865dc2f12e8ec4
 Size (httpd-2.0.64.tar.bz2) = 4954766 bytes
