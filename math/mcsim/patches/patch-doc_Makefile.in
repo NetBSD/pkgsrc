@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2011/12/18 17:12:48 marino Exp $
+
+--- doc/Makefile.in.orig	2011-01-29 15:52:31.000000000 +0000
++++ doc/Makefile.in
+@@ -207,7 +207,7 @@ dist_mydoc_DATA = mcsim.pdf mcsim.ps
+ all: all-am
+ 
+ .SUFFIXES:
+-.SUFFIXES: .dvi .html .info .pdf .ps .texinfo
++.SUFFIXES: .info .pdf .ps
+ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
+ 	@for dep in $?; do \
+ 	  case '$(am__configure_deps)' in \
