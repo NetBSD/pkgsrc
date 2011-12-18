@@ -1,0 +1,38 @@
+$NetBSD: patch-makeproto_c,v 1.1 2011/12/18 16:54:09 dholland Exp $
+
+- use standard headers
+- remove outdated and bogus system type probing
+- fix wrong printf call
+
+--- makeproto.c~	1991-04-24 20:30:50.000000000 +0000
++++ makeproto.c
+@@ -9,18 +9,8 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <time.h>
+-
+-#ifdef FILE       /* a #define in BSD, a typedef in SYSV (hp-ux, at least) */
+-# ifndef BSD
+-#  define BSD 1
+-# endif
+-#endif
+-
+-#ifdef BSD
+-# include <strings.h>
+-#else
+-# include <string.h>
+-#endif
++#include <string.h>
++#include <stdlib.h>
+ 
+ 
+ 
+@@ -418,7 +408,7 @@ char **argv;
+                                               argdecls[i] + strlen(warntypes[j].bad));
+                         strcpy(argdecls[i], temp);
+                         fprintf(stderr, "Warning: Argument %s of %s has type %s\n",
+-                                        argnames[i], fname, warntypes[j]);
++                                        argnames[i], fname, warntypes[j].bad);
+                     }
+                 }
+             }

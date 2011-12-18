@@ -1,0 +1,93 @@
+$NetBSD: patch-trans_h,v 1.1 2011/12/18 16:54:09 dholland Exp $
+
+- use standard includes
+- remove ancient system type probing
+- fix symbol conflict with logf (from math.h)
+
+--- trans.h.orig	1991-04-24 20:30:53.000000000 +0000
++++ trans.h
+@@ -37,57 +37,12 @@ the Free Software Foundation, Inc., 675 
+ 
+ 
+ #include <stdio.h>
+-
+-
+-/* If the following heuristic fails, compile -DBSD=0 for non-BSD systems,
+-   or -DBSD=1 for BSD systems. */
+-
+-#ifdef M_XENIX
+-# define BSD 0
+-#endif
+-
+-#ifdef FILE       /* a #define in BSD, a typedef in SYSV (hp-ux, at least) */
+-# ifndef BSD
+-#  define BSD 1
+-# endif
+-#endif
+-
+-#ifdef BSD
+-# if !BSD
+-#  undef BSD
+-# endif
+-#endif
+-
+-
+-#ifdef __STDC__
+-# include <stddef.h>
+-# include <stdlib.h>
+-# include <limits.h>
+-#else
+-# ifndef BSD
+-#  include <malloc.h>
+-#  include <memory.h>
+-#  include <values.h>
+-# endif
+-# define EXIT_SUCCESS 0
+-# define EXIT_FAILURE 1
+-# define CHAR_BIT 8
+-# define LONG_MAX (((unsigned long)~0L) >> 1)
+-# define LONG_MIN (- LONG_MAX - 1)
+-#endif
+-
+-
+-
+-#if defined(BSD) && !defined(__STDC__)
+-# include <strings.h>
+-# define memcpy(a,b,n) bcopy(b,a,n)
+-# define memcmp(a,b,n) bcmp(a,b,n)
+-char *malloc(), *realloc();
+-#else
+-# include <string.h>
+-#endif
+-
++#include <stddef.h>
++#include <stdlib.h>
++#include <limits.h>
++#include <string.h>
+ #include <ctype.h>
++#include <unistd.h>
+ 
+ 
+ #ifdef __GNUC__      /* Fast, in-line version of strcmp */
+@@ -1678,7 +1633,7 @@ extern int final_parens, final_ptrdescs,
+ 
+ extern char *infname, *outfname, *codefname, *hdrfname;
+ extern char *requested_module;
+-extern FILE *inf, *outf, *codef, *hdrf, *logf;
++extern FILE *inf, *outf, *codef, *hdrf, *loggf;
+ extern short setup_complete, found_module;
+ extern short regression, verbose, conserve_mem;
+ extern int inf_lnum, inf_ltotal;
+@@ -1757,12 +1712,6 @@ extern Strlist *attrlist;
+ 
+ 
+ 
+-/* Our library omits declarations for these functions! */
+-
+-int link           PP( (char *, char *) );
+-int unlink         PP( (char *) );
+-
+-
+ 
+ #define minspcthresh ((minspacingthresh >= 0) ? minspacingthresh : minspacing)
+ 

@@ -1,0 +1,61 @@
+$NetBSD: patch-comment_c,v 1.1 2011/12/18 16:54:09 dholland Exp $
+
+- fix symbol conflict with logf (from math.h)
+- fix wrong printf formats
+
+--- comment.c.orig	1991-04-24 20:30:39.000000000 +0000
++++ comment.c
+@@ -286,7 +286,7 @@ long serial;
+     else if (outf != stdout)
+ 	printf("%s, line %d/%d: %s\n", infname, inf_lnum, outf_lnum, msg);
+     if (verbose)
+-	fprintf(logf, "%s, %d/%d: %s\n", infname, inf_lnum, outf_lnum, msg);
++	fprintf(loggf, "%s, %d/%d: %s\n", infname, inf_lnum, outf_lnum, msg);
+     if (notephase == 2 || regression)
+ 	prefix = format_s("\004 p2c: %s:", infname);
+     else
+@@ -368,7 +368,7 @@ int kind;
+     curcomments = savecmt;
+     grabbed_comment = 1;
+     if (cmtdebug > 1)
+-	fprintf(outf, "Grabbed comment [%d] \"%s\"\n", cmt->value & CMT_MASK, cmt->s);
++	fprintf(outf, "Grabbed comment [%ld] \"%s\"\n", cmt->value & CMT_MASK, cmt->s);
+     return cmt;
+ }
+ 
+@@ -406,7 +406,7 @@ int kind, stamp;
+     while (cmt && !matchcomment(cmt, kind, stamp))
+ 	cmt = cmt->next;
+     if (cmt && cmtdebug > 1)
+-	fprintf(outf, "Found comment [%d] \"%s\"\n", cmt->value & CMT_MASK, cmt->s);
++	fprintf(outf, "Found comment [%ld] \"%s\"\n", cmt->value & CMT_MASK, cmt->s);
+     return cmt;
+ }
+ 
+@@ -422,7 +422,7 @@ int kind, stamp;
+     while ((sl = *cmt)) {
+ 	if (matchcomment(sl, kind, stamp)) {
+ 	    if (cmtdebug > 1)
+-		fprintf(outf, "Extracted comment [%d] \"%s\"\n",
++		fprintf(outf, "Extracted comment [%ld] \"%s\"\n",
+ 		        sl->value & CMT_MASK, sl->s);
+ 	    *cmt = sl->next;
+ 	    *last = sl;
+@@ -442,7 +442,7 @@ int okind, ostamp, kind, stamp;
+     while (cmt) {
+ 	if (matchcomment(cmt, okind, ostamp)) {
+ 	    if (cmtdebug > 1)
+-		fprintf(outf, "Changed comment [%s:%d] \"%s\" ",
++		fprintf(outf, "Changed comment [%s:%ld] \"%s\" ",
+ 			CMT_NAMES[getcommentkind(cmt)],
+ 			cmt->value & CMT_MASK, cmt->s);
+ 	    if (kind >= 0)
+@@ -450,7 +450,7 @@ int okind, ostamp, kind, stamp;
+ 	    if (stamp >= 0)
+ 		cmt->value = (cmt->value & ~CMT_MASK) | stamp;
+ 	    if (cmtdebug > 1)
+-		fprintf(outf, " to [%s:%d]\n",
++		fprintf(outf, " to [%s:%ld]\n",
+ 			CMT_NAMES[getcommentkind(cmt)], cmt->value & CMT_MASK);
+ 	}
+ 	cmt = cmt->next;

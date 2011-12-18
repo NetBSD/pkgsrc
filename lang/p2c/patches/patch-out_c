@@ -1,0 +1,15 @@
+$NetBSD: patch-out_c,v 1.1 2011/12/18 16:54:09 dholland Exp $
+
+- fix symbol conflict with logf (from math.h)
+
+--- out.c~	1991-04-24 20:30:39.000000000 +0000
++++ out.c
+@@ -1136,7 +1136,7 @@ register char *msg;
+ 			    " seconds, %ld tries on line %d [251]", alts, outf_lnum);
+ 		    note(outbuf);
+ 		} else if (verbose) {
+-		    fprintf(logf, "%s, %d/%d: Line breaker spent %ld tries\n",
++		    fprintf(loggf, "%s, %d/%d: Line breaker spent %ld tries\n",
+ 			    infname, inf_lnum, outf_lnum, alts);
+ 		}
+ 		if (testinglinebreaker)
