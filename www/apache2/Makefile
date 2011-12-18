@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.135 2011/09/14 17:51:51 hans Exp $
+# $NetBSD: Makefile,v 1.136 2011/12/18 09:13:11 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
 COMMENT=	Apache HTTP (Web) server, version 2
 
 CONFLICTS=	apache-*ssl-[0-9]* apache6-[0-9]*
+
+CVE_2011_3192=	CVE-2011-3192-${APACHE_VERSION}-byterange-fixes.patch
+PATCHFILES+=	${CVE_2011_3192}
+SITES.${CVE_2011_3192}=	${MASTER_SITE_APACHE:=httpd/patches/apply_to_${APACHE_VERSION}/}
 
 BUILD_DEFS+=	IPV6_READY
 BUILD_DEFS+=	VARBASE
