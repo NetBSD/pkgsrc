@@ -1,0 +1,15 @@
+$NetBSD: patch-src_flash_h,v 1.1 2011/12/18 19:51:33 dholland Exp $
+
+ - Patch up gcc inline mess.
+
+--- src/flash.h.orig	2003-12-02 08:25:00.000000000 +0000
++++ src/flash.h
+@@ -46,7 +48,7 @@ extern void flash_destroy (void *flash);
+ extern int flash_get_size (Flash *flash);
+ extern void flash_dump_core (Flash *flash, FILE * f_core);
+ 
+-extern inline uint16_t
++static inline uint16_t
+ flash_read (Flash *flash, int addr)
+ {
+     return storage_readw ((Storage *)flash, addr * 2);

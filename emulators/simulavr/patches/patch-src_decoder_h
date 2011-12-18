@@ -1,0 +1,15 @@
+$NetBSD: patch-src_decoder_h,v 1.1 2011/12/18 19:51:33 dholland Exp $
+
+ - Patch up gcc inline mess.
+
+--- src/decoder.h.orig	2003-12-02 08:25:00.000000000 +0000
++++ src/decoder.h
+@@ -48,7 +50,7 @@ extern void decode_init_lookup_table (vo
+ extern int  avr_op_UNKNOWN (AvrCore *core, uint16_t opcode, unsigned int arg1,
+                             unsigned int arg2);
+ 
+-extern inline struct opcode_info *
++static inline struct opcode_info *
+ decode_opcode (uint16_t opcode)
+ {
+     struct opcode_info *opi;
