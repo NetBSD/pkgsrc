@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2011/12/17 10:15:00 sbd Exp $
+$NetBSD: patch-ac,v 1.3 2011/12/18 18:18:50 dholland Exp $
+
+- honor LDFLAGS
+- DESTDIR support
+- let the pkgsrc makefile handle the permissions
 
 --- build/Makefile.in.orig	1998-08-12 14:31:56.000000000 +0000
 +++ build/Makefile.in
@@ -18,7 +22,7 @@ $NetBSD: patch-ac,v 1.2 2011/12/17 10:15:00 sbd Exp $
 -	[ -d $(bindir) ] || (mkdir $(bindir))
 -	$(INSTALL) -s -o uucp -g bin -m 4555 snooper $(bindir)
 +	[ -d $(DESTDIR)$(bindir) ] || (mkdir $(DESTDIR)$(bindir))
-+	$(INSTALL) -s -o uucp -g bin -m 4555 snooper $(DESTDIR)$(bindir)
++	$(INSTALL) -s snooper $(DESTDIR)$(bindir)
  
  clean:
  	-rm -f *.o *.core

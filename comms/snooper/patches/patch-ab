@@ -1,19 +1,23 @@
-$NetBSD: patch-ab,v 1.2 2009/12/17 21:43:17 abs Exp $
+$NetBSD: patch-ab,v 1.3 2011/12/18 18:18:50 dholland Exp $
+
+- use standard headers
+- use NAME_MAX where available, as it's the standard symbol
 
 --- src/uucplock.c.orig	1999-12-02 03:12:46.000000000 +0000
 +++ src/uucplock.c
-@@ -38,8 +38,9 @@ static char sccsid[] = "@(#)uucplock.c	5
+@@ -38,8 +38,10 @@ static char sccsid[] = "@(#)uucplock.c	5
  #include "config.h"
  
  #include <sys/file.h>
 -#include <sys/dir.h>
 +#include <dirent.h>
++#include <stdio.h>
  #include <errno.h>
 +#include <limits.h>
  
  #include "pathnames.h"
  
-@@ -52,9 +53,12 @@ static char sccsid[] = "@(#)uucplock.c	5
+@@ -52,9 +54,12 @@ static char sccsid[] = "@(#)uucplock.c	5
  uu_lock(ttyname)
  	char *ttyname;
  {
@@ -27,7 +31,7 @@ $NetBSD: patch-ab,v 1.2 2009/12/17 21:43:17 abs Exp $
  	off_t lseek();
  
  	(void)snprintf(tbuf, sizeof(tbuf), _PATH_LOCKDIRNAME, ttyname);
-@@ -104,7 +108,11 @@ uu_lock(ttyname)
+@@ -104,7 +109,11 @@ uu_lock(ttyname)
  uu_unlock(ttyname)
  	char *ttyname;
  {
