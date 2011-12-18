@@ -1,0 +1,227 @@
+$NetBSD: patch-src_avrcore_h,v 1.1 2011/12/18 19:51:33 dholland Exp $
+
+ - Patch up gcc inline mess.
+
+--- src/avrcore.h.orig	2003-12-01 07:35:52.000000000 +0000
++++ src/avrcore.h
+@@ -127,20 +129,20 @@ extern void avr_core_get_sizes (AvrCore 
+ 
+ /* Attach a Virtual Device to the core */
+ 
+-extern inline void
++static inline void
+ avr_core_attach_vdev (AvrCore *core, VDevice *dev)
+ {
+     vdev_set_core (dev, (AvrClass *)core);
+     mem_attach (core->mem, dev);
+ }
+ 
+-extern inline VDevice *
++static inline VDevice *
+ avr_core_get_vdev_by_name (AvrCore *core, char *name)
+ {
+     return mem_get_vdevice_by_name (core->mem, name);
+ }
+ 
+-extern inline VDevice *
++static inline VDevice *
+ avr_core_get_vdev_by_addr (AvrCore *core, int addr)
+ {
+     return mem_get_vdevice_by_addr (core->mem, addr);
+@@ -148,13 +150,13 @@ avr_core_get_vdev_by_addr (AvrCore *core
+ 
+ /* State Access Methods */
+ 
+-extern inline int
++static inline int
+ avr_core_get_state (AvrCore *core)
+ {
+     return core->state;
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_set_state (AvrCore *core, StateType state)
+ {
+     core->state = state;
+@@ -162,14 +164,14 @@ avr_core_set_state (AvrCore *core, State
+ 
+ /* Sleep Mode Access Methods */
+ 
+-extern inline void
++static inline void
+ avr_core_set_sleep_mode (AvrCore *core, int sleep_mode)
+ {
+     core->state = STATE_SLEEP;
+     core->sleep_mode = ((unsigned int)1 << sleep_mode);
+ }
+ 
+-extern inline int
++static inline int
+ avr_core_get_sleep_mode (AvrCore *core)
+ {
+     return core->sleep_mode;
+@@ -229,13 +231,13 @@ avr_core_sreg_set (AvrCore *core, uint8_
+     sreg_set (core->sreg, v);
+ }
+ 
+-extern inline int
++static inline int
+ avr_core_sreg_get_bit (AvrCore *core, int b)
+ {
+     return sreg_get_bit (core->sreg, b);
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_sreg_set_bit (AvrCore *core, int b, int v)
+ {
+     sreg_set_bit (core->sreg, b, v);
+@@ -243,13 +245,13 @@ avr_core_sreg_set_bit (AvrCore *core, in
+ 
+ /* RAMPZ Access Methods */
+ 
+-extern inline uint8_t
++static inline uint8_t
+ avr_core_rampz_get (AvrCore *core)
+ {
+     return rampz_get (core->rampz);
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_rampz_set (AvrCore *core, uint8_t v)
+ {
+     rampz_set (core->rampz, v);
+@@ -273,13 +275,13 @@ avr_core_gpwr_set (AvrCore *core, int re
+ 
+ extern void avr_core_io_display_names (AvrCore *core);
+ 
+-extern inline uint8_t
++static inline uint8_t
+ avr_core_io_read (AvrCore *core, int reg)
+ {
+     return avr_core_mem_read (core, reg + IO_REG_ADDR_BEGIN);
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_io_write (AvrCore *core, int reg, uint8_t val)
+ {
+     avr_core_mem_write (core, reg + IO_REG_ADDR_BEGIN, val);
+@@ -294,13 +296,13 @@ avr_core_io_fetch (AvrCore *core, int re
+ 
+ /* Stack Access Methods */
+ 
+-extern inline uint32_t
++static inline uint32_t
+ avr_core_stack_pop (AvrCore *core, int bytes)
+ {
+     return stack_pop (core->stack, bytes);
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_stack_push (AvrCore *core, int bytes, uint32_t val)
+ {
+     stack_push (core->stack, bytes, val);
+@@ -314,7 +316,7 @@ avr_core_stack_push (AvrCore *core, int 
+    values which go past zero. These should be interpreted as wrapping back
+    around the last address in the flash. */
+ 
+-extern inline void
++static inline void
+ _adjust_PC_to_max (AvrCore *core)
+ {
+     if (core->PC < 0)
+@@ -326,7 +328,7 @@ _adjust_PC_to_max (AvrCore *core)
+ 
+ /* Program Counter Access Methods */
+ 
+-extern inline int32_t
++static inline int32_t
+ avr_core_PC_size (AvrCore *core)
+ {
+     return core->PC_size;
+@@ -352,7 +354,7 @@ avr_core_PC_set (AvrCore *core, int32_t 
+     display_pc (core->PC);
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_PC_incr (AvrCore *core, int val)
+ {
+     core->PC += val;
+@@ -365,7 +367,7 @@ avr_core_PC_incr (AvrCore *core, int val
+ extern void avr_core_irq_raise (AvrCore *core, int irq);
+ extern void avr_core_irq_clear (AvrCore *core, IntVect *irq);
+ 
+-extern inline void
++static inline void
+ avr_core_irq_clear_all (AvrCore *core)
+ {
+     dlist_delete_all (core->irq_pending);
+@@ -388,13 +390,13 @@ extern void avr_core_reset (AvrCore *cor
+ 
+ /* Methods for accessing CK and inst_CKS */
+ 
+-extern inline uint64_t
++static inline uint64_t
+ avr_core_CK_get (AvrCore *core)
+ {
+     return core->CK;
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_CK_incr (AvrCore *core)
+ {
+     core->CK++;
+@@ -403,13 +405,13 @@ avr_core_CK_incr (AvrCore *core)
+     display_clock (core->CK);
+ }
+ 
+-extern inline int
++static inline int
+ avr_core_inst_CKS_get (AvrCore *core)
+ {
+     return core->inst_CKS;
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_inst_CKS_set (AvrCore *core, int val)
+ {
+     core->inst_CKS = val;
+@@ -417,13 +419,13 @@ avr_core_inst_CKS_set (AvrCore *core, in
+ 
+ /* Methods for handling clock callbacks */
+ 
+-extern inline void
++static inline void
+ avr_core_clk_cb_add (AvrCore *core, CallBack *cb)
+ {
+     core->clk_cb = callback_list_add (core->clk_cb, cb);
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_clk_cb_exec (AvrCore *core)
+ {
+     core->clk_cb =
+@@ -432,13 +434,13 @@ avr_core_clk_cb_exec (AvrCore *core)
+ 
+ /* Methods for handling asynchronous callbacks */
+ 
+-extern inline void
++static inline void
+ avr_core_async_cb_add (AvrCore *core, CallBack *cb)
+ {
+     core->async_cb = callback_list_add (core->async_cb, cb);
+ }
+ 
+-extern inline void
++static inline void
+ avr_core_async_cb_exec (AvrCore *core)
+ {
+     core->async_cb =

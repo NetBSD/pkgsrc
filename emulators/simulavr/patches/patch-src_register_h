@@ -1,0 +1,55 @@
+$NetBSD: patch-src_register_h,v 1.1 2011/12/18 19:51:33 dholland Exp $
+
+ - Patch up gcc inline mess.
+
+--- src/register.h.orig	2003-12-01 07:35:53.000000000 +0000
++++ src/register.h
+@@ -83,26 +84,26 @@ extern SREG *sreg_new (void);
+ extern void sreg_construct (SREG *sreg);
+ extern void sreg_destroy (void *sreg);
+ 
+-extern inline uint8_t
++static inline uint8_t
+ sreg_get (SREG *sreg)
+ {
+     return sreg->sreg.reg;
+ }
+ 
+-extern inline void
++static inline void
+ sreg_set (SREG *sreg, uint8_t val)
+ {
+     sreg->sreg.reg = val;
+     display_io_reg (SREG_IO_REG, sreg->sreg.reg);
+ }
+ 
+-extern inline uint8_t
++static inline uint8_t
+ sreg_get_bit (SREG *sreg, int bit)
+ {
+     return !!(sreg->sreg.reg & (1 << bit));
+ }
+ 
+-extern inline void
++static inline void
+ sreg_set_bit (SREG *sreg, int bit, int val)
+ {
+     sreg->sreg.reg = set_bit_in_byte (sreg->sreg.reg, bit, val);
+@@ -133,7 +134,7 @@ extern GPWR *gpwr_new (void);
+ extern void gpwr_construct (GPWR *gpwr);
+ extern void gpwr_destroy (void *gpwr);
+ 
+-extern inline uint8_t
++static inline uint8_t
+ gpwr_get (GPWR *gpwr, int reg)
+ {
+ #if defined(CHECK_REGISTER_BOUNDS)
+@@ -144,7 +145,7 @@ gpwr_get (GPWR *gpwr, int reg)
+     return gpwr->reg[reg];
+ }
+ 
+-extern inline void
++static inline void
+ gpwr_set (GPWR *gpwr, int reg, uint8_t val)
+ {
+ #if defined(CHECK_REGISTER_BOUNDS)

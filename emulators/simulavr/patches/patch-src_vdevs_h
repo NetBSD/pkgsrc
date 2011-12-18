@@ -1,0 +1,15 @@
+$NetBSD: patch-src_vdevs_h,v 1.1 2011/12/18 19:51:33 dholland Exp $
+
+ - Patch up gcc inline mess.
+
+--- src/vdevs.h~	2003-12-02 08:25:00.000000000 +0000
++++ src/vdevs.h
+@@ -72,7 +74,7 @@ extern char *vdev_get_reg_name (VDevice 
+ 
+ extern void vdev_set_core (VDevice *dev, AvrClass *core);
+ 
+-extern inline AvrClass *vdev_get_core (VDevice *dev)
++static inline AvrClass *vdev_get_core (VDevice *dev)
+ {
+     return dev->core;
+ }

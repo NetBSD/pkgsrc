@@ -1,0 +1,24 @@
+$NetBSD: patch-src_storage_h,v 1.1 2011/12/18 19:51:33 dholland Exp $
+
+ - Patch up gcc inline mess.
+
+--- src/storage.h~	2003-12-02 08:25:00.000000000 +0000
++++ src/storage.h
+@@ -46,7 +48,7 @@ extern Storage *storage_new (int base, i
+ extern void storage_construct (Storage *stor, int base, int size);
+ extern void storage_destroy (void *stor);
+ 
+-extern inline uint8_t
++static inline uint8_t
+ storage_readb (Storage *stor, int addr)
+ {
+     int _addr = addr - stor->base;
+@@ -60,7 +62,7 @@ storage_readb (Storage *stor, int addr)
+     return stor->data[_addr];
+ }
+ 
+-extern inline uint16_t
++static inline uint16_t
+ storage_readw (Storage *stor, int addr)
+ {
+     int _addr = addr - stor->base;

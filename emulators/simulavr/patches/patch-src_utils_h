@@ -1,0 +1,22 @@
+$NetBSD: patch-src_utils_h,v 1.1 2011/12/18 19:51:33 dholland Exp $
+
+ - Patch up gcc inline mess.
+
+--- src/utils.h~	2003-12-01 07:35:54.000000000 +0000
++++ src/utils.h
+@@ -47,13 +49,13 @@ extern int str2ffmt (char *str);
+  *
+ \****************************************************************************/
+ 
+-extern inline uint8_t
++static inline uint8_t
+ set_bit_in_byte (uint8_t src, int bit, int val)
+ {
+     return ((src & ~(1 << bit)) | ((val != 0) << bit));
+ }
+ 
+-extern inline uint16_t
++static inline uint16_t
+ set_bit_in_word (uint16_t src, int bit, int val)
+ {
+     return ((src & ~(1 << bit)) | ((val != 0) << bit));
