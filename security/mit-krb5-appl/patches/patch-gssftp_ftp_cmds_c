@@ -1,0 +1,21 @@
+$NetBSD: patch-gssftp_ftp_cmds_c,v 1.1 2011/12/18 18:05:13 dholland Exp $
+
+Don't use "bool" as a variable name.
+
+--- gssftp/ftp/cmds.c~	2009-11-05 20:15:06.000000000 +0000
++++ gssftp/ftp/cmds.c
+@@ -1122,11 +1122,11 @@ remglob(argv,doswitch)
+ }
+ 
+ static char *
+-onoff(bool)
+-	int bool;
++onoff(flag)
++	int flag;
+ {
+ 
+-	return (bool ? "on" : "off");
++	return (flag ? "on" : "off");
+ }
+ 
+ static void cstatus()
