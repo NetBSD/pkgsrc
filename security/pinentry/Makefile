@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/12/17 10:16:40 sbd Exp $
+# $NetBSD: Makefile,v 1.31 2011/12/18 03:10:29 sbd Exp $
 #
 
 DISTNAME=		pinentry-0.8.1
@@ -29,7 +29,7 @@ BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
