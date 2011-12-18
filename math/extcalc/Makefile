@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/01 06:02:01 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2011/12/18 10:09:37 marino Exp $
 #
 
 DISTNAME=	extcalc-0.9.3-1
@@ -15,6 +15,7 @@ USE_LANGUAGES=	c c++
 USE_DIRS+=	xdg-1.1
 PKG_DESTDIR_SUPPORT= user-destdir
 USE_CMAKE=	yes
+LDFLAGS+=	-lGL	# direct link required by ld v2.22
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
