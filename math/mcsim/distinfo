@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2011/05/09 20:59:10 asau Exp $
+$NetBSD: distinfo,v 1.5 2011/12/18 17:12:48 marino Exp $
 
 SHA1 (mcsim-5.4.0.tar.gz) = 63a9b9fd22869f49bb92dbbf5e90e8320571b8a1
 RMD160 (mcsim-5.4.0.tar.gz) = 7294cdac918fef2e0e52b4e0c226492af7423fd2
 Size (mcsim-5.4.0.tar.gz) = 1840057 bytes
 SHA1 (patch-Makefile.in) = 9d4e0a8b716d41a6e9c046909bc69ec8ff2a9749
+SHA1 (patch-doc_Makefile.in) = 34c1c8668e8e52f6831edb468e7086ae9d83974e
