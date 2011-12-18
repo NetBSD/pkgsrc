@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.853 2011/12/18 06:41:40 sbd Exp $
+# $NetBSD: Makefile,v 1.854 2011/12/18 07:53:09 sbd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -591,6 +591,7 @@ SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-csspool
 SUBDIR+=	ruby-div
 SUBDIR+=	ruby-erubis
+SUBDIR+=	ruby-erubis26
 SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-http_parser.rb
