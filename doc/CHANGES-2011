@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3347 2011/12/18 08:39:14 ryoon Exp $
+$NetBSD: CHANGES-2011,v 1.3348 2011/12/18 09:13:29 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5403,3 +5403,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/zkt to 1.0nb1 [sbd 2011-12-17]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2011Q4 branch [agc 2011-12-17]
 	Updated www/php-owncloud to 2.0.1nb1 [ryoon 2011-12-18]
+	Updated www/apache2 to 2.0.64nb1 [obache 2011-12-18]
