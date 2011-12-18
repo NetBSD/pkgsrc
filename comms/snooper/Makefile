@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/12/17 10:15:00 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2011/12/18 15:59:57 dholland Exp $
 
 DISTNAME=	snooper-19991202
 PKGREVISION=	2
@@ -22,5 +22,5 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/snooper
 
-.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
