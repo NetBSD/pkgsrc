@@ -1,0 +1,15 @@
+$NetBSD: patch-main_c,v 1.1 2011/12/18 18:18:50 dholland Exp $
+
+- fix void main
+
+--- src/main.c~	1998-08-12 14:31:59.000000000 +0000
++++ src/main.c
+@@ -714,7 +714,7 @@ end:
+ 	binlog_end(1);
+ }
+ 
+-void
++int
+ main(argc, argv)
+ 	int argc;
+ 	char **argv;
