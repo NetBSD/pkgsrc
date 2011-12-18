@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/01 01:02:41 asau Exp $
+# $NetBSD: Makefile,v 1.13 2011/12/18 16:57:22 ryoon Exp $
 #
 
 DISTNAME=	spl-1.0pre3
@@ -10,6 +10,7 @@ MASTER_SITES=	http://www.clifford.at/spl/releases/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clifford.at/spl/
 COMMENT=	The SPL Programming Language
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -32,8 +33,11 @@ BUILD_TARGET=	all spldoc
 EGDIR=		${PREFIX}/share/examples/spl
 DOCDIR=		${PREFIX}/share/doc/spl
 
+.include "options.mk"
+
+INSTALLATION_DIRS+=	libexec/cgi-bin/webspl_cache
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libexec/cgi-bin/webspl_cache
 	${CHMOD} a+rwx ${DESTDIR}${PREFIX}/libexec/cgi-bin/webspl_cache
 	${LN} -sf ${PREFIX}/lib/spl_modules ${DESTDIR}${PREFIX}/libexec/cgi-bin/spl_modules
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
