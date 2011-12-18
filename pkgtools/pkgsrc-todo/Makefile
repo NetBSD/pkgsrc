@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/30 10:40:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/18 17:09:07 ryoon Exp $
 #
 
-DISTNAME=	pkgsrc-todo-1.0
+DISTNAME=	pkgsrc-todo-1.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -30,7 +30,7 @@ SUBST_FILES.todo+=	add_todo.1
 SUBST_FILES.todo+=	obsolete_todo.pl
 SUBST_FILES.todo+=	obsolete_todo.1
 SUBST_SED.todo+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR}\|g
-SUBST_SED.todo+=	-e s\|pkgsrc/\|${PKGSRCDIR}\|g
+SUBST_SED.todo+=	-e s\|pkgsrc/\|${PKGSRCDIR}/\|g
 SUBST_SED.todo+=	-e s\|@PERL@\|${PERL5:Q}\|g
 
 do-extract:
