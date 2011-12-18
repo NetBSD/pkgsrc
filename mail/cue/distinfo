@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.33 2011/11/27 13:05:33 obache Exp $
+$NetBSD: distinfo,v 1.34 2011/12/18 11:33:42 obache Exp $
 
 SHA1 (cue-snap-20100426.tar.gz) = 37f758bb65a9b5e6089b23aabd655d2fdadc76e2
 RMD160 (cue-snap-20100426.tar.gz) = cb908dc73c662ee22811cc4c09a64d81684eedea
 Size (cue-snap-20100426.tar.gz) = 256759 bytes
 SHA1 (patch-aa) = c83665ce01f9a56652a3ad650910f9b810cae4b4
 SHA1 (patch-configure.in) = 3f7c2fe9ce3ab851d06cc6d4e31e8c3bdde6d709
+SHA1 (patch-pgp.c) = 88f370cf04d8806c2df02653f7857460151c93f6
