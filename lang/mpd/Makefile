@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/03/03 13:31:53 is Exp $
+# $NetBSD: Makefile,v 1.16 2011/12/18 19:12:28 dholland Exp $
 #
 
 DISTNAME=		mpd.1.0.1
@@ -20,6 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		musicpd-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
+NOT_FOR_PLATFORM=	*-*-x86_64  # as per lang/sr
 
 
 TEST_TARGET=		verify
