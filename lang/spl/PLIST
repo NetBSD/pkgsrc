@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/18 16:57:22 ryoon Exp $
 bin/spl-config
 bin/splrun
 bin/webspld
@@ -20,6 +20,7 @@ lib/spl_modules/mod_format_ini.splb
 @comment lib/spl_modules/mod_gl.so
 lib/spl_modules/mod_prime.so
 lib/spl_modules/mod_sql.so
+${PLIST.sqlite}lib/spl_modules/mod_sql_sqlite.so
 lib/spl_modules/mod_sql_utils.splb
 lib/spl_modules/mod_system.so
 lib/spl_modules/mod_task.so
