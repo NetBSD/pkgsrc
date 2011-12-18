@@ -1,10 +1,17 @@
-$NetBSD: distinfo,v 1.4 2009/09/03 13:14:10 joerg Exp $
+$NetBSD: distinfo,v 1.5 2011/12/18 16:54:08 dholland Exp $
 
 SHA1 (p2c-1.20.tar.Z) = 797c5394d50567d5195548d3919c5a66ab90f680
 RMD160 (p2c-1.20.tar.Z) = 9917ef3f501b1506f2992d572f439398862fba4c
 Size (p2c-1.20.tar.Z) = 579294 bytes
-SHA1 (patch-aa) = 0cd351023774bd4ffa50d10b1a02bf37cb54f781
-SHA1 (patch-ab) = 852981992cefacd660ae8f136d64e22fb323fb03
-SHA1 (patch-ac) = 25003bcfdaa806bc556c182f33d6c0b95eda83f3
-SHA1 (patch-ad) = 54368e2cead224e1b696d7a1f1c8b0152d7783f1
-SHA1 (patch-ae) = a9299dc05cd831e6ca9977a2fb4c14a09c8f8b24
+SHA1 (patch-aa) = 0da0ac982bfc799dae3d291a66abb50239ffa9da
+SHA1 (patch-ab) = ceeda201cff0dfb975fec7f489fdaaca94984935
+SHA1 (patch-ac) = d169a0c722bebd53f9de25c0f6e208236650939a
+SHA1 (patch-ad) = f2ecb3a2f0cf51024b221e02eb92b9e517455d93
+SHA1 (patch-ae) = 43d37b979e0b111b5314802584207abc739a723c
+SHA1 (patch-comment_c) = e9a03bc63787e042678a7f18996e4e11168bbe19
+SHA1 (patch-decl_c) = 7a0afaa3ebc94159a8e54ae48300456d11dfa3f1
+SHA1 (patch-expr_c) = 314559cb335fac66f25bbf1d3343a7a8f4f88f9a
+SHA1 (patch-makeproto_c) = 55b947e8f1de54ab072bd4b32cf0f71973906083
+SHA1 (patch-out_c) = bd78a599ed5f2d34e58aee717555c1dc57ea76ec
+SHA1 (patch-trans_c) = b64b5dd8f6ef9e03007478ade7495877fa2d7f81
+SHA1 (patch-trans_h) = fb935075574c15b8ba2622392ceb9c0352459ca6

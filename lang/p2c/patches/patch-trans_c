@@ -1,0 +1,155 @@
+$NetBSD: patch-trans_c,v 1.1 2011/12/18 16:54:09 dholland Exp $
+
+- fix symbol conflict with logf (from math.h)
+- fix wrong printf formats
+- don't try to use sbrk() to figure the heap size
+
+--- trans.c.orig	1991-04-24 20:30:37.000000000 +0000
++++ trans.c
+@@ -551,17 +551,17 @@ Static void openlogfile()
+     if (!name)
+ 	name = format_s("%s.log", codefname);
+     saveoldfile(name);
+-    logf = fopen(name, "w");
+-    if (logf) {
+-	fprintf(logf, "\nTranslation of %s to %s by p2c %s\n",
++    loggf = fopen(name, "w");
++    if (loggf) {
++	fprintf(loggf, "\nTranslation of %s to %s by p2c %s\n",
+ 		infname, codefname, P2C_VERSION);
+-	fprintf(logf, "Translated");
++	fprintf(loggf, "Translated");
+ 	uname = getenv("USER");
+ 	if (uname)
+-	    fprintf(logf, " by %s", uname);
++	    fprintf(loggf, " by %s", uname);
+ 	time(&starting_time);
+-	fprintf(logf, " on %s", ctime(&starting_time));
+-	fprintf(logf, "\n\n");
++	fprintf(loggf, " on %s", ctime(&starting_time));
++	fprintf(loggf, "\n\n");
+     } else {
+ 	perror(name);
+ 	verbose = 0;
+@@ -573,18 +573,18 @@ void closelogfile()
+ {
+     long ending_time;
+ 
+-    if (logf) {
+-	fprintf(logf, "\n\n");
+-#if defined(unix) || defined(__unix)
+-	fprintf(logf, "Total memory used: %ld bytes.\n", (long)sbrk(0));
++    if (loggf) {
++	fprintf(loggf, "\n\n");
++#if 0
++	fprintf(loggf, "Total memory used: %ld bytes.\n", (long)sbrk(0));
+ #endif
+ 	time(&ending_time);
+-	fprintf(logf, "Processed %d source lines in %ld:%ld seconds.\n",
++	fprintf(loggf, "Processed %d source lines in %ld:%ld seconds.\n",
+ 		inf_ltotal,
+ 		(ending_time - starting_time) / 60,
+ 		(ending_time - starting_time) % 60);
+-	fprintf(logf, "\n\nTranslation completed on %s", ctime(&ending_time));
+-	fclose(logf);
++	fprintf(loggf, "\n\nTranslation completed on %s", ctime(&ending_time));
++	fclose(loggf);
+     }
+ }
+ 
+@@ -833,7 +833,7 @@ char **argv;
+         setbuf(codef, NULL);      /* for debugging */
+     outf = codef;
+     outf_lnum = 1;
+-    logf = NULL;
++    loggf = NULL;
+     if (verbose)
+ 	openlogfile();
+     setup_complete = 0;
+@@ -1000,12 +1000,12 @@ Type *tp;
+         return;
+     }
+     if (ISBOGUS(tp)) {
+-	fprintf(outf, "0x%lX\n", tp);
++	fprintf(outf, "%p\n", tp);
+ 	return;
+     }
+-    fprintf(outf, "      Type %lx, kind=%s", tp, typekindname(tp->kind));
++    fprintf(outf, "      Type %p, kind=%s", tp, typekindname(tp->kind));
+ #ifdef HASDUMPS
+-    fprintf(outf, ", meaning=%lx, basetype=%lx, indextype=%lx\n",
++    fprintf(outf, ", meaning=%p, basetype=%p, indextype=%p\n",
+             tp->meaning, tp->basetype, tp->indextype);
+     tp->dumped = 1;
+     if (tp->basetype)
+@@ -1026,13 +1026,13 @@ Meaning *mp;
+         return;
+     }
+     if (ISBOGUS(mp)) {
+-	fprintf(outf, "0x%lX\n", mp);
++	fprintf(outf, "%p\n", mp);
+ 	return;
+     }
+-    fprintf(outf, "   Meaning %lx, name=%s, kind=%s", mp, ((mp->name) ? mp->name : "<null>"),
++    fprintf(outf, "   Meaning %p, name=%s, kind=%s", mp, ((mp->name) ? mp->name : "<null>"),
+                                                      meaningkindname(mp->kind));
+ #ifdef HASDUMPS
+-    fprintf(outf, ", ctx=%lx, cbase=%lx, cnext=%lx, type=%lx\n",
++    fprintf(outf, ", ctx=%p, cbase=%p, cnext=%p, type=%p\n",
+             mp->ctx, mp->cbase, mp->cnext, mp->type);
+     if (mp->type && !mp->type->dumped)
+ 	dumptype(mp->type);
+@@ -1077,7 +1077,7 @@ int waddr;
+ 	return;
+     }
+     if (ISBOGUS(tp)) {
+-	fprintf(outf, "0x%lX", tp);
++	fprintf(outf, "%p", tp);
+ 	return;
+     }
+     if (tp == tp_int)             fprintf(outf, "I");
+@@ -1117,7 +1117,7 @@ int waddr;
+ 	    waddr = 1;
+ 	}
+ 	if (waddr) {
+-	    fprintf(outf, "%lX", tp);
++	    fprintf(outf, "%p", tp);
+ 	    if (tp->dumped)
+ 		return;
+ 	    fprintf(outf, ":");
+@@ -1251,7 +1251,7 @@ Expr *ex;
+         return;
+     }
+     if (ISBOGUS(ex)) {
+-	fprintf(outf, "0x%lX", ex);
++	fprintf(outf, "p", ex);
+ 	return;
+     }
+     if (ex->kind == EK_CONST && ex->val.type == tp_integer &&
+@@ -1291,7 +1291,7 @@ Expr *ex;
+         }
+     }
+     if (ISBOGUS(ex->val.s))
+-	fprintf(outf, "[0x%lX]", ex->val.s);
++	fprintf(outf, "[%p]", ex->val.s);
+     else if (ex->val.s) {
+         switch (ex->kind) {
+ 
+@@ -1310,7 +1310,7 @@ Expr *ex;
+                         fprintf(outf, "[s=%s]", ex->val.s);
+                         break;
+                     default:
+-                        fprintf(outf, "[s=%lx]", ex->val.s);
++                        fprintf(outf, "[s=%p]", ex->val.s);
+                 }
+                 break;
+         }
+@@ -1353,7 +1353,7 @@ int indent;
+     }
+     while (sp) {
+ 	if (ISBOGUS(sp)) {
+-	    fprintf(outf, "0x%lX\n", sp);
++	    fprintf(outf, "%p\n", sp);
+ 	    return;
+ 	}
+         fprintf(outf, "%s", stmtkindname(sp->kind));
