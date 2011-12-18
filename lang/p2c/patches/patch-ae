@@ -1,7 +1,19 @@
-$NetBSD: patch-ae,v 1.1 2009/09/03 13:14:10 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2011/12/18 16:54:09 dholland Exp $
 
---- parse.c.orig	2009-09-03 14:57:44.000000000 +0200
+- fix symbol conflict with getline (which is now a POSIX thing)
+- fix symbol conflict with logf (from math.h)
+
+--- parse.c.orig	1991-04-24 20:30:42.000000000 +0000
 +++ parse.c
+@@ -3150,7 +3150,7 @@ Static Stmt *p_body()
+     long saveserial;
+ 
+     if (verbose)
+-	fprintf(logf, "%s, %d/%d: Translating %s (in %s)\n",
++	fprintf(loggf, "%s, %d/%d: Translating %s (in %s)\n",
+ 		infname, inf_lnum, outf_lnum,
+ 		curctx->name, curctx->ctx->name);
+     notephase = 1;
 @@ -3769,7 +3769,7 @@ Token blkind;
  	out_include(fname, 1);
      outsection(majorspace);
@@ -11,3 +23,23 @@ $NetBSD: patch-ae,v 1.1 2009/09/03 13:14:10 joerg Exp $
      gettok();
  }
  
+@@ -4157,8 +4157,8 @@ int need;
+     if (!fp) {
+         if (need)
+             perror(infnbuf);
+-	if (logf)
+-	    fprintf(logf, "(Unable to open search file \"%s\")\n", infnbuf);
++	if (loggf)
++	    fprintf(loggf, "(Unable to open search file \"%s\")\n", infnbuf);
+         return 0;
+     }
+     flushcomments(NULL, -1, -1);
+@@ -4195,7 +4195,7 @@ int need;
+ 	    else
+ 		printf("Reading import text for \"%s\"\n", mod->name);
+ 	if (verbose)
+-	    fprintf(logf, "%s, %d/%d: Reading import text for \"%s\"\n",
++	    fprintf(loggf, "%s, %d/%d: Reading import text for \"%s\"\n",
+ 		    infname, inf_lnum, outf_lnum, mod->name);
+         pushctx(mod);
+         gettok();
