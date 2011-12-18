@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/23 05:35:29 taca Exp $
+# $NetBSD: Makefile,v 1.9 2011/12/18 07:51:56 sbd Exp $
 
 DISTNAME=	thoth-0.2.1
 PKGREVISION=	2
@@ -10,7 +10,7 @@ COMMENT=	Minimalistic blog engine
 LICENSE=	modified-bsd
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ramaze>=2008.06:../../www/ramaze
-DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.6.2<2.7:../../www/erubis
+DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.6.2<2.7:../../www/ruby-erubis26
 DEPENDS+=	${RUBY_PKGPREFIX}-builder>=2.1.2:../../textproc/ruby-builder
 DEPENDS+=	${RUBY_PKGPREFIX}-configuration>=0.0.5:../../misc/ruby-configuration
 DEPENDS+=	${RUBY_PKGPREFIX}-cssmin>=1.0.2<1.1:../../www/ruby-cssmin
