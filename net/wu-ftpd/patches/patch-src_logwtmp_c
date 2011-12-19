@@ -1,0 +1,34 @@
+$NetBSD: patch-src_logwtmp_c,v 1.1 2011/12/19 05:06:34 dholland Exp $
+
+Use time_t for calls to time().
+
+--- src/logwtmp.c~	2000-07-01 18:17:39.000000000 +0000
++++ src/logwtmp.c
+@@ -81,6 +81,7 @@ void wu_logwtmp(char *line, char *name, 
+ {
+     struct stat buf;
+     struct utmp ut;
++    time_t timer;
+ 
+ #ifdef SVR4
+ #ifndef NO_UTMPX
+@@ -120,7 +121,8 @@ void wu_logwtmp(char *line, char *name, 
+ 	(void) strncpy(utx.ut_line, line, sizeof(utx.ut_line));
+ 	utx.ut_syslen = strlen(utx.ut_host) + 1;
+ 	utx.ut_pid = getpid();
+-	(void) time(&utx.ut_tv.tv_sec);
++	(void) time(&timer);
++	utx.ut_tv.tv_sec = timer;
+ 	if (login /* name && *name */ ) {
+ 	    utx.ut_type = USER_PROCESS;
+ 	}
+@@ -192,7 +194,8 @@ void wu_logwtmp(char *line, char *name, 
+ 	    (void) strncpy(ut.ut_host, "", sizeof(ut.ut_host));
+ 	}
+ #endif
+-	(void) time(&ut.ut_time);
++	(void) time(&timer);
++	ut.ut_time = timer;
+ 	if (write(fd, (char *) &ut, sizeof(struct utmp)) !=
+ 	    sizeof(struct utmp))
+ 	         (void) ftruncate(fd, buf.st_size);
