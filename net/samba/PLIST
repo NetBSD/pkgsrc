@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2011/12/16 22:32:06 asau Exp $
+@comment $NetBSD: PLIST,v 1.47 2011/12/19 14:47:27 asau Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -173,11 +173,9 @@ man/man8/vfs_streams_xattr.8
 man/man8/vfs_time_audit.8
 man/man8/vfs_xattr_tdb.8
 man/man8/winbindd.8
-${PLIST.cifsmount}sbin/mount.cifs
 sbin/nmbd
 sbin/smbd
 sbin/swat
-${PLIST.cifsmount}sbin/umount.cifs
 ${PLIST.winbind}sbin/winbindd
 share/doc/samba/NT4-Locking.reg
 share/doc/samba/NT4_PlainPassword.reg
