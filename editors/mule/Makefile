@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/09/13 08:48:40 obache Exp $
+# $NetBSD: Makefile,v 1.47 2011/12/19 21:36:07 ryoon Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	7
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/mule/
 COMMENT=	Multilingual GNU editing macros (editor)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
