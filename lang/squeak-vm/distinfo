@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2011/01/18 15:28:13 asau Exp $
+$NetBSD: distinfo,v 1.4 2011/12/19 11:26:59 obache Exp $
 
 SHA1 (squeak/Squeak-3.11.3.2135-src.tar.gz) = cdc033b14e56ea05aa62bcb1686bb73f4347e29f
 RMD160 (squeak/Squeak-3.11.3.2135-src.tar.gz) = abb7dbde7e79f18161842d1451959ad09e7ef3ad
 Size (squeak/Squeak-3.11.3.2135-src.tar.gz) = 3585556 bytes
 SHA1 (patch-aa) = dfdb3be82288e8bd7658832e8dd91d242d2b97b2
-SHA1 (patch-ab) = 8f5e72383e4cdc1554e225e9ddafb1c4c17f9ccf
+SHA1 (patch-ab) = 019a6b1bc50e3abc500902a45edcd960b7708bf2
 SHA1 (patch-ac) = bad06ae257766407c90a62f5927a53c97ee8072a
 SHA1 (patch-ad) = e426d1de4b496704be08c67d2d2ab61a24735017
 SHA1 (patch-ae) = 73c358e42d153c9e6fe605fa1c77360ad48c6ec3

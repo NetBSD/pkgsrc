@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/12/17 12:45:17 marino Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/19 11:26:59 obache Exp $
 #
 
 SQUEAK_VERSION=	3.11.3.2135
@@ -44,11 +44,6 @@ PLIST_SUBST=	SQUEAK_VERSION=${SQUEAK_VERSION}
 
 PLIST_VARS+=	oss
 
-.if $(OPSYS) != "DragonFly"
-PLIST.oss=	yes
-CMAKE_ARGS+=	-DLIBOSSAUDIO=${LIBOSSAUDIO}
-.endif
-
 pre-configure:
 	${MKDIR} ${CONFIGURE_DIRS}
 
@@ -65,4 +60,8 @@ pre-configure:
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
+.if $(OSS_TYPE) != "none"
+PLIST.oss=	yes
+CMAKE_ARGS+=	-DLIBOSSAUDIO=${LIBOSSAUDIO:S/-l//}
+.endif
 .include "../../mk/bsd.pkg.mk"
