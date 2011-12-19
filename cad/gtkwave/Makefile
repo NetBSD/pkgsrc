@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/12/18 19:22:50 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2011/12/19 13:28:59 drochner Exp $
 #
 
 DISTNAME=		gtkwave-3.3.28
@@ -15,12 +15,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-tcl
 USE_TOOLS+=		gmake pkg-config
 
 PTHREAD_AUTO_VARS=	yes
 
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
