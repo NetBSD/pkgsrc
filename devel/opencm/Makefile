@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/01/29 19:12:10 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2011/12/19 13:58:13 wiz Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
@@ -27,7 +27,7 @@ OPENCM_VERSION=	opencm-0.1.2alpha8
 CONF_FILES=	${PREFIX}/share/examples/opencm/opencm.conf \
 		${PKG_SYSCONFDIR}/opencm.conf
 
-INFO_FILES=	# PLIST
+INFO_FILES=	YES
 
 CPPFLAGS+=	-D__unix__
 MAKE_ENV+=	GZIP_CMD=${GZIP_CMD:Q}
