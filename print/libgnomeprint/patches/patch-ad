@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.3 2011/12/19 11:14:25 drochner Exp $
+
+--- libgnomeprint/modules/cups/gnome-print-cups-transport.c.orig	2010-02-09 12:32:51.000000000 +0000
++++ libgnomeprint/modules/cups/gnome-print-cups-transport.c
+@@ -36,6 +36,7 @@
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <locale.h>
++#include <stdio.h>
+ 
+ #include <cups/cups.h>
+ #include <libgnomeprint/gnome-print.h>
