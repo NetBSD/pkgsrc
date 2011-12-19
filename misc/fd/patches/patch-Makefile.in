@@ -1,7 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.2 2011/12/17 10:16:13 sbd Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2011/12/19 00:25:59 sbd Exp $
 
 * honor PKGMANDIR
 * let not to take __LANGDIR__ from ${LANG}
+* Append to LDFLAGS
+* Force the use of -ltermcap and let BUILDLINK_TRANSFORM sort out the right
+  library to use.
 
 --- Makefile.in.orig	2010-09-24 15:00:00.000000000 +0000
 +++ Makefile.in
@@ -25,7 +28,7 @@ $NetBSD: patch-Makefile.in,v 1.2 2011/12/17 10:16:13 sbd Exp $
  DEBUG	=
  
 -LDFLAGS	= __TERMLIBS__ __REGLIBS__ __SOCKETLIBS__ __OTHERLIBS__ $(ALLOC)
-+LDFLAGS	+= __TERMLIBS__ __REGLIBS__ __SOCKETLIBS__ __OTHERLIBS__ $(ALLOC)
++LDFLAGS	+= -ltermcap __REGLIBS__ __SOCKETLIBS__ __OTHERLIBS__ $(ALLOC)
  CFLAGS	= -D__OSTYPE__=1 __CCOPTIONS__ $(DEBUG)
  HOSTCFLAGS = -D__OSTYPE__=1 __HOSTCCOPTIONS__
  SLDFLAGS = __REGLIBS__ __OTHERLIBS__ $(ALLOC)
