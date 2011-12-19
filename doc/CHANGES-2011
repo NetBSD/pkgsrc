@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3350 2011/12/18 18:19:23 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.3351 2011/12/19 07:46:01 dholland Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/apache2 to 2.0.64nb1 [obache 2011-12-18]
 	Updated lang/p2c to 1.20nb1 [dholland 2011-12-18]
 	Updated comms/snooper to 19991202nb3 [dholland 2011-12-18]
+	Updated mail/dk-milter to 0.3.0nb5 [dholland 2011-12-19]
