@@ -1,14 +1,17 @@
-$NetBSD: patch-aq,v 1.1 2007/08/01 20:19:21 joerg Exp $
+$NetBSD: patch-aq,v 1.2 2011/12/19 13:44:07 wiz Exp $
 
---- ncp/socketchan.cc.orig	2007-08-01 20:00:46.000000000 +0000
+--- ncp/socketchan.cc.orig	1999-04-12 21:17:00.000000000 +0000
 +++ ncp/socketchan.cc
-@@ -20,9 +20,9 @@
+@@ -19,10 +19,11 @@
+ //
  //  e-mail philip.proudman@btinternet.com
  
- #include <stream.h>
+-#include <stream.h>
 -#include "stdio.h"
 -#include "string.h"
 -#include "malloc.h"
++#include <iostream>
++using namespace std;
 +#include <stdio.h>
 +#include <string.h>
 +#include <stdlib.h>
