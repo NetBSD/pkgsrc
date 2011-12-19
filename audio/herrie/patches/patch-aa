@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2008/07/16 07:21:23 bjs Exp $
+$NetBSD: patch-aa,v 1.5 2011/12/19 06:33:33 sbd Exp $
 
 --- configure.orig	2008-07-15 11:59:07.000000000 -0400
 +++ configure
-@@ -33,7 +33,7 @@ APP_LINGUAS='ca da de es fi ga nl pl pt_
- CFG_AO=oss
- unset CFG_BINEXT
- CFG_CURSES_HEADER=ncurses
--CFG_CURSES_LIB=ncursesw
-+CFG_CURSES_LIB=ncurses
- CFG_HTTP=yes
- CFG_MODPLUG=yes
- CFG_MP3=yes
 @@ -64,7 +64,7 @@ Darwin)
  	LDFLAGS="$LDFLAGS -lresolv"
  	[ "$PREFIX" = "" ] && PREFIX=/opt/local

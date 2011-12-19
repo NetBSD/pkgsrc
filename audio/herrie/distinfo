@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/10/31 22:48:02 bjs Exp $
+$NetBSD: distinfo,v 1.6 2011/12/19 06:33:33 sbd Exp $
 
 SHA1 (herrie-2.2.tar.bz2) = ae5c39be11aeb19898cd3f968580eafc623830b7
 RMD160 (herrie-2.2.tar.bz2) = e0f70ca4d867cf6cdbb452bd0f0860ef1f5a9f39
 Size (herrie-2.2.tar.bz2) = 71596 bytes
-SHA1 (patch-aa) = ee64594d6a4157869e6c99dd419c9c538c78bb52
+SHA1 (patch-aa) = 1da76ead69ad6ebbc57abe401046ba853e0e169d
