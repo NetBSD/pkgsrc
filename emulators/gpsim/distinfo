@@ -1,10 +1,29 @@
-$NetBSD: distinfo,v 1.9 2007/10/14 08:14:11 rillig Exp $
+$NetBSD: distinfo,v 1.10 2011/12/19 15:52:18 wiz Exp $
 
 SHA1 (gpsim-0.21.11.tar.gz) = 05337560a6b48a9afb7a3f4be1ba606709f6b30a
 RMD160 (gpsim-0.21.11.tar.gz) = 36001180948fc2394043d8283dc1dd028ee4f922
 Size (gpsim-0.21.11.tar.gz) = 1218332 bytes
 SHA1 (patch-aa) = 0d102952cb8dbe7faaf50416a2d9bec24683c300
-SHA1 (patch-ab) = 199403ee700b145dcb44f42c258903903af20785
+SHA1 (patch-ab) = 14cae18eeb413e9bc911e1fcf0213d318bf88a1a
 SHA1 (patch-ac) = 1c2cf1059db73c385817199bb35672f4f2246a67
 SHA1 (patch-ad) = f172ec71e2c2ef6bb798da79e1f73c063ff27d5b
 SHA1 (patch-ae) = 5185e3cbea6d5e036020f1de9636907efe54c851
+SHA1 (patch-cli_cmd__clear.cc) = 72f0f069692c6d9b8e6ba2abb4286a01de0d9a82
+SHA1 (patch-cli_cmd__help.cc) = 90d3df16dd7c1746f68b850f8dc86a751352b9d2
+SHA1 (patch-cli_cmd__list.cc) = 5f20122097f3be39b7a714b46ca0e71b6356a9b9
+SHA1 (patch-cli_cmd__x.cc) = c9730d62932455dcaf99ab1db9352219a0976188
+SHA1 (patch-cli_socket.cc) = 6b8b0c0e071ca6d78f943e6445bb5e2e1c4a941c
+SHA1 (patch-gui_gui__regwin.cc) = 218b41e9e4a0eb9336757c842686eef3b35ea403
+SHA1 (patch-gui_gui__src.cc) = 1622d9a75451230d74bc4aee907eeb7dd64f7aa2
+SHA1 (patch-gui_gui__stack.cc) = badf2fbda9f2f8a1f0005dab5bde4adf814aafe4
+SHA1 (patch-gui_gui__symbols.cc) = 2f36fb615029823065214a030b309ca4f36336cc
+SHA1 (patch-gui_settings__exdbm.cc) = 957854ab58bde81857a2729120a710346f89ecf6
+SHA1 (patch-modules_binary__indicator.cc) = a666710d4d93077c57163176428075416483719e
+SHA1 (patch-src_cmd__manager.h) = 1fda88495f6c4ff8a244787f19e64558f86675e0
+SHA1 (patch-src_modules.cc) = bc01b99a564051bce16c5d010635691a2b651c72
+SHA1 (patch-src_operator.cc) = 303dd4744aabc3a42fa97db3d3bebc3994c80e8a
+SHA1 (patch-src_processor.cc) = b77bc4710c14fd519dd5b72e0700172c9b2dc02e
+SHA1 (patch-src_processor.h) = 29cd80b086f7267c7d092e22d9f5780310d8d006
+SHA1 (patch-src_program__files.cc) = 25e3b4ee2e8ad91eaa54a64d7ccc2f1ff51b51a9
+SHA1 (patch-src_symbol.cc) = cb84a108f2a79a1d3eb40da33cd11f3276682bc0
+SHA1 (patch-src_value.cc) = 8a97172012cccb14c7b4654e4da1b60041b7733f
