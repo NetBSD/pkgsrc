@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3351 2011/12/19 07:46:01 dholland Exp $
+$NetBSD: CHANGES-2011,v 1.3352 2011/12/19 12:59:18 schwarz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5407,3 +5407,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/p2c to 1.20nb1 [dholland 2011-12-18]
 	Updated comms/snooper to 19991202nb3 [dholland 2011-12-18]
 	Updated mail/dk-milter to 0.3.0nb5 [dholland 2011-12-19]
+	Updated devel/libosip to 3.6.0 [schwarz 2011-12-19]
