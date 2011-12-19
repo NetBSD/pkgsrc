@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/18 21:09:27 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2011/12/19 03:04:13 obache Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -14,8 +14,8 @@ USE_LANGUAGES=		c c++
 
 # php/ext.mk trashes these, preventing the package from building,
 # so set them back again afterwards. grr
-DISTNAME=	phraseanet-v3.1.4-linux
-DISTINFO_FILE=	${.CURDIR}/distinfo
+DISTNAME=	phraseanet-v${VERS}-linux
+DIST_SUBDIR=	#empty
 
 # This seems to now be needed though it wasn't before...
 WRKSRC=${WRKDIR}/${DISTNAME}/bin/src/php_phrasea2
