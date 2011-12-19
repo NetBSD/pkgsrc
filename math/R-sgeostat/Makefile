@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/07/30 10:36:26 asau Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/19 22:27:05 markd Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Object-oriented Framework for Geostatistical Modeling in S+
 
 R_PKGNAME=	sgeostat
 R_PKGVER=	1.0-23
-USE_LANGUAGES=	c fortran77
+USE_LANGUAGES=	c fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
