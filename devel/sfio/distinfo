@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/10/03 00:07:31 dholland Exp $
+$NetBSD: distinfo,v 1.8 2011/12/19 14:19:43 wiz Exp $
 
 SHA1 (sfio_1999.src.unix.cpio) = 6fd3a711ca8f95190c0859934f57a66d02c842a4
 RMD160 (sfio_1999.src.unix.cpio) = 379148273c9979f7a5a921a338465b7579a6ac5e
@@ -6,8 +6,8 @@ Size (sfio_1999.src.unix.cpio) = 647168 bytes
 SHA1 (patch-aa) = 514aafe5eb5f97150742efa6a5b51644bf485bda
 SHA1 (patch-ab) = 184497c28da9db978c2b384d3be526d28e3ebae0
 SHA1 (patch-ac) = 0e3b0aae65393ce98fd086ec593dd73e2b41c283
-SHA1 (patch-ad) = 4298da6e3778890f152c897d2da2849944f4eef3
-SHA1 (patch-ae) = 807cd4fc112fd439eb3431da6ae2b0dc7c7a38b4
+SHA1 (patch-ad) = 2e144ceabe9652e9acac8d08f6cf6ce8433425e6
+SHA1 (patch-ae) = 545addaf670f917f71fe71337b0d267be4debc70
 SHA1 (patch-af) = 4cdd35605fd7412fc3281577227d3e0da7dddfb9
 SHA1 (patch-ag) = ffa7233bcb32efd393a449bfcfb6e2696e76f9d6
 SHA1 (patch-ah) = 02d80635de65a6513a222be69643e9925a170d17
@@ -16,3 +16,8 @@ SHA1 (patch-aj) = 8e6c2c21fc4ed576679554c2e97d9eefa0f1e72a
 SHA1 (patch-ak) = 42d8dd1a5518b558f8875f9fb60f7e80b9c0fd4b
 SHA1 (patch-al) = d11738f33e3382664e8dc57501a062a0df948083
 SHA1 (patch-src_lib_sfio_Sfio__dc_sfcdio_c) = 9085c7e69de27a2ae72200015afc578d13237221
+SHA1 (patch-src_lib_sfio_Sfio__dc_sfdcfilter.c) = e547e614dd91876a6e09c12852c4c7700871afd1
+SHA1 (patch-src_lib_sfio_Sfio__dc_sfdcseekable.c) = daa5b79246462fe474dc72b4dba323d4af2f648d
+SHA1 (patch-src_lib_sfio_Sfio__dc_sfdcsubstream.c) = 57acce973b885a97ef783cab5ffafd07666fca61
+SHA1 (patch-src_lib_sfio_Sfio__dc_sfdctee.c) = a21856a2c6db519e5dda508c7dd3358aef5ffe13
+SHA1 (patch-src_lib_sfio_Sfio__dc_sfdcunion.c) = 95c2113db9c1ff1c9ee7c9388a1324033a7fe697

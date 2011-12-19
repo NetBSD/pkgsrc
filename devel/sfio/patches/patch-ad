@@ -1,10 +1,12 @@
-$NetBSD: patch-ad,v 1.2 2000/08/13 17:42:24 itojun Exp $
+$NetBSD: patch-ad,v 1.3 2011/12/19 14:19:43 wiz Exp $
 
 Avoid a compiler warning.
 
---- src/lib/sfio/sfvscanf.c.orig	Sat May 29 04:19:30 1999
-+++ src/lib/sfio/sfvscanf.c	Mon Aug 14 01:56:07 2000
-@@ -642,7 +642,3 @@
+--- src/lib/sfio/sfvscanf.c.orig	1999-05-28 19:19:30.000000000 +0000
++++ src/lib/sfio/sfvscanf.c
+@@ -640,11 +640,7 @@ loop_fmt :
+ 			{	n_assign += 1;
+ 
  				if(fmt == 'p')
 -#if _more_void_int
 -					*((Void_t**)value) = (Void_t*)((ulong)argv.lu);
@@ -13,3 +15,5 @@ Avoid a compiler warning.
 -#endif
 +					(void) memcpy(value, &argv.lu, sizeof(value));
  #if !_ast_intmax_long
+ 				else if(FMTCMP(size,Sflong_t,Sflong_t))
+ 					*((Sflong_t*)value) = argv.ll;
