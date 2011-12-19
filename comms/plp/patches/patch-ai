@@ -1,8 +1,18 @@
-$NetBSD: patch-ai,v 1.2 2004/09/08 12:47:39 wiz Exp $
+$NetBSD: patch-ai,v 1.3 2011/12/19 13:44:07 wiz Exp $
 
---- utils/ppsocket.cc.orig	1999-04-12 23:17:08.000000000 +0200
+--- utils/ppsocket.cc.orig	1999-04-12 21:17:08.000000000 +0000
 +++ utils/ppsocket.cc
-@@ -198,7 +198,7 @@ bool ppsocket::listen(char* Host, int Po
+@@ -24,7 +24,8 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <stdarg.h>
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <sys/time.h>
+@@ -198,7 +199,7 @@ bool ppsocket::listen(char* Host, int Po
  
  ppsocket* ppsocket::accept(char* Peer, int MaxLen)
  { 
@@ -11,7 +21,7 @@ $NetBSD: patch-ai,v 1.2 2004/09/08 12:47:39 wiz Exp $
    ppsocket* accepted;
    char* peer;
  
-@@ -421,7 +421,7 @@ bool ppsocket::sputc(char c)
+@@ -421,7 +422,7 @@ bool ppsocket::sputc(char c)
  { 
    int i;
  

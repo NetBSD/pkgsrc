@@ -1,8 +1,19 @@
-$NetBSD: patch-al,v 1.1 2004/09/08 12:47:39 wiz Exp $
+$NetBSD: patch-al,v 1.2 2011/12/19 13:44:07 wiz Exp $
 
---- ncp/ncp.cc.orig	1999-04-12 23:27:06.000000000 +0200
+--- ncp/ncp.cc.orig	1999-04-12 21:27:06.000000000 +0000
 +++ ncp/ncp.cc
-@@ -33,7 +33,7 @@
+@@ -19,8 +19,9 @@
+ //
+ //  e-mail philip.proudman@btinternet.com
+ 
+-#include <stream.h>
+ #include <string.h>
++#include <iostream>
++using namespace std;
+ 
+ #include "bool.h"
+ #include "../defaults.h"
+@@ -33,7 +34,7 @@
  ncp::ncp(const char *fname, int baud, IOWatch &iow, bool _s5) :
    s5(_s5)
  {

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2009/03/11 12:16:21 hasso Exp $
+$NetBSD: distinfo,v 1.16 2011/12/19 13:44:07 wiz Exp $
 
 SHA1 (plp_1_8.tar.gz) = cad586353091895b6efc556d2cb5fa16891a3749
 RMD160 (plp_1_8.tar.gz) = 1a29209fd7def352c9a1c6671b1a90efcd276456
@@ -9,16 +9,25 @@ SHA1 (patch-ac) = 9f196ba3c236629c6ed1b59842fb6de2716917a6
 SHA1 (patch-ad) = 4a6421d7256498df6293011bafc76e75cc5512e6
 SHA1 (patch-ae) = 29b0cde6353c257a01a1630981f229c6673bbe73
 SHA1 (patch-af) = 0ab78ff48fbd42b45bd59468eb24297f44802ef5
-SHA1 (patch-ag) = c6610f91ba3216aaca6fbf74620e64b1657e711e
-SHA1 (patch-ah) = bd381b9d8bbd68e985e6323c775324093fe7fbfe
-SHA1 (patch-ai) = 82b2a9af4d88bb27ea8c196f1b2ecdc39d7c9d24
-SHA1 (patch-aj) = 4973bd796ce661c6a4dcf11c8a774e0d6450480b
+SHA1 (patch-ag) = a8c2760b8153813acb221c486b2164cd2c982f81
+SHA1 (patch-ah) = eacad8ac9edd80b01b7ae8b945bb2ba1385c8b61
+SHA1 (patch-ai) = 443f28f1abc75dfc3372c7441fca34e20fefbd48
+SHA1 (patch-aj) = bcd8ec18f0b73399dea10e126fbf9bfaa9626583
 SHA1 (patch-ak) = 28ca61ae1f6b1a02f349bf57f5f351c55c3b7575
-SHA1 (patch-al) = c8dc10319e174159efc6d838928a39bdb0446feb
+SHA1 (patch-al) = 38ac0f658723bed15a69a0c4b5ca74f9da9e9ecb
 SHA1 (patch-am) = b3453d4cfb48a6daeae9aea896b261cae7db489f
 SHA1 (patch-ao) = eabe7562e75c3ab9900a889ffe14813a9faad01b
-SHA1 (patch-ap) = c104fcff93c6a20da75dcfa63ad814da43bbc718
-SHA1 (patch-aq) = 706c2518c92c1b9ce3098839e5b282933f7904f0
+SHA1 (patch-ap) = 852649f18942bbb9ae4d705f4ed16bde6a512b71
+SHA1 (patch-aq) = 9da03a6397a76d317642363ee82c5da0bbee7405
 SHA1 (patch-ar) = 25ec84057553840bb071706ecf143189f7591fc9
 SHA1 (patch-as) = 696b46a9f173cc81083a0c4efa2ffdd8df2d0f19
 SHA1 (patch-at) = d5196efa3423c0d3e897806325ff712dec7f05c2
+SHA1 (patch-ncp_channel.cc) = 8e23d082652aaec48a8e3a78be79b964c813830d
+SHA1 (patch-ncp_linkchan.cc) = 599ed3ec1a86a653620bf0fb3b74793034561f2c
+SHA1 (patch-ncp_main.cc) = 141a13d3b82769630735f506b3e9c40d136db523
+SHA1 (patch-ncp_psiemul.cc) = c343d5eadc21f0f49062617cdc0a8b2f1b7d5e92
+SHA1 (patch-ncp_psiemul.h) = 315e07b43f075c98bbd2cb16750eebb170ca99ef
+SHA1 (patch-rfsv_ftp.cc) = 64fa434d73f3bbe5340ff9fd57de7e103b63578e
+SHA1 (patch-rfsv_main.cc) = 275ea36dccc70e93d213490871be42d52dffd854
+SHA1 (patch-utils_bufferstore.cc) = 2e734886f9619812319546e450df05f2ed8f117b
+SHA1 (patch-utils_iowatch.cc) = 520096aef79ed8ea8490e6426e2b2b59d8ee27a8

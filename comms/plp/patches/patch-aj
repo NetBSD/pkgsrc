@@ -1,8 +1,20 @@
-$NetBSD: patch-aj,v 1.1 2004/09/08 12:47:39 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2011/12/19 13:44:07 wiz Exp $
 
---- ncp/link.cc.orig	1999-04-12 23:49:12.000000000 +0200
+--- ncp/link.cc.orig	1999-04-12 21:49:12.000000000 +0000
 +++ ncp/link.cc
-@@ -30,7 +30,7 @@
+@@ -19,9 +19,10 @@
+ //
+ //  e-mail philip.proudman@btinternet.com
+ 
+-#include <stream.h>
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <iostream>
++using namespace std;
+ 
+ #include "bool.h"
+ #include "../defaults.h"
+@@ -30,7 +31,7 @@
  #include "bufferstore.h"
  #include "bufferarray.h"
  
@@ -11,7 +23,7 @@ $NetBSD: patch-aj,v 1.1 2004/09/08 12:47:39 wiz Exp $
    s5(_s5)
  {
    p = new packet(fname, baud, iow, PACKET_LAYER_DIAGNOSTICS);
-@@ -43,16 +43,16 @@ link::link(const char *fname, int baud, 
+@@ -43,16 +44,16 @@ link::link(const char *fname, int baud, 
    failed = false;
  }
  
@@ -31,7 +43,7 @@ $NetBSD: patch-aj,v 1.1 2004/09/08 12:47:39 wiz Exp $
    bufferArray ret;
    bufferStore buff;
    unsigned char type;
-@@ -145,10 +145,10 @@ bufferArray link::poll() {
+@@ -145,10 +146,10 @@ bufferArray link::poll() {
    return ret;
  }
  
