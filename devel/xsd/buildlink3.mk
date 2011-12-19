@@ -1,6 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/10/15 12:39:42 hasso Exp $
-
-BUILDLINK_DEPMETHOD.xsd?=	build
+# $NetBSD: buildlink3.mk,v 1.2 2011/12/19 14:36:28 wiz Exp $
 
 BUILDLINK_TREE+=	xsd
 
@@ -11,6 +9,7 @@ BUILDLINK_API_DEPENDS.xsd+=	xsd>=3.2
 BUILDLINK_ABI_DEPENDS.xsd+=	xsd>=3.2
 BUILDLINK_PKGSRCDIR.xsd?=	../../devel/xsd
 
+BUILDLINK_DEPMETHOD.xsd?=	build
 .endif # XSD_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-xsd
