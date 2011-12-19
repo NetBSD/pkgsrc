@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-ad,v 1.5 2011/12/19 21:36:07 ryoon Exp $
+
+* "Should be one line" test is for gcc 4.5's cpp from emacs20's patch-ab.
 
 --- configure.orig	1995-06-05 01:11:38.000000000 +0000
 +++ configure
@@ -25,3 +27,33 @@ $NetBSD: patch-ad,v 1.4 2006/01/04 20:35:08 joerg Exp $
        *-nextstep* )             opsys=mach2 ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
+@@ -1384,10 +1387,13 @@ if test -z "$CPP"; then
+ #include "confdefs.h"
+ #include <stdio.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+ # Some shells (Coherent) do redirections in the wrong order, so need
+ # the parens.
+-ac_err=`eval "($ac_cpp conftest.${ac_ext} >/dev/null) 2>&1"`
++ac_err=`eval "($ac_cpp conftest.${ac_ext} > conftest2.out) 2>&1 ; \
++grep -L \"Should  *be one line\" conftest2.out"`
+ if test -z "$ac_err"; then
+   :
+ else
+@@ -1397,10 +1403,13 @@ else
+ #include "confdefs.h"
+ #include <stdio.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+ # Some shells (Coherent) do redirections in the wrong order, so need
+ # the parens.
+-ac_err=`eval "($ac_cpp conftest.${ac_ext} >/dev/null) 2>&1"`
++ac_err=`eval "($ac_cpp conftest.${ac_ext} >/dev/null) 2>&1 ; \
++grep -L \"Should  *be one line\" conftest2.out"`
+ if test -z "$ac_err"; then
+   :
+ else
