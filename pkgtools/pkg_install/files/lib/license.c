@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.24 2011/12/15 22:16:55 ryoon Exp $	*/
+/*	$NetBSD: license.c,v 1.25 2011/12/19 12:57:16 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -46,7 +46,7 @@
 #define	HASH_SIZE	521
 
 const char *default_acceptable_licenses =
-    "public-domain unlicense"
+    "public-domain unlicense "
     "gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3 "
     "gnu-gpl-v1 "
     "gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 "
