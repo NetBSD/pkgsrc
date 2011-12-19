@@ -1,0 +1,21 @@
+$NetBSD: patch-typemap,v 1.1 2011/12/19 15:26:51 hiramatsu Exp $
+
+Modification to be built with Perl 5.14 API.
+
+--- typemap.orig	2011-12-19 09:59:47.000000000 +0000
++++ typemap
+@@ -54,11 +54,11 @@ struct timeval		T_timeval
+ #########
+ INPUT
+ T_timeval
+-	$var.tv_sec = atof((char *)SvPV($arg,na));
++	$var.tv_sec = atof((char *)SvPV($arg,PL_na));
+ 	$var.tv_usec = 0
+ T_berval
+-	$var.bv_val = (char *)SvPV($arg,na);
+-	$var.bv_len = na
++	$var.bv_val = (char *)SvPV($arg,PL_na);
++	$var.bv_len = PL_na
+ T_charptrptr
+         $var = (char **)avref2charptrptr($arg)
+ T_bervalptrptr

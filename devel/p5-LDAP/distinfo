@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:26 agc Exp $
+$NetBSD: distinfo,v 1.4 2011/12/19 15:26:51 hiramatsu Exp $
 
 SHA1 (perldap-1.2.2.tgz) = 71511b4c2c246db1b520732c3797551d35c26ae7
 RMD160 (perldap-1.2.2.tgz) = 834941555053f0b101712d0caeb26c86c22c65d7
 Size (perldap-1.2.2.tgz) = 74058 bytes
+SHA1 (patch-API.xs) = 761a7f1aef91c8c017f921d39fc899cd59e9a15f
 SHA1 (patch-aa) = 430f7e2e41087ca3a3eba19b012ba4f96c0a1de3
+SHA1 (patch-typemap) = 9255e0d9c53d57ee90f27f5e544867ca51d92d8c
