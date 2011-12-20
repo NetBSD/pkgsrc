@@ -1,0 +1,15 @@
+$NetBSD: patch-cmap_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- cmap.hc~	2011-12-20 14:38:01.000000000 +0000
++++ cmap.hc
+@@ -2,7 +2,7 @@
+ #include "cmap.h"
+ #include "xbm.h"
+  
+-cmap::cmap (win *w_i, char name_i [], bool preload, bool smart_load)
++cmap::cmap (win *w_i, const char name_i [], bool preload, bool smart_load)
+   {w              = w_i;
+    is_mask        = false;
+    is_loaded      = false;

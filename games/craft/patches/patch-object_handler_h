@@ -1,0 +1,15 @@
+$NetBSD: patch-object_handler_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- object_handler.h~	1997-04-17 13:07:38.000000000 +0000
++++ object_handler.h
+@@ -297,7 +297,7 @@ class object_handler
+   bool can_built             (int id, int x, int y, int cmd,
+                               bool is_robot = false);
+   bool attack_possible       (int id, int x, int y);
+-  void write                 (int color, char msg []);
++  void write                 (int color, const char msg []);
+   bool direct_move           (int id, int range, int &dx, int &dy);
+   bool max_diff              (int x, int y, int h);
+   bool min_diff              (int x, int y, int h);
