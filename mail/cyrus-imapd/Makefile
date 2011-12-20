@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2011/12/17 07:29:49 sbd Exp $
+# $NetBSD: Makefile,v 1.92 2011/12/20 11:59:46 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
 PKGREVISION=	5
@@ -75,7 +75,20 @@ CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
 .else
 CONFIGURE_ARGS+=	--without-krb
 CONFIGURE_ARGS+=	--disable-gssapi
+CHECK_BUILTIN.heimdal:=		yes
+.  include "../../security/heimdal/builtin.mk"
+CHECK_BUILTIN.heimdal:=		no
+CHECK_BUILTIN.mit-krb5:=	yes
+.  include "../../security/mit-krb5/builtin.mk"
+CHECK_BUILTIN.mit-krb5:=	no
+.  if ( !empty(USE_BUILTIN.heimdal:M[Yy][Ee][Ss]) || \
+	!empty(USE_BUILTIN.mit-krb5:M[Yy][Ee][Ss])) && \
+        exists(/usr/bin/compile_et) && exists(/usr/include/krb5/com_err.h)
+CPPFLAGS+=	-I/usr/include/krb5
+CONFIGURE_ENV+=	COMPILE_ET=/usr/bin/compile_et
+.  else
 CONFIGURE_ARGS+=	--with-com-err=yes
+.  endif
 .endif
 
 PLIST_VARS+=		ldap
