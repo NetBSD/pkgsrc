@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/07/23 02:22:43 obache Exp $
+# $NetBSD: Makefile,v 1.37 2011/12/20 09:32:22 sbd Exp $
 
 DISTNAME=	snownews-1.5.12
 CATEGORIES=	www
@@ -23,14 +23,15 @@ CONFIG_SHELL=		perl
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 MAKE_ENV+=		EXTRA_CFLAGS=${CFLAGS:Q}
 
+INCOMPAT_CURSES=	NetBSD-[0-4].*-*	#WA_BOLD, WA_REVERSE, KEY_RESIZE
+
 post-configure:
 	${ECHO} LOCALEPATH=${PREFIX}/${PKGLOCALEDIR}/locale >> ${WRKSRC}/platform_settings
 	${ECHO} MANPATH=${PREFIX}/${PKGMANDIR} >> ${WRKSRC}/platform_settings
 
-.include "options.mk"
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
