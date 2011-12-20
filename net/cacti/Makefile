@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/22 22:23:13 tez Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/20 23:57:33 tez Exp $
 #
 
-DISTNAME=		cacti-0.8.7h
+PKGNAME=		cacti-0.8.7i
+DISTNAME=		cacti-0.8.7i-PIA-3.1
 CATEGORIES=		net
-DISTFILES=		cacti-0.8.7h.tar.gz
-DISTFILES+=		cacti-plugin-0.8.7h-PA-v3.0.tar.gz
 MASTER_SITES=		http://www.cacti.net/downloads/
-MASTER_SITES+=		http://www.cacti.net/downloads/pia/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cacti.net/
@@ -74,9 +72,6 @@ SPECIAL_PERMS+=		share/cacti/log/cacti.log ${CACTI_USER} ${CACTI_GROUP} 755
 
 INSTALLATION_DIRS=      share/examples/cacti
 INSTALLATION_DIRS+=	share/cacti
-
-pre-patch:
-	${CP} -R ${WRKDIR}/cacti-plugin-arch/files/* ${WRKDIR}
 
 post-extract:
 	${CP} ${FILESDIR}/httpd-cacti.conf ${WRKDIR}/
