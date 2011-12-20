@@ -1,0 +1,26 @@
+$NetBSD: patch-table_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- table.h~	1997-03-19 13:43:26.000000000 +0000
++++ table.h
+@@ -68,7 +68,7 @@ class table
+      table  (char dir [], char name [], bool &is_new, int lru_size = 0);
+      ~table ();
+ 
+-     void  check_bound (int adr, int row_no, int column_no, char action []);
++     void  check_bound (int adr, int row_no, int column_no, const char action []);
+      void  save        ();
+      void  load        ();
+ 
+@@ -76,8 +76,8 @@ class table
+      void  rename      (char  new_name []);
+      void  copy        (table *destination); 
+ 
+-     int   add_column  (char name [], int type);
+-     int   column_no   (char name []);
++     int   add_column  (const char name [], int type);
++     int   column_no   (const char name []);
+      int   num_columns (); 
+ 
+      int   candidate   (bool &with_remove);

@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2001/12/19 10:26:47 tron Exp $
+$NetBSD: patch-ae,v 1.3 2011/12/20 16:18:16 dholland Exp $
+
+ - use configured install prefix
 
 --- setupedit.hc.orig	Thu Sep 24 10:09:51 1998
 +++ setupedit.hc	Thu Sep 24 10:10:11 1998

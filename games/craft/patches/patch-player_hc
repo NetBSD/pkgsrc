@@ -1,0 +1,48 @@
+$NetBSD: patch-player_hc,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- player.hc~	2011-12-20 15:13:53.000000000 +0000
++++ player.hc
+@@ -2113,7 +2113,7 @@ int player::y_center (int ly)
+   {return (ly * pic_dy);
+   }
+ 
+-void player::show_percent (int x, int y, int dx, int dy, int p, char title [])
++void player::show_percent (int x, int y, int dx, int dy, int p, const char title [])
+   {if (! is_robot)
+       perform_show;
+ 
+@@ -2176,7 +2176,7 @@ void player::clear_status ()
+ 
+   }
+ 
+-void player::push_cmd (char name [], int code, char c, int a_price, int a_wood)
++void player::push_cmd (const char name [], int code, char c, int a_price, int a_wood)
+   {cmds       [num_cmds] = new button (w_status, name, x_cmd, y_cmd);
+    cmd_code   [num_cmds] = code;
+    cmd_char   [num_cmds] = c;
+@@ -2394,7 +2394,7 @@ bool supports (int type, int c)
+ 
+   }
+ 
+-void player::adjust_cmd (int cmd, char c, char name [])
++void player::adjust_cmd (int cmd, char c, const char name [])
+   {bool is_ok = true;
+ 
+    check_units;
+@@ -2869,12 +2869,12 @@ void player::inform (char msg [])
+ 
+   }
+ 
+-void player::write (char msg [])
++void player::write (const char msg [])
+   {
+   }
+ 
+ /*
+-void player::write (char msg [])
++void player::write (const char msg [])
+   {if (! is_robot)
+       perform_show;
+ 

@@ -1,0 +1,24 @@
+$NetBSD: patch-xstring_hc,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- xstring.hc~	2011-12-20 15:05:11.000000000 +0000
++++ xstring.hc
+@@ -130,7 +130,7 @@ void changeall (char s           [], 
+ 
+   }
+ 
+-char *substring (char s [], int from)
++char *substring (const char s [], int from)
+   {static bool is_init = false;
+    static char *result;
+ 
+@@ -151,7 +151,7 @@ char *substring (char s [], int from)
+ 
+   }
+ 
+-char *substring (char s [], int from, int to)
++char *substring (const char s [], int from, int to)
+   {static bool is_init = false;
+    static char *result;
+ 

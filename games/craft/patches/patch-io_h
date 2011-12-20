@@ -1,0 +1,19 @@
+$NetBSD: patch-io_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- io.h~	1997-03-19 13:41:40.000000000 +0000
++++ io.h
+@@ -13,9 +13,9 @@
+ #define io_h
+ 
+ void   ack   ();
+-void   s_ack (char msg []);
++void   s_ack (const char msg []);
+ bool   ok    ();
+-double d_get (char msg []);
+-int    i_get (char msg []);
++double d_get (const char msg []);
++int    i_get (const char msg []);
+ 
+ #endif

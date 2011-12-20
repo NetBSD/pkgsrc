@@ -1,0 +1,15 @@
+$NetBSD: patch-compress_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- compress.h~	1997-02-21 11:48:58.000000000 +0000
++++ compress.h
+@@ -26,7 +26,7 @@ class compress
+      compress  ();
+      ~compress ();
+ 
+-     char *frame_name (char postfix []);
++     char *frame_name (const char postfix []);
+      void encode      (char name    []);
+      void decode      (char name    []);
+  

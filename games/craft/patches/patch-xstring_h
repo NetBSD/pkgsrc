@@ -1,0 +1,17 @@
+$NetBSD: patch-xstring_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- xstring.h~	1997-02-21 11:52:27.000000000 +0000
++++ xstring.h
+@@ -14,8 +14,8 @@ void changeall  (char s [], 
+                  int  max_length_of_s,
+                  char tmpalte     [],
+                  char replacement []);
+-char *substring (char s [], int from, int to);
+-char *substring (char s [], int from); 
++char *substring (const char s [], int from, int to);
++char *substring (const char s [], int from); 
+ int  submatch   (char s [], char p [], int &pos);
+ void strcat     (char s [], int len, char app []);
+ void delchar    (char s [], int pos);

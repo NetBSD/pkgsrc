@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2009/07/08 17:20:52 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2011/12/20 16:18:16 dholland Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://set.gmd.de/pub/as/janus/craft/
 EXTRACT_SUFX=	.tar.Z
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
 USE_X11BASE=	yes
 
 SUBST_CLASSES+=		craft
@@ -36,14 +35,10 @@ post-extract:
 	for f in `find ${WRKSRC} -name "*.hc" -type f -print`; do	\
 	  ${ECHO} "" >>$$f;						\
 	done
-
-post-patch:
+	${CHMOD} a-x ${WRKSRC}/html/pic/*.gif
+	${CHMOD} a-x ${WRKSRC}/html/pic/craft.gif.old
+	${CHMOD} a-x ${WRKSRC}/html/craftcc.html
 	rm -f ${WRKSRC}/hcc/hcc
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Linux"
-BUILDLINK_TRANSFORM+=	rm:-lcompat
-.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

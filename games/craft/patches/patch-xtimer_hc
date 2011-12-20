@@ -1,0 +1,31 @@
+$NetBSD: patch-xtimer_hc,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - Fix y2038 issue.
+ - Don't use legacy time function ftime().
+
+--- xtimer.hc~	2011-12-20 14:14:03.000000000 +0000
++++ xtimer.hc
+@@ -5,19 +5,15 @@
+ #include "sys/time.h"
+ #include "signal.h"
+ 
+-extern "C"
+-  {int ftime (struct timeb *);
+-  }
+-
+ /*----------------------------------------------------------------------*/
+ /* CLASS xtimer (funktions)                                              */
+ /*----------------------------------------------------------------------*/
+ 
+-long x_sys_time ()
+-  {struct timeb	tb;
++long long x_sys_time ()
++  {struct timeval tv;
+ 
+-   ftime (&tb);
+-   return (tb.time * 1000 + (unsigned long) tb.millitm);
++   gettimeofday (&tv, NULL);
++   return (tv.tv_sec * 1000 + (unsigned long) tv.tv_usec / 1000);
+   }
+ 
+ void xtimer::start ()

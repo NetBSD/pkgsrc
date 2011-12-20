@@ -1,0 +1,15 @@
+$NetBSD: patch-selector_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- selector.h~	1997-02-21 11:52:20.000000000 +0000
++++ selector.h
+@@ -38,7 +38,7 @@ class selector
+    bool     mark         [max_selector_cases];
+    int      case_dy;   
+    
+-   selector (char name [], 
++   selector (const char name [], 
+              win  *w,
+              int  num_cases,
+              char case_string [max_selector_cases][128],

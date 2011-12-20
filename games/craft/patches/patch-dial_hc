@@ -1,0 +1,24 @@
+$NetBSD: patch-dial_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- dial.hc~	2011-12-20 14:38:01.000000000 +0000
++++ dial.hc
+@@ -16,7 +16,7 @@
+ #define val_dy    20
+ 
+ dial::dial (win  *p_w,
+-            char p_title [],
++            const char p_title [],
+             int  p_title_dx, 
+             int  p_x,
+             int  p_y,
+@@ -95,7 +95,7 @@ dial::dial (win  *p_w,
+ 
+ 
+ dial::dial (win  *p_w,
+-            char p_title [],
++            const char p_title [],
+             int  p_title_dx, 
+             int  p_x,
+             int  p_y,
