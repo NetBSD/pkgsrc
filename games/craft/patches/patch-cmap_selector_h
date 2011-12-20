@@ -1,0 +1,35 @@
+$NetBSD: patch-cmap_selector_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- cmap_selector.h~	1997-02-21 11:48:24.000000000 +0000
++++ cmap_selector.h
+@@ -40,7 +40,7 @@ class cmap_selector
+    int      case_dy;   
+    int      case_dx;
+    
+-   cmap_selector     (char name [], 
++   cmap_selector     (const char name [], 
+                       win  *w,
+                       int  num_cases,
+                       char case_string [max_cmap_selector_cases][128],
+@@ -55,7 +55,7 @@ class cmap_selector
+    void set_cases     (int  num_cases,
+                        char case_string [max_cmap_selector_cases][128]);
+    void set_mark      (int  case_no, bool mode);
+-   void set_string    (int  case_no, char string []);
++   void set_string    (int  case_no, const char string []);
+    void refresh       (int  case_no);
+    bool is_mark       (int  case_no);
+    bool on            ();
+@@ -65,8 +65,8 @@ class cmap_selector
+ 
+   }; 
+ 
+-bool cmap_sel      (char name [], char pattern []);
+-void get_file_list (char file_pattern [],
++bool cmap_sel      (char name [], const char pattern []);
++void get_file_list (const char file_pattern [],
+                     int  &num_files,
+                     char file_list [max_cmap_selector_cases][128]);
+ 

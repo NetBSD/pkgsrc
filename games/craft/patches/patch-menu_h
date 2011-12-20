@@ -1,0 +1,28 @@
+$NetBSD: patch-menu_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- menu.h~	1997-03-19 13:41:59.000000000 +0000
++++ menu.h
+@@ -93,10 +93,10 @@ class menu
+   
+ 
+       menu ();
+-      menu (char name [],
++      menu (const char name [],
+             int  x,
+             int  y,
+-            char cmds [],
++            const char cmds [],
+             int  wmode = m_pop_up,
+             int  menu_group = std_menu_group);
+ 
+@@ -112,7 +112,7 @@ class menu
+      void release      ();
+      void release      (int no);
+      void write        (int m_no, char string [], bool pressed = false);
+-     bool get_cmd      (char cmds [], int &p, char cmd []);
++     bool get_cmd      (const char cmds [], int &p, char cmd []);
+      
+   };
+ 
