@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/03/21 08:47:12 obache Exp $
+# $NetBSD: Makefile,v 1.23 2011/12/20 03:11:19 dholland Exp $
 #
 
 # pkgsrc/mail/sendmail (as of 8.11.0) specifically wants 1999, not 2000.
@@ -21,6 +21,7 @@ COMMENT=	Safe and Fast IO library
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
+MAKE_FLAGS+=	MKPROFILE=yes
 
 WRKSRC=		${WRKDIR}
 
