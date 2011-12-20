@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2006/06/21 20:46:28 joerg Exp $
+$NetBSD: patch-af,v 1.2 2011/12/20 10:35:03 wiz Exp $
 
---- boson/unit.cpp.orig	2006-06-21 18:55:20.000000000 +0000
+--- boson/unit.cpp.orig	2003-03-29 11:42:04.000000000 +0000
 +++ boson/unit.cpp
 @@ -1083,7 +1083,7 @@ BoItemList* Unit::unitsInRange(unsigned 
   QRect rect;
