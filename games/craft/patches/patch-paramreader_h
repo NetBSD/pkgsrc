@@ -1,0 +1,29 @@
+$NetBSD: patch-paramreader_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- paramreader.h.orig	1997-03-19 13:42:26.000000000 +0000
++++ paramreader.h
+@@ -56,15 +56,15 @@ class paramreader
+      int  num_includes;
+ 
+ 
+-          paramreader (char *param_file_name);
++          paramreader (const char *param_file_name);
+ 
+    void   dump       ();
+-   char * s_param    (char name []);
+-   double d_param    (char name []);
+-   int    i_param    (char name []);
+-   int    param_no   (char name []);
+-   void   set        (char name [], char value []);
+-   void   read_sym   (char sym  [], bool &is_eof);
++   char * s_param    (const char name []);
++   double d_param    (const char name []);
++   int    i_param    (const char name []);
++   int    param_no   (const char name []);
++   void   set        (const char name [], const char value []);
++   void   read_sym   (const char sym  [], bool &is_eof);
+    int    max_i_name ();
+ 
+   };

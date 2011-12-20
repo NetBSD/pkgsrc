@@ -1,15 +1,145 @@
-$NetBSD: patch-ab,v 1.3 2001/12/19 10:51:19 tron Exp $
+$NetBSD: patch-ab,v 1.4 2011/12/20 16:18:16 dholland Exp $
 
---- win.hc.orig	Wed Mar 19 07:21:21 1997
-+++ win.hc	Thu Sep 24 11:48:49 1998
-@@ -118,8 +118,8 @@
+ - use configured installation directory properly 
+ - const correctness demanded by recent gcc
+
+--- win.hc.orig	2011-12-20 15:13:53.000000000 +0000
++++ win.hc
+@@ -42,7 +42,7 @@ bool bitmap_size (char name [], int &dx,
+ /* ROUTINES text size information (deklarations)                        */
+ /*----------------------------------------------------------------------*/
  
+-void text_size (char s [], char font [], int &dx, int &dy, int &num_lines)
++void text_size (const char s [], const char font [], int &dx, int &dy, int &num_lines)
+   {XFontStruct *font_info;
+    Display     *display;
+ 
+@@ -119,37 +119,37 @@ void init_default_handler ()
  .  perform_init
       {win_handler_init = true;
--      if (! f_exists (".windefaults.params"))
+       if (! f_exists (".windefaults.params"))
 -         system ("cp /home/hua/craft/.windefaults.params .");
-+      if (! f_exists (".windefaults.params"))
 +         system ("cp " CRAFT_DIR ".windefaults.params .windefaults.params");
        win_defaults = new paramreader (".windefaults");
       }.
+ 
+   }
+ 
+-int win_default_i (int param, char default_name [])
++int win_default_i (int param, const char default_name [])
+   {init_default_handler ();
+    if   (param != by_default)
+         return param;
+    else return win_default_i (default_name);
+   }
+ 
+-int win_default_i (char default_name [])
++int win_default_i (const char default_name [])
+   {init_default_handler ();
+    return win_defaults->i_param (default_name);
+   }
+ 
+-char *win_default_s (char default_name [])
++char *win_default_s (const char default_name [])
+   {init_default_handler ();
+    return win_defaults->s_param (default_name);
+   }
+ 
+-int win_default_c (int param, char default_name [])
++int win_default_c (int param, const char default_name [])
+   {init_default_handler ();
+    if   (param != by_default)
+         return param;
+    else return win_default_c (default_name);
+   }
+ 
+-int win_default_c (char default_name [])
++int win_default_c (const char default_name [])
+   {char color_name [128];
+ 
+    init_default_handler ();
+@@ -159,7 +159,7 @@ int win_default_c (char default_name [])
+    else return win_color (color_name);
+   }
+ 
+-int win_color (char name [])
++int win_color (const char name [])
+   {if (strcmp (name, "white")      == 0)    return  0 ;
+    if (strcmp (name, "red")        == 0)    return  1 ;
+    if (strcmp (name, "red1")       == 0)    return  2 ;
+@@ -263,8 +263,8 @@ bool win::fix_initialized = false;
+ /* CLASS win (funktions)                                                */
+ /*----------------------------------------------------------------------*/
+ 
+-win::win (char title [],
+-          char host  [],
++win::win (const char title [],
++          const char host  [],
+           int  x,
+           int  y, 
+           int  dx,
+@@ -512,8 +512,8 @@ win::win (char title [],
+   }
+ 
+ win::win (win  *parent,
+-          char title [],
+-          char host  [],
++          const char title [],
++          const char host  [],
+           int  x,
+           int  y, 
+           int  dx,
+@@ -749,7 +749,7 @@ win::win (win  *parent,
+ 
+   }
+ 
+-win::win (char title [])
++win::win (const char title [])
+   {mydisplay = XOpenDisplay    ("");
+    myscreen  = DefaultScreen   (mydisplay);
+    cmap      = DefaultColormap (mydisplay, myscreen);
+@@ -762,7 +762,7 @@ win::win (char title [])
+    is_alien = true;
+   }
+       
+-Window win::grab (Display *dsp, Window wnd, char name [])
++Window win::grab (Display *dsp, Window wnd, const char name [])
+   {Window       *children, dummy;
+    unsigned int nchildren;
+    int          i;
+@@ -817,7 +817,7 @@ win::~win ()
+ #undef green
+ #undef blue
+ 
+-void win::alloc_color (char name [], int no)
++void win::alloc_color (const char name [], int no)
+   {Screen *src = ScreenOfDisplay (mydisplay, myscreen);
+    XColor c;
+    XColor d;
+@@ -1753,7 +1753,7 @@ void win::shift (int x1, int y1, int x2,
+ 
+   }
+ 
+-void win::text_size (char string [], int &dx, int &dy)
++void win::text_size (const char string [], int &dx, int &dy)
+   {if (is_enable)
+       perform_get_size;
+ 
+@@ -1767,7 +1767,7 @@ void win::text_size (char string [], int
+ 
+   }
+ 
+-void win::set_font (char name [])
++void win::set_font (const char name [])
+   {if (is_enable)
+       perform_load;
+ 
+@@ -1795,7 +1795,7 @@ void win::write (int x, int y, int d)
+    write   (x, y, s);
+   }
+ 
+-void win::write (int x, int y, char string [])
++void win::write (int x, int y, const char string [])
+   {if (is_enable)
+       perform_write;
  
