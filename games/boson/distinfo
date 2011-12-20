@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.4 2006/06/21 20:46:28 joerg Exp $
+$NetBSD: distinfo,v 1.5 2011/12/20 10:35:09 wiz Exp $
 
 SHA1 (boson-all-0.8.tar.bz2) = 8af09f0632e0483e8d0ebd279ea302bbaa3518a7
 RMD160 (boson-all-0.8.tar.bz2) = eb894699fefa422ca05fde5e1a3b2cd864d4ecbb
 Size (boson-all-0.8.tar.bz2) = 32271883 bytes
-SHA1 (patch-aa) = a95b4abb4d13fce5731192b9f99a8e6baf69af69
+SHA1 (patch-aa) = b4b96f43e2e1614e2237e77bd6d6f54eeb39d4ee
 SHA1 (patch-ab) = 5ff072e94bbdb6d0f3e2876852f0f8e1c8586a54
-SHA1 (patch-ac) = 13f5668982ae5a1930640d8baba6dbd2a5dfd027
-SHA1 (patch-ad) = c2004c4d2a9fbf908a511c8aa39ab6b46ea0c930
-SHA1 (patch-ae) = f2c219e7d9deb7c7c7c16b73e6f3f1d4a81b3c13
-SHA1 (patch-af) = f5b50b1b044eea72ebb3a64cb2dc194d261a4ff0
+SHA1 (patch-ac) = 6a183218781bbb7498635892c11cac3a37a573b6
+SHA1 (patch-ad) = 487d3c1997b95bf3239d6d5ede0d7f390d391a37
+SHA1 (patch-ae) = 1c3d4a8d68d31ce7bb0706237c2aabcaab247abf
+SHA1 (patch-af) = 399e28eb547e1f517354d17c406c9becdf64b84a
+SHA1 (patch-boson_bo3dsload.h) = f737c53872767c2b7145e631820508b8a5481a7e
