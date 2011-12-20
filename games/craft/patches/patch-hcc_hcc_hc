@@ -1,18 +1,18 @@
-$NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
+$NetBSD: patch-hcc_hcc_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
 
 - use standard headers
 - don't croak on platforms where char is unsigned
-- const correctness demanded by newer gcc
+- const correctness demanded by recent gcc
 - declare main's return type
-- should match patch-hcc_hcc_hc
+- should match patch-ag
 
---- hcc/hcc.cc.orig	1997-02-21 11:50:16.000000000 +0000
-+++ hcc/hcc.cc
+--- hcc/hcc.hc.orig	2011-12-20 14:59:27.000000000 +0000
++++ hcc/hcc.hc
 @@ -1,6 +1,5 @@
 -#include "bool.h"
  #include "stdio.h"
 -#include "std.h"
-+#include <stdlib.h>
++#include "stdlib.h"
  #include "string.h"
  #include "ctype.h"
  
@@ -23,9 +23,9 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
 -void f_open (FILE *&f, char name [], char mode [])
 +void f_open (FILE *&f, const char name [], const char mode [])
    {f = fopen (name, mode);
-     /* check_error */      {if (mode [0] == 'r' && f == NULL)
-          {printf ("1, FILE, file '%s' not found\n", name);
-@@ -51,7 +50,7 @@ void f_open (FILE *&f, char name [], cha
+    check_error;
+ 
+@@ -53,7 +52,7 @@ void f_open (FILE *&f, char name [], cha
    }
  
  
@@ -34,7 +34,7 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
    {static bool is_init = false;
     static char *result;
  
-@@ -68,7 +67,7 @@ char *substring (char s [], int from)
+@@ -74,7 +73,7 @@ char *substring (char s [], int from)
  
    }
  
@@ -43,7 +43,7 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
    {static bool is_init = false;
     static char *result;
  
-@@ -91,8 +90,8 @@ char *substring (char s [], int from, in
+@@ -101,8 +100,8 @@ char *substring (char s [], int from, in
  
  void changeall (char s           [], 
                  int  max_length_of_s,
@@ -54,7 +54,7 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
  
    {char *pos;
  
-@@ -129,7 +128,7 @@ void changeall (char s           [], 
+@@ -147,7 +146,7 @@ void changeall (char s           [], 
  
    }
   
@@ -63,7 +63,7 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
    {static char r [256];
  
     strcpy (r, name);
-@@ -175,7 +174,7 @@ void dump_line_cor ()
+@@ -198,7 +197,7 @@ void dump_line_cor ()
       };
    }
  
@@ -72,7 +72,7 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
    {char err_msg [256];
     char ii      [128];
  
-@@ -187,7 +186,7 @@ void pass_1_error (int line_no, char msg
+@@ -210,7 +209,7 @@ void pass_1_error (int line_no, char msg
     exit      (1);
    }
  
@@ -81,7 +81,7 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
    {fclose (src);
     printf ("error : %d : %s\n", line_no, msg);
     exit   (1);
-@@ -203,7 +202,7 @@ bool pass_1 (char src_name [])
+@@ -226,7 +225,7 @@ bool pass_1 (char src_name [])
     char last_last_sym;
     int  last_ref_sym_line;
     int  last_ref_sym_no;
@@ -90,7 +90,7 @@ $NetBSD: patch-ag,v 1.5 2011/12/20 16:18:16 dholland Exp $
     int  nested_brackets;
     bool inside_refinement;
     bool inside_string;
-@@ -1307,7 +1306,7 @@ void pass_3 (char src_name [])
+@@ -883,7 +882,7 @@ void pass_3 (char src_name [])
  
    }
  

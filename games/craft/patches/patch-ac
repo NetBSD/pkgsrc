@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2001/12/19 10:26:47 tron Exp $
+$NetBSD: patch-ac,v 1.3 2011/12/20 16:18:16 dholland Exp $
+
+ - use configured install prefix
 
 --- craft_def.h.orig	Fri Feb 21 04:49:57 1997
 +++ craft_def.h	Thu Sep 24 09:19:35 1998
