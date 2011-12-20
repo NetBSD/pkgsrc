@@ -1,0 +1,29 @@
+$NetBSD: patch-file_selector_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- file_selector.h~	1997-02-21 11:50:14.000000000 +0000
++++ file_selector.h
+@@ -32,17 +32,17 @@ class file_selector
+ 
+    button   *cancel;
+   
+-   file_selector      (char name [], 
++   file_selector      (const char name [], 
+                        int  x,
+                        int  y,
+-                       char file_name    [],
+-                       char file_pattern [],
++                       const char file_name    [],
++                       const char file_pattern [],
+                        bool must_exists = true);
+ 
+-   file_selector      (char name [],
++   file_selector      (const char name [],
+                        int  x,
+                        int  y,
+-                       char full_file_name [],
++                       const char full_file_name [],
+                        bool must_exist = true);
+ 
+    ~file_selector     ();

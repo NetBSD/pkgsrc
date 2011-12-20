@@ -1,0 +1,33 @@
+$NetBSD: patch-table_hc,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- table.hc~	2011-12-20 15:13:53.000000000 +0000
++++ table.hc
+@@ -66,7 +66,7 @@ table::~table ()
+       delete (lru_queue);
+   }
+    
+-void table::check_bound (int adr, int row_no, int column_no, char action [])
++void table::check_bound (int adr, int row_no, int column_no, const char action [])
+   {if (row_no < 0 || row_no >= number_of_rows) {
+        fprintf (stderr, "row = %d\n", row_no);
+        errorstop (4, "table", action, "row out of range", name);
+@@ -424,7 +424,7 @@ void table::copy (table *dest)
+ 
+   }
+ 
+-int table::add_column (char name [], int type)
++int table::add_column (const char name [], int type)
+   {int col_no;
+ 
+    get_col_no;
+@@ -462,7 +462,7 @@ int table::add_column (char name [], int
+ 
+   }
+    
+-int table::column_no (char name [])
++int table::column_no (const char name [])
+   {for (int i = 0; i < number_of_rows; i++)
+      if (strcmp (column_name [i], name) == 0)
+         return i;

@@ -1,7 +1,10 @@
-$NetBSD: patch-ah,v 1.1 1999/08/11 21:54:22 tron Exp $
+$NetBSD: patch-ah,v 1.2 2011/12/20 16:18:16 dholland Exp $
 
---- xfile.hc.orig	Thu Mar 20 09:29:16 1997
-+++ xfile.hc	Wed Aug  4 14:42:46 1999
+ - handle platforms where char is unsigned (XXX looks suspicious to me)
+ - const correctness demanded by recent gcc
+
+--- xfile.hc.orig	2011-12-20 15:13:53.000000000 +0000
++++ xfile.hc
 @@ -12,10 +12,10 @@
  /*----------------------------------------------------------------------*/
  
@@ -17,3 +20,113 @@ $NetBSD: patch-ah,v 1.1 1999/08/11 21:54:22 tron Exp $
     };
  
  union conv_data
+@@ -29,7 +29,7 @@ union conv_data
+ /* General functions                                                    */
+ /*----------------------------------------------------------------------*/
+ 
+-bool f_exists (char file_name [])
++bool f_exists (const char file_name [])
+   {FILE *f;
+    bool is_error;
+ 
+@@ -60,7 +60,7 @@ double d_get (FILE *f, bool &is_eof) 
+ 
+   }
+ 
+-void f_open (FILE *&f, char name [], char mode [])
++void f_open (FILE *&f, const char name [], const char mode [])
+   {f = fopen (name, mode);
+    check_error;
+ 
+@@ -74,7 +74,7 @@ void f_open (FILE *&f, char name [], cha
+ 
+   }
+       
+-void f_open_with_extend (FILE *&f, char name [], char mode [], int max_no)
++void f_open_with_extend (FILE *&f, const char name [], const char mode [], int max_no)
+   {int  version;
+    char v_name [128];
+ 
+@@ -113,7 +113,7 @@ char *f_getline (FILE *f, char record []
+    return r;
+   }
+ 
+-time_t f_date (char file_name [])
++time_t f_date (const char file_name [])
+   {
+   }
+ /*
+@@ -124,7 +124,7 @@ time_t f_date (char file_name [])
+   }
+ */
+ 
+-char *f_name (char full_path [])
++char *f_name (const char full_path [])
+   {static char r [1024];
+    int         i;
+ 
+@@ -136,7 +136,7 @@ char *f_name (char full_path [])
+    return r;
+   }
+ 
+-char *f_path (char full_path [])
++char *f_path (const char full_path [])
+   {static char r [1024];
+           int  p = 0;
+ 
+@@ -150,7 +150,7 @@ char *f_path (char full_path [])
+    return r;
+   }
+ 
+-char *f_tail (char full_path [])
++char *f_tail (const char full_path [])
+   {static char r [1024];
+ 
+    if   (f_is_dir (full_path))
+@@ -168,30 +168,30 @@ char *f_tail (char full_path [])
+ 
+   }
+ 
+-char *f_home_dir (char full_name [])
++char *f_home_dir (const char full_name [])
+   {static char result [512];
+ 
+    sprintf (result, "/home/%s", &full_name [1]);
+    return result;
+   }
+ 
+-bool f_is_pattern (char f_name [])
++bool f_is_pattern (const char f_name [])
+   {return (strstr (f_name, "*") != NULL);
+   }
+ 
+-bool f_is_dir (char file_name [])
++bool f_is_dir (const char file_name [])
+   {return (file_name [strlen (file_name)-1] == '/' || 
+            file_name [strlen (file_name)-1] == '.');
+   }
+ 
+-bool f_is_home_dir (char full_name [])
++bool f_is_home_dir (const char full_name [])
+   {return full_name [0] == '~';
+   }
+ 
+-bool sel_get_name (char name      [],
++bool sel_get_name (const char name      [],
+                    char f_name    [],
+-                   char f_pattern [],
+-                   char mode      [])
++                   const char f_pattern [],
++                   const char mode      [])
+ 
+   {char          pat [256];
+    file_selector *fsel;
+@@ -260,7 +260,7 @@ bool sel_get_name (char name      [],
+ 
+   }
+ 
+-char *complete (char name [], char tail [])
++char *complete (const char name [], const char tail [])
+   {static char r [256];
+ 
+    strcpy (r, name);

@@ -1,0 +1,15 @@
+$NetBSD: patch-object_handler_hc,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- object_handler.hc~	2011-12-20 15:13:53.000000000 +0000
++++ object_handler.hc
+@@ -9321,7 +9321,7 @@ bool object_handler::readmin (int  n_col
+   }
+ 
+ 
+-void object_handler::write (int color, char msg [])
++void object_handler::write (int color, const char msg [])
+   {players [color_player [color]]->write (msg);
+   }
+ 

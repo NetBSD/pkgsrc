@@ -1,0 +1,15 @@
+$NetBSD: patch-cmap_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- cmap.h~	1997-02-21 11:48:24.000000000 +0000
++++ cmap.h
+@@ -23,7 +23,7 @@ class cmap
+    int         rot;
+ 
+    cmap      (win  *w_i,
+-              char name_i [],
++              const char name_i [],
+               bool preload = true,
+               bool smart_load = true);
+    ~cmap     ();
