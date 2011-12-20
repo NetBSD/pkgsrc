@@ -1,0 +1,15 @@
+$NetBSD: patch-scroller_hc,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- scroller.hc~	2011-12-20 14:38:01.000000000 +0000
++++ scroller.hc
+@@ -4,7 +4,7 @@
+ #define bar_button_size 14
+ #define bar_size        16
+ 
+-scroller::scroller (char v_name [],
++scroller::scroller (const char v_name [],
+                     win  *v_w,
+                     int  v_x,
+                     int  v_y,

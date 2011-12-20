@@ -1,0 +1,15 @@
+$NetBSD: patch-compress_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- compress.hc~	2011-12-20 15:13:53.000000000 +0000
++++ compress.hc
+@@ -25,7 +25,7 @@ compress::~compress ()
+   {
+   }
+ 
+-char *compress::frame_name (char postfix [])
++char *compress::frame_name (const char postfix [])
+   {static char r [128];
+ 
+    sprintf (r, "%s%04d.%s", name, snr, postfix);
