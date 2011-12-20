@@ -1,0 +1,33 @@
+$NetBSD: patch-io_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- io.hc~	2011-12-20 15:13:53.000000000 +0000
++++ io.hc
+@@ -4,7 +4,7 @@ void ack () 
+   {while (getchar () != '\n');
+   }
+ 
+-void s_ack (char msg []) 
++void s_ack (const char msg []) 
+   {printf ("%s ", msg);
+    ack    ();
+   }
+@@ -13,7 +13,7 @@ bool ok ()
+   {return (getchar () != 'q');
+   }
+ 
+-double d_get (char msg [])
++double d_get (const char msg [])
+   {float d;
+ 
+    printf ("%s", msg);
+@@ -21,7 +21,7 @@ double d_get (char msg [])
+    return (double) d;
+  }
+ 
+-int i_get (char msg [])
++int i_get (const char msg [])
+   {int i;
+ 
+    printf ("%s", msg);

@@ -1,0 +1,36 @@
+$NetBSD: patch-player_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- player.h~	1997-02-21 11:52:14.000000000 +0000
++++ player.h
+@@ -149,7 +149,7 @@ class player
+    void edit                ();
+ 
+    void inform              (char msg []);
+-   void write               (char msg []);
++   void write               (const char msg []);
+ 
+    void load_pics           ();
+ 
+@@ -184,17 +184,17 @@ class player
+    int  x_center            (int lx);
+    int  y_center            (int ly);
+ 
+-   void show_percent        (int x,int y,int dx,int dy,int p,char title []);
++   void show_percent        (int x,int y,int dx,int dy,int p, const char title []);
+    void clear_percent       (int x,int y,int dx,int dy);
+    void clear_status        ();
+    void show_status         (int id, bool is_first_time);
+ 
+-   void push_cmd            (char name [], 
++   void push_cmd            (const char name [], 
+                              int  code, 
+                              char c, 
+                              int  price, 
+                              int  wood);
+-   void adjust_cmd          (int cmd, char c, char name []);
++   void adjust_cmd          (int cmd, char c, const char name []);
+    void adjust_cmds         ();
+ 
+    void talk                (char from [], char msg []);

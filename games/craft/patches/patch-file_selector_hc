@@ -1,0 +1,34 @@
+$NetBSD: patch-file_selector_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- file_selector.hc~	2011-12-20 15:13:53.000000000 +0000
++++ file_selector.hc
+@@ -23,10 +23,10 @@
+ #define pattern_dx  292
+ #define pattern_dy  20
+   
+-file_selector::file_selector (char p_name [],
++file_selector::file_selector (const char p_name [],
+                               int  x,
+                               int  y,
+-                              char full_file_name [],
++                              const char full_file_name [],
+                               bool must_exist)
+ 
+   {store_params;
+@@ -77,11 +77,11 @@ file_selector::file_selector (char p_nam
+ 
+   }
+ 
+-file_selector::file_selector (char p_name [], 
++file_selector::file_selector (const char p_name [], 
+                               int  x,
+                               int  y,
+-                              char p_file_name    [],
+-                              char p_file_pattern [],
++                              const char p_file_name    [],
++                              const char p_file_pattern [],
+                               bool must_exist)
+ 
+   {store_params;

@@ -1,0 +1,24 @@
+$NetBSD: patch-xtimer_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - Fix y2038 issue.
+
+--- xtimer.h~	1997-04-25 12:49:00.000000000 +0000
++++ xtimer.h
+@@ -13,7 +13,7 @@
+ class xtimer
+   {private :
+ 
+-     long   stamp;
++     long long   stamp;
+      double dt;
+ 
+    public :
+@@ -26,7 +26,7 @@ class xtimer
+ 
+   };
+ 
+-long x_sys_time ();
++long long x_sys_time ();
+ void delay (int dt);
+ 
+ #endif

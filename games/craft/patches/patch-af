@@ -1,8 +1,29 @@
-$NetBSD: patch-af,v 1.2 1998/10/14 08:19:51 frueauf Exp $
+$NetBSD: patch-af,v 1.3 2011/12/20 16:18:16 dholland Exp $
 
---- paramreader.hc.orig	Thu Sep 24 12:00:23 1998
-+++ paramreader.hc	Thu Sep 24 12:00:59 1998
-@@ -101,8 +101,11 @@
+ - const correctness demanded by newer gcc
+ - look in $HOME for settings file
+
+--- paramreader.hc.orig	2011-12-20 16:08:24.000000000 +0000
++++ paramreader.hc
+@@ -32,7 +32,7 @@ void check_params (int num_params)
+ /* CLASS paramreader (functions)                                        */
+ /*----------------------------------------------------------------------*/
+ 
+-void paramreader::read_sym (char sym [], bool &is_eof)
++void paramreader::read_sym (const char sym [], bool &is_eof)
+   {is_eof = false;
+    get_sym;
+    perhaps_skip_comment;
+@@ -88,7 +88,7 @@ void paramreader::read_sym (char sym [],
+   
+   }
+    
+-paramreader::paramreader (char param_file_name [])
++paramreader::paramreader (const char param_file_name [])
+   {bool is_eof = false;
+ 
+    num_params = 0;
+@@ -101,8 +101,11 @@ paramreader::paramreader (char param_fil
  .  open_param_file   
       {char file_name [128];
  
@@ -15,3 +36,40 @@ $NetBSD: patch-af,v 1.2 1998/10/14 08:19:51 frueauf Exp $
        f [0]        = fopen (file_name, "r");
        num_includes = 1;
       }.
+@@ -129,7 +132,7 @@ void paramreader::dump ()
+      printf (">%s< = >%s<\n", name [i], value [i]);
+   }
+ 
+-int paramreader::param_no (char p_name [])
++int paramreader::param_no (const char p_name [])
+   {for (int no = 0; no < num_params; no++)
+      if (strcmp (name [no], p_name) == 0)
+         return no;
+@@ -138,15 +141,15 @@ int paramreader::param_no (char p_name [
+    return (0);
+   }
+ 
+-char * paramreader::s_param (char name [])
++char * paramreader::s_param (const char name [])
+   {return value [param_no (name)];
+   }
+ 
+-double paramreader::d_param (char name [])
++double paramreader::d_param (const char name [])
+   {return atof (value [param_no (name)]);
+   }
+ 
+-int paramreader::i_param (char name [])
++int paramreader::i_param (const char name [])
+   {return atoi (value [param_no (name)]);
+   }
+ 
+@@ -158,7 +161,7 @@ int paramreader::max_i_name ()
+    return max;
+   }
+ 
+-void paramreader::set (char p_name [], char p_value [])
++void paramreader::set (const char p_name [], const char p_value [])
+   {int pno = param_no (p_name);
+ 
+    strcpy (value [pno], p_value);

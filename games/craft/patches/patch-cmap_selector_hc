@@ -1,0 +1,42 @@
+$NetBSD: patch-cmap_selector_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- cmap_selector.hc.orig	2011-12-20 16:09:53.000000000 +0000
++++ cmap_selector.hc
+@@ -11,7 +11,7 @@
+ #define cmap_selector_marked_case_color    yellow 
+ #define cmap_selector_unmarked_case_color  black
+ 
+-cmap_selector::cmap_selector (char v_name [], 
++cmap_selector::cmap_selector (const char v_name [], 
+                               win  *v_w,
+                               int  v_num_cases,
+                               char v_case_string[max_cmap_selector_cases][128],
+@@ -118,7 +118,7 @@ void cmap_selector::set_mark (int case_n
+    refresh (case_no);
+   } 
+ 
+-void cmap_selector::set_string (int case_no, char string [])
++void cmap_selector::set_string (int case_no, const char string [])
+   {strcpy  (case_strings [case_no], string);
+    get_draw_length;
+    refresh (case_no);
+@@ -290,7 +290,7 @@ bool cmap_selector::eval (int &case_no, 
+   }
+ 
+ 
+-bool cmap_sel (char name [], char pattern [])
++bool cmap_sel (char name [], const char pattern [])
+   {int  num_cases;
+    char cases [max_cmap_selector_cases][128];
+    bool quit;
+@@ -339,7 +339,7 @@ bool cmap_sel (char name [], char patter
+   }
+ 
+ 
+-void get_file_list (char pattern [],
++void get_file_list (const char pattern [],
+                     int  &num_files,
+                     char file_list [max_cmap_selector_cases][128])
+ 

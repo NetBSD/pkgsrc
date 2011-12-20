@@ -1,0 +1,47 @@
+$NetBSD: patch-errorhandling_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- errorhandling.h~	1997-03-19 13:41:06.000000000 +0000
++++ errorhandling.h
+@@ -13,26 +13,26 @@
+ #include "stdio.h"
+ 
+ void errorstop (int  error_no,
+-                char c_class [],
+-                char msg     []);
++                const char c_class [],
++                const char msg     []);
+ 
+ void errorstop (int  error_no,
+-                char c_class [],
+-                char msg     [],
+-                char info    []);
++                const char c_class [],
++                const char msg     [],
++                const char info    []);
+ 
+ void errorstop (int  error_no,
+-                char c_class [],
+-                char msg     [],
+-                char info    [],
+-		char param1  []);
++                const char c_class [],
++                const char msg     [],
++                const char info    [],
++		const char param1  []);
+ 
+ void errorstop (int  error_no,
+-                char c_class [],
+-                char msg     [],
+-                char info    [],
+-		char param1  [],
+-                char param2  []);
++                const char c_class [],
++                const char msg     [],
++                const char info    [],
++		const char param1  [],
++                const char param2  []);
+ 
+ #endif
+ 

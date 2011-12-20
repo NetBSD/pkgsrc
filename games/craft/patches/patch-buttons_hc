@@ -1,0 +1,30 @@
+$NetBSD: patch-buttons_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- buttons.hc.orig	2011-12-20 15:13:53.000000000 +0000
++++ buttons.hc
+@@ -12,7 +12,7 @@
+ #include "win.h"
+ 
+ button::button (win  *b_w,
+-                char b_label [],
++                const char b_label [],
+                 int  b_x,
+                 int  b_y,
+                 bool b_with_repeat,
+@@ -179,12 +179,12 @@ bool button::eval (int &button)
+ 
+   }
+ 
+-void button::write (char label_string [])
++void button::write (const char label_string [])
+   {strcpy (label, label_string);
+    write  (label, is_pressed);
+   }
+ 
+-void button::write (char label [], bool is_pressed)
++void button::write (const char label [], bool is_pressed)
+   {draw_border;
+    if   (is_icon)
+         write_icon

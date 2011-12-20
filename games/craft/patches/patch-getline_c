@@ -1,0 +1,15 @@
+$NetBSD: patch-getline_c,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- getline.hc~	2011-12-20 14:38:01.000000000 +0000
++++ getline.hc
+@@ -4,7 +4,7 @@
+ 
+ #define hist_button_name         "/hist.open"
+ 
+-getline::getline (char v_name   [],
++getline::getline (const char v_name   [],
+                   win  *v_w,        
+                   char v_string [], 
+                   int  v_x,         

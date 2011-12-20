@@ -1,0 +1,75 @@
+$NetBSD: patch-masks_hc,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- masks.hc~	2011-12-20 15:13:53.000000000 +0000
++++ masks.hc
+@@ -67,11 +67,11 @@ void frame (win *w, int x1, int y1, int 
+    w->line      (x1, y2, x1, y1);
+   }
+ 
+-bool yes (char question [])
++bool yes (const char question [])
+   {return yes ("", question);
+   }
+ 
+-bool yes (char host [], char question [])
++bool yes (const char host [], const char question [])
+   {win    *w;
+    button *ok;
+    button *no;
+@@ -125,7 +125,7 @@ bool yes (char host [], char question []
+ 
+   }
+ 
+-bool yes (win *parent, char host [], char question [])
++bool yes (win *parent, const char host [], const char question [])
+   {win    *w;
+    button *ok;
+    button *no;
+@@ -179,11 +179,11 @@ bool yes (win *parent, char host [], cha
+ 
+   }
+ 
+-void ack (char message [])
++void ack (const char message [])
+   {ack ("", message);
+   }
+ 
+-void ack (char host [], char message [])
++void ack (const char host [], const char message [])
+   {win    *w;
+    button *ok;
+    int    dx;
+@@ -262,11 +262,11 @@ void ack (char host [], char message [])
+ 
+   }
+ 
+-void tell (win *&w, char message [])
++void tell (win *&w, const char message [])
+   {tell ("", w, message);
+   }
+ 
+-void tell (char host [], win *&w, char message [])
++void tell (const char host [], win *&w, const char message [])
+   {open_mask;
+    tell_message;
+ 
+@@ -295,7 +295,7 @@ void tell (char host [], win *&w, char m
+ 
+   }
+ 
+-void tell (char host [], win *parent, win *&w, char message [])
++void tell (const char host [], win *parent, win *&w, const char message [])
+   {open_mask;
+    tell_message;
+ 
+@@ -365,7 +365,7 @@ bool get_line (char s    [],
+ 
+   }
+         
+-int select (char menu_string [], char *name)
++int select (const char menu_string [], char *name)
+   {menu *m;
+    char *m_string;
+    char m_name [512];

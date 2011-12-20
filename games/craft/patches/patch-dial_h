@@ -1,0 +1,24 @@
+$NetBSD: patch-dial_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- dial.h~	1997-02-21 11:50:13.000000000 +0000
++++ dial.h
+@@ -46,7 +46,7 @@ class dial
+      bool    with_edit;
+ 
+    dial  (win  *w, 
+-          char title [],
++          const char title [],
+           int  title_dx,
+           int  x, 
+           int  y,
+@@ -60,7 +60,7 @@ class dial
+           int  incr2       = 0,
+           bool auto_repeat = false);
+    dial  (win  *w, 
+-          char title [],
++          const char title [],
+           int  title_dx,
+           int  x, 
+           int  y,

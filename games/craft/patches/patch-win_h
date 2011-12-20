@@ -1,0 +1,88 @@
+$NetBSD: patch-win_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- win.h.orig	1997-03-19 13:43:52.000000000 +0000
++++ win.h
+@@ -129,7 +129,7 @@ bool bitmap_size (char name [], int &dx,
+ /* ROUTINES text size information (deklarations)                        */
+ /*----------------------------------------------------------------------*/
+ 
+-void text_size (char s [], char font [], int &dx, int &dy, int &num_of_lines);
++void text_size (const char s [], const char font [], int &dx, int &dy, int &num_of_lines);
+ 
+ /*----------------------------------------------------------------------*/
+ /* Default Handler (deklarations)                                       */
+@@ -140,12 +140,12 @@ void text_size (char s [], char font [],
+ extern bool        win_handler_init;
+ extern paramreader *win_defaults;
+ 
+-int   win_default_i (int param, char default_name []);
+-int   win_default_i (char default_name []);
+-int   win_default_c (int param, char default_name []);
+-int   win_default_c (char default_name []);
+-char *win_default_s (char default_name []);
+-int   win_color     (char color_name   []);
++int   win_default_i (int param, const char default_name []);
++int   win_default_i (const char default_name []);
++int   win_default_c (int param, const char default_name []);
++int   win_default_c (const char default_name []);
++char *win_default_s (const char default_name []);
++int   win_color     (const char color_name   []);
+ 
+ /*----------------------------------------------------------------------*/
+ /* CLASS polyline (deklarations)                                        */
+@@ -241,10 +241,10 @@ class win
+      int           event_mark;
+      int           event_id;
+ 
+-          win  (char title []);
++          win  (const char title []);
+ 
+-          win  (char title [],
+-                char host  [],
++          win  (const char title [],
++                const char host  [],
+                 int  x,
+                 int  y, 
+                 int  dx,
+@@ -252,8 +252,8 @@ class win
+                 bool enable        = true,
+                 bool resize_enable = false);
+           win  (win  *parent,
+-                char title [],
+-                char host  [],
++                const char title [],
++                const char host  [],
+                 int  x,
+                 int  y, 
+                 int  dx,
+@@ -289,9 +289,9 @@ class win
+      void   mark_mouse       ();
+      void   scratch_mouse    ();
+      void   clear            ();
+-     void   set_font         (char name []);
+-     void   text_size        (char string [], int &dx, int &dy);
+-     void   write            (int x, int y, char   string []);
++     void   set_font         (const char name []);
++     void   text_size        (const char string [], int &dx, int &dy);
++     void   write            (int x, int y, const char   string []);
+      void   write            (int x, int y, double d);
+      void   write            (int x, int y, int    i);
+      void   set_clip         (int x, int y, int dx, int dy);
+@@ -332,13 +332,13 @@ class win
+      int    dy               ();
+      void   tick             (bool just_raised);
+      void   tick             ();
+-     void   alloc_color      (char name [], int no);
++     void   alloc_color      (const char name [], int no);
+      void   create_color_map ();
+      void   draw             (polyline *p);
+      void   fill             (polyline *p);
+      void   xsync            ();
+ 
+-     Window grab             (Display *dsp, Window wnd, char name []);
++     Window grab             (Display *dsp, Window wnd, const char name []);
+ 
+      void   get_image        (XImage *&i, int x, int y, int dx, int dy);
+      void   put_image        (XImage *i, int x, int y, int dx, int dy);

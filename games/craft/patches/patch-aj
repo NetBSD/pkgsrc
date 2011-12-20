@@ -1,7 +1,12 @@
-$NetBSD: patch-aj,v 1.1 2007/03/06 22:57:46 rillig Exp $
+$NetBSD: patch-aj,v 1.2 2011/12/20 16:18:16 dholland Exp $
 
---- getline.h.orig	1997-02-21 12:50:14.000000000 +0100
-+++ getline.h	2007-03-06 23:10:00.692282961 +0100
+ - fix conflict with posix getline
+ - include stdio.h preemptively to make sure the getline #define doesn't
+   break it
+ - const correctness demanded by recent gcc
+
+--- getline.h.orig	1997-02-21 11:50:14.000000000 +0000
++++ getline.h
 @@ -6,6 +6,9 @@
  #include "buttons.h"
  #include "bool.h"
@@ -12,3 +17,12 @@ $NetBSD: patch-aj,v 1.1 2007/03/06 22:57:46 rillig Exp $
  class getline
    {public:
  
+@@ -37,7 +40,7 @@ class getline
+    bool    was_deactive;
+    bool    is_single_char;
+    
+-   getline      (char name [],
++   getline      (const char name [],
+                  win  *w,
+                  char string [],
+                  int  x,

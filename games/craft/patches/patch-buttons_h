@@ -1,0 +1,26 @@
+$NetBSD: patch-buttons_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- buttons.h.orig	1997-03-19 13:40:07.000000000 +0000
++++ buttons.h
+@@ -58,7 +58,7 @@ class button
+      
+ 
+      button (win  *b_w,
+-             char b_label [],
++             const char b_label [],
+              int  b_x,
+              int  b_y,
+              bool b_with_repeat = false,
+@@ -76,8 +76,8 @@ class button
+      void press (bool mode);
+      bool eval  (int  &button);
+      bool eval  ();
+-     void write (char label_string []);
+-     void write (char label_string [], bool is_pressed);
++     void write (const char label_string []);
++     void write (const char label_string [], bool is_pressed);
+ 
+   };
+ 

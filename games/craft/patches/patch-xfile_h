@@ -1,0 +1,51 @@
+$NetBSD: patch-xfile_h,v 1.1 2011/12/20 16:18:17 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- xfile.h.orig	1997-03-19 13:44:01.000000000 +0000
++++ xfile.h
+@@ -15,28 +15,28 @@
+ #include "bool.h"
+ 
+ double d_get              (FILE *f, bool &is_eof);
+-time_t f_date             (char f_name []);
+-bool   f_exists           (char f_name []);
+-void   f_open             (FILE *&f, char name [], char mode []);
+-void   f_open_with_extend (FILE *&f, char name [], char mode [], int max_no);
++time_t f_date             (const char f_name []);
++bool   f_exists           (const char f_name []);
++void   f_open             (FILE *&f, const char name [], const char mode []);
++void   f_open_with_extend (FILE *&f, const char name [], const char mode [], int max_no);
+ char   *f_getline         (FILE *f,  char line [], int  max_length); 
+ 
+ char   *f_postfix         (char full_path []);
+-char   *f_name            (char full_path []);
+-char   *f_tail            (char full_path []);
+-char   *f_path            (char full_path []);
+-char   *f_home_dir        (char full_path []);
+-bool   f_is_pattern       (char f_name    []);
+-bool   f_is_dir           (char f_name    []);
+-bool   f_is_home_dir      (char f_name    []);
++char   *f_name            (const char full_path []);
++char   *f_tail            (const char full_path []);
++char   *f_path            (const char full_path []);
++char   *f_home_dir        (const char full_path []);
++bool   f_is_pattern       (const char f_name    []);
++bool   f_is_dir           (const char f_name    []);
++bool   f_is_home_dir      (const char f_name    []);
+ 
+-bool   sel_get_name       (char name   [],
++bool   sel_get_name       (const char name   [],
+                            char f_name [],
+-                           char f_pat  [],
+-                           char mode   []);
++                           const char f_pat  [],
++                           const char mode   []);
+ 
+-char   *complete          (char name [],
+-                           char tail []);
++char   *complete          (const char name [],
++                           const char tail []);
+ 
+ void   bprintf            (FILE *f, int num_bytes, int i);
+ bool   bscanf             (FILE *f, int num_bytes, int &i);

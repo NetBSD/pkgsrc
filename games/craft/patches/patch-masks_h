@@ -1,0 +1,45 @@
+$NetBSD: patch-masks_h,v 1.1 2011/12/20 16:18:16 dholland Exp $
+
+ - const correctness demanded by recent gcc
+
+--- masks.h~	1997-02-21 11:52:06.000000000 +0000
++++ masks.h
+@@ -25,27 +25,27 @@ void frame      (win *w,
+                  int dx, int dy, 
+                  int color_1, int color_2);
+ 
+-bool yes        (win *w, char host [], char question []);
+-bool yes        (char host [], char question []);
+-bool yes        (char question []);
+-void ack        (char host [], char msg []);
+-void ack        (char message []);
++bool yes        (win *w, const char host [], const char question []);
++bool yes        (const char host [], const char question []);
++bool yes        (const char question []);
++void ack        (const char host [], const char msg []);
++void ack        (const char message []);
+ void tell       (win  *&w,
+-                 char message []);
+-void tell       (char host [],
++                 const char message []);
++void tell       (const char host [],
+                  win  *&w,
+-                 char message []);
+-void tell       (char host [],
++                 const char message []);
++void tell       (const char host [],
+                  win  *parent,
+                  win  *&w,
+-                 char message []);
++                 const char message []);
+ 
+ bool get_line   (char s    [],
+                  char name [],
+                  int  dx           = 300,
+                  bool with_history = true);
+ 
+-int  select     (char menu_string [], char *name = NULL);
++int  select     (const char menu_string [], char *name = NULL);
+ 
+ 
+ #endif
