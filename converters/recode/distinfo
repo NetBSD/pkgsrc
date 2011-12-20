@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/08/26 08:13:44 wiz Exp $
+$NetBSD: distinfo,v 1.8 2011/12/20 17:22:25 dholland Exp $
 
 SHA1 (recode-3.6.tar.gz) = 2de90cd2ba553bc07d75a29913ea4424dd9e616b
 RMD160 (recode-3.6.tar.gz) = 97dcb2544472c9025689452a94bed98ea36374b5
 Size (recode-3.6.tar.gz) = 1751886 bytes
 SHA1 (patch-aa) = bc1fcbced4af16cb059beabbc34009e3dcd960d7
+SHA1 (patch-src_Makefile_in) = 7f0d2a585aa18af817c221a2c4934550fdb5c7e6
 SHA1 (patch-src_recodext.h) = f404830d5573e86ce5f9c9ce6477110f6c9dc1c0
