@@ -1,0 +1,16 @@
+$NetBSD: patch-src_lisp_core.lisp.in,v 1.1 2011/12/20 08:22:34 asau Exp $
+
+Ignore compilation failure on CLISP: COMPILE-FILE returns failure-p
+but CLISP doesn't list any errors.
+
+--- src/lisp/core.lisp.in.orig	2009-08-05 09:51:44.000000000 +0000
++++ src/lisp/core.lisp.in
+@@ -832,7 +832,7 @@
+ 		    (setq result nil))
+ 	 (cond ((null result) 
+ 		(|coreError| "compilation of Lisp code failed"))
+-	       (failure-p
++	       ((and failure-p #+:clisp (not (equal file "patches.lisp")))
+ 		;; Since we believe the source code must
+ 		;; be fixed, we don't want to leave
+ 		;; the generated FASL behing us, as that
