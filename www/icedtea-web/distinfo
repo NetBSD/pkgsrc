@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/21 23:01:22 tnn Exp $
+$NetBSD: distinfo,v 1.2 2011/12/20 13:19:00 asau Exp $
 
 SHA1 (61e08e67b176.tar.bz2) = 3db5488f3c0ea1b9c83a74632d300d8717c9b478
 RMD160 (61e08e67b176.tar.bz2) = c0dd67a6ae982f09b3675c164b5decab4f7e140f
 Size (61e08e67b176.tar.bz2) = 609340 bytes
+SHA1 (patch-plugin_icedteanp_IcedTeaNPPlugin.cc) = 09b11790a418aca59aa9de47f6e0d000faf579b4
