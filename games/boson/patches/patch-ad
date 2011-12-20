@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2006/06/21 20:46:28 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2011/12/20 10:35:03 wiz Exp $
 
---- boson/bosoncollisions.cpp.orig	2006-06-21 18:45:21.000000000 +0000
+--- boson/bosoncollisions.cpp.orig	2003-03-04 22:42:52.000000000 +0000
 +++ boson/bosoncollisions.cpp
 @@ -232,7 +232,7 @@ BoItemList* BosonCollisions::collisionsA
  		s = *it;
