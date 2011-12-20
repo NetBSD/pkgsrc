@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/11/01 06:03:03 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/20 20:27:17 marino Exp $
 #
 
 DISTNAME=	matchbox-panel-manager-0.1
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
+LDFLAGS+=	-lX11	# direct link required for ld v2.22
 
 .include "../../devel/libmatchbox/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
