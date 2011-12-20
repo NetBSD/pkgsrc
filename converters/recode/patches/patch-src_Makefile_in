@@ -1,0 +1,51 @@
+$NetBSD: patch-src_Makefile_in,v 1.1 2011/12/20 17:22:25 dholland Exp $
+
+Include lib/error.c in librecode.so, or else librecode.so ends up with
+an undefined symbol "error". Fix mostly from PR 32253.
+
+--- src/Makefile.in.orig	2001-01-22 18:14:16.000000000 +0000
++++ src/Makefile.in
+@@ -129,7 +129,7 @@ L_SURFACES = 
+ recode_SOURCES = main.c freeze.c mixed.c
+ recode_LDADD = librecode.la ../lib/libreco.a
+ 
+-librecode_la_SOURCES = argmatch.c charname.c combine.c fr-charname.c hash.c iconv.c libiconv.c localcharset.c merged.c names.c outer.c quotearg.c recode.c request.c strip-pool.c task.c xmalloc.c $(C_STEPS)
++librecode_la_SOURCES = argmatch.c charname.c combine.c fr-charname.c hash.c iconv.c libiconv.c localcharset.c merged.c names.c outer.c quotearg.c recode.c request.c strip-pool.c task.c xmalloc.c error.c $(C_STEPS)
+ 
+ librecode_la_LDFLAGS = -version-info 0:0:0
+ 
+@@ -165,7 +165,7 @@ ebcdic$U.lo ibmpc$U.lo iconqnx$U.lo lat1
+ strip-data$U.lo testdump$U.lo ucs$U.lo utf16$U.lo utf7$U.lo utf8$U.lo \
+ varia$U.lo vn$U.lo flat$U.lo html$U.lo lat1ltex$U.lo lat1txte$U.lo \
+ rfc1345$U.lo texinfo$U.lo base64$U.lo dump$U.lo endline$U.lo \
+-permut$U.lo quoted$U.lo
++permut$U.lo quoted$U.lo error$U.lo
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
+ recode_OBJECTS =  main$U.o freeze$U.o mixed$U.o
+@@ -419,6 +419,8 @@ vn_.c: vn.c $(ANSI2KNR)
+ 	$(CPP) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/vn.c; then echo $(srcdir)/vn.c; else echo vn.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > vn_.c
+ xmalloc_.c: xmalloc.c $(ANSI2KNR)
+ 	$(CPP) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/xmalloc.c; then echo $(srcdir)/xmalloc.c; else echo xmalloc.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > xmalloc_.c
++error_.c: error.c $(ANSI2KNR)
++	$(CPP) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) `if test -f $(srcdir)/error.c; then echo $(srcdir)/error.c; else echo error.c; fi` | sed 's/^# \([0-9]\)/#line \1/' | $(ANSI2KNR) > error_.c
+ african_.o african_.lo afrtran_.o afrtran_.lo applemac_.o applemac_.lo \
+ argmatch_.o argmatch_.lo atarist_.o atarist_.lo bangbang_.o \
+ bangbang_.lo base64_.o base64_.lo cdcnos_.o cdcnos_.lo charname_.o \
+@@ -435,7 +437,7 @@ request_.o request_.lo rfc1345_.o rfc134
+ strip-data_.lo strip-pool_.o strip-pool_.lo task_.o task_.lo \
+ testdump_.o testdump_.lo texinfo_.o texinfo_.lo ucs_.o ucs_.lo utf16_.o \
+ utf16_.lo utf7_.o utf7_.lo utf8_.o utf8_.lo varia_.o varia_.lo vn_.o \
+-vn_.lo xmalloc_.o xmalloc_.lo : $(ANSI2KNR)
++vn_.lo xmalloc_.o xmalloc_.lo error_.lo : $(ANSI2KNR)
+ 
+ install-man1:
+ 	$(mkinstalldirs) $(DESTDIR)$(man1dir)
+@@ -690,6 +692,7 @@ varia.lo varia.o : varia.c common.h ../c
+ vn.lo vn.o : vn.c common.h ../config.h xalloc.h argmatch.h \
+ 	../lib/error.h recodext.h recode.h
+ xmalloc.lo xmalloc.o : xmalloc.c ../config.h ../lib/error.h xalloc.h
++error.lo error.o : ../lib/error.h
+ 
+ info-am:
+ info: info-am
