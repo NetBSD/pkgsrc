@@ -1,8 +1,16 @@
-$NetBSD: patch-al,v 1.1.1.1 2007/11/10 11:33:00 agc Exp $
+$NetBSD: patch-al,v 1.2 2011/12/20 13:42:47 wiz Exp $
 
---- src/Util/BDBFile.cpp	2007/11/07 21:22:30	1.1
-+++ src/Util/BDBFile.cpp	2007/11/07 21:37:32
-@@ -275,6 +275,7 @@
+--- src/Util/BDBFile.cpp.orig	2005-07-09 06:23:41.000000000 +0000
++++ src/Util/BDBFile.cpp
+@@ -32,6 +32,7 @@
+ #include <fstream>
+ #include <sstream>
+ #include <string>
++#include <string.h>
+ #include <map>
+ #include <math.h>
+ #include <cassert>
+@@ -275,6 +276,7 @@ void BDBFile::closeCursor()
  
  void BDBFile::showStats()
  {
@@ -10,7 +18,7 @@ $NetBSD: patch-al,v 1.1.1.1 2007/11/10 11:33:00 agc Exp $
    DB_BTREE_STAT *pStat;
  
    dbHandle->stat(&pStat, 0);
-@@ -284,10 +285,12 @@
+@@ -284,10 +286,12 @@ void BDBFile::showStats()
    cout << bdbFileName << " contains "
        << pStat->bt_ndata << " records\n";
    free(pStat);  
@@ -23,7 +31,7 @@ $NetBSD: patch-al,v 1.1.1.1 2007/11/10 11:33:00 agc Exp $
    DB_BTREE_STAT *pStat;
  
    dbHandle->stat(&pStat, 0);
-@@ -297,6 +300,7 @@
+@@ -297,6 +301,7 @@ u_long BDBFile::getRecordCount()
    u_long cnt = pStat->bt_ndata;
    free(pStat);
    return cnt;  
