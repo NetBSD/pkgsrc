@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3352 2011/12/19 12:59:18 schwarz Exp $
+$NetBSD: CHANGES-2011,v 1.3353 2011/12/20 00:52:08 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5408,3 +5408,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated comms/snooper to 19991202nb3 [dholland 2011-12-18]
 	Updated mail/dk-milter to 0.3.0nb5 [dholland 2011-12-19]
 	Updated devel/libosip to 3.6.0 [schwarz 2011-12-19]
+	Updated devel/xulrunner192 to 1.9.2.24 [obache 2011-12-19]
+	Updated www/firefox36 to 3.6.24 [obache 2011-12-19]
+	Updated www/firefox36-l10n to 3.6.24 [obache 2011-12-19]
