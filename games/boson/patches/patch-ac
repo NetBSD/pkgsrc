@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/06/21 20:46:28 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2011/12/20 10:35:03 wiz Exp $
 
---- boson/bosoncanvas.cpp.orig	2006-06-21 17:58:06.000000000 +0000
+--- boson/bosoncanvas.cpp.orig	2003-03-29 11:42:02.000000000 +0000
 +++ boson/bosoncanvas.cpp
 @@ -911,12 +911,12 @@ unsigned int BosonCanvas::allItemsCount(
  
