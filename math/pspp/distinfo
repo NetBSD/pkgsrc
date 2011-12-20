@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2010/03/09 02:06:37 taca Exp $
+$NetBSD: distinfo,v 1.17 2011/12/20 16:14:44 wiz Exp $
 
 SHA1 (pspp-0.6.2.tar.gz) = c45f721a7ee82aede2106b77eade5e568c0930da
 RMD160 (pspp-0.6.2.tar.gz) = 97667eb32b23a1bc7d18b7022649bd973ff01424
 Size (pspp-0.6.2.tar.gz) = 3375748 bytes
 SHA1 (patch-aa) = c7024562eee77aa558931cab387d250e046f11e4
 SHA1 (patch-ad) = cd06383be08b753423ea10f52098135002671385
+SHA1 (patch-lib_gtksheet_gtkitementry.c) = 22242a3b1b68f77abf98f3d919f955e8537ac0f9
