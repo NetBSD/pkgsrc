@@ -1,27 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/21 12:11:39 fhajny Exp $
+$NetBSD: patch-aa,v 1.2 2011/12/20 14:08:55 fhajny Exp $
 
 Set pkgsrc standard paths.
 
---- configure.orig	2009-11-24 23:54:09.000000000 +0000
+--- configure.orig	2011-10-24 09:38:37.000000000 +0000
 +++ configure
-@@ -753,6 +753,7 @@ locallibdir
- localdocdir
- localdatadir
+@@ -916,6 +916,7 @@ bug_uri
  localconfdir
+ localdatadir
+ localdocdir
 +localegdir
- bug_uri
- version_release
- version_stage
-@@ -12081,17 +12082,19 @@ bug_uri="https://issues.apache.org/jira/
- 
- localconfdir=${sysconfdir}/${package_identifier}
- 
-+localegdir=@EGDIR@
-+
- localdatadir=${datadir}/${package_identifier}
+ locallibdir
+ localstatelibdir
+ localstatelogdir
+@@ -12937,13 +12938,15 @@ localdatadir=${datadir}/${package_identi
  
  localdocdir=${datadir}/doc/${package_identifier}
  
++localegdir=@EGDIR@
++
  locallibdir=${libdir}/${package_identifier}
  
 -localstatelibdir=${localstatedir}/lib/${package_identifier}
@@ -34,7 +30,7 @@ Set pkgsrc standard paths.
  
  
  # On Windows we install directly into our erlang distribution.
-@@ -12101,9 +12104,9 @@ if test x${IS_WINDOWS} = xTRUE; then
+@@ -12953,9 +12956,9 @@ if test x${IS_WINDOWS} = xTRUE; then
      localerlanglibdir=${libdir}
  
  else
@@ -46,3 +42,20 @@ Set pkgsrc standard paths.
  
  fi
  
+@@ -14177,6 +14180,7 @@ bug_uri!$bug_uri$ac_delim
+ localconfdir!$localconfdir$ac_delim
+ localdatadir!$localdatadir$ac_delim
+ localdocdir!$localdocdir$ac_delim
++localegdir!$localegdir$ac_delim
+ locallibdir!$locallibdir$ac_delim
+ localstatelibdir!$localstatelibdir$ac_delim
+ localstatelogdir!$localstatelogdir$ac_delim
+@@ -14189,7 +14193,7 @@ LIBOBJS!$LIBOBJS$ac_delim
+ LTLIBOBJS!$LTLIBOBJS$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 64; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 65; then
+     break
+   elif $ac_last_try; then
+     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
