@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2009/07/07 19:34:24 joerg Exp $
+$NetBSD: distinfo,v 1.4 2011/12/21 13:02:10 wiz Exp $
 
 SHA1 (waimea-0.4.0.tar.gz) = b2dc5e829aad8681bab9313bd336b79875154531
 RMD160 (waimea-0.4.0.tar.gz) = 5694d832cb3cd51d6f3473c73eb70f803825c1a3
 Size (waimea-0.4.0.tar.gz) = 242526 bytes
 SHA1 (patch-aa) = f6cdb4054bb3f86f90a942cbaaad3a46bd42c6e2
+SHA1 (patch-src_Resources.cc) = 4190dc1cd288fed8a3d3d217ba51e2bdee229cbd
+SHA1 (patch-src_Resources.hh) = 6f273e42d362e87413cab68cdd42d9e2277ffdaf
+SHA1 (patch-src_Window.cc) = 3a42d1015bb343191c4ad2f1ef42e61a2650a87e
