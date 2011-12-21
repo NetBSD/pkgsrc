@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/03 22:15:51 mjl Exp $
+$NetBSD: distinfo,v 1.2 2011/12/21 08:29:05 dholland Exp $
 
 SHA1 (pgbouncer-1.4.2.tgz) = 610198c3f2186d70267275f554e23bd43598e4b5
 RMD160 (pgbouncer-1.4.2.tgz) = 055796e23dd7029d3f4a2c882cf24399a5481cb1
 Size (pgbouncer-1.4.2.tgz) = 283204 bytes
+SHA1 (patch-lib_usual_endian_h) = 38ee6610c1f4e4aeededcb41cad56b877b6b7b0b
