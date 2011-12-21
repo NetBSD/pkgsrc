@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/21 08:27:20 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/21 08:29:05 dholland Exp $
 #
 
 DISTNAME=	pgbouncer-${VERSION}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	1.4.2
 USE_LANGUAGES=	c
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
@@ -27,6 +27,8 @@ CONF_FILES=		${EGDIR}/pgbouncer.ini ${PKG_SYSCONFDIR}/pgbouncer.ini \
 RCD_SCRIPTS+=		pgbouncer
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
+
+.include "../../mk/bsd.prefs.mk"
 
 PGUSER?=		pgsql
 PGGROUP?=		pgsql
