@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/05/22 20:02:31 tnn Exp $
+$NetBSD: distinfo,v 1.4 2011/12/21 17:13:48 dholland Exp $
 
 SHA1 (unfs3-0.9.22.tar.gz) = a6c83e1210ce75836c672cd76e66577bfef7a17a
 RMD160 (unfs3-0.9.22.tar.gz) = de51d1c6049a265a1a790fc3b59907202c82e1f5
 Size (unfs3-0.9.22.tar.gz) = 168447 bytes
+SHA1 (patch-Makefile_in) = 68e86790c80db6d9cfb5698735ec54163adea68d
