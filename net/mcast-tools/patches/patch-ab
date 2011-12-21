@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2007/12/27 17:46:53 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2011/12/21 11:36:50 wiz Exp $
 
---- pim6dd/defs.h.orig	2007-12-27 15:50:19.000000000 +0000
+--- pim6dd/defs.h.orig	2005-09-21 11:33:52.000000000 +0000
 +++ pim6dd/defs.h
 @@ -87,12 +87,19 @@
  #ifdef __FreeBSD__      /* sigh */
@@ -22,3 +22,12 @@ $NetBSD: patch-ab,v 1.1 2007/12/27 17:46:53 joerg Exp $
  #ifdef __linux__
  #include <linux/mroute6.h>
  #else
+@@ -424,7 +431,7 @@ extern void	init_sin6(struct sockaddr_in
+ 
+ /* kern.c */
+ extern void     k_set_rcvbuf    __P((int socket, int bufsize, int minsize));
+-extern void     k_hdr_include   __P((int socket, int bool));
++extern void     k_hdr_include   __P((int socket, int booll));
+ extern void     k_set_hlim       __P((int socket, int t));
+ extern void     k_set_loop      __P((int socket, int l));
+ extern void     k_set_if        __P((int socket, u_int ifindex));
