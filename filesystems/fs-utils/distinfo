@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/04/30 19:50:56 stacktic Exp $
+$NetBSD: distinfo,v 1.9 2011/12/21 08:53:43 dholland Exp $
 
 SHA1 (fs-utils_20091116.tar.gz) = cb49494a66a5d6bf69f2d80d79482b3f7607da29
 RMD160 (fs-utils_20091116.tar.gz) = 8381dfc13d8470560342c96167e033c255233ab2
 Size (fs-utils_20091116.tar.gz) = 153103 bytes
 SHA1 (patch-aa) = 654fc2827e1c41bd28cc31535a91fff799424017
 SHA1 (patch-ab) = e0654d25a6e0f8456f0568c9b20de16cfe1b77c1
+SHA1 (patch-lib_Makefile_inc) = e004fd2eaa287dd683e95718b3d3cb714c63f003
