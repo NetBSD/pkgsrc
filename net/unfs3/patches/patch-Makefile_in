@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile_in,v 1.1 2011/12/21 17:13:48 dholland Exp $
+
+--- Makefile.in~	2007-12-05 19:11:28.000000000 +0000
++++ Makefile.in
+@@ -25,7 +25,7 @@ SUBDIRS = Config @SUBDIRS@
+ 
+ DESTDIR =
+ 
+-all: subdirs unfsd$(EXEEXT)
++all: subdirs .WAIT unfsd$(EXEEXT)
+ 
+ unfsd$(EXEEXT): $(OBJS) $(CONFOBJ) $(EXTRAOBJ)
+ 	$(CC) -o $@ $(OBJS) $(CONFOBJ) $(EXTRAOBJ) $(LDFLAGS)
