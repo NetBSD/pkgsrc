@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2007/04/20 18:55:00 bouyer Exp $
+$NetBSD: distinfo,v 1.11 2011/12/21 11:58:41 wiz Exp $
 
 SHA1 (pim6sd-20031021a.tar.gz) = 96334a3e765bebc3ad4789b47543eb0ddccf9c6e
 RMD160 (pim6sd-20031021a.tar.gz) = e285ec24eae1bf09460d20e7fff6089ed7515f3a
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 8f5082c64fe20d8df41fb69fed366eb0cfcc0c01
 SHA1 (patch-ae) = bfa5245dd7c2c29d88e420559afbd13c5f9fe9a7
 SHA1 (patch-af) = 3936ade5af8b5e25cefd85810ac50b3663d0323a
 SHA1 (patch-ag) = 902312b492c53257f4e29cab90094b8734f06b97
+SHA1 (patch-cfparse.y) = 6a781cc772f6d200e55b743ea2a5d4414769f00e
