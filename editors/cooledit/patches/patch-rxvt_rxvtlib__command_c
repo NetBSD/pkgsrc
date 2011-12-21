@@ -1,0 +1,23 @@
+$NetBSD: patch-rxvt_rxvtlib__command_c,v 1.1 2011/12/21 08:45:34 dholland Exp $
+
+If the configuration detects /dev/ptmx, it tries to use it; but avoid
+in that case trying to do STREAMS things.
+
+--- rxvt/rxvtlib_command.c~	2005-04-04 20:47:45.000000000 +0000
++++ rxvt/rxvtlib_command.c
+@@ -386,6 +386,7 @@ int             rxvtlib_get_tty (rxvtlib
+ 	return -1;
+     }
+ #ifdef PTYS_ARE_PTMX
++#ifndef __NetBSD__
+ /*
+  * Push STREAMS modules:
+  *    ptem: pseudo-terminal hardware emulation module.
+@@ -398,6 +399,7 @@ int             rxvtlib_get_tty (rxvtlib
+ 	ioctl (fd, I_PUSH, "ttcompat");
+     }
+ #endif
++#endif
+     if (o->changettyowner) {
+ 	/* change ownership of tty to real uid and real group */
+ 	unsigned int    mode = 0622;
