@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2006/07/22 04:34:48 minskim Exp $
+$NetBSD: distinfo,v 1.8 2011/12/21 08:45:34 dholland Exp $
 
 SHA1 (cooledit-3.17.17.tar.gz) = 73f9bffcb5e3e92f0a71d3f34fef19eb0287ee07
 RMD160 (cooledit-3.17.17.tar.gz) = 96ddde14fada220c381142d68147735ac5c75163
@@ -10,3 +10,5 @@ SHA1 (patch-ae) = b5de0e395562effea6790be06b65d0d7265a4ea1
 SHA1 (patch-af) = c3d948e490e1756c33080e252949de0fb1c4743a
 SHA1 (patch-ah) = 6c657d734f7b4ec15321cf8ed8db1cecbb89db07
 SHA1 (patch-ai) = 48ef9745aef54e337aa5f55710a4c4711ffe017c
+SHA1 (patch-rxvt___rxvtlib_h) = 1491dedc31005f9da7c4311bcc9cd1948f4c53dc
+SHA1 (patch-rxvt_rxvtlib__command_c) = 65fd59841ccb8fbba84f9f1d38d602be4cffcc54
