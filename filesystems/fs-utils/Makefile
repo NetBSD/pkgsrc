@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/04/30 19:50:56 stacktic Exp $
+# $NetBSD: Makefile,v 1.11 2011/12/21 07:46:59 dholland Exp $
 #
 
 DISTNAME=		fs-utils_20091116
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_BSD_MAKEFILE=	yes
 WRKSRC=			${WRKDIR}/fs-utils
 INSTALLATION_DIRS=	bin lib include ${PKGMANDIR}/man1 ${PKGMANDIR}/man3
+MAKE_FLAGS+=		MKPROFILE=yes
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
