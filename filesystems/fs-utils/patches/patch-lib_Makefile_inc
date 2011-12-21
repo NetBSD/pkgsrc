@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_Makefile_inc,v 1.1 2011/12/21 08:53:44 dholland Exp $
+
+Fix shared library linkage with USE_BSD_MAKEFILE in a bootstrapped
+environment, where the rules for building .so files don't really
+accomodate multiple libs in the same package properly.
+
+This is a hack; bootstrap-mk-files should be fixed.
+
+--- lib/Makefile.inc~	2009-11-15 16:29:22.000000000 +0000
++++ lib/Makefile.inc
+@@ -4,3 +4,4 @@
+ 
+ CFLAGS+=        -I${RUMPINCSDIR}
+ LDADD+=         -L${RUMPLIBDIR} -lukfs
++LDADD+=		-R${PREFIX}/lib
