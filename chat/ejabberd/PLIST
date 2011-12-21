@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/06/11 20:27:12 mspo Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/12/21 13:42:36 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -9,6 +9,7 @@ lib/erlang/lib/${PKGNAME}/ebin/cyrsasl.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_anonymous.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_digest.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_plain.beam
+lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_scram.beam
 lib/erlang/lib/${PKGNAME}/ebin/dynamic_compile.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.app
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.beam
@@ -147,6 +148,7 @@ lib/erlang/lib/${PKGNAME}/ebin/pubsub_index.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/randoms.beam
+lib/erlang/lib/${PKGNAME}/ebin/scram.beam
 lib/erlang/lib/${PKGNAME}/ebin/sha.beam
 lib/erlang/lib/${PKGNAME}/ebin/shaper.beam
 lib/erlang/lib/${PKGNAME}/ebin/stringprep.beam
@@ -212,9 +214,7 @@ share/doc/ejabberd/COPYING
 share/doc/ejabberd/dev.html
 share/doc/ejabberd/discorus.png
 share/doc/ejabberd/features.html
-share/doc/ejabberd/features.pdf
 share/doc/ejabberd/guide.html
-share/doc/ejabberd/guide.pdf
 share/doc/ejabberd/logo.png
 share/doc/ejabberd/msrl-dit-deep.png
 share/doc/ejabberd/msrl-dit-flat.png
@@ -244,6 +244,7 @@ share/doc/ejabberd/release_notes_2.1.5.txt
 share/doc/ejabberd/release_notes_2.1.6.txt
 share/doc/ejabberd/release_notes_2.1.7.txt
 share/doc/ejabberd/release_notes_2.1.8.txt
+share/doc/ejabberd/release_notes_2.1.9.txt
 share/doc/ejabberd/webadmmain.png
 share/doc/ejabberd/webadmmainru.png
 share/doc/ejabberd/yozhikheader.png
