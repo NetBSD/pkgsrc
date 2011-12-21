@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/11/25 21:53:25 joerg Exp $
+$NetBSD: distinfo,v 1.6 2011/12/21 16:58:15 dholland Exp $
 
 SHA1 (exult-1.2.tar.gz) = 81f9d3d428c80990b8e970a4dee5c85a7236dace
 RMD160 (exult-1.2.tar.gz) = 339231edf84507f05115ab3189875cb15be9c04f
@@ -33,9 +33,10 @@ SHA1 (patch-tools_cmanip.cc) = 3bb7231dc1a4bddf430222888b7d83893b9efd1f
 SHA1 (patch-tools_splitshp.cc) = 1eb810b609c5ae5b0b4cae5e043e376c0d6ebd84
 SHA1 (patch-usecode_compiler_ucfun.cc) = aa7d0248b46685c1af42d1114a8f92637bab6b6d
 SHA1 (patch-usecode_compiler_uclex.ll) = 791e55539ebd09011ee5024f6f576bc3a50f87ab
-SHA1 (patch-usecode_compiler_ucloc.cc) = 0ad6e6e96db7e02cbda9ede04824978ba824ed00
-SHA1 (patch-usecode_compiler_ucmain.cc) = fa35d5d6083d8ffc21d80733c0c9be1c7568bdab
-SHA1 (patch-usecode_compiler_ucparse.yy) = 6a645e9001722ce6665d24933853982ed20d7c05
+SHA1 (patch-usecode_compiler_ucloc.cc) = 28e27090fc9a161a49ffa0d570ea1d665d8c40fe
+SHA1 (patch-usecode_compiler_ucloc.h) = a2ed46a6ae96a6634bc5709bba14929a5774d98c
+SHA1 (patch-usecode_compiler_ucmain.cc) = 9f124c0113497f3132f66646aebc21a2e92fce38
+SHA1 (patch-usecode_compiler_ucparse.yy) = 4caa0927da5846b24df3a78af0ea5350064d6080
 SHA1 (patch-usecode_compiler_ucsym.cc) = a68b476a9aa1362051176ad4de5352b6ce610f55
 SHA1 (patch-usecode_ucmachine.cc) = 01db5ff3f6d9c23271dfbd15c50e1c78d9af28a1
 SHA1 (patch-usecode_ucxt_head2data.cc) = 1bb92845f2c7b2368ca6849031e0c9d35affc7e5
