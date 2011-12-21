@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/22 22:23:13 tez Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/21 17:18:21 tez Exp $
 share/cacti/LICENSE
 share/cacti/README
 share/cacti/about.php
@@ -35,6 +35,7 @@ share/cacti/data_queries.php
 share/cacti/data_sources.php
 share/cacti/data_templates.php
 share/cacti/docs/CHANGELOG
+share/cacti/docs/CHANGELOG.PIA
 share/cacti/docs/CONTRIB
 share/cacti/docs/README
 share/cacti/docs/html/LICENSE.html
@@ -182,12 +183,17 @@ share/cacti/images/cacti_logo.gif
 share/cacti/images/calendar.gif
 share/cacti/images/delete_icon.gif
 share/cacti/images/delete_icon_large.gif
+share/cacti/images/disable_icon.png
+share/cacti/images/enable_icon.png
+share/cacti/images/enable_icon_disabled.png
 share/cacti/images/favicon.ico
 share/cacti/images/graph_page_top.gif
 share/cacti/images/graph_properties.gif
 share/cacti/images/graph_query.png
 share/cacti/images/graph_zoom.gif
 share/cacti/images/hide.gif
+share/cacti/images/install_icon.png
+share/cacti/images/install_icon_disabled.png
 share/cacti/images/left_border.gif
 share/cacti/images/menu_line.gif
 share/cacti/images/menuarrow.gif
@@ -213,6 +219,8 @@ share/cacti/images/tab_mode_tree_down.gif
 share/cacti/images/tab_settings.gif
 share/cacti/images/tab_settings_down.gif
 share/cacti/images/transparent_line.gif
+share/cacti/images/uninstall_icon.gif
+share/cacti/images/view_none.gif
 share/cacti/include/auth.php
 share/cacti/include/bottom_footer.php
 share/cacti/include/config.php
@@ -268,6 +276,7 @@ share/cacti/include/jscalendar/lang/calendar-zh.js
 share/cacti/include/jscalendar/lang/cn_utf8.js
 share/cacti/include/layout.js
 share/cacti/include/main.css
+share/cacti/include/plugins.php
 share/cacti/include/top_graph_header.php
 share/cacti/include/top_header.php
 share/cacti/include/treeview/ftiens4.js
@@ -304,6 +313,7 @@ share/cacti/install/0_8_7d_to_0_8_7e.php
 share/cacti/install/0_8_7e_to_0_8_7f.php
 share/cacti/install/0_8_7f_to_0_8_7g.php
 share/cacti/install/0_8_7g_to_0_8_7h.php
+share/cacti/install/0_8_7h_to_0_8_7i.php
 share/cacti/install/0_8_to_0_8_1.php
 share/cacti/install/index.php
 share/cacti/install/install_finish.gif
@@ -418,6 +428,7 @@ share/cacti/lib/html_validate.php
 share/cacti/lib/import.php
 share/cacti/lib/ldap.php
 share/cacti/lib/ping.php
+share/cacti/lib/plugins.php
 share/cacti/lib/poller.php
 share/cacti/lib/rrd.php
 share/cacti/lib/snmp.php
@@ -432,6 +443,8 @@ share/cacti/lib/xml.php
 share/cacti/log/.htaccess
 share/cacti/log/cacti.log
 share/cacti/logout.php
+share/cacti/plugins.php
+share/cacti/plugins/index.php
 share/cacti/poller.php
 share/cacti/poller_commands.php
 share/cacti/poller_export.php
