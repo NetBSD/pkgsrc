@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2011/11/01 06:02:18 sbd Exp $
+# $NetBSD: Makefile,v 1.25 2011/12/21 14:06:43 wiz Exp $
 #
 
 VERSION=	3.5.0
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filezilla/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gnutls>=2.8.3:../../security/gnutls
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=	sqlite3>=3.7.5:../../databases/sqlite3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
