@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/03 22:15:51 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/21 08:27:20 dholland Exp $
 #
 
 DISTNAME=	pgbouncer-${VERSION}
@@ -18,23 +18,23 @@ USE_LANGUAGES=	c
 USE_TOOLS=	gmake
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=        --with-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
 
-EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=             ${EGDIR}/pgbouncer.ini ${PKG_SYSCONFDIR}/pgbouncer.ini \
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=		${EGDIR}/pgbouncer.ini ${PKG_SYSCONFDIR}/pgbouncer.ini \
 			${EGDIR}/pgbouncer.userlist ${PKG_SYSCONFDIR}/pgbouncer.userlist
 
 RCD_SCRIPTS+=		pgbouncer
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
 
-PGUSER?=                pgsql
-PGGROUP?=               pgsql
-PKG_GROUPS=     	${PGGROUP}
-PKG_USERS=      	${PGUSER}:${PGGROUP}
+PGUSER?=		pgsql
+PGGROUP?=		pgsql
+PKG_GROUPS=		${PGGROUP}
+PKG_USERS=		${PGUSER}:${PGGROUP}
 
 BUILD_DEFS+=		PGUSER PGGROUP
-FILES_SUBST+=           PGUSER=${PGUSER}
+FILES_SUBST+=		PGUSER=${PGUSER}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pgbouncer ${DESTDIR}${PREFIX}/bin/
