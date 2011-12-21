@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/04/15 07:51:23 obache Exp $
+# $NetBSD: Makefile,v 1.21 2011/12/21 11:58:27 wiz Exp $
 
 DISTNAME=	pim6sd-20031021a
 PKGREVISION=	1
@@ -19,8 +19,9 @@ USE_TOOLS+=	lex yacc
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8 \
 			${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
-CONFLICTS=	mcast-tools-*
+CONFLICTS=	mcast-tools-[0-9]*
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/pim6stat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
 .include "../../mk/bsd.pkg.mk"
