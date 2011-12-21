@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2009/03/27 09:24:45 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/12/21 12:12:53 wiz Exp $
 
 SHA1 (gnome-packagekit-0.4.0.tar.gz) = 8a204535c4a219b8987af756db999ec4f3caa84e
 RMD160 (gnome-packagekit-0.4.0.tar.gz) = 9c1de792b00749ea54fe44d7287cf55228df4bdf
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 88522542563043b06358e98fa323eb94b9e34679
 SHA1 (patch-ac) = fb0b16340091eeede5b608645b5aa43a4ab50a9f
 SHA1 (patch-ad) = db285ef99ef8822f6417522a908ef976304d18c2
 SHA1 (patch-ae) = 88fd8a4f3a739af9ce06b3ca60a95a7a6ccc1c83
+SHA1 (patch-src_gpk-update-viewer.c) = 20365e1f3101038b9864eda6dd5b1c0a66191bd1
