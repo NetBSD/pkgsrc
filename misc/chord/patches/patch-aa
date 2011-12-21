@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2010/02/11 19:02:01 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2011/12/21 08:36:01 dholland Exp $
 
---- Makefile.orig	Tue Apr 25 08:04:52 1995
-+++ Makefile	Mon Sep 22 11:18:10 2003
-@@ -8,15 +8,15 @@
+- configure for pkgsrc
+- fix deps of a2crd
+
+--- Makefile.orig	1995-04-25 07:04:52.000000000 +0000
++++ Makefile
+@@ -8,15 +8,15 @@ PAPERSIZE = US
  #GETOPT = getopt.o
  
  # Use a ansi or K&R compiler
@@ -23,7 +26,19 @@ $NetBSD: patch-aa,v 1.4 2010/02/11 19:02:01 joerg Exp $
  
  # You should not have to change anything below this line
  
-@@ -46,13 +46,12 @@
+@@ -35,9 +35,9 @@ all: $(PROGRAMS)
+ chord : $(OBJ) Makefile
+ 	$(CC) $(CFLAGS) -o $@ $(OBJ)
+ 
+-a2crd: a2crd.o Makefile
++a2crd: a2crd.o common.o Makefile
+ 	$(CC) $(CFLAGS) -o $@ a2crd.o common.o
+-	
++
+ chord.o    : chord.h
+ common.o   : chord.h
+ grid.o     : chord.h
+@@ -46,13 +46,12 @@ getopt.o   : getopt.h
  toc.o	   : chord.h
  
  install : all
@@ -43,3 +58,9 @@ $NetBSD: patch-aa,v 1.4 2010/02/11 19:02:01 joerg Exp $
  shar : $(SRC)
  	rm -f $(RELNAME).part*
  	shar -F -L 60 -o $(RELNAME).part $(SRC) $(INCL) $(SONGS) $(DOCS)
+@@ -67,5 +66,3 @@ lint : $(SRC)
+ 
+ clean:
+ 	rm -f core *.o chord 
+-
+-	
