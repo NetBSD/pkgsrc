@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2006/03/23 13:50:12 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2011/12/22 19:06:23 is Exp $
 
 --- tcptraceroute.c.orig	2002-07-30 21:51:27.000000000 +0000
 +++ tcptraceroute.c
@@ -11,6 +11,33 @@ $NetBSD: patch-ab,v 1.4 2006/03/23 13:50:12 joerg Exp $
  #define HASSALEN /* Awful, awful hack to make subinterfaces work on BSD. */
  #endif
  
+@@ -306,7 +306,7 @@ struct datalinktype {
+ };
+ 
+ /* Various globals */
+-u_long dst_ip, src_ip;
++in_addr_t dst_ip, src_ip;
+ u_short src_prt, dst_prt;
+ char *device, *name, *dst, *src;
+ char dst_name[TEXTSIZE], dst_prt_name[TEXTSIZE], filter[TEXTSIZE];
+@@ -322,7 +322,7 @@ int o_minttl, o_maxttl, o_timeout, o_deb
+ /* interface linked list, built later by getinterfaces() */
+ struct interface_entry {
+ 	char *name;
+-	u_long addr;
++	in_addr_t addr;
+ 	struct interface_entry *next;
+ } *interfaces;
+ 
+@@ -332,7 +332,7 @@ typedef struct {
+ 	u_short id, src_prt;
+ 	struct timeval timestamp;
+ 	double delta;
+-	u_long addr;
++	in_addr_t addr;
+ 	char *state;
+ 	char *string;
+ } proberecord;
 @@ -340,7 +340,6 @@ typedef struct {
  extern char *optarg;
  extern int optind, opterr, optopt;
@@ -34,6 +61,33 @@ $NetBSD: patch-ab,v 1.4 2006/03/23 13:50:12 joerg Exp $
  }
  
  void about(void)
+@@ -563,7 +562,7 @@ int tvsign(struct timeval *tv)
+  */
+ 
+ #define IPTOSBUFFERS	12
+-char *iptos(u_long in)
++char *iptos(in_addr_t in)
+ {
+ 	static char output[IPTOSBUFFERS][3*4+3+1];
+ 	static short which;
+@@ -580,7 +579,7 @@ char *iptos(u_long in)
+  * RFC1918 space.
+  */
+ 
+-char *iptohost(u_long in)
++char *iptohost(in_addr_t in)
+ {
+ 	u_char *p = (u_char *)&in;
+ 
+@@ -635,7 +634,7 @@ void getinterfaces(void)
+ 	struct ifconf ifc;
+ 	struct ifreq *ifrp, ifr;
+ 	int numreqs, i, s;
+-	u_long addr;
++	in_addr_t addr;
+ 	int salen;
+ 	char *x;
+ 
 @@ -724,8 +723,7 @@ void getinterfaces(void)
  		}
  #endif
@@ -44,6 +98,42 @@ $NetBSD: patch-ab,v 1.4 2006/03/23 13:50:12 joerg Exp $
  		{
  			debug("Ignoring non-AF_INET address on interface %s\n",
  				sprintable(ifr.ifr_name));
+@@ -772,7 +770,7 @@ void getinterfaces(void)
+  * given destination address.
+  */
+ 
+-u_long findsrc(u_long dest)
++in_addr_t findsrc(in_addr_t dest)
+ {
+ 	struct sockaddr_in sinsrc, sindest;
+ 	int s, size;
+@@ -808,7 +806,7 @@ u_long findsrc(u_long dest)
+  * interface exists with an address of 127.0.0.1.
+  */
+ 
+-char *finddev(u_long with_src)
++char *finddev(in_addr_t with_src)
+ {
+ 	struct interface_entry *p;
+ 	char *device = NULL;
+@@ -905,7 +903,7 @@ void showprobe(proberecord *record)
+ 	/* Variables to keep state between calls */
+ 	static char laststate[TEXTSIZE];
+ 	static int lastttl;
+-	static u_long lastaddr;
++	static in_addr_t lastaddr;
+ 	static int everprint;
+ 
+ 	int printflag = 0;
+@@ -1053,7 +1051,7 @@ void debugoptions(void)
+ void defaults(void)
+ {
+ 	struct servent *serv;
+-	u_long recommended_src;
++	in_addr_t recommended_src;
+ 
+ 	getinterfaces();
+ 
 @@ -1182,9 +1180,9 @@ void initcapture(void)
  	if (! (pcap = pcap_open_live(device, offset + SNAPLEN, 0, 10, errbuf)))
  		fatal("pcap_open_live failed: %s", errbuf);
