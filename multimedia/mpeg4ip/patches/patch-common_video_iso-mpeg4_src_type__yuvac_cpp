@@ -1,0 +1,24 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_type__yuvac_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/type_yuvac.cpp~	2005-05-04 19:56:00.000000000 +0000
++++ common/video/iso-mpeg4/src/type_yuvac.cpp
+@@ -39,7 +39,7 @@ Revision History:
+ 
+ *************************************************************************/
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include "typeapi.h"
+ 
+ #ifdef __MFC_
+@@ -540,7 +540,7 @@ const CU8Image* CVOPU8YUVBA::getPlaneA (
+ const CU8Image* CVOPU8YUVBA::getPlane (PlaneType plnType) const
+ {
+ 	if (plnType==A_PLANE) {
+-		cerr << "For A-Planes please use CVOPIntYUVBA::getPlaneA()!\n";
++		std::cerr << "For A-Planes please use CVOPIntYUVBA::getPlaneA()!\n";
+ 		assert( plnType!=A_PLANE );
+ 	}
+ 	

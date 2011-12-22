@@ -1,0 +1,15 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_sys__encoder__gmc__enc__util_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/sys_encoder_gmc_enc_util.cpp~	2005-05-04 19:55:59.000000000 +0000
++++ common/video/iso-mpeg4/src/sys_encoder_gmc_enc_util.cpp
+@@ -46,7 +46,7 @@ Abstract:
+ #include <stdio.h>
+ #include <math.h>
+ #include <stdlib.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <assert.h>
+ 
+ #include "typeapi.h"

@@ -1,0 +1,15 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_sys__encoder__tm5rc_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/sys_encoder_tm5rc.cpp~	2005-05-04 19:55:59.000000000 +0000
++++ common/video/iso-mpeg4/src/sys_encoder_tm5rc.cpp
+@@ -52,7 +52,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <math.h>
+ #include "header.h"
+ #include "typeapi.h"

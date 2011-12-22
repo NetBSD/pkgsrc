@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2010/12/13 21:32:14 chuck Exp $
+$NetBSD: distinfo,v 1.16 2011/12/22 14:44:42 dholland Exp $
 
 SHA1 (mpeg4ip-1.5.0.1.tar.gz) = 1271de695ed65284d9c39aa91bf26c5494603fd3
 RMD160 (mpeg4ip-1.5.0.1.tar.gz) = fee5c21c17a470e6de349e07d233a1eb46b2064a
@@ -16,3 +16,26 @@ SHA1 (patch-aj) = f0aeab4c17bb8a737a9ae3d4385c9f2989540ea7
 SHA1 (patch-ak) = 8a89f6eb4860b12479a062303c15a4f09416c964
 SHA1 (patch-al) = 5966b9c64a7d305b3e3b70717036ccebb5c3bdcd
 SHA1 (patch-am) = a0c9eb088b02d460925fb00e3f76b3fce186b187
+SHA1 (patch-common_video_iso-mpeg4_include_bitstrm_hpp) = 0706ccacbeefd9e416ad19e19a5db761166c3c18
+SHA1 (patch-common_video_iso-mpeg4_include_entropy_hpp) = b3fe3821186102a27ba70a6f7b2461909ecf7fb0
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__errenc_cpp) = cdc0eeeef9faf97aa8a9e29ed107b40dcf179efd
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__gmc__enc__util_cpp) = 4452af67a3ac0352dcc78388b5f8cec7e17f1bbd
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__mbenc_cpp) = c59fe6335a9e04539cedb1ef69844983065af39e
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__mbinterlace_cpp) = 5fa1be1847fa776db1de70612757f362c6d7a4fd
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__mcenc_cpp) = 5210bbf90a9a1b07b29e96a7f5e93d83b6a3b121
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__motest_cpp) = 62fd59b3e40524ba4ad90f0d1538d4a3c7df4421
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__mvenc_cpp) = 1702cf094a8eeab45a1ceeb397bd86dd9c52ad8f
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__padenc_cpp) = d47e8385c531dbe213929f70a5ffd1cf22d7f026
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__sptenc_cpp) = c4041cd35081a8419c0b81bf108b6cff93397d0b
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__tm5rc_cpp) = ce53fee8cb41f9bad6e1bccf514107a14336a585
+SHA1 (patch-common_video_iso-mpeg4_src_sys__encoder__vopmbenc_cpp) = 2d7ba52bbe723ab30d8d243ed65727b77b757126
+SHA1 (patch-common_video_iso-mpeg4_src_sys__error_cpp) = e418ad95f222478e08d4e14a922a45063bac55c8
+SHA1 (patch-common_video_iso-mpeg4_src_sys__mode_cpp) = 9e51f0cb3c81fa1dbdc3fa5e4a7802eb8e1ae256
+SHA1 (patch-common_video_iso-mpeg4_src_sys__rrv_cpp) = 3a4a6b4b7caa63ecde5030376a86db28e04e1701
+SHA1 (patch-common_video_iso-mpeg4_src_sys__tps__enhcbuf_cpp) = 3a400efaf50055cf8544a94d7b4fa05cb2d7ff58
+SHA1 (patch-common_video_iso-mpeg4_src_tools__entropy__bitstrm_cpp) = 27ccb1d800b35c6f641a794389e9a9c8f22500f1
+SHA1 (patch-common_video_iso-mpeg4_src_tools__entropy__huffman_cpp) = 2842a4c5c29be1d809c295d2484100706aeb1d9c
+SHA1 (patch-common_video_iso-mpeg4_src_tools__sadct__sadct_cpp) = c1345fadb405a203542bb72df4bd0b47ecdb6ddd
+SHA1 (patch-common_video_iso-mpeg4_src_type__yuvac_cpp) = 5ff0d2a25b42832bd11a42043b264e36dff8f5ac
+SHA1 (patch-common_video_iso-mpeg4_src_type__yuvai_cpp) = ee62e50f089d9a198ac40045960b1e8c195641d9
+SHA1 (patch-common_video_iso-mpeg4_src_vtc__main__vtcenc_cpp) = 8e9b3ce134ebad001d942152d2e4b88a88bb4144

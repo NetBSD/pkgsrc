@@ -1,0 +1,15 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_sys__tps__enhcbuf_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/sys_tps_enhcbuf.cpp~	2005-05-04 19:56:00.000000000 +0000
++++ common/video/iso-mpeg4/src/sys_tps_enhcbuf.cpp
+@@ -36,7 +36,7 @@ Revision History:
+ *************************************************************************/
+ 
+ #include <stdio.h>
+-#include <fstream.h>
++#include <fstream>
+ #include <stdlib.h>
+ 
+ #include "typeapi.h"
