@@ -1,0 +1,72 @@
+$NetBSD: patch-configure,v 1.1 2011/12/22 11:06:40 fhajny Exp $
+
+Skip checks for user/group at configure time.
+--- configure.orig	2011-10-10 09:11:25.745910175 +0000
++++ configure
+@@ -3381,33 +3381,9 @@ $as_echo_n "checking for user name \"$US
+ # MAILMAN_USER == variable name
+ # $USERNAME == user id to check for
+ 
+-
+-if test -z "$MAILMAN_USER"
+-then
+-    cat > conftest.py <<EOF
+-import pwd
+-uid = ''
+-for user in "$USERNAME".split():
+-    try:
+-        try:
+-            uname = pwd.getpwuid(int(user))[0]
+-            break
+-        except ValueError:
+-            uname = pwd.getpwnam(user)[0]
+-            break
+-    except KeyError:
+-        uname = ''
+-fp = open("conftest.out", "w")
+-fp.write("%s\n" % uname)
+-fp.close()
+-EOF
+-    $PYTHON conftest.py
+-    MAILMAN_USER=`cat conftest.out`
+-fi
+-
+-rm -f conftest.out conftest.py
+ if test -z "$MAILMAN_USER"
+ then
++  MAILMAN_USER="$USERNAME"
+   if test "$with_permcheck" = "yes"
+   then
+     { { $as_echo "$as_me:$LINENO: error:
+@@ -3457,30 +3433,7 @@ $as_echo_n "checking for group name \"$G
+ 
+ if test -z "$MAILMAN_GROUP"
+ then
+-    cat > conftest.py <<EOF
+-import grp
+-gid = ''
+-for group in "$GROUPNAME".split():
+-    try:
+-        try:
+-            gname = grp.getgrgid(int(group))[0]
+-            break
+-        except ValueError:
+-            gname = grp.getgrnam(group)[0]
+-            break
+-    except KeyError:
+-        gname = ''
+-fp = open("conftest.out", "w")
+-fp.write("%s\n" % gname)
+-fp.close()
+-EOF
+-    $PYTHON conftest.py
+-    MAILMAN_GROUP=`cat conftest.out`
+-fi
+-
+-rm -f conftest.out conftest.py
+-if test -z "$MAILMAN_GROUP"
+-then
++  MAILMAN_GROUP="$GROUPNAME"
+   if test "$with_permcheck" = "yes"
+   then
+     { { $as_echo "$as_me:$LINENO: error:
