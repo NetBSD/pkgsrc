@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.DragonFly,v 1.1 2011/12/22 07:58:16 marino Exp $
+lib/xawtv/drv0-bsd.so
