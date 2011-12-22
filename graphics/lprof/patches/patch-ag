@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2006/05/12 10:53:14 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2011/12/22 16:31:16 joerg Exp $
 
---- src/qtMeasurementTool/qtiffio.cpp.orig	2006-05-06 12:25:32.000000000 +0000
+--- src/qtMeasurementTool/qtiffio.cpp.orig	2005-08-20 01:11:52.000000000 +0000
 +++ src/qtMeasurementTool/qtiffio.cpp
 @@ -17,6 +17,7 @@
  // 
@@ -10,3 +10,34 @@ $NetBSD: patch-ag,v 1.1 2006/05/12 10:53:14 joerg Exp $
  #include <sys/mman.h>
  
  #include <tiffio.h>
+@@ -69,19 +70,6 @@ static toff_t tiff_size(thandle_t handle
+   return iod->size();
+ }
+ 
+-//! QIODevice / libtiff mmap wrapper
+-/*! \warning always returns MAP_FAILED.
+-*/
+-static int tiff_mmap(thandle_t handle,tdata_t* data,toff_t* size) {
+-  return (int) MAP_FAILED;
+-}
+-
+-//! QIODevice / libtiff write wrapper
+-/*! \warning because you can't mmap, this is a dummy.
+-*/
+-static void tiff_unmap(thandle_t handle, tdata_t data, toff_t size) {
+-}
+-
+ //! QImageIO read handler for TIFF files.
+ //
+ static void read_tiff_image(QImageIO *iio) {
+@@ -103,8 +91,8 @@ static void read_tiff_image(QImageIO *ii
+                            tiff_seek,
+                            tiff_close,
+                            tiff_size,
+-                           tiff_mmap,
+-                           tiff_unmap );
++                           NULL,
++                           NULL );
+   
+   if(tif) {
+     unsigned width, height,size;
