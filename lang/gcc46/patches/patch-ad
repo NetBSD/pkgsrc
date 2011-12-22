@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2011/12/22 14:14:22 wiz Exp $
 
 --- configure.orig	2011-03-16 18:27:36.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
  
  if test "x$with_mpfr" != x; then
 -  gmplibs="-L$with_mpfr/lib $gmplibs"
-+  gmplibs="-L$with_mpfr/lib -Wl,-R${PREFIX}/lib $gmplibs"
++  gmplibs="-L$with_mpfr/lib ${COMPILER_RPATH_FLAG}$with_mpfr/lib $gmplibs"
    gmpinc="-I$with_mpfr/include $gmpinc"
  fi
  if test "x$with_mpfr_include" != x; then
