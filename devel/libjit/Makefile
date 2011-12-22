@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/07/08 16:23:59 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2011/12/22 00:26:02 joerg Exp $
 #
 
 DISTNAME=	libjit-0.1.2
@@ -18,6 +18,12 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake lex yacc makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	ac_cv_header_tgmath_h=no
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
