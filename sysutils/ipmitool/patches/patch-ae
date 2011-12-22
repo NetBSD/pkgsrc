@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2011/12/22 19:00:05 drochner Exp $
+
+CVE-2011-4339
+
+--- lib/helper.c.orig	2009-02-25 20:38:52.000000000 +0000
++++ lib/helper.c
+@@ -427,7 +427,6 @@ ipmi_start_daemon(struct ipmi_intf *intf
+ #endif
+ 
+ 	chdir("/");
+-	umask(0);
+ 
+ 	for (fd=0; fd<64; fd++) {
+ 		if (fd != intf->fd)
