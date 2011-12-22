@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2011/07/03 06:20:06 markd Exp $
+# $NetBSD: Makefile,v 1.65 2011/12/22 11:06:40 fhajny Exp $
 
 DISTNAME=	mailman-2.1.14-1
 PKGNAME=	mailman-2.1.14.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.14/+download/
 EXTRACT_SUFX=	.tgz
@@ -43,7 +43,6 @@ PLIST_SUBST+=		MAILMAN_CGIEXT=${MAILMAN_CGIEXT:S/none//}
 PKG_GROUPS_VARS+=	MAILMAN_GROUP MAILMAN_CGIGROUP MAILMAN_MAILGROUP
 PKG_USERS_VARS+=	MAILMAN_USER
 
-USERGROUP_PHASE=	pre-install
 PKG_GROUPS=		${MAILMAN_GROUP}
 PKG_USERS=		${MAILMAN_USER}:${MAILMAN_GROUP}
 
@@ -113,7 +112,7 @@ post-patch:
 	${RM} -f ${WRKSRC}/[A-Z]*.orig
 
 pre-install:
-	${INSTALL} -d -o ${MAILMAN_USER} -g ${MAILMAN_GROUP} -m 775 ${DESTDIR}${EXECDIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${EXECDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXECDIR}/support
 
@@ -128,7 +127,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailman.conf.dist ${DESTDIR}${EGDIR}/mailman.conf
 	${INSTALL_DATA} ${WRKSRC}/cron/crontab.in ${DESTDIR}${EGDIR}/crontab.in
-	${CHOWN} -R root:${MAILMAN_GROUP} ${DESTDIR}${EXECDIR}
 	${CHMOD} -R g+w ${DESTDIR}${EXECDIR}
 	${CHMOD} g+s ${DESTDIR}${EXECDIR}/cgi-bin/*
 	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/lib/mailman/bin ${DESTDIR}${PREFIX}/lib/mailman/cron ${DESTDIR}${PREFIX}/lib/mailman/scripts
