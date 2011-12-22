@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/04/14 20:15:27 elric Exp $
+$NetBSD: distinfo,v 1.4 2011/12/22 16:33:51 joerg Exp $
 
 SHA1 (knc-1.6.1.tar.gz) = 2ab0356f0552c10b0da2ef2ffd6533989b29d2dd
 RMD160 (knc-1.6.1.tar.gz) = 945281771b1033798449d3bce468d4a5994ba83d
 Size (knc-1.6.1.tar.gz) = 20534 bytes
+SHA1 (patch-bin_gssstdio.h) = 4dd09f27467b8967929adf553d97b68a5d10fc52
