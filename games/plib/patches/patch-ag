@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2011/12/22 18:21:38 drochner Exp $
+
+CVE-2011-4620
+
+--- src/util/ulError.cxx.orig	2008-03-11 02:06:23.000000000 +0000
++++ src/util/ulError.cxx
+@@ -39,7 +39,7 @@ void ulSetError ( enum ulSeverity severi
+ {
+   va_list argp;
+   va_start ( argp, fmt ) ;
+-  vsprintf ( _ulErrorBuffer, fmt, argp ) ;
++  vsnprintf ( _ulErrorBuffer, sizeof(_ulErrorBuffer), fmt, argp ) ;
+   va_end ( argp ) ;
+  
+   if ( _ulErrorCB )
