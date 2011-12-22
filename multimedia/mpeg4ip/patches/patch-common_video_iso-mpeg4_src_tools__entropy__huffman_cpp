@@ -1,0 +1,15 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_tools__entropy__huffman_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/tools_entropy_huffman.cpp~	2005-06-17 20:07:56.000000000 +0000
++++ common/video/iso-mpeg4/src/tools_entropy_huffman.cpp
+@@ -55,7 +55,7 @@ Revision History:
+ #include "bitstrm.hpp"
+ 
+ #include "vlc.hpp"
+-#include <iostream.h>
++#include <iostream>
+ #ifdef __MFC_
+ #ifdef _DEBUG
+ #undef THIS_FILE
