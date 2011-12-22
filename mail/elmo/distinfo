@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2008/08/31 20:09:12 dholland Exp $
+$NetBSD: distinfo,v 1.6 2011/12/22 04:33:27 dholland Exp $
 
 SHA1 (elmo-1.3.2.tar.gz) = d4e7999ce85c17df082a016fd70ee4978cfe1043
 RMD160 (elmo-1.3.2.tar.gz) = 3db1fafbbe38636459c4b1bbc3dae414e54c92d6
 Size (elmo-1.3.2.tar.gz) = 536768 bytes
-SHA1 (patch-aa) = 8bfed77e5b5bae8c649b7474a3e64a188fb96f75
+SHA1 (patch-aa) = d7596f202bcd3ed1596ea61602aa7b9e3ec7f542
 SHA1 (patch-ab) = 64f3b1e5e913811da210b8df99076ba2dd3fd99c
 SHA1 (patch-ac) = 47287a753a78582c6d241df0af33b4231f658c50
 SHA1 (patch-ad) = 9c22a6eba18694cbbd6c8f51c467c0986a39d4f0
@@ -13,3 +13,5 @@ SHA1 (patch-ag) = 4c6d8cc128265f7c9b5a10cca09f5ab8cd0c2e9a
 SHA1 (patch-ah) = e0607381e57acb0ea8d5939d0ed7ccae08c65ff9
 SHA1 (patch-ai) = 6e96d4bb861ffbec3e7836773133cb1c77e6510e
 SHA1 (patch-aj) = f974c1de88cc3957ce3a255a73ae690dff6cd9f1
+SHA1 (patch-src_compose_l) = f5b3e7aea749935b7992d9a16ec54dcac1ecc7a5
+SHA1 (patch-src_confread_l) = d3096ba3bed7a25cbe71710146975727cc25e13d

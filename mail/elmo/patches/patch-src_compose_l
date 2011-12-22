@@ -1,0 +1,15 @@
+$NetBSD: patch-src_compose_l,v 1.1 2011/12/22 04:33:28 dholland Exp $
+
+- newer lex does not define YY_PROTO
+
+--- src/compose.l~	2004-08-13 11:18:22.000000000 +0000
++++ src/compose.l
+@@ -83,7 +83,7 @@
+ #define PREAMBLE do {if (mail == NULL) return NULL; } while (0)
+ 
+ 
+-#define YY_DECL static void write_mail YY_PROTO ((void)) 
++#define YY_DECL static void write_mail(void)
+ 
+ typedef enum {COMPOSE_NEW, COMPOSE_REPLY, COMPOSE_FWD} compose_act_t;
+ 
