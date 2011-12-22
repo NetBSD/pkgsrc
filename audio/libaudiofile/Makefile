@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2011/11/30 20:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2011/12/22 07:47:43 sbd Exp $
 
 DISTNAME=		audiofile-0.3.2
 PKGNAME=		lib${DISTNAME}
@@ -26,4 +26,8 @@ INSTALLATION_DIRS=	${DOCDIR}
 post-install:
 	cd ${WRKSRC}/docs; ${INSTALL_DATA} af* sf* ${DESTDIR}${DOCDIR}
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
