@@ -1,7 +1,19 @@
-$NetBSD: patch-aa,v 1.1 2005/07/16 15:40:56 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2011/12/22 04:33:28 dholland Exp $
 
---- src/mlex.l.orig	Fri Aug 13 13:18:23 2004
+- newer lex does not define YY_PROTO
+- hack around issue with date parsing
+
+--- src/mlex.l.orig	2004-08-13 11:18:23.000000000 +0000
 +++ src/mlex.l
+@@ -66,7 +66,7 @@
+  ****************************************************************************/
+   
+ #define EXECUTE(fun) ((fun) ? fun (), 0 : 0)
+-#define YY_DECL  int mlex_scan YY_PROTO ((void))
++#define YY_DECL  int mlex_scan(void)
+ #define YY_BREAK offset += yyleng; break;
+ 
+ 
 @@ -352,8 +352,14 @@ TEXT_PLAIN_CHARSET [ \t]*text\/plain.*(;
                   * obsolete one first, and check if it was possible to get
                   * the date
@@ -16,5 +28,5 @@ $NetBSD: patch-aa,v 1.1 2005/07/16 15:40:56 wiz Exp $
 -                if (tmp == NULL)
 +                if (tmp == NULL) */
                          tmp = strptime (date, "%d %b %Y %H:%M:%S", &tm);
-
+ 
  #ifdef HAVE_LOCALE_H
