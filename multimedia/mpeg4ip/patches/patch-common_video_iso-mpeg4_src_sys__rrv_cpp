@@ -1,0 +1,14 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_sys__rrv_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/sys_rrv.cpp~	2005-06-17 20:07:56.000000000 +0000
++++ common/video/iso-mpeg4/src/sys_rrv.cpp
+@@ -53,7 +53,6 @@ Revision History:
+ #include "global.hpp"
+ #include "mode.hpp"
+ #include "bitstrm.hpp"
+-class ofstream;
+ #include "sesenc.hpp"
+ #include "vopses.hpp"
+ #include "vopseenc.hpp"
