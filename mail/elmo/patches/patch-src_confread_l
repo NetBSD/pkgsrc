@@ -1,0 +1,15 @@
+$NetBSD: patch-src_confread_l,v 1.1 2011/12/22 04:33:28 dholland Exp $
+
+- newer lex does not define YY_PROTO
+
+--- src/confread.l~	2004-08-13 11:18:22.000000000 +0000
++++ src/confread.l
+@@ -64,7 +64,7 @@
+ #define FIRST_ALLOC 128
+ #define MAX_DEPTH   10
+ 
+-#define YY_DECL static token_t next_token YY_PROTO ((void))
++#define YY_DECL static token_t next_token(void)
+ 
+         typedef enum token {KW_SET       = 300,
+                             KW_HOOK      = 301,
