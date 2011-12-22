@@ -1,0 +1,33 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_type__yuvai_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/type_yuvai.cpp~	2005-05-04 19:56:00.000000000 +0000
++++ common/video/iso-mpeg4/src/type_yuvai.cpp
+@@ -37,7 +37,7 @@ Revision History:
+ *************************************************************************/
+ 
+ #include "typeapi.h"
+-#include <iostream.h>
++#include <iostream>
+ 
+ #ifdef __MFC_
+ #ifdef _DEBUG
+@@ -252,7 +252,7 @@ CVOPIntYUVBA::CVOPIntYUVBA (AlphaUsage f
+ const CIntImage* CVOPIntYUVBA::getPlane (PlaneType plnType) const
+ {
+   if (plnType==A_PLANE) {
+-    cerr << "For A-Planes please use CVOPIntYUVBA::getPlaneA()!\n";
++    std::cerr << "For A-Planes please use CVOPIntYUVBA::getPlaneA()!\n";
+     assert( plnType!=A_PLANE );
+   }
+ 
+@@ -309,7 +309,7 @@ Void CVOPIntYUVBA::setPlaneA (const CInt
+ Void CVOPIntYUVBA::setPlane (const CIntImage* pii, PlaneType plnType, Bool bBUV)
+ {
+   if (plnType==A_PLANE) {
+-    cerr << "For A-Planes please use CVOPIntYUVBA::setPlaneA()!\n";
++    std::cerr << "For A-Planes please use CVOPIntYUVBA::setPlaneA()!\n";
+     assert( plnType!=A_PLANE );
+   }
+ 

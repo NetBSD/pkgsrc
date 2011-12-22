@@ -1,0 +1,18 @@
+$NetBSD: patch-common_video_iso-mpeg4_include_bitstrm_hpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/include/bitstrm.hpp~	2005-09-08 22:02:55.000000000 +0000
++++ common/video/iso-mpeg4/include/bitstrm.hpp
+@@ -45,8 +45,9 @@ Revision History:
+ #ifndef _BITSTREAM_HPP_
+ #define _BITSTREAM_HPP_
+ #include "inbits.h"
+-#include <istream.h>
+-#include <ostream.h>
++#include <istream>
++#include <ostream>
++using namespace std;
+ 
+ class CIOBitStream
+ {

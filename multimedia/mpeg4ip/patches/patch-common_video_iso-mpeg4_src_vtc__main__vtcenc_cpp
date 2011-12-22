@@ -1,0 +1,15 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_vtc__main__vtcenc_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/vtc_main_vtcenc.cpp~	2005-05-04 19:56:00.000000000 +0000
++++ common/video/iso-mpeg4/src/vtc_main_vtcenc.cpp
+@@ -57,7 +57,7 @@
+ #include <math.h>
+ #include <assert.h>
+ // begin: added by Sharp (99/2/16)
+-#include <iostream.h>
++#include <iostream>
+ #include <sys/stat.h>
+ // end: added by Sharp (99/2/16)
+ 

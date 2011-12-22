@@ -1,0 +1,15 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_tools__sadct__sadct_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/tools_sadct_sadct.cpp~	2005-05-04 19:56:00.000000000 +0000
++++ common/video/iso-mpeg4/src/tools_sadct_sadct.cpp
+@@ -37,7 +37,7 @@ Revision History:
+ #include "dct.hpp"
+ #include <math.h>
+ #if defined(__DEBUG_SADCT_) && !defined(NDEBUG)
+-#include <iostream.h>
++#include <iostream>
+ #endif
+ #ifdef __MFC_
+ #ifdef _DEBUG

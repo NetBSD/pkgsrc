@@ -1,0 +1,17 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_tools__entropy__bitstrm_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/tools_entropy_bitstrm.cpp~	2005-09-08 22:02:55.000000000 +0000
++++ common/video/iso-mpeg4/src/tools_entropy_bitstrm.cpp
+@@ -42,8 +42,8 @@ Revision History:
+ 
+ *************************************************************************/
+ 
+-#include <fstream.h>
+-#include <iostream.h>
++#include <fstream>
++#include <iostream>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include "typeapi.h"
