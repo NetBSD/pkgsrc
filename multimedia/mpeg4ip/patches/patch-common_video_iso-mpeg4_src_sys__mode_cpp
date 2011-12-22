@@ -1,0 +1,15 @@
+$NetBSD: patch-common_video_iso-mpeg4_src_sys__mode_cpp,v 1.1 2011/12/22 14:44:42 dholland Exp $
+
+Fix C++ headers.
+
+--- common/video/iso-mpeg4/src/sys_mode.cpp~	2005-05-04 19:56:00.000000000 +0000
++++ common/video/iso-mpeg4/src/sys_mode.cpp
+@@ -50,7 +50,7 @@ Revision History:
+ 
+ 
+ #include <string.h>
+-#include <iostream.h>
++#include <iostream>
+ #include <math.h>
+ #include "typeapi.h"
+ #include "mode.hpp"
