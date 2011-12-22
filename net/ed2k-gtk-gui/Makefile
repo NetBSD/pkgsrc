@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/11/01 06:02:17 sbd Exp $
+# $NetBSD: Makefile,v 1.29 2011/12/22 22:10:33 marino Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.3
 PKGREVISION=		11
@@ -15,6 +15,7 @@ USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CONFIGURE_LDFLAGS=${LDFLAGS:M*:Q}
+LDFLAGS+=		-lX11	# direct link for ld v2.22
 
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
