@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2009/11/23 11:53:20 drochner Exp $
+$NetBSD: distinfo,v 1.14 2011/12/22 16:17:57 drochner Exp $
 
 SHA1 (jasper-1.900.1.zip) = 9c5735f773922e580bf98c7c7dfda9bbed4c5191
 RMD160 (jasper-1.900.1.zip) = fb2c188abf5b8c297078ac1f913101734f72db5c
@@ -7,5 +7,5 @@ SHA1 (patch-ad) = 85637e42cdb1245babd5736c2d039558025738a6
 SHA1 (patch-ae) = bfe00f76582a44ad748706c3fc81c4d6b8aede35
 SHA1 (patch-ag) = 0a3cf7ffff67001529198c23c3ca2499c71be7fa
 SHA1 (patch-ah) = 5455854277ad52adb4a22be08219facd796bbf1a
-SHA1 (patch-ai) = 000e9e4fe04d7dd4b5982953c39dbbd311487348
+SHA1 (patch-ai) = 39a16368197d180d9d925bc12b9fc1c6985f06f0
 SHA1 (patch-aj) = a2f5b3b31220767cd6f22ff236e3789ab6a5ba4f
