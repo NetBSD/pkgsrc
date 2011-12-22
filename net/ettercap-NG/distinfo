@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/12/23 07:03:16 obache Exp $
+$NetBSD: distinfo,v 1.7 2011/12/22 22:11:41 marino Exp $
 
 SHA1 (ettercap-NG-0.7.3.tar.gz) = 7a2c3f848ca4f39c07fddeb0d6308641265bc4ff
 RMD160 (ettercap-NG-0.7.3.tar.gz) = f4e6c0d87b2064b3775e9af60f34575273742616
@@ -7,4 +7,4 @@ SHA1 (patch-aa) = 27c7f53e0d704b7dc2b8c9c76bf1f9aeff1bbece
 SHA1 (patch-ab) = 7cf863797abac4b67dbca55f6f763bf7b9830259
 SHA1 (patch-ac) = ad04400499dcfdb4067079a58c849c287a34d12f
 SHA1 (patch-ad) = f39de66feb894ef2f1134abd3a3ca36677bea2b4
-SHA1 (patch-ae) = 9559d95f9793221a640461f7c894a6c034cd26d0
+SHA1 (patch-ae) = 1020e3d6b0aadd96f7a30455d30e3d3cb363e0b6
