@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/09 19:12:27 asau Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/22 22:09:35 marino Exp $
 #
 
 CLISP_MODULE=	rawsock
@@ -14,5 +14,6 @@ COMMENT=	CLISP rawsock module
 MAKE_JOBS_SAFE=	no
 
 .include "../../lang/clisp/module.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
