@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/12/15 18:51:43 dholland Exp $
+$NetBSD: distinfo,v 1.9 2011/12/23 01:17:54 joerg Exp $
 
 SHA1 (root_v5.26.00b.source.tar.gz) = 70db6f9cf6acc29bcf0060a4c2e1f9e24c26702a
 RMD160 (root_v5.26.00b.source.tar.gz) = 057ce1151a534f00a445ec69392e7a7a3bd55ca8
@@ -28,3 +28,5 @@ SHA1 (patch-bh) = 70591be468ba459aa1ab7f5159a3399566a784ea
 SHA1 (patch-bi) = 338133d5a00d67f6d2fab4ee55ca8b3f9c78ddf5
 SHA1 (patch-bj) = 07b5423a35c3998639cd5ac09596e5e40ce700f0
 SHA1 (patch-ca) = 016b52171f894a800f667c7e588a51a8031907bb
+SHA1 (patch-graf2d_asimage_src_libAfterImage_export.c) = a206c421c5d05c4a38dba0fc686e75459a713e70
+SHA1 (patch-graf2d_asimage_src_libAfterImage_import.c) = b5e33f2b3ce858bfdc64eaed59ea7606173a2169
