@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2011/11/25 21:42:44 joerg Exp $
+$NetBSD: distinfo,v 1.11 2011/12/23 01:12:35 joerg Exp $
 
 SHA1 (gcvs-1.0.tar.gz) = 42b2469d0a9acc0e69a127b44000cd1b11bb895e
 RMD160 (gcvs-1.0.tar.gz) = 195698283848cd1f22d00eb37df7dd0f6b52cffc
@@ -36,3 +36,5 @@ SHA1 (patch-cvstree_CvsLog.h) = 4f6dae8bb52b0f6b0e226dac985bbc098177acb6
 SHA1 (patch-cvstree_main.cpp) = 0b45151fe355dc3b2fa50013389511c10ed30740
 SHA1 (patch-cvsunix_lib_getline_c) = 502b5967beb579bbbd5ebab7ee8824136e24f3fd
 SHA1 (patch-cvsunix_lib_getline_h) = c717385903f2f36e992213cbc8f010d683858d5a
+SHA1 (patch-cvsunix_src_client.c) = 7f07bf41740470f3c6123a20dba9b005b5dca329
+SHA1 (patch-cvsunix_src_server.c) = dce0f6cd59df4dda7f5baf3222f222e1bd1d8deb
