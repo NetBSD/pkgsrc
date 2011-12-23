@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3363 2011/12/23 11:32:51 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3364 2011/12/23 17:01:10 tez Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated multimedia/mplayer-plugin to 3.55nb9 [obache 2011-12-22]
 	Updated databases/phpmyadmin to 3.4.9 [tron 2011-12-23]
 	Updated converters/skf to 1.97.4nb2 [obache 2011-12-23]
+	Updated security/mit-krb5-appl to 1.0.1nb3 [tez 2011-12-23]
