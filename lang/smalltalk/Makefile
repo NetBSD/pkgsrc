@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2011/11/01 06:01:56 sbd Exp $
+# $NetBSD: Makefile,v 1.61 2011/12/23 19:01:40 asau Exp $
 
 DISTNAME=	smalltalk-3.2.4
 PKGREVISION=	2
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=	--without-emacs
 #CONFIGURE_ARGS+=	--without-glib --without-gtk
 #CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
+CONFIGURE_ENV+=		ac_cv_header_sqlite3_h=no
 
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
 INFO_FILES=		YES
