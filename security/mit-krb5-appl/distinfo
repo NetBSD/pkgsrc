@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2011/12/18 18:05:13 dholland Exp $
+$NetBSD: distinfo,v 1.4 2011/12/23 16:44:24 tez Exp $
 
 SHA1 (2011-005-patch.txt) = 5e52a66b299407f54038fc287732160aabce51ff
 RMD160 (2011-005-patch.txt) = 780d9769e3b2661b927b26295f14a31dee314213
@@ -8,3 +8,4 @@ RMD160 (krb5-appl-1.0.1-signed.tar) = ca0668b623dcf4dc5a0699fa47d86660aac5544a
 Size (krb5-appl-1.0.1-signed.tar) = 645120 bytes
 SHA1 (patch-ab) = 4522fcdb396d2079ac6405926a64f907d94a2593
 SHA1 (patch-gssftp_ftp_cmds_c) = 24942a2bcfc0cb0ce3045da5468d315c5b1bfadb
+SHA1 (patch-telnet_libtelnet_encrypt.c) = 26e21d72c6f5bad4af2c733c2fe63fdc65a78bf2
