@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/02/07 13:17:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/12/23 11:32:37 obache Exp $
 bin/skf
 man/ja_JP.EUC/man1/skf.1
 man/ja_JP.UTF-8/man1/skf.1
@@ -6,11 +6,11 @@ man/man1/skf.1
 share/doc/skf/CHANGES_ja.txt
 share/doc/skf/README.txt
 share/doc/skf/copyright
-share/doc/skf/doc/1.Introduction.txt
-share/doc/skf/doc/2.intenal_code.txt
-share/doc/skf/doc/3.charset.txt
-share/doc/skf/doc/4.moji_table.txt
-share/doc/skf/doc/5.languages.txt
+share/doc/skf/doc/1.Introduction.txt.gz
+share/doc/skf/doc/2.intenal_code.txt.gz
+share/doc/skf/doc/3.charset.txt.gz
+share/doc/skf/doc/4.moji_table.txt.gz
+share/doc/skf/doc/5.languages.txt.gz
 share/locale/ja/LC_MESSAGES/skf.mo
 share/skf/lib/${VERSION}/iIM34@.stb
 share/skf/lib/${VERSION}/iIM34E.stb
