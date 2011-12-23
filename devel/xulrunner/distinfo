@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2011/11/27 13:09:00 tnn Exp $
+$NetBSD: distinfo,v 1.56 2011/12/23 01:16:27 joerg Exp $
 
 SHA1 (firefox-8.0.source.tar.bz2) = 843cf4ad70d2fc4b16654c3ff9b080d3eb357452
 RMD160 (firefox-8.0.source.tar.bz2) = f87ec7668b2dcc1bb581b97e1dbe85e4b97cb31c
@@ -76,3 +76,4 @@ SHA1 (patch-xl) = afd74085c01d207907d0b3bfc040bf92fd1ba8b1
 SHA1 (patch-xm) = 072240b71e4738e96d258fcd481698464623735e
 SHA1 (patch-xn) = b0d0943b2bc39d8395055550c0fedfa447a5de01
 SHA1 (patch-xo) = 437cbc7e0ed8777ae2313165f8754759d8eee01d
+SHA1 (patch-xpcom_idl-parser_header.py) = cd14f4056a31f15066aebb85e5c14fba2aa37f13

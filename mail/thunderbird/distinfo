@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2011/11/27 13:09:00 tnn Exp $
+$NetBSD: distinfo,v 1.87 2011/12/23 01:16:27 joerg Exp $
 
 SHA1 (enigmail-1.3.3.tar.gz) = a6d61b6dbdcfdb0dc4eaa8aac1b6277fed65c8c5
 RMD160 (enigmail-1.3.3.tar.gz) = 4c7ab726052b566f913612cfbdd767714486bf9c
@@ -60,6 +60,7 @@ SHA1 (patch-mk) = 3c25934e0c7b9277d96a5635b961e1fb6682ab7b
 SHA1 (patch-ml) = ef7d87fff48f298f4c1ed037439eaf8c7c574f68
 SHA1 (patch-mm) = f54286fe1acef3202d728b3e83cbd65cffe8ab12
 SHA1 (patch-mn) = 3a1c25a3f5a1532331424fc1e720f35cd0ed5d5b
+SHA1 (patch-mozilla_xpcom_idl-parser_header.py) = 38313ee3f2f7b45d4968c08be0af3ff36560baff
 SHA1 (patch-mp) = 673ba7fb0426d13699ead5fbcf762d8adb6baf40
 SHA1 (patch-pa) = a41a2dadd3b1c902f85632a4b57008a789b269bc
 SHA1 (patch-pb) = 11dada932534519ccf54998d027cf6f69d7b0d1d
