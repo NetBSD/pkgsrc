@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3361 2011/12/22 12:11:37 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3362 2011/12/23 08:08:02 tron Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5419,3 +5419,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/pam-tacplus to 1.3.5nb1 [wiz 2011-12-21]
 	Updated net/filezilla to 3.5.0nb3 [wiz 2011-12-21]
 	Updated multimedia/mplayer-plugin to 3.55nb9 [obache 2011-12-22]
+	Updated databases/phpmyadmin to 3.4.9 [tron 2011-12-23]
