@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2011/04/22 13:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.34 2011/12/23 11:32:37 obache Exp $
 
 DISTNAME=	skf_${VERSION}.4
 VERSION=	1.97
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=skf/50807/}
 
@@ -18,8 +18,7 @@ WRKSRC=		${WRKDIR}/skf-${VERSION}
 INSTALL_TARGET=	install locale_install
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt perl
-TOOLS_NOOP+=		gzip
+USE_TOOLS+=		msgfmt perl gzip
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 
