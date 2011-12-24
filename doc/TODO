@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10752 2011/12/23 17:21:14 wiz Exp $
+$NetBSD: TODO,v 1.10753 2011/12/24 14:28:36 taca Exp $
 
 Suggested new packages
 ======================
@@ -967,6 +967,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
 	o mathomatic-15.7.1
+	o mediawiki-1.17.1 [security fix]
+	o mediawiki-1.18.0
 	o memtester-4.2.2
 	o mergeant-0.67
 	o mesure-0.7.2
