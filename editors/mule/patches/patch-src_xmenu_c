@@ -1,0 +1,14 @@
+$NetBSD: patch-src_xmenu_c,v 1.1 2011/12/24 17:07:08 dholland Exp $
+
+- use standard headers
+
+--- src/xmenu.c~	1995-02-17 07:47:37.000000000 +0000
++++ src/xmenu.c
+@@ -34,6 +34,7 @@ the Free Software Foundation, 675 Mass A
+ #include <config.h>
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "lisp.h"
+ #include "termhooks.h"
+ #include "frame.h"

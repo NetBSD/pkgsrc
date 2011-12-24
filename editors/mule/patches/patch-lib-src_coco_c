@@ -1,0 +1,12 @@
+$NetBSD: patch-lib-src_coco_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- lib-src/coco.c~	1996-04-04 03:43:46.000000000 +0000
++++ lib-src/coco.c
+@@ -1,4 +1,5 @@
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "mulelib.h"
+ 
+ #define IN_BUF_SIZE 4096

@@ -1,0 +1,14 @@
+$NetBSD: patch-src_doc_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/doc.c~	1994-10-21 04:20:03.000000000 +0000
++++ src/doc.c
+@@ -22,6 +22,7 @@ the Free Software Foundation, 675 Mass A
+ 
+ #include <sys/types.h>
+ #include <sys/file.h>	/* Must be after sys/types.h for USG and BSD4_1*/
++#include <stdlib.h>
+ 
+ #ifdef USG5
+ #include <fcntl.h>

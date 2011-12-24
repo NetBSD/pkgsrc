@@ -1,0 +1,14 @@
+$NetBSD: patch-src_xdisp_c,v 1.1 2011/12/24 17:07:08 dholland Exp $
+
+- use standard headers
+
+--- src/xdisp.c~	1996-03-06 08:08:03.000000000 +0000
++++ src/xdisp.c
+@@ -68,6 +68,7 @@ the Free Software Foundation, 675 Mass A
+ 
+ #include <config.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ /*#include <ctype.h>*/
+ #undef NULL
+ #include "lisp.h"

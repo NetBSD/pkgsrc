@@ -1,12 +1,21 @@
-$NetBSD: patch-src_alloc_c,v 1.1 2011/12/24 13:30:33 dholland Exp $
+$NetBSD: patch-src_alloc_c,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
+- use standard includes
 - add an empty asm() destroying memory that prevents gcc from
   optimizing out __malloc_hook and friends (which leads to
   SIGSEGV in temacs during build)
 
---- src/alloc.c~	1994-10-24 11:37:41.000000000 +0000
+--- src/alloc.c.orig	1994-10-24 11:37:41.000000000 +0000
 +++ src/alloc.c
-@@ -240,6 +240,9 @@ emacs_blocked_free (ptr)
+@@ -30,6 +30,7 @@ the Free Software Foundation, 675 Mass A
+ 	In make_string(), original bug fixed. */
+ 
+ #include <signal.h>
++#include <stdlib.h>
+ 
+ #include <config.h>
+ #include "lisp.h"
+@@ -240,6 +241,9 @@ emacs_blocked_free (ptr)
  {
    BLOCK_INPUT;
    __free_hook = old_free_hook;
@@ -16,7 +25,7 @@ $NetBSD: patch-src_alloc_c,v 1.1 2011/12/24 13:30:33 dholland Exp $
    free (ptr);
    __free_hook = emacs_blocked_free;
    UNBLOCK_INPUT;
-@@ -253,6 +256,9 @@ emacs_blocked_malloc (size)
+@@ -253,6 +257,9 @@ emacs_blocked_malloc (size)
  
    BLOCK_INPUT;
    __malloc_hook = old_malloc_hook;
@@ -26,7 +35,7 @@ $NetBSD: patch-src_alloc_c,v 1.1 2011/12/24 13:30:33 dholland Exp $
    value = (void *) malloc (size);
    __malloc_hook = emacs_blocked_malloc;
    UNBLOCK_INPUT;
-@@ -269,6 +275,9 @@ emacs_blocked_realloc (ptr, size)
+@@ -269,6 +276,9 @@ emacs_blocked_realloc (ptr, size)
  
    BLOCK_INPUT;
    __realloc_hook = old_realloc_hook;

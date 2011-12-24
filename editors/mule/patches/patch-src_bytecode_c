@@ -1,0 +1,14 @@
+$NetBSD: patch-src_bytecode_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/bytecode.c~	1994-10-21 04:19:49.000000000 +0000
++++ src/bytecode.c
+@@ -34,6 +34,7 @@ by Hallvard:
+ 
+ /* 92.3.6   modified for Mule Ver.0.9.0 by K.Handa <handa@etl.go.jp> */
+ 
++#include <stdlib.h>
+ #include <config.h>
+ #include "lisp.h"
+ #include "buffer.h"

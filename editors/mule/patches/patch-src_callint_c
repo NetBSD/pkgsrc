@@ -1,0 +1,14 @@
+$NetBSD: patch-src_callint_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/callint.c~	1994-10-21 04:19:49.000000000 +0000
++++ src/callint.c
+@@ -24,6 +24,7 @@ the Free Software Foundation, 675 Mass A
+ /* 93.3.18  modified for Mule Ver.0.9.7.1 by K.Handa <handa@etl.go.jp>
+ 	Document of 'interactive' updated. */
+ 
++#include <stdlib.h>
+ #include <config.h>
+ #include "lisp.h"
+ #include "buffer.h"

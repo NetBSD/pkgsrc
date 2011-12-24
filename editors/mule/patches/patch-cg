@@ -1,8 +1,19 @@
-$NetBSD: patch-cg,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-cg,v 1.2 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+- don't declare own errno
 
 --- src/process.c.orig	1996-08-15 03:39:14.000000000 +0000
 +++ src/process.c
-@@ -191,7 +191,6 @@ static Lisp_Object stream_process;
+@@ -95,6 +95,7 @@ the Free Software Foundation, 675 Mass A
+ #include <stdio.h>
+ #include <errno.h>
+ #include <setjmp.h>
++#include <stdlib.h>
+ #include <sys/types.h>		/* some typedefs are used in sys/file.h */
+ #include <sys/file.h>
+ #include <sys/stat.h>
+@@ -191,7 +192,6 @@ static Lisp_Object stream_process;
  
  #include "syswait.h"
  

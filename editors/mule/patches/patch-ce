@@ -1,8 +1,21 @@
-$NetBSD: patch-ce,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-ce,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
---- src/sysdep.c.orig	2006-01-04 18:25:48.000000000 +0000
+- use standard headers
+- don't declare own errno
+
+--- src/sysdep.c.orig	1995-06-10 03:07:04.000000000 +0000
 +++ src/sysdep.c
-@@ -75,8 +75,6 @@ extern int h_errno;
+@@ -20,6 +20,9 @@ the Free Software Foundation, 675 Mass A
+ 
+ #include <signal.h>
+ #include <setjmp.h>
++#include <string.h>
++#include <stdlib.h>
++#include <unistd.h>
+ 
+ #include <config.h>
+ #include "lisp.h"
+@@ -75,8 +78,6 @@ extern int h_errno;
  #include <sys/param.h>
  #endif
  

@@ -1,8 +1,19 @@
-$NetBSD: patch-am,v 1.2 2005/12/01 18:13:24 wiz Exp $
+$NetBSD: patch-am,v 1.3 2011/12/24 17:07:07 dholland Exp $
 
---- src/xfns.c.orig	1994-11-04 12:11:24.000000000 +0100
+- use standard headers
+- declare external symbols properly
+
+--- src/xfns.c.orig	1994-11-04 11:11:24.000000000 +0000
 +++ src/xfns.c
-@@ -226,7 +226,7 @@ Lisp_Object Qborder_width;
+@@ -23,6 +23,7 @@ the Free Software Foundation, 675 Mass A
+ 
+ #include <signal.h>
+ #include <config.h>
++#include <stdlib.h>
+ 
+ #if 0
+ #include <stdio.h>
+@@ -226,7 +227,7 @@ Lisp_Object Qborder_width;
  Lisp_Object Qbox;
  Lisp_Object Qcursor_color;
  Lisp_Object Qcursor_type;
