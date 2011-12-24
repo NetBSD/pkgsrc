@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.72 2011/12/24 03:02:25 sbd Exp $
+# $NetBSD: Makefile.common,v 1.73 2011/12/24 08:39:11 sbd Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-arts/Makefile
@@ -66,6 +66,7 @@ BUILDLINK_TRANSFORM+=	"rm:-Wl,--no-undefined"
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/lib/dummy.c
+	cd ${WRKSRC} && aclocal -I m4
 	cd ${WRKSRC} && automake -Wnone
 	cd ${WRKSRC} && autoheader
 	cd ${WRKSRC} && autoconf
