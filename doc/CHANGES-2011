@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3364 2011/12/23 17:01:10 tez Exp $
+$NetBSD: CHANGES-2011,v 1.3365 2011/12/24 14:27:43 taca Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5422,3 +5422,5 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated databases/phpmyadmin to 3.4.9 [tron 2011-12-23]
 	Updated converters/skf to 1.97.4nb2 [obache 2011-12-23]
 	Updated security/mit-krb5-appl to 1.0.1nb3 [tez 2011-12-23]
+	Updated www/typo3_45 to 4.5.10 [taca 2011-12-24]
+	Updated www/typo3_46 to 4.6.3 [taca 2011-12-24]
