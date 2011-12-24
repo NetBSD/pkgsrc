@@ -1,0 +1,15 @@
+$NetBSD: patch-lib-src_profile_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- fix void main
+
+--- lib-src/profile.c~	1994-07-25 23:20:58.000000000 +0000
++++ lib-src/profile.c
+@@ -66,7 +66,7 @@ get_time ()
+   return time_string;
+ }
+ 
+-void
++int
+ main ()
+ {
+   int c;

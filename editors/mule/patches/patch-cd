@@ -1,8 +1,19 @@
-$NetBSD: patch-cd,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-cd,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
---- src/xterm.c.orig	2006-01-04 18:04:35.000000000 +0000
+- use standard headers
+- don't declare own errno
+
+--- src/xterm.c.orig	1995-07-22 00:59:57.000000000 +0000
 +++ src/xterm.c
-@@ -358,8 +358,6 @@ static int x_noop_count;
+@@ -71,6 +71,7 @@ the Free Software Foundation, 675 Mass A
+ #include <setjmp.h>
+ #include <sys/stat.h>
+ #include <sys/param.h>
++#include <stdlib.h>
+ 
+ #include "dispextern.h"
+ #include "termhooks.h"
+@@ -358,8 +359,6 @@ static int x_noop_count;
  
  static WINDOWINFO_TYPE windowinfo;
  

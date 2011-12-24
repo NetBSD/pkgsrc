@@ -1,0 +1,14 @@
+$NetBSD: patch-src_charset_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/charset.c~	1995-07-18 11:35:56.000000000 +0000
++++ src/charset.c
+@@ -73,6 +73,7 @@ the Free Software Foundation, 675 Mass A
+ #include <sys/types.h>
+ #include <config.h>
+ #else  /* not emacs */
++#include <stdlib.h>
+ #define xmalloc (void *)malloc
+ #define xrealloc (void *)realloc
+ #endif /* emacs */

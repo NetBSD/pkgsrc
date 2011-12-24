@@ -1,10 +1,12 @@
-$NetBSD: patch-bx,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-bx,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
 --- lib-src/emacsserver.c.orig	2006-01-04 17:43:55.000000000 +0000
 +++ lib-src/emacsserver.c
-@@ -56,8 +56,6 @@ main ()
+@@ -56,8 +56,8 @@ main ()
  #include <stdio.h>
  #include <errno.h>
++#include <stdlib.h>
++#include <string.h>
  
 -extern int errno;
 -

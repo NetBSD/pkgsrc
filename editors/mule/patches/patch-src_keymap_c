@@ -1,0 +1,14 @@
+$NetBSD: patch-src_keymap_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/keymap.c~	1994-10-24 12:30:52.000000000 +0000
++++ src/keymap.c
+@@ -31,6 +31,7 @@ the Free Software Foundation, 675 Mass A
+ 
+ #include <config.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #undef NULL
+ #include "lisp.h"
+ #include "commands.h"
