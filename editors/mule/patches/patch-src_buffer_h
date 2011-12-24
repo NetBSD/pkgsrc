@@ -1,0 +1,15 @@
+$NetBSD: patch-src_buffer_h,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/buffer.h~	1995-06-09 08:31:18.000000000 +0000
++++ src/buffer.h
+@@ -40,6 +40,8 @@ the Free Software Foundation, 675 Mass A
+ /* 93.7.7   modified for Mule Ver.0.9.8 by K.Handa <handa@etl.go.jp>
+ 	frontmap is introduced. */
+ 
++#include <stdlib.h>
++
+ #ifdef USE_TEXT_PROPERTIES
+ #define SET_PT(position) (set_point ((position), current_buffer))
+ #define TEMP_SET_PT(position) (temp_set_point ((position), current_buffer))
