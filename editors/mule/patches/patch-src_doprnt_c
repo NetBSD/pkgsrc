@@ -1,0 +1,14 @@
+$NetBSD: patch-src_doprnt_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/doprnt.c~	1994-10-24 12:24:27.000000000 +0000
++++ src/doprnt.c
+@@ -29,6 +29,7 @@ the Free Software Foundation, 675 Mass A
+ #include <config.h>
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdlib.h>
+ 
+ #include "lisp.h"
+ #include "charset.h"

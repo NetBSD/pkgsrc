@@ -1,8 +1,10 @@
-$NetBSD: patch-src_m_amd64.h,v 1.1 2011/12/20 18:33:40 ryoon Exp $
+$NetBSD: patch-src_m_amd64.h,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
---- src/m/amd64.h.orig	2011-12-20 18:27:24.000000000 +0000
+amd64 support.
+
+--- src/m/amd64.h.orig	2011-12-24 14:41:29.000000000 +0000
 +++ src/m/amd64.h
-@@ -0,0 +1,141 @@
+@@ -0,0 +1,156 @@
 +/* machine description file for AMD x86-64.
 +   Copyright (C) 2002 Free Software Foundation, Inc.
 +
@@ -30,9 +32,17 @@ $NetBSD: patch-src_m_amd64.h,v 1.1 2011/12/20 18:33:40 ryoon Exp $
 +  
 +#define SHORTBITS 16		/* Number of bits in a short */
 +
-+#define INTBITS 32		/* Number of bits in an int */
++#define INTBITS 32L		/* Number of bits in an int */
 +
-+#define LONGBITS 64		/* Number of bits in a long */
++#define LONGBITS 64L		/* Number of bits in a long */
++
++/* Define LONG_LISP_OBJECT if you define LISP_OBJECT as long. */
++
++#define LONG_LISP_OBJECT
++
++/* Define the number of bits compose Lisp_Object. The default is 32. */
++
++#define LISP_OBJECT_BITS 64
 +
 +/* The following line tells the configuration script what sort of 
 +   operating system this machine is likely to run.
@@ -41,10 +51,10 @@ $NetBSD: patch-src_m_amd64.h,v 1.1 2011/12/20 18:33:40 ryoon Exp $
 +#define BITS_PER_LONG           64
 +#define BITS_PER_EMACS_INT      64
 +
-+/* Define WORDS_BIG_ENDIAN iff lowest-numbered byte in a word
++/* Define BIG_ENDIAN iff lowest-numbered byte in a word
 +   is the most significant byte.  */
 +
-+#undef WORDS_BIG_ENDIAN
++#undef BIG_ENDIAN
 +
 +/* Define NO_ARG_ARRAY if you cannot take the address of the first of a
 + * group of arguments and treat it as an array of the arguments.  */
@@ -55,6 +65,11 @@ $NetBSD: patch-src_m_amd64.h,v 1.1 2011/12/20 18:33:40 ryoon Exp $
 + * to be corrected before they can be used as byte counts.  */
 +
 +/* #define WORD_MACHINE  */
++
++/* Define how to take a char and sign-extend into an int.
++   On machines where char is signed, this is a no-op.  */
++
++#define SIGN_EXTEND_CHAR(c) ((signed char)(c))
 +
 +/* Now define a symbol for the cpu type, if your compiler
 +   does not define it automatically:
@@ -122,6 +137,7 @@ $NetBSD: patch-src_m_amd64.h,v 1.1 2011/12/20 18:33:40 ryoon Exp $
 +
 +#define PNTR_COMPARISON_TYPE unsigned long
 +
++#if 0
 +/* On the 64 bit architecture, we can use 60 bits for addresses */
 +
 +#define VALBITS         60
@@ -134,6 +150,7 @@ $NetBSD: patch-src_m_amd64.h,v 1.1 2011/12/20 18:33:40 ryoon Exp $
 +/* Define XINT and XUINT so that they can take arguments of type int */
 +#define XINT(a)  (((long) (a) << (BITS_PER_LONG - VALBITS)) >> (BITS_PER_LONG - VALBITS))
 +#define XUINT(a) ((long) (a) & VALMASK)
++#endif
 +
 +/* Define XPNTR to avoid or'ing with DATA_SEG_BITS */
 +

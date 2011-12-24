@@ -1,8 +1,19 @@
-$NetBSD: patch-cb,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-cb,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
---- src/dispnew.c.orig	2006-01-04 18:00:54.000000000 +0000
+- use standard headers
+- don't declare own errno
+
+--- src/dispnew.c.orig	1995-02-03 01:21:28.000000000 +0000
 +++ src/dispnew.c
-@@ -2047,7 +2047,6 @@ SIGTYPE
+@@ -59,6 +59,7 @@ the Free Software Foundation, 675 Mass A
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdlib.h>
+ 
+ #include "lisp.h"
+ #include "termchar.h"
+@@ -2047,7 +2048,6 @@ SIGTYPE
  window_change_signal ()
  {
    int width, height;

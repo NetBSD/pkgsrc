@@ -1,12 +1,30 @@
-$NetBSD: patch-by,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-by,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
---- lib-src/timer.c.orig	2006-01-04 17:44:22.000000000 +0000
+- use standard headers
+- don't declare own errno
+
+--- lib-src/timer.c.orig	1995-02-17 07:47:36.000000000 +0000
 +++ lib-src/timer.c
-@@ -33,7 +33,6 @@
+@@ -12,7 +12,9 @@
+    esr@snark.thyrsus.com, Aug 7 1992.  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <signal.h>
++#include <time.h>
+ #include <errno.h>
+ #include <sys/types.h>  /* time_t */
+ 
+@@ -33,12 +35,7 @@
  #endif
  
  
 -extern int errno;
  extern char *strerror ();
- #ifndef OSF1
- extern char *malloc ();
+-#ifndef OSF1
+-extern char *malloc ();
+-#endif
+-extern time_t time ();
+ 
+ /*
+  * The field separator for input.  This character shouldn't occur in dates,

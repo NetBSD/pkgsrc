@@ -1,0 +1,14 @@
+$NetBSD: patch-src_xfaces_c,v 1.1 2011/12/24 17:07:08 dholland Exp $
+
+- use standard headers
+
+--- src/xfaces.c~	1995-07-18 08:14:26.000000000 +0000
++++ src/xfaces.c
+@@ -21,6 +21,7 @@ the Free Software Foundation, 675 Mass A
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <stdlib.h>
+ 
+ #include <config.h>
+ #include "lisp.h"

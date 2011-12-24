@@ -1,8 +1,31 @@
-$NetBSD: patch-bw,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-bw,v 1.2 2011/12/24 17:07:07 dholland Exp $
 
---- lib-src/movemail.c.orig	2006-01-04 17:43:12.000000000 +0000
+- use standard headers
+- don't declare own errno
+- fix malloc usage
+
+--- lib-src/movemail.c.orig	1994-08-04 23:15:22.000000000 +0000
 +++ lib-src/movemail.c
-@@ -370,7 +370,6 @@ error (s1, s2, s3)
+@@ -54,6 +54,9 @@ the Free Software Foundation, 675 Mass A
+ #include <sys/stat.h>
+ #include <sys/file.h>
+ #include <errno.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <../src/syswait.h>
+ 
+ #ifdef MSDOS
+@@ -98,7 +101,7 @@ extern int lk_open (), lk_close ();
+ #undef close
+ 
+ char *concat ();
+-char *xmalloc ();
++void *xmalloc (size_t);
+ #ifndef errno
+ extern int errno;
+ #endif
+@@ -370,7 +373,6 @@ error (s1, s2, s3)
  pfatal_with_name (name)
       char *name;
  {
@@ -10,7 +33,7 @@ $NetBSD: patch-bw,v 1.1 2006/01/04 20:35:08 joerg Exp $
    extern char *strerror ();
    char *s;
  
-@@ -381,7 +380,6 @@ pfatal_with_name (name)
+@@ -381,7 +383,6 @@ pfatal_with_name (name)
  pfatal_and_delete (name)
       char *name;
  {
@@ -18,7 +41,22 @@ $NetBSD: patch-bw,v 1.1 2006/01/04 20:35:08 joerg Exp $
    extern char *strerror ();
    char *s;
  
-@@ -747,7 +745,6 @@ multiline (buf, n, f)
+@@ -409,11 +410,10 @@ concat (s1, s2, s3)
+ 
+ /* Like malloc but get fatal error if memory is exhausted.  */
+ 
+-char *
+-xmalloc (size)
+-     unsigned size;
++void *
++xmalloc (size_t size)
+ {
+-  char *result = (char *) malloc (size);
++  void *result = (char *) malloc (size);
+   if (!result)
+     fatal ("virtual memory exhausted", 0);
+   return result;
+@@ -747,7 +747,6 @@ multiline (buf, n, f)
  char *
  get_errmsg ()
  {

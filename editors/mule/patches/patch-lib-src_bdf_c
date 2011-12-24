@@ -1,0 +1,14 @@
+$NetBSD: patch-lib-src_bdf_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- lib-src/bdf.c~	1995-06-15 08:12:59.000000000 +0000
++++ lib-src/bdf.c
+@@ -50,6 +50,7 @@ the Free Software Foundation, 675 Mass A
+ 	In bdf_load_font(), fontp->extra->fs should not be set in emacs. */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <sys/param.h>
+ #include <sys/types.h>
+ #include <fcntl.h>

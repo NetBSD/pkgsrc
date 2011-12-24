@@ -1,0 +1,15 @@
+$NetBSD: patch-lib-src_etags_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- lib-src/etags.c~	1994-07-08 10:24:10.000000000 +0000
++++ lib-src/etags.c
+@@ -44,6 +44,8 @@ char pot_etags_version[] = "@(#) pot rev
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
