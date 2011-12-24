@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2011/11/18 07:27:43 obache Exp $
+# $NetBSD: Makefile.common,v 1.72 2011/12/24 03:02:25 sbd Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-arts/Makefile
@@ -28,7 +28,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	misc/libxine.pc.in
-USE_TOOLS+=		autoconf gmake msgfmt pkg-config xmkmf perl
+USE_TOOLS+=		autoconf automake gmake msgfmt pkg-config xmkmf perl
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 #CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
@@ -66,6 +66,7 @@ BUILDLINK_TRANSFORM+=	"rm:-Wl,--no-undefined"
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/lib/dummy.c
+	cd ${WRKSRC} && automake -Wnone
 	cd ${WRKSRC} && autoheader
 	cd ${WRKSRC} && autoconf
 

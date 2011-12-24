@@ -1,23 +1,13 @@
-$NetBSD: patch-ap,v 1.10 2011/11/16 19:45:37 drochner Exp $
+$NetBSD: patch-ap,v 1.11 2011/12/24 03:02:25 sbd Exp $
 
 --- src/dxr3/Makefile.am.orig	2011-10-04 21:42:53.000000000 +0000
 +++ src/dxr3/Makefile.am
-@@ -17,6 +17,9 @@ endif
- if HAVE_LIBRTE
- link_rte = -lrte
- endif
-+if HAVE_XINERAMA
-+link_xinerama = -lXinerama
-+endif
- 
- EXTRA_DIST = compat.c
- 
 @@ -45,7 +48,7 @@ xineplug_vo_out_dxr3_la_SOURCES = \
  	dxr3_scr.c \
  	video_out_dxr3.c
  
 -xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm
-+xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_xinerama) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm
++xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm $(XINERAMA_LIBS)
  xineplug_vo_out_dxr3_la_CFLAGS = $(VISIBILITY_FLAG) $(AM_CFLAGS)
  xineplug_vo_out_dxr3_la_LDFLAGS = $(xineplug_ldflags)
  
