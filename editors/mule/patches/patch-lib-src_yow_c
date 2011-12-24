@@ -1,0 +1,23 @@
+$NetBSD: patch-lib-src_yow_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use time() correctly
+
+--- lib-src/yow.c~	1994-06-07 15:18:54.000000000 +0000
++++ lib-src/yow.c
+@@ -9,6 +9,7 @@
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include <time.h>
+ #include <../src/paths.h>      /* For PATH_DATA.  */
+ 
+ #define BUFSIZE  80
+@@ -53,7 +54,7 @@ main (argc, argv)
+   }
+ 
+   /* initialize random seed */
+-  srand((int) (getpid() + time((long *) 0)));
++  srand((int) (getpid() + time(NULL)));
+ 
+   setup_yow(fp);
+   yow(fp);

@@ -1,0 +1,14 @@
+$NetBSD: patch-src_editfns_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+
+- use standard headers
+
+--- src/editfns.c~	1994-10-24 04:23:21.000000000 +0000
++++ src/editfns.c
+@@ -46,6 +46,7 @@ the Free Software Foundation, 675 Mass A
+ 	char_to_string() and string_to_char() completely re-written. */
+ 
+ #include <sys/types.h>
++#include <stdlib.h>
+ 
+ #include <config.h>
+ 
