@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2005/12/01 18:13:24 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2011/12/24 17:07:07 dholland Exp $
 
 --- src/unexelf.c.orig	1994-10-21 05:21:00.000000000 +0100
 +++ src/unexelf.c
@@ -466,7 +466,7 @@ $NetBSD: patch-ab,v 1.2 2005/12/01 18:13:24 wiz Exp $
 +/*
 + * NetBSD does not have normal-looking user-land ELF support.
 + */
-+# ifdef __alpha__
++# if defined(__alpha__) || defined(__x86_64__) || defined(__sparc64__) || defined(_LP64)
 +#  define ELFSIZE	64
 +# else
 +#  define ELFSIZE	32
