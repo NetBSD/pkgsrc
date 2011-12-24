@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10753 2011/12/24 14:28:36 taca Exp $
+$NetBSD: TODO,v 1.10754 2011/12/24 23:46:37 asau Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
-	o octave-3.4.3
 	o offlineimap-6.4.2 [pkg/45712]
 	o olvwm-4.5
 	o oo2c-2.1.7
