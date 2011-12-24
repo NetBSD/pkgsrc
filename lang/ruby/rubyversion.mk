@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.64 2011/11/08 15:18:31 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.65 2011/12/24 03:30:10 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -230,13 +230,6 @@ RUBY_VER=	${RUBY_VERSION_SUPPORTED}
 RUBY_VER=	${rv}
 .  endif
 . endfor
-.endif
-
-# For backward compatibility
-.if ${RUBY_VER} == "1.9" || ${RUBY_VER} == "192"
-RUBY_VER=	19
-.elif  ${RUBY_VER} == "1.8"
-RUBY_VER=	18
 .endif
 
 .if ${RUBY_VER} == "18"
@@ -570,5 +563,7 @@ PRINT_PLIST_AWK+=	/^${RUBY_SYSRIDIR:S|/|\\/|g}\// \
 			{ next; }
 PRINT_PLIST_AWK+=	/\/${RUBY_NAME}/ \
 			{ sub(/${RUBY_NAME}/, "$${RUBY_NAME}"); }
+PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g:S|.|\\.|g}/ \
+			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); }
 
 .endif # _RUBY_MK
