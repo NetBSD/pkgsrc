@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/12/11 13:01:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2011/12/25 01:29:01 ryoon Exp $
 #
 
-DISTNAME=	tiki-6.4
+DISTNAME=	tiki-6.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/tiki-/tiki6-/}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tikiwiki/}
 EXTRACT_SUFX=	.tar.bz2
