@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3366 2011/12/24 23:46:37 asau Exp $
+$NetBSD: CHANGES-2011,v 1.3367 2011/12/25 01:30:31 ryoon Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5425,3 +5425,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/typo3_45 to 4.5.10 [taca 2011-12-24]
 	Updated www/typo3_46 to 4.6.3 [taca 2011-12-24]
 	Updated math/octave to 3.4.3 [asau 2011-12-24]
+	Updated www/php-tiki6 to 6.5 [ryoon 2011-12-25]
