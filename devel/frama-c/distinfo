@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/06/15 08:26:54 wiz Exp $
+$NetBSD: distinfo,v 1.3 2011/12/25 15:52:12 asau Exp $
 
-SHA1 (frama-c-Beryllium-20090901.tar.gz) = 17b1516e9807a9a34ab20a3413efc372549e6fed
-RMD160 (frama-c-Beryllium-20090901.tar.gz) = b29038e948b898196947cae636eef9adbea99ed6
-Size (frama-c-Beryllium-20090901.tar.gz) = 18162700 bytes
-SHA1 (patch-aa) = fbeccfdd1b90c1d72d954d4ea06309da5684f6a4
-SHA1 (patch-ab) = 3f59690f68cfe408cc5dc86adf4c2d66b361eca5
+SHA1 (frama-c-Nitrogen-20111001.tar.gz) = 5b5b8cd0b21e007012c899ab74bb33cbe23582ed
+RMD160 (frama-c-Nitrogen-20111001.tar.gz) = 4401666bdca00c9f8fe9882309116633e5d68984
+Size (frama-c-Nitrogen-20111001.tar.gz) = 12110786 bytes

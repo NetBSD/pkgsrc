@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2011/12/24 13:18:00 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2011/12/25 15:52:12 asau Exp $
 #
 
-DISTNAME=	frama-c-Beryllium-20090901
-PKGNAME=	${DISTNAME:S/-Beryllium//}
-PKGREVISION=	9
+DISTNAME=	frama-c-Nitrogen-20111001
+PKGNAME=	${DISTNAME:S/-Nitrogen//}
 CATEGORIES=	devel
 MASTER_SITES=	http://frama-c.com/download/
 
@@ -17,11 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
-PLIST_SRC=	${PLIST_SRC_DFLT}
-
 .include "options.mk"
 
-.include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
