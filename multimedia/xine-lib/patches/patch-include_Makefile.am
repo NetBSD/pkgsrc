@@ -1,0 +1,14 @@
+$NetBSD: patch-include_Makefile.am,v 1.1 2011/12/25 03:24:10 sbd Exp $
+
+--- include/Makefile.am.orig	2010-03-09 22:17:04.000000000 +0000
++++ include/Makefile.am
+@@ -26,7 +26,8 @@ maintainer-clean-generic:
+ 	-rm -f Makefile.in configure.h.in
+ 
+ install-data-local: install-includeHEADERS
+-	sed -e '/^\/\*_x_/d' xine.h > $(DESTDIR)$(includedir)/xine.h
++	sed -e '/^\/\*_x_/d' xine.h > installed-xine.h
++	$(INSTALL_HEADER) installed-xine.h $(DESTDIR)$(includedir)/xine.h
+ if GENERATED_INTTYPES_H
+ 	$(INSTALL) inttypes.h $(DESTDIR)$(includedir)
+ endif

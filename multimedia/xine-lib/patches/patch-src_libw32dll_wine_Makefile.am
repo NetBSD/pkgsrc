@@ -1,0 +1,13 @@
+$NetBSD: patch-src_libw32dll_wine_Makefile.am,v 1.1 2011/12/25 03:24:10 sbd Exp $
+
+--- src/libw32dll/wine/Makefile.am.orig	2011-12-25 02:59:19.234745775 +0000
++++ src/libw32dll/wine/Makefile.am
+@@ -21,6 +21,8 @@ if HAVE_W32DLL
+ wine_lib = libwine.la
+ endif
+ 
++libwine_la_LIBADD = ${WINE_LIBS}
++
+ libwine_la_SOURCES = \
+ 	afl.c \
+ 	driver.c \

@@ -1,24 +1,22 @@
-$NetBSD: distinfo,v 1.77 2011/12/24 03:02:25 sbd Exp $
+$NetBSD: distinfo,v 1.78 2011/12/25 03:24:09 sbd Exp $
 
 SHA1 (xine-lib-1.1.20.tar.bz2) = 60ce1cea9bf7a6b7d8c60141593a8ed0c54f9445
 RMD160 (xine-lib-1.1.20.tar.bz2) = c531b74142ad92b7fe2956c69fd1398e7c8cb1fb
 Size (xine-lib-1.1.20.tar.bz2) = 7585795 bytes
+SHA1 (patch-Makefile.am) = 3cfff7a6941015921c166f9a67159a5bb3ca0204
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ag) = 96a2bab961ca90d7e3c1d67b6aa09388f9478d35
 SHA1 (patch-aj) = 4215c3bc37cf636e563a509f9a391081ed8e773b
 SHA1 (patch-ak) = 987700e6526b5112ac66bd6a8f9ee41f338c3508
-SHA1 (patch-ao) = 2682548a181803bc2d79f79d76828b6b3ba0e4fa
 SHA1 (patch-ap) = 4bc0c3923b50049f166f3bec703705ae33c166e9
 SHA1 (patch-as) = a0a93a256589e87a66eef31494441aa1b200f834
-SHA1 (patch-be) = 6d03de71811bd03295621d04d3166625f4f4f079
-SHA1 (patch-bg) = f072486eb8441b8bed2c825380aa04d99bc70cc1
 SHA1 (patch-cb) = db4ff27418e05e97bf30b554beecc24d6e578d15
 SHA1 (patch-cd) = a080c745d08ded46db7c1173fe55350c1eb9ff33
 SHA1 (patch-da) = f79701d7c036e78d760c12119d88fe3f0dd1762d
 SHA1 (patch-db) = 3ad4ca6f43a379b251211477972cd6d34b1f821a
 SHA1 (patch-dc) = 11c4212029e67f22796e57706b42400a0dbcac3a
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
-SHA1 (patch-ga) = c4770b6be12bbc4dd72f8299f3b0bbf92546cc68
+SHA1 (patch-include_Makefile.am) = 9fa5a83a340358b1d3651ce2cc18f61772e9d128
 SHA1 (patch-input_dvb.c) = 37aa191dca0df058dc09477624ff76dbc3a2f9b9
 SHA1 (patch-src-audio_out-audio_file_out.c) = 2b09abc82bc0b023ed9feaa5d77dd14db73f30df
 SHA1 (patch-src-demuxers-demux_qt.c) = 2942911c09c0580c6017474af2a14f5b1f193c1d
@@ -39,3 +37,5 @@ SHA1 (patch-src-post-planar-noise.c) = b3baf82e150ca9a27e73753398c18839066748f1
 SHA1 (patch-src-post-planar-pp.c) = 147dc05a09ff851af99c488112c6a77926ae5afb
 SHA1 (patch-src-post-planar-unsharp.c) = 964ec33c8c3cfcc8783b5fae1093c8fba76ff2a9
 SHA1 (patch-src-xine-engine-post.h) = 9a768aa3558bcde6f382f6945758a969f669338c
+SHA1 (patch-src_audio__out_Makefile.am) = a4b5b55eb2b5e7a8d85fb58100f71fb89bd9d79c
+SHA1 (patch-src_libw32dll_wine_Makefile.am) = 6be7574a5e0d120f1598b6cc34c39f1bf98a2a69
