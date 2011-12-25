@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/25 01:29:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2011/12/25 03:35:39 ryoon Exp $
 #
 
 DISTNAME=	tiki-6.5
@@ -18,6 +18,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.2.0:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.2.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.2.0:../../net/php-xmlrpc
+DEPENDS+=	${PHP_PKG_PREFIX}-pear>=1.9.4:../../lang/pear
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
