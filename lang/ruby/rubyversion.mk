@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.68 2011/12/25 02:18:09 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.69 2011/12/25 02:49:28 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -233,7 +233,7 @@ RUBY_VER=	${rv}
 .endif
 
 .if ${RUBY_VER} == "192"
-RUBY_VER:=	19
+RUBY_VER=	19
 .endif
 
 .if ${RUBY_VER} == "18"
