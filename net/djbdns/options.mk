@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.16 2011/06/09 01:44:16 schmonz Exp $
+# $NetBSD: options.mk,v 1.17 2011/12/25 21:16:46 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
-PKG_SUPPORTED_OPTIONS+=		inet6 djbdns-cachestats djbdns-ignoreip2
+PKG_SUPPORTED_OPTIONS+=		# inet6
+PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2
 PKG_SUPPORTED_OPTIONS+=		djbdns-tinydns64
 PKG_OPTIONS_OPTIONAL_GROUPS=	qmerge
 PKG_OPTIONS_GROUP.qmerge=	djbdns-qmerge1 djbdns-qmerge2
@@ -17,13 +18,13 @@ PKG_SUGGESTED_OPTIONS+=   djbdns-tinydns64
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=			inet6
-.if !empty(PKG_OPTIONS:Minet6)
-IPV6_PATCH=			djbdns-1.05-test23.diff.bz2
-PATCHFILES+=			${IPV6_PATCH}
-SITES.${IPV6_PATCH}=		http://www.fefe.de/dns/
-PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
-PLIST.inet6=			yes
-.endif
+#.if !empty(PKG_OPTIONS:Minet6)
+#IPV6_PATCH=			djbdns-1.05-test25.diff.bz2
+#PATCHFILES+=			${IPV6_PATCH}
+#SITES.${IPV6_PATCH}=		http://www.fefe.de/dns/
+#PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
+#PLIST.inet6=			yes
+#.endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-cachestats)
 CACHESTATS_PATCH=		djbdns-cachestats.patch
