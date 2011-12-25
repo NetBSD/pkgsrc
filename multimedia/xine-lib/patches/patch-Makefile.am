@@ -1,8 +1,8 @@
-$NetBSD: patch-ga,v 1.6 2009/12/09 10:13:03 drochner Exp $
+$NetBSD: patch-Makefile.am,v 1.1 2011/12/25 03:24:09 sbd Exp $
 
---- Makefile.in.orig	2009-12-01 02:53:42.000000000 +0100
-+++ Makefile.in
-@@ -1049,8 +1049,8 @@ maintainer-clean-generic:
+--- Makefile.am.orig	2010-03-22 20:08:04.000000000 +0000
++++ Makefile.am
+@@ -111,5 +111,5 @@ maintainer-clean-generic:
  maintainer-clean-generic-hook:
  	rm -f config.status
  
@@ -10,6 +10,3 @@ $NetBSD: patch-ga,v 1.6 2009/12/09 10:13:03 drochner Exp $
 -	cd $(srcdir) && $(AUTOCONF) && $(SED) -i -e '/gnu_ld/,/;;/ s/--rpath \$${wl}/--rpath,/' $@
 +#$(top_srcdir)/configure:  $(am__configure_deps)
 +#	cd $(srcdir) && $(AUTOCONF) && $(SED) -i -e '/gnu_ld/,/;;/ s/--rpath \$${wl}/--rpath,/' $@
- 
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.

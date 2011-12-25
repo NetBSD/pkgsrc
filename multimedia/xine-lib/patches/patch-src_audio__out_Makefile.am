@@ -1,0 +1,13 @@
+$NetBSD: patch-src_audio__out_Makefile.am,v 1.1 2011/12/25 03:24:10 sbd Exp $
+
+--- src/audio_out/Makefile.am.orig	2011-12-25 03:03:07.490662740 +0000
++++ src/audio_out/Makefile.am
+@@ -84,7 +84,7 @@ xineplug_ao_out_file_la_LIBADD = $(XINE_
+ xineplug_ao_out_file_la_CFLAGS = $(VISIBILITY_FLAG)
+ 
+ xineplug_ao_out_oss_la_SOURCES = audio_oss_out.c
+-xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB) $(LTLIBINTL)
++xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB) $(LTLIBINTL) $(OSS_LIBS)
+ xineplug_ao_out_oss_la_CFLAGS = $(VISIBILITY_FLAG)
+ 
+ xineplug_ao_out_alsa_la_SOURCES = audio_alsa_out.c
