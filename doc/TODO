@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10755 2011/12/25 15:02:18 wiz Exp $
+$NetBSD: TODO,v 1.10756 2011/12/25 15:52:39 asau Exp $
 
 Suggested new packages
 ======================
@@ -648,7 +648,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fossil-1.21
 	o fotoxx-11.12.1
 	o fox-1.6.41
-	o frama-c-20110201
 	o freeciv-2.3.1
 	o freeglut-2.4.0
 	o freenet-0.7
