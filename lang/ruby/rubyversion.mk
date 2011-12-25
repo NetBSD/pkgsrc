@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.67 2011/12/24 23:16:04 joerg Exp $
+# $NetBSD: rubyversion.mk,v 1.68 2011/12/25 02:18:09 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -214,7 +214,7 @@ RUBY19_API_VERSION=	1.9.1
 RUBY193_API_VERSION=	1.9.1
 
 #
-RUBY_VERSION_DEFAULT?=	19
+RUBY_VERSION_DEFAULT?=	192
 
 RUBY_VERSION_SUPPORTED?= 18 192 193
 RUBY_VER?=		${RUBY_VERSION_DEFAULT}
@@ -232,11 +232,8 @@ RUBY_VER=	${rv}
 . endfor
 .endif
 
-# For backward compatibility
-.if ${RUBY_VER} == "1.9" || ${RUBY_VER} == "192"
-RUBY_VER=	19
-.elif  ${RUBY_VER} == "1.8"
-RUBY_VER=	18
+.if ${RUBY_VER} == "192"
+RUBY_VER:=	19
 .endif
 
 .if ${RUBY_VER} == "18"
