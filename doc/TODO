@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10754 2011/12/24 23:46:37 asau Exp $
+$NetBSD: TODO,v 1.10755 2011/12/25 15:02:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,6 +329,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
+	o GraphicsMagick-1.3.13
 	o ImageMagick-6.7.3.10
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
@@ -405,8 +406,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asymptote-2.14
 	o at-spi-2.2.3
 	o aterm-1.0.1
-	o atk-2.2.0
-	o attica-0.2.9
+	o atk-2.2.0 [pkg/45738]
+	o attica-0.3.0
 	o audacious-plugins-2.4.4
 	o audacity-1.3.13
 	o autoconvert-0.3.16
@@ -460,6 +461,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.2.2
+	o chemtool-1.6.13
 	o cherokee-1.2.101
 	o chromium-0.9.15
 	o chrony-1.26
@@ -508,7 +510,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dejagnu-1.5
 	o delegate-9.9.7
 	o dhid-5.3
-	o diffpdf-1.7.0
+	o diffpdf-1.8.0
 	o diffstat-1.54
 	o diffutils-3.2
 	o digikam-2.4.1
@@ -530,7 +532,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dvdisaster-0.72.2
 	o dvdstyler-2.0.0
 	o dvtm-0.7
-	o dwm-6.0
+	o dwm-6.0 [pkg/45737]
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.9
@@ -948,6 +950,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liferea-1.8.0
 	o lighttpd-1.4.30
 	o lincvs-2.1.4 [now called CrossVC]
+	o links-2.5
+	o links-gui-2.5
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
@@ -1052,7 +1056,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssh-5.9p1
 	o openssl-1.0.0d [pkg/44717]
 	o openssl-1.0.0e
-	o openttd-1.1.3
+	o openttd-1.1.4
 	o opera-11.60
 	o orca-2.32.1 [GNOME 2.32]
 	o oroborus-2.0.18
@@ -1062,6 +1066,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Net-SNMP-5.7.1
 	o p5-PerlMagick-6.7.3.10
 	o p5-Search-Xapian-1.2.2.0
+	o p5-cairo-1.081
+	o p5-glib2-1.241
+	o p5-gtk2-1.241
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
@@ -1137,12 +1144,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-dbus-0.84.0
 	o py-feedparser-5.1
 	o py-game-1.9.1
+	o py-gdata-2.0.15
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
+	o py-icalendar-2.2
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
+	o py-pytz-2011n
 	o py-qt4-4.9
 	o py-simplejson-2.2.1
 	o py-sip-4.13.1
@@ -1203,8 +1213,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
-	o scmgit-base-1.7.8
-	o scmgit-docs-1.7.8
+	o scmgit-base-1.7.8.1
+	o scmgit-docs-1.7.8.1
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
@@ -1378,7 +1388,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111217
+	o x264-devel-20111224
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
