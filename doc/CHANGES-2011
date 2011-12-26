@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3370 2011/12/26 12:28:59 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3371 2011/12/26 19:08:31 ryoon Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5429,3 +5429,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/frama-c to 20111001 [asau 2011-12-25]
 	Updated net/mikutter to 0.0.4.622 [obache 2011-12-26]
 	Updated devel/SDL to 1.2.14nb5 [wiz 2011-12-26]
+	Updated www/php-tiki6 to 6.5nb1 [ryoon 2011-12-26]
