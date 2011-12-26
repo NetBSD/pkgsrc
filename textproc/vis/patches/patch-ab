@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2011/09/07 00:57:30 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2011/12/26 13:25:45 joerg Exp $
 
 --- vis/libvis.c.orig	2011-09-07 00:34:51.000000000 +0000
 +++ vis/libvis.c
-@@ -81,14 +81,6 @@ __RCSID("$NetBSD: vis.c,v 1.27 2004/02/2
+@@ -81,14 +81,6 @@
  #include <vis.h>
  #include <stdlib.h>
  
