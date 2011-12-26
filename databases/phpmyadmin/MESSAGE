@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.12 2011/07/29 17:21:20 tron Exp $
+$NetBSD: MESSAGE,v 1.13 2011/12/26 16:38:29 tron Exp $
 
 Do *not* edit "${CONF_INC_PHP}" to customize
 this package because it is a link which will removed during upgrades.
@@ -14,9 +14,6 @@ to httpd.conf:
 to make phpMyAdmin accessible through:
 
 	http://www.domain.com/phpmyadmin/
-
-If you use "cookie" authentication method, installing security/php-mcrypt
-package is recommended to accelerate phpMyAdmin operation.
 
 If you are setting up phpmyadmin for the first time you will need to
 comment out the configuration block in your apache.conf which denies
