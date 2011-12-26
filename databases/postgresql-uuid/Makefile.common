@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2011/06/10 09:51:15 obache Exp $
+# $NetBSD: Makefile.common,v 1.4 2011/12/26 13:23:16 joerg Exp $
 #
 # used by databases/postgresql83-uuid
 # used by databases/postgresql84-uuid
@@ -19,10 +19,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 
-DESCR_SRC=	../../databases/postgresql-uuid/DESCR
+DESCR_SRC=	${.CURDIR}/../../databases/postgresql-uuid/DESCR
 DISTINFO_FILE=	${.CURDIR}/../../databases/postgresql-uuid/distinfo
-PATCHDIR=	../../databases/postgresql-uuid/patches
-PLIST_SRC=	../../databases/postgresql-uuid/PLIST
+PATCHDIR=	${.CURDIR}/../../databases/postgresql-uuid/patches
+PLIST_SRC=	${.CURDIR}/../../databases/postgresql-uuid/PLIST
 
 post-extract:
 	${MV} ${WRKSRC}/uuid-freebsd.c ${WRKSRC}/uuid.c
