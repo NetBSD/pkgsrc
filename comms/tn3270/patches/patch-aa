@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2010/12/30 09:22:43 obache Exp $
+$NetBSD: patch-aa,v 1.2 2011/12/26 03:11:10 joerg Exp $
 
 * workaround for DragonFly arpa/telnet.h, telopts will not defined
   without TELOPTS (already defined in telnet/utilities.c)
 
 --- telnet/commands.c.orig	2010-01-17 18:00:03.000000000 +0000
 +++ telnet/commands.c
-@@ -84,6 +84,9 @@ __RCSID("$NetBSD: commands.c,v 1.1.1.1 2
+@@ -84,6 +84,9 @@
  #include <unistd.h>
  
  #include <arpa/telnet.h>
