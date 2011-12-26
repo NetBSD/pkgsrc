@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2011/12/13 20:03:26 marino Exp $
+$NetBSD: distinfo,v 1.10 2011/12/26 02:56:51 sbd Exp $
 
 SHA1 (evas-1.1.0.tar.bz2) = e09daebd5aa14ecdff94bca0ff30a4cf70b3b84b
 RMD160 (evas-1.1.0.tar.bz2) = ebad0e5b4f3987ee9a29b39f329afb650eafeb20
 Size (evas-1.1.0.tar.bz2) = 9235732 bytes
-SHA1 (patch-configure) = 76c1e7dec71cf4505e0ac4b52b7187be1adaeabf
-SHA1 (patch-configure.ac) = ab4c089e250ecc1acfb57e1b949b918bfc590608
+SHA1 (patch-configure) = e8c7965ff313119dafed9e741439056a0b68bf13
+SHA1 (patch-configure.ac) = 7ab470d4c80e60859c3990eccc54633e84d54bda
