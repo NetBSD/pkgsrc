@@ -1,0 +1,13 @@
+$NetBSD: patch-.._dist_configure.in,v 1.1 2011/12/26 01:54:39 sbd Exp $
+
+--- ../dist/configure.in.orig	2007-11-18 16:41:42.000000000 +0000
++++ ../dist/configure.in
+@@ -787,6 +787,8 @@ if test "$vi_cv_gettimeofday" = broken;
+ fi
+ AC_MSG_RESULT($vi_cv_gettimeofday)
+ 
++AC_CHECK_HEADERS([sys/stropts.h stropts.h])
++
+ dnl Check for which version of openpty to use, System V or Berkeley.
+ AC_MSG_CHECKING(for System V pty calls)
+ AC_CACHE_VAL(vi_cv_sys5_pty, [dnl
