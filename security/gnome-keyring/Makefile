@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2011/11/01 06:02:28 sbd Exp $
+# $NetBSD: Makefile,v 1.65 2011/12/26 07:24:35 sbd Exp $
 
 DISTNAME=	gnome-keyring-2.32.1
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	GNOME password and secret manager
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config gsed
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
