@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/10/07 12:17:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/12/26 09:01:39 sbd Exp $
 bin/jsc-1
 include/webkit-1.0/JavaScriptCore/JSBase.h
 include/webkit-1.0/JavaScriptCore/JSContextRef.h
@@ -516,4 +516,5 @@ share/webkitgtk-1.0/webinspector/popover.css
 share/webkitgtk-1.0/webinspector/textViewer.css
 share/webkitgtk-1.0/webinspector/treeoutline.js
 share/webkitgtk-1.0/webinspector/utilities.js
+share/glib-2.0/schemas/org.webkitgtk-1.0.gschema.xml
 @pkgdir share/glib-2.0/schemas
