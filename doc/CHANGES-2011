@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3368 2011/12/25 15:52:39 asau Exp $
+$NetBSD: CHANGES-2011,v 1.3369 2011/12/26 05:37:58 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5427,3 +5427,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/octave to 3.4.3 [asau 2011-12-24]
 	Updated www/php-tiki6 to 6.5 [ryoon 2011-12-25]
 	Updated devel/frama-c to 20111001 [asau 2011-12-25]
+	Updated net/mikutter to 0.0.4.622 [obache 2011-12-26]
