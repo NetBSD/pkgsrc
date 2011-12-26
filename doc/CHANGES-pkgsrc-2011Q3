@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.56 2011/12/23 13:57:43 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q3,v 1.1.2.57 2011/12/26 03:07:07 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q3 branch:
@@ -213,3 +213,5 @@ Pullup ticket #3628 - requested by dholland
 www/kazehakase: build fix
 Pullup ticket #3637 - requested by drochner
 graphics/jasper: security patch
+Pullup ticket #3636 - requested by tron
+databases/phpmyadmin security update
