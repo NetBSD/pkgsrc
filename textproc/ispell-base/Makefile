@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/07/21 09:59:09 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2011/12/26 01:50:24 sbd Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -46,6 +46,7 @@ do-configure:
 	${ECHO} "#undef WORDS"  >> local.h ;				\
 	${ECHO} '#define WORDS   "${EXTRADICT}"'  >> local.h ;		\
 	${ECHO} "#define CFLAGS \"${CFLAGS}\"" >> local.h ;		\
+	${ECHO} "#define LIBES \"${LDFLAGS}\"" >> local.h ;		\
 	${ECHO} "#define MAN1DIR \"${PREFIX}/${PKGMANDIR}/man1\"" >> local.h ; \
 	${ECHO} "#define MAN45DIR \"${PREFIX}/${PKGMANDIR}/man5\"" >> local.h ;
 .if ${OPSYS} == "SunOS"
