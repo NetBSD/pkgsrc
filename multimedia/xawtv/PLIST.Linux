@@ -1,4 +1,4 @@
-@comment $NetBSD@
+@comment $NetBSD: PLIST.Linux,v 1.2 2011/12/26 13:24:06 joerg Exp $
 bin/fbtv
 bin/radio
 bin/v4l-conf
