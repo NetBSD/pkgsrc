@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.39 2011/10/07 12:17:25 drochner Exp $
+$NetBSD: distinfo,v 1.40 2011/12/27 03:54:36 sbd Exp $
 
 SHA1 (webkit-1.6.1.tar.gz) = dab3bda0708a5e0595584ca5aa33ea6bfd24ffd3
 RMD160 (webkit-1.6.1.tar.gz) = 08c6bc3f40c6a3d9fa5997bb750845e99cdb5643
 Size (webkit-1.6.1.tar.gz) = 10129874 bytes
 SHA1 (patch-Source_JavaScriptCore_jit_JITStubs.cpp) = 37d860bad704ab6920881c0401f657e49084f833
+SHA1 (patch-Source_autotools_gsettings.m4) = b9babd19808bdce325fc17d432a1bb5ec04cecae
 SHA1 (patch-ag) = 220a9925ba1eb4288d334997fda24f41595de1c8
 SHA1 (patch-ah) = de2e719f67534bf64fb5968b457888e9bd824a3d
 SHA1 (patch-ai) = 8998dbb783922a866dcd00e14f33086d7edecdef
+SHA1 (patch-configure) = d1d50d4bfe98fbce454c8bd246410b1b2e91a289
+SHA1 (patch-configure.bak) = e3771d98e8589f8a9db987b099bd80cbfa5127a3
