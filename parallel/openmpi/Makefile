@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:11:57 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2011/12/27 23:15:35 asau Exp $
 
 DISTNAME=	openmpi-1.5.4
 PKGREVISION=	1
@@ -30,6 +30,9 @@ CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
+
+# Prevent detection of OpenMP support in order to make PLIST consistent:
+BUILDLINK_TRANSFORM=	rm:-fopenmp
 
 USE_TOOLS+=		perl:run
 
