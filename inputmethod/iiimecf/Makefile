@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/11/28 01:56:05 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/12/27 08:53:31 obache Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
@@ -13,6 +13,7 @@ COMMENT=	Emacs Lisp library for IIIM Protocol
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
 EMACS_BUILDLINK=# defined
 
 do-build:
