@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.77 2010/04/20 00:32:22 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.78 2011/12/28 19:19:31 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -161,19 +161,23 @@ AC_CHECK_DECLS([optarg, optind, optreset], [:], [:], [
 	#include <unistd.h>
 ])
 
-
+our_getopt_long=no
 AC_CHECK_HEADERS([getopt.h],
-	[ AC_CHECK_TYPES([struct option],
-	    [:],
-	    [ AC_LIBOBJ(getopt_long)],
-	    [#include <getopt.h>])],
-	[ AC_LIBOBJ(getopt_long)]
+	[ AC_CHECK_TYPES([struct option], [:],
+	    [ our_getopt_long=yes ], [#include <getopt.h>])],
+	[ our_getopt_long=yes ]
 )
 
 if test "$enable_bsd_getopt" = yes; then
 	if test "$ac_cv_have_decl_optreset" = no; then
+		AC_MSG_NOTICE([Using included getopt and getopt_long])
 		AC_LIBOBJ(getopt)
+		our_getopt_long=yes
 	fi
+fi
+
+if test "$our_getopt_long" = "yes"; then
+	AC_LIBOBJ(getopt_long)
 fi
 
 dnl Check that this vis.h has *vis()-related functions because Solaris'
