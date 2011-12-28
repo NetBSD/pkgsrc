@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/12/27 03:54:36 sbd Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/12/28 04:22:15 sbd Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -44,6 +44,7 @@ BUILDLINK_DEPMETHOD.python= build
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
