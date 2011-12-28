@@ -1,10 +1,10 @@
-$NetBSD: patch-ew,v 1.1 2010/09/10 03:29:01 taca Exp $
+$NetBSD: patch-ew,v 1.2 2011/12/28 16:40:07 taca Exp $
 
 * r26583: don't use O_NOFOLLOW because /dev/urandom is a symlink in OpenSolaris.
 
---- random.c.orig	2009-01-17 03:18:21.000000000 +0000
+--- random.c.orig	2011-12-28 12:47:15.000000000 +0000
 +++ random.c
-@@ -280,9 +280,6 @@ random_seed()
+@@ -276,9 +276,6 @@ fill_random_seed(ptr)
  #ifdef O_NOCTTY
              |O_NOCTTY
  #endif
@@ -13,4 +13,4 @@ $NetBSD: patch-ew,v 1.1 2010/09/10 03:29:01 taca Exp $
 -#endif
              )) >= 0) {
          if (fstat(fd, &statbuf) == 0 && S_ISCHR(statbuf.st_mode)) {
-             read(fd, seed, seed_len);
+             read(fd, seed, DEFAULT_SEED_LEN);
