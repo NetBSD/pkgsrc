@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.3 2011/12/28 22:35:28 joerg Exp $
+
+--- configure.orig	2011-12-28 18:33:00.000000000 +0000
++++ configure
+@@ -19061,10 +19061,6 @@ install-data-am: install-gsettings-schem
+ 
+ .SECONDARY: $(gsettings_SCHEMAS)
+ 
+-gsettings__base_list = \
+-  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
+-  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
+-
+ install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid) $(gsettings__enum_file)
+ 	@$(NORMAL_INSTALL)
+ 	test -z "$(gsettingsschemadir)" || $(MKDIR_P) "$(DESTDIR)$(gsettingsschemadir)"
+@@ -19072,7 +19068,7 @@ install-gsettings-schemas: $(gsettings_S
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+-	done | $(gsettings__base_list) | \
++	done | \
+ 	while read files; do \
+ 	  echo " $(INSTALL_DATA) $$files '\''$(DESTDIR)$(gsettingsschemadir)'\''"; \
+ 	  $(INSTALL_DATA) $$files "$(DESTDIR)$(gsettingsschemadir)" || exit $$?; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/12/28 04:22:15 sbd Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/12/28 22:35:28 joerg Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -14,7 +14,7 @@ PATCHDIR=		${.CURDIR}/../../www/webkit-gtk/patches
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison gmake perl:build pkg-config msgfmt gsed
+USE_TOOLS+=	bison gmake perl:build pkg-config msgfmt
 
 PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
 
