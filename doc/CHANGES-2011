@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3374 2011/12/28 06:40:29 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.3375 2011/12/28 06:52:29 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5434,3 +5434,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/gnome-keyring to 2.32.1nb4 [sbd 2011-12-28]
 	Updated www/webkit-gtk to 1.6.1nb3 [sbd 2011-12-28]
 	Updated www/webkit-gtk3 to 1.6.1nb2 [sbd 2011-12-28]
+	Updated databases/ruby-ldap to 0.9.12 [obache 2011-12-28]
