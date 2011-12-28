@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2011/12/26 07:24:35 sbd Exp $
+# $NetBSD: Makefile,v 1.66 2011/12/28 01:32:25 sbd Exp $
 
 DISTNAME=	gnome-keyring-2.32.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.32/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,8 +35,6 @@ CONFIGURE_ENV+=	ac_cv_header_security_pam_modules_h=yes
 .include "../../mk/dlopen.buildlink3.mk"
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
-
-BUILD_DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../devel/glib2/schemas.mk"
