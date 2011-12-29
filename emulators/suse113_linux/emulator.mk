@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.4 2011/09/12 17:17:04 joerg Exp $
+# $NetBSD: emulator.mk,v 1.5 2011/12/29 22:17:20 wiz Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -26,6 +26,7 @@ DEPENDS_suse-11.3.base?=	suse_base${_SUSE_VERSION_REQD}:../../emulators/suse113_
 DEPENDS_suse-11.3.compat?=	suse_compat${_SUSE_VERSION_REQD}:../../emulators/suse113_compat
 DEPENDS_suse-11.3.cups?=	suse_libcups${_SUSE_VERSION_REQD}:../../emulators/suse113_libcups
 DEPENDS_suse-11.3.curl?=	suse_libcurl${_SUSE_VERSION_REQD}:../../emulators/suse113_libcurl
+DEPENDS_suse-11.3.drm?=		suse_libdrm${_SUSE_VERSION_REQD}:../../emulators/suse113_libdrm
 DEPENDS_suse-11.3.expat?=	suse_expat${_SUSE_VERSION_REQD}:../../emulators/suse113_expat
 DEPENDS_suse-11.3.fontconfig?=	suse_fontconfig${_SUSE_VERSION_REQD}:../../emulators/suse113_fontconfig
 DEPENDS_suse-11.3.freetype2?=	suse_freetype2${_SUSE_VERSION_REQD}:../../emulators/suse113_freetype2
