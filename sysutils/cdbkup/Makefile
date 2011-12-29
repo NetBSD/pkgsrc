@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/07/15 15:33:46 mishka Exp $
+# $NetBSD: Makefile,v 1.17 2011/12/29 16:38:37 joerg Exp $
 
 DISTNAME=		cdbkup-1.0
 PKGREVISION=		6
@@ -21,12 +21,16 @@ CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == "SunOS"
 CDBKUP_SNARDIR?=	/var/${PKGBASE}
 CDBKUP_DUMPGRP?=	sys
 .else
 CDBKUP_SNARDIR?=	/var/db/${PKGBASE}
 CDBKUP_DUMPGRP?=	operator
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		MOUNT=/sbin/mount UMOUNT=/sbin/umount
 .endif
 
 CONFIGURE_ARGS+=	--with-snardir=${CDBKUP_SNARDIR:Q} \
