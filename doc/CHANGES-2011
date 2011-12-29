@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3380 2011/12/29 21:48:16 schmonz Exp $
+$NetBSD: CHANGES-2011,v 1.3381 2011/12/29 22:30:59 sbd Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5440,3 +5440,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated devel/SDL to 1.2.14nb6 [jmcneill 2011-12-29]
 	Updated audio/libaudiofile to 0.3.2nb2 [rumko 2011-12-29]
 	Updated www/ikiwiki to 3.20111229 [schmonz 2011-12-29]
+	Updated textproc/gsed to 4.2.1nb2 [sbd 2011-12-29]
