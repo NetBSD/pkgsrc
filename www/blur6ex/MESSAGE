@@ -1,5 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/09/28 12:13:07 rillig Exp $
+$NetBSD: MESSAGE,v 1.5 2011/12/29 14:44:21 joerg Exp $
+
+Install mysql-server as needed.
 
 To configure blur6ex, complete the following steps:
 
