@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3378 2011/12/29 10:01:37 jmcneill Exp $
+$NetBSD: CHANGES-2011,v 1.3379 2011/12/29 16:29:02 rumko Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated lang/ruby18-base to 1.8.7.357 [taca 2011-12-28]
 	Updated textproc/groonga to 1.2.9 [obache 2011-12-29]
 	Updated devel/SDL to 1.2.14nb6 [jmcneill 2011-12-29]
+	Updated audio/libaudiofile to 0.3.2nb2 [rumko 2011-12-29]
