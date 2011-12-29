@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3376 2011/12/28 16:44:36 taca Exp $
+$NetBSD: CHANGES-2011,v 1.3377 2011/12/29 08:17:37 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5436,3 +5436,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/webkit-gtk3 to 1.6.1nb2 [sbd 2011-12-28]
 	Updated databases/ruby-ldap to 0.9.12 [obache 2011-12-28]
 	Updated lang/ruby18-base to 1.8.7.357 [taca 2011-12-28]
+	Updated textproc/groonga to 1.2.9 [obache 2011-12-29]
