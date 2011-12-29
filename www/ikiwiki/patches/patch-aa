@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.24 2011/09/25 14:33:09 schmonz Exp $
+$NetBSD: patch-aa,v 1.25 2011/12/29 21:47:56 schmonz Exp $
 
 PKG_SYSCONFDIR and PKGMANDIR support, avoid GNUisms in standard utilities.
 
---- Makefile.PL.orig	2011-08-24 21:14:48.000000000 +0000
+--- Makefile.PL.orig	2011-12-06 18:57:23.000000000 +0000
 +++ Makefile.PL
 @@ -19,11 +19,14 @@ SED?=sed
  
@@ -119,6 +119,6 @@ PKG_SYSCONFDIR and PKGMANDIR support, avoid GNUisms in standard utilities.
 +	-install -m 0644 wikilist $(DESTDIR)$(SYSCONFDIR)
 +	-install -m 0644 auto.setup $(DESTDIR)$(SYSCONFDIR)
 +	-install -m 0644 auto-blog.setup $(DESTDIR)$(SYSCONFDIR)
- }
- }
  
+ # The git/hg plugins want to chdir; so does Devel::Cover. Skip those tests
+ # to stop them hurting each other.
