@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/11/25 22:16:26 joerg Exp $
+$NetBSD: distinfo,v 1.10 2011/12/29 16:35:41 joerg Exp $
 
 SHA1 (lyx-1.2.0.tar.gz) = 56db850f316c18e00c4b10946216b6eb25107dab
 RMD160 (lyx-1.2.0.tar.gz) = e21eeb53517bf994938f2d89e7be585da9ff8cd3
@@ -18,9 +18,10 @@ SHA1 (patch-ai) = 3e694cf156a527bba9155de49c3a6a9fb66af014
 SHA1 (patch-aj) = 8a8e5750fe67093e748791da7b11141fcf3a0795
 SHA1 (patch-ak) = beb9e230d33a3d6bc25212aa9ef8841d9b17d7ac
 SHA1 (patch-al) = a441f0925619fcc674d83c24e90d041047a71ad7
-SHA1 (patch-am) = 88120d6a4705f9bcdac2e675dd74b83c9e270082
+SHA1 (patch-am) = abf7427e2fbf918bb30006f9a524dc16fc12e08f
 SHA1 (patch-an) = b39ef6b367a1e47e072d48181aa29a0b8cbcec13
 SHA1 (patch-ao) = 663016706d09b7ac8d34efab2c71d4c46e2757cd
+SHA1 (patch-src_frontends_controllers_ControlInset.h) = f2f8eab52fbbf871ad7518e607b85255839bd965
 SHA1 (patch-src_frontends_controllers_helper__funcs.h) = 03b1f40d5ad9c686dd58b2170aa50bc18a7dedae
 SHA1 (patch-src_frontends_xforms_FormMathsMatrix.C) = 63e1003ebc15be07556ff2f0fcc6aa26ee207fd6
 SHA1 (patch-src_mathed_math__xdata.C) = e0d51e11a5fa2c2a29e5ce95ed0b4dd11abd5c0a
