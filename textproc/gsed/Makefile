@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2011/04/22 13:44:50 obache Exp $
+# $NetBSD: Makefile,v 1.38 2011/12/29 22:30:47 sbd Exp $
 #
 
 DISTNAME=	sed-4.2.1
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc editors
 MASTER_SITES=	${MASTER_SITE_GNU:=sed/}
 
@@ -30,6 +30,15 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+
+PLIST_VARS=		gsed
+.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+PLIST.gsed=		yes
+
+post-install:
+	${LN} -f ${DESTDIR}${PREFIX}/bin/${GNU_PROGRAM_PREFIX}sed ${DESTDIR}${PREFIX}/bin/gsed
+	${LN} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${GNU_PROGRAM_PREFIX}sed.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gsed.1
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
