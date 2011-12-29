@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.11 2011/09/09 21:01:36 abs Exp $
+# $NetBSD: linux.mk,v 1.12 2011/12/29 22:17:20 wiz Exp $
 #
 # Linux binary emulation framework
 #
@@ -60,6 +60,7 @@ _EMUL_MODULES+=		base
 _EMUL_MODULES+=		compat
 _EMUL_MODULES+=		cups
 _EMUL_MODULES+=		curl
+_EMUL_MODULES+=		drm
 _EMUL_MODULES+=		expat
 _EMUL_MODULES+=		fontconfig
 _EMUL_MODULES+=		freetype2
