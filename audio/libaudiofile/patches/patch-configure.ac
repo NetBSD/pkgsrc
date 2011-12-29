@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2011/12/29 16:19:25 rumko Exp $
+
+Check for libm so it is included if need be.
+
+--- configure.ac.orig	2011-11-29 06:55:00.000000000 +0000
++++ configure.ac
+@@ -22,6 +22,9 @@ dnl Checks for header files.
+ AC_HEADER_STDC
+ AC_CHECK_HEADERS(fcntl.h unistd.h)
+ 
++dnl Checks for libraries
++AC_CHECK_LIB([m],[sqrt])
++
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+ AC_C_BIGENDIAN
