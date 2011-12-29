@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/11/30 10:39:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/12/29 08:17:23 obache Exp $
 bin/grntest
 bin/groonga
 bin/groonga-query-log-analyzer
@@ -671,7 +671,6 @@ share/doc/groonga/source/tutorial/patricia_trie.txt
 share/doc/groonga/source/tutorial/query_expansion.txt
 share/doc/groonga/source/tutorial/search.txt
 share/doc/groonga/source/type.txt
-share/doc/groonga/source/update_execution_example.py
 share/examples/groonga/groonga.conf
 share/groonga/examples/dictionary/edict/edict-import.sh
 share/groonga/examples/dictionary/edict/edict2grn.rb
@@ -725,4 +724,6 @@ share/groonga/html/admin/images/loading.gif
 share/groonga/html/admin/index.html
 share/groonga/html/admin/js/jquery-1.4.2.min.js
 share/groonga/html/admin/js/jquery-ui-1.8.1.custom.min.js
+share/groonga/html/admin/js/jquery.flot-0.7.min.js
+share/groonga/html/admin/js/jquery.flot.license.txt
 share/groonga/html/admin/js/jquery.json-2.2.min.js
