@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3379 2011/12/29 16:29:02 rumko Exp $
+$NetBSD: CHANGES-2011,v 1.3380 2011/12/29 21:48:16 schmonz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5439,3 +5439,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated textproc/groonga to 1.2.9 [obache 2011-12-29]
 	Updated devel/SDL to 1.2.14nb6 [jmcneill 2011-12-29]
 	Updated audio/libaudiofile to 0.3.2nb2 [rumko 2011-12-29]
+	Updated www/ikiwiki to 3.20111229 [schmonz 2011-12-29]
