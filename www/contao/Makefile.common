@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/11/08 12:11:42 taca Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/12/30 15:12:21 taca Exp $
 #
 # used by www/contao29/Makefile
 # used by www/contao29-example/Makefile
@@ -10,7 +10,7 @@
 
 # current release
 CT29_VERSION=	2.9.5
-CT210_VERSION=	2.10.3
+CT210_VERSION=	2.10.4
 
 CT_VERS?=	210
 
@@ -18,9 +18,13 @@ CT_VERS?=	210
 CT_VERSION=    ${CT29_VERSION}
 .elif ${CT_VERS} == "210"
 CT_VERSION=    ${CT210_VERSION}
+CT_WRKSRC=     contao-core-ef27969
 .else
 .error "Illegal version specified: ${CT_VERS}"
 .endif
+
+CT_WRKSRC?=	${DISTNAME}
+WRKSRC?=	${WRKDIR}/${CT_WRKSRC}
 
 CT_VER?=	${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1\2/}
 CT_PKGVER=	${CT_VERSION:S/.RC/rc/}
