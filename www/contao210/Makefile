@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/12/17 18:20:01 taca Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/30 15:12:22 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 
@@ -73,7 +72,7 @@ SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
 SUBST_SED.conf+=        -e 's|@CT_WEBDIR@|${CT_WEBDIR:Q}|g'
 SUBST_STAGE.conf=	post-configure
 
-WWW_FILES=	CHANGELOG.txt GPL.txt INSTALL.txt LGPL.txt \
+WWW_FILES=	CHANGELOG.txt GPL.txt LGPL.txt README.md \
 		contao cron.php index.php plugins share.php templates \
 		typolight
 WWW_SYSFILES=	config/.htaccess constants.php contao.css drivers \
@@ -85,9 +84,6 @@ INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR} ${CT_WEBDIR}/system/config
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
-
-post-extract:
-	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
 
 pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
