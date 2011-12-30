@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/01 06:02:11 sbd Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/30 07:27:58 obache Exp $
 #
 
 DISTNAME=	gecko-mediaplayer-1.0.4
@@ -30,8 +30,8 @@ CONFIGURE_ARGS+=	--with-libcurl
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
-BUILDLINK_DEPMETHOD.xulrunner=	build
-.include "../../devel/xulrunner/buildlink3.mk"
+BUILDLINK_DEPMETHOD.xulrunner192=	build
+.include "../../devel/xulrunner192/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
