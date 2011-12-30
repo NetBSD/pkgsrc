@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2011/12/30 15:12:22 taca Exp $
+# $NetBSD: Makefile,v 1.8 2011/12/30 23:21:00 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
+DIST_SUBDIR=	${CT_DIST_SUBDIR}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.contao.org/
@@ -84,6 +85,9 @@ INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR} ${CT_WEBDIR}/system/config
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
+
+pre-patch:
+	${FIND} ${WRKSRC} -name '._*' -exec ${RM} '{}' \;
 
 pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
