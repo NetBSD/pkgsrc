@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.example,v 1.3 2011/12/30 15:12:21 taca Exp $
+# $NetBSD: Makefile.example,v 1.4 2011/12/30 23:21:00 taca Exp $
 #
 # used by www/contao29-example/Makefile
 #
@@ -26,7 +26,7 @@ WWW_EG_FILES?=	tl_files/music_academy
 WWW_FILE?=	templates/music_academy.sql
 
 .for f in ${WWW_EG_FILES} ${WWW_FILE}
-EXTRACT_ELEMENTS+=	${CT_WRKSRC}/${f}
+EXTRACT_ELEMENTS+=	${DISTNAME}/${f}
 .endfor
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
