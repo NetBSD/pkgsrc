@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3382 2011/12/30 07:12:35 sbd Exp $
+$NetBSD: CHANGES-2011,v 1.3383 2011/12/30 13:55:42 he Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5442,3 +5442,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/ikiwiki to 3.20111229 [schmonz 2011-12-29]
 	Updated textproc/gsed to 4.2.1nb2 [sbd 2011-12-29]
 	Updated lang/sun-jre6 to 6.0.29nb1 [sbd 2011-12-30]
+	Updated misc/openoffice3 to 3.1.1nb15 [he 2011-12-30]
