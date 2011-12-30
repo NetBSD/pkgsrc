@@ -1,0 +1,13 @@
+$NetBSD: patch-sf,v 1.1 2011/12/30 09:33:04 is Exp $
+
+--- fb/fbpict.c.orig	2009-10-12 02:52:40.000000000 +0000
++++ fb/fbpict.c
+@@ -37,7 +37,7 @@
+ #include "mipict.h"
+ #include "fbpict.h"
+ 
+-#define mod(a,b) ((b) == 1 ? 0 : (a) >= 0 ? (a) % (b) : (b) - (-a) % (b))
++#define mod(a,b) ((b) == 1 ? 0 : (a) >= 0 ? (a) % (b) : (b) - (-(a)) % (b))
+ 
+ void
+ fbWalkCompositeRegion (CARD8 op,

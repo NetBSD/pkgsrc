@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2010/10/31 23:43:08 wiz Exp $
+$NetBSD: distinfo,v 1.44 2011/12/30 09:33:04 is Exp $
 
 SHA1 (xorg-server-1.6.5.tar.bz2) = c57c80dd15d3ca492e58ae993b9015d085ec6ea6
 RMD160 (xorg-server-1.6.5.tar.bz2) = 702970358a5643dbc9205f42e39c5b8ed2ff845a
@@ -30,3 +30,5 @@ SHA1 (patch-sb) = 48c22a62b30c6bc4d5786624bc264fee30a9bb81
 SHA1 (patch-sc) = dd93e15253b78395050d65df0f972e57ccf546e0
 SHA1 (patch-sd) = 36d3946217b57416e8d0d3099e48d4e9f957c881
 SHA1 (patch-se) = 22b20c734b7fcf59d75227aeb1fa703465582568
+SHA1 (patch-sf) = 22d4f575c066691696ec96f1fcd459251b662012
+SHA1 (patch-sg) = 81598e687357a6e8b477055d14ece01372ae4617
