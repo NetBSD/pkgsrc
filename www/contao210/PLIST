@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/12 13:07:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/30 15:12:22 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.txt
 ${CT_WEBDIR}/GPL.txt
-${CT_WEBDIR}/INSTALL.txt
 ${CT_WEBDIR}/LGPL.txt
+${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/contao/contao.js
 ${CT_WEBDIR}/contao/contao_src.js
 ${CT_WEBDIR}/contao/file.php
