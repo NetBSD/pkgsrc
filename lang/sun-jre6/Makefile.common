@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2011/08/25 10:32:52 sbd Exp $
+# $NetBSD: Makefile.common,v 1.17 2011/12/30 07:12:23 sbd Exp $
 # used by lang/sun-jre6/Makefile
 # used by lang/sun-jdk6/Makefile
 
@@ -43,6 +43,7 @@ JAVA_ARCH=		${JAVA_ARCH.${EMUL_ARCH}}
 .else
 JAVA_ARCH=		${EMUL_ARCH}
 .endif
+FILES_SUBST+=		JAVA_ARCH=${JAVA_ARCH:Q}
 
 INTERACTIVE_STAGE=	fetch
 BUILD_DIRS=		# empty
