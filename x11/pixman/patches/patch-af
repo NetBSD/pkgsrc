@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.9 2011/01/26 19:25:55 drochner Exp $
+$NetBSD: patch-af,v 1.10 2011/12/31 15:37:55 bsiegert Exp $
 
---- pixman/pixman-compiler.h.orig	2011-01-19 13:05:40.000000000 +0000
+--- pixman/pixman-compiler.h.orig	Mon Jul  4 20:22:16 2011
 +++ pixman/pixman-compiler.h
 @@ -82,7 +82,7 @@
  #   define PIXMAN_GET_THREAD_LOCAL(name)				\
@@ -16,7 +16,7 @@ $NetBSD: patch-af,v 1.9 2011/01/26 19:25:55 drochner Exp $
      (&name)
  
 -#elif defined(HAVE_PTHREAD_SETSPECIFIC)
-+#elif defined(HAVE_PTHREAD_SETSPECIFIC) || defined(__NetBSD__)
++#elif defined(HAVE_PTHREAD_SETSPECIFIC) || defined(__NetBSD__) || defined(__MirBSD__)
  
  #include <pthread.h>
  
