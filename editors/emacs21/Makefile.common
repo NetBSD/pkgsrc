@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.8 2011/03/21 06:05:44 obache Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/12/31 11:40:27 dholland Exp $
+#
+# used by editors/emacs21/Makefile
+# used by editors/emacs21-nox11/Makefile
 
 DISTNAME=	emacs-${EMACSVERSION}a
 
