@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.6 2011/07/12 22:03:28 tron Exp $
+# $NetBSD: hacks.mk,v 1.7 2011/12/31 15:37:55 bsiegert Exp $
 #
 .if !defined(PIXMAN_HACKS_MK)
 PIXMAN_HACKS_MK=	# empty
@@ -16,4 +16,8 @@ CONFIGURE_ARGS+=	--disable-sse2
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 CONFIGURE_ARGS+=	--disable-sse2 --disable-mmx
+.endif
+
+.if ${OPSYS} == "MirBSD"
+CONFIGURE_ARGS+=	PTHREAD_LIBS=-pthread
 .endif
