@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3387 2011/12/31 03:03:40 obache Exp $
+$NetBSD: CHANGES-2011,v 1.3388 2011/12/31 11:16:30 dholland Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -5415,6 +5415,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated x11/xdm3d to 1.0nb4 [dholland 2011-12-20]
 	Updated net/unbound to 1.4.14 [pettai 2011-12-20]
 	Updated games/craft to 3.5nb2 [dholland 2011-12-20]
+	Updated converters/recode to 3.6nb6 [dholland 2011-12-20]
 	Updated net/cacti to 0.8.7i [tez 2011-12-20]
 	Updated security/pam-tacplus to 1.3.5nb1 [wiz 2011-12-21]
 	Updated net/filezilla to 3.5.0nb3 [wiz 2011-12-21]
