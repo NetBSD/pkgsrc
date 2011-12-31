@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2011/12/31 16:37:25 dholland Exp $
+$NetBSD: patch-ab,v 1.3 2011/12/31 23:56:47 dholland Exp $
 
 Caution: the extra cpp checking (the three hunks containing "Should be
 one line") is manually hacked and not reflected in configure.in; do
@@ -64,7 +64,7 @@ started doing regrettable things with backslash-escaped newlines.
  { (eval echo configure:2063: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
 -ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
 +ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
-+    grep -L "Should  *be one line" contest2.out \
++    grep -L "Should  *be one line" conftest2.out \
 +    `
  if test -z "$ac_err"; then
    :
@@ -81,7 +81,7 @@ started doing regrettable things with backslash-escaped newlines.
  { (eval echo configure:2080: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
 -ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
 +ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
-+    grep -L "Should  *be one line" contest2.out \
++    grep -L "Should  *be one line" conftest2.out \
 +    `
  if test -z "$ac_err"; then
    :
@@ -98,7 +98,7 @@ started doing regrettable things with backslash-escaped newlines.
  { (eval echo configure:2097: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
 -ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
 +ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
-+    grep -L "Should  *be one line" contest2.out \
++    grep -L "Should  *be one line" conftest2.out \
 +    `
  if test -z "$ac_err"; then
    :
