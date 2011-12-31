@@ -1,4 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2007/06/11 13:38:33 markd Exp $
+$NetBSD: patch-ab,v 1.2 2011/12/31 16:37:25 dholland Exp $
+
+Caution: the extra cpp checking (the three hunks containing "Should be
+one line") is manually hacked and not reflected in configure.in; do
+not regenerate configure with autoconf without merging it. This
+checking is required because somewhere between gcc 4.1 and 4.5 cpp
+started doing regrettable things with backslash-escaped newlines.
 
 --- configure.orig	2003-03-18 14:19:12.000000000 +0000
 +++ configure
@@ -39,7 +45,65 @@ $NetBSD: patch-ab,v 1.1 2007/06/11 13:38:33 markd Exp $
        *-nextstep* )             opsys=nextstep ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
-@@ -9124,6 +9137,22 @@ EOF
+@@ -2052,15 +2065,21 @@ else
+   CPP="${CC-cc} -E"
+   # On the NeXT, cc -E runs the code through the compiler's parser,
+   # not just through cpp.
++  # And, gcc 4.5? and up does not preserve escaped newlines, which is
++  # fatal for preprocessing makefiles.
+   cat > conftest.$ac_ext <<EOF
+ #line 2057 "configure"
+ #include "confdefs.h"
+ #include <assert.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp conftest.$ac_ext >conftest2.out 2>conftest.out"
+ { (eval echo configure:2063: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
++    grep -L "Should  *be one line" contest2.out \
++    `
+ if test -z "$ac_err"; then
+   :
+ else
+@@ -2074,10 +2093,14 @@ else
+ #include "confdefs.h"
+ #include <assert.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp conftest.$ac_ext >conftest2.out 2>conftest.out"
+ { (eval echo configure:2080: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
++    grep -L "Should  *be one line" contest2.out \
++    `
+ if test -z "$ac_err"; then
+   :
+ else
+@@ -2091,10 +2114,14 @@ else
+ #include "confdefs.h"
+ #include <assert.h>
+ Syntax Error
++Should \\
++be one line.
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp conftest.$ac_ext >conftest2.out 2>conftest.out"
+ { (eval echo configure:2097: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"; \
++    grep -L "Should  *be one line" contest2.out \
++    `
+ if test -z "$ac_err"; then
+   :
+ else
+@@ -9124,6 +9151,22 @@ EOF
  fi
  
  
