@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2011/12/31 17:14:16 gdt Exp $
+
+See configure.ac patch.
+
+--- configure.orig	2011-12-31 03:24:50.000000000 +0000
++++ configure
+@@ -16430,12 +16430,14 @@ fi
+ 
+ 
+ 
+-PGSQL_FE_LDFLAGS=-L`$PGCONFIG --libdir`" -lpq"
++
++PGSQL_FE_LDFLAGS="-L`$PGCONFIG --libdir` -R`$PGCONFIG --libdir` -lpq"
+ PGSQL_FE_CPPFLAGS=-I`$PGCONFIG --includedir`
+ 
+ 
+ 
+ 
++
+ PGSQL_DOCDIR=`$PGCONFIG --docdir`
+ PGSQL_MANDIR=`$PGCONFIG --mandir`
+ 
