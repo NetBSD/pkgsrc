@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/12/20 14:05:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/12/31 03:03:07 obache Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -90,6 +90,7 @@ include/cyrus/prot.h
 include/cyrus/retry.h
 include/cyrus/rfc822date.h
 include/cyrus/signals.h
+include/cyrus/strarray.h
 include/cyrus/strhash.h
 include/cyrus/stristr.h
 include/cyrus/sysexits.h
