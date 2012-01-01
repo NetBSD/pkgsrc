@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/11/23 23:33:18 shattered Exp $
+$NetBSD: distinfo,v 1.3 2012/01/01 14:39:33 shattered Exp $
 
 SHA1 (libplist-1.4.tar.bz2) = 82e98d13cdff1a62ad1184d515d71e8898866ee4
 RMD160 (libplist-1.4.tar.bz2) = a00366f0fe164d7bd5d516092e2731b3233ac075
 Size (libplist-1.4.tar.bz2) = 68176 bytes
 SHA1 (patch-cmake_modules_FindGLIB2.cmake) = 7e61b972dee88d288ebdc067440889d71011e1ed
+SHA1 (patch-swig_plist.i) = f4a375c2b96c8eb04c5f53f4753703c0bb86088d
