@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2011/12/26 06:25:04 sbd Exp $
+# $NetBSD: Makefile,v 1.85 2012/01/01 04:03:33 sbd Exp $
 
 DISTNAME=	cdrtools-3.01a06
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
@@ -27,8 +27,6 @@ USE_TOOLS+=	gm4 gmake tbl
 
 CFLAGS.NetBSD+=	-DUSE_GETRAWPARTITION
 LDFLAGS.NetBSD+=	-lutil
-
-MAKE_JOBS_SAFE=	No
 
 # avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=	ARCH=""
