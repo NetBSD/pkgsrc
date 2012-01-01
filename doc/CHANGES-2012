@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1 2012/01/01 09:36:02 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.2 2012/01/01 20:09:42 ryoon Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -12,3 +12,4 @@ README! README! README! README! README! README! README! README! README! README!
 
 Changes to the packages collection and infrastructure in 2012:
 
+	Updated net/xnap to 2.0nb2 [ryoon 2012-01-01]
