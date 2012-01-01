@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2003/07/02 18:28:43 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2012/01/01 20:06:34 ryoon Exp $
 
---- xnap.sh.in.orig	2002-03-09 01:22:14.000000000 +0100
-+++ xnap.sh.in
+--- xnap.sh.orig	2002-03-09 00:22:14.000000000 +0000
++++ xnap.sh
 @@ -6,6 +6,8 @@ if [ -f "${APP}" ]; then
      APPHOME="."
  elif [ -f "`dirname "$0"`/${APP}" ]; then
@@ -11,3 +11,9 @@ $NetBSD: patch-aa,v 1.2 2003/07/02 18:28:43 jmmv Exp $
  elif [ "`dirname $0`" = "/usr/local/bin" ]; then
      APPHOME="/usr/local/share/xnap/"
  elif [ "`dirname $0`" = "/usr/bin" ]; then
+@@ -15,4 +17,4 @@ else
+     exit 1
+ fi
+ 
+-java -jar "${APPHOME}/${APP}" $*
++@JAVA_HOME@/bin/java -jar "${APPHOME}/${APP}" $*
