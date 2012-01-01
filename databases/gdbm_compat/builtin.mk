@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2011/12/03 08:44:21 sbd Exp $
+# $NetBSD: builtin.mk,v 1.2 2012/01/01 04:22:03 sbd Exp $
 
 BUILTIN_PKG:=			gdbm_compat
 BUILTIN_FIND_FILES_VAR=		NDBM_H 
@@ -19,13 +19,19 @@ IS_BUILTIN.gdbm_compat=	yes
 .endif
 MAKEVARS+=	IS_BUILTIN.gdbm_compat
 
+##
+## Include databases/gdbm/builtin.mk so that BUILTIN_PKG.gdbm and 
+## USE_BUILTIN.gdbm are set.
+.if !defined(BUILTIN_PKG.gdbm) || !defined(USE_BUILTIN.gdbm)
+.  include "../../databases/gdbm/builtin.mk"
+.endif
+
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.gdbm_compat) && \
     !empty(IS_BUILTIN.gdbm_compat:M[yY][eE][sS])
-.include "../../databases/gdbm/builtin.mk"
 BUILTIN_PKG.gdbm_compat:= ${BUILTIN_PKG.gdbm:S/gdbm-/gdbm_compat-/}
 .endif
 MAKEVARS+=	BUILTIN_PKG.gdbm_compat
