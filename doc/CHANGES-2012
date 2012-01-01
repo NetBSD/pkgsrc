@@ -1,0 +1,14 @@
+$NetBSD: CHANGES-2012,v 1.1 2012/01/01 09:36:02 jnemeth Exp $
+
+================================================================================
+README! README! README! README! README! README! README! README! README! README!
+
+PLEASE NOTE THAT WE ARE CURRENTLY IN A FREEZE FOR INFRASTRUCTURE CHANGES AND NEW
+FUNCTIONALITY IN PKGSRC. IF YOU'D LIKE TO MAKE CHANGES, PLEASE GET APPROVAL FROM
+A PKGSRC-PMC MEMBER IN ADVANCE.
+
+README! README! README! README! README! README! README! README! README! README!
+================================================================================
+
+Changes to the packages collection and infrastructure in 2012:
+
