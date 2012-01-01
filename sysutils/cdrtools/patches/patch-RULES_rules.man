@@ -1,0 +1,13 @@
+$NetBSD: patch-RULES_rules.man,v 1.1 2012/01/01 04:03:33 sbd Exp $
+
+--- RULES/rules.man.orig	2012-01-01 03:11:58.255958830 +0000
++++ RULES/rules.man
+@@ -46,7 +46,7 @@ INSMODEI=	$(__INSMODEI:$(_UNIQ)%=%)
+ 
+ all:		$(ARCHDIR) $(PTARGET)
+ 
+-$(PTARGET):	$(SRCFILE)
++$(PTARGET):	$(SRCFILE) $(ARCHDIR)
+ 		$(LOCALIZE) $(SRCFILE) $@
+ 
+ $(ARCHDIR):
