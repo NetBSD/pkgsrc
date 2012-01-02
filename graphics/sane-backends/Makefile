@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2011/08/30 01:30:01 gdt Exp $
+# $NetBSD: Makefile,v 1.54 2012/01/02 22:26:39 sbd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 # the .o
 MAKE_JOBS_SAFE=		NO
 
-USE_TOOLS+=		msgfmt msgmerge
+USE_TOOLS+=		msgfmt msgmerge pkg-config
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--with-gphoto2=no
@@ -68,6 +68,9 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .include "options.mk"
 .if (${OPSYS} != "SunOS")
 . include "../../devel/libusb/buildlink3.mk"
+.endif
+.if (${OPSYS} == "Linux")
+.include "../../graphics/libv4l/buildlink3.mk"
 .endif
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
