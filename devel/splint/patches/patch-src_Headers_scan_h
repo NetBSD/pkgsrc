@@ -1,0 +1,18 @@
+$NetBSD: patch-src_Headers_scan_h,v 1.1 2012/01/02 04:19:44 dholland Exp $
+
+- patch out uncompilable unused definition
+
+--- src/Headers/scan.h~	2003-03-02 20:18:48.000000000 +0000
++++ src/Headers/scan.h
+@@ -7,9 +7,11 @@
+ ** scan.h
+ */
+ 
++#if 0
+ /*@-redecl@*/ /*@-type@*/ /*@-incondefs@*/
+ extern unsigned int lsllex (YYSTYPE *p_lval);
+ /*@=redecl@*/ /*@=type@*/ /*@=incondefs@*/
++#endif
+ 
+ extern /*@only@*/ ltoken LSLScanNextToken(void) /*@modifies internalState@*/ ;	       
+ extern void LSLScanFreshToken(ltoken p_tok) /*@modifies internalState@*/ ;
