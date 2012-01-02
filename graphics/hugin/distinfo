@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/01/13 13:52:53 wiz Exp $
+$NetBSD: distinfo,v 1.9 2012/01/02 22:43:48 dholland Exp $
 
 SHA1 (hugin-2010.4.0.tar.bz2) = 47f25c0a8b97c27108e567bcd22203c87f268d07
 RMD160 (hugin-2010.4.0.tar.bz2) = f97b8d37470443eb81c3e915e5f5efa91227b135
 Size (hugin-2010.4.0.tar.bz2) = 11009978 bytes
 SHA1 (patch-ab) = 6faee5f634ff3af345f909b41f03d1a8cdc414b5
 SHA1 (patch-ac) = aac60aa6d3b99a632fce03749660e10ea82ad028
+SHA1 (patch-src_foreign_vigra_vigra__impex_png_cxx) = 43ee756664ca8232b3006b76f12fb8ef55711575
