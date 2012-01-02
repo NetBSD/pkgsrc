@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.7 2012/01/02 16:49:05 taca Exp $
+$NetBSD: CHANGES-2012,v 1.8 2012/01/02 16:58:31 joerg Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -18,3 +18,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/alsa-lib to 1.0.22 [sbd 2012-01-02]
 	Updated devel/cutter to 1.2.0 [obache 2012-01-02]
 	Updated www/contao210-translations to 20111231 [taca 2012-01-02]
+	Updated pkgtools/port2pkg to 1.12 [joerg 2012-01-02]
