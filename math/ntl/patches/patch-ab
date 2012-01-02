@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2001/01/29 06:53:28 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2012/01/02 23:42:28 dholland Exp $
+
+Configure for pkgsrc.
 
 --- ../include/NTL/config.h.orig	Mon Jan 29 06:50:11 2001
 +++ ../include/NTL/config.h
