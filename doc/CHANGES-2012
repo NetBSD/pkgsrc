@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.5 2012/01/02 04:06:32 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.6 2012/01/02 05:53:59 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -16,3 +16,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated cross/h8300-hms-gcc to 3.1nb6 [dholland 2012-01-02]
 	Updated security/cy2-gssapi to 2.1.25nb1 [obache 2012-01-02]
 	Updated audio/alsa-lib to 1.0.22 [sbd 2012-01-02]
+	Updated devel/cutter to 1.2.0 [obache 2012-01-02]
