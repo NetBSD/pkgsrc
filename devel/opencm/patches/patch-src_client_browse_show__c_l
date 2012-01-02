@@ -1,0 +1,15 @@
+$NetBSD: patch-src_client_browse_show__c_l,v 1.1 2012/01/02 03:42:32 dholland Exp $
+
+- patch out YY_PROTO, which newer flex no longer provides.
+
+--- src/client/browse/show_c.l~	2003-03-12 19:05:00.000000000 +0000
++++ src/client/browse/show_c.l
+@@ -53,7 +53,7 @@
+ extern void exit(int);
+ 
+ /* Suppress compiler complaint about yy_flex_realloc: */
+-static void *yy_flex_realloc YY_PROTO(( void *, yy_size_t )) __attribute__((unused));
++static void *yy_flex_realloc( void *, yy_size_t ) __attribute__((unused));
+ 
+ static const Buffer *buffer;
+  static ocmoff_t position;
