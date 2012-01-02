@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2011/12/19 13:58:33 wiz Exp $
+$NetBSD: distinfo,v 1.19 2012/01/02 03:42:32 dholland Exp $
 
 SHA1 (opencm-0.1.2alpha8-2-src.tgz) = 2befad488fd7b73f961f7f6a771acdcee921a20d
 RMD160 (opencm-0.1.2alpha8-2-src.tgz) = 2ec1b4c317bd90723bccd73a4245c464c337bd9d
@@ -11,4 +11,8 @@ SHA1 (patch-ae) = 17caf47d93ec763248792994a3cca3869a8cd8ac
 SHA1 (patch-af) = 63194a7f9530ccf3ac7f0d91b94d717295c61f0b
 SHA1 (patch-ag) = 603fddc1fb526e70fc194280c387084270d62180
 SHA1 (patch-ah) = 1d29db6a5c7ff2d1c7ddc7fcbd5309b35a3f9407
+SHA1 (patch-src_client_browse_show__c_l) = bfec026cbc24675dcbd477975568b4851c725700
+SHA1 (patch-src_client_browse_show__make_l) = 13aaf6227a4ba06f2b6f094df62a3ce8674fe55c
+SHA1 (patch-src_client_browse_show__shell_l) = 08cebb89ab2f4eeb98a90cd27ed7d25696f63089
+SHA1 (patch-src_client_browse_show__text_l) = 14726c4192f415239f18015c2056c6121573f1aa
 SHA1 (patch-src_common_PubKey.c) = 3febe96d04b7c3f6ed47cbe75edd41f8334590c3
