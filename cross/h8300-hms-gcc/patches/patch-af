@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2010/02/14 21:30:00 dholland Exp $
+$NetBSD: patch-af,v 1.2 2012/01/02 01:25:25 dholland Exp $
 
 DESTDIR support.
 
@@ -49,7 +49,8 @@ DESTDIR support.
 +	    rm -f $(DESTDIR)$(bindir)/$(CXX_TARGET_INSTALL_NAME)$(exeext); \
 +	    $(LN) $(DESTDIR)$(bindir)/$(CXX_INSTALL_NAME)$(exeext) $(DESTDIR)$(bindir)/$(CXX_TARGET_INSTALL_NAME)$(exeext); \
  	  fi ; \
- 	  if [ x$(DEMANGLER_PROG) != x ] && [ -x "$(DEMANGLER_PROG)" ]; then \
+-	  if [ x$(DEMANGLER_PROG) != x ] && [ -x "$(DEMANGLER_PROG)" ]; then \
++	  if false; then \
  	    if [ -f g++-cross$(exeext) ] ; then \
 -	      rm -f $(bindir)/$(DEMANGLER_CROSS_NAME)$(exeext); \
 -	      $(INSTALL_PROGRAM) $(DEMANGLER_PROG) $(bindir)/$(DEMANGLER_CROSS_NAME)$(exeext); \
