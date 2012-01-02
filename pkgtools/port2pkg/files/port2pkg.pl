@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.19 2007/07/10 15:27:57 joerg Exp $
+# $NetBSD: port2pkg.pl,v 1.20 2012/01/02 12:15:48 joerg Exp $
 #
 
 require 'getopts.pl';
@@ -289,7 +289,7 @@ sub conv_PLIST {
 		open(NEWPLIST, ">$pkgdir/new.$plist")
 			|| die "$pkgdir/new.$plist: $!\n";
 
-		print NEWPLIST "\@comment \$NetBSD\$\n";
+		print NEWPLIST "\@comment \$"."NetBSD\$\n";
 		my ($cat_added, $man_added);
 		while (<OLDPLIST>) {
 			s|\%\%([^\%]+)\%\%|\${$1}|g;
@@ -323,7 +323,7 @@ sub add_NetBSD_ID {
 	    || open(MD5, "$portsdir/distinfo")) {
 		open(NMD5, ">$pkgdir/distinfo")
 			|| die "$pkgdir/distinfo: $!\n";
-		print NMD5 "\$NetBSD\$\n\n";
+		print NMD5 "\$"."NetBSD\$\n\n";
 		while (<MD5>) {
 			print NMD5 $_;
 		}
@@ -341,7 +341,7 @@ sub add_NetBSD_ID {
 		    || open(PATCH, "$portsdir/files/$patch")) {
 			open(NPATCH, ">$pkgdir/patches/$patch")
 				|| die "$pkgdir/patches/$patch: $!\n";
-			print NPATCH "\$NetBSD\$\n\n";
+			print NPATCH "\$"."NetBSD\$\n\n";
 			while (<PATCH>) {
 				if (/(FreeBSD)/i ||
 				    /(#!.*perl)/) {
