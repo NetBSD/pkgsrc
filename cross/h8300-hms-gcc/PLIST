@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2010/02/14 21:30:00 dholland Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/01/02 01:25:25 dholland Exp $
 bin/h8300-hms-c++
-bin/h8300-hms-c++filt
 bin/h8300-hms-cpp
 bin/h8300-hms-g++
 bin/h8300-hms-gcc
 bin/h8300-hms-gccbug
 bin/h8300-hms-gcov
 libexec/cross-h8300-hms/bin/h8300-hms-c++
-libexec/cross-h8300-hms/bin/h8300-hms-c++filt
 libexec/cross-h8300-hms/bin/h8300-hms-cpp
 libexec/cross-h8300-hms/bin/h8300-hms-g++
 libexec/cross-h8300-hms/bin/h8300-hms-gcc
