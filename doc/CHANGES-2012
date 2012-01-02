@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.8 2012/01/02 16:58:31 joerg Exp $
+$NetBSD: CHANGES-2012,v 1.9 2012/01/02 18:01:14 wiz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -19,3 +19,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/cutter to 1.2.0 [obache 2012-01-02]
 	Updated www/contao210-translations to 20111231 [taca 2012-01-02]
 	Updated pkgtools/port2pkg to 1.12 [joerg 2012-01-02]
+	Updated textproc/mdoclint to 1.14 [wiz 2012-01-02]
