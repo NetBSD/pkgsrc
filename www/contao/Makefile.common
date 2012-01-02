@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2011/12/30 23:21:00 taca Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/01/02 16:47:11 taca Exp $
 #
 # used by www/contao29/Makefile
 # used by www/contao29-example/Makefile
@@ -18,7 +18,7 @@ CT_VERS?=	210
 CT_VERSION=	${CT29_VERSION}
 .elif ${CT_VERS} == "210"
 CT_VERSION=	${CT210_VERSION}
-CT_DIST_SUBDIR=	201112300
+CT_DIST_SUBDIR=	contao210-201201020
 .else
 .error "Illegal version specified: ${CT_VERS}"
 .endif
