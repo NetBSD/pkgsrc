@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10758 2011/12/28 14:30:36 wiz Exp $
+$NetBSD: TODO,v 1.10759 2012/01/02 18:01:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -330,7 +330,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GraphicsMagick-1.3.13
-	o ImageMagick-6.7.3.10
+	o ImageMagick-6.7.4.2
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -413,7 +413,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.4.4
 	o audacity-1.3.13
 	o autoconvert-0.3.16
-	o autogen-5.13
+	o autogen-5.14
 	o avcheck-0.91
 	o avl-2.0.2a
 	o awesome-3.4.11
@@ -451,7 +451,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.31
+	o calibre-0.8.33
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
@@ -520,7 +520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dillo-3.0.2
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
-	o dmenu-4.4.1
+	o dmenu-4.4.1 [pkg/45763]
 	o dnsmasq-2.59
 	o dnstracer-1.9
 	o doclifter-2.7
@@ -549,7 +549,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o egtk-0.3.6.2
 	o eigen2-2.0.17
 	o eigen3-3.0.4
-	o ejabberd-2.1.9
+	o ejabberd-2.1.11
 	o ekiga-3.2.7
 	o electric-9.01
 	o electricfence-2.4.16
@@ -603,9 +603,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
-	o firefox-9.0
+	o firefox-9.0.1
 	o fisg-0.3.12
 	o flashplayer-0.4.13
+	o flickcurl-1.22
 	o flightgear-2.4
 	o flpsed-0.4.4
 	o fltk-1.3.0 [pkgsrc-wip]
@@ -758,6 +759,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-vnc-0.4.3
 	o gtkmm-3.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
+	o gtkwave-3.3.29
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -976,12 +978,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mathomatic-15.7.1
 	o mediawiki-1.17.1 [security fix]
 	o mediawiki-1.18.0
+	o memtest86-4.0 [pkg/45754]
 	o memtester-4.2.2
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
 	o mined-2011.19
+	o minicom-2.6
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mirmon-1.37
@@ -1033,7 +1037,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
 	o nulib2-220
-	o nut-17.4
+	o nut-17.5
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
@@ -1067,10 +1071,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o otpCalc-0.97
 	o p5-Gtk2-1.223
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.3.10
+	o p5-PerlMagick-6.7.4.2
 	o p5-Search-Xapian-1.2.2.0
 	o p5-cairo-1.082
-	o p5-glib2-1.241
+	o p5-glib2-1.242
 	o p5-gtk2-1.241
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1134,7 +1138,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pure-ftpd-1.0.35
 	o putty-0.62
 	o puzzle-9173
-	o puzzles-9372
+	o puzzles-9375
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1161,6 +1165,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-sip-4.13.1
 	o py-sybase-0.37
 	o py-urwid-1.0.1
+	o py-zfec-1.4.22
 	o python-3.2
 	o qbrew-0.3.9
 	o qemu-1.0
@@ -1175,7 +1180,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o raine-0.51.8
 	o randrproto-1.3.2
 	o rapidsvn-0.12
-	o raptor-2.0.5
+	o raptor-2.0.6
 	o rasqal-0.9.28 [needs raptor-2.0.0]
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
@@ -1216,8 +1221,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
-	o scmgit-base-1.7.8.1
-	o scmgit-docs-1.7.8.1
+	o scmgit-base-1.7.8.2
+	o scmgit-docs-1.7.8.2
 	o scons-2.0.1
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
@@ -1262,6 +1267,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ssmtp-2.64
 	o star-1.5.1
 	o statist-1.3.0
+	o stella-3.5
 	o stlport-4.6.2
 	o stow-2.1.1
 	o strace-4.5.16
@@ -1291,10 +1297,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-31.0.0
+	o tea-31.1.0
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.4
+	o terminus-font-4.36 [pkg/45761]
 	o tesseract-3.01
 	o tetrinetx-1.40c
 	o texmaker-3.1 [pkg/45521]
@@ -1392,7 +1399,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111224
+	o x264-devel-20111231
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
