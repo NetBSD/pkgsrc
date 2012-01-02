@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.9 2012/01/02 18:01:14 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.10 2012/01/02 20:17:21 pettai Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -20,3 +20,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao210-translations to 20111231 [taca 2012-01-02]
 	Updated pkgtools/port2pkg to 1.12 [joerg 2012-01-02]
 	Updated textproc/mdoclint to 1.14 [wiz 2012-01-02]
+	Updated net/ldns to 1.6.11nb1 [pettai 2012-01-02]
