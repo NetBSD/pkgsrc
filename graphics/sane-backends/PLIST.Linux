@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2005/09/27 09:29:56 wiz Exp $
+@comment $NetBSD: PLIST.Linux,v 1.3 2012/01/02 22:26:40 sbd Exp $
 lib/sane/libsane-qcam.la
 lib/sane/libsane-v4l.la
 share/examples/sane/qcam.conf
 share/examples/sane/v4l.conf
+man/man5/sane-qcam.5
+man/man5/sane-v4l.5
