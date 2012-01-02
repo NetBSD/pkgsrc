@@ -1,85 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2001/06/20 10:19:28 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2012/01/02 23:42:28 dholland Exp $
 
---- WizardAux.orig	Fri Jun  8 14:23:16 2001
+- adjust to libtooling
+
+--- WizardAux.orig	2009-08-14 12:53:12.000000000 +0000
 +++ WizardAux
-@@ -12,7 +12,7 @@
- cat clr_LONG_LONG clr_AVOID_FLOAT > best1
- cat clr_LONG_LONG clr_AVOID_FLOAT clr_TBL_REM clr_AVOID_BRANCHING clr_FFT_PIPELINE set_WIZARD_HACK isettings > isettings1
- sed -f isettings1 config_template > ../include/NTL/config.h
--make wntl.a
-+make libwntl.la
- sh RemoveProg MulTimeTest
+@@ -47,7 +47,7 @@ sub RunProg {
+    my $val;
+    my $res;
  
- if test -f NO_GMP_LIP
-@@ -33,7 +33,7 @@
-    cat clr_LONG_LONG set_AVOID_FLOAT clr_TBL_REM clr_AVOID_BRANCHING clr_FFT_PIPELINE set_WIZARD_HACK isettings > isettings1
-    sed -f isettings1 config_template > ../include/NTL/config.h
-    rm lip.o
--   make wntl.a
-+   make libwntl.la
-    sh RemoveProg MulTimeTest
-    make MulTimeTest
-    if test -f MulTimeTest
-@@ -55,7 +55,7 @@
-    cat set_LONG_LONG clr_AVOID_FLOAT clr_TBL_REM clr_AVOID_BRANCHING clr_FFT_PIPELINE set_WIZARD_HACK isettings > isettings1
-    sed -f isettings1 config_template > ../include/NTL/config.h
-    rm lip.o
--   make wntl.a
-+   make libwntl.la
-    sh RemoveProg MulTimeTest
-    make MulTimeTest
-    if test -f MulTimeTest
-@@ -79,7 +79,7 @@
- cat best1 clr_TBL_REM clr_AVOID_BRANCHING clr_FFT_PIPELINE set_WIZARD_HACK isettings > isettings1
- sed -f isettings1 config_template > ../include/NTL/config.h
- rm lip.o
--make wntl.a
-+make libwntl.la
- sh RemoveProg PolyTimeTest
- make PolyTimeTest
- if test -f PolyTimeTest
-@@ -95,7 +95,7 @@
- cat best1 clr_TBL_REM clr_AVOID_BRANCHING set_FFT_PIPELINE set_WIZARD_HACK isettings > isettings1
- sed -f isettings1 config_template > ../include/NTL/config.h
- rm FFT.o
--make wntl.a
-+make libwntl.la
- sh RemoveProg PolyTimeTest
- make PolyTimeTest
- if test -f PolyTimeTest
-@@ -123,7 +123,7 @@
-    cat best1 set_TBL_REM clr_AVOID_BRANCHING best2 set_WIZARD_HACK isettings > isettings1
-    sed -f isettings1 config_template > ../include/NTL/config.h
-    rm lip.o 
--   make wntl.a
-+   make libwntl.la
-    sh RemoveProg PolyTimeTest
-    make PolyTimeTest
-    if test -f PolyTimeTest
-@@ -151,7 +151,7 @@
- cat best1 clr_TBL_REM set_AVOID_BRANCHING clr_FFT_PIPELINE set_WIZARD_HACK isettings > isettings1
- sed -f isettings1 config_template > ../include/NTL/config.h
- rm *.o
--make wntl.a
-+make libwntl.la
- sh RemoveProg PolyTimeTest
- make PolyTimeTest
- if test -f PolyTimeTest
-@@ -167,7 +167,7 @@
- cat best1 clr_TBL_REM set_AVOID_BRANCHING set_FFT_PIPELINE set_WIZARD_HACK isettings > isettings1
- sed -f isettings1 config_template > ../include/NTL/config.h
- rm FFT.o
--make wntl.a
-+make libwntl.la
- sh RemoveProg PolyTimeTest
- make PolyTimeTest
- if test -f PolyTimeTest
-@@ -196,7 +196,7 @@
-    cat best1 set_TBL_REM set_AVOID_BRANCHING best2 set_WIZARD_HACK isettings > isettings1
-    sed -f isettings1 config_template > ../include/NTL/config.h
-    rm lip.o 
--   make wntl.a
-+   make libwntl.la
-    sh RemoveProg PolyTimeTest
-    make PolyTimeTest
-    if test -f PolyTimeTest
+-   system("make wntl.a");
++   system("make libwntl.la");
+    RemoveProg($name);
+    system("make $name");
+ 
