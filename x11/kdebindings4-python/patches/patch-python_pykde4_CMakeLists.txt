@@ -1,0 +1,13 @@
+$NetBSD: patch-python_pykde4_CMakeLists.txt,v 1.1 2012/01/02 06:58:26 sbd Exp $
+
+--- python/pykde4/CMakeLists.txt.orig	2010-11-02 12:51:11.000000000 +0000
++++ python/pykde4/CMakeLists.txt
+@@ -15,6 +15,8 @@ endif(${CMAKE_SOURCE_DIR} STREQUAL ${CMA
+ # This module can be built independant from the rest of kdebindings.
+ SET(CMAKE_MODULE_PATH ${pykde4_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ # Fix output file conflict with the Ruby bindings
+ IF(CMAKE_MAJOR_VERSION EQUAL 2 AND CMAKE_MINOR_VERSION LESS 6)
+     SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib/pykde)
