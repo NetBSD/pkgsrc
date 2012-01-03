@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.25 2011/11/27 00:10:38 agc Exp $
+# $Id: pkg_tarup,v 1.26 2012/01/03 12:57:20 joerg Exp $
 #
 # Tar up installed package
 #
@@ -265,16 +265,6 @@ exit 0
 
  - maybe the squirelling away of +REQUIRED_BY should be done here
    instead of in the bsd.pkg.mk framework that normally calls this.
-
-
-mtree file considerations:
-
- - keeping uncompressed mtree file adds ~10% to the size of /var/db/pkg
-
- - could gzip file, space saving: 5kb->850b (plus some intelligence to
-   uncompress them when needed)
-
- - not keeping mtree file results in pkgs w/o mtree file (but should work)
 
 integration:
 
