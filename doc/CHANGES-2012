@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.13 2012/01/03 09:26:30 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.14 2012/01/03 16:24:07 taca Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -25,3 +25,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated cad/boolean to 6.99nb9 [dholland 2012-01-03]
 	Updated emulators/xm7 to 1020s [obache 2012-01-03]
 	Updated multimedia/gst-plugins0.10-bad to 0.10.22nb2 [sbd 2012-01-03]
+	Updated lang/php53 to 5.3.8nb2 [taca 2012-01-03]
