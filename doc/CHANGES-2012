@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.11 2012/01/03 01:19:08 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.12 2012/01/03 07:17:15 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -23,3 +23,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ldns to 1.6.11nb1 [pettai 2012-01-02]
 	Updated math/ntl to 5.5.2 [dholland 2012-01-02]
 	Updated cad/boolean to 6.99nb9 [dholland 2012-01-03]
+	Updated emulators/xm7 to 1020s [obache 2012-01-03]
