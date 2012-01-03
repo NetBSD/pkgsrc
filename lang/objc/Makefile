@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/01/03 01:25:28 dholland Exp $
 
 DISTNAME=	objc-3.2.6
 CATEGORIES=	lang
@@ -12,6 +12,8 @@ COMMENT=	Portable Object Compiler
 DIST_BS=	objc-bootstrap-3.1.33
 WRKSRC_BS=	${WRKDIR}/${DIST_BS}
 
+MAKE_JOBS_SAFE=		no
+
 CONFIGURE_DIRS=		${WRKSRC_BS} ${WRKSRC}
 CONFIG_GUESS_OVERRIDE=	${WRKSRC_BS}/util/config.guess util/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC_BS}/util/config.sub util/config.sub
@@ -22,6 +24,13 @@ BUILD_TARGET=		default
 USE_TOOLS+=		lex yacc
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+SUBST_CLASSES+=		mflags
+SUBST_STAGE.mflags=	post-extract
+SUBST_MESSAGE.mflags=	Changing 'MFLAGS' to 'MMFLAGS'
+SUBST_SED.mflags=	-e 's,MFLAGS,MMFLAGS,g'
+SUBST_FILES.mflags=	configure configure.in manual.html \
+			*/Makefile* src/*/Makefile*
 
 pre-configure:
 	${ECHO} >> ${WRKSRC_BS}/configure \
