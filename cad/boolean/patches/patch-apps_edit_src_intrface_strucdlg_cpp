@@ -1,0 +1,24 @@
+$NetBSD: patch-apps_edit_src_intrface_strucdlg_cpp,v 1.1 2012/01/03 01:18:46 dholland Exp $
+
+Avoid undefined behvior, caught by gcc.
+
+--- apps/edit/src/intrface/strucdlg.cpp~	2006-05-03 11:41:00.000000000 +0000
++++ apps/edit/src/intrface/strucdlg.cpp
+@@ -286,7 +286,7 @@ void StructuresDialog::CmOk(wxCommandEve
+       selectedStruct = selectedStruct.Mid( 0, top );
+ 	_structure = _structurelist->GetStructure(selectedStruct);
+    if (_structure)
+-		GLOB->CMDH->DoCommand("viewstructure %s",selectedStruct);
++		GLOB->CMDH->DoCommand("viewstructure %s", (const char *)selectedStruct);
+ }
+ 
+ // OK button pressed: get the choosen structure
+@@ -299,7 +299,7 @@ void StructuresDialog::CmShow(wxCommandE
+       selectedStruct = selectedStruct.Mid( 0, top );
+ 	_structure = _structurelist->GetStructure(selectedStruct);
+    if (_structure)
+-		GLOB->CMDH->DoCommand("viewstructure %s",selectedStruct);
++		GLOB->CMDH->DoCommand("viewstructure %s", (const char *)selectedStruct);
+ }
+ 
+ Structure* StructuresDialog::GetStructure()
