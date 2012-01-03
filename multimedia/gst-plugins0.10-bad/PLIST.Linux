@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2012/01/03 11:33:32 obache Exp $
+lib/gstreamer-0.10/libgstdecklink.la
+lib/gstreamer-0.10/libgstlinsys.la
