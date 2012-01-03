@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10759 2012/01/02 18:01:14 wiz Exp $
+$NetBSD: TODO,v 1.10760 2012/01/03 07:17:15 obache Exp $
 
 Suggested new packages
 ======================
@@ -1488,7 +1488,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xlogo-1.0.3
 	o xlsatoms-1.1.0 [unpackaged]
 	o xlsclients-1.1.2
-	o xm7-1020s
 	o xmag-1.0.4 [pkg/45551]
 	o xman-1.1.2
 	o xmbdfed-4.6
