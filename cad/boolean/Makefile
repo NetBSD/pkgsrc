@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2011/11/01 06:00:42 sbd Exp $
+# $NetBSD: Makefile,v 1.52 2012/01/03 01:18:46 dholland Exp $
 #
 
 DISTNAME=	boolean_6_99
 PKGNAME=	boolean-6.99
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://boolean.klaasholwerda.nl/download/boolzip/
 EXTRACT_SUFX=	.tgz
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://boolean.klaasholwerda.nl/bool.html
 COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/boolean
 
@@ -41,6 +41,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/boolean.sh  ${DESTDIR}${PREFIX}/bin/boolean
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/edit  ${DESTDIR}${PREFIX}/bin/edit
 
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../x11/wxGTK28-contrib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
