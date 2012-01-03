@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/03/15 11:30:05 obache Exp $
+# $NetBSD: Makefile,v 1.32 2012/01/03 00:51:10 dholland Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -21,6 +21,8 @@ BUILD_TARGET=		depend world
 CONFIGURE_ARGS+=	--disable-debugger
 
 MAKE_JOBS_SAFE=		no
+
+NOT_FOR_PLATFORM=	*-*-x86_64
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
