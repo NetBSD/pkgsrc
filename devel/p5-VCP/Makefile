@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/08/14 12:26:48 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/03 01:06:29 dholland Exp $
 
 DISTNAME=	VCP-autrijus-snapshot-0.9-${SNAPSHOT_VERS}
 SNAPSHOT_VERS=	20050110
@@ -12,9 +12,9 @@ AUTHOR_DIR=	authors/id/A/AU/AUTRIJUS
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Versioned Copy, copying hierarchies of versioned files
 
-BROKEN=		Fails to locate VCP/DiffFormat.pm
-
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
