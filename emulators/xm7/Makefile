@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/05/19 08:59:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/01/03 03:24:45 dholland Exp $
 #
 
 DISTNAME=		xm71010s
@@ -18,6 +18,10 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
+
+FETCH_MESSAGE=  "The xm7 distfile is no longer available, and is not freely"
+FETCH_MESSAGE+= "distributable. If you do not already have it then this"
+FETCH_MESSAGE+= "package is not of much use."
 
 BUILD_DEPENDS+=		nkf>=1.7:../../converters/nkf
 
