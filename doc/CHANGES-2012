@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.12 2012/01/03 07:17:15 obache Exp $
+$NetBSD: CHANGES-2012,v 1.13 2012/01/03 09:26:30 sbd Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -24,3 +24,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/ntl to 5.5.2 [dholland 2012-01-02]
 	Updated cad/boolean to 6.99nb9 [dholland 2012-01-03]
 	Updated emulators/xm7 to 1020s [obache 2012-01-03]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.22nb2 [sbd 2012-01-03]
