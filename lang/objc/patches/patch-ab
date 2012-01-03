@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2005/01/14 09:18:56 adam Exp $
+$NetBSD: patch-ab,v 1.2 2012/01/03 01:25:28 dholland Exp $
 
 --- configure.orig	2005-01-14 10:10:45.000000000 +0000
 +++ configure
 @@ -3367,7 +3367,7 @@ USELFLAG=1;
  
- MFLAGS=OPT_MFLAGS;
+ MMFLAGS=OPT_MMFLAGS;
  case $ac_cv_c_compiler_gnu in
--  yes) OPT_MFLAGS='-DNDEBUG -O2';;
-+  yes) OPT_MFLAGS='-DNDEBUG $(CFLAGS)';;
-   *) OPT_MFLAGS='-DNDEBUG';;
+-  yes) OPT_MMFLAGS='-DNDEBUG -O2';;
++  yes) OPT_MMFLAGS='-DNDEBUG $(CFLAGS)';;
+   *) OPT_MMFLAGS='-DNDEBUG';;
  esac
  

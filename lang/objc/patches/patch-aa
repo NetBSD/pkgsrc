@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/09/24 00:28:01 rh Exp $
+$NetBSD: patch-aa,v 1.2 2012/01/03 01:25:28 dholland Exp $
 
 --- src/objc/Makefile.in.orig	2002-05-18 20:57:50.000000000 +1000
 +++ src/objc/Makefile.in
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/09/24 00:28:01 rh Exp $
 +	$(YACC) -d $*.ym
  	-$(CP) $(YTABH) $*.h
  	-$(CP) $(YTABC) $*.m
- 	$(OBJC) -c $(MFLAGS) $(IFLAGS) $*.m
+ 	$(OBJC) -c $(MMFLAGS) $(IFLAGS) $*.m
