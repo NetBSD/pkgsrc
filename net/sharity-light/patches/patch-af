@@ -1,8 +1,19 @@
-$NetBSD: patch-af,v 1.1 2005/12/18 20:14:03 joerg Exp $
+$NetBSD: patch-af,v 1.2 2012/01/04 15:29:02 dholland Exp $
 
---- syshdr.h.orig	2005-12-18 20:00:48.000000000 +0000
+- needs <time.h> on linux
+- dragonfly support
+
+--- syshdr.h.orig	1998-11-16 17:03:49.000000000 +0000
 +++ syshdr.h
-@@ -47,6 +47,9 @@
+@@ -15,6 +15,7 @@
+ #include <sys/socket.h>
+ #include <unistd.h>
+ #include <sys/time.h>
++#include <time.h>
+ #include <fcntl.h>
+ #include <sys/errno.h>
+ #include <errno.h>
+@@ -47,6 +48,9 @@
  #		define BSD4_4_LITE2
  #	endif
  #endif
