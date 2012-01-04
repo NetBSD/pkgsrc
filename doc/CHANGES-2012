@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.16 2012/01/04 16:10:48 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.17 2012/01/04 21:11:58 morr Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/basic256 to 0.9.6.66nb1 [dholland 2012-01-04]
 	Updated misc/zyGrib to 5.0.6nb2 [dholland 2012-01-04]
 	Updated lang/swi-prolog-packages to 5.11.18nb2 [dholland 2012-01-04]
+	Updated www/wordpress to 3.3.1 [morr 2012-01-04]
