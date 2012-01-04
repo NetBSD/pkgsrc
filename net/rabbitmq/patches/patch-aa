@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2011/12/14 11:55:20 fhajny Exp $
+$NetBSD: patch-aa,v 1.5 2012/01/04 19:08:30 fhajny Exp $
 
 Support for Python 2.7, drop dependency on gsed.
---- Makefile.orig	2011-11-08 16:55:55.000000000 +0000
+--- Makefile.orig	2011-12-16 12:24:15.000000000 +0000
 +++ Makefile
 @@ -1,3 +1,4 @@
 +SHELL=$(MAKE_SHELL)
@@ -26,10 +26,10 @@ Support for Python 2.7, drop dependency on gsed.
  
  BASIC_PLT=basic.plt
  RABBIT_PLT=rabbit.plt
-@@ -252,7 +257,9 @@ srcdist: distclean
- 	cp README.in $(TARGET_SRC_DIR)/README
- 	elinks -dump -no-references -no-numbering $(WEB_URL)build-server.html \
- 		>> $(TARGET_SRC_DIR)/README
+@@ -246,7 +251,9 @@ stop-cover: all
+ srcdist: distclean
+ 	mkdir -p $(TARGET_SRC_DIR)/codegen
+ 	cp -r ebin src include LICENSE LICENSE-MPL-RabbitMQ INSTALL README $(TARGET_SRC_DIR)
 -	sed -i.save 's/%%VSN%%/$(VERSION)/' $(TARGET_SRC_DIR)/ebin/rabbit_app.in && rm -f $(TARGET_SRC_DIR)/ebin/rabbit_app.in.save
 +	sed 's/%%VSN%%/$(VERSION)/' $(TARGET_SRC_DIR)/ebin/rabbit_app.in \
 +		> $(TARGET_SRC_DIR)/ebin/rabbit_app.in.tmp && \
