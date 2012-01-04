@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/11/23 08:12:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/04 15:12:18 dholland Exp $
 #
 
 DISTNAME=	basic256_0.9.6.66
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kidbasic/}
 EXTRACT_SUFX=	.tgz
@@ -43,6 +44,7 @@ MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/espeak/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
