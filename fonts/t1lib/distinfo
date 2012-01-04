@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2011/03/08 17:13:33 drochner Exp $
+$NetBSD: distinfo,v 1.21 2012/01/04 16:59:15 drochner Exp $
 
 SHA1 (t1lib-5.1.2.tar.gz) = 4b4fc22c8688eefaaa8cfc990f0039f95f4287de
 RMD160 (t1lib-5.1.2.tar.gz) = ab22aea390356750d743c0f4b08762aa76ca2a82
@@ -9,3 +9,5 @@ SHA1 (patch-ad) = 29c530f6d363de31777ad45823b55e72208c4ccb
 SHA1 (patch-af) = e89df0d94e0748e468c7c3d40ce2fc0ccdb0116c
 SHA1 (patch-ah) = 60ead43eeb6327cd3fd94755364633b6bf5d5d0d
 SHA1 (patch-ai) = 176ed28f114f64c5e97e7c00c684a74895de2df3
+SHA1 (patch-aj) = f5fc3b192b21df64150288bad4f1f0cff58d4d84
+SHA1 (patch-ak) = e66b8b8f987d15d07264f268acc7e3a02ba76d36
