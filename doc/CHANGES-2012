@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.15 2012/01/04 11:04:12 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.16 2012/01/04 16:10:48 dholland Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -27,3 +27,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/gst-plugins0.10-bad to 0.10.22nb2 [sbd 2012-01-03]
 	Updated lang/php53 to 5.3.8nb2 [taca 2012-01-03]
 	Updated x11/rxvt-unicode to 9.06nb5 [wiz 2012-01-04]
+	Updated devel/ogre to 1.6.3nb5 [dholland 2012-01-04]
+	Updated databases/sdbm to 90.12.1nb2 [dholland 2012-01-04]
+	Updated lang/basic256 to 0.9.6.66nb1 [dholland 2012-01-04]
+	Updated misc/zyGrib to 5.0.6nb2 [dholland 2012-01-04]
+	Updated lang/swi-prolog-packages to 5.11.18nb2 [dholland 2012-01-04]
