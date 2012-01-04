@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/03 09:16:21 sbd Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/04 06:46:59 sbd Exp $
 bin/jack_alias
 bin/jack_connect
 bin/jack_disconnect
@@ -27,15 +27,15 @@ include/jack/thread.h
 include/jack/timestamps.h
 include/jack/transport.h
 include/jack/types.h
-lib${LIBABISUFFIX}/jack/inprocess.la
-lib${LIBABISUFFIX}/jack/intime.la
-lib${LIBABISUFFIX}/jack/jack_dummy.la
-lib${LIBABISUFFIX}/jack/jack_net.la
-${PLIST.coreaudio}lib${LIBABISUFFIX}/jack/jack_coreaudio.la
-${PLIST.oss}lib${LIBABISUFFIX}/jack/jack_oss.la
-${PLIST.sunaudio}lib${LIBABISUFFIX}/jack/jack_sun.la
-lib${LIBABISUFFIX}/libjack.la
-lib${LIBABISUFFIX}/libjackserver.la
-lib${LIBABISUFFIX}/pkgconfig/jack.pc
+lib/jack/inprocess.la
+lib/jack/intime.la
+lib/jack/jack_dummy.la
+lib/jack/jack_net.la
+${PLIST.coreaudio}lib/jack/jack_coreaudio.la
+${PLIST.oss}lib/jack/jack_oss.la
+${PLIST.sunaudio}lib/jack/jack_sun.la
+lib/libjack.la
+lib/libjackserver.la
+lib/pkgconfig/jack.pc
 man/man1/jackd.1
 man/man1/jackstart.1
