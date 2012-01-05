@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.18 2012/01/05 00:53:27 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.19 2012/01/05 08:01:46 sbd Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -34,3 +34,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/swi-prolog-packages to 5.11.18nb2 [dholland 2012-01-04]
 	Updated www/wordpress to 3.3.1 [morr 2012-01-04]
 	Updated mail/spamdyke to 4.2.1 [schmonz 2012-01-05]
+	Updated devel/xulrunner to 8.0nb1 [sbd 2012-01-05]
