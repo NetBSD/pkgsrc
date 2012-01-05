@@ -1,0 +1,31 @@
+$NetBSD: patch-compat_memory_c,v 1.1 2012/01/05 12:02:38 cegger Exp $
+
+--- xen/common/compat/memory.c.orig	2009-08-06 12:56:41.000000000 +0000
++++ xen/common/compat/memory.c
+@@ -7,6 +7,12 @@
+ #include <asm/current.h>
+ #include <compat/memory.h>
+ 
++#define xen_domid_t domid_t
++#define compat_domid_t domid_compat_t
++CHECK_TYPE(domid);
++#undef compat_domid_t
++#undef xen_domid_t
++
+ int compat_memory_op(unsigned int cmd, XEN_GUEST_HANDLE(void) compat)
+ {
+     int rc, split, op = cmd & MEMOP_CMD_MASK;
+@@ -171,13 +177,6 @@ int compat_memory_op(unsigned int cmd, X
+         case XENMEM_current_reservation:
+         case XENMEM_maximum_reservation:
+         case XENMEM_maximum_gpfn:
+-        {
+-#define xen_domid_t domid_t
+-#define compat_domid_t domid_compat_t
+-            CHECK_TYPE(domid);
+-#undef compat_domid_t
+-#undef xen_domid_t
+-        }
+         case XENMEM_maximum_ram_page:
+             nat.hnd = compat;
+             break;
