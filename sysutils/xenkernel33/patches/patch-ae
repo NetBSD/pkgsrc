@@ -1,21 +1,27 @@
-$NetBSD: patch-ae,v 1.1 2011/07/19 18:54:12 jym Exp $
-- protect Xen's stdarg.h from multiple inclusion.
-- build fix for stdarg under NetBSD.
+$NetBSD: patch-ae,v 1.2 2012/01/05 12:02:38 cegger Exp $
 
-Both backported from upstream.
-
-http://xenbits.xensource.com/hg/xen-unstable.hg/file/a574bf2f5059/xen/include/xen/stdarg.h
---- xen/include/xen/stdarg.h.orig	2009-08-06 12:56:43.000000000 +0000
+--- xen/include/xen/stdarg.h.orig	2012-01-05 11:29:11.000000000 +0000
 +++ xen/include/xen/stdarg.h
-@@ -1,5 +1,15 @@
+@@ -1,5 +1,26 @@
 +#ifndef __XEN_STDARG_H__
 +#define __XEN_STDARG_H__
 +
  #if defined(__OpenBSD__)
  #  include "/usr/include/stdarg.h"
 +#elif defined (__NetBSD__)
++   /* Why not just include stdarg.h like everyone else? should explain */
 +   typedef __builtin_va_list va_list;
-+#  define va_start(ap, last)    __builtin_stdarg_start((ap), (last))
++#  ifdef __GNUC__
++#    define __GNUC_PREREQ__(x, y)                                           \
++        ((__GNUC__ == (x) && __GNUC_MINOR__ >= (y)) ||                  \
++         (__GNUC__ > (x)))
++#  else
++#    define __GNUC_PREREQ__(x, y)   0
++#  endif
++#  if !__GNUC_PREREQ__(4, 5)
++#    define __builtin_va_start(ap, last)    __builtin_stdarg_start((ap), (last))
++#  endif
++#  define va_start(ap, last)    __builtin_va_start((ap), (last))
 +#  define va_end(ap)            __builtin_va_end(ap)
 +#  define va_arg                __builtin_va_arg
  #else
