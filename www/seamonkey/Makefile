@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2011/11/13 17:02:20 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2012/01/05 08:55:32 sbd Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
+
+BUILD_DEPENDS+=	yasm>=1.1.0:../../devel/yasm
 
 WRKSRC=		${WRKDIR}/comm-beta
 MOZILLA_DIR=	mozilla/
