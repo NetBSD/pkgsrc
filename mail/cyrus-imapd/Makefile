@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2011/12/20 11:59:46 obache Exp $
+# $NetBSD: Makefile,v 1.93 2012/01/05 11:52:33 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
 PKGREVISION=	5
@@ -85,6 +85,9 @@ CHECK_BUILTIN.mit-krb5:=	no
 	!empty(USE_BUILTIN.mit-krb5:M[Yy][Ee][Ss])) && \
         exists(/usr/bin/compile_et) && exists(/usr/include/krb5/com_err.h)
 CPPFLAGS+=	-I/usr/include/krb5
+CONFIGURE_ENV+=	COMPILE_ET=/usr/bin/compile_et
+.  elif ${OPSYS} != "Linux" && \
+	exists(/usr/bin/compile_et) && exists(/usr/include/com_err.h)
 CONFIGURE_ENV+=	COMPILE_ET=/usr/bin/compile_et
 .  else
 CONFIGURE_ARGS+=	--with-com-err=yes
