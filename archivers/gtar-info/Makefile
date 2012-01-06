@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2011/05/11 07:49:59 adam Exp $
+# $NetBSD: Makefile,v 1.31 2012/01/06 11:49:31 obache Exp $
 
 DISTNAME=	tar-1.26
 PKGNAME=	${DISTNAME:S/tar/gtar-info/}
+PKGREVISION=	1
 SVR4_PKGNAME=	gtari
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
@@ -23,5 +24,6 @@ INSTALLATION_DIRS=	${PKGINFODIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/tar.info ${DESTDIR}${PREFIX}/${PKGINFODIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/tar.info-[0-9]* ${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.pkg.mk"
