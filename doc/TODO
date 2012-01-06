@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10761 2012/01/06 01:36:40 wiz Exp $
+$NetBSD: TODO,v 1.10762 2012/01/06 02:37:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -534,7 +534,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dropbear-2011.054
 	o dspam-3.10.0
 	o dvdisaster-0.72.2
-	o dvdstyler-2.0.0
+	o dvdstyler-2.1
 	o dvtm-0.7
 	o dwm-6.0 [pkg/45737]
 	o easymenu-0.7.2p1
@@ -786,7 +786,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-7.8.1
-	o highlight-3.6
+	o highlight-3.7
 	o honeyd-1.5c
 	o horde-4.0.13
 	o host-20070128
@@ -1263,6 +1263,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.6
 	o sox-14.3.2
+	o spamdyke-4.2.1
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
