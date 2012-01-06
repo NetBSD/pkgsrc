@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/01/05 08:55:32 sbd Exp $
+# $NetBSD: Makefile,v 1.58 2012/01/06 07:36:38 sbd Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
@@ -12,8 +12,6 @@ MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
 
-BUILD_DEPENDS+=	yasm>=1.1.0:../../devel/yasm
-
 WRKSRC=		${WRKDIR}/comm-beta
 MOZILLA_DIR=	mozilla/
 
@@ -23,6 +21,13 @@ CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 CONFIGURE_ARGS+=	--enable-application=suite
 
 ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin") && \
+    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
