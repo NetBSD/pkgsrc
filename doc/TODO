@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10760 2012/01/03 07:17:15 obache Exp $
+$NetBSD: TODO,v 1.10761 2012/01/06 01:36:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -415,6 +415,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o autoconvert-0.3.16
 	o autogen-5.14
 	o avcheck-0.91
+	o avidemux-2.5.6
 	o avl-2.0.2a
 	o awesome-3.4.11
 	o baci-20040415
@@ -507,16 +508,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dcc-1.3.140
 	o dconf-0.7.1
 	o ddclient-3.7.3
-	o ddrescue-1.14
+	o ddrescue-1.15
 	o defendguin-0.0.11
 	o dejagnu-1.5
 	o delegate-9.9.7
 	o dhid-5.3
 	o dia-0.97.2
 	o diffpdf-1.8.0
-	o diffstat-1.54
+	o diffstat-1.55
 	o diffutils-3.2
-	o digikam-2.4.1
+	o digikam-2.5.0
 	o dillo-3.0.2
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -540,7 +541,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.9
 	o eclipse-3.2.0
-	o ed-1.5
+	o ed-1.6
 	o ede-2.0
 	o editres-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
@@ -599,7 +600,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fetchyahoo-2.14.0
 	o ffmpeg-20111121.0.8.7
 	o ffmpeg-20121212.0.9
-	o file-5.09
+	o file-5.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
@@ -650,7 +651,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontsproto-2.1.1
 	o fossil-1.21
-	o fotoxx-11.12.1
+	o fotoxx-12.01.2
 	o fox-1.6.41
 	o freeciv-2.3.1
 	o freeglut-2.4.0
@@ -714,6 +715,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
+	o gnome-nettool-3.0.1
 	o gnome-packagekit-2.32.0 [GNOME 2.32]
 	o gnome-packagekit-3.2.1
 	o gnome-pilot-2.32.1 [GNOME 2.32]
@@ -731,7 +733,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
-	o gnutls-3.0.9
+	o gnutls-3.0.10
 	o gobject-introspection-1.30.0
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -794,7 +796,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o httping-1.5.2
 	o httptunnel-3.3
 	o hugin-2011.4.0
-	o hylafax-5.5.0
+	o hylafax-5.5.1
 	o ibus-input-pad-1.4.0 [for ibus-1.4.x]
 	o ical-2.3.2
 	o icdprog-0.5
@@ -990,7 +992,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o miredo-1.2.4
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-5.1.0
+	o mkvtoolnix-5.2.1
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
 	o modular-xorg-server-1.11.3
@@ -1000,6 +1002,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
+	o mp3diags-1.0.10
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
 	o mpg123-1.13.4
@@ -1008,7 +1011,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mserv-devel-0.41
 	o mtools-4.0.17
 	o mu-0.9.7
-	o multitail-5.2.8
+	o multitail-5.2.9
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
@@ -1031,6 +1034,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ng-1.4.4
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
+	o nmh-1.4
 	o notification-daemon-0.7.0
 	o ns-3.12.1
 	o ns-plugger-common-5.1.3
@@ -1224,6 +1228,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-base-1.7.8.2
 	o scmgit-docs-1.7.8.2
 	o scons-2.0.1
+	o scribus-1.4.0
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
 	o scrotwm-0.9.34
@@ -1265,6 +1270,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o squid-3.1.18
 	o ssh-askpass-1.2.4.1
 	o ssmtp-2.64
+	o stalin-0.11
 	o star-1.5.1
 	o statist-1.3.0
 	o stella-3.5
@@ -1297,7 +1303,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-31.1.0
+	o tea-31.2.0
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.4
@@ -1305,7 +1311,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tesseract-3.01
 	o tetrinetx-1.40c
 	o texmaker-3.1 [pkg/45521]
-	o texmaker-3.2
+	o texmaker-3.2.1
 	o tfmxplay-1.1.6
 	o tiff-4.0.0
 	o tig-0.18
@@ -1385,7 +1391,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weechat-0.3.6
 	o whohas-0.29
 	o windowlab-1.40
-	o wine-devel-1.3.35
+	o wine-devel-1.3.36
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1426,7 +1432,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xerces-j-2.9.0
 	o xev-1.1.0
 	o xeyes-1.1.1
-	o xf86-input-keyboard-1.6.0
+	o xf86-input-keyboard-1.6.1
 	o xf86-input-mouse-1.7.1
 	o xf86-input-vmmouse-12.7.0
 	o xf86-input-void-1.4.0
@@ -1472,6 +1478,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xgamma-1.0.4
 	o xhippo-3.5
 	o xhost-1.0.4
+	o xine-lib-1.1.20.1
+	o xine-lib-1.2.0
 	o xineramaproto-1.2.1
 	o xinit-1.3.1
 	o xinput-1.5.4
