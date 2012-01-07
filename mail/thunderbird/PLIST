@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2011/12/11 11:55:12 marino Exp $
+@comment $NetBSD: PLIST,v 1.37 2012/01/07 23:37:51 sbd Exp $
 bin/thunderbird
 ${PLIST.jit}include/thunderbird/Allocator.h
 ${PLIST.jit}include/thunderbird/Assembler.h
@@ -166,6 +166,8 @@ include/thunderbird/jArray.h
 include/thunderbird/jar-ds.h
 include/thunderbird/jar.h
 include/thunderbird/jarfile.h
+${PLIST.jemalloc}include/thunderbird/jemalloc.h
+${PLIST.jemalloc}include/thunderbird/jemalloc_types.h
 include/thunderbird/js-config.h
 include/thunderbird/js.msg
 include/thunderbird/jsalloc.h
