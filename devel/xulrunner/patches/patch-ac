@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
+$NetBSD: patch-ac,v 1.3 2012/01/07 18:47:39 marino Exp $
 
---- nsprpub/configure.in.orig	2011-02-03 20:12:03.000000000 +0000
+--- nsprpub/configure.in.orig	2011-09-02 20:15:44.000000000 +0000
 +++ nsprpub/configure.in
 @@ -71,7 +71,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
  LIBPLC='-L$(dist_libdir) -lplc$(MOD_MAJOR_VERSION)'
  CYGWIN_WRAPPER=
  MACOS_SDK_DIR=
-@@ -1311,6 +1311,34 @@ tools are selected during the Xcode/Deve
+@@ -1311,6 +1311,33 @@ tools are selected during the Xcode/Deve
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -25,7 +25,6 @@ $NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
 +        USE_PTHREADS=1
 +    fi
 +    AC_DEFINE(XP_UNIX)
-+    AC_DEFINE(FREEBSD)
 +    AC_DEFINE(HAVE_BSD_FLOCK)
 +    AC_DEFINE(HAVE_SOCKLEN_T)
 +    CFLAGS="$CFLAGS $(DSO_CFLAGS) -ansi -Wall"
@@ -38,7 +37,7 @@ $NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
 +    MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
 +    DSO_CFLAGS=-fPIC
 +    DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
-+    MDCPUCFG_H=_freebsd.cfg
++    MDCPUCFG_H=_dragonfly.cfg
 +    PR_MD_CSRCS=freebsd.c
 +    if test "$LIBRUNPATH"; then
 +        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
@@ -46,7 +45,7 @@ $NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
      ;;
  
  *-hpux*)
-@@ -1925,6 +1953,7 @@ mips-nec-sysv*)
+@@ -1925,6 +1952,7 @@ mips-nec-sysv*)
      AC_DEFINE(XP_UNIX)
      AC_DEFINE(NETBSD)
      AC_DEFINE(HAVE_BSD_FLOCK)
@@ -54,7 +53,7 @@ $NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
      if test -z "$USE_NSPR_THREADS"; then
          USE_PTHREADS=1
      fi
-@@ -2730,7 +2759,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2730,7 +2758,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -63,7 +62,7 @@ $NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2768,7 +2797,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2768,7 +2796,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -72,7 +71,7 @@ $NetBSD: patch-ac,v 1.2 2011/04/26 14:16:36 tnn Exp $
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2849,7 +2878,7 @@ case "$target" in
+@@ -2849,7 +2877,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
