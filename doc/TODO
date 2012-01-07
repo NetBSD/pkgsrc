@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10763 2012/01/06 13:39:40 obache Exp $
+$NetBSD: TODO,v 1.10764 2012/01/07 05:23:36 taca Exp $
 
 Suggested new packages
 ======================
@@ -1067,7 +1067,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openoffice3-3.3
 	o openssh-5.9p1
 	o openssl-1.0.0d [pkg/44717]
-	o openssl-1.0.0e
+	o openssl-1.0.0f
 	o openttd-1.1.4
 	o opera-11.60
 	o orca-2.32.1 [GNOME 2.32]
@@ -1264,7 +1264,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.6
 	o sox-14.3.2
-	o spamdyke-4.2.1
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
@@ -1464,7 +1463,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-tseng-1.2.4
 	o xf86-video-vmware-11.0.3
 	o xf86-video-voodoo-1.2.4
-	o xf86-video-wsfb-0.3.0
+	o xf86-video-wsfb-0.4.0
 	o xf86-video-xgi-1.6.0 [unpackaged]
 	o xf86dgaproto-2.1
 	o xf86driproto-2.1.1
