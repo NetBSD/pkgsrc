@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/12/21 13:42:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/01/07 23:02:03 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -44,6 +44,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_odbc_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_piefxis.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_rdbms.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_receiver.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_regexp.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_router.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_s2s_in.beam
@@ -245,6 +246,7 @@ share/doc/ejabberd/release_notes_2.1.6.txt
 share/doc/ejabberd/release_notes_2.1.7.txt
 share/doc/ejabberd/release_notes_2.1.8.txt
 share/doc/ejabberd/release_notes_2.1.9.txt
+share/doc/ejabberd/release_notes_2.1.10.txt
 share/doc/ejabberd/webadmmain.png
 share/doc/ejabberd/webadmmainru.png
 share/doc/ejabberd/yozhikheader.png
