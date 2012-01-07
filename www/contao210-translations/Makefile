@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2012/01/02 16:48:15 taca Exp $
+# $NetBSD: Makefile,v 1.21 2012/01/07 05:21:23 taca Exp $
 #
 
 # Use time stamp of latest translation.
-VERS=		20111231
+VERS=		20120103
 CT_VERS=	210
 
 PKG_DESTDIR_SUPPORT=	user-destdir
