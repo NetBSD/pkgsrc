@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/01/06 07:36:38 sbd Exp $
+# $NetBSD: Makefile,v 1.59 2012/01/07 20:44:32 marino Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
@@ -24,7 +24,8 @@ ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin") && \
+.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || \
+     ${OPSYS} == "DragonFly") && \
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 .endif
