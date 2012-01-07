@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/06/02 12:36:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/01/07 12:58:45 obache Exp $
 bin/cin2tab
 bin/xcin
 lib/libxcin.la
@@ -17,13 +17,26 @@ lib/xcin/tab/big5/pinyin0.tab
 lib/xcin/tab/big5/simplex.tab
 lib/xcin/tab/big5/sys.tab
 lib/xcin/tab/big5/telecode.tab
-lib/xcin/tab/${EUC_LOCALE}/default.phr
-lib/xcin/tab/${EUC_LOCALE}/jtcj_gb.tab
-lib/xcin/tab/${EUC_LOCALE}/phonegb2.tab
-lib/xcin/tab/${EUC_LOCALE}/pinyin.tab
-lib/xcin/tab/${EUC_LOCALE}/shuangpin.tab
-lib/xcin/tab/${EUC_LOCALE}/sys.tab
-lib/xcin/tab/${EUC_LOCALE}/wubizixing.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/array30.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/bims_pinyin.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/cj.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/default.phr
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/jyutping.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/jyutping0.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/phone.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/pinyin.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/simplex.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/sys.tab
+${PLIST.big5hk}lib/xcin/tab/${BIG5HK_ENC}/telecode.tab
+lib/xcin/tab/${GB2312_ENC}/default.phr
+lib/xcin/tab/${GB2312_ENC}/jtcj_gb.tab
+lib/xcin/tab/${GB2312_ENC}/phonegb2.tab
+lib/xcin/tab/${GB2312_ENC}/pinyin.tab
+lib/xcin/tab/${GB2312_ENC}/shuangpin.tab
+lib/xcin/tab/${GB2312_ENC}/sys.tab
+lib/xcin/tab/${GB2312_ENC}/wubizixing.tab
+${PLIST.gbk}lib/xcin/tab/${GBK_ENC}/default.phr
+${PLIST.gbk}lib/xcin/tab/${GBK_ENC}/sys.tab
 lib/xcin/zh_hex.la
 man/man1/xcin.1
 share/doc/xcin/Bugs
