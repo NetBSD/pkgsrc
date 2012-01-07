@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.26 2012/01/07 15:46:54 chs Exp $
+$NetBSD: CHANGES-2012,v 1.27 2012/01/07 23:38:01 sbd Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -42,3 +42,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao210-translations to 20120103 [taca 2012-01-07]
 	Updated emulators/suse113_base to 11.3nb8 [chs 2012-01-07]
 	Updated emulators/suse113_freetype2 to 11.3nb4 [chs 2012-01-07]
+	Updated mail/thunderbird to 8.0nb1 [sbd 2012-01-07]
