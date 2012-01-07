@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.25 2012/01/07 15:46:20 chs Exp $
+$NetBSD: CHANGES-2012,v 1.26 2012/01/07 15:46:54 chs Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -41,3 +41,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-gnome2-glib to 1.0.3nb1 [obache 2012-01-06]
 	Updated www/contao210-translations to 20120103 [taca 2012-01-07]
 	Updated emulators/suse113_base to 11.3nb8 [chs 2012-01-07]
+	Updated emulators/suse113_freetype2 to 11.3nb4 [chs 2012-01-07]
