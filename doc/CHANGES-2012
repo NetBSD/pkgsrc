@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.23 2012/01/06 13:35:16 obache Exp $
+$NetBSD: CHANGES-2012,v 1.24 2012/01/07 05:22:06 taca Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -39,3 +39,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/openssl to 0.9.8s [taca 2012-01-06]
 	Updated archivers/gtar-info to 1.26nb1 [obache 2012-01-06]
 	Updated devel/ruby-gnome2-glib to 1.0.3nb1 [obache 2012-01-06]
+	Updated www/contao210-translations to 20120103 [taca 2012-01-07]
