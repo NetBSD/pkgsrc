@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/12/15 17:00:31 abs Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/07 15:46:02 chs Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	emulators
 DISTFILES+=	aaa_base-11.3-8.9.1.${SUSE_ARCH}.rpm
 DISTFILES+=	bash-4.1-8.1.${SUSE_ARCH}.rpm
@@ -9,7 +9,7 @@ DISTFILES+=	coreutils-7.1-10.1.${SUSE_ARCH}.rpm
 DISTFILES+=	cyrus-sasl-2.1.23-11.1.${SUSE_ARCH}.rpm
 DISTFILES+=	findutils-4.4.2-4.1.${SUSE_ARCH}.rpm
 DISTFILES+=	gdbm-1.8.3-373.4.${SUSE_ARCH}.rpm
-DISTFILES+=	glibc-2.11.2-3.3.1.${SUSE_ARCH}.rpm
+DISTFILES+=	glibc-2.11.2-3.7.1.${SUSE_ARCH}.rpm
 DISTFILES+=	keyutils-libs-1.3-1.9.${SUSE_ARCH}.rpm
 DISTFILES+=	libFLAC8-1.2.1-75.1.${SUSE_ARCH}.rpm
 DISTFILES+=	libacl-2.2.48-8.1.${SUSE_ARCH}.rpm
@@ -30,7 +30,7 @@ DISTFILES+=	libstdc++45-4.5.0_20100604-1.12.${SUSE_ARCH}.rpm
 DISTFILES+=	libuuid1-2.17.2-5.3.${SUSE_ARCH}.rpm
 DISTFILES+=	libvorbis-1.2.3-5.1.${SUSE_ARCH}.rpm
 DISTFILES+=	mozilla-nspr-4.8.4-4.1.${SUSE_ARCH}.rpm
-DISTFILES+=	mozilla-nss-3.12.6-6.1.${SUSE_ARCH}.rpm
+DISTFILES+=	mozilla-nss-3.13.1-0.2.1.${SUSE_ARCH}.rpm
 DISTFILES+=	net-tools-1.60-741.1.${SUSE_ARCH}.rpm
 DISTFILES+=	tcpd-7.6-863.1.${SUSE_ARCH}.rpm
 DISTFILES+=	zlib-1.2.3-141.1.${SUSE_ARCH}.rpm
