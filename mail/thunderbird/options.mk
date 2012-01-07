@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.9 2011/09/12 09:19:06 tnn Exp $
+# $NetBSD: options.mk,v 1.10 2012/01/07 23:37:51 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning mozilla-enigmail
 PKG_SUGGESTED_OPTIONS=	mozilla-lightning
 
-PLIST_VARS+=		branding nobranding debug gnome jit
+PLIST_VARS+=		branding nobranding debug gnome jemalloc jit
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
+PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
