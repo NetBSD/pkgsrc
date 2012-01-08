@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10766 2012/01/08 09:24:06 adam Exp $
+$NetBSD: TODO,v 1.10767 2012/01/08 10:09:00 adam Exp $
 
 Suggested new packages
 ======================
@@ -524,7 +524,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnsmasq-2.59
 	o dnstracer-1.9
 	o doclifter-2.7
-	o dovecot-2.0.15
 	o doxygen-1.7.6.1
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
@@ -1266,7 +1265,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
 	o srp_client-1.7.5
-	o squid-3.1.18
 	o ssh-askpass-1.2.4.1
 	o ssmtp-2.64
 	o stalin-0.11
