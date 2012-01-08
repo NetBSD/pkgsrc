@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2009/11/05 19:50:54 reinoud Exp $
+$NetBSD: patch-ab,v 1.5 2012/01/08 03:39:25 sbd Exp $
 
---- ROX-Filer/src/infobox.c.orig	2009-07-18 16:23:18.000000000 +0200
+--- ROX-Filer/src/infobox.c.orig	2009-07-18 14:23:18.000000000 +0000
 +++ ROX-Filer/src/infobox.c
-@@ -435,7 +435,7 @@ static void insert_size(DU *du, const ch
+@@ -26,6 +26,7 @@
+ #include <string.h>
+ #include <sys/param.h>
+ #include <signal.h>
++#include <stdint.h>
+ #include <libxml/parser.h>
+ 
+ #include <gtk/gtk.h>
+@@ -435,7 +436,7 @@ static void insert_size(DU *du, const ch
  	cell = (size >= PRETTY_SIZE_LIMIT)
  		? g_strdup_printf("%s (%" SIZE_FMT " %s)",
  				format_size(size),
@@ -11,7 +19,7 @@ $NetBSD: patch-ab,v 1.4 2009/11/05 19:50:54 reinoud Exp $
  		: g_strdup(format_size(size));
  
  	set_cell(du->store, du->path, cell);
-@@ -576,7 +576,7 @@ static GtkWidget *make_details(const guc
+@@ -576,7 +577,7 @@ static GtkWidget *make_details(const guc
  				 item->size >= PRETTY_SIZE_LIMIT
  				 ? g_strdup_printf("%s (%" SIZE_FMT " %s)",
  						   format_size(item->size),
