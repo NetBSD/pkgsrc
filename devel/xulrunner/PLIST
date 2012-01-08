@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2012/01/05 07:53:49 sbd Exp $
+@comment $NetBSD: PLIST,v 1.37 2012/01/08 10:32:08 obache Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -243,6 +243,7 @@ include/xulrunner/md/_beos.cfg
 include/xulrunner/md/_bsdi.cfg
 include/xulrunner/md/_darwin.cfg
 include/xulrunner/md/_dgux.cfg
+include/xulrunner/md/_dragonfly.cfg
 include/xulrunner/md/_freebsd.cfg
 include/xulrunner/md/_hpux32.cfg
 include/xulrunner/md/_hpux64.cfg
@@ -2212,6 +2213,7 @@ include/xulrunner/nspr/md/_beos.cfg
 include/xulrunner/nspr/md/_bsdi.cfg
 include/xulrunner/nspr/md/_darwin.cfg
 include/xulrunner/nspr/md/_dgux.cfg
+include/xulrunner/nspr/md/_dragonfly.cfg
 include/xulrunner/nspr/md/_freebsd.cfg
 include/xulrunner/nspr/md/_hpux32.cfg
 include/xulrunner/nspr/md/_hpux64.cfg
