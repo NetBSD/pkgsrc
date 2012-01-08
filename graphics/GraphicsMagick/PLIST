@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/05/18 14:26:26 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/01/08 05:25:54 obache Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -113,12 +113,14 @@ lib/${PKGNAME}/modules-Q8/coders/hrz.la
 lib/${PKGNAME}/modules-Q8/coders/html.la
 lib/${PKGNAME}/modules-Q8/coders/icon.la
 lib/${PKGNAME}/modules-Q8/coders/identity.la
+lib/${PKGNAME}/modules-Q8/coders/info.la
 lib/${PKGNAME}/modules-Q8/coders/jbig.la
 ${PLIST.jasper}lib/${PKGNAME}/modules-Q8/coders/jp2.la
 lib/${PKGNAME}/modules-Q8/coders/jpeg.la
 lib/${PKGNAME}/modules-Q8/coders/label.la
 lib/${PKGNAME}/modules-Q8/coders/locale.la
 lib/${PKGNAME}/modules-Q8/coders/logo.la
+lib/${PKGNAME}/modules-Q8/coders/mac.la
 lib/${PKGNAME}/modules-Q8/coders/map.la
 lib/${PKGNAME}/modules-Q8/coders/mat.la
 lib/${PKGNAME}/modules-Q8/coders/matte.la
@@ -208,9 +210,9 @@ share/doc/GraphicsMagick/ChangeLog.2006
 share/doc/GraphicsMagick/ChangeLog.2007
 share/doc/GraphicsMagick/ChangeLog.2008
 share/doc/GraphicsMagick/ChangeLog.2009
+share/doc/GraphicsMagick/ChangeLog.2010
 share/doc/GraphicsMagick/Copyright.txt
 share/doc/GraphicsMagick/NEWS.txt
-share/doc/GraphicsMagick/www/CVS.html
 share/doc/GraphicsMagick/www/ChangeLog-2001.html
 share/doc/GraphicsMagick/www/ChangeLog-2002.html
 share/doc/GraphicsMagick/www/ChangeLog-2003.html
@@ -220,10 +222,13 @@ share/doc/GraphicsMagick/www/ChangeLog-2006.html
 share/doc/GraphicsMagick/www/ChangeLog-2007.html
 share/doc/GraphicsMagick/www/ChangeLog-2008.html
 share/doc/GraphicsMagick/www/ChangeLog-2009.html
+share/doc/GraphicsMagick/www/ChangeLog-2010.html
 share/doc/GraphicsMagick/www/Changelog.html
+share/doc/GraphicsMagick/www/Changes.html
 share/doc/GraphicsMagick/www/Copyright.html
 share/doc/GraphicsMagick/www/FAQ.html
 share/doc/GraphicsMagick/www/GraphicsMagick.html
+share/doc/GraphicsMagick/www/Hg.html
 share/doc/GraphicsMagick/www/INSTALL-unix.html
 share/doc/GraphicsMagick/www/INSTALL-windows.html
 share/doc/GraphicsMagick/www/ImageMagickObject.html
@@ -283,9 +288,11 @@ share/doc/GraphicsMagick/www/api/draw.html
 share/doc/GraphicsMagick/www/api/effect.html
 share/doc/GraphicsMagick/www/api/enhance.html
 share/doc/GraphicsMagick/www/api/error.html
+share/doc/GraphicsMagick/www/api/export.html
 share/doc/GraphicsMagick/www/api/fx.html
 share/doc/GraphicsMagick/www/api/hclut.html
 share/doc/GraphicsMagick/www/api/image.html
+share/doc/GraphicsMagick/www/api/import.html
 share/doc/GraphicsMagick/www/api/list.html
 share/doc/GraphicsMagick/www/api/magick.html
 share/doc/GraphicsMagick/www/api/memory.html
@@ -329,7 +336,7 @@ share/doc/GraphicsMagick/www/gm.html
 share/doc/GraphicsMagick/www/identify.html
 share/doc/GraphicsMagick/www/images/ball.png
 share/doc/GraphicsMagick/www/images/banner_bg.png
-share/doc/GraphicsMagick/www/images/examples.jpg
+share/doc/GraphicsMagick/www/images/gm-107x76.gif
 share/doc/GraphicsMagick/www/images/gm-107x76.png
 share/doc/GraphicsMagick/www/images/gm-125x80t.png
 share/doc/GraphicsMagick/www/images/right_triangle.png
@@ -347,7 +354,9 @@ share/doc/GraphicsMagick/www/perl.html
 share/doc/GraphicsMagick/www/platforms.html
 share/doc/GraphicsMagick/www/process.html
 share/doc/GraphicsMagick/www/programming.html
+share/doc/GraphicsMagick/www/project.html
 share/doc/GraphicsMagick/www/quantize.html
+share/doc/GraphicsMagick/www/reference.html
 share/doc/GraphicsMagick/www/smile.c
 share/doc/GraphicsMagick/www/tools.html
 share/doc/GraphicsMagick/www/utilities.html

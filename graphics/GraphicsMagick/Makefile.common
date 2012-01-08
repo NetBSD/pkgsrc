@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2011/05/18 14:26:26 obache Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/01/08 05:25:54 obache Exp $
 #
 # used by graphics/p5-GraphicsMagick/Makefile
 
 GM_MAJOR_VER=		1.3
-GM_MINOR_VER=		12
+GM_MINOR_VER=		13
 DISTVERSION=		${GM_MAJOR_VER}.${GM_MINOR_VER}
 DISTNAME=		GraphicsMagick-${DISTVERSION}
 
