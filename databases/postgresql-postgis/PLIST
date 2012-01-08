@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/31 17:14:16 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/01/08 18:39:49 gdt Exp $
 bin/pgsql2shp
 bin/shp2pgsql
 lib/postgresql/postgis-1.5.so
@@ -97,9 +97,9 @@ share/doc/postgis/images/warning.png
 share/doc/postgis/postgis.html
 share/doc/postgis/style.css
 share/postgresql/contrib/postgis-1.5/postgis.sql
+share/postgresql/contrib/postgis-1.5/postgis_comments.sql
 share/postgresql/contrib/postgis-1.5/postgis_upgrade_13_to_15.sql
 share/postgresql/contrib/postgis-1.5/postgis_upgrade_14_to_15.sql
 share/postgresql/contrib/postgis-1.5/postgis_upgrade_15_minor.sql
 share/postgresql/contrib/postgis-1.5/spatial_ref_sys.sql
 share/postgresql/contrib/postgis-1.5/uninstall_postgis.sql
-share/postgresql/contrib/postgis_comments.sql
