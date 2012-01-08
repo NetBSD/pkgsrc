@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/16 15:36:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/01/08 03:05:01 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/AUTHORS
@@ -16,6 +16,9 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/README.ru.rdoc
 ${GEM_LIBDIR}/README.zh.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/chat.rb
+${GEM_LIBDIR}/examples/simple.rb
+${GEM_LIBDIR}/examples/stream.ru
 ${GEM_LIBDIR}/lib/sinatra.rb
 ${GEM_LIBDIR}/lib/sinatra/base.rb
 ${GEM_LIBDIR}/lib/sinatra/images/404.png
@@ -37,6 +40,8 @@ ${GEM_LIBDIR}/test/filter_test.rb
 ${GEM_LIBDIR}/test/haml_test.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/helpers_test.rb
+${GEM_LIBDIR}/test/integration/app.rb
+${GEM_LIBDIR}/test/integration_test.rb
 ${GEM_LIBDIR}/test/less_test.rb
 ${GEM_LIBDIR}/test/liquid_test.rb
 ${GEM_LIBDIR}/test/mapped_error_test.rb
