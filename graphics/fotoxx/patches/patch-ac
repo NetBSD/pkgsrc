@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.8 2011/11/20 00:00:28 ryoon Exp $
+$NetBSD: patch-ac,v 1.9 2012/01/08 12:35:45 ryoon Exp $
 
---- zfuncs.h.orig	2011-11-05 05:30:36.000000000 +0000
+--- zfuncs.h.orig	2012-01-04 08:47:11.000000000 +0000
 +++ zfuncs.h
 @@ -36,7 +36,12 @@
  #include <pthread.h>
@@ -14,4 +14,4 @@ $NetBSD: patch-ac,v 1.8 2011/11/20 00:00:28 ryoon Exp $
 +#endif
  #include <locale.h>
  
- #define  int8   char                                                       //  number types
+ #include <gtk/gtk.h>
