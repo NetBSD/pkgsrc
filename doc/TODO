@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10764 2012/01/07 05:23:36 taca Exp $
+$NetBSD: TODO,v 1.10765 2012/01/08 05:26:21 obache Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o GraphicsMagick-1.3.13
 	o ImageMagick-6.7.4.2
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
