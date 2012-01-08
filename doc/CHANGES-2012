@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.48 2012/01/08 11:36:43 adam Exp $
+$NetBSD: CHANGES-2012,v 1.49 2012/01/08 12:31:20 ryoon Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -84,3 +84,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/boost-python to 1.48.0 [adam 2012-01-08]
 	Updated meta-pkgs/boost to 1.48.0 [adam 2012-01-08]
 	Updated multimedia/libogg to 1.3.0 [adam 2012-01-08]
+	Updated net/aria2 to 1.14.0 [ryoon 2012-01-08]
