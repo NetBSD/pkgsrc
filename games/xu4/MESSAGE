@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/01/08 15:52:12 wiz Exp $
+
+xu4 needs the original Ultima IV data files.
+The package ultima4-data provides them, but is not a dependency
+due to licensing reasons.
+
+===========================================================================
