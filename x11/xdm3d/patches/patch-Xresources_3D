@@ -1,0 +1,22 @@
+$NetBSD: patch-Xresources_3D,v 1.1 2012/01/08 00:33:34 dholland Exp $
+
+Apparently at least one X resources processing chain treats the
+backslash-space-newline sequence below as just backslash-newline,
+which makes a mess. Insert a blank line to mitigate the effect.
+
+Arguably this shouldn't be using backslash-space, but presumably it
+wants a space after the login prompt and without the backslash there's
+probably something else that will fail or drop it.
+
+This hack should at least be harmless.
+
+--- Xresources.3D~	1998-08-18 09:17:37.000000000 +0000
++++ Xresources.3D
+@@ -6,6 +6,7 @@ xlogin*login.translations: #override\
+ 	<Key>Return: set-session-argument() finish-field()
+ xlogin*greeting: CLIENTHOST
+ xlogin*namePrompt: login:\ 
++
+ xlogin*fail: Login incorrect
+ xlogin*y: 380
+ #ifdef COLOR
