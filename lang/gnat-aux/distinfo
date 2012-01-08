@@ -1,8 +1,23 @@
-$NetBSD: distinfo,v 1.7 2011/12/05 07:52:25 marino Exp $
+$NetBSD: distinfo,v 1.8 2012/01/08 11:17:07 marino Exp $
 
-SHA1 (gnat-aux-20110627.tar.bz2) = 598d2c21c3bbd1e2cada2ca98331107af3deb608
-RMD160 (gnat-aux-20110627.tar.bz2) = 84b05832457568fef9355279214caeacca9c74ba
-Size (gnat-aux-20110627.tar.bz2) = 26799024 bytes
+SHA1 (gcc-ada-4.6.2.tar.bz2) = e6eaa9b8111ac8e550844a7cc2d161f8c3c96522
+RMD160 (gcc-ada-4.6.2.tar.bz2) = 6f5d5af97c374411e13698c32314b43b1afd99cf
+Size (gcc-ada-4.6.2.tar.bz2) = 6064757 bytes
+SHA1 (gcc-core-4.6.2.tar.bz2) = 23d259e2269a40f6e203cf6f57bc7eb7a207a8b3
+RMD160 (gcc-core-4.6.2.tar.bz2) = 82c25532303759b6195bbd53d7f371f1974ff182
+Size (gcc-core-4.6.2.tar.bz2) = 30258326 bytes
+SHA1 (gcc-fortran-4.6.2.tar.bz2) = aba480c9a42d58eca6c34355b6d2f5f487de051d
+RMD160 (gcc-fortran-4.6.2.tar.bz2) = 6a966d647e9d3fe35996d390fbcd7ff0622edfb8
+Size (gcc-fortran-4.6.2.tar.bz2) = 1676539 bytes
+SHA1 (gcc-g++-4.6.2.tar.bz2) = f0bc2b4e1c23c5dc1462599efd5df4b9807b23af
+RMD160 (gcc-g++-4.6.2.tar.bz2) = afb274990e9102b55cb5f5dc11876c96e6b31c96
+Size (gcc-g++-4.6.2.tar.bz2) = 6955594 bytes
+SHA1 (gcc-objc-4.6.2.tar.bz2) = 32e5fbc31f1e8dd5e7c7e7ed9172afaf6136ea4e
+RMD160 (gcc-objc-4.6.2.tar.bz2) = 3c38c655edb90fadb2805043219296a4af43c56a
+Size (gcc-objc-4.6.2.tar.bz2) = 342544 bytes
+SHA1 (gcc-testsuite-4.6.2.tar.bz2) = 514c0ed8b9e4ed22e55303ae2426dd6f1e8a24f2
+RMD160 (gcc-testsuite-4.6.2.tar.bz2) = 859486da17497b61e0919f53f13efc04eeaef751
+Size (gcc-testsuite-4.6.2.tar.bz2) = 6309400 bytes
 SHA1 (gnat-bootstrap.i386.dragonfly.tar.bz2) = d7a8103243a2df3723d9d3c3ec0da9c3bb725214
 RMD160 (gnat-bootstrap.i386.dragonfly.tar.bz2) = 9e6fde444e0ed76ee404810af6d6b7eb48659c09
 Size (gnat-bootstrap.i386.dragonfly.tar.bz2) = 28205489 bytes
@@ -18,7 +33,3 @@ Size (gnat-bootstrap.x86_64.netbsd.tar.bz2) = 30572187 bytes
 SHA1 (gnat-bootstrap.i386.solaris.tar.bz2) = 4962657bfc894a20ad3102c1f6fe8e566b47cb51
 RMD160 (gnat-bootstrap.i386.solaris.tar.bz2) = ae72e76d0aba94451d99b9a70a3c049c9258cc82
 Size (gnat-bootstrap.i386.solaris.tar.bz2) = 43247034 bytes
-SHA1 (patch-aa) = 8a6199bb91fa1051db7af154e6995c116da71e63
-SHA1 (patch-ab) = 76cff68f5f697ed5aacd41d06bbb4d9a805e9d91
-SHA1 (patch-ac) = f8a73fc95b9119ae75b64a5578b94be6dbccb837
-SHA1 (patch-ad) = 989e84c2b7c41698a07894298f7fb8a8459de5e7
