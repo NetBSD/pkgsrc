@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 05:42:08 obache Exp $
+include/gmtk/gm_audio.h
+include/gmtk/gm_common.h
+include/gmtk/gm_file.h
+include/gmtk/gm_parse.h
+include/gmtk/gm_pref_store.h
+include/gmtk/gm_strfuncs.h
+include/gmtk/gmlib.h
+include/gmtk/gmtk.h
+include/gmtk/gmtk_audio_meter.h
+include/gmtk/gmtk_common.h
+include/gmtk/gmtk_media_player.h
+include/gmtk/gmtk_media_tracker.h
+include/gmtk/gmtk_output_combo_box.h
+lib/libgmlib.la
+lib/libgmtk.la
+lib/pkgconfig/gmlib.pc
+lib/pkgconfig/gmtk.pc
+share/doc/gmtk/AUTHORS
+share/doc/gmtk/COPYING
+share/doc/gmtk/ChangeLog
+share/doc/gmtk/INSTALL
+share/doc/gmtk/NEWS
+share/doc/gmtk/README
