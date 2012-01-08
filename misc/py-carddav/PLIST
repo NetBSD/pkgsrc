@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 15:20:31 wiz Exp $
+bin/pc_query
+bin/pycardsyncer
+share/doc/py-carddav/README.html
+share/doc/py-carddav/README.rst
+share/examples/py-carddav/pycard.conf.sample
