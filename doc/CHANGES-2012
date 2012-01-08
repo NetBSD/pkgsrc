@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.28 2012/01/08 00:00:49 obache Exp $
+$NetBSD: CHANGES-2012,v 1.29 2012/01/08 00:33:49 dholland Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -44,3 +44,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse113_freetype2 to 11.3nb4 [chs 2012-01-07]
 	Updated mail/thunderbird to 8.0nb1 [sbd 2012-01-07]
 	Updated mail/msmtp to 1.4.27 [obache 2012-01-08]
+	Updated x11/xdm3d to 1.0nb5 [dholland 2012-01-08]
