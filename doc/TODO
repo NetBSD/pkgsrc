@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10770 2012/01/08 12:49:52 ryoon Exp $
+$NetBSD: TODO,v 1.10771 2012/01/08 15:10:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -839,7 +839,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kapooka-0.3
 	o kbibtex-0.2.2
 	o kbiff-4.0
-	o kchmviewer-6.0
 	o kdbg-2.5.1
 	o kde4-4.7.4
 	o kdenlive-0.8.2.1
