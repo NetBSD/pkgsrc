@@ -11,3 +11,6 @@ binaries produced by any FSF GNAT compiler.
 GNAT AUX implements the full Ada-83, Ada-95, and Ada-2005 language standards.
 It also implements some features of the draft Ada-2012 standard, which are
 optionally accessible via the -gnat2012 switch or Ada_2012 pragma.
+
+GNAT AUX always builds C, and builds Ada, Fortran, C++, and Objective-C by
+default.  The last four languages can be disabled by the options framework.
