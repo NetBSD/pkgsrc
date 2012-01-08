@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.63 2012/01/08 15:22:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.64 2012/01/08 15:53:48 wiz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -99,3 +99,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added misc/libcarddav version 0.6.2.2.2 [wiz 2012-01-08]
 	Added misc/py-carddav version 0.3.1 [wiz 2012-01-08]
 	Added wm/notion version 3.2011102900 [wiz 2012-01-08]
+	Added games/ultima4-data version 1.0 [wiz 2012-01-08]
