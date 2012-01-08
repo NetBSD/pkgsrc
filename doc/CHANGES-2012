@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.44 2012/01/08 09:24:06 adam Exp $
+$NetBSD: CHANGES-2012,v 1.45 2012/01/08 10:09:00 adam Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -70,3 +70,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-django-classy-tags to 0.3.4.1 [adam 2012-01-08]
 	Updated www/py-django-cms to 2.2 [adam 2012-01-08]
 	Updated databases/gdbm to 1.10 [adam 2012-01-08]
+	Updated mail/dovecot2 to 2.0.17 [adam 2012-01-08]
+	Updated devel/cmake to 2.8.7 [adam 2012-01-08]
+	Updated net/freeradius2 to 2.1.12 [adam 2012-01-08]
+	Updated www/squid31 to 3.1.18 [adam 2012-01-08]
