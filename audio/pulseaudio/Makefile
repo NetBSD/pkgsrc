@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/11/01 06:11:52 sbd Exp $
+# $NetBSD: Makefile,v 1.52 2012/01/08 15:00:38 shattered Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -91,10 +91,10 @@ PLIST.oss=		yes
 
 CFLAGS.SunOS+=		-std=c99
 
-PKG_GROUPS=             ${PULSE_GROUP}
+PKG_GROUPS=		${PULSE_GROUP}
 PKG_GROUPS+=		${PULSE_GROUP_REALTIME}
 PKG_GROUPS+=		${PULSE_GROUP_ACCESS}
-PKG_USERS=              ${PULSE_USER}:${PULSE_GROUP}
+PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 
@@ -109,7 +109,7 @@ CONFIGURE_ARGS+=	--disable-netbsd-atomic-ops
 
 # Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux" && exists(/usr/include/linux/input.h)
-PLIST.evdev=           yes
+PLIST.evdev=		yes
 .endif
 
 .include "options.mk"
