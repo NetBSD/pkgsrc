@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.902 2012/01/08 15:14:48 wiz Exp $
+# $NetBSD: Makefile,v 1.903 2012/01/08 16:25:49 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -12,6 +12,7 @@ SUBDIR+=	IglooFTP
 SUBDIR+=	LaBrea
 SUBDIR+=	ORBit
 SUBDIR+=	ORBit2
+SUBDIR+=	Radicale
 SUBDIR+=	SDL_net
 SUBDIR+=	Transmission
 SUBDIR+=	adns
