@@ -1,7 +1,25 @@
-$NetBSD: patch-aa,v 1.4 2007/12/01 13:03:27 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2012/01/08 15:05:58 shattered Exp $
 
---- tcpdpriv.c.orig	2000-04-18 09:59:19.000000000 +0200
-+++ tcpdpriv.c	2007-12-01 14:02:20.000000000 +0100
+--- tcpdpriv.c.orig	2000-04-18 07:59:19.000000000 +0000
++++ tcpdpriv.c
+@@ -65,7 +65,7 @@
+ #endif	/* defined(SVR4) */
+ #include <sys/param.h>
+ #include <sys/time.h>
+-#if	!defined(SVR4)
++#if 0
+ #include <sys/ucred.h>
+ #endif	/* !defined(SVR4) */
+ #include <sys/mount.h>
+@@ -78,7 +78,7 @@
+ 
+ #include <netinet/in.h>
+ #include <netinet/if_ether.h>
+-#if	!defined(SVR4)
++#if 0
+ #include <sys/mbuf.h>
+ #endif	/* !defined(SVR4) */
+ #include <netinet/in_systm.h>
 @@ -90,7 +90,7 @@
  #include <arpa/nameser.h>
  #endif
