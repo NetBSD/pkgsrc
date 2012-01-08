@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.603 2011/12/18 06:17:11 sbd Exp $
+# $NetBSD: Makefile,v 1.604 2012/01/08 02:29:17 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -359,6 +359,7 @@ SUBDIR+=	p5-Text-Glob
 SUBDIR+=	p5-Text-Kakasi
 SUBDIR+=	p5-Text-LevenshteinXS
 SUBDIR+=	p5-Text-Markdown
+SUBDIR+=	p5-Text-Markdown-Discount
 SUBDIR+=	p5-Text-MicroTemplate
 SUBDIR+=	p5-Text-Microformat
 SUBDIR+=	p5-Text-PDF
