@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/08 15:11:37 wiz Exp $
+bin/calypso
+${PYSITELIB}/calypso/__init__.py
+${PYSITELIB}/calypso/__init__.pyc
+${PYSITELIB}/calypso/__init__.pyo
+${PYSITELIB}/calypso/acl/__init__.py
+${PYSITELIB}/calypso/acl/__init__.pyc
+${PYSITELIB}/calypso/acl/__init__.pyo
+${PYSITELIB}/calypso/acl/fake.py
+${PYSITELIB}/calypso/acl/fake.pyc
+${PYSITELIB}/calypso/acl/fake.pyo
+${PYSITELIB}/calypso/acl/htpasswd.py
+${PYSITELIB}/calypso/acl/htpasswd.pyc
+${PYSITELIB}/calypso/acl/htpasswd.pyo
+${PYSITELIB}/calypso/config.py
+${PYSITELIB}/calypso/config.pyc
+${PYSITELIB}/calypso/config.pyo
+${PYSITELIB}/calypso/webdav.py
+${PYSITELIB}/calypso/webdav.pyc
+${PYSITELIB}/calypso/webdav.pyo
+${PYSITELIB}/calypso/xmlutils.py
+${PYSITELIB}/calypso/xmlutils.pyc
+${PYSITELIB}/calypso/xmlutils.pyo
+share/examples/calypso/config

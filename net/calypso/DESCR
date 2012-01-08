@@ -1,0 +1,9 @@
+Calypso is a CalDAV/CardDAV server on Linux.
+
+Calypso works with evolution, iceowl and the Android CalDAV/CardDAV
+plugins. It does not yet work with aCal; for some reason aCal cannot
+find any calendars on the server.
+
+Calypso also supports importing calendar changes from the command
+line, allowing you to integrate support into a text-based email
+application like notmuch or mutt.
