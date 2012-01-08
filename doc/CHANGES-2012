@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.40 2012/01/08 05:42:24 obache Exp $
+$NetBSD: CHANGES-2012,v 1.41 2012/01/08 05:48:12 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -63,3 +63,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/GraphicsMagick to 1.3.13 [obache 2012-01-08]
 	Updated graphics/p5-GraphicsMagick to 1.3.13 [obache 2012-01-08]
 	Added devel/gmtk version 1.0.5 [obache 2012-01-08]
+	Updated multimedia/gnome-mplayer to 1.0.5 [obache 2012-01-08]
