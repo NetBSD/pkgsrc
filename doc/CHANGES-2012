@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.55 2012/01/08 15:10:28 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.56 2012/01/08 15:10:57 wiz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -91,3 +91,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added databases/gtkdbfeditor version 1.0.4 [wiz 2012-01-08]
 	Updated devel/mercurial to 2.0.2 [wiz 2012-01-08]
 	Updated misc/kchmviewer to 6.0 [wiz 2012-01-08]
+	Updated emulators/dgen to 1.28 [wiz 2012-01-08]
