@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10768 2012/01/08 12:31:49 ryoon Exp $
+$NetBSD: TODO,v 1.10769 2012/01/08 12:36:58 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -648,7 +648,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontsproto-2.1.1
 	o fossil-1.21
-	o fotoxx-12.01.2
 	o fox-1.6.41
 	o freeciv-2.3.1
 	o freeglut-2.4.0
