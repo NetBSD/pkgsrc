@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/10/11 10:02:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/01/08 11:35:07 adam Exp $
 share/boost-build/Jamroot.jam
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
@@ -384,11 +384,14 @@ share/boost-build/test/project_test4.py
 share/boost-build/test/property_expansion.py
 share/boost-build/test/qt4.py
 share/boost-build/test/qt4/jamroot.jam
+share/boost-build/test/qt4/mock.cpp
+share/boost-build/test/qt4/mock.h
 share/boost-build/test/qt4/phonon.cpp
 share/boost-build/test/qt4/qt3support.cpp
 share/boost-build/test/qt4/qtassistant.cpp
 share/boost-build/test/qt4/qtcore.cpp
 share/boost-build/test/qt4/qtcorefail.cpp
+share/boost-build/test/qt4/qtdeclarative.cpp
 share/boost-build/test/qt4/qtgui.cpp
 share/boost-build/test/qt4/qthelp.cpp
 share/boost-build/test/qt4/qtmultimedia.cpp
@@ -490,6 +493,7 @@ share/boost-build/test/wrong_project.py
 share/boost-build/to_merge.sh
 share/boost-build/tools/__init__.py
 share/boost-build/tools/acc.jam
+share/boost-build/tools/auto-index.jam
 share/boost-build/tools/bison.jam
 share/boost-build/tools/boostbook-config.jam
 share/boost-build/tools/boostbook.jam
