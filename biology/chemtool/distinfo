@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2009/09/05 13:43:26 asau Exp $
+$NetBSD: distinfo,v 1.14 2012/01/08 12:47:18 ryoon Exp $
 
-SHA1 (chemtool-1.6.12.tar.gz) = 23ab6555fcad2b85c3ecdde7ee4b62f1de1c7acc
-RMD160 (chemtool-1.6.12.tar.gz) = b3501d4af20164e6ec3227970d6daf2950e5506c
-Size (chemtool-1.6.12.tar.gz) = 733454 bytes
+SHA1 (chemtool-1.6.13.tar.gz) = 03d139cfefe9e4e8957239d8d16c56dc6a369090
+RMD160 (chemtool-1.6.13.tar.gz) = c54494fdda19deb0115839263c7db5b9825bf56b
+Size (chemtool-1.6.13.tar.gz) = 838868 bytes
