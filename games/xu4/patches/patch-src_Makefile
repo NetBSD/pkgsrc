@@ -1,0 +1,72 @@
+$NetBSD: patch-src_Makefile,v 1.1.1.1 2012/01/08 15:52:12 wiz Exp $
+
+Add DESTDIR support.
+Remove unportable BACKTRACE default setting.
+Pre-create directories instead of using unportable install -D.
+
+--- src/Makefile.orig	2005-01-14 09:15:17.000000000 +0000
++++ src/Makefile
+@@ -3,5 +3,5 @@
+ #
+ 
+-prefix=/usr/local
++prefix=${PREFIX}
+ bindir=$(prefix)/bin
+ libdir=$(prefix)/lib
+@@ -12,5 +12,5 @@ UILIBS=$(shell sdl-config --libs) -lSDL_
+ UIFLAGS=$(shell sdl-config --cflags)
+ 
+-FEATURES=-DHAVE_BACKTRACE=1 -DHAVE_VARIADIC_MACROS=1
++FEATURES=-DHAVE_VARIADIC_MACROS=1
+ DEBUGCXXFLAGS=-ggdb1 -rdynamic
+ CXXFLAGS=$(FEATURES) -Wall -I. $(UIFLAGS) $(shell xml2-config --cflags) -DICON_FILE=\"$(datadir)/pixmaps/u4.bmp\" -DVERSION=\"$(VERSION)\" $(DEBUGCXXFLAGS)
+@@ -26,25 +26,28 @@ include Makefile.common
+ 
+ install::
+-	$(INSTALL) -D $(MAIN) $(bindir)/$(MAIN)
+-	$(INSTALL) -D ../icons/u4.bmp $(datadir)/pixmaps/u4.bmp
+-	$(INSTALL) -D ../icons/u4.png $(datadir)/pixmaps/u4.png
+-	mkdir -p $(libdir)/u4/music
+-	$(INSTALL) ../mid/*.mid $(libdir)/u4/music
+-	mkdir -p $(libdir)/u4/sound
+-	$(INSTALL) ../sound/*.ogg $(libdir)/u4/sound
+-	$(INSTALL) ../sound/*.wav $(libdir)/u4/sound
+-	$(INSTALL) -D dumpsavegame $(libdir)/u4/dumpsavegame
+-	$(INSTALL) -D u4enc $(libdir)/u4/u4enc
+-	$(INSTALL) -D u4dec $(libdir)/u4/u4dec
+-	$(INSTALL) -D tlkconv $(libdir)/u4/tlkconv
+-	$(INSTALL) ../conf/*.xml $(libdir)/u4
+-	mkdir -p $(libdir)/u4/dtd
+-	$(INSTALL) ../conf/dtd/*.dtd $(libdir)/u4/dtd
+-	mkdir -p $(libdir)/u4/graphics
+-	mkdir -p $(libdir)/u4/graphics/ega
+-	mkdir -p $(libdir)/u4/graphics/vga
+-	$(INSTALL) ../graphics/ega/*.png $(libdir)/u4/graphics/ega
+-	$(INSTALL) ../graphics/vga/*.png $(libdir)/u4/graphics/vga
+-	$(INSTALL) -D ../u4.desktop $(datadir)/applications/u4.desktop
++	mkdir -p $(DESTDIR)$(bindir)
++	$(INSTALL) $(MAIN) $(DESTDIR)$(bindir)/$(MAIN)
++	mkdir -p $(DESTDIR)$(datadir)/pixmaps
++	$(INSTALL) ../icons/u4.bmp $(DESTDIR)$(datadir)/pixmaps/u4.bmp
++	$(INSTALL) ../icons/u4.png $(DESTDIR)$(datadir)/pixmaps/u4.png
++	mkdir -p $(DESTDIR)$(libdir)/u4/music
++	$(INSTALL) ../mid/*.mid $(DESTDIR)$(libdir)/u4/music
++	mkdir -p $(DESTDIR)$(libdir)/u4/sound
++	$(INSTALL) ../sound/*.ogg $(DESTDIR)$(libdir)/u4/sound
++	$(INSTALL) ../sound/*.wav $(DESTDIR)$(libdir)/u4/sound
++	$(INSTALL) dumpsavegame $(DESTDIR)$(libdir)/u4/dumpsavegame
++	$(INSTALL) u4enc $(DESTDIR)$(libdir)/u4/u4enc
++	$(INSTALL) u4dec $(DESTDIR)$(libdir)/u4/u4dec
++	$(INSTALL) tlkconv $(DESTDIR)$(libdir)/u4/tlkconv
++	$(INSTALL) ../conf/*.xml $(DESTDIR)$(libdir)/u4
++	mkdir -p $(DESTDIR)$(libdir)/u4/dtd
++	$(INSTALL) ../conf/dtd/*.dtd $(DESTDIR)$(libdir)/u4/dtd
++	mkdir -p $(DESTDIR)$(libdir)/u4/graphics
++	mkdir -p $(DESTDIR)$(libdir)/u4/graphics/ega
++	mkdir -p $(DESTDIR)$(libdir)/u4/graphics/vga
++	$(INSTALL) ../graphics/ega/*.png $(DESTDIR)$(libdir)/u4/graphics/ega
++	$(INSTALL) ../graphics/vga/*.png $(DESTDIR)$(libdir)/u4/graphics/vga
++	mkdir -p $(DESTDIR)$(datadir)/applications
++	$(INSTALL) ../u4.desktop $(DESTDIR)$(datadir)/applications/u4.desktop
+ 
+ # use GCC's automatic dependency generation
