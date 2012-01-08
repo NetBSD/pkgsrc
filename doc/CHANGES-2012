@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.35 2012/01/08 03:53:58 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.36 2012/01/08 04:03:03 sbd Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -58,3 +58,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/shmux to 1.0nb1 [sbd 2012-01-08]
 	Updated time/gcal to 3.6.1nb1 [sbd 2012-01-08]
 	Updated www/varnish to 3.0.2nb2 [sbd 2012-01-08]
+	Updated net/ettercap-NG to 0.7.3nb6 [sbd 2012-01-08]
