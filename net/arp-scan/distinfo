@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/08 15:14:23 wiz Exp $
+
+SHA1 (arp-scan-1.8.tar.gz) = 26ebf18eff367aaf99307841bec9e8b9e596c3bb
+RMD160 (arp-scan-1.8.tar.gz) = 2cf60da998cd8bf49767938187426f83ba0582f1
+Size (arp-scan-1.8.tar.gz) = 430221 bytes
