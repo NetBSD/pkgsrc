@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.32 2012/01/08 03:02:15 obache Exp $
+$NetBSD: CHANGES-2012,v 1.33 2012/01/08 03:05:12 obache Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -48,3 +48,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Text-Markdown-Discount version 0.02 [schmonz 2012-01-08]
 	Updated devel/mr to 1.10 [schmonz 2012-01-08]
 	Updated www/ruby-rack-protection to 1.2.0 [obache 2012-01-08]
+	Updated www/ruby-sinatra to 1.3.2 [obache 2012-01-08]
