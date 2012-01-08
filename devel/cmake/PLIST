@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2011/10/15 07:24:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2012/01/08 09:47:42 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -202,6 +202,7 @@ share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/SunPro-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/TinyCC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/VisualAge-Fortran.cmake
@@ -212,6 +213,7 @@ share/cmake-${CMAKE_API}/Modules/Compiler/XL-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/XL.cmake
 share/cmake-${CMAKE_API}/Modules/Dart.cmake
 share/cmake-${CMAKE_API}/Modules/DartConfiguration.tcl.in
+share/cmake-${CMAKE_API}/Modules/DeployQt4.cmake
 share/cmake-${CMAKE_API}/Modules/Documentation.cmake
 share/cmake-${CMAKE_API}/Modules/DummyCXXFile.cxx
 share/cmake-${CMAKE_API}/Modules/ExternalProject.cmake
@@ -440,6 +442,8 @@ share/cmake-${CMAKE_API}/Modules/Platform/Darwin.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/DragonFly.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/FreeBSD.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/GNUtoMS_lib.bat.in
+share/cmake-${CMAKE_API}/Modules/Platform/GNUtoMS_lib.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Generic-ADSP-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Generic-ADSP-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Generic-ADSP-CXX.cmake
@@ -480,6 +484,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linux-PathScale-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-PathScale-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-PathScale.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-SunPro-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-TinyCC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-VisualAge-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-VisualAge-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-VisualAge-Fortran.cmake
@@ -511,8 +516,11 @@ share/cmake-${CMAKE_API}/Modules/Platform/Windows-Borland-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Borland-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Borland.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-G95-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-C-ABI.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-CXX-ABI.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-Fortran-ABI.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-GNU.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-Intel-ASM.cmake
