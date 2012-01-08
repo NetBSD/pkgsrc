@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 04:53:23 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/08 15:10:49 wiz Exp $
 bin/dgen
-bin/tobin
+bin/dgen_tobin
 man/man1/dgen.1
-man/man1/tobin.1
+man/man1/dgen_tobin.1
 man/man5/dgenrc.5
