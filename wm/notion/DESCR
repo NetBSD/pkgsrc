@@ -1,0 +1,12 @@
+Notion is a tiling, tabbed window manager for the X window system:
+
+    Tiling: you divide the screen into non-overlapping 'tiles'.
+    Every window occupies one tile, and is maximized to it
+
+    Tabbing: a tile may contain multiple windows - they will be
+    'tabbed'
+
+    Static: most tiled window managers are 'dynamic', meaning they
+    automatically resize and move around tiles as windows appear
+    and disappear. Notion, by contrast, does not automatically
+    change the tiling. You're in control.
