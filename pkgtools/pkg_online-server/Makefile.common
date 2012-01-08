@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/05/21 09:07:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/01/08 15:16:38 cheusov Exp $
 #
 # used by pkgtools/pkg_online-client/Makefile
 # used by pkgtools/pkg_online-server/Makefile
@@ -6,12 +6,12 @@
 DISTNAME=	pkg_online-${VERSION}
 MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
 
-VERSION=	0.12.1
+VERSION=	0.13.0
 
 HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
 COMMENT=	Client/Server package searcher for pkgsrc
 
-LICENSE=		mit
+LICENSE=		2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
