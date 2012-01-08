@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/08 15:52:12 wiz Exp $
+
+SHA1 (xu4-1.0beta3.tar.gz) = baf1bbdc18088096ae11ea31aa497532b7e7124c
+RMD160 (xu4-1.0beta3.tar.gz) = f758fea4bc3034b19122651cfb725a88e0684960
+Size (xu4-1.0beta3.tar.gz) = 418477 bytes
+SHA1 (patch-src_Makefile) = ac80c253affd3b150a377cd0072db9557c26407b
+SHA1 (patch-src_armor.cpp) = 1cc4ad07efaa70c5764b910d055939e22b4287d5
+SHA1 (patch-src_codex.cpp) = 706aa3a6854b72ae6ada927cc1bd1c71f7c4959e
+SHA1 (patch-src_conversation.cpp) = 15ea5eed4abe11e7afb58359b6cd732b1e84b458
+SHA1 (patch-src_creature.cpp) = 9479f075c95b481bae073011c72672b383a5f7e4
+SHA1 (patch-src_dialogueloader.cpp) = 10b46af20241f6571a7656b577f42dfca39f74cc
+SHA1 (patch-src_dialogueloader__tlk.cpp) = e4f69fc103836a15800b9f76ae742555a686ad34
+SHA1 (patch-src_direction.cpp) = 412950b32b43dbfd7081733c94b4365ee85a3fdd
+SHA1 (patch-src_imageloader.cpp) = 88ed63cb53b5de9d14d940e045752f01a3a5f4b6
+SHA1 (patch-src_imageloader__png.cpp) = e790fac8468d74ff605868c29d8cc8759cb16871
+SHA1 (patch-src_imagemgr.h) = 36b1bd2d750e17b9c403cded9d8787aa6a8a61cd
+SHA1 (patch-src_intro.cpp) = 5330d1bedb8e79750468d9463a016b041b7aa496
+SHA1 (patch-src_item.cpp) = 667498d2c8fcf4c2c35da0d9189d68c9b6a9baf5
+SHA1 (patch-src_lzw_u6decode.cpp) = 1dbf1cb0f24ad9d083f4a7fe666f1503c9647ab6
+SHA1 (patch-src_person.cpp) = b93703514429257ae4665ab7242c5dc1ead18c3c
+SHA1 (patch-src_savegame.cpp) = 6a0b43d29bd26fd2265953588ae82c950d14e6ba
+SHA1 (patch-src_screen.cpp) = bffaf51b9ac63112733d89c0b5e30370a695d45d
+SHA1 (patch-src_settings.cpp) = 6eacdf00c5d85cb848b089933ce9a70817714453
+SHA1 (patch-src_spell.cpp) = 4412c24a2265f41f30b6fdbc4a21ac0a1df8e329
+SHA1 (patch-src_stats.cpp) = da37132d4c710e5dda29b222d27aed84fcd250d1
+SHA1 (patch-src_textview.cpp) = 18da8c99836c4a277c1f674b03f7c77da58f020e
+SHA1 (patch-src_u4file.cpp) = 70d8d1650d0888d56c2d9f720b1d4b715b8502dd
+SHA1 (patch-src_weapon.cpp) = d87690c8ed0b63be171437b2331955284859be97
