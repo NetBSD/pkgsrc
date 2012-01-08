@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2011/10/17 08:40:15 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/01/08 09:22:52 adam Exp $
 #
 # used by databases/gdbm/Makefile
 # used by databases/gdbm_compat/Makefile
 
-DISTNAME=	gdbm-1.9.1
+DISTNAME=	gdbm-1.10
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=gdbm/}
 
