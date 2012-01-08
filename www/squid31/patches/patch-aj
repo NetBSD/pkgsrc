@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.5 2011/01/15 10:32:08 adam Exp $
+$NetBSD: patch-aj,v 1.6 2012/01/08 10:06:59 adam Exp $
 
---- src/Makefile.in.orig	2010-12-22 05:47:54.000000000 +0000
+--- src/Makefile.in.orig	2011-12-03 06:20:35.000000000 +0000
 +++ src/Makefile.in
-@@ -4616,14 +4616,14 @@ info: info-recursive
+@@ -4712,14 +4712,14 @@ info: info-recursive
  
  info-am:
  
@@ -19,3 +19,12 @@ $NetBSD: patch-aj,v 1.5 2011/01/15 10:32:08 adam Exp $
  
  install-html: install-html-recursive
  
+@@ -4814,7 +4814,7 @@ cache_cf.o: cf_parser.cci
+ 
+ # cf_gen builds the configuration files.
+ cf_gen$(EXEEXT): $(cf_gen_SOURCES) $(cf_gen_DEPENDENCIES)
+-	$(HOSTCXX) -o $@ $(srcdir)/cf_gen.cc -I$(srcdir) -I$(top_builddir)/include/ -I$(top_builddir)/src
++	$(HOSTCXX) $(CXXFLAGS) -o $@ $(srcdir)/cf_gen.cc -I$(srcdir) -I$(top_builddir)/include/ -I$(top_builddir)/src
+ 
+ # squid.conf.default is built by cf_gen when making cf_parser.cci
+ squid.conf.default squid.conf.documented: cf_parser.cci
