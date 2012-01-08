@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10771 2012/01/08 15:10:28 wiz Exp $
+$NetBSD: TODO,v 1.10772 2012/01/08 16:12:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.33
+	o calibre-0.8.34
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.6
 	o cddbd-1.5.2
@@ -499,6 +499,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.4.2
 	o darcs-2.4
 	o dasher-4.11
+	o davical-1.0.1
 	o dbench-4.0
 	o dbus-1.4.16
 	o dbus-glib-0.98
@@ -519,6 +520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.4.1 [pkg/45763]
+	o dmenu-4.5
 	o dnsmasq-2.59
 	o dnstracer-1.9
 	o doclifter-2.7
@@ -652,6 +654,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o freeglut-2.4.0
 	o freepops-0.2.9 [pkg/45790]
 	o freenet-0.7
+	o freepops-0.2.9 [pkg/45790]
 	o freesci-0.6.4
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
@@ -693,6 +696,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gl-7.8.2 [pkgrc-wip]
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
+	o gle-4.2.4
 	o glib2-2.30.2
 	o global-6.1
 	o glom-1.14.2 [GNOME 2.26]
@@ -775,9 +779,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.4
 	o haskell-mode-1.45
-	o hatari-1.5.0
+	o hatari-1.6.0
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
-	o help2man-1.40.4
+	o help2man-1.40.5
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-7.8.1
@@ -901,7 +905,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libcares-1.7.4
 	o libcdio-0.83
 	o libchamplain08-0.12.1
-	o libdrm-2.4.29
+	o libdrm-2.4.30
 	o libextractor-0.6.3
 	o libffi-3.0.10
 	o libflash-0.4.13
@@ -992,7 +996,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.11.3
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o mono-2.10.7
+	o mono-2.10.8
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
@@ -1001,10 +1005,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpfr-3.1.0
 	o mpg123-1.13.4
 	o mpich-1.4.1p1
-	o mpop-1.0.25
+	o mpop-1.0.26
 	o mserv-devel-0.41
 	o mtools-4.0.17
-	o mu-0.9.7
+	o mu-0.9.8alpha
 	o multitail-5.2.9
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
@@ -1149,7 +1153,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-dbus-0.84.0
 	o py-feedparser-5.1
 	o py-game-1.9.1
-	o py-gdata-2.0.15
+	o py-gdata-2.0.16
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-icalendar-2.2
@@ -1219,7 +1223,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scew-0.4.0
 	o scilab-5.5.3
 	o scm-5e7
-	o scmgit-base-1.7.8.2
+	o scmgit-1.7.8.3
+	o scmgit-base-1.7.8.3
 	o scmgit-docs-1.7.8.2
 	o scons-2.0.1
 	o scribus-1.4.0
@@ -1398,7 +1403,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20111231
+	o x264-devel-20120107
 	o xanalyser-1.30
 	o xapian-1.2.7
 	o xapian-omega-1.2.7
