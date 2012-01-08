@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.50 2012/01/08 12:36:37 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.51 2012/01/08 12:49:29 ryoon Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -86,3 +86,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/libogg to 1.3.0 [adam 2012-01-08]
 	Updated net/aria2 to 1.14.0 [ryoon 2012-01-08]
 	Updated graphics/fotoxx to 12.01.2 [ryoon 2012-01-08]
+	Updated biology/chemtool to 1.6.13 [ryoon 2012-01-08]
