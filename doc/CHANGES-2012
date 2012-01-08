@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.65 2012/01/08 15:53:57 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.66 2012/01/08 16:20:33 wiz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -101,3 +101,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added wm/notion version 3.2011102900 [wiz 2012-01-08]
 	Added games/ultima4-data version 1.0 [wiz 2012-01-08]
 	Added games/xu4 version 1.0beta3 [wiz 2012-01-08]
+	Added fonts/EB-Garamond version 0.012 [wiz 2012-01-08]
