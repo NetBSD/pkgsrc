@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/11/17 08:10:01 ghen Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/01/08 09:43:47 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -444,6 +444,7 @@ share/doc/dovecot/wiki/Debugging.Rawlog.txt
 share/doc/dovecot/wiki/Debugging.Thunderbird.txt
 share/doc/dovecot/wiki/Design.Arrays.txt
 share/doc/dovecot/wiki/Design.AuthProcess.txt
+share/doc/dovecot/wiki/Design.AuthProtocol.txt
 share/doc/dovecot/wiki/Design.Buffers.txt
 share/doc/dovecot/wiki/Design.Dsync.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
@@ -478,6 +479,7 @@ share/doc/dovecot/wiki/Errors.ChgrpNoPerm.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
+share/doc/dovecot/wiki/HowTo.ImapcProxy.txt
 share/doc/dovecot/wiki/HowTo.PopBSMTPAndDovecot.txt
 share/doc/dovecot/wiki/HowTo.PopRelay.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
@@ -590,6 +592,7 @@ share/doc/dovecot/wiki/SSL.DovecotConfiguration.txt
 share/doc/dovecot/wiki/SSL.txt
 share/doc/dovecot/wiki/Sasl.txt
 share/doc/dovecot/wiki/SecurityTuning.txt
+share/doc/dovecot/wiki/Services.txt
 share/doc/dovecot/wiki/SharedMailboxes.Permissions.txt
 share/doc/dovecot/wiki/SharedMailboxes.Public.txt
 share/doc/dovecot/wiki/SharedMailboxes.Shared.txt
