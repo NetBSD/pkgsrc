@@ -1,0 +1,3 @@
+Text::Markdown::Discount - Perl extension interface for "Discount",
+an implementation of John Gruber's "markdown" in C developed by
+David Loren Parsons.
