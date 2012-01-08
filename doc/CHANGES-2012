@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.34 2012/01/08 03:10:03 obache Exp $
+$NetBSD: CHANGES-2012,v 1.35 2012/01/08 03:53:58 sbd Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -50,3 +50,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-rack-protection to 1.2.0 [obache 2012-01-08]
 	Updated www/ruby-sinatra to 1.3.2 [obache 2012-01-08]
 	Updated www/ruby-rack to 1.3.6 [obache 2012-01-08]
+	Updated security/pinentry-gtk to 0.8.1nb2 [sbd 2012-01-08]
+	Updated security/pinentry-gtk2 to 0.8.1nb4 [sbd 2012-01-08]
+	Updated security/pinentry-qt to 0.8.1nb4 [sbd 2012-01-08]
+	Updated security/pinentry-qt4 to 0.8.1nb4 [sbd 2012-01-08]
+	Updated sysutils/psmisc to 20.1nb2 [sbd 2012-01-08]
+	Updated sysutils/shmux to 1.0nb1 [sbd 2012-01-08]
+	Updated time/gcal to 3.6.1nb1 [sbd 2012-01-08]
+	Updated www/varnish to 3.0.2nb2 [sbd 2012-01-08]
