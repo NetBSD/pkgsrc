@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.66 2012/01/08 16:20:33 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.67 2012/01/08 16:25:58 wiz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -102,3 +102,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added games/ultima4-data version 1.0 [wiz 2012-01-08]
 	Added games/xu4 version 1.0beta3 [wiz 2012-01-08]
 	Added fonts/EB-Garamond version 0.012 [wiz 2012-01-08]
+	Added net/Radicale version 0.6.3 [wiz 2012-01-08]
