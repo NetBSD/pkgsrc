@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.68 2012/01/08 16:27:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.69 2012/01/08 18:38:55 gdt Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -104,3 +104,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added fonts/EB-Garamond version 0.012 [wiz 2012-01-08]
 	Added net/Radicale version 0.6.3 [wiz 2012-01-08]
 	Updated net/Radicale to 0.6.4 [wiz 2012-01-08]
+	Updated geography/geos to 3.3.2 [gdt 2012-01-08]
