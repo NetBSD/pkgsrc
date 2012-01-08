@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.60 2012/01/08 15:17:17 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.61 2012/01/08 15:19:11 wiz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -96,3 +96,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/arp-scan version 1.8 [wiz 2012-01-08]
 	Updated pkgtools/pkg_online-client to 0.13.0 [cheusov 2012-01-08]
 	Updated pkgtools/pkg_online-server to 0.13.0 [cheusov 2012-01-08]
+	Added misc/libcarddav version 0.6.2.2.2 [wiz 2012-01-08]
