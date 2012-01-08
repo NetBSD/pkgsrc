@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.366 2011/12/15 14:48:00 taca Exp $
+# $NetBSD: Makefile,v 1.367 2012/01/08 15:19:01 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -141,6 +141,7 @@ SUBDIR+=	koffice-l10n-pl
 SUBDIR+=	kp
 SUBDIR+=	latin-words-bin
 SUBDIR+=	less
+SUBDIR+=	libcarddav
 SUBDIR+=	libcdio
 SUBDIR+=	libquantum
 SUBDIR+=	libreoffice3-bin
