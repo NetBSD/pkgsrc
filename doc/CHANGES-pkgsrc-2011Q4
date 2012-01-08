@@ -1,6 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.1 2012/01/08 01:57:48 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.2 2012/01/08 14:00:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
 
 Created pkgsrc-2011Q4 branch [agc 2012-01-08 01:52 UTC]
+
+Pullup ticket #3638 - requested by obache
+devel/xulrunner: build fix
