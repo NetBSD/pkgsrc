@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/01/08 15:15:04 marino Exp $
+# $NetBSD: Makefile,v 1.10 2012/01/09 09:31:33 wiz Exp $
 #
 
 PKGNAME=	gnat-aux-${SNAPSHOT}
@@ -270,6 +270,7 @@ do-test: build
 	${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
 .else
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-ada
+.endif
 .endif
 .if !empty(PKG_OPTIONS:Mfortran) && !empty(PKG_OPTIONS:Mtestfortran)
 	cd ${BUILDDIR} && ${SETENV} ${MY_MAKE_ENV} ${GMAKE} -sk check-fortran
