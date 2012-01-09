@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2011/03/10 23:38:42 pettai Exp $
+# $NetBSD: options.mk,v 1.12 2012/01/09 14:53:31 drochner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lftp
@@ -16,8 +16,8 @@ PKG_SUGGESTED_OPTIONS=	ssl
 ###
 .if !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--without-openssl
+USE_TOOLS+=	pkg-config
 .  include "../../security/gnutls/buildlink3.mk"
-.  include "../../security/gnutls/libgnutls-config.mk"
 .elif !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--without-gnutls
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
