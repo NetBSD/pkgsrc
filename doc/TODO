@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10772 2012/01/08 16:12:52 wiz Exp $
+$NetBSD: TODO,v 1.10773 2012/01/09 06:40:15 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -438,7 +438,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bluefish-2.2.0
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.5
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
