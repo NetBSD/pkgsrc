@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/06/14 13:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2012/01/09 14:53:31 drochner Exp $
 
 DISTNAME=		elinks-0.12pre5
 PKGNAME=		${DISTNAME:S/pre/rc/}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--enable-256-colors
