@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/03/11 10:38:14 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/09 22:32:22 sbd Exp $
 #
 
 DISTNAME=	blackened-1.7.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	#ftp://ftp.blackened.com/pub/irc/blackened/
 # newer version at http://freebsd.aeternal.net/ports/blackened-1.8.1.tar.gz
@@ -18,4 +19,5 @@ GNU_CONFIGURE=	YES
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
