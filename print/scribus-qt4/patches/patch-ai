@@ -1,17 +1,17 @@
-$NetBSD: patch-ai,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
+$NetBSD: patch-ai,v 1.2 2012/01/09 17:44:12 drochner Exp $
 
---- CMakeLists.txt.orig	2010-11-26 22:06:01.000000000 +0000
+--- CMakeLists.txt.orig	2011-12-30 20:46:04.000000000 +0000
 +++ CMakeLists.txt
-@@ -250,7 +250,7 @@ ENDIF (APPLEBUNDLE)
+@@ -251,7 +251,7 @@ ENDIF (APPLEBUNDLE)
  #Setp all the directories we will use
  #MAN
  CMAKE_POLICY(SET CMP0005 OLD)
 -SET(MANDIR "share/man/")
 +SET(MANDIR "man/")
- SET(SHAREDIR "share/${MAIN_DIR_NAME}${TAG_VERSION}/")
- ADD_DEFINITIONS("-DSHAREDIR=\\\"${CMAKE_INSTALL_PREFIX}/${SHAREDIR}\\\"")
- 
-@@ -307,12 +307,6 @@ ENDIF (APPLICATION_DATA_DIR)
+ IF(WANT_VERSIONING)
+     SET(SHAREDIR "share/${MAIN_DIR_NAME}${TAG_VERSION}/")
+ ELSE(WANT_VERSIONING)
+@@ -316,12 +316,6 @@ ENDIF (APPLICATION_DATA_DIR)
  
  #LIB LOCATION - lib or lib64 normally
  #LIB
@@ -24,7 +24,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
  SET(LIB_DIR_NAME "lib${LIB_SUFFIX}")
  SET(LIBDIR "${LIB_DIR_NAME}/${MAIN_DIR_NAME}${TAG_VERSION}/")
  ADD_DEFINITIONS("-DLIBDIR=\\\"${CMAKE_INSTALL_PREFIX}/${LIBDIR}\\\"")
-@@ -787,7 +781,7 @@ INSTALL(FILES
+@@ -820,7 +814,7 @@ INSTALL(FILES
  #KDE workaround until it starts supporting freedesktop spec
  INSTALL(FILES
    vnd.scribus.desktop
