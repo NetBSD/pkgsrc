@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.74 2012/01/09 07:08:33 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.75 2012/01/09 19:41:34 ryoon Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -110,3 +110,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated filesystems/perfused to 20111217 [manu 2012-01-09]
 	Updated emulators/bochs to 2.5.1 [ryoon 2012-01-09]
 	Updated www/py-uwsgi to 0.9.8.6nb2 [sbd 2012-01-09]
+	Updated emulators/hatari to 1.6.0 [ryoon 2012-01-09]
