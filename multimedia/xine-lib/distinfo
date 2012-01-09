@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.78 2011/12/25 03:24:09 sbd Exp $
+$NetBSD: distinfo,v 1.79 2012/01/09 17:20:01 drochner Exp $
 
-SHA1 (xine-lib-1.1.20.tar.bz2) = 60ce1cea9bf7a6b7d8c60141593a8ed0c54f9445
-RMD160 (xine-lib-1.1.20.tar.bz2) = c531b74142ad92b7fe2956c69fd1398e7c8cb1fb
-Size (xine-lib-1.1.20.tar.bz2) = 7585795 bytes
+SHA1 (xine-lib-1.1.20.1.tar.bz2) = 68e85049723b491ccb22d5123bf8fa780529868a
+RMD160 (xine-lib-1.1.20.1.tar.bz2) = 73adb48ca4e3bd73018eaeb92ea4740b2c004d29
+Size (xine-lib-1.1.20.1.tar.bz2) = 7569871 bytes
 SHA1 (patch-Makefile.am) = 3cfff7a6941015921c166f9a67159a5bb3ca0204
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ag) = 96a2bab961ca90d7e3c1d67b6aa09388f9478d35
@@ -18,7 +18,6 @@ SHA1 (patch-dc) = 11c4212029e67f22796e57706b42400a0dbcac3a
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
 SHA1 (patch-include_Makefile.am) = 9fa5a83a340358b1d3651ce2cc18f61772e9d128
 SHA1 (patch-input_dvb.c) = 37aa191dca0df058dc09477624ff76dbc3a2f9b9
-SHA1 (patch-src-audio_out-audio_file_out.c) = 2b09abc82bc0b023ed9feaa5d77dd14db73f30df
 SHA1 (patch-src-demuxers-demux_qt.c) = 2942911c09c0580c6017474af2a14f5b1f193c1d
 SHA1 (patch-src-post-audio-stretch.c) = bc083541c410e8b8c2b5c23bc7b2b0ae312272a5
 SHA1 (patch-src-post-audio-upmix.c) = ab01e157b42b8dd99622a17b5a8ecdb464ee694e
