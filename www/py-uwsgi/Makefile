@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/01/08 04:06:34 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/01/09 07:07:10 sbd Exp $
 
 DISTNAME=	uwsgi-0.9.8.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
 
@@ -20,15 +19,11 @@ PYTHON_VERSIONS_ACCEPTED=	27 26 25
 USE_LANGUAGES=		c
 PYDISTUTILSPKG=		yes
 
-MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
-INSTALL_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
-
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	mv ${DESTDIR}${PREFIX}/bin/uwsgi ${DESTDIR}${PREFIX}/bin/uwsgi-${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
-.include "../../devel/libuuid/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
