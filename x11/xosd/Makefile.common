@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2010/01/16 17:57:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2012/01/09 17:57:34 wiz Exp $
 #
 # used by x11/xmms-osd/Makefile
 
@@ -7,7 +7,8 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libxosd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ignavus.net/software.html
+HOMEPAGE=	http://sourceforge.net/projects/libxosd/
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/xosd/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xosd/patches
