@@ -1,0 +1,72 @@
+$NetBSD: patch-source_Makefile.in,v 1.1 2012/01/09 22:32:22 sbd Exp $
+
+Put $(INCLUDES) before $(CFLAGS) so that -I../include comes before 
+ -I${PREFIX}/include...
+
+--- source/Makefile.in.orig	1999-07-26 06:54:32.000000000 +0000
++++ source/Makefile.in
+@@ -50,7 +50,7 @@ all: blackened
+ irc: blackened
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -c $<
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) $(PP_DEFS) -c $<
+ 
+ blackened: $(OBJECTS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $(DEFS) -o blackened $(OBJECTS) $(LIBS)
+@@ -63,37 +63,37 @@ install: blackened
+ # .o files needing special compilation flags
+ 
+ irc.o: Makefile ../Makefile
+-	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -DIRCLIB=\"$(IRCLIB)/\" -DIRCPATH=\"$(IRCPATH)\" -c irc.c
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) $(PP_DEFS) -DIRCLIB=\"$(IRCLIB)/\" -DIRCPATH=\"$(IRCPATH)\" -c irc.c
+ 
+ vars.o: Makefile ../Makefile
+-	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -DDEFAULT_HELP_FILE=\"$(HELP_FILE)\" -DDEFAULT_HELP_PATH=\"$(HELP_DIR)\" -c vars.c
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) $(PP_DEFS) -DDEFAULT_HELP_FILE=\"$(HELP_FILE)\" -DDEFAULT_HELP_PATH=\"$(HELP_DIR)\" -c vars.c
+ 
+ help.o: Makefile ../Makefile
+-	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -DDEFAULT_HELP_FILE=\"$(HELP_FILE)\" -DDEFAULT_HELP_PATH=\"$(HELP_DIR)\" -c help.c
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) $(PP_DEFS) -DDEFAULT_HELP_FILE=\"$(HELP_FILE)\" -DDEFAULT_HELP_PATH=\"$(HELP_DIR)\" -c help.c
+ 
+ server.o: Makefile ../Makefile
+-	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -DIRCSERV_PATH=\"$(INSTALL_IRCSERV)\" -c server.c
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) $(PP_DEFS) -DIRCSERV_PATH=\"$(INSTALL_IRCSERV)\" -c server.c
+ 
+ translat.o: Makefile ../Makefile
+-	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -DTRANSLATION_PATH=\"$(TRANS_DIR)/\" -c translat.c
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) $(PP_DEFS) -DTRANSLATION_PATH=\"$(TRANS_DIR)/\" -c translat.c
+ 
+ screen.o: Makefile ../Makefile
+-	$(CC) $(CFLAGS) $(DEFS) $(PP_DEFS) $(INCLUDES) -DWSERV_PATH=\"$(INSTALL_WSERV)\" -c screen.c
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) $(PP_DEFS) -DWSERV_PATH=\"$(INSTALL_WSERV)\" -c screen.c
+ 
+ # auxiliary programs
+ 
+ ircflush: ircflush.o ircsig.o
+-	$(CC) $(CFLAGS) $(LDFLAGS) $(DEFS) $(INCLUDES) -o ircflush ircflush.o ircsig.o $(LIBS)
++	$(CC) $(INCLUDES) $(CFLAGS) $(LDFLAGS) $(DEFS) -o ircflush ircflush.o ircsig.o $(LIBS)
+ clean::
+ 	$(RM) ircflush ircflush.o
+ 
+ ircserv: ircserv.o newio.o ircsig.o
+-	$(CC) $(CFLAGS) $(LDFLAGS) $(DEFS) $(PPS_DEFS) $(INCLUDES) -o ircserv ircserv.o newio.o ircsig.o $(LIBS)
++	$(CC) $(INCLUDES) $(CFLAGS) $(LDFLAGS) $(DEFS) $(PPS_DEFS) -o ircserv ircserv.o newio.o ircsig.o $(LIBS)
+ clean::
+ 	$(RM) ircserv ircserv.o newio.o
+ 
+ wserv: $(WSERV_OBJECTS) ircsig.o
+-	$(CC) $(CFLAGS) $(LDFLAGS) $(DEFS) $(INCLUDES) -o wserv $(WSERV_OBJECTS) ircsig.o $(LIBS)
++	$(CC) $(INCLUDES) $(CFLAGS) $(LDFLAGS) $(DEFS) -o wserv $(WSERV_OBJECTS) ircsig.o $(LIBS)
+ clean::
+ 	$(RM) wserv wserv.o wterm.o wterm.c
+ 
+@@ -105,7 +105,7 @@ clean::
+ wterm.o: term.c
+ 	$(RM) wterm.c
+ 	$(LN) term.c wterm.c
+-	$(CC) $(CFLAGS) $(DEFS) $(INCLUDES) -DSTTY_ONLY -c wterm.c
++	$(CC) $(INCLUDES) $(CFLAGS) $(DEFS) -DSTTY_ONLY -c wterm.c
+ 
+ # DO NOT DELETE
+ 
