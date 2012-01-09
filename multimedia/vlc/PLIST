@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2011/11/14 19:53:18 marino Exp $
+@comment $NetBSD: PLIST,v 1.48 2012/01/09 17:12:57 drochner Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -319,6 +319,7 @@ lib/vlc/plugins/video_filter/libmosaic_plugin.la
 lib/vlc/plugins/video_filter/libmotionblur_plugin.la
 lib/vlc/plugins/video_filter/libmotiondetect_plugin.la
 lib/vlc/plugins/video_filter/libnoise_plugin.la
+lib/vlc/plugins/video_filter/libosdmenu_plugin.la
 ${PLIST.x11}lib/vlc/plugins/video_filter/libpanoramix_plugin.la
 lib/vlc/plugins/video_filter/libpostproc_plugin.la
 lib/vlc/plugins/video_filter/libpsychedelic_plugin.la
