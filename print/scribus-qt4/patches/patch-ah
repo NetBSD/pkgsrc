@@ -1,24 +1,24 @@
-$NetBSD: patch-ah,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
+$NetBSD: patch-ah,v 1.2 2012/01/09 17:44:12 drochner Exp $
 
---- scribus/CMakeLists.txt.orig	2010-10-31 10:44:16.000000000 +0000
+--- scribus/CMakeLists.txt.orig	2011-04-17 21:20:49.000000000 +0000
 +++ scribus/CMakeLists.txt
-@@ -723,13 +723,13 @@ ELSE(WIN32)
+@@ -728,13 +728,13 @@ ELSE(WIN32)
  ENDIF(WIN32)
  
  ##TEST FIX FOR 6897
--IF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-+IF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
+-IF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++IF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
  # Use the -E / --export-dynamic flag to ensure that symbols in the Scribus
  # binary are in the public symbol table for plugins. The symbols must also
  # be set as SCRIBUS_API if we're building with -fvisibility=hidden .
  # Should fix bug 6897 .
    SET_TARGET_PROPERTIES(${EXE_NAME} PROPERTIES LINK_FLAGS -Wl,-E)
--ENDIF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-+ENDIF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
+-ENDIF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++ENDIF (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
  IF (GCC AND NOT WIN32)
  # Use the -E / --export-dynamic flag to ensure that symbols in the Scribus
  # binary are in the public symbol table for plugins. The symbols must also
-@@ -767,9 +767,9 @@ TARGET_LINK_LIBRARIES(${EXE_NAME}
+@@ -771,9 +771,9 @@ TARGET_LINK_LIBRARIES(${EXE_NAME}
  
  # required to resolve symbols from libdl when ld is called with --no-add-needed
  # #9310 for the OpenBSD addition
@@ -30,7 +30,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2010/12/13 11:49:44 drochner Exp $
  
  # #9311 for the OpenBSD addition
  IF(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-@@ -866,6 +866,7 @@ IF(NOT WANT_NOHEADERINSTALL)
+@@ -877,6 +877,7 @@ IF(NOT WANT_NOHEADERINSTALL)
      PATTERN "manpages" EXCLUDE
      PATTERN "old" EXCLUDE
      PATTERN ".svn" EXCLUDE 
