@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10773 2012/01/09 06:40:15 ryoon Exp $
+$NetBSD: TODO,v 1.10774 2012/01/09 19:42:13 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -778,7 +778,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.4
 	o haskell-mode-1.45
-	o hatari-1.6.0
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o help2man-1.40.5
 	o hesiod-3.1.0
