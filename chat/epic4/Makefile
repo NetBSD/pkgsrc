@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2010/12/29 02:02:02 dholland Exp $
+# $NetBSD: Makefile,v 1.34 2012/01/09 23:08:56 sbd Exp $
 #
 
 DISTNAME=	epic4-2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.freenet.de/pub/ftp.prbh.org/pub/epic/EPIC4-PRODUCTION/ \
@@ -26,5 +26,6 @@ INSTALL_MAKE_FLAGS+=	IP=${DESTDIR}
 
 CFLAGS.OSF1+=	-D_SOCKADDR_LEN
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
