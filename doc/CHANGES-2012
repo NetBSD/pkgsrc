@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.71 2012/01/08 21:56:29 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.72 2012/01/09 05:31:26 manu Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated geography/geos to 3.3.2 [gdt 2012-01-08]
 	Updated databases/postgresql-postgis to 1.5.3 [gdt 2012-01-08]
 	Updated editors/emacs-snapshot to 24.0.92.20120105 [minskim 2012-01-08]
+	Updated filesystems/perfused to 20111217 [manu 2012-01-09]

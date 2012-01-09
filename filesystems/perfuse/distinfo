@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2011/12/17 05:47:50 manu Exp $
+$NetBSD: distinfo,v 1.31 2012/01/09 05:31:26 manu Exp $
 
 SHA1 (perfuse-20111217.tgz) = bcf72851e79f501b47c320f6a3baf592e7d89c5a
 RMD160 (perfuse-20111217.tgz) = a05dde1169a3aca9cb082e4725e165e6d93c68b1
