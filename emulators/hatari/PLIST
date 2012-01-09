@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.12 2010/08/27 08:24:27 adam Exp $
-bin/atari-hd-image.sh
+@comment $NetBSD: PLIST,v 1.13 2012/01/09 19:39:52 ryoon Exp $
+bin/atari-hd-image
 bin/hatari
-bin/hatari-console.py
 bin/hatariui
 bin/hmsa
-bin/zip2st.sh
+bin/zip2st
+man/man1/atari-hd-image.1
 man/man1/hatari.1
 man/man1/hatariui.1
+man/man1/hconsole.1
+man/man1/hmsa.1
+man/man1/zip2st.1
 share/applications/hatariui.desktop
 share/doc/hatari/authors.txt
 share/doc/hatari/compatibility.html
@@ -43,5 +46,10 @@ share/hatari/hatariui/hatari.py
 share/hatari/hatariui/hatariui.py
 share/hatari/hatariui/release-notes.txt
 share/hatari/hatariui/uihelpers.py
+share/hatari/hconsole/example-commands
+share/hatari/hconsole/example-debugger
+share/hatari/hconsole/example.py
+share/hatari/hconsole/hconsole.py
+share/hatari/hconsole/release-notes.txt
 share/hatari/tos.img
 share/icons/hicolor/32x32/apps/hatari-icon.png
