@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/10/19 06:12:59 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/09 02:54:25 obache Exp $
 #
 
 DISTNAME=	mdds_0.5.3
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://multidimalgorithm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
