@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.73 2011/12/24 08:39:11 sbd Exp $
+# $NetBSD: Makefile.common,v 1.74 2012/01/09 17:20:01 drochner Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-arts/Makefile
@@ -7,8 +7,8 @@
 # used by multimedia/xine-v4l/Makefile
 # used by multimedia/xine-v4l2/Makefile
 
-DISTNAME=		xine-lib-1.1.20
-XINE_PKGNAME=		xine-lib-1.1.20
+DISTNAME=		xine-lib-1.1.20.1
+XINE_PKGNAME=		xine-lib-1.1.20.1
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
