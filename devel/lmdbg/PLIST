@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/08 18:32:15 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/09 19:47:35 cheusov Exp $
 bin/lmdbg
 bin/lmdbg-grep
 bin/lmdbg-leaks
@@ -23,6 +23,7 @@ man/man1/lmdbg-stat.1
 man/man1/lmdbg-sym.1
 man/man1/lmdbg-sysleaks.1
 man/man1/lmdbg.1
-share/doc/lmdbg/ChangeLog
+share/doc/lmdbg/LICENSE
 share/doc/lmdbg/NEWS
 share/doc/lmdbg/README
+share/doc/lmdbg/TODO
