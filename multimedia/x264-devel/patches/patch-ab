@@ -1,20 +1,20 @@
-$NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
+$NetBSD: patch-ab,v 1.15 2012/01/09 17:04:03 drochner Exp $
 
---- Makefile.orig	2011-07-07 20:45:05.000000000 +0000
+--- Makefile.orig	2011-12-07 21:45:03.000000000 +0000
 +++ Makefile
-@@ -86,9 +86,9 @@ endif
+@@ -88,9 +88,9 @@ endif
  ifdef ARCH_X86
  ASFLAGS += -Icommon/x86/
  SRCS   += common/x86/mc-c.c common/x86/predict-c.c
 -OBJASM  = $(ASMSRC:%.asm=%.o)
 +OBJASM  = $(ASMSRC:%.asm=%.lo)
  $(OBJASM): common/x86/x86inc.asm common/x86/x86util.asm
--checkasm: tools/checkasm-a.o
-+checkasm: tools/checkasm-a.lo
+-OBJCHK += tools/checkasm-a.o
++OBJCHK += tools/checkasm-a.lo
  endif
  endif
  
-@@ -108,7 +108,7 @@ ASMSRC += common/arm/cpu-a.S common/arm/
+@@ -110,7 +110,7 @@ ASMSRC += common/arm/cpu-a.S common/arm/
            common/arm/dct-a.S common/arm/quant-a.S common/arm/deblock-a.S \
            common/arm/predict-a.S
  SRCS   += common/arm/mc-c.c common/arm/predict-c.c
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
  endif
  endif
  
-@@ -116,7 +116,7 @@ endif
+@@ -118,7 +118,7 @@ endif
  ifeq ($(ARCH),UltraSPARC)
  ifeq ($(findstring HIGH_BIT_DEPTH, $(CONFIG)),)
  ASMSRC += common/sparc/pixel.asm
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
  endif
  endif
  
-@@ -130,8 +130,8 @@ SRCSO += x264dll.c
+@@ -132,8 +132,8 @@ SRCSO += x264dll.c
  endif
  endif
  
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
  OBJSO = $(SRCSO:%.c=%.o)
  DEP  = depend
  
-@@ -139,26 +139,30 @@ DEP  = depend
+@@ -141,14 +141,17 @@ DEP  = depend
  
  default: $(DEP)
  
@@ -56,6 +56,7 @@ $NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
  lib-shared: $(SONAME)
  
 -$(LIBX264): .depend $(OBJS) $(OBJASM)
+-	rm -f $(LIBX264)
 -	$(AR)$@ $(OBJS) $(OBJASM)
 -	$(if $(RANLIB), $(RANLIB) $@)
 +libx264.la: .depend $(OBJS) $(OBJASM)
@@ -65,16 +66,21 @@ $NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
  
  $(SONAME): .depend $(OBJS) $(OBJASM) $(OBJSO)
  	$(LD)$@ $(OBJS) $(OBJASM) $(OBJSO) $(SOFLAGS) $(LDFLAGS)
+@@ -159,17 +162,17 @@ x264: x264$(EXE)
+ checkasm: checkasm$(EXE)
+ endif
  
 -x264$(EXE): .depend $(OBJCLI) $(CLI_LIBX264)
 -	$(LD)$@ $(OBJCLI) $(CLI_LIBX264) $(LDFLAGSCLI) $(LDFLAGS)
 +x264$(EXE): .depend $(OBJCLI) libx264.la
 +	${LIBTOOL} --mode=link $(LD)$@ $(OBJCLI) libx264.la $(LDFLAGSCLI) $(LDFLAGS)
  
--checkasm: tools/checkasm.o $(LIBX264)
--	$(LD)$@ $+ $(LDFLAGS)
-+checkasm: tools/checkasm.o libx264.la
+-checkasm$(EXE): .depend $(OBJCHK) $(LIBX264)
+-	$(LD)$@ $(OBJCHK) $(LIBX264) $(LDFLAGS)
++checkasm$(EXE): .depend $(OBJCHK) libx264.la
 +	${LIBTOOL} --mode=link $(LD)$@ $+ $(LDFLAGS)
+ 
+ $(OBJS) $(OBJASM) $(OBJSO) $(OBJCLI) $(OBJCHK): .depend
  
 -%.o: %.asm
 -	$(AS) $(ASFLAGS) -o $@ $<
@@ -85,7 +91,7 @@ $NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
  
  %.o: %.S
  	$(AS) $(ASFLAGS) -o $@ $<
-@@ -224,8 +228,7 @@ install-lib-dev:
+@@ -234,8 +237,7 @@ install-lib-dev:
  	install -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
  
  install-lib-static: lib-static install-lib-dev
@@ -94,4 +100,4 @@ $NetBSD: patch-ab,v 1.14 2011/07/18 21:00:11 drochner Exp $
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libx264.la $(DESTDIR)$(libdir)
  
  install-lib-shared: lib-shared install-lib-dev
- ifeq ($(SYS),WINDOWS)
+ ifneq ($(IMPLIBNAME),)
