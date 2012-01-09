@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2011/11/01 06:01:09 sbd Exp $
+# $NetBSD: Makefile,v 1.63 2012/01/09 06:38:44 ryoon Exp $
 
-DISTNAME=		bochs-2.4.6
-PKGREVISION=		2
+DISTNAME=		bochs-2.5.1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -12,9 +11,10 @@ LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+MAKE_JOBS_SAFE=		no
+
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-USE_TOOLS+=		gunzip gzip
+USE_TOOLS+=		gmake gunzip gzip
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
@@ -37,7 +37,7 @@ PKG_SUGGESTED_OPTIONS+=	x11
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-# Debugging features for the client operating systems.  These options are
+# Debugging features for the client operating systems. These options are
 # not enabled by default because they can adversely impact performance.
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--disable-plugins
@@ -56,27 +56,20 @@ CONFIGURE_ARGS+=	--enable-x86-64
 CONFIGURE_ARGS+=	--enable-smp
 CONFIGURE_ARGS+=	--enable-long-phy-address
 CONFIGURE_ARGS+=	--enable-cpu-level=6
-CONFIGURE_ARGS+=	--enable-ne2000
-CONFIGURE_ARGS+=	--enable-acpi
 CONFIGURE_ARGS+=	--enable-pci
 CONFIGURE_ARGS+=	--enable-usb
 CONFIGURE_ARGS+=	--enable-usb-ohci
 CONFIGURE_ARGS+=	--enable-pnic
-CONFIGURE_ARGS+=	--enable-x2apic
 CONFIGURE_ARGS+=	--enable-repeat-speedups
-CONFIGURE_ARGS+=	--enable-trace-cache
-CONFIGURE_ARGS+=	--enable-host-specific-asms
 CONFIGURE_ARGS+=	--enable-configurable-msrs
 CONFIGURE_ARGS+=	--enable-all-optimizations
-CONFIGURE_ARGS+=	--enable-instrumentation
-CONFIGURE_ARGS+=	--enable-vbe
+#CONFIGURE_ARGS+=	--enable-instrumentation
 CONFIGURE_ARGS+=	--enable-clgd54xx
 CONFIGURE_ARGS+=	--enable-fpu
 CONFIGURE_ARGS+=	--enable-vmx=2
 #CONFIGURE_ARGS+=	--enable-3dnow
 CONFIGURE_ARGS+=	--enable-alignment-check
 CONFIGURE_ARGS+=	--enable-misaligned-sse
-CONFIGURE_ARGS+=	--enable-cdrom
 #CONFIGURE_ARGS+=	--enable-gdb-stub
 CONFIGURE_ARGS+=	--enable-gameport
 
