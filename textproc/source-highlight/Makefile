@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2011/10/19 06:13:03 obache Exp $
+# $NetBSD: Makefile,v 1.32 2012/01/09 02:54:29 obache Exp $
 
 DISTNAME=	source-highlight-3.1.4
+PKGREVISION=	2
 SVR4_PKGNAME=	srchl
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=src-highlite/}
 
