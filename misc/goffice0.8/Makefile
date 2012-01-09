@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2011/11/01 06:02:05 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2012/01/09 17:22:48 drochner Exp $
 #
 
 DISTNAME=		goffice-0.8.17
 PKGNAME=		${DISTNAME:S/goffice/goffice0.8/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,7 +27,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
-.include "../../devel/libgsf-gnome/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.1
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
