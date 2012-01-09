@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.77 2012/01/09 20:54:43 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.78 2012/01/09 20:57:52 cheusov Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -113,3 +113,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/hatari to 1.6.0 [ryoon 2012-01-09]
 	Updated devel/lmdbg to 1.0.0 [cheusov 2012-01-09]
 	Updated pkgtools/pkg_summary-utils to 0.57.0 [cheusov 2012-01-09]
+	Updated pkgtools/distbb to 0.43.0 [cheusov 2012-01-09]
