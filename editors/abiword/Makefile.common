@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2010/12/23 11:44:28 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.42 2012/01/09 17:31:56 drochner Exp $
 #
 # used by editors/abiword-plugins/Makefile
 
@@ -28,14 +28,12 @@ PATCHDIR=	${.CURDIR}/../../editors/abiword/patches
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libgsf-gnome/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
