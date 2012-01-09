@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.52 2011/12/22 13:31:48 drochner Exp $
+$NetBSD: distinfo,v 1.53 2012/01/09 17:12:57 drochner Exp $
 
-SHA1 (vlc-1.1.12.tar.bz2) = b39de66711a33746ce12f16a50e41d3def7b1452
-RMD160 (vlc-1.1.12.tar.bz2) = 117530abc8bd3f38d9233b7a7c91a3aaa17af87c
-Size (vlc-1.1.12.tar.bz2) = 26220996 bytes
+SHA1 (vlc-1.1.13.tar.bz2) = 05bbc7ff427f3b919b29a45ce014caff9ba92648
+RMD160 (vlc-1.1.13.tar.bz2) = c5aa438a9085ddbf28e849df442b75475693290d
+Size (vlc-1.1.13.tar.bz2) = 26226587 bytes
 SHA1 (patch-aa) = 684f7ad6a20ed6b9b8a8be2fc61836e6b471b686
 SHA1 (patch-ap) = 423b571ca8a1b740812aea021e331912ba34c868
-SHA1 (patch-ar) = f2a8b586c4672bbb0f7ccd163531c3f27eadc949
+SHA1 (patch-ar) = 153164870e9dc50ad32106d9f8ebd25b35ed3dd3
 SHA1 (patch-as) = b53b074b2791d7bf69d5f09c7c32d873608f3086
 SHA1 (patch-at) = 5761ec0809d2b03511666ae81f7b4ae01b6f5930
-SHA1 (patch-au) = f40733e9d48cd4db1eaec2367ccd86efc66d287e
 SHA1 (patch-modules_audio__output_pulse.c) = 994389b214f3e2b7b8b7ccaf3bb535a94523f81b
