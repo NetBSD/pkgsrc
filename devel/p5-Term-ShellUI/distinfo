@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/31 11:43:02 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/01/10 08:57:39 hiramatsu Exp $
 
-SHA1 (Term-ShellUI-0.86.tar.gz) = 26133f7bb0f7d387bf1399f6b820aca8a763fe8c
-RMD160 (Term-ShellUI-0.86.tar.gz) = 5dc4fd1de81a7956f176165bc8aca17c0b8d86cf
-Size (Term-ShellUI-0.86.tar.gz) = 43479 bytes
+SHA1 (Term-ShellUI-0.91.tar.gz) = 4cd8b2e471d73c26d8eb8322412e46b451c899a7
+RMD160 (Term-ShellUI-0.91.tar.gz) = 5ae37c9c777d9fb1cc42b1cf866b90281690c029
+Size (Term-ShellUI-0.91.tar.gz) = 30664 bytes
