@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.87 2012/01/10 01:06:39 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.88 2012/01/10 03:38:22 asau Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -121,3 +121,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/xapian to 1.2.8 [schmonz 2012-01-10]
 	Updated textproc/xapian-omega to 1.2.8 [schmonz 2012-01-10]
 	Updated textproc/p5-Search-Xapian to 1.2.8.0 [schmonz 2012-01-10]
+	Updated math/maxima to 5.26.0 [asau 2012-01-10]
