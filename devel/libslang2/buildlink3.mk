@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2011/01/13 13:36:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2012/01/10 01:31:45 sbd Exp $
 
 BUILDLINK_TREE+=	libslang2
 
@@ -23,6 +23,7 @@ pkgbase:=	libslang2
 .  include "../../textproc/oniguruma/buildlink3.mk"
 .endif
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .endif # LIBSLANG2_BUILDLINK3_MK
