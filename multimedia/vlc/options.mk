@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2011/09/12 21:50:38 shattered Exp $
+# $NetBSD: options.mk,v 1.23 2012/01/10 12:37:32 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad dbus hal skins sdl pulseaudio x11 gnome dts
@@ -119,6 +119,7 @@ CONFIGURE_ARGS+=	--without-x \
 			--disable-xcb \
 			--disable-qt4 \
 			--disable-glx \
+			--disable-freetype \
 			--disable-snapshot
 .endif
 
@@ -135,9 +136,9 @@ CONFIGURE_ARGS+=	--disable-faad
 ## DTS support (libdca is non-redistributable)
 
 .if !empty(PKG_OPTIONS:Mdts)
-CONFIGURE_ARGS+=	--enable-libdca
+CONFIGURE_ARGS+=	--enable-dca
 PLIST.dts=		yes
 .  include "../../audio/libdca/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--enable-libdca=no
+CONFIGURE_ARGS+=	--enable-dca=no
 .endif
