@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10774 2012/01/09 19:42:13 ryoon Exp $
+$NetBSD: TODO,v 1.10775 2012/01/10 01:03:41 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1403,7 +1403,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x11perf-1.5.4
 	o x264-devel-20120107
 	o xanalyser-1.30
-	o xapian-1.2.7
 	o xapian-omega-1.2.7
 	o xaric-0.13.2
 	o xauth-1.0.6
