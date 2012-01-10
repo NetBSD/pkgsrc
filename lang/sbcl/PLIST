@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/12/05 23:02:18 asau Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/01/10 03:48:08 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/Makefile
@@ -178,7 +178,6 @@ lib/sbcl/sb-posix/macros.fasl
 lib/sbcl/sb-posix/macros.lisp
 lib/sbcl/sb-posix/posix-tests.fasl
 lib/sbcl/sb-posix/posix-tests.lisp
-lib/sbcl/sb-posix/posix-tests.lisp.orig
 lib/sbcl/sb-posix/sb-posix.asd
 lib/sbcl/sb-posix/sb-posix.fasl
 lib/sbcl/sb-posix/sb-posix.texinfo
