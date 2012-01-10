@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/17 08:44:32 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/10 04:40:03 obache Exp $
 #
 
 .include "../../databases/gdbm/Makefile.common"
@@ -16,4 +16,7 @@ CONFIGURE_ARGS+=	--enable-libgdbm-compat
 
 BUILD_DIRS=		compat
 
+.include "../../databases/gdbm/buildlink3.mk"
+post-extract:
+	${LN} -s ${BUILDLINK_PREFIX.gdbm}/lib/libgdbm.la ${WRKSRC}/src
 .include "../../mk/bsd.pkg.mk"
