@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2011/10/09 10:02:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.84 2012/01/10 00:52:54 sbd Exp $
 
 DISTNAME=	mc-4.7.0.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -67,4 +67,5 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
