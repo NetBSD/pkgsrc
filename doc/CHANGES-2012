@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.93 2012/01/10 12:30:50 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.94 2012/01/10 21:11:11 tez Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -122,3 +122,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gdk-pixbuf2 to 2.24.1 [drochner 2012-01-10]
 	Updated print/scribus-qt4 to 1.4.0 [drochner 2012-01-10]
 	Updated net/mikutter to 0.0.4.638 [obache 2012-01-10]
+	Updated converters/mpack to 1.6nb3 [tez 2012-01-10]
