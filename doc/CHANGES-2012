@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.83 2012/01/09 23:09:03 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.84 2012/01/10 00:53:03 sbd Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -117,3 +117,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ikiwiki to 3.20120109 [schmonz 2012-01-09]
 	Updated chat/blackened to 1.7.1nb1 [sbd 2012-01-09]
 	Updated chat/epic4 to 2.2nb3 [sbd 2012-01-09]
+	Updated sysutils/mc to 4.7.0.10nb4 [sbd 2012-01-10]
