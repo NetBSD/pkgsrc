@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/07/26 23:37:29 schmonz Exp $
+$NetBSD: patch-ab,v 1.2 2012/01/10 01:04:00 schmonz Exp $
+
+Respect ${VARBASE} and follow hier(7).
 
 --- omega.conf.orig	2008-07-16 00:42:17.000000000 -0400
 +++ omega.conf
