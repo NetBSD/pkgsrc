@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2010/12/03 09:55:33 abs Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/01/10 01:03:28 schmonz Exp $
 bin/copydatabase
 bin/delve
-${PLIST.quartz}bin/quartzcheck
-${PLIST.quartz}bin/quartzcompact
-${PLIST.quartz}bin/quartzdump
 bin/quest
 bin/simpleexpand
 bin/simpleindex
 bin/simplesearch
-${PLIST.flint}bin/xapian-check
-${PLIST.flint}bin/xapian-compact
+bin/xapian-check
+bin/xapian-compact
 bin/xapian-chert-update
 bin/xapian-config
-${PLIST.flint}bin/xapian-inspect
+bin/xapian-inspect
 bin/xapian-metadata
 bin/xapian-progsrv
 bin/xapian-replicate
@@ -20,6 +17,7 @@ bin/xapian-replicate-server
 bin/xapian-tcpsrv
 include/xapian.h
 include/xapian/base.h
+include/xapian/compactor.h
 include/xapian/database.h
 include/xapian/dbfactory.h
 include/xapian/deprecated.h
@@ -52,15 +50,12 @@ lib/cmake/xapian/xapian-config.cmake
 lib/libxapian.la
 man/man1/copydatabase.1
 man/man1/delve.1
-${PLIST.quartz}man/man1/quartzcheck.1
-${PLIST.quartz}man/man1/quartzcompact.1
-${PLIST.quartz}man/man1/quartzdump.1
 man/man1/quest.1
-${PLIST.flint}man/man1/xapian-check.1
-${PLIST.flint}man/man1/xapian-compact.1
+man/man1/xapian-check.1
+man/man1/xapian-compact.1
 man/man1/xapian-chert-update.1
 man/man1/xapian-config.1
-${PLIST.flint}man/man1/xapian-inspect.1
+man/man1/xapian-inspect.1
 man/man1/xapian-metadata.1
 man/man1/xapian-progsrv.1
 man/man1/xapian-replicate-server.1
@@ -79,6 +74,8 @@ share/doc/xapian-core/apidoc/html/classXapian_1_1BM25Weight__inherit__graph.png
 share/doc/xapian-core/apidoc/html/classXapian_1_1BoolWeight-members.html
 share/doc/xapian-core/apidoc/html/classXapian_1_1BoolWeight.html
 share/doc/xapian-core/apidoc/html/classXapian_1_1BoolWeight__inherit__graph.png
+share/doc/xapian-core/apidoc/html/classXapian_1_1Compactor-members.html
+share/doc/xapian-core/apidoc/html/classXapian_1_1Compactor.html
 share/doc/xapian-core/apidoc/html/classXapian_1_1Database-members.html
 share/doc/xapian-core/apidoc/html/classXapian_1_1Database.html
 share/doc/xapian-core/apidoc/html/classXapian_1_1DatabaseCorruptError-members.html
@@ -258,6 +255,7 @@ share/doc/xapian-core/apidoc/html/classXapian_1_1WritableDatabase.html
 share/doc/xapian-core/apidoc/html/classXapian_1_1WritableDatabase__inherit__graph.png
 share/doc/xapian-core/apidoc/html/classes.html
 share/doc/xapian-core/apidoc/html/closed.gif
+share/doc/xapian-core/apidoc/html/compactor_8h.html
 share/doc/xapian-core/apidoc/html/database_8h.html
 share/doc/xapian-core/apidoc/html/dbfactory_8h.html
 share/doc/xapian-core/apidoc/html/deprecated.html
@@ -348,6 +346,7 @@ share/doc/xapian-core/apidoc/html/inherit__graph__25.png
 share/doc/xapian-core/apidoc/html/inherit__graph__26.png
 share/doc/xapian-core/apidoc/html/inherit__graph__27.png
 share/doc/xapian-core/apidoc/html/inherit__graph__28.png
+share/doc/xapian-core/apidoc/html/inherit__graph__29.png
 share/doc/xapian-core/apidoc/html/inherit__graph__3.png
 share/doc/xapian-core/apidoc/html/inherit__graph__4.png
 share/doc/xapian-core/apidoc/html/inherit__graph__5.png
@@ -400,9 +399,10 @@ share/doc/xapian-core/apidoc/html/version_8h.html
 share/doc/xapian-core/apidoc/html/weight_8h.html
 share/doc/xapian-core/apidoc/html/xapian_8h.html
 share/doc/xapian-core/bm25.html
-share/doc/xapian-core/categorisation.html
 share/doc/xapian-core/code_structure.html
+share/doc/xapian-core/collapsing.html
 share/doc/xapian-core/deprecation.html
+share/doc/xapian-core/facets.html
 share/doc/xapian-core/glossary.html
 share/doc/xapian-core/index.html
 share/doc/xapian-core/install.html
@@ -411,7 +411,6 @@ share/doc/xapian-core/intro_ir.html
 share/doc/xapian-core/matcherdesign.html
 share/doc/xapian-core/overview.html
 share/doc/xapian-core/postingsource.html
-${PLIST.quartz}share/doc/xapian-core/quartzdesign.html
 share/doc/xapian-core/queryparser.html
 share/doc/xapian-core/quickstart.html
 share/doc/xapian-core/quickstartexpand.cc.html
