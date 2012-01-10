@@ -1,14 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.88 2012/01/10 03:38:22 asau Exp $
-
-================================================================================
-README! README! README! README! README! README! README! README! README! README!
-
-PLEASE NOTE THAT WE ARE CURRENTLY IN A FREEZE FOR INFRASTRUCTURE CHANGES AND NEW
-FUNCTIONALITY IN PKGSRC. IF YOU'D LIKE TO MAKE CHANGES, PLEASE GET APPROVAL FROM
-A PKGSRC-PMC MEMBER IN ADVANCE.
-
-README! README! README! README! README! README! README! README! README! README!
-================================================================================
+$NetBSD: CHANGES-2012,v 1.89 2012/01/10 05:56:39 agc Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -45,6 +35,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/thunderbird to 8.0nb1 [sbd 2012-01-07]
 	Updated mail/msmtp to 1.4.27 [obache 2012-01-08]
 	Updated x11/xdm3d to 1.0nb5 [dholland 2012-01-08]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2011Q4 branch [agc 2012-01-08]
 	Added textproc/p5-Text-Markdown-Discount version 0.02 [schmonz 2012-01-08]
 	Updated devel/mr to 1.10 [schmonz 2012-01-08]
 	Updated www/ruby-rack-protection to 1.2.0 [obache 2012-01-08]
