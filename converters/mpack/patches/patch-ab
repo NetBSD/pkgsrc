@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.8 2010/01/15 23:47:14 dholland Exp $
+$NetBSD: patch-ab,v 1.9 2012/01/10 21:09:55 tez Exp $
 
 - Include fixes for modern Unix.
 - Don't try to use /usr/tmp.
 - Time handling fixes for NetBSD with 64-bit time_t.
+- Fix for CVE-2011-4919 (bad permissions on created files)
 
 Upstream: as far as I know not actively maintained upstream.
 
---- unixos.c.orig	2003-07-21 16:54:05.000000000 -0400
-+++ unixos.c	2009-02-15 14:56:48.000000000 -0500
+--- unixos.c.orig	2003-07-21 20:54:05.000000000 +0000
++++ unixos.c
 @@ -23,9 +23,11 @@
   * SOFTWARE.
   */
@@ -53,3 +54,15 @@ Upstream: as far as I know not actively maintained upstream.
      }
      strcat(buf, "/m-prts-");
      p = getenv("USER");
+@@ -137,9 +139,9 @@ FILE *os_createnewfile(char *fname)
+     FILE *ret;
+      
+ #ifdef O_EXCL
+-    fd=open(fname, O_RDWR|O_CREAT|O_EXCL, 0644);
++    fd=open(fname, O_RDWR|O_CREAT|O_EXCL, 0600);
+ #else
+-    fd=open(fname, O_RDWR|O_CREAT|O_TRUNC, 0644);
++    fd=open(fname, O_RDWR|O_CREAT|O_TRUNC, 0600);
+ #endif
+ 
+     if (fd == -1)
