@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.89 2012/01/10 05:56:39 agc Exp $
+$NetBSD: CHANGES-2012,v 1.90 2012/01/10 08:58:50 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -113,3 +113,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/xapian-omega to 1.2.8 [schmonz 2012-01-10]
 	Updated textproc/p5-Search-Xapian to 1.2.8.0 [schmonz 2012-01-10]
 	Updated math/maxima to 5.26.0 [asau 2012-01-10]
+	Updated devel/p5-Term-ShellUI to 0.91 [hiramatsu 2012-01-10]
+	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.59 [hiramatsu 2012-01-10]
