@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2011/05/09 22:32:40 asau Exp $
+# $NetBSD: Makefile,v 1.30 2012/01/10 03:38:08 asau Exp $
 #
 
-DISTNAME=		maxima-5.24.0
+DISTNAME=		maxima-5.26.0
 # On updates, please make sure editors/TeXmacs knows about the new
 # version number.
 # (if needed, patch plugins/maxima/bin/{maxima_detect,tm_maxima})
