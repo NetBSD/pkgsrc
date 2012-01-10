@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.91 2012/01/10 10:43:41 obache Exp $
+$NetBSD: CHANGES-2012,v 1.92 2012/01/10 11:29:50 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -115,4 +115,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/maxima to 5.26.0 [asau 2012-01-10]
 	Updated devel/p5-Term-ShellUI to 0.91 [hiramatsu 2012-01-10]
 	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.59 [hiramatsu 2012-01-10]
+	Updated multimedia/x264-devel to 20111207 [drochner 2012-01-10]
+	Updated multimedia/ffmpeg to 0.7.10 [drochner 2012-01-10]
+	Updated multimedia/vlc to 1.1.13 [drochner 2012-01-10]
+	Updated multimedia/xine-lib to 1.1.20.1 [drochner 2012-01-10]
+	Updated graphics/gdk-pixbuf2 to 2.24.1 [drochner 2012-01-10]
+	Updated print/scribus-qt4 to 1.4.0 [drochner 2012-01-10]
 	Updated net/mikutter to 0.0.4.638 [obache 2012-01-10]
