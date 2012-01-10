@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.85 2012/01/10 01:03:40 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.86 2012/01/10 01:04:07 schmonz Exp $
 
 ================================================================================
 README! README! README! README! README! README! README! README! README! README!
@@ -119,3 +119,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/epic4 to 2.2nb3 [sbd 2012-01-09]
 	Updated sysutils/mc to 4.7.0.10nb4 [sbd 2012-01-10]
 	Updated textproc/xapian to 1.2.8 [schmonz 2012-01-10]
+	Updated textproc/xapian-omega to 1.2.8 [schmonz 2012-01-10]
