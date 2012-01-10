@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2011/12/03 03:44:38 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/10 01:03:28 schmonz Exp $
 #
 
-DISTNAME=	xapian-core-1.2.2
+DISTNAME=	xapian-core-1.2.8
 PKGNAME=	${DISTNAME:S/-core//}
-PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	http://oligarchy.co.uk/xapian/1.2.2/
+MASTER_SITES=	http://oligarchy.co.uk/xapian/1.2.8/
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://xapian.org/
@@ -20,40 +19,6 @@ USE_LANGUAGES=	c c++
 
 TEST_TARGET=	check
 
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.xapian
-.if ${OPSYS} == "Darwin"
-PKG_SUPPORTED_OPTIONS=	xapian-flint-backend xapian-quartz-backend
-PKG_SUGGESTED_OPTIONS=	xapian-flint-backend xapian-quartz-backend
-.else
-PKG_SUPPORTED_OPTIONS=	xapian-flint-backend
-PKG_SUGGESTED_OPTIONS=	xapian-flint-backend
-.endif
-
-.include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		quartz
-.if !empty(PKG_OPTIONS:Mxapian-quartz-backend)
-CONFIGURE_ARGS+=	--enable-backend-quartz
-PLIST.quartz=		yes
-.else
-CONFIGURE_ARGS+=	--disable-backend-quartz
-.endif
-
-PLIST_VARS+=		flint
-.if !empty(PKG_OPTIONS:Mxapian-flint-backend)
-CONFIGURE_ARGS+=	--enable-backend-flint
-PLIST.flint=		yes
-.else
-CONFIGURE_ARGS+=	--disable-backend-flint
-.endif
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .include "../../devel/libuuid/buildlink3.mk"
-.endif
-
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
