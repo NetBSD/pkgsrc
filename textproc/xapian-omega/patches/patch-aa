@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2009/08/27 13:22:42 schmonz Exp $
+$NetBSD: patch-aa,v 1.3 2012/01/10 01:04:00 schmonz Exp $
 
---- Makefile.in.orig	2009-08-26 17:52:54.000000000 -0400
+Call it "xapian-omega" and follow hier(7).
+
+--- Makefile.in.orig	2011-12-14 05:34:48.000000000 +0000
 +++ Makefile.in
-@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
+@@ -38,7 +38,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
@@ -10,21 +12,26 @@ $NetBSD: patch-aa,v 1.2 2009/08/27 13:22:42 schmonz Exp $
 +pkglibbin_PROGRAMS = xapian-omega$(EXEEXT)
  bin_PROGRAMS = omindex$(EXEEXT) scriptindex$(EXEEXT)
  check_PROGRAMS = htmlparsetest$(EXEEXT) md5test$(EXEEXT) \
- 	utf8converttest$(EXEEXT)
-@@ -336,10 +336,10 @@ EXTRA_DIST = \
- 	xapian-omega.spec
+ 	urlenctest$(EXEEXT) utf8converttest$(EXEEXT)
+@@ -423,7 +423,7 @@ AM_CPPFLAGS = \
+ 	-DCONFIGFILE_SYSTEM=\"$(sysconfdir)/omega.conf\" \
+ 	-DPKGLIBBINDIR=\"$(pkglibbindir)\"
  
- AM_CPPFLAGS = -DCONFIGFILE_SYSTEM=\"$(sysconfdir)/omega.conf\"
 -pkglibbindir = $(pkglibdir)/bin
 +pkglibbindir = $(libexecdir)/cgi-bin
+ dist_pkglibbin_SCRIPTS = outlookmsg2html
  dist_bin_SCRIPTS = dbi2omega htdig2omega mbox2omega
- TESTS = htmlparsetest$(EXEEXT) md5test$(EXEEXT) utf8converttest$(EXEEXT)
+ TESTS = htmlparsetest$(EXEEXT)\
+@@ -431,7 +431,7 @@ TESTS = htmlparsetest$(EXEEXT)\
+ 	urlenctest$(EXEEXT)\
+ 	utf8converttest$(EXEEXT)
+ 
 -omegadatadir = $(datadir)/omega
 +omegadatadir = $(datadir)/xapian-omega
  dist_omegadata_DATA = htdig2omega.script mbox2omega.script
  dist_sysconf_DATA = omega.conf
  
-@@ -510,8 +510,8 @@ htmlparsetest$(EXEEXT): $(htmlparsetest_
+@@ -662,8 +662,8 @@ htmlparsetest$(EXEEXT): $(htmlparsetest_
  md5test$(EXEEXT): $(md5test_OBJECTS) $(md5test_DEPENDENCIES) 
  	@rm -f md5test$(EXEEXT)
  	$(CXXLINK) $(md5test_OBJECTS) $(md5test_LDADD) $(LIBS)
