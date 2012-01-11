@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/01/11 02:46:01 sbd Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/01/11 09:43:25 asau Exp $
 bin/bt2line
 bin/check_callstack
 bin/clog2_join
@@ -16,9 +16,6 @@ bin/mpiexec.gforker
 bin/mpiexec.hydra
 bin/mpif77
 bin/mpirun
-bin/parkill
-bin/plpa-info
-bin/plpa-taskset
 include/clog_commset.h
 include/clog_const.h
 include/clog_inttypes.h
@@ -35,7 +32,7 @@ include/mpicxx.h
 include/mpif.h
 include/mpio.h
 include/mpiof.h
-include/plpa.h
+include/mpix.h
 lib/libfmpich.a
 lib/liblmpe.a
 lib/libmpe.a
@@ -49,13 +46,17 @@ lib/libmpichcxx.a
 lib/libmpl.la
 lib/libtmpe.a
 lib/mpe_prof.o
-lib/pkgconfig/mpich2-ch3.pc
+lib/pkgconfig/mpich2-c.pc
+lib/pkgconfig/mpich2-cxx.pc
+lib/pkgconfig/mpich2-f77.pc
+lib/pkgconfig/mpich2-f90.pc
 man/man1/MPI.1
 man/man1/mpicc.1
 man/man1/mpicxx.1
 man/man1/mpiexec.1
 man/man1/mpif77.1
 man/man1/mpif90.1
+man/man3/MPIX_Group_comm_create.3
 man/man3/MPI_Abort.3
 man/man3/MPI_Accumulate.3
 man/man3/MPI_Add_error_class.3
@@ -414,6 +415,7 @@ share/doc/mpich2/html/www1/mpicxx.html
 share/doc/mpich2/html/www1/mpiexec.html
 share/doc/mpich2/html/www1/mpif77.html
 share/doc/mpich2/html/www1/mpif90.html
+share/doc/mpich2/html/www3/MPIX_Group_comm_create.html
 share/doc/mpich2/html/www3/MPI_Abort.html
 share/doc/mpich2/html/www3/MPI_Accumulate.html
 share/doc/mpich2/html/www3/MPI_Add_error_class.html
