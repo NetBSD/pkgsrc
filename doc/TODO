@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10782 2012/01/11 16:51:02 schmonz Exp $
+$NetBSD: TODO,v 1.10783 2012/01/11 17:01:30 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -979,7 +979,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mediawiki-1.17.1 [security fix]
 	o mediawiki-1.18.0
 	o memtest86-4.0 [pkg/45754]
-	o memtester-4.2.2
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
