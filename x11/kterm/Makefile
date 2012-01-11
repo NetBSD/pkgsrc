@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.51 2011/02/21 07:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2012/01/11 12:06:51 ryoon Exp $
 
 DISTNAME=	kterm-6.2.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 # the following patch includes NFS xauth patch, and kamo's wd0.2 patch.
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	kterm-620-0213-20030825.diff.gz
+PATCH_SITES=	${MASTER_SITE_LOCAL}
+PATCHFILES=	kterm-6.2.0-termios-wd0.2.patch \
+		kterm-6.2.0.NFS-xauth.patch \
+		kterm-6.2.0.ext06.patch.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
