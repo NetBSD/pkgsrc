@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/06/12 11:43:34 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/11 13:47:31 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gstreamer-${VERSION}
@@ -11,11 +11,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_EXTCONF_SUBDIRS=	gstreamer
 
+DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
+
 do-test:
 	${RUN} cd ${WRKSRC}/gstreamer/test; ${SETENV} ${TEST_ENV} ${RUBY} run-test.rb
 
-BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
-.include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../devel/ruby-pkg-config/tool.mk"
