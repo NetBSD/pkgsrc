@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/04/22 13:42:56 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/11 19:08:55 hans Exp $
 
 DISTNAME=		moc-2.5.0-alpha3
 PKGNAME=		${DISTNAME:S/-alpha/./:moc%=moc-devel%}
@@ -36,6 +36,13 @@ SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 #	cd ${WRKSRC} && autoreconf -v -i
 post-extract:
 	${CP} ${FILESDIR}/getline.c ${WRKSRC}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=   rm:-Wl,--export-dynamic
+.endif
+
+LIBS.SunOS+=    -lsocket
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
