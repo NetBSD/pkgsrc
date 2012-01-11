@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/09/12 06:27:21 dholland Exp $
+$NetBSD: distinfo,v 1.6 2012/01/11 19:08:55 hans Exp $
 
 SHA1 (moc-2.5.0-alpha3.tar.bz2) = 59251b6239ad38f3f5ba8a1f73d1e90246765ab7
 RMD160 (moc-2.5.0-alpha3.tar.bz2) = 7a603538e2080f3e182a543bc82100a09a56c2fe
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 44b3ede2c3d69857e84a67ede997b429cce61a29
 SHA1 (patch-ae) = f7b98f7af3843432bab24049b17c8639a0dfce59
 SHA1 (patch-af) = 0176dff0c460a12a563df10685818face3c4b3d5
 SHA1 (patch-ag) = 818df09cf6d06165cbd1c62681a3b5d84daa30bf
+SHA1 (patch-playlist__file.c) = 1026a40068a75e5076d3b6d661e5c47f7f0a418e
