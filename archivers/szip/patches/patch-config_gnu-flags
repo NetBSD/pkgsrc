@@ -1,0 +1,13 @@
+$NetBSD: patch-config_gnu-flags,v 1.1 2012/01/11 14:20:21 hans Exp $
+
+--- config/gnu-flags.orig	2005-03-04 22:37:52.000000000 +0100
++++ config/gnu-flags	2011-12-28 13:09:28.722283206 +0100
+@@ -168,7 +168,7 @@ esac
+ # Please follow the pattern below by adding new versions at the top, copying
+ # the information from the previous version and adding modifications to that.
+ case "$cc_vendor-$cc_version" in
+-    gcc-3.3*)
++    gcc-3.3*|gcc-3.4*|gcc-4.*)
+         # Replace -ansi flag with -std=c99 flag
+ 	CFLAGS="`echo $CFLAGS | sed -e 's/-ansi/-std=c99/g'`"
+ 
