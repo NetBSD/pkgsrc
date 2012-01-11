@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/10/21 20:51:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/11 18:43:31 hans Exp $
 #
 
 DISTNAME=	libmp3splt-0.7
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
+
+LIBS.SunOS+=		-lresolv
 
 FIND_PREFIX:=   LTDLDIR=libltdl
 .include "../../mk/find-prefix.mk"
