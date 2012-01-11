@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/11/01 06:00:35 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2012/01/11 15:54:44 hans Exp $
 #
 
 DISTNAME=	easytag-2.1.6
@@ -23,8 +23,6 @@ USE_TOOLS+=		pkg-config xgettext
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.1
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.4.1
-
-CPPFLAGS.SunOS=		-Du_int64_t=uint64_t -Du_int32_t=uint32_t -Du_int16_t=uint16_t -Du_int8_t=uint8_t
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
