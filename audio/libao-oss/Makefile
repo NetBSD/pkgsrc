@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/30 17:50:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/11 18:06:22 hans Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/libao/libao-oss/}
 
 COMMENT+=	(OSS plugin)
 
-NOT_FOR_PLATFORM+=	Darwin-*-* Interix-*-* SunOS-*-*
+NOT_FOR_PLATFORM+=	Darwin-*-* Interix-*-* SunOS-5.[0-9]-* SunOS-5.10-*
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/ENABLE_OSS=no/ENABLE_OSS=yes/g}
 BUILD_DIRS=		${WRKSRC}/src/plugins/oss
