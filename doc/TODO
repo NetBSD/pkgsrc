@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10779 2012/01/11 11:32:14 obache Exp $
+$NetBSD: TODO,v 1.10780 2012/01/11 11:33:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -435,9 +435,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bitlbee-3.0.4
 	o bitmap-1.0.5
 	o blender-2.61
-	o bluefish-2.2.0
+	o bluefish-2.2.1
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o bochs-2.5.1
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
@@ -451,7 +452,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o calamaris-2.59
 	o calibre-0.8.34
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o ccache-3.1.6
+	o ccache-3.1.7
 	o cddbd-1.5.2
 	o cdialog-1.1.20111020
 	o cdif-1.19
@@ -502,7 +503,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dbench-4.0
 	o dbus-1.4.16
 	o dbus-glib-0.98
-	o dcc-1.3.140
+	o dcc-1.3.141
 	o dconf-0.7.1
 	o ddclient-3.7.3
 	o ddrescue-1.15
@@ -709,7 +710,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-games-3.2.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
 	o gnome-keyring-3.2.2
-	o gnome-mag-0.16.3
+	o gnome-mag-0.16.3 [pkg/45812]
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
@@ -925,7 +926,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libltdl-2.4
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
-	o libmemcached-1.0.2
+	o libmemcached-1.0.3
 	o libmilter-8.14.5
 	o libnasl-2.3.1
 	o libnids-1.24
@@ -1066,7 +1067,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0f
 	o openttd-1.1.4
 	o opera-11.60
-	o orca-2.32.1 [GNOME 2.32]
+	o orca-2.32.1 [pkg/45807, GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o otpCalc-0.97
@@ -1185,6 +1186,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8
+	o rdesktop-1.7.1
 	o rdp-1.6
 	o recordproto-1.14.1
 	o redland-1.0.15 [needs rasqal-0.9.22]
@@ -1225,7 +1227,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-base-1.7.8.3
 	o scmgit-docs-1.7.8.2
 	o scons-2.0.1
-	o scribus-1.4.0
 	o scrnsaverproto-1.2.1
 	o scrollz-1.9.99
 	o scrotwm-0.9.34
@@ -1373,7 +1374,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vmips-1.3.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
-	o vttest-20110705
+	o vttest-20111210
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warzone2100-2.3.8
@@ -1472,7 +1473,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xgamma-1.0.4
 	o xhippo-3.5
 	o xhost-1.0.4
-	o xine-lib-1.1.20.1
 	o xine-lib-1.2.0
 	o xineramaproto-1.2.1
 	o xinit-1.3.1
@@ -1520,7 +1520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsetroot-1.1.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-276
+	o xterm-277
 	o xtraceroute-0.9.1
 	o xtrans-1.2.6
 	o xtu-1.3
