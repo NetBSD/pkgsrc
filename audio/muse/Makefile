@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/12/17 10:14:48 sbd Exp $
+# $NetBSD: Makefile,v 1.37 2012/01/11 19:59:35 hans Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-gtk2
 LIBS+=			${LIBOSSAUDIO}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 MAKE_FLAGS+=		docsdir=${PREFIX:Q}/share/doc/MuSE
+
+LIBS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	post-patch
