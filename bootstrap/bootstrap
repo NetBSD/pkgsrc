@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.173 2011/11/29 17:06:45 hans Exp $
+# $NetBSD: bootstrap,v 1.174 2012/01/11 01:15:17 riz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -276,7 +276,7 @@ mkdir_p()
 
 mkdir_p_early()
 {
-	[ -d "$1" ] && return 0	
+	[ -d "$1" ] && return 0
 	mkdir -p "$1" 2> /dev/null && return 0
 	parent=`dirname "$1"`
 	mkdir_p_early "$parent"
@@ -329,7 +329,7 @@ case "$bootstrap_sh" in
 /*)
 	;;
 *)
-	echo "ERROR: The variable SH must contain an absolute path" 1>&2 
+	echo "ERROR: The variable SH must contain an absolute path" 1>&2
 	exit 1
 	;;
 esac
@@ -1121,7 +1121,7 @@ echo "You can find extensive documentation of the NetBSD Packages Collection"
 echo "in $pkgsrcdir/doc/pkgsrc.txt."
 echo ""
 echo "Hopefully everything is now complete."
-echo "Thank you"
+echo "Thank you for using pkgsrc!"
 echo ""
 echo "$hline"
 echo ""
