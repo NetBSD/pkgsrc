@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2011/11/30 08:04:20 sbd Exp $
+# $NetBSD: builtin.mk,v 1.4 2012/01/11 13:28:45 hans Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -73,6 +73,11 @@ CHECK_BUILTIN.libuuid?=	no
       !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 BUILDLINK_TARGETS+=	libuuid-fake-pc
 
+.    if ${OPSYS} == "SunOS"
+BUILDLINK_PASSTHRU_DIRS+=	/lib
+LIBUUID_LDADD=			-L/lib
+.    endif
+
 libuuid-fake-pc:
 	${RUN}						\
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\
@@ -84,7 +89,7 @@ libuuid-fake-pc:
 		{	${ECHO} "Name: uuid";				\
 			${ECHO} "Description: Universally unique id library"; \
 			${ECHO} "Version: ${BUILTIN_VERSION.libuuid}";	\
-			${ECHO} "Libs: -L/usr/lib -luuid"		\
+			${ECHO} "Libs: -L/usr/lib -luuid ${LIBUUID_LDADD}"	\
 			${ECHO} "Cflags: -I/usr/include";		\
 		} >$${dst} ;\
 	fi
