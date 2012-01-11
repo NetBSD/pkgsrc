@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/01/11 20:08:39 drochner Exp $
+
+This should be done when installing the package (Makefile when
+"make install" or PLIST when "pkg_add").
+
+--- pskgen/Makefile.in.orig	2007-12-12 07:12:22.000000000 +0000
++++ pskgen/Makefile.in
+@@ -17,11 +17,9 @@ PROG=pskgen
+ all:
+ 
+ install: all
+-	$(INSTALL) -d $(sbindir)
+-	$(INSTALL_SCRIPT) $(PROG) $(sbindir)
+-	$(INSTALL_DATA) $(PROG).8 $(mandir)/man8
+-	$(INSTALL) -d $(prefix)/etc/racoon2
+-	sh ./autogen.spmd.pwd
++	$(INSTALL) -d $(DESTDIR)$(sbindir)
++	$(INSTALL_SCRIPT) $(PROG) $(DESTDIR)$(sbindir)
++	$(INSTALL_DATA) $(PROG).8 $(DESTDIR)$(mandir)/man8
+ 
+ depend:
+ 

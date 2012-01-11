@@ -1,0 +1,6 @@
+The Racoon2 project is a joint effort which provides an implementation
+of key management system for IPsec.  The implementation is called
+Racoon2, a successor of Racoon, which was developed by the KAME
+project.  It supports IKEv1, IKEv2, and KINK protocols.  It works on
+FreeBSD, NetBSD, Linux, and Mac OS X.  Racoon2 is provided under a
+BSD-style license.
