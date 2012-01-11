@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/01/11 20:08:39 drochner Exp $
+
+Don't mess up user's configuration files.
+
+--- samples/Makefile.in.orig	2007-12-27 10:08:52.000000000 +0900
++++ samples/Makefile.in	2007-12-27 10:08:52.000000000 +0900
+@@ -11,8 +11,7 @@
+ # empty
+ all:
+ 
+-install: all install-startup-@startup_scripts@ install-samples install-hook
+-	$(INSTALL) -d -o 0 -g 0 -m 700 /var/run/racoon2
++install: all install-startup-@startup_scripts@
+ 
+ install-samples:
+ 	$(INSTALL) -d $(sysconfdir)
