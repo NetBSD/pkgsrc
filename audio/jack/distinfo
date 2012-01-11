@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2008/11/16 11:55:19 bjs Exp $
+$NetBSD: distinfo,v 1.9 2012/01/11 17:51:21 hans Exp $
 
 SHA1 (jack-audio-connection-kit-0.115.1.tar.bz2) = 13c07dd4c9bc53475084f8e7a9c5bd9791f76838
 RMD160 (jack-audio-connection-kit-0.115.1.tar.bz2) = fa4e0eace1a21cdfb29b2fe32b38a0c12b98434a
@@ -19,3 +19,4 @@ SHA1 (patch-ap) = 60738eae086bdab7aa1986889da95621353f7aa6
 SHA1 (patch-aq) = 212441bb56a4cf33a213bb299f42e7dbcbc33274
 SHA1 (patch-ar) = 892dcd268eef033a9dcb2251560fc48662b54916
 SHA1 (patch-as) = 46c609026d53fdebf1d46263d8f196cd8ecbac77
+SHA1 (patch-drivers_netjack_netjack__packet.c) = 6ac2d470a10a823d66f3836989fa7125eae3e1b9
