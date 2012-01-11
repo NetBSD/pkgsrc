@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/01/04 06:46:58 sbd Exp $
+# $NetBSD: Makefile,v 1.19 2012/01/11 17:51:21 hans Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--enable-timestamps
 
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 CFLAGS.Linux+=		-D_GNU_SOURCE
+CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
 
