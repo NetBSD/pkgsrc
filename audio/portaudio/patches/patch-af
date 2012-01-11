@@ -1,8 +1,14 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/04/20 17:52:49 ben Exp $
+$NetBSD: patch-af,v 1.2 2012/01/11 20:14:10 hans Exp $
 
 --- pa_unix_oss/pa_unix_oss.c~	Mon Jun 30 11:05:50 2003
 +++ pa_unix_oss/pa_unix_oss.c	Wed Nov 26 02:40:25 2003
-@@ -47,6 +47,9 @@
+@@ -43,10 +43,15 @@
+ 
+ #ifdef __linux__
+ #include <linux/soundcard.h>
++#elif defined(__sun)
++#include <sys/soundcard.h>
+ #else
  #include <machine/soundcard.h> /* JH20010905 */
  #endif
  
@@ -12,7 +18,7 @@ $NetBSD: patch-af,v 1.1.1.1 2004/04/20 17:52:49 ben Exp $
  
  #ifndef AFMT_S16_NE
  #define AFMT_S16_NE  Get_AFMT_S16_NE()
-@@ -236,7 +239,11 @@
+@@ -236,7 +241,11 @@ PaError Pa_SetupDeviceFormat( int devHan
          ERR_RPT(("Pa_SetupDeviceFormat: HW does not support AFMT_S16_NE\n" ));
          return paHostError;
      }
