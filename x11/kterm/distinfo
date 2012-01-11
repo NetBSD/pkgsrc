@@ -1,11 +1,17 @@
-$NetBSD: distinfo,v 1.19 2011/02/21 07:33:48 wiz Exp $
+$NetBSD: distinfo,v 1.20 2012/01/11 12:06:51 ryoon Exp $
 
+SHA1 (kterm-6.2.0-termios-wd0.2.patch) = d5757bc6ddd850132f89283e1ceb4f5ff4e8c00b
+RMD160 (kterm-6.2.0-termios-wd0.2.patch) = 61ce0c04d0fdcf6e3bf076bc2109cc5f819dff40
+Size (kterm-6.2.0-termios-wd0.2.patch) = 7234 bytes
+SHA1 (kterm-6.2.0.NFS-xauth.patch) = 940298d2ae3f45d4b2c80f29687c90a09d9a6cb0
+RMD160 (kterm-6.2.0.NFS-xauth.patch) = dd4aa490abeea768e74b97baba6ea29f79299328
+Size (kterm-6.2.0.NFS-xauth.patch) = 4137 bytes
+SHA1 (kterm-6.2.0.ext06.patch.gz) = aa7e4b7c96fd39f0b7a247734ca3992d3faa0243
+RMD160 (kterm-6.2.0.ext06.patch.gz) = 3486869425a85496714ef98493f32188fffcfe38
+Size (kterm-6.2.0.ext06.patch.gz) = 78729 bytes
 SHA1 (kterm-6.2.0.tar.gz) = 23b612254e9f7c9f5e233a4bcacc651887a3f7ee
 RMD160 (kterm-6.2.0.tar.gz) = d23c755f119b5602a3c6f6ac97e27e10c43a8bfe
 Size (kterm-6.2.0.tar.gz) = 200448 bytes
-SHA1 (kterm-620-0213-20030825.diff.gz) = 48ecccb1dd7de2f0337a4bb782e1ad4516e0266f
-RMD160 (kterm-620-0213-20030825.diff.gz) = bb149345361ec60d823447eef8c1e729d8c01995
-Size (kterm-620-0213-20030825.diff.gz) = 14586 bytes
 SHA1 (patch-aa) = 6afc18d4c35f86077e00d3444d8ba6953463f073
 SHA1 (patch-ab) = 011b1fc5033f61784e57030c78f6cca5a82722d1
 SHA1 (patch-ac) = 926a43c2bb1b78cd87dae39b10800a1e7cdfe0ce
