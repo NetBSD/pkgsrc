@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2011/11/07 13:10:31 hans Exp $
+# $NetBSD: Makefile,v 1.43 2012/01/11 22:41:46 tron Exp $
 
 DISTNAME=	libtorrent-0.12.9
 CATEGORIES=	net
@@ -20,8 +20,9 @@ CONFIGURE_ARGS+=	--disable-debug
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH} == "alpha" || \
     ${MACHINE_ARCH} == "i386" || \
+    ${MACHINE_ARCH} == "powerpc" || \
     ${MACHINE_ARCH} == "x86_64"
-GCC_REQD+=		3.3
+GCC_REQD+=		4.1.3
 .else
 GCC_REQD+=		4.2.1
 .endif
