@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2012/01/11 20:18:24 hans Exp $
+bin/nasay
