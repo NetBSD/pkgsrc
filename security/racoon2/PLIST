@@ -1,0 +1,66 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/11 20:08:39 drochner Exp $
+${IKED}man/man8/iked.8
+${KINKD}man/man8/kinkd.8
+man/man8/pskgen.8
+man/man8/spmd.8
+man/man8/spmdctl.8
+${IKED}sbin/iked
+${KINKD}sbin/kinkd
+sbin/pskgen
+sbin/spmd
+sbin/spmdctl
+share/doc/racoon2/COPYRIGHT
+share/doc/racoon2/README
+share/doc/racoon2/NEWS
+share/doc/racoon2/INSTALL
+share/doc/racoon2/USAGE
+share/doc/racoon2/cfg-usage.txt
+share/doc/racoon2/config-usage.txt
+share/examples/racoon2/default.conf
+share/examples/racoon2/racoon2.conf
+share/examples/racoon2/vals.conf
+share/examples/racoon2/transport_ike.conf
+share/examples/racoon2/tunnel_ike.conf
+share/examples/racoon2/tunnel_ike_natt.conf
+share/examples/racoon2/transport_kink.conf
+share/examples/racoon2/tunnel_kink.conf
+share/examples/racoon2/local-test.conf
+share/examples/racoon2/hook/functions
+share/examples/racoon2/hook/child-up
+share/examples/racoon2/hook/child-up.d/00childup_sample
+share/examples/racoon2/hook/child-down
+share/examples/racoon2/hook/child-rekey
+share/examples/racoon2/hook/ikesa-up
+share/examples/racoon2/hook/ikesa-up.d/00ikesaup_sample
+share/examples/racoon2/hook/ikesa-down
+share/examples/racoon2/hook/ikesa-rekey
+share/examples/racoon2/hook/migration
+share/examples/racoon2/hook/ph1-up
+share/examples/racoon2/hook/ph1-down
+share/examples/rc.d/iked
+share/examples/rc.d/kinkd
+share/examples/rc.d/racoon2
+share/examples/rc.d/spmd
+@dirrm share/doc/racoon2
+@exec ${MKDIR} %D/share/examples/racoon2/hook/child-up.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/child-down.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/child-rekey.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/ikesa-up.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/ikesa-down.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/ikesa-rekey.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/migration.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/ph1-up.d
+@exec ${MKDIR} %D/share/examples/racoon2/hook/ph1-down.d
+@dirrm share/examples/racoon2/hook/child-up.d
+@dirrm share/examples/racoon2/hook/child-down.d
+@dirrm share/examples/racoon2/hook/child-rekey.d
+@dirrm share/examples/racoon2/hook/ikesa-up.d
+@dirrm share/examples/racoon2/hook/ikesa-down.d
+@dirrm share/examples/racoon2/hook/ikesa-rekey.d
+@dirrm share/examples/racoon2/hook/migration.d
+@dirrm share/examples/racoon2/hook/ph1-up.d
+@dirrm share/examples/racoon2/hook/ph1-down.d
+@dirrm share/examples/racoon2/hook
+@dirrm share/examples/racoon2
+@exec %D/sbin/pskgen -r -o ${PKG_SYSCONFDIR}/spmd.pwd
+@unexec ${RM} ${PKG_SYSCONFDIR}/spmd.pwd

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/11 20:08:39 drochner Exp $
+
+SHA1 (racoon2-20100526a.tgz) = 268429af8a031dbbc279580cf98ea18331f0e2d9
+RMD160 (racoon2-20100526a.tgz) = 014cdcf78cc82ab21235a21491850cdcd1f883bf
+Size (racoon2-20100526a.tgz) = 1017077 bytes
+SHA1 (patch-aa) = e3bc810f72dac266bec992f0430572b00768cc22
+SHA1 (patch-ab) = eb6d901108ebcca90571851817137b4b3f3c594b
+SHA1 (patch-ac) = 081a2d3d694d4c20cf1fa2d9718577577280288e
+SHA1 (patch-ad) = 0d04dc7027c100de6bc04db00eddb30a12fd8715
+SHA1 (patch-ae) = 937cf84a2b6f1e8f8d288703a0556faf500bab95

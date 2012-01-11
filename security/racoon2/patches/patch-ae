@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/01/11 20:08:39 drochner Exp $
+
+--- kinkd/Makefile.in.orig	2010-05-07 18:42:30.000000000 +0000
++++ kinkd/Makefile.in
+@@ -49,14 +49,14 @@ $(PROG): ../lib/libracoon.a
+ ../lib/libracoon.a:		# check its timestamp only when there is.
+ 
+ install: all
+-	$(INSTALL) -d $(sbindir)
+-	$(INSTALL_PROGRAM) $(PROG) $(sbindir)
+-	$(INSTALL) -d $(mandir)/man8
++	$(INSTALL) -d $(DESTDIR)$(sbindir)
++	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)$(sbindir)
++	$(INSTALL) -d $(DESTDIR)$(mandir)/man8
+ # not friendly with -n  :-(
+ 	sysconfdir="$$(echo '$(sysconfdir)' | sed 's/%/\\\%/g')"; \
+ 	for f in $(MAN); do \
+ 		sed -e s%\@sysconfdir\@%"$$sysconfdir"%g < $$f > $${f}.tmp; \
+-		$(INSTALL_DATA) $${f}.tmp $(mandir)/man$${f##*.}/$$f; \
++		$(INSTALL_DATA) $${f}.tmp $(DESTDIR)$(mandir)/man$${f##*.}/$$f; \
+ 		rm $${f}.tmp; \
+ 	done
+ 
