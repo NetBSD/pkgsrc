@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.102 2012/01/11 14:54:38 taca Exp $
+$NetBSD: CHANGES-2012,v 1.103 2012/01/11 16:51:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -143,3 +143,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/ruby-gnome2-gtksourceview2 to 1.1.0 [obache 2012-01-11]
 	Updated x11/ruby-gnome2-vte to 1.1.0 [obache 2012-01-11]
 	Updated lang/php53 to 5.3.9 [taca 2012-01-11]
+	Updated textproc/py-feedparser to 5.1 [schmonz 2012-01-11]
