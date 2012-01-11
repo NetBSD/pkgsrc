@@ -1,20 +1,29 @@
-$NetBSD: patch-ab,v 1.6 2004/06/09 12:53:46 minskim Exp $
+$NetBSD: patch-ab,v 1.7 2012/01/11 20:26:13 hans Exp $
 
 --- mpegsound/mpegsound.h.orig	1998-03-06 11:43:55.000000000 -0600
 +++ mpegsound/mpegsound.h
-@@ -11,6 +11,11 @@
+@@ -11,6 +11,20 @@
  /************************************/
  #include <stdio.h>
  #include <sys/types.h>
 +#ifdef __linux__
 +#include <endian.h>
++#elif defined(__sun)
++#include <sys/byteorder.h>
++#define LITTLE_ENDIAN 1234
++#define BIG_ENDIAN 4321
++#ifdef _LITTLE_ENDIAN
++#define BYTE_ORDER LITTLE_ENDIAN
++#else
++#define BYTE_ORDER BIG_ENDIAN
++#endif
 +#else
 +#include <machine/endian.h>
 +#endif
  
  #ifdef PTHREADEDMPEG
  #ifdef HAVE_PTHREAD_H
-@@ -90,6 +95,8 @@
+@@ -90,6 +104,8 @@
  /*******************************************/
  /* Define values for Microsoft WAVE format */
  /*******************************************/
@@ -23,7 +32,7 @@ $NetBSD: patch-ab,v 1.6 2004/06/09 12:53:46 minskim Exp $
  #define RIFF		0x46464952
  #define WAVE		0x45564157
  #define FMT		0x20746D66
-@@ -101,6 +108,21 @@
+@@ -101,27 +117,42 @@
  #define MODE_MONO   0
  #define MODE_STEREO 1
  
@@ -45,3 +54,38 @@ $NetBSD: patch-ab,v 1.6 2004/06/09 12:53:46 minskim Exp $
  /********************/
  /* Type definitions */
  /********************/
+ typedef float REAL;
+ 
+ typedef struct _waveheader {
+-  u_int32_t     main_chunk;  // 'RIFF'
+-  u_int32_t     length;      // filelen
+-  u_int32_t     chunk_type;  // 'WAVE'
+-
+-  u_int32_t     sub_chunk;   // 'fmt '
+-  u_int32_t     sc_len;      // length of sub_chunk, =16
+-  u_int16_t     format;      // should be 1 for PCM-code
+-  u_int16_t     modus;       // 1 Mono, 2 Stereo
+-  u_int32_t     sample_fq;   // frequence of sample
+-  u_int32_t     byte_p_sec;
+-  u_int16_t     byte_p_spl;  // samplesize; 1 or 2 bytes
+-  u_int16_t     bit_p_spl;   // 8, 12 or 16 bit
++  uint32_t     main_chunk;  // 'RIFF'
++  uint32_t     length;      // filelen
++  uint32_t     chunk_type;  // 'WAVE'
++
++  uint32_t     sub_chunk;   // 'fmt '
++  uint32_t     sc_len;      // length of sub_chunk, =16
++  uint16_t     format;      // should be 1 for PCM-code
++  uint16_t     modus;       // 1 Mono, 2 Stereo
++  uint32_t     sample_fq;   // frequence of sample
++  uint32_t     byte_p_sec;
++  uint16_t     byte_p_spl;  // samplesize; 1 or 2 bytes
++  uint16_t     bit_p_spl;   // 8, 12 or 16 bit
+ 
+-  u_int32_t     data_chunk;  // 'data'
+-  u_int32_t     data_length; // samplecount
++  uint32_t     data_chunk;  // 'data'
++  uint32_t     data_length; // samplecount
+ }WAVEHEADER;
+ 
+ typedef struct
