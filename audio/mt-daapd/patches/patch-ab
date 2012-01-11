@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2006/12/06 16:41:26 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2012/01/11 19:55:56 hans Exp $
 
 --- src/mp3-scanner.c.orig	2006-12-06 16:35:37.000000000 +0000
 +++ src/mp3-scanner.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1 2006/12/06 16:41:26 joerg Exp $
  int scan_path(char *path) {
      DIR *current_dir;
 -    char de[sizeof(struct dirent) + MAXNAMLEN + 1]; /* overcommit for solaris */
-+    char de[sizeof(struct dirent) + NAME_MAX + 1]; /* overcommit for solaris */
++    char de[sizeof(struct dirent) + FILENAME_MAX + 1]; /* overcommit for solaris */
      struct dirent *pde;
      int err;
      char mp3_path[PATH_MAX];

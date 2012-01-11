@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/08/22 13:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/01/11 20:03:44 hans Exp $
 
 DISTNAME=	openal-0.0.8
 PKGREVISION=	5
@@ -22,6 +22,8 @@ INFO_FILES=		yes
 INSTALLATION_DIRS=	${PKGINFODIR} include/AL
 PKGCONFIG_OVERRIDE=	admin/pkgconfig/openal.pc.in
 LIBS+=			${LIBOSSAUDIO}
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 SUBST_CLASSES+=		fixdev
 SUBST_STAGE.fixdev=	post-configure
