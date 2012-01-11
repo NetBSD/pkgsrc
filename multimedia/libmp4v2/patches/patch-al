@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.4 2007/11/19 09:48:43 dillo Exp $
+$NetBSD: patch-al,v 1.5 2012/01/11 15:43:44 hans Exp $
 
 --- lib/mp4v2/mp4.h.orig	2007-09-28 22:45:11.000000000 +0200
 +++ lib/mp4v2/mp4.h
-@@ -31,8 +31,22 @@
+@@ -31,8 +31,29 @@
  #ifndef __MP4_INCLUDED__
  #define __MP4_INCLUDED__
  
@@ -20,6 +20,13 @@ $NetBSD: patch-al,v 1.4 2007/11/19 09:48:43 dillo Exp $
 +                                   const char *lib,
 +                                   const char *fmt,
 +                                   ...);
++
++#ifdef __sun
++#define u_int8_t	uint8_t
++#define u_int16_t	uint16_t
++#define u_int32_t	uint32_t
++#define u_int64_t	uint64_t
++#endif
 +#endif
 +
  #include <math.h>	/* to define float HUGE_VAL and/or NAN */
