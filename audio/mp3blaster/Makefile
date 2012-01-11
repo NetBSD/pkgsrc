@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/03/07 09:34:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2012/01/11 19:20:12 hans Exp $
 
 DISTNAME=	mp3blaster-3.2.5
 CATEGORIES=	audio
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3blaster/}
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://mp3blaster.sourceforge.net/
 COMMENT=	MP3 console curses-based player
+PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,6 +18,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=	yes
+
+CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
+LIBS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -46,5 +50,5 @@ CONFIGURE_ARGS+=	--with-sdl=yes
 .endif
 
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
