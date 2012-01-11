@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.2 2011/09/04 04:42:41 dholland Exp $
+$NetBSD: patch-ab,v 1.3 2012/01/11 19:11:38 hans Exp $
 
 - fix gcc/c99 inline mess
 - initialize the uninitialized (not sure if this is necessary or just to
   silence the compiler)
+- remove set but not used variable found_weak_header
 
 --- mp3_check_misc.c.orig	2000-09-16 03:36:01.000000000 +0000
 +++ mp3_check_misc.c
@@ -15,7 +16,38 @@ $NetBSD: patch-ab,v 1.2 2011/09/04 04:42:41 dholland Exp $
  int			get_char_from_file(FILE *, unsigned int *header_value, gen_info *file_info, command_flags *flags, char *possible_mp3_tag);
  int			scan_file(FILE *, char *filename, meta_options *flag_options, command_flags *flags);
  int			parse_args(char **argv, meta_options *flag_options, command_flags *flags);
-@@ -631,6 +631,8 @@ parse_args(argv, flag_options, flags)
+@@ -54,7 +54,6 @@ scan_file(fp, filename, flag_options, fl
+ 	//  the first 4 bytes off the stream no matter what. 
+ 	
+ 	char	found_valid_header = YES;
+-	char	found_weak_header = NO;
+ 
+ 
+ 	// Keep all the structures centralized.
+@@ -128,8 +127,6 @@ scan_file(fp, filename, flag_options, fl
+ 		//  
+ 		if (((header_value >> 21) & 0x7ff) == 0x7ff) {
+ 
+-			found_weak_header = YES;
+-
+ 			init_frame_struct(&mp3_i);
+ 
+ 			if (check_header_value(&header_value, filename, &mp3_i)) {
+@@ -355,13 +352,11 @@ scan_file(fp, filename, flag_options, fl
+ 
+ 			// and mark as not currently synchronized - force it
+ 			found_valid_header = YES;
+-			found_weak_header = NO;
+ 		} else {
+ 			// Getting to this section does not mean we got
+ 			// an invalid mp3 file...
+ 
+ 			found_valid_header = NO;
+-			found_weak_header = NO;
+ 		}
+ 	} // WHILE 
+ 
+@@ -631,6 +626,8 @@ parse_args(argv, flag_options, flags)
  	int	error_count = 0;
  	int	found_file = FALSE;
  
@@ -24,7 +56,7 @@ $NetBSD: patch-ab,v 1.2 2011/09/04 04:42:41 dholland Exp $
  
  	do {
  		if (*argv) {
-@@ -670,7 +672,7 @@ parse_args(argv, flag_options, flags)
+@@ -670,7 +667,7 @@ parse_args(argv, flag_options, flags)
  		return(PASS);
  }
  
