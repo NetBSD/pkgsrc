@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.10 2011/03/05 12:36:39 gdt Exp $
+$NetBSD: README.MacOSX,v 1.11 2012/01/11 01:15:17 riz Exp $
 
 
 Mac OS X Snow Leopard 32/64 (i386/x86_64) ABI issue:
@@ -11,7 +11,7 @@ packages that don't support 64-bit under Mac OS X at all.  Because of
 this, the default for pkgsrc is use use the 32-bit ABI, which results
 in packages being compiled and run in i386 mode.  For a longer
 discussion, see:
-http://mail-index.netbsd.org/pkgsrc-users/2009/09/24/msg010817.html
+http://mail-index.NetBSD.org/pkgsrc-users/2009/09/24/msg010817.html
 
 
 Developer tools:

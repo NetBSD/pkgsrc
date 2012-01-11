@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.12 2009/01/26 10:02:19 sketch Exp $
+$NetBSD: README.Solaris,v 1.13 2012/01/11 01:15:17 riz Exp $
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
@@ -45,7 +45,7 @@ If you are using gcc
 It makes life much simpler if you only use the same gcc consistently
 for building all packages.
 
-See http://www.netbsd.org/docs/software/packages.html for
+See http://www.NetBSD.org/docs/software/packages.html for
 binary kits and initial packages, including gcc.
 
 It is recommended that an external gcc be used only for bootstrapping,
