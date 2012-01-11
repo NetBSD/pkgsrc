@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/11/01 06:00:33 sbd Exp $
+# $NetBSD: Makefile,v 1.13 2012/01/11 14:48:59 hans Exp $
 #
 
 DISTNAME=	albumplayer-0.3.1
@@ -19,6 +19,11 @@ USE_TOOLS+=		pkg-config
 USE_DIRS+=		xdg-1.1
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	share/applications
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-export-dynamic
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
