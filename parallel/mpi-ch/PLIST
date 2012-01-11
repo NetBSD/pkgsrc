@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/12/17 02:47:18 asau Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/01/11 02:46:01 sbd Exp $
 bin/bt2line
 bin/check_callstack
 bin/clog2_join
@@ -17,6 +17,8 @@ bin/mpiexec.hydra
 bin/mpif77
 bin/mpirun
 bin/parkill
+bin/plpa-info
+bin/plpa-taskset
 include/clog_commset.h
 include/clog_const.h
 include/clog_inttypes.h
@@ -33,6 +35,7 @@ include/mpicxx.h
 include/mpif.h
 include/mpio.h
 include/mpiof.h
+include/plpa.h
 lib/libfmpich.a
 lib/liblmpe.a
 lib/libmpe.a
