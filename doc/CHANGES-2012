@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.98 2012/01/11 09:44:15 asau Exp $
+$NetBSD: CHANGES-2012,v 1.99 2012/01/11 09:48:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -127,3 +127,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated parallel/mpi-ch to 1.3.1nb1 [sbd 2012-01-11]
 	Added textproc/p5-Text-Typography version 0.01 [schmonz 2012-01-11]
 	Updated parallel/mpi-ch to 1.4.1p1 [asau 2012-01-11]
+	Updated net/wireshark to 1.6.5 [tron 2012-01-11]
