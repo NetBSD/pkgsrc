@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2012/01/11 02:46:01 sbd Exp $
+# $NetBSD: Makefile,v 1.68 2012/01/11 09:43:25 asau Exp $
 
-DISTNAME=	mpich2-1.3.1
-PKGREVISION=	1
+DISTNAME=	mpich2-1.4.1p1
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3.1/
+MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.4.1p1/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
@@ -29,7 +28,6 @@ CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
 CONFIGURE_ARGS+=	--with-pm=hydra:gforker
-CONFIGURE_ARGS+=	--with-hydra-bindlib=plpa # problems with hwloc
 CONFIGURE_ARGS+=	--disable-fc		# problems?
 CONFIGURE_ARGS+=	--with-openpa-prefix=$(BUILDLINK_PREFIX.openpa:Q) # reuse it
 
