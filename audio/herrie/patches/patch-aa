@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2011/12/19 06:33:33 sbd Exp $
+$NetBSD: patch-aa,v 1.6 2012/01/11 17:33:52 hans Exp $
 
 --- configure.orig	2008-07-15 11:59:07.000000000 -0400
 +++ configure
@@ -11,6 +11,15 @@ $NetBSD: patch-aa,v 1.5 2011/12/19 06:33:33 sbd Exp $
  	CFG_SETPROCTITLE=yes
  	[ "$PREFIX" = "" ] && PREFIX=/usr/local
  	[ "$MANDIR" = "" ] && MANDIR=$PREFIX/man
+@@ -105,7 +105,7 @@ BINDIR=$PREFIX/bin
+ CONFFILE=$CONFDIR/$APP_NAME.conf
+ [ "$LINGUAS" = "" ] && LINGUAS=$APP_LINGUAS
+ [ "$MANDIR" = "" ] && MANDIR=$PREFIX/share/man
+-TRANSDIR=$PREFIX/share/locale
++[ "$TRANSDIR" = "" ] && TRANSDIR=$PREFIX/share/locale
+ [ "$CC" = "" ] && CC=cc
+ [ "$INSTALL" = "" ] && INSTALL=install
+ MANPARTS="00-man 02-man 04-man 06-man"
 @@ -320,13 +320,13 @@ oss)
  	NetBSD|OpenBSD)
  		CFLAGS="$CFLAGS -DOSS_HEADER=\\<soundcard.h\\>"
