@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2009/09/11 16:24:31 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2012/01/12 15:47:45 hans Exp $
 
 --- gnuradio-core/src/lib/runtime/gr_dispatcher.cc.orig	2008-05-09 18:35:10.000000000 +1200
 +++ gnuradio-core/src/lib/runtime/gr_dispatcher.cc
@@ -29,4 +29,14 @@ $NetBSD: patch-aa,v 1.1 2009/09/11 16:24:31 joerg Exp $
 +#    include <unistd.h>
  #  endif
  #endif
+ 
+@@ -44,6 +44,9 @@
+ #  endif
+ #endif
+ 
++#ifdef __sun
++#include <string.h>		/* for memset(), used by FD_ZERO */
++#endif
+ 
+ static gr_dispatcher_sptr s_singleton;
  
