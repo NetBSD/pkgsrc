@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2011/12/07 17:01:58 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2012/01/12 16:01:46 hans Exp $
 
 PKGVER=		2.3.3
 DISTNAME=	openmotif-${PKGVER}
@@ -42,6 +42,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		flex gmake tbl pkg-config
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no # PR 37233
+
+CFLAGS.SunOS+=		-Dsun
 
 SUBST_CLASSES+=			man_rename
 SUBST_STAGE.man_rename=		pre-configure
