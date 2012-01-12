@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.110 2012/01/12 20:18:25 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.111 2012/01/12 23:04:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -157,3 +157,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql51-server to 5.1.61 [adam 2012-01-12]
 	Updated www/ap2-authn-otp to 1.1.4 [pettai 2012-01-12]
 	Updated security/oath-toolkit to 1.10.5 [pettai 2012-01-12]
+	Updated x11/qt4 to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-libs to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-tools to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-docs to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-mng to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-mysql to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-pgsql to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-qdbus to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-sqlite3 to 4.8.0 [adam 2012-01-13]
+	Updated x11/qt4-tiff to 4.8.0 [adam 2012-01-13]
