@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.4 2012/01/12 11:56:20 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.5 2012/01/12 12:06:13 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -54,3 +54,5 @@ www/php-curl: security update
 www/php-tidy: security update
 Pullup ticket #3642 - requested by drochner
 fonts/t1lib: bug fix patch
+Pullup ticket #3643 - requested by obache
+www/ruby-rack: security update
