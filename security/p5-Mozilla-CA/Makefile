@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/09/15 06:20:29 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/12 01:16:39 hiramatsu Exp $
 #
 
-DISTNAME=		Mozilla-CA-20110904
+DISTNAME=		Mozilla-CA-20111025
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mozilla/}
