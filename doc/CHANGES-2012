@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.105 2012/01/12 01:17:14 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.106 2012/01/12 12:24:56 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -147,3 +147,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/memtester to 4.2.2 [schmonz 2012-01-11]
 	Updated devel/p5-Capture-Tiny to 0.15 [hiramatsu 2012-01-12]
 	Updated security/p5-Mozilla-CA to 20111025 [hiramatsu 2012-01-12]
+	Updated www/py-blosxom to 1.5.2 [hauke 2012-01-12]
