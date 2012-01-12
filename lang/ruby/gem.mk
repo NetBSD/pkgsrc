@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.10 2011/12/13 15:47:06 taca Exp $
+# $NetBSD: gem.mk,v 1.11 2012/01/12 08:43:22 obache Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -114,6 +114,22 @@ USE_RAKE=		YES
 USE_TOOLS+=		expr
 .endif
 
+# print-PLIST support
+PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
+			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
+PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
+	{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
+PRINT_PLIST_AWK+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
+	{ gsub(/${GEM_LIBDIR:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
+PRINT_PLIST_AWK+=	/^${GEM_DOCDIR:S|/|\\/|g}/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g}/ \
+			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
+		{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
+			print; next; }
+
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
 
@@ -206,22 +222,6 @@ RUBYGEM=	${RUBYGEM_PREFIX}/bin/${RUBYGEM_NAME}
 PLIST_SUBST+=		GEM_NAME=${GEM_NAME}
 PLIST_SUBST+=		GEM_LIBDIR=${GEM_LIBDIR}
 PLIST_SUBST+=		GEM_DOCDIR=${GEM_DOCDIR}
-
-# print-PLIST support
-PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
-			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
-PRINT_PLIST_AWK+=	/${GEM_NAME:S/./[.]/g}[.](gem|gemspec)$$/ \
-	{ gsub(/${PKGVERSION_NOREV:S|/|\\/|g}[.]gem/, "$${PKGVERSION}.gem"); }
-PRINT_PLIST_AWK+=	/^${GEM_LIBDIR:S|/|\\/|g}/ \
-	{ gsub(/${GEM_LIBDIR:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
-PRINT_PLIST_AWK+=	/^${GEM_DOCDIR:S|/|\\/|g}/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g}/ \
-			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); \
-			print; next; }
-PRINT_PLIST_AWK+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
-		{ gsub(/${RUBY_GEM_BASE:S|/|\\/|g}/, "$${RUBY_GEM_BASE}"); \
-			print; next; }
 
 ###
 ### gem-extract
