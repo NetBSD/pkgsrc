@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/12/13 15:12:59 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2012/01/12 15:21:05 hans Exp $
 
 --- Makefile.orig	1992-11-05 22:03:14.000000000 +0000
 +++ Makefile
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.4 2005/12/13 15:12:59 joerg Exp $
  	else \
  		echo You must specify what machine you are on,;\
  		echo e.g. \"make sun\", \"make cray2\", \"make pyramid\", \"make xmp\";\
-@@ -33,6 +31,24 @@ unicos60 unicos61:
+@@ -33,6 +31,30 @@ unicos60 unicos61:
  		DEFINES="-DWAIT3CODE -DNO_ISO" \
  		LIBS="" OPT="-O"
  
@@ -30,6 +30,12 @@ $NetBSD: patch-aa,v 1.4 2005/12/13 15:12:59 joerg Exp $
 +		INCLUDE="-I." \
 +		DEFINES="-DWAIT3CODE -DNAMEDPIPES -DNO_ISO" \
 +		LIBS="" OPT="-O"
++
++SunOS:
++	$(MAKE) objs \
++		INCLUDE="-I." \
++		DEFINES="-DSYSV -DWAIT3CODE -DNAMEDPIPES -DNO_ISO" \
++		LIBS="-lsocket -lnsl" OPT="-O"
 +
 +DragonFly NetBSD:
 +	$(MAKE) objs \
