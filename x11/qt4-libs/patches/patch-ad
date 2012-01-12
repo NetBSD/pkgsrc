@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.12 2011/01/12 07:07:07 adam Exp $
+$NetBSD: patch-ad,v 1.13 2012/01/12 22:59:58 adam Exp $
 
 --- src/corelib/global/qglobal.h.orig	2010-09-10 09:05:25.000000000 +0000
 +++ src/corelib/global/qglobal.h
-@@ -159,6 +159,7 @@ namespace QT_NAMESPACE {}
+@@ -163,6 +163,7 @@ namespace QT_NAMESPACE {}
       NETBSD   - NetBSD
       OPENBSD  - OpenBSD
       BSDI     - BSD/OS
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.12 2011/01/12 07:07:07 adam Exp $
       IRIX     - SGI Irix
       OSF      - HP Tru64 UNIX
       SCO      - SCO OpenServer 5
-@@ -224,6 +225,9 @@ namespace QT_NAMESPACE {}
+@@ -229,6 +230,9 @@ namespace QT_NAMESPACE {}
  #elif defined(__NetBSD__)
  #  define Q_OS_NETBSD
  #  define Q_OS_BSD4
