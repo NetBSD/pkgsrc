@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2011/12/09 14:36:36 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2012/01/12 15:58:33 hans Exp $
 
 DISTNAME=	xps-4.2
 PKGREVISION=	3
@@ -11,7 +11,7 @@ COMMENT=	Displays the Unix process list as a hierarchical tree
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pod2man pod2html
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	x_applibdir=${PREFIX}/lib/X11/app-defaults
 
