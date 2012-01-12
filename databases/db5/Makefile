@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/03 10:54:45 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/12 22:41:21 asau Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (5.n -> 5.(n+1))
@@ -8,6 +8,7 @@
 
 DISTNAME=	db-5.2.36
 PKGNAME=	${DISTNAME:S/db/db5/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 		http://download-uk.oracle.com/berkeley-db/
@@ -15,7 +16,8 @@ MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db/db/index.html
 COMMENT=	Berkeley DB version 5 from Oracle
-LICENSE=	modified-bsd
+# NOTE: it is NOT a modified BSD in a common sense:
+#LICENSE=
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
