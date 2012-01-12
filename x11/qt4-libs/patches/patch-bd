@@ -1,13 +1,20 @@
-$NetBSD: patch-bd,v 1.1 2010/11/15 13:05:45 adam Exp $
+$NetBSD: patch-bd,v 1.2 2012/01/12 22:59:58 adam Exp $
 
---- src/3rdparty/webkit/JavaScriptCore/config.h.orig	2010-10-26 09:26:05.000000000 +0000
-+++ src/3rdparty/webkit/JavaScriptCore/config.h
-@@ -53,7 +53,7 @@
+Build shared libwebcore.
+
+--- src/3rdparty/webkit/Source/WebCore/WebCore.pro.orig	2012-01-09 07:30:08.000000000 +0000
++++ src/3rdparty/webkit/Source/WebCore/WebCore.pro
+@@ -7,13 +7,10 @@
+ include($$PWD/WebCore.pri)
+ include($$PWD/../JavaScriptCore/JavaScriptCore.pri)
  
- #endif
+-contains(QT_CONFIG, reduce_exports):CONFIG += hide_symbols
  
--#if OS(FREEBSD) || OS(OPENBSD)
-+#if OS(FREEBSD) || OS(OPENBSD) || OS(DRAGONFLY)
- #define HAVE_PTHREAD_NP_H 1
- #endif
+ TEMPLATE = lib
+ TARGET = $$WEBCORE_TARGET
+-CONFIG += staticlib
  
+-DESTDIR = $$WEBCORE_DESTDIR
+ 
+ DEFINES += BUILDING_WEBKIT
+ DEFINES += QT_MAKEDLL

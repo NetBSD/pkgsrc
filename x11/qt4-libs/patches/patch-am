@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.5 2008/01/05 22:15:24 wiz Exp $
+$NetBSD: patch-am,v 1.6 2012/01/12 22:59:58 adam Exp $
 
---- tools/designer/src/uitools/uitools.pro.orig	2007-12-04 16:43:42.000000000 +0000
+--- tools/designer/src/uitools/uitools.pro.orig	2011-12-08 05:06:02.000000000 +0000
 +++ tools/designer/src/uitools/uitools.pro
 @@ -1,7 +1,7 @@
  TEMPLATE = lib
- TARGET = $$qtLibraryTarget(QtUiTools)
+ TARGET = QtUiTools
  QT += xml
 -CONFIG += qt staticlib
 +CONFIG += qt dll

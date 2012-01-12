@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.8 2010/07/04 06:00:14 adam Exp $
+$NetBSD: patch-ao,v 1.9 2012/01/12 22:59:58 adam Exp $
 
---- src/corelib/codecs/qiconvcodec.cpp.orig	2010-06-02 02:03:17.000000000 +0000
+--- src/corelib/codecs/qiconvcodec.cpp.orig	2011-12-08 05:06:03.000000000 +0000
 +++ src/corelib/codecs/qiconvcodec.cpp
 @@ -50,9 +50,14 @@
  #include <stdio.h>
@@ -28,7 +28,7 @@ $NetBSD: patch-ao,v 1.8 2010/07/04 06:00:14 adam Exp $
  #else
  #  define UTF16 "UTF-16"
  #endif
-@@ -218,7 +226,7 @@ QString QIconvCodec::convertToUnicode(co
+@@ -219,7 +227,7 @@ QString QIconvCodec::convertToUnicode(co
      IconvState *state = *pstate;
      size_t inBytesLeft = len;
      // best case assumption, each byte is converted into one UTF-16 character, plus 2 bytes for the BOM
@@ -37,7 +37,7 @@ $NetBSD: patch-ao,v 1.8 2010/07/04 06:00:14 adam Exp $
      // GNU doesn't disagree with POSIX :/
      const char *inBytes = chars;
  #else
-@@ -311,7 +319,7 @@ static bool setByteOrder(iconv_t cd)
+@@ -314,7 +322,7 @@ static bool setByteOrder(iconv_t cd)
      size_t outBytesLeft = sizeof buf;
      size_t inBytesLeft = sizeof bom;
  
@@ -46,7 +46,7 @@ $NetBSD: patch-ao,v 1.8 2010/07/04 06:00:14 adam Exp $
      const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
      char **inBytesPtr = &inBytes;
-@@ -331,7 +339,7 @@ QByteArray QIconvCodec::convertFromUnico
+@@ -334,7 +342,7 @@ QByteArray QIconvCodec::convertFromUnico
      char *outBytes;
      size_t inBytesLeft;
  
@@ -55,7 +55,7 @@ $NetBSD: patch-ao,v 1.8 2010/07/04 06:00:14 adam Exp $
      const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
      char **inBytesPtr = &inBytes;
-@@ -468,11 +476,13 @@ iconv_t QIconvCodec::createIconv_t(const
+@@ -466,11 +474,13 @@ iconv_t QIconvCodec::createIconv_t(const
      static const char empty_codeset[] = "";
      const char *codeset = empty_codeset;
      cd = iconv_open(to ? to : codeset, from ? from : codeset);

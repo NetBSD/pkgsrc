@@ -1,11 +1,10 @@
-$NetBSD: patch-bg,v 1.1 2011/08/14 08:56:21 mrg Exp $
+$NetBSD: patch-bg,v 1.2 2012/01/12 22:59:58 adam Exp $
 
 this ends up going into non-const-able interfaces inside qt4
 
-
 --- src/dbus/qdbusintegrator.cpp.orig	2011-03-30 05:19:07.000000000 +0000
 +++ src/dbus/qdbusintegrator.cpp	2011-08-08 21:44:34.000000000 +0000
-@@ -71,7 +71,7 @@
+@@ -72,7 +72,7 @@
  static bool isDebugging;
  #define qDBusDebug              if (!::isDebugging); else qDebug
  

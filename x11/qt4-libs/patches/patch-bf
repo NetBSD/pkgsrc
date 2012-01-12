@@ -1,27 +1,33 @@
-$NetBSD: patch-bf,v 1.1 2010/11/15 13:05:45 adam Exp $
+$NetBSD: patch-bf,v 1.2 2012/01/12 22:59:58 adam Exp $
 
---- src/3rdparty/webkit/JavaScriptCore/JavaScriptCore.pro.orig	2010-11-06 01:55:20.000000000 +0000
-+++ src/3rdparty/webkit/JavaScriptCore/JavaScriptCore.pro
-@@ -4,7 +4,7 @@ include($$PWD/../WebKit.pri)
+Build shared libjscore.
+
+--- src/3rdparty/webkit/Source/JavaScriptCore/JavaScriptCore.pro.orig	2011-12-08 05:06:02.000000000 +0000
++++ src/3rdparty/webkit/Source/JavaScriptCore/JavaScriptCore.pro
+@@ -4,7 +4,6 @@ include($$PWD/../WebKit.pri)
  include(JavaScriptCore.pri)
  
  TEMPLATE = lib
 -CONFIG += staticlib
-+CONFIG += buildling-libs
  # Don't use JavaScriptCore as the target name. qmake would create a JavaScriptCore.vcproj for msvc
  # which already exists as a directory
  TARGET = $$JAVASCRIPTCORE_TARGET
-@@ -33,10 +33,11 @@ CONFIG(QTDIR_build) {
+@@ -19,17 +19,14 @@ contains(QT_CONFIG, embedded):CONFIG += 
  # WebCore adds these config only when in a standalone build.
  # qbase.pri takes care of that when in a QTDIR_build
  # Here we add the config for both cases since we don't include qbase.pri
 -contains(QT_CONFIG, reduce_exports):CONFIG += hide_symbols
 -unix:contains(QT_CONFIG, reduce_relocations):CONFIG += bsymbolic_functions
-+#contains(QT_CONFIG, reduce_exports):CONFIG += hide_symbols
-+#unix:contains(QT_CONFIG, reduce_relocations):CONFIG += bsymbolic_functions
  
  CONFIG(QTDIR_build) {
 +    include($$QT_SOURCE_TREE/src/qbase.pri)
      # Remove the following 2 lines if you want debug information in JavaScriptCore
      CONFIG -= separate_debug_info
      CONFIG += no_debug_info
+ }
+ 
+-*-g++*:QMAKE_CXXFLAGS_RELEASE -= -O2
+-*-g++*:QMAKE_CXXFLAGS_RELEASE += -O3
+ 
+ # Rules when JIT enabled (not disabled)
+ !contains(DEFINES, ENABLE_JIT=0) {

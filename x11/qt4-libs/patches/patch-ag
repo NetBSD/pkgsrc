@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.13 2011/03/03 05:50:04 adam Exp $
+$NetBSD: patch-ag,v 1.14 2012/01/12 22:59:58 adam Exp $
 
 --- qmake/project.cpp.orig	2010-09-10 09:04:41.000000000 +0000
 +++ qmake/project.cpp
-@@ -1550,6 +1550,9 @@ QMakeProject::isActiveConfig(const QStri
+@@ -1555,6 +1555,9 @@ QMakeProject::isActiveConfig(const QStri
          return Option::target_mode == Option::TARG_WIN_MODE;
      }
  

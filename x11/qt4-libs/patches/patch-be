@@ -1,13 +1,15 @@
-$NetBSD: patch-be,v 1.2 2010/11/15 18:32:26 adam Exp $
+$NetBSD: patch-be,v 1.3 2012/01/12 22:59:58 adam Exp $
 
---- src/3rdparty/webkit/JavaScriptCore/JavaScriptCore.pri.orig	2010-11-06 01:55:19.000000000 +0000
-+++ src/3rdparty/webkit/JavaScriptCore/JavaScriptCore.pri
-@@ -88,9 +88,7 @@ defineTest(addJavaScriptCoreLib) {
+Build shared libjscore.
+
+--- src/3rdparty/webkit/Source/JavaScriptCore/JavaScriptCore.pri.orig	2011-12-08 05:06:02.000000000 +0000
++++ src/3rdparty/webkit/Source/JavaScriptCore/JavaScriptCore.pri
+@@ -86,9 +86,7 @@ defineTest(prependJavaScriptCoreLib) {
      } else {
          # Make sure jscore will be early in the list of libraries to workaround a bug in MinGW
          # that can't resolve symbols from QtCore if libjscore comes after.
 -        QMAKE_LIBDIR = $$pathToJavaScriptCoreOutput $$QMAKE_LIBDIR
-         LIBS += -l$$JAVASCRIPTCORE_TARGET
+         LIBS = -l$$JAVASCRIPTCORE_TARGET $$LIBS
 -        POST_TARGETDEPS += $${pathToJavaScriptCoreOutput}$${QMAKE_DIR_SEP}lib$${JAVASCRIPTCORE_TARGET}.a
      }
  
