@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/01/09 09:31:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/12 15:38:45 hans Exp $
 #
 
 PKGNAME=	gnat-aux-${SNAPSHOT}
@@ -20,7 +20,7 @@ LANGS=		c
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake sed perl makeinfo bzip2 patch
+USE_TOOLS+=		gmake sed perl makeinfo bzip2 patch pod2man
 USE_BUILTIN.iconv=	no
 APPLY_DIFFS=		core
 
