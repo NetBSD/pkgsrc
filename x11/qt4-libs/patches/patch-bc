@@ -1,33 +1,24 @@
-$NetBSD: patch-bc,v 1.3 2010/11/15 13:05:45 adam Exp $
+$NetBSD: patch-bc,v 1.4 2012/01/12 22:59:58 adam Exp $
 
---- src/3rdparty/webkit/JavaScriptCore/wtf/Platform.h.orig	2010-11-06 01:55:19.000000000 +0000
-+++ src/3rdparty/webkit/JavaScriptCore/wtf/Platform.h
-@@ -376,7 +376,7 @@
+Build shared libwebcore.
+
+--- src/3rdparty/webkit/Source/WebCore/WebCore.pri.orig	2012-01-09 07:28:46.000000000 +0000
++++ src/3rdparty/webkit/Source/WebCore/WebCore.pri
+@@ -272,6 +272,7 @@ contains(DEFINES, ENABLE_WEBGL=1)|contai
+ }
  
- /* OS(NETBSD) - NetBSD */
- #if defined(__NetBSD__)
--#define WTF_PLATFORM_NETBSD 1
-+#define WTF_OS_NETBSD 1
- #endif
- 
- /* OS(OPENBSD) - OpenBSD */
-@@ -384,6 +384,11 @@
- #define WTF_OS_OPENBSD 1
- #endif
- 
-+/* OS(DRAGONFLY) - DragonFly */
-+#ifdef __DragonFly__
-+#define WTF_OS_DRAGONFLY 1
-+#endif
-+
- /* OS(QNX) - QNX */
- #if defined(__QNXNTO__)
- #define WTF_OS_QNX 1
-@@ -414,6 +419,7 @@
-     || OS(ANDROID)          \
-     || OS(DARWIN)           \
-     || OS(FREEBSD)          \
-+    || OS(DRAGONFLY)        \
-     || OS(HAIKU)            \
-     || OS(LINUX)            \
-     || OS(NETBSD)           \
+ !CONFIG(webkit-debug):CONFIG(QTDIR_build) {
++    include($$QT_SOURCE_TREE/src/qbase.pri)
+     # Remove the following 2 lines if you want debug information in WebCore
+     CONFIG -= separate_debug_info
+     CONFIG += no_debug_info
+@@ -351,9 +351,7 @@ defineTest(prependWebCoreLib) {
+         QMAKE_LIBDIR += $$pathToWebCoreOutput
+         POST_TARGETDEPS += $${pathToWebCoreOutput}$${QMAKE_DIR_SEP}$${WEBCORE_TARGET}.lib
+     } else {
+-        QMAKE_LIBDIR = $$pathToWebCoreOutput $$QMAKE_LIBDIR
+         LIBS = -l$$WEBCORE_TARGET $$LIBS
+-        POST_TARGETDEPS += $${pathToWebCoreOutput}$${QMAKE_DIR_SEP}lib$${WEBCORE_TARGET}.a
+     }
+     
+     CONFIG -= explicitlib
