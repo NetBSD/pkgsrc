@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/09/12 07:10:32 dholland Exp $
+$NetBSD: distinfo,v 1.10 2012/01/12 12:36:13 hans Exp $
 
 SHA1 (benchfft-2.0.tar.gz) = b49cbad9d390e54d3afe661d51d3dce7b3d6435e
 RMD160 (benchfft-2.0.tar.gz) = bd9ef45e633b8384c836e32e1e1cee877495bb26
@@ -9,8 +9,8 @@ Size (fftw-2.0.1.tar.gz) = 894543 bytes
 SHA1 (patch-aa) = 11c7d759af18a51da99231c964a079147656c9cc
 SHA1 (patch-ab) = 1c1be2e043ea9280f70dddd8082d20e929ea9d49
 SHA1 (patch-ac) = 24a1f01426f7e905f5033202b075786f2a632aa4
-SHA1 (patch-ad) = af0b491821b32d4039dd5bc17613b2a0872d13c0
-SHA1 (patch-ae) = ea3cc3719931d2d99484b5291e878a289565174f
+SHA1 (patch-ad) = bb9d22c526a5f9ef4c187893a964ae2d0d71ea80
+SHA1 (patch-ae) = afe38ba1f8d8d3497e5d6a8c722f4ab11b6f1c3a
 SHA1 (patch-af) = b301bdb6707f448fae83d1f0659ae966e3869027
 SHA1 (patch-ag) = a08153a6a8800184e7d186bf44a36f11372e853c
 SHA1 (patch-ah) = f03ce90b929b8a460157aff96facb3163d4e401c
