@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/03/11 14:42:46 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2012/01/12 11:39:38 drochner Exp $
 
---- gtk/makefile.orig	2010-10-27 21:16:07.000000000 +0000
+--- gtk/makefile.orig	2011-08-01 02:49:29.000000000 +0000
 +++ gtk/makefile
-@@ -84,13 +84,13 @@ deps:
+@@ -97,7 +97,7 @@ deps:
  	$(CC) -MM $(CONFIGFLAGS) $(CXXFLAGS) *.cxx ../src/*.cxx | sed -e 's/\/usr.* //' | grep [a-zA-Z] >deps.mak
  
  # make should be run in ../../scintilla/gtk to compile all the lexers.
@@ -10,22 +10,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/03/11 14:42:46 drochner Exp $
 +COMPLIB=$(prefix)/lib/scintilla.a
  
  $(PROG): SciTEGTK.o GUIGTK.o Widget.o \
- FilePath.o SciTEBase.o SciTEBuffers.o SciTEIO.o StringList.o Exporters.o StringHelpers.o \
- PropSetFile.o MultiplexExtension.o DirectorExtension.o SciTEProps.o StyleWriter.o Utf8_16.o \
- 	JobQueue.o GTKMutex.o IFaceTable.o $(COMPLIB) $(LUA_OBJS)
--	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--as-needed -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB) -ldl -lstdc++
-+	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--as-needed -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB) -lstdc++
- 
- # Automatically generate header dependencies with "make deps"
- include deps.mak
-@@ -109,8 +109,8 @@ install:
- 	done
- 
- ifdef gnomeprefix
--	$(INSTALL) -m 755 -D SciTE.desktop $(DESTDIR)$(datadir)/applications/SciTE.desktop
--	$(INSTALL) -m 644 -D Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
-+	$(INSTALL) -m 755 SciTE.desktop $(DESTDIR)$(datadir)/applications/SciTE.desktop
-+	$(INSTALL) -m 644 Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
- endif
- 
- uninstall:
+ FilePath.o SciTEBase.o Credits.o SciTEBuffers.o SciTEIO.o StringList.o Exporters.o StringHelpers.o \
