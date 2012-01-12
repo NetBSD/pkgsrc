@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.10 2011/10/20 12:39:33 taca Exp $
+# $NetBSD: Makefile.php,v 1.10.2.1 2012/01/12 11:29:04 tron Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--disable-dom
 CONFIGURE_ARGS+=	--disable-pdo
 CONFIGURE_ARGS+=	--disable-json
 
+CONFIGURE_ARGS+=	--enable-cgi
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -66,8 +67,10 @@ PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
 PKG_FAIL_REASON+=	"an updated patch is released or temporarily"
 PKG_FAIL_REASON+=	"build this package without the suhosin option."
 .  else
-PATCH_SITES=		http://download.suhosin.org/
-PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.gz
+#PATCH_SITES=		http://download.suhosin.org/
+#PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.gz
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10-local.patch.gz
 PATCH_DIST_STRIP=	-p1
 PLIST.suhosin=		yes
 MESSAGE_SRC=		${.CURDIR}/../../lang/php53/MESSAGE
