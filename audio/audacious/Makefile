@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/11/01 06:00:34 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/12 17:16:48 hans Exp $
 #
 
 DISTNAME=		audacious-1.5.1
@@ -30,6 +30,8 @@ PKG_SUPPORTED_OPTIONS=	inet6
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
+
+LIBS.SunOS+=	-lm -lX11
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
