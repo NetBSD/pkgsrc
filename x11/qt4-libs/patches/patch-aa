@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2010/11/15 13:05:45 adam Exp $
+$NetBSD: patch-aa,v 1.13 2012/01/12 22:59:58 adam Exp $
 
 --- qmake/generators/unix/unixmake2.cpp.orig	2010-09-10 09:04:41.000000000 +0000
 +++ qmake/generators/unix/unixmake2.cpp
@@ -25,12 +25,3 @@ $NetBSD: patch-aa,v 1.12 2010/11/15 13:05:45 adam Exp $
      } else {
          project->values("TARGETA").append(project->first("DESTDIR") + project->first("QMAKE_PREFIX_STATICLIB")
                  + project->first("TARGET") + "." + project->first("QMAKE_EXTENSION_STATICLIB"));
-@@ -1467,7 +1473,7 @@ UnixMakefileGenerator::writePkgConfigFil
-             bundle = bundle.left(suffix);
-         pkgConfiglibName = "-framework " + bundle + " ";
-     } else {
--        pkgConfiglibDir = "-L${libdir}";
-+        pkgConfiglibDir = "-Wl,-R${libdir} -L${libdir}";
-         pkgConfiglibName = "-l" + lname.left(lname.length()-Option::libtool_ext.length());
-     }
-     t << pkgConfiglibDir << " " << pkgConfiglibName << " " << endl;
