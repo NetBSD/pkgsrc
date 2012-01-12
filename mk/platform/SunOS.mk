@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.40 2011/09/10 16:30:02 abs Exp $
+# $NetBSD: SunOS.mk,v 1.41 2012/01/12 15:53:37 hans Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -16,7 +16,6 @@ DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
-MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 NOLOGIN?=		/usr/bin/false
 ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
@@ -28,6 +27,11 @@ ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
 X11_TYPE?=		native
+.if ${X11_TYPE} == native
+MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
+.else
+MOTIF_TYPE_DEFAULT?=	lesstif
+.endif
 
 # imake installs manpages in weird places
 .if !defined(X11_TYPE) || defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
