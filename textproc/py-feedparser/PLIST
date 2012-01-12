@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2012/01/11 16:50:53 schmonz Exp $
-${PYSITELIB}/feedparser-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/feedparser-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/feedparser-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/feedparser-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2012/01/12 18:28:30 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/feedparser.py
 ${PYSITELIB}/feedparser.pyc
 ${PYSITELIB}/feedparser.pyo
