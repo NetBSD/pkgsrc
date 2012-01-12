@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.5 2012/01/12 12:06:13 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.6 2012/01/12 14:02:52 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -56,3 +56,7 @@ Pullup ticket #3642 - requested by drochner
 fonts/t1lib: bug fix patch
 Pullup ticket #3643 - requested by obache
 www/ruby-rack: security update
+Pullup ticket #3644 - requested by obache
+www/ruby-rack12: security update
+Pullup ticket #3645 - requested by obache
+www/ruby-rack11: security update
