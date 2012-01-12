@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2012/01/04 16:59:16 drochner Exp $
+$NetBSD: patch-aj,v 1.1.2.1 2012/01/12 11:52:14 tron Exp $
 
 CVE-2011-0764
 
@@ -8,7 +8,7 @@ CVE-2011-0764
    double nextdtana = 0.0;   /* tangent of post-delta against horizontal line */ 
    double nextdtanb = 0.0;   /* tangent of post-delta against vertical line */ 
    
-+  if (numppoints < 1) Error0v("FindStems: No previous point!\n");
++  if (ppoints == NULL || numppoints < 1) Error0v("FindStems: No previous point!\n");
   
    /* setup default hinted position */
    ppoints[numppoints-1].ax     = ppoints[numppoints-1].x;
@@ -43,7 +43,7 @@ CVE-2011-0764
    double deltay = 0.0;
 -  
 + 
-+  if (numppoints < 1) Error0i("DoClosePath: No previous point!");
++  if (ppoints == NULL || numppoints < 1) Error0i("DoClosePath: No previous point!");
 + 
    /* If this ClosePath command together with the starting point of this
       path completes to a segment aligned to a stem, we would miss
@@ -52,7 +52,7 @@ CVE-2011-0764
      deltax = ppoints[i].x - ppoints[numppoints-1].x;
      deltay = ppoints[i].y - ppoints[numppoints-1].y;
  
-+    if (numppoints <= i + 1) Error0i("DoClosePath: No previous point!");
++    if (ppoints == NULL || numppoints <= i + 1) Error0i("DoClosePath: No previous point!");
      /* save nummppoints and reset to move point */
      tmpind = numppoints;
      numppoints = i + 1;
@@ -68,7 +68,7 @@ CVE-2011-0764
    DOUBLE cx, cy;
    DOUBLE ex, ey;
  
-+  if (numppoints < 8) Error0v("FlxProc: No previous point!");
++  if (ppoints == NULL || numppoints < 8) Error0v("FlxProc: No previous point!");
  
    /* Our PPOINT list now contains 7 moveto commands which
       are about to be consumed by the Flex mechanism. --> Remove these
@@ -76,7 +76,7 @@ CVE-2011-0764
  /*   Returns currentpoint on stack          */
  static void FlxProc2()
  {
-+  if (numppoints < 1) Error0v("FlxProc2: No previous point!");
++  if (ppoints == NULL || numppoints < 1) Error0v("FlxProc2: No previous point!");
    /* Push CurrentPoint on fake PostScript stack */
    PSFakePush( ppoints[numppoints-1].x);
    PSFakePush( ppoints[numppoints-1].y);

@@ -1,15 +1,27 @@
-$NetBSD: patch-ak,v 1.1 2012/01/04 16:59:16 drochner Exp $
+$NetBSD: patch-ak,v 1.1.2.1 2012/01/12 11:52:14 tron Exp $
 
 CVE-2011-0764
 
 --- lib/type1/lines.c.orig	2007-12-23 15:49:42.000000000 +0000
 +++ lib/type1/lines.c
-@@ -150,7 +150,7 @@ Find the starting x and y integer pel co
-  y = RoundFP(y1,PREC);
- 
-  edgeP += y;
-- count = RoundFP(y2,PREC) - y;
-+ count = (RoundFP(y2,PREC) - y) - 2;
- /*------------------------------------------------------------------*/
- /* Force dx to be positive so that dfy will be negative             */
- /*       this means that vertical moves will decrease d             */
+@@ -67,6 +67,10 @@ This module provides the following entry
+ None.
+ */
+  
++#define  BITS         (sizeof(LONG)*8)
++#define  HIGHTEST(p)  (((p)>>(BITS-2)) != 0)  /* includes sign bit */
++#define  TOOBIG(xy)   ((xy < 0) ? HIGHTEST(-xy) : HIGHTEST(xy))
++
+ /*
+ :h2.StepLine() - Produces Run Ends for a Line After Checks
+  
+@@ -84,6 +88,9 @@ void StepLine(R, x1, y1, x2, y2)
+        IfTrace4((LineDebug > 0), ".....StepLine: (%d,%d) to (%d,%d)\n",
+                                             x1, y1, x2, y2);
+  
++      if ( TOOBIG(x1) || TOOBIG(x2) || TOOBIG(y1) || TOOBIG(y2))
++              abort("Lines this big not supported", 49);
++
+        dy = y2 - y1;
+  
+ /*
