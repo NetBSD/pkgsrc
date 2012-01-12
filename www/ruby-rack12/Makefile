@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/15 14:22:21 taca Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2012/01/12 13:58:04 tron Exp $
 
-DISTNAME=	rack-1.2.4
+DISTNAME=	rack-1.2.5
 CATEGORIES=	www
 
 # Note: www/ruby-actionpack3needs ruby-rack<1.3.
