@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/11/01 06:00:50 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2012/01/12 15:31:45 hans Exp $
 #
 
 DISTNAME=		krecipes-1.0-beta1
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt perl
 
 CONFIGURE_ARGS+=	--without-mysql --without-postgresql
 
