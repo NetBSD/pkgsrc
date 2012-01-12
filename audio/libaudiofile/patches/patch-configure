@@ -1,7 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2011/12/29 16:19:25 rumko Exp $
-
-Fix unportable test(1) construct.
-Accepted by upstream, will be in next release.
+$NetBSD: patch-configure,v 1.5 2012/01/12 16:34:28 adam Exp $
 
 Check for libm so it is included if need be.
 
@@ -59,57 +56,3 @@ Check for libm so it is included if need be.
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for an ANSI C-conforming const" >&5
  $as_echo_n "checking for an ANSI C-conforming const... " >&6; }
-@@ -15246,7 +15291,7 @@ else
-   enable_werror=no
- fi
- 
-- if test "$enable_werror" == "yes"; then
-+ if test "$enable_werror" = "yes"; then
-   ENABLE_WERROR_TRUE=
-   ENABLE_WERROR_FALSE='#'
- else
-@@ -15255,7 +15300,7 @@ else
- fi
- 
- 
--if test "$enable_werror" == "yes"; then :
-+if test "$enable_werror" = "yes"; then :
-   WERROR_CFLAGS="-Werror"
- 
- fi
-@@ -15267,7 +15312,7 @@ else
-   enable_coverage=no
- fi
- 
-- if test "$enable_coverage" == "yes"; then
-+ if test "$enable_coverage" = "yes"; then
-   ENABLE_COVERAGE_TRUE=
-   ENABLE_COVERAGE_FALSE='#'
- else
-@@ -15276,7 +15321,7 @@ else
- fi
- 
- 
--if test "$enable_coverage" == "yes"; then :
-+if test "$enable_coverage" = "yes"; then :
-   COVERAGE_CFLAGS="-fprofile-arcs -ftest-coverage"
- 	COVERAGE_LIBS="-lgcov"
- 
-@@ -15380,7 +15425,7 @@ else
-   enable_valgrind=no
- fi
- 
-- if test "$enable_valgrind" == "yes"; then
-+ if test "$enable_valgrind" = "yes"; then
-   ENABLE_VALGRIND_TRUE=
-   ENABLE_VALGRIND_FALSE='#'
- else
-@@ -15389,7 +15434,7 @@ else
- fi
- 
- 
--if test "$enable_valgrind" == "yes"; then :
-+if test "$enable_valgrind" = "yes"; then :
-   # Extract the first word of "valgrind", so it can be a program name with args.
- set dummy valgrind; ac_word=$2
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
