@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.106 2012/01/12 12:24:56 hauke Exp $
+$NetBSD: CHANGES-2012,v 1.107 2012/01/12 17:00:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -148,3 +148,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Capture-Tiny to 0.15 [hiramatsu 2012-01-12]
 	Updated security/p5-Mozilla-CA to 20111025 [hiramatsu 2012-01-12]
 	Updated www/py-blosxom to 1.5.2 [hauke 2012-01-12]
+	Updated meta-pkgs/php53-extensions to 5.3.9nb2 [taca 2012-01-12]
