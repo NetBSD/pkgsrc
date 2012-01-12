@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.8 2011/03/03 05:50:04 adam Exp $
+$NetBSD: patch-al,v 1.9 2012/01/12 22:59:58 adam Exp $
 
 --- src/corelib/io/qsettings.cpp.orig	2011-02-22 12:04:00.000000000 +0000
 +++ src/corelib/io/qsettings.cpp
-@@ -142,9 +142,16 @@ QT_END_INCLUDE_NAMESPACE
+@@ -141,9 +141,16 @@ QT_END_INCLUDE_NAMESPACE
  
  Q_AUTOTEST_EXPORT_HELPER bool qIsLikelyToBeNfs(int handle)
  {
@@ -19,7 +19,7 @@ $NetBSD: patch-al,v 1.8 2011/03/03 05:50:04 adam Exp $
      return qt_isEvilFsTypeName(buf.f_fstypename);
  }
  
-@@ -178,7 +185,7 @@ Q_AUTOTEST_EXPORT_HELPER bool qIsLikelyT
+@@ -177,7 +184,7 @@ Q_AUTOTEST_EXPORT_HELPER bool qIsLikelyT
  
  #elif defined(Q_OS_SOLARIS) || defined(Q_OS_IRIX) || defined(Q_OS_AIX) || defined(Q_OS_HPUX) \
        || defined(Q_OS_OSF) || defined(Q_OS_QNX) || defined(Q_OS_SCO) \

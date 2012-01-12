@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2011/09/18 09:01:30 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2012/01/12 22:59:58 adam Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -11,8 +11,6 @@
 DISTNAME=	qt-everywhere-opensource-src-${QTVERSION}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.qt.nokia.com/qt/source/
-# XXX the distfile for 4.7.4 has been changed; remove this for future releases
-DIST_SUBDIR=	qt4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,7 +36,6 @@ CONFIGURE_ARGS+=	-no-phonon
 CONFIGURE_ARGS+=	-no-phonon-backend
 CONFIGURE_ARGS+=	-optimized-qmake
 CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
-CONFIGURE_ARGS+=	-qt-gif	# qt4 does not write compressed GIFs
 CONFIGURE_ARGS.SunOS+=	-no-xrender
 CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-opensource -confirm-license

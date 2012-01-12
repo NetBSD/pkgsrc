@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2011/11/01 06:03:07 sbd Exp $
+# $NetBSD: Makefile,v 1.67 2012/01/12 22:59:58 adam Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt4-libs/Makefile.common"
@@ -66,12 +65,12 @@ do-install:
 	 ${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/imports/QtWebKit/libqmlwebkitplugin.la \
 		${DESTDIR}${QTPREFIX}/imports/QtWebKit/
-.for incl in corelib declarative gui multimedia network opengl qt3support script scripttools sql svg testlib xml xmlpatterns 3rdparty/webkit/WebCore
+.for incl in corelib declarative gui multimedia network opengl qt3support script scripttools sql svg testlib xml xmlpatterns 3rdparty/webkit/Source/WebKit/qt
 	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_flat_headers install_targ_headers install_class_headers
 .endfor
 	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore
+.for lib in Qt3Support QtCore QtDeclarative QtGui QtMultimedia QtNetwork QtOpenGL QtScript QtScriptTools QtSql QtSvg QtTest QtWebKit QtXml QtXmlPatterns jscore webcore
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
@@ -101,7 +100,7 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/iconengines/libqsvgicon.la \
 		${DESTDIR}/${QTPREFIX}/plugins/iconengines/
-.for plug in qgif qico qjpeg qsvg
+.for plug in qgif qico qjpeg qsvg qtga
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/imageformats/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/imageformats/

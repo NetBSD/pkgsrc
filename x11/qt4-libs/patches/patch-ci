@@ -1,6 +1,6 @@
-$NetBSD: patch-ci,v 1.2 2011/08/12 13:24:07 adam Exp $
+$NetBSD: patch-ci,v 1.3 2012/01/12 22:59:58 adam Exp $
 
-Rename argument 'id'; 'id' is a key-word in Objective-C.
+Avoid error when compiling with Clang.
 
 --- src/plugins/bearer/corewlan/qcorewlanengine.mm.orig	2011-03-02 13:32:05.000000000 +0000
 +++ src/plugins/bearer/corewlan/qcorewlanengine.mm
@@ -13,21 +13,3 @@ Rename argument 'id'; 'id' is a key-word in Objective-C.
  
  
  @interface QT_MANGLE_NAMESPACE(QNSListener) : NSObject
-@@ -864,7 +864,7 @@ quint64 QCoreWlanEngine::bytesReceived(c
-     return getBytes(interfaceStr,true);
- }
- 
--quint64 QCoreWlanEngine::startTime(const QString &id)
-+quint64 QCoreWlanEngine::startTime(const QString &qid)
- {
-     QMutexLocker locker(&mutex);
-     NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
-@@ -899,7 +899,7 @@ quint64 QCoreWlanEngine::startTime(const
-                 for(int i = 0; i < dictSize; i++) {
-                     if([ssidStr isEqualToString:keys[i]]) {
-                         const QString ident = QString::number(qHash(QLatin1String("corewlan:") + qt_NSStringToQString(objects[i])));
--                        if(ident == id) {
-+                        if(ident == qid) {
-                             ok = true;
-                         }
-                     }
