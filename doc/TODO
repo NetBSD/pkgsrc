@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10784 2012/01/12 00:50:27 taca Exp $
+$NetBSD: TODO,v 1.10785 2012/01/12 11:08:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -1123,6 +1123,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o posh-0.5.5
 	o postal-0.70
 	o postgresql-postgis-1.5.3
+	o powerdns-2.9.22.5
 	o powwow-1.2.16
 	o prboom-2.5.0.8
 	o printproto-1.0.5
