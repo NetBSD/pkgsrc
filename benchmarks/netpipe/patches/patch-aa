@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2010/10/16 10:15:57 adam Exp $
+$NetBSD: patch-aa,v 1.5 2012/01/12 15:15:09 hans Exp $
 
 --- makefile.orig	2010-10-14 09:16:46.000000000 +0000
 +++ makefile
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.4 2010/10/16 10:15:57 adam Exp $
  SRC        = ./src
  
  # For MPI, mpicc will set up the proper include and library paths
+@@ -81,7 +79,7 @@ clean:
+ 
+ 
+ tcp: $(SRC)/tcp.c $(SRC)/netpipe.c $(SRC)/netpipe.h 
+-	$(CC) $(CFLAGS) $(SRC)/netpipe.c $(SRC)/tcp.c -DTCP -o NPtcp -I$(SRC)
++	$(CC) $(CFLAGS) $(SRC)/netpipe.c $(SRC)/tcp.c -DTCP -o NPtcp -I$(SRC) ${EXTRA_LIBS}
+ 
+ tcp6: $(SRC)/tcp.c $(SRC)/netpipe.c $(SRC)/netpipe.h 
+ 	$(CC) $(CFLAGS) $(SRC)/netpipe.c $(SRC)/tcp6.c -DTCP6 \
