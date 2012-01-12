@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.108 2012/01/12 17:42:52 adam Exp $
+$NetBSD: CHANGES-2012,v 1.109 2012/01/12 20:11:49 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql55-server to 5.5.20 [adam 2012-01-12]
 	Updated databases/mysql51-client to 5.1.61 [adam 2012-01-12]
 	Updated databases/mysql51-server to 5.1.61 [adam 2012-01-12]
+	Updated www/ap2-authn-otp to 1.1.4 [pettai 2012-01-12]
