@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.117 2012/01/13 13:09:58 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.118 2012/01/13 13:44:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -182,3 +182,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/bluefish to 2.2.1 [drochner 2012-01-13]
 	Updated www/midori to 0.4.3 [drochner 2012-01-13]
 	Added security/racoon2 version 20100526a [drochner 2012-01-13]
+	Updated net/isc-dhcp4 to 4.2.3p2 [taca 2012-01-13]
+	Updated net/isc-dhclient4 to 4.2.3p2 [taca 2012-01-13]
+	Updated net/isc-dhcpd4 to 4.2.3p2 [taca 2012-01-13]
+	Updated net/isc-dhcrelay4 to 4.2.3p2 [taca 2012-01-13]
