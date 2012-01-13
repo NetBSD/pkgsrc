@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/11/30 17:50:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/01/13 10:54:46 obache Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-esound/}
+PKGREVISION=	1
 
 COMMENT+=	(esound plugin)
 

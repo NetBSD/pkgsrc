@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2011/11/01 06:00:39 sbd Exp $
+# $NetBSD: Makefile,v 1.18 2012/01/13 10:54:46 obache Exp $
 #
 
 DISTNAME=		lmms-0.2.0
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lmms/}
 EXTRACT_SUFX=		.tar.bz2

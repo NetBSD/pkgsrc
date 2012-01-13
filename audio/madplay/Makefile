@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2011/04/22 13:42:56 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/01/13 10:54:47 obache Exp $
 #
 
 DISTNAME=	madplay-0.15.2b
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 

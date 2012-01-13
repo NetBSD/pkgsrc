@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/11/01 06:02:19 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/13 10:55:27 obache Exp $
 
 DISTNAME=	kmldonkey-0.11
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_KDE:=apps/KDE3.x/network/}
 

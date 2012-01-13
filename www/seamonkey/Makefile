@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2012/01/07 20:44:32 marino Exp $
+# $NetBSD: Makefile,v 1.60 2012/01/13 10:55:36 obache Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER}
 SM_VER=		2.5b4
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
