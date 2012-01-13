@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/11/09 00:30:12 gdt Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2012/01/13 13:02:04 tron Exp $
 #
 
-VERSION=	1.9.0
+VERSION=	1.9.1
 DISTNAME=	allmydata-tahoe-${VERSION}
 EGG_NAME=	allmydata_tahoe-${VERSION}
 PKGNAME=	tahoe-lafs-${VERSION}
@@ -45,11 +45,15 @@ DEPENDS+=	${PYPKGPREFIX}-cryptopp-[0-9]*:../../security/py-cryptopp
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-nevow-[0-9]*:../../www/py-nevow
 
+#1.9.1 seems ok
+#BAD_DISTFILE_MODES=yes
+.if defined(BAD_DISTFILE_MODES)
 # Distfile has files mode 600, which leads to root-owned 600 files in
 # the binary package.
 post-extract:
 	${ECHO} "Fixing distfile contents to be world readable:"
 	chmod -R +r ${WRKSRC}
+.endif
 
 REPLACE_PYTHON+= src/allmydata/reliability.py
 REPLACE_PYTHON+= src/allmydata/storage/shares.py
