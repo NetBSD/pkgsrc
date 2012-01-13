@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.23 2011/12/17 13:46:27 obache Exp $
+# $NetBSD: ext.mk,v 1.23.2.1 2012/01/13 12:12:29 tron Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -40,7 +40,7 @@ DISTINFO_FILE=		${.CURDIR}/${PHPPKGSRCDIR}/distinfo
 . if ${PKG_PHP_VERSION} == "5"
 PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-5.2.17.${PECL_VERSION}
 . elif ${PKG_PHP_VERSION} == "53"
-PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-5.3.8.${PECL_VERSION}
+PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-5.3.9.${PECL_VERSION}
 . endif
 .else
 PKGNAME?=		${PHP_PKG_PREFIX}-${MODNAME}-${PECL_VERSION}
