@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.114 2012/01/13 11:33:22 obache Exp $
+$NetBSD: CHANGES-2012,v 1.115 2012/01/13 12:15:24 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -169,3 +169,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4-tiff to 4.8.0 [adam 2012-01-13]
 	Updated filesystems/tahoe-lafs to 1.9.1 [gdt 2012-01-13]
 	Updated www/mediawiki to 1.17.2 [obache 2012-01-13]
+	Updated net/powerdns to 2.9.22.5 [ghen 2012-01-13]
+	Updated net/powerdns-ldap to 2.9.22.5 [ghen 2012-01-13]
+	Updated net/powerdns-mysql to 2.9.22.5 [ghen 2012-01-13]
+	Updated net/powerdns-pgsql to 2.9.22.5 [ghen 2012-01-13]
+	Updated net/powerdns-sqlite to 2.9.22.5 [ghen 2012-01-13]
