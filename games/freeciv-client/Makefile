@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2011/11/01 06:01:15 sbd Exp $
+# $NetBSD: Makefile,v 1.49 2012/01/13 10:55:05 obache Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Freeciv client
 
 PKG_DESTDIR_SUPPORT=	user-destdir
