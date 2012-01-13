@@ -1,0 +1,13 @@
+$NetBSD: patch-KTerm.ad,v 1.1 2012/01/13 16:53:28 ryoon Exp $
+
+* Should not set globally.
+
+--- KTerm.ad.orig	2012-01-13 16:42:21.000000000 +0000
++++ KTerm.ad
+@@ -123,6 +123,3 @@ KTerm.JoinSession:False
+ *tek4014*font2: 8x13
+ *tek4014*font3: 6x13
+ *tek4014*fontSmall: 6x10
+-
+-*VT100*translations: #override  Shift<Key>space: \
+-	begin-conversion(_JAPANESE_CONVERSION)
