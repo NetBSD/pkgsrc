@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2011/11/01 06:02:38 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2012/01/13 10:55:34 obache Exp $
 
 BUILDLINK_TREE+=	soprano
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	soprano
 SOPRANO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.soprano+=	soprano>=2.0.3
-BUILDLINK_ABI_DEPENDS.soprano?=	soprano>=2.5.2nb4
+BUILDLINK_ABI_DEPENDS.soprano?=	soprano>=2.5.2nb6
 BUILDLINK_PKGSRCDIR.soprano?=	../../textproc/soprano
 
 .include "../../textproc/libclucene/buildlink3.mk"
