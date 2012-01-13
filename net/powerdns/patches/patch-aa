@@ -1,20 +1,23 @@
-$NetBSD: patch-aa,v 1.2 2011/11/23 23:32:17 joerg Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2012/01/13 14:03:32 tron Exp $
 
---- pdns/Makefile.in.orig	2008-08-07 07:04:53.000000000 +0000
+--- pdns/Makefile.in.orig	2012-01-05 14:27:41.000000000 +0000
 +++ pdns/Makefile.in
-@@ -796,12 +796,12 @@ distclean-libtool:
- uninstall-info-am:
+@@ -1012,15 +1012,15 @@ clean-libtool:
+ 	-rm -rf .libs _libs
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
-+	test -z "$(EGDIR)" || $(mkdir_p) "$(DESTDIR)$(EGDIR)"
- 	@list='$(sysconf_DATA)'; for p in $$list; do \
+-	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
++	test -z "$(EGDIR)" || $(MKDIR_P) "$(DESTDIR)$(EGDIR)"
+ 	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f=$(am__strip_dir) \
--	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
-+	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(EGDIR)/$$f'"; \
-+	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(EGDIR)/$$f"; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(EGDIR)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(EGDIR)" || exit $$?; \
  	done
  
  uninstall-sysconfDATA:
