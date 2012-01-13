@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/01/07 06:11:28 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/01/13 10:54:59 obache Exp $
 #
 
 SWTREL=		3.5.1
@@ -7,7 +7,7 @@ SWTDATE=	200909170800
 
 PKGNAME=	swt-${SWTREL}.${SWTVER}
 DISTNAME=	swt-${SWTREL}-gtk-linux-x86
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	http://download.eclipse.org/eclipse/downloads/drops/R-${SWTREL}-${SWTDATE}/
 EXTRACT_SUFX=	.zip
