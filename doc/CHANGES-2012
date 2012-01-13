@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.116 2012/01/13 12:24:00 obache Exp $
+$NetBSD: CHANGES-2012,v 1.117 2012/01/13 13:09:58 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -175,3 +175,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/powerdns-pgsql to 2.9.22.5 [ghen 2012-01-13]
 	Updated net/powerdns-sqlite to 2.9.22.5 [ghen 2012-01-13]
 	Removed lang/py-html-docs [obache 2012-01-13]
+	Added audio/mp3gain version 1.5.2 [drochner 2012-01-13]
+	Updated x11/qt4-qscintilla to 2.6 [drochner 2012-01-13]
+	Updated editors/scite to 2.29 [drochner 2012-01-13]
+	Updated devel/scintilla to 2.29 [drochner 2012-01-13]
+	Updated www/bluefish to 2.2.1 [drochner 2012-01-13]
+	Updated www/midori to 0.4.3 [drochner 2012-01-13]
+	Added security/racoon2 version 20100526a [drochner 2012-01-13]
