@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/12/12 13:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/13 20:15:33 drochner Exp $
 #
 
-DISTNAME=	libjpeg-turbo-1.0.1
+DISTNAME=	libjpeg-turbo-1.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libjpeg-turbo/}
 
@@ -17,7 +17,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 GNU_CONFIGURE=	yes
+# compatibility with pkgsrc/graphics/jpeg
+CONFIGURE_ARGS+= --with-jpeg8
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+TEST_TARGET=	test
 
 .include "../../mk/bsd.pkg.mk"
