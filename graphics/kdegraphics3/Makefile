@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2011/11/01 06:01:37 sbd Exp $
+# $NetBSD: Makefile,v 1.95 2012/01/13 10:55:12 obache Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
