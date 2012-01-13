@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.112 2012/01/13 01:22:24 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.113 2012/01/13 11:32:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -168,3 +168,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4-sqlite3 to 4.8.0 [adam 2012-01-13]
 	Updated x11/qt4-tiff to 4.8.0 [adam 2012-01-13]
 	Updated filesystems/tahoe-lafs to 1.9.1 [gdt 2012-01-13]
+	Updated www/mediawiki to 1.17.2 [obache 2012-01-13]
+	Updated www/mediawiki to 1.17.2 [obache 2012-01-13]
