@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2011/04/07 02:07:19 rh Exp $
+# $NetBSD: Makefile,v 1.50 2012/01/13 10:55:39 obache Exp $
 
 DISTNAME=	gnustep-gui-0.18.0
+PKGREVISION=	1
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
