@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/07/08 08:19:27 abs Exp $
+@comment $NetBSD: PLIST,v 1.6.4.1 2012/01/13 13:20:49 tron Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/COPYING
 share/mediawiki/CREDITS
@@ -1226,6 +1226,7 @@ share/mediawiki/maintenance/oracle/archives/patch_16_17_schema_changes.sql
 share/mediawiki/maintenance/oracle/archives/patch_create_17_functions.sql
 share/mediawiki/maintenance/oracle/archives/patch_fk_rename_deferred.sql
 share/mediawiki/maintenance/oracle/archives/patch_namespace_defaults.sql
+share/mediawiki/maintenance/oracle/archives/patch_remove_not_null_empty_defs.sql
 share/mediawiki/maintenance/oracle/patch_seq_names_pre1.16.sql
 share/mediawiki/maintenance/oracle/tables.sql
 share/mediawiki/maintenance/oracle/user.sql
@@ -1733,6 +1734,7 @@ share/mediawiki/skins/common/images/button_media.png
 share/mediawiki/skins/common/images/button_nowiki.png
 share/mediawiki/skins/common/images/button_sig.png
 share/mediawiki/skins/common/images/button_template.png
+share/mediawiki/skins/common/images/cc-0.png
 share/mediawiki/skins/common/images/cc-by-nc-sa.png
 share/mediawiki/skins/common/images/cc-by-sa.png
 share/mediawiki/skins/common/images/closewindow.png
