@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:23:51 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/01/13 10:54:44 obache Exp $
 
 BUILDLINK_TREE+=	SDL_sound
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDL_sound
 SDL_SOUND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDL_sound+=	SDL_sound>=1.0.3
-BUILDLINK_ABI_DEPENDS.SDL_sound?=	SDL_sound>=1.0.3nb1
+BUILDLINK_ABI_DEPENDS.SDL_sound?=	SDL_sound>=1.0.3nb4
 BUILDLINK_PKGSRCDIR.SDL_sound?=	../../audio/SDL_sound
 
 .include "../../audio/flac/buildlink3.mk"

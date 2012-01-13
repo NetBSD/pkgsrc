@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2011/11/01 06:01:52 sbd Exp $
+# $NetBSD: Makefile,v 1.42 2012/01/13 10:55:15 obache Exp $
 #
 
 DISTNAME=		imhangul_status_applet-0.3
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		korean inputmethod
 MASTER_SITES=		http://download.kldp.net/imhangul/imhangul_status_applet/0.3/
 

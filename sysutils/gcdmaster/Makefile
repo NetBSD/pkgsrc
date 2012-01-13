@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2011/11/01 06:02:32 sbd Exp $
+# $NetBSD: Makefile,v 1.54 2012/01/13 10:55:32 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
-PKGREVISION=	8
+PKGREVISION=	9
 
 PKGNAME=	gcdmaster-${CDRDAO_VER}
 COMMENT=	Gnome UI frontend to cdrdao

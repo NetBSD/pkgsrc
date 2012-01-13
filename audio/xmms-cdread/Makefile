@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/10/09 10:02:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/13 10:54:49 obache Exp $
 #
 
 DISTNAME=		xmms-cdread-0.14a
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		ftp://mud.stack.nl/pub/OuterSpace/willem/
 

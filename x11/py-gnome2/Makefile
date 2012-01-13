@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2011/11/01 06:03:05 sbd Exp $
+# $NetBSD: Makefile,v 1.78 2012/01/13 10:55:50 obache Exp $
 #
 
 DISTNAME=	gnome-python-2.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.28/}
 EXTRACT_SUFX=	.tar.bz2
