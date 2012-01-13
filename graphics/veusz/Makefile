@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2011/11/30 10:59:13 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2012/01/13 10:55:14 obache Exp $
 #
 
 DISTNAME=		veusz-1.14
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://download.gna.org/veusz/
 
