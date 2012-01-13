@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.7 2012/01/12 19:54:20 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.8 2012/01/13 16:11:36 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -62,3 +62,19 @@ Pullup ticket #3644 - requested by obache
 www/ruby-rack12: security update
 Pullup ticket #3645 - requested by obache
 www/ruby-rack11: security update
+Pullup ticket #3646 - requested by joerg
+lang/php: build for PHP extensions
+Pullup ticket #3647 - requested by gdt
+filesystems/tahoe-lafs: security update
+Pullup ticket #3648 - requested by drochner
+textproc/libxml2: security patch
+Pullup ticket #3649 - requested by obache
+www/mediawiki: security update
+Pullup ticket #3650 - requested by ghen
+net/powerdns: security update
+net/powerdns-ldap: security update
+net/powerdns-mysql: security update
+net/powerdns-pgsql: security update
+net/powerdns-sqlite: security update
+Pullup ticket #3651 - requested by taca
+net/isc-dhcp4: security update
