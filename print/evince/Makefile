@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2011/11/01 06:02:24 sbd Exp $
+# $NetBSD: Makefile,v 1.75 2012/01/14 07:44:34 obache Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--enable-comics
 CONFIGURE_ARGS+=	--disable-nautilus
 GCONF_SCHEMAS+=		evince-thumbnailer-comics.schemas
 
-BUILD_DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
+USE_TOOLS+=	gsed
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/schemas.mk"
