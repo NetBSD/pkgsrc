@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2012/01/14 02:09:35 hans Exp $
+# $NetBSD: Makefile,v 1.112 2012/01/14 02:46:26 hans Exp $
 #
 
 DISTNAME=	file-roller-2.32.2
@@ -12,14 +12,12 @@ HOMEPAGE=	http://fileroller.sourceforge.net/
 COMMENT=	Front-end to archiving programs like tar and zip
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
-DEPENDS+=		unzip>=5.50nb2:../../archivers/unzip
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config zip:run
+USE_TOOLS+=		gmake gtar:run intltool msgfmt perl pkg-config unzip:run
+USE_TOOLS+=		zip:run
 USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS=		file-roller.schemas
@@ -27,14 +25,17 @@ GCONF_SCHEMAS=		file-roller.schemas
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 
-# Force to use unzip from pkgsrc as other installed versions in path
-# may be incompatible. (For example NetBSD 6.0's unzip)
-#
+# Force unzip from pkgsrc on NetBSD
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.unzip=
+.endif
+
 SUBST_CLASSES+=		unzip
 SUBST_STAGE.unzip=	pre-build
 SUBST_MESSAGE.unzip=	Hardcoding unzip path
 SUBST_FILES.unzip=	src/fr-command-zip.c
-SUBST_SED.unzip=	-e 's|@@UNZIP_COMMAND@@|${LOCALBASE}/bin/unzip|'
+SUBST_SED.unzip=	-e 's|@@UNZIP_COMMAND@@|${TOOLS_PATH.unzip}|'
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
