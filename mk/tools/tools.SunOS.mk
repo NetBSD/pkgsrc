@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.36 2011/12/14 03:17:25 joerg Exp $
+# $NetBSD: tools.SunOS.mk,v 1.37 2012/01/14 02:11:00 hans Exp $
 #
 # System-supplied tools for the Solaris operating system.
 #
@@ -210,4 +210,10 @@ TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 .if exists(/usr/bin/yacc)
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
+.endif
+.if exists(/usr/bin/zip)
+TOOLS_PLATFORM.zip?=		/usr/bin/zip
+TOOLS_PLATFORM.zipcloak?=	/usr/bin/zipcloak
+TOOLS_PLATFORM.zipnote?=	/usr/bin/zipnote
+TOOLS_PLATFORM.zipsplit?=	/usr/bin/zipsplit
 .endif
