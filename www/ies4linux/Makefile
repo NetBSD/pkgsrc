@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/10 19:17:47 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/01/14 03:16:57 hans Exp $
 #
 
 DISTNAME=	ies4linux-2.99.0.1
@@ -10,8 +10,6 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.tatanka.com.br/ies4linux/page/Main_Page
 COMMENT=	Microsoft Internet Explorer installer
 
-DEPENDS+=  bash-[0-9]*:../../shells/bash
-DEPENDS+=  unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=  wget-[0-9]*:../../net/wget
 DEPENDS+=  wine-[0-9]*:../../emulators/wine
 DEPENDS+=  ${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
@@ -20,7 +18,7 @@ BUILD_DEPENDS+= cabextract-[0-9]*:../../archivers/cabextract
 NO_BUILD= 	yes
 PKG_DESTDIR_SUPPORT=    user-destdir
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pax
+USE_TOOLS+=	bash:run pax unzip:run
 
 SHAREDIR=		share/ies4linux
 
