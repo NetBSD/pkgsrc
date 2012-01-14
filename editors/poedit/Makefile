@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/11/01 06:01:07 sbd Exp $
+# $NetBSD: Makefile,v 1.37 2012/01/14 02:09:36 hans Exp $
 
 DISTNAME=	poedit-1.4.6.1
 PKGREVISION=	7
@@ -12,12 +12,10 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	zip-[0-9]*:../../archivers/zip
-
 BDB_ACCEPTED=		db4 db5
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config zip:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		BDB_TYPE="${BDB_TYPE}"
 CONFIGURE_ENV+=		WX_CONFIG_NAME=${BUILDLINK_PREFIX.wxGTK28}/bin/wx-config

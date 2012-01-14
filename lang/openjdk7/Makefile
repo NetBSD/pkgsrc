@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/11/01 06:01:56 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2012/01/14 02:09:36 hans Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -30,9 +30,8 @@ JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar java javac javadoc javah javap keytool orbd \
 		policytool rmid rmiregistry servertool tnameserv
 
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-MAKE_ENV+=		PKGSRC_ZIPEXE=${PREFIX}/bin/zip
+MAKE_ENV+=		PKGSRC_ZIPEXE=${TOOLS_PATH.zip}
 MAKE_ENV+=		PKGSRC_UNZIP=${PREFIX}/bin/unzip
 MAKE_ENV+=		PKGSRC_UNZIPSFX=${PREFIX}/bin/unzipsfv
 
@@ -42,7 +41,7 @@ DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pax
+USE_TOOLS+=		gmake pax zip:run
 UNLIMIT_RESOURCES=	datasize stacksize
 WRKSRC=			${WRKDIR}/openjdk
 
