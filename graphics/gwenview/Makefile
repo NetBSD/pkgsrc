@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/01/13 10:55:11 obache Exp $
+# $NetBSD: Makefile,v 1.47 2012/01/14 15:38:59 dholland Exp $
 #
 
 DISTNAME=	gwenview-1.4.2
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake pkg-config msgfmt
+USE_TOOLS+=	gmake pkg-config msgfmt perl
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
