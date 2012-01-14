@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/07/30 11:53:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.24 2012/01/14 14:39:18 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -59,6 +59,7 @@ share/doc/zsh/NEWS
 share/zsh/${PKGVERSION}/functions/VCS_INFO_adjust
 share/zsh/${PKGVERSION}/functions/VCS_INFO_bydir_detect
 share/zsh/${PKGVERSION}/functions/VCS_INFO_check_com
+share/zsh/${PKGVERSION}/functions/VCS_INFO_check_com
 share/zsh/${PKGVERSION}/functions/VCS_INFO_detect_bzr
 share/zsh/${PKGVERSION}/functions/VCS_INFO_detect_cdv
 share/zsh/${PKGVERSION}/functions/VCS_INFO_detect_cvs
@@ -98,6 +99,7 @@ share/zsh/${PKGVERSION}/functions/_aap
 share/zsh/${PKGVERSION}/functions/_acpi
 share/zsh/${PKGVERSION}/functions/_acpitool
 share/zsh/${PKGVERSION}/functions/_acroread
+share/zsh/${PKGVERSION}/functions/_adb
 share/zsh/${PKGVERSION}/functions/_alias
 share/zsh/${PKGVERSION}/functions/_aliases
 share/zsh/${PKGVERSION}/functions/_all_labels
@@ -182,6 +184,7 @@ share/zsh/${PKGVERSION}/functions/_cowsay
 share/zsh/${PKGVERSION}/functions/_cp
 share/zsh/${PKGVERSION}/functions/_cpio
 share/zsh/${PKGVERSION}/functions/_cplay
+share/zsh/${PKGVERSION}/functions/_cryptsetup
 share/zsh/${PKGVERSION}/functions/_cssh
 share/zsh/${PKGVERSION}/functions/_csup
 share/zsh/${PKGVERSION}/functions/_ctags_tags
@@ -373,6 +376,7 @@ share/zsh/${PKGVERSION}/functions/_links
 share/zsh/${PKGVERSION}/functions/_lintian
 share/zsh/${PKGVERSION}/functions/_list
 share/zsh/${PKGVERSION}/functions/_list_files
+share/zsh/${PKGVERSION}/functions/_ln
 share/zsh/${PKGVERSION}/functions/_loadkeys
 share/zsh/${PKGVERSION}/functions/_locales
 share/zsh/${PKGVERSION}/functions/_locate
@@ -445,7 +449,9 @@ share/zsh/${PKGVERSION}/functions/_newsgroups
 share/zsh/${PKGVERSION}/functions/_next_label
 share/zsh/${PKGVERSION}/functions/_next_tags
 share/zsh/${PKGVERSION}/functions/_nice
+share/zsh/${PKGVERSION}/functions/_nm
 share/zsh/${PKGVERSION}/functions/_nmap
+share/zsh/${PKGVERSION}/functions/_nmcli
 share/zsh/${PKGVERSION}/functions/_normal
 share/zsh/${PKGVERSION}/functions/_nothing
 share/zsh/${PKGVERSION}/functions/_notmuch
@@ -533,6 +539,7 @@ share/zsh/${PKGVERSION}/functions/_rebootin
 share/zsh/${PKGVERSION}/functions/_redirect
 share/zsh/${PKGVERSION}/functions/_regex_arguments
 share/zsh/${PKGVERSION}/functions/_regex_words
+share/zsh/${PKGVERSION}/functions/_remote_files
 share/zsh/${PKGVERSION}/functions/_renice
 share/zsh/${PKGVERSION}/functions/_reprepro
 share/zsh/${PKGVERSION}/functions/_requested
@@ -552,6 +559,7 @@ share/zsh/${PKGVERSION}/functions/_samba
 share/zsh/${PKGVERSION}/functions/_savecore
 share/zsh/${PKGVERSION}/functions/_sccs
 share/zsh/${PKGVERSION}/functions/_sched
+share/zsh/${PKGVERSION}/functions/_schedtool
 share/zsh/${PKGVERSION}/functions/_schroot
 share/zsh/${PKGVERSION}/functions/_screen
 share/zsh/${PKGVERSION}/functions/_sed
@@ -599,6 +607,7 @@ share/zsh/${PKGVERSION}/functions/_svcs
 share/zsh/${PKGVERSION}/functions/_svcs_fmri
 share/zsh/${PKGVERSION}/functions/_svn-buildpackage
 share/zsh/${PKGVERSION}/functions/_sysctl
+share/zsh/${PKGVERSION}/functions/_systemctl
 share/zsh/${PKGVERSION}/functions/_tags
 share/zsh/${PKGVERSION}/functions/_tar
 share/zsh/${PKGVERSION}/functions/_tar_archive
@@ -628,8 +637,10 @@ share/zsh/${PKGVERSION}/functions/_tpb
 share/zsh/${PKGVERSION}/functions/_tpconfig
 share/zsh/${PKGVERSION}/functions/_tracepath
 share/zsh/${PKGVERSION}/functions/_trap
+share/zsh/${PKGVERSION}/functions/_tree
 share/zsh/${PKGVERSION}/functions/_ttyctl
 share/zsh/${PKGVERSION}/functions/_tune2fs
+share/zsh/${PKGVERSION}/functions/_twidge
 share/zsh/${PKGVERSION}/functions/_twisted
 share/zsh/${PKGVERSION}/functions/_typeset
 share/zsh/${PKGVERSION}/functions/_ulimit
@@ -797,6 +808,7 @@ share/zsh/${PKGVERSION}/functions/match-word-context
 share/zsh/${PKGVERSION}/functions/match-words-by-style
 share/zsh/${PKGVERSION}/functions/mere
 share/zsh/${PKGVERSION}/functions/modify-current-argument
+share/zsh/${PKGVERSION}/functions/move-line-in-buffer
 share/zsh/${PKGVERSION}/functions/narrow-to-region
 share/zsh/${PKGVERSION}/functions/narrow-to-region-invisible
 share/zsh/${PKGVERSION}/functions/nslookup
@@ -839,6 +851,7 @@ share/zsh/${PKGVERSION}/functions/send-invisible
 share/zsh/${PKGVERSION}/functions/smart-insert-last-word
 share/zsh/${PKGVERSION}/functions/split-shell-arguments
 share/zsh/${PKGVERSION}/functions/sticky-note
+share/zsh/${PKGVERSION}/functions/zsh-mime-contexts
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_alias
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_close
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_command
