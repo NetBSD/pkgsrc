@@ -1,8 +1,10 @@
-$NetBSD: patch-af,v 1.4 2010/10/03 22:13:38 pettai Exp $
+$NetBSD: patch-af,v 1.5 2012/01/14 15:36:24 taca Exp $
 
---- program/include/iniset.php.orig	2010-09-29 10:04:09.000000000 +0000
+Honor PKG_SYSCONFDIR.
+
+--- program/include/iniset.php.orig	2012-01-06 16:01:53.000000000 +0000
 +++ program/include/iniset.php
-@@ -46,7 +46,7 @@ if (!defined('INSTALL_PATH')) {
+@@ -47,7 +47,7 @@ if (!defined('INSTALL_PATH')) {
  }
  
  if (!defined('RCMAIL_CONFIG_DIR')) {
