@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/01/13 10:55:36 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/01/14 02:09:38 hans Exp $
 #
 
 DISTNAME=	61e08e67b176
@@ -15,11 +15,9 @@ COMMENT=	Java browser plugin and Web Start launcher
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
-
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		autoconf automake gmake pkg-config
+USE_TOOLS+=		autoconf automake gmake pkg-config zip
 WRKSRC=			${WRKDIR}/icedtea-web-${DISTNAME}
 
 CONFIGURE_ARGS+=	 --with-jdk-home=${PREFIX}/java/openjdk7
