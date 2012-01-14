@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/12/12 07:12:52 marino Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/01/14 03:24:15 hans Exp $
 #
 # used by graphics/eog-plugins/Makefile
 # used by graphics/eog-plugins-map/Makefile
@@ -19,6 +19,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config gmake gsed msgfmt
 # XXX pkgsrc tries to trick us into using NetBSD's sed
-_TOOLS_USE_PKGSRC.gsed=yes
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.gsed=
+.endif
 
 .include "../../graphics/eog/buildlink3.mk"
