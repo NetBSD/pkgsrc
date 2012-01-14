@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/14 07:44:35 obache Exp $
 #
 
 DISTNAME=	coolkey-1.1.0
@@ -15,13 +15,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_PLATFORM=	NetBSD-[0-3].*-* NetBSD-4.[0-9].*-*
 NOT_FOR_PLATFORM+=	NetBSD-4.[0-8]*.*-* NetBSD-4.9[0-8].*-*
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	autoconf
 USE_TOOLS+=	gmake
 USE_TOOLS+=	grep
+.if ${OPSYS} != "NetBSD"
 USE_TOOLS+=	gsed
+.endif
 USE_LANGUAGES=	c c++
 AUTOCONF_REQD=	2.59
 

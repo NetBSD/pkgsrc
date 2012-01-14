@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/14 03:43:36 hans Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/14 07:44:34 obache Exp $
 #
 
 DISTNAME=	pdf2djvu_0.7.7
@@ -15,19 +15,13 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
-DEPENDS+=	gsed>=4.2:../../textproc/gsed
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++ c
-USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext gsed
-
-# We really need GNU sed not NetBSD's GNUish sed
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.gsed=	# empty
-.endif
+USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext gsed:run
+TOOLS_DEPENDS.gsed=	gsed>=4.2:../../textproc/gsed
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
