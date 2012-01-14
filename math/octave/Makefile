@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2012/01/14 03:36:42 hans Exp $
+# $NetBSD: Makefile,v 1.97 2012/01/14 07:44:34 obache Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -36,12 +36,6 @@ USE_LANGUAGES=		c c++ fortran77
 CONFIGURE_ARGS+=	--enable-dl
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	--enable-shared
-
-# trick pkgsrc into real gsed, needed for "mkf77def"
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.gsed=	#empty
-.endif
 
 .include "options.mk"
 
