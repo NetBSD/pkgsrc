@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2012/01/14 00:51:36 hans Exp $
+# $NetBSD: Makefile,v 1.96 2012/01/14 03:36:42 hans Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -38,7 +38,10 @@ CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	--enable-shared
 
 # trick pkgsrc into real gsed, needed for "mkf77def"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.gsed=	#empty
+.endif
 
 .include "options.mk"
 
