@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/06 23:41:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/14 02:09:37 hans Exp $
 #
 
 DISTNAME=	ebook-tools-0.1.1
@@ -11,14 +11,13 @@ HOMEPAGE=	http://ebook-tools.sourceforge.net/
 COMMENT=	Convert .lit files to valid epub
 LICENSE=	mit
 
-DEPENDS+=	zip-[0-9]*:../../archivers/zip
 DEPENDS+=	convertlit-[0-9]*:../../textproc/convertlit
 
 CONFLICTS+=	ebook-tools<=0.1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run zip:run
 REPLACE_BASH=	src/tools/lit2epub
 NO_BUILD=	yes
 

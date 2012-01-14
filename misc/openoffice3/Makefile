@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/01/13 10:55:22 obache Exp $
+# $NetBSD: Makefile,v 1.59 2012/01/14 02:09:37 hans Exp $
 
 OO_VER=			3.1.1
 OO_TAG=			OOO310_m19
@@ -22,7 +22,6 @@ LICENSE=		gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 
 DEPENDS+=		libpaper-[0-9]*:../../print/libpaper
@@ -43,7 +42,7 @@ CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
-USE_TOOLS+=		bash bison gmake imake perl pkg-config tar unzip
+USE_TOOLS+=		bash bison gmake imake perl pkg-config tar unzip zip
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 

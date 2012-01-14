@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/15 05:37:31 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/14 02:09:37 hans Exp $
 #
 
 DISTNAME=	SOGo-2.0.0b3
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/SOGo
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c
-USE_TOOLS+=     gmake
+USE_TOOLS+=     gmake zip:run
 
 CONFIGURE_ARGS= --enable-debug --disable-strip
 
@@ -62,7 +62,6 @@ pre-install:
 .include "../../devel/SOPE/buildlink3.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 
 .include "../../mk/bsd.pkg.mk"

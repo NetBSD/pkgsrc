@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2011/11/01 06:00:34 sbd Exp $
+# $NetBSD: Makefile,v 1.70 2012/01/14 02:09:35 hans Exp $
 
 DISTNAME=		audacity-src-1.2.6
 PKGREVISION=		11
@@ -10,14 +10,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://audacity.sourceforge.net/
 COMMENT=		Audio editor
 
-DEPENDS+=		zip>=0.0:../../archivers/zip
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf gmake msgfmt pkg-config
+USE_TOOLS+=		autoconf gmake msgfmt pkg-config zip:run
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaudio

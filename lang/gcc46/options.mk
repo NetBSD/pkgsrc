@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/10/13 10:54:24 hans Exp $
+# $NetBSD: options.mk,v 1.4 2012/01/14 02:09:36 hans Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc46
 PKG_SUPPORTED_OPTIONS=	nls gcc-c++ gcc-fortran gcc-java gcc-objc #gcc-ada
@@ -43,8 +43,7 @@ PKG_OPTIONS+=		gcc-c++
 LANGS+=			java
 REPLACE_PYTHON=		libjava/contrib/aot-compile.in
 
-USE_TOOLS+=		unzip
-DEPENDS+=		zip-[0-9]*:../../archivers/zip
+USE_TOOLS+=		unzip zip:run
 CONFIGURE_ARGS+=	--with-system-zlib
 
 # ${WRKSRC}/gcc-4.6.1/libjava/contrib/aotcompile.py.in stores the path to

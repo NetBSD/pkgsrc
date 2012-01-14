@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2011/11/01 06:00:33 sbd Exp $
+# $NetBSD: Makefile,v 1.111 2012/01/14 02:09:35 hans Exp $
 #
 
 DISTNAME=	file-roller-2.32.2
@@ -14,13 +14,12 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
 DEPENDS+=		unzip>=5.50nb2:../../archivers/unzip
-DEPENDS+=		zip>=2.3nb2:../../archivers/zip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config zip:run
 USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS=		file-roller.schemas

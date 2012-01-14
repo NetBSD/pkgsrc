@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/11/01 06:01:22 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/14 02:09:36 hans Exp $
 #
 
 DISTNAME=	warzone2100-2.2.2
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wz2100.net/
 COMMENT=	Real-time strategy and real-time tactics hybrid computer game
 
-BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
@@ -18,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config bison msgfmt intltool gmake gawk flex
+USE_TOOLS+=	pkg-config bison msgfmt intltool gmake gawk flex zip
 
 CONFIGURE_ARGS+=	--with-distributor=pkgsrc
 
