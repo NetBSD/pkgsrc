@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2011/03/11 11:48:40 zafer Exp $
+# $NetBSD: Makefile,v 1.46 2012/01/14 15:36:10 dholland Exp $
 #
 
 DISTNAME=	angband-3.0.3
 PKGNAME=	angband-x11-3.0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	# ftp://clockwork.dementia.org/angband/Source/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}
@@ -19,6 +19,7 @@ CONFLICTS=	angband-tty-[0-9]*
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=	pax
+USE_GAMESGROUP=	yes
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-M]-*
@@ -26,7 +27,7 @@ INCOMPAT_CURSES+=	NetBSD-1.6[A-M]-*
 SPOILERFILE=	angband-spoilers.tar.gz
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-setgid=games
+CONFIGURE_ARGS+=	--with-setgid=${GAMES_GROUP}
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
@@ -44,7 +45,7 @@ INSTALLATION_DIRS+=	share/games/angband/lib/info
 post-install:
 	cd ${DESTDIR}${PREFIX}/share/games/angband/lib/info/ && \
 		 pax -O -zrf ${DISTDIR}/${SPOILERFILE}
-	${CHOWN} -R bin:games ${DESTDIR}${PREFIX}/share/games/angband
+	${CHGRP} -R ${GAMES_GROUP} ${DESTDIR}${PREFIX}/share/games/angband
 	${FIND} ${DESTDIR}${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
 
 BUILDLINK_DEPMETHOD.libXt?=	build
