@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.52 2011/11/26 16:11:11 hans Exp $
+# $NetBSD: bsd.tools.mk,v 1.53 2012/01/14 00:47:53 hans Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -152,6 +152,7 @@ post-tools:
 .include "texinfo.mk"
 .include "gettext.mk"
 .include "flex.mk"
+.include "bison.mk"
 .include "gmake.mk"
 .include "intltool.mk"
 .include "ldconfig.mk"
