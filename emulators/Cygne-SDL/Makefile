@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 19:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2012/01/14 02:09:36 hans Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
@@ -12,7 +12,6 @@ HOMEPAGE=		http://icculus.org/Cygne-SDL/
 COMMENT=		Bandai Wonderswan Color handheld emulator
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
-BUILD_DEPENDS+=		zip>=2.0:../../archivers/zip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,6 +20,7 @@ MAKE_FILE=		Makefiles/Makefile.unix
 NO_CONFIGURE=		yes
 BUILD_DIRS=		src
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		zip
 
 # Uses i386 assembly code
 ONLY_FOR_PLATFORM=	*-*-i386

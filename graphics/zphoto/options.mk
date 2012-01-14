@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/09/22 20:21:03 joerg Exp $
+# $NetBSD: options.mk,v 1.5 2012/01/14 02:09:36 hans Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zphoto
 PKG_SUPPORTED_OPTIONS=	zip wx
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-imlib2
 .endif
 
 .if !empty(PKG_OPTIONS:Mzip)
-DEPENDS+=	zip-[0-9]*:../../archivers/zip
+USE_TOOLS+=	zip:run
 .else
 CONFIGURE_ARGS+=	--disable-zip
 .endif

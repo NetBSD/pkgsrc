@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2011/12/23 19:01:40 asau Exp $
+# $NetBSD: Makefile,v 1.62 2012/01/14 02:09:37 hans Exp $
 
 DISTNAME=	smalltalk-3.2.4
 PKGREVISION=	2
@@ -15,9 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
-
-USE_TOOLS+=		gawk gmake makeinfo pkg-config
+USE_TOOLS+=		gawk gmake makeinfo pkg-config zip
 USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2011/12/22 07:56:18 marino Exp $
+# $NetBSD: Makefile,v 1.36 2012/01/14 02:09:37 hans Exp $
 #
 
 DISTNAME=	DVDStyler-1.8.2.1
@@ -19,11 +19,10 @@ DEPENDS+=	dvdauthor>=0.6.10:../../multimedia/dvdauthor
 DEPENDS+=	dvd+rw-tools-[0-9]*:../../sysutils/dvd+rw-tools
 DEPENDS+=	mpgtx-[0-9]*:../../graphics/mpgtx
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake pkg-config msgfmt zip
 GNU_CONFIGURE=		yes
 LDFLAGS+=		-ljpeg
 
