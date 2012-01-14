@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/03/23 05:36:29 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/14 00:38:18 asau Exp $
 #
 
-DISTNAME=		gromacs-4.5.4
+DISTNAME=		gromacs-4.5.5
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.gromacs.org/pub/gromacs/
 
@@ -28,6 +28,12 @@ CONFIGURE_ARGS+=	--disable-gcc41-check
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		scripts/demux.pl scripts/xplor2gmx.pl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if $(MACHINE_ARCH) == "i386"
+CFLAGS+=	-msse -msse2
+.endif
 
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"	# optional

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/03/23 05:36:29 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/14 00:38:18 asau Exp $
 bin/GMXRC
 bin/GMXRC.bash
 bin/GMXRC.csh
@@ -25,11 +25,13 @@ bin/g_covar
 bin/g_current
 bin/g_density
 bin/g_densmap
+bin/g_densorder
 bin/g_dielectric
 bin/g_dih
 bin/g_dipoles
 bin/g_disre
 bin/g_dist
+bin/g_dos
 bin/g_dyndom
 bin/g_enemat
 bin/g_energy
@@ -39,6 +41,7 @@ bin/g_h2order
 bin/g_hbond
 bin/g_helix
 bin/g_helixorient
+bin/g_hydorder
 bin/g_kinetics
 bin/g_lie
 bin/g_luck
@@ -240,10 +243,10 @@ include/gromacs/thread_mpi/atomic/xlc_ppc.h
 include/gromacs/thread_mpi/barrier.h
 include/gromacs/thread_mpi/collective.h
 include/gromacs/thread_mpi/event.h
-include/gromacs/thread_mpi/hwinfo.h
 include/gromacs/thread_mpi/list.h
 include/gromacs/thread_mpi/lock.h
 include/gromacs/thread_mpi/mpi_bindings.h
+include/gromacs/thread_mpi/numa_malloc.h
 include/gromacs/thread_mpi/threads.h
 include/gromacs/thread_mpi/tmpi.h
 include/gromacs/thread_mpi/wait.h
@@ -265,15 +268,18 @@ include/gromacs/types/fcdata.h
 include/gromacs/types/filenm.h
 include/gromacs/types/forcerec.h
 include/gromacs/types/genborn.h
+include/gromacs/types/globsig.h
 include/gromacs/types/graph.h
 include/gromacs/types/group.h
 include/gromacs/types/idef.h
 include/gromacs/types/ifunc.h
 include/gromacs/types/inputrec.h
 include/gromacs/types/ishift.h
+include/gromacs/types/iteratedconstraints.h
 include/gromacs/types/matrix.h
 include/gromacs/types/mdatom.h
 include/gromacs/types/nblist.h
+include/gromacs/types/nlistheuristics.h
 include/gromacs/types/nrnb.h
 include/gromacs/types/ns.h
 include/gromacs/types/nsgrid.h
@@ -327,6 +333,7 @@ man/man1/g_covar.1
 man/man1/g_current.1
 man/man1/g_density.1
 man/man1/g_densmap.1
+man/man1/g_densorder.1
 man/man1/g_dielectric.1
 man/man1/g_dih.1
 man/man1/g_dipoles.1
@@ -341,6 +348,7 @@ man/man1/g_h2order.1
 man/man1/g_hbond.1
 man/man1/g_helix.1
 man/man1/g_helixorient.1
+man/man1/g_hydorder.1
 man/man1/g_lie.1
 man/man1/g_mdmat.1
 man/man1/g_membed.1
@@ -350,7 +358,9 @@ man/man1/g_msd.1
 man/man1/g_nmeig.1
 man/man1/g_nmens.1
 man/man1/g_nmtraj.1
+man/man1/g_options.1
 man/man1/g_order.1
+man/man1/g_pme_error.1
 man/man1/g_polystat.1
 man/man1/g_potential.1
 man/man1/g_principal.1
@@ -461,6 +471,7 @@ share/gromacs/html/online/g_confrms.html
 share/gromacs/html/online/g_covar.html
 share/gromacs/html/online/g_density.html
 share/gromacs/html/online/g_densmap.html
+share/gromacs/html/online/g_densorder.html
 share/gromacs/html/online/g_dielectric.html
 share/gromacs/html/online/g_dih.html
 share/gromacs/html/online/g_dipoles.html
