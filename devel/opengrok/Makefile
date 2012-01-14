@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/01/14 02:09:35 hans Exp $
+# $NetBSD: Makefile,v 1.18 2012/01/14 03:13:04 hans Exp $
 #
 
 DISTNAME=	opengrok-0.8.1
@@ -11,8 +11,6 @@ HOMEPAGE=	http://hub.opensolaris.org/bin/view/Project+opengrok/
 COMMENT=	Fast and usable source code search and cross reference engine
 
 DEPENDS+=	exctags-[0-9]*:../../devel/exctags
-DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,7 +22,7 @@ NO_BUILD=	YES
 
 USE_JAVA=	run
 USE_JAVA2=	yes
-USE_TOOLS+=	zip:run
+USE_TOOLS+=	unzip:run zip:run
 
 CONF_FILES=	${PREFIX}/share/examples/opengrok/paths.tsv \
 		${PREFIX}/share/opengrok/paths.tsv

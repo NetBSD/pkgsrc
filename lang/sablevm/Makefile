@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:59 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/01/14 03:13:04 hans Exp $
 #
 
 DISTNAME=	sablevm-1.13
@@ -12,13 +12,12 @@ COMMENT=	SableVM free Java virtual machine
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	unzip>=5.50:../../archivers/unzip
 DEPENDS+=	sablevm-classpath-1.13nb1:../../lang/sablevm-classpath
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
-USE_TOOLS+=		gmake gm4
+USE_TOOLS+=		gmake gm4 unzip:run
 USE_LIBTOOL=		yes
 
 JAVA_NAME=		sablevm
