@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.126 2012/01/14 15:36:31 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.127 2012/01/14 15:37:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -194,3 +194,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated shells/zsh-current to 4.3.15 [ryoon 2012-01-14]
 	Updated net/aria2 to 1.14.1 [ryoon 2012-01-14]
 	Updated games/angband-x11 to 3.0.3nb3 [dholland 2012-01-14]
+	Updated mail/roundcube to 0.7.1 [taca 2012-01-14]
