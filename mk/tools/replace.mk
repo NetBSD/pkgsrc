@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.238 2012/01/12 15:55:01 hans Exp $
+# $NetBSD: replace.mk,v 1.239 2012/01/14 01:52:14 hans Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -866,6 +866,19 @@ TOOLS_ARGS.yacc=		-y
 TOOLS_VALUE_GNU.yacc=		${TOOLS_CMDLINE.yacc}
 .  endif
 .endif
+
+.for _t_ in zip zipcloak zipnote zipsplit
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Marchivers/zip)
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=		zip-[0-9]*:../../archivers/zip
+TOOLS_CREATE+=			${_t_}
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=zip
+TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.    endif
+.  endif
+.endfor
 
 ######################################################################
 
