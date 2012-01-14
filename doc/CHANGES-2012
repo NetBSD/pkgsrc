@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.121 2012/01/14 00:38:43 asau Exp $
+$NetBSD: CHANGES-2012,v 1.122 2012/01/14 08:30:26 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -189,3 +189,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/kterm to 6.2.0nb19 [ryoon 2012-01-13]
 	Updated devel/bison to 2.5nb2 [morr 2012-01-13]
 	Updated biology/gromacs to 4.5.5 [asau 2012-01-14]
+	Updated comms/asterisk16 to 1.6.2.22 [jnemeth 2012-01-14]
