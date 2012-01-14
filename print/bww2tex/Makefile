@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/07/14 12:56:11 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/01/14 00:51:37 hans Exp $
 #
 
 DISTNAME=	bww2tex-2.00
@@ -12,7 +12,7 @@ COMMENT=	Bagpipe Music Writer Gold to BagpipeTeX converter
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+USE_TOOLS+=	bison
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
