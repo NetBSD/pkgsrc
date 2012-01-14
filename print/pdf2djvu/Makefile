@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/01 06:02:26 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/14 03:43:36 hans Exp $
 #
 
 DISTNAME=	pdf2djvu_0.7.7
@@ -24,7 +24,10 @@ USE_LANGUAGES=		c++ c
 USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext gsed
 
 # We really need GNU sed not NetBSD's GNUish sed
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.gsed=	# empty
+.endif
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
