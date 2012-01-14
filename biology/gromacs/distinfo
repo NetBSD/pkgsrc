@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/03/23 05:36:29 asau Exp $
+$NetBSD: distinfo,v 1.9 2012/01/14 00:38:18 asau Exp $
 
-SHA1 (gromacs-4.5.4.tar.gz) = c7b3fbd2f3ddf915bc082e7effe76a8276563726
-RMD160 (gromacs-4.5.4.tar.gz) = 96065d1a173231f75869764a08eb4feccc1ec597
-Size (gromacs-4.5.4.tar.gz) = 10353984 bytes
+SHA1 (gromacs-4.5.5.tar.gz) = ce4b4f9a0453dd2ffea72f28ea0bc7bb7a72f479
+RMD160 (gromacs-4.5.5.tar.gz) = a3d40c3ac6ec9ee3e4607bd35afca1dd4715154e
+Size (gromacs-4.5.5.tar.gz) = 10398178 bytes
 SHA1 (patch-aa) = 29c6683c71989621f0f41682b1c225f524a2d84f
 SHA1 (patch-ad) = 68b37154ba466e28cad0e539e25253c901421aaa
 SHA1 (patch-ae) = 59a5e88abeee883483b557cab1681c9a9098870f
