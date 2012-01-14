@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/02/14 06:58:25 dholland Exp $
+# $NetBSD: Makefile,v 1.33 2012/01/14 07:44:34 obache Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		5
@@ -17,12 +17,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
-BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
-
 NOT_FOR_PLATFORM+=	Interix-*-* *-*-x86_64
 
 WRKSRC=			${WRKDIR}/gcc-2.95.3
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake gsed
 USE_NCURSES=		yes
 PLIST_SRC=		PLIST
 

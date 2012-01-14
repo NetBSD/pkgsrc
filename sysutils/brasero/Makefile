@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/11/01 06:02:31 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/01/14 07:44:35 obache Exp $
 #
 
 DISTNAME=	brasero-2.32.1
@@ -17,11 +17,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # gnome-common provides m4 files we need
 #
 BUILD_DEPENDS+=         gnome-common>=2.26.0:../../devel/gnome-common
-BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool gawk msgfmt
+USE_TOOLS+=	pkg-config gmake gsed intltool gawk msgfmt
 
 CONFIGURE_ARGS+=	--disable-inotify
 
