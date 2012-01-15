@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10792 2012/01/15 15:34:57 ryoon Exp $
+$NetBSD: TODO,v 1.10793 2012/01/15 20:49:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -436,7 +436,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bitlbee-3.0.4
 	o bitmap-1.0.5
 	o blender-2.61
-	o bluefish-2.2.1
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.5.1
@@ -450,7 +449,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.34
+	o calibre-0.8.35
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccache-3.1.7
 	o cddbd-1.5.2
@@ -499,7 +498,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dar-2.4.2
 	o darcs-2.4
 	o dasher-4.11
-	o davical-1.0.1
+	o davical-1.0.2
 	o dbench-4.0
 	o dbus-1.4.16
 	o dbus-glib-0.98
@@ -568,7 +567,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
 	o eric4-4.4.17
-	o eric5-5.1.7
+	o eric5-5.1.8
 	o erlang-15b
 	o esh-0.8.5
 	o espeak-1.40
@@ -596,8 +595,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
+	o ffmpeg-20120115.0.7.11
 	o ffmpeg-20111121.0.8.7
-	o ffmpeg-20121212.0.9
+	o ffmpeg-20111212.0.9
 	o file-5.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -779,6 +779,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.4
 	o haskell-mode-1.45
+	o hatari-1.6.1
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o help2man-1.40.5
 	o hesiod-3.1.0
@@ -831,6 +832,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jed-0.99-18
 	o john-1.7.9jumbo5
 	o jools-1.0
+	o jpeg-8d
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
 	o jwm-2.1.0
@@ -932,6 +934,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnotify-0.7.1
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libpciaccess-0.12.1
+	o libplist-1.8
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.14.3
@@ -1117,11 +1120,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.18.2
+	o poppler-0.18.3
 	o poppy-4.01
 	o posh-0.5.5
-	o postal-0.70
+	o postal-0.72
 	o postgresql-postgis-1.5.3
+	o powder-117
 	o powerdns-2.9.22.5
 	o powwow-1.2.16
 	o prboom-2.5.0.8
@@ -1170,8 +1174,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qemu-1.0
 	o qnetwalk-1.3
 	o qpopper-4.0.14
-	o qt4-libs-4.8.0
-	o qt4-qscintilla-2.6
 	o qvplay-0.95
 	o qwt-6.0.0
 	o radiance-3.7.2
@@ -1217,6 +1219,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sarg-2.2.5
 	o sawfish-1.8.2
 	o saxon-9.2
+	o sbcl-1.0.55
 	o scapy-2.2.0
 	o scew-0.4.0
 	o scilab-5.5.3
@@ -1294,7 +1297,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tcpillust-1.00b
 	o tcpreplay-3.4.4
 	o tcpslice-1.2a3
-	o tcsh-6.17.06
+	o tcsh-6.18.00
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
@@ -1306,7 +1309,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tesseract-3.01
 	o tetrinetx-1.40c
 	o texmaker-3.1 [pkg/45521]
-	o texmaker-3.2.1
+	o texmaker-3.2.2
 	o tfmxplay-1.1.6
 	o tiff-4.0.0
 	o tig-0.18
@@ -1386,7 +1389,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weechat-0.3.6
 	o whohas-0.29
 	o windowlab-1.40
-	o wine-devel-1.3.36
+	o wine-devel-1.3.37
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1494,6 +1497,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
+	o xmlstarlet-1.3.1
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
@@ -1503,7 +1507,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xorg-util-macros-1.10.1 [pkg/43891]
 	o xorg-util-macros-1.16.0
 	o xorp-1.8.4
-	o xpaint-2.9.8.2
+	o xpaint-2.9.8.4
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.1
 	o xproto-7.0.22 [pkg/45465]
