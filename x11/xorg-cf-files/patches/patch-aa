@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2010/05/21 22:09:43 schwarz Exp $
+$NetBSD: patch-aa,v 1.3 2012/01/15 14:01:59 shattered Exp $
 
---- NetBSD.cf.orig	2010-05-16 12:26:19.000000000 +0200
-+++ NetBSD.cf	2010-05-16 12:27:44.000000000 +0200
+--- NetBSD.cf.orig	2009-10-16 21:45:42.000000000 +0000
++++ NetBSD.cf
 @@ -126,7 +126,7 @@
  # if ((OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 11) || \
        (OSMajorVersion == 2 && OSMinorVersion < 99) || \
@@ -49,3 +49,33 @@ $NetBSD: patch-aa,v 1.2 2010/05/21 22:09:43 schwarz Exp $
  /*
   * NetBSD doesn't have gperf in default system
   * you may override this in host.def if you installed perl from the packages
+@@ -596,10 +602,6 @@
+ # define BuildXInputLib          YES
+ #endif
+ 
+-#if defined(i386Architecture) || defined(Arm32Architecture) || defined(AlphaArchitecture) || defined(PpcArchitecture) || defined(AMD64Architecture)
+-# include <xorg.cf>
+-#endif
+-
+ /*
+  * Definitions for the SUN server on NetBSD/sparc
+  */
+@@ -629,7 +631,6 @@
+ #define BuildXF86VidModeExt	NO
+ #define BuildXF86DGA		NO
+ #define BuildXInputExt		NO
+-#include <xorg.cf>
+ #endif
+ 
+ /*
+@@ -696,3 +697,10 @@
+ #define HasDevRandom		YES
+ #define RandomDeviceFile	/dev/urandom
+ #endif
++
++/*
++ * Always include xorg.cf for GccAliasingArgs,
++ * regardless of server support on this plattform
++ */
++#include <xorg.cf>
++
