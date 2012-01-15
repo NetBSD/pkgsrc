@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.52 2009/09/20 10:24:00 wiz Exp $
+# $NetBSD: mksandbox,v 1.53 2012/01/15 13:34:28 ryoon Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -76,6 +76,19 @@ Darwin)
 	idprog=/usr/bin/id
 	mkdirprog="/bin/mkdir -p"
 	mountflags="-t null"
+	mountprog=/sbin/mount
+	paxprog=/bin/pax
+	sedprog=/usr/bin/sed
+	;;
+FreeBSD)
+	bmakeprog=bmake
+	chmodprog=/bin/chmod
+	chownprog=/usr/sbin/chown
+	cpprog=/bin/cp
+	gtarprog=/usr/bin/tar
+	idprog=/usr/bin/id
+	mkdirprog="/bin/mkdir -p"
+	mountflags="-t nullfs"
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
@@ -235,8 +248,7 @@ SunOS)
 	fi
 	;;
 Linux)
-	$cpprog /dev/MAKEDEV* $sandbox/dev
-	(cd $sandbox/dev; ./MAKEDEV generic random)
+	$mountprog $mountflags /dev $sandbox/dev
 	;;
 FreeBSD)
 	$mountprog -t devfs devfs $sandbox/dev
