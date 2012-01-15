@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.131 2012/01/15 15:34:21 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.132 2012/01/15 18:38:15 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -211,3 +211,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/ruby-gnome2-vte to 1.1.2 [obache 2012-01-15]
 	Updated net/mikutter to 0.0.4.642 [obache 2012-01-15]
 	Updated lang/bwbasic to 2.50 [ryoon 2012-01-15]
+	Added comms/asterisk10 version 10.0.0 [jnemeth 2012-01-15]
