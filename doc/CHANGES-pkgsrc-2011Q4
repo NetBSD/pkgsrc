@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.8 2012/01/13 16:11:36 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.9 2012/01/15 16:54:44 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -78,3 +78,5 @@ net/powerdns-pgsql: security update
 net/powerdns-sqlite: security update
 Pullup ticket #3651 - requested by taca
 net/isc-dhcp4: security update
+Pullup ticket #3640 - requested by tron
+net/wireshark: security update
