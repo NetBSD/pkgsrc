@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/11/18 02:38:01 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/01/15 02:52:18 mrg Exp $
 
 # To the poor soul who wants to update this package:
 #
@@ -43,7 +43,7 @@
 
 DISTNAME=	${PRODUCT:tl:S/_v/-/}-noCPAN
 PKGNAME=	${DISTNAME:S/-noCPAN//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.slimdevices.com/${PRODUCT}/
 
@@ -97,7 +97,9 @@ DEPENDS+=	p5-YAML-Syck>=1.05:../../textproc/p5-YAML-Syck
 # Perl modules without native code
 DEPENDS+=	p5-Cache-Cache>=1.04:../../devel/p5-Cache-Cache
 DEPENDS+=	p5-Class-Data-Inheritable>=0.04:../../devel/p5-Class-Data-Inheritable
+DEPENDS+=	p5-Class-ISA>=0.36nb2:../../devel/p5-Class-ISA
 DEPENDS+=	p5-Class-Inspector>=1.16:../../devel/p5-Class-Inspector
+DEPENDS+=	p5-Data-Compare-[0-9]*:../../devel/p5-Data-Compare
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=	p5-Data-URIEncode>=0.11:../../www/p5-Data-URIEncode
 DEPENDS+=	p5-DBIx-Class>=0.08109:../../databases/p5-DBIx-Class
