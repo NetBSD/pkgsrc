@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10791 2012/01/14 15:16:09 ryoon Exp $
+$NetBSD: TODO,v 1.10792 2012/01/15 15:34:57 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -445,7 +445,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.10.0
 	o bugzilla-3.6
-	o bwbasic-2.50 [pkg/42846]
 	o byacc-20110908
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
