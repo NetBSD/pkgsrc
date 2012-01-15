@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.6 2011/10/11 03:12:55 jnemeth Exp $
+$NetBSD: patch-aq,v 1.7 2012/01/15 03:32:48 jnemeth Exp $
 
---- configure.orig	2011-09-19 16:57:40.000000000 +0000
+--- configure.orig	2011-10-18 21:26:48.000000000 +0000
 +++ configure
-@@ -22644,6 +22644,146 @@ fi
+@@ -24922,6 +24922,146 @@ fi
  
  
  
@@ -146,10 +146,10 @@ $NetBSD: patch-aq,v 1.6 2011/10/11 03:12:55 jnemeth Exp $
 +
 +
 +
- { echo "$as_me:$LINENO: checking for int" >&5
- echo $ECHO_N "checking for int... $ECHO_C" >&6; }
- if test "${ac_cv_type_int+set}" = set; then
-@@ -27486,6 +27626,8 @@ _ACEOF
+ # The cast to long int works around a bug in the HP C Compiler
+ # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
+ # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
+@@ -29226,6 +29366,8 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -158,7 +158,7 @@ $NetBSD: patch-aq,v 1.6 2011/10/11 03:12:55 jnemeth Exp $
  #include <ifaddrs.h>
  int
  main ()
-@@ -53846,9 +53988,8 @@ cat >>confdefs.h <<\_ACEOF
+@@ -55374,9 +55516,8 @@ cat >>confdefs.h <<\_ACEOF
  #define HAVE_SBIN_LAUNCHD 1
  _ACEOF
  

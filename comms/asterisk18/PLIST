@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/10/17 23:40:50 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/01/15 03:32:47 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -2127,8 +2127,506 @@ sbin/astgenkey
 sbin/autosupport
 sbin/rasterisk
 sbin/safe_asterisk
-share/doc/asterisk/AST.pdf
-share/doc/asterisk/AST.txt
+share/doc/asterisk/Asterisk-Admin-Guide/AGI Command Template Page.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGI Commands.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_ANSWER.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_ASYNCAGI BREAK.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_CHANNEL STATUS.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_CONTROL STREAM FILE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_DATABASE DEL.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_DATABASE DELTREE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_DATABASE GET.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_DATABASE PUT.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_EXEC.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_GET DATA.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_GET FULL VARIABLE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_GET OPTION.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_GET VARIABLE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_GOSUB.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_HANGUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_NOOP.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_RECEIVE CHAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_RECEIVE TEXT.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_RECORD FILE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SAY ALPHA.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SAY DATE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SAY DATETIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SAY DIGITS.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SAY NUMBER.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SAY PHONETIC.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SAY TIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SEND IMAGE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SEND TEXT.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SET AUTOHANGUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SET CALLERID.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SET CONTEXT.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SET EXTENSION.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SET MUSIC.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SET PRIORITY.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SET VARIABLE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH ACTIVATE GRAMMAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH CREATE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH DEACTIVATE GRAMMAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH DESTROY.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH LOAD GRAMMAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH RECOGNIZE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH SET.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_SPEECH UNLOAD GRAMMAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_STREAM FILE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_TDD MODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_VERBOSE.html
+share/doc/asterisk/Asterisk-Admin-Guide/AGICommand_WAIT FOR DIGIT.html
+share/doc/asterisk/Asterisk-Admin-Guide/AMI Action Template Page.html
+share/doc/asterisk/Asterisk-Admin-Guide/AMI Actions.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ADSIProg.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_AELSub.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_AGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_AMD.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_AddQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_AgentLogin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_AgentMonitorOutgoing.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_AlarmReceiver.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Answer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Authenticate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_BackGround.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_BackgroundDetect.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Bridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Busy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_CELGenUserEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_CallCompletionCancel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_CallCompletionRequest.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ChanIsAvail.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ChanSpy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ChangeMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ChannelRedirect.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ClearHash.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ConfBridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Congestion.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ContinueWhile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ControlPlayback.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DAHDIAcceptR2Call.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DAHDIBarge.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DAHDIRAS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DAHDIScan.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DAHDISendCallreroutingFacility.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DAHDISendKeypadFacility.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DBdel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DBdeltree.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DISA.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DateTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DeadAGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Dial.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Dictate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Directory.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_DumpChan.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_EAGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Echo.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_EndWhile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Exec.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ExecIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ExecIfTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ExitWhile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ExtenSpy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ExternalIVR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Festival.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Flash.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_FollowMe.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ForkCDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_GetCPEID.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Gosub.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_GosubIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Goto.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_GotoIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_GotoIfTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Hangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_IAX2Provision.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ICES.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_IVRDemo.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ImportVar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Incomplete.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_JACK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_JabberJoin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_JabberLeave.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_JabberSend.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_JabberSendGroup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_JabberStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Log.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MP3Player.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MSet.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Macro.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MacroExclusive.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MacroExit.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MacroIf.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MailboxExists.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MeetMe.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MeetMeAdmin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MeetMeChannelAdmin.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MeetMeCount.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Milliwatt.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MinivmAccMess.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MinivmDelete.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MinivmGreet.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MinivmMWI.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MinivmNotify.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MinivmRecord.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MixMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Monitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Morsecode.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_MusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_NBScat.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_NoCDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_NoOp.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ODBCFinish.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ODBC_Commit.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ODBC_Rollback.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_OSPAuth.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_OSPFinish.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_OSPLookup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_OSPNext.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Originate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Page.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Park.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ParkAndAnnounce.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ParkedCall.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_PauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_PauseQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Pickup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_PickupChan.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_PlayTones.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Playback.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_PrivacyManager.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Proceeding.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Progress.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Queue.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_QueueLog.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_RaiseException.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Read.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ReadExten.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ReadFile.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ReceiveFAX (app_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ReceiveFax (res_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ReceiveFax.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Record.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_RemoveQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_ResetCDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_RetryDial.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Return.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Ringing.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SIPAddHeader.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SIPDtmfMode.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SIPRemoveHeader.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SLAStation.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SLATrunk.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SMS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayAlpha.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayCountPL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayCountedAdj.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayCountedNoun.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayDigits.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayNumber.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayPhonetic.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SayUnixTime.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SendDTMF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SendFAX (app_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SendFax (res_fax).html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SendFax.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SendImage.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SendText.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SendURL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Set.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SetAMAFlags.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SetCallerPres.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SetMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Skel.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SoftHangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechActivateGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechBackground.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechCreate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechDeactivateGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechDestroy.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechLoadGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechProcessingSound.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechStart.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_SpeechUnloadGrammar.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_StackPop.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_StartMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_StopMixMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_StopMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_StopMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_StopPlayTones.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_System.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_TestClient.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_TestServer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Transfer.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_TryExec.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_TrySystem.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_UnpauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_UnpauseQueueMember.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_UserEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_VMAuthenticate.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_VMSayName.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Verbose.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_VoiceMail.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_VoiceMailMain.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Wait.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_WaitExten.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_WaitForNoise.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_WaitForRing.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_WaitForSilence.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_WaitMusicOnHold.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_WaitUntil.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_While.html
+share/doc/asterisk/Asterisk-Admin-Guide/Application_Zapateller.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk 1.8 Documentation.html
+share/doc/asterisk/Asterisk-Admin-Guide/Asterisk Command Reference.html
+share/doc/asterisk/Asterisk-Admin-Guide/Dialplan Application Template Page.html
+share/doc/asterisk/Asterisk-Admin-Guide/Dialplan Applications.html
+share/doc/asterisk/Asterisk-Admin-Guide/Dialplan Function Template Page.html
+share/doc/asterisk/Asterisk-Admin-Guide/Dialplan Functions.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_AES_DECRYPT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_AES_ENCRYPT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_AGC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_AGENT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ARRAY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_AST_CONFIG.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_AUDIOHOOK_INHERIT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_BASE64_DECODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_BASE64_ENCODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_BLACKLIST.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALENDAR_BUSY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALENDAR_EVENT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALENDAR_QUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALENDAR_QUERY_RESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALENDAR_WRITE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALLCOMPLETION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALLERID.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CALLERPRES.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CDR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CHANNEL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CHANNELS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CHECKSIPDOMAIN.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CONNECTEDLINE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CSV_QUOTE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_CUT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DB.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DB_DELETE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DB_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DEC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DENOISE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DEVICE_STATE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DIALGROUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DIALPLAN_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DUNDILOOKUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DUNDIQUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_DUNDIRESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ENUMLOOKUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ENUMQUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ENUMRESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ENV.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_EVAL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_EXCEPTION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_EXTENSION_STATE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FAXOPT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FIELDNUM.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FIELDQTY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FILE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FILE_COUNT_LINE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FILE_FORMAT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FILTER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_FRAME_TRACE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_GLOBAL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_GROUP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_GROUP_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_GROUP_LIST.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_GROUP_MATCH_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_HASH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_HASHKEYS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_HINT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_IAXPEER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_IAXVAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ICONV.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_IF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_IFMODULE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_IFTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_IMPORT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_INC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ISNULL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_JABBER_RECEIVE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_JABBER_STATUS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_KEYPADHASH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_LEN.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_LISTFILTER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_LOCAL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_LOCAL_PEEK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_LOCK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MAILBOX_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MASTER_CHANNEL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MATH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MD5.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MEETME_INFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MINIVMACCOUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MINIVMCOUNTER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_MUTEAUDIO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ODBC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_ODBC_FETCH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_PASSTHRU.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_PITCH_SHIFT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_POP.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_PP_EACH_EXTENSION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_PP_EACH_USER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_PUSH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUEUE_EXISTS.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUEUE_MEMBER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUEUE_MEMBER_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUEUE_MEMBER_LIST.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUEUE_MEMBER_PENALTY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUEUE_VARIABLES.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUEUE_WAITING_COUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_QUOTE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_RAND.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REALTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REALTIME_DESTROY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REALTIME_FIELD.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REALTIME_HASH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REALTIME_STORE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REDIRECTING.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REGEX.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_REPLACE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SET.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SHA1.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SHARED.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SHELL.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SHIFT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SIPCHANINFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SIPPEER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SIP_HEADER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SMDI_MSG.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SMDI_MSG_RETRIEVE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SORT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SPEECH.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SPEECH_ENGINE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SPEECH_GRAMMAR.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SPEECH_RESULTS_TYPE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SPEECH_SCORE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SPEECH_TEXT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SPRINTF.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SQL_ESC.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SRVQUERY.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SRVRESULT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_STAT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_STRFTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_STRPTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_SYSINFO.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_TESTTIME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_TIMEOUT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_TOLOWER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_TOUPPER.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_TRYLOCK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_TXTCIDNAME.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_UNLOCK.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_UNSHIFT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_URIDECODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_URIENCODE.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_VALID_EXTEN.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_VERSION.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_VMCOUNT.html
+share/doc/asterisk/Asterisk-Admin-Guide/Function_VOLUME.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_AGI.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_AOCMessage.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_AbsoluteTimeout.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_AgentLogoff.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Agents.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Atxfer.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Bridge.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Challenge.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ChangeMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Command.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_CoreSettings.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_CoreShowChannels.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_CoreStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_CreateConfig.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DAHDIDNDoff.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DAHDIDNDon.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DAHDIDialOffhook.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DAHDIHangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DAHDIRestart.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DAHDIShowChannels.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DAHDITransfer.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DBDel.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DBDelTree.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DBGet.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DBPut.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_DataGet.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Events.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ExtensionState.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_GetConfig.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_GetConfigJSON.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Getvar.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Hangup.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_IAXnetstats.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_IAXpeerlist.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_IAXpeers.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_IAXregistry.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_JabberSend.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ListCategories.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ListCommands.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_LocalOptimizeAway.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Login.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Logoff.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_MailboxCount.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_MailboxStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_MeetmeList.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_MeetmeMute.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_MeetmeUnmute.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_MixMonitorMute.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ModuleCheck.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ModuleLoad.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Monitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Originate.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Park.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ParkedCalls.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_PauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Ping.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_PlayDTMF.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueAdd.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueLog.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueuePause.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueuePenalty.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueReload.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueRemove.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueReset.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueRule.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueStatus.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_QueueSummary.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Queues.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Redirect.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Reload.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SIPnotify.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SIPpeers.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SIPqualifypeer.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SIPshowpeer.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SIPshowregistry.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SKINNYdevices.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SKINNYlines.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SKINNYshowdevice.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SKINNYshowline.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_SendText.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Setvar.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_ShowDialPlan.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_Status.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_StopMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_UnpauseMonitor.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_UpdateConfig.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_UserEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_VoicemailUsersList.html
+share/doc/asterisk/Asterisk-Admin-Guide/ManagerAction_WaitEvent.html
+share/doc/asterisk/Asterisk-Admin-Guide/New in 1.8.html
+share/doc/asterisk/Asterisk-Admin-Guide/images/border/spacer.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/emoticons/error.gif
+share/doc/asterisk/Asterisk-Admin-Guide/images/icons/emoticons/smile.gif
+share/doc/asterisk/Asterisk-Admin-Guide/index.html
+share/doc/asterisk/Asterisk-Admin-Guide/styles/site.css
 share/doc/asterisk/BUGS
 share/doc/asterisk/CHANGES
 share/doc/asterisk/COPYING
