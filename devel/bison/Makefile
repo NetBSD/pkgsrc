@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2012/01/13 17:13:39 morr Exp $
+# $NetBSD: Makefile,v 1.80 2012/01/15 13:19:29 obache Exp $
 
 DISTNAME=		bison-2.5
 PKGREVISION=		2
@@ -42,5 +42,4 @@ post-configure:
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
