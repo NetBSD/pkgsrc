@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.34 2011/11/30 12:02:25 wiz Exp $
+$NetBSD: distinfo,v 1.35 2012/01/16 20:57:32 drochner Exp $
 
-SHA1 (mpd-0.16.2.tar.bz2) = ce0b8cd473f8acb45c06d73f41c18fc4dabbe440
-RMD160 (mpd-0.16.2.tar.bz2) = 74e63fe4514eb8309bf2b2e4e4012566e14b6262
-Size (mpd-0.16.2.tar.bz2) = 478096 bytes
+SHA1 (mpd-0.16.6.tar.bz2) = 235e34a27cfa5fbf5849eb1be32e441d34c3a139
+RMD160 (mpd-0.16.6.tar.bz2) = 5a54c17f7fae46b7e30afefdcc68c1b23b23f511
+Size (mpd-0.16.6.tar.bz2) = 486442 bytes
 SHA1 (patch-aa) = 4ac387b87c793014f2001e4cc2ba8242eaaa05e5
 SHA1 (patch-ab) = b0879896541d220300c105a0b2a94b53d62203cc
 SHA1 (patch-ac) = 08cb6ce7a7ca6e2c56d19d9d5487944dbba66c91
 SHA1 (patch-ad) = 0a836d2ca10143eb1472560d97769c367e42aea6
 SHA1 (patch-ae) = dfc4ca455ef606baf56cb2513e5471f6c16385dc
-SHA1 (patch-src_decoder_audiofile__decoder__plugin.c) = 6734eae169da69ac3447252da65394e08afbee3d
+SHA1 (patch-src_decoder_audiofile__decoder__plugin.c) = 1d87dace0d129e40849738f4f705c29688ce51a4
