@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2012/01/16 20:36:08 adam Exp $
+
+--- configure.orig	2012-01-16 20:32:17.000000000 +0000
++++ configure
+@@ -977,7 +977,7 @@ public:
+ 	{
+ 		bundled = false;
+ 
+-#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
++#if defined(Q_OS_WIN)
+ 		// use built-in
+ 		return true;
+ #else
