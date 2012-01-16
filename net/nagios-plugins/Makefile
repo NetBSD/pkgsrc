@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/04/22 13:44:25 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/01/16 22:09:59 sbd Exp $
 #
 
 PKGREVISION=	1
@@ -47,7 +47,7 @@ LIBS.SunOS+=	-lm
 DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
 .endif
 
-.if ${OPSYS} == "DragonFly" && (!exists(/usr/bin/dig) || !exists(/usr/bin/nslookup))
+.if !exists(/usr/bin/dig) || !exists(/usr/bin/nslookup)
 DEPENDS+=	bind-[0-9]*:../../net/bind96
 .endif
 
