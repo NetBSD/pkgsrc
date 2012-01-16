@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2012/01/14 15:36:24 taca Exp $
+# $NetBSD: Makefile,v 1.38 2012/01/16 13:08:14 taca Exp $
 
 DISTNAME=	roundcubemail-0.7.1-dep
 PKGNAME=	${DISTNAME:S/mail-/-/:S/-dep//}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -71,7 +72,7 @@ CONF_FILES_PERMS+=	${EGDIR}/main.inc.php.dist \
 
 .for f in ${CONF_PLUGINS}
 CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
-			${RCDIR}/plugins/${f}/config.iplnc.php \
+			${RCDIR}/plugins/${f}/config.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 .endfor
 
@@ -132,8 +133,9 @@ do-install:
 
 .for f in ${CONF_PLUGINS}
 	${MKDIR} ${DESTDIR}${EGDIR}/plugins/${f}
-	${MV} ${DESTDIR}${RCDIR}/plugins/${f}/config.inc.php.dist \
-		${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php
+	test -f ${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php ] ||
+		${MV} ${DESTDIR}${RCDIR}/plugins/${f}/config.inc.php.dist \
+			${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
