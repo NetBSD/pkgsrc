@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.132 2012/01/15 18:38:15 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.133 2012/01/16 04:43:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -212,3 +212,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.0.4.642 [obache 2012-01-15]
 	Updated lang/bwbasic to 2.50 [ryoon 2012-01-15]
 	Added comms/asterisk10 version 10.0.0 [jnemeth 2012-01-15]
+	Updated www/ikiwiki to 3.20120115 [schmonz 2012-01-16]
