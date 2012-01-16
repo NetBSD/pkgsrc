@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/27 15:04:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/16 21:00:00 drochner Exp $
 include/mpd/async.h
 include/mpd/audio_format.h
 include/mpd/capabilities.h
@@ -11,6 +11,7 @@ include/mpd/entity.h
 include/mpd/error.h
 include/mpd/idle.h
 include/mpd/list.h
+include/mpd/message.h
 include/mpd/mixer.h
 include/mpd/output.h
 include/mpd/pair.h
