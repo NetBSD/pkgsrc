@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.2 2011/02/19 14:42:21 drochner Exp $
+$NetBSD: patch-ba,v 1.3 2012/01/16 12:42:56 drochner Exp $
 
 --- backend/dvi/mdvi-lib/afmparse.c.orig	2009-04-24 07:24:16.000000000 +0000
 +++ backend/dvi/mdvi-lib/afmparse.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ba,v 1.2 2011/02/19 14:42:21 drochner Exp $
      idx = 0;
      while (ch != EOF && ch != ' ' && ch != lineterm 
 -           && ch != '\t' && ch != ':' && ch != ';') 
-+           && ch != '\t' && ch != ':' && ch != ';' && idx < MAX_NAME)
++           && ch != '\t' && ch != ':' && ch != ';' && idx < (MAX_NAME - 1))
      {
          ident[idx++] = ch;
          ch = fgetc(stream);
@@ -16,7 +16,7 @@ $NetBSD: patch-ba,v 1.2 2011/02/19 14:42:21 drochner Exp $
      
      idx = 0;
 -    while (ch != EOF && ch != lineterm) 
-+    while (ch != EOF && ch != lineterm && idx < MAX_NAME) 
++    while (ch != EOF && ch != lineterm && idx < (MAX_NAME - 1)) 
      {
          ident[idx++] = ch;
          ch = fgetc(stream);
