@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/01/13 10:55:04 obache Exp $
+# $NetBSD: Makefile,v 1.55 2012/01/16 09:10:10 obache Exp $
 
 DISTNAME=	kmymoney2-1.0.5
 PKGREVISION=	4
@@ -21,7 +21,10 @@ MAKE_JOBS_SAFE=		NO
 CONFIG_SHELL=		${BASH}
 SHLIBTOOL_OVERRIDE=	# empty
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "NetBSD"
 USE_TOOLS+=		gsed
+.endif
 USE_TOOLS+=		autoconf
 
 pre-configure:
