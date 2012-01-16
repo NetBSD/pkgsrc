@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.133 2012/01/16 04:43:40 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.134 2012/01/16 13:09:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -213,3 +213,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/bwbasic to 2.50 [ryoon 2012-01-15]
 	Added comms/asterisk10 version 10.0.0 [jnemeth 2012-01-15]
 	Updated www/ikiwiki to 3.20120115 [schmonz 2012-01-16]
+	Updated mail/roundcube to 0.7.1nb1 [taca 2012-01-16]
