@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.135 2012/01/16 22:27:33 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.136 2012/01/17 00:21:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -215,3 +215,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ikiwiki to 3.20120115 [schmonz 2012-01-16]
 	Updated mail/roundcube to 0.7.1nb1 [taca 2012-01-16]
 	Updated devel/atf to 0.15 [jmmv 2012-01-16]
+	Updated mail/spamdyke to 4.3.0 [schmonz 2012-01-17]
