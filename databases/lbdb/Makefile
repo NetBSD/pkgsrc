@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/01/29 17:13:36 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/01/17 21:43:18 sbd Exp $
 
 DISTNAME=		lbdb_0.35.1
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -16,7 +16,7 @@ DEPENDS+=		p5-perl-ldap>=0.20:../../databases/p5-perl-ldap
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/lbdb/
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/libexec/lbdb
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-lbdb_dotlock
 CONFIGURE_ARGS+=	--without-getent
