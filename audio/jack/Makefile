@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/01/11 17:51:21 hans Exp $
+# $NetBSD: Makefile,v 1.20 2012/01/17 21:43:18 sbd Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -27,7 +27,6 @@ PKGCONFIG_OVERRIDE+=	jack.pc.in
 
 PTHREAD_OPTS+=		require native
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-freebob
 CONFIGURE_ARGS+=	--disable-coreaudio

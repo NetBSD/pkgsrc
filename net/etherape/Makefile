@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2012/01/13 10:55:26 obache Exp $
+# $NetBSD: Makefile,v 1.63 2012/01/17 21:43:20 sbd Exp $
 
 DISTNAME=	etherape-0.9.12
 PKGREVISION=	3
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	etherape
 
 # XXX: $localedir defaults to $libdir/locale
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/${PKGLOCALEDIR}
+GNU_CONFIGURE_LIBDIR=${PREFIX}/${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/etherape

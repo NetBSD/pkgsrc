@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2011/08/14 07:38:55 obache Exp $
+# $NetBSD: Makefile,v 1.59 2012/01/17 21:43:18 sbd Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -31,7 +31,7 @@ MAKE_ENV+=		examplesdir=${EGDIR}
 
 CONF_FILES+=		${EGDIR}/silc.conf.default ${PKG_SYSCONFDIR}/silc.conf
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/${PKGBASE}
+GNU_CONFIGURE_LIBSUBDIR=${PKGBASE}
 CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/${PKGBASE}/help
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}

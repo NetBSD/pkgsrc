@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/04/22 13:43:18 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/01/17 21:43:19 sbd Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -20,7 +20,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6
+GNU_CONFIGURE_LIBSUBDIR=gdb6
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
 CONFIGURE_ARGS+=	--enable-libada
 INFO_FILES=		yes

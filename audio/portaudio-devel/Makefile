@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/28 23:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/17 21:43:18 sbd Exp $
 
 DISTNAME=	pa_snapshot_v19
 PKGNAME=	portaudio-devel-20060521
@@ -18,7 +18,7 @@ NOT_FOR_PLATFORM=	Interix-*-*
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/portaudio2
+GNU_CONFIGURE_LIBSUBDIR=portaudio2
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/portaudio2
 CONFIGURE_ARGS+=	--without-alsa
 LDFLAGS+=		${LIBOSSAUDIO}
