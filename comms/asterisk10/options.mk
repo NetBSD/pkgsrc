@@ -1,14 +1,15 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+# $NetBSD: options.mk,v 1.2 2012/01/17 07:07:33 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
-PKG_SUPPORTED_OPTIONS+=		jabber
+PKG_SUPPORTED_OPTIONS+=		jabber speex
 PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
-PKG_SUGGESTED_OPTIONS=		ldap jabber
+PKG_SUGGESTED_OPTIONS=		ldap jabber speex
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap spandsp jabber
+PLIST_VARS+=		speex
 
 # Asterisk now uses DAHDI, not zaptel; not implemented yet...
 #.if !empty(PKG_OPTIONS:Mzaptel)
@@ -107,4 +108,14 @@ PLIST.webvmail=		yes
 PLIST.ldap=		yes
 .else
 CONFIGURE_ARGS+=	--without-ldap
+.endif
+
+.if !empty(PKG_OPTIONS:Mspeex)
+.include "../../audio/speex/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-speex
+CONFIGURE_ARGS+=	--with-speexdsp
+PLIST.speex=		yes
+.else
+CONFIGURE_ARGS+=	--without-speex
+CONFIGURE_ARGS+=	--without-speexdsp
 .endif

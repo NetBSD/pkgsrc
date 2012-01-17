@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/15 18:36:20 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/17 07:07:33 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -241,6 +241,7 @@ lib/asterisk/modules/codec_gsm.so
 ${PLIST.ilbc}lib/asterisk/modules/codec_ilbc.so
 lib/asterisk/modules/codec_lpc10.so
 lib/asterisk/modules/codec_resample.so
+${PLIST.speex}lib/asterisk/modules/codec_speex.so
 lib/asterisk/modules/codec_ulaw.so
 lib/asterisk/modules/format_g719.so
 lib/asterisk/modules/format_g723.so
@@ -292,6 +293,7 @@ lib/asterisk/modules/func_rand.so
 lib/asterisk/modules/func_realtime.so
 lib/asterisk/modules/func_sha1.so
 lib/asterisk/modules/func_shell.so
+${PLIST.speex}lib/asterisk/modules/func_speex.so
 lib/asterisk/modules/func_sprintf.so
 lib/asterisk/modules/func_srv.so
 lib/asterisk/modules/func_strings.so
