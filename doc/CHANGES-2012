@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.137 2012/01/17 00:58:03 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.138 2012/01/17 02:13:01 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -217,3 +217,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/atf to 0.15 [jmmv 2012-01-16]
 	Updated mail/spamdyke to 4.3.0 [schmonz 2012-01-17]
 	Updated x11/kdebase-workspace4 to 4.5.5nb7 [sbd 2012-01-17]
+	Updated comms/asterisk16 to 1.6.2.22nb1 [jnemeth 2012-01-17]
