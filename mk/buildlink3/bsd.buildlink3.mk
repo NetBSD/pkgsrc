@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.209 2010/12/03 18:59:20 abs Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.210 2012/01/17 22:19:22 sbd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -919,6 +919,16 @@ _BLNK_TRANSFORM+=	strip-slashdot:
 .for _dir_ in ${_BLNK_PROTECT_DIRS}
 _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
+#
+# Transform /usr/lib/../lib* to /usr/lib* so the following transformation
+# work.  (added by libtool on multlib Linux systems).
+#
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+_BLNK_TRANSFORM+=	mangle:/usr/lib/../lib64:/usr/lib64
+_BLNK_TRANSFORM+=	mangle:/usr/lib/../lib:/usr/lib
+_BLNK_TRANSFORM+=	mangle:/usr/lib/../lib32:/usr/lib32
+_BLNK_TRANSFORM+=	mangle:/usr/lib/../libx32:/usr/libx32
+.endif
 #
 # Protect -I/usr/include/* and -L/usr/lib/* from transformations (these
 # aren't part of the normal header or library search paths).
