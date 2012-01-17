@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/07/27 00:53:37 taca Exp $
+# $NetBSD: Makefile,v 1.16 2012/01/17 21:43:20 sbd Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -49,8 +49,8 @@ FILES_SUBST+=		SAMBA_STATEDIR=${SAMBA_STATEDIR:Q}
 FILES_SUBST+=		SAMBA_VARDIR=${SAMBA_VARDIR:Q}
 FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT:Q}
 
+GNU_CONFIGURE_LIBDIR=	${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR:Q}
-CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR:Q}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR:Q}
 CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR:Q}
 CONFIGURE_ARGS+=	--with-modulesdir=${SAMBA_MODULESDIR:Q}
