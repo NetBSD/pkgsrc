@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2011/11/26 21:32:43 jmmv Exp $
+# $NetBSD: options.mk,v 1.12 2012/01/17 16:51:04 jmmv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.glib2
 PKG_SUPPORTED_OPTIONS=	kqueue
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS=	# empty
 
 .if $(PKG_OPTIONS:Mkqueue)
 PATCH_SITES=		http://dmitrymatveev.co.uk/files/
-PATCHFILES=		glib-gio-kqueue-2.28.8-v2.patch
+PATCHFILES=		glib-gio-kqueue-2.28.8-v3.patch
 PATCH_DIST_STRIP=	-p0
 
 USE_TOOLS+=	autoconf autoheader automake
