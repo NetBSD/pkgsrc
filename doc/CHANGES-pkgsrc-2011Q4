@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.9 2012/01/15 16:54:44 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.10 2012/01/17 22:42:33 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -80,3 +80,5 @@ Pullup ticket #3651 - requested by taca
 net/isc-dhcp4: security update
 Pullup ticket #3640 - requested by tron
 net/wireshark: security update
+Pullup ticket #3652 - requested by sbd
+x11/kdebase-workspace4: build fix
