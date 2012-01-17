@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.10 2011/01/23 19:07:25 agc Exp $
+# $NetBSD: gnu-configure.mk,v 1.11 2012/01/17 21:10:24 sbd Exp $
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
@@ -27,6 +27,10 @@ CONFIGURE_ENV+=	lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+
 
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX:Q}
+
+.if defined(GNU_CONFIGURE_LIBDIR) && !empty(GNU_CONFIGURE_LIBDIR)
+CONFIGURE_ARGS+=	--libdir=${GNU_CONFIGURE_LIBDIR:Q}
+.endif
 
 USE_GNU_CONFIGURE_HOST?=	yes
 .if !empty(USE_GNU_CONFIGURE_HOST:M[yY][eE][sS])
