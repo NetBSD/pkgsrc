@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.16 2011/05/13 16:43:02 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.17 2012/01/17 19:04:46 drochner Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -256,6 +256,7 @@ share/sip${PYVERSSUFFIX}/QtGui/qframe.sip
 share/sip${PYVERSSUFFIX}/QtGui/qgenericmatrix.sip
 share/sip${PYVERSSUFFIX}/QtGui/qgesture.sip
 share/sip${PYVERSSUFFIX}/QtGui/qgesturerecognizer.sip
+share/sip${PYVERSSUFFIX}/QtGui/qglyphrun.sip
 share/sip${PYVERSSUFFIX}/QtGui/qgraphicsanchorlayout.sip
 share/sip${PYVERSSUFFIX}/QtGui/qgraphicseffect.sip
 share/sip${PYVERSSUFFIX}/QtGui/qgraphicsgridlayout.sip
@@ -275,6 +276,7 @@ share/sip${PYVERSSUFFIX}/QtGui/qgroupbox.sip
 share/sip${PYVERSSUFFIX}/QtGui/qheaderview.sip
 share/sip${PYVERSSUFFIX}/QtGui/qicon.sip
 share/sip${PYVERSSUFFIX}/QtGui/qiconengine.sip
+share/sip${PYVERSSUFFIX}/QtGui/qidentityproxymodel.sip
 share/sip${PYVERSSUFFIX}/QtGui/qimage.sip
 share/sip${PYVERSSUFFIX}/QtGui/qimageiohandler.sip
 share/sip${PYVERSSUFFIX}/QtGui/qimagereader.sip
@@ -330,6 +332,7 @@ share/sip${PYVERSSUFFIX}/QtGui/qpushbutton.sip
 share/sip${PYVERSSUFFIX}/QtGui/qpytextobject.sip
 share/sip${PYVERSSUFFIX}/QtGui/qquaternion.sip
 share/sip${PYVERSSUFFIX}/QtGui/qradiobutton.sip
+share/sip${PYVERSSUFFIX}/QtGui/qrawfont.sip
 share/sip${PYVERSSUFFIX}/QtGui/qregion.sip
 share/sip${PYVERSSUFFIX}/QtGui/qrgb.sip
 share/sip${PYVERSSUFFIX}/QtGui/qrubberband.sip
@@ -421,6 +424,7 @@ share/sip${PYVERSSUFFIX}/QtNetwork/qftp.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qhostaddress.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qhostinfo.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qhttp.sip
+share/sip${PYVERSSUFFIX}/QtNetwork/qhttpmultipart.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qlocalserver.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qlocalsocket.sip
 share/sip${PYVERSSUFFIX}/QtNetwork/qnetworkaccessmanager.sip
