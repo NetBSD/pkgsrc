@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2012/01/13 12:12:48 ghen Exp $
+# $NetBSD: Makefile.common,v 1.7 2012/01/17 21:43:20 sbd Exp $
 
 PDNS_VERSION=		2.9.22.5
 DISTNAME=		pdns-${PDNS_VERSION}
@@ -13,7 +13,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/pdns
+GNU_CONFIGURE_LIBSUBDIR=pdns
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
