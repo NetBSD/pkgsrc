@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2011/12/17 10:16:00 sbd Exp $
+# $NetBSD: Makefile,v 1.74 2012/01/17 21:43:19 sbd Exp $
 
 DISTNAME=		nmh-1.3
 PKGREVISION=		3
@@ -37,7 +37,7 @@ NMH_MTA?=		smtp
 
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/nmh
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/libexec/nmh
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-nmh-pop
 CONFIGURE_ARGS+=	--with-mts=${NMH_MTA:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/01/13 10:55:29 obache Exp $
+# $NetBSD: Makefile,v 1.41 2012/01/17 21:43:20 sbd Exp $
 
 DISTNAME=		advi-1.10.1
 PKGREVISION=		3
@@ -20,7 +20,7 @@ DEPENDS+=		texlive-tetex>=2010:../../print/texlive-tetex
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gs:run
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/share/texmf-dist
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/share/texmf-dist
 CONFIGURE_ARGS+=	--with-gs=${PREFIX}/bin/gs
 
 INSTALL_UNSTRIPPED=	yes

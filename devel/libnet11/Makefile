@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/09 07:39:30 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/17 21:43:19 sbd Exp $
 
 DISTNAME=	libnet-1.1.2.1
 PKGNAME=	${DISTNAME:S/libnet/libnet11/}
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/libnet
 
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/libnet11
+GNU_CONFIGURE_LIBSUBDIR=libnet11
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/libnet11
 
 LNDOCS=		DESIGN_NOTES MIGRATION PACKET_BUILDING RAWSOCKET_NON_SEQUITUR
