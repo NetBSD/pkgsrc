@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/11/05 19:09:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/17 15:53:13 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -77,8 +77,10 @@ share/doc/sqlite3/c3ref/create_function.html
 share/doc/sqlite3/c3ref/create_module.html
 share/doc/sqlite3/c3ref/data_count.html
 share/doc/sqlite3/c3ref/db_config.html
+share/doc/sqlite3/c3ref/db_filename.html
 share/doc/sqlite3/c3ref/db_handle.html
 share/doc/sqlite3/c3ref/db_mutex.html
+share/doc/sqlite3/c3ref/db_release_memory.html
 share/doc/sqlite3/c3ref/db_status.html
 share/doc/sqlite3/c3ref/declare_vtab.html
 share/doc/sqlite3/c3ref/enable_load_extension.html
@@ -119,7 +121,8 @@ share/doc/sqlite3/c3ref/objlist.html
 share/doc/sqlite3/c3ref/open.html
 share/doc/sqlite3/c3ref/overload_function.html
 share/doc/sqlite3/c3ref/pcache.html
-share/doc/sqlite3/c3ref/pcache_methods.html
+share/doc/sqlite3/c3ref/pcache_methods2.html
+share/doc/sqlite3/c3ref/pcache_page.html
 share/doc/sqlite3/c3ref/prepare.html
 share/doc/sqlite3/c3ref/profile.html
 share/doc/sqlite3/c3ref/progress_handler.html
@@ -137,6 +140,7 @@ share/doc/sqlite3/c3ref/sqlite3.html
 share/doc/sqlite3/c3ref/status.html
 share/doc/sqlite3/c3ref/step.html
 share/doc/sqlite3/c3ref/stmt.html
+share/doc/sqlite3/c3ref/stmt_busy.html
 share/doc/sqlite3/c3ref/stmt_readonly.html
 share/doc/sqlite3/c3ref/stmt_status.html
 share/doc/sqlite3/c3ref/strnicmp.html
@@ -147,7 +151,7 @@ share/doc/sqlite3/c3ref/threadsafe.html
 share/doc/sqlite3/c3ref/total_changes.html
 share/doc/sqlite3/c3ref/unlock_notify.html
 share/doc/sqlite3/c3ref/update_hook.html
-share/doc/sqlite3/c3ref/uri_parameter.html
+share/doc/sqlite3/c3ref/uri_boolean.html
 share/doc/sqlite3/c3ref/user_data.html
 share/doc/sqlite3/c3ref/value.html
 share/doc/sqlite3/c3ref/value_blob.html
@@ -458,6 +462,7 @@ share/doc/sqlite3/optoverview.html
 share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
 share/doc/sqlite3/privatebranch.html
+share/doc/sqlite3/psow.html
 share/doc/sqlite3/queryplanner.html
 share/doc/sqlite3/quickstart.html
 share/doc/sqlite3/releaselog/3_0_0.html
@@ -549,6 +554,7 @@ share/doc/sqlite3/releaselog/3_6_9.html
 share/doc/sqlite3/releaselog/3_7_0.html
 share/doc/sqlite3/releaselog/3_7_0_1.html
 share/doc/sqlite3/releaselog/3_7_1.html
+share/doc/sqlite3/releaselog/3_7_10.html
 share/doc/sqlite3/releaselog/3_7_2.html
 share/doc/sqlite3/releaselog/3_7_3.html
 share/doc/sqlite3/releaselog/3_7_4.html
