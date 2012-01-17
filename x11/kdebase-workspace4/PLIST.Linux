@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.Linux,v 1.1.2.2 2012/01/17 22:40:37 tron Exp $
+bin/solid-bluetooth
+bin/solid-network
+bin/solid-powermanagement
+lib/kde4/kcm_joystick.so
+lib/kde4/kded_networkstatus.so
+lib/kde4/solid_hal_power.so
+share/kde4/services/joystick.desktop
+share/kde4/services/kded/networkstatus.desktop
+share/kde4/services/solidbackends/solid_hal_power.desktop
