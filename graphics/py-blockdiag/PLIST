@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/12 11:33:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/18 10:40:39 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,9 +21,9 @@ ${PYSITELIB}/blockdiag/builder.pyo
 ${PYSITELIB}/blockdiag/command.py
 ${PYSITELIB}/blockdiag/command.pyc
 ${PYSITELIB}/blockdiag/command.pyo
-${PYSITELIB}/blockdiag/diagparser.py
-${PYSITELIB}/blockdiag/diagparser.pyc
-${PYSITELIB}/blockdiag/diagparser.pyo
+${PYSITELIB}/blockdiag/drawer.py
+${PYSITELIB}/blockdiag/drawer.pyc
+${PYSITELIB}/blockdiag/drawer.pyo
 ${PYSITELIB}/blockdiag/elements.py
 ${PYSITELIB}/blockdiag/elements.pyc
 ${PYSITELIB}/blockdiag/elements.pyo
@@ -48,6 +48,9 @@ ${PYSITELIB}/blockdiag/imagedraw/simplesvg.pyo
 ${PYSITELIB}/blockdiag/imagedraw/svg.py
 ${PYSITELIB}/blockdiag/imagedraw/svg.pyc
 ${PYSITELIB}/blockdiag/imagedraw/svg.pyo
+${PYSITELIB}/blockdiag/metrics.py
+${PYSITELIB}/blockdiag/metrics.pyc
+${PYSITELIB}/blockdiag/metrics.pyo
 ${PYSITELIB}/blockdiag/noderenderer/__init__.py
 ${PYSITELIB}/blockdiag/noderenderer/__init__.pyc
 ${PYSITELIB}/blockdiag/noderenderer/__init__.pyo
@@ -117,6 +120,9 @@ ${PYSITELIB}/blockdiag/noderenderer/square.pyo
 ${PYSITELIB}/blockdiag/noderenderer/textbox.py
 ${PYSITELIB}/blockdiag/noderenderer/textbox.pyc
 ${PYSITELIB}/blockdiag/noderenderer/textbox.pyo
+${PYSITELIB}/blockdiag/parser.py
+${PYSITELIB}/blockdiag/parser.pyc
+${PYSITELIB}/blockdiag/parser.pyo
 ${PYSITELIB}/blockdiag/plugins/__init__.py
 ${PYSITELIB}/blockdiag/plugins/__init__.pyc
 ${PYSITELIB}/blockdiag/plugins/__init__.pyo
@@ -139,6 +145,7 @@ ${PYSITELIB}/blockdiag/tests/diagrams/circular_ref_to_root.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_skipped_edge.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/define_class.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/diagram_attributes.diag
+${PYSITELIB}/blockdiag/tests/diagrams/diagram_attributes_order.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/diagram_orientation.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/edge_attribute.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/edge_label.diag
@@ -309,9 +316,15 @@ ${PYSITELIB}/blockdiag/utils/TextFolder.pyo
 ${PYSITELIB}/blockdiag/utils/__init__.py
 ${PYSITELIB}/blockdiag/utils/__init__.pyc
 ${PYSITELIB}/blockdiag/utils/__init__.pyo
+${PYSITELIB}/blockdiag/utils/bootstrap.py
+${PYSITELIB}/blockdiag/utils/bootstrap.pyc
+${PYSITELIB}/blockdiag/utils/bootstrap.pyo
 ${PYSITELIB}/blockdiag/utils/collections.py
 ${PYSITELIB}/blockdiag/utils/collections.pyc
 ${PYSITELIB}/blockdiag/utils/collections.pyo
+${PYSITELIB}/blockdiag/utils/config.py
+${PYSITELIB}/blockdiag/utils/config.pyc
+${PYSITELIB}/blockdiag/utils/config.pyo
 ${PYSITELIB}/blockdiag/utils/ellipse.py
 ${PYSITELIB}/blockdiag/utils/ellipse.pyc
 ${PYSITELIB}/blockdiag/utils/ellipse.pyo
