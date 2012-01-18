@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/10/03 10:54:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/01/18 13:46:50 adam Exp $
 bin/db5_archive
 bin/db5_checkpoint
 bin/db5_deadlock
@@ -16,11 +16,11 @@ bin/db5_verify
 include/db5/db.h
 include/db5/db_185.h
 include/db5/db_cxx.h
-lib/libdb5-5.2.la
+lib/libdb5-5.3.la
 lib/libdb5-5.so
 lib/libdb5.a
 lib/libdb5.so
-lib/libdb5_cxx-5.2.la
+lib/libdb5_cxx-5.3.la
 lib/libdb5_cxx-5.so
 lib/libdb5_cxx.a
 lib/libdb5_cxx.so
@@ -116,7 +116,9 @@ share/doc/db5/api_reference/C/dbget_errpfx.html
 share/doc/db5/api_reference/C/dbget_flags.html
 share/doc/db5/api_reference/C/dbget_h_ffactor.html
 share/doc/db5/api_reference/C/dbget_h_nelem.html
+share/doc/db5/api_reference/C/dbget_heap_regionsize.html
 share/doc/db5/api_reference/C/dbget_heapsize.html
+share/doc/db5/api_reference/C/dbget_lk_exclusive.html
 share/doc/db5/api_reference/C/dbget_lorder.html
 share/doc/db5/api_reference/C/dbget_mpf.html
 share/doc/db5/api_reference/C/dbget_msgfile.html
@@ -161,7 +163,9 @@ share/doc/db5/api_reference/C/dbset_h_compare.html
 share/doc/db5/api_reference/C/dbset_h_ffactor.html
 share/doc/db5/api_reference/C/dbset_h_hash.html
 share/doc/db5/api_reference/C/dbset_h_nelem.html
+share/doc/db5/api_reference/C/dbset_heap_regionsize.html
 share/doc/db5/api_reference/C/dbset_heapsize.html
+share/doc/db5/api_reference/C/dbset_lk_exclusive.html
 share/doc/db5/api_reference/C/dbset_lorder.html
 share/doc/db5/api_reference/C/dbset_msgcall.html
 share/doc/db5/api_reference/C/dbset_msgfile.html
@@ -180,6 +184,7 @@ share/doc/db5/api_reference/C/dbsite_get_config.html
 share/doc/db5/api_reference/C/dbsite_get_eid.html
 share/doc/db5/api_reference/C/dbsite_remove.html
 share/doc/db5/api_reference/C/dbsite_set_config.html
+share/doc/db5/api_reference/C/dbsort_multiple.html
 share/doc/db5/api_reference/C/dbsql.html
 share/doc/db5/api_reference/C/dbstat.html
 share/doc/db5/api_reference/C/dbstat_print.html
@@ -190,9 +195,11 @@ share/doc/db5/api_reference/C/dbupgrade.html
 share/doc/db5/api_reference/C/dbverify.html
 share/doc/db5/api_reference/C/env.html
 share/doc/db5/api_reference/C/envadd_data_dir.html
+share/doc/db5/api_reference/C/envbackup.html
 share/doc/db5/api_reference/C/envcdsgroup_begin.html
 share/doc/db5/api_reference/C/envclose.html
 share/doc/db5/api_reference/C/envcreate.html
+share/doc/db5/api_reference/C/envdbbackup.html
 share/doc/db5/api_reference/C/envdbremove.html
 share/doc/db5/api_reference/C/envdbrename.html
 share/doc/db5/api_reference/C/enverr.html
@@ -200,6 +207,8 @@ share/doc/db5/api_reference/C/envevent_notify.html
 share/doc/db5/api_reference/C/envfailchk.html
 share/doc/db5/api_reference/C/envfileid_reset.html
 share/doc/db5/api_reference/C/envfullversion.html
+share/doc/db5/api_reference/C/envget_backup_callbacks.html
+share/doc/db5/api_reference/C/envget_backup_config.html
 share/doc/db5/api_reference/C/envget_cache_max.html
 share/doc/db5/api_reference/C/envget_cachesize.html
 share/doc/db5/api_reference/C/envget_create_dir.html
@@ -225,6 +234,7 @@ share/doc/db5/api_reference/C/envget_lk_priority.html
 share/doc/db5/api_reference/C/envget_lk_tablesize.html
 share/doc/db5/api_reference/C/envget_memory_init.html
 share/doc/db5/api_reference/C/envget_memory_max.html
+share/doc/db5/api_reference/C/envget_metadata_dir.html
 share/doc/db5/api_reference/C/envget_mp_mmapsize.html
 share/doc/db5/api_reference/C/envget_mp_mtxcount.html
 share/doc/db5/api_reference/C/envget_mp_pagesize.html
@@ -246,6 +256,8 @@ share/doc/db5/api_reference/C/envopen.html
 share/doc/db5/api_reference/C/envremove.html
 share/doc/db5/api_reference/C/envset_alloc.html
 share/doc/db5/api_reference/C/envset_app_dispatch.html
+share/doc/db5/api_reference/C/envset_backup_callbacks.html
+share/doc/db5/api_reference/C/envset_backup_config.html
 share/doc/db5/api_reference/C/envset_cache_max.html
 share/doc/db5/api_reference/C/envset_cachesize.html
 share/doc/db5/api_reference/C/envset_create_dir.html
@@ -273,6 +285,7 @@ share/doc/db5/api_reference/C/envset_lk_priority.html
 share/doc/db5/api_reference/C/envset_lk_tablesize.html
 share/doc/db5/api_reference/C/envset_memory_init.html
 share/doc/db5/api_reference/C/envset_memory_max.html
+share/doc/db5/api_reference/C/envset_metadata_dir.html
 share/doc/db5/api_reference/C/envset_mp_mmapsize.html
 share/doc/db5/api_reference/C/envset_mp_mtxcount.html
 share/doc/db5/api_reference/C/envset_mp_pagesize.html
@@ -541,7 +554,9 @@ share/doc/db5/api_reference/CXX/dbget_errpfx.html
 share/doc/db5/api_reference/CXX/dbget_flags.html
 share/doc/db5/api_reference/CXX/dbget_h_ffactor.html
 share/doc/db5/api_reference/CXX/dbget_h_nelem.html
+share/doc/db5/api_reference/CXX/dbget_heap_regionsize.html
 share/doc/db5/api_reference/CXX/dbget_heapsize.html
+share/doc/db5/api_reference/CXX/dbget_lk_exclusive.html
 share/doc/db5/api_reference/CXX/dbget_lorder.html
 share/doc/db5/api_reference/CXX/dbget_mpf.html
 share/doc/db5/api_reference/CXX/dbget_msgfile.html
@@ -598,7 +613,9 @@ share/doc/db5/api_reference/CXX/dbset_h_compare.html
 share/doc/db5/api_reference/CXX/dbset_h_ffactor.html
 share/doc/db5/api_reference/CXX/dbset_h_hash.html
 share/doc/db5/api_reference/CXX/dbset_h_nelem.html
+share/doc/db5/api_reference/CXX/dbset_heap_regionsize.html
 share/doc/db5/api_reference/CXX/dbset_heapsize.html
+share/doc/db5/api_reference/CXX/dbset_lk_exclusive.html
 share/doc/db5/api_reference/CXX/dbset_lorder.html
 share/doc/db5/api_reference/CXX/dbset_message_stream.html
 share/doc/db5/api_reference/CXX/dbset_msgcall.html
@@ -618,6 +635,7 @@ share/doc/db5/api_reference/CXX/dbsite_get_config.html
 share/doc/db5/api_reference/CXX/dbsite_get_eid.html
 share/doc/db5/api_reference/CXX/dbsite_remove.html
 share/doc/db5/api_reference/CXX/dbsite_set_config.html
+share/doc/db5/api_reference/CXX/dbsort_multiple.html
 share/doc/db5/api_reference/CXX/dbsql.html
 share/doc/db5/api_reference/CXX/dbstat.html
 share/doc/db5/api_reference/CXX/dbstat_print.html
@@ -628,9 +646,11 @@ share/doc/db5/api_reference/CXX/dbupgrade.html
 share/doc/db5/api_reference/CXX/dbverify.html
 share/doc/db5/api_reference/CXX/env.html
 share/doc/db5/api_reference/CXX/envadd_data_dir.html
+share/doc/db5/api_reference/CXX/envbackup.html
 share/doc/db5/api_reference/CXX/envcdsgroup_begin.html
 share/doc/db5/api_reference/CXX/envclose.html
 share/doc/db5/api_reference/CXX/envcreate.html
+share/doc/db5/api_reference/CXX/envdbbackup.html
 share/doc/db5/api_reference/CXX/envdbremove.html
 share/doc/db5/api_reference/CXX/envdbrename.html
 share/doc/db5/api_reference/CXX/enverr.html
@@ -638,6 +658,8 @@ share/doc/db5/api_reference/CXX/envevent_notify.html
 share/doc/db5/api_reference/CXX/envfailchk.html
 share/doc/db5/api_reference/CXX/envfileid_reset.html
 share/doc/db5/api_reference/CXX/envfullversion.html
+share/doc/db5/api_reference/CXX/envget_backup_callbacks.html
+share/doc/db5/api_reference/CXX/envget_backup_config.html
 share/doc/db5/api_reference/CXX/envget_cache_max.html
 share/doc/db5/api_reference/CXX/envget_cachesize.html
 share/doc/db5/api_reference/CXX/envget_create_dir.html
@@ -663,6 +685,7 @@ share/doc/db5/api_reference/CXX/envget_lk_priority.html
 share/doc/db5/api_reference/CXX/envget_lk_tablesize.html
 share/doc/db5/api_reference/CXX/envget_memory_init.html
 share/doc/db5/api_reference/CXX/envget_memory_max.html
+share/doc/db5/api_reference/CXX/envget_metadata_dir.html
 share/doc/db5/api_reference/CXX/envget_mp_mmapsize.html
 share/doc/db5/api_reference/CXX/envget_mp_mtxcount.html
 share/doc/db5/api_reference/CXX/envget_mp_pagesize.html
@@ -684,6 +707,8 @@ share/doc/db5/api_reference/CXX/envopen.html
 share/doc/db5/api_reference/CXX/envremove.html
 share/doc/db5/api_reference/CXX/envset_alloc.html
 share/doc/db5/api_reference/CXX/envset_app_dispatch.html
+share/doc/db5/api_reference/CXX/envset_backup_callbacks.html
+share/doc/db5/api_reference/CXX/envset_backup_config.html
 share/doc/db5/api_reference/CXX/envset_cache_max.html
 share/doc/db5/api_reference/CXX/envset_cachesize.html
 share/doc/db5/api_reference/CXX/envset_create_dir.html
@@ -713,6 +738,7 @@ share/doc/db5/api_reference/CXX/envset_lk_tablesize.html
 share/doc/db5/api_reference/CXX/envset_memory_init.html
 share/doc/db5/api_reference/CXX/envset_memory_max.html
 share/doc/db5/api_reference/CXX/envset_message_stream.html
+share/doc/db5/api_reference/CXX/envset_metadata_dir.html
 share/doc/db5/api_reference/CXX/envset_mp_mmapsize.html
 share/doc/db5/api_reference/CXX/envset_mp_mtxcount.html
 share/doc/db5/api_reference/CXX/envset_mp_pagesize.html
@@ -1287,6 +1313,7 @@ share/doc/db5/articles/mssgtxt/DBMessageTextReference.pdf
 share/doc/db5/articles/mssgtxt/gettingStarted.css
 share/doc/db5/articles/mssgtxt/index.html
 share/doc/db5/bdb-sql/BDB-SQL-Guide.pdf
+share/doc/db5/bdb-sql/accessing_bdb_sql_databases.title.html
 share/doc/db5/bdb-sql/addedpragmas.html
 share/doc/db5/bdb-sql/admin.html
 share/doc/db5/bdb-sql/bdb-concepts.html
@@ -1410,6 +1437,7 @@ share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BTreeCursor.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BTreeDatabase.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BTreeDatabaseConfig.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BTreeStats.htm
+share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BackupOptions.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BadSecondaryException.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BaseCursor.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_BaseDatabase.htm
@@ -1445,6 +1473,7 @@ share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_HeapDatabaseConfig.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_HeapFullException.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_HeapRecordId.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_HeapStats.htm
+share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_IBackup.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_JoinCursor.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_KeyEmptyException.htm
 share/doc/db5/csharp/html/AllMembers_T_BerkeleyDB_KeyExistException.htm
@@ -1517,6 +1546,12 @@ share/doc/db5/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_DuplicateCompare.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_Duplicates.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_NoReverseSplitting.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_UseRecordNumbers.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_BackupOptions_Clean.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_BackupOptions_Creation.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_BackupOptions_Files.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_BackupOptions_NoLogs.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_BackupOptions_SingleDir.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_BackupOptions_Update.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ByteOrder_BIG_ENDIAN.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ByteOrder_LITTLE_ENDIAN.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ByteOrder_MACHINE.htm
@@ -1546,6 +1581,7 @@ share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_ErrorPrefix.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_Feedback.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_FreeThreaded.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_NoMMap.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_NoWaitDbExclusiveLock.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_NonDurableTxns.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_Priority.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseConfig_ReadOnly.htm
@@ -1570,6 +1606,7 @@ share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_LockSystemCfg.h
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_Lockdown.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_LogSystemCfg.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_MPoolSystemCfg.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_MetadataDir.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_MutexSystemCfg.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_NoBuffer.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_NoLocking.htm
@@ -1686,6 +1723,7 @@ share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_AutoInit.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_BulkTransfer.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_DelayClientSync.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_Elections.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_InMemory.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_NoBlocking.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_RepMgrAckPolicy.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_ReplicationConfig_RepmgrSitesConfig.htm
@@ -1725,6 +1763,7 @@ share/doc/db5/csharp/html/F_BerkeleyDB_TransactionConfig_Snapshot.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_TransactionConfig_SyncAction.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_Transaction_GlobalIdLength.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_VerboseMessages_AllFileOps.htm
+share/doc/db5/csharp/html/F_BerkeleyDB_VerboseMessages_Backup.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_VerboseMessages_Deadlock.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_VerboseMessages_FileOps.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_VerboseMessages_Recovery.htm
@@ -1742,6 +1781,7 @@ share/doc/db5/csharp/html/F_BerkeleyDB_VerboseMessages_ReplicationTest.htm
 share/doc/db5/csharp/html/F_BerkeleyDB_VerboseMessages_WaitsForTable.htm
 share/doc/db5/csharp/html/Fields_T_BerkeleyDB_AckPolicy.htm
 share/doc/db5/csharp/html/Fields_T_BerkeleyDB_BTreeDatabaseConfig.htm
+share/doc/db5/csharp/html/Fields_T_BerkeleyDB_BackupOptions.htm
 share/doc/db5/csharp/html/Fields_T_BerkeleyDB_BadSecondaryException.htm
 share/doc/db5/csharp/html/Fields_T_BerkeleyDB_ByteOrder.htm
 share/doc/db5/csharp/html/Fields_T_BerkeleyDB_CacheInfo.htm
@@ -1840,6 +1880,7 @@ share/doc/db5/csharp/html/M_BerkeleyDB_BTreeDatabase_Stats_1.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_BTreeDatabase_Stats_2.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_BTreeDatabase_TruncateUnusedPages.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_BTreeDatabase_TruncateUnusedPages_1.htm
+share/doc/db5/csharp/html/M_BerkeleyDB_BackupOptions__ctor.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_BadSecondaryException__ctor.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_BaseCursor_Close.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_BaseCursor_Compare.htm
@@ -2001,6 +2042,8 @@ share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironmentConfig_SetEncryption.h
 share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironmentConfig__ctor.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironment_ArchivableDatabaseFiles.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironment_ArchivableLogFiles.htm
+share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironment_Backup.htm
+share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironment_BackupDatabase.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironment_BeginCDSGroup.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironment_BeginTransaction.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_DatabaseEnvironment_BeginTransaction_1.htm
@@ -2187,6 +2230,9 @@ share/doc/db5/csharp/html/M_BerkeleyDB_HeapRecordId_fromArray.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_HeapRecordId_fromArray_1.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_HeapRecordId_toArray.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_HeapRecordId_toArray_1.htm
+share/doc/db5/csharp/html/M_BerkeleyDB_IBackup_Close.htm
+share/doc/db5/csharp/html/M_BerkeleyDB_IBackup_Open.htm
+share/doc/db5/csharp/html/M_BerkeleyDB_IBackup_Write.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_JoinCursor_Close.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_JoinCursor_Dispose.htm
 share/doc/db5/csharp/html/M_BerkeleyDB_JoinCursor_GetEnumerator.htm
@@ -2369,6 +2415,7 @@ share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BTreeCursor.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BTreeDatabase.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BTreeDatabaseConfig.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BTreeStats.htm
+share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BackupOptions.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BadSecondaryException.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BaseCursor.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_BaseDatabase.htm
@@ -2404,6 +2451,7 @@ share/doc/db5/csharp/html/Methods_T_BerkeleyDB_HeapDatabaseConfig.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_HeapFullException.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_HeapRecordId.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_HeapStats.htm
+share/doc/db5/csharp/html/Methods_T_BerkeleyDB_IBackup.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_JoinCursor.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_KeyEmptyException.htm
 share/doc/db5/csharp/html/Methods_T_BerkeleyDB_KeyExistException.htm
@@ -2799,9 +2847,7 @@ share/doc/db5/csharp/html/P_BerkeleyDB_ActiveTransaction_ParentID.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_ActiveTransaction_Priority.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_ActiveTransaction_ProcessID.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_ActiveTransaction_SnapshotReads.htm
-share/doc/db5/csharp/html/P_BerkeleyDB_ActiveTransaction_Status.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_ActiveTransaction_ThreadID.htm
-share/doc/db5/csharp/html/P_BerkeleyDB_ActiveTransaction_XAStatus.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_Compress.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_Decompress.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_MinKeysPerPage.htm
@@ -2849,6 +2895,7 @@ share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_FreeThreaded.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_HasMultiple.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_InHostOrder.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_NoMMap.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_NoWaitDbExclusiveLock.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_NonDurableTxns.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_Pagesize.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_BaseDatabase_Priority.htm
@@ -2891,6 +2938,11 @@ share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_ThreadCount.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_TxnTimeout.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_TxnTimestamp.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_AutoCommit.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_BackupBufferSize.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_BackupHandler.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_BackupReadCount.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_BackupReadSleepDuration.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_BackupWriteDirect.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_CDB_ALLDB.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_CacheSize.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_Create.htm
@@ -2938,6 +2990,7 @@ share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxObjects.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxOpenFiles.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxSequentialWrites.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxTransactions.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MetadataDir.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MutexAlignment.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MutexIncrement.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_NoBuffer.htm
@@ -2963,6 +3016,7 @@ share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepElectionTimeout.ht
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepFullElectionTimeout.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepHeartbeatMonitor.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepHeartbeatSend.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepInMemory.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepLeaseTimeout.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepMessageDispatch.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepMgrAckPolicy.htm
@@ -3045,13 +3099,16 @@ share/doc/db5/csharp/html/P_BerkeleyDB_HashStats_nKeys.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HashStats_nPages.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_MaxSizeBytes.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_MaxSizeGBytes.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_RegionSize.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapDatabase_MaxSizeBytes.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapDatabase_MaxSizeGBytes.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_HeapDatabase_RegionSize.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapRecordId_Index.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapRecordId_PageNumber.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapStats_MagicNumber.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapStats_MetadataFlags.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapStats_PageSize.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_HeapStats_RegionSize.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapStats_Version.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapStats_nPages.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_HeapStats_nRecords.htm
@@ -3163,6 +3220,7 @@ share/doc/db5/csharp/html/P_BerkeleyDB_MPoolConfig_MMapSize.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_MPoolConfig_MaxOpenFiles.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_MPoolConfig_MaxSequentialWrites.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_MPoolConfig_SequentialWritePause.htm
+share/doc/db5/csharp/html/P_BerkeleyDB_MPoolFileStats_BackupSpins.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_MPoolFileStats_FileName.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_MPoolFileStats_MappedPages.htm
 share/doc/db5/csharp/html/P_BerkeleyDB_MPoolFileStats_PageSize.htm
@@ -3543,8 +3601,6 @@ share/doc/db5/csharp/html/Properties_T_BerkeleyDB_VerificationException.htm
 share/doc/db5/csharp/html/Properties_T_BerkeleyDB_VersionMismatchException.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_AckPolicy.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_ActiveTransaction.htm
-share/doc/db5/csharp/html/T_BerkeleyDB_ActiveTransaction_TransactionStatus.htm
-share/doc/db5/csharp/html/T_BerkeleyDB_ActiveTransaction_XATransactionStatus.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_AppendRecordDelegate.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BTreeCompressDelegate.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BTreeCursor.htm
@@ -3552,6 +3608,7 @@ share/doc/db5/csharp/html/T_BerkeleyDB_BTreeDatabase.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BTreeDatabaseConfig.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BTreeDecompressDelegate.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BTreeStats.htm
+share/doc/db5/csharp/html/T_BerkeleyDB_BackupOptions.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BadSecondaryException.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BaseCursor.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_BaseDatabase.htm
@@ -3604,6 +3661,7 @@ share/doc/db5/csharp/html/T_BerkeleyDB_HeapDatabaseConfig.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_HeapFullException.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_HeapRecordId.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_HeapStats.htm
+share/doc/db5/csharp/html/T_BerkeleyDB_IBackup.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_Isolation.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_JoinCursor.htm
 share/doc/db5/csharp/html/T_BerkeleyDB_KeyEmptyException.htm
@@ -4014,10 +4072,10 @@ share/doc/db5/gsg_txn/C/architectrecovery.html
 share/doc/db5/gsg_txn/C/autocommit.html
 share/doc/db5/gsg_txn/C/backuprestore.html
 share/doc/db5/gsg_txn/C/blocking_deadlocks.html
-share/doc/db5/gsg_txn/C/deadlock-pdf.jpg
 share/doc/db5/gsg_txn/C/deadlock.jpg
 share/doc/db5/gsg_txn/C/enabletxn.html
 share/doc/db5/gsg_txn/C/envopen.html
+share/doc/db5/gsg_txn/C/exclusivelock.html
 share/doc/db5/gsg_txn/C/filemanagement.html
 share/doc/db5/gsg_txn/C/gettingStarted.css
 share/doc/db5/gsg_txn/C/hotfailover.html
@@ -4041,6 +4099,9 @@ share/doc/db5/gsg_txn/C/recovery-intro.html
 share/doc/db5/gsg_txn/C/recovery.html
 share/doc/db5/gsg_txn/C/reversesplit.html
 share/doc/db5/gsg_txn/C/rwlocks1-pdf.jpg
+share/doc/db5/gsg_txn/C/rwlocks1.jpg
+share/doc/db5/gsg_txn/C/simplelock-pdf.jpg
+share/doc/db5/gsg_txn/C/simplelock.jpg
 share/doc/db5/gsg_txn/C/sysfailure.html
 share/doc/db5/gsg_txn/C/txn_ccursor.html
 share/doc/db5/gsg_txn/C/txnconcurrency.html
@@ -4050,7 +4111,7 @@ share/doc/db5/gsg_txn/C/txnindices.html
 share/doc/db5/gsg_txn/C/txnnowait.html
 share/doc/db5/gsg_txn/C/usingtxns.html
 share/doc/db5/gsg_txn/C/wrapup.html
-share/doc/db5/gsg_txn/C/writeblock-pdf.jpg
+share/doc/db5/gsg_txn/C/writeblock.jpg
 share/doc/db5/gsg_txn/CXX/BerkeleyDB-Core-Cxx-Txn.pdf
 share/doc/db5/gsg_txn/CXX/abortresults.html
 share/doc/db5/gsg_txn/CXX/apireq.html
@@ -4058,10 +4119,10 @@ share/doc/db5/gsg_txn/CXX/architectrecovery.html
 share/doc/db5/gsg_txn/CXX/autocommit.html
 share/doc/db5/gsg_txn/CXX/backuprestore.html
 share/doc/db5/gsg_txn/CXX/blocking_deadlocks.html
-share/doc/db5/gsg_txn/CXX/deadlock-pdf.jpg
 share/doc/db5/gsg_txn/CXX/deadlock.jpg
 share/doc/db5/gsg_txn/CXX/enabletxn.html
 share/doc/db5/gsg_txn/CXX/envopen.html
+share/doc/db5/gsg_txn/CXX/exclusivelock.html
 share/doc/db5/gsg_txn/CXX/filemanagement.html
 share/doc/db5/gsg_txn/CXX/gettingStarted.css
 share/doc/db5/gsg_txn/CXX/hotfailover.html
@@ -4085,6 +4146,9 @@ share/doc/db5/gsg_txn/CXX/recovery-intro.html
 share/doc/db5/gsg_txn/CXX/recovery.html
 share/doc/db5/gsg_txn/CXX/reversesplit.html
 share/doc/db5/gsg_txn/CXX/rwlocks1-pdf.jpg
+share/doc/db5/gsg_txn/CXX/rwlocks1.jpg
+share/doc/db5/gsg_txn/CXX/simplelock-pdf.jpg
+share/doc/db5/gsg_txn/CXX/simplelock.jpg
 share/doc/db5/gsg_txn/CXX/sysfailure.html
 share/doc/db5/gsg_txn/CXX/txn_ccursor.html
 share/doc/db5/gsg_txn/CXX/txnconcurrency.html
@@ -4094,7 +4158,7 @@ share/doc/db5/gsg_txn/CXX/txnindices.html
 share/doc/db5/gsg_txn/CXX/txnnowait.html
 share/doc/db5/gsg_txn/CXX/usingtxns.html
 share/doc/db5/gsg_txn/CXX/wrapup.html
-share/doc/db5/gsg_txn/CXX/writeblock-pdf.jpg
+share/doc/db5/gsg_txn/CXX/writeblock.jpg
 share/doc/db5/gsg_txn/JAVA/BerkeleyDB-Core-JAVA-Txn.pdf
 share/doc/db5/gsg_txn/JAVA/abortresults.html
 share/doc/db5/gsg_txn/JAVA/apireq.html
@@ -4102,10 +4166,10 @@ share/doc/db5/gsg_txn/JAVA/architectrecovery.html
 share/doc/db5/gsg_txn/JAVA/autocommit.html
 share/doc/db5/gsg_txn/JAVA/backuprestore.html
 share/doc/db5/gsg_txn/JAVA/blocking_deadlocks.html
-share/doc/db5/gsg_txn/JAVA/deadlock-pdf.jpg
 share/doc/db5/gsg_txn/JAVA/deadlock.jpg
 share/doc/db5/gsg_txn/JAVA/enabletxn.html
 share/doc/db5/gsg_txn/JAVA/envopen.html
+share/doc/db5/gsg_txn/JAVA/exclusivelock.html
 share/doc/db5/gsg_txn/JAVA/filemanagement.html
 share/doc/db5/gsg_txn/JAVA/gettingStarted.css
 share/doc/db5/gsg_txn/JAVA/hotfailover.html
@@ -4129,6 +4193,9 @@ share/doc/db5/gsg_txn/JAVA/recovery-intro.html
 share/doc/db5/gsg_txn/JAVA/recovery.html
 share/doc/db5/gsg_txn/JAVA/reversesplit.html
 share/doc/db5/gsg_txn/JAVA/rwlocks1-pdf.jpg
+share/doc/db5/gsg_txn/JAVA/rwlocks1.jpg
+share/doc/db5/gsg_txn/JAVA/simplelock-pdf.jpg
+share/doc/db5/gsg_txn/JAVA/simplelock.jpg
 share/doc/db5/gsg_txn/JAVA/sysfailure.html
 share/doc/db5/gsg_txn/JAVA/txn_ccursor.html
 share/doc/db5/gsg_txn/JAVA/txnconcurrency.html
@@ -4139,13 +4206,14 @@ share/doc/db5/gsg_txn/JAVA/txnindices.html
 share/doc/db5/gsg_txn/JAVA/txnnowait.html
 share/doc/db5/gsg_txn/JAVA/usingtxns.html
 share/doc/db5/gsg_txn/JAVA/wrapup.html
-share/doc/db5/gsg_txn/JAVA/writeblock-pdf.jpg
+share/doc/db5/gsg_txn/JAVA/writeblock.jpg
 share/doc/db5/index.html
 share/doc/db5/installation/BDB_Installation.pdf
 share/doc/db5/installation/arch_bigpic.gif
 share/doc/db5/installation/arch_smallpic.gif
 share/doc/db5/installation/build_android_config.html
 share/doc/db5/installation/build_android_intro.html
+share/doc/db5/installation/build_android_jdbc.html
 share/doc/db5/installation/build_unix.html
 share/doc/db5/installation/build_unix_aix.html
 share/doc/db5/installation/build_unix_conf.html
@@ -4170,7 +4238,6 @@ share/doc/db5/installation/build_unix_sunos.html
 share/doc/db5/installation/build_unix_test.html
 share/doc/db5/installation/build_vxworks.html
 share/doc/db5/installation/build_vxworks_faq.html
-share/doc/db5/installation/build_vxworks_intro6x.html
 share/doc/db5/installation/build_vxworks_notes.html
 share/doc/db5/installation/build_win.html
 share/doc/db5/installation/build_win_csharp.html
@@ -4189,6 +4256,7 @@ share/doc/db5/installation/changelog_4_8.html
 share/doc/db5/installation/changelog_5_0.html
 share/doc/db5/installation/changelog_5_1.html
 share/doc/db5/installation/changelog_5_2.html
+share/doc/db5/installation/changelog_5_3.html
 share/doc/db5/installation/debug.html
 share/doc/db5/installation/debug_compile.html
 share/doc/db5/installation/debug_printlog.html
@@ -4220,6 +4288,17 @@ share/doc/db5/installation/upgrade_11gr2_52_repmgr_channels.html
 share/doc/db5/installation/upgrade_11gr2_52_seq_sql.html
 share/doc/db5/installation/upgrade_11gr2_52_sqlite_ver.html
 share/doc/db5/installation/upgrade_11gr2_52_xa.html
+share/doc/db5/installation/upgrade_11gr2_53_build_windows.html
+share/doc/db5/installation/upgrade_11gr2_53_conn_status.html
+share/doc/db5/installation/upgrade_11gr2_53_excl.html
+share/doc/db5/installation/upgrade_11gr2_53_heap_regionsize.html
+share/doc/db5/installation/upgrade_11gr2_53_hotbackup.html
+share/doc/db5/installation/upgrade_11gr2_53_jdbc.html
+share/doc/db5/installation/upgrade_11gr2_53_meta_dir.html
+share/doc/db5/installation/upgrade_11gr2_53_sql_build.html
+share/doc/db5/installation/upgrade_11gr2_53_sql_pragma.html
+share/doc/db5/installation/upgrade_11gr2_53_sql_rep.html
+share/doc/db5/installation/upgrade_11gr2_53_xa_mvcc.html
 share/doc/db5/installation/upgrade_11gr2_autoinit.html
 share/doc/db5/installation/upgrade_11gr2_dbsqlcodegen.html
 share/doc/db5/installation/upgrade_11gr2_remsupp.html
@@ -4232,6 +4311,7 @@ share/doc/db5/installation/upgrade_4_8_mpool.html
 share/doc/db5/installation/upgrade_4_8_toc.html
 share/doc/db5/installation/upgrade_51_toc.html
 share/doc/db5/installation/upgrade_52_toc.html
+share/doc/db5/installation/upgrade_53_toc.html
 share/doc/db5/installation/win_additional_options.html
 share/doc/db5/installation/win_build64.html
 share/doc/db5/installation/win_build_cxx.html
@@ -4386,6 +4466,8 @@ share/doc/db5/java/com/sleepycat/collections/package-frame.html
 share/doc/db5/java/com/sleepycat/collections/package-summary.html
 share/doc/db5/java/com/sleepycat/collections/package-tree.html
 share/doc/db5/java/com/sleepycat/collections/package-use.html
+share/doc/db5/java/com/sleepycat/db/BackupHandler.html
+share/doc/db5/java/com/sleepycat/db/BackupOptions.html
 share/doc/db5/java/com/sleepycat/db/BtreeCompressor.html
 share/doc/db5/java/com/sleepycat/db/BtreePrefixCalculator.html
 share/doc/db5/java/com/sleepycat/db/BtreeStats.html
@@ -4463,6 +4545,7 @@ share/doc/db5/java/com/sleepycat/db/ReplicationJoinFailureException.html
 share/doc/db5/java/com/sleepycat/db/ReplicationLeaseExpiredException.html
 share/doc/db5/java/com/sleepycat/db/ReplicationLockoutException.html
 share/doc/db5/java/com/sleepycat/db/ReplicationManagerAckPolicy.html
+share/doc/db5/java/com/sleepycat/db/ReplicationManagerConnectionStatus.html
 share/doc/db5/java/com/sleepycat/db/ReplicationManagerMessageDispatch.html
 share/doc/db5/java/com/sleepycat/db/ReplicationManagerSite.html
 share/doc/db5/java/com/sleepycat/db/ReplicationManagerSiteConfig.html
@@ -4492,6 +4575,8 @@ share/doc/db5/java/com/sleepycat/db/TransactionStatus.html
 share/doc/db5/java/com/sleepycat/db/VerboseConfig.html
 share/doc/db5/java/com/sleepycat/db/VerifyConfig.html
 share/doc/db5/java/com/sleepycat/db/VersionMismatchException.html
+share/doc/db5/java/com/sleepycat/db/class-use/BackupHandler.html
+share/doc/db5/java/com/sleepycat/db/class-use/BackupOptions.html
 share/doc/db5/java/com/sleepycat/db/class-use/BtreeCompressor.html
 share/doc/db5/java/com/sleepycat/db/class-use/BtreePrefixCalculator.html
 share/doc/db5/java/com/sleepycat/db/class-use/BtreeStats.html
@@ -4569,6 +4654,7 @@ share/doc/db5/java/com/sleepycat/db/class-use/ReplicationJoinFailureException.ht
 share/doc/db5/java/com/sleepycat/db/class-use/ReplicationLeaseExpiredException.html
 share/doc/db5/java/com/sleepycat/db/class-use/ReplicationLockoutException.html
 share/doc/db5/java/com/sleepycat/db/class-use/ReplicationManagerAckPolicy.html
+share/doc/db5/java/com/sleepycat/db/class-use/ReplicationManagerConnectionStatus.html
 share/doc/db5/java/com/sleepycat/db/class-use/ReplicationManagerMessageDispatch.html
 share/doc/db5/java/com/sleepycat/db/class-use/ReplicationManagerSite.html
 share/doc/db5/java/com/sleepycat/db/class-use/ReplicationManagerSiteConfig.html
@@ -4612,6 +4698,7 @@ share/doc/db5/java/com/sleepycat/persist/IndexNotAvailableException.html
 share/doc/db5/java/com/sleepycat/persist/PrimaryIndex.html
 share/doc/db5/java/com/sleepycat/persist/SecondaryIndex.html
 share/doc/db5/java/com/sleepycat/persist/StoreConfig.html
+share/doc/db5/java/com/sleepycat/persist/StoreConfigBeanInfo.html
 share/doc/db5/java/com/sleepycat/persist/StoreExistsException.html
 share/doc/db5/java/com/sleepycat/persist/StoreNotFoundException.html
 share/doc/db5/java/com/sleepycat/persist/class-use/DatabaseNamer.html
@@ -4624,6 +4711,7 @@ share/doc/db5/java/com/sleepycat/persist/class-use/IndexNotAvailableException.ht
 share/doc/db5/java/com/sleepycat/persist/class-use/PrimaryIndex.html
 share/doc/db5/java/com/sleepycat/persist/class-use/SecondaryIndex.html
 share/doc/db5/java/com/sleepycat/persist/class-use/StoreConfig.html
+share/doc/db5/java/com/sleepycat/persist/class-use/StoreConfigBeanInfo.html
 share/doc/db5/java/com/sleepycat/persist/class-use/StoreExistsException.html
 share/doc/db5/java/com/sleepycat/persist/class-use/StoreNotFoundException.html
 share/doc/db5/java/com/sleepycat/persist/evolve/Conversion.html
@@ -4632,6 +4720,7 @@ share/doc/db5/java/com/sleepycat/persist/evolve/DeletedClassException.html
 share/doc/db5/java/com/sleepycat/persist/evolve/Deleter.html
 share/doc/db5/java/com/sleepycat/persist/evolve/EntityConverter.html
 share/doc/db5/java/com/sleepycat/persist/evolve/EvolveConfig.html
+share/doc/db5/java/com/sleepycat/persist/evolve/EvolveConfigBeanInfo.html
 share/doc/db5/java/com/sleepycat/persist/evolve/EvolveEvent.html
 share/doc/db5/java/com/sleepycat/persist/evolve/EvolveInternal.html
 share/doc/db5/java/com/sleepycat/persist/evolve/EvolveListener.html
@@ -4646,6 +4735,7 @@ share/doc/db5/java/com/sleepycat/persist/evolve/class-use/DeletedClassException.
 share/doc/db5/java/com/sleepycat/persist/evolve/class-use/Deleter.html
 share/doc/db5/java/com/sleepycat/persist/evolve/class-use/EntityConverter.html
 share/doc/db5/java/com/sleepycat/persist/evolve/class-use/EvolveConfig.html
+share/doc/db5/java/com/sleepycat/persist/evolve/class-use/EvolveConfigBeanInfo.html
 share/doc/db5/java/com/sleepycat/persist/evolve/class-use/EvolveEvent.html
 share/doc/db5/java/com/sleepycat/persist/evolve/class-use/EvolveInternal.html
 share/doc/db5/java/com/sleepycat/persist/evolve/class-use/EvolveListener.html
@@ -4716,6 +4806,9 @@ share/doc/db5/java/com/sleepycat/persist/raw/package-frame.html
 share/doc/db5/java/com/sleepycat/persist/raw/package-summary.html
 share/doc/db5/java/com/sleepycat/persist/raw/package-tree.html
 share/doc/db5/java/com/sleepycat/persist/raw/package-use.html
+share/doc/db5/java/com/sleepycat/util/ClassResolver.Stream.html
+share/doc/db5/java/com/sleepycat/util/ClassResolver.html
+share/doc/db5/java/com/sleepycat/util/ConfigBeanInfoBase.html
 share/doc/db5/java/com/sleepycat/util/ErrorBuffer.html
 share/doc/db5/java/com/sleepycat/util/ExceptionUnwrapper.html
 share/doc/db5/java/com/sleepycat/util/ExceptionWrapper.html
@@ -4725,6 +4818,9 @@ share/doc/db5/java/com/sleepycat/util/IOExceptionWrapper.html
 share/doc/db5/java/com/sleepycat/util/PackedInteger.html
 share/doc/db5/java/com/sleepycat/util/RuntimeExceptionWrapper.html
 share/doc/db5/java/com/sleepycat/util/UtfOps.html
+share/doc/db5/java/com/sleepycat/util/class-use/ClassResolver.Stream.html
+share/doc/db5/java/com/sleepycat/util/class-use/ClassResolver.html
+share/doc/db5/java/com/sleepycat/util/class-use/ConfigBeanInfoBase.html
 share/doc/db5/java/com/sleepycat/util/class-use/ErrorBuffer.html
 share/doc/db5/java/com/sleepycat/util/class-use/ExceptionUnwrapper.html
 share/doc/db5/java/com/sleepycat/util/class-use/ExceptionWrapper.html
@@ -4908,6 +5004,7 @@ share/doc/db5/programmer_reference/rep_ex_chan.html
 share/doc/db5/programmer_reference/rep_ex_comm.html
 share/doc/db5/programmer_reference/rep_ex_rq.html
 share/doc/db5/programmer_reference/rep_faq.html
+share/doc/db5/programmer_reference/rep_filename.html
 share/doc/db5/programmer_reference/rep_id.html
 share/doc/db5/programmer_reference/rep_init.html
 share/doc/db5/programmer_reference/rep_lease.html
@@ -4921,6 +5018,7 @@ share/doc/db5/programmer_reference/rep_pri.html
 share/doc/db5/programmer_reference/rep_replicate.html
 share/doc/db5/programmer_reference/rep_ryw.html
 share/doc/db5/programmer_reference/rep_trans.html
+share/doc/db5/programmer_reference/rep_twosite.html
 share/doc/db5/programmer_reference/repmgr_channels.html
 share/doc/db5/programmer_reference/rq_conf.html
 share/doc/db5/programmer_reference/second.javas
