@@ -14,8 +14,7 @@ Here is an alphabetical list:
 * kconf_update
     Auto-Updater for config files.
 * kde3support
-    This contains libraries that were part of KDE3, but have been
-    replaced for KDE4
+    Libraries that were part of KDE3, but have been replaced for KDE4
 * kdecore
     This is the core collection of KDE stuff. Non GUI classes reside here.
 * kded
