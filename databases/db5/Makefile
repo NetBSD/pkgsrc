@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/12 22:41:21 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/18 13:46:50 adam Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (5.n -> 5.(n+1))
@@ -6,9 +6,8 @@
 # ABI depends in buildlink3.mk and bump PKGREVISIONs for all dependencies.
 # In particular, take care to include BDB_ACCEPTED=db5 packages.
 
-DISTNAME=	db-5.2.36
+DISTNAME=	db-5.3.15
 PKGNAME=	${DISTNAME:S/db/db5/}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 		http://download-uk.oracle.com/berkeley-db/
