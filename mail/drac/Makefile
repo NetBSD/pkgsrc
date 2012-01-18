@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/03/07 13:30:48 obache Exp $
-#
+# $NetBSD: Makefile,v 1.20 2012/01/18 14:33:17 adam Exp $
 
 DISTNAME=	drac
 PKGNAME=	drac-1.12
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cc.umanitoba.ca/src/
 EXTRACT_SUFX=	.tar.Z
