@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/08/31 18:25:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2012/01/18 18:36:51 drochner Exp $
 bin/dia
 lib/dia/libaadl_objects.la
 lib/dia/libart_filter.la
@@ -1717,7 +1717,6 @@ ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/connect-middle.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/default-colors.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/defaults-box.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/defaults-text.png
-${PLIST.gnome}${DIA_HELPDIR}/en/graphics/delete-text.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/dia-startup.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/diagram-properties-grid.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/diagram-properties.png
@@ -1765,6 +1764,7 @@ ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/toolbox-magnify.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/toolbox-modify.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/toolbox-scroll.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/toolbox-special.png
+${PLIST.gnome}${DIA_HELPDIR}/en/graphics/toolbox-textedit.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/toolbox.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/uml-shapes.png
 ${PLIST.gnome}${DIA_HELPDIR}/en/graphics/view-menu.png
@@ -1845,6 +1845,7 @@ share/icons/hicolor/48x48/apps/dia.png
 share/icons/hicolor/scalable/apps/dia.svg
 share/locale/am/LC_MESSAGES/dia.mo
 share/locale/ar/LC_MESSAGES/dia.mo
+share/locale/ast/LC_MESSAGES/dia.mo
 share/locale/az/LC_MESSAGES/dia.mo
 share/locale/be/LC_MESSAGES/dia.mo
 share/locale/bg/LC_MESSAGES/dia.mo
@@ -1858,6 +1859,7 @@ share/locale/dz/LC_MESSAGES/dia.mo
 share/locale/el/LC_MESSAGES/dia.mo
 share/locale/en_CA/LC_MESSAGES/dia.mo
 share/locale/en_GB/LC_MESSAGES/dia.mo
+share/locale/eo/LC_MESSAGES/dia.mo
 share/locale/es/LC_MESSAGES/dia.mo
 share/locale/eu/LC_MESSAGES/dia.mo
 share/locale/fi/LC_MESSAGES/dia.mo
