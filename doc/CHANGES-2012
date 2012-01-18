@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.145 2012/01/18 10:40:55 obache Exp $
+$NetBSD: CHANGES-2012,v 1.146 2012/01/18 14:51:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -233,3 +233,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/musicpd to 0.16.6 [drochner 2012-01-17]
 	Updated math/ruby-spreadsheet to 0.6.7 [obache 2012-01-18]
 	Updated graphics/py-blockdiag to 1.1.2 [obache 2012-01-18]
+	Updated databases/db5 to 5.3.15 [adam 2012-01-18]
+	Updated databases/py-bsddb3 to 5.3.0 [adam 2012-01-18]
+	Updated mail/avenger to 0.8.2 [adam 2012-01-18]
