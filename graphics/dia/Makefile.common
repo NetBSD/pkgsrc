@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.25 2010/01/27 19:38:51 drochner Exp $
+# $NetBSD: Makefile.common,v 1.26 2012/01/18 18:36:51 drochner Exp $
 #
 # used by graphics/dia-python/Makefile
 
-DISTNAME=	dia-0.97.1
+DISTNAME=	dia-0.97.2
 PKGNAME=	${DISTNAME:S/dia-/dia${DIA_SUBPKG}-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.97/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/dia/
@@ -21,6 +22,8 @@ USE_TOOLS+=		gmake intltool pkg-config msgfmt
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
+
+CHECK_PORTABILITY_SKIP+= installer/macosx/dia
 
 CONFIGURE_ARGS+=	--disable-emf
 CONFIGURE_ARGS+=	--without-python
