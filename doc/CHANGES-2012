@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.147 2012/01/18 15:32:05 chs Exp $
+$NetBSD: CHANGES-2012,v 1.148 2012/01/18 15:35:43 chs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -237,3 +237,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/py-bsddb3 to 5.3.0 [adam 2012-01-18]
 	Updated mail/avenger to 0.8.2 [adam 2012-01-18]
 	Updated emulators/suse113_libxml2 to 11.3nb4 [chs 2012-01-18]
+	Updated print/acroread9 to 9.4.7 [chs 2012-01-18]
