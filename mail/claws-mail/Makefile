@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2011/11/01 06:01:59 sbd Exp $
+# $NetBSD: Makefile,v 1.39 2012/01/18 14:04:44 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EGDIR}
@@ -7,7 +7,7 @@ INSTALLATION_DIRS+=	share/claws-mail
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X based e-mail and netnews client
