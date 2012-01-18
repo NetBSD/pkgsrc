@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10794 2012/01/17 14:39:20 taca Exp $
+$NetBSD: TODO,v 1.10795 2012/01/18 21:10:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-6.6.2
+	o abcm2ps-6.6.3
 	o abcmidi-20111211
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.2.1
@@ -444,7 +444,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.10.0
 	o bugzilla-3.6
-	o byacc-20110908
+	o byacc-20120115
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
 	o cal3d-0.11.0
@@ -510,12 +510,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dejagnu-1.5
 	o delegate-9.9.7
 	o dhid-5.3
-	o dia-0.97.2
 	o diffpdf-1.8.0
 	o diffstat-1.55
 	o diffutils-3.2
 	o digikam-2.5.0
-	o dillo-3.0.2
+	o dillo-3.0.2 [pkg/45852]
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.4.1 [pkg/45763]
@@ -595,7 +594,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o felt-3.07
 	o festival-1.96
 	o fetchyahoo-2.14.0
-	o ffmpeg-20120115.0.7.11
 	o ffmpeg-20111121.0.8.7
 	o ffmpeg-20111212.0.9
 	o file-5.10
@@ -684,6 +682,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdm-3.0.3
 	o gdsreader-0.3.2
 	o geany-0.21
+	o gedit-3.2.6
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gentoo-0.19.12
 	o gfract-0.33
@@ -760,7 +759,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-vnc-0.4.3
 	o gtkmm-3.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.29
+	o gtkwave-3.3.30
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -808,7 +807,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imake-1.0.4
 	o imap-uw-2007f
 	o imapsync-1.452
-	o imp-5.0.17
+	o imp-5.0.18
 	o ingo-2.0.7
 	o inputproto-2.1
 	o inspircd-1.2.1
@@ -861,7 +860,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o koffice-l10n-de-2.0.2
 	o konversation-1.4
 	o kphotobook-0.0.7
-	o kronolith-3.0.13
+	o kronolith-3.0.14
 	o krusader-2.0
 	o ktorrent-4.1.3
 	o ktorrent3-3.3.4
@@ -938,6 +937,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libraw-0.14.3
+	o libreoffice3-3.4.5
 	o librep-0.92.1b
 	o libssh-0.5.2 [www.libssh.org]
 	o libssh2-1.2.7
@@ -1073,6 +1073,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o otpCalc-0.97
+	o p0f-3.00b
 	o p5-Gtk2-1.223
 	o p5-Net-SNMP-5.7.1
 	o p5-PerlMagick-6.7.4.2
@@ -1143,7 +1144,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pure-ftpd-1.0.35
 	o putty-0.62
 	o puzzle-9173
-	o puzzles-9375
+	o puzzles-9377
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1151,6 +1152,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
+	o py-bsddb3-5.3.0
 	o py-checker-0.8.19
 	o py-cups-1.9.60
 	o py-dbus-0.84.0
@@ -1164,9 +1166,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-m2crypto-0.20.2
 	o py-mxDateTime-3.2.0
 	o py-pytz-2011n
-	o py-qt4-4.9
 	o py-simplejson-2.2.1
-	o py-sip-4.13.1
 	o py-sybase-0.37
 	o py-urwid-1.0.1
 	o py-zfec-1.4.22
@@ -1214,6 +1214,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-rb-appscript-0.6.1
+	o rudiments-0.35
 	o rxvt-unicode-9.14
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.2
@@ -1266,6 +1267,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
+	o squidclamav-6.5
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
 	o ssmtp-2.64
@@ -1292,6 +1294,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o t1utils-1.36
 	o tacacs-4.0.4.14
 	o tads-3.0.16
+	o taskjuggler-3.1.0
 	o tcl-8.5.11
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1305,7 +1308,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tea-31.2.0
 	o ted-en-us-2.17
 	o teem-1.10.0
-	o tellico-2.3.4
+	o tellico-2.3.5
 	o terminus-font-4.36 [pkg/45761]
 	o tesseract-3.01
 	o tetrinetx-1.40c
@@ -1336,7 +1339,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
-	o turba-3.0.10
+	o turba-3.0.11
 	o tuxpaint-0.9.21
 	o twelf-1.5r1
 	o twm-1.0.7
@@ -1498,7 +1501,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
-	o xmlstarlet-1.3.1
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmodmap-1.0.5
