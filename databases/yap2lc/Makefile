@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/09/16 08:06:14 adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/18 13:49:23 adam Exp $
 
 DISTNAME=	yap2lc-0.5.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yap2lc/}
 

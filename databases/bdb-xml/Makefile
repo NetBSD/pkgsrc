@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2011/04/01 21:07:01 markd Exp $
+# $NetBSD: Makefile,v 1.19 2012/01/18 13:49:23 adam Exp $
 
 DISTNAME=	dbxml-2.5.16
 PKGNAME=	${DISTNAME:S/db/bdb-/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
