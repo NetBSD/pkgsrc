@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.9 2011/03/16 06:51:11 obache Exp $
+$NetBSD: distinfo,v 1.10 2012/01/18 19:34:19 drochner Exp $
 
 SHA1 (gnome-python-extras-2.25.3.tar.bz2) = e69e5288466c960ed6f985bb10c9969b21ed85a4
 RMD160 (gnome-python-extras-2.25.3.tar.bz2) = e09bc0152512e2caa61626a7dc788d7336f24e46
 Size (gnome-python-extras-2.25.3.tar.bz2) = 370489 bytes
-SHA1 (patch-configure.ac) = 99dbd3acf78da883ff10cebd148bafcb6d6a9928
-SHA1 (patch-gtkmozembed_Makefile.am) = d4c3d324c328bec48fd00e4e641f1a539b0628ce
-SHA1 (patch-gtkmozembed_gtkmozembedmodule.cpp) = c870d91b64f222930efccf62c565d7f738081424
