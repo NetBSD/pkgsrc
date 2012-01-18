@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.12 2011/12/29 22:17:20 wiz Exp $
+# $NetBSD: linux.mk,v 1.13 2012/01/18 00:37:46 sbd Exp $
 #
 # Linux binary emulation framework
 #
@@ -96,9 +96,11 @@ EMULSUBDIR=		# empty
 
 .if (${_EMUL_TYPE} == "builtin") || (${_EMUL_TYPE} == "native")
 .  for _mod_ in ${_EMUL_MODULES}
-DEPENDS_native-linux.${_mod_}=	# empty
+DEPENDS_${EMUL_DISTRO}.${_mod_}=	# empty
 .  endfor
 .endif
 
+.if !defined(EMUL_IS_NATIVE)
 LDCONFIG_ADD_CMD?=	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
 LDCONFIG_REMOVE_CMD?=	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
+.endif
