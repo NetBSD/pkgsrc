@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2009/06/14 18:05:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.34 2012/01/18 18:31:10 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -122,8 +122,6 @@ include/libspreadsheet-1.8/spreadsheet/xml-sax.h
 lib/gnumeric/${PKGVERSION}/include/gnumeric-features.h
 lib/gnumeric/${PKGVERSION}/plugins/applix/applix.la
 lib/gnumeric/${PKGVERSION}/plugins/applix/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/corba/corba.la
-lib/gnumeric/${PKGVERSION}/plugins/corba/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/derivatives/derivatives.la
 lib/gnumeric/${PKGVERSION}/plugins/derivatives/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/dif/dif.la
@@ -205,9 +203,6 @@ man/man1/gnumeric.1
 man/man1/ssconvert.1
 man/man1/ssindex.1
 share/applications/gnumeric.desktop
-share/gconf/schemas/gnumeric-dialogs.schemas
-share/gconf/schemas/gnumeric-general.schemas
-share/gconf/schemas/gnumeric-plugins.schemas
 share/gnome/help/gnumeric/C/about-authors.xml
 share/gnome/help/gnumeric/C/about-history.xml
 share/gnome/help/gnumeric/C/about-license.xml
@@ -701,7 +696,6 @@ share/gnumeric/${PKGVERSION}/glade/tabulate.glade
 share/gnumeric/${PKGVERSION}/glade/variance-tests.glade
 share/gnumeric/${PKGVERSION}/glade/view.glade
 share/gnumeric/${PKGVERSION}/glade/workbook-attr.glade
-share/gnumeric/${PKGVERSION}/idl/GNOME_Gnumeric.idl
 share/gnumeric/${PKGVERSION}/templates/invoice.gnumeric
 share/gnumeric/${PKGVERSION}/templates/loan.gnumeric
 share/gnumeric/${PKGVERSION}/templates/mileage.gnumeric
@@ -808,7 +802,6 @@ share/locale/zh_CN/LC_MESSAGES/gnumeric-functions.mo
 share/locale/zh_CN/LC_MESSAGES/gnumeric.mo
 share/locale/zh_TW/LC_MESSAGES/gnumeric-functions.mo
 share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
-share/omf/gnumeric/gnumeric-C.omf
 share/pixmaps/gnome-application-vnd.lotus-1-2-3.png
 share/pixmaps/gnome-application-x-applix-spreadsheet.png
 share/pixmaps/gnome-application-x-generic-spreadsheet.png
