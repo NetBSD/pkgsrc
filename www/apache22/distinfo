@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2011/12/13 15:37:56 spz Exp $
+$NetBSD: distinfo,v 1.47.2.1 2012/01/18 19:54:36 tron Exp $
 
 SHA1 (httpd-2.2.21.tar.bz2) = c02f9b05da9a7e316ff37d9053dc76a57ba51cb4
 RMD160 (httpd-2.2.21.tar.bz2) = 6464a03d78ab858b1288ea9eef4cd5f73b60a9f1
@@ -19,4 +19,5 @@ SHA1 (patch-modules_mappers_mod_rewrite.c) = de7bbdf02dda38e2542e4967ee6f22745ec
 SHA1 (patch-modules_proxy_mod_proxy.c) = bab58b70eee22d7c08be9a4a9ada3fad886fa796
 SHA1 (patch-repos.c) = 0e0361b91d4b0fe6c7c55a12fdfd2e6aacc710e1
 SHA1 (patch-server_protocol.c) = 2be3e4fc08da717fa55b058eb32e398f6546d457
-SHA1 (patch-server_util.c) = b63f73e2a482facd188eecb0864fc612d1b7b3a5
+SHA1 (patch-server_scoreboard.c) = 8d1e007f8d1d6a6db827a41d82369749e603a2b3
+SHA1 (patch-server_util.c) = 37e9c357618a9645222cd981f0ccb04c7987fe15
