@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/05/26 20:19:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/01/19 10:17:56 fhajny Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -3022,11 +3022,8 @@ lib/erlang/lib/observer-${VERSION.observer}/ebin/ttb_et.beam
 lib/erlang/lib/observer-${VERSION.observer}/examples/multitrace.erl
 lib/erlang/lib/observer-${VERSION.observer}/include/etop.hrl
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/cdv
-lib/erlang/lib/observer-${VERSION.observer}/priv/bin/cdv.bat
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/etop
-lib/erlang/lib/observer-${VERSION.observer}/priv/bin/etop.bat
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/getop
-lib/erlang/lib/observer-${VERSION.observer}/priv/bin/getop.bat
 lib/erlang/lib/observer-${VERSION.observer}/priv/crashdump_viewer.tool
 lib/erlang/lib/observer-${VERSION.observer}/priv/crashdump_viewer/collapsd.gif
 lib/erlang/lib/observer-${VERSION.observer}/priv/crashdump_viewer/exploded.gif
@@ -3583,7 +3580,6 @@ lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_target_cache.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_trap.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_usm.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_vacm.beam
-lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc_lib.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc_mib_gram.beam
@@ -4316,7 +4312,6 @@ lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.appup
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.beam
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool_sup.beam
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/start_webtool
-lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/start_webtool.bat
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/root/conf/mime.types
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/root/doc/index.html
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/root/doc/start_info.html
@@ -4438,6 +4433,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListBox.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListCtrl.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListItem.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListItemAttr.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListView.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListbook.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxLogNull.beam
@@ -4766,6 +4762,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListBox.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListCtrl.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListItem.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListItemAttr.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListView.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListbook.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxLogNull.erl
