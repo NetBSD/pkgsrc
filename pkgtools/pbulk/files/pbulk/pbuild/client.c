@@ -1,4 +1,4 @@
-/* $NetBSD: client.c,v 1.3 2007/07/27 09:59:36 joerg Exp $ */
+/* $NetBSD: client.c,v 1.4 2012/01/19 18:53:32 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -92,7 +92,7 @@ loop:
 	recv_bytes = atomic_read(fd, build_info, build_info_len);
 	if (recv_bytes == -1)
 		err(1, "Could not read from socket");
-	if (recv_bytes != build_info_len || strlen(build_info) != build_info_len)
+	if ((uint32_t)recv_bytes != build_info_len || strlen(build_info) != build_info_len)
 		errx(1, "Premature end of stream while reading path from socket");
 
 	if (verbosity > 0) {
