@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/02/03 13:03:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/01/19 19:10:40 drochner Exp $
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -83,6 +83,9 @@ ${PYSITELIB}/zope/interface/tests/foodforthought.txt
 ${PYSITELIB}/zope/interface/tests/ifoo.py
 ${PYSITELIB}/zope/interface/tests/ifoo.pyc
 ${PYSITELIB}/zope/interface/tests/ifoo.pyo
+${PYSITELIB}/zope/interface/tests/ifoo_other.py
+${PYSITELIB}/zope/interface/tests/ifoo_other.pyc
+${PYSITELIB}/zope/interface/tests/ifoo_other.pyo
 ${PYSITELIB}/zope/interface/tests/m1.py
 ${PYSITELIB}/zope/interface/tests/m1.pyc
 ${PYSITELIB}/zope/interface/tests/m1.pyo
