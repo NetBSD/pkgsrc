@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/27 19:53:20 drochner Exp $
+$NetBSD: distinfo,v 1.2 2012/01/19 19:22:35 drochner Exp $
 
-SHA1 (ario-1.3.tar.gz) = d9d43854a0055b9ab0c9062826019174a053fb70
-RMD160 (ario-1.3.tar.gz) = b0531cb50df44118aca08a0ab6d3bf4bf5e8780f
-Size (ario-1.3.tar.gz) = 1041586 bytes
+SHA1 (ario-1.5.1.tar.gz) = 99c1ae6318a596cd27ac3c38ad25bc716527a94d
+RMD160 (ario-1.5.1.tar.gz) = dfc819cf46a80e822aa3b654c334d8cbaddb3b9d
+Size (ario-1.5.1.tar.gz) = 1135444 bytes
