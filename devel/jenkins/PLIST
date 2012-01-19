@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/08 14:09:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2012/01/19 22:26:27 tron Exp $
 share/jenkins/JNLPMain.class
 share/jenkins/LogFileOutputStream$1.class
 share/jenkins/LogFileOutputStream$2.class
@@ -22,7 +22,7 @@ share/jenkins/WEB-INF/jonas-web.xml
 share/jenkins/WEB-INF/lib/access-modifier-annotation-1.0.jar
 share/jenkins/WEB-INF/lib/acegi-security-1.0.5.jar
 share/jenkins/WEB-INF/lib/activation-1.1.1-hudson-1.jar
-share/jenkins/WEB-INF/lib/akuma-1.4.jar
+share/jenkins/WEB-INF/lib/akuma-1.7.jar
 share/jenkins/WEB-INF/lib/annotation-indexer-1.2.jar
 share/jenkins/WEB-INF/lib/ant-1.8.0.jar
 share/jenkins/WEB-INF/lib/ant-launcher-1.8.0.jar
