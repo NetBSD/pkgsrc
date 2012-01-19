@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.31 2011/09/10 16:30:02 abs Exp $
+# $NetBSD: OpenBSD.mk,v 1.32 2012/01/19 10:53:56 obache Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -95,6 +95,11 @@ SERIAL_DEVICES?=	/dev/ttya \
 .else
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
+.endif
+
+# check for kqueue(2) support, added in OpenBSD-2.9
+.if exists(/usr/include/sys/event.h)
+PKG_HAVE_KQUEUE=	# defined
 .endif
 
 _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
