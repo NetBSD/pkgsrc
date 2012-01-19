@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.156 2012/01/19 20:41:09 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.157 2012/01/19 20:52:16 tez Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -246,3 +246,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/jenkins to 1.424.2 [ryoon 2012-01-19]
 	Updated emulators/suse113_openssl to 11.3nb6 [chs 2012-01-19]
 	Updated devel/scmgit to 1.7.7.6 [gdt 2012-01-19]
+	Updated editors/emacs to 23.3bnb1 [tez 2012-01-19]
+	Updated editors/emacs-nox11 to 23.3bnb1 [tez 2012-01-19]
