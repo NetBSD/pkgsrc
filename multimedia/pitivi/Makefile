@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2011/12/22 07:57:09 marino Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/19 19:15:18 drochner Exp $
 #
 
-DISTNAME=	pitivi-0.13.4
-PKGREVISION=	6
+DISTNAME=	pitivi-0.15.0
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pitivi/0.13/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pitivi/0.15/}
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pitivi/}
 EXTRACT_SUFX=	.tar.bz2
 
@@ -18,7 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 PYTHON_PATCH_SCRIPTS=	bin/pitivi.in
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
+# no 25, needs setter/getter
+PYTHON_VERSIONS_ACCEPTED= 27 26
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../lang/python/application.mk"
@@ -27,4 +27,5 @@ PYTHON_VERSIONS_ACCEPTED= 27 26 25
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-gnonlin/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
