@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.155 2012/01/19 15:55:10 chs Exp $
+$NetBSD: CHANGES-2012,v 1.156 2012/01/19 20:41:09 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -245,3 +245,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/bison to 2.5nb3 [tsutsui 2012-01-19]
 	Updated devel/jenkins to 1.424.2 [ryoon 2012-01-19]
 	Updated emulators/suse113_openssl to 11.3nb6 [chs 2012-01-19]
+	Updated devel/scmgit to 1.7.7.6 [gdt 2012-01-19]
