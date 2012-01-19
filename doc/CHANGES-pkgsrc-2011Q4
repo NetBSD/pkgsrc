@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.12 2012/01/19 06:14:03 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.13 2012/01/19 22:27:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -88,3 +88,5 @@ Pullup ticket #3654 - requested by tron
 textproc/libxml2 security patch
 Pullup ticket #3656 - requested by taca
 security/openssl security fix
+Pullup ticket #3657 - requested by ryoon
+devel/jenkins: security update
