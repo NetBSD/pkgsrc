@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.11 2012/01/18 19:55:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.12 2012/01/19 06:14:03 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -84,3 +84,7 @@ Pullup ticket #3652 - requested by sbd
 x11/kdebase-workspace4: build fix
 Pullup ticket #3653 - requested by spz
 www/apache22: security patch
+Pullup ticket #3654 - requested by tron
+textproc/libxml2 security patch
+Pullup ticket #3656 - requested by taca
+security/openssl security fix
