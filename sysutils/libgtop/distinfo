@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25 2011/11/24 20:36:48 marino Exp $
+$NetBSD: distinfo,v 1.26 2012/01/19 19:43:57 drochner Exp $
 
-SHA1 (libgtop-2.28.3.tar.bz2) = cb97c9f24af7bf25df31d517999cab6a4793ab11
-RMD160 (libgtop-2.28.3.tar.bz2) = 122832350b2b16e327032b4e353fd6ec9b186fc3
-Size (libgtop-2.28.3.tar.bz2) = 793252 bytes
+SHA1 (libgtop-2.28.4.tar.bz2) = b6f002cc80a61dc0908dd96e0b543113a46bc4b7
+RMD160 (libgtop-2.28.4.tar.bz2) = 96ac76aa409bbd202bedacd94df14cd549e10d6b
+Size (libgtop-2.28.4.tar.bz2) = 819576 bytes
 SHA1 (patch-aa) = b056c00edebf3578364de50bcd1345bff67b45bc
 SHA1 (patch-ab) = cd11ad54870ab54fb940f922c1cc55d1c7ec2161
 SHA1 (patch-ac) = 3dd59355e36657df4c8575c35ef11c28d4192d77
@@ -15,17 +15,17 @@ SHA1 (patch-al) = 8d69828a73fd8f87cef08786bc5c3cd864210da6
 SHA1 (patch-am) = e69e9fd4ea90d2bb467050b5b4e8490baa162ef7
 SHA1 (patch-an) = 169366e6dc034db05eb54d6abb1416889f17a8e2
 SHA1 (patch-ao) = f58a1bd19d63377b86478e72f23bd5a4cca5af76
-SHA1 (patch-aq) = bb44484df341a009aa269fbaf5039e351e105e6c
+SHA1 (patch-aq) = 1d6f04fa2674f66a5702847c03f4740074b5dd24
 SHA1 (patch-bc) = 3638dfee30a4f10bc9662c23063df3f6a8cdc914
 SHA1 (patch-bd) = 7825fd4d2e6c06510fa3d76b4efa4d2ffab2a7d8
 SHA1 (patch-ca) = 06bc86bce721155315a1905b750f795629460ff7
 SHA1 (patch-cb) = cabc971530d8113694ff6d04108490749d40bcec
 SHA1 (patch-cc) = 2cb1d2da57a8622c93ed255a416ed9c811e775a2
 SHA1 (patch-cd) = cf96896ddde9c830c1e808d8bf37b9fdb611ed24
-SHA1 (patch-da) = 31c0e36155d80079779d7aec4552e0084f593ff2
-SHA1 (patch-db) = e3efc8ac9cf2320fef788b6265b0012ea4d3d660
-SHA1 (patch-dc) = ada7813f4a4203cc8d1bfa46bce7b87ecee06bc0
-SHA1 (patch-dd) = fea61bea21b1d1ae52f614ce9804a1132f3f368f
+SHA1 (patch-da) = 62c34addf08890cf1aa28a2604347f69e2c8ad0c
+SHA1 (patch-db) = 35174f7d45aeae95c33e440cae59830f7a964915
+SHA1 (patch-dc) = 3922128034b005f0b86c98abb3e10c1b1d5107ac
+SHA1 (patch-dd) = 7f35b3263189d43473adc0ac13244159b58ac9ff
 SHA1 (patch-de) = 85c5cb3d1185c8cc68ab09c7d16ed39e22a12093
 SHA1 (patch-df) = 8c1dab41b7449a2c706792036cf393553cebf9f0
 SHA1 (patch-dg) = b10933f50a1561d211afb6e817be9613cab37607

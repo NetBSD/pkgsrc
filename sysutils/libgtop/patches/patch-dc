@@ -1,16 +1,16 @@
-$NetBSD: patch-dc,v 1.1 2009/07/11 13:14:13 hasso Exp $
+$NetBSD: patch-dc,v 1.2 2012/01/19 19:43:57 drochner Exp $
 
---- sysdeps/freebsd/cpu.c.orig	2009-07-10 22:48:38 +0300
-+++ sysdeps/freebsd/cpu.c	2009-07-10 22:51:26 +0300
+--- sysdeps/freebsd/cpu.c.orig	2011-07-24 19:13:56.000000000 +0000
++++ sysdeps/freebsd/cpu.c
 @@ -53,6 +53,7 @@ _glibtop_init_cpu_s (glibtop *server)
  void
  glibtop_get_cpu_s (glibtop *server, glibtop_cpu *buf)
  {
 +#ifndef __DragonFly__
  	long cpts [CPUSTATES];
+ 	long *cp_times = NULL;
  	struct clockinfo ci;
- 	size_t length;
-@@ -111,4 +112,5 @@ glibtop_get_cpu_s (glibtop *server, glib
+@@ -132,4 +133,5 @@ glibtop_get_cpu_s (glibtop *server, glib
  	if (ncpu > 1) {
  		buf->flags |= _glibtop_sysdeps_cpu_smp;
  	}
