@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2011/11/01 06:00:52 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/01/19 19:35:11 drochner Exp $
 #
 
-PKGREVISION=	1
 MAKE_JOBS_SAFE=	no
 
 .include "../../devel/GConf/Makefile.common"
