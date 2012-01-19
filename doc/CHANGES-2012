@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.150 2012/01/19 00:52:14 taca Exp $
+$NetBSD: CHANGES-2012,v 1.151 2012/01/19 10:43:46 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -240,3 +240,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/acroread9 to 9.4.7 [chs 2012-01-18]
 	Updated net/ldns to 1.6.12 [pettai 2012-01-18]
 	Updated security/openssl to 0.9.8t [taca 2012-01-19]
+	Updated net/p5-Net-Twitter to 3.18001nb1 [hiramatsu 2012-01-19]
