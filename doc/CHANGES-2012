@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.153 2012/01/19 13:34:10 tsutsui Exp $
+$NetBSD: CHANGES-2012,v 1.154 2012/01/19 14:40:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -243,3 +243,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/p5-Net-Twitter to 3.18001nb1 [hiramatsu 2012-01-19]
 	Updated net/openvpn to 2.2.2 [adam 2012-01-19]
 	Updated devel/bison to 2.5nb3 [tsutsui 2012-01-19]
+	Updated devel/jenkins to 1.424.2 [ryoon 2012-01-19]
