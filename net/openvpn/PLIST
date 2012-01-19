@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/07/08 10:15:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/01/19 13:26:55 adam Exp $
 man/man8/openvpn.8
 sbin/openvpn
 share/doc/openvpn/management-notes.txt
@@ -53,7 +53,6 @@ share/openvpn/easy-rsa/list-crl
 share/openvpn/easy-rsa/openssl-0.9.6.cnf
 share/openvpn/easy-rsa/openssl-0.9.8.cnf
 share/openvpn/easy-rsa/openssl-1.0.0.cnf
-share/openvpn/easy-rsa/openssl-1.0.0.cnf-old-copy
 share/openvpn/easy-rsa/pkitool
 share/openvpn/easy-rsa/revoke-full
 share/openvpn/easy-rsa/sign-req
