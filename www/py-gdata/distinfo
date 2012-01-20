@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/10/08 14:11:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2012/01/20 12:21:39 wiz Exp $
 
-SHA1 (gdata-2.0.14.tar.gz) = 5eed0e01ab931e3f706ec544fc8f06ecac384e91
-RMD160 (gdata-2.0.14.tar.gz) = 9a0f2b7ba5bfc0cd813ac7ef54068acfae0992b6
-Size (gdata-2.0.14.tar.gz) = 1872888 bytes
+SHA1 (gdata-2.0.16.tar.gz) = 2cf06487e6c7e549e699dd737ba7b1c25e78c246
+RMD160 (gdata-2.0.16.tar.gz) = 6a549df0e6a7115dbb637fe8623fb8a0e73e14ff
+Size (gdata-2.0.16.tar.gz) = 2077455 bytes
