@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10802 2012/01/20 12:27:46 wiz Exp $
+$NetBSD: TODO,v 1.10803 2012/01/20 12:29:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1256,7 +1256,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sope-4.6
 	o sound-juicer-2.32.0
 	o source-highlight-3.1.6
-	o sox-14.3.2
 	o spcaview-20060501
 	o spidermonkey-1.8.5
 	o spl-1.0pre6
