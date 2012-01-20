@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10803 2012/01/20 12:29:54 wiz Exp $
+$NetBSD: TODO,v 1.10804 2012/01/20 12:33:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -829,7 +829,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jed-0.99-18
 	o john-1.7.9jumbo5
 	o jools-1.0
-	o jpeg-8d
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
 	o jwm-2.1.0
