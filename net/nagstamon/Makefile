@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/01 06:02:21 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/20 04:44:49 obache Exp $
 #
 
 VERSION=	0.9.2
@@ -9,7 +9,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagstamon/}
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://nagstamon.sf.net/
+HOMEPAGE=	http://nagstamon.ifw-dresden.de/
 COMMENT=	Nagios status monitor which takes place in systray or on desktop
 LICENSE=	gnu-gpl-v2
 
