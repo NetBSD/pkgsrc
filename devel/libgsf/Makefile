@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.74 2011/06/06 07:55:54 obache Exp $
-#
-# Some files are shared with libgsf-gnome, so update that
-# as well when updating libgsf!
+# $NetBSD: Makefile,v 1.75 2012/01/20 12:05:09 wiz Exp $
 #
 
-DISTNAME=	libgsf-1.14.21
+DISTNAME=	libgsf-1.14.22
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.14/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -24,11 +21,6 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
 
 CONFIGURE_ARGS+=	--without-python
-
-# XXX workaround for missing substitution in configure
-MAKE_ENV+=	GCONF2_SCHEMAS_DIR=${GCONF_SCHEMAS_DIR}
-
-GCONF_SCHEMAS=	gsf-office-thumbnailer.schemas
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
