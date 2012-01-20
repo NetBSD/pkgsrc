@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10800 2012/01/20 12:21:50 wiz Exp $
+$NetBSD: TODO,v 1.10801 2012/01/20 12:26:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -438,7 +438,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o blender-2.61
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.5.1
 	o bomberclone-0.11.9
 	o bos-2.5
 	o boson-0.13
@@ -592,7 +591,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fbreader-0.12.10
 	o fcitx-3.6.2
 	o felt-3.07
-	o festival-1.96
 	o fetchyahoo-2.14.0
 	o ffmpeg-20111121.0.8.7
 	o ffmpeg-20111212.0.9
@@ -1066,7 +1064,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openoffice3-3.3
 	o openssh-5.9p1
 	o openssl-1.0.0d [pkg/44717]
-	o openssl-1.0.0f
+	o openssl-1.0.0g
 	o openttd-1.1.4
 	o opera-11.60
 	o orca-2.32.1 [pkg/45807, GNOME 2.32]
@@ -1084,6 +1082,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
+	o pam-passwdqc-1.2.2
 	o paprefs-0.9.8
 	o parallel-20111222
 	o pari-2.5.0
@@ -1109,7 +1108,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pingus-0.7.4
 	o pioneers-0.12.5
 	o pircbot-1.4.6
-	o pixman-0.24.0
+	o pixman-0.24.2
 	o pkg-config-0.26
 	o pks-0.9.6
 	o planner-0.14.6
@@ -1126,9 +1125,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
-	o postgresql-postgis-1.5.3
 	o powder-117
-	o powerdns-2.9.22.5
 	o powwow-1.2.16
 	o prboom-2.5.0.8
 	o printproto-1.0.5
@@ -1152,7 +1149,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
-	o py-bsddb3-5.3.0
 	o py-checker-0.8.19
 	o py-cups-1.9.60
 	o py-dbus-0.84.0
@@ -1256,6 +1252,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snes9x-1.53
 	o snort-2.9.2
 	o socat-1.7.2.0
+	o softhsm-1.3.1
 	o solfege-3.20.4
 	o sope-4.6
 	o sound-juicer-2.32.0
@@ -1485,7 +1482,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xkbevd-1.1.2 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
-	o xkeyboard-config-2.4.1
+	o xkeyboard-config-2.5
 	o xkill-1.0.3
 	o xli-2006.11.10
 	o xload-1.1.0
@@ -1523,7 +1520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsetroot-1.1.0
 	o xsm-1.0.2
 	o xsoldier-1.4
-	o xterm-277
+	o xterm-278
 	o xtraceroute-0.9.1
 	o xtrans-1.2.6
 	o xtu-1.3
