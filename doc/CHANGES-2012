@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.166 2012/01/20 12:21:50 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.167 2012/01/20 12:27:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -258,3 +258,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/py-icalendar to 2.2 [wiz 2012-01-20]
 	Updated time/py-pytz to 2011n [wiz 2012-01-20]
 	Updated www/py-gdata to 2.0.16 [wiz 2012-01-20]
+	Updated www/links to 2.5 [wiz 2012-01-20]
