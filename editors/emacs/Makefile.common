@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.32 2012/01/19 20:50:00 tez Exp $
+# $NetBSD: Makefile.common,v 1.33 2012/01/20 04:20:43 obache Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
 
 DISTNAME=	emacs-${EMACS_VERSION}b
-PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
