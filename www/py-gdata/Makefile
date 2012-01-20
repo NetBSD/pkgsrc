@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/10/10 08:32:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/20 12:21:39 wiz Exp $
 
-DISTNAME=	gdata-2.0.14
+DISTNAME=	gdata-2.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://gdata-python-client.googlecode.com/files/
 
@@ -16,8 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 
-REPLACE_PYTHON=		src/atom/auth.py
-REPLACE_PYTHON+=	src/atom/__init__.py
+REPLACE_PYTHON=		src/atom/__init__.py
+REPLACE_PYTHON+=	src/atom/auth.py
 REPLACE_PYTHON+=	src/atom/client.py
 REPLACE_PYTHON+=	src/atom/core.py
 REPLACE_PYTHON+=	src/atom/data.py
@@ -44,19 +43,25 @@ REPLACE_PYTHON+=	src/gdata/analytics/service.py
 REPLACE_PYTHON+=	src/gdata/apps/__init__.py
 REPLACE_PYTHON+=	src/gdata/apps/adminsettings/__init__.py
 REPLACE_PYTHON+=	src/gdata/apps/adminsettings/service.py
+REPLACE_PYTHON+=	src/gdata/apps/apps_property_entry.py
+REPLACE_PYTHON+=	src/gdata/apps/data.py
 REPLACE_PYTHON+=	src/gdata/apps/emailsettings/__init__.py
 REPLACE_PYTHON+=	src/gdata/apps/emailsettings/client.py
 REPLACE_PYTHON+=	src/gdata/apps/emailsettings/data.py
 REPLACE_PYTHON+=	src/gdata/apps/emailsettings/service.py
+REPLACE_PYTHON+=	src/gdata/apps/groups/client.py
+REPLACE_PYTHON+=	src/gdata/apps/groups/data.py
 REPLACE_PYTHON+=	src/gdata/apps/groups/service.py
 REPLACE_PYTHON+=	src/gdata/apps/migration/__init__.py
 REPLACE_PYTHON+=	src/gdata/apps/migration/service.py
+REPLACE_PYTHON+=	src/gdata/apps/multidomain/client.py
+REPLACE_PYTHON+=	src/gdata/apps/multidomain/data.py
+REPLACE_PYTHON+=	src/gdata/apps/organization/client.py
+REPLACE_PYTHON+=	src/gdata/apps/organization/data.py
 REPLACE_PYTHON+=	src/gdata/apps/organization/service.py
 REPLACE_PYTHON+=	src/gdata/apps/service.py
 REPLACE_PYTHON+=	src/gdata/apps_property.py
 REPLACE_PYTHON+=	src/gdata/auth.py
-REPLACE_PYTHON+=	src/gdata/base/__init__.py
-REPLACE_PYTHON+=	src/gdata/base/service.py
 REPLACE_PYTHON+=	src/gdata/blogger/__init__.py
 REPLACE_PYTHON+=	src/gdata/blogger/client.py
 REPLACE_PYTHON+=	src/gdata/blogger/data.py
@@ -75,6 +80,9 @@ REPLACE_PYTHON+=	src/gdata/contacts/__init__.py
 REPLACE_PYTHON+=	src/gdata/contacts/client.py
 REPLACE_PYTHON+=	src/gdata/contacts/data.py
 REPLACE_PYTHON+=	src/gdata/contacts/service.py
+REPLACE_PYTHON+=	src/gdata/contentforshopping/__init__.py
+REPLACE_PYTHON+=	src/gdata/contentforshopping/client.py
+REPLACE_PYTHON+=	src/gdata/contentforshopping/data.py
 REPLACE_PYTHON+=	src/gdata/core.py
 REPLACE_PYTHON+=	src/gdata/data.py
 REPLACE_PYTHON+=	src/gdata/docs/__init__.py
