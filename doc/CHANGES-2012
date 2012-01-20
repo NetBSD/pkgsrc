@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.157 2012/01/19 20:52:16 tez Exp $
+$NetBSD: CHANGES-2012,v 1.158 2012/01/20 03:24:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -248,3 +248,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit to 1.7.7.6 [gdt 2012-01-19]
 	Updated editors/emacs to 23.3bnb1 [tez 2012-01-19]
 	Updated editors/emacs-nox11 to 23.3bnb1 [tez 2012-01-19]
+	Updated lang/php53 to 5.3.9nb1 [taca 2012-01-20]
+	Updated security/php-suhosin to 0.9.33 [taca 2012-01-20]
