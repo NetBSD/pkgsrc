@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2011/08/14 13:47:55 obache Exp $
+# $NetBSD: Makefile,v 1.53 2012/01/20 13:39:38 drochner Exp $
 #
 
 DISTNAME=	dvdrip-0.98.11
@@ -25,6 +25,8 @@ DEPENDS+=	p5-Event-ExecFlow>=0.62:../../devel/p5-Event-ExecFlow
 DEPENDS+=	p5-Event-RPC>=0.89:../../devel/p5-Event-RPC
 DEPENDS+=	p5-AnyEvent>=1.02:../../devel/p5-AnyEvent
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+# uses programs only (mplex)
+DEPENDS+=	mjpegtools-[0-9]*:../../multimedia/mjpegtools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -51,6 +53,5 @@ SUBST_MESSAGE.fping=	Fixing hardcoded path.
 .include "options.mk"
 .endif
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
