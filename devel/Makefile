@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1552 2012/01/08 05:43:01 obache Exp $
+# $NetBSD: Makefile,v 1.1553 2012/01/20 12:06:04 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -346,7 +346,6 @@ SUBDIR+=	libgnomeui
 SUBDIR+=	libgnomeuimm
 SUBDIR+=	libgphoto2
 SUBDIR+=	libgsf
-SUBDIR+=	libgsf-gnome
 SUBDIR+=	libgweather
 SUBDIR+=	libhfs
 SUBDIR+=	libiberty
