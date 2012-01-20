@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2011/03/11 09:27:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/01/20 12:36:14 drochner Exp $
 bin/xmlif
 bin/xmlto
 man/man1/xmlif.1
 man/man1/xmlto.1
 share/xmlto/format/docbook/awt
 share/xmlto/format/docbook/dvi
+share/xmlto/format/docbook/epub
 share/xmlto/format/docbook/fo
 share/xmlto/format/docbook/html
 share/xmlto/format/docbook/html-nochunks
