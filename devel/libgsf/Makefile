@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2012/01/20 12:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2012/01/20 12:57:52 drochner Exp $
 #
 
 DISTNAME=	libgsf-1.14.22
@@ -26,5 +26,4 @@ CONFIGURE_ARGS+=	--without-python
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
 .include "../../mk/bsd.pkg.mk"
