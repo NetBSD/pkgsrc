@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2011/11/02 22:51:07 jnemeth Exp $
+# $NetBSD: options.mk,v 1.8 2012/01/20 17:07:38 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	idea mdc2 rc5 zlib threads
@@ -12,12 +12,8 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
 ###
 ### Support for the IDEA algorithm
-###	US Patent: 5214703
-###	Europe Patent: EP0482154
-###	Japan Patent: 508119/1991
 ###
 .if !empty(PKG_OPTIONS:Midea)
-OPENSSL_LICENSE+=	idea-license
 PLIST.idea=		yes
 .else
 CONFIGURE_ARGS+=	no-idea
@@ -25,11 +21,8 @@ CONFIGURE_ARGS+=	no-idea
 
 ###
 ### Support for the MDC2 algorithm
-###	US Patent: 4908861
 ###
 .if !empty(PKG_OPTIONS:Mmdc2)
-# A license file is needed.
-OPENSSL_LICENSE+=	mdc2-nonlicense
 CONFIGURE_ARGS+=	enable-mdc2
 PLIST.mdc2=		yes
 .else
