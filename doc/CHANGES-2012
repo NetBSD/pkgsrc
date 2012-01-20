@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.170 2012/01/20 12:36:35 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.171 2012/01/20 12:43:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -262,3 +262,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/sox to 14.3.2 [wiz 2012-01-20]
 	Updated graphics/jpeg to 8d [wiz 2012-01-20]
 	Updated net/flickcurl to 1.22 [wiz 2012-01-20]
+	Updated games/powder to 117 [wiz 2012-01-20]
