@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/11/16 01:33:17 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/20 13:55:27 drochner Exp $
 # FreeBSD Id: ports/multimedia/dvd-slideshow/Makefile,v 1.12 2007/09/23 04:42:06 edwin Exp
 
 DISTNAME=	dvd-slideshow-0.7.5
@@ -19,6 +19,9 @@ DEPENDS+=	sox-[0-9]*:../../audio/sox
 DEPENDS+=	dvdauthor-[0-9]*:../../multimedia/dvdauthor
 DEPENDS+=	dvd+rw-tools-[0-9]*:../../sysutils/dvd+rw-tools
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+# uses programs only (mplex, ffmpeg)
+DEPENDS+=	mjpegtools-[0-9]*:../../multimedia/mjpegtools
+DEPENDS+=	ffmpeg-[0-9]*:../../multimedia/ffmpeg
 
 USE_X11BASE=	yes
 USE_TOOLS+=	bash:run
@@ -67,6 +70,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${DESTDIR}${PREFIX}/share/doc/dvd-slideshow
 .endfor
 
-.include "../../multimedia/mjpegtools/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
