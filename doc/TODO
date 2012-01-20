@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10799 2012/01/20 12:12:34 wiz Exp $
+$NetBSD: TODO,v 1.10800 2012/01/20 12:21:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1157,7 +1157,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-cups-1.9.60
 	o py-dbus-0.84.0
 	o py-game-1.9.1
-	o py-gdata-2.0.16
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-jersey-1.0.3 [pkg/43762]
