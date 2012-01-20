@@ -1,8 +1,18 @@
-$NetBSD: patch-ad,v 1.2 1998/11/12 23:34:32 frueauf Exp $
+$NetBSD: patch-ad,v 1.3 2012/01/20 17:06:52 joerg Exp $
 
---- main.c.orig	Fri Sep 13 22:32:10 1991
-+++ main.c	Mon Aug 17 00:20:12 1998
-@@ -138,9 +138,7 @@
+--- main.c.orig	1991-09-13 20:32:10.000000000 +0000
++++ main.c
+@@ -52,6 +52,9 @@
+ #include <X11/Xaw/Box.h>
+ #endif
+ 
++#include <stdio.h>
++#include <stdlib.h>
++#include <unistd.h>
+ 
+ #include "xpipeman.h"
+ 
+@@ -138,9 +141,7 @@ static XtActionsRec actions[] = {
    {"do_nothing",(XtActionProc)do_nothing_action},
  };
  
@@ -13,7 +23,7 @@ $NetBSD: patch-ad,v 1.2 1998/11/12 23:34:32 frueauf Exp $
  
  static XrmOptionDescRec options[] = {
  	{"-scorefile","scorefile",XrmoptionSepArg, NULL },
-@@ -148,13 +146,13 @@
+@@ -148,19 +149,20 @@ static XrmOptionDescRec options[] = {
  
  static XtResource application_resources[] = {
    {"foreground", "Foreground", XtRPixel, sizeof(Pixel),
@@ -31,7 +41,15 @@ $NetBSD: patch-ad,v 1.2 1998/11/12 23:34:32 frueauf Exp $
  };
  
  /*----------------------------------------------------------------------*/
-@@ -177,7 +175,7 @@
+ 
++int
+ main(argc, argv)
+-  unsigned int argc;
++  int argc;
+   char **argv;
+ {
+   Arg args[1];
+@@ -177,7 +179,7 @@ main(argc, argv)
  
    XtAddActions(actions,XtNumber(actions));
  
@@ -40,7 +58,7 @@ $NetBSD: patch-ad,v 1.2 1998/11/12 23:34:32 frueauf Exp $
  			XtNumber(application_resources), NULL, 0 );
  
    top_widget = XtCreateManagedWidget(
-@@ -193,7 +191,7 @@
+@@ -193,7 +195,7 @@ main(argc, argv)
                                      arglistplayfield,
                                      XtNumber(arglistplayfield));
  
@@ -49,7 +67,7 @@ $NetBSD: patch-ad,v 1.2 1998/11/12 23:34:32 frueauf Exp $
  
    quit_command = XtCreateManagedWidget(
                                      "quit_button",
-@@ -263,12 +261,12 @@
+@@ -263,12 +265,12 @@ main(argc, argv)
  
    display   = XtDisplay(playfield_widget);
    playfield = XtWindow(playfield_widget);
