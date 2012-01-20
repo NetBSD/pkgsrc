@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.173 2012/01/20 15:26:18 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.174 2012/01/20 15:44:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -265,3 +265,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/powder to 117 [wiz 2012-01-20]
 	Updated chat/dccserver to 0.5 [wiz 2012-01-20]
 	Updated archivers/unrar to 4.1.4 [wiz 2012-01-20]
+	Updated devel/scmgit to 1.7.8.4 [adam 2012-01-20]
+	Updated devel/scmgit-base to 1.7.8.4 [adam 2012-01-20]
+	Updated devel/scmgit-docs to 1.7.8.4 [adam 2012-01-20]
