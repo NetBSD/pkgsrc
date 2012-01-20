@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.162 2012/01/20 12:05:19 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.163 2012/01/20 12:06:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -254,3 +254,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.8.2 [jnemeth 2012-01-20]
 	Updated multimedia/swfdec-mozilla to 0.8.2nb11 [obache 2012-01-20]
 	Updated devel/libgsf to 1.14.22 [wiz 2012-01-20]
+	Removed devel/libgsf-gnome [wiz 2012-01-20]
