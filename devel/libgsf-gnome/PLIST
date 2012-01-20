@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2009/08/02 10:52:06 drochner Exp $
-include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
-include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
-include/libgsf-1/gsf-gnome/gsf-output-bonobo.h
-include/libgsf-1/gsf-gnome/gsf-output-gnomevfs.h
-include/libgsf-1/gsf-gnome/gsf-shared-bonobo-stream.h
-lib/libgsf-gnome-1.la
-lib/pkgconfig/libgsf-gnome-1.pc
