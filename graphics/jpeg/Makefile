@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2011/01/21 11:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.45 2012/01/20 12:33:07 wiz Exp $
 
-DISTNAME=	jpegsrc.v8c
+DISTNAME=	jpegsrc.v8d
 PKGNAME=	${DISTNAME:S/src.v/-/}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ijg.org/files/
