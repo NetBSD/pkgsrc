@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/17 13:46:28 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/20 08:41:01 obache Exp $
 #
 
 MODNAME=	mecab
@@ -8,7 +8,7 @@ CATEGORIES=	textproc japanese
 MASTER_SITES=	http://pecl.opendogs.org/get/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://page2.xrea.jp/#php_mecab
+HOMEPAGE=	https://github.com/rsky/php-mecab
 #		http://d.hatena.ne.jp/rsky/
 COMMENT=	PHP extension for MeCab Morphological Analyzer
 LICENSE=	mit
