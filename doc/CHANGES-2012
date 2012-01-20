@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.167 2012/01/20 12:27:46 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.168 2012/01/20 12:29:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -259,3 +259,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/py-pytz to 2011n [wiz 2012-01-20]
 	Updated www/py-gdata to 2.0.16 [wiz 2012-01-20]
 	Updated www/links to 2.5 [wiz 2012-01-20]
+	Updated audio/sox to 14.3.2 [wiz 2012-01-20]
