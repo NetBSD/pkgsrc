@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.165 2012/01/20 12:12:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.166 2012/01/20 12:21:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed devel/libgsf-gnome [wiz 2012-01-20]
 	Updated time/py-icalendar to 2.2 [wiz 2012-01-20]
 	Updated time/py-pytz to 2011n [wiz 2012-01-20]
+	Updated www/py-gdata to 2.0.16 [wiz 2012-01-20]
