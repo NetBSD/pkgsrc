@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/08/17 09:38:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/01/20 12:12:26 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pytz/__init__.py
 ${PYSITELIB}/pytz/__init__.pyc
 ${PYSITELIB}/pytz/__init__.pyo
+${PYSITELIB}/pytz/exceptions.py
+${PYSITELIB}/pytz/exceptions.pyc
+${PYSITELIB}/pytz/exceptions.pyo
 ${PYSITELIB}/pytz/reference.py
 ${PYSITELIB}/pytz/reference.pyc
 ${PYSITELIB}/pytz/reference.pyo
@@ -42,6 +45,7 @@ ${PYSITELIB}/pytz/zoneinfo/Africa/Freetown
 ${PYSITELIB}/pytz/zoneinfo/Africa/Gaborone
 ${PYSITELIB}/pytz/zoneinfo/Africa/Harare
 ${PYSITELIB}/pytz/zoneinfo/Africa/Johannesburg
+${PYSITELIB}/pytz/zoneinfo/Africa/Juba
 ${PYSITELIB}/pytz/zoneinfo/Africa/Kampala
 ${PYSITELIB}/pytz/zoneinfo/Africa/Khartoum
 ${PYSITELIB}/pytz/zoneinfo/Africa/Kigali
@@ -156,10 +160,12 @@ ${PYSITELIB}/pytz/zoneinfo/America/Juneau
 ${PYSITELIB}/pytz/zoneinfo/America/Kentucky/Louisville
 ${PYSITELIB}/pytz/zoneinfo/America/Kentucky/Monticello
 ${PYSITELIB}/pytz/zoneinfo/America/Knox_IN
+${PYSITELIB}/pytz/zoneinfo/America/Kralendijk
 ${PYSITELIB}/pytz/zoneinfo/America/La_Paz
 ${PYSITELIB}/pytz/zoneinfo/America/Lima
 ${PYSITELIB}/pytz/zoneinfo/America/Los_Angeles
 ${PYSITELIB}/pytz/zoneinfo/America/Louisville
+${PYSITELIB}/pytz/zoneinfo/America/Lower_Princes
 ${PYSITELIB}/pytz/zoneinfo/America/Maceio
 ${PYSITELIB}/pytz/zoneinfo/America/Managua
 ${PYSITELIB}/pytz/zoneinfo/America/Manaus
@@ -170,6 +176,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Mazatlan
 ${PYSITELIB}/pytz/zoneinfo/America/Mendoza
 ${PYSITELIB}/pytz/zoneinfo/America/Menominee
 ${PYSITELIB}/pytz/zoneinfo/America/Merida
+${PYSITELIB}/pytz/zoneinfo/America/Metlakatla
 ${PYSITELIB}/pytz/zoneinfo/America/Mexico_City
 ${PYSITELIB}/pytz/zoneinfo/America/Miquelon
 ${PYSITELIB}/pytz/zoneinfo/America/Moncton
@@ -182,6 +189,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/New_York
 ${PYSITELIB}/pytz/zoneinfo/America/Nipigon
 ${PYSITELIB}/pytz/zoneinfo/America/Nome
 ${PYSITELIB}/pytz/zoneinfo/America/Noronha
+${PYSITELIB}/pytz/zoneinfo/America/North_Dakota/Beulah
 ${PYSITELIB}/pytz/zoneinfo/America/North_Dakota/Center
 ${PYSITELIB}/pytz/zoneinfo/America/North_Dakota/New_Salem
 ${PYSITELIB}/pytz/zoneinfo/America/Ojinaga
@@ -208,6 +216,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Santo_Domingo
 ${PYSITELIB}/pytz/zoneinfo/America/Sao_Paulo
 ${PYSITELIB}/pytz/zoneinfo/America/Scoresbysund
 ${PYSITELIB}/pytz/zoneinfo/America/Shiprock
+${PYSITELIB}/pytz/zoneinfo/America/Sitka
 ${PYSITELIB}/pytz/zoneinfo/America/St_Barthelemy
 ${PYSITELIB}/pytz/zoneinfo/America/St_Johns
 ${PYSITELIB}/pytz/zoneinfo/America/St_Kitts
@@ -267,6 +276,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Dubai
 ${PYSITELIB}/pytz/zoneinfo/Asia/Dushanbe
 ${PYSITELIB}/pytz/zoneinfo/Asia/Gaza
 ${PYSITELIB}/pytz/zoneinfo/Asia/Harbin
+${PYSITELIB}/pytz/zoneinfo/Asia/Hebron
 ${PYSITELIB}/pytz/zoneinfo/Asia/Ho_Chi_Minh
 ${PYSITELIB}/pytz/zoneinfo/Asia/Hong_Kong
 ${PYSITELIB}/pytz/zoneinfo/Asia/Hovd

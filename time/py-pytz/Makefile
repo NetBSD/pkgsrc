@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/08/17 09:38:00 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/20 12:12:26 wiz Exp $
 #
 
-DISTNAME=	pytz-2010k
+DISTNAME=	pytz-2011n
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pytz/
@@ -15,6 +15,8 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCLUDE_3X=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
