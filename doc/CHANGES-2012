@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.172 2012/01/20 15:05:14 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.173 2012/01/20 15:26:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -264,3 +264,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/flickcurl to 1.22 [wiz 2012-01-20]
 	Updated games/powder to 117 [wiz 2012-01-20]
 	Updated chat/dccserver to 0.5 [wiz 2012-01-20]
+	Updated archivers/unrar to 4.1.4 [wiz 2012-01-20]
