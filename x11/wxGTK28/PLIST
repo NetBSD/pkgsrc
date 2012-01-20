@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/01/20 12:02:24 drochner Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.8
@@ -552,6 +552,7 @@ lib/libwx_gtk2${DEBUG_LIB}_aui-2.8.la
 lib/libwx_gtk2${DEBUG_LIB}_core-2.8.la
 lib/libwx_gtk2${DEBUG_LIB}_gl-2.8.la
 lib/libwx_gtk2${DEBUG_LIB}_html-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_media-2.8.la
 lib/libwx_gtk2${DEBUG_LIB}_qa-2.8.la
 lib/libwx_gtk2${DEBUG_LIB}_richtext-2.8.la
 lib/libwx_gtk2${DEBUG_LIB}_xrc-2.8.la
@@ -560,6 +561,7 @@ lib/libwx_gtk2u${DEBUG_LIB}_aui-2.8.la
 lib/libwx_gtk2u${DEBUG_LIB}_core-2.8.la
 lib/libwx_gtk2u${DEBUG_LIB}_gl-2.8.la
 lib/libwx_gtk2u${DEBUG_LIB}_html-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_media-2.8.la
 lib/libwx_gtk2u${DEBUG_LIB}_qa-2.8.la
 lib/libwx_gtk2u${DEBUG_LIB}_richtext-2.8.la
 lib/libwx_gtk2u${DEBUG_LIB}_xrc-2.8.la
