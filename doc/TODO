@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10808 2012/01/21 17:53:54 gls Exp $
+$NetBSD: TODO,v 1.10809 2012/01/21 18:42:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
+	o SDL-1.2.15
 	o SDL_gfx-2.0.23
 	o SmartEiffel-2.3
 	o TiffIO-130e
@@ -477,7 +478,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o connect-1.96
 	o consolekit-0.4.0
 	o cook-2.31
-	o coreutils-8.14
+	o coreutils-8.15
 	o courier-0.66.1
 	o covered-0.7.9
 	o covered-current-20090802
@@ -528,7 +529,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dropbear-2011.054
 	o dspam-3.10.0
 	o dvdisaster-0.72.2
-	o dvdstyler-2.1
 	o dvtm-0.7
 	o dwm-6.0 [pkg/45737]
 	o easymenu-0.7.2p1
@@ -727,7 +727,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
-	o gnutls-3.0.10
+	o gnutls-3.0.12
 	o gobject-introspection-1.30.0
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
@@ -952,7 +952,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o liferea-1.8.0
 	o lighttpd-1.4.30
 	o lincvs-2.1.4 [now called CrossVC]
-	o links-gui-2.5
 	o liquidwar-6.0.0.11
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.4.5
@@ -1061,7 +1060,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssh-5.9p1
 	o openssl-1.0.0d [pkg/44717]
 	o openssl-1.0.0g
-	o openttd-1.1.4
+	o openttd-1.1.5
 	o opera-11.60
 	o orca-2.32.1 [pkg/45807, GNOME 2.32]
 	o oroborus-2.0.18
@@ -1493,7 +1492,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-util-macros-1.10.1 [pkg/43891]
-	o xorg-util-macros-1.16.0
+	o xorg-util-macros-1.16.1
 	o xorp-1.8.4
 	o xpaint-2.9.8.4
 	o xpr-1.0.3 [unpackaged]
