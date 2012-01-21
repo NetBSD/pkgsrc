@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2012/01/13 10:55:18 obache Exp $
+# $NetBSD: Makefile,v 1.31 2012/01/21 17:53:32 gls Exp $
 #
 
-DISTNAME=	calibre-0.8.29
-#PKGREVISION=	2
-PKGREVISION=	1
+DISTNAME=	calibre-0.8.36
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.calibre-ebook.com/
@@ -25,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.7:../../textproc/py-cssutils
 # Let's depend on the ones we have in pkgsrc instead of the bundled ones.
 DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
 DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
+DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -63,6 +64,7 @@ FIX_PYTHON+=	src/calibre/devices/kobo/*.py
 FIX_PYTHON+=	src/calibre/devices/prs505/*.py
 FIX_PYTHON+=	src/calibre/devices/prst1/*.py
 FIX_PYTHON+=	src/calibre/devices/teclast/*.py
+FIX_PYTHON+=	src/calibre/ebooks/*.py
 FIX_PYTHON+=	src/calibre/ebooks/chm/*.py
 FIX_PYTHON+=	src/calibre/ebooks/comic/*.py
 FIX_PYTHON+=	src/calibre/ebooks/compression/*.py
@@ -84,6 +86,8 @@ FIX_PYTHON+=	src/calibre/ebooks/metadata/sources/*.py
 FIX_PYTHON+=	src/calibre/ebooks/mobi/*.py
 FIX_PYTHON+=	src/calibre/ebooks/mobi/writer2/*.py
 FIX_PYTHON+=	src/calibre/ebooks/odt/__init__.py
+FIX_PYTHON+=	src/calibre/ebooks/oeb/*.py
+FIX_PYTHON+=	src/calibre/ebooks/oeb/display/test-cfi/*.py
 FIX_PYTHON+=	src/calibre/ebooks/oeb/transforms/*.py
 FIX_PYTHON+=	src/calibre/ebooks/pdf/__init__.py
 FIX_PYTHON+=	src/calibre/ebooks/pdf/reflow.py
@@ -156,7 +160,7 @@ MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 
 # Let's depend on the ones we have in pkgsrc instead of the bundled ones.
 pre-configure:
-	cd ${WRKSRC} && rm -rf src/cherrypy src/pyPdf
+	cd ${WRKSRC} && rm -rf src/cherrypy src/pyPdf src/html5lib src/chardet
 
 post-install:
 	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
