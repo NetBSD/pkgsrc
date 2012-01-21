@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/24 07:43:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/01/21 12:09:48 shattered Exp $
 bin/castool
+bin/floptool
 bin/imgtool
 bin/mess
 share/doc/mess/credits.htm
