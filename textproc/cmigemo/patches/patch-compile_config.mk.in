@@ -1,0 +1,35 @@
+$NetBSD: patch-compile_config.mk.in,v 1.1.1.1 2012/01/21 13:38:41 obache Exp $
+
+* change docdir to usual location
+* avoid to depend on iconv(1)
+* libtoolize
+
+--- compile/config.mk.in.orig	2011-02-27 10:45:40.000000000 +0000
++++ compile/config.mk.in
+@@ -19,7 +19,7 @@ incdir		= $(prefix)/include
+ # WARNING: Directories $(dictdir) and $(docdir) will be deleted whole the
+ # directory when unintall.
+ dictdir		= $(prefix)/share/migemo
+-docdir		= $(prefix)/doc/migemo
++docdir		= $(prefix)/share/doc/migemo
+ 
+ ##############################################################################
+ # Commands
+@@ -35,7 +35,7 @@ BUNZIP2		= bzip2 -d
+ GUNZIP		= gzip -d
+ FILTER_CP932	= ${PROGRAM_ENCODEFILTER} -s
+ FILTER_EUCJP	= ${PROGRAM_ENCODEFILTER} -e
+-FILTER_UTF8	= iconv -t utf-8 -f cp932
++FILTER_UTF8	= nkf --oc=UTF-8 --ic=Windows-31J
+ INSTALL		= ${PROGRAM_INSTALL} -c
+ INSTALL_PROGRAM	= $(INSTALL) -m 755
+ INSTALL_DATA	= $(INSTALL) -m 644
+@@ -43,7 +43,7 @@ INSTALL_DATA	= $(INSTALL) -m 644
+ ##############################################################################
+ # Constants
+ #
+-O		= o
++O		= lo
+ EXE		=
+ CONFIG_DEFAULT	= compile/config_default.mk
+ CONFIG_IN	= ${config_in}
