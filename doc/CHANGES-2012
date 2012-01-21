@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.182 2012/01/21 16:54:35 gson Exp $
+$NetBSD: CHANGES-2012,v 1.183 2012/01/21 17:53:53 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -283,3 +283,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated wm/pekwm to 0.1.14 [gls 2012-01-21]
 	Updated emulators/suse113_qt4 to 11.3nb2 [chs 2012-01-21]
 	Updated misc/py-anita to 1.24 [gson 2012-01-21]
+	Updated misc/calibre to 0.8.36 [gls 2012-01-21]
