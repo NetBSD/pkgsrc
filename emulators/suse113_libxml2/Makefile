@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/01/18 15:31:43 chs Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/21 15:25:56 chs Exp $
 
 DISTNAME=	suse_libxml2-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
-DISTFILES=	libxml2-2.7.7-4.9.1.${SUSE_ARCH}.rpm
+DISTFILES=	libxml2-2.7.7-4.11.1.${SUSE_ARCH}.rpm
 
 MAINTAINER=	chs@NetBSD.org
 COMMENT=	Linux compatibility package for libxml2
