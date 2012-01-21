@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.13 2012/01/19 22:27:27 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.14 2012/01/21 09:05:39 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -90,3 +90,7 @@ Pullup ticket #3656 - requested by taca
 security/openssl security fix
 Pullup ticket #3657 - requested by ryoon
 devel/jenkins: security update
+Pullup ticket #3658 - requested by taca
+security/php-suhosin security fix
+Pullup ticket #3659 - requested by taca
+lang/php53 suhosin-patch update.
