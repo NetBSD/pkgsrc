@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2011/10/11 12:01:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2012/01/21 10:16:43 obache Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -234,6 +234,7 @@ ${PLIST.macosx}share/git-gui/lib/Git Gui.app/Contents/Resources/git-gui.icns
 ${PLIST.gui}share/git-gui/lib/git-gui.ico
 ${PLIST.macosx}share/git-gui/lib/git-gui.tcl
 ${PLIST.gui}share/git-gui/lib/index.tcl
+${PLIST.gui}share/git-gui/lib/line.tcl
 ${PLIST.gui}share/git-gui/lib/logo.tcl
 ${PLIST.gui}share/git-gui/lib/merge.tcl
 ${PLIST.gui}share/git-gui/lib/mergetool.tcl
