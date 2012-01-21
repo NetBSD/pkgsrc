@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.176 2012/01/20 18:02:49 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.177 2012/01/21 06:12:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/pitivi to 0.15.0 [drochner 2012-01-20]
 	Updated devel/py-ZopeInterface to 3.6.7 [drochner 2012-01-20]
 	Updated mail/spamdyke to 4.3.1 [schmonz 2012-01-20]
+	Updated math/ruby-spreadsheet to 0.6.8 [obache 2012-01-21]
