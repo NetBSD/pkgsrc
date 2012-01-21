@@ -1,0 +1,3 @@
+PyZMQ is ostensibly the Python bindings for ZeroMQ, but the project,
+following Python's 'batteries included' philosophy, provides more than
+just Python methods objects for calling into the ZeroMQ C++ library.
