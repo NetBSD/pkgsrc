@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.184 2012/01/21 20:17:49 apb Exp $
+$NetBSD: CHANGES-2012,v 1.185 2012/01/21 20:27:47 apb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -285,3 +285,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/py-anita to 1.24 [gson 2012-01-21]
 	Updated misc/calibre to 0.8.36 [gls 2012-01-21]
 	Added net/py-zmq version 2.1.10 [apb 2012-01-21]
+	Added sysutils/salt version 0.9.5 [apb 2012-01-21]
