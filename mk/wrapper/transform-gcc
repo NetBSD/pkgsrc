@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.21 2011/01/23 19:07:26 agc Exp $
+# $NetBSD: transform-gcc,v 1.22 2012/01/21 12:05:03 shattered Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -52,6 +52,7 @@ case $arg in
 -mabi=*			|\
 -march=*		|\
 -mcpu=*			|\
+-mschedule=*		|\
 -mieee-fp		|\
 -O[23s]			|\
 -pedantic		|\
