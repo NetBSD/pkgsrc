@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/15 08:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/21 16:52:44 gls Exp $
 
 DISTNAME=	html5lib-0.90
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://html5lib.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://code.google.com/5/html5lib/
+HOMEPAGE=	http://code.google.com/p/html5lib/
 COMMENT=	HTML5 parser and tokenizer
 LICENSE=	mit
 
