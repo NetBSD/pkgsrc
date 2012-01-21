@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.177 2012/01/21 06:12:34 obache Exp $
+$NetBSD: CHANGES-2012,v 1.178 2012/01/21 13:38:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -278,3 +278,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-ZopeInterface to 3.6.7 [drochner 2012-01-20]
 	Updated mail/spamdyke to 4.3.1 [schmonz 2012-01-20]
 	Updated math/ruby-spreadsheet to 0.6.8 [obache 2012-01-21]
+	Added textproc/cmigemo version 1.3e.20110227 [obache 2012-01-21]
