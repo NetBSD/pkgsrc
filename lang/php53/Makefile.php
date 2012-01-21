@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.10.2.1 2012/01/12 11:29:04 tron Exp $
+# $NetBSD: Makefile.php,v 1.10.2.2 2012/01/21 09:02:55 sbd Exp $
 # used by lang/php53/Makefile
 # used by www/ap-php/Makefile
 
@@ -60,17 +60,15 @@ PKG_SUGGESTED_OPTIONS+=	inet6 ssl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msuhosin)
-SUHOSIN_PHPVER=		5.3.7
-.  if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS} && ${SUHOSIN_PHPVER} != "5.3.7"
+SUHOSIN_PHPVER=		5.3.9
+.  if ${SUHOSIN_PHPVER} != ${PHP_BASE_VERS}
 PKG_FAIL_REASON+=	"The suhosin patch is currently not available for"
 PKG_FAIL_REASON+=	"this version of PHP.  You may have to wait until"
 PKG_FAIL_REASON+=	"an updated patch is released or temporarily"
 PKG_FAIL_REASON+=	"build this package without the suhosin option."
 .  else
-#PATCH_SITES=		http://download.suhosin.org/
-#PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.gz
-PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10-local.patch.gz
+PATCH_SITES=		http://download.suhosin.org/
+PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.gz
 PATCH_DIST_STRIP=	-p1
 PLIST.suhosin=		yes
 MESSAGE_SRC=		${.CURDIR}/../../lang/php53/MESSAGE
