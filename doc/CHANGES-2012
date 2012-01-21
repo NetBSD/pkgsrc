@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.178 2012/01/21 13:38:57 obache Exp $
+$NetBSD: CHANGES-2012,v 1.179 2012/01/21 15:26:09 chs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -279,3 +279,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/spamdyke to 4.3.1 [schmonz 2012-01-20]
 	Updated math/ruby-spreadsheet to 0.6.8 [obache 2012-01-21]
 	Added textproc/cmigemo version 1.3e.20110227 [obache 2012-01-21]
+	Updated emulators/suse113_libxml2 to 11.3nb5 [chs 2012-01-21]
