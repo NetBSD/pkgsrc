@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/02/28 14:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/21 12:09:03 shattered Exp $
 #
 
 DISTNAME=	libpciaccess-0.11.0
@@ -19,7 +19,7 @@ ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 NetBSD-*-x86_64 OpenBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-*-i386 DragonFly-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*
-ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
+ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64 NetBSD-*-hppa
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
