@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/21 13:38:41 obache Exp $
+
+SHA1 (SKK-JISYO.L.201102.bz2) = 14a6160269548a6ead1adf627fa0b9c8e27751fe
+RMD160 (SKK-JISYO.L.201102.bz2) = d993fd99ed2156fb2163e021a850094b53590518
+Size (SKK-JISYO.L.201102.bz2) = 1694273 bytes
+SHA1 (cmigemo-default-src-20110227.zip) = 25e279c56d3a8f1e82cbfb3526d1b38742d1d66c
+RMD160 (cmigemo-default-src-20110227.zip) = 38d0670b3ebe36af78650a0b13dbdf14b16ded95
+Size (cmigemo-default-src-20110227.zip) = 116574 bytes
+SHA1 (patch-compile_Make__gcc.mak) = c99e3e335142ffa3e24655980b6eca6dc5235842
+SHA1 (patch-compile_config.mk.in) = 7480a20f597c49ba18a2ab01098f7ee2a492d026
+SHA1 (patch-compile_unix.mak) = f0fe8277035ebcf8e5aeef83ab72fd466a1ec8ce
+SHA1 (patch-dict_dict.mak) = 80f59a3110b6b152c0a03d829077c059a23e843b
+SHA1 (patch-src_wordbuf.c) = 27194e8b6e5e297eb16d7d0f0b8d3d61604f94fb

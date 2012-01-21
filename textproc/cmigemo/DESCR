@@ -1,0 +1,3 @@
+Migemo is a library to generate regex pattern to search Japanese (which includes
+Hiragana/Kanji) text without any IME easily.  C/Migemo is an implementation of
+that Migemo library.

@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/21 13:38:41 obache Exp $
+bin/cmigemo
+include/migemo.h
+lib/libmigemo.la
+share/doc/migemo/README_j.txt
+share/migemo/cp932/han2zen.dat
+share/migemo/cp932/hira2kata.dat
+share/migemo/cp932/migemo-dict
+share/migemo/cp932/roma2hira.dat
+share/migemo/cp932/zen2han.dat
+share/migemo/euc-jp/han2zen.dat
+share/migemo/euc-jp/hira2kata.dat
+share/migemo/euc-jp/migemo-dict
+share/migemo/euc-jp/roma2hira.dat
+share/migemo/euc-jp/zen2han.dat
+share/migemo/utf-8/han2zen.dat
+share/migemo/utf-8/hira2kata.dat
+share/migemo/utf-8/migemo-dict
+share/migemo/utf-8/roma2hira.dat
+share/migemo/utf-8/zen2han.dat
