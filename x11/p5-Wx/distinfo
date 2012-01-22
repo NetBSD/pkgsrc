@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2010/08/20 05:41:27 sno Exp $
+$NetBSD: distinfo,v 1.6 2012/01/22 19:03:31 abs Exp $
 
-SHA1 (Wx-0.98.tar.gz) = ef7c1d07268394db565e082e4f0760cec4f7e737
-RMD160 (Wx-0.98.tar.gz) = 4303ef2ad82a6c50eda215428f43e6d21c0e116f
-Size (Wx-0.98.tar.gz) = 389859 bytes
+SHA1 (Wx-0.9903.tar.gz) = 05dfedb55c6b8a65a4baf4a4af71c928085409de
+RMD160 (Wx-0.9903.tar.gz) = 0fb61c0ad4459c2190dd09222ebd6028e86622da
+Size (Wx-0.9903.tar.gz) = 413294 bytes
