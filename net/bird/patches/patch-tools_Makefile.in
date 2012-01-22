@@ -1,0 +1,26 @@
+$NetBSD: patch-tools_Makefile.in,v 1.1.1.1 2012/01/22 02:53:01 agc Exp $
+
+install the example config files into the correct directory
+
+--- tools/Makefile.in.orig	2011-03-31 08:29:42.000000000 +0000
++++ tools/Makefile.in
+@@ -55,16 +55,13 @@ tags:
+ 	cd $(srcdir) ; etags -lc `find $(static-dirs) $(addprefix $(objdir)/,$(dynamic-dirs)) $(client-dirs) -name *.[chY]`
+ 
+ install: all
+-	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(sysconfdir) $(DESTDIR)/$(localstatedir)/run
++	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(EGDIR) $(DESTDIR)/$(localstatedir)/run
+ 	$(INSTALL_PROGRAM) -s $(exedir)/bird $(DESTDIR)/$(sbindir)/bird@SUFFIX6@
+ 	if test -n "@CLIENT@" ; then								\
+ 		$(INSTALL_PROGRAM) -s $(exedir)/birdc $(DESTDIR)/$(sbindir)/birdc@SUFFIX6@ ;				\
+ 	fi
+-	if ! test -f $(DESTDIR)/$(sysconfdir)/bird@SUFFIX6@.conf ; then						\
+-		$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(sysconfdir)/bird@SUFFIX6@.conf ;	\
+-	else											\
+-		echo "Not overwriting old bird@SUFFIX@.conf" ;						\
+-	fi
++
++	$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(EGDIR)/bird@SUFFIX6@.conf
+ 
+ install-docs:
+ 	$(INSTALL) -d $(DESTDIR)/$(docdir)
