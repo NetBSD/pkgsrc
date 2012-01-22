@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/01/22 10:05:18 apb Exp $
 ${PYSITELIB}/M2Crypto/ASN1.py
 ${PYSITELIB}/M2Crypto/ASN1.pyc
 ${PYSITELIB}/M2Crypto/ASN1.pyo
@@ -8,15 +8,24 @@ ${PYSITELIB}/M2Crypto/AuthCookie.pyo
 ${PYSITELIB}/M2Crypto/BIO.py
 ${PYSITELIB}/M2Crypto/BIO.pyc
 ${PYSITELIB}/M2Crypto/BIO.pyo
+${PYSITELIB}/M2Crypto/BN.py
+${PYSITELIB}/M2Crypto/BN.pyc
+${PYSITELIB}/M2Crypto/BN.pyo
 ${PYSITELIB}/M2Crypto/DH.py
 ${PYSITELIB}/M2Crypto/DH.pyc
 ${PYSITELIB}/M2Crypto/DH.pyo
 ${PYSITELIB}/M2Crypto/DSA.py
 ${PYSITELIB}/M2Crypto/DSA.pyc
 ${PYSITELIB}/M2Crypto/DSA.pyo
+${PYSITELIB}/M2Crypto/EC.py
+${PYSITELIB}/M2Crypto/EC.pyc
+${PYSITELIB}/M2Crypto/EC.pyo
 ${PYSITELIB}/M2Crypto/EVP.py
 ${PYSITELIB}/M2Crypto/EVP.pyc
 ${PYSITELIB}/M2Crypto/EVP.pyo
+${PYSITELIB}/M2Crypto/Engine.py
+${PYSITELIB}/M2Crypto/Engine.pyc
+${PYSITELIB}/M2Crypto/Engine.pyo
 ${PYSITELIB}/M2Crypto/Err.py
 ${PYSITELIB}/M2Crypto/Err.pyc
 ${PYSITELIB}/M2Crypto/Err.pyo
@@ -50,6 +59,9 @@ ${PYSITELIB}/M2Crypto/Rand.pyo
 ${PYSITELIB}/M2Crypto/SMIME.py
 ${PYSITELIB}/M2Crypto/SMIME.pyc
 ${PYSITELIB}/M2Crypto/SMIME.pyo
+${PYSITELIB}/M2Crypto/SSL/Checker.py
+${PYSITELIB}/M2Crypto/SSL/Checker.pyc
+${PYSITELIB}/M2Crypto/SSL/Checker.pyo
 ${PYSITELIB}/M2Crypto/SSL/Cipher.py
 ${PYSITELIB}/M2Crypto/SSL/Cipher.pyc
 ${PYSITELIB}/M2Crypto/SSL/Cipher.pyo
@@ -59,15 +71,15 @@ ${PYSITELIB}/M2Crypto/SSL/Connection.pyo
 ${PYSITELIB}/M2Crypto/SSL/Context.py
 ${PYSITELIB}/M2Crypto/SSL/Context.pyc
 ${PYSITELIB}/M2Crypto/SSL/Context.pyo
-${PYSITELIB}/M2Crypto/SSL/Error.py
-${PYSITELIB}/M2Crypto/SSL/Error.pyc
-${PYSITELIB}/M2Crypto/SSL/Error.pyo
 ${PYSITELIB}/M2Crypto/SSL/SSLServer.py
 ${PYSITELIB}/M2Crypto/SSL/SSLServer.pyc
 ${PYSITELIB}/M2Crypto/SSL/SSLServer.pyo
 ${PYSITELIB}/M2Crypto/SSL/Session.py
 ${PYSITELIB}/M2Crypto/SSL/Session.pyc
 ${PYSITELIB}/M2Crypto/SSL/Session.pyo
+${PYSITELIB}/M2Crypto/SSL/TwistedProtocolWrapper.py
+${PYSITELIB}/M2Crypto/SSL/TwistedProtocolWrapper.pyc
+${PYSITELIB}/M2Crypto/SSL/TwistedProtocolWrapper.pyo
 ${PYSITELIB}/M2Crypto/SSL/__init__.py
 ${PYSITELIB}/M2Crypto/SSL/__init__.pyc
 ${PYSITELIB}/M2Crypto/SSL/__init__.pyo
@@ -87,9 +99,6 @@ ${PYSITELIB}/M2Crypto/__init__.py
 ${PYSITELIB}/M2Crypto/__init__.pyc
 ${PYSITELIB}/M2Crypto/__init__.pyo
 ${PYSITELIB}/M2Crypto/__m2crypto.so
-${PYSITELIB}/M2Crypto/_version.py
-${PYSITELIB}/M2Crypto/_version.pyc
-${PYSITELIB}/M2Crypto/_version.pyo
 ${PYSITELIB}/M2Crypto/callback.py
 ${PYSITELIB}/M2Crypto/callback.pyc
 ${PYSITELIB}/M2Crypto/callback.pyo
@@ -105,6 +114,9 @@ ${PYSITELIB}/M2Crypto/m2.pyo
 ${PYSITELIB}/M2Crypto/m2urllib.py
 ${PYSITELIB}/M2Crypto/m2urllib.pyc
 ${PYSITELIB}/M2Crypto/m2urllib.pyo
+${PYSITELIB}/M2Crypto/m2urllib2.py
+${PYSITELIB}/M2Crypto/m2urllib2.pyc
+${PYSITELIB}/M2Crypto/m2urllib2.pyo
 ${PYSITELIB}/M2Crypto/m2xmlrpclib.py
 ${PYSITELIB}/M2Crypto/m2xmlrpclib.pyc
 ${PYSITELIB}/M2Crypto/m2xmlrpclib.pyo
