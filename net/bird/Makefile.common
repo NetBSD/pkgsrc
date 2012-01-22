@@ -1,0 +1,41 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2012/01/22 02:53:01 agc Exp $
+# used by net/bird/Makefile
+# used by net/bird6/Makefile
+
+DISTNAME=	bird-1.3.6
+PKGNAME=	${DISTNAME:S/bird/bird${BIRD6}/}
+CATEGORIES=	net
+MASTER_SITES=	ftp://bird.network.cz/pub/bird/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://bird.network.cz/
+COMMENT=	The BIRD Internet Routing Daemon
+LICENSE=	gnu-gpl-v2
+
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake flex bison
+USE_GNU_READLINE=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ARGS+=	--localstatedir=/var
+BIRD6?=			# empty
+PLIST_SUBST+=		BIRD6=${BIRD6}
+
+FILESDIR=               ${.CURDIR}/../bird/files
+PATCHDIR=               ${.CURDIR}/../bird/patches
+DISTINFO_FILE=		${.CURDIR}/../bird/distinfo
+PLIST_SRC=		${.CURDIR}/../bird/PLIST
+DESCR_SRC=		${.CURDIR}/../bird/DESCR
+
+RCD_SCRIPTS+=		bird${BIRD6}
+
+EGDIR=			${PREFIX}/share/examples/bird${BIRD6}
+ALL_ENV+=		EGDIR=${EGDIR}
+CONF_FILES=		${EGDIR}/bird${BIRD6}.conf ${PKG_SYSCONFDIR}/bird${BIRD6}.conf
+
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"
