@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2011/12/17 12:13:29 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/22 20:00:26 abs Exp $
 
-DISTNAME=	Dancer-1.3090
+DISTNAME=	Dancer-1.3091
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
@@ -16,11 +16,11 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Dancer/.packlist
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	p5-HTTP-Body-[0-9]*:../../www/p5-HTTP-Body
+DEPENDS+=	p5-HTTP-Body>=1.07:../../www/p5-HTTP-Body
 DEPENDS+=	p5-HTTP-Server-Simple-PSGI>=0.11:../../www/p5-HTTP-Server-Simple-PSGI
 DEPENDS+=	p5-MIME-Types-[0-9]*:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Test-Simple>=0.87:../../devel/p5-Test-Simple
-DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-URI>=1.59:../../www/p5-URI
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
