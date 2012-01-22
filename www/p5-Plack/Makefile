@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2011/10/19 08:11:01 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.16 2012/01/22 19:43:50 abs Exp $
 
-DISTNAME=	Plack-0.9984
+DISTNAME=	Plack-0.9985
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
