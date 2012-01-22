@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10811 2012/01/22 11:26:14 obache Exp $
+$NetBSD: TODO,v 1.10812 2012/01/22 12:24:33 gls Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.8.2
 	o clutter-gst-1.4.4
-	o cmus-2.4.3
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compositeproto-0.4.2
