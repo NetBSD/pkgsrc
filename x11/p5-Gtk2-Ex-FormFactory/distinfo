@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2006/08/24 08:37:01 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2012/01/22 18:38:34 abs Exp $
 
-SHA1 (Gtk2-Ex-FormFactory-0.65.tar.gz) = ff98e55cc1a11c12b6e8874654506c03041fd711
-RMD160 (Gtk2-Ex-FormFactory-0.65.tar.gz) = f64eada735392d6e483c1322cb08bbb251bfdbbf
-Size (Gtk2-Ex-FormFactory-0.65.tar.gz) = 102039 bytes
+SHA1 (Gtk2-Ex-FormFactory-0.67.tar.gz) = 1d42ad798a16efb212d984b3d38b630a8bf1cdb3
+RMD160 (Gtk2-Ex-FormFactory-0.67.tar.gz) = 08f0f7cc579a27a9d3d0733c0e792af6d88619db
+Size (Gtk2-Ex-FormFactory-0.67.tar.gz) = 104401 bytes
