@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10810 2012/01/22 10:07:02 apb Exp $
+$NetBSD: TODO,v 1.10811 2012/01/22 11:26:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -513,7 +513,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o diffstat-1.55
 	o diffutils-3.2
 	o digikam-2.5.0
-	o dillo-3.0.2 [pkg/45852]
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.4.1 [pkg/45763]
