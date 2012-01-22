@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2011/09/21 14:08:29 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2012/01/22 19:00:34 abs Exp $
 
 X11R7 uses a different include guard.
 
---- pTk/Xlib.h.orig	2011-09-21 13:58:35.000000000 +0000
+--- pTk/Xlib.h.orig	2011-06-13 12:16:52.000000000 +0000
 +++ pTk/Xlib.h
 @@ -1,5 +1,8 @@
  #ifndef _XLIB
@@ -11,5 +11,5 @@ X11R7 uses a different include guard.
 +#define _XLIB_H_
 +#endif
  #ifndef _XLIB_H_
+ #ifndef _X11_XLIB_H_
  extern XFontStruct *XLoadQueryFont  _ANSI_ARGS_((Display *, const char *));
- extern XModifierKeymap *XGetModifierMapping  _ANSI_ARGS_((Display *));
