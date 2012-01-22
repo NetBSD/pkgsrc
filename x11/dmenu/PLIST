@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:48:51 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/01/22 12:59:01 obache Exp $
 bin/dmenu
-bin/dmenu_path
 bin/dmenu_run
+bin/lsx
 man/man1/dmenu.1
+man/man1/lsx.1
