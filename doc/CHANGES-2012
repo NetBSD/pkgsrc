@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.192 2012/01/22 16:21:47 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.193 2012/01/22 18:11:22 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -294,3 +294,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/cmus to 2.4.3 [gls 2012-01-22]
 	Updated x11/dmenu to 4.4.1 [obache 2012-01-22]
 	Added print/tex-bibtex8 version 3.71 [cheusov 2012-01-22]
+	Updated lang/elk to 3.99.8 [asau 2012-01-22]
