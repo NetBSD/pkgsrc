@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10812 2012/01/22 12:24:33 gls Exp $
+$NetBSD: TODO,v 1.10813 2012/01/22 13:00:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o digikam-2.5.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
-	o dmenu-4.4.1 [pkg/45763]
 	o dmenu-4.5
 	o dnsmasq-2.59
 	o dnstracer-1.9
