@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2011/11/01 06:11:58 sbd Exp $
+# $NetBSD: Makefile,v 1.66 2012/01/22 09:07:50 shattered Exp $
 
 DISTNAME=		apcupsd-3.14.9
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 
-PKG_SYSCONFSUBDIR= 	apcupsd
+PKG_SYSCONFSUBDIR=	apcupsd
 
 .include "options.mk"
 
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 CONFIGURE_ENV+=		SCRIPTSHELL=${TOOLS_SH:Q}
 CONFIGURE_ENV+=		ac_cv_path_MAKE=${MAKE:Q}
 
-EGDIR=          ${PREFIX}/share/examples/apcupsd
+EGDIR=		${PREFIX}/share/examples/apcupsd
 
 CONF_FILES_PERMS+= ${EGDIR}/apcupsd.conf ${PKG_SYSCONFDIR}/apcupsd.conf ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 CONF_FILES_PERMS+= ${EGDIR}/apcupsd.css ${PKG_SYSCONFDIR}/apcupsd.css ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
@@ -65,6 +65,7 @@ CONF_FILES_PERMS+= ${EGDIR}/hosts.conf ${PKG_SYSCONFDIR}/hosts.conf  ${REAL_ROOT
 CONF_FILES_PERMS+= ${EGDIR}/offbattery ${PKG_SYSCONFDIR}/offbattery ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+
 RCD_SCRIPTS=	apcupsd
 PLATFORM_SUBDIR=${OPSYS:tl}
 .if ${OPSYS} == "DragonFly"
@@ -74,10 +75,9 @@ RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/platforms/${PLATFORM_SUBDIR}/apcupsd
 
 EGFILES= netbsd/apccontrol etc/changeme etc/commfailure etc/commok \
     etc/offbattery etc/onbattery etc/multimon.conf etc/hosts.conf
-MANFILES= apcupsd apctest
 
 INSTALLATION_DIRS=	share/examples/apcupsd share/examples/rc.d \
-			share/doc/html/apcupsd
+			share/doc/html/apcupsd share/doc/html/apcupsd/manual
 
 SUBST_CLASSES+=		strip
 SUBST_STAGE.strip=	pre-configure
@@ -90,9 +90,11 @@ SUBST_MESSAGE.strip=	Fixing conflicting STRIP variable name
 # XXX we should probably allow the tty to be set in /etc/mk.conf too
 #
 
-HTMLDOCS= apcupsd.gif bclogo.gif bugs.html bugs.wml index.html index.wml \
-    license.html license.wml lists.html lists.wml mail16d.png menu.inc \
-    publishsite support.html support.wml systems.html systems.wml template.inc
+HTMLDOCS= apcupsd.gif bclogo.gif bugs.html index.html license.html \
+	lists.html mail16d.png support.html systems.html
+HTMLMANUALS=	manual.html apcupsd.png charging.png commlost.png \
+	main_configs.png multimon.png onbatt.png online.png status.png \
+	thanks.png wininstall6.png
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/platforms/etc/apcupsd.conf \
@@ -106,6 +108,10 @@ post-install:
 .for file in ${HTMLDOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/home-page/${file} \
 		${DESTDIR}${PREFIX}/share/doc/html/apcupsd
+.endfor
+.for file in ${HTMLMANUALS}
+	${INSTALL_DATA} ${WRKSRC}/doc/manual/${file} \
+		${DESTDIR}${PREFIX}/share/doc/html/apcupsd/manual
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
