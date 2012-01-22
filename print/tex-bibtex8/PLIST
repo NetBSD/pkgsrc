@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/22 16:21:33 cheusov Exp $
+bin/bibtex8
+share/texmf-dist/bibtex/csf/88591lat.csf
+share/texmf-dist/bibtex/csf/88591sca.csf
+share/texmf-dist/bibtex/csf/ascii.csf
+share/texmf-dist/bibtex/csf/cp1251rus.csf
+share/texmf-dist/bibtex/csf/cp437lat.csf
+share/texmf-dist/bibtex/csf/cp850lat.csf
+share/texmf-dist/bibtex/csf/cp850sca.csf
+share/texmf-dist/bibtex/csf/cp866rus.csf
+share/texmf-dist/bibtex/csf/koi8r.csf

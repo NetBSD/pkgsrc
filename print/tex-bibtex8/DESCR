@@ -1,0 +1,8 @@
+A multilanguage implementation of BibTeX 0.99.
+(v3.71) "big" BibTeX with full support of 8-bit encodings
+
+An enhanced, portable C version of BibTeX. Enhanced by conversion to "big"
+(32-bit) capacity, addition of run-time selectable capacity and 8-bit
+support extensions.  National character set and sorting order are controlled
+by an external configuration file.
+Various examples are included.
