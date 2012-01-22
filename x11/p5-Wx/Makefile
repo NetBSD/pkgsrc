@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/01/22 19:03:31 abs Exp $
+# $NetBSD: Makefile,v 1.18 2012/01/22 19:05:34 abs Exp $
 
 DISTNAME=	Wx-0.9903
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=		no
 
 BUILD_DEPENDS+=	p5-Alien-wxWidgets>=0.25:../../x11/p5-Alien-wxWidgets
 BUILD_DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-ParseXS>=2.22.03}:../../devel/p5-ExtUtils-ParseXS
-BUILD_DEPENDS+=	p5-ExtUtils-XSpp>=0.1602:../../devel/p5-ExtUtils-XSpp
+BUILD_DEPENDS+=	p5-ExtUtils-XSpp>=0.16.02:../../devel/p5-ExtUtils-XSpp
 
 #USE_TOOLS+=		gmake pkg-config wx-config
 USE_TOOLS+=		perl
