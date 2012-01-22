@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.186 2012/01/22 02:56:04 agc Exp $
+$NetBSD: CHANGES-2012,v 1.187 2012/01/22 10:07:02 apb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -288,3 +288,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added sysutils/salt version 0.9.5 [apb 2012-01-21]
 	Added net/bird version 1.3.6 [agc 2012-01-21]
 	Added net/bird6 version 1.3.6 [agc 2012-01-21]
+	Updated security/py-m2crypto to 0.21.1 [apb 2012-01-22]
