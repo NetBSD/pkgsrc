@@ -1,27 +1,25 @@
-$NetBSD: patch-ac,v 1.2 2008/10/22 10:35:30 markd Exp $
+$NetBSD: patch-ac,v 1.3 2012/01/22 19:00:34 abs Exp $
 
---- JPEG/Makefile.PL.orig	2007-05-06 06:38:15.000000000 +1200
+--- JPEG/Makefile.PL.orig	2010-05-31 19:58:38.000000000 +0000
 +++ JPEG/Makefile.PL
-@@ -5,29 +5,11 @@ my $l = $Config::Config{'lib_ext'};
+@@ -4,24 +4,24 @@ use Tk::Config ();
+ use File::Copy;
+ my $l = $Config::Config{'lib_ext'};
  
- # use ExtUtils::MakeMaker '6.05';
- 
--my @local_jpeg = (
--    'INC'          => '-Ijpeg',
--    'MYEXTLIB'     => "jpeg/libjpeg$l",
--);
--
 -use Tk::MMtry;
--
--if ($Tk::MMtry::VERSION ge '4.007' && try_run("jpeg/has_jpeg.c",['-I/usr/local/include'],['-ljpeg']))
-- {
++# use Tk::MMtry;
+ 
+-if ($Tk::MMtry::VERSION ge '4.007' && try_run("config/has_jpeg.c",['-I/usr/local/include'],['-ljpeg']))
++# if ($Tk::MMtry::VERSION ge '4.007' && try_run("config/has_jpeg.c",['-I/usr/local/include'],['-ljpeg']))
+  {
    push(@args, LIBS => ['-ljpeg'],
 -              INC  => '-I/usr/local/include',
++              # INC  => '-I/usr/local/include',
                DEFINE => '-DHAVE_JPEGLIB_H',
        );
    warn "Using system's -ljpeg\n";
    unlink("jpeg/Makefile.PL");
-- }
+  }
 -else
 - {
 -  push(@args, MYEXTLIB  => "jpeg/libjpeg$l",
@@ -29,6 +27,13 @@ $NetBSD: patch-ac,v 1.2 2008/10/22 10:35:30 markd Exp $
 -  copy("Makefile.jpeg.maybe","jpeg/Makefile.PL");
 -  warn "Building jpeg/libjpeg$l\n";
 - }
++# else
++#  {
++#   push(@args, MYEXTLIB  => "jpeg/libjpeg$l",
++#               'INC'     => '-Ijpeg');
++#   copy("Makefile.jpeg.maybe","jpeg/Makefile.PL");
++#   warn "Building jpeg/libjpeg$l\n";
++#  }
  
  Tk::MMutil::TkExtMakefile(@args,
      'NAME'         => 'Tk::JPEG',
