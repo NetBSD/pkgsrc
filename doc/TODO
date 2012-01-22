@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10814 2012/01/22 17:36:48 wiz Exp $
+$NetBSD: TODO,v 1.10815 2012/01/22 19:15:42 abs Exp $
 
 Suggested new packages
 ======================
@@ -1073,8 +1073,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Net-SNMP-5.7.1
 	o p5-PerlMagick-6.7.4.2
 	o p5-cairo-1.082
-	o p5-glib2-1.242
-	o p5-gtk2-1.241
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
