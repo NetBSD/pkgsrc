@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2009/08/17 14:40:43 gson Exp $
+$NetBSD: patch-ai,v 1.2 2012/01/22 19:00:34 abs Exp $
 
---- pTk/mTk/generic/tkBind.c.orig	2009-08-17 12:41:17.000000000 +0300
+--- pTk/mTk/generic/tkBind.c.orig	2010-05-29 09:56:11.000000000 +0000
 +++ pTk/mTk/generic/tkBind.c
 @@ -585,6 +585,9 @@ char *eventTypeName[TK_LASTEVENT] = {
     "ColormapNotify",
