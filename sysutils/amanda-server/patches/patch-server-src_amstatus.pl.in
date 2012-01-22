@@ -1,0 +1,15 @@
+$NetBSD: patch-server-src_amstatus.pl.in,v 1.1 2012/01/22 21:08:00 hauke Exp $
+
+Remove an over-zealous warning, which breaks the script for
+Perl 5.14+. According to 
+<https://bugzilla.redhat.com/show_bug.cgi?id=512534>, 
+upstream did away with -T here in v2.6
+
+--- server-src/amstatus.pl.in.orig	2007-06-04 12:37:38.000000000 +0000
++++ server-src/amstatus.pl.in
+@@ -1,4 +1,4 @@
+-#!@PERL@ -Tw
++#!@PERL@ -w
+ #
+ 
+ # Run perl.
