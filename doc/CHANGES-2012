@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.194 2012/01/22 19:15:42 abs Exp $
+$NetBSD: CHANGES-2012,v 1.195 2012/01/22 20:16:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -305,3 +305,12 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/p5-Wx to 0.9903 [abs 2012-01-22]
 	Updated x11/p5-Wx-Perl-ProcessStream to 0.30 [abs 2012-01-22]
 	Updated x11/p5-gtk2 to 1.242 [abs 2012-01-22]
+	Updated www/p5-URI-Find to 20111103 [abs 2012-01-22]
+	Updated www/p5-Test-WWW-Mechanize to 1.38 [abs 2012-01-22]
+	Updated www/p5-Template-Toolkit-Simple to 0.16 [abs 2012-01-22]
+	Updated www/p5-Template-Toolkit to 2.23 [abs 2012-01-22]
+	Updated www/p5-Starlet to 0.14 [abs 2012-01-22]
+	Updated www/p5-Plack to 0.9985 [abs 2012-01-22]
+	Updated devel/p5-Parallel-Prefork to 0.13 [abs 2012-01-22]
+	Updated www/p5-Dancer to 1.3091 [abs 2012-01-22]
+	Updated www/p5-Task-Plack to 0.25 [abs 2012-01-22]
