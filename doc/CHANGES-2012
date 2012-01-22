@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.193 2012/01/22 18:11:22 asau Exp $
+$NetBSD: CHANGES-2012,v 1.194 2012/01/22 19:15:42 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -295,3 +295,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/dmenu to 4.4.1 [obache 2012-01-22]
 	Added print/tex-bibtex8 version 3.71 [cheusov 2012-01-22]
 	Updated lang/elk to 3.99.8 [asau 2012-01-22]
+	Updated devel/p5-glib2 to 1.242 [abs 2012-01-22]
+	Updated www/p5-WWW-Mechanize to 1.71 [abs 2012-01-22]
+	Updated www/p5-WWW-Pastebin-PastebinCom-Create to 0.004 [abs 2012-01-22]
+	Updated www/p5-Web-Scraper to 0.36 [abs 2012-01-22]
+	Updated x11/p5-Alien-wxWidgets to 0.54nb1 [abs 2012-01-22]
+	Updated x11/p5-Gtk2-Ex-FormFactory to 0.67 [abs 2012-01-22]
+	Updated x11/p5-Tk to 804.030 [abs 2012-01-22]
+	Updated x11/p5-Wx to 0.9903 [abs 2012-01-22]
+	Updated x11/p5-Wx-Perl-ProcessStream to 0.30 [abs 2012-01-22]
+	Updated x11/p5-gtk2 to 1.242 [abs 2012-01-22]
