@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2009/08/26 17:36:53 sno Exp $
+$NetBSD: distinfo,v 1.12 2012/01/22 19:38:54 abs Exp $
 
-SHA1 (Template-Toolkit-2.22.tar.gz) = 5e553cdb97a594e0d81c5bd7c9b5664f963ffa4f
-RMD160 (Template-Toolkit-2.22.tar.gz) = bcb15f3cf7de5f9ec6de31f9b427c22f30c1592e
-Size (Template-Toolkit-2.22.tar.gz) = 492219 bytes
-SHA1 (patch-aa) = 9ec406bb228cd5ac62460453ec5af678562e4f1f
+SHA1 (Template-Toolkit-2.23.tar.gz) = 84bd304e83b3da8fbbdb8fc766e5570201c1b384
+RMD160 (Template-Toolkit-2.23.tar.gz) = 94c013db6f48e8c17e389364df62f09b354f7ffd
+Size (Template-Toolkit-2.23.tar.gz) = 496692 bytes
