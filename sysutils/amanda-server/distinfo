@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2008/02/15 16:23:09 gdt Exp $
+$NetBSD: distinfo,v 1.13 2012/01/22 21:10:18 hauke Exp $
 
 SHA1 (amanda-2.5.2p1.tar.gz) = 0969376590a93b2c060dbe9d2573bf335614a4c2
 RMD160 (amanda-2.5.2p1.tar.gz) = 31a81a7c5c0d953a6dffa575a7c3edc14d41f236
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = a5d85a0b947926f84dab3d6826cdcc69d4709486
 SHA1 (patch-aj) = 63e3cb69b74fbe624c7777ae5515832aea9335ca
 SHA1 (patch-ak) = 403ed50f3396198abab03cc06378030b605fff02
 SHA1 (patch-aq) = 5d0b287ef3271c0ffaa13f4841312859ffc34bf4
+SHA1 (patch-server-src_amstatus.pl.in) = 75cc66b2b27cb9a9170257d42079b9e140e0f3f0
