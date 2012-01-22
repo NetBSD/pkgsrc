@@ -1,14 +1,16 @@
-$NetBSD: patch-ab,v 1.5 2006/08/17 23:51:33 adam Exp $
+$NetBSD: patch-ab,v 1.6 2012/01/22 18:11:05 asau Exp $
 
---- configure.orig	2006-08-18 01:34:22.000000000 +0200
-+++ configure
-@@ -27759,6 +27759,9 @@ else
+--- configure.orig	2011-06-18 15:08:11.000000000 +0400
++++ configure	2012-01-22 19:22:24.000000000 +0400
+@@ -17675,6 +17675,11 @@
+ else
    ac_cv_my_have_xaw="no (cross-compiling)"
  fi
- 
++
 +if test "${WITH_XAW}" = "no"; then
 +  ac_cv_my_have_xaw=no
 +fi
- 
- if test "${ac_cv_my_have_xaw}" = "yes"; then
++ 
+  if test "${ac_cv_my_have_xaw}" = "yes"; then
    HAVE_XAW_TRUE=
+   HAVE_XAW_FALSE='#'

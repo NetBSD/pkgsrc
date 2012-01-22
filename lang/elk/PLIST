@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/01/22 18:11:05 asau Exp $
 bin/elk
 bin/scheme-elk
 include/elk/compat.h
@@ -75,8 +75,6 @@ share/doc/elk/examples/scheme/rungekutta.scm
 share/doc/elk/examples/scheme/sqrt.scm
 share/doc/elk/examples/scheme/unify.scm
 share/doc/elk/examples/scheme/work.scm
-share/doc/elk/examples/tests/README
-share/doc/elk/examples/tests/r4rstest.scm
 share/doc/elk/examples/unix/calc.scm
 share/doc/elk/examples/unix/copy.scm
 share/doc/elk/examples/unix/lock.scm
