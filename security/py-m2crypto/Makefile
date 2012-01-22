@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2010/01/17 12:02:44 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/01/22 10:05:18 apb Exp $
 #
 
-DISTNAME=		m2crypto-0.13
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}.1
-PKGREVISION=		3
+DISTNAME=		M2Crypto-0.21.1
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=		security python
-MASTER_SITES=		http://sandbox.rulemaker.net/ngps/Dist/
-EXTRACT_SUFX=		.zip
-
-PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		0.13p1.patch
+MASTER_SITES=		http://pypi.python.org/packages/source/M/M2Crypto/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sandbox.rulemaker.net/ngps/m2/
+HOMEPAGE=		http://chandlerproject.org/bin/view/Projects/MeTooCrypto
 COMMENT=		Crypto and SSL toolkit for Python
+LICENSE=		m2crypto-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
