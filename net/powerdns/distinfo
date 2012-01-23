@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2012/01/13 12:12:48 ghen Exp $
+$NetBSD: distinfo,v 1.10 2012/01/23 15:11:54 ghen Exp $
 
 SHA1 (pdns-2.9.22.5.tar.gz) = 7a514fe624c110afb8a262f4d76376d0f8e17bea
 RMD160 (pdns-2.9.22.5.tar.gz) = 8be76a7a63c3366d55724815245e2f955ec0adda
 Size (pdns-2.9.22.5.tar.gz) = 1077617 bytes
 SHA1 (patch-aa) = e31080087d9369349e912c94e7dbfce72c9fc629
 SHA1 (patch-ab) = f54ace6ff60162e50119eb11bcb2f5db5e1ea480
+SHA1 (patch-configure) = 2a0beb262c421d7887dcabc56102c04b340a920b
 SHA1 (patch-pdns_dynmessenger.cc) = df89ba91abc96319b323fc19b413b127112f4afb
