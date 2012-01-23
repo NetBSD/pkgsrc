@@ -1,0 +1,48 @@
+$NetBSD: patch-man_man5_configure.acr.5,v 1.1 2012/01/23 20:49:21 joerg Exp $
+
+--- man/man5/configure.acr.5.orig	2005-09-23 05:21:20.000000000 +0000
++++ man/man5/configure.acr.5
+@@ -31,14 +31,13 @@ conditionals and dies
+ .El
+ .\"
+ .Sh SYNTAX
+-.Bl -tag -width indent
+ The configure.acr file is a word-based configuration file for ACR.
+ .Pp
+ This means that each word must be separated with space, tab or new-lines.
+ The ';' separator must be also a word.
+ .Pp
+-.Bl -bold -tag -width indent
+ Each word is called "keyword", there these types:
++.Bl -tag -width indent
+ .It Miscelaneous-Keys:
+ { } ;
+ .It Context:
+@@ -56,7 +55,6 @@ IF IFEQ IFEQVAL IFAND -NOT
+ From the version 0.4, acr supports the normal variable assignation syntax format. Now you can use things like that:
+ VAR = VALUE ;
+ Old format ( = VAR VALUE ; ) may be deprecated in the future.
+-
+ .Bl -bullet -compact
+ .It
+ "=" resets the value of the target variable.
+@@ -201,8 +199,8 @@ Checks if CLASSPATH contains the desired
+ .Sh CONTEXTS
+ Contexts tells definitions where to be stored, in a global context (before all checks and conditionals) or in 'local' context (inside conditional checks). This last context is useful for nested conditionals.
+ .Pp
+-.Bl -tag -width indent
+ Contexts are:
++.Bl -tag -width indent
+ .It GLOBAL:
+ The default one. Tells definitions to be stored before any check or conditional.
+ .It LOCAL:
+@@ -210,8 +208,8 @@ Definitions are ordered to be stored ins
+ .El
+ .\"
+ .Sh DEFINITIONS
+-.Bl -tag -width indent
+ Sets are processed at the beggining of the configure script.
++.Bl -tag -width indent
+ .It = varname value\ ;
+ Sets the value of varname to value.
+ .It += varname value\ ;
