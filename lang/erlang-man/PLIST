@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/05/26 20:19:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/01/23 09:32:39 fhajny Exp $
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameter_compile.1
 lib/erlang/man/man1/epmd.1
@@ -482,6 +482,7 @@ lib/erlang/man/man3/wxListBox.3
 lib/erlang/man/man3/wxListCtrl.3
 lib/erlang/man/man3/wxListEvent.3
 lib/erlang/man/man3/wxListItem.3
+lib/erlang/man/man3/wxListItemAttr.3
 lib/erlang/man/man3/wxListView.3
 lib/erlang/man/man3/wxListbook.3
 lib/erlang/man/man3/wxLogNull.3
