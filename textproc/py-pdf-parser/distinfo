@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/23 23:34:37 wiz Exp $
+
+SHA1 (pdf-parser_V0_3_7.zip) = c5b92dbb06c59a81d8762784612629a772ad2681
+RMD160 (pdf-parser_V0_3_7.zip) = b3cab33df88b3dd26475690beaff229e2c4ee703
+Size (pdf-parser_V0_3_7.zip) = 7114 bytes
+SHA1 (patch-pdf-parser.py) = 88372ba772feb24df570b63bdc63ff5ac48d05d4

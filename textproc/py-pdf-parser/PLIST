@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/23 23:34:37 wiz Exp $
+bin/pdf-parser.py
