@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/23 15:53:46 wiz Exp $
 #
 
 DISTNAME=	dasm212
@@ -9,7 +9,7 @@ MASTER_SITES=	http://members.cox.net/rcolbert/zip/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	xmor61@users.sourceforge.net
-HOMEPAGE=	http://members.cox.net/rcolbert/dasm.htm
+HOMEPAGE=	http://dasm-dillon.sourceforge.net/
 COMMENT=	Multi-CPU cross-assembler for 6502, 6803 and 68HC11
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
