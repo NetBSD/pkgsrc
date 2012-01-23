@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2011/07/05 02:14:12 dholland Exp $
+# $NetBSD: Makefile,v 1.51 2012/01/23 20:19:00 sbd Exp $
 #
 
 DISTNAME=	libggi-2.2.2.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ggi-project.org/ftp/ggi/v2.2/ \
 		${MASTER_SITE_SOURCEFORGE:=ggi/}
@@ -28,6 +29,10 @@ EGDIR=			${PREFIX}/share/examples/ggi
 CONF_FILES=		${EGDIR}/libggi.conf ${PKG_SYSCONFDIR}/libggi.conf
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+CONF_FILES+=	${EGDIR}/fbdev.conf ${PKG_SYSCONFDIR}/ggi/ggi/targets/fbdev.conf
+.endif
 
 PLIST_VARS+=		libvgl terminfo xf86dga
 
