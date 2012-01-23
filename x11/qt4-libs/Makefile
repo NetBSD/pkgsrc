@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2012/01/12 22:59:58 adam Exp $
+# $NetBSD: Makefile,v 1.68 2012/01/23 04:14:26 sbd Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
@@ -46,6 +46,12 @@ INSTALLATION_DIRS+=	${QTPREFIX}/plugins/inputmethods
 .endif
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
+
+SUBST_CLASSES+=			no-libtool
+SUBST_MESSAGE.no-libtool=	Removing unwanted libtool link command.
+SUBST_STAGE.no-libtool=		post-configure
+SUBST_FILES.no-libtool=		translations/Makefile
+SUBST_SED.no-libtool=		-e '/@: IGNORE THIS LINE/s,=.*$$,= @:,'
 
 do-install:
 .for prog in moc rcc uic
