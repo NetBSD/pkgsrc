@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2011/07/03 12:26:34 jym Exp $
+# $NetBSD: Makefile,v 1.28 2012/01/23 00:31:17 joerg Exp $
 #
 
 DISTNAME=	screws-0.56
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.nopcode.org/prj/screws/
 
@@ -32,6 +32,11 @@ REPLACE_PERL+=	src/Exec/obsd-qos.x
 REPLACE_PERL+=	src/Exec/perl.pl
 REPLACE_PERL+=	src/Exec/perl/*.pl
 REPLACE_PERL+=	src/Exec/perl/htdocs/example.x
+
+SUBST_CLASSES+=	mdoc
+SUBST_FILES.mdoc=	doc/manpage/*.[158]
+SUBST_SED.mdoc+=	-e '/^$$/d'
+SUBST_STAGE.mdoc=	pre-patch
 
 RCD_SCRIPTS=		screws
 RCD_SCRIPT_SRC.screws=	${WRKSRC}/src/Utils/files/screws.sh
