@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2011/08/21 16:44:30 abs Exp $
+# $NetBSD: Makefile,v 1.86 2012/01/23 08:08:25 joerg Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 PKGREVISION=	3
@@ -72,6 +72,12 @@ pre-install:
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-no-integrated-as -fvisibility=hidden
+.endif
 
 # no configure phase
 .include "../../mk/configure/pkg-config-override.mk"
