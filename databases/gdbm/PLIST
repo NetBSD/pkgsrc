@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2011/08/17 07:17:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/01/23 07:04:15 sbd Exp $
 bin/testgdbm
 include/gdbm.h
 info/gdbm.info
 lib/libgdbm.la
 man/man3/gdbm.3
+share/locale/de/LC_MESSAGES/gdbm.mo
+share/locale/fi/LC_MESSAGES/gdbm.mo
+share/locale/ja/LC_MESSAGES/gdbm.mo
+share/locale/pl/LC_MESSAGES/gdbm.mo
+share/locale/uk/LC_MESSAGES/gdbm.mo
