@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/08/27 11:43:05 adam Exp $
+$NetBSD: patch-ad,v 1.2 2012/01/23 08:58:00 adam Exp $
 
---- src/plugins/grass/qtermwidget/kpty.cpp.orig	2009-12-31 06:59:10.000000000 +0000
+--- src/plugins/grass/qtermwidget/kpty.cpp.orig	2011-06-05 11:59:48.000000000 +0000
 +++ src/plugins/grass/qtermwidget/kpty.cpp
-@@ -61,6 +61,8 @@
+@@ -66,6 +66,8 @@
  #include <unistd.h>
  #include <grp.h>
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/08/27 11:43:05 adam Exp $
  #if defined(HAVE_PTY_H)
  # include <pty.h>
  #endif
-@@ -565,7 +567,7 @@ void KPty::logout()
+@@ -570,7 +572,7 @@ void KPty::logout()
      ut->ut_type = DEAD_PROCESS;
  #  endif
  #  ifdef HAVE_UTMPX

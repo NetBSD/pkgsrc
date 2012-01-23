@@ -1,10 +1,16 @@
-$NetBSD: distinfo,v 1.2 2010/12/21 17:48:13 adam Exp $
+$NetBSD: distinfo,v 1.3 2012/01/23 08:58:00 adam Exp $
 
-SHA1 (qgis-1.6.0.tar.bz2) = 815e7d7f465f878c37866b0bc38345bbd76541cc
-RMD160 (qgis-1.6.0.tar.bz2) = e98aef1bf5290dc7f4433fc1ec648ad13273604c
-Size (qgis-1.6.0.tar.bz2) = 17479207 bytes
-SHA1 (patch-ab) = 59a6f7305ae86664cad08d3d65f6450e64822535
-SHA1 (patch-ac) = 4f5fff981f42e6fbd4ed87ef67564c8999ee0914
-SHA1 (patch-ad) = 47c48d236079369a61e1c6c2522cddfb04e344f0
-SHA1 (patch-al) = fcc667900e73e4a843d009c216aad6fa6354f1f6
-SHA1 (patch-am) = 4fe6cde9bd459d0e3197bc5e3d6fd301039178b9
+SHA1 (qgis-1.7.3.tar.bz2) = 97ad40ada045fcecbd858114527820f1e3f0eae1
+RMD160 (qgis-1.7.3.tar.bz2) = 830202899996013cd296dca8a5fa2440e85e4d27
+Size (qgis-1.7.3.tar.bz2) = 25328792 bytes
+SHA1 (patch-CMakeLists.txt) = 2f7c42d6d68ead325537f72fae6d785afa30aa65
+SHA1 (patch-ad) = c5fbccce3eb93c3181d19eb9b1b29463a3fba1c1
+SHA1 (patch-al) = d3910f1dc5ddcdafef21d214b84289c51bc0f84a
+SHA1 (patch-am) = 69864d921b4438b9a90f0bfb8f727d96a41d00d9
+SHA1 (patch-cmake_FindGEOS.cmake) = f3d2cfc454a3da938cdfa9b1c25aead96674d796
+SHA1 (patch-python_core_sipcorepart1.cpp) = 26ac87ca62dc744c3cc560387fe48361f9f16016
+SHA1 (patch-python_core_sipcorepart3.cpp) = ff1fd8551f3e43197386ac3e0db16c93d2ca6a99
+SHA1 (patch-src_app_CMakeLists.txt) = 9862723ae1cc432aabb53eca5b3eb29bc6906b1a
+SHA1 (patch-src_core_spatialindex_include_Tools.h) = ccee3200f1a4d6807d0da2fb3f2307bfc345f83d
+SHA1 (patch-src_core_spatialite_spatialite.c) = a6b8ad377311a4a3e122a1336ccc32a2b1638cd7
+SHA1 (patch-src_helpviewer_CMakeLists.txt) = 209347863b9b3719d0eb04b142c831a2bfdb77ea
