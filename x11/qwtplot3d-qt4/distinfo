@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/11 19:22:10 drochner Exp $
+$NetBSD: distinfo,v 1.2 2012/01/23 20:55:47 joerg Exp $
 
 SHA1 (qwtplot3d-0.2.7.tgz) = 4463fafb8420a91825e165da7a296aaabd70abea
 RMD160 (qwtplot3d-0.2.7.tgz) = 0f28462cb95ef6091d73642c8b26ece60d50bfb8
 Size (qwtplot3d-0.2.7.tgz) = 183836 bytes
 SHA1 (patch-aa) = e46978e1d3b0b68ed5481861fc99703b8fa44ff3
+SHA1 (patch-include_qwt3d__openglhelper.h) = ffb9b5c4d883bd3823b1dd1efcdbd09620683d1f
