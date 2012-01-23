@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/11/06 19:39:49 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2012/01/23 09:39:52 wiz Exp $
 
 --- fileio.c.orig	2004-12-13 02:47:59.000000000 +0000
 +++ fileio.c
@@ -17,18 +17,3 @@ $NetBSD: patch-aa,v 1.5 2005/11/06 19:39:49 joerg Exp $
  
  #define MAX_FILES 200
  
-@@ -375,12 +383,14 @@ void nb_qfileinfo(struct child_struct *c
- 
- void nb_qfsinfo(struct child_struct *child, int level, const char *status)
- {
-+#if 0 /* does this code do anything useful? */
- 	struct statvfs st;
- 
- 	(void)level;
- 	(void)status;
- 
- 	statvfs(child->directory, &st);
-+#endif
- }
- 
- void nb_findfirst(struct child_struct *child, char *fname, int level, int maxcnt, 
