@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2012/01/23 20:19:00 sbd Exp $
+lib/ggi/default/fbdev/fbdev_m2164w.la
+lib/ggi/default/fbdev/fbdev_mach64.la
+lib/ggi/default/fbdev/fbdev_mga_g400.la
+lib/ggi/display/fbdev.la
+lib/ggi/display/linvtsw.la
+lib/ggi/display/vcsa.la
+share/examples/ggi/fbdev.conf
