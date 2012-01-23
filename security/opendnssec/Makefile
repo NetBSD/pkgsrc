@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/12/12 09:07:22 pettai Exp $
+# $NetBSD: Makefile,v 1.18 2012/01/23 11:19:26 pettai Exp $
 #
 
-DISTNAME=	opendnssec-1.3.4
+DISTNAME=	opendnssec-1.3.5
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	ldns>=1.6.9:../../net/ldns
+DEPENDS+=	ldns>=1.6.12:../../net/ldns
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.53:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
