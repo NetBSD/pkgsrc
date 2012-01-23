@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.209 2012/01/23 21:44:37 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.210 2012/01/23 23:33:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -331,3 +331,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/powerdns-sqlite to 2.9.22.5nb1 [ghen 2012-01-23]
 	Updated graphics/libggi to 2.2.2nb1 [sbd 2012-01-23]
 	Added devel/py-pip version 1.0.2 [pettai 2012-01-23]
+	Added graphics/AfterShotPro version 1.0 [wiz 2012-01-23]
