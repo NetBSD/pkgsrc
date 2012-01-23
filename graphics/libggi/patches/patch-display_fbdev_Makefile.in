@@ -1,0 +1,13 @@
+$NetBSD: patch-display_fbdev_Makefile.in,v 1.1 2012/01/23 20:19:01 sbd Exp $
+
+--- display/fbdev/Makefile.in.orig	2007-01-26 20:28:11.000000000 +0000
++++ display/fbdev/Makefile.in
+@@ -323,7 +323,7 @@ INCLUDES = -I$(top_srcdir)/include $(ext
+ libfbdev_la_LIBADD = 
+ noinst_LTLIBRARIES = libfbdev.la
+ libfbdev_la_SOURCES = visual.c mode.c pan.c color.c
+-fbdevconfdir = $(sysconfdir)/$(ggi_subdir)/targets
++fbdevconfdir = $(datadir)/examples/ggi
+ fbdevconf_DATA = fbdev.conf
+ EXTRA_DIST = EXPSYMS
+ MAINTAINERCLEANFILES = Makefile.in
