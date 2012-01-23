@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/12/28 12:10:44 ghen Exp $
+$NetBSD: distinfo,v 1.7 2012/01/23 00:30:30 joerg Exp $
 
 SHA1 (tspc-2.1.1-src.tgz) = 55b1385fa860c6f2bbe63a6d2559eb6e8edea64b
 RMD160 (tspc-2.1.1-src.tgz) = 53031fb1d157d5eae9b828c8fcc632cd01e247c9
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = e51b35c077acc90035ef4e2624002b37fe615f96
 SHA1 (patch-ab) = 6dc480d452d433ff4444349bcb1de800cb48e8b5
 SHA1 (patch-ac) = a89fda0331837399062c3486306adbd0b0e78474
 SHA1 (patch-ad) = e138a9a274607cbf8162868596b7399df9041c51
+SHA1 (patch-man-man8-tspc.8) = 9338dca0267de2b9b7ddd90f9631e0c08043c245
