@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2008/05/01 13:17:55 obache Exp $
+$NetBSD: distinfo,v 1.12 2012/01/23 09:39:52 wiz Exp $
 
 SHA1 (dbench-3.04.tar.gz) = 09d7b647663ddc3e5617956dedd1aa6a4da2d840
 RMD160 (dbench-3.04.tar.gz) = 707f396aec21e6c6c79a6b93217e9503356cefea
 Size (dbench-3.04.tar.gz) = 2078197 bytes
-SHA1 (patch-aa) = 462f50ac9d529d788f165556846df88b8d8765c6
+SHA1 (patch-aa) = f808137abe6b88add704ffbbaaa7684b84a5900c
 SHA1 (patch-ab) = 8d17f83c86ef9b733f6970454f3321a8afdac600
 SHA1 (patch-ac) = b60ff204f1f2a1f30976a8c2a51f19e0633e4bf5

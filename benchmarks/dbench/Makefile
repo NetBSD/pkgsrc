@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/07/08 14:12:30 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/23 09:39:52 wiz Exp $
 
 DISTNAME=	dbench-3.04
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://samba.org/ftp/tridge/dbench/
 
