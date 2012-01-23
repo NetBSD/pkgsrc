@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10815 2012/01/22 19:15:42 abs Exp $
+$NetBSD: TODO,v 1.10816 2012/01/23 11:14:18 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1243,7 +1243,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snes9x-1.53
 	o snort-2.9.2
 	o socat-1.7.2.0
-	o softhsm-1.3.1
 	o solfege-3.20.4
 	o sope-4.6
 	o sound-juicer-2.32.0
