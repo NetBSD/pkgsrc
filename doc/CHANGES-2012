@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.199 2012/01/23 08:36:48 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.200 2012/01/23 08:44:30 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -318,3 +318,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/py-jpCodecs to 1.4.11nb2 [obache 2012-01-23]
 	Updated net/nicotine to 1.0.8nb15 [obache 2012-01-23]
 	Updated databases/gdbm to 1.10nb1 [sbd 2012-01-23]
+	Updated databases/mysql51-server to 5.1.61 [sbd 2012-01-23]
