@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2010/08/27 11:43:05 adam Exp $
+$NetBSD: patch-al,v 1.2 2012/01/23 08:58:00 adam Exp $
 
---- src/plugins/grass/CMakeLists.txt.orig	2009-12-03 09:13:55.000000000 +0000
+--- src/plugins/grass/CMakeLists.txt.orig	2011-06-05 11:59:48.000000000 +0000
 +++ src/plugins/grass/CMakeLists.txt
-@@ -147,6 +147,10 @@ INCLUDE_DIRECTORIES(
+@@ -137,6 +137,10 @@ INCLUDE_DIRECTORIES(
       qtermwidget
  )
  
