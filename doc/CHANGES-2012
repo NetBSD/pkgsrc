@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.210 2012/01/23 23:33:35 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.211 2012/01/23 23:35:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/libggi to 2.2.2nb1 [sbd 2012-01-23]
 	Added devel/py-pip version 1.0.2 [pettai 2012-01-23]
 	Added graphics/AfterShotPro version 1.0 [wiz 2012-01-23]
+	Added textproc/py-pdf-parser version 0.3.7 [wiz 2012-01-23]
