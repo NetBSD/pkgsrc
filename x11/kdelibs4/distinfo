@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2012/01/18 22:03:23 abs Exp $
+$NetBSD: distinfo,v 1.23 2012/01/23 08:14:02 joerg Exp $
 
 SHA1 (kdelibs-4.5.5.tar.bz2) = 127a2b50fe31ff345e05660dd50f7c55ae78d854
 RMD160 (kdelibs-4.5.5.tar.bz2) = 7c33afa12379119fbf7d70e8895c3f2ada9a2eba
@@ -22,3 +22,5 @@ SHA1 (patch-kio_kio_scheduler.h) = b09d3fba61f68685037a6cfa62b58ab768de71c1
 SHA1 (patch-kio_kssl_ksslcertificatebox.cpp) = 1f187968a49e251fbdbbf2569e4703ac05b474be
 SHA1 (patch-kioslave_http_http.cpp) = abd6446120fab21cd30da3e9e1fdc00218802d89
 SHA1 (patch-kjs_JSImmediate.h) = 29949739140d766362d308ece28c96aef593ed73
+SHA1 (patch-kjs_lookup.h) = 7a66c3e79d8177cf46579e153fbafb0b1cae9551
+SHA1 (patch-kjs_wtf_RefPtr.h) = ecf999e97edebdb53edeeffeee6200305ddacc3e
