@@ -1,0 +1,20 @@
+$NetBSD: patch-man-bmon.1,v 1.1 2012/01/23 20:52:18 joerg Exp $
+
+--- man/bmon.1.orig	2012-01-23 19:37:53.000000000 +0000
++++ man/bmon.1
+@@ -122,7 +122,6 @@ of secondary input modules is not limite
+ Every input module has a description, help text and list of
+ options available which can be seen by adding the option
+ "help" to the module options:
+-.TP
+ .RS
+ .NF
+ bmon -i netlink:help
+@@ -206,7 +205,6 @@ of secondary output modules is not limit
+ Every output module has a description, help text and list of
+ options available which can be seen by adding the option
+ "help" to the module options:
+-.TP
+ .RS
+ .NF
+ bmon -o ascii:help
