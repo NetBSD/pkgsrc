@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.203 2012/01/23 09:40:02 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.204 2012/01/23 10:38:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql51-server to 5.1.61nb1 [sbd 2012-01-23]
 	Updated geography/qgis to 1.7.3 [adam 2012-01-23]
 	Updated benchmarks/dbench to 3.04nb1 [wiz 2012-01-23]
+	Updated net/py-kenosis to 0.96nb1 [obache 2012-01-23]
