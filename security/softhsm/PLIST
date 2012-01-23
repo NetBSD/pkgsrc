@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/13 17:47:56 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/23 11:12:47 pettai Exp $
 bin/softhsm
 bin/softhsm-keyconv
-lib/libsofthsm.la
+lib/softhsm/libsofthsm.la
 man/man1/softhsm-keyconv.1
 man/man1/softhsm.1
 man/man5/softhsm.conf.5
