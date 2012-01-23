@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_file.man,v 1.1 2012/01/23 20:54:09 joerg Exp $
+
+--- doc/file.man.orig	2012-01-23 19:18:16.000000000 +0000
++++ doc/file.man
+@@ -175,7 +175,7 @@ Exclude the test named in
+ .Ar testname
+ from the list of tests made to determine the file type. Valid test names
+ are:
+-.Bl -tag -width
++.Bl -tag -width compress
+ .It apptype
+ .Dv EMX
+ application type (only on EMX).
