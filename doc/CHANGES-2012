@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.202 2012/01/23 09:24:56 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.203 2012/01/23 09:40:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -320,3 +320,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/gdbm to 1.10nb1 [sbd 2012-01-23]
 	Updated databases/mysql51-server to 5.1.61nb1 [sbd 2012-01-23]
 	Updated geography/qgis to 1.7.3 [adam 2012-01-23]
+	Updated benchmarks/dbench to 3.04nb1 [wiz 2012-01-23]
