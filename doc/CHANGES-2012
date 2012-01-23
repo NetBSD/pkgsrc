@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.205 2012/01/23 11:14:18 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.206 2012/01/23 11:19:52 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -323,3 +323,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated benchmarks/dbench to 3.04nb1 [wiz 2012-01-23]
 	Updated net/py-kenosis to 0.96nb1 [obache 2012-01-23]
 	Updated security/softhsm to 1.3.1 [pettai 2012-01-23]
+	Updated security/opendnssec to 1.3.5 [pettai 2012-01-23]
