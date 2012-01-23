@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2010/01/30 15:19:26 tnn Exp $
+$NetBSD: distinfo,v 1.17 2012/01/23 20:19:00 sbd Exp $
 
 SHA1 (libggi-2.2.2.src.tar.bz2) = aa439b21fb040b5b52ae18099a0c3cb02e50110f
 RMD160 (libggi-2.2.2.src.tar.bz2) = e76d22f06231e0aa1f752e33951802f243b7f0aa
@@ -6,3 +6,4 @@ Size (libggi-2.2.2.src.tar.bz2) = 1071939 bytes
 SHA1 (patch-aa) = e09aa0c5e6f2a09ba08b94ea37154f5f25f67006
 SHA1 (patch-ab) = 5ab8c53bf89a1527a0e01311d48b93af61d54a1b
 SHA1 (patch-ad) = 0764cbec555ea68fa55952be8b21fc8508fe97f5
+SHA1 (patch-display_fbdev_Makefile.in) = 88b3965f2ae2637b22e1e1b7f1b441de3c2b36da
