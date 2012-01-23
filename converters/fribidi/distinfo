@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.4 2008/08/02 11:35:41 bjs Exp $
+$NetBSD: distinfo,v 1.5 2012/01/23 08:07:17 joerg Exp $
 
 SHA1 (fribidi-0.10.9.tar.gz) = f9aae2d2084eaccbc87760401c4521e96a92a436
 RMD160 (fribidi-0.10.9.tar.gz) = 31495fecd4318f9bd6217b015f65a936389c3204
 Size (fribidi-0.10.9.tar.gz) = 621563 bytes
+SHA1 (patch-fribidi__char__sets__cp1255.c) = 87545e71f9dcf0d62e29f2796f4ebbf9562de9a7
+SHA1 (patch-fribidi__char__sets__cp1256.c) = 06b589fe2956d74a75387d1495a3b04b293ae539
+SHA1 (patch-fribidi__char__sets__isiri__3342.c) = a519e0cd26d1e715dce3d004d849584009f54d01
+SHA1 (patch-fribidi__char__sets__iso8859__6.c) = 1acda158007088e338bfd618bb9d43f8c310690e
+SHA1 (patch-fribidi__char__sets__iso8859__8.c) = d092261f36d9360efe2d148d8ba0eccda278255f
