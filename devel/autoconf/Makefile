@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2011/12/14 02:03:25 sbd Exp $
+# $NetBSD: Makefile,v 1.80 2012/01/23 20:50:13 joerg Exp $
 
 DISTNAME=		autoconf-2.68
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
@@ -9,6 +9,8 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=		Generates automatic source code configuration scripts
 LICENSE=		gnu-gpl-v3 AND gnu-fdl-v1.3
+
+BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 # XXX: needs m4>1.4.6; wants m4>1.4.13
 USE_TOOLS+=		gm4:run perl:run
