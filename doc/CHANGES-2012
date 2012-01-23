@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.195 2012/01/22 20:16:37 abs Exp $
+$NetBSD: CHANGES-2012,v 1.196 2012/01/23 07:54:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -314,3 +314,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Parallel-Prefork to 0.13 [abs 2012-01-22]
 	Updated www/p5-Dancer to 1.3091 [abs 2012-01-22]
 	Updated www/p5-Task-Plack to 0.25 [abs 2012-01-22]
+	Updated converters/py-chardet to 2.0.1nb1 [obache 2012-01-23]
