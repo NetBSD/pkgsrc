@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.606 2012/01/21 13:39:50 obache Exp $
+# $NetBSD: Makefile,v 1.607 2012/01/23 23:34:56 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -503,6 +503,7 @@ SUBDIR+=	py-libxslt
 SUBDIR+=	py-lxml
 SUBDIR+=	py-markdown
 SUBDIR+=	py-mecab
+SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-pygments
 SUBDIR+=	py-sphinx
 SUBDIR+=	py-textile
