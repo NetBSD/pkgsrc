@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/01/13 10:55:51 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/01/23 20:55:47 joerg Exp $
 #
 
 DISTNAME=	qwtplot3d-0.2.7
@@ -30,6 +30,7 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_DATA} \
 		${WRKSRC}/lib/libqwtplot3d.la ${DESTDIR}${PREFIX}/lib
 
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
