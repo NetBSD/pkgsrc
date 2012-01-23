@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.196 2012/01/23 07:54:50 obache Exp $
+$NetBSD: CHANGES-2012,v 1.197 2012/01/23 07:57:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -315,3 +315,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-Dancer to 1.3091 [abs 2012-01-22]
 	Updated www/p5-Task-Plack to 0.25 [abs 2012-01-22]
 	Updated converters/py-chardet to 2.0.1nb1 [obache 2012-01-23]
+	Updated converters/py-jpCodecs to 1.4.11nb2 [obache 2012-01-23]
