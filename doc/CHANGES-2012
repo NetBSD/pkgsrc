@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.216 2012/01/24 11:11:13 obache Exp $
+$NetBSD: CHANGES-2012,v 1.217 2012/01/24 11:49:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -338,3 +338,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/tacacs-shrubbery to 4.0.4.22 [pettai 2012-01-24]
 	Updated mail/py-libgmail to 0.1.11 [obache 2012-01-24]
 	Updated mail/py-sendmail-admin to 1.0nb1 [obache 2012-01-24]
+	Updated mail/archivemail to 0.9.0 [obache 2012-01-24]
