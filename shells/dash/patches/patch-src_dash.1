@@ -1,0 +1,15 @@
+$NetBSD: patch-src_dash.1,v 1.1 2012/01/24 22:24:34 joerg Exp $
+
+--- src/dash.1.orig	2009-01-13 23:37:13.000000000 +0000
++++ src/dash.1
+@@ -2132,9 +2132,9 @@ is specified, the soft limit is displaye
+ If both are specified, the last one wins.
+ .El
+ .Pp
+-.Bl -tag -width Fl
+ The limit to be interrogated or set, then, is chosen by specifying
+ any one of these flags:
++.Bl -tag -width Fl
+ .It Fl a
+ show all the current limits
+ .It Fl t
