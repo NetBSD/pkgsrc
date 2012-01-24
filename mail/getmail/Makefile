@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2012/01/24 12:01:13 obache Exp $
+# $NetBSD: Makefile,v 1.108 2012/01/24 12:02:41 obache Exp $
 
 DISTNAME=	getmail-4.24.0
 PKGREVISION=	1
@@ -11,6 +11,8 @@ COMMENT=	Secure, flexible, reliable, easy-to-use fetchmail replacement
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=	# none
 
 PYTHON_PATCH_SCRIPTS=	*.py getmailcore/*.py
 
