@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.214 2012/01/24 09:06:42 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.215 2012/01/24 11:00:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -336,3 +336,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/gdbm to 1.10nb3 [sbd 2012-01-24]
 	Updated lang/erlang to 14.1.4nb1 [sbd 2012-01-24]
 	Updated net/tacacs-shrubbery to 4.0.4.22 [pettai 2012-01-24]
+	Updated mail/py-libgmail to 0.1.11 [obache 2012-01-24]
