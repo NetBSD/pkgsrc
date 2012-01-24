@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/12 00:18:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/01/24 10:59:03 obache Exp $
+${PYSITELIB}/gmail_transport.py
+${PYSITELIB}/gmail_transport.pyc
+${PYSITELIB}/gmail_transport.pyo
 ${PYSITELIB}/lgconstants.py
 ${PYSITELIB}/lgconstants.pyc
 ${PYSITELIB}/lgconstants.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/libgmail.py
 ${PYSITELIB}/libgmail.pyc
 ${PYSITELIB}/libgmail.pyo
