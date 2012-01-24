@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/11/16 01:33:15 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/01/24 23:17:49 marino Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -13,6 +13,7 @@ CONFLICTS+=		xvidcap<1.1.3nb3
 
 CONFIGURE_ARGS+=	--with-gtk2
 USE_TOOLS+=		pkg-config
+LDFLAGS.DragonFly=	-lXt -lX11
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
