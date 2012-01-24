@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2011/12/02 15:31:44 hauke Exp $
+$NetBSD: patch-ab,v 1.10 2012/01/24 23:45:00 marino Exp $
 
 --- iozone.c.orig	2011-05-06 15:39:00.000000000 +0000
 +++ iozone.c
@@ -30,17 +30,19 @@ $NetBSD: patch-ab,v 1.9 2011/12/02 15:31:44 hauke Exp $
  #endif
  
  #endif
-@@ -6876,6 +6879,10 @@ long long *data2;
+@@ -6876,7 +6879,11 @@ long long *data2;
  	if(odsync)
  		file_flags |= O_DSYNC;
  #endif
+-#if defined(_HPUX_SOURCE) || defined(linux) || defined(__FreeBSD__) || defined(__DragonFly__)
 +#if defined (__DragonFly__)
 +	if(read_sync)
 +		file_flags |= O_SYNC;
 +#endif
- #if defined(_HPUX_SOURCE) || defined(linux) || defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(_HPUX_SOURCE) || defined(linux) || defined(__FreeBSD__)
  	if(read_sync)
  		file_flags |=O_RSYNC|O_SYNC;
+ #endif
 @@ -10098,7 +10105,11 @@ long long *data1, *data2;
  		open_flags |=O_DIRECTIO;
  #endif
@@ -54,15 +56,7 @@ $NetBSD: patch-ab,v 1.9 2011/12/02 15:31:44 hauke Exp $
  	if(read_sync)
  		open_flags |=O_RSYNC|O_SYNC;
  #endif
-@@ -10324,6 +10335,7 @@ long long *data1,*data2;
- 	off64_t filebytes64,i;
- 	off64_t numrecs64;
- 	int fd,ltest;
-+	int wval;
- #if defined(VXFS) || defined(solaris)
- 	int test_foo = 0;
- #endif
-@@ -10454,7 +10466,7 @@ long long *data1,*data2;
+@@ -10454,7 +10465,7 @@ long long *data1,*data2;
  					purgeit(piov[xx].piov_base,reclen);
  			}
  			if(pwritev(fd, piov,numvecs
@@ -71,7 +65,7 @@ $NetBSD: patch-ab,v 1.9 2011/12/02 15:31:44 hauke Exp $
  				, list_off[0]
  #endif
  				) != (reclen*numvecs))
-@@ -10781,7 +10793,7 @@ long long *data1,*data2;
+@@ -10781,7 +10792,7 @@ long long *data1,*data2;
  				   purgeit(piov[xx].piov_base,reclen);
  			}
  			if(preadv(fd, piov, numvecs
