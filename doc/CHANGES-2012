@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.218 2012/01/24 12:01:23 obache Exp $
+$NetBSD: CHANGES-2012,v 1.219 2012/01/24 15:17:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -340,3 +340,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/py-sendmail-admin to 1.0nb1 [obache 2012-01-24]
 	Updated mail/archivemail to 0.9.0 [obache 2012-01-24]
 	Updated mail/getmail to 4.24.0nb1 [obache 2012-01-24]
+	Updated devel/SDL to 1.2.14nb9 [wiz 2012-01-24]
