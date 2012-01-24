@@ -1,10 +1,19 @@
-$NetBSD: patch-ah,v 1.1.1.1 2011/11/30 23:47:29 pettai Exp $
+$NetBSD: patch-ah,v 1.2 2012/01/24 08:46:04 pettai Exp $
 
 Handle IRIX the same way as Solaris
 
---- do_acct.c.orig	2011-11-30 17:58:18.000000000 +0100
-+++ do_acct.c	2011-11-30 17:58:28.000000000 +0100
-@@ -223,7 +223,7 @@
+--- do_acct.c.orig	2012-01-24 07:39:56.000000000 +0000
++++ do_acct.c
+@@ -214,7 +214,7 @@ wtmp_entry(char *line, char *name, char 
+     if (!wtmpfile) {
+ 	return(1);
+     }
+-#if HAVE_UTMPX_H
++#if HAVE_UTMPX_H && !HAVE_UTMP_H
+ # define ut_name	ut_user
+ #endif
+ 
+@@ -230,7 +230,7 @@ wtmp_entry(char *line, char *name, char 
      else
  	memcpy(entry.ut_name, name, sizeof(entry.ut_name));
  
