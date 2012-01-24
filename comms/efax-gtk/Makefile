@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2011/11/01 06:00:48 sbd Exp $
+# $NetBSD: Makefile,v 1.53 2012/01/24 23:55:57 marino Exp $
 
 DISTNAME=	efax-gtk-3.2.3.src
 PKGNAME=	efax-gtk-3.2.3
@@ -20,6 +20,7 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/spool/efax
+LDFLAGS.DragonFly=	-lX11
 
 EGDIR=			${PREFIX}/share/examples
 CONF_FILES=		${EGDIR}/efax-gtkrc ${PKG_SYSCONFDIR}/efax-gtkrc
