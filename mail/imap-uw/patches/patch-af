@@ -1,14 +1,16 @@
-$NetBSD: patch-af,v 1.8 2011/01/30 01:33:44 markd Exp $
+$NetBSD: patch-af,v 1.9 2012/01/24 09:04:07 shattered Exp $
 
---- src/osdep/unix/kerb_mit.c.orig	2006-08-31 01:40:15.000000000 +0000
+--- src/osdep/unix/kerb_mit.c.orig	2008-06-04 18:18:34.000000000 +0000
 +++ src/osdep/unix/kerb_mit.c
-@@ -26,9 +26,16 @@
+@@ -26,9 +26,18 @@
   * Last Edited:	30 August 2006
   */
  
 +#ifdef HEIMDAL_KRB5
 +#include <gssapi/gssapi.h>
++#ifdef GSSAPI_GSSAPI_H_ /* older heimdals use GSSAPI_H_ */
 +#include <gssapi/gssapi_krb5.h>
++#endif
 +#include <krb5.h>
 +#define gss_nt_service_name	GSS_C_NT_HOSTBASED_SERVICE
 +#else
