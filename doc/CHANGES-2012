@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.213 2012/01/24 03:39:30 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.214 2012/01/24 09:06:42 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -335,3 +335,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/py-pdf-parser version 0.3.7 [wiz 2012-01-23]
 	Updated databases/gdbm to 1.10nb3 [sbd 2012-01-24]
 	Updated lang/erlang to 14.1.4nb1 [sbd 2012-01-24]
+	Updated net/tacacs-shrubbery to 4.0.4.22 [pettai 2012-01-24]
