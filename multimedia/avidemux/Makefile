@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2011/11/01 06:02:10 sbd Exp $
+# $NetBSD: Makefile,v 1.69 2012/01/24 09:11:08 sbd Exp $
 #
 
 DISTNAME=	avidemux_2.5.4
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.berlios.de/avidemux/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2012/01/13 10:54:48 obache Exp $
+# $NetBSD: Makefile,v 1.47 2012/01/24 09:10:57 sbd Exp $
 #
 
 DISTNAME=		sound-juicer-2.28.2
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		audio
 MASTER_SITES=		http://www.burtonini.com/computing/ \
 			${MASTER_SITE_GNOME:=sources/sound-juicer/2.28/}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2011/12/03 09:12:03 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2012/01/24 09:10:51 sbd Exp $
 #
 
 BUILDLINK_TREE+=	gdbm_compat
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	gdbm_compat
 GDBM_COMPAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdbm_compat+=	gdbm_compat>=1.8.3
-BUILDLINK_ABI_DEPENDS.gdbm_compat+=	gdbm_compat>=1.9.1
+BUILDLINK_ABI_DEPENDS.gdbm_compat+=	gdbm_compat>=1.10
 BUILDLINK_PKGSRCDIR.gdbm_compat?=	../../databases/gdbm_compat
 
 # Look like real ndbm.
