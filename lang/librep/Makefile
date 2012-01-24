@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2011/08/23 13:06:49 obache Exp $
+# $NetBSD: Makefile,v 1.57 2012/01/24 09:11:06 sbd Exp $
 #
 
 DISTNAME=		librep-0.91.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang devel
 MASTER_SITES=		http://download.tuxfamily.org/sawfish/librep/
 EXTRACT_SUFX=		.tar.bz2
