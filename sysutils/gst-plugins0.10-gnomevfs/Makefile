@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2011/11/01 06:02:34 sbd Exp $
+# $NetBSD: Makefile,v 1.27 2012/01/24 09:11:15 sbd Exp $
 #
 
 GST_PLUGINS0.10_NAME=	gnomevfs
 GST_PLUGINS0.10_DIRS=	ext/gnomevfs
 GST_PLUGINS0.10_FLAGS=	gnome_vfs
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

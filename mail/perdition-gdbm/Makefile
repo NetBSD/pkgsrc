@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2011/08/23 13:06:50 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/24 09:11:07 sbd Exp $
 
-PKGREVISION=		2
+PKGREVISION=		3
 PERDITION_COMMENT=	GDBM user database module
 PERDITION_PKGNAME=	gdbm
 BUILD_DIRS=		makegdbm perdition/db/gdbm

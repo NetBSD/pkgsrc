@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2011/12/03 00:02:14 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2012/01/24 09:10:59 sbd Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases python
 
 MAINTAINER=	dolecek@ics.muni.cz

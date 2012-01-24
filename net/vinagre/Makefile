@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/01/13 10:55:29 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/01/24 09:11:12 sbd Exp $
 #
 
 DISTNAME=	vinagre-2.30.3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/2.30/}
 
