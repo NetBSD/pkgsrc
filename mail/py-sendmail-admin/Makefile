@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/12/03 00:02:15 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/24 11:10:59 obache Exp $
 #
 
 VER=		1.0
 DISTNAME=	sendmail-admin-${VER}
 PKGNAME=	${PYPKGPREFIX}-sendmail-admin-${VER}
+PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	http://www.clapper.org/software/python/sendmail-admin/
 
@@ -18,8 +19,8 @@ USE_LANGUAGES=	# none
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG=	yes
+EGG_NAME=	${DISTNAME:S/-/_/}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
