@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2010/02/15 13:35:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/24 20:39:59 joerg Exp $
 #
 
 .include "../../inputmethod/sj3/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/sj3-/sj3-client-/}
+PKGREVISION=	1
 
 COMMENT=	SJ3 Japanese input method client & library
 
