@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/01/01 17:51:06 gson Exp $
+$NetBSD: distinfo,v 1.5 2012/01/24 20:43:37 gson Exp $
 
 SHA1 (boto-1.9b.tar.gz) = 00a033b0a593c3ca82927867950f73d88b831155
 RMD160 (boto-1.9b.tar.gz) = 0d403ad76bf02a60699693dc13cd0911196ec844
 Size (boto-1.9b.tar.gz) = 218406 bytes
+SHA1 (patch-aa) = 4f5b68d78b477125c96ff88b32e1c241eb6bc7f2
