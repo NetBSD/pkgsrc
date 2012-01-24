@@ -1,14 +1,16 @@
-$NetBSD: patch-al,v 1.8 2011/01/30 01:33:44 markd Exp $
+$NetBSD: patch-al,v 1.9 2012/01/24 09:04:07 shattered Exp $
 
---- src/c-client/auth_gss.c.orig	2006-08-30 23:37:16.000000000 +0000
+--- src/c-client/auth_gss.c.orig	2008-06-04 18:18:34.000000000 +0000
 +++ src/c-client/auth_gss.c
-@@ -26,6 +26,15 @@
+@@ -26,6 +26,17 @@
   * Last Edited:	30 August 2006
   */
  
 +#ifdef HEIMDAL_KRB5
 +#include <gssapi/gssapi.h>
++#ifdef GSSAPI_GSSAPI_H_ /* older heimdals use GSSAPI_H_ */
 +#include <gssapi/gssapi_krb5.h>
++#endif
 +#include <krb5.h>
 +#define gss_nt_service_name	GSS_C_NT_HOSTBASED_SERVICE
 +#else
@@ -18,7 +20,7 @@ $NetBSD: patch-al,v 1.8 2011/01/30 01:33:44 markd Exp $
  
  long auth_gssapi_valid (void);
  long auth_gssapi_client (authchallenge_t challenger,authrespond_t responder,
-@@ -64,15 +73,32 @@ long auth_gssapi_valid (void)
+@@ -64,15 +75,32 @@ long auth_gssapi_valid (void)
    OM_uint32 smn;
    gss_buffer_desc buf;
    gss_name_t name;
