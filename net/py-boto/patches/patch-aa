@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2012/01/24 20:43:37 gson Exp $
+
+Fix http://code.google.com/p/boto/issues/detail?id=310
+
+--- boto/ec2/blockdevicemapping.py.orig	2009-12-16 18:21:40.000000000 +0200
++++ boto/ec2/blockdevicemapping.py
+@@ -75,7 +75,7 @@ class BlockDeviceMapping(dict):
+     def build_list_params(self, params, prefix=''):
+         i = 1
+         for dev_name in self:
+-            pre = '%sBlockDeviceMapping.%d' % (pre, i)
++            pre = '%sBlockDeviceMapping.%d' % (prefix, i)
+             params['%s.DeviceName' % pre] = dev_name
+             ebs = self[dev_name]
+             if ebs.snapshot_id:
