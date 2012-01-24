@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2012/01/24 03:39:22 sbd Exp $
+lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
+lib/erlang/lib/os_mon-${VERSION.os_mon}/src/cpu_sup.c
