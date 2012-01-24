@@ -1,4 +1,4 @@
-$NetBSD: patch-src_video_wscons_SDL__wsconsvideo.c,v 1.2 2011/12/26 12:28:47 wiz Exp $
+$NetBSD: patch-src_video_wscons_SDL__wsconsvideo.c,v 1.3 2012/01/24 15:17:05 wiz Exp $
 
 Fix tty device and color patterns for wscons driver on NetBSD.
 
@@ -23,9 +23,9 @@ Fix tty device and color patterns for wscons driver on NetBSD.
    }
    if (private->info.depth > 8) {
 +#ifdef __NetBSD__
-+    private->redMask = 0x0000ff;
 +    private->greenMask = 0x00ff00;
-+    private->blueMask = 0xff0000;
++    private->blueMask = 0x0000ff;
++    private->redMask = 0xff0000;
 +#else
      if (wstype == WSDISPLAY_TYPE_SUN24 ||
  	wstype == WSDISPLAY_TYPE_SUNCG12 ||
