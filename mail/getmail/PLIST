@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/01/24 12:01:13 obache Exp $
 bin/getmail
 bin/getmail_fetch
 bin/getmail_maildir
@@ -23,6 +23,7 @@ share/doc/getmail/getmaildocs.css
 share/doc/getmail/getmailrc-examples
 share/doc/getmail/troubleshooting.html
 share/doc/getmail/troubleshooting.txt
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/getmailcore/__init__.py
 ${PYSITELIB}/getmailcore/__init__.pyc
 ${PYSITELIB}/getmailcore/__init__.pyo
