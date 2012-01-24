@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2012/01/24 00:28:17 abs Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/01/24 02:44:30 sbd Exp $
 bin/testgdbm
 include/gdbm.h
 info/gdbm.info
 lib/libgdbm.la
 man/man3/gdbm.3
-${PLIST.nls}share/locale/de/LC_MESSAGES/gdbm.mo
-${PLIST.nls}share/locale/fi/LC_MESSAGES/gdbm.mo
-${PLIST.nls}share/locale/ja/LC_MESSAGES/gdbm.mo
-${PLIST.nls}share/locale/pl/LC_MESSAGES/gdbm.mo
-${PLIST.nls}share/locale/uk/LC_MESSAGES/gdbm.mo
+share/locale/de/LC_MESSAGES/gdbm.mo
+share/locale/fi/LC_MESSAGES/gdbm.mo
+share/locale/ja/LC_MESSAGES/gdbm.mo
+share/locale/pl/LC_MESSAGES/gdbm.mo
+share/locale/uk/LC_MESSAGES/gdbm.mo
