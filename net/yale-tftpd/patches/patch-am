@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1 2012/01/25 09:56:09 he Exp $
+
+A number of changes to make this build with no warnings under -Wall.
+
+--- classes/config.h.orig	2012-01-24 11:37:19.000000000 +0000
++++ classes/config.h
+@@ -11,7 +11,7 @@ typedef struct _Config_* Config;
+ 	int		config_nfields (Config self);
+ 	char**		config_fields (Config self);
+ 	int		config_scanbuf (Config self, char* buf);
+-	int		config_setbreak (	
++	void		config_setbreak (
+ 				Config self,
+ 				const char* delimiters,
+ 				const char* punctuation

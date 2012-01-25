@@ -1,0 +1,24 @@
+$NetBSD: patch-al,v 1.1 2012/01/25 09:56:09 he Exp $
+
+A number of changes to make this build with no warnings under -Wall.
+
+--- classes/access.h.orig	1994-10-05 05:18:21.000000000 +0000
++++ classes/access.h
+@@ -16,7 +16,7 @@ typedef struct _AccessGroup_* AccessGrou
+ 			);
+ 
+ 	struct		_AccessCondition_;
+-	int		accessGroup_addCondition (
++	void		accessGroup_addCondition (
+ 				AccessGroup self,
+ 				int list,
+ 				struct _AccessCondition_* condition
+@@ -31,7 +31,7 @@ typedef struct _AccessGroup_* AccessGrou
+ 
+ 	char*		accessGroup_lastError ( AccessGroup self );
+ 
+-	int		accessGroup_printOn (
++	void		accessGroup_printOn (
+ 				AccessGroup self,
+ 				FILE* file
+ 			);
