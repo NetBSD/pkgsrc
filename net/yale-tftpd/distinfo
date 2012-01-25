@@ -1,16 +1,18 @@
-$NetBSD: distinfo,v 1.10 2011/09/06 11:20:19 obache Exp $
+$NetBSD: distinfo,v 1.11 2012/01/25 09:56:08 he Exp $
 
 SHA1 (yale-tftpd-3.0.tar.gz) = 5f87e3d37feb5c5c8b7f2db34a0c87ee537727af
 RMD160 (yale-tftpd-3.0.tar.gz) = 207b88c4383b283e3c0d81a50061a65513031854
 Size (yale-tftpd-3.0.tar.gz) = 33469 bytes
-SHA1 (patch-aa) = 9523f1d0727be08b2ebea275f0676f824f06c82a
-SHA1 (patch-ab) = e6eb66ed95139b47ee1df07014a636803e89ad47
-SHA1 (patch-ac) = bd44bf8d19079e1a74850dbcc8cfea3d82f36c3e
-SHA1 (patch-ad) = 2ac867228602d860e6cf39ad08dc5bec732fe52e
-SHA1 (patch-ae) = 61ae35f5e8d5d8f3cd60ba515a925a4098628fb1
-SHA1 (patch-af) = d51ac136dc653395faea0c6f2c748f57584d47b5
-SHA1 (patch-ag) = be6114e57b7c154eccd09ac4b9187957d2ba4dde
-SHA1 (patch-ah) = aee72d3af9fd015b9e1563610b7e72011ce07a05
-SHA1 (patch-ai) = 3624ecf5d448358834e5ace2f18bfd4caaf954db
-SHA1 (patch-aj) = 289bd4840cabe516f9ab09e883089f4aa4f7763b
-SHA1 (patch-ak) = 48c125fc5012e65b9310298dba29f76e5b60b078
+SHA1 (patch-aa) = 3ee2118e261ed2012932ec87f998aa309d187a86
+SHA1 (patch-ab) = b32890019b289362b2b0f626394eba128585c9fc
+SHA1 (patch-ac) = a009cf18fa7413f1d3b2523f5ad7db600cc7cc57
+SHA1 (patch-ad) = 04a5079132a2e9f01c37c9551a09ac244217d2dd
+SHA1 (patch-ae) = 8a1da199365465d35b903578323485404155803e
+SHA1 (patch-af) = 4d36c2bf21d5f100d012eb8bc83f9770085216f6
+SHA1 (patch-ag) = 04f68d8cb30c146978bf5b2d18623645a07cd137
+SHA1 (patch-ah) = 105c226bcc36fb14279333ec013340b809eca915
+SHA1 (patch-ai) = df8ac74bc8c2517f34f028667470468ad2ba9eef
+SHA1 (patch-aj) = 6628e046d2040a9c9ef02acf2f1228a77fcffcf4
+SHA1 (patch-ak) = ffcaedfa9937f2b587a06a31ef0a2a3ceeb64a9d
+SHA1 (patch-al) = 72a41ee9799ccd6f8d65b650ae73bc405d159b9d
+SHA1 (patch-am) = a1d89211e1495c2eb2f6f1a83d822e652fbb41b2

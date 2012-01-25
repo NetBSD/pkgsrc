@@ -1,10 +1,14 @@
-$NetBSD: patch-ag,v 1.2 2007/10/02 20:23:08 heinz Exp $
+$NetBSD: patch-ag,v 1.3 2012/01/25 09:56:08 he Exp $
 
---- classes/dict.c.orig	1994-10-05 06:20:48.000000000 +0100
+A number of changes to make this build with no warnings under -Wall.
+
+--- classes/dict.c.orig	1994-10-05 05:20:48.000000000 +0000
 +++ classes/dict.c
-@@ -14,8 +14,13 @@
+@@ -13,9 +13,15 @@
+  * [X]	provide sequencing over all elements.
   */
  
++#include <inttypes.h>
  #include <stdio.h>
 +#include <stdlib.h>
  #include <strings.h>
@@ -16,3 +20,90 @@ $NetBSD: patch-ag,v 1.2 2007/10/02 20:23:08 heinz Exp $
  extern int	strcasecmp();
  
  #define _CLASS_Dict_PRIVATE_
+@@ -51,16 +57,18 @@ struct	_SymEnt_ {
+ 				int	mayAdd
+ 			);
+ 	static SymEnt syment_new (void);
+-	static SymEnt syment_dispose (SymEnt sep);
+ 	static Hash_t	symhash (Key_t key);
+ 	static Hash_t	symcasehash (Key_t key);
+ 
++#if 0
++static void dict_printOn(Dict, FILE*);
++#endif
++
+ #else
+ 
+ 	static Dict dict_expand ();
+ 	static SymEnt*	dict_locationOf ();
+ 	static SymEnt syment_new ();
+-	static SymEnt syment_dispose ();
+ 	static Hash_t	symhash ();
+ 	static Hash_t	symcasehash ();
+ 
+@@ -164,7 +172,6 @@ Value_t	v;
+ {
+ 	SymEnt* psep, sep;
+ 	struct _SymEnt_ tmp;
+-	Hash_t hsh;
+ 
+ 	tmp.name = n;
+ 	psep = dict_locationOf (self, &tmp, 1);
+@@ -205,7 +212,6 @@ Key_t	n;
+ {
+ 	register SymEnt* psep, sep;
+ 	struct _SymEnt_ tmp;
+-	Value_t v = 0;
+ 
+ 	tmp.name = n;
+ 	psep = dict_locationOf (self, &tmp, 0);
+@@ -270,7 +276,6 @@ Value_t	v;
+ {
+ 	SymEnt* psep, sep;
+ 	struct _SymEnt_ tmp;
+-	Hash_t hsh;
+ 	Value_t oldValue;
+ 
+ 
+@@ -389,15 +394,18 @@ int	yesno;
+ 	return 0;
+ }
+ 
++#if 0
++static void
+ dict_printOn (self, file)
+-Dict	self;
+-FILE*	file;
++     Dict	self;
++     FILE*	file;
+ {
+ 	fprintf (file, "Dict(0x%x): nhead=%d; nheadinuse=%d\n",
+-		 self, self->nhead, self->nheadinuse);
++		 (intptr_t)self, self->nhead, self->nheadinuse);
+ 	fprintf (file, "  nitems=%d; avgChain = %.2f\n", self->nitems,
+ 		self->nheadinuse ? (double)self->nitems/self->nheadinuse : (double )0);
+ }
++#endif
+ 
+ /* Private Functions:
+  *
+@@ -477,7 +485,7 @@ Key_t	ptr;
+ {
+ 	Hash_t ret = 0;
+ 	register unsigned char* nhp = (unsigned char*)ptr;
+-	register cv;
++	int cv;
+ 
+ 	while (*nhp) {
+ 		cv = *nhp++;
+@@ -545,8 +553,8 @@ int	mayAdd;
+ static SymEnt
+ syment_new()
+ {
+-	register SymEnt sep;
+-	register n;
++	SymEnt sep;
++	int n;
+ 
+ 	sep = (SymEnt) calloc (DFLTSYMENT, sizeof (*sep));
+ 	for (n = 0; n < DFLTSYMENT; n++, sep++)

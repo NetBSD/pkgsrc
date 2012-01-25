@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.4 2011/09/06 11:20:19 obache Exp $
+$NetBSD: patch-ai,v 1.5 2012/01/25 09:56:08 he Exp $
+
+A number of changes to make this build with no warnings under -Wall.
 
 --- tftpyale.c.orig	1995-03-20 20:11:11.000000000 +0000
 +++ tftpyale.c
@@ -13,7 +15,24 @@ $NetBSD: patch-ai,v 1.4 2011/09/06 11:20:19 obache Exp $
  #include <sys/stat.h>
  #include <netinet/in.h>
  #include "tftpyale.h"
-@@ -95,7 +96,7 @@ addFileRestriction (ac, av)
+@@ -73,6 +74,10 @@ static char*		accessFormatError;
+ static char*		cfgets();
+ static struct stat	configStat;
+ static int		defaultAccessList;
++static int		addFileRestriction(int, char **);
++static void		resetConfig();
++static void		accessDebugDump();
++
+ 
+ /* for debugging printouts */
+ static char* permNames[] ={ "deny", "readonly", "writeonly", "readwrite" };
+@@ -90,12 +95,12 @@ static char* permNames[] ={ "deny", "rea
+ #define CMD_INPUT_WAIT		7
+ 
+ /* Add a file restriction clause to the list */
+-static
++static int
+ addFileRestriction (ac, av)
  int	ac;
  char**	av;
  {
@@ -22,7 +41,7 @@ $NetBSD: patch-ai,v 1.4 2011/09/06 11:20:19 obache Exp $
  
  	ac--; av++;
  	if (ac != 2) {
-@@ -104,7 +105,7 @@ char**	av;
+@@ -104,7 +109,7 @@ char**	av;
  	}
  
  	/* get list number */
@@ -31,7 +50,15 @@ $NetBSD: patch-ai,v 1.4 2011/09/06 11:20:19 obache Exp $
  	if (list <= 0) {
  		accessFormatError = "list argument not positive integer";
  		return 0;
-@@ -157,27 +158,24 @@ struct stat* sb;
+@@ -142,6 +147,7 @@ int	*lineCount;
+ /* Return whether the file named by the argument stat structure
+  * is the same as the configuration file.
+  */
++int
+ isConfigFile (sb)
+ struct stat* sb;
+ {
+@@ -157,27 +163,24 @@ struct stat* sb;
   * qualified (starts with '/') check to see if the
   * prefix matches the default directory.
   */
@@ -65,7 +92,57 @@ $NetBSD: patch-ai,v 1.4 2011/09/06 11:20:19 obache Exp $
  
  	return list ? list : defaultAccessList;
  }
-@@ -269,7 +267,7 @@ char**	argv;
+@@ -202,7 +205,7 @@ char* arg;
+  * on the file and check to see if it's been modified since
+  * the last read.
+  */
+-
++int
+ readConfigFile(argc, argv)
+ int	argc;
+ char**	argv;
+@@ -216,12 +219,14 @@ char**	argv;
+ 	struct stat statb;
+ 	Config	cnf;
+ 
++	fileName="";
+ 	/* If given an argument, it must be the name
+ 	 * of a configuration file.  Otherwise use
+ 	 * the default.
+ 	 */
+ 	if (tftpDebugLevel > 3) {
+-		syslog(LOG_DEBUG, "readConfigFile(%d,0x%08x)", argc, argv);
++		syslog(LOG_DEBUG, "readConfigFile(%d,0x%08x)",
++		       argc, (intptr_t) argv);
+ 	}
+ 	if (configf == 0) {
+ 		fileName = dfltConfigFile;
+@@ -238,7 +243,7 @@ char**	argv;
+ 	}
+ 	if (tftpDebugLevel > 3) {
+ 		syslog(LOG_DEBUG, "configFile = '%s'; FILE* = 0x%08x",
+-			fileName, configf);
++		       fileName, (intptr_t)configf);
+ 	}
+ 
+ 	/* See if the file has been changed since the last time we
+@@ -250,7 +255,7 @@ char**	argv;
+ 	fstat(fileno(configf), &statb);
+ 	configStat = statb;
+ 	if (statb.st_mtime == configModTime)
+-		return;
++		return 0;
+ 	configModTime = statb.st_mtime;
+ 
+ 	/* Read the config file */
+@@ -262,14 +267,13 @@ char**	argv;
+ 	config_setoptions (cnf, config_getoptions (cnf)& ~CFG_OPT_CASEMAP);
+ 
+ 	while (cfgets (buf, sizeof buf, configf, &configLineNumber) != NULL) {
+-		char* end;
+ 
+ 		cargc = config_scanbuf (cnf, buf);
+ 		if (cargc == 0)
  			continue;
  
  		cargv = config_fields(cnf);
@@ -74,12 +151,72 @@ $NetBSD: patch-ai,v 1.4 2011/09/06 11:20:19 obache Exp $
  		  /* specify default directory */
  		  case CMD_DEFAULT_DIR:
  			if (cargc != 2)
-@@ -481,7 +479,7 @@ char*	buf;
+@@ -446,7 +450,7 @@ char*	buf;
+ 
+ 	/* squeeze out current and parent entries */
+ 	{
+-		register i, j;
++		int i, j;
+ 
+ 		for (i=0, j=0; i < num; i++) {
+ 			char* cur = obuf[i];
+@@ -481,28 +485,28 @@ char*	buf;
  
  static struct CMDS {
  	char* cmdName;
 -	int cmdVal;
 +	long cmdVal;
  } configCmds[] ={
- 	"default-directory",	CMD_DEFAULT_DIR,
- 	"defaultDirectory",	CMD_DEFAULT_DIR,
+-	"default-directory",	CMD_DEFAULT_DIR,
+-	"defaultDirectory",	CMD_DEFAULT_DIR,
+-	"debug-level",		CMD_DEBUG_LEVEL,
+-	"debugLevel",		CMD_DEBUG_LEVEL,
+-	"root-directory",	CMD_ROOT_DIR,
+-	"rootDirectory",	CMD_ROOT_DIR,
+-	"access-list",		CMD_ACCESS_LIST,
+-	"accessList",		CMD_ACCESS_LIST,
+-	"default-access-list",	CMD_DEFAULT_ACCESS_LIST,
+-	"defaultAccessList",	CMD_DEFAULT_ACCESS_LIST,
+-	"restrict",		CMD_RESTRICT,
+-	"inputWait",		CMD_INPUT_WAIT,
+-	"input-wait",		CMD_INPUT_WAIT,
+-	(char*)0,		0
++	{ "default-directory",	CMD_DEFAULT_DIR },
++	{ "defaultDirectory",	CMD_DEFAULT_DIR },
++	{ "debug-level",	CMD_DEBUG_LEVEL },
++	{ "debugLevel",		CMD_DEBUG_LEVEL },
++	{ "root-directory",	CMD_ROOT_DIR },
++	{ "rootDirectory",	CMD_ROOT_DIR },
++	{ "access-list",	CMD_ACCESS_LIST },
++	{ "accessList",		CMD_ACCESS_LIST },
++	{ "default-access-list",CMD_DEFAULT_ACCESS_LIST },
++	{ "defaultAccessList",	CMD_DEFAULT_ACCESS_LIST },
++	{ "restrict",		CMD_RESTRICT },
++	{ "inputWait",		CMD_INPUT_WAIT },
++	{ "input-wait",		CMD_INPUT_WAIT },
++	{ (char*)0,		0 }
+ };
+ 
+ /* reset configuration options to defaults */
++static void
+ resetConfig()
+ {
+-	register int i;
+ 	extern char* dfltDefaultDirectory;
+ 	extern char* dfltRootDirectory;
+ 	extern int dfltDebugLevel;
+@@ -603,12 +607,14 @@ int type;
+ 
+ 
+ #ifndef DEBUG
++static void
+ accessDebugDump()
+ {
+ }
+ #else
+ #include <stdio.h>
+ 
++static void
+ accessDebugDump()
+ {
+ 	FILE*	logf;

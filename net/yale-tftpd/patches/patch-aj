@@ -1,14 +1,26 @@
-$NetBSD: patch-aj,v 1.2 2007/10/02 20:23:08 heinz Exp $
+$NetBSD: patch-aj,v 1.3 2012/01/25 09:56:08 he Exp $
 
---- tftpsubs.c.orig	1994-10-05 06:20:49.000000000 +0100
+A number of changes to make this build with no warnings under -Wall.
+
+--- tftpsubs.c.orig	1994-10-05 05:20:49.000000000 +0000
 +++ tftpsubs.c
-@@ -38,12 +38,15 @@ static char sccsid[] = "@(#)tftpsubs.c	5
+@@ -18,7 +18,7 @@
+  */
+ 
+ #ifndef lint
+-static char sccsid[] = "@(#)tftpsubs.c	5.5 (Berkeley) 6/1/90";
++char subs_sccsid[] = "@(#)tftpsubs.c	5.5 (Berkeley) 6/1/90";
+ #endif /* not lint */
+ 
+ /* Simple minded read-ahead/write-behind subroutines for tftp user and
+@@ -38,12 +38,16 @@ static char sccsid[] = "@(#)tftpsubs.c	5
  #include <netinet/in.h>
  #include <arpa/tftp.h>
  #include <stdio.h>
 +#ifdef __sun
 +#include <sys/filio.h>
 +#endif
++#include <unistd.h>
  
 -#define PKTSIZE SEGSIZE+4       /* should be moved to tftp.h */
 +#define BUF_PKTSIZE SEGSIZE+4       /* should be moved to tftp.h */
@@ -20,12 +32,73 @@ $NetBSD: patch-aj,v 1.2 2007/10/02 20:23:08 heinz Exp $
  } bfs[2];
  
  				/* Values for bf.counter  */
-@@ -233,7 +236,7 @@ synchnet(f)
+@@ -58,8 +62,12 @@ static int current;     /* index of buff
+ int newline = 0;        /* fillbuf: in middle of newline expansion */
+ int prevchar = -1;      /* putbuf: previous char (cr check) */
+ 
++void read_ahead(FILE *, int);
++int write_behind(FILE *, int);
++
+ struct tftphdr *rw_init();
+ 
++
+ struct tftphdr *w_init() { return rw_init(0); }         /* write-behind */
+ struct tftphdr *r_init() { return rw_init(1); }         /* read-ahead */
+ 
+@@ -80,6 +88,7 @@ int x;                  /* zero for writ
+ /* Have emptied current buffer by sending to net and getting ack.
+    Free it and return next buffer filled with data.
+  */
++int
+ readit(file, dpp, convert)
+ 	FILE *file;                     /* file opened for read */
+ 	struct tftphdr **dpp;
+@@ -93,7 +102,7 @@ readit(file, dpp, convert)
+ 	b = &bfs[current];              /* look at new buffer */
+ 	if (b->counter == BF_FREE)      /* if it's empty */
+ 		read_ahead(file, convert);      /* fill it */
+-/*      assert(b->counter != BF_FREE);  /* check */
++/*      assert(b->counter != BF_FREE);     check */
+ 	*dpp = (struct tftphdr *)b->buf;        /* set caller's ptr */
+ 	return b->counter;
+ }
+@@ -102,6 +111,7 @@ readit(file, dpp, convert)
+  * fill the input buffer, doing ascii conversions if requested
+  * conversions are  lf -> cr,lf  and cr -> cr, nul
+  */
++void
+ read_ahead(file, convert)
+ 	FILE *file;                     /* file opened for read */
+ 	int convert;                    /* if true, convert to ascii */
+@@ -150,9 +160,11 @@ read_ahead(file, convert)
+    from the queue.  Calls write_behind only if next buffer not
+    available.
+  */
++int
+ writeit(file, dpp, ct, convert)
+ 	FILE *file;
+ 	struct tftphdr **dpp;
++	int ct;
+ 	int convert;
+ {
+ 	bfs[current].counter = ct;      /* set size of data to write */
+@@ -170,6 +182,7 @@ writeit(file, dpp, ct, convert)
+  * Note spec is undefined if we get CR as last byte of file or a
+  * CR followed by anything else.  In this case we leave it alone.
+  */
++int
+ write_behind(file, convert)
+ 	FILE *file;
+ 	int convert;
+@@ -233,9 +246,9 @@ synchnet(f)
  int	f;		/* socket to flush */
  {
  	int i, j = 0;
 -	char rbuf[PKTSIZE];
 +	char rbuf[BUF_PKTSIZE];
  	struct sockaddr_in from;
- 	int fromlen;
+-	int fromlen;
++	socklen_t fromlen;
  
+ 	while (1) {
+ 		(void) ioctl(f, FIONREAD, &i);
