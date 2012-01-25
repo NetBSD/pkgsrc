@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2011/11/01 06:02:42 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2012/01/25 12:15:07 obache Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
 DISTNAME=		icecc-2.9
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icecc/}
 DISTFILES=		icecc-2.9.tar.bz2		\
@@ -23,7 +23,8 @@ MAINTAINER=		plunky@rya-online.net
 HOMEPAGE=		http://icecc.sourceforge.net/
 COMMENT=		IceWM Control Centre
 
-DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=6.3.0:../../editors/vim-xaw
+DEPENDS+=		vim-{gtk,gtk2,kde,motif,xaw}>=${VIM_VERSION}:../../editors/vim-xaw
+DEPENDS+=		${PYPKGPREFIX}-qt3-base-[0-9]*:../../x11/py-qt3-base
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -76,6 +77,7 @@ post-install:
 
 .include "../../editors/vim-share/version.mk"
 .include "../../lang/python/application.mk"
-.include "../../x11/py-qt3-base/buildlink3.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
