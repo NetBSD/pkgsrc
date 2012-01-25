@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.228 2012/01/25 13:20:14 obache Exp $
+$NetBSD: CHANGES-2012,v 1.229 2012/01/25 17:22:41 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -356,3 +356,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated wm/py-tyle to 0.7.5nb1 [obache 2012-01-25]
 	Updated www/zopeedit to 0.7nb4 [obache 2012-01-25]
 	Updated www/py-curl to 7.19.0 [obache 2012-01-25]
+	Updated emulators/qemu to 0.15.1nb1 [jakllsch 2012-01-25]
