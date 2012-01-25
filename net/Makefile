@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.905 2012/01/22 02:54:58 agc Exp $
+# $NetBSD: Makefile,v 1.906 2012/01/25 09:55:42 hiramatsu Exp $
 #
 
 COMMENT=	Networking tools
@@ -369,6 +369,9 @@ SUBDIR+=	p5-Net-DNSServer
 SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-Dev-MIBLoadOrder
 SUBDIR+=	p5-Net-FTPSSL
+SUBDIR+=	p5-Net-Frame
+SUBDIR+=	p5-Net-Frame-Dump
+SUBDIR+=	p5-Net-Frame-Simple
 SUBDIR+=	p5-Net-GitHub
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Google
