@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.224 2012/01/25 10:22:30 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.225 2012/01/25 12:15:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -352,3 +352,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/powerdns-mysql to 2.9.22.5nb2 [ghen 2012-01-25]
 	Updated net/powerdns-pgsql to 2.9.22.5nb2 [ghen 2012-01-25]
 	Updated net/powerdns-sqlite to 2.9.22.5nb2 [ghen 2012-01-25]
+	Updated wm/icecc to 2.9nb13 [obache 2012-01-25]
