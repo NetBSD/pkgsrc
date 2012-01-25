@@ -1,7 +1,18 @@
-$NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
+$NetBSD: patch-ad,v 1.7 2012/01/25 09:56:08 he Exp $
+
+A number of changes to make this build with no warnings under -Wall.
 
 --- tftpd.c.orig	1995-03-20 20:14:39.000000000 +0000
 +++ tftpd.c
+@@ -24,7 +24,7 @@ char copyright[] =
+ #endif /* not lint */
+ 
+ #ifndef lint
+-static char sccsid[] = "@(#)tftpd.c	5.12 (Berkeley) 6/1/90";
++char tftpd_sccsid[] = "@(#)tftpd.c	5.12 (Berkeley) 6/1/90";
+ #endif /* not lint */
+ 
+ /*
 @@ -43,9 +43,13 @@ static char sccsid[] = "@(#)tftpd.c	5.12
  #include <sys/signal.h>
  #include <sys/time.h>
@@ -16,7 +27,7 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  #include <arpa/tftp.h>
  
  #include <netdb.h>
-@@ -56,17 +60,22 @@ static char sccsid[] = "@(#)tftpd.c	5.12
+@@ -56,19 +60,45 @@ static char sccsid[] = "@(#)tftpd.c	5.12
  #include <syslog.h>
  #include <string.h>
  
@@ -29,6 +40,27 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  #define	TIMEOUT		5
  
 -extern	int errno;
++extern int readConfigFile(int, char**);
++extern int realPath(char *, char*);
++extern int validateAccessToFile(char *, unsigned long, int);
++extern int isConfigFile(struct stat*);
++
++extern int readit(FILE *, struct tftphdr **, int);
++extern void read_ahead(FILE *, int);
++extern int synchnet(int);
++extern int write_behind(FILE *, int);
++extern int writeit(FILE *, struct tftphdr **, int, int);
++
++
++static void setUpForDebugging();
++static void reapChildren();
++static int awaitInput(int);
++static int createChild();
++static void runChild(struct tftphdr*, int);
++static void tftp(struct tftphdr *, int);
++static void nak(int);
++static int validate_access(char *, int);
++
  struct	sockaddr_in sock_in = { AF_INET };
  int	peer;
  int	rexmtval = TIMEOUT;
@@ -41,9 +73,20 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
 +char	buf[BUF_PKTSIZE];
 +char	ackbuf[BUF_PKTSIZE];
  struct	sockaddr_in from;
- int	fromlen;
+-int	fromlen;
++socklen_t	fromlen;
  
-@@ -105,6 +114,8 @@ char	**argv;
+ extern int	tftpDebugLevel;
+ extern char*	tftpDefaultDirectory;
+@@ -92,6 +122,7 @@ int	n;
+ }
+ #endif
+ 
++int
+ main(argc, argv)
+ int	argc;
+ char	**argv;
+@@ -105,6 +136,8 @@ char	**argv;
  
  	if (argc > 1 && strcmp (argv[1], "-d") == 0) {
  		setUpForDebugging();
@@ -52,7 +95,28 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  	}
  	if (ioctl(0, FIONBIO, &on) < 0) {
  		syslog(LOG_ERR, "ioctl(FIONBIO): %m\n");
-@@ -202,7 +213,7 @@ setUpForDebugging()
+@@ -165,6 +198,7 @@ char	**argv;
+ 
+ /* Run directly, rather than called from inetd.
+  */
++static void
+ setUpForDebugging()
+ {
+ 	int peer;
+@@ -182,7 +216,7 @@ setUpForDebugging()
+ 
+ 	listenSock.sin_family = AF_INET;
+ 	listenSock.sin_addr.s_addr = htonl(INADDR_ANY);
+-	if (serv = getservbyname("tftpd", "udp"))
++	if ((serv = getservbyname("tftpd", "udp")) != 0)
+ 		listenSock.sin_port = serv->s_port;
+ 	else
+ 		listenSock.sin_port = htons(69);
+@@ -199,10 +233,11 @@ setUpForDebugging()
+  * wait for <maxInputWait> seconds, or a default
+  * of 5 minutes if that is not set.
+  */
++static int
  awaitInput(chan)
  int	chan;
  {
@@ -61,7 +125,7 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  	int nready;
  	struct timeval tv;
  	extern int maxInputWait;
-@@ -212,8 +223,9 @@ int	chan;
+@@ -212,8 +247,9 @@ int	chan;
  	else
  		tv.tv_sec = 5*60;	/* default: wait for 5 minutes */
  	tv.tv_usec = 0;
@@ -73,7 +137,36 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  	return nready;
  }
  
-@@ -294,7 +306,10 @@ int n;
+@@ -228,6 +264,7 @@ int	signum;
+ }
+ 
+ /* Create a child process */
++static int
+ createChild()
+ {
+ 	int i, pid;
+@@ -247,6 +284,7 @@ createChild()
+ }
+ 
+ /* check for any terminated child processes */
++static void
+ reapChildren()
+ {
+ 	int p;
+@@ -262,9 +300,10 @@ reapChildren()
+  * Get a connected socket to the client and process
+  * the request.
+  */
++static void
+ runChild(tp, n)
+-register struct tftphdr *tp;
+-int n;
++     struct tftphdr *tp;
++     int n;
+ {
+ 
+ 	from.sin_family = AF_INET;
+@@ -294,7 +333,10 @@ int n;
  }
  
  int	validate_access();
@@ -85,7 +178,7 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  
  struct formats {
  	char	*f_mode;
-@@ -303,8 +318,8 @@ struct formats {
+@@ -303,8 +345,8 @@ struct formats {
  	int	(*f_recv)();
  	int	f_convert;
  } formats[] = {
@@ -96,7 +189,35 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  #ifdef notdef
  	{ "mail",	validate_user,		sendmail,	recvmail, 1 },
  #endif
-@@ -355,13 +370,13 @@ again:
+@@ -314,6 +356,7 @@ struct formats {
+ /*
+  * Handle initial connection protocol.
+  */
++static void
+ tftp(tp, size)
+ 	struct tftphdr *tp;
+ 	int size;
+@@ -323,6 +366,8 @@ tftp(tp, size)
+ 	register struct formats *pf;
+ 	char *filename, *mode;
+ 
++	mode = "";
++
+ #ifdef	BROKEN_TH_STUFF		/* solaris 2.3 redefiened th_stuff */
+ 	filename = cp = (char *) &tp->th_stuff;
+ #else
+@@ -345,8 +390,8 @@ again:
+ 		goto again;
+ 	}
+ 	for (cp = mode; *cp; cp++)
+-		if (isupper(*cp))
+-			*cp = tolower(*cp);
++		if (isupper((unsigned char)*cp))
++		  *cp = tolower((unsigned char)*cp);
+ 	for (pf = formats; pf->f_mode; pf++)
+ 		if (strcmp(pf->f_mode, mode) == 0)
+ 			break;
+@@ -355,13 +400,13 @@ again:
  		exit(1);
  	}
  	if (tftpDebugLevel > 0) {
@@ -113,7 +234,15 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  	}
  	ecode = (*pf->f_validate)(filename, tp->th_opcode);
  	if (ecode) {
-@@ -459,17 +474,25 @@ validate_access(filename, mode)
+@@ -438,6 +483,7 @@ FILE *file;
+  *
+  */
+ #define IS_ROOTED(S)	(*(S) == '/')
++static int
+ validate_access(filename, mode)
+ 	char *filename;
+ 	int mode;
+@@ -459,17 +505,25 @@ validate_access(filename, mode)
  
  	/* Rule 2:
  	 */
@@ -142,7 +271,7 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  
  			/* Insure our temporary space is big enough */
  			maxPath = ((sizeof _tmp) - 1) - rootLen;
-@@ -481,6 +504,8 @@ validate_access(filename, mode)
+@@ -481,6 +535,8 @@ validate_access(filename, mode)
  				return EACCESS;
  			}
  
@@ -151,7 +280,7 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  			/* Squeeze out any '.' or '..' components */
  			strcpy (tmpPath, filename);
  			if (realPath (tmpPath, _tmp) < 0) {
-@@ -492,21 +517,54 @@ validate_access(filename, mode)
+@@ -492,21 +548,54 @@ validate_access(filename, mode)
  			/* Create the full pathname, prefixed by the
  			 * virtual root.
  			 */
@@ -210,7 +339,7 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  	/* Check access lists */
  	/* Rules 4&5:
  	 */
-@@ -565,7 +623,7 @@ validate_access(filename, mode)
+@@ -565,7 +654,7 @@ validate_access(filename, mode)
  	 * This will be done with the effective permissions of the TFTPD
  	 * process.
  	 */
@@ -219,25 +348,27 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  	if (fd < 0) {
  		syslog (LOG_DEBUG, "open fails; errno = %d", errno);
  		return errno+100;
-@@ -593,7 +651,7 @@ void timer()
+@@ -593,7 +682,8 @@ void timer()
  /*
   * Send the requested file.
   */
 -sendfile(pf)
++int
 +tftpsendfile(pf)
  	struct formats *pf;
  {
  	struct tftphdr *dp, *r_init();
-@@ -664,7 +722,7 @@ void justquit()
+@@ -664,7 +754,8 @@ void justquit()
  /*
   * Receive a file.
   */
 -recvfile(pf)
++int
 +tftprecvfile(pf)
  	struct formats *pf;
  {
  	struct tftphdr *dp, *w_init();
-@@ -688,7 +746,7 @@ send_ack:
+@@ -688,7 +779,7 @@ send_ack:
  		write_behind(file, pf->f_convert);
  		for ( ; ; ) {
  			alarm(rexmtval);
@@ -246,3 +377,11 @@ $NetBSD: patch-ad,v 1.6 2011/09/06 11:20:19 obache Exp $
  			alarm(0);
  			if (n < 0) {            /* really? */
  				syslog(LOG_ERR, "tftpd: read: %m\n");
+@@ -758,6 +849,7 @@ struct errmsg {
+  * standard TFTP codes, or a UNIX errno
+  * offset by 100.
+  */
++static void
+ nak(error)
+ 	int error;
+ {
