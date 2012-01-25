@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/08/23 09:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/25 12:34:30 obache Exp $
 #
 
 DISTNAME=	pytyle-0.7.5
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytyle/}
 
@@ -14,9 +15,8 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PYDISTUTILSPKG=	yes
-PY_PATCHLIST=	yes
+
 PYTHON_VERSIONS_INCOMPATIBLE=	24 25 31
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
