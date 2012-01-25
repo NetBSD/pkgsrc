@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/01/25 13:19:57 obache Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pycurl.so
 share/doc/pycurl${PYVERSSUFFIX}/COPYING
+share/doc/pycurl${PYVERSSUFFIX}/COPYING2
 share/doc/pycurl${PYVERSSUFFIX}/ChangeLog
 share/doc/pycurl${PYVERSSUFFIX}/INSTALL
 share/doc/pycurl${PYVERSSUFFIX}/README
@@ -35,12 +37,14 @@ share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi4.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi5.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi6.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi_socket.py
+share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi_socket_select.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi_timer.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_multi_vs_thread.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_post.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_post2.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_post3.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_share.py
+share/doc/pycurl${PYVERSSUFFIX}/tests/test_socketopen.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_stringio.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_xmlrpc.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/util.py
