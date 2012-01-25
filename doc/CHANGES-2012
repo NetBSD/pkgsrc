@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.226 2012/01/25 12:34:41 obache Exp $
+$NetBSD: CHANGES-2012,v 1.227 2012/01/25 12:41:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -354,3 +354,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/powerdns-sqlite to 2.9.22.5nb2 [ghen 2012-01-25]
 	Updated wm/icecc to 2.9nb13 [obache 2012-01-25]
 	Updated wm/py-tyle to 0.7.5nb1 [obache 2012-01-25]
+	Updated www/zopeedit to 0.7nb4 [obache 2012-01-25]
