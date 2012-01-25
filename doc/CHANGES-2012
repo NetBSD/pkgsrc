@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.223 2012/01/25 09:57:47 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.224 2012/01/25 10:22:30 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -347,3 +347,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/p5-Net-Frame version 1.07 [hiramatsu 2012-01-25]
 	Added net/p5-Net-Frame-Dump version 1.09 [hiramatsu 2012-01-25]
 	Added net/p5-Net-Frame-Simple version 1.04 [hiramatsu 2012-01-25]
+	Updated net/powerdns to 2.9.22.5nb2 [ghen 2012-01-25]
+	Updated net/powerdns-ldap to 2.9.22.5nb2 [ghen 2012-01-25]
+	Updated net/powerdns-mysql to 2.9.22.5nb2 [ghen 2012-01-25]
+	Updated net/powerdns-pgsql to 2.9.22.5nb2 [ghen 2012-01-25]
+	Updated net/powerdns-sqlite to 2.9.22.5nb2 [ghen 2012-01-25]
