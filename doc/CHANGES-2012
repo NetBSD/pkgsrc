@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.221 2012/01/24 20:46:19 gson Exp $
+$NetBSD: CHANGES-2012,v 1.222 2012/01/25 09:56:42 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -343,3 +343,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/SDL to 1.2.14nb9 [wiz 2012-01-24]
 	Updated geography/gdal-lib to 1.8.1 [gdt 2012-01-24]
 	Updated net/py-boto to 1.9bnb2 [gson 2012-01-24]
+	Updated net/yale-tftpd to 3.0nb6 [he 2012-01-25]
