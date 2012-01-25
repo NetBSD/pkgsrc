@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2011/10/19 18:45:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2012/01/25 17:22:33 jakllsch Exp $
 
 DISTNAME=		qemu-0.15.1
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 
@@ -119,6 +120,8 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
