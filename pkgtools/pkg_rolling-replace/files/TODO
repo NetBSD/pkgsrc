@@ -1,2 +1,38 @@
-* Add support for a package variable 'norebuild', which will cause
-  pkg_rolling-replace to exclude rebuilding that package.
+* norebuild variable
+
+Add support for a package variable 'norebuild', which will cause
+pkg_rolling-replace to exclude rebuilding that package.
+
+* unsafe_depends on options
+
+Currently, "make replace" sets unsafe_depends on every invocation
+where the PKGNAME differs, and unsafe_depends_strict on every
+invocation.  However, if the PKG_OPTIONS differ, unsafe_depends should
+be set, because options in general change the ABI.
+
+* unsafe_depends_loose
+
+Often, a package changes (in version number) and there is not in fact
+an ABI change.  Using unsafe_depends with pkg_rolling-replace can
+cause unnecessary rebuilding.  Therefore it is desirable to have a way
+to mark a package to be rebuilt only if there is an ABI change.
+
+Because knowing whether there is an ABI change is hard, and because
+missed ABI changes cause problems, unsafe_depends and the default
+pkg_rolling-replace invocation will continue to mean what they do.
+
+To help those who wish to avoid rebuilding when there is believed not
+to be an ABI change, the following features are planned (with no
+timeframe):
+
+  unsafe_depends_loose: this variable is set on a replace operation if
+  the ABI has changed, and as infrequently as possible if the ABI has
+  not changed.  See mk/pkgformat/pkg/replace.mk for where
+  unsafe_depends is set; there is a natural place to insert the
+  variable setting if only one knew the correct conditional.
+
+  pkg_rolling-replace will have a new option -l, which causes it to
+  use unsafe_depends_loose instead of unsafe_depends.  This change is
+  trivial, but does not help until unsafe_depends_loose is
+  implemented.
+
