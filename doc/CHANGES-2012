@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.222 2012/01/25 09:56:42 he Exp $
+$NetBSD: CHANGES-2012,v 1.223 2012/01/25 09:57:47 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -344,3 +344,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated geography/gdal-lib to 1.8.1 [gdt 2012-01-24]
 	Updated net/py-boto to 1.9bnb2 [gson 2012-01-24]
 	Updated net/yale-tftpd to 3.0nb6 [he 2012-01-25]
+	Added net/p5-Net-Frame version 1.07 [hiramatsu 2012-01-25]
+	Added net/p5-Net-Frame-Dump version 1.09 [hiramatsu 2012-01-25]
+	Added net/p5-Net-Frame-Simple version 1.04 [hiramatsu 2012-01-25]
