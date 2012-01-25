@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2007/03/22 22:24:08 recht Exp $
+$NetBSD: patch-aa,v 1.7 2012/01/25 13:19:57 obache Exp $
 
---- setup.py.orig	2007-03-04 20:26:59.000000000 +0100
-+++ setup.py	2007-03-22 23:13:42.000000000 +0100
-@@ -146,9 +146,9 @@
+--- setup.py.orig	2008-09-09 17:40:34.000000000 +0000
++++ setup.py
+@@ -149,9 +149,9 @@ def get_data_files():
      # a list of tuples with (path to install to, a list of local files)
      data_files = []
      if sys.platform == "win32":
@@ -12,5 +12,5 @@ $NetBSD: patch-aa,v 1.6 2007/03/22 22:24:08 recht Exp $
 -        datadir = os.path.join("share", "doc", PACKAGE)
 +        datadir = os.path.join("share", "doc", PACKAGE  + sys.version[0:3])
      #
-     files = ["ChangeLog", "COPYING", "INSTALL", "README", "TODO",]
+     files = ["ChangeLog", "COPYING", "COPYING2", "INSTALL", "README", "TODO",]
      if files:
