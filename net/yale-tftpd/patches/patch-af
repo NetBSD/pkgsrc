@@ -1,6 +1,8 @@
-$NetBSD: patch-af,v 1.3 2007/10/02 20:23:08 heinz Exp $
+$NetBSD: patch-af,v 1.4 2012/01/25 09:56:08 he Exp $
 
---- classes/config.c.orig	1994-10-05 06:18:21.000000000 +0100
+A number of changes to make this build with no warnings under -Wall.
+
+--- classes/config.c.orig	1994-10-05 05:18:21.000000000 +0000
 +++ classes/config.c
 @@ -1,8 +1,12 @@
  #define CLASS_Config_PRIVATE
@@ -15,23 +17,163 @@ $NetBSD: patch-af,v 1.3 2007/10/02 20:23:08 heinz Exp $
  
  #define DFLT_NFIELDS	10
  #define START_FIELD(S)	\
-@@ -35,10 +39,6 @@ static Config config_expand();
- static unsigned char* config_copy();
- static unsigned char* get_quoted_string();
+@@ -31,13 +35,12 @@ static char quote_delimiters[]		= "'\"";
+  * a normal character.
+  */
  
+-static Config config_expand();
+-static unsigned char* config_copy();
+-static unsigned char* get_quoted_string();
+-
 -extern char*	malloc();
 -extern char*	realloc();
 -extern char*	strdup();
--
++static Config config_expand(Config, char*);
++static char* config_copy(Config, char*, char**, int);
++static char* get_quoted_string(char, char*, char**);
++
++void config_setbreak (Config, const char*, const char*);
++
+ 
  static int dflt_options	= CFG_OPT_UCASE;
  
- Config
-@@ -130,7 +130,7 @@ char*	buf;
+@@ -45,7 +48,6 @@ Config
+ config_new()
+ {
+ 	Config self;
+-	register char* p;
+ 
+ 	self = (Config)calloc (1, sizeof (*self));
+ 	config_setbreak (self, default_separators, default_delimiters);
+@@ -69,17 +71,13 @@ Config	self;
+ 	return 0;
+ }
+ 
+-#ifndef __STDC__
+-# define const
+-#endif
+-int
++void
+ config_setbreak (self, separators, delimiters)
+-Config	self;
+-const char*	separators;
+-const char*	delimiters;
+-#undef const
++	Config	self;
++	const char*	separators;
++	const char*	delimiters;
+ {
+-	register unsigned char* p;
++	unsigned char* p;
+ 
+ 	self->separators = (char*)separators;
+ 	self->delimiters = (char*)delimiters;
+@@ -112,21 +110,21 @@ Config	self;
+ }
+ 
+ /* Okay, start stashing tokens away */
++int
+ config_scanbuf (self, buf)
+-Config	self;
+-char*	buf;
++	Config	self;
++	char*	buf;
+ {
+-	register unsigned char* fr;
+-	unsigned char* to;
++	char* fr;
++	char* to;
+ 	int type;
+-	int len;
+ 
+ 	self->buf = buf;
+ 	self->tbuf = strdup(buf);
+ 	self->nfields = 0;
+ 
+-	fr = (unsigned char*)self->tbuf; to = (unsigned char*)self->buf;
+-	while ((type = self->brk[*fr]) != BRK_EOS) {
++	fr = self->tbuf; to = self->buf;
++	while ((type = self->brk[(unsigned char)*fr]) != BRK_EOS) {
  		switch (type) {
  		 case BRK_QUOTE:
  			START_FIELD(to);
--			fr = get_quoted_string (*fr, fr+1, &to);
-+			fr = get_quoted_string (*fr, fr+1, (char**)&to);
- 			fr++;	/* skip terminating quote */
- 			break;
+@@ -176,8 +174,8 @@ int	options;
+ /* Private methods */
+ static Config
+ config_expand (self, fieldstart)
+-Config	self;
+-char*	fieldstart;
++	Config	self;
++	char*	fieldstart;
+ {
+ 	self->maxfields += DFLT_NFIELDS;
  
+@@ -229,11 +227,11 @@ char*	fieldstart;
+  * returns: the location in <ss> where the scan terminated (i.e., the
+  * terminating instances of <qc>).
+  */
+-static unsigned char*
++static char*
+ get_quoted_string (qc, ss, rsd)
+-char qc;
+-register unsigned char* ss;
+-char**	rsd;
++	char qc;
++	char* ss;
++	char**	rsd;
+ {
+ 	int v;
+ 	register char* sd = *rsd;
+@@ -251,11 +249,12 @@ char**	rsd;
+ 			ss++;
+ 
+ 			/* \xDD: hex digit escape */
+-			if (*ss == 'x' && isxdigit (ss[1])) {
++			if (*ss == 'x' && isxdigit ((unsigned char)ss[1])) {
+ 				v = 0;
+ 				ss++;
+ 
+-				v = (hex_ord(*ss) << 4) + hex_ord(ss[1]);
++				v = (hex_ord((unsigned char)*ss) << 4) +
++					hex_ord((unsigned char)ss[1]);
+ 				ss++;
+ 				*sd++ = v;
+ 				continue;
+@@ -264,10 +263,12 @@ char**	rsd;
+ 			/* \DDD: octal digit escape. Up to 3 octal
+ 			 * digits.
+ 			 */
+-			else if (isodigit(*ss)) {
++			else if (isodigit((unsigned char)*ss)) {
+ 				int n = 3;
+ 
+-				for (v = 0; isodigit(*ss) && n > 0; ss++,n--) {
++				for (v = 0; isodigit((unsigned char)*ss) &&
++					     n > 0; ss++,n--)
++				{
+ 					v = (v << 3) + *ss - '0';
+ 				}
+ 				ss--;
+@@ -297,15 +298,15 @@ char**	rsd;
+ }
+ 
+ /* Copy characters and map to upper-case */
+-static unsigned char*
++static char*
+ config_copy (self, fr, pto, brk)
+-Config self;
+-register unsigned char* fr;
+-unsigned char** pto;
+-int brk;
++	Config self;
++	char* fr;
++	char** pto;
++	int brk;
+ {
+-	register unsigned char* to = *pto;
+-	register unsigned char c;
++	char* to = *pto;
++	unsigned char c;
+ 
+ 	if (self->options & CFG_OPT_UCASE) {
+ 		while ((self->brk[c = *fr] & brk) == 0) {

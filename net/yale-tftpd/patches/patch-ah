@@ -1,6 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2007/10/02 20:23:08 heinz Exp $
+$NetBSD: patch-ah,v 1.3 2012/01/25 09:56:08 he Exp $
 
---- classes/fuzzdict.c.orig	1994-10-05 06:18:22.000000000 +0100
+A number of changes to make this build with no warnings under -Wall.
+
+--- classes/fuzzdict.c.orig	1994-10-05 05:18:22.000000000 +0000
 +++ classes/fuzzdict.c
 @@ -4,6 +4,9 @@
   * unique prefix.  Need to find a better name.
@@ -22,3 +24,28 @@ $NetBSD: patch-ah,v 1.2 2007/10/02 20:23:08 heinz Exp $
  
  /* Private function declarations */
  #ifdef __STDC__
+@@ -111,7 +116,7 @@ Key_t	key;
+ {
+ 	Value_t rslt;
+ 
+-	if (rslt = SUPER_remove (self, key))
++	if ((rslt = SUPER_remove (self, key)) != 0)
+ 		self->keylistValid = 0;
+ 	return rslt;
+ }
+@@ -128,13 +133,13 @@ Key_t	key;
+ 	Value_t ret;
+ 
+ 	/* Do we have an exact match? */
+-	if (ret = SUPER_find (self, key))
++	if ((ret = SUPER_find (self, key)) != 0)
+ 		return ret;
+ 
+ 	/*
+ 	 * See if we can find a unique match on the prefix.
+ 	 */
+-	if (key = fuzzdict_bsearch (self, key))
++	if ((key = fuzzdict_bsearch (self, key)) != 0)
+ 		return SUPER_find (self, key);
+ 
+ 	/* Can't find it */

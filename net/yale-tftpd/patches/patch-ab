@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
+$NetBSD: patch-ab,v 1.2 2012/01/25 09:56:08 he Exp $
+
+Don't do lint by default.
 
 --- classes/Makefile.orig	Mon Mar 20 21:11:53 1995
 +++ classes/Makefile
