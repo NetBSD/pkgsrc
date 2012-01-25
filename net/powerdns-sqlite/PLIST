@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/23 15:11:54 ghen Exp $
-lib/libgsqlitebackend.la
+@comment $NetBSD: PLIST,v 1.3 2012/01/25 10:21:12 ghen Exp $
+lib/pdns/libgsqlitebackend.la
