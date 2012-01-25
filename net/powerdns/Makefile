@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/01/23 15:11:54 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/25 10:21:12 ghen Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns/}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Modern, advanced and high performance nameserver
 
 CONFIGURE_ARGS+=	--with-modules="geo"
