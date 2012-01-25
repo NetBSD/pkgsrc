@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2005/12/18 18:37:16 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2012/01/25 09:56:08 he Exp $
+
+A number of changes to make this build with no warnings under -Wall.
 
 --- classes/access.c.orig	1994-10-05 05:20:44.000000000 +0000
 +++ classes/access.c
@@ -9,7 +11,43 @@ $NetBSD: patch-ae,v 1.2 2005/12/18 18:37:16 joerg Exp $
  #include <ctype.h>
  #include <sys/types.h>
  #include <sys/stat.h>
-@@ -92,7 +94,6 @@ AccessGroup
+@@ -39,7 +41,7 @@ typedef struct ACCESSLISTHEAD {
+ 
+ #if defined (__STDC__)
+ 
+-	int	accessGroup_printOn (
++	void	accessGroup_printOn (
+ 			AccessGroup self,
+ 			FILE* file
+ 		);
+@@ -51,13 +53,14 @@ typedef struct ACCESSLISTHEAD {
+ 			listhead_t* alp,
+ 			condition_t* condition
+ 		);
++/*
+ 	static int accessList_validateAddress (
+ 			listhead_t* alp,
+ 			unsigned long source,
+ 			int type
+ 		);
+-
+-	static int	accessListPrintOn (
++*/
++	static void	accessListPrintOn (
+ 			listhead_t* alp,
+ 			FILE* file
+ 		);
+@@ -69,6 +72,9 @@ typedef struct ACCESSLISTHEAD {
+ 			condition_t* ptr
+ 		);
+ 	static int accessListVerifyAddress ();
++
++void accessGroup_addCondition(AccessGroup, int, condition_t*);
++
+ #else
+ 	static int	accessList_dispose ();
+ 	static int	accessList_addCondition ();
+@@ -92,7 +98,6 @@ AccessGroup
  accessGroup_new ()
  {
  	AccessGroup self;
@@ -17,3 +55,82 @@ $NetBSD: patch-ae,v 1.2 2005/12/18 18:37:16 joerg Exp $
  
  	self = (AccessGroup)calloc (1, sizeof (*self));
  	return self;
+@@ -123,9 +128,9 @@ AccessGroup self;
+  */
+ int
+ accessGroup_add (self, argc, argv)
+-AccessGroup self;
+-int	argc;
+-char	**argv;
++	AccessGroup self;
++	int	argc;
++	char	**argv;
+ {
+ 	condition_t condition;
+ 	int list;
+@@ -137,14 +142,13 @@ char	**argv;
+ }
+ 
+ 
+-int
++void
+ accessGroup_addCondition (self, list, condition)
+-AccessGroup self;
+-condition_t* condition;
+-int list;
++	AccessGroup self;
++	int list;
++	condition_t* condition;
+ {
+-	condition_t* cp, * lp;
+-	listhead_t* hp;
++	condition_t* cp;
+ 	char *tcp;
+ 
+ 	/* get enough space for the condition */
+@@ -218,9 +222,10 @@ int type;
+ 
+ 
+ /* Debugging function */
++void
+ accessGroup_printOn(self, file)
+-AccessGroup self;
+-FILE*	file;
++     AccessGroup self;
++     FILE*	file;
+ {
+ 	register int i;
+ 
+@@ -365,9 +370,10 @@ static char* permNames[] ={ "deny", "rea
+ 				? "<unknown>" : permNames[N])
+ 
+ 
++void
+ accessListPrintOn (alp, file)
+-listhead_t* alp;
+-FILE*	file;
++     listhead_t* alp;
++     FILE*	file;
+ {
+ 	char* permission;
+ 	char addrbuf[32], maskbuf[32];
+@@ -426,7 +432,7 @@ condition_t* ptr;
+ 	}
+ 	av++; ac--;
+ 
+-	if (ac == 1 && **av == '-' || **av == '+') {
++	if ((ac == 1 && **av == '-') || **av == '+') {
+ 		int addlist;
+ 		listhead_t* hp;
+ 		condition_t* cp;
+@@ -435,7 +441,9 @@ condition_t* ptr;
+ 			self->accessError = "-<list> not implemented yet";
+ 			return 0;
+ 		}
+-		if (!isdigit (av[0][1]) || (addlist = atoi (&av[0][1])) < 0) {
++		if (!isdigit ((unsigned char)av[0][1]) ||
++		    (addlist = atoi (&av[0][1])) < 0)
++		{
+ 			self->accessError =
+ 				"+<list> requires positive integer argument";
+ 			return 0;
