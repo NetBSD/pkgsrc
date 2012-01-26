@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2011/09/12 08:17:07 adam Exp $
+# $NetBSD: Makefile,v 1.33 2012/01/26 11:34:28 obache Exp $
 
 DJANGOVERS=	1.3.1
 DISTNAME=	Django-${DJANGOVERS}
 PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://media.djangoproject.com/releases/1.3/
 
@@ -13,7 +14,6 @@ LICENSE=	modified-bsd
 
 PREV_PKGPATH=	www/py-django-devel
 
-PYDISTUTILSPKG=	# yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -48,5 +48,5 @@ PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/postgresql/", "$${PLIST.pgsql}${BACKE
 PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/postgresql_psycopg2/", "$${PLIST.pgsql}${BACKEND_PATH_PLIST}/postgresql_psycopg2/") }
 PRINT_PLIST_AWK+=	{ gsub("^${BACKEND_PATH}/sqlite3/", "$${PLIST.sqlite}${BACKEND_PATH_PLIST}/sqlite3/") }
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
