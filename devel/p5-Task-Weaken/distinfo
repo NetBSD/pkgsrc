@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/06/14 19:46:43 sno Exp $
+$NetBSD: distinfo,v 1.4 2012/01/26 12:47:38 rhaen Exp $
 
-SHA1 (Task-Weaken-1.03.tar.gz) = 1a958220f92ac11dd4548c9fe405ca9c9a0ffdc9
-RMD160 (Task-Weaken-1.03.tar.gz) = 5b1298166ba38715e0f9f43f8ce8bfb29b8706da
-Size (Task-Weaken-1.03.tar.gz) = 26337 bytes
+SHA1 (Task-Weaken-1.04.tar.gz) = a057c88cd98d1d81cad911f2d8bbd8c717310d43
+RMD160 (Task-Weaken-1.04.tar.gz) = c97f8ffb97e6d4e2b4ecfb3f83cbe82fd0417778
+Size (Task-Weaken-1.04.tar.gz) = 29976 bytes
