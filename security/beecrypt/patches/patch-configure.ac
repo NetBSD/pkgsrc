@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.ac,v 1.1 2012/01/26 06:05:04 sbd Exp $
+
+--- configure.ac.orig	2004-11-19 12:33:00.000000000 +0000
++++ configure.ac
+@@ -602,7 +602,7 @@ case $target_os in
+ linux*)
+   case $bc_target_arch in
+   powerpc64 | s390x | x86_64)
+-    bc_libalt="64"
++    bc_libalt=""
+     ;;
+   esac
+   ;;
