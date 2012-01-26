@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2011/08/16 20:19:14 wiz Exp $
+$NetBSD: distinfo,v 1.9 2012/01/26 15:33:31 rhaen Exp $
 
-SHA1 (ORLite-1.50.tar.gz) = b11cfc94beaccd7ce1a3d4376c92f3f9a57e18d8
-RMD160 (ORLite-1.50.tar.gz) = 7d4029a63e3c9886a1bd92a12a80c468070f797b
-Size (ORLite-1.50.tar.gz) = 60652 bytes
+SHA1 (ORLite-1.51.tar.gz) = 9f1a994ab0b31ac8382c9e784ac3e0edfc557862
+RMD160 (ORLite-1.51.tar.gz) = b7f8fd8a52633c2d804466d3fa299dbef715b5a5
+Size (ORLite-1.51.tar.gz) = 62175 bytes
