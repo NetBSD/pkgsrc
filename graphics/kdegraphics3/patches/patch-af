@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.4 2012/01/26 21:14:30 shattered Exp $
+
+--- kpdf/xpdf/xpdf/GlobalParams.cc.orig	2012-01-23 00:54:20.000000000 +0000
++++ kpdf/xpdf/xpdf/GlobalParams.cc
+@@ -128,6 +128,7 @@ static char *displayFontDirs[] = {
+ };
+ #else
+ static char *displayFontDirs[] = {
++  "/usr/pkg/share/fonts/urw",
+   "/usr/share/ghostscript/fonts",
+   "/usr/pkg/share/ghostscript/fonts",
+   "/usr/local/share/ghostscript/fonts",
