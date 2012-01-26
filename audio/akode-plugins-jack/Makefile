@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/26 02:45:44 sbd Exp $
 #
 
 PKGNAME=		akode-plugins-jack-${AKODE_VERSION}
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-jack
 
 do-install:
 	cd ${WRKSRC}/akode/plugins/jack_sink && ${SETENV} ${MAKE_ENV} ${MAKE} \
-		prefix=${DESTDIR}${PREFIX} install
+		DESTDIR=${DESTDIR} install
 
 .include "../../audio/jack/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"

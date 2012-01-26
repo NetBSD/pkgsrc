@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/26 02:45:45 sbd Exp $
 #
 
 PKGNAME=		akode-plugins-resampler-${AKODE_VERSION}
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-libsamplerate
 
 do-install:
 	cd ${WRKSRC}/akode/plugins/src_resampler && ${SETENV} ${MAKE_ENV} \
-		${MAKE} prefix=${DESTDIR}${PREFIX} install
+		${MAKE} DESTDIR=${DESTDIR} install
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
