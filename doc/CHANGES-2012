@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.245 2012/01/26 20:07:11 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.246 2012/01/26 21:05:10 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -410,3 +410,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/p5-NetPacket to 1.3.1 [rhaen 2012-01-26]
 	Updated mail/p5-App-Siesh to 0.21 [rhaen 2012-01-26]
 	Updated databases/p5-Net-MySQL to 0.11 [rhaen 2012-01-26]
+	Updated graphics/p5-Image-ExifTool to 8.75 [rhaen 2012-01-26]
+	Updated devel/p5-Set-IntSpan to 1.16 [rhaen 2012-01-26]
+	Updated net/p5-IO-Interface to 1.06 [rhaen 2012-01-26]
+	Updated net/p5-Net-LDAP-Server to 0.43 [rhaen 2012-01-26]
+	Updated devel/p5-File-Find-Rule to 0.33 [rhaen 2012-01-26]
+	Updated security/p5-Authen-TacacsPlus to 0.22 [rhaen 2012-01-26]
+	Updated textproc/p5-XML-Parser-Lite-Tree to 0.14 [rhaen 2012-01-26]
+	Updated databases/p5-Redis to 1.926 [rhaen 2012-01-26]
+	Updated audio/p5-Audio-Scan to 0.93 [rhaen 2012-01-26]
+	Updated devel/p5-InlineX-C2XS to 0.17 [rhaen 2012-01-26]
