@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.242 2012/01/26 15:45:01 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.243 2012/01/26 15:51:56 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -385,3 +385,14 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTTP-Server-Simple to 0.44 [rhaen 2012-01-26]
 	Updated misc/libreoffice3-bin to 3.4.5 [ryoon 2012-01-26]
 	Updated editors/Sigil to 0.5.0 [ryoon 2012-01-26]
+	Updated databases/p5-Apache-DBI to 1.11 [rhaen 2012-01-26]
+	Updated databases/p5-BerkeleyDB to 0.50 [rhaen 2012-01-26]
+	Updated databases/p5-DBD-SQLite to 1.35 [rhaen 2012-01-26]
+	Updated databases/p5-DBIx-Class to 0.08196 [rhaen 2012-01-26]
+	Updated databases/p5-DB_File to 1.826 [rhaen 2012-01-26]
+	Updated databases/p5-Jifty-DBI to 0.74 [rhaen 2012-01-26]
+	Updated devel/p5-Module-Install to 1.04 [rhaen 2012-01-26]
+	Updated databases/p5-ORLite to 1.51 [rhaen 2012-01-26]
+	Updated databases/p5-ORLite-Migrate to 1.09 [rhaen 2012-01-26]
+	Updated devel/p5-App-Cmd to 0.314 [rhaen 2012-01-26]
+	Updated devel/p5-Devel-PatchPerl to 0.62 [rhaen 2012-01-26]
