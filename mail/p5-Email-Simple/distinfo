@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/03/11 09:24:29 sno Exp $
+$NetBSD: distinfo,v 1.7 2012/01/26 12:59:57 rhaen Exp $
 
-SHA1 (Email-Simple-2.100.tar.gz) = 0c5d212246c5d75873fe7d0673fb9f78c2d59702
-RMD160 (Email-Simple-2.100.tar.gz) = 3dd74acc94d26b9324acb35d43bd4552ae8d2a56
-Size (Email-Simple-2.100.tar.gz) = 31007 bytes
+SHA1 (Email-Simple-2.101.tar.gz) = 0e37a1ce0607725f3d759d269f6aaab13f4fd497
+RMD160 (Email-Simple-2.101.tar.gz) = bc6c2e9dda3ca2b0b62eee578524577d1c290b3d
+Size (Email-Simple-2.101.tar.gz) = 31327 bytes
