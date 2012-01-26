@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.243 2012/01/26 15:51:56 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.244 2012/01/26 16:00:33 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -396,3 +396,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-ORLite-Migrate to 1.09 [rhaen 2012-01-26]
 	Updated devel/p5-App-Cmd to 0.314 [rhaen 2012-01-26]
 	Updated devel/p5-Devel-PatchPerl to 0.62 [rhaen 2012-01-26]
+	Updated devel/p5-Tee to 0.14 [rhaen 2012-01-26]
+	Updated devel/p5-Test-Pod to 1.45 [rhaen 2012-01-26]
