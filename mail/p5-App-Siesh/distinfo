@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/22 18:21:08 sno Exp $
+$NetBSD: distinfo,v 1.2 2012/01/26 19:50:32 rhaen Exp $
 
-SHA1 (App-Siesh-0.20.tar.gz) = 7fc2064a86b8509e2b0d01a0ace3adb3be50aaba
-RMD160 (App-Siesh-0.20.tar.gz) = 7991ff7719a8981ea60618fb9847476f118f0404
-Size (App-Siesh-0.20.tar.gz) = 11404 bytes
+SHA1 (App-Siesh-0.21.tar.gz) = e113b8deeca5c9eb0805e98abdddb187b2172938
+RMD160 (App-Siesh-0.21.tar.gz) = 5936b468973dbe70b5b30e03fdd998327e73fb70
+Size (App-Siesh-0.21.tar.gz) = 14237 bytes
