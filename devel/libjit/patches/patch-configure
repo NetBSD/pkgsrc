@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2012/01/26 02:59:53 sbd Exp $
+
+Remove the section from configure that adds the gcc multi_os_directory to
+the libdir.
+
+--- configure.orig	2008-12-10 17:49:28.000000000 +0000
++++ configure
+@@ -22531,13 +22531,6 @@ rm -f core conftest.err conftest.$ac_obj
+ { echo "$as_me:$LINENO: result: $piccompgoto" >&5
+ echo "${ECHO_T}$piccompgoto" >&6; }
+ 
+-if test x$GCC = xyes ; then
+-	multi_os_directory=`$CC -print-multi-os-directory`
+-	case $multi_os_directory in
+-	  .) ;; # Avoid trailing /.
+-	  *) libdir=$libdir/$multi_os_directory ;;
+-	esac
+-fi
+ 
+ 
+ if test "x$suppress_libm" = "xno" ; then
