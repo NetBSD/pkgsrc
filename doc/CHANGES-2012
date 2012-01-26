@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.230 2012/01/26 05:41:11 obache Exp $
+$NetBSD: CHANGES-2012,v 1.231 2012/01/26 09:14:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -358,3 +358,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-curl to 7.19.0 [obache 2012-01-25]
 	Updated emulators/qemu to 0.15.1nb1 [jakllsch 2012-01-25]
 	Updated net/zeromq to 2.1.11 [obache 2012-01-26]
+	Updated www/py-webpy to 0.36nb1 [obache 2012-01-26]
