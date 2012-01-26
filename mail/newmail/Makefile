@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/02/10 17:22:20 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/01/26 14:56:56 joerg Exp $
 
 DISTNAME=	newmail-1.0.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ugh.net.au/pub/unix/newmail/
 
