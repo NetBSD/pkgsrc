@@ -1,0 +1,142 @@
+.\" $NetBSD: screws.conf.5,v 1.1 2012/01/26 15:00:25 joerg Exp $
+.\" Original source covered by GPLv2
+.Dd 2004-04-25
+.Dt SCREWS.CONF 5
+.Os
+.Sh NAME
+.Nm screws.conf
+.Nd Screws configuration file
+.Sh DESCRIPTION
+The
+.Nm
+file is the default configuration file for screws.
+This file is composed by lines telling to the interpreter how to run the
+server, which files to read, ports to listen, security issues, permissions,
+environment variables, IO stuff, SSL parameters, logging facilities and
+restrictions.
+.Pp
+There's one optional argument passed to some directives named as '[?]',
+it's used to define where the directive will act. This argument could be
+for example if you don't define this argument, the value will be defined
+as global, and every thread created after it will inherit this value.
+.Pp
+Also this argument could be a name of a thread, or '*' if you want to
+apunter to all threads, or '@*' if you want to apunter to all threads
+created by every listenthread (it means execution threads). Or just
+type the name of the thread, for example: 'default' or '@default'.
+.Sh DIRECTIVES
+.Ss Control directives
+.Bl -tag
+.It Cm daemon
+Starts the server in background.
+.It Cm strict
+Be strict in warnings produced by the configuration file, missconfigurations, syntax errors, etc.
+.It Cm verbose
+Verbose level. This value comes from 0 to 5, it's used for debugging purposes, the default value is '0'.
+.It Cm whitespace [char]
+Specify the character that will be an alias for the ' ' character.
+.El
+.Ss Screws directives
+.Bl -tag
+.It Cm listen [proto] [ip] [port] [name]
+Where [proto] is 'inet' or 'inet6'. [ip] is the IP where screws will bind to it (for example 0.0.0.0), and [name] is the alias name for this listenThread.
+.It Cm exec [?] [pathtobin]
+This directive is used to specify the program or script that will get the connection, parse the arguments of the request and print the output.
+.It Cm env [?] [var] ([value])
+Using env you can set and unset environment variables to the threads. Environment variables are inherited from their parent processes. If value isn't defined. screws will unsetenv it.
+.El
+.Ss Network directives
+.Bl -tag
+.It Cm io [type]
+IO type means the internal functionality of buffers and streams. Nowadays there are 4 different methods: \fBdirect, buffer, poll, select\fP. Depending on your requeriments you would have to select one. Their differences are: \fBdirect\fP is just direct output, it means that there's no buffering and SSL is not supported, \fBbuffer\fP wraps the output by the tcp-window size and only supports output buffering, there's no input (PUT method will not work here). \fBpoll\fP and \fBselect\fP works on a similar way, but poll should work faster, and select is more portable than poll.
+.It Cm httplen
+Limits the number of characters in the input request. Default value is MAX_INT.
+.It Cm timeout [?] [seconds]
+Sets a timeout for the client connections.
+.It Cm notimeout
+This directive disables all connection timeouts.
+.It Cm falsetimeout
+When this directive is set, every line typed into the incomming connection will reset the alarm timeout.
+.It Cm noresolv
+It's used to disable all dns name lookups, it's useful to enhace timeouts.
+.It Cm backlog [?] [number]
+The maximum number of connections that will be handled in queue by the operating system.
+.It Cm maxhdr [?] [number]
+It's used to specify the maximum number of headers that the client will be able to write from the client.
+.It Cm noargs
+This directive disables all argument parsing. (?var=value&var2=value2)
+.El
+.Ss Logging directives
+.Bl -tag
+.It Cm logstr [?] [string]
+Sets the logging string. By default is set to the standard apache format. Format have these variables: %a:useragent, %e:errorcode, %r:referer, %i:remoteIP, %I:remoteHOST, %h:host(vhosts), %H:httpversion, %d:date in human format, %t:hexdate, %f:file requested, %m method, %c:argc, %n:newline
+.It Cm nologs
+Disable logs.
+.It Cm nolock
+Disable file locking access. Just for debugging if you have problems with locked threads.
+.It Cm logfile [?] [file]
+Specifies the file where screws will write the access log.
+.It Cm errfile [?] [file]
+Sets the file where screws will write the error log.
+.El
+.Ss Tunning directives
+.Bl -tag
+.It Cm maxthr [?] [number]
+Defines the maximum number of threads that this process can have.
+.It Cm maxcpu [?] [number]
+Defines the time of life for the process.
+.It Cm maxmem [?] [number]
+Sets the maximum amount of memory that this process would handle.
+.It Cm prio [?] [number]
+Nice the process to this value.
+.It Cm usleep [usecs]
+Sets the usecs time that screws will sleep in infinite loops.(fine tunning)
+.El
+.Ss Module directives
+.Bl -tag
+.It Cm addmod [module]
+Loads a module into memory. Modules path is set by default to: ${PREFIX}/lib/screws/. You can give the complete URL or relative URL from your current directory or just the name of the module with or without the '.so' extension.
+.It Cm modopt [module] [argument]
+Sets an option for a module. These options are documented inside every module. Not all modules takes arguments.
+.El
+.Ss Security directives
+.Bl -tag
+.It Cm setuid|seteuid [?] [usr]
+Sets the UserID or EffectiveUserID to the given username/uid.
+.It Cm setgid|setegid [?] [grp]
+Sets the GroupID or EffectiveGroupID to the given groupname/gid.
+.It Cm chroot [?] [dir]
+Sets the directory where the thread will chroot to it. Parent process must be root or kernel permissions to execute this syscall. It's executed in a secure way, it means: "chdir(dir);chroot(.)". Like BSD systems do.
+.It Cm chdir [?] [dir]
+Sets the directory where the process will change to.
+.El
+.Ss SSL directives
+.Bl -tag
+.It Cm enc [algorithm]
+Algorithm can be set to ssl2, ssl3, tls and ssl23.
+.It Cm addssl [?] [cert] ([private key])
+Sets to the thread [?] the SSL comunication. You must specify the certificate and private key. On loading, screws will ask for the SSL password.
+.El
+.Sh EXAMPLE
+.Bd -literal
+#
+# SCREWS default configuration file
+#
+noresolv
+io buffer
+
+listen inet 0.0.0.0 80 default
+
+chdir @* perl/
+exec * ./main.pl
+
+addmod unicode
+addmod Mime
+addmod noupdir
+.Ed
+.Sh SEE ALSO
+.Xr screwsctl 1 ,
+.Xr screwsd 8 ,
+.Xr screws.conf 5 ,
+.Sh AUTHORS
+Main developer: pancake <pancake@phreaker.net>
