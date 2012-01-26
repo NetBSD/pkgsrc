@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.234 2012/01/26 10:52:25 obache Exp $
+$NetBSD: CHANGES-2012,v 1.235 2012/01/26 11:34:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -361,3 +361,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated archivers/p5-Archive-Tar to 1.82 [rhaen 2012-01-26]
 	Updated www/py-webpy to 0.36nb1 [obache 2012-01-26]
 	Updated databases/py-psycopg2 to 2.4.4 [obache 2012-01-26]
+	Updated www/py-django to 1.3.1nb1 [obache 2012-01-26]
