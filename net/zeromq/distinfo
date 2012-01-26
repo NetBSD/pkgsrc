@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/10/04 07:59:04 obache Exp $
+$NetBSD: distinfo,v 1.5 2012/01/26 05:40:30 obache Exp $
 
-SHA1 (zeromq-2.1.10.tar.gz) = 9f8af8b15ce0215243ea1b1c3969284550895718
-RMD160 (zeromq-2.1.10.tar.gz) = c750f99ed0d816aaa911afb3ee73e75918a6bf8c
-Size (zeromq-2.1.10.tar.gz) = 1879075 bytes
+SHA1 (zeromq-2.1.11.tar.gz) = e8691266559a8031ade6c4fe53f54738c7757447
+RMD160 (zeromq-2.1.11.tar.gz) = 017379490ec76ccab6aac2ccaee8b6fa2adb5d4e
+Size (zeromq-2.1.11.tar.gz) = 1891038 bytes
