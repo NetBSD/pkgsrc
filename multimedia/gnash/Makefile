@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/01/24 09:11:09 sbd Exp $
+# $NetBSD: Makefile,v 1.46 2012/01/26 14:17:38 joerg Exp $
 #
 
 DISTNAME=		gnash-${VER}
@@ -8,7 +8,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_GNU:=gnash/${VER}/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		matias@dotbsd.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnashdev.org/
 COMMENT=		GPL SWF player
 LICENSE=		gnu-gpl-v3
