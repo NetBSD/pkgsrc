@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2012/01/18 13:49:23 adam Exp $
+# $NetBSD: Makefile,v 1.37 2012/01/26 15:00:27 rhaen Exp $
 
-DISTNAME=	BerkeleyDB-0.49
+DISTNAME=	BerkeleyDB-0.50
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5bdb
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=BerkeleyDB/}
