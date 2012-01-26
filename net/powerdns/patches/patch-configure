@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1.2.2 2012/01/26 23:39:10 tron Exp $
+
+--- configure.orig	2012-01-23 14:16:18.745785316 +0000
++++ configure
+@@ -16867,7 +16867,7 @@ do
+ 	done
+ 	modulelibs="$modulelibs `cat $srcdir/modules/${a}backend/OBJECTLIBS`"
+ 
+-	if test ${a} == "gpgsql"; then
++	if test ${a} = "gpgsql"; then
+ 		case "$host_os" in
+ 		freebsd*)
+ 			;;

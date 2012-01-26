@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6.16.1 2012/01/13 14:03:31 tron Exp $
+# $NetBSD: Makefile,v 1.6.16.2 2012/01/26 23:39:09 tron Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../net/powerdns/Makefile.backend"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns-ldap/}
+PKGREVISION=		2
 COMMENT=		LDAP backend module for PowerDNS
 
 CONFIGURE_ARGS+=	--with-dynmodules="ldap"
