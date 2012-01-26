@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/16 10:53:26 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/26 12:49:25 obache Exp $
 #
 
 DISTNAME=	django-registration-0.8-alpha-1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S:-alpha-:a:}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://bitbucket.org/ubernostrum/django-registration/downloads/
 
@@ -18,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-PYDISTUTILSPKG=	# yes
+EGG_NAME=	${DISTNAME:S/-/_/g:S/registration_/registration-/}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
