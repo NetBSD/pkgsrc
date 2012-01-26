@@ -1,15 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/03/11 14:18:30 gdt Exp $
+$NetBSD: patch-aa,v 1.2 2012/01/26 01:00:14 gdt Exp $
 
---- src/gpspoint.c.orig	2009-02-08 14:47:01.000000000 +0100
+--- src/gpspoint.c.orig	2010-12-13 01:55:55.000000000 +0000
 +++ src/gpspoint.c
-@@ -81,8 +81,14 @@ static gdouble line_altitude = VIK_DEFAU
+@@ -81,8 +81,25 @@ static gdouble line_altitude = VIK_DEFAU
  static gboolean line_visible = TRUE;
  
  static gboolean line_extended = FALSE;
-+/* Work around a bug in NetBSD. See PR standards/40695 */
-+#if defined(__NetBSD__) && __GNUC_PREREQ__(3,3)
++#if defined(__NetBSD__)
++#if __GNUC_PREREQ__(3,3)
++/*
++ * Work around a bug in NetBSD.  See PR standards/40695.  Bug is fixed
++ * in -current but not -5; revisit if the workaround causes problems.
++ */
 +static gdouble line_speed = __builtin_nanf("");
 +static gdouble line_course = __builtin_nanf("");
++#else /* _GNUC_PREREQ__(3,3) */
++/*
++ * gcc too old for workaround; defer fix to someone else.
++ */
++static gdouble line_speed = NAN;
++static gdouble line_course = NAN;
++#endif
 +#else /* NetBSD */
  static gdouble line_speed = NAN;
  static gdouble line_course = NAN;
