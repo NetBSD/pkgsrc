@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.14 2012/01/21 09:05:39 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.15 2012/01/26 23:45:32 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -94,3 +94,11 @@ Pullup ticket #3658 - requested by taca
 security/php-suhosin security fix
 Pullup ticket #3659 - requested by taca
 lang/php53 suhosin-patch update.
+Pullup ticket #3660 - requested by ghen
+net/powerdns: build fix
+net/powerdns-ldap: build fix
+net/powerdns-mysql: build fix
+net/powerdns-pgsql: build fix
+net/powerdns-sqlite: build fix
+Pullup ticket #3662 - requested by gls
+www/moodle: security update
