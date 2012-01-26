@@ -1,0 +1,25 @@
+$NetBSD: patch-bc,v 1.1 2012/01/26 11:25:55 drochner Exp $
+
+CVE-2012-0036
+
+--- lib/imap.c.orig	2011-11-04 22:32:56.000000000 +0000
++++ lib/imap.c
+@@ -947,17 +947,12 @@ static CURLcode imap_parse_url_path(stru
+   struct imap_conn *imapc = &conn->proto.imapc;
+   struct SessionHandle *data = conn->data;
+   const char *path = data->state.path;
+-  int len;
+ 
+   if(!*path)
+     path = "INBOX";
+ 
+   /* url decode the path and use this mailbox */
+-  imapc->mailbox = curl_easy_unescape(data, path, 0, &len);
+-  if(!imapc->mailbox)
+-    return CURLE_OUT_OF_MEMORY;
+-
+-  return CURLE_OK;
++  return Curl_urldecode(data, path, 0, &imapc->mailbox, NULL, TRUE);
+ }
+ 
+ /* call this when the DO phase has completed */
