@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/08/11 17:14:09 adam Exp $
+$NetBSD: distinfo,v 1.7 2012/01/26 18:45:10 rhaen Exp $
 
-SHA1 (Data-Dump-1.19.tar.gz) = ffd9099e0d6fdfb83b0149be419cb45512aca702
-RMD160 (Data-Dump-1.19.tar.gz) = 625881436d1ca3500d22bc4b514823a31780c158
-Size (Data-Dump-1.19.tar.gz) = 19705 bytes
+SHA1 (Data-Dump-1.21.tar.gz) = 472688c9c109d200f9b401e8230c39a56d7f7bf6
+RMD160 (Data-Dump-1.21.tar.gz) = cee46a00f23d60e0ff05bd9cc9d12c797382eb8b
+Size (Data-Dump-1.21.tar.gz) = 20132 bytes
