@@ -1,10 +1,16 @@
-$NetBSD: distinfo,v 1.14 2012/01/16 21:05:01 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2012/01/26 15:43:20 ryoon Exp $
 
-SHA1 (Sigil-0.4.2-Code.zip) = 67464f521c1b11641812b6959549a842546b4f8d
-RMD160 (Sigil-0.4.2-Code.zip) = c0834a04cdc67f8d066e4a66c43973a6013866e0
-Size (Sigil-0.4.2-Code.zip) = 10104606 bytes
-SHA1 (patch-CMakeLists.txt) = 1e7691d8c318b8d8bb9f76462cc50325fad387d7
+SHA1 (Sigil-0.5.0-Code.zip) = 4139602b0c39db72f6317f39c13b35cd0f86238d
+RMD160 (Sigil-0.5.0-Code.zip) = 737f34b95b165a7af6c72b44daf08103d47b6b26
+Size (Sigil-0.5.0-Code.zip) = 12396113 bytes
+SHA1 (patch-CMakeLists.txt) = 2a60748a6e1106814d151aca7ebc93b33be8d38b
+SHA1 (patch-src_FlightCrew_CMakeLists.txt) = 2c7cc2717a3f099f14d570c95b9d032920aabeb0
 SHA1 (patch-src_FlightCrew_Validators_Opf_ReachabilityAnalysis.cpp) = 0977053a34b81c27cfb2408c9da9b77b69c76854
+SHA1 (patch-src_Sigil_CMakeLists.txt) = d0be4fe85f0f48efd5ed5ca0b087ac021b42cb61
+SHA1 (patch-src_Sigil_Exporters_ExportEPUB.cpp) = 19fc68f3558f564509d0bc3508c18a634530419b
+SHA1 (patch-src_Sigil_Importers_ImportOEBPS.cpp) = 8965f6b3de3d7c56044cb342e2a0a66ec78bd9e2
+SHA1 (patch-src_XercesExtensions_CMakeLists.txt) = 295d99ffac4e65c9d96e8972318bb1cd45e0aef0
 SHA1 (patch-src_ZipArchive_DirEnumerator.cpp) = 1430a73cb771c77bd15fc32768a3accfd70ee28b
 SHA1 (patch-src_ZipArchive_ZipFile__stl.cpp) = d7db211cfd373a3d4ead90da67d0b9d445baa26f
 SHA1 (patch-src_ZipArchive_ZipPlatform__lnx.cpp) = 9d552417e86c77584b952bc07b06e75eaa02a68d
+SHA1 (patch-src_utf8-cpp_utf8_core.h) = 38ae594f64c0a55316aa0ec29571a01d440a1948
