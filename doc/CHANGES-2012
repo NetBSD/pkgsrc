@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.240 2012/01/26 14:41:46 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.241 2012/01/26 15:34:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -383,3 +383,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTTP-Body to 0.15 [rhaen 2012-01-26]
 	Updated www/p5-HTTP-DAV to 0.46 [rhaen 2012-01-26]
 	Updated www/p5-HTTP-Server-Simple to 0.44 [rhaen 2012-01-26]
+	Updated misc/libreoffice3-bin to 3.4.5 [ryoon 2012-01-26]
