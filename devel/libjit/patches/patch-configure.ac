@@ -1,0 +1,24 @@
+$NetBSD: patch-configure.ac,v 1.1 2012/01/26 02:59:53 sbd Exp $
+
+Remove the section from configure that adds the gcc multi_os_directory to
+the libdir.
+
+--- configure.ac.orig	2008-12-10 17:46:12.000000000 +0000
++++ configure.ac
+@@ -441,16 +441,6 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]],
+ ]])], [AC_DEFINE(HAVE_PIC_COMPUTED_GOTO, 1, Define if you have PIC support for computed gotos) piccompgoto=yes], [piccompgoto=no])
+ AC_MSG_RESULT($piccompgoto)
+ 
+-dnl Check for building on a multi os system
+-if test x$GCC = xyes ; then
+-	multi_os_directory=`$CC -print-multi-os-directory`
+-	case $multi_os_directory in
+-	  .) ;; # Avoid trailing /.
+-	  *) libdir=$libdir/$multi_os_directory ;;
+-	esac
+-fi
+-AC_SUBST(libdir)
+-
+ dnl Checks for library functions.
+ if test "x$suppress_libm" = "xno" ; then
+ 	AC_CHECK_LIB(m, sin)
