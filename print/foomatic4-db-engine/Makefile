@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/08/14 14:21:29 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/26 11:53:49 drochner Exp $
 #
 
-DISTNAME=	foomatic-db-engine-4.0.6
-PKGREVISION=	2
+DISTNAME=	foomatic-db-engine-4.0.8
 CATEGORIES=	print
 MASTER_SITES=	http://www.openprinting.org/download/foomatic/
 
@@ -17,6 +16,7 @@ CONFIGURE_ENV+=	LIBDIR=${LOCALBASE}/share/foomatic
 CONFIGURE_ENV+=	FOOMATIC_RIP=${LOCALBASE}/bin/foomatic-rip
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 CONFIGURE_ENV+=	CUPS_ETC=${PKG_SYSCONFBASE}/cups
+CONFIGURE_ENV+=	PERL_INSTALLDIRS=vendor
 USE_TOOLS+=	perl gmake
 PERL5_PACKLIST=	auto/Foomatic/.packlist
 
