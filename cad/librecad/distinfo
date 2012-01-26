@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/26 21:43:23 ryoon Exp $
+
+SHA1 (LibreCAD-LibreCAD-v1.0.0-0-g22839a7.zip) = bbf890a641c66856231024e4d957f21c80cdbf22
+RMD160 (LibreCAD-LibreCAD-v1.0.0-0-g22839a7.zip) = ecb8e1e3d9559009fdd47d39467cc0a580d975c1
+Size (LibreCAD-LibreCAD-v1.0.0-0-g22839a7.zip) = 5629971 bytes
+SHA1 (patch-scripts_postprocess-unix.sh) = 4c0b153fa1cf59d6a0070c56b0d976ca25fe89b9
