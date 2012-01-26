@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/24 09:10:54 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/26 02:45:45 sbd Exp $
 #
 
 PKGNAME=		akode-plugins-pulseaudio-${AKODE_VERSION}
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-polypaudio
 
 do-install:
 	cd ${WRKSRC}/akode/plugins/polyp_sink && ${SETENV} ${MAKE_ENV} ${MAKE} \
-		prefix=${DESTDIR}${PREFIX} install
+		DESTDIR=${DESTDIR} install
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
