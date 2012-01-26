@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/06 19:42:37 gls Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2012/01/26 23:44:34 tron Exp $
 share/examples/moodle/moodle.conf
 share/moodle/COPYING.txt
 share/moodle/README.txt
@@ -1718,6 +1718,7 @@ share/moodle/install/lang/sv/install.php
 share/moodle/install/lang/sv/langconfig.php
 share/moodle/install/lang/sv/moodle.php
 share/moodle/install/lang/sv_fi/langconfig.php
+share/moodle/install/lang/sw/admin.php
 share/moodle/install/lang/sw/langconfig.php
 share/moodle/install/lang/ta/admin.php
 share/moodle/install/lang/ta/error.php
@@ -5898,7 +5899,7 @@ share/moodle/lib/zend/Zend/Validate/Barcode/Planet.php
 share/moodle/lib/zend/Zend/Validate/Barcode/Postnet.php
 share/moodle/lib/zend/Zend/Validate/Barcode/Royalmail.php
 share/moodle/lib/zend/Zend/Validate/Barcode/Sscc.php
-share/moodle/lib/zend/Zend/Validate/Barcode/UpcA.php
+share/moodle/lib/zend/Zend/Validate/Barcode/Upca.php
 share/moodle/lib/zend/Zend/Validate/Barcode/Upce.php
 share/moodle/lib/zend/Zend/Validate/Between.php
 share/moodle/lib/zend/Zend/Validate/Callback.php
@@ -6059,6 +6060,7 @@ share/moodle/message/search.html
 share/moodle/message/search_advanced.html
 share/moodle/message/send_form.php
 share/moodle/message/settings.html
+share/moodle/message/upgrade.txt
 share/moodle/mnet/environment.php
 share/moodle/mnet/lib.php
 share/moodle/mnet/peer.php
@@ -6664,6 +6666,7 @@ share/moodle/mod/quiz/report/statistics/db/install.php
 share/moodle/mod/quiz/report/statistics/db/install.xml
 share/moodle/mod/quiz/report/statistics/db/upgrade.php
 share/moodle/mod/quiz/report/statistics/lang/en/quiz_statistics.php
+share/moodle/mod/quiz/report/statistics/lib.php
 share/moodle/mod/quiz/report/statistics/qstats.php
 share/moodle/mod/quiz/report/statistics/report.php
 share/moodle/mod/quiz/report/statistics/responseanalysis.php
@@ -8651,6 +8654,7 @@ share/moodle/theme/sky_high/style/core.css
 share/moodle/theme/sky_high/style/editor.css
 share/moodle/theme/sky_high/style/menu.css
 share/moodle/theme/sky_high/style/pagelayout.css
+share/moodle/theme/sky_high/style/report.css
 share/moodle/theme/splash/config.php
 share/moodle/theme/splash/lang/en/theme_splash.php
 share/moodle/theme/splash/layout/general.php
