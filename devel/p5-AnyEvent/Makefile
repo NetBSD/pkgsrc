@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2011/08/13 17:53:07 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2012/01/26 11:55:12 rhaen Exp $
 
-DISTNAME=	AnyEvent-5.34
-PKGNAME=	p5-AnyEvent-5.340
+DISTNAME=	AnyEvent-6.13
+PKGNAME=	p5-AnyEvent-6.130
 CATEGORIES=	devel
 #MASTER_SITES=	http://www.cpan.org/modules/by-authors/Marc_Lehmann/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
@@ -16,7 +16,7 @@ PERL5_PACKLIST=	auto/AnyEvent/.packlist
 
 # recommented dependencies:
 DEPENDS+=	p5-Async-Interrupt>=1:../../devel/p5-Async-Interrupt
-DEPENDS+=	p5-EV>=3.1:../../devel/p5-EV
+DEPENDS+=	p5-EV>=4:../../devel/p5-EV
 DEPENDS+=	p5-Guard>=1.020:../../devel/p5-Guard
 DEPENDS+=	p5-JSON>=2.09:../../converters/p5-JSON
 DEPENDS+=	p5-JSON-XS>=2.200:../../converters/p5-JSON-XS
