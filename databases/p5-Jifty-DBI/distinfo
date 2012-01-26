@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/11/17 09:09:22 hiramatsu Exp $
+$NetBSD: distinfo,v 1.7 2012/01/26 15:25:13 rhaen Exp $
 
-SHA1 (Jifty-DBI-0.72.tar.gz) = ac29e8d558e6c79228109e43b69be66041f25d4e
-RMD160 (Jifty-DBI-0.72.tar.gz) = f80ca708b101e51237eb2f83b7f2275c1eb0d9dd
-Size (Jifty-DBI-0.72.tar.gz) = 163600 bytes
+SHA1 (Jifty-DBI-0.74.tar.gz) = 1ca75cd813a38ecb20bce391a6c172ba94e8ffb9
+RMD160 (Jifty-DBI-0.74.tar.gz) = 51c5b3f118480d56b6b39df3f7197821a230ca7b
+Size (Jifty-DBI-0.74.tar.gz) = 163808 bytes
