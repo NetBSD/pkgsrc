@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.246 2012/01/26 21:05:10 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.247 2012/01/26 21:44:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -420,3 +420,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-Redis to 1.926 [rhaen 2012-01-26]
 	Updated audio/p5-Audio-Scan to 0.93 [rhaen 2012-01-26]
 	Updated devel/p5-InlineX-C2XS to 0.17 [rhaen 2012-01-26]
+	Added cad/librecad version 1.0.0 [ryoon 2012-01-26]
