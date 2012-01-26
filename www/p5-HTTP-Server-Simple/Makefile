@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2011/08/14 16:05:58 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/01/26 14:24:57 rhaen Exp $
 #
 
-DISTNAME=	HTTP-Server-Simple-0.43
+DISTNAME=	HTTP-Server-Simple-0.44
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 SVR4_PKGNAME=	p5hss
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
