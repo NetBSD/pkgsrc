@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/28 14:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/26 02:45:44 sbd Exp $
 #
 
 PKGNAME=		akode-plugins-alsa-${AKODE_VERSION}
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-alsa
 
 do-install:
 	cd ${WRKSRC}/akode/plugins/alsa_sink && ${SETENV} ${MAKE_ENV} ${MAKE} \
-		prefix=${DESTDIR}${PREFIX} install
+		DESTDIR=${DESTDIR} install
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"

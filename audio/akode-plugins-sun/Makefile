@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/28 14:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/01/26 02:45:45 sbd Exp $
 #
 
 PKGNAME=		akode-plugins-sun-${AKODE_VERSION}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-sun
 
 do-install:
 	cd ${WRKSRC}/akode/plugins/sun_sink && ${SETENV} ${MAKE_ENV} ${MAKE} \
-		prefix=${DESTDIR}${PREFIX} install
+		DESTDIR=${DESTDIR} install
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../audio/akode/buildlink3.mk"
