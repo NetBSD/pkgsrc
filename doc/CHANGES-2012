@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.238 2012/01/26 12:02:50 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.239 2012/01/26 13:51:48 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -365,3 +365,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-EV to 4.10 [rhaen 2012-01-26]
 	Updated devel/p5-AnyEvent to 6.13 [rhaen 2012-01-26]
 	Updated devel/p5-IPC-Run3 to 0.045 [rhaen 2012-01-26]
+	Updated devel/p5-SVN-Notify to 2.83 [rhaen 2012-01-26]
+	Updated devel/p5-Task-Weaken to 1.04 [rhaen 2012-01-26]
+	Updated devel/p5-Test-NoWarnings to 1.04 [rhaen 2012-01-26]
+	Updated devel/p5-Test-Tester to 0.108 [rhaen 2012-01-26]
+	Updated mail/p5-Email-Address to 1.895 [rhaen 2012-01-26]
+	Updated mail/p5-Email-Simple to 2.101 [rhaen 2012-01-26]
+	Updated textproc/p5-XML-Twig to 3.39 [rhaen 2012-01-26]
+	Updated textproc/p5-XML-Writer to 0.615 [rhaen 2012-01-26]
+	Updated www/p5-HTML-Mason to 1.47 [rhaen 2012-01-26]
+	Updated www/p5-Catalyst-Runtime to 5.90007 [rhaen 2012-01-26]
