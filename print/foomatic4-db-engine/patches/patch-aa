@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/11/20 20:54:00 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2012/01/26 11:53:50 drochner Exp $
 
---- configure.orig	2009-08-19 20:09:16.000000000 +0200
+--- configure.orig	2011-07-25 09:51:22.000000000 +0000
 +++ configure
-@@ -3924,8 +3924,8 @@ done
+@@ -4041,8 +4041,8 @@ LIBS="$save_LIBS"
  SPOOLSEARCHPATH=/var/spool:/usr/spool/:/usr/local/spool:/usr/local/var/spool:/var/local/spool:/var/local
  LOGSEARCHPATH=/var/log:/usr/log:/usr/local/log:/usr/local/var/log:/var/local/log:/var/local
  SYSCONFSEARCHPATH=/etc:/usr/etc:/usr/local/etc:/var/etc
@@ -10,15 +10,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/11/20 20:54:00 drochner Exp $
 -BINSEARCHPATH=/usr/bin:/bin:/usr/local/bin
 +SBINSEARCHPATH=${LOCALBASE}/sbin:/usr/sbin:/sbin:/usr/local/sbin:/etc/sbin
 +BINSEARCHPATH=${LOCALBASE}/bin:/usr/bin:/bin:/usr/local/bin
- DATASEARCHPATH=/usr/share:/usr/local/share:/usr/lib:/usr/local/lib:/opt
- LIBSEARCHPATH=/usr/lib:/lib:/usr/local/lib:/usr/local/libexec:/opt
+ DATASEARCHPATH=/usr/share:/usr/local/share:$libdir:/usr/local/lib:/opt
+ LIBSEARCHPATH=$libdir:/lib:/usr/local/lib:/usr/local/libexec:/opt
  PTALPIPESSEARCHPATH=/var/run:/var:/var/ptal:/usr/var/run:/usr/var:/usr/var/ptal:/usr/local/var/run:/usr/local/var:/usr/local/var/ptal:/dev:/dev/ptal
-@@ -4414,7 +4414,7 @@ fi
- 
- 
- 
--PERL_INSTALLDIRS=site
-+PERL_INSTALLDIRS=vendor
- 
- 
- for ac_prog in bash sh
