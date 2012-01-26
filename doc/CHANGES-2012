@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.236 2012/01/26 11:48:20 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.237 2012/01/26 11:56:22 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -363,3 +363,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/py-psycopg2 to 2.4.4 [obache 2012-01-26]
 	Updated www/py-django to 1.3.1nb1 [obache 2012-01-26]
     Updated devel/p5-EV to 4.10 [rhaen 2012-01-26]
+    Updated devel/p5-AnyEvent to 6.13 [rhaen 2012-01-26]
