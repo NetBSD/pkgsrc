@@ -1,0 +1,31 @@
+.\" $NetBSD: screwsctl.1,v 1.1 2012/01/26 15:00:25 joerg Exp $
+.\" Original source covered by GPLv2
+.Dd 2004-04-25
+.Dt SCREWSCTL 1
+.Os
+.Sh NAME
+.Nm screwsctl
+.Nd Screws control
+.Sh SYNOPSIS
+.Nm 
+.Op Ar ACTION
+.Sh DESCRIPTION
+.Nm
+is an screws tool that allows you to control if there's
+any screws daemon running, and act over it starting, stopping and restarting.
+This command tries to be similar to apachectl.
+.Sh OPTIONS
+.Bl -tag
+.It Cm start
+This action starts the daemon in the background. Using the default configuration file.
+.It Cm stop
+Stops the execution of the screws server and their threads.
+.It Cm restart
+Verbose level. This value comes from 0 to 5, it's used for debugging purposes, the default value is '0'.
+.El
+.Sh SEE ALSO
+.Xr screwsctl 1 ,
+.Xr screwsd 8 ,
+.Xr screws.conf 5 ,
+.Sh AUTHORS
+Main developer: pancake <pancake@phreaker.net>

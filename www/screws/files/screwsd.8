@@ -1,0 +1,44 @@
+.\" $NetBSD: screwsd.8,v 1.1 2012/01/26 15:00:25 joerg Exp $
+.\" Original source covered by GPLv2
+.Dd 2004-04-25
+.Dt SCREWSD 8
+.Sh NAME
+.Nm screwsd
+.Nd Script Enhaced Web Server daemon
+.Sh SYNOPSIS
+.Nm
+.Op Ar OPTION
+.Ar ...
+.Sh DESCRIPTION
+.Nm
+is a web server with an special feature: Everything
+is able to be modificable with scripts. 'screwsd' is just the main
+daemon that parses the configuration file and calls the rest of
+the scripts when they are necessary.
+.Pp
+By default screwsd uses the ${PREFIX}/etc/screws.conf to run.
+.Sh OPTIONS
+.Bl -tag
+.It Cm -c filename
+Specifies the configuration file to be used.
+.It Cm -p progname
+Set the argv[0] string. That's useful to change the name of the program seen into the ps list.
+.It Cm -v #
+Verbose level. This value comes from 0 to 5, it's used for debugging purposes, the default value is '0'.
+.It Cm -l
+List all configuration file directives. This is useful to generate default configuration file.
+.It Cm -s
+Be strict. It means that if there's a problem or warning parsing the configuration file server willn't be started. By default screwsd ignores these warnings.
+.It Cm -d
+Run as daemon in the background. This option can be also enabled into the configuration file using the 'daemon' directive.
+.It Cm -o
+Show the static options defined in the compilation. These are: PREFIX, EXEC, MODULEPATH, CFGFILE, VERSION and other flags defined into the CONFIG file before building like DEBUG, POLL, IPV6, SSL, MODULES.
+.It Cm -h
+Shows a list of default cmdline flags
+.El
+.Sh SEE ALSO
+.Xr screwsctl 1 ,
+.Xr screwsd 8 ,
+.Xr screws.conf 5 ,
+.Sh AUTHORS
+Main developer: pancake <pancake@phreaker.net>
