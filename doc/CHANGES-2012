@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.239 2012/01/26 13:51:48 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.240 2012/01/26 14:41:46 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -375,3 +375,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-XML-Writer to 0.615 [rhaen 2012-01-26]
 	Updated www/p5-HTML-Mason to 1.47 [rhaen 2012-01-26]
 	Updated www/p5-Catalyst-Runtime to 5.90007 [rhaen 2012-01-26]
+	Updated www/p5-HTML-Lint to 2.10 [rhaen 2012-01-26]
+	Updated www/p5-HTML-Parser to 3.69 [rhaen 2012-01-26]
+	Updated www/p5-HTML-Scrubber to 0.09 [rhaen 2012-01-26]
+	Updated www/p5-HTML-Selector-XPath to 0.14 [rhaen 2012-01-26]
+	Updated www/p5-HTML-TreeBuilder-LibXML to 0.15 [rhaen 2012-01-26]
+	Updated www/p5-HTTP-Body to 0.15 [rhaen 2012-01-26]
+	Updated www/p5-HTTP-DAV to 0.46 [rhaen 2012-01-26]
+	Updated www/p5-HTTP-Server-Simple to 0.44 [rhaen 2012-01-26]
