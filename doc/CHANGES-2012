@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.247 2012/01/26 21:44:52 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.248 2012/01/27 05:52:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -421,3 +421,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/p5-Audio-Scan to 0.93 [rhaen 2012-01-26]
 	Updated devel/p5-InlineX-C2XS to 0.17 [rhaen 2012-01-26]
 	Added cad/librecad version 1.0.0 [ryoon 2012-01-26]
+	Updated www/py-moin to 1.9.3nb2 [obache 2012-01-27]
