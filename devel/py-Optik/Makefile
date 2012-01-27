@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2010/02/04 10:35:28 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/01/27 08:30:40 obache Exp $
 
 DISTNAME=	optik-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/optik/Optik/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=optik/}
 
@@ -12,10 +13,10 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG=	yes
+USE_LANGUAGES=	#none
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/test_optik.py
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
