@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/12/06 00:19:22 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/01/27 08:37:01 obache Exp $
 
 DISTNAME=	coccinelle-0.2.5
 PKGREVISION=	1
@@ -22,7 +22,6 @@ USE_TOOLS+=	gmake perl
 REPLACE_PERL=	configure
 BUILD_TARGET=	all all.opt
 
-.include "../../lang/python/tool.mk"
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIG_SHELL=	${PERL5}
 
