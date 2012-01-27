@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/01/21 15:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/27 06:30:21 obache Exp $
 
 DISTNAME=	gdata-2.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://gdata-python-client.googlecode.com/files/
 
@@ -10,10 +11,8 @@ HOMEPAGE=	http://code.google.com/p/gdata-python-client/
 COMMENT=	Google Data API Python client library
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYDISTUTILSPKG=	yes
-PY_PATCHPLIST=	yes
 
 REPLACE_PYTHON=		src/atom/__init__.py
 REPLACE_PYTHON+=	src/atom/auth.py
@@ -130,10 +129,5 @@ REPLACE_PYTHON+=	src/gdata/youtube/service.py
 # 2.0.16 introduced a neologism
 PYTHON_VERSIONS_INCOMPATIBLE=	24
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-.if !empty(PYPKGPREFIX:Mpy24)
-DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
-.else
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-.endif
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
