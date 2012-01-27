@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2009/06/02 18:39:20 hasso Exp $
+$NetBSD: patch-aa,v 1.5 2012/01/27 08:59:49 sbd Exp $
 
---- libffi/configure.orig	2009-06-02 16:37:36 +0300
-+++ libffi/configure	2009-06-02 16:38:41 +0300
-@@ -20700,6 +20700,7 @@ i*86-*-solaris2.1[0-9]*) TARGET=X86_64; 
+--- libffi/configure.orig	2007-03-01 18:57:59.000000000 +0000
++++ libffi/configure
+@@ -20700,6 +20700,7 @@ i*86-*-solaris2.1[0-9]*) TARGET=X86_64;
  i*86-*-solaris*) TARGET=X86; TARGETDIR=x86;;
  i*86-*-beos*) TARGET=X86; TARGETDIR=x86;;
  i*86-*-freebsd* | i*86-*-kfreebsd*-gnu) TARGET=X86; TARGETDIR=x86;;
@@ -19,3 +19,15 @@ $NetBSD: patch-aa,v 1.4 2009/06/02 18:39:20 hasso Exp $
  sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
  sh-*-rtems*) TARGET=SH; TARGETDIR=sh;;
  sh64-*-linux* | sh5*-*-linux*) TARGET=SH64; TARGETDIR=sh64;;
+@@ -23270,11 +23271,6 @@ else
+   toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
+   toolexeclibdir='$(libdir)'
+ fi
+-multi_os_directory=`$CC -print-multi-os-directory`
+-case $multi_os_directory in
+-  .) ;; # Avoid trailing /.
+-  *) toolexeclibdir=$toolexeclibdir/$multi_os_directory ;;
+-esac
+ 
+ 
+ 
