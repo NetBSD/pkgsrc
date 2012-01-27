@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2012/01/19 15:00:35 reed Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/01/27 06:36:57 obache Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -40,7 +40,7 @@ REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table \
 		Source/WebCore/make-hash-tools.pl \
 		Source/WebCore/platform/text/mac/*.pl
 
-BUILDLINK_DEPMETHOD.python= build
+PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
