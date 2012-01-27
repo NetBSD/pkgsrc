@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.249 2012/01/27 06:16:34 obache Exp $
+$NetBSD: CHANGES-2012,v 1.250 2012/01/27 06:30:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -423,3 +423,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added cad/librecad version 1.0.0 [ryoon 2012-01-26]
 	Updated www/py-moin to 1.9.3nb2 [obache 2012-01-27]
 	Updated www/midori to 0.4.3nb1 [obache 2012-01-27]
+	Updated www/py-gdata to 2.0.16nb1 [obache 2012-01-27]
