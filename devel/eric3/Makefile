@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/03/11 12:02:50 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/01/27 12:46:22 obache Exp $
 #
 
 DISTNAME=	eric-3.8.1
@@ -12,6 +12,7 @@ COMMENT=	Python IDE
 
 DEPENDS+=	${PYPKGPREFIX}-qt3-modules>=3.11:../../x11/py-qt3-modules
 DEPENDS+=	${PYPKGPREFIX}-qt3-qscintilla>=3.11:../../x11/py-qt3-qscintilla
+DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -35,5 +36,4 @@ do-install:
 		${PYTHONBIN} -c "import py_compile; py_compile.compile('sitecustomize.py')")
 
 .include "../../lang/python/extension.mk"
-.include "../../textproc/py-xml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
