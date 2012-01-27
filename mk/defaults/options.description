@@ -334,6 +334,7 @@ libxml2			Use the libxml2 library for XML support.
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
 liferea-mozilla		Use xulrunner to render HTML.
 links			Use and enable support for the links browser.
+links-xz		Enable lzma support for the links WWW browser.
 links-zlib		Enable zlib support for the links WWW browser.
 live			Enable live555 support.
 lprng-priv-ports	Connections must be made from privileged ports.
