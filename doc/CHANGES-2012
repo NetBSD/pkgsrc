@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.254 2012/01/27 08:30:51 obache Exp $
+$NetBSD: CHANGES-2012,v 1.255 2012/01/27 08:35:13 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -428,3 +428,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-swish-e to 0.5nb1 [obache 2012-01-27]
 	Updated geography/py-proj to 1.8.3nb1 [obache 2012-01-27]
 	Updated devel/py-Optik to 1.5.3nb1 [obache 2012-01-27]
+	Updated textproc/xapian-omega to 1.2.8nb1 [sbd 2012-01-27]
+	Updated www/links to 2.5nb1 [sbd 2012-01-27]
+	Updated www/links-gui to 2.5nb1 [sbd 2012-01-27]
