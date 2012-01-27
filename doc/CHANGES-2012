@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.257 2012/01/27 08:54:01 obache Exp $
+$NetBSD: CHANGES-2012,v 1.258 2012/01/27 09:15:29 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -433,3 +433,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/links-gui to 2.5nb1 [sbd 2012-01-27]
 	Updated print/cups to 1.5.0nb1 [sbd 2012-01-27]
 	Updated devel/bzrtools to 2.4.1nb1 [obache 2012-01-27]
+	Updated lang/pnet to 0.8.0nb1 [sbd 2012-01-27]
