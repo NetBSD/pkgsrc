@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2011/03/07 20:51:40 gls Exp $
+$NetBSD: distinfo,v 1.8 2012/01/27 05:52:40 obache Exp $
 
 SHA1 (moin-1.9.3.tar.gz) = e019c2742f42d4d1f32b0f86f985ce938b821f1b
 RMD160 (moin-1.9.3.tar.gz) = c8679c9440768906c47048f2544a26b77b1ca061
 Size (moin-1.9.3.tar.gz) = 30514897 bytes
 SHA1 (patch-MoinMoin_parser_text__rst.py) = 21876302d8ecef85295cc6c24ef4e3823f578556
+SHA1 (patch-MoinMoin_support_werkzeug_templates.py) = d0baba8d2d01f9757e0702786828e2f4d6716c1b
