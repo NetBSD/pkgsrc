@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.251 2012/01/27 06:52:10 obache Exp $
+$NetBSD: CHANGES-2012,v 1.252 2012/01/27 07:52:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -425,3 +425,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/midori to 0.4.3nb1 [obache 2012-01-27]
 	Updated www/py-gdata to 2.0.16nb1 [obache 2012-01-27]
 	Updated www/py-scgi to 1.13nb1 [obache 2012-01-27]
+	Updated www/py-swish-e to 0.5nb1 [obache 2012-01-27]
