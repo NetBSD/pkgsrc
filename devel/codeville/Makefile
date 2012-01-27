@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.22 2010/02/10 19:17:35 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/01/27 10:19:16 obache Exp $
 
 DISTNAME=	Codeville-0.8.0
 PKGNAME=	codeville-0.8.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel scm
 MASTER_SITES=	http://codeville.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://codeville.org/
 COMMENT=	Distributed revision control system
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PYDISTUTILSPKG=		yes
+
 REPLACE_PYTHON=		*.py
 REPLACE_PYTHON+=	*/*.py
 
@@ -38,6 +39,6 @@ post-install:
 		${DESTDIR}${EGDIR}/cdvserver.conf
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
