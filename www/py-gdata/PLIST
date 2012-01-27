@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/20 12:21:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/27 06:30:21 obache Exp $
 ${PYSITELIB}/atom/__init__.py
 ${PYSITELIB}/atom/__init__.pyc
 ${PYSITELIB}/atom/__init__.pyo
@@ -41,6 +41,7 @@ ${PYSITELIB}/atom/token_store.pyo
 ${PYSITELIB}/atom/url.py
 ${PYSITELIB}/atom/url.pyc
 ${PYSITELIB}/atom/url.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gdata/Crypto/Cipher/__init__.py
 ${PYSITELIB}/gdata/Crypto/Cipher/__init__.pyc
 ${PYSITELIB}/gdata/Crypto/Cipher/__init__.pyo
