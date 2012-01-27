@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2012/01/27 06:07:48 sbd Exp $
 
 --- configure.orig	2009-03-06 12:17:38.000000000 +0000
 +++ configure
@@ -37,7 +37,15 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
      /usr/X11R6/include        \
      /usr/X11R6.4/include      \
                                \
-@@ -26379,9 +26380,9 @@ echo "${ECHO_T}$ac_cv_header_png_h" >&6
+@@ -25055,6 +25056,7 @@ fi
+         wx_cv_std_libpath="lib";
+         ;;
+ esac
++wx_cv_std_libpath="lib"
+ 
+ echo "$as_me:$LINENO: result: $wx_cv_std_libpath" >&5
+ echo "${ECHO_T}$wx_cv_std_libpath" >&6
+@@ -26379,9 +26381,9 @@ echo "${ECHO_T}$ac_cv_header_png_h" >&6
  
  
              if test "$ac_cv_header_png_h" = "yes"; then
@@ -50,7 +58,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -26399,11 +26400,11 @@ extern "C"
+@@ -26399,11 +26401,11 @@ extern "C"
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
@@ -64,7 +72,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
    ;
    return 0;
  }
-@@ -26429,20 +26430,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -26429,20 +26431,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -90,7 +98,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
    PNG_LINK=" -lpng -lz"
  fi
  
-@@ -39478,6 +39479,9 @@ echo "$as_me: WARNING: BeOS threads are 
+@@ -39478,6 +39480,9 @@ echo "$as_me: WARNING: BeOS threads are
                      THREAD_OPTS="-mt $THREAD_OPTS"
                  fi
                  ;;
@@ -100,7 +108,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
            *-*-freebsd*)
                                                  THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
                  ;;
-@@ -39611,7 +39615,7 @@ echo $ECHO_N "checking if more special f
+@@ -39611,7 +39616,7 @@ echo $ECHO_N "checking if more special f
                                                                                                                  LDFLAGS="-L/usr/lib/threads $LDFLAGS"
                  flag="-D_THREAD_SAFE"
                  ;;
@@ -109,7 +117,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
                  flag="-D_THREAD_SAFE"
                  ;;
              *-hp-hpux* )
-@@ -48532,7 +48536,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+@@ -48532,7 +48537,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
              SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
          fi
  
@@ -118,7 +126,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
              PIC_FLAG="-dynamic -fPIC"
          fi
          if test "x$XLCC" = "xyes"; then
-@@ -49099,6 +49103,7 @@ EOF
+@@ -49099,6 +49104,7 @@ EOF
  
        powerpc-apple-macos* | \
        *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
@@ -126,7 +134,7 @@ $NetBSD: patch-aa,v 1.3 2010/06/13 22:45:54 wiz Exp $
        *-*-mirbsd* | \
        *-*-sunos4* | \
        *-*-osf* | \
-@@ -49142,7 +49147,7 @@ echo "$as_me: error: unknown system type
+@@ -49142,7 +49148,7 @@ echo "$as_me: error: unknown system type
  
      case "${BAKEFILE_HOST}" in
        *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
