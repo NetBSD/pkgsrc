@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/11/29 17:00:54 darcy Exp $
+$NetBSD: distinfo,v 1.4 2012/01/27 06:21:31 obache Exp $
 
 SHA1 (BeautifulSoup-3.2.0.tar.gz) = 924eb4e43144e233e3749edadc8dc5cd8ec8a3be
 RMD160 (BeautifulSoup-3.2.0.tar.gz) = 44c04cf55cf8fe7d192a32d8362a36d292acb767
 Size (BeautifulSoup-3.2.0.tar.gz) = 31056 bytes
-SHA1 (patch-aa) = 759fb0b55b5c731998e4b7c7cd4dbda45e47771f
