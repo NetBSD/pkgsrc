@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2010/12/02 16:00:38 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2012/01/27 08:24:28 sbd Exp $
 #
 
 COMMENT=	Lynx-like text WWW browser
+PKGREVISION=	1
 
 CONFLICTS+=	links-gui-[0-9]* elinks-0.3*
 
