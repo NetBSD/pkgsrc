@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2011/11/29 20:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2012/01/28 14:17:53 wiz Exp $
 
-DISTNAME=	lame-3.99.3
+DISTNAME=	lame-3.99.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/}
 
