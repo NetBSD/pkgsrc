@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10832 2012/01/28 15:56:14 wiz Exp $
+$NetBSD: TODO,v 1.10833 2012/01/28 15:57:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -862,7 +862,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o latex2rtf-1.9.19
 	o lbdb-0.38
 	o lcc-4.2
-	o lcms-2.3
 	o ldapsdk-6.0.7
 	o leafnode-1.11.8
 	o level9-4.1
@@ -978,7 +977,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mgetty+sendfax-1.1.35
 	o milkytracker-0.90.85
 	o mimedefang-2.73
-	o mined-2011.19
+	o mined-2012.20
 	o minicom-2.6
 	o minivmac-3.2.3
 	o miredo-1.2.4
