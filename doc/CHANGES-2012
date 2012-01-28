@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.271 2012/01/28 13:58:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.272 2012/01/28 14:18:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -448,3 +448,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/SDL_ttf to 2.0.11 [wiz 2012-01-28]
 	Updated net/SDL_net to 1.2.8 [wiz 2012-01-28]
 	Updated devel/SDL_gfx to 2.0.23 [wiz 2012-01-28]
+	Updated audio/lame to 3.99.4 [wiz 2012-01-28]
