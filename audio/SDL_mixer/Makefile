@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.40 2012/01/13 10:54:43 obache Exp $
+# $NetBSD: Makefile,v 1.41 2012/01/28 13:46:15 wiz Exp $
 
-DISTNAME=	SDL_mixer-1.2.11
-PKGREVISION=	2
+DISTNAME=	SDL_mixer-1.2.12
 CATEGORIES=	audio
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_mixer/
 COMMENT=	Multi-channel audio mixer library
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	zlib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -37,6 +36,10 @@ post-install:
 BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.10
 
 .include "../../audio/flac/buildlink3.mk"
+# needs fluid_player_add_mem support, which is not yet
+# mainstream, it seems (at least in fluidsynth 1.1.5)
+# (patchset is from 2010)
+#.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libmikmod/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
