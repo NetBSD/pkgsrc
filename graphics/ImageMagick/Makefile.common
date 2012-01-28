@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.91 2011/10/22 14:55:51 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.92 2012/01/28 23:49:30 wiz Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 
@@ -36,7 +36,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-dps
 CONFIGURE_ARGS+=	--without-fpx
 CONFIGURE_ARGS+=	--without-gvc
-CONFIGURE_ARGS+=	--without-hdf
 CONFIGURE_ARGS+=	--without-jbig
 CONFIGURE_ARGS+=	--without-lqr
 CONFIGURE_ARGS+=	--without-modules
