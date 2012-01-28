@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.277 2012/01/28 15:54:13 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.278 2012/01/28 15:56:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -454,3 +454,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/php-libawl to 0.51 [wiz 2012-01-28]
 	Updated www/davical to 1.0.2 [wiz 2012-01-28]
 	Updated graphics/lcms2 to 2.3 [wiz 2012-01-28]
+	Updated news/tin to 2.0.1 [wiz 2012-01-28]
