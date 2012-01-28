@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10819 2012/01/28 10:24:09 wiz Exp $
+$NetBSD: TODO,v 1.10820 2012/01/28 10:26:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -931,7 +931,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
 	o libmemcached-1.0.4
-	o libmicrohttpd-0.9.18
 	o libmilter-8.14.5
 	o libnasl-2.3.1
 	o libnids-1.24
