@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.16 2011/10/04 11:55:34 ryoon Exp $
+$NetBSD: distinfo,v 1.17 2012/01/28 23:04:53 christos Exp $
 
-SHA1 (tmux-1.5.tar.gz) = e26132f02f344f8d6d06ae87d11f6a7aad880f67
-RMD160 (tmux-1.5.tar.gz) = 08eec02bcbd91b3c37a36a05167f3758e7911973
-Size (tmux-1.5.tar.gz) = 374093 bytes
-SHA1 (patch-configure) = 945501bfb2ae1fc3edf78947f2ddcc662e950c50
-SHA1 (patch-configure.ac) = a9f12fee5bec74ad6e608ab7d5442b346816bb3d
-SHA1 (patch-osdep-dragonfly.c) = dbd6ab3e3437aaae7c333ac884f39bc7d0a5b917
+SHA1 (tmux-1.6.tar.gz) = 8756f6bcecb18102b87e5d6f5952ba2541f68ed3
+RMD160 (tmux-1.6.tar.gz) = e88d1ac4751920bf5a6b52be80f332f1eb2e8694
+Size (tmux-1.6.tar.gz) = 388633 bytes
