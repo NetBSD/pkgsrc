@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.278 2012/01/28 15:56:14 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.279 2012/01/28 19:11:53 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/davical to 1.0.2 [wiz 2012-01-28]
 	Updated graphics/lcms2 to 2.3 [wiz 2012-01-28]
 	Updated news/tin to 2.0.1 [wiz 2012-01-28]
+	Updated comms/asterisk18 to 1.8.9.0 [jnemeth 2012-01-28]
