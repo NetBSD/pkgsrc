@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.281 2012/01/28 23:18:54 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.282 2012/01/28 23:49:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.9.0 [jnemeth 2012-01-28]
 	Updated comms/asterisk10 to 10.1.0 [jnemeth 2012-01-28]
 	Updated editors/emacs-snapshot to 24.0.92.20120126 [minskim 2012-01-28]
+	Updated graphics/ImageMagick to 6.7.3.1nb3 [wiz 2012-01-28]
