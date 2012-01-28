@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.92 2011/12/03 00:02:15 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.93 2012/01/28 12:14:08 joerg Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -172,6 +172,7 @@ PYDISTUTILS_CREATES_EGGFILES=	no
 .else
 PKG_FAIL_REASON+=   "No valid Python version"
 PYDISTUTILS_CREATES_EGGFILES=	no
+PYPKGPREFIX=
 .endif
 
 PTHREAD_OPTS+=	require
