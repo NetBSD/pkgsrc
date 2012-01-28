@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2008/10/14 13:13:23 obache Exp $
+$NetBSD: distinfo,v 1.8 2012/01/28 13:54:38 wiz Exp $
 
-SHA1 (SDL_net-1.2.7.tar.gz) = b46c7e3221621cc34fec1238f1b5f0ce8972274d
-RMD160 (SDL_net-1.2.7.tar.gz) = 5c95cf28f35ceb796188323666b92cafa60fba25
-Size (SDL_net-1.2.7.tar.gz) = 373866 bytes
-SHA1 (patch-ab) = 64a9458f068964a621a7bed92f0fe7c692e5b110
+SHA1 (SDL_net-1.2.8.tar.gz) = fd393059fef8d9925dc20662baa3b25e02b8405d
+RMD160 (SDL_net-1.2.8.tar.gz) = 44262f5d4c68c9b525fce04ebe83e03cd7e005a4
+Size (SDL_net-1.2.8.tar.gz) = 360958 bytes
+SHA1 (patch-ab) = 685ae9339c9fc9eef4221bcf9db8accb6e07fab2
