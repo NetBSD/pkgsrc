@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/12/03 00:02:14 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2012/01/28 07:55:57 obache Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-cursespanel-0
@@ -8,6 +8,8 @@ CATEGORIES=	devel python
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
 COMMENT=	Curses panel module for Python
+
+DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -34,5 +36,5 @@ do-patch:
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
-.include "../../devel/py-curses/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
