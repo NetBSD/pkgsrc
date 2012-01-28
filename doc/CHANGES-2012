@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.268 2012/01/28 13:46:25 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.269 2012/01/28 13:49:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/SDL_image to 1.2.12 [wiz 2012-01-28]
 	Updated audio/fluidsynth to 1.1.5 [wiz 2012-01-28]
 	Updated audio/SDL_mixer to 1.2.12 [wiz 2012-01-28]
+	Updated devel/SDL_ttf to 2.0.11 [wiz 2012-01-28]
