@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2012/01/28 01:52:49 sbd Exp $
+$NetBSD: patch-ad,v 1.4 2012/01/28 04:37:36 sbd Exp $
 
 --- aa.c.orig	2005-07-31 22:20:23.000000000 +0000
 +++ aa.c
@@ -12,19 +12,7 @@ $NetBSD: patch-ad,v 1.3 2012/01/28 01:52:49 sbd Exp $
  
  #include <ctype.h>
  
-@@ -221,7 +224,10 @@ asystem(aa_t *aa, const char *file, int
- 		(void) close(fdv[0]);
- 		(void) write(fdv[1], aa->phrase, strlen(aa->phrase));
- 		(void) write(fdv[1], "\n", 1);
--		(void) wait(&status);
-+#if !defined(__GLIBC__) || !defined(__USE_BSD)
-+#define __WAIT_STATUS	int *
-+#endif
-+		(void) wait((__WAIT_STATUS)&status);
- 		(void) close(fdv[1]);
- 		break;
- 	}
-@@ -534,7 +540,7 @@ readfile(aa_t *aa, aaent_t *aep, char *n
+@@ -534,7 +537,7 @@ readfile(aa_t *aa, aaent_t *aep, char *n
  #ifdef HAVE_SETXATTR            
  /* set the external attributes */
  static int
@@ -33,7 +21,7 @@ $NetBSD: patch-ad,v 1.3 2012/01/28 01:52:49 sbd Exp $
  {
  	char	*ap;
  	char	*eq;
-@@ -549,7 +555,11 @@ ext_attr_set(aa_t *aa, aaent_t *aep, cha
+@@ -549,7 +552,11 @@ ext_attr_set(aa_t *aa, aaent_t *aep, cha
  			warn("WARNING: malformed attribute (%s) for \"%s\"", ap, name);
  		} else {
  			*eq = 0x0;
@@ -45,7 +33,7 @@ $NetBSD: patch-ad,v 1.3 2012/01/28 01:52:49 sbd Exp $
  				warn("WARNING: can't setxattr (%s) for \"%s\"", ap, name);
  			}
  			*eq = '=';
-@@ -605,7 +615,11 @@ extractfile(aa_t *aa, aaent_t *aep, char
+@@ -605,7 +612,11 @@ extractfile(aa_t *aa, aaent_t *aep, char
  				warn("extractfile: can't open \"%s\" mode %x", name, mode);
  				return 0;
  			}
@@ -57,7 +45,7 @@ $NetBSD: patch-ad,v 1.3 2012/01/28 01:52:49 sbd Exp $
  				warn("extractfile: can't set access/modification time for \"%s\"", name);
  			}
  			if (aep->sub.xattrlen > 0) {
-@@ -927,9 +941,17 @@ ext_attr_get(aa_t *aa, aaent_t *aep, cha
+@@ -927,9 +938,17 @@ ext_attr_get(aa_t *aa, aaent_t *aep, cha
  	int	 cc;
  	int	 vc;
  
@@ -75,7 +63,7 @@ $NetBSD: patch-ad,v 1.3 2012/01/28 01:52:49 sbd Exp $
  				warnx("file \"%s\" attribute \"%s\" is too long, skipping...", path, key);
  			} else {
  				ac += snprintf(&attrs[ac], sizeof(attrs) - ac, "%s=%s\n", key, val);
-@@ -982,7 +1004,11 @@ addent(aa_t *aa, char *name, int namelen
+@@ -982,7 +1001,11 @@ addent(aa_t *aa, char *name, int namelen
  #endif
  	a.sub.size = sp->st_size;
  	a.sub.blocks = sp->st_blocks;
