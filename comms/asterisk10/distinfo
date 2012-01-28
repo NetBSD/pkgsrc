@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.2 2012/01/20 07:29:09 jnemeth Exp $
+$NetBSD: distinfo,v 1.3 2012/01/28 20:39:10 jnemeth Exp $
 
-SHA1 (asterisk-10.0.1/asterisk-10.0.1.tar.gz) = 7a700c3c5b9af28f433f20d4267d5fc71ca32341
-RMD160 (asterisk-10.0.1/asterisk-10.0.1.tar.gz) = 289731127e45351047f565acd0f6372cb48cb7d1
-Size (asterisk-10.0.1/asterisk-10.0.1.tar.gz) = 24866828 bytes
-SHA1 (asterisk-10.0.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-10.0.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-10.0.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
-SHA1 (asterisk-10.0.1/extract-cfile.txt) = b22874814c83a53bcd1a8d96b5911304f304971e
-RMD160 (asterisk-10.0.1/extract-cfile.txt) = e7205fe7e95793f3ca6e384edeef1ad5713485e0
-Size (asterisk-10.0.1/extract-cfile.txt) = 643 bytes
-SHA1 (asterisk-10.0.1/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
-RMD160 (asterisk-10.0.1/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
-Size (asterisk-10.0.1/rfc3951.txt) = 373442 bytes
+SHA1 (asterisk-10.1.0/asterisk-10.1.0.tar.gz) = a2123563d37a1f1bc4222798065ec88f2943712b
+RMD160 (asterisk-10.1.0/asterisk-10.1.0.tar.gz) = 8c08392d67c407cbb17eae84d8509daf7176808e
+Size (asterisk-10.1.0/asterisk-10.1.0.tar.gz) = 24745392 bytes
+SHA1 (asterisk-10.1.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-10.1.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-10.1.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (asterisk-10.1.0/extract-cfile.txt) = b22874814c83a53bcd1a8d96b5911304f304971e
+RMD160 (asterisk-10.1.0/extract-cfile.txt) = e7205fe7e95793f3ca6e384edeef1ad5713485e0
+Size (asterisk-10.1.0/extract-cfile.txt) = 643 bytes
+SHA1 (asterisk-10.1.0/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
+RMD160 (asterisk-10.1.0/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
+Size (asterisk-10.1.0/rfc3951.txt) = 373442 bytes
 SHA1 (patch-Makefile) = 900252eff84bda22d2cbe09e0f22505531284cbb
 SHA1 (patch-apps_app__dial.c) = 2109ed50406dedc90a300981a3a7500b1397ff3a
 SHA1 (patch-apps_app__followme.c) = a0a507986ec9722337d46fdaaac0a79d23a634e4
