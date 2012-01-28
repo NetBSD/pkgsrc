@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10824 2012/01/28 13:46:25 wiz Exp $
+$NetBSD: TODO,v 1.10825 2012/01/28 13:49:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RealPlayer-11
 	o SDL_gfx-2.0.23
 	o SDL_net-1.2.8
-	o SDL_ttf-2.0.11
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o XaoS-3.5
