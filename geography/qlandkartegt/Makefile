@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/28 13:51:56 jkunz Exp $
+# $NetBSD: Makefile,v 1.16 2012/01/28 16:22:31 jkunz Exp $
 #
 
 DISTNAME=	qlandkartegt-1.3.2
@@ -17,6 +17,7 @@ USE_CMAKE=	yes
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PREFIX}/${PKGMANDIR}
 
 DEPENDS+=	qlandkartegt-garmindev>=0.3:../../geography/qlandkartegt-garmindev
+DEPENDS+=	qt4-sqlite3>=4.8:../../x11/qt4-sqlite3
 
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../geography/gpsd/buildlink3.mk"
