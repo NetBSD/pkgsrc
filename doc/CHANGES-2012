@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.265 2012/01/28 10:33:39 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.266 2012/01/28 11:00:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -442,3 +442,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/py-musicbrainz to 0.4.1nb2 [obache 2012-01-28]
 	Updated www/libmicrohttpd to 0.9.18 [wiz 2012-01-28]
 	Updated devel/SDL to 1.2.15 [wiz 2012-01-28]
+	Updated graphics/SDL_image to 1.2.12 [wiz 2012-01-28]
