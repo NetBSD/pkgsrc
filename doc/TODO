@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10822 2012/01/28 11:00:11 wiz Exp $
+$NetBSD: TODO,v 1.10823 2012/01/28 13:15:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -608,7 +608,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flpsed-0.4.4
 	o fltk-1.3.0 [pkgsrc-wip]
 	o fltk2-2.0pre8323
-	o fluidsynth-1.1.5
 	o fluxbox-1.3.2
 	o font-adobe-100dpi-1.0.3 [pkg/45537]
 	o font-adobe-75dpi-1.0.3 [pkg/45537]
