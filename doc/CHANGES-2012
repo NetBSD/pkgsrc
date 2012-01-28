@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.273 2012/01/28 14:41:24 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.274 2012/01/28 15:01:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -450,3 +450,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/SDL_gfx to 2.0.23 [wiz 2012-01-28]
 	Updated audio/lame to 3.99.4 [wiz 2012-01-28]
 	Updated www/curl to 7.24.0 [wiz 2012-01-28]
+	Updated devel/ccache to 3.1.7 [wiz 2012-01-28]
