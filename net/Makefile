@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.906 2012/01/25 09:55:42 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.907 2012/01/28 07:02:47 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -502,6 +502,7 @@ SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-suds
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
+SUBDIR+=	py-zmq
 SUBDIR+=	py-zsi
 SUBDIR+=	pygopherd
 SUBDIR+=	qadsl
