@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/11/03 00:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/01/28 10:52:58 obache Exp $
 #
 
 DISTNAME=	diffuse-0.4.6
@@ -12,6 +12,8 @@ COMMENT=	Graphical tool for merging and comparing text files
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.10:../../x11/py-gtk2
 
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	# none
@@ -31,7 +33,5 @@ do-install:
 
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.10
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
