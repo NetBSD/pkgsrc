@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/01/28 10:41:09 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/01/28 10:43:00 obache Exp $
 #
 
 DISTNAME=		tailor-0.9.35
@@ -12,6 +12,8 @@ COMMENT=		Tool to migrate changesets between various version control systems
 LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=		#none
 
 PYTHON_PATCH_SCRIPTS=	tailor
 
