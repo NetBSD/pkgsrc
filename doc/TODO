@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10829 2012/01/28 14:41:24 wiz Exp $
+$NetBSD: TODO,v 1.10830 2012/01/28 15:01:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o calibre-0.8.37
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.2
-	o ccache-3.1.7
 	o cddbd-1.5.2
 	o cdialog-1.1.20111020
 	o cdif-1.19
