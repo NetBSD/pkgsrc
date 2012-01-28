@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/25 20:31:10 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/01/28 08:30:55 obache Exp $
 ${PYSITELIB}/ANSI.py
 ${PYSITELIB}/ANSI.pyc
 ${PYSITELIB}/ANSI.pyo
@@ -8,6 +8,7 @@ ${PYSITELIB}/FSM.pyo
 ${PYSITELIB}/fdpexpect.py
 ${PYSITELIB}/fdpexpect.pyc
 ${PYSITELIB}/fdpexpect.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pexpect.py
 ${PYSITELIB}/pexpect.pyc
 ${PYSITELIB}/pexpect.pyo
