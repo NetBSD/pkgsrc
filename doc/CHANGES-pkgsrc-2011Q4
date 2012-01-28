@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.15 2012/01/26 23:45:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.16 2012/01/28 06:27:19 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -102,3 +102,5 @@ net/powerdns-pgsql: build fix
 net/powerdns-sqlite: build fix
 Pullup ticket #3662 - requested by gls
 www/moodle: security update
+Pullup ticket #3663 - requested by drochner
+www/curl security update
