@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.280 2012/01/28 20:39:16 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.281 2012/01/28 23:18:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -457,3 +457,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated news/tin to 2.0.1 [wiz 2012-01-28]
 	Updated comms/asterisk18 to 1.8.9.0 [jnemeth 2012-01-28]
 	Updated comms/asterisk10 to 10.1.0 [jnemeth 2012-01-28]
+	Updated editors/emacs-snapshot to 24.0.92.20120126 [minskim 2012-01-28]
