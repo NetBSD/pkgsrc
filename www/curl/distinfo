@@ -1,6 +1,12 @@
-$NetBSD: distinfo,v 1.72 2011/11/30 20:56:08 wiz Exp $
+$NetBSD: distinfo,v 1.72.2.1 2012/01/28 06:26:18 sbd Exp $
 
 SHA1 (curl-7.23.1.tar.bz2) = 9bac69696446ead85e59d8488098ee84cf897b7e
 RMD160 (curl-7.23.1.tar.bz2) = 96c45f38361d04a939e135c9e5fcf27ca1180abe
 Size (curl-7.23.1.tar.bz2) = 2376653 bytes
 SHA1 (patch-aa) = 14a1854429e12d0f7d0da040a09ef6d173a6dff2
+SHA1 (patch-ba) = b247fed2f7224a2d584f5370a18d8a609706859a
+SHA1 (patch-bb) = 86fd7e1d100b1991be43d3aa415be5a37a81db5f
+SHA1 (patch-bc) = 7ac1cf45003c541078b5deb96b8a373ce0631fcc
+SHA1 (patch-bd) = ab1b25ce6c5a057d6429d4ba4d79b1db27c2a3ae
+SHA1 (patch-be) = a5cf52d7ccc768c8be41e4f2ae53e90f998708a2
+SHA1 (patch-bf) = 7ae4442ea7e81293d91b7415b767708f1e2e8321
