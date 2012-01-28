@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/09 19:22:59 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/28 11:32:09 marino Exp $
 #
 
 CLISP_MODULE=	fastcgi
@@ -16,5 +16,6 @@ MAKE_JOBS_SAFE=	no
 
 .include "../../lang/clisp/module.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
