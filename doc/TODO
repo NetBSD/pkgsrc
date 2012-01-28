@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10821 2012/01/28 10:33:39 wiz Exp $
+$NetBSD: TODO,v 1.10822 2012/01/28 11:00:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -340,7 +340,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SDL_gfx-2.0.23
-	o SDL_image-1.2.12
 	o SDL_mixer-1.2.12
 	o SDL_net-1.2.8
 	o SDL_ttf-2.0.11
