@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/01/25 13:19:57 obache Exp $
+# $NetBSD: Makefile,v 1.42 2012/01/28 13:12:06 obache Exp $
 
 DISTNAME=	pycurl-7.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-BUILDLINK_API_DEPENDS.curl+=        curl>=7.19.0
+BUILDLINK_API_DEPENDS.curl+=	curl>=7.19.0
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
