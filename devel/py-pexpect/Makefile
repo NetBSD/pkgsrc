@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2011/04/15 13:43:13 adam Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/28 08:30:55 obache Exp $
 
 DISTNAME=	pexpect-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pexpect/}
 
@@ -12,8 +13,9 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG= yes
 NO_CONFIGURE=	yes
 
-.include "../../lang/python/extension.mk"
+USE_LANGUAGES=	#none
+
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
