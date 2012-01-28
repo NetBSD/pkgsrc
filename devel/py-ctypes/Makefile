@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/15 11:40:00 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/28 09:12:03 obache Exp $
 
 DISTNAME=	ctypes-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Foreign Function Interface package for Python
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_ACCEPTED=	24
 
 do-test:
 	${PYTHONBIN} ${WRKSRC}/ctypes/test/runtests.py
