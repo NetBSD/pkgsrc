@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2005/10/31 05:11:41 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2012/01/28 04:37:36 sbd Exp $
 
---- configure.orig	2005-07-31 15:23:59.000000000 -0700
+--- configure.orig	2005-07-31 22:23:59.000000000 +0000
 +++ configure
 @@ -3157,7 +3157,8 @@ done
  
@@ -12,3 +12,25 @@ $NetBSD: patch-ac,v 1.1 2005/10/31 05:11:41 minskim Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -3597,10 +3598,6 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 
+ #include <stdlib.h>
+ 
+-int
+-main ()
+-{
+-
+ static void foo(void) __attribute__ ((noreturn));
+ 
+ static void
+@@ -3609,6 +3606,10 @@ foo(void)
+   exit(1);
+ }
+ 
++int
++main ()
++{
++
+   ;
+   return 0;
+ }

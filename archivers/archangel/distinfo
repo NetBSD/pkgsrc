@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.9 2012/01/28 01:52:48 sbd Exp $
+$NetBSD: distinfo,v 1.10 2012/01/28 04:37:36 sbd Exp $
 
 SHA1 (archangel-20050730.tar.gz) = 966948ebac01a71732e93afd72fe5c4a21ba1ed8
 RMD160 (archangel-20050730.tar.gz) = 16b5f1d7dae8d45b22d0e371a90e0673c5e58caa
 Size (archangel-20050730.tar.gz) = 673307 bytes
 SHA1 (patch-aa) = cc5369ee02b35a0f4c21bed18802a3919f89bc63
 SHA1 (patch-ab) = 580fac24f5c2ee698ea58dce3b75bc4301db75bf
-SHA1 (patch-ac) = f7cd2a68ae6349e9ce2570ee269c70d7dd565c8f
-SHA1 (patch-ad) = 7d4ec3b88e2453d81c041ec37859c804b36a0090
+SHA1 (patch-ac) = 55c35373a9baeb99310285d8a848ff9567305fd5
+SHA1 (patch-aclocal.m4) = 6939dbc5a5acd8046248cdbd23c73fb1e5790f03
+SHA1 (patch-ad) = 895e65f995cdc52a14140fe021b072155ea55882
 SHA1 (patch-ae) = 21e2e651af0d828813b26cd036b7583a5dd3eebe
