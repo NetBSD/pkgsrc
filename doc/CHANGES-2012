@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.260 2012/01/28 08:22:16 obache Exp $
+$NetBSD: CHANGES-2012,v 1.261 2012/01/28 08:31:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -437,3 +437,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/codeville to 0.8.0nb5 [obache 2012-01-27]
 	Updated devel/py-urwid to 0.9.9.1nb1 [obache 2012-01-28]
 	Updated devel/mercurial to 2.0.2nb1 [obache 2012-01-28]
+	Updated devel/py-pexpect to 2.3nb1 [obache 2012-01-28]
