@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/08 09:38:18 cegger Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/28 11:34:54 obache Exp $
 #
 
 DISTNAME=		hg-git-0.2.2
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.6.0:../../devel/py-dulwich
 DEPENDS+=	mercurial>=1.3.1:../../devel/mercurial
+
+USE_LANGUAGES=	#none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
