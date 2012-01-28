@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.266 2012/01/28 11:00:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.267 2012/01/28 13:15:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -443,3 +443,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/libmicrohttpd to 0.9.18 [wiz 2012-01-28]
 	Updated devel/SDL to 1.2.15 [wiz 2012-01-28]
 	Updated graphics/SDL_image to 1.2.12 [wiz 2012-01-28]
+	Updated audio/fluidsynth to 1.1.5 [wiz 2012-01-28]
