@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.39 2011/01/13 13:36:11 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/01/28 11:00:01 wiz Exp $
 
-DISTNAME=	SDL_image-1.2.10
-PKGREVISION=	3
+DISTNAME=	SDL_image-1.2.12
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_image/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_image/
 COMMENT=	Load images as SDL surfaces
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	zlib
 
 CONFLICTS=		SDL-image-[0-9]*
 
@@ -29,6 +28,7 @@ post-install:
 BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.10
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
