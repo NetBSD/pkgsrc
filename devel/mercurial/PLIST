@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2011/11/02 23:14:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2012/01/28 08:22:03 obache Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -177,6 +177,7 @@ ${PYSITELIB}/hgext/zeroconf/Zeroconf.pyo
 ${PYSITELIB}/hgext/zeroconf/__init__.py
 ${PYSITELIB}/hgext/zeroconf/__init__.pyc
 ${PYSITELIB}/hgext/zeroconf/__init__.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
