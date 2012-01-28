@@ -1,0 +1,4 @@
+This is an shared library built from source provided by Adobe which
+enables the use of OSS audio in the multimedia/ns-flash package
+
+Non Linux platforms will probably also need www/nspluginwrapper
