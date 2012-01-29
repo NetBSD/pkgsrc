@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2011/08/20 16:02:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.38 2012/01/29 02:54:18 sbd Exp $
 
 DISTNAME=	dar-2.4.1
 CATEGORIES=	archivers sysutils
@@ -92,6 +92,17 @@ UNLIMIT_RESOURCES=	datasize
 ## XXX Needed for getopt() with SunPro (USE_FEATURES?)
 #
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+## Build a static binary with threads is currently broken with glibc.
+.if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mthreads)
+SUBST_CLASSES+=		static
+SUBST_STAGE.static=	post-patch
+SUBST_MESSAGE.static=	Changing -all-static to -static
+SUBST_FILES.static=	src/testing/Makefile.in
+SUBST_SED.static=	-e 's,-all-static,-static,g'
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
