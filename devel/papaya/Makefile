@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/07/06 13:17:46 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/01/29 20:54:54 marino Exp $
 #
 
 DISTNAME=	papaya-0.1.7
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=	sh_command=${TOOLS_SH:Q}
 CONFIGURE_ENV+=	tar_command=${TOOLS_TAR:Q}
 CONFIGURE_ENV+=	texi2html_command=${TOOLS_PATH.texi2html:Q}
 CONFIGURE_ENV+=	gmake_command=${TOOLS_PATH.gmake}
-USE_TOOLS+=	sh perl:run tar texi2html gmake:run gzip:run
+USE_TOOLS+=	sh perl:run tar texi2html gmake:run gzip:run makeinfo
 INFO_FILES=	# PLIST
 
 CONFIGURE_ENV+=	perl_command=${PERL5:Q}
