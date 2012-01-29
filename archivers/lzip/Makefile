@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/21 21:26:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/29 08:41:22 sbd Exp $
 #
 
 DISTNAME=	lzip-1.12
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c++
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS=		--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 INFO_FILES=		YES
 
