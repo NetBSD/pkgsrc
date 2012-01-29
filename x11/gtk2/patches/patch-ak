@@ -1,0 +1,97 @@
+$NetBSD: patch-ak,v 1.5 2012/01/29 10:56:44 drochner Exp $
+
+revert upstream commit 8170436e61ea68c713d75ad374d22c3261be9203,
+it causes firefox crashes (see gnome bug #543520)
+
+--- modules/printbackends/cups/gtkprintbackendcups.c.orig	2012-01-24 19:38:37.000000000 +0000
++++ modules/printbackends/cups/gtkprintbackendcups.c
+@@ -483,44 +483,22 @@ cups_print_cb (GtkPrintBackendCups *prin
+   GDK_THREADS_LEAVE ();  
+ }
+ 
+-typedef struct {
+-  GtkCupsRequest *request;
+-  GtkPrinterOptionSet *options;
+-} CupsOptionsData;
+-
+ static void
+ add_cups_options (const gchar *key,
+ 		  const gchar *value,
+ 		  gpointer     user_data)
+ {
+-  CupsOptionsData *data = (CupsOptionsData *) user_data;
+-  GtkCupsRequest *request = data->request;
+-  GtkPrinterOptionSet *options = data->options;
+-  GtkPrinterOption *option = NULL;
+-  gchar *new_value = NULL;
++  GtkCupsRequest *request = user_data;
+ 
+   if (!g_str_has_prefix (key, "cups-"))
+     return;
+ 
+   if (strcmp (value, "gtk-ignore-value") == 0)
+     return;
+-
+-  option = gtk_printer_option_set_lookup (options, key);
+   
+   key = key + strlen ("cups-");
+ 
+-  /* Add "Custom." prefix to custom values */
+-  if (value && option &&
+-      !gtk_printer_option_has_choice (option, value))
+-    new_value = g_strdup_printf ("Custom.%s", value);
+-
+-  if (new_value)
+-    {
+-      gtk_cups_request_encode_option (request, key, new_value);
+-      g_free (new_value);
+-    }
+-  else
+-    gtk_cups_request_encode_option (request, key, value);
++  gtk_cups_request_encode_option (request, key, value);
+ }
+ 
+ static void
+@@ -533,12 +511,8 @@ gtk_print_backend_cups_print_stream (Gtk
+ {
+   GtkPrinterCups *cups_printer;
+   CupsPrintStreamData *ps;
+-  CupsOptionsData *options_data;
+   GtkCupsRequest *request;
+   GtkPrintSettings *settings;
+-  GtkPrinterOptionSet *options;
+-  GtkPrintCapabilities capabilities;
+-  GtkPageSetup *page_setup;
+   const gchar *title;
+   char  printer_absolute_uri[HTTP_MAX_URI];
+ 
+@@ -547,8 +521,6 @@ gtk_print_backend_cups_print_stream (Gtk
+ 
+   cups_printer = GTK_PRINTER_CUPS (gtk_print_job_get_printer (job));
+   settings = gtk_print_job_get_settings (job);
+-  capabilities = cups_printer_get_capabilities (GTK_PRINTER (cups_printer));
+-  page_setup = gtk_printer_get_default_page_size (GTK_PRINTER (cups_printer));
+ 
+   request = gtk_cups_request_new_with_username (NULL,
+                                                 GTK_CUPS_POST,
+@@ -586,18 +558,8 @@ gtk_print_backend_cups_print_stream (Gtk
+                                      IPP_TAG_NAME, "job-name", 
+                                      NULL, title);
+ 
+-  options = cups_printer_get_options (GTK_PRINTER (cups_printer), settings, page_setup, capabilities);
+-
+-  options_data = g_new0 (CupsOptionsData, 1);
+-  options_data->request = request;
+-  options_data->options = options;
+-
+-  gtk_print_settings_foreach (settings, add_cups_options, options_data);
+-
+-  g_object_unref (page_setup);
+-  g_object_unref (options);
+-  g_free (options_data);
+-
++  gtk_print_settings_foreach (settings, add_cups_options, request);
++  
+   ps = g_new0 (CupsPrintStreamData, 1);
+   ps->callback = callback;
+   ps->user_data = user_data;
