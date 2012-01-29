@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/07 03:14:36 asau Exp $
+# $NetBSD: Makefile,v 1.23 2012/01/29 20:48:48 asau Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -30,7 +30,7 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
-SML_VERSION=	110.72
+SML_VERSION=	110.73
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
