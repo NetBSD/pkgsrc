@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2009/02/09 23:25:45 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2012/01/29 08:26:32 sbd Exp $
 
---- Makefile.orig	Thu Aug 30 17:03:17 2001
-+++ Makefile	Wed Dec  3 15:29:20 2003
+--- Makefile.orig	2001-08-30 16:03:17.000000000 +0000
++++ Makefile
 @@ -1,7 +1,7 @@
  # Makefile - makefile for lbrate
  
@@ -11,7 +11,16 @@ $NetBSD: patch-aa,v 1.4 2009/02/09 23:25:45 joerg Exp $
  
  # Set BINDIR to directory for binary,
  # MANDIR to directory for man page.
-@@ -19,14 +19,14 @@
+@@ -9,7 +9,7 @@ CFLAGS=-O2 -Wall
+ #
+ PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+-MANDIR=$(PREFIX)/man/man1
++MANDIR=$(PREFIX)/$(PKGMANDIR)/man1
+ 
+ # You shouldn't need to edit below this line.
+ #--------------------------------------------------------
+@@ -19,14 +19,14 @@ OBJ=main.o readrle.o readhuff.o readlzw.
  all: lbrate
  
  lbrate: $(OBJ)
@@ -19,13 +28,14 @@ $NetBSD: patch-aa,v 1.4 2009/02/09 23:25:45 joerg Exp $
 +	$(CC) $(CFLAGS) -o lbrate $(OBJ) $(LDFLAGS)
  
  installdirs:
- 	/bin/sh ./mkinstalldirs $(BINDIR) $(MANDIR)
+-	/bin/sh ./mkinstalldirs $(BINDIR) $(MANDIR)
++	/bin/sh ./mkinstalldirs ${DESTDIR}$(BINDIR) ${DESTDIR}$(MANDIR)
  
  install: lbrate installdirs
 -	install -m 755 lbrate $(BINDIR)
 -	install -m 644 lbrate.1 $(MANDIR)
 +	$(BSD_INSTALL_PROGRAM) lbrate ${DESTDIR}$(BINDIR)
-+	$(BSD_INSTALL_MAN) lbrate.1 ${DESTDIR}${PREFIX}/$(PKGMANDIR)/man1/
++	$(BSD_INSTALL_MAN) lbrate.1 ${DESTDIR}$(MANDIR)
  
  uninstall:
  	$(RM) $(BINDIR)/lbrate $(MANDIR)/lbrate.1
