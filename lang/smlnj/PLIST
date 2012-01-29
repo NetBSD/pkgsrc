@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/02/07 03:14:36 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/01/29 20:48:48 asau Exp $
 bin/heap2asm
 bin/heap2exec
 bin/ml-antlr
@@ -73,12 +73,18 @@ lib/smlnj/lib/cml-lib/.cm/${BOX}-unix/smlnj-lib.cm
 lib/smlnj/lib/cml-lib/.cm/${BOX}-unix/trace-cml.cm
 lib/smlnj/lib/cml/.cm/${BOX}-unix/basis.cm
 lib/smlnj/lib/cml/.cm/${BOX}-unix/cml-internal.cm
+lib/smlnj/lib/cml/.cm/${BOX}-unix/cml-lib.cm
 lib/smlnj/lib/cml/.cm/${BOX}-unix/cml.cm
 lib/smlnj/lib/cml/.cm/${BOX}-unix/core-cml.cm
+lib/smlnj/lib/cml/.cm/${BOX}-unix/inet-lib.cm
+lib/smlnj/lib/cml/.cm/${BOX}-unix/smlnj-lib.cm
+lib/smlnj/lib/cml/.cm/${BOX}-unix/trace-cml.cm
+lib/smlnj/lib/cml/.cm/${BOX}-unix/unix-lib.cm
 lib/smlnj/lib/dir-tool.cm/.cm/${BOX}-unix/dir-tool.cm
 lib/smlnj/lib/eXene.cm/.cm/${BOX}-unix/eXene.cm
 lib/smlnj/lib/grm-ext.cm/.cm/${BOX}-unix/grm-ext.cm
 lib/smlnj/lib/hash-cons-lib.cm/.cm/${BOX}-unix/hash-cons-lib.cm
+lib/smlnj/lib/html4-lib.cm/.cm/${BOX}-unix/html4-lib.cm
 lib/smlnj/lib/inet-lib.cm/.cm/${BOX}-unix/inet-lib.cm
 lib/smlnj/lib/json-lib.cm/.cm/${BOX}-unix/json-lib.cm
 lib/smlnj/lib/lex-ext.cm/.cm/${BOX}-unix/lex-ext.cm
