@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2011/11/01 06:02:27 sbd Exp $
+# $NetBSD: Makefile,v 1.75 2012/01/29 10:06:39 marino Exp $
 
 DISTNAME=		scribus-1.3.3.14
 PKGREVISION=		4
@@ -20,6 +20,9 @@ USE_TOOLS+=		gmake perl pkg-config
 PTHREAD_OPTS+=		require
 SHLIBTOOL_OVERRIDE=	# empty
 USE_CMAKE=	yes
+
+LDFLAGS.DragonFly=	-lX11
+
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--with-extra-includes=${PREFIX}/include
 CONFIGURE_ARGS+=	--with-extra-libs=${PREFIX}/lib
