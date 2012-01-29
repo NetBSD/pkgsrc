@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10836 2012/01/29 10:47:52 drochner Exp $
+$NetBSD: TODO,v 1.10837 2012/01/29 22:02:50 taca Exp $
 
 Suggested new packages
 ======================
@@ -1202,7 +1202,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rxvt-unicode-9.15
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.2
-	o samba-3.6.2
 	o sarg-2.2.5
 	o sawfish-1.8.2
 	o saxon-9.2
@@ -1420,7 +1419,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-input-vmmouse-12.7.0
 	o xf86-input-void-1.4.0
 	o xf86-video-apm-1.2.3
-	o xf86-video-ark-0.7.3
+	o xf86-video-ark-0.7.4
 	o xf86-video-ast-0.91.10
 	o xf86-video-ati-6.14.3
 	o xf86-video-chips-1.2.4
@@ -1463,7 +1462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xhost-1.0.4
 	o xine-lib-1.2.0
 	o xineramaproto-1.2.1
-	o xinit-1.3.1
+	o xinit-1.3.2
 	o xinput-1.5.4
 	o xjman-0.7
 	o xkbcomp-1.2.3
