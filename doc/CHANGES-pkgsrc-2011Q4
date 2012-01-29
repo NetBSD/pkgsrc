@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.16 2012/01/28 06:27:19 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.17 2012/01/29 23:47:04 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -104,3 +104,5 @@ Pullup ticket #3662 - requested by gls
 www/moodle: security update
 Pullup ticket #3663 - requested by drochner
 www/curl security update
+Pullup ticket #3665 - requested by taca
+net/samba: security update
