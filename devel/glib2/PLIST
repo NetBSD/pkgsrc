@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.63 2012/01/29 10:46:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.64 2012/01/29 17:43:43 drochner Exp $
 bin/gdbus
-bin/gdbus-codegen
 bin/gio-querymodules
 bin/glib-compile-schemas
 bin/glib-genmarshal
@@ -228,30 +227,6 @@ include/glib/glib-2.0/gobject/gvalue.h
 include/glib/glib-2.0/gobject/gvaluearray.h
 include/glib/glib-2.0/gobject/gvaluecollector.h
 include/glib/glib-2.0/gobject/gvaluetypes.h
-lib/gdbus-2.0/codegen/__init__.py
-lib/gdbus-2.0/codegen/__init__.pyc
-lib/gdbus-2.0/codegen/__init__.pyo
-lib/gdbus-2.0/codegen/codegen.py
-lib/gdbus-2.0/codegen/codegen.pyc
-lib/gdbus-2.0/codegen/codegen.pyo
-lib/gdbus-2.0/codegen/codegen_docbook.py
-lib/gdbus-2.0/codegen/codegen_docbook.pyc
-lib/gdbus-2.0/codegen/codegen_docbook.pyo
-lib/gdbus-2.0/codegen/codegen_main.py
-lib/gdbus-2.0/codegen/codegen_main.pyc
-lib/gdbus-2.0/codegen/codegen_main.pyo
-lib/gdbus-2.0/codegen/config.py
-lib/gdbus-2.0/codegen/config.pyc
-lib/gdbus-2.0/codegen/config.pyo
-lib/gdbus-2.0/codegen/dbustypes.py
-lib/gdbus-2.0/codegen/dbustypes.pyc
-lib/gdbus-2.0/codegen/dbustypes.pyo
-lib/gdbus-2.0/codegen/parser.py
-lib/gdbus-2.0/codegen/parser.pyc
-lib/gdbus-2.0/codegen/parser.pyo
-lib/gdbus-2.0/codegen/utils.py
-lib/gdbus-2.0/codegen/utils.pyc
-lib/gdbus-2.0/codegen/utils.pyo
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.la
 lib/libglib-2.0.la
