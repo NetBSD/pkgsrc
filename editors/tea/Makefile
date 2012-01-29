@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/24 09:11:02 sbd Exp $
+# $NetBSD: Makefile,v 1.16 2012/01/29 21:00:13 marino Exp $
 #
 
 DISTNAME=		tea-16.0.5
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config msgfmt
+LDFLAGS.DragonFly=	-lX11 -lm
 
 .include "options.mk"
 
