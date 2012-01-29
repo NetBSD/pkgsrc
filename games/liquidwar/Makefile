@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/12/12 16:26:37 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/29 21:04:58 marino Exp $
 #
 
 DISTNAME=	liquidwar-5.6.4
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 
+LDFLAGS.DragonFly=	-lm
 CONFIGURE_ARGS+=	--disable-doc-ps --disable-doc-pdf
 #CONFIGURE_ARGS+=	--enable-debug
 
