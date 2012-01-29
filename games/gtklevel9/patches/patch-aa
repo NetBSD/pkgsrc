@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/01 14:56:14 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2012/01/29 21:03:37 marino Exp $
 
 --- Makefile.orig	2005-07-26 12:03:48.000000000 +0200
 +++ Makefile
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/01 14:56:14 dillo Exp $
  
  OBJS = level9.o main.o config.o gui.o text.o graphics.o util.o
  
+@@ -40,7 +40,7 @@ GTK_LIBS = `pkg-config --libs gtk+-2.0`
+ 
+ #######################################################################
+ 
+-LIBS = $(GTK_LIBS)
++LIBS = $(GTK_LIBS) -lm
+ 
+ gtklevel9: $(OBJS)
+ 	$(CC) -o gtklevel9 $(OBJS) $(LIBS)
