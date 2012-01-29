@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.22 2011/11/01 06:01:02 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2012/01/29 08:59:46 obache Exp $
 #
 
-DISTNAME=		at-spi-1.30.1
+DISTNAME=		at-spi-1.32.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		6
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.30/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.32/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Assistive Technology Service Provider Interface
-LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-lgpl-v2 # or later
+
+DEPENDS+=		at-spi>=${PKGVERSION_NOREV}:../../devel/at-spi
+DEPENDS+=		${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
+DEPENDS+=		${PYPKGPREFIX}-ORBit-[0-9]*:../../net/py-ORBit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=		#none
 
 NO_BUILD=	yes
 PY_PATCHPLIST=	yes
@@ -27,5 +32,4 @@ do-install:
 	${PY_COMPILE_ALL} ${DESTDIR}${PYATSPIDIR}
 
 .include "../../lang/python/extension.mk"
-.include "../../devel/at-spi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

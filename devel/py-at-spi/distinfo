@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/06/05 11:05:59 wiz Exp $
+$NetBSD: distinfo,v 1.8 2012/01/29 08:59:46 obache Exp $
 
-SHA1 (at-spi-1.30.1.tar.bz2) = d7bf78555e8025e42325437d7809e1c98a35389e
-RMD160 (at-spi-1.30.1.tar.bz2) = f317c5ad38a6f79b1917f3173e77e4746f79408b
-Size (at-spi-1.30.1.tar.bz2) = 836847 bytes
+SHA1 (at-spi-1.32.0.tar.bz2) = 0cc1403dde2f62f7254b32ff305984ed091cc9c7
+RMD160 (at-spi-1.32.0.tar.bz2) = 18e9453c26f8d1cdd91ba7bf2d8ac49a19b9aa7d
+Size (at-spi-1.32.0.tar.bz2) = 845788 bytes
