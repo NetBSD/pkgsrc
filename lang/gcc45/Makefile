@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/01/14 02:09:36 hans Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/29 16:13:06 marino Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -29,7 +29,7 @@ MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 # To avoid GNU surprises
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-NOT_FOR_PLATFORM=	Interix-*-*
+NOT_FOR_PLATFORM=	Interix-*-* DragonFly-*-*
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
