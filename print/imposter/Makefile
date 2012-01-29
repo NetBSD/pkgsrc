@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/11/01 06:02:25 sbd Exp $
+# $NetBSD: Makefile,v 1.24 2012/01/29 10:09:29 marino Exp $
 #
 
 DISTNAME=	imposter-0.3
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
+
+LDFLAGS.DragonFly=	-lm
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
