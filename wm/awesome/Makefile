@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/11/01 06:02:41 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2012/01/29 15:54:40 marino Exp $
 #
 
 DISTNAME=		awesome-2.3.6
@@ -20,6 +20,8 @@ USE_LANGUAGES=		c99
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+LDFLAGS.DragonFly=	-lX11 -lXext
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
