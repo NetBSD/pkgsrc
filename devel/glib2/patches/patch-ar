@@ -1,0 +1,51 @@
+$NetBSD: patch-ar,v 1.1 2012/01/29 17:43:44 drochner Exp $
+
+avoid python dependency
+
+--- gio/tests/Makefile.in.orig	2011-11-11 22:11:56.000000000 +0000
++++ gio/tests/Makefile.in
+@@ -48,17 +48,14 @@ noinst_PROGRAMS = $(am__EXEEXT_5) $(am__
+ @OS_UNIX_TRUE@	gdbus-peer gdbus-exit-on-close gdbus-non-socket \
+ @OS_UNIX_TRUE@	gdbus-bz627724 appinfo contenttype file $(NULL) \
+ @OS_UNIX_TRUE@	live-g-file desktop-app-info unix-fd \
+-@OS_UNIX_TRUE@	unix-streams gapplication gdbus-test-codegen \
++@OS_UNIX_TRUE@	unix-streams gapplication \
+ @OS_UNIX_TRUE@	$(NULL)
+ @OS_UNIX_TRUE@am__append_2 = \
+ @OS_UNIX_TRUE@	gdbus-example-unix-fd-client 		\
+-@OS_UNIX_TRUE@	gdbus-example-objectmanager-server 	\
+-@OS_UNIX_TRUE@	gdbus-example-objectmanager-client 	\
+ @OS_UNIX_TRUE@	$(NULL)
+ 
+ @OS_WIN32_TRUE@am__append_3 = win32-streams
+ @HAVE_DBUS1_TRUE@am__append_4 = gdbus-serialization
+-@OS_UNIX_TRUE@am__append_5 = gdbus-test-codegen-generated.c gdbus-test-codegen-generated.h
+ subdir = gio/tests
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/m4macros/gtk-doc.m4 \
+@@ -96,7 +93,7 @@ am__EXEEXT_1 =
+ @OS_UNIX_TRUE@	$(am__EXEEXT_1) live-g-file$(EXEEXT) \
+ @OS_UNIX_TRUE@	desktop-app-info$(EXEEXT) unix-fd$(EXEEXT) \
+ @OS_UNIX_TRUE@	unix-streams$(EXEEXT) gapplication$(EXEEXT) \
+-@OS_UNIX_TRUE@	gdbus-test-codegen$(EXEEXT) $(am__EXEEXT_1)
++@OS_UNIX_TRUE@	$(am__EXEEXT_1)
+ @OS_WIN32_TRUE@am__EXEEXT_3 = win32-streams$(EXEEXT)
+ @HAVE_DBUS1_TRUE@am__EXEEXT_4 = gdbus-serialization$(EXEEXT)
+ am__EXEEXT_5 = io-stream$(EXEEXT) actions$(EXEEXT) \
+@@ -115,8 +112,6 @@ am__EXEEXT_5 = io-stream$(EXEEXT) action
+ 	cancellable$(EXEEXT) $(am__EXEEXT_1) $(am__EXEEXT_2) \
+ 	$(am__EXEEXT_3) $(am__EXEEXT_4)
+ @OS_UNIX_TRUE@am__EXEEXT_6 = gdbus-example-unix-fd-client$(EXEEXT) \
+-@OS_UNIX_TRUE@	gdbus-example-objectmanager-server$(EXEEXT) \
+-@OS_UNIX_TRUE@	gdbus-example-objectmanager-client$(EXEEXT) \
+ @OS_UNIX_TRUE@	$(am__EXEEXT_1)
+ am__EXEEXT_7 = resolver$(EXEEXT) socket-server$(EXEEXT) \
+ 	socket-client$(EXEEXT) echo-server$(EXEEXT) httpd$(EXEEXT) \
+@@ -902,7 +897,6 @@ TEST_PROGS = io-stream actions memory-in
+ 	gdbus-addresses network-address gdbus-message socket pollable \
+ 	tls-certificate tls-interaction cancellable $(NULL) \
+ 	$(am__append_1) $(am__append_3) $(am__append_4)
+-SUBDIRS = gdbus-object-manager-example
+ INCLUDES = \
+ 	-g 			\
+ 	$(gio_INCLUDES)		\
