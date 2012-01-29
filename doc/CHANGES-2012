@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.290 2012/01/29 12:29:27 tron Exp $
+$NetBSD: CHANGES-2012,v 1.291 2012/01/29 13:23:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -467,3 +467,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gtk2 to 2.24.9 [drochner 2012-01-29]
 	Added print/tex-splitbib version 20051222 [cheusov 2012-01-29]
 	Updated www/apache22 to 2.2.21nb7 [tron 2012-01-29]
+	Added devel/py-ipython version 0.10.2 [obache 2012-01-29]
