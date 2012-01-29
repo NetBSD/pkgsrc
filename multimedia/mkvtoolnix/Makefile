@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/01/13 10:55:24 obache Exp $
+# $NetBSD: Makefile,v 1.40 2012/01/29 00:22:21 marino Exp $
 
 DISTNAME=	mkvtoolnix-5.0.0
 PKGREVISION=	4
@@ -20,6 +20,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}
 CONFIGURE_ARGS+=	--with-boost_regex=boost_regex
 CONFIGURE_ARGS+=	--with-boost-filesystem=boost_filesystem
+
+LDFLAGS.DragonFly=	-lboost_system
 
 INSTALL_ENV+=	SHELL=${SH:Q}
 
