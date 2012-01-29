@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2011/11/25 22:19:56 joerg Exp $
+$NetBSD: distinfo,v 1.9 2012/01/29 15:53:27 marino Exp $
 
 SHA1 (glclock-6.0b6.0.tar.gz) = e276a516d543c9a6c04f06cfa046f89a476a8685
 RMD160 (glclock-6.0b6.0.tar.gz) = f0bd207a47a01e3dc3d3da5b107b168a3210d2a3
 Size (glclock-6.0b6.0.tar.gz) = 811803 bytes
 SHA1 (patch-GLObject.H) = 62040251be8e6dba3d744640fdcb614eed30a306
 SHA1 (patch-MString.H) = 3d31d19c33327d6b6775d9bb7db165a8949e4fc2
-SHA1 (patch-aa) = d2526e6ce7679ce67835b6b916b4524b4249d7e5
+SHA1 (patch-aa) = 922d73d2c864abde5ca9a39ca27d4740ceedb616
 SHA1 (patch-ab) = 8d4f12c9948d703e4fbff68282388efc7a352f59
 SHA1 (patch-ac) = d06a44d725820c2988888665c4d5dd75161525b8
