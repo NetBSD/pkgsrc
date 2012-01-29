@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/16 12:57:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/29 22:27:27 taca Exp $
 
 DISTNAME=	drupal-7.10
 CATEGORIES=	www
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
-
-CONFLICTS+=	drupal-[1-9].*{,nb*}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

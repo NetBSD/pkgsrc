@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2011/09/16 05:46:26 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/01/29 22:27:27 taca Exp $
 
 DISTNAME=	drupal-6.22
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
-
-CONFLICTS+=	drupal-5.*{,nb*}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
