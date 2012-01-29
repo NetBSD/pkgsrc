@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/29 08:01:36 obache Exp $
+# $NetBSD: Makefile,v 1.16 2012/01/29 08:10:43 obache Exp $
 
 DISTNAME=	stgit-0.14.3
 PKGREVISION=	3
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+= xmlto-[0-9]*:../../textproc/xmlto
-DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=	scmgit-base>=1.5.2:../../devel/scmgit-base
 
 AUTO_MKDIRS=	yes
 USE_TOOLS+=	bash:run perl gmake
