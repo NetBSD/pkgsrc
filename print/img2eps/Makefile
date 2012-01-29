@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:44:32 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/01/29 10:08:30 marino Exp $
 #
 
 DISTNAME=	img2eps-0.2
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 TEST_TARGET=	check
+
+LDFLAGS.DragonFly=	-lm
 
 .include "options.mk"
 
