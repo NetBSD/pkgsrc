@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.286 2012/01/29 09:00:07 obache Exp $
+$NetBSD: CHANGES-2012,v 1.287 2012/01/29 10:47:51 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -463,3 +463,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/dvdbackup to 0.4.1nb1 [jakllsch 2012-01-29]
 	Updated devel/stgit to 0.14.3nb3 [obache 2012-01-29]
 	Updated devel/py-at-spi to 1.32.0 [obache 2012-01-29]
+	Updated devel/glib2 to 2.30.2 [drochner 2012-01-29]
