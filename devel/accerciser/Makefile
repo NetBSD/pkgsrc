@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.16 2012/01/24 09:11:00 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/01/29 13:32:20 obache Exp $
 #
 
-DISTNAME=	accerciser-1.6.1
-PKGREVISION=	10
+DISTNAME=	accerciser-1.12.1
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/1.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/1.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Interactive Python accessibility explorer for the GNOME desktop
 LICENSE=	modified-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
+DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-at-spi>=1.23.4:../../devel/py-at-spi
+DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -22,14 +26,10 @@ REPLACE_PYTHON=		plugins/ipython_view.py
 REPLACE_PYTHON+=	src/accerciser.in
 
 .include "../../devel/GConf/schemas.mk"
-BUILDLINK_API_DEPENDS.py-at-spi+=	${PYPKGPREFIX}-at-spi>=1.23.3
-.include "../../devel/py-at-spi/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../x11/py-gnome2-desktop/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
