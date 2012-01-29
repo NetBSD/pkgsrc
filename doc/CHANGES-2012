@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.289 2012/01/29 11:55:53 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.290 2012/01/29 12:29:27 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -466,3 +466,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/glib2 to 2.30.2 [drochner 2012-01-29]
 	Updated x11/gtk2 to 2.24.9 [drochner 2012-01-29]
 	Added print/tex-splitbib version 20051222 [cheusov 2012-01-29]
+	Updated www/apache22 to 2.2.21nb7 [tron 2012-01-29]
