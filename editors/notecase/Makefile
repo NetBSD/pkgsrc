@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/01/24 09:11:02 sbd Exp $
+# $NetBSD: Makefile,v 1.22 2012/01/29 20:57:55 marino Exp $
 #
 
 DISTNAME=	notecase-1.8.8_src
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/notecase-1.8.8
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake msgfmt pkg-config gsed
+
+LDFLAGS.DragonFly=	-lX11
 
 INSTALLATION_DIRS=	share/doc/notecase share/locale/fr_CA/LC_MESSAGES \
 			share/locale/no/LC_MESSAGES
