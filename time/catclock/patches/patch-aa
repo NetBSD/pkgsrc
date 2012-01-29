@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2002/01/24 15:07:35 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2012/01/29 15:52:34 marino Exp $
 
 --- imakefile.orig	Sun Dec 20 21:24:08 1992
 +++ imakefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2002/01/24 15:07:35 jlam Exp $
 -MOTIF_INCS = -I$(MOTIF)/lib -I$(MOTIF)/lib/Xt
 -  INCLUDES = -I. $(MOTIF_INCS) -I$(TOP)
 +     MOTIF = ${BUILDLINK_DIR}
-+MOTIF_LIBS = ${MOTIFLIB} -lSM -lICE
++MOTIF_LIBS = ${MOTIFLIB} -lSM -lICE -lXt
 +MOTIF_INCS = -I$(MOTIF)/include
 +  INCLUDES = -I. $(MOTIF_INCS) $(TOP_X_INCLUDES)
     DEFINES = -DHAS_GNU_EMACS
