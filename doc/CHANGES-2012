@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.284 2012/01/29 02:48:40 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.285 2012/01/29 08:02:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -461,3 +461,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/ImageMagick to 6.7.3.1nb3 [wiz 2012-01-28]
 	Updated misc/tmux to 1.6 [christos 2012-01-29]
 	Updated multimedia/dvdbackup to 0.4.1nb1 [jakllsch 2012-01-29]
+	Updated devel/stgit to 0.14.3nb3 [obache 2012-01-29]
