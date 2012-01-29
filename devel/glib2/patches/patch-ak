@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
+$NetBSD: patch-ak,v 1.9 2012/01/29 10:46:53 drochner Exp $
 
---- configure.ac.orig	2011-06-05 19:18:49.000000000 -0400
-+++ configure.ac	2011-10-08 23:50:38.000000000 -0400
-@@ -825,7 +825,7 @@ int main (int argc, char **argv)
+--- configure.ac.orig	2011-10-14 04:12:40.000000000 +0000
++++ configure.ac
+@@ -882,7 +882,7 @@ int main (int argc, char **argv)
  AC_MSG_RESULT($g_have_gnuc_visibility)
  AM_CONDITIONAL(HAVE_GNUC_VISIBILITY, [test x$g_have_gnuc_visibility = xyes])
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
  #else
  # include "error: this is not Sun Studio."
-@@ -1023,8 +1023,20 @@ fi
+@@ -1114,8 +1114,20 @@ AC_SUBST(NETWORK_LIBS)
  
  case $host in
    *-*-solaris* )
@@ -32,7 +32,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
       AC_DEFINE(__EXTENSIONS__,         1, Needed to get declarations for msg_control and msg_controllen on Solaris)
       ;;
  esac
-@@ -1379,11 +1391,12 @@ if test x"$glib_native_win32" = xyes; th
+@@ -1509,11 +1521,12 @@ if test x"$glib_native_win32" = xyes; th
    G_MODULE_LDFLAGS=
  else
    export SED
@@ -46,7 +46,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1444,7 +1457,7 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
+@@ -1574,7 +1587,7 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  dnl *** check for OSF1/5.0 RTLD_GLOBAL brokenness
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -55,7 +55,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
  		-export-dynamic -o plugin.o plugin.c 2>&1 >/dev/null
  	AC_CACHE_CHECK([for RTLD_GLOBAL brokenness],
  		glib_cv_rtldglobal_broken,[
-@@ -1508,6 +1521,38 @@ dnl *** check for having dlerror()
+@@ -1638,6 +1651,38 @@ dnl *** check for having dlerror()
  		[G_MODULE_HAVE_DLERROR=0])
  	LIBS="$LIBS_orig"
  fi
@@ -94,7 +94,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1518,7 +1563,7 @@ fi
+@@ -1648,7 +1693,7 @@ fi
  
  AC_MSG_CHECKING(for the suffix of module shared libraries)
  export SED
@@ -103,7 +103,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -1537,6 +1582,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
+@@ -1667,6 +1712,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
  AC_SUBST(G_MODULE_LDFLAGS)
  AC_SUBST(G_MODULE_HAVE_DLERROR)
  AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
@@ -112,7 +112,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -1925,22 +1972,8 @@ if test x"$have_threads" != xno; then
+@@ -2055,22 +2102,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -122,7 +122,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
 -          AC_TRY_RUN(glib_thread_test(0),
 -                     glib_flag_works=yes,
 -                     glib_flag_works=no,
--                     [AC_LINK_IFELSE(glib_thread_test(0),
+-                     [AC_LINK_IFELSE([AC_LANG_SOURCE(glib_thread_test(0))],
 -                                     glib_flag_works=yes,
 -                                     glib_flag_works=no)])
 -          CFLAGS="$glib_save_CFLAGS"
@@ -137,7 +137,7 @@ $NetBSD: patch-ak,v 1.8 2011/10/09 19:40:02 jmmv Exp $
           ;;
      esac 
    fi
-@@ -3638,7 +3671,7 @@ AC_ARG_ENABLE(Bsymbolic,
+@@ -3771,7 +3804,7 @@ AC_ARG_ENABLE(Bsymbolic,
                             enable_Bsymbolic=no)
                 LDFLAGS="${SAVED_LDFLAGS}"])
  
