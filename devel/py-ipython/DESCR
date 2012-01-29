@@ -1,0 +1,5 @@
+The goal of IPython is to create a comprehensive environment for interactive and
+exploratory computing. To support this goal, IPython has two main components:
+
+ * An enhanced interactive Python shell.
+ * An architecture for interactive parallel computing.
