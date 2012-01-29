@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.292 2012/01/29 13:35:15 obache Exp $
+$NetBSD: CHANGES-2012,v 1.293 2012/01/29 20:49:28 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -469,3 +469,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/apache22 to 2.2.21nb7 [tron 2012-01-29]
 	Added devel/py-ipython version 0.10.2 [obache 2012-01-29]
 	Updated devel/accerciser to 1.12.1 [obache 2012-01-29]
+	Updated lang/smlnj to 110.73 [asau 2012-01-29]
