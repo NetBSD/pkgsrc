@@ -1,16 +1,16 @@
-$NetBSD: patch-cl,v 1.1 2011/10/09 19:40:02 jmmv Exp $
+$NetBSD: patch-cl,v 1.2 2012/01/29 10:46:54 drochner Exp $
 
---- gio/Makefile.am.orig	2011-10-09 17:21:29.000000000 +0000
+--- gio/Makefile.am.orig	2011-10-14 03:47:57.000000000 +0000
 +++ gio/Makefile.am
-@@ -632,12 +632,6 @@ gdbus_LDADD = libgio-2.0.la \
+@@ -633,12 +633,6 @@ gdbus_LDADD = libgio-2.0.la \
  	$(top_builddir)/glib/libglib-2.0.la 		\
  	$(top_builddir)/gobject/libgobject-2.0.la
  
 -completiondir = $(sysconfdir)/bash_completion.d
--completion_SCRIPTS = \
+-completion_DATA = \
 -	gdbus-bash-completion.sh		\
 -	gsettings-bash-completion.sh
--EXTRA_DIST += $(completion_SCRIPTS)
+-EXTRA_DIST += $(completion_DATA)
 -
  # ------------------------------------------------------------------------
  

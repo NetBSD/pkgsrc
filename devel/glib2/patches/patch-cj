@@ -1,22 +1,22 @@
-$NetBSD: patch-cj,v 1.5 2011/06/09 11:16:38 drochner Exp $
+$NetBSD: patch-cj,v 1.6 2012/01/29 10:46:54 drochner Exp $
 
 The mem-overflow test contains a declaration of an empty struct, which breaks
 on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
 test for now, pending a better fix.
 https://bugzilla.gnome.org/show_bug.cgi?id=641350
 
---- glib/tests/Makefile.in.orig	2011-06-05 23:24:51.000000000 +0000
+--- glib/tests/Makefile.in.orig	2011-10-14 13:31:09.000000000 +0000
 +++ glib/tests/Makefile.in
-@@ -59,7 +59,7 @@ am__EXEEXT_1 = testing$(EXEEXT) option-c
- 	string$(EXEEXT) markup-parse$(EXEEXT) markup-collect$(EXEEXT) \
- 	markup-escape$(EXEEXT) markup-subparser$(EXEEXT) \
- 	array-test$(EXEEXT) hostutils$(EXEEXT) gvariant$(EXEEXT) \
--	mem-overflow$(EXEEXT) utf8-performance$(EXEEXT) utils$(EXEEXT) \
-+	utf8-performance$(EXEEXT) utils$(EXEEXT) \
- 	regex$(EXEEXT) base64$(EXEEXT) sequence$(EXEEXT) \
- 	scannerapi$(EXEEXT) shell$(EXEEXT) collate$(EXEEXT) \
- 	utf8-pointer$(EXEEXT) utf8-validate$(EXEEXT) \
-@@ -139,8 +139,6 @@ markup_parse_DEPENDENCIES = $(progs_ldad
+@@ -69,7 +69,7 @@ am__EXEEXT_2 = testing$(EXEEXT) option-c
+ 	strfuncs$(EXEEXT) string$(EXEEXT) markup-parse$(EXEEXT) \
+ 	markup-collect$(EXEEXT) markup-escape$(EXEEXT) \
+ 	markup-subparser$(EXEEXT) array-test$(EXEEXT) \
+-	hostutils$(EXEEXT) gvariant$(EXEEXT) mem-overflow$(EXEEXT) \
++	hostutils$(EXEEXT) gvariant$(EXEEXT) \
+ 	utf8-performance$(EXEEXT) utils$(EXEEXT) regex$(EXEEXT) \
+ 	base64$(EXEEXT) sequence$(EXEEXT) scannerapi$(EXEEXT) \
+ 	shell$(EXEEXT) collate$(EXEEXT) utf8-pointer$(EXEEXT) \
+@@ -173,8 +173,6 @@ markup_parse_DEPENDENCIES = $(progs_ldad
  markup_subparser_SOURCES = markup-subparser.c
  markup_subparser_OBJECTS = markup-subparser.$(OBJEXT)
  markup_subparser_DEPENDENCIES = $(progs_ldadd)
@@ -25,34 +25,34 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  mem_overflow_DEPENDENCIES = $(progs_ldadd)
  node_SOURCES = node.c
  node_OBJECTS = node.$(OBJEXT)
-@@ -242,7 +240,7 @@ SOURCES = array-test.c base64.c bookmark
- 	$(fileutils_SOURCES) $(gdatetime_SOURCES) gvariant.c hash.c \
- 	hostutils.c $(keyfile_SOURCES) list.c logging.c \
+@@ -293,7 +291,7 @@ SOURCES = array-test.c atomic.c base64.c
+ 	$(gdatetime_SOURCES) gvariant.c hash.c hmac.c hostutils.c \
+ 	$(keyfile_SOURCES) list.c logging.c mappedfile.c \
  	markup-collect.c markup-escape.c markup-parse.c \
 -	markup-subparser.c mem-overflow.c node.c \
 +	markup-subparser.c node.c \
- 	$(option_context_SOURCES) pattern.c $(protocol_SOURCES) \
- 	queue.c $(rand_SOURCES) regex.c scannerapi.c sequence.c \
- 	shell.c slist.c $(strfuncs_SOURCES) $(string_SOURCES) \
-@@ -254,7 +252,7 @@ DIST_SOURCES = array-test.c base64.c boo
- 	$(fileutils_SOURCES) $(gdatetime_SOURCES) gvariant.c hash.c \
- 	hostutils.c $(keyfile_SOURCES) list.c logging.c \
+ 	$(option_argv0_SOURCES) $(option_context_SOURCES) pattern.c \
+ 	$(protocol_SOURCES) queue.c $(rand_SOURCES) regex.c \
+ 	scannerapi.c sequence.c shell.c slist.c sort.c \
+@@ -308,7 +306,7 @@ DIST_SOURCES = array-test.c atomic.c bas
+ 	$(gdatetime_SOURCES) gvariant.c hash.c hmac.c hostutils.c \
+ 	$(keyfile_SOURCES) list.c logging.c mappedfile.c \
  	markup-collect.c markup-escape.c markup-parse.c \
 -	markup-subparser.c mem-overflow.c node.c \
 +	markup-subparser.c node.c \
- 	$(option_context_SOURCES) pattern.c $(protocol_SOURCES) \
- 	queue.c $(rand_SOURCES) regex.c scannerapi.c sequence.c \
- 	shell.c slist.c $(strfuncs_SOURCES) $(string_SOURCES) \
-@@ -507,7 +505,7 @@ EXTRA_DIST = 4096-random-bytes keyfilete
- TEST_PROGS = testing option-context keyfile fileutils test-printf \
- 	protocol rand strfuncs string markup-parse markup-collect \
- 	markup-escape markup-subparser array-test hostutils gvariant \
--	mem-overflow utf8-performance utils regex base64 sequence \
-+	utf8-performance utils regex base64 sequence \
- 	scannerapi shell collate utf8-pointer utf8-validate utf8-misc \
- 	checksum hash date node convert list slist queue tree uri dir \
- 	pattern logging error bookmarkfile gdatetime timeout \
-@@ -692,9 +690,6 @@ markup-parse$(EXEEXT): $(markup_parse_OB
+ 	$(option_argv0_SOURCES) $(option_context_SOURCES) pattern.c \
+ 	$(protocol_SOURCES) queue.c $(rand_SOURCES) regex.c \
+ 	scannerapi.c sequence.c shell.c slist.c sort.c \
+@@ -567,7 +565,7 @@ EXTRA_DIST = 4096-random-bytes keyfilete
+ TEST_PROGS = testing option-context option-argv0 keyfile fileutils \
+ 	test-printf protocol rand strfuncs string markup-parse \
+ 	markup-collect markup-escape markup-subparser array-test \
+-	hostutils gvariant mem-overflow utf8-performance utils regex \
++	hostutils gvariant utf8-performance utils regex \
+ 	base64 sequence scannerapi shell collate utf8-pointer \
+ 	utf8-validate utf8-misc unicode checksum hmac hash cache date \
+ 	node convert list slist queue tree uri dir pattern logging \
+@@ -785,9 +783,6 @@ markup-parse$(EXEEXT): $(markup_parse_OB
  markup-subparser$(EXEEXT): $(markup_subparser_OBJECTS) $(markup_subparser_DEPENDENCIES) 
  	@rm -f markup-subparser$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(markup_subparser_OBJECTS) $(markup_subparser_LDADD) $(LIBS)
@@ -62,11 +62,11 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  node$(EXEEXT): $(node_OBJECTS) $(node_DEPENDENCIES) 
  	@rm -f node$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(node_OBJECTS) $(node_LDADD) $(LIBS)
-@@ -793,7 +788,6 @@ distclean-compile:
+@@ -907,7 +902,6 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-escape.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-parse.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-subparser.Po@am__quote@
 -@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mem-overflow.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/node.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/option-argv0.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/option-context.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pattern.Po@am__quote@
