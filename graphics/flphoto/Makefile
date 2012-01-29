@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/04/22 13:43:44 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/01/29 15:49:17 marino Exp $
 #
 
 DISTNAME=		flphoto-1.2-source
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/flphoto-1.2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+LIBS.DragonFly= 	-lstdc++
 
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
