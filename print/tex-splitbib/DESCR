@@ -1,0 +1,3 @@
+This package allows you to split a bibliography into several
+categories and subcategories. It does not depend on BibTeX, and any
+bibliography may be split and reordered.
