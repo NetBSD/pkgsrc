@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.190 2012/01/17 16:51:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.191 2012/01/29 10:46:52 drochner Exp $
 
 .include "Makefile.common"
 .include "options.mk"
-
-PKGREVISION=		4
 
 CATEGORIES=		devel
 
@@ -34,6 +32,7 @@ FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
 # agc doesn't want glib2 to depend on python so we install it
 # in a broken and useless state.
 CHECK_INTERPRETER_SKIP+=	bin/gtester-report
+CHECK_INTERPRETER_SKIP+=	bin/gdbus-codegen
 
 # need pcre utf8 + unicode-properties
 BUILDLINK_API_DEPENDS.pcre+=	pcre>=8.11
@@ -50,4 +49,5 @@ LIBS.SunOS+=	-lnsl -lsocket
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
