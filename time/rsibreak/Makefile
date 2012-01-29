@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/01/13 10:55:34 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/01/29 00:13:49 marino Exp $
 
 DISTNAME=		rsibreak-0.10
 PKGREVISION=		8
@@ -18,6 +18,8 @@ BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
 USE_TOOLS+=		msgfmt perl
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
+
+LDFLAGS.DragonFly=	-lX11 -lXext
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
