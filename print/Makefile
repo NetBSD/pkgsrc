@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.517 2012/01/28 07:05:13 jnemeth Exp $
+# $NetBSD: Makefile,v 1.518 2012/01/29 11:57:57 cheusov Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -564,6 +564,7 @@ SUBDIR+=	tex-soul
 SUBDIR+=	tex-soul-doc
 SUBDIR+=	tex-sphack
 SUBDIR+=	tex-sphack-doc
+SUBDIR+=	tex-splitbib
 SUBDIR+=	tex-srcltx
 SUBDIR+=	tex-srcltx-doc
 SUBDIR+=	tex-statex
