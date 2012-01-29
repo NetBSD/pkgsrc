@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.294 2012/01/29 21:01:20 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.295 2012/01/29 22:02:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -471,3 +471,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/accerciser to 1.12.1 [obache 2012-01-29]
 	Updated lang/smlnj to 110.73 [asau 2012-01-29]
 	Added devel/lutok version 0.1 [jmmv 2012-01-29]
+	Updated net/samba to 3.6.3 [taca 2012-01-29]
