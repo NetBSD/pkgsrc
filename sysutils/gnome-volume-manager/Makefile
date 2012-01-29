@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/01/24 09:11:14 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/01/29 10:12:20 marino Exp $
 #
 
 DISTNAME=	gnome-volume-manager-2.24.1
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
+
+LDFLAGS.DragonFly=	-lX11
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-multiuser
