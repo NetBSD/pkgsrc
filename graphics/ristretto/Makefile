@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/01 06:01:45 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/29 10:15:56 marino Exp $
 #
 
 DISTNAME=	ristretto-0.0.22
@@ -19,6 +19,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
+
+LDFLAGS.DragonFly=	-lX11
 
 .include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
