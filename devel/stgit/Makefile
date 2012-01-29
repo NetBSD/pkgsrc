@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/02/28 14:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/01/29 08:01:36 obache Exp $
 
 DISTNAME=	stgit-0.14.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://homepage.ntlworld.com/cmarinas/stgit/
 
@@ -17,12 +17,12 @@ DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
 
 AUTO_MKDIRS=	yes
 USE_TOOLS+=	bash:run perl gmake
+USE_LANGUAGES=	#none
 
 REPLACE_PERL=	Documentation/build-docdep.perl
 REPLACE_BASH=	contrib/stg-*
 
 PYTHON_PATCH_SCRIPTS=	*.py stgit/*.py stg
-PYDISTUTILSPKG=		yes
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}
 
 MAKE_ENV+=	ASCIIDOC=${PREFIX}/bin/asciidoc
@@ -45,7 +45,7 @@ ASCIIDOC_EXTRA+= -a docbook-xsl-172
 .endif
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 
 pre-build:
 	cd ${WRKSRC}/Documentation && \
