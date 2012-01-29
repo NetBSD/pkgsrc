@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:02:38 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/01/29 00:15:04 marino Exp $
 
 DISTNAME=		ebview-0.3.6
 PKGREVISION=		7
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		YES
+
+LDFLAGS.DragonFly=	-lX11
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/eb/buildlink3.mk"
