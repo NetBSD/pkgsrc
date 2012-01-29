@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.293 2012/01/29 20:49:28 asau Exp $
+$NetBSD: CHANGES-2012,v 1.294 2012/01/29 21:01:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -470,3 +470,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/py-ipython version 0.10.2 [obache 2012-01-29]
 	Updated devel/accerciser to 1.12.1 [obache 2012-01-29]
 	Updated lang/smlnj to 110.73 [asau 2012-01-29]
+	Added devel/lutok version 0.1 [jmmv 2012-01-29]
