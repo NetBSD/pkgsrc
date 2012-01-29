@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/01/13 10:55:01 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/29 20:59:19 marino Exp $
 #
 
 DISTNAME=	qgoogletranslator-1.2.1
@@ -18,6 +18,8 @@ DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 
 USE_LANGUAGES=	c++ c
 USE_CMAKE=	yes
+
+LDFLAGS.DragonFly=	-lX11
 
 FIND_PREFIX:=	MPG123DIR=mpg123
 .include "../../mk/find-prefix.mk"
