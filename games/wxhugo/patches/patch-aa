@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2006/05/21 16:43:27 rillig Exp $
+$NetBSD: patch-aa,v 1.7 2012/01/29 21:05:53 marino Exp $
 
 --- Makefile.orig	2005-01-16 20:25:50.000000000 +0100
 +++ Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.6 2006/05/21 16:43:27 rillig Exp $
  #LDFLAGS = `wx-config --libs` -lgtk -lgdk -lmikmod
  # Uncomment the following if compiling with GTK 2 support:
 -LDFLAGS = `wx-config --libs` -lgtk-x11-2.0 -lgdk-x11-2.0 -lmikmod
-+LDFLAGS = `wx24-config --libs` -lmikmod
++LDFLAGS = `wx24-config --libs` -lmikmod -lstdc++
  
  # Use these LDFLAGS and STATICLIBS for static building:
  #STATICLIBS = /usr/local/lib/libmikmod.a /usr/local/lib/libwx_gtk2-2.4.a
