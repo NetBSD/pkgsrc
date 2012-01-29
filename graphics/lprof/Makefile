@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/11/01 06:01:41 sbd Exp $
+# $NetBSD: Makefile,v 1.21 2012/01/29 10:15:01 marino Exp $
 #
 
 DISTNAME=		lprof-1.10.1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://lprof.sourceforge.net/
 COMMENT=		ICC Profile generation tool (for IT8.7 targets)
 
 MAKE_JOBS_SAFE=		no
+LDFLAGS.DragonFly=	-lstdc++
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
