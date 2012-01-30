@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.211 2012/01/30 15:44:02 adam Exp $
+# $NetBSD: Makefile,v 1.212 2012/01/30 15:48:11 tron Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
