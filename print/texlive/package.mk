@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.13 2011/12/10 19:17:00 minskim Exp $
+# $NetBSD: package.mk,v 1.14 2012/01/30 19:08:58 sno Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -103,7 +103,7 @@ _texlive-install:
 	if [ -d ${WRKSRC}/${_dir} ]; then \
 		cd ${WRKSRC} && \
 		${MKDIR} ${_topdir} && \
-		pax -rwpm -s ',.*\.orig$$,,' \
+		${PAX} -rwpm -s ',.*\.orig$$,,' \
 			${_dir} ${_topdir}; \
 	fi
 .endfor
