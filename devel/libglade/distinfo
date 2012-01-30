@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2009/03/19 11:26:41 drochner Exp $
+$NetBSD: distinfo,v 1.13 2012/01/30 10:45:08 drochner Exp $
 
 SHA1 (libglade-2.6.4.tar.bz2) = 8465851733b8a0efbe57c43efc0f140d8e2d2edb
 RMD160 (libglade-2.6.4.tar.bz2) = 516a43543e518a319ca9b35556ca1ac88e2ce8fb
 Size (libglade-2.6.4.tar.bz2) = 356119 bytes
 SHA1 (patch-aa) = 17b79519102422772a63e25158e39ac95f15019e
+SHA1 (patch-ab) = 722c225cb12042282ebda1af25c158045da5626d
