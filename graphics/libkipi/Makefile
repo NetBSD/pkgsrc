@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/01/13 10:55:13 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/01/30 03:54:22 sbd Exp $
 
 DISTNAME=	libkipi-0.1.6
 PKGREVISION=	10
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
+SET_LIBDIR=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
 
