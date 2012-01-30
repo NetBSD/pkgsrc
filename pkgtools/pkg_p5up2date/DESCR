@@ -1,0 +1,2 @@
+pkg_p5up2date checks for outdated Perl5 modules in pkgsrc against
+the database from Comprehensive Perl Archive Network.
