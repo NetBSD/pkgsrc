@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.13 2007/05/05 21:31:10 markd Exp $
+$NetBSD: patch-ab,v 1.14 2012/01/30 01:34:38 sbd Exp $
 
---- server/Imakefile.orig	2006-08-14 13:04:17.000000000 +1200
+--- server/Imakefile.orig	2007-06-16 19:03:22.000000000 +0000
 +++ server/Imakefile
 @@ -61,7 +61,7 @@ XCOMM $NCDId: @(#)Imakefile,v 1.17 1995/
  #endif
@@ -20,7 +20,22 @@ $NetBSD: patch-ab,v 1.13 2007/05/05 21:31:10 markd Exp $
  # define CanBuildAuServer	YES
  
  # if defined(cygwinArchitecture)
-@@ -213,14 +213,19 @@ clean::
+@@ -204,23 +204,34 @@ dirs: FRC								@@\
+ 	$(MAKE) $(MFLAGS) PassCDebugFlags all				@@\
+ 									@@\
+ FRC:
++
+ #endif /* ForceSubdirs */
+ #endif /* Project X < 5 */
+ 
+ ForceSubdirs($(DEPDIRS) $(SUBDIRS))
+ 
++$(VOXWARELIBS):
++	@echo "making all in $(CURRENT_DIR)/${@D}..."
++	@(cd ${@D} && $(MAKE) $(MFLAGS) $(PARALLELMFLAGS) \		@@\ 
++		PassCDebugFlags all) || exit $$?
++
+ clean::
  	$(RM) $(ALL)
  
   ETCDIR = NasConfigSearchPath
