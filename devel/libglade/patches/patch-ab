@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.8 2012/01/30 10:45:08 drochner Exp $
+
+--- glade/Makefile.in.orig	2009-03-17 14:25:37.000000000 +0000
++++ glade/Makefile.in
+@@ -238,7 +238,6 @@ INCLUDES = \
+   $(LIBGLADE_CFLAGS) \
+   -DGLADE_LIBDIR=\""$(libdir)"\" \
+   -DGLADE_PREFIX=\""$(prefix)"\" \
+-  -DG_DISABLE_DEPRECATED \
+   -DGDK_DISABLE_DEPRECATED \
+   -DGDK_PIXBUF_DISABLE_DEPRECATED \
+   -DGNOME_DISABLE_DEPRECATED
