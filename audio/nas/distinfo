@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.27 2009/07/09 19:10:25 hasso Exp $
+$NetBSD: distinfo,v 1.28 2012/01/30 01:34:38 sbd Exp $
 
 SHA1 (nas-1.9.1.src.tar.gz) = 1207a821676ca1b763a47e3c278262a64a626ba3
 RMD160 (nas-1.9.1.src.tar.gz) = 6d6aa05ae2376fbc8ff3145b73da1d28b190a856
 Size (nas-1.9.1.src.tar.gz) = 1454523 bytes
 SHA1 (patch-aa) = f407891f0207d789c0e5bf7a455fd7798ce01fde
-SHA1 (patch-ab) = d424b0970bd23584629f6a9bebea8b8c014462b5
+SHA1 (patch-ab) = 2929b5477f21cd82ef8b5f0fb3039ea9a6e7b2c0
 SHA1 (patch-ac) = 48f6c6791bde679774fd534012e8da2cf6e1e781
 SHA1 (patch-ad) = b889775d66e1de80fc9bc2563f9cc0ebf720ad71
 SHA1 (patch-ae) = f8ec2cb1809937aa7366ab65bee294e8affce543
