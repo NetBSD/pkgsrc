@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2012/01/30 18:26:53 drochner Exp $
+
+--- Makefile.in.orig	2011-10-18 01:29:56.000000000 +0000
++++ Makefile.in
+@@ -280,7 +280,7 @@ GTESTER_REPORT = gtester-report		# for t
+ EXTRA_DIST = 
+ TEST_PROGS = 
+ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+-SUBDIRS = po $(am__append_1) $(am__append_2) proxy/tests \
++SUBDIRS = po $(am__append_1) $(am__append_2) \
+ 	$(am__append_3) tls/tests
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
