@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2010/07/20 12:29:20 asau Exp $
+# $NetBSD: Makefile,v 1.37 2012/01/30 05:40:02 asau Exp $
 
-DISTNAME=		mercury-compiler-0.13.1
-PKGNAME=		mercury-0.13.1
+DISTNAME=		mercury-compiler-11.07
+PKGNAME=		mercury-11.07
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
 			http://www.mercury.cs.mu.oz.au/download/files/ \
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pax
 USE_TOOLS+=		perl # ?
-USE_GNU_READLINE=	yes	# rl_prep_term_function
+USE_GNU_READLINE=	yes # rl_prep_term_function
 INFO_FILES=		# PLIST
 
 # Some of the scripts test CC and use special settings for gcc.
@@ -33,6 +33,9 @@ BUILD_MAKE_FLAGS+=	INSTALL_PREFIX=${INSTALL_PREFIX:Q}
 BUILD_MAKE_FLAGS+=	INSTALL_INFO_DIR=${INSTALL_PREFIX:Q}/${PKGINFODIR:Q}
 BUILD_MAKE_FLAGS+=	INSTALL_MAN_DIR=${INSTALL_PREFIX:Q}/${PKGMANDIR:Q}
 BUILD_MAKE_FLAGS+=	MERCURY_COMPILER=${INSTALL_PREFIX:Q}/bin/mercury_compile
+#BUILD_MAKE_FLAGS+=	PARALLEL=$(MAKE_JOBS:D-j$(MAKE_JOBS))
+
+CHECK_INTERPRETER_SKIP+=	lib/mercury/reconf/scripts/mtags.in
 
 post-patch:
 	${TOUCH} \
