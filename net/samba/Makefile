@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2012/01/30 13:44:06 tron Exp $
+# $NetBSD: Makefile,v 1.211 2012/01/30 15:44:02 adam Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -97,10 +97,10 @@ FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
 .if ${OPSYS} == "NetBSD"
-.if !empty(PKG_OPTIONS:Mwinbind)
+.  if !empty(PKG_OPTIONS:Mwinbind)
 # Install a /usr/lib/nss_winbind.so.0 -> ${PREFIX}/lib/nss_winbind.so.0 symlink
 INSTALL_TEMPLATES+=	INSTALL.nss_winbind
-.endif
+.  endif
 .endif
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
@@ -159,10 +159,10 @@ post-install:
 		${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 .if ${OPSYS} == "NetBSD"
-.if !empty(PKG_OPTIONS:Mwinbind)
+.  if !empty(PKG_OPTIONS:Mwinbind)
 	${INSTALL_LIB} ${WRKDIR}/${DISTNAME}/nsswitch/nss_winbind.${SAMBA_LIBEXT} \
 		${DESTDIR}${PREFIX}/lib/nss_winbind.${SAMBA_LIBEXT}.0
-.endif
+.  endif
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
