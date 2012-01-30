@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.300 2012/01/30 15:48:27 tron Exp $
+$NetBSD: CHANGES-2012,v 1.301 2012/01/30 19:10:17 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -477,3 +477,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/mercury to 11.07 [asau 2012-01-30]
 	Added pkgtools/pkg_p5up2date version 0.03 [sno 2012-01-30]
 	Updated net/samba to 3.6.3nb2 [tron 2012-01-30]
+	Updated net/glib-networking to 2.30.2 [drochner 2012-01-30]
+	Updated net/libsoup24 to 2.36.1 [drochner 2012-01-30]
