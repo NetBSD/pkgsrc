@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2011/07/31 11:39:13 gls Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/30 18:26:53 drochner Exp $
 #
 
-DISTNAME=	glib-networking-2.28.7
+DISTNAME=	glib-networking-2.30.2
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/2.28/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/2.30/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+= --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config gmake gettext
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.28.0
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.30.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
 BUILDLINK_API_DEPENDS.libproxy+= libproxy>=0.3.1
