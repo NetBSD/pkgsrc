@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.298 2012/01/30 06:11:23 sno Exp $
+$NetBSD: CHANGES-2012,v 1.299 2012/01/30 13:48:13 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -476,3 +476,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/drupal6 to 6.22nb2 [taca 2012-01-29]
 	Updated lang/mercury to 11.07 [asau 2012-01-30]
 	Added pkgtools/pkg_p5up2date version 0.03 [sno 2012-01-30]
+	Updated net/samba to 3.6.3nb1 [tron 2012-01-30]
