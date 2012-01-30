@@ -1,4 +1,4 @@
-$NetBSD: patch-client_client.c,v 1.1 2012/01/30 13:44:06 tron Exp $
+$NetBSD: patch-client_client.c,v 1.2 2012/01/30 15:48:11 tron Exp $
 
 Restore compatibility with CIFS server on Apple Time Capsule:
 
@@ -12,7 +12,7 @@ https://bugzilla.samba.org/show_bug.cgi?id=8139
  
 -		if (!NT_STATUS_IS_OK(status)) {
 +		if (!NT_STATUS_IS_OK(status)
-+		    && NT_STATUS_EQUAL(status, NT_STATUS_NOT_SUPPORTED)) {
++		    && NT_STATUS_V(status) != 0xffff0002) {
  			DEBUG(0, ("SMBecho failed. Maybe server has closed "
  				"the connection\n"));
  			finished = true;
