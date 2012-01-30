@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2011/01/19 19:14:15 drochner Exp $
+# $NetBSD: Makefile,v 1.41 2012/01/30 07:09:06 sbd Exp $
 
 DISTNAME=	transfig.3.2.5d
 PKGNAME=	transfig-3.2.5d
@@ -19,11 +19,6 @@ USE_IMAKE=		yes
 # A default paper size is used only in the IBM-GL/HP-GL driver:
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
 MAKE_ENV+=		DDA4="-DA4"
-.endif
-
-# We must use GNU make on Linux
-.if ${OPSYS} == "Linux"
-USE_TOOLS+=		gmake
 .endif
 
 MAKE_ENV+=		ICONVLIBS="${BUILDLINK_LDADD.iconv}"
