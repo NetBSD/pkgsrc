@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/30 06:10:58 sno Exp $
+bin/pkg_p5up2date
+man/man8/pkg_p5up2date.8
