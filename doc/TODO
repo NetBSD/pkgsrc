@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10837 2012/01/29 22:02:50 taca Exp $
+$NetBSD: TODO,v 1.10838 2012/01/31 02:22:11 obache Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o asymptote-2.14
 	o at-spi-2.2.3
 	o aterm-1.0.1
-	o atk-2.2.0 [pkg/45738]
 	o attica-0.3.0
 	o audacious-plugins-2.4.4
 	o audacity-1.3.13
