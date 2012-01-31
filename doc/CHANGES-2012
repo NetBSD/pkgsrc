@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.311 2012/01/31 07:44:56 sno Exp $
+$NetBSD: CHANGES-2012,v 1.312 2012/01/31 07:59:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -488,3 +488,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-File-Listing to 6.03 [sno 2012-01-31]
 	Updated net/samba35 to 3.5.12nb2 [sbd 2012-01-31]
 	Updated devel/p5-ExtUtils-ParseXS to 3.11 [sno 2012-01-31]
+	Updated devel/p5-Data-Alias to 1.16 [sno 2012-01-31]
