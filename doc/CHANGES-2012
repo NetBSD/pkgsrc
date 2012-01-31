@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.320 2012/01/31 12:05:16 obache Exp $
+$NetBSD: CHANGES-2012,v 1.321 2012/01/31 12:39:40 roy Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -498,3 +498,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/ffmpeg to 20120112.0.7.11nb2 [ryoon 2012-01-31]
 	Updated multimedia/gst-plugins0.10-vp8 to 0.10.22nb1 [ryoon 2012-01-31]
 	Updated misc/orca to 2.32.1 [obache 2012-01-31]
+	Updated net/dnsmasq to 2.59 [roy 2012-01-31]
