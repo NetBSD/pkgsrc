@@ -1,7 +1,16 @@
-$NetBSD: patch-cl,v 1.2 2012/01/29 10:46:54 drochner Exp $
+$NetBSD: patch-cl,v 1.3 2012/01/31 18:36:01 drochner Exp $
 
---- gio/Makefile.am.orig	2011-10-14 03:47:57.000000000 +0000
+--- gio/Makefile.am.orig	2011-11-11 17:56:51.000000000 +0000
 +++ gio/Makefile.am
+@@ -2,7 +2,7 @@ include $(top_srcdir)/Makefile.decl
+ 
+ NULL =
+ 
+-SUBDIRS = gdbus-2.0/codegen
++SUBDIRS =
+ 
+ if OS_UNIX
+ SUBDIRS += libasyncns xdgmime
 @@ -633,12 +633,6 @@ gdbus_LDADD = libgio-2.0.la \
  	$(top_builddir)/glib/libglib-2.0.la 		\
  	$(top_builddir)/gobject/libgobject-2.0.la
