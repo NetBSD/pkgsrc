@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10840 2012/01/31 11:58:34 ryoon Exp $
+$NetBSD: TODO,v 1.10841 2012/01/31 11:59:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -706,7 +706,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-games-3.2.1
 	o gnome-games-extra-data-2.30.0 [GNOME 2.30]
 	o gnome-keyring-3.2.2
-	o gnome-mag-0.16.3 [pkg/45812]
 	o gnome-media-2.32.0 [GNOME 2.32]
 	o gnome-netstatus-2.28.2 [GNOME 2.32]
 	o gnome-nettool-2.32.0 [GNOME 2.32]
