@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2011/07/15 13:08:15 abs Exp $
+@comment $NetBSD: PLIST,v 1.35 2012/01/31 02:21:56 obache Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -29,6 +29,7 @@ include/atk-1.0/atk/atktable.h
 include/atk-1.0/atk/atktext.h
 include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
+include/atk-1.0/atk/atkwindow.h
 lib/libatk-1.0.la
 lib/pkgconfig/atk.pc
 share/gtk-doc/html/atk/AtkAction.html
