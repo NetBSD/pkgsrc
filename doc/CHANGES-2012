@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.319 2012/01/31 12:02:27 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.320 2012/01/31 12:05:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -497,3 +497,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gnome-mag to 0.16.3 [obache 2012-01-31]
 	Updated multimedia/ffmpeg to 20120112.0.7.11nb2 [ryoon 2012-01-31]
 	Updated multimedia/gst-plugins0.10-vp8 to 0.10.22nb1 [ryoon 2012-01-31]
+	Updated misc/orca to 2.32.1 [obache 2012-01-31]
