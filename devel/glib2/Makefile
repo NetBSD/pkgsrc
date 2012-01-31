@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.192 2012/01/31 14:43:06 abs Exp $
+# $NetBSD: Makefile,v 1.193 2012/01/31 18:36:01 drochner Exp $
 
 .include "Makefile.common"
 .include "options.mk"
-
-PKGREVISION=		1
 
 CATEGORIES=		devel
 
@@ -46,11 +44,6 @@ CONFIGURE_ARGS+=	PCRE_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib -
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.2.1
 
 LIBS.SunOS+=	-lnsl -lsocket
-
-# Until the implicit but not declared dependency on python is resolved
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/bin/gdbus-codegen
-	${RM} -r ${DESTDIR}${PREFIX}/lib/gdbus-2.0
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
