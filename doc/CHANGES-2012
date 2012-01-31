@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.328 2012/01/31 14:52:45 taca Exp $
+$NetBSD: CHANGES-2012,v 1.329 2012/01/31 14:55:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -506,3 +506,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-Catalyst-Plugin-Session to 0.32 [rhaen 2012-01-31]
 	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.16 [rhaen 2012-01-31]
 	Updated mail/mew to 6.4nb1 [taca 2012-01-31]
+	Updated misc/rubygems to 1.8.15 [taca 2012-01-31]
