@@ -1,17 +1,28 @@
-$NetBSD: patch-aa,v 1.3 2011/08/07 17:20:09 ryoon Exp $
+$NetBSD: patch-aa,v 1.4 2012/01/31 11:53:52 ryoon Exp $
 
---- build/make/Makefile.orig	2011-08-04 17:30:15.000000000 +0000
+--- build/make/Makefile.orig	2012-01-27 18:36:39.000000000 +0000
 +++ build/make/Makefile
-@@ -102,7 +102,7 @@ $(BUILD_PFX)%.c.d: %.c
+@@ -106,16 +106,16 @@ $(BUILD_PFX)%.c.d: %.c
  
  $(BUILD_PFX)%.c.o: %.c
  	$(if $(quiet),@echo "    [CC] $@")
 -	$(qexec)$(CC) $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
 +	$(qexec)${LIBTOOL} --mode=compile $(CC) $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
  
+ $(BUILD_PFX)%.cc.d: %.cc
+ 	$(if $(quiet),@echo "    [DEP] $@")
+ 	$(qexec)mkdir -p $(dir $@)
+-	$(qexec)g++ $(INTERNAL_CFLAGS) $(CFLAGS) -M $< | $(fmt_deps) > $@
++	$(qexec)${CXX} $(INTERNAL_CFLAGS) $(CFLAGS) -M $< | $(fmt_deps) > $@
+ 
+ $(BUILD_PFX)%.cc.o: %.cc
+ 	$(if $(quiet),@echo "    [CXX] $@")
+-	$(qexec)g++ $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
++	$(qexec)${LIBTOOL} --mode=compile ${CXX} $(INTERNAL_CFLAGS) $(CFLAGS) -c -o $@ $<
+ 
  $(BUILD_PFX)%.asm.d: %.asm
  	$(if $(quiet),@echo "    [DEP] $@")
-@@ -112,7 +112,8 @@ $(BUILD_PFX)%.asm.d: %.asm
+@@ -125,7 +125,8 @@ $(BUILD_PFX)%.asm.d: %.asm
  
  $(BUILD_PFX)%.asm.o: %.asm
  	$(if $(quiet),@echo "    [AS] $@")
@@ -21,7 +32,7 @@ $NetBSD: patch-aa,v 1.3 2011/08/07 17:20:09 ryoon Exp $
  
  $(BUILD_PFX)%.s.d: %.s
  	$(if $(quiet),@echo "    [DEP] $@")
-@@ -194,7 +195,8 @@ define linker_template
+@@ -207,13 +208,15 @@ define linker_template
  $(1): $(filter-out -%,$(2))
  $(1):
  	$(if $(quiet),@echo    "    [LD] $$@")
@@ -29,9 +40,17 @@ $NetBSD: patch-aa,v 1.3 2011/08/07 17:20:09 ryoon Exp $
 +	$(qexec)${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $$@ \
 +	    $$(filter-out -lvpx,$(2)) libvpx.la $$(extralibs)
  endef
+ define linkerxx_template
+ $(1): $(filter-out -%,$(2))
+ $(1):
+ 	$(if $(quiet),@echo    "    [LD] $$@")
+-	$(qexec)g++ $$(strip $$(INTERNAL_LDFLAGS) $$(LDFLAGS) -o $$@ $(2) $(3) $$(extralibs))
++	$(qexec)${LIBTOOL} --mode=link ${CXX} $(LDFLAGS) -o $$@ \
++	    $$(filter-out -lvpx,$(2)) libvpx.la $$(extralibs)
+ endef
  # make-3.80 has a bug with expanding large input strings to the eval function,
  # which was triggered in some cases by the following component of
-@@ -207,8 +209,12 @@ endef
+@@ -226,8 +229,12 @@ endef
  define install_map_template
  $(DIST_DIR)/$(1): $(2)
  	$(if $(quiet),@echo "    [INSTALL] $$@")
@@ -46,23 +65,48 @@ $NetBSD: patch-aa,v 1.3 2011/08/07 17:20:09 ryoon Exp $
  endef
  
  define archive_template
-@@ -217,7 +223,9 @@ define archive_template
+@@ -236,7 +243,9 @@ define archive_template
  # for creating them.
  $(1):
  	$(if $(quiet),@echo "    [AR] $$@")
 -	$(qexec)$$(AR) $$(ARFLAGS) $$@ $$?
 +	$(qexec)${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $$(patsubst %.a,%.la,$$@) \
 +	    $$(patsubst %.o,%.lo,$$?) -rpath $(PREFIX)/lib $$(extralibs) \
-+	    -version-info $(VERSION_MINOR):$(VERSION_PATCH):$(VERSION_MINOR)
++	    -version-info $(VERSION_MAJOR):$(VERSION_MINOR):$(VERSION_PATCH)
  endef
  
  define so_template
-@@ -296,7 +304,7 @@ clean::
+@@ -313,20 +322,20 @@ clean::
+ 	rm -f .bins .install-bins $(BINS)
+ 
  LIBS=$(call enabled,LIBS)
- .libs: $(LIBS)
+-.libs: $(LIBS)
++dot.libs: $(LIBS)
  	@touch $@
 -$(foreach lib,$(filter %_g.a,$(LIBS)),$(eval $(call archive_template,$(lib))))
 +$(foreach lib,$(filter %.a,$(LIBS)),$(eval $(call archive_template,$(lib))))
  $(foreach lib,$(filter %so.$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH),$(LIBS)),$(eval $(call so_template,$(lib))))
  
  INSTALL-LIBS=$(call cond_enabled,CONFIG_INSTALL_LIBS,INSTALL-LIBS)
+ ifeq ($(MAKECMDGOALS),dist)
+ INSTALL-LIBS+=$(call cond_enabled,CONFIG_INSTALL_LIBS,DIST-LIBS)
+ endif
+-.install-libs: .libs $(addprefix $(DIST_DIR)/,$(INSTALL-LIBS))
++.install-libs: dot.libs $(addprefix $(DIST_DIR)/,$(INSTALL-LIBS))
+ 	@touch $@
+ 
+ clean::
+-	rm -f .libs .install-libs $(LIBS)
++	rm -f dot.libs .install-libs $(LIBS)
+ 
+ ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
+ PROJECTS=$(call enabled,PROJECTS)
+@@ -376,7 +385,7 @@ ifeq ($(CONFIG_EXTERNAL_BUILD),yes)
+     BUILD_TARGETS += .projects
+     INSTALL_TARGETS += .install-projects
+ endif
+-BUILD_TARGETS += .docs .libs .bins
++BUILD_TARGETS += .docs dot.libs .bins
+ INSTALL_TARGETS += .install-docs .install-srcs .install-libs .install-bins
+ all: $(BUILD_TARGETS)
+ install:: $(INSTALL_TARGETS)
