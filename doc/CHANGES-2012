@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.315 2012/01/31 08:12:37 sno Exp $
+$NetBSD: CHANGES-2012,v 1.316 2012/01/31 11:09:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -492,3 +492,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Compress-Raw-Zlib to 2.048 [sno 2012-01-31]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.048 [sno 2012-01-31]
 	Updated devel/p5-IO-Compress to 2.048 [sno 2012-01-31]
+	Added misc/colorblind version 0.0.1 [obache 2012-01-31]
