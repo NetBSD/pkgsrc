@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.10 2012/01/31 00:58:43 christos Exp $
+
+--- lib/fflush.c.orig	2011-03-01 11:39:27.000000000 -0500
++++ lib/fflush.c	2012-01-30 19:56:16.000000000 -0500
+@@ -91,7 +91,7 @@
+ update_fpos_cache (FILE *fp, off_t pos)
+ {
+ #if defined __sferror || defined __DragonFly__ /* FreeBSD, NetBSD, OpenBSD, DragonFly, MacOS X, Cygwin */
+-# if defined __CYGWIN__
++# if defined(__CYGWIN__) || defined(__NetBSD__)
+   /* fp_->_offset is typed as an integer.  */
+   fp_->_offset = pos;
+ # else
