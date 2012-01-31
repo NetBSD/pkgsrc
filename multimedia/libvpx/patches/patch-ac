@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2011/08/07 17:20:09 ryoon Exp $
+$NetBSD: patch-ac,v 1.3 2012/01/31 11:53:52 ryoon Exp $
 
---- examples.mk.orig	2011-08-04 17:30:15.000000000 +0000
+--- examples.mk.orig	2012-01-27 18:36:39.000000000 +0000
 +++ examples.mk
-@@ -167,7 +167,7 @@ BINS-$(NOT_MSVS)           += $(addprefi
+@@ -178,7 +178,7 @@ BINS-$(NOT_MSVS)           += $(addprefi
  
  # Instantiate linker template for all examples.
  CODEC_LIB=$(if $(CONFIG_DEBUG_LIBS),vpx_g,vpx)

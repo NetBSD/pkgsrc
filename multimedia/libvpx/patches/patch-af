@@ -1,7 +1,13 @@
-$NetBSD: patch-af,v 1.1 2011/09/14 17:22:44 hans Exp $
+$NetBSD: patch-af,v 1.2 2012/01/31 11:53:52 ryoon Exp $
 
---- examples/gen_example_code.sh.orig	2011-03-04 21:40:37.000000000 +0100
-+++ examples/gen_example_code.sh	2011-04-08 16:28:11.822549731 +0200
+--- examples/gen_example_code.sh.orig	2012-01-27 18:36:39.000000000 +0000
++++ examples/gen_example_code.sh
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/usr/pkg/bin/bash
+ ##
+ ##  Copyright (c) 2010 The WebM project authors. All Rights Reserved.
+ ##
 @@ -80,6 +80,6 @@ while IFS=$'\n' read -r line; do
              || include_block < "${template%.c}.txt" \
              #|| echo "WARNING: failed to find text for block $block_name" >&2
