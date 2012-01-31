@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.214 2012/01/31 05:54:06 sbd Exp $
+# $NetBSD: Makefile,v 1.215 2012/01/31 06:53:30 sbd Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
@@ -165,9 +165,13 @@ post-install:
 .  endif
 .endif
 
+.if ${OPSYS} == "Linux"
+.include "../../devel/libuuid/buildlink3.mk"
+.endif
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
