@@ -1,0 +1,37 @@
+$NetBSD: patch-as,v 1.1 2012/01/31 18:36:01 drochner Exp $
+
+avoid python dependency
+
+--- gio/tests/Makefile.am.orig	2011-11-11 17:56:52.000000000 +0000
++++ gio/tests/Makefile.am
+@@ -4,7 +4,7 @@ BUILT_SOURCES =
+ 
+ include $(top_srcdir)/Makefile.decl
+ 
+-SUBDIRS = gdbus-object-manager-example
++#SUBDIRS = gdbus-object-manager-example
+ 
+ INCLUDES = 			\
+ 	-g 			\
+@@ -115,12 +115,9 @@ TEST_PROGS += 			\
+ 	unix-fd 		\
+ 	unix-streams 		\
+ 	gapplication 		\
+-	gdbus-test-codegen 	\
+ 	$(NULL)
+ SAMPLE_PROGS +=					\
+ 	gdbus-example-unix-fd-client 		\
+-	gdbus-example-objectmanager-server 	\
+-	gdbus-example-objectmanager-client 	\
+ 	$(NULL)
+ endif
+ 
+@@ -286,7 +283,7 @@ gdbus-test-codegen-generated.h gdbus-tes
+ 		$(srcdir)/test-codegen.xml \
+ 		$(NULL)
+ 
+-BUILT_SOURCES += gdbus-test-codegen-generated.c gdbus-test-codegen-generated.h
++#BUILT_SOURCES += gdbus-test-codegen-generated.c gdbus-test-codegen-generated.h
+ 
+ gdbus_test_codegen_SOURCES  = gdbus-test-codegen.c gdbus-sessionbus.c gdbus-sessionbus.h gdbus-tests.h gdbus-tests.c
+ gdbus_test_codegen_SOURCES += gdbus-test-codegen-generated.c gdbus-test-codegen-generated.h
