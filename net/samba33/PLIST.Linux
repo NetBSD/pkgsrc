@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2012/01/31 07:14:58 sbd Exp $
+lib/samba/vfs/dirsort.so
+lib/samba/vfs/fileid.so
+lib/samba/vfs/syncops.so
