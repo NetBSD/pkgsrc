@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10839 2012/01/31 10:59:56 wiz Exp $
+$NetBSD: TODO,v 1.10840 2012/01/31 11:58:34 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -948,7 +948,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libusb-1.0
 	o libv4l-0.8.5
 	o libvirt-0.9.9
-	o libvpx-1.0.0
 	o libxcb-1.8
 	o libxkbfile-1.0.7
 	o libxklavier-5.1
