@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.317 2012/01/31 11:58:19 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.318 2012/01/31 11:59:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -494,3 +494,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-IO-Compress to 2.048 [sno 2012-01-31]
 	Added misc/colorblind version 0.0.1 [obache 2012-01-31]
 	Updated multimedia/libvpx to 1.0.0 [ryoon 2012-01-31]
+	Updated x11/gnome-mag to 0.16.3 [obache 2012-01-31]
