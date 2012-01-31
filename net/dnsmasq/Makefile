@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2010/11/27 13:24:47 roy Exp $
+# $NetBSD: Makefile,v 1.16 2012/01/31 12:39:22 roy Exp $
 #
 
-DISTNAME=		dnsmasq-2.55
+DISTNAME=		dnsmasq-2.59
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
@@ -14,8 +14,24 @@ CONF_FILES=		${PREFIX}/share/examples/dnsmasq/dnsmasq.conf.example \
 			${PKG_SYSCONFDIR}/dnsmasq.conf
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_OPTIONS_VAR=	PKG_OPTIONS.dnsmasq
+PKG_SUPPORTED_OPTIONS=	dbus inet6
+PLIST_VARS+=	dbus
 
-.include "options.mk"
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdbus)
+USE_TOOLS+=	pkg-config
+CFLAGS+=	-DHAVE_DBUS
+.include "../../sysutils/dbus/buildlink3.mk"
+CONF_FILES+=	${PREFIX}/share/examples/dnsmasq/dnsmasq-dbus.conf \
+		${PKG_SYSCONFDIR}/dbus-1/system.d/dnsmasq-dbus.conf
+PLIST.dbus=	yes
+.endif
+
+.if empty(PKG_OPTIONS:Minet6)
+CFLAGS+=	-DNO_IPV6
+.endif
 
 # Override the defaults
 AUTO_MKDIRS=yes
@@ -32,5 +48,9 @@ INSTALL_MAKE_FLAGS+=	AWK="${AWK}"
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dnsmasq.conf.example \
 		${DESTDIR}${PREFIX}/share/examples/dnsmasq/
+.if !empty(PKG_OPTIONS:Mdbus)
+	${INSTALL_DATA} ${WRKSRC}/dbus/dnsmasq.conf \
+		${DESTDIR}${PREFIX}/share/examples/dnsmasq/dnsmasq-dbus.conf
+.endif
 
 .include "../../mk/bsd.pkg.mk"
