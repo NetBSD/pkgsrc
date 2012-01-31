@@ -1,0 +1,48 @@
+$NetBSD: patch-bin_cmew,v 1.1 2012/01/31 14:52:20 taca Exp $
+
+Fix case significant problem of keys.
+
+--- bin/cmew.orig	2011-10-19 08:46:38.000000000 +0000
++++ bin/cmew
+@@ -29,7 +29,8 @@ def mail_header(path)
+       next if /^From / =~ l
+       break if /^$/ =~ l
+       if /^\s+/ !~ l
+-        (name, value) = l.split(/:\s+/, 2)
++        (name, value) = l.split(/:\s*/, 2)
++        value = '' if value.nil?
+         @header[name.downcase] = value
+       else
+         value << $'
+@@ -103,7 +104,7 @@ def check_id(id)
+ end
+ 
+ def get_id(msg)
+-  return check_id(msg['Message-Id'])
++  return check_id(msg['message-id'])
+ end
+ 
+ def get_parid(msg)
+@@ -111,11 +112,11 @@ def get_parid(msg)
+   # (2) The References contains one or more IDs, use the last one.
+   # (3) The In-Reply-To contains two or more IDs, use the first one.
+   irt = []
+-  irt = msg['In-Reply-To'].split(/[ \t\n]+/) if msg['In-Reply-To']
++  irt = msg['in-reply-to'].split(/[ \t\n]+/) if msg['in-reply-to']
+   irt.delete_if {|id| !check_id(id) }
+   return irt[0] if irt.size == 1
+   ref = []
+-  ref = msg['References'].split(/[ \t\n]+/) if msg['References']
++  ref = msg['references'].split(/[ \t\n]+/) if msg['references']
+   ref.delete_if {|id| !check_id(id) }
+   return ref.pop if ref.size > 0
+   return irt[0] if irt.size > 1
+@@ -124,7 +125,7 @@ end
+ 
+ def get_date(msg)
+   begin
+-    date = Time.rfc2822(msg['Date']).getutc().strftime('%Y%m%d%H%M%S')
++    date = Time.rfc2822(msg['date']).getutc().strftime('%Y%m%d%H%M%S')
+   rescue
+     date = '19700101000000'
+   end
