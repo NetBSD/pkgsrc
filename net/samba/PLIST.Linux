@@ -1,0 +1,4 @@
+@comment $NetBSD
+lib/samba/vfs/dirsort.${LIBEXT}
+lib/samba/vfs/fileid.${LIBEXT}
+lib/samba/vfs/syncops.${LIBEXT}
