@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.322 2012/01/31 12:43:41 taca Exp $
+$NetBSD: CHANGES-2012,v 1.323 2012/01/31 13:24:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/orca to 2.32.1 [obache 2012-01-31]
 	Updated net/dnsmasq to 2.59 [roy 2012-01-31]
 	Updated www/contao210-translations to 20120117 [taca 2012-01-31]
+	Updated www/typo3_45 to 4.5.11 [taca 2012-01-31]
