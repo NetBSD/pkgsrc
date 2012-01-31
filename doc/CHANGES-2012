@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.313 2012/01/31 08:06:18 sno Exp $
+$NetBSD: CHANGES-2012,v 1.314 2012/01/31 08:07:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -490,3 +490,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-ExtUtils-ParseXS to 3.11 [sno 2012-01-31]
 	Updated devel/p5-Data-Alias to 1.16 [sno 2012-01-31]
 	Updated devel/p5-Compress-Raw-Zlib to 2.048 [sno 2012-01-31]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.048 [sno 2012-01-31]
