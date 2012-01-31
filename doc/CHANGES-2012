@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.302 2012/01/30 23:07:34 tron Exp $
+$NetBSD: CHANGES-2012,v 1.303 2012/01/31 02:22:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -479,3 +479,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/glib-networking to 2.30.2 [drochner 2012-01-30]
 	Updated net/libsoup24 to 2.36.1 [drochner 2012-01-30]
 	Updated net/samba to 3.6.3nb3 [tron 2012-01-30]
+	Updated devel/atk to 2.2.0 [obache 2012-01-31]
