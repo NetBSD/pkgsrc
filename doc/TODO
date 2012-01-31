@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10842 2012/01/31 12:05:16 obache Exp $
+$NetBSD: TODO,v 1.10843 2012/01/31 12:39:40 roy Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.5
-	o dnsmasq-2.59
 	o dnstracer-1.9
 	o doclifter-2.7
 	o doxygen-1.7.6.1
