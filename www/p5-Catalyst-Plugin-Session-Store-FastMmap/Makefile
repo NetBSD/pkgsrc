@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2011/08/14 16:05:49 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/01/31 14:34:47 rhaen Exp $
 
-DISTNAME=	Catalyst-Plugin-Session-Store-FastMmap-0.13
-PKGREVISION=	3
+DISTNAME=	Catalyst-Plugin-Session-Store-FastMmap-0.16
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -17,6 +16,8 @@ DEPENDS+=       {perl>=5.10,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=       p5-Path-Class>=0:../../devel/p5-Path-Class
 DEPENDS+=       {perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
+DEPENDS+=       p5-MooseX-Emulate-Class-Accessor-Fast-[0-9]*:../../devel/p5-MooseX-Emulate-Class-Accessor-Fast
+DEPENDS+=       p5-Catalyst-Runtime>=5.9:../../www/p5-Catalyst-Runtime
 
 # Missed in package META.yml
 DEPENDS+=       p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
