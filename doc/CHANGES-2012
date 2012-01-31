@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.309 2012/01/31 07:40:35 sno Exp $
+$NetBSD: CHANGES-2012,v 1.310 2012/01/31 07:42:23 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-File-Find-Rule-Perl to 1.12 [sno 2012-01-31]
 	Updated devel/p5-File-HomeDir to 0.99 [sno 2012-01-31]
 	Updated devel/p5-File-Listing to 6.03 [sno 2012-01-31]
+	Updated net/samba35 to 3.5.12nb2 [sbd 2012-01-31]
