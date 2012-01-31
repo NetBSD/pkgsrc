@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10841 2012/01/31 11:59:28 obache Exp $
+$NetBSD: TODO,v 1.10842 2012/01/31 12:05:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -1067,7 +1067,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-1.0.0g
 	o openttd-1.1.5
 	o opera-11.61
-	o orca-2.32.1 [pkg/45807, GNOME 2.32]
 	o oroborus-2.0.18
 	o ortp-0.16.5
 	o otpCalc-0.97
