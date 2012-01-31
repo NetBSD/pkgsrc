@@ -1,4 +1,4 @@
-@comment $NetBSD
+@comment $NetBSD: PLIST.Linux,v 1.2 2012/01/31 06:34:02 sbd Exp $
 lib/samba/vfs/dirsort.${LIBEXT}
 lib/samba/vfs/fileid.${LIBEXT}
 lib/samba/vfs/syncops.${LIBEXT}
