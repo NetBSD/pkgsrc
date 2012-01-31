@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.3 2011/12/24 14:25:50 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/01/31 13:23:35 taca Exp $
 
-SHA1 (dummy-4.5.10.tar.gz) = 7f9a9c5ba42315ec8d7c97fdc3e7af57c44e7a94
-RMD160 (dummy-4.5.10.tar.gz) = 23650827a20dc52038dd2b525f80b27f3af35480
-Size (dummy-4.5.10.tar.gz) = 9855 bytes
-SHA1 (typo3_src-4.5.10.tar.gz) = 2cfd9cd2ead0c5acaafb114df8d7b0f64b3fb316
-RMD160 (typo3_src-4.5.10.tar.gz) = 717d867e5255e64561ede520d68926c471c592df
-Size (typo3_src-4.5.10.tar.gz) = 20528141 bytes
+SHA1 (dummy-4.5.11.tar.gz) = 985e7b4319aade6df958601f9ffc86dbef93532b
+RMD160 (dummy-4.5.11.tar.gz) = da77489deadc729f567e9686c831bca387231f5a
+Size (dummy-4.5.11.tar.gz) = 9857 bytes
+SHA1 (typo3_src-4.5.11.tar.gz) = ff339747109b1f2672acc74f77b0c663b6813dbc
+RMD160 (typo3_src-4.5.11.tar.gz) = 913474133aa0c30e8ca3caa7784754b66028a708
+Size (typo3_src-4.5.11.tar.gz) = 20530278 bytes
 SHA1 (patch-aa) = dd0847334b30215a822bcdcd9231862d7eab68a6
-SHA1 (patch-typo3_sysext_rtehtmlarea_class.tx__rtehtmlarea__base.php) = 47d4e8960eca02c5e046116c11ba4521156069ed
