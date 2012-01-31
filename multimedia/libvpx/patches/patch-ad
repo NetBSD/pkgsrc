@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2011/08/07 17:20:09 ryoon Exp $
+$NetBSD: patch-ad,v 1.5 2012/01/31 11:53:52 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 
---- build/make/configure.sh.orig	2011-08-04 17:30:15.000000000 +0000
+--- build/make/configure.sh.orig	2012-01-27 18:36:39.000000000 +0000
 +++ build/make/configure.sh
-@@ -562,7 +562,7 @@ process_common_toolchain() {
+@@ -573,7 +573,7 @@ process_common_toolchain() {
                  [ -z "$tgt_isa" ] && tgt_isa=x86
                  tgt_os=win32
                  ;;
@@ -13,10 +13,10 @@ $NetBSD: patch-ad,v 1.4 2011/08/07 17:20:09 ryoon Exp $
                  tgt_os=linux
                  ;;
              *solaris2.10)
-@@ -970,10 +970,29 @@ EOF
-     if enabled multithread; then
+@@ -1019,10 +1019,29 @@ EOF
          case ${toolchain} in
              *-win*);;
+             *-android-gcc);;
 -            *) check_header pthread.h && add_extralibs -lpthread
 +            *) check_header pthread.h && add_extralibs ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
          esac
@@ -24,21 +24,21 @@ $NetBSD: patch-ad,v 1.4 2011/08/07 17:20:09 ryoon Exp $
  
 +    case ${tgt_os} in
 +    darwin*)
-+       add_extralibs -lm
-+       ;;
++	add_extralibs -lm
++	;;
 +    solaris*)
-+       add_extralibs -lm -lrt
-+       ;;
-+    linux*)
-+       case ${gcctarget} in
-+       *qnx6*)
-+           add_extralibs -lm
-+           ;;
-+       *)
-+           add_extralibs -lm -lrt
-+           ;;
-+       esac
-+       ;;
++	add_extralibs -lm -lrt
++	;;
++	linux*)
++	case ${gcctarget} in
++	*qnx6*)
++	    add_extralibs -lm
++	    ;;
++	*)
++	    add_extralibs -lm -lrt
++	    ;;
++	esac
++	;;
 +    esac
 +
      # for sysconf(3) and friends.
