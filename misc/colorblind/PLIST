@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/31 11:08:58 obache Exp $
+include/colorblind.h
+lib/libcolorblind.la

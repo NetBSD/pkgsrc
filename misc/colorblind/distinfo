@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/31 11:08:58 obache Exp $
+
+SHA1 (colorblind-0.0.1.tar.gz) = b54bed1db2322d2fa361c2c6a0abbc61f97c2a48
+RMD160 (colorblind-0.0.1.tar.gz) = c0b973dd471e2d48b2f115cb2545b9a07059d723
+Size (colorblind-0.0.1.tar.gz) = 288457 bytes
