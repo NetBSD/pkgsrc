@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.326 2012/01/31 14:24:39 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.327 2012/01/31 14:36:00 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -504,3 +504,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_46 to 4.6.4 [taca 2012-01-31]
 	Updated www/p5-Catalyst-Devel to 1.36 [rhaen 2012-01-31]
 	Updated www/p5-Catalyst-Plugin-Session to 0.32 [rhaen 2012-01-31]
+	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.16 [rhaen 2012-01-31]
