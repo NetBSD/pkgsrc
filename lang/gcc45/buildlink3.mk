@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/05/14 20:19:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/02/01 22:22:57 hans Exp $
 
 BUILDLINK_TREE+=	gcc45
 
@@ -46,8 +46,7 @@ BUILDLINK_INCDIRS.gcc45+=	${_GCC45_SUBDIR}/include ${gcc45_GCC_ARCHDIR:S/^${BUIL
 
 BUILDLINK_FILES_CMD.gcc45=	\
 	(cd  ${BUILDLINK_PREFIX.gcc45} &&	\
-	${FIND} ${_GCC45_SUBDIR}/bin ${_GCC45_SUBDIR}/libexec ${_GCC45_SUBDIR}/lib \( -type f -o -type l \) -print)
-BUILDLINK_FNAME_TRANSFORM.gcc45=	-e s:buildlink:buildlink/gcc45:
+	${FIND} ${_GCC45_SUBDIR}/bin ${_GCC45_SUBDIR}/include ${_GCC45_SUBDIR}/libexec ${_GCC45_SUBDIR}/lib \( -type f -o -type l \) -print)
 
 # Packages that link against shared libraries need a full dependency.
 .if defined(_USE_GCC_SHLIB)
