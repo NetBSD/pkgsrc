@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/01/31 07:42:15 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/01 08:32:01 sbd Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
@@ -165,12 +165,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/updatesmbpasswd.sh \
 		${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
-.if ${OPSYS} == "NetBSD"
-.  if !empty(PKG_OPTIONS:Mwinbind)
-	${INSTALL_LIB} ${WRKDIR}/${DISTNAME}/nsswitch/nss_winbind.${SAMBA_LIBEXT} \
-		${DESTDIR}${PREFIX}/lib/nss_winbind.${SAMBA_LIBEXT}.0
-.  endif
-.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
