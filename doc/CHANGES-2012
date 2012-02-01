@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.332 2012/02/01 10:38:34 obache Exp $
+$NetBSD: CHANGES-2012,v 1.333 2012/02/01 11:06:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/samba to 3.6.3nb6 [sbd 2012-02-01]
 	Updated net/samba35 to 3.5.12nb3 [sbd 2012-02-01]
 	Updated mail/enma to 1.2.0 [obache 2012-02-01]
+	Updated net/mikutter to 0.0.4.658 [obache 2012-02-01]
