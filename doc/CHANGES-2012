@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.343 2012/02/01 19:53:47 tron Exp $
+$NetBSD: CHANGES-2012,v 1.344 2012/02/01 20:15:56 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -520,4 +520,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Class-Method-Modifiers to 1.08 [rhaen 2012-02-01]
 	Updated devel/p5-Class-Mix to 0.005 [rhaen 2012-02-01]
 	Updated devel/p5-Class-XSAccessor to 1.13 [rhaen 2012-02-01]
+	Removed devel/p5-Class-XSAccessor-Array [rhaen 2012-02-01]
 	Updated www/apache22 to 2.2.22 [tron 2012-02-01]
