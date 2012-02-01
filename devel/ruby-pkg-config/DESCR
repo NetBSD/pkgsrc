@@ -1,1 +1,2 @@
-A pkg-config implementation by Ruby.
+pkg-config can be used in your extconf.rb to properly detect need libraries for
+compiling Ruby native extensions.
