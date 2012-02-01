@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/12/19 19:58:13 jmcneill Exp $
+# $NetBSD: options.mk,v 1.3 2012/02/01 21:57:38 is Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ns-flash
@@ -18,7 +18,12 @@ PKG_SUGGESTED_OPTIONS=  nspluginwrapper
 
 .if !empty(PKG_OPTIONS:Mnspluginwrapper)
 DEPENDS+= nspluginwrapper>0:../../www/nspluginwrapper
+.if ${OPSYS} == "NetBSD" && (!empty(OS_VERSION:M5.[0-9].*) || \
+			!empty(OS_VERSION:M[0-4].*))
+DEPENDS+= libflashsupport<1.1:../../multimedia/libflashsupport10
+.else
 DEPENDS+= libflashsupport{,-pulse}>0:../../multimedia/libflashsupport
+.endif
 INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.nspluginwrapper
 DEINSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.nspluginwrapper
 .endif
