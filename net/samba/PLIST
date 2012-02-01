@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2012/01/30 15:44:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2012/02/01 08:30:39 sbd Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -45,6 +45,8 @@ lib/libtdb.${LIBEXT}.1
 lib/libtdb.${LIBEXT}.1.2.9
 ${PLIST.winbind}lib/libwbclient.${LIBEXT}
 ${PLIST.winbind}lib/libwbclient.${LIBEXT}.0
+${PLIST.winbind}${NSS_WINBIND}
+${PLIST.winbind}${NSS_WINS}
 lib/samba/auth/script.${LIBEXT}
 lib/samba/charset/CP437.${LIBEXT}
 lib/samba/charset/CP850.${LIBEXT}
