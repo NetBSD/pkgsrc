@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.337 2012/02/01 14:37:52 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.338 2012/02/01 19:14:54 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -515,3 +515,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/rabbit to 1.0.5 [obache 2012-02-01]
 	Updated databases/py-table to 0.8.3anb4 [obache 2012-02-01]
 	Added filesystems/py-filesystem version filesystem [gdt 2012-02-01]
+	Updated devel/p5-Class-Load to 0.13 [rhaen 2012-02-01]
