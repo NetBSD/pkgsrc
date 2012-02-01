@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/01 12:32:12 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/01 12:48:17 obache Exp $
 
 DISTNAME=	pkg-config-1.1.3
 CATEGORIES=	devel
@@ -17,14 +17,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_SETUP=		yes
 
-SUBST_CLASSES+=		vsetup
-SUBST_STAGE.vsetup=	pre-configure
-SUBST_FILES.vsetup=	setup.rb
-SUBST_SED.vsetup=	-e "s|'sitedir'|'vendordir'|g"
-SUBST_SED.vsetup+=	-e "s|'sitelibdir'|'vendorlibdir'|g"
-SUBST_SED.vsetup+=	-e 's|"sitelibdir"|"vendorlibdir"|g'
-SUBST_SED.vsetup+=	-e 's|/site_ruby/|/vendor_ruby/|g'
-SUBST_MESSAGE.vsetup=	Fixing setup.rb to use `vendor'.
+CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
+			--siterubyver=${PREFIX}/${RUBY_VENDORLIB} \
+			--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
 
 #do-test:
 #		cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${RUBY} test/run-test.rb
