@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/01 10:38:18 obache Exp $
 bin/sidfquery
+lib/libsauth.la
 libexec/enma
 man/ja_JP.UTF-8/man1/enma.1
 man/man1/enma.1

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/05/28 07:26:48 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/01 10:38:18 obache Exp $
 #
 
-DISTNAME=	enma-1.1.0
-PKGREVISION=	2
+DISTNAME=	enma-1.2.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enma/}
 
@@ -14,12 +13,14 @@ LICENSE=	2-clause-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--with-libmilter=${BUILDLINK_PREFIX.libmilter}
-CONFIGURE_ARGS+=	--with-libbind=${BUILDLINK_PREFIX.libbind}
+CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples/enma
+CONFIGURE_ARGS+=	--with-resolver=ldns
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 BUILD_DEFS+=	VARBASE
 
@@ -61,7 +62,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/enma/enma.conf.sample
 
 .include "../../mail/libmilter/buildlink3.mk"
-.include "../../net/libbind/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ldns+=	ldns>=1.6.0
+.include "../../net/ldns/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

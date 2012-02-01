@@ -1,14 +1,17 @@
 ENMA is a milter program for the domain authentication technologies.
-It authenticates sender's address with SPF and Sender ID, then
-labels the result onto the Authentication-Results: field.
+It authenticates sender's address with SPF, Sender ID, DKIM and DKIM
+ADSP, then labels the result onto the Authentication-Results: field.
 
-ENMA implements the following RFCs and an Internet Draft:
+ENMA implements the following RFCs:
 
-- RFC4406 (Sender ID)
-- RFC4407 (PRA)
-- RFC4408 (SPF)
-- draft-kucherawy-sender-auth-header-15
-  (the Authentication-Results: field)
+- RFC4406 (Sender ID: Authenticating E-Mail)
+- RFC4407 (Purported Responsible Address)
+- RFC4408 (Sender Policy Framework)
+- RFC4871 (DKIM Signatures, obsoleted by RFC6376)
+- RFC5451 (Authentication-Results Header Field)
+- RFC5617 (ADSP)
+- RFC5672 (RFC 4871 Update, obsoleted by RFC6376)
+- RFC6376 (DKIM Signatures)
 
 ENMA is developed by IIJ. IIJ has been using several domain
 authentication software, though, all of them appeared unstable. ENMA
