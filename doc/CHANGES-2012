@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.350 2012/02/01 23:05:27 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.351 2012/02/01 23:55:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -527,3 +527,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Config-INI to 0.019 [rhaen 2012-02-01]
 	Updated devel/p5-Const-Fast to 0.009 [rhaen 2012-02-01]
 	Updated graphics/png to 1.5.8 [wiz 2012-02-01]
+	Updated textproc/icu to 4.8.1nb2 [wiz 2012-02-01]
