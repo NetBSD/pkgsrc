@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/05/12 06:50:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.20 2012/02/01 19:53:21 tron Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -127,16 +127,17 @@ ${PLIST.all-shared}lib/httpd/mod_version.so
 ${PLIST.all-shared}lib/httpd/mod_vhost_alias.so
 libexec/cgi-bin/printenv
 libexec/cgi-bin/test-cgi
+man/man1/ab.1
+man/man1/apxs.1
 man/man1/dbmmanage.1
 man/man1/htdbm.1
 man/man1/htdigest.1
 man/man1/htpasswd.1
-man/man8/ab.8
+man/man1/httxt2dbm.1
+man/man1/logresolve.1
 man/man8/apachectl.8
-man/man8/apxs.8
 man/man8/htcacheclean.8
 man/man8/httpd.8
-man/man8/logresolve.8
 man/man8/rotatelogs.8
 man/man8/suexec.8
 sbin/ab
@@ -618,6 +619,7 @@ share/httpd/manual/license.html
 share/httpd/manual/license.html.en
 share/httpd/manual/logs.html
 share/httpd/manual/logs.html.en
+share/httpd/manual/logs.html.fr
 share/httpd/manual/logs.html.ja.utf8
 share/httpd/manual/logs.html.ko.euc-kr
 share/httpd/manual/logs.html.tr.utf8
@@ -892,11 +894,14 @@ share/httpd/manual/mod/mod_proxy_connect.html.en
 share/httpd/manual/mod/mod_proxy_connect.html.ja.utf8
 share/httpd/manual/mod/mod_proxy_ftp.html
 share/httpd/manual/mod/mod_proxy_ftp.html.en
+share/httpd/manual/mod/mod_proxy_ftp.html.ja.utf8
 share/httpd/manual/mod/mod_proxy_http.html
 share/httpd/manual/mod/mod_proxy_http.html.en
 share/httpd/manual/mod/mod_proxy_http.html.fr
+share/httpd/manual/mod/mod_proxy_http.html.ja.utf8
 share/httpd/manual/mod/mod_proxy_scgi.html
 share/httpd/manual/mod/mod_proxy_scgi.html.en
+share/httpd/manual/mod/mod_proxy_scgi.html.ja.utf8
 share/httpd/manual/mod/mod_reqtimeout.html
 share/httpd/manual/mod/mod_reqtimeout.html.en
 share/httpd/manual/mod/mod_rewrite.html
@@ -1007,6 +1012,7 @@ share/httpd/manual/new_features_2_0.html.tr.utf8
 share/httpd/manual/new_features_2_2.html
 share/httpd/manual/new_features_2_2.html.en
 share/httpd/manual/new_features_2_2.html.fr
+share/httpd/manual/new_features_2_2.html.ja.utf8
 share/httpd/manual/new_features_2_2.html.ko.euc-kr
 share/httpd/manual/new_features_2_2.html.pt-br
 share/httpd/manual/new_features_2_2.html.tr.utf8
@@ -1074,6 +1080,7 @@ share/httpd/manual/programs/httxt2dbm.html.tr.utf8
 share/httpd/manual/programs/index.html
 share/httpd/manual/programs/index.html.en
 share/httpd/manual/programs/index.html.es
+share/httpd/manual/programs/index.html.ja.utf8
 share/httpd/manual/programs/index.html.ko.euc-kr
 share/httpd/manual/programs/index.html.ru.koi8-r
 share/httpd/manual/programs/index.html.tr.utf8
@@ -1190,6 +1197,7 @@ share/httpd/manual/upgrading.html
 share/httpd/manual/upgrading.html.de
 share/httpd/manual/upgrading.html.en
 share/httpd/manual/upgrading.html.fr
+share/httpd/manual/upgrading.html.ja.utf8
 share/httpd/manual/urlmapping.html
 share/httpd/manual/urlmapping.html.en
 share/httpd/manual/urlmapping.html.ja.utf8
