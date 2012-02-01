@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.339 2012/02/01 19:18:47 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.340 2012/02/01 19:22:25 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -517,3 +517,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added filesystems/py-filesystem version filesystem [gdt 2012-02-01]
 	Updated devel/p5-Class-Load to 0.13 [rhaen 2012-02-01]
 	Updated devel/p5-Class-Load-XS to 0.03 [rhaen 2012-02-01]
+	Updated devel/p5-Class-Method-Modifiers to 1.08 [rhaen 2012-02-01]
