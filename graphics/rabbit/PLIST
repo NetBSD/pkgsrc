@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/08/06 13:39:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.20 2012/02/01 12:57:50 obache Exp $
 bin/rabbirack
 bin/rabbirc
 bin/rabbit
@@ -104,6 +104,8 @@ ${RUBY_VENDORLIB}/rabbit/parser/ext/image.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/inline.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/tex.rb
 ${RUBY_VENDORLIB}/rabbit/parser/image.rb
+${RUBY_VENDORLIB}/rabbit/parser/markdown.rb
+${RUBY_VENDORLIB}/rabbit/parser/markdown/converter.rb
 ${RUBY_VENDORLIB}/rabbit/parser/pause-support.rb
 ${RUBY_VENDORLIB}/rabbit/parser/pdf.rb
 ${RUBY_VENDORLIB}/rabbit/parser/rd.rb
