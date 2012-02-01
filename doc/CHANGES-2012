@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.347 2012/02/01 20:45:13 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.348 2012/02/01 20:48:57 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -525,3 +525,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Config-AutoConf to 0.17 [rhaen 2012-02-01]
 	Updated devel/p5-Config-GitLike to 1.07 [rhaen 2012-02-01]
 	Updated devel/p5-Config-INI to 0.019 [rhaen 2012-02-01]
+	Updated devel/p5-Const-Fast to 0.009 [rhaen 2012-02-01]
