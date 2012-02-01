@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2012/01/30 15:44:02 adam Exp $
+# $NetBSD: options.mk,v 1.29 2012/02/01 08:30:39 sbd Exp $
 
 # Recommended package options for various setups:
 #
@@ -149,7 +149,7 @@ NSS_WINBIND_cmd=	\
 .PHONY: samba-nss-winbind-install
 post-install: samba-nss-winbind-install
 samba-nss-winbind-install:
-	lib=${WRKSRC}/nsswitch/${NSS_WINBIND:T:Q};			\
+	lib=${WRKDIR}/${DISTNAME}/nsswitch/${NSS_WINBIND:T:Q};		\
 	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX}/lib
 
 # Install the NSS WINS module if it exists.
@@ -167,7 +167,7 @@ NSS_WINS_cmd=	\
 .PHONY: samba-nss-wins-install
 post-install: samba-nss-wins-install
 samba-nss-wins-install:
-	lib=${WRKSRC}/nsswitch/${NSS_WINS:T:Q};				\
+	lib=${WRKDIR}/${DISTNAME}/nsswitch/${NSS_WINS:T:Q};		\
 	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX}/lib
 .else
 CONFIGURE_ARGS+=	--without-winbind
