@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10844 2012/02/01 12:25:37 wiz Exp $
+$NetBSD: TODO,v 1.10845 2012/02/01 13:12:21 obache Exp $
 
 Suggested new packages
 ======================
@@ -976,7 +976,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
 	o mathomatic-15.7.1
-	o mecab-0.991
+	o mecab-0.992 [break textproc/php-mecab]
 	o mediawiki-1.18.1
 	o meld-1.5.3
 	o memtest86-4.0 [pkg/45754]
