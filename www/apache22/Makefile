@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2012/01/29 12:29:07 tron Exp $
+# $NetBSD: Makefile,v 1.79 2012/02/01 19:53:21 tron Exp $
 
-DISTNAME=	httpd-2.2.21
+DISTNAME=	httpd-2.2.22
 
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
 		http://archive.apache.org/dist/httpd/ \
@@ -122,8 +121,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert
 FIX_MAN_PERMS=		man1/htdbm.1 man1/htpasswd.1 man1/htdigest.1
 FIX_MAN_PERMS+=		man1/dbmmanage.1 man8/httpd.8 man8/suexec.8
-FIX_MAN_PERMS+=		man8/rotatelogs.8 man8/logresolve.8 man8/apxs.8
-FIX_MAN_PERMS+=		man8/apachectl.8 man8/ab.8
+FIX_MAN_PERMS+=		man8/rotatelogs.8 man1/logresolve.1 man1/apxs.1
+FIX_MAN_PERMS+=		man8/apachectl.8 man1/ab.1 man1/httxt2dbm.1
 
 # Fix paths in the apache manpages.
 SUBST_CLASSES+=		man

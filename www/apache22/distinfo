@@ -1,24 +1,18 @@
-$NetBSD: distinfo,v 1.49 2012/01/29 12:29:07 tron Exp $
+$NetBSD: distinfo,v 1.50 2012/02/01 19:53:21 tron Exp $
 
-SHA1 (httpd-2.2.21.tar.bz2) = c02f9b05da9a7e316ff37d9053dc76a57ba51cb4
-RMD160 (httpd-2.2.21.tar.bz2) = 6464a03d78ab858b1288ea9eef4cd5f73b60a9f1
-Size (httpd-2.2.21.tar.bz2) = 5324905 bytes
-SHA1 (patch-CVE-2012-0021) = 8c44c591ffa3a4ca32de47c71d1aa8470de81f1e
+SHA1 (httpd-2.2.22.tar.bz2) = 766cd0843050a8dfb781e48b976f3ba6ebcf8696
+RMD160 (httpd-2.2.22.tar.bz2) = 237a26a7759e7e1af175900d598e25fb082a4eb9
+Size (httpd-2.2.22.tar.bz2) = 5378934 bytes
 SHA1 (patch-aa) = e0bfdf6bc9cb034bea46a390a12a5508e363c9a7
 SHA1 (patch-ab) = 365cc3b0ac2d9d68ccb94f5699fe168a1c9b0150
 SHA1 (patch-ac) = 515043b5c215d49fe8f6d3191b502c978e2a2dad
 SHA1 (patch-ad) = 088d6ff0e7a8acfe70b4f85a6ce58d42c935fd13
 SHA1 (patch-ae) = 86b307d6eefef232b6223afc3f69e64be40bd913
-SHA1 (patch-af) = 312d3bce5e1bf6e747b5f0f313d89bf5b4636392
+SHA1 (patch-af) = 580950dbf0154ba1c93f5c58eae766c7d6c0c00c
 SHA1 (patch-ag) = 78dcb023f524ef65928b529320932c9664ec0d01
 SHA1 (patch-ai) = 4ebc3bd580a298973928eb6d13d2ce745eac0312
 SHA1 (patch-al) = 56b9f5c2f6fd01fe5067f9210e328cbf674c68f1
 SHA1 (patch-am) = ab4a2f7e5a1a3064e908b61157e7fd349c0b0c08
 SHA1 (patch-aw) = ca53d67beeb2c2c4d9adb04d3d79e24a8c427fd4
 SHA1 (patch-lock.c) = 770ca03f1cb4421879bd5baa5a7c30cc91acb6e1
-SHA1 (patch-modules_mappers_mod_rewrite.c) = de7bbdf02dda38e2542e4967ee6f22745ec0f118
-SHA1 (patch-modules_proxy_mod_proxy.c) = bab58b70eee22d7c08be9a4a9ada3fad886fa796
 SHA1 (patch-repos.c) = 0e0361b91d4b0fe6c7c55a12fdfd2e6aacc710e1
-SHA1 (patch-server_protocol.c) = dc99717704f53837dfd7b9c1018487a787dcbfd9
-SHA1 (patch-server_scoreboard.c) = 8d1e007f8d1d6a6db827a41d82369749e603a2b3
-SHA1 (patch-server_util.c) = 37e9c357618a9645222cd981f0ccb04c7987fe15
