@@ -1,7 +1,55 @@
-$NetBSD: patch-aa,v 1.12 2010/12/07 17:58:13 adam Exp $
+$NetBSD: patch-aa,v 1.13 2012/02/01 23:53:32 wiz Exp $
 
---- Makefile.in.orig	2010-10-07 00:23:38.000000000 +0000
+Add linker flags for finding the libraries to pkg-config files.
+Avoid using programs which need elevated privileges during the build.
+
+--- Makefile.in.orig	2011-07-19 21:19:38.000000000 +0000
 +++ Makefile.in
+@@ -225,7 +225,7 @@ config/icu-uc.pc: config/icu.pc Makefile
+ 	@cat config/icu.pc > $@
+ 	@echo "Description: $(PACKAGE_ICU_DESCRIPTION): Common and Data libraries" >> $@
+ 	@echo "Name: $(PACKAGE)-uc" >> $@
+-	@echo "Libs:" '-L$${libdir}' "${ICULIBS_UC}" "${ICULIBS_DT}" >> $@
++	@echo "Libs:" ${COMPILER_RPATH_FLAG}'$${libdir} -L$${libdir}' "${ICULIBS_UC}" "${ICULIBS_DT}" >> $@
+ 	@echo "Libs.private:" '$${baselibs}' >> $@
+ 	@echo $@ updated.
+ 
+@@ -234,7 +234,7 @@ config/icu-i18n.pc: config/icu.pc Makefi
+ 	@echo "Description: $(PACKAGE_ICU_DESCRIPTION): Internationalization library" >> $@
+ 	@echo "Name: $(PACKAGE)-i18n" >> $@
+ 	@echo "Requires: icu-uc" >> $@
+-	@echo "Libs:" "${ICULIBS_I18N}" >> $@
++	@echo "Libs:" ${COMPILER_RPATH_FLAG}'$${libdir} -L$${libdir}' "${ICULIBS_I18N}" >> $@
+ 	@echo $@ updated.
+ 
+ config/icu-io.pc: config/icu.pc Makefile icudefs.mk
+@@ -242,7 +242,7 @@ config/icu-io.pc: config/icu.pc Makefile
+ 	@echo "Description: $(PACKAGE_ICU_DESCRIPTION): Stream and I/O Library" >> $@
+ 	@echo "Name: $(PACKAGE)-io" >> $@
+ 	@echo "Requires: icu-i18n" >> $@
+-	@echo "Libs:" "${ICULIBS_IO}" >> $@
++	@echo "Libs:" ${COMPILER_RPATH_FLAG}'$${libdir} -L$${libdir}' "${ICULIBS_IO}" >> $@
+ 	@echo $@ updated.
+ 
+ config/icu-le.pc: config/icu.pc Makefile icudefs.mk
+@@ -250,7 +250,7 @@ config/icu-le.pc: config/icu.pc Makefile
+ 	@echo "Description: $(PACKAGE_ICU_DESCRIPTION): Layout library" >> $@
+ 	@echo "Name: $(PACKAGE)-le" >> $@
+ 	@echo "Requires: icu-uc" >> $@
+-	@echo "Libs:" "${ICULIBS_LE}" >> $@
++	@echo "Libs:" ${COMPILER_RPATH_FLAG}'$${libdir} -L$${libdir}' "${ICULIBS_LE}" >> $@
+ 	@echo $@ updated.
+ 
+ config/icu-lx.pc: config/icu.pc Makefile icudefs.mk
+@@ -258,7 +258,7 @@ config/icu-lx.pc: config/icu.pc Makefile
+ 	@echo "Description: $(PACKAGE_ICU_DESCRIPTION): Paragraph Layout library" >> $@
+ 	@echo "Name: $(PACKAGE)-lx" >> $@
+ 	@echo "Requires: icu-le" >> $@
+-	@echo "Libs:" "${ICULIBS_LX}" >> $@
++	@echo "Libs:" ${COMPILER_RPATH_FLAG}'$${libdir} -L$${libdir}' "${ICULIBS_LX}" >> $@
+ 	@echo $@ updated.
+ 
+ 
 @@ -280,7 +280,7 @@ $(top_builddir)/config/pkgdataMakefile:
  
  $(top_builddir)/config/icu-config: $(top_builddir)/Makefile $(top_srcdir)/config/icu-config-top $(top_srcdir)/config/icu-config-bottom $(top_builddir)/config/Makefile.inc @platform_make_fragment@ $(top_srcdir)/config/make2sh.sed
