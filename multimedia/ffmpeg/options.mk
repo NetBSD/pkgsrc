@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.23 2012/01/09 17:08:52 drochner Exp $
+# $NetBSD: options.mk,v 1.24 2012/02/01 17:56:07 drochner Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	theora vorbis xvid faac x264 opencore-amr libvpx
-PKG_SUGGESTED_OPTIONS=	theora vorbis xvid x264 libvpx
+PKG_SUPPORTED_OPTIONS=	faac lame libvpx opencore-amr theora vorbis x264 xvid
+PKG_SUGGESTED_OPTIONS=	lame libvpx theora vorbis x264 xvid
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faac
 
@@ -64,6 +64,16 @@ CONFIGURE_ARGS+=	--enable-libtheora
 .if !empty(PKG_OPTIONS:Mvorbis)
 CONFIGURE_ARGS+=	--enable-libvorbis
 .include "../../audio/libvorbis/buildlink3.mk"
+.endif
+
+###
+### LAME MP3 encoder
+###
+.if !empty(PKG_OPTIONS:Mlame)
+# "lame-3.98" isn't compatible with "ffmpeg" which breaks audio encoding.
+BUILDLINK_ABI_DEPENDS.lame+= lame>=3.98.2nb1
+CONFIGURE_ARGS+=	--enable-libmp3lame
+.include "../../audio/lame/buildlink3.mk"
 .endif
 
 ###
