@@ -1,9 +1,21 @@
-$NetBSD: patch-ac,v 1.1 2009/04/09 02:25:38 obache Exp $
+$NetBSD: patch-ac,v 1.2 2012/02/01 10:38:18 obache Exp $
 
---- configure.orig	2009-03-02 05:01:02.000000000 +0000
+* Not to be unwanted CFLAGS modification. 
+* Use pkgsrc's PTHREAD related compiler flags.
+
+--- configure.orig	2012-01-30 08:06:13.000000000 +0000
 +++ configure
-@@ -4170,8 +4170,8 @@ fi
+@@ -18548,8 +18548,6 @@ fi
+ if test "${enable_debug+set}" = set; then
+   enableval="$enable_debug"
+   CFLAGS="$CFLAGS -g3 -O0"
+-else
+-  CFLAGS="$CFLAGS -g -O2"
+ fi;
  
+ 
+@@ -18641,8 +18639,8 @@ else
+ fi;
  
  CFLAGS="$CFLAGS -std=gnu99 -Wall -Wextra"
 -CPPFLAGS="$CPPFLAGS -I$includedir -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
@@ -11,5 +23,5 @@ $NetBSD: patch-ac,v 1.1 2009/04/09 02:25:38 obache Exp $
 +CPPFLAGS="$CPPFLAGS -I$includedir $PTHREAD_CFLAGS"
 +LDFLAGS="$LDFLAGS -L$libdir $PTHREAD_LDFLAGS $PTHREAD_LIBS"
  
- { echo "$as_me:$LINENO: checking for __res_ndestroy in -lbind" >&5
- echo $ECHO_N "checking for __res_ndestroy in -lbind... $ECHO_C" >&6; }
+ 
+ # Check whether --with-resolver or --without-resolver was given.
