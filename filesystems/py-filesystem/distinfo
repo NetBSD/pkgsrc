@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/01 14:36:42 gdt Exp $
+
+SHA1 (fs-0.4.0.tar.gz) = e8dcac1d3caac041ea3d9503e18707ccfb00c524
+RMD160 (fs-0.4.0.tar.gz) = 232eb53b73d6ee918c8da7299dcccb726e8702c9
+Size (fs-0.4.0.tar.gz) = 191749 bytes
