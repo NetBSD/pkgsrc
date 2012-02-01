@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2010/10/16 18:00:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.52 2012/02/01 18:47:00 drochner Exp $
 bin/pango-querymodules
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -81,6 +81,7 @@ share/gtk-doc/html/pango/index-1.22.html
 share/gtk-doc/html/pango/index-1.24.html
 share/gtk-doc/html/pango/index-1.26.html
 share/gtk-doc/html/pango/index-1.28.html
+share/gtk-doc/html/pango/index-1.30.html
 share/gtk-doc/html/pango/index-1.4.html
 share/gtk-doc/html/pango/index-1.6.html
 share/gtk-doc/html/pango/index-1.8.html
@@ -115,7 +116,6 @@ share/gtk-doc/html/pango/pango-Xft-Fonts-and-Rendering.html
 share/gtk-doc/html/pango/pango-hierarchy.html
 share/gtk-doc/html/pango/pango-pango-renderer.html
 share/gtk-doc/html/pango/pango-querymodules.html
-share/gtk-doc/html/pango/pango.devhelp
 share/gtk-doc/html/pango/pango.devhelp2
 share/gtk-doc/html/pango/pango.html
 share/gtk-doc/html/pango/rendering.html
