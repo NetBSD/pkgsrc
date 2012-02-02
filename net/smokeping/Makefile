@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2010/01/27 17:40:30 joerg Exp $
+# $NetBSD: Makefile,v 1.27.16.1 2012/02/02 20:08:40 tron Exp $
 
-DISTNAME=	smokeping-2.4.2
+DISTNAME=	smokeping-2.6.7
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/smokeping/pub/
 
@@ -9,14 +9,20 @@ HOMEPAGE=	http://oss.oetiker.ch/smokeping/index.en.html
 COMMENT=	Latency/packet loss monitoring/graphing tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/smokeping
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-htdocs-dir=${PREFIX}/share/httpd/htdocs
 
 DEPENDS+=	rrdtool>=1.0:../../databases/rrdtool
 DEPENDS+=	fping>=2.4b2:../../net/fping
 DEPENDS+=	p5-Digest-MD5>=2.20:../../security/p5-Digest-MD5
+DEPENDS+=	p5-Digest-HMAC>=1.03:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
+DEPENDS+=	p5-FCGI>=0.74:../../www/p5-FCGI
+DEPENDS+=	p5-Config-Grammar>=1.10:../../devel/p5-Config-Grammar
 
-USE_TOOLS+=	pax perl:run
-NO_BUILD=	YES
+USE_TOOLS+=	pax gmake perl:run
 
 PKG_SYSCONFSUBDIR?=	smokeping
 SMOKEPING_HOME=		${VARBASE}/db/smokeping
@@ -28,81 +34,60 @@ SPDIR=			${PREFIX}/share/smokeping
 CONF_FILES=		${EGDIR}/basepage.html.dist \
 			${PKG_SYSCONFDIR}/basepage.html
 CONF_FILES+=		${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
+CONF_FILES+=		${EGDIR}/smokeping_secrets.dist ${PKG_SYSCONFDIR}/smokeping_secrets
 CONF_FILES+=		${EGDIR}/config.dist ${PKG_SYSCONFDIR}/config
 CONF_FILES+=		${EGDIR}/tmail.dist ${PKG_SYSCONFDIR}/tmail
 CONF_FILES+=		${EGDIR}/smokeping.conf ${PKG_SYSCONFDIR}/smokeping.conf
+
 RCD_SCRIPTS=		smokeping
-REPLACE_PERL=		bin/smokeping.dist bin/tSmoke.dist
+REPLACE_PERL=		bin/smokeping_cgi bin/smokeping
+REPLACE_PERL+=		bin/smokeinfo bin/tSmoke
 
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-patch
-SUBST_FILES.files=	bin/smokeping.dist htdocs/smokeping.cgi.dist \
-			etc/config.dist etc/smokemail.dist bin/tSmoke.dist \
-			etc/basepage.html.dist smokeping.conf htdocs/tr.cgi.dist
+SUBST_FILES.files=	etc/config.dist.in bin/smokeping \
+			bin/smokeping_cgi bin/tSmoke \
+			htdocs/Makefile.in smokeping.conf
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_SED.files+=	-e "s|@INTERP@|${INTERP}|g"
-SUBST_SED.files+=	-e "s|perl-5.8.4|perl|g"
-SUBST_SED.files+=	-e "s|/usr/bin/perl|${PERL5}|g"
 SUBST_SED.files+=	-e "s|@SPDIR@|${SPDIR}|g"
-SUBST_SED.files+=	-e "s|cropper/|/smokeping/cropper/|g"
-SUBST_SED.files+=	-e "s|= cache|= /smokeping/.simg|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
+
+SUBST_CLASSES+=		libs
+SUBST_STAGE.libs=	post-patch
+SUBST_FILES.libs=	bin/smokeping_cgi bin/smokeping bin/smokeinfo bin/tSmoke
+SUBST_SED.libs=	-e "s|FindBin::Bin/../lib|FindBin::Bin/../lib/smokeping|g"
+SUBST_MESSAGE.libs=	Fixing library path
 
 OWN_DIRS+=		${SMOKEPING_HOME}
 OWN_DIRS+=		${SPDIR}/.simg
 
-INSTALLATION_DIRS=	bin libexec/cgi-bin
-
-.include "options.mk"
+INSTALLATION_DIRS=	bin libexec/cgi-bin share/httpd/htdocs
 
 post-extract:
 	${CP} ${FILESDIR}/smokeping.conf ${WRKSRC}
 
+post-install:
+	for FILE in CHANGES CONTRIBUTORS COPYRIGHT LICENSE README TODO; do \
+		${INSTALL_DATA} \
+		${WRKSRC}/$$FILE ${DESTDIR}${PREFIX}/share/doc/smokeping ; \
+	done
+
+	${INSTALL_DATA} ${WRKSRC}/smokeping.conf ${DESTDIR}${EGDIR}
+
+	${MV} ${DESTDIR}${PREFIX}/share/httpd/htdocs/smokeping.fcgi.dist \
+		 ${DESTDIR}${PREFIX}/libexec/cgi-bin/smokeping.cgi
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/*.dist ${DESTDIR}${EGDIR}/
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/examples/* ${DESTDIR}${EGDIR}/
+	${RMDIR} ${DESTDIR}${PKG_SYSCONFDIR}/examples
+
+.include "options.mk"
+
 INSTALLATION_DIRS+=	lib/smokeping share/doc/smokeping ${EGDIR} \
 	${SPDIR}/cropper ${SPDIR}/resource ${SPDIR}/script
-
-do-install:
-	for FILE in CHANGES CONTRIBUTORS COPYING COPYRIGHT README TODO; do \
-		${INSTALL_DATA} \
-			${WRKSRC}/$$FILE ${DESTDIR}${PREFIX}/share/doc/smokeping; \
-	done
-
-	for FILE in ${WRKSRC}/doc/*.txt; do \
-		${INSTALL_DATA} $$FILE ${DESTDIR}${PREFIX}/share/doc/smokeping; \
-	done
-
-	for FILE in ${WRKSRC}/doc/examples/config.*; do \
-		${INSTALL_DATA} $$FILE ${DESTDIR}${EGDIR}; \
-	done
-
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/smokeping.dist ${DESTDIR}${PREFIX}/bin/smokeping
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/tSmoke.dist ${DESTDIR}${PREFIX}/bin/tSmoke
-
-	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/smokeping.cgi.dist \
-		${DESTDIR}${PREFIX}/libexec/cgi-bin/smokeping.cgi
-	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/tr.cgi.dist \
-		${DESTDIR}${PREFIX}/libexec/cgi-bin/tr.cgi
-
-	cd ${WRKSRC}/htdocs/cropper && pax -rw -pm . ${DESTDIR}${SPDIR}/cropper
-	cd ${WRKSRC}/htdocs/resource && pax -rw -pm . ${DESTDIR}${SPDIR}/resource
-	cd ${WRKSRC}/htdocs/script && pax -rw -pm . ${DESTDIR}${SPDIR}/script
-	cd ${WRKSRC}/lib && pax -rw -pm . ${DESTDIR}${PREFIX}/lib/smokeping
-	${INSTALL_DATA} ${WRKSRC}/htdocs/tr.html ${DESTDIR}${SPDIR}
-
-	for FILE in ${WRKSRC}/etc/config.dist \
-		${WRKSRC}/etc/basepage.html.dist \
-		${WRKSRC}/etc/tmail.dist \
-		${WRKSRC}/etc/config.dist \
-		${WRKSRC}/smokeping.conf \
-		${WRKSRC}/etc/smokemail.dist; do \
-		${INSTALL_DATA} $$FILE ${DESTDIR}${EGDIR}; \
-	done
-
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/lib/smokeping/JSON/*.pm
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/lib/smokeping/JSON.pm
 
 .include "../../mk/bsd.pkg.mk"
