@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.28 2011/06/02 06:45:49 asau Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.29 2012/02/02 00:39:23 asau Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -91,7 +91,7 @@ and dashes.</para>
 <screen>&uprompt; <userinput>cd /usr &amp;&amp; cvs -q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P pkgsrc</userinput>
 </screen>
 
-	<para>Refer to <ulink url="http://NetBSD.org/FIXME">list of available CVS mirrors</ulink> to choose faster one.</para>
+	<para>Refer to the <ulink url="http://www.NetBSD.org/mirrors/">list of available mirrors</ulink> to choose a faster CVS mirror, if needed.</para>
 
 <!-- FIXME: All this CVS magic should move into appendix or so. -->
 	<para>If you get error messages from <literal>rsh</literal>, you need to set CVS_RSH variable. E.g.:</para>
