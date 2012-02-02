@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/02/02 21:35:21 wiz Exp $
+
+Explicitly tell libtool the compiler type. Seems to be needed on NetBSD 5.0.
+
+--- Makefile.in.orig	2012-01-21 01:51:33.000000000 +0000
++++ Makefile.in
+@@ -80,7 +80,7 @@ am_libSDL_image_la_OBJECTS = IMG.lo IMG_
+ 	IMG_tif.lo IMG_xcf.lo IMG_xpm.lo IMG_xv.lo IMG_webp.lo \
+ 	$(am__objects_1)
+ libSDL_image_la_OBJECTS = $(am_libSDL_image_la_OBJECTS)
+-libSDL_image_la_LINK = $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
++libSDL_image_la_LINK = $(LIBTOOL) --tag CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(libSDL_image_la_LDFLAGS) $(LDFLAGS) -o $@
+ PROGRAMS = $(noinst_PROGRAMS)
