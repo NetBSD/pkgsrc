@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/08/14 15:14:15 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/02 09:44:58 hans Exp $
 
 DISTNAME=	Text-WrapI18N-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Text/WrapI18N/.packlist
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
