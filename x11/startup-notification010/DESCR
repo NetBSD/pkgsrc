@@ -1,0 +1,5 @@
+startup-notification provides mechanisms allowing a desktop environment to
+track application startup, to provide user feedback and other features.
+
+This is an older version to allow compatibility with native X11 in
+NetBSD 5 and earlier (pre-xcb).

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/02/02 11:31:33 wiz Exp $
+
+--- libsn/sn-monitor.h	2009-04-03 17:11:34.000000000 +0700
++++ libsn/sn-monitor.h	2010-03-26 20:35:05.000000000 +0700
+@@ -73,6 +73,7 @@
+ const char* sn_startup_sequence_get_wmclass               (SnStartupSequence *sequence);
+ const char* sn_startup_sequence_get_binary_name           (SnStartupSequence *sequence);
+ const char* sn_startup_sequence_get_icon_name             (SnStartupSequence *sequence);
++const char* sn_startup_sequence_get_application_id        (SnStartupSequence *sequence);
+ int         sn_startup_sequence_get_screen                (SnStartupSequence *sequence);
+ 
+ void        sn_startup_sequence_get_initiated_time        (SnStartupSequence *sequence,
