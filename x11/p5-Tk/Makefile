@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2012/01/22 19:00:34 abs Exp $
+# $NetBSD: Makefile,v 1.74 2012/02/02 09:53:44 hans Exp $
 
 DISTNAME=	Tk-804.030
 PKGNAME=	p5-${DISTNAME}
@@ -33,7 +33,7 @@ SUBST_FILES.prefix=	PNG/Makefile.PL
 SUBST_SED.prefix=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f -print0 | ${XARGS} -0 ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f -print0 | ${XARGS} -0 ${RM} -f
 
 .include "../../lang/perl5/module.mk"
 .include "../../graphics/png/buildlink3.mk"
