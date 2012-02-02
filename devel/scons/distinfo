@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2011/03/12 16:04:58 shattered Exp $
+$NetBSD: distinfo,v 1.8 2012/02/02 11:49:55 obache Exp $
 
 SHA1 (scons-1.3.1.tar.gz) = 360d4167ea7f92fbdd173776ce1c191b9aa7fa42
 RMD160 (scons-1.3.1.tar.gz) = e4f568afa7c2519dc03d2993c8dfbb247b6b7c21
 Size (scons-1.3.1.tar.gz) = 599550 bytes
-SHA1 (patch-aa) = 054740ccd5092b8444dc00bb5488c459bff7c18f
+SHA1 (patch-aa) = 20fe8e5e31b7f0f0d5755a51beefffd7504a55ae
