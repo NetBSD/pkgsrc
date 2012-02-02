@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.352 2012/02/01 23:56:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.353 2012/02/02 00:37:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/icu to 4.8.1nb2 [wiz 2012-02-01]
 	Updated www/drupal6 to 6.23 [taca 2012-02-01]
 	Updated www/drupal7 to 7.11 [taca 2012-02-01]
+	Updated mail/getmail to 4.25.0 [schmonz 2012-02-02]
