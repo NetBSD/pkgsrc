@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2012/02/02 11:49:55 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/02/02 11:55:23 obache Exp $
 #
 # used by devel/scons/Makefile
 # used by devel/scons-devel/Makefile
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scons/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scons.org/
 COMMENT?=		Python-based, open-source build system
+LICENSE?=		mit
 
 REPLACE_PYTHON+=	script/scons script/scons-time script/sconsign
 
