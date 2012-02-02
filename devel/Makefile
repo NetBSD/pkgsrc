@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1557 2012/02/01 20:11:37 rhaen Exp $
+# $NetBSD: Makefile,v 1.1558 2012/02/02 07:44:29 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1044,6 +1044,7 @@ SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Name
 SUBDIR+=	p5-Sub-Override
 SUBDIR+=	p5-Sub-Uplevel
+SUBDIR+=	p5-Sys-Syscall
 SUBDIR+=	p5-System-Command
 SUBDIR+=	p5-TAP-Formatter-HTML
 SUBDIR+=	p5-TAP-Harness-Archive
@@ -1260,8 +1261,8 @@ SUBDIR+=	py-generate
 SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-idle
-SUBDIR+=	py-jersey
 SUBDIR+=	py-ipython
+SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-logilab-astng
