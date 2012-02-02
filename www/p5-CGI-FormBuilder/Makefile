@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/08/14 16:05:45 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/02 09:48:42 hans Exp $
 
 DISTNAME=		CGI-FormBuilder-3.0501
 PKGNAME=		p5-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=		p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 #DEPENDS+=		p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
