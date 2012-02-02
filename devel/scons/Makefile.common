@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2011/02/28 14:52:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2012/02/02 11:49:55 obache Exp $
 #
 # used by devel/scons/Makefile
 # used by devel/scons-devel/Makefile
@@ -11,10 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scons.org/
 COMMENT?=		Python-based, open-source build system
 
-PYDISTUTILSPKG=		yes
-
-MAKE_ENV+=		PKGVERSION_NOREV=${PKGVERSION_NOREV:Q}
 REPLACE_PYTHON+=	script/scons script/scons-time script/sconsign
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
