@@ -1,47 +1,46 @@
-$NetBSD: patch-ac,v 1.8 2008/08/17 11:09:10 adrianp Exp $
+$NetBSD: patch-ac,v 1.8.30.1 2012/02/02 20:08:41 tron Exp $
 
---- etc/config.dist.orig	2008-07-24 18:36:57.000000000 +0100
-+++ etc/config.dist
+--- etc/config.dist.in.orig	2011-10-30 11:33:11.000000000 +0100
++++ etc/config.dist.in	2012-02-02 16:51:40.000000000 +0100
 @@ -1,19 +1,19 @@
  *** General ***
  
 -owner    = Peter Random
 -contact  = some@address.nowhere
 -mailhost = my.mail.host
--sendmail = /usr/lib/sendmail
 +owner    = Charlie Root
 +contact  = root@localhost
 +mailhost = localhost
-+sendmail = /usr/sbin/sendmail
+ sendmail = @SENDMAIL@
  # NOTE: do not put the Image Cache below cgi-bin
  # since all files under cgi-bin will be executed ... this is not
  # good for images.
--imgcache = /home/oetiker/public_html/smokeping-ms/cache
+-imgcache = @prefix@/cache
 +imgcache = @SPDIR@/.simg
  imgurl   = cache
--datadir  = /tmp/smokeping-ms/data
--piddir  = /tmp/smokeping-ms/var
+-datadir  = @prefix@/data
+-piddir  = @prefix@/var
 -cgiurl   = http://some.url/smokeping.cgi
--smokemail = /home/oetiker/checkouts/smokeping/trunk/software/etc/smokemail.dist
--tmail = /home/oetiker/checkouts/smokeping/trunk/software/etc/tmail.dist
+-smokemail = @prefix@/etc/smokemail.dist
+-tmail = @prefix@/etc/tmail.dist
 +datadir  = @VARBASE@/db/smokeping
 +piddir  = @VARBASE@/run
 +cgiurl   = http://localhost/cgi-bin/smokeping.cgi
-+smokemail = @PREFIX@/etc/smokeping/smokemail
++smokemail = @PKG_SYSCONFDIR@/smokemail
 +tmail = @PKG_SYSCONFDIR@/tmail
  # specify this to get syslog logging
  syslogfacility = local0
  # each probe is now run in its own process
-@@ -47,7 +47,7 @@ AVERAGE  0.5 144   720
+@@ -47,7 +47,7 @@
  
  *** Presentation ***
  
--template = /home/oetiker/checkouts/smokeping/trunk/software/etc/basepage.html.dist
+-template = @prefix@/etc/basepage.html.dist
 +template = @PKG_SYSCONFDIR@/basepage.html
  
  + charts
  
-@@ -105,7 +105,7 @@ unison_tolerance = 2
+@@ -105,10 +105,10 @@
  
  + FPing
  
@@ -49,4 +48,8 @@ $NetBSD: patch-ac,v 1.8 2008/08/17 11:09:10 adrianp Exp $
 +binary = @PREFIX@/sbin/fping
  
  *** Slaves ***
- secrets=/home/oetiker/checkouts/smokeping/trunk/software/etc/smokeping_secrets.dist
+-secrets=@prefix@/etc/smokeping_secrets.dist
++secrets=@PKG_SYSCONFDIR@/smokeping_secrets
+ +boomer
+ display_name=boomer
+ color=0000ff
