@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2011/08/07 20:58:40 gls Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/02 21:50:18 asau Exp $
 #
 
-DISTNAME=	dwm-5.9
+DISTNAME=	dwm-6.0
 CATEGORIES=	wm
 MASTER_SITES=	http://dl.suckless.org/dwm/
 
