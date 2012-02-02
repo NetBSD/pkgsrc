@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.363 2012/02/02 21:17:54 asau Exp $
+$NetBSD: CHANGES-2012,v 1.364 2012/02/02 21:50:30 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/smokeping to 2.6.7 [bouyer 2012-02-02]
 	Updated editors/emacs-snapshot to 24.0.93.20120201 [minskim 2012-02-02]
 	Updated fonts/terminus-font to 4.36 [asau 2012-02-02]
+	Updated wm/dwm to 6.0 [asau 2012-02-02]
