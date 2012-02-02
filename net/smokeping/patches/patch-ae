@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2008/08/17 11:09:10 adrianp Exp $
+$NetBSD: patch-ae,v 1.1.30.1 2012/02/02 20:08:41 tron Exp $
 
---- htdocs/tr.cgi.dist.orig	2008-07-24 19:25:28.000000000 +0100
-+++ htdocs/tr.cgi.dist
-@@ -1,6 +1,6 @@
--#!/usr/sepp/bin/speedy-5.8.8 -w
-+#!@PREFIX@/@INTERP@ -w
- use strict;
--use lib qw(/home/oposs/smokeping/software/lib);
-+use lib qw(@PREFIX@/lib/smokeping);
- use lib qw(perl);
+--- htdocs/Makefile.in.orig	2012-02-02 15:51:17.000000000 +0100
++++ htdocs/Makefile.in	2012-02-02 15:52:04.000000000 +0100
+@@ -424,7 +424,7 @@
+ install-data-local:
+ 	$(MKDIR) -p $(DESTDIR)$(HTDOCSDIR)
+ 	$(ECHO)	"#!/bin/sh" > $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
+-	$(ECHO)	"$(prefix)/bin/smokeping_cgi $(prefix)/etc/config" >> $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
++	$(ECHO)	"$(prefix)/bin/smokeping_cgi @PKG_SYSCONFDIR@/config" >> $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
+ 	chmod +x $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
  
- use CGI;
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
