@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/02 11:31:33 wiz Exp $
+
+SHA1 (startup-notification-0.10.tar.gz) = 670c5e44f59e3844e2ca0c67730ba9ca5f5228fc
+RMD160 (startup-notification-0.10.tar.gz) = de905634db3263d24b69ae42887111b7ff95b3ba
+Size (startup-notification-0.10.tar.gz) = 328787 bytes
+SHA1 (patch-aa) = 71748b823916667c59af680371d31b03f56a2177
+SHA1 (patch-ab) = ec8c08bb3ce2cf0db23d6949e95ccf88c149d1cc
