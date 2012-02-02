@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/08/14 14:14:50 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/02/02 09:40:04 hans Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -36,7 +36,7 @@ SUBST_FILES.etc-fix=	ISPMan/*
 SUBST_SED.etc-fix=	-e 's:/etc:${PREFIX}/etc:g'
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/IO-stringy-1.212_patched/lib/IO/Scalar.pm \

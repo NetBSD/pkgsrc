@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/08/14 14:14:44 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/02 09:42:30 hans Exp $
 #
 
 DISTNAME=		Net-Ident-1.23
@@ -21,7 +21,7 @@ USE_LANGUAGES=		#empty
 PERL5_PACKLIST=		auto/Net/Ident/.packlist
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

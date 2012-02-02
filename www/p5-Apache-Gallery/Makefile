@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2011/11/01 06:02:47 sbd Exp $
+# $NetBSD: Makefile,v 1.50 2012/02/02 09:47:19 hans Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.9.1
@@ -72,7 +72,7 @@ post-patch:
 	    ${WRKSRC}/htdocs/gallery-new.css
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 post-build:
 	@for j in default new; \
