@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2012/02/02 17:27:19 drochner Exp $
+
+--- clutter-gtk/Makefile.in.orig	2010-09-16 13:50:05.000000000 +0000
++++ clutter-gtk/Makefile.in
+@@ -281,7 +281,6 @@ AM_CPPFLAGS = \
+ 	-DPREFIX=\""$(prefix)"\" 		\
+ 	-DLIBDIR=\""$(libdir)"\" 		\
+         -DCLUTTER_GTK_COMPILATION               \
+-        -DG_DISABLE_DEPRECATED                  \
+         -DGDK_PIXBUF_DISABLE_DEPRECATED         \
+         -DGDK_DISABLE_DEPRECATED                \
+         -DGTK_DISABLE_DEPRECATED                \

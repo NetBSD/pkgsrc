@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.4 2012/02/02 17:27:19 drochner Exp $
+
+--- clutter/Makefile.in.orig	2010-09-24 15:28:52.000000000 +0000
++++ clutter/Makefile.in
+@@ -472,7 +472,6 @@ AM_CPPFLAGS = \
+ 	-DCLUTTER_COMPILATION=1			\
+ 	-DCOGL_DISABLE_DEPRECATED		\
+ 	-DCOGL_ENABLE_EXPERIMENTAL_API		\
+-	-DG_DISABLE_DEPRECATED 			\
+ 	-DG_DISABLE_SINGLE_INCLUDES		\
+ 	-DG_LOG_DOMAIN=\"Clutter\" 		\
+ 	$(CLUTTER_DEBUG_CFLAGS)			\

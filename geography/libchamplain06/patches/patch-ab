@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2012/02/02 17:27:19 drochner Exp $
+
+--- tidy/Makefile.in.orig	2010-06-26 22:01:29.000000000 +0000
++++ tidy/Makefile.in
+@@ -273,7 +273,6 @@ INCLUDES = \
+ 	-I$(top_srcdir) 		\
+ 	-DPREFIX=\""$(prefix)"\" 	\
+ 	-DLIBDIR=\""$(libdir)"\" 	\
+-	-DG_DISABLE_DEPRECATED 		\
+ 	-DG_LOG_DOMAIN=\"Tidy\" 	\
+ 	$(DEPS_CFLAGS) 			\
+ 	$(TIDY_DEBUG_CFLAGS) 		\
