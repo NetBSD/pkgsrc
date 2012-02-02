@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/14 12:26:38 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/02 09:29:27 hans Exp $
 #
 
 DISTNAME=	Template-Plugin-VMethods-0.03
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Template-Toolkit>=2.06:../../www/p5-Template-Toolkit
 PERL5_PACKLIST=		auto/Template/Plugin/VMethods/.packlist
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
