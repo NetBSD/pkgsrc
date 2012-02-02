@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2011/11/03 03:38:49 jnemeth Exp $
+# $NetBSD: Makefile,v 1.103 2012/02/02 07:52:26 jnemeth Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -37,6 +37,7 @@ SUBDIR+=	pkg_leaves
 SUBDIR+=	pkg_notify
 SUBDIR+=	pkg_online-client
 SUBDIR+=	pkg_online-server
+SUBDIR+=	pkg_p5up2date
 SUBDIR+=	pkg_regress
 SUBDIR+=	pkg_rolling-replace
 SUBDIR+=	pkg_select
