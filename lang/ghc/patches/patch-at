@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.4 2010/09/24 14:32:50 jwise Exp $
+$NetBSD: patch-at,v 1.5 2012/02/02 12:32:32 wiz Exp $
 
 --- ../ghc-6.4.2/configure.orig	2006-04-19 07:36:55.000000000 +1200
 +++ ../ghc-6.4.2/configure
@@ -7,7 +7,7 @@ $NetBSD: patch-at,v 1.4 2010/09/24 14:32:50 jwise Exp $
     else
     $PerlCmd -v >conftest.out 2>&1
 -   if grep "v5.6" conftest.out >/dev/null 2>&1; then
-+   if grep "v5.1[02]" conftest.out >/dev/null 2>&1; then
++   if grep "v5.1[024]" conftest.out >/dev/null 2>&1; then
        :
     else
        if grep "v5.8" conftest.out >/dev/null 2>&1; then
