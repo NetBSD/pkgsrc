@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.7 2008/11/09 22:48:59 bjs Exp $
+# $NetBSD: Makefile,v 1.8 2012/02/02 21:17:40 asau Exp $
 #
 
-DISTNAME=		terminus-font-4.28
+DISTNAME=		terminus-font-4.36
 CATEGORIES=		fonts
-MASTER_SITES=		http://www.is-vn.bg/hamster/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=terminus-font/}
 
 MAINTAINER=		j+pkgsrc@salmi.ch
-HOMEPAGE=		http://www.is-vn.bg/hamster/jimmy-en.html
+HOMEPAGE=		http://terminus-font.sourceforge.net/
 COMMENT=		Clean, fixed-width font
+LICENSE=		open-font-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		perl bdftopcf gzip
+USE_TOOLS+=		bdftopcf gmake gzip perl
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x11dir=${PREFIX}/lib/X11/fonts/misc
