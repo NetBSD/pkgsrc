@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/11/27 13:38:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.20 2012/02/02 11:21:41 obache Exp $
 
 DISTNAME=	bzr-svn-${VER}
 CATEGORIES=	devel scm
@@ -18,19 +18,18 @@ PYTHON_PATCH_SCRIPTS= info.py wiki.py
 PYTHON_VERSIONS_ACCEPTED=	27 26
 
 DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.8.8:../../devel/py-subvertpy
-
-.include "../../lang/python/pyversion.mk"
-
 DEPENDS=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 # for make test
 USE_TOOLS+=	gmake
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+USE_LANGUAGES=	#none
 
 # NOTE: This must run in a UTF-8 locale, e.g. LC_TYPE=en_US.utf8 make test
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 #TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 #TEST_TARGET=	check-verbose
+
+EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../devel/bzr/plugin.mk"
 .include "../../lang/python/application.mk"
