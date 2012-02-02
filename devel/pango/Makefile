@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2012/02/01 18:47:00 drochner Exp $
+# $NetBSD: Makefile,v 1.157 2012/02/02 00:00:39 tron Exp $
 
 DISTNAME=		pango-1.29.4
 CATEGORIES=		devel fonts
@@ -38,9 +38,13 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 
 CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 
-PLIST_VARS+=		carbon
+PLIST_VARS+=		carbon coretext
 
 .include "options.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST.coretext=	yes
+.endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 .include "../../devel/glib2/buildlink3.mk"
