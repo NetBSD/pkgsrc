@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/26 11:05:26 drochner Exp $
+$NetBSD: distinfo,v 1.2 2012/02/02 17:24:02 drochner Exp $
 
-SHA1 (libchamplain-0.4.6.tar.bz2) = 418c30568aefdd430289c93aa7a832229c4407af
-RMD160 (libchamplain-0.4.6.tar.bz2) = ad76f917e5dd1c2b1a42328626d88a2db3a77381
-Size (libchamplain-0.4.6.tar.bz2) = 528683 bytes
+SHA1 (libchamplain-0.4.7.tar.bz2) = ba91c449b0a69ec9a3da3c7b29f2bca375fbfec6
+RMD160 (libchamplain-0.4.7.tar.bz2) = 240041797047e50f013c59a5e00f30be5eac3a74
+Size (libchamplain-0.4.7.tar.bz2) = 548779 bytes
+SHA1 (patch-aa) = d92dcc5478e8a9c29e971fe038620f1c7533bbac
