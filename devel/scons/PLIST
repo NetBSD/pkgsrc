@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/06/19 11:33:46 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/02/02 11:49:55 obache Exp $
 bin/scons
 bin/${PKGNAME}
 bin/scons-time
@@ -566,6 +566,7 @@ lib/${PKGNAME}/SCons/dblite.pyo
 lib/${PKGNAME}/SCons/exitfuncs.py
 lib/${PKGNAME}/SCons/exitfuncs.pyc
 lib/${PKGNAME}/SCons/exitfuncs.pyo
+${PLIST.eggfile}lib/${PKGNAME}/${EGG_FILE}
 man/man1/scons-time.1
 man/man1/scons.1
 man/man1/sconsign.1
