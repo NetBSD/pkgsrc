@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10845 2012/02/01 13:12:21 obache Exp $
+$NetBSD: TODO,v 1.10846 2012/02/02 21:17:54 asau Exp $
 
 Suggested new packages
 ======================
@@ -1301,7 +1301,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.5
-	o terminus-font-4.36 [pkg/45761]
 	o tesseract-3.01
 	o tetrinetx-1.40c
 	o texmaker-3.1 [pkg/45521]
