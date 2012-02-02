@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.907 2012/01/28 07:02:47 jnemeth Exp $
+# $NetBSD: Makefile,v 1.908 2012/02/02 07:51:10 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -346,6 +346,7 @@ SUBDIR+=	overnet
 SUBDIR+=	p5-Cisco-Abbrev
 SUBDIR+=	p5-DNS-ZoneParse
 SUBDIR+=	p5-Data-Stream-Bulk
+SUBDIR+=	p5-Danga-Socket
 SUBDIR+=	p5-Geo-IP
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-IO-Interface
@@ -450,6 +451,7 @@ SUBDIR+=	pear-Net_Socket
 SUBDIR+=	pear-Net_URL
 SUBDIR+=	pear-SOAP
 SUBDIR+=	pen
+SUBDIR+=	perlbal
 SUBDIR+=	pfnet
 SUBDIR+=	php-ftp
 SUBDIR+=	php-snmp
