@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10846 2012/02/02 21:17:54 asau Exp $
+$NetBSD: TODO,v 1.10847 2012/02/02 21:50:30 asau Exp $
 
 Suggested new packages
 ======================
@@ -527,7 +527,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dspam-3.10.0
 	o dvdisaster-0.72.2
 	o dvtm-0.7
-	o dwm-6.0 [pkg/45737]
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o echinus-0.4.9
