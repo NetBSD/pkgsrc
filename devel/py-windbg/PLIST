@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/16 19:10:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/02 13:44:00 obache Exp $
 bin/rpdb2
 bin/winpdb
 ${PYSITELIB}/rpdb2.py
 ${PYSITELIB}/rpdb2.pyc
 ${PYSITELIB}/rpdb2.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/winpdb.py
 ${PYSITELIB}/winpdb.pyc
 ${PYSITELIB}/winpdb.pyo
