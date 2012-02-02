@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.354 2012/02/02 03:58:48 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.355 2012/02/02 04:04:39 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -532,3 +532,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/drupal7 to 7.11 [taca 2012-02-01]
 	Updated mail/getmail to 4.25.0 [schmonz 2012-02-02]
 	Updated devel/p5-Modern-Perl to 1.20120130 [schmonz 2012-02-02]
+	Updated devel/p5-App-cpanminus to 1.5007 [hiramatsu 2012-02-02]
+	Updated textproc/p5-podlators to 2.4.0 [hiramatsu 2012-02-02]
