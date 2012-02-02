@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/26 13:46:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/02 09:55:25 hans Exp $
 #
 
 DISTNAME=		yaws-1.91
@@ -46,7 +46,7 @@ post-patch:
 	${RM} ${WRKDIR}/yaws
 	${RM} -Rf ${WRKSRC}/www/.xvpics
 	${RM} -Rf ${WRKSRC}/www/testdir
-	${FIND} ${WRKSRC} -name \*.orig -o -name .empty | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name \*.orig -o -name .empty | ${XARGS} ${RM} -f
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
