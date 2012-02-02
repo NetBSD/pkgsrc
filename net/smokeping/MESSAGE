@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2007/11/22 20:25:54 adrianp Exp $
+$NetBSD: MESSAGE,v 1.5 2012/02/02 18:54:34 bouyer Exp $
 
 Smokeping is now installed.
 The documentation can be found at ${PREFIX}/share/doc/smokeping/
@@ -14,6 +14,7 @@ basepage.html and smokemail in this directory.
 Make sure that your web's server /cgi-bin/smokeping.cgi refers to
 ${PREFIX}/libexec/cgi-bin/smokeping.cgi, or copy the smokeping in your
 web server's cgi space.
+Also make sure that /cropper/ refers to ${PREFIX}/share/httpd/htdocs/cropper/
 
 You will need to make smokeping accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
