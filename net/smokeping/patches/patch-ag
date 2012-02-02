@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.1 2012/02/02 18:54:35 bouyer Exp $
+
+--- etc/basepage.html.dist.orig	2012-02-02 18:44:25.000000000 +0100
++++ etc/basepage.html.dist	2012-02-02 18:44:37.000000000 +0100
+@@ -53,10 +53,10 @@
+ -->
+ </STYLE>
+ 
+-<script src="cropper/lib/prototype.js" type="text/javascript"></script>      
+-<script src="cropper/lib/scriptaculous.js?load=builder,effects,dragdrop" type="text/javascript"></script>
+-<script src="cropper/cropper.js" type="text/javascript"></script>
+-<script src="cropper/smokeping-zoom.js" type="text/javascript"></script>
++<script src="/cropper/lib/prototype.js" type="text/javascript"></script>      
++<script src="/cropper/lib/scriptaculous.js?load=builder,effects,dragdrop" type="text/javascript"></script>
++<script src="/cropper/cropper.js" type="text/javascript"></script>
++<script src="/cropper/smokeping-zoom.js" type="text/javascript"></script>
+ 
+ 
+ 
