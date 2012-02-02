@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/08/14 12:26:46 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/02 09:30:28 hans Exp $
 #
 
 DISTNAME=	Tie-File-0.96
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=		auto/Tie/File/.packlist
 
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
