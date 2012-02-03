@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2011/09/05 22:07:28 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.34 2012/02/03 12:38:01 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -110,7 +110,6 @@ share/ikiwiki/examples/blog/archives.mdwn
 share/ikiwiki/examples/blog/comments.mdwn
 share/ikiwiki/examples/blog/index.mdwn
 share/ikiwiki/examples/blog/posts.mdwn
-share/ikiwiki/examples/blog/posts/Discussion.mdwn
 share/ikiwiki/examples/blog/posts/first_post.mdwn
 share/ikiwiki/examples/blog/sidebar.mdwn
 share/ikiwiki/examples/blog/tags.mdwn
