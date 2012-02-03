@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2012/02/02 00:00:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.54 2012/02/03 22:03:34 adam Exp $
 bin/pango-querymodules
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -27,7 +27,6 @@ include/pango-1.0/pango/pango-tabs.h
 include/pango-1.0/pango/pango-types.h
 include/pango-1.0/pango/pango-utils.h
 include/pango-1.0/pango/pango.h
-${PLIST.carbon}include/pango-1.0/pango/pangoatsui.h
 include/pango-1.0/pango/pangocairo.h
 ${PLIST.coretext}include/pango-1.0/pango/pangocoretext.h
 include/pango-1.0/pango/pangofc-decoder.h
@@ -44,7 +43,6 @@ ${PLIST.x11}lib/libpangox-1.0.la
 ${PLIST.x11}lib/libpangoxft-1.0.la
 lib/pango/1.6.0/modules/pango-arabic-fc.la
 lib/pango/1.6.0/modules/pango-arabic-lang.la
-${PLIST.carbon}lib/pango/1.6.0/modules/pango-basic-atsui.la
 lib/pango/1.6.0/modules/pango-basic-fc.la
 ${PLIST.coretext}lib/pango/1.6.0/modules/pango-basic-coretext.la
 ${PLIST.x11}lib/pango/1.6.0/modules/pango-basic-x.la
