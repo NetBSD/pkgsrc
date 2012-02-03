@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10848 2012/02/03 15:06:30 ryoon Exp $
+$NetBSD: TODO,v 1.10849 2012/02/03 19:07:42 drochner Exp $
 
 Suggested new packages
 ======================
@@ -910,7 +910,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
 	o libgdata-0.10.1
-	o libgee-0.6.4
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.2.2
 	o libgnomedb-3.1.2
