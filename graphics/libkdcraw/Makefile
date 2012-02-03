@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/01/13 10:55:13 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/02/03 07:09:34 sbd Exp $
 #
 
 DISTNAME=	libkdcraw-0.1.9
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+SET_LIBDIR=	yes
 USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
