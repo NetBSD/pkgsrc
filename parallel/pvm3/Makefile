@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2011/05/08 15:12:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.61 2012/02/03 04:29:54 sbd Exp $
 
 DISTNAME=	pvm3.4.6
 PKGNAME=	pvm-3.4.6
@@ -27,7 +27,7 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 WRKSRC=			${WRKDIR}/pvm3
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake m4
+USE_TOOLS+=		gmake m4 csh:run
 MAKE_JOBS_SAFE=		no
 
 PVM_ROOT=		${WRKSRC}
@@ -38,6 +38,11 @@ MAKE_ENV+=		MKDIR=${MKDIR:Q}
 MAKE_ENV+=		PVMLIB_VER=3:4
 MAKE_ENV+=		PVM_DIR=${PVM_DIR:Q}
 BUILD_TARGET=		all install
+
+REPLACE_INTERPRETER+=	csh
+REPLACE.csh.old=	.*csh
+REPLACE.csh.new=	${CSH}
+REPLACE_FILES.csh=	${WRKSRC}/lib/debugger ${WRKSRC}/lib/debugger2
 
 # Set PVM_ARCH to the correct value for this machine platform.
 .include "arch.mk"
