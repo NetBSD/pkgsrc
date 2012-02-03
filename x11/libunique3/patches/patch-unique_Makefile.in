@@ -1,0 +1,12 @@
+$NetBSD: patch-unique_Makefile.in,v 1.1 2012/02/03 03:47:48 sbd Exp $
+
+--- unique/Makefile.in.orig	2011-06-14 14:57:01.000000000 +0000
++++ unique/Makefile.in
+@@ -395,7 +395,6 @@ INCLUDES = -I$(top_srcdir)
+ AM_CPPFLAGS = \
+ 	-DG_DISABLE_SINGLE_INCLUDES	\
+ 	-DGTK_DISABLE_SINGLE_INCLUDES	\
+-	-DG_DISABLE_DEPRECATED		\
+ 	-DGTK_DISABLE_DEPRECATED	\
+ 	-DG_LOG_DOMAIN=\"Unique\"	\
+ 	-DPREFIX=\""$(prefix)"\"	\
