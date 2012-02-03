@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2012/02/02 00:00:39 tron Exp $
+# $NetBSD: Makefile,v 1.158 2012/02/03 22:03:34 adam Exp $
 
 DISTNAME=		pango-1.29.4
 CATEGORIES=		devel fonts
@@ -35,10 +35,12 @@ PKGCONFIG_OVERRIDE+=	pangoxft-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangoxft.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
+# Carbon has been obsoleted; force turning it off
+CONFIGURE_ENV+=		ac_cv_header_Carbon_Carbon_h=no
 
 CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 
-PLIST_VARS+=		carbon coretext
+PLIST_VARS+=		coretext
 
 .include "options.mk"
 
