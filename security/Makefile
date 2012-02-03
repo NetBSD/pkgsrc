@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.422 2012/01/11 20:10:44 drochner Exp $
+# $NetBSD: Makefile,v 1.423 2012/02/03 14:45:29 drochner Exp $
 #
 
 COMMENT=	Security tools
@@ -170,6 +170,7 @@ SUBDIR+=	openvas-plugins
 SUBDIR+=	openvas-server
 SUBDIR+=	otpCalc
 SUBDIR+=	p0f
+SUBDIR+=	p11-kit
 SUBDIR+=	p5-Authen-CAS-Client
 SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-Authen-PAM
