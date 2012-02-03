@@ -1,8 +1,26 @@
-$NetBSD: patch-af,v 1.2 2011/04/08 13:54:25 drochner Exp $
+$NetBSD: patch-af,v 1.3 2012/02/03 14:48:45 drochner Exp $
 
---- configure.orig	2011-03-23 20:31:51.000000000 +0000
+--- configure.orig	2011-12-19 14:16:11.000000000 +0000
 +++ configure
-@@ -21765,7 +21765,7 @@ _ACEOF
+@@ -18927,7 +18927,7 @@ fi
+ fi
+ 
+ 
+-if test "x$enable_broadway_backend" == xyes; then
++if test "x$enable_broadway_backend" = xyes; then
+   GDK_BACKENDS="$GDK_BACKENDS broadway"
+   cairo_backends="$cairo_backends cairo"
+   GDK_WINDOWING="$GDK_WINDOWING
+@@ -18952,7 +18952,7 @@ fi
+ 
+ fi
+ 
+-if test "x$enable_wayland_backend" == "xyes"; then
++if test "x$enable_wayland_backend" = "xyes"; then
+   # Wayland uses cairo-gl
+   cairo_backends="$cairo_backends cairo-gl"
+   GDK_BACKENDS="$GDK_BACKENDS wayland"
+@@ -22056,7 +22056,7 @@ _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
