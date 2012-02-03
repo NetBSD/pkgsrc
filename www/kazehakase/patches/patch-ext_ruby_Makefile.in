@@ -1,0 +1,14 @@
+$NetBSD: patch-ext_ruby_Makefile.in,v 1.1 2012/02/03 02:46:39 sbd Exp $
+
+--- ext/ruby/Makefile.in.orig	2009-09-29 03:43:57.000000000 +0000
++++ ext/ruby/Makefile.in
+@@ -109,8 +109,7 @@ AMTAR = @AMTAR@
+ AM_CFLAGS = @AM_CFLAGS@
+ AM_CPPFLAGS = \
+ 	-DGTK_DISABLE_DEPRECATED=1			\
+-	-DGDK_DISABLE_DEPRECATED=1			\
+-	-DG_DISABLE_DEPRECATED=1
++	-DGDK_DISABLE_DEPRECATED=1
+ 
+ AM_CXXFLAGS = @AM_CXXFLAGS@
+ AM_LDFLAGS = @AM_LDFLAGS@
