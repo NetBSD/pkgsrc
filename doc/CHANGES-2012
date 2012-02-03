@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.370 2012/02/03 15:06:02 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.371 2012/02/03 17:02:12 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -552,3 +552,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/roundup to 1.4.19nb1 [obache 2012-02-03]
 	Updated devel/gnatpython to 20110912nb1 [obache 2012-02-03]
 	Updated textproc/wdiff to 1.1.0 [ryoon 2012-02-03]
+	Updated sysutils/xentools33 to 3.3.2nb10 [bouyer 2012-02-03]
+	Updated sysutils/xentools41 to 4.1.2nb3 [bouyer 2012-02-03]
