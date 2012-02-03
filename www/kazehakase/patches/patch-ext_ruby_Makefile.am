@@ -1,0 +1,14 @@
+$NetBSD: patch-ext_ruby_Makefile.am,v 1.1 2012/02/03 02:46:39 sbd Exp $
+
+--- ext/ruby/Makefile.am.orig	2009-09-29 03:38:20.000000000 +0000
++++ ext/ruby/Makefile.am
+@@ -4,8 +4,7 @@ ext_LTLIBRARIES = ruby.la
+ 
+ AM_CPPFLAGS =						\
+ 	-DGTK_DISABLE_DEPRECATED=1			\
+-	-DGDK_DISABLE_DEPRECATED=1			\
+-	-DG_DISABLE_DEPRECATED=1
++	-DGDK_DISABLE_DEPRECATED=1
+ 
+ INCLUDES =						\
+ 	$(MOZILLA_COMPONENT_CFLAGS)			\
