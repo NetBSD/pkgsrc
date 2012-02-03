@@ -1,0 +1,12 @@
+$NetBSD: patch-module_embed_webkit-gtk_Makefile.in,v 1.1 2012/02/03 02:46:39 sbd Exp $
+
+--- module/embed/webkit-gtk/Makefile.in.orig	2009-09-29 03:43:58.000000000 +0000
++++ module/embed/webkit-gtk/Makefile.in
+@@ -341,7 +341,6 @@ INCLUDES = \
+ webkit_gtk_la_CPPFLAGS = \
+ 	-DGTK_DISABLE_DEPRECATED=1		\
+ 	-DGDK_DISABLE_DEPRECATED=1		\
+-	-DG_DISABLE_DEPRECATED=1		\
+ 	-DG_LOG_DOMAIN=\"Kazehakase-WebKit/GTK+\"
+ 
+ webkit_gtk_la_LDFLAGS = \
