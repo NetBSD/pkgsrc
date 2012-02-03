@@ -1,0 +1,12 @@
+$NetBSD: patch-clutter_json_Makefile.am,v 1.1 2012/02/03 01:18:09 sbd Exp $
+
+--- clutter/json/Makefile.am.orig	2009-02-20 15:41:39.000000000 +0000
++++ clutter/json/Makefile.am
+@@ -19,7 +19,6 @@ libclutter_json_la_SOURCES = $(source_c)
+ 
+ INCLUDES = \
+ 	-I$(top_srcdir) \
+-	-DG_DISABLE_DEPRECATED \
+ 	$(GCC_FLAGS) \
+ 	$(CLUTTER_CFLAGS) \
+ 	$(CLUTTER_DEBUG_CFLAGS)
