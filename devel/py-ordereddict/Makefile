@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/07 12:54:24 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/03 13:19:34 obache Exp $
 #
 
 DISTNAME=	ordereddict-1.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/o/ordereddict/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/ordereddict/
+HOMEPAGE=	http://pypi.python.org/pypi/ordereddict/
 COMMENT=	Drop-in substitute for Py2.7's new collections.OrderedDict
 LICENSE=	mit
 
