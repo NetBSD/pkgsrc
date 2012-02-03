@@ -1,0 +1,14 @@
+$NetBSD: patch-module_embed_ie_Makefile.am,v 1.1 2012/02/03 02:46:39 sbd Exp $
+
+--- module/embed/ie/Makefile.am.orig	2009-09-29 03:38:19.000000000 +0000
++++ module/embed/ie/Makefile.am
+@@ -18,8 +18,7 @@ INCLUDES =						\
+ ie_la_CPPFLAGS=						\
+ 	-DG_LOG_DOMAIN=\"Kazehakase-IE\"		\
+ 	-DGTK_DISABLE_DEPRECATED=1			\
+-	-DGDK_DISABLE_DEPRECATED=1			\
+-	-DG_DISABLE_DEPRECATED=1
++	-DGDK_DISABLE_DEPRECATED=1
+ 
+ ie_la_LDFLAGS =					\
+ 	-avoid-version				\
