@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/12 11:10:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/03 18:51:11 drochner Exp $
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
 include/atkmm-1.6/atkmm/component.h
@@ -132,7 +132,7 @@ share/doc/atkmm-1.6/reference/html/graph_legend.png
 share/doc/atkmm-1.6/reference/html/group__atkmmEnums.html
 share/doc/atkmm-1.6/reference/html/hierarchy.html
 share/doc/atkmm-1.6/reference/html/index.html
-share/doc/atkmm-1.6/reference/html/inherit__graph__0.png
+share/doc/atkmm-1.6/reference/html/inherit_graph_0.png
 share/doc/atkmm-1.6/reference/html/inherits.html
 share/doc/atkmm-1.6/reference/html/modules.html
 share/doc/atkmm-1.6/reference/html/namespaceAtk.html
