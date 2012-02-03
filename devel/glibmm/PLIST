@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/07/15 12:22:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2012/02/03 18:49:48 drochner Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/appinfo.h
 include/giomm-2.4/giomm/asyncinitable.h
@@ -182,6 +182,7 @@ include/glibmm-2.4/glibmm/containerhandle_shared.h
 include/glibmm-2.4/glibmm/containers.h
 include/glibmm-2.4/glibmm/convert.h
 include/glibmm-2.4/glibmm/date.h
+include/glibmm-2.4/glibmm/datetime.h
 include/glibmm-2.4/glibmm/debug.h
 include/glibmm-2.4/glibmm/dispatcher.h
 include/glibmm-2.4/glibmm/error.h
@@ -212,6 +213,7 @@ include/glibmm-2.4/glibmm/private/balancedtree_p.h
 include/glibmm-2.4/glibmm/private/checksum_p.h
 include/glibmm-2.4/glibmm/private/convert_p.h
 include/glibmm-2.4/glibmm/private/date_p.h
+include/glibmm-2.4/glibmm/private/datetime_p.h
 include/glibmm-2.4/glibmm/private/fileutils_p.h
 include/glibmm-2.4/glibmm/private/interface_p.h
 include/glibmm-2.4/glibmm/private/iochannel_p.h
@@ -227,6 +229,7 @@ include/glibmm-2.4/glibmm/private/regex_p.h
 include/glibmm-2.4/glibmm/private/shell_p.h
 include/glibmm-2.4/glibmm/private/spawn_p.h
 include/glibmm-2.4/glibmm/private/thread_p.h
+include/glibmm-2.4/glibmm/private/timezone_p.h
 include/glibmm-2.4/glibmm/private/unicode_p.h
 include/glibmm-2.4/glibmm/private/uriutils_p.h
 include/glibmm-2.4/glibmm/private/valuearray_p.h
@@ -252,6 +255,7 @@ include/glibmm-2.4/glibmm/thread.h
 include/glibmm-2.4/glibmm/threadpool.h
 include/glibmm-2.4/glibmm/timer.h
 include/glibmm-2.4/glibmm/timeval.h
+include/glibmm-2.4/glibmm/timezone.h
 include/glibmm-2.4/glibmm/unicode.h
 include/glibmm-2.4/glibmm/uriutils.h
 include/glibmm-2.4/glibmm/ustring.h
@@ -312,7 +316,6 @@ lib/libglibmm-2.4.la
 lib/libglibmm_generate_extra_defs-2.4.la
 lib/pkgconfig/giomm-2.4.pc
 lib/pkgconfig/glibmm-2.4.pc
-share/aclocal/glibmm_check_perl.m4
 share/devhelp/books/glibmm-2.4/glibmm-2.4.devhelp2
 share/doc/glibmm-2.4/images/gtkmm_logo.gif
 share/doc/glibmm-2.4/images/top.gif
@@ -607,6 +610,8 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1ConvertError.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ConvertError__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Date-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Date.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1DateTime-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1DateTime.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Dir-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Dir.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1DirIterator-members.html
@@ -805,6 +810,8 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1ThreadError__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ThreadPool-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ThreadPool.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Thread_1_1Exit.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1TimeZone-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1TimeZone.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1TimeoutSource-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1TimeoutSource.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1TimeoutSource__inherit__graph.png
@@ -962,8 +969,8 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring__Iterator-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ustring__Iterator.html
 share/doc/glibmm-2.4/reference/html/classes.html
-share/doc/glibmm-2.4/reference/html/classsigc_1_1trackable.html
-share/doc/glibmm-2.4/reference/html/classsigc_1_1trackable__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classresize__policy.html
+share/doc/glibmm-2.4/reference/html/classresize__policy__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/closed.png
 share/doc/glibmm-2.4/reference/html/deprecated.html
 share/doc/glibmm-2.4/reference/html/doxygen.css
@@ -1183,6 +1190,9 @@ share/doc/glibmm-2.4/reference/html/inherit_graph_90.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_91.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_92.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_93.png
+share/doc/glibmm-2.4/reference/html/inherit_graph_94.png
+share/doc/glibmm-2.4/reference/html/inherit_graph_95.png
+share/doc/glibmm-2.4/reference/html/inherit_graph_96.png
 share/doc/glibmm-2.4/reference/html/inherits.html
 share/doc/glibmm-2.4/reference/html/modules.html
 share/doc/glibmm-2.4/reference/html/namespaceGio.html
@@ -1267,7 +1277,9 @@ share/doc/glibmm-2.4/reference/html/since_2_22.html
 share/doc/glibmm-2.4/reference/html/since_2_24.html
 share/doc/glibmm-2.4/reference/html/since_2_26.html
 share/doc/glibmm-2.4/reference/html/since_2_28.html
+share/doc/glibmm-2.4/reference/html/since_2_30.html
 share/doc/glibmm-2.4/reference/html/since_2_6.html
+share/doc/glibmm-2.4/reference/html/since_3_2.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits_3_01Glib_1_1RefPtr_3_01Gio_1_1Drive_01_4_01_4.html
