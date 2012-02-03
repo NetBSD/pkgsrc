@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.1.1.1 2011/03/18 17:06:10 drochner Exp $
+$NetBSD: patch-aj,v 1.2 2012/02/03 14:48:45 drochner Exp $
 
---- Makefile.in.orig	2011-03-14 16:33:16.000000000 +0000
+--- Makefile.in.orig	2011-12-19 14:16:16.000000000 +0000
 +++ Makefile.in
-@@ -419,7 +419,7 @@ XVFB_START = \
+@@ -424,7 +424,7 @@ XVFB_START = \
  	|| { echo "Gtk+Tests:ERROR: Failed to start Xvfb environment for X11 target tests."; exit 1; } \
  	&& DISPLAY=:$$XID && export DISPLAY
  
--SRC_SUBDIRS = gdk gtk modules demos tests perf examples
-+SRC_SUBDIRS = gdk gtk modules demos
+-SRC_SUBDIRS = gdk gtk libgail-util modules demos tests perf examples
++SRC_SUBDIRS = gdk gtk libgail-util modules demos
  SUBDIRS = po po-properties $(SRC_SUBDIRS) docs m4macros build
  ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
  MAINTAINERCLEANFILES = \
