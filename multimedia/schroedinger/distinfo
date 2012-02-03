@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/03 14:52:02 drochner Exp $
+
+SHA1 (schroedinger-1.0.11.tar.gz) = c01ee0bed6c1bd7608763927f719f94ebc6aaa41
+RMD160 (schroedinger-1.0.11.tar.gz) = 2246f07d2a7310d7a4fa8b79f62b28f65c780322
+Size (schroedinger-1.0.11.tar.gz) = 1019247 bytes
