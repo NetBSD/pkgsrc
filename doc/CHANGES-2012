@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.368 2012/02/03 13:09:18 obache Exp $
+$NetBSD: CHANGES-2012,v 1.369 2012/02/03 13:15:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -550,3 +550,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/ffmpeg to 20120112.0.7.11nb3 [sbd 2012-02-03]
 	Updated www/ikiwiki to 3.20120202 [schmonz 2012-02-03]
 	Updated devel/roundup to 1.4.19nb1 [obache 2012-02-03]
+	Updated devel/gnatpython to 20110912nb1 [obache 2012-02-03]
