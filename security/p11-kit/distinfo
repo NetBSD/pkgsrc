@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/03 14:43:12 drochner Exp $
+
+SHA1 (p11-kit-0.10.tar.gz) = 861e8d19a2c578ef8009c8ac93975db9884bb002
+RMD160 (p11-kit-0.10.tar.gz) = f305a865b4d267b79abb183965704ae406e357ae
+Size (p11-kit-0.10.tar.gz) = 528279 bytes
+SHA1 (patch-aa) = 16b1ed56c062ed5fe3227489e8d44071882ac1df
