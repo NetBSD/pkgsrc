@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2012/02/03 13:04:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/02/03 13:08:57 obache Exp $
 bin/roundup-admin
 bin/roundup-demo
 bin/roundup-gettext
 bin/roundup-mailgw
 bin/roundup-server
 bin/roundup-xmlrpc-server
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/roundup/__init__.py
 ${PYSITELIB}/roundup/__init__.pyc
 ${PYSITELIB}/roundup/__init__.pyo
