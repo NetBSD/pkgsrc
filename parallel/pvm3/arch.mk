@@ -1,4 +1,4 @@
-# $NetBSD: arch.mk,v 1.11 2007/02/22 19:27:02 wiz Exp $
+# $NetBSD: arch.mk,v 1.12 2012/02/03 04:06:08 sbd Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
@@ -19,6 +19,8 @@ _PVM_ARCH=	SPARC
 _PVM_ARCH=	HPPA
 .  elif !empty(MACHINE_ARCH:Mppc*)
 _PVM_ARCH=	PPC
+.  elif !empty(MACHINE_ARCH:Mx86_64)
+_PVM_ARCH=	64
 .  else
 _PVM_ARCH=	# empty
 .  endif
