@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.364 2012/02/02 21:50:30 asau Exp $
+$NetBSD: CHANGES-2012,v 1.365 2012/02/03 03:11:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -544,3 +544,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/emacs-snapshot to 24.0.93.20120201 [minskim 2012-02-02]
 	Updated fonts/terminus-font to 4.36 [asau 2012-02-02]
 	Updated wm/dwm to 6.0 [asau 2012-02-02]
+	Updated lang/php53 to 5.3.10 [taca 2012-02-03]
