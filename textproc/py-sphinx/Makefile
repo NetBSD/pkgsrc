@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/12/05 15:34:12 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/04 12:42:09 obache Exp $
 
 DISTNAME=	Sphinx-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,6 +17,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	24
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
+
+USE_LANGUAGES=	#none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
