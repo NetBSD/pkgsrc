@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2011/10/01 20:39:28 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2012/02/04 12:03:32 obache Exp $
 #
 
 DISTNAME=	pyexcelerator-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-Excelerator-${VERSION}
-VERSION=	0.6.3a
+VERSION=	0.6.4.1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyexcelerator/}
 EXTRACT_SUFX=	.zip
@@ -14,9 +14,9 @@ COMMENT=	Python library for generating Excel 97/2000/XP/2003 files
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG=	yes
+USE_LANGUAGES=	#none
 
-WRKSRC=${WRKDIR}/pyExcelerator-${VERSION}
+EGG_NAME=	pyExcelerator-${VERSION}
 
 REPLACE_PYTHON+=	pyExcelerator/BIFFRecords.py
 REPLACE_PYTHON+=	pyExcelerator/Bitmap.py
@@ -46,5 +46,5 @@ post-install:
 	done
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
