@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.378 2012/02/04 05:46:23 obache Exp $
+$NetBSD: CHANGES-2012,v 1.379 2012/02/04 07:00:20 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -566,3 +566,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/py-reportlab to 2.5nb2 [obache 2012-02-04]
 	Updated news/hellanzb to 0.14.1087nb3 [obache 2012-02-04]
 	Updated textproc/py-gnosis-utils to 1.2.2 [obache 2012-02-04]
+	Updated audio/csound5 to 5.01nb11 [sbd 2012-02-04]
