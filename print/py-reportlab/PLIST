@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2011/04/15 08:29:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/02/04 04:41:56 obache Exp $
 ${PYSITELIB}/_renderPM.so
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/reportlab/__init__.py
 ${PYSITELIB}/reportlab/__init__.pyc
 ${PYSITELIB}/reportlab/__init__.pyo
