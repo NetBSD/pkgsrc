@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/12 21:07:01 snj Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/04 11:01:23 obache Exp $
 bin/lottanzb
 ${PYSITELIB}/lottanzb/__init__.py
 ${PYSITELIB}/lottanzb/__init__.pyc
@@ -248,6 +248,9 @@ share/lottanzb/glade/remote_frontend_config_view.glade
 share/lottanzb/glade/server_dialog.glade
 share/lottanzb/glade/small_lock.svg
 share/lottanzb/glade/standalone_config_view.glade
+share/mime-info/lottanzb.keys
+share/mime-info/lottanzb.mime
+share/mime/packages/lottanzb.xml
 share/omf/lottanzb/lottanzb-C.omf
 share/omf/lottanzb/lottanzb-da.omf
 share/omf/lottanzb/lottanzb-de.omf
@@ -255,6 +258,3 @@ share/omf/lottanzb/lottanzb-en_GB.omf
 share/omf/lottanzb/lottanzb-es.omf
 share/omf/lottanzb/lottanzb-fr.omf
 share/omf/lottanzb/lottanzb-nl.omf
-share/mime-info/lottanzb.keys
-share/mime-info/lottanzb.mime
-share/mime/packages/lottanzb.xml
