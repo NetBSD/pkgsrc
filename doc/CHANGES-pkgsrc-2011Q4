@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.19 2012/02/02 20:10:17 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.20 2012/02/04 08:34:07 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -116,3 +116,5 @@ Pullup ticket #3669 - requested by bouyer
 devel/p5-Config-Grammar: new package
 Pullup ticket #3670 - requested by bouyer
 net/smokeping: security update
+Pullup ticket #3671 - requested by taca
+lang/php53 security and build fixes.
