@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.384 2012/02/04 13:27:37 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.385 2012/02/04 21:11:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/py-Excelerator to 0.6.4.1 [obache 2012-02-04]
 	Updated textproc/py-xml to 0.8.4nb4 [obache 2012-02-04]
 	Updated www/webkit-gtk to 1.6.3 [drochner 2012-02-04]
+	Updated graphics/gimp to 2.6.12 [adam 2012-02-04]
