@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/10/26 19:01:18 gls Exp $
+# $NetBSD: Makefile,v 1.34 2012/02/04 13:10:16 obache Exp $
 
 DISTNAME=	docutils-0.8.1
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	public-domain AND 2-clause-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
+
+USE_LANGUAGES=	#none
 
 SUBST_CLASSES+=		env
 SUBST_SED.env=		-e "s,\#! */usr/bin/env  *python[0-9.]*,\#!${PYTHONBIN},"
