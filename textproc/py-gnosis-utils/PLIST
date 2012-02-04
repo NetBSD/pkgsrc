@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/04 05:46:10 obache Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gnosis/README
 ${PYSITELIB}/gnosis/__init__.py
 ${PYSITELIB}/gnosis/__init__.pyc
@@ -30,11 +31,13 @@ ${PYSITELIB}/gnosis/doc/charming_python_b12.txt
 ${PYSITELIB}/gnosis/doc/filtering-spam.txt
 ${PYSITELIB}/gnosis/doc/metaclass.txt
 ${PYSITELIB}/gnosis/doc/oop_for_validity.txt
+${PYSITELIB}/gnosis/doc/readme
 ${PYSITELIB}/gnosis/doc/xml_matters_1.txt
 ${PYSITELIB}/gnosis/doc/xml_matters_11.txt
 ${PYSITELIB}/gnosis/doc/xml_matters_16.txt
 ${PYSITELIB}/gnosis/doc/xml_matters_2.txt
 ${PYSITELIB}/gnosis/doc/xml_matters_20.txt
+${PYSITELIB}/gnosis/doc/xml_matters_39.txt
 ${PYSITELIB}/gnosis/indexer.py
 ${PYSITELIB}/gnosis/indexer.pyc
 ${PYSITELIB}/gnosis/indexer.pyo
@@ -50,6 +53,9 @@ ${PYSITELIB}/gnosis/magic/metapickler.pyo
 ${PYSITELIB}/gnosis/magic/multimethods.py
 ${PYSITELIB}/gnosis/magic/multimethods.pyc
 ${PYSITELIB}/gnosis/magic/multimethods.pyo
+${PYSITELIB}/gnosis/pyconfig.py
+${PYSITELIB}/gnosis/pyconfig.pyc
+${PYSITELIB}/gnosis/pyconfig.pyo
 ${PYSITELIB}/gnosis/spam-test.py
 ${PYSITELIB}/gnosis/spam-test.pyc
 ${PYSITELIB}/gnosis/spam-test.pyo
@@ -74,9 +80,9 @@ ${PYSITELIB}/gnosis/util/convert/__init__.pyo
 ${PYSITELIB}/gnosis/util/convert/curses_txt2html.py
 ${PYSITELIB}/gnosis/util/convert/curses_txt2html.pyc
 ${PYSITELIB}/gnosis/util/convert/curses_txt2html.pyo
-${PYSITELIB}/gnosis/util/convert/dmtxt2html.py
-${PYSITELIB}/gnosis/util/convert/dmtxt2html.pyc
-${PYSITELIB}/gnosis/util/convert/dmtxt2html.pyo
+${PYSITELIB}/gnosis/util/convert/dmTxt2Html.py
+${PYSITELIB}/gnosis/util/convert/dmTxt2Html.pyc
+${PYSITELIB}/gnosis/util/convert/dmTxt2Html.pyo
 ${PYSITELIB}/gnosis/util/convert/dw_colorize.py
 ${PYSITELIB}/gnosis/util/convert/dw_colorize.pyc
 ${PYSITELIB}/gnosis/util/convert/dw_colorize.pyo
@@ -118,6 +124,9 @@ ${PYSITELIB}/gnosis/util/convert/typographify.pyo
 ${PYSITELIB}/gnosis/util/dtd2sql.py
 ${PYSITELIB}/gnosis/util/dtd2sql.pyc
 ${PYSITELIB}/gnosis/util/dtd2sql.pyo
+${PYSITELIB}/gnosis/util/hashcash.py
+${PYSITELIB}/gnosis/util/hashcash.pyc
+${PYSITELIB}/gnosis/util/hashcash.pyo
 ${PYSITELIB}/gnosis/util/introspect.py
 ${PYSITELIB}/gnosis/util/introspect.pyc
 ${PYSITELIB}/gnosis/util/introspect.pyo
@@ -148,6 +157,9 @@ ${PYSITELIB}/gnosis/util/uusplit.pyo
 ${PYSITELIB}/gnosis/util/xml2sql.py
 ${PYSITELIB}/gnosis/util/xml2sql.pyc
 ${PYSITELIB}/gnosis/util/xml2sql.pyo
+${PYSITELIB}/gnosis/version.py
+${PYSITELIB}/gnosis/version.pyc
+${PYSITELIB}/gnosis/version.pyo
 ${PYSITELIB}/gnosis/xml/__init__.py
 ${PYSITELIB}/gnosis/xml/__init__.pyc
 ${PYSITELIB}/gnosis/xml/__init__.pyo
@@ -160,9 +172,6 @@ ${PYSITELIB}/gnosis/xml/objectify/__init__.pyo
 ${PYSITELIB}/gnosis/xml/objectify/_objectify.py
 ${PYSITELIB}/gnosis/xml/objectify/_objectify.pyc
 ${PYSITELIB}/gnosis/xml/objectify/_objectify.pyo
-${PYSITELIB}/gnosis/xml/objectify/_printer.py
-${PYSITELIB}/gnosis/xml/objectify/_printer.pyc
-${PYSITELIB}/gnosis/xml/objectify/_printer.pyo
 ${PYSITELIB}/gnosis/xml/objectify/doc/AUTHOR
 ${PYSITELIB}/gnosis/xml/objectify/doc/COPYRIGHT
 ${PYSITELIB}/gnosis/xml/objectify/doc/GOTCHAS
@@ -190,7 +199,14 @@ ${PYSITELIB}/gnosis/xml/objectify/test/test_expat2.pyo
 ${PYSITELIB}/gnosis/xml/objectify/test/test_inject.py
 ${PYSITELIB}/gnosis/xml/objectify/test/test_inject.pyc
 ${PYSITELIB}/gnosis/xml/objectify/test/test_inject.pyo
+${PYSITELIB}/gnosis/xml/objectify/test/test_xpath.py
+${PYSITELIB}/gnosis/xml/objectify/test/test_xpath.pyc
+${PYSITELIB}/gnosis/xml/objectify/test/test_xpath.pyo
 ${PYSITELIB}/gnosis/xml/objectify/test/testns.xml
+${PYSITELIB}/gnosis/xml/objectify/test/xpath.xml
+${PYSITELIB}/gnosis/xml/objectify/utils.py
+${PYSITELIB}/gnosis/xml/objectify/utils.pyc
+${PYSITELIB}/gnosis/xml/objectify/utils.pyo
 ${PYSITELIB}/gnosis/xml/pickle/PyObject.dtd
 ${PYSITELIB}/gnosis/xml/pickle/__init__.py
 ${PYSITELIB}/gnosis/xml/pickle/__init__.pyc
@@ -240,6 +256,12 @@ ${PYSITELIB}/gnosis/xml/pickle/test/test_4list.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_all.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_all.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_all.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_all_all.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_all_all.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_all_all.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_badstring.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_badstring.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_badstring.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_basic.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_basic.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_basic.pyo
@@ -258,6 +280,18 @@ ${PYSITELIB}/gnosis/xml/pickle/test/test_circular.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_compat.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_compat.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_compat.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_exit.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_exit.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_exit.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_1.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_1.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_1.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_2.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_2.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_2.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_3.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_3.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_fail_raise_3.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_ftypes.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_ftypes.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_ftypes.pyo
@@ -300,6 +334,15 @@ ${PYSITELIB}/gnosis/xml/pickle/test/test_objectify.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_paranoia.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_paranoia.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_paranoia.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_1.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_1.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_1.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_2.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_2.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_2.pyo
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_3.py
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_3.pyc
+${PYSITELIB}/gnosis/xml/pickle/test/test_pass_3.pyo
 ${PYSITELIB}/gnosis/xml/pickle/test/test_rawp_mx.py
 ${PYSITELIB}/gnosis/xml/pickle/test/test_rawp_mx.pyc
 ${PYSITELIB}/gnosis/xml/pickle/test/test_rawp_mx.pyo
@@ -404,3 +447,6 @@ ${PYSITELIB}/gnosis/xml/validity/simple_diss.pyo
 ${PYSITELIB}/gnosis/xml/xmlcat.py
 ${PYSITELIB}/gnosis/xml/xmlcat.pyc
 ${PYSITELIB}/gnosis/xml/xmlcat.pyo
+${PYSITELIB}/gnosis/xml/xmlmap.py
+${PYSITELIB}/gnosis/xml/xmlmap.pyc
+${PYSITELIB}/gnosis/xml/xmlmap.pyo
