@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/09/07 12:42:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/04 07:00:11 sbd Exp $
 bin/csound5
 include/csound5/CppSound.hpp
 include/csound5/CsoundFile.hpp
@@ -37,6 +37,7 @@ lib/csound5/makecsd
 lib/csound5/mixer
 lib/csound5/plugins/libbabo.so
 lib/csound5/plugins/libbarmodel.so
+lib/csound5/plugins/libcontrol.so
 lib/csound5/plugins/libfluidOpcodes.so
 lib/csound5/plugins/libftest.so
 lib/csound5/plugins/libgrain4.so
