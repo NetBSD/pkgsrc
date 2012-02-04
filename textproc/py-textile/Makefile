@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/10/25 08:30:10 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/04 12:38:43 obache Exp $
 #
 
 DISTNAME=		textile-2.1.5
@@ -12,6 +12,8 @@ COMMENT=		XHTML generator using a simple markup
 LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=		#none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
