@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2011/11/01 06:02:31 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/02/04 21:57:54 shattered Exp $
 #
 
-DISTNAME=		dvdisaster-0.70.6
-PKGREVISION=		7
+DISTNAME=		dvdisaster-0.72.3
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dvdisaster/}
+MASTER_SITES=		http://dvdisaster.net/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		shattered@NetBSD.org
-HOMEPAGE=		http://www.dvdisaster.com/
+HOMEPAGE=		http://www.dvdisaster.net/en/
 COMMENT=		Protects data on optical media with error correcting codes
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-*
@@ -36,6 +35,8 @@ CONFIGURE_ARGS+=	--buildroot=${DESTDIR}
 CONFIGURE_ARGS+=	--with-embedded-src-path=no
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 MAKE_FILE=		GNUmakefile
+
+CHECK_PORTABILITY_SKIP+=macinst/launcher.sh
 
 post-install:
 	rm -f ${DESTDIR}${PREFIX}/bin/dvdisaster-uninstall.sh
