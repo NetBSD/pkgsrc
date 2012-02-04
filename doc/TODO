@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10849 2012/02/03 19:07:42 drochner Exp $
+$NetBSD: TODO,v 1.10850 2012/02/04 05:46:23 obache Exp $
 
 Suggested new packages
 ======================
@@ -1143,7 +1143,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
-	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-TTFQuery-1.0.0
