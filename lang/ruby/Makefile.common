@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2011/12/18 13:20:17 taca Exp $
+# $NetBSD: Makefile.common,v 1.24 2012/02/04 09:43:32 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -46,15 +46,6 @@ MASTER_SITE_RUBY?= \
 RUBY_DISTINFO_FILE=	${RUBY_SRCDIR}/distinfo
 
 RUBY_HOMEPAGE=		http://www.ruby-lang.org/en/
-
-# common default
-_RUBY_PATCHLEVEL=	${RUBY_PATCHLEVEL:S/pl/p/:S/pre/preview/}
-
-.if !empty(_RUBY_PATCHLEVEL)
-RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-${_RUBY_PATCHLEVEL}
-.else
-RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
-.endif
 
 RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
 EXTRACT_SUFX=		.tar.bz2
