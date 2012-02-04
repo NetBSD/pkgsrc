@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2011/12/07 15:22:59 joerg Exp $
+$NetBSD: distinfo,v 1.25.2.1 2012/02/04 12:42:20 tron Exp $
 
 SHA1 (xen-3.3.2.tar.gz) = 7f438e73ac81b25cf5e1570709e87001066bafe4
 RMD160 (xen-3.3.2.tar.gz) = 28faa56286f2a418e35dcba6079570ea871d6c7b
@@ -54,4 +54,5 @@ SHA1 (patch-fd) = 619b865b2f17814e6e62ebab21de9183474dd075
 SHA1 (patch-fe) = 85d42672766fe8ce2dc7f745938722710c6ee5a3
 SHA1 (patch-ff) = 6ff97fa4f34f29c276e4aaab4b4db9ccf7b09957
 SHA1 (patch-fg) = 913295d341c1dd5bf4d1ef78f27520920f138d4c
+SHA1 (patch-qemu-e1000-CVSE-2012-0029) = 8628504e1dfd013254f816cb4feeb7548b9ad2ec
 SHA1 (patch-qemu-phy-devices) = 29790e45372ae16157e906dc39a667229e8a0ba5
