@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2012/02/04 11:01:23 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/02/04 11:20:34 obache Exp $
 bin/lottanzb
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/lottanzb/__init__.py
 ${PYSITELIB}/lottanzb/__init__.pyc
 ${PYSITELIB}/lottanzb/__init__.pyo
@@ -191,6 +192,22 @@ share/gnome/help/lottanzb/fr/figures/UsageRemote.png
 share/gnome/help/lottanzb/fr/figures/UsageStandAlone.png
 share/gnome/help/lottanzb/fr/legal.xml
 share/gnome/help/lottanzb/fr/lottanzb.xml
+share/gnome/help/lottanzb/nb/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/nb/figures/DragDropQueue.png
+share/gnome/help/lottanzb/nb/figures/FileAddMenu.png
+share/gnome/help/lottanzb/nb/figures/MainWindow.png
+share/gnome/help/lottanzb/nb/figures/Newzbin.png
+share/gnome/help/lottanzb/nb/figures/Paused.png
+share/gnome/help/lottanzb/nb/figures/Preferences.png
+share/gnome/help/lottanzb/nb/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/nb/figures/PreferencesServer.png
+share/gnome/help/lottanzb/nb/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/nb/figures/Processing.png
+share/gnome/help/lottanzb/nb/figures/UsageLocal.png
+share/gnome/help/lottanzb/nb/figures/UsageRemote.png
+share/gnome/help/lottanzb/nb/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/nb/legal.xml
+share/gnome/help/lottanzb/nb/lottanzb.xml
 share/gnome/help/lottanzb/nl/figures/DownloadingMultiple.png
 share/gnome/help/lottanzb/nl/figures/DragDropQueue.png
 share/gnome/help/lottanzb/nl/figures/FileAddMenu.png
@@ -207,6 +224,22 @@ share/gnome/help/lottanzb/nl/figures/UsageRemote.png
 share/gnome/help/lottanzb/nl/figures/UsageStandAlone.png
 share/gnome/help/lottanzb/nl/legal.xml
 share/gnome/help/lottanzb/nl/lottanzb.xml
+share/gnome/help/lottanzb/tr/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/tr/figures/DragDropQueue.png
+share/gnome/help/lottanzb/tr/figures/FileAddMenu.png
+share/gnome/help/lottanzb/tr/figures/MainWindow.png
+share/gnome/help/lottanzb/tr/figures/Newzbin.png
+share/gnome/help/lottanzb/tr/figures/Paused.png
+share/gnome/help/lottanzb/tr/figures/Preferences.png
+share/gnome/help/lottanzb/tr/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/tr/figures/PreferencesServer.png
+share/gnome/help/lottanzb/tr/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/tr/figures/Processing.png
+share/gnome/help/lottanzb/tr/figures/UsageLocal.png
+share/gnome/help/lottanzb/tr/figures/UsageRemote.png
+share/gnome/help/lottanzb/tr/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/tr/legal.xml
+share/gnome/help/lottanzb/tr/lottanzb.xml
 share/icons/gnome/16x16/mimetypes/application-x-nzb.png
 share/icons/gnome/24x24/mimetypes/application-x-nzb.png
 share/icons/gnome/32x32/mimetypes/application-x-nzb.png
@@ -230,6 +263,7 @@ share/locale/nb/LC_MESSAGES/lottanzb.mo
 share/locale/nl/LC_MESSAGES/lottanzb.mo
 share/locale/pl/LC_MESSAGES/lottanzb.mo
 share/locale/pt/LC_MESSAGES/lottanzb.mo
+share/locale/tr/LC_MESSAGES/lottanzb.mo
 share/lottanzb/glade/about_dialog.glade
 share/lottanzb/glade/add_file_dialog.glade
 share/lottanzb/glade/add_newzbin_dialog.glade
@@ -257,4 +291,6 @@ share/omf/lottanzb/lottanzb-de.omf
 share/omf/lottanzb/lottanzb-en_GB.omf
 share/omf/lottanzb/lottanzb-es.omf
 share/omf/lottanzb/lottanzb-fr.omf
+share/omf/lottanzb/lottanzb-nb.omf
 share/omf/lottanzb/lottanzb-nl.omf
+share/omf/lottanzb/lottanzb-tr.omf
