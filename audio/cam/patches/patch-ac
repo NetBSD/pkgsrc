@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2008/06/20 01:09:05 joerg Exp $
+$NetBSD: patch-ac,v 1.9 2012/02/04 06:48:35 sbd Exp $
 
 --- Makefile.orig	1996-09-19 13:18:29.000000000 -0400
 +++ Makefile	2004-06-02 16:31:54.000000000 -0400
@@ -17,7 +17,7 @@ $NetBSD: patch-ac,v 1.8 2008/06/20 01:09:05 joerg Exp $
 +BINDIR = ${PREFIX}/bin
  MANFILE= cam.1
 -MANDIR = /usr/man/man1
-+MANDIR = ${PREFIX}/man/man1
++MANDIR = ${PREFIX}/${PKGMANDIR}/man1
  EFILE  = cam
  XEFILE = xcam
  OBJS   = cam.o screens.o sounds.o
