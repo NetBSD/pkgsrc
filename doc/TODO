@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10850 2012/02/04 05:46:23 obache Exp $
+$NetBSD: TODO,v 1.10851 2012/02/04 15:23:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -387,7 +387,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-transform-0.6.0
 	o apache-maven-3.0
 	o apache-tomcat6-6.0.33
-	o apache22-2.2.22
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
 	o apr-util-1.4.1
@@ -412,9 +411,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacity-1.3.13
 	o autoconvert-0.3.16
 	o autogen-5.14
+	o automake-1.11.3
 	o avcheck-0.91
 	o avidemux-2.5.6
 	o avl-2.0.2a
+	o avrdude-5.11 [pkg/45924]
 	o awesome-3.4.11
 	o baci-20040415
 	o balance-3.54
@@ -691,7 +692,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
 	o gle-4.2.4
-	o global-6.2
+	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
 	o gmp-5.0.3
@@ -748,9 +749,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gss-1.0.2
 	o gssdp-0.10.0
 	o gtexinfo-4.13a
-	o gthumb-2.14.2
 	o gtick-0.4.2
-	o gtk3-3.2.3
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
@@ -798,6 +797,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o iceauth-1.0.5
 	o icewm-1.3.7
 	o ico-1.0.3
+	o idutils-4.6
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
@@ -973,7 +973,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.7.1
+	o mathomatic-15.7.3
 	o mecab-0.992 [break textproc/php-mecab]
 	o mediawiki-1.18.1
 	o meld-1.5.3
@@ -1139,7 +1139,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pure-ftpd-1.0.35 [pkg/45867]
 	o putty-0.62
 	o puzzle-9173
-	o puzzles-9388
+	o puzzles-9403
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1537,7 +1537,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.4.3
+	o zile-2.4.4
 	o zim-0.54
 	o zircon-1.18.256
 	o zlib-1.2.6
