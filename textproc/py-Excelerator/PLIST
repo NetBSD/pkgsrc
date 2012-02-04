@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/04 11:58:19 obache Exp $
 ${PYSITELIB}/pyExcelerator/BIFFRecords.py
 ${PYSITELIB}/pyExcelerator/BIFFRecords.pyc
 ${PYSITELIB}/pyExcelerator/BIFFRecords.pyo
@@ -64,10 +64,13 @@ share/doc/py-Excelerator/LICENSE.txt
 share/doc/py-Excelerator/README.txt
 share/doc/py-Excelerator/THANKS.txt
 share/doc/py-Excelerator/TODO.txt
+share/examples/py-Excelerator/Analyzer.py
+share/examples/py-Excelerator/biff-dumper.py
 share/examples/py-Excelerator/big-16Mb.py
 share/examples/py-Excelerator/big-35Mb.py
 share/examples/py-Excelerator/blanks.py
 share/examples/py-Excelerator/col_width.py
+share/examples/py-Excelerator/compdoc-dumper.py
 share/examples/py-Excelerator/dates.py
 share/examples/py-Excelerator/format.py
 share/examples/py-Excelerator/formula_names.py
@@ -91,9 +94,6 @@ share/examples/py-Excelerator/unicode0.py
 share/examples/py-Excelerator/unicode1.py
 share/examples/py-Excelerator/unicode2.py
 share/examples/py-Excelerator/wsprops.py
-share/examples/py-Excelerator/Analyzer.py
-share/examples/py-Excelerator/biff-dumper.py
-share/examples/py-Excelerator/compdoc-dumper.py
 share/examples/py-Excelerator/xls2csv-gerry.py
 share/examples/py-Excelerator/xls2csv.py
 share/examples/py-Excelerator/xls2html.py
