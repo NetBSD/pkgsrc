@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/11/30 19:24:06 joerg Exp $
+$NetBSD: distinfo,v 1.5 2012/02/04 05:46:10 obache Exp $
 
-SHA1 (Gnosis_Utils-1.1.1.tar.gz) = 7e4477d5133656949550c3dfaef5406a601700c5
-RMD160 (Gnosis_Utils-1.1.1.tar.gz) = 44c98cd6a8365439f94e77ab42c60e3a09e23163
-Size (Gnosis_Utils-1.1.1.tar.gz) = 224646 bytes
+SHA1 (Gnosis_Utils-1.2.2.tar.gz) = 27ce9ccedd8391dec482522ebc0c0d3ed4e350d6
+RMD160 (Gnosis_Utils-1.2.2.tar.gz) = eb2010e3ee7e155cf6f84d0b5abf274c85f839ea
+Size (Gnosis_Utils-1.2.2.tar.gz) = 287989 bytes
 SHA1 (patch-aa) = 1162bd97f4c811a8ca16a43a7778fefb449d0912
 SHA1 (patch-ab) = 9a70e0b7ad1ca2b5cffe20fb8307c9ee2b4f17c8
