@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/08 11:15:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/04 12:55:45 obache Exp $
 #
 
 DISTNAME=	coccigrep-1.6
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS=	coccinelle-[0-9]*:../../devel/coccinelle
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
