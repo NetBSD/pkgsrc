@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/04 05:13:03 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/04 05:59:35 obache Exp $
 #
 .include "../../news/hellanzb/Makefile.version"
 
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=1.3:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	par2>=0.4:../../archivers/par2
 DEPENDS+=	unrar>=3.5.4:../../archivers/unrar
+
+USE_LANGUAGES=	#none
 
 PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 
