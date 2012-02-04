@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/31 02:45:46 mspo Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/04 02:34:59 sbd Exp $
 #
 
 DISTNAME=	Perlbal-1.79
@@ -13,12 +13,12 @@ LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-IO-Socket-SSL:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-IO-AIO:../../devel/p5-IO-AIO
-DEPENDS+=	p5-BSD-Resource:../../devel/p5-BSD-Resource
-DEPENDS+=	p5-HTTP-Date:../../www/p5-HTTP-Date
-DEPENDS+=	p5-HTTP-Message:../../www/p5-HTTP-Message
-DEPENDS+=	p5-Danga-Socket:../../net/p5-Danga-Socket
+DEPENDS+=	p5-IO-Socket-SSL>=0:../../security/p5-IO-Socket-SSL
+DEPENDS+=	p5-IO-AIO>=0:../../devel/p5-IO-AIO
+DEPENDS+=	p5-BSD-Resource>=0:../../devel/p5-BSD-Resource
+DEPENDS+=	p5-HTTP-Date>=0:../../www/p5-HTTP-Date
+DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
+DEPENDS+=	p5-Danga-Socket>=0:../../net/p5-Danga-Socket
 
 DEPENDS+=	p5-BSD-Resource>=0:../../devel/p5-BSD-Resource
 DEPENDS+=	p5-Danga-Socket>=1.44:../../net/p5-Danga-Socket
