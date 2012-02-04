@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.21 2012/02/04 12:42:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.22 2012/02/04 14:21:50 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -119,5 +119,5 @@ net/smokeping: security update
 Pullup ticket #3671 - requested by taca
 lang/php53 security and build fixes.
 Pullup ticket #3672 - requested by bouyer
-sysutils/xentools33: security patch
-sysutils/xentools41: security patch
+sysutils/xentools33: build fix & security patch
+sysutils/xentools41: bug fix & security patch
