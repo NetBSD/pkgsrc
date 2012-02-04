@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/02/04 10:36:53 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/02/04 10:46:21 obache Exp $
 #
 
 DISTNAME=	kiwi-1.9.29
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.async.com.br/projects/kiwi/
 COMMENT=	Framework and a set of enhanced PyGTK widgets
 LICENSE=	gnu-lgpl-v2.1 # or later
-
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c6:../../devel/py-setuptools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
