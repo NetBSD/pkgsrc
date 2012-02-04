@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.240 2012/02/01 12:05:09 obache Exp $
+# $NetBSD: replace.mk,v 1.241 2012/02/04 02:26:23 sbd Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -405,7 +405,7 @@ TOOLS_ALIASES.gawk=		awk
 MAKEFLAGS+=			TOOLS_IGNORE.gem=
 .  elif !empty(_TOOLS_USE_PKGSRC.gem:M[yY][eE][sS])
 .    if !defined(RUBY_VER) || !empty(RUBY_VER:M18)
-TOOLS_DEPENDS.gem?=		rubygems-[0-9]*:../../misc/rubygems
+TOOLS_DEPENDS.gem?=		${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
 .    else
 TOOLS_DEPENDS.gem?=		${RUBY_BASE}>=${RUBY_VERSION}:../../lang/${RUBY_BASE}
 .    endif
