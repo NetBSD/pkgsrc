@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.70 2011/12/28 16:40:06 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.71 2012/02/04 09:43:32 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -11,7 +11,6 @@
 #	The preferered Ruby version to use.
 #
 #		Possible values: 18 192 193
-#		Compatible values: 1.9(= 192) 19(= 192)
 #		Default: 192
 #
 # RUBY_BUILD_RDOC
@@ -350,6 +349,17 @@ RUBY_SLEXT=	dylib
 .else
 RUBY_DLEXT=	so
 RUBY_SLEXT=	so
+.endif
+
+#
+# Ruby distribution file, few package need it.
+#
+_RUBY_PATCHLEVEL=	${RUBY_PATCHLEVEL:S/pl/p/:S/pre/preview/}
+
+.if !empty(_RUBY_PATCHLEVEL)
+RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-${_RUBY_PATCHLEVEL}
+.else
+RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
 .endif
 
 #
