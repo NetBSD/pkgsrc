@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.382 2012/02/04 12:03:50 obache Exp $
+$NetBSD: CHANGES-2012,v 1.383 2012/02/04 13:02:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -570,3 +570,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/py-kiwi to 1.9.29 [obache 2012-02-04]
 	Updated news/lottanzb to 0.4.1 [obache 2012-02-04]
 	Updated textproc/py-Excelerator to 0.6.4.1 [obache 2012-02-04]
+	Updated textproc/py-xml to 0.8.4nb4 [obache 2012-02-04]
