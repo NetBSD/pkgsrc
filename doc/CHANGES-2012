@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.374 2012/02/03 21:34:44 asau Exp $
+$NetBSD: CHANGES-2012,v 1.375 2012/02/04 04:42:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/gconfmm to 2.28.3 [drochner 2012-02-03]
 	Updated lang/racket to 5.2.1 [asau 2012-02-03]
 	Updated lang/racket-textual to 5.2.1 [asau 2012-02-03]
+	Updated print/py-reportlab to 2.5nb1 [obache 2012-02-04]
