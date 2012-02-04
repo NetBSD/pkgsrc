@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.376 2012/02/04 04:46:34 obache Exp $
+$NetBSD: CHANGES-2012,v 1.377 2012/02/04 05:13:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/racket to 5.2.1 [asau 2012-02-03]
 	Updated lang/racket-textual to 5.2.1 [asau 2012-02-03]
 	Updated print/py-reportlab to 2.5nb2 [obache 2012-02-04]
+	Updated news/hellanzb to 0.14.1087nb3 [obache 2012-02-04]
