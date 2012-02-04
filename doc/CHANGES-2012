@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.380 2012/02/04 10:38:11 obache Exp $
+$NetBSD: CHANGES-2012,v 1.381 2012/02/04 11:20:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -568,3 +568,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/py-gnosis-utils to 1.2.2 [obache 2012-02-04]
 	Updated audio/csound5 to 5.01nb11 [sbd 2012-02-04]
 	Updated x11/py-kiwi to 1.9.29 [obache 2012-02-04]
+	Updated news/lottanzb to 0.4.1 [obache 2012-02-04]
