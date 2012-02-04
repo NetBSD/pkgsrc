@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2012/01/27 06:36:57 obache Exp $
+# $NetBSD: Makefile.common,v 1.9 2012/02/04 13:24:35 drochner Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
-DISTNAME=	webkit-1.6.1
+DISTNAME=	webkit-1.6.3
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webkitgtk.org/
