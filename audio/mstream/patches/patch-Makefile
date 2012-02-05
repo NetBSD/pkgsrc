@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2012/02/05 21:31:17 sbd Exp $
+
+--- Makefile.orig	2008-11-22 07:46:37.000000000 +0000
++++ Makefile
+@@ -5,7 +5,7 @@
+ 
+ PREFIX	= /usr/pkg
+ BINDIR	= ${PREFIX}/bin
+-MAN1DIR	= ${PREFIX}/man/man1
++MAN1DIR	= ${PREFIX}/${PKGMANDIR}/man1
+ MODDIR	= ${PREFIX}/share/ices-mp3
+ DATADIR	= ${PREFIX}/share/mstream
+ 

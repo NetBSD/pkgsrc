@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/10 11:51:26 abs Exp $
+$NetBSD: distinfo,v 1.2 2012/02/05 21:28:09 sbd Exp $
 
 SHA1 (mserv-irman-0.21.tbz) = 7ffd86c24573d6d54716c68d471bcd27ec7ae788
 RMD160 (mserv-irman-0.21.tbz) = 06d5095d493a8c6bb157d19d0721ff785f84f6db
 Size (mserv-irman-0.21.tbz) = 9310 bytes
+SHA1 (patch-Makefile) = f28f5e64212219caa4c7884e4d9b865bdfa31244
