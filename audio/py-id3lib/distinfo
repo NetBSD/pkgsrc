@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/01/06 11:20:30 drochner Exp $
+$NetBSD: distinfo,v 1.5 2012/02/05 22:27:09 sbd Exp $
 
 SHA1 (pyid3lib-0.5.1.tar.bz2) = 5026f9aa7f868a081a7caecc54cbdbc0cdaea27b
 RMD160 (pyid3lib-0.5.1.tar.bz2) = cec0607aab0eeaaa953428a4d06c7b7a19232616
 Size (pyid3lib-0.5.1.tar.bz2) = 21207 bytes
-SHA1 (patch-aa) = 65cb7a9dbdff417baf80fd00c3aebb89a22e7593
+SHA1 (patch-aa) = f5df1b2756fdcc1f6f37a2670400187db732836e
