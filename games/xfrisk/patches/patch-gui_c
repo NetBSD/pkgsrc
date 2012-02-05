@@ -1,0 +1,15 @@
+$NetBSD: patch-gui_c,v 1.1 2012/02/05 00:02:47 dholland Exp $
+
+Fix LP64 bug (that only became a fatal crash with gcc 4.5)
+
+--- gui.c~	2000-01-10 22:47:40.000000000 +0000
++++ gui.c
+@@ -701,7 +701,7 @@ static Int32 GUI_GetNumColorsInMap(CStri
+  ************************************************************************/
+ void GUI_SetColorOfCurrentPlayer(Int32 iColor)
+ {
+-  Int32 c, d;
++  Pixel c, d;
+ 
+   c = COLOR_QueryColor(iColor);
+   XtVaGetValues(wCurrentPlayer, XtNbackground, &d, NULL);
