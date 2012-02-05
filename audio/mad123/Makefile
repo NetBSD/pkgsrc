@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/01/13 10:54:47 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/02/05 20:39:50 sbd Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -17,8 +17,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mad123
 PKG_SUPPORTED_OPTIONS=	arts oss sun
 PKG_SUGGESTED_OPTIONS+=	oss
-.if ${OPSYS} != "DragonFly"
+.if ${OPSYS} != "DragonFly" && ${OPSYS} != "Linux"
 PKG_SUGGESTED_OPTIONS+=	sun
+.endif
+.if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+= arts
 .endif
 
 .include "../../mk/bsd.options.mk"
