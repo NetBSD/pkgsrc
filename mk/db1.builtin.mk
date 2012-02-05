@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.21 2007/11/16 08:14:20 rillig Exp $
+# $NetBSD: db1.builtin.mk,v 1.22 2012/02/05 12:16:56 obache Exp $
 
 BUILTIN_PKG:=	db1
 
@@ -76,7 +76,7 @@ BUILDLINK_LDADD.db1=	-ldb
 .    else
 BUILDLINK_LDADD.db1=	# empty
 .    endif
-BUILDLINK_LIBS.db1=	${BUILDLINK_LDADD.db1}
+#BUILDLINK_LIBS.db1=	${BUILDLINK_LDADD.db1}
 .  endif
 
 BUILDLINK_TARGETS+=	buildlink-db1-db185-h
