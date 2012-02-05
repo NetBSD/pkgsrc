@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/19 17:11:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/05 15:29:18 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -17,6 +17,7 @@ share/tomcat/bin/catalina.sh
 share/tomcat/bin/commons-daemon-native.tar.gz
 share/tomcat/bin/commons-daemon.jar
 share/tomcat/bin/configtest.sh
+share/tomcat/bin/daemon.sh
 share/tomcat/bin/digest.sh
 share/tomcat/bin/setclasspath.sh
 share/tomcat/bin/shutdown.sh
@@ -30,7 +31,7 @@ share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-3.7.jar
+share/tomcat/lib/ecj-3.7.1.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
