@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2011/03/10 11:03:11 adam Exp $
+# $NetBSD: Makefile,v 1.36 2012/02/05 08:40:46 obache Exp $
 
-DISTNAME=	libsigc++-2.2.9
+DISTNAME=	libsigc++-2.2.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/2.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,6 +25,8 @@ GCC_REQD+=		3.2
 EXTRACT_USING=		bsdtar
 
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
+
+TEST_TARGET=		check
 
 .include "../../mk/pthread.buildlink3.mk"
 
