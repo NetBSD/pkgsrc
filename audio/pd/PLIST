@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/15 01:05:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/05 22:20:42 sbd Exp $
 bin/pd
 bin/pd-gui.tcl
 bin/pdreceive
@@ -17,17 +17,17 @@ lib/pd/extra/choice/choice.la
 lib/pd/extra/complex-mod~-help.pd
 lib/pd/extra/complex-mod~.pd
 lib/pd/extra/expr-help.pd
-lib/pd/extra/expr.
+lib/pd/extra/expr.${EXTERNAL_EXTENSION}
 lib/pd/extra/expr~-help.pd
-lib/pd/extra/expr~.
+lib/pd/extra/expr~.${EXTERNAL_EXTENSION}
 lib/pd/extra/expr~/LICENSE.txt
 lib/pd/extra/expr~/README.txt
 lib/pd/extra/expr~/expr-help.pd
-lib/pd/extra/expr~/expr.
+lib/pd/extra/expr~/expr.${EXTERNAL_EXTENSION}
 lib/pd/extra/expr~/expr~.la
-lib/pd/extra/expr~/fexpr~.
+lib/pd/extra/expr~/fexpr~.${EXTERNAL_EXTENSION}
 lib/pd/extra/fexpr~-help.pd
-lib/pd/extra/fexpr~.
+lib/pd/extra/fexpr~.${EXTERNAL_EXTENSION}
 lib/pd/extra/fiddle~/fiddle~-help.pd
 lib/pd/extra/fiddle~/fiddle~.la
 lib/pd/extra/hilbert~-help.pd
