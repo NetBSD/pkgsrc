@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.4 2009/03/11 14:31:20 hasso Exp $
+$NetBSD: distinfo,v 1.5 2012/02/05 20:05:56 sbd Exp $
 
 SHA1 (libspiff-1.0.0.tar.bz2) = 4e69677fb16a35ee4158bedb9965345e1f530a28
 RMD160 (libspiff-1.0.0.tar.bz2) = 89fee7e0c8a8de59452494251a2121a858824c85
 Size (libspiff-1.0.0.tar.bz2) = 385061 bytes
 SHA1 (patch-aa) = 16f441fd7662395244feae0bebf03497c1bba0ed
+SHA1 (patch-src_SpiffPropsWriter.cpp) = 20d1025408613bfb42878c21da8a987bbc8df1f3
+SHA1 (patch-src_SpiffWriter.cpp) = d245cf9772609dffa3f4b941219c67a5a3491b5d
+SHA1 (patch-src_SpiffXmlFormatter.cpp) = d9e488b980489639f6b6cfaa069713f4df2dca69
