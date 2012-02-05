@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2011/04/23 12:49:38 tron Exp $
+# $NetBSD: options.mk,v 1.27.6.1 2012/02/05 18:41:14 spz Exp $
 
 # Recommended package options for various setups:
 #
@@ -31,7 +31,7 @@ SAMBA_STATIC_MODULES:=	# empty
 PKG_OPTIONS+=		ldap
 .  endif
 CONFIGURE_ARGS+=	--with-ads
-CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE:Q}
+CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE}
 
 # Avoid build failures with recent version of Heimdal under NetBSD.
 .  if ${OPSYS} == "NetBSD"
@@ -149,8 +149,8 @@ NSS_WINBIND_cmd=	\
 .PHONY: samba-nss-winbind-install
 post-install: samba-nss-winbind-install
 samba-nss-winbind-install:
-	lib=${WRKSRC:Q}/nsswitch/${NSS_WINBIND:T:Q};			\
-	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX:Q}/lib
+	lib=${WRKSRC}/nsswitch/${NSS_WINBIND:T:Q};			\
+	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX}/lib
 
 # Install the NSS WINS module if it exists.
 PLIST_SUBST+=	NSS_WINS=${NSS_WINS:Q}
@@ -167,8 +167,8 @@ NSS_WINS_cmd=	\
 .PHONY: samba-nss-wins-install
 post-install: samba-nss-wins-install
 samba-nss-wins-install:
-	lib=${WRKSRC:Q}/nsswitch/${NSS_WINS:T:Q};			\
-	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX:Q}/lib
+	lib=${WRKSRC}/nsswitch/${NSS_WINS:T:Q};				\
+	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX}/lib
 .else
 CONFIGURE_ARGS+=	--without-winbind
 PLIST_SUBST+=		NSS_WINBIND="no NSS winbind module"
