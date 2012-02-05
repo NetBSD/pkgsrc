@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.207.2.1 2012/01/29 23:46:39 tron Exp $
+# $NetBSD: Makefile,v 1.207.2.2 2012/02/05 18:41:14 spz Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=	samba-${VERSION}
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
@@ -96,10 +97,10 @@ FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
 .if ${OPSYS} == "NetBSD"
-.if !empty(PKG_OPTIONS:Mwinbind)
+.  if !empty(PKG_OPTIONS:Mwinbind)
 # Install a /usr/lib/nss_winbind.so.0 -> ${PREFIX}/lib/nss_winbind.so.0 symlink
 INSTALL_TEMPLATES+=	INSTALL.nss_winbind
-.endif
+.  endif
 .endif
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
@@ -158,15 +159,19 @@ post-install:
 		${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 .if ${OPSYS} == "NetBSD"
-.if !empty(PKG_OPTIONS:Mwinbind)
+.  if !empty(PKG_OPTIONS:Mwinbind)
 	${INSTALL_LIB} ${WRKDIR}/${DISTNAME}/nsswitch/nss_winbind.${SAMBA_LIBEXT} \
 		${DESTDIR}${PREFIX}/lib/nss_winbind.${SAMBA_LIBEXT}.0
-.endif
+.  endif
 .endif
 
+.if ${OPSYS} == "Linux"
+.include "../../devel/libuuid/buildlink3.mk"
+.endif
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
