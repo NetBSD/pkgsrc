@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.387 2012/02/05 00:03:21 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.388 2012/02/05 08:41:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -575,3 +575,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gimp to 2.6.12 [adam 2012-02-04]
 	Updated sysutils/dvdisaster to 0.72.3 [shattered 2012-02-04]
 	Updated games/xfrisk to 1.2nb7 [dholland 2012-02-05]
+	Updated devel/libsigc++ to 2.2.10 [obache 2012-02-05]
