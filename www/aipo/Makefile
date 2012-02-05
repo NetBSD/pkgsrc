@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/12/06 12:41:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/05 15:43:16 ryoon Exp $
 #
 
-DISTNAME=	aipo6020ja_linux32
-PKGNAME=	aipo-6.02
-PKGREVISION=	2
+DISTNAME=	aipo6030ja_linux32
+PKGNAME=	aipo-6.03
 CATEGORIES=	www
 MASTER_SITES=	http://aipo.googlecode.com/files/
 
@@ -38,7 +37,7 @@ SUBST_SED.username=		-e 's,cayenne.dbcp.username=postgres,cayenne.dbcp.username=
 SUBST_SED.username+=		-e 's,cayenne.dbcp.password=aipo,cayenne.dbcp.password=aipo_db_password,'
 
 post-extract:
-	cd ${WRKSRC} && ${GUNZIP_CMD} -c aipo6020.tar.gz | ${TAR} -xpf -
+	cd ${WRKSRC} && ${GUNZIP_CMD} -c aipo6030.tar.gz | ${TAR} -xpf -
 
 do-install:
 	cd  ${WRKSRC}/aipo/src/webapps && \
