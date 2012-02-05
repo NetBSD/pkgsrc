@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.22 2012/02/04 14:21:50 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.23 2012/02/05 18:42:28 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -121,3 +121,5 @@ lang/php53 security and build fixes.
 Pullup ticket #3672 - requested by bouyer
 sysutils/xentools33: build fix & security patch
 sysutils/xentools41: bug fix & security patch
+Pullup ticket #3666 - requested by tron
+net/samba: functionality fixes
