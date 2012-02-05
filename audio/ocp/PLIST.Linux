@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2012/02/05 21:48:26 sbd Exp $
+bin/ocp-vcsa
+lib/${PKGNAME}/autoload/30-cdrom.so
+lib/${PKGNAME}/playcda.so
