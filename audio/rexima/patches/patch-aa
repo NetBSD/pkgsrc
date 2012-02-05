@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2009/07/07 15:28:47 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2012/02/05 22:53:51 sbd Exp $
 
---- Makefile.orig	2003-06-30 14:45:27.000000000 +0200
+--- Makefile.orig	2003-06-30 12:45:27.000000000 +0000
 +++ Makefile
-@@ -1,13 +1,13 @@
+@@ -1,15 +1,15 @@
  # Makefile - makefile for rexima
  
 -CC=gcc
@@ -17,14 +17,17 @@ $NetBSD: patch-aa,v 1.2 2009/07/07 15:28:47 joerg Exp $
 -PREFIX=/usr/local
 +#PREFIX=/usr/local
  BINDIR=$(PREFIX)/bin
- MANDIR=$(PREFIX)/man/man1
+-MANDIR=$(PREFIX)/man/man1
++MANDIR=$(PREFIX)/${PKGMANDIR}/man1
  
+ # You shouldn't need to edit below this line.
+ #--------------------------------------------------------
 @@ -17,14 +17,14 @@ MANDIR=$(PREFIX)/man/man1
  all: rexima
  
  rexima: rexima.o
 -	$(CC) $(CFLAGS) -o rexima rexima.o -lncurses
-+	$(CC) $(CFLAGS) -o rexima rexima.o -lncurses ${LIBOSSAUDIO}
++	$(CC) $(CFLAGS) $(LDFLAGS) -o rexima rexima.o -lncurses ${LIBOSSAUDIO}
  
  installdirs:
 -	/bin/sh ./mkinstalldirs $(BINDIR) $(MANDIR)

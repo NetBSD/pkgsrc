@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/07/07 15:28:47 joerg Exp $
+$NetBSD: distinfo,v 1.4 2012/02/05 22:53:51 sbd Exp $
 
 SHA1 (rexima-1.4.tar.gz) = 86dc739e1a14074c89b06ce5ac668d13ef824948
 RMD160 (rexima-1.4.tar.gz) = 08251ac47f9ce6db01d2bb41d7b0c01c36c096d9
 Size (rexima-1.4.tar.gz) = 15903 bytes
-SHA1 (patch-aa) = b3723573e106bc64203404051e76a303c14f9ef9
+SHA1 (patch-aa) = 0a97974b7aeb76ad9efe9ab5d36697bc623d0a83
