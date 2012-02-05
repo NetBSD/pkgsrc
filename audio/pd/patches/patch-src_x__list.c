@@ -1,4 +1,4 @@
-$NetBSD: patch-src_x__list.c,v 1.2 2011/10/05 20:02:48 wiz Exp $
+$NetBSD: patch-src_x__list.c,v 1.3 2012/02/05 21:55:15 sbd Exp $
 
 alloca.h is not portable.
 https://sourceforge.net/tracker/?func=detail&aid=3411730&group_id=55736&atid=478072
@@ -14,7 +14,7 @@ https://sourceforge.net/tracker/?func=detail&aid=3411730&group_id=55736&atid=478
 -#else
 +#if defined(HAVE_ALLOCA_H)
  #include <alloca.h>
-+#elsif defined(HAVE_MALLOC_H)
++#elif defined(HAVE_MALLOC_H)
 +#include <malloc.h>
  #endif
  
