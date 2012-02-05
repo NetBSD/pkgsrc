@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.386 2012/02/04 21:59:39 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.387 2012/02/05 00:03:21 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -574,3 +574,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/webkit-gtk to 1.6.3 [drochner 2012-02-04]
 	Updated graphics/gimp to 2.6.12 [adam 2012-02-04]
 	Updated sysutils/dvdisaster to 0.72.3 [shattered 2012-02-04]
+	Updated games/xfrisk to 1.2nb7 [dholland 2012-02-05]
