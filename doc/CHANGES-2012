@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.394 2012/02/05 22:20:50 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.395 2012/02/05 23:58:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/aipo to 6.03 [ryoon 2012-02-05]
 	Updated audio/ocp to 0.1.21nb1 [sbd 2012-02-05]
 	Updated audio/pd to 0.43.0nb1 [sbd 2012-02-05]
+	Updated www/awstats to 7.0nb3 [minskim 2012-02-05]
