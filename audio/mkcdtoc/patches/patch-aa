@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/07/26 13:20:34 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2012/02/05 21:17:02 sbd Exp $
 
---- include.mak.orig	2006-07-23 13:47:10.000000000 +0200
+--- include.mak.orig	2006-03-16 20:51:59.000000000 +0000
 +++ include.mak
 @@ -2,12 +2,12 @@ PACKAGE = mkcdtoc
  VERSION = 1.0
@@ -10,7 +10,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/07/26 13:20:34 drochner Exp $
 +#PREFIX=/usr/local
  BINDIR=$(PREFIX)/bin
  DATADIR=$(PREFIX)/share
- MANDIR=$(PREFIX)/man
+-MANDIR=$(PREFIX)/man
++MANDIR=$(PREFIX)/$(PKGMANDIR)
  DESTDIR=
 -PERL=/usr/bin/perl
 +#PERL=/usr/bin/perl
