@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.393 2012/02/05 21:48:34 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.394 2012/02/05 22:20:50 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -581,3 +581,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/apache-tomcat7 to 7.0.25 [ryoon 2012-02-05]
 	Updated www/aipo to 6.03 [ryoon 2012-02-05]
 	Updated audio/ocp to 0.1.21nb1 [sbd 2012-02-05]
+	Updated audio/pd to 0.43.0nb1 [sbd 2012-02-05]
