@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.389 2012/02/05 13:20:37 obache Exp $
+$NetBSD: CHANGES-2012,v 1.390 2012/02/05 14:50:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -577,3 +577,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/xfrisk to 1.2nb7 [dholland 2012-02-05]
 	Updated devel/libsigc++ to 2.2.10 [obache 2012-02-05]
 	Updated textproc/py-yamcha to 0.33nb1 [obache 2012-02-05]
+	Updated net/youtube-dl to 20120108b [ryoon 2012-02-05]
