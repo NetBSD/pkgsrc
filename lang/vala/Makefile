@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2011/06/09 11:10:41 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2012/02/06 12:40:47 wiz Exp $
 #
 
 DISTNAME=	vala-0.12.1
+PKGREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/0.12/}
 EXTRACT_SUFX=	.tar.bz2

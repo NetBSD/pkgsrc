@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2011/11/01 06:02:26 sbd Exp $
+# $NetBSD: Makefile,v 1.43 2012/02/06 12:41:23 wiz Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-glib-${POPPLER_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		PDF rendering library (GLib wrapper)
 MAINTAINER=		reed@reedmedia.net

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2012/01/13 10:55:20 obache Exp $
+# $NetBSD: Makefile,v 1.62 2012/02/06 12:40:58 wiz Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 

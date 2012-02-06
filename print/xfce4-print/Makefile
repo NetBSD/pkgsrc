@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/11/01 06:02:27 sbd Exp $
+# $NetBSD: Makefile,v 1.33 2012/02/06 12:41:24 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGNAME=	xfce4-print-${XFCE4_VERSION}
 DISTNAME=	xfprint-${XFCE4_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print
 COMMENT=	Xfce print dialog
 

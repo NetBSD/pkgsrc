@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/11/13 07:57:58 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/06 12:40:44 wiz Exp $
 #
 
 DISTNAME=		scim-uim-0.2.0
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 

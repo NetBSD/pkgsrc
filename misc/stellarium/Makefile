@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2012/01/13 10:55:22 obache Exp $
+# $NetBSD: Makefile,v 1.50 2012/02/06 12:40:59 wiz Exp $
 
 DISTNAME=	stellarium-0.11.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stellarium/}
 
