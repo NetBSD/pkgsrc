@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2011/11/01 06:02:14 sbd Exp $
+# $NetBSD: Makefile,v 1.16 2012/02/06 12:41:07 wiz Exp $
 #
 
 DISTNAME=		subtitleeditor-0.30.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.gna.org/subtitleeditor/0.30/
 
