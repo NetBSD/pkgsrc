@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/03 15:15:44 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/06 11:44:53 drochner Exp $
 #
 
 DISTNAME=	libgee-0.6.4
@@ -16,7 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=		pkg-config gmake
-BUILD_DEPENDS+=	vala-[0-9]*:../../lang/vala
+
+# to regenerate after patches
+#BUILD_DEPENDS+=	vala-[0-9]*:../../lang/vala
 
 PKGCONFIG_OVERRIDE+=	gee-1.0.pc.in
 
