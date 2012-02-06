@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2010/07/19 16:42:12 ver Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/06 00:25:42 jakllsch Exp $
 bin/s3cmd
 man/man1/s3cmd.1
 share/doc/packages/s3cmd/INSTALL
 share/doc/packages/s3cmd/NEWS
 share/doc/packages/s3cmd/README
+${PYSITELIB}/S3/AccessLog.py
+${PYSITELIB}/S3/AccessLog.pyc
+${PYSITELIB}/S3/AccessLog.pyo
 ${PYSITELIB}/S3/ACL.py
 ${PYSITELIB}/S3/ACL.pyc
 ${PYSITELIB}/S3/ACL.pyo
