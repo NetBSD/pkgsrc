@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.7 2012/01/11 20:26:13 hans Exp $
+$NetBSD: patch-ab,v 1.8 2012/02/06 02:59:49 sbd Exp $
 
---- mpegsound/mpegsound.h.orig	1998-03-06 11:43:55.000000000 -0600
+--- mpegsound/mpegsound.h.orig	1998-03-06 17:43:55.000000000 +0000
 +++ mpegsound/mpegsound.h
-@@ -11,6 +11,20 @@
+@@ -11,6 +11,21 @@
  /************************************/
  #include <stdio.h>
  #include <sys/types.h>
 +#ifdef __linux__
 +#include <endian.h>
++#include <stdint.h>
 +#elif defined(__sun)
 +#include <sys/byteorder.h>
 +#define LITTLE_ENDIAN 1234
@@ -23,7 +24,7 @@ $NetBSD: patch-ab,v 1.7 2012/01/11 20:26:13 hans Exp $
  
  #ifdef PTHREADEDMPEG
  #ifdef HAVE_PTHREAD_H
-@@ -90,6 +104,8 @@
+@@ -90,6 +105,8 @@
  /*******************************************/
  /* Define values for Microsoft WAVE format */
  /*******************************************/
@@ -32,7 +33,7 @@ $NetBSD: patch-ab,v 1.7 2012/01/11 20:26:13 hans Exp $
  #define RIFF		0x46464952
  #define WAVE		0x45564157
  #define FMT		0x20746D66
-@@ -101,27 +117,42 @@
+@@ -101,27 +118,42 @@
  #define MODE_MONO   0
  #define MODE_STEREO 1
  
