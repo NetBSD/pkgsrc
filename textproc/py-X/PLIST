@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/06 11:04:46 obache Exp $
 etc/pyxrc.default
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pyx/__init__.py
 ${PYSITELIB}/pyx/__init__.pyc
 ${PYSITELIB}/pyx/__init__.pyo
