@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.402 2012/02/06 12:41:28 fhajny Exp $
+$NetBSD: CHANGES-2012,v 1.403 2012/02/06 12:44:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -592,3 +592,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/ruby-kgio version 2.7.2 [fhajny 2012-02-06]
 	Added www/ruby-raindrops version 0.8.0 [fhajny 2012-02-06]
 	Added www/ruby-unicorn version 4.2.0 [fhajny 2012-02-06]
+	Updated textproc/dblatex to 0.3nb1 [obache 2012-02-06]
