@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/06 14:27:30 fhajny Exp $
+
+SHA1 (yajl-ruby-1.1.0.gem) = f0c4026f1a9086595b8dbc0795ad795fc120c0dd
+RMD160 (yajl-ruby-1.1.0.gem) = affb53c6a9ef08e4dec367b2c755458e6a842921
+Size (yajl-ruby-1.1.0.gem) = 557056 bytes
