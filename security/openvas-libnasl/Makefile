@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/04/22 13:44:36 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/06 12:41:27 wiz Exp $
 #
 
 DISTNAME=	openvas-libnasl-2.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/549/
 
