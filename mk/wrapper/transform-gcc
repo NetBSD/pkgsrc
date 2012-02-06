@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.24 2012/02/06 12:49:38 fhajny Exp $
+# $NetBSD: transform-gcc,v 1.25 2012/02/06 13:03:55 bsiegert Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -30,6 +30,7 @@ case $arg in
 -ffloat-store		|\
 -fhonour-copts		|\
 -finline-functions	|\
+-fno-align-*		|\
 -fno-builtin*		|\
 -fno-common		|\
 -fno-implicit-templates	|\
@@ -40,9 +41,12 @@ case $arg in
 -fpic			|\
 -fpcc-struct-return	|\
 -freg-struct-return	|\
+-frename-registers	|\
 -fsigned-char		|\
 -funroll-loops		|\
 -funsigned-char		|\
+-fweb			|\
+-fwrapv			|\
 -ggdb			|\
 -M			|\
 -M[DFMPT]		|\
@@ -52,6 +56,9 @@ case $arg in
 -mabi=*			|\
 -march=*		|\
 -mcpu=*			|\
+-momit-leaf-frame-pointer |\
+-mpreferred-stack-boundary=* |\
+-mpush-args		|\
 -mschedule=*		|\
 -mieee-fp		|\
 -O[23s]			|\
@@ -78,7 +85,7 @@ case $arg in
 -Wextra			|\
 -Werror			|\
 -Werror-implicit-function-declaration |\
--Wformat=[012]		|\
+-Wformat*		|\
 -Wmissing-declarations	|\
 -Wmissing-format-attribute |\
 -Wmissing-prototypes	|\
