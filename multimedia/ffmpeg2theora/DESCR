@@ -1,0 +1,5 @@
+With "ffmpeg2theora" you can convert any file that "ffmpeg" can decode into
+the Theora format. Right now the settings are hardcoded into the binary.
+The idea is to provide "ffmpeg2theora" as a binary along sites like
+"v2v.cc" to enable as many people as possible to encode video clips with
+the same settings.
