@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.407 2012/02/06 15:44:06 roy Exp $
+$NetBSD: CHANGES-2012,v 1.408 2012/02/06 15:48:07 roy Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -599,3 +599,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/dnstracer to 1.9 [shattered 2012-02-06]
 	Added textproc/ruby-yajl version 1.1.0 [fhajny 2012-02-06]
 	Updated net/dhcpcd to 5.5.4 [roy 2012-02-06]
+	Updated net/dhcpcd-dbus to 0.6.0 [roy 2012-02-06]
