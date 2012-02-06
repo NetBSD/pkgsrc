@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2010/07/30 10:36:22 asau Exp $
+# $NetBSD: Makefile,v 1.36 2012/02/06 06:24:53 sbd Exp $
 
 DISTNAME=		benchfft-2.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		benchmarks math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			ftp://ftp.fftw.org/pub/fftw/old/benchfft/
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake csh:run
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
 
@@ -23,6 +23,8 @@ LIBTOOL_OVERRIDE=	libtool ../fftw-*/libtool
 CONFIG_GUESS_OVERRIDE=	config.guess ../fftw-*/config.guess
 CONFIG_SUB_OVERRIDE=	config.sub ../fftw-*/config.sub
 CONFIG_STATUS_OVERRIDE=	config.status ../fftw-*/config.status
+
+REPLACE_CSH=		submit-script
 
 INSTALLATION_DIRS=	bin
 
