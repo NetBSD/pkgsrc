@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2012/01/25 17:22:33 jakllsch Exp $
+# $NetBSD: Makefile,v 1.86 2012/02/06 12:40:07 wiz Exp $
 
 DISTNAME=		qemu-0.15.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 
