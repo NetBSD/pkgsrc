@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/29 11:51:32 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/06 11:14:13 obache Exp $
 #
 
 DISTNAME=	cssutils-0.9.7
@@ -14,6 +14,8 @@ COMMENT=	Cascading Style Sheets parser and library for Python
 LICENSE=	gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=	#none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	24
 
