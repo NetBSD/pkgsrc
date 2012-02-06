@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.395 2012/02/05 23:58:45 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.396 2012/02/06 00:25:52 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -583,3 +583,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/ocp to 0.1.21nb1 [sbd 2012-02-05]
 	Updated audio/pd to 0.43.0nb1 [sbd 2012-02-05]
 	Updated www/awstats to 7.0nb3 [minskim 2012-02-05]
+	Updated net/py-s3cmd to 1.0.1 [jakllsch 2012-02-06]
