@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/01/20 15:43:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/02/06 13:11:35 adam Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -23,6 +23,9 @@ man/man1/git-commit-tree.1
 man/man1/git-commit.1
 man/man1/git-config.1
 man/man1/git-count-objects.1
+man/man1/git-credential-cache--daemon.1
+man/man1/git-credential-cache.1
+man/man1/git-credential-store.1
 man/man1/git-cvsexportcommit.1
 man/man1/git-cvsimport.1
 man/man1/git-cvsserver.1
@@ -77,6 +80,7 @@ man/man1/git-mktree.1
 man/man1/git-mv.1
 man/man1/git-name-rev.1
 man/man1/git-notes.1
+man/man1/git-p4.1
 man/man1/git-pack-objects.1
 man/man1/git-pack-redundant.1
 man/man1/git-pack-refs.1
@@ -152,6 +156,7 @@ man/man5/gitrepository-layout.5
 man/man5/gitweb.conf.5
 man/man7/gitcli.7
 man/man7/gitcore-tutorial.7
+man/man7/gitcredentials.7
 man/man7/gitcvs-migration.7
 man/man7/gitdiffcore.7
 man/man7/gitglossary.7
