@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10853 2012/02/06 12:32:38 wiz Exp $
+$NetBSD: TODO,v 1.10854 2012/02/06 14:22:54 shattered Exp $
 
 Suggested new packages
 ======================
@@ -517,7 +517,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.5
-	o dnstracer-1.9
 	o doclifter-2.7
 	o doxygen-1.7.6.1
 	o dpkg-1.16.0.3
