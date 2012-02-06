@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2010/04/15 09:07:37 tron Exp $
+# $NetBSD: Makefile,v 1.47 2012/02/06 06:19:18 sbd Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -26,16 +26,13 @@ EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 USE_TOOLS+=	bdftopcf csh:run
 
-REPLACE_INTERPRETER+=	csh
-REPLACE.csh.old=	/bin/csh
-REPLACE.csh.new=	${CSH}
-REPLACE_FILES.csh=	bin/audiocompose bin/audiosend bin/extcompose
-REPLACE_FILES.csh+=	bin/getfilename bin/mailserver bin/mailto-hebrew
-REPLACE_FILES.csh+=	bin/metasend bin/patch-metamail bin/showaudio
-REPLACE_FILES.csh+=	bin/showexternal bin/shownonascii bin/showpartial
-REPLACE_FILES.csh+=	bin/showpicture bin/sun-audio-file bin/sun-message.csh
-REPLACE_FILES.csh+=	bin/sun-to-mime
-REPLACE_FILES.csh+=	fonts/Xmailto-hebrew fonts/Xshownonascii
+REPLACE_CSH=	bin/audiocompose bin/audiosend bin/extcompose
+REPLACE_CSH+=	bin/getfilename bin/mailserver bin/mailto-hebrew
+REPLACE_CSH+=	bin/metasend bin/patch-metamail bin/showaudio
+REPLACE_CSH+=	bin/showexternal bin/shownonascii bin/showpartial
+REPLACE_CSH+=	bin/showpicture bin/sun-audio-file bin/sun-message.csh
+REPLACE_CSH+=	bin/sun-to-mime
+REPLACE_CSH+=	fonts/Xmailto-hebrew fonts/Xshownonascii
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 ${EGDIR}
 

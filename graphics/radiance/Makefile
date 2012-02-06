@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2011/07/21 05:53:23 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2012/02/06 06:19:17 sbd Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -32,29 +32,26 @@ PATCHEES=	makeall ./src/rt/Rmakefile ./src/util/Rmakefile		\
 		./src/px/tiff/contrib/addtiffo/Makefile  		\
 		./src/px/tiff/contrib/iptcutil/Makefile
 
-REPLACE_INTERPRETER+=	csh
-REPLACE.csh.old=	/bin/csh
-REPLACE.csh.new=	${CSH}
-REPLACE_FILES.csh=	src/cal/cal/colorcal.csh src/cal/cal/illumcal.csh
-REPLACE_FILES.csh+=	src/cal/cal/reinhard.csh src/gen/genwindow.csh
-REPLACE_FILES.csh+=	src/gen/genbackg.csh src/gen/genpine.csh
-REPLACE_FILES.csh+=	src/gen/glaze.csh src/gen/markpath.csh
-REPLACE_FILES.csh+=	src/px/falsecolor.csh src/px/normpat.csh
-REPLACE_FILES.csh+=	src/px/pacuity.csh src/px/pbilat.csh src/px/pdelta.csh
-REPLACE_FILES.csh+=	src/px/pdfblur.csh src/px/pgblur.csh src/px/phisteq.csh
-REPLACE_FILES.csh+=	src/px/phisto.csh src/px/pmblur.csh src/px/psquish.csh
-REPLACE_FILES.csh+=	src/px/pveil.csh src/px/vlpic.csh src/px/xyzimage.csh
-REPLACE_FILES.csh+=	src/util/compamb.csh src/util/dayfact.csh
-REPLACE_FILES.csh+=	src/util/debugcal.csh src/util/genambpos.csh
-REPLACE_FILES.csh+=	src/util/help2roff.csh src/util/glare.csh
-REPLACE_FILES.csh+=	src/util/ivpict.csh src/util/ivprep.csh
-REPLACE_FILES.csh+=	src/util/objline.csh src/util/objpict.csh
-REPLACE_FILES.csh+=	src/util/objview.csh src/util/raddepend.csh
-REPLACE_FILES.csh+=	src/util/rlux.csh src/util/tradinstall.csh
-REPLACE_FILES.csh+=	src/util/vinfo.csh
-REPLACE_FILES.csh+=	obj/cabin/anim1/script obj/cabin/anim1/script2
-REPLACE_FILES.csh+=	obj/cabin/runscript.csh
-REPLACE_FILES.csh+=	obj/office/anim.csh obj/office/anim2.csh
+REPLACE_CSH=	src/cal/cal/colorcal.csh src/cal/cal/illumcal.csh
+REPLACE_CSH+=	src/cal/cal/reinhard.csh src/gen/genwindow.csh
+REPLACE_CSH+=	src/gen/genbackg.csh src/gen/genpine.csh
+REPLACE_CSH+=	src/gen/glaze.csh src/gen/markpath.csh
+REPLACE_CSH+=	src/px/falsecolor.csh src/px/normpat.csh
+REPLACE_CSH+=	src/px/pacuity.csh src/px/pbilat.csh src/px/pdelta.csh
+REPLACE_CSH+=	src/px/pdfblur.csh src/px/pgblur.csh src/px/phisteq.csh
+REPLACE_CSH+=	src/px/phisto.csh src/px/pmblur.csh src/px/psquish.csh
+REPLACE_CSH+=	src/px/pveil.csh src/px/vlpic.csh src/px/xyzimage.csh
+REPLACE_CSH+=	src/util/compamb.csh src/util/dayfact.csh
+REPLACE_CSH+=	src/util/debugcal.csh src/util/genambpos.csh
+REPLACE_CSH+=	src/util/help2roff.csh src/util/glare.csh
+REPLACE_CSH+=	src/util/ivpict.csh src/util/ivprep.csh
+REPLACE_CSH+=	src/util/objline.csh src/util/objpict.csh
+REPLACE_CSH+=	src/util/objview.csh src/util/raddepend.csh
+REPLACE_CSH+=	src/util/rlux.csh src/util/tradinstall.csh
+REPLACE_CSH+=	src/util/vinfo.csh
+REPLACE_CSH+=	obj/cabin/anim1/script obj/cabin/anim1/script2
+REPLACE_CSH+=	obj/cabin/runscript.csh
+REPLACE_CSH+=	obj/office/anim.csh obj/office/anim2.csh
 
 .include "../../mk/bsd.prefs.mk"
 
