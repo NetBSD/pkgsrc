@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2012/01/13 10:55:51 obache Exp $
+# $NetBSD: Makefile,v 1.91 2012/02/06 12:42:31 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Like the XLock session-locker/screensaver, but with more
 
 CONFIGURE_ARGS+=	--with-opengl

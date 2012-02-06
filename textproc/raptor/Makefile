@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2011/07/02 01:24:28 markd Exp $
+# $NetBSD: Makefile,v 1.30 2012/02/06 12:41:44 wiz Exp $
 #
 
 DISTNAME=	raptor-1.4.21
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 

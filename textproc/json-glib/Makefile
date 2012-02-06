@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/11/05 15:56:47 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/06 12:41:44 wiz Exp $
 #
 
 DISTNAME=	json-glib-0.14.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/0.14/}
 EXTRACT_SUFX=	.tar.bz2
