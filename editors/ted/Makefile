@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2011/12/09 14:36:34 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2012/02/06 12:40:04 wiz Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
 

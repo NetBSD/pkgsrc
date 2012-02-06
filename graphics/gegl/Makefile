@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2011/12/09 17:45:13 adam Exp $
+# $NetBSD: Makefile,v 1.25 2012/02/06 12:40:23 wiz Exp $
 
 DISTNAME=	gegl-0.1.8
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gegl/0.1/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2012/01/13 10:55:13 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2012/02/06 12:40:30 wiz Exp $
 
 BUILDLINK_TREE+=	libkipi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkipi
 LIBKIPI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkipi+=	libkipi>=0.1.5
-BUILDLINK_ABI_DEPENDS.libkipi?=	libkipi>=0.1.6nb10
+BUILDLINK_ABI_DEPENDS.libkipi?=	libkipi>=0.1.6nb11
 BUILDLINK_PKGSRCDIR.libkipi?=	../../graphics/libkipi
 
 .include "../../x11/kdelibs3/buildlink3.mk"

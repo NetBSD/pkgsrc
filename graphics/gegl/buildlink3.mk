@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/11/01 06:01:33 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2012/02/06 12:40:23 wiz Exp $
 
 BUILDLINK_TREE+=	gegl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gegl
 GEGL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gegl+=	gegl>=0.0.20
-BUILDLINK_ABI_DEPENDS.gegl+=	gegl>=0.1.6nb2
+BUILDLINK_ABI_DEPENDS.gegl+=	gegl>=0.1.8nb1
 BUILDLINK_PKGSRCDIR.gegl?=	../../graphics/gegl
 
 pkgbase := gegl

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2011/10/03 09:50:36 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2012/02/06 12:40:30 wiz Exp $
 
 BUILDLINK_TREE+=	libpano13
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpano13
 LIBPANO13_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpano13+=	libpano13>=2.9.17
-BUILDLINK_ABI_DEPENDS.libpano13+=	libpano13>=2.9.18
+BUILDLINK_ABI_DEPENDS.libpano13+=	libpano13>=2.9.18nb1
 BUILDLINK_PKGSRCDIR.libpano13?=		../../graphics/libpano13
 
 .include "../../mk/jpeg.buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:00:56 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/06 12:39:51 wiz Exp $
 #
 
-PKGREVISION=		1
+PKGREVISION=		2
 GST_PLUGINS0.10_NAME=	pango
 GST_PLUGINS0.10_DIRS=	ext/pango
 GST_PLUGINS0.10_FLAGS=	pango

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2011/11/01 06:01:34 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/02/06 12:40:24 wiz Exp $
 #
 
 DISTNAME=		refocus-it-2.0.0
 PKGNAME=		gimp-refocus-it-2.0.0
-PKGREVISION=		22
+PKGREVISION=		23
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=refocus-it/}
 
