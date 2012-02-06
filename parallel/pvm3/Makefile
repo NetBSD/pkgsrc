@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/02/03 04:29:54 sbd Exp $
+# $NetBSD: Makefile,v 1.62 2012/02/06 06:19:18 sbd Exp $
 
 DISTNAME=	pvm3.4.6
 PKGNAME=	pvm-3.4.6
@@ -39,10 +39,7 @@ MAKE_ENV+=		PVMLIB_VER=3:4
 MAKE_ENV+=		PVM_DIR=${PVM_DIR:Q}
 BUILD_TARGET=		all install
 
-REPLACE_INTERPRETER+=	csh
-REPLACE.csh.old=	.*csh
-REPLACE.csh.new=	${CSH}
-REPLACE_FILES.csh=	${WRKSRC}/lib/debugger ${WRKSRC}/lib/debugger2
+REPLACE_CSH=		${WRKSRC}/lib/debugger ${WRKSRC}/lib/debugger2
 
 # Set PVM_ARCH to the correct value for this machine platform.
 .include "arch.mk"

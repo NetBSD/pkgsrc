@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 06:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2012/02/06 06:19:17 sbd Exp $
 
 DISTNAME=		mapit.v1-16
 PKGNAME=		dipmap-1.16
@@ -18,10 +18,7 @@ USE_TOOLS+=		csh:run
 WRKSRC=			${WRKDIR}/mapit
 INSTALLATION_DIRS=	bin libexec
 
-REPLACE_INTERPRETER+=	csh
-REPLACE.csh.old=	/bin/csh
-REPLACE.csh.new=	${CSH}
-REPLACE_FILES.csh=	dipmap
+REPLACE_CSH=		dipmap
 
 post-patch:
 	${SED} "s,@PREFIX@,${PREFIX},g" ${WRKSRC}/dipmap > ${WRKSRC}/dipmap.new
