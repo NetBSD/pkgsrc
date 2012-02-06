@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.399 2012/02/06 06:25:03 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.400 2012/02/06 11:06:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -587,3 +587,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/rsynth to 2.0nb5 [sbd 2012-02-06]
 	Updated filesystems/perfuse to 20120206 [manu 2012-02-06]
 	Updated benchmarks/benchfft to 2.0nb4 [sbd 2012-02-06]
+	Updated textproc/py-X to 0.9nb3 [obache 2012-02-06]
