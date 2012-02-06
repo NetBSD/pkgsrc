@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2009/10/06 17:27:51 joerg Exp $
+$NetBSD: distinfo,v 1.16 2012/02/06 02:40:29 sbd Exp $
 
 SHA1 (rplay-3.3.2.tar.gz) = 80b8001998a6f9837773f26285afffd609df2662
 RMD160 (rplay-3.3.2.tar.gz) = e5c740eade2cc770ea78c8f53020fa6d78f59861
@@ -34,3 +34,5 @@ SHA1 (patch-bc) = ea0d5d00cf71263f6f6cf2e54a8dd8b730aba8e8
 SHA1 (patch-ca) = d5ffe7a8e0f2112adf0d11b5661d565e5a57dec8
 SHA1 (patch-cb) = 24c810e43d6735c24908ba429ede32a49cff36e8
 SHA1 (patch-cc) = 824d7c70282d24e489c7c041982018da13ac70ce
+SHA1 (patch-devrplay_Makefile.in) = 0e158606fefa128cfcd798cd7919fe589ba04144
+SHA1 (patch-devrplay_devrplay.c) = b9a5434a8060347217e5a683cfc84d9bf73d9572
