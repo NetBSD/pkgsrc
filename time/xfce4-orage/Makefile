@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/11/01 06:02:40 sbd Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/06 12:41:47 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTNAME=	orage-${XFCE4_VERSION}
 PKGNAME=	xfce4-orage-${XFCE4_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	time
 COMMENT=	Xfce time managing application
 
