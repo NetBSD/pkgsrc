@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/01/13 10:54:48 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/02/06 12:39:29 wiz Exp $
 #
 
 DISTNAME=	qjackctl-0.3.3
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qjackctl/}
 
