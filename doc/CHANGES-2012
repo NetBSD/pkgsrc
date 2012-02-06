@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.410 2012/02/06 17:44:27 adam Exp $
+$NetBSD: CHANGES-2012,v 1.411 2012/02/06 20:31:39 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -602,3 +602,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/dhcpcd-dbus to 0.6.0 [roy 2012-02-06]
 	Updated net/dhcpcd-gtk to 0.6.0 [roy 2012-02-06]
 	Updated textproc/xmlrpc-c to 1.16.39 [adam 2012-02-06]
+	Updated shells/mksh to 40d [bsiegert 2012-02-06]
