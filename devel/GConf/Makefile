@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2011/05/13 17:07:27 drochner Exp $
+# $NetBSD: Makefile,v 1.77 2012/02/06 12:39:46 wiz Exp $
 #
 
 .include "../../devel/GConf/Makefile.common"
+
+PKGREVISION=		1
 
 CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	ac_cv_header_ldap_h=no
