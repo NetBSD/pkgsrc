@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.405 2012/02/06 14:22:54 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.406 2012/02/06 14:27:51 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -597,3 +597,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-base to 1.7.9 [adam 2012-02-06]
 	Updated devel/scmgit-docs to 1.7.9 [adam 2012-02-06]
 	Updated net/dnstracer to 1.9 [shattered 2012-02-06]
+	Added textproc/ruby-yajl version 1.1.0 [fhajny 2012-02-06]
