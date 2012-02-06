@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/01/13 10:54:55 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/06 12:39:47 wiz Exp $
 #
 
 DISTNAME=	cppcheck-1.48
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
