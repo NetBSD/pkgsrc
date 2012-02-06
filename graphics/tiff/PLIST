@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/11/15 18:12:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/02/06 12:30:52 wiz Exp $
 bin/bmp2tiff
 bin/fax2ps
 bin/fax2tiff
@@ -29,6 +29,7 @@ include/tiffio.hxx
 include/tiffvers.h
 lib/libtiff.la
 lib/libtiffxx.la
+lib/pkgconfig/libtiff-4.pc
 man/man1/bmp2tiff.1
 man/man1/fax2ps.1
 man/man1/fax2tiff.1
@@ -229,3 +230,4 @@ share/doc/tiff/html/v3.8.2.html
 share/doc/tiff/html/v3.9.0beta.html
 share/doc/tiff/html/v3.9.1.html
 share/doc/tiff/html/v3.9.2.html
+share/doc/tiff/html/v${PKGVERSION}.html
