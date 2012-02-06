@@ -1,0 +1,16 @@
+$NetBSD: patch-e_data_book_c,v 1.1 2012/02/06 10:44:43 drochner Exp $
+
+Replace deprecated g_atomic_int_exchange_and_add()
+1886d3d0573388aa5c13af99f714687ba6a66ec6
+
+--- addressbook/libedata-book/e-data-book.c.orig	2011-04-21 19:35:36.000000000 +0000
++++ addressbook/libedata-book/e-data-book.c
+@@ -632,7 +632,7 @@ construct_bookview_path (void)
+ 
+ 	return g_strdup_printf ("/org/gnome/evolution/dataserver/addressbook/BookView/%d/%d",
+ 				getpid (),
+-				g_atomic_int_exchange_and_add ((int*)&counter, 1));
++				g_atomic_int_add ((int*)&counter, 1));
+ }
+ 
+ static gboolean
