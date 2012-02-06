@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2011/11/01 06:01:05 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2012/02/06 12:39:59 wiz Exp $
 #
 
 DISTNAME=	beaver${BEAVER_VERSION:S/./_/g}
 PKGNAME=	beaver-${BEAVER_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	http://download.savannah.gnu.org/releases/beaver/0.3.0.1%20-%202008.06.26/
 EXTRACT_SUFX=	.tgz

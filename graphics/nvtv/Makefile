@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/11/01 06:01:41 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/06 12:40:31 wiz Exp $
 
 DISTNAME=	nvtv-0.4.7
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nv-tv-out/}
 

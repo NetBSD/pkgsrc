@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2011/11/01 06:00:55 sbd Exp $
+# $NetBSD: Makefile,v 1.29 2012/02/06 12:39:50 wiz Exp $
 
 DISTNAME=		giblib-1.2.4
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		devel
 MASTER_SITES=		http://linuxbrit.co.uk/downloads/
 

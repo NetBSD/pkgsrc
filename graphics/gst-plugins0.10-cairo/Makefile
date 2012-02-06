@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:01:36 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/06 12:40:25 wiz Exp $
 #
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 GST_PLUGINS0.10_NAME=	cairo
 GST_PLUGINS0.10_DIRS=	ext/cairo
