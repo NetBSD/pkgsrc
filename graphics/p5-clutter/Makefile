@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2011/11/01 06:01:42 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/06 12:40:32 wiz Exp $
 #
 
 DISTNAME=	Clutter-1.002
 PKGNAME=	p5-${DISTNAME:tl}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Clutter/}
 
