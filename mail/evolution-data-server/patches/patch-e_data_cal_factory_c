@@ -1,0 +1,16 @@
+$NetBSD: patch-e_data_cal_factory_c,v 1.1 2012/02/06 10:44:44 drochner Exp $
+
+Replace deprecated g_atomic_int_exchange_and_add()
+1886d3d0573388aa5c13af99f714687ba6a66ec6
+
+--- calendar/libedata-cal/e-data-cal-factory.c.orig	2011-04-21 19:36:35.000000000 +0000
++++ calendar/libedata-cal/e-data-cal-factory.c
+@@ -245,7 +245,7 @@ construct_cal_factory_path (void)
+ 
+ 	return g_strdup_printf (
+ 		"/org/gnome/evolution/dataserver/calendar/%d/%u",
+-		getpid (), g_atomic_int_exchange_and_add (&counter, 1));
++		getpid (), g_atomic_int_add (&counter, 1));
+ }
+ 
+ static gboolean
