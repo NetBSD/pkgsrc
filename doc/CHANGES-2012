@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.398 2012/02/06 05:46:25 manu Exp $
+$NetBSD: CHANGES-2012,v 1.399 2012/02/06 06:25:03 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/py-s3cmd to 1.0.1 [jakllsch 2012-02-06]
 	Updated audio/rsynth to 2.0nb5 [sbd 2012-02-06]
 	Updated filesystems/perfuse to 20120206 [manu 2012-02-06]
+	Updated benchmarks/benchfft to 2.0nb4 [sbd 2012-02-06]
