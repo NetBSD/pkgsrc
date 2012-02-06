@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.242 2012/02/06 12:41:29 fhajny Exp $
+# $NetBSD: replace.mk,v 1.243 2012/02/06 12:49:38 fhajny Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -737,7 +737,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tar=
 TOOLS_DEPENDS.tar?=		pax>=20040802:../../archivers/pax
 TOOLS_CREATE+=			tar
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tar=pax
-TOOLS_PATH.tar=			${TOOLS_PREFIX.tar}/bin/${NBPAX_PROGRAM_PREFIX}tar
+TOOLS_PATH.tar=			${TOOLS_PREFIX.tar}/bin/tar
 .  endif
 .endif
 
