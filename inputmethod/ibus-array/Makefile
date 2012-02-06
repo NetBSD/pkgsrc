@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:43:54 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/06 12:40:39 wiz Exp $
 #
 
 DISTNAME=	ibus-array-0.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus-array.googlecode.com/files/
 

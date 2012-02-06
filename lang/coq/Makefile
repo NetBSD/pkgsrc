@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2012/01/24 09:11:06 sbd Exp $
+# $NetBSD: Makefile,v 1.38 2012/02/06 12:40:46 wiz Exp $
 #
 
 DISTNAME=	coq-8.3pl1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang math
 MASTER_SITES=	http://coq.inria.fr/distrib/V8.3pl1/files/
 
