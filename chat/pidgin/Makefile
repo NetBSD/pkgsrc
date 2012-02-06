@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2011/11/01 06:00:47 sbd Exp $
+# $NetBSD: Makefile,v 1.35 2012/02/06 12:39:37 wiz Exp $
 
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Multi-protocol Instant Messaging client GTK frontend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
