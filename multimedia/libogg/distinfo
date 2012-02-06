@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2012/01/08 11:31:28 adam Exp $
+$NetBSD: distinfo,v 1.10 2012/02/06 01:31:13 dsainty Exp $
 
 SHA1 (libogg-1.3.0.tar.xz) = d74e7514f268d58a171b4b9baf15602fd8060c33
 RMD160 (libogg-1.3.0.tar.xz) = fb6dcdadeccabbd8555e007f9efd28fc11708ba5
 Size (libogg-1.3.0.tar.xz) = 289384 bytes
-SHA1 (patch-aa) = 36d34f1dfc27abf5779a0bd2e8cfbd5e862a19a7
