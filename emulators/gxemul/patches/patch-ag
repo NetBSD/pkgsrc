@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2012/02/06 05:37:40 matt Exp $
+
+--- src/cpus/cpu_arm_instr.cc.orig	2012-02-06 05:14:31.000000000 +0000
++++ src/cpus/cpu_arm_instr.cc
+@@ -2631,6 +2631,7 @@ X(to_be_translated)
+ 					ic->f = cond_instr(bx);
+ 			}
+ 			ic->arg[0] = (size_t)(&cpu->cd.arm.r[rm]);
++			ic->arg[2] = (addr & 0xffc) + 4;
+                         break;
+                 }
+ 		if ((iword & 0x0fb00ff0) == 0x1000090) {
