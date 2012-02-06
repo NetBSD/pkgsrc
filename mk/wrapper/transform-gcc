@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.22 2012/01/21 12:05:03 shattered Exp $
+# $NetBSD: transform-gcc,v 1.23 2012/02/06 12:41:29 fhajny Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -111,6 +111,9 @@ case $arg in
 
 # There are some packages suppressing all warnings. We don't want that.
 -w			) transform_discard ;;
+
+# Discard visibility (Sun linker won't support it)
+-fvisibility=*          ) transform_discard ;;
 
 # Options specific to g++.
 -fexceptions		|\
