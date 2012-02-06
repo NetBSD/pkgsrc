@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/06 11:04:46 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/06 11:06:42 obache Exp $
 #
 
 DISTNAME=	PyX-0.9
@@ -18,6 +18,8 @@ DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=	#none
 
 CONF_FILES=	${PREFIX}/share/examples/PyX/pyxrc \
 		${PKG_SYSCONFDIR}/pyxrc
