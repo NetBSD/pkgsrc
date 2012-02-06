@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10852 2012/02/04 21:59:39 shattered Exp $
+$NetBSD: TODO,v 1.10853 2012/02/06 12:32:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1302,7 +1302,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texmaker-3.1 [pkg/45521]
 	o texmaker-3.2.2
 	o tfmxplay-1.1.6
-	o tiff-4.0.0
 	o tig-0.18
 	o tightvnc-2.0.95
 	o tile-0.7.4
