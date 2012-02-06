@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2011/11/01 06:02:29 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/06 12:41:28 wiz Exp $
 #
 
 DISTNAME=	putty-0.60-2009-09-06
 PKGNAME=	putty-0.60.20090906
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/ahoka/dist/
 
