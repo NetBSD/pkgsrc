@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.9 2011/01/23 03:00:04 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/06 11:04:46 obache Exp $
 #
 
 DISTNAME=	PyX-0.9
 PKGNAME=	${PYPKGPREFIX}-X-0.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyx/}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://pyx.sourceforge.net/
+COMMENT=	Package for the creation of PostScript and PDF files
+LICENSE=	gnu-gpl-v2 # or later
 
 DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
-PYDISTUTILSPKG=	yes
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pyx.sourceforge.net/
-COMMENT=	Package for the creation of PostScript and PDF files
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONF_FILES=	${PREFIX}/share/examples/PyX/pyxrc \
 		${PKG_SYSCONFDIR}/pyxrc
@@ -37,6 +36,6 @@ pre-install:
 post-install:
 	${CP} ${WRKSRC}/pyxrc ${DESTDIR}${PREFIX}/share/examples/PyX/pyxrc
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
