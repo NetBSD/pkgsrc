@@ -1,0 +1,45 @@
+$NetBSD: patch-devrplay_Makefile.in,v 1.1 2012/02/06 02:40:29 sbd Exp $
+
+--- devrplay/Makefile.in.orig	1999-03-23 02:36:30.000000000 +0000
++++ devrplay/Makefile.in
+@@ -10,29 +10,30 @@ MKINSTALLDIRS= @srcdir@/../mkinstalldirs
+ 
+ CPPFLAGS=	$(CC_OPTIONS) -fPIC -I. -I../include -I@srcdir@/../include @DEFS@
+ 
+-.c.o:
+-		$(CC) -c $(CPPFLAGS) $(CFLAGS) $<
++.SUFFIXES: .lo
++.c.lo:
++		$(LIBTOOL) --mode=compile $(CC) -shared -c $(CPPFLAGS) $(CFLAGS) $<
+ 
+-LDFLAGS=	$(LD_OPTIONS) -shared @LDFLAGS@ @LIBS@ -L../librplay -lrplay -ldl
++LDFLAGS=	$(LD_OPTIONS) @LDFLAGS@ @LIBS@ -L../librplay -lrplay -ldl -rpath $(libdir)
+ 
+-TARGET=		devrplay.so
++TARGET=		devrplay.la
+ SRCS=		devrplay.c 
+-OBJS=		devrplay.o
++OBJS=		devrplay.lo
+ 
+ all:		$(TARGET)
+ 
+ #$(TARGET):	$(OBJS) ../librplay/librplay.so
+ #		$(CC) -o $@ $(OBJS) ../librplay/rplay.lo ../librplay/rptp.lo $(LDFLAGS)
+ 
+-$(TARGET):	$(OBJS) ../librplay/librplay.so
+-		$(CC) -o $@ $(OBJS) $(LDFLAGS)
++$(TARGET):	$(OBJS) ../librplay/librplay.la
++		$(LIBTOOL) --mode=link $(CC) -module -shared  -avoid-version -o $@ $(OBJS) $(LDFLAGS)
+ 
+-../librplay/librplay.so:
+-		(cd ../librplay; $(MAKE) $(MFLAGS) librplay.so)
++../librplay/librplay.la:
++		(cd ../librplay; $(MAKE) $(MFLAGS) librplay.la)
+ 
+ install:	all
+ 		$(MKINSTALLDIRS) $(libdir)
+-		$(INSTALL_DATA) $(TARGET) $(libdir)
++		$(LIBTOOL) --mode=install $(INSTALL_DATA) $(TARGET) $(libdir)
+ 
+ uninstall:
+ 		$(RM) $(libdir)/$(TARGET)
