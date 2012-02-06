@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/07/03 21:25:50 jym Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/06 11:47:25 obache Exp $
 #
 
 VER=		1.0.2
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-PYDISTUTILSPKG= yes
+EGG_NAME=	${DISTNAME:S/-/_/}
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python=	build/scripts.*/4xml
@@ -29,14 +29,10 @@ SUBST_FILES.python+=	test/test.py
 SUBST_STAGE.python=	post-build
 SUBST_SED.python=	-e 's,\#![^ ]* python,\#! ${PYTHONBIN},'
 
-# lang/python/egg.mk can't be used because of setup.py
-# Use this quirk instead for the egg file
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
 	${PYTHONBIN} setup.py config --prefix=${PREFIX}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
