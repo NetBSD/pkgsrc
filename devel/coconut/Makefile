@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2011/11/01 06:00:53 sbd Exp $
+# $NetBSD: Makefile,v 1.44 2012/02/06 12:39:47 wiz Exp $
 #
 
 DISTNAME=	coconut-0.3.0
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	devel
 MASTER_SITES=	# ${MASTER_SITE_SOURCEFORGE:=coconut-lib/}
 

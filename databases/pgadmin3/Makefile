@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2011/11/01 06:00:52 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2012/02/06 12:39:45 wiz Exp $
 
 .include "../../databases/postgresql84/Makefile.mirrors"
 
 DISTNAME=	pgadmin3-1.12.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	${PGSQL_MIRRORS:=pgadmin3/release/v${PKGVERSION_NOREV}/src/}
 
