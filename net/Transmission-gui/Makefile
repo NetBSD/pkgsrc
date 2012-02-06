@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/16 22:16:43 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/06 12:41:09 wiz Exp $
 
 PKGNAME=		${DISTNAME:C:t:T:C:-:-gui-:}
 
@@ -9,6 +9,8 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}
 CONFIGURE_ARGS+=	--disable-cli --disable-daemon
 
 .include "../../net/Transmission/Makefile.common"
+
+PKGREVISION=		1
 
 post-build:
 	cd ${WRKSRC}/qt && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake qtr.pro
