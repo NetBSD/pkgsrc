@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2010/10/28 10:23:08 adam Exp $
+$NetBSD: patch-aa,v 1.14 2012/02/06 13:11:35 adam Exp $
 
---- Makefile.orig	2010-10-22 03:49:16.000000000 +0000
+--- Makefile.orig	2012-01-27 20:51:04.000000000 +0000
 +++ Makefile
-@@ -259,8 +259,6 @@ endif
+@@ -303,8 +303,6 @@ endif
  
  CFLAGS = -g -O2 -Wall
  LDFLAGS =
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.13 2010/10/28 10:23:08 adam Exp $
  STRIP ?= strip
  
  # Among the variables below, these:
-@@ -298,13 +296,9 @@ pathsep = :
+@@ -339,13 +337,9 @@ pathsep = :
  
- export prefix bindir sharedir sysconfdir gitwebdir
+ export prefix bindir sharedir sysconfdir gitwebdir localedir
  
 -CC = gcc
 -AR = ar
@@ -25,8 +25,8 @@ $NetBSD: patch-aa,v 1.13 2010/10/28 10:23:08 adam Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -834,9 +828,10 @@ ifeq ($(uname_S),Darwin)
- 	USE_ST_TIMESPEC = YesPlease
+@@ -928,9 +922,10 @@ ifeq ($(uname_S),Darwin)
+ 	HAVE_DEV_TTY = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
 +	NEED_LIBICONV = YesPlease
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.13 2010/10/28 10:23:08 adam Exp $
  	SANE_TOOL_PATH = /usr/xpg6/bin:/usr/xpg4/bin
  	NO_STRCASESTR = YesPlease
  	NO_MEMMEM = YesPlease
-@@ -880,8 +875,6 @@ ifeq ($(uname_S),SunOS)
+@@ -972,8 +967,6 @@ ifeq ($(uname_S),SunOS)
  		NO_STRTOUMAX = YesPlease
  		GIT_TEST_CMP = cmp
  	endif
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.13 2010/10/28 10:23:08 adam Exp $
  	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__ -DHAVE_ALLOCA_H
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -1563,8 +1556,8 @@ DEFAULT_PAGER_CQ_SQ = $(subst ','\'',$(D
+@@ -1814,8 +1807,8 @@ DEFAULT_PAGER_CQ_SQ = $(subst ','\'',$(D
  BASIC_CFLAGS += -DDEFAULT_PAGER='$(DEFAULT_PAGER_CQ_SQ)'
  endif
  

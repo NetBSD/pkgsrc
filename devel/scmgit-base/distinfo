@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.46 2012/01/20 15:43:38 adam Exp $
+$NetBSD: distinfo,v 1.47 2012/02/06 13:11:35 adam Exp $
 
-SHA1 (git-1.7.8.4.tar.gz) = add7b05f26216181d1b148dde298432132552b0f
-RMD160 (git-1.7.8.4.tar.gz) = ee203b3d6252c2df150ef7904c6b95672dea4aff
-Size (git-1.7.8.4.tar.gz) = 3544195 bytes
-SHA1 (patch-aa) = f47ff9d8b9ba8592f7bbd21d4b0ab30394e8f9a0
+SHA1 (git-1.7.9.tar.gz) = ed51ef5ef250daaa6e98515cf2641820cd268d4c
+RMD160 (git-1.7.9.tar.gz) = 60aa60c076d0e398f7bc07d6cfab3c5ed28fdadc
+Size (git-1.7.9.tar.gz) = 3606326 bytes
+SHA1 (patch-aa) = 52a8bd8aec6dcb54dafe9414a00e627a6b04e4a0
 SHA1 (patch-ac) = ae75c6ca3abb5edf688e4877f3df8b6c6297f091
-SHA1 (patch-ae) = 06ea26658a986dc702c1c2c04c1a27f0a01e4dce
-SHA1 (patch-af) = 60029a215edf5218a76be41932afb5b9f8c4729a
+SHA1 (patch-ae) = d420c0a1db0de77bd9713d066434981b20bd4299
+SHA1 (patch-af) = d6c942f7d8a0fe0074ea3edb7e6d858354c85232
 SHA1 (patch-ag) = 4f0b9a5745203ea7ef369c8272b3ea7c644762f0
 SHA1 (patch-ah) = f22a2160631fb624e9e20616c68ad1a4aa2bebc7
 SHA1 (patch-ai) = 56b63d4790a11f5eb128186ad5efdd1bcf102f2e
