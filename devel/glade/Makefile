@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2011/11/01 06:00:55 sbd Exp $
+# $NetBSD: Makefile,v 1.69 2012/02/06 12:39:50 wiz Exp $
 
 DISTNAME=	glade-2.12.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glade/2.12/}
 EXTRACT_SUFX=	.tar.bz2
