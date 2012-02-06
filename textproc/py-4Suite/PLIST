@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/16 22:31:04 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/06 11:47:25 obache Exp $
 bin/4xml
 bin/4xpath
 bin/4xslt
@@ -349,7 +349,7 @@ lib/4Suite/tests/Xml/Xslt/__init__.py
 lib/4Suite/tests/Xml/Xslt/test_harness.py
 lib/4Suite/tests/Xml/__init__.py
 lib/4Suite/tests/test.py
-${PYSITELIB}/4Suite_XML-1.0.2-py${PYVERSSUFFIX}.egg-info
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.py
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.pyc
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.pyo
