@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/04/22 13:42:59 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/06 12:39:31 wiz Exp $
 #
 
 DISTNAME=	streamripper-1.64.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=streamripper/}
 

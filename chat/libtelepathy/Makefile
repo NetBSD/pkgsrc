@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2011/04/22 13:42:24 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/02/06 12:39:36 wiz Exp $
 #
 
 DISTNAME=	libtelepathy-0.3.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/libtelepathy/
 

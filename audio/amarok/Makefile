@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.103 2012/01/13 10:54:44 obache Exp $
+# $NetBSD: Makefile,v 1.104 2012/02/06 12:39:17 wiz Exp $
 #
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.4.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio multimedia
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/amarok/${VERS}/src/
 EXTRACT_SUFX=	.tar.bz2
