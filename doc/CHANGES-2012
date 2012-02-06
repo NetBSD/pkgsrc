@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.404 2012/02/06 13:12:52 adam Exp $
+$NetBSD: CHANGES-2012,v 1.405 2012/02/06 14:22:54 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -596,3 +596,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit to 1.7.9 [adam 2012-02-06]
 	Updated devel/scmgit-base to 1.7.9 [adam 2012-02-06]
 	Updated devel/scmgit-docs to 1.7.9 [adam 2012-02-06]
+	Updated net/dnstracer to 1.9 [shattered 2012-02-06]
