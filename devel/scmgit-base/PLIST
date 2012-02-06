@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2012/01/21 10:16:43 obache Exp $
+@comment $NetBSD: PLIST,v 1.28 2012/02/06 13:11:35 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -51,6 +51,9 @@ libexec/git-core/git-commit
 libexec/git-core/git-commit-tree
 libexec/git-core/git-config
 libexec/git-core/git-count-objects
+libexec/git-core/git-credential-cache
+libexec/git-core/git-credential-cache--daemon
+libexec/git-core/git-credential-store
 libexec/git-core/git-cvsexportcommit
 libexec/git-core/git-cvsimport
 libexec/git-core/git-cvsserver
@@ -280,3 +283,4 @@ share/gitweb/static/git-logo.png
 share/gitweb/static/gitweb.css
 share/gitweb/static/gitweb.js
 @pkgdir share/examples/scmgit/templates/branches
+share/locale/is/LC_MESSAGES/git.mo
