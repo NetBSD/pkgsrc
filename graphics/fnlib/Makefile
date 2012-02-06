@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2011/04/22 13:42:43 obache Exp $
+# $NetBSD: Makefile,v 1.45 2012/02/06 12:40:22 wiz Exp $
 #
 
 DISTNAME=		fnlib-0.5
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		x11 graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
