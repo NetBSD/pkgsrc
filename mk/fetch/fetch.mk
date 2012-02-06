@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.53 2011/12/06 01:17:33 obache Exp $
+# $NetBSD: fetch.mk,v 1.54 2012/02/06 12:41:29 fhajny Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -266,7 +266,6 @@ _FETCH_ARGS+=	-d ${DIST_SUBDIR}
 .PHONY: do-fetch-file
 do-fetch-file: .USE
 	@${STEP_MSG} "Fetching ${.TARGET:T}"
-	${RUN} ${MKDIR} ${.TARGET:H}
 	${RUN}								\
 	for d in "" ${DIST_PATH:S/:/ /g}; do				\
 		case $$d in						\
