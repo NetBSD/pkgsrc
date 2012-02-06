@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2012/01/24 09:11:13 sbd Exp $
+# $NetBSD: Makefile,v 1.51 2012/02/06 12:41:20 wiz Exp $
 #
 
 DISTNAME=		glabels-2.2.8
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=glabels/}
 
