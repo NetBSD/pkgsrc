@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.403 2012/02/06 12:44:38 obache Exp $
+$NetBSD: CHANGES-2012,v 1.404 2012/02/06 13:12:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -593,3 +593,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/ruby-raindrops version 0.8.0 [fhajny 2012-02-06]
 	Added www/ruby-unicorn version 4.2.0 [fhajny 2012-02-06]
 	Updated textproc/dblatex to 0.3nb1 [obache 2012-02-06]
+	Updated devel/scmgit to 1.7.9 [adam 2012-02-06]
+	Updated devel/scmgit-base to 1.7.9 [adam 2012-02-06]
+	Updated devel/scmgit-docs to 1.7.9 [adam 2012-02-06]
