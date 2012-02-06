@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2011/04/22 13:41:56 obache Exp $
+# $NetBSD: Makefile,v 1.46 2012/02/06 12:39:22 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GNOME 2 text-to-speech API
 
