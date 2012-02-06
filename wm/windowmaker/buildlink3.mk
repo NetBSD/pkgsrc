@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2011/11/01 06:02:44 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2012/02/06 12:41:50 wiz Exp $
 
 BUILDLINK_TREE+=	windowmaker
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	windowmaker
 WINDOWMAKER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.windowmaker+=		windowmaker>=0.80.2nb3
-BUILDLINK_ABI_DEPENDS.windowmaker+=	windowmaker>=0.92.0nb17
+BUILDLINK_ABI_DEPENDS.windowmaker+=	windowmaker>=0.92.0nb18
 BUILDLINK_PKGSRCDIR.windowmaker?=	../../wm/windowmaker
 
 .include "../../devel/gettext-lib/buildlink3.mk"

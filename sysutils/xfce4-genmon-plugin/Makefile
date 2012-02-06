@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/11/01 06:02:36 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/06 12:41:40 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	3.1
 
 DISTNAME=	xfce4-genmon-plugin-${XFCE4_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-genmon-plugin/
 COMMENT=	Xfce general purpose monitor plugin

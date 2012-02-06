@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2011/04/22 13:44:41 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/02/06 12:41:32 wiz Exp $
 
 .include "../../sysutils/gamin/Makefile.common"
 
-PKGREVISION=		3
+PKGREVISION=		4
 CONFIGURE_ARGS+=	--enable-server
 
 TEST_TARGET=		check

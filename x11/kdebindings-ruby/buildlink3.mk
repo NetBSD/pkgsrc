@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/01/13 10:55:48 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/02/06 12:42:17 wiz Exp $
 
 BUILDLINK_TREE+=	kdebindings-ruby
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdebindings-ruby
 KDEBINDINGS_RUBY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdebindings-ruby+=	kdebindings-ruby>=3.5.5
-BUILDLINK_ABI_DEPENDS.kdebindings-ruby?=	kdebindings-ruby>=3.5.10nb12
+BUILDLINK_ABI_DEPENDS.kdebindings-ruby?=	kdebindings-ruby>=3.5.10nb13
 BUILDLINK_PKGSRCDIR.kdebindings-ruby?=	../../x11/kdebindings-ruby
 
 .include "../../lang/ruby/buildlink3.mk"
