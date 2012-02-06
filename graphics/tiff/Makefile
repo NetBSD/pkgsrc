@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2011/04/12 08:57:57 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2012/02/06 12:30:52 wiz Exp $
 
-DISTNAME=	tiff-3.9.5
+DISTNAME=	tiff-4.0.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
@@ -22,6 +23,8 @@ CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
 CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
+
+PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
 TEST_TARGET=		check
 
