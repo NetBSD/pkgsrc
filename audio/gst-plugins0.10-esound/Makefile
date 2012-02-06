@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/01/13 10:54:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/06 12:39:23 wiz Exp $
 #
 
 GST_PLUGINS0.10_NAME=	esound
 GST_PLUGINS0.10_DIRS=	ext/esd
 GST_PLUGINS0.10_FLAGS=	esd
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
