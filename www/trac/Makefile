@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2012/01/27 05:58:56 obache Exp $
+# $NetBSD: Makefile,v 1.55 2012/02/07 01:32:16 gdt Exp $
 #
 
-DISTNAME=	Trac-0.12.2
+DISTNAME=	Trac-0.12.3
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/ \
 		ftp://ftp.edgewall.org/pub/trac/
