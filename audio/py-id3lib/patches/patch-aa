@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2012/02/05 22:27:09 sbd Exp $
+$NetBSD: patch-aa,v 1.5 2012/02/07 09:04:56 obache Exp $
 
-Fix for LP64 on python > 2.4.
+* Fix for LP64 on python > 2.4.
+* `strchr' for `const char*' may return `const char*'.
 
 --- pyid3lib.cc.orig	2003-02-16 23:50:20.000000000 +0000
 +++ pyid3lib.cc
@@ -91,7 +92,7 @@ Fix for LP64 on python > 2.4.
  {
      ID3_Frame* newframe;
  
-@@ -382,7 +393,7 @@ static ID3_Frame** frames_from_dictseq(
+@@ -382,7 +393,7 @@ static ID3_Frame** frames_from_dictseq( 
      return NULL;
  }
  
@@ -109,12 +110,12 @@ Fix for LP64 on python > 2.4.
      
      ID3_Field* field;
      ID3_FieldID flid;
-@@ -1054,7 +1065,7 @@ static PyObject* id3_getattr( ID3Object*
-             fld = frame->GetField( ID3FN_TEXT );
-             str = fld->GetRawText();
-             
--            if ( (slash = strchr( str, '/' )) != NULL )
-+            if ( (slash = (char *)strchr( str, '/' )) != NULL )
-                 result = Py_BuildValue( "ii", atoi( str ), atoi( slash+1 ) );
-             else
-                 result = Py_BuildValue( "(i)", atoi( str ) );
+@@ -1013,7 +1024,7 @@ static PyObject* id3_getattr( ID3Object*
+     {
+         ID3_Frame* frame;
+ 	const char* str;
+-	char* slash;
++	const char* slash;
+         ID3_Field* fld;
+ 	int i;
+ 
