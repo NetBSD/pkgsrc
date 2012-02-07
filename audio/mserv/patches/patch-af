@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
+$NetBSD: patch-af,v 1.10 2012/02/07 09:44:22 martin Exp $
 
---- mserv/mserv.c.orig	2003-08-03 09:57:20.000000000 -0500
-+++ mserv/mserv.c
-@@ -62,12 +62,17 @@ met:
+--- mserv/mserv.c.orig	2003-08-03 16:57:20.000000000 +0200
++++ mserv/mserv.c	2012-02-07 10:39:02.000000000 +0100
+@@ -62,12 +62,17 @@
  #include <sys/ioctl.h>
  #include <time.h>
  
@@ -21,7 +21,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
  #include "defconf.h"
  #include "conf.h"
  #include "opt.h"
-@@ -79,6 +84,10 @@ met:
+@@ -79,6 +84,10 @@
  # define MIN(X,Y) (((X) < (Y)) ? (X) : (Y))
  #endif
  
@@ -32,7 +32,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
  extern char *optarg;
  extern int optind;
  /* extern int getopt(int, char *const *, const char *); */ /* sunos ;( */
-@@ -131,7 +140,8 @@ static void mserv_vresponse(t_client *cl
+@@ -131,7 +140,8 @@
  static void mserv_scandir(void);
  static void mserv_scandir_recurse(const char *pathname);
  static t_track *mserv_loadtrk(const char *filename);
@@ -42,7 +42,16 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
  static int album_insertsort(t_album *album);
  static t_author *mserv_authorlist(void);
  static int author_insertsort(t_author **list, t_author *author);
-@@ -292,7 +302,7 @@ int main(int argc, char *argv[])
+@@ -224,7 +234,7 @@
+   int i;
+   struct protoent *protocol;
+   struct sockaddr_in sin;
+-  int so_int;
++  int so_int, proto;
+   int flags;
+   char *mserv_root = NULL;
+   char *mserv_conf = NULL;
+@@ -292,7 +302,7 @@
  	     ps->pw_dir[strlen(ps->pw_dir)-1] == '/' ? "" : "/");
    } else {
      /* copy out of environment */
@@ -51,7 +60,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
        fprintf(stderr, "%s: out of memory\n", progname);
        exit(1);
      }
-@@ -305,7 +315,7 @@ int main(int argc, char *argv[])
+@@ -305,7 +315,7 @@
      l--;
    mserv_root[l] = '\0';
    if (!mserv_conf) {
@@ -60,7 +69,22 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
        fprintf(stderr, "%s: out of memory\n", progname);
        exit(1);
      }
-@@ -1624,6 +1634,7 @@ static void mserv_scandir_recurse(const 
+@@ -427,8 +437,13 @@
+  
+   if (mserv_verbose && mserv_port)
+     printf("Port set via command line options to %d\n", mserv_port);
++
+   protocol = getprotobyname("IP");
+-  mserv_socket = socket(AF_INET, SOCK_STREAM, protocol->p_proto);
++  if (protocol)
++    proto = protocol->p_proto;
++  else
++    proto = IPPROTO_IP;
++  mserv_socket = socket(AF_INET, SOCK_STREAM, proto);
+   if (mserv_socket == -1) {
+     mserv_log("Socket error '%s'", strerror(errno));
+     mserv_closedown(1);
+@@ -1624,6 +1639,7 @@
    int i;
    t_album *album;
    int flag = 0;
@@ -68,7 +92,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
  
    /* pathname is "" or "directory/" or "directory/directory/..." */
  
-@@ -1686,22 +1697,32 @@ static void mserv_scandir_recurse(const 
+@@ -1686,22 +1702,32 @@
        toomany = 1;
        break;
      }
@@ -102,7 +126,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
      return;
    qsort(tracks, TRACKSPERALBUM, sizeof(t_track *),
  	mserv_trackcompare_filename);
-@@ -1815,7 +1836,7 @@ static int mserv_trackcompare_rating(con
+@@ -1815,7 +1841,7 @@
    }
  }
  
@@ -111,7 +135,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
  {
    FILE *fd;
    char fullpath[MAXFNAME];
-@@ -1899,8 +1920,13 @@ static t_album *mserv_loadalbum(const ch
+@@ -1899,8 +1925,13 @@
        return NULL;
      mtime = time(NULL);
    }
@@ -127,7 +151,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
    if (!*name) {
      if (!*filename || !*(filename+1)) {
        strcpy(name, "rootdir");
-@@ -2019,11 +2045,13 @@ static t_track *mserv_loadtrk(const char
+@@ -2019,11 +2050,13 @@
        alen = strlen(buffer);
        if (buffer[alen-1] != '\n') {
  	mserv_log("Line %d too long in '%s'", line, fullpath_trk);
@@ -141,7 +165,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
  	return NULL;
        }
        strncpy(token, buffer, l);
-@@ -2059,6 +2087,7 @@ static t_track *mserv_loadtrk(const char
+@@ -2059,6 +2092,7 @@
  	}
  	if ((arate = malloc(sizeof(t_rating)+strlen(token)+1)) == NULL) {
  	  mserv_log("Out of memory creating ratings for '%s'", fullpath_trk);
@@ -149,7 +173,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
  	  return NULL;
  	}
  	memset(arate, 0, sizeof(t_rating));
-@@ -2082,15 +2111,18 @@ static t_track *mserv_loadtrk(const char
+@@ -2082,15 +2116,18 @@
      }
      if (!*author) {
        mserv_log("No author specified in '%s'", fullpath_trk);
@@ -168,7 +192,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
        return NULL;
      }
      mtime = buf.st_mtime;
-@@ -2098,8 +2130,17 @@ static t_track *mserv_loadtrk(const char
+@@ -2098,8 +2135,17 @@
    }
    if (duration == 0 && !*miscinfo) {
      len = strlen(fullpath_file);
@@ -186,7 +210,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
        if (duration == -1) {
  	mserv_log("Unable to determine details of mp3 '%s': %s",
  		  filename, strerror(errno));
-@@ -2719,7 +2760,7 @@ t_album *mserv_checkdisk_album(t_album *
+@@ -2719,7 +2765,7 @@
    }
    if (buf.st_mtime == album->mtime)
      return album;
@@ -195,7 +219,7 @@ $NetBSD: patch-af,v 1.9 2004/09/12 05:08:28 minskim Exp $
      mserv_log("Unable to re-load '%s'", album->filename);
      return album;
    }
-@@ -3430,3 +3471,59 @@ int mserv_setmixer(t_client *cl, int wha
+@@ -3430,3 +3476,59 @@
  }
  
  #endif
