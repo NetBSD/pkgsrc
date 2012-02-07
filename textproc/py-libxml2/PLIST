@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 11:47:17 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/07 11:21:51 obache Exp $
 ${PYSITELIB}/drv_libxml2.py
 ${PYSITELIB}/drv_libxml2.pyc
 ${PYSITELIB}/drv_libxml2.pyo
 ${PYSITELIB}/libxml2.py
 ${PYSITELIB}/libxml2.pyc
 ${PYSITELIB}/libxml2.pyo
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/libxml2mod.so
