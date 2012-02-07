@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.5 2010/02/08 01:47:14 jakllsch Exp $
+$NetBSD: patch-af,v 1.6 2012/02/07 00:21:49 mef Exp $
+
+Add DragonFly
 
 --- ppi.c.orig	2010-01-19 10:39:11.000000000 +0000
 +++ ppi.c
