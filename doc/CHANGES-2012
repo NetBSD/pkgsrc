@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.418 2012/02/07 11:54:54 obache Exp $
+$NetBSD: CHANGES-2012,v 1.419 2012/02/07 19:58:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -615,3 +615,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/py-cabocha to 0.53nb1 [obache 2012-02-07]
 	Updated textproc/py-libxml2 to 2.7.8nb1 [obache 2012-02-07]
 	Updated textproc/py-lxml to 2.3.2 [obache 2012-02-07]
+	Updated net/nicovideo-dl to 0.0.20110724 [ryoon 2012-02-07]
