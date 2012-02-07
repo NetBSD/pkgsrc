@@ -1,8 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/10/16 05:33:56 manu Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/02/07 11:34:00 fhajny Exp $
 
 BUILDLINK_TREE+=	libmemcached
 
-.if !defined(libmemcached_BUILDLINK3_MK)
+.if !defined(LIBMEMCACHED_BUILDLINK3_MK)
 LIBMEMCACHED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmemcached+=	libmemcached>=0.53
