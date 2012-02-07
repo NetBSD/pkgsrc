@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.30 2008/06/17 12:58:28 sketch Exp $
+# $NetBSD: transform-sunpro-cc,v 1.31 2012/02/07 09:42:05 shattered Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -144,7 +144,7 @@ case $arg in
 #-std=gnu99	) transform_to "-xc99" ;;
 #-xc99		) transform_to_and_split "-xc99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__" ;;
 
--ggdb		) transform_to "-g" ;;
+-ggdb*		) transform_to "-g" ;;
 
 # Ignore some flags that are unnecessary for SunPro.
 -ansi		|\
