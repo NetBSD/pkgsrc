@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10855 2012/02/07 00:02:13 tron Exp $
+$NetBSD: TODO,v 1.10856 2012/02/07 00:25:30 mef Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avcheck-0.91
 	o avidemux-2.5.6
 	o avl-2.0.2a
-	o avrdude-5.11 [pkg/45924]
 	o awesome-3.4.11
 	o baci-20040415
 	o balance-3.54
