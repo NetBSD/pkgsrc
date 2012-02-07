@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2011/05/14 16:49:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.96 2012/02/07 22:11:40 fhajny Exp $
 
 ###########################################################################
 ###########################################################################
@@ -26,7 +26,7 @@
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	5
+PKGREVISION=	6
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
@@ -56,6 +56,11 @@ CONFIGURE_ARGS+=	--disable-libtool-lock
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
 CONFIGURE_ARGS+=	--disable-shared
 BUILD_SHLIBTOOL=	NO
+.  endif
+
+.elif ${OPSYS} == "SunOS"
+.  if !empty(ABI:M64)
+CFLAGS+=		-m64
 .  endif
 .endif
 
