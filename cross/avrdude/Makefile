@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2011/11/08 20:41:40 minskim Exp $
+# $NetBSD: Makefile,v 1.32 2012/02/07 00:21:48 mef Exp $
 
-DISTNAME=		avrdude-5.10
-PKGREVISION=		2
+DISTNAME=		avrdude-5.11
 CATEGORIES=		cross
 MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.bsdhome.com/avrdude/
+HOMEPAGE=		http://www.nongnu.org/avrdude/
 COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2
 
@@ -30,9 +29,9 @@ CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
 CONFIGURE_ARGS+=	--enable-doc
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		DEFAULT_SER_PORT=${DEFAULT_SERIAL_DEVICE:Q}
-PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 # The autotools used by this pkg are older than what's in pkgsrc
 # currently.  This makes the diffs huge.
