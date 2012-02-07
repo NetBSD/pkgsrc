@@ -1,5 +1,7 @@
-$NetBSD: patch-ag,v 1.4 2010/02/08 01:47:14 jakllsch Exp $
+$NetBSD: patch-ag,v 1.5 2012/02/07 00:21:49 mef Exp $
+
 Work around AVRISP mkII initial sync stalls on NetBSD.
+
 --- usb_libusb.c.orig	2010-01-19 10:39:11.000000000 +0000
 +++ usb_libusb.c
 @@ -237,6 +237,17 @@ static void usbdev_close(union filedescr
