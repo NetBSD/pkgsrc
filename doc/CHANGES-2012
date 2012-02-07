@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.412 2012/02/06 23:12:24 tron Exp $
+$NetBSD: CHANGES-2012,v 1.413 2012/02/07 00:25:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -604,3 +604,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/xmlrpc-c to 1.16.39 [adam 2012-02-06]
 	Updated shells/mksh to 40d [bsiegert 2012-02-06]
 	Added multimedia/ffmpeg2theora version 0.28 [tron 2012-02-06]
+	Updated cross/avrdude to 5.11 [mef 2012-02-07]
