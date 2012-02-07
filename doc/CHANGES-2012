@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.414 2012/02/07 01:33:08 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.415 2012/02/07 06:45:14 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -606,3 +606,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Added multimedia/ffmpeg2theora version 0.28 [tron 2012-02-06]
 	Updated cross/avrdude to 5.11 [mef 2012-02-07]
 	Updated www/trac to 0.12.3 [gdt 2012-02-07]
+	Updated biology/py-mol to 1.4.1nb2 [sbd 2012-02-07]
+	Updated converters/xlhtml to 0.5nb2 [sbd 2012-02-07]
+	Updated games/crossfire-server to 1.11.0nb8 [sbd 2012-02-07]
+	Updated lang/jasmin to 1.06nb2 [sbd 2012-02-07]
+	Updated textproc/p5-CAM-PDF to 1.55nb1 [sbd 2012-02-07]
+	Updated x11/xpns to 1.0nb3 [sbd 2012-02-07]
