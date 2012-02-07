@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/07 09:39:16 shattered Exp $
 bin/cvpasswd
 bin/cvsup
 man/man1/cvpasswd.1
@@ -7,4 +7,4 @@ man/man8/cvsupd.8
 sbin/cvsupd
 share/doc/cvsup/License
 share/examples/cvsup/supfile-cvsup.jp.netbsd.org
-share/examples/cvsup/supfile-cvsup.no.netbsd.org
+share/examples/cvsup/supfile-cvsup.se.netbsd.org
