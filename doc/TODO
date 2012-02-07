@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10857 2012/02/07 11:34:37 fhajny Exp $
+$NetBSD: TODO,v 1.10858 2012/02/07 20:41:41 morr Exp $
 
 Suggested new packages
 ======================
@@ -1131,7 +1131,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-1.0.0
 	o pulseaudio-1.0
 	o puppet-2.7.6
-	o pure-ftpd-1.0.35 [pkg/45867]
 	o putty-0.62
 	o puzzle-9173
 	o puzzles-9403
