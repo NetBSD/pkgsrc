@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.415 2012/02/07 06:45:14 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.416 2012/02/07 11:06:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -612,3 +612,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/jasmin to 1.06nb2 [sbd 2012-02-07]
 	Updated textproc/p5-CAM-PDF to 1.55nb1 [sbd 2012-02-07]
 	Updated x11/xpns to 1.0nb3 [sbd 2012-02-07]
+	Updated textproc/py-cabocha to 0.53nb1 [obache 2012-02-07]
