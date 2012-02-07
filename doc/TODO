@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10854 2012/02/06 14:22:54 shattered Exp $
+$NetBSD: TODO,v 1.10855 2012/02/07 00:02:13 tron Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fcitx-3.6.2
 	o felt-3.07
 	o fetchyahoo-2.14.0
-	o ffmpeg-20111121.0.8.7
 	o ffmpeg-20120127.0.9.1
 	o ffmpeg-20120127.0.10
 	o file-5.10
