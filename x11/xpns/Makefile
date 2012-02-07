@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/07/07 16:51:09 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2012/02/07 06:42:56 sbd Exp $
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 cad
 MASTER_SITES=	http://robotics.ee.uwa.edu.au/pns/ftp/
 EXTRACT_SUFX=	.tar.Z
@@ -17,6 +17,9 @@ WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 MAKE_FILE=	makefile
 BUILD_TARGET=	pns
+
+USE_TOOLS+=	csh:run
+REPLACE_CSH=	xpns
 
 INSTALLATION_DIRS=	bin lib/xpns share/doc/xpns
 
