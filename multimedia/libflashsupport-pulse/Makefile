@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/03/18 13:29:32 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/07 09:43:24 shattered Exp $
 
 DISTNAME=	libflashsupport-pulse-20081219
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.invisible.ca/~jmcneill/netbsd/libflashsupport/
 
@@ -22,10 +23,6 @@ BUILD_DIRS=		# empty
 INSTALLATION_DIRS=	${EMULSUBDIR}/usr/lib
 
 do-install:
-	${INSTALL_LIB} ${WRKDIR}/usr/lib/libgdbm.so.3.0.0 \
-		${DESTDIR}${PREFIX}/${EMULSUBDIR}/usr/lib/libgdbm.so.3
-	${INSTALL_LIB} ${WRKDIR}/usr/lib/libpulse.so.0.7.0 \
-		${DESTDIR}${PREFIX}/${EMULSUBDIR}/usr/lib/libpulse.so.0
 	${INSTALL_LIB} ${WRKDIR}/usr/lib/libflashsupport.so \
 		${DESTDIR}${PREFIX}/${EMULSUBDIR}/usr/lib
 
