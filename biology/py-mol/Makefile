@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2011/11/01 06:00:42 sbd Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/07 06:36:35 sbd Exp $
 
 DISTNAME=	pymol-v1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
 EGG_NAME=	pymol-1.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pymol.org/
 COMMENT=	Molecular Visualization System
+
+USE_TOOLS+=	csh:run
 
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-Pmw-[0-9]*:../../x11/py-Pmw
@@ -25,6 +27,7 @@ CONFLICTS=	pymol-[0-9]*
 
 USE_LANGUAGES=	c c++
 
+REPLACE_CSH=	test/vdiff
 REPLACE_PYTHON=	test/cyg test/run test/show test/win.py
 
 # not used

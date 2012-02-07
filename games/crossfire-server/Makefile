@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2011/04/22 13:43:34 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/02/07 06:42:18 sbd Exp $
 
 DISTNAME=	crossfire-1.11.0
 PKGNAME=	crossfire-server-1.11.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_SYSCONFSUBDIR=	crossfire
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:run bash:run
+USE_TOOLS+=		gmake perl:run bash:run csh:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -46,6 +46,9 @@ REPLACE_PERL+=	utils/metaserver.pl.in
 REPLACE_PERL+=	utils/mktable.script
 REPLACE_PERL+=	lib/adm/map_info
 # arch
+REPLACE_CSH+=	../arch/dev/xpmtopng
+REPLACE_CSH+=	../arch/dev/merge.csh
+REPLACE_CSH+=	../arch/dev/scripts/updatearch
 REPLACE_PERL+=	../arch/dev/scripts/update_armor.pl
 REPLACE_PERL+=	../arch/dev/scripts/update_body.pl
 REPLACE_PERL+=	../arch/dev/scripts/update_monster.pl
