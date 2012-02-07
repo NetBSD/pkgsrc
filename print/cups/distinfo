@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.90 2011/12/21 08:57:11 sbd Exp $
+$NetBSD: distinfo,v 1.91 2012/02/07 23:16:57 sbd Exp $
 
-SHA1 (cups-1.5.0-source.tar.bz2) = 628f549867751e373fc20c7558fec422f9eb942b
-RMD160 (cups-1.5.0-source.tar.bz2) = e7be9b6b44428561609c59abaea8fa31a11aefff
-Size (cups-1.5.0-source.tar.bz2) = 4090210 bytes
+SHA1 (cups-1.5.2-source.tar.bz2) = 56fdb4f58e676607845321c0296c1e90e416883f
+RMD160 (cups-1.5.2-source.tar.bz2) = 98181e2ee8c6e574fb6d405f688f52c9b61a2355
+Size (cups-1.5.2-source.tar.bz2) = 9595665 bytes
 SHA1 (patch-ac) = d99dfa6e71efdc5f069c2c3e73e1b29beebf5c9b
 SHA1 (patch-ad) = a8d6610c4057ae98d98435ba577606e3c2bfb4b9
 SHA1 (patch-ae) = 7806067b36fa1c98763cf51a14941665f590b816
@@ -16,6 +16,5 @@ SHA1 (patch-at) = bbda891ed0820e23fe7f6fe3dd5326eeda5b3b2e
 SHA1 (patch-au) = 0d1d3cf255b996c96b0ea798f46b08523ef22a60
 SHA1 (patch-conf_Makefile) = 9bb4106e9fecaed2ba9bb67b7989f2ac9a9494fc
 SHA1 (patch-config-scripts_cups-gssapi.m4) = a3505afd30f0864e3022d8f65c810b9614d82cf4
-SHA1 (patch-filter_image-gif.c) = 2269cbf7e42ec80ba91c27eda4871884775f4b7a
 SHA1 (patch-ppdc_Makefile) = 7dcc34217557a4c6f42064b61abf593bd7620b60
 SHA1 (patch-scheduler_dirsvc.c) = 62c6b47522a60b9f8042421e4a9d25a5dfa47c47
