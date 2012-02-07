@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2011/04/02 08:00:58 obache Exp $
+# $NetBSD: Makefile,v 1.28 2012/02/07 20:40:39 morr Exp $
 
-DISTNAME=	pure-ftpd-1.0.30
+DISTNAME=	pure-ftpd-1.0.35
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/ \
 		http://download.pureftpd.org/pub/pure-ftpd/releases/ \
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--without-privsep
 
 .include "options.mk"
 
-RCD_SCRIPTS=		pure_ftpd
+RCD_SCRIPTS=		pure_ftpd pure_uploadscript
 INSTALLATION_DIRS=	share/doc/pure-ftpd
 
 post-install:

@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2004/10/11 22:14:51 reed Exp $
+$NetBSD: MESSAGE,v 1.4 2012/02/07 20:40:39 morr Exp $
 
 To use pure-ftpd, you will need to perform the following steps:
 
@@ -14,4 +14,17 @@ To use pure-ftpd, you will need to perform the following steps:
    command
 
 	/etc/rc.d/pure_ftpd start
+
+3. If you want to use pure-uploadscript, you should copy pure_uploadscript to 
+   /etc/rc.d, if you don't have it already, and need to add "-o" option to
+   pure_ftpd_flags, and set
+
+	 pure_uploadscript=YES
+	 pure_uploadscript_flags="-r /path/to/script"
+
+   Then you can start by
+
+	/etc/rc.d/pure_uploadscript start
+
+   For more details, read pure-uploadscript(8).
 ===========================================================================
