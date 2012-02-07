@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/06 23:09:30 tron Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/07 00:18:27 tron Exp $
 
 DISTNAME=	ffmpeg2theora-0.28
 CATEGORIES=	multimedia
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		scons>=1.3.1:../../devel/scons
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 SCONS=		${PREFIX}/bin/scons
-SCONS_ARGS=	-C ${WRKSRC} cc=${CC:Q} destdir=${DESTDIR:Q} prefix=${PREFIX:Q}
+SCONS_ARGS=	-C ${WRKSRC} destdir=${DESTDIR:Q} prefix=${PREFIX:Q}
 SCONS_ARGS+=	APPEND_CCFLAGS=${CFLAGS:Q}
 SCONS_ARGS+=	APPEND_LINKFLAGS=${LDFLAGS:Q}
 
