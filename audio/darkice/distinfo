@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2012/02/04 07:53:26 sbd Exp $
+$NetBSD: distinfo,v 1.12 2012/02/08 00:19:42 sbd Exp $
 
 SHA1 (darkice-0.17.1.tar.gz) = 2952961c8e99412d831ca619f152ba6774efefac
 RMD160 (darkice-0.17.1.tar.gz) = b6575b28190276d77e721e2ef15e8a93162693cc
@@ -7,4 +7,4 @@ SHA1 (patch-aa) = 6f58c2ae94a9b199ac733fd4b0742178f46dc961
 SHA1 (patch-ab) = 51cf308b209b933fe003775116d8b7d986e92476
 SHA1 (patch-ac) = 4ba61f7544da079a6e6aaaf49e03ef7c6c3fb8ca
 SHA1 (patch-src_Makefile_in) = 5627f74907abe9ab0dc297ca8ae7378fe004d3cf
-SHA1 (patch-src_Util.cpp) = 0721d889d4755c9251eda9248b59c74fea26d980
+SHA1 (patch-src_Util.cpp) = fe609e7f0c03e4c0b667b054a2035dae57e2dff8
