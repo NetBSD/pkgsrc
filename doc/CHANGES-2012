@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.423 2012/02/08 05:42:39 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.424 2012/02/08 07:27:30 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -620,3 +620,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/pure-ftpd to 1.0.35 [morr 2012-02-07]
 	Updated print/cups to 1.5.2 [sbd 2012-02-07]
 	Updated comms/asterisk10 to 10.1.1 [jnemeth 2012-02-08]
+	Updated comms/asterisk18 to 1.8.9.1 [jnemeth 2012-02-08]
