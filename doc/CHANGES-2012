@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.426 2012/02/08 09:53:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.427 2012/02/08 11:25:45 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -623,3 +623,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.9.1 [jnemeth 2012-02-08]
 	Updated security/skey to 1.1.5nb4 [obache 2012-02-08]
 	Updated pkgtools/revbump to 2.2 [wiz 2012-02-08]
+	Updated lang/pcc-current to 20120208 [plunky 2012-02-08]
