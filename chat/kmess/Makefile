@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/02/06 12:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/02/08 00:09:56 sbd Exp $
 #
 
 DISTNAME=	kmess-1.4.3
@@ -13,6 +13,7 @@ COMMENT=	MSN Messenger Client for KDE3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+SET_LIBDIR=		yes
 USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
