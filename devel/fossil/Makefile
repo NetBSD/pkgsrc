@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.16 2011/12/03 19:38:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/08 19:45:41 bsiegert Exp $
 
-DISTNAME=	fossil-src-20110713230341
-PKGNAME=	fossil-1.18
+DISTNAME=	Fossil-002580c50d94790a
+PKGNAME=	fossil-1.21
 CATEGORIES=	devel scm
-MASTER_SITES=	http://www.fossil-scm.org/download/
+# have to log in to download the tarball
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki
+HOMEPAGE=	http://www.fossil-scm.org/
 COMMENT=	Simple, high-reliability, distributed software configuration management
 LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
+HAS_CONFIGURE=	yes
 
 INSTALLATION_DIRS+=	bin
 
