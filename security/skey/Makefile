@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2011/01/06 08:55:37 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/02/08 09:05:33 obache Exp $
 #
 
 DISTNAME=		skey-1.1.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		security
 MASTER_SITES=		http://www.sparc.spb.su/solaris/skey/
 EXTRACT_SUFX=		.tar.bz2
@@ -38,6 +38,10 @@ CONFIGURE_ENV+=		ac_cv_header_rmd160_h=no
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
 BUILDLINK_TRANSFORM+=	l:crypt:md:crypt
 .endif
+# setusercontext() is in -lutil
+LIBS.DragonFly+=	-lutil
+LIBS.FreeBSD+=		-lutil
+LIBS.NetBSD+=		-lutil
 
 post-install:
 	${RANLIB} ${DESTDIR}${PREFIX}/lib/libskey.a
