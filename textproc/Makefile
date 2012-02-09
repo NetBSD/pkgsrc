@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.607 2012/01/23 23:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.608 2012/02/09 08:35:53 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -579,6 +579,7 @@ SUBDIR+=	ruby-will-paginate
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
 SUBDIR+=	ruby-xslt
+SUBDIR+=	ruby-yajl
 SUBDIR+=	ruby-yamcha
 SUBDIR+=	sablotron
 SUBDIR+=	sary
