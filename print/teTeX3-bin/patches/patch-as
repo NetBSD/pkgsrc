@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.10 2011/10/27 19:39:34 minskim Exp $
+$NetBSD: patch-as,v 1.11 2012/02/09 21:44:15 minskim Exp $
 
 --- texk/tetex/Makefile.in.orig	2005-02-04 22:20:54.000000000 +0000
 +++ texk/tetex/Makefile.in
-@@ -8,26 +8,21 @@ ac_include ../make/programs.mk
+@@ -8,26 +8,20 @@ ac_include ../make/programs.mk
  man5dir = $(mandir)/man5
  
  SCRIPTS = \
@@ -10,7 +10,7 @@ $NetBSD: patch-as,v 1.10 2011/10/27 19:39:34 minskim Exp $
 -  kpsetool kpsewhere ps2frag pslatex rubibtex rumakeindex \
 -  texconfig texconfig-dialog texdoc texdoctk texexec texlinks updmap \
 -  ps4pdf fmtutil-sys texconfig-sys updmap-sys
-+  texdoc texdoctk texexec
++  texexec
  
 -PDFSCRIPTS = a2ping e2pall epstopdf
 +PDFSCRIPTS = ""
@@ -26,7 +26,6 @@ $NetBSD: patch-as,v 1.10 2011/10/27 19:39:34 minskim Exp $
 -  texdoctk texexec texfind texfont texshow texutil thumbpdf \
 -  ttf2afm updmap
 +  fdf2tex \
-+  texdoc \
 +  texshow
  
  INFOFILES= latex.info
@@ -36,7 +35,7 @@ $NetBSD: patch-as,v 1.10 2011/10/27 19:39:34 minskim Exp $
  default: all
  
  install: install-data install-exec
-@@ -39,30 +34,6 @@ install-data:: $(INFOFILES)
+@@ -39,30 +33,6 @@ install-data:: $(INFOFILES)
  	for p in $(manpgs); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
  	done
@@ -67,7 +66,7 @@ $NetBSD: patch-as,v 1.10 2011/10/27 19:39:34 minskim Exp $
  	test -r ./latex.info || cd $(srcdir) && for i in latex.info*; do \
  	  $(INSTALL_DATA) $$i $(infodir)/$$i; done
  	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
-@@ -71,17 +42,6 @@ install-data:: $(INFOFILES)
+@@ -71,17 +41,6 @@ install-data:: $(INFOFILES)
  	for p in $(POOLFILES); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p $(texpooldir)/$$p; \
  	done
@@ -85,7 +84,7 @@ $NetBSD: patch-as,v 1.10 2011/10/27 19:39:34 minskim Exp $
  
  install-exec:
  	-$(SHELL) $(srcdir)/../mkinstalldirs $(scriptdir)
-@@ -96,16 +56,10 @@ install-exec:
+@@ -96,16 +55,10 @@ install-exec:
  	else \
  	  true; \
  	fi
