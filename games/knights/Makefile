@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/02/06 12:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/02/09 21:44:27 sbd Exp $
 
 DISTNAME=	knights-0.6
 PKGREVISION=	21
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
+SET_LIBDIR=		YES
 USE_LIBTOOL=		YES
 
 .include "../../meta-pkgs/kde3/kde3.mk"

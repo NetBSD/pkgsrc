@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/02/06 12:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2012/02/09 21:44:29 sbd Exp $
 #
 
 DISTNAME=		k3b-1.0.5
@@ -17,6 +17,7 @@ DEPENDS+=		cdrdao-[0-9]*:../../sysutils/cdrdao
 DEPENDS+=		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
 GNU_CONFIGURE=		yes
+SET_LIBDIR=		yes
 USE_TOOLS+=		gmake perl pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

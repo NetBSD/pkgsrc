@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/02/06 12:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/02/09 21:44:27 sbd Exp $
 #
 
 DISTNAME=		krecipes-1.0-beta1
@@ -14,6 +14,7 @@ COMMENT=		Recipe manager
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+SET_LIBDIR=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt perl
