@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.5 2012/02/09 19:17:13 drochner Exp $
+
+--- plugins/Makefile.plugin.mk.orig	2011-11-03 21:25:02.000000000 +0000
++++ plugins/Makefile.plugin.mk
+@@ -10,7 +10,9 @@
+ # NOTE: This file is called from the cwd of each directory, hence the relative paths should be
+ # read as such.
+ 
++ifndef VALAC
+ VALAC := valac
++endif
+ MAKE_FILES := Makefile ../Makefile.plugin.mk ../plugins.mk
+ HEADER_FILES := ../shotwell-plugin-dev-1.0.vapi ../shotwell-plugin-dev-1.0.h \
+ 	../shotwell-plugin-dev-1.0.deps

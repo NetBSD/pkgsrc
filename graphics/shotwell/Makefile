@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/02/06 12:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/02/09 19:17:13 drochner Exp $
 #
 
 DISTNAME=		shotwell-0.11.6
@@ -21,6 +21,7 @@ CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--assume-pkgs
 CONFIGURE_ENV+=		--define=NO_CAMERA
+MAKE_ENV+=		VALAC=${VALAC}
 
 REPLACE_SH+=		configure
 
@@ -37,6 +38,8 @@ BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
 # Required for dealing with .svg icons. Spotted on a clean box
 .include "../../graphics/librsvg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.vala+= vala>=0.11.7
+BUILDLINK_API_DEPENDS.vala+= vala<0.14
+BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
