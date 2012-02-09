@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/02/06 12:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/02/09 21:44:28 sbd Exp $
 #
 
 DISTNAME=	kchm-0.6.5
@@ -14,6 +14,7 @@ COMMENT=	KDE CHM file viewer
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
+SET_LIBDIR=	YES
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake

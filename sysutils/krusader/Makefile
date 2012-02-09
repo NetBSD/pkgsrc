@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/02/06 12:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/02/09 21:44:29 sbd Exp $
 #
 
 DISTNAME=	krusader-1.90.0
@@ -16,6 +16,7 @@ USE_TOOLS+=	gmake perl msgfmt
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+SET_LIBDIR=	YES
 
 SHLIBTOOL_OVERRIDE=	# empty
 

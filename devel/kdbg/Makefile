@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2012/02/06 12:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2012/02/09 21:44:27 sbd Exp $
 
 DISTNAME=	kdbg-2.2.2
 PKGREVISION=	4
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt perl
 GNU_CONFIGURE=		YES
+SET_LIBDIR=		YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 

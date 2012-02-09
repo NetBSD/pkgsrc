@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/02/06 12:40:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/02/09 21:44:27 sbd Exp $
 #
 
 DISTNAME=	six-0.5.3
@@ -13,6 +13,7 @@ COMMENT=	Hex, a board game with very simple rules
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+SET_LIBDIR=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
