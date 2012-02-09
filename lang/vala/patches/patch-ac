@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2012/02/09 19:54:42 drochner Exp $
+
+--- Makefile.in.orig	2011-06-01 14:37:56.000000000 +0000
++++ Makefile.in
+@@ -288,7 +288,6 @@ SUBDIRS = \
+ 	compiler \
+ 	vapi \
+ 	tests \
+-	doc \
+ 	$(VAPIGEN_SUBDIRS) \
+ 	$(NULL)
+ 
+@@ -805,7 +804,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-dist_aclocalDATA install-pkgconfigDATA
++install-data-am: install-pkgconfigDATA
+ 
+ install-dvi: install-dvi-recursive
+ 
