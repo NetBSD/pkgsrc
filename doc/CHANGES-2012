@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.431 2012/02/09 20:30:24 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.432 2012/02/09 21:23:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -629,3 +629,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/gtk2 to 2.24.10 [drochner 2012-02-09]
 	Updated math/py-numpy to 1.4.1nb3 [obache 2012-02-09]
 	Updated textproc/libcroco to 0.6.4 [drochner 2012-02-09]
+	Added print/tex-texdoc version 2011 [minskim 2012-02-09]
+	Added print/tex-texdoc-doc version 2011 [minskim 2012-02-09]
