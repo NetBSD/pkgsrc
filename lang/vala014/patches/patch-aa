@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/02/09 20:02:03 drochner Exp $
+
+--- doc/vala/Makefile.in.orig	2012-01-31 14:03:04.000000000 +0000
++++ doc/vala/Makefile.in
+@@ -223,9 +223,9 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ vala_gen_introspect_decl = @vala_gen_introspect_decl@
+ vapigen_decl = @vapigen_decl@
+-NULL = 
++NULL =
+ book_name = vala@PACKAGE_SUFFIX@
+-bookdir = $(datadir)/devhelp/books/$(book_name)
++bookdir = @@BOOKDIR@@
+ chapter_data = \
+ 	overview.html \
+ 	types.html \
