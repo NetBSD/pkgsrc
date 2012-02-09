@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/09 21:20:31 minskim Exp $
+bin/texdoc
+bin/texdoctk
+share/texmf-dist/texdoc/texdoc.cnf
+share/texmf/scripts/texdoc/Data.meta.lua
+share/texmf/scripts/texdoc/Data.tlpdb.lua
+share/texmf/scripts/texdoc/alias.tlu
+share/texmf/scripts/texdoc/config.tlu
+share/texmf/scripts/texdoc/constants.tlu
+share/texmf/scripts/texdoc/functions.tlu
+share/texmf/scripts/texdoc/main.tlu
+share/texmf/scripts/texdoc/score.tlu
+share/texmf/scripts/texdoc/search.tlu
+share/texmf/scripts/texdoc/texdoclib.tlu
+share/texmf/scripts/texdoc/view.tlu
+share/texmf/texdoctk/texdocrc-win32.defaults
+share/texmf/texdoctk/texdocrc.defaults
+share/texmf/texdoctk/texdoctk.dat
