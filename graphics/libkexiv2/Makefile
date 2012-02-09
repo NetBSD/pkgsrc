@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/02/06 12:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/02/09 21:44:28 sbd Exp $
 #
 
 DISTNAME=	libkexiv2-0.1.9
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+SET_LIBDIR=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
