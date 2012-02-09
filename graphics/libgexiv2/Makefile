@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/06 12:40:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/09 19:23:35 drochner Exp $
 
 DISTNAME=	libgexiv2-0.3.1
 PKGREVISION=	3
@@ -11,7 +11,8 @@ HOMEPAGE=	http://trac.yorba.org/wiki/gexiv2
 COMMENT=	GObject-based wrapper around the Exiv2 library
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
+# if needed to regenerate after patches
+#BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
