@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/10 17:03:39 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/09 12:42:37 obache Exp $
 #
 
 DISTNAME=	coverage-3.3.1
@@ -16,9 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c
 PLIST_SUBST=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-EGG_INFODIR= ${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-post-install:
-	${CHMOD} +r ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
+post-extract:
+	${CHMOD} +r ${WRKSRC}/coverage.egg-info/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
