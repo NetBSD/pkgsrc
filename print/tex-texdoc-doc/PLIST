@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/09 21:20:47 minskim Exp $
+man/man1/texdoc.1
+man/man1/texdoctk.1
+share/texmf/doc/texdoc/News
+share/texmf/doc/texdoc/texdoc.pdf
+share/texmf/doc/texdoc/texdoc.tex
