@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2011/11/16 14:32:53 he Exp $
+@comment $NetBSD: PLIST,v 1.29 2012/02/09 10:39:25 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -14,11 +14,6 @@ include/parrot/${PKGVERSION}/imcc/api.h
 include/parrot/${PKGVERSION}/imcc/embed.h
 include/parrot/${PKGVERSION}/imcc/yyscanner.h
 include/parrot/${PKGVERSION}/parrot/api.h
-include/parrot/${PKGVERSION}/parrot/atomic.h
-include/parrot/${PKGVERSION}/parrot/atomic/fallback.h
-include/parrot/${PKGVERSION}/parrot/atomic/gcc_pcc.h
-include/parrot/${PKGVERSION}/parrot/atomic/gcc_x86.h
-include/parrot/${PKGVERSION}/parrot/atomic/sparc.h
 include/parrot/${PKGVERSION}/parrot/caches.h
 include/parrot/${PKGVERSION}/parrot/call.h
 include/parrot/${PKGVERSION}/parrot/cclass.h
@@ -72,6 +67,7 @@ include/parrot/${PKGVERSION}/parrot/pobj.h
 include/parrot/${PKGVERSION}/parrot/pointer_array.h
 include/parrot/${PKGVERSION}/parrot/runcore_api.h
 include/parrot/${PKGVERSION}/parrot/runcore_profiling.h
+include/parrot/${PKGVERSION}/parrot/runcore_subprof.h
 include/parrot/${PKGVERSION}/parrot/runcore_trace.h
 include/parrot/${PKGVERSION}/parrot/scheduler.h
 include/parrot/${PKGVERSION}/parrot/scheduler_private.h
@@ -79,10 +75,6 @@ include/parrot/${PKGVERSION}/parrot/settings.h
 include/parrot/${PKGVERSION}/parrot/string.h
 include/parrot/${PKGVERSION}/parrot/string_funcs.h
 include/parrot/${PKGVERSION}/parrot/sub.h
-include/parrot/${PKGVERSION}/parrot/thr_none.h
-include/parrot/${PKGVERSION}/parrot/thr_pthread.h
-include/parrot/${PKGVERSION}/parrot/thr_windows.h
-include/parrot/${PKGVERSION}/parrot/thread.h
 include/parrot/${PKGVERSION}/parrot/vtable.h
 include/parrot/${PKGVERSION}/parrot/vtables.h
 include/parrot/${PKGVERSION}/parrot/warnings.h
@@ -152,7 +144,6 @@ include/parrot/${PKGVERSION}/pmc/pmc_packfilesegment.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileview.h
 include/parrot/${PKGVERSION}/pmc/pmc_parrotinterpreter.h
 include/parrot/${PKGVERSION}/pmc/pmc_parrotlibrary.h
-include/parrot/${PKGVERSION}/pmc/pmc_parrotthread.h
 include/parrot/${PKGVERSION}/pmc/pmc_pmcproxy.h
 include/parrot/${PKGVERSION}/pmc/pmc_pointer.h
 include/parrot/${PKGVERSION}/pmc/pmc_ptr.h
@@ -176,7 +167,6 @@ include/parrot/${PKGVERSION}/pmc/pmc_stringiterator.h
 include/parrot/${PKGVERSION}/pmc/pmc_structview.h
 include/parrot/${PKGVERSION}/pmc/pmc_sub.h
 include/parrot/${PKGVERSION}/pmc/pmc_task.h
-include/parrot/${PKGVERSION}/pmc/pmc_threadinterpreter.h
 include/parrot/${PKGVERSION}/pmc/pmc_timer.h
 include/parrot/${PKGVERSION}/pmc/pmc_undef.h
 include/parrot/${PKGVERSION}/pmc/pmc_unmanagedstruct.h
@@ -621,7 +611,6 @@ src/parrot/${PKGVERSION}/pmc/packfilesegment.dump
 src/parrot/${PKGVERSION}/pmc/packfileview.dump
 src/parrot/${PKGVERSION}/pmc/parrotinterpreter.dump
 src/parrot/${PKGVERSION}/pmc/parrotlibrary.dump
-src/parrot/${PKGVERSION}/pmc/parrotthread.dump
 src/parrot/${PKGVERSION}/pmc/pmcproxy.dump
 src/parrot/${PKGVERSION}/pmc/pointer.dump
 src/parrot/${PKGVERSION}/pmc/ptr.dump
@@ -645,7 +634,6 @@ src/parrot/${PKGVERSION}/pmc/stringiterator.dump
 src/parrot/${PKGVERSION}/pmc/structview.dump
 src/parrot/${PKGVERSION}/pmc/sub.dump
 src/parrot/${PKGVERSION}/pmc/task.dump
-src/parrot/${PKGVERSION}/pmc/threadinterpreter.dump
 src/parrot/${PKGVERSION}/pmc/timer.dump
 src/parrot/${PKGVERSION}/pmc/undef.dump
 src/parrot/${PKGVERSION}/pmc/unmanagedstruct.dump
