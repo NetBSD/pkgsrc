@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.433 2012/02/09 21:27:43 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.434 2012/02/09 21:45:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -632,3 +632,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/tex-texdoc version 2011 [minskim 2012-02-09]
 	Added print/tex-texdoc-doc version 2011 [minskim 2012-02-09]
 	Updated print/texlive-tetex to 2011nb1 [minskim 2012-02-09]
+	Updated print/teTeX3-bin to 3.0nb50 [minskim 2012-02-09]
+	Updated print/teTeX to 3.0nb11 [minskim 2012-02-09]
