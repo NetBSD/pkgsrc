@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/02/09 20:02:03 drochner Exp $
+
+--- doc/vala/Makefile.am.orig	2011-11-30 14:02:46.000000000 +0000
++++ doc/vala/Makefile.am
+@@ -2,7 +2,7 @@ NULL =
+ 
+ book_name=vala@PACKAGE_SUFFIX@
+ 
+-bookdir=$(datadir)/devhelp/books/$(book_name)
++bookdir=@@BOOKDIR@@
+ 
+ chapter_data = \
+ 	overview.html \
