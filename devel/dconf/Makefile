@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/06 12:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/09 20:24:48 drochner Exp $
 #
 
 DISTNAME=	dconf-0.5.1
@@ -14,8 +14,6 @@ COMMENT=	Backend for gsettings
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --disable-editor
 USE_LIBTOOL=	yes
@@ -23,5 +21,7 @@ USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in
 
+BUILDLINK_DEPMETHOD.vala= build
+.include "../../lang/vala/buildlink3.mk"
 .include "../../devel/glib2/modules.mk"
 .include "../../mk/bsd.pkg.mk"

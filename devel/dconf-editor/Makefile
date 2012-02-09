@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/06 12:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/09 20:24:48 drochner Exp $
 #
 
 DISTNAME=	dconf-0.5.1
@@ -30,12 +30,13 @@ SUBST_CLASSES+=	prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	editor/dconf-model.vala
 SUBST_VARS.prefix=	PREFIX
-BUILD_DEPENDS+=	vala-[0-9]*:../../lang/vala
 
 # SUBST doesn't touch - force rebuild
 pre-build:
 	${RM} ${WRKSRC}/editor/dconf-model.c
 
+BUILDLINK_DEPMETHOD.vala= build
+.include "../../lang/vala/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
