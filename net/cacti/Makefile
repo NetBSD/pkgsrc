@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/06 12:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/09 04:46:02 asau Exp $
 #
 
 PKGNAME=		cacti-0.8.7i
@@ -18,9 +18,9 @@ NO_BUILD=		yes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
-DEPENDS+=		${PHP_PKG_PREFIX}-snmp-[0-9]*:../../net/php-snmp/
-DEPENDS+=		${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets/
-DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php/
+DEPENDS+=		${PHP_PKG_PREFIX}-snmp-[0-9]*:../../net/php-snmp
+DEPENDS+=		${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
+DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
