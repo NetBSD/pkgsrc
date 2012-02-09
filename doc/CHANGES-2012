@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.430 2012/02/09 13:09:21 obache Exp $
+$NetBSD: CHANGES-2012,v 1.431 2012/02/09 20:30:24 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -626,4 +626,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/pcc-current to 20120208 [plunky 2012-02-08]
 	Updated devel/fossil to 1.21 [bsiegert 2012-02-08]
 	Updated lang/parrot to 3.9.0 [he 2012-02-09]
+	Updated x11/gtk2 to 2.24.10 [drochner 2012-02-09]
 	Updated math/py-numpy to 1.4.1nb3 [obache 2012-02-09]
+	Updated textproc/libcroco to 0.6.4 [drochner 2012-02-09]
