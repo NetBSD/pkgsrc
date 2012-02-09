@@ -1,0 +1,3 @@
+TeXdoc is a script for easy access to the package documentation of
+TeX distributions (i.e., .dvi, .pdf or .ps files on the $TEXDOCS
+tree).
