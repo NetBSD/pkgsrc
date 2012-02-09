@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/11/06 08:43:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/02/09 21:27:26 minskim Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -39,7 +39,6 @@ man/man1/rubibtex.1
 man/man1/rumakeindex.1
 man/man1/texconfig-sys.1
 man/man1/texconfig.1
-man/man1/texdoctk.1
 man/man1/texlinks.1
 man/man1/thumbpdf.1
 man/man5/fmtutil.cnf.5
