@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/01/31 11:53:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/09 17:12:40 minskim Exp $
 
 DISTNAME=	libvpx-v1.0.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -46,6 +46,16 @@ CONFIGURE_ARGS+=	--target=x86-darwin10-gcc
 CONFIGURE_ARGS+=	--target=x86-darwin10-gcc
 .    else
 CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
+.    endif
+.  elif ${MACHINE_ARCH} == "x86_64"
+.    if !empty(OS_VERSION:M11.*)
+CONFIGURE_ARGS+=	--target=x86_64-darwin10-gcc
+.    elif !empty(OS_VERSION:M10.*)
+CONFIGURE_ARGS+=	--target=x86_64-darwin10-gcc
+.    elif !empty(OS_VERSION:M9.*)
+CONFIGURE_ARGS+=	--target=x86_64-darwin10-gcc
+.    else
+CONFIGURE_ARGS+=	--target=x86_64-darwin8-gcc
 .    endif
 .  endif
 .endif
