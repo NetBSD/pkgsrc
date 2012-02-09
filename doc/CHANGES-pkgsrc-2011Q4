@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.26 2012/02/08 20:12:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.27 2012/02/09 21:42:17 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -132,3 +132,5 @@ emulators/suse113_openssl: security update
 Pullup ticket #3676 - requested by wiz
 x11/startup-notification010: new package
 x11/startup-notification: suport older native X11 via "startup-notification010"
+Pullup ticket #3677 - requested by wiz
+Additon of startup-notification010 to x11 SUBDIR list
