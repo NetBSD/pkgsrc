@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:17 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/10 17:50:46 minskim Exp $
 
 DISTNAME=	moreverb
-PKGNAME=	tex-${DISTNAME}-2.3
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
+PKGNAME=	tex-${DISTNAME}-2.3a
+TEXLIVE_REV=	22126
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extended verbatim
