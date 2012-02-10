@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/02/03 14:48:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/02/10 15:51:26 drochner Exp $
 bin/gtk-query-immodules-3.0
 bin/gtk3-demo
 include/gail-3.0/libgail-util/gail-util.h
@@ -286,6 +286,9 @@ include/gtk-3.0/unix-print/gtk/gtkprinter.h
 include/gtk-3.0/unix-print/gtk/gtkprintjob.h
 include/gtk-3.0/unix-print/gtk/gtkprintunixdialog.h
 include/gtk-3.0/unix-print/gtk/gtkunixprint.h
+lib/girepository-1.0/Gdk-3.0.typelib
+${PLIST.x11}lib/girepository-1.0/GdkX11-3.0.typelib
+lib/girepository-1.0/Gtk-3.0.typelib
 lib/gtk-3.0/3.0.0/immodules/im-am-et.la
 lib/gtk-3.0/3.0.0/immodules/im-cedilla.la
 lib/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.la
@@ -315,6 +318,9 @@ libdata/gtk-3.0/im-multipress.conf
 man/man1/gtk-query-immodules-3.0.1
 man/man1/gtk-update-icon-cache.1
 share/aclocal/gtk-3.0.m4
+share/gir-1.0/Gdk-3.0.gir
+${PLIST.x11}share/gir-1.0/GdkX11-3.0.gir
+share/gir-1.0/Gtk-3.0.gir
 share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
 share/gtk-3.0/demo/alphatest.png
 share/gtk-3.0/demo/apple-red.png
