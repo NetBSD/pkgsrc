@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.438 2012/02/10 17:13:10 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.439 2012/02/10 17:51:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -639,3 +639,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Shell-Perl to 0.0022 [hiramatsu 2012-02-10]
 	Updated www/privoxy to 3.0.19 [mjl 2012-02-10]
 	Updated converters/bibtex2html to 1.97 [minskim 2012-02-10]
+	Updated print/tex-moreverb to 2.3a [minskim 2012-02-10]
+	Updated print/tex-moreverb-doc to 2.3a [minskim 2012-02-10]
