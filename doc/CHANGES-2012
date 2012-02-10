@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.435 2012/02/10 10:50:59 obache Exp $
+$NetBSD: CHANGES-2012,v 1.436 2012/02/10 12:28:09 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -635,3 +635,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/teTeX3-bin to 3.0nb50 [minskim 2012-02-09]
 	Updated print/teTeX to 3.0nb11 [minskim 2012-02-09]
 	Updated net/p5-Net-Amazon to 0.61 [obache 2012-02-10]
+	Updated devel/p5-App-cpanoutdated to 0.20 [hiramatsu 2012-02-10]
+	Updated devel/p5-Shell-Perl to 0.0022 [hiramatsu 2012-02-10]
