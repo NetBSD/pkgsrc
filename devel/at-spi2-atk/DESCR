@@ -1,0 +1,3 @@
+This package provides the Accessibility Toolkit GTK+ Module which
+allows GTK based applications to register with the accessibility
+bus provided by devel/at-spi2-core.
