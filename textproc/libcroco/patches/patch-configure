@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/02/10 15:26:16 tron Exp $
+
+Fix build on platforms where "ld" doesn't support the "-Bsymbolic" option.
+
+--- configure.orig	2012-02-06 19:22:50.000000000 +0000
++++ configure	2012-02-10 15:05:15.000000000 +0000
+@@ -11934,7 +11934,7 @@
+ if test "${enable_Bsymbolic+set}" = set; then :
+   enableval=$enable_Bsymbolic;
+ else
+-  enable_Bsymbolic=yes
++  enable_Bsymbolic=auto
+ fi
+ 
+ 
