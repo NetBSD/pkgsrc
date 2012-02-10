@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/02/10 08:50:14 tron Exp $
-#
+# $NetBSD: Makefile,v 1.43 2012/02/10 15:26:16 tron Exp $
 
 DISTNAME=	libcroco-0.6.4
 CATEGORIES=	textproc
@@ -21,7 +20,6 @@ PKGCONFIG_OVERRIDE+=	libcroco-0.6.pc
 
 CONFIGURE_ARGS+=	--enable-seleng=yes
 CONFIGURE_ARGS+=	--enable-layeng=yes
-CONFIGURE_ARGS+=	--disable-Bsymbolic
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
