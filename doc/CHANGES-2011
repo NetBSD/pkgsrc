@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3389 2012/01/10 05:56:39 agc Exp $
+$NetBSD: CHANGES-2011,v 1.3390 2012/02/10 16:35:17 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -5439,3 +5439,4 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated security/heimdal to 1.4nb2 [tez 2011-12-30]
 	Updated www/contao210-translations to 20111230 [taca 2011-12-31]
 	Updated mail/cyrus-imapd24 to 2.4.13 [obache 2011-12-31]
+	Updated devel/imake to 1.0.3nb1 [bsiegert 2011-10-23]
