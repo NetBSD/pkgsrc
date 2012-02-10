@@ -1,0 +1,6 @@
+This package provides the core of the Assistive Technology Service
+Provider Interface, in particular the registry daemon with which
+AT applications such as screen readers can listen for events
+broadcast by accessible programs; and also a library, libatspi, to
+assist in writing AT applications.  This "version 2" uses DBUS
+rather than CORBA for inter-application communication.
