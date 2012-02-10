@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/05/21 22:10:12 schwarz Exp $
+$NetBSD: distinfo,v 1.3 2012/02/10 16:33:40 bsiegert Exp $
 
 SHA1 (imake-1.0.3.tar.bz2) = 625a974dd0fe4c4e9d7ec036fc7b079ec05185f1
 RMD160 (imake-1.0.3.tar.bz2) = 5cbd5f23fc8360a10cb36c367405f5950443349d
 Size (imake-1.0.3.tar.bz2) = 139230 bytes
+SHA1 (patch-imakemdep.h) = 9238bdaa7095056b20d96bd0387474d416c533ba
