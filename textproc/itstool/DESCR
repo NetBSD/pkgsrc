@@ -1,0 +1,4 @@
+ITS Tool extracts messages from XML files and outputs PO template
+files, then merges translations from MO files to create translated
+XML files.  It determines what to translate and how to chunk it
+into messages using the W3C Internationalization Tag Set (ITS).
