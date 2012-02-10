@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/02/06 12:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/02/10 15:14:56 drochner Exp $
 #
 
-DISTNAME=	gobject-introspection-0.10.8
-PKGREVISION=	2
+DISTNAME=	gobject-introspection-1.30.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/0.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/1.30/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -44,8 +43,11 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 # not executable
 CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
 
+# needed for test only
+#.include "../../graphics/cairo/buildlink3.mk"
 TEST_TARGET=	check
 
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.30.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/application.mk"
