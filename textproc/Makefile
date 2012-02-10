@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.608 2012/02/09 08:35:53 jnemeth Exp $
+# $NetBSD: Makefile,v 1.609 2012/02/10 18:00:13 drochner Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -198,6 +198,7 @@ SUBDIR+=	ispell-slovak
 SUBDIR+=	ispell-spanish
 SUBDIR+=	ispell-svenska
 SUBDIR+=	itex2MML
+SUBDIR+=	itstool
 SUBDIR+=	ja-grep
 SUBDIR+=	ja-groff
 SUBDIR+=	ja-sed
@@ -649,6 +650,7 @@ SUBDIR+=	xqilla
 SUBDIR+=	xslide
 SUBDIR+=	xt
 SUBDIR+=	yamcha
+SUBDIR+=	yelp-xsl
 SUBDIR+=	yodl
 SUBDIR+=	zoem
 
