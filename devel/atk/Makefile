@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2012/02/10 15:18:17 drochner Exp $
+# $NetBSD: Makefile,v 1.82 2012/02/10 15:24:10 drochner Exp $
 
 DISTNAME=		atk-2.2.0
 PKGREVISION=		2
@@ -27,6 +27,7 @@ UNLIMIT_RESOURCES=	stacksize
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.5.7
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
