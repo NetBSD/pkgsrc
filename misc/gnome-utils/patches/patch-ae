@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.5 2012/02/10 16:05:30 drochner Exp $
+
+--- gnome-dictionary/libgdict/Makefile.in.orig	2010-09-27 22:50:41.000000000 +0000
++++ gnome-dictionary/libgdict/Makefile.in
+@@ -328,7 +328,6 @@ INCLUDES = -DG_LOG_DOMAIN=\"Gdict\" 				
+ 	-DGNOMELOCALEDIR=\""$(gnomeutilslocaledir)"\" 		\
+ 	-DGDICTSOURCESDIR=\""$(datadir)/gdict-1.0/sources"\" 	\
+ 	-DGDICT_ENABLE_INTERNALS=1 				\
+-	-DG_DISABLE_DEPRECATED					\
+ 	-DGDK_DISABLE_DEPRECATED				\
+ 	-DGTK_DISABLE_DEPRECATED				\
+ 	-DPANGO_DISABLE_DEPRECATED				\
