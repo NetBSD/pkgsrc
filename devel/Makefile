@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1560 2012/02/09 08:27:59 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1561 2012/02/10 17:32:20 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -49,6 +49,8 @@ SUBDIR+=	as31
 SUBDIR+=	asm2html
 SUBDIR+=	astyle
 SUBDIR+=	at-spi
+SUBDIR+=	at-spi2-atk
+SUBDIR+=	at-spi2-core
 SUBDIR+=	atf
 SUBDIR+=	atk
 SUBDIR+=	atkmm
