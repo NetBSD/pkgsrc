@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.434 2012/02/09 21:45:05 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.435 2012/02/10 10:50:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -634,3 +634,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/texlive-tetex to 2011nb1 [minskim 2012-02-09]
 	Updated print/teTeX3-bin to 3.0nb50 [minskim 2012-02-09]
 	Updated print/teTeX to 3.0nb11 [minskim 2012-02-09]
+	Updated net/p5-Net-Amazon to 0.61 [obache 2012-02-10]
