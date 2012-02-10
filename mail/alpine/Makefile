@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/12/17 10:15:56 sbd Exp $
+# $NetBSD: Makefile,v 1.26 2012/02/10 08:44:01 cheusov Exp $
 #
 
 DISTNAME=	alpine-2.00
@@ -17,7 +17,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-ssl-dir=${SSLBASE:Q}
+CONFIGURE_ARGS+= --with-ssl-dir=${SSLBASE}
+CONFIGURE_ARGS+= --with-ssl-certs-dir=${SSLCERTS:Q}
+CONFIGURE_ARGS+= --with-ssl-include-dir=${SSLBASE}/include
+CONFIGURE_ARGS+= --with-ssl-lib-dir=${SSLBASE}/lib
 CONFIGURE_ARGS+= --with-system-pinerc=${PKG_SYSCONFDIR}/pine.conf
 CONFIGURE_ARGS+= --with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
 # disabled, for Web Alpine Support
