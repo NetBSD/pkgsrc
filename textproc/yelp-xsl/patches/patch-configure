@@ -1,0 +1,145 @@
+$NetBSD: patch-configure,v 1.1.1.1 2012/02/10 17:57:38 drochner Exp $
+
+Remove dependencies on libxml-2.0 and libxslt shared libraries.
+configure.ac equivalent of:
+
+   -# Dependecies
+   -PKG_CHECK_MODULES(YELP_XSL,
+   -[
+   -       libxml-2.0 >= 2.6.12
+   -       libxslt    >= 1.1.8
+   -])
+
+There are no C programs, so we don't need compile flags for the
+above libraries. The dependency on libxml2 is present indirectly
+in the dependency on itstool. I should be able to install yelp-xsl
+without having the above shared libraries.
+
+One could argue that I needn't put the DEPENDS lines in the Makefile.
+
+--- configure.orig	2012-01-07 10:04:25.000000000 +0000
++++ configure
+@@ -2645,123 +2645,6 @@ $as_echo "no" >&6; }
+ 	fi
+ fi
+ 
+-pkg_failed=no
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for YELP_XSL" >&5
+-$as_echo_n "checking for YELP_XSL... " >&6; }
+-
+-if test -n "$YELP_XSL_CFLAGS"; then
+-    pkg_cv_YELP_XSL_CFLAGS="$YELP_XSL_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-") 2>&5
+-  ac_status=$?
+-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  test $ac_status = 0; }; then
+-  pkg_cv_YELP_XSL_CFLAGS=`$PKG_CONFIG --cflags "
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+- else
+-    pkg_failed=untried
+-fi
+-if test -n "$YELP_XSL_LIBS"; then
+-    pkg_cv_YELP_XSL_LIBS="$YELP_XSL_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-") 2>&5
+-  ac_status=$?
+-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  test $ac_status = 0; }; then
+-  pkg_cv_YELP_XSL_LIBS=`$PKG_CONFIG --libs "
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+- else
+-    pkg_failed=untried
+-fi
+-
+-
+-
+-if test $pkg_failed = yes; then
+-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-
+-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+-        _pkg_short_errors_supported=yes
+-else
+-        _pkg_short_errors_supported=no
+-fi
+-        if test $_pkg_short_errors_supported = yes; then
+-	        YELP_XSL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-" 2>&1`
+-        else
+-	        YELP_XSL_PKG_ERRORS=`$PKG_CONFIG --print-errors "
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-" 2>&1`
+-        fi
+-	# Put the nasty error message in config.log where it belongs
+-	echo "$YELP_XSL_PKG_ERRORS" >&5
+-
+-	as_fn_error $? "Package requirements (
+-	libxml-2.0 >= 2.6.12
+-	libxslt    >= 1.1.8
+-) were not met:
+-
+-$YELP_XSL_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables YELP_XSL_CFLAGS
+-and YELP_XSL_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details." "$LINENO" 5
+-
+-elif test $pkg_failed = untried; then
+-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+-as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables YELP_XSL_CFLAGS
+-and YELP_XSL_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+-See \`config.log' for more details" "$LINENO" 5; }
+-
+-else
+-	YELP_XSL_CFLAGS=$pkg_cv_YELP_XSL_CFLAGS
+-	YELP_XSL_LIBS=$pkg_cv_YELP_XSL_LIBS
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-
+-fi
+ 
+ # i18n stuff
+ GETTEXT_PACKAGE=yelp-xsl
