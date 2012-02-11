@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2009/01/04 20:11:45 adrianp Exp $
+$NetBSD: patch-aa,v 1.6 2012/02/11 03:21:35 hiramatsu Exp $
 
---- Makefile.PL.orig	2008-12-11 11:05:40.000000000 +0000
+Skip interactive configuration.
+
+--- Makefile.PL.orig	2012-02-10 16:04:21.000000000 +0000
 +++ Makefile.PL
-@@ -155,90 +155,8 @@ FIX
+@@ -156,93 +156,8 @@ FIX
      exit 1;
  }
  
@@ -31,7 +33,7 @@ $NetBSD: patch-aa,v 1.5 2009/01/04 20:11:45 adrianp Exp $
 -        }
 -    }
 -
--    print "\n";
+-#   print "\n";
 -    eval "require $module";
 -    if($@)
 -    {   if($@ =~ m/^Can't locate /)
@@ -66,13 +68,16 @@ $NetBSD: patch-aa,v 1.5 2009/01/04 20:11:45 adrianp Exp $
 -    }
 -    
 -    my $install = $default_install_answer
--     || prompt "Do you want to install $module? yes/no/all"
+-     || prompt "Do you want to install $module? yes/no/all/none"
 -             , (-t STDIN ? 'y' : 'n');
 -
 -    $install = $default_install_answer = 'y'
--        if $install eq 'a';
+-        if $install =~ m/^a/i;
 -
--    next unless $install eq 'y';
+-    $install = $default_install_answer = 'n'
+-        if $install =~ m/^non/i;
+-
+-    next if $install !~ m/^y/i;
 -
 -    my $distr = $args{distr} || $module;
 -
