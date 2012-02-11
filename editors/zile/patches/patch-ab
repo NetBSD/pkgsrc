@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.5 2010/06/08 15:59:50 hauke Exp $
+$NetBSD: patch-ab,v 1.6 2012/02/11 09:54:21 hiramatsu Exp $
 
---- lib/wchar.in.h.orig	2010-05-09 18:10:04.000000000 +0000
+Include stdlib.h when zile is not build with glibc.
+
+--- lib/wchar.in.h.orig	2012-02-11 05:51:54.000000000 +0000
 +++ lib/wchar.in.h
-@@ -59,6 +59,7 @@
-    But avoid namespace pollution on glibc systems.  */
- #ifndef __GLIBC__
+@@ -68,6 +68,7 @@
  # include <stddef.h>
-+# include <stdlib.h>		/* NetBSD */
+ #endif
+ #ifndef __GLIBC__
++# include <stdlib.h>	/* NetBSD */
  # include <stdio.h>
  # include <time.h>
  #endif
