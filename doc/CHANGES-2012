@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.442 2012/02/11 09:55:11 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.443 2012/02/11 11:44:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -646,3 +646,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/p5-Mail-Box to 2.102 [hiramatsu 2012-02-11]
 	Updated devel/p5-parent to 0.225 [hiramatsu 2012-02-11]
 	Updated editors/zile to 2.4.5 [hiramatsu 2012-02-11]
+	Updated www/squid31 to 3.1.19 [adam 2012-02-11]
