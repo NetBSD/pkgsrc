@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.440 2012/02/10 18:51:46 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.441 2012/02/11 03:23:00 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -643,3 +643,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-moreverb to 2.3a [minskim 2012-02-10]
 	Updated print/tex-moreverb-doc to 2.3a [minskim 2012-02-10]
 	Updated graphics/feh to 2.3 [drochner 2012-02-10]
+	Updated mail/p5-Mail-Box to 2.102 [hiramatsu 2012-02-11]
+	Updated devel/p5-parent to 0.225 [hiramatsu 2012-02-11]
