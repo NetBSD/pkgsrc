@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.441 2012/02/11 03:23:00 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.442 2012/02/11 09:55:11 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -645,3 +645,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/feh to 2.3 [drochner 2012-02-10]
 	Updated mail/p5-Mail-Box to 2.102 [hiramatsu 2012-02-11]
 	Updated devel/p5-parent to 0.225 [hiramatsu 2012-02-11]
+	Updated editors/zile to 2.4.5 [hiramatsu 2012-02-11]
