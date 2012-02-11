@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2010/06/08 15:59:50 hauke Exp $
+# $NetBSD: Makefile,v 1.27 2012/02/11 09:54:21 hiramatsu Exp $
 
-DISTNAME=	zile-2.3.17
-#PKGREVISION=	1
+DISTNAME=	zile-2.4.5
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/gnu/zile/
 
@@ -22,4 +21,5 @@ INFO_FILES=	yes
 DEPENDS+=       libiconv-[0-9]*:../../converters/libiconv
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
