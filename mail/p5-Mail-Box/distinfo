@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/01/04 20:11:45 adrianp Exp $
+$NetBSD: distinfo,v 1.7 2012/02/11 03:21:35 hiramatsu Exp $
 
-SHA1 (Mail-Box-2.086.tar.gz) = 1c40ef8f726f157a7506762f7d33dcdb1e8831be
-RMD160 (Mail-Box-2.086.tar.gz) = d56543abab3cc2bb1e48e78b013374562e80e6c4
-Size (Mail-Box-2.086.tar.gz) = 598922 bytes
-SHA1 (patch-aa) = ca07d344e1e4bf621bb9a87cd019fd3b686c9d7a
+SHA1 (Mail-Box-2.102.tar.gz) = 28820bf3edf7d8175f53e318714c8066e1a80a73
+RMD160 (Mail-Box-2.102.tar.gz) = abc9bf4dedc47b75f458a0636e6f1b57bd45d0e3
+Size (Mail-Box-2.102.tar.gz) = 612927 bytes
+SHA1 (patch-aa) = 91a9f9f42bf25df5dcaf27ffb0ce0ba5b0caefc4
