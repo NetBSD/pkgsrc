@@ -1,0 +1,5 @@
+Unicode::Collate implements Unicode Collation Algorithm (UCA). The UCA
+provides a specification for how to compare two Unicode strings while
+remaining conformant to the requirements of The Unicode Standard. The UCA
+also supplies the Default Unicode Collation Element Table (DUCET), which
+is data specifying the default collation order for all Unicode characters.
