@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2011/12/04 21:44:52 gls Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/02/12 15:45:34 gls Exp $
 bin/fab
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fabfile/__init__.py
 ${PYSITELIB}/fabfile/__init__.pyc
@@ -53,6 +54,9 @@ ${PYSITELIB}/fabric/decorators.pyo
 ${PYSITELIB}/fabric/io.py
 ${PYSITELIB}/fabric/io.pyc
 ${PYSITELIB}/fabric/io.pyo
+${PYSITELIB}/fabric/job_queue.py
+${PYSITELIB}/fabric/job_queue.pyc
+${PYSITELIB}/fabric/job_queue.pyo
 ${PYSITELIB}/fabric/main.py
 ${PYSITELIB}/fabric/main.pyc
 ${PYSITELIB}/fabric/main.pyo
@@ -68,6 +72,9 @@ ${PYSITELIB}/fabric/sftp.pyo
 ${PYSITELIB}/fabric/state.py
 ${PYSITELIB}/fabric/state.pyc
 ${PYSITELIB}/fabric/state.pyo
+${PYSITELIB}/fabric/task_utils.py
+${PYSITELIB}/fabric/task_utils.pyc
+${PYSITELIB}/fabric/task_utils.pyo
 ${PYSITELIB}/fabric/tasks.py
 ${PYSITELIB}/fabric/tasks.pyc
 ${PYSITELIB}/fabric/tasks.pyo
@@ -97,6 +104,7 @@ share/doc/fabric/development.rst
 share/doc/fabric/faq.rst
 share/doc/fabric/index.rst
 share/doc/fabric/installation.rst
+share/doc/fabric/roadmap.rst
 share/doc/fabric/tutorial.rst
 share/doc/fabric/usage/env.rst
 share/doc/fabric/usage/execution.rst
@@ -105,6 +113,7 @@ share/doc/fabric/usage/fabfiles.rst
 share/doc/fabric/usage/interactivity.rst
 share/doc/fabric/usage/library.rst
 share/doc/fabric/usage/output_controls.rst
+share/doc/fabric/usage/parallel.rst
 share/doc/fabric/usage/ssh.rst
 share/doc/fabric/usage/tasks.rst
 @pkgdir share/doc/fabric/changes
