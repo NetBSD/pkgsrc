@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.28 2012/02/12 01:37:35 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.29 2012/02/12 23:07:43 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -136,3 +136,5 @@ Pullup ticket #3677 - requested by wiz
 Additon of startup-notification010 to x11 SUBDIR list
 Pullup ticket #3679 - requested by spz
 devel/apr security update
+Pullup ticket #3680 - requested by sbd
+emulators/qemu: build fix
