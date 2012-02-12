@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.454 2012/02/12 20:11:00 gls Exp $
+$NetBSD: CHANGES-2012,v 1.455 2012/02/12 20:16:38 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -661,3 +661,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/py-zfec to 1.4.22 [gls 2012-02-12]
 	Updated converters/py-zbase32 to 1.1.3 [gls 2012-02-12]
 	Updated devel/py-pyutil to 1.8.4 [gls 2012-02-12]
+	Updated comms/asterisk18 to 1.8.9.2 [jnemeth 2012-02-12]
