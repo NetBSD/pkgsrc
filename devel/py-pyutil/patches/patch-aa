@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2010/11/27 18:24:44 gdt Exp $
+$NetBSD: patch-aa,v 1.2 2012/02/12 20:10:42 gls Exp $
 
 http://tahoe-lafs.org/trac/zfec/ticket/11
 
---- setup.py.orig	2010-06-16 15:49:16.000000000 +0000
+--- setup.py.orig	2011-02-13 07:34:23.000000000 +0000
 +++ setup.py
-@@ -69,7 +69,7 @@ if 'darcsver' in sys.argv[1:]:
- # "sdist" or "bdist_egg"), unless there is a pyutil.egg-info/SOURCE.txt file
- # present which contains a complete list of files that should be included.
- # http://pypi.python.org/pypi/setuptools_darcs
--setup_requires.append('setuptools_darcs >= 1.1.0')
-+# setup_requires.append('setuptools_darcs >= 1.1.0')
+@@ -76,8 +76,8 @@ if 'darcsver' in sys.argv[1:]:
+ # Lucid, so for now you have to manually install it before building
+ # sdists or eggs:
+ # http://bitbucket.org/tarek/distribute/issue/55/revision-control-plugin-automatically-installed-as-a-build-dependency-is-not-present-when-another-build-dependency-is-being
+-if False:
+-    setup_requires.append('setuptools_darcs >= 1.1.0')
++#if False:
++#    setup_requires.append('setuptools_darcs >= 1.1.0')
  
- data_fnames=[ 'COPYING.GPL', 'COPYING.TGPPL.html', 'README.txt', 'CREDITS' ]
  
+ data_fnames=[ 'COPYING.SPL.txt', 'COPYING.GPL', 'COPYING.TGPPL.html', 'README.rst', 'CREDITS' ]
