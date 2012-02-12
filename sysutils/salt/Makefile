@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/02/12 13:40:44 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/12 13:43:21 obache Exp $
 #
 
 DISTNAME=	salt-0.9.5
 CATEGORIES=	sysutils
-MASTER_SITES=	https://github.com/downloads/saltstack/salt/
+MASTER_SITES=	http://cloud.github.com/downloads/saltstack/salt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
@@ -11,8 +11,6 @@ COMMENT=	Remote execution and configuration management system
 LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-FETCH_USING=	curl
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-patch
