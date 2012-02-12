@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.447 2012/02/12 14:38:12 gls Exp $
+$NetBSD: CHANGES-2012,v 1.448 2012/02/12 15:08:55 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -653,3 +653,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-XML-TreePP to 0.41 [hiramatsu 2012-02-12]
 	Updated devel/p5-Log-Any-Adapter to 0.06 [hiramatsu 2012-02-12]
 	Updated security/py-crypto to 2.5 [gls 2012-02-12]
+	Added security/py-ssh version 1.7.12 [gls 2012-02-12]
