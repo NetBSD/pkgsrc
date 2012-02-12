@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/03 18:25:53 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2012/02/12 14:12:19 wiz Exp $
 
 DISTNAME=	ng-1.4.3
 PKGREVISION=	1
@@ -22,14 +22,21 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.ng
 .if !empty(PKG_OPTIONS:Mcanna)
 .include "../../inputmethod/canna-lib/buildlink3.mk"
 MAKEFLAGS+=	USE_CANNA=YES
+.else
+MAKEFLAGS+=	USE_CANNA=NO
 .endif
 
 BUILD_TARGET=	ng
 
 INSTALLATION_DIRS=	bin
 
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+post-patch:
+	@(cd ${WRKSRC}; ${LN} -s sys/sysv/Makefile . )
+.else
 post-patch:
 	@(cd ${WRKSRC}; ${LN} -s sys/bsd/Makefile . )
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ng ${DESTDIR}${PREFIX}/bin
