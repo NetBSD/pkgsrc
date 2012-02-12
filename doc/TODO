@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10862 2012/02/11 09:55:11 hiramatsu Exp $
+$NetBSD: TODO,v 1.10863 2012/02/12 18:49:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -971,7 +971,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mediawiki-1.18.1
 	o meld-1.5.3
 	o memtest86-4.0 [pkg/45754]
-	o mercurial-2.1
 	o mergeant-0.67
 	o mess-0.145
 	o mesure-0.7.2
