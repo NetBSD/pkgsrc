@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/06 12:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/12 13:28:21 wiz Exp $
 #
 
 DISTNAME=	libcarddav_0.6.2-2debian2
@@ -19,6 +19,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:C/-[0-9]debian[0-9]//}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
+
+FETCH_USING=	curl
 
 .include "options.mk"
 
