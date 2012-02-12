@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2010/11/27 13:35:07 gdt Exp $
+$NetBSD: patch-aa,v 1.2 2012/02/12 19:55:09 gls Exp $
 
 http://tahoe-lafs.org/trac/zfec/ticket/11
 
---- setup.py.orig	2010-05-24 06:20:43.000000000 +0000
+--- setup.py.orig	2011-03-03 12:07:50.000000000 +0000
 +++ setup.py
-@@ -115,7 +115,7 @@ setup_requires.append('darcsver >= 1.2.0
- # "sdist" or "bdist_egg"), unless there is a zfec.egg-info/SOURCE.txt file
- # present which contains a complete list of files that should be included.
- # http://pypi.python.org/pypi/setuptools_darcs
--setup_requires.append('setuptools_darcs >= 1.1.0')
-+# setup_requires.append('setuptools_darcs >= 1.1.0')
+@@ -116,8 +116,8 @@ if 'darcsver' in sys.argv[1:]:
+ # shipped in Ubuntu Lucid, so for now you have to manually install it
+ # before building sdists or eggs:
+ # http://bitbucket.org/tarek/distribute/issue/55/revision-control-plugin-automatically-installed-as-a-build-dependency-is-not-present-when-another-build-dependency-is-being
+-if False:
+-    setup_requires.append('setuptools_darcs >= 1.1.0')
++#if False:
++#    setup_requires.append('setuptools_darcs >= 1.1.0')
  
- # stdeb is required to build Debian dsc files.
- if "sdist_dsc" in sys.argv:
+ 
+ # setuptools_trial is needed if you want "./setup.py trial" or
