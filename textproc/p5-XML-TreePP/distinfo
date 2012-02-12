@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/30 10:29:30 seb Exp $
+$NetBSD: distinfo,v 1.2 2012/02/12 14:25:00 hiramatsu Exp $
 
-SHA1 (XML-TreePP-0.39.tar.gz) = 2daa1a2ec33ea6d427cbf8d3eaac09d955a1fc34
-RMD160 (XML-TreePP-0.39.tar.gz) = 5d578c669bf661c204ce2716b3a4cba3f638d361
-Size (XML-TreePP-0.39.tar.gz) = 80485 bytes
+SHA1 (XML-TreePP-0.41.tar.gz) = ca16413eb7b0c023d0a6343c70861de544d3bc2b
+RMD160 (XML-TreePP-0.41.tar.gz) = a9f8a47e6a2c7814ba678d1ac36afab71cd80edc
+Size (XML-TreePP-0.41.tar.gz) = 96333 bytes
