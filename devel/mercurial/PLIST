@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2012/01/28 08:22:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.28 2012/02/12 18:49:45 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -286,6 +286,7 @@ ${PYSITELIB}/mercurial/help/hgweb.txt
 ${PYSITELIB}/mercurial/help/merge-tools.txt
 ${PYSITELIB}/mercurial/help/multirevs.txt
 ${PYSITELIB}/mercurial/help/patterns.txt
+${PYSITELIB}/mercurial/help/phases.txt
 ${PYSITELIB}/mercurial/help/revisions.txt
 ${PYSITELIB}/mercurial/help/revsets.txt
 ${PYSITELIB}/mercurial/help/subrepos.txt
@@ -423,6 +424,9 @@ ${PYSITELIB}/mercurial/parsers.so
 ${PYSITELIB}/mercurial/patch.py
 ${PYSITELIB}/mercurial/patch.pyc
 ${PYSITELIB}/mercurial/patch.pyo
+${PYSITELIB}/mercurial/phases.py
+${PYSITELIB}/mercurial/phases.pyc
+${PYSITELIB}/mercurial/phases.pyo
 ${PYSITELIB}/mercurial/posix.py
 ${PYSITELIB}/mercurial/posix.pyc
 ${PYSITELIB}/mercurial/posix.pyo
