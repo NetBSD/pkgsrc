@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/12 15:06:04 sno Exp $
+$NetBSD: distinfo,v 1.2 2012/02/12 14:25:33 hiramatsu Exp $
 
-SHA1 (Log-Any-Adapter-0.03.tar.gz) = 5c70dcd7fbdd8c4a3956a5abd3a9a97089db6b7f
-RMD160 (Log-Any-Adapter-0.03.tar.gz) = 9920b05a39731bcc4afccc66c8a64331e678c853
-Size (Log-Any-Adapter-0.03.tar.gz) = 27710 bytes
+SHA1 (Log-Any-Adapter-0.06.tar.gz) = fa518e20c0b7bf411492ec509438e644e87e52e2
+RMD160 (Log-Any-Adapter-0.06.tar.gz) = cbf396e4f78620c039c55284b2efba14752fca22
+Size (Log-Any-Adapter-0.06.tar.gz) = 16458 bytes
