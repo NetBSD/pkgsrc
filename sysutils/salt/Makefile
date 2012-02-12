@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/01/21 20:26:58 apb Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/12 13:28:03 wiz Exp $
 #
 
 DISTNAME=	salt-0.9.5
@@ -11,6 +11,8 @@ COMMENT=	Remote execution and configuration management system
 LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+FETCH_USING=	curl
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-patch
