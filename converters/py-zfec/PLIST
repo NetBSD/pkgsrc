@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/24 13:24:15 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/12 19:55:09 gls Exp $
 bin/zfec
 bin/zunfec
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -39,6 +39,6 @@ ${PYSITELIB}/zfec/test/test_zfec.pyc
 ${PYSITELIB}/zfec/test/test_zfec.pyo
 share/doc/zfec/COPYING.GPL
 share/doc/zfec/COPYING.TGPPL.html
-share/doc/zfec/README.txt
+share/doc/zfec/README.rst
 share/doc/zfec/TODO
 share/doc/zfec/changelog
