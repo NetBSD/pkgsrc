@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2011/12/03 00:02:16 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2012/02/12 14:37:52 gls Exp $
 #
 
-DISTNAME=	pycrypto-2.4.1
+DISTNAME=	pycrypto-2.5
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
 CATEGORIES=	security python
 MASTER_SITES=	http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/
@@ -23,11 +23,8 @@ GNU_CONFIGURE=	yes
 do-test:
 	${RUN}cd ${WRKSRC};${SETENV} ${TEST_ENV} ${PYTHONBIN} ${PYSETUP} test
 
-PLIST_VARS+=	py25 py2x
+PLIST_VARS+=	py2x
 .include "../../lang/python/pyversion.mk"
-.if empty(PYPKGPREFIX:Mpy24)
-PLIST.py25=	yes
-.endif
 .if empty(PYPKGPREFIX:Mpy3?)
 PLIST.py2x=	yes
 .endif
