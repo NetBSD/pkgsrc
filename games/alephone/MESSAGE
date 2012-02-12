@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/02/12 14:17:10 wiz Exp $
+
+Aleph One, the game engine, is installed. You will need data files in order
+to play any games.
+
+See games/marathon-trilogy or any other games/marathon-* package.
+
+===========================================================================
