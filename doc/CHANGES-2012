@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.445 2012/02/12 12:52:33 taca Exp $
+$NetBSD: CHANGES-2012,v 1.446 2012/02/12 14:26:32 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -650,3 +650,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Perl-APIReference to 0.09 [hiramatsu 2012-02-12]
 	Updated time/p5-Schedule-At to 1.14 [hiramatsu 2012-02-12]
 	Updated www/contao210-translations to 20120212 [taca 2012-02-12]
+	Updated textproc/p5-XML-TreePP to 0.41 [hiramatsu 2012-02-12]
+	Updated devel/p5-Log-Any-Adapter to 0.06 [hiramatsu 2012-02-12]
