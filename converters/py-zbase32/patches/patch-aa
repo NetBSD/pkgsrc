@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2010/11/27 14:15:29 gdt Exp $
+$NetBSD: patch-aa,v 1.2 2012/02/12 20:02:53 gls Exp $
 
 http://tahoe-lafs.org/trac/zfec/ticket/11#comment:2
 
---- setup.py.orig	2010-06-09 01:06:41.000000000 +0000
+--- setup.py.orig	2010-12-21 23:28:56.000000000 +0000
 +++ setup.py
-@@ -63,7 +63,7 @@ if 'darcsver' in sys.argv[1:]:
- # "sdist" or "bdist_egg"), unless there is a pyutil.egg-info/SOURCE.txt file
- # present which contains a complete list of files that should be included.
- # http://pypi.python.org/pypi/setuptools_darcs
--setup_requires.append('setuptools_darcs >= 1.1.0')
-+#setup_requires.append('setuptools_darcs >= 1.1.0')
+@@ -68,8 +68,8 @@ if 'darcsver' in sys.argv[1:]:
+ # Lucid, so for now you have to manually install it before building
+ # sdists or eggs:
+ # http://bitbucket.org/tarek/distribute/issue/55/revision-control-plugin-automatically-installed-as-a-build-dependency-is-not-present-when-another-build-dependency-is-being
+-if False:
+-    setup_requires.append('setuptools_darcs >= 1.1.0')
++#if False:
++#    setup_requires.append('setuptools_darcs >= 1.1.0')
+ 
  
  setup(name=PKG,
-       version=verstr,
