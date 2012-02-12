@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.456 2012/02/12 20:17:22 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.457 2012/02/12 23:30:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -663,3 +663,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-pyutil to 1.8.4 [gls 2012-02-12]
 	Updated comms/asterisk18 to 1.8.9.2 [jnemeth 2012-02-12]
 	Updated comms/asterisk10 to 10.1.2 [jnemeth 2012-02-12]
+	Updated www/p5-Template-Extract to 0.41nb5 [minskim 2012-02-12]
+	Updated www/p5-Template-Generate to 0.04nb11 [minskim 2012-02-12]
