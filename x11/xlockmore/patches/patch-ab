@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2010/12/08 12:54:32 obache Exp $
+$NetBSD: patch-ab,v 1.24 2012/02/13 11:46:13 drochner Exp $
 
---- configure.orig	2008-08-29 01:55:43.000000000 +0200
+--- configure.orig	2011-11-10 16:08:45.000000000 +0000
 +++ configure
-@@ -10532,10 +10399,10 @@ _ACEOF
+@@ -9434,10 +9434,10 @@ case "${canonical}" in
          dirname=`which gcc`
          dirname=`dirname $dirname`
          dirname=`dirname $dirname`/lib
@@ -17,7 +17,16 @@ $NetBSD: patch-ab,v 1.23 2010/12/08 12:54:32 obache Exp $
      fi
      XLOCKLDFLAGS="-Wl,-R${XLOCK_LDFLAGS}"
      XMLOCKLDFLAGS="-Wl,-R${XMLOCK_LDFLAGS}"
-@@ -10833,10 +10700,10 @@ _ACEOF
+@@ -9486,6 +9486,8 @@ _ACEOF
+     ac_fn_c_check_header_mongrel "$LINENO" "elf.h" "ac_cv_header_elf_h" "$ac_includes_default"
+ if test "x$ac_cv_header_elf_h" = xyes; then :
+   $as_echo "#define HAVE_SHADOW 1" >>confdefs.h
++  XLOCKLDFLAGS="${COMPILER_RPATH_FLAG}${XLOCK_LDFLAGS}"
++  XMLOCKLDFLAGS="${COMPILER_RPATH_FLAG}${XMLOCK_LDFLAGS}"
+ 
+ fi
+ 
+@@ -9581,10 +9583,10 @@ $as_echo "no" >&6; }
          dirname=`which gcc`
          dirname=`dirname $dirname`
          dirname=`dirname $dirname`/lib
