@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.1 2009/11/20 17:02:23 drochner Exp $
+$NetBSD: patch-an,v 1.2 2012/02/13 12:08:11 drochner Exp $
 
---- libgphoto2_port/configure.orig	2009-08-11 17:13:11.000000000 +0200
+--- libgphoto2_port/configure.orig	2011-11-29 21:04:51.000000000 +0000
 +++ libgphoto2_port/configure
-@@ -18333,7 +18333,7 @@ fi
+@@ -15422,7 +15422,7 @@ fi
  if test "x${udevscriptdir}" = "x"; then	udevscriptdir="\${libdir}/udev"; fi
  
  
-- if if echo "$host"|grep -i linux >/dev/null ; then test "x$have_LIBUSB" = xyes; fi ; then
-+ if if echo "$host"|grep -i linux >/dev/null ; then test "x$have_LIBUSB" = xyes; else false; fi ; then
+- if if echo "$host"|grep -i linux >/dev/null ; then test "x$have_LIBUSB" = xyes -o "x$have_LIBUSB1" = xyes; fi ; then
++ if if echo "$host"|grep -i linux >/dev/null ; then test "x$have_LIBUSB" = xyes -o "x$have_LIBUSB1" = xyes; else false; fi ; then
    HAVE_UDEV_TRUE=
    HAVE_UDEV_FALSE='#'
  else
