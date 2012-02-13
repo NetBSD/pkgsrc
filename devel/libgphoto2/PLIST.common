@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.18 2011/11/07 11:03:05 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.19 2012/02/13 12:08:11 drochner Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -82,6 +82,7 @@ lib/libgphoto2/${PKGVERSION}/stv0680.la
 lib/libgphoto2/${PKGVERSION}/sx330z.la
 lib/libgphoto2/${PKGVERSION}/topfield.la
 lib/libgphoto2/${PKGVERSION}/toshiba_pdrm11.la
+lib/libgphoto2/${PKGVERSION}/tp6801.la
 lib/libgphoto2/print-camera-list
 lib/libgphoto2_port.la
 lib/libgphoto2_port/0.8.0/disk.la
@@ -140,6 +141,7 @@ share/doc/libgphoto2/camlibs/README.sq905
 share/doc/libgphoto2/camlibs/README.st2205
 share/doc/libgphoto2/camlibs/README.st2205-compression
 share/doc/libgphoto2/camlibs/README.toshiba-pdrm11
+share/doc/libgphoto2/camlibs/README.tp6801
 share/doc/libgphoto2_port/AUTHORS
 share/doc/libgphoto2_port/NEWS
 share/doc/libgphoto2_port/README
