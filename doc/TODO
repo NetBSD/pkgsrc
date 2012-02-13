@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10865 2012/02/13 02:14:12 mef Exp $
+$NetBSD: TODO,v 1.10866 2012/02/13 12:35:15 drochner Exp $
 
 Suggested new packages
 ======================
@@ -325,7 +325,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.4.10
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
