@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2012/02/04 13:24:35 drochner Exp $
+# $NetBSD: Makefile.common,v 1.10 2012/02/13 01:24:20 obache Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
@@ -20,7 +20,6 @@ USE_TOOLS+=	bison gmake perl:build pkg-config msgfmt
 PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_JOBS_SAFE=		no
 
 MAKE_FILE=	GNUmakefile
 GNU_CONFIGURE=	yes
