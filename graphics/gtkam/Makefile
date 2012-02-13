@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2012/02/06 12:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2012/02/13 12:21:43 drochner Exp $
 #
 
-DISTNAME=	gtkam-0.1.16
-PKGREVISION=	10
+DISTNAME=	gtkam-0.1.18
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 
@@ -22,6 +21,7 @@ CONFIGURE_ARGS+=	--without-bonobo-activation
 CONFIGURE_ARGS+=	--without-gnome
 CONFIGURE_ARGS+=	--without-gimp
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/libexif-gtk/buildlink3.mk"
