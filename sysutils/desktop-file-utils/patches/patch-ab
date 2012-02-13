@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2007/07/03 19:47:36 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2012/02/13 12:29:12 drochner Exp $
 
---- Makefile.in.orig	2007-06-04 22:33:50.000000000 +0000
+--- Makefile.in.orig	2011-12-20 15:09:44.000000000 +0000
 +++ Makefile.in
-@@ -143,7 +143,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
--SUBDIRS = src misc
-+SUBDIRS = src
- subdir = .
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -198,7 +198,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = src man misc
++SUBDIRS = src man
+ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+ EXTRA_DIST = HACKING
+ MAINTAINERCLEANFILES = \
