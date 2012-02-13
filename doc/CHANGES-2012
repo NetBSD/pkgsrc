@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.458 2012/02/13 11:16:36 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.459 2012/02/13 12:35:15 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -665,5 +665,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk10 to 10.1.2 [jnemeth 2012-02-12]
 	Updated www/p5-Template-Extract to 0.41nb5 [minskim 2012-02-12]
 	Updated www/p5-Template-Generate to 0.04nb11 [minskim 2012-02-12]
+	Updated graphics/ImageMagick to 6.7.5.5 [drochner 2012-02-13]
 	Updated devel/p5-Parse-ErrorString-Perl to 0.15 [hiramatsu 2012-02-13]
 	Added devel/p5-CPAN-Perl-Releases version 0.42 [hiramatsu 2012-02-13]
+	Updated x11/xlockmore to 5.38 [drochner 2012-02-13]
+	Updated devel/libgphoto2 to 2.4.12 [drochner 2012-02-13]
+	Updated graphics/gtkam to 0.1.18 [drochner 2012-02-13]
+	Updated sysutils/desktop-file-utils to 0.19 [drochner 2012-02-13]
+	Updated databases/shared-mime-info to 1.0 [drochner 2012-02-13]
