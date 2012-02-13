@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10864 2012/02/12 19:55:28 gls Exp $
+$NetBSD: TODO,v 1.10865 2012/02/13 02:14:12 mef Exp $
 
 Suggested new packages
 ======================
@@ -426,8 +426,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bftpd-3.6
 	o biew-6.1.0
 	o bigreqsproto-1.1.1
-	o binutils-2.21.1 [wip]
-	o binutils-2.22
+	o binutils-2.22 [wip]
 	o bioperl-1.5.0
 	o bitlbee-3.0.4
 	o bitmap-1.0.5
