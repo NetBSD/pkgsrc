@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.369 2012/01/31 11:10:56 obache Exp $
+# $NetBSD: Makefile,v 1.370 2012/02/13 12:42:41 drochner Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -265,6 +265,7 @@ SUBDIR+=	xrolodex
 SUBDIR+=	xtail
 SUBDIR+=	xtend
 SUBDIR+=	yelp
+SUBDIR+=	yelp3
 SUBDIR+=	yrolo
 SUBDIR+=	zorro
 SUBDIR+=	zyGrib
