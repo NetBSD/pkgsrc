@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.460 2012/02/13 14:43:08 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.461 2012/02/13 17:58:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -674,3 +674,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/desktop-file-utils to 0.19 [drochner 2012-02-13]
 	Updated databases/shared-mime-info to 1.0 [drochner 2012-02-13]
 	Updated textproc/hunspell to 1.3.2 [wiz 2012-02-13]
+	Updated editors/emacs-snapshot to 24.0.93.20120208 [minskim 2012-02-13]
