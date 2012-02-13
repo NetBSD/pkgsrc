@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10866 2012/02/13 12:35:15 drochner Exp $
+$NetBSD: TODO,v 1.10867 2012/02/13 14:05:50 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o acme-091 [pkg/44771]
 	o acpica-utils-20110623
 	o acr-0.5.2
-	o acroread-9.4.7
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
