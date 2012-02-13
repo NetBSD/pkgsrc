@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/13 14:42:59 wiz Exp $
+bin/affixcompress
 bin/analyze
 bin/chmorph
-bin/example
 bin/hunspell
 bin/hunzip
 bin/hzip
+bin/ispellaff2myspell
+bin/makealias
 bin/munch
 bin/unmunch
+bin/wordforms
+bin/wordlist2hunspell
 include/hunspell/affentry.hxx
 include/hunspell/affixmgr.hxx
 include/hunspell/atypes.hxx
@@ -18,15 +22,14 @@ include/hunspell/hashmgr.hxx
 include/hunspell/htypes.hxx
 include/hunspell/hunspell.h
 include/hunspell/hunspell.hxx
+include/hunspell/hunvisapi.h
 include/hunspell/hunzip.hxx
 include/hunspell/langnum.hxx
 include/hunspell/phonet.hxx
 include/hunspell/replist.hxx
 include/hunspell/suggestmgr.hxx
 include/hunspell/w_char.hxx
-include/munch.h
-include/unmunch.h
-lib/libhunspell-1.2.la
+lib/libhunspell-1.3.la
 lib/libparsers.a
 lib/pkgconfig/hunspell.pc
 man/hu/man1/hunspell.1
@@ -37,3 +40,4 @@ man/man1/hzip.1
 man/man3/hunspell.3
 man/man4/hunspell.4
 share/locale/hu/LC_MESSAGES/hunspell.mo
+share/locale/it/LC_MESSAGES/hunspell.mo
