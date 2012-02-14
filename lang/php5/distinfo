@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.91 2011/08/20 14:50:51 taca Exp $
+$NetBSD: distinfo,v 1.91.4.1 2012/02/14 09:48:13 tron Exp $
 
 SHA1 (php-5.2.17/php-5.2.17.tar.bz2) = d68f3b09f766990d815a3c4c63c157db8dab8095
 RMD160 (php-5.2.17/php-5.2.17.tar.bz2) = 567fa8d718b93fb83a89494c83a8bec224ac99e9
@@ -26,3 +26,4 @@ SHA1 (patch-main_rfc1867.c) = 89a1a0e52402a8f8f1cc5b1ec007f5ab1ab69dc2
 SHA1 (patch-main_snprintf.c) = cb112df0cadf84aaeee5987169a31460989995a8
 SHA1 (patch-main_snprintf.h) = 86ae4c1c8ae9183254e9914cb56d3df999f719cf
 SHA1 (patch-main_spprintf.c) = 0fe0888b612402c41f040c8781df7f1a7ca66275
+SHA1 (patch-main_streams_cast.c) = 0e69cad7d6451b18ec844cc8ea6d18eaf0748530
