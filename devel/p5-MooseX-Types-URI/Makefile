@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2011/08/14 12:26:24 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/14 13:32:41 hiramatsu Exp $
 #
 
-DISTNAME=	MooseX-Types-URI-0.02
+DISTNAME=	MooseX-Types-URI-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MooseX-Types-URI/
 COMMENT=	URI related types and coercions for Moose
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=0.50:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types>0:../../devel/p5-MooseX-Types
