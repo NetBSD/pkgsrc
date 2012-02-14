@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10868 2012/02/13 17:35:33 bsiegert Exp $
+$NetBSD: TODO,v 1.10869 2012/02/14 11:22:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,14 +334,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o Sigil-0.5.1
+	o Sigil-0.5.2
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o abcm2ps-6.6.3
-	o abcmidi-20111211
+	o abcmidi-20120205
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.2.1
 	o acme-091 [pkg/44771]
@@ -441,7 +441,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.38
+	o calibre-0.8.39
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.2
 	o cddbd-1.5.2
@@ -460,6 +460,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
+	o clex-4.6.4 [pkg/45960]
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.8.4
 	o clutter-gst-1.4.6
@@ -531,7 +532,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.21
 	o egtk-0.3.6.2
 	o eigen2-2.0.17
-	o eigen3-3.0.4
+	o eigen3-3.0.5
 	o ejabberd-2.1.11
 	o ekiga-3.2.7
 	o electric-9.01
@@ -560,7 +561,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
-	o etm-885
+	o etm-887
 	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evieext-1.1.1
@@ -673,6 +674,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gfract-0.33
 	o ghc-7.0.4
 	o ghostscript-9.04 [wip]
+	o ghostscript-9.05
 	o gif2png-2.5.5
 	o gifsicle-1.48
 	o gkrellm-2.3.5
@@ -685,7 +687,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
-	o gmp-5.0.3
+	o gmp-5.0.4
+	o gnash-0.8.10
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.2.2
@@ -738,6 +741,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.2
 	o gssdp-0.10.0
+	o gst123-0.2.2
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
@@ -799,7 +803,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o inputproto-2.1
 	o inspircd-1.2.1
 	o instiki-0.13
-	o intltool-0.50.0
+	o intltool-0.50.1
 	o ircservices-5.1.21
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
@@ -906,7 +910,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgnomekbd-3.2.0
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version]
 	o libjit-1.0.2
-	o libjpeg-turbo-1.1.1
+	o libjpeg-turbo-1.2.0
 	o liblbxutil-1.1.0
 	o libltdl-2.4
 	o libmatheval-1.1.6
@@ -979,14 +983,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o minivmac-3.2.3
 	o miredo-1.2.4
 	o mirmon-1.37
+	o mkfontdir-1.0.7
+	o mkfontscale-1.1.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-5.2.1
+	o mkvtoolnix-5.3.0
 	o moc-2.4.4
+	o modular-xorg-server-1.10.6
 	o modular-xorg-server-1.11.2 [wip]
 	o modular-xorg-server-1.11.4
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o mono-2.10.8
+	o mono-2.10.9
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
@@ -1131,7 +1138,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-2.7.6
 	o putty-0.62
 	o puzzle-9173
-	o puzzles-9405
+	o puzzles-9406
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1147,7 +1154,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-mxDateTime-3.2.0
+	o py-qt4-4.9.1
 	o py-simplejson-2.2.1
+	o py-sip-4.13.2
 	o py-sybase-0.37
 	o py-urwid-1.0.1
 	o py-xcbgen-1.7
@@ -1156,6 +1165,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qemu-1.0
 	o qnetwalk-1.3
 	o qpopper-4.0.14
+	o qt4-qscintilla-2.6.1
 	o quilt-0.51
 	o qvplay-0.95
 	o qwt-6.0.0
@@ -1328,6 +1338,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o ufoai-2.3.1
 	o uim-1.7.2
+	o uni2ascii-4.18 [pkg/45971]
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
 	o units-88 [pkg/43742]
@@ -1398,7 +1409,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xcb-proto-1.7
 	o xcb-util-0.3.8 [NOT binary compatible to 0.3.6, so perhaps wait with update -- wiz 20110524]
 	o xcircuit-3.6.85
-	o xclock-1.0.5
+	o xclock-1.0.6
 	o xcmiscproto-1.2.1
 	o xcmsdb-1.0.3 [unpackaged]
 	o xconsole-1.0.4
@@ -1430,6 +1441,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-mga-1.4.13
 	o xf86-video-neomagic-1.2.5
 	o xf86-video-newport-0.2.3 [unpackaged]
+	o xf86-video-openchrome-0.2.905
 	o xf86-video-rendition-4.2.4
 	o xf86-video-savage-2.3.3
 	o xf86-video-siliconmotion-1.7.5
