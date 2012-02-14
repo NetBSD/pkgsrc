@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.469 2012/02/14 20:10:02 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.470 2012/02/14 21:51:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -684,3 +684,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Test-InDistDir version 1.112071 [hiramatsu 2012-02-14]
 	Updated databases/ruby-activeldap to 3.1.1 [taca 2012-02-14]
 	Added print/paps version 0.6.8 [wiz 2012-02-14]
+	Updated print/tex-exam to 2.4 [minskim 2012-02-14]
+	Updated print/tex-exam-doc to 2.4 [minskim 2012-02-14]
