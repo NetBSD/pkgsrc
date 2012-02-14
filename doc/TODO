@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10870 2012/02/14 12:04:38 obache Exp $
+$NetBSD: TODO,v 1.10871 2012/02/14 12:49:54 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -741,7 +741,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.2
 	o gssdp-0.10.0
-	o gst123-0.2.2
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
