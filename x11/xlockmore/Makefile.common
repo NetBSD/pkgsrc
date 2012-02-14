@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2012/02/13 11:46:13 drochner Exp $
+# $NetBSD: Makefile.common,v 1.61 2012/02/14 08:24:41 tron Exp $
 #
 # This Makefile.common is included by:
 #
@@ -57,6 +57,7 @@ CONFIGURE_ARGS+=	--without-dtsaver
 CONFIGURE_ARGS+=	--without-rplay
 CONFIGURE_ARGS+=	--without-nas
 CONFIGURE_ARGS+=	--without-gtk
+CONFIGURE_ARGS+=	--without-esound
 CONFIGURE_ARGS+=	--enable-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 CONFIGURE_ENV+=		ac_cv_x_app_defaults=${PREFIX}/lib/X11/app-defaults
 
