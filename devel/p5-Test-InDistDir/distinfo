@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/14 13:34:49 hiramatsu Exp $
+
+SHA1 (Test-InDistDir-1.112071.tar.gz) = 5cfcb91e912d9c1fd528867af1d89f1983235b16
+RMD160 (Test-InDistDir-1.112071.tar.gz) = 993430f503f06b6407fd9adfb05f6b3f2e3decfb
+Size (Test-InDistDir-1.112071.tar.gz) = 5341 bytes
