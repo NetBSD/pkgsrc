@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.30 2012/02/13 20:43:15 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.31 2012/02/14 09:48:31 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -140,3 +140,5 @@ Pullup ticket #3680 - requested by sbd
 emulators/qemu: build fix
 Pullup ticket #3681 - requested by riz
 devel/m4: build fix
+Pullup ticket #3682 - requested by riz
+lang/php5: build fix
