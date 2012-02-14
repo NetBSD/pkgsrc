@@ -1,0 +1,6 @@
+libunistring provides a library that implements Unicode strings (in
+three flavours: UTF-8 strings, UTF-16 strings, UTF-32 strings),
+together with functions for Unicode charactets (character names,
+classifications, properties) and functions for string processing
+(formatted output, width, word breaks, line breaks, normalization,
+case folding, regular expressions).
