@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.463 2012/02/14 06:03:59 obache Exp $
+$NetBSD: CHANGES-2012,v 1.464 2012/02/14 12:04:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -677,3 +677,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/emacs-snapshot to 24.0.93.20120208 [minskim 2012-02-13]
 	Updated www/awstats to 7.0nb4 [gls 2012-02-13]
 	Updated x11/libunique to 1.1.6nb8 [obache 2012-02-14]
+	Updated textproc/uni2ascii to 4.18 [obache 2012-02-14]
