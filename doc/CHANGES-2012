@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.470 2012/02/14 21:51:30 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.471 2012/02/14 22:47:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -686,3 +686,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/paps version 0.6.8 [wiz 2012-02-14]
 	Updated print/tex-exam to 2.4 [minskim 2012-02-14]
 	Updated print/tex-exam-doc to 2.4 [minskim 2012-02-14]
+	Updated devel/scmgit-base to 1.7.9.1 [gdt 2012-02-14]
