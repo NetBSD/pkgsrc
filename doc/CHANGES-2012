@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.465 2012/02/14 12:49:30 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.466 2012/02/14 12:53:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -679,3 +679,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/libunique to 1.1.6nb8 [obache 2012-02-14]
 	Updated textproc/uni2ascii to 4.18 [obache 2012-02-14]
 	Updated multimedia/gst123 to 0.2.2 [ryoon 2012-02-14]
+	Updated net/p5-Net-DBus to 1.0.0 [sno 2012-02-14]
