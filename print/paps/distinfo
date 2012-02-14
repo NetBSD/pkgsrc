@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/14 20:07:32 wiz Exp $
+
+SHA1 (paps-0.6.8.tar.gz) = 83646b0de89deb8321f260c2c5a665bc7c8f5928
+RMD160 (paps-0.6.8.tar.gz) = f8dda178279a4e5903b45b803e8a3ae42df3afdd
+Size (paps-0.6.8.tar.gz) = 460062 bytes

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/14 20:07:32 wiz Exp $
+bin/paps
+include/libpaps.h
+lib/libpaps.a
+man/man1/paps.1
