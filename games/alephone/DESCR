@@ -3,10 +3,6 @@ their acclaimed Marathon 2 under the GPL.  This has evolved into Aleph One,
 which makes it possible to play the classic Marathon Trilogy on a wide
 range of systems with improved features like OpenGL and internet play.
 
-You will also want the marathon-trilogy package, which provides the
-game data for the original trilogy. The marathon-scenarios package
-(currently in wip) provides several third-party scenarios.
-
 Also see:
-   http://traxus.bungie.org  (information and more third-party scenarios)
    http://trilogyrelease.bungie.org  (the original free downloads)
+   http://traxus.bungie.org  (information and more third-party scenarios)
