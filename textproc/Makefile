@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2012/02/10 18:00:13 drochner Exp $
+# $NetBSD: Makefile,v 1.610 2012/02/14 23:07:45 gdt Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -220,6 +220,7 @@ SUBDIR+=	liblrdf
 SUBDIR+=	libnxml
 SUBDIR+=	libplist
 SUBDIR+=	libunicode
+SUBDIR+=	libunistring
 SUBDIR+=	libxml
 SUBDIR+=	libxml++
 SUBDIR+=	libxml++1
