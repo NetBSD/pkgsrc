@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/02/06 12:42:18 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/14 06:03:11 obache Exp $
 #
 
 DISTNAME=	libunique-1.1.6
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libunique/1.1/}
 
@@ -22,6 +22,17 @@ PKGCONFIG_OVERRIDE+=	unique.pc.in
 # Workaround for Upstream Bug#562310.
 # for more detail, see also PR#41475.
 TOOLS_NOOP+=	gtkdoc-rebase
+
+SUBST_CLASSES+=		g_const
+SUBST_STAGE.g_const=	post-configure
+SUBST_MESSAGE.g_const=	Replace deprecated G_CONST_RETURN with plain "const".
+SUBST_FILES.g_const=	unique/uniqueapp.c
+SUBST_FILES.g_const+=	unique/uniquebackend.c
+SUBST_FILES.g_const+=	unique/uniquebackend.h
+SUBST_FILES.g_const+=	unique/uniqueinternals.h
+SUBST_FILES.g_const+=	unique/uniquemessage.c
+SUBST_FILES.g_const+=	unique/uniquemessage.h
+SUBST_SED.g_const=	-e 's/G_CONST_RETURN /const /g'
 
 .include "../../mk/compiler.mk"
 
