@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 00:18:16 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/14 21:50:46 minskim Exp $
 
 DISTNAME=	exam.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.3
-TEXLIVE_REV=	15878
-DIST_SUBDIR=	${PKGBASE:S/-doc//}-${TEXLIVE_REV}.2010
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.4
+TEXLIVE_REV=	22585
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-exam
