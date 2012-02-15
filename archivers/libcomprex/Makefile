@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/04/22 13:42:10 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/02/15 19:19:27 hans Exp $
 
 DISTNAME=	libcomprex-0.3.3
 PKGREVISION=	5
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE=	libcomprex.pc.in
 GNU_CONFIGURE=		yes
 BROKEN_GETTEXT_DETECTION=	yes
 CONFIGURE_ENV+=		ac_cv_lib_curl_curl_formparse=yes
+REPLACE_SH=		comprex-config.in
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
