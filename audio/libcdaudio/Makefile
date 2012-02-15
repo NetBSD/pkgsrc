@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/11/21 10:38:19 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2012/02/15 21:53:56 hans Exp $
 
 DISTNAME=	libcdaudio-0.99.12
 PKGREVISION=	2
@@ -18,5 +18,6 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	libcdaudio.pc.in
+REPLACE_SH=		libcdaudio-config.in
 
 .include "../../mk/bsd.pkg.mk"
