@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3.6.1 2012/02/15 09:17:16 plunky Exp $
+$NetBSD: patch-ab,v 1.3.6.2 2012/02/15 09:26:54 plunky Exp $
 
---- lib/bluetooth.h.orig	2011-12-22 00:18:58.000000000 +0000
-+++ lib/bluetooth.h
+--- bluetooth/bluetooth.h.orig	2011-06-19 12:38:18.000000000 +0000
++++ bluetooth/bluetooth.h
 @@ -30,6 +30,7 @@
  extern "C" {
  #endif
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.3.6.1 2012/02/15 09:17:16 plunky Exp $
  #include <stdio.h>
  #include <stdint.h>
  #include <string.h>
-@@ -107,6 +108,20 @@ enum {
+@@ -103,6 +104,17 @@ enum {
  #else
  #error "Unknown byte order"
  #endif
@@ -24,22 +24,19 @@ $NetBSD: patch-ab,v 1.3.6.1 2012/02/15 09:17:16 plunky Exp $
 +#define htobl(d)	htole32(d)
 +#define btohs(d)	le16toh(d)
 +#define btohl(d)	le32toh(d)
-+#define bswap_64(v)	bswap64(v)
-+#define bswap_32(v)	bswap32(v)
-+#define bswap_16(v)	bswap16(v)
 +#endif
  
  /* Bluetooth unaligned access */
  #define bt_get_unaligned(ptr)			\
-@@ -189,6 +204,7 @@ static inline uint16_t bt_get_be16(void 
- #error "Unknown byte order"
- #endif
+@@ -121,6 +133,7 @@ do {						\
+ 	__p->__v = (val);			\
+ } while(0)
  
 +#if 0
  /* BD Address */
  typedef struct {
  	uint8_t b[6];
-@@ -197,6 +213,7 @@ typedef struct {
+@@ -129,6 +142,7 @@ typedef struct {
  #define BDADDR_ANY   (&(bdaddr_t) {{0, 0, 0, 0, 0, 0}})
  #define BDADDR_ALL   (&(bdaddr_t) {{0xff, 0xff, 0xff, 0xff, 0xff, 0xff}})
  #define BDADDR_LOCAL (&(bdaddr_t) {{0, 0, 0, 0xff, 0xff, 0xff}})
@@ -47,7 +44,7 @@ $NetBSD: patch-ab,v 1.3.6.1 2012/02/15 09:17:16 plunky Exp $
  
  /* Copy, swap, convert BD Address */
  static inline int bacmp(const bdaddr_t *ba1, const bdaddr_t *ba2)
-@@ -209,9 +226,12 @@ static inline void bacpy(bdaddr_t *dst, 
+@@ -141,9 +155,12 @@ static inline void bacpy(bdaddr_t *dst, 
  }
  
  void baswap(bdaddr_t *dst, const bdaddr_t *src);
@@ -60,7 +57,7 @@ $NetBSD: patch-ab,v 1.3.6.1 2012/02/15 09:17:16 plunky Exp $
  int str2ba(const char *str, bdaddr_t *ba);
  int ba2oui(const bdaddr_t *ba, char *oui);
  int bachk(const char *str);
-@@ -220,11 +240,14 @@ int baprintf(const char *format, ...);
+@@ -152,11 +169,14 @@ int baprintf(const char *format, ...);
  int bafprintf(FILE *stream, const char *format, ...);
  int basprintf(char *str, const char *format, ...);
  int basnprintf(char *str, size_t size, const char *format, ...);

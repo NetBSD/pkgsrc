@@ -1,7 +1,18 @@
-$NetBSD: patch-al,v 1.2.6.1 2012/02/15 09:17:17 plunky Exp $
+$NetBSD: patch-al,v 1.2.6.2 2012/02/15 09:26:54 plunky Exp $
 
---- lib/bluetooth.c.orig	2011-12-22 00:18:58.000000000 +0000
-+++ lib/bluetooth.c
+--- src/bt_lib.c.orig	2011-06-19 12:38:18.000000000 +0000
++++ src/bt_lib.c
+@@ -35,8 +35,8 @@
+ #include <string.h>
+ #include <sys/socket.h>
+ 
+-#include "bluetooth.h"
+-#include "hci.h"
++#include <bluetooth/bluetooth.h>
++#include <bluetooth/hci.h>
+ 
+ void baswap(bdaddr_t *dst, const bdaddr_t *src)
+ {
 @@ -48,6 +48,7 @@ void baswap(bdaddr_t *dst, const bdaddr_
  		d[i] = s[5-i];
  }
