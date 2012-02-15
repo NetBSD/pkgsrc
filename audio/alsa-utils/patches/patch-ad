@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2010/02/16 18:28:01 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2012/02/15 19:46:31 hans Exp $
 
 --- speaker-test/speaker-test.c.orig	2009-12-16 15:18:52.000000000 +0000
 +++ speaker-test/speaker-test.c
-@@ -44,7 +44,14 @@
+@@ -44,7 +44,18 @@
  #include <getopt.h>
  #include <inttypes.h>
  #include <ctype.h>
@@ -11,6 +11,10 @@ $NetBSD: patch-ad,v 1.4 2010/02/16 18:28:01 wiz Exp $
 +#define bswap_16 bswap16
 +#define bswap_32 bswap32
 +#define ESTRPIPE EPIPE
++#elif defined(__sun)
++#include <sys/byteorder.h>
++#define bswap_16 BSWAP_16
++#define bswap_32 BSWAP_32
 +#else
  #include <byteswap.h>
 +#endif
