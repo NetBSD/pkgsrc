@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/02/06 12:39:22 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/02/15 21:27:10 hans Exp $
 #
 
 DISTNAME=		gmpc-0.20.0
@@ -18,6 +18,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool msgfmt pkg-config gmake
 PKGCONFIG_OVERRIDE=	data/gmpc.pc.in
+REPLACE_SH=		remote/gmpc-remote-stream
 
 .include "options.mk"
 

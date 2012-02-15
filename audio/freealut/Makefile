@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/15 21:25:52 hans Exp $
 #
 
 DISTNAME=	freealut-1.1.0
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+REPLACE_SH=		admin/pkgconfig/freealut-config.in
 PKGCONFIG_OVERRIDE+=	admin/pkgconfig/freealut.pc.in
 
 .include "../../mk/pthread.buildlink3.mk"

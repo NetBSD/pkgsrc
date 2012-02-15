@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/02/06 12:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/02/15 21:33:04 hans Exp $
 
 DISTNAME=		gqmpeg-0.91.1
 PKGREVISION=		14
@@ -22,6 +22,8 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		GNOME_DATADIR=${PREFIX}/share
+
+REPLACE_SH=		plugin/gqmpeg-shoutcast-plugin.sh
 
 MAKE_ENV+=		builddir=.
 
