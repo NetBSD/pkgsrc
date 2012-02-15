@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/08/11 22:03:39 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2012/02/15 19:28:18 hans Exp $
 
 DISTNAME=	xpk-0.1.4
 PKGREVISION=	1
@@ -11,6 +11,8 @@ COMMENT=	The eXternal PacKer (XPK) library system
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+REPLACE_SH=		xpk-config.in
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
