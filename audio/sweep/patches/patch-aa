@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.3 2003/04/30 17:13:02 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2012/02/15 22:57:55 hans Exp $
 
 --- src/driver_oss.c.orig	2003-04-27 07:37:14.000000000 +0200
 +++ src/driver_oss.c
-@@ -85,6 +85,7 @@ oss_get_names (void)
+@@ -51,6 +51,12 @@
+ 
+ #include <sys/soundcard.h>
+ 
++#ifdef __sun
++#define SOUND_PCM_WRITE_CHANNELS	SNDCTL_DSP_CHANNELS
++#define SOUND_PCM_WRITE_RATE		SNDCTL_DSP_SPEED
++#define SOUND_PCM_WRITE_BITS		SNDCTL_DSP_SETFMT
++#endif
++
+ #ifdef DEVEL_CODE
+ /*#define DEBUG*/
+ #endif
+@@ -85,6 +91,7 @@ oss_get_names (void)
  {
    GList * names = NULL;
  
@@ -10,7 +23,7 @@ $NetBSD: patch-aa,v 1.3 2003/04/30 17:13:02 jmmv Exp $
    names = g_list_append (names, "/dev/dsp");
    names = g_list_append (names, "/dev/dsp1");
    names = g_list_append (names, "/dev/sound/dsp");
-@@ -212,6 +213,7 @@ setup_dev_dsp (sw_handle * handle, sw_fo
+@@ -212,6 +219,7 @@ setup_dev_dsp (sw_handle * handle, sw_fo
      exit (1) ;
    }
  
@@ -18,7 +31,7 @@ $NetBSD: patch-aa,v 1.3 2003/04/30 17:13:02 jmmv Exp $
    fmt = AFMT_QUERY;
    if ((error = ioctl (dev_dsp, SOUND_PCM_SETFMT, &fmt)) != 0) {
      perror ("open_dsp_device 8") ;
-@@ -229,6 +231,7 @@ setup_dev_dsp (sw_handle * handle, sw_fo
+@@ -229,6 +237,7 @@ setup_dev_dsp (sw_handle * handle, sw_fo
      handle->custom_data = GINT_TO_POINTER(1);
    }
  #endif
