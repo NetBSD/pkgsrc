@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:31 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/15 19:23:20 hans Exp $
 #
 
 DISTNAME=	archive-2.0
@@ -24,6 +24,7 @@ USE_TOOLS+=	pax
 NO_BUILD=	yes
 
 PYTHON_PATCH_SCRIPTS=	AppRun tests/testall.py
+REPLACE_SH=		Messages/dist Messages/update-po
 
 INSTALLATION_DIRS=	share/rox/Archive
 
