@@ -1,11 +1,12 @@
-$NetBSD: patch-src_wildmidi.c,v 1.1.1.1 2011/11/30 13:47:16 wiz Exp $
+$NetBSD: patch-src_wildmidi.c,v 1.2 2012/02/15 22:05:24 hans Exp $
 
 On NetBSD, FNONBLOCK is only defined for the kernel.
+Define MAP_FILE if necessary.
 Fix device name in printf.
 
 --- src/wildmidi.c.orig	2010-07-30 00:33:46.000000000 +0000
 +++ src/wildmidi.c
-@@ -63,7 +63,11 @@
+@@ -63,7 +63,15 @@
  #include "wildmidi_lib.h"
  
  #ifndef FNONBLOCK
@@ -14,10 +15,14 @@ Fix device name in printf.
 +#else
 +#define FNONBLOCK O_NONBLOCK
 +#endif
++#endif
++
++#ifndef MAP_FILE
++#define MAP_FILE 0
  #endif
  
  
-@@ -573,11 +577,11 @@ open_oss_output( void ) {
+@@ -573,11 +581,11 @@ open_oss_output( void ) {
  	}
  
  	if ((audio_fd = open(pcmname, omode)) < 0) {
