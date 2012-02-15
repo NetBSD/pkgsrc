@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10874 2012/02/15 13:16:32 ryoon Exp $
+$NetBSD: TODO,v 1.10875 2012/02/15 13:47:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -1177,6 +1177,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rcs-5.8
 	o rdesktop-1.7.1
 	o rdp-1.6
+	o re-alpine-2.02 [pkg/46025]
 	o recordproto-1.14.1
 	o redland-1.0.15 [needs rasqal-0.9.22]
 	o remind-3.1.12
