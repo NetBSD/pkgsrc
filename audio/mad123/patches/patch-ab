@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2012/02/05 20:39:50 sbd Exp $
+$NetBSD: patch-ab,v 1.3 2012/02/15 22:09:31 hans Exp $
 
 --- audio_dev.c.orig	2004-09-22 09:23:43.000000000 +0000
 +++ audio_dev.c
@@ -12,7 +12,18 @@ $NetBSD: patch-ab,v 1.2 2012/02/05 20:39:50 sbd Exp $
  #include <sys/ioctl.h>
  #include <sys/mman.h>
  #include <sys/wait.h>
-@@ -43,6 +45,10 @@
+@@ -35,6 +35,10 @@
+ #include <unistd.h>
+ #include <mad.h>
+ 
++#ifdef __sun
++#include <sys/stropts.h>
++#endif
++
+ #include "audio_dev.h"
+ 
+ #if (BYTE_ORDER == BIG_ENDIAN)
+@@ -43,6 +47,10 @@
  #undef WORDS_BIGENDIAN
  #endif
  
@@ -23,7 +34,25 @@ $NetBSD: patch-ab,v 1.2 2012/02/05 20:39:50 sbd Exp $
  #define PCM_BUFFSIZE	((sizeof(((struct mad_pcm *)0)->samples) / \
  			    sizeof(mad_fixed_t)) * 2)
  struct pcm_data {
-@@ -97,8 +103,12 @@ static void	audio_convert_dither(unsigne
+@@ -58,7 +66,7 @@ struct pcm_data {
+ #define PCM_LOW_WATER   32
+ struct pcm_buffer {
+ 	volatile int	pb_command;
+-	u_int64_t	pb_playsamples;
++	uint64_t	pb_playsamples;
+ 	int		pb_rate;
+ 	int		pb_nchannels;
+ 	volatile int	pb_purge;
+@@ -74,7 +82,7 @@ struct audio_dev_ctx {
+ 	int		ac_paused;
+ 	int		ac_peerread;
+ 	int		ac_peerwrite;
+-	u_int64_t	ac_buffersamples;
++	uint64_t	ac_buffersamples;
+ 	void		(*ac_readcallback)(void *);
+ 	void		*ac_cbarg;
+ 	struct pcm_buffer *ac_pcm;
+@@ -97,8 +105,12 @@ static void	audio_convert_dither(unsigne
  
  
  static const struct audio_dev_backend *audio_dev_backends[] = {
@@ -36,3 +65,12 @@ $NetBSD: patch-ab,v 1.2 2012/02/05 20:39:50 sbd Exp $
  #ifndef NOARTS
  	&audio_dev_arts,
  #endif
+@@ -326,7 +338,7 @@ audio_dev_output(struct audio_dev_ctx *a
+ 	pd->pd_len = len;
+ 
+ 	written /= pd->pd_nchannels;
+-	written /= sizeof(u_int16_t);
++	written /= sizeof(uint16_t);
+ 	ac->ac_pcm->pb_playsamples += written;
+ 
+ 	return ((rv >= 0) ? 0 : -1);
