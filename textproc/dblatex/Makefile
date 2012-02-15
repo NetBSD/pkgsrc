@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/02/06 12:39:48 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/15 22:06:02 gls Exp $
 #
 
-DISTNAME=	dblatex-0.3
-PKGREVISION=	1
+DISTNAME=	dblatex-0.3.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dblatex/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dblatex.sourceforge.net/
 COMMENT=	DocBook to LaTeX Publishing
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
