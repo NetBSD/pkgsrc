@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/11/22 20:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/02/15 22:11:04 hans Exp $
 
 DISTNAME=	maplay1_2
 PKGNAME=	maplay-1.2
@@ -19,6 +19,8 @@ USE_LANGUAGES=	c++
 NOT_FOR_PLATFORM=	Interix-*-*
 
 INSTALLATION_DIRS=	bin
+
+MAKE_ENV+=	INSTALL=${TOOLS_PATH.install:Q}
 
 pre-configure:
 	cd ${WRKSRC} && ${MAKE} pre-install
