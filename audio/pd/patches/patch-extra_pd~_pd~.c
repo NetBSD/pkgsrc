@@ -1,4 +1,4 @@
-$NetBSD: patch-extra_pd~_pd~.c,v 1.2 2011/10/05 20:02:48 wiz Exp $
+$NetBSD: patch-extra_pd~_pd~.c,v 1.3 2012/02/15 22:36:38 hans Exp $
 
 Add missing include (for SIGPIPE).
 Define extensions for NetBSD.
@@ -14,7 +14,7 @@ https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478
  #include <string.h>
  #include <unistd.h>
  #include <stdlib.h>
-@@ -56,6 +57,15 @@ static char pd_tilde_dllextent[] = ".l_i
+@@ -56,6 +57,24 @@ static char pd_tilde_dllextent[] = ".l_i
      pd_tilde_dllextent2[] = ".pd_linux";
  #endif
  #endif
@@ -25,6 +25,15 @@ https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478
 +#else
 +static char pd_tilde_dllextent[] = ".n_i386",
 +    pd_tilde_dllextent2[] = ".pd_netbsd";
++#endif
++#endif
++#if defined(__sun)
++#ifdef __x86_64__
++static char pd_tilde_dllextent[] = ".s_ia64",
++    pd_tilde_dllextent2[] = ".pd_sunos";
++#else
++static char pd_tilde_dllextent[] = ".s_i386",
++    pd_tilde_dllextent2[] = ".pd_sunos";
 +#endif
 +#endif
  #ifdef __APPLE__
