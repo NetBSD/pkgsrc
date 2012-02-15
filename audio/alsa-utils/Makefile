@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/01/24 23:21:23 marino Exp $
+# $NetBSD: Makefile,v 1.9 2012/02/15 19:46:30 hans Exp $
 #
 
 DISTNAME=	alsa-utils-1.0.22
@@ -17,6 +17,7 @@ USE_TOOLS=		pkg-config gmake bash:run
 USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		yes
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
 REPLACE_BASH=		alsaconf/alsaconf.in
 
