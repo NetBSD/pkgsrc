@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2005/11/11 16:49:32 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2012/02/15 21:37:48 hans Exp $
 
 --- bplaysrc/Makefile.orig	2000-03-27 21:24:46.000000000 +0000
 +++ bplaysrc/Makefile
-@@ -6,18 +6,29 @@ OBJS = bplay.o sndfunc.o shmbuf.o ../yes
+@@ -6,18 +6,27 @@ OBJS = bplay.o sndfunc.o shmbuf.o ../yes
          ../clrscr.o ../secshms.o
  #SRCS = bplay.c sndfunc.o shmbuf.c
  
@@ -25,13 +25,11 @@ $NetBSD: patch-ab,v 1.2 2005/11/11 16:49:32 joerg Exp $
 +CFLAGS = -Wall -O2 -DLP2CD -DVUMETER
 +LIBS = -lcurses ${LIBOSSAUDIO}
 +else
-+ifeq (${OS}, NetBSD)
  # For FreeBSD (and maybe others), use these:
 -#CFLAGS = -Wall -O2 -DLP2CD -DVUMETER # -DDEBUG
 -#LIBS = -lncurses
 +CFLAGS = -Wall -O2 -DLP2CD -DVUMETER -DOLD_CURSES -D_SEM_SEMUN_UNDEFINED # -DDEBUG
 +LIBS = -lcurses ${LIBOSSAUDIO}
-+endif
 +endif
 +endif
  
