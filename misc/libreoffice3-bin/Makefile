@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/01/26 15:33:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/15 12:59:37 ryoon Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
 CATEGORIES=		misc
-MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.4.5/rpm/x86/
+MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.5.0/rpm/x86/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.libreoffice.org/
@@ -20,8 +20,8 @@ CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
-OO_BASEVER=		3.4
-OO_RELEASE=		3.4.5
+OO_BASEVER=		3.5
+OO_RELEASE=		3.5.0
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -59,7 +59,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		LibO_${OO_RELEASE}_Linux_x86_install-rpm_en-US
-WRKSRC=			${WRKDIR}/LibO_${OO_RELEASE}rc2_Linux_x86_install-rpm_en-US
+WRKSRC=			${WRKDIR}/LibO_${OO_RELEASE}rc3_Linux_x86_install-rpm_en-US
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solaris_x86_install_en-US
 WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502/packages
@@ -90,7 +90,7 @@ do-install:
 .endfor
 
 post-install:
-	${CHMOD} 755 ${DESTDIR}${PREFIX}/opt/libreoffice3.4/program/oosplash.bin
-	${BINPATCHDIR}/bin/binpatch file=${DESTDIR}${PREFIX}/opt/libreoffice3.4/program/oosplash.bin size=19100 offset=16458 compare=76657273696F6E00 skip=0 replace=637075696E666f
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/oosplash
+	${BINPATCHDIR}/bin/binpatch file=${DESTDIR}${PREFIX}/opt/libreoffice${OO_BASEVER}/program/oosplash size=18856 offset=15183 compare=76657273696F6E00 skip=0 replace=637075696E666f
 
 .include "../../mk/bsd.pkg.mk"
