@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1.1.1.10.1 2012/02/15 09:17:17 plunky Exp $
+$NetBSD: patch-an,v 1.1.1.1.10.2 2012/02/15 09:26:54 plunky Exp $
 
---- src/hcidump.8.orig	2011-01-27 03:33:33.000000000 +0000
+--- src/hcidump.8.orig	2007-07-26 08:34:58.000000000 +0100
 +++ src/hcidump.8
 @@ -28,7 +28,7 @@ which must be the name of an installed B
  and if
