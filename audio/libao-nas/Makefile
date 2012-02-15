@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/02 13:17:16 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/15 21:50:17 hans Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -9,6 +9,8 @@ COMMENT+=	(nas plugin)
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/disable-nas/enable-nas/g}
 BUILD_DIRS=		src/plugins/nas
 INSTALL_DIRS=		src/plugins/nas
+
+LIBS.SunOS+=	-lm
 
 _LIBAO_BUILDING_PLUGIN=	yes
 
