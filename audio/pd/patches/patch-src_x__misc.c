@@ -1,4 +1,4 @@
-$NetBSD: patch-src_x__misc.c,v 1.2 2011/10/05 20:02:48 wiz Exp $
+$NetBSD: patch-src_x__misc.c,v 1.3 2012/02/15 22:36:39 hans Exp $
 
 Define missing symbol the same as on FreeBSD/Mac OS X.
 https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478072
@@ -10,7 +10,7 @@ https://sourceforge.net/tracker/?func=detail&aid=3411732&group_id=55736&atid=478
  #endif /* _WIN32 */
  
 -#if defined (__APPLE__) || defined (__FreeBSD__)
-+#if defined (__APPLE__) || defined (__FreeBSD__) || defined(__NetBSD__)
++#if defined (__APPLE__) || defined (__FreeBSD__) || defined(__NetBSD__) || defined(__sun)
  #define CLOCKHZ CLK_TCK
  #endif
  #if defined (__linux__) || defined (__CYGWIN__) || defined (ANDROID)

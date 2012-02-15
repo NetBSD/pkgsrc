@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/05 22:20:42 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/15 22:36:38 hans Exp $
 #
 
 DISTNAME=	pd-0.43-0.src
@@ -22,6 +22,9 @@ USE_TOOLS+=	autoconf automake gmake msgfmt pkg-config
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
+REPLACE_SH=	tcl/pd-gui.tcl
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 PKGCONFIG_OVERRIDE+=	pd.pc.in
 
