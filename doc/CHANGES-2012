@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.475 2012/02/15 04:22:31 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.476 2012/02/15 08:00:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -691,3 +691,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/umefont-ttf to 0.436 [ryoon 2012-02-15]
 	Updated lang/newlisp to 10.4.0 [ryoon 2012-02-15]
 	Updated devel/mr to 1.11 [schmonz 2012-02-15]
+	Updated editors/Sigil to 0.5.2 [ryoon 2012-02-15]
