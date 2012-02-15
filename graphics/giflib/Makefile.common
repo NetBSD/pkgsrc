@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2012/02/15 11:08:46 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/02/15 11:20:46 obache Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
@@ -17,3 +17,7 @@ DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+CONFIGURE_ARGS+=	--disable-rle
+CONFIGURE_ARGS+=	--disable-x11
+CONFIGURE_ARGS+=	--disable-gl
