@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/12 21:10:25 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2012/02/15 23:13:32 hans Exp $
 
 --- wslib/audio_voxware.c.orig	Fri Mar 31 22:14:40 2000
 +++ wslib/audio_voxware.c
-@@ -106,7 +106,7 @@
+@@ -106,7 +106,7 @@ resetAudioDevice(int audiofd)
  {
  	assert(audiofd > 0);
  
@@ -10,4 +10,40 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/12 21:10:25 wiz Exp $
 +	if (ioctl(audiofd, SNDCTL_DSP_RESET, NULL) == -1) {
  		perror("SNDCTL_DSP_RESET");
  		SErrorCode = SERR_DEVRESET;
+ 		return -1;
+@@ -398,7 +398,7 @@ writeAudioData(int audiofd, SAudioFileIn
+ static int
+ write8bitAudioData(int audiofd, SAudioFileInfo *afInfo)
+ {
+-	u_int8_t	*buffer;		/* audio buffer */
++	uint8_t		*buffer;		/* audio buffer */
+ 	long		curFrame;		/* current framecount */
+ 	long		blkFrames;		/* number of frames in current audio block */
+ 	int		blockSize = 8192;	/* Size of an audio block buffer in frames */
+@@ -408,7 +408,7 @@ write8bitAudioData(int audiofd, SAudioFi
+ 	fprintf(stderr, " >> writing data\n");
+ #endif
+ 
+-	buffer = (u_int8_t *) malloc( blockSize * (afInfo->SampleWidth/8) * afInfo->Channels * sizeof(u_int8_t));
++	buffer = (uint8_t *) malloc( blockSize * (afInfo->SampleWidth/8) * afInfo->Channels * sizeof(uint8_t));
+ 	if (!buffer) {
+ 		SErrorCode = SERR_NOMEMORY;
+ 		return -1;
+@@ -498,7 +498,7 @@ write8bitAudioData(int audiofd, SAudioFi
+ static int
+ write16bitAudioData(int audiofd, SAudioFileInfo *afInfo)
+ {
+-	u_int16_t	*buffer;		/* audio buffer */
++	uint16_t	*buffer;		/* audio buffer */
+ 	long		curFrame;		/* current framecount */
+ 	long		blkFrames;		/* number of frames in current audio block */
+ 	int		blockSize = 4096;	/* Size of an audio block buffer in frames */
+@@ -508,7 +508,7 @@ write16bitAudioData(int audiofd, SAudioF
+ 	fprintf(stderr, " >> writing data\n");
+ #endif
+ 
+-	buffer = (u_int16_t *) malloc( blockSize * (afInfo->SampleWidth/8) * afInfo->Channels * sizeof(u_int16_t));
++	buffer = (uint16_t *) malloc( blockSize * (afInfo->SampleWidth/8) * afInfo->Channels * sizeof(uint16_t));
+ 	if (!buffer) {
+ 		SErrorCode = SERR_NOMEMORY;
  		return -1;

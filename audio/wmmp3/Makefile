@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/09/04 21:38:03 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2012/02/15 23:11:29 hans Exp $
 
 DISTNAME=	wmmp3-0.12
 PKGREVISION=	3
@@ -12,6 +12,8 @@ COMMENT=	Front-end for mpg123 in a Window Maker dockapp
 DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib${LIBABISUFFIX:Q}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	share/examples

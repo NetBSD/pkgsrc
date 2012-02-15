@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/02/06 12:39:31 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2012/02/15 23:13:32 hans Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -21,6 +21,7 @@ USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}	# not really needed
 CONFIGURE_ENV+=		ac_cv_path_AUDIOFILE_CONFIG="pkg-config audiofile"
+CONFIGURE_ENV+=		TOOLS_PATH_SH=${TOOLS_PATH.sh}
 PKG_SYSCONFSUBDIR=	WindowMaker
 EGDIR=			${PREFIX}/share/examples/wsoundserver
 CONF_FILES=		${EGDIR:Q}/WMSound ${PKG_SYSCONFDIR:Q}/WMSound
