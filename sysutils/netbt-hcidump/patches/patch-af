@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+$NetBSD: patch-af,v 1.1.1.1.10.1 2012/02/15 09:17:17 plunky Exp $
 
---- parser/bnep.c.orig	2007-02-18 03:39:02.000000000 +0000
+--- parser/bnep.c.orig	2011-12-22 00:18:58.000000000 +0000
 +++ parser/bnep.c
-@@ -33,7 +33,7 @@
+@@ -32,7 +32,7 @@
+ #include <stdlib.h>
  #include <string.h>
- #include <sys/types.h>
  
 -#include <net/ethernet.h>
 +#include <net/ethertypes.h>
  
- #include "parser.h"
+ #include "parser/parser.h"
  

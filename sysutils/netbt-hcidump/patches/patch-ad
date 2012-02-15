@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
+$NetBSD: patch-ad,v 1.1.1.1.10.1 2012/02/15 09:17:17 plunky Exp $
 
---- bluetooth/hci_lib.h.orig	2010-09-30 08:53:08.000000000 +0000
-+++ bluetooth/hci_lib.h
+--- lib/hci_lib.h.orig	2011-12-22 00:18:58.000000000 +0000
++++ lib/hci_lib.h
 @@ -30,6 +30,7 @@
  extern "C" {
  #endif
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
  struct hci_request {
  	uint16_t ogf;
  	uint16_t ocf;
-@@ -135,11 +136,15 @@ char *hci_bustostr(int bus);
+@@ -142,11 +143,15 @@ char *hci_bustostr(int bus);
  char *hci_typetostr(int type);
  char *hci_dtypetostr(int type);
  char *hci_dflagstostr(uint32_t flags);
@@ -26,7 +26,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
  int hci_strtolp(char *str, unsigned int *val);
  char *hci_lmtostr(unsigned int ptype);
  int hci_strtolm(char *str, unsigned int *val);
-@@ -147,9 +152,13 @@ int hci_strtolm(char *str, unsigned int 
+@@ -154,9 +159,13 @@ int hci_strtolm(char *str, unsigned int 
  char *hci_cmdtostr(unsigned int cmd);
  char *hci_commandstostr(uint8_t *commands, char *pref, int width);
  
@@ -40,7 +40,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/12/19 20:20:43 plunky Exp $
  int lmp_strtover(char *str, unsigned int *ver);
  
  char *lmp_featurestostr(uint8_t *features, char *pref, int width);
-@@ -218,6 +227,7 @@ static inline int hci_filter_test_opcode
+@@ -225,6 +234,7 @@ static inline int hci_filter_test_opcode
  {
  	return (f->opcode == opcode);
  }
