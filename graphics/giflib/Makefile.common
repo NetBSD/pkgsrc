@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2012/02/15 11:08:46 obache Exp $
+# used by graphics/giflib/Makefile
+# used by graphics/giflib-util/Makefile
+
+DISTNAME=	giflib-4.1.6
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://giflib.sourceforge.net/
+LICENSE=	mit
+
+PATCHDIR=	${.CURDIR}/../../graphics/giflib/patches
+DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
