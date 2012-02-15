@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
+$NetBSD: patch-af,v 1.2 2012/02/15 22:23:16 hans Exp $
 
 --- config.h.in.orig	2008-01-14 18:48:57.000000000 +0000
 +++ config.h.in
-@@ -215,7 +215,7 @@
+@@ -250,7 +250,7 @@
  #include <duma.h>
  #endif
  
@@ -10,4 +10,15 @@ $NetBSD: patch-af,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
 +#if defined(HAVE_DUMA)||defined(HAVE_EFENCE)||defined(__NetBSD__)
  #define NO_DLCLOSE
  #endif
+ 
+@@ -272,7 +272,9 @@ extern void *memmem(const void *haystack
+ /* A lot of structures etc. uses PATH_MAX, NAME_MAX and friends, so we
+  * still #include <limits.h> here
+  */
+-
++#ifndef NAME_MAX
++#define NAME_MAX PATH_MAX
++#endif
+ 
+ #undef GCC_411_RUNTIMECHECK
  
