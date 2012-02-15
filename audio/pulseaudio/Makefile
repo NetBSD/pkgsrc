@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/02/06 12:39:29 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2012/02/15 22:38:30 hans Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -22,6 +22,11 @@ USE_TOOLS+=	pkg-config gmake m4 msgfmt intltool perl \
 		autoconf automake autoreconf
 
 AUTOCONF_REQD=	2.63
+
+REPLACE_SH+=	src/daemon/esdcompat.in
+REPLACE_SH+=	src/daemon/start-pulseaudio-x11.in
+REPLACE_SH+=	src/daemon/start-pulseaudio-kde.in
+REPLACE_SH+=	src/utils/padsp
 
 PKGCONFIG_OVERRIDE+=	libpulse-browse.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
