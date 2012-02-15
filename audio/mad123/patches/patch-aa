@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2005/11/11 18:58:18 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2012/02/15 22:09:31 hans Exp $
 
 --- mad123.c.orig	2005-11-11 18:19:59.000000000 +0000
 +++ mad123.c
@@ -10,3 +10,14 @@ $NetBSD: patch-aa,v 1.1 2005/11/11 18:58:18 joerg Exp $
  #include <sys/time.h>
  #include <sys/resource.h>
  #include <sys/poll.h>
+@@ -33,6 +34,10 @@
+ #include <unistd.h>
+ #include <mad.h>
+ 
++#ifdef __sun
++#include <sys/stropts.h>
++#endif
++
+ #include "audio_dev.h"
+ #include "mp3_stream.h"
+ 
