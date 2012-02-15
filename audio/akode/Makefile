@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/11/22 10:54:15 marino Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/15 19:31:19 hans Exp $
 #
 
 PKGNAME=		akode-2.0.2
@@ -11,6 +11,8 @@ LICENSE=		gnu-lgpl-v2
 .include "../../audio/akode/Makefile.common"
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+REPLACE_SH=		akode/akode-config.in
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
