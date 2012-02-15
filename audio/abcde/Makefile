@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/01/14 07:44:33 obache Exp $
+# $NetBSD: Makefile,v 1.50 2012/02/15 19:30:13 hans Exp $
 
 DISTNAME=	abcde-2.3.99.7_p235
 PKGNAME=	abcde-2.3.99.7
@@ -27,7 +27,7 @@ EXTRACT_SUFX=	.tar.bz2
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_TOOLS+=	bash:run gsed:run
-REPLACE_BASH=	abcde
+REPLACE_BASH=	abcde cddb-tool
 
 EGDIR=		${PREFIX}/share/examples/abcde
 
