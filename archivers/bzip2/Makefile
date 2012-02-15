@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2010/09/22 14:53:21 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2012/02/15 19:15:04 hans Exp $
 #
 
 DISTNAME=	bzip2-1.0.6
@@ -13,6 +13,7 @@ DISTFILES=	# empty
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+REPLACE_SH=	bzdiff bzgrep bzmore
 
 MAKE_JOBS_SAFE=		no
 USE_LIBTOOL=		yes
