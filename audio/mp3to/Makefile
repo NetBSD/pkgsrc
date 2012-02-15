@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/25 14:45:16 tron Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/15 22:13:36 hans Exp $
 
 DISTNAME=	mp3to
 PKGNAME=	${DISTNAME}-1.0.1
@@ -17,6 +17,8 @@ DEPENDS+=	gmp3info>=0.8.2:../../audio/gmp3info
 DEPENDS+=	sox>=12.17.1:../../audio/sox
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+REPLACE_SH=	mp3to
 
 NO_BUILD=	YES
 
