@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.3 2009/08/31 14:25:49 wiz Exp $
+$NetBSD: patch-ap,v 1.4 2012/02/15 19:43:51 hans Exp $
 
 --- src/pcm/pcm_file.c.orig	2009-05-06 07:07:23.000000000 +0000
 +++ src/pcm/pcm_file.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ap,v 1.3 2009/08/31 14:25:49 wiz Exp $
   *
   */
    
-+#if !defined(__NetBSD__) && !defined(__DragonFly__)
++#if !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__sun)
  #include <endian.h>
  #include <byteswap.h>
 +#endif
