@@ -1,4 +1,4 @@
-#!/bin/sh
+#!XXXPKG_SHXXX
 
 case "$1" in
 play)
