@@ -1,22 +1,20 @@
-$NetBSD: distinfo,v 1.5 2011/06/19 13:02:35 plunky Exp $
+$NetBSD: distinfo,v 1.5.6.1 2012/02/15 09:17:16 plunky Exp $
 
-SHA1 (bluez-4.94.tar.gz) = 5a6ac6dfe6074e002a517f6e841623f0ded66e41
-RMD160 (bluez-4.94.tar.gz) = 20010e0db361fce9e08c0342d092f8397e478551
-Size (bluez-4.94.tar.gz) = 1152526 bytes
-SHA1 (bluez-hcidump-2.1.tar.gz) = d797000ac0f840803abecdae5e44db88c5e5dbe8
-RMD160 (bluez-hcidump-2.1.tar.gz) = cf26c5ea4f68abc6dee1135a0a9b35cac45ebb7f
-Size (bluez-hcidump-2.1.tar.gz) = 154630 bytes
-SHA1 (patch-aa) = 6e30f3bd8e06e152bd2b65b32e173de039320787
-SHA1 (patch-ab) = e313255f11be98686f40af27c6a18550656759ea
-SHA1 (patch-ac) = adbc1e33996e61ccc5c016154bee3c4af72d784d
-SHA1 (patch-ad) = b7007a6c55011ac6a1da2fd1883f953532d75ea5
-SHA1 (patch-ae) = e59424e971879f368c09adae894088952612f1be
-SHA1 (patch-af) = 7748d6d83ce118eff90b9d8158badd0664faa308
-SHA1 (patch-ah) = b5a190251ccb9e55d2ac8460a436df3026d6be3d
-SHA1 (patch-ai) = 46239a7931f8fecee9216b13f98227711c69c54d
-SHA1 (patch-aj) = 3ef708a26e82ea209ef66c556889ba0cb9c9dd86
-SHA1 (patch-ak) = bbdb271ca8ff39b57082659ceceb9435273ab5ac
-SHA1 (patch-al) = 0a7330fbc9b38c13797aae1a46ecc07b2eca8643
-SHA1 (patch-am) = 7de396188d6c519e4d7b95eb5134cb1464dfb865
-SHA1 (patch-an) = 35d9fd1b0d82addf0688e2997fdf589fbc89d921
-SHA1 (patch-ao) = 9572764ecba59a92f69996f5601fe14d4ebe3b23
+SHA1 (bluez-hcidump-2.2.tar.gz) = 4d36b9265e23bfdbc824f00f6f6a1c3fd794559a
+RMD160 (bluez-hcidump-2.2.tar.gz) = 5ec584f7b3c0818452ba1e874d8b17bb01efe621
+Size (bluez-hcidump-2.2.tar.gz) = 190096 bytes
+SHA1 (patch-aa) = 3a856deba9518923321b3ddffe863d7817a021e1
+SHA1 (patch-ab) = ad50cee12679bd302475f7a62391a3833343f51b
+SHA1 (patch-ac) = 42a0bfc63a64243db201973c1973b914bee92192
+SHA1 (patch-ad) = 65f5e76b20489907838d2eff47c6fdaea251a7e0
+SHA1 (patch-ae) = a5ce4c703d491472421138bbe7ebb0133832992c
+SHA1 (patch-af) = d32b7ac6add15c95fce071d1f64ad7e1f655c99f
+SHA1 (patch-ah) = 911e4c7d76b18681413a021df6cbf264cb13555e
+SHA1 (patch-ai) = 44800df5e4b4b729cd73478eda0c330024235e81
+SHA1 (patch-aj) = 27b2298a968ca4306072950f5d49bb5c5204777a
+SHA1 (patch-ak) = a9528e81fe86c4b7cac0e82f883e3490d0c092ce
+SHA1 (patch-al) = 2d62a0a4203c1ecce7b71fd16fe909f0f4356d2c
+SHA1 (patch-am) = d1e1fd830bf3d064dccabbbe2ddd5e302b2e28aa
+SHA1 (patch-an) = f9889b24e5ec399ef6fb40055c5df5a560d20f92
+SHA1 (patch-ao) = 070fc923cfb303ba9e3f9fd843b3ccd253db0698
+SHA1 (patch-lib_Makefile) = 027fc649ecb277b9402062a605d75122404ab595

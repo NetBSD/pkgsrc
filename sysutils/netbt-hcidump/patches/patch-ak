@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.2 2011/06/19 13:02:35 plunky Exp $
+$NetBSD: patch-ak,v 1.2.6.1 2012/02/15 09:17:17 plunky Exp $
 
---- src/Makefile.orig	2011-06-19 12:48:50.000000000 +0000
+--- src/Makefile.orig	2012-02-15 08:56:20.000000000 +0000
 +++ src/Makefile
 @@ -0,0 +1,16 @@
 +.PATH: ../parser
@@ -10,12 +10,12 @@ $NetBSD: patch-ak,v 1.2 2011/06/19 13:02:35 plunky Exp $
 +
 +BINDIR=	${PREFIX}/sbin
 +
-+SRCS=	hcidump.c bt_lib.c hci_lib.c 				\
-+	att.c avctp.c avdtp.c bnep.c bpa.c capi.c cmtp.c csr.c	\
-+	ericsson.c hci.c hcrp.c hidp.c l2cap.c lmp.c obex.c	\
++SRCS=	hcidump.c							\
++	att.c avctp.c avdtp.c avrcp.c bnep.c bpa.c capi.c cmtp.c	\
++	csr.c ericsson.c hci.c hcrp.c hidp.c l2cap.c lmp.c obex.c	\
 +	parser.c ppp.c rfcomm.c sdp.c smp.c tcpip.c
 +
 +CPPFLAGS+=	-I..
-+LDADD+=		-lbluetooth
++LDADD+=		../lib/libbluez.a -lbluetooth
 +
 +.include <bsd.prog.mk>
