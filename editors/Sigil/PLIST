@@ -1,19 +1,27 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/26 15:43:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/15 08:00:03 ryoon Exp $
 bin/sigil
 share/applications/sigil.desktop
 share/pixmaps/sigil.png
 share/sigil/dictionaries/About.txt
-share/sigil/dictionaries/de_DE-frami.aff
-share/sigil/dictionaries/de_DE-frami.dic
+share/sigil/dictionaries/de_DE.aff
+share/sigil/dictionaries/de_DE.dic
+share/sigil/dictionaries/en_GB.aff
+share/sigil/dictionaries/en_GB.dic
 share/sigil/dictionaries/en_US.aff
 share/sigil/dictionaries/en_US.dic
-share/sigil/dictionaries/es_MX.aff
-share/sigil/dictionaries/es_MX.dic
-share/sigil/dictionaries/fr-moderne.aff
-share/sigil/dictionaries/fr-moderne.dic
+share/sigil/dictionaries/es.aff
+share/sigil/dictionaries/es.dic
+share/sigil/dictionaries/fr.aff
+share/sigil/dictionaries/fr.dic
+share/sigil/dictionaries/hyph_de_DE.dic
+share/sigil/dictionaries/hyph_en_GB.dic
+share/sigil/dictionaries/hyph_en_US.dic
+share/sigil/dictionaries/hyph_es.dic
+share/sigil/dictionaries/hyph_fr.dic
 share/sigil/translations/sigil_cs.qm
 share/sigil/translations/sigil_da_DK.qm
 share/sigil/translations/sigil_de.qm
+share/sigil/translations/sigil_en.qm
 share/sigil/translations/sigil_es_ES.qm
 share/sigil/translations/sigil_fr.qm
 share/sigil/translations/sigil_it.qm
