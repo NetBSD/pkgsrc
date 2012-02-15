@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.sys.mk,v 1.3 2010/05/12 20:57:46 tez Exp $
+#	$NetBSD: SunOS.sys.mk,v 1.4 2012/02/15 15:30:25 hans Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
@@ -65,7 +65,7 @@ LINK.F?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
 COMPILE.r?=	${FC} ${FFLAGS} ${RFLAGS} -c
 LINK.r?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
 
-INSTALL?=	/usr/ucb/install
+INSTALL?=	${PREFIX}/bin/install-sh
 
 LEX?=		lex
 LFLAGS?=
