@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2011/11/23 08:32:10 marino Exp $
+$NetBSD: distinfo,v 1.14 2012/02/15 22:52:50 hans Exp $
 
 SHA1 (SpiralSynth-2.0.0.tar.gz) = ea42c5b7710237139f5281cf0c4ca155c184c4cd
 RMD160 (SpiralSynth-2.0.0.tar.gz) = c05f38a9ae8b8b87f520c11854631e6dfa00c034
@@ -14,7 +14,7 @@ SHA1 (patch-ai) = e21a111e3e52fc3c24433f248fa1bfdf566e72dd
 SHA1 (patch-aj) = 7e3e29fbfd38428d68f195db8a7f5007c1417c88
 SHA1 (patch-ak) = 67643c5abea0498f8ea046c5abd52f2d328a5538
 SHA1 (patch-al) = 7436bce933cbddcd4f869ab2cbbe27762d4273e5
-SHA1 (patch-am) = 4899c78015028a6e8047e5527362646e40a10708
+SHA1 (patch-am) = 78ab70a1952f389712412515652c2e8cc7d917a3
 SHA1 (patch-an) = 2bafb1a9a959816af43a858fdb4a9df5586a91e9
 SHA1 (patch-ao) = 138f58bd7fae0226690747efcb8daf472e3a5337
 SHA1 (patch-ar) = 44ab335b5a7831080d58a952f3cc13e5795a3f0e
