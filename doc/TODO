@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10872 2012/02/15 08:01:19 ryoon Exp $
+$NetBSD: TODO,v 1.10873 2012/02/15 12:30:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -1029,7 +1029,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ng-1.4.4
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
-	o nload-0.7.4 [pkg/45947]
 	o nmh-1.4
 	o notification-daemon-0.7.0
 	o ns-3.12.1
