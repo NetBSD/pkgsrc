@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/05 21:48:26 sbd Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/15 22:23:15 hans Exp $
 
 DISTNAME=		ocp-0.1.21
 PKGREVISION=		1
@@ -23,11 +23,20 @@ USE_LANGUAGES=		c c++
 USE_NCURSES=		yes	# resize_term
 INFO_FILES=		yes
 
+REPLACE_SH=		ocp-curses ocp-sdl ocp-vcsa ocp-x11
+
 # ymtype.so wants to link -llzh before it's finished building
 MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--without-x11
+CONFIGURE_ARGS+=	--without-sdl
+
+CFLAGS.SunOS+=		-mimpure-text
+CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_CHANNELS=SNDCTL_DSP_CHANNELS
+CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_BITS=SNDCTL_DSP_SETFMT
+CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_RATE=SNDCTL_DSP_SPEED
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
