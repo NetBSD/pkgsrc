@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/11/18 21:07:30 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/15 19:27:10 hans Exp $
 
 DISTNAME=	upx-1.25-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -14,12 +14,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gmake perl pod2man pod2html pod2text
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin
 
 BUILDLINK_TRANSFORM=	rm:-mcpu=i686
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM=	rm:-Wl,-Map rm:-Wl,upx.map
+.endif
 
 do-build:
 	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV}			\
