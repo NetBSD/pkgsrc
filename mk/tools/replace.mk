@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.243 2012/02/06 12:49:38 fhajny Exp $
+# $NetBSD: replace.mk,v 1.244 2012/02/15 15:08:01 hans Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1047,7 +1047,7 @@ GHOSTSCRIPT_REQD?=	6.01
 .if !defined(TOOLS_DEPENDS.ghostscript)
 _TOOLS_DEP.ghostscript:=	ghostscript
 TOOLS_DEPENDS.ghostscript=	ghostscript>=${GHOSTSCRIPT_REQD}:../../print/ghostscript
-MAKEVARS+=			${TOOLS_DEPENDS.ghostscript}
+MAKEVARS+=			TOOLS_DEPENDS.ghostscript
 .endif
 
 .for _t_ in ${_TOOLS.ghostscript}
