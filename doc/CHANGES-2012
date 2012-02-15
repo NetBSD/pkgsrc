@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.472 2012/02/14 23:08:10 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.473 2012/02/15 03:38:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -688,3 +688,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-exam-doc to 2.4 [minskim 2012-02-14]
 	Updated devel/scmgit-base to 1.7.9.1 [gdt 2012-02-14]
 	Added textproc/libunistring version 0.9.3 [gdt 2012-02-14]
+	Updated fonts/umefont-ttf to 0.436 [ryoon 2012-02-15]
