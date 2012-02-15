@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1 2004/11/25 17:24:27 ben Exp $
+$NetBSD: patch-am,v 1.2 2012/02/15 22:52:50 hans Exp $
 
 --- SpiralSound/Output.C.orig	Sun Jun  2 13:58:06 2002
 +++ SpiralSound/Output.C
@@ -12,3 +12,33 @@ $NetBSD: patch-am,v 1.1 2004/11/25 17:24:27 ben Exp $
  
  #define CHECK_AND_REPORT_ERROR	if (result<0)         \
  								{                     \
+@@ -224,7 +227,7 @@ void OSSOutput::OpenWrite()
+ 	CHECK_AND_REPORT_ERROR;
+ 	
+ 	val = 1;
+-	result = ioctl(m_Dspfd, SOUND_PCM_WRITE_CHANNELS, &val);
++	result = ioctl(m_Dspfd, SNDCTL_DSP_CHANNELS, &val);
+ 	CHECK_AND_REPORT_ERROR;
+ 	
+ 	val = AFMT_S16_LE;
+@@ -260,9 +263,11 @@ void OSSOutput::OpenRead()
+ 	result = ioctl(m_Dspfd,SNDCTL_DSP_RESET,NULL);
+ 	CHECK_AND_REPORT_ERROR;
+ 	
++#ifdef SOUND_PCM_READ_CHANNELS
+ 	val = 1;
+ 	result = ioctl(m_Dspfd, SOUND_PCM_READ_CHANNELS, &val);
+ 	CHECK_AND_REPORT_ERROR;
++#endif
+ 	
+ 	val = AFMT_S16_LE;
+ 	result = ioctl(m_Dspfd,SNDCTL_DSP_SETFMT,&val);	 
+@@ -317,7 +322,7 @@ void OSSOutput::OpenReadWrite()
+ 	CHECK_AND_REPORT_ERROR;
+ 	
+ 	val = 1;
+-	result = ioctl(m_Dspfd, SOUND_PCM_WRITE_CHANNELS, &val);
++	result = ioctl(m_Dspfd, SNDCTL_DSP_CHANNELS, &val);
+ 	CHECK_AND_REPORT_ERROR;
+ 	
+ 	val = AFMT_S16_LE;

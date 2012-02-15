@@ -1,8 +1,26 @@
-$NetBSD: patch-ai,v 1.1 2003/12/19 16:37:54 ben Exp $
+$NetBSD: patch-ai,v 1.2 2012/02/15 22:47:31 hans Exp $
 
 --- SpiralSound/Output.C.orig	2001-04-19 13:48:12.000000000 -0700
 +++ SpiralSound/Output.C
-@@ -29,7 +29,7 @@ m_Channels(Channels)
+@@ -19,6 +19,17 @@
+ #include "Output.h"
+ #include "Sample.h"
+ 
++#ifdef __sun
++#include <sys/byteorder.h>
++#define LITTLE_ENDIAN 1234
++#define BIG_ENDIAN 4321
++#ifdef _BIG_ENDIAN
++#define __BYTE_ORDER BIG_ENDIAN
++#else
++#define __BYTE_ORDER LITTLE_ENDIAN
++#endif
++#endif
++
+ Output::Output(int Channels) :
+ m_Amp(0.5),
+ m_Channels(Channels)
+@@ -29,7 +40,7 @@ m_Channels(Channels)
  	m_Buffer.Zero();
  }
  
