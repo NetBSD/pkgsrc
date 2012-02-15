@@ -1,26 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2011/09/06 18:45:46 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/15 11:08:46 obache Exp $
 #
 
-DISTNAME=	giflib-4.1.6
+.include "../../graphics/giflib/Makefile.common"
+
 PKGNAME=	giflib-util-4.1.6
-CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://giflib.sourceforge.net/
-COMMENT=	GIF image format library
-LICENSE=	mit
-
-PATCHDIR=	${.CURDIR}/../../graphics/giflib/patches
-DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
+COMMENT=	GIF image format utility
 
 CONFLICTS+=	libungif-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	util/gifburst
 
@@ -40,4 +29,7 @@ post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${DESTDIR}${HTMLDIR}
 
 .include "../../mk/giflib.buildlink3.mk"
+.if ${GIFLIB_IMPLEMENTATION} == "libungif"
+PKG_FAIL_REASON= "please use graphics/libungif"
+.endif
 .include "../../mk/bsd.pkg.mk"
