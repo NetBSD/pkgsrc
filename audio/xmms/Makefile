@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2012/01/13 10:54:49 obache Exp $
+# $NetBSD: Makefile,v 1.75 2012/02/15 23:15:04 hans Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,6 +20,8 @@ PLIST.cdaudio=		yes
 .endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+REPLACE_SH=		xmms-config.in
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
