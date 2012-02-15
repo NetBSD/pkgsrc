@@ -1,0 +1,63 @@
+$NetBSD: patch-sv4Lib.rules,v 1.1 2012/02/15 15:25:15 hans Exp $
+
+--- sv4Lib.rules.orig	2009-10-16 23:45:42.000000000 +0200
++++ sv4Lib.rules	2012-01-15 22:45:33.359398571 +0100
+@@ -63,26 +63,50 @@ XCOMM $XFree86: xc/config/cf/sv4Lib.rule
+ /*
+  * InstallSharedLibrary - generate rules to install the shared library.
+  */
++INSTALLMINORREV = true
++
+ #ifndef InstallSharedLibrary
+ #if StripInstalledPrograms
+ # define InstallSharedLibrary(libname,rev,dest)				@@\
+ install:: Concat(lib,libname.so.rev) 					@@\
+ 	MakeDir($(DESTDIR)dest)						@@\
+-	$(INSTALL) $(INSTALLFLAGS) $(INSTLIBFLAGS) Concat(lib,libname.so.rev) $(DESTDIR)dest @@\
++	T=`echo Concat(lib,libname.so.rev) | sed 's/\(lib[^\.]*\.so\.[0-9]*\)\(\.[0-9]*\)\{1,2\}/\1/'`;\	@@\
++	if $(INSTALLMINORREV); then \					@@\
++	  INST=Concat(lib,libname.so.rev); \				@@\
++	  LINK=$$T; \							@@\
++	else \								@@\
++	  INST=$$T; \							@@\
++	fi; \								@@\
++	(set -x; \							@@\
++	$(INSTALL) $(INSTALLFLAGS) $(INSTBINFLAGS) $$INST $(DESTDIR)dest); \ @@\
+ 	mcs -d Concat($(DESTDIR)dest/lib,libname.so.rev)		@@\
+-	@if $(SOSYMLINK); then (set -x; \				@@\
++	if [ X"$$LINK" != X ]; then (set -x; \				@@\
++	  $(RM) $(DESTDIR)dest/$$LINK; \				@@\
++	  $(LN) $$INST $(DESTDIR)dest/$$LINK); \			@@\
++	fi; \								@@\
++	if $(SOSYMLINK); then (set -x; \				@@\
+ 	  $(RM) Concat($(DESTDIR)dest/lib,libname.so); \		@@\
+-	  cd $(DESTDIR)dest; \						@@\
+-	  $(LN) Concat(lib,libname.so.rev) Concat(lib,libname.so)); fi
++	  $(LN) $$T Concat($(DESTDIR)dest/lib,libname.so)); fi
+ #else
+ # define InstallSharedLibrary(libname,rev,dest)				@@\
+ install:: Concat(lib,libname.so.rev) 					@@\
+ 	MakeDir($(DESTDIR)dest)						@@\
+-	$(INSTALL) $(INSTALLFLAGS) $(INSTLIBFLAGS) Concat(lib,libname.so.rev) $(DESTDIR)dest @@\
+-	@if $(SOSYMLINK); then (set -x; \				@@\
++	T=`echo Concat(lib,libname.so.rev) | sed 's/\(lib[^\.]*\.so\.[0-9]*\)\(\.[0-9]*\)\{1,2\}/\1/'`;\	@@\
++	if $(INSTALLMINORREV); then \					@@\
++	  INST=Concat(lib,libname.so.rev); \				@@\
++	  LINK=$$T; \							@@\
++	else \								@@\
++	  INST=$$T; \							@@\
++	fi; \								@@\
++	(set -x; \							@@\
++	$(INSTALL) $(INSTALLFLAGS) $(INSTBINFLAGS) $$INST $(DESTDIR)dest); \ @@\
++	if [ X"$$LINK" != X ]; then (set -x; \				@@\
++	  $(RM) $(DESTDIR)dest/$$LINK; \				@@\
++	  $(LN) $$INST $(DESTDIR)dest/$$LINK); \			@@\
++	fi; \								@@\
++	if $(SOSYMLINK); then (set -x; \				@@\
+ 	  $(RM) Concat($(DESTDIR)dest/lib,libname.so); \		@@\
+-	  cd $(DESTDIR)dest; \						@@\
+-	  $(LN) Concat(lib,libname.so.rev) Concat(lib,libname.so)); fi
++	  $(LN) $$T Concat($(DESTDIR)dest/lib,libname.so)); fi
+ #endif
+ 
+ #endif /* InstallSharedLibrary */
