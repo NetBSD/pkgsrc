@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2011/12/28 20:07:34 adam Exp $
+# $NetBSD: Makefile,v 1.80 2012/02/15 19:24:39 hans Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
@@ -13,6 +13,8 @@ LICENSE=	info-zip
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+REPLACE_SH=	unix/zipgrep
 
 USE_TOOLS+=	gmake
 
