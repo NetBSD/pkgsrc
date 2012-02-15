@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/07/08 12:15:39 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/02/15 22:18:15 gls Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -44,6 +44,9 @@ ${PYSITELIB}/simplejson/tests/test_encode_basestring_ascii.pyo
 ${PYSITELIB}/simplejson/tests/test_encode_for_html.py
 ${PYSITELIB}/simplejson/tests/test_encode_for_html.pyc
 ${PYSITELIB}/simplejson/tests/test_encode_for_html.pyo
+${PYSITELIB}/simplejson/tests/test_errors.py
+${PYSITELIB}/simplejson/tests/test_errors.pyc
+${PYSITELIB}/simplejson/tests/test_errors.pyo
 ${PYSITELIB}/simplejson/tests/test_fail.py
 ${PYSITELIB}/simplejson/tests/test_fail.pyc
 ${PYSITELIB}/simplejson/tests/test_fail.pyo
