@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/02/06 12:39:25 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/02/15 21:42:08 hans Exp $
 #
 
 DISTNAME=	gtkpod-1.0.0
@@ -18,15 +18,14 @@ GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool gmake lex msgfmt perl:run pkg-config
+USE_TOOLS+=		bash:run intltool gmake lex msgfmt perl:run pkg-config
+
+CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t
+CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
 REPLACE_PERL+=		scripts/mab2vcard
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	.*/bin/bash
-REPLACE.bash.new=	${PREFIX}/bin/bash
-REPLACE_FILES.bash=	scripts/sync-knotes.sh scripts/sync-evolution.sh \
-			scripts/sync-ldif.sh
+REPLACE_BASH=		scripts/*.sh
 
 REPLACE_PYTHON+=	scripts/sync-palm-jppy.py
 .include "../../lang/python/application.mk"
