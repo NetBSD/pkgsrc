@@ -1,9 +1,9 @@
-# $NetBSD: SunOS.mk,v 1.41 2012/01/12 15:53:37 hans Exp $
+# $NetBSD: SunOS.mk,v 1.42 2012/02/15 15:15:23 hans Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
 ECHO_N?=	${ECHO} -n
-IMAKE_MAKE?=	/usr/ccs/bin/make	# program which gets invoked by imake
+IMAKE_MAKE?=	${MAKE}	# program which gets invoked by imake
 PKGLOCALEDIR?=	lib
 PS?=		/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
