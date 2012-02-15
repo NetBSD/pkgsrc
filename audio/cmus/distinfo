@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.14 2012/01/22 12:23:51 gls Exp $
+$NetBSD: distinfo,v 1.15 2012/02/15 20:15:42 hans Exp $
 
 SHA1 (cmus-v2.4.3.tar.bz2) = ba63a417b0df42fa9a4850dd8b922a95a426f7f5
 RMD160 (cmus-v2.4.3.tar.bz2) = e41adbda28db529b245447f7bdf22cf8de118a62
 Size (cmus-v2.4.3.tar.bz2) = 204508 bytes
+SHA1 (patch-mixer__sun.c) = ffab27aa6c24715d78757015f4dcb2a53f2920b0
+SHA1 (patch-sun.c) = b3abbd3446b695c8d0aec9d9132328e92511b475
