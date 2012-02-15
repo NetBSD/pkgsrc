@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/03/30 11:17:45 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/15 12:30:06 obache Exp $
 #
 
-DISTNAME=		nload-0.7.2
+DISTNAME=		nload-0.7.4
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nload/}
 
