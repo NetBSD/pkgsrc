@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.478 2012/02/15 09:31:49 plunky Exp $
+$NetBSD: CHANGES-2012,v 1.479 2012/02/15 12:30:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/Sigil to 0.5.2 [ryoon 2012-02-15]
 	Updated graphics/lensfun to 0.2.5nb7 [sbd 2012-02-15]
 	Updated sysutils/netbt-hcidump to 2.2 [plunky 2012-02-15]
+	Updated net/nload to 0.7.4 [obache 2012-02-15]
