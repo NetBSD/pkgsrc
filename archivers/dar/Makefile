@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/01/29 02:54:18 sbd Exp $
+# $NetBSD: Makefile,v 1.39 2012/02/15 19:20:36 hans Exp $
 
 DISTNAME=	dar-2.4.1
 CATEGORIES=	archivers sysutils
@@ -32,7 +32,7 @@ PKGCONFIG_OVERRIDE=	src/libdar/libdar.pc.tmpl.in
 #
 CHECK_INTERPRETER_SKIP+=	share/dar/samples/*
 REPLACE_PERL+=			doc/samples/dar_backup
-REPLACE_BASH+=			doc/samples/*.bash doc/samples/clust*.sh
+REPLACE_BASH+=			doc/samples/*.bash doc/samples/*.sh doc/samples/*.duc
 
 ## Our threading check here is the same as the one used in devel/perl5.
 #
