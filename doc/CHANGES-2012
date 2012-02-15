@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.480 2012/02/15 13:00:26 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.481 2012/02/15 22:06:57 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -696,3 +696,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/netbt-hcidump to 2.2 [plunky 2012-02-15]
 	Updated net/nload to 0.7.4 [obache 2012-02-15]
 	Updated misc/libreoffice3-bin to 3.5.0 [ryoon 2012-02-15]
+	Updated textproc/dblatex to 0.3.2 [gls 2012-02-15]
