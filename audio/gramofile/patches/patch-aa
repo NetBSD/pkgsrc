@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2008/03/17 22:28:13 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2012/02/15 21:37:48 hans Exp $
 
 --- Makefile.orig	2000-03-28 15:23:58.000000000 -0500
 +++ Makefile
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.4 2008/03/17 22:28:13 jlam Exp $
  COPY_A = -a
 -
 +else
-+ifeq (,$(filter-out NetBSD DragonFly,$(OS)))
++ifeq (,$(filter-out NetBSD DragonFly SunOS,$(OS)))
  # For FreeBSD (and maybe others), use these:
 -#CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER
 -#DEPS = $(OBJS) makebplay
