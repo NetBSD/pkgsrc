@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2011/12/19 13:16:16 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2012/02/15 23:13:32 hans Exp $
 
 Fix configury with libaudiofile-0.3+.
+Fix interpreter in get-wsound-flags.
 
 --- configure.orig	2011-12-19 13:10:25.000000000 +0000
 +++ configure
@@ -19,3 +20,12 @@ Fix configury with libaudiofile-0.3+.
      if test "x$enable_audiofiletest" = "xyes" ; then
        ac_save_CFLAGS="$CFLAGS"
        ac_save_LIBS="$LIBS"
+@@ -4272,7 +4272,7 @@ test "$no_create" = yes || ${CONFIG_SHEL
+ 
+ 
+ cat <<EOF >get-wsound-flags
+-#!/bin/sh
++#!${TOOLS_PATH_SH}
+ 
+ prefix="$prefix"
+ exec_prefix=\$prefix
