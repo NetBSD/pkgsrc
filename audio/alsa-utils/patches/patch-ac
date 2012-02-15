@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2008/12/30 14:44:14 hasso Exp $
+$NetBSD: patch-ac,v 1.3 2012/02/15 19:46:31 hans Exp $
 
 --- aplay/formats.h.orig	2008-12-18 22:21:49.000000000 -0500
 +++ aplay/formats.h
-@@ -1,8 +1,15 @@
+@@ -1,8 +1,20 @@
  #ifndef FORMATS_H
  #define FORMATS_H		1
  
@@ -11,6 +11,11 @@ $NetBSD: patch-ac,v 1.2 2008/12/30 14:44:14 hasso Exp $
 +#define bswap_16 bswap16
 +#define bswap_32 bswap32
 +#define bswap_64 bswap64
++#elif defined(__sun)
++#include <sys/byteorder.h>
++#define bswap_16 BSWAP_16
++#define bswap_32 BSWAP_32
++#define bswap_64 BSWAP_64
 +#else
  #include <endian.h>
  #include <byteswap.h>
