@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.474 2012/02/15 03:52:22 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.475 2012/02/15 04:22:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -690,3 +690,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/libunistring version 0.9.3 [gdt 2012-02-14]
 	Updated fonts/umefont-ttf to 0.436 [ryoon 2012-02-15]
 	Updated lang/newlisp to 10.4.0 [ryoon 2012-02-15]
+	Updated devel/mr to 1.11 [schmonz 2012-02-15]
