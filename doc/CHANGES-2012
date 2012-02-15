@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.476 2012/02/15 08:00:55 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.477 2012/02/15 08:50:26 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -692,3 +692,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/newlisp to 10.4.0 [ryoon 2012-02-15]
 	Updated devel/mr to 1.11 [schmonz 2012-02-15]
 	Updated editors/Sigil to 0.5.2 [ryoon 2012-02-15]
+	Updated graphics/lensfun to 0.2.5nb7 [sbd 2012-02-15]
