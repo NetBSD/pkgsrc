@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/11 13:03:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/15 03:51:51 ryoon Exp $
 #
 
-DISTNAME=	newlisp-10.3.3
+DISTNAME=	newlisp-10.4.0
 CATEGORIES=	lang
 MASTER_SITES=	http://www.newlisp.org/downloads/
 EXTRACT_SUFX=	.tgz
