@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/02/06 12:39:20 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/02/15 20:15:42 hans Exp $
 #
 
 DISTNAME=		cmus-v2.4.3
@@ -19,6 +19,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+
+REPLACE_SH+=		cmus-status-display
 
 CONFIGURE_ARGS+=	prefix=${PREFIX}
 CONFIGURE_ARGS+=	CONFIG_ALSA=n
