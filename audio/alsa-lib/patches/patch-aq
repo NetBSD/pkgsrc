@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+$NetBSD: patch-aq,v 1.2 2012/02/15 19:43:51 hans Exp $
 
 --- src/pcm/pcm_hw.c.orig	2008-10-29 08:42:10.000000000 -0400
 +++ src/pcm/pcm_hw.c
@@ -13,3 +13,55 @@ $NetBSD: patch-aq,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
  //#define DEBUG_RW		/* use to debug readi/writei/readn/writen */
  //#define DEBUG_MMAP		/* debug mmap_commit */
  
+@@ -219,10 +223,11 @@ static int snd_pcm_hw_nonblock(snd_pcm_t
+ 
+ static int snd_pcm_hw_async(snd_pcm_t *pcm, int sig, pid_t pid)
+ {
+-	long flags;
+ 	snd_pcm_hw_t *hw = pcm->private_data;
+ 	int fd = hw->fd, err;
+ 
++#ifndef __sun
++	long flags;
+ 	if ((flags = fcntl(fd, F_GETFL)) < 0) {
+ 		err = -errno;
+ 		SYSMSG("F_GETFL failed");
+@@ -237,13 +242,16 @@ static int snd_pcm_hw_async(snd_pcm_t *p
+ 		SYSMSG("F_SETFL for O_ASYNC failed");
+ 		return err;
+ 	}
++#endif
+ 	if (sig < 0)
+ 		return 0;
++#ifndef __sun
+ 	if (fcntl(fd, F_SETSIG, (long)sig) < 0) {
+ 		err = -errno;
+ 		SYSMSG("F_SETSIG failed");
+ 		return err;
+ 	}
++#endif
+ 	if (fcntl(fd, F_SETOWN, (long)pid) < 0) {
+ 		err = -errno;
+ 		SYSMSG("F_SETOWN failed");
+@@ -1141,8 +1149,10 @@ int snd_pcm_hw_open_fd(snd_pcm_t **pcmp,
+ 	mode = 0;
+ 	if (fmode & O_NONBLOCK)
+ 		mode |= SND_PCM_NONBLOCK;
++#ifndef __sun
+ 	if (fmode & O_ASYNC)
+ 		mode |= SND_PCM_ASYNC;
++#endif
+ 
+ 	if (ioctl(fd, SNDRV_PCM_IOCTL_PVERSION, &ver) < 0) {
+ 		ret = -errno;
+@@ -1281,8 +1291,10 @@ int snd_pcm_hw_open(snd_pcm_t **pcmp, co
+ 	fmode = O_RDWR;
+ 	if (mode & SND_PCM_NONBLOCK)
+ 		fmode |= O_NONBLOCK;
++#ifndef __sun
+ 	if (mode & SND_PCM_ASYNC)
+ 		fmode |= O_ASYNC;
++#endif
+ 	if (mode & SND_PCM_APPEND)
+ 		fmode |= O_APPEND;
+ 	fd = snd_open_device(filename, fmode);
