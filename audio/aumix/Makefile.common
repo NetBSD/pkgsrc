@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2011/04/17 08:51:22 obache Exp $
+# $NetBSD: Makefile.common,v 1.7 2012/02/15 20:04:30 hans Exp $
 # used by audio/aumix/Makefile
 # used by audio/aumix-gtk/Makefile
 
@@ -28,6 +28,10 @@ CONFIGURE_ARGS+=	--enable-own-labels
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--without-gtk1
 CONFIGURE_ARGS+=	--without-gtk
+
+LIBS.SunOS+=		-lintl
+
+REPLACE_SH+=		src/mute src/xaumix
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
