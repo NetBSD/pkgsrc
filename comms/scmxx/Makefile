@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2011/04/22 13:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.49 2012/02/16 17:47:04 hans Exp $
 #
 
 DISTNAME=		scmxx-0.9.0
@@ -12,8 +12,8 @@ HOMEPAGE=		http://www.hendrik-sattler.de/scmxx/
 COMMENT=		Data exchange utility for Siemens mobile phones
 
 GNU_CONFIGURE=		yes
-USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
+LDFLAGS.SunOS+=		-lintl
 
 INSTALLATION_DIRS+= share/doc/scmxx share/examples/scmxx
 PKG_DESTDIR_SUPPORT= user-destdir
