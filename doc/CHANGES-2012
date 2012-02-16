@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.483 2012/02/16 04:01:55 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.484 2012/02/16 04:39:19 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -699,3 +699,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/dblatex to 0.3.2 [gls 2012-02-15]
 	Updated converters/py-simplejson to 2.1.3 [gls 2012-02-15]
 	Updated print/pdf2djvu to 0.7.12 [ryoon 2012-02-16]
+	Updated misc/window to 20120215 [jmmv 2012-02-16]
