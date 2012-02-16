@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.492 2012/02/16 11:57:53 taca Exp $
+$NetBSD: CHANGES-2012,v 1.493 2012/02/16 16:47:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -709,3 +709,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/gnash to 0.8.10 [obache 2012-02-16]
 	Added devel/ruby-fast_gettext version 0.6.4 [taca 2012-02-16]
 	Added devel/ruby-gettext_i18n_rails version 0.4.3 [taca 2012-02-16]
+	Updated lang/ruby18-base to 1.8.7.358 [taca 2012-02-16]
+	Updated lang/ruby18 to 1.8.7.358 [taca 2012-02-16]
+	Updated lang/ruby193-base to 1.9.3p125 [taca 2012-02-16]
+	Updated lang/ruby193 to 1.9.3p125 [taca 2012-02-16]
+	Updated devel/ruby-mode to 1.9.3p125 [taca 2012-02-16]
