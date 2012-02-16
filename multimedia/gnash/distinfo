@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.16 2011/04/12 13:15:01 obache Exp $
+$NetBSD: distinfo,v 1.17 2012/02/16 10:44:53 obache Exp $
 
-SHA1 (gnash-0.8.9.tar.bz2) = 585c320c98b3304fcbba230f2c4b1fdf2a52aee0
-RMD160 (gnash-0.8.9.tar.bz2) = 34bb51cfe5b8593dc14bc2c21c0085277dbb23f1
-Size (gnash-0.8.9.tar.bz2) = 3777140 bytes
-SHA1 (patch-aa) = 5d2e5ac763bfa6480f246743c5eee88c6a2a0d21
-SHA1 (patch-ae) = 67c5093f417b0faa78e6fac2e5a16cb5aea8588e
-SHA1 (patch-libbase_Makefile.in) = 14101fcd56d0913901be82b9653a157ca85da441
-SHA1 (patch-libcore_Makefile.in) = afbcf74085ea4276735cd117a18263ff716f3014
-SHA1 (patch-libmedia_Makefile.in) = c59307744f0d85f239607ddb8a465bda9172ffd0
-SHA1 (patch-librender_Makefile.in) = 60101200612d3cd2d803652705b6e015d1a72ec1
-SHA1 (patch-libsound_Makefile.in) = 399b6f053c8415dd85e9cb825324871366065bfa
-SHA1 (patch-plugin_klash4_Makefile.in) = 086b08bd6ba5ddfa09297e6636e9f00acb6cd990
+SHA1 (gnash-0.8.10.tar.bz2) = be3b12a5edcd3b05f2ae73d02f0991aa786e7300
+RMD160 (gnash-0.8.10.tar.bz2) = 0093174ec0a912309772c033b5f1c1ad46ab41dc
+Size (gnash-0.8.10.tar.bz2) = 4238106 bytes
+SHA1 (patch-aa) = 2698c2841523938772ba9e24a798c3cbc3395380
+SHA1 (patch-ae) = ca44e2559a1ce0a24baf6d5479636f967e011202
+SHA1 (patch-libbase_Makefile.in) = c5b6533f5ac2b2ee26d0547c3054375e72512ccf
+SHA1 (patch-libcore_Makefile.in) = 6b92917f0be3779b7f6e1993ac29960cef50c736
+SHA1 (patch-libmedia_Makefile.in) = 10fde4560a20dcb28599d8c51a4fc7af93109474
+SHA1 (patch-librender_Makefile.in) = 25e38d82e3ecc156ff1f2b855a05437da015f3ce
+SHA1 (patch-libsound_Makefile.in) = 26c7390196b7e0bb301427b27cf87a1ae52f0b87
+SHA1 (patch-plugin_klash4_Makefile.in) = 86c669eb0ed2478a6f4d328266af2188395f0f10
