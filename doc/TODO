@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10876 2012/02/15 14:14:03 ryoon Exp $
+$NetBSD: TODO,v 1.10877 2012/02/16 10:45:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -685,7 +685,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
 	o gmp-5.0.4
-	o gnash-0.8.10
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.2.2
