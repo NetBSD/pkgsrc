@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/04/22 13:43:08 obache Exp $
+# $NetBSD: Makefile,v 1.32 2012/02/16 16:08:15 hans Exp $
 
 DISTNAME=	Unreal3.2.8.1
 PKGNAME=	unrealircd-3.2.8.1
@@ -118,6 +118,8 @@ INSTALLATION_DIRS=	sbin ${IRCD_DOCS} ${IRCD_EG} ${IRCD_SHARE}/aliases \
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=YES
 .endif
+
+CFLAGS.SunOS+=	-DUSE_LOCALE
 
 .include "../../net/libcares/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
