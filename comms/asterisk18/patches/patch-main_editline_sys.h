@@ -1,0 +1,15 @@
+$NetBSD: patch-main_editline_sys.h,v 1.1 2012/02/16 16:33:36 hans Exp $
+
+--- main/editline/sys.h.orig	2010-07-28 00:30:38.000000000 +0200
++++ main/editline/sys.h	2012-01-25 15:50:04.918035224 +0100
+@@ -103,9 +103,9 @@ extern int	tgetent(const char *bp, char 
+ extern int	tgetflag(const char *id);
+ extern int	tgetnum(const char *id);
+ extern char    *tgetstr(const char *id, char **area);
+-#endif
+ extern char    *tgoto(const char *cap, int col, int row);
+ extern int	tputs(const char *str, int affcnt, int (*putc)(int));
++#endif
+ extern char    *getenv(const char *);
+ extern int	fprintf(FILE *, const char *, ...);
+ extern int	sigsetmask(int);
