@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.482 2012/02/15 22:19:38 gls Exp $
+$NetBSD: CHANGES-2012,v 1.483 2012/02/16 04:01:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/libreoffice3-bin to 3.5.0 [ryoon 2012-02-15]
 	Updated textproc/dblatex to 0.3.2 [gls 2012-02-15]
 	Updated converters/py-simplejson to 2.1.3 [gls 2012-02-15]
+	Updated print/pdf2djvu to 0.7.12 [ryoon 2012-02-16]
