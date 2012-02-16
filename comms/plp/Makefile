@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/12/19 13:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/02/16 17:44:15 hans Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 MAKE_JOBS_SAFE=	no
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin lib
 
