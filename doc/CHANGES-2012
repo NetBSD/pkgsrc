@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.490 2012/02/16 06:30:00 sno Exp $
+$NetBSD: CHANGES-2012,v 1.491 2012/02/16 10:45:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -706,3 +706,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-B-Hooks-Parser to 0.10 [sno 2012-02-16]
 	Updated devel/p5-B-Keywords to 1.12 [sno 2012-02-16]
 	Updated devel/p5-B-Utils to 0.17 [sno 2012-02-16]
+	Updated multimedia/gnash to 0.8.10 [obache 2012-02-16]
