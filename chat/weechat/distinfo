@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2011/03/05 22:48:07 tonio Exp $
+$NetBSD: distinfo,v 1.19 2012/02/16 16:11:24 hans Exp $
 
 SHA1 (weechat-0.3.4.tar.gz) = 5a956aed4b3ba1fbadeac4435a4ec0eac499ffda
 RMD160 (weechat-0.3.4.tar.gz) = dbd70a2dc05e53e0c23cd3b865af7f98d8b21dbf
@@ -12,3 +12,4 @@ SHA1 (patch-src_core_wee-hook.h) = 643dd8ec271f4632f631ece55cd46f9964100fad
 SHA1 (patch-src_core_wee-network.c) = dcba7c9c2814ebd65efdc80db6d7955e88dd66b3
 SHA1 (patch-src_plugins_irc_irc-server.c) = 2ba285bee488f5fdfea98c6b17ceddbb8b11c1cb
 SHA1 (patch-src_plugins_rmodifier_rmodifier-config.h) = e5e733d52ad1c6a56c981069710738420bd1c8af
+SHA1 (patch-src_plugins_rmodifier_rmodifier.c) = 02b6df6a1133fe4ab5ddf10376e18b37ac92ce8f
