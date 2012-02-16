@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.3 2011/11/25 21:31:13 joerg Exp $
+$NetBSD: distinfo,v 1.4 2012/02/16 13:57:16 hans Exp $
 
 SHA1 (gloox-1.0.tar.bz2) = 8c788738f72b05fae7c05c744a67859419ffa09c
 RMD160 (gloox-1.0.tar.bz2) = 92089462ed778fb41bf97d882fc1785b8e82233f
 Size (gloox-1.0.tar.bz2) = 603434 bytes
+SHA1 (patch-src_connectiontcpbase.cpp) = 41cda3692468a86f4b819f66d887667065a6cbe4
 SHA1 (patch-src_connectiontcpserver.cpp) = 720129dfcdff5a7ebb70bbf378c9ca3e5dfaabae
 SHA1 (patch-src_dns.cpp) = dfc538e9a059b06b6222c3dffe879105701d504c
 SHA1 (patch-src_sha.cpp) = b9f51307b97c68575aff4a029653584fcc6aeec6
