@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/01/17 12:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/16 14:00:08 hans Exp $
 #
 
 DISTNAME=		gtmess-0.91
@@ -18,6 +18,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		ac_cv_search_iconv=${BUILDLINK_LDADD.iconv:Q}
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 INCOMPAT_CURSES=	NetBSD-1.*-*
 

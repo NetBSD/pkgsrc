@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-ac,v 1.3 2012/02/16 14:13:15 hans Exp $
 
 --- icb/c_log.c.orig	1995-02-24 16:20:18.000000000 -0500
 +++ icb/c_log.c	2008-12-16 20:17:59.000000000 -0500
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/17 02:19:59 christos Exp $
  
  FILE *logfp = NULL;
  
-@@ -45,8 +46,6 @@
+@@ -45,8 +46,6 @@ char *path;
  	time_t time();
  	struct tm *t, *localtime();
  	time_t clock;
@@ -19,7 +19,35 @@ $NetBSD: patch-ac,v 1.2 2008/12/17 02:19:59 christos Exp $
  
  	/* determine pathname to use */
  	if (path == NULL || *path == '\0')
-@@ -97,8 +96,8 @@
+@@ -64,23 +63,15 @@ char *path;
+ 	
+ 	/* open the session log */
+ 	if ((logfp = fopen(path, "a")) == NULL) {
+-		if (errno > sys_nerr)
+-		   sprintf(TRET,
+-		    "c_log: can't open \"%s\": errno %d", path, errno);
+-		else
+-		   sprintf(TRET,
+-		    "c_log: can't open \"%s\": %s", path, sys_errlist[errno]);
++		sprintf(TRET,
++		 "c_log: can't open \"%s\": %s", path, strerror(errno));
+ 		return(-1);
+ 	}
+ 
+ 	/* protect the logfile against others */
+ 	if (fchmod((int)(fileno(logfp)), 0600) != 0) {
+-		if (errno > sys_nerr)
+-		   sprintf(TRET,
+-		    "c_log: can't fchmod \"%s\": errno %d", path, errno);
+-		else
+-		   sprintf(TRET,
+-		    "c_log: can't fchmod \"%s\": %s", path, sys_errlist[errno]);
++		sprintf(TRET,
++		 "c_log: can't fchmod \"%s\": %s", path, strerror(errno));
+ 		fclose(logfp);
+ 		logfp = NULL;
+ 		return(-1);
+@@ -97,8 +88,8 @@ char *path;
  		aptr++;
  	
  	/* timestamp it */
@@ -30,7 +58,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/17 02:19:59 christos Exp $
  	putl(mbuf, PL_SCR | PL_LOG);
  
  	return(0);
-@@ -126,8 +125,8 @@
+@@ -126,8 +117,8 @@ closesessionlog()
  		aptr++;
  	
  	/* timestamp it */

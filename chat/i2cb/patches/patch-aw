@@ -1,8 +1,13 @@
-$NetBSD: patch-aw,v 1.1 2005/12/13 21:30:11 joerg Exp $
+$NetBSD: patch-aw,v 1.2 2012/02/16 14:05:07 hans Exp $
 
 --- src/unix.c.orig	2005-12-13 17:46:52.000000000 +0000
 +++ src/unix.c
-@@ -10,7 +10,8 @@
+@@ -6,11 +6,13 @@
+ 
+ #include <sys/types.h>
+ #include <sys/param.h>
++#include <sys/ioctl.h>
+ #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
  #include <pwd.h>
@@ -12,7 +17,7 @@ $NetBSD: patch-aw,v 1.1 2005/12/13 21:30:11 joerg Exp $
  #include <time.h>
  #include <unistd.h>
  #include "icb.h"
-@@ -235,7 +236,11 @@ tildexpand (char *s)
+@@ -235,7 +237,11 @@ tildexpand (char *s)
  	struct passwd *pw;
  	char login[17];
  	char *p = login;

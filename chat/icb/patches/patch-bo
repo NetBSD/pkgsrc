@@ -1,4 +1,4 @@
-$NetBSD: patch-bo,v 1.2 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-bo,v 1.3 2012/02/16 14:13:15 hans Exp $
 
 --- tcl/strerror.c.orig	1995-02-24 16:19:50.000000000 -0500
 +++ tcl/strerror.c	2008-12-16 20:18:00.000000000 -0500
@@ -6,7 +6,7 @@ $NetBSD: patch-bo,v 1.2 2008/12/17 02:19:59 christos Exp $
  #include <stdio.h>
  #include <string.h>
  
-+#if !defined(BSD4_4) && !defined(__linux__) && !defined(__APPLE__) && !defined(__DragonFly__)
++#if !defined(BSD4_4) && !defined(__linux__) && !defined(__APPLE__) && !defined(__DragonFly__) && !defined(__sun)
  /*
   * List of known errors:
   */

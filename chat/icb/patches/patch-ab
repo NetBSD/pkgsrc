@@ -1,8 +1,27 @@
-$NetBSD: patch-ab,v 1.2 2008/12/17 02:19:59 christos Exp $
+$NetBSD: patch-ab,v 1.3 2012/02/16 14:13:15 hans Exp $
 
 --- tcl/tclGlob.c.orig	2008-12-16 20:18:00.000000000 -0500
 +++ tcl/tclGlob.c	2008-12-16 20:18:01.000000000 -0500
-@@ -40,8 +40,6 @@
+@@ -24,18 +24,24 @@ static char rcsid[] = "$Header: /home/ag
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
+-#include <sys/dir.h>
++#include <dirent.h>
+ #include <sys/stat.h>
+ #include <tcl.h>
+ 
++#define direct dirent
++
++#ifdef __sun
++#define D_NAMLEN(d) (strlen((d)->d_name))
++#else
++#define D_NAMLEN(d) ((d)->d_namlen)
++#endif
++
+ /*
+  * The structure below is used to keep track of a globbing result
+  * being built up (i.e. a partial list of file names).  The list
   * grows dynamically to be as big as needed.
   */
  
@@ -11,3 +30,19 @@ $NetBSD: patch-ab,v 1.2 2008/12/17 02:19:59 christos Exp $
  typedef struct {
      char *result;		/* Pointer to result area. */
      int totalSpace;		/* Total number of characters allocated
+@@ -298,12 +304,12 @@ DoGlob(interp, dir, rem, resPtr)
+ 	    if (Tcl_StringMatch(entryPtr->d_name, pattern)) {
+ 		if (*p == 0) {
+ 		    AppendResult(dir, entryPtr->d_name,
+-			    (int) entryPtr->d_namlen, resPtr);
++			    (int) D_NAMLEN(entryPtr), resPtr);
+ 		} else {
+-		    if ((l1+entryPtr->d_namlen+2) <= STATIC_SIZE) {
++		    if ((l1+D_NAMLEN(entryPtr)+2) <= STATIC_SIZE) {
+ 			newDir = static1;
+ 		    } else {
+-			newDir = malloc((unsigned) (l1+entryPtr->d_namlen+2));
++			newDir = malloc((unsigned) (l1+D_NAMLEN(entryPtr)+2));
+ 		    }
+ 		    sprintf(newDir, "%s%s/", dir, entryPtr->d_name);
+ 		    result = DoGlob(interp, newDir, p+1, resPtr);

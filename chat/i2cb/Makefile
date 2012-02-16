@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/03/04 21:40:29 spz Exp $
+# $NetBSD: Makefile,v 1.23 2012/02/16 14:05:07 hans Exp $
 #
 
 DISTNAME=	i2cb-6.0_ALPHA
@@ -14,6 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/icb
 USE_GNU_READLINE=	yes
+
+CFLAGS.SunOS+=	-DBSD_COMP
+LIBS.SunOS+=	-lsocket
+
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 INSTALLATION_DIRS=	bin libdata
 
