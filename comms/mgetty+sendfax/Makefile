@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2012/02/06 12:39:42 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2012/02/16 17:29:24 hans Exp $
 
 DISTNAME=	mgetty1.1.37-Jun05
 PKGNAME=	mgetty-1.1.37
@@ -22,6 +22,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 MAKE_ENV+=		MGETTY_CONFDIR=${PKG_SYSCONFDIR:Q} PERL5=${PERL5:Q}
+MAKE_ENV+=		ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP}
 MAKE_FLAGS+=		prefix=${DESTDIR:Q}${PREFIX:Q}                  \
 			INFODIR=${DESTDIR:Q}${PREFIX:Q}/${PKGINFODIR:Q} \
 			MAN1DIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man1\
@@ -30,6 +31,14 @@ MAKE_FLAGS+=		prefix=${DESTDIR:Q}${PREFIX:Q}                  \
 			MAN8DIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man8
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CONFDIR=${DESTDIR:Q}${EXAMPLES_DIR:Q}
 BUILD_MAKE_FLAGS=	${MAKE_FLAGS:S,${DESTDIR},,} CONFDIR=${PKG_SYSCONFDIR:Q}
+
+CFLAGS.SunOS+=		-Dsolaris2
+CFLAGS+=		-DDEVICE_GROUP=${ROOT_GROUP}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "SunOS"
+LIBS+=			-lutil
+.endif
 
 USE_TOOLS+=		makeinfo perl:run
 

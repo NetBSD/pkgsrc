@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2007/01/26 01:50:54 markd Exp $
+$NetBSD: patch-aa,v 1.5 2012/02/16 17:25:16 hans Exp $
 
 --- Makefile.orig	2003-05-31 11:42:14.000000000 +1200
 +++ Makefile
@@ -18,7 +18,18 @@ $NetBSD: patch-aa,v 1.4 2007/01/26 01:50:54 markd Exp $
  
  CFLAGS = -Wall -g -DMALSYNC -I$(TREETOP)/mal/common \
    -I$(TREETOP)/mal/client/common -I$(PILOT_LINK_DIR)/include \
-@@ -72,8 +73,8 @@ DYNLINK = -rdynamic
+@@ -59,10 +60,6 @@ SRC = malsync.c  \
+   $(TREETOP)/mal/client/common/AGSyncProcessor.c \
+   $(TREETOP)/mal/common/AGServerConfig.c
+ 
+-ifeq ($(PLAT),SunOS)
+-SRC += ap_snprintf.c
+-endif
+-
+ OBJS = $(SRC:.c=.o)
+ 
+ ifeq ($(PLAT),Darwin)
+@@ -72,8 +69,8 @@ DYNLINK = -rdynamic
  endif
  
  $(TARGET): $(OBJS)

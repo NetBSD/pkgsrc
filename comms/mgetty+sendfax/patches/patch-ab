@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
+$NetBSD: patch-ab,v 1.13 2012/02/16 17:29:25 hans Exp $
 
 --- Makefile.orig	2010-06-05 09:48:22.000000000 +0000
 +++ Makefile
@@ -18,31 +18,40 @@ $NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
  #
  #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
 -CFLAGS=-O2 -Wall -pipe
-+CFLAGS=-O2 -Wall -pipe -DPREFIX=\"${PREFIX}\"
++CFLAGS+=-O2 -Wall -pipe -DPREFIX=\"${PREFIX}\"
  #CFLAGS=-O -DSVR4
  #CFLAGS=-O -DSVR4 -DSVR42
  #CFLAGS=-O -DUSE_POLL
-@@ -151,7 +151,7 @@ CFLAGS=-O2 -Wall -pipe
+@@ -150,8 +150,6 @@ CFLAGS=-O2 -Wall -pipe
+ # 	"utmp.o: unresolved symbol _login"
  # For Linux, add "-lutil" if the linker complains about "updwtmp".
  #
- LDFLAGS=
+-LDFLAGS=
 -LIBS=
-+LIBS=-lutil
  #LIBS=-lprot -lsocket				# SCO Unix
  #LIBS=-lsocket
  #LIBS=-lbsd					# OSF/1
-@@ -171,8 +171,8 @@ LIBS=
+@@ -171,8 +169,8 @@ LIBS=
  #
  # if your systems doesn't have one, use the shell script that I provide
  # in "inst.sh" (taken from X11R5). Needed on IRIX5.2
 -INSTALL=install -c -o bin -g bin
 -#INSTALL=install -c -o root -g wheel		# NeXT/BSD
 +#INSTALL=install -c -o bin -g bin
-+INSTALL=install -c -o root -g wheel		# NeXT/BSD
++INSTALL=install -c -o ${ROOT_USER} -g ${ROOT_GROUP}	# NeXT/BSD
  #INSTALL=/usr/ucb/install -c -o bin -g bin	# AIX, Solaris 2.x
  #INSTALL=installbsd -c -o bin -g bin		# OSF/1, AIX 4.1, 4.2
  #INSTALL=/usr/bin/X11/bsdinst -c -o bin 	# IRIX
-@@ -265,12 +265,12 @@ AWK=awk
+@@ -247,7 +245,7 @@ INFODIR=$(prefix)/info
+ #  Usually this will be /bin/sh or /usr/bin/sh, but bash or ksh are fine.
+ #  (on some ultrix systems, you may need /bin/sh5 here)
+ #
+-SHELL=/bin/sh
++#SHELL=/bin/sh
+ #
+ # If your shell requires pre-posix syntax to disable traps ('trap 0' 
+ #  instead of 'trap - 0'), set this to "0" (very rarely needed)
+@@ -265,12 +263,12 @@ AWK=awk
  # and the "tkperl" frontends without PERL, so don't worry if you don't
  # have it.
  # If you specify command line arguments (-w), don't forget the quotes!
@@ -57,7 +66,7 @@ $NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
  #
  #
  # An echo program that understands escapes like "\n" for newline or
-@@ -282,9 +282,9 @@ TKPERL=/usr/bin/tkperl
+@@ -282,9 +280,9 @@ TKPERL=/usr/bin/tkperl
  # please use the "mg.echo" program provided in the compat/ subdirectory.
  # Set ECHO="mg.echo" and INSTALL_MECHO to mg.echo
  #
@@ -69,7 +78,7 @@ $NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
  
  #
  # for mgetty, that's it. If you want to use the voice
-@@ -292,7 +292,7 @@ ECHO="echo"
+@@ -292,7 +290,7 @@ ECHO="echo"
  
  # To maintain security, I recommend creating a new group for
  # users who are allowed to manipulate the recorded voice messages.
@@ -78,7 +87,7 @@ $NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
  PHONE_PERMS=770
  
  # Add -DNO_STRSTR to CFLAGS if you don't have strstr().
-@@ -324,7 +324,7 @@ SFAXOBJ=sendfax.o logfile.o locks.o mode
+@@ -324,7 +322,7 @@ SFAXOBJ=sendfax.o logfile.o locks.o mode
  
  all:	bin-all doc-man-only
  
@@ -87,7 +96,7 @@ $NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
  
  # a few C files need extra compiler arguments
  
-@@ -572,8 +572,8 @@ newslock: compat/newslock.c
+@@ -572,8 +570,8 @@ newslock: compat/newslock.c
  # internal: use this to create a "clean" mgetty+sendfax tree
  bindist: all doc-all sedscript
  	-rm -rf bindist
@@ -98,7 +107,7 @@ $NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
  		BINDIR=$$bd$(BINDIR) SBINDIR=$$bd$(SBINDIR) \
  		LIBDIR=$$bd$(LIBDIR) CONFDIR=$$bd$(CONFDIR) \
  		spool=$$bd$(spool) FAX_SPOOL=$$bd$(FAX_SPOOL) \
-@@ -585,7 +585,7 @@ bindist: all doc-all sedscript
+@@ -585,7 +583,7 @@ bindist: all doc-all sedscript
  	cd bindist; gtar cvvfz mgetty$(MR).$(SR)-bin.tgz *
  
  
@@ -107,7 +116,7 @@ $NetBSD: patch-ab,v 1.12 2011/04/06 20:57:19 is Exp $
  
  install.bin: mgetty sendfax newslock \
  		login.config mgetty.config sendfax.config 
-@@ -593,7 +593,7 @@ install.bin: mgetty sendfax newslock \
+@@ -593,7 +591,7 @@ install.bin: mgetty sendfax newslock \
  # binaries
  #
  	-test -d $(BINDIR)  || ( ./mkidirs $(BINDIR)  ; chmod 755 $(BINDIR)  )

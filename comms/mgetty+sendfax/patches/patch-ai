@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.6 2009/10/02 19:21:59 is Exp $
+$NetBSD: patch-ai,v 1.7 2012/02/16 17:29:25 hans Exp $
 
 --- policy.h.orig	2009-10-02 11:51:33.000000000 +0200
 +++ policy.h
-@@ -593,6 +593,22 @@
+@@ -593,6 +593,21 @@
   */
  #define	MINFREESPACE 1024
  
@@ -21,11 +21,10 @@ $NetBSD: patch-ai,v 1.6 2009/10/02 19:21:59 is Exp $
 +#define MAILER          "/usr/sbin/sendmail"
 +
 +#undef DEVICE_GROUP
-+#define DEVICE_GROUP    "wheel"
  /* fax machines exchange so-called "non-standard-frames" that can be 
   * used to identify what vendor and model is on the other end.
   * mgetty parses and prints this by default, because it can help 
-@@ -601,3 +617,4 @@
+@@ -601,3 +616,4 @@
   */
  #define FAX_NSF_PARSER
  
