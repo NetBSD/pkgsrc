@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.3 2009/08/06 08:24:29 plunky Exp $
+$NetBSD: patch-al,v 1.4 2012/02/16 14:13:15 hans Exp $
 
 --- icb/protos.h.orig	1995-02-24 21:20:25.000000000 +0000
 +++ icb/protos.h
@@ -16,7 +16,7 @@ $NetBSD: patch-al,v 1.3 2009/08/06 08:24:29 plunky Exp $
  int ishushed(char *nick);
  int lcaseit(char *s);
 -#ifdef linux
-+#if defined(linux) || (defined(BSD) && BSD >= 199306)
++#if defined(linux) || (defined(BSD) && BSD >= 199306) || defined(__sun)
  int linebuffer(FILE *fp);
  #else
  int linebuffer(struct _iobuf *fp);

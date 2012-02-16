@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
+$NetBSD: patch-av,v 1.4 2012/02/16 14:13:15 hans Exp $
 
 --- icb/unix.c.orig	1995-02-24 16:20:31.000000000 -0500
 +++ icb/unix.c	2009-07-23 21:22:34.000000000 -0400
@@ -8,8 +8,9 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  #include "externs.h"
 +#include <limits.h>
  #include <pwd.h>
+-#include <sys/dir.h>
 +#include <time.h>
- #include <sys/dir.h>
++#include <dirent.h>
  
  #undef stty
  #undef gtty
@@ -22,7 +23,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  #include <sgtty.h>
  #endif
  
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__sun)
 +#include <termios.h>
 +#define TTYSTRUCT termios
 +#define stty(fd,buf) tcsetattr((fd),TCSANOW,(buf))
@@ -40,7 +41,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  
  char *getlogin();
  
-@@ -65,13 +73,16 @@
+@@ -65,13 +73,16 @@ gettime()
  
  /* set line buffering for an open file pointer */
  /* output will be flushed every newline */
@@ -59,7 +60,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  }
  
  
-@@ -79,13 +90,13 @@
+@@ -79,13 +90,13 @@ FILE *fp;
  pushback(c)
  char c;
  {
@@ -76,7 +77,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  }
  
  
-@@ -94,25 +105,25 @@
+@@ -94,25 +105,25 @@ char c;
  
  getterm()
  {
@@ -110,7 +111,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  	/* get local special chars */
   	if (ioctl(0, TIOCGLTC, &lt) < 0) {
  		ttyinfo.redraw = '\022'; /* ^R */
-@@ -121,10 +132,10 @@
+@@ -121,10 +132,10 @@ getterm()
  		ttyinfo.redraw = lt.t_rprntc;
  		ttyinfo.werase = lt.t_werasc;
  	}
@@ -123,7 +124,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  
  	/* get the current window size */
  	getwinsize();
-@@ -145,14 +156,14 @@
+@@ -145,14 +156,14 @@ icbterm()
  	bcopy((char *)&origtty, (char *)&tty, (unsigned)sizeof(struct TTYSTRUCT));
  
  	/* turn on cbreak - turn off echo */
@@ -143,7 +144,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  
  	echomode = 0;
  	/* set the new flags */
-@@ -206,7 +217,11 @@
+@@ -206,7 +217,11 @@ char *s;
  	struct passwd *pw;
  	char login[17];
  	char *p = login;
@@ -155,7 +156,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  
  	/* has to start with a tilde */
  	if (*s++ != '~')
-@@ -258,11 +273,11 @@
+@@ -258,11 +273,11 @@ echo()
  	}
  
  	/* turn on echo */
@@ -171,7 +172,7 @@ $NetBSD: patch-av,v 1.3 2009/07/24 01:24:39 christos Exp $
  
  	echomode = 1;
  
-@@ -287,11 +302,11 @@
+@@ -287,11 +302,11 @@ noecho()
  	}
  
  	/* turn off echo */

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/02/28 14:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/02/16 14:13:15 hans Exp $
 #
 
 # Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
@@ -22,6 +22,10 @@ INSTALLATION_DIRS=	bin ${ICBLIBDIR} ${EGDIR}
 EGDIR=			${PREFIX}/share/examples/icb
 ICBLIBDIR=		${PREFIX}/libdata/icb
 CONF_FILES+=		${EGDIR}/icbserverdb ${PREFIX}/libdata/icbserverdb
+
+CPPFLAGS.SunOS+=	-DBSD_COMP
+LIBS.SunOS+=		-lsocket -lnsl
+MAKE_ENV+=		OTHERLIBS=${LIBS:Q}
 
 post-extract:
 	${RM} -f ${WRKSRC}/tcl/string.h
