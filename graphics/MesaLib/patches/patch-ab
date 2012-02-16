@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.18 2009/08/08 08:25:51 wiz Exp $
+$NetBSD: patch-ab,v 1.19 2012/02/16 18:56:23 hans Exp $
 
 --- src/glu/sgi/Makefile.orig	2008-08-25 14:46:42.000000000 +0000
 +++ src/glu/sgi/Makefile
@@ -40,7 +40,7 @@ $NetBSD: patch-ab,v 1.18 2009/08/08 08:25:51 wiz Exp $
 -		$(GLU_LIB_DEPS) $(OBJECTS)
 +# Make the exports file with the mangled or unmangled names per $CFLAGS
 +glu.exports: glu.exports.in
-+	$(CC) -E -I $(TOP)/include/GL $(CFLAGS) $< | \
++	$(CC) -E -I $(TOP)/include/GL $(CFLAGS) -xc-header $< | \
 +		awk '/^[^#]+/ {print}' > $@
 +
  
