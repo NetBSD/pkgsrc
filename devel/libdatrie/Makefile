@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/12/06 11:06:51 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/02/16 18:46:51 hans Exp $
 #
 
 DISTNAME=	libdatrie-0.2.5
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+LIBS.SunOS+=	-liconv
 
 PKGCONFIG_OVERRIDE+=	datrie-0.2.pc.in
 
