@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2011/12/07 00:30:16 jym Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/16 11:05:20 hans Exp $
 bin/phoronix-test-suite
 man/man1/phoronix-test-suite.1
 share/applications/phoronix-test-suite.desktop
@@ -110,7 +110,7 @@ share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-fe
 share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-freebsd-packages.sh
 share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-gentoo-packages.sh
 share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-mandrivalinux-packages.sh
-share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-${LOWER_OPSYS}-packages.sh
+share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-netbsd-packages.sh
 share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-openindiana-packages.sh
 share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-opensolaris-packages.sh
 share/phoronix-test-suite/pts-core/external-test-dependencies/scripts/install-opensuse-packages.sh
@@ -126,7 +126,7 @@ share/phoronix-test-suite/pts-core/external-test-dependencies/xml/freebsd-packag
 share/phoronix-test-suite/pts-core/external-test-dependencies/xml/generic-packages.xml
 share/phoronix-test-suite/pts-core/external-test-dependencies/xml/gentoo-packages.xml
 share/phoronix-test-suite/pts-core/external-test-dependencies/xml/mandrivalinux-packages.xml
-share/phoronix-test-suite/pts-core/external-test-dependencies/xml/${LOWER_OPSYS}-packages.xml
+share/phoronix-test-suite/pts-core/external-test-dependencies/xml/netbsd-packages.xml
 share/phoronix-test-suite/pts-core/external-test-dependencies/xml/openindiana-packages.xml
 share/phoronix-test-suite/pts-core/external-test-dependencies/xml/opensolaris-packages.xml
 share/phoronix-test-suite/pts-core/external-test-dependencies/xml/opensuse-packages.xml
