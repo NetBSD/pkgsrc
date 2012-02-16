@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2011/11/21 00:43:48 marino Exp $
+# $NetBSD: Makefile.common,v 1.31 2012/02/16 19:27:47 hans Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faac/Makefile
@@ -37,6 +37,7 @@ GST_PLUGINS0.10_VER=	0.10.22
 		swfdec \
 		theoradec \
 		vcd \
+		vdpau \
 		xvid
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
