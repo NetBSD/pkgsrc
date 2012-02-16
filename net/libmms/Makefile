@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/06 12:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/16 19:31:25 hans Exp $
 #
 
 DISTNAME=	libmms-0.6
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+CPPFLAGS.SunOS+=	-Du_int64_t=uint64_t -Du_int32_t=uint32_t -Du_int16_t=uint16_t
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/libmms.pc.in
 
