@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp,v 1.1 2012/01/16 09:00:27 adam Exp $
+$NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp,v 1.2 2012/02/16 20:42:46 hans Exp $
 
 Fix building on NetBSD/amd64 with GCC.
 
@@ -9,7 +9,7 @@ Fix building on NetBSD/amd64 with GCC.
  #endif
  
 -#if (OS(LINUX) || OS(FREEBSD)) && CPU(X86_64)
-+#if (OS(LINUX) || OS(FREEBSD) || OS(NETBSD)) && CPU(X86_64)
++#if (OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(SOLARIS)) && CPU(X86_64) || (OS(SOLARIS) && CPU(X86))
  #define SYMBOL_STRING_RELOCATION(name) #name "@plt"
  #elif OS(DARWIN) || (CPU(X86_64) && COMPILER(MINGW) && !GCC_VERSION_AT_LEAST(4, 5, 0))
  #define SYMBOL_STRING_RELOCATION(name) "_" #name
