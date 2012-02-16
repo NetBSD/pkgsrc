@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:53 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/16 19:57:57 hans Exp $
 #
 
 DISTNAME=	blackbox-0.70.1
@@ -20,6 +20,8 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+LIBS.SunOS+=	-liconv
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
