@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2011/02/16 20:46:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/02/16 05:49:57 ryoon Exp $
 bin/abcm2ps
 share/abcm2ps/fbook.fmt
 share/abcm2ps/flute.fmt
 share/abcm2ps/fonts.fmt
 share/abcm2ps/landscape.fmt
+share/abcm2ps/musicfont.fmt
 share/abcm2ps/tight.fmt
 share/doc/abcm2ps/Changes
 share/doc/abcm2ps/License
@@ -13,9 +14,6 @@ share/doc/abcm2ps/chinese.abc
 share/doc/abcm2ps/deco.abc
 share/doc/abcm2ps/features.txt
 share/doc/abcm2ps/format.txt
-share/doc/abcm2ps/journey.abc
-share/doc/abcm2ps/mtunes1.abc
-share/doc/abcm2ps/mtunes2.abc
 share/doc/abcm2ps/newfeatures.abc
 share/doc/abcm2ps/options.txt
 share/doc/abcm2ps/sample.abc
