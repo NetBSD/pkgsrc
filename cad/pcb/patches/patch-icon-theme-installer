@@ -1,0 +1,12 @@
+$NetBSD: patch-icon-theme-installer,v 1.1 2012/02/16 11:43:25 hans Exp $
+
+--- icon-theme-installer.orig	2009-12-25 18:18:18.329539169 +0100
++++ icon-theme-installer	2009-12-25 19:01:51.837047302 +0100
+@@ -121,7 +121,6 @@ for icon in $@; do
+ 	size=`echo $icon | sed -n 's/.*-\([0-9]*\).*/\1/p'`
+ 	category=`echo $icon | cut -d, -f1`
+ 	build_name=`echo $icon | cut -d, -f2`
+-	install_name=`echo $build_name | sed 's/-[0-9]\+//g'`
+ 	install_name=`basename $install_name`
+ 
+ 	if test -z $size; then 
