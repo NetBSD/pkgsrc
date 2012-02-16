@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/16 17:54:26 hans Exp $
 #
 
 DISTNAME=		synce-rra-0.9.1
@@ -18,6 +18,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 .include "../../comms/synce-librapi2/buildlink3.mk"
 .include "../../comms/synce-libsynce/buildlink3.mk"
