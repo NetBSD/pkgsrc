@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/02/06 12:40:55 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/02/16 21:29:35 gls Exp $
 #
 
-DISTNAME=	calibre-0.8.36
-PKGREVISION=	1
+DISTNAME=	calibre-0.8.39
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -70,6 +69,7 @@ FIX_PYTHON+=	src/calibre/ebooks/chm/*.py
 FIX_PYTHON+=	src/calibre/ebooks/comic/*.py
 FIX_PYTHON+=	src/calibre/ebooks/compression/*.py
 FIX_PYTHON+=	src/calibre/ebooks/conversion/*.py
+FIX_PYTHON+=	src/calibre/ebooks/conversion/plugins/*.py
 FIX_PYTHON+=	src/calibre/ebooks/djvu/*.py
 FIX_PYTHON+=	src/calibre/ebooks/epub/fix/*.py
 FIX_PYTHON+=	src/calibre/ebooks/epub/*.py
@@ -112,6 +112,7 @@ FIX_PYTHON+=	src/calibre/gui2/tag_browser/*.py
 FIX_PYTHON+=	src/calibre/gui2/viewer/*.py
 FIX_PYTHON+=	src/calibre/gui2/wizard/*.py
 FIX_PYTHON+=	src/calibre/library/*.py
+FIX_PYTHON+=	src/calibre/library/catalogs/*.py
 FIX_PYTHON+=	src/calibre/library/server/*.py
 FIX_PYTHON+=	src/calibre/manual/*.py
 FIX_PYTHON+=	src/calibre/manual/plugin_examples/helloworld/*.py
