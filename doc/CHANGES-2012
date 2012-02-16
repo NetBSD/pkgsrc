@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.488 2012/02/16 06:23:47 sno Exp $
+$NetBSD: CHANGES-2012,v 1.489 2012/02/16 06:26:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -704,3 +704,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Capture-Tiny to 0.16 [sno 2012-02-16]
 	Updated devel/p5-App-Cmd to 0.316 [sno 2012-02-16]
 	Updated devel/p5-B-Hooks-Parser to 0.10 [sno 2012-02-16]
+	Updated devel/p5-B-Keywords to 1.12 [sno 2012-02-16]
