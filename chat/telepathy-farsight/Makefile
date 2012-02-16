@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/02/06 12:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/02/16 15:39:11 hans Exp $
 #
 
 DISTNAME=	telepathy-farsight-0.0.16
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+
+CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 
 PKGCONFIG_OVERRIDE+=	telepathy-farsight/telepathy-farsight.pc.in
 
