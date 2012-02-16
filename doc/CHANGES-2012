@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.486 2012/02/16 06:10:21 sno Exp $
+$NetBSD: CHANGES-2012,v 1.487 2012/02/16 06:13:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/window to 20120215 [jmmv 2012-02-16]
 	Updated print/abcm2ps to 6.6.6 [ryoon 2012-02-16]
 	Updated devel/p5-Capture-Tiny to 0.16 [sno 2012-02-16]
+	Updated devel/p5-App-Cmd to 0.316 [sno 2012-02-16]
