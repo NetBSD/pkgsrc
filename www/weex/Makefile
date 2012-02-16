@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/04/22 13:45:01 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/16 20:06:35 hans Exp $
 
 DISTNAME=	weex-2.6.1.5
 PKGREVISION=	1
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
+
+LIBS.SunOS+=		-lintl
 
 WEEX_DOCS=	AUTHORS BUGS BUGS.ja COPYING COPYING.ja \
 		ChangeLog ChangeLog.ja FAQ FAQ.ja README README.ja \
