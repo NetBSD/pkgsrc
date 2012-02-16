@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/01 06:01:18 sbd Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/16 18:49:41 hans Exp $
 #
 
 DISTNAME=	hex-a-hop-1.1.0
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+LIBS.SunOS+=	-liconv
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
