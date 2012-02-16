@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/24 17:25:51 gdt Exp $
+$NetBSD: distinfo,v 1.2 2012/02/16 22:11:38 gls Exp $
 
-SHA1 (argparse-1.1.zip) = da0c55dc79cafe0eec50e7f10b06c72319a96f78
-RMD160 (argparse-1.1.zip) = 57a1f074ea95891fa473396851e8302b03637bb8
-Size (argparse-1.1.zip) = 151471 bytes
+SHA1 (argparse-1.2.1.tar.gz) = caadac82aa2576d6b445058c1fcf6ef0b14dbaa1
+RMD160 (argparse-1.2.1.tar.gz) = 4ba4f413fab2a5f566b9b9bf1572714cd762fc66
+Size (argparse-1.2.1.tar.gz) = 69297 bytes

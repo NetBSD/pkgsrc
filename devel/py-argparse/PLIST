@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/24 17:25:51 gdt Exp $
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2012/02/16 22:11:38 gls Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/argparse.py
 ${PYSITELIB}/argparse.pyc
 ${PYSITELIB}/argparse.pyo
