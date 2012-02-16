@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/10 00:11:49 markd Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/16 15:14:41 hans Exp $
 
 DISTNAME=	libmsn-4.1
 CATEGORIES=	chat
@@ -16,6 +16,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES+= c c++
 
 PKGCONFIG_OVERRIDE+=	libmsn.pc.cmake
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
