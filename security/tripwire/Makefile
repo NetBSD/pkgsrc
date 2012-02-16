@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/05/21 21:56:27 zafer Exp $
+# $NetBSD: Makefile,v 1.33 2012/02/16 19:43:14 hans Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -21,6 +21,7 @@ PKG_SYSCONFSUBDIR=	tripwire
 OWN_DIRS=		${PKG_SYSCONFDIR}/databases
 EGDIR=			${PREFIX}/share/examples/tripwire
 CONF_FILES=		${EGDIR}/tripwire.conf ${PKG_SYSCONFDIR}/tripwire.conf
+MAKE_ENV+=		INSTALL=${TOOLS_PATH.install:Q}
 
 AUTO_MKDIRS=			yes
 
