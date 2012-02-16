@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/04/22 13:45:15 obache Exp $
+# $NetBSD: Makefile,v 1.31 2012/02/16 20:09:00 hans Exp $
 #
 
 DISTNAME=		XaoS-3.4
@@ -31,6 +31,8 @@ INSTALLATION_DIRS=	${PKGINFODIR}
 
 CHECK_PORTABILITY_SKIP+=	help/applehelpconv
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+LDFLAGS.SunOS+=		-liconv
 
 .include "../../math/gsl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
