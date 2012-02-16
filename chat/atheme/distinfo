@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/16 10:38:27 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2012/02/16 13:46:52 hans Exp $
 
 SHA1 (atheme-services-3.0.4.tbz2) = 1ba73fa07377f3ec31d03b0ac588141e10ad35b3
 RMD160 (atheme-services-3.0.4.tbz2) = cca06369a1fd6989178b760efdbf745de28c9b60
 Size (atheme-services-3.0.4.tbz2) = 580786 bytes
 SHA1 (patch-aa) = ea2122cbe3dc1f7ddbc62aa9bcc695a384dc575e
 SHA1 (patch-ab) = 49c72c026c24f0e2b5054a2297d80256ca37ed1d
+SHA1 (patch-include_common.h) = ee4ab38b65f954d8a545e7f6d58f41b964b301e5
+SHA1 (patch-include_stdinc.h) = a7d2898581addaf7730270003b0f0eb30a455de9
