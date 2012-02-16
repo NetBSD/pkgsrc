@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.11 2011/12/19 13:25:22 wiz Exp $
+$NetBSD: distinfo,v 1.12 2012/02/16 17:32:45 hans Exp $
 
 SHA1 (modemd-970221.tar.gz) = 104f8e596f711e349203b2da8c4f2ecf40d490c3
 RMD160 (modemd-970221.tar.gz) = ade5d735e5fd07b91006cf1334a41a43dca7e3d9
 Size (modemd-970221.tar.gz) = 56093 bytes
 SHA1 (patch-aa) = 093d70c98c5fa21f3c5fff8dc5092ca0afa365ef
-SHA1 (patch-ab) = fd0382bd007ea3be2be0983db8e78a865ceb0d20
-SHA1 (patch-ac) = 55f4bf4b57e1c42becb816ac4982620c42a5bf1a
-SHA1 (patch-ad) = e8c78c84b9ab58644d8e2e105416d5ef5b59fba4
+SHA1 (patch-ab) = 711b600d5dfa11e859f6af1124aaa18224b37ad3
+SHA1 (patch-ac) = fe3898ea85204631e31c49a8872855c0e7c09e9d
+SHA1 (patch-ad) = f18d3ffe0658ef2709eb28d342b31361b86b1b0b
 SHA1 (patch-ae) = 44e38979c686f66a22e3fd3b027cb9129b6266ba
 SHA1 (patch-af) = c438c7ddaa223ae5bdb5b4fd11c5d6304eec4008
-SHA1 (patch-ag) = 8d93d4da055170a19336e127017dfe42501a0538
+SHA1 (patch-ag) = 3505bf5b749288de673970ea95ab3196669feca9
 SHA1 (patch-ah) = 9294419cd64c3b5cc9ebadc3a4c135a0a969262d
 SHA1 (patch-ai) = 8e81c1e522979f616f2f4aafd5dd65400a6330fa
 SHA1 (patch-aj) = 2837ce9ac377aa6b4f7a8c96f63ff80fcdee9b17
@@ -22,7 +22,8 @@ SHA1 (patch-ap) = ed747dc8ef3419bc4431d934aaf4692cadd0ade4
 SHA1 (patch-aq) = f77b4b16b12ca74e897372f328e850a3d9b52229
 SHA1 (patch-ar) = 0fc63025d29a0bd626ec8a51f8c6a461bdbb84a4
 SHA1 (patch-as) = 5ac081a2200b72321973004803d15dd3b9d387b3
-SHA1 (patch-incoming_login.c) = 9ece373aee2ea8caa751752a5390decf390eef12
+SHA1 (patch-cf_sunos4.h) = efe0b9c58ad20247cbc313c1569f9d0be8901d14
+SHA1 (patch-incoming_login.c) = 62784076e0ac1e23e2e7a6f8c248f3e1fa6b6293
 SHA1 (patch-outgoing_tn.c) = 133c714eb6d33912f6edfcd12034b3155707d701
 SHA1 (patch-outgoing_tnstate.c) = da65871a0397c13e1cd345c1832e3cfbe188f629
 SHA1 (patch-outgoing_tnutil.c) = ef8b3f32a6e491d6fa56ba3a8f8c4ee64a368cc9
