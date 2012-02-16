@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile,v 1.1 2012/02/16 14:05:08 hans Exp $
+
+--- src/Makefile.orig	2000-03-16 00:15:37.000000000 +0100
++++ src/Makefile	2012-01-20 12:58:46.918323541 +0100
+@@ -8,8 +8,6 @@
+ 
+ .include "../config"
+ 
+-LIBS =
+-
+ SRC = \
+ 	c_hclear.c \
+ 	c_hdel.c \

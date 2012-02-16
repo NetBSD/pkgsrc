@@ -1,8 +1,12 @@
-$NetBSD: patch-af,v 1.3 2009/06/05 09:36:15 hasso Exp $
+$NetBSD: patch-af,v 1.4 2012/02/16 14:05:07 hans Exp $
 
 --- src/contoport.c.orig	2000-03-16 00:13:28 +0200
 +++ src/contoport.c	2009-06-05 11:30:39 +0300
-@@ -6,7 +6,7 @@
+@@ -3,10 +3,11 @@
+ /* connect to a port */
+ 
+ #include <stdio.h>
++#include <sys/file.h>
  #include <sys/types.h>
  #include <fcntl.h>
  #include <sys/socket.h>
@@ -11,7 +15,7 @@ $NetBSD: patch-af,v 1.3 2009/06/05 09:36:15 hasso Exp $
  #include <unistd.h>
  #include <netinet/in.h>
  #include <netdb.h>
-@@ -14,14 +14,15 @@
+@@ -14,14 +15,15 @@
  #include "icb.h"
  #include "externs.h"
  
@@ -30,7 +34,7 @@ $NetBSD: patch-af,v 1.3 2009/06/05 09:36:15 hasso Exp $
  
  	snprintf(p, 9, "%d", port_number);
  
-@@ -36,12 +37,43 @@ connecttoport (char *host_name, int port
+@@ -36,12 +38,43 @@ connecttoport (char *host_name, int port
                  perror(gai_strerror(err));
  		return(-1);
  	}

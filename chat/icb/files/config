@@ -1,4 +1,4 @@
-#	$NetBSD: config,v 1.2 2008/03/02 07:06:20 jlam Exp $
+#	$NetBSD: config,v 1.3 2012/02/16 14:13:15 hans Exp $
 #
 #	THIS IS AN AUTOMATICALLY GENERATED FILE
 #
@@ -30,7 +30,7 @@ LFLAGS		= -u  -DNO_LRAND48 -DSTRINGS_H -DTIME_H -DVOID_SIGHANDLER=1
 SYSDEP		=sysdep.bsd
 
 # Other libraries to include.
-OTHERLIBS	=-ltermcap
+OTHERLIBS	+=-ltermcap
 
 # Resolver library
 RESOLVLIB	=
