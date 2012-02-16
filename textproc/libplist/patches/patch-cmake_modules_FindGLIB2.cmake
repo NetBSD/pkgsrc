@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_modules_FindGLIB2.cmake,v 1.1.1.1 2011/11/21 18:51:37 shattered Exp $
+$NetBSD: patch-cmake_modules_FindGLIB2.cmake,v 1.2 2012/02/16 19:53:54 hans Exp $
 
 Fix glib2 detection using macros from spectrum.im.
 
@@ -35,7 +35,7 @@ Fix glib2 detection using macros from spectrum.im.
  find_path(GLIB2_MAIN_INCLUDE_DIR glib.h
            PATH_SUFFIXES glib-2.0
 -          PATHS ${_LibGLIB2IncDir} )
-+          PATHS ${PKG_GLIB_INCLUDE_DIRS} )
++          PATHS ${PKG_GLIB_INCLUDE_DIRS} NO_DEFAULT_PATH)
  
  # search the glibconfig.h include dir under the same root where the library is found
 -find_library(GLIB2_LIBRARIES 
@@ -45,16 +45,16 @@ Fix glib2 detection using macros from spectrum.im.
 -get_filename_component(glib2LibDir "${GLIB2_LIBRARIES}" PATH)
 +find_library(GLIB2_LIBRARIES
 +             NAMES glib-2.0
-+             PATHS ${PKG_GLIB_LIBRARY_DIRS} )
++             PATHS ${PKG_GLIB_LIBRARY_DIRS} NO_DEFAULT_PATH)
 +
 +find_library(GLIB2_THREAD
 +             NAMES gthread-2.0
-+             PATHS ${PKG_GLIB_LIBRARY_DIRS} )
++             PATHS ${PKG_GLIB_LIBRARY_DIRS} NO_DEFAULT_PATH)
  
  find_path(GLIB2_INTERNAL_INCLUDE_DIR glibconfig.h
            PATH_SUFFIXES glib-2.0/include
 -          PATHS ${_LibGLIB2IncDir} "${glib2LibDir}" ${CMAKE_SYSTEM_LIBRARY_PATH})
-+          PATHS ${PKG_GLIB_INCLUDE_DIRS} ${PKG_GLIB_LIBRARIES} ${CMAKE_SYSTEM_LIBRARY_PATH})
++          PATHS ${PKG_GLIB_INCLUDE_DIRS} ${PKG_GLIB_LIBRARIES} ${CMAKE_SYSTEM_LIBRARY_PATH} NO_DEFAULT_PATH)
 +
 +if(GLIB2_THREAD)
 +	set(GLIB2_LIBRARIES ${GLIB2_LIBRARIES} ${GLIB2_THREAD})
