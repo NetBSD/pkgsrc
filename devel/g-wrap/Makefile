@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2012/02/06 12:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2012/02/16 18:38:46 hans Exp $
 
 DISTNAME=	g-wrap-1.9.14
 PKGREVISION=	1
@@ -23,6 +23,11 @@ TEST_TARGET=		check
 INFO_FILES=		YES
 
 INSTALLATION_DIRS=	share/guile/site/g-wrap/guile/ws
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-Werror
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
