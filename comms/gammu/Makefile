@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/04/22 13:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/16 17:13:03 hans Exp $
 #
 
 .include "Makefile.common"
@@ -32,6 +32,8 @@ REPLACE_BASH=	utils/gammu-config utils/jadmaker
 
 # needed because of https://bugs.cihar.com/view.php?id=908
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+LDFLAGS.SunOS+=	-lintl
 
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

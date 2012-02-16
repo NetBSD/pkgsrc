@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/09/09 13:34:54 wiz Exp $
+$NetBSD: distinfo,v 1.7 2012/02/16 17:13:03 hans Exp $
 
 SHA1 (gammu-1.26.1.tar.bz2) = 122886f29c566f72020e91da119e1e04f7bfbec6
 RMD160 (gammu-1.26.1.tar.bz2) = a913ac6c999f81ab4fda7c1656232484033ac540
 Size (gammu-1.26.1.tar.bz2) = 2113622 bytes
+SHA1 (patch-contrib_smscgi_sms__cgi.c) = c7f40671374294ce90f17541b15529ee4ee649aa

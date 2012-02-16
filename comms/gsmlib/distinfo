@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/11/24 14:17:05 joerg Exp $
+$NetBSD: distinfo,v 1.10 2012/02/16 17:17:08 hans Exp $
 
 SHA1 (gsmlib-1.10.tar.gz) = 0f329f6185c0dd5221f85ee0af7d95dea23bed8f
 RMD160 (gsmlib-1.10.tar.gz) = 8abd1cdb4b61ddbb6fffd3a4100edcc0f079b845
@@ -11,3 +11,4 @@ SHA1 (patch-apps_gsmsmsd.cc) = c95f4e7083b04136195225e87a260cfe527296e3
 SHA1 (patch-gsmlib_gsm__me__ta.cc) = ea7414ec1536e581c78c6418d029b8b754854fcb
 SHA1 (patch-gsmlib_gsm__sms__codec.cc) = 633d3bb0c592d96646566732a1fa61ddf1820769
 SHA1 (patch-gsmlib_gsm__sorted__phonebook.cc) = 0d8a145a4ebcda8428ec5391571293d3e5f81bc5
+SHA1 (patch-gsmlib_gsm__util.cc) = dc50a452bbec427d7d5d918f720fe03e4a688019
