@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/06/13 10:59:33 roy Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/16 19:33:55 hans Exp $
 #
 
 DISTNAME=		openresolv-3.4.2
@@ -18,6 +18,8 @@ USE_LANGUAGES=		# none
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+MAKE_ENV+=		INSTALL=${TOOLS_PATH.install:Q}
 
 EGDIR=			${PREFIX}/share/examples/resolvconf
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
