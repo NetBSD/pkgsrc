@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.71 2012/02/04 09:43:32 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.72 2012/02/16 16:36:07 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -203,7 +203,7 @@ RUBY19_VERSION=		1.9.2
 RUBY193_VERSION=	1.9.3
 
 # patch
-RUBY18_PATCHLEVEL=	pl357
+RUBY18_PATCHLEVEL=	pl358
 RUBY19_PATCHLEVEL=	pl290
 RUBY193_PATCHLEVEL=	p0
 
