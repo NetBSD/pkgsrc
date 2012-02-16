@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/09 17:38:55 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2012/02/16 04:38:45 jmmv Exp $
 
-SHA1 (window-20110309.tar.gz) = 949d92aa036b0e9a4ccea2ae8969cf6e7eb6d72e
-RMD160 (window-20110309.tar.gz) = 0633000a1a4792fa8e8dce7597a5fbf1557901d5
-Size (window-20110309.tar.gz) = 84574 bytes
+SHA1 (window-20120215.tar.gz) = 95e2f3376e101d014fa07e1e6f9a7129ccf51755
+RMD160 (window-20120215.tar.gz) = 34d2f8bad158a419387a4d6f7fa977f65d54ab9b
+Size (window-20120215.tar.gz) = 84798 bytes
