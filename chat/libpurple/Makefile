@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/02/06 12:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2012/02/16 15:17:05 hans Exp $
 
 PKGNAME=	libpurple-${PIDGIN_VERSION}
 PKGREVISION=	3
@@ -14,6 +14,8 @@ MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 
 PKGCONFIG_OVERRIDE+=	gaim.pc.in
 PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
+
+CPPFLAGS.SunOS+=	-D__SunOS
 
 .include "options.mk"
 
