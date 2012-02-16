@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/26 10:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/16 19:06:52 hans Exp $
 #
 
 DISTNAME=		bsdiff-4.3
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		bzip2:run
 
 MAKE_ENV+=		BZIP2=${BZIP2}
+MAKE_ENV+=		INSTALL=${TOOLS_PATH.install:Q}
 
 INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
