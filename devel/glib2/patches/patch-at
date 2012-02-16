@@ -1,0 +1,25 @@
+$NetBSD: patch-at,v 1.1 2012/02/16 15:09:54 drochner Exp $
+
+open() can be variadic, the ABI is incompatible eg. on amd64
+
+--- glib/gstdio.h.orig	2011-08-29 18:29:04.000000000 +0000
++++ glib/gstdio.h
+@@ -62,7 +62,6 @@ typedef struct stat GStatBuf;
+ 
+ #ifndef __GTK_DOC_IGNORE__
+ #define g_chmod   chmod
+-#define g_open    open
+ #define g_creat   creat
+ #define g_rename  rename
+ #define g_mkdir   mkdir
+@@ -77,6 +76,10 @@ typedef struct stat GStatBuf;
+ int g_access (const gchar *filename,
+ 	      int          mode);
+ 
++int g_open (const gchar *filename,
++	    int flags,
++	    int mode);
++
+ int g_chdir  (const gchar *path);
+ 
+ int g_unlink (const gchar *filename);
