@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/22 13:43:05 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/16 13:57:16 hans Exp $
 
 DISTNAME=		gloox-1.0
 PKGREVISION=		1
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c++ c
 USE_TOOLS+=		autoconf automake pkg-config
 USE_LIBTOOL=		yes
+
+LIBS.SunOS+=		-lnsl
 
 .include "options.mk"
 
