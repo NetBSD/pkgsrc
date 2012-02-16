@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2006/02/16 19:41:04 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2012/02/16 11:39:39 hans Exp $
 
 --- src/v.h.orig	2006-02-10 12:25:44.000000000 +0100
 +++ src/v.h
-@@ -102,7 +102,7 @@ typedef int32 sighandler();
+@@ -95,7 +95,7 @@ typedef int32 i_tev_ndx;
+ /* needed to allow signals to use normal decls */
+ typedef int32 sighandler();
+ 
+-#ifndef __sparc
++#ifndef __sun
+ /* BEWARE - assuming all non sparc systems define BYTE_ORDER and endian.h */
+ /* to PORT change for your system */ 
+ # ifdef __APPLE__
+@@ -104,7 +104,7 @@ typedef int32 sighandler();
  #  ifdef __CYGWIN32__
  #   include <sys/param.h>
  #  else
