@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2009/07/20 05:56:02 hasso Exp $
+$NetBSD: distinfo,v 1.8 2012/02/16 17:40:29 hans Exp $
 
 SHA1 (obexftp-0.20.tar.bz2) = 0b3a7d2aeb0dbd24d75761a7e59f42f46ea5ef82
 RMD160 (obexftp-0.20.tar.bz2) = ded5cf4d95eac77d5f6ee0a39f3789eb962534ed
@@ -11,7 +11,7 @@ SHA1 (patch-ae) = d08fd3b4aa5e2f61eda5ea6d3f6656f8b036af30
 SHA1 (patch-af) = f1e96b8a15a4fec69b81d19635a674ee307d31c1
 SHA1 (patch-ag) = 7a3f10354e8a86022cac360b8a36198d9e7449ab
 SHA1 (patch-ah) = c0fe5bd78e7614a7eb6adb7154676fd9bde7a31c
-SHA1 (patch-ai) = 8baf3463303156e890316622ddeb011842acaa85
+SHA1 (patch-ai) = dca54c345dba0977f1bf90778e15cdd4676749ca
 SHA1 (patch-aj) = 26f6509d26aaa893fe6018bd048135fb077e0b9c
 SHA1 (patch-ak) = bdef026206a0dca2c4781b06bbdfdd90f1c934f6
 SHA1 (patch-al) = 1f2dd6ed302711f17e33584cc34f6f674a6973c7

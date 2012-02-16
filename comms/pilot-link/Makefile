@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2011/04/22 13:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.54 2012/02/16 17:42:19 hans Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--with-perl5=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-libpng
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--enable-conduits
+
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 BUILD_DIRS=		src bindings doc tests
 
