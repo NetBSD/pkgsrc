@@ -1,24 +1,24 @@
-$NetBSD: patch-ae,v 1.3 2011/04/12 13:15:01 obache Exp $
+$NetBSD: patch-ae,v 1.4 2012/02/16 10:44:54 obache Exp $
 
---- gui/Makefile.in.orig	2011-03-18 13:50:23.000000000 +0000
+--- gui/Makefile.in.orig	2012-01-19 19:49:49.000000000 +0000
 +++ gui/Makefile.in
-@@ -1413,8 +1413,8 @@ GUI_SRCS = gnash.cpp \
- @BUILD_QTOPIA3_GUI_TRUE@	$(GNASH_LIBS) $(AM_LDFLAGS) \
- @BUILD_QTOPIA3_GUI_TRUE@	$(am__append_13) $(am__append_16)
+@@ -1496,8 +1496,8 @@ GUI_SRCS = gnash.cpp \
+ @BUILD_QTOPIA3_GUI_TRUE@	$(AM_LDFLAGS) $(am__append_19) \
+ @BUILD_QTOPIA3_GUI_TRUE@	$(am__append_22)
  @BUILD_KDE3_GUI_TRUE@kde3_gnash_CPPFLAGS = -DGUI_KDE3 \
 -@BUILD_KDE3_GUI_TRUE@	-DGUI_CONFIG=\"KDE3\" $(AM_CPPFLAGS) \
  @BUILD_KDE3_GUI_TRUE@	$(KDE3_CFLAGS) $(QT3_CFLAGS) \
 +@BUILD_KDE3_GUI_TRUE@	-DGUI_CONFIG=\"KDE3\" $(AM_CPPFLAGS) \
- @BUILD_KDE3_GUI_TRUE@	$(am__append_20) $(am__append_23)
- @BUILD_KDE3_GUI_TRUE@kde3_gnash_SOURCES = $(GUI_SRCS) kde/gui_kde.cpp \
- @BUILD_KDE3_GUI_TRUE@	$(am__append_22) $(am__append_25)
-@@ -1429,8 +1429,8 @@ GUI_SRCS = gnash.cpp \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_30) $(am__append_33) \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_36)
- @BUILD_KDE4_GUI_TRUE@kde4_gnash_CPPFLAGS = -DGUI_KDE4 \
--@BUILD_KDE4_GUI_TRUE@	-DGUI_CONFIG=\"KDE4\" $(AM_CPPFLAGS) \
- @BUILD_KDE4_GUI_TRUE@	$(KDE4_CFLAGS) $(QT4_CFLAGS) \
-+@BUILD_KDE4_GUI_TRUE@	-DGUI_CONFIG=\"KDE4\" $(AM_CPPFLAGS) \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_28) $(am__append_31) \
- @BUILD_KDE4_GUI_TRUE@	$(am__append_34)
- @BUILD_KDE4_GUI_TRUE@kde4_gnash_LDFLAGS = -export-dynamic 
+ @BUILD_KDE3_GUI_TRUE@	$(am__append_26) $(am__append_29)
+ @BUILD_KDE3_GUI_TRUE@kde3_gnash_SOURCES = $(GUI_SRCS) qt/gui_kde.cpp \
+ @BUILD_KDE3_GUI_TRUE@	qt/kde.cpp qt/kdesup.h qt/kde_glue.h \
+@@ -1512,8 +1512,8 @@ GUI_SRCS = gnash.cpp \
+ @BUILD_QT4_GUI_TRUE@	qt/Qt4Glue.h $(am__append_36) \
+ @BUILD_QT4_GUI_TRUE@	$(am__append_39) $(am__append_42)
+ @BUILD_QT4_GUI_TRUE@qt4_gnash_CPPFLAGS = -DGUI_QT4 \
+-@BUILD_QT4_GUI_TRUE@	-DGUI_CONFIG=\"QT4\" $(AM_CPPFLAGS) \
+ @BUILD_QT4_GUI_TRUE@	$(QT4_CFLAGS) $(am__append_34) \
++@BUILD_QT4_GUI_TRUE@	-DGUI_CONFIG=\"QT4\" $(AM_CPPFLAGS) \
+ @BUILD_QT4_GUI_TRUE@	$(am__append_37) $(am__append_40)
+ @BUILD_QT4_GUI_TRUE@qt4_gnash_LDFLAGS = -export-dynamic 
+ @BUILD_QT4_GUI_TRUE@qt4_gnash_LDADD = $(GNASH_LIBS) $(AM_LDFLAGS) \
