@@ -11,6 +11,7 @@ use File::Spec;
 use version;
 use File::Find::Rule;
 use Getopt::Long;
+use Pod::Usage qw(pod2usage);
 
 use CPAN;
 use CPAN::DistnameInfo;
