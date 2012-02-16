@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/07 20:11:57 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/16 19:55:31 hans Exp $
 
 DISTNAME=		grdc-20031019
 CATEGORIES=		time
@@ -12,6 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin man/man6
 INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
+MAKE_ENV+=		INSTALL=${TOOLS_PATH.install:Q}
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

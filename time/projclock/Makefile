@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:53 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/02/16 19:57:18 hans Exp $
 #
 
 DISTNAME=	pclock0.7
@@ -22,5 +22,6 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
+MAKE_ENV+=		INSTALL=${TOOLS_PATH.install}
 
 .include "../../mk/bsd.pkg.mk"
