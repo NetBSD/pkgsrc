@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2012/02/06 10:44:43 drochner Exp $
+$NetBSD: distinfo,v 1.79 2012/02/16 19:02:47 hans Exp $
 
 SHA1 (evolution-data-server-2.32.3.tar.bz2) = cbf32c3438c4f1650b35b87007a337ebc1c56cec
 RMD160 (evolution-data-server-2.32.3.tar.bz2) = adc8b07aef41a89d16fc426541c12190a3688b8f
@@ -7,6 +7,7 @@ SHA1 (patch-aa) = 3b85e844c79edbd9a6dcee5e7819230671e0673e
 SHA1 (patch-ab) = fd27fd0a521899be568c843b24d9b6eeeb99a2bb
 SHA1 (patch-bd) = 8df85b9ab7ae71558fb939565e944b614de628bb
 SHA1 (patch-ca) = e879d29105997045e1293fe627ec55a05e5ba88d
+SHA1 (patch-calendar_libegdbus_Makefile.in) = ac5aabae5160967c498f12c0f29be3e206e03622
 SHA1 (patch-cc) = a59bbc664a96f467888cae89cb00eb9a9033a925
 SHA1 (patch-cd) = 6e366e65e68cd0c5a8eafa67c7f9152c6521de12
 SHA1 (patch-ce) = 1da2a3773ff89319bc79bbb7375e8259f0be89e4

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/01/18 14:32:10 adam Exp $
+$NetBSD: distinfo,v 1.6 2012/02/16 19:00:14 hans Exp $
 
 SHA1 (avenger-0.8.2.tar.gz) = bd645143289d28fac54eb1943b3f114ea396e205
 RMD160 (avenger-0.8.2.tar.gz) = 539b1163fd805e34a432d988c255c92c0fee8963
@@ -10,3 +10,4 @@ SHA1 (patch-libasync_ihash.h) = 745cadbcd9778182e0a17afbbd5e84d91572468e
 SHA1 (patch-libasync_itree.h) = 52fdac5183e5be5406c1b67c0f97c5552a18a1ec
 SHA1 (patch-libasync_qhash.h) = 8bc832dee629cc8e0f7efc25e9011d9883f08e92
 SHA1 (patch-libasync_vec.h) = 91a4db8114a6ae8915f29610ab11fafdf4427cde
+SHA1 (patch-util_avutil.h) = e7799fc638e9b5e7a888f7108785a3e54ed52540
