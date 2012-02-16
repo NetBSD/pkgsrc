@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/01/12 16:33:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/02/16 14:47:01 taca Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -14,8 +14,8 @@ bin/perror
 bin/replace
 bin/resolve_stack_dump
 bin/resolveip
-${PLIST.embedded}lib/libmysqld.a
 info/mysql.info
+${PLIST.embedded}lib/libmysqld.a
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth.so
