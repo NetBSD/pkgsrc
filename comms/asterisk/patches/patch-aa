@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2012/02/16 16:21:36 hans Exp $
 
 --- Makefile.orig	2007-07-16 20:33:02.000000000 +0200
 +++ Makefile
@@ -10,10 +10,11 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
  endif
  
  #Overwite config files on "make samples"
-@@ -111,31 +110,32 @@ BUSYDETECT+= #-DBUSYDETECT_TONEONLY
+@@ -110,35 +109,20 @@ BUSYDETECT+= #-DBUSYDETECT_TONEONLY
+ # Don't use together with -DBUSYDETECT_TONEONLY
  BUSYDETECT+= #-DBUSYDETECT_COMPARE_TONE_AND_SILENCE
  
- ifneq ($(OSARCH),SunOS)
+-ifneq ($(OSARCH),SunOS)
 -  ASTLIBDIR=$(INSTALL_PREFIX)/usr/lib/asterisk
 -  ASTVARLIBDIR=$(INSTALL_PREFIX)/var/lib/asterisk
 -  ASTETCDIR=$(INSTALL_PREFIX)/etc/asterisk
@@ -39,7 +40,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
 +  ASTEXAMPLEDIR?=${PREFIX}/share/examples/asterisk
    MODULES_DIR=$(ASTLIBDIR)/modules
    AGI_DIR=$(ASTVARLIBDIR)/agi-bin
- else
+-else
 -  ASTLIBDIR=$(INSTALL_PREFIX)/opt/asterisk/lib
 -  ASTVARLIBDIR=$(INSTALL_PREFIX)/var/opt/asterisk/lib
 -  ASTETCDIR=$(INSTALL_PREFIX)/etc/opt/asterisk
@@ -51,21 +52,27 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
 -  ASTSBINDIR=$(INSTALL_PREFIX)/opt/asterisk/usr/sbin
 -  ASTVARRUNDIR=$(INSTALL_PREFIX)/var/opt/asterisk/run
 -  ASTMANDIR=$(INSTALL_PREFIX)/opt/asterisk/usr/share/man
-+ASTLIBDIR = ${PREFIX}/lib/asterisk
-+ASTVARLIBDIR = ${PREFIX}/libdata/asterisk
-+ASTETCDIR = ${PREFIX}/etc/asterisk
-+ASTSPOOLDIR = ${VARBASE}/spool/asterisk
-+ASTLOGDIR = ${VARBASE}/log/asterisk
-+ASTHEADERDIR = ${PREFIX}/include/asterisk
-+ASTCONFPATH = ${PREFIX}/etc/asterisk/asterisk.conf
-+ASTBINDIR = ${PREFIX}/bin
-+ASTSBINDIR = ${PREFIX}/sbin
-+ASTVARRUNDIR = ${VARBASE}/run
-+ASTMANDIR = ${PREFIX}/man
-   MODULES_DIR=$(ASTLIBDIR)/modules
-   AGI_DIR=$(ASTVARLIBDIR)/agi-bin
- endif
-@@ -231,10 +231,14 @@ ASTCFLAGS+=$(OPTIMIZE)
+-  MODULES_DIR=$(ASTLIBDIR)/modules
+-  AGI_DIR=$(ASTVARLIBDIR)/agi-bin
+-endif
+ 
+ ASTCFLAGS=-Wformat-security
+ 
+@@ -217,24 +201,20 @@ GREP=grep
+ LN=ln
+ ID=id
+ 
+-ifeq ($(OSARCH),SunOS)
+-  GREP=/usr/xpg4/bin/grep
+-  M4=/usr/local/bin/m4
+-  ID=/usr/xpg4/bin/id
+-  LN=/usr/xpg4/bin/ln
+-  INSTALL=ginstall
+-endif
+-
+ INCLUDE+=-Iinclude -I../include
+ ASTCFLAGS+=-pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations $(DEBUG) $(INCLUDE) -D_REENTRANT -D_GNU_SOURCE #-DMAKE_VALGRIND_HAPPY
+ ASTCFLAGS+=$(OPTIMIZE)
  ASTOBJ=-o asterisk
  
  ifeq ($(findstring BSD,$(OSARCH)),BSD)
@@ -81,7 +88,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
  ifneq ($(PROC),ultrasparc)
    ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
  endif
-@@ -262,24 +266,24 @@ ifeq ($(OSARCH),FreeBSD)
+@@ -262,24 +242,24 @@ ifeq ($(OSARCH),FreeBSD)
  
    # XXX FreeBSD paths
    PREFIX?=/usr/local
@@ -118,7 +125,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
    MPG123TARG=netbsd
  endif
  
-@@ -301,7 +305,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
+@@ -301,7 +281,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
    ASTOBJ=-shared -o asterisk.dll -Wl,--out-implib=libasterisk.dll.a -Wl,--export-all-symbols
    ASTLINK=
    LIBS+=-lpthread -lncurses -lm -lresolv
@@ -127,7 +134,20 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
    PROC=$(shell uname -m)
  endif
  
-@@ -382,7 +386,8 @@ ifeq ($(OSARCH),Darwin)
+@@ -369,11 +349,7 @@ endif
+ ifeq ($(OSARCH),Linux)
+   LIBS+=-ldl -lpthread -lncurses -lm -lresolv  #-lnjamd
+ else
+-  ifeq ($(OSARCH),SunOS)
+-    LIBS+=-lm -lcurses
+-  else
+-    LIBS+=-lncurses -lm
+-  endif
++  LIBS+=-lncurses -lm
+ endif
+ 
+ ifeq ($(OSARCH),Darwin)
+@@ -382,7 +358,8 @@ ifeq ($(OSARCH),Darwin)
    AUDIO_LIBS=-framework CoreAudio
    ASTLINK=-Wl,-dynamic
    SOLINK=-dynamic -bundle -undefined suppress -force_flat_namespace
@@ -137,7 +157,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
    ASTCFLAGS+=-DPOLLCOMPAT
  else
  #These are used for all but Darwin
-@@ -394,8 +399,12 @@ ifeq ($(OSARCH),FreeBSD)
+@@ -394,8 +371,12 @@ ifeq ($(OSARCH),FreeBSD)
    LIBS+=-lcrypto
  endif
  
@@ -151,7 +171,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
  endif
  
  ifeq ($(OSARCH),OpenBSD)
-@@ -551,7 +560,7 @@ clean:
+@@ -551,7 +532,7 @@ clean:
  	$(MAKE) -C stdtime clean
  
  datafiles: all
@@ -160,7 +180,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
  	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/digits
  	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/silence
  	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/priv-callerintros
-@@ -651,7 +660,7 @@ bininstall: all
+@@ -651,7 +632,7 @@ bininstall: all
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/tmp
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/meetme
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/monitor
@@ -169,7 +189,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
  	if [ -f cygwin/asterisk.exe ]; then $(INSTALL) -m 755 cygwin/asterisk.exe $(DESTDIR)$(ASTSBINDIR)/; fi
  	if [ -f asterisk.dll ]; then $(INSTALL) -m 755 asterisk.dll $(DESTDIR)$(ASTSBINDIR)/; fi
  	$(LN) -sf asterisk $(DESTDIR)$(ASTSBINDIR)/rasterisk
-@@ -740,31 +749,31 @@ install: all datafiles bininstall instal
+@@ -740,31 +721,31 @@ install: all datafiles bininstall instal
  upgrade: all bininstall
  
  adsi:
@@ -210,7 +230,7 @@ $NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
  		( \
  		echo "[directories]" ; \
  		echo "astetcdir => $(ASTETCDIR)" ; \
-@@ -781,7 +790,7 @@ samples: adsi
+@@ -781,7 +762,7 @@ samples: adsi
  		echo ";astctlowner = root" ; \
  		echo ";astctlgroup = apache" ; \
  		echo ";astctl = asterisk.ctl" ; \
