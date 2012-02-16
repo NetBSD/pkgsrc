@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/06 12:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/16 15:12:49 hans Exp $
 #
 
 DISTNAME=	folks-0.4.2
@@ -24,6 +24,8 @@ PKGCONFIG_OVERRIDE+=	backends/telepathy/lib/folks-telepathy.pc.in
 PKGCONFIG_OVERRIDE+=	folks/folks.pc.in
 
 TEST_TARGET=	check
+
+CPPFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
