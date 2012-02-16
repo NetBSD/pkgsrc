@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2011/11/25 21:34:34 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2012/02/16 17:32:45 hans Exp $
 
 --- common/ttio.c.orig	1997-02-21 23:06:09.000000000 +0000
 +++ common/ttio.c
-@@ -45,12 +45,15 @@ static char copyright[] =
+@@ -45,12 +45,19 @@ static char copyright[] =
  #include "osdep.h"
  #include "cdefs.h"
  #include "global.h"
@@ -14,7 +14,11 @@ $NetBSD: patch-ab,v 1.4 2011/11/25 21:34:34 joerg Exp $
  #include "ttio.h"
  #include <pwd.h>
 +#include <stdlib.h>
++#ifndef __sun
 +#include <util.h>
++#else
++#include <sys/file.h>
++#endif
  
  static void dectl PROTO ((char *, int, char *, int, char *));
  
