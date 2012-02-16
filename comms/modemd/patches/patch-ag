@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 1998/08/07 10:36:45 agc Exp $
+$NetBSD: patch-ag,v 1.3 2012/02/16 17:32:45 hans Exp $
 
 --- outgoing/Makefile.orig	Tue Sep 10 03:08:00 1996
 +++ outgoing/Makefile	Tue Mar  3 17:19:07 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.2 1998/08/07 10:36:45 agc Exp $
  
  DPADD = ${LIBDIR}/libmodemd.a
 -LDADD = ${DPADD}
-+LDADD = ${DPADD} -lutil
++LDADD = ${DPADD} ${LIBS}
  
  .include "../Makefile.inc"
  .include <bsd.prog.mk>
