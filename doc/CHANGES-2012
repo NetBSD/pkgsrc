@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.491 2012/02/16 10:45:29 obache Exp $
+$NetBSD: CHANGES-2012,v 1.492 2012/02/16 11:57:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -707,3 +707,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-B-Keywords to 1.12 [sno 2012-02-16]
 	Updated devel/p5-B-Utils to 0.17 [sno 2012-02-16]
 	Updated multimedia/gnash to 0.8.10 [obache 2012-02-16]
+	Added devel/ruby-fast_gettext version 0.6.4 [taca 2012-02-16]
+	Added devel/ruby-gettext_i18n_rails version 0.4.3 [taca 2012-02-16]
