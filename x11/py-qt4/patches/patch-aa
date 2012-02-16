@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2010/09/02 09:20:19 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2012/02/16 20:12:12 hans Exp $
 
---- configure.py.orig	2010-08-31 08:28:48.000000000 +0000
-+++ configure.py
-@@ -365,8 +365,8 @@ class ConfigurePyQt4:
+--- configure.py.orig	2011-08-02 11:18:51.000000000 +0200
++++ configure.py	2011-10-11 16:36:11.233813486 +0200
+@@ -355,7 +355,7 @@ class ConfigurePyQt4:
+         pyqt_modules.append("QtCore")
+ 
+         check_module("QtGui", "qwidget.h", "new QWidget()")
+-        check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")")
++        check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")", extra_libs=["QtCore"])
+         check_module("QtMultimedia", "QAudioDeviceInfo",
+                 "new QAudioDeviceInfo()")
+         check_module("QtNetwork", "qhostaddress.h", "new QHostAddress()")
+@@ -372,8 +372,8 @@ class ConfigurePyQt4:
          check_module("QtWebKit", "qwebpage.h", "new QWebPage()")
          check_module("QtXml", "qdom.h", "new QDomDocument()")
          check_module("QtXmlPatterns", "qxmlname.h", "new QXmlName()")
@@ -13,7 +22,7 @@ $NetBSD: patch-aa,v 1.4 2010/09/02 09:20:19 drochner Exp $
          check_module("QtAssistant", "qassistantclient.h",
                  "new QAssistantClient(\"foo\")", extra_lib_dirs=ass_lib_dirs,
                  extra_libs=ass_libs)
-@@ -1855,11 +1855,7 @@ int main(int, char **)
+@@ -1981,11 +1981,7 @@ int main(int, char **)
  
      out << QLibraryInfo::licensee() << '\\n';
  
