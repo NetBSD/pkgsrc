@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/11/25 21:38:09 joerg Exp $
+$NetBSD: distinfo,v 1.8 2012/02/16 18:36:34 hans Exp $
 
 SHA1 (doc++-3.4.10.tar.gz) = 2102e99152ab91d80d7977fa5e13dd6f6043b2c8
 RMD160 (doc++-3.4.10.tar.gz) = 85b14d32e2932ceb465f1bab16eb8389cd22d72d
@@ -18,4 +18,5 @@ SHA1 (patch-src_main.cc) = a78300cea46ddb1edfafd09f6b15277beeed512e
 SHA1 (patch-src_nametable.cc) = 7d2976d12520572a6bc5a118f435f7446a560eaf
 SHA1 (patch-src_nametable.h) = da6cfcd23e69f069e238d5e03a5af69176e15792
 SHA1 (patch-src_php.ll) = b118886c8d0d9915dc18b41ebcaccc94b6a926d2
+SHA1 (patch-src_portability.h) = 28be0b12d78fb25047d2b1cea0db14e6db049d05
 SHA1 (patch-src_tex2gif.cc) = 10f4500735c58a9d733f904e119ed0edb428006e
