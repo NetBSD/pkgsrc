@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/28 19:32:48 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/16 13:46:52 hans Exp $
 #
 
 DISTNAME=	atheme-services-3.0.4
@@ -39,6 +39,8 @@ FILES_SUBST+=		ATHEME_USER=${ATHEME_USER}
 FILES_SUBST+=		ATHEME_GROUP=${ATHEME_GROUP}
 
 .include "options.mk"
+
+CFLAGS.SunOS+=		-Dfaultcode_t=foo_faultcode_t -Dboolean_t=foo_boolean_t
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--enable-fhs-paths
