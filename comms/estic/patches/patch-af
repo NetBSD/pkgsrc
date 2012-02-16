@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/02/10 18:34:23 tron Exp $
+$NetBSD: patch-af,v 1.2 2012/02/16 16:47:58 hans Exp $
 
 --- make/freebsd-x.mak.orig	Fri Jan 31 03:57:24 1997
 +++ make/freebsd-x.mak	Sat Feb 10 18:38:34 2001
@@ -13,7 +13,7 @@ $NetBSD: patch-af,v 1.1.1.1 2001/02/10 18:34:23 tron Exp $
  
 -CFLAGS	= -DFREEBSD -g -Wall -I$(INCDIR) -x c++ -L /usr/X11R6/lib -fno-implicit-templates -DEXPLICIT_TEMPLATES
 -
-+CFLAGS	+= -DFREEBSD -Wall -I$(INCDIR) -fno-implicit-templates -DEXPLICIT_TEMPLATES
++CFLAGS	+= $(CPPFLAGS) -Wall -I$(INCDIR) -fno-implicit-templates -DEXPLICIT_TEMPLATES
  
  # ------------------------------------------------------------------------------
  # Implicit rules
