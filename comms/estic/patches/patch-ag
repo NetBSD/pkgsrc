@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2006/09/08 07:35:50 joerg Exp $
+$NetBSD: patch-ag,v 1.5 2012/02/16 16:47:58 hans Exp $
 
 --- ../spunk/make/freebsd-x.mak.orig	1996-11-24 22:33:26.000000000 +0100
 +++ ../spunk/make/freebsd-x.mak
@@ -10,7 +10,7 @@ $NetBSD: patch-ag,v 1.4 2006/09/08 07:35:50 joerg Exp $
  
  # Flags for the gnu compiler
 -CFLAGS	= -DFREEBSD -DUSE_OLD_TTY -g -Wall -x c++ -I /usr/X11R6/include -fno-implicit-templates -DEXPLICIT_TEMPLATES
-+CFLAGS	+= -DFREEBSD -Wall -I$(X11BASE)/include -fno-implicit-templates -DEXPLICIT_TEMPLATES
++CFLAGS	+= $(CPPFLAGS) -Wall -I$(X11BASE)/include -fno-implicit-templates -DEXPLICIT_TEMPLATES
  
  LIB	= spunk.a
  ZIPFILE = spunk.zip
