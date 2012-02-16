@@ -1,0 +1,9 @@
+--- CMakeLists.txt.orig	2012-01-27 11:52:46.987517960 +0100
++++ CMakeLists.txt	2012-01-27 11:55:28.028774190 +0100
+@@ -70,5 +70,5 @@ ADD_CUSTOM_TARGET (distclean
+ 
+ IF (POD2MAN) 
+ ADD_CUSTOM_TARGET(man ALL
+-	COMMAND ${POD2MAN} -u --section=1 --release=${VERSION} --center '' ${sakura_SOURCE_DIR}/sakura.pod sakura.1)
++	COMMAND ${POD2MAN} --section=1 --release=${VERSION} --center '' ${sakura_SOURCE_DIR}/sakura.pod sakura.1)
+ ENDIF (POD2MAN)	
