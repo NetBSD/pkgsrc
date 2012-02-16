@@ -1,0 +1,13 @@
+$NetBSD: patch-config.h.in,v 1.1 2012/02/16 15:07:48 hans Exp $
+
+--- config.h.in.orig	2012-01-20 19:10:13.658229763 +0100
++++ config.h.in	2012-01-20 19:12:30.887940973 +0100
+@@ -163,7 +163,7 @@
+  * that defines bzero.
+  */
+ 
+-#if defined(_AIX)
++#if defined(_AIX) || defined(__sun)
+ #include <strings.h>
+ #endif
+ 
