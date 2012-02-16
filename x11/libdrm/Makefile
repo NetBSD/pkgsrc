@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/05/02 22:24:38 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/02/16 20:30:55 hans Exp $
 #
 
 DISTNAME=		libdrm-2.4.20
@@ -13,7 +13,7 @@ COMMENT=		Userspace interface to kernel DRM services
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
-			Linux-*-* 
+			Linux-*-* SunOS-*-*
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
