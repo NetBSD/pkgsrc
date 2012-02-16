@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2011/12/09 12:42:09 dmcmahill Exp $
+$NetBSD: distinfo,v 1.20 2012/02/16 11:43:23 hans Exp $
 
 SHA1 (pcb-20110918.tar.gz) = 53ca27797d4db65a068b56f157e3ea6c5c29051f
 RMD160 (pcb-20110918.tar.gz) = 1e176a03a7a61ac23b7abe532277415c87637c16
 Size (pcb-20110918.tar.gz) = 4015128 bytes
 SHA1 (patch-aa) = 444de8ec535224bd2fbc6633d4e00ae5d970719a
+SHA1 (patch-icon-theme-installer) = b3b183f2ab77c56e52d4cd96058a28bc7e2832bb
