@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/26 04:39:27 sbd Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/16 18:05:09 hans Exp $
 #
 
 DISTNAME=	odt2txt-0.4
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+
+LDFLAGS.SunOS+=	-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
