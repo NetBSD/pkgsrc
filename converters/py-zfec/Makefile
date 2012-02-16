@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/02/12 19:55:09 gls Exp $
+# $NetBSD: Makefile,v 1.8 2012/02/16 18:06:45 hans Exp $
 #
 
 DISTNAME=	zfec-1.4.22
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-darcsver-[0-9]*:../../devel/py-darcsver
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 
 REPLACE_INTERPRETER+=  python
 REPLACE.python.old=    /usr/bin/env python
