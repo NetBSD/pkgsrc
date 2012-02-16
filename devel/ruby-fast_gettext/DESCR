@@ -1,0 +1,5 @@
+GetText but 3.5 x faster, 560 x less memory, simple, clean namespace (7 vs 34)
+and threadsafe!
+
+It supports multiple backends (.mo, .po, .yml files, Database (ActiveRecord +
+any other), Chain, Loggers) and can easily be extended.
