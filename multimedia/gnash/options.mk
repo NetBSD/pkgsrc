@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2011/12/08 10:39:13 obache Exp $
+# $NetBSD: options.mk,v 1.17 2012/02/16 10:44:53 obache Exp $
 #
 
 #
@@ -29,9 +29,9 @@ PLIST.gtk=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mkde)
-BUILDLINK_DEPMETHOD.xulrunner192=	build
-.include "../../devel/xulrunner192/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-npapi-incl=${BUILDLINK_PREFIX.xulrunner192}/include/xulrunner192
+BUILDLINK_FNAME_TRANSFORM.npapi-sdk+=	-e 's|lib/pkgconfig/npapi-sdk.pc|lib/pkgconfig/mozilla-plugin.pc|'
+.include "../../devel/npapi-sdk/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-npapi-incl=${BUILDLINK_PREFIX.npapi-sdk}/include/npapi-sdk
 CONFIGURE_ARGS+=	--with-npapi-install=system
 CONFIGURE_ARGS+=	--with-npapi-plugindir=${PREFIX}/lib/netscape/plugins
 PLIST.plugin=		yes
@@ -119,7 +119,7 @@ CONFIGURE_ARGS+=	--enable-media=${GNASH_MEDIA:Unone:tW:S/ /,/}
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 .include "../../multimedia/ffmpeg/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-hwaccel=VAAPI
+CONFIGURE_ARGS+=	--enable-device=VAAPI
 .else
-CONFIGURE_ARGS+=	--enable-hwaccel=none
+CONFIGURE_ARGS+=	--enable-device=x11
 .endif
