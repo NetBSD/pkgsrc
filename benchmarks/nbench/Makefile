@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/06/30 00:07:10 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/16 10:56:10 hans Exp $
 #
 
 DISTNAME=	nbench-byte-2.2.2
@@ -17,6 +17,12 @@ MAKE_JOBS_SAFE=		no
 BUILD_TARGET=	default
 
 INSTALLATION_DIRS=	bin
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS" && \
+    (!empty(OS_VERSION:M5.1*) || ${ABI} == 64)
+BUILDLINK_TRANSFORM+=	rm:-static
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nbench ${DESTDIR}${PREFIX}/bin
