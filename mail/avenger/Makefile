@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/01/18 14:32:10 adam Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/16 19:00:14 hans Exp $
 
 DISTNAME=	avenger-0.8.2
 CATEGORIES=	mail
@@ -20,6 +20,9 @@ CONFIGURE_ARGS+=	--with-db=${BDBBASE}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		BDB_TYPE="${BDB_TYPE}"
 PKG_SYSCONFSUBDIR=	avenger
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
+CFLAGS.SunOS+=		-DDBM_RDONLY=O_RDONLY
 
 .include "options.mk"
 
