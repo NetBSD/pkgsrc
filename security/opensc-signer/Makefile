@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/04/22 13:44:36 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/02/16 19:39:48 hans Exp $
 
 PKGNAME=		opensc-signer-${OPENSC_PKG_VERSION}
 PKGREVISION=		1
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--enable-nsplugin
 CONFIGURE_ARGS+=	--with-plugindir=${PREFIX}/lib/xulrunner/plugins
 CONFIGURE_ARGS+=	--with-pinentry=${PREFIX}/bin/pinentry
+
+LDFLAGS.SunOS+=		-liconv
 
 do-install:
 	cd ${WRKSRC}/src/signer && ${SETENV} ${MAKE_ENV} ${MAKE} \
