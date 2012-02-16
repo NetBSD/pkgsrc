@@ -1,7 +1,14 @@
-$NetBSD: distinfo,v 1.11 2009/10/06 00:54:19 dmcmahill Exp $
+$NetBSD: distinfo,v 1.12 2012/02/16 11:37:27 hans Exp $
 
 SHA1 (gnucap-2006-07-08.tar.gz) = dafdfa1f78ee37b247066ccac7a2e63f99a7d8f0
 RMD160 (gnucap-2006-07-08.tar.gz) = 8006dffd189095b81dbf7358caacea870bc054df
 Size (gnucap-2006-07-08.tar.gz) = 1546670 bytes
 SHA1 (patch-aa) = 60e6484c852adfba3b0bd11a9a5c691e4d228bd7
 SHA1 (patch-ab) = cdb1825722b18784ca54ae0c39183ff0790dc6d9
+SHA1 (patch-modelgen_ap.h) = 323081e63db5148da5706ea8a9470f2c8769467f
+SHA1 (patch-modelgen_io__.h) = 56aa956aa1e49889fea1ad59c2615e7c34f87b4c
+SHA1 (patch-src_ap.h) = a11af959b3e7637a5e49df1c2fc2672ded4dc5df
+SHA1 (patch-src_c__comand.h) = c00405e8f81398ab1bbaea171ee51f5cbcfe5328
+SHA1 (patch-src_declare.h) = a8cea1d2a6866b12a3aa0d91a5f86b14ca7030fa
+SHA1 (patch-src_io__.h) = 06120be26f562dae4ffd57ae784ed15dc298b93a
+SHA1 (patch-src_u__opt.h) = 628878fea102c6b95cbcc2f3ffcf9d9e8b071299
