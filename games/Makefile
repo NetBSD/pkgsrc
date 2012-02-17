@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2012/02/17 16:59:03 jakllsch Exp $
+# $NetBSD: Makefile,v 1.348 2012/02/17 17:23:05 jakllsch Exp $
 #
 
 COMMENT=	Games
@@ -12,6 +12,7 @@ SUBDIR+=	REminiscence
 SUBDIR+=	abuse
 SUBDIR+=	adom
 SUBDIR+=	alephone
+SUBDIR+=	amaze
 SUBDIR+=	an
 SUBDIR+=	angband-tty
 SUBDIR+=	angband-x11
