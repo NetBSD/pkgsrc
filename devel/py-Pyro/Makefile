@@ -1,35 +1,23 @@
-# $NetBSD: Makefile,v 1.11 2011/10/15 12:08:37 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/17 18:32:57 drochner Exp $
 #
 
-DISTNAME=		Pyro-3.4
+DISTNAME=		Pyro4-4.12
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pyro/}
+MASTER_SITES=		http://pypi.python.org/packages/source/P/Pyro4/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pyro.sourceforge.net/
 COMMENT=		Distributed Object Technology system in Python
+LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PLIST_SUBST+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
-MAKE_ENV+=		PKGSRC="1"
-MAKE_ENV+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
+# only needed for test
+#DEPENDS+= ${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+#DEPENDS+= ${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+do-test:
+	cd ${WRKSRC}/tests; ${PYTHONBIN} run_suite.py
 
-post-extract:
-	set -e; \
-	cd ${WRKSRC}/bin; \
-	${MV} es es-${PYVERSSUFFIX}; \
-	${MV} esd esd-${PYVERSSUFFIX}; \
-	${MV} genguid genguid-${PYVERSSUFFIX}; \
-	${MV} ns ns-${PYVERSSUFFIX}; \
-	${MV} nsc nsc-${PYVERSSUFFIX}; \
-	${MV} nsd nsd-${PYVERSSUFFIX}; \
-	${MV} pyroc pyroc-${PYVERSSUFFIX}; \
-	${MV} rns rns-${PYVERSSUFFIX}; \
-	${MV} wxnsc wxnsc-${PYVERSSUFFIX}; \
-	${MV} xnsc xnsc-${PYVERSSUFFIX}
-
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
