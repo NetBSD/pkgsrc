@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/17 17:22:13 jakllsch Exp $
+
+SHA1 (amaze-0pre0/amaze.tar.gz) = 98e9bebdade4b2491baa39e371517fd66865cd4a
+RMD160 (amaze-0pre0/amaze.tar.gz) = 6c727ec49296e4987c87d4c0d3c69927cfeacc7c
+Size (amaze-0pre0/amaze.tar.gz) = 6941 bytes
+SHA1 (patch-amaze.c) = 6c128b209804b6b141e9b5b42dcb7db1cc4b27b7
