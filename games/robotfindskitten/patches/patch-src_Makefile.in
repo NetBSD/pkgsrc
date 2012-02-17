@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1.1.1 2012/02/17 16:57:25 jakllsch Exp $
+Install binary in usual location.
+--- src/Makefile.in.orig	2007-11-27 21:16:18.000000000 +0000
++++ src/Makefile.in
+@@ -170,7 +170,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-execgamesdir = $(prefix)/games
++execgamesdir = @bindir@
+ robotfindskitten_SOURCES = draw.h messages.h robotfindskitten.c 
+ all: all-am
+ 
