@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.498 2012/02/17 01:48:45 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.499 2012/02/17 07:00:40 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -720,3 +720,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-argparse to 1.2.1 [gls 2012-02-16]
 	Added net/p5-Net-Libdnet6 version 0.24 [hiramatsu 2012-02-17]
 	Added net/p5-Net-Frame-Layer-IPv6 version 1.03 [hiramatsu 2012-02-17]
+	Updated devel/p5-MouseX-Types to 0.06 [hiramatsu 2012-02-17]
+	Updated net/p5-Geo-IP to 1.40 [hiramatsu 2012-02-17]
+	Updated devel/p5-POE-Test-Loops to 1.350 [hiramatsu 2012-02-17]
