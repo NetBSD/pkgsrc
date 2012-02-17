@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/10 10:31:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/17 18:30:23 drochner Exp $
 bin/nosetests-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -111,6 +111,9 @@ ${PYSITELIB}/nose/plugins/xunit.pyo
 ${PYSITELIB}/nose/proxy.py
 ${PYSITELIB}/nose/proxy.pyc
 ${PYSITELIB}/nose/proxy.pyo
+${PYSITELIB}/nose/pyversion.py
+${PYSITELIB}/nose/pyversion.pyc
+${PYSITELIB}/nose/pyversion.pyo
 ${PYSITELIB}/nose/result.py
 ${PYSITELIB}/nose/result.pyc
 ${PYSITELIB}/nose/result.pyo

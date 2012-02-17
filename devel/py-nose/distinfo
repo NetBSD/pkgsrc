@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/04/19 11:40:16 obache Exp $
+$NetBSD: distinfo,v 1.4 2012/02/17 18:30:23 drochner Exp $
 
-SHA1 (nose-0.11.3.tar.gz) = 37c03a5b9738575e25ef99a5ca3b021f66c53421
-RMD160 (nose-0.11.3.tar.gz) = 9f5e93d9bcfa2f294f97f6a5c31e462eb13e43e2
-Size (nose-0.11.3.tar.gz) = 256723 bytes
-SHA1 (patch-aa) = 6a48d1e0661eeaf5aa6600f1c3fa9369b3ab1e91
+SHA1 (nose-1.1.2.tar.gz) = 7525f7ef056af66cdbada010d4a8b96e63a193e8
+RMD160 (nose-1.1.2.tar.gz) = 717c16abf3577387dbba406530693898b723f7ac
+Size (nose-1.1.2.tar.gz) = 729206 bytes
+SHA1 (patch-aa) = 13b33fbeda3f372ea1d7a068b3dda0c409adafa0
