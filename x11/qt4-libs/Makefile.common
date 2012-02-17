@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2012/01/12 22:59:58 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2012/02/17 14:11:23 hans Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -36,7 +36,6 @@ CONFIGURE_ARGS+=	-no-phonon
 CONFIGURE_ARGS+=	-no-phonon-backend
 CONFIGURE_ARGS+=	-optimized-qmake
 CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
-CONFIGURE_ARGS.SunOS+=	-no-xrender
 CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-opensource -confirm-license
 OPSYSVARS+=		CONFIGURE_ARGS
@@ -82,6 +81,7 @@ CONFIGURE_ARGS+=	-platform solaris-cc
 .    endif
 .  endif
 SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
+BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=	-platform interix-g++
 CFLAGS+=		-I/usr/local/include/bind
