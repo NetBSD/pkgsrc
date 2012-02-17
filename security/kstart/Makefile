@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/15 20:23:03 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/17 18:26:00 jakllsch Exp $
 
-DISTNAME=	kstart-3.16
+DISTNAME=	kstart-4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
