@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.504 2012/02/17 17:23:35 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.505 2012/02/17 18:26:15 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-owncloud to 3.0.0 [ryoon 2012-02-17]
 	Added games/robotfindskitten version 1.7320508.406 [jakllsch 2012-02-17]
 	Added games/amaze version 0pre0 [jakllsch 2012-02-17]
+	Updated security/kstart to 4.1 [jakllsch 2012-02-17]
