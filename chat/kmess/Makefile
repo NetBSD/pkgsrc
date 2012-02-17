@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/02/08 00:09:56 sbd Exp $
+# $NetBSD: Makefile,v 1.47 2012/02/17 13:46:46 hans Exp $
 #
 
 DISTNAME=	kmess-1.4.3
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt perl
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
