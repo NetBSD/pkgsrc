@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2009/12/17 21:49:22 abs Exp $
+$NetBSD: patch-ac,v 1.6 2012/02/17 13:49:48 hans Exp $
 
 --- xispid.c.orig	2005-11-07 00:38:22.000000000 +0000
 +++ xispid.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.5 2009/12/17 21:49:22 abs Exp $
  #endif
  
 -#if !defined(__FreeBSD__) && !defined(linux) /* setgrent() is int in FreeBSD */
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(linux) /* setgrent() is int in FreeBSD */
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(linux) && !defined(__sun) /* setgrent() is int in FreeBSD */
  struct passwd *getpwuid();
  struct group *getgrgid(), *getgrent();
  uid_t getuid(), geteuid();
