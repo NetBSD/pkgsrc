@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.499 2012/02/17 07:00:40 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.500 2012/02/17 08:18:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -723,3 +723,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-MouseX-Types to 0.06 [hiramatsu 2012-02-17]
 	Updated net/p5-Geo-IP to 1.40 [hiramatsu 2012-02-17]
 	Updated devel/p5-POE-Test-Loops to 1.350 [hiramatsu 2012-02-17]
+	Updated lang/sun-jre6 to 6.0.31 [obache 2012-02-17]
+	Updated lang/sun-jdk6 to 6.0.31 [obache 2012-02-17]
