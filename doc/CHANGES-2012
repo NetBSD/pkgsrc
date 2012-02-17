@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.502 2012/02/17 16:42:05 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.503 2012/02/17 16:59:26 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -727,3 +727,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/sun-jdk6 to 6.0.31 [obache 2012-02-17]
 	Updated sysutils/clex to 4.6.4 [obache 2012-02-17]
 	Updated www/php-owncloud to 3.0.0 [ryoon 2012-02-17]
+	Added games/robotfindskitten version 1.7320508.406 [jakllsch 2012-02-17]
