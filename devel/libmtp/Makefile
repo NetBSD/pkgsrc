@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/04/21 15:06:04 hans Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/17 13:52:03 hans Exp $
 #
 
 DISTNAME=		libmtp-1.0.1
@@ -25,7 +25,6 @@ REPLACE_SH+=		libmtp.sh.in
 # XXX ?
 LDFLAGS.FreeBSD+=	-liconv
 LDFLAGS.SunOS=		-liconv
-CPPFLAGS.SunOS=		-Du_int64_t=uint64_t -Du_int32_t=uint32_t
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
