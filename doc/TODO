@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10880 2012/02/17 13:25:39 obache Exp $
+$NetBSD: TODO,v 1.10881 2012/02/17 18:41:20 drochner Exp $
 
 Suggested new packages
 ======================
@@ -1146,9 +1146,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-mxDateTime-3.2.0
-	o py-qt4-4.9.1
 	o py-simplejson-2.2.1
-	o py-sip-4.13.2
 	o py-sybase-0.37
 	o py-urwid-1.0.1
 	o py-xcbgen-1.7
@@ -1157,7 +1155,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qemu-1.0
 	o qnetwalk-1.3
 	o qpopper-4.0.14
-	o qt4-qscintilla-2.6.1
 	o quilt-0.51
 	o qvplay-0.95
 	o qwt-6.0.0
