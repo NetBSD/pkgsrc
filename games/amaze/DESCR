@@ -1,0 +1,3 @@
+A 3D maze game based on a similar game I read the source to in an
+Australian PC magazine in the mid 1980s. Implemented using curses,
+so that you can play it on a VT100 should you so desire.
