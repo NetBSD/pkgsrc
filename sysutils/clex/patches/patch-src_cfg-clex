@@ -1,0 +1,15 @@
+$NetBSD: patch-src_cfg-clex,v 1.1 2012/02/17 13:23:28 obache Exp $
+
+* portability fix
+
+--- src/cfg-clex.orig	2009-05-20 08:58:50.000000000 +0000
++++ src/cfg-clex
+@@ -144,7 +144,7 @@ convert_config() {
+ 	if [ x"$CLEX_ACTIVE_LAYOUT" != x ] ; then
+ 		CLEX_LAYOUT_ACTIVE=`expr $CLEX_ACTIVE_LAYOUT + 1`
+ 	fi
+-	if [ x"$CLEX_XTERM_TITLE" == x'2' ] ; then
++	if [ x"$CLEX_XTERM_TITLE" = x'2' ] ; then
+ 		CLEX_XTERM_TITLE='1'
+ 	fi
+ 	if [ x"$CLEX_LAYOUT1" != x ] ; then
