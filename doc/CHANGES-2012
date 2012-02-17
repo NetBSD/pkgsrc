@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.497 2012/02/16 22:12:51 gls Exp $
+$NetBSD: CHANGES-2012,v 1.498 2012/02/17 01:48:45 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -718,3 +718,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/calibre to 0.8.39 [gls 2012-02-16]
 	Updated devel/py-mock to 0.8.0 [gls 2012-02-16]
 	Updated devel/py-argparse to 1.2.1 [gls 2012-02-16]
+	Added net/p5-Net-Libdnet6 version 0.24 [hiramatsu 2012-02-17]
+	Added net/p5-Net-Frame-Layer-IPv6 version 1.03 [hiramatsu 2012-02-17]
