@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/10 17:03:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/17 18:19:30 drochner Exp $
 bin/coverage${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/coverage/__init__.py
 ${PYSITELIB}/coverage/__init__.pyc
 ${PYSITELIB}/coverage/__init__.pyo
+${PYSITELIB}/coverage/__main__.py
+${PYSITELIB}/coverage/__main__.pyc
+${PYSITELIB}/coverage/__main__.pyo
 ${PYSITELIB}/coverage/annotate.py
 ${PYSITELIB}/coverage/annotate.pyc
 ${PYSITELIB}/coverage/annotate.pyo
@@ -47,8 +50,12 @@ ${PYSITELIB}/coverage/html.pyc
 ${PYSITELIB}/coverage/html.pyo
 ${PYSITELIB}/coverage/htmlfiles/coverage_html.js
 ${PYSITELIB}/coverage/htmlfiles/index.html
-${PYSITELIB}/coverage/htmlfiles/jquery-1.3.2.min.js
+${PYSITELIB}/coverage/htmlfiles/jquery-1.4.3.min.js
+${PYSITELIB}/coverage/htmlfiles/jquery.hotkeys.js
+${PYSITELIB}/coverage/htmlfiles/jquery.isonscreen.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.tablesorter.min.js
+${PYSITELIB}/coverage/htmlfiles/keybd_closed.png
+${PYSITELIB}/coverage/htmlfiles/keybd_open.png
 ${PYSITELIB}/coverage/htmlfiles/pyfile.html
 ${PYSITELIB}/coverage/htmlfiles/style.css
 ${PYSITELIB}/coverage/misc.py

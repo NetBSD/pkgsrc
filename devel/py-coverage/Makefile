@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/02/09 12:42:37 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/17 18:19:30 drochner Exp $
 #
 
-DISTNAME=	coverage-3.3.1
-PKGNAME=	${PYPKGPREFIX}-coverage-3.3.1
+DISTNAME=	coverage-3.5.1
+PKGNAME=	${PYPKGPREFIX}-coverage-3.5.1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/c/coverage/
 
