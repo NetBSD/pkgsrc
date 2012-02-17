@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/17 17:22:13 jakllsch Exp $
+bin/amaze
+man/cat6/amaze.0
+man/man6/amaze.6
