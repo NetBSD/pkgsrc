@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/10 17:03:39 drochner Exp $
+$NetBSD: distinfo,v 1.2 2012/02/17 18:19:30 drochner Exp $
 
-SHA1 (coverage-3.3.1.tar.gz) = 56b30e982c618c34c1ba7d97a19ae48716b1c51d
-RMD160 (coverage-3.3.1.tar.gz) = 25b43c2e9286576a41c8cd0d86fa0b0bf4d0c26d
-Size (coverage-3.3.1.tar.gz) = 84453 bytes
-SHA1 (patch-aa) = c295ead1d87b6dd4d581bdfd1936bba3844032df
+SHA1 (coverage-3.5.1.tar.gz) = 815061b1906bd83b7d8ba46db0986ce7c4e84951
+RMD160 (coverage-3.5.1.tar.gz) = 054797366f8bc1968fc75e0121aaba3d12576200
+Size (coverage-3.5.1.tar.gz) = 113277 bytes
+SHA1 (patch-aa) = 4096d982a73a56879a1e1eb41095bc6da869ab82
