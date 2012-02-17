@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.505 2012/02/17 18:26:15 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.506 2012/02/17 18:41:20 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -729,4 +729,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-owncloud to 3.0.0 [ryoon 2012-02-17]
 	Added games/robotfindskitten version 1.7320508.406 [jakllsch 2012-02-17]
 	Added games/amaze version 0pre0 [jakllsch 2012-02-17]
+	Updated devel/py-coverage to 3.5.1 [drochner 2012-02-17]
 	Updated security/kstart to 4.1 [jakllsch 2012-02-17]
+	Updated devel/py-nose to 1.1.2 [drochner 2012-02-17]
+	Updated devel/py-Pyro to 4.12 [drochner 2012-02-17]
+	Updated x11/py-sip to 4.13.2 [drochner 2012-02-17]
+	Updated x11/py-qt4 to 4.9.1 [drochner 2012-02-17]
+	Updated x11/qt4-qscintilla to 2.6.1 [drochner 2012-02-17]
