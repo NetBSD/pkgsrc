@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/12/20 01:59:44 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/17 16:40:23 ryoon Exp $
 #
 
-DISTNAME=	owncloud-2.0.1
+DISTNAME=	owncloud-3.0.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://owncloud.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,10 +14,11 @@ LICENSE=	gnu-agpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.0:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.2.0:../../archivers/php-zip
 .include "options.mk"
 
 WRKSRC=		${WRKDIR}/owncloud
