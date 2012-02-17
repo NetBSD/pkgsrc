@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2012/01/12 11:43:22 drochner Exp $
+$NetBSD: distinfo,v 1.8 2012/02/17 18:39:18 drochner Exp $
 
-SHA1 (QScintilla-gpl-2.6.tar.gz) = f55dfc6804b2140a5c3e69bd85eb64caa1a5c2ce
-RMD160 (QScintilla-gpl-2.6.tar.gz) = 5a04e13b2642d5611b15e4a1e49a3021f5dc25f3
-Size (QScintilla-gpl-2.6.tar.gz) = 2655263 bytes
+SHA1 (QScintilla-gpl-2.6.1.tar.gz) = c68dbeaafb4f5dbe0d8200ae907cced0c7762e19
+RMD160 (QScintilla-gpl-2.6.1.tar.gz) = f3e3eeb0ffb30f0a388309d46874983ff0ef8e3d
+Size (QScintilla-gpl-2.6.1.tar.gz) = 2657005 bytes
