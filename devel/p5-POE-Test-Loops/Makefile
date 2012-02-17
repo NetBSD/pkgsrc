@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2011/08/06 13:15:54 adam Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/17 06:59:32 hiramatsu Exp $
 
-DISTNAME=	POE-Test-Loops-1.312
+DISTNAME=	POE-Test-Loops-1.350
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
