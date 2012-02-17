@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2011/12/18 08:38:14 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2012/02/17 16:40:23 ryoon Exp $
 
 To use ownCloud, you will need to perform the following steps.
 
@@ -10,7 +10,7 @@ To use ownCloud, you will need to perform the following steps.
 
 3. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
 
-	DocumentRoot "${PREFIX}/share/ownloud"
+	DocumentRoot "${PREFIX}/share/owncloud"
 	LoadModule php5_module lib/httpd/mod_php5.so
 	AddType application/x-httpd-php .php
 	<Directory ${PREFIX}/share/owncloud>
@@ -20,9 +20,11 @@ To use ownCloud, you will need to perform the following steps.
 
 4. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
-	extension=zip.so
-	extension=mbstring.so
+	extension=dom.so
+	extension=gd.so
 	extension=json.so
+	extension=mbstring.so
+	extension=zip.so
 	extension=sqlite.so ;if you select sqlite backend.
 	extension=mysql.so ;if you select MySQL backend.
 
