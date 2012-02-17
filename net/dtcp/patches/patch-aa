@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2010/02/11 20:47:16 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2012/02/17 14:09:05 hans Exp $
 
 --- Makefile.orig	2006-01-24 11:51:58.000000000 -0800
 +++ Makefile	2006-01-24 11:52:30.000000000 -0800
-@@ -14,9 +14,9 @@
+@@ -14,9 +14,9 @@ PREFIX?=	/usr/local
  BINDIR=		$(PREFIX)/sbin
  
  .if (${OPSYS} == "NetBSD")
@@ -14,3 +14,18 @@ $NetBSD: patch-aa,v 1.7 2010/02/11 20:47:16 joerg Exp $
  .endif
  MAN=		dtcps.8 dtcpc.8 dtcpauth.8
  
+@@ -69,11 +69,11 @@ dtcpauth.8:	dtcpauth.8.in
+ 
+ realinstall:
+ 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 555 dtcps \
+-		${BINDIR}/dtcps
++		${DESTDIR}${BINDIR}/dtcps
+ 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 555 dtcpc \
+-		${BINDIR}/dtcpc
++		${DESTDIR}${BINDIR}/dtcpc
+ 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 555 dtcpauth \
+-		${BINDIR}/dtcpauth
++		${DESTDIR}${BINDIR}/dtcpauth
+ 
+ dist:
+ 	@data=`date +%Y%m%d`; \
