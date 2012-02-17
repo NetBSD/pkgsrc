@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10878 2012/02/16 21:30:48 gls Exp $
+$NetBSD: TODO,v 1.10879 2012/02/17 09:42:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -299,7 +299,7 @@ Suggested new packages
 	libWindowsWM, libXfontcache, util-macros, viewres, windowswmproto,
 	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
 	xf86-input-fpit, xf86-input-hyperpen, xf86-input-penmount,
-	xf86-input-mutouch,
+	xf86-input-mutouch, xorg-gtest,
 	xf86-input-joystick, xf86-input-synaptics, xf86-input-wacom,
 	xf86-video-dummy, xf86-video-fbdev, xf86-video-glide, xfsinfo,
 	xf86-video-impact, xf86-video-newport, xf86-video-sisusb, xmh,
@@ -442,7 +442,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.2
 	o cddbd-1.5.2
-	o cdialog-1.1.20111020
+	o cdialog-1.1.20120215
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
@@ -536,7 +536,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elm-me-2.5plalpha27
+	o elm-me-2.5plalpha28
 	o emacs-23.4
 	o emacs-muse-3.20
 	o emech-2.8.5.1
@@ -557,7 +557,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
-	o etm-887
+	o etm-888
 	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evieext-1.1.1
@@ -1331,7 +1331,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o ufoai-2.3.1
-	o uim-1.7.2
+	o uim-1.7.3 [pkg/46030]
+	o uim-elisp-1.7.3 [pkg/46030]
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
 	o units-88 [pkg/43742]
@@ -1405,6 +1406,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xclock-1.0.6
 	o xcmiscproto-1.2.1
 	o xcmsdb-1.0.3 [unpackaged]
+	o xcompmgr-1.1.6
 	o xconsole-1.0.4
 	o xcursorgen-1.0.4
 	o xdesktopwaves-1.3
@@ -1427,7 +1429,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
-	o xf86-video-glint-1.2.6
+	o xf86-video-glint-1.2.7
 	o xf86-video-i128-1.3.4
 	o xf86-video-intel-2.17.0
 	o xf86-video-mach64-6.9.0
@@ -1453,7 +1455,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86vidmodeproto-2.3.1
 	o xfce4-4.8
 	o xfce4-volman-0.3.80
-	o xfd-1.1.0
+	o xfd-1.1.1
 	o xfe-1.32.4
 	o xfontsel-1.0.3 [pkg/45523]
 	o xforms-1.0.93sp1
@@ -1496,7 +1498,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xorg-util-macros-1.16.1
 	o xorp-1.8.4
 	o xosview-1.9.2
-	o xpaint-2.9.8.4
+	o xpaint-2.9.9
 	o xpr-1.0.3 [unpackaged]
 	o xprop-1.2.1
 	o xproto-7.0.22 [pkg/45465]
