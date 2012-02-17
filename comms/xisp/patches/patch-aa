@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2009/12/17 21:49:22 abs Exp $
+$NetBSD: patch-aa,v 1.12 2012/02/17 13:49:47 hans Exp $
 
 --- Makefile.orig	2005-11-07 00:38:22.000000000 +0000
 +++ Makefile
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.11 2009/12/17 21:49:22 abs Exp $
  #
  # Debian vars (if your Debian distribution is relatively
  # old and does not use glibc2, use the lines which DO NOT
-@@ -186,25 +186,29 @@ INSTALL    = install
+@@ -186,25 +186,28 @@ INSTALL    = install
  #
  # NetBSD vars
  #-------------
@@ -101,20 +101,19 @@ $NetBSD: patch-aa,v 1.11 2009/12/17 21:49:22 abs Exp $
 +PPPDLCKDIR = $(VARBASE)/spool/lock
 +DESTDIR    = 
 +GROUP      = $(DIALER_GROUP)
-+CCFLAGS    = -Wall -O
++CCFLAGS    = -Wall -O ${CFLAGS}
 +EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DHAVE_STRERROR
 +.if defined(OPSYS) && ${OPSYS} == "DragonFly"
 +EXTRALIBS  = -lcipher
 +.else
 +EXTRALIBS  = -lcrypt
 +.endif
-+LINKX11    = -Wl,-R$(LIBX11)
++LINKX11    = -Wl,-R$(LIBX11) ${LDFLAGS}
 +LINKFORMS  = -Wl,-R$(LIBFORMS) -L$(LIBFORMS) -lforms
-+INSTALL    = /usr/bin/install
  #
  # FreeBSD vars
  #-------------
-@@ -324,19 +328,19 @@ network.o: network.h network.c
+@@ -324,19 +327,19 @@ network.o: network.h network.c
  	$(CC) $(CCOPTS) -c network.c
  
  xispdial: xispdial.o $(SHAREOBJ)
@@ -137,7 +136,7 @@ $NetBSD: patch-aa,v 1.11 2009/12/17 21:49:22 abs Exp $
  	$(EXTRALIBS) -L$(LIBX11) $(LINKFORMS) -lXpm -lX11 -lm
  
  rcio.o: rcio.h rcio.c common.h version.h
-@@ -349,7 +353,7 @@ xisp_euidaccess.o: xisp_euidaccess.c
+@@ -349,7 +352,7 @@ xisp_euidaccess.o: xisp_euidaccess.c
  	$(CC) $(CCOPTS) -c xisp_euidaccess.c
  
  xispid: xispid.c
