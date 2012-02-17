@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.909 2012/02/09 08:32:28 jnemeth Exp $
+# $NetBSD: Makefile,v 1.910 2012/02/17 01:46:33 hiramatsu Exp $
 #
 
 COMMENT=	Networking tools
@@ -372,6 +372,7 @@ SUBDIR+=	p5-Net-Dev-MIBLoadOrder
 SUBDIR+=	p5-Net-FTPSSL
 SUBDIR+=	p5-Net-Frame
 SUBDIR+=	p5-Net-Frame-Dump
+SUBDIR+=	p5-Net-Frame-Layer-IPv6
 SUBDIR+=	p5-Net-Frame-Simple
 SUBDIR+=	p5-Net-GitHub
 SUBDIR+=	p5-Net-Gnats
@@ -388,6 +389,7 @@ SUBDIR+=	p5-Net-Jifty
 SUBDIR+=	p5-Net-LDAP-Server
 SUBDIR+=	p5-Net-LibIDN
 SUBDIR+=	p5-Net-Libdnet
+SUBDIR+=	p5-Net-Libdnet6
 SUBDIR+=	p5-Net-MAC
 SUBDIR+=	p5-Net-NBName
 SUBDIR+=	p5-Net-OAuth
