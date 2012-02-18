@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.24 2011/05/29 06:13:57 obache Exp $
+# $NetBSD: options.mk,v 1.25 2012/02/18 11:46:14 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-#PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn xim
-PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep xim
+PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde3
 PKG_OPTIONS_GROUP.qt=	qt qt3
@@ -204,13 +203,14 @@ CONFIGURE_ARGS+=	--with-sqlite3
 PLIST.sqlite=		yes
 .endif
 
-#.if !empty(PKG_OPTIONS:Mwnn)
-#.  include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
-#CONFIGURE_ARGS+=	--with-wnn
-#CONFIGURE_ARGS+=	--with-wnn-includes=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/include/wnn
-#CONFIGURE_ARGS+=	--with-wnn-libraries=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/lib
-#PLIST.wnn=		yes
-#.endif
+.if !empty(PKG_OPTIONS:Mwnn4)
+.  include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-wnn
+CONFIGURE_ARGS+=	--with-wnn-includes=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/include/wnn
+CONFIGURE_ARGS+=	--with-wnn-libraries=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/lib
+CPPFLAGS+=		-DWNNENVDIR=\"${BUILDLINK_PREFIX.ja-FreeWnn-lib}/share/wnn\"
+PLIST.wnn=		yes
+.endif
 
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk

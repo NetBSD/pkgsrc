@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/05/29 06:13:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.19 2012/02/18 11:46:14 obache Exp $
 ${PLIST.qt3}bin/uim-chardict-qt
 ${PLIST.qt}bin/uim-chardict-qt4
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
@@ -108,7 +108,7 @@ share/uim/anthy-utf8-custom.scm
 share/uim/anthy-utf8.scm
 share/uim/anthy.scm
 share/uim/byeoru-custom.scm
-share/uim/byeoru-dic.scm
+share/uim/byeoru-data/byeoru-dict
 share/uim/byeoru-key-custom.scm
 share/uim/byeoru-symbols.scm
 share/uim/byeoru.scm
