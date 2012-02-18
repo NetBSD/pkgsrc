@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.31 2012/02/14 09:48:31 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.32 2012/02/18 01:39:47 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -142,3 +142,5 @@ Pullup ticket #3681 - requested by riz
 devel/m4: build fix
 Pullup ticket #3682 - requested by riz
 lang/php5: build fix
+Pullup ticket #3683 - requested by obache
+lang/sun-{jre,jdk}6 security update
