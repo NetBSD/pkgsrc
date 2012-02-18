@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.1 2011/08/16 22:13:23 abs Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.1.4.1 2012/02/18 01:38:57 sbd Exp $
 bin/sun6-appletviewer
 bin/sun6-apt
 bin/sun6-extcheck
@@ -3557,9 +3557,12 @@ java/sun-6/lib/visualvm/visualvm/config/Modules/org-openide-compat.xml_hidden
 java/sun-6/lib/visualvm/visualvm/config/Modules/org-openide-options.xml_hidden
 java/sun-6/lib/visualvm/visualvm/config/Modules/org-openide-util-enumerations.xml_hidden
 java/sun-6/lib/visualvm/visualvm/core/com-sun-tools-visualvm-modules-startup.jar
+java/sun-6/lib/visualvm/visualvm/core/locale/.svn_ja.jar
+java/sun-6/lib/visualvm/visualvm/core/locale/.svn_zh_CN.jar
 java/sun-6/lib/visualvm/visualvm/core/locale/com-sun-tools-visualvm-modules-startup_ja.jar
 java/sun-6/lib/visualvm/visualvm/core/locale/com-sun-tools-visualvm-modules-startup_zh_CN.jar
 java/sun-6/lib/visualvm/visualvm/core/locale/core_visualvm.jar
+java/sun-6/lib/visualvm/visualvm/modules/all-wcprops
 java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-api-caching.jar
 java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application-views.jar
 java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application.jar
@@ -3582,6 +3585,7 @@ java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-sampler.jar
 java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-threaddump.jar
 java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-tools.jar
 java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-uisupport.jar
+java/sun-6/lib/visualvm/visualvm/modules/entries
 java/sun-6/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-api-caching_ja.jar
 java/sun-6/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-api-caching_zh_CN.jar
 java/sun-6/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-application-views_ja.jar
@@ -3628,7 +3632,17 @@ java/sun-6/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-uisupport
 java/sun-6/lib/visualvm/visualvm/modules/locale/com-sun-tools-visualvm-uisupport_zh_CN.jar
 java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-core-windows_visualvm.jar
 java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-core_visualvm.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-.svn_ja.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-.svn_zh_CN.jar
 java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-profiler_visualvm.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-prop-base_ja.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-prop-base_zh_CN.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-props_ja.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-props_zh_CN.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-text-base_ja.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-text-base_zh_CN.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-tmp_ja.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-modules-tmp_zh_CN.jar
 java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-api-caching.xml
 java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application-views.xml
 java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application.xml
