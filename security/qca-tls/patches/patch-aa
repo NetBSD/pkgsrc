@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/12/23 21:05:51 jdolecek Exp $
+$NetBSD: patch-aa,v 1.6 2012/02/18 01:23:59 sbd Exp $
 
 --- configure.orig	2003-12-17 17:54:50.000000000 -0500
 +++ configure
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.5 2007/12/23 21:05:51 jdolecek Exp $
  			ext += QString("-I") + kbdir + ' ';
  		if(!lib.isEmpty())
 -			ext += QString("-L") + lib + " -lssl -lcrypto ";
-+			ext += QString("-L") + lib + " " + QString("-R") + lib + " -lssl -lcrypto ";
++			ext += QString("-L") + lib + " " + QString("@COMPILER_RPATH_FLAG@") + lib + " -lssl -lcrypto ";
  		int ret;
  		if(!conf->doCompileAndLink(str, ext, &ret))
  			return false;
