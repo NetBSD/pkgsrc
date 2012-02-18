@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2012/02/13 11:46:13 drochner Exp $
+# $NetBSD: Makefile,v 1.93 2012/02/18 23:50:33 elric Exp $
 
 .include "Makefile.common"
 
@@ -22,6 +22,7 @@ PLIST_SUBST+=    LITE=""
 
 USE_TOOLS+=	pkg-config
 
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
