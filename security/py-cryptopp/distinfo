@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/09/24 18:10:46 gdt Exp $
+$NetBSD: distinfo,v 1.3 2012/02/18 21:18:02 gls Exp $
 
-SHA1 (pycryptopp-0.5.25.tar.gz) = eba08385397a5a5fd172f8e271a07c9c4e79d52b
-RMD160 (pycryptopp-0.5.25.tar.gz) = 167dcebf24ae0fa3f371cbbddd526a2adda1a631
-Size (pycryptopp-0.5.25.tar.gz) = 1125824 bytes
-SHA1 (patch-aa) = 24090e39c58807588fb5893318d7f92bf13b0af7
+SHA1 (pycryptopp-0.5.29.tar.gz) = 53127f9f9748c159f99700684c86098c2e96573d
+RMD160 (pycryptopp-0.5.29.tar.gz) = 99e081c5c21a735777f093965dbc5638a25f0749
+Size (pycryptopp-0.5.29.tar.gz) = 1114525 bytes
+SHA1 (patch-aa) = 144552faf822cd224e30dd849a35505c70946a47

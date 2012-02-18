@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/07/23 23:17:48 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/18 21:18:02 gls Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -43,12 +43,18 @@ ${PYSITELIB}/pycryptopp/test/test_aes.pyo
 ${PYSITELIB}/pycryptopp/test/test_ecdsa.py
 ${PYSITELIB}/pycryptopp/test/test_ecdsa.pyc
 ${PYSITELIB}/pycryptopp/test/test_ecdsa.pyo
+${PYSITELIB}/pycryptopp/test/test_from_Nikratio.py
+${PYSITELIB}/pycryptopp/test/test_from_Nikratio.pyc
+${PYSITELIB}/pycryptopp/test/test_from_Nikratio.pyo
 ${PYSITELIB}/pycryptopp/test/test_rsa.py
 ${PYSITELIB}/pycryptopp/test/test_rsa.pyc
 ${PYSITELIB}/pycryptopp/test/test_rsa.pyo
 ${PYSITELIB}/pycryptopp/test/test_sha256.py
 ${PYSITELIB}/pycryptopp/test/test_sha256.pyc
 ${PYSITELIB}/pycryptopp/test/test_sha256.pyo
+${PYSITELIB}/pycryptopp/test/test_startup.py
+${PYSITELIB}/pycryptopp/test/test_startup.pyc
+${PYSITELIB}/pycryptopp/test/test_startup.pyo
 ${PYSITELIB}/pycryptopp/testvectors/KAT_AES/ECBGFSbox128e.txt
 ${PYSITELIB}/pycryptopp/testvectors/KAT_AES/ECBGFSbox256e.txt
 ${PYSITELIB}/pycryptopp/testvectors/KAT_AES/ECBKeySbox128e.txt
