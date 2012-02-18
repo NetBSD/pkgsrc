@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.509 2012/02/18 10:26:32 sno Exp $
+$NetBSD: CHANGES-2012,v 1.510 2012/02/18 10:35:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ruby193-base to 1.9.3p125nb1 [taca 2012-02-18]
 	Updated net/httping to 1.5.2 [shattered 2012-02-18]
 	Updated devel/p5-CPAN-Checksums to 2.08 [sno 2012-02-18]
+	Updated devel/p5-Config-AutoConf to 0.19 [sno 2012-02-18]
