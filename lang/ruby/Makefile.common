@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2012/02/18 06:24:21 taca Exp $
+# $NetBSD: Makefile.common,v 1.26 2012/02/18 06:28:46 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -14,6 +14,11 @@
 # used by lang/ruby193-base/Makefile
 # used by textproc/ruby-psych/Makefile
 # used by x11/ruby-tk/Makefile
+#
+# RUBY_EXTNAME
+#	RUBY_EXTNAME defines name of extension which included in
+#	the Ruby's distribution file.
+#
 
 # Ruby's license
 .if ${RUBY_VER} == "18" || ${RUBY_VER} == "19"
@@ -65,6 +70,7 @@ PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 DIST_SUBDIR=	ruby193-base-201202170
 .endif
 
+PKGNAME?=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_FULL}
 DISTINFO_FILE=		${.CURDIR}/../../lang/${RUBY_BASE}/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/${RUBY_BASE}/patches
 do-patch:
