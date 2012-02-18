@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.510 2012/02/18 10:35:09 sno Exp $
+$NetBSD: CHANGES-2012,v 1.511 2012/02/18 11:46:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -740,3 +740,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/httping to 1.5.2 [shattered 2012-02-18]
 	Updated devel/p5-CPAN-Checksums to 2.08 [sno 2012-02-18]
 	Updated devel/p5-Config-AutoConf to 0.19 [sno 2012-02-18]
+	Updated inputmethod/uim to 1.7.3 [obache 2012-02-18]
