@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2012/02/04 09:43:32 taca Exp $
+# $NetBSD: Makefile.common,v 1.25 2012/02/18 06:24:21 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -16,7 +16,7 @@
 # used by x11/ruby-tk/Makefile
 
 # Ruby's license
-.if ${RUBY_VER} == "18" ||  ${RUBY_VER} == "19"
+.if ${RUBY_VER} == "18" || ${RUBY_VER} == "19"
 LICENSE=		gnu-gpl-v2 OR ruby-license
 .else
 LICENSE=		2-clause-bsd OR ruby-license
@@ -61,6 +61,10 @@ PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 			RUBY_NAME=${RUBY_NAME:Q}
 
 .if !empty(RUBY_EXTNAME)
+.if ${RUBY_VER} == "193"
+DIST_SUBDIR=	ruby193-base-201202170
+.endif
+
 DISTINFO_FILE=		${.CURDIR}/../../lang/${RUBY_BASE}/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/${RUBY_BASE}/patches
 do-patch:
