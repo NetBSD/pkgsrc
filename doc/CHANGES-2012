@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.515 2012/02/18 17:06:04 gls Exp $
+$NetBSD: CHANGES-2012,v 1.516 2012/02/18 20:41:09 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -748,3 +748,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Test-YAML-Meta to 0.19 [hiramatsu 2012-02-18]
 	Updated graphics/png to 1.5.9rc01 [wiz 2012-02-18]
 	Updated net/nagstamon to 0.9.8 [gls 2012-02-18]
+	Updated security/py-OpenSSL to 0.13 [gls 2012-02-18]
