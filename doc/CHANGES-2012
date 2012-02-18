@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.507 2012/02/18 05:04:35 taca Exp $
+$NetBSD: CHANGES-2012,v 1.508 2012/02/18 10:07:27 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -737,3 +737,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/py-qt4 to 4.9.1 [drochner 2012-02-17]
 	Updated x11/qt4-qscintilla to 2.6.1 [drochner 2012-02-17]
 	Updated lang/ruby193-base to 1.9.3p125nb1 [taca 2012-02-18]
+	Updated net/httping to 1.5.2 [shattered 2012-02-18]
