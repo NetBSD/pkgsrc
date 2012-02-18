@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10881 2012/02/17 18:41:20 drochner Exp $
+$NetBSD: TODO,v 1.10882 2012/02/18 10:07:27 shattered Exp $
 
 Suggested new packages
 ======================
@@ -774,7 +774,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
 	o htop-1.0
-	o httping-1.5.2
 	o httptunnel-3.3
 	o hugin-2011.4.0
 	o hylafax-5.5.1
