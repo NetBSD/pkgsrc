@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/08/14 12:26:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/18 15:11:01 hiramatsu Exp $
 #
 
-DISTNAME=	Test-YAML-Meta-0.16
+DISTNAME=	Test-YAML-Meta-0.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -12,14 +11,11 @@ HOMEPAGE=	http://search.cpan.org/dist/Test-YAML-Meta/
 COMMENT=	Perl 5 module to validate the META.yml file in a distribution
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Test-YAML-Valid>=0.03:../../devel/p5-Test-YAML-Valid
+DEPENDS+=	p5-Test-CPAN-Meta-YAML-[0-9]*:../../devel/p5-Test-CPAN-Meta-YAML
 
 # These are recommended:
 BUILD_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=0.08:../../devel/p5-Test-Pod-Coverage
-DEPENDS+=	p5-Test-YAML-Valid>=0.03:../../devel/p5-Test-YAML-Valid
-DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
-DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
