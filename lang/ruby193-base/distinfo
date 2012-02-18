@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/02/16 16:43:38 taca Exp $
+$NetBSD: distinfo,v 1.5 2012/02/18 05:03:34 taca Exp $
 
-SHA1 (ruby-1.9.3-p125.tar.bz2) = 3ab1c7769ee4445f57f4dc377b89eece560df901
-RMD160 (ruby-1.9.3-p125.tar.bz2) = d1b2a1653cba4c2e8913cd4323b099647a5b0d3b
-Size (ruby-1.9.3-p125.tar.bz2) = 9640876 bytes
+SHA1 (ruby193-base-201202170/ruby-1.9.3-p125.tar.bz2) = bcdd597cfea7f79fb949314f265fc36af7de16a5
+RMD160 (ruby193-base-201202170/ruby-1.9.3-p125.tar.bz2) = 37517b3b0ab27ec09e3c5a5c48102d39f9657e28
+Size (ruby193-base-201202170/ruby-1.9.3-p125.tar.bz2) = 9733962 bytes
 SHA1 (patch-configure) = 3045588df7baca5e100363eaef64567d6a59d527
 SHA1 (patch-configure.in) = c6671d30e11dfb2d5e4b253b6f3e53cf32af0152
 SHA1 (patch-defs_default__gems) = fb24111736f1a76a05e853aa068024dbdd24e5a5
