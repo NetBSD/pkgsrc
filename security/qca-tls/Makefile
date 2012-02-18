@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2011/11/08 15:38:48 gavan Exp $
+# $NetBSD: Makefile,v 1.33 2012/02/18 01:23:59 sbd Exp $
 
 DISTNAME=	qca-tls-1.0
 PKGREVISION=	10
@@ -21,6 +21,12 @@ CONFIGURE_ARGS+=	--with-openssl-inc=${SSLBASE}/include
 CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
+
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_MESSAGE.rpath=	Substituting compiler RPATH flag.
+SUBST_FILES.rpath=	configure
+SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 pre-install:
 	mkdir -p ${DESTDIR}${PREFIX}/qt3/plugins/crypto
