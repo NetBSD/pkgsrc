@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.42 2011/12/16 17:04:18 hans Exp $
+$NetBSD: distinfo,v 1.42.2.1 2012/02/18 23:35:28 tron Exp $
 
 SHA1 (Python-2.6.7.tar.bz2) = 5d35eb746e85fb3deaff8518448137c9b9fb6daa
 RMD160 (Python-2.6.7.tar.bz2) = 513e84a7cb76ca876e3803bb03ed558bd0378063
 Size (Python-2.6.7.tar.bz2) = 11084667 bytes
+SHA1 (patch-CVE-2012-0845) = 1c0a8d7224b6b5cb65b24d38ac0967f8f8fb2da9
 SHA1 (patch-Mac_Modules_fm___Fmmodule.c) = b9314bccb51b4fe672b81559068f7a79d2965f94
 SHA1 (patch-Mac_Modules_qd___Qdmodule.c) = 45c748b15b9436d45ba137460389638aa7108c8d
 SHA1 (patch-Mac_Modules_qdoffs___Qdoffsmodule.c) = 9994f0c1a908f18f1f3df3f05b184f082c018365
