@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/01/28 11:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/02/18 14:37:14 gls Exp $
 
 DISTNAME=	AlephOne-20100424
 PKGNAME=	${DISTNAME:tl}
@@ -29,6 +29,7 @@ BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.6
 .include "../../devel/SDL/buildlink3.mk"
 BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.31
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.6
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
