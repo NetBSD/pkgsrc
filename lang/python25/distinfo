@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.21 2011/12/16 17:04:17 hans Exp $
+$NetBSD: distinfo,v 1.21.2.1 2012/02/18 23:35:28 tron Exp $
 
 SHA1 (Python-2.5.6.tar.bz2) = 29f6dd41bf09c5e04311b367cbb7604fa016e699
 RMD160 (Python-2.5.6.tar.bz2) = 92f0a955971f187a7d50c6422168202ec551bf22
 Size (Python-2.5.6.tar.bz2) = 9821788 bytes
+SHA1 (patch-CVE-2012-0845) = 1c0a8d7224b6b5cb65b24d38ac0967f8f8fb2da9
 SHA1 (patch-SA43463) = df776e171f1794bae52b6e98bc71ae63734b7693
 SHA1 (patch-aa) = d44e67645dc86ff14f5daf5705de02c6f330cc48
 SHA1 (patch-ab) = d35025df83e70d129f9fbcd277652b0eea83b026
