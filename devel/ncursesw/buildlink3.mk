@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2012/02/17 11:01:01 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2012/02/18 10:19:04 obache Exp $
 
 BUILDLINK_TREE+=	ncursesw
 
@@ -16,8 +16,10 @@ CHECK_BUILTIN.ncursesw:=	yes
 .  include "builtin.mk"
 CHECK_BUILTIN.ncursesw:=	no
 .  if defined(IS_BUILTIN.ncursesw) && !empty(IS_BUILTIN.ncursesw:M[nN][oO])
-PKG_BUILD_DEPENDS.ncurses!=	${PKG_INFO} -qn ncursesw 2> /dev/null \
-	|| { cd ../../devel/ncurses && ${MAKE} ${MAKEFLAGS} show-depends; }
+PKG_BUILD_DEPENDS.ncurses!=	\
+	echo "";		\
+	${PKG_INFO} -qn ncursesw 2> /dev/null \
+	|| { cd ../../devel/ncursesw && ${MAKE} ${MAKEFLAGS} show-depends; }
 .    for d in ${PKG_BUILD_DEPENDS.ncurses:Mncurses[-><]*}
 BUILDLINK_API_DEPENDS.ncurses+=	${d}
 .    endfor
