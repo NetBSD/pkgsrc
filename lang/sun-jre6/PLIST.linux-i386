@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.22 2011/06/09 09:08:17 obache Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.22.6.1 2012/02/18 01:38:57 sbd Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -123,8 +123,8 @@ java/sun-6/lib/fontconfig.RedHat.3.bfc.default
 java/sun-6/lib/fontconfig.RedHat.3.properties.src.default
 java/sun-6/lib/fontconfig.RedHat.4.bfc.default
 java/sun-6/lib/fontconfig.RedHat.4.properties.src.default
-java/sun-6/lib/fontconfig.RedHat.6.0.bfc.default
-java/sun-6/lib/fontconfig.RedHat.6.0.properties.src.default
+java/sun-6/lib/fontconfig.RedHat.6.bfc.default
+java/sun-6/lib/fontconfig.RedHat.6.properties.src.default
 java/sun-6/lib/fontconfig.RedHat.bfc.default
 java/sun-6/lib/fontconfig.RedHat.properties.src.default
 java/sun-6/lib/fontconfig.SuSE.11.bfc.default
@@ -286,6 +286,7 @@ java/sun-6/lib/zi/Africa/Freetown
 java/sun-6/lib/zi/Africa/Gaborone
 java/sun-6/lib/zi/Africa/Harare
 java/sun-6/lib/zi/Africa/Johannesburg
+java/sun-6/lib/zi/Africa/Juba
 java/sun-6/lib/zi/Africa/Kampala
 java/sun-6/lib/zi/Africa/Khartoum
 java/sun-6/lib/zi/Africa/Kigali
@@ -488,6 +489,7 @@ java/sun-6/lib/zi/Asia/Dubai
 java/sun-6/lib/zi/Asia/Dushanbe
 java/sun-6/lib/zi/Asia/Gaza
 java/sun-6/lib/zi/Asia/Harbin
+java/sun-6/lib/zi/Asia/Hebron
 java/sun-6/lib/zi/Asia/Ho_Chi_Minh
 java/sun-6/lib/zi/Asia/Hong_Kong
 java/sun-6/lib/zi/Asia/Hovd
