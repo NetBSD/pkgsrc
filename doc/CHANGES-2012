@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.512 2012/02/18 11:47:06 obache Exp $
+$NetBSD: CHANGES-2012,v 1.513 2012/02/18 15:12:09 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -742,3 +742,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Config-AutoConf to 0.19 [sno 2012-02-18]
 	Updated inputmethod/uim to 1.7.3 [obache 2012-02-18]
 	Updated inputmethod/uim-elisp to 1.7.3 [obache 2012-02-18]
+	Updated devel/p5-Moose to 2.0402 [hiramatsu 2012-02-18]
+	Updated devel/p5-MooseX-Role-Parameterized to 1.00 [hiramatsu 2012-02-18]
+	Updated devel/p5-Hash-MultiValue to 0.10 [hiramatsu 2012-02-18]
+	Updated devel/p5-Test-YAML-Meta to 0.19 [hiramatsu 2012-02-18]
