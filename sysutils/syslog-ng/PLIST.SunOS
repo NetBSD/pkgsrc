@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2012/02/18 21:03:21 bouyer Exp $
+lib/syslog-ng/libafstreams.la
