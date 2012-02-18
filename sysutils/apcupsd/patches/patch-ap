@@ -1,0 +1,14 @@
+$NetBSD: patch-ap,v 1.3 2012/02/18 21:08:32 bouyer Exp $
+
+# patch for sysutils/apcupsd on OpenSolaris
+--- platforms/sun/Makefile.orig 2008-06-02 06:57:56.000000000 +0900
++++ platforms/sun/Makefile      2012-02-18 15:49:42.175525737 +0900
+@@ -12,7 +12,7 @@
+       $(call MKDIR,/etc/rc1.d)
+       $(call MKDIR,/etc/rc2.d)
+       $(call MKDIR,/etc/init.d)
+-      $(call INSTPROG,744,apcupsd,/etc/init.d/apcupsd)
++      $(call INSTSCRIPT,744,apcupsd,/etc/init.d/apcupsd)
+       $(call SYMLINK,../init.d/apcupsd,/etc/rc0.d/K21apcupsd)
+       $(call SYMLINK,../init.d/apcupsd,/etc/rc1.d/S89apcupsd)
+       $(call SYMLINK,../init.d/apcupsd,/etc/rc2.d/S89apcupsd)
