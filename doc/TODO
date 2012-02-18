@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10882 2012/02/18 10:07:27 shattered Exp $
+$NetBSD: TODO,v 1.10883 2012/02/18 11:46:41 obache Exp $
 
 Suggested new packages
 ======================
@@ -1326,7 +1326,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ucblogo-5.5
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, wait for compatible version]
 	o ufoai-2.3.1
-	o uim-1.7.3 [pkg/46030]
 	o uim-elisp-1.7.3 [pkg/46030]
 	o unicap-0.9.8
 	o unicode-screensaver-0.4
