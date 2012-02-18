@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.32 2012/02/18 01:39:47 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.33 2012/02/18 23:36:42 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -144,3 +144,10 @@ Pullup ticket #3682 - requested by riz
 lang/php5: build fix
 Pullup ticket #3683 - requested by obache
 lang/sun-{jre,jdk}6 security update
+Pullup ticket #3684 - requested by drochner
+audio/libvorbis: security patch
+Pullup ticket #3685 - requested by drochner
+lang/python25: security patch
+lang/python26: security patch
+lang/python27: security patch
+lang/python31: security patch
