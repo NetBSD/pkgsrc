@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.522 2012/02/19 05:25:14 obache Exp $
+$NetBSD: CHANGES-2012,v 1.523 2012/02/19 07:44:33 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -754,3 +754,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/munge version 0.5.10 [asau 2012-02-19]
 	Updated audio/sptk to 3.5 [obache 2012-02-19]
 	Updated net/mikutter to 0.0.4.690 [obache 2012-02-19]
+	Updated graphics/p5-GD to 2.46nb3 [hiramatsu 2012-02-19]
