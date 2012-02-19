@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.530 2012/02/19 13:10:12 obache Exp $
+$NetBSD: CHANGES-2012,v 1.531 2012/02/19 14:02:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -764,3 +764,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-sqlite3 to 1.3.5 [taca 2012-02-19]
 	Updated shells/lshell to 0.9.14 [gls 2012-02-19]
 	Updated mail/offlineimap to 6.5.2.1 [obache 2012-02-19]
+	Updated devel/py-pysvn to 1.7.5 [wiz 2012-02-19]
