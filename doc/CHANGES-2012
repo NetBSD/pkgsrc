@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.531 2012/02/19 14:02:48 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.532 2012/02/19 14:33:18 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -765,3 +765,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated shells/lshell to 0.9.14 [gls 2012-02-19]
 	Updated mail/offlineimap to 6.5.2.1 [obache 2012-02-19]
 	Updated devel/py-pysvn to 1.7.5 [wiz 2012-02-19]
+	Added x11/libdesktop-agnostic version 0.3.92 [imil 2012-02-19]
