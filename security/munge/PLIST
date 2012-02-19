@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/19 03:51:17 asau Exp $
+bin/munge
+bin/remunge
+bin/unmunge
+include/munge.h
+lib/libmunge.la
+man/man1/munge.1
+man/man1/remunge.1
+man/man1/unmunge.1
+man/man3/munge.3
+man/man3/munge_ctx.3
+man/man3/munge_ctx_copy.3
+man/man3/munge_ctx_create.3
+man/man3/munge_ctx_destroy.3
+man/man3/munge_ctx_get.3
+man/man3/munge_ctx_set.3
+man/man3/munge_ctx_strerror.3
+man/man3/munge_decode.3
+man/man3/munge_encode.3
+man/man3/munge_enum.3
+man/man3/munge_enum_int_to_str.3
+man/man3/munge_enum_is_valid.3
+man/man3/munge_enum_str_to_int.3
+man/man3/munge_strerror.3
+man/man7/munge.7
+man/man8/munged.8
+sbin/munged
+share/examples/default/munge
+share/examples/init.d/munge
+@pkgdir var/run/munge
+@pkgdir var/log/munge
+@pkgdir var/lib/munge
+@pkgdir share/examples/munge
