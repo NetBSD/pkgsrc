@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10888 2012/02/19 17:45:24 minskim Exp $
+$NetBSD: TODO,v 1.10889 2012/02/19 21:07:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -299,7 +299,7 @@ Suggested new packages
 	libWindowsWM, libXfontcache, util-macros, viewres, windowswmproto,
 	xcmsdb, xf86-input-acecad, xf86-input-aiptek, xf86-input-evdev,
 	xf86-input-fpit, xf86-input-hyperpen, xf86-input-penmount,
-	xf86-input-mutouch, xorg-gtest,
+	xf86-input-mutouch, xorg-gtest, xf86-video-modesetting,
 	xf86-input-joystick, xf86-input-synaptics, xf86-input-wacom,
 	xf86-video-dummy, xf86-video-fbdev, xf86-video-glide, xfsinfo,
 	xf86-video-impact, xf86-video-newport, xf86-video-sisusb, xmh,
@@ -424,9 +424,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bigreqsproto-1.1.1
 	o binutils-2.22 [wip]
 	o bioperl-1.5.0
-	o bitlbee-3.0.4
+	o bitlbee-3.0.5
 	o bitmap-1.0.5
-	o blender-2.61
+	o blender-2.62
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -439,6 +439,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o calibre-0.8.40
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.2
 	o cddbd-1.5.2
@@ -500,6 +501,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.7
 	o dgen-1.29
 	o dhid-5.3
+	o dialog-1.1.20120215
 	o diffpdf-1.8.0
 	o diffstat-1.55
 	o diffutils-3.2
@@ -548,7 +550,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
 	o eric4-4.5.0
-	o eric5-5.1.8
+	o eric5-5.2.0
 	o erlang-15b
 	o esh-0.8.5
 	o espeak-1.40
@@ -581,7 +583,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
-	o firefox-10.0
+	o firefox-10.0.2
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-2.4
@@ -741,7 +743,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-vnc-0.4.3
 	o gtkmm-3.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtkwave-3.3.31
+	o gtkwave-3.3.32
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranslator-1.9.6
@@ -762,7 +764,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o haskell-mode-1.45
 	o hatari-1.6.1
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
-	o help2man-1.40.5
+	o help2man-1.40.6
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-8.0
@@ -958,7 +960,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.7.3
+	o mathomatic-15.8.0
 	o mecab-0.992 [break textproc/php-mecab]
 	o mediawiki-1.18.1
 	o meld-1.5.3
@@ -995,7 +997,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mpop-1.0.26
 	o mserv-devel-0.41
 	o mtools-4.0.17
-	o mu-0.9.8
+	o mu-0.9.8.1
 	o multitail-5.2.9
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
@@ -1046,7 +1048,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opengrok-0.11
 	o openh323-1.19.1
 	o openldap-2.4.28
-	o openldap-client-2.4.28
+	o openldap-client-2.4.29
 	o openmortal-0.7.1
 	o openmsx-0.8.2
 	o openoffice3-3.3
@@ -1107,7 +1109,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o polkit-qt-0.103.0
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.18.3
+	o poppler-0.18.4
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.72
@@ -1125,7 +1127,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-2.7.6
 	o putty-0.62
 	o puzzle-9173
-	o puzzles-9406
+	o puzzles-9408
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1147,7 +1149,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-xcbgen-1.7
 	o python-3.2
 	o qbrew-0.3.9
-	o qemu-1.0
+	o qemu-1.0.1
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o quilt-0.51
@@ -1289,6 +1291,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texmaker-3.1 [pkg/45521]
 	o texmaker-3.2.2
 	o tfmxplay-1.1.6
+	o tiff-4.0.1
 	o tig-0.18
 	o tightvnc-2.0.95
 	o tile-0.7.4
@@ -1347,6 +1350,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vino-2.32.2 [GNOME 2.32]
 	o vino-3.2.2
 	o visual-regexp-3.1
+	o vlc-2.0.0
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.4
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
@@ -1365,7 +1369,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wesnoth-1.10
 	o whohas-0.29
 	o windowlab-1.40
-	o wine-devel-1.4.0rc2
+	o wine-devel-1.4.0rc4
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1523,6 +1527,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
+	o zile-2.4.6
 	o zim-0.54
 	o zircon-1.18.256
 	o zlib-1.2.6
