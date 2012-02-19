@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2012/01/12 16:33:49 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2012/02/19 01:46:45 sbd Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -53,6 +53,7 @@ CMAKE_ARGS+=		-DINSTALL_DOCDIR="share/doc/mysql"
 CMAKE_ARGS+=		-DINSTALL_DOCREADMEDIR="share/doc/mysql"
 CMAKE_ARGS+=		-DINSTALL_INCLUDEDIR="include/mysql"
 CMAKE_ARGS+=		-DINSTALL_INFODIR="info"
+CMAKE_ARGS+=		-DINSTALL_MANDIR="${PKGMANDIR}"
 CMAKE_ARGS+=		-DINSTALL_MYSQLSHAREDIR="share/mysql"
 CMAKE_ARGS+=		-DINSTALL_MYSQLTESTDIR="share/mysql/test"
 CMAKE_ARGS+=		-DINSTALL_PLUGINDIR="lib/mysql/plugin"
