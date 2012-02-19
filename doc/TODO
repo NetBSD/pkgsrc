@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10886 2012/02/19 11:14:48 obache Exp $
+$NetBSD: TODO,v 1.10887 2012/02/19 13:09:35 obache Exp $
 
 Suggested new packages
 ======================
@@ -1036,7 +1036,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
-	o offlineimap-6.4.2 [pkg/45712]
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
