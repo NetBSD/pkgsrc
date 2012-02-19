@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/08 13:32:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/19 05:10:11 obache Exp $
 SPTK/bin/acep
 SPTK/bin/acorr
 SPTK/bin/agcep
@@ -23,6 +23,7 @@ SPTK/bin/df2
 SPTK/bin/dfs
 SPTK/bin/dmp
 SPTK/bin/ds
+SPTK/bin/dtw
 SPTK/bin/echo2
 SPTK/bin/excite
 SPTK/bin/extract
@@ -73,9 +74,14 @@ SPTK/bin/ltcdf
 SPTK/bin/mc2b
 SPTK/bin/mcep
 SPTK/bin/merge
+SPTK/bin/mfcc
 SPTK/bin/mgc2mgc
+SPTK/bin/mgc2mgclsp
+SPTK/bin/mgc2mgclsp.sh
 SPTK/bin/mgc2sp
 SPTK/bin/mgcep
+SPTK/bin/mgclsp2mgc
+SPTK/bin/mgclsp2mgc.sh
 SPTK/bin/mglsadf
 SPTK/bin/minmax
 SPTK/bin/mlpg
