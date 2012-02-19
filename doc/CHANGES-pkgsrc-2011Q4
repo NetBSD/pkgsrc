@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.33 2012/02/18 23:36:42 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.34 2012/02/19 04:20:38 sbd Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -151,3 +151,6 @@ lang/python25: security patch
 lang/python26: security patch
 lang/python27: security patch
 lang/python31: security patch
+Pullup ticket #3686 - requested by tron
+databases/phpmyadmin security update
+
