@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/19 14:43:11 imil Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/19 17:33:26 imil Exp $
 #
 
 DISTNAME=	avant-window-navigator-0.4.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/awn/0.4/0.4.0/+download/
 
@@ -46,11 +47,13 @@ REPLACE_PYTHON+=	awn-settings/awnSettings.py.in
 REPLACE_PYTHON+=	awn-settings/awnSettingsHelper.py
 
 DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
+DEPENDS+=		bzr>=2.4.2:../../devel/bzr
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../lang/vala014/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/py-dbus/buildlink3.mk"  
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../x11/libdesktop-agnostic/buildlink3.mk"
@@ -60,4 +63,6 @@ DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
