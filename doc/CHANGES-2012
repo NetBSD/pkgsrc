@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.532 2012/02/19 14:33:18 imil Exp $
+$NetBSD: CHANGES-2012,v 1.533 2012/02/19 14:47:19 imil Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -766,3 +766,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/offlineimap to 6.5.2.1 [obache 2012-02-19]
 	Updated devel/py-pysvn to 1.7.5 [wiz 2012-02-19]
 	Added x11/libdesktop-agnostic version 0.3.92 [imil 2012-02-19]
+	Added x11/avant-window-navigator version 0.4.0 [imil 2012-02-19]
