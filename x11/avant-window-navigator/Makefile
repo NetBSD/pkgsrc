@@ -1,0 +1,63 @@
+# $NetBSD: Makefile,v 1.1.1.1 2012/02/19 14:43:11 imil Exp $
+#
+
+DISTNAME=	avant-window-navigator-0.4.0
+CATEGORIES=	x11
+MASTER_SITES=	https://launchpad.net/awn/0.4/0.4.0/+download/
+
+MAINTAINER=	imil@NetBSD.org
+HOMEPAGE=	https://launchpad.net/awn
+COMMENT=	Dock-like navigation bar
+LICENSE=	gnu-lgpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Needed fo launchpad
+FETCH_USING=	curl
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config msgfmt intltool gmake
+USE_LIBTOOL=	yes
+
+PKGCONFIG_OVERRIDE+=	awn.pc.in
+
+GCONF_SCHEMAS+=		avant-window-navigator.schemas
+GCONF_SCHEMAS+=		awn-applet-taskmanager.schemas
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	post-patch
+SUBST_MESSAGE.python=	Fixing python path
+SUBST_FILES.python=	applet-activation/main.c
+SUBST_SED.python=	-e "s,@PYTHONBIN@,${PYTHONBIN},"
+
+SUBST_CLASSES+=		pathfix
+SUBST_STAGE.pathfix=	post-patch
+SUBST_MESSAGE.pathfix=	Fixing hardcoded paths
+SUBST_FILES.pathfix=	applets/taskmanager/awn-applet-taskmanager.schema-ini.in
+SUBST_FILES.pathfix+=	doc/reference/html/*.html
+SUBST_FILES.pathfix+=	libawn/awn-themed-icon.c
+SUBST_FILES.pathfix+=	tests/test-awn-effects.c
+SUBST_FILES.pathfix+=	tests/test-overlays.py
+SUBST_SED.pathfix=	-e "s,/usr/share,${PREFIX}/share,"
+
+PY_PATCHPLIST=		yes
+REPLACE_PYTHON+=	awn-settings/awnSettings.py.in
+REPLACE_PYTHON+=	awn-settings/awnSettingsHelper.py
+
+DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
+
+.include "../../devel/GConf/schemas.mk"
+.include "../../lang/vala014/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../x11/libdesktop-agnostic/buildlink3.mk"
+.include "../../sysutils/libgtop/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/19 14:43:11 imil Exp $
+
+SHA1 (avant-window-navigator-0.4.0.tar.gz) = 2e64c4e66af93ff5ef3a5a2f3cfbaa1db1027a9c
+RMD160 (avant-window-navigator-0.4.0.tar.gz) = 2f57086b34bceba1e503e3fbe7e10a2138bb683c
+Size (avant-window-navigator-0.4.0.tar.gz) = 1556708 bytes
+SHA1 (patch-applet-activation_main.c) = 364b76fb884d02e6e4f84b630116aaa7cda22e5d
+SHA1 (patch-applets_taskmanager_Makefile.in) = d0cdfc228b18bf13c65ab5dca219b6cd16a4dd87
+SHA1 (patch-data_Makefile.in) = af286e9c8dcc72559f07e818759cd4d6543205a2
