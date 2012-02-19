@@ -1,0 +1,54 @@
+$NetBSD: patch-src_etc_Makefile.in,v 1.1.1.1 2012/02/19 03:51:17 asau Exp $
+
+--- src/etc/Makefile.in.orig	2011-01-20 01:41:36.000000000 +0000
++++ src/etc/Makefile.in
+@@ -217,6 +217,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++sysconfexampledir = $(pkgdatadir)/examples
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -432,23 +433,23 @@ distclean-local::
+ 
+ install-data-local:
+ 	expr "`id`" : 'uid=0(' >/dev/null && OWNER="-o daemon" || OWNER=""; \
+-	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfdir)/init.d"; \
+-	new=""; test ! -f "$(DESTDIR)$(sysconfdir)/init.d/munge" \
++	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfexampledir)/init.d"; \
++	new=""; test ! -f "$(DESTDIR)$(sysconfexampledir)/init.d/munge" \
+ 	  || cmp "$(builddir)/munge.init" \
+-	    "$(DESTDIR)$(sysconfdir)/init.d/munge" \
++	    "$(DESTDIR)$(sysconfexampledir)/init.d/munge" \
+ 	  1>/dev/null 2>&1 || new=".new"; \
+ 	$(INSTALL) -m 0755 "$(builddir)/munge.init" \
+-	  "$(DESTDIR)$(sysconfdir)/init.d/munge$${new}"; \
++	  "$(DESTDIR)$(sysconfexampledir)/init.d/munge$${new}"; \
+ 	test -d "/etc/sysconfig" && d="sysconfig" || d="default"; \
+-	new=""; test ! -f "$(DESTDIR)$(sysconfdir)/$${d}/munge" \
++	new=""; test ! -f "$(DESTDIR)$(sysconfexampledir)/$${d}/munge" \
+ 	  || cmp "$(srcdir)/munge.sysconfig" \
+-	    "$(DESTDIR)$(sysconfdir)/$${d}/munge" \
++	    "$(DESTDIR)$(sysconfexampledir)/$${d}/munge" \
+ 	  1>/dev/null 2>&1 || new=".new"; \
+-	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfdir)/$${d}"; \
++	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfexampledir)/$${d}"; \
+ 	$(INSTALL) -m 0644 "$(srcdir)/munge.sysconfig" \
+-	  "$(DESTDIR)$(sysconfdir)/$${d}/munge$${new}"; \
++	  "$(DESTDIR)$(sysconfexampledir)/$${d}/munge$${new}"; \
+ 	$(INSTALL) $${OWNER} -m 0700 -d \
+-	  "$(DESTDIR)$(sysconfdir)/munge"; \
++	  "$(DESTDIR)$(sysconfexampledir)/munge"; \
+ 	$(INSTALL) -m 0711 -d "$(DESTDIR)$(localstatedir)/lib"; \
+ 	$(INSTALL) $${OWNER} -m 0711 -d \
+ 	  "$(DESTDIR)$(localstatedir)/lib/munge"; \
+@@ -458,7 +459,7 @@ install-data-local:
+ 	$(INSTALL) -m 0711 -d "$(DESTDIR)$(localstatedir)/run"; \
+ 	$(INSTALL) $${OWNER} -m 0755 -d \
+ 	  "$(DESTDIR)$(localstatedir)/run/munge"
+-	chmod 755 "$(DESTDIR)$(sysconfdir)"
++	chmod 755 "$(DESTDIR)$(sysconfexampledir)"
+ 	chmod 755 "$(DESTDIR)$(localstatedir)"
+ 	chmod 755 "$(DESTDIR)$(localstatedir)/lib"
+ 	chmod 755 "$(DESTDIR)$(localstatedir)/log"
