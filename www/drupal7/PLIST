@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/01 23:55:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/19 16:31:08 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -56,6 +56,7 @@ share/drupal/includes/image.inc
 share/drupal/includes/install.core.inc
 share/drupal/includes/install.inc
 share/drupal/includes/iso.inc
+share/drupal/includes/json-encode.inc
 share/drupal/includes/language.inc
 share/drupal/includes/locale.inc
 share/drupal/includes/lock.inc
@@ -242,6 +243,8 @@ share/drupal/modules/block/block.test
 share/drupal/modules/block/block.tpl.php
 share/drupal/modules/block/tests/block_test.info
 share/drupal/modules/block/tests/block_test.module
+share/drupal/modules/block/tests/themes/block_test_theme/block_test_theme.info
+share/drupal/modules/block/tests/themes/block_test_theme/page.tpl.php
 share/drupal/modules/blog/blog.info
 share/drupal/modules/blog/blog.install
 share/drupal/modules/blog/blog.module
@@ -691,6 +694,14 @@ share/drupal/modules/simpletest/tests/session_test.module
 share/drupal/modules/simpletest/tests/system.base.css
 share/drupal/modules/simpletest/tests/system_dependencies_test.info
 share/drupal/modules/simpletest/tests/system_dependencies_test.module
+share/drupal/modules/simpletest/tests/system_incompatible_core_version_dependencies_test.info
+share/drupal/modules/simpletest/tests/system_incompatible_core_version_dependencies_test.module
+share/drupal/modules/simpletest/tests/system_incompatible_core_version_test.info
+share/drupal/modules/simpletest/tests/system_incompatible_core_version_test.module
+share/drupal/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.info
+share/drupal/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.module
+share/drupal/modules/simpletest/tests/system_incompatible_module_version_test.info
+share/drupal/modules/simpletest/tests/system_incompatible_module_version_test.module
 share/drupal/modules/simpletest/tests/system_test.info
 share/drupal/modules/simpletest/tests/system_test.module
 share/drupal/modules/simpletest/tests/tablesort.test
@@ -700,8 +711,14 @@ share/drupal/modules/simpletest/tests/taxonomy_test.module
 share/drupal/modules/simpletest/tests/theme.test
 share/drupal/modules/simpletest/tests/theme_test.info
 share/drupal/modules/simpletest/tests/theme_test.module
+share/drupal/modules/simpletest/tests/theme_test.template_test.tpl.php
+share/drupal/modules/simpletest/tests/themes/test_theme/template.php
+share/drupal/modules/simpletest/tests/themes/test_theme/test_theme.info
 share/drupal/modules/simpletest/tests/unicode.test
 share/drupal/modules/simpletest/tests/update.test
+share/drupal/modules/simpletest/tests/update_script_test.info
+share/drupal/modules/simpletest/tests/update_script_test.install
+share/drupal/modules/simpletest/tests/update_script_test.module
 share/drupal/modules/simpletest/tests/update_test_1.info
 share/drupal/modules/simpletest/tests/update_test_1.install
 share/drupal/modules/simpletest/tests/update_test_1.module
@@ -717,10 +734,15 @@ share/drupal/modules/simpletest/tests/upgrade/drupal-6.filled.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.forum.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.locale.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.menu.database.php
+share/drupal/modules/simpletest/tests/upgrade/drupal-6.node_type_broken.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.translatable.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.user-no-password-token.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.user-password-token.database.php
+share/drupal/modules/simpletest/tests/upgrade/drupal-7.bare.minimal.database.php.gz
+share/drupal/modules/simpletest/tests/upgrade/drupal-7.bare.standard_all.database.php.gz
+share/drupal/modules/simpletest/tests/upgrade/drupal-7.filled.minimal.database.php.gz
+share/drupal/modules/simpletest/tests/upgrade/drupal-7.filled.standard_all.database.php.gz
 share/drupal/modules/simpletest/tests/upgrade/upgrade.comment.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.filter.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.forum.test
@@ -834,6 +856,8 @@ share/drupal/modules/update/tests/drupal.0.xml
 share/drupal/modules/update/tests/drupal.1.xml
 share/drupal/modules/update/tests/drupal.2-sec.xml
 share/drupal/modules/update/tests/drupal.dev.xml
+share/drupal/modules/update/tests/themes/update_test_basetheme/update_test_basetheme.info
+share/drupal/modules/update/tests/themes/update_test_subtheme/update_test_subtheme.info
 share/drupal/modules/update/tests/update_test.info
 share/drupal/modules/update/tests/update_test.module
 share/drupal/modules/update/tests/update_test_basetheme.1_1-sec.xml
@@ -890,9 +914,12 @@ share/drupal/scripts/cron-curl.sh
 share/drupal/scripts/cron-lynx.sh
 share/drupal/scripts/drupal.sh
 share/drupal/scripts/dump-database-d6.sh
+share/drupal/scripts/dump-database-d7.sh
 share/drupal/scripts/generate-d6-content.sh
+share/drupal/scripts/generate-d7-content.sh
 share/drupal/scripts/password-hash.sh
 share/drupal/scripts/run-tests.sh
+share/drupal/scripts/test.script
 share/drupal/sites/all/README.txt
 share/drupal/themes/README.txt
 share/drupal/themes/bartik/bartik.info
@@ -999,11 +1026,6 @@ share/drupal/themes/stark/layout.css
 share/drupal/themes/stark/logo.png
 share/drupal/themes/stark/screenshot.png
 share/drupal/themes/stark/stark.info
-share/drupal/themes/tests/README.txt
-share/drupal/themes/tests/test_theme/template.php
-share/drupal/themes/tests/test_theme/test_theme.info
-share/drupal/themes/tests/update_test_basetheme/update_test_basetheme.info
-share/drupal/themes/tests/update_test_subtheme/update_test_subtheme.info
 share/drupal/update.php
 share/drupal/xmlrpc.php
 share/examples/drupal/default.settings.php
