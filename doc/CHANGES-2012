@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.523 2012/02/19 07:44:33 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.524 2012/02/19 09:26:51 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -755,3 +755,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/sptk to 3.5 [obache 2012-02-19]
 	Updated net/mikutter to 0.0.4.690 [obache 2012-02-19]
 	Updated graphics/p5-GD to 2.46nb3 [hiramatsu 2012-02-19]
+	Updated graphics/png to 1.5.9 [tron 2012-02-19]
