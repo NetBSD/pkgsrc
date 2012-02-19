@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.34 2012/02/19 04:20:38 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.35 2012/02/19 13:58:45 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -117,7 +117,7 @@ devel/p5-Config-Grammar: new package
 Pullup ticket #3670 - requested by bouyer
 net/smokeping: security update
 Pullup ticket #3671 - requested by taca
-lang/php53 security and build fixes.
+lang/php53: security and build fixes.
 Pullup ticket #3672 - requested by bouyer
 sysutils/xentools33: build fix & security patch
 sysutils/xentools41: bug fix & security patch
@@ -135,7 +135,7 @@ x11/startup-notification: suport older native X11 via "startup-notification010"
 Pullup ticket #3677 - requested by wiz
 Additon of startup-notification010 to x11 SUBDIR list
 Pullup ticket #3679 - requested by spz
-devel/apr security update
+devel/apr: security update
 Pullup ticket #3680 - requested by sbd
 emulators/qemu: build fix
 Pullup ticket #3681 - requested by riz
@@ -143,7 +143,7 @@ devel/m4: build fix
 Pullup ticket #3682 - requested by riz
 lang/php5: build fix
 Pullup ticket #3683 - requested by obache
-lang/sun-{jre,jdk}6 security update
+lang/sun-{jre,jdk}6: security update
 Pullup ticket #3684 - requested by drochner
 audio/libvorbis: security patch
 Pullup ticket #3685 - requested by drochner
@@ -152,5 +152,6 @@ lang/python26: security patch
 lang/python27: security patch
 lang/python31: security patch
 Pullup ticket #3686 - requested by tron
-databases/phpmyadmin security update
-
+databases/phpmyadmin: security update
+Pullup ticket #3687 - requested by tron
+graphics/png: security update
