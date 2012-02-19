@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.643 2012/02/19 14:31:01 imil Exp $
+# $NetBSD: Makefile,v 1.644 2012/02/19 14:45:37 imil Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -18,6 +18,7 @@ SUBDIR+=	applewmproto
 SUBDIR+=	appres
 SUBDIR+=	asnap
 SUBDIR+=	aterm
+SUBDIR+=	avant-window-navigator
 SUBDIR+=	bbapm
 SUBDIR+=	beforelight
 SUBDIR+=	bigreqsproto
