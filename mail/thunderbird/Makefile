@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2012/02/06 12:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2012/02/19 10:11:40 cheusov Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/comm-release
