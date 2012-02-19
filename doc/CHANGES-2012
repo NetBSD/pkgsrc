@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.538 2012/02/19 17:45:24 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.539 2012/02/19 18:21:26 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -773,3 +773,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/emacs-snapshot to 24.0.93.20120216 [minskim 2012-02-19]
 	Updated x11/avant-window-navigator to 0.4.0nb1 [imil 2012-02-19]
 	Updated editors/emacs to 23.4 [minskim 2012-02-19]
+	Updated mail/postfix to 2.8.8 [tron 2012-02-19]
