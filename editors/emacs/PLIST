@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2011/11/28 16:29:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2012/02/19 17:44:35 minskim Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -85,7 +85,7 @@ share/emacs/${EMACS_VERSION}/etc/COPYING
 share/emacs/${EMACS_VERSION}/etc/DEBUG
 share/emacs/${EMACS_VERSION}/etc/DEVEL.HUMOR
 share/emacs/${EMACS_VERSION}/etc/DISTRIB
-share/emacs/${EMACS_VERSION}/etc/DOC-23.3.1
+share/emacs/${EMACS_VERSION}/etc/DOC-${EMACS_VERSION}.1
 share/emacs/${EMACS_VERSION}/etc/ERC-NEWS
 share/emacs/${EMACS_VERSION}/etc/ETAGS.EBNF
 share/emacs/${EMACS_VERSION}/etc/ETAGS.README
