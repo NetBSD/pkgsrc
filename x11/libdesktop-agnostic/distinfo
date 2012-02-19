@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/19 14:23:00 imil Exp $
+
+SHA1 (libdesktop-agnostic-0.3.92.tar.gz) = b8be6db7f6185f0d9ddbc632cd7211f1043c85b1
+RMD160 (libdesktop-agnostic-0.3.92.tar.gz) = 7936f6473ce06bc6ec01cf1cc6edd43418888b62
+Size (libdesktop-agnostic-0.3.92.tar.gz) = 442653 bytes
+SHA1 (patch-data_wscript) = b43f9ee46a99f393236ed9a91386368045ad0ed2
+SHA1 (patch-gen__src_libdesktop-agnostic_vfs-glob.c) = 915cdfa4a1bd0c2112cdf5e63ba92e9f4ea377ab
