@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10885 2012/02/18 17:06:05 gls Exp $
+$NetBSD: TODO,v 1.10886 2012/02/19 11:14:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -963,7 +963,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mecab-0.992 [break textproc/php-mecab]
 	o mediawiki-1.18.1
 	o meld-1.5.3
-	o memtest86-4.0 [pkg/45754]
 	o mergeant-0.67
 	o mess-0.145
 	o mesure-0.7.2
