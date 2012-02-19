@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.535 2012/02/19 16:33:14 taca Exp $
+$NetBSD: CHANGES-2012,v 1.536 2012/02/19 17:08:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -770,3 +770,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/drupal6 to 6.24 [taca 2012-02-19]
 	Updated www/drupal7 to 7.12 [taca 2012-02-19]
 	Updated misc/rubygems to 1.8.17 [taca 2012-02-19]
+	Updated editors/emacs-snapshot to 24.0.93.20120216 [minskim 2012-02-19]
