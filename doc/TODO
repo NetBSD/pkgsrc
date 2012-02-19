@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10887 2012/02/19 13:09:35 obache Exp $
+$NetBSD: TODO,v 1.10888 2012/02/19 17:45:24 minskim Exp $
 
 Suggested new packages
 ======================
@@ -536,7 +536,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
 	o elm-me-2.5plalpha28
-	o emacs-23.4
 	o emacs-muse-3.20
 	o emech-2.8.5.1
 	o emerillon-0.1.90
