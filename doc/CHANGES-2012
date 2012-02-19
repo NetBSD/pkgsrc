@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.533 2012/02/19 14:47:19 imil Exp $
+$NetBSD: CHANGES-2012,v 1.534 2012/02/19 16:31:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -767,3 +767,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-pysvn to 1.7.5 [wiz 2012-02-19]
 	Added x11/libdesktop-agnostic version 0.3.92 [imil 2012-02-19]
 	Added x11/avant-window-navigator version 0.4.0 [imil 2012-02-19]
+	Updated www/drupal6 to 6.24 [taca 2012-02-19]
+	Updated www/drupal7 to 7.12 [taca 2012-02-19]
