@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/08/12 11:58:10 adam Exp $
+$NetBSD: distinfo,v 1.4 2012/02/20 13:47:11 sno Exp $
 
-SHA1 (Devel-TraceUse-2.05.tar.gz) = a6bd193fafa974b63599e0976d0156bf738e2689
-RMD160 (Devel-TraceUse-2.05.tar.gz) = 1de996ed475b6fd6a1700da19bbd375321fa1c2e
-Size (Devel-TraceUse-2.05.tar.gz) = 12480 bytes
+SHA1 (Devel-TraceUse-2.06.tar.gz) = b207d2e5427981537e39ee67eb3889834370cff6
+RMD160 (Devel-TraceUse-2.06.tar.gz) = 638ed2ddac17841858172818bb81c45280e2ca37
+Size (Devel-TraceUse-2.06.tar.gz) = 12650 bytes
