@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.19 2011/08/20 15:28:09 joerg Exp $
+$NetBSD: distinfo,v 1.20 2012/02/20 15:39:37 reinoud Exp $
 
-SHA1 (allegro-4.2.2.tar.gz) = 1526fc87e028db9de0b94fd8d0697e47b91b15b7
-RMD160 (allegro-4.2.2.tar.gz) = 4cefa321f38aa955d857ac3b74e529bc8e044fe9
-Size (allegro-4.2.2.tar.gz) = 3181258 bytes
-SHA1 (patch-aa) = 8115771ea7f5fd8e0c06f9791229dcbe4e102996
-SHA1 (patch-ac) = 78f99723b095f460f20e8367fffb443a8f3d6ab6
-SHA1 (patch-ad) = 52f694e1b0053cff94c53ee10f603d535eba5fa5
-SHA1 (patch-ae) = 32e5ecd77e58bb6926c207c668755043448457f9
-SHA1 (patch-ax) = b79d1bf82fc0e9bba9b7d81e6d2005f35a217ca0
-SHA1 (patch-de) = 6233472355f49442a5278e1f49dd888f51433a93
-SHA1 (patch-include-allegro-internal-alconfig.h) = 4d6b9453e52f31b7d5ce95458ae087a36e86bc3a
+SHA1 (allegro-4.4.2.tar.gz) = ae0c15d2cb6b0337ef388dc98cefc620883720df
+RMD160 (allegro-4.4.2.tar.gz) = a6f6a03d6748230dfb5f306d1a05ef45ffa49f42
+Size (allegro-4.4.2.tar.gz) = 4674902 bytes
+SHA1 (patch-CMakeLists.txt) = 3909f98a2156085d8462e779c95c8df3b20bd602
+SHA1 (patch-docs_CMakeLists.txt) = a5a8cbfed0721a37a921c481c9c9295b2be62bb7
+SHA1 (patch-xdga2-include) = d2df1ff176b6190f317f02a19f49b7476365188e
