@@ -1,58 +1,52 @@
-# $NetBSD: Makefile,v 1.32 2012/01/13 10:54:54 obache Exp $
+# $NetBSD: Makefile,v 1.33 2012/02/20 15:39:37 reinoud Exp $
+#
 
-DISTNAME=	allegro-4.2.2
-PKGREVISION=	1
+DISTNAME=	allegro-4.4.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alleg.sourceforge.net/
 COMMENT=	Allegro game programming library
+#LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_JOBS_SAFE=		no
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config makeinfo
+USE_LANGUAGES=	c c++
 
-USE_TOOLS+=		gmake makeinfo
-GNU_CONFIGURE=		yes
+INFO_FILES=	yes
 
-MAKE_FILE=		makefile
-BUILD_TARGET=		# there is no 'all' target for some reason
-INFO_FILES=		YES
-INSTALL_TARGET=		install install-info
+.include "../../mk/bsd.prefs.mk"
 
-# NetBSD's OSS midi emulation is non-existent.
-CONFIGURE_ARGS+=	--disable-ossmidi
-
-.include "options.mk"
-
-.if !empty(INSTALL_UNSTRIPPED:Uno:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	allegro_cv_prog_ld_s=no
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		ossmidi
+SUBST_STAGE.ossmidi=	pre-configure
+SUBST_MESSAGE.ossmidi=	NetBSD's OSS midi emulation is non-existent.
+SUBST_FILES.ossmidi=	CMakeLists.txt
+SUBST_SED.ossmidi=	-e 's/ALLEGRO_WITH_OSSMIDI 1/ALLEGRO_WITH_OSSMIDI 0/'
 .endif
 
-SUBST_CLASSES+=		oss
-SUBST_STAGE.oss=	post-patch
-SUBST_FILES.oss=	src/unix/uoss.c setup/setup.c
-SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
-
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	src/unix/umodules.c src/unix/usystem.c
-SUBST_SED.path=		-e "s,@@PREFIX@@,${PREFIX},g"
-SUBST_MESSAGE.path=	Fixing hardcoded path.
-
-BUILDLINK_DEPMETHOD.libXt?=	build
+PKGCONFIG_OVERRIDE+=	misc/logg.pc.in
+PKGCONFIG_OVERRIDE+=	misc/loadpng.pc.in
+PKGCONFIG_OVERRIDE+=	misc/allegrogl.pc.in
+PKGCONFIG_OVERRIDE+=	misc/jpgalleg.pc.in
+PKGCONFIG_OVERRIDE+=	misc/allegro.pc.in
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
