@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2012/02/20 15:40:55 reinoud Exp $
+
+--- CMakeLists.txt.orig	2011-03-24 23:18:50.000000000 +0000
++++ CMakeLists.txt
+@@ -434,6 +434,7 @@ if(ALLEGRO_UNIX) # not MACOSX
+             set(ALLEGRO_WITH_OSSDIGI 1)
+             set(ALLEGRO_WITH_OSSMIDI 1)
+             include_directories(SYSTEM ${OSS_INCLUDE_DIR})
++	    list(APPEND PLATFORM_LIBS ossaudio)
+         endif(OSS_FOUND)
+     endif(WANT_OSS)
+ 

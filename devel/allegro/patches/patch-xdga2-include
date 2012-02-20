@@ -1,0 +1,13 @@
+$NetBSD: patch-xdga2-include,v 1.1 2012/02/20 15:40:55 reinoud Exp $
+
+--- src/x/xdga2.c.orig	2007-03-24 15:02:01.000000000 +0000
++++ src/x/xdga2.c
+@@ -23,7 +23,7 @@
+ #if (defined ALLEGRO_XWINDOWS_WITH_XF86DGA2) && ((!defined ALLEGRO_WITH_MODULES) || (defined ALLEGRO_MODULE))
+ 
+ #include <X11/Xlib.h>
+-#include <X11/extensions/xf86dga.h>
++#include <X11/extensions/Xxf86dga.h>
+ 
+ 
+ #define RESYNC()     XDGASync(_xwin.display, _xwin.screen);
