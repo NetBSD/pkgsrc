@@ -1,0 +1,13 @@
+$NetBSD: patch-docs_CMakeLists.txt,v 1.1 2012/02/20 15:40:55 reinoud Exp $
+
+--- docs/CMakeLists.txt.orig	2009-10-30 23:05:30.000000000 +0000
++++ docs/CMakeLists.txt
+@@ -8,7 +8,7 @@ if(NOT WANT_DOCS OR CMAKE_CROSSCOMPILING
+     return()
+ endif()
+ 
+-set(DOCDIR "doc" CACHE STRING "Install docs into $DOCDIR/allegro-$VERSION")
++set(DOCDIR "share/doc" CACHE STRING "Install docs into $DOCDIR/allegro-$VERSION")
+ set(ACTUAL_DOC_DIR "${DOCDIR}/allegro-${ALLEGRO_VERSION}")
+ 
+ add_executable(makedoc
