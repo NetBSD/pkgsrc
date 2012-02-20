@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2012/01/28 10:33:31 wiz Exp $
+$NetBSD: distinfo,v 1.62 2012/02/20 14:57:06 jdc Exp $
 
 SHA1 (SDL-1.2.15.tar.gz) = 0c5f193ced810b0d7ce3ab06d808cbb5eef03a2c
 RMD160 (SDL-1.2.15.tar.gz) = d4802a090cb4a24eeb0c8ce5690802f596d394c3
@@ -8,3 +8,4 @@ SHA1 (patch-ac) = a5a04b04bffd24787282de3fa719809ba63193dd
 SHA1 (patch-src_audio_sun_SDL__sunaudio.c) = e2bbc5577a397e418c3fb565428b8fc558089802
 SHA1 (patch-src_video_wscons_SDL__wsconsevents.c) = e1595611542f3ffaebfe32ee611596c18c06be5e
 SHA1 (patch-src_video_wscons_SDL__wsconsvideo.c) = 356a8817cc41dde5e24cb23f032215931f85a84b
+SHA1 (patch-src_video_x11_SDL_x11video.c) = 624fbb7e701d6de6ec93096beea7c085125934aa
