@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.540 2012/02/20 12:26:28 sno Exp $
+$NetBSD: CHANGES-2012,v 1.541 2012/02/20 12:29:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/emacs to 23.4 [minskim 2012-02-19]
 	Updated mail/postfix to 2.8.8 [tron 2012-02-19]
 	Updated devel/p5-Array-Compare to 2.02 [sno 2012-02-20]
+	Updated devel/p5-Attribute-Handlers to 0.93 [sno 2012-02-20]
