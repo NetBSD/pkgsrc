@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.544 2012/02/20 13:16:36 sno Exp $
+$NetBSD: CHANGES-2012,v 1.545 2012/02/20 13:20:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -779,3 +779,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-AutoLoader to 5.72 [sno 2012-02-20]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.10 [sno 2012-02-20]
 	Added devel/p5-CPAN-Meta-YAML version 0.007 [sno 2012-02-20]
+	Updated devel/p5-Parse-CPAN-Meta to 1.4402 [sno 2012-02-20]
