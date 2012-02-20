@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.539 2012/02/19 18:21:26 tron Exp $
+$NetBSD: CHANGES-2012,v 1.540 2012/02/20 12:26:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -774,3 +774,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/avant-window-navigator to 0.4.0nb1 [imil 2012-02-19]
 	Updated editors/emacs to 23.4 [minskim 2012-02-19]
 	Updated mail/postfix to 2.8.8 [tron 2012-02-19]
+	Updated devel/p5-Array-Compare to 2.02 [sno 2012-02-20]
