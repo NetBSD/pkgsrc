@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.546 2012/02/20 13:34:21 sno Exp $
+$NetBSD: CHANGES-2012,v 1.547 2012/02/20 13:47:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -781,3 +781,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-CPAN-Meta-YAML version 0.007 [sno 2012-02-20]
 	Updated devel/p5-Parse-CPAN-Meta to 1.4402 [sno 2012-02-20]
 	Updated devel/p5-CPAN-Meta to 2.120351 [sno 2012-02-20]
+	Updated devel/p5-Devel-TraceUse to 2.06 [sno 2012-02-20]
