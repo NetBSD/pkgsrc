@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2011/12/05 01:17:21 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2012/02/20 15:45:19 reinoud Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -18,6 +18,7 @@ SUBDIR+=	aranym
 SUBDIR+=	arcem
 SUBDIR+=	arnold
 SUBDIR+=	atari800
+SUBDIR+=	b-em
 SUBDIR+=	blinkensim
 SUBDIR+=	bochs
 SUBDIR+=	ckmame
