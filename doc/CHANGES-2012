@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.550 2012/02/20 17:28:09 adam Exp $
+$NetBSD: CHANGES-2012,v 1.551 2012/02/20 20:03:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -785,3 +785,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/allegro to 4.2.2 [reinoud 2012-02-20]
 	Added emulators/b-em version 2.1a [reinoud 2012-02-20]
 	Updated graphics/pngcrush to 1.7.25 [adam 2012-02-20]
+	Updated meta-pkgs/netbsd-www to 1.6 [tron 2012-02-20]
