@@ -1,0 +1,77 @@
+@comment $NetBSD: PLIST,v 1.1 2012/02/20 15:45:19 reinoud Exp $
+bin/b-em
+share/b-em/cmos.bin
+share/b-em/cmosa.bin
+share/b-em/cmosc.bin
+share/b-em/ddnoise/35/motor.wav
+share/b-em/ddnoise/35/motoroff.wav
+share/b-em/ddnoise/35/motoron.wav
+share/b-em/ddnoise/35/seek1i.wav
+share/b-em/ddnoise/35/seek1o.wav
+share/b-em/ddnoise/35/seek2i.wav
+share/b-em/ddnoise/35/seek2o.wav
+share/b-em/ddnoise/35/seek3i.wav
+share/b-em/ddnoise/35/seek3o.wav
+share/b-em/ddnoise/35/stepi.wav
+share/b-em/ddnoise/35/stepo.wav
+share/b-em/ddnoise/525/motor.wav
+share/b-em/ddnoise/525/motoroff.wav
+share/b-em/ddnoise/525/motoron.wav
+share/b-em/ddnoise/525/seek.wav
+share/b-em/ddnoise/525/seek2.wav
+share/b-em/ddnoise/525/seek3.wav
+share/b-em/ddnoise/525/step.wav
+share/b-em/ddnoise/motoroff.wav
+share/b-em/ddnoise/motoron.wav
+share/b-em/discs/ARMEvaluationSystem-Disc1.adl
+share/b-em/discs/ARMEvaluationSystem-Disc2.adl
+share/b-em/discs/ARMEvaluationSystem-Disc3.adl
+share/b-em/discs/ARMEvaluationSystem-Disc4.adl
+share/b-em/discs/ARMEvaluationSystem-Disc5.adl
+share/b-em/discs/B-em Demo Disc.ssd
+share/b-em/discs/Master 512 Disc 1 (DOS Plus Boot).img
+share/b-em/discs/Master 512 Disc 2 (GEM).img
+share/b-em/discs/Master 512 Disc 3 (GEM data).img
+share/b-em/discs/Master 512 Disc 4 (Miscellaneous).img
+share/b-em/discs/MasterWelcome.adl
+share/b-em/discs/Welcome.ssd
+share/b-em/discs/cpm1.dsd
+share/b-em/discs/cpm2.dsd
+share/b-em/discs/cpm3.dsd
+share/b-em/discs/cpm4.dsd
+share/b-em/discs/cpm5.dsd
+share/b-em/discs/cpm6.dsd
+share/b-em/discs/cpm7.dsd
+share/b-em/roms/ADFS1-53.rom
+share/b-em/roms/a/BASIC.ROM
+share/b-em/roms/a01/BASIC1.rom
+share/b-em/roms/b/BASIC.ROM
+share/b-em/roms/b/DFS-0.9.rom
+share/b-em/roms/b1770/BASIC.ROM
+share/b-em/roms/b1770/dfs1770.rom
+share/b-em/roms/b1770/zADFS.ROM
+share/b-em/roms/bp/BASIC.ROM
+share/b-em/roms/bp/dfs.rom
+share/b-em/roms/bp/zADFS.ROM
+share/b-em/roms/bpos
+share/b-em/roms/compact/adfs210.rom
+share/b-em/roms/compact/basic48.rom
+share/b-em/roms/compact/basic486.rom
+share/b-em/roms/compact/os51.rom
+share/b-em/roms/compact/utils.rom
+share/b-em/roms/deos
+share/b-em/roms/master/mos.txt
+share/b-em/roms/master/mos3.20
+share/b-em/roms/os
+share/b-em/roms/os01
+share/b-em/roms/tube/6502Tube.rom
+share/b-em/roms/tube/ARMeval_100.rom
+share/b-em/roms/tube/BIOS.ROM
+share/b-em/roms/tube/ReCo6502ROM_816
+share/b-em/roms/tube/Z80_120.rom
+share/b-em/roms/us/USBASIC.rom
+share/b-em/roms/us/USDNFS.rom
+share/b-em/roms/usmos
+share/b-em/tapes/Welcome-BBCMaster-Side1_BM.uef
+share/b-em/tapes/Welcome-BBCMaster-Side2_BM.uef
+share/b-em/tapes/Welcome_B.uef

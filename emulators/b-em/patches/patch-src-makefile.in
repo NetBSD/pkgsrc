@@ -1,0 +1,23 @@
+$NetBSD: patch-src-makefile.in,v 1.1 2012/02/20 15:45:19 reinoud Exp $
+
+--- src/Makefile.in.orig	2010-10-17 16:02:04.000000000 +0000
++++ src/Makefile.in
+@@ -76,7 +76,8 @@ am__DEPENDENCIES_1 =
+ @OS_WIN_FALSE@b_em_DEPENDENCIES = $(am__DEPENDENCIES_1)
+ SCRIPTS = $(noinst_SCRIPTS)
+ DEFAULT_INCLUDES = -I.@am__isrc@
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
++#depcomp = $(SHELL) $(top_srcdir)/depcomp
++depcomp = $(SHELL) $(PREFIX)/share/automake-1.11/depcomp
+ am__depfiles_maybe = depfiles
+ am__mv = mv -f
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+@@ -1277,7 +1278,7 @@ install-exec: install-exec-am
+ install-data: install-data-am
+ uninstall: uninstall-am
+ 
+-install-am: all-am
++install-am:
+ 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+ 
+ installcheck: installcheck-am
