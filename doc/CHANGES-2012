@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.542 2012/02/20 12:33:12 sno Exp $
+$NetBSD: CHANGES-2012,v 1.543 2012/02/20 12:38:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -777,3 +777,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Array-Compare to 2.02 [sno 2012-02-20]
 	Updated devel/p5-Attribute-Handlers to 0.93 [sno 2012-02-20]
 	Updated devel/p5-AutoLoader to 5.72 [sno 2012-02-20]
+	Updated devel/p5-B-Hooks-EndOfScope to 0.10 [sno 2012-02-20]
