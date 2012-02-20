@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/02/06 12:40:14 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2012/02/20 15:01:24 jdc Exp $
 
 DISTNAME=	wesnoth-1.8.6
 PKGREVISION=	4
@@ -23,6 +23,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 
 UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	stacksize
 
 REPLACE_PERL+=		utils/wesnothd.pl
 USE_TOOLS+=		perl:run msgfmt
