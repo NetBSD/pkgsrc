@@ -1,0 +1,12 @@
+B-em: A Freeware BBC Micro Emulator
+
+Emulating Acorn BBC-A, BBC-B and the BBC Master series including discdrives,
+tape and the tube!
+
+Tube processors supported:
+   6502
+  65810
+    Z80
+   ARM1	(!)
+
+ROMS, tapes and example discs are provided.
