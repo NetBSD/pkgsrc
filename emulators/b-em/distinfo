@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2012/02/20 15:45:19 reinoud Exp $
+
+SHA1 (B-emv2.1aLinux.tar.gz) = a5e674009eaeab5aeb9b50f3c699c6d0ea110c38
+RMD160 (B-emv2.1aLinux.tar.gz) = b31a4812fabad9d6d67372361955b3de3686943b
+Size (B-emv2.1aLinux.tar.gz) = 5226120 bytes
+SHA1 (patch-src-b-em.h) = d450f335c15f539cf3f81a800dec87472c134cab
+SHA1 (patch-src-cmos.c) = dfddf6a6bc4b494e11b7882363a6e79280480b20
+SHA1 (patch-src-fdi2raw.c) = 98a00eb3059c92b0c2e8009275e5b4a7dfee9b0c
+SHA1 (patch-src-linux.c) = b36cf4f3c957cab24bf67cd34688231e3b292d02
+SHA1 (patch-src-makefile.in) = ae5e7fbd9d13cdd6af89512e10a2d23c4716c0cf
+SHA1 (patch-src-resources.h) = 6f62502882e82e56f8bd606dd8618e3eccb7b786
+SHA1 (patch-src-tapenoise.c) = b279aabb6eec7a816a8fe2178e44d326e5ebdbe1
+SHA1 (patch-src-win.c) = 119f41dc2c80a53f5edbeb7e42d85238d1d21b82
