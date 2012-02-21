@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2010/03/21 16:29:41 wiz Exp $
+# $NetBSD: Makefile,v 1.25.16.1 2012/02/21 02:43:01 sbd Exp $
 
-DISTNAME=	netbsd-www-1.5
+DISTNAME=	netbsd-www-1.6
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,8 +21,8 @@ DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
 DEPENDS+=	psutils>=1.17:../../print/psutils
+DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
 DEPENDS+=	tex-german-[0-9]*:../../print/tex-german
-DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	w3m>=0.4:../../www/w3m
 DEPENDS+=	xplanet>=1.2.0nb3:../../x11/xplanet
 
