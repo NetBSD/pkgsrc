@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/02/06 12:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/02/21 22:49:18 drochner Exp $
 #
 
 DISTNAME=	telepathy-glib-0.14.3
@@ -30,8 +30,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.20.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.vala+= vala>=0.11.7
-.include "../../lang/vala/buildlink3.mk"
+.include "../../lang/vala014/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.82
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=0.95
