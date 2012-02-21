@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/05/10 08:18:38 tnn Exp $
+$NetBSD: patch-aa,v 1.5 2012/02/21 12:38:58 drochner Exp $
 
---- config.linux.orig	2008-07-25 00:40:05.000000000 +0000
+--- config.linux.orig	2012-02-04 11:01:47.000000000 +0000
 +++ config.linux
 @@ -1,17 +1,20 @@
 +.SUFFIXES: .la .lo .cpp
@@ -20,10 +20,10 @@ $NetBSD: patch-aa,v 1.4 2010/05/10 08:18:38 tnn Exp $
 +LINK+=			# this is needed to add a space!
  LINK_OPTS =		-L.
  CONSOLE_LINK_OPTS =	$(LINK_OPTS)
--LIBRARY_LINK =		ld -o
+-LIBRARY_LINK =		ar cr 
 +LIBRARY_LINK =		${LIBTOOL} --tag=CXX --mode=link c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
 +LIBRARY_LINK+=		# this is needed to add a space!
- LIBRARY_LINK_OPTS =	$(LINK_OPTS) -r -Bstatic
+ LIBRARY_LINK_OPTS =	
 -LIB_SUFFIX =			a
 +LIB_SUFFIX =		la
  LIBS_FOR_CONSOLE_APPLICATION =
