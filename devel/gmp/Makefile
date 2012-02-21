@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2011/11/16 21:30:07 is Exp $
+# $NetBSD: Makefile,v 1.62 2012/02/21 13:18:19 drochner Exp $
 
-DISTNAME=	gmp-5.0.2
-PKGREVISION=	1
+DISTNAME=	gmp-5.0.4
 CATEGORIES=	devel math
 MASTER_SITES=	${MASTER_SITE_GNU:=gmp/}
 EXTRACT_SUFX=	.tar.bz2
