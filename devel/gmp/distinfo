@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2011/11/16 21:30:07 is Exp $
+$NetBSD: distinfo,v 1.37 2012/02/21 13:18:19 drochner Exp $
 
-SHA1 (gmp-5.0.2.tar.bz2) = 2968220e1988eabb61f921d11e5d2db5431e0a35
-RMD160 (gmp-5.0.2.tar.bz2) = fce06e3246f067301a54f3457960f1d6d71adfc2
-Size (gmp-5.0.2.tar.bz2) = 2024576 bytes
+SHA1 (gmp-5.0.4.tar.bz2) = ea4ea7c3f10436ef5ae7a75b3fad163a8b86edc0
+RMD160 (gmp-5.0.4.tar.bz2) = 4164d025e412a2fa087de5fa37d84408d5f29f69
+Size (gmp-5.0.4.tar.bz2) = 2031540 bytes
 SHA1 (patch-aa) = a53db34c8ecf38d6556a59a0fa7382456c30fab6
 SHA1 (patch-ab) = e768eca25c117871041d12a618e38d9d252f25e5
 SHA1 (patch-ac) = 9c7e6817632596bfd6c86a30e3b2d7f78fccd5ff
@@ -13,4 +13,4 @@ SHA1 (patch-ag) = 66f5cd58ca75a19e3136bb2dedced9b406df82ce
 SHA1 (patch-ah) = 6144e12426073013ec2a4582f1b795c7de7a6c35
 SHA1 (patch-ai) = 2a692aac1a3fe191156d5ce66c13eb33e3c4fc8c
 SHA1 (patch-aj) = 49e8945703e67f7a158ed7fd496188d85c659fb3
-SHA1 (patch-mpn_arm_invert__limb.asm) = 5864f46c78798150c3df9d6bb38650b8a5c511a6
+SHA1 (patch-mpn_arm_invert__limb.asm) = f0565d76c56a6547027fa85850639d2e69f72a51
