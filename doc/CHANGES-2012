@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.553 2012/02/21 02:26:15 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.554 2012/02/21 06:40:01 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -788,3 +788,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated meta-pkgs/netbsd-www to 1.6 [tron 2012-02-20]
 	Updated graphics/png to 1.5.9nb1 [wiz 2012-02-20]
 	Updated textproc/wdiff to 1.1.0nb1 [sbd 2012-02-21]
+	Updated fonts/Xg to 1.0nb3 [sbd 2012-02-21]
