@@ -1,0 +1,22 @@
+$NetBSD: patch-cb,v 1.1 2012/02/21 12:38:58 drochner Exp $
+
+--- liveMedia/ServerMediaSession.cpp.orig	2012-02-04 11:01:47.000000000 +0000
++++ liveMedia/ServerMediaSession.cpp
+@@ -231,7 +231,7 @@ char* ServerMediaSession::generateSDPDes
+ 
+     char const* const sdpPrefixFmt =
+       "v=0\r\n"
+-      "o=- %ld%06ld %d IN IP4 %s\r\n"
++      "o=- %lld%06d %d IN IP4 %s\r\n"
+       "s=%s\r\n"
+       "i=%s\r\n"
+       "t=0 0\r\n"
+@@ -258,7 +258,7 @@ char* ServerMediaSession::generateSDPDes
+ 
+     // Generate the SDP prefix (session-level lines):
+     sprintf(sdp, sdpPrefixFmt,
+-	    fCreationTime.tv_sec, fCreationTime.tv_usec, // o= <session id>
++	    (unsigned long long)fCreationTime.tv_sec, fCreationTime.tv_usec, // o= <session id>
+ 	    1, // o= <version> // (needs to change if params are modified)
+ 	    ipAddressStr.val(), // o= <address>
+ 	    fDescriptionSDPString, // s= <description>

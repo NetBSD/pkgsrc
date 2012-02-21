@@ -1,0 +1,15 @@
+$NetBSD: patch-ca,v 1.1 2012/02/21 12:38:58 drochner Exp $
+
+--- liveMedia/FileSink.cpp.orig	2012-02-04 11:01:47.000000000 +0000
++++ liveMedia/FileSink.cpp
+@@ -92,8 +92,8 @@ void FileSink::addData(unsigned char con
+ 		       struct timeval presentationTime) {
+   if (fPerFrameFileNameBuffer != NULL) {
+     // Special case: Open a new file on-the-fly for this frame
+-    sprintf(fPerFrameFileNameBuffer, "%s-%lu.%06lu", fPerFrameFileNamePrefix,
+-	    presentationTime.tv_sec, presentationTime.tv_usec);
++    sprintf(fPerFrameFileNameBuffer, "%s-%llu.%06u", fPerFrameFileNamePrefix,
++	    (unsigned long long)presentationTime.tv_sec, presentationTime.tv_usec);
+     fOutFid = OpenOutputFile(envir(), fPerFrameFileNameBuffer);
+   }
+ 

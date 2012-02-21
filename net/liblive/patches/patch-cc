@@ -1,0 +1,13 @@
+$NetBSD: patch-cc,v 1.1 2012/02/21 12:38:58 drochner Exp $
+
+--- testProgs/playCommon.cpp.orig	2012-02-04 11:01:47.000000000 +0000
++++ testProgs/playCommon.cpp
+@@ -1216,7 +1216,7 @@ void checkForPacketArrival(void* /*clien
+     struct timeval timeNow;
+     gettimeofday(&timeNow, NULL);
+ 	char timestampStr[100];
+-	sprintf(timestampStr, "%ld%03ld", timeNow.tv_sec, (long)(timeNow.tv_usec/1000));
++	sprintf(timestampStr, "%lld%03ld", (unsigned long long)timeNow.tv_sec, (long)(timeNow.tv_usec/1000));
+     *env << (syncStreams ? "Synchronized d" : "D")
+ 		<< "ata packets have begun arriving [" << timestampStr << "]\007\n";
+     return;
