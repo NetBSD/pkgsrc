@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/02/03 14:42:53 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/02/21 09:51:25 ryoon Exp $
 info/skk.info
 ${EMACS_LISPPREFIX}/skk/ccc.el
 ${EMACS_LISPPREFIX}/skk/ccc.elc
@@ -66,6 +66,8 @@ ${EMACS_LISPPREFIX}/skk/skk-server-completion.elc
 ${EMACS_LISPPREFIX}/skk/skk-server.el
 ${EMACS_LISPPREFIX}/skk/skk-server.elc
 ${EMACS_LISPPREFIX}/skk/skk-setup.el
+${EMACS_LISPPREFIX}/skk/skk-show-mode.el
+${EMACS_LISPPREFIX}/skk/skk-show-mode.elc
 ${EMACS_LISPPREFIX}/skk/skk-sticky.el
 ${EMACS_LISPPREFIX}/skk/skk-sticky.elc
 ${EMACS_LISPPREFIX}/skk/skk-study.el
