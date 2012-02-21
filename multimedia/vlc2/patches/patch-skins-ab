@@ -1,0 +1,12 @@
+$NetBSD: patch-skins-ab,v 1.1.1.1 2012/02/21 12:49:43 drochner Exp $
+
+--- modules/gui/skins2/x11/x11_window.cpp.orig	2011-12-08 18:00:26.000000000 +0000
++++ modules/gui/skins2/x11/x11_window.cpp
+@@ -36,6 +36,7 @@
+ #include "x11_factory.hpp"
+ 
+ #include <assert.h>
++#include <limits.h> /* for _POSIX_HOST_NAME_MAX */
+ 
+ X11Window::X11Window( intf_thread_t *pIntf, GenericWindow &rWindow,
+                       X11Display &rDisplay, bool dragDrop, bool playOnDrop,
