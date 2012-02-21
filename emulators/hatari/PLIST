@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/01/09 19:39:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/02/21 11:20:47 ryoon Exp $
 bin/atari-hd-image
 bin/hatari
 bin/hatariui
@@ -38,6 +38,7 @@ share/hatari/hatari-icon.bmp
 share/hatari/hatariui/README
 share/hatari/hatariui/TODO
 share/hatari/hatariui/config.py
+share/hatari/hatariui/conftypes.py
 share/hatari/hatariui/debugui.py
 share/hatari/hatariui/dialogs.py
 share/hatari/hatariui/hatari-icon.png
