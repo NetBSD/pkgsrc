@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10890 2012/02/21 11:21:47 ryoon Exp $
+$NetBSD: TODO,v 1.10891 2012/02/21 13:19:13 drochner Exp $
 
 Suggested new packages
 ======================
@@ -683,7 +683,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
-	o gmp-5.0.4
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.2.2
@@ -1290,7 +1289,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o texmaker-3.1 [pkg/45521]
 	o texmaker-3.2.2
 	o tfmxplay-1.1.6
-	o tiff-4.0.1
 	o tig-0.18
 	o tightvnc-2.0.95
 	o tile-0.7.4
