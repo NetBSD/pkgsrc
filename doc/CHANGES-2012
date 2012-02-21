@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.555 2012/02/21 07:08:23 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.556 2012/02/21 09:52:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -790,3 +790,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/wdiff to 1.1.0nb1 [sbd 2012-02-21]
 	Updated fonts/Xg to 1.0nb3 [sbd 2012-02-21]
 	Removed net/nagios-imagepak-base [sbd 2012-02-21]
+	Updated inputmethod/skk to 14.4 [ryoon 2012-02-21]
