@@ -1,0 +1,21 @@
+$NetBSD: patch-av,v 1.1.1.1 2012/02/21 12:49:43 drochner Exp $
+
+--- include/vlc_common.h.orig	2011-12-11 22:34:47.000000000 +0000
++++ include/vlc_common.h
+@@ -625,6 +625,8 @@ static inline unsigned clz (unsigned x)
+ /* XXX: this assumes that int is 32-bits or more */
+ #define clz32( x ) (clz(x) - ((sizeof(unsigned) - sizeof (uint32_t)) * 8))
+ 
++#ifndef __NetBSD__
++
+ /** Bit weight */
+ VLC_USED
+ static inline unsigned popcount (unsigned x)
+@@ -696,6 +698,7 @@ static inline uint64_t bswap64 (uint64_t
+ #endif
+ }
+ 
++#endif /* NetBSD */
+ 
+ /* Free and set set the variable to NULL */
+ #define FREENULL(a) do { free( a ); a = NULL; } while(0)
