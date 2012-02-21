@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.1 2008/10/30 09:58:46 is Exp $
+$NetBSD: patch-ba,v 1.2 2012/02/21 12:38:58 drochner Exp $
 
---- config.solaris.orig	2008-07-25 02:40:05.000000000 +0200
-+++ config.solaris
+--- config.solaris-32bit.orig	2008-07-25 02:40:05.000000000 +0200
++++ config.solaris-32bit
 @@ -1,17 +1,20 @@
 -COMPILE_OPTS =		$(INCLUDES) -I. -O -DSOLARIS -DSOCKLEN_T=socklen_t
 +.SUFFIXES: .la .lo .cpp
