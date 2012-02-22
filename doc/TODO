@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10892 2012/02/22 07:47:07 wiz Exp $
+$NetBSD: TODO,v 1.10893 2012/02/22 15:27:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1125,7 +1125,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puf-1.0.0
 	o pulseaudio-1.0
 	o puppet-2.7.6
-	o putty-0.62
 	o puzzle-9173
 	o puzzles-9411
 	o pv-1.1.4
