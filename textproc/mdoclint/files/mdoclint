@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.14 2009/04/13 12:40:05 espie Exp $
-# $NetBSD: mdoclint,v 1.17 2012/01/02 18:01:00 wiz Exp $
+# $NetBSD: mdoclint,v 1.18 2012/02/22 15:31:35 wiz Exp $
 #
 # Copyright (c) 2001-2012 Thomas Klausner
 # All rights reserved.
@@ -42,15 +42,15 @@ use constant {
 };
 
 use vars qw(
-	$opt_a $opt_D $opt_d $opt_e $opt_F $opt_f $opt_H $opt_h $opt_m
-	$opt_n $opt_o $opt_P $opt_p $opt_r $opt_S $opt_s $opt_v $opt_w
+    	$opt_A $opt_a $opt_D $opt_d $opt_e $opt_F $opt_f $opt_H $opt_h $opt_m
+	$opt_n $opt_O $opt_o $opt_P $opt_p $opt_r $opt_S $opt_s $opt_v $opt_w
 	$opt_X $opt_x
 );
 
 
 my $arch=`uname -m`;
 chomp($arch);
-my $options="aDdeFfHhmnoPprSsvwXx";
+my $options="AaDdeFfHhmnOoPprSsvwXx";
 
 sub usage
 	{
@@ -59,6 +59,7 @@ sub usage
 	print STDERR <<"EOF";
 mdoclint: verify man page correctness
 usage:	mdoclint [-$options] file ...
+	-A	warn about missing .An in AUTHORS section
 	-a	warn about SEE ALSO section problems
 	-D	warn about bad casing and archs in .Dt
 	-d	warn about bad date strings (in .Dd only)
@@ -69,6 +70,7 @@ usage:	mdoclint [-$options] file ...
 	-h	display this help text
 	-m	warn about man pages that are not in mdoc(7) format
 	-n	warn about .Nd's ending in '.'
+	-O	warn about unsorted .It arguments
 	-o	warn about non-empty .Os strings
 	-P	warn about paragraph problems
 	-p	warn about punctuation problems
@@ -181,19 +183,37 @@ sub warning
 	print STDOUT "$self->{fn}:$extra$self->{ln}: ", join('', @_), "\n";
 }
 
+my $order = " !\"#\$\%&'()*+,-./:;<=>?[\\]^_{|}~".
+	"0123456789".
+	"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+
+sub forder {
+	my ($a, $b, $c, $len, $i);
+	$a = $_[0];
+	$b = $_[1];
+	$len = (length($a) < length($b))? length($a) : length($b);
+	for($i = 0; $i<=$len; $i++) {
+		$c = (index($order,substr($a,$i,1)) <=> index($order,substr($b,$i,1)));
+		if($c){ return $c };
+	}
+	return (length($a) <=> length($b));
+}
+
+
 sub handle_options
 {
 	getopts($options);
 	$opt_h and usage();
 
 	# default to all warnings if no flag is set
-	unless ($opt_a or $opt_D or $opt_d or $opt_e or $opt_f or $opt_H
-	    or $opt_m or $opt_n or $opt_o or $opt_P or $opt_p or $opt_r
-	    or $opt_S or $opt_s or $opt_X or $opt_x) {
-		$opt_a = $opt_D = $opt_d = $opt_f = $opt_m =
-		    $opt_n = $opt_o = $opt_P = $opt_p = $opt_r = $opt_S =
+	unless ($opt_A or $opt_a or $opt_D or $opt_d or $opt_e
+		or $opt_f or $opt_H or $opt_m or $opt_n or $opt_O
+		or $opt_o or $opt_P or $opt_p or $opt_r
+		or $opt_S or $opt_s or $opt_X or $opt_x) {
+		$opt_A = $opt_a = $opt_D = $opt_d = $opt_f = $opt_m =
+		    $opt_n = $opt_O = $opt_o = $opt_P = $opt_p = $opt_r = $opt_S =
 		    $opt_s = $opt_X = $opt_x = 1;
-		    $opt_e = 1 if NETBSD;
+		$opt_e = 1 if NETBSD;
 	}
 }
 
@@ -315,7 +335,7 @@ sub set_section_header
 	}
 
 	if ($s->{lastline} =~ /^\.Pp/o) {
-		$s->warning("Paragraph problem: section header after .Pp") 
+		$s->warning("Paragraph problem: section header after .Pp")
 		    if $opt_P;
 	}
 
@@ -344,12 +364,12 @@ sub process_line
 		s/\s+$//o;
 	}
 	if (/\$OpenBSD\b.*\$/o) {
-		$s->{oxrcsidseen} = 1;
+		$s->{oxrcsidseen}++;
 		# nothing else to do
 		return "$_\n";
 	}
 	if (/[\$]NetBSD\b.*\$/o) {
-		$s->{nxrcsidseen} = 1;
+		$s->{nxrcsidseen}++;
 		# nothing else to do
 		return "$_\n";
 	}
@@ -439,7 +459,7 @@ sub process_line
 		    . "`$short{$1}': `$_'") if $opt_X;
 	}
 	if (/^\./o and (/Bx (Open)/o or /Bx (Free)/o or /Bx (Net)/o)) {
-		$s->warning("`.Bx $1' found -- use $short{$1} instead") 
+		$s->warning("`.Bx $1' found -- use $short{$1} instead")
 		    if $opt_X;
 	}
 	if (/^\.Os\s+(.+)/o) {
@@ -546,8 +566,14 @@ sub finish
 	if (NETBSD and not $s->{nxrcsidseen}) {
 		$s->warning("Missing RCS Id") if $opt_r;
 	}
+	if (NETBSD and ($s->{nxrcsidseen} > 1)) {
+		$s->warning("RCS Id seen twice") if $opt_r;
+	}
 	if (OPENBSD and not $s->{oxrcsidseen}) {
 		$s->warning("Missing RCS Id") if $opt_r;
+	}
+	if (OPENBSD and ($s->{oxrcsidseen} > 1)) {
+		$s->warning("RCS Id seen twice") if $opt_r;
 	}
 
 	if ($s->{lastline} =~ /^\.Pp/o) {
@@ -587,7 +613,7 @@ sub handle_file
 		open OUT, ">$_[0].new" or
 		    die "can't open output file `$_[0].new'";
 		for my $l (@{$parser->{all}}) {
-			print OUT $l 
+			print OUT $l
 		}
 		close OUT;
 		system("mv -i $_[0].new $_[0]");

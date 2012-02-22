@@ -1,7 +1,7 @@
 .\"	$OpenBSD: mdoclint.1,v 1.7 2009/04/13 19:06:38 jmc Exp $
-.\" $NetBSD: mdoclint.1,v 1.5 2011/09/26 12:46:29 wiz Exp $
+.\" $NetBSD: mdoclint.1,v 1.6 2012/02/22 15:31:35 wiz Exp $
 .\"
-.\" Copyright (c) 2001-2009 Thomas Klausner
+.\" Copyright (c) 2001-2011 Thomas Klausner
 .\" All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -33,7 +33,7 @@
 .Nd man page verifier
 .Sh SYNOPSIS
 .Nm
-.Op Fl aDdeFfHhmnoPprSsvwXx
+.Op Fl AaDdeFfHhmnOoPprSsvwXx
 .Ar
 .Sh DESCRIPTION
 .Nm
@@ -47,6 +47,12 @@ is assumed (that is, everything except
 .Pp
 The options are as follows:
 .Bl -tag -width xxxx -compact
+.It Fl A
+Warn if the
+.Dq .An
+macro (author) markup is not used in the
+.Sx AUTHORS
+section.
 .It Fl a
 Warn about some possible problems in the
 .Sx SEE ALSO
@@ -91,6 +97,10 @@ format.
 .It Fl n
 Warn when the .Nd macro's argument ends in a dot, that is
 .Sq \&. .
+.It Fl O
+Warn about unsorted
+.Dq .It
+macros.
 .It Fl o
 Warn when the .Os macro has an argument (it shouldn't have one at
 least in the base system, because on
