@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2011/08/21 22:57:54 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2012/02/22 13:25:14 ryoon Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-[56].*-i386 NetBSD-[56].*-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-2.*-i386
@@ -21,13 +21,15 @@ EXTRACT_ONLY+=		${BOOT.nb5-amd64}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-6.[0-8]*-i386) || make(distinfo) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-5.99.*-i386)
+    !empty(MACHINE_PLATFORM:MNetBSD-5.99.*-i386) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-6.99.*-i386)
 DISTFILES+=		${BOOT.nb6-i386}
 EXTRACT_ONLY+=		${BOOT.nb6-i386}
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-6.[0-8]*-x86_64) || make(distinfo) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-5.99.*-x86_64)
+    !empty(MACHINE_PLATFORM:MNetBSD-5.99.*-x86_64) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-6.99.*-x86_64)
 DISTFILES+=		${BOOT.nb6-amd64}
 EXTRACT_ONLY+=		${BOOT.nb6-amd64}
 .endif
