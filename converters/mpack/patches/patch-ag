@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2010/11/17 22:24:40 is Exp $
+$NetBSD: patch-ag,v 1.2 2012/02/22 21:01:53 shattered Exp $
 
 --- decode.c.orig	2003-07-21 20:47:54.000000000 +0000
 +++ decode.c
@@ -10,6 +10,17 @@ $NetBSD: patch-ag,v 1.1 2010/11/17 22:24:40 is Exp $
  #include <stdio.h>
  #include <string.h>
  #include <ctype.h>
+@@ -545,8 +546,8 @@ getDispositionFilename(char *disposition
+ 	SkipWhitespace(&disposition);
+ 	if (!disposition) return 0;
+ 
+-	/* If we're looking at a ";", we found what we're looking for */
+-	if (*disposition++ == ';') break;
++	/* If we're looking at a "=", we found what we're looking for */
++	if (*disposition++ == '=') break;
+     }
+ 
+     SkipWhitespace(&disposition);
 @@ -601,7 +602,7 @@ int handlePartial(struct part *inpart, c
  {
      char *id, *dir, *p;
