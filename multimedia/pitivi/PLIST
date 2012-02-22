@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/19 19:15:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/22 00:01:52 sbd Exp $
 bin/pitivi
 lib/pitivi/python/pitivi/__init__.py
 lib/pitivi/python/pitivi/__init__.pyc
@@ -293,7 +293,6 @@ share/gnome/help/pitivi/C/crossfading.page
 share/gnome/help/pitivi/C/effects.page
 share/gnome/help/pitivi/C/effectsanimation.page
 share/gnome/help/pitivi/C/fadeinfadeout.page
-share/gnome/help/pitivi/C/figures/codecscontainers.jpg 
 share/gnome/help/pitivi/C/figures/fadestep1.png
 share/gnome/help/pitivi/C/figures/fadestep2.png
 share/gnome/help/pitivi/C/figures/fadestep3.png
@@ -302,7 +301,6 @@ share/gnome/help/pitivi/C/figures/hovering.png
 share/gnome/help/pitivi/C/figures/keyframecurves.png
 share/gnome/help/pitivi/C/figures/layers.png
 share/gnome/help/pitivi/C/figures/logo.png
-share/gnome/help/pitivi/C/figures/mainwindow.png
 share/gnome/help/pitivi/C/figures/previewsource.png
 share/gnome/help/pitivi/C/figures/ripple-after.png
 share/gnome/help/pitivi/C/figures/ripple-before.png
@@ -340,7 +338,6 @@ share/gnome/help/pitivi/de/crossfading.page
 share/gnome/help/pitivi/de/effects.page
 share/gnome/help/pitivi/de/effectsanimation.page
 share/gnome/help/pitivi/de/fadeinfadeout.page
-share/gnome/help/pitivi/de/figures/codecscontainers.jpg 
 share/gnome/help/pitivi/de/figures/fadestep1.png
 share/gnome/help/pitivi/de/figures/fadestep2.png
 share/gnome/help/pitivi/de/figures/fadestep3.png
@@ -349,7 +346,6 @@ share/gnome/help/pitivi/de/figures/hovering.png
 share/gnome/help/pitivi/de/figures/keyframecurves.png
 share/gnome/help/pitivi/de/figures/layers.png
 share/gnome/help/pitivi/de/figures/logo.png
-share/gnome/help/pitivi/de/figures/mainwindow.png
 share/gnome/help/pitivi/de/figures/previewsource.png
 share/gnome/help/pitivi/de/figures/ripple-after.png
 share/gnome/help/pitivi/de/figures/ripple-before.png
@@ -387,7 +383,6 @@ share/gnome/help/pitivi/es/crossfading.page
 share/gnome/help/pitivi/es/effects.page
 share/gnome/help/pitivi/es/effectsanimation.page
 share/gnome/help/pitivi/es/fadeinfadeout.page
-share/gnome/help/pitivi/es/figures/codecscontainers.jpg 
 share/gnome/help/pitivi/es/figures/fadestep1.png
 share/gnome/help/pitivi/es/figures/fadestep2.png
 share/gnome/help/pitivi/es/figures/fadestep3.png
@@ -396,7 +391,6 @@ share/gnome/help/pitivi/es/figures/hovering.png
 share/gnome/help/pitivi/es/figures/keyframecurves.png
 share/gnome/help/pitivi/es/figures/layers.png
 share/gnome/help/pitivi/es/figures/logo.png
-share/gnome/help/pitivi/es/figures/mainwindow.png
 share/gnome/help/pitivi/es/figures/previewsource.png
 share/gnome/help/pitivi/es/figures/ripple-after.png
 share/gnome/help/pitivi/es/figures/ripple-before.png
