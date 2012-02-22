@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/02/22 10:43:42 fhajny Exp $
+
+For more information about PHP FastCGI Process Manager see FPM wiki at:
+http://php-fpm.org/wiki/Main_Page
+
+For NetBSD consider adding something like following to /etc/newsyslog.conf:
+
+${VARBASE}/log/php-fpm.log 640 7 * * BZ ${VARBASE}/run/php-fpm.pid SIGUSR1
+
+===========================================================================
