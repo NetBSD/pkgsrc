@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10891 2012/02/21 13:19:13 drochner Exp $
+$NetBSD: TODO,v 1.10892 2012/02/22 07:47:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,6 +379,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap-xslt-1.4.0
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
+	o apache-2.4
 	o apache-maven-3.0
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
@@ -419,7 +420,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bdftopcf-1.0.3 [pkg/45536]
 	o beforelight-1.0.4
 	o benchfft-3.1
-	o bftpd-3.6
+	o bftpd-3.7
 	o biew-6.1.0
 	o bigreqsproto-1.1.1
 	o binutils-2.22 [wip]
@@ -716,7 +717,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
 	o gnupg-1.4.12
-	o gnutls-3.0.12
+	o gnutls-3.0.13
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -934,7 +935,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libvirt-0.9.9
 	o libxcb-1.8
 	o libxkbfile-1.0.7
-	o libxklavier-5.2
+	o libxklavier-5.2.1
 	o licq-1.3.8
 	o liferea-1.8.0
 	o lighttpd-1.4.30
@@ -944,6 +945,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lmms-0.4.5
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
+	o lua-5.1.5
 	o lua-5.2.0
 	o luit-1.1.0
 	o lwm-1.2.2
@@ -1042,7 +1044,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
 	o opendkim-2.4.3
-	o opendnssec-1.3.5
+	o opendnssec-1.3.6
 	o opengrok-0.11
 	o openh323-1.19.1
 	o openldap-2.4.28
@@ -1125,7 +1127,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-2.7.6
 	o putty-0.62
 	o puzzle-9173
-	o puzzles-9408
+	o puzzles-9411
 	o pv-1.1.4
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
@@ -1140,6 +1142,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-utils-1.2.1
 	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
+	o py-moin-1.9.4
 	o py-mxDateTime-3.2.0
 	o py-simplejson-2.2.1
 	o py-sybase-0.37
@@ -1251,7 +1254,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stella-3.5.5
 	o stgit-0.16
 	o stlport-4.6.2
-	o stow-2.1.1
+	o stow-2.2.0
 	o strace-4.5.16
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
@@ -1340,7 +1343,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vicq-0.4.2
 	o viewres-1.0.2 [unpackaged]
 	o viewvc-1.1.13
-	o vifm-0.7.1
+	o vifm-0.7.2
 	o vile-9.8
 	o vim-7.3
 	o vinagre-3.2.2
@@ -1358,7 +1361,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o warzone2100-2.3.8
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
-	o webkit-gtk-1.7.3
+	o webkit-gtk-1.7.5
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.580 [security]
 	o websvn-2.3.2
@@ -1366,13 +1369,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wesnoth-1.10
 	o whohas-0.29
 	o windowlab-1.40
+	o windowmaker-0.95.2 [wip]
 	o wine-devel-1.4.0rc4
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
-	o worker-2.19.0
+	o worker-2.19.1
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9h
 	o wxGTK28-2.8.12
@@ -1405,7 +1409,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xemacs-current-21.5.31
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
-	o xev-1.1.0
+	o xev-1.2.0
 	o xeyes-1.1.1
 	o xf86-input-keyboard-1.6.1
 	o xf86-input-mouse-1.7.1
