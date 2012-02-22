@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.565 2012/02/22 15:31:05 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.566 2012/02/22 15:31:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -805,4 +805,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/firefox36-l10n to 3.6.27 [obache 2012-02-22]
 	Updated editors/OmegaT to 2.5.1.01 [ryoon 2012-02-22]
 	Updated security/putty to 0.62 [wiz 2012-02-22]
-	Removed security/putty-devel [wiz 2012-02-22]
+	Removed security/putty-devel successor security/putty [wiz 2012-02-22]
