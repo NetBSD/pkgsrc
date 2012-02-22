@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.425 2012/02/19 03:52:28 asau Exp $
+# $NetBSD: Makefile,v 1.426 2012/02/22 15:31:05 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -284,7 +284,6 @@ SUBDIR+=	priv
 SUBDIR+=	prngd
 SUBDIR+=	pscan
 SUBDIR+=	putty
-SUBDIR+=	putty-devel
 SUBDIR+=	pwsafe
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-SSLCrypto
