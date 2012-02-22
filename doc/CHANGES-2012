@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.560 2012/02/22 10:23:07 hiramatsu Exp $
+$NetBSD: CHANGES-2012,v 1.561 2012/02/22 10:44:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -799,3 +799,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/pkg_install to 20120221 [wiz 2012-02-21]
 	Updated databases/p5-DBIx-Abstract to 1.01 [hiramatsu 2012-02-22]
 	Updated databases/p5-DBIx-Class-UUIDColumns to 0.02006 [hiramatsu 2012-02-22]
+	Added www/php-fpm version 5.3.10 [fhajny 2012-02-22]
