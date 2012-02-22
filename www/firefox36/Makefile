@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/02/06 12:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/02/22 11:00:07 obache Exp $
 
 .include "../../devel/xulrunner192/dist.mk"
 PKGNAME=	firefox36-${FIREFOX_VER}
-PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	tnn@NetBSD.org
@@ -26,7 +25,7 @@ SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/app/nsRegisterGREUnix.cpp
 SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/installer/Makefile.in 
 SUBST_SED.fix-paths2=		-e 's,/etc/gre.d,${PREFIX}/lib/xulrunner192/gre.d,g' 
 
-.include "../../devel/xulrunner/mozilla-common.mk"
+.include "../../devel/xulrunner192/mozilla-common.mk"
 CONFIGURE_ARGS+=		--enable-chrome-format=jar
 .include "options.mk"
 
