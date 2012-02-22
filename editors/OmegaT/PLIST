@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 20:33:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/22 13:41:45 ryoon Exp $
 bin/OmegaT
 share/OmegaT/OmegaT.jar
 share/OmegaT/lib/CDDL+GPLv2.txt
@@ -676,6 +676,33 @@ share/doc/OmegaT/license.txt
 share/doc/OmegaT/nl/GoogleTranslate.html
 share/doc/OmegaT/nl/OmegaT.css
 share/doc/OmegaT/nl/aboutOmegaT.html
+share/doc/OmegaT/nl/appendix.acknowledgements.html
+share/doc/OmegaT/nl/appendix.keyboard.html
+share/doc/OmegaT/nl/appendix.languages.html
+share/doc/OmegaT/nl/appendix.legal.notices.html
+share/doc/OmegaT/nl/appendix.website.html
+share/doc/OmegaT/nl/chapter.about.OmegaT.html
+share/doc/OmegaT/nl/chapter.dictionaries.html
+share/doc/OmegaT/nl/chapter.file.filters.html
+share/doc/OmegaT/nl/chapter.files.and.directories.html
+share/doc/OmegaT/nl/chapter.files.to.translate.html
+share/doc/OmegaT/nl/chapter.font.html
+share/doc/OmegaT/nl/chapter.formatted.text.html
+share/doc/OmegaT/nl/chapter.glossaries.html
+share/doc/OmegaT/nl/chapter.installing.and.running.html
+share/doc/OmegaT/nl/chapter.instant.start.guide.html
+share/doc/OmegaT/nl/chapter.machine.translate.html
+share/doc/OmegaT/nl/chapter.menu.html
+share/doc/OmegaT/nl/chapter.misc.html
+share/doc/OmegaT/nl/chapter.plain.text.html
+share/doc/OmegaT/nl/chapter.project.properties.html
+share/doc/OmegaT/nl/chapter.regexp.html
+share/doc/OmegaT/nl/chapter.searches.html
+share/doc/OmegaT/nl/chapter.segmentation.html
+share/doc/OmegaT/nl/chapter.spellchecker.html
+share/doc/OmegaT/nl/chapter.translation.editing.html
+share/doc/OmegaT/nl/chapter.translation.memories.html
+share/doc/OmegaT/nl/chapter.user.interface.html
 share/doc/OmegaT/nl/commandlineArguments.html
 share/doc/OmegaT/nl/consoleMode.html
 share/doc/OmegaT/nl/dictionaries.html
@@ -686,40 +713,45 @@ share/doc/OmegaT/nl/fontSettings.html
 share/doc/OmegaT/nl/formattedText.html
 share/doc/OmegaT/nl/glossaries.html
 share/doc/OmegaT/nl/images/AppleKey.gif
-share/doc/OmegaT/nl/images/AsciiFilteroptions.jpg
+share/doc/OmegaT/nl/images/AsciiFilteroptions.png
 share/doc/OmegaT/nl/images/DictMerriamWebster.png
 share/doc/OmegaT/nl/images/Dock.gif
+share/doc/OmegaT/nl/images/EditingBehaviourOptions.png
 share/doc/OmegaT/nl/images/Glossary_pane.png
 share/doc/OmegaT/nl/images/Main pane counters_html_780661d2.gif
+share/doc/OmegaT/nl/images/Main_pane_counters.png
+share/doc/OmegaT/nl/images/MatchStatistics.png
 share/doc/OmegaT/nl/images/MatchesPane.png
 share/doc/OmegaT/nl/images/Maximize.gif
 share/doc/OmegaT/nl/images/Minimize.gif
 share/doc/OmegaT/nl/images/MobyDick.png
+share/doc/OmegaT/nl/images/MultiTerm_Glossary.png
 share/doc/OmegaT/nl/images/NewProject.png
-share/doc/OmegaT/nl/images/OmegaT projects and subdirectories.jpg
+share/doc/OmegaT/nl/images/OmT_Cyrillic.png
+share/doc/OmegaT/nl/images/OmT_Japanese.png
+share/doc/OmegaT/nl/images/OmegaT projects_and_subdirectories.png
 share/doc/OmegaT/nl/images/OmegaT_icon.png
 share/doc/OmegaT/nl/images/OmegaT_panes.png
 share/doc/OmegaT/nl/images/OmegaT_projects_and_subdirectories.png
-share/doc/OmegaT/nl/images/Omegatproject.jpg
 share/doc/OmegaT/nl/images/Omegatproject.png
 share/doc/OmegaT/nl/images/ProjectFiles.png
-share/doc/OmegaT/nl/images/Projectstatistics.jpg
 share/doc/OmegaT/nl/images/RegexTester.png
 share/doc/OmegaT/nl/images/Restore.gif
 share/doc/OmegaT/nl/images/SpellcheckerSetup.png
 share/doc/OmegaT/nl/images/SpellcheckerSetup2.png
 share/doc/OmegaT/nl/images/SpellcheckingText.png
+share/doc/OmegaT/nl/images/TagValidation.png
 share/doc/OmegaT/nl/images/TagValidator.png
 share/doc/OmegaT/nl/images/TextSearch.png
 share/doc/OmegaT/nl/images/Undock.gif
-share/doc/OmegaT/nl/images/saveglossary.jpg
-share/doc/OmegaT/nl/images/setting up a new project.jpg
+share/doc/OmegaT/nl/images/saveglossary.png
 share/doc/OmegaT/nl/images/tagged_segment.png
 share/doc/OmegaT/nl/images/tagged_segment_target.png
 share/doc/OmegaT/nl/index.html
 share/doc/OmegaT/nl/installingAndRunning.html
 share/doc/OmegaT/nl/instantStartGuide.html
 share/doc/OmegaT/nl/instantStartGuideNoTOC.html
+share/doc/OmegaT/nl/ix01.html
 share/doc/OmegaT/nl/languages.html
 share/doc/OmegaT/nl/legalNotices.html
 share/doc/OmegaT/nl/license.txt
