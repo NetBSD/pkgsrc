@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2011/09/16 05:46:24 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/02/23 11:24:29 obache Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
-PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/ingo/ \
 		ftp://ftp.horde.org/pub/ingo/
@@ -10,6 +9,7 @@ MASTER_SITES=	http://ftp.horde.org/pub/ingo/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/ingo/
 COMMENT=	Horde based generic and complete mail filter rule frontend
+LICENSE=	apache-1.1
 
 DEPENDS+=	horde>=3.2:../../www/horde
 
@@ -23,7 +23,7 @@ DOCDIR=		${PREFIX}/share/doc/ingo
 EGDIR=		${PREFIX}/share/examples/ingo
 HORDEDIR=	${PREFIX}/share/horde
 INGODIR=	${HORDEDIR}/ingo
-INGOVER=	1.2.5
+INGOVER=	1.2.6
 PAXDIRS=	lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	INGODIR=${INGODIR}
