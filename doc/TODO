@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10895 2012/02/23 12:54:15 wiz Exp $
+$NetBSD: TODO,v 1.10896 2012/02/23 17:50:19 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1043,7 +1043,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opal-3.8.3
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
-	o opendkim-2.4.3
 	o opendnssec-1.3.6
 	o opengrok-0.11
 	o openh323-1.19.1
