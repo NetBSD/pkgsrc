@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 21:38:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/02/23 12:05:50 obache Exp $
 share/doc/kronolith/INSTALL
 share/doc/kronolith/README
 share/doc/kronolith/RELEASE_NOTES
@@ -100,6 +100,8 @@ share/horde/kronolith/lib/tests/bug2813.phpt
 share/horde/kronolith/lib/tests/bug6031.phpt
 share/horde/kronolith/lib/tests/bug7068.ics
 share/horde/kronolith/lib/tests/bug7068.phpt
+share/horde/kronolith/lib/tests/fromicalendar.ics
+share/horde/kronolith/lib/tests/fromicalendar.phpt
 share/horde/kronolith/lib/tests/recurrence.phpt
 share/horde/kronolith/lib/tests/toicalendar.phpt
 share/horde/kronolith/lib/version.php
@@ -122,6 +124,8 @@ share/horde/kronolith/locale/fi_FI/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/fi_FI/help.xml
 share/horde/kronolith/locale/fr_FR/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/fr_FR/help.xml
+share/horde/kronolith/locale/hr_HR/LC_MESSAGES/kronolith.mo
+share/horde/kronolith/locale/hr_HR/help.xml
 share/horde/kronolith/locale/hu_HU/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/hu_HU/help.xml
 share/horde/kronolith/locale/it_IT/LC_MESSAGES/kronolith.mo
@@ -162,6 +166,7 @@ share/horde/kronolith/po/et_EE.po
 share/horde/kronolith/po/eu_ES.po
 share/horde/kronolith/po/fi_FI.po
 share/horde/kronolith/po/fr_FR.po
+share/horde/kronolith/po/hr_HR.po
 share/horde/kronolith/po/hu_HU.po
 share/horde/kronolith/po/it_IT.po
 share/horde/kronolith/po/ja_JP.po
@@ -186,6 +191,7 @@ share/horde/kronolith/po/zh_CN.po
 share/horde/kronolith/po/zh_TW.po
 share/horde/kronolith/pref_api.php
 share/horde/kronolith/scripts/import_icals.php
+share/horde/kronolith/scripts/import_squirrelmail_calendar.php
 share/horde/kronolith/scripts/migrate_to_sql_driver.php
 share/horde/kronolith/scripts/reminders.php
 share/horde/kronolith/scripts/sql/kronolith.mssql.sql
@@ -197,13 +203,18 @@ share/horde/kronolith/scripts/sql/kronolith.xml
 share/horde/kronolith/scripts/upgrades/1.1_to_2.0.mysql.sql
 share/horde/kronolith/scripts/upgrades/1.1_to_2.0.oci8.sql
 share/horde/kronolith/scripts/upgrades/1.1_to_2.0.pgsql.sql
+share/horde/kronolith/scripts/upgrades/2.1_to_2.2.oci8.sql
 share/horde/kronolith/scripts/upgrades/2.1_to_2.2.pgsql.sql
 share/horde/kronolith/scripts/upgrades/2.1_to_2.2.sql
 share/horde/kronolith/scripts/upgrades/2.2_to_2.3.oci8.sql
+share/horde/kronolith/scripts/upgrades/2.2_to_2.3.pgsql.sql
 share/horde/kronolith/scripts/upgrades/2.2_to_2.3.sql
 share/horde/kronolith/scripts/upgrades/2006-08-20_fix_recur_int_fields.mysql.sql
+share/horde/kronolith/scripts/upgrades/2006-08-20_fix_recur_int_fields.pgsql.sql
 share/horde/kronolith/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/kronolith/scripts/upgrades/convert_datatree_shares_to_sql.php
+share/horde/kronolith/scripts/upgrades/convert_sql_shares_to_sqlng.php
+share/horde/kronolith/scripts/upgrades/sharesng.sql
 share/horde/kronolith/search.php
 share/horde/kronolith/templates/attendees/attendees.inc
 share/horde/kronolith/templates/calendar_info.php
@@ -320,6 +331,8 @@ share/horde/kronolith/themes/silver/graphics/new.png
 share/horde/kronolith/themes/silver/graphics/new_big.png
 share/horde/kronolith/themes/silver/graphics/new_small.png
 share/horde/kronolith/themes/silver/graphics/plus.png
+share/horde/kronolith/themes/silver/graphics/private-000.png
+share/horde/kronolith/themes/silver/graphics/private-fff.png
 share/horde/kronolith/themes/silver/graphics/recur-000.png
 share/horde/kronolith/themes/silver/graphics/recur-fff.png
 share/horde/kronolith/themes/silver/graphics/search.png
@@ -353,6 +366,8 @@ share/horde/kronolith/themes/tango-blue/graphics/new.png
 share/horde/kronolith/themes/tango-blue/graphics/new_big.png
 share/horde/kronolith/themes/tango-blue/graphics/new_small.png
 share/horde/kronolith/themes/tango-blue/graphics/plus.png
+share/horde/kronolith/themes/tango-blue/graphics/private-000.png
+share/horde/kronolith/themes/tango-blue/graphics/private-fff.png
 share/horde/kronolith/themes/tango-blue/graphics/recur-000.png
 share/horde/kronolith/themes/tango-blue/graphics/recur-fff.png
 share/horde/kronolith/themes/tango-blue/graphics/search.png
