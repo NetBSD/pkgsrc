@@ -1,6 +1,8 @@
-$NetBSD: patch-ldisc.c,v 1.1 2011/12/05 22:55:36 joerg Exp $
+$NetBSD: patch-ldisc.c,v 1.1.2.2 2012/02/23 15:53:56 tron Exp $
 
---- ldisc.c.orig	2011-12-05 21:43:46.000000000 +0000
+pwrite is a standard system call
+
+--- ldisc.c.orig	2010-09-09 14:32:25.000000000 +0000
 +++ ldisc.c
 @@ -41,7 +41,7 @@ static int plen(Ldisc ldisc, unsigned ch
  	return 4;		       /* <XY> hex representation */

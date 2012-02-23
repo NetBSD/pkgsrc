@@ -1,17 +1,12 @@
-$NetBSD: distinfo,v 1.9 2011/12/10 20:50:51 cheusov Exp $
+$NetBSD: distinfo,v 1.9.2.1 2012/02/23 15:53:56 tron Exp $
 
-SHA1 (putty-0.60.tar.gz) = 8d99f8f1077b7ab25f014126b5d812a1ad55ce37
-RMD160 (putty-0.60.tar.gz) = 9c56ee4d2d05f5b1079c65f19a5d9d06b596aba3
-Size (putty-0.60.tar.gz) = 1743711 bytes
-SHA1 (patch-aa) = 4949b10698c445fa16a28a8818c7448959f45135
-SHA1 (patch-ac) = 61cc8640417931a04152d4f4a1d6daa420d85496
-SHA1 (patch-ad) = 02b6d4a1869e40cf891f2ff8710b2aa27b5b23ba
-SHA1 (patch-ae) = 82bd150f0dfb59eda57e4d9bca7abfc8093090a9
-SHA1 (patch-af) = 549688da80048f57530f23d59799c04f09ddbdca
-SHA1 (patch-ag) = 2012609deff68e4931538b1a987c02b532bf04be
-SHA1 (patch-ai) = 3965e71c222d7db61d5d852dedf8fb3ec082c9a1
-SHA1 (patch-aj) = 7c22c5cb2c41445fa70dfff9e6d756af444daf06
-SHA1 (patch-ak) = 2ca42d1ea913505d7d265a3fde71e09aa292d75f
-SHA1 (patch-al) = dd8d49697806d9087b9691c3bb48fe32b70a77e1
-SHA1 (patch-am) = 4dc40f37310f8bcebee3e41bb684c89bae9323e3
-SHA1 (patch-an) = 8411855d0a21b0ddb490384990003a3cfc58edcf
+SHA1 (putty-0.62.tar.gz) = 5898438614117ee7e3704fc3f30a3c4bf2041380
+RMD160 (putty-0.62.tar.gz) = 48324416005eb4b14654fc9e0e14d39f20971507
+Size (putty-0.62.tar.gz) = 1783106 bytes
+SHA1 (patch-import.c) = c2dc26aa851a326ea89e782ef93ae7bfdc916366
+SHA1 (patch-ldisc.c) = e4dd89bfb2ddcb47aad46cc7c311f424aa6ab6be
+SHA1 (patch-terminal.c) = 48c3c928711bf7f461c0fd66490b0412f165f75b
+SHA1 (patch-unix_Makefile.gtk) = 0ad8226e2ad8e6e40d3eb9ddef4b22e7d07b7895
+SHA1 (patch-unix_gtkwin.c) = ead5e3dea292e6054afa3b9b1a9bc93fc1aff642
+SHA1 (patch-unix_uxnet.c) = 50e39093ece97b189da4a736713b59ed72c162d9
+SHA1 (patch-windows_window.c) = 0c9f4ad5870e63793278d6f04cae88154611e596

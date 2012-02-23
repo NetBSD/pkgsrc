@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2005/04/13 16:45:46 rillig Exp $
+$NetBSD: patch-import.c,v 1.1.2.2 2012/02/23 15:53:56 tron Exp $
 
---- import.c.orig	Tue Apr  5 21:37:51 2005
-+++ import.c	Tue Apr 12 10:27:13 2005
-@@ -680,8 +680,8 @@ int openssh_write(const Filename *filena
+--- import.c.orig	2010-04-12 11:02:06.000000000 +0000
++++ import.c
+@@ -717,8 +717,8 @@ int openssh_write(const Filename *filena
      unsigned char *outblob;
      int outlen;
      struct mpint_pos numbers[9];
@@ -13,7 +13,7 @@ $NetBSD: patch-ak,v 1.2 2005/04/13 16:45:46 rillig Exp $
      char zero[1];
      unsigned char iv[8];
      int ret = 0;
-@@ -1441,8 +1441,8 @@ int sshcom_write(const Filename *filenam
+@@ -1513,8 +1513,8 @@ int sshcom_write(const Filename *filenam
      unsigned char *outblob;
      int outlen;
      struct mpint_pos numbers[6];
