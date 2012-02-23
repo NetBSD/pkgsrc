@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/15 13:36:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/23 09:53:19 ghen Exp $
 bin/sieve-dump
+bin/sieve-filter
 bin/sieve-test
 bin/sievec
+include/dovecot/sieve/edit-mail.h
 include/dovecot/sieve/pigeonhole-config.h
 include/dovecot/sieve/rfc2822.h
 include/dovecot/sieve/sieve-actions.h
@@ -53,6 +55,7 @@ lib/dovecot/settings/libmanagesieve_settings.la
 libexec/dovecot/managesieve
 libexec/dovecot/managesieve-login
 man/man1/sieve-dump.1
+man/man1/sieve-filter.1
 man/man1/sieve-test.1
 man/man1/sievec.1
 man/man1/sieved.1
