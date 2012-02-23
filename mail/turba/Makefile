@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2011/09/16 05:46:25 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/02/23 11:46:07 obache Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
-PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/turba/ \
 		ftp://ftp.horde.org/pub/turba/
@@ -10,8 +9,9 @@ MASTER_SITES=	http://ftp.horde.org/pub/turba/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/turba/
 COMMENT=	Horde contact management application
+LICENSE=	apache-1.1
 
-DEPENDS+=	horde>=3.2:../../www/horde
+DEPENDS+=	horde>=3.3.7:../../www/horde
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -21,7 +21,7 @@ DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
-TURBAVER=	2.3.1
+TURBAVER=	2.3.6
 PAXDIRS=	addressbooks lib locale po scripts templates themes js
 USE_TOOLS+=	pax perl:run
 
