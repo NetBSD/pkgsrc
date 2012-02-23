@@ -1,12 +1,10 @@
-$NetBSD: patch-am,v 1.1.1.1 2009/09/07 18:01:43 ahoka Exp $
+$NetBSD: patch-terminal.c,v 1.1.2.2 2012/02/23 15:53:56 tron Exp $
 
 Make the home/end keys work on BSD servers as well as Linux ones
 
-Index: terminal.c
-===================================================================
---- terminal.c	(revision 8466)
-+++ terminal.c	(working copy)
-@@ -6131,13 +6131,6 @@
+--- terminal.c.orig	2011-07-16 11:27:05.000000000 +0000
++++ terminal.c
+@@ -6202,13 +6202,6 @@ void term_key(Terminal *term, Key_Sym ke
  	    }
  	}
  
@@ -20,7 +18,7 @@ Index: terminal.c
  	if (term->vt52_mode) {
  	    int xkey;
  
-@@ -6158,11 +6151,23 @@
+@@ -6229,11 +6222,23 @@ void term_key(Terminal *term, Key_Sym ke
  	    goto done;
  	}
  
@@ -31,9 +29,9 @@ Index: terminal.c
 +	     * but those are Linux console */
 +	    const char *he;
 +	    if (term->cfg.rxvt_homeend)
-+	        he = keysym == PK_HOME ? "\x1B[7~" : "\x1B[8~";
++		he = keysym == PK_HOME ? "\x1B[7~" : "\x1B[8~";
 +	    else
-+	        he = keysym == PK_HOME ? "\x1BOH" : "\x1BOF";
++		he = keysym == PK_HOME ? "\x1BOH" : "\x1BOF";
 +	    p += sprintf((char *) p, he);
 +	    goto done;
 +	}

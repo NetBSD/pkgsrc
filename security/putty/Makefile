@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2011/12/10 20:50:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2012/02/23 15:53:56 tron Exp $
 #
 
-DISTNAME=	putty-0.60
-PKGREVISION=	2
+DISTNAME=	putty-0.62
 CATEGORIES=	security
-MASTER_SITES=	http://the.earth.li/~sgtatham/putty/0.60/
+MASTER_SITES=	http://the.earth.li/~sgtatham/putty/0.62/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/putty/
 COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -20,24 +20,17 @@ MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.putty
-PKG_SUPPORTED_OPTIONS=	inet6
-
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 
 .if empty(OPSYS:MLinux)
 CFLAGS+=	-DHAVE_NO_SETRESUID
-.endif
-
-.if !empty(PKG_OPTIONS:Minet6)
-CFLAGS+=	-DIPV6
 .endif
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
 CFLAGS+=	-DOMIT_UTMP
 .endif
 
-# Unix98 ptys were added some weeks ago in NetBSD -current,
+# Unix98 ptys were added some time ago in NetBSD -current,
 # so use it if we have the device, otherwise use the old style.
 .if !exists(/dev/ptmx)
 CFLAGS+=	-DBSD_PTYS
@@ -46,5 +39,6 @@ CFLAGS+=	-DBSD_PTYS
 LDFLAGS.SunOS+=	-lsocket -lnsl
 CFLAGS.SunOS+=	-DBSD_COMP
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
