@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.571 2012/02/23 09:55:11 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.572 2012/02/23 10:40:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/mathomatic to 15.8.0 [asau 2012-02-23]
 	Updated mail/dovecot2 to 2.1.1 [ghen 2012-02-23]
 	Updated mail/dovecot2-pigeonhole to 0.3.0 [ghen 2012-02-23]
+	Updated www/horde to 3.3.13 [obache 2012-02-23]
