@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2012/02/23 18:39:53 marino Exp $
+
+--- configure.orig	2012-02-19 15:57:14.638423000 +0000
++++ configure
+@@ -4744,7 +4744,7 @@ if test "$ac_x_libraries" = no; then
+   # See if we find them without any special options.
+   # Don't add to $LIBS permanently.
+   ac_save_LIBS=$LIBS
+-  LIBS="-lXt $LIBS"
++  LIBS="-lXt -lX11 $LIBS"
+   cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
