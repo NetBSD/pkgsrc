@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.36 2012/02/21 02:44:01 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.37 2012/02/23 15:55:46 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -157,3 +157,6 @@ Pullup ticket #3687 - requested by tron
 graphics/png: security update
 Pullup ticket #3688 - requested by tron
 meta-pkgs/netbsd-www dependence update
+Pullup ticket #3689 - requested by wiz
+security/putty: security update
+security/putty-devel: removed
