@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2012/02/03 09:57:19 shattered Exp $
+# $NetBSD: options.mk,v 1.7 2012/02/23 12:16:32 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula-clientonly
-PKG_SUPPORTED_OPTIONS=		bacula-static ssl
+# bacula-static is broken -- see PR 42954
+PKG_SUPPORTED_OPTIONS=		ssl
 
 .include "../../mk/bsd.options.mk"
 
