@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2012/02/23 15:20:53 ghen Exp $
+
+--- src/lib/mountpoint.c.orig	2012-02-12 19:58:18.000000000 +0000
++++ src/lib/mountpoint.c
+@@ -136,7 +136,7 @@ struct mountpoint_iter {
+ #elif defined(MOUNTPOINT_SOLARIS) || defined(MOUNTPOINT_LINUX)
+ 	FILE *f;
+ #elif defined(HAVE_GETMNTINFO) /* BSDs */
+-	struct statfs *fs;
++	struct statvfs *fs;
+ 	int count;
+ #endif
+ 	struct mountpoint mnt;
+@@ -286,7 +286,7 @@ const struct mountpoint *mountpoint_iter
+ 	return NULL;
+ #elif defined(HAVE_GETMNTINFO) /* BSDs */
+ 	while (iter->count > 0) {
+-		struct statfs *fs = iter->fs;
++		struct statvfs *fs = iter->fs;
+ 
+ 		iter->fs++;
+ 		iter->count--;
