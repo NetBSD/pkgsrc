@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.581 2012/02/23 15:19:44 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.582 2012/02/23 17:50:19 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-base to 1.7.9.2 [gdt 2012-02-23]
 	Updated devel/scmgit-docs to 1.7.9.2 [gdt 2012-02-23]
 	Updated devel/scmgit to 1.7.9.2 [gdt 2012-02-23]
+	Updated mail/opendkim to 2.4.3 [pettai 2012-02-23]
