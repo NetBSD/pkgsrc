@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/04/28 23:00:07 pettai Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/23 17:45:32 pettai Exp $
 bin/opendkim-genkey
 bin/opendkim-genzone
 bin/opendkim-testadsp
@@ -21,6 +21,7 @@ share/doc/opendkim/RELEASE_NOTES.Sendmail
 share/doc/opendkim/authheaders-check-setup-hook.lua
 share/doc/opendkim/convert_keylist.sh
 share/doc/opendkim/dkim.html
+share/doc/opendkim/dkim_add_xtag.html
 share/doc/opendkim/dkim_alg_t.html
 share/doc/opendkim/dkim_body.html
 share/doc/opendkim/dkim_canon_t.html
@@ -28,6 +29,10 @@ share/doc/opendkim/dkim_cbstat.html
 share/doc/opendkim/dkim_chunk.html
 share/doc/opendkim/dkim_close.html
 share/doc/opendkim/dkim_diffheaders.html
+share/doc/opendkim/dkim_dns_set_query_cancel.html
+share/doc/opendkim/dkim_dns_set_query_service.html
+share/doc/opendkim/dkim_dns_set_query_start.html
+share/doc/opendkim/dkim_dns_set_query_waitreply.html
 share/doc/opendkim/dkim_dnssec.html
 share/doc/opendkim/dkim_eoh.html
 share/doc/opendkim/dkim_eom.html
@@ -66,6 +71,7 @@ share/doc/opendkim/dkim_options.html
 share/doc/opendkim/dkim_param_t.html
 share/doc/opendkim/dkim_policy.html
 share/doc/opendkim/dkim_policy_getdnssec.html
+share/doc/opendkim/dkim_policy_getqueries.html
 share/doc/opendkim/dkim_policy_getreportinfo.html
 share/doc/opendkim/dkim_policy_state_free.html
 share/doc/opendkim/dkim_policy_state_new.html
@@ -73,7 +79,10 @@ share/doc/opendkim/dkim_policy_syntax.html
 share/doc/opendkim/dkim_policy_t.html
 share/doc/opendkim/dkim_presult.html
 share/doc/opendkim/dkim_pstate.html
+share/doc/opendkim/dkim_qi_getname.html
+share/doc/opendkim/dkim_qi_gettype.html
 share/doc/opendkim/dkim_query_t.html
+share/doc/opendkim/dkim_queryinfo.html
 share/doc/opendkim/dkim_resign.html
 share/doc/opendkim/dkim_set_dns_callback.html
 share/doc/opendkim/dkim_set_final.html
@@ -98,6 +107,7 @@ share/doc/opendkim/dkim_sig_geterrorstr.html
 share/doc/opendkim/dkim_sig_getflags.html
 share/doc/opendkim/dkim_sig_getidentity.html
 share/doc/opendkim/dkim_sig_getkeysize.html
+share/doc/opendkim/dkim_sig_getqueries.html
 share/doc/opendkim/dkim_sig_getreportinfo.html
 share/doc/opendkim/dkim_sig_getselector.html
 share/doc/opendkim/dkim_sig_getsignalg.html
@@ -117,11 +127,13 @@ share/doc/opendkim/dkim_stat.html
 share/doc/opendkim/dkim_verify.html
 share/doc/opendkim/dns.html
 share/doc/opendkim/draft-ietf-dkim-implementation-report-06.txt
-share/doc/opendkim/draft-ietf-dkim-mailinglists-06.txt
-share/doc/opendkim/draft-ietf-marf-dkim-reporting-01.txt
-share/doc/opendkim/draft-kucherawy-authres-vbr-04.txt
+share/doc/opendkim/draft-ietf-dkim-mailinglists-12.txt
+share/doc/opendkim/draft-ietf-dkim-rfc4871bis-15.txt
+share/doc/opendkim/draft-ietf-marf-dkim-reporting-02.txt
+share/doc/opendkim/draft-kucherawy-dkim-atps-06.txt
 share/doc/opendkim/index.html
 share/doc/opendkim/opendkim
+share/doc/opendkim/opendkim-fixipaddrs.pl
 share/doc/opendkim/opendkim-reportstats
 share/doc/opendkim/opendkim.conf.sample
 share/doc/opendkim/opendkim.conf.simple
@@ -143,4 +155,4 @@ share/doc/opendkim/rfc5863.txt
 share/doc/opendkim/rfc5965.txt
 share/doc/opendkim/rfc6008.txt
 share/doc/opendkim/rfc6212.txt
-share/examples/rc.d/opendkim
+share/doc/opendkim/stats.lua
