@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.575 2012/02/23 11:46:20 obache Exp $
+$NetBSD: CHANGES-2012,v 1.576 2012/02/23 12:06:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/imp to 4.3.11 [obache 2012-02-23]
 	Updated mail/ingo to 1.2.6 [obache 2012-02-23]
 	Updated mail/turba to 2.3.6 [obache 2012-02-23]
+	Updated time/kronolith to 2.3.6 [obache 2012-02-23]
