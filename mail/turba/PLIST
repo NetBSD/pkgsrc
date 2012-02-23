@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/02/23 11:37:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.19 2012/02/23 11:46:07 obache Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -117,6 +117,8 @@ share/horde/turba/locale/fi_FI/help.xml
 share/horde/turba/locale/fr_FR/LC_MESSAGES/turba.mo
 share/horde/turba/locale/fr_FR/help.xml
 share/horde/turba/locale/gl_ES/LC_MESSAGES/turba.mo
+share/horde/turba/locale/hr_HR/LC_MESSAGES/turba.mo
+share/horde/turba/locale/hr_HR/help.xml
 share/horde/turba/locale/hu_HU/LC_MESSAGES/turba.mo
 share/horde/turba/locale/is_IS/LC_MESSAGES/turba.mo
 share/horde/turba/locale/it_IT/LC_MESSAGES/turba.mo
@@ -160,6 +162,7 @@ share/horde/turba/po/fa_IR.po
 share/horde/turba/po/fi_FI.po
 share/horde/turba/po/fr_FR.po
 share/horde/turba/po/gl_ES.po
+share/horde/turba/po/hr_HR.po
 share/horde/turba/po/hu_HU.po
 share/horde/turba/po/is_IS.po
 share/horde/turba/po/it_IT.po
@@ -206,13 +209,17 @@ share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.oci8.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.pgsql.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_sql_schema.php
+share/horde/turba/scripts/upgrades/2.2.1_to_2.3.oci8.sql
 share/horde/turba/scripts/upgrades/2.2.1_to_2.3.pgsql.sql
 share/horde/turba/scripts/upgrades/2.2.1_to_2.3.sql
+share/horde/turba/scripts/upgrades/2.3_to_2.3.3.pgsql.sql
 share/horde/turba/scripts/upgrades/2007-06-17_flatten_shares.php
 share/horde/turba/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/turba/scripts/upgrades/convert_datatree_shares_to_sql.php
+share/horde/turba/scripts/upgrades/convert_sql_shares_to_sqlng.php
 share/horde/turba/scripts/upgrades/create_default_histories.php
 share/horde/turba/scripts/upgrades/public_to_horde_share.php
+share/horde/turba/scripts/upgrades/sharesng.sql
 share/horde/turba/search.php
 share/horde/turba/templates/addressbook_list.php
 share/horde/turba/templates/block/minisearch.inc
