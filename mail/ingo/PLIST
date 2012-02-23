@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/11/10 12:50:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/02/23 11:24:29 obache Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -132,6 +132,8 @@ share/horde/ingo/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/ingo/scripts/upgrades/convert_datatree_shares_to_sql.php
 share/horde/ingo/scripts/upgrades/convert_imp_filters.php
 share/horde/ingo/scripts/upgrades/convert_prefs_to_sql.php
+share/horde/ingo/scripts/upgrades/convert_sql_shares_to_sqlng.php
+share/horde/ingo/scripts/upgrades/sharesng.sql
 share/horde/ingo/spam.php
 share/horde/ingo/templates/blacklist/blacklist.inc
 share/horde/ingo/templates/common-header.inc
