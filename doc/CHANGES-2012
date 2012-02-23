@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.583 2012/02/23 19:03:09 morr Exp $
+$NetBSD: CHANGES-2012,v 1.584 2012/02/23 19:25:02 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -828,3 +828,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit to 1.7.9.2 [gdt 2012-02-23]
 	Updated mail/opendkim to 2.4.3 [pettai 2012-02-23]
 	Updated net/haproxy to 1.4.19 [morr 2012-02-23]
+	Updated math/fricas to 1.1.6 [asau 2012-02-23]
