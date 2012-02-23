@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.17 2011/06/18 10:40:33 shattered Exp $
+# $NetBSD: options.mk,v 1.18 2012/02/23 12:16:31 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
-PKG_SUPPORTED_OPTIONS=		bacula-static ssl python
+# bacula-static is broken -- see PR 42954
+PKG_SUPPORTED_OPTIONS=		ssl python
 PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	catalog-sqlite3 catalog-pgsql catalog-mysql
 PKG_SUGGESTED_OPTIONS=		catalog-sqlite3
