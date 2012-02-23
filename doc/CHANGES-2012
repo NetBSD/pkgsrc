@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.578 2012/02/23 14:01:59 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.579 2012/02/23 14:16:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/mysql55-client to 5.5.21 [adam 2012-02-23]
 	Updated databases/mysql55-server to 5.5.21 [adam 2012-02-23]
 	Updated graphics/cairo to 1.10.2nb4 [ryoon 2012-02-23]
+	Updated lang/ruby19-base to 1.9.2pl318 [taca 2012-02-23]
