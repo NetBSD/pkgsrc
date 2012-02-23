@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.570 2012/02/23 07:58:10 asau Exp $
+$NetBSD: CHANGES-2012,v 1.571 2012/02/23 09:55:11 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -810,3 +810,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/hoe to 2.14.0 [minskim 2012-02-22]
 	Updated security/p5-Net-SSLeay to 1.42 [pettai 2012-02-22]
 	Updated math/mathomatic to 15.8.0 [asau 2012-02-23]
+	Updated mail/dovecot2 to 2.1.1 [ghen 2012-02-23]
+	Updated mail/dovecot2-pigeonhole to 0.3.0 [ghen 2012-02-23]
