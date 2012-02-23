@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2012/02/23 19:08:23 drochner Exp $
+
+--- daemon/gvfsbackendtest.c.orig	2010-11-12 14:23:35.000000000 +0000
++++ daemon/gvfsbackendtest.c
+@@ -92,7 +92,7 @@ open_idle_cb (gpointer data)
+       return FALSE;
+     }
+   
+-  fd = g_open (job->filename, O_RDONLY);
++  fd = g_open (job->filename, O_RDONLY, 0);
+   if (fd == -1)
+     {
+       int errsv = errno;
