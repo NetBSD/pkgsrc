@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/05/11 21:28:35 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/02/23 11:37:19 obache Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -206,8 +206,8 @@ share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.oci8.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.pgsql.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_sql_schema.php
-share/horde/turba/scripts/upgrades/2.2.1_to_2.3.sql
 share/horde/turba/scripts/upgrades/2.2.1_to_2.3.pgsql.sql
+share/horde/turba/scripts/upgrades/2.2.1_to_2.3.sql
 share/horde/turba/scripts/upgrades/2007-06-17_flatten_shares.php
 share/horde/turba/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/turba/scripts/upgrades/convert_datatree_shares_to_sql.php
