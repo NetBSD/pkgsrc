@@ -1,0 +1,35 @@
+$NetBSD: patch-unix_Makefile.gtk,v 1.1.2.2 2012/02/23 15:53:56 tron Exp $
+
+Allow adding CFLAGS from the pkgsrc environment.
+Use pkgsrc infrastructure for deciding on whether to link against libdl or not.
+Set prefix suitable for pkgsrc.
+
+--- unix/Makefile.gtk.orig	2011-12-10 12:35:15.000000000 +0000
++++ unix/Makefile.gtk
+@@ -119,14 +119,14 @@ GTK_CONFIG = sh -c 'pkg-config gtk+-2.0 
+ 
+ unexport CFLAGS # work around a weird issue with krb5-config
+ 
+-CFLAGS = -O2 -Wall -Werror -g -I.././ -I../charset/ -I../windows/ -I../unix/ \
++CFLAGS += -O2 -Wall -Werror -g -I.././ -I../charset/ -I../windows/ -I../unix/ \
+ 		-I../macosx/ $(shell $(GTK_CONFIG) --cflags) -D _FILE_OFFSET_BITS=64
+ XLDFLAGS = $(LDFLAGS) $(shell $(GTK_CONFIG) --libs)
+ ULDFLAGS = $(LDFLAGS)
+ ifeq (,$(findstring NO_GSSAPI,$(COMPAT)))
+ ifeq (,$(findstring STATIC_GSSAPI,$(COMPAT)))
+-XLDFLAGS+= -ldl
+-ULDFLAGS+= -ldl
++XLDFLAGS+= ${DL_LIBS}
++ULDFLAGS+= ${DL_LIBS}
+ else
+ CFLAGS+= -DNO_LIBDL $(shell $(KRB5CONFIG) --cflags gssapi)
+ XLDFLAGS+= $(shell $(KRB5CONFIG) --libs gssapi)
+@@ -136,7 +136,7 @@ endif
+ INSTALL=install
+ INSTALL_PROGRAM=$(INSTALL)
+ INSTALL_DATA=$(INSTALL)
+-prefix=/usr/local
++prefix=${PREFIX}
+ exec_prefix=$(prefix)
+ bindir=$(exec_prefix)/bin
+ mandir=$(prefix)/man
