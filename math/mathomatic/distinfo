@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.82 2011/04/30 23:28:56 asau Exp $
+$NetBSD: distinfo,v 1.83 2012/02/23 07:57:55 asau Exp $
 
-SHA1 (mathomatic-15.6.0.tar.bz2) = e2503399ffa93fded9f0cf42f62353c8e4d17abb
-RMD160 (mathomatic-15.6.0.tar.bz2) = 29920457eb8ce9416d5b554f00f0c2e4d2891121
-Size (mathomatic-15.6.0.tar.bz2) = 214652 bytes
+SHA1 (mathomatic-15.8.0.tar.bz2) = 9623dd8e3ef38a202077d260eefd90be43aa423d
+RMD160 (mathomatic-15.8.0.tar.bz2) = 56f4c86cb90ff47266bb5326d345ee9d61163661
+Size (mathomatic-15.8.0.tar.bz2) = 257128 bytes
+SHA1 (patch-makefile) = e275f0ca1dace4943bb9b38b16215c962848573b
