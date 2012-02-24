@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/10/11 14:53:34 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2012/02/24 21:07:41 jmmv Exp $
 
-SHA1 (kyua-cli-0.2.tar.gz) = 109dcb81a2b2be3057ced56e853f1148a68c254d
-RMD160 (kyua-cli-0.2.tar.gz) = a484b0b259b5ff8383a0be9871e8e7631e3afcca
-Size (kyua-cli-0.2.tar.gz) = 487085 bytes
-SHA1 (patch-aa) = 11b824faff74aabdb2d46d4b124eeb82016b0a5f
+SHA1 (kyua-cli-0.3.tar.gz) = 445f054c739a8786439b8debfb6fb48df13349f9
+RMD160 (kyua-cli-0.3.tar.gz) = 214b6b947f947d7f5a42894278dcf909ccefe14d
+Size (kyua-cli-0.3.tar.gz) = 563041 bytes
