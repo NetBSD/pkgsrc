@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.590 2012/02/24 19:45:07 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.591 2012/02/24 21:08:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/p5-Math-BigInt-GMP to 1.37 [adam 2012-02-24]
 	Updated math/py-mpmath to 0.17 [drochner 2012-02-24]
 	Updated math/py-sympy to 0.7.1 [drochner 2012-02-24]
+	Updated devel/kyua-cli to 0.3 [jmmv 2012-02-24]
