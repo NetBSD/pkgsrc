@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.87 2012/01/21 20:43:00 wiz Exp $
+# $NetBSD: sites.mk,v 1.88 2012/02/24 13:36:21 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -50,8 +50,8 @@ MASTER_SITE_TEX_CTAN+= \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
 	ftp://ftp.tex.ac.uk/tex-archive/ \
 	ftp://ftp.dante.de/tex-archive/ \
-	ftp://www.t.ring.gr.jp/pub/text/CTAN/ \
-	http://www.t.ring.gr.jp/archives/text/CTAN/
+	ftp://www.dnsbalance.ring.gr.jp/pub/text/CTAN/ \
+	http://www.dnsbalance.ring.gr.jp/archives/text/CTAN/
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://sunsite.unc.edu/pub/Linux/ \
@@ -76,8 +76,8 @@ MASTER_SITE_GNOME+=     \
 
 MASTER_SITE_KDE+=	\
 	ftp://ftp.kde.org/pub/kde/stable/ \
-	ftp://www.t.ring.gr.jp/pub/X/kde/stable/ \
-	http://www.t.ring.gr.jp/archives/X/kde/stable/ \
+	ftp://www.dnsbalance.ring.gr.jp/pub/X/kde/stable/ \
+	http://www.dnsbalance.ring.gr.jp/archives/X/kde/stable/ \
 	ftp://ftp.kddlabs.co.jp/pub/X/kde/stable/ \
 	http://mirrors.isc.org/pub/kde/stable/ \
 	ftp://ftp.gtlib.cc.gatech.edu/pub/kde/stable/ \
@@ -134,7 +134,7 @@ MASTER_SITE_XEMACS+=    \
 	ftp://ftp.pasteur.fr/pub/computing/xemacs/ \
 	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
 	ftp://mirror.cict.fr/xemacs/ \
-	ftp://ftp.t.ring.gr.jp/pub/text/xemacs/
+	ftp://ftp.dnsbalance.ring.gr.jp/pub/text/xemacs/
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
@@ -283,13 +283,13 @@ MASTER_SITE_OPENOFFICE+=	\
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
-	ftp://ftp.t.ring.gr.jp/pub/misc/openoffice/ \
+	ftp://ftp.dnsbalance.ring.gr.jp/pub/misc/openoffice/ \
 	ftp://ftp.kr.freebsd.org/pub/openoffice/
 
 MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
 	http://mirrors.xmission.com/cygwin/ \
-	ftp://ftp.t.ring.gr.jp/pub/pc/gnu-win32/ \
+	ftp://ftp.dnsbalance.ring.gr.jp/pub/pc/gnu-win32/ \
 	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
 
 MASTER_SITE_IFARCHIVE+= \
