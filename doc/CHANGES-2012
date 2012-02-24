@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.588 2012/02/24 15:06:34 adam Exp $
+$NetBSD: CHANGES-2012,v 1.589 2012/02/24 16:32:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Text-Ngram version 0.14 [fhajny 2012-02-24]
 	Added textproc/p5-Lingua-Identify version 0.50 [fhajny 2012-02-24]
 	Updated net/nmap to 5.51.6 [adam 2012-02-24]
+	Updated math/p5-Math-BigInt-GMP to 1.37 [adam 2012-02-24]
