@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.585 2012/02/23 20:15:28 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.586 2012/02/24 09:04:18 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -830,3 +830,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/haproxy to 1.4.19 [morr 2012-02-23]
 	Updated math/fricas to 1.1.6 [asau 2012-02-23]
 	Updated editors/emacs-snapshot to 24.0.93.20120222 [minskim 2012-02-23]
+	Updated sysutils/btpin-qt to 1.5 [plunky 2012-02-24]
