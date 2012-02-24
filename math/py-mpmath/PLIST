@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/08/10 18:04:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/24 19:40:53 drochner Exp $
 ${PYSITELIB}/mpmath/__init__.py
 ${PYSITELIB}/mpmath/__init__.pyc
 ${PYSITELIB}/mpmath/__init__.pyo
@@ -53,9 +53,15 @@ ${PYSITELIB}/mpmath/function_docs.pyo
 ${PYSITELIB}/mpmath/functions/__init__.py
 ${PYSITELIB}/mpmath/functions/__init__.pyc
 ${PYSITELIB}/mpmath/functions/__init__.pyo
+${PYSITELIB}/mpmath/functions/bessel.py
+${PYSITELIB}/mpmath/functions/bessel.pyc
+${PYSITELIB}/mpmath/functions/bessel.pyo
 ${PYSITELIB}/mpmath/functions/elliptic.py
 ${PYSITELIB}/mpmath/functions/elliptic.pyc
 ${PYSITELIB}/mpmath/functions/elliptic.pyo
+${PYSITELIB}/mpmath/functions/expintegrals.py
+${PYSITELIB}/mpmath/functions/expintegrals.pyc
+${PYSITELIB}/mpmath/functions/expintegrals.pyo
 ${PYSITELIB}/mpmath/functions/factorials.py
 ${PYSITELIB}/mpmath/functions/factorials.pyc
 ${PYSITELIB}/mpmath/functions/factorials.pyo
@@ -65,12 +71,18 @@ ${PYSITELIB}/mpmath/functions/functions.pyo
 ${PYSITELIB}/mpmath/functions/hypergeometric.py
 ${PYSITELIB}/mpmath/functions/hypergeometric.pyc
 ${PYSITELIB}/mpmath/functions/hypergeometric.pyo
+${PYSITELIB}/mpmath/functions/orthogonal.py
+${PYSITELIB}/mpmath/functions/orthogonal.pyc
+${PYSITELIB}/mpmath/functions/orthogonal.pyo
 ${PYSITELIB}/mpmath/functions/qfunctions.py
 ${PYSITELIB}/mpmath/functions/qfunctions.pyc
 ${PYSITELIB}/mpmath/functions/qfunctions.pyo
 ${PYSITELIB}/mpmath/functions/rszeta.py
 ${PYSITELIB}/mpmath/functions/rszeta.pyc
 ${PYSITELIB}/mpmath/functions/rszeta.pyo
+${PYSITELIB}/mpmath/functions/theta.py
+${PYSITELIB}/mpmath/functions/theta.pyc
+${PYSITELIB}/mpmath/functions/theta.pyo
 ${PYSITELIB}/mpmath/functions/zeta.py
 ${PYSITELIB}/mpmath/functions/zeta.pyc
 ${PYSITELIB}/mpmath/functions/zeta.pyo
@@ -86,6 +98,10 @@ ${PYSITELIB}/mpmath/libmp/__init__.pyo
 ${PYSITELIB}/mpmath/libmp/backend.py
 ${PYSITELIB}/mpmath/libmp/backend.pyc
 ${PYSITELIB}/mpmath/libmp/backend.pyo
+${PYSITELIB}/mpmath/libmp/exec_py2.py
+${PYSITELIB}/mpmath/libmp/exec_py2.pyc
+${PYSITELIB}/mpmath/libmp/exec_py2.pyo
+${PYSITELIB}/mpmath/libmp/exec_py3.py
 ${PYSITELIB}/mpmath/libmp/gammazeta.py
 ${PYSITELIB}/mpmath/libmp/gammazeta.pyc
 ${PYSITELIB}/mpmath/libmp/gammazeta.pyo
@@ -128,9 +144,10 @@ ${PYSITELIB}/mpmath/rational.pyo
 ${PYSITELIB}/mpmath/tests/__init__.py
 ${PYSITELIB}/mpmath/tests/__init__.pyc
 ${PYSITELIB}/mpmath/tests/__init__.pyo
+${PYSITELIB}/mpmath/tests/extratest_bessel.py
+${PYSITELIB}/mpmath/tests/extratest_bessel.pyc
+${PYSITELIB}/mpmath/tests/extratest_bessel.pyo
 ${PYSITELIB}/mpmath/tests/extratest_gamma.py
-${PYSITELIB}/mpmath/tests/extratest_gamma.pyc
-${PYSITELIB}/mpmath/tests/extratest_gamma.pyo
 ${PYSITELIB}/mpmath/tests/extratest_zeta.py
 ${PYSITELIB}/mpmath/tests/extratest_zeta.pyc
 ${PYSITELIB}/mpmath/tests/extratest_zeta.pyo
@@ -222,8 +239,6 @@ ${PYSITELIB}/mpmath/tests/test_visualization.py
 ${PYSITELIB}/mpmath/tests/test_visualization.pyc
 ${PYSITELIB}/mpmath/tests/test_visualization.pyo
 ${PYSITELIB}/mpmath/tests/torture.py
-${PYSITELIB}/mpmath/tests/torture.pyc
-${PYSITELIB}/mpmath/tests/torture.pyo
 ${PYSITELIB}/mpmath/usertools.py
 ${PYSITELIB}/mpmath/usertools.pyc
 ${PYSITELIB}/mpmath/usertools.pyo
