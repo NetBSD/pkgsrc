@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.589 2012/02/24 16:32:11 adam Exp $
+$NetBSD: CHANGES-2012,v 1.590 2012/02/24 19:45:07 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -836,3 +836,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Lingua-Identify version 0.50 [fhajny 2012-02-24]
 	Updated net/nmap to 5.51.6 [adam 2012-02-24]
 	Updated math/p5-Math-BigInt-GMP to 1.37 [adam 2012-02-24]
+	Updated math/py-mpmath to 0.17 [drochner 2012-02-24]
+	Updated math/py-sympy to 0.7.1 [drochner 2012-02-24]
