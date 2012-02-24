@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/03 16:55:34 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/24 15:26:28 drochner Exp $
 bin/xenstore
 bin/xenstore-chmod
 bin/xenstore-control
@@ -12,3 +12,4 @@ bin/xenstore-write
 lib/libxenstore.so
 lib/libxenstore.so.3.0
 lib/libxenstore.so.3.0.0
+share/examples/rc.d/xendomname
