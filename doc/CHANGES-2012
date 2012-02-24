@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.586 2012/02/24 09:04:18 plunky Exp $
+$NetBSD: CHANGES-2012,v 1.587 2012/02/24 09:43:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -831,3 +831,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/fricas to 1.1.6 [asau 2012-02-23]
 	Updated editors/emacs-snapshot to 24.0.93.20120222 [minskim 2012-02-23]
 	Updated sysutils/btpin-qt to 1.5 [plunky 2012-02-24]
+	Added textproc/p5-Text-Affixes to 0.07 [fhajny 2012-02-24]
+	Added textproc/p5-Text-Ngram to 0.14 [fhajny 2012-02-24]
+	Added textproc/p5-Lingua-Identify version 0.50 [fhajny 2012-02-24]
