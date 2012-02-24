@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2012/02/14 23:07:45 gdt Exp $
+# $NetBSD: Makefile,v 1.611 2012/02/24 09:43:08 fhajny Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -279,6 +279,7 @@ SUBDIR+=	p5-Lingua-EN-Inflect-Phrase
 SUBDIR+=	p5-Lingua-EN-Numbers-Ordinate
 SUBDIR+=	p5-Lingua-EN-Sentence
 SUBDIR+=	p5-Lingua-EN-Tagger
+SUBDIR+=	p5-Lingua-Identify
 SUBDIR+=	p5-Lingua-PT-Stemmer
 SUBDIR+=	p5-Lingua-Preferred
 SUBDIR+=	p5-Lingua-Stem
@@ -335,6 +336,7 @@ SUBDIR+=	p5-Template-Plugin-Latex
 SUBDIR+=	p5-Template-Plugin-Number-Format
 SUBDIR+=	p5-Template-Plugin-YAML
 SUBDIR+=	p5-Template-Tiny
+SUBDIR+=	p5-Text-Affixes
 SUBDIR+=	p5-Text-Aspell
 SUBDIR+=	p5-Text-Autoformat
 SUBDIR+=	p5-Text-Balanced
@@ -365,6 +367,7 @@ SUBDIR+=	p5-Text-Markdown
 SUBDIR+=	p5-Text-Markdown-Discount
 SUBDIR+=	p5-Text-MicroTemplate
 SUBDIR+=	p5-Text-Microformat
+SUBDIR+=	p5-Text-Ngram
 SUBDIR+=	p5-Text-PDF
 SUBDIR+=	p5-Text-Quoted
 SUBDIR+=	p5-Text-RecordParser
