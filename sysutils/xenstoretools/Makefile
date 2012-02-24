@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/03 16:55:34 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/24 15:26:28 drochner Exp $
 #
 
 # VERSION is set in xentool41/version.mk
@@ -39,6 +39,9 @@ USE_TOOLS+=		gmake
 MAKE_ENV+=		PREFIX=${prefix:Q} WRKSRC=${WRKSRC}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 MAKE_ENV+=		VARBASE=${VARBASE}
+
+RCD_SCRIPTS=		xendomname
+FILES_SUBST+=		PREFIX=${PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
