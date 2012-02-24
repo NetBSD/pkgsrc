@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/02/22 10:19:29 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.8 2012/02/24 20:05:47 joerg Exp $
 #
 
 DISTNAME=	DBIx-Abstract-1.01
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/DBIx-Abstract/
 COMMENT=	SQL Database access functions
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Check-ISA-[0-9]*:../../devel/p5-Check-ISA
+#DEPENDS+=	p5-Check-ISA-[0-9]*:../../devel/p5-Check-ISA
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
