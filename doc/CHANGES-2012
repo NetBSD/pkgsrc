@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.591 2012/02/24 21:08:49 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.592 2012/02/25 05:15:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/py-mpmath to 0.17 [drochner 2012-02-24]
 	Updated math/py-sympy to 0.7.1 [drochner 2012-02-24]
 	Updated devel/kyua-cli to 0.3 [jmmv 2012-02-24]
+	Added devel/p5-Check-ISA version 0.04 [obache 2012-02-25]
