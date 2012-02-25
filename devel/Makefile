@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1566 2012/02/23 19:14:03 drochner Exp $
+# $NetBSD: Makefile,v 1.1567 2012/02/25 05:16:28 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -554,6 +554,7 @@ SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Carp-Assert-More
 SUBDIR+=	p5-Carp-Clan
 SUBDIR+=	p5-Carp-REPL
+SUBDIR+=	p5-Check-ISA
 SUBDIR+=	p5-Class-Accessor
 SUBDIR+=	p5-Class-Accessor-Chained
 SUBDIR+=	p5-Class-Accessor-Grouped
