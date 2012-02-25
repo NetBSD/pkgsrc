@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.593 2012/02/25 05:46:39 taca Exp $
+$NetBSD: CHANGES-2012,v 1.594 2012/02/25 16:04:02 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -841,3 +841,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/kyua-cli to 0.3 [jmmv 2012-02-24]
 	Added devel/p5-Check-ISA version 0.04 [obache 2012-02-25]
 	Updated www/contao211-translations to 201202240 [taca 2012-02-25]
+	Updated net/rancid to 2.3.8 [pettai 2012-02-25]
