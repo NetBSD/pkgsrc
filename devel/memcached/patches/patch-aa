@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2011/10/03 11:53:11 adam Exp $
+$NetBSD: patch-aa,v 1.6 2012/02/25 20:52:53 mspo Exp $
 
 time_t changes
 
---- items.c.orig	2011-08-10 15:44:52.000000000 +0000
+--- items.c.orig        2012-02-25 20:16:35.000000000 +0000
 +++ items.c
-@@ -383,9 +383,9 @@ char *do_item_cachedump(const unsigned i
+@@ -379,9 +379,9 @@ char *do_item_cachedump(const unsigned i
          /* Copy the key since it may not be null-terminated in the struct */
          strncpy(key_temp, ITEM_key(it), it->nkey);
          key_temp[it->nkey] = 0x00; /* terminate */
@@ -16,19 +16,20 @@ time_t changes
          if (bufcurr + len + 6 > memlimit)  /* 6 is END\r\n\0 */
              break;
          memcpy(buffer + bufcurr, temp, len);
-@@ -429,13 +429,13 @@ void do_item_stats(ADD_STAT add_stats, v
+@@ -419,13 +419,13 @@ void do_item_stats(ADD_STAT add_stats, v
                  continue;
              }
              APPEND_NUM_FMT_STAT(fmt, i, "number", "%u", sizes[i]);
--            APPEND_NUM_FMT_STAT(fmt, i, "age", "%u", tails[i]->time);
-+            APPEND_NUM_FMT_STAT(fmt, i, "age", "%jd", tails[i]->time);
+-            APPEND_NUM_FMT_STAT(fmt, i, "age", "%u", current_time - tails[i]->time);
++            APPEND_NUM_FMT_STAT(fmt, i, "age", "%jd", current_time - tails[i]->time);
              APPEND_NUM_FMT_STAT(fmt, i, "evicted",
-                                 "%u", itemstats[i].evicted);
+                                 "%llu", (unsigned long long)itemstats[i].evicted);
              APPEND_NUM_FMT_STAT(fmt, i, "evicted_nonzero",
-                                 "%u", itemstats[i].evicted_nonzero);
+                                 "%llu", (unsigned long long)itemstats[i].evicted_nonzero);
              APPEND_NUM_FMT_STAT(fmt, i, "evicted_time",
 -                                "%u", itemstats[i].evicted_time);
 +                                "%jd", itemstats[i].evicted_time);
              APPEND_NUM_FMT_STAT(fmt, i, "outofmemory",
-                                 "%u", itemstats[i].outofmemory);
+                                 "%llu", (unsigned long long)itemstats[i].outofmemory);
              APPEND_NUM_FMT_STAT(fmt, i, "tailrepairs",
+
