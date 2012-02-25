@@ -1,22 +1,13 @@
-$NetBSD: patch-configure,v 1.1 2011/10/03 11:53:11 adam Exp $
+$NetBSD: patch-configure,v 1.2 2012/02/25 20:52:53 mspo Exp $
 
---- configure.orig	2011-08-16 22:35:45.000000000 +0000
+--- configure.orig	2012-02-25 19:58:48.000000000 +0000
 +++ configure
-@@ -5282,7 +5282,7 @@ rm -f core conftest.err conftest.$ac_obj
-   saved_LDFLAGS="$saved_LDFLAGS -Wl,-R$ledir/lib"
- else
-   if test "$GCC" = "yes"; then :
--  saved_LDFLAGS="$saved_LDFLAGS -Wl,-rpath=$ledir/lib"
-+  saved_LDFLAGS="$saved_LDFLAGS -Wl,-rpath $ledir/lib"
- fi
- fi
-        else
-@@ -6183,7 +6183,7 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
+@@ -6261,7 +6261,7 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
  elif test "$GCC" = "yes"
  then
    GCC_VERSION=`$CC -dumpversion`
 -  CFLAGS="$CFLAGS -Wall -Werror -pedantic -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls"
-+  CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls"
++  CFLAGS="$CFLAGS -Wall -pedantic -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls"
    case $GCC_VERSION in
      4.4.*)
      CFLAGS="$CFLAGS -fno-strict-aliasing"

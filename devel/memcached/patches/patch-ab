@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2011/10/03 11:53:11 adam Exp $
+$NetBSD: patch-ab,v 1.8 2012/02/25 20:52:53 mspo Exp $
 
 time_t changes
 
 --- memcached.h.orig	2011-08-10 04:53:38.000000000 +0000
 +++ memcached.h
-@@ -195,7 +195,7 @@ enum delta_result_type {
+@@ -199,7 +199,7 @@ enum delta_result_type {
  };
  
  /** Time relative to server start. Smaller than time_t on 64-bit systems. */
