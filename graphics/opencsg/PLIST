@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/26 20:41:04 reinoud Exp $
+include/opencsg.h
+lib/libopencsg.so
+lib/libopencsg.so.1
+lib/libopencsg.so.1.3
+lib/libopencsg.so.${PKGVERSION}
