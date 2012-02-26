@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/01/23 08:58:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/26 23:19:02 adam Exp $
 bin/qgis
 include/qgis/characterwidget.h
 include/qgis/qextserialenumerator.h
@@ -247,9 +247,11 @@ share/qgis/i18n/qgis_cs_CZ.qm
 share/qgis/i18n/qgis_de.qm
 share/qgis/i18n/qgis_el_GR.qm
 share/qgis/i18n/qgis_es.qm
+share/qgis/i18n/qgis_et.qm
 share/qgis/i18n/qgis_fa.qm
 share/qgis/i18n/qgis_fi.qm
 share/qgis/i18n/qgis_fr.qm
+share/qgis/i18n/qgis_gl_ES.qm
 share/qgis/i18n/qgis_he.qm
 share/qgis/i18n/qgis_hr_HR.qm
 share/qgis/i18n/qgis_hu.qm
@@ -258,6 +260,7 @@ share/qgis/i18n/qgis_is.qm
 share/qgis/i18n/qgis_it.qm
 share/qgis/i18n/qgis_ja.qm
 share/qgis/i18n/qgis_ka_GE.qm
+share/qgis/i18n/qgis_ko_KR.qm
 share/qgis/i18n/qgis_lo.qm
 share/qgis/i18n/qgis_lt.qm
 share/qgis/i18n/qgis_lv.qm
@@ -290,6 +293,8 @@ share/qgis/images/splash/splash.png
 share/qgis/images/splash/splash_mask.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/GdalTools.py
 ${PLIST.python}share/qgis/python/plugins/GdalTools/__init__.py
+${PLIST.python}share/qgis/python/plugins/GdalTools/icons/24-to-8-bits.png
+${PLIST.python}share/qgis/python/plugins/GdalTools/icons/8-to-24-bits.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/about.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/contour.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/dem.png
@@ -299,12 +304,10 @@ ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/merge.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/nearblack.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/polygonize.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/projection-add.png
-${PLIST.python}share/qgis/python/plugins/GdalTools/icons/projection-export.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/proximity.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/raster-clip.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/raster-info.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/raster-overview.png
-${PLIST.python}share/qgis/python/plugins/GdalTools/icons/raster-paletted.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/raster-rgb.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/rasterize.png
 ${PLIST.python}share/qgis/python/plugins/GdalTools/icons/reset.png
@@ -444,6 +447,7 @@ ${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/layer_extent.png
 ${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/management.png
 ${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/matrix.png
 ${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/mean.png
+${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/merge_shapes.png
 ${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/multi_to_single.png
 ${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/neighbour.png
 ${PLIST.python}share/qgis/python/plugins/fTools/icons/gis/random_points.png
