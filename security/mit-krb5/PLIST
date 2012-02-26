@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/03/22 23:31:04 tez Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/02/26 13:14:19 adam Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -20,12 +20,12 @@ include/gssapi/gssapi.h
 include/gssapi/gssapi_ext.h
 include/gssapi/gssapi_generic.h
 include/gssapi/gssapi_krb5.h
+include/gssapi/mechglue.h
 include/gssrpc/auth.h
 include/gssrpc/auth_gss.h
 include/gssrpc/auth_gssapi.h
 include/gssrpc/auth_unix.h
 include/gssrpc/clnt.h
-include/gssapi/mechglue.h
 include/gssrpc/netdb.h
 include/gssrpc/pmap_clnt.h
 include/gssrpc/pmap_prot.h
@@ -48,6 +48,9 @@ include/profile.h
 info/krb5-admin.info
 info/krb5-install.info
 info/krb5-user.info
+lib/krb5/plugins/kdb/libdb2.la
+lib/krb5/plugins/preauth/libencrypted_challenge.la
+lib/krb5/plugins/preauth/libpkinit.la
 lib/libcom_err.la
 lib/libgssapi_krb5.la
 lib/libgssrpc.la
@@ -59,9 +62,6 @@ lib/libkadm5srv_mit.la
 lib/libkdb5.la
 lib/libkrb5.la
 lib/libkrb5support.la
-lib/krb5/plugins/kdb/libdb2.la
-lib/krb5/plugins/preauth/libencrypted_challenge.la
-lib/krb5/plugins/preauth/libpkinit.la
 man/man1/compile_et.1
 man/man1/k5srvutil.1
 man/man1/kadmin.1
