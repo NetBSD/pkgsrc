@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.601 2012/02/26 13:17:56 adam Exp $
+$NetBSD: CHANGES-2012,v 1.602 2012/02/26 16:33:27 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/p5-GraphicsMagick to 1.3.14 [obache 2012-02-26]
 	Updated security/mit-krb5 to 1.8.6 [adam 2012-02-26]
 	Updated security/mit-krb5-appl to 1.0.3 [adam 2012-02-26]
+	Updated sysutils/flashrom to 0.9.5.1 [jakllsch 2012-02-26]
