@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.598 2012/02/26 12:22:18 obache Exp $
+$NetBSD: CHANGES-2012,v 1.599 2012/02/26 12:23:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -845,4 +845,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/memcached to 1.4.13 [mspo 2012-02-25]
 	Updated pkgtools/url2pkg to 2.14 [dholland 2012-02-26]
 	Updated devel/ruby-ole to 1.2.11.3 [obache 2012-02-26]
-	Updated graphics/GraphicsMagick to 1.3.14nb1 [obache 2012-02-26]
+	Updated graphics/GraphicsMagick to 1.3.14 [obache 2012-02-26]
