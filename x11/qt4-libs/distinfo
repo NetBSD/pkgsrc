@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2012/02/16 20:42:46 hans Exp $
+$NetBSD: distinfo,v 1.71 2012/02/26 22:16:16 adam Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.0.tar.gz) = 2ba35adca8fb9c66a58eca61a15b21df6213f22e
 RMD160 (qt-everywhere-opensource-src-4.8.0.tar.gz) = 7506dce7743215481fd9fe56920b8a47f07a112e
@@ -44,7 +44,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp) = bfe38e
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_MathExtras.h) = 384bfccabae5e3a4ea6dea39b912a941133c5632
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h) = 10bfe59d623db5047e2a4c678ee79a217ea8b7ec
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_features.pri) = d0053dd2732604908fcec294b2a833aeb6d93f40
-SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = 9e4a68fe02204e5fda7272f988d991992dfd281e
+SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = 0377066bd28d5eae02e8fcf200da4360c286ad84
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_MediaPlayer.cpp) = f9a1f71b4607c5f542c059873cf5735fad9ff3a1
 SHA1 (patch-src_dbus_qdbusserver.cpp) = 6b49a383ea561e8024184a5939ff143e91a10171
 SHA1 (patch-src_dbus_qdbusserver.h) = 67cc43c0f5e46a0e84b21d5af3ea1e949f26c7b1
