@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/01/08 05:25:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/02/26 12:22:06 obache Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -211,6 +211,7 @@ share/doc/GraphicsMagick/ChangeLog.2007
 share/doc/GraphicsMagick/ChangeLog.2008
 share/doc/GraphicsMagick/ChangeLog.2009
 share/doc/GraphicsMagick/ChangeLog.2010
+share/doc/GraphicsMagick/ChangeLog.2011
 share/doc/GraphicsMagick/Copyright.txt
 share/doc/GraphicsMagick/NEWS.txt
 share/doc/GraphicsMagick/www/ChangeLog-2001.html
@@ -223,6 +224,7 @@ share/doc/GraphicsMagick/www/ChangeLog-2007.html
 share/doc/GraphicsMagick/www/ChangeLog-2008.html
 share/doc/GraphicsMagick/www/ChangeLog-2009.html
 share/doc/GraphicsMagick/www/ChangeLog-2010.html
+share/doc/GraphicsMagick/www/ChangeLog-2011.html
 share/doc/GraphicsMagick/www/Changelog.html
 share/doc/GraphicsMagick/www/Changes.html
 share/doc/GraphicsMagick/www/Copyright.html
@@ -351,7 +353,6 @@ share/doc/GraphicsMagick/www/mogrify.html
 share/doc/GraphicsMagick/www/montage.html
 share/doc/GraphicsMagick/www/motion-picture.html
 share/doc/GraphicsMagick/www/perl.html
-share/doc/GraphicsMagick/www/platforms.html
 share/doc/GraphicsMagick/www/process.html
 share/doc/GraphicsMagick/www/programming.html
 share/doc/GraphicsMagick/www/project.html
