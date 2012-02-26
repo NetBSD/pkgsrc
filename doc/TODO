@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10896 2012/02/23 17:50:19 pettai Exp $
+$NetBSD: TODO,v 1.10897 2012/02/26 20:31:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -325,6 +325,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
+	o ImageMagick-6.7.5.6
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -334,6 +335,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
+	o Sigil-0.5.3
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o XaoS-3.5
@@ -379,7 +381,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap-xslt-1.4.0
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
-	o apache-2.4
+	o apache-2.4.1
 	o apache-maven-3.0
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
@@ -441,7 +443,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.40
+	o calibre-0.8.41
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.2
 	o cddbd-1.5.2
@@ -512,12 +514,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-mode-9.3e
 	o dmenu-4.5
 	o doclifter-2.7
-	o doxygen-1.7.6.1
+	o doxygen-1.8.0
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
 	o dri2proto-2.6
 	o drivel-3.0.3
-	o dropbear-2011.054
+	o dropbear-2012.055
 	o dspam-3.10.0
 	o dvtm-0.7
 	o easymenu-0.7.2p1
@@ -581,6 +583,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fetchyahoo-2.14.0
 	o ffmpeg-20120127.0.9.1
 	o ffmpeg-20120127.0.10
+	o fftw-3.3.1
 	o file-5.11
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -718,7 +721,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
 	o gnupg-1.4.12
-	o gnutls-3.0.13
+	o gnutls-3.0.14
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -737,6 +740,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.2
 	o gssdp-0.10.0
+	o gst-plugins0.10-bad-0.10.23
+	o gst-plugins0.10-base-0.10.36
+	o gst-plugins0.10-good-0.10.31
+	o gst-plugins0.10-ugly-0.10.19
+	o gstreamer0.10-0.10.36
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
@@ -790,6 +798,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
 	o imap-uw-2007f
+	o imapfilter-2.5
 	o imapsync-1.452
 	o imp-5.0.18
 	o ingo-2.0.7
@@ -1062,7 +1071,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p0f-3.00b
 	o p5-Gtk2-1.223
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.4.10
+	o p5-PerlMagick-6.7.5.6
 	o p5-cairo-1.082
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1073,6 +1082,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o parallel-20120222
 	o pari-2.5.0
 	o pari-galdata-2.2 [pkg/38117]
+	o parrot-4.1.0
 	o patch-2.6.1
 	o patchutils-0.3.2
 	o pbzip2-1.1.6
@@ -1148,7 +1158,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-xcbgen-1.7
 	o python-3.2
 	o qbrew-0.3.9
-	o qemu-1.0.1
+	o qemu-1.0.1 [wip]
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o quilt-0.51
@@ -1278,7 +1288,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tcpillust-1.00b
 	o tcpreplay-3.4.4
 	o tcpslice-1.2a3
-	o tcsh-6.18.00
+	o tcsh-6.18.01
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
@@ -1369,7 +1379,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.29
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
-	o wine-devel-1.4.0rc4
+	o wine-devel-1.4.0rc5
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1383,7 +1393,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4 [pkg/43792]
 	o wyrd-1.4.5
 	o x11perf-1.5.4
-	o x264-devel-20120206
+	o x264-devel-20120225
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xauth-1.0.6
@@ -1424,7 +1434,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-glide-1.0.3
 	o xf86-video-glint-1.2.7
 	o xf86-video-i128-1.3.4
-	o xf86-video-intel-2.17.0
+	o xf86-video-intel-2.18.0
 	o xf86-video-mach64-6.9.0
 	o xf86-video-mga-1.4.13
 	o xf86-video-neomagic-1.2.5
