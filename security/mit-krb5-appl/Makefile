@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2011/12/23 16:44:24 tez Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/26 13:16:32 adam Exp $
 
-DISTNAME=	krb5-appl-1.0.1
+DISTNAME=	krb5-appl-1.0.3
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5-appl/1.0/
-DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar
+DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 
-PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
-
-PATCHFILES=	2011-005-patch.txt
+#PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
+#PATCHFILES=	2011-005-patch.txt
 
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/
@@ -25,11 +23,9 @@ CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 CONFLICTS+=	mit-krb5<1.8
 
-USE_TOOLS+=		yacc
-USE_TOOLS+=		autoconf
+USE_TOOLS+=		autoconf autoheader yacc
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PATCH_DIST_ARGS=	-d ${WRKSRC} -p1
 
