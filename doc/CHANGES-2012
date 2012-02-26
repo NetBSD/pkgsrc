@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.596 2012/02/26 02:35:05 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.597 2012/02/26 11:55:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -844,3 +844,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/rancid to 2.3.8 [pettai 2012-02-25]
 	Updated devel/memcached to 1.4.13 [mspo 2012-02-25]
 	Updated pkgtools/url2pkg to 2.14 [dholland 2012-02-26]
+	Updated devel/ruby-ole to 1.2.11.3 [obache 2012-02-26]
