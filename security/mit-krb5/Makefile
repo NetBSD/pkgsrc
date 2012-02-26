@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.55 2011/10/23 19:58:16 tez Exp $
+# $NetBSD: Makefile,v 1.56 2012/02/26 13:14:19 adam Exp $
 
-DISTNAME=	krb5-1.8.4
+DISTNAME=	krb5-1.8.6
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.8/
 EXTRACT_SUFX=	.tar
 DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 
-PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
-PATCHFILES=	2011-006-patch-r18.txt
+#PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
+#PATCHFILES=	2011-006-patch-r18.txt
 
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/
