@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.21 2012/02/16 16:33:36 hans Exp $
+$NetBSD: distinfo,v 1.22 2012/02/26 23:12:56 jnemeth Exp $
 
-SHA1 (asterisk-1.8.9.2/asterisk-1.8.9.2.tar.gz) = ac53c6db9d68b36479000326d88f200057d641ef
-RMD160 (asterisk-1.8.9.2/asterisk-1.8.9.2.tar.gz) = cd57801defd69b358979a1e2ff8db73ba3364e57
-Size (asterisk-1.8.9.2/asterisk-1.8.9.2.tar.gz) = 24820991 bytes
-SHA1 (asterisk-1.8.9.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-1.8.9.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-1.8.9.2/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
-SHA1 (asterisk-1.8.9.2/extract-cfile.txt) = b22874814c83a53bcd1a8d96b5911304f304971e
-RMD160 (asterisk-1.8.9.2/extract-cfile.txt) = e7205fe7e95793f3ca6e384edeef1ad5713485e0
-Size (asterisk-1.8.9.2/extract-cfile.txt) = 643 bytes
-SHA1 (asterisk-1.8.9.2/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
-RMD160 (asterisk-1.8.9.2/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
-Size (asterisk-1.8.9.2/rfc3951.txt) = 373442 bytes
+SHA1 (asterisk-1.8.9.3/asterisk-1.8.9.3.tar.gz) = 013ac12b372b96c0e1f2e968fd5e738eeb5fff76
+RMD160 (asterisk-1.8.9.3/asterisk-1.8.9.3.tar.gz) = 0e118391e0ecc03f5546cd2ec31f47f10af9dc1e
+Size (asterisk-1.8.9.3/asterisk-1.8.9.3.tar.gz) = 24825965 bytes
+SHA1 (asterisk-1.8.9.3/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-1.8.9.3/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-1.8.9.3/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (asterisk-1.8.9.3/extract-cfile.txt) = b22874814c83a53bcd1a8d96b5911304f304971e
+RMD160 (asterisk-1.8.9.3/extract-cfile.txt) = e7205fe7e95793f3ca6e384edeef1ad5713485e0
+Size (asterisk-1.8.9.3/extract-cfile.txt) = 643 bytes
+SHA1 (asterisk-1.8.9.3/rfc3951.txt) = 1a6c769be750fb02456d60db2470909254496017
+RMD160 (asterisk-1.8.9.3/rfc3951.txt) = 15f7ec61653ec9953172f8f2150e7d8f6f620926
+Size (asterisk-1.8.9.3/rfc3951.txt) = 373442 bytes
 SHA1 (patch-aa) = 496565e1e567c42ab6ba8f996c506f52cb9c8cfe
 SHA1 (patch-af) = 19786616bb606c38f769ec85f2e4d118573659ab
 SHA1 (patch-ag) = c71c61350cefbbe53eefa99245ca7712753f22d5
@@ -43,4 +43,4 @@ SHA1 (patch-bi) = d71662f618a10c3ca4277feb7ad0d659935dee1e
 SHA1 (patch-bj) = a184452adf2c883695e3819c13c584a3db9608d7
 SHA1 (patch-bk) = 93679dfb04d26c99ac9c2822e0d74d869d16369f
 SHA1 (patch-bl) = ae68a81a758e3b49eb54b7400d8d5c6ed4efa51a
-SHA1 (patch-main_editline_sys.h) = 284b34e20091b3427cd67b835fc7aa62c9d92a6c
+SHA1 (patch-bm) = 284b34e20091b3427cd67b835fc7aa62c9d92a6c

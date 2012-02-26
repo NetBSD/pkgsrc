@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2012/02/16 16:33:36 hans Exp $
+# $NetBSD: Makefile,v 1.26 2012/02/26 23:12:56 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-1.8.9.2
+DISTNAME=	asterisk-1.8.9.3
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -95,7 +95,7 @@ BUILDLINK_TRANSFORM+=	rm:-march=i386
 .endif
 
 PLIST_VARS+=	kqueue
-.if ${OPSYS} != "SunOS"
+.if exists(/usr/include/sys/event.h)
 PLIST.kqueue=	yes
 .endif
 

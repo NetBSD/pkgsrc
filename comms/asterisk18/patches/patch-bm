@@ -1,4 +1,4 @@
-$NetBSD: patch-main_editline_sys.h,v 1.1 2012/02/16 16:33:36 hans Exp $
+$NetBSD: patch-bm,v 1.1 2012/02/26 23:12:56 jnemeth Exp $
 
 --- main/editline/sys.h.orig	2010-07-28 00:30:38.000000000 +0200
 +++ main/editline/sys.h	2012-01-25 15:50:04.918035224 +0100
