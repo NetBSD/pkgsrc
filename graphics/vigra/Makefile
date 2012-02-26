@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/02/06 12:40:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/02/26 08:33:06 obache Exp $
 
 DISTNAME=	vigra-1.8.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -36,8 +36,8 @@ CHECK_INTERPRETER_SKIP=	bin/vigra-config
 
 .include "options.mk"
 
-post-patch:
-	${RM} ${WRKSRC}/include/vigra/*.orig
+pre-install:
+	${RM} -f ${WRKSRC}/include/vigra/*.orig
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
