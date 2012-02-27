@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/12/29 08:17:23 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/02/27 11:59:52 obache Exp $
 bin/grntest
 bin/groonga
 bin/groonga-query-log-analyzer
@@ -76,6 +76,7 @@ share/doc/groonga/en/html/_sources/news/0.x.txt
 share/doc/groonga/en/html/_sources/news/1.0.x.txt
 share/doc/groonga/en/html/_sources/news/1.1.x.txt
 share/doc/groonga/en/html/_sources/news/senna.txt
+share/doc/groonga/en/html/_sources/output.txt
 share/doc/groonga/en/html/_sources/pseudo_column.txt
 share/doc/groonga/en/html/_sources/reference.txt
 share/doc/groonga/en/html/_sources/spec.txt
@@ -193,6 +194,7 @@ share/doc/groonga/en/html/news/1.0.x.html
 share/doc/groonga/en/html/news/1.1.x.html
 share/doc/groonga/en/html/news/senna.html
 share/doc/groonga/en/html/objects.inv
+share/doc/groonga/en/html/output.html
 share/doc/groonga/en/html/pseudo_column.html
 share/doc/groonga/en/html/reference.html
 share/doc/groonga/en/html/search.html
@@ -283,6 +285,7 @@ share/doc/groonga/ja/html/_sources/news/0.x.txt
 share/doc/groonga/ja/html/_sources/news/1.0.x.txt
 share/doc/groonga/ja/html/_sources/news/1.1.x.txt
 share/doc/groonga/ja/html/_sources/news/senna.txt
+share/doc/groonga/ja/html/_sources/output.txt
 share/doc/groonga/ja/html/_sources/pseudo_column.txt
 share/doc/groonga/ja/html/_sources/reference.txt
 share/doc/groonga/ja/html/_sources/spec.txt
@@ -400,6 +403,7 @@ share/doc/groonga/ja/html/news/1.0.x.html
 share/doc/groonga/ja/html/news/1.1.x.html
 share/doc/groonga/ja/html/news/senna.html
 share/doc/groonga/ja/html/objects.inv
+share/doc/groonga/ja/html/output.html
 share/doc/groonga/ja/html/pseudo_column.html
 share/doc/groonga/ja/html/reference.html
 share/doc/groonga/ja/html/search.html
@@ -644,6 +648,7 @@ share/doc/groonga/source/news/0.x.txt
 share/doc/groonga/source/news/1.0.x.txt
 share/doc/groonga/source/news/1.1.x.txt
 share/doc/groonga/source/news/senna.txt
+share/doc/groonga/source/output.txt
 share/doc/groonga/source/pseudo_column.txt
 share/doc/groonga/source/rdoc.py
 share/doc/groonga/source/reference.txt
