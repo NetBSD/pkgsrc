@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2011/02/21 16:01:21 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/27 11:53:07 obache Exp $
 
 .include "../../textproc/mecab/Makefile.common"
 
 DISTNAME=	mecab-ruby-${MECAB_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-mecab-${MECAB_VERSION}
-PKGREVISION=	1
 CATEGORIES+=	ruby
 
 COMMENT=	MeCab ruby module
@@ -19,7 +18,7 @@ USE_RUBY_EXTCONF=	yes
 do-test:
 	${RUN}								\
 	cd ${WRKSRC};							\
-	env ${TEST_ENV} ${RUBY} test.rb
+	${SETENV} ${TEST_ENV} ${RUBY} -I${WRKSRC} test.rb
 
 BUILDLINK_API_DEPENDS.mecab+=	mecab>=${MECAB_VERSION}
 

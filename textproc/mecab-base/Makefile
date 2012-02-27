@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/12/16 16:49:26 hans Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/27 11:53:07 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -44,6 +44,17 @@ SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread||g'
 
 PTHREAD_AUTO_VARS=	yes
+
+# No TLS support for NetBSD.
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
+SUBST_SED.pthread+=	-e 's|enable_tls=yes|enable_tls=no|g'
+.endif
+
+# require i486 features for atomic_op.
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-march=i486
+CXXFLAGS+=	-march=i486
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
