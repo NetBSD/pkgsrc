@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2009/10/14 08:22:35 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/02/27 11:53:07 obache Exp $
 #
 # used by textproc/mecab-base/Makefile
 # used by textproc/java-mecab/Makefile
@@ -8,10 +8,10 @@
 # used by textproc/mecab-ipadic/Makefile
 # used by textproc/mecab-jumandic/Makefile
 
-MECAB_VERSION=	0.98
+MECAB_VERSION=	0.993
 
 CATEGORIES=	japanese textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mecab/}
+MASTER_SITES=	http://mecab.googlecode.com/files/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mecab.sourceforge.net/
