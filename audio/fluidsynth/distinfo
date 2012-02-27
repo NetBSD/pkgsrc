@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2012/01/28 13:15:32 wiz Exp $
+$NetBSD: distinfo,v 1.10 2012/02/27 13:24:13 adam Exp $
 
 SHA1 (fluidsynth-1.1.5.tar.gz) = 2f98696ca0a6757684f0a881bf92b3149536fdf2
 RMD160 (fluidsynth-1.1.5.tar.gz) = f95f5a7091cede2d0991bab7fa8089e79925544f
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 1819b1e969b4b98dc7677cdfbff624be3f3ec666
 SHA1 (patch-ac) = 81ca2243404a4fd1a3f93da82116c276db7fb42c
 SHA1 (patch-ad) = edb221360d033804d04c15560a80e9d08e8406bc
 SHA1 (patch-ae) = a536d0d16e7b4a138e69b0b0d91f2926e0675e45
+SHA1 (patch-src_drivers_fluid_coreaudio.c) = c42bd8a1cace1c6a785a6c2e0c368a1bfc065b17
