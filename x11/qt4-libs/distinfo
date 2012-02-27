@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2012/02/26 22:16:16 adam Exp $
+$NetBSD: distinfo,v 1.72 2012/02/27 12:41:22 reinoud Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.0.tar.gz) = 2ba35adca8fb9c66a58eca61a15b21df6213f22e
 RMD160 (qt-everywhere-opensource-src-4.8.0.tar.gz) = 7506dce7743215481fd9fe56920b8a47f07a112e
@@ -39,6 +39,7 @@ SHA1 (patch-cg) = 2519fe525237167f10dffb9294c861f4d7063f31
 SHA1 (patch-ci) = bc85adf9ea17be24f92897b960517941f5b28ab7
 SHA1 (patch-cj) = 4f6d3546e3bc04ca2034af21645fc6f27bc82eef
 SHA1 (patch-qmake_generators_makefile.cpp) = 54184d85fd06c86a62640add6c8334ca323ea863
+SHA1 (patch-src-tools-mocmain.cpp-QTBUG-22829) = 79ffa61f856d657be054d1ea2fcab3a90740621e
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 5b5ed1512adcde18ef86044986f36d0bb87e1666
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_jit_JITStubs.cpp) = bfe38ea1e26fef02dd78e40c95c000cb0cc32a04
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_MathExtras.h) = 384bfccabae5e3a4ea6dea39b912a941133c5632
