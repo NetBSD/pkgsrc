@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.39 2010/11/13 16:23:22 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.40 2012/02/27 22:42:27 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -701,13 +701,14 @@ pkg_build()
 {
     local failed invalid p pkgs script statfile
 
-    pkgs="$*"
-
-    # Check if all packages exist
-    invalid=""
-    for p in $pkgs; do
-        if [ ! -d $REAL_PKGSRC/$p ]; then
-            invalid="$invalid $p"
+    pkgs=
+    invalid=
+    for pkg in "${@}"; do
+        local match="$(find_pkg "${pkg}")"
+        if [ -z "${match}" ]; then
+            invalid="${invalid} ${pkg}"
+        else
+            pkgs="${pkgs} ${match}"
         fi
     done
     if [ -n "$invalid" ]; then
@@ -752,6 +753,32 @@ EOF
             echo "    $p"
         done
     fi
+}
+
+# find_pkg name
+#
+#   Checks if the given package exists and outputs its path within pkgsrc.
+#   Outputs nothing if the package is not found.
+find_pkg()
+{
+    local name="${1}"
+
+    case "${name}" in
+    */*)
+        if [ -d "${REAL_PKGSRC}/${name}" ]; then
+            echo "${name}"
+        else
+            :  # Not found; output nothing.
+        fi
+        ;;
+    *)
+        local match="$(cd "${REAL_PKGSRC}" && echo */"${name}")"
+        if [ -d "${REAL_PKGSRC}/${match}" ]; then
+            echo "${match}"
+        else
+            :  # Not found; output nothing.
+        fi
+    esac
 }
 
 # build_and_install pkg
