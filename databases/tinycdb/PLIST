@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2010/09/11 08:26:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/27 17:14:46 elric Exp $
 bin/cdb
 include/cdb.h
 lib/libcdb.a
 lib/libcdb.so
 lib/libcdb.so.1
+lib/libcdb_pic.a
 lib/pkgconfig/libcdb.pc
 man/man1/cdb.1
 man/man3/cdb.3
