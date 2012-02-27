@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.605 2012/02/26 23:19:55 adam Exp $
+$NetBSD: CHANGES-2012,v 1.606 2012/02/27 00:18:17 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -853,3 +853,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/distbb to 0.44.0 [cheusov 2012-02-26]
 	Added graphics/opencsg version 1.3.2 [reinoud 2012-02-26]
 	Updated geography/qgis to 1.7.4 [adam 2012-02-27]
+	Updated comms/asterisk10 to 10.1.3 [jnemeth 2012-02-27]
