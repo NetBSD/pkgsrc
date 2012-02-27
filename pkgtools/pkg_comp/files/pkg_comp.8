@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.35 2010/04/15 09:42:45 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.36 2012/02/27 22:42:27 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd April 15, 2010
+.Dd February 27, 2012
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -155,7 +155,12 @@ issuing a maketemplate.
 A list of packages to automatically build during the
 .Sy auto
 target.
-A package is in the form section/name, like misc/colorls.
+A package is in the form
+.Sq section/name ,
+like
+.Sq misc/colorls ,
+or a plain name like
+.Sq colorls .
 Defaults to nothing.
 .It AUTO_TARGET
 The pkgsrc target to use when building packages in an automated fashion
@@ -173,7 +178,12 @@ Defaults to
 A list of packages to automatically build after the
 .Sy makeroot
 target.
-A package is in the form section/name, like misc/colorls.
+A package is in the form
+.Sq section/name ,
+like
+.Sq misc/colorls ,
+or a plain name like
+.Sq colorls .
 Defaults to nothing.
 .It BUILD_TARGET
 The pkgsrc target to use when building packages.
@@ -475,8 +485,8 @@ Create the chroot environment, based on the specs of the configuration file.
 This step is required before trying any other, except maketemplate.
 .It build
 Builds the specified packages inside the chroot.
-You need to pass their names as relative paths inside pkgsrc, like
-.Pa pkgtools/pkg_comp .
+You can pass the package names as a relative path within pkgsrc or as the
+basename of the package directory (i.e. omitting the directory name).
 .It install
 Install the specified binary packages into the chroot.
 Package names can contain globs.
