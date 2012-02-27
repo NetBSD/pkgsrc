@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/27 12:46:27 reinoud Exp $
+
+SHA1 (CGAL-3.9.tar.gz) = cc99fad7116f221b6301326834f71ff65cebf2eb
+RMD160 (CGAL-3.9.tar.gz) = 0a5a929ecedeeac3833ec90f802b7f5ac069ad47
+Size (CGAL-3.9.tar.gz) = 14276059 bytes
+SHA1 (patch-manpage-installation) = c664f64ccc9507871c1ada46b983f0d006b13fe6
