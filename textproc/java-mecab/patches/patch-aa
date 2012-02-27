@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2007/12/31 12:23:41 obache Exp $
+$NetBSD: patch-aa,v 1.3 2012/02/27 11:53:07 obache Exp $
 
---- Makefile.orig	2007-06-10 14:32:44.000000000 +0000
+--- Makefile.orig	2012-01-13 14:58:07.000000000 +0000
 +++ Makefile
 @@ -2,22 +2,20 @@ TARGET=MeCab
  JAVAC=javac
  JAVA=java
  JAR=jar
 -CXX=c++
--INCLUDE=/usr/local/jdk/include
+-INCLUDE=/usr/lib/jvm/java-6-openjdk/include
  
  PACKAGE=org/chasen/mecab
  
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.2 2007/12/31 12:23:41 obache Exp $
  	$(JAR) cfv $(TARGET).jar $(PACKAGE)/*.class
  
  test:
-+	$(JAVAC) -encoding EUC_JP test.java
++	$(JAVAC) -encoding UTF-8 test.java
  	env LD_LIBRARY_PATH=. $(JAVA) test
  
  clean:

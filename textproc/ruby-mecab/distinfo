@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/10/14 08:22:35 obache Exp $
+$NetBSD: distinfo,v 1.5 2012/02/27 11:53:07 obache Exp $
 
-SHA1 (mecab-ruby-0.98.tar.gz) = fd9c6354b228de787d1de4a0645a74188c08900d
-RMD160 (mecab-ruby-0.98.tar.gz) = 66ea105e366b7567a514fba8d29e15d0cb0856c6
-Size (mecab-ruby-0.98.tar.gz) = 41674 bytes
+SHA1 (mecab-ruby-0.993.tar.gz) = 6a9fcea067c8914f6da80a40fd8cac74aadde75f
+RMD160 (mecab-ruby-0.993.tar.gz) = 8596943da117daa67aaaec4fa262b644cf134806
+Size (mecab-ruby-0.993.tar.gz) = 44004 bytes
