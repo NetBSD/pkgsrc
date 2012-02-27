@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.20 2011/09/14 17:33:00 hans Exp $
+@comment $NetBSD: PLIST,v 1.21 2012/02/27 12:39:11 asau Exp $
 bin/afslog
 bin/compile_et
-bin/gss
+bin/gsstool
 bin/hxtool
 bin/idn-lookup
-bin/kauth
+bin/kcc
 bin/kdestroy
 bin/kf
 bin/kftp
@@ -42,6 +42,7 @@ include/krb5/gssapi/gkrb5_err.h
 include/krb5/gssapi/gssapi.h
 include/krb5/gssapi/gssapi_krb5.h
 include/krb5/gssapi/gssapi_ntlm.h
+include/krb5/gssapi/gssapi_oid.h
 include/krb5/gssapi/gssapi_spnego.h
 ${PLIST.hcrypto}include/krb5/hcrypto/aes.h
 ${PLIST.hcrypto}include/krb5/hcrypto/bn.h
@@ -73,6 +74,7 @@ include/krb5/hdb_err.h
 include/krb5/heim-ipc.h
 include/krb5/heim_asn1.h
 include/krb5/heim_err.h
+include/krb5/heimbase.h
 include/krb5/heimntlm-protos.h
 include/krb5/heimntlm.h
 include/krb5/hex.h
@@ -93,6 +95,7 @@ include/krb5/krb5-private.h
 include/krb5/krb5-protos.h
 include/krb5/krb5-types.h
 include/krb5/krb5.h
+include/krb5/krb5/ccache_plugin.h
 include/krb5/krb5/locate_plugin.h
 include/krb5/krb5/send_to_kdc_plugin.h
 include/krb5/krb5/windc_plugin.h
@@ -100,6 +103,7 @@ include/krb5/krb5_asn1.h
 include/krb5/krb5_ccapi.h
 include/krb5/krb5_err.h
 include/krb5/kx509_asn1.h
+include/krb5/ntlm_err.h
 include/krb5/ocsp_asn1.h
 include/krb5/otp.h
 include/krb5/parse_bytes.h
@@ -127,6 +131,7 @@ lib/libcom_err.la
 lib/libgssapi.la
 ${PLIST.hcrypto}lib/libhcrypto.la
 lib/libhdb.la
+lib/libheimbase.la
 lib/libheimntlm.la
 lib/libhx509.la
 lib/libkadm5clnt.la
@@ -187,13 +192,10 @@ man/man1/xnlock.1
 man/man3/HDB.3
 man/man3/__gss_c_attr_stream_sizes_oid_desc.3
 man/man3/arg_printusage.3
-man/man3/challange.3
+man/man3/challenge.3
 man/man3/context.3
 man/man3/data.3
-man/man3/dnsdomainname.3
-man/man3/dnsservername.3
 man/man3/domain.3
-man/man3/domainname.3
 man/man3/ecalloc.3
 man/man3/emalloc.3
 man/man3/eread.3
@@ -222,11 +224,13 @@ man/man3/gss_import_name.3
 man/man3/gss_import_sec_context.3
 man/man3/gss_indicate_mechs.3
 man/man3/gss_init_sec_context.3
+man/man3/gss_inquire_attrs_for_mech.3
 man/man3/gss_inquire_context.3
 man/man3/gss_inquire_cred.3
 man/man3/gss_inquire_cred_by_mech.3
 man/man3/gss_inquire_mechs_for_name.3
 man/man3/gss_inquire_names_for_mech.3
+man/man3/gss_inquire_saslname_for_mech.3
 man/man3/gss_krb5_ccache_name.3
 man/man3/gss_krb5_compat_des3_mic.3
 man/man3/gss_krb5_copy_ccache.3
@@ -270,9 +274,11 @@ man/man3/hdb__put.3
 man/man3/hdb_auth_status.3
 man/man3/hdb_check_constrained_delegation.3
 man/man3/hdb_check_pkinit_ms_upn_match.3
+man/man3/hdb_check_s4u2self.3
 man/man3/hdb_close.3
 man/man3/hdb_destroy.3
-man/man3/hdb_fetch.3
+man/man3/hdb_entry_ex.3
+man/man3/hdb_fetch_kvno.3
 man/man3/hdb_firstkey.3
 man/man3/hdb_free.3
 man/man3/hdb_get_realms.3
@@ -286,6 +292,8 @@ man/man3/hdb_rename.3
 man/man3/hdb_store.3
 man/man3/hdb_unlock.3
 man/man3/heim_ntlm_build_ntlm1_master.3
+man/man3/heim_ntlm_build_ntlm2_master.3
+man/man3/heim_ntlm_calculate_lm2.3
 man/man3/heim_ntlm_calculate_ntlm1.3
 man/man3/heim_ntlm_calculate_ntlm2.3
 man/man3/heim_ntlm_decode_targetinfo.3
@@ -298,6 +306,7 @@ man/man3/heim_ntlm_free_targetinfo.3
 man/man3/heim_ntlm_free_type1.3
 man/man3/heim_ntlm_free_type2.3
 man/man3/heim_ntlm_free_type3.3
+man/man3/heim_ntlm_keyex_unwrap.3
 man/man3/heim_ntlm_nt_key.3
 man/man3/heim_ntlm_ntlmv2_key.3
 man/man3/heim_ntlm_verify_ntlm2.3
@@ -625,6 +634,7 @@ man/man3/krb5_checksumsize.3
 man/man3/krb5_cksumtype_to_enctype.3
 man/man3/krb5_cksumtype_valid.3
 man/man3/krb5_clear_error_message.3
+man/man3/krb5_clear_error_string.3
 man/man3/krb5_closelog.3
 man/man3/krb5_compare_creds.3
 man/man3/krb5_config_file_free.3
@@ -679,6 +689,7 @@ man/man3/krb5_crypto_overhead.3
 man/man3/krb5_data_alloc.3
 man/man3/krb5_data_cmp.3
 man/man3/krb5_data_copy.3
+man/man3/krb5_data_ct_cmp.3
 man/man3/krb5_data_free.3
 man/man3/krb5_data_realloc.3
 man/man3/krb5_data_zero.3
@@ -762,11 +773,15 @@ man/man3/krb5_free_krbhst.3
 man/man3/krb5_free_principal.3
 man/man3/krb5_free_salt.3
 man/man3/krb5_free_ticket.3
+man/man3/krb5_free_unparsed_name.3
 man/man3/krb5_fwd_tgt_creds.3
 man/man3/krb5_generate_random_block.3
+man/man3/krb5_generate_subkey.3
 man/man3/krb5_generate_subkey_extended.3
 man/man3/krb5_get_all_client_addrs.3
 man/man3/krb5_get_all_server_addrs.3
+man/man3/krb5_get_cred_from_kdc.3
+man/man3/krb5_get_cred_from_kdc_opt.3
 man/man3/krb5_get_credentials.3
 man/man3/krb5_get_credentials_with_flags.3
 man/man3/krb5_get_creds.3
@@ -847,7 +862,6 @@ man/man3/krb5_init_creds_set_password.3
 man/man3/krb5_init_creds_set_service.3
 man/man3/krb5_init_creds_step.3
 man/man3/krb5_init_ets.3
-man/man3/krb5_init_etype.3
 man/man3/krb5_initlog.3
 man/man3/krb5_introduction.3
 man/man3/krb5_is_config_principal.3
@@ -884,6 +898,7 @@ man/man3/krb5_kt_get_entry.3
 man/man3/krb5_kt_get_full_name.3
 man/man3/krb5_kt_get_name.3
 man/man3/krb5_kt_get_type.3
+man/man3/krb5_kt_have_content.3
 man/man3/krb5_kt_next_entry.3
 man/man3/krb5_kt_read_service_key.3
 man/man3/krb5_kt_register.3
@@ -1022,6 +1037,7 @@ man/man3/krb5_storage_seek.3
 man/man3/krb5_storage_set_byteorder.3
 man/man3/krb5_storage_set_eof_code.3
 man/man3/krb5_storage_set_flags.3
+man/man3/krb5_storage_set_max_alloc.3
 man/man3/krb5_storage_to_data.3
 man/man3/krb5_storage_truncate.3
 man/man3/krb5_storage_write.3
@@ -1086,6 +1102,7 @@ man/man3/krb5_verify_user_lrealm.3
 man/man3/krb5_verify_user_opt.3
 man/man3/krb5_vlog.3
 man/man3/krb5_vlog_msg.3
+man/man3/krb5_vset_error_string.3
 man/man3/krb5_vwarn.3
 man/man3/krb_afslog.3
 man/man3/krb_afslog_uid.3
@@ -1094,7 +1111,6 @@ man/man3/lm.3
 man/man3/ntlm.3
 man/man3/ntlm_buf.3
 man/man3/ntlm_core.3
-man/man3/ntlm_targetinfo.3
 man/man3/ntlm_type1.3
 man/man3/ntlm_type2.3
 man/man3/ntlm_type3.3
@@ -1132,7 +1148,6 @@ man/man3/rtbl_set_column_prefix.3
 man/man3/rtbl_set_flags.3
 man/man3/rtbl_set_prefix.3
 man/man3/rtbl_set_separator.3
-man/man3/servername.3
 man/man3/sessionkey.3
 man/man3/targetinfo.3
 man/man3/targetname.3
