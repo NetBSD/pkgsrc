@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.614 2012/02/27 14:47:13 reinoud Exp $
+$NetBSD: CHANGES-2012,v 1.615 2012/02/27 22:43:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -867,4 +867,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4-libs to 4.8.0nb2 [reinoud 2012-02-27]
 	Updated games/scummvm to 1.4.1 [adam 2012-02-27]
 	Added cad/openscad version 2011.12 [reinoud 2012-02-27]
-
+	Updated pkgtools/pkg_comp to 1.36 [jmmv 2012-02-27]
