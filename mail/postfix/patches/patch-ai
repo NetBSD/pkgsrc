@@ -1,11 +1,11 @@
-$NetBSD: patch-ai,v 1.26 2010/02/25 13:01:23 martti Exp $
+$NetBSD: patch-ai,v 1.27 2012/02/27 03:01:30 taca Exp $
 
 Make this pkgsrc friendly.
-Add support for NetBSD 5.x and DragonFly BSD.
+Add support for NetBSD 5.x, NetBSD 6.x and DragonFly BSD.
 
---- makedefs.orig	2010-02-03 22:58:58.000000000 +0200
-+++ makedefs	2010-02-25 14:48:50.000000000 +0200
-@@ -146,6 +146,8 @@
+--- makedefs.orig	2011-11-02 23:46:22.000000000 +0000
++++ makedefs
+@@ -146,6 +146,8 @@ case "$SYSTEM.$RELEASE" in
  		;;
    FreeBSD.8*)	SYSTYPE=FREEBSD8
  		;;
@@ -14,16 +14,18 @@ Add support for NetBSD 5.x and DragonFly BSD.
    OpenBSD.2*)	SYSTYPE=OPENBSD2
  		;;
    OpenBSD.3*)	SYSTYPE=OPENBSD3
-@@ -162,6 +164,8 @@
+@@ -164,6 +166,10 @@ case "$SYSTEM.$RELEASE" in
  		;;
     NetBSD.4*)	SYSTYPE=NETBSD4
  		;;
 +   NetBSD.5*)	SYSTYPE=NETBSD5
 +		;;
++   NetBSD.6*)	SYSTYPE=NETBSD6
++		;;
     BSD/OS.2*)	SYSTYPE=BSDI2
  		;;
     BSD/OS.3*)	SYSTYPE=BSDI3
-@@ -214,13 +218,6 @@
+@@ -216,13 +222,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -37,7 +39,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -252,25 +249,8 @@
+@@ -260,25 +259,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -63,7 +65,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
-@@ -281,7 +261,6 @@
+@@ -289,7 +271,6 @@ case "$SYSTEM.$RELEASE" in
  		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
  		#     GDBM_LIBS=gdbm
  		# fi
@@ -71,7 +73,7 @@ Add support for NetBSD 5.x and DragonFly BSD.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -383,25 +362,13 @@
+@@ -418,25 +399,13 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"
