@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/02/06 12:42:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/02/28 15:11:39 hans Exp $
 #
 
 .include "../../x11/wxGTK28/Makefile.common"
@@ -12,6 +12,8 @@ BUILD_TARGET=	all
 INSTALL_TARGET=	install
 
 INSTALLATION_DIRS=	${DOCDIR}
+
+REPLACE_SH=		wx-config.in wx-config-inplace.in
 
 post-build:
 	set -e; cd ${WRKSRC}/locale; \
