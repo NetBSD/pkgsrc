@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.112 2011/11/03 19:11:37 hans Exp $
+# $NetBSD: gcc.mk,v 1.113 2012/02/28 12:57:24 hans Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -630,7 +630,7 @@ PKGSRC_FORTRAN?=f2c
 #.endif
 
 _GCC_NEEDS_A_FORTRAN=	no
-.if !exists(${FCPATH})
+.if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !exists(${FCPATH})
 _GCC_NEEDS_A_FORTRAN=	yes
 .else
 .  for _pattern_ in 0.* 1.[0-4] 1.[0-4].*
