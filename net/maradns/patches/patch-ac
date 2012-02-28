@@ -1,25 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2010/05/23 17:30:31 schwarz Exp $
+$NetBSD: patch-ac,v 1.4 2012/02/28 21:55:28 cheusov Exp $
 
---- configure.orig	2010-05-23 18:50:50.000000000 +0200
-+++ configure	2010-05-23 18:52:29.000000000 +0200
-@@ -112,14 +112,14 @@
- 	EXITCODE=0
- elif echo $UNAME | grep -i darwin > /dev/null ; then
- 	cat $BUILDDIR/Makefile.darwin >> Makefile
--	cp $BUILDDIR/install.darwin $BUILDDIR/install.locations
-+	#cp $BUILDDIR/install.darwin $BUILDDIR/install.locations
- 	echo It looks like you are using Darwin \(usually\; Mac OS X\)\;
- 	#echo This should compile fine by typing in \'make\'.
- 	echo You might be able to compile MaraDNS by typing \"make\"
- 	echo \(if you typed in \"make\" before, just type it again\)
- 	echo
- 	echo THIS PORT HAS NOT BEEN FULLY TESTED\; USE AT YOUR OWN RISK
--	EXITCODE=1
-+	EXITCODE=0
- # This is a a template for adding support to a new OS for MaraDNS.
- # Some points: If you port MaraDNS, make sure the underlying OS has
- # /dev/urandom support or have the default mararc have a
-@@ -155,7 +155,7 @@
+--- configure.orig	2011-08-05 11:59:45.000000000 +0000
++++ configure
+@@ -125,7 +125,7 @@ else
  	echo \(if you typed in \"make\" before, just type it again\)
  	echo
  	echo THIS PORT HAS NOT BEEN TESTED\; USE AT YOUR OWN RISK
