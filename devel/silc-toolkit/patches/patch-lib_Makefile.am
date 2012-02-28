@@ -1,0 +1,21 @@
+$NetBSD: patch-lib_Makefile.am,v 1.1 2012/02/28 17:26:29 hans Exp $
+
+--- lib/Makefile.am.orig	2009-08-07 13:51:26.000000000 +0200
++++ lib/Makefile.am	2012-02-28 18:13:23.369079034 +0100
+@@ -82,14 +82,14 @@ LIBSILC_REVISION=@LIBSILC_REVISION@
+ LIBSILC_AGE=@LIBSILC_AGE@
+ 
+ libsilc.a:
+-	find $(SILCLIB_DIRS) -type f -name *.lo | xargs	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $(SILC_LINK_LIBS)	$(LIBTOOL_SILC_VERSION)	$(LIBTOOL_OPTS) -o libsilc.la
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $(SILC_LINK_LIBS)	$(LIBTOOL_SILC_VERSION)	$(LIBTOOL_OPTS) -o libsilc.la `find $(SILCLIB_DIRS) -type f -name *.lo`
+ 
+ LIBSILCCLIENT_CURRENT=@LIBSILCCLIENT_CURRENT@
+ LIBSILCCLIENT_REVISION=@LIBSILCCLIENT_REVISION@
+ LIBSILCCLIENT_AGE=@LIBSILCCLIENT_AGE@
+ 
+ libsilcclient.a:
+-	find $(SILCCLIENTLIB_DIRS) -type f -name *.lo | xargs	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS)	$(SILCCLIENT_LINK_LIBS) $(LIBTOOL_SILCCLIENT_VERSION)	$(LIBTOOL_OPTS) -o libsilcclient.la
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS)	$(SILCCLIENT_LINK_LIBS) $(LIBTOOL_SILCCLIENT_VERSION)	$(LIBTOOL_OPTS) -o libsilcclient.la `find $(SILCCLIENTLIB_DIRS) -type f -name *.lo`
+ 
+ 
+ pkgconfigdir = $(libdir)/pkgconfig

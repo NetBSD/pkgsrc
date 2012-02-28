@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2012/02/28 17:26:29 hans Exp $
+
+--- lib/Makefile.in.orig	2009-08-07 13:51:30.000000000 +0200
++++ lib/Makefile.in	2012-02-28 18:15:14.847802539 +0100
+@@ -678,10 +678,10 @@ install-exec-hook:
+ 	-$(LIBTOOL) --mode=install $(INSTALL) libsilcclient.la $(DESTDIR)$(libdir)/
+ 
+ libsilc.a:
+-	find $(SILCLIB_DIRS) -type f -name *.lo | xargs	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $(SILC_LINK_LIBS)	$(LIBTOOL_SILC_VERSION)	$(LIBTOOL_OPTS) -o libsilc.la
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $(SILC_LINK_LIBS)	$(LIBTOOL_SILC_VERSION)	$(LIBTOOL_OPTS) -o libsilc.la `find $(SILCLIB_DIRS) -type f -name *.lo`
+ 
+ libsilcclient.a:
+-	find $(SILCCLIENTLIB_DIRS) -type f -name *.lo | xargs	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS)	$(SILCCLIENT_LINK_LIBS) $(LIBTOOL_SILCCLIENT_VERSION)	$(LIBTOOL_OPTS) -o libsilcclient.la
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS)	$(SILCCLIENT_LINK_LIBS) $(LIBTOOL_SILCCLIENT_VERSION)	$(LIBTOOL_OPTS) -o libsilcclient.la `find $(SILCCLIENTLIB_DIRS) -type f -name *.lo`
+ toolkit-install:
+ 	-mkdir -p $(docdir)/toolkit/
+ 	-$(INSTALL_DATA) $(top_srcdir)/doc/toolkit/* $(docdir)/toolkit
