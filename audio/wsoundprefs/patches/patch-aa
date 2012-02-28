@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2010/02/01 02:00:32 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2012/02/28 15:29:56 hans Exp $
 
 --- Imakefile.orig	2000-03-31 14:16:47.000000000 +0000
 +++ Imakefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2010/02/01 02:00:32 joerg Exp $
  XCOMM -------------------------------------------------
  XCOMM PREFIX = /usr/GNUstep/Local
 -PREFIX = /usr/local/GNUstep
-+PREFIX := ${PREFIX}/GNUstep
++PREFIX := ${PREFIX}
  
  
  XCOMM CDEBUGFLAGS = -Wall -ggdb -DDEBUG
