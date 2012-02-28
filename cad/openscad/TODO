@@ -1,7 +1,2 @@
 Known issues of openscad:
 
-* fast rendering with opencsg (F5) does not allways seem to be correct due to
-	RenderTexture Error: Couldn't find a suitable pixel format.
-  reason unknown, more expensive rendering using cgal (F6) works fine all the
-  time.
-
