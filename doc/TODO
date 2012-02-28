@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10900 2012/02/28 11:45:21 wiz Exp $
+$NetBSD: TODO,v 1.10901 2012/02/28 18:45:31 drochner Exp $
 
 Suggested new packages
 ======================
@@ -741,11 +741,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.2
 	o gssdp-0.10.0
-	o gst-plugins0.10-bad-0.10.23
-	o gst-plugins0.10-base-0.10.36
-	o gst-plugins0.10-good-0.10.31
-	o gst-plugins0.10-ugly-0.10.19
-	o gstreamer0.10-0.10.36
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
