@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/26 20:41:04 reinoud Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/28 10:42:12 reinoud Exp $
 #
 
 PKGNAME=	opencsg-1.3.2
 DISTNAME=	OpenCSG-1.3.2
+PKG_REVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.opencsg.org/
 
@@ -24,7 +25,6 @@ do-install:
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
-#.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glut/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
