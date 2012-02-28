@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/27 14:44:28 reinoud Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/28 10:58:01 reinoud Exp $
 #
 
 PKGNAME=	openscad-2011.12
 DISTNAME=	openscad-2011.12.src
-CATEGORIES=	wip
+CATEGORIES=	cad
 MASTER_SITES=	https://github.com/downloads/openscad/openscad/
 
 MAINTAINER=	reinoud@NetBSD.org
@@ -22,12 +22,12 @@ USE_TOOLS+=	cmake flex bison pkg-config
 USE_LIBTOOL=	yes
 
 SUBST_CLASSES+=prefix
-SUBST_SED.prefix=-e 's,@PREFIX@,$(PREFIX),g'
+SUBST_SED.prefix=-e 's,@PREFIX@,${PREFIX},g'
 SUBST_FILES.prefix=${WRKSRC}/eigen2.pri ${WRKSRC}/openscad.pro
 SUBST_STAGE.prefix=post-patch
 
 SUBST_CLASSES+=destdir
-SUBST_SED.destdir=-e 's,@DESTDIR@,$(DESTDIR),g'
+SUBST_SED.destdir=-e 's,@DESTDIR@,${DESTDIR},g'
 SUBST_FILES.destdir=${WRKSRC}/openscad.pro
 SUBST_STAGE.destdir=post-patch
 
