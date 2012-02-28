@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2009/11/26 18:59:17 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2012/02/28 17:37:10 hans Exp $
 
 --- lib/Makefile.in.orig	2009-11-26 19:51:28.000000000 +0100
 +++ lib/Makefile.in
-@@ -643,8 +643,6 @@ install-exec-hook:
+@@ -643,14 +643,12 @@ install-exec-hook:
  @SILC_ENABLE_SHARED_TRUE@	-mkdir -p $(libdir)
  @SILC_ENABLE_SHARED_TRUE@	-$(LIBTOOL) --mode=install $(INSTALL) libsilc.la $(DESTDIR)$(libdir)/
  @SILC_ENABLE_SHARED_TRUE@	-$(LIBTOOL) --mode=install $(INSTALL) libsilcclient.la $(DESTDIR)$(libdir)/
@@ -10,4 +10,12 @@ $NetBSD: patch-ag,v 1.1 2009/11/26 18:59:17 joerg Exp $
 -@SILC_ENABLE_SHARED_TRUE@	-rm -rf $(DESTDIR)$(libdir)/libsilcclient.a
  
  libsilc.a:
- 	find $(SILCLIB_DIRS) -type f -name *.lo | xargs	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $(SILC_LINK_LIBS)	$(LIBTOOL_SILC_VERSION)	$(LIBTOOL_OPTS) -o libsilc.la
+-	find $(SILCLIB_DIRS) -type f -name *.lo | xargs	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $(SILC_LINK_LIBS)	$(LIBTOOL_SILC_VERSION)	$(LIBTOOL_OPTS) -o libsilc.la
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) $(SILC_LINK_LIBS)	$(LIBTOOL_SILC_VERSION)	$(LIBTOOL_OPTS) -o libsilc.la `find $(SILCLIB_DIRS) -type f -name *.lo`
+ 
+ libsilcclient.a:
+-	find $(SILCCLIENTLIB_DIRS) -type f -name *.lo | xargs	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS)	$(SILCCLIENT_LINK_LIBS) $(LIBTOOL_SILCCLIENT_VERSION)	$(LIBTOOL_OPTS) -o libsilcclient.la
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS)	$(SILCCLIENT_LINK_LIBS) $(LIBTOOL_SILCCLIENT_VERSION)	$(LIBTOOL_OPTS) -o libsilcclient.la `find $(SILCCLIENTLIB_DIRS) -type f -name *.lo`
+ 
+ install-data-hook:
+ 
