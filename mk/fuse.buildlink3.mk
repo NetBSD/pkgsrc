@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.12 2011/07/09 12:33:40 tron Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.13 2012/02/28 15:05:07 hans Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -32,6 +32,13 @@ BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/fuse
 
 .  elif ${OPSYS} == "Linux"
 
+.    include "../../filesystems/fuse/buildlink3.mk"
+
+.  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
+
+.    if !exists(/usr/include/fuse/fuse.h)
+PKG_FAIL_REASON+=	"Couldn't find fuse headers, please install libfuse."
+.    endif
 .    include "../../filesystems/fuse/buildlink3.mk"
 
 .  elif ${OPSYS} == "NetBSD"
