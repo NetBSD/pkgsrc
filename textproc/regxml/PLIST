@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2012/02/28 17:17:58 apb Exp $
+bin/xmlgrep
+bin/xmlsed
+man/man1/xmlgrep.1
+man/man1/xmlsed.1
+man/man3/regxml.3
+man/man3/regxml_xml.3
+man/man7/xmltools.7

@@ -1,0 +1,4 @@
+regxml is a collection of command-line utilities for XML stream
+manipulation.  The xmlgrep and xmlsed commands are fast and
+memory-efficient commands for editing tasks similar to what
+grep(1) and sed(1) can do on text files.
