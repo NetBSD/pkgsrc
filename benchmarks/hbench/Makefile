@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/09/12 11:15:33 dholland Exp $
+# $NetBSD: Makefile,v 1.47 2012/02/28 15:49:56 hans Exp $
 
 DISTNAME=		hbench-OS-1.1
 PKGNAME=		hbench-1.1
@@ -24,12 +24,16 @@ OSVERSION_SPECIFIC=	YES
 BUILD_TARGET=		build
 USE_TOOLS+=		perl:run
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
+MAKE_JOBS_SAFE=		no
 
 GET_ARCH_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/-.*-.*$$//'
 GET_OS_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/^.*-.*-//'
 PLIST_SUBST+=		PLATFORM=${GET_OS_CMD:sh:Q}-${GET_ARCH_CMD:sh:Q}
 
 .include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-static
+.endif
 
 HB_HOSTNAME!=		${UNAME} -n
 HB_SHORTNAME=		${HB_HOSTNAME:C/\..*//}
