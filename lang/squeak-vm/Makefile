@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/02/06 12:40:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/28 17:53:41 hans Exp $
 #
 
 SQUEAK_VERSION=	3.11.3.2135
@@ -30,6 +30,8 @@ CMAKE_ARG_PATH=	../unix
 CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
 CMAKE_ARGS+=	-DVM_HOST=${MACHINE_GNU_PLATFORM:Q} -DVM_VERSION=${SQUEAK_VERSION}
 CMAKE_ARGS+=	-DDEVOSSAUDIO=${DEVOSSAUDIO}
+
+LDFLAGS.SunOS+=	-liconv -lsocket -lnsl -lm
 
 .include "../../mk/bsd.prefs.mk"
 
