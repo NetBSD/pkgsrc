@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2010/12/03 18:15:44 drochner Exp $
+$NetBSD: patch-ab,v 1.8 2012/02/28 18:28:15 drochner Exp $
 
---- ext/alsa/gstalsasink.c.orig	2010-11-29 12:19:06.000000000 +0000
+--- ext/alsa/gstalsasink.c.orig	2012-01-18 01:36:56.000000000 +0000
 +++ ext/alsa/gstalsasink.c
-@@ -53,6 +53,10 @@
- 
+@@ -54,6 +54,10 @@
  #include <gst/gst-i18n-plugin.h>
+ #include "gst/glib-compat-private.h"
  
 +#ifndef ESTRPIPE
 +#define ESTRPIPE EPIPE
