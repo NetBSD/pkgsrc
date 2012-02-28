@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.618 2012/02/28 17:18:41 apb Exp $
+$NetBSD: CHANGES-2012,v 1.619 2012/02/28 18:45:31 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -871,3 +871,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/py-ldap to 2.4.8 [adam 2012-02-28]
 	Updated graphics/opencgs to 1.3.2nb1 [reinoud 2012-02-28]
 	Added textproc/regxml version 0.0.20100901 [apb 2012-02-28]
+	Updated multimedia/gstreamer0.10 to 0.10.36 [drochner 2012-02-28]
+	Updated multimedia/gst-plugins0.10-base to 0.10.36 [drochner 2012-02-28]
+	Updated multimedia/gst-plugins0.10-good to 0.10.31 [drochner 2012-02-28]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.23 [drochner 2012-02-28]
+	Updated multimedia/gst-plugins0.10-ugly to 0.10.19 [drochner 2012-02-28]
