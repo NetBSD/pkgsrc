@@ -1,0 +1,18 @@
+Hints and tips for OpenSCAD:
+
+openscad-2011.12: Sometimes it doesn't seem to render all objects when
+rendering with the fast OpenCSG. It is not yet clear if this is a problem with
+OpenSCAD or with OpenCSG. The solution is to add the render() primitive to the
+function. This will then use CGAL to create a primitive even when rendering
+with OpenCSG. It also speeds up rendering significantly since it creates them
+as primitives! So transform 
+
+	func(l) {
+		....
+	}
+to
+	func(l) render() {
+		....
+	}
+
+if you encounter render problems or when rendering a primitive is very slow.
