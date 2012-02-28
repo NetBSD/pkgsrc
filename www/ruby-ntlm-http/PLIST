@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/28 21:02:07 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/http.rb
+${GEM_LIBDIR}/examples/imap.rb
+${GEM_LIBDIR}/examples/smtp.rb
+${GEM_LIBDIR}/lib/net/ntlm.rb
+${GEM_LIBDIR}/lib/net/ntlm_http.rb
+${GEM_LIBDIR}/${GEM_NAME}.gemspec
+${GEM_LIBDIR}/test/function_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
