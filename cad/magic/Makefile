@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/03/08 17:24:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.25 2012/02/28 16:14:45 hans Exp $
 #
 
 DISTNAME=	magic-7.5.188
@@ -23,6 +23,15 @@ GNU_CONFIGURE=	yes
 CONFIG_DIRS=	scripts
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
+
+CFLAGS.SunOS=	-DSYSV
+
+.include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN} == "big"
+CPPFLAGS+=	-DIS_BIG_ENDIAN
+.else
+CPPFLAGS+=	-DIS_LITTLE_ENDIAN
+.endif
 
 USE_TOOLS+=		awk:run
 REPLACE_INTERPRETER+=	awk
