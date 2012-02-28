@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2010/08/30 11:17:16 adam Exp $
+# $NetBSD: Makefile,v 1.64 2012/02/28 17:37:42 hans Exp $
 
 DISTNAME=	silc-server-1.1.18
 CATEGORIES=	chat security
@@ -25,6 +25,9 @@ CONFIGURE_ARGS+=	--without-iconv
 #.if ${MACHINE_ARCH} != "i386"
 #CONFIGURE_ARGS+=	--disable-asm
 #.endif
+
+CONFIGURE_ENV+=		ac_cv_lib_gmp___gmpz_init=no
+CONFIGURE_ENV+=		ac_cv_func_iconv=no
 
 .include "../../mk/bsd.prefs.mk"
 
