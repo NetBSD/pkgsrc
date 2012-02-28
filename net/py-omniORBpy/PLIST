@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/04/21 16:35:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/28 07:20:21 sbd Exp $
 include/omniORB4/pydistdate.hh
 include/omniORBpy.h
 ${PYSITELIB}/CORBA.py
@@ -316,7 +316,7 @@ ${PYSITELIB}/omniORB/omniConnectionMgmt.py
 ${PYSITELIB}/omniORB/omniConnectionMgmt.pyc
 ${PYSITELIB}/omniORB/tcInternal.py
 ${PYSITELIB}/omniORB/tcInternal.pyc
-${PYSITELIB}/omniidl_be/__init__.py
-${PYSITELIB}/omniidl_be/__init__.pyc
+${PLIST.omniidl_be_init}${PYSITELIB}/omniidl_be/__init__.py
+${PLIST.omniidl_be_init}${PYSITELIB}/omniidl_be/__init__.pyc
 ${PYSITELIB}/omniidl_be/python.py
 ${PYSITELIB}/omniidl_be/python.pyc
