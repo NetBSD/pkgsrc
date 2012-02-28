@@ -1,9 +1,19 @@
-$NetBSD: patch-aq,v 1.4 2011/09/12 11:15:33 dholland Exp $
+$NetBSD: patch-aq,v 1.5 2012/02/28 15:49:56 hans Exp $
 
 - fix parallel build
+- solaris runs not only on sparc
 
 --- src/Makefile.orig	2011-09-12 10:59:10.000000000 +0000
 +++ src/Makefile
+@@ -121,7 +121,7 @@ bsdi:
+ 	@$(MAKE) LDLIBS="-lrpc" binaries
+ 
+ solaris:
+-	@$(MAKE) CC=gcc LDLIBS="-lnsl -lsocket -lcpc" SYS5=-DSYS5 CFLAGS="-Wa,-xarch=v8plusa $(CFLAGS_SPARC)" CPPFLAGS="-Wa,-xarch=v8plusa" binaries 
++	@$(MAKE) CC=gcc LDLIBS="-lnsl -lsocket -lcpc" SYS5=-DSYS5 CFLAGS="$(CFLAGS_SPARC)" binaries 
+ 
+ # HPUX needs gcc; their C compiler screws up mhz.c.
+ hpux:
 @@ -170,7 +170,7 @@ EXES=	$(BINDIR)/bw_bzero $(BINDIR)/bw_fi
  	$(BINDIR)/mhz $(BINDIR)/mhz-counter
  #	$(BINDIR)/lmdd $(BINDIR)/lat_pagefault
