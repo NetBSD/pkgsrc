@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2011/12/20 14:02:02 pettai Exp $
+# $NetBSD: Makefile,v 1.20 2012/02/28 20:05:05 pettai Exp $
 
-DISTNAME=	unbound-1.4.14
+DISTNAME=	unbound-1.4.16
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -15,7 +15,6 @@ BUILD_DEFS+=	VARBASE
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
 CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
