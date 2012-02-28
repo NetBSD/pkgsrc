@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.619 2012/02/28 18:45:31 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.620 2012/02/28 20:23:27 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -876,3 +876,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/gst-plugins0.10-good to 0.10.31 [drochner 2012-02-28]
 	Updated multimedia/gst-plugins0.10-bad to 0.10.23 [drochner 2012-02-28]
 	Updated multimedia/gst-plugins0.10-ugly to 0.10.19 [drochner 2012-02-28]
+	Updated net/unbound to 1.4.16 [pettai 2012-02-28]
