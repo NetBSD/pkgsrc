@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2007/08/12 01:14:31 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2012/02/28 21:55:28 cheusov Exp $
 
---- build/install.locations.orig	2007-08-12 02:02:22.000000000 +0200
+--- build/install.locations.orig	2011-02-06 02:21:31.000000000 +0000
 +++ build/install.locations
-@@ -23,34 +23,14 @@ if [ ! -d doc/$LANGUAGE/man ]; then
+@@ -23,43 +23,14 @@ if [ ! -d doc/$LANGUAGE/man ]; then
  fi
  
  # The location of programs that the end user may wish to use
@@ -32,14 +32,23 @@ $NetBSD: patch-aa,v 1.4 2007/08/12 01:14:31 joerg Exp $
 -# If the directory that MAN1 points to does not exist
 -if [ ! -d $MAN1 ] ; then
 -        # Then try this location instead
--	MAN1="/usr/local/share/man/man1"
+-	MAN1="$PREFIX/share/man/man1"
+-	if [ ! -d $MAN1 ] ; then
+-		MAN1="/usr/local/share/man/man1"
+-	fi
 -fi
 -# Do the same with the MAN5 and MAN8 directories
 -if [ ! -d $MAN5 ] ; then
--	MAN5="/usr/local/share/man/man5"
+-	MAN5="$PREFIX/share/man/man5"
+-	if [ ! -d $MAN5 ] ; then
+-		MAN5="/usr/local/share/man/man5"
+-	fi
 -fi
 -if [ ! -d $MAN8 ] ; then
--	MAN8="/usr/local/share/man/man8"
+-	MAN8="$PREFIX/share/man/man8"
+-	if [ ! -d $MAN8 ] ; then
+-		MAN8="/usr/local/share/man/man8"
+-	fi
 -fi
 -
 +DOCS="${DESTDIR}$PREFIX/share/doc/maradns"

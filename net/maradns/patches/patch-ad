@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2011/05/06 11:36:24 obache Exp $
+$NetBSD: patch-ad,v 1.5 2012/02/28 21:55:28 cheusov Exp $
 
---- parse/ParseMaraRc.c.orig	2010-05-23 17:51:12.000000000 +0200
-+++ parse/ParseMaraRc.c	2010-05-23 17:51:18.000000000 +0200
-@@ -1037,7 +1037,7 @@
+--- parse/ParseMaraRc.c.orig	2012-02-12 06:04:12.000000000 +0000
++++ parse/ParseMaraRc.c
+@@ -1037,7 +1037,7 @@ int find_mararc(js_string *out) {
          return JS_ERROR;
  
      /* Simple and secure: We look for it in /etc/mararc */
 -    return js_qstr2js(out,"/etc/mararc");
-+    return js_qstr2js(out,"@PKG_SYSCONFDIR@/mararc");
++    return js_qstr2js(out,"@PKG_SYSCONFDIR@/maradns/mararc");
  
      }
  
