@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2011/07/12 08:56:11 drochner Exp $
+# $NetBSD: Makefile.common,v 1.32 2012/02/28 18:28:14 drochner Exp $
 #
 # used by audio/gst-plugins0.10-alsa/Makefile
 # used by audio/gst-plugins0.10-cdparanoia/Makefile
@@ -12,7 +12,7 @@
 # used by x11/gst-plugins0.10-x11/Makefile
 
 GST_PLUGINS0.10_TYPE=	base
-GST_PLUGINS0.10_VER=	0.10.35
+GST_PLUGINS0.10_VER=	0.10.36
 BUILDLINK_API_DEPENDS.gstreamer0.10+= gstreamer0.10>=0.10.20.1
 
 # Disable all drivers and features by default.
