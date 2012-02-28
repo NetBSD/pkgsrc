@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10899 2012/02/27 13:58:56 adam Exp $
+$NetBSD: TODO,v 1.10900 2012/02/28 11:45:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -389,10 +389,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
+	o aria2-1.14.2
 	o arirang-1.70
 	o arla-0.90
 	o arnold-20040104
-	o arping-2.09
+	o arping-2.10
 	o asapm-3.1
 	o asc-2.4.0
 	o aspell-faroese-0.4.0
@@ -406,7 +407,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.4.4
 	o audacity-1.3.13
 	o autoconvert-0.3.16
-	o autogen-5.14
+	o autogen-5.15
 	o automake-1.11.3
 	o avcheck-0.91
 	o avidemux-2.5.6
@@ -489,7 +490,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dansguardian-2.10.0.3
 	o dante-1.3.2
 	o dap-3.7
-	o dar-2.4.2
+	o dar-2.4.3
 	o darcs-2.4
 	o dasher-4.11
 	o dasm-2.20.11
@@ -775,7 +776,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o help2man-1.40.6
 	o hesiod-3.1.0
 	o heyu-2.9.0
-	o hiawatha-8.0
+	o hiawatha-8.1
 	o highlight-3.7
 	o honeyd-1.5c
 	o horde-4.0.13
@@ -798,7 +799,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ike-2.0.1 [pkg/37032]
 	o imake-1.0.4
 	o imap-uw-2007f
-	o imapfilter-2.5
+	o imapfilter-2.5.1
 	o imapsync-1.452
 	o imp-5.0.18
 	o ingo-2.0.7
@@ -1206,6 +1207,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rxvt-unicode-9.15
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.2
+	o sakura-3.0.0
 	o sarg-2.2.5
 	o sawfish-1.8.2
 	o saxon-9.2
@@ -1297,7 +1299,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tesseract-3.01
 	o tetrinetx-1.40c
 	o texmaker-3.1 [pkg/45521]
-	o texmaker-3.2.2
+	o texmaker-3.3.1
 	o tfmxplay-1.1.6
 	o tig-0.18
 	o tightvnc-2.0.95
@@ -1372,8 +1374,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.580 [security]
 	o websvn-2.3.2
-	o weechat-0.3.6
-	o wesnoth-1.10
+	o weechat-0.3.7
+	o wesnoth-1.10.1
 	o whohas-0.29
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
