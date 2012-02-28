@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/08/12 01:14:31 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2012/02/28 21:55:28 cheusov Exp $
 
---- build/install.sh.orig	2007-08-12 02:07:37.000000000 +0200
+--- build/install.sh.orig	2011-08-05 11:59:45.000000000 +0000
 +++ build/install.sh
-@@ -136,6 +136,8 @@ else
+@@ -157,6 +157,8 @@ else
  	cd doc/en/examples
  fi
  
