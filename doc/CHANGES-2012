@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.621 2012/02/28 20:32:34 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.622 2012/02/28 20:39:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -878,3 +878,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/gst-plugins0.10-ugly to 0.10.19 [drochner 2012-02-28]
 	Updated net/unbound to 1.4.16 [pettai 2012-02-28]
 	Added net/ruby-domain_name version 0.5.2 [minskim 2012-02-28]
+	Updated www/ruby-net-http-persistent to 2.5.2 [minskim 2012-02-28]
