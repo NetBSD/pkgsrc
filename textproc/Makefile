@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2012/02/27 11:29:09 obache Exp $
+# $NetBSD: Makefile,v 1.613 2012/02/28 23:32:33 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -526,6 +526,7 @@ SUBDIR+=	rarian
 SUBDIR+=	rasqal
 SUBDIR+=	redland
 SUBDIR+=	regexx
+SUBDIR+=	regxml
 SUBDIR+=	rfcutil
 SUBDIR+=	rman
 SUBDIR+=	robodoc
