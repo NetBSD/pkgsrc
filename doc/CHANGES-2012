@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.622 2012/02/28 20:39:16 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.623 2012/02/28 21:02:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -879,3 +879,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/unbound to 1.4.16 [pettai 2012-02-28]
 	Added net/ruby-domain_name version 0.5.2 [minskim 2012-02-28]
 	Updated www/ruby-net-http-persistent to 2.5.2 [minskim 2012-02-28]
+	Added www/ruby-ntlm-http version 0.1.1 [minskim 2012-02-28]
