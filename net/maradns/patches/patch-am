@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.3 2012/02/28 21:55:28 cheusov Exp $
+
+--- MaraDns.h.orig	2012-02-14 14:06:44.000000000 +0100
++++ MaraDns.h	2012-02-14 14:09:52.000000000 +0100
+@@ -91,7 +91,7 @@
+ /* The directory that Duende runs in.  This directory has to exist for
+    Duende to be able to run.  Again, IF YOU CHANGE THIS, CHANGE THE
+    DUENDE MAN PAGE */
+-#define DUENDE_CHROOT_DIR "/etc/maradns/logger"
++#define DUENDE_CHROOT_DIR "@PKG_SYSCONFDIR@/maradns/logger"
+ 
+ /* The default IP address that Askmara uses; this used to be 127.0.0.3
+    but is now 127.0.0.1 because many non-Linux systems only use 127.0.0.1
