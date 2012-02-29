@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2010/12/17 01:19:17 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/29 21:19:02 apb Exp $
 #
 
-DISTNAME=	git-${VERSION}
-VERSION=	1.7.3.4
+.include "../../devel/scmgit/Makefile.version"
+
+DISTNAME=	git-${GIT_VERSION}
 PKGNAME=	${DISTNAME:S/git/gitweb/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://git.or.cz/
@@ -15,12 +16,13 @@ COMMENT=	Web interface for GIT repositories
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
-DEPENDS+=	scmgit-base>=${VERSION}:../../devel/scmgit-base
+DEPENDS+=	scmgit-base>=${GIT_VERSION}:../../devel/scmgit-base
 
 #EXTRACT_USING=	gtar
 USE_TOOLS+=	gmake perl:run
 
-BUILD_TARGET=	gitweb/gitweb.cgi
+BUILD_DIRS=	gitweb
+BUILD_TARGET=	gitweb.cgi
 MAKE_FLAGS=	prefix=${PREFIX}
 MAKE_FLAGS+=	GITWEB_FAVICON=/gitweb/git-favicon.png
 MAKE_FLAGS+=	GITWEB_CONFIG=${GITWEB_CONFIG}
@@ -38,7 +40,7 @@ GITWEB_EGDIR=	${PREFIX}/share/examples/gitweb
 CONF_FILES=	${GITWEB_EGDIR}/gitweb.conf ${PKG_SYSCONFDIR}/gitweb.conf
 MESSAGE_SUBST+=	CONFFILE=${PKG_SYSCONFDIR}/gitweb.conf
 
-INSTALLATION_DIRS=	libexec/cgi-bin share/httpd/htdocs  \
+INSTALLATION_DIRS=	libexec/cgi-bin \
 			share/doc/gitweb \
 			${GITWEB_EGDIR} ${GITWEB_HTDOCS}
 
