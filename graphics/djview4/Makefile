@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/02/06 12:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/02/29 21:22:16 shattered Exp $
 #
 
 DISTNAME=	djview-4.8
 PKGNAME=	${DISTNAME:S/djview/djview4/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 
@@ -17,6 +17,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+SUBST_CLASSES+=		nsdejavu
+SUBST_STAGE.nsdejavu=	post-patch
+SUBST_MESSAGE.nsdejavu=	Fixing hardcoded paths.
+SUBST_FILES.nsdejavu=	nsdejavu/nsdejavu.c
+SUBST_SED.nsdejavu=	-e 's:/usr/local/lib:${LOCALBASE}/lib:'
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
