@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/01/09 02:54:25 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/29 16:32:20 hans Exp $
 #
 
 DISTNAME=		libcassandra-20101010
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.ancient-solutions.com/pub/bsdprojects/NetBSD/packages/distfiles/
 
