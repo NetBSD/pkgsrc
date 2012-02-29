@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.625 2012/02/29 07:47:31 obache Exp $
+$NetBSD: CHANGES-2012,v 1.626 2012/02/29 16:34:42 hans Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -882,3 +882,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/ruby-ntlm-http version 0.1.1 [minskim 2012-02-28]
 	Updated net/maradns to 2.0.05 [cheusov 2012-02-28]
 	Updated net/ruby-addressable to 2.2.7 [obache 2012-02-29]
+	Updated devel/boost-jam to 1.49.0 [hans 2012-02-29]
+	Updated devel/boost-headers to 1.49.0 [hans 2012-02-29]
+	Updated devel/boost-libs to 1.49.0 [hans 2012-02-29]
+	Updated devel/boost-docs to 1.49.0 [hans 2012-02-29]
+	Updated devel/boost-build to 1.49.0 [hans 2012-02-29]
+	Updated devel/boost-python to 1.49.0 [hans 2012-02-29]
+	Updated meta-pkgs/boost to 1.49.0 [hans 2012-02-29]
