@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2012/02/06 12:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/02/29 16:32:22 hans Exp $
 
 DISTNAME=	hugin-2010.4.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
