@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/02/29 13:33:00 hans Exp $
+# $NetBSD: Makefile,v 1.62 2012/02/29 13:34:24 hans Exp $
 #
 
 DISTNAME=	groff-1.20.1
@@ -21,6 +21,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
 USE_TOOLS+=		perl:run sed:run awk:run
 USE_FEATURES=		getopt_long
+
+CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600
 
 INFO_FILES=		YES
 
