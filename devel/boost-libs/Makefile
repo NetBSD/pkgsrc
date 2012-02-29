@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/02/20 14:59:31 jdc Exp $
+# $NetBSD: Makefile,v 1.20 2012/02/29 14:22:24 hans Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
-PKGREVISION=		2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
