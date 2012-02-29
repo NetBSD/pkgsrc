@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2005/10/03 11:23:43 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2012/02/29 20:17:32 hans Exp $
 
 --- xbinunix.c.orig	2005-08-17 18:43:47.000000000 +0000
 +++ xbinunix.c
@@ -10,7 +10,8 @@ $NetBSD: patch-aa,v 1.1 2005/10/03 11:23:43 joerg Exp $
  #include <stdio.h>
  #include <sys/types.h>
  #include <sys/stat.h>
- #include <sys/dir.h>
+-#include <sys/dir.h>
++#include <dirent.h>
  
 -#ifdef MAXNAMLEN	/* 4.2 BSD */
 +#if defined(NAME_MAX)
