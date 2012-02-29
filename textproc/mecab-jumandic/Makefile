@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2010/05/16 00:25:26 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/29 09:10:06 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
 
 DISTNAME=	mecab-jumandic-5.1-20070304
 PKGNAME=	mecab-jumandic-5.1.20070304
+PKGREVISION=	1
 
 COMMENT=	Japanese Morphological Dictionary for MeCab
 LICENSE=	modified-bsd
+
+BUILD_DEPENDS+=	mecab-base-[0-9]*:../../textproc/mecab-base
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -19,5 +22,8 @@ BUILD_DEFS+=		MECAB_CHARSET
 
 UNLIMIT_RESOURCES=	datasize
 
-.include "../../textproc/mecab-base/buildlink3.mk"
+FIND_PREFIX:=	MECABDIR=mecab-base
+.include "../../mk/find-prefix.mk"
+CONFIGURE_ARGS+=	--with-mecab-config=${MECABDIR}/bin/mecab-config
+
 .include "../../mk/bsd.pkg.mk"
