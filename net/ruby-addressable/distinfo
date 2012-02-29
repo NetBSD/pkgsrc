@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/11/06 07:44:27 obache Exp $
+$NetBSD: distinfo,v 1.6 2012/02/29 07:47:04 obache Exp $
 
-SHA1 (addressable-2.2.6.gem) = 0b46d26336521fdc1843a5efc515b8102ef8a60c
-RMD160 (addressable-2.2.6.gem) = 52df9776570df16e4014f3add8799269ed506c0c
-Size (addressable-2.2.6.gem) = 97792 bytes
-SHA1 (patch-lib_addressable_template.rb) = e6f9b63e4fca8007246924d98efbc72c34a8267a
-SHA1 (patch-lib_addressable_uri.rb) = 41f7bc99d7bf18a62bf4b181a0ee094de57a1c5c
+SHA1 (addressable-2.2.7.gem) = ffd2c2908477dfa3089e37462e9b2f7582e86ae7
+RMD160 (addressable-2.2.7.gem) = c4228c6c241f324fde8551fe8825377552b98adc
+Size (addressable-2.2.7.gem) = 98816 bytes
