@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2012/02/15 20:01:54 hans Exp $
+# $NetBSD: Makefile,v 1.73 2012/02/29 20:43:33 hans Exp $
 
 DISTNAME=		audacity-src-1.2.6
 PKGREVISION=		12
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	no
 USE_TOOLS+=		autoconf gmake msgfmt pkg-config zip:run
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
