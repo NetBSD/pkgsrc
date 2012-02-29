@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.624 2012/02/28 22:12:54 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.625 2012/02/29 07:47:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -881,3 +881,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-net-http-persistent to 2.5.2 [minskim 2012-02-28]
 	Added www/ruby-ntlm-http version 0.1.1 [minskim 2012-02-28]
 	Updated net/maradns to 2.0.05 [cheusov 2012-02-28]
+	Updated net/ruby-addressable to 2.2.7 [obache 2012-02-29]
