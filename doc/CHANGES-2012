@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.626 2012/02/29 16:34:42 hans Exp $
+$NetBSD: CHANGES-2012,v 1.627 2012/02/29 18:50:52 morr Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -889,3 +889,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/boost-build to 1.49.0 [hans 2012-02-29]
 	Updated devel/boost-python to 1.49.0 [hans 2012-02-29]
 	Updated meta-pkgs/boost to 1.49.0 [hans 2012-02-29]
+	Updated x11/rxvt-unicode to 9.15 [morr 2012-02-29]
