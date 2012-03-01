@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.632 2012/03/01 15:12:41 taca Exp $
+$NetBSD: CHANGES-2012,v 1.633 2012/03/01 15:13:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -895,3 +895,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/gitweb to 1.7.9.2 [apb 2012-03-01]
 	Updated misc/py-carddav to 0.3.3 [wiz 2012-03-01]
 	Added misc/ruby-ansi version 1.4.2 [taca 2012-03-01]
+	Updated editors/Sigil to 0.5.3 [ryoon 2012-03-01]
