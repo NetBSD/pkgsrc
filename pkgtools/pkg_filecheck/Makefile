@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/04/09 00:48:12 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2012/03/01 16:31:55 hans Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.4
@@ -15,8 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
 USE_FEATURES=	fts_open
-
-NO_CONFIGURE=	yes
 
 FILES_SUBST+=	X11PREFIX=${X11PREFIX:Q}
 FILES_SUBST+=	PKG_DBDIR=${PKG_DBDIR:Q}
@@ -45,7 +43,7 @@ post-extract:
 do-build:
 	cd ${WRKSRC} \
 	    && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${BDB_LIBS} \
-		-o pkg_filecheck pkg_filecheck.c
+		-o pkg_filecheck pkg_filecheck.c ${LIBS}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/builddb.pl ${DESTDIR}${PREFIX}/bin/builddb
