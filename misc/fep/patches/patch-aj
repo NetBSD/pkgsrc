@@ -1,8 +1,11 @@
-$NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
+$NetBSD: patch-aj,v 1.11 2012/03/01 22:00:44 hans Exp $
 
 --- fep_main.c.orig	1993-06-10 02:53:06.000000000 +0000
 +++ fep_main.c	2011-09-29 20:16:05.000000000 +0000
-@@ -6,15 +6,24 @@
+@@ -3,18 +3,30 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Id: patch-aj,v 1.11 2012/03/01 22:00:44 hans Exp $ (SRA)";
 -#endif lint
 +#endif /* lint */
  
@@ -16,6 +19,9 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
 +#include <stdlib.h>
 +#include <fcntl.h>
 +#include <termios.h>
++#ifdef __sun
++#include <sys/ttold.h>
++#endif
 +#ifndef _POSIX_VDISABLE
 +#define _POSIX_VDISABLE '\0'
 +#endif
@@ -30,7 +36,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  #include "fep_defs.h"
  #include "fep_glob.h"
-@@ -30,7 +39,7 @@
+@@ -30,7 +42,7 @@ static char rcsid[]=
  #ifdef STAT
    static char fep_statrc[] = FEP_STAT;
  #endif
@@ -39,7 +45,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  char	*myself;			/* the command name */
  char	*prompt = "";			/* prompt string */
-@@ -38,9 +47,9 @@
+@@ -38,9 +50,9 @@ char	*delimiters = DEFAULT_DELIMITERS;
  					/* delimiter characters */
  int	master;				/* file discriptor for pty master */
  int	slave;				/* file discriptor for pty slave */
@@ -52,12 +58,12 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  int	selectnfds;			/* max (fileno(stdin), master) + 1*/
  int	child_pid;			/* child pid */
  int	ptyflag = ON;			/* flag to use pty or not */
-@@ -48,27 +57,34 @@
+@@ -48,27 +60,34 @@ int	histlen = -1;			/* history length */
  int	debug = OFF;			/* debug switch */
  int	auto_tty_fix = ON;		/* fix tty mode automaticaly */
  FILE	*script_fp = NULL;		/* script file pointer */
 -int	catchsig();			/* function take care SIGCHILD */
-+void	catchsig __P((int));		/* function take care SIGCHILD */
++void	catchsig (int);		/* function take care SIGCHILD */
  
 -struct	sgttyb initial_ttymode;		/* initial tty mode */
 -struct	sgttyb master_ttymode;		/* master tty mode */
@@ -76,7 +82,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  char	*term_clear;			/* terminal clear code */
  
 -void	(*sighup)(), (*sigchld)(), (*sigtstp)();
-+void	(*sighup) __P((int)), (*sigchld) __P((int)), (*sigtstp) __P((int));
++void	(*sighup)(int), (*sigchld)(int), (*sigtstp)(int);
  					/* function buffer for signal */
  
 +#ifdef TIOCSETN
@@ -93,7 +99,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  char	master_tty[16];			/* master tty name */
  char	slave_tty[16];			/* slave tty name */
-@@ -112,6 +128,10 @@
+@@ -112,6 +131,10 @@ main(argc, argv)
  
      myself = argv[0];
  
@@ -104,7 +110,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
      /*
       * Initialize binding table
       */
-@@ -172,7 +192,7 @@
+@@ -172,7 +195,7 @@ main(argc, argv)
  		    histlen = atoi (argv[1]);
  		}
  		else {
@@ -113,16 +119,16 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  		}
  		break;
  
-@@ -276,7 +296,7 @@
+@@ -276,7 +299,7 @@ DEFAULT:
  fix_signal ()
  {
  #ifdef SIGWINCH
 -    int sigwinch();
-+    void sigwinch __P((int));
++    void sigwinch(int);
  #endif
  
      sighup = signal (SIGHUP, terminate);
-@@ -298,7 +318,7 @@
+@@ -298,7 +321,7 @@ recover_signal ()
  input_handler()
  {
      char   *inputline;
@@ -131,7 +137,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
      /*
       * Get slave tty descriptor for auto-tty-fix
-@@ -306,7 +326,7 @@
+@@ -306,7 +329,7 @@ input_handler()
      if ((slave = open (slave_tty, O_RDONLY)) < 0)
  	perror ("open");
  
@@ -140,7 +146,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  	/*
  	 * XXX: nbyte should be greater than 0 only for ^@ input in emacs.
  	 * This solution is very ugly.. but it will takes a half day
-@@ -322,7 +342,7 @@
+@@ -322,7 +345,7 @@ input_handler()
  
  	/*
  	 * NOTE:
@@ -149,7 +155,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  	 * Because inputline here is converted by alias.
  	 */
  
-@@ -336,7 +356,7 @@
+@@ -336,7 +359,7 @@ input_handler()
  	if (Through == OFF && Transparency == OFF && script_fp)
  	    fwrite (inputline, sizeof(CHAR), strlen (inputline), script_fp);
      }
@@ -158,7 +164,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  }
  
  #define INPUT_BUFFER_SIZE 1024
-@@ -384,21 +404,19 @@
+@@ -384,21 +407,19 @@ getcharacter()
  {
      char c;
      int n;
@@ -184,7 +190,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  RETRY:
      readfd = selectmask;
-@@ -409,13 +427,13 @@
+@@ -409,13 +430,13 @@ RETRY:
      while ((nfound = select (selectnfds, &readfd, 0, 0, *timeout)) < 0)
  	if (errno != EINTR) {
  		perror ("select");
@@ -200,7 +206,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  	int nbyte;
  
  	/*
-@@ -451,7 +469,7 @@
+@@ -451,7 +472,7 @@ RETRY:
      /*
       * Found input from terminal
       */
@@ -209,7 +215,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  #ifndef USE_TIMEOUT
  	/*
-@@ -467,8 +485,8 @@
+@@ -467,8 +488,8 @@ RETRY:
  	RETURNCHAR:
  	if ((c = getc (stdin)) == EOF) {
  	    if (debug)
@@ -220,7 +226,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  	}
  	else
  	    return (c & CHARMASK);
-@@ -504,7 +522,7 @@
+@@ -504,7 +525,7 @@ int set_buffer (bp, size)
      BUFFER *bp;
      int size;
  {
@@ -229,7 +235,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
      if (bp->b_buf)
  	newbuf = (char *) realloc (bp->b_buf, size);
-@@ -596,7 +614,7 @@
+@@ -596,7 +617,7 @@ buf_put (bp, s)
  
  swallow_output()
  {
@@ -238,7 +244,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
      int r;
      int nbyte;
      int ncount = 10;
-@@ -604,7 +622,7 @@
+@@ -604,7 +625,7 @@ swallow_output()
      while (
  	ncount-- &&
  	select (selectnfds, &readfd, 0, 0, TIMEOUT_NOBLOCK) > 0 &&
@@ -247,7 +253,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
      ) {
  	nbyte = buf_read (master, output_buffer);
  	if (nbyte > 0) {
-@@ -636,21 +654,23 @@
+@@ -636,21 +657,23 @@ swallow_output()
  #include <sys/m_wait.h>
  #endif
  
@@ -275,7 +281,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  }
  
  exec_to_command(argv)
-@@ -675,13 +695,37 @@
+@@ -675,13 +698,37 @@ exec_to_command(argv)
      dup2 (slave, 2);
      (void) close (slave);
  
@@ -314,7 +320,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  fix_tty()
  {
      struct tchars tcbuf;
-@@ -719,6 +763,7 @@
+@@ -719,6 +766,7 @@ fix_tty()
      ioctl (0, TIOCSETC, (char *) & tcbuf);
      ioctl (0, TIOCSLTC, (char *) & lcbuf);
  }
@@ -322,7 +328,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  kill_process()
  {
-@@ -727,9 +772,10 @@
+@@ -727,9 +775,10 @@ kill_process()
  	(void) killpg (child_pid, SIGTERM);
  }
  
@@ -335,7 +341,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
      /*
       * Save history if 'history-file' is set
-@@ -759,10 +805,14 @@
+@@ -759,10 +808,14 @@ terminate()
  	    if (killpg (child_pid, SIGKILL) < 0)
  		perror ("kill");
  
@@ -351,7 +357,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  }
  
  get_pty_master()
-@@ -775,6 +825,41 @@
+@@ -775,6 +828,41 @@ get_pty_master()
  	master = 1;
  	return;
      }
@@ -393,7 +399,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
      for (c = 'p'; c <= 's'; c++) {
  	for (i = 0; i < 16; i++) {
  	    sprintf (master_tty, "/dev/pty%c%x", c, i);
-@@ -796,11 +881,16 @@
+@@ -796,11 +884,16 @@ get_pty_master()
      }
  
   FOUND:
@@ -410,7 +416,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  #ifdef TIOCGWINSZ
      {
-@@ -820,11 +910,15 @@
+@@ -820,11 +913,15 @@ get_pty_master()
  # if defined(TIOCKGETC) && defined(TIOCKSETC)
      ioctl (0, TIOCKGETC, (char *) &jtchars_buf);
  # endif
@@ -430,7 +436,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
      selectnfds = max (fileno(stdin), master) + 1;
  
      return;
-@@ -838,11 +932,20 @@
+@@ -838,11 +935,20 @@ get_pty_slave()
  	perror (slave_tty);
  	exit (1);
      }
@@ -451,7 +457,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  #ifdef KANJI
  # if defined(TIOCKGET) && defined(TIOCKSET)
-@@ -851,7 +954,7 @@
+@@ -851,7 +957,7 @@ get_pty_slave()
  # if defined(TIOCKGETC) && defined(TIOCKSETC)
      ioctl (slave, TIOCKSETC, (char *) &jtchars_buf);
  # endif
@@ -460,7 +466,7 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  
  #ifdef TIOCSWINSZ
      {
-@@ -866,18 +969,20 @@
+@@ -866,37 +972,40 @@ get_pty_slave()
  
  recover_tty()
  {
@@ -478,13 +484,22 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
  {
      long	pid;
 -    void	(*func) ();
-+    void	(*func) __P((int));
-     int		omask;
+-    int		omask;
 -    extern int	errno;
++    void	(*func) (int);
++    sigset_t    set, oset;
  
      pid = getpid ();
   /* reset signal handler so kill below stops us */
-@@ -890,7 +995,7 @@
+     func = signal (SIGCHLD, SIG_IGN);
+     signal (SIGTSTP, SIG_DFL);
+     recover_tty();
+-#define	mask(s)	(1 << ((s)-1))
+-    omask = sigsetmask (sigblock (0) & ~mask (SIGTSTP));
++    sigemptyset(&set);
++    sigaddset(&set, SIGTSTP);
++    sigprocmask (SIG_BLOCK, &set, &oset);
+     kill (0, SIGTSTP);
  
      if (kill (child_pid, SIGCONT) < 0 && errno == ESRCH) {
  	printf ("Where my child has gone?!\n");
@@ -493,12 +508,19 @@ $NetBSD: patch-aj,v 1.10 2011/09/29 20:22:26 wiz Exp $
      }
      killpg (child_pid, SIGCONT);
      kill (0, SIGCONT);
-@@ -933,7 +1038,7 @@
+     signal (SIGCHLD, func);
+     signal (SIGTSTP, SIG_IGN);
+-    sigblock (mask (SIGTSTP));
++    sigprocmask (SIG_BLOCK, &set, &oset);
+     fix_tty ();
+     if (look_var ("auto-repaint"))
+ 	fep_repaint(0);
+@@ -933,7 +1042,7 @@ usageAndExit()
  /*
   * Propagate window size changes to the slave tty.
   */
 -sigwinch()
-+sigwinch(int num)
++void sigwinch(int num)
  {
  #ifdef TIOCGWINSZ			/* 4.3BSD */
      struct winsize win;
