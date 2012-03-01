@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.6 2005/12/11 20:46:50 joerg Exp $
+$NetBSD: patch-ab,v 1.7 2012/03/01 17:38:56 hans Exp $
 
 --- src/Sample.cc.orig	2005-12-11 20:37:17.000000000 +0000
 +++ src/Sample.cc
-@@ -12,6 +12,8 @@
+@@ -12,6 +12,10 @@
  #include <errno.h>
  #ifdef __NetBSD__
  #  include <machine/endian.h>
 +#elif defined(__DragonFly__)
 +#  include <sys/endian.h>
++#elif defined(__sun)
++#  include <sys/byteorder.h>
  #else
  #  include <endian.h>
  #endif

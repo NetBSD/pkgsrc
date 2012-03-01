@@ -1,17 +1,21 @@
-$NetBSD: patch-aa,v 1.3 2005/12/11 20:46:50 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2012/03/01 17:38:56 hans Exp $
 
 --- src/pcm.cc.orig	2005-12-11 20:35:40.000000000 +0000
 +++ src/pcm.cc
-@@ -9,6 +9,8 @@
+@@ -9,6 +9,12 @@
  #include <stdlib.h>
  #ifdef __NetBSD__
  #  include <machine/byte_swap.h>
 +#elif defined(__DragonFly__)
 +#  include <sys/endian.h>
++#elif defined(__sun)
++#  include <sys/byteorder.h>
++#  define bswap_16 BSWAP_16
++#  define bswap_32 BSWAP_32
  #else
  #  include <byteswap.h>
  #endif
-@@ -122,7 +124,7 @@ PCM::swap_buffer (void* buffer, int fram
+@@ -122,7 +128,7 @@ PCM::swap_buffer (void* buffer, int fram
  	case S16: {
  	    int16_t* tmp_buffer = (int16_t*) buffer;
  	    for (int i = n; i != 0; i--) {
@@ -20,7 +24,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/11 20:46:50 joerg Exp $
  		*tmp_buffer = bswap16 (*tmp_buffer);
  #else
  		*tmp_buffer = bswap_16 (*tmp_buffer);
-@@ -134,7 +136,7 @@ PCM::swap_buffer (void* buffer, int fram
+@@ -134,7 +140,7 @@ PCM::swap_buffer (void* buffer, int fram
  	case S32: {
  	    int32_t* tmp_buffer = (int32_t*) buffer;
  	    for (int i = n; i != 0; i--) {
