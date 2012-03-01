@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/12/14 03:14:13 sbd Exp $
+$NetBSD: distinfo,v 1.6 2012/03/01 17:30:00 hans Exp $
 
 SHA1 (ubs-0.17.tar.gz) = f0f67d437e4c5c7026b2f05d1aaff53688eb3253
 RMD160 (ubs-0.17.tar.gz) = 4e0e46bb8346f0c86989b0b33973000bbb86f1aa
@@ -6,3 +6,4 @@ Size (ubs-0.17.tar.gz) = 372222 bytes
 SHA1 (patch-aa) = 4f8d8085a8925ffe866f2d8cec72232f6da70811
 SHA1 (patch-ab) = 88d06fca850e7bf2d38ad587021e4352c96cc89b
 SHA1 (patch-ac) = af22e0ca907b22eedb86e79ce2e81e4fb87283e9
+SHA1 (patch-lib_get__song.c) = 1158e4dacb1f47e27902af0e42b60ecbc96e82f6
