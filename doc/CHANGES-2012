@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.630 2012/03/01 05:44:09 apb Exp $
+$NetBSD: CHANGES-2012,v 1.631 2012/03/01 12:30:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -893,3 +893,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/gitweb to 1.7.8.4 [apb 2012-02-29]
 	Updated www/ruby-mechanize to 2.3 [minskim 2012-03-01]
 	Updated www/gitweb to 1.7.9.2 [apb 2012-03-01]
+	Updated misc/py-carddav to 0.3.3 [wiz 2012-03-01]
