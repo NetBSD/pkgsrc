@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2011/10/28 21:19:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.185 2012/03/01 21:40:00 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -64,6 +64,7 @@ CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
 
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
+MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 
 PKG_DBDIR?=		/var/db/pkg
 EGDIR=			${PREFIX}/share/examples/pkg_install
