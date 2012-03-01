@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2010/01/27 18:36:54 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2012/03/01 16:21:12 hans Exp $
 
 --- Makefile.in	2007/01/17 23:05:04	1.1
 +++ Makefile.in	2007/01/17 23:10:33
-@@ -196,7 +196,7 @@
+@@ -51,7 +51,8 @@ RELEASE_PATH=${HOME}/release
+ 
+ CC=@CC@
+ CXX=@CXX@
+-CFLAGS=@CFLAGS@ @DEFS@
++CFLAGS+=@CPPFLAGS@ @CFLAGS@ @DEFS@
++CFLAGS_I=$(CFLAGS)
+ #CFLAGS_O=-O2
+ #CFLAGS_O=-O2 -fomit-frame-pointer
+ #CFLAGS_P=$(CFLAGS) -pg
+@@ -196,7 +197,7 @@ debclean: distclean
  		.version_patch`  > .version
  
  _version.h: .version
