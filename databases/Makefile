@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.392 2012/01/08 15:08:32 wiz Exp $
+# $NetBSD: Makefile,v 1.393 2012/03/01 21:13:41 gdt Exp $
 #
 
 COMMENT=	Databases
@@ -305,6 +305,7 @@ SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlite3
 SUBDIR+=	py-sybase
 SUBDIR+=	py-table
+SUBDIR+=	py-tokyocabinet
 SUBDIR+=	qdbm
 SUBDIR+=	qdbm-cgi
 SUBDIR+=	qdbm-plus
