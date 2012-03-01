@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10902 2012/02/29 18:50:53 morr Exp $
+$NetBSD: TODO,v 1.10903 2012/03/01 15:13:35 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -335,7 +335,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.14
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o Sigil-0.5.3
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o XaoS-3.5
