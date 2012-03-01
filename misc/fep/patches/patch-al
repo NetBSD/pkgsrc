@@ -1,11 +1,25 @@
-$NetBSD: patch-al,v 1.5 2006/01/17 21:23:01 kristerw Exp $
+$NetBSD: patch-al,v 1.6 2012/03/01 22:00:44 hans Exp $
 
 --- fep_util.c.orig	1988-12-28 07:24:01.000000000 -0500
 +++ fep_util.c	2005-12-10 16:59:27.000000000 -0500
-@@ -6 +6 @@
+@@ -3,14 +3,14 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-al,v 1.6 2012/03/01 22:00:44 hans Exp $ (SRA)";
 -#endif lint
 +#endif /* lint */
-@@ -178,9 +178,9 @@
+ 
+ #ifndef MKARGDEBUG
+ 
+ #include <stdio.h>
+ #include <pwd.h>
+ #include <sys/types.h>
+-#include <sys/dir.h>
++#include <dirent.h>
+ #include <ctype.h>
+ #include "fep_defs.h"
+ 
+@@ -178,9 +178,9 @@ max (d1, d2)
  {
      return (d1 > d2 ? d1 : d2);
  }
@@ -17,7 +31,7 @@ $NetBSD: patch-al,v 1.5 2006/01/17 21:23:01 kristerw Exp $
  
  #include <stdio.h>
  #include <ctype.h>
-@@ -198,7 +198,7 @@
+@@ -198,7 +198,7 @@ main()
  	showArgs (s);
      }
  }
@@ -26,7 +40,7 @@ $NetBSD: patch-al,v 1.5 2006/01/17 21:23:01 kristerw Exp $
  
  showArgs (comline)
      char *comline;
-@@ -402,4 +402,4 @@
+@@ -402,4 +402,4 @@ iskanji_in_string (s, i)
      else
  	return (iskanji (*cp));
  }
