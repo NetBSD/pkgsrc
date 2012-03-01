@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.628 2012/02/29 21:21:13 apb Exp $
+$NetBSD: CHANGES-2012,v 1.629 2012/03/01 01:25:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated meta-pkgs/boost to 1.49.0 [hans 2012-02-29]
 	Updated x11/rxvt-unicode to 9.15 [morr 2012-02-29]
 	Updated www/gitweb to 1.7.8.4 [apb 2012-02-29]
+	Updated www/ruby-mechanize to 2.3 [minskim 2012-03-01]
