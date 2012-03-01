@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/10/11 20:44:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/01 17:03:18 ryoon Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
@@ -123,6 +123,9 @@ ${PYSITELIB}/zim/plugins/arithmetic.pyo
 ${PYSITELIB}/zim/plugins/attachmentbrowser.py
 ${PYSITELIB}/zim/plugins/attachmentbrowser.pyc
 ${PYSITELIB}/zim/plugins/attachmentbrowser.pyo
+${PYSITELIB}/zim/plugins/automount.py
+${PYSITELIB}/zim/plugins/automount.pyc
+${PYSITELIB}/zim/plugins/automount.pyo
 ${PYSITELIB}/zim/plugins/calendar.py
 ${PYSITELIB}/zim/plugins/calendar.pyc
 ${PYSITELIB}/zim/plugins/calendar.pyo
@@ -224,6 +227,8 @@ share/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-zim-notebook.png
 share/icons/hicolor/scalable/apps/zim.svg
 share/icons/hicolor/scalable/mimetypes/application-x-zim-notebook.svg
 share/icons/hicolor/scalable/mimetypes/gnome-mime-application-x-zim-notebook.svg
+share/icons/ubuntu-mono-dark/apps/22/zim-panel.svg
+share/icons/ubuntu-mono-light/apps/22/zim-panel.svg
 share/locale/ca/LC_MESSAGES/zim.mo
 share/locale/cs/LC_MESSAGES/zim.mo
 share/locale/da/LC_MESSAGES/zim.mo
@@ -233,6 +238,7 @@ share/locale/en_GB/LC_MESSAGES/zim.mo
 share/locale/es/LC_MESSAGES/zim.mo
 share/locale/et/LC_MESSAGES/zim.mo
 share/locale/fr/LC_MESSAGES/zim.mo
+share/locale/gl/LC_MESSAGES/zim.mo
 share/locale/he/LC_MESSAGES/zim.mo
 share/locale/hu/LC_MESSAGES/zim.mo
 share/locale/it/LC_MESSAGES/zim.mo
@@ -263,6 +269,7 @@ share/mime/subclasses
 share/mime/text/x-zim-wiki.xml
 share/mime/treemagic
 share/mime/types
+share/mime/version
 share/pixmaps/zim.png
 share/zim/applications/firefox.desktop
 share/zim/applications/open.desktop
@@ -298,6 +305,7 @@ share/zim/manual/Help/Templates.txt
 share/zim/manual/Help/Wiki_Syntax.txt
 share/zim/manual/Plugins.txt
 share/zim/manual/Plugins/Arithmetic.txt
+share/zim/manual/Plugins/Automount.txt
 share/zim/manual/Plugins/Calendar.txt
 share/zim/manual/Plugins/Diagram_Editor.txt
 share/zim/manual/Plugins/Diagram_Editor/diagram.png
