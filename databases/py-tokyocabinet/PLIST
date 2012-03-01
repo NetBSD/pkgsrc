@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/01 21:13:08 gdt Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/tokyocabinet/__init__.py
+${PYSITELIB}/tokyocabinet/__init__.pyc
+${PYSITELIB}/tokyocabinet/__init__.pyo
+${PYSITELIB}/tokyocabinet/btree.so
+${PYSITELIB}/tokyocabinet/hash.so
+${PYSITELIB}/tokyocabinet/table.so
