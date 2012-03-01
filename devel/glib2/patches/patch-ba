@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.8 2012/01/29 10:46:54 drochner Exp $
+$NetBSD: patch-ba,v 1.9 2012/03/01 15:06:20 ryoon Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=583330
 
---- gio/gunixmounts.c.orig	2011-10-14 03:47:57.000000000 +0000
+--- gio/gunixmounts.c.orig	2011-11-11 17:56:52.000000000 +0000
 +++ gio/gunixmounts.c
 @@ -153,6 +153,9 @@ struct _GUnixMountMonitor {
  
@@ -62,6 +62,33 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
      "/var",
      "/var/crash",
      "/var/local",
+@@ -595,7 +609,7 @@ get_mtab_monitor_file (void)
+ static GList *
+ _g_get_unix_mounts (void)
+ {
+-#if defined(HAVE_GETVFSSTAT)
++#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
+   struct statvfs *mntent = NULL;
+ #elif defined(HAVE_GETFSSTAT)
+   struct statfs *mntent = NULL;
+@@ -608,7 +622,7 @@ _g_get_unix_mounts (void)
+   GList *return_list;
+   
+   /* Pass NOWAIT to avoid blocking trying to update NFS mounts. */
+-#if defined(HAVE_GETVFSSTAT)
++#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
+   num_mounts = getvfsstat (NULL, 0, ST_NOWAIT);
+ #elif defined(HAVE_GETFSSTAT)
+   num_mounts = getfsstat (NULL, 0, MNT_NOWAIT);
+@@ -618,7 +632,7 @@ _g_get_unix_mounts (void)
+ 
+   bufsize = num_mounts * sizeof (*mntent);
+   mntent = g_malloc (bufsize);
+-#if defined(HAVE_GETVFSSTAT)
++#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
+   num_mounts = getvfsstat (mntent, bufsize, ST_NOWAIT);
+ #elif defined(HAVE_GETFSSTAT)
+   num_mounts = getfsstat (mntent, bufsize, MNT_NOWAIT);
 @@ -634,9 +648,15 @@ _g_get_unix_mounts (void)
        
        mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
@@ -70,8 +97,9 @@ http://bugzilla.gnome.org/show_bug.cgi?id=583330
 +      mount_entry->filesystem_type = g_strdup ("unknown");
 +#else
        mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
+-#if defined(HAVE_GETVFSSTAT)
 +#endif
- #if defined(HAVE_GETVFSSTAT)
++#if defined(HAVE_GETVFSSTAT) && !defined(__DragonFly__)
        if (mntent[i].f_flag & ST_RDONLY)
 +#elif defined(__digital__)
 +      if (mntent[i].f_flags & M_RDONLY)
