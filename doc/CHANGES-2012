@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.629 2012/03/01 01:25:08 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.630 2012/03/01 05:44:09 apb Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -892,3 +892,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/rxvt-unicode to 9.15 [morr 2012-02-29]
 	Updated www/gitweb to 1.7.8.4 [apb 2012-02-29]
 	Updated www/ruby-mechanize to 2.3 [minskim 2012-03-01]
+	Updated www/gitweb to 1.7.9.2 [apb 2012-03-01]
