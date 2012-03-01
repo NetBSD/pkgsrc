@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/21 09:00:15 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/01 22:42:31 wiz Exp $
 #
 
 DISTNAME=		tcd-2.2.0
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://download.savannah.gnu.org/releases/tcd/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/tcd/
 COMMENT=		Audio CD player using ncurses and SDL
 
