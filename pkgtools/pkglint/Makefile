@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.397 2012/01/06 01:26:44 wiz Exp $
+# $NetBSD: Makefile,v 1.398 2012/03/01 22:42:31 wiz Exp $
 #
 
 # Note: if you update the version number, please have a look at the
@@ -9,7 +9,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Verifier for NetBSD packages
 
