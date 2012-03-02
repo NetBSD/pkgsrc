@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/11/29 06:19:43 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/03/02 09:58:55 ghen Exp $
 
 DISTNAME=		policyd-1.82
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=policyd/}
 
@@ -31,6 +31,11 @@ SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-build
 SUBST_FILES.config=	policyd.conf
 SUBST_SED.config=	-e 's,%%VARBASE%%,${VARBASE},'
+
+SUBST_CLASSES+=		dbtype
+SUBST_STAGE.dbtype=	post-build
+SUBST_FILES.dbtype=	DATABASE.mysql
+SUBST_SED.dbtype=	-e 's,TYPE=,ENGINE=,'
 
 FILES_SUBST+=		BINDIR=${BINDIR}
 MESSAGE_SUBST+=		BINDIR=${BINDIR}
