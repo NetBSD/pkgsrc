@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/16 13:28:29 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/02 16:47:10 hans Exp $
 
 DISTNAME=	uucp-1.07
 PKGREVISION=	6
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.airs.com/ian/uucp.html
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	mkdir:run pwd:run rmdir:run
+USE_FEATURES+=	cdefs
 
 .include "../../mk/bsd.prefs.mk"
 
