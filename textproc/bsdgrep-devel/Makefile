@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/09/29 20:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/03/02 16:23:01 hans Exp $
 #
 
 DISTNAME=	bsdgrep-20071201
@@ -13,6 +13,7 @@ LICENSE=	original-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_FEATURES+=		cdefs fts_open
 USE_BSD_MAKEFILE=	yes
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
