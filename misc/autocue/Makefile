@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/20 21:42:26 agc Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/02 16:21:32 hans Exp $
 #
 
 DISTNAME=	autocue-20070224
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	Time-based text formatter, sending output to xcb for pasting
 
 DEPENDS+=	xcb-[0-9]*:../../x11/xcb
+
+USE_FEATURES+=	cdefs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
