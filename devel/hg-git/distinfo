@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/03/08 09:38:18 cegger Exp $
+$NetBSD: distinfo,v 1.5 2012/03/02 07:21:22 ryoon Exp $
 
-SHA1 (hg-git-0.2.2.tar.gz) = 9161bf89bacdc95222cbe6e2b2fe1e3ae022c60b
-RMD160 (hg-git-0.2.2.tar.gz) = 65a7f3bc179b71f06996575609ec7f2eac3a69f8
-Size (hg-git-0.2.2.tar.gz) = 37298 bytes
-SHA1 (patch-aa) = 9a1c4e75b68bd95d5ae7ad375bd6a42981919ecf
+SHA1 (hg-git-0.3.2.tar.gz) = 5c7689a5e2d811ee5f2aad0d24d62321df80bc9d
+RMD160 (hg-git-0.3.2.tar.gz) = 387a146db36da30316a4b264570c5f9fa0954c51
+Size (hg-git-0.3.2.tar.gz) = 46419 bytes

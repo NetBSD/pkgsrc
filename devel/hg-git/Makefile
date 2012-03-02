@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/01/28 11:34:54 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/02 07:21:22 ryoon Exp $
 #
 
-DISTNAME=		hg-git-0.2.2
-EGG_NAME=		hg_git-0.2.2
-PKGREVISION=		1
+DISTNAME=		hg-git-0.3.2
+EGG_NAME=		hg_git-0.3.2
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -13,8 +12,8 @@ COMMENT=		Git plugin for Mercurial
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.6.0:../../devel/py-dulwich
-DEPENDS+=	mercurial>=1.3.1:../../devel/mercurial
+DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.8.0:../../devel/py-dulwich
+DEPENDS+=	mercurial>=1.7.0:../../devel/mercurial
 
 USE_LANGUAGES=	#none
 
