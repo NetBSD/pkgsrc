@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.19 2008/06/14 08:55:58 joerg Exp $
+# $NetBSD: features-vars.mk,v 1.20 2012/03/02 16:19:17 hans Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -36,6 +36,7 @@
 #
 #	Possible:
 #	* asprintf: The functions asprintf and vasprintf.
+#	* cdefs: The header sys/cdefs.h.
 #	* err: The functions err, verr, errx, verrx.
 #	* warn: The functions warn, vwarn, warnx, vwarnx.
 #	* fts_close, fts_open, fts_read, fts_set: Functions
@@ -57,7 +58,7 @@
 #	current system.  Also includes "inet6" if the system doesn't
 #	support IPv6.
 #
-# Keywords: feature features asprintf vasprintf err errx warn warnx
+# Keywords: feature features asprintf vasprintf cdefs err errx warn warnx
 # Keywords: fts fts_open fts_read fts_set fts_close getopt_long
 # Keywords: getprogname setprogname glob regcomp setenv snprintf vsnprintf
 # Keywords: utimes libnbcompat nbcompat
@@ -85,6 +86,10 @@ MISSING_FEATURES+=	inet6
 MISSING_FEATURES+=	${f}
 .  endif
 .endfor
+
+.if !exists(/usr/include/sys/cdefs.h) && !empty(USE_FEATURES:Mcdefs)
+MISSING_FEATURES+=	cdefs
+.endif
 
 .for _feature_ in err warn
 .  if !empty(USE_FEATURES:M${_feature_})
