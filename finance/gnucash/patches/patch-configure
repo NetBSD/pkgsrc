@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/03/02 15:15:34 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2012-03-02 14:29:10.000000000 +0000
++++ configure
+@@ -21160,7 +21160,7 @@ else
+   CUSTOM_GNC_DBD_DIR_FALSE=
+ fi
+ 
+- if test "x$ac_cv_header_dbi_dbi_h" == xyes; then
++ if test "x$ac_cv_header_dbi_dbi_h" = xyes; then
+   WITH_DBI_TRUE=
+   WITH_DBI_FALSE='#'
+ else
