@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2011/03/18 10:39:07 adam Exp $
+# $NetBSD: Makefile,v 1.46 2012/03/02 18:31:40 hans Exp $
 
 DISTNAME=	vtun-3.0.2
 CATEGORIES=	net
@@ -46,6 +46,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/vtund.conf ${DESTDIR}${EGDIR}/vtund.conf
 	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+.include "../../net/solaris-tap/buildlink3.mk"
+.endif
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
