@@ -1,4 +1,4 @@
-# $NetBSD: features.mk,v 1.6 2008/01/14 23:06:26 tnn Exp $
+# $NetBSD: features.mk,v 1.7 2012/03/02 16:19:17 hans Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -36,7 +36,7 @@ LIBS+=			${FEATURE_LIBS}
 # libnbcompat provides many of the current features.
 #
 _FEATURE_USE_NBCOMPAT?=	no
-.  for f in asprintf err fts_close fts_open fts_read fts_set getopt_long glob nbcompat regcomp setenv snprintf utimes vsnprintf warn
+.  for f in asprintf cdefs err fts_close fts_open fts_read fts_set getopt_long glob nbcompat regcomp setenv snprintf utimes vsnprintf warn
 .    if !empty(MISSING_FEATURES:M${f})
 _FEATURE_USE_NBCOMPAT=	yes
 .    endif
@@ -49,6 +49,9 @@ FEATURE_LDFLAGS+=	${LDFLAGS.nbcompat}
 FEATURE_LIBS+=		${LDADD.nbcompat}
 .  endif
 
+.  if (${_FEATURE_USE_NBCOMPAT} == "yes") && !empty(MISSING_FEATURES:Mcdefs)
+BUILDLINK_TARGETS+=	features-sys-cdefs-h
+.  endif
 .  if (${_FEATURE_USE_NBCOMPAT} == "yes") && \
       (!empty(MISSING_FEATURES:Mfts_close) || \
        !empty(MISSING_FEATURES:Mfts_open) || \
@@ -63,11 +66,11 @@ BUILDLINK_TARGETS+=	features-glob-h
 BUILDLINK_TARGETS+=	features-regex-h
 .  endif
 
-.  for _file_ in fts.h glob.h regex.h
-.PHONY: features-${_file_:S/./-/}
-features-${_file_:S/./-/}:
+.  for _file_ in fts.h glob.h regex.h sys/cdefs.h
+.PHONY: features-${_file_:S/./-/:S/\//-/}
+features-${_file_:S/./-/:S/\//-/}:
 	${RUN}set -e;							\
-	nbcompat_header=${LIBNBCOMPAT_SRCDIR:Q}/nbcompat/${_file_:Q};	\
+	nbcompat_header=${LIBNBCOMPAT_SRCDIR:Q}/nbcompat/`${BASENAME} ${_file_:Q}`;	\
 	header=${BUILDLINK_DIR:Q}/include/${_file_:Q};			\
 	if ${TEST} ! -f "$$header" -a -f "$$nbcompat_header"; then	\
 		${ECHO_BUILDLINK_MSG} "Creating $$header.";		\
