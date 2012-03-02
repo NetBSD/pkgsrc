@@ -1,5 +1,14 @@
-$NetBSD: distinfo,v 1.35 2011/01/28 09:33:35 ahoka Exp $
+$NetBSD: distinfo,v 1.36 2012/03/02 12:00:14 asau Exp $
 
-SHA1 (opera-11.01-1190.i386.rpm) = 61830f3923e3b67a5b1624c5f92c1989b537feb1
-RMD160 (opera-11.01-1190.i386.rpm) = 80b346bba09121d24522ace8834b11dd4162514b
-Size (opera-11.01-1190.i386.rpm) = 13306952 bytes
+SHA1 (opera-11.61-1250.amd64.freebsd.tar.xz) = 3bac82d74f3fd7fe65233956034a629905ec864c
+RMD160 (opera-11.61-1250.amd64.freebsd.tar.xz) = 312fac7b0fcfa5cd880c5e0b66db96b778a3224c
+Size (opera-11.61-1250.amd64.freebsd.tar.xz) = 12101656 bytes
+SHA1 (opera-11.61-1250.i386.freebsd.tar.xz) = 154e73851169f1a1150bcf0256529c6b05cce42e
+RMD160 (opera-11.61-1250.i386.freebsd.tar.xz) = 985a7bf4e82b09e8da3cb529019df78f227bac21
+Size (opera-11.61-1250.i386.freebsd.tar.xz) = 11542444 bytes
+SHA1 (opera-11.61-1250.i386.linux.tar.xz) = 504f05eeab4e2ef07b82ce8090c30bf49d108237
+RMD160 (opera-11.61-1250.i386.linux.tar.xz) = 7715b98548457260a838944b30b8e16de6915cec
+Size (opera-11.61-1250.i386.linux.tar.xz) = 11490920 bytes
+SHA1 (opera-11.61-1250.x86_64.linux.tar.xz) = 32256a638430a8298fea12fd909c773431063430
+RMD160 (opera-11.61-1250.x86_64.linux.tar.xz) = 36b8fe9df9717673a1252b0a1ecd72c18d36ad0f
+Size (opera-11.61-1250.x86_64.linux.tar.xz) = 12319616 bytes
