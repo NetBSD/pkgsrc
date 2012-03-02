@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.163 2012/02/06 12:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2012/03/02 15:15:34 wiz Exp $
 #
 
-DISTNAME=		gnucash-2.4.8
-PKGREVISION=		4
+DISTNAME=		gnucash-2.4.10
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -52,9 +51,6 @@ GCONF_SCHEMAS+=	apps_gnucash_window_pages_register.schemas
 GCONF_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
 #GCONF_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
 GCONF_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
-
-post-install:
-	rm ${DESTDIR}${PREFIX}/bin/gnc-test-env
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
