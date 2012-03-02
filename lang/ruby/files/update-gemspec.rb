@@ -1,9 +1,9 @@
 #!/usr/pkg/bin/ruby
 # -*- coding: utf-8 -*-
 #
-# $NetBSD: update-gemspec.rb,v 1.3 2011/11/07 11:56:25 taca Exp $
+# $NetBSD: update-gemspec.rb,v 1.4 2012/03/02 03:46:09 taca Exp $
 #
-# Copyright (c) 2011 The NetBSD Foundation, Inc.
+# Copyright (c) 2011, 2012 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -55,34 +55,48 @@ class GemSpecUpdater
       @spec = Gem::Specification.from_yaml(f)
     }
     @requirements = {}
+    @attr = {}
   end
 
   #
   # rule should be:
-  #	rule ::= name_spec op version
-  #	name_sec ::= name [ : new_name ]
+  #	rule ::= [ dependecy_specs ] [ attr_specs ]
+  #	dependency_specs ::= dependency_spec [ dependency_spec ]
+  #	dependency_spec ::= name_spec [ dependency ]
+  #	name_spec ::= name [ ":" new_name ]
+  #	dependency ::= "pkgsrc's dependecy operator and version string"
+  #	command ::= ":" attr_name" attr_operations
+  #	attr_operations ::= attr_op [ attr_op ]
+  #	attr_op ::= new | old=new | old=
   #
   def parse_rules(rules)
+    key = nil
     rules.each do |s|
-      s.split.each do |dep|
-        method = names = op = ver = nil
-        if /([a-z0-9_:-]+)([=!><\~][=>]*)(.*)/ =~ dep
-          names = $1
-          op = $2
-          ver = $3
-          r = Gem::Version.new ver
-          name, new_name = names.split(/:/, 2)
-          @requirements[name] = {
-            :method => :update,
-            :op => op,
-            :version => r,
-            :name => new_name
-          }
-        elsif /([a-z0-9_-]+):$/ =~ dep
-          name = $1
-          @requirements[name] = {
-            :method => :delete,
-          }
+      s.split.each do |ru|
+        if /^:([a-z_]+)+/ =~ ru
+          key = $1
+          @attr[key] = []
+        elsif not key.nil?
+          @attr[key].push ru
+        else
+          if /([a-z0-9_:-]+)([=!><\~][=>]*)(.*)/ =~ ru
+            names = $1
+            op = $2
+            ver = $3
+            r = Gem::Version.new ver
+            name, new_name = names.split(/:/, 2)
+            @requirements[name] = {
+              :method => :update,
+              :op => op,
+              :version => r,
+              :name => new_name
+            }
+          elsif /([a-z0-9_-]+):$/ =~ ru
+            name = $1
+            @requirements[name] = {
+              :method => :delete,
+            }
+          end
         end
       end
     end
@@ -108,11 +122,30 @@ class GemSpecUpdater
       update = @requirements[dep.name]
       not update.nil? and update[:method] == :delete
     }
+    @attr.keys.each do |name|
+      av = @spec.instance_variable_get('@' + name)
+      if av.class == Array
+        operation = @attr[name]
+        operation.each do |op|
+          if /^([^=]+)=([^=]+)$/ =~ op
+            ov = $1
+            nv = $2
+            av.delete_if {|a| a == ov}
+            av.push nv unless av.include? nv
+          elsif /^([^=]+)=$/ =~ op
+            ov = $1
+            av.delete_if {|a| a == ov}
+          else
+            av.push op unless av.include? op
+          end
+        end
+      end
+    end
   end
 
   def update
     FileUtils.cp(@file, @file + OrigSuffix, :preserve => true)
-    
+
     open(@file, "w") { |f|
       f.print YAML.dump(@spec) + "\n"
     }
@@ -127,9 +160,9 @@ class GemSpecUpdater
   end
 end
 
-def usage
+def usage(status)
   $stderr.puts <<"EOF"
-#{$0}: [-n] [-o] [-h] gemspec [rules ...]
+#{File.basename($0)}: [-n] [-o] [-h] gemspec [rules ...]
 	Update gemspec with as version patterns.
 	Options:
 	-h	Show this help.
@@ -137,7 +170,7 @@ def usage
 	-o	Don't update gemspec file and show original dependency.
 
 EOF
-  exit
+  Process.exit status
 end
 
 ENV['TZ'] = 'UTC'
@@ -148,7 +181,11 @@ update = true
 opt = OptionParser.new
 opt.on('-n') { show = true }
 opt.on('-o') { show = true; update = false }
-opt.on('-h') { usage }
+opt.on('-h') { usage 0 }
+
+if ARGV.size < 1
+  usage 1
+end
 
 opt.parse!(ARGV)
 
