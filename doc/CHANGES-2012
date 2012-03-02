@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.637 2012/03/02 03:02:05 taca Exp $
+$NetBSD: CHANGES-2012,v 1.638 2012/03/02 03:26:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -900,3 +900,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added databases/py-tokyocabinet version 0.5 [gdt 2012-03-01]
 	Updated x11/rxvt-unicode to 9.15nb1 [morr 2012-03-01]
 	Updated misc/ruby-sprockets to 2.0.3nb1 [taca 2012-03-02]
+	Updated databases/ruby-arel to 2.2.3 [taca 2012-03-02]
