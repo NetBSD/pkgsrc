@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/12/14 16:27:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/02 03:25:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -64,6 +64,7 @@ ${GEM_LIBDIR}/lib/arel/table.rb
 ${GEM_LIBDIR}/lib/arel/tree_manager.rb
 ${GEM_LIBDIR}/lib/arel/update_manager.rb
 ${GEM_LIBDIR}/lib/arel/visitors.rb
+${GEM_LIBDIR}/lib/arel/visitors/bind_visitor.rb
 ${GEM_LIBDIR}/lib/arel/visitors/depth_first.rb
 ${GEM_LIBDIR}/lib/arel/visitors/dot.rb
 ${GEM_LIBDIR}/lib/arel/visitors/ibm_db.rb
@@ -108,6 +109,7 @@ ${GEM_LIBDIR}/test/test_insert_manager.rb
 ${GEM_LIBDIR}/test/test_select_manager.rb
 ${GEM_LIBDIR}/test/test_table.rb
 ${GEM_LIBDIR}/test/test_update_manager.rb
+${GEM_LIBDIR}/test/visitors/test_bind_visitor.rb
 ${GEM_LIBDIR}/test/visitors/test_depth_first.rb
 ${GEM_LIBDIR}/test/visitors/test_dot.rb
 ${GEM_LIBDIR}/test/visitors/test_ibm_db.rb
