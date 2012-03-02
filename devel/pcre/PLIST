@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/11/28 16:39:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/03/02 14:10:42 wiz Exp $
 bin/pcre-config
 bin/pcregrep
 bin/pcretest
@@ -18,6 +18,32 @@ man/man1/pcre-config.1
 man/man1/pcregrep.1
 man/man1/pcretest.1
 man/man3/pcre.3
+man/man3/pcre16.3
+man/man3/pcre16_assign_jit_stack.3
+man/man3/pcre16_compile.3
+man/man3/pcre16_compile2.3
+man/man3/pcre16_config.3
+man/man3/pcre16_copy_named_substring.3
+man/man3/pcre16_copy_substring.3
+man/man3/pcre16_dfa_exec.3
+man/man3/pcre16_exec.3
+man/man3/pcre16_free_study.3
+man/man3/pcre16_free_substring.3
+man/man3/pcre16_free_substring_list.3
+man/man3/pcre16_fullinfo.3
+man/man3/pcre16_get_named_substring.3
+man/man3/pcre16_get_stringnumber.3
+man/man3/pcre16_get_stringtable_entries.3
+man/man3/pcre16_get_substring.3
+man/man3/pcre16_get_substring_list.3
+man/man3/pcre16_jit_stack_alloc.3
+man/man3/pcre16_jit_stack_free.3
+man/man3/pcre16_maketables.3
+man/man3/pcre16_pattern_to_host_byte_order.3
+man/man3/pcre16_refcount.3
+man/man3/pcre16_study.3
+man/man3/pcre16_utf16_to_host_byte_order.3
+man/man3/pcre16_version.3
 man/man3/pcre_assign_jit_stack.3
 man/man3/pcre_compile.3
 man/man3/pcre_compile2.3
@@ -35,12 +61,13 @@ man/man3/pcre_get_stringnumber.3
 man/man3/pcre_get_stringtable_entries.3
 man/man3/pcre_get_substring.3
 man/man3/pcre_get_substring_list.3
-man/man3/pcre_info.3
 man/man3/pcre_jit_stack_alloc.3
 man/man3/pcre_jit_stack_free.3
 man/man3/pcre_maketables.3
+man/man3/pcre_pattern_to_host_byte_order.3
 man/man3/pcre_refcount.3
 man/man3/pcre_study.3
+man/man3/pcre_utf16_to_host_byte_order.3
 man/man3/pcre_version.3
 man/man3/pcreapi.3
 man/man3/pcrebuild.3
@@ -68,6 +95,7 @@ share/doc/pcre/README
 share/doc/pcre/html/index.html
 share/doc/pcre/html/pcre-config.html
 share/doc/pcre/html/pcre.html
+share/doc/pcre/html/pcre16.html
 share/doc/pcre/html/pcre_assign_jit_stack.html
 share/doc/pcre/html/pcre_compile.html
 share/doc/pcre/html/pcre_compile2.html
@@ -85,12 +113,13 @@ share/doc/pcre/html/pcre_get_stringnumber.html
 share/doc/pcre/html/pcre_get_stringtable_entries.html
 share/doc/pcre/html/pcre_get_substring.html
 share/doc/pcre/html/pcre_get_substring_list.html
-share/doc/pcre/html/pcre_info.html
 share/doc/pcre/html/pcre_jit_stack_alloc.html
 share/doc/pcre/html/pcre_jit_stack_free.html
 share/doc/pcre/html/pcre_maketables.html
+share/doc/pcre/html/pcre_pattern_to_host_byte_order.html
 share/doc/pcre/html/pcre_refcount.html
 share/doc/pcre/html/pcre_study.html
+share/doc/pcre/html/pcre_utf16_to_host_byte_order.html
 share/doc/pcre/html/pcre_version.html
 share/doc/pcre/html/pcreapi.html
 share/doc/pcre/html/pcrebuild.html
