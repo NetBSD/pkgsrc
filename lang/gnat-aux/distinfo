@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.8 2012/01/08 11:17:07 marino Exp $
+$NetBSD: distinfo,v 1.9 2012/03/02 16:00:58 marino Exp $
 
-SHA1 (gcc-ada-4.6.2.tar.bz2) = e6eaa9b8111ac8e550844a7cc2d161f8c3c96522
-RMD160 (gcc-ada-4.6.2.tar.bz2) = 6f5d5af97c374411e13698c32314b43b1afd99cf
-Size (gcc-ada-4.6.2.tar.bz2) = 6064757 bytes
-SHA1 (gcc-core-4.6.2.tar.bz2) = 23d259e2269a40f6e203cf6f57bc7eb7a207a8b3
-RMD160 (gcc-core-4.6.2.tar.bz2) = 82c25532303759b6195bbd53d7f371f1974ff182
-Size (gcc-core-4.6.2.tar.bz2) = 30258326 bytes
-SHA1 (gcc-fortran-4.6.2.tar.bz2) = aba480c9a42d58eca6c34355b6d2f5f487de051d
-RMD160 (gcc-fortran-4.6.2.tar.bz2) = 6a966d647e9d3fe35996d390fbcd7ff0622edfb8
-Size (gcc-fortran-4.6.2.tar.bz2) = 1676539 bytes
-SHA1 (gcc-g++-4.6.2.tar.bz2) = f0bc2b4e1c23c5dc1462599efd5df4b9807b23af
-RMD160 (gcc-g++-4.6.2.tar.bz2) = afb274990e9102b55cb5f5dc11876c96e6b31c96
-Size (gcc-g++-4.6.2.tar.bz2) = 6955594 bytes
-SHA1 (gcc-objc-4.6.2.tar.bz2) = 32e5fbc31f1e8dd5e7c7e7ed9172afaf6136ea4e
-RMD160 (gcc-objc-4.6.2.tar.bz2) = 3c38c655edb90fadb2805043219296a4af43c56a
-Size (gcc-objc-4.6.2.tar.bz2) = 342544 bytes
-SHA1 (gcc-testsuite-4.6.2.tar.bz2) = 514c0ed8b9e4ed22e55303ae2426dd6f1e8a24f2
-RMD160 (gcc-testsuite-4.6.2.tar.bz2) = 859486da17497b61e0919f53f13efc04eeaef751
-Size (gcc-testsuite-4.6.2.tar.bz2) = 6309400 bytes
+SHA1 (gcc-ada-4.6.3.tar.bz2) = dad948b980357bab992d0ac9aaa1f9859f1671e7
+RMD160 (gcc-ada-4.6.3.tar.bz2) = 33d0077a366edc8705d6907ca98ff2c53a434498
+Size (gcc-ada-4.6.3.tar.bz2) = 6092418 bytes
+SHA1 (gcc-core-4.6.3.tar.bz2) = eaefb90df5a833c94560a8dda177bd1e165c2a88
+RMD160 (gcc-core-4.6.3.tar.bz2) = 071371eae1ce10dbb44c077b69256f2ec2ee1b6b
+Size (gcc-core-4.6.3.tar.bz2) = 30305971 bytes
+SHA1 (gcc-fortran-4.6.3.tar.bz2) = 4dc62a4b995391584e7f80e05353e9635407e647
+RMD160 (gcc-fortran-4.6.3.tar.bz2) = 95b338486d4427f1ba54d3c652fcb628da2c5576
+Size (gcc-fortran-4.6.3.tar.bz2) = 1676490 bytes
+SHA1 (gcc-g++-4.6.3.tar.bz2) = 528d010ee7af50e023bd4d476d65d08df71a7f65
+RMD160 (gcc-g++-4.6.3.tar.bz2) = 2540b113a2ee983c517b1bed6910d8d60c1292c3
+Size (gcc-g++-4.6.3.tar.bz2) = 6928430 bytes
+SHA1 (gcc-objc-4.6.3.tar.bz2) = a584c2b3505a7f6411167027cc7fe473182c6e1c
+RMD160 (gcc-objc-4.6.3.tar.bz2) = 1a673690aad47472126e518d4f56f3b385751877
+Size (gcc-objc-4.6.3.tar.bz2) = 342441 bytes
+SHA1 (gcc-testsuite-4.6.3.tar.bz2) = 31f428af55332ee45bfae7184139a65d130ac2df
+RMD160 (gcc-testsuite-4.6.3.tar.bz2) = 6b2d96cc4db33bd28c0b98fe43526acdc69ecd0d
+Size (gcc-testsuite-4.6.3.tar.bz2) = 6354781 bytes
 SHA1 (gnat-bootstrap.i386.dragonfly.tar.bz2) = d7a8103243a2df3723d9d3c3ec0da9c3bb725214
 RMD160 (gnat-bootstrap.i386.dragonfly.tar.bz2) = 9e6fde444e0ed76ee404810af6d6b7eb48659c09
 Size (gnat-bootstrap.i386.dragonfly.tar.bz2) = 28205489 bytes
