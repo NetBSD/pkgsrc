@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2006/01/19 23:39:19 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2012/03/02 15:07:16 hans Exp $
 
 --- src/myendian.h.orig	2006-01-19 23:32:41.000000000 +0000
 +++ src/myendian.h
-@@ -8,7 +8,7 @@
+@@ -8,10 +8,19 @@
  #    define BYTE_ORDER LITTLE_ENDIAN
  #  endif
  #else
@@ -11,3 +11,15 @@ $NetBSD: patch-ad,v 1.1 2006/01/19 23:39:19 joerg Exp $
  #    include <sys/endian.h>
  #  elif __APPLE__
  #    include <ppc/endian.h>
++#  elif __sun
++#    include <sys/byteorder.h>
++#    define LITTLE_ENDIAN 1234
++#    define BIG_ENDIAN 4321
++#    ifdef _BIG_ENDIAN
++#      define BYTE_ORDER BIG_ENDIAN
++#    else
++#      define BYTE_ORDER LITTLE_ENDIAN
++#    endif
+ #  else
+ #    include <endian.h>
+ #  endif
