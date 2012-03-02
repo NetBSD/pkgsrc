@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/02/11 22:10:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/02 16:32:47 hans Exp $
 
 DISTNAME=		mtftpd-20080229
 CATEGORIES=		net
@@ -11,6 +11,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/mtftpd
 
+USE_FEATURES+=		cdefs
 USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/bsd.prefs.mk"
