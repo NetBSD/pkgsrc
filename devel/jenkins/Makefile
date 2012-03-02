@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/19 14:39:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/02 06:55:40 ryoon Exp $
 #
 
 DISTNAME=	jenkins
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-J_VERSION=	1.424.2
+J_VERSION=	1.424.3
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
