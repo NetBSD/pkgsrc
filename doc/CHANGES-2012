@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.641 2012/03/02 09:59:45 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.642 2012/03/02 12:00:32 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.697 [obache 2012-03-02]
 	Updated devel/jenkins to 1.424.3 [ryoon 2012-03-02]
 	Updated mail/policyd to 1.82nb2 [ghen 2012-03-02]
+	Updated www/opera to 11.61 [asau 2012-03-02]
