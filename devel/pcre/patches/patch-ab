@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2011/08/22 12:58:08 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2012/03/02 15:24:48 wiz Exp $
 
 Remove a feeble attempt at providing ABI compatibility for the C++ portion
 of the PCRE library. Relying on the C++ compiler to crunch symbols in a
@@ -6,9 +6,9 @@ particular way is platform dependent at best, and the comments indicate
 that this was done for OSX.
 Also, the test misfired on SunOS leading to breakage (PR pkg/38768).
 
---- configure.orig	2008-05-07 18:22:58.000000000 +0200
+--- configure.orig	2012-02-04 12:55:43.000000000 +0000
 +++ configure
-@@ -20901,6 +20901,8 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
+@@ -16189,6 +16189,8 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
  ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
  ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
@@ -17,7 +17,7 @@ Also, the test misfired on SunOS leading to breakage (PR pkg/38768).
  
  # Older versions of pcre defined pcrecpp::no_arg, but in new versions
  # it's called pcrecpp::RE::no_arg.  For backwards ABI compatibility,
-@@ -20968,6 +20970,9 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -16231,6 +16233,9 @@ rm -f core conftest.err conftest.$ac_obj
  done
  LDFLAGS="$OLD_LDFLAGS"
  
