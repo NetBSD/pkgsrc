@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2011/10/23 08:04:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2012/03/02 15:15:34 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -229,7 +229,6 @@ include/gnucash/table-layout.h
 include/gnucash/table-model.h
 include/gnucash/window-main-summarybar.h
 include/gnucash/window-report.h
-info/gnucash-design.info
 lib/gnucash/libgncmod-app-utils.la
 lib/gnucash/libgncmod-backend-xml.la
 lib/gnucash/libgncmod-bi_import.la
@@ -754,6 +753,7 @@ share/gnucash/guile-modules/gnucash/printf.scm
 share/gnucash/guile-modules/gnucash/report/aging.scm
 share/gnucash/guile-modules/gnucash/report/balsheet-eg.css
 share/gnucash/guile-modules/gnucash/report/balsheet-eg.eguile.scm
+share/gnucash/guile-modules/gnucash/report/balsheet-eg.scm
 share/gnucash/guile-modules/gnucash/report/business-reports.scm
 share/gnucash/guile-modules/gnucash/report/customer-summary.scm
 share/gnucash/guile-modules/gnucash/report/easy-invoice.scm
@@ -777,7 +777,6 @@ share/gnucash/guile-modules/gnucash/report/standard-reports/account-summary.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/advanced-portfolio.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/average-balance.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/balance-sheet.scm
-share/gnucash/guile-modules/gnucash/report/standard-reports/balsheet-eg.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/budget-balance-sheet.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/budget-barchart.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/budget-flow.scm
@@ -791,6 +790,7 @@ share/gnucash/guile-modules/gnucash/report/standard-reports/general-journal.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/general-ledger.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/income-statement.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/net-barchart.scm
+share/gnucash/guile-modules/gnucash/report/standard-reports/net-linechart.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/portfolio.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/price-scatter.scm
 share/gnucash/guile-modules/gnucash/report/standard-reports/register.scm
