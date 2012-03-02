@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.11 2012/01/12 08:43:22 obache Exp $
+# $NetBSD: gem.mk,v 1.12 2012/03/02 03:46:09 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -18,24 +18,44 @@
 #	Default: not defined
 #
 # OVERRIDE_GEMSPEC
-#	Fix version of depending gem.  Specify as gem and dependency
-#	pattern as usual pkgsrc's one.
+#	Fix version of depending gem or modify files in gemspec.
 #
-#	Example:
-#	    When gemspec contains "json~>1.4.7" as runtime dependency
-#	    (i.e. json>=1.4.7<1.5) and if you want to relax it to
-#	    "json>=1.4.6" then use:
+#	(1) Specify as gem and dependency pattern as usual pkgsrc's one.
 #
-#		OVERRIDE_GEMSPEC+= json>=1.4.6
+#		Example:
+#		    When gemspec contains "json~>1.4.7" as runtime dependency
+#		    (i.e. json>=1.4.7<1.5) and if you want to relax it to
+#		    "json>=1.4.6" then use:
+#	
+#			OVERRIDE_GEMSPEC+= json>=1.4.6
+#	
+#		    If you want to change depending gem to "json_pure>=1.4.6"
+#		    then use:
+#	
+#			OVERRIDE_GEMSPEC+= json:json_pure>=1.4.6
+#	
+#		    You can also remove dependency:
+#	
+#			OVERRIDE_GEMSPEC+= json:
 #
-#	    If you want to change depending gem to "json_pure>=1.4.6"
-#	    then use:
+#	(2) Modify files in gemspec.
 #
-#		OVERRIDE_GEMSPEC+= json:json_pure>=1.4.6
+#		Example:
+#			Remove files (a.rb and b.rb) from 'files':
 #
-#	    You can also remove dependency:
+#			OVERRIDE_GEMSPEC+= :files a.rb= b.rb=
 #
-#		OVERRIDE_GEMSPEC+= json:
+#		Example:
+#			Add a file (exec.rb) to 'executables':
+#
+#			OVERRIDE_GEMSPEC+= :executables exec.rb
+#
+#		Example:
+#			Rename a file (from 'ruby' to 'ruby193') in 'files':
+#
+#			OVERRIDE_GEMSPEC+= :files ruby=ruby193
+#
+#	Note: Because of limited parser, argumetns for (1) must preceed to (2).
 #
 #	Default: (empty)
 #
@@ -86,6 +106,8 @@
 # RUBYGEM
 #	The path to the rubygems ``gem'' script.
 #
+.if !defined(_RUBYGEM_MK)
+_RUBYGEM_MK=	# defined
 
 # By default, assume that gems are capable of user-destdir installation.
 PKG_DESTDIR_SUPPORT?=	user-destdir
@@ -378,3 +400,5 @@ _gem-install:
 	@${STEP_MSG} "gem install"
 	${RUN} cd ${RUBYGEM_INSTALL_ROOT}${PREFIX} && \
 		pax -rwpe . ${DESTDIR}${PREFIX}
+
+.endif
