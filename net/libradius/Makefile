@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/03/22 04:53:40 manu Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/02 16:28:07 hans Exp $
 
 DISTNAME=	libradius-linux-20040827
 PKGNAME=	${DISTNAME:S/-linux//}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	RADIUS client library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_FEATURES+=	cdefs
 
 CONFLICTS+=	inn-[0-9]*
 
