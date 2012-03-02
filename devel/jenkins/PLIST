@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/19 14:39:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/02 06:55:40 ryoon Exp $
 share/jenkins/JNLPMain.class
 share/jenkins/LogFileOutputStream$1.class
 share/jenkins/LogFileOutputStream$2.class
@@ -52,14 +52,11 @@ share/jenkins/WEB-INF/lib/commons-jexl-1.1-hudson-20090508.jar
 share/jenkins/WEB-INF/lib/commons-lang-2.4.jar
 share/jenkins/WEB-INF/lib/commons-logging-1.1.jar
 share/jenkins/WEB-INF/lib/crypto-util-1.1.jar
-share/jenkins/WEB-INF/lib/cssparser-0.9.5.jar
 share/jenkins/WEB-INF/lib/dom4j-1.6.1-hudson-3.jar
 share/jenkins/WEB-INF/lib/embedded_su4j-1.1.jar
 share/jenkins/WEB-INF/lib/ezmorph-1.0.3.jar
 share/jenkins/WEB-INF/lib/groovy-all-1.6.0.jar
 share/jenkins/WEB-INF/lib/guava-r06.jar
-share/jenkins/WEB-INF/lib/htmlunit-2.6-jenkins-5.jar
-share/jenkins/WEB-INF/lib/htmlunit-core-js-2.6-hudson-1.jar
 share/jenkins/WEB-INF/lib/instance-identity-1.1.jar
 share/jenkins/WEB-INF/lib/j-interop-2.0.6-kohsuke-1.jar
 share/jenkins/WEB-INF/lib/j-interopdeps-2.0.6-kohsuke-1.jar
@@ -84,11 +81,9 @@ share/jenkins/WEB-INF/lib/log4j-1.2.9.jar
 share/jenkins/WEB-INF/lib/logkit-1.0.1.jar
 share/jenkins/WEB-INF/lib/mail-1.4.jar
 share/jenkins/WEB-INF/lib/memory-monitor-1.5.jar
-share/jenkins/WEB-INF/lib/nekohtml-1.9.13.jar
 share/jenkins/WEB-INF/lib/oro-2.0.8.jar
 share/jenkins/WEB-INF/lib/remoting-2.4.jar
 share/jenkins/WEB-INF/lib/robust-http-client-1.2.jar
-share/jenkins/WEB-INF/lib/sac-1.3.jar
 share/jenkins/WEB-INF/lib/sezpoz-1.9.jar
 share/jenkins/WEB-INF/lib/spring-aop-2.5.jar
 share/jenkins/WEB-INF/lib/spring-beans-2.5.jar
@@ -113,7 +108,6 @@ share/jenkins/WEB-INF/lib/txw2-20070624.jar
 share/jenkins/WEB-INF/lib/windows-remote-command-1.3.jar
 share/jenkins/WEB-INF/lib/winp-1.14.jar
 share/jenkins/WEB-INF/lib/wstx-asl-3.2.7.jar
-share/jenkins/WEB-INF/lib/xercesImpl-2.9.1.jar
 share/jenkins/WEB-INF/lib/xpp3-1.1.4c.jar
 share/jenkins/WEB-INF/lib/xpp3_min-1.1.4c.jar
 share/jenkins/WEB-INF/lib/xstream-1.3.1-hudson-8.jar
