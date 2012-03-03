@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2011/04/22 13:44:02 obache Exp $
+# $NetBSD: Makefile,v 1.47 2012/03/03 18:32:33 tron Exp $
 
 DISTNAME=		elm2.5.8
 PKGNAME=		elm-2.5.8
@@ -29,10 +29,14 @@ INSTALLATION_DIRS=	share/nls/C
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == Darwin)
+.if (${OPSYS} == "Darwin")
 LIBC=			/usr/lib/libSystem.dylib
 .else
 LIBC=			/usr/lib/libc.so
+.endif
+
+.if (${OPSYS} == "NetBSD")
+MANINSTALL=	maninstall catinstall
 .endif
 
 SPECIAL_PERMS+=		bin/elm ${ROOT_USER} mail 2755
