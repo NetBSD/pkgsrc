@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2011/12/11 20:14:24 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/03 23:00:22 minskim Exp $
 
 DISTNAME=	dvips.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2011
-TEXLIVE_REV=	24563
+TEXLIVE_REV=	25424
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-dvips
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	tex-bin-dvipsk-doc-[0-9]*
 
