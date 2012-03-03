@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/03 19:36:57 minskim Exp $
+share/texmf-dist/doc/platex/japanese/README
+share/texmf-dist/doc/platex/japanese/sample.pdf
+share/texmf-dist/doc/platex/japanese/sample.tex
