@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.656 2012/03/03 15:57:16 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.657 2012/03/03 19:38:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -953,3 +953,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/postgresql90-replicationtools to 9.0.8 [adam 2012-03-03]
 	Updated databases/postgresql90-upgrade to 9.0.6 [adam 2012-03-03]
 	Updated audio/glurp to 0.12.3 [jakllsch 2012-03-03]
+	Added print/tex-japanese version 1.3 [minskim 2012-03-03]
+	Added print/tex-japanese-doc version 1.3 [minskim 2012-03-03]
