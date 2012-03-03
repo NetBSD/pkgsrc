@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/09/13 04:40:12 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/03 23:28:04 minskim Exp $
 
-DISTNAME=	texlive-20100720-source
-PKGNAME=	dvipsk-5.99
+DISTNAME=	texlive-20110705-source
+PKGNAME=	dvipsk-5.991
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,7 @@ COMMENT=	DVI-to-PostScript translator
 CONFLICTS+=	teTeX-bin<3.0nb24
 CONFLICTS+=	teTeX-texmf<3.0nb9
 BUILD_DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
-DEPENDS+=	tex-dvips>=2009.16376:../../print/tex-dvips
+DEPENDS+=	tex-dvips>=2011.25424:../../print/tex-dvips
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/dvipsk
@@ -45,17 +45,21 @@ TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
+FIND_PREFIX:=	TEX_DVIPS_PREFIX=tex-dvips \
+		TEXCONFIG_PREFIX=texlive-tetex
+.include "../../mk/find-prefix.mk"
+
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
 
 post-build:
 	${MKDIR} -p ${WRKSRC}/texmf/dvips/config
-	${CP} ${LOCALBASE}/share/texmf/dvips/config/config.ps \
+	${CP} ${TEX_DVIPS_PREFIX}/share/texmf/dvips/config/config.ps \
 		${WRKSRC}/texmf/dvips/config
-	env TEXMFCONFIG=${LOCALBASE}/share/texmf \
+	env TEXMFCONFIG=${TEX_DVIPS_PREFIX}/share/texmf \
 		TFC_TEXMFCONFIG=${WRKSRC}/texmf \
 		configPsFile=${WRKSRC}/config.ps \
-		${LOCALBASE}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
+		${TEXCONFIG_PREFIX}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/texmf/dvips/config/config.ps \
