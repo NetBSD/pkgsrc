@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2012/02/06 12:40:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2012/03/03 00:12:07 wiz Exp $
 
 BUILDLINK_TREE+=	libsylph
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsylph
 LIBSYLPH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsylph+=	libsylph>=0.3.0
-BUILDLINK_ABI_DEPENDS.libsylph?=	libsylph>=0.3.0nb4
+BUILDLINK_ABI_DEPENDS.libsylph?=	libsylph>=0.3.0nb5
 BUILDLINK_PKGSRCDIR.libsylph?=	../../mail/libsylph
 
 .include "../../devel/gettext-lib/buildlink3.mk"

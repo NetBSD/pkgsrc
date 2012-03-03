@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/02/16 19:31:25 hans Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/03 00:13:46 wiz Exp $
 #
 
 DISTNAME=	libmms-0.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmms/}
 

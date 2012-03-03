@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/02/29 16:32:20 hans Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/03 00:12:47 wiz Exp $
 #
 
 DISTNAME=	LibreCAD-LibreCAD-v1.0.0-0-g22839a7
 PKGNAME=	librecad-1.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	-https://github.com/LibreCAD/LibreCAD/zipball/v1.0.0
 EXTRACT_SUFX=	.zip
