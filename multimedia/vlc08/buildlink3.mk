@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2012/01/28 11:00:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2012/03/03 00:11:51 wiz Exp $
 
 BUILDLINK_TREE+=	vlc08
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vlc08
 VLC08_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vlc08+=	vlc08>=0.8.6d
-BUILDLINK_ABI_DEPENDS.vlc08?=	vlc08>=0.8.6inb18
+BUILDLINK_ABI_DEPENDS.vlc08?=	vlc08>=0.8.6inb20
 BUILDLINK_PKGSRCDIR.vlc08?=	../../multimedia/vlc08
 
 pkgbase:= vlc08
