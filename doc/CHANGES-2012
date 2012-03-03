@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.653 2012/03/03 12:58:22 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.654 2012/03/03 13:00:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -920,3 +920,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/gmplayer to 1.0rc20100913nb13 [sbd 2012-03-03]
 	Updated graphics/rabbit to 1.0.6 [obache 2012-03-03]
 	Updated devel/automake to 1.11.3 [wiz 2012-03-03]
+	Updated devel/meld to 1.5.3 [wiz 2012-03-03]
