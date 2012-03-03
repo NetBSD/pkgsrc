@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2012/02/06 12:39:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2012/03/03 00:12:06 wiz Exp $
 
 BUILDLINK_TREE+=	py-gobject-shared
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-gobject-shared
 PY_GOBJECT_SHARED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-gobject-shared+=	py-gobject-shared>=2.10.1
-BUILDLINK_ABI_DEPENDS.py-gobject-shared?=		py-gobject-shared>=2.28.6nb2
+BUILDLINK_ABI_DEPENDS.py-gobject-shared?=		py-gobject-shared>=2.28.6nb3
 BUILDLINK_PKGSRCDIR.py-gobject-shared?=		../../devel/py-gobject-shared
 BUILDLINK_DEPMETHOD.py-gobject-shared?=		build
 
