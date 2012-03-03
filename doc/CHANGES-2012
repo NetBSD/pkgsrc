@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.648 2012/03/03 00:34:48 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.649 2012/03/03 01:48:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated finance/gnucash to 2.4.10 [wiz 2012-03-02]
 	Updated security/gnupg to 1.4.12 [wiz 2012-03-03]
 	Updated textproc/intltool to 0.50.2 [wiz 2012-03-03]
+	Updated www/ruby-jekyll to 0.11.2 [minskim 2012-03-03]
