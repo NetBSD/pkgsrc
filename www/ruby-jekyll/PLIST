@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/21 04:25:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/03 01:47:51 minskim Exp $
 bin/jekyll
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -8,14 +8,6 @@ ${GEM_LIBDIR}/README.textile
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/jekyll
 ${GEM_LIBDIR}/cucumber.yml
-${GEM_LIBDIR}/doc/output/book.html
-${GEM_LIBDIR}/doc/output/ch00-preface.asc
-${GEM_LIBDIR}/doc/output/ch01-quick-start.asc
-${GEM_LIBDIR}/doc/output/ch02-directory-layout.asc
-${GEM_LIBDIR}/doc/output/stylesheets/handbookish-quirks.css
-${GEM_LIBDIR}/doc/output/stylesheets/handbookish.css
-${GEM_LIBDIR}/doc/output/stylesheets/scribe-quirks.css
-${GEM_LIBDIR}/doc/output/stylesheets/scribe.css
 ${GEM_LIBDIR}/features/create_sites.feature
 ${GEM_LIBDIR}/features/embed_filters.feature
 ${GEM_LIBDIR}/features/markdown.feature
@@ -26,7 +18,6 @@ ${GEM_LIBDIR}/features/site_configuration.feature
 ${GEM_LIBDIR}/features/site_data.feature
 ${GEM_LIBDIR}/features/step_definitions/jekyll_steps.rb
 ${GEM_LIBDIR}/features/support/env.rb
-${GEM_LIBDIR}/g.pl
 ${GEM_LIBDIR}/jekyll.gemspec
 ${GEM_LIBDIR}/lib/jekyll.rb
 ${GEM_LIBDIR}/lib/jekyll/converter.rb
@@ -59,8 +50,6 @@ ${GEM_LIBDIR}/lib/jekyll/site.rb
 ${GEM_LIBDIR}/lib/jekyll/static_file.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/highlight.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/include.rb
-${GEM_LIBDIR}/output/stylesheets/scribe-quirks.css
-${GEM_LIBDIR}/output/stylesheets/scribe.css
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/source/.htaccess
 ${GEM_LIBDIR}/test/source/_includes/sig.markdown
