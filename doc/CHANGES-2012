@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.649 2012/03/03 01:48:13 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.650 2012/03/03 04:48:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -912,3 +912,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/gnupg to 1.4.12 [wiz 2012-03-03]
 	Updated textproc/intltool to 0.50.2 [wiz 2012-03-03]
 	Updated www/ruby-jekyll to 0.11.2 [minskim 2012-03-03]
+	Updated devel/ruby-activesupport3 to 3.0.11nb1 [taca 2012-03-03]
+	Updated devel/ruby-activesupport31 to 3.1.3nb2 [taca 2012-03-03]
+	Updated www/ruby-actionpack3 to 3.0.11nb3 [taca 2012-03-03]
+	Updated www/ruby-actionpack31 to 3.1.3nb1 [taca 2012-03-03]
