@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/02/28 18:28:14 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/03 12:54:20 wiz Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
+PKGREVISION=1
 
 #CONFIGURE_ARGS+= --disable-silent-rules
 

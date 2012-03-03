@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2012/02/06 12:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2012/03/03 12:54:20 wiz Exp $
 
 DISTNAME=		ettercap-0.6.b
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ettercap/}
 
