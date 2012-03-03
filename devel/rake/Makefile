@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/08/12 16:01:39 taca Exp $
+# $NetBSD: Makefile,v 1.19 2012/03/03 07:41:07 taca Exp $
 
 DISTNAME=	rake-0.8.7
 PKGREVISION=	2
@@ -10,6 +10,10 @@ COMMENT=	Ruby Make
 LICENSE=	mit
 
 USE_TOOLS+=	gzip
+
+OVERRIDE_GEMSPEC+= :executables rake=rake${RUBY_VER} \
+		:files bin/rake=bin/rake${RUBY_VER} doc/rake.1.gz=doc/rake.1 \
+		test/data/unittest/subdir=
 
 FIX_PERM=	doc/release_notes/rake-0.7.3.rdoc \
 		lib/rake/ruby182_test_unit_fix.rb
