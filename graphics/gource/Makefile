@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/01/28 11:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/03 00:13:14 wiz Exp $
 #
 
 DISTNAME=	gource-0.37
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://gource.googlecode.com/files/
 

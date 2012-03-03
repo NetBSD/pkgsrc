@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2012/02/06 12:41:43 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2012/03/03 00:12:16 wiz Exp $
 
 DISTNAME=	gnome-spell-1.0.8
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-spell/1.0/}
 EXTRACT_SUFX=	.tar.bz2
