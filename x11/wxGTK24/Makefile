@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2012/02/06 12:42:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2012/03/03 00:12:32 wiz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PKGREVISION=		23
+PKGREVISION=		24
 COMMENT=		GTK-based implementation of the wxWidgets GUI library
 CONFLICTS+=		wxGTK<=2.4.2nb5
 

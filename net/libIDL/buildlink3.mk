@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/02/06 12:41:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/03/03 00:11:53 wiz Exp $
 
 BUILDLINK_TREE+=	libIDL
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libIDL
 LIBIDL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libIDL+=	libIDL>=0.8.3nb1
-BUILDLINK_ABI_DEPENDS.libIDL+=	libIDL>=0.8.14nb2
+BUILDLINK_ABI_DEPENDS.libIDL+=	libIDL>=0.8.14nb3
 BUILDLINK_PKGSRCDIR.libIDL?=	../../net/libIDL
 
 .include "../../devel/gettext-lib/buildlink3.mk"

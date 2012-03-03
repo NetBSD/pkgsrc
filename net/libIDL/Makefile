@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2012/02/06 12:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2012/03/03 00:11:53 wiz Exp $
 
 DISTNAME=	libIDL-0.8.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libIDL/0.8/}
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2012/02/06 12:40:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/03 00:14:25 wiz Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	spamassassin
 .include "../../mail/claws-mail/plugins.mk"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enables the scanning of incoming mail using SpamAssassin

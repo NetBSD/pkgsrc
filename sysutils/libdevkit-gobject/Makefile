@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/02/06 12:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/03 00:11:59 wiz Exp $
 #
 
 DISTNAME=	DeviceKit-003
 PKGNAME=	${DISTNAME:S/DeviceKit/libdevkit-gobject/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 

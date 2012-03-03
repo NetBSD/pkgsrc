@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2012/02/06 12:39:35 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2012/03/03 00:12:48 wiz Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		chat
 MASTER_SITES=		http://www.irssi.org/files/
 EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}

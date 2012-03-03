@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2012/02/06 12:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/03 00:12:08 wiz Exp $
 #
 
 .include "Makefile.common"
 
 MAINTAINER=	obache@NetBSD.org
 COMMENT=	On-screen Input Pad to Send Characters with Mouse
-PKGREVISION=	4
+PKGREVISION=	5
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

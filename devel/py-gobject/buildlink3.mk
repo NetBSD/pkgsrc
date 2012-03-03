@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2012/02/06 12:39:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2012/03/03 00:11:56 wiz Exp $
 
 BUILDLINK_TREE+=	pygobject
 
@@ -8,7 +8,7 @@ PY_GOBJECT_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.10.1nb1
-BUILDLINK_ABI_DEPENDS.pygobject?=	${PYPKGPREFIX}-gobject>=2.28.6nb2
+BUILDLINK_ABI_DEPENDS.pygobject?=	${PYPKGPREFIX}-gobject>=2.28.6nb3
 BUILDLINK_PKGSRCDIR.pygobject?=	../../devel/py-gobject
 
 .include "../../devel/py-gobject-shared/buildlink3.mk"

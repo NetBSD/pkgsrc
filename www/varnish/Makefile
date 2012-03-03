@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/01/08 03:50:39 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/03 00:14:07 wiz Exp $
 #
 
 DISTNAME=	varnish-3.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 

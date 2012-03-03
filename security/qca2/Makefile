@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/02/06 12:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/03/03 00:12:27 wiz Exp $
 
 DISTNAME=	qca-2.0.3
 PKGNAME=	qca2-${DISTNAME:C/.*-//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/
 EXTRACT_SUFX=	.tar.bz2

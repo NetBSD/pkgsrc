@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2012/02/06 12:39:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2012/03/03 00:12:29 wiz Exp $
 
 BUILDLINK_TREE+=	libgnomedb
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnomedb
 LIBGNOMEDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomedb+=	libgnomedb>=2.99.2
-BUILDLINK_ABI_DEPENDS.libgnomedb+=	libgnomedb>=3.0.0nb13
+BUILDLINK_ABI_DEPENDS.libgnomedb+=	libgnomedb>=3.0.0nb14
 BUILDLINK_PKGSRCDIR.libgnomedb?=	../../databases/libgnomedb
 
 .include "../../databases/libgda/buildlink3.mk"

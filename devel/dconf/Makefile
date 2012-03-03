@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/02/09 20:24:48 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/03 00:12:00 wiz Exp $
 #
 
 DISTNAME=	dconf-0.5.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/0.5/}
 EXTRACT_SUFX=	.tar.bz2

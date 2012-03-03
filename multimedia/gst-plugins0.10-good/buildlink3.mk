@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2012/02/06 12:41:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2012/03/03 00:12:19 wiz Exp $
 
 BUILDLINK_TREE+=	gst-plugins0.10-good
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins0.10-good
 GST_PLUGINS0.10_GOOD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins0.10-good+=	gst-plugins0.10-good>=0.10.1
-BUILDLINK_ABI_DEPENDS.gst-plugins0.10-good?=	gst-plugins0.10-good>=0.10.30nb2
+BUILDLINK_ABI_DEPENDS.gst-plugins0.10-good?=	gst-plugins0.10-good>=0.10.31nb1
 BUILDLINK_PKGSRCDIR.gst-plugins0.10-good?=	../../multimedia/gst-plugins0.10-good
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"

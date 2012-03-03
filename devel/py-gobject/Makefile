@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2012/02/06 12:39:57 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2012/03/03 00:11:56 wiz Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.28.6
-PKGREVISION=		2
+PKGREVISION=		3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

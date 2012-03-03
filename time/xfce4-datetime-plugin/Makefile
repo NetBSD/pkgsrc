@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/02/06 12:41:47 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/03/03 00:12:00 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -7,7 +7,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 XFCE4_VERSION=	0.6.1
 
 DISTNAME=	xfce4-datetime-plugin-${XFCE4_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	time
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-datetime-plugin/
 EXTRACT_SUFX=	.tar.bz2

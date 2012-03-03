@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.77 2012/02/06 12:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2012/03/03 00:12:01 wiz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../print/evince/Makefile.common"
-PKGREVISION=	9
+PKGREVISION=	10
 
 COMMENT=		Document viewer
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/02/06 12:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/03 00:13:52 wiz Exp $
 #
 
 DISTNAME=	KeePassX-0.2.2
 PKGNAME=	${DISTNAME:S/KeePassX/keepassx/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepassx/}
 
