@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/12/15 14:39:10 taca Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/03 04:47:14 taca Exp $
 
 DISTNAME=	actionpack-${RUBY_RAILS3_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
