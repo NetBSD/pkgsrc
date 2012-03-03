@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:48:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/03/03 12:58:13 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -9,6 +9,7 @@ man/man1/aclocal.1
 man/man1/automake-${PKG_DIR_VERSION}.1
 man/man1/automake.1
 share/aclocal-${PKG_DIR_VERSION}/amversion.m4
+share/aclocal-${PKG_DIR_VERSION}/ar-lib.m4
 share/aclocal-${PKG_DIR_VERSION}/as.m4
 share/aclocal-${PKG_DIR_VERSION}/auxdir.m4
 share/aclocal-${PKG_DIR_VERSION}/ccstdc.m4
@@ -53,6 +54,7 @@ share/automake-${PKG_DIR_VERSION}/Automake/Configure_ac.pm
 share/automake-${PKG_DIR_VERSION}/Automake/DisjConditions.pm
 share/automake-${PKG_DIR_VERSION}/Automake/FileUtils.pm
 share/automake-${PKG_DIR_VERSION}/Automake/General.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Getopt.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Item.pm
 share/automake-${PKG_DIR_VERSION}/Automake/ItemDef.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Location.pm
@@ -69,6 +71,7 @@ share/automake-${PKG_DIR_VERSION}/COPYING
 share/automake-${PKG_DIR_VERSION}/INSTALL
 share/automake-${PKG_DIR_VERSION}/acinstall
 share/automake-${PKG_DIR_VERSION}/am/ansi2knr.am
+share/automake-${PKG_DIR_VERSION}/am/check-html.am
 share/automake-${PKG_DIR_VERSION}/am/check.am
 share/automake-${PKG_DIR_VERSION}/am/check2.am
 share/automake-${PKG_DIR_VERSION}/am/clean-hdr.am
@@ -111,6 +114,7 @@ share/automake-${PKG_DIR_VERSION}/am/vala.am
 share/automake-${PKG_DIR_VERSION}/am/yacc.am
 share/automake-${PKG_DIR_VERSION}/ansi2knr.1
 share/automake-${PKG_DIR_VERSION}/ansi2knr.c
+share/automake-${PKG_DIR_VERSION}/ar-lib
 share/automake-${PKG_DIR_VERSION}/compile
 share/automake-${PKG_DIR_VERSION}/config-ml.in
 share/automake-${PKG_DIR_VERSION}/config.guess
