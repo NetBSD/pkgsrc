@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/08/21 04:25:08 minskim Exp $
+$NetBSD: distinfo,v 1.3 2012/03/03 01:47:51 minskim Exp $
 
-SHA1 (jekyll-0.11.0.gem) = 06b8171fe6883ff5ed6b8780db5c780b2b922b5a
-RMD160 (jekyll-0.11.0.gem) = b790d0ed9add5587e88530e44642907e1fcf3b04
-Size (jekyll-0.11.0.gem) = 64000 bytes
+SHA1 (jekyll-0.11.2.gem) = 37c0eb75f5106a9fcc294b8504a62d6d3918f949
+RMD160 (jekyll-0.11.2.gem) = bb792149bdf3619bbf15e2dea400090c8f04fcff
+Size (jekyll-0.11.2.gem) = 53248 bytes
