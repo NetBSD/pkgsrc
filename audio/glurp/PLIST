@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/03 15:57:07 jakllsch Exp $
 bin/glurp
 share/glurp/glurp.glade
 share/glurp/pixmaps/add.png
+share/glurp/pixmaps/condense.png
 share/glurp/pixmaps/config.png
 share/glurp/pixmaps/media-audiofile.png
 share/glurp/pixmaps/offline.png
@@ -14,6 +15,7 @@ share/glurp/pixmaps/player-prev.png
 share/glurp/pixmaps/player-random.png
 share/glurp/pixmaps/player-repeat.png
 share/glurp/pixmaps/player-stop.png
+share/glurp/pixmaps/player-tabswitch.png
 share/glurp/pixmaps/playlist.png
 share/glurp/pixmaps/playlists.png
 share/glurp/pixmaps/remove.png
