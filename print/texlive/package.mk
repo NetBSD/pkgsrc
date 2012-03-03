@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.14 2012/01/30 19:08:58 sno Exp $
+# $NetBSD: package.mk,v 1.15 2012/03/03 21:32:34 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -16,12 +16,6 @@
 #
 # TEX_HYPHEN_DEF
 #	See ../../print/texlive-tetex/hyphen.mk.
-#
-# TEX_MAP_FILES
-#	See ../../print/texlive-tetex/map.mk.
-#
-# TEX_MIXEDMAP_FILES
-#	See ../../print/texlive-tetex/map.mk.
 #
 # TEX_TEXMF_DIRS
 #	See ../../print/kpathsea/texmf.mk.
