@@ -1,0 +1,4 @@
+The package behaves in a similar way as if you provided the
+(non-existent) Japanese option to babel so that you can handle
+Japanese language text in LaTeX documents. The package requires
+a Japanese-enabled TeX system, such as pTeX or jTeX.
