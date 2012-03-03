@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2011/03/02 04:33:23 minskim Exp $
+# $NetBSD: hacks.mk,v 1.2 2012/03/03 18:45:01 minskim Exp $
 
 .if !defined(PDVIPSK_HACKS_MK)
 PDVIPSK_HACKS_MK=	# defined
@@ -9,6 +9,9 @@ PDVIPSK_HACKS_MK=	# defined
 BUILD_DEPENDS+=	patch-[0-9]*:../../devel/patch
 
 PATCH=		${LOCALBASE}/bin/gpatch
+PKG_HACKS+=	patch-dvips_info
+.elif ${OPSYS} == "Darwin"
+TOOLS_PLATFORM.patch=	/usr/bin/patch
 PKG_HACKS+=	patch-dvips_info
 .endif
 
