@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/06 20:37:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/03/03 14:01:13 adam Exp $
 bin/postgres
 bin/postmaster
 lib/postgresql/ascii_and_mic.so
@@ -47,6 +47,8 @@ share/locale/pl/LC_MESSAGES/postgres-9.1.mo
 share/locale/pt_BR/LC_MESSAGES/plpgsql-9.1.mo
 share/locale/pt_BR/LC_MESSAGES/postgres-9.1.mo
 share/locale/ro/LC_MESSAGES/plpgsql-9.1.mo
+share/locale/ru/LC_MESSAGES/plpgsql-9.1.mo
+share/locale/ru/LC_MESSAGES/postgres-9.1.mo
 share/locale/tr/LC_MESSAGES/plpgsql-9.1.mo
 share/locale/zh_CN/LC_MESSAGES/plpgsql-9.1.mo
 share/locale/zh_CN/LC_MESSAGES/postgres-9.1.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/09/27 11:04:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/03 14:01:11 adam Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -586,6 +586,7 @@ ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/pg_ctl-9.0.mo
 ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/pg_dump-9.0.mo
 ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/pg_resetxlog-9.0.mo
 ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/pgscripts-9.0.mo
+${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/psql-9.0.mo
 ${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/ecpg-9.0.mo
 ${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/ecpglib6-9.0.mo
 ${PG_SUBPREFIX}share/locale/ja/LC_MESSAGES/initdb-9.0.mo
@@ -636,12 +637,17 @@ ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/pg_config-9.0.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/pg_controldata-9.0.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/pg_resetxlog-9.0.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/pgscripts-9.0.mo
+${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/ecpg-9.0.mo
+${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/ecpglib6-9.0.mo
 ${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/initdb-9.0.mo
 ${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/libpq5-9.0.mo
 ${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/pg_config-9.0.mo
 ${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/pg_controldata-9.0.mo
 ${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/pg_ctl-9.0.mo
+${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/pg_dump-9.0.mo
 ${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/pg_resetxlog-9.0.mo
+${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/pgscripts-9.0.mo
+${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/psql-9.0.mo
 ${PG_SUBPREFIX}share/locale/sv/LC_MESSAGES/initdb-9.0.mo
 ${PG_SUBPREFIX}share/locale/sv/LC_MESSAGES/libpq5-9.0.mo
 ${PG_SUBPREFIX}share/locale/sv/LC_MESSAGES/pg_config-9.0.mo

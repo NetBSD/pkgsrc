@@ -1,6 +1,6 @@
-$NetBSD: patch-src_pl_plperl_GNUmakefile,v 1.2 2011/12/06 20:37:33 adam Exp $
+$NetBSD: patch-src_pl_plperl_GNUmakefile,v 1.3 2012/03/03 14:01:12 adam Exp $
 
---- src/pl/plperl/GNUmakefile.orig	2011-12-01 21:47:20.000000000 +0000
+--- src/pl/plperl/GNUmakefile.orig	2012-02-23 22:53:36.000000000 +0000
 +++ src/pl/plperl/GNUmakefile
 @@ -60,7 +60,6 @@ XSUBPPDIR = $(shell $(PERL) -e 'use List
  
@@ -17,5 +17,5 @@ $NetBSD: patch-src_pl_plperl_GNUmakefile,v 1.2 2011/12/06 20:37:33 adam Exp $
 -all: all-lib
 +all: perlchunks.h plperl_opmask.h plperl_helpers.h all-lib
  
- SPI.c: SPI.xs
+ SPI.c: SPI.xs plperl_helpers.h
  	@if [ x"$(perl_privlibexp)" = x"" ]; then echo "configure switch --with-perl was not specified."; exit 1; fi
