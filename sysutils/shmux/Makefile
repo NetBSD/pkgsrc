@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/01/08 03:48:27 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/03/03 00:13:59 wiz Exp $
 
 DISTNAME=	shmux-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.taranis.org/shmux/dist/
 EXTRACT_SUFX=	.tgz

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/02/06 12:40:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/03 00:13:12 wiz Exp $
 #
 
 DISTNAME=	gdk-pixbuf-2.24.1
 PKGNAME=	gdk-pixbuf2-jasper-2.24.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/2.24/}
 EXTRACT_SUFX=	.tar.xz

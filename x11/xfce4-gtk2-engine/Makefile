@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/02/06 12:42:29 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/03 00:14:21 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ XFCE4_VERSION=	2.6.0
 
 DISTNAME=	gtk-xfce-engine-${XFCE4_VERSION}
 PKGNAME=	xfce4-gtk2-engine-${XFCE4_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 COMMENT=	Xfce GTK2 themes
 

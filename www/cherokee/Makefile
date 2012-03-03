@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/11/16 01:33:19 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/03/03 00:14:05 wiz Exp $
 #
 
 DISTNAME=	cherokee-1.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.cherokee-project.com/download/1.0/${PKGVERSION_NOREV}/
 

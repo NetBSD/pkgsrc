@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/02/06 12:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/03 00:13:48 wiz Exp $
 #
 
 DISTNAME=		twitux-0.69
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=twitux/}
 EXTRACT_SUFX=		.tar.bz2

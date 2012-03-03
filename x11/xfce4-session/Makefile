@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2012/02/06 12:42:30 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/03/03 00:12:02 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-session-${XFCE4_VERSION}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		x11
 COMMENT=		Xfce session manager
 

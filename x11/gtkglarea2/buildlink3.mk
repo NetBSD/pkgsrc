@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/02/06 12:42:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/03/03 00:12:32 wiz Exp $
 
 BUILDLINK_TREE+=	gtkglarea2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkglarea2
 GTKGLAREA2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkglarea2+=	gtkglarea2>=2.0.1
-BUILDLINK_ABI_DEPENDS.gtkglarea2?=	gtkglarea2>=2.0.1nb4
+BUILDLINK_ABI_DEPENDS.gtkglarea2?=	gtkglarea2>=2.0.1nb5
 BUILDLINK_PKGSRCDIR.gtkglarea2?=	../../x11/gtkglarea2
 
 .include "../../graphics/MesaLib/buildlink3.mk"

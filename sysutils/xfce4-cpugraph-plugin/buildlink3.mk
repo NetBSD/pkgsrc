@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2012/02/06 12:41:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2012/03/03 00:12:13 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-cpugraph-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-cpugraph-plugin
 XFCE4_CPUGRAPH_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-cpugraph-plugin+=	xfce4-cpugraph-plugin>=0.3.0
-BUILDLINK_ABI_DEPENDS.xfce4-cpugraph-plugin?=	xfce4-cpugraph-plugin>=0.3.0nb8
+BUILDLINK_ABI_DEPENDS.xfce4-cpugraph-plugin?=	xfce4-cpugraph-plugin>=0.3.0nb9
 BUILDLINK_PKGSRCDIR.xfce4-cpugraph-plugin?=	../../sysutils/xfce4-cpugraph-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

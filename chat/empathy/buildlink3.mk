@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2012/02/06 12:39:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2012/03/03 00:11:55 wiz Exp $
 
 BUILDLINK_TREE+=	empathy
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	empathy
 EMPATHY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.empathy+=	empathy>=2.24.1nb1
-BUILDLINK_ABI_DEPENDS.empathy?=	empathy>=2.34.0nb8
+BUILDLINK_ABI_DEPENDS.empathy?=	empathy>=2.34.0nb9
 BUILDLINK_PKGSRCDIR.empathy?=	../../chat/empathy
 
 .include "../../devel/glib2/buildlink3.mk"

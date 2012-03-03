@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2012/02/06 12:41:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2012/03/03 00:12:01 wiz Exp $
 
 BUILDLINK_TREE+=	linc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	linc
 LINC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.linc+=	linc>=1.1.1
-BUILDLINK_ABI_DEPENDS.linc+=	linc>=1.1.1nb8
+BUILDLINK_ABI_DEPENDS.linc+=	linc>=1.1.1nb9
 BUILDLINK_PKGSRCDIR.linc?=	../../net/linc
 
 .include "../../devel/glib2/buildlink3.mk"

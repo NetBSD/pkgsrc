@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.81 2012/02/06 12:42:21 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2012/03/03 00:12:29 wiz Exp $
 #
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.24/}
 EXTRACT_SUFX=	.tar.bz2

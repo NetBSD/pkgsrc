@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2010/11/05 14:16:39 adam Exp $
+# $NetBSD: Makefile,v 1.72 2012/03/03 00:14:26 wiz Exp $
 
 DISTNAME=	courier-imap-4.8.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2

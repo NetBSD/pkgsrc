@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2012/02/06 12:39:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/03/03 00:12:16 wiz Exp $
 
 BUILDLINK_TREE+=	monodevelop
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	monodevelop
 MONODEVELOP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.monodevelop+=	monodevelop>=2.4
-BUILDLINK_ABI_DEPENDS.monodevelop?=	monodevelop>=2.4.2nb7
+BUILDLINK_ABI_DEPENDS.monodevelop?=	monodevelop>=2.4.2nb8
 BUILDLINK_PKGSRCDIR.monodevelop?=	../../devel/monodevelop
 BUILDLINK_CONTENTS_FILTER.monodevelop+=	${EGREP} '^lib/'
 
