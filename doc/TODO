@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10909 2012/03/03 00:34:48 wiz Exp $
+$NetBSD: TODO,v 1.10910 2012/03/03 12:58:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacity-1.3.13
 	o autoconvert-0.3.16
 	o autogen-5.15
-	o automake-1.11.3
 	o avcheck-0.91
 	o avidemux-2.5.6
 	o avl-2.0.2a
