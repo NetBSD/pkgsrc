@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.650 2012/03/03 04:48:14 taca Exp $
+$NetBSD: CHANGES-2012,v 1.651 2012/03/03 07:22:36 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -916,3 +916,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-activesupport31 to 3.1.3nb2 [taca 2012-03-03]
 	Updated www/ruby-actionpack3 to 3.0.11nb3 [taca 2012-03-03]
 	Updated www/ruby-actionpack31 to 3.1.3nb1 [taca 2012-03-03]
+	Updated multimedia/mplayer to 1.0rc20100913nb11 [sbd 2012-03-03]
+	Updated multimedia/gmplayer to 1.0rc20100913nb13 [sbd 2012-03-03]
