@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.11 2008/07/20 23:31:50 dbj Exp $
+#	$NetBSD: Makefile.in,v 1.12 2012/03/04 19:50:21 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -47,13 +47,15 @@ distclean: clean
 install:
 	$(INSTALL) -m 755 -d $(DESTDIR)$(bindir)
 	$(INSTALL) -m 755 -d $(DESTDIR)$(man1dir)
-	$(INSTALL) -m 755 -d $(DESTDIR)$(cat1dir)
 	$(INSTALL) $(PROG) $(DESTDIR)$(bindir)/$$(echo $(PROG) | sed '$(program_transform_name)')
 	ln -f $(DESTDIR)$(bindir)/$$(echo $(PROG) | sed '$(program_transform_name)') $(DESTDIR)$(bindir)/$$(echo cpio | sed '$(program_transform_name)')
 	ln -f $(DESTDIR)$(bindir)/$$(echo $(PROG) | sed '$(program_transform_name)') $(DESTDIR)$(bindir)/$$(echo tar | sed '$(program_transform_name)')
 	$(INSTALL) -m 444 $(PROG).1 $(DESTDIR)$(man1dir)/$$(echo $(PROG) | sed '$(program_transform_name)').1
-	$(INSTALL) -m 444 $(PROG).cat1 $(DESTDIR)$(cat1dir)/$$(echo $(PROG) | sed '$(program_transform_name)').0
 	$(INSTALL) -m 444 cpio.1 $(DESTDIR)$(man1dir)/$$(echo cpio | sed '$(program_transform_name)').1
-	$(INSTALL) -m 444 cpio.cat1 $(DESTDIR)$(cat1dir)/$$(echo cpio | sed '$(program_transform_name)').0
 	$(INSTALL) -m 444 tar.1 $(DESTDIR)$(man1dir)/$$(echo tar | sed '$(program_transform_name)').1
+.if !empty(MANINSTALL:Mcatinstall)
+	$(INSTALL) -m 755 -d $(DESTDIR)$(cat1dir)
+	$(INSTALL) -m 444 $(PROG).cat1 $(DESTDIR)$(cat1dir)/$$(echo $(PROG) | sed '$(program_transform_name)').0
+	$(INSTALL) -m 444 cpio.cat1 $(DESTDIR)$(cat1dir)/$$(echo cpio | sed '$(program_transform_name)').0
 	$(INSTALL) -m 444 tar.cat1 $(DESTDIR)$(cat1dir)/$$(echo tar | sed '$(program_transform_name)').0
+.endif
