@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2012/01/26 11:55:12 rhaen Exp $
+# $NetBSD: Makefile,v 1.25 2012/03/04 13:56:38 abs Exp $
 
-DISTNAME=	AnyEvent-6.13
+DISTNAME=	AnyEvent-6.14
 PKGNAME=	p5-AnyEvent-6.130
 CATEGORIES=	devel
 #MASTER_SITES=	http://www.cpan.org/modules/by-authors/Marc_Lehmann/
@@ -14,13 +14,13 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=	auto/AnyEvent/.packlist
 
-# recommented dependencies:
-DEPENDS+=	p5-Async-Interrupt>=1:../../devel/p5-Async-Interrupt
-DEPENDS+=	p5-EV>=4:../../devel/p5-EV
-DEPENDS+=	p5-Guard>=1.020:../../devel/p5-Guard
-DEPENDS+=	p5-JSON>=2.09:../../converters/p5-JSON
-DEPENDS+=	p5-JSON-XS>=2.200:../../converters/p5-JSON-XS
-DEPENDS+=	p5-Net-SSLeay>=1.33:../../security/p5-Net-SSLeay
+# 	  Task::Weaken in perl 5.14
+DEPENDS+= p5-Net-SSLeay>=1.33:../../security/p5-Net-SSLeay
+DEPENDS+= p5-JSON>=2.09:../../converters/p5-JSON
+DEPENDS+= p5-JSON-XS>=2.200:../../converters/p5-JSON-XS
+DEPENDS+= p5-EV>=4:../../devel/p5-EV
+DEPENDS+= p5-Guard>=1.020:../../devel/p5-Guard
+DEPENDS+= p5-Async-Interrupt>=1:../../devel/p5-Async-Interrupt
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
