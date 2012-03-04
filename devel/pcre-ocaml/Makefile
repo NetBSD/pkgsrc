@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/03/03 00:11:52 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.11 2012/03/04 09:42:31 asau Exp $
 
-DISTNAME=		pcre-ocaml-5.15.0
-PKGREVISION=		2
+DISTNAME=		pcre-ocaml-6.2.5
 CATEGORIES=		devel
 MASTER_SITES=		http://www.ocaml.info/ocaml_sources/
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ocaml.info/ocaml_sources/
