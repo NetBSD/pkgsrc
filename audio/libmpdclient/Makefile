@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/01/16 21:00:00 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/04 20:10:47 jakllsch Exp $
 #
 
 DISTNAME=	libmpdclient-2.6
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=musicpd/}
 EXTRACT_SUFX=	.tar.bz2
