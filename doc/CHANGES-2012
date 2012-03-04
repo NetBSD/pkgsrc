@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.679 2012/03/04 20:12:38 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.680 2012/03/04 21:38:58 martin Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -985,3 +985,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/makeindexk-tl2011 to 2.15nb4 [minskim 2012-03-04]
 	Updated audio/libmpd to 0.20.0nb4 [jakllsch 2012-03-04]
 	Updated audio/libmpdclient to 2.6nb1 [jakllsch 2012-03-04]
+	Updated textproc/libxml++ to 2.34.2 [martin 2012-03-04]
