@@ -1,4 +1,4 @@
-# $NetBSD: map-install.tmpl,v 1.1 2011/11/06 08:43:28 minskim Exp $
+# $NetBSD: map-install.tmpl,v 1.2 2012/03/04 01:01:43 minskim Exp $
 #
 # Enable font maps.
 #
@@ -14,6 +14,10 @@ POST-INSTALL)
 	mixedmap_files="@MIXEDMAP_FILES@"
 	for map in $mixedmap_files ; do
 	    echo "MixedMap ${map}" >> ${UPDMAP_CFG}
+	done
+	kanjimap_files="@KANJIMAP_FILES@"
+	for map in $kanjimap_files ; do
+	    echo "KanjiMap ${map}" >> ${UPDMAP_CFG}
 	done
 	@UPDMAP_SYS@
         ;;
