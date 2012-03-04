@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.6 2008/03/06 04:45:58 jlam Exp $
+#	$NetBSD: Makefile.in,v 1.7 2012/03/04 19:49:41 joerg Exp $
 #
 
 srcdir	= @srcdir@
@@ -42,8 +42,10 @@ ${OBJS}: ${srcdir}/../tnftp.h ../config.h
 install: all
 	-mkdir -p ${DESTDIR}${bindir}
 	${INSTALL} -m 555 ${PROG} ${DESTDIR}${bindir}/`echo ${PROG}|sed '$(transform)'`
+.if !empty(MANINSTALL:Mcatinstall)
 	-mkdir -p ${DESTDIR}${mandircat1}
 	${INSTALL} -m 444 ${srcdir}/${PROG}.cat1 ${DESTDIR}${mandircat1}/`echo ${PROG}|sed '$(transform)'`.0
+.endif
 
 clean:
 	rm -f core ${PROG} ${OBJS}
