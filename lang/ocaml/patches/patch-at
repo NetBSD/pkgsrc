@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
+$NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
 
 . Include CFLAGS in bytecccompopts and LDFLAGS in bytecclinkopts.
 . Add cases for dragonfly support.
@@ -15,9 +15,9 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
 . Enable profiling and native dynamic loading for all DragonFly platforms
 . Add pkgsrc X11 checks in case X11 support is enabled in the future
 
---- configure.orig	2010-07-28 13:18:22.000000000 +0000
-+++ configure
-@@ -328,6 +328,8 @@ case "$bytecc,$host" in
+--- configure.orig	2011-07-05 01:15:01.000000000 +0400
++++ configure	2012-03-04 07:07:17.000000000 +0400
+@@ -328,6 +328,8 @@
    gcc*)
      bytecccompopts="-fno-defer-pop $gcc_warnings";;
  esac
@@ -26,7 +26,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
  
  # Configure compiler to use in further tests
  
-@@ -520,7 +522,7 @@ if test $withsharedlibs = "yes"; then
+@@ -521,7 +523,7 @@
        mksharedlib="$flexlink"
        mkmaindll="$flexlink -maindll"
        shared_libraries_supported=true;;
@@ -35,7 +35,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -620,7 +622,7 @@ if test $withsharedlibs = "yes"; then
+@@ -621,7 +623,7 @@
      i[3456]86-*-linux*)           natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
      i[3456]86-*-darwin10.*)
@@ -44,18 +44,16 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
          natdynlink=true
        fi;;
      i[3456]86-*-darwin[89]*)      natdynlink=true;;
-@@ -629,6 +631,10 @@ if test $withsharedlibs = "yes"; then
-     i686-*-kfreebsd*)             natdynlink=true;;
-     x86_64-*-kfreebsd*)           natdynlink=true;;
-     i386-*-gnu0.3)                natdynlink=true;;
-+    i[3456]86-*-netbsdelf)        natdynlink=true;;
+@@ -635,6 +637,8 @@
+     x86_64-*-openbsd*)            natdynlink=true;;
+     i[345]86-*-netbsd*)           natdynlink=true;;
+     x86_64-*-netbsd*)             natdynlink=true;;
 +    i[3456]86-*-dragonfly)        natdynlink=true;;
-+    x86_64-*-netbsd)              natdynlink=true;;
 +    x86_64-*-dragonfly)           natdynlink=true;;
+     i386-*-gnu0.3)                natdynlink=true;;
    esac
  fi
- 
-@@ -653,12 +659,13 @@ case "$host" in
+@@ -660,12 +664,13 @@
    alpha*-*-netbsd*)             arch=alpha; system=netbsd;;
    alpha*-*-openbsd*)            arch=alpha; system=openbsd;;
    sparc*-*-sunos4.*)            arch=sparc; system=sunos;;
@@ -70,7 +68,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -667,6 +674,7 @@ case "$host" in
+@@ -674,6 +679,7 @@
                                  fi;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -78,7 +76,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -683,17 +691,21 @@ case "$host" in
+@@ -690,17 +696,21 @@
    powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
    powerpc-*-darwin*)            arch=power; system=rhapsody
                                  if $arch64; then model=ppc64; else model=ppc; fi;;
@@ -100,7 +98,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
  esac
  
  # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -794,6 +806,8 @@ case "$arch,$model,$system" in
+@@ -801,6 +811,8 @@
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
    amd64,*,gnu) profiling='prof';;
@@ -109,7 +107,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1198,6 +1212,8 @@ if test "$pthread_wanted" = "yes"; then
+@@ -1205,6 +1217,8 @@
                     pthread_caml_link="-cclib -lpthread -cclib -lposix4";;
      *-*-freebsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
@@ -118,7 +116,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
      *-*-openbsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
      *)             pthread_link="-lpthread"
-@@ -1249,6 +1265,7 @@ fi
+@@ -1256,6 +1270,7 @@
  x11_include="not found"
  x11_link="not found"
  
@@ -126,7 +124,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1287,6 +1304,7 @@ for dir in \
+@@ -1294,6 +1309,7 @@
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -134,7 +132,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1301,6 +1319,7 @@ do
+@@ -1308,6 +1324,7 @@
      break
    fi
  done
@@ -142,7 +140,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1343,6 +1362,7 @@ for dir in \
+@@ -1350,6 +1367,7 @@
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -150,7 +148,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1395,31 +1415,8 @@ dbm_include="not found"
+@@ -1402,31 +1420,8 @@
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -184,7 +182,7 @@ $NetBSD: patch-at,v 1.24 2011/11/27 19:11:59 marino Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1429,8 +1426,8 @@ else
+@@ -1436,8 +1431,8 @@
    else
      dbm_include="-I$dbm_include"
    fi
