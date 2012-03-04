@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/02/07 19:59:44 minskim Exp $
+$NetBSD: distinfo,v 1.3 2012/03/04 01:20:20 minskim Exp $
 
-SHA1 (tex-ptex-21270/ptex.tar.xz) = d22797983328cff055077de9be34898d015cd069
-RMD160 (tex-ptex-21270/ptex.tar.xz) = b53823cbbcb90e5dc6b2df1be1034e5d02d61732
-Size (tex-ptex-21270/ptex.tar.xz) = 99232 bytes
-SHA1 (patch-aa) = e53be2bf0bdb5bb700096d190a9a3813418c1439
+SHA1 (tex-ptex-25342/ptex.tar.xz) = 8d6e94f651b30af4ceb77b1895f96774b005e768
+RMD160 (tex-ptex-25342/ptex.tar.xz) = 0d0cdd994e45e0a0c1301e32f26c383bcd8e3783
+Size (tex-ptex-25342/ptex.tar.xz) = 105544 bytes
+SHA1 (patch-aa) = ad476760c8edd55bc863edc575c86bbfbb797922
