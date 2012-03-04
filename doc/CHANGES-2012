@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.666 2012/03/04 01:20:57 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.667 2012/03/04 01:50:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -966,3 +966,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added fonts/tex-japanese-otf-doc version 1.7b4 [minskim 2012-03-04]
 	Updated print/tex-ptex to 3.2 [minskim 2012-03-04]
 	Updated print/tex-ptex-doc to 3.2 [minskim 2012-03-04]
+	Updated textproc/php-mecab to 0.5.0 [taca 2012-03-04]
