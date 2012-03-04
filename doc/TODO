@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10914 2012/03/04 21:28:45 wiz Exp $
+$NetBSD: TODO,v 1.10915 2012/03/04 22:27:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -645,7 +645,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
-	o frozen-bubble-2.2.0
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.6.1
 	o fuse-encfs-1.5.2

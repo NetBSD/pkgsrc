@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.681 2012/03/04 22:10:50 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.682 2012/03/04 22:27:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -987,3 +987,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/libmpdclient to 2.6nb1 [jakllsch 2012-03-04]
 	Updated textproc/libxml++ to 2.34.2 [martin 2012-03-04]
 	Updated devel/SDL_Pango to 0.1.2nb8 [wiz 2012-03-04]
+	Updated games/frozen-bubble to 2.2.0 [wiz 2012-03-04]
