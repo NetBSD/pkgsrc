@@ -1,29 +1,31 @@
-$NetBSD: patch-aa,v 1.4 2003/04/18 08:07:51 salo Exp $
+$NetBSD: patch-aa,v 1.5 2012/03/04 22:27:08 wiz Exp $
 
---- c_stuff/Makefile.PL.orig	2002-04-18 11:44:20.000000000 +0200
-+++ c_stuff/Makefile.PL	2003-04-18 09:57:58.000000000 +0200
-@@ -34,7 +34,7 @@
- ccompile('#include <SDL/SDL.h>
-           #include <SDL/SDL_mixer.h>',
+Does not ignore CFLAGS.
+
+--- c_stuff/Makefile.PL.orig	2008-07-02 23:07:14.000000000 +0200
++++ c_stuff/Makefile.PL
+@@ -34,7 +34,7 @@ system("sdl-config --cflags 2>/dev/null 
+ ccompile('#include <SDL.h>
+           #include <SDL_mixer.h>',
  	 '',
--	 `sdl-config --cflags`,
+-	 chomp_(`sdl-config --cflags`),
 +	 chomp_($ENV{CFLAGS} . ' ' . `sdl-config --cflags`),
  	 chomp_(`sdl-config --libs`) . ' -lSDL_mixer')
    or
-   die_ 'SDL_mixer is needed (and, by the way, version >= 1.2.2 will be needed)';
-@@ -43,7 +43,7 @@
- ccompile('#include <SDL/SDL.h>
-           #include <SDL/SDL_mixer.h>',
+   die_ 'SDL_mixer development environment seems to be missing (failed to compile and link a simple program against libSDL_mixer)';
+@@ -43,7 +43,7 @@ ccompile('#include <SDL.h>
+ ccompile('#include <SDL.h>
+           #include <SDL_mixer.h>',
  	 'Mix_FadeInMusicPos(NULL, 0, 0, 0);',
--	 `sdl-config --cflags`,
+-	 chomp_(`sdl-config --cflags`),
 +	 chomp_($ENV{CFLAGS} . ' ' . `sdl-config --cflags`),
  	 chomp_(`sdl-config --libs`) . ' -lSDL_mixer')
    or
-   die_ 'SDL_mixer >= 1.2.2 is needed (function Mix_FadeInMusicPos is missing)';
-@@ -55,6 +55,6 @@
+   die_ 'SDL_mixer >= 1.2.2 is needed (impossible to create an executable with function Mix_FadeInMusicPos)';
+@@ -77,6 +77,6 @@ WriteMakefile(
      'VERSION_FROM' => 'fb_c_stuff.pm', # finds VERSION
      'OBJECT'       => 'fb_c_stuff.o',
-     'INC'          => chomp_(`sdl-config --cflags`) . ' -I.',
+     'INC'          => chomp_(`sdl-config --cflags`) . ' ' . chomp_(`pkg-config SDL_Pango --cflags`) . ' -I.',
 -    'OPTIMIZE'     => '-O2 -Wall',
 +    'OPTIMIZE'     => chomp_($ENV{CFLAGS} . ' -O2 -Wall'),
      'MAKEFILE'     => 'Makefile_c',
