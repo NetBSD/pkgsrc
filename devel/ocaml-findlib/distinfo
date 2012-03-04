@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2010/08/21 15:27:31 asau Exp $
+$NetBSD: distinfo,v 1.4 2012/03/04 09:26:55 asau Exp $
 
-SHA1 (findlib-1.2.6.tar.gz) = 50d2764025168a5f3cab7f559b8fdf3cb680e405
-RMD160 (findlib-1.2.6.tar.gz) = 76ee6ba0cf5c4ec8693dec14fae8582ad6cd5de3
-Size (findlib-1.2.6.tar.gz) = 162458 bytes
+SHA1 (findlib-1.2.8.tar.gz) = 85d28df1a5a5c72a7a1b1c40ff89ea592507e6bd
+RMD160 (findlib-1.2.8.tar.gz) = 8b8c22c27cbdfa0a324d44480671d36d3c6eb2a8
+Size (findlib-1.2.8.tar.gz) = 163985 bytes
 SHA1 (patch-aa) = f11eb4120e6be80c2f225d4c2597c33aceefdce6
 SHA1 (patch-ab) = 043d43f04c61ced0f3f9f3b6d59f89e83d6a18ee
