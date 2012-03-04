@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.669 2012/03/04 08:19:47 obache Exp $
+$NetBSD: CHANGES-2012,v 1.670 2012/03/04 09:19:02 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/php-mecab to 0.5.0 [taca 2012-03-04]
 	Removed textproc/mecab-base09 [taca 2012-03-04]
 	Updated lang/python31 to 3.1.4nb4 [obache 2012-03-04]
+	Updated lang/ocaml to 3.12.1 [asau 2012-03-04]
