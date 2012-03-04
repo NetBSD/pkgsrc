@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2012/03/04 22:27:08 wiz Exp $
+
+Do not hard-code install.
+
+--- server/Makefile.orig	2008-07-02 23:07:28.000000000 +0200
++++ server/Makefile
+@@ -21,11 +21,11 @@ clean: 
+ 	rm -f fb-server *.o .depend
+ 
+ install: fb-server
+-	install -d $(DESTDIR)$(LIBDIR)/frozen-bubble
+-	install fb-server $(DESTDIR)$(LIBDIR)/frozen-bubble
++	${INSTALL_LIB_DIR} $(DESTDIR)$(LIBDIR)/frozen-bubble
++	${INSTALL_LIB} fb-server $(DESTDIR)$(LIBDIR)/frozen-bubble
+ 
+ .depend:
+-	$(CPP) $(CFLAGS) $(CPPFLAGS) -M $(ALLSRC) > .depend
++	$(CC) $(CFLAGS) $(CPPFLAGS) -M $(ALLSRC) > .depend
+ 
+ ifeq (.depend,$(wildcard .depend))
+ include .depend
