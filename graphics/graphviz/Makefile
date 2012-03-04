@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2012/03/03 12:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2012/03/04 11:37:48 obache Exp $
 
 DISTNAME=	graphviz-2.26.3
 PKGREVISION=	8
@@ -30,14 +30,14 @@ CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
 CPPFLAGS+=		-DNO_POSTSCRIPT_ALIAS=1
-PKGCONFIG_OVERRIDE=	lib/agraph/libagraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cdt/libcdt.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cgraph/libcgraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/expr/libexpr.pc.in
 PKGCONFIG_OVERRIDE+=	lib/graph/libgraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/gvc/libgvc.pc.in
-PKGCONFIG_OVERRIDE+=	lib/gvc/libgvc_builtins.pc.in
+PKGCONFIG_OVERRIDE+=	lib/gvpr/libgvpr.pc.in
 PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
+PKGCONFIG_OVERRIDE+=	lib/xdot/libxdot.pc.in
 XAW_TYPE=		standard
 
 REPLACE_INTERPRETER+=	lua
