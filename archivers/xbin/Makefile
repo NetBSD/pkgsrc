@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2010/01/25 00:18:05 zafer Exp $
+# $NetBSD: Makefile,v 1.28 2012/03/04 19:50:56 joerg Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://sunsite.bilkent.edu.tr/pub/tex/ctan/tools/xbin/
 DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
@@ -32,21 +33,21 @@ LDFLAGS+=		-lcompat
 CFLAGS.Interix+=	-DBSD
 CFLAGS.Darwin+=		-DBSD
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-extract:
 .for dfile in ${DISTFILES}
-	${CP} ${DISTDIR:Q}/${dfile:Q} ${WRKSRC:Q}
+	${CP} ${DISTDIR}/${dfile} ${WRKSRC}
 .endfor
 
 do-build:
-	cd ${WRKSRC:Q} && \
-	${CC} ${CFLAGS} -o ${PRGNAME:Q} ${DISTNAME:Q}.c ${LDFLAGS}
+	cd ${WRKSRC} && \
+	${CC} ${CFLAGS} -o ${PRGNAME} ${DISTNAME}.c ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PRGNAME:Q} \
-		${DESTDIR}${PREFIX:Q}/bin
-	${INSTALL_MAN} ${WRKSRC:Q}/${PRGNAME:Q}.man \
-		${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/cat1/${PRGNAME:Q}.0
+	${INSTALL_PROGRAM} ${WRKSRC}/${PRGNAME} \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PRGNAME}.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PRGNAME}.1
 
 .include "../../mk/bsd.pkg.mk"
