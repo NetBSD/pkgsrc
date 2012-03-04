@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.674 2012/03/04 10:27:07 tron Exp $
+$NetBSD: CHANGES-2012,v 1.675 2012/03/04 14:12:54 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -974,3 +974,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/pcre-ocaml to 6.2.5 [asau 2012-03-04]
 	Updated devel/equeue to 2.1.4 [asau 2012-03-04]
 	Updated lang/perl5 to 5.14.2nb5 [tron 2012-03-04]
+	Updated www/p5-libwww to 6.04 [abs 2012-03-04]
+	Updated devel/p5-AnyEvent to 6.130 [abs 2012-03-04]
+	Updated devel/p5-App-perlbrew to 0.41 [abs 2012-03-04]
+	Updated devel/p5-Variable-Magic to 0.48 [abs 2012-03-04]
+	Updated devel/p5-B-Hooks-EndOfScope to 0.11 [abs 2012-03-04]
