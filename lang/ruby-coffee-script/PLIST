@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 16:14:42 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/coffee-script.rb
+${GEM_LIBDIR}/lib/coffee_script.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
