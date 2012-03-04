@@ -1,7 +1,7 @@
-$NetBSD: patch-bs,v 1.7 2010/08/19 08:06:53 asau Exp $
+$NetBSD: patch-bs,v 1.8 2012/03/04 09:06:46 asau Exp $
 
---- tools/Makefile.shared.orig	2010-06-07 10:58:41.000000000 +0400
-+++ tools/Makefile.shared	2010-08-12 14:44:51.000000000 +0400
+--- tools/Makefile.shared.orig	2010-10-15 19:36:55.000000000 +0400
++++ tools/Makefile.shared	2012-03-04 07:13:54.000000000 +0400
 @@ -52,9 +52,9 @@
  	rm -f ocamldep.opt
  
@@ -14,7 +14,7 @@ $NetBSD: patch-bs,v 1.7 2010/08/19 08:06:53 asau Exp $
  
  # The profiler
  
-@@ -70,15 +70,15 @@
+@@ -70,9 +70,9 @@
  	$(CAMLC) $(LINKFLAGS) -o ocamlcp warnings.cmo main_args.cmo ocamlcp.cmo
  
  install::
@@ -27,14 +27,7 @@ $NetBSD: patch-bs,v 1.7 2010/08/19 08:06:53 asau Exp $
  
  clean::
  	rm -f ocamlprof ocamlcp
- 
- install::
--	cp ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
-+	$(BSD_INSTALL_SCRIPT) ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
- 
- clean::
- 	rm -f ocamlmktop
-@@ -98,7 +98,7 @@
+@@ -93,7 +93,7 @@
  	cp ../myocamlbuild_config.ml .
  
  install::
@@ -43,16 +36,16 @@ $NetBSD: patch-bs,v 1.7 2010/08/19 08:06:53 asau Exp $
  
  clean::
  	rm -f ocamlmklib
-@@ -122,7 +122,7 @@
+@@ -117,7 +117,7 @@
  # To make custom toplevels (see Makefile/Makefile.nt)
  
  install::
--	cp ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
-+	$(BSD_INSTALL_SCRIPT) ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
+-	cp ocamlmktop $(BINDIR)/   # no $(EXE) here, ocamlmktop is a script
++	$(BSD_INSTALL_SCRIPT) ocamlmktop $(BINDIR)/   # no $(EXE) here, ocamlmktop is a script
  
  clean::
  	rm -f ocamlmktop
-@@ -239,8 +239,8 @@
+@@ -234,8 +234,8 @@
  	$(CAMLC) -o objinfo $(OBJINFO)
  
  install::
