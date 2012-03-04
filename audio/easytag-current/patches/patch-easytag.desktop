@@ -1,0 +1,13 @@
+$NetBSD: patch-easytag.desktop,v 1.1 2012/03/04 22:45:20 wiz Exp $
+
+Avoid using obsolete x-directory MIME type.
+
+--- easytag.desktop.orig	2007-11-28 08:54:05.000000000 +0000
++++ easytag.desktop
+@@ -22,5 +22,5 @@ Terminal=false
+ Type=Application
+ Categories=AudioVideo;AudioVideoEditing;GTK;
+ X-Desktop-File-Install-Version=0.14
+-MimeType=audio/x-mp3;application/ogg;x-directory/normal;
++MimeType=audio/x-mp3;application/ogg;inode/directory;
+ 
