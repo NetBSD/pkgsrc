@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.312 2012/02/09 20:03:48 drochner Exp $
+# $NetBSD: Makefile,v 1.313 2012/03/04 16:11:39 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -155,6 +155,7 @@ SUBDIR+=	rexx-imc
 SUBDIR+=	rexx-regina
 SUBDIR+=	ruby
 SUBDIR+=	ruby-doc-stdlib
+SUBDIR+=	ruby-execjs
 SUBDIR+=	ruby18
 SUBDIR+=	ruby18-base
 SUBDIR+=	ruby19
