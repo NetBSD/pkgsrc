@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/27 04:30:19 heinz Exp $
+$NetBSD: distinfo,v 1.2 2012/03/04 22:10:41 wiz Exp $
 
+SHA1 (SDL_Pango-0.1.2-API-adds.patch) = 20a8441a7e051e8928400c89dedbb6ef169c7c65
+RMD160 (SDL_Pango-0.1.2-API-adds.patch) = 052602db317522d459b155114096e71e28666299
+Size (SDL_Pango-0.1.2-API-adds.patch) = 3624 bytes
 SHA1 (SDL_Pango-0.1.2.tar.gz) = c30f2941d476d9362850a150d29cb4a93730af68
 RMD160 (SDL_Pango-0.1.2.tar.gz) = d2531cfbe726d27054ca03978721bcc76413379a
 Size (SDL_Pango-0.1.2.tar.gz) = 405967 bytes
