@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.663 2012/03/04 01:02:06 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.664 2012/03/04 01:12:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -960,3 +960,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/dvipsk to 5.991 [minskim 2012-03-03]
 	Updated mail/elm to 2.5.8nb4 [tron 2012-03-03]
 	Updated print/tex-tetex to 3.0.25424 [minskim 2012-03-04]
+	Added fonts/tex-ipaex version 2011 [minskim 2012-03-04]
+	Added fonts/tex-ipaex-doc version 2011 [minskim 2012-03-04]
