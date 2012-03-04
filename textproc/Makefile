@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2012/02/28 23:32:33 wiz Exp $
+# $NetBSD: Makefile,v 1.614 2012/03/04 02:30:17 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -239,7 +239,6 @@ SUBDIR+=	mdoclint
 SUBDIR+=	mdocml
 SUBDIR+=	mecab
 SUBDIR+=	mecab-base
-SUBDIR+=	mecab-base09
 SUBDIR+=	mecab-ipadic
 SUBDIR+=	mecab-jumandic
 SUBDIR+=	mecab-naistdic
