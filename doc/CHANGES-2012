@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.671 2012/03/04 09:28:20 asau Exp $
+$NetBSD: CHANGES-2012,v 1.672 2012/03/04 09:42:44 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -971,3 +971,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/python31 to 3.1.4nb4 [obache 2012-03-04]
 	Updated lang/ocaml to 3.12.1 [asau 2012-03-04]
 	Updated devel/ocaml-findlib to 1.2.8 [asau 2012-03-04]
+	Updated devel/pcre-ocaml to 6.2.5 [asau 2012-03-04]
