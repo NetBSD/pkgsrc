@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1 2011/11/06 08:43:28 minskim Exp $
+# $NetBSD: DEINSTALL,v 1.2 2012/03/04 01:01:43 minskim Exp $
 
 TEXMFSYSVAR="@VARBASE@/lib/texmf"
 
@@ -24,7 +24,8 @@ DEINSTALL)
 		${TEXMFSYSVAR}/web2c \
 		${TEXMFSYSVAR}/fonts/map/dvipdfm/updmap \
 		${TEXMFSYSVAR}/fonts/map/dvips/updmap \
-		${TEXMFSYSVAR}/fonts/map/pdftex/updmap
+		${TEXMFSYSVAR}/fonts/map/pdftex/updmap \
+		${TEXMFSYSVAR}/fonts/map/pxdvi/updmap
 	do
 		@RMDIR@ -p "$dir" 2>/dev/null || @TRUE@
 	done

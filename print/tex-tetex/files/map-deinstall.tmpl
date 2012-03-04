@@ -1,4 +1,4 @@
-# $NetBSD: map-deinstall.tmpl,v 1.1 2011/11/06 08:43:28 minskim Exp $
+# $NetBSD: map-deinstall.tmpl,v 1.2 2012/03/04 01:01:43 minskim Exp $
 #
 # Disable font maps and remove entries from updmap.cfg.
 #
@@ -16,6 +16,12 @@ DEINSTALL)
 	mixedmap_files="@MIXEDMAP_FILES@"
 	for map in $mixedmap_files ; do
 		${GREP} -v "^MixedMap ${map}" ${UPDMAP_CFG} > \
+		       ${UPDMAP_CFG}.tmp &&
+		${MV} ${UPDMAP_CFG}.tmp ${UPDMAP_CFG}
+	done
+	kanjimap_files="@KANJIMAP_FILES@"
+	for map in $kanjimap_files ; do
+		${GREP} -v "^KanjiMap ${map}" ${UPDMAP_CFG} > \
 		       ${UPDMAP_CFG}.tmp &&
 		${MV} ${UPDMAP_CFG}.tmp ${UPDMAP_CFG}
 	done
