@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/03/03 23:33:55 tron Exp $
+# $NetBSD: Makefile,v 1.60 2012/03/04 07:45:02 tron Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
@@ -22,10 +22,6 @@ BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.knews
 PKG_SUPPORTED_OPTIONS=	inet6
-
-.if (${OPSYS} == "NetBSD")
-MANINSTALL=	maninstall catinstall
-.endif
 
 .include "../../mk/bsd.options.mk"
 
