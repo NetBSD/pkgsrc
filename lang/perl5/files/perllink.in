@@ -1,5 +1,5 @@
 #!@SH@
-#	$NetBSD: perllink.in,v 1.3 2006/07/19 18:10:32 jlam Exp $
+#	$NetBSD: perllink.in,v 1.4 2012/03/04 10:26:57 tron Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -136,6 +136,10 @@ destman1dir="$opt_prefix/$pkgmandir/man1"
 
 echo __dummy__ | $perlprog -pe '0' $opt_packlists |
 { while read file junk; do
+	if [ ! -f "$file" ] && [ -f "$file.gz" ]; then
+		file="$file.gz"
+	fi
+
 	case "$file" in
 	$scriptdir/*|$sitescript/*|$vendorscript/*)  destdir="$destbindir" ;;
 	$man1dir/*|$siteman1dir/*|$vendorman1dir/*)  destdir="$destman1dir" ;;
