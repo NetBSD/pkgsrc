@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.672 2012/03/04 09:42:44 asau Exp $
+$NetBSD: CHANGES-2012,v 1.673 2012/03/04 09:49:15 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -972,3 +972,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ocaml to 3.12.1 [asau 2012-03-04]
 	Updated devel/ocaml-findlib to 1.2.8 [asau 2012-03-04]
 	Updated devel/pcre-ocaml to 6.2.5 [asau 2012-03-04]
+	Updated devel/equeue to 2.1.4 [asau 2012-03-04]
