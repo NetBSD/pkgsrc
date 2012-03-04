@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.667 2012/03/04 01:50:04 taca Exp $
+$NetBSD: CHANGES-2012,v 1.668 2012/03/04 02:31:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -967,3 +967,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/tex-ptex to 3.2 [minskim 2012-03-04]
 	Updated print/tex-ptex-doc to 3.2 [minskim 2012-03-04]
 	Updated textproc/php-mecab to 0.5.0 [taca 2012-03-04]
+	Removed textproc/mecab-base09 [taca 2012-03-04]
