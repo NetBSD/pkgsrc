@@ -1,3 +1,4 @@
 bin/2to3 @PREFIX@/bin/2to3-3.1
-bin/pydoc @PREFIX@/bin/pydoc3.1
+bin/idle3 @PREFIX@/bin/idle3.1
+bin/pydoc3 @PREFIX@/bin/pydoc3.1
 bin/python @PREFIX@/bin/python3.1
