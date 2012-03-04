@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 01:13:54 minskim Exp $
+share/texmf-dist/doc/fonts/japanese-otf/COPYRIGHT
+share/texmf-dist/doc/fonts/japanese-otf/readme.en.txt
+share/texmf-dist/doc/fonts/japanese-otf/readme.txt
