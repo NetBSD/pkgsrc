@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.3 2011/09/10 11:23:12 obache Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2012/03/04 08:11:51 obache Exp $
 bin/2to3-${PY_VER_SUFFIX}
-bin/idle3
+bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}-config
@@ -2177,9 +2177,9 @@ lib/python${PY_VER_SUFFIX}/site-packages/README
 lib/python${PY_VER_SUFFIX}/site.py
 lib/python${PY_VER_SUFFIX}/site.pyc
 lib/python${PY_VER_SUFFIX}/site.pyo
-lib/python${PY_VER_SUFFIX}/smtpd${PY_VER_SUFFIX}.py
-lib/python${PY_VER_SUFFIX}/smtpd${PY_VER_SUFFIX}.pyc
-lib/python${PY_VER_SUFFIX}/smtpd${PY_VER_SUFFIX}.pyo
+lib/python${PY_VER_SUFFIX}/smtpd.py
+lib/python${PY_VER_SUFFIX}/smtpd.pyc
+lib/python${PY_VER_SUFFIX}/smtpd.pyo
 lib/python${PY_VER_SUFFIX}/smtplib.py
 lib/python${PY_VER_SUFFIX}/smtplib.pyc
 lib/python${PY_VER_SUFFIX}/smtplib.pyo

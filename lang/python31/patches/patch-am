@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2011/11/08 07:30:09 sbd Exp $
+$NetBSD: patch-am,v 1.6 2012/03/04 08:11:51 obache Exp $
 
 --- setup.py.orig	2011-06-11 15:48:52.000000000 +0000
 +++ setup.py
@@ -102,7 +102,7 @@ $NetBSD: patch-am,v 1.5 2011/11/08 07:30:09 sbd Exp $
  
 -          scripts = ["Tools/scripts/pydoc3", "Tools/scripts/idle3",
 -                     "Tools/scripts/2to3"]
-+          scripts = ["Tools/scripts/pydoc3.1", "Tools/scripts/idle3",
++          scripts = ["Tools/scripts/pydoc3.1", "Tools/scripts/idle3.1",
 +                     "Tools/scripts/2to3-3.1"]
          )
  
