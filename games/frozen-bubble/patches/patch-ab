@@ -1,47 +1,47 @@
-$NetBSD: patch-ab,v 1.4 2008/11/17 19:58:59 he Exp $
+$NetBSD: patch-ab,v 1.5 2012/03/04 22:27:08 wiz Exp $
 
---- Makefile.orig	2003-02-03 14:36:55.000000000 +0000
+Do not hard-code pkgsrc tools.
+
+--- Makefile.orig	2008-11-08 15:47:24.000000000 +0100
 +++ Makefile
-@@ -1,33 +1,30 @@
- DIRS = c_stuff
- 
--PREFIX = /usr/local
- DATADIR = $(PREFIX)/share
- BINDIR = $(PREFIX)/bin
--MANDIR = $(DATADIR)/man
-+MANDIR = $(PREFIX)/man
- 
- all: dirs
+@@ -11,30 +11,28 @@ prepare:
+ 	echo '@EXPORT = qw($$FPATH $$FLPATH);' >> c_stuff/lib/fb_config.pm
+ 	echo '$$FPATH = "$(DATADIR)/frozen-bubble";' >> c_stuff/lib/fb_config.pm
+ 	echo '$$FLPATH = "$(LIBDIR)/frozen-bubble";' >> c_stuff/lib/fb_config.pm
+-	perl -ne "print \$$1 if m|\\\$$version = '(.*)';|" c_stuff/lib/fb_stuff.pm > VERSION
++	${PERL5} -ne "print \$$1 if m|\\\$$version = '(.*)';|" c_stuff/lib/fb_stuff.pm > VERSION
  
  dirs:
 -	@if ! perl -e 'use SDL'; then echo -e "\n    *** I need perl-SDL installed"; false; fi
--	@if ! perl -e 'use SDL; ($$mj, $$mn, $$mc) = split /\./, $$SDL::VERSION; exit 1 if $$mj<1 || $$mn<19'; then echo -e "\n    *** I need perl-SDL version 1.19.0 or upper"; false; fi
+-	@if ! perl -e 'use SDL; ($$mj, $$mn, $$mc) = split /\./, $$SDL::VERSION; exit 0 if $$mj > 1 || $$mn >= 19; exit 1'; then echo -e "\n    *** I need perl-SDL version 1.19.0 or upper"; false; fi
 +	@if ! ${PERL5} -e 'use SDL'; then echo -e "\n    *** I need perl-SDL installed"; false; fi
-+	@if ! ${PERL5} -e 'use SDL; ($$mj, $$mn, $$mc) = split /\./, $$SDL::VERSION; exit 1 if $$mj<1 || ($$mj == 1 && $$mn<19)'; then echo -e "\n    *** I need perl-SDL version 1.19.0 or higher"; false; fi
++	@if ! ${PERL5} -e 'use SDL; ($$mj, $$mn, $$mc) = split /\./, $$SDL::VERSION; exit 0 if $$mj > 1 || $$mn >= 19; exit 1'; then echo -e "\n    *** I need perl-SDL version 1.19.0 or upper"; false; fi
  	@for n in . $(DIRS); do \
- 		[ "$$n" = "." ] || $(MAKE) -C $$n ;\
+-		[ "$$n" = "." ] || $(MAKE) -C $$n || exit $$? ;\
++		[ "$$n" = "." ] || $(GMAKE) -C $$n || exit $$? ;\
  	done
- 	@if [ ! -d save_virgin ]; then mkdir save_virgin; cp c_stuff/lib/fb_stuff.pm save_virgin; fi
--	cp -f save_virgin/fb_stuff.pm c_stuff/lib/fb_stuff.pm
--	perl -pi -e 's|\@DATADIR\@|$(DATADIR)|' c_stuff/lib/fb_stuff.pm
-+	${CP} -f save_virgin/fb_stuff.pm c_stuff/lib/fb_stuff.pm
-+	${PERL5} -pi -e 's|\@DATADIR\@|$(DATADIR)|' c_stuff/lib/fb_stuff.pm
  
  
  install: $(ALL)
  	@for n in $(DIRS); do \
- 		(cd $$n; $(MAKE) install) \
+-		(cd $$n; $(MAKE) install) \
++		(cd $$n; $(GMAKE) install) \
  	done
--	install -d $(BINDIR)
--	install frozen-bubble frozen-bubble-editor $(BINDIR)
--	install -d $(DATADIR)/frozen-bubble
--	cp -a gfx snd data $(DATADIR)/frozen-bubble
--	install -d $(MANDIR)/man6
--	install doc/*.6 $(MANDIR)/man6
-+	${BSD_INSTALL_SCRIPT} frozen-bubble frozen-bubble-editor $(BINDIR)
-+	${BSD_INSTALL_DATA_DIR} $(DATADIR)/frozen-bubble
-+	${CP} -R gfx snd data $(DATADIR)/frozen-bubble
-+	${BSD_INSTALL_MAN} doc/*.6 $(MANDIR)/man6
+-	install -d $(DESTDIR)$(BINDIR)
+-	install frozen-bubble frozen-bubble-editor $(DESTDIR)$(BINDIR)
+-	install -d $(DESTDIR)$(DATADIR)/frozen-bubble
+-	cp -a gfx snd data $(DESTDIR)$(DATADIR)/frozen-bubble
+-	install -d $(DESTDIR)$(MANDIR)/man6
+-	install doc/*.6 $(DESTDIR)$(MANDIR)/man6
++	${INSTALL_SCRIPT} frozen-bubble frozen-bubble-editor $(DESTDIR)$(BINDIR)
++	${INSTALL_DATA_DIR} $(DESTDIR)$(DATADIR)/frozen-bubble
++	${CP} -R gfx snd data $(DESTDIR)$(DATADIR)/frozen-bubble
++	${INSTALL_MAN} doc/*.6 $(DESTDIR)$(MANDIR)/man6
  
  clean: 
  	@for n in $(DIRS); do \
+-		(cd $$n; $(MAKE) clean) \
++		(cd $$n; $(GMAKE) clean) \
+ 	done
+ 	@rm -f c_stuff/lib/fb_config.pm
+ 
