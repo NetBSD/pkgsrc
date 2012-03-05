@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2011/02/22 08:51:59 obache Exp $
+@comment $NetBSD: PLIST.Linux2,v 1.1 2012/03/05 08:23:24 sbd Exp $
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyo
