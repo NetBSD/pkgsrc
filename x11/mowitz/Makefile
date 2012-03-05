@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/03/17 23:36:21 zafer Exp $
+# $NetBSD: Makefile,v 1.18 2012/03/05 04:28:21 dholland Exp $
 
 DISTNAME=	Mowitz-0.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://siag.nu/pub/mowitz/
 
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=--with-xaw3d=neXtaw
 CONFIGURE_ARGS+=--with-xaw3d=Xaw
 .endif
 
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
