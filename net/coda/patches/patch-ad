@@ -1,6 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2011/03/12 13:59:59 gdt Exp $
+$NetBSD: patch-ad,v 1.2 2012/03/05 11:27:53 gdt Exp $
 
---- configure.orig	2011-02-25 20:04:49.000000000 +0000
+Remove bashism.
+
+Reported upstream on 20110301.
+
+--- configure.orig	2010-03-29 19:13:56.000000000 +0000
 +++ configure
 @@ -18400,7 +18400,7 @@ $as_echo "#define HAVE_FLOCK_LOCKING 1" 
  
