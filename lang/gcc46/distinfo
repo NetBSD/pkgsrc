@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/12/22 14:14:22 wiz Exp $
+$NetBSD: distinfo,v 1.6 2012/03/05 15:25:36 wiz Exp $
 
-SHA1 (gcc-4.6.2.tar.bz2) = 691974613b1c1f15ed0182ec539fa54a12dd6f93
-RMD160 (gcc-4.6.2.tar.bz2) = e7041933b39629f9524848dcf81a1a4c02a225c6
-Size (gcc-4.6.2.tar.bz2) = 71995338 bytes
+SHA1 (gcc-4.6.3.tar.bz2) = ce317ca5c8185b58bc9300182b534608c578637f
+RMD160 (gcc-4.6.3.tar.bz2) = 9abb2f940d08fc84f2d91b6a6ce8d662ca889269
+Size (gcc-4.6.3.tar.bz2) = 71999439 bytes
 SHA1 (patch-aa) = 801b340bb24586c84b09f53161a7aced141ab9d9
 SHA1 (patch-ab) = f69d2db611aee1d31b7872bbf59d2b651413b3d3
 SHA1 (patch-ac) = 5e4c05ac8cac376b2c4c33db90d3b309a11cedee
