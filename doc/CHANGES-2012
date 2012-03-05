@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.688 2012/03/05 07:26:48 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.689 2012/03/05 11:18:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -993,3 +993,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/mowitz to 0.3.1nb2 [dholland 2012-03-05]
 	Updated textproc/harmony to 20060526nb3 [minskim 2012-03-05]
 	Updated pkgtools/bootstrap-mk-files to 20120305 [sbd 2012-03-05]
+	Updated www/apache-tomcat7 to 7.0.26 [abs 2012-03-05]
