@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.697 2012/03/05 14:15:08 adam Exp $
+$NetBSD: CHANGES-2012,v 1.698 2012/03/05 14:30:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1017,3 +1017,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/postgresql83-plperl to 8.3.18 [adam 2012-03-05]
 	Updated databases/postgresql83-plpython to 8.3.18 [adam 2012-03-05]
 	Updated databases/postgresql83-pltcl to 8.3.18 [adam 2012-03-05]
+	Updated security/p5-Net-SSLeay to 1.45 [sno 2012-03-05]
