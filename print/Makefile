@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.522 2012/03/03 19:38:24 minskim Exp $
+# $NetBSD: Makefile,v 1.523 2012/03/05 16:22:08 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -247,6 +247,8 @@ SUBDIR+=	tex-cooking
 SUBDIR+=	tex-cooking-doc
 SUBDIR+=	tex-csquotes
 SUBDIR+=	tex-csquotes-doc
+SUBDIR+=	tex-cweb
+SUBDIR+=	tex-cweb-doc
 SUBDIR+=	tex-cyrillic
 SUBDIR+=	tex-cyrillic-doc
 SUBDIR+=	tex-datatool
