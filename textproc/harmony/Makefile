@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/03/03 00:14:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/05 04:41:17 minskim Exp $
 #
 
 DISTNAME=	harmony-stable-${VERSION}
 PKGNAME=	harmony-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://alliance.seas.upenn.edu/~harmony/download/
 
@@ -15,6 +15,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+BUILD_DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
+BUILD_DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 DEPENDS+=	equeue-[0-9]*:../../devel/equeue
 DEPENDS+=	ocamlnet-[0-9]*:../../net/ocamlnet
@@ -24,7 +28,6 @@ VERSION=20060526
 
 WRKSRC=		${WRKDIR}/harmony-nightly-${VERSION}
 USE_TOOLS+=	gmake
-TEX_DEPMETHOD=	build
 TEST_TARGET=	test
 
 INSTALLATION_DIRS=	bin share/doc/harmony
@@ -46,5 +49,4 @@ do-install:
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
