@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/01 21:13:08 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/05 08:26:17 dholland Exp $
 #
 
 VERSION=	0.5
@@ -13,6 +13,8 @@ COMMENT=	Python wrapper to tokyocabinet database
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_INCOMPATIBLE=	24
 
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../lang/python/egg.mk"
