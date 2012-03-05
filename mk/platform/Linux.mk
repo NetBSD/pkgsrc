@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.47 2012/01/22 08:40:11 sbd Exp $
+# $NetBSD: Linux.mk,v 1.48 2012/03/05 07:53:42 sbd Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -109,4 +109,9 @@ LIBABISUFFIX?=          64
 _GLIBC_VERSION_CMD=	/lib/libc.so.6 --version | \
 				sed -ne's/^GNU C.*version \(.*\),.*$$/\1/p'
 GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
+.endif
+
+# If this is defined pass it to the make process. 
+.if !defined(NOGCCERROR)
+MAKE_ENV+=	NOGCCERROR=true
 .endif
