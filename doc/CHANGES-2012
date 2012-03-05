@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.684 2012/03/05 01:39:04 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.685 2012/03/05 04:02:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -989,3 +989,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/SDL_Pango to 0.1.2nb8 [wiz 2012-03-04]
 	Updated games/frozen-bubble to 2.2.0 [wiz 2012-03-04]
 	Updated audio/easytag-current to 2.1.6nb11 [wiz 2012-03-04]
+	Updated textproc/rubber to 1.1nb4 [minskim 2012-03-05]
