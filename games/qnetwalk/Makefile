@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/11/01 06:01:20 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/05 04:51:48 dholland Exp $
 #
 
 DISTNAME=	qnetwalk-1.2
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
+
+INSTALLATION_DIRS+=	bin
 
 QNETWALK_BIN=	${PREFIX}/bin
 QNETWALK_MAN=	${PREFIX}/${PKGMANDIR}/man6
