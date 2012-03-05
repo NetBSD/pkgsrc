@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-bg,v 1.2 2012/03/05 07:29:36 dholland Exp $
 
---- configure.in.orig	Mon Jun  5 17:42:49 2000
-+++ configure.in	Tue Oct 22 15:59:01 2002
-@@ -66,6 +66,8 @@
+--- configure.in.orig	2000-06-05 15:42:49.000000000 +0000
++++ configure.in
+@@ -66,6 +66,8 @@ Currently, \`yes', \`athena' and \`lucid
  	  esac
  	  with_x_toolkit=$val
  ])
@@ -11,9 +11,16 @@ $NetBSD: patch-bg,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  
  #### Make srcdir absolute, if it isn't already.  It's important to
  #### avoid running the path through pwd unnecessary, since pwd can
-@@ -158,9 +160,13 @@
+@@ -152,15 +154,19 @@ case "${canonical}" in
+     opsys=netbsd
+     case "${canonical}" in
+       alpha*-*-netbsd*)	machine=alpha ;;
++      hppa*-*-netbsd*)	machine=hp800 ;;
+       i[3456]86-*-netbsd*) machine=intel386 ;;
+       m68k-*-netbsd*)
+ 			# This is somewhat bogus.
  			machine=hp9000s300 ;;
-       powerpc-apple-netbsd*) machine=macppc ;;
+-      powerpc-apple-netbsd*) machine=macppc ;;
        mips-*-netbsd*)	machine=pmax ;;
 +      mipsel-*-netbsd*)	machine=pmax ;;
 +      mipsev-*-netbsd*)	machine=mips ;;		# HF: what else?
@@ -26,7 +33,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
      esac
    ;;
  
-@@ -1594,6 +1600,14 @@
+@@ -1594,6 +1600,14 @@ dnl tranle@intellicorp.com says libXmu.a
      LIBS="-lXt $LIBS"
    fi
    AC_CHECK_LIB(Xmu, XmuConvertStandardSelection)
@@ -41,7 +48,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
    LIBS="$OLDLIBS"
  fi
  
-@@ -1747,6 +1761,10 @@
+@@ -1747,6 +1761,10 @@ if test -f /usr/lpp/X11/bin/smt.exp; the
    AC_DEFINE(HAVE_AIX_SMT_EXP)
  fi
  
