@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2008/05/17 22:46:34 tnn Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/linuxaudiodev.so
+@comment $NetBSD: PLIST.Linux,v 1.3 2012/03/05 08:23:09 sbd Exp $
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/lib-dynload/linuxaudiodev.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.py
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyc
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyo
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.py
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyc
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyo
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.py
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyc
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyo
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.py
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyc
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyo
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.py
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyc
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyo
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.py
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyc
+${PLIST.linux2}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyo
