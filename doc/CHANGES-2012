@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.685 2012/03/05 04:02:57 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.686 2012/03/05 04:28:43 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -990,3 +990,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/frozen-bubble to 2.2.0 [wiz 2012-03-04]
 	Updated audio/easytag-current to 2.1.6nb11 [wiz 2012-03-04]
 	Updated textproc/rubber to 1.1nb4 [minskim 2012-03-05]
+	Updated x11/mowitz to 0.3.1nb2 [dholland 2012-03-05]
