@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/02/24 17:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/05 15:25:36 wiz Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run bash:run chmod gmake:run makeinfo sed:run
 
-GCC_VERSION=		4.6.2
+GCC_VERSION=		4.6.3
 
 GCC_SUBPREFIX=		gcc46
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
