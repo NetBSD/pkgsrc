@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/12/18 16:54:08 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/05 04:04:09 dholland Exp $
 
 DISTNAME=	p2c-1.20
 PKGREVISION=	1
@@ -23,6 +23,6 @@ post-extract:
 	# The distfile contains a number of world-writable files, including
 	# an entry for '.' that causes pkgsrc to become upset. Fix it.
 	${CHMOD} 755 ${WRKDIR}
-	${CHMOD} -R o-w ${WRKDIR}
+	${CHMOD} -R o-w ${WRKDIR}/*
 
 .include "../../mk/bsd.pkg.mk"
