@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2012/01/20 12:27:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.55 2012/03/05 13:17:14 wiz Exp $
 # used by www/links/Makefile
 # used by www/links-gui/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://links.twibright.com/download/
 EXTRACT_SUFX=  .tar.bz2
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://links.twibright.com/
 LICENSE=	gnu-gpl-v2 # including special OpenSSL paragraph
 
