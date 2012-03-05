@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.694 2012/03/05 13:30:04 sno Exp $
+$NetBSD: CHANGES-2012,v 1.695 2012/03/05 13:37:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -999,3 +999,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Capture-Tiny to 0.17 [sno 2012-03-05]
 	Updated devel/p5-Class-Inspector to 1.27 [sno 2012-03-05]
 	Updated devel/p5-Class-Accessor-Grouped to 0.10006 [sno 2012-03-05]
+	Updated textproc/p5-Text-CSV_XS to 0.86 [sno 2012-03-05]
