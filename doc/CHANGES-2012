@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.692 2012/03/05 13:22:25 sno Exp $
+$NetBSD: CHANGES-2012,v 1.693 2012/03/05 13:26:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -997,3 +997,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-rack-cache to 1.2 [taca 2012-03-05]
 	Updated archivers/p5-Archive-Tar to 1.84 [sno 2012-03-05]
 	Updated devel/p5-Capture-Tiny to 0.17 [sno 2012-03-05]
+	Updated devel/p5-Class-Inspector to 1.27 [sno 2012-03-05]
