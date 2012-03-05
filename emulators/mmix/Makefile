@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2009/06/30 00:07:15 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2012/03/05 16:22:46 minskim Exp $
 
 DISTNAME=	mmix-20060918
+PKGREVISION=	1
 CATEGORIES=	emulators devel lang
 MASTER_SITES=	http://www-cs-faculty.stanford.edu/~knuth/programs/
 
@@ -9,20 +10,18 @@ HOMEPAGE=	http://www-cs-faculty.stanford.edu/~knuth/mmix.html
 COMMENT=	Simulators for Knuth's MMIX RISC architecture
 
 BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+BUILD_DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
+BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
+BUILD_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
-TEX_DEPMETHOD=	build
-TEX_ACCEPTED=	teTeX3
-
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	all doc
 
 INSTALLATION_DIRS=	bin
-
-.include "../../mk/tex.buildlink3.mk"
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} abstime mmix mmixal 		\
