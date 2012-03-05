@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.687 2012/03/05 04:41:40 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.688 2012/03/05 07:26:48 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/rubber to 1.1nb4 [minskim 2012-03-05]
 	Updated x11/mowitz to 0.3.1nb2 [dholland 2012-03-05]
 	Updated textproc/harmony to 20060526nb3 [minskim 2012-03-05]
+	Updated pkgtools/bootstrap-mk-files to 20120305 [sbd 2012-03-05]
