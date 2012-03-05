@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2012/02/16 06:10:10 sno Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/05 13:22:15 sno Exp $
 
-DISTNAME=	Capture-Tiny-0.16
+DISTNAME=	Capture-Tiny-0.17
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
