@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.39 2012/02/29 19:34:14 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.40 2012/03/05 23:53:47 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -164,3 +164,10 @@ Pullup ticket #3690 - requested by martin
 lang/perl5: build fix
 Pullup ticket #3691 - requested by tron
 mail/postfix: build fix
+Pullup ticket #3693 - requested by taca
+devel/ruby-activesupport3: security patch
+devel/ruby-activesupport31: security patch
+www/ruby-actionpack3: security patch
+www/ruby-actionpack31: security patch
+Pullup ticket #3694 - requested by obache
+net/p5-Net-Amazon: compatibility update
