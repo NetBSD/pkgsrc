@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/03/12 10:30:04 tonio Exp $
+# $NetBSD: Makefile,v 1.23 2012/03/05 03:52:53 minskim Exp $
 #
 
 DISTNAME=		rubber-1.1
@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://ebeffara.free.fr/pub/
 
 MAINTAINER=		tonio@NetBSD.org
-HOMEPAGE=		http://www.pps.jussieu.fr/~beffara/soft/rubber/
+HOMEPAGE=		https://launchpad.net/rubber
 COMMENT=		Automated system for building LaTeX documents
 
 PKG_DESTDIR_SUPPORT=	user-destdir
