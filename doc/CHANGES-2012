@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.700 2012/03/05 16:22:07 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.701 2012/03/05 16:23:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1021,3 +1021,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gcc46 to 4.6.3 [wiz 2012-03-05]
 	Added print/tex-cweb version 3.64ad [minskim 2012-03-05]
 	Added print/tex-cweb-doc version 3.64ad [minskim 2012-03-05]
+	Updated emulators/mmix to 20060918nb1 [minskim 2012-03-05]
