@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.699 2012/03/05 15:25:46 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.700 2012/03/05 16:22:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1019,3 +1019,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/postgresql83-pltcl to 8.3.18 [adam 2012-03-05]
 	Updated security/p5-Net-SSLeay to 1.45 [sno 2012-03-05]
 	Updated lang/gcc46 to 4.6.3 [wiz 2012-03-05]
+	Added print/tex-cweb version 3.64ad [minskim 2012-03-05]
+	Added print/tex-cweb-doc version 3.64ad [minskim 2012-03-05]
