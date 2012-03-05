@@ -1,11 +1,8 @@
-$NetBSD: patch-aj,v 1.11 2012/03/01 22:00:44 hans Exp $
+$NetBSD: patch-aj,v 1.12 2012/03/05 12:16:00 obache Exp $
 
 --- fep_main.c.orig	1993-06-10 02:53:06.000000000 +0000
 +++ fep_main.c	2011-09-29 20:16:05.000000000 +0000
-@@ -3,18 +3,30 @@
- #ifndef lint
- static char rcsid[]=
- "$Id: patch-aj,v 1.11 2012/03/01 22:00:44 hans Exp $ (SRA)";
+@@ -6,15 +6,27 @@
 -#endif lint
 +#endif /* lint */
  
