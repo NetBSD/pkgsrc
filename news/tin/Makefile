@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2012/03/03 00:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2012/03/05 13:13:46 wiz Exp $
 #
 
 DISTNAME=	tin-2.0.1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tin.org/
 COMMENT=	TIN newsreader (termcap based)
 # See src/nntplib.c, vms/vms.c
