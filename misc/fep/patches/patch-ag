@@ -1,11 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2012/03/01 22:00:44 hans Exp $
+$NetBSD: patch-ag,v 1.8 2012/03/05 12:16:00 obache Exp $
 
 --- fep_funcs.h.orig	1991-05-29 01:31:20.000000000 -0400
 +++ fep_funcs.h	2005-12-10 16:59:27.000000000 -0500
-@@ -3,7 +3,7 @@
- #ifndef lint
- # define FEP_FUNCS \
-     "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ag,v 1.7 2012/03/01 22:00:44 hans Exp $ (SRA)"
+@@ -6,4 +6,4 @@
 -#endif lint
 +#endif /* lint */
  
