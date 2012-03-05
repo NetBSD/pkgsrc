@@ -1,6 +1,7 @@
-$NetBSD: patch-ad,v 1.5 2012/01/31 11:53:52 ryoon Exp $
+$NetBSD: patch-ad,v 1.6 2012/03/05 21:16:09 adam Exp $
 
 *BSD and qnx are identified as linux.
+Add another SDK path on Mac OS X.
 
 --- build/make/configure.sh.orig	2012-01-27 18:36:39.000000000 +0000
 +++ build/make/configure.sh
@@ -13,6 +14,16 @@ $NetBSD: patch-ad,v 1.5 2012/01/31 11:53:52 ryoon Exp $
                  tgt_os=linux
                  ;;
              *solaris2.10)
+@@ -628,6 +628,9 @@ process_common_toolchain() {
+     if [ -d "/Developer/SDKs/MacOSX10.7.sdk" ]; then
+         osx_sdk_dir="/Developer/SDKs/MacOSX10.7.sdk"
+     fi
++    if [ -d "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk" ]; then
++        osx_sdk_dir="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk"
++    fi
+ 
+     case ${toolchain} in
+         *-darwin8-*)
 @@ -1019,10 +1019,29 @@ EOF
          case ${toolchain} in
              *-win*);;
