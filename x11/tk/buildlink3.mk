@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2011/11/13 13:55:59 shattered Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2012/03/05 13:36:37 obache Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -18,6 +18,8 @@ BUILDLINK_TRANSFORM+=	l:tk:tk84
 BUILDLINK_TRANSFORM+=	l:tk8.4:tk84
 
 TKCONFIG_SH?=	${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
+
+_TOOLS_USE_PKGSRC.wish=	yes
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
