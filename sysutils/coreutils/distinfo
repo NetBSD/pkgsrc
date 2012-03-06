@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.21 2011/10/03 16:17:08 jmmv Exp $
+$NetBSD: distinfo,v 1.22 2012/03/06 23:38:04 joerg Exp $
 
 SHA1 (coreutils-8.13.tar.gz) = 83b7e25661c439ecac55e99ff0dd816b9ff478a5
 RMD160 (coreutils-8.13.tar.gz) = fb24a15641581ba57482f4c1c1ecfc32752dbd9d
 Size (coreutils-8.13.tar.gz) = 11660808 bytes
+SHA1 (patch-lib-fflush.c) = e52e0da2127c5debbb14e967b1e206226efdaa4a
+SHA1 (patch-lib-fseeko.c) = ab62b8c7faa9a601191475c040c7466e1bd52fe1
