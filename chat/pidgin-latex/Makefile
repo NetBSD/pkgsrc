@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2012/03/06 17:38:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/06 23:08:05 minskim Exp $
 
 VERSION=	1.2.1
-PKGREVISION=	15
+PKGREVISION=	16
 DISTNAME=	pidgin-latex-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	chat print
@@ -11,6 +11,12 @@ WRKSRC=		${WRKDIR}/pidgin-latex
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/pidgin-latex/
 COMMENT=	Plugin for pidgin to render LaTeX as images
+
+DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
+DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -35,7 +41,6 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--export-dynamic
 
 .include "../../chat/pidgin/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
