@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/06 23:26:38 joerg Exp $
 bin/dx
 dx/bin/dx
 dx/bin/mdf2c
@@ -2251,7 +2251,6 @@ dx/lib_${LOWER_OPSYS}/libDX.la
 dx/lib_${LOWER_OPSYS}/libDXL.la
 dx/lib_${LOWER_OPSYS}/libDXcallm.la
 dx/lib_${LOWER_OPSYS}/libDXlite.la
-dx/man/catl/dx.0
 dx/man/manl/dx.l
 dx/ui/Basic2D.cfg
 dx/ui/Basic2D.net
