@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/11/10 12:46:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.25.10.1 2012/03/06 09:51:46 tron Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -372,10 +372,13 @@ share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Base.php
 share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Combined.php
 share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Combined/Decorator/Cache.php
 share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Decorator/Log.php
-share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Fwthree.php
 share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Xacl/Cache.php
 share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Xacl/Configuration.php
 share/horde/lib/Horde/Kolab/FreeBusy/Export/Freebusy/Xacl/Decorator/Log.php
+share/horde/lib/Horde/Kolab/FreeBusy/Helper/Freebusy/Owa.php
+share/horde/lib/Horde/Kolab/FreeBusy/Helper/Freebusy/StatusMap.php
+share/horde/lib/Horde/Kolab/FreeBusy/Helper/Freebusy/StatusMap/Config.php
+share/horde/lib/Horde/Kolab/FreeBusy/Helper/Freebusy/StatusMap/Default.php
 share/horde/lib/Horde/Kolab/FreeBusy/Imap.php
 share/horde/lib/Horde/Kolab/FreeBusy/Logger.php
 share/horde/lib/Horde/Kolab/FreeBusy/Object/Event.php
@@ -384,9 +387,12 @@ share/horde/lib/Horde/Kolab/FreeBusy/Owner/Event.php
 share/horde/lib/Horde/Kolab/FreeBusy/Owner/Event/Kolab.php
 share/horde/lib/Horde/Kolab/FreeBusy/Owner/Kolab.php
 share/horde/lib/Horde/Kolab/FreeBusy/Params/Freebusy/Folder.php
-share/horde/lib/Horde/Kolab/FreeBusy/Params/Freebusy/Owner.php
+share/horde/lib/Horde/Kolab/FreeBusy/Params/Freebusy/Folder/Named.php
+share/horde/lib/Horde/Kolab/FreeBusy/Params/Freebusy/Folder/Request.php
 share/horde/lib/Horde/Kolab/FreeBusy/Params/Freebusy/Resource/Kolab.php
 share/horde/lib/Horde/Kolab/FreeBusy/Params/Owner.php
+share/horde/lib/Horde/Kolab/FreeBusy/Params/Owner/Named.php
+share/horde/lib/Horde/Kolab/FreeBusy/Params/Owner/Request.php
 share/horde/lib/Horde/Kolab/FreeBusy/Params/User.php
 share/horde/lib/Horde/Kolab/FreeBusy/Report.php
 share/horde/lib/Horde/Kolab/FreeBusy/Request.php
@@ -398,6 +404,7 @@ share/horde/lib/Horde/Kolab/FreeBusy/Resource/Event/Decorator/Log.php
 share/horde/lib/Horde/Kolab/FreeBusy/Resource/Event/Decorator/Mcache.php
 share/horde/lib/Horde/Kolab/FreeBusy/Resource/Event/Fwthree.php
 share/horde/lib/Horde/Kolab/FreeBusy/Resource/Event/Kolab.php
+share/horde/lib/Horde/Kolab/FreeBusy/Resource/Event/Owa.php
 share/horde/lib/Horde/Kolab/FreeBusy/Resource/Kolab.php
 share/horde/lib/Horde/Kolab/FreeBusy/User.php
 share/horde/lib/Horde/Kolab/FreeBusy/User/Decorator/Log.php
@@ -648,6 +655,7 @@ share/horde/lib/Horde/Share/datatree.php
 share/horde/lib/Horde/Share/kolab.php
 share/horde/lib/Horde/Share/sql.php
 share/horde/lib/Horde/Share/sql_hierarchical.php
+share/horde/lib/Horde/Share/sqlng.php
 share/horde/lib/Horde/SpellChecker.php
 share/horde/lib/Horde/SpellChecker/aspell.php
 share/horde/lib/Horde/String.php
@@ -941,6 +949,10 @@ share/horde/scripts/import_squirrelmail_sql_prefs.php
 share/horde/scripts/ldap/horde.prefs.acl
 share/horde/scripts/ldap/horde.schema
 share/horde/scripts/set_perms.sh
+share/horde/scripts/share-stress-test-conf.php.dist
+share/horde/scripts/share-stress-test-sql.xml
+share/horde/scripts/share-stress-test-sqlng.xml
+share/horde/scripts/share-stress-test.php
 share/horde/scripts/sql/README
 share/horde/scripts/sql/README.OCI8
 share/horde/scripts/sql/create.mssql.sql
@@ -3874,13 +3886,4 @@ share/horde/themes/tango-blue/screen.css
 share/horde/themes/tango-blue/themed_graphics
 share/horde/util/barcode.php
 share/horde/util/icon_browser.php
-@pkgdir share/horde/lib/File/tests
-@pkgdir share/horde/lib/Horde/Text/tests
-@pkgdir share/horde/lib/Horde/docs/examples
-@pkgdir share/horde/lib/Horde/tests
-@pkgdir share/horde/lib/Text/docs/examples
-@pkgdir share/horde/lib/Text/tests
-@pkgdir share/horde/lib/VFS/tests
-@pkgdir share/horde/lib/XML/docs/examples
-@pkgdir share/horde/lib/XML/tests
-@pkgdir share/horde/lib/data
+@pkgdir share/horde/config
