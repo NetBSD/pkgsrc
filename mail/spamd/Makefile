@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/06/26 20:59:51 peter Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/06 23:27:15 joerg Exp $
 
 DISTNAME=		spamd-20060330
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
@@ -45,24 +46,14 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 share/examples/spamd
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.cat5 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat5/spamd.conf.0
 	${INSTALL_MAN} ${WRKSRC}/spamd/spamd.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamd/spamd.cat8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamd.0
 	${INSTALL_MAN} ${WRKSRC}/spamd-setup/spamd-setup.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamd-setup/spamd-setup.cat8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamd-setup.0
 	${INSTALL_MAN} ${WRKSRC}/spamdb/spamdb.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamdb/spamdb.cat8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamdb.0
 	${INSTALL_MAN} ${WRKSRC}/spamlogd/spamlogd.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamlogd/spamlogd.cat8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamlogd.0
 
 	${INSTALL_PROGRAM} ${WRKSRC}/spamd-setup/spamd-setup \
 		${DESTDIR}${PREFIX}/libexec
