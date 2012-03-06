@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2011/11/22 09:15:58 sborrill Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/06 11:09:06 sborrill Exp $
 #
 
+# Values from XenServer 6.0.2 = 6, 0, 2, 52898
 # Values from XenServer 6.0 = 6, 0, 0, 50560
 # Values from XenServer 5.6 SP2 = 5, 6, 100, 39153
 XENMAJOR=	6
 XENMINOR=	0
-XENTEENY=	0
-XENBUILD=	50560
+XENTEENY=	2
+XENBUILD=	52898
 
 VERSION=	${XENMAJOR}.${XENMINOR}.${XENTEENY}
 DISTNAME=	xe-guest-utilities_5.6.0-595
-PKGREVISION=	1
 CATEGORIES=	sysutils
 PKGNAME=	xe-guest-utilities-${VERSION}
 MASTER_SITES=	http://updates.vmd.citrix.com/XenServer/5.6.0/debian/pool/main/x/xe-guest-utilities/
