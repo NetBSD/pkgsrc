@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2011/11/12 13:00:29 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2012/03/06 12:34:08 ryoon Exp $
 
 .include "../../devel/xulrunner/dist.mk"
-PKGNAME=		nss-${NSS_RELEASE}${MOZ_BRANCH_MINOR}
-NSS_RELEASE=		3.12.11.0
+PKGNAME=		nss-${NSS_RELEASE}
+NSS_RELEASE=		3.13.1
 CATEGORIES=		security
 
 MAINTAINER=		tnn@NetBSD.org
@@ -50,12 +50,12 @@ MAKE_ENV+=	EXTRA_SHARED_LIBS="-Wl,-R${BUILDLINK_PREFIX.nspr}/lib/nspr -Wl,-R,${P
 
 pre-configure:
 # sanity check: make sure the nss release is what we think it is.
-	@set -e; if [ '"${NSS_RELEASE}"' !=			\
-	  "`${AWK} '/NSS_VERSION/ {print $$3}' <		\
-	  ${WRKSRC}/security/nss/lib/nss/nss.h`" ]; then	\
-	  ${ECHO} "package is out of date";			\
-	  exit 1;						\
-	fi
+#	@set -e; if [ '"${NSS_RELEASE}"' !=			\
+#	  "`${AWK} '/NSS_VERSION/ {print $$3}' <		\
+#	  ${WRKSRC}/security/nss/lib/nss/nss.h`" ]; then	\
+#	  ${ECHO} "package is out of date";			\
+#	  exit 1;						\
+#	fi
 
 do-build:
 	cd ${WRKSRC}/security/nss && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
@@ -68,6 +68,8 @@ do-install:
 	(cd ${DIST}/public && pax -Lrwpe . ${DESTDIR}${PREFIX}/include/nss/ )
 	(cd ${DIST}/*_OPT.OBJ/lib && \
 		pax -Lrwpe *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
+	${INSTALL_LIB} ${DIST}/*_OPT.OBJ/lib/libcrmf.a \
+		${DESTDIR}${PREFIX}/lib/nss/
 	set -e; \
 	{ ${ECHO} "Name: NSS"; \
 	  ${ECHO} "Description: Mozilla Network Security Services"; \

@@ -1,40 +1,45 @@
-$NetBSD: patch-aw,v 1.1 2009/09/13 20:02:36 tnn Exp $
+$NetBSD: patch-aw,v 1.2 2012/03/06 12:34:08 ryoon Exp $
 
 --- xulrunner/stub/nsXULStub.cpp.orig	2009-08-24 17:53:30.000000000 +0200
 +++ xulrunner/stub/nsXULStub.cpp
-@@ -44,6 +44,27 @@
+@@ -44,6 +44,29 @@
  #include "nsILocalFile.h"
  
  #include <stdarg.h>
++#if defined(__NetBSD__)
 +#include <sys/resource.h>
 +/*
 + * On netbsd-4, ulimit -n is 64 by default; too few for us.
 + */
 +static void netbsd_fixrlimit(void) {
-+	struct rlimit rlp;
-+	if (getrlimit(RLIMIT_NOFILE, &rlp) == -1) {
-+		fprintf(stderr, "warning: getrlimit failed\n");
-+		return;
-+	}
-+	if (rlp.rlim_cur >= 512)
-+		return;
-+	if (rlp.rlim_max < 512) {
-+		fprintf(stderr, "warning: hard limit of 'ulimit -n' too low\n");
-+		rlp.rlim_cur = rlp.rlim_max;
-+	}
-+	else
-+		rlp.rlim_cur = 512;
-+	if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
-+		fprintf(stderr, "warning: setrlimit failed\n");
++       struct rlimit rlp;
++       if (getrlimit(RLIMIT_NOFILE, &rlp) == -1) {
++	       fprintf(stderr, "warning: getrlimit failed\n");
++	       return;
++       }
++       if (rlp.rlim_cur >= 512)
++	       return;
++       if (rlp.rlim_max < 512) {
++	       fprintf(stderr, "warning: hard limit of 'ulimit -n' too low\n");
++	       rlp.rlim_cur = rlp.rlim_max;
++       }
++       else
++	       rlp.rlim_cur = 512;
++       if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
++	       fprintf(stderr, "warning: setrlimit failed\n");
 +}
++#endif
  
  #ifdef XP_WIN
  #include <windows.h>
-@@ -205,6 +226,7 @@ main(int argc, char **argv)
-   char tmpPath[MAXPATHLEN];
+@@ -202,7 +225,9 @@
    char greDir[MAXPATHLEN];
-   PRBool greFound = PR_FALSE;
-+  netbsd_fixrlimit();
+   bool greFound = false;
  
- #if defined(XP_MACOSX)
+-#if defined(XP_MACOSX)
++#if defined(__NetBSD__)
++  netbsd_fixrlimit();
++#elif defined(XP_MACOSX)
    CFBundleRef appBundle = CFBundleGetMainBundle();
+   if (!appBundle)
+     return 1;
