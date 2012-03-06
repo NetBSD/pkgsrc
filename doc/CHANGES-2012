@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.705 2012/03/06 11:09:55 sborrill Exp $
+$NetBSD: CHANGES-2012,v 1.706 2012/03/06 11:11:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1026,3 +1026,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/emacs-snapshot to 24.0.94.20120305 [minskim 2012-03-06]
 	Added sysutils/logrotate version 3.8.1 [sbd 2012-03-06]
 	Updated sysutils/xe-guest-utilities to 6.0.2 [sborrill 2012-03-06]
+	Updated mail/postfix to 2.8.9 [taca 2012-03-06]
