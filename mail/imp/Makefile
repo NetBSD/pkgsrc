@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2011/09/16 05:46:24 obache Exp $
+# $NetBSD: Makefile,v 1.57.4.1 2012/03/06 10:08:21 tron Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
-PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/imp/ \
 		ftp://ftp.horde.org/pub/imp/
@@ -10,6 +9,7 @@ MASTER_SITES=	http://ftp.horde.org/pub/imp/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	imp-3.*{,nb*}
 
@@ -28,7 +28,7 @@ DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
-IMPVER=		4.3.9
+IMPVER=		4.3.11
 PAXDIRS=	lib locale po scripts templates themes js
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
