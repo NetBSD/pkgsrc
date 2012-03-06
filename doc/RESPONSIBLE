@@ -1,4 +1,4 @@
-$NetBSD: RESPONSIBLE,v 1.20 2011/02/28 15:21:54 wiz Exp $
+$NetBSD: RESPONSIBLE,v 1.21 2012/03/06 22:03:26 bsiegert Exp $
 
 List of sections of the system, and who is responsible for them (or
 at least considered an expert on them).
@@ -36,5 +36,6 @@ FreeBSD				-
 HP-UX				tnn
 Interix				-
 Linux				jschauma, reed
+MirBSD				bsiegert
 OSF/1				tnn
 Solaris				-
