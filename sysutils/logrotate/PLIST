@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/06 04:53:24 sbd Exp $
+man/man5/logrotate.conf.5
+man/man8/logrotate.8
+sbin/logrotate
+share/doc/logrotate/CHANGES
+share/doc/logrotate/COPYING
+share/doc/logrotate/README.HPUX
+share/doc/logrotate/README.Solaris
+share/examples/logrotate/logrotate.conf
+share/examples/logrotate/logrotate.cron
