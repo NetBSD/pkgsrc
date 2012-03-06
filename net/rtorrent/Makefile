@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2012/01/11 22:41:46 tron Exp $
+# $NetBSD: Makefile,v 1.48 2012/03/06 18:24:15 elric Exp $
 
 DISTNAME=	rtorrent-0.8.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -48,11 +48,13 @@ CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
 CXXFLAGS+=	-march=i486
 .endif
 
-INSTALLATION_DIRS=	share/examples/rtorrent
+INSTALLATION_DIRS=	man/man1 share/examples/rtorrent
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/rtorrent.rc \
 		${DESTDIR}${PREFIX}/share/examples/rtorrent
+	${INSTALL_DATA} ${WRKSRC}/doc/rtorrent.1 \
+		${DESTDIR}${PREFIX}/man/man1/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/libtorrent/buildlink3.mk"
