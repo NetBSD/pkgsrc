@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.707 2012/03/06 12:38:37 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.708 2012/03/06 23:08:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1031,3 +1031,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/nspr to 4.9.2beta1 [ryoon 2012-03-06]
 	Updated devel/nss to 3.13.1 [ryoon 2012-03-06]
 	Updated www/firefox to 10.0.2 [ryoon 2012-03-06]
+	Updated chat/pidgin-latex to 1.2.1nb16 [minskim 2012-03-06]
