@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.533 2012/01/28 07:08:19 jnemeth Exp $
+# $NetBSD: Makefile,v 1.534 2012/03/06 04:54:54 sbd Exp $
 #
 
 COMMENT=	System utilities
@@ -243,6 +243,7 @@ SUBDIR+=	libvirt
 SUBDIR+=	lilo
 SUBDIR+=	logfinder
 SUBDIR+=	logrot
+SUBDIR+=	logrotate
 SUBDIR+=	lsof
 SUBDIR+=	magicrescue
 SUBDIR+=	mbmon
