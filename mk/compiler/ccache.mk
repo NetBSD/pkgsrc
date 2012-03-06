@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.32 2009/08/31 08:38:50 tnn Exp $
+# $NetBSD: ccache.mk,v 1.33 2012/03/06 02:44:54 sbd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -121,7 +121,7 @@ BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
 # Override the compiler-specific hash with the version string for the
 # compiler.
 #
-PKGSRC_MAKE_ENV+=	CCACHE_HASHCC=${CC_VERSION_STRING:Q}
+PKGSRC_MAKE_ENV+=	CCACHE_COMPILERCHECK=echo\ ${CC_VERSION_STRING:Q}
 PKGSRC_MAKE_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
 
 # Create symlinks for the compiler into ${WRKDIR}.
