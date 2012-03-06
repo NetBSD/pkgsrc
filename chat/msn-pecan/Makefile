@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/03/03 00:12:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/06 17:38:54 ryoon Exp $
 #
 
 DISTNAME=	msn-pecan-0.0.18
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	chat
 MASTER_SITES=	http://msn-pecan.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
