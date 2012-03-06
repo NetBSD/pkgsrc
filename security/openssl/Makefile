@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159.2.1 2012/01/19 06:11:48 sbd Exp $
+# $NetBSD: Makefile,v 1.159.2.2 2012/03/06 10:29:29 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -22,6 +22,7 @@ MASTER_SITES=	ftp://ftp.openssl.org/snapshot/
 .endif
 
 SVR4_PKGNAME=	ossl
+PKGREVISION=	1
 CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openssl.org/
