@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.702 2012/03/05 17:21:41 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.703 2012/03/06 03:01:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/tex-cweb-doc version 3.64ad [minskim 2012-03-05]
 	Updated emulators/mmix to 20060918nb1 [minskim 2012-03-05]
 	Updated graphics/gri to 2.12.18nb3 [minskim 2012-03-05]
+	Updated editors/emacs-snapshot to 24.0.94.20120305 [minskim 2012-03-06]
