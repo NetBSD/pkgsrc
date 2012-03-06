@@ -1,0 +1,31 @@
+$NetBSD: patch-examples_logrotate-default,v 1.1.1.1 2012/03/06 04:53:24 sbd Exp $
+
+Add pkgsrc paths compatibility.
+
+--- examples/logrotate-default.orig	2011-08-31 12:39:04.000000000 +0000
++++ examples/logrotate-default
+@@ -14,22 +14,7 @@ dateext
+ # uncomment this if you want your log files compressed
+ #compress
+ 
+-# RPM packages drop log rotation information into this directory
+-include /etc/logrotate.d
+-
+-# no packages own wtmp and btmp -- we'll rotate them here
+-/var/log/wtmp {
+-    monthly
+-    create 0664 root utmp
+-	minsize 1M
+-    rotate 1
+-}
+-
+-/var/log/btmp {
+-    missingok
+-    monthly
+-    create 0600 root utmp
+-    rotate 1
+-}
++# Packages drop log rotation information into this directory
++include @PKG_SYSCONFDIR@/etc/logrotate.d
+ 
+ # system-specific logs may be also be configured here.
