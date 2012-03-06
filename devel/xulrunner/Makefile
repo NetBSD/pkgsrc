@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2012/03/03 12:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2012/03/06 12:34:08 ryoon Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-PKGREVISION=	5
 CATEGORIES=	devel www
 
 MAINTAINER=	tnn@NetBSD.org
@@ -30,11 +29,6 @@ MAKE_ENV+=		FREEBL_NO_DEPEND=0
 
 .include "mozilla-common.mk"
 .include "options.mk"
-
-.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin") && \
-    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
-BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
-.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoconf

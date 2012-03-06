@@ -1,0 +1,15 @@
+$NetBSD: patch-xulrunner_app_Makefile.in,v 1.1 2012/03/06 12:34:09 ryoon Exp $
+
+--- xulrunner/app/Makefile.in.orig	2011-12-21 00:28:44.000000000 +0100
++++ xulrunner/app/Makefile.in	2012-01-30 11:24:22.000000000 +0100
+@@ -130,6 +130,10 @@
+ RCFLAGS += -DXULRUNNER_ICO=\"$(DIST)/branding/xulrunner.ico\" -DDOCUMENT_ICO=\"$(DIST)/branding/document.ico\"
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++OS_LIBS += $(call EXPAND_LIBNAME,kvm)
++endif
++
+ include $(topsrcdir)/config/rules.mk
+ 
+ DEFINES += -DXULRUNNER_ICO=\"$(DIST)/branding/xulrunner.ico\" -DDOCUMENT_ICO=\"$(DIST)/branding/document.ico\"

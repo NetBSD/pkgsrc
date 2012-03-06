@@ -1,13 +1,12 @@
-$NetBSD: patch-bi,v 1.1 2011/04/26 14:16:37 tnn Exp $
+$NetBSD: patch-bi,v 1.2 2012/03/06 12:34:09 ryoon Exp $
 
---- gfx/angle/src/compiler/osinclude.h.orig	2010-12-15 01:02:57.000000000 +0000
+--- gfx/angle/src/compiler/osinclude.h.orig	2011-12-20 23:28:17.000000000 +0000
 +++ gfx/angle/src/compiler/osinclude.h
-@@ -16,7 +16,7 @@
+@@ -16,6 +16,7 @@
  #define ANGLE_OS_WIN
  #elif defined(__APPLE__) || defined(__linux__) || \
        defined(__FreeBSD__) || defined(__OpenBSD__) || \
--      defined(__sun)
-+      defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
++      defined(__NetBSD__) || defined(__DragonFly__) || \
+       defined(__sun) || defined(ANDROID)
  #define ANGLE_OS_POSIX
  #else
- #error Unsupported platform.
