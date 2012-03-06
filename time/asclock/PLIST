@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:18:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/06 23:29:29 joerg Exp $
 bin/asclock
+man/man1/asclock.1
 libexec/asclock-classic
