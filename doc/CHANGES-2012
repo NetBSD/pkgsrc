@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.714 2012/03/07 12:56:23 taca Exp $
+$NetBSD: CHANGES-2012,v 1.715 2012/03/07 14:26:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1038,3 +1038,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ja-trac to 0.12.3pl1 [obache 2012-03-07]
 	Updated www/typo3_45 to 4.5.12 [taca 2012-03-07]
 	Updated www/typo3_46 to 4.6.5 [taca 2012-03-07]
+	Added net/bind99 version 9.9.0 [taca 2012-03-07]
