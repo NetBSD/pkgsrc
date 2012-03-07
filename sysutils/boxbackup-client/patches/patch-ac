@@ -1,0 +1,55 @@
+$NetBSD: patch-ac,v 1.3 2012/03/07 19:25:28 drochner Exp $
+
+avoid "make -C", not supported by older BSD make
+
+--- infrastructure/makeparcels.pl.in.orig	2011-01-08 21:35:22.000000000 +0000
++++ infrastructure/makeparcels.pl.in
+@@ -123,7 +123,7 @@ release/common/test:
+ 
+ .PHONY: docs
+ docs:
+-	\$(MAKE) -C docs
++	(cd docs && \$(MAKE))
+ 
+ __END_OF_FRAGMENT
+ 
+@@ -220,7 +220,7 @@ EOF
+ 			print MAKE <<EOF;
+ .PHONY: docs/man/${name}.gz
+ docs/man/${name}.gz:
+-	\$(MAKE) -C docs man/${name}.gz
++	(cd docs && \$(MAKE) man/${name}.gz)
+ 
+ EOF
+ 			push @parcel_deps, "$dir/${name}.gz";
+@@ -238,7 +238,7 @@ EOF
+ 			print MAKE <<EOF;
+ .PHONY: docs/htmlguide/man-html/${name}.html
+ docs/htmlguide/man-html/${name}.html:
+-	\$(MAKE) -C docs htmlguide/man-html/${name}.html
++	(cd docs && \$(MAKE) htmlguide/man-html/${name}.html)
+ 
+ EOF
+ 			push @parcel_deps, "$dir/docs/${name}.html";
+@@ -249,10 +249,10 @@ EOF
+ .PHONY: $name-build $name-clean
+ 
+ $name-build:
+-	\$(MAKE) -C $name
++	(cd $name && \$(MAKE))
+ 
+ $name-clean:
+-	\$(MAKE) -C $name clean
++	(cd $name && \$(MAKE) clean)
+ EOF
+ 			push @parcel_deps, "$name-build";
+ 			push @clean_deps,  "$name-clean";
+@@ -359,7 +359,7 @@ install:
+ 	cat local/install.msg
+ 
+ clean: @clean_deps
+-	\$(MAKE) -C docs clean
++	(cd docs && \$(MAKE) clean)
+ EOF
+ 
+ if ($build_os eq 'CYGWIN')
