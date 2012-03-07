@@ -1,8 +1,20 @@
-$NetBSD: patch-ad,v 1.3 2005/12/09 12:10:09 joerg Exp $
+$NetBSD: patch-ad,v 1.4 2012/03/07 15:08:40 hans Exp $
 
 --- src/uartctrl.cpp	2003/08/14 08:54:51	1.1
 +++ src/uartctrl.cpp	2003/08/14 09:15:14
-@@ -40,6 +40,29 @@
+@@ -35,11 +35,41 @@
+ 
+ #define MODULE_NAME "UARTCTRL"
+ 
++#ifdef __sun
++static int getpt(void)
++{
++	return open("/dev/ptmx", O_RDWR|O_NOCTTY);
++}
++#endif
++
+ ///////////////////////////////////////////////////////////////////////////////
+ // ~CUARTCtrl - 
  //
  int CUARTCtrl::GetPty()
  {
@@ -32,7 +44,7 @@ $NetBSD: patch-ad,v 1.3 2005/12/09 12:10:09 joerg Exp $
  	char *namepty;
  	struct termios tiopty;
  	int curFlags;
-@@ -102,6 +125,7 @@
+@@ -102,6 +132,7 @@ int CUARTCtrl::GetPty()
  		getchar();
  	}
  	return 0;
