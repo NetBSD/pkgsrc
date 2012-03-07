@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/02/15 17:18:52 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2012/03/07 19:10:30 hans Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -14,6 +14,7 @@ COMMENT=		Super Nintendo Entertainment System (SNES) emulator
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/snes9x
 USE_LANGUAGES=		c c++
@@ -26,7 +27,7 @@ SUBST_CLASSES+=		nodos
 SUBST_STAGE.nodos=	pre-patch
 SUBST_FILES.nodos=	../language.h
 SUBST_FILES.nodos+=	../readme.txt dsp1.h dsp3emu.cpp dsp4emu.cpp
-SUBST_FILTER_CMD.nodos=	tr -d '\r'
+SUBST_FILTER_CMD.nodos=	env -i ${TR} -d '\r'
 
 SUBST_CLASSES+=		paircpp
 SUBST_STAGE.paircpp=	pre-patch
