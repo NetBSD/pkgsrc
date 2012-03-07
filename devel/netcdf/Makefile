@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2010/07/30 10:36:24 asau Exp $
+# $NetBSD: Makefile,v 1.31 2012/03/07 16:11:29 adam Exp $
 
-DISTNAME=	netcdf-3.6.0-p1
-PKGNAME=	netcdf-3.6.0p1
-PKGREVISION=	2
+DISTNAME=	netcdf-4.1.3
 CATEGORIES=	devel
-MASTER_SITES=	ftp://www.gfd-dennou.org/arch/netcdf/unidata-mirror/
+MASTER_SITES=	http://www.unidata.ucar.edu/downloads/netcdf/ftp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unidata.ucar.edu/software/netcdf/index.html
@@ -12,13 +10,13 @@ COMMENT=	Library for array-oriented data access
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-MAKE_FLAGS+=		MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR} \
-			exec_prefix=${DESTDIR}${PREFIX}
-CPPFLAGS+=		-Df2cFortran -Dunix
-MAKE_JOBS_SAFE=		no
+CONFIGURE_ARGS+=	--disable-f90
+CONFIGURE_ARGS+=	--disable-examples
+CONFIGURE_ARGS+=	--disable-netcdf-4
+
+INFO_FILES=		yes
 
 .include "../../mk/bsd.pkg.mk"
