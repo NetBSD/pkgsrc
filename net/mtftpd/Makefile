@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/02 16:32:47 hans Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/07 11:39:39 hans Exp $
 
 DISTNAME=		mtftpd-20080229
 CATEGORIES=		net
@@ -17,6 +17,8 @@ USE_BSD_MAKEFILE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS+=		-DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
+CFLAGS.SunOS+=		-DMAP_FILE=0
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS+=	bin share/examples/mtftpd
 
