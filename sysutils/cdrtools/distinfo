@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.62 2012/01/01 04:03:33 sbd Exp $
+$NetBSD: distinfo,v 1.63 2012/03/07 14:54:44 wiz Exp $
 
-SHA1 (cdrtools-3.01a06.tar.bz2) = 0001d0213dfe2c78c4b8b34288854c01c5387464
-RMD160 (cdrtools-3.01a06.tar.bz2) = abf83892bbea28906c88c1f109d42891dd34f721
-Size (cdrtools-3.01a06.tar.bz2) = 2026840 bytes
-SHA1 (patch-RULES_rules.man) = 37a8873090551d36d887e47c414b5712ad4512bb
+SHA1 (cdrtools-3.01a07.tar.bz2) = ee4b540e4897ee6637837a097658305d18345999
+RMD160 (cdrtools-3.01a07.tar.bz2) = b8331d826bf64de8bd26c041624a3e41648b6952
+Size (cdrtools-3.01a07.tar.bz2) = 2043525 bytes
 SHA1 (patch-include-schily-mconfig.h) = ad973fb720361fbe900bda12699d46d5ab799326
