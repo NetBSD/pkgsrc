@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2007/05/30 17:47:04 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2012/03/07 18:27:30 hans Exp $
 
 --- tcpdstat.h.orig	2000-06-30 04:16:39.000000000 -0700
 +++ tcpdstat.h
+@@ -28,7 +28,7 @@
+ 
+ struct pkt_cnt {
+ 	int	packets;
+-	quad_t	bytes;
++	int64_t	bytes;
+ };
+ 
+ enum protos {
 @@ -70,7 +70,6 @@ enum protos {
  extern int read_count;
  extern struct timeval start_time, end_time;
