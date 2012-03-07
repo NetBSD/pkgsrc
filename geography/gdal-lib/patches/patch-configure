@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2012/03/07 16:17:05 adam Exp $
+
+Avoid bad substitution.
+
+--- configure.orig	2012-03-07 12:27:50.000000000 +0000
++++ configure
+@@ -21235,9 +21235,7 @@ $as_echo_n "checking libnetcdf version w
+       netcdf_version=`$ncdump 2>&1 | grep "netcdf library version" | awk '{gsub(/"/,"");print $4}'`
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: got $netcdf_version" >&5
+ $as_echo "got $netcdf_version" >&6; }
+-      if test "$netcdf_version" != "" -a "${netcdf_version:0:1}" == "4" ; then
+           nc_config=$NETCDF_ROOT"/bin/nc-config"
+-      fi
+     fi
+ 
+         if { test -x "$nc_config"; }; then
