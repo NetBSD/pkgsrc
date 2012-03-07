@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.9 2005/12/09 12:10:09 joerg Exp $
+$NetBSD: distinfo,v 1.10 2012/03/07 15:08:40 hans Exp $
 
 SHA1 (swarm-0.61.tar.gz) = 36ed52671f8be2cf8e799efd94a48b2919979d2c
 RMD160 (swarm-0.61.tar.gz) = d8e15da178236a46761a65cd52809276df5f3511
 Size (swarm-0.61.tar.gz) = 395061 bytes
-SHA1 (patch-aa) = 65da2134c0d99930412e60fbb3e0f299d3982113
+SHA1 (patch-aa) = 58aaf4fc9a39f14a8083ef8cc534b0199a757360
 SHA1 (patch-ab) = 5a71a670297e4d8db2dd3c7c96d9528f878d13cb
 SHA1 (patch-ac) = 20b0603e24178a6086531bd2f7eb0eb5fc0e99c3
-SHA1 (patch-ad) = 4e660fcb3dae67d4519ad3df40e342707e983e96
+SHA1 (patch-ad) = 6d328a265f9e2f7774e759d01a920a81e1bceeb8
 SHA1 (patch-ae) = 08b8819ad53bb0a91c3ab7a56479b2f36faab754
 SHA1 (patch-af) = 8228c591fd22ee8984d1f434940ad2cbbba41a22
 SHA1 (patch-ag) = 4d3ca9cd45edc081b85019ec88135504b3e7b0a1
