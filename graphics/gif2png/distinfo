@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2011/01/24 12:47:19 wiz Exp $
+$NetBSD: distinfo,v 1.12 2012/03/07 15:28:12 wiz Exp $
 
-SHA1 (gif2png-2.5.4.tar.gz) = 40a33457e5d2beb0f001c14fabf0e92533c38450
-RMD160 (gif2png-2.5.4.tar.gz) = 372a56e260957a7f8895322904f3691df7e56d7e
-Size (gif2png-2.5.4.tar.gz) = 125731 bytes
-SHA1 (patch-aa) = ae26b928890c0d7577a0889ae21f6f836faa71b1
+SHA1 (gif2png-2.5.5.tar.gz) = df38c056ab8441fff3735316fb0fc2c3953f6c93
+RMD160 (gif2png-2.5.5.tar.gz) = 1c1e68553d508bd34a37e0dafc061e39efc42228
+Size (gif2png-2.5.5.tar.gz) = 126884 bytes
+SHA1 (patch-aa) = 513f9d79aa3594eea9e3e848911e11f26abcb1dd

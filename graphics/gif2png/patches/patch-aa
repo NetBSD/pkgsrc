@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.5 2011/01/13 17:07:53 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2012/03/07 15:28:12 wiz Exp $
 
 Fix build with png-1.5.
 
---- gif2png.c.orig	2009-11-11 20:28:02.000000000 +0000
+--- gif2png.c.orig	2012-01-28 23:02:06.000000000 +0000
 +++ gif2png.c
 @@ -10,6 +10,7 @@
  #include <string.h>
  #include <stdlib.h>
  #include <unistd.h>	/* for isatty() */
 +#include <zlib.h>
+ #include <sys/stat.h>
+ #include <utime.h>
  
- #if !defined(TRUE)
- #define FALSE	0
-@@ -120,8 +121,8 @@ int writefile(struct GIFelement *s,struc
+@@ -122,8 +123,8 @@ int writefile(struct GIFelement *s,struc
      int colors_used = 0;
      byte remap[MAXCMSIZE];
      int low_prec;
@@ -23,7 +23,7 @@ Fix build with png-1.5.
      int p;
      int gray_bitdepth;
      png_color pal_rgb[MAXCMSIZE], *pltep;
-@@ -136,6 +137,19 @@ int writefile(struct GIFelement *s,struc
+@@ -138,6 +139,19 @@ int writefile(struct GIFelement *s,struc
      png_text software;
      png_text comment;
  
