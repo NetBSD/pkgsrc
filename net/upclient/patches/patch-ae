@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2006/01/25 17:00:25 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2012/03/07 17:19:56 hans Exp $
 
 --- src/Makefile.orig	2001-06-16 22:48:35.000000000 +0000
 +++ src/Makefile
@@ -23,3 +23,12 @@ $NetBSD: patch-ae,v 1.2 2006/01/25 17:00:25 joerg Exp $
  		upclient
  
  darwin:
+@@ -82,7 +89,7 @@ solaris:
+ 	$(MAKE) CC=gcc \
+ 		LDFLAGS='-lsocket -lnsl' \
+ 		OBJECTS='stats-sol.c $(STDOPTS)' \
+-		CFLAGS='-DPLATFORM_SOLARIS -DCONFIGFILE=\"$(CONFIGFILE)\"' \
++		CFLAGS='$(CFLAGS) -DPLATFORM_SOLARIS -DCONFIGFILE=\"$(CONFIGFILE)\"' \
+ 		upclient
+ 
+ linux:

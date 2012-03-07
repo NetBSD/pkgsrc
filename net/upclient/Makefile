@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/02/11 23:08:17 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2012/03/07 17:19:56 hans Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if ${OPSYS} == "DragonFly"
 BUILD_TARGET=	dragonfly
+.elif ${OPSYS} == "SunOS"
+BUILD_TARGET=	solaris
 .else
 BUILD_TARGET=	bsd
 .endif
