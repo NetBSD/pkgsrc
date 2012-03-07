@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.25 2012/02/06 13:03:55 bsiegert Exp $
+# $NetBSD: transform-gcc,v 1.26 2012/03/07 12:55:53 he Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -131,6 +131,12 @@ case $arg in
 # Options specific to Objective C
 -fgnu-runtime		|\
 -fconstant-string-class=* ) transform_pass ;;
+
+# Old-style rpath specifier, may come from autoconf's AC_PATH_XTRA.
+# Our gcc re-orders -R args relative to -Wl,-R specifiers (puts -R
+# args at the front of the "ld" invocation), which messes up the relative
+# search order.  Fix this by rewriting -R to -Wl,-R.
+-R*			) transform_to "-Wl,$arg" ;;
 
 # Other compiler's options that have corresponding GCC options.
 -Kpic			|\
