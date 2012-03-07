@@ -1,0 +1,12 @@
+$NetBSD: patch-Makefile,v 1.1 2012/03/07 18:27:30 hans Exp $
+
+--- Makefile.orig	2000-04-16 18:26:25.000000000 +0200
++++ Makefile	2012-03-07 18:55:43.383385719 +0100
+@@ -4,7 +4,6 @@ OBJS=	stat.o net_read.o ip_flow.o
+ 
+ SYS_DEFINES?=	-DINET6
+ 
+-CFLAGS=		-g -Wall
+ DEFINES=	$(SYS_DEFINES)
+ INCLUDES=	-I. $(SYS_INCLUDES)
+ 
