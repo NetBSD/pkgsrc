@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10920 2012/03/07 14:43:56 wiz Exp $
+$NetBSD: TODO,v 1.10921 2012/03/07 14:46:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -509,7 +509,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.7
 	o dgen-1.29
 	o dhid-5.3
-	o dialog-1.1.20120215
 	o diffpdf-1.9.2
 	o diffstat-1.55
 	o diffutils-3.2

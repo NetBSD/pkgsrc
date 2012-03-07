@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.716 2012/03/07 14:43:56 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.717 2012/03/07 14:46:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1040,3 +1040,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_46 to 4.6.5 [taca 2012-03-07]
 	Added net/bind99 version 9.9.0 [taca 2012-03-07]
 	Updated audio/lame to 3.99.5 [wiz 2012-03-07]
+	Updated misc/dialog to 1.1.20120215 [wiz 2012-03-07]
