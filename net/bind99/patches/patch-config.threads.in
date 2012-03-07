@@ -1,0 +1,15 @@
+$NetBSD: patch-config.threads.in,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+
+* Add DragonFly support.
+
+--- config.threads.in.orig	2012-01-30 07:08:34.000000000 +0000
++++ config.threads.in
+@@ -50,6 +50,8 @@ case $host in
+ 	use_threads=false ;;
+ *-freebsd*)
+ 	use_threads=true ;;
++*-dragonfly*)
++	use_threads=false ;;
+ [*-bsdi[234]*])
+ 	# Thread signals do not work reliably on some versions of BSD/OS.
+ 	use_threads=false ;;
