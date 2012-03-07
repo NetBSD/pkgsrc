@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.712 2012/03/07 03:54:29 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.713 2012/03/07 05:12:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1035,3 +1035,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/tex2page to 20060131nb13 [minskim 2012-03-07]
 	Removed print/cjk-lyx successor editors/lyx [minskim 2012-03-07]
 	Updated meta-pkgs/netbsd-www to 1.7 [minskim 2012-03-07]
+	Updated www/ja-trac to 0.12.3pl1 [obache 2012-03-07]
