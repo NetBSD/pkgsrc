@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2012/03/07 15:27:30 minskim Exp $
+# $NetBSD: Makefile,v 1.78 2012/03/07 15:56:32 minskim Exp $
 #
 
 DISTNAME=	lilypond-2.14.2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://lilypond.org/
 COMMENT=	GNU Music Typesetter
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
+BUILD_DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
