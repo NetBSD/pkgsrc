@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+
+SHA1 (bind-9.9.0.tar.gz) = 6be77c75c8649088b0ae7124d819b5f412bb0094
+RMD160 (bind-9.9.0.tar.gz) = 5fda36a3aa84062f7936978cb540e8ad3f1c4e08
+Size (bind-9.9.0.tar.gz) = 7114050 bytes
+SHA1 (patch-bin_dig_dighost.c) = 186cdc70605242afb0211dc8802ec75677a65614
+SHA1 (patch-config.threads.in) = 227b83efe9cb3e301aaac9b97cf42f1fb8ad06b2
+SHA1 (patch-configure) = 6a8b709d8369864c397d4315348c9c96753618f6
+SHA1 (patch-lib_bind9_Makefile.in) = 89e21d21fa512f11a2fdb8d7455abd5d95f20ba5
+SHA1 (patch-lib_dns_Makefile.in) = 1770a8bd86901c618b11d255f3af54748d04b759
+SHA1 (patch-lib_dns_rbt.c) = df4b029369d9fa3b250d8505b5f7590e2cd86654
+SHA1 (patch-lib_dns_zone.c) = e01378ee95bf7c5b903a2c3a90acf83a3a4cae52
+SHA1 (patch-lib_isc_Makefile.in) = 5e0739d19957b1f26bcc24a6c76bcab6248cbff5
+SHA1 (patch-lib_isccc_Makefile.in) = a31831872b7724cb84f663ed70a82335d812f95f
+SHA1 (patch-lib_isccfg_Makefile.in) = 5ce4a85c1a13eca255804850b18b421418a2a01b
+SHA1 (patch-lib_lwres_Makefile.in) = 40fd0ed1d699cb2f6258f33888a9495899373767
+SHA1 (patch-lib_lwres_getaddrinfo.c) = ccc00e446867785e401eb92e63e05505dfd01087
+SHA1 (patch-lib_lwres_getnameinfo.c) = 418ad349cf52925c9e8051b5c71d9d51ea8d2fb1
