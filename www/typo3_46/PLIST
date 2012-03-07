@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/15 12:58:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/07 12:54:34 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -1994,7 +1994,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/js/tree.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/jsfunc.tbe_editor.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/listframe_loader.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/login_frameset.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/logomenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/logout.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/md5.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod.php
