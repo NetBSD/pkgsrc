@@ -1,25 +1,8 @@
-$NetBSD: patch-an,v 1.2 2005/02/25 09:52:47 adam Exp $
+$NetBSD: patch-an,v 1.3 2012/03/07 16:11:30 adam Exp $
 
---- cxx/nctst.cpp.orig	2004-08-15 18:04:30.000000000 +0000
+--- cxx/nctst.cpp.orig	2011-06-30 23:22:19.000000000 +0000
 +++ cxx/nctst.cpp
-@@ -1,6 +1,6 @@
- #include <iostream>
- using namespace std;
--
-+#include <iostream>
- #include <string.h>
- #include "netcdfcpp.h"
- 
-@@ -22,7 +22,7 @@ void gen(const char* path, int version)	
- 
-     // Check if the file was opened successfully
-     if (! nc.is_valid()) {
--	cerr << "can't create netCDF file " << path << "\n";
-+	std::cerr << "can't create netCDF file " << path << "\n";
- 	return;
-     }
- 
-@@ -138,12 +138,12 @@ void DumpableNcFile::dumpdims( void )
+@@ -369,12 +369,12 @@ void DumpableNcFile::dumpdims( void )
  
      for (int n=0; n < num_dims(); n++) {
  	NcDim* dim = get_dim(n);
@@ -35,27 +18,23 @@ $NetBSD: patch-an,v 1.2 2005/02/25 09:52:47 adam Exp $
      }
  }
  
-@@ -151,10 +151,10 @@ void dumpatts(NcVar& var)
- {
+@@ -383,9 +383,9 @@ void dumpatts(NcVar& var)
      NcToken vname = var.name();
      NcAtt* ap;
--    for(int n = 0; ap = var.get_att(n); n++) {
+     for(int n = 0; (ap = var.get_att(n)); n++) {
 -	cout << "\t\t" << vname << ":" << ap->name() << " = " ;
-+    for(int n = 0; (ap = var.get_att(n)); n++) {
 +	std::cout << "\t\t" << vname << ":" << ap->name() << " = " ;
  	NcValues* vals = ap->values();
 -	cout << *vals << " ;" << endl ;
-+	std::cout << *vals << " ;" << std::endl ;
++	std::cout << *vals << " ;" << endl ;
  	delete ap;
  	delete vals;
      }
-@@ -167,20 +167,20 @@ void DumpableNcFile::dumpvars( void )
-       {"","byte","char","short","long","float","double"};
+@@ -399,19 +399,19 @@ void DumpableNcFile::dumpvars( void )
      NcVar* vp;
  
--    for(n = 0; vp = get_var(n); n++) {
+     for(n = 0; (vp = get_var(n)); n++) {
 -	cout << "\t" << types[vp->type()] << " " << vp->name() ;
-+    for(n = 0; (vp = get_var(n)); n++) {
 +	std::cout << "\t" << types[vp->type()] << " " << vp->name() ;
  
  	if (vp->num_dims() > 0) {
@@ -67,7 +46,7 @@ $NetBSD: patch-an,v 1.2 2005/02/25 09:52:47 adam Exp $
 +		std::cout << dim->name();
  		if (d < vp->num_dims()-1)
 -		  cout << ", ";		  
-+		  std::cout << ", ";
++		  std::cout << ", ";		  
  	    }
 -	    cout << ")";
 +	    std::cout << ")";
@@ -77,35 +56,31 @@ $NetBSD: patch-an,v 1.2 2005/02/25 09:52:47 adam Exp $
  	// now dump each of this variable's attributes
  	dumpatts(*vp);
      }
-@@ -189,10 +189,10 @@ void DumpableNcFile::dumpvars( void )
- void DumpableNcFile::dumpgatts( void )
+@@ -421,9 +421,9 @@ void DumpableNcFile::dumpgatts( void )
  {
      NcAtt* ap;
--    for(int n = 0; ap = get_att(n); n++) {
+     for(int n = 0; (ap = get_att(n)); n++) {
 -	cout << "\t\t" << ":" << ap->name() << " = " ;
-+    for(int n = 0; (ap = get_att(n)); n++) {
 +	std::cout << "\t\t" << ":" << ap->name() << " = " ;
  	NcValues* vals = ap->values();
 -	cout << *vals << " ;" << endl ;
-+	std::cout << *vals << " ;" << std::endl ;
++	std::cout << *vals << " ;" << endl ;
  	delete vals;
  	delete ap;
      }
-@@ -201,10 +201,10 @@ void DumpableNcFile::dumpgatts( void )
- void DumpableNcFile::dumpdata( )
+@@ -433,9 +433,9 @@ void DumpableNcFile::dumpdata( )
  {
      NcVar* vp;
--    for (int n = 0; vp = get_var(n); n++) {
+     for (int n = 0; (vp = get_var(n)); n++) {
 -	cout << " " << vp->name() << " = ";
-+    for (int n = 0; (vp = get_var(n)); n++) {
 +	std::cout << " " << vp->name() << " = ";
  	NcValues* vals = vp->values();
 -	cout << *vals << " ;" << endl ;
-+	std::cout << *vals << " ;" << std::endl ;
++	std::cout << *vals << " ;" << endl ;
  	delete vals;
      }
  }
-@@ -213,25 +213,25 @@ void dump(const char* path)
+@@ -444,25 +444,25 @@ void dump(const char* path)
  {
      DumpableNcFile nc(path);	// default is open in read-only mode
  
@@ -136,4 +111,37 @@ $NetBSD: patch-an,v 1.2 2005/02/25 09:52:47 adam Exp $
 +    std::cout << "}" << std::endl;
  }
  
+ /* Test everything for classic and 64-bit offsetfiles. If netcdf-4 is
+@@ -477,7 +477,7 @@ int
+ main( void )	// test new netCDF interface
+ {
  
+-   cout << "*** Testing C++ API with " << NUM_FORMATS 
++   std::cout << "*** Testing C++ API with " << NUM_FORMATS 
+ 	<< " different netCDF formats.\n";
+ 
+    // Set up the format constants.
+@@ -501,18 +501,18 @@ main( void )	// test new netCDF interfac
+       if (gen(file_name[i], format[i]) || 
+ 	  read(file_name[i], format[i]))
+       {
+-	 cout << "*** FAILURE with file " << file_name[i] << "\n";
++	 std::cout << "*** FAILURE with file " << file_name[i] << "\n";
+ 	 errs++;
+       }
+       else
+-	 cout << "*** SUCCESS with file " << file_name[i] << "\n";
++	 std::cout << "*** SUCCESS with file " << file_name[i] << "\n";
+    }
+ 
+-   cout << "\n*** Total number of failures: " << errs << "\n";
++   std::cout << "\n*** Total number of failures: " << errs << "\n";
+    if (errs)
+-      cout << "*** nctst FAILURE!\n";
++      std::cout << "*** nctst FAILURE!\n";
+    else
+-      cout << "*** nctst SUCCESS!\n";
++      std::cout << "*** nctst SUCCESS!\n";
+       
+    return errs;
+ }
