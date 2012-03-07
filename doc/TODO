@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10923 2012/03/07 15:12:36 wiz Exp $
+$NetBSD: TODO,v 1.10924 2012/03/07 15:26:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -583,6 +583,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.31
 	o fbreader-0.12.10
 	o fcitx-3.6.2
+	o feh-2.4
 	o felt-3.07
 	o fetchyahoo-2.14.0
 	o ffmpeg-20120127.0.9.1
@@ -658,7 +659,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gawk-4.0.0
 	o gbdfed-1.6
 	o gbrainy-2.11
-	o gcc44-4.4.7
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-9.5
@@ -996,7 +996,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3diags-1.1.12
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
-	o mpg123-1.13.4
+	o mpg123-1.13.5
 	o mpich-1.4.1p1
 	o mpop-1.0.26
 	o mserv-devel-0.41
@@ -1100,7 +1100,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pioneers-0.12.5
 	o pircbot-1.4.6
 	o pixman-0.24.4
-	o pkg-config-0.26
+	o pkg-config-0.26 [wip]
 	o pks-0.9.6
 	o planner-0.14.6
 	o plone-3.2.3 [should make plone-32?]
@@ -1288,7 +1288,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-31.2.0
+	o tea-32.0.0
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.5
