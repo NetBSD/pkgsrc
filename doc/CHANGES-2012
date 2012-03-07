@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.717 2012/03/07 14:46:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.718 2012/03/07 14:47:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1041,3 +1041,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/bind99 version 9.9.0 [taca 2012-03-07]
 	Updated audio/lame to 3.99.5 [wiz 2012-03-07]
 	Updated misc/dialog to 1.1.20120215 [wiz 2012-03-07]
+	Updated www/contao211-translations to 201202290 [taca 2012-03-07]
