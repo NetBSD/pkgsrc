@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2012/03/03 00:12:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/03/07 19:31:32 drochner Exp $
 
 BUILDLINK_TREE+=	shared-mime-info
 
@@ -25,9 +25,6 @@ shared-mime-info-buildlink-fake:
 		${CHMOD} +x ${_SMI_FAKE_UPDATEDB};			\
 	fi
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .endif # SHARED_MIME_INFO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-shared-mime-info
