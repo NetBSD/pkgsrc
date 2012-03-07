@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2012/02/20 19:59:47 tron Exp $
+# $NetBSD: Makefile,v 1.27 2012/03/07 03:53:22 minskim Exp $
 
-DISTNAME=	netbsd-www-1.6
+DISTNAME=	netbsd-www-1.7
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,10 +19,9 @@ DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
+DEPENDS+=	netbsd-doc-print>=1.3:../../meta-pkgs/netbsd-doc-print
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
 DEPENDS+=	psutils>=1.17:../../print/psutils
-DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
-DEPENDS+=	tex-german-[0-9]*:../../print/tex-german
 DEPENDS+=	w3m>=0.4:../../www/w3m
 DEPENDS+=	xplanet>=1.2.0nb3:../../x11/xplanet
 
