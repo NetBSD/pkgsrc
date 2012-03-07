@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.710 2012/03/07 03:23:26 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.711 2012/03/07 03:53:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1034,3 +1034,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/pidgin-latex to 1.2.1nb16 [minskim 2012-03-06]
 	Updated textproc/tex2page to 20060131nb13 [minskim 2012-03-07]
 	Removed print/cjk-lyx successor editors/lyx [minskim 2012-03-04]
+	Updated meta-pkgs/netbsd-www to 1.7 [minskim 2012-03-07]
