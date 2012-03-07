@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/25 05:46:01 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/07 14:47:19 taca Exp $
 #
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	contao${CT_VER}>=${CT_PKGVER}:../../www/contao${CT_VER}
 
 # Use time stamp of latest translation.
-VERS=		201202240
+VERS=		201202290
 CT_VERS=	211
 
 USE_TOOLS=	pax
