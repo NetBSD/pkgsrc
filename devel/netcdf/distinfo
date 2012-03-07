@@ -1,16 +1,8 @@
-$NetBSD: distinfo,v 1.14 2009/10/06 00:52:28 dmcmahill Exp $
+$NetBSD: distinfo,v 1.15 2012/03/07 16:11:29 adam Exp $
 
-SHA1 (netcdf-3.6.0-p1.tar.gz) = 7e02a62a1abe9c1f00222f44ed44d63def3cc3d2
-RMD160 (netcdf-3.6.0-p1.tar.gz) = f59877c5f1f70b7099f263f0a34c1b1bd12d41d9
-Size (netcdf-3.6.0-p1.tar.gz) = 842025 bytes
-SHA1 (patch-aa) = c8ecb2b6d6bb7c7573b56531530d4e43e9b383e6
-SHA1 (patch-ab) = 74b40940c888f661b122f2498b94662118e88f80
-SHA1 (patch-ac) = 82db04a3ed00b649c4f85ec0f72d1c9242244bfe
-SHA1 (patch-ad) = deadd0acf929a05b54fca49843ef1c4f9c00c9c5
-SHA1 (patch-ae) = 73e17b16250cd93eb971e0bda356069f20c5b45e
-SHA1 (patch-af) = c15c86f7bad1959b66062ff43ad319f860f8038e
-SHA1 (patch-ag) = 49b2077ec60c05c32f0fc9f782cf0c6972039989
-SHA1 (patch-ah) = 49eb830457f1544cbd63c82671ef77267d544455
-SHA1 (patch-ai) = b6f3f113e9f952c4041daf1080b56f64590d2a75
-SHA1 (patch-al) = 2157008ecc8cc0f3330a41ee8a646233f19c5dbb
-SHA1 (patch-an) = 4cbf9b83f380d36a58ee3840bcd3e5a27404b58e
+SHA1 (netcdf-4.1.3.tar.gz) = e600322478276f51612e17cca3cda38489003f81
+RMD160 (netcdf-4.1.3.tar.gz) = ac07f570873bba89a49cb2eb2275a40cbc8e502b
+Size (netcdf-4.1.3.tar.gz) = 11097157 bytes
+SHA1 (patch-an) = b3d3cf17c177779d18a2d3fcc3cb7186b3cc8374
+SHA1 (patch-configure) = b1ea50699ad3c7510e123a9f40d02683700af40c
+SHA1 (patch-nc_test4_run_bm_ar4.sh) = 1580189e460444b1169ef9d400570852e6afd90e
