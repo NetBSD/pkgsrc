@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.523 2012/03/05 16:22:08 minskim Exp $
+# $NetBSD: Makefile,v 1.524 2012/03/07 03:21:27 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -21,7 +21,6 @@ SUBDIR+=	bg5ps
 SUBDIR+=	bibtool
 SUBDIR+=	bww2tex
 SUBDIR+=	chktex
-SUBDIR+=	cjk-lyx
 SUBDIR+=	cjkutils
 SUBDIR+=	cnprint
 SUBDIR+=	cups
