@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2012/02/06 12:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/07 00:33:55 minskim Exp $
 #
 
 DISTNAME=		tex2page
 DIST_SUBDIR=		tex2page-20060131
 PKGNAME=		tex2page-20060131
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.ccs.neu.edu/home/dorai/tex2page/
 
@@ -15,6 +15,14 @@ COMMENT=		Converts TeX manuscripts into (HTML) web pages
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
+DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
+DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
+DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
@@ -35,5 +43,4 @@ do-install:
 
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../lang/guile16/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
