@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
+$NetBSD: patch-ac,v 1.2 2012/03/07 16:27:35 adam Exp $
 
---- ./include/osg/Math.orig	2008-11-23 13:35:43.000000000 +0200
-+++ ./include/osg/Math	2009-01-14 09:49:00.000000000 +0200
+--- include/osg/Math.orig	2008-11-23 13:35:43.000000000 +0200
++++ include/osg/Math	2009-01-14 09:49:00.000000000 +0200
 @@ -14,7 +14,7 @@
  #ifndef __OSG_MATH
  #define __OSG_MATH
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
  
  #include <osg/Export>
  
-@@ -200,14 +200,14 @@
+@@ -207,14 +207,14 @@
      inline bool isNaN(float v) { return _isnan(v)!=0; }
      inline bool isNaN(double v) { return _isnan(v)!=0; }
  #else
