@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2010/02/16 13:58:19 taca Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/07 14:50:57 taca Exp $
 
-DISTNAME=	HTML_Select-1.3.0
+DISTNAME=	HTML_Select-1.3.1
 CATEGORIES=	www
 
 MAINTAINER=	jdolecek@NetBSD.org
