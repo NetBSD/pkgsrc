@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
+$NetBSD: patch-ad,v 1.2 2012/03/07 16:27:35 adam Exp $
 
---- ./src/OpenThreads/pthreads/PThread.c++.orig	2009-06-22 12:51:46.000000000 +0200
-+++ ./src/OpenThreads/pthreads/PThread.c++	2009-06-22 16:55:54.000000000 +0200
-@@ -124,6 +124,15 @@
+--- src/OpenThreads/pthreads/PThread.cpp.orig	2011-06-23 20:09:26.000000000 +0000
++++ src/OpenThreads/pthreads/PThread.cpp
+@@ -135,6 +135,15 @@ private:
          {
  #if defined(__sgi)
              pthread_setrunon_np( pd->cpunum );
@@ -18,7 +18,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
  #elif defined(HAVE_PTHREAD_SETAFFINITY_NP) || defined(HAVE_THREE_PARAM_SCHED_SETAFFINITY) || defined(HAVE_TWO_PARAM_SCHED_SETAFFINITY)
              cpu_set_t cpumask;
              CPU_ZERO( &cpumask );
-@@ -537,6 +546,18 @@
+@@ -565,6 +574,18 @@ int Thread::setProcessorAffinity(unsigne
      status = pthread_attr_setscope( &thread_attr, PTHREAD_SCOPE_BOUND_NP );
      return status;
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/08/26 13:08:49 adam Exp $
  #elif defined(HAVE_PTHREAD_SETAFFINITY_NP) || defined(HAVE_THREE_PARAM_SCHED_SETAFFINITY) || defined(HAVE_TWO_PARAM_SCHED_SETAFFINITY)
  
      if (pd->isRunning && Thread::CurrentThread()==this)
-@@ -974,7 +995,16 @@
+@@ -1030,7 +1051,16 @@ int OpenThreads::SetProcessorAffinityOfC
      }
      else
      {
