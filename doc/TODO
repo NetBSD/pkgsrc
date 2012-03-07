@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10924 2012/03/07 15:26:05 wiz Exp $
+$NetBSD: TODO,v 1.10925 2012/03/07 15:28:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -678,7 +678,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ghc-7.0.4
 	o ghostscript-9.04 [wip]
 	o ghostscript-9.05
-	o gif2png-2.5.5
 	o gifsicle-1.48
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
