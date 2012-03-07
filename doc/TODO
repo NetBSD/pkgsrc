@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10925 2012/03/07 15:28:22 wiz Exp $
+$NetBSD: TODO,v 1.10926 2012/03/07 16:30:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ne-2.01
 	o nessus-4.4.1
 	o net-snmp-5.7.1
-	o netcdf-4.1.3
 	o netramet-50
 	o newmail-1.0.2
 	o newt-0.52.12
