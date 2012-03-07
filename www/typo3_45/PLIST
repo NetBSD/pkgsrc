@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/16 11:26:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/07 12:53:40 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -1947,7 +1947,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/js/workspacemenu.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/jsfunc.tbe_editor.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/listframe_loader.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/login_frameset.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/logomenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/logout.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/md5.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod.php
@@ -7421,7 +7420,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_list.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_rte.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_table.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/wizard_tsconfig.php
-${TYPO3DIR}/${SITEDIR}/_.htaccess
 ${TYPO3DIR}/${SITEDIR}/INSTALL.txt
 ${TYPO3DIR}/${SITEDIR}/README.txt
 ${TYPO3DIR}/${SITEDIR}/RELEASE_NOTES.txt
