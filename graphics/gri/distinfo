@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.8 2008/09/16 22:47:41 dholland Exp $
+$NetBSD: distinfo,v 1.9 2012/03/07 16:29:45 adam Exp $
 
-SHA1 (gri-2.12.18.tar.gz) = 978f7ebcff13bbc830b90a5d58b01acbf0321057
-RMD160 (gri-2.12.18.tar.gz) = fbf66ac8c40010749c40ed96bf5f6b0086cfa0e9
-Size (gri-2.12.18.tar.gz) = 1672471 bytes
-SHA1 (patch-aa) = 8c328a245d8c56785a0e749ce77bea70232605c8
-SHA1 (patch-ab) = 184f8a1e87436e20bfc97e6a3d85c312300e4cd0
-SHA1 (patch-ac) = b5bf77c1e0c94b8dd5eaef28890e1b7e7972ece2
+SHA1 (gri-2.12.23.tar.gz) = 75856cc100040da28ba7d667e12301293e7dd5a5
+RMD160 (gri-2.12.23.tar.gz) = 9cd7861c88f7db0ec9a23e9cc2a2971a9d763842
+Size (gri-2.12.23.tar.gz) = 1668587 bytes
+SHA1 (patch-aa) = bce867b76177e0625e36f7dead764cce9ba8cb6f
+SHA1 (patch-ab) = a6bfac5aa9d3dd1228a35d31900e3b553a293552
+SHA1 (patch-ac) = c4552643d14c32ff3539daf9193565077c2eb583
 SHA1 (patch-ae) = f3f25302a8893b3cbe23f909ffd5c8a2782c5b1f
-SHA1 (patch-ag) = 5980890ff8dd23dd259b79a5de2e3148dde383fa
