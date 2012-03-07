@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2008/09/16 22:47:41 dholland Exp $
+$NetBSD: patch-ac,v 1.4 2012/03/07 16:29:45 adam Exp $
 
---- doc/Makefile.in.orig	2008-09-08 12:35:24.000000000 -0400
-+++ doc/Makefile.in	2008-09-16 18:35:52.000000000 -0400
+--- doc/Makefile.in.orig	2011-07-06 14:09:14.000000000 +0000
++++ doc/Makefile.in
 @@ -179,31 +179,13 @@ target_alias = @target_alias@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.3 2008/09/16 22:47:41 dholland Exp $
 +MAN_DIR=$(DESTDIR)$(prefix)/${PKGMANDIR}/man1
 +INFO_DIR=$(DESTDIR)$(prefix)/${PKGINFODIR}
 +DOC_DIR=$(DESTDIR)$(prefix)/share/doc/gri
-+HTML_DIR=$(DESTDIR)$(prefix)/share/doc/html/gri
++HTML_DIR=$(DESTDIR)$(prefix)/share/doc/gri/html
 +EXAMPLES_DIR=$(DESTDIR)$(prefix)/share/examples/gri
 +
  RM = rm -f
@@ -50,7 +50,7 @@ $NetBSD: patch-ac,v 1.3 2008/09/16 22:47:41 dholland Exp $
  
  # Sun Jun  8 11:40:52 UTC 2003  [Dan Kelley]
  # This is commented-out because it's not used.  Later it will be deleted.
-@@ -898,7 +880,7 @@ install-data-local:
+@@ -900,7 +882,7 @@ install-data-local:
  #       This is handled by gri.spec [2003-may-31 Dan Kelley]
  @OS_IS_LINUX_REDHAT_FALSE@	$(INSTALL_DATA) refcard.ps                       $(DOC_DIR)
  @OS_IS_LINUX_REDHAT_FALSE@	$(INSTALL_DATA) cmdrefcard.ps                    $(DOC_DIR)
@@ -59,7 +59,7 @@ $NetBSD: patch-ac,v 1.3 2008/09/16 22:47:41 dholland Exp $
  	cat $(srcdir)/../doc/$(gri_manpage_name) | sed -e s,VERSION,${PACKAGE_VERSION}, > tmp
  	$(INSTALL_DATA)    tmp                             $(MAN_DIR)/gri.1
  	$(RM) tmp
-@@ -906,7 +888,7 @@ install-data-local:
+@@ -908,7 +890,7 @@ install-data-local:
  #	they are supposed to go, at least on linux/redhat systems [2003-jun-8 Dan Kelley]
  	$(INSTALL_DATA) $(srcdir)/../doc/gri_merge.1-skel  $(MAN_DIR)/gri_merge.1
  	$(INSTALL_DATA) $(srcdir)/../doc/gri_unpage.1-skel $(MAN_DIR)/gri_unpage.1
