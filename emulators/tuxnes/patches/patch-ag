@@ -1,13 +1,23 @@
-$NetBSD: patch-ag,v 1.1 2006/01/12 21:03:20 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2012/03/07 15:52:40 hans Exp $
 
 --- w.c.orig	2006-01-12 20:48:51.000000000 +0000
 +++ w.c
-@@ -29,7 +29,7 @@
+@@ -29,8 +29,17 @@
  #include <unistd.h>
  #if defined(__FreeBSD__)
  #include <machine/endian.h>
 -#elif defined(__NetBSD__) || defined(__OpenBSD__)
 +#elif defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
  #include <sys/endian.h>
++#elif defined(__sun)
++#include <sys/byteorder.h>
++#define LITTLE_ENDIAN 1234
++#define BIG_ENDIAN 4321
++#ifdef _BIG_ENDIAN
++#define BYTE_ORDER BIG_ENDIAN
++#else
++#define BYTE_ORDER LITTLE_ENDIAN
++#endif
  #else /* Linux */
  #include <endian.h>
+ #endif
