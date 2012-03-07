@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_isccfg_Makefile.in,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+
+* XXX: Install with proper permission.
+
+--- lib/isccfg/Makefile.in.orig	2011-03-10 04:36:16.000000000 +0000
++++ lib/isccfg/Makefile.in
+@@ -77,7 +77,7 @@ installdirs:
+ 	$(SHELL) ${top_srcdir}/mkinstalldirs ${DESTDIR}${libdir}
+ 
+ install:: timestamp installdirs
+-	${LIBTOOL_MODE_INSTALL} ${INSTALL_DATA} libisccfg.@A@ ${DESTDIR}${libdir}
++	${LIBTOOL_MODE_INSTALL} ${INSTALL_SCRIPT} libisccfg.@A@ ${DESTDIR}${libdir}
+ 
+ clean distclean::
+ 	rm -f libisccfg.@A@ timestamp

@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_lwres_Makefile.in,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+
+* XXX: Install with proper permission.
+
+--- lib/lwres/Makefile.in.orig	2007-06-19 23:47:22.000000000 +0000
++++ lib/lwres/Makefile.in
+@@ -78,7 +78,7 @@ installdirs:
+ 	$(SHELL) ${top_srcdir}/mkinstalldirs ${DESTDIR}${libdir}
+ 
+ install:: timestamp installdirs
+-	${LIBTOOL_MODE_INSTALL} ${INSTALL_DATA} liblwres.@A@ ${DESTDIR}${libdir}
++	${LIBTOOL_MODE_INSTALL} ${INSTALL_SCRIPT} liblwres.@A@ ${DESTDIR}${libdir}
+ 
+ clean distclean::
+ 	rm -f liblwres.@A@ liblwres.la timestamp

@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/03/07 14:25:00 taca Exp $
+
+Please consider running BIND under the pseudo user account "${BIND_USER}"
+in a chroot environment for security reasons.
+
+To achieve this, set the variable "named_chrootdir" in /etc/rc.conf to
+the directory with the chroot environment e.g. "${BIND_DIR}".
+
+===========================================================================
