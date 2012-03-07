@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/02/10 03:45:09 brook Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/03/07 16:17:05 adam Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_grid
@@ -11,6 +11,7 @@ bin/gdalenhance
 bin/gdalinfo
 bin/gdallocationinfo
 bin/gdalmanage
+bin/gdalsrsinfo
 bin/gdaltindex
 bin/gdaltransform
 bin/gdalwarp
@@ -20,7 +21,6 @@ bin/ogrinfo
 bin/ogrtindex
 bin/testepsg
 include/cpl_atomic_ops.h
-include/cpl_base64.h
 include/cpl_config.h
 include/cpl_config_extras.h
 include/cpl_conv.h
@@ -85,14 +85,19 @@ share/gdal/datum_shift.csv
 share/gdal/ecw_cs.wkt
 share/gdal/ellipsoid.csv
 share/gdal/epsg.wkt
+share/gdal/esri_StatePlane_extra.wkt
+share/gdal/esri_Wisconsin_extra.wkt
 share/gdal/esri_extra.wkt
 share/gdal/gcs.csv
 share/gdal/gcs.override.csv
 share/gdal/gdal_datum.csv
 share/gdal/gdalicon.png
+share/gdal/geoccs.csv
 share/gdal/gt_datum.csv
 share/gdal/gt_ellips.csv
 share/gdal/header.dxf
+share/gdal/nitf_spec.xml
+share/gdal/nitf_spec.xsd
 share/gdal/pci_datum.txt
 share/gdal/pci_ellips.txt
 share/gdal/pcs.csv
