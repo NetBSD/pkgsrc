@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10926 2012/03/07 16:30:22 adam Exp $
+$NetBSD: TODO,v 1.10927 2012/03/07 23:23:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -586,7 +586,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o feh-2.4
 	o felt-3.07
 	o fetchyahoo-2.14.0
-	o ffmpeg-20120127.0.9.1
+	o ffmpeg-20120212.0.8.10
+	o ffmpeg-20120105.0.9.1
 	o ffmpeg-20120127.0.10
 	o ffplay-20120127.0.10
 	o file-5.11
@@ -828,7 +829,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbibtex-0.2.2
 	o kbiff-4.0
 	o kdbg-2.5.1
-	o kde4-4.8
+	o kde4-4.8.1
 	o kdenlive-0.8.2.1
 	o kdevelop-4.2.3
 	o kdiff3-0.9.96
