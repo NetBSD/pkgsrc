@@ -1,4 +1,4 @@
-$NetBSD: patch-make,v 1.1.1.1 2009/07/20 14:06:02 ahoka Exp $
+$NetBSD: patch-make,v 1.2 2012/03/07 20:38:54 hans Exp $
 
 --- Makefile.orig	2003-10-04 02:22:07.000000000 +0200
 +++ Makefile
@@ -55,6 +55,18 @@ $NetBSD: patch-make,v 1.1.1.1 2009/07/20 14:06:02 ahoka Exp $
 +
  #special things for SunOS
  ifeq ($(OS), SunOS)
+ 
+@@ -62,9 +68,9 @@ ifeq ($(OS), SunOS)
+     ifeq ($(COMPILER), gcc)
+ 	CFLAGS=-O3 -Wall
+     endif
+-    CFLAGS +=`gtk-config --cflags` ${EXTRA}
++    CFLAGS +=`pkg-config --cflags gtk+-2.0` ${EXTRA}
+     OBJS += sys_sunos.o
+-    LIBS = `gtk-config --libs` -lkstat -lm
++    LIBS = `pkg-config --libs gtk+-2.0` -lkstat -lm -lX11
+     INSTALL = -m 755
+ endif
  
 @@ -78,4 +84,4 @@ clean:
  	rm -f bubblemon *.o *.bb* *.gcov gmon.* *.da *~
