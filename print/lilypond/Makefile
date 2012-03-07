@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2012/03/03 00:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2012/03/07 15:27:30 minskim Exp $
 #
 
 DISTNAME=	lilypond-2.14.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v2.14/
 
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lilypond.org/
 COMMENT=	GNU Music Typesetter
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -54,5 +57,4 @@ USE_TOOLS+= flex
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
