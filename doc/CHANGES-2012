@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.722 2012/03/07 15:27:50 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.723 2012/03/07 15:28:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1048,3 +1048,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/cdrtools to 3.01alpha07 [wiz 2012-03-07]
 	Updated www/libmicrohttpd to 0.9.19 [wiz 2012-03-07]
 	Updated print/lilypond to 2.14.2nb4 [minskim 2012-03-07]
+	Updated graphics/gif2png to 2.5.5 [wiz 2012-03-07]
