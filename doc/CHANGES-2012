@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.725 2012/03/08 01:31:28 obache Exp $
+$NetBSD: CHANGES-2012,v 1.726 2012/03/08 09:01:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1055,3 +1055,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/osg to 3.0.1 [adam 2012-03-07]
 	Updated graphics/gri to 2.12.23 [adam 2012-03-07]
 	Updated www/ja-trac to 0.12.3pl2 [obache 2012-03-08]
+	Updated devel/p5-CPAN-Meta to 2.120630 [sno 2012-03-08]
