@@ -1,14 +1,18 @@
-$NetBSD: patch-ad,v 1.1 2006/03/14 02:10:10 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2012/03/08 10:35:24 hans Exp $
 
 --- pcap2ipstat/pcap2ipstat.c.orig	2006-03-14 02:07:53.000000000 +0000
 +++ pcap2ipstat/pcap2ipstat.c
-@@ -7,9 +7,14 @@
+@@ -7,9 +7,18 @@
  #include "checksum.h"
  
  #include <net/if.h>
 +#if defined(__DragonFly__)
 +#include <net/ethernet.h>
 +#include <net/ppp_layer/ppp_defs.h>
++#elif defined(__sun)
++#include <sys/ethernet.h>
++#include <netinet/if_ether.h>
++#include <net/ppp_defs.h>
 +#else
  #include <net/if_ether.h>
  #include <net/ethertypes.h>
@@ -17,3 +21,19 @@ $NetBSD: patch-ad,v 1.1 2006/03/14 02:10:10 joerg Exp $
  #include <netinet/tcp.h>
  #include <netinet/udp.h>
  
+@@ -184,7 +193,6 @@ void FilterPPPoE(u_char *Ptr,
+ 
+ {
+  const u_char *PH;
+- bpf_u_int32 Length;
+  struct pcap_pkthdr NewPktHdr;
+  u_char *NewPktData;
+ 
+@@ -196,7 +204,6 @@ void FilterPPPoE(u_char *Ptr,
+  /* No data packet */
+  if (PH[1]!=0) return;
+ 
+- Length=(PH[4]<<8)+PH[5];
+  if ((NewPktData=StripPkt(PktHdr,
+                           PktData,
+                           PPPOE_HEADERLEN,

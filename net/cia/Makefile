@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/02/11 20:27:45 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/08 10:35:24 hans Exp $
 
 DISTNAME=	cia-20030922
 CATEGORIES=	net
@@ -12,6 +12,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOC_DIR=	${PREFIX}/share/doc/cia
 EXAMPLES_DIR=	${PREFIX}/share/examples/cia
+
+CFLAGS.SunOS+=	-DETHERTYPE_PPPOE=ETHERTYPE_PPPOES
+CFLAGS.SunOS+=	-Du_int64_t=uint64_t -Du_int32_t=uint32_t
+CFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int8_t=uint8_t
 
 USE_BSD_MAKEFILE=	yes
 
