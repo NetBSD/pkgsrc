@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2009/04/09 00:48:11 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/08 01:09:35 joerg Exp $
 
-DISTNAME=	genrpm-1.1
+DISTNAME=	genrpm-1.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,18 +28,9 @@ do-build:
 			-e 's|@SH@|${SH}|g'				\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
-	# pre-created man-pages are "mandoc" pages, these OS need "man",
-	# so regen the .0 page
-	nroff -man ${WRKSRC}/genrpm.8 >${WRKSRC}/genrpm.0
-.endif
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_SCRIPT} ${WRKSRC}/genrpm ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/genrpm.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8
 	${INSTALL_MAN} ${WRKSRC}/genrpm.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
