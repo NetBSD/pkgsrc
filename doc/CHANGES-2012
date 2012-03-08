@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.740 2012/03/08 14:10:39 he Exp $
+$NetBSD: CHANGES-2012,v 1.741 2012/03/08 14:58:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added graphics/p5-GraphViz2 version 1.12 [fhajny 2012-03-08]
 	Updated lang/parrot to 3.10.0 [he 2012-03-08]
 	Updated lang/parrot to 3.11.0 [he 2012-03-08]
+	Updated www/firefox-l10n to 10.0.2 [obache 2012-03-08]
