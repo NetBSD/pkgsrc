@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.733 2012/03/08 09:51:01 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.734 2012/03/08 09:54:51 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Const-Fast to 0.011 [sno 2012-03-08]
 	Updated audio/easytag to 2.1.7 [wiz 2012-03-08]
 	Removed audio/easytag-current successor audio/easytag [wiz 2012-03-08]
+	Updated devel/p5-Module-Runtime to 0.013 [sno 2012-03-08]
