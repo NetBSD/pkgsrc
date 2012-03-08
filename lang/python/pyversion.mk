@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.95 2012/02/26 09:17:41 sbd Exp $
+# $NetBSD: pyversion.mk,v 1.96 2012/03/08 11:44:06 wiz Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -9,7 +9,7 @@
 #	The preferred Python version to use.
 #
 #	Possible values: 24 25 26 27 31
-#	Default: 26
+#	Default: 27
 #
 # === Package-settable variables ===
 #
@@ -47,13 +47,13 @@
 #	The prefix to use in PKGNAME for extensions which are meant
 #	to be installed for multiple Python versions.
 #
-#	Example: py26
+#	Example: py27
 #
 # PYVERSSUFFIX
 #	The suffix to executables and in the library path, equal to
 #	sys.version[0:3].
 #
-#	Example: 2.6
+#	Example: 2.7
 #
 # Keywords: python
 #
@@ -76,7 +76,7 @@ PYTHON_VERSION_REQD?= ${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
 BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
-PYTHON_VERSION_DEFAULT?=		26
+PYTHON_VERSION_DEFAULT?=		27
 .if ${PYTHON_VERSIONS_INCLUDE_3X:U:tl} == "yes"
 PYTHON_VERSIONS_ACCEPTED?=		31 27 26 25 24
 .else
