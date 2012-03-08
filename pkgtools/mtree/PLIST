@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/14 19:23:09 jlam Exp $
-man/cat8/mtree.0
+@comment $NetBSD: PLIST,v 1.3 2012/03/08 01:11:21 joerg Exp $
 man/man8/mtree.8
 sbin/mtree
