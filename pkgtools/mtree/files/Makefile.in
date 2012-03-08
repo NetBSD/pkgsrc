@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.8 2009/02/10 00:11:53 joerg Exp $
+#	$NetBSD: Makefile.in,v 1.9 2012/03/08 01:11:21 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -8,7 +8,6 @@ sbindir=	@sbindir@
 mandir=		@mandir@
 
 man8dir=	$(mandir)/man8
-cat8dir=	$(mandir)/cat8
 
 CC=		@CC@
 CCLD=		$(CC)
@@ -43,7 +42,5 @@ distclean: clean
 install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(sbindir)
 	$(INSTALL) -m 755 -d ${DESTDIR}$(man8dir)
-	$(INSTALL) -m 755 -d ${DESTDIR}$(cat8dir)
 	$(INSTALL) $(PROG) ${DESTDIR}$(sbindir)
 	$(INSTALL) -m 444 $(PROG).8 ${DESTDIR}$(man8dir)/$(PROG).8
-	$(INSTALL) -m 444 $(PROG).cat8 ${DESTDIR}$(cat8dir)/$(PROG).0
