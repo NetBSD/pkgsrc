@@ -1,0 +1,6 @@
+The 'Log::Handler' is a object oriented handler for logging, tracing and
+debugging. It is very easy to use and provides a simple interface for
+multiple output objects with lots of configuration parameters. You can
+easily filter the amount of logged information on a per-output base,
+define priorities, create patterns to format the messages and reload the
+complete logging machine.

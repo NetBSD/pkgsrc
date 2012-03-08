@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/08 11:23:30 fhajny Exp $
+
+SHA1 (Log-Handler-0.72.tar.gz) = caa9c71eb19a5e0140c7e7d605441d4a97a1397a
+RMD160 (Log-Handler-0.72.tar.gz) = 69f9d096c9a5ec094c9778c6cda3231a71478744
+Size (Log-Handler-0.72.tar.gz) = 72196 bytes
