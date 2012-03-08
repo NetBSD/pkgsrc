@@ -1,14 +1,24 @@
-# $NetBSD: Makefile,v 1.24 2009/02/10 00:11:53 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2012/03/08 01:11:21 joerg Exp $
 #
-# This version of mtree installs into ${PKG_TOOLS_BIN}.
-#
+
+DISTNAME=		mtree-20120308
+CATEGORIES=		pkgtools sysutils
+MASTER_SITES=		# empty
+DISTFILES=		# empty
+
+MAINTAINER=		sbd@NetBSD.org
+HOMEPAGE=		http://www.NetBSD.org/
+COMMENT=		Utility for mapping and checking directory hierarchies
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "Makefile.common"
+GNU_CONFIGURE=		yes
 
-CATEGORIES=	pkgtools
+USE_FEATURES=		nbcompat
 
-NO_PKGTOOLS_REQD_CHECK=	# defined
+.include "../../mk/bsd.prefs.mk"
+
+do-extract:
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
