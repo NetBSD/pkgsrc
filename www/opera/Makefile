@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2012/03/02 12:00:14 asau Exp $
+# $NetBSD: Makefile,v 1.93 2012/03/08 11:24:01 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -34,6 +34,8 @@ OPERA_PKG_BUILD=	1250
 OPERA_PKG_VERSION=	11.61
 OPERA_PKG_VERSION_DIR=	1161
 
+PLIST_VARS+=		ia32w
+
 .if ${EMUL_OPSYS} == "linux"
 EMUL_MODULES.linux=	base x11 fontconfig
 EMUL_REQD=		suse>=10.0
@@ -42,6 +44,9 @@ OPERA_OPSYS_SUBDIR=	linux
 .if !defined(EMUL_IS_NATIVE) && ${OPSYS} == "NetBSD"
 TOOLS_CREATE+=		md5
 TOOLS_SCRIPT.md5=	/usr/bin/md5 -n "$$2" | { read sum file; echo $$sum; }
+.endif
+.if ${EMUL_ARCH} == "x86_64"
+PLIST.ia32w=		yes
 .endif
 
 .elif ${EMUL_OPSYS} == "freebsd"
