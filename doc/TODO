@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10928 2012/03/08 12:13:10 wiz Exp $
+$NetBSD: TODO,v 1.10929 2012/03/08 12:15:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -586,7 +586,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o feh-2.4
 	o felt-3.07
 	o fetchyahoo-2.14.0
-	o ffmpeg-20120212.0.8.10
+	o ffmpeg-20120112.0.8.10
 	o ffmpeg-20120105.0.9.1
 	o ffmpeg-20120127.0.10
 	o ffplay-20120127.0.10
@@ -987,9 +987,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-5.3.0
 	o moc-2.4.4
-	o modular-xorg-server-1.12.0
 	o modular-xorg-server-1.11.2 [wip]
 	o modular-xorg-server-1.11.4
+	o modular-xorg-server-1.12.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-2.10.9
