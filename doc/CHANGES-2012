@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.744 2012/03/08 17:17:07 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.745 2012/03/08 22:47:17 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/mame to 0.145 [wiz 2012-03-08]
 	Updated emulators/mess to 0.145 [wiz 2012-03-08]
 	Updated graphics/gif2png to 2.5.7 [wiz 2012-03-08]
+	Updated sysutils/flashrom to 0.9.5.2 [jakllsch 2012-03-08]
