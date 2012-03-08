@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.41 2012/03/06 10:31:08 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.42 2012/03/08 06:44:58 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -177,3 +177,5 @@ Pullup ticket #3696 - requested by obache
 mail/imp: security update
 Pullup ticket #3698 - requested by pettai
 security/openssl: security patch
+Pullup ticket #3699 - requested by he
+misc/openoffice3: build fix
