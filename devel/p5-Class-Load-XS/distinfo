@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/02/01 19:17:15 rhaen Exp $
+$NetBSD: distinfo,v 1.3 2012/03/08 10:07:43 sno Exp $
 
-SHA1 (Class-Load-XS-0.03.tar.gz) = 2b3f2adef5039003f04b751d0787cb31f718c28e
-RMD160 (Class-Load-XS-0.03.tar.gz) = c6ae70fe74ae3d29993bdd6d8decd9bc2471d569
-Size (Class-Load-XS-0.03.tar.gz) = 54629 bytes
+SHA1 (Class-Load-XS-0.04.tar.gz) = ef672cc73e4a40284e80ff5a67dc33a642acf113
+RMD160 (Class-Load-XS-0.04.tar.gz) = 17b0606d147a07110948ad24ae0cdadc0fc2f167
+Size (Class-Load-XS-0.04.tar.gz) = 55168 bytes
