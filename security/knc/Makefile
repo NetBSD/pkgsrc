@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/14 20:15:27 elric Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/08 01:13:42 joerg Exp $
 #
 
 DISTNAME=	knc-1.6.1
@@ -12,9 +12,13 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		nroff
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
+BUILD_DIRS=	bin
+BUILD_TARGET=	knc
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/man/knc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/krb5.buildlink3.mk"
 .if ${KRB5_TYPE} == "heimdal"
