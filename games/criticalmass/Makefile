@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/01/28 11:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/03/08 01:03:40 joerg Exp $
 #
 
 DISTNAME=	CriticalMass-1.0.2
@@ -19,8 +19,9 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
+.include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
