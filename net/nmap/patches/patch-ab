@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.16 2011/01/31 23:22:48 pettai Exp $
+$NetBSD: patch-ab,v 1.17 2012/03/08 11:43:47 wiz Exp $
 
 --- configure.orig	2011-01-21 21:00:04.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.16 2011/01/31 23:22:48 pettai Exp $
  else
  
 -	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
-+	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
++	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.7 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
  	  test "$am_cv_pathless_PYTHON" = none && break
  	  prog="import sys
  # split strings by '.' and convert to numeric.  Append some zeros
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.16 2011/01/31 23:22:48 pettai Exp $
  else
  
 -	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
-+	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
++	for am_cv_pathless_PYTHON in python python2 python3 python3.0 python2.7 python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0 none; do
  	  test "$am_cv_pathless_PYTHON" = none && break
  	  prog="import sys
  # split strings by '.' and convert to numeric.  Append some zeros
