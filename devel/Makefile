@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1567 2012/02/25 05:16:28 obache Exp $
+# $NetBSD: Makefile,v 1.1568 2012/03/08 09:59:43 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -862,6 +862,7 @@ SUBDIR+=	p5-Module-CoreList
 SUBDIR+=	p5-Module-Dependency
 SUBDIR+=	p5-Module-ExtractUse
 SUBDIR+=	p5-Module-Find
+SUBDIR+=	p5-Module-Implementation
 SUBDIR+=	p5-Module-Install
 SUBDIR+=	p5-Module-Install-PadrePlugin
 SUBDIR+=	p5-Module-Install-RTx
