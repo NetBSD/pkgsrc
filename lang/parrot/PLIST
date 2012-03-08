@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/02/09 10:39:25 he Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/03/08 10:11:23 he Exp $
 bin/ops2c
 bin/parrot
 bin/parrot-nqp
@@ -13,6 +13,7 @@ bin/winxed
 include/parrot/${PKGVERSION}/imcc/api.h
 include/parrot/${PKGVERSION}/imcc/embed.h
 include/parrot/${PKGVERSION}/imcc/yyscanner.h
+include/parrot/${PKGVERSION}/parrot/alarm.h
 include/parrot/${PKGVERSION}/parrot/api.h
 include/parrot/${PKGVERSION}/parrot/caches.h
 include/parrot/${PKGVERSION}/parrot/call.h
@@ -24,10 +25,11 @@ include/parrot/${PKGVERSION}/parrot/core_pmcs.h
 include/parrot/${PKGVERSION}/parrot/core_types.h
 include/parrot/${PKGVERSION}/parrot/datatypes.h
 include/parrot/${PKGVERSION}/parrot/debugger.h
+include/parrot/${PKGVERSION}/parrot/disassemble.h
 include/parrot/${PKGVERSION}/parrot/dynext.h
-include/parrot/${PKGVERSION}/parrot/embed.h
 include/parrot/${PKGVERSION}/parrot/encoding.h
 include/parrot/${PKGVERSION}/parrot/enums.h
+include/parrot/${PKGVERSION}/parrot/events.h
 include/parrot/${PKGVERSION}/parrot/exceptions.h
 include/parrot/${PKGVERSION}/parrot/exit.h
 include/parrot/${PKGVERSION}/parrot/extend.h
@@ -80,11 +82,13 @@ include/parrot/${PKGVERSION}/parrot/vtables.h
 include/parrot/${PKGVERSION}/parrot/warnings.h
 include/parrot/${PKGVERSION}/pmc/dummy
 include/parrot/${PKGVERSION}/pmc/pmc_addrregistry.h
+include/parrot/${PKGVERSION}/pmc/pmc_alarm.h
 include/parrot/${PKGVERSION}/pmc/pmc_arrayiterator.h
 include/parrot/${PKGVERSION}/pmc/pmc_bigint.h
 include/parrot/${PKGVERSION}/pmc/pmc_bignum.h
 include/parrot/${PKGVERSION}/pmc/pmc_boolean.h
 include/parrot/${PKGVERSION}/pmc/pmc_bytebuffer.h
+include/parrot/${PKGVERSION}/pmc/pmc_callback.h
 include/parrot/${PKGVERSION}/pmc/pmc_callcontext.h
 include/parrot/${PKGVERSION}/pmc/pmc_capture.h
 include/parrot/${PKGVERSION}/pmc/pmc_class.h
@@ -144,6 +148,7 @@ include/parrot/${PKGVERSION}/pmc/pmc_packfilesegment.h
 include/parrot/${PKGVERSION}/pmc/pmc_packfileview.h
 include/parrot/${PKGVERSION}/pmc/pmc_parrotinterpreter.h
 include/parrot/${PKGVERSION}/pmc/pmc_parrotlibrary.h
+include/parrot/${PKGVERSION}/pmc/pmc_pmclist.h
 include/parrot/${PKGVERSION}/pmc/pmc_pmcproxy.h
 include/parrot/${PKGVERSION}/pmc/pmc_pointer.h
 include/parrot/${PKGVERSION}/pmc/pmc_ptr.h
@@ -195,6 +200,7 @@ lib/parrot/${PKGVERSION}/include/errors.pasm
 lib/parrot/${PKGVERSION}/include/except_severity.pasm
 lib/parrot/${PKGVERSION}/include/except_types.pasm
 lib/parrot/${PKGVERSION}/include/fp_equality.pasm
+lib/parrot/${PKGVERSION}/include/green_threads.pir
 lib/parrot/${PKGVERSION}/include/hash_key_type.pasm
 lib/parrot/${PKGVERSION}/include/hllmacros.pir
 lib/parrot/${PKGVERSION}/include/iglobals.pasm
@@ -498,6 +504,7 @@ lib/parrot/${PKGVERSION}/tools/lib/Parrot/H2inc.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/DefaultTests.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/Options.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/Smoke.pm
+lib/parrot/${PKGVERSION}/tools/lib/Parrot/Harness/TestSets.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Headerizer.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/Headerizer/Functions.pm
 lib/parrot/${PKGVERSION}/tools/lib/Parrot/IO/Directory.pm
@@ -547,11 +554,13 @@ share/doc/parrot/${PKGVERSION}/README_win32.pod
 share/doc/parrot/${PKGVERSION}/RESPONSIBLE_PARTIES
 share/doc/parrot/${PKGVERSION}/TODO
 src/parrot/${PKGVERSION}/pmc/addrregistry.dump
+src/parrot/${PKGVERSION}/pmc/alarm.dump
 src/parrot/${PKGVERSION}/pmc/arrayiterator.dump
 src/parrot/${PKGVERSION}/pmc/bigint.dump
 src/parrot/${PKGVERSION}/pmc/bignum.dump
 src/parrot/${PKGVERSION}/pmc/boolean.dump
 src/parrot/${PKGVERSION}/pmc/bytebuffer.dump
+src/parrot/${PKGVERSION}/pmc/callback.dump
 src/parrot/${PKGVERSION}/pmc/callcontext.dump
 src/parrot/${PKGVERSION}/pmc/capture.dump
 src/parrot/${PKGVERSION}/pmc/class.dump
@@ -611,6 +620,7 @@ src/parrot/${PKGVERSION}/pmc/packfilesegment.dump
 src/parrot/${PKGVERSION}/pmc/packfileview.dump
 src/parrot/${PKGVERSION}/pmc/parrotinterpreter.dump
 src/parrot/${PKGVERSION}/pmc/parrotlibrary.dump
+src/parrot/${PKGVERSION}/pmc/pmclist.dump
 src/parrot/${PKGVERSION}/pmc/pmcproxy.dump
 src/parrot/${PKGVERSION}/pmc/pointer.dump
 src/parrot/${PKGVERSION}/pmc/ptr.dump
