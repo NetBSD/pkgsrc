@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.4 2004/02/04 20:38:00 markd Exp $
+$NetBSD: patch-an,v 1.5 2012/03/08 09:07:28 shattered Exp $
 
---- klaptopdaemon/portable.cpp.orig	2003-11-30 22:50:47.000000000 +1300
+--- klaptopdaemon/portable.cpp.orig	2008-02-13 09:38:14.000000000 +0000
 +++ klaptopdaemon/portable.cpp
-@@ -2414,10 +2414,14 @@ laptop_portable::software_suspend_set_ma
+@@ -2438,10 +2438,14 @@ laptop_portable::software_suspend_set_ma
  #include <sys/ioctl.h>
  #include <sys/stat.h>
  #include <machine/apmvar.h>
@@ -19,7 +19,7 @@ $NetBSD: patch-an,v 1.4 2004/02/04 20:38:00 markd Exp $
  // Scott Presnell, srp@zgi.com, srp@tworoads.net
  // Fri Jun 29 17:21:25 PDT 2001
  // Tested on Dell I4K running NetBSD 1.5R
-@@ -2439,6 +2443,7 @@ laptop_portable::has_power_management()
+@@ -2463,6 +2467,7 @@ laptop_portable::has_power_management()
         }
  
         struct apm_power_info info;
@@ -27,7 +27,7 @@ $NetBSD: patch-an,v 1.4 2004/02/04 20:38:00 markd Exp $
         ret=ioctl(fd, APM_IOC_GETPOWER, &info);
         ::close(fd);
  
-@@ -2466,6 +2471,7 @@ int laptop_portable::has_battery_time()
+@@ -2490,6 +2495,7 @@ int laptop_portable::has_battery_time()
           return 0;
  
         struct apm_power_info info;
@@ -35,7 +35,7 @@ $NetBSD: patch-an,v 1.4 2004/02/04 20:38:00 markd Exp $
         ret=ioctl(fd, APM_IOC_GETPOWER, &info);
         ::close(fd);
  
-@@ -2639,6 +2645,15 @@ laptop_portable::apm_set_mask(bool , boo
+@@ -2661,6 +2667,15 @@ laptop_portable::apm_set_mask(bool , boo
  
  
  //
@@ -51,7 +51,7 @@ $NetBSD: patch-an,v 1.4 2004/02/04 20:38:00 markd Exp $
  //     return current battery state
  //
  struct power_result laptop_portable::poll_battery_state()
-@@ -2652,6 +2667,7 @@ struct power_result laptop_portable::pol
+@@ -2674,6 +2689,7 @@ struct power_result laptop_portable::pol
                 goto bad;
  
                 struct apm_power_info info;
@@ -59,7 +59,7 @@ $NetBSD: patch-an,v 1.4 2004/02/04 20:38:00 markd Exp $
                 ret=ioctl(fd, APM_IOC_GETPOWER, &info);
                 ::close(fd);
         
-@@ -2714,7 +2730,16 @@ laptop_portable::get_brightness()
+@@ -2736,7 +2752,16 @@ laptop_portable::get_brightness()
  }
  
  bool
@@ -77,10 +77,16 @@ $NetBSD: patch-an,v 1.4 2004/02/04 20:38:00 markd Exp $
  {
  	// INSERT HERE
  	current = 0;
-@@ -2772,6 +2797,12 @@ laptop_portable::get_battery_status(int 
+@@ -2794,6 +2819,18 @@ laptop_portable::get_battery_status(int 
  	values.append(s);
  }
  
++bool
++laptop_portable::has_software_suspend(int /*type*/)
++{
++	return false; // (::has_software_suspend(type));
++}
++
 +void
 +laptop_portable::software_suspend_set_mask(bool hibernate)
 +{
