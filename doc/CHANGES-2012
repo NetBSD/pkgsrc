@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.742 2012/03/08 17:11:20 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.743 2012/03/08 17:13:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1082,3 +1082,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/parrot to 3.11.0 [he 2012-03-08]
 	Updated www/firefox-l10n to 10.0.2 [obache 2012-03-08]
 	Updated emulators/mame to 0.145 [wiz 2012-03-08]
+	Updated emulators/mess to 0.145 [wiz 2012-03-08]
