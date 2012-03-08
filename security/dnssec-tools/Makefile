@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/12/29 16:37:18 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/08 01:14:24 joerg Exp $
 #
 
 DISTNAME=	dnssec-tools-1.10
@@ -55,7 +55,12 @@ INSTALLATION_DIRS=	${EGDIR}
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/sbin/dnssec-keygen)
 CONFIGURE_ARGS+=	BIND_DNSSEC_KEYGEN=/usr/sbin/dnssec-keygen
+.endif
+.if ${OPSYS} == "NetBSD" && exists(/usr/sbin/dnssec-signzone)
 CONFIGURE_ARGS+=	BIND_DNSSEC_SIGNZONE=/usr/sbin/dnssec-signzone
+.endif
+.if ${OPSYS} == "NetBSD" && exists(/usr/sbin/named-checkzone)
+CONFIGURE_ARGS+=	BIND_DNSSEC_CHECKZONE=/usr/sbin/named-checkzone
 .endif
 
 post-install:
