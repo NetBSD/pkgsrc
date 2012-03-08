@@ -1,0 +1,6 @@
+This module provides a Perl interface to the amazing Graphviz, an open source
+graph visualization tool from AT&T.
+
+It is called GraphViz2 so that pre-existing code using (the Perl module)
+GraphViz continues to work. GraphViz2 V 1 is not backwards compatible with
+GraphViz V 2, despite the considerable similarity.
