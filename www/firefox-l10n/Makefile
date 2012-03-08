@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/11/12 13:33:18 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/08 14:57:23 obache Exp $
 #
 
-FIREFOX_VER=	8.0
+FIREFOX_VER=	10.0.2
 PKGNAME=	firefox-l10n-${FIREFOX_VER}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -18,8 +18,8 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-FIREFOX_LOCALES=af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de	\
-		el en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et	\
+FIREFOX_LOCALES=af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da	\
+		de el en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et	\
 		eu fa fi fr fy-NL ga-IE gd gl gu-IN he hi-IN hr hu	\
 		hy-AM id is it ja kk kn ko ku lg lt lv mai mk ml mr	\
 		nb-NO nl nn-NO nso or pa-IN pl pt-BR pt-PT rm ro ru	\
@@ -28,12 +28,6 @@ FIREFOX_LOCALES=af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de	\
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/extensions
 XPI_FILES=		${FIREFOX_LOCALES:=.xpi}
-
-# remove head of 3 empty lines
-SUBST_CLASSES+=		chop
-SUBST_STAGE.chop=	post-configure
-SUBST_FILES.chop=	ta-LK/install.rdf
-SUBST_SED.chop=		-e '1,3d'
 
 .include "../../devel/xulrunner/xpi.mk"
 .include "../../mk/bsd.pkg.mk"
