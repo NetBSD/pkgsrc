@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/26 06:05:00 agc Exp $
+$NetBSD: distinfo,v 1.2 2012/03/08 01:12:51 joerg Exp $
 
 SHA1 (libvirt-0.9.3.tar.gz) = e25850d270a24441305dd92935209efa993b479d
 RMD160 (libvirt-0.9.3.tar.gz) = a01dbe29e23225706afcff74146aa3b224ba04bb
@@ -6,3 +6,5 @@ Size (libvirt-0.9.3.tar.gz) = 15958983 bytes
 SHA1 (patch-aa) = 12269e5e0dd650423df5e31dd6f8069af04532c3
 SHA1 (patch-ab) = 66757963d769cc7a12c5dfa4fe035ec9417a0512
 SHA1 (patch-ac) = af670f3e9af0dc4053c3e8584ed815f03bb7bb56
+SHA1 (patch-gnulib-lib-fflush.c) = dce77a7b18bdf9fb20b31dcf6d473bd51a63dba9
+SHA1 (patch-gnulib-lib-fseeko.c) = d8e4107166baba980e20add7d267510d7da9be9a
