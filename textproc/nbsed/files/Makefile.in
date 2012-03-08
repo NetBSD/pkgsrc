@@ -1,4 +1,4 @@
-# $Id: Makefile.in,v 1.4 2004/08/27 03:45:08 jlam Exp $
+# $Id: Makefile.in,v 1.5 2012/03/08 01:12:07 joerg Exp $
 
 @SET_MAKE@
 SHELL = @SHELL@
@@ -79,10 +79,6 @@ install: sed
 	@f=`echo sed.1|sed '$(transform)'`; \
 	echo "$(INSTALL_DATA) sed.1 $(DESTDIR)$(mandir)/man1/$$f"; \
 	$(INSTALL_DATA) sed.1 $(DESTDIR)$(mandir)/man1/$$f
-	$(mkinstalldirs) $(DESTDIR)$(mandir)/cat1
-	@f=`echo sed.cat1|sed '$(transform);s,\.cat1$$,.0,'`; \
-	echo "$(INSTALL_DATA) sed.cat1 $(DESTDIR)$(mandir)/cat1/$$f"; \
-	$(INSTALL_DATA) sed.cat1 $(DESTDIR)$(mandir)/cat1/$$f
 
 uninstall:
 	@f=`echo sed|sed '$(transform)'`; \
