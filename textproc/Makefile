@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2012/03/04 02:30:17 taca Exp $
+# $NetBSD: Makefile,v 1.615 2012/03/08 11:39:52 fhajny Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -392,12 +392,14 @@ SUBDIR+=	p5-Text-WikiCreole
 SUBDIR+=	p5-Text-WikiFormat
 SUBDIR+=	p5-Text-WrapI18N
 SUBDIR+=	p5-Text-Wrapper
+SUBDIR+=	p5-Text-Xslate
 SUBDIR+=	p5-Text-vCard
 SUBDIR+=	p5-Text-vFile-asData
 SUBDIR+=	p5-XML-Atom
 SUBDIR+=	p5-XML-Atom-SimpleFeed
 SUBDIR+=	p5-XML-Atom-Stream
 SUBDIR+=	p5-XML-AutoWriter
+SUBDIR+=	p5-XML-Bare
 SUBDIR+=	p5-XML-Checker
 SUBDIR+=	p5-XML-Clean
 SUBDIR+=	p5-XML-DOM
@@ -438,6 +440,7 @@ SUBDIR+=	p5-XML-SemanticDiff
 SUBDIR+=	p5-XML-Simple
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-XML-Tidy
+SUBDIR+=	p5-XML-Tiny
 SUBDIR+=	p5-XML-TreeBuilder
 SUBDIR+=	p5-XML-TreePP
 SUBDIR+=	p5-XML-Twig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1568 2012/03/08 09:59:43 sno Exp $
+# $NetBSD: Makefile,v 1.1569 2012/03/08 11:39:52 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -615,6 +615,7 @@ SUBDIR+=	p5-Config-GitLike
 SUBDIR+=	p5-Config-Grammar
 SUBDIR+=	p5-Config-INI
 SUBDIR+=	p5-Config-IniFiles
+SUBDIR+=	p5-Config-Properties
 SUBDIR+=	p5-Config-Std
 SUBDIR+=	p5-Config-Tiny
 SUBDIR+=	p5-Const-Fast
@@ -634,6 +635,7 @@ SUBDIR+=	p5-Data-Dumper-Concise
 SUBDIR+=	p5-Data-Dumper-Names
 SUBDIR+=	p5-Data-Hierarchy
 SUBDIR+=	p5-Data-Integer
+SUBDIR+=	p5-Data-MessagePack
 SUBDIR+=	p5-Data-OptList
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Pageset
@@ -773,6 +775,7 @@ SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Gtk2-GladeXML
 SUBDIR+=	p5-Guard
 SUBDIR+=	p5-Hash-Case
+SUBDIR+=	p5-Hash-FieldHash
 SUBDIR+=	p5-Hash-Flatten
 SUBDIR+=	p5-Hash-Merge
 SUBDIR+=	p5-Hash-MoreUtils
@@ -838,6 +841,7 @@ SUBDIR+=	p5-Log-Dispatch
 SUBDIR+=	p5-Log-Dispatch-Config
 SUBDIR+=	p5-Log-Dispatch-DBI
 SUBDIR+=	p5-Log-Dispatch-FileRotate
+SUBDIR+=	p5-Log-Handler
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Log-LogLite
 SUBDIR+=	p5-Log-Report
@@ -1029,6 +1033,7 @@ SUBDIR+=	p5-Scalar-Util-Refcount
 SUBDIR+=	p5-Schedule-RateLimiter
 SUBDIR+=	p5-Scope-Guard
 SUBDIR+=	p5-Scope-Upper
+SUBDIR+=	p5-Set-Array
 SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Set-Scalar
@@ -1146,6 +1151,7 @@ SUBDIR+=	p5-Tie-Cache
 SUBDIR+=	p5-Tie-Cache-LRU
 SUBDIR+=	p5-Tie-Cache-LRU-Expires
 SUBDIR+=	p5-Tie-File
+SUBDIR+=	p5-Tie-Function
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Tie-LLHash
 SUBDIR+=	p5-Tie-RefHash
