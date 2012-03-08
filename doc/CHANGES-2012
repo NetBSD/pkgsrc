@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.737 2012/03/08 10:07:53 sno Exp $
+$NetBSD: CHANGES-2012,v 1.738 2012/03/08 11:39:52 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1067,3 +1067,14 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Module-Implementation version 0.06 [sno 2012-03-08]
 	Updated devel/p5-Class-Load to 0.18 [sno 2012-03-08]
 	Updated devel/p5-Class-Load-XS to 0.04 [sno 2012-03-08]
+	Added devel/p5-Config-Properties version 1.73 [fhajny 2012-03-08]
+	Added devel/p5-Data-MessagePack version 0.39 [fhajny 2012-03-08]
+	Added devel/p5-Hash-FieldHash version 0.12 [fhajny 2012-03-08]
+	Added devel/p5-Log-Handler version 0.72 [fhajny 2012-03-08]
+	Added devel/p5-Set-Array version 0.24 [fhajny 2012-03-08]
+	Added devel/p5-Tie-Function version 0.02 [fhajny 2012-03-08]
+	Added textproc/p5-XML-Bare version 0.47 [fhajny 2012-03-08]
+	Added textproc/p5-XML-Tiny version 2.06 [fhajny 2012-03-08]
+	Added www/p5-HTML-Entities-Interpolate version 1.04 [fhajny 2012-03-08]
+	Added textproc/p5-Text-Xslate version 1.5.7 [fhajny 2012-03-08]
+	Added graphics/p5-GraphViz2 version 1.12 [fhajny 2012-03-08]
