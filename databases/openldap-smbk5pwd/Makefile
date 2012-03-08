@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/17 10:20:51 adam Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/08 05:01:03 dholland Exp $
 
 PKGNAME=	${DISTNAME:S/-/-smbk5pwd-/}
 COMMENT=	Samba and Kerberos password sync for OpenLDAP
@@ -24,6 +24,8 @@ do-install:
 LIBS+=		-ldes
 .endif
 
+.include "../../databases/openldap-server/options.mk"
+
 .include "../../mk/krb5.buildlink3.mk"
 
 .if ${KRB5_TYPE} == "heimdal"
@@ -37,5 +39,4 @@ MAKE_ENV+=	LIBS=${LIBS:M*:Q}
 
 .include "../../databases/openldap/Makefile.common"
 .include "../../databases/openldap-client/buildlink3.mk"
-.include "../../databases/openldap-server/options.mk"
 .include "../../mk/bsd.pkg.mk"
