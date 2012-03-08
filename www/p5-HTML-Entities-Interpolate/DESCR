@@ -1,0 +1,1 @@
+Call HTML::Entities::encode_entities, via a hash, within a string.
