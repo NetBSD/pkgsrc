@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.724 2012/03/07 16:30:22 adam Exp $
+$NetBSD: CHANGES-2012,v 1.725 2012/03/08 01:31:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated geography/gdal-lib to 1.9.0 [adam 2012-03-07]
 	Updated graphics/osg to 3.0.1 [adam 2012-03-07]
 	Updated graphics/gri to 2.12.23 [adam 2012-03-07]
+	Updated www/ja-trac to 0.12.3pl2 [obache 2012-03-08]
