@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.739 2012/03/08 13:51:30 he Exp $
+$NetBSD: CHANGES-2012,v 1.740 2012/03/08 14:10:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1079,3 +1079,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/p5-Text-Xslate version 1.5.7 [fhajny 2012-03-08]
 	Added graphics/p5-GraphViz2 version 1.12 [fhajny 2012-03-08]
 	Updated lang/parrot to 3.10.0 [he 2012-03-08]
+	Updated lang/parrot to 3.11.0 [he 2012-03-08]
