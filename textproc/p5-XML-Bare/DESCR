@@ -1,0 +1,5 @@
+This module is a 'Bare' XML parser. It is implemented in C. The parser itself
+is a simple state engine that is less than 500 lines of C. The parser builds
+a C struct tree from input text. That C struct tree is converted to a Perl
+hash by a Perl function that makes basic calls back to the C to go through
+the nodes sequentially.
