@@ -1,6 +1,6 @@
-.\"	$NetBSD: obsolete_todo.1,v 1.1.1.1 2009/08/30 10:40:34 wiz Exp $
+.\"	$NetBSD: obsolete_todo.1,v 1.2 2012/03/08 12:11:55 wiz Exp $
 .\"
-.Dd August 30, 2009
+.Dd March 8, 2012
 .Dt OBSOLETE_TODO 1
 .Sh NAME
 .Nm obsolete_todo
@@ -11,8 +11,8 @@
 .Nm
 removes entries from
 .Pa pkgsrc/doc/TODO
-which were already handled, i.e. that or newer versions already exist
-in pkgsrc.
+which were already handled, i.e. that or a newer version
+already exists in pkgsrc.
 .Nm
 does this by checking the entries in
 .Pa pkgsrc/doc/TODO
@@ -48,26 +48,22 @@ of
 Currently, the following entries are removed even though they
 shouldn't be:
 .Bl -tag
-.It bonnie++-1.96
-.It drscheme-4.0.2
-.It exempi-2.0.2
-.It fixesproto-4.1
-.It lapack-3.2.1
-.It ldapsdk-6.0.2
+.It lapack-3.4.0
+.It ldapsdk-6.0.7
 .It libixp-0.5
-.It libssh-0.3.3
+.It libssh-0.5.2
 .It lmbench-2.5
 .It oto-0.5
-.It sch-3.8.3
 .It zenicb-1.31
 .El
+.Pp
 There are three reasons:
-.Bl -enumerate
+.Bl -enum
 .It
 matching errors (bonnie vs. bonnie++)
 .It
-downgraded packages (exempi, fixesproto, oto, libixp)
+downgraded packages (libixp, oto)
 .It
-changes in versioning schemes (drscheme, lapack, ldapsdk, libssh,
-lmbench, sch, zenicb)
+changes in versioning schemes (lapack, ldapsdk, libssh,
+lmbench, zenicb)
 .El
