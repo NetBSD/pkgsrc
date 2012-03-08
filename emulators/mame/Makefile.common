@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/11/24 07:40:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/03/08 17:11:09 wiz Exp $
 #
 # used by emulators/mame/Makefile
 # used by emulators/mess/Makefile
@@ -41,11 +41,6 @@ SUBST_SED.exe=		-e 's,$$(PREFIX)$$(PREFIXSDL)$$(NAME)$$(SUFFIX)$$(SUFFIX64)$$(SU
 SUBST_FILES.exe=	makefile
 SUBST_STAGE.exe=	post-patch
 SUBST_MESSAGE.exe=	Fixing executable name.
-
-# mame source is double-zipped
-post-extract:
-	cd ${WRKDIR} && ${.CURDIR}/../../mk/extract/extract mame.zip
-	rm ${WRKDIR}/mame.zip
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
