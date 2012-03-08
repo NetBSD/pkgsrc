@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/02 12:00:14 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/08 11:24:01 obache Exp $
 bin/opera
 bin/opera-widget-manager
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
@@ -9,6 +9,8 @@ lib/opera/liboperakde4.so
 lib/opera/opera
 lib/opera/operaplugincleaner
 lib/opera/operapluginwrapper
+${PLIST.ia32w}lib/opera/operapluginwrapper-ia32-linux
+${PLIST.ia32w}lib/opera/operapluginwrapper-native
 lib/opera/plugins/README
 man/man1/opera-widget-manager.1
 man/man1/opera.1
