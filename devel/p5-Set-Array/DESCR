@@ -1,0 +1,11 @@
+Set::Array allows you to create arrays as objects and use OO-style methods on
+them. Many convenient methods are provided here that appear in the FAQ's, the
+Perl Cookbook or posts from comp.lang.perl.misc. In addition, there are Set
+methods with corresponding (overloaded) operators for the purpose of Set
+comparison, i.e. +, ==, etc.
+
+The purpose is to provide built-in methods for operations that people are
+always asking how to do, and which already exist in languages like Ruby. This
+should (hopefully) improve code readability and/or maintainability. The other
+advantage to this module is method-chaining by which any number of methods may
+be called on a single object in a single statement.
