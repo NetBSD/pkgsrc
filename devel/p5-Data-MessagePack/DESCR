@@ -1,0 +1,1 @@
+This module converts Perl data structures to MessagePack and vice versa.
