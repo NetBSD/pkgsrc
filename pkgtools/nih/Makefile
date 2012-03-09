@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/11/22 21:03:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/09 19:05:31 cheusov Exp $
 
 DISTNAME=	pkgnih-0.10.0
 PKGREVISION=	2
@@ -38,8 +38,6 @@ REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
 REPLACE_FILES.runawk=	nih/pkg_update_plan.in nih/cmp2hr.in
 
-MAKE_PROGRAM=		mkcmake
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD || ${OPSYS} == FreeBSD || ${OPSYS} == OpenBSD || \
@@ -56,6 +54,6 @@ MAKE_ENV+= FTP=${FTP_CMD:Q}
 REPLACE_SH+=	nih/nih.in nih/pkg_status.in
 .endif
 
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 
 .include "../../mk/bsd.pkg.mk"
