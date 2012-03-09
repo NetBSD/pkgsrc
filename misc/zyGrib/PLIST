@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2011/06/17 15:57:13 plunky Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/09 10:22:33 plunky Exp $
 bin/zyGrib
 share/zyGrib/colors/colors_binary.txt
 share/zyGrib/colors/colors_cape_jkg.txt
 share/zyGrib/colors/colors_clouds_black_pc.txt
 share/zyGrib/colors/colors_clouds_white_pc.txt
+share/zyGrib/colors/colors_current_kts.txt
 share/zyGrib/colors/colors_deltatemp_celcius.txt
 share/zyGrib/colors/colors_humidrel_pc.txt
 share/zyGrib/colors/colors_rain_mmh.txt
 share/zyGrib/colors/colors_snowdepth_m.txt
 share/zyGrib/colors/colors_temp_celcius.txt
+share/zyGrib/colors/colors_waveheight_m.txt
+share/zyGrib/colors/colors_whitecap_prb.txt
+share/zyGrib/colors/colors_whitecap_prb.txt.colors
 share/zyGrib/colors/colors_wind_kts.txt
 share/zyGrib/gis/cities_10k-more.txt.gz
 share/zyGrib/gis/cities_3k-10k.txt.gz
@@ -22,6 +26,7 @@ share/zyGrib/img/anim.png
 share/zyGrib/img/back.png
 share/zyGrib/img/connect_no.png
 share/zyGrib/img/down.png
+share/zyGrib/img/drapeau_ar.png
 share/zyGrib/img/drapeau_cz.png
 share/zyGrib/img/drapeau_de.png
 share/zyGrib/img/drapeau_en.png
@@ -77,6 +82,8 @@ share/zyGrib/maps/gshhs/wdb_rivers_c.b
 share/zyGrib/maps/gshhs/wdb_rivers_i.b
 share/zyGrib/maps/gshhs/wdb_rivers_l.b
 share/zyGrib/stuff/boat_parameters.csv
+share/zyGrib/tr/zyGrib_ar.qm
+share/zyGrib/tr/zyGrib_ar.ts
 share/zyGrib/tr/zyGrib_cz.qm
 share/zyGrib/tr/zyGrib_cz.ts
 share/zyGrib/tr/zyGrib_de.qm
