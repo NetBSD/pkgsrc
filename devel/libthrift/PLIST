@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/09/12 15:51:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/09 14:31:07 fhajny Exp $
 bin/thrift
 include/thrift/TApplicationException.h
 include/thrift/TLogging.h
@@ -355,9 +355,6 @@ ${PLIST.java}share/doc/thrift/java/overview-frame.html
 ${PLIST.java}share/doc/thrift/java/overview-summary.html
 ${PLIST.java}share/doc/thrift/java/overview-tree.html
 ${PLIST.java}share/doc/thrift/java/package-list
-${PLIST.java}share/doc/thrift/java/resources/background.gif
-${PLIST.java}share/doc/thrift/java/resources/tab.gif
-${PLIST.java}share/doc/thrift/java/resources/titlebar.gif
-${PLIST.java}share/doc/thrift/java/resources/titlebar_end.gif
+${PLIST.java}share/doc/thrift/java/resources/inherit.gif
 ${PLIST.java}share/doc/thrift/java/serialized-form.html
 ${PLIST.java}share/doc/thrift/java/stylesheet.css
