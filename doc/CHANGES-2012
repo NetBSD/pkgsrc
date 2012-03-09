@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.750 2012/03/09 14:17:24 obache Exp $
+$NetBSD: CHANGES-2012,v 1.751 2012/03/09 14:20:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1090,3 +1090,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/zyGrib to 5.1.2 [plunky 2012-03-09]
 	Updated lang/parrot to 4.1.0 [he 2012-03-09]
 	Updated www/opera-acroread7 to 1.0nb4 [obache 2012-03-09]
+	Updated www/opera-plugins to 1.0nb2 [obache 2012-03-09]
