@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/10/21 23:30:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/09 18:56:21 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.21.2
+DISTNAME=	mk-configure-0.22.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -9,7 +9,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mk-configure
 COMMENT=	Lightweight but powerful replacement for GNU autotools
-LICENSE=		modified-bsd
+LICENSE=	modified-bsd
+
+DEPENDS+=	bmake-[0-9]*:../../devel/bmake
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,7 +20,7 @@ USE_LANGUAGES=		# no languages
 DOC_FILES=		README NEWS ChangeLog TODO FAQ COPYRIGHT \
 			doc/presentation.pdf
 
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} BMAKE=${MAKE}
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} BMAKE=${PREFIX}/bin/bmake
 
 AUTO_MKDIRS=		yes
 
