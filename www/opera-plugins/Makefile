@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/03/17 08:38:41 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/03/09 14:19:52 obache Exp $
 
 DISTNAME=	opera-plugins-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opera.com/
 COMMENT=	Plugins for the Opera browser
 
-DEPENDS+=	opera>=5.999.1:../../www/opera
+DEPENDS+=	opera>=11.61:../../www/opera
 DEPENDS+=	ns-flash>=5.0.47:../../multimedia/ns-flash
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -31,15 +31,15 @@ PLUGIN_DIR=	${PREFIX}/lib/netscape/plugins
 #
 PLUGINS=	libflashplayer.so
 
-INSTALLATION_DIRS=	${EMULSUBDIRSLASH}usr/lib/opera/plugins
+INSTALLATION_DIRS=	lib/opera/plugins
 
 do-install:
 	${RM} -f ${PLIST_SRC}
 	${TOUCH} ${PLIST_SRC}
 	for FILE in ${PLUGINS}; do 					\
 		${LN} -fs ${PLUGIN_DIR}/$$FILE				\
-			${DESTDIR}${EMULDIR}/usr/lib/opera/plugins/$$FILE;	\
-		${ECHO} ${EMULSUBDIRSLASH}usr/lib/opera/plugins/$$FILE	\
+			${DESTDIR}${PREFIX}/lib/opera/plugins/$$FILE;	\
+		${ECHO} lib/opera/plugins/$$FILE			\
 			>>${PLIST_SRC};					\
 	done
 
