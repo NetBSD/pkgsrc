@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/29 21:19:02 apb Exp $
-#
+# $NetBSD: Makefile,v 1.11 2012/03/09 17:02:14 adam Exp $
 
 .include "../../devel/scmgit/Makefile.version"
 
@@ -7,7 +6,6 @@ DISTNAME=	git-${GIT_VERSION}
 PKGNAME=	${DISTNAME:S/git/gitweb/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://git.or.cz/
@@ -18,7 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 #DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
 DEPENDS+=	scmgit-base>=${GIT_VERSION}:../../devel/scmgit-base
 
-#EXTRACT_USING=	gtar
+DISTINFO_FILE=	${.CURDIR}/../../devel/scmgit-base/distinfo
+
 USE_TOOLS+=	gmake perl:run
 
 BUILD_DIRS=	gitweb
