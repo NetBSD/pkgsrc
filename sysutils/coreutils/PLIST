@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/10/03 16:17:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/03/09 13:31:29 fhajny Exp $
 bin/${GNU_PROGRAM_PREFIX}[
 bin/${GNU_PROGRAM_PREFIX}base64
 bin/${GNU_PROGRAM_PREFIX}basename
@@ -101,7 +101,7 @@ bin/${GNU_PROGRAM_PREFIX}who
 bin/${GNU_PROGRAM_PREFIX}whoami
 bin/${GNU_PROGRAM_PREFIX}yes
 info/coreutils.info
-${PLIST.stdbuf}libexec/coreutils/glibstdbuf.so
+${PLIST.stdbuf}libexec/coreutils/${GNU_PROGRAM_PREFIX}libstdbuf.so
 man/man1/${GNU_PROGRAM_PREFIX}base64.1
 man/man1/${GNU_PROGRAM_PREFIX}basename.1
 man/man1/${GNU_PROGRAM_PREFIX}cat.1
