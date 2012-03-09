@@ -1,9 +1,9 @@
-# $NetBSD: INSTALL,v 1.1 2011/10/02 14:31:14 wiz Exp $
+# $NetBSD: INSTALL,v 1.2 2012/03/09 14:16:57 obache Exp $
 
 case "${STAGE}" in
 POST-INSTALL)
 	src="${PKG_PREFIX}/@ACROREAD@/@ACRO_SUBDIR@/@ACRO_PLATFORM@/nppdf.so"
-	dest="${EMULDIR}/usr/lib/opera/plugins/nppdf.so"
+	dest="${PKG_PREFIX}/lib/opera/plugins/nppdf.so"
 	${TEST} -f "$dest" || ${LN} -s "$src" "$dest"
 	;;
 esac
