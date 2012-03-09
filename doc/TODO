@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10931 2012/03/08 17:13:32 wiz Exp $
+$NetBSD: TODO,v 1.10932 2012/03/09 10:19:08 plunky Exp $
 
 Suggested new packages
 ======================
@@ -1159,7 +1159,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qpopper-4.0.14
 	o quilt-0.60
 	o qvplay-0.95
-	o qwt-6.0.0
 	o radiance-3.7.2
 	o rails-3.0.7
 	o raine-0.51.8
