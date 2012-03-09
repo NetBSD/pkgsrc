@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/08/30 17:16:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2012/03/09 12:49:25 fhajny Exp $
 #
 
 DISTNAME=	cvsps-2.1
@@ -9,6 +9,7 @@ MASTER_SITES=	${HOMEPAGE}
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.cobite.com/cvsps/
 COMMENT=	Generates 'patchset' information from a CVS repository
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
