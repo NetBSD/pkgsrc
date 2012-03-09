@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/02/25 20:52:53 mspo Exp $
+# $NetBSD: Makefile,v 1.27 2012/03/09 13:41:30 fhajny Exp $
 
 DISTNAME=	memcached-1.4.13
 CATEGORIES=	devel
@@ -20,6 +20,8 @@ RCD_SCRIPTS=		memcached
 INSTALLATION_DIRS=	share/doc/${PKGBASE} share/examples/rc.d
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "options.mk"
 
 MEMCACHED_USER?=	memcached
 MEMCACHED_GROUP?=	memcached
