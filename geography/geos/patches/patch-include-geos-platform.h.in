@@ -1,8 +1,8 @@
-$NetBSD: patch-include-geos-platform.h.in,v 1.2 2011/12/01 19:13:05 marino Exp $
+$NetBSD: patch-include-geos-platform.h.in,v 1.3 2012/03/09 14:46:12 fhajny Exp $
 
---- include/geos/platform.h.in.orig	2011-09-21 08:51:25.000000000 +0000
+--- include/geos/platform.h.in.orig	2011-05-18 19:59:50.000000000 +0000
 +++ include/geos/platform.h.in
-@@ -91,7 +91,7 @@ extern "C"
+@@ -91,10 +91,13 @@ extern "C"
  # elif defined(__MINGW32__)
  // sandro furieri: sanitizing MinGW32
  #  define ISNAN(x) (std::isnan(x))
@@ -11,3 +11,9 @@ $NetBSD: patch-include-geos-platform.h.in,v 1.2 2011/12/01 19:13:05 marino Exp $
     // Hack for OS/X <cmath> incorrectly re-defining isnan() into oblivion.
     // It does leave a version in std.
  #  define ISNAN(x) (std::isnan(x))
++# elif defined(__sun)
++#  include <cmath>
++#  define ISNAN(x) (std::isnan(x))
+ # endif
+ #endif
+ 
