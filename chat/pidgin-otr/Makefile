@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/03/06 17:38:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2012/03/09 12:34:03 wiz Exp $
 
 VERSION=	3.2.0
 DISTNAME=	pidgin-otr-${VERSION}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	chat security
 MASTER_SITES=	http://www.cypherpunks.ca/otr/
 
