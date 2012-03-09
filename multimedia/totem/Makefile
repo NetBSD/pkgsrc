@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.54 2012/03/03 00:12:32 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2012/03/09 12:34:20 wiz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
-PKGREVISION=	7
+PKGREVISION=	8
 
 DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 
