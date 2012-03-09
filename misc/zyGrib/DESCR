@@ -15,3 +15,5 @@ Weather data display:
     - CAPE (convective available potential energy) at earth level.
     - Data in altitude (850, 700, 500, 300, 200 hPa) : geopotential altitude,
 	wind, temperature, theta-e, relative humidity.
+    - Waves : height, direction, period, whitecap probability, for wind waves,
+	swell, and for significant, maximum, primary, secondary waves.
