@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2012/03/06 11:10:22 taca Exp $
+# $NetBSD: Makefile,v 1.248 2012/03/09 14:58:41 fhajny Exp $
 
 DISTNAME=	postfix-2.8.9
 CATEGORIES=	mail
@@ -132,6 +132,14 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
+
+.if ${OPSYS} == "SunOS" && !exists(/usr/include/rpcsvc/nis_cache.h)
+SUBST_CLASSES+=		nis
+SUBST_FILES.nis=	src/util/sys_defs.h
+SUBST_MESSAGE.nis=	Working around dropped support for NIS+ on SunOS
+SUBST_STAGE.nis=	post-patch
+SUBST_SED.nis=		-e 's,\#define HAS_NISPLUS,\#undef HAS_NISPLUS,g'
+.endif
 
 .if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
 DESTDIR_INSTALLOPTIONS=-package install_root="${DESTDIR}"
