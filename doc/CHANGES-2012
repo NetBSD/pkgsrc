@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.752 2012/03/09 16:21:31 taca Exp $
+$NetBSD: CHANGES-2012,v 1.753 2012/03/09 17:03:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1093,3 +1093,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/opera-plugins to 1.0nb2 [obache 2012-03-09]
 	Updated www/contao211 to 2.11.1 [taca 2012-03-09]
 	Updated www/contao211-translations to 201203090 [taca 2012-03-09]
+	Updated devel/scmgit to 1.7.9.3 [adam 2012-03-09]
+	Updated devel/scmgit-base to 1.7.9.3 [adam 2012-03-09]
+	Updated devel/scmgit-docs to 1.7.9.3 [adam 2012-03-09]
+	Updated www/gitweb to 1.7.9.3 [adam 2012-03-09]
