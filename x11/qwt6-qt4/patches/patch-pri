@@ -1,0 +1,30 @@
+$NetBSD: patch-pri,v 1.1.1.1 2012/03/09 10:14:39 plunky Exp $
+
+--- qwtconfig.pri.orig	2011-04-15 10:48:51.000000000 +0000
++++ qwtconfig.pri
+@@ -19,14 +19,14 @@ QWT_VERSION      = $${QWT_VER_MAJ}.$${QW
+ QWT_INSTALL_PREFIX = $$[QT_INSTALL_PREFIX]
+ 
+ unix {
+-    QWT_INSTALL_PREFIX    = /usr/local/qwt-$$QWT_VERSION
++    QWT_INSTALL_PREFIX    = $$(PREFIX)
+ }
+ 
+ win32 {
+     QWT_INSTALL_PREFIX    = C:/Qwt-$$QWT_VERSION
+ }
+ 
+-QWT_INSTALL_DOCS      = $${QWT_INSTALL_PREFIX}/doc
++QWT_INSTALL_DOCS      = $${QWT_INSTALL_PREFIX}/share/doc/qwt
+ QWT_INSTALL_HEADERS   = $${QWT_INSTALL_PREFIX}/include
+ QWT_INSTALL_LIBS      = $${QWT_INSTALL_PREFIX}/lib
+ 
+@@ -34,7 +34,7 @@ QWT_INSTALL_LIBS      = $${QWT_INSTALL_P
+ # Designer plugin
+ ######################################################################
+ 
+-QWT_INSTALL_PLUGINS   = $${QWT_INSTALL_PREFIX}/plugins/designer
++QWT_INSTALL_PLUGINS   = $${QWT_INSTALL_PREFIX}/qt4/plugins/designer
+ # QWT_INSTALL_PLUGINS   = $${QT_INSTALL_PREFIX}/plugins/designer
+ 
+ ######################################################################

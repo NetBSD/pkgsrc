@@ -1,0 +1,19 @@
+$NetBSD: patch-srcpro,v 1.1.1.1 2012/03/09 10:14:39 plunky Exp $
+
+--- src/src.pro.orig	2011-04-15 10:48:51.000000000 +0000
++++ src/src.pro
+@@ -216,11 +216,11 @@ contains(QWT_CONFIG, QwtWidgets) {
+ 
+ target.path    = $${QWT_INSTALL_LIBS}
+ 
+-doc.files      = $${QWT_ROOT}/doc/html 
+-unix:doc.files += $${QWT_ROOT}/doc/man
++doc.files      = $${QWT_ROOT}/doc/html/*
++man.files      = $${QWT_ROOT}/doc/man/*
+ doc.path       = $${QWT_INSTALL_DOCS}
+ 
+-INSTALLS       = target doc
++INSTALLS       = target doc man
+ 
+ CONFIG(lib_bundle) {
+ 
