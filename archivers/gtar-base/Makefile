@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2011/05/11 07:49:58 adam Exp $
+# $NetBSD: Makefile,v 1.72 2012/03/09 10:13:29 fhajny Exp $
 
 DISTNAME=	tar-1.26
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
@@ -32,7 +32,8 @@ GTAR_PROGRAM_PREFIX?=	${GNU_PROGRAM_PREFIX}
 GTAR_PROGRAM_PREFIX?=	g
 .endif
 
-.if ${GTAR_PROGRAM_PREFIX} == ""
+.if ${GTAR_PROGRAM_PREFIX} == "" && \
+    (!defined(NBPAX_PROGRAM_PREFIX) || ${NBPAX_PROGRAM_PREFIX} == "")
 # pax installs a "tar" also
 CONFLICTS+=		pax-[0-9]*
 .else
