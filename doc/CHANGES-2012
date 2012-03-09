@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.749 2012/03/09 14:07:04 he Exp $
+$NetBSD: CHANGES-2012,v 1.750 2012/03/09 14:17:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1089,3 +1089,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added x11/qwt6-qt4 version 6.0.1 [plunky 2012-03-09]
 	Updated misc/zyGrib to 5.1.2 [plunky 2012-03-09]
 	Updated lang/parrot to 4.1.0 [he 2012-03-09]
+	Updated www/opera-acroread7 to 1.0nb4 [obache 2012-03-09]
