@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2011/11/29 06:12:51 sbd Exp $
+$NetBSD: patch-aa,v 1.7 2012/03/09 12:49:25 fhajny Exp $
 
 --- Makefile.orig	2005-05-26 03:39:40.000000000 +0000
 +++ Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.6 2011/11/29 06:12:51 sbd Exp $
  
  cvsps: $(OBJS)
 -	$(CC) -o cvsps $(OBJS) -lz
-+	$(CC) $(LDFLAGS) -o cvsps $(OBJS) -lz
++	$(CC) $(LDFLAGS) -o cvsps $(OBJS) -lz $(LIBS)
  
  install:
  	[ -d $(prefix)/bin ] || mkdir -p $(prefix)/bin
