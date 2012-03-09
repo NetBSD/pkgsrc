@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/02/15 09:30:23 plunky Exp $
+$NetBSD: distinfo,v 1.7 2012/03/09 18:12:55 plunky Exp $
 
-SHA1 (bluez-hcidump-2.2.tar.gz) = 4d36b9265e23bfdbc824f00f6f6a1c3fd794559a
-RMD160 (bluez-hcidump-2.2.tar.gz) = 5ec584f7b3c0818452ba1e874d8b17bb01efe621
-Size (bluez-hcidump-2.2.tar.gz) = 190096 bytes
+SHA1 (bluez-hcidump-2.3.tar.gz) = d60e3546c27d68615fe908899ba0d6af5f4d4171
+RMD160 (bluez-hcidump-2.3.tar.gz) = 95ac3961c0ae5c15902d72733579d1dfb3bde04b
+Size (bluez-hcidump-2.3.tar.gz) = 190848 bytes
 SHA1 (patch-aa) = 3a856deba9518923321b3ddffe863d7817a021e1
 SHA1 (patch-ab) = ad50cee12679bd302475f7a62391a3833343f51b
 SHA1 (patch-ac) = 42a0bfc63a64243db201973c1973b914bee92192
