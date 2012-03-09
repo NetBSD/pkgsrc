@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.753 2012/03/09 17:03:31 adam Exp $
+$NetBSD: CHANGES-2012,v 1.754 2012/03/09 18:13:27 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1097,3 +1097,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-base to 1.7.9.3 [adam 2012-03-09]
 	Updated devel/scmgit-docs to 1.7.9.3 [adam 2012-03-09]
 	Updated www/gitweb to 1.7.9.3 [adam 2012-03-09]
+	Updated sysutils/netbt-hcidump to 2.3 [plunky 2012-03-09]
