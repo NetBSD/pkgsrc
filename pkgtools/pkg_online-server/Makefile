@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/09 10:02:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/09 19:15:19 cheusov Exp $
 #
 
 .include "../../pkgtools/pkg_online-server/Makefile.common"
@@ -24,7 +24,5 @@ MAKE_ENV+=	DOCDIR=${DOCDIR} EGDIR=${EGDIR}
 CONF_FILES=	${EGDIR}/pkg_online_server.conf \
 		${PKG_SYSCONFDIR}/pkg_online_server.conf
 
-MAKE_PROGRAM=	mkcmake
-
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
