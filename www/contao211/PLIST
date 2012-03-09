@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/19 10:54:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/09 16:18:55 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/GPL.txt
 ${CT_WEBDIR}/LGPL.txt
@@ -177,10 +177,10 @@ ${CT_WEBDIR}/plugins/mootools/1.3.2/mootools-core-uncompressed.js
 ${CT_WEBDIR}/plugins/mootools/1.3.2/mootools-core.js
 ${CT_WEBDIR}/plugins/mootools/1.3.2/mootools-more-uncompressed.js
 ${CT_WEBDIR}/plugins/mootools/1.3.2/mootools-more.js
-${CT_WEBDIR}/plugins/mootools/1.4.4/mootools-core-uncompressed.js
-${CT_WEBDIR}/plugins/mootools/1.4.4/mootools-core.js
-${CT_WEBDIR}/plugins/mootools/1.4.4/mootools-more-uncompressed.js
-${CT_WEBDIR}/plugins/mootools/1.4.4/mootools-more.js
+${CT_WEBDIR}/plugins/mootools/1.4.5/mootools-core-uncompressed.js
+${CT_WEBDIR}/plugins/mootools/1.4.5/mootools-core.js
+${CT_WEBDIR}/plugins/mootools/1.4.5/mootools-more-uncompressed.js
+${CT_WEBDIR}/plugins/mootools/1.4.5/mootools-more.js
 ${CT_WEBDIR}/plugins/simplepie/simplepie.inc
 ${CT_WEBDIR}/plugins/slimbox/README.txt
 ${CT_WEBDIR}/plugins/slimbox/css/closelabel.gif
@@ -862,6 +862,8 @@ ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/ru.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/ru_dlg.js
+${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/sl.js
+${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/sl_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/sv.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/sv_dlg.js
 ${CT_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/uk.js
@@ -1892,6 +1894,7 @@ ${CT_WEBDIR}/system/modules/tpl_editor/languages/de/tl_templates.php
 ${CT_WEBDIR}/system/modules/tpl_editor/languages/en/.htaccess
 ${CT_WEBDIR}/system/modules/tpl_editor/languages/en/modules.php
 ${CT_WEBDIR}/system/modules/tpl_editor/languages/en/tl_templates.php
+${CT_WEBDIR}/system/scripts/index.html
 ${CT_WEBDIR}/system/themes/default/basic.css
 ${CT_WEBDIR}/system/themes/default/help.css
 ${CT_WEBDIR}/system/themes/default/hover.js
