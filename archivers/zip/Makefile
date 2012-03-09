@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2011/11/22 05:49:00 enami Exp $
+# $NetBSD: Makefile,v 1.60 2012/03/09 10:58:30 fhajny Exp $
 
 DISTNAME=	zip30
 PKGNAME=	zip-3.0
@@ -35,7 +35,7 @@ BUILD_TARGET=	generic
 CFLAGS+=	-O
 .endif
 
-.if !empty(PKGSRC_COMPILER:Msunpro)
+.if !empty(PKGSRC_COMPILER:Msunpro) || ${OPSYS} == "SunOS"
 MAKE_FLAGS+=	DISABLE_ASM=YES
 .endif
 
