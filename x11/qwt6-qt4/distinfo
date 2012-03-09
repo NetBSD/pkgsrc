@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/09 10:14:35 plunky Exp $
+
+SHA1 (qwt-6.0.1.tar.bz2) = 301cca0c49c7efc14363b42e082b09056178973e
+RMD160 (qwt-6.0.1.tar.bz2) = 54b815d131fd7e7c8bfd1a49fbf3bc7c0ccc9c7a
+Size (qwt-6.0.1.tar.bz2) = 2437570 bytes
+SHA1 (patch-pri) = cb1fa1b13318ca3afb038bcffb6a0c9b608e33f4
+SHA1 (patch-srcpro) = 1addda2225949b5a0abd0eadf6032b9486877307
