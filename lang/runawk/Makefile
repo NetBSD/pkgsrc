@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/27 18:52:53 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/09 18:58:19 cheusov Exp $
 #
 
 DISTNAME=	runawk-1.4.0
@@ -37,9 +37,5 @@ MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	EGDIR=${EGDIR}
 MAKE_ENV+=	SUBPRJ_DFLT='runawk modules a_getopt doc examples'
 
-AUTO_MKDIRS=	yes
-
-MAKE_PROGRAM=	mkcmake
-
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"

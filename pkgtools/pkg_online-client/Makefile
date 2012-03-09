@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/01/08 15:16:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/09 19:15:19 cheusov Exp $
 #
 
 .include "../../pkgtools/pkg_online-server/Makefile.common"
@@ -28,7 +28,5 @@ CONF_FILES=	${EGDIR}/pkg_online_client.conf \
 
 REPLACE_SH=	client/pkg_online_client client/pkg_online_find
 
-MAKE_PROGRAM=	mkcmake
-
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"

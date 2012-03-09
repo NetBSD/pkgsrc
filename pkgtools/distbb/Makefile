@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/02/26 17:39:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/09 19:08:16 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.44.0
@@ -41,15 +41,13 @@ DOCFILES=		README NEWS TODO
 
 MAKE_FLAGS+=		EGDIR=${EGDIR}
 
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
 .for f in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
-MAKE_PROGRAM=		mkcmake
-
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 
 .include "../../mk/bsd.pkg.mk"

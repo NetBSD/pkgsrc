@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/09 10:02:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/09 19:00:36 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.16.1
@@ -34,9 +34,7 @@ MAKE_ENV+=		EGDIR=${EGDIR}
 REPLACE_SH+=		examples/cc_wrapper/cc_wrapper_cmd \
 			tests/broken_echo/transport_broken_echo2
 
-MAKE_PROGRAM=		${PREFIX}/bin/mkcmake
-
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 
 .include "../../devel/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
