@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/02/15 09:30:23 plunky Exp $
+# $NetBSD: Makefile,v 1.6 2012/03/09 18:12:55 plunky Exp $
 
-DISTNAME=		netbt-hcidump-2.2
+DISTNAME=		bluez-hcidump-2.3
+PKGNAME=		${DISTNAME:S/bluez/netbt/}
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.kernel.org/pub/linux/bluetooth/
-DISTFILES=		bluez-hcidump-2.2.tar.gz
 
 MAINTAINER=		plunky@rya-online.net
 HOMEPAGE=		http://www.bluez.org/
@@ -15,11 +15,9 @@ CONFLICTS+=		hcidump-[0-9]* bluez-hcidump-[0-9]*
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
-WRKSRC=			${WRKDIR}/bluez-hcidump-2.2
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CPPFLAGS+=	-DVERSION=\""2.2-netbt"\"
+CPPFLAGS+=	-DVERSION=\""${DISTNAME:S/bluez-hcidump-//}-netbt"\"
 
 USE_BSD_MAKEFILE=	yes
 
