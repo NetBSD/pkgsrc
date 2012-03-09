@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2012/01/12 17:41:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2012/03/09 11:55:11 fhajny Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -110,6 +110,12 @@ CONFIGURE_ENV+=		ac_cv_func_pthread_attr_setschedparam=no
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf bash autoheader gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+
+# reset the platform diff on SunOS unless it's a GNU diff
+# which is required by the MySQL build 
+.if ${OPSYS} == "SunOS" && empty(TOOLS_PLATFORM.diff:Mgdiff)
+TOOLS_PLATFORM.diff=	# empty
+.endif
 
 SUBST_CLASSES=		mk
 SUBST_STAGE.mk=		pre-configure
