@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2012/01/17 16:51:04 jmmv Exp $
+# $NetBSD: options.mk,v 1.13 2012/03/09 14:41:48 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.glib2
 PKG_SUPPORTED_OPTIONS=	kqueue
@@ -24,6 +24,7 @@ PATCH_DIST_STRIP=	-p0
 USE_TOOLS+=	autoconf autoheader automake
 pre-configure: regen-autotools
 regen-autotools:
+	cd ${WRKSRC} && aclocal
 	cd ${WRKSRC} && automake
 	cd ${WRKSRC} && autoheader
 	cd ${WRKSRC} && autoconf
