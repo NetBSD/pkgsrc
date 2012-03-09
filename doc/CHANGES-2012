@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.751 2012/03/09 14:20:02 obache Exp $
+$NetBSD: CHANGES-2012,v 1.752 2012/03/09 16:21:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1091,3 +1091,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/parrot to 4.1.0 [he 2012-03-09]
 	Updated www/opera-acroread7 to 1.0nb4 [obache 2012-03-09]
 	Updated www/opera-plugins to 1.0nb2 [obache 2012-03-09]
+	Updated www/contao211 to 2.11.1 [taca 2012-03-09]
+	Updated www/contao211-translations to 201203090 [taca 2012-03-09]
