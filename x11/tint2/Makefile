@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/03/03 00:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/09 12:34:25 wiz Exp $
 
 DISTNAME=		tint2-0.11
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		x11
 MASTER_SITES=		http://tint2.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2

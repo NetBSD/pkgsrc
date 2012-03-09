@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/06/01 22:01:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/09 12:34:06 wiz Exp $
 
 DISTNAME=	GNS3-0.7-src
 PKGNAME=	gns3-0.7
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gns3/}
 
