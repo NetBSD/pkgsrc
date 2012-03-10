@@ -1,7 +1,16 @@
-$NetBSD: patch-libvisual_lv__types.h,v 1.1 2012/02/15 21:58:44 hans Exp $
+$NetBSD: patch-libvisual_lv__types.h,v 1.2 2012/03/10 09:19:32 sbd Exp $
 
---- libvisual/lv_types.h.orig	2006-02-13 21:54:08.000000000 +0100
-+++ libvisual/lv_types.h	2012-01-11 14:44:09.647013746 +0100
+--- libvisual/lv_types.h.orig	2006-02-13 20:54:08.000000000 +0000
++++ libvisual/lv_types.h
+@@ -26,7 +26,7 @@
+ 
+ #include <libvisual/lv_defines.h>
+ 
+-#if defined(VISUAL_OS_WIN32)
++#if defined(VISUAL_OS_WIN32) || defined(__linux__)
+ #include <stdint.h>
+ #else
+ #include <sys/types.h>
 @@ -38,20 +38,6 @@ VISUAL_BEGIN_DECLS
  
  #define VISUAL_TABLESIZE(table)			(sizeof (table) / sizeof (table[0]))
