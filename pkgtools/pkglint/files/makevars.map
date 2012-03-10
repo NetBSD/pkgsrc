@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.218 2012/01/06 01:26:45 wiz Exp $
+# $NetBSD: makevars.map,v 1.219 2012/03/10 11:00:24 cheusov Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -475,7 +475,7 @@ MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 51 55 } [m:s]
 MYSQL_VERSION_DEFAULT	Version [$user]
 NM			ShellCommand [$system]
 NONBINMODE		FileMode [$system]
-NOT_FOR_COMPILER	List of { ccache ccc clang distcc f2c gcc icc hp ido mipspro mipspro-ucode pcc sunpro xlc } [$package]
+NOT_FOR_COMPILER	List of { ccache ccc clang distcc f2c gcc hp icc ido mipspro mipspro-ucode pcc sunpro xlc } [$package]
 NOT_FOR_PLATFORM	InternalList of PlatformTriple [$package_list]
 NOT_FOR_UNPRIVILEGED	YesNo [$package]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
@@ -490,7 +490,7 @@ NO_INSTALL_MANPAGES	Yes [$package]
 NO_PKGTOOLS_REQD_CHECK	Yes [m:s]
 NO_SRC_ON_CDROM		Restricted [m:s,c:s]
 NO_SRC_ON_FTP		Restricted [m:s,c:s]
-ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$package_list]
+ONLY_FOR_COMPILER	List of { ccc clang gcc hp icc ido mipspro mipspro-ucode pcc sunpro xlc } [$package_list]
 ONLY_FOR_PLATFORM	InternalList of PlatformTriple [$package_list]
 ONLY_FOR_UNPRIVILEGED	YesNo [$package]
 OPSYS			Identifier [$system]
