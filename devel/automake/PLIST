@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/03/03 12:58:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/03/10 08:00:52 sbd Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -130,3 +130,4 @@ share/automake-${PKG_DIR_VERSION}/symlink-tree
 share/automake-${PKG_DIR_VERSION}/texinfo.tex
 share/automake-${PKG_DIR_VERSION}/ylwrap
 share/doc/automake/amhello-1.0.tar.gz
+@pkgdir share/aclocal
