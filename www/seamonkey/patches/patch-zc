@@ -1,6 +1,6 @@
-$NetBSD: patch-zc,v 1.1 2009/11/29 00:40:48 tnn Exp $
+$NetBSD: patch-zc,v 1.2 2012/03/10 03:26:07 ryoon Exp $
 
---- suite/app/nsSuiteApp.cpp.orig	2009-10-25 15:29:07.000000000 +0100
+--- suite/app/nsSuiteApp.cpp.orig	2012-02-16 13:59:53.000000000 +0000
 +++ suite/app/nsSuiteApp.cpp
 @@ -44,6 +44,27 @@
  

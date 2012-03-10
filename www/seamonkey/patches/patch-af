@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.4 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-af,v 1.5 2012/03/10 03:26:04 ryoon Exp $
 
---- mozilla/config/mkdepend/imakemdep.h.orig	2009-06-29 18:14:41.000000000 +0200
+--- mozilla/config/mkdepend/imakemdep.h.orig	2012-02-16 14:08:41.000000000 +0000
 +++ mozilla/config/mkdepend/imakemdep.h
 @@ -235,7 +235,7 @@ in this Software without prior written a
  #ifdef _CRAY

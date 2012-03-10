@@ -1,8 +1,8 @@
-$NetBSD: patch-xl,v 1.1 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-xl,v 1.2 2012/03/10 03:26:07 ryoon Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s.orig	2009-06-29 18:15:33.000000000 +0200
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s.orig	2012-02-16 14:09:41.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ppc_netbsd.s
 @@ -1,43 +1,43 @@
 -# -*- Mode: Asm -*-

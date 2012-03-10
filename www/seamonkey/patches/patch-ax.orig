@@ -1,0 +1,13 @@
+$NetBSD: patch-ax.orig,v 1.1 2012/03/10 03:26:05 ryoon Exp $
+
+--- mozilla/xpcom/base/nsStackWalk.cpp.orig	2010-12-15 01:03:41.000000000 +0000
++++ mozilla/xpcom/base/nsStackWalk.cpp
+@@ -1137,7 +1137,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
+ #define __USE_GNU
+ #endif
+ 
+-#if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
++#if defined(HAVE_DLOPEN) || defined(XP_MACOSX) || defined(__NetBSD__)
+ #include <dlfcn.h>
+ #endif
+ 
