@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/02/26 16:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/10 22:23:13 markd Exp $
 #
 
-DISTNAME=	pdfjam_1.20
+DISTNAME=	pdfjam_2.02
 PKGNAME=	${DISTNAME:C/_/-/}
-PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://www.warwick.ac.uk/go/pdfjam/
 EXTRACT_SUFX=	.tgz
@@ -24,13 +23,14 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/pdfjam
 
-UTILS=		pdf90 pdfjoin pdfnup
+UTILS=		pdf180 pdf270 pdf90 pdfbook pdfflip pdfjam pdfjam-pocketmod \
+	pdfjam-slides3up pdfjam-slides6up pdfjoin pdfnup pdfpun
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 .for _util in ${UTILS}
-		${INSTALL_SCRIPT} ${WRKSRC}/scripts/${_util} ${DESTDIR}${PREFIX}/bin/${_util}
+		${INSTALL_SCRIPT} ${WRKSRC}/bin/${_util} ${DESTDIR}${PREFIX}/bin/${_util}
 		${INSTALL_MAN} ${WRKSRC}/man1/${_util}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${_util}.1
 .endfor
 .undef ${_util}
