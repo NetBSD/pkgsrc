@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/03/03 00:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2012/03/10 20:55:46 markd Exp $
 #
 
 DISTNAME=		lyx-1.6.9
@@ -68,6 +68,8 @@ USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GCC_REQD+=		2.95
+
+CXXFLAGS.Linux+=	-fpermissive
 
 CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt4-libs} \
 			--with-qt4-dir=${QTDIR:Q} \
