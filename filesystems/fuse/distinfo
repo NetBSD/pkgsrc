@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2010/08/25 08:02:21 manu Exp $
+$NetBSD: distinfo,v 1.3 2012/03/10 20:59:52 markd Exp $
 
 SHA1 (fuse-2.8.4.tar.gz) = b1bc296c3e5b90b3658edb5d8d7aa0ee97c145d7
 RMD160 (fuse-2.8.4.tar.gz) = 75093d0ddf8c4b9fc2e4764bdf86c43c5937c297
@@ -15,3 +15,4 @@ SHA1 (patch-ak) = 222faa9b6549063428c89e65dfcb77e002dc798e
 SHA1 (patch-al) = 358d734dbfa43e306bf0bb0a39b006be5822f1a3
 SHA1 (patch-am) = 2abd07b403896bff5aad6cd865cb473553851a22
 SHA1 (patch-an) = 3f119dae5f08996dd483a0fb4fa0365507be2070
+SHA1 (patch-util_fusermount.c) = c65c377b917dc0c34cf5b8fb4d70e75075debcf9
