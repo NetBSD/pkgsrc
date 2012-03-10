@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2012/03/03 12:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2012/03/10 03:26:04 ryoon Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER}
-SM_VER=		2.5b4
-PKGREVISION=	4
+SM_VER=		2.7.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +14,7 @@ COMMENT=	Full-featured gecko-based browser
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/comm-beta
+WRKSRC=		${WRKDIR}/comm-release
 MOZILLA_DIR=	mozilla/
 
 CONFIG_GUESS_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.guess
@@ -24,6 +23,8 @@ CONFIG_SUB_OVERRIDE+=	ldap/sdks/c-sdk/config/autoconf/config.sub
 CONFIGURE_ARGS+=	--enable-application=suite
 
 ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
+
+LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/seamonkey
 
 .include "../../mk/bsd.prefs.mk"
 
