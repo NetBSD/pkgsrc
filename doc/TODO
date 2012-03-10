@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10933 2012/03/10 10:58:08 ryoon Exp $
+$NetBSD: TODO,v 1.10934 2012/03/10 23:42:51 markd Exp $
 
 Suggested new packages
 ======================
@@ -401,7 +401,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aspell-norwegian-2.0.10
 	o ast-ksh-20080624 [pkg/37854]
 	o astyle-1.15.3
-	o asymptote-2.14
 	o at-spi-2.2.3
 	o aterm-1.0.1
 	o attica-0.3.0
@@ -842,7 +841,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kmp-0.5
 	o kmymoney2-4.6.1
 	o knights-2.4.0
-	o kodos-2.4.5
 	o koffice-l10n-de-2.0.2
 	o konversation-1.4
 	o kphotobook-0.0.7
