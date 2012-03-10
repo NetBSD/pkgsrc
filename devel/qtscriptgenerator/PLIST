@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/15 15:57:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/10 20:42:31 markd Exp $
 qt4/bin/generator
 qt4/plugins/script/libqtscript_core.la
 qt4/plugins/script/libqtscript_gui.la
@@ -156,7 +156,6 @@ share/doc/qtscriptgenerator/qfile.html
 share/doc/qtscriptgenerator/qfiledialog.html
 share/doc/qtscriptgenerator/qfileiconprovider.html
 share/doc/qtscriptgenerator/qfileinfo.html
-share/doc/qtscriptgenerator/qfileopenevent.html
 share/doc/qtscriptgenerator/qfilesystemwatcher.html
 share/doc/qtscriptgenerator/qfocusevent.html
 share/doc/qtscriptgenerator/qfocusframe.html
