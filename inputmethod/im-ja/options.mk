@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/05/20 08:18:00 obache Exp $
+# $NetBSD: options.mk,v 1.2 2012/03/10 15:24:50 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.im-ja
-PKG_SUPPORTED_OPTIONS=	anthy canna skk gnome xim
+PKG_SUPPORTED_OPTIONS=	anthy canna wnn4 skk gnome xim
 PKG_SUGGESTED_OPTIONS=	anthy canna skk gnome xim
 
 .include "../../mk/bsd.options.mk"
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--disable-anthy
 
 #
 # Wnn support
-# XXX: broken, need shlib.
 #
 .if !empty(PKG_OPTIONS:Mwnn4)
 .include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
