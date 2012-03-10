@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10932 2012/03/09 10:19:08 plunky Exp $
+$NetBSD: TODO,v 1.10933 2012/03/10 10:58:08 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1521,6 +1521,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.25.5
 	o xvinfo-1.1.1
+	o xvkbd-3.3
 	o xwd-1.0.5
 	o xwininfo-1.1.2
 	o xwpe-1.5.30a
