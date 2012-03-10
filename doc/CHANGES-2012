@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.756 2012/03/09 22:49:43 abs Exp $
+$NetBSD: CHANGES-2012,v 1.757 2012/03/10 02:08:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1100,3 +1100,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/netbt-hcidump to 2.3 [plunky 2012-03-09]
 	Updated devel/mk-configure to 0.22.0 [cheusov 2012-03-09]
 	Added filesystems/cloudfuse version 20120124 [abs 2012-03-09]
+	Updated graphics/gif2png to 2.5.8 [wiz 2012-03-10]
