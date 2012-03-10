@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.763 2012/03/10 11:45:16 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.764 2012/03/10 23:42:51 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1110,3 +1110,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/ng to 1.4.3nb2 [sbd 2012-03-10]
 	Updated mail/thunderbird to 10.0.2 [ryoon 2012-03-10]
 	Updated mail/thunderbird-l10n to 10.0.2 [ryoon 2012-03-10]
+	Updated converters/txt2html to 2.45 [markd 2012-03-10]
+	Updated devel/libdbusmenu-qt to 0.9.0 [markd 2012-03-10]
+	Updated graphics/asymptote to 2.15 [markd 2012-03-10]
+	Updated misc/kodos to 2.4.9 [markd 2012-03-10]
+	Updated print/pdfjam to 2.02 [markd 2012-03-10]
