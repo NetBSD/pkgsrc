@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.6 2011/04/15 16:32:33 drochner Exp $
+$NetBSD: distinfo,v 1.7 2012/03/10 20:55:46 markd Exp $
 
 SHA1 (lyx-1.6.9.tar.bz2) = a1acacc8a26546542e32977ae222e811c98b1ca4
 RMD160 (lyx-1.6.9.tar.bz2) = 30e37efc4c9cf3d335e78a1a1940dba2a0df1645
 Size (lyx-1.6.9.tar.bz2) = 12560174 bytes
 SHA1 (patch-development_MacOSX_Makefile.in) = ae9e51e3458f8986ae392b146f8684305b7fe25b
+SHA1 (patch-src_WordList.cpp) = d747efcd6ca4d7015a5c6860a8844ac79a65672a
+SHA1 (patch-src_mathed_InsetMath.h) = c178b1436c7a969e29b328dde1a800e9ccb7af0e
+SHA1 (patch-src_mathed_MathData.h) = fcd51f36aa2aae29f75e041d7adb1d88baa370a5
+SHA1 (patch-src_support_unicode.cpp) = 71bdc1b929a3c90bed84d6de5aa0734e548c67de
