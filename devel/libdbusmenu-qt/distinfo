@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/13 21:21:24 markd Exp $
+$NetBSD: distinfo,v 1.2 2012/03/10 20:33:14 markd Exp $
 
-SHA1 (libdbusmenu-qt-0.8.2.tar.bz2) = a8875734c3ef8a1cf6fb7a19c79baf72e7ff5539
-RMD160 (libdbusmenu-qt-0.8.2.tar.bz2) = 166581f3fe97fa4b22f004f3fdc257cccfb785c5
-Size (libdbusmenu-qt-0.8.2.tar.bz2) = 35252 bytes
+SHA1 (libdbusmenu-qt-0.9.0.tar.bz2) = 690a885825d45579607f3d6708aad84b6f3ecdd0
+RMD160 (libdbusmenu-qt-0.9.0.tar.bz2) = 6fbaa348f10f7eedd68c1c6860805b0aaf4db195
+Size (libdbusmenu-qt-0.9.0.tar.bz2) = 37153 bytes

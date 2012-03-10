@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/13 21:21:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/10 20:33:14 markd Exp $
 include/dbusmenu-qt/dbusmenu_config.h
 include/dbusmenu-qt/dbusmenu_export.h
 include/dbusmenu-qt/dbusmenu_version.h
@@ -7,6 +7,6 @@ include/dbusmenu-qt/dbusmenuexporter.h
 include/dbusmenu-qt/dbusmenuimporter.h
 lib/libdbusmenu-qt.so
 lib/libdbusmenu-qt.so.2
-lib/libdbusmenu-qt.so.2.5.1
+lib/libdbusmenu-qt.so.2.6.0
 lib/pkgconfig/dbusmenu-qt.pc
 @pkgdir include/dbusmenu-qt/CMakeFiles/dbusmenu-qt.dir
