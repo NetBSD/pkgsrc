@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/01/26 22:58:45 sbd Exp $
+$NetBSD: distinfo,v 1.7 2012/03/10 21:47:30 markd Exp $
 
 SHA1 (gnuradio-3.3.0.tar.gz) = 41d5c177b173ce73404f5fe539b013c82600f73f
 RMD160 (gnuradio-3.3.0.tar.gz) = ae83bd8a93deaf73d730e2af0d05c9ffc4c98520
@@ -14,3 +14,4 @@ SHA1 (patch-aj) = 046fb46567fcbef58143ac3eeb2d0f1fd905618e
 SHA1 (patch-ak) = c6d2d9289600a89cd425d1bab671b080888d9c04
 SHA1 (patch-config_gr__lib64.m4) = 2263778dea1b8918033c175735f3134a6da80dc5
 SHA1 (patch-gnuradio-core_src_lib_general_gr__math.cc) = 81161e9576c3ec8259a20663eb991578f0ac40c3
+SHA1 (patch-usrp_host_swig_usrp_prims.i) = 2ff2f695a2ba8cb4237298be96833225f37cfec8
