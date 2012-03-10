@@ -1,0 +1,14 @@
+$NetBSD: patch-generator_typesystem_gui-common.xml,v 1.1 2012/03/10 20:42:31 markd Exp $
+
+Fix build with qt4.8, from fedora by way of gentoo  
+
+--- generator/typesystem_gui-common.xml.orig	2012-02-15 22:42:52.385763112 +0000
++++ generator/typesystem_gui-common.xml
+@@ -2233,7 +2233,6 @@
+     
+                
+   </object-type>
+-  <object-type name="QFileOpenEvent" polymorphic-id-expression="%1-&gt;type() == QEvent::FileOpen"/>
+   <object-type name="QFocusEvent" polymorphic-id-expression="%1-&gt;type() == QEvent::FocusIn || %1-&gt;type() == QEvent::FocusOut">
+         <modify-function signature="reason()const">
+             <remove/>
