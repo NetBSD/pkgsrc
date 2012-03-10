@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2002/06/10 12:37:43 sakamoto Exp $
+$NetBSD: patch-aa,v 1.6 2012/03/10 08:20:13 sbd Exp $
 
---- sys/bsd/Makefile.orig	Sun Oct  1 00:59:42 2000
-+++ sys/bsd/Makefile	Thu Feb 15 18:28:30 2001
+--- sys/bsd/Makefile.orig	2000-09-30 15:59:42.000000000 +0000
++++ sys/bsd/Makefile
 @@ -13,12 +13,15 @@
  SYS	= bsd
  
@@ -15,8 +15,10 @@ $NetBSD: patch-aa,v 1.5 2002/06/10 12:37:43 sakamoto Exp $
 +CANNAINC = ${CPPFLAGS}
 +.else
  CANNADEF =
- CANNALIB =
- CANNAINC =
+-CANNALIB =
+-CANNAINC =
++CANNALIB = ${LDFLAGS}
++CANNAINC = ${CPPFLAGS}
 +.endif
  
  # CDEFS gets defines, and gets passed to lint. CFLAGS gets flags, and doesn't

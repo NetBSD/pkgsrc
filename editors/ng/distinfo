@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 17:15:12 agc Exp $
+$NetBSD: distinfo,v 1.6 2012/03/10 08:20:13 sbd Exp $
 
 SHA1 (ng-1.4.3.tar.gz) = b5200da6c41f0e4d1d232a1a0c9548f8a37a96e2
 RMD160 (ng-1.4.3.tar.gz) = 5c0bcf80502cdba1bc7ea51c484b31088e5864bd
 Size (ng-1.4.3.tar.gz) = 586587 bytes
-SHA1 (patch-aa) = 0df9627b2dc337df879d982fe51a8293b65f3155
+SHA1 (patch-aa) = 9fe18cac939f4ac659f662d548d32996159e1ca6
+SHA1 (patch-sys_sysv_Makefile) = 02178b598ffc7d7e05150324b4f19af73cb3a047
