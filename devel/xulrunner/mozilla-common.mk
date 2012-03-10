@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.30 2012/03/06 12:34:08 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.31 2012/03/10 03:08:25 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -54,9 +54,6 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
-
-# workround for link of xulrunner-bin etc.
-LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib/xulrunner
 
 PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../lang/python/application.mk"
