@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/03/09 16:18:55 taca Exp $
+$NetBSD: distinfo,v 1.3 2012/03/10 03:43:09 taca Exp $
 
 SHA1 (contao-2.11.1.tar.gz) = ba48d9f7a8b9596b910679c0ccf5f29c2e0f6cc5
 RMD160 (contao-2.11.1.tar.gz) = 94d5971b94f1da885d0613122df3fb5100dc2e63
 Size (contao-2.11.1.tar.gz) = 5318332 bytes
+SHA1 (patch-plugins_idna_idna__convert.class.php) = 44b825f9a53a9cee4529d0b50f4660f701224bcc
