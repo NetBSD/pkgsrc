@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.5 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-ba,v 1.6 2012/03/10 03:26:05 ryoon Exp $
 
 pthread_t may be 64-bit, avoid casting it.
 
---- mozilla/nsprpub/pr/include/private/pprthred.h.orig	2009-11-02 22:43:08.000000000 +0100
+--- mozilla/nsprpub/pr/include/private/pprthred.h.orig	2012-02-16 14:09:27.000000000 +0000
 +++ mozilla/nsprpub/pr/include/private/pprthred.h
 @@ -51,6 +51,8 @@
  #include <os2.h>

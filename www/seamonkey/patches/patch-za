@@ -1,12 +1,13 @@
-$NetBSD: patch-za,v 1.3 2011/11/12 16:41:43 tnn Exp $
+$NetBSD: patch-za,v 1.4 2012/03/10 03:26:07 ryoon Exp $
 
---- suite/app/Makefile.in.orig	2011-09-28 23:11:01.000000000 +0000
+--- suite/app/Makefile.in.orig	2012-02-16 13:59:53.000000000 +0000
 +++ suite/app/Makefile.in
-@@ -91,6 +91,10 @@ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
+@@ -92,6 +92,11 @@ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
  TK_LIBS := -framework Cocoa $(TK_LIBS)
  endif
  
 +ifeq ($(OS_ARCH),NetBSD)
++OS_LIBS += $(call EXPAND_LIBNAME,kvm)
 +LIBS += -lossaudio
 +endif
 +
