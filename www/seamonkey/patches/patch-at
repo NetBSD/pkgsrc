@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.7 2011/08/21 23:21:34 tnn Exp $
+$NetBSD: patch-at,v 1.8 2012/03/10 03:26:05 ryoon Exp $
 
 Avoid silly redefinitions of standard types on NetBSD.
 
---- mozilla/gfx/qcms/qcmstypes.h.orig	2010-11-04 19:20:39.000000000 +0000
+--- mozilla/gfx/qcms/qcmstypes.h.orig	2012-02-16 14:08:55.000000000 +0000
 +++ mozilla/gfx/qcms/qcmstypes.h
 @@ -10,6 +10,8 @@
  #if defined (__SVR4) && defined (__sun)
@@ -12,4 +12,4 @@ Avoid silly redefinitions of standard types on NetBSD.
 +#include <stdint.h>
  #elif defined (_AIX)
  #include <sys/types.h>
- #elif !defined(ANDROID)
+ #elif defined(__OpenBSD__)

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xpcom_idl-parser_header.py,v 1.1 2011/12/23 01:16:27 joerg Exp $
+$NetBSD: patch-mozilla_xpcom_idl-parser_header.py,v 1.2 2012/03/10 03:26:06 ryoon Exp $
 
---- mozilla/xpcom/idl-parser/header.py.orig	2011-12-22 00:35:28.000000000 +0000
+--- mozilla/xpcom/idl-parser/header.py.orig	2012-02-16 14:09:41.000000000 +0000
 +++ mozilla/xpcom/idl-parser/header.py
 @@ -521,6 +521,12 @@ if __name__ == '__main__':
          outfd.close()

@@ -1,10 +1,10 @@
-$NetBSD: patch-md,v 1.1 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-md,v 1.2 2012/03/10 03:26:05 ryoon Exp $
 
 ???. from www/firefox/patch-ax.
 
---- mozilla/security/coreconf/SunOS5.mk.orig	2009-06-29 18:15:11.000000000 +0200
+--- mozilla/security/coreconf/SunOS5.mk.orig	2012-02-16 14:09:29.000000000 +0000
 +++ mozilla/security/coreconf/SunOS5.mk
-@@ -156,6 +156,10 @@ endif
+@@ -147,6 +147,10 @@ endif
  endif
  DSO_LDOPTS += -z combreloc -z defs -z ignore
  
