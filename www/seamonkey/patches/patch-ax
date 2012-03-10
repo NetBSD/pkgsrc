@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.7 2011/07/11 20:46:36 tnn Exp $
+$NetBSD: patch-ax,v 1.8 2012/03/10 03:26:05 ryoon Exp $
 
---- mozilla/xpcom/base/nsStackWalk.cpp.orig	2010-12-15 01:03:41.000000000 +0000
+--- mozilla/xpcom/base/nsStackWalk.cpp.orig	2012-02-16 14:09:41.000000000 +0000
 +++ mozilla/xpcom/base/nsStackWalk.cpp
-@@ -1137,7 +1137,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
+@@ -1140,7 +1140,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
  #define __USE_GNU
  #endif
  

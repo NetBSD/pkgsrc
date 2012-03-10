@@ -1,6 +1,6 @@
-$NetBSD: patch-av,v 1.1 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-av,v 1.2 2012/03/10 03:26:05 ryoon Exp $
 
---- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2008-03-22 05:25:35.000000000 +0100
+--- mozilla/xulrunner/app/nsXULRunnerApp.cpp.orig	2012-02-16 14:09:42.000000000 +0000
 +++ mozilla/xulrunner/app/nsXULRunnerApp.cpp
 @@ -37,6 +37,27 @@
  
@@ -30,7 +30,7 @@ $NetBSD: patch-av,v 1.1 2010/03/16 10:59:10 tnn Exp $
  #ifdef XP_WIN
  #include <windows.h>
  #endif
-@@ -283,6 +304,7 @@ private:
+@@ -274,6 +295,7 @@ private:
  
  int main(int argc, char* argv[])
  {

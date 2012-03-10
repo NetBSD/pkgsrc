@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.1 2010/03/16 10:59:10 tnn Exp $
+$NetBSD: patch-az,v 1.2 2012/03/10 03:26:05 ryoon Exp $
 
---- mozilla/nsprpub/pr/src/pthreads/ptthread.c.orig	2009-11-02 22:43:08.000000000 +0100
+--- mozilla/nsprpub/pr/src/pthreads/ptthread.c.orig	2012-02-16 14:09:27.000000000 +0000
 +++ mozilla/nsprpub/pr/src/pthreads/ptthread.c
-@@ -1089,12 +1089,12 @@ PR_IMPLEMENT(void) PR_ProcessExit(PRIntn
+@@ -1070,12 +1070,12 @@ PR_IMPLEMENT(void) PR_ProcessExit(PRIntn
      _exit(status);
  }
  

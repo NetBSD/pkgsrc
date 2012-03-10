@@ -1,0 +1,22 @@
+$NetBSD: patch-mozilla_js_src_configure,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+
+--- mozilla/js/src/configure.orig	2012-02-16 14:10:22.000000000 +0000
++++ mozilla/js/src/configure
+@@ -3411,7 +3411,7 @@ fi
+ 
+ echo "$ac_t""$ac_cv_have_std__Throw" 1>&6
+ 
+-        if test "$ac_cv_have_std__Throw" == "yes"; then
++        if test "$ac_cv_have_std__Throw" = "yes"; then
+             echo $ac_n "checking for |class __declspec(dllimport) exception| bug""... $ac_c" 1>&6
+ echo "configure:3417: checking for |class __declspec(dllimport) exception| bug" >&5
+ if eval "test \"`echo '$''{'ac_cv_have_dllimport_exception_bug'+set}'`\" = set"; then
+@@ -9325,7 +9325,7 @@ ac_link='${CC-cc} -o conftest${ac_exeext
+ cross_compiling=$ac_cv_prog_cc_cross
+ 
+ 
+-if test "$ac_have_gcc_pr49911" == "yes"; then
++if test "$ac_have_gcc_pr49911" = "yes"; then
+    echo "$ac_t""yes" 1>&6
+    CFLAGS="$CFLAGS -fno-tree-vrp"
+    CXXFLAGS="$CXXFLAGS -fno-tree-vrp"
