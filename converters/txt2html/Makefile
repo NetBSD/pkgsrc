@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2011/08/14 07:47:43 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/03/10 20:08:13 markd Exp $
 #
 
-DISTNAME=		txt2html-2.44
-PKGREVISION=		3
+DISTNAME=		txt2html-2.45
 CATEGORIES=		converters www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=txt2html/}
 
