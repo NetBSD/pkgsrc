@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2012/03/03 00:12:45 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2012/03/10 13:20:12 shattered Exp $
 
 DISTNAME=	TiMidity++-2.13.2
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://timidity.sourceforge.net/
 COMMENT=	MIDI to WAV renderer and player
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/03/03 00:13:06 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2012/03/10 13:20:11 shattered Exp $
 
 DISTNAME=	gtkballs-3.1.5
 PKGREVISION=	17
@@ -8,6 +8,7 @@ MASTER_SITES=	http://gtkballs.antex.ru/dist/
 MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://gtkballs.antex.ru/
 COMMENT=	GTK+ clone of "Color Lines"
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
