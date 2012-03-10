@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.757 2012/03/10 02:08:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.758 2012/03/10 03:34:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1101,3 +1101,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mk-configure to 0.22.0 [cheusov 2012-03-09]
 	Added filesystems/cloudfuse version 20120124 [abs 2012-03-09]
 	Updated graphics/gif2png to 2.5.8 [wiz 2012-03-10]
+	Updated www/firefox to 10.0.2nb1 [ryoon 2012-03-10]
+	Updated www/seamonkey to 2.7.2 [ryoon 2012-03-10]
+	Updated www/seamonkey-l10n to 2.7.2 [ryoon 2012-03-10]
