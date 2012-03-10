@@ -1,35 +1,47 @@
-$NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.1 2011/07/11 20:46:36 tnn Exp $
+$NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.2 2012/03/10 03:26:05 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/debug_util_posix.cc.orig	2011-06-15 21:57:27.000000000 +0000
+--- mozilla/ipc/chromium/src/base/debug_util_posix.cc.orig	2012-02-16 14:09:02.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/debug_util_posix.cc
-@@ -11,10 +11,10 @@
- #include <sys/stat.h>
- #include <sys/types.h>
+@@ -5,7 +5,7 @@
+ #include "build/build_config.h"
+ #include "base/debug_util.h"
+ 
+-#define MOZ_HAVE_EXECINFO_H (!defined(ANDROID) && !defined(__OpenBSD__))
++#define MOZ_HAVE_EXECINFO_H (defined(__linux__) && !defined(ANDROID))
+ 
+ #include <errno.h>
+ #include <fcntl.h>
+@@ -17,8 +17,11 @@
  #include <unistd.h>
--#ifndef ANDROID
-+#ifdef __linux__
+ #if MOZ_HAVE_EXECINFO_H
  #include <execinfo.h>
 -#include <sys/sysctl.h>
  #endif
++#if defined(OS_DRAGONFLY)
++#include <sys/user.h>
++#endif
 +#include <sys/sysctl.h>
  
  #include "base/basictypes.h"
  #include "base/eintr_wrapper.h"
-@@ -119,7 +119,7 @@ StackTrace::StackTrace() {
-   const int kMaxCallers = 256;
- 
-   void* callers[kMaxCallers];
--#ifndef ANDROID
-+#ifdef __GLIBC__
-   int count = backtrace(callers, kMaxCallers);
- #else
-   int count = 0;
-@@ -138,7 +138,7 @@ StackTrace::StackTrace() {
- 
- void StackTrace::PrintBacktrace() {
-   fflush(stderr);
--#ifndef ANDROID
-+#ifdef __GLIBC__
-   backtrace_symbols_fd(&trace_[0], trace_.size(), STDERR_FILENO);
- #endif
+@@ -32,7 +35,7 @@ bool DebugUtil::SpawnDebuggerOnProcess(u
+   return false;
  }
+ 
+-#if defined(OS_MACOSX)
++#if defined(OS_MACOSX) || defined(OS_BSD)
+ 
+ // Based on Apple's recommended method as described in
+ // http://developer.apple.com/qa/qa2004/qa1361.html
+@@ -71,7 +74,11 @@ bool DebugUtil::BeingDebugged() {
+ 
+   // This process is being debugged if the P_TRACED flag is set.
+   is_set = true;
++#if defined(__DragonFly__)
++  being_debugged = (info.kp_flags & P_TRACED) != 0;
++#else
+   being_debugged = (info.kp_proc.p_flag & P_TRACED) != 0;
++#endif
+   return being_debugged;
+ }
+ 

@@ -1,6 +1,6 @@
-$NetBSD: patch-pb,v 1.2 2011/07/11 20:46:36 tnn Exp $
+$NetBSD: patch-pb,v 1.3 2012/03/10 03:26:06 ryoon Exp $
 
---- mozilla/xulrunner/installer/libxul.pc.in.orig	2010-11-04 19:20:39.000000000 +0000
+--- mozilla/xulrunner/installer/libxul.pc.in.orig	2012-02-16 14:09:42.000000000 +0000
 +++ mozilla/xulrunner/installer/libxul.pc.in
 @@ -7,5 +7,5 @@ Name: libxul
  Description: The Mozilla Runtime and Embedding Engine
