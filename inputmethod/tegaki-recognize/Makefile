@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/10 10:56:16 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/10 13:04:34 obache Exp $
 #
 
 DISTNAME=	tegaki-recognize-0.3.1.2
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	bin/tegaki-recognize
 
-EGG_NAME=	${PKGNAME:S/-/_/}
+EGG_NAME=	${DISTNAME:S/-/_/}
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
