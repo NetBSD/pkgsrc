@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/01/04 15:21:18 dholland Exp $
+# $NetBSD: Makefile,v 1.32 2012/03/10 21:36:14 markd Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -23,6 +23,7 @@ BUILD_DEPENDS+=		modular-xorg-server-[0-9]*:../../x11/modular-xorg-server
 
 CONFIGURE_ENV+=		PL=swi-prolog
 CONFIGURE_ENV+=		ARCH=${MACHINE_GNU_PLATFORM}	# make PLIST consistent
+CONFIGURE_ARGS+=	--without-jpl
 
 CONFIGURE_DIRS+=	. packages
 BUILD_DIRS+=		packages
