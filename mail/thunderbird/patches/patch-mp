@@ -1,6 +1,6 @@
-$NetBSD: patch-mp,v 1.4 2011/08/19 14:39:10 tnn Exp $
+$NetBSD: patch-mp,v 1.5 2012/03/10 11:42:39 ryoon Exp $
 
---- mozilla/media/libsydneyaudio/src/Makefile.in.orig	2010-07-21 00:52:30.000000000 +0000
+--- mozilla/media/libsydneyaudio/src/Makefile.in.orig	2012-02-16 10:25:19.000000000 +0000
 +++ mozilla/media/libsydneyaudio/src/Makefile.in
 @@ -97,6 +97,12 @@ ifeq ($(OS_ARCH),WINNT)
  OS_LIBS += winmm.lib

@@ -1,11 +1,15 @@
-$NetBSD: patch-mm,v 1.5 2011/08/19 14:39:10 tnn Exp $
+$NetBSD: patch-mm,v 1.6 2012/03/10 11:42:39 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2011-06-15 21:58:10.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2012-02-16 10:25:30.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -216,6 +216,13 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+@@ -209,6 +209,17 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
  endif
  
++ifeq ($(OS_ARCH),DragonFly)
++OS_LIBS += $(call EXPAND_LIBNAME,kvm)
++endif
++
 +ifeq ($(OS_ARCH),NetBSD)
 +EXTRA_DSO_LDOPTS += -lossaudio
 +endif

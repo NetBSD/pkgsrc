@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.enigmail,v 1.3 2011/08/19 14:39:09 tnn Exp $
+@comment $NetBSD: PLIST.enigmail,v 1.4 2012/03/10 11:42:38 ryoon Exp $
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome.manifest
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/chrome/enigmail.jar
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/components/enigMsgCompFields.js
@@ -13,6 +13,8 @@ lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/install.rdf
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/commonFuncs.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/enigmailCommon.jsm
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess.jsm
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_unix.js
+lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/modules/subprocess_worker_win.js
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/platform/${OPSYS}_${TARGET_XPCOM_ABI}/components/libenigmime-${TARGET_XPCOM_ABI}.so
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/platform/${OPSYS}_${TARGET_XPCOM_ABI}/components/libipc-${TARGET_XPCOM_ABI}.so
 lib/thunderbird/extensions/{847b3a00-7ab1-11d4-8f02-006008948af5}/wrappers/gpg-agent-wrapper.sh

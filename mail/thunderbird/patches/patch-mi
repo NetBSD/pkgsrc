@@ -1,15 +1,15 @@
-$NetBSD: patch-mi,v 1.2 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-mi,v 1.3 2012/03/10 11:42:38 ryoon Exp $
 
 Add DragonFly support.
 
---- mozilla/config/config.mk.orig	2009-06-29 18:14:41.000000000 +0200
+--- mozilla/config/config.mk.orig	2012-02-16 10:24:47.000000000 +0000
 +++ mozilla/config/config.mk
-@@ -133,7 +133,7 @@ endif
+@@ -129,7 +129,7 @@ endif
  # but save the version to allow multiple versions of the same base
  # platform to be built in the same tree.
  #
--ifneq (,$(filter FreeBSD HP-UX IRIX Linux NetBSD OpenBSD OSF1 SunOS,$(OS_ARCH)))
-+ifneq (,$(filter DragonFly FreeBSD HP-UX IRIX Linux NetBSD OpenBSD OSF1 SunOS,$(OS_ARCH)))
+-ifneq (,$(filter FreeBSD HP-UX Linux NetBSD OpenBSD OSF1 SunOS,$(OS_ARCH)))
++ifneq (,$(filter DragonFly FreeBSD HP-UX Linux NetBSD OpenBSD OSF1 SunOS,$(OS_ARCH)))
  OS_RELEASE	:= $(basename $(OS_RELEASE))
  
  # Allow the user to ignore the OS_VERSION, which is usually irrelevant.
