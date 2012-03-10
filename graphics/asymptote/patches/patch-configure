@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2012/03/10 21:14:52 markd Exp $
+
+Handle TEXMFLOCAL having multiple elements.
+
+--- configure.orig	2012-02-18 05:02:01.000000000 +0000
++++ configure
+@@ -3773,7 +3773,7 @@ fi
+ 
+ 
+ if test "x$kpsewhich" = "xtrue"; then
+-  latexdir=`kpsewhich -expand-var='$TEXMFLOCAL'/tex/latex`
++  latexdir=`kpsewhich -expand-var='$TEXMFLOCAL' | sed -e 's/:.*//' -e 's:$:/tex/latex:'`
+ else
+   latexdir=$prefix/share/texmf/tex/latex
+   as_ac_File=`$as_echo "ac_cv_file_$latexdir/base/latex.ltx" | $as_tr_sh`
+@@ -3872,7 +3872,7 @@ fi
+ 
+ 
+ if test "x$kpsewhich" = "xtrue"; then
+-  contextdir=`kpsewhich -expand-var='$TEXMFLOCAL'/tex/context/third`
++  contextdir=`kpsewhich -expand-var='$TEXMFLOCAL' | sed -e 's/:.*//' -e 's:$:/tex/context/third:'`
+ else
+   contextdir=$prefix/share/texmf/tex/context/third
+ fi
+@@ -6709,7 +6709,7 @@ $as_echo "$as_me: *** Could not find lib
+ fi
+ 
+ esac
+-   if test "x$enable_offscreen" == "xyes"; then
++   if test "x$enable_offscreen" = "xyes"; then
+            { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OSMesaCreateContext in -lOSMesa" >&5
+ $as_echo_n "checking for OSMesaCreateContext in -lOSMesa... " >&6; }
+ if test "${ac_cv_lib_OSMesa_OSMesaCreateContext+set}" = set; then :
