@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/01/04 14:08:14 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/10 13:20:10 shattered Exp $
 #
 
 DISTNAME=	libdca-0.0.5
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.videolan.org/developers/libdca.html
 COMMENT=	DTS Coherent Acoustics decoder
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
