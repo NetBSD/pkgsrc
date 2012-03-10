@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/10 21:53:47 markd Exp $
 bin/kodos.py
 ${PYSITELIB}/kodos.pth
 ${PYSITELIB}/kodos/__init__.py
@@ -25,6 +25,9 @@ ${PYSITELIB}/kodos/modules/debug.pyo
 ${PYSITELIB}/kodos/modules/help.py
 ${PYSITELIB}/kodos/modules/help.pyc
 ${PYSITELIB}/kodos/modules/help.pyo
+${PYSITELIB}/kodos/modules/helpBA.py
+${PYSITELIB}/kodos/modules/helpBA.pyc
+${PYSITELIB}/kodos/modules/helpBA.pyo
 ${PYSITELIB}/kodos/modules/kodosBA.py
 ${PYSITELIB}/kodos/modules/kodosBA.pyc
 ${PYSITELIB}/kodos/modules/kodosBA.pyo
@@ -100,6 +103,9 @@ ${PYSITELIB}/kodos/modules/webbrowser.pyo
 ${PYSITELIB}/kodos/modules/xpm.py
 ${PYSITELIB}/kodos/modules/xpm.pyc
 ${PYSITELIB}/kodos/modules/xpm.pyo
+${PYSITELIB}/kodos/py2exe-setup.py
+${PYSITELIB}/kodos/py2exe-setup.pyc
+${PYSITELIB}/kodos/py2exe-setup.pyo
 share/kodos/help/examine.html
 share/kodos/help/example.html
 share/kodos/help/importURL.html
@@ -125,11 +131,6 @@ share/kodos/images/green.png
 share/kodos/images/help.png
 share/kodos/images/kodos.png
 share/kodos/images/kodos_icon.png
-share/kodos/images/kodos_icon_old.png
-share/kodos/images/kodos_icon_small.png
-share/kodos/images/kodos_logo.png
-share/kodos/images/kodos_text_logo.png
-share/kodos/images/kodos_text_logo1.png
 share/kodos/images/library.png
 share/kodos/images/pause.png
 share/kodos/images/pause_toolbar.png
@@ -139,6 +140,7 @@ share/kodos/images/yellow.png
 share/kodos/kodos.pro
 share/kodos/kodosqt.pro
 share/kodos/modules/aboutBA.ui
+share/kodos/modules/helpBA.ui
 share/kodos/modules/kodosBA.ui
 share/kodos/modules/newUserDialogBA.ui
 share/kodos/modules/prefsBA.ui
