@@ -1,7 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/09 10:10:08 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/10 22:23:13 markd Exp $
+bin/pdf180
+bin/pdf270
 bin/pdf90
+bin/pdfbook
+bin/pdfflip
+bin/pdfjam
+bin/pdfjam-pocketmod
+bin/pdfjam-slides3up
+bin/pdfjam-slides6up
 bin/pdfjoin
 bin/pdfnup
+bin/pdfpun
+man/man1/pdf180.1
+man/man1/pdf270.1
 man/man1/pdf90.1
+man/man1/pdfbook.1
+man/man1/pdfflip.1
+man/man1/pdfjam-pocketmod.1
+man/man1/pdfjam-slides3up.1
+man/man1/pdfjam-slides6up.1
+man/man1/pdfjam.1
 man/man1/pdfjoin.1
 man/man1/pdfnup.1
+man/man1/pdfpun.1
