@@ -1,4 +1,4 @@
-# $Id: Makefile.in,v 1.1 2004/08/27 03:06:07 jlam Exp $
+# $Id: Makefile.in,v 1.2 2012/03/10 16:10:56 joerg Exp $
 
 @SET_MAKE@
 SHELL = @SHELL@
@@ -80,10 +80,6 @@ install: rcorder
 	@f=`echo rcorder.8|sed '$(transform)'`; \
 	echo "$(INSTALL_DATA) rcorder.8 $(DESTDIR)$(mandir)/man8/$$f"; \
 	$(INSTALL_DATA) rcorder.8 $(DESTDIR)$(mandir)/man8/$$f
-	$(mkinstalldirs) $(DESTDIR)$(mandir)/cat8
-	@f=`echo rcorder.cat8|sed '$(transform);s,\.cat8$$,.0,'`; \
-	echo "$(INSTALL_DATA) rcorder.cat8 $(DESTDIR)$(mandir)/cat8/$$f"; \
-	$(INSTALL_DATA) rcorder.cat8 $(DESTDIR)$(mandir)/cat8/$$f
 
 uninstall:
 	@f=`echo rcorder|sed '$(transform)'`; \
