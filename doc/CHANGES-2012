@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.760 2012/03/10 08:04:04 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.761 2012/03/10 08:04:53 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1106,3 +1106,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/seamonkey-l10n to 2.7.2 [ryoon 2012-03-10]
 	Updated devel/automake to 1.11.3nb1 [sbd 2012-03-10]
 	Updated devel/pcre to 8.30nb2 [sbd 2012-03-10]
+	Updated devel/fossil to 1.21nb1 [sbd 2012-03-10]
