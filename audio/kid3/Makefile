@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/03/03 00:12:40 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2012/03/10 21:22:07 shattered Exp $
 #
 
 DISTNAME=		kid3-1.6
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kid3/}
 MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://kid3.sourceforge.net/
 COMMENT=		ID3 tagger for KDE 3
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
