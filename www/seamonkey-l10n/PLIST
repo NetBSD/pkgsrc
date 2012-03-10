@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/12 16:42:12 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/03/10 03:27:07 ryoon Exp $
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/autoconfig/autoconfig.properties
@@ -13,6 +13,7 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/c
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/about.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/askViewZoom.dtd
@@ -190,6 +191,8 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/c
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/cookie/cookieAcceptDialog.dtd
@@ -229,6 +232,7 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/e
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/editor/editor.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/editor/editor.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/editor/editorOverlay.dtd
@@ -297,6 +301,7 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/g
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/languageNames.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/mozilla.dtd
@@ -323,7 +328,6 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/g
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/viewSource.properties
-lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/wizard.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/wizard.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/global/xbl.properties
@@ -360,7 +364,6 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/m
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/addressbook/abNewCardDialog.dtd
@@ -405,6 +408,7 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/m
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/mailTasksOverlay.dtd
@@ -547,6 +551,7 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/c
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/about.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/askViewZoom.dtd
@@ -724,6 +729,8 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/c
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/cookie/cookieAcceptDialog.dtd
@@ -763,6 +770,7 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/e
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/editor/editor.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/editor/editor.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/editor/editorOverlay.dtd
@@ -831,6 +839,7 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/g
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/languageNames.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/mozilla.dtd
@@ -857,7 +866,6 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/g
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/viewSource.properties
-lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/wizard.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/wizard.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/global/xbl.properties
@@ -894,7 +902,6 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/m
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/addressbook/abNewCardDialog.dtd
@@ -939,6 +946,7 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/m
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/mailTasksOverlay.dtd
@@ -1081,6 +1089,7 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/c
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/about.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/askViewZoom.dtd
@@ -1258,6 +1267,8 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/c
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/cookie/cookieAcceptDialog.dtd
@@ -1297,6 +1308,7 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/e
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/editor/editor.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/editor/editor.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/editor/editorOverlay.dtd
@@ -1365,6 +1377,7 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/g
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/languageNames.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/mozilla.dtd
@@ -1391,7 +1404,6 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/g
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/viewSource.properties
-lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/wizard.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/wizard.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/global/xbl.properties
@@ -1428,7 +1440,6 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/m
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/addressbook/abNewCardDialog.dtd
@@ -1473,6 +1484,7 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/m
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/mailTasksOverlay.dtd
@@ -1615,6 +1627,7 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/about.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/askViewZoom.dtd
@@ -1792,6 +1805,8 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/cookie/cookieAcceptDialog.dtd
@@ -1831,6 +1846,7 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/editor/editor.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/editor/editor.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/editor/editorOverlay.dtd
@@ -1899,6 +1915,7 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/languageNames.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/mozilla.dtd
@@ -1925,7 +1942,6 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/viewSource.properties
-lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/wizard.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/wizard.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/global/xbl.properties
@@ -1962,7 +1978,6 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/addressbook/abNewCardDialog.dtd
@@ -2007,6 +2022,7 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/mailTasksOverlay.dtd
@@ -2149,6 +2165,7 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/about.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/askViewZoom.dtd
@@ -2326,6 +2343,8 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/cookie/cookieAcceptDialog.dtd
@@ -2365,6 +2384,7 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/editor/editor.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/editor/editor.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/editor/editorOverlay.dtd
@@ -2433,6 +2453,7 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/languageNames.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/mozilla.dtd
@@ -2459,7 +2480,6 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/viewSource.properties
-lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/wizard.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/wizard.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/global/xbl.properties
@@ -2496,7 +2516,6 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/addressbook/abNewCardDialog.dtd
@@ -2541,6 +2560,7 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/mailTasksOverlay.dtd
@@ -2683,6 +2703,7 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/about.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/askViewZoom.dtd
@@ -2860,6 +2881,8 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/cookie/cookieAcceptDialog.dtd
@@ -2899,6 +2922,7 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/editor/editor.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/editor/editor.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/editor/editorOverlay.dtd
@@ -2967,6 +2991,7 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/languageNames.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/mozilla.dtd
@@ -2993,7 +3018,6 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/viewSource.properties
-lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/wizard.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/wizard.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/global/xbl.properties
@@ -3030,7 +3054,6 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/addressbook/abNewCardDialog.dtd
@@ -3075,6 +3098,7 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/mailTasksOverlay.dtd
@@ -3217,6 +3241,7 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/about.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/askViewZoom.dtd
@@ -3394,6 +3419,8 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/cookie/cookieAcceptDialog.dtd
@@ -3433,6 +3460,7 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/editor/editor.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/editor/editor.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/editor/editorOverlay.dtd
@@ -3501,6 +3529,7 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/languageNames.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/mozilla.dtd
@@ -3527,7 +3556,6 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/viewSource.properties
-lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/wizard.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/wizard.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/global/xbl.properties
@@ -3564,7 +3592,6 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/addressbook/abNewCardDialog.dtd
@@ -3609,6 +3636,7 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/mailTasksOverlay.dtd
@@ -3751,6 +3779,7 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/c
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/about.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/askViewZoom.dtd
@@ -3928,6 +3957,8 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/c
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/cookie/cookieAcceptDialog.dtd
@@ -3967,6 +3998,7 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/e
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/editor/editor.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/editor/editor.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/editor/editorOverlay.dtd
@@ -4035,6 +4067,7 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/g
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/languageNames.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/mozilla.dtd
@@ -4061,7 +4094,6 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/g
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/viewSource.properties
-lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/wizard.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/wizard.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/global/xbl.properties
@@ -4098,7 +4130,6 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/m
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/addressbook/abNewCardDialog.dtd
@@ -4143,6 +4174,7 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/m
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/mailTasksOverlay.dtd
@@ -4285,6 +4317,7 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/c
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/about.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/askViewZoom.dtd
@@ -4462,6 +4495,8 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/c
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/cookie/cookieAcceptDialog.dtd
@@ -4501,6 +4536,7 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/e
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/editor/editor.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/editor/editor.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/editor/editorOverlay.dtd
@@ -4569,6 +4605,7 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/g
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/languageNames.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/mozilla.dtd
@@ -4595,7 +4632,6 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/g
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/viewSource.properties
-lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/wizard.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/wizard.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/global/xbl.properties
@@ -4632,7 +4668,6 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/m
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/addressbook/abNewCardDialog.dtd
@@ -4677,6 +4712,7 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/m
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/mailTasksOverlay.dtd
@@ -4819,6 +4855,7 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/c
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/about.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/askViewZoom.dtd
@@ -4996,6 +5033,8 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/c
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/cookie/cookieAcceptDialog.dtd
@@ -5035,6 +5074,7 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/e
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/editor/editor.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/editor/editor.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/editor/editorOverlay.dtd
@@ -5103,6 +5143,7 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/g
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/languageNames.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/mozilla.dtd
@@ -5129,7 +5170,6 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/g
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/viewSource.properties
-lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/wizard.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/wizard.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/global/xbl.properties
@@ -5166,7 +5206,6 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/m
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/addressbook/abNewCardDialog.dtd
@@ -5211,6 +5250,7 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/m
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/mailTasksOverlay.dtd
@@ -5353,6 +5393,7 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/c
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/about.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/askViewZoom.dtd
@@ -5530,6 +5571,8 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/c
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/cookie/cookieAcceptDialog.dtd
@@ -5569,6 +5612,7 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/e
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/editor/editor.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/editor/editor.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/editor/editorOverlay.dtd
@@ -5637,6 +5681,7 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/g
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/languageNames.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/mozilla.dtd
@@ -5663,7 +5708,6 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/g
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/viewSource.properties
-lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/wizard.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/wizard.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/global/xbl.properties
@@ -5700,7 +5744,6 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/m
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/addressbook/abNewCardDialog.dtd
@@ -5745,6 +5788,7 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/m
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/mailTasksOverlay.dtd
@@ -5887,6 +5931,7 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/about.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/askViewZoom.dtd
@@ -6064,6 +6109,8 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/cookie/cookieAcceptDialog.dtd
@@ -6103,6 +6150,7 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/editor/editor.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/editor/editor.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/editor/editorOverlay.dtd
@@ -6171,6 +6219,7 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/languageNames.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/mozilla.dtd
@@ -6197,7 +6246,6 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/viewSource.properties
-lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/wizard.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/wizard.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/global/xbl.properties
@@ -6234,7 +6282,6 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/addressbook/abNewCardDialog.dtd
@@ -6279,6 +6326,7 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/mailTasksOverlay.dtd
@@ -6421,6 +6469,7 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/c
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/about.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/askViewZoom.dtd
@@ -6598,6 +6647,8 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/c
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/cookie/cookieAcceptDialog.dtd
@@ -6637,6 +6688,7 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/e
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/editor/editor.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/editor/editor.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/editor/editorOverlay.dtd
@@ -6705,6 +6757,7 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/g
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/languageNames.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/mozilla.dtd
@@ -6731,7 +6784,6 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/g
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/viewSource.properties
-lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/wizard.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/wizard.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/global/xbl.properties
@@ -6768,7 +6820,6 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/m
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/addressbook/abNewCardDialog.dtd
@@ -6813,6 +6864,7 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/m
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/mailTasksOverlay.dtd
@@ -6955,6 +7007,7 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/c
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/about.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/askViewZoom.dtd
@@ -7132,6 +7185,8 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/c
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/cookie/cookieAcceptDialog.dtd
@@ -7171,6 +7226,7 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/e
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/editor/editor.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/editor/editor.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/editor/editorOverlay.dtd
@@ -7239,6 +7295,7 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/g
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/languageNames.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/mozilla.dtd
@@ -7265,7 +7322,6 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/g
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/viewSource.properties
-lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/wizard.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/wizard.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/global/xbl.properties
@@ -7302,7 +7358,6 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/m
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/addressbook/abNewCardDialog.dtd
@@ -7347,6 +7402,7 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/m
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/mailTasksOverlay.dtd
@@ -7489,6 +7545,7 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/about.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/askViewZoom.dtd
@@ -7666,6 +7723,8 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/cookie/cookieAcceptDialog.dtd
@@ -7705,6 +7764,7 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/editor/editor.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/editor/editor.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/editor/editorOverlay.dtd
@@ -7773,6 +7833,7 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/languageNames.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/mozilla.dtd
@@ -7799,7 +7860,6 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/viewSource.properties
-lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/wizard.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/wizard.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/global/xbl.properties
@@ -7836,7 +7896,6 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/addressbook/abNewCardDialog.dtd
@@ -7881,6 +7940,7 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/mailTasksOverlay.dtd
@@ -8023,6 +8083,7 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/c
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/about.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/askViewZoom.dtd
@@ -8200,6 +8261,8 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/c
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/cookie/cookieAcceptDialog.dtd
@@ -8239,6 +8302,7 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/e
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/editor/editor.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/editor/editor.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/editor/editorOverlay.dtd
@@ -8307,6 +8371,7 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/g
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/languageNames.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/mozilla.dtd
@@ -8333,7 +8398,6 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/g
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/viewSource.properties
-lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/wizard.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/wizard.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/global/xbl.properties
@@ -8370,7 +8434,6 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/m
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/addressbook/abNewCardDialog.dtd
@@ -8415,6 +8478,7 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/m
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/mailTasksOverlay.dtd
@@ -8557,6 +8621,7 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/c
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/about.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/askViewZoom.dtd
@@ -8734,6 +8799,8 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/c
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/cookie/cookieAcceptDialog.dtd
@@ -8773,6 +8840,7 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/e
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/editor/editor.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/editor/editor.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/editor/editorOverlay.dtd
@@ -8841,6 +8909,7 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/g
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/languageNames.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/mozilla.dtd
@@ -8867,7 +8936,6 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/g
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/viewSource.properties
-lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/wizard.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/wizard.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/global/xbl.properties
@@ -8904,7 +8972,6 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/m
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/addressbook/abNewCardDialog.dtd
@@ -8949,6 +9016,7 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/m
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/mailTasksOverlay.dtd
@@ -9091,6 +9159,7 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/about.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/askViewZoom.dtd
@@ -9268,6 +9337,8 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/cookie/cookieAcceptDialog.dtd
@@ -9307,6 +9378,7 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/editor/editor.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/editor/editor.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/editor/editorOverlay.dtd
@@ -9375,6 +9447,7 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/languageNames.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/mozilla.dtd
@@ -9401,7 +9474,6 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/viewSource.properties
-lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/wizard.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/wizard.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/global/xbl.properties
@@ -9438,7 +9510,6 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/addressbook/abNewCardDialog.dtd
@@ -9483,6 +9554,7 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/mailTasksOverlay.dtd
@@ -9625,6 +9697,7 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/c
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/about.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/askViewZoom.dtd
@@ -9802,6 +9875,8 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/c
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/cookie/cookieAcceptDialog.dtd
@@ -9841,6 +9916,7 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/e
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/editor/editor.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/editor/editor.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/editor/editorOverlay.dtd
@@ -9909,6 +9985,7 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/g
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/languageNames.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/mozilla.dtd
@@ -9935,7 +10012,6 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/g
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/viewSource.properties
-lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/wizard.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/wizard.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/global/xbl.properties
@@ -9972,7 +10048,6 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/m
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/addressbook/abNewCardDialog.dtd
@@ -10017,6 +10092,7 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/m
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/mailTasksOverlay.dtd
@@ -10159,6 +10235,7 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/c
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/about.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/askViewZoom.dtd
@@ -10336,6 +10413,8 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/c
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/cookie/cookieAcceptDialog.dtd
@@ -10375,6 +10454,7 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/e
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/editor/editor.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/editor/editor.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/editor/editorOverlay.dtd
@@ -10443,6 +10523,7 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/g
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/languageNames.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/mozilla.dtd
@@ -10469,7 +10550,6 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/g
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/viewSource.properties
-lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/wizard.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/wizard.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/global/xbl.properties
@@ -10506,7 +10586,6 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/m
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/addressbook/abNewCardDialog.dtd
@@ -10551,6 +10630,7 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/m
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/mailTasksOverlay.dtd
@@ -10693,6 +10773,7 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/about.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/askViewZoom.dtd
@@ -10870,6 +10951,8 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/cookie/cookieAcceptDialog.dtd
@@ -10909,6 +10992,7 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/editor/editor.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/editor/editor.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/editor/editorOverlay.dtd
@@ -10977,6 +11061,7 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/languageNames.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/mozilla.dtd
@@ -11003,7 +11088,6 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/viewSource.properties
-lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/wizard.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/wizard.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/global/xbl.properties
@@ -11040,7 +11124,6 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/addressbook/abNewCardDialog.dtd
@@ -11085,6 +11168,7 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/mailTasksOverlay.dtd
@@ -11227,6 +11311,7 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/c
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator-platform/win/platformCommunicatorOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator-platform/win/pref/platformPrefOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator-region/region.properties
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/about.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/aboutSessionRestore.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/aboutSyncTabs.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/askViewZoom.dtd
@@ -11404,6 +11489,8 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/c
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/typeaheadfind.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/utilityOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/utilityOverlay.properties
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/viewApplyThemeOverlay.dtd
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/viewApplyThemeOverlay.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/viewZoomOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/communicator/viewZoomOverlay.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/cookie/cookieAcceptDialog.dtd
@@ -11443,6 +11530,7 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/e
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/editor/EditorSpellCheck.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/editor/EditorTableProperties.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/editor/EditorTextAreaProperties.dtd
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/editor/editingOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/editor/editor.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/editor/editor.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/editor/editorOverlay.dtd
@@ -11511,6 +11599,7 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/g
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/languageNames.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout/HtmlForm.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout/MediaDocument.properties
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout/htmlparser.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout/xmlparser.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/layout_errors.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/mozilla.dtd
@@ -11537,7 +11626,6 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/g
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/videocontrols.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/viewSource.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/viewSource.properties
-lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/webConsole.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/wizard.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/wizard.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/global/xbl.properties
@@ -11574,7 +11662,6 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/m
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/addressbook/abAddressBookNameDialog.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/addressbook/abCardOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/addressbook/abCardViewOverlay.dtd
-lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/addressbook/abDirTreeOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/addressbook/abMailListDialog.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/addressbook/abMainWindow.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/addressbook/abNewCardDialog.dtd
@@ -11619,6 +11706,7 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/m
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/junkMailInfo.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/localMsgs.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/mailEditorOverlay.dtd
+lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/mailKeysOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/mailOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/mailPrefsOverlay.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/mailTasksOverlay.dtd
