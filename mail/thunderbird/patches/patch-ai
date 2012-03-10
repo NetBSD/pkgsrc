@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.7 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-ai,v 1.8 2012/03/10 11:42:38 ryoon Exp $
 
---- mozilla/dbm/src/mktemp.c.orig	2009-06-29 18:14:43.000000000 +0200
+--- mozilla/dbm/src/mktemp.c.orig	2012-02-16 10:24:52.000000000 +0000
 +++ mozilla/dbm/src/mktemp.c
-@@ -90,7 +90,7 @@ mktemp(char *path)
+@@ -92,7 +92,7 @@ mktemp(char *path)
  static int 
  _gettemp(char *path, register int *doopen, int extraFlags)
  {    

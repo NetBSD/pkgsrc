@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.87 2012/03/03 12:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2012/03/10 11:42:38 ryoon Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		8.0
-PKGREVISION=	5
+TB_VER=		10.0.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,12 +26,10 @@ CONFIGURE_ARGS+=	--enable-application=mail
 
 ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 
-.include "../../mk/bsd.prefs.mk"
+# workround for link of xulrunner-bin etc.
+LDFLAGS+=		-Wl,-rpath,${PREFIX}/lib/thunderbird
 
-.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin") && \
-    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
-BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 #SUBST_CLASSES+=			ext-compat
 #SUBST_STAGE.ext-compat=		pre-configure

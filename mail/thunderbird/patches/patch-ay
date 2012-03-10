@@ -1,6 +1,6 @@
-$NetBSD: patch-ay,v 1.3 2011/11/13 16:59:58 tnn Exp $
+$NetBSD: patch-ay,v 1.4 2012/03/10 11:42:38 ryoon Exp $
 
---- mozilla/browser/app/nsBrowserApp.cpp.orig	2011-09-22 20:20:17.000000000 +0000
+--- mozilla/browser/app/nsBrowserApp.cpp.orig	2012-02-16 10:24:45.000000000 +0000
 +++ mozilla/browser/app/nsBrowserApp.cpp
 @@ -49,6 +49,27 @@
  #include <stdio.h>

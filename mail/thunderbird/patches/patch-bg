@@ -1,6 +1,6 @@
-$NetBSD: patch-bg,v 1.2 2011/08/19 14:39:09 tnn Exp $
+$NetBSD: patch-bg,v 1.3 2012/03/10 11:42:38 ryoon Exp $
 
---- mozilla/storage/src/SQLiteMutex.h.orig	2010-05-28 13:22:58.000000000 +0000
+--- mozilla/storage/src/SQLiteMutex.h.orig	2012-02-16 10:25:26.000000000 +0000
 +++ mozilla/storage/src/SQLiteMutex.h
 @@ -141,15 +141,19 @@ public:
    void assertCurrentThreadOwns()

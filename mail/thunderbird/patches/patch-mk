@@ -1,10 +1,10 @@
-$NetBSD: patch-mk,v 1.2 2010/07/12 16:49:22 tnn Exp $
+$NetBSD: patch-mk,v 1.3 2012/03/10 11:42:39 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- mozilla/config/rules.mk.orig	2009-06-29 18:14:41.000000000 +0200
+--- mozilla/config/rules.mk.orig	2012-02-16 10:24:47.000000000 +0000
 +++ mozilla/config/rules.mk
-@@ -592,6 +592,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+@@ -580,6 +580,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
  endif
  endif
  
@@ -17,3 +17,14 @@ Treat DragonFly like FreeBSD.
  ifeq ($(OS_ARCH),NetBSD)
  ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
  ifeq ($(MODULE),layout)
+@@ -589,6 +595,10 @@ endif
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/xulrunner
++endif
++
+ #
+ # HP-UXBeOS specific section: for COMPONENTS only, add -Bsymbolic flag
+ # which uses internal symbols first
