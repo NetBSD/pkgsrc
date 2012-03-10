@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/10 08:47:15 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/10 08:49:11 obache Exp $
 #
 
 DISTNAME=	telepathy-logger-0.2.7
@@ -24,6 +24,8 @@ PKGCONFIG_OVERRIDE+=	extensions/tpl-extensions.pc.in
 PKGCONFIG_OVERRIDE+=	telepathy-logger/telepathy-logger-0.1.pc.in
 
 BUILD_DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+PYTHON_FOR_BUILD_ONLY=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
