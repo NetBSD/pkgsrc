@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2012/03/10 13:31:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2012/03/11 10:37:51 wiz Exp $
 
 BUILDLINK_TREE+=	startup-notification
 
@@ -8,6 +8,8 @@ STARTUP_NOTIFICATION_BUILDLINK3_MK:=
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${X11_TYPE} == "modular"
 BUILDLINK_PKGSRCDIR.startup-notification?=	../../x11/startup-notification
+BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.5
+BUILDLINK_ABI_DEPENDS.startup-notification+=	startup-notification>=0.8nb1
 .else
 .if ${OPSYS} == "NetBSD"
 .if !empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6789].*)
