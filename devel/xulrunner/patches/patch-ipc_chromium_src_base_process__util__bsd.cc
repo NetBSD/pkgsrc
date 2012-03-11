@@ -1,15 +1,13 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.1 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.2 2012/03/11 16:33:48 marino Exp $
 
---- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-02-24 09:52:40.581943000 +0000
+--- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-03-11 15:20:05.625294000 +0000
 +++ ipc/chromium/src/base/process_util_bsd.cc
-@@ -0,0 +1,298 @@
+@@ -0,0 +1,297 @@
 +// Copyright (c) 2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +// derived from process_util_linux.cc and process_util_mac.cc
-+
-+// TODO: - add code for FreeBSD/DragonFly/MirBSD (?) to use kvm_getprocx
 +
 +#include "base/process_util.h"
 +
@@ -22,6 +20,7 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.1 2012/03/06 12:3
 +#include <sys/types.h>
 +#include <sys/wait.h>
 +#if defined(OS_DRAGONFLY)
++#define HAVE_POSIX_SPAWN
 +#include <sys/user.h>
 +#endif
 +
