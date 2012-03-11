@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2011/01/21 23:34:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.57 2012/03/11 04:56:36 markd Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -53,11 +53,16 @@ CONFIGURE_ARGS+=	--with-mailer=${MAIL_CMD:Q}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-SUBST_CLASSES+=		man-ja
+SUBST_CLASSES+=		man-ja fh
 SUBST_MESSAGE.man-ja=	Fixing the path to Japanese manual pages.
 SUBST_STAGE.man-ja=	post-patch
 SUBST_FILES.man-ja=	Makefile.in config.h.dist
 SUBST_SED.man-ja=	-e 's|/ja/|/ja_JP.eucJP/|g'
+
+SUBST_MESSAGE.fh=	Rename file_handle.
+SUBST_STAGE.fh=		post-patch
+SUBST_FILES.fh=		istream.*
+SUBST_SED.fh=		-e 's/file_handle/file_handle_rofl/g'
 
 post-extract:
 	cd ${WRKSRC}/doc; ${RM} -fr CVS
