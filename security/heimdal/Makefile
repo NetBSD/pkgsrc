@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2012/02/27 12:39:11 asau Exp $
+# $NetBSD: Makefile,v 1.88 2012/03/11 11:30:06 shattered Exp $
 
 DISTNAME=	heimdal-1.5.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
 
@@ -33,7 +34,7 @@ CONFIGURE_ARGS+=	--enable-kcm
 CONFIGURE_ARGS+=	--enable-pthread-support
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/krb5
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-hdbdir=${HEIMDAL_HDB_DIR:H}
+CONFIGURE_ARGS+=	--with-hdbdir=${HEIMDAL_HDB_DIR}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 CONFIGURE_ARGS+=	--without-x
