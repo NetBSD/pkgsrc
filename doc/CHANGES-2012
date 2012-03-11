@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.764 2012/03/10 23:42:51 markd Exp $
+$NetBSD: CHANGES-2012,v 1.765 2012/03/11 07:27:16 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1115,3 +1115,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/asymptote to 2.15 [markd 2012-03-10]
 	Updated misc/kodos to 2.4.9 [markd 2012-03-10]
 	Updated print/pdfjam to 2.02 [markd 2012-03-10]
+	Updated devel/automake to 1.11.3nb2 [sbd 2012-03-11]
