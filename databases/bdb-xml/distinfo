@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2012/03/10 20:18:03 markd Exp $
+$NetBSD: distinfo,v 1.12 2012/03/11 20:26:57 markd Exp $
 
 SHA1 (dbxml-2.5.16.tar.gz) = 46f0e6b301e556c2502e4da0cd96a599acc53837
 RMD160 (dbxml-2.5.16.tar.gz) = fdb4c85271cb84a8e31931d8fb287ad17fafff9c
 Size (dbxml-2.5.16.tar.gz) = 52819154 bytes
 SHA1 (patch-configure) = f9b11c666d92be8ad6db40f31e58c316fb5cc9a4
-SHA1 (patch-dbxml_src_dbxml_Results.cpp) = fd448f9b22aa2adec363461eb333aca0c14aa8e4
-SHA1 (patch-dbxml_src_dbxml_dataItem_DbXmlConfiguration.cpp) = 31f7305472effce7beacef733e66acbb884823f8
-SHA1 (patch-dbxml_src_dbxml_dataItem_DbXmlDocumentCacheImpl.cpp) = ef6fe1a2873f4a0bd4d1b7ff375d18824336d425
-SHA1 (patch-dbxml_src_dbxml_dataItem_DbXmlPrintAST.cpp) = 4a9cffd8c9eeb2a46db60ceaec1560c2ae06dcce
-SHA1 (patch-dbxml_src_dbxml_dataItem_Join.cpp) = f7c03b1c09e7c3b965cedd9f964d28a58a9ec8f8
+SHA1 (patch-dbxml_src_dbxml_Results.cpp) = fa5f325b8f29fd4c1c5675b3ea8bfed84dbafa1a
+SHA1 (patch-dbxml_src_dbxml_dataItem_DbXmlConfiguration.cpp) = a74fe4c644c3abb7aca14976b34cc86045355ba0
+SHA1 (patch-dbxml_src_dbxml_dataItem_DbXmlDocumentCacheImpl.cpp) = 4a7fb559ef2419d1db4488ccd389651c7165d9a0
+SHA1 (patch-dbxml_src_dbxml_dataItem_DbXmlPrintAST.cpp) = f181f837de51e9ca068f98e8f759c9e397d3ebbb
+SHA1 (patch-dbxml_src_dbxml_dataItem_Join.cpp) = 691d34b196daa1814a32001cacbb707773b3ced6
