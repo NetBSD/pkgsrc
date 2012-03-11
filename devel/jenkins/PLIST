@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/02 06:55:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/03/11 11:44:37 ryoon Exp $
+share/jenkins/ColorFormatter.class
 share/jenkins/JNLPMain.class
 share/jenkins/LogFileOutputStream$1.class
 share/jenkins/LogFileOutputStream$2.class
@@ -56,7 +57,7 @@ share/jenkins/WEB-INF/lib/dom4j-1.6.1-hudson-3.jar
 share/jenkins/WEB-INF/lib/embedded_su4j-1.1.jar
 share/jenkins/WEB-INF/lib/ezmorph-1.0.3.jar
 share/jenkins/WEB-INF/lib/groovy-all-1.6.0.jar
-share/jenkins/WEB-INF/lib/guava-r06.jar
+share/jenkins/WEB-INF/lib/guava-11.0.1.jar
 share/jenkins/WEB-INF/lib/instance-identity-1.1.jar
 share/jenkins/WEB-INF/lib/j-interop-2.0.6-kohsuke-1.jar
 share/jenkins/WEB-INF/lib/j-interopdeps-2.0.6-kohsuke-1.jar
@@ -72,6 +73,7 @@ share/jenkins/WEB-INF/lib/jmdns-3.4.0-jenkins-2.jar
 share/jenkins/WEB-INF/lib/jna-3.3.0-jenkins-2.jar
 share/jenkins/WEB-INF/lib/jna-posix-1.0.3.jar
 share/jenkins/WEB-INF/lib/json-lib-2.1-rev7.jar
+share/jenkins/WEB-INF/lib/jsr305-1.3.9.jar
 share/jenkins/WEB-INF/lib/jstl-1.1.0.jar
 share/jenkins/WEB-INF/lib/jtidy-4aug2000r7-dev-hudson-1.jar
 share/jenkins/WEB-INF/lib/libpam4j-1.4.jar
@@ -82,6 +84,7 @@ share/jenkins/WEB-INF/lib/logkit-1.0.1.jar
 share/jenkins/WEB-INF/lib/mail-1.4.jar
 share/jenkins/WEB-INF/lib/memory-monitor-1.5.jar
 share/jenkins/WEB-INF/lib/oro-2.0.8.jar
+share/jenkins/WEB-INF/lib/owasp-html-sanitizer-r88.jar
 share/jenkins/WEB-INF/lib/remoting-2.4.jar
 share/jenkins/WEB-INF/lib/robust-http-client-1.2.jar
 share/jenkins/WEB-INF/lib/sezpoz-1.9.jar
