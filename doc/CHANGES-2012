@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.766 2012/03/11 08:25:43 markd Exp $
+$NetBSD: CHANGES-2012,v 1.767 2012/03/11 11:47:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1117,3 +1117,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/pdfjam to 2.02 [markd 2012-03-10]
 	Updated devel/automake to 1.11.3nb2 [sbd 2012-03-11]
 	Added devel/p5-ExtUtils-LibBuilder version 0.04 [markd 2012-03-11]
+	Updated devel/jenkins to 1.424.6 [ryoon 2012-03-11]
