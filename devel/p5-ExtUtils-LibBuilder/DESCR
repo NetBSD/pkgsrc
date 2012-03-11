@@ -1,0 +1,6 @@
+Some Perl modules need to ship C libraries together with their Perl
+code. Although there are mechanisms to compile and link (or glue) C
+code in your Perl programs, there isn't a clear method to compile
+standard, self-contained C libraries.
+
+This module main goal is to help in that task.
