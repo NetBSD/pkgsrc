@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/12/15 14:26:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2012/03/11 09:38:12 wiz Exp $
 
 SHA1 (ortp-0.16.1.tar.gz) = 4e6288745b066d51b58834e2e33d8bc48d50d94e
 RMD160 (ortp-0.16.1.tar.gz) = c1c85ebdf308de4b5be66707c56a156299f67b9e
 Size (ortp-0.16.1.tar.gz) = 466365 bytes
+SHA1 (patch-src_stun.c) = 841d91447489b42134fe4d4f5608bbb6cfaa3a0e
+SHA1 (patch-src_tests_rtprecv.c) = 5b42382fcd7ebcaf189fdadea893df42457029dd
