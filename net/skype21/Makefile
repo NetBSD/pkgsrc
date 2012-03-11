@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/23 23:00:50 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/11 18:42:48 wiz Exp $
 
 DISTNAME=		skype-2.1.0.81
 CATEGORIES=		net
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
 COMMENT=		P2P VoIP software
-LICENSE=		skype-license
+LICENSE=		skype21-license
 
 RESTRICTED=		Complex terms for redistribution.
 NO_SRC_ON_FTP=		${RESTRICTED}
