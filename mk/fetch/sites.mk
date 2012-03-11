@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.88 2012/02/24 13:36:21 obache Exp $
+# $NetBSD: sites.mk,v 1.89 2012/03/11 10:26:21 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -353,11 +353,7 @@ MASTER_SITE_PGSQL+=	\
 	ftp://ftp.ch.postgresql.org/mirror/postgresql/ \
 	http://ftp3.tw.postgresql.org/postgresql/ \
 	ftp://ftp3.tw.postgresql.org/postgresql/ \
-	http://ftp9.us.postgresql.org/pub/mirrors/postgresql/ \
-	ftp://ftp9.us.postgresql.org/pub/mirrors/postgresql/ \
 	ftp://ftp5.us.postgresql.org/pub/PostgreSQL/ \
-	ftp://ftp10.us.postgresql.org/pub/postgresql/ \
-	ftp://ftp3.ua.postgresql.org/pub/mirrors/postgresql/ \
 	http://ftp2.uk.postgresql.org/sites/ftp.postgresql.org/ \
 	ftp://ftp2.uk.postgresql.org/sites/ftp.postgresql.org/
 
