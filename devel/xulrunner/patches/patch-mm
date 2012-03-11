@@ -1,13 +1,14 @@
-$NetBSD: patch-mm,v 1.7 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-mm,v 1.8 2012/03/11 12:03:51 marino Exp $
 
 --- toolkit/library/Makefile.in.orig	2012-02-16 06:40:54.000000000 +0000
 +++ toolkit/library/Makefile.in
-@@ -209,6 +209,17 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+@@ -209,6 +209,18 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
  endif
  
 +ifeq ($(OS_ARCH),DragonFly)
 +OS_LIBS += $(call EXPAND_LIBNAME,kvm)
++EXTRA_DSO_LDOPTS += -lplc4 -lplds4 -lnspr4 -lnssutil3
 +endif
 +
 +ifeq ($(OS_ARCH),NetBSD)
