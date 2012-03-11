@@ -1,0 +1,16 @@
+$NetBSD: patch-lib_am_python.am,v 1.1 2012/03/11 07:27:08 sbd Exp $
+
+--- lib/am/python.am.orig	2012-01-31 11:41:18.000000000 +0000
++++ lib/am/python.am
+@@ -23,8 +23,10 @@ endif %?INSTALL%
+ ## Installing.  ##
+ ## ------------ ##
+ 
++if %?FIRST%
++am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
++endif %?FIRST%
+ if %?INSTALL%
+-?FIRST?am__py_compile = PYTHON=$(PYTHON) $(SHELL) $(py_compile)
+ am__installdirs += "$(DESTDIR)$(%NDIR%dir)"
+ .PHONY install-%EXEC?exec:data%-am: install-%DIR%PYTHON
+ install-%DIR%PYTHON: $(%DIR%_PYTHON)

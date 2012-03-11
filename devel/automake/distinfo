@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.33 2012/03/03 12:58:13 wiz Exp $
+$NetBSD: distinfo,v 1.34 2012/03/11 07:27:08 sbd Exp $
 
 SHA1 (automake-1.11.3.tar.xz) = 711b365fce1522d7ab1ffb26ca49d67757264e9b
 RMD160 (automake-1.11.3.tar.xz) = 0172db7fc14b5e8f2b3eb751fc9fb235babcad4a
 Size (automake-1.11.3.tar.xz) = 1076640 bytes
 SHA1 (patch-aa) = 9a31e63f2b197343f8f881808b470249f1d6d8b1
+SHA1 (patch-lib_am_python.am) = f637fc01008a981b44f1cd449e774d223de9901e
