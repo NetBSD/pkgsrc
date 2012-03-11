@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/11/22 07:07:52 sno Exp $
+# $NetBSD: Makefile,v 1.31 2012/03/11 04:42:53 markd Exp $
 
 DISTNAME=	Mouse-0.97
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.29:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=2.21:../../devel/p5-ExtUtils-ParseXS
+BUILD_DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-ParseXS>=2.21}:../../devel/p5-ExtUtils-ParseXS
 BUILD_DEPENDS+=	p5-Devel-PPPort>=3.19:../../devel/p5-Devel-PPPort
 
 PKG_DESTDIR_SUPPORT=	user-destdir
