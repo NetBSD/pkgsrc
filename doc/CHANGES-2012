@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.767 2012/03/11 11:47:02 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.768 2012/03/11 12:19:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1118,3 +1118,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/automake to 1.11.3nb2 [sbd 2012-03-11]
 	Added devel/p5-ExtUtils-LibBuilder version 0.04 [markd 2012-03-11]
 	Updated devel/jenkins to 1.424.6 [ryoon 2012-03-11]
+	Updated devel/apr to 1.4.6 [ryoon 2012-03-11]
+	Updated devel/apr-util to 1.4.1 [ryoon 2012-03-11]

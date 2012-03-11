@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10934 2012/03/10 23:42:51 markd Exp $
+$NetBSD: TODO,v 1.10935 2012/03/11 12:19:44 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -385,8 +385,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-maven-3.0
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
-	o apr-1.4.6
-	o apr-util-1.4.1
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o argtable-2.9
