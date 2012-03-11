@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/11 08:18:59 markd Exp $
+
+SHA1 (ExtUtils-LibBuilder-0.04.tar.gz) = 295926a51051e86f9173da0a091cc90c8efb4052
+RMD160 (ExtUtils-LibBuilder-0.04.tar.gz) = a12ef706c4da6a3b0fbc2facf5b37f05a3509a82
+Size (ExtUtils-LibBuilder-0.04.tar.gz) = 5372 bytes
