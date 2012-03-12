@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/02/23 14:15:58 taca Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/12 12:30:28 fhajny Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -40,6 +40,10 @@ LDFLAGS.SunOS+=	-L${SUNWSPROBASE}/lib -Wl,-R${SUNWSPROBASE}/lib
 CONFIGURE_ENV+=	LDSHARED="${CC} -G"
 .else
 LIBS.SunOS+=	-lm
+.endif
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	OBJCOPY=:
 .endif
 
 # Ruby build process depends on config.status's content
