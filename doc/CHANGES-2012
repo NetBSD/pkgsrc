@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.769 2012/03/12 09:13:50 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.770 2012/03/12 13:40:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1121,3 +1121,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/apr to 1.4.6 [ryoon 2012-03-11]
 	Updated devel/apr-util to 1.4.1 [ryoon 2012-03-11]
 	Updated devel/nss to 3.13.1nb2 [ryoon 2012-03-12]
+	Updated mail/cyrus-imapd24 to 2.4.14 [obache 2012-03-12]
