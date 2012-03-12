@@ -1,0 +1,42 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2012/03/12 04:39:16 joerg Exp $
+
+--- doc/Makefile.in.orig	2012-03-11 21:02:41.000000000 +0000
++++ doc/Makefile.in
+@@ -164,35 +164,20 @@ docclean manclean maintainer-clean::
+ installdirs:
+ 	$(SHELL) ${top_srcdir}/mkinstalldirs \
+ 		${MANDIR}/man${LIB_NETWORK_EXT} \
+-		${MANDIR}/cat${LIB_NETWORK_EXT} \
+ 		${MANDIR}/man${FORMAT_EXT} \
+-		${MANDIR}/cat${FORMAT_EXT} \
+-		${MANDIR}/man${DESC_EXT} \
+-		${MANDIR}/cat${DESC_EXT}
++		${MANDIR}/man${DESC_EXT}
+ 
+-install:: doc installdirs
++install:: installdirs
+ 	@set -x; N=${LIB_NETWORK_EXT}; for f in ${LIB_NETWORK_BASE}; do \
+ 		${INSTALL_DATA} $${f}.${LIB_NETWORK_MAN_EXT} \
+ 		${MANDIR}/man${LIB_NETWORK_EXT}/$${f}.${LIB_NETWORK_EXT}; \
+ 	done
+-	@set -x; N=${LIB_NETWORK_EXT}; for f in ${LIB_NETWORK_BASE}; do \
+-		${INSTALL_DATA} $${f}.${LIB_NETWORK_CAT_EXT} \
+-		${MANDIR}/cat${LIB_NETWORK_EXT}/$${f}.${LIB_NETWORK_EXT}; \
+-	done
+ 	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_BASE}; do \
+ 		${INSTALL_DATA} $${f}.${FORMAT_MAN_EXT} \
+ 		${MANDIR}/man${FORMAT_EXT}/$${f}.${FORMAT_EXT}; \
+ 	done
+-	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_BASE}; do \
+-		${INSTALL_DATA} $${f}.${FORMAT_CAT_EXT} \
+-		${MANDIR}/cat${FORMAT_EXT}/$${f}.${FORMAT_EXT}; \
+-	done
+ 	@set -x; N=${DESC_EXT}; for f in ${DESC_BASE}; do \
+ 		${INSTALL_DATA} $${f}.${DESC_MAN_EXT} \
+ 		${MANDIR}/man${DESC_EXT}/$${f}.${DESC_EXT}; \
+ 	done
+-	@set -x; N=${DESC_EXT}; for f in ${DESC_BASE}; do \
+-		${INSTALL_DATA} $${f}.${DESC_CAT_EXT} \
+-		${MANDIR}/cat${DESC_EXT}/$${f}.${DESC_EXT}; \
+-	done
+ 
