@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2002/07/23 08:42:37 schmonz Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2012/03/12 21:52:07 joerg Exp $
 bin/ezmlm-list
 bin/ezmlm-make
 bin/ezmlm-manage
@@ -9,17 +9,6 @@ bin/ezmlm-sub
 bin/ezmlm-unsub
 bin/ezmlm-warn
 bin/ezmlm-weed
-man/cat1/ezmlm-list.0
-man/cat1/ezmlm-make.0
-man/cat1/ezmlm-manage.0
-man/cat1/ezmlm-reject.0
-man/cat1/ezmlm-return.0
-man/cat1/ezmlm-send.0
-man/cat1/ezmlm-sub.0
-man/cat1/ezmlm-unsub.0
-man/cat1/ezmlm-warn.0
-man/cat1/ezmlm-weed.0
-man/cat5/ezmlm.0
 man/man1/ezmlm-list.1
 man/man1/ezmlm-make.1
 man/man1/ezmlm-manage.1
