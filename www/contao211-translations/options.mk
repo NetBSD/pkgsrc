@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/03/09 16:20:27 taca Exp $
+# $NetBSD: options.mk,v 1.5 2012/03/12 15:43:13 taca Exp $
 
 # Not yet ready for Contao 2.11:
 #	af ar bs ca da es fi gl gn hr hu id is ku lt
@@ -11,10 +11,10 @@ CT_TRANSLATIONS.ar=	Contao-Arabic-v3.zip		# 2010/10/30
 CT_TRANSLATIONS.bg=	Contao-Bulgarian-v24.zip	# 2012/02/29
 CT_TRANSLATIONS.bs=	Contao-Bosnian-v15.zip		# 2010/09/12
 CT_TRANSLATIONS.ca=	TYPOlight-Catalan-v4.zip	# 2008/09/24
-CT_TRANSLATIONS.cs=	Contao-Czech-v46.zip		# 2011/02/22
+CT_TRANSLATIONS.cs=	Contao-Czech-v47.zip		# 2012/03/10
 CT_TRANSLATIONS.da=	Contao-Danish-v15.zip		# 2010/08/31
 CT_TRANSLATIONS.es=	Contao-Spanish-v17.zip		# 2011/12/31
-CT_TRANSLATIONS.fa=	Contao-Persian-v11.zip		# 2012/02/24
+CT_TRANSLATIONS.fa=	Contao-Persian-v12.zip		# 2012/03/10
 CT_TRANSLATIONS.fi=	Contao-Finnish-v8.zip		# 2012/01/03
 CT_TRANSLATIONS.fr=	Contao-French-v80.zip		# 2012/03/09
 CT_TRANSLATIONS.gl=	TYPOlight-Galician-v3.zip	# 2010/03/26
@@ -27,7 +27,7 @@ CT_TRANSLATIONS.it=	Contao-Italian-v31.zip		# 2012/03/09
 CT_TRANSLATIONS.ja=	Contao-Japanese-v82.zip		# 2012/03/09
 CT_TRANSLATIONS.ku=	Contao-Kurdish-v5.zip		# 2010/12/24
 CT_TRANSLATIONS.lt=	Contao-Lithuanian-v8.zip	# 2010/11/20
-CT_TRANSLATIONS.lv=	Contao-Latvian-v35.zip		# 2012/02/24
+CT_TRANSLATIONS.lv=	Contao-Latvian-v36.zip		# 2012/03/10
 CT_TRANSLATIONS.nl=	Contao-Dutch-v58.zip		# 2012/02/16
 CT_TRANSLATIONS.no=	TYPOlight-Norwegian-v11.zip	# 2009/11/16
 CT_TRANSLATIONS.pl=	Contao-Polish-v32.zip		# 2012/02/17
@@ -39,7 +39,7 @@ CT_TRANSLATIONS.sk=	Contao-Slovak-v9.zip		# 2011/03/18
 CT_TRANSLATIONS.sl=	Contao-Slovenian-v12.zip	# 2012/01/17
 CT_TRANSLATIONS.sq=	Contao-Albanian-v7.zip		# 2012/02/16
 CT_TRANSLATIONS.sr=	Contao-Serbian-v8.zip		# 2011/05/24
-CT_TRANSLATIONS.sv=	Contao-Swedish-v63.zip		# 2012/02/16
+CT_TRANSLATIONS.sv=	Contao-Swedish-v64.zip		# 2012/03/10
 CT_TRANSLATIONS.th=	TYPOlight-Thai-v2.zip		# 2008/11/23
 CT_TRANSLATIONS.tl=	TYPOlight-Tagalog-v1.zip	# 2010/01/29
 CT_TRANSLATIONS.tr=	Contao-Turkish-v14.zip		# 2011/03/24
