@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/29 16:32:20 hans Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/12 07:10:13 sbd Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -24,17 +24,13 @@ BUILDLINK_TRANSFORM+=	rm:-Wundef
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} != "DragonFly"
+GCC_REQD+=	4.4
+.endif
+
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libthrift/buildlink3.mk"
-.if ${OPSYS} != "DragonFly"
-.include "../../lang/gcc44/buildlink3.mk"
-.endif
-
-pre-configure:
-.if ${OPSYS} != "DragonFly"
-.include "../../lang/gcc44/preconfigure.mk"
-.endif
 
 CONFIGURE_ARGS+=	CPPFLAGS="-I${BUILDLINK_PREFIX.libthrift}/include/thrift -I${BUILDLINK_PREFIX.boost-headers}/include/boost"
 MAKE_ENV+=		AM_DEFAULT_VERBOSITY=1
