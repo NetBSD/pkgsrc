@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.23 2008/09/06 14:58:34 wiz Exp $
+$NetBSD: patch-aa,v 1.23.30.1 2012/03/12 18:06:50 spz Exp $
 
---- Makefile.in.orig	2008-08-30 16:50:47.000000000 +0200
+--- Makefile.in.orig	2010-11-04 17:28:16.000000000 +0000
 +++ Makefile.in
-@@ -657,7 +657,7 @@ pkgconfig_DATA = libxml-2.0.pc
+@@ -569,7 +569,7 @@ DIST_SUBDIRS = include . doc example pyt
+ INCLUDES = -I$(top_builddir)/include -I@srcdir@/include @THREAD_CFLAGS@ @Z_CFLAGS@ 
+ bin_SCRIPTS = xml2-config
+ lib_LTLIBRARIES = libxml2.la
+-libxml2_la_LIBADD = @THREAD_LIBS@ @Z_LIBS@ $(ICONV_LIBS) @M_LIBS@ @WIN32_EXTRA_LIBADD@
++libxml2_la_LIBADD = @Z_LIBS@ $(ICONV_LIBS) @M_LIBS@ @WIN32_EXTRA_LIBADD@
+ @USE_VERSION_SCRIPT_FALSE@LIBXML2_VERSION_SCRIPT = 
+ @USE_VERSION_SCRIPT_TRUE@LIBXML2_VERSION_SCRIPT = $(VERSION_SCRIPT_FLAGS)$(srcdir)/libxml2.syms
+ libxml2_la_LDFLAGS = @CYGWIN_EXTRA_LDFLAGS@ @WIN32_EXTRA_LDFLAGS@ \
+@@ -714,7 +714,7 @@ pkgconfig_DATA = libxml-2.0.pc
  #
  BASE_DIR = $(datadir)/doc
  DOC_MODULE = libxml2-$(VERSION)
