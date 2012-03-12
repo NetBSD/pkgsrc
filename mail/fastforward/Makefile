@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/03/15 17:29:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/12 21:53:09 joerg Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -17,9 +17,7 @@ DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 CONFLICTS+=		esmtp>=1.2 postfix-[0-9]* sendmail-[0-9]*
 
-USE_TOOLS+=		nroff
-
-DJB_BUILD_TARGETS=	install instcheck
+BUILD_TARGETS=	install instcheck
 
 DJB_RESTRICTED=		no
 
