@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/01/20 12:12:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/03/12 15:51:20 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,6 +117,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Chihuahua
 ${PYSITELIB}/pytz/zoneinfo/America/Coral_Harbour
 ${PYSITELIB}/pytz/zoneinfo/America/Cordoba
 ${PYSITELIB}/pytz/zoneinfo/America/Costa_Rica
+${PYSITELIB}/pytz/zoneinfo/America/Creston
 ${PYSITELIB}/pytz/zoneinfo/America/Cuiaba
 ${PYSITELIB}/pytz/zoneinfo/America/Curacao
 ${PYSITELIB}/pytz/zoneinfo/America/Danmarkshavn
