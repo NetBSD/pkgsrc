@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.779 2012/03/12 15:49:51 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.780 2012/03/12 15:51:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1131,3 +1131,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211-translations to 201203100 [taca 2012-03-12]
 	Updated textproc/xmlrpc-c to 1.16.40 [adam 2012-03-12]
 	Updated lang/lua to 5.1.5 [wiz 2012-03-12]
+	Updated time/py-pytz to 2012b [wiz 2012-03-12]
