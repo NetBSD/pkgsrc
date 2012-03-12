@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2010/03/15 17:28:46 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2012/03/12 21:52:07 joerg Exp $
 
 --- Makefile.orig	1997-06-30 03:11:54.000000000 +0000
 +++ Makefile
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.1 2010/03/15 17:28:46 schmonz Exp $
 -it man install conf-bin conf-man
 -	./install "`head -1 conf-bin`" < BIN
 -	./install "`head -1 conf-man`" < MAN
-+it man install conf-bin conf-man conf-destdir
++it install conf-bin conf-man conf-destdir
 +	./install "`head -1 conf-destdir``head -1 conf-bin`" < BIN
 +	./install "`head -1 conf-destdir``head -1 conf-man`" < MAN
  
