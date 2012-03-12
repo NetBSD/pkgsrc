@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2010/09/19 06:11:04 obache Exp $
+$NetBSD: patch-ab,v 1.5 2012/03/12 14:18:44 fhajny Exp $
 
 * YACC and LEX are passwd as full path.
 * static linking is not supported on MacOS X.  PR#39058.
+* FILE_OFFSET_BITS corrected
 
 --- configure.orig	2010-09-10 17:48:04.000000000 +0000
 +++ configure
@@ -37,3 +38,12 @@ $NetBSD: patch-ab,v 1.4 2010/09/19 06:11:04 obache Exp $
      *)
  	## pic_flag='-fPIC'
  	;;
+@@ -6435,7 +6430,7 @@ ac_fn_c_check_func "$LINENO" "lstat64" "
+ if test "x$ac_cv_func_lstat64" = x""yes; then :
+   ac_fn_c_check_func "$LINENO" "stat64" "ac_cv_func_stat64"
+ if test "x$ac_cv_func_stat64" = x""yes; then :
+-  AIDE_DEFS="$AIDE_DEFS -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS"
++  AIDE_DEFS="$AIDE_DEFS -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
+ 	AIDE_LSTAT_FUNC="lstat64"
+ 	compoptionstring="${compoptionstring}WITH_LSTAT64\\n"
+ 	AIDE_STAT_FUNC="stat64"
