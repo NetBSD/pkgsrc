@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.773 2012/03/12 15:35:44 taca Exp $
+$NetBSD: CHANGES-2012,v 1.774 2012/03/12 15:37:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1125,3 +1125,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/mutt-devel to 1.5.21nb4 [wiz 2012-03-12]
 	Updated multimedia/libmp4v2 to 1.6.1nb3 [wiz 2012-03-12]
 	Updated mail/pear-Mail_Mime to 1.8.3 [taca 2012-03-12]
+	Updated time/ruby-tzinfo to 0.3.32 [taca 2012-03-12]
