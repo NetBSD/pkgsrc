@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2012/01/14 15:36:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2012/03/12 15:38:04 taca Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -305,6 +305,7 @@ share/roundcube/plugins/managesieve/tests/parset_subaddress.phpt
 share/roundcube/plugins/managesieve/tests/tokenize.phpt
 share/roundcube/plugins/markasjunk/localization/cs_CZ.inc
 share/roundcube/plugins/markasjunk/localization/da_DK.inc
+share/roundcube/plugins/markasjunk/localization/de_CH.inc
 share/roundcube/plugins/markasjunk/localization/de_DE.inc
 share/roundcube/plugins/markasjunk/localization/en_US.inc
 share/roundcube/plugins/markasjunk/localization/es_AR.inc
@@ -486,7 +487,6 @@ share/roundcube/program/include/rcube_json_output.php
 share/roundcube/program/include/rcube_ldap.php
 share/roundcube/program/include/rcube_mdb2.php
 share/roundcube/program/include/rcube_message.php
-share/roundcube/program/include/rcube_mime_struct.php
 share/roundcube/program/include/rcube_plugin.php
 share/roundcube/program/include/rcube_plugin_api.php
 share/roundcube/program/include/rcube_result_set.php
