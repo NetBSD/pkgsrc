@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/11/08 16:46:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/03/12 15:36:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -109,6 +109,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Chihuahua.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Coral_Harbour.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Cordoba.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Costa_Rica.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Creston.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Cuiaba.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Curacao.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Danmarkshavn.rb
