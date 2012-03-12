@@ -1,0 +1,42 @@
+$NetBSD: patch-MAN,v 1.1 2012/03/12 04:32:11 joerg Exp $
+
+--- MAN.orig	2012-03-11 20:13:04.000000000 +0000
++++ MAN
+@@ -34,37 +34,3 @@ c:::644:/man5/:ezmlm.5:
+ c:::644:/man5/:ezmlmglrc.5:
+ c:::644:/man5/:ezmlmrc.5:
+ c:::644:/man5/:ezmlmsubrc.5:
+-d:::755:/cat1::
+-c:::644:/cat1/:ezmlm-accept.0:
+-c:::644:/cat1/:ezmlm-archive.0:
+-c:::644:/cat1/:ezmlm-check.0:
+-c:::644:/cat1/:ezmlm-clean.0:
+-c:::644:/cat1/:ezmlm-confirm.0:
+-c:::644:/cat1/:ezmlm-cron.0:
+-c:::644:/cat1/:ezmlm-gate.0:
+-c:::644:/cat1/:ezmlm-get.0:
+-c:::644:/cat1/:ezmlm-glconf.0:
+-c:::644:/cat1/:ezmlm-idx.0:
+-c:::644:/cat1/:ezmlm-issubn.0:
+-c:::644:/cat1/:ezmlm-limit.0:
+-c:::644:/cat1/:ezmlm-list.0:
+-c:::644:/cat1/:ezmlm-make.0:
+-c:::644:/cat1/:ezmlm-manage.0:
+-c:::644:/cat1/:ezmlm-mktab.0:
+-c:::644:/cat1/:ezmlm-moderate.0:
+-c:::644:/cat1/:ezmlm-reject.0:
+-c:::644:/cat1/:ezmlm-request.0:
+-c:::644:/cat1/:ezmlm-return.0:
+-c:::644:/cat1/:ezmlm-send.0:
+-c:::644:/cat1/:ezmlm-split.0:
+-c:::644:/cat1/:ezmlm-store.0:
+-c:::644:/cat1/:ezmlm-sub.0:
+-c:::644:/cat1/:ezmlm-tstdig.0:
+-c:::644:/cat1/:ezmlm-unsub.0:
+-c:::644:/cat1/:ezmlm-warn.0:
+-c:::644:/cat1/:ezmlm-weed.0:
+-d:::755:/cat5::
+-c:::644:/cat5/:ezmlm.0:
+-c:::644:/cat5/:ezmlmglrc.0:
+-c:::644:/cat5/:ezmlmrc.0:
+-c:::644:/cat5/:ezmlmsubrc.0:

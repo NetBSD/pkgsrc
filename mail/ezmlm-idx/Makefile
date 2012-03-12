@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2011/06/07 03:25:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2012/03/12 04:32:11 joerg Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
+PKGREVISION=		1
 IDXVERSION=		0.444
 SITES.${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/${IDXVERSION}/
 
@@ -32,7 +33,6 @@ CONF_FILES=		${EGDIR}/ezcgirc ${PKG_SYSCONFDIR}/ezcgirc
 CONF_FILES+=		${EGDIR}/ezmlmrc ${PKG_SYSCONFDIR}/ezmlmrc
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-INSTALLATION_DIRS+=	${PKGMANDIR}/cat1 ${PKGMANDIR}/cat5
 INSTALLATION_DIRS+=	share/examples/ezmlm-idx
 
 post-extract:
