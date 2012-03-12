@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.21 2010/11/26 13:43:25 drochner Exp $
+$NetBSD: patch-ab,v 1.21.10.1 2012/03/12 18:06:50 spz Exp $
 
 --- configure.orig	2010-11-04 17:28:14.000000000 +0000
 +++ configure
@@ -20,6 +20,32 @@ $NetBSD: patch-ab,v 1.21 2010/11/26 13:43:25 drochner Exp $
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
+@@ -13815,13 +13815,13 @@ else
+         if test "$with_threads" = "pthread" || test "$with_threads" = "" || test "$with_threads" = "yes" ; then
+         ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
+ if test "x$ac_cv_header_pthread_h" = x""yes; then :
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in -lpthread" >&5
+-$as_echo_n "checking for pthread_join in -lpthread... " >&6; }
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++$as_echo_n "checking for pthread_join in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
+ if test "${ac_cv_lib_pthread_pthread_join+set}" = set; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -13853,7 +13853,7 @@ fi
+ $as_echo "$ac_cv_lib_pthread_pthread_join" >&6; }
+ if test "x$ac_cv_lib_pthread_pthread_join" = x""yes; then :
+ 
+-	       THREAD_LIBS="-lpthread"
++	       THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+ 
+ $as_echo "#define HAVE_LIBPTHREAD /**/" >>confdefs.h
+ 
 @@ -14582,10 +14582,10 @@ $as_echo "#define snprintf _snprintf" >>
  
  $as_echo "#define vsnprintf _vsnprintf" >>confdefs.h
