@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10937 2012/03/12 15:47:09 taca Exp $
+$NetBSD: TODO,v 1.10938 2012/03/12 15:49:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -954,7 +954,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lmms-0.4.5
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
-	o lua-5.1.5
 	o lua-5.2.0
 	o luit-1.1.0
 	o lwm-1.2.2
