@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2011/06/11 04:44:08 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.55 2012/03/12 12:53:12 fhajny Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -33,6 +33,10 @@ BUILD_DEFS+=	SMRSH_CMDDIR
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_TOOLS+=	gm4
 MAKE_ENV+=	M4=${TOOLS_M4}
+
+.if ${OPSYS} == "SunOS" && exists(/usr/include/paths.h)
+CFLAGS+=	-DSOLARIS_HAS_PATHS_H
+.endif
 
 .PHONY: make-sendmail-siteconfig
 make-sendmail-siteconfig:
