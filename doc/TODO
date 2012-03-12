@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10935 2012/03/11 12:19:44 ryoon Exp $
+$NetBSD: TODO,v 1.10936 2012/03/12 15:31:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aterm-1.0.1
 	o attica-0.3.0
 	o audacious-plugins-2.4.4
-	o audacity-1.3.13
+	o audacity-1.3.14
 	o autoconvert-0.3.16
 	o autogen-5.15
 	o avcheck-0.91
@@ -427,8 +427,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o binutils-2.22 [wip]
 	o bioperl-1.5.0
 	o bitlbee-3.0.5
-	o bitmap-1.0.5
+	o bitmap-1.0.6
 	o blender-2.62
+	o bluefish-2.2.2
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -437,13 +438,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o botan-1.10.0
 	o bugzilla-3.6
 	o byacc-20120115
+	o bzr-2.5.0
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.8.41
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o cc65-2.13.2
+	o cc65-2.13.3
 	o cddbd-1.5.2
 	o cdialog-1.1.20120215
 	o cdif-1.19
@@ -503,7 +505,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o defendguin-0.0.11
 	o dejagnu-1.5
 	o delegate-9.9.7
-	o dgen-1.29
+	o desktop-file-utils-0.20
+	o dgen-1.30
 	o dhid-5.3
 	o diffpdf-1.9.2
 	o diffstat-1.55
@@ -731,7 +734,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gramps3-3.3.1
 	o granulate-0.2
 	o graphviz-2.28.0
-	o grep-2.10
+	o grep-2.11
 	o grhino-0.16.1
 	o groff-1.21
 	o gsharutils-4.11
@@ -755,13 +758,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gutenprint-5.2.7
 	o gv-3.7.3
 	o gvfs-1.6.7
-	o gwaei-3.2.0
+	o gwaei-3.4.0
 	o gworkspace-0.9.0
 	o gxine-0.5.906
 	o gzip-1.4
 	o hackbot-2.21
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o hanzim-3.4
+	o haproxy-1.4.20
 	o haskell-mode-1.45
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
 	o help2man-1.40.6
@@ -936,7 +940,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libusb-1.0
 	o libv4l-0.8.5
 	o libvirt-0.9.9
-	o libxcb-1.8
+	o libxcb-1.8.1
 	o libxkbfile-1.0.8
 	o libxklavier-5.2.1
 	o licq-1.3.8
@@ -965,13 +969,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
+	o mathomatic-15.8.1
+	o mdds-0.5.4
 	o mediawiki-1.18.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
+	o migu-ttf-20111002 [pkg/46169]
 	o milkytracker-0.90.85
 	o mimedefang-2.73
-	o mined-2012.20
+	o mined-2012.21
 	o minicom-2.6
 	o minivmac-3.2.3
 	o miredo-1.2.4
@@ -979,7 +986,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkfontdir-1.0.7
 	o mkfontscale-1.1.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-5.3.0
+	o mkvtoolnix-5.4.0
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
 	o modular-xorg-server-1.11.4
@@ -990,15 +997,15 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
-	o mp3diags-1.1.12
+	o mp3diags-1.1.16
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
-	o mpg123-1.13.5
+	o mpg123-1.13.6
 	o mpich-1.4.1p1
 	o mpop-1.0.26
 	o mserv-devel-0.41
 	o mtools-4.0.17
-	o mu-0.9.8.1
+	o mu-0.9.8.2
 	o multitail-5.2.9
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
@@ -1143,6 +1150,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-karaoke-0.7.3
 	o py-moin-1.9.4
 	o py-mxDateTime-3.2.0
+	o py-pytz-2012b
 	o py-simplejson-2.2.1
 	o py-sqlalchemy-0.6.8
 	o py-sybase-0.37
@@ -1151,6 +1159,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o python-3.2
 	o qbrew-0.3.9
 	o qemu-1.0.1 [wip]
+	o qiv-2.2.4 [pkg/46167]
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o quilt-0.60
@@ -1284,7 +1293,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-32.0.0
+	o tea-32.0.1
 	o ted-en-us-2.17
 	o teem-1.10.0
 	o tellico-2.3.5
@@ -1296,7 +1305,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tig-0.18
 	o tightvnc-2.0.95
 	o tile-0.7.4
-	o tinc-1.0.16
+	o tinc-1.0.17
 	o tinyproxy-1.8.3
 	o tk-8.5.11
 	o tkcvs-8.2.3
@@ -1414,7 +1423,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xeyes-1.1.1
 	o xf86-input-keyboard-1.6.1
 	o xf86-input-mouse-1.7.1
-	o xf86-input-vmmouse-12.7.0
+	o xf86-input-vmmouse-12.8.0
 	o xf86-input-void-1.4.0
 	o xf86-video-apm-1.2.3
 	o xf86-video-ark-0.7.4
@@ -1441,7 +1450,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-tga-1.2.1
 	o xf86-video-trident-1.3.4
 	o xf86-video-tseng-1.2.4
-	o xf86-video-vmware-11.1.0
+	o xf86-video-vmware-12.0.0
 	o xf86-video-voodoo-1.2.4
 	o xf86-video-wsfb-0.4.0
 	o xf86-video-xgi-1.6.0 [unpackaged]
@@ -1522,6 +1531,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwininfo-1.1.2
 	o xwpe-1.5.30a
 	o xwud-1.0.3
+	o xye-0.12.1
 	o xzip-182
 	o yafc-1.1
 	o yaz-4.1.7
