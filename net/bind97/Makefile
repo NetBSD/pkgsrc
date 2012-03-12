@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/11/16 21:49:56 spz Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/12 15:40:15 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -74,7 +74,6 @@ INSTALLATION_DIRS=	${DOCDIR} share/doc/bind9/arm share/doc/bind9/draft \
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.html ${DOCDIR}/arm
 	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.html ${DOCDIR}/arm
 	${INSTALL_DATA} ${WRKSRC}/doc/draft/draft-*.txt ${DOCDIR}/draft
 	${INSTALL_DATA} ${WRKSRC}/doc/rfc/rfc*.txt ${DOCDIR}/rfc
