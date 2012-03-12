@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.771 2012/03/12 15:15:08 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.772 2012/03/12 15:15:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1123,3 +1123,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/nss to 3.13.1nb2 [ryoon 2012-03-12]
 	Updated mail/cyrus-imapd24 to 2.4.14 [obache 2012-03-12]
 	Updated mail/mutt-devel to 1.5.21nb4 [wiz 2012-03-12]
+	Updated multimedia/libmp4v2 to 1.6.1nb3 [wiz 2012-03-12]
