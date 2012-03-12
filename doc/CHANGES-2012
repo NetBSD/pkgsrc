@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.777 2012/03/12 15:43:39 taca Exp $
+$NetBSD: CHANGES-2012,v 1.778 2012/03/12 15:48:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/roundcube to 0.7.2 [taca 2012-03-12]
 	Updated devel/ruby-gettext to 2.2.0 [taca 2012-03-12]
 	Updated www/contao211-translations to 201203100 [taca 2012-03-12]
+	Updated textproc/xmlrpc-c to 1.16.40 [adam 2012-03-12]
