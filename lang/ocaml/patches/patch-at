@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
+$NetBSD: patch-at,v 1.26 2012/03/12 12:28:04 fhajny Exp $
 
 . Include CFLAGS in bytecccompopts and LDFLAGS in bytecclinkopts.
 . Add cases for dragonfly support.
@@ -14,10 +14,11 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
 . Enable suport for x86_64-DragonFly
 . Enable profiling and native dynamic loading for all DragonFly platforms
 . Add pkgsrc X11 checks in case X11 support is enabled in the future
+. Fix SunOS linker and as args
 
---- configure.orig	2011-07-05 01:15:01.000000000 +0400
-+++ configure	2012-03-04 07:07:17.000000000 +0400
-@@ -328,6 +328,8 @@
+--- configure.orig	2011-07-04 21:15:01.000000000 +0000
++++ configure
+@@ -328,6 +328,8 @@ case "$bytecc,$host" in
    gcc*)
      bytecccompopts="-fno-defer-pop $gcc_warnings";;
  esac
@@ -26,7 +27,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
  
  # Configure compiler to use in further tests
  
-@@ -521,7 +523,7 @@
+@@ -521,7 +523,7 @@ if test $withsharedlibs = "yes"; then
        mksharedlib="$flexlink"
        mkmaindll="$flexlink -maindll"
        shared_libraries_supported=true;;
@@ -35,7 +36,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -621,7 +623,7 @@
+@@ -621,7 +623,7 @@ if test $withsharedlibs = "yes"; then
      i[3456]86-*-linux*)           natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
      i[3456]86-*-darwin10.*)
@@ -44,7 +45,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
          natdynlink=true
        fi;;
      i[3456]86-*-darwin[89]*)      natdynlink=true;;
-@@ -635,6 +637,8 @@
+@@ -635,6 +637,8 @@ if test $withsharedlibs = "yes"; then
      x86_64-*-openbsd*)            natdynlink=true;;
      i[345]86-*-netbsd*)           natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
@@ -53,7 +54,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
      i386-*-gnu0.3)                natdynlink=true;;
    esac
  fi
-@@ -660,12 +664,13 @@
+@@ -660,12 +664,13 @@ case "$host" in
    alpha*-*-netbsd*)             arch=alpha; system=netbsd;;
    alpha*-*-openbsd*)            arch=alpha; system=openbsd;;
    sparc*-*-sunos4.*)            arch=sparc; system=sunos;;
@@ -68,7 +69,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -674,6 +679,7 @@
+@@ -674,6 +679,7 @@ case "$host" in
                                  fi;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -76,7 +77,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -690,17 +696,21 @@
+@@ -690,17 +696,21 @@ case "$host" in
    powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
    powerpc-*-darwin*)            arch=power; system=rhapsody
                                  if $arch64; then model=ppc64; else model=ppc; fi;;
@@ -98,7 +99,25 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
  esac
  
  # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
-@@ -801,6 +811,8 @@
+@@ -740,7 +750,7 @@ case "$arch,$nativecc,$system,$host_type
+                        if $arch64; then partialld="ld -r -arch ppc64"; fi;;
+   *,gcc*,cygwin,*)     nativecccompopts="$gcc_warnings -U_WIN32";;
+   amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
+-  amd64,gcc*,solaris,*) partialld="ld -r -m elf_x86_64";;
++  amd64,gcc*,solaris,*) partialld="ld -r -64";;
+   *,gcc*,*,*)          nativecccompopts="$gcc_warnings";;
+ esac
+ 
+@@ -763,7 +773,7 @@ case "$arch,$model,$system" in
+   hppa,*,*)         as='as';
+                     aspp='gcc -traditional -c';;
+   i386,*,solaris)   as='as'
+-                    aspp='/usr/ccs/bin/as -P';;
++                    aspp='gcc -traditional -c';;
+   i386,*,*)         as='as'
+                     aspp='gcc -c';;
+   ia64,*,*)         as='as -xexplicit'
+@@ -801,6 +811,8 @@ case "$arch,$model,$system" in
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
    amd64,*,gnu) profiling='prof';;
@@ -107,7 +126,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1205,6 +1217,8 @@
+@@ -1205,6 +1217,8 @@ if test "$pthread_wanted" = "yes"; then
                     pthread_caml_link="-cclib -lpthread -cclib -lposix4";;
      *-*-freebsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
@@ -116,7 +135,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
      *-*-openbsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
      *)             pthread_link="-lpthread"
-@@ -1256,6 +1270,7 @@
+@@ -1256,6 +1270,7 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -124,7 +143,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1294,6 +1309,7 @@
+@@ -1294,6 +1309,7 @@ for dir in \
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -132,7 +151,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1308,6 +1324,7 @@
+@@ -1308,6 +1324,7 @@ do
      break
    fi
  done
@@ -140,7 +159,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1350,6 +1367,7 @@
+@@ -1350,6 +1367,7 @@ for dir in \
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -148,7 +167,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1402,31 +1420,8 @@
+@@ -1402,31 +1420,8 @@ dbm_include="not found"
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -182,7 +201,7 @@ $NetBSD: patch-at,v 1.25 2012/03/04 09:06:46 asau Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1436,8 +1431,8 @@
+@@ -1436,8 +1431,8 @@ else
    else
      dbm_include="-I$dbm_include"
    fi
