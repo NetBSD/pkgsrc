@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2011/01/19 13:46:14 adam Exp $
+$NetBSD: patch-ab,v 1.14 2012/03/12 15:49:27 wiz Exp $
 
---- src/Makefile.orig	2008-01-19 19:37:58.000000000 +0000
-+++ src/Makefile	2009-12-17 16:36:51.000000000 +0000
+--- src/Makefile.orig	2012-02-13 20:41:22.000000000 +0000
++++ src/Makefile
 @@ -7,8 +7,8 @@
  # Your platform. See PLATS for possible values.
  PLAT= none
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.13 2011/01/19 13:46:14 adam Exp $
  a:	$(ALL_A)
  
  $(LUA_A): $(CORE_O) $(LIB_O)
--	$(AR) $@ $?
+-	$(AR) $@ $(CORE_O) $(LIB_O)	# DLL needs all object files
 -	$(RANLIB) $@
 +	${LIBTOOL} --tag=CC --mode=link ${CC} ${LDFLAGS} -o $@ ${CORE_O} ${LIB_O} -rpath ${PREFIX}/lib -version-info ${LV} ${LIBS}
  
