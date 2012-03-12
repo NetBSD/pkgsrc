@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/03/06 17:38:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2012/03/12 11:22:15 fhajny Exp $
 #
 
 DISTNAME=	gpac-0.4.5
@@ -21,7 +21,13 @@ USE_LANGUAGES=	c c++
 # not really GNU configure, but close enough
 GNU_CONFIGURE=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--disable-wx
+CONFIGURE_ARGS+=	--X11-path=${X11BASE}
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-pic
+.endif
 
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
