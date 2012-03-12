@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/02/24 18:37:30 christos Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/12 15:14:51 wiz Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 # distfile at sf is corrupt
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mpeg4ip/}
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_FREEBSD_LOCAL:=ahze/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mpeg4ip.sourceforge.net/
-COMMENT=		libmp4v2 from mpeg4ip
+COMMENT=		Library for reading and modifying mp4 files
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
