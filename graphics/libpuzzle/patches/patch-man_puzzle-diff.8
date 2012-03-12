@@ -1,0 +1,49 @@
+$NetBSD: patch-man_puzzle-diff.8,v 1.1 2012/03/12 14:51:39 wiz Exp $
+
+Fix some bugs in the man page (mandoc -Tlint).
+
+--- man/puzzle-diff.8.orig	2009-03-24 14:01:25.000000000 +0000
++++ man/puzzle-diff.8
+@@ -15,10 +15,12 @@
+ .\"
+ .Dd $Mdocdate: September 23 2007 $
+ .Dt PUZZLE-DIFF 1
++.Os
+ .Sh NAME
+-.Nm puzzle\-diff \- Compare pictures with libpuzzle
++.Nm puzzle\-diff
++.Nd compare pictures with libpuzzle
+ .Sh SYNOPSIS
+-.B puzzle\-diff
++.Nm puzzle\-diff
+ [\-b <contrast barrier for cropping] [\-c] [\-C <max cropping ratio>]
+ [\-e] [\-E <similarity threshold>] [\-h] [\-H <max height>] [\-l <lambdas>]
+ [\-n <noise cutoff>] [\-p <p ratio>] [\-t] [\-W <max width>]
+@@ -31,16 +33,15 @@ Try
+ .Em puzzle\-diff \-h
+ for more info.
+ .Sh EXAMPLES
+-.Pp
+ Output distance between two images:
+-.Bd \-literal \-offset indent
++.Bd -literal -offset indent
+ $ puzzle\-diff pic\-a\-0.jpg pics\-a\-1.jpg
+ 0.102286
+ .Ed
+ .Pp
+ Compare two images, exit with 10 if they look the same, exit with 20 if
+ they don't (may be useful for scripts):
+-.Bd \-literal \-offset indent
++.Bd -literal -offset indent
+ $ puzzle\-diff \-e pic\-a\-0.jpg pics\-a\-1.jpg
+ $ echo $?
+ 10
+@@ -48,7 +49,7 @@ $ echo $?
+ .Pp
+ Compute distance, without cropping and with computing the average intensity
+ of the whole blocks:
+-.Bd \-literal \-offset indent
++.Bd -literal -offset indent
+ $ puzzle\-diff \-p 1.0 \-c pic\-a\-0.jpg pic\-a\-1.jpg
+ 0.0523151
+ .Ed
