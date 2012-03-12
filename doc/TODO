@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10940 2012/03/12 15:57:06 wiz Exp $
+$NetBSD: TODO,v 1.10941 2012/03/12 16:02:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
 	o apache-2.4.1
-	o apache-ant-1.8.3
 	o apache-maven-3.0
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
