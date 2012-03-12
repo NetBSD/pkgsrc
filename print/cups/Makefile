@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2012/02/07 23:16:57 sbd Exp $
+# $NetBSD: Makefile,v 1.190 2012/03/12 13:37:40 fhajny Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -8,6 +8,7 @@ DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
 BASE_VERS=	1.5.2
 DIST_VERS=	${BASE_VERS}
+PKGREVISION=	1
 
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -72,6 +73,7 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		LIBS_SSP=-lssp_nonshared
+LIBS.SunOS+=		-liconv
 .endif
 
 PLIST_VARS+=		notmac
@@ -172,6 +174,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${DESTDIR}${EGDIR}
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
