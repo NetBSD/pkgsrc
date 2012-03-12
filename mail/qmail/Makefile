@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2012/03/09 04:04:47 sbd Exp $
+# $NetBSD: Makefile,v 1.64 2012/03/12 03:53:55 sbd Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -57,20 +57,14 @@ SETUP_PROGRAMS=		dnsfq dnsip dnsptr hostname install ipmeprint
 SETUP_SCRIPTS=		config config-fast
 
 MANDIRS=		man
-.for i in cat man
-.  for j in 1 5 7 8
-MANDIRS+=		man/${i}${j}
-.  endfor
+.for j in 1 5 7 8
+MANDIRS+=		man/man${j}
 .endfor
 INSTALLATION_DIRS=	bin ${MANDIRS} ${DOCDIR} ${SHAREDIR}
 INSTALLATION_DIRS+=	${EGDIR}/alias ${EGDIR}/boot ${EGDIR}/control
 INSTALLATION_DIRS+=	${EGDIR}/users
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX qmail always installs the manpages and catpages so MANINSTALL
-# XXX must be set here so thay are not removed from the PLIST. 
-MANINSTALL=		maninstall catinstall
 
 BUILD_DEFS+=		QMAILDIR QMAIL_QUEUE_DIR QMAIL_QUEUE_EXTRA
 
