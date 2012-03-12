@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2011/04/15 14:47:17 abs Exp $
+# $NetBSD: Makefile,v 1.30 2012/03/12 16:02:32 wiz Exp $
 #
 
-DISTNAME=	apache-ant-1.8.2-bin
+DISTNAME=	apache-ant-1.8.3-bin
 PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
@@ -37,7 +37,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/antRun ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${DESTDIR}${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/ant-*.jar ${DESTDIR}${PREFIX}/lib/java/ant
-	cd ${WRKSRC}/docs && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/doc/java/ant
+	cd ${WRKSRC}/manual && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/java/ant
 
