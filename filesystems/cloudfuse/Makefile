@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/09 22:46:25 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/12 17:05:03 abs Exp $
 
 DISTNAME=	1003a82
 PKGNAME=	cloudfuse-20120124
@@ -10,7 +10,7 @@ MAINTAINER=	abs@absd.org
 HOMEPAGE=	https://redbo.github.com/cloudfuse/
 COMMENT=	Filesystem (fuse) implemented on Mosso's Cloud Files
 EXTRACT_SUFX=
-EXTRACT_CMD=	${TAR} -xzf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_CMD=	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
