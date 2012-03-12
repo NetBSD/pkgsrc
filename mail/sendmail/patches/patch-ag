@@ -1,8 +1,17 @@
-$NetBSD: patch-ag,v 1.13 2007/04/26 06:26:27 jnemeth Exp $
+$NetBSD: patch-ag,v 1.14 2012/03/12 12:53:13 fhajny Exp $
 
---- include/sm/conf.h.orig	2007-03-21 16:56:18.000000000 -0700
+--- include/sm/conf.h.orig	2011-05-03 16:24:00.000000000 +0000
 +++ include/sm/conf.h
-@@ -806,7 +806,11 @@ extern unsigned int sleepX __P((unsigned
+@@ -381,7 +381,7 @@ typedef int		pid_t;
+ #   ifndef __svr4__
+ #    define __svr4__		/* use all System V Release 4 defines below */
+ #   endif /* ! __svr4__ */
+-#   if SOLARIS >= 21100
++#   if SOLARIS >= 21100 && defined(SOLARIS_HAS_PATHS_H)
+ #    include <paths.h>
+ #   endif /* SOLARIS >= 21100 */
+ #   ifndef _PATH_VARRUN
+@@ -818,7 +818,11 @@ extern unsigned int sleepX __P((unsigned
  #  ifndef LA_TYPE
  #   define LA_TYPE	LA_SUBR
  #  endif /* ! LA_TYPE */
