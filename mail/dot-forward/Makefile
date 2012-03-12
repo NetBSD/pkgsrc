@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2010/03/15 17:28:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2012/03/12 21:49:49 joerg Exp $
 #
 
 DISTNAME=		dot-forward-0.71
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 

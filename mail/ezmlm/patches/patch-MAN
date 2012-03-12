@@ -1,0 +1,21 @@
+$NetBSD: patch-MAN,v 1.1 2012/03/12 21:52:07 joerg Exp $
+
+--- MAN.orig	1997-06-30 03:11:54.000000000 +0000
++++ MAN
+@@ -12,16 +12,3 @@ c:::644:/man1/:ezmlm-sub.1:
+ c:::644:/man1/:ezmlm-unsub.1:
+ c:::644:/man1/:ezmlm-warn.1:
+ c:::644:/man1/:ezmlm-weed.1:
+-d:::755:/cat1::
+-d:::755:/cat5::
+-c:::644:/cat5/:ezmlm.0:
+-c:::644:/cat1/:ezmlm-list.0:
+-c:::644:/cat1/:ezmlm-make.0:
+-c:::644:/cat1/:ezmlm-manage.0:
+-c:::644:/cat1/:ezmlm-reject.0:
+-c:::644:/cat1/:ezmlm-return.0:
+-c:::644:/cat1/:ezmlm-send.0:
+-c:::644:/cat1/:ezmlm-sub.0:
+-c:::644:/cat1/:ezmlm-unsub.0:
+-c:::644:/cat1/:ezmlm-warn.0:
+-c:::644:/cat1/:ezmlm-weed.0:

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/12 21:50:32 joerg Exp $
 bin/answer
 bin/checkalias
 bin/elm
@@ -25,22 +25,6 @@ lib/elmrc-info
 lib/elmterminal
 lib/elmunidata
 lib/prlong
-man/cat1/answer.0
-man/cat1/checkalias.0
-man/cat1/elm.0
-man/cat1/elmalias.0
-man/cat1/elmcharset.0
-man/cat1/elmterminal.0
-man/cat1/elmunidata.0
-man/cat1/fastmail.0
-man/cat1/frm.0
-man/cat1/listalias.0
-man/cat1/messages.0
-man/cat1/newalias.0
-man/cat1/newmail.0
-man/cat1/printmail.0
-man/cat1/readmsg.0
-man/cat1/wnewmail.0
 man/man1/answer.1
 man/man1/checkalias.1
 man/man1/elm.1
