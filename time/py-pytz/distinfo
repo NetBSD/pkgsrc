@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2012/01/20 12:12:26 wiz Exp $
+$NetBSD: distinfo,v 1.10 2012/03/12 15:51:20 wiz Exp $
 
-SHA1 (pytz-2011n.tar.bz2) = 778a01c4211c0f1bd7e535aad13289214adba08f
-RMD160 (pytz-2011n.tar.bz2) = 13984061a020a8a7d39b526c4d84021df5a8cdec
-Size (pytz-2011n.tar.bz2) = 166887 bytes
+SHA1 (pytz-2012b.tar.bz2) = 513d0ea4921ad6915a9ca6d18b8cafbbdcb82339
+RMD160 (pytz-2012b.tar.bz2) = 6c13b8392c0b9c171693eec2ac8df0a6e2fdbd57
+Size (pytz-2012b.tar.bz2) = 166426 bytes
