@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.7 2008/01/13 17:15:16 ghen Exp $
+$NetBSD: patch-ah,v 1.8 2012/03/13 19:57:11 adam Exp $
 
 --- libraries/libldap/init.c.orig	2007-09-01 01:13:55.000000000 +0200
 +++ libraries/libldap/init.c
-@@ -581,7 +581,11 @@ void ldap_int_initialize( struct ldapopt
+@@ -636,7 +636,11 @@ void ldap_int_initialize( struct ldapopt
  
  #if defined(HAVE_TLS) || defined(HAVE_CYRUS_SASL)
  	{

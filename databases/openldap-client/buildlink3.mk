@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2010/01/17 12:02:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/03/13 19:57:11 adam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	openldap-client
 OPENLDAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openldap-client+=	openldap-client>=2.4.6
-BUILDLINK_ABI_DEPENDS.openldap-client?=	openldap-client>=2.4.19
+BUILDLINK_ABI_DEPENDS.openldap-client+=	openldap-client>=2.4.19
 BUILDLINK_PKGSRCDIR.openldap-client?=	../../databases/openldap-client
 
 # Export the deprecated API from the openldap-2.2.x releases.

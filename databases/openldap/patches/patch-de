@@ -1,7 +1,8 @@
-$NetBSD: patch-de,v 1.1 2009/08/05 02:14:42 manu Exp $
+$NetBSD: patch-de,v 1.2 2012/03/13 19:57:11 adam Exp $
+
 --- contrib/slapd-modules/smbk5pwd/smbk5pwd.c.orig	2009-08-04 17:38:01.000000000 +0200
 +++ contrib/slapd-modules/smbk5pwd/smbk5pwd.c	2009-08-04 22:56:06.000000000 +0200
-@@ -67,9 +67,15 @@
+@@ -68,9 +68,15 @@
  #ifdef HAVE_GNUTLS
  #include <gcrypt.h>
  typedef unsigned char DES_cblock[8];

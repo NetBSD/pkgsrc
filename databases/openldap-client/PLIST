@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/03/17 14:09:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/03/13 19:57:11 adam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -16,6 +16,7 @@ include/ldap_cdefs.h
 include/ldap_features.h
 include/ldap_schema.h
 include/ldap_utf8.h
+include/ldif.h
 include/slapi-plugin.h
 lib/liblber.la
 lib/libldap.la
@@ -109,6 +110,7 @@ man/man3/ldap_dn2ad_canonical.3
 man/man3/ldap_dn2dcedn.3
 man/man3/ldap_dn2str.3
 man/man3/ldap_dn2ufn.3
+man/man3/ldap_dnfree.3
 man/man3/ldap_dup.3
 man/man3/ldap_err2string.3
 man/man3/ldap_errlist.3
@@ -220,6 +222,7 @@ man/man5/slapd-hdb.5
 man/man5/slapd-ldap.5
 man/man5/slapd-ldbm.5
 man/man5/slapd-ldif.5
+man/man5/slapd-mdb.5
 man/man5/slapd-meta.5
 man/man5/slapd-monitor.5
 man/man5/slapd-ndb.5
@@ -250,6 +253,7 @@ man/man5/slapo-ppolicy.5
 man/man5/slapo-refint.5
 man/man5/slapo-retcode.5
 man/man5/slapo-rwm.5
+man/man5/slapo-sock.5
 man/man5/slapo-sssvlv.5
 man/man5/slapo-syncprov.5
 man/man5/slapo-translucent.5

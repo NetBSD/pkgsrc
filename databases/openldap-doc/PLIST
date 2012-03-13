@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:43:19 joerg Exp $
-share/doc/openldap/COPYRIGHT
-share/doc/openldap/LICENSE
-share/doc/openldap/README
+@comment $NetBSD: PLIST,v 1.6 2012/03/13 19:57:11 adam Exp $
 share/doc/openldap/admin/allmail-en.png
 share/doc/openldap/admin/allusersgroup-en.png
 share/doc/openldap/admin/config_dit.png
 share/doc/openldap/admin/config_local.png
 share/doc/openldap/admin/config_ref.png
 share/doc/openldap/admin/config_repl.png
+share/doc/openldap/admin/delta-syncrepl.png
 share/doc/openldap/admin/dual_dc.png
 share/doc/openldap/admin/guide.html
 share/doc/openldap/admin/intro_dctree.png
 share/doc/openldap/admin/intro_tree.png
+share/doc/openldap/admin/ldap-sync-refreshandpersist.png
+share/doc/openldap/admin/ldap-sync-refreshonly.png
+share/doc/openldap/admin/n-way-multi-master.png
 share/doc/openldap/admin/push-based-complete.png
 share/doc/openldap/admin/push-based-standalone.png
 share/doc/openldap/admin/refint.png
