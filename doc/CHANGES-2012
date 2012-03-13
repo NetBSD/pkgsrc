@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.795 2012/03/13 15:41:43 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.796 2012/03/13 19:59:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1144,9 +1144,16 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/typo3_46 to 4.6.6 [taca 2012-03-13]
 	Updated net/samba33 to 3.3.16nb3 [taca 2012-03-13]
 	Updated net/samba30 to 3.0.37nb9 [taca 2012-03-13]
-	Updated devel/xulrunner192 to 1.9.2.28 [martin 2012 2012-03-13]
-	Updated www/firefox36 to 3.6.28 [martin 2012 2012-03-13]
+	Updated devel/xulrunner192 to 1.9.2.28 [martin 2012-03-13]
+	Updated www/firefox36 to 3.6.28 [martin 2012-03-13]
 	Added security/libyubikey version 1.8 [pettai 2012-03-13]
 	Added security/ykclient version 2.7 [pettai 2012-03-13]
 	Added security/ykpers version 1.6.3 [pettai 2012-03-13]
 	Added security/pam-yubico version 2.11 [pettai 2012-03-13]
+	Updated databases/openldap to 2.4.30 [adam 2012-03-13]
+	Updated databases/openldap-client to 2.4.30 [adam 2012-03-13]
+	Updated databases/openldap-server to 2.4.30 [adam 2012-03-13]
+	Updated databases/openldap-doc to 2.4.30 [adam 2012-03-13]
+	Updated databases/openldap-cloak to 2.4.30 [adam 2012-03-13]
+	Updated databases/openldap-nops to 2.4.30 [adam 2012-03-13]
+	Updated databases/openldap-smbk5pwd to 2.4.30 [adam 2012-03-13]
