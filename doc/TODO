@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10942 2012/03/13 03:19:08 mef Exp $
+$NetBSD: TODO,v 1.10943 2012/03/13 19:59:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -1050,8 +1050,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o opendnssec-1.3.6
 	o opengrok-0.11
 	o openh323-1.19.1
-	o openldap-2.4.30
-	o openldap-client-2.4.29
 	o openmortal-0.7.1
 	o openmsx-0.8.2
 	o openoffice3-3.3
