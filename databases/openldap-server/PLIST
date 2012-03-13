@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/03/17 14:09:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/03/13 19:57:12 adam Exp $
 libexec/slapd
 sbin/slapacl
 sbin/slapadd
@@ -11,24 +11,32 @@ sbin/slapschema
 sbin/slaptest
 share/examples/openldap/DB_CONFIG
 share/examples/openldap/schema/README
+share/examples/openldap/schema/collective.ldif
 share/examples/openldap/schema/collective.schema
+share/examples/openldap/schema/corba.ldif
 share/examples/openldap/schema/corba.schema
 share/examples/openldap/schema/core.ldif
 share/examples/openldap/schema/core.schema
 share/examples/openldap/schema/cosine.ldif
 share/examples/openldap/schema/cosine.schema
+share/examples/openldap/schema/duaconf.ldif
 share/examples/openldap/schema/duaconf.schema
 share/examples/openldap/schema/dyngroup.ldif
 share/examples/openldap/schema/dyngroup.schema
 share/examples/openldap/schema/inetorgperson.ldif
 share/examples/openldap/schema/inetorgperson.schema
+share/examples/openldap/schema/java.ldif
 share/examples/openldap/schema/java.schema
+share/examples/openldap/schema/misc.ldif
 share/examples/openldap/schema/misc.schema
 share/examples/openldap/schema/nis.ldif
 share/examples/openldap/schema/nis.schema
 share/examples/openldap/schema/openldap.ldif
 share/examples/openldap/schema/openldap.schema
+share/examples/openldap/schema/pmi.ldif
 share/examples/openldap/schema/pmi.schema
+share/examples/openldap/schema/ppolicy.ldif
 share/examples/openldap/schema/ppolicy.schema
 share/examples/openldap/slapd.conf
+share/examples/openldap/slapd.ldif
 share/examples/rc.d/slapd

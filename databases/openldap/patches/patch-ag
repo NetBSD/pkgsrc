@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.6 2007/09/02 13:02:37 ghen Exp $
+$NetBSD: patch-ag,v 1.7 2012/03/13 19:57:11 adam Exp $
 
 --- servers/slapd/Makefile.in.orig	2007-02-14 16:59:43.000000000 +0100
 +++ servers/slapd/Makefile.in
@@ -13,7 +13,7 @@ $NetBSD: patch-ag,v 1.6 2007/09/02 13:02:37 ghen Exp $
  BUILD_OPT = "--enable-slapd"
  BUILD_SRV = @BUILD_SLAPD@
  
-@@ -432,9 +436,7 @@ install-db-config: FORCE
+@@ -441,9 +445,7 @@ install-db-config: FORCE
  	@-$(MKDIR) $(DESTDIR)$(localstatedir) $(DESTDIR)$(sysconfdir)
  	@-$(INSTALL) -m 700 -d $(DESTDIR)$(localstatedir)/openldap-data
  	$(INSTALL) $(INSTALLFLAGS) -m 600 $(srcdir)/DB_CONFIG \
