@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/03/15 16:48:53 taca Exp $
+# $NetBSD: options.mk,v 1.3 2012/03/13 03:14:38 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wordpress
 
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=		ap-php
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mphp-cgi)
-DEPENDS+=	php>=5.2.4:../../lang/php5
+DEPENDS+=	php>=5.2.4:${PHPPKGSRCDIR}
 .endif
 
 .if !empty(PKG_OPTIONS:Map-php)
