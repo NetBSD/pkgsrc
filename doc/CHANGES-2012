@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.785 2012/03/13 03:17:00 taca Exp $
+$NetBSD: CHANGES-2012,v 1.786 2012/03/13 03:20:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1137,3 +1137,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/libxslt to 1.1.26nb2 [tez 2012-03-12]
 	Updated security/openssl to 0.9.8u [taca 2012-03-13]
 	Updated www/contao29 to 2.9.5nb6 [taca 2012-03-13]
+	Removed www/drupal [taca 2012-03-13]
