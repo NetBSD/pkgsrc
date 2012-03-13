@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/03/03 00:14:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/13 09:36:33 fhajny Exp $
 #
 
 DISTNAME=	varnish-3.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
@@ -51,9 +51,9 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
 
 .if ${OPSYS} == "SunOS"
 .  if ${PKGSRC_COMPILER} == "sunpro"
-CONFIGURE_ENV+=	VCC="cc -Kpic -G -o %o %s"
+CONFIGURE_ENV+=	VCC_CC="cc ${_COMPILER_ABI_FLAG.${ABI}} -Kpic -G -o %o %s"
 .  else
-CONFIGURE_ENV+=	VCC_CC="gcc -fpic -shared -o %o %s"
+CONFIGURE_ENV+=	VCC_CC="gcc ${_COMPILER_ABI_FLAG.${ABI}} -fpic -shared -o %o %s"
 .  endif
 .endif
 
