@@ -1,19 +1,17 @@
-$NetBSD: patch-da,v 1.4 2010/12/17 10:20:51 adam Exp $
+$NetBSD: patch-da,v 1.5 2012/03/13 19:57:11 adam Exp $
 
---- contrib/slapd-modules/smbk5pwd/Makefile.orig	2010-04-13 20:22:30.000000000 +0000
+--- contrib/slapd-modules/smbk5pwd/Makefile.orig	2012-02-29 17:37:09.000000000 +0000
 +++ contrib/slapd-modules/smbk5pwd/Makefile
-@@ -13,21 +13,21 @@
+@@ -13,21 +13,19 @@
  # <http://www.OpenLDAP.org/license.html>.
  
  LIBTOOL=../../../libtool
 -OPT=-g -O2
 -CC=gcc
 +OPT=${CFLAGS} ${CPPFLAGS}
-+#CC=gcc
  
- # Omit DO_KRB5 or DO_SAMBA if you don't want to support it.
--DEFS=-DDO_KRB5 -DDO_SAMBA
-+#DEFS=-DDO_KRB5 -DDO_SAMBA
+ # Omit DO_KRB5, DO_SAMBA or DO_SHADOW if you don't want to support it.
+-DEFS=-DDO_KRB5 -DDO_SAMBA -DDO_SHADOW
  
  HEIMDAL_INC=-I/usr/heimdal/include
  SSL_INC=
@@ -25,7 +23,7 @@ $NetBSD: patch-da,v 1.4 2010/12/17 10:20:51 adam Exp $
  SSL_LIB=-lcrypto
  LDAP_LIB=-lldap_r -llber
 -LIBS=$(LDAP_LIB) $(HEIMDAL_LIB) $(SSL_LIB)
-+LIBS+=$(LDAP_LIB) $(SSL_LIB)
++LIBS=$(LDAP_LIB) $(SSL_LIB)
  
  prefix=/usr/local
  exec_prefix=$(prefix)

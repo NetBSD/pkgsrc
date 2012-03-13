@@ -1,20 +1,19 @@
-$NetBSD: distinfo,v 1.83 2012/01/24 20:36:40 joerg Exp $
+$NetBSD: distinfo,v 1.84 2012/03/13 19:57:10 adam Exp $
 
-SHA1 (openldap-2.4.24.tgz) = a4baad3d45ae5810ba5fee48603210697c70d52f
-RMD160 (openldap-2.4.24.tgz) = b9df6a5a562b83fe4ad92f8779909b36fab65c52
-Size (openldap-2.4.24.tgz) = 5240643 bytes
-SHA1 (patch-ac) = 905b08c4dea8c61e044ccf66d6af22cc685a3ccc
+SHA1 (openldap-2.4.30.tgz) = 7447e89b9a5199f9bb2231bda42c308a1b6513d9
+RMD160 (openldap-2.4.30.tgz) = 071a3c2a183293999b2627be05ccb4fb1b271b16
+Size (openldap-2.4.30.tgz) = 5440261 bytes
+SHA1 (patch-ac) = 2995c518278b363bf9657e181c2340d3024d5980
 SHA1 (patch-ad) = 24e7ec27d592dd76bdec1e4805801c5304951daf
-SHA1 (patch-af) = 1ae9137e76e885e03d0f44727197a444893ec7c5
-SHA1 (patch-ag) = bde3cb8eb9ece90e1ac13d15f8d156201c3b7026
-SHA1 (patch-ah) = ba33845171cef760a68af1406ee2e1dcae7a5a47
-SHA1 (patch-aj) = 4cedc384f2e81d592d66c0e1688e61cf0e69b05d
-SHA1 (patch-am) = cf97dbc86ed1e0dc3cd7f901dd3f0e4c77490a82
-SHA1 (patch-an) = f98c6457474247c092dd0a062e86560cc894ec4e
-SHA1 (patch-ao) = 6276a1226689fc3be3ffacbcd8df2e4f3e51d1a0
-SHA1 (patch-ap) = c3f14d81e70acf5b236bbeab36204debc1b44b95
+SHA1 (patch-af) = 2e00b01bd813e73bdc1fb764a02e98d7755703de
+SHA1 (patch-ag) = ec8581f7145ba47712be65f97051ffd2d7299896
+SHA1 (patch-ah) = 5c833010b5e875c12322a112f42fc723ab070a92
+SHA1 (patch-aj) = 857bbf14855d7d2a2911457bc6373d8beb69b751
+SHA1 (patch-am) = fb8f3e7699f8b2ef55c066cdc6216522c101c7f3
+SHA1 (patch-an) = a2ef7e96505df948494673f1d1805f1090adad8e
+SHA1 (patch-ao) = 4fcbbfd4d6be792392e3646123022aeaf25923e3
 SHA1 (patch-contrib_slapd-modules_nops_slapo-nops.5) = f32352f19361b7e9aa5b038ae8578def7c08fa47
-SHA1 (patch-da) = cb705b12715869ef4df4477ac82ab006154978de
-SHA1 (patch-dd) = bc1b506e0516f8ee604898beb39380111d07c56f
-SHA1 (patch-de) = 749cdbf2d76bcf4ff192ef087f1404b608447a30
-SHA1 (patch-libraries_liblutil_detach.c) = 346839a1053d098a01eb13e4c429c45be654c511
+SHA1 (patch-da) = 39f51d21b06d03ffc9d83fd39e88f5b6af1d4f60
+SHA1 (patch-dd) = 9c74118ff0b2232bda729c9917082fceef41dd16
+SHA1 (patch-de) = c18fd4103d6a6ac7925d59513a9b6bc2196679ba
+SHA1 (patch-libraries_libmdb_mdb.c) = 2ba3d25dfb1aa6b5e81eed77a46ad58aa74733b5
