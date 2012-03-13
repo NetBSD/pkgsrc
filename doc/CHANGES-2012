@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.788 2012/03/13 12:42:01 adam Exp $
+$NetBSD: CHANGES-2012,v 1.789 2012/03/13 13:16:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1140,3 +1140,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/drupal [taca 2012-03-13]
 	Updated misc/py-anita to 1.25 [gson 2012-03-13]
 	Updated net/samba35 to 3.5.13 [adam 2012-03-13]
+	Updated www/typo3_45 to 4.5.13 [taca 2012-03-13]
+	Updated www/typo3_46 to 4.6.6 [taca 2012-03-13]
