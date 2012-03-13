@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.783 2012/03/12 18:28:33 tez Exp $
+$NetBSD: CHANGES-2012,v 1.784 2012/03/13 03:12:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1135,3 +1135,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mdds to 0.5.4 [wiz 2012-03-12]
 	Updated devel/apache-ant to 1.8.3 [wiz 2012-03-12]
 	Updated textproc/libxslt to 1.1.26nb2 [tez 2012-03-12]
+	Updated security/openssl to 0.9.8u [taca 2012-03-13]
