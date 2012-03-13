@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/04/18 17:21:34 tez Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/03/13 14:19:00 fhajny Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -38,6 +38,7 @@ share/locale/uk/LC_MESSAGES/nano.mo
 share/locale/vi/LC_MESSAGES/nano.mo
 share/locale/zh_CN/LC_MESSAGES/nano.mo
 share/locale/zh_TW/LC_MESSAGES/nano.mo
+share/examples/nano/nanorc
 share/nano/asm.nanorc
 share/nano/awk.nanorc
 share/nano/c.nanorc
