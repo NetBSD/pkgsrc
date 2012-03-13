@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2012/03/12 12:53:12 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.56 2012/03/13 11:01:01 obache Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -33,6 +33,8 @@ BUILD_DEFS+=	SMRSH_CMDDIR
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_TOOLS+=	gm4
 MAKE_ENV+=	M4=${TOOLS_M4}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS" && exists(/usr/include/paths.h)
 CFLAGS+=	-DSOLARIS_HAS_PATHS_H
