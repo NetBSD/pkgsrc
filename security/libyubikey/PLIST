@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/13 15:12:36 pettai Exp $
+bin/modhex
+bin/ykgenerate
+bin/ykparse
+include/yubikey.h
+lib/libyubikey.la
