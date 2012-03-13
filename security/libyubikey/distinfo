@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/13 15:12:36 pettai Exp $
+
+SHA1 (libyubikey-1.8.tar.gz) = 9193d49bb4cfccf15d46016b3fe9d11bac4a46bd
+RMD160 (libyubikey-1.8.tar.gz) = 5d02638b0411d65466fa8c217732d8079b159636
+Size (libyubikey-1.8.tar.gz) = 320998 bytes
