@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2012/03/11 11:30:06 shattered Exp $
+# $NetBSD: Makefile,v 1.89 2012/03/13 09:04:49 fhajny Exp $
 
 DISTNAME=	heimdal-1.5.2
 PKGREVISION=	1
@@ -59,8 +59,11 @@ PLIST_VARS+=		afskauth hcrypto
 .if ${OPSYS} == "IRIX"
 PLIST.afskauth=		yes
 .endif
+
+.include "../../security/openssl/builtin.mk"
+
 .if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != "" || \
-    ${OPSYS} == "SunOS"
+    (${OPSYS} == "SunOS" && !empty(USE_BUILTIN.openssl:Myes))
 PLIST.hcrypto=		yes
 .endif
 
