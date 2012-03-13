@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.792 2012/03/13 15:40:27 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.793 2012/03/13 15:40:53 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1147,3 +1147,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/xulrunner192 to 1.9.2.28 [martin 2012 2012-03-13]
 	Updated www/firefox36 to 3.6.28 [martin 2012 2012-03-13]
 	Added security/libyubikey version 1.8 [pettai 2012-03-13]
+	Added security/ykclient version 2.7 [pettai 2012-03-13]
