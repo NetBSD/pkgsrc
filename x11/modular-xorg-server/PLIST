@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/08/01 11:06:23 hasso Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/03/13 14:13:52 fhajny Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -9,6 +9,7 @@ include/xorg/BT.h
 include/xorg/IBM.h
 include/xorg/TI.h
 include/xorg/XIstubs.h
+${PLIST.sunos}include/xorg/agpgart.h
 include/xorg/bstore.h
 include/xorg/bstorestr.h
 include/xorg/bt829.h
@@ -102,6 +103,7 @@ include/xorg/shadow.h
 include/xorg/shadowfb.h
 include/xorg/shmint.h
 include/xorg/site.h
+${PLIST.sunos}include/xorg/solaris-${SUNOS_ARCH}.il
 include/xorg/swaprep.h
 include/xorg/swapreq.h
 include/xorg/tda8425.h

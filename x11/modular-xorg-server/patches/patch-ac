@@ -1,9 +1,19 @@
-$NetBSD: patch-ac,v 1.6 2010/10/31 23:43:08 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2012/03/13 14:13:52 fhajny Exp $
 
 Fix build on DragonFly after header moved.
+Do not set HAS_USL_VTS on any SunOS platform.
 
---- hw/xfree86/os-support/xf86_OSlib.h.orig	2010-10-30 02:24:29 +0200
-+++ hw/xfree86/os-support/xf86_OSlib.h	2010-10-30 02:25:03 +0200
+--- hw/xfree86/os-support/xf86_OSlib.h.orig	2011-10-28 15:02:52.128328912 +0000
++++ hw/xfree86/os-support/xf86_OSlib.h
+@@ -140,7 +140,7 @@
+ #  include <sys/mmap.h>		/* MMAP driver header */
+ # endif
+ 
+-# if !defined(sun) || (!defined(sparc) && !defined(__SOL8__))
++# if !defined(sun)
+ #  define HAS_USL_VTS
+ # endif
+ # if !defined(sun)
 @@ -346,7 +346,7 @@
  #    include <dev/wscons/wsdisplay_usl_io.h>
  #   endif /* WSCONS_SUPPORT */
