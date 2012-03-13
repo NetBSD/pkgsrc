@@ -1,0 +1,2 @@
+The Yubico PAM module provides an easy way to integrate the Yubikey
+into your existing user authentication infrastructure.
