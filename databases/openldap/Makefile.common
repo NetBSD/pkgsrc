@@ -1,26 +1,28 @@
-# $NetBSD: Makefile.common,v 1.29 2011/03/20 20:27:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2012/03/13 19:57:10 adam Exp $
 #
 # used by databases/openldap-client/Makefile
+# used by databases/openldap-cloak/Makefile
 # used by databases/openldap-nops/Makefile
 # used by databases/openldap-server/Makefile
 # used by databases/openldap-smbk5pwd/Makefile
 
 # please stick to the "stable" releases as much as possible!
-DISTNAME=		openldap-2.4.24
-CATEGORIES=		databases
-MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
-MASTER_SITES+=		http://www.openldap.org/software/download/OpenLDAP/openldap-release/
-MASTER_SITES+=		ftp://gd.tuwien.ac.at/infosys/network/OpenLDAP/openldap-release/
-MASTER_SITES+=		ftp://ftp.ntua.gr/mirror/OpenLDAP/openldap-release/
-MASTER_SITES+=		ftp://ftp.dti.ad.jp/pub/net/OpenLDAP/openldap-release/
-MASTER_SITES+=		ftp://ftp.u-aizu.ac.jp/pub/net/openldap/openldap-release/
-MASTER_SITES+=		ftp://ftp.nl.uu.net/pub/unix/db/openldap/openldap-release/
-MASTER_SITES+=		ftp://ftp.linux.pt/pub/mirrors/OpenLDAP/openldap-release/
-MASTER_SITES+=		ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/openldap-release/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	openldap-2.4.30
+CATEGORIES=	databases
+MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/ \
+		http://www.openldap.org/software/download/OpenLDAP/openldap-release/ \
+		ftp://gd.tuwien.ac.at/infosys/network/OpenLDAP/openldap-release/ \
+		ftp://ftp.ntua.gr/mirror/OpenLDAP/openldap-release/ \
+		ftp://ftp.dti.ad.jp/pub/net/OpenLDAP/openldap-release/ \
+		ftp://ftp.u-aizu.ac.jp/pub/net/openldap/openldap-release/ \
+		ftp://ftp.nl.uu.net/pub/unix/db/openldap/openldap-release/ \
+		ftp://ftp.linux.pt/pub/mirrors/OpenLDAP/openldap-release/ \
+		ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/openldap-release/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		ghen@NetBSD.org
-HOMEPAGE=		http://www.openldap.org/
+MAINTAINER=	ghen@NetBSD.org
+HOMEPAGE=	http://www.openldap.org/
+LICENSE=	modified-bsd
 
 CONFLICTS+=		ldapsdk-[0-9]*
 
@@ -32,7 +34,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		soelim
 GNU_CONFIGURE=		yes
 
-MAKE_ENV+=		LIBMODE=${LIBMODE:Q}
+MAKE_ENV+=		LIBMODE=${LIBMODE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,8 +66,8 @@ SUBST_MESSAGE.conflict=	Fixing conflicting function prototypes.
 CPPFLAGS.Darwin+=	-DBIND_8_COMPAT
 CPPFLAGS.Linux+=	-D_GNU_SOURCE
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR}
 CONFIGURE_ARGS+=	--enable-dynamic
 CONFIGURE_ARGS+=	--with-tls=openssl
 
@@ -73,11 +75,11 @@ EGDIR=			${PREFIX}/share/examples/openldap
 
 CONF_FILES=		# empty
 CONF_FILES_PERMS=	# empty
-.for FILE in ${CNFS}
-CONF_FILES+=		${EGDIR}/${FILE:Q} ${OPENLDAP_ETCDIR}/${FILE:Q}
+.for file in ${CNFS}
+CONF_FILES+=		${EGDIR}/${file} ${OPENLDAP_ETCDIR}/${file}
 .endfor
-.for FILE in ${CNFS_PERMS}
-CONF_FILES_PERMS+=	${EGDIR}/${FILE:Q} ${OPENLDAP_ETCDIR}/${FILE:Q} ${OPENLDAP_FILEPERMS}
+.for file in ${CNFS_PERMS}
+CONF_FILES_PERMS+=	${EGDIR}/${file} ${OPENLDAP_ETCDIR}/${file} ${OPENLDAP_FILEPERMS}
 .endfor
 
 DB_CONFIG?=		# empty
@@ -93,10 +95,8 @@ CONFIGURE_ARGS+=	--with-threads
 .elif ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-threads=pth
 
-#
 # Don't use a larger FD_SETSIZE than GNU Pth can handle (value taken from
 # pth.h header).
-#
 PTH_FDSETSIZE_cmd=							\
 	if ${TEST} -f ${BUILDLINK_PREFIX.pth:Q}/include/pth.h; then	\
 		${AWK} '/if FD_SETSIZE >/ { print $$4 }'		\
@@ -107,8 +107,8 @@ PTH_FDSETSIZE_cmd=							\
 CPPFLAGS+=	-DOPENLDAP_FD_SETSIZE=${PTH_FDSETSIZE_cmd:sh:Q}
 .endif
 
-MAKE_FLAGS+=		moduledir=${OPENLDAP_MODULEDIR:Q}
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+MAKE_FLAGS+=		moduledir=${OPENLDAP_MODULEDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 # Set the correct file modes for the example config files.
 post-install:
