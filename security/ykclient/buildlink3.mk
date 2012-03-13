@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.2 2012/03/13 15:15:15 pettai Exp $
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/03/13 15:16:00 pettai Exp $
 
 BUILDLINK_TREE+=	ykclient
 
