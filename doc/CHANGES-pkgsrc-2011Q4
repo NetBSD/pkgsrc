@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.44 2012/03/12 18:09:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.45 2012/03/13 01:37:32 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -183,3 +183,5 @@ Pullup ticket #3697 - requested by tron
 mk/plist: fix for handling of man pages
 Pullup ticket #3701 - requested by drochner
 textproc/libxml2: security patches
+Pullup ticket #3700 - requested by wiz
+x11/startup-notification: build fix
