@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2009/08/25 05:27:57 hasso Exp $
+# $NetBSD: options.mk,v 1.16 2012/03/13 13:24:36 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=
@@ -19,7 +19,8 @@ PKG_SUGGESTED_OPTIONS+=		${MACHINE_ARCH}
      ${MACHINE_ARCH} == "sparc64") && \
     ((${OPSYS} == "NetBSD" && ${X11_TYPE} == "modular") || \
      ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
-     ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux")
+     ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || \
+     ${OPSYS} == "SunOS")
 PKG_SUPPORTED_OPTIONS+=		dri
 .endif
 ###
