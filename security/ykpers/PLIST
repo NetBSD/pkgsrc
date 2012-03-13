@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/13 15:30:07 pettai Exp $
+bin/ykchalresp
+bin/ykpersonalize
+include/ykpers-1/ykcore.h
+include/ykpers-1/ykdef.h
+include/ykpers-1/ykpers.h
+include/ykpers-1/ykstatus.h
+lib/libykpers-1.la
+lib/pkgconfig/ykpers-1.pc
+man/man1/ykchalresp.1
+man/man1/ykpersonalize.1
