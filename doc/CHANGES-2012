@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.794 2012/03/13 15:41:17 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.795 2012/03/13 15:41:43 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1149,3 +1149,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/libyubikey version 1.8 [pettai 2012-03-13]
 	Added security/ykclient version 2.7 [pettai 2012-03-13]
 	Added security/ykpers version 1.6.3 [pettai 2012-03-13]
+	Added security/pam-yubico version 2.11 [pettai 2012-03-13]
