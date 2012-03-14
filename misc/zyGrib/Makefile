@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2012/03/09 10:22:33 plunky Exp $
+# $NetBSD: Makefile,v 1.27 2012/03/14 14:49:06 plunky Exp $
 #
 
-DISTNAME=	zyGrib-5.1.2
+DISTNAME=	zyGrib-5.1.3
 CATEGORIES=	misc
 MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz
@@ -132,6 +132,8 @@ INSTALL_FILES+=	tr/zyGrib_it.qm
 INSTALL_FILES+=	tr/zyGrib_it.ts
 INSTALL_FILES+=	tr/zyGrib_nl.qm
 INSTALL_FILES+=	tr/zyGrib_nl.ts
+INSTALL_FILES+=	tr/zyGrib_pt.qm
+INSTALL_FILES+=	tr/zyGrib_pt.ts
 INSTALL_FILES+=	tr/zyGrib_ru.qm
 INSTALL_FILES+=	tr/zyGrib_ru.ts
 
