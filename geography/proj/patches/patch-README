@@ -1,0 +1,20 @@
+$NetBSD: patch-README,v 1.1 2012/03/14 23:36:06 gdt Exp $
+
+Sent upstream by email 20120309.
+
+--- README.orig	2010-12-05 16:06:32.000000000 +0000
++++ README
+@@ -40,6 +40,13 @@ After executing configure, execute:
+ 
+ The install target will create, if necessary, all required sub-directories.
+ 
++To test, execute:
++
++	make check
++
++Note that you must have installed proj-datumgrid-1.5 in nad prior to
++building; the test suite includes grid shift tests.
++
+ Windows Build
+ -------------
+ 
