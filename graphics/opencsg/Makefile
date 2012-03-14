@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/28 10:42:12 reinoud Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/14 23:11:58 joerg Exp $
 #
 
 PKGNAME=	opencsg-1.3.2
@@ -17,9 +17,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
+INSTALLATION_DIRS=	include lib
+
 do-install:
-	${INSTALL_LIB} -d ${DESTDIR}${PREFIX}/lib
-	${INSTALL_LIB} -d ${DESTDIR}${PREFIX}/include
 	${INSTALL_LIB} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/lib/
 	${INSTALL_DATA} ${WRKSRC}/include/* ${DESTDIR}${PREFIX}/include/
 
