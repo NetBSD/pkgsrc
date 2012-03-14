@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2012/03/02 14:21:46 taca Exp $
+# $NetBSD: Makefile,v 1.34 2012/03/14 03:33:51 taca Exp $
 
 DISTNAME=	drupal-6.25
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -53,7 +54,7 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	drupal.conf
 SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
-SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
 INSTALLATION_DIRS+=	${DRUPAL}/files ${DRUPAL}/sites/all \
