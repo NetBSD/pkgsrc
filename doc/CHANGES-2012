@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.796 2012/03/13 19:59:22 adam Exp $
+$NetBSD: CHANGES-2012,v 1.797 2012/03/14 03:35:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1157,3 +1157,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/openldap-cloak to 2.4.30 [adam 2012-03-13]
 	Updated databases/openldap-nops to 2.4.30 [adam 2012-03-13]
 	Updated databases/openldap-smbk5pwd to 2.4.30 [adam 2012-03-13]
+	Updated www/drupal6 to 6.25nb1 [taca 2012-03-14]
+	Updated www/drupal7 to 7.12nb1 [taca 2012-03-14]
