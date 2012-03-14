@@ -1,4 +1,4 @@
-.\"	$NetBSD: add_todo.1,v 1.2 2012/03/08 12:11:55 wiz Exp $
+.\"	$NetBSD: add_todo.1,v 1.3 2012/03/14 14:34:39 wiz Exp $
 .\"
 .Dd March 8, 2012
 .Dt ADD_TODO 1
@@ -6,7 +6,7 @@
 .Nm add_todo
 .Nd add entries to pkgsrc/doc/TODO
 .Sh SYNOPSIS
-.Nm add_todo
+.Nm
 .Op Fl f
 .Ar package
 .Sh DESCRIPTION
@@ -20,15 +20,14 @@ The
 .Ar package
 argument needs to be of the form
 .Dq PKGNAME-PKGVERSION ,
-e.g.
+e.g.,
 .Dq pkgsrc-todo-1.1 .
 .Nm
 checks if the package exists in pkgsrc by looking for an entry for it
 in the
 .Pa CHANGES-*
 files (to catch typos).
-.Nm
-also checks if the update was already committed, i.e. if an entry for
+It also checks if the update was already committed, i.e., if an entry for
 it or a newer version exists in any
 .Pa CHANGES-*
 files.
