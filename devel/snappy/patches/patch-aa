@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/04/05 05:34:16 agc Exp $
+$NetBSD: patch-aa,v 1.2 2012/03/14 18:15:27 abs Exp $
 
 Depending on the definition of LZF_STATE_ARG, lzf can grow an extra arg.
 Accommodate.
 
---- snappy_unittest.cc	2011/03/23 19:16:06	1.1
-+++ snappy_unittest.cc	2011/03/23 19:21:09
-@@ -154,10 +154,17 @@
+--- snappy_unittest.cc.orig	2012-02-24 15:46:14.000000000 +0000
++++ snappy_unittest.cc
+@@ -216,10 +216,17 @@ static bool Compress(const char* input, 
+ 
  #ifdef LZF_VERSION
      case LIBLZF: {
-       compressed->resize(input_size - 1);
 +#  ifdef LZF_STATE_ARG
 +      LZF_STATE htab;
 +#  endif
        int destlen = lzf_compress(input,
                                   input_size,
                                   string_as_array(compressed),
--                                 input_size - 1);
-+                                 input_size - 1
+-                                 input_size);
++                                 input_size
 +#  ifdef LZF_STATE_ARG
 +				 , htab
 +#  endif

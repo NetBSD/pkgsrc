@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/11/26 04:39:47 sbd Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/14 18:15:27 abs Exp $
 
-DISTNAME=	snappy-1.0.1
-PKGREVISION=	1
+DISTNAME=	snappy-1.0.5
 CATEGORIES=	devel
 MASTER_SITES=	http://snappy.googlecode.com/files/
 
