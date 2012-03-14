@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/14 23:13:47 joerg Exp $
 share/doc/qmail/fastforward/ALIASES
 bin/fastforward
 bin/printforward
@@ -14,10 +14,3 @@ man/man1/newaliases.1
 man/man1/printmaillist.1
 man/man1/setmaillist.1
 man/man1/newinclude.1
-man/cat1/fastforward.0
-man/cat1/printforward.0
-man/cat1/setforward.0
-man/cat1/newaliases.0
-man/cat1/printmaillist.0
-man/cat1/setmaillist.0
-man/cat1/newinclude.0
