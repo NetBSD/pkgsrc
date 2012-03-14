@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.800 2012/03/14 14:40:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.801 2012/03/14 14:41:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/ruby-wxruby to 2.0.1nb4 [taca 2012-03-14]
 	Updated www/firefox36-l10n to 3.6.28 [obache 2012-03-14]
 	Updated archivers/lzip to 1.13 [wiz 2012-03-14]
+	Added archivers/lziprecover version 1.13 [wiz 2012-03-14]
