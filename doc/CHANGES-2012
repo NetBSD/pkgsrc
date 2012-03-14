@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.805 2012/03/14 16:42:25 taca Exp $
+$NetBSD: CHANGES-2012,v 1.806 2012/03/14 18:16:03 abs Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1167,3 +1167,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211 to 2.11.2 [taca 2012-03-14]
 	Updated www/contao210 to 2.10.4nb1 [taca 2012-03-14]
 	Updated www/contao29 to 2.9.5nb7 [taca 2012-03-14]
+	Updated devel/snappy to 1.0.5 [abs 2012-03-14]
