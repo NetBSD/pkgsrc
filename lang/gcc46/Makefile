@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/03/05 15:25:36 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/14 23:24:54 wiz Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -76,10 +77,8 @@ CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 .if ${OPSYS} == "NetBSD"
-.include "../../devel/binutils/buildlink3.mk"
-.include "../../devel/libelf/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
-CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
+CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .endif
 .if ${OPSYS} == "Linux"
@@ -102,7 +101,7 @@ CPPFLAGS+=		-I${BUILDLINK_DIR}/include
 CFLAGS+=		-I${BUILDLINK_DIR}/include
 
 
-# Somone should fix this so it will match the NetBSD system compiler
+# Someone should fix this so it will match the NetBSD system compiler
 #.if ${OPSYS} == "NetBSD"
 #GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}
 #CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
@@ -134,7 +133,7 @@ do-test:
 #.if (${MACHINE_GNU_ARCH} == "x86_64")
 #	(cd ${FILESDIR} && ${CP} netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
 #.endif
-	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
+	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${GMAKE} -k check)
 
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR} \
