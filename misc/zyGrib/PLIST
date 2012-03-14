@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/09 10:22:33 plunky Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/14 14:49:06 plunky Exp $
 bin/zyGrib
 share/zyGrib/colors/colors_binary.txt
 share/zyGrib/colors/colors_cape_jkg.txt
@@ -96,5 +96,7 @@ share/zyGrib/tr/zyGrib_it.qm
 share/zyGrib/tr/zyGrib_it.ts
 share/zyGrib/tr/zyGrib_nl.qm
 share/zyGrib/tr/zyGrib_nl.ts
+share/zyGrib/tr/zyGrib_pt.qm
+share/zyGrib/tr/zyGrib_pt.ts
 share/zyGrib/tr/zyGrib_ru.qm
 share/zyGrib/tr/zyGrib_ru.ts
