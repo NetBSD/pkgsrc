@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10944 2012/03/14 14:10:18 wiz Exp $
+$NetBSD: TODO,v 1.10945 2012/03/14 14:18:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1267,7 +1267,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
 	o subversion-1.7.4
-	o sudo-1.8.4p2
+	o sudo-1.8.4p4
 	o supertuxkart-0.7.3
 	o suse-12.1
 	o swfdec-gnome-2.30.1
