@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.133 2011/11/26 04:40:23 sbd Exp $
+# $NetBSD: Makefile,v 1.134 2012/03/14 14:20:38 wiz Exp $
 #
 
 DISTNAME=		sudo-1.7.8p1
 PKGREVISION=		1
 CATEGORIES=		security
-MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
-			ftp://ftp.courtesan.com/pub/sudo/ \
+MASTER_SITES=		http://www.sudo.ws/dist/ \
+			ftp://ftp.sudo.ws/pub/sudo/ \
 			ftp://ftp.uwsg.indiana.edu/pub/security/sudo/ \
 			ftp://ftp.twaren.net/Unix/Security/Sudo/ \
 			http://ftp.tux.org/pub/security/sudo/
 
 MAINTAINER=		kim@tac.nyc.ny.us
-HOMEPAGE=		http://www.courtesan.com/sudo/
+HOMEPAGE=		http://www.sudo.ws/
 COMMENT=		Allow others to run commands as root
-LICENSE=		modified-bsd
+LICENSE=		isc AND modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
