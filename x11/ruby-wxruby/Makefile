@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/03/03 00:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/14 03:41:16 taca Exp $
 #
 
 DISTNAME=	wxruby-2.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://rubyforge.org/frs/download.php/63379/
 
