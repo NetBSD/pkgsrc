@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10946 2012/03/14 14:40:10 wiz Exp $
+$NetBSD: TODO,v 1.10947 2012/03/14 16:20:49 taca Exp $
 
 Suggested new packages
 ======================
@@ -522,7 +522,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dri2proto-2.6
 	o drivel-3.0.3
 	o dropbear-2012.055
-	o drupal-6.25
 	o dspam-3.10.0
 	o dvtm-0.7
 	o easymenu-0.7.2p1
@@ -1056,7 +1055,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openoffice3-3.3
 	o openssh-5.9p1
 	o openssl-1.0.0d [pkg/44717]
-	o openssl-1.0.0g
+	o openssl-1.0.1
 	o openttd-1.1.5
 	o oroborus-2.0.18
 	o ortp-0.16.5
