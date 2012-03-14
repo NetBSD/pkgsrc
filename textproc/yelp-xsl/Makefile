@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/10 17:57:37 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/14 15:09:23 marino Exp $
 #
 
 DISTNAME=	yelp-xsl-3.3.2
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config intltool
+USE_TOOLS+=	pkg-config intltool msgfmt
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	yelp-xsl.pc.in
