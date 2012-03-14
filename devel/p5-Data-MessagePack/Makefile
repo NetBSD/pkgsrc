@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/08 11:20:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/14 23:09:38 joerg Exp $
 #
 
 DISTNAME=	Data-MessagePack-0.39
@@ -17,6 +17,8 @@ DEPENDS+=	p5-Test-Requires>=0:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=	auto/Data/MessagePack/.packlist
 USE_LANGUAGES=	c99
+
+MAKE_JOBS_SAFE=	no
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
