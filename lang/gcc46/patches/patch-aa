@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2012/03/14 23:24:54 wiz Exp $
 
---- gcc/config.gcc.orig	2011-03-14 06:05:29.000000000 +0000
-+++ gcc/config.gcc
-@@ -560,6 +560,33 @@ case ${target} in
+--- gcc/config.gcc.orig	2011-07-22 18:44:50.000000000 +0200
++++ gcc/config.gcc	2012-03-13 13:40:05.000000000 +0100
+@@ -561,6 +561,33 @@
    # need_64bit_hwint=yes # system compiler has this for all arch!
    use_gcc_stdint=wrap
    ;;
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
  *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu* | *-*-kopensolaris*-gnu)
    extra_options="$extra_options gnu-user.opt"
    extra_parts="crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o"
-@@ -654,6 +681,7 @@ case ${target} in
+@@ -655,6 +682,7 @@
        default_use_cxa_atexit=yes
        ;;
    esac
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
    ;;
  *-*-openbsd*)
    tmake_file="t-libc-ok t-openbsd t-libgcc-pic"
-@@ -1217,19 +1245,25 @@ x86_64-*-freebsd*)
+@@ -1219,19 +1247,26 @@
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	tmake_file="${tmake_file} i386/t-crtstuff"
  	;;
@@ -58,6 +58,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
 -	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
 +	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h netbsd-stdint.h"
  	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	tmake_file="${tmake_file} i386/t-crtstuff"
  	;;
  i[34567]86-*-netbsd*)
 -	tm_file="${tm_file} i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h netbsd.h netbsd-aout.h i386/netbsd.h"
