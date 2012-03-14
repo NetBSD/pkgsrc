@@ -1,4 +1,4 @@
-.\"	$NetBSD: obsolete_todo.1,v 1.2 2012/03/08 12:11:55 wiz Exp $
+.\"	$NetBSD: obsolete_todo.1,v 1.3 2012/03/14 14:34:39 wiz Exp $
 .\"
 .Dd March 8, 2012
 .Dt OBSOLETE_TODO 1
@@ -6,15 +6,14 @@
 .Nm obsolete_todo
 .Nd remove obsolete entries from pkgsrc/doc/TODO
 .Sh SYNOPSIS
-.Nm obsolete_todo
+.Nm
 .Sh DESCRIPTION
 .Nm
-removes entries from
-.Pa pkgsrc/doc/TODO
-which were already handled, i.e. that or a newer version
-already exists in pkgsrc.
-.Nm
-does this by checking the entries in
+removes obsoleted entries from
+.Pa pkgsrc/doc/TODO ,
+i.e., entries for packages that already exist
+in pkgsrc in either the version from the entry or a higher one.
+It does this by checking the entries in
 .Pa pkgsrc/doc/TODO
 against the entries in the various
 .Pa pkgsrc/doc/CHANGES-*
