@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/03/15 17:30:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2012/03/14 23:15:16 joerg Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
@@ -11,10 +12,9 @@ COMMENT=		Collection of tools to help analyze qmail's activity
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		nroff
-
 DJB_RESTRICTED=		YES
 DJB_CONFIG_PREFIX=	${PREFIX}/qmailanalog
+BUILD_TARGETS=		prog install instcheck
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

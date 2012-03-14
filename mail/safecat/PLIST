@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/15 09:50:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/14 23:16:29 joerg Exp $
 bin/maildir
 bin/safecat
-man/cat1/maildir.0
-man/cat1/safecat.0
 man/man1/maildir.1
 man/man1/safecat.1
