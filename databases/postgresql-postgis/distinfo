@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2012/01/10 14:00:46 gdt Exp $
+$NetBSD: distinfo,v 1.8 2012/03/14 16:41:10 fhajny Exp $
 
 SHA1 (postgis-1.5.3.tar.gz) = e8c572e0258ba760a67b7f717bdc8321b9f6cd58
 RMD160 (postgis-1.5.3.tar.gz) = e30275890b175cbe1d70d5899cbe45ec34ddbafb
@@ -7,3 +7,4 @@ SHA1 (patch-configure) = 5995e773b9f8ec20e710d6cb690e928856c2650e
 SHA1 (patch-configure.ac) = 993358912b61670733602511d507e497c9677875
 SHA1 (patch-doc_Makefile.in) = 98807010256cf42e4d179305febe2525efbb6cd1
 SHA1 (patch-doc_html_image__src_Makefile.in) = 89e19e03dbb936d723d1e6748cd2bd77232bcf6d
+SHA1 (patch-postgis_Makefile.in) = db0e73dac0d4c88cd44fe33253c8b766c576b664
