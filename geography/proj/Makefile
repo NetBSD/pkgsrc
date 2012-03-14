@@ -1,13 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/14 16:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/14 23:36:06 gdt Exp $
 
-DISTNAME=	proj-4.7.0
+VERSION=	4.8.0
+DISTNAME=	proj-${VERSION}
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/proj/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} proj-datumgrid-1.4${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} proj-datumgrid-1.5${EXTRACT_SUFX}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac.osgeo.org/proj/
 COMMENT=	Cartographic projection software
+
+LICENSE=	mit
+
+PREV_PKGPATH=		misc/proj
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -15,14 +20,16 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
-PREV_PKGPATH=		misc/proj
+TEST_TARGET=		check
 
+# The last file is out of order to avoid reordering the whole list
+# from datumgrid-1.4 to datumgrid-1.5
 DATUMGRID_FILES= 							\
 	FL.lla MD.lla README.NADUS TN.lla WI.lla WO.lla alaska.lla	\
 	conus.lla hawaii.lla ntv1_can.dat null.lla nzgd2kgrid0005.gsb	\
-	prvi.lla stgeorge.lla stlrnc.lla stpaul.lla
+	prvi.lla stgeorge.lla stlrnc.lla stpaul.lla ntf_r93.gsb
 
 post-extract:
-	cd ${WRKDIR} &&	${LN} ${DATUMGRID_FILES} ${WRKDIR}/${DISTNAME}/nad
+	cd ${WRKDIR} &&	${LN} ${DATUMGRID_FILES} ${WRKDIR}/${PKGNAME}/nad
 
 .include "../../mk/bsd.pkg.mk"
