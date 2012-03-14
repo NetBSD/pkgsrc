@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10943 2012/03/13 19:59:22 adam Exp $
+$NetBSD: TODO,v 1.10944 2012/03/14 14:10:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cabextract-1.4
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.41
+	o calibre-0.8.42
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.3
 	o cddbd-1.5.2
@@ -686,6 +686,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
 	o gle-4.2.4
+	o glib2-2.30.3
 	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
@@ -780,7 +781,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o htop-1.0
 	o httptunnel-3.3
 	o hugin-2011.4.0
-	o hylafax-5.5.1
+	o hylafax-6.0.5
 	o ibus-input-pad-1.4.0 [for ibus-1.4.x]
 	o ical-2.3.2
 	o icdprog-0.5
@@ -957,6 +958,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o luit-1.1.0
 	o lwm-1.2.2
 	o lyx-2.0.3
+	o lzip-1.13
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mailgraph-1.14
@@ -1047,7 +1049,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o open-vm-tools-2010.09.19.301124
 	o openafs-1.7.2
 	o opendkim-2.5.0
-	o opendnssec-1.3.6
+	o opendnssec-1.3.7
 	o opengrok-0.11
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1092,6 +1094,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php-jpgraph-3.0.6
 	o phppgadmin-5.0.3
 	o picp-0.6.8
+	o pidgin-2.10.2
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
@@ -1444,7 +1447,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-tga-1.2.1
 	o xf86-video-trident-1.3.4
 	o xf86-video-tseng-1.2.4
-	o xf86-video-vmware-12.0.0
+	o xf86-video-vmware-12.0.1
 	o xf86-video-voodoo-1.2.4
 	o xf86-video-wsfb-0.4.0
 	o xf86-video-xgi-1.6.0 [unpackaged]
@@ -1493,7 +1496,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-util-macros-1.10.1 [pkg/43891]
-	o xorg-util-macros-1.16.2
+	o xorg-util-macros-1.17
 	o xorp-1.8.4
 	o xosview-1.9.2
 	o xpaint-2.9.9
