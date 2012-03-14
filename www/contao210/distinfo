@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/01/02 16:47:11 taca Exp $
+$NetBSD: distinfo,v 1.9 2012/03/14 16:35:29 taca Exp $
 
 SHA1 (contao210-201201020/contao-2.10.4.tar.gz) = 1a27453f9ecac540a509f299efd5caa495fa6964
 RMD160 (contao210-201201020/contao-2.10.4.tar.gz) = 89f5a3435d67f82c36884f080f630403a8495c22
 Size (contao210-201201020/contao-2.10.4.tar.gz) = 4880113 bytes
+SHA1 (patch-contao_popup.php) = 61747c25cc8d2e74aecba107f694be462371d898
+SHA1 (patch-system_drivers_DC__Table.php) = 3c927c6093df90b8fc54a993f28844d369b1a43d
+SHA1 (patch-system_modules_backend_StyleSheets.php) = e510727d99a505d1309bd0bbbaaa21fd21e95ea3
