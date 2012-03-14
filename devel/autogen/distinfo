@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2011/10/04 15:29:34 drochner Exp $
+$NetBSD: distinfo,v 1.13 2012/03/14 22:51:14 wiz Exp $
 
 SHA1 (autogen-5.12.tar.bz2) = 3212cf32da9ba2866e1566e78dac3867ee247ac2
 RMD160 (autogen-5.12.tar.bz2) = b00ab61cf0b47fb53039fa680071382c34b51f65
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = 095ad72ef6ac6b1f3677a9898d8788c5ff60f4e0
 SHA1 (patch-ac) = 2a37cc72d2affbb8d99d3d23d0e6782a013cfec4
 SHA1 (patch-ad) = 3bb19c5e15768335bf5ae11be3803b2587298fa3
 SHA1 (patch-ae) = 7249600bfc3cdcafdf55a100db775e9d1a9403f0
+SHA1 (patch-agen5_fmemopen.c) = 849e330a2e4661e2e0097995952ba01fc2972b5d
