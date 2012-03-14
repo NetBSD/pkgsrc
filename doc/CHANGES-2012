@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.807 2012/03/14 23:25:04 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.808 2012/03/14 23:37:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1169,3 +1169,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao29 to 2.9.5nb7 [taca 2012-03-14]
 	Updated devel/snappy to 1.0.5 [abs 2012-03-14]
 	Updated lang/gcc46 to 4.6.3nb1 [wiz 2012-03-14]
+	Updated geography/proj to 4.8.0 [gdt 2012-03-14]
