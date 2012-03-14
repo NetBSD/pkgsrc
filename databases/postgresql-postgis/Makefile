@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/01/08 18:39:49 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/14 16:41:09 fhajny Exp $
 
 DISTNAME=	postgis-1.5.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases geography
 MASTER_SITES=	http://postgis.refractions.net/download/
 
@@ -13,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PGSQL_VERSIONS_ACCEPTED=	84 83
+PGSQL_VERSIONS_ACCEPTED=	91 90 84 83
 
 DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
@@ -42,6 +43,9 @@ SUBST_VARS.paths+=	PKG_SYSCONFDIR
 SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
+
+MAKE_ENV+=		PERL5=${PERL5:Q}
+INSTALL_ENV+=		mkinstalldirs=${INSTALL_DATA_DIR:Q}
 
 post-install:
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/README.postgis ${DESTDIR}${DOCDIR}
