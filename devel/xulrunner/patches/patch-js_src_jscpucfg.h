@@ -1,11 +1,11 @@
-$NetBSD: patch-js_src_jscpucfg.h,v 1.1 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-js_src_jscpucfg.h,v 1.2 2012/03/15 08:30:06 ryoon Exp $
 
 
 --- js/src/jscpucfg.h.orig	2012-01-29 11:24:34.000000000 +0100
 +++ js/src/jscpucfg.h	2012-02-08 12:35:20.000000000 +0100
 @@ -77,6 +77,21 @@
- #define IS_BIG_ENDIAN 1
- #endif
+ #  define IS_BIG_ENDIAN 1
+ # endif
  
 +#elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__MirBSD__) || defined(__DragonFly__)
 +#include <sys/endian.h>
@@ -23,5 +23,6 @@ $NetBSD: patch-js_src_jscpucfg.h,v 1.1 2012/03/06 12:34:09 ryoon Exp $
 +#endif
 +
  #elif defined(JS_HAVE_ENDIAN_H)
- #include <endian.h>
+ # include <endian.h>
  
+
