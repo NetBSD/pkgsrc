@@ -1,0 +1,24 @@
+$NetBSD: patch-ba,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+
+pthread_t may be 64-bit, avoid casting it.
+
+--- mozilla/nsprpub/pr/include/private/pprthred.h.orig	2012-02-16 10:25:22.000000000 +0000
++++ mozilla/nsprpub/pr/include/private/pprthred.h
+@@ -51,6 +51,8 @@
+ #include <os2.h>
+ #endif
+ 
++#include <pthread.h>
++
+ PR_BEGIN_EXTERN_C
+ 
+ /*---------------------------------------------------------------------------
+@@ -91,7 +93,7 @@ NSPR_API(void) PR_DetachThread(void);
+ ** Get the id of the named thread. Each thread is assigned a unique id
+ ** when it is created or attached.
+ */
+-NSPR_API(PRUint32) PR_GetThreadID(PRThread *thread);
++NSPR_API(pthread_t) PR_GetThreadID(PRThread *thread);
+ 
+ /*
+ ** Set the procedure that is called when a thread is dumped. The procedure
