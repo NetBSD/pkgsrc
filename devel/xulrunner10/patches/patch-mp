@@ -1,0 +1,17 @@
+$NetBSD: patch-mp,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+--- media/libsydneyaudio/src/Makefile.in.orig	2012-03-09 22:20:29.000000000 +0000
++++ media/libsydneyaudio/src/Makefile.in
+@@ -97,6 +97,12 @@ ifeq ($(OS_ARCH),WINNT)
+ OS_LIBS += winmm.lib
+ endif
+ 
++ifdef PKGSRC_PULSEAUDIO
++CSRCS		= \
++		sydney_audio_pulseaudio.c \
++		$(NULL)
++endif
++
+ include $(topsrcdir)/config/rules.mk
+ 
+ LOCAL_INCLUDES += -I$(srcdir)/../include
