@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.813 2012/03/15 16:01:56 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.814 2012/03/15 17:04:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1185,3 +1185,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/firefox10-l10n version 10.0.3 [ryoon 2012-03-15]
 	Added mail/thunderbird10-l10n version 10.0.3 [ryoon 2012-03-15]
 	Updated net/libquvi-scripts to 0.4.2nb1 [wiz 2012-03-15]
+	Updated security/gnutls to 2.12.17 [adam 2012-03-15]
