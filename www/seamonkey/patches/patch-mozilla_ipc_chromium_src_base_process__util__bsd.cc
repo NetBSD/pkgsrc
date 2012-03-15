@@ -1,15 +1,14 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.2 2012/03/15 08:36:43 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util_bsd.cc.orig	2012-03-09 13:13:25.000000000 +0000
-+++ mozilla/ipc/chromium/src/base/process_util_bsd.cc
-@@ -0,0 +1,298 @@
+
+--- mozilla/ipc/chromium/src/base/process_util_bsd.cc.orig	2012-03-08 18:52:15.229788000 +0100
++++ mozilla/ipc/chromium/src/base/process_util_bsd.cc	2012-03-11 10:59:50.559480000 +0100
+@@ -0,0 +1,309 @@
 +// Copyright (c) 2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +// derived from process_util_linux.cc and process_util_mac.cc
-+
-+// TODO: - add code for FreeBSD/DragonFly/MirBSD (?) to use kvm_getprocx
 +
 +#include "base/process_util.h"
 +
@@ -17,12 +16,23 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.1 2012/03
 +#include <fcntl.h>
 +#include <unistd.h>
 +#include <string>
++#if defined(OS_DRAGONFLY)
++/* DragonFly, as of v3.0.1, does not explicitly mark symbols public */
++#define PRE_SYS_INCLUDE		_Pragma("GCC visibility push(default)")
++#define POST_SYS_INCLUDE	_Pragma("GCC visibility pop")
++#else
++#define PRE_SYS_INCLUDE
++#define POST_SYS_INCLUDE
++#endif
++PRE_SYS_INCLUDE
 +#include <kvm.h>
++POST_SYS_INCLUDE
 +#include <sys/sysctl.h>
 +#include <sys/types.h>
 +#include <sys/wait.h>
 +#if defined(OS_DRAGONFLY)
 +#include <sys/user.h>
++#define HAVE_POSIX_SPAWN	1
 +#endif
 +
 +#include "base/debug_util.h"
@@ -40,7 +50,9 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc,v 1.1 2012/03
 +#endif
 +
 +#ifdef HAVE_POSIX_SPAWN
++PRE_SYS_INCLUDE
 +#include <spawn.h>
++POST_SYS_INCLUDE
 +extern "C" char **environ __dso_public;
 +#endif
 +

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2012/03/10 03:26:04 ryoon Exp $
+$NetBSD: distinfo,v 1.75 2012/03/15 08:36:43 ryoon Exp $
 
 SHA1 (seamonkey-2.7.2.source.tar.bz2) = 4c3004f129a26cfb4d085ac7b3c128dd9d5a89c5
 RMD160 (seamonkey-2.7.2.source.tar.bz2) = fd8712a63f70cf2e05ace47cc25204d0774f838c
@@ -61,13 +61,13 @@ SHA1 (patch-mozilla_build_autoconf_nss.m4) = d07c020d6903ffec1b808e1d22e3e0242df
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 379733f5018e0ece33b9301143b1dffa6943c81a
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = c027190ef4f2dd57d158b333c3ee4c99172e5803
 SHA1 (patch-mozilla_ipc_chromium_Makefile.in) = 8671984c61e7310aa6d3de45bb9080b723332322
-SHA1 (patch-mozilla_ipc_chromium_chromium-config.mk) = f33de1c90e99f1e5b9d108883c00865a070ddef9
+SHA1 (patch-mozilla_ipc_chromium_chromium-config.mk) = 21dd321c09108c2567698bcd3510957435be24be
 SHA1 (patch-mozilla_ipc_chromium_src_base_base__paths.h) = e2b197f22bb44008881480291f9e890f005c65c6
 SHA1 (patch-mozilla_ipc_chromium_src_base_file__util__bsd.cc) = 251ed873e26a47c69f4ddf809c4f5b496cbd9e97
 SHA1 (patch-mozilla_ipc_chromium_src_base_message__loop.cc) = ecbcb2d966490d0d438c28e02a8cef731ff43094
 SHA1 (patch-mozilla_ipc_chromium_src_base_platform__thread.h) = ef83a20b54fb8b09b1b8e23373628a1a00f295a2
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util.h) = 263ae63a4c9b8ef82dacc3e72afcadb3de5c82fd
-SHA1 (patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc) = 8dd159ab48e9727fb7e6802ba1de63461c7792f2
+SHA1 (patch-mozilla_ipc_chromium_src_base_process__util__bsd.cc) = c0a5f86bc9db4c137c8bb77e9773e5134fd755c1
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util__posix.cc) = 61c8eaa26205e8be2135a05188226556f79a27da
 SHA1 (patch-mozilla_ipc_chromium_src_base_third__party_nspr_prtime.cc) = 35e33a07f7185ed6c68783c760b53919689dae76
 SHA1 (patch-mozilla_ipc_chromium_src_chrome_common_ipc__message__utils.h) = 00ed184c5e7561ddcd166b307985396ffe5dbff4

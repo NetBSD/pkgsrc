@@ -1,3 +1,3 @@
-# $NetBSD: hacks.mk,v 1.1 2011/07/11 20:49:29 tnn Exp $
+# $NetBSD: hacks.mk,v 1.2 2012/03/15 08:36:43 ryoon Exp $
 
-.include "../../devel/xulrunner/hacks.mk"
+.include "../../devel/xulrunner10/hacks.mk"
