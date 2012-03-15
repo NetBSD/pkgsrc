@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1570 2012/03/11 08:21:48 markd Exp $
+# $NetBSD: Makefile,v 1.1571 2012/03/15 11:50:51 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1530,6 +1530,7 @@ SUBDIR+=	xmake
 SUBDIR+=	xorg-util-macros
 SUBDIR+=	xsd
 SUBDIR+=	xulrunner
+SUBDIR+=	xulrunner10
 SUBDIR+=	xulrunner192
 SUBDIR+=	xxgdb
 SUBDIR+=	yasm
