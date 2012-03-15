@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2010/02/10 19:17:44 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/15 11:53:37 obache Exp $
 
 DISTNAME=	flawfinder-1.27
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.dwheeler.com/flawfinder/
 

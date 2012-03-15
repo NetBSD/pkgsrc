@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/01/27 12:46:22 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/03/15 11:53:24 obache Exp $
 #
 
 DISTNAME=	eric-3.8.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eric-ide/}
 

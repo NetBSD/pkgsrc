@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/03/26 08:02:38 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/15 11:53:44 obache Exp $
 
 DISTNAME=	loggerhead-${VER}
+PKGREVISION=	1
 CATEGORIES=	www scm
 MASTER_SITES=	http://launchpad.net/loggerhead/1.18/${VER}/+download/
 VER=		1.18.1

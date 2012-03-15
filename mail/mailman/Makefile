@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2011/12/22 11:06:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.66 2012/03/15 11:53:29 obache Exp $
 
 DISTNAME=	mailman-2.1.14-1
 PKGNAME=	mailman-2.1.14.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	http://launchpad.net/mailman/2.1/2.1.14/+download/
 EXTRACT_SUFX=	.tgz

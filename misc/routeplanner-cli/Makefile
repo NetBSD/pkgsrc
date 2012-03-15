@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2010/02/10 19:17:42 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/03/15 11:53:34 obache Exp $
 #
 
 DISTNAME=		routeplanner_0.11
 PKGNAME=		routeplanner-cli-0.11
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=routeplanner/}
 

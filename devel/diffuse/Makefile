@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/01/28 10:52:58 obache Exp $
+# $NetBSD: Makefile,v 1.31 2012/03/15 11:53:23 obache Exp $
 #
 
 DISTNAME=	diffuse-0.4.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2
