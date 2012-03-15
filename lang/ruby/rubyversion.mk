@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.74 2012/02/23 14:15:58 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.75 2012/03/15 08:35:24 marino Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -321,7 +321,11 @@ RUBY_STATICLIB?=	${RUBY_VER}-static.a
 RUBY_SHLIBVER=		${_RUBY_API_MAJOR}.${_RUBY_API_MINOR}
 _RUBY_SHLIBALIAS=	${RUBY_VER}.${RUBY_SLEXT}.${_RUBY_API_MAJOR}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+.if ${RUBY_VER} == "18" || ${RUBY_VER} == "19"
 RUBY_SHLIBVER=		${RUBY_VER}
+.else
+RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
+.endif
 .elif ${OPSYS} == "OpenBSD"
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
 .elif ${OPSYS} == "Darwin"
