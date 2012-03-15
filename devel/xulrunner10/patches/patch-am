@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+SHA1_Update conflicts with openssl which may be dynamically loaded
+at runtime via libcups or libgssapi so causing a crash due to using
+the wrong binding.  So rename here to avoid conflict.
+
+--- security/nss/lib/freebl/blapi.h.orig	2012-03-09 22:20:33.000000000 +0000
++++ security/nss/lib/freebl/blapi.h
+@@ -1038,6 +1038,8 @@ extern void SHA1_DestroyContext(SHA1Cont
+ */
+ extern void SHA1_Begin(SHA1Context *cx);
+ 
++#define SHA1_Update NSS_SHA1_Update
++
+ /*
+ ** Update the SHA-1 hash function with more data.
+ **	"cx" the context

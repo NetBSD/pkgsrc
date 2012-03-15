@@ -1,0 +1,40 @@
+$NetBSD: patch-ay,v 1.1.1.1 2012/03/15 08:58:27 ryoon Exp $
+
+--- browser/app/nsBrowserApp.cpp.orig	2012-03-09 22:20:07.000000000 +0000
++++ browser/app/nsBrowserApp.cpp
+@@ -49,6 +49,27 @@
+ #include <stdio.h>
+ #include <stdarg.h>
+ #include <string.h>
++#include <sys/resource.h>
++/*
++ * On netbsd-4, ulimit -n is 64 by default; too few for us.
++ */
++static void netbsd_fixrlimit(void) {
++	struct rlimit rlp;
++	if (getrlimit(RLIMIT_NOFILE, &rlp) == -1) {
++		fprintf(stderr, "warning: getrlimit failed\n");
++		return;
++	}
++	if (rlp.rlim_cur >= 512)
++		return;
++	if (rlp.rlim_max < 512) {
++		fprintf(stderr, "warning: hard limit of 'ulimit -n' too low\n");
++		rlp.rlim_cur = rlp.rlim_max;
++	}
++	else
++		rlp.rlim_cur = 512;
++	if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
++		fprintf(stderr, "warning: setrlimit failed\n");
++}
+ 
+ #include "plstr.h"
+ #include "prprf.h"
+@@ -203,6 +224,7 @@ static int do_main(const char *exePath, 
+ int main(int argc, char* argv[])
+ {
+   char exePath[MAXPATHLEN];
++  netbsd_fixrlimit();
+ 
+   nsresult rv = mozilla::BinaryPath::Get(argv[0], exePath);
+   if (NS_FAILED(rv)) {

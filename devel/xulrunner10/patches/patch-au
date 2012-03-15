@@ -1,0 +1,30 @@
+$NetBSD: patch-au,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+- Fix device name on NetBSD
+- SOUND_VERSION just isn't a reliable way to detect features supported by
+  particular OSS implementation.
+
+--- media/libsydneyaudio/src/sydney_audio_oss.c.orig	2012-03-09 22:20:29.000000000 +0000
++++ media/libsydneyaudio/src/sydney_audio_oss.c
+@@ -55,7 +55,7 @@
+ // support only versions newer than 3.6.1
+ #define SUPP_OSS_VERSION OSS_VERSION(3,0,1)
+ 
+-#if (SOUND_VERSION < SUPP_OSS_VERSION)
++#if 0 // (SOUND_VERSION < SUPP_OSS_VERSION)
+ #error Unsupported OSS Version
+ #else
+ 
+@@ -205,7 +205,12 @@ sa_stream_create_pcm(
+     return SA_ERROR_SYSTEM;
+   }
+ 
++#if defined(__NetBSD__)
++  /* XXX should use DEVOSSAUDIO provided by pkgsrc. */
++  s->output_unit  = "/dev/audio";
++#else
+   s->output_unit  = "/dev/dsp";
++#endif
+   s->output_fd    = -1;
+   s->thread_id    = 0;
+   s->playing      = 0;

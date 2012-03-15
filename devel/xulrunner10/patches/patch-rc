@@ -1,0 +1,11 @@
+$NetBSD: patch-rc,v 1.1.1.1 2012/03/15 08:58:27 ryoon Exp $
+
+--- browser/branding/unofficial/locales/en-US/brand.dtd.orig	2012-03-09 22:20:08.000000000 +0000
++++ browser/branding/unofficial/locales/en-US/brand.dtd
+@@ -1,4 +1,4 @@
+-<!ENTITY  brandShortName        "Mozilla Developer Preview">
+-<!ENTITY  brandFullName         "Mozilla Developer Preview">
++<!ENTITY  brandShortName        "Browser">
++<!ENTITY  brandFullName         "Browser">
+ <!ENTITY  vendorShortName       "mozilla.org">
+ <!ENTITY  trademarkInfo.part1   " ">
