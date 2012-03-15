@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/03/03 00:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/15 11:53:41 obache Exp $
 #
 
 DISTNAME=	bmpanel2-2.1pre1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bmpanel2.googlecode.com/files/
 

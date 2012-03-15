@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/06/14 09:54:55 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/15 11:53:24 obache Exp $
 
 DISTNAME=	ko-po-check-0.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel korean textproc
 MASTER_SITES=	http://kldp.net/frs/download.php/3863/
 

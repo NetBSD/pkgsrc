@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2012/02/19 13:09:03 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/15 11:53:29 obache Exp $
 #
 
 DISTNAME=	offlineimap-v6.5.2.1
 PKGNAME=	${DISTNAME:S/-v/-/}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://cloud.github.com/downloads/spaetz/offlineimap/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/07/03 07:08:27 markd Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/15 11:53:26 obache Exp $
 
 DISTNAME=	dynagen-0.11.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dyna-gen/}
 
