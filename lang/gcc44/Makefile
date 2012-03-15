@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/03/15 06:52:07 sbd Exp $
+# $NetBSD: Makefile,v 1.33 2012/03/15 07:43:30 sbd Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
-PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run bash:run chmod gmake:run makeinfo sed:run
 
-GCC_VERSION=		4.4.6
+GCC_VERSION=		4.4.7
 
 GCC_SUBPREFIX=		gcc44
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
