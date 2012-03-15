@@ -1,0 +1,13 @@
+$NetBSD: patch-mi,v 1.1.1.1 2012/03/15 08:58:27 ryoon Exp $
+
+--- config/config.mk.orig	2012-03-09 22:20:09.000000000 +0000
++++ config/config.mk
+@@ -129,7 +129,7 @@ endif
+ # but save the version to allow multiple versions of the same base
+ # platform to be built in the same tree.
+ #
+-ifneq (,$(filter FreeBSD HP-UX Linux NetBSD OpenBSD OSF1 SunOS,$(OS_ARCH)))
++ifneq (,$(filter DragonFly FreeBSD HP-UX Linux NetBSD OpenBSD OSF1 SunOS,$(OS_ARCH)))
+ OS_RELEASE	:= $(basename $(OS_RELEASE))
+ 
+ # Allow the user to ignore the OS_VERSION, which is usually irrelevant.
