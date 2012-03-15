@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2012/03/09 10:13:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.73 2012/03/15 14:18:39 fhajny Exp $
 
 DISTNAME=	tar-1.26
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
@@ -70,7 +70,7 @@ post-install:
 	${INSTALL_MAN} ${FILESDIR}/gtar.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${GTAR_PROGRAM_PREFIX}tar.1
 .if ${GTAR_PROGRAM_PREFIX} != "g"
-	${LN} -sf ${DESTDIR}${GTAR_PROGRAM_PREFIX}tar ${DESTDIR}${PREFIX}/bin/"gtar"
+	${LN} -sf ${GTAR_PROGRAM_PREFIX}tar ${DESTDIR}${PREFIX}/bin/"gtar"
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
