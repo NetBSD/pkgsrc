@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/10 11:44:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/15 09:12:54 ryoon Exp $
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome.manifest
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/alerts/notificationNames.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/autoconfig/autoconfig.properties
@@ -195,7 +195,6 @@ lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/custom.properties
 lib/thunderbird/extensions/langpack-ar@thunderbird.mozilla.org/chrome/ar/locale/ar/messenger/customizeToolbarOverlay.dtd
@@ -545,7 +544,6 @@ lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/custom.properties
 lib/thunderbird/extensions/langpack-be@thunderbird.mozilla.org/chrome/be/locale/be/messenger/customizeToolbarOverlay.dtd
@@ -895,7 +893,6 @@ lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/l
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/custom.properties
 lib/thunderbird/extensions/langpack-bn-BD@thunderbird.mozilla.org/chrome/bn-BD/locale/bn-BD/messenger/customizeToolbarOverlay.dtd
@@ -1245,7 +1242,6 @@ lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/custom.properties
 lib/thunderbird/extensions/langpack-br@thunderbird.mozilla.org/chrome/br/locale/br/messenger/customizeToolbarOverlay.dtd
@@ -1595,7 +1591,6 @@ lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/custom.properties
 lib/thunderbird/extensions/langpack-ca@thunderbird.mozilla.org/chrome/ca/locale/ca/messenger/customizeToolbarOverlay.dtd
@@ -1945,7 +1940,6 @@ lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/custom.properties
 lib/thunderbird/extensions/langpack-cs@thunderbird.mozilla.org/chrome/cs/locale/cs/messenger/customizeToolbarOverlay.dtd
@@ -2295,7 +2289,6 @@ lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/custom.properties
 lib/thunderbird/extensions/langpack-da@thunderbird.mozilla.org/chrome/da/locale/da/messenger/customizeToolbarOverlay.dtd
@@ -2645,7 +2638,6 @@ lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/custom.properties
 lib/thunderbird/extensions/langpack-de@thunderbird.mozilla.org/chrome/de/locale/de/messenger/customizeToolbarOverlay.dtd
@@ -2995,7 +2987,6 @@ lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/custom.properties
 lib/thunderbird/extensions/langpack-el@thunderbird.mozilla.org/chrome/el/locale/el/messenger/customizeToolbarOverlay.dtd
@@ -3345,7 +3336,6 @@ lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/l
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/custom.properties
 lib/thunderbird/extensions/langpack-en-GB@thunderbird.mozilla.org/chrome/en-GB/locale/en-GB/messenger/customizeToolbarOverlay.dtd
@@ -3695,7 +3685,6 @@ lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/l
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/custom.properties
 lib/thunderbird/extensions/langpack-en-US@thunderbird.mozilla.org/chrome/en-US/locale/en-US/messenger/customizeToolbarOverlay.dtd
@@ -4045,7 +4034,6 @@ lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/l
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/custom.properties
 lib/thunderbird/extensions/langpack-es-AR@thunderbird.mozilla.org/chrome/es-AR/locale/es-AR/messenger/customizeToolbarOverlay.dtd
@@ -4395,7 +4383,6 @@ lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/l
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/custom.properties
 lib/thunderbird/extensions/langpack-es-ES@thunderbird.mozilla.org/chrome/es-ES/locale/es-ES/messenger/customizeToolbarOverlay.dtd
@@ -4745,7 +4732,6 @@ lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/custom.properties
 lib/thunderbird/extensions/langpack-et@thunderbird.mozilla.org/chrome/et/locale/et/messenger/customizeToolbarOverlay.dtd
@@ -5095,7 +5081,6 @@ lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/custom.properties
 lib/thunderbird/extensions/langpack-eu@thunderbird.mozilla.org/chrome/eu/locale/eu/messenger/customizeToolbarOverlay.dtd
@@ -5445,7 +5430,6 @@ lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/custom.properties
 lib/thunderbird/extensions/langpack-fi@thunderbird.mozilla.org/chrome/fi/locale/fi/messenger/customizeToolbarOverlay.dtd
@@ -5795,7 +5779,6 @@ lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/custom.properties
 lib/thunderbird/extensions/langpack-fr@thunderbird.mozilla.org/chrome/fr/locale/fr/messenger/customizeToolbarOverlay.dtd
@@ -6145,7 +6128,6 @@ lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/l
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/custom.properties
 lib/thunderbird/extensions/langpack-fy-NL@thunderbird.mozilla.org/chrome/fy-NL/locale/fy-NL/messenger/customizeToolbarOverlay.dtd
@@ -6495,7 +6477,6 @@ lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/l
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/custom.properties
 lib/thunderbird/extensions/langpack-ga-IE@thunderbird.mozilla.org/chrome/ga-IE/locale/ga-IE/messenger/customizeToolbarOverlay.dtd
@@ -6845,7 +6826,6 @@ lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/custom.properties
 lib/thunderbird/extensions/langpack-he@thunderbird.mozilla.org/chrome/he/locale/he/messenger/customizeToolbarOverlay.dtd
@@ -7195,7 +7175,6 @@ lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/custom.properties
 lib/thunderbird/extensions/langpack-hu@thunderbird.mozilla.org/chrome/hu/locale/hu/messenger/customizeToolbarOverlay.dtd
@@ -7545,7 +7524,6 @@ lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/custom.properties
 lib/thunderbird/extensions/langpack-id@thunderbird.mozilla.org/chrome/id/locale/id/messenger/customizeToolbarOverlay.dtd
@@ -7895,7 +7873,6 @@ lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/custom.properties
 lib/thunderbird/extensions/langpack-is@thunderbird.mozilla.org/chrome/is/locale/is/messenger/customizeToolbarOverlay.dtd
@@ -8245,7 +8222,6 @@ lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/custom.properties
 lib/thunderbird/extensions/langpack-it@thunderbird.mozilla.org/chrome/it/locale/it/messenger/customizeToolbarOverlay.dtd
@@ -8595,7 +8571,6 @@ lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/custom.properties
 lib/thunderbird/extensions/langpack-ja@thunderbird.mozilla.org/chrome/ja/locale/ja/messenger/customizeToolbarOverlay.dtd
@@ -8945,7 +8920,6 @@ lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/custom.properties
 lib/thunderbird/extensions/langpack-ko@thunderbird.mozilla.org/chrome/ko/locale/ko/messenger/customizeToolbarOverlay.dtd
@@ -9295,7 +9269,6 @@ lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/custom.properties
 lib/thunderbird/extensions/langpack-lt@thunderbird.mozilla.org/chrome/lt/locale/lt/messenger/customizeToolbarOverlay.dtd
@@ -9645,7 +9618,6 @@ lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/l
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/custom.properties
 lib/thunderbird/extensions/langpack-nb-NO@thunderbird.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/customizeToolbarOverlay.dtd
@@ -9995,7 +9967,6 @@ lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/custom.properties
 lib/thunderbird/extensions/langpack-nl@thunderbird.mozilla.org/chrome/nl/locale/nl/messenger/customizeToolbarOverlay.dtd
@@ -10345,7 +10316,6 @@ lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/l
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/custom.properties
 lib/thunderbird/extensions/langpack-nn-NO@thunderbird.mozilla.org/chrome/nn-NO/locale/nn-NO/messenger/customizeToolbarOverlay.dtd
@@ -10695,7 +10665,6 @@ lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/l
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/custom.properties
 lib/thunderbird/extensions/langpack-pt-BR@thunderbird.mozilla.org/chrome/pt-BR/locale/pt-BR/messenger/customizeToolbarOverlay.dtd
@@ -11045,7 +11014,6 @@ lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/l
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/custom.properties
 lib/thunderbird/extensions/langpack-pt-PT@thunderbird.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/customizeToolbarOverlay.dtd
@@ -11395,7 +11363,6 @@ lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/custom.properties
 lib/thunderbird/extensions/langpack-rm@thunderbird.mozilla.org/chrome/rm/locale/rm/messenger/customizeToolbarOverlay.dtd
@@ -11745,7 +11712,6 @@ lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/custom.properties
 lib/thunderbird/extensions/langpack-ru@thunderbird.mozilla.org/chrome/ru/locale/ru/messenger/customizeToolbarOverlay.dtd
@@ -12095,7 +12061,6 @@ lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/custom.properties
 lib/thunderbird/extensions/langpack-si@thunderbird.mozilla.org/chrome/si/locale/si/messenger/customizeToolbarOverlay.dtd
@@ -12445,7 +12410,6 @@ lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/custom.properties
 lib/thunderbird/extensions/langpack-sk@thunderbird.mozilla.org/chrome/sk/locale/sk/messenger/customizeToolbarOverlay.dtd
@@ -12795,7 +12759,6 @@ lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/custom.properties
 lib/thunderbird/extensions/langpack-sl@thunderbird.mozilla.org/chrome/sl/locale/sl/messenger/customizeToolbarOverlay.dtd
@@ -13145,7 +13108,6 @@ lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/custom.properties
 lib/thunderbird/extensions/langpack-sq@thunderbird.mozilla.org/chrome/sq/locale/sq/messenger/customizeToolbarOverlay.dtd
@@ -13495,7 +13457,6 @@ lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/l
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/custom.properties
 lib/thunderbird/extensions/langpack-sv-SE@thunderbird.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/customizeToolbarOverlay.dtd
@@ -13845,7 +13806,6 @@ lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/l
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/custom.properties
 lib/thunderbird/extensions/langpack-ta-LK@thunderbird.mozilla.org/chrome/ta-LK/locale/ta-LK/messenger/customizeToolbarOverlay.dtd
@@ -14195,7 +14155,6 @@ lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/custom.properties
 lib/thunderbird/extensions/langpack-tr@thunderbird.mozilla.org/chrome/tr/locale/tr/messenger/customizeToolbarOverlay.dtd
@@ -14545,7 +14504,6 @@ lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/custom.properties
 lib/thunderbird/extensions/langpack-uk@thunderbird.mozilla.org/chrome/uk/locale/uk/messenger/customizeToolbarOverlay.dtd
@@ -14895,7 +14853,6 @@ lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/custom.properties
 lib/thunderbird/extensions/langpack-vi@thunderbird.mozilla.org/chrome/vi/locale/vi/messenger/customizeToolbarOverlay.dtd
@@ -15245,7 +15202,6 @@ lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/l
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/custom.properties
 lib/thunderbird/extensions/langpack-zh-CN@thunderbird.mozilla.org/chrome/zh-CN/locale/zh-CN/messenger/customizeToolbarOverlay.dtd
@@ -15595,7 +15551,6 @@ lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/l
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/am-smime.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/appleMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/baseMenuOverlay.dtd
-lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/comm4xMailImportMsgs.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/configEditorOverlay.dtd
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/custom.properties
 lib/thunderbird/extensions/langpack-zh-TW@thunderbird.mozilla.org/chrome/zh-TW/locale/zh-TW/messenger/customizeToolbarOverlay.dtd
