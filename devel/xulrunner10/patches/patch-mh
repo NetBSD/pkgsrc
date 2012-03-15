@@ -1,0 +1,13 @@
+$NetBSD: patch-mh,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+--- security/nss/lib/Makefile.orig	2012-03-09 22:20:33.000000000 +0000
++++ security/nss/lib/Makefile
+@@ -70,7 +70,7 @@ endif
+ 
+ ifndef MOZILLA_CLIENT
+ ifeq ($(OS_ARCH),Linux)
+-SYSINIT_SRCDIR = sysinit  # Add the sysinit directory to DIRS.
++#SYSINIT_SRCDIR = sysinit  # Add the sysinit directory to DIRS.
+ endif
+ endif
+ 

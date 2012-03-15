@@ -1,0 +1,20 @@
+$NetBSD: patch-aj,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+--- profile/dirserviceprovider/src/nsProfileLock.cpp.orig	2012-03-09 22:20:32.000000000 +0000
++++ profile/dirserviceprovider/src/nsProfileLock.cpp
+@@ -408,6 +408,7 @@ nsresult nsProfileLock::LockWithSymlink(
+ #endif
+                     sigfillset(&act.sa_mask);
+ 
++#ifndef DEBUG
+ #define CATCH_SIGNAL(signame)                                           \
+ PR_BEGIN_MACRO                                                          \
+   if (sigaction(signame, NULL, &oldact) == 0 &&                         \
+@@ -426,6 +427,7 @@ PR_BEGIN_MACRO                          
+                     CATCH_SIGNAL(SIGTERM);
+ 
+ #undef CATCH_SIGNAL
++#endif
+                 }
+             }
+         }

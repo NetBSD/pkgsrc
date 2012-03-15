@@ -1,0 +1,17 @@
+$NetBSD: patch-md,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+???. from www/firefox/patch-ax.
+
+--- security/coreconf/SunOS5.mk.orig	2012-03-09 22:20:32.000000000 +0000
++++ security/coreconf/SunOS5.mk
+@@ -147,6 +147,10 @@ endif
+ endif
+ DSO_LDOPTS += -z combreloc -z defs -z ignore
+ 
++ifdef LIBRUNPATH
++DSO_LDOPTS += -R$(LIBRUNPATH)
++endif
++
+ # -KPIC generates position independent code for use in shared libraries.
+ # (Similarly for -fPIC in case of gcc.)
+ ifdef NS_USE_GCC
