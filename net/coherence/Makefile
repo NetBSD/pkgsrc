@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/05/20 21:22:51 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/15 11:53:35 obache Exp $
 #
 
 DISTNAME=	Coherence-0.6.6.2
 PKGNAME=	coherence-0.6.6.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://coherence.beebits.net/download/
 
