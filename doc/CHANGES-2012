@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.809 2012/03/15 01:56:45 markd Exp $
+$NetBSD: CHANGES-2012,v 1.810 2012/03/15 07:43:37 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1171,3 +1171,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gcc46 to 4.6.3nb1 [wiz 2012-03-14]
 	Updated geography/proj to 4.8.0 [gdt 2012-03-14]
 	Updated print/pdfjam to 2.08 [markd 2012-03-15]
+	Updated lang/gcc44 to 4.4.7 [sbd 2012-03-15]
