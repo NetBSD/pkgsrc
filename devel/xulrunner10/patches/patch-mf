@@ -1,0 +1,21 @@
+$NetBSD: patch-mf,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+Add DragonFly support.
+Make sure nss libraries have a run path defined.
+
+--- security/coreconf/config.mk.orig	2012-03-09 22:20:32.000000000 +0000
++++ security/coreconf/config.mk
+@@ -63,7 +63,7 @@ endif
+ #######################################################################
+ 
+ TARGET_OSES = FreeBSD BSD_OS NetBSD OpenUNIX OS2 QNX Darwin BeOS OpenBSD \
+-              AIX RISCOS WINNT WIN95 WINCE Linux
++              AIX RISCOS WINNT WIN95 WINCE Linux DragonFly
+ 
+ ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
+ include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk
+@@ -207,3 +207,4 @@ endif
+ DEFINES += -DUSE_UTIL_DIRECTLY
+ USE_UTIL_DIRECTLY = 1
+ 
++EXTRA_SHARED_LIBS +=    -Wl,-R${PREFIX}/lib/${MOZILLA_PKG_NAME}

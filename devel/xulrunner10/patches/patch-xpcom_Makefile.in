@@ -1,0 +1,15 @@
+$NetBSD: patch-xpcom_Makefile.in,v 1.1.1.1 2012/03/15 08:58:28 ryoon Exp $
+
+--- xpcom/Makefile.in.orig	2012-03-09 22:20:38.000000000 +0000
++++ xpcom/Makefile.in
+@@ -68,6 +68,10 @@ DIRS		+= windbgdlg
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++EXTRA_DSO_LDOPTS += -Wl,-rpath,${PREFIX}/lib/xulrunner-sdk/sdk/lib
++endif
++
+ ifdef ENABLE_TESTS
+ TOOL_DIRS += \
+ 	tests \
