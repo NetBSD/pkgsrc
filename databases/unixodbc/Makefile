@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/03/15 12:58:38 abs Exp $
+# $NetBSD: Makefile,v 1.33 2012/03/15 14:54:09 abs Exp $
 
 DISTNAME=	unixODBC-2.3.0
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS+=		iodbc<3.52.7nb1
+CONFLICTS+=		iodbc<3.52.7nb2
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
