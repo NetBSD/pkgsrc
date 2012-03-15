@@ -1,10 +1,10 @@
-$NetBSD: patch-ax,v 1.9 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-ax,v 1.10 2012/03/15 08:52:34 ryoon Exp $
 
---- mozilla/xpcom/base/nsStackWalk.cpp.orig	2012-02-16 10:25:32.000000000 +0000
+--- mozilla/xpcom/base/nsStackWalk.cpp.orig	2012-03-13 02:43:49.000000000 +0000
 +++ mozilla/xpcom/base/nsStackWalk.cpp
-@@ -1140,7 +1140,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
- #define __USE_GNU
- #endif
+@@ -54,7 +54,7 @@ struct CriticalAddress {
+ };
+ static CriticalAddress gCriticalAddress;
  
 -#if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
 +#if defined(HAVE_DLOPEN) || defined(XP_MACOSX) || defined(__NetBSD__)
