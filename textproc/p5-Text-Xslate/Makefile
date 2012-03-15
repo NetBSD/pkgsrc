@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/08 11:30:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/15 01:17:28 joerg Exp $
 #
 
 DISTNAME=	Text-Xslate-1.5007
@@ -12,6 +12,7 @@ COMMENT=	Scalable template engine for Perl5
 LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=	p5-Any-Moose>=0.13:../../devel/p5-Any-Moose
 DEPENDS+=	p5-Data-MessagePack>=0.30:../../devel/p5-Data-MessagePack
