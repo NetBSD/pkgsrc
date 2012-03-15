@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.7 2009/10/17 02:01:50 taca Exp $
+$NetBSD: distinfo,v 1.8 2012/03/15 14:50:56 abs Exp $
 
 SHA1 (libiodbc-3.52.7.tar.gz) = 53988878b6897d5ce7b8f62138f1f7e0e40b7d4f
 RMD160 (libiodbc-3.52.7.tar.gz) = 7bdac0e18dd65debd41059ceb59b4653bed4774b
 Size (libiodbc-3.52.7.tar.gz) = 1038710 bytes
-SHA1 (patch-aa) = 7fc72be935b3e19a836f20edf8efac05d22c643f
-SHA1 (patch-ac) = ff520f920c9aa9db44ce315219836dc4e98af9cd
+SHA1 (patch-admin_Makefile.am) = 50df99ec7a592b77b235c907e6b599f533466786
+SHA1 (patch-admin_Makefile.in) = 065fb31beacdf6a1cb4350fdfd5d8aedf99ae16f
+SHA1 (patch-configure) = 47df9401022a8cf4ad31a7de48bcccacde5befc2
+SHA1 (patch-configure.in) = dfcf36e845fbea146021bd3eb80a92e8225556d6
+SHA1 (patch-include_sqltypes.h) = 92db8703b7b88eb7e4ec8dca9c5dc3f207cc0234
+SHA1 (patch-samples_Makefile.in) = 59b8f2e03fe6c92d9e10f86cd57d5d563d0eaf14
