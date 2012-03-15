@@ -1,0 +1,14 @@
+$NetBSD: patch-pg,v 1.1.1.1 2012/03/15 09:45:30 ryoon Exp $
+
+--- mozilla/xulrunner/installer/mozilla-nspr.pc.in.orig	2012-02-16 10:25:33.000000000 +0000
++++ mozilla/xulrunner/installer/mozilla-nspr.pc.in
+@@ -5,7 +5,5 @@ includedir=%includedir%
+ Name: NSPR
+ Description: The Netscape Portable Runtime
+ Version: %NSPR_VERSION%
+-Libs: %FULL_NSPR_LIBS%
+-Cflags: %FULL_NSPR_CFLAGS%
+-
+-
++Libs: -Wl,-R${prefix}/lib/thunderbird10 -L${prefix}/lib/thunderbird10 -lplds4 -lplc4 -lnspr4 -pthread
++Cflags: -I${includedir}

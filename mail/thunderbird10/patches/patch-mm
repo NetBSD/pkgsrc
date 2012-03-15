@@ -1,0 +1,22 @@
+$NetBSD: patch-mm,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+
+--- mozilla/toolkit/library/Makefile.in.orig	2012-02-16 10:25:30.000000000 +0000
++++ mozilla/toolkit/library/Makefile.in
+@@ -209,6 +209,17 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),DragonFly)
++OS_LIBS += $(call EXPAND_LIBNAME,kvm)
++endif
++
++ifeq ($(OS_ARCH),NetBSD)
++EXTRA_DSO_LDOPTS += -lossaudio
++endif
++ifdef PKGSRC_PULSEAUDIO
++EXTRA_DSO_LDOPTS += -lpulse
++endif
++
+ ifeq ($(OS_ARCH),WINNT)
+ OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 uuid version winspool comdlg32 imm32 winmm wsock32 msimg32 shlwapi psapi ws2_32 dbghelp)
+ ifneq (,$(MOZ_DEBUG)$(NS_TRACE_MALLOC))
