@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/15 12:54:09 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/15 14:50:56 abs Exp $
 bin/iodbc-config
 bin/iodbctest
 bin/iodbctestw
@@ -13,10 +13,10 @@ include/iodbc/sql.h
 include/iodbc/sqlext.h
 include/iodbc/sqltypes.h
 include/iodbc/sqlucode.h
-lib/libiodbc.la
-lib/libiodbcinst.la
-lib/libodbc.a
-lib/libodbc.so
+lib/iodbc/libiodbc.la
+lib/iodbc/libiodbcinst.la
+lib/iodbc/libodbc.a
+lib/iodbc/libodbc.so
 lib/pkgconfig/libiodbc.pc
 man/man1/iodbc-config.1
 man/man1/iodbctest.1
