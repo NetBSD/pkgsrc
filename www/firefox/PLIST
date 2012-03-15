@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2012/03/10 03:09:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.49 2012/03/15 08:31:10 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/blocklist.xml
@@ -245,7 +245,6 @@ lib/firefox/chrome/browser/skin/classic/browser/places/organizer.xml
 lib/firefox/chrome/browser/skin/classic/browser/places/pageStarred.png
 lib/firefox/chrome/browser/skin/classic/browser/places/places.css
 lib/firefox/chrome/browser/skin/classic/browser/places/query.png
-lib/firefox/chrome/browser/skin/classic/browser/places/searching_16.png
 lib/firefox/chrome/browser/skin/classic/browser/places/starPage.png
 lib/firefox/chrome/browser/skin/classic/browser/places/starred48.png
 lib/firefox/chrome/browser/skin/classic/browser/places/tag.png
@@ -311,6 +310,7 @@ lib/firefox/chrome/en-US/locale/browser/devtools/gclicommands.properties
 lib/firefox/chrome/en-US/locale/browser/devtools/inspector.properties
 lib/firefox/chrome/en-US/locale/browser/devtools/scratchpad.dtd
 lib/firefox/chrome/en-US/locale/browser/devtools/scratchpad.properties
+lib/firefox/chrome/en-US/locale/browser/devtools/styleeditor.dtd
 lib/firefox/chrome/en-US/locale/browser/devtools/styleinspector.dtd
 lib/firefox/chrome/en-US/locale/browser/devtools/styleinspector.properties
 lib/firefox/chrome/en-US/locale/browser/devtools/webConsole.dtd
@@ -465,10 +465,26 @@ lib/firefox/modules/services-sync/rest.js
 lib/firefox/modules/services-sync/service.js
 lib/firefox/modules/services-sync/status.js
 lib/firefox/modules/services-sync/util.js
+lib/firefox/modules/services-sync/addonsreconciler.js
+lib/firefox/modules/services-sync/engines/addons.js
+lib/firefox/modules/services-sync/engines/apps.js
+lib/firefox/modules/tabview/utils.jsm
+lib/firefox/modules/devtools/SplitView.jsm
+lib/firefox/modules/devtools/StyleEditor.jsm
+lib/firefox/modules/devtools/StyleEditorChrome.jsm
+lib/firefox/modules/devtools/StyleEditorUtil.jsm
+lib/firefox/modules/devtools/Tilt.jsm
+lib/firefox/modules/devtools/TiltGL.jsm
+lib/firefox/modules/devtools/TiltMath.jsm
+lib/firefox/modules/devtools/TiltUtils.jsm
+lib/firefox/modules/devtools/TiltVisualizer.jsm
+lib/firefox/modules/devtools/TiltVisualizerStyle.jsm
+lib/firefox/modules/devtools/TiltWorkerCrafter.js
+lib/firefox/modules/devtools/TiltWorkerPicker.js
+lib/firefox/modules/offlineAppCache.jsm
 lib/firefox/modules/source-editor-orion.jsm
 lib/firefox/modules/source-editor-textarea.jsm
 lib/firefox/modules/source-editor.jsm
-lib/firefox/modules/tabview/utils.jsm
 lib/firefox/removed-files
 lib/firefox/run-mozilla.sh
 lib/firefox/searchplugins/amazondotcom.xml
@@ -481,3 +497,19 @@ lib/firefox/searchplugins/yahoo.xml
 lib/firefox/updater.ini
 share/applications/firefox.desktop
 share/pixmaps/firefox.png
+lib/firefox/chrome/browser/content/browser/splitview.css
+lib/firefox/chrome/browser/content/browser/styleeditor.css
+lib/firefox/chrome/browser/content/browser/styleeditor.xul
+lib/firefox/chrome/browser/skin/classic/browser/devtools/common.css
+lib/firefox/chrome/browser/skin/classic/browser/devtools/itemArrow-ltr.png
+lib/firefox/chrome/browser/skin/classic/browser/devtools/itemArrow-rtl.png
+lib/firefox/chrome/browser/skin/classic/browser/devtools/itemToggle.png
+lib/firefox/chrome/browser/skin/classic/browser/devtools/magnifying-glass.png
+lib/firefox/chrome/browser/skin/classic/browser/devtools/splitview.css
+lib/firefox/chrome/browser/skin/classic/browser/devtools/styleeditor.css
+lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole.css
+lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole.png
+lib/firefox/chrome/browser/skin/classic/browser/devtools/webconsole_networkpanel.css
+lib/firefox/chrome/en-US/locale/browser/devtools/styleeditor.properties
+lib/firefox/chrome/en-US/locale/browser/devtools/tilt.properties
+lib/firefox/components/ChromeProfileMigrator.js
