@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2011/10/29 07:48:47 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/15 11:53:38 obache Exp $
 
 DISTNAME=		duplicity-0.6.16
+PKGREVISION=		1
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://code.launchpad.net/duplicity/0.6-series/${PKGVERSION_NOREV}/+download/
 
