@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/03/15 06:45:26 sbd Exp $
+# $NetBSD: Makefile,v 1.32 2012/03/15 06:52:07 sbd Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -21,8 +21,6 @@ GCC_VERSION=		4.4.6
 GCC_SUBPREFIX=		gcc44
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
-MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
-
 
 # To avoid GNU surprises
 CONFIG_SHELL=		${TOOLS_PATH.bash}
@@ -98,14 +96,6 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 #.endif # NetBSD
 
 LIBS.SunOS+=		-lgmp
-
-pre-configure:
-.if ${OPSYS} == "DragonFly"
-	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/gcc/config/dragonfly.h
-	${CP} ${FILESDIR}/dragonfly-spec.h ${WRKSRC}/gcc/config/dragonfly-spec.h
-	${CP} ${FILESDIR}/i386-dragonfly.h ${WRKSRC}/gcc/config/i386/dragonfly.h
-	${CP} ${FILESDIR}/i386-dragonfly64.h ${WRKSRC}/gcc/config/i386/dragonfly64.h
-.endif
 
 
 do-configure:
