@@ -1,0 +1,20 @@
+$NetBSD: patch-admin_Makefile.in,v 1.1 2012/03/15 14:50:56 abs Exp $
+
+--- admin/Makefile.in.orig	2009-09-10 14:34:57.000000000 +0000
++++ admin/Makefile.in
+@@ -254,6 +254,7 @@ inidir = @inidir@
+ install_sh = @install_sh@
+ lib_version = @lib_version@
+ libdir = @libdir@
++pkgconfigdir = @pkgconfigdir@
+ libexecdir = @libexecdir@
+ localedir = @localedir@
+ localstatedir = @localstatedir@
+@@ -280,7 +281,6 @@ EXTRA_DIST = \
+ 	$(srcdir)/libiodbc.spec.in \
+ 	$(srcdir)/libiodbc.pc.in
+ 
+-pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libiodbc.pc
+ noinst_SCRIPTS = libiodbc.spec
+ all: all-am

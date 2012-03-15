@@ -1,0 +1,12 @@
+$NetBSD: patch-configure.in,v 1.1 2012/03/15 14:50:56 abs Exp $
+
+--- configure.in.orig	2009-09-10 13:08:59.000000000 +0000
++++ configure.in
+@@ -820,6 +820,7 @@ echo "${B}Installation paths${N}"
+ echo "AC_HELP_STRING(programs,		[${bindir}])"
+ echo "AC_HELP_STRING(include files, 	[${includedir}])"
+ echo "AC_HELP_STRING(libraries, 	[${libdir}])"
++echo "AC_HELP_STRING(pkgconfig, 	[${pkgconfigdir}])"
+ echo "AC_HELP_STRING(manual pages, 	[${mandir}])"
+ echo ""
+ echo "${B}Configuration files${N}"
