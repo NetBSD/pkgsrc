@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2010/02/10 19:17:37 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/03/15 11:53:27 obache Exp $
 
 DISTNAME=	mftrace-1.2.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://lilypond.org/download/sources/mftrace/
 
