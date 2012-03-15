@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2012/03/15 09:45:26 ryoon Exp $
+include/thunderbird10/nsslowhash.h

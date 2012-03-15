@@ -1,0 +1,15 @@
+$NetBSD: patch-mj,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+
+Add DragonFly support.
+
+--- mozilla/security/coreconf/arch.mk.orig	2012-02-16 10:25:23.000000000 +0000
++++ mozilla/security/coreconf/arch.mk
+@@ -146,7 +146,7 @@ endif
+ # IRIX 6.5-ALPHA-1289139620.
+ #
+ 
+-ifeq (,$(filter-out Linux FreeBSD IRIX,$(OS_ARCH)))
++ifeq (,$(filter-out Linux DragonFly FreeBSD IRIX,$(OS_ARCH)))
+     OS_RELEASE := $(shell echo $(OS_RELEASE) | sed 's/-.*//')
+ endif
+ 

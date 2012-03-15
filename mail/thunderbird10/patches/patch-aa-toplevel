@@ -1,0 +1,33 @@
+$NetBSD: patch-aa-toplevel,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+
+--- configure.in.orig	2012-02-16 10:18:22.000000000 +0000
++++ configure.in
+@@ -1945,7 +1945,7 @@ ld.])
+     MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
+@@ -1953,6 +1953,9 @@ ld.])
+     if test ! "$GNU_CC"; then
+ 	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
+     fi
++    if test "$LIBRUNPATH"; then
++       DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ ia64*-hpux*)
+@@ -3185,6 +3188,9 @@ dnl ====================================
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;

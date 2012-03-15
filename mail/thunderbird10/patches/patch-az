@@ -1,0 +1,19 @@
+$NetBSD: patch-az,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+
+--- mozilla/nsprpub/pr/src/pthreads/ptthread.c.orig	2012-02-16 10:25:22.000000000 +0000
++++ mozilla/nsprpub/pr/src/pthreads/ptthread.c
+@@ -1070,12 +1070,12 @@ PR_IMPLEMENT(void) PR_ProcessExit(PRIntn
+     _exit(status);
+ }
+ 
+-PR_IMPLEMENT(PRUint32) PR_GetThreadID(PRThread *thred)
++PR_IMPLEMENT(pthread_t) PR_GetThreadID(PRThread *thred)
+ {
+ #if defined(_PR_DCETHREADS)
+     return (PRUint32)&thred->id;  /* this is really a sham! */
+ #else
+-    return (PRUint32)thred->id;  /* and I don't know what they will do with it */
++    return thred->id;  /* and I don't know what they will do with it */
+ #endif
+ }
+ 
