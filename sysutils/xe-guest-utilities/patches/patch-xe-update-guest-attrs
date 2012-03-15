@@ -1,4 +1,4 @@
-$NetBSD: patch-xe-update-guest-attrs,v 1.1.1.1 2011/10/03 16:57:03 sborrill Exp $
+$NetBSD: patch-xe-update-guest-attrs,v 1.2 2012/03/15 14:06:08 sborrill Exp $
 
 --- xe-update-guest-attrs.orig	2011-09-23 15:39:33.000000000 +0100
 +++ xe-update-guest-attrs	2011-09-23 15:44:30.000000000 +0100
@@ -156,7 +156,7 @@ $NetBSD: patch-xe-update-guest-attrs,v 1.1.1.1 2011/10/03 16:57:03 sborrill Exp 
 -
 -# whether I support ballooning or not
 -xenstore_write_cached "control/feature-balloon" "1"
-+sysctl -n machdep.xen.balloon.current 2>/dev/null
++sysctl -n machdep.xen.balloon.current > /dev/null 2>&1
 +if [ "$?" = 0 ]; then
 +	xenstore_write_cached "control/feature-balloon" "1"
 +else

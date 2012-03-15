@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/06 11:09:06 sborrill Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/15 14:06:08 sborrill Exp $
 #
 
 # Values from XenServer 6.0.2 = 6, 0, 2, 52898
@@ -10,6 +10,7 @@ XENTEENY=	2
 XENBUILD=	52898
 
 VERSION=	${XENMAJOR}.${XENMINOR}.${XENTEENY}
+PKGREVISION=	1
 DISTNAME=	xe-guest-utilities_5.6.0-595
 CATEGORIES=	sysutils
 PKGNAME=	xe-guest-utilities-${VERSION}
