@@ -1,0 +1,2 @@
+Plugins for Remmina, a remote desktop client written in GTK+.
+Currently RDP, VNC, NX, XDMCP and SSH are supported.
