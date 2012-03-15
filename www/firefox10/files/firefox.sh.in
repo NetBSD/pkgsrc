@@ -1,0 +1,9 @@
+#! /bin/sh
+#
+# $NetBSD: firefox.sh.in,v 1.1.1.1 2012/03/15 09:02:43 ryoon Exp $
+#
+# We currently overwrite the nsXULStub launcher with this wrapper script.
+# The stub causes problems like HTTPS protocol not working.
+# XXX to be investigated
+
+exec @PREFIX@/lib/xulrunner10/xulrunner-bin @PREFIX@/lib/firefox10/application.ini "$@"
