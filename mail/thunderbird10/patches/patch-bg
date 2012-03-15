@@ -1,0 +1,24 @@
+$NetBSD: patch-bg,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+
+--- mozilla/storage/src/SQLiteMutex.h.orig	2012-02-16 10:25:26.000000000 +0000
++++ mozilla/storage/src/SQLiteMutex.h
+@@ -141,15 +141,19 @@ public:
+   void assertCurrentThreadOwns()
+   {
+     NS_ASSERTION(mMutex, "No mutex associated with this wrapper!");
++#if 0 /* XXX tnn: this breaks the debug build. */
+     NS_ASSERTION(sqlite3_mutex_held(mMutex),
+                  "Mutex is not held, but we expect it to be!");
++#endif
+   }
+ 
+   void assertNotCurrentThreadOwns()
+   {
+     NS_ASSERTION(mMutex, "No mutex associated with this wrapper!");
++#if 0 /* XXX tnn: this breaks the debug build. */
+     NS_ASSERTION(sqlite3_mutex_notheld(mMutex),
+                  "Mutex is held, but we expect it to not be!");
++#endif
+   }
+ #endif // ifndef DEBUG
+ 

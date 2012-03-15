@@ -1,0 +1,15 @@
+$NetBSD: patch-zb,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
+
+--- mail/app/Makefile.in.orig	2012-02-16 10:18:22.000000000 +0000
++++ mail/app/Makefile.in
+@@ -103,6 +103,10 @@ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
+ TK_LIBS := -framework Cocoa $(TK_LIBS)
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++LIBS += -lossaudio
++endif
++
+ LIBS += \
+ 	$(EXTRA_DSO_LIBS) \
+ 	$(XPCOM_STANDALONE_GLUE_LDOPTS) \
