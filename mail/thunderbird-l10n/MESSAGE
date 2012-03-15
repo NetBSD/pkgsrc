@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/04/22 16:59:05 tnn Exp $
+$NetBSD: MESSAGE,v 1.2 2012/03/15 09:12:54 ryoon Exp $
 
-To change the language in Thunderbird, go to:
-Edit -> Preferences ->  Advanced -> General -> Config Editor
-and edit the general.useragent.locale property. 
+To change the language in Thunderbird,
+1) Enable language packs in Tools->Add-ons->Languages
+2) Go to: Edit -> Preferences ->  Advanced -> General -> Config Editor
+3) Edit the general.useragent.locale property. 
 ===========================================================================
