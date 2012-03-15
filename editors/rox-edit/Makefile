@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/02/10 19:17:37 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/15 11:53:26 obache Exp $
 #
 
 DISTNAME=	edit-2.0
 PKGNAME=	rox-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz

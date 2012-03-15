@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/02/03 13:15:39 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/15 11:53:24 obache Exp $
 #
 
 DISTNAME=	gnatpython-${SNAPSHOT}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/ \
 		http://dragonlace.mirrors.ada.cx/src/
