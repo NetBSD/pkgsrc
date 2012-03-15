@@ -1,0 +1,12 @@
+$NetBSD: patch-admin_Makefile.am,v 1.1 2012/03/15 14:50:56 abs Exp $
+
+--- admin/Makefile.am.orig	2009-09-09 22:01:16.000000000 +0000
++++ admin/Makefile.am
+@@ -76,7 +76,6 @@ EXTRA_DIST = \
+ 	$(srcdir)/libiodbc.spec.in \
+ 	$(srcdir)/libiodbc.pc.in
+ 
+-pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libiodbc.pc
+ 
+ 

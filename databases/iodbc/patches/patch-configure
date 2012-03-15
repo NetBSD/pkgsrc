@@ -1,0 +1,49 @@
+$NetBSD: patch-configure,v 1.1 2012/03/15 14:50:56 abs Exp $
+
+--- configure.orig	2009-09-10 14:34:58.000000000 +0000
++++ configure
+@@ -891,6 +891,7 @@ DEFS
+ mandir
+ localedir
+ libdir
++pkgconfigdir
+ psdir
+ pdfdir
+ dvidir
+@@ -996,6 +997,7 @@ dvidir='${docdir}'
+ pdfdir='${docdir}'
+ psdir='${docdir}'
+ libdir='${exec_prefix}/lib'
++pkgconfigdir='${libdir}/pkgconfig'
+ localedir='${datarootdir}/locale'
+ mandir='${datarootdir}/man'
+ 
+@@ -1145,6 +1147,11 @@ do
+   -libdir=* | --libdir=* | --libdi=* | --libd=*)
+     libdir=$ac_optarg ;;
+ 
++  -pkgconfigdir | --pkgconfigdir | --pkgconfigdi | --pkgconfigd)
++    ac_prev=pkgconfigdir ;;
++  -pkgconfigdir=* | --pkgconfigdir=* | --pkgconfigdi=* | --pkgconfigd=*)
++    pkgconfigdir=$ac_optarg ;;
++
+   -libexecdir | --libexecdir | --libexecdi | --libexecd | --libexec \
+   | --libexe | --libex | --libe)
+     ac_prev=libexecdir ;;
+@@ -1381,7 +1388,7 @@ fi
+ for ac_var in	exec_prefix prefix bindir sbindir libexecdir datarootdir \
+ 		datadir sysconfdir sharedstatedir localstatedir includedir \
+ 		oldincludedir docdir infodir htmldir dvidir pdfdir psdir \
+-		libdir localedir mandir
++		libdir pkgconfigdir localedir mandir
+ do
+   eval ac_val=\$$ac_var
+   # Remove trailing slashes.
+@@ -1542,6 +1549,7 @@ Fine tuning of the installation director
+   --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
+   --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
+   --libdir=DIR            object code libraries [EPREFIX/lib]
++  --pkgconfigdir=DIR      pkgconfig [LIBDIR/pkgconfig]
+   --includedir=DIR        C header files [PREFIX/include]
+   --oldincludedir=DIR     C header files for non-gcc [/usr/include]
+   --datarootdir=DIR       read-only arch.-independent data root [PREFIX/share]
