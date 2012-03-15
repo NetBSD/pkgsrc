@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.811 2012/03/15 08:15:12 obache Exp $
+$NetBSD: CHANGES-2012,v 1.812 2012/03/15 11:50:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1172,3 +1172,15 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated geography/proj to 4.8.0 [gdt 2012-03-14]
 	Updated print/pdfjam to 2.08 [markd 2012-03-15]
 	Updated lang/gcc44 to 4.4.7 [sbd 2012-03-15]
+	Updated devel/nspr to 4.9.3 [ryoon 2012-03-15]
+	Updated devel/nss to 3.13.3 [ryoon 2012-03-15]
+	Updated devel/xulrunner to 11.0 [ryoon 2012-03-15]
+	Updated www/firefox to 11.0 [ryoon 2012-03-15]
+	Updated www/seamonkey to 2.7.2nb1 [ryoon 2012-03-15]
+	Updated www/firefox-l10n to 11.0 [ryoon 2012-03-15]
+	Updated mail/thunderbird to 11.0 [ryoon 2012-03-15]
+	Added devel/xulrunner10 version 10.0.3 [ryoon 2012-03-15]
+	Added www/firefox10 version 10.0.3 [ryoon 2012-03-15]
+	Updated mail/thunderbird-l10n to 11.0 [ryoon 2012-03-15]
+	Added www/firefox10-l10n version 10.0.3 [ryoon 2012-03-15]
+	Added mail/thunderbird10-l10n version 10.0.3 [ryoon 2012-03-15]
