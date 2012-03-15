@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.lightning,v 1.7 2012/03/10 11:42:38 ryoon Exp $
+@comment $NetBSD: PLIST.lightning,v 1.8 2012/03/15 08:52:34 ryoon Exp $
 include/thunderbird/calIAlarm.h
 include/thunderbird/calIAlarmService.h
 include/thunderbird/calIAttachment.h
@@ -278,7 +278,6 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calenda
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/nav-arrow.svg
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/nav-today-hov.svg
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/nav-today.svg
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/view-navigation.png
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/icons/default/calendar-alarm-dialog.png
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/icons/default/calendar-event-dialog.png
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/icons/default/calendar-event-summary-dialog.png
@@ -302,7 +301,6 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightni
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/messenger-overlay-preferences.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/messenger-overlay-sidebar.js
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/messenger-overlay-sidebar.xul
-lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/messenger-overlay-toolbar.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/suite-overlay-preferences.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/suite-overlay-sidebar.xul
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/skin/lightning/accountCentral.css
@@ -356,6 +354,10 @@ lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calSto
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calStorageUpgrade.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/modules/calUtils.jsm
 lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/timezones.sqlite
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/view-navigation-hov.svg
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/calendar/skin/calendar/widgets/view-navigation.svg
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-menus.xul
+lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}/chrome/lightning/content/lightning/lightning-toolbar.xul
 share/idl/thunderbird/calIAlarm.idl
 share/idl/thunderbird/calIAlarmService.idl
 share/idl/thunderbird/calIAttachment.idl
