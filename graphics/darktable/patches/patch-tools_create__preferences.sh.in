@@ -1,0 +1,12 @@
+$NetBSD: patch-tools_create__preferences.sh.in,v 1.1 2012/03/16 00:35:01 jakllsch Exp $
+
+We don't want to depend on bash.
+
+--- tools/create_preferences.sh.in.orig	2012-03-13 21:29:39.000000000 +0000
++++ tools/create_preferences.sh.in
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ tabs='gui core'
+ 
