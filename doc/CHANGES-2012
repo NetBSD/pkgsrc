@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.817 2012/03/16 00:16:11 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.818 2012/03/16 00:35:11 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1190,3 +1190,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/remmina-plugins version 0.9.2 [asau 2012-03-15]
 	Updated misc/libreoffice3-bin to 3.5.1 [ryoon 2012-03-15]
 	Updated security/py-cryptopp to 0.6.0.1206569328141510525648634803928199668821045408958 [gdt 2012-03-16]
+	Updated graphics/darktable to 1.0 [jakllsch 2012-03-16]
