@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.824 2012/03/16 17:41:18 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.825 2012/03/16 20:54:09 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1197,3 +1197,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added textproc/libexttextcat version 3.2.0 [wiz 2012-03-16]
 	Updated games/gbrainy to 2.12 [wiz 2012-03-16]
 	Added converters/libvisio version 0.0.15 [wiz 2012-03-16]
+	Updated devel/bzr to 2.5.0nb1 [cheusov 2012-03-16]
