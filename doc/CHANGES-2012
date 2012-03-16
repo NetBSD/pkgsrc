@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.826 2012/03/16 20:59:58 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.827 2012/03/16 21:04:55 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1199,3 +1199,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added converters/libvisio version 0.0.15 [wiz 2012-03-16]
 	Updated devel/bzr to 2.5.0nb1 [cheusov 2012-03-16]
 	Updated devel/bzr-svn to 1.2.1 [cheusov 2012-03-16]
+	Updated devel/bzrtools to 2.5.0 [cheusov 2012-03-16]
