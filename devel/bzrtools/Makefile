@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2012/03/16 04:31:16 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/03/16 21:04:40 cheusov Exp $
 
-DISTNAME=	bzrtools-${VER}
-PKGREVISION=	2
+PKGNAME=	bzrtools-${VER}
+DISTNAME=	bzrtools-${VER:R}
 CATEGORIES=	devel scm
-MASTER_SITES=	http://launchpad.net/bzrtools/stable/${VER}/+download/
-VER=		2.4.1
+MASTER_SITES=	http://launchpad.net/bzrtools/stable/${VER:R}/+download/
+VER=		2.5.0
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://bazaar-vcs.org/BzrTools
