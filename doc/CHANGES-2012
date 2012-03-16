@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.823 2012/03/16 17:32:49 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.824 2012/03/16 17:41:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1196,3 +1196,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.710 [obache 2012-03-16]
 	Added textproc/libexttextcat version 3.2.0 [wiz 2012-03-16]
 	Updated games/gbrainy to 2.12 [wiz 2012-03-16]
+	Added converters/libvisio version 0.0.15 [wiz 2012-03-16]
