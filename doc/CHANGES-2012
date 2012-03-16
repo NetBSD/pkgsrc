@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.821 2012/03/16 15:46:53 obache Exp $
+$NetBSD: CHANGES-2012,v 1.822 2012/03/16 17:31:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1194,3 +1194,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.697nb1 [obache 2012-03-16]
 	Updated lang/pcc-current to 20120316 [plunky 2012-03-16]
 	Updated net/mikutter to 0.1.0.710 [obache 2012-03-16]
+	Added textproc/libexttextcat version 3.2.0 [wiz 2012-03-16]
