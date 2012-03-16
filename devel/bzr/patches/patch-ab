@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.8 2011/11/27 13:31:23 cheusov Exp $
+$NetBSD: patch-ab,v 1.9 2012/03/16 20:53:46 cheusov Exp $
 
 # Honor PKGMANDIR
---- setup.py.orig	2010-03-24 07:18:08.000000000 +0000
-+++ setup.py
-@@ -709,7 +709,7 @@ else:
+--- setup.py.orig	2012-02-24 11:42:19.000000000 +0100
++++ setup.py	2012-03-13 09:25:47.000000000 +0100
+@@ -761,7 +761,7 @@
      if not 'bdist_egg' in sys.argv:
          # generate and install bzr.1 only with plain install, not the
          # easy_install one
 -        DATA_FILES = [('man/man1', ['bzr.1'])]
 +        DATA_FILES = [(os.getenv('PKGMANDIR', 'man') + '/man1', ['bzr.1'])]
  
+     DATA_FILES = DATA_FILES + I18N_FILES
      # std setup
-     ARGS = {'scripts': ['bzr'],
