@@ -1,17 +1,13 @@
-$NetBSD: patch-src_develop_blend.c,v 1.1 2011/11/15 21:19:02 jakllsch Exp $
+$NetBSD: patch-src_develop_blend.c,v 1.2 2012/03/16 00:35:01 jakllsch Exp $
 
---- src/develop/blend.c.orig	2011-11-07 06:46:13.000000000 +0000
+--- src/develop/blend.c.orig	2012-03-13 21:29:39.000000000 +0000
 +++ src/develop/blend.c
-@@ -1230,8 +1230,12 @@ void dt_develop_blend_process (struct dt
+@@ -1230,7 +1230,7 @@ void dt_develop_blend_process (struct dt
        ch = 1;
      
  #ifdef _OPENMP
-+#if defined(__NetBSD__)
-+    #pragma omp parallel for default(none) shared(in,roi_out,out,blend,d,__sF,ch)
-+#else
+-#if !defined(__SUNOS__)
++#if !defined(__SUNOS__) && !defined(__NetBSD__)
      #pragma omp parallel for default(none) shared(in,roi_out,out,blend,d,stderr,ch)
- #endif
-+#endif
-     for (int y=0; y<roi_out->height; y++) {
-         int index = (ch*y*roi_out->width);
-         blend(cst, opacity, in+index, out+index, roi_out->width*ch, blendflag);
+ #else
+     #pragma omp parallel for shared(in,roi_out,out,blend,d,ch)
