@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.827 2012/03/16 21:04:55 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.828 2012/03/16 21:21:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1200,3 +1200,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/bzr to 2.5.0nb1 [cheusov 2012-03-16]
 	Updated devel/bzr-svn to 1.2.1 [cheusov 2012-03-16]
 	Updated devel/bzrtools to 2.5.0 [cheusov 2012-03-16]
+	Updated mail/thunderbird to 11.0nb1 [ryoon 2012-03-16]
