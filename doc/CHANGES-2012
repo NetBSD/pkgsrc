@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.825 2012/03/16 20:54:09 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.826 2012/03/16 20:59:58 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1198,3 +1198,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/gbrainy to 2.12 [wiz 2012-03-16]
 	Added converters/libvisio version 0.0.15 [wiz 2012-03-16]
 	Updated devel/bzr to 2.5.0nb1 [cheusov 2012-03-16]
+	Updated devel/bzr-svn to 1.2.1 [cheusov 2012-03-16]
