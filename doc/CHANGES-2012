@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.818 2012/03/16 00:35:11 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.819 2012/03/16 05:14:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1191,3 +1191,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/libreoffice3-bin to 3.5.1 [ryoon 2012-03-15]
 	Updated security/py-cryptopp to 0.6.0.1206569328141510525648634803928199668821045408958 [gdt 2012-03-16]
 	Updated graphics/darktable to 1.0 [jakllsch 2012-03-16]
+	Updated net/mikutter to 0.1.0.697nb1 [obache 2012-03-16]
