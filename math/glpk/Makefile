@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2011/12/07 18:52:22 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2012/03/16 00:20:51 wiz Exp $
 
 DISTNAME=	glpk-4.47
 CATEGORIES=	math
-MASTER_SITES=	$(MASTER_SITE_GNU:=glpk/)
+MASTER_SITES=	${MASTER_SITE_GNU:=glpk/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/glpk/glpk.html
 COMMENT=	Library for solving linear programming problems
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
