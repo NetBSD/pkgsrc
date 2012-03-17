@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2009/03/17 13:34:06 jmcneill Exp $
+$NetBSD: patch-ae,v 1.3 2012/03/17 02:19:08 wiz Exp $
 
---- libgamin/gam_api.c.orig	2007-08-27 06:21:03.000000000 -0400
+--- libgamin/gam_api.c.orig	2007-08-27 10:21:03.000000000 +0000
 +++ libgamin/gam_api.c
 @@ -7,6 +7,7 @@
  #include <stdlib.h>
@@ -96,14 +96,14 @@ $NetBSD: patch-ae,v 1.2 2009/03/17 13:34:06 jmcneill Exp $
 +    struct iovec iov;
 +    pid_t pid = getpid();
 +    int written;
-+
+ 
+-    iov.iov_base = &data[0];
+-    iov.iov_len = 1;
 +#if defined(BSDCRED) && !defined(LOCAL_CREDS)
 +    struct cmsghdr *cmsg;
 +    char cmsgbuf[CMSG_SPACE(CRED_DATASIZE)];
 +#endif
- 
--    iov.iov_base = &data[0];
--    iov.iov_len = 1;
++
 +    iov.iov_base = &pid;
 +    iov.iov_len = sizeof(pid_t);
  
@@ -216,15 +216,15 @@ $NetBSD: patch-ae,v 1.2 2009/03/17 13:34:06 jmcneill Exp $
 +    if (msg.msg_controllen == 0) {
 +        GAM_DEBUG(DEBUG_INFO,
 +                  "No control message received over recvmsg()\n");
++        goto failed;
++    }
++    if ((msg.msg_flags & MSG_CTRUNC) != 0) {
++        GAM_DEBUG(DEBUG_INFO,
++                  "Lost control message data over recvmsg()\n");
          goto failed;
      }
 -#ifdef HAVE_CMSGCRED
 -    if (cmsg.hdr.cmsg_len < sizeof(cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS) {
-+    if ((msg.msg_flags & MSG_CTRUNC) != 0) {
-+        GAM_DEBUG(DEBUG_INFO,
-+                  "Lost control message data over recvmsg()\n");
-+        goto failed;
-+    }
 +    cmsg = CMSG_FIRSTHDR(&msg);
 +    if (cmsg->cmsg_type != SCM_CREDS) {
          GAM_DEBUG(DEBUG_INFO,
