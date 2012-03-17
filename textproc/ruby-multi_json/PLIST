@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/16 12:38:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/17 16:47:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.rspec
@@ -11,6 +11,7 @@ ${GEM_LIBDIR}/lib/multi_json.rb
 ${GEM_LIBDIR}/lib/multi_json/engines/json_common.rb
 ${GEM_LIBDIR}/lib/multi_json/engines/json_gem.rb
 ${GEM_LIBDIR}/lib/multi_json/engines/json_pure.rb
+${GEM_LIBDIR}/lib/multi_json/engines/nsjsonserialization.rb
 ${GEM_LIBDIR}/lib/multi_json/engines/ok_json.rb
 ${GEM_LIBDIR}/lib/multi_json/engines/yajl.rb
 ${GEM_LIBDIR}/lib/multi_json/vendor/ok_json.rb
