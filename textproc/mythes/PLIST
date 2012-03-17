@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/17 10:57:37 wiz Exp $
+bin/th_gen_idx.pl
+include/mythes.hxx
+lib/libmythes-1.2.la
+lib/pkgconfig/mythes.pc
