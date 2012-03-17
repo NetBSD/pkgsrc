@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/12/15 16:11:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/03/17 16:46:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -66,8 +66,6 @@ ${GEM_LIBDIR}/ext/json/ext/parser/parser.c
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.h
 ${GEM_LIBDIR}/ext/json/ext/parser/parser.rl
 ${GEM_LIBDIR}/install.rb
-${GEM_LIBDIR}/java/lib/bytelist-1.0.6.jar
-${GEM_LIBDIR}/java/lib/jcodings.jar
 ${GEM_LIBDIR}/java/src/json/ext/ByteListTranscoder.java
 ${GEM_LIBDIR}/java/src/json/ext/Generator.java
 ${GEM_LIBDIR}/java/src/json/ext/GeneratorMethods.java
