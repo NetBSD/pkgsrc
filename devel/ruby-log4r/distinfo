@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/12/04 04:01:06 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/03/17 14:40:33 taca Exp $
 
-SHA1 (log4r-1.1.9.gem) = 0f9e9db0f9be5a1f341eace428c3b1d9416b1333
-RMD160 (log4r-1.1.9.gem) = 5d916df63f42d399dafc0f127f5f075c07ef52ba
-Size (log4r-1.1.9.gem) = 122368 bytes
+SHA1 (log4r-1.1.10.gem) = fb3fc6244753d78ba38fa88e3497fa2c9fe27d81
+RMD160 (log4r-1.1.10.gem) = 3e1a76eefaa985c97346c23b3cece5bf7b2cafa6
+Size (log4r-1.1.10.gem) = 118272 bytes
