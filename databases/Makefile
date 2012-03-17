@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.393 2012/03/01 21:13:41 gdt Exp $
+# $NetBSD: Makefile,v 1.394 2012/03/17 14:19:35 taca Exp $
 #
 
 COMMENT=	Databases
@@ -372,7 +372,6 @@ SUBDIR+=	ruby-mysql
 SUBDIR+=	ruby-odbc
 SUBDIR+=	ruby-pg
 SUBDIR+=	ruby-postgres-pr
-SUBDIR+=	ruby-postgresql
 SUBDIR+=	ruby-qdbm
 SUBDIR+=	ruby-rrdtool
 SUBDIR+=	ruby-sequel
