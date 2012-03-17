@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/12/15 15:11:38 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/03/17 15:22:38 taca Exp $
 
-SHA1 (subexec-0.2.0.gem) = 2198f2be1862221e344358bd10fb547f1cd8dcc0
-RMD160 (subexec-0.2.0.gem) = 8a859f685a5b1430cd7cc09a503a43e8103aa8c8
-Size (subexec-0.2.0.gem) = 4608 bytes
+SHA1 (subexec-0.2.1.gem) = fdff7b1332043ecd9b29be069a4952a5995af90e
+RMD160 (subexec-0.2.1.gem) = ae1d40c2cab8e60c3747688e5d72e460d2c471ef
+Size (subexec-0.2.1.gem) = 5120 bytes
