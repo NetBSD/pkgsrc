@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/16 11:55:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/17 14:40:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/lib/gettext_i18n_rails/action_controller.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/active_record.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/backend.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/haml_parser.rb
+${GEM_LIBDIR}/lib/gettext_i18n_rails/hamlet_parser.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/html_safe_translations.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/i18n_hacks.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/model_attributes_finder.rb
@@ -25,6 +26,7 @@ ${GEM_LIBDIR}/spec/gettext_i18n_rails/action_controller_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/active_record_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/backend_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/haml_parser_spec.rb
+${GEM_LIBDIR}/spec/gettext_i18n_rails/hamlet_parser_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/slim_parser_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails/string_interpolate_fix_spec.rb
 ${GEM_LIBDIR}/spec/gettext_i18n_rails_spec.rb
