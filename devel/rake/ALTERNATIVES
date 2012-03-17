@@ -1,1 +1,0 @@
-bin/rake @PREFIX@/bin/rake@RUBY_VER@
