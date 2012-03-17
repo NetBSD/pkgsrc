@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.830 2012/03/17 03:16:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.831 2012/03/17 05:01:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1203,3 +1203,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/thunderbird to 11.0nb1 [ryoon 2012-03-16]
 	Updated mail/dovecot2 to 2.1.3 [ghen 2012-03-17]
 	Updated lang/gawk to 4.0.0 [wiz 2012-03-17]
+	Removed emulators/suse100_qt3 [obache 2012-03-17]
+	Removed emulators/suse100_32_qt3 [obache 2012-03-17]
