@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/17 15:42:28 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitmodules
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/build.js
+${GEM_LIBDIR}/lib/es5.js
+${GEM_LIBDIR}/lib/uglifier.rb
+${GEM_LIBDIR}/lib/uglify.js
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/uglifier_spec.rb
+${GEM_LIBDIR}/uglifier.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
