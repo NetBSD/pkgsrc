@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2011/12/15 15:40:52 taca Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/17 16:16:32 taca Exp $
 
-DISTNAME=	columnize-0.3.5
+DISTNAME=	columnize-0.3.6
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
