@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.371 2012/03/01 15:11:48 taca Exp $
+# $NetBSD: Makefile,v 1.372 2012/03/17 16:30:47 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -222,6 +222,8 @@ SUBDIR+=	ruby-gem_plugin
 SUBDIR+=	ruby-launchy
 SUBDIR+=	ruby-progressbar
 SUBDIR+=	ruby-sprockets
+SUBDIR+=	ruby-sprockets20
+SUBDIR+=	ruby-sprockets21
 SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	rubygems
 SUBDIR+=	rump
