@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2011/12/15 14:24:22 taca Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/17 16:02:19 taca Exp $
 
 DISTNAME=	actionmailer-${RUBY_RAILS_VERSION}
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Email composition, delivery, and receiving framework
+COMMENT=	Email composition, delivery and receiving (for Rails 3.0)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
