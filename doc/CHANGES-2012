@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.848 2012/03/17 15:23:13 taca Exp $
+$NetBSD: CHANGES-2012,v 1.849 2012/03/17 15:25:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1244,3 +1244,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/ruby-simplecov-html version 0.5.3 [taca 2012-03-17]
 	Added devel/ruby-simplecov version 0.6.1 [taca 2012-03-17]
 	Updated devel/ruby-subexec to 0.2.1 [taca 2012-03-17]
+	Updated devel/ruby-test-unit to 2.4.8 [taca 2012-03-17]
