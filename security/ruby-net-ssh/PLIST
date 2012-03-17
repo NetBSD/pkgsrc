@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/10 07:44:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/17 17:01:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Manifest
@@ -56,10 +56,16 @@ ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/md5_96.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/none.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha1.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha1_96.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_256_96.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_512.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/hmac/sha2_512_96.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/identity_cipher.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex/diffie_hellman_group1_sha1.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex/diffie_hellman_group_exchange_sha1.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/kex/diffie_hellman_group_exchange_sha256.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/key_expander.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/openssl.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/packet_stream.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/server_version.rb
@@ -73,7 +79,6 @@ ${GEM_LIBDIR}/net-ssh.gemspec
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/support/arcfour_check.rb
 ${GEM_LIBDIR}/support/ssh_tunnel_bug.rb
-${GEM_LIBDIR}/test/README.txt
 ${GEM_LIBDIR}/test/authentication/methods/common.rb
 ${GEM_LIBDIR}/test/authentication/methods/test_abstract.rb
 ${GEM_LIBDIR}/test/authentication/methods/test_hostbased.rb
@@ -88,12 +93,9 @@ ${GEM_LIBDIR}/test/configs/eqsign
 ${GEM_LIBDIR}/test/configs/exact_match
 ${GEM_LIBDIR}/test/configs/host_plus
 ${GEM_LIBDIR}/test/configs/multihost
-${GEM_LIBDIR}/test/configs/nohost
-${GEM_LIBDIR}/test/configs/numeric_host
 ${GEM_LIBDIR}/test/configs/wild_cards
 ${GEM_LIBDIR}/test/connection/test_channel.rb
 ${GEM_LIBDIR}/test/connection/test_session.rb
-${GEM_LIBDIR}/test/manual/test_forward.rb
 ${GEM_LIBDIR}/test/test_all.rb
 ${GEM_LIBDIR}/test/test_buffer.rb
 ${GEM_LIBDIR}/test/test_buffered_io.rb
@@ -104,6 +106,11 @@ ${GEM_LIBDIR}/test/transport/hmac/test_md5_96.rb
 ${GEM_LIBDIR}/test/transport/hmac/test_none.rb
 ${GEM_LIBDIR}/test/transport/hmac/test_sha1.rb
 ${GEM_LIBDIR}/test/transport/hmac/test_sha1_96.rb
+${GEM_LIBDIR}/test/transport/hmac/test_sha2_256.rb
+${GEM_LIBDIR}/test/transport/hmac/test_sha2_256_96.rb
+${GEM_LIBDIR}/test/transport/hmac/test_sha2_512.rb
+${GEM_LIBDIR}/test/transport/hmac/test_sha2_512_96.rb
+${GEM_LIBDIR}/test/transport/kex/test_diffie_hellman_group_exchange_sha256.rb
 ${GEM_LIBDIR}/test/transport/kex/test_diffie_hellman_group1_sha1.rb
 ${GEM_LIBDIR}/test/transport/kex/test_diffie_hellman_group_exchange_sha1.rb
 ${GEM_LIBDIR}/test/transport/test_algorithms.rb
