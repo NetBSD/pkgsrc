@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.5 2011/12/29 22:17:20 wiz Exp $
+# $NetBSD: emulator.mk,v 1.6 2012/03/17 06:43:54 obache Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -42,7 +42,6 @@ DEPENDS_suse-11.3.png?=		suse_libpng${_SUSE_VERSION_REQD}:../../emulators/suse11
 DEPENDS_suse-11.3.qt4?=		suse_qt4${_SUSE_VERSION_REQD}:../../emulators/suse113_qt4
 DEPENDS_suse-11.3.slang?=	suse_slang${_SUSE_VERSION_REQD}:../../emulators/suse113_slang
 DEPENDS_suse-11.3.tiff?=	suse_libtiff${_SUSE_VERSION_REQD}:../../emulators/suse113_libtiff
-DEPENDS_suse-11.3.vmware?=	suse_vmware${_SUSE_VERSION_REQD}:../../emulators/suse113_vmware
 DEPENDS_suse-11.3.x11?=		suse_x11${_SUSE_VERSION_REQD}:../../emulators/suse113_x11
 DEPENDS_suse-11.3.xml2?=	suse_libxml2${_SUSE_VERSION_REQD}:../../emulators/suse113_libxml2
 
