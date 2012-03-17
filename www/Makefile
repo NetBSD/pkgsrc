@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.864 2012/03/15 11:51:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.865 2012/03/17 16:39:52 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -624,6 +624,7 @@ SUBDIR+=	ruby-rack-test
 SUBDIR+=	ruby-rack-test05
 SUBDIR+=	ruby-rack11
 SUBDIR+=	ruby-rack12
+SUBDIR+=	ruby-rack13
 SUBDIR+=	ruby-rails
 SUBDIR+=	ruby-rails3
 SUBDIR+=	ruby-rails31
