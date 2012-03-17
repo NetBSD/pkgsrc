@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 16:44:01 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/17 14:41:08 taca Exp $
 
-DISTNAME=	randexp-0.1.6
+DISTNAME=	randexp-0.1.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

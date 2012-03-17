@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 16:44:01 taca Exp $
+$NetBSD: distinfo,v 1.2 2012/03/17 14:41:08 taca Exp $
 
-SHA1 (randexp-0.1.6.gem) = 532894fc9d1c78db2d7b79510d5c707fb7ed7c25
-RMD160 (randexp-0.1.6.gem) = 1fe283bce9efbaf7a6a60e9acb00c4c3fe05404a
-Size (randexp-0.1.6.gem) = 34816 bytes
+SHA1 (randexp-0.1.7.gem) = b77aab995076fcf52a07a1e3188420b90dedb7e1
+RMD160 (randexp-0.1.7.gem) = 7b4640850cedcaaee5e740edb8c1c2d7f2cc6535
+Size (randexp-0.1.7.gem) = 35840 bytes
