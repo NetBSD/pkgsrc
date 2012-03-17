@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/12/15 15:40:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/17 16:13:32 taca Exp $
 bin/bundle
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -15,11 +15,15 @@ ${GEM_LIBDIR}/lib/bundler.rb
 ${GEM_LIBDIR}/lib/bundler/capistrano.rb
 ${GEM_LIBDIR}/lib/bundler/cli.rb
 ${GEM_LIBDIR}/lib/bundler/definition.rb
+${GEM_LIBDIR}/lib/bundler/dep_proxy.rb
 ${GEM_LIBDIR}/lib/bundler/dependency.rb
 ${GEM_LIBDIR}/lib/bundler/deployment.rb
 ${GEM_LIBDIR}/lib/bundler/dsl.rb
+${GEM_LIBDIR}/lib/bundler/endpoint_specification.rb
 ${GEM_LIBDIR}/lib/bundler/environment.rb
+${GEM_LIBDIR}/lib/bundler/fetcher.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helper.rb
+${GEM_LIBDIR}/lib/bundler/gem_helpers.rb
 ${GEM_LIBDIR}/lib/bundler/gem_installer.rb
 ${GEM_LIBDIR}/lib/bundler/gem_tasks.rb
 ${GEM_LIBDIR}/lib/bundler/graph.rb
@@ -41,6 +45,8 @@ ${GEM_LIBDIR}/lib/bundler/man/bundle-update.txt
 ${GEM_LIBDIR}/lib/bundler/man/bundle.txt
 ${GEM_LIBDIR}/lib/bundler/man/gemfile.5
 ${GEM_LIBDIR}/lib/bundler/man/gemfile.5.txt
+${GEM_LIBDIR}/lib/bundler/match_platform.rb
+${GEM_LIBDIR}/lib/bundler/psyched_yaml.rb
 ${GEM_LIBDIR}/lib/bundler/remote_specification.rb
 ${GEM_LIBDIR}/lib/bundler/resolver.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_ext.rb
@@ -52,8 +58,11 @@ ${GEM_LIBDIR}/lib/bundler/shared_helpers.rb
 ${GEM_LIBDIR}/lib/bundler/source.rb
 ${GEM_LIBDIR}/lib/bundler/spec_set.rb
 ${GEM_LIBDIR}/lib/bundler/templates/Executable
+${GEM_LIBDIR}/lib/bundler/templates/Executable.standalone
 ${GEM_LIBDIR}/lib/bundler/templates/Gemfile
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/Gemfile.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/LICENSE.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/README.md.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/Rakefile.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/bin/newgem.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/gitignore.tt
@@ -61,6 +70,8 @@ ${GEM_LIBDIR}/lib/bundler/templates/newgem/lib/newgem.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/lib/newgem/version.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/newgem.gemspec.tt
 ${GEM_LIBDIR}/lib/bundler/ui.rb
+${GEM_LIBDIR}/lib/bundler/vendor/net/http/faster.rb
+${GEM_LIBDIR}/lib/bundler/vendor/net/http/persistent.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/actions/create_file.rb
@@ -101,7 +112,9 @@ ${GEM_LIBDIR}/man/bundle-update.ronn
 ${GEM_LIBDIR}/man/bundle.ronn
 ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/index.txt
+${GEM_LIBDIR}/spec/bundler/dsl_spec.rb
 ${GEM_LIBDIR}/spec/bundler/gem_helper_spec.rb
+${GEM_LIBDIR}/spec/bundler/source_spec.rb
 ${GEM_LIBDIR}/spec/cache/gems_spec.rb
 ${GEM_LIBDIR}/spec/cache/git_spec.rb
 ${GEM_LIBDIR}/spec/cache/path_spec.rb
@@ -109,13 +122,16 @@ ${GEM_LIBDIR}/spec/cache/platform_spec.rb
 ${GEM_LIBDIR}/spec/install/deploy_spec.rb
 ${GEM_LIBDIR}/spec/install/deprecated_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/c_ext_spec.rb
+${GEM_LIBDIR}/spec/install/gems/dependency_api_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/env_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/flex_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/groups_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/packed_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/platform_spec.rb
+${GEM_LIBDIR}/spec/install/gems/post_install_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/resolving_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/simple_case_spec.rb
+${GEM_LIBDIR}/spec/install/gems/standalone_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/sudo_spec.rb
 ${GEM_LIBDIR}/spec/install/gems/win32_spec.rb
 ${GEM_LIBDIR}/spec/install/gemspec_spec.rb
@@ -126,6 +142,7 @@ ${GEM_LIBDIR}/spec/install/upgrade_spec.rb
 ${GEM_LIBDIR}/spec/lock/git_spec.rb
 ${GEM_LIBDIR}/spec/lock/lockfile_spec.rb
 ${GEM_LIBDIR}/spec/other/check_spec.rb
+${GEM_LIBDIR}/spec/other/clean_spec.rb
 ${GEM_LIBDIR}/spec/other/config_spec.rb
 ${GEM_LIBDIR}/spec/other/console_spec.rb
 ${GEM_LIBDIR}/spec/other/exec_spec.rb
@@ -134,8 +151,10 @@ ${GEM_LIBDIR}/spec/other/help_spec.rb
 ${GEM_LIBDIR}/spec/other/init_spec.rb
 ${GEM_LIBDIR}/spec/other/newgem_spec.rb
 ${GEM_LIBDIR}/spec/other/open_spec.rb
+${GEM_LIBDIR}/spec/other/outdated_spec.rb
 ${GEM_LIBDIR}/spec/other/show_spec.rb
 ${GEM_LIBDIR}/spec/quality_spec.rb
+${GEM_LIBDIR}/spec/realworld/edgecases_spec.rb
 ${GEM_LIBDIR}/spec/resolver/basic_spec.rb
 ${GEM_LIBDIR}/spec/resolver/platform_spec.rb
 ${GEM_LIBDIR}/spec/runtime/executable_spec.rb
@@ -145,7 +164,19 @@ ${GEM_LIBDIR}/spec/runtime/require_spec.rb
 ${GEM_LIBDIR}/spec/runtime/setup_spec.rb
 ${GEM_LIBDIR}/spec/runtime/with_clean_env_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/artifice/endopint_marshal_fail_basic_authentication.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_500.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_api_missing.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_basic_authentication.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_extra.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_extra_missing.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_fallback.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_marshal_fail.rb
+${GEM_LIBDIR}/spec/support/artifice/endpoint_redirect.rb
 ${GEM_LIBDIR}/spec/support/builders.rb
+${GEM_LIBDIR}/spec/support/fakeweb/rack-1.0.0.marshal
+${GEM_LIBDIR}/spec/support/fakeweb/windows.rb
 ${GEM_LIBDIR}/spec/support/helpers.rb
 ${GEM_LIBDIR}/spec/support/indexes.rb
 ${GEM_LIBDIR}/spec/support/matchers.rb
