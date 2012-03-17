@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.834 2012/03/17 10:58:16 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.835 2012/03/17 13:54:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1217,3 +1217,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated meta-pkgs/suse100 to 10.0nb5 [obache 2012-03-17]
 	Updated meta-pkgs/suse113 to 11.3nb1 [obache 2012-03-17]
 	Added textproc/mythes version 1.2.2 [wiz 2012-03-17]
+	Renamed devel/rake to devel/ruby-rake [taca 2012-03-17]
