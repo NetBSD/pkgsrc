@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.842 2012/03/17 14:30:04 taca Exp $
+$NetBSD: CHANGES-2012,v 1.843 2012/03/17 14:42:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1228,3 +1228,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-do_postgres to 0.10.8 [taca 2012-03-17]
 	Updated databases/ruby-do_sqlite3 to 0.10.8 [taca 2012-03-17]
 	Updated databases/ruby-sequel to 3.33.0 [taca 2012-03-17]
+	Updated devel/ruby-highline to 1.6.11 [taca 2012-03-17]
+	Updated devel/ruby-inline to 3.11.2 [taca 2012-03-17]
+	Updated devel/ruby-mocha to 0.10.5 [taca 2012-03-17]
+	Updated devel/ruby-gettext_i18n_rails to 0.4.5 [taca 2012-03-17]
+	Updated devel/ruby-log4r to 1.1.10 [taca 2012-03-17]
+	Updated devel/ruby-randexp to 0.1.7 [taca 2012-03-17]
