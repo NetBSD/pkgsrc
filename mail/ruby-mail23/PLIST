@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/17 15:58:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/17 16:08:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Dependencies.txt
@@ -13,7 +13,7 @@ ${GEM_LIBDIR}/lib/mail/body.rb
 ${GEM_LIBDIR}/lib/mail/configuration.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/nil.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/object.rb
-${GEM_LIBDIR}/lib/mail/core_extensions/shellwords.rb
+${GEM_LIBDIR}/lib/mail/core_extensions/shell_escape.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/smtp.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/string.rb
 ${GEM_LIBDIR}/lib/mail/core_extensions/string/access.rb
@@ -90,6 +90,7 @@ ${GEM_LIBDIR}/lib/mail/multibyte/exceptions.rb
 ${GEM_LIBDIR}/lib/mail/multibyte/unicode.rb
 ${GEM_LIBDIR}/lib/mail/multibyte/utils.rb
 ${GEM_LIBDIR}/lib/mail/network.rb
+${GEM_LIBDIR}/lib/mail/network/delivery_methods/exim.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/file_delivery.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/sendmail.rb
 ${GEM_LIBDIR}/lib/mail/network/delivery_methods/smtp.rb
