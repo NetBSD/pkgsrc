@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.850 2012/03/17 15:34:20 taca Exp $
+$NetBSD: CHANGES-2012,v 1.851 2012/03/17 15:44:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1247,3 +1247,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-test-unit to 2.4.8 [taca 2012-03-17]
 	Added devel/ruby-turn08 version 0.8.3 [taca 2012-03-17]
 	Added devel/ruby-turn version 0.9.4 [taca 2012-03-17]
+	Added devel/ruby-uglifier10 version 1.0.4 [taca 2012-03-17]
+	Added devel/ruby-uglifier version 1.2.3 [taca 2012-03-17]
