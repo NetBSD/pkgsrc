@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/09/12 13:29:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/17 16:55:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -37,6 +37,8 @@ ${GEM_LIBDIR}/docs/diagrams/002_blabbr_example_routing.png
 ${GEM_LIBDIR}/docs/diagrams/003_weathr_example_routing.png
 ${GEM_LIBDIR}/docs/diagrams/004_fanout_exchange.png
 ${GEM_LIBDIR}/docs/diagrams/005_direct_exchange.png
+${GEM_LIBDIR}/docs/diagrams/006_amqp_091_message_acknowledgements.png
+${GEM_LIBDIR}/docs/diagrams/007_rabbitmq_publisher_confirms.png
 ${GEM_LIBDIR}/docs/diagrams/redhat/direct_exchange.png
 ${GEM_LIBDIR}/docs/diagrams/redhat/fanout_exchange.png
 ${GEM_LIBDIR}/docs/diagrams/redhat/topic_exchange.png
@@ -58,6 +60,7 @@ ${GEM_LIBDIR}/examples/error_handling/connection_level_exception_with_objects.rb
 ${GEM_LIBDIR}/examples/error_handling/connection_loss_handler.rb
 ${GEM_LIBDIR}/examples/error_handling/global_channel_level_exception_handler.rb
 ${GEM_LIBDIR}/examples/error_handling/handling_authentication_failure_with_a_callback.rb
+${GEM_LIBDIR}/examples/error_handling/reopening_a_channel_after_channel_level_exception.rb
 ${GEM_LIBDIR}/examples/error_handling/handling_authentication_failure_with_a_rescue_block.rb
 ${GEM_LIBDIR}/examples/error_handling/handling_vhost_misconfiguration_with_a_rescue_block.rb
 ${GEM_LIBDIR}/examples/error_handling/hello_world_producer.rb
@@ -116,6 +119,8 @@ ${GEM_LIBDIR}/examples/legacy/primes.rb
 ${GEM_LIBDIR}/examples/legacy/stocks.rb
 ${GEM_LIBDIR}/examples/patterns/command/consumer.rb
 ${GEM_LIBDIR}/examples/patterns/command/producer.rb
+${GEM_LIBDIR}/examples/patterns/event/consumer.rb
+${GEM_LIBDIR}/examples/patterns/event/producer.rb
 ${GEM_LIBDIR}/examples/patterns/request_reply/client.rb
 ${GEM_LIBDIR}/examples/patterns/request_reply/server.rb
 ${GEM_LIBDIR}/examples/publishing/publishing_a_one_off_message.rb
@@ -125,6 +130,7 @@ ${GEM_LIBDIR}/examples/publishing/simplistic_scatter_gather.rb
 ${GEM_LIBDIR}/examples/queues/accessing_message_metadata.rb
 ${GEM_LIBDIR}/examples/queues/automatic_binding_for_default_direct_exchange.rb
 ${GEM_LIBDIR}/examples/queues/basic_get.rb
+${GEM_LIBDIR}/examples/queues/cancel_default_consumer.rb
 ${GEM_LIBDIR}/examples/queues/declare_a_queue_without_assignment.rb
 ${GEM_LIBDIR}/examples/queues/declare_and_bind_a_server_named_queue.rb
 ${GEM_LIBDIR}/examples/queues/queue_status.rb
