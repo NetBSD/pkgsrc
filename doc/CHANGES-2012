@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.838 2012/03/17 14:06:10 taca Exp $
+$NetBSD: CHANGES-2012,v 1.839 2012/03/17 14:08:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-rake to 0.9.2.2 [taca 2012-03-17]
 	Updated devel/hoe to 2.16.1 [taca 2012-03-17]
 	Updated www/ruby-rails to 2.3.14nb1 [taca 2012-03-17]
+	Updated converters/ruby-unf to 0.0.5 [taca 2012-03-17]
