@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.840 2012/03/17 14:19:10 taca Exp $
+$NetBSD: CHANGES-2012,v 1.841 2012/03/17 14:27:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1223,3 +1223,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-rails to 2.3.14nb1 [taca 2012-03-17]
 	Updated converters/ruby-unf to 0.0.5 [taca 2012-03-17]
 	Removed databases/ruby-postgresql [taca 2012-03-17]
+	Updated databases/ruby-data_objects to 0.10.8 [taca 2012-03-17]
+	Updated databases/ruby-do_mysql to 0.10.8 [taca 2012-03-17]
+	Updated databases/ruby-do_postgres to 0.10.8 [taca 2012-03-17]
+	Updated databases/ruby-do_sqlite3 to 0.10.8 [taca 2012-03-17]
