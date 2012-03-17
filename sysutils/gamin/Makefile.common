@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/01/17 04:10:40 asau Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/03/17 02:19:22 wiz Exp $
 #
 # used by sysutils/gamin/Makefile
 # used by sysutils/libgamin/Makefile
@@ -12,6 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/~veillard/gamin/
 COMMENT=	File alteration monitor
+LICENSE=	gnu-lgpl-v2
 
 CONFLICTS=	fam-[0-9]*
 
@@ -40,7 +41,6 @@ SUBST_FILES.sysconfdir=	doc/config.html doc/gamin.html server/gam_conf.c
 SUBST_SED.sysconfdir=	-e "s,/etc/gamin/,${PKG_SYSCONFDIR}/,"
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/gamin/distinfo
-FILESDIR=	${.CURDIR}/../../sysutils/gamin/files
 PATCHDIR=	${.CURDIR}/../../sysutils/gamin/patches
 
 LIBS.SunOS+=	-lsocket
