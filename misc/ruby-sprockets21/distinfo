@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/17 16:29:43 taca Exp $
+
+SHA1 (sprockets-2.1.2.gem) = b049a75f0679a0480dc80b238d17d7cf2d61e6ad
+RMD160 (sprockets-2.1.2.gem) = 8ff2d55b2887d5d84adf2ed3fccaf7ae872083aa
+Size (sprockets-2.1.2.gem) = 32768 bytes
