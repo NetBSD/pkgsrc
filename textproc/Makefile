@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.616 2012/03/16 17:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.617 2012/03/17 10:58:02 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -248,6 +248,7 @@ SUBDIR+=	metauml
 SUBDIR+=	migemo
 SUBDIR+=	migemo-elisp
 SUBDIR+=	mxml
+SUBDIR+=	mythes
 SUBDIR+=	namazu
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
