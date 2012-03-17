@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/16 15:55:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/17 15:06:58 taca Exp $
 bin/autospec
 bin/rspec
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/exe/autospec
 ${GEM_LIBDIR}/exe/rspec
@@ -9,12 +10,13 @@ ${GEM_LIBDIR}/features/Autotest.md
 ${GEM_LIBDIR}/features/README.md
 ${GEM_LIBDIR}/features/Upgrade.md
 ${GEM_LIBDIR}/features/command_line/README.md
-${GEM_LIBDIR}/features/command_line/configure.feature
 ${GEM_LIBDIR}/features/command_line/example_name_option.feature
 ${GEM_LIBDIR}/features/command_line/exit_status.feature
 ${GEM_LIBDIR}/features/command_line/format_option.feature
+${GEM_LIBDIR}/features/command_line/init.feature
 ${GEM_LIBDIR}/features/command_line/line_number_appended_to_path.feature
 ${GEM_LIBDIR}/features/command_line/line_number_option.feature
+${GEM_LIBDIR}/features/command_line/order.feature
 ${GEM_LIBDIR}/features/command_line/pattern_option.feature
 ${GEM_LIBDIR}/features/command_line/rake_task.feature
 ${GEM_LIBDIR}/features/command_line/ruby.feature
@@ -62,21 +64,20 @@ ${GEM_LIBDIR}/lib/rspec/autorun.rb
 ${GEM_LIBDIR}/lib/rspec/core.rb
 ${GEM_LIBDIR}/lib/rspec/core/backward_compatibility.rb
 ${GEM_LIBDIR}/lib/rspec/core/command_line.rb
-${GEM_LIBDIR}/lib/rspec/core/command_line_configuration.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration_options.rb
 ${GEM_LIBDIR}/lib/rspec/core/deprecation.rb
 ${GEM_LIBDIR}/lib/rspec/core/drb_command_line.rb
+${GEM_LIBDIR}/lib/rspec/core/drb_options.rb
 ${GEM_LIBDIR}/lib/rspec/core/dsl.rb
-${GEM_LIBDIR}/lib/rspec/core/errors.rb
 ${GEM_LIBDIR}/lib/rspec/core/example.rb
 ${GEM_LIBDIR}/lib/rspec/core/example_group.rb
-${GEM_LIBDIR}/lib/rspec/core/expecting/with_rspec.rb
-${GEM_LIBDIR}/lib/rspec/core/expecting/with_stdlib.rb
 ${GEM_LIBDIR}/lib/rspec/core/extensions.rb
 ${GEM_LIBDIR}/lib/rspec/core/extensions/instance_eval_with_args.rb
 ${GEM_LIBDIR}/lib/rspec/core/extensions/kernel.rb
 ${GEM_LIBDIR}/lib/rspec/core/extensions/module_eval_with_args.rb
+${GEM_LIBDIR}/lib/rspec/core/extensions/ordered.rb
+${GEM_LIBDIR}/lib/rspec/core/filter_manager.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/base_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/base_text_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/documentation_formatter.rb
@@ -97,6 +98,7 @@ ${GEM_LIBDIR}/lib/rspec/core/mocking/with_rr.rb
 ${GEM_LIBDIR}/lib/rspec/core/mocking/with_rspec.rb
 ${GEM_LIBDIR}/lib/rspec/core/option_parser.rb
 ${GEM_LIBDIR}/lib/rspec/core/pending.rb
+${GEM_LIBDIR}/lib/rspec/core/project_initializer.rb
 ${GEM_LIBDIR}/lib/rspec/core/rake_task.rb
 ${GEM_LIBDIR}/lib/rspec/core/reporter.rb
 ${GEM_LIBDIR}/lib/rspec/core/ruby_project.rb
@@ -111,15 +113,17 @@ ${GEM_LIBDIR}/lib/rspec/monkey/spork/test_framework/rspec.rb
 ${GEM_LIBDIR}/spec/autotest/discover_spec.rb
 ${GEM_LIBDIR}/spec/autotest/failed_results_re_spec.rb
 ${GEM_LIBDIR}/spec/autotest/rspec_spec.rb
-${GEM_LIBDIR}/spec/rspec/core/command_line_configuration_spec.rb
+${GEM_LIBDIR}/spec/command_line/order_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/command_line_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/command_line_spec_output.txt
 ${GEM_LIBDIR}/spec/rspec/core/configuration_options_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/configuration_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/deprecations_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/drb_command_line_spec.rb
+${GEM_LIBDIR}/spec/rspec/core/drb_options_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/example_group_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/example_spec.rb
+${GEM_LIBDIR}/spec/rspec/core/filter_manager_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/formatters/base_formatter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/formatters/base_text_formatter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/formatters/documentation_formatter_spec.rb
@@ -143,6 +147,7 @@ ${GEM_LIBDIR}/spec/rspec/core/let_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/metadata_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/option_parser_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/pending_example_spec.rb
+${GEM_LIBDIR}/spec/rspec/core/project_initializer_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/rake_task_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/reporter_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/resources/a_bar.rb
@@ -160,6 +165,7 @@ ${GEM_LIBDIR}/spec/rspec/core/subject_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core/world_spec.rb
 ${GEM_LIBDIR}/spec/rspec/core_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/config_options_helper.rb
 ${GEM_LIBDIR}/spec/support/matchers.rb
 ${GEM_LIBDIR}/spec/support/shared_example_groups.rb
 ${GEM_LIBDIR}/spec/support/spec_files.rb
