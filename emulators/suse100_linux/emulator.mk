@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.7 2011/09/12 11:34:08 joerg Exp $
+# $NetBSD: emulator.mk,v 1.8 2012/03/17 06:43:54 obache Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -28,9 +28,7 @@ DEPENDS_suse-10.0.cups?=	suse_libcups${_SUSE_VERSION_REQD}:../../emulators/suse1
 DEPENDS_suse-10.0.expat?=	suse_expat${_SUSE_VERSION_REQD}:../../emulators/suse100_expat
 DEPENDS_suse-10.0.fontconfig?=	suse_fontconfig${_SUSE_VERSION_REQD}:../../emulators/suse100_fontconfig
 DEPENDS_suse-10.0.freetype2?=	suse_freetype2${_SUSE_VERSION_REQD}:../../emulators/suse100_freetype2
-DEPENDS_suse-10.0.gdk-pixbuf?=	suse_gdk-pixbuf${_SUSE_VERSION_REQD}:../../emulators/suse100_gdk-pixbuf
 DEPENDS_suse-10.0.glx?=	suse_glx${_SUSE_VERSION_REQD}:../../emulators/suse100_glx
-DEPENDS_suse-10.0.gtk?=	suse_gtk${_SUSE_VERSION_REQD}:../../emulators/suse100_gtk
 DEPENDS_suse-10.0.gtk2?=	suse_gtk2${_SUSE_VERSION_REQD}:../../emulators/suse100_gtk2
 DEPENDS_suse-10.0.jpeg?=	suse_libjpeg${_SUSE_VERSION_REQD}:../../emulators/suse100_libjpeg
 DEPENDS_suse-10.0.krb5?=	suse_krb5${_SUSE_VERSION_REQD}:../../emulators/suse100_krb5
@@ -39,11 +37,9 @@ DEPENDS_suse-10.0.locale?=	suse_locale${_SUSE_VERSION_REQD}:../../emulators/suse
 DEPENDS_suse-10.0.motif?=	suse_openmotif${_SUSE_VERSION_REQD}:../../emulators/suse100_openmotif
 DEPENDS_suse-10.0.openssl?=	suse_openssl${_SUSE_VERSION_REQD}:../../emulators/suse100_openssl
 DEPENDS_suse-10.0.png?=	suse_libpng${_SUSE_VERSION_REQD}:../../emulators/suse100_libpng
-DEPENDS_suse-10.0.qt3?=		suse_qt3${_SUSE_VERSION_REQD}:../../emulators/suse100_qt3
 DEPENDS_suse-10.0.resmgr?=	suse_resmgr${_SUSE_VERSION_REQD}:../../emulators/suse100_resmgr
 DEPENDS_suse-10.0.slang?=	suse_slang${_SUSE_VERSION_REQD}:../../emulators/suse100_slang
 DEPENDS_suse-10.0.tiff?=	suse_libtiff${_SUSE_VERSION_REQD}:../../emulators/suse100_libtiff
-DEPENDS_suse-10.0.vmware?=	suse_vmware${_SUSE_VERSION_REQD}:../../emulators/suse100_vmware
 DEPENDS_suse-10.0.x11?=	suse_x11${_SUSE_VERSION_REQD}:../../emulators/suse100_x11
 DEPENDS_suse-10.0.xml2?=	suse_libxml2${_SUSE_VERSION_REQD}:../../emulators/suse100_libxml2
 
