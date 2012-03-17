@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/16 11:55:54 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/17 14:40:01 taca Exp $
 
-DISTNAME=	gettext_i18n_rails-0.4.3
+DISTNAME=	gettext_i18n_rails-0.4.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
