@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2011/07/01 15:10:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/17 16:51:05 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/CHANGELOG.ja.rdoc
 ${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/C_CODING_STYLE.rdoc
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.ja.rdoc
 ${GEM_LIBDIR}/README.rdoc
@@ -20,6 +21,8 @@ ${GEM_LIBDIR}/ext/nokogiri/html_entity_lookup.c
 ${GEM_LIBDIR}/ext/nokogiri/html_entity_lookup.h
 ${GEM_LIBDIR}/ext/nokogiri/html_sax_parser_context.c
 ${GEM_LIBDIR}/ext/nokogiri/html_sax_parser_context.h
+${GEM_LIBDIR}/ext/nokogiri/html_sax_push_parser.c
+${GEM_LIBDIR}/ext/nokogiri/html_sax_push_parser.h
 ${GEM_LIBDIR}/ext/nokogiri/nokogiri.c
 ${GEM_LIBDIR}/ext/nokogiri/nokogiri.h
 ${GEM_LIBDIR}/ext/nokogiri/xml_attr.c
@@ -98,6 +101,7 @@ ${GEM_LIBDIR}/lib/nokogiri/html/element_description_defaults.rb
 ${GEM_LIBDIR}/lib/nokogiri/html/entity_lookup.rb
 ${GEM_LIBDIR}/lib/nokogiri/html/sax/parser.rb
 ${GEM_LIBDIR}/lib/nokogiri/html/sax/parser_context.rb
+${GEM_LIBDIR}/lib/nokogiri/html/sax/push_parser.rb
 ${GEM_LIBDIR}/lib/nokogiri/nokogiri.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/nokogiri/syntax_error.rb
 ${GEM_LIBDIR}/lib/nokogiri/version.rb
@@ -197,6 +201,7 @@ ${GEM_LIBDIR}/test/xml/sax/test_push_parser.rb
 ${GEM_LIBDIR}/test/xml/test_attr.rb
 ${GEM_LIBDIR}/test/xml/test_attribute_decl.rb
 ${GEM_LIBDIR}/test/xml/test_builder.rb
+${GEM_LIBDIR}/test/xml/test_c14n.rb
 ${GEM_LIBDIR}/test/xml/test_cdata.rb
 ${GEM_LIBDIR}/test/xml/test_comment.rb
 ${GEM_LIBDIR}/test/xml/test_document.rb
@@ -212,6 +217,7 @@ ${GEM_LIBDIR}/test/xml/test_namespace.rb
 ${GEM_LIBDIR}/test/xml/test_node.rb
 ${GEM_LIBDIR}/test/xml/test_node_attributes.rb
 ${GEM_LIBDIR}/test/xml/test_node_encoding.rb
+${GEM_LIBDIR}/test/xml/test_node_inheritance.rb
 ${GEM_LIBDIR}/test/xml/test_node_reparenting.rb
 ${GEM_LIBDIR}/test/xml/test_node_set.rb
 ${GEM_LIBDIR}/test/xml/test_parse_options.rb
@@ -222,6 +228,7 @@ ${GEM_LIBDIR}/test/xml/test_schema.rb
 ${GEM_LIBDIR}/test/xml/test_syntax_error.rb
 ${GEM_LIBDIR}/test/xml/test_text.rb
 ${GEM_LIBDIR}/test/xml/test_unparented_node.rb
+${GEM_LIBDIR}/test/xml/test_xinclude.rb
 ${GEM_LIBDIR}/test/xml/test_xpath.rb
 ${GEM_LIBDIR}/test/xslt/test_custom_functions.rb
 ${GEM_LIBDIR}/test/xslt/test_exception_handling.rb
