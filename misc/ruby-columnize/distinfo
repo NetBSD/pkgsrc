@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2011/12/15 15:40:52 taca Exp $
+$NetBSD: distinfo,v 1.10 2012/03/17 16:16:32 taca Exp $
 
-SHA1 (columnize-0.3.5.gem) = cd690d3b5539acf2783b78083ee1831157f7adaf
-RMD160 (columnize-0.3.5.gem) = 21dc8a3de64603f20de705cc5d15b24f6bdd8b69
-Size (columnize-0.3.5.gem) = 14336 bytes
+SHA1 (columnize-0.3.6.gem) = 75d0dabbfb577dc350519aed4b21f780313efc9e
+RMD160 (columnize-0.3.6.gem) = 7b23be0ac17b4926ff7f59ed953f04163e082889
+Size (columnize-0.3.6.gem) = 13824 bytes
