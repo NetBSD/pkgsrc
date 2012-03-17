@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/02/23 09:53:05 ghen Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/03/17 02:14:15 ghen Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -203,6 +203,7 @@ include/dovecot/mail-transaction-log-private.h
 include/dovecot/mail-transaction-log-view-private.h
 include/dovecot/mail-transaction-log.h
 include/dovecot/mail-types.h
+include/dovecot/mail-user-hash.h
 include/dovecot/mail-user.h
 include/dovecot/mailbox-guid-cache.h
 include/dovecot/mailbox-list-delete.h
@@ -369,6 +370,7 @@ lib/dovecot/lib20_expire_plugin.la
 lib/dovecot/lib20_fts_plugin.la
 lib/dovecot/lib20_listescape_plugin.la
 lib/dovecot/lib20_mail_log_plugin.la
+lib/dovecot/lib20_replication_plugin.la
 lib/dovecot/lib20_virtual_plugin.la
 lib/dovecot/lib20_zlib_plugin.la
 lib/dovecot/lib21_fts_squat_plugin.la
@@ -381,6 +383,7 @@ lib/dovecot/libdovecot-sql.la
 lib/dovecot/libdovecot-ssl.la
 lib/dovecot/libdovecot-storage.la
 lib/dovecot/libdovecot.la
+libexec/dovecot/aggregator
 libexec/dovecot/anvil
 libexec/dovecot/auth
 libexec/dovecot/checkpassword-reply
@@ -404,6 +407,7 @@ libexec/dovecot/maildirlock
 libexec/dovecot/pop3
 libexec/dovecot/pop3-login
 libexec/dovecot/rawlog
+libexec/dovecot/replicator
 libexec/dovecot/script
 libexec/dovecot/script-login
 libexec/dovecot/ssl-params
