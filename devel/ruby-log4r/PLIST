@@ -1,11 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/10 05:54:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/03/17 14:40:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/INSTALL
-${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/LICENSE.LGPLv3
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/doc/content/contact.html
 ${GEM_LIBDIR}/doc/content/contribute.html
 ${GEM_LIBDIR}/doc/content/index.html
@@ -66,6 +60,7 @@ ${GEM_LIBDIR}/lib/log4r/outputter/outputter.rb
 ${GEM_LIBDIR}/lib/log4r/outputter/outputterfactory.rb
 ${GEM_LIBDIR}/lib/log4r/outputter/remoteoutputter.rb
 ${GEM_LIBDIR}/lib/log4r/outputter/rollingfileoutputter.rb
+${GEM_LIBDIR}/lib/log4r/outputter/scribeoutputter.rb
 ${GEM_LIBDIR}/lib/log4r/outputter/staticoutputter.rb
 ${GEM_LIBDIR}/lib/log4r/outputter/syslogoutputter.rb
 ${GEM_LIBDIR}/lib/log4r/outputter/udpoutputter.rb
@@ -75,21 +70,25 @@ ${GEM_LIBDIR}/lib/log4r/rdoc/NDC
 ${GEM_LIBDIR}/lib/log4r/rdoc/configurator
 ${GEM_LIBDIR}/lib/log4r/rdoc/emailoutputter
 ${GEM_LIBDIR}/lib/log4r/rdoc/formatter
+${GEM_LIBDIR}/lib/log4r/rdoc/log4jxmlformatter
 ${GEM_LIBDIR}/lib/log4r/rdoc/log4r
 ${GEM_LIBDIR}/lib/log4r/rdoc/logger
 ${GEM_LIBDIR}/lib/log4r/rdoc/logserver
 ${GEM_LIBDIR}/lib/log4r/rdoc/outputter
 ${GEM_LIBDIR}/lib/log4r/rdoc/patternformatter
+${GEM_LIBDIR}/lib/log4r/rdoc/scribeoutputter
 ${GEM_LIBDIR}/lib/log4r/rdoc/syslogoutputter
 ${GEM_LIBDIR}/lib/log4r/rdoc/win32eventoutputter
 ${GEM_LIBDIR}/lib/log4r/rdoc/yamlconfigurator
 ${GEM_LIBDIR}/lib/log4r/repository.rb
 ${GEM_LIBDIR}/lib/log4r/staticlogger.rb
+${GEM_LIBDIR}/lib/log4r/version.rb
 ${GEM_LIBDIR}/lib/log4r/yamlconfigurator.rb
 ${GEM_LIBDIR}/tests/README
 ${GEM_LIBDIR}/tests/testGDC.rb
 ${GEM_LIBDIR}/tests/testMDC.rb
 ${GEM_LIBDIR}/tests/testNDC.rb
+${GEM_LIBDIR}/tests/test_helper.rb
 ${GEM_LIBDIR}/tests/testall.rb
 ${GEM_LIBDIR}/tests/testbase.rb
 ${GEM_LIBDIR}/tests/testchainsaw.rb
@@ -101,4 +100,7 @@ ${GEM_LIBDIR}/tests/testoutputter.rb
 ${GEM_LIBDIR}/tests/testpatternformatter.rb
 ${GEM_LIBDIR}/tests/testthreads.rb
 ${GEM_LIBDIR}/tests/testxmlconf.rb
+${GEM_LIBDIR}/tests/testyaml.rb
+${GEM_LIBDIR}/tests/testyaml_arrays.yaml
+${GEM_LIBDIR}/tests/testyaml_injection.yaml
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
