@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/12/15 15:41:36 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/03/17 16:58:19 taca Exp $
 
-SHA1 (net-ping-1.5.2.gem) = c216fff1eeff7886c2b3b68d2c29e57033a7d0e3
-RMD160 (net-ping-1.5.2.gem) = 2d46be962aff557e0a225d53a6657bb5d0fd2664
-Size (net-ping-1.5.2.gem) = 25600 bytes
+SHA1 (net-ping-1.5.3.gem) = 925448a283726bc159e3f896ceb6252f1d059560
+RMD160 (net-ping-1.5.3.gem) = f71bceccb98635272827938b6cd02781409aa2d6
+Size (net-ping-1.5.3.gem) = 25600 bytes
