@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.832 2012/03/17 05:17:44 taca Exp $
+$NetBSD: CHANGES-2012,v 1.833 2012/03/17 06:13:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1206,3 +1206,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed emulators/suse100_qt3 [obache 2012-03-17]
 	Removed emulators/suse100_32_qt3 [obache 2012-03-17]
 	Updated www/contao211-translations to 201203160 [taca 2012-03-17]
+	Removed emulators/suse100_gdk-pixbuf [obache 2012-03-17]
+	Removed emulators/suse100_32_gdk-pixbuf [obache 2012-03-17]
+	Removed emulators/suse100_gtk [obache 2012-03-17]
+	Removed emulators/suse100_32_gtk [obache 2012-03-17]
+	Removed emulators/suse100_vmware [obache 2012-03-17]
+	Removed emulators/suse100_32_vmware [obache 2012-03-17]
+	Removed emulators/suse113_vmware [obache 2012-03-17]
+	Removed emulators/suse113_32_vmware [obache 2012-03-17]
+	Updated meta-pkgs/suse100 to 10.0nb5 [obache 2012-03-17]
+	Updated meta-pkgs/suse113 to 11.3nb1 [obache 2012-03-17]
