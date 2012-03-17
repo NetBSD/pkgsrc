@@ -1,0 +1,19 @@
+# $NetBSD: INSTALL,v 1.1 2012/03/17 13:57:59 taca Exp $
+
+GEMSPEC="@PREFIX@/@GEM_HOME@/specifications/@GEM_NAME@.gemspec"
+RAKE_HACK="@RAKE_HACK@"
+RAKE_BIN="@PREFIX@/bin/rake@RUBY_VER@"
+RAKE_BIN_HACK="@PREFIX@/bin/@RAKEBIN@"
+
+case ${STAGE} in
+POST-INSTALL)
+	if [ "${RAKE_HACK}" -a -f ${GEMSPEC} ]; then
+		${MV} ${GEMSPEC} ${GEMSPEC}.orig
+		${MV} ${GEMSPEC}${RAKE_HACK} ${GEMSPEC}
+	fi
+	if [ "${RAKE_BIN}" != "${RAKE_BIN_HACK}" ]; then
+		${MV} ${RAKE_BIN} ${RAKE_BIN_HACK}.save
+		${MV} ${RAKE_BIN_HACK} ${RAKE_BIN}
+	fi
+	;;
+esac
