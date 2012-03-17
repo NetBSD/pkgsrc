@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/02/23 14:20:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/03/17 14:29:27 taca Exp $
 bin/sequel
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -64,6 +64,7 @@ ${GEM_LIBDIR}/doc/release_notes/3.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.30.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.31.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.32.0.txt
+${GEM_LIBDIR}/doc/release_notes/3.33.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/3.6.0.txt
@@ -161,6 +162,7 @@ ${GEM_LIBDIR}/lib/sequel/dataset/prepared_statements.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/query.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/sql.rb
 ${GEM_LIBDIR}/lib/sequel/exceptions.rb
+${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/inflector.rb
@@ -171,6 +173,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pagination.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/schema_dumper.rb
+${GEM_LIBDIR}/lib/sequel/extensions/server_block.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_date_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
@@ -254,6 +257,7 @@ ${GEM_LIBDIR}/spec/core/schema_spec.rb
 ${GEM_LIBDIR}/spec/core/spec_helper.rb
 ${GEM_LIBDIR}/spec/core/version_spec.rb
 ${GEM_LIBDIR}/spec/extensions/active_model_spec.rb
+${GEM_LIBDIR}/spec/extensions/arbitrary_servers_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_autoreloading_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_dependencies_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_pks_spec.rb
@@ -293,6 +297,7 @@ ${GEM_LIBDIR}/spec/extensions/schema_dumper_spec.rb
 ${GEM_LIBDIR}/spec/extensions/schema_spec.rb
 ${GEM_LIBDIR}/spec/extensions/serialization_modification_detection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/serialization_spec.rb
+${GEM_LIBDIR}/spec/extensions/server_block_spec.rb
 ${GEM_LIBDIR}/spec/extensions/sharding_spec.rb
 ${GEM_LIBDIR}/spec/extensions/single_table_inheritance_spec.rb
 ${GEM_LIBDIR}/spec/extensions/skip_create_refresh_spec.rb
@@ -349,6 +354,10 @@ ${GEM_LIBDIR}/spec/files/reversible_migrations/005_reversible.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253849_create_sessions.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253851_create_nodes.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253853_3_create_users.rb
+${GEM_LIBDIR}/spec/files/transaction_migrations/001_create_alt_basic.rb
+${GEM_LIBDIR}/spec/files/transaction_migrations/002_create_basic.rb
+${GEM_LIBDIR}/spec/files/transactionless_migrations/001_create_alt_basic.rb
+${GEM_LIBDIR}/spec/files/transactionless_migrations/002_create_basic.rb
 ${GEM_LIBDIR}/spec/files/uppercase_timestamped_migrations/1273253849_CREATE_SESSIONS.RB
 ${GEM_LIBDIR}/spec/files/uppercase_timestamped_migrations/1273253851_CREATE_NODES.RB
 ${GEM_LIBDIR}/spec/files/uppercase_timestamped_migrations/1273253853_3_CREATE_USERS.RB
