@@ -1,14 +1,17 @@
-$NetBSD: distinfo,v 1.5 2012/03/12 15:43:13 taca Exp $
+$NetBSD: distinfo,v 1.6 2012/03/17 05:17:03 taca Exp $
 
 SHA1 (Contao-Bulgarian-v24.zip) = 23518f9974d88d548e7fa40ffa7cf9d0f19fc12d
 RMD160 (Contao-Bulgarian-v24.zip) = 186b562c6bf0a70d0e1f19ce10d12e375133602b
 Size (Contao-Bulgarian-v24.zip) = 122294 bytes
-SHA1 (Contao-Czech-v47.zip) = c281781ee90228f75716f58fe420c6bbf76b99b3
-RMD160 (Contao-Czech-v47.zip) = c712463725da59c3cfcb85764d21b22d46e944c9
-Size (Contao-Czech-v47.zip) = 149746 bytes
-SHA1 (Contao-Dutch-v58.zip) = 59e3764f6f013b956c7449fd54c1acc3d0dde784
-RMD160 (Contao-Dutch-v58.zip) = 3088dd0f34cdb236ca0c45cebac1f213b1d151fe
-Size (Contao-Dutch-v58.zip) = 136064 bytes
+SHA1 (Contao-Czech-v49.zip) = a2a6900f3d58d2ac5958312fdf5959e988368648
+RMD160 (Contao-Czech-v49.zip) = 896f9f711809ceb5f10570682cc5bf1f9ed145c3
+Size (Contao-Czech-v49.zip) = 150625 bytes
+SHA1 (Contao-Danish-v16.zip) = 254073b7b9c1cbf5cbdcebce8ae5df72519452c8
+RMD160 (Contao-Danish-v16.zip) = 80a6883b921c60d9feb80fb0f0b947b6dd547069
+Size (Contao-Danish-v16.zip) = 146286 bytes
+SHA1 (Contao-Dutch-v59.zip) = a6a17550d84854ae9d23a9f33ac986127e713b85
+RMD160 (Contao-Dutch-v59.zip) = f77141ded9aee0c1fb33d6850ff97b4ec8391009
+Size (Contao-Dutch-v59.zip) = 136014 bytes
 SHA1 (Contao-French-v80.zip) = 30cdc168ccd80c576867ef14d69a761a83737666
 RMD160 (Contao-French-v80.zip) = 5b5da5d2b8467744fb62110f6342629724987f3e
 Size (Contao-French-v80.zip) = 147034 bytes
@@ -36,6 +39,15 @@ Size (Contao-Romanian-v14.zip) = 138548 bytes
 SHA1 (Contao-Russian-v46.zip) = 24905a4e086e7291902e0ac010a340f8d82135a5
 RMD160 (Contao-Russian-v46.zip) = 2d706741bfa1a336e041d8f0c2ace414d2b9e5e0
 Size (Contao-Russian-v46.zip) = 172745 bytes
+SHA1 (Contao-Slovak-v10.zip) = f571931557decb607309d85eb342df3065e7112e
+RMD160 (Contao-Slovak-v10.zip) = 87bf6a8c65b16e97519baa7b1e6e3afadf84610d
+Size (Contao-Slovak-v10.zip) = 114137 bytes
+SHA1 (Contao-Slovenian-v13.zip) = ae9ced74e327687bd90f75cd2fe389f0b5229f10
+RMD160 (Contao-Slovenian-v13.zip) = 255dc7c47153670ad5aff9f1c0c4dda612f202d4
+Size (Contao-Slovenian-v13.zip) = 132721 bytes
+SHA1 (Contao-Spanish-v18.zip) = 13584f017e16871c2ad01bbd3a0b4300ae64e65b
+RMD160 (Contao-Spanish-v18.zip) = 0fc5962f0bd1f2bd27dab46e5d91337233aa0425
+Size (Contao-Spanish-v18.zip) = 149049 bytes
 SHA1 (Contao-Swedish-v64.zip) = bb851313190a33920c95dec99107b9b1af636a9c
 RMD160 (Contao-Swedish-v64.zip) = 07f02e0f85da19776189c1a461cc319be6b6d7da
 Size (Contao-Swedish-v64.zip) = 143087 bytes
