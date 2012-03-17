@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/12/15 14:58:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/03/17 16:42:00 taca Exp $
 bin/rackup
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -83,6 +83,7 @@ ${GEM_LIBDIR}/test/cgi/lighttpd.conf
 ${GEM_LIBDIR}/test/cgi/rackup_stub.rb
 ${GEM_LIBDIR}/test/cgi/sample_rackup.ru
 ${GEM_LIBDIR}/test/cgi/test
+${GEM_LIBDIR}/test/cgi/test+directory/test+file
 ${GEM_LIBDIR}/test/cgi/test.fcgi
 ${GEM_LIBDIR}/test/cgi/test.ru
 ${GEM_LIBDIR}/test/gemloader.rb
@@ -96,6 +97,9 @@ ${GEM_LIBDIR}/test/multipart/filename_and_modification_param
 ${GEM_LIBDIR}/test/multipart/filename_with_escaped_quotes
 ${GEM_LIBDIR}/test/multipart/filename_with_escaped_quotes_and_modification_param
 ${GEM_LIBDIR}/test/multipart/filename_with_percent_escaped_quotes
+${GEM_LIBDIR}/test/multipart/filename_with_unescaped_percentages
+${GEM_LIBDIR}/test/multipart/filename_with_unescaped_percentages2
+${GEM_LIBDIR}/test/multipart/filename_with_unescaped_percentages3
 ${GEM_LIBDIR}/test/multipart/filename_with_unescaped_quotes
 ${GEM_LIBDIR}/test/multipart/ie
 ${GEM_LIBDIR}/test/multipart/mixed_files
@@ -152,6 +156,7 @@ ${GEM_LIBDIR}/test/spec_thin.rb
 ${GEM_LIBDIR}/test/spec_urlmap.rb
 ${GEM_LIBDIR}/test/spec_utils.rb
 ${GEM_LIBDIR}/test/spec_webrick.rb
+${GEM_LIBDIR}/test/static/index.html
 ${GEM_LIBDIR}/test/testrequest.rb
 ${GEM_LIBDIR}/test/unregistered_handler/rack/handler/unregistered.rb
 ${GEM_LIBDIR}/test/unregistered_handler/rack/handler/unregistered_long_one.rb
