@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2012/03/17 04:59:33 obache Exp $
+# $NetBSD: Makefile,v 1.196 2012/03/17 06:08:15 obache Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -118,9 +118,7 @@ SUBDIR+=	suse100_32_compat
 SUBDIR+=	suse100_32_expat
 SUBDIR+=	suse100_32_fontconfig
 SUBDIR+=	suse100_32_freetype2
-SUBDIR+=	suse100_32_gdk-pixbuf
 SUBDIR+=	suse100_32_glx
-SUBDIR+=	suse100_32_gtk
 SUBDIR+=	suse100_32_gtk2
 SUBDIR+=	suse100_32_krb5
 SUBDIR+=	suse100_32_libcups
@@ -134,7 +132,6 @@ SUBDIR+=	suse100_32_openmotif
 SUBDIR+=	suse100_32_openssl
 SUBDIR+=	suse100_32_resmgr
 SUBDIR+=	suse100_32_slang
-SUBDIR+=	suse100_32_vmware
 SUBDIR+=	suse100_32_x11
 SUBDIR+=	suse100_alsa
 SUBDIR+=	suse100_aspell
@@ -143,9 +140,7 @@ SUBDIR+=	suse100_compat
 SUBDIR+=	suse100_expat
 SUBDIR+=	suse100_fontconfig
 SUBDIR+=	suse100_freetype2
-SUBDIR+=	suse100_gdk-pixbuf
 SUBDIR+=	suse100_glx
-SUBDIR+=	suse100_gtk
 SUBDIR+=	suse100_gtk2
 SUBDIR+=	suse100_krb5
 SUBDIR+=	suse100_libcups
@@ -160,7 +155,6 @@ SUBDIR+=	suse100_openmotif
 SUBDIR+=	suse100_openssl
 SUBDIR+=	suse100_resmgr
 SUBDIR+=	suse100_slang
-SUBDIR+=	suse100_vmware
 SUBDIR+=	suse100_x11
 SUBDIR+=	suse113_32_alsa
 SUBDIR+=	suse113_32_aspell
@@ -185,7 +179,6 @@ SUBDIR+=	suse113_32_openmotif
 SUBDIR+=	suse113_32_openssl
 SUBDIR+=	suse113_32_qt4
 SUBDIR+=	suse113_32_slang
-SUBDIR+=	suse113_32_vmware
 SUBDIR+=	suse113_32_x11
 SUBDIR+=	suse113_alsa
 SUBDIR+=	suse113_aspell
@@ -211,7 +204,6 @@ SUBDIR+=	suse113_openmotif
 SUBDIR+=	suse113_openssl
 SUBDIR+=	suse113_qt4
 SUBDIR+=	suse113_slang
-SUBDIR+=	suse113_vmware
 SUBDIR+=	suse113_x11
 SUBDIR+=	swarm
 SUBDIR+=	tme
