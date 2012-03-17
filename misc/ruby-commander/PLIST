@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2011/08/12 16:57:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/17 16:17:22 taca Exp $
 bin/commander
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/DEVELOPMENT
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.rdoc
 ${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.rdoc
@@ -33,10 +36,6 @@ ${GEM_LIBDIR}/spec/core_ext/array_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/object_spec.rb
 ${GEM_LIBDIR}/spec/help_formatters/terminal_spec.rb
 ${GEM_LIBDIR}/spec/runner_spec.rb
-${GEM_LIBDIR}/spec/spec.opts
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/ui_spec.rb
-${GEM_LIBDIR}/tasks/dev_setup.rake
-${GEM_LIBDIR}/tasks/docs.rake
-${GEM_LIBDIR}/tasks/gemspec.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
