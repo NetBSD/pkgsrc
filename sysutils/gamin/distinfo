@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2010/04/16 22:32:14 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2012/03/17 02:19:08 wiz Exp $
 
 SHA1 (gamin-0.1.10.tar.gz) = f4c6b9fe87757552ef58fef4abef9e42cd3142ac
 RMD160 (gamin-0.1.10.tar.gz) = fb6ba5ec2d2f49afacf10dda4095f02f5930d686
@@ -7,8 +7,12 @@ SHA1 (patch-aa) = 0d3700cf3e1abd4dab2f6e801d31e25e352474a0
 SHA1 (patch-ab) = d0f280fc8b2cbedee2d2a38cd67e8eb6aecba66d
 SHA1 (patch-ac) = bc06c646288bf1f1fcf4aa73eb06da55e0620b1e
 SHA1 (patch-ad) = 0ed5da772a0afbce7abf01623c9aebdd67e68537
-SHA1 (patch-ae) = 954e0d2678193e0bedab7e87b80548a3eef71b0e
+SHA1 (patch-ae) = 957f1bc0690b6c41b7724c9667387b7f1e03e014
 SHA1 (patch-af) = 7cda705d59206a1fad0c91b56206630f01717adc
 SHA1 (patch-ag) = 59b35394c29d0cbbf7905df24ef4ba913ebfec46
 SHA1 (patch-ah) = 79e132b615a6492587a10a550c421fcc91a27761
 SHA1 (patch-ai) = 54c6d347eef37a97e16c6f00870953fbdba41182
+SHA1 (patch-server_gam__node.c) = 286655e55996523d4ce5ea3df0ce6f9e12cf4278
+SHA1 (patch-server_gam__node.h) = 49a0d381b4900564c4f0ba7a654eb22e294c0a16
+SHA1 (patch-server_gam__subscription.c) = 58f6c10e4e1e899d097662536ea31bf8a692b114
+SHA1 (patch-server_gam__subscription.h) = 6347865210aa0338bc8b0a81fc671824c786fd26
