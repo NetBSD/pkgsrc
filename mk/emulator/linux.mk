@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.14 2012/01/18 00:52:20 sbd Exp $
+# $NetBSD: linux.mk,v 1.15 2012/03/17 04:59:34 obache Exp $
 #
 # Linux binary emulation framework
 #
@@ -79,7 +79,6 @@ _EMUL_MODULES+=		locale
 _EMUL_MODULES+=		motif
 _EMUL_MODULES+=		openssl
 _EMUL_MODULES+=		png
-_EMUL_MODULES+=		qt3
 _EMUL_MODULES+=		qt4
 _EMUL_MODULES+=		resmgr
 _EMUL_MODULES+=		slang

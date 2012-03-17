@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2012/02/20 15:45:19 reinoud Exp $
+# $NetBSD: Makefile,v 1.195 2012/03/17 04:59:33 obache Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -132,7 +132,6 @@ SUBDIR+=	suse100_32_libxml2
 SUBDIR+=	suse100_32_locale
 SUBDIR+=	suse100_32_openmotif
 SUBDIR+=	suse100_32_openssl
-SUBDIR+=	suse100_32_qt3
 SUBDIR+=	suse100_32_resmgr
 SUBDIR+=	suse100_32_slang
 SUBDIR+=	suse100_32_vmware
@@ -159,7 +158,6 @@ SUBDIR+=	suse100_libxml2
 SUBDIR+=	suse100_locale
 SUBDIR+=	suse100_openmotif
 SUBDIR+=	suse100_openssl
-SUBDIR+=	suse100_qt3
 SUBDIR+=	suse100_resmgr
 SUBDIR+=	suse100_slang
 SUBDIR+=	suse100_vmware
