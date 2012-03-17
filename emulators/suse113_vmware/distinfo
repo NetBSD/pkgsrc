@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 01:28:12 chs Exp $
-
-SHA1 (suse113/i586/grep-2.5.4-7.1.i586.rpm) = e9c17b93376cc6a78b134f2330703d7f562f68d3
-RMD160 (suse113/i586/grep-2.5.4-7.1.i586.rpm) = e82657e5336697d525b3718e880d380a765eb29e
-Size (suse113/i586/grep-2.5.4-7.1.i586.rpm) = 164953 bytes
-SHA1 (suse113/x86_64/grep-2.5.4-7.1.x86_64.rpm) = 14b489e6ad01dbf36c2b182515807ff76cac65a0
-RMD160 (suse113/x86_64/grep-2.5.4-7.1.x86_64.rpm) = 97dc3035fc546647e6cca484ef7a4480e302b0b6
-Size (suse113/x86_64/grep-2.5.4-7.1.x86_64.rpm) = 167022 bytes
