@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2011/12/15 14:56:17 taca Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/17 16:06:54 taca Exp $
 
-DISTNAME=	mail-2.3.0
+DISTNAME=	mail-2.4.4
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,8 +8,8 @@ HOMEPAGE=	http://github.com/mikel/mail
 COMMENT=	Mail provides a nice Ruby DSL for making, sending and reading emails
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.16:../../mail/ruby-mime-types
-DEPENDS+=	${RUBY_PKGPREFIX}-treetop>=1.4.8:../../textproc/ruby-treetop
+DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.16<2:../../mail/ruby-mime-types
+DEPENDS+=	${RUBY_PKGPREFIX}-treetop>=1.4.8<1.5:../../textproc/ruby-treetop
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.4.0:../../devel/ruby-i18n
 
 .include "../../lang/ruby/gem.mk"
