@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2011/08/12 17:22:41 taca Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/18 02:46:43 taca Exp $
 
-DISTNAME=	stringex-1.3.0
+DISTNAME=	stringex-1.3.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
