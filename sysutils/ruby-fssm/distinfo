@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/19 07:36:15 taca Exp $
+$NetBSD: distinfo,v 1.2 2012/03/18 02:35:27 taca Exp $
 
-SHA1 (fssm-0.2.7.gem) = a76aad02acbc7ae1763533f3e50487745c017eba
-RMD160 (fssm-0.2.7.gem) = 2287126a9865f293269e88a3270d47dea133e282
-Size (fssm-0.2.7.gem) = 25088 bytes
+SHA1 (fssm-0.2.8.1.gem) = 590e6a6fc6d152134b7d99f362f69acff8cfbd4f
+RMD160 (fssm-0.2.8.1.gem) = dbdb3ea18373da4beda10a34aa3a0f1806718079
+Size (fssm-0.2.8.1.gem) = 25088 bytes
