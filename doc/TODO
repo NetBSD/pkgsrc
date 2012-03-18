@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10955 2012/03/18 18:09:30 wiz Exp $
+$NetBSD: TODO,v 1.10956 2012/03/18 21:16:06 pettai Exp $
 
 Suggested new packages
 ======================
@@ -973,7 +973,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mgetty+sendfax-1.1.35
 	o migu-ttf-20111002 [pkg/46169]
 	o milkytracker-0.90.85
-	o mimedefang-2.73
 	o mined-2012.21
 	o minicom-2.6
 	o minivmac-3.2.3
