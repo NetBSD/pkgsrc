@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.876 2012/03/18 07:56:25 taca Exp $
+$NetBSD: CHANGES-2012,v 1.877 2012/03/18 08:10:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1320,3 +1320,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed devel/ruby-rspec-rails1 [taca 2012-03-18]
 	Removed devel/ruby-rspec1 [taca 2012-03-18]
 	Removed databases/ruby-acts-as-versioned02 [taca 2012-03-18]
+	Removed www/ruby-rails [taca 2012-03-18]
+	Removed mail/ruby-actionmailer [taca 2012-03-18]
+	Removed www/ruby-activeresource [taca 2012-03-18]
+	Removed databases/ruby-activerecord [taca 2012-03-18]
+	Removed www/ruby-actionpack [taca 2012-03-18]
+	Removed devel/ruby-activesupport [taca 2012-03-18]
