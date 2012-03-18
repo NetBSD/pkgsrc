@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.865 2012/03/18 02:33:18 taca Exp $
+$NetBSD: CHANGES-2012,v 1.866 2012/03/18 02:36:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1274,3 +1274,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/uulib to 0.5.20nb5 [wiz 2012-03-17]
 	Updated net/quagga to 0.99.20.1 [gdt 2012-03-18]
 	Updated sysutils/capistrano to 2.11.2 [taca 2012-03-18]
+	Updated sysutils/ruby-facter to 1.6.5 [taca 2012-03-18]
+	Updated sysutils/ruby-fssm to 0.2.8.1 [taca 2012-03-18]
