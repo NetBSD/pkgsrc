@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.890 2012/03/18 21:20:58 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.891 2012/03/18 21:23:22 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/mono to 2.10.6nb2 [wiz 2012-03-18]
 	Updated mail/mimedefang to 2.73 [pettai 2012-03-18]
 	Updated x11/xicc to 0.1nb3 [jakllsch 2012-03-18]
+	Updated x11/xcalib to 0.8nb1 [jakllsch 2012-03-18]
