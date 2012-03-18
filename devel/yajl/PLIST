@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/18 16:56:32 abs Exp $
+include/yajl/yajl_common.h
+include/yajl/yajl_gen.h
+include/yajl/yajl_parse.h
+lib/libyajl.la
