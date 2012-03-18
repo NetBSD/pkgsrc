@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1575 2012/03/17 15:43:43 taca Exp $
+# $NetBSD: Makefile,v 1.1576 2012/03/18 06:53:54 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1339,9 +1339,11 @@ SUBDIR+=	ruby-SDL
 SUBDIR+=	ruby-abstract
 SUBDIR+=	ruby-activemodel
 SUBDIR+=	ruby-activemodel31
+SUBDIR+=	ruby-activemodel32
 SUBDIR+=	ruby-activesupport
 SUBDIR+=	ruby-activesupport3
 SUBDIR+=	ruby-activesupport31
+SUBDIR+=	ruby-activesupport32
 SUBDIR+=	ruby-amstd
 SUBDIR+=	ruby-assistance
 SUBDIR+=	ruby-bsearch
@@ -1407,6 +1409,7 @@ SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties
 SUBDIR+=	ruby-railties31
+SUBDIR+=	ruby-railties32
 SUBDIR+=	ruby-randexp
 SUBDIR+=	ruby-rbtree
 SUBDIR+=	ruby-rbx-require-relative
