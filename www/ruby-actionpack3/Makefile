@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2012/03/03 04:47:14 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/03/18 05:24:54 taca Exp $
 
 DISTNAME=	actionpack-${RUBY_RAILS3_VERSION}
-PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Toolkit for building modeling frameworks (part of Rails)
+COMMENT=	Toolkit for building modeling frameworks (part of Rails 3.0)
 LICENSE=	mit
 
 # Comment out dependency in gemspec but already depends indirectly one.
