@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.878 2012/03/18 08:17:15 taca Exp $
+$NetBSD: CHANGES-2012,v 1.879 2012/03/18 09:10:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1327,3 +1327,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/ruby-actionpack [taca 2012-03-18]
 	Removed devel/ruby-activesupport [taca 2012-03-18]
 	Removed www/ruby-rack11 [taca 2012-03-18]
+	Updated archivers/ruby-zip to 0.9.6.1 [taca 2012-03-18]
