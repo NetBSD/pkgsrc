@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.886 2012/03/18 17:39:15 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.887 2012/03/18 19:24:07 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1335,3 +1335,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/yajl version 2.0.1 [abs 2012-03-18]
 	Updated math/mathomatic to 15.8.1 [asau 2012-03-18]
 	Updated security/opendnssec to 1.3.7 [pettai 2012-03-18]
+	Updated security/dnssec-tools to 1.12.1 [pettai 2012-03-18]
