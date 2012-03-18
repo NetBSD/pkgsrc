@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.863 2012/03/17 22:30:30 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.864 2012/03/18 01:14:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ruby-net-ping to 1.5.3 [taca 2012-03-17]
 	Updated security/ruby-net-ssh to 2.3.0 [taca 2012-03-17]
 	Updated converters/uulib to 0.5.20nb5 [wiz 2012-03-17]
+	Updated net/quagga to 0.99.20.1 [gdt 2012-03-18]
