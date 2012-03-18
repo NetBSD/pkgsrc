@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/18 16:56:32 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/18 23:22:03 abs Exp $
+bin/json_reformat
+bin/json_verify
 include/yajl/yajl_common.h
 include/yajl/yajl_gen.h
 include/yajl/yajl_parse.h
-lib/libyajl.la
+include/yajl/yajl_tree.h
+include/yajl/yajl_version.h
+lib/libyajl.so
+lib/libyajl.so.2
+lib/libyajl.so.2.0.1
+lib/libyajl_s.a
