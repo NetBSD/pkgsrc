@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/08/19 12:16:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/18 19:23:27 pettai Exp $
 bin/getaddr
 bin/gethost
 bin/getname
@@ -36,8 +36,8 @@ man/man3/resolv_conf_set.3
 man/man3/root_hints_get.3
 man/man3/root_hints_set.3
 man/man3/val_add_valpolicy.3
+man/man3/val_context_setqflags.3
 man/man3/val_create_context.3
-man/man3/val_create_context_with_conf.3
 man/man3/val_does_not_exist.3
 man/man3/val_free_answer_chain.3
 man/man3/val_free_context.3
