@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.867 2012/03/18 07:06:38 taca Exp $
+# $NetBSD: Makefile,v 1.868 2012/03/18 07:15:30 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -636,6 +636,8 @@ SUBDIR+=	ruby-rails31
 SUBDIR+=	ruby-rails32
 SUBDIR+=	ruby-raindrops
 SUBDIR+=	ruby-sass
+SUBDIR+=	ruby-sass-rails31
+SUBDIR+=	ruby-sass-rails32
 SUBDIR+=	ruby-sinatra
 SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
