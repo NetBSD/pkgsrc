@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/18 06:53:00 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/1.9.3/gems/rails-${PKGVERSION}
