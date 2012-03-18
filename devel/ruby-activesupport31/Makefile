@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/03/03 04:47:14 taca Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/18 05:36:53 taca Exp $
 
 DISTNAME=	activesupport-${RUBY_RAILS_VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Toolkit of support libraries and Ruby core extensions 3.1
+COMMENT=	Toolkit of support libraries (part of Rails 3.1)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.0<2:../../textproc/ruby-multi_json
