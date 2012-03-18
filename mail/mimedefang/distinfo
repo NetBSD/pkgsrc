@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2011/07/27 04:23:53 pettai Exp $
+$NetBSD: distinfo,v 1.24 2012/03/18 21:11:11 pettai Exp $
 
-SHA1 (mimedefang-2.72.tar.gz) = 13c3eb90100d4fa192773a2fa36a1c1db019150d
-RMD160 (mimedefang-2.72.tar.gz) = 2bba6655b2109641697425fde598ee23063aba63
-Size (mimedefang-2.72.tar.gz) = 348897 bytes
+SHA1 (mimedefang-2.73.tar.gz) = 224422495caacdaaec261743ec11f25a8e065c9a
+RMD160 (mimedefang-2.73.tar.gz) = b0c988aa858e11d3023b89f4bcc688cef4ff597f
+Size (mimedefang-2.73.tar.gz) = 356601 bytes
 SHA1 (patch-ac) = 8733dca9408f29f63d71f6a0f3af817ef6b9a148
 SHA1 (patch-ad) = 1130dad09875d069ca246db8f8f567366e0af5be
