@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.872 2012/03/18 05:55:48 taca Exp $
+$NetBSD: CHANGES-2012,v 1.873 2012/03/18 07:07:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1305,3 +1305,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-railties31 to 3.1.4 [taca 2012-03-18]
 	Updated www/ruby-rails31 to 3.1.4 [taca 2012-03-18]
 	Updated databases/ruby-arel to 3.0.2 [taca 2012-03-18]
+	Added devel/ruby-activesupport32 version 3.2.2 [taca 2012-03-18]
+	Added devel/ruby-activemodel32 version 3.2.2 [taca 2012-03-18]
+	Added www/ruby-actionpack32 version 3.2.2 [taca 2012-03-18]
+	Added www/ruby-activeresource32 version 3.2.2 [taca 2012-03-18]
+	Added mail/ruby-actionmailer32 version 3.2.2 [taca 2012-03-18]
+	Added devel/ruby-railties32 version 3.2.2 [taca 2012-03-18]
+	Added www/ruby-rails32 version 3.2.2 [taca 2012-03-18]
+	Added www/ruby-journey version 1.0.3 [taca 2012-03-18]
+	Added www/ruby-jquery-rails10 version 1.0.19 [taca 2012-03-18]
+	Added www/ruby-jquery-rails20 version 2.0.1 [taca 2012-03-18]
