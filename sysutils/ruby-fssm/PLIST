@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 07:36:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/18 02:35:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/example.rb
+${GEM_LIBDIR}/ext/rakefile.rb
 ${GEM_LIBDIR}/fssm.gemspec
 ${GEM_LIBDIR}/lib/fssm.rb
 ${GEM_LIBDIR}/lib/fssm/backends/fsevents.rb
