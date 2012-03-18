@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.868 2012/03/18 05:07:43 taca Exp $
+$NetBSD: CHANGES-2012,v 1.869 2012/03/18 05:15:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1285,3 +1285,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ruby-xslt to 0.9.9 [taca 2012-03-18]
 	Updated www/ruby-css-parser to 1.2.6 [taca 2012-03-18]
 	Updated www/ruby-csspool to 3.0.0 [taca 2012-03-18]
+	Updated www/ruby-patron to 0.4.18 [taca 2012-03-18]
+	Updated www/ruby-sass to 3.1.15 [taca 2012-03-18]
+	Updated www/ruby-webrobots to 0.0.13 [taca 2012-03-18]
