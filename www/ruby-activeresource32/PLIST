@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/18 06:50:07 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/examples/performance.rb
+${GEM_LIBDIR}/lib/active_resource.rb
+${GEM_LIBDIR}/lib/active_resource/base.rb
+${GEM_LIBDIR}/lib/active_resource/connection.rb
+${GEM_LIBDIR}/lib/active_resource/custom_methods.rb
+${GEM_LIBDIR}/lib/active_resource/exceptions.rb
+${GEM_LIBDIR}/lib/active_resource/formats.rb
+${GEM_LIBDIR}/lib/active_resource/formats/json_format.rb
+${GEM_LIBDIR}/lib/active_resource/formats/xml_format.rb
+${GEM_LIBDIR}/lib/active_resource/http_mock.rb
+${GEM_LIBDIR}/lib/active_resource/log_subscriber.rb
+${GEM_LIBDIR}/lib/active_resource/observing.rb
+${GEM_LIBDIR}/lib/active_resource/railtie.rb
+${GEM_LIBDIR}/lib/active_resource/schema.rb
+${GEM_LIBDIR}/lib/active_resource/validations.rb
+${GEM_LIBDIR}/lib/active_resource/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
