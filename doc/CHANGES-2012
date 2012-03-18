@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.871 2012/03/18 05:46:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.872 2012/03/18 05:55:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/ruby-actionmailer31 to 3.1.4 [taca 2012-03-18]
 	Updated devel/ruby-railties31 to 3.1.4 [taca 2012-03-18]
 	Updated www/ruby-rails31 to 3.1.4 [taca 2012-03-18]
+	Updated databases/ruby-arel to 3.0.2 [taca 2012-03-18]
