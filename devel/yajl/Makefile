@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/18 16:56:32 abs Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/18 23:22:03 abs Exp $
 
 DISTNAME=	2.0.1
 PKGNAME=	yajl-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/lloyd/yajl/tarball/
 DIST_SUBDIR=	yajl
@@ -24,13 +25,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	tar
-
-MAKE_ENV+=	MKDIR="${MKDIR}"
-MAKE_ENV+=	CP="${CP}"
-
-BUILD_DIRS=	src
-
-post-extract:
-	${CP} ${FILESDIR}/Makefile ${WRKSRC}/src/
+USE_CMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
