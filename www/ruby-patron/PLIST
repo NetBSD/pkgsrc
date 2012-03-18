@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/11/08 15:37:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/18 05:11:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gitignore
@@ -10,6 +10,9 @@ ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/ext/patron/.gitignore
 ${GEM_LIBDIR}/ext/patron/extconf.rb
+${GEM_LIBDIR}/ext/patron/membuffer.c
+${GEM_LIBDIR}/ext/patron/membuffer.h
+${GEM_LIBDIR}/ext/patron/sglib.h
 ${GEM_LIBDIR}/ext/patron/session_ext.c
 ${GEM_LIBDIR}/lib/patron.rb
 ${GEM_LIBDIR}/lib/patron/error.rb
@@ -21,6 +24,7 @@ ${GEM_LIBDIR}/lib/patron/session_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/patron/util.rb
 ${GEM_LIBDIR}/lib/patron/version.rb
 ${GEM_LIBDIR}/patron.gemspec
+${GEM_LIBDIR}/pic.png
 ${GEM_LIBDIR}/script/console
 ${GEM_LIBDIR}/script/test_server
 ${GEM_LIBDIR}/spec/patron_spec.rb
@@ -28,5 +32,6 @@ ${GEM_LIBDIR}/spec/request_spec.rb
 ${GEM_LIBDIR}/spec/response_spec.rb
 ${GEM_LIBDIR}/spec/session_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/test_server.rb
 ${GEM_LIBDIR}/spec/util_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
