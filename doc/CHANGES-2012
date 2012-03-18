@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.888 2012/03/18 19:39:47 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.889 2012/03/18 21:16:06 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1337,3 +1337,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/opendnssec to 1.3.7 [pettai 2012-03-18]
 	Updated security/dnssec-tools to 1.12.1 [pettai 2012-03-18]
 	Updated lang/mono to 2.10.6nb2 [wiz 2012-03-18]
+	Updated mail/mimedefang to 2.73 [pettai 2012-03-18]
