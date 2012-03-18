@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/12/17 06:25:16 taca Exp $
+$NetBSD: distinfo,v 1.3 2012/03/18 02:45:58 taca Exp $
 
-SHA1 (kramdown-0.13.4.gem) = 514eda95f88d485fa81c1ca7e8d34feed96e065c
-RMD160 (kramdown-0.13.4.gem) = d7f984af732710503581c8b9a1d2759194347d28
-Size (kramdown-0.13.4.gem) = 206336 bytes
+SHA1 (kramdown-0.13.5.gem) = 96f31fc52ab9b929034b8e16f107dd4387382ca5
+RMD160 (kramdown-0.13.5.gem) = 9b69c319f7202d59bcd69f7c6c80856432b078b0
+Size (kramdown-0.13.5.gem) = 267776 bytes
