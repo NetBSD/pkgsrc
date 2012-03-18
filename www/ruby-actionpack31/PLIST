@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/16 12:26:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/18 05:38:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -131,7 +131,6 @@ ${GEM_LIBDIR}/lib/action_view/asset_paths.rb
 ${GEM_LIBDIR}/lib/action_view/base.rb
 ${GEM_LIBDIR}/lib/action_view/buffers.rb
 ${GEM_LIBDIR}/lib/action_view/context.rb
-${GEM_LIBDIR}/lib/action_view/data/encoding_conversions.txt
 ${GEM_LIBDIR}/lib/action_view/flows.rb
 ${GEM_LIBDIR}/lib/action_view/helpers.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/active_model_helper.rb
