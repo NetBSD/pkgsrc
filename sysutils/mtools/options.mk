@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2008/04/10 21:19:19 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2012/03/18 12:41:53 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mtools
 PKG_SUPPORTED_OPTIONS=		floppyd
-PKG_OPTIONS_LEGACY_VARS=	MTOOLS_ENABLE_FLOPPYD:floppyd
+PKG_OPTIONS_LEGACY_VARS+=	MTOOLS_ENABLE_FLOPPYD:floppyd
 
 .include "../../mk/bsd.options.mk"
 

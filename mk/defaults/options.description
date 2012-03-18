@@ -153,6 +153,7 @@ finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
 firefox3		Use firefox3 as gecko rendering engine.
 flac			Enable FLAC support.
+floppyd			Use floppyd to access floppy device.
 fluidsynth		Enable MIDI support using fluidsynth.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.

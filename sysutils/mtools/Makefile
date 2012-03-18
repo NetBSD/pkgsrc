@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2011/10/09 14:57:24 zafer Exp $
+# $NetBSD: Makefile,v 1.49 2012/03/18 12:41:53 shattered Exp $
 
-DISTNAME=	mtools-4.0.14
+DISTNAME=	mtools-4.0.17
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mtools.linux.lu/
 EXTRACT_SUFX=	.tar.bz2
