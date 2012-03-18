@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2012/02/15 22:06:02 gls Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/18 16:04:35 gls Exp $
 bin/dblatex
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/dbtexmf/__init__.py
 ${PYSITELIB}/dbtexmf/__init__.pyc
 ${PYSITELIB}/dbtexmf/__init__.pyo
