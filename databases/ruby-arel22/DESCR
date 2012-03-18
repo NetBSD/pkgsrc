@@ -1,0 +1,21 @@
+
+## Abstract ##
+
+Arel is a Relational Algebra for Ruby.
+
+1) simplifies the generation complex of SQL queries
+2) adapts to various RDBMS systems
+
+It is intended to be a framework framework; that is, you can build
+your own ORM with it, focusing on innovative object and collection
+modeling as opposed to database compatibility and query generation.
+
+## Status ##
+
+For the moment, Arel uses ActiveRecord's connection adapters to
+connect to the various engines, connection pooling, perform quoting,
+and do type conversion. On the horizon is the use of DataObjects
+instead.
+
+The long term goal, following both LINQ and DataMapper, is to have
+Arel adapt to engines beyond RDBMS, including XML, IMAP, YAML, etc.
