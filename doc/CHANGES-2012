@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.874 2012/03/18 07:18:16 taca Exp $
+$NetBSD: CHANGES-2012,v 1.875 2012/03/18 07:49:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1317,3 +1317,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/ruby-jquery-rails20 version 2.0.1 [taca 2012-03-18]
 	Added www/ruby-sass-rails31 version 3.1.5 [taca 2012-03-18]
 	Added www/ruby-sass-rails32 version 3.2.4 [taca 2012-03-18]
+	Removed devel/ruby-rspec-rails1 [taca 2012-03-18]
+	Removed devel/ruby-rspec1 [taca 2012-03-18]
