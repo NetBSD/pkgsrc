@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/23 07:30:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/18 05:06:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
@@ -14,20 +15,11 @@ ${GEM_LIBDIR}/lib/csspool/css/document.rb
 ${GEM_LIBDIR}/lib/csspool/css/document_handler.rb
 ${GEM_LIBDIR}/lib/csspool/css/import_rule.rb
 ${GEM_LIBDIR}/lib/csspool/css/media.rb
+${GEM_LIBDIR}/lib/csspool/css/parser.rb
+${GEM_LIBDIR}/lib/csspool/css/parser.y
 ${GEM_LIBDIR}/lib/csspool/css/rule_set.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_additional_sel.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_attr_sel.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_doc_handler.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_num.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_parser.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_parsing_location.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_pseudo.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_rgb.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_selector.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_simple_sel.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/cr_term.rb
-${GEM_LIBDIR}/lib/csspool/lib_croco/glist.rb
+${GEM_LIBDIR}/lib/csspool/css/tokenizer.rb
+${GEM_LIBDIR}/lib/csspool/css/tokenizer.rex
 ${GEM_LIBDIR}/lib/csspool/node.rb
 ${GEM_LIBDIR}/lib/csspool/sac.rb
 ${GEM_LIBDIR}/lib/csspool/sac/document.rb
@@ -50,13 +42,16 @@ ${GEM_LIBDIR}/lib/csspool/terms/number.rb
 ${GEM_LIBDIR}/lib/csspool/terms/rgb.rb
 ${GEM_LIBDIR}/lib/csspool/terms/string.rb
 ${GEM_LIBDIR}/lib/csspool/terms/uri.rb
-${GEM_LIBDIR}/lib/csspool/visitable.rb
 ${GEM_LIBDIR}/lib/csspool/visitors.rb
+${GEM_LIBDIR}/lib/csspool/visitors/children.rb
 ${GEM_LIBDIR}/lib/csspool/visitors/comparable.rb
+${GEM_LIBDIR}/lib/csspool/visitors/iterator.rb
 ${GEM_LIBDIR}/lib/csspool/visitors/to_css.rb
 ${GEM_LIBDIR}/lib/csspool/visitors/visitor.rb
 ${GEM_LIBDIR}/test/css/test_document.rb
 ${GEM_LIBDIR}/test/css/test_import_rule.rb
+${GEM_LIBDIR}/test/css/test_parser.rb
+${GEM_LIBDIR}/test/css/test_tokenizer.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/sac/test_parser.rb
 ${GEM_LIBDIR}/test/sac/test_properties.rb
@@ -64,6 +59,8 @@ ${GEM_LIBDIR}/test/sac/test_terms.rb
 ${GEM_LIBDIR}/test/test_collection.rb
 ${GEM_LIBDIR}/test/test_parser.rb
 ${GEM_LIBDIR}/test/test_selector.rb
+${GEM_LIBDIR}/test/visitors/test_children.rb
 ${GEM_LIBDIR}/test/visitors/test_comparable.rb
+${GEM_LIBDIR}/test/visitors/test_each.rb
 ${GEM_LIBDIR}/test/visitors/test_to_css.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
