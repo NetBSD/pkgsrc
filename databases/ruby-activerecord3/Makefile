@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2011/12/13 15:50:06 taca Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/18 05:26:09 taca Exp $
 
 DISTNAME=	activerecord-${RUBY_RAILS_VERSION}
-PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Object-relational mapper framework
+COMMENT=	Object-relational mapper framework (part of Rails 3.0)
 LICENSE=	mit
 
 # Comment out dependency in gemspec but already depends indirectly one.
