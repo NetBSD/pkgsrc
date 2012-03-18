@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2011/12/13 15:54:19 taca Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/18 05:29:14 taca Exp $
 
 DISTNAME=	railties-${RUBY_RAILS_VERSION}
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Tools for creating, working with, and running Rails applications
+COMMENT=	Tools for creating, working with, and running Rails 3.0
 LICENSE=	mit
 
 # Comment out dependency in gemspec but already depends indirectly one.
