@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/14 17:01:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/18 09:10:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/NEWS
 ${GEM_LIBDIR}/README.md
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/lib/zip/compressor.rb
 ${GEM_LIBDIR}/lib/zip/constants.rb
 ${GEM_LIBDIR}/lib/zip/decompressor.rb
 ${GEM_LIBDIR}/lib/zip/deflater.rb
+${GEM_LIBDIR}/lib/zip/dos_time.rb
 ${GEM_LIBDIR}/lib/zip/inflater.rb
 ${GEM_LIBDIR}/lib/zip/ioextras.rb
 ${GEM_LIBDIR}/lib/zip/null_compressor.rb
@@ -15,7 +16,6 @@ ${GEM_LIBDIR}/lib/zip/null_decompressor.rb
 ${GEM_LIBDIR}/lib/zip/null_input_stream.rb
 ${GEM_LIBDIR}/lib/zip/pass_thru_compressor.rb
 ${GEM_LIBDIR}/lib/zip/pass_thru_decompressor.rb
-${GEM_LIBDIR}/lib/zip/stdrubyext.rb
 ${GEM_LIBDIR}/lib/zip/tempfile_bugfixed.rb
 ${GEM_LIBDIR}/lib/zip/zip.rb
 ${GEM_LIBDIR}/lib/zip/zip_central_directory.rb
