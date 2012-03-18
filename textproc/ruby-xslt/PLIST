@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2010/12/04 04:39:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/18 02:48:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/AUTHORS
+${GEM_LIBDIR}/AUTHORS.rdoc
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/ChangeLog.rdoc
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
