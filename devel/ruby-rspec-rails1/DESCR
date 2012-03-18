@@ -1,6 +1,0 @@
-Behaviour Driven Development for Ruby on Rails.
-
-rspec-rails is an RSpec extension that allows you to drive the development of
-Ruby on Rails applications with RSpec.
-
-This version is only for Ruby on Rails 2.
