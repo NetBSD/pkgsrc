@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1578 2012/03/18 08:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.1579 2012/03/18 16:57:03 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -1540,6 +1540,7 @@ SUBDIR+=	xulrunner10
 SUBDIR+=	xulrunner192
 SUBDIR+=	xxgdb
 SUBDIR+=	yasm
+SUBDIR+=	yajl
 SUBDIR+=	z80-asm
 SUBDIR+=	zlib
 SUBDIR+=	zzuf
