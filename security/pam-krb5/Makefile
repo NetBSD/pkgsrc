@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/12/01 16:05:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/19 19:31:24 pettai Exp $
 #
 
-DISTNAME=	pam-krb5-4.4
+DISTNAME=	pam-krb5-4.5
 CATEGORIES=	security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-krb5-include=/usr/include/krb5
 
 CPPFLAGS.NetBSD+=       -DNO_STATIC_MODULES
 
