@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.42 2012/02/15 15:15:23 hans Exp $
+# $NetBSD: SunOS.mk,v 1.43 2012/03/19 12:34:18 joerg Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -32,27 +32,6 @@ MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 .else
 MOTIF_TYPE_DEFAULT?=	lesstif
 .endif
-
-# imake installs manpages in weird places
-.if !defined(X11_TYPE) || defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
-# openwindows
-IMAKE_MAN_SOURCE_PATH=	share/man/man
-IMAKE_MAN_SUFFIX=	1
-IMAKE_LIBMAN_SUFFIX=	3
-.else
-# xfree86, xorg
-IMAKE_MAN_SOURCE_PATH=	man/man
-IMAKE_MAN_SUFFIX=	1x
-IMAKE_LIBMAN_SUFFIX=	3x
-.endif
-IMAKE_FILEMAN_SUFFIX=	4
-IMAKE_GAMEMAN_SUFFIX=	6
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
-IMAKE_MANINSTALL?=	maninstall
 
 _OPSYS_EMULDIR.solaris=		# empty
 _OPSYS_EMULDIR.solaris32=	# empty

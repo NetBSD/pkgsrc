@@ -1,0 +1,16 @@
+$NetBSD: patch-X11.tmpl,v 1.1 2012/03/19 12:34:23 joerg Exp $
+
+--- X11.tmpl.orig	2012-03-04 18:19:34.000000000 +0000
++++ X11.tmpl
+@@ -1657,7 +1657,11 @@ XCOMM X Window System make variables; th
+          SHAREDIR = ShareDir		/* rgb, XErrorDB, etc. */
+        LIBEXECDIR = LibexecDir
+         MODULEDIR = ModuleDir
++#ifdef RealProjectRoot
++   TOP_X_INCLUDES = TopXInclude -I $(REALPROJECTROOT)/include
++#else
+    TOP_X_INCLUDES = TopXInclude
++#endif
+           XBINDIR = XBinDir		/* BINDIR for X11ProjectRoot */
+ 
+        INSTSRCDIR = InstSrcDir		/* Installed source (kernel modules). */
