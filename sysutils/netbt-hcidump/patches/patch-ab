@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2012/02/15 09:30:23 plunky Exp $
+$NetBSD: patch-ab,v 1.5 2012/03/19 12:09:00 plunky Exp $
 
---- lib/bluetooth.h.orig	2011-12-22 00:18:58.000000000 +0000
+--- lib/bluetooth.h.orig	2012-02-29 18:23:20.000000000 +0000
 +++ lib/bluetooth.h
 @@ -30,6 +30,7 @@
  extern "C" {
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.4 2012/02/15 09:30:23 plunky Exp $
  #include <stdio.h>
  #include <stdint.h>
  #include <string.h>
-@@ -107,6 +108,20 @@ enum {
+@@ -135,6 +136,20 @@ enum {
  #else
  #error "Unknown byte order"
  #endif
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.4 2012/02/15 09:30:23 plunky Exp $
  
  /* Bluetooth unaligned access */
  #define bt_get_unaligned(ptr)			\
-@@ -189,6 +204,7 @@ static inline uint16_t bt_get_be16(void 
+@@ -217,6 +232,7 @@ static inline uint16_t bt_get_be16(const
  #error "Unknown byte order"
  #endif
  
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.4 2012/02/15 09:30:23 plunky Exp $
  /* BD Address */
  typedef struct {
  	uint8_t b[6];
-@@ -197,6 +213,7 @@ typedef struct {
+@@ -225,6 +241,7 @@ typedef struct {
  #define BDADDR_ANY   (&(bdaddr_t) {{0, 0, 0, 0, 0, 0}})
  #define BDADDR_ALL   (&(bdaddr_t) {{0xff, 0xff, 0xff, 0xff, 0xff, 0xff}})
  #define BDADDR_LOCAL (&(bdaddr_t) {{0, 0, 0, 0xff, 0xff, 0xff}})
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.4 2012/02/15 09:30:23 plunky Exp $
  
  /* Copy, swap, convert BD Address */
  static inline int bacmp(const bdaddr_t *ba1, const bdaddr_t *ba2)
-@@ -209,9 +226,12 @@ static inline void bacpy(bdaddr_t *dst, 
+@@ -237,9 +254,12 @@ static inline void bacpy(bdaddr_t *dst, 
  }
  
  void baswap(bdaddr_t *dst, const bdaddr_t *src);
@@ -60,7 +60,7 @@ $NetBSD: patch-ab,v 1.4 2012/02/15 09:30:23 plunky Exp $
  int str2ba(const char *str, bdaddr_t *ba);
  int ba2oui(const bdaddr_t *ba, char *oui);
  int bachk(const char *str);
-@@ -220,11 +240,14 @@ int baprintf(const char *format, ...);
+@@ -248,11 +268,14 @@ int baprintf(const char *format, ...);
  int bafprintf(FILE *stream, const char *format, ...);
  int basprintf(char *str, const char *format, ...);
  int basnprintf(char *str, size_t size, const char *format, ...);
