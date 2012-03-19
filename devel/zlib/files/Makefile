@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/08/02 15:07:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/19 15:47:12 adam Exp $
 #
 # Replacement Makefile for zlib.
-#
 
-OBJS=	adler32.o compress.o crc32.o deflate.o gzio.o \
-	infback.o inffast.o inflate.o inftrees.o trees.o \
+OBJS=	adler32.o compress.o crc32.o deflate.o gzclose.o gzlib.o gzread.o \
+	gzwrite.o infback.o inffast.o inflate.o inftrees.o trees.o \
 	uncompr.o zutil.o
 LOBJS=	${OBJS:R:S/$/.lo/g}
 
