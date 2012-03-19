@@ -1,16 +1,15 @@
-$NetBSD: patch-za,v 1.4 2012/03/10 03:26:07 ryoon Exp $
+$NetBSD: patch-za,v 1.5 2012/03/19 10:36:01 ryoon Exp $
 
---- suite/app/Makefile.in.orig	2012-02-16 13:59:53.000000000 +0000
+--- suite/app/Makefile.in.orig	2012-03-19 00:25:52.000000000 +0000
 +++ suite/app/Makefile.in
-@@ -92,6 +92,11 @@ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
- TK_LIBS := -framework Cocoa $(TK_LIBS)
- endif
+@@ -82,6 +82,10 @@ LOCAL_INCLUDES += \
+   -I$(MOZILLA_SRCDIR)/xpcom/base \
+   $(NULL)
  
 +ifeq ($(OS_ARCH),NetBSD)
 +OS_LIBS += $(call EXPAND_LIBNAME,kvm)
-+LIBS += -lossaudio
 +endif
 +
- APP_XPCOM_LIBS = $(XPCOM_GLUE_LDOPTS)
- 
- LIBS += \
+ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
+ LIBS += $(DIST)/bin/XUL
+ else
