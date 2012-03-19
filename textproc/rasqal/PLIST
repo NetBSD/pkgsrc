@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/12/12 12:00:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/19 09:26:22 markd Exp $
 bin/rasqal-config
 bin/roqet
 include/rasqal/rasqal.h
@@ -12,6 +12,13 @@ share/gtk-doc/html/rasqal/index.html
 share/gtk-doc/html/rasqal/index.sgml
 share/gtk-doc/html/rasqal/indexes.html
 share/gtk-doc/html/rasqal/left.png
+share/gtk-doc/html/rasqal/rasqal-changes-0-9-21-to-0-9-22.html
+share/gtk-doc/html/rasqal/rasqal-changes-0-9-22-to-0-9-23.html
+share/gtk-doc/html/rasqal/rasqal-changes-0-9-23-to-0-9-24.html
+share/gtk-doc/html/rasqal/rasqal-changes-0-9-24-to-0-9-25.html
+share/gtk-doc/html/rasqal/rasqal-changes-0-9-25-to-0-9-26.html
+share/gtk-doc/html/rasqal/rasqal-changes-0-9-26-to-0-9-27.html
+share/gtk-doc/html/rasqal/rasqal-changes.html
 share/gtk-doc/html/rasqal/rasqal-section-data.html
 share/gtk-doc/html/rasqal/rasqal-section-expression.html
 share/gtk-doc/html/rasqal/rasqal-section-general.html
@@ -29,7 +36,6 @@ share/gtk-doc/html/rasqal/rasqal-section-updates.html
 share/gtk-doc/html/rasqal/rasqal-section-variable.html
 share/gtk-doc/html/rasqal/rasqal-section-variables-table.html
 share/gtk-doc/html/rasqal/rasqal-section-xsd.html
-share/gtk-doc/html/rasqal/rasqal.devhelp
 share/gtk-doc/html/rasqal/rasqal.devhelp2
 share/gtk-doc/html/rasqal/rasqal.html
 share/gtk-doc/html/rasqal/reference-manual.html
