@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2010/10/25 20:19:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/19 11:39:15 markd Exp $
+bin/akonadi_agent_launcher
+bin/akonadi_agent_server
 bin/akonadi_control
 bin/akonadi_rds
 bin/akonadictl
@@ -12,14 +14,13 @@ include/akonadi/private/protocol_p.h
 include/akonadi/private/xdgbasedirs_p.h
 lib/cmake/Akonadi/AkonadiConfig.cmake
 lib/cmake/Akonadi/AkonadiConfigVersion.cmake
-lib/libakonadiprivate.so
-lib/libakonadiprivate.so.1
-lib/libakonadiprivate.so.${PKGVERSION}
+lib/cmake/Akonadi/AkonadiTargetsWithPrefix-noconfig.cmake
+lib/cmake/Akonadi/AkonadiTargetsWithPrefix.cmake
 lib/libakonadiprotocolinternals.so
 lib/libakonadiprotocolinternals.so.1
 lib/libakonadiprotocolinternals.so.${PKGVERSION}
 lib/pkgconfig/akonadi.pc
-lib/qt4/plugins/sqldrivers/libqsqlite3.so
+${PLIST.sqlite}qt4/plugins/sqldrivers/libqsqlite3.so
 share/config/akonadi/mysql-global-mobile.conf
 share/config/akonadi/mysql-global.conf
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Agent.Control.xml
@@ -28,6 +29,7 @@ share/dbus-1/interfaces/org.freedesktop.Akonadi.AgentManager.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.ControlManager.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.DebugInterface.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.NotificationManager.xml
+share/dbus-1/interfaces/org.freedesktop.Akonadi.NotificationSource.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Preprocessor.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Resource.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Server.xml

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2012/03/03 00:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2012/03/19 11:39:15 markd Exp $
 
-DISTNAME=	akonadi-1.4.0
-PKGREVISION=	12
+DISTNAME=	akonadi-1.7.0
 CATEGORIES=	mail
-MASTER_SITES=	http://download.akonadi-project.org/
+MASTER_SITES=	ftp://kde.mirror.anlx.net/stable/akonadi/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
@@ -17,15 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
-.include "../../mk/mysql.buildlink3.mk"
-.if ${_MYSQL_VERSION} == "55"
-.include "../../databases/mysql55-server/buildlink3.mk"
-.elif ${_MYSQL_VERSION} == "51"
-.include "../../databases/mysql51-server/buildlink3.mk"
-.else
-.include "../../databases/mysql5-server/buildlink3.mk"
-.endif
+
+.include "options.mk"
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
@@ -39,16 +31,7 @@ pre-configure:
 
 PKGCONFIG_OVERRIDE+=	akonadi.pc.cmake
 
-SUBST_CLASSES+=		mysql
-SUBST_STAGE.mysql=	post-patch
-SUBST_MESSAGE.mysql=	Fix mysqld path.
-SUBST_FILES.mysql=	server/CMakeLists.txt
-SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFIX}/libexec:"
-
-LDFLAGS.SunOS+=		-lsocket
-
 .include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../textproc/soprano/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
