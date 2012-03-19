@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2011/01/23 07:55:17 markd Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/19 10:26:04 markd Exp $
 
-DISTNAME=	oxygen-icons-4.5.5
+DISTNAME=	oxygen-icons-4.8.0
 CATEGORIES=	graphics kde
-MASTER_SITES=	${MASTER_SITE_KDE:=4.5.5/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=4.8.0/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
