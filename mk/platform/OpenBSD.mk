@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.32 2012/01/19 10:53:56 obache Exp $
+# $NetBSD: OpenBSD.mk,v 1.33 2012/03/19 12:34:18 joerg Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -34,20 +34,6 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 X11_TYPE?=		native
-
-# imake installs manpages in weird places
-# these values from /usr/X11R6/lib/X11/config/OpenBSD.cf
-IMAKE_MAN_SOURCE_PATH=	man/cat
-IMAKE_MANNEWSUFFIX=	0
-IMAKE_MAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_LIBMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_FILEMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_GAMEMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MANINSTALL?=	maninstall catinstall
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

@@ -1,12 +1,12 @@
-$NetBSD: patch-ak,v 1.1 2009/07/14 06:19:43 dholland Exp $
+$NetBSD: patch-ak,v 1.2 2012/03/19 12:34:24 joerg Exp $
 
 The standard says that failing () doesn't stop the shell, even when -e
 is set, so () constructs need || exit $? on the end. (Which needs to be
 $$? when it's coming from inside make.)
 
---- Imake.rules~	2005-11-08 01:33:24.000000000 -0500
-+++ Imake.rules	2008-08-30 11:57:32.000000000 -0400
-@@ -534,9 +534,9 @@
+--- Imake.rules.orig	2009-10-16 21:45:42.000000000 +0000
++++ Imake.rules
+@@ -534,9 +534,9 @@ clean cleantc::								@@\
  		set +x; \						@@\
  	else \								@@\
  		if [ -h dir ]; then \					@@\
@@ -18,7 +18,7 @@ $$? when it's coming from inside make.)
  	fi
  #endif /* MakeDir */
  
-@@ -545,9 +545,9 @@
+@@ -545,9 +545,9 @@ clean cleantc::								@@\
  		:; \							@@\
  	else \								@@\
  		if [ -h dir ]; then \					@@\
@@ -30,7 +30,7 @@ $$? when it's coming from inside make.)
  	fi
  #endif /* MakeDirInline */
  
-@@ -571,7 +571,7 @@
+@@ -571,7 +571,7 @@ includes:: srclist							@@\
  	@(set -x; cd $(BUILDINCDIR) && for i in srclist; do \		@@\
  		RemoveFile($$i); \					@@\
  		$(LN) $(BUILDINCTOP)/$(CURRENT_DIR)/$$i .; \		@@\
@@ -39,7 +39,7 @@ $$? when it's coming from inside make.)
  #endif /* BuildIncludesTop */
  
  #ifndef BuildIncludes
-@@ -581,7 +581,7 @@
+@@ -581,7 +581,7 @@ includes:: srclist							@@\
  	@(set -x; cd $(BUILDINCDIR)/dstsubdir && for i in srclist; do \	@@\
  		RemoveFile($$i); \					@@\
  		$(LN) $(BUILDINCTOP)/dstupdir/$(CURRENT_DIR)/$$i .; \	@@\
@@ -48,7 +48,7 @@ $$? when it's coming from inside make.)
  #endif /* BuildIncludes */
  
  /*
-@@ -604,7 +604,7 @@
+@@ -604,7 +604,7 @@ interfaces::								@@\
  	@(set -x; cd $(BUILDINCDIR)/dstsubdir && for i in srclist; do \	@@\
  		RemoveFile($$i); \					@@\
  		$(LN) $(BUILDINCTOP)/dstupdir/$(CURRENT_DIR)/$$i .; \	@@\
@@ -57,7 +57,30 @@ $$? when it's coming from inside make.)
  #endif /* BuildInterfaces */
  
  /*
-@@ -1302,7 +1302,7 @@
+@@ -1280,20 +1280,18 @@ InstallTarget(install.ln,Concat(llib-l,l
+  * (the limit for using source code control systems on files systems with
+  * short file names).
+  */
+-#ifndef InstallManPageLong
++#undef InstallManPageLong
+ #define	InstallManPageLong(file,destdir,dest)				@@\
+ BuildInstallHtmlManPage(file,dest,$(MANSUFFIX))				@@\
+ 									@@\
+ CppManTarget(file,$(EXTRAMANDEFS))					@@\
+ 									@@\
+ InstallNamedTarget(install.man,file.$(MANNEWSUFFIX),$(INSTMANFLAGS),destdir,dest.$(MANSUFFIX))
+-#endif /* InstallManPageLong */
+-
+ 
+ /*
+  * InstallManPageAliases - generate rules to install manual page aliases.
+  */
+-#ifndef InstallManPageAliases
++#undef InstallManPageAliases
+ #define	InstallManPageAliases(file,destdir,aliases)			@@\
+ InstallHtmlManPageAliases(file,aliases,$(MANSUFFIX))			@@\
+ 									@@\
+@@ -1302,17 +1300,15 @@ install.man::								@@\
  	RemoveFile($${TMP}); \						@@\
  	echo .so `basename destdir`/file.$(MANSUFFIX) > $${TMP}; \	@@\
  	for i in aliases; do (set -x; \					@@\
@@ -65,8 +88,34 @@ $$? when it's coming from inside make.)
 +	$(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $${TMP} $(DESTDIR)destdir/$$i.$(MANSUFFIX)) || exit $$?; \ @@\
  	done; \								@@\
  	RemoveFile($${TMP}))
- #endif /* InstallManPageAliases */
-@@ -1337,7 +1337,7 @@
+-#endif /* InstallManPageAliases */
+-
+ 
+ /*
+  * InstallGenManPageLong - More general rules for installing manual pages --
+  * doesn't assume MANSUFFIX.
+  */
+-#ifndef InstallGenManPageLong
++#undef InstallGenManPageLong
+ #define	InstallGenManPageLong(file,destdir,dest,suffix)			@@\
+ BuildInstallHtmlManPage(file,dest,suffix)				@@\
+ 									@@\
+@@ -1322,13 +1318,11 @@ install.man:: file.$(MANNEWSUFFIX)					@
+ 	MakeDir($(DESTDIR)destdir)					@@\
+ 	$(INSTALL) -c $(INSTMANFLAGS) file.$(MANNEWSUFFIX) \		@@\
+ 		$(DESTDIR)destdir/dest.suffix
+-#endif /* InstallGenManPageLong */
+-
+ 
+ /*
+  * InstallGenManPageAliases - general equivalent of InstallManPageAliases
+  */
+-#ifndef InstallGenManPageAliases
++#undef InstallGenManPageAliases
+ #define	InstallGenManPageAliases(file,destdir,suffix,aliases)		@@\
+ InstallHtmlManPageAliases(file,aliases,suffix)				@@\
+ 									@@\
+@@ -1337,14 +1331,13 @@ install.man::								@@\
  	RemoveFile($${TMP}); \						@@\
  	echo .so `basename destdir`/file.suffix > $${TMP}; \		@@\
  	for i in aliases; do (set -x; \					@@\
@@ -74,19 +123,105 @@ $$? when it's coming from inside make.)
 +	$(INSTALL) $(INSTALLFLAGS) $(INSTMANFLAGS) $${TMP} $(DESTDIR)destdir/$$i.suffix) || exit $$?; \ @@\
  	done; \								@@\
  	RemoveFile($${TMP}))
- #endif /* InstallGenManPageAliases */
-@@ -1397,8 +1397,8 @@
+-#endif /* InstallGenManPageAliases */
+ 
+ #else /* CompressManPages */
+ 
+-#ifndef InstallManPageLong
++#undef InstallManPageLong
+ #define InstallManPageLong(file,destdir,dest)				@@\
+ BuildInstallHtmlManPage(file,dest,$(MANSUFFIX))				@@\
+ 									@@\
+@@ -1356,9 +1349,8 @@ install.man:: file.$(MANNEWSUFFIX)					@
+ 	$(INSTALL) -c $(INSTMANFLAGS) file.$(MANNEWSUFFIX) \		@@\
+ 	  $(DESTDIR)destdir/dest.$(MANSUFFIX)				@@\
+ 	-$(COMPRESSMANCMD) $(DESTDIR)destdir/dest.$(MANSUFFIX)
+-#endif
+ 
+-#ifndef InstallGenManPageLong
++#undef InstallGenManPageLong
+ #define InstallGenManPageLong(file,destdir,dest,suffix)			@@\
+ BuildInstallHtmlManPage(file,dest,suffix)				@@\
+ 									@@\
+@@ -1370,9 +1362,8 @@ install.man:: file.$(MANNEWSUFFIX)					@
+ 	$(INSTALL) -c $(INSTMANFLAGS) file.$(MANNEWSUFFIX) \		@@\
+ 	  $(DESTDIR)destdir/dest.suffix					@@\
+ 	-$(COMPRESSMANCMD) $(DESTDIR)destdir/dest.suffix
+-#endif
+ 
+-#ifndef InstallMultipleMan
++#undef InstallMultipleMan
+ #define InstallMultipleMan(list,dest)					@@\
+ install.man:: list							@@\
+ 	MakeDir($(DESTDIR)dest)						@@\
+@@ -1385,39 +1376,35 @@ install.man:: list							@@\
+ 		  $(DESTDIR)dest/$${MNAME}.$(MANSUFFIX); \		@@\
+ 		$(COMPRESSMANCMD) $(DESTDIR)dest/$${MNAME}.$(MANSUFFIX)); \ @@\
+ 	done
+-#endif
+ 
+ /*
+  * InstallManPageAliases - install soft links for aliases.
+  */
+-#ifndef InstallManPageAliasesBase
++#undef InstallManPageAliasesBase
+ #define InstallManPageAliasesBase(file,destdir,aliases)			@@\
+ install.man::								@@\
+ 	@(SUFFIX=`echo $(DESTDIR)destdir/file.* | sed -e 's,.*/[^\.]*.,,'`; \ @@\
  	for i in aliases; do (set -x; \					@@\
  	$(RM) $(DESTDIR)destdir/$$i.*; \				@@\
  	(cd $(DESTDIR)destdir; $(LN) file.$${SUFFIX} \			@@\
 -	$$i.$${SUFFIX})); \						@@\
 -	done)
+-#endif
 +	$$i.$${SUFFIX}) || exit $$?) || exit $$?; \			@@\
 +	done) || exit $$?
- #endif
  
- #ifndef InstallManPageAliases
-@@ -1499,7 +1499,8 @@
+-#ifndef InstallManPageAliases
++#undef InstallManPageAliases
+ #define InstallManPageAliases(file,destdir,aliases)			@@\
+ InstallHtmlManPageAliases(file,aliases,$(MANSUFFIX))			@@\
+ 									@@\
+ InstallManPageAliasesBase(file,destdir,aliases)
+-#endif
+ 
+ 
+ /*
+  * InstallGenManPageAliases - install soft links for aliases.
+  */
+-#ifndef InstallGenManPageAliases
++#undef InstallGenManPageAliases
+ #define InstallGenManPageAliases(file,destdir,suffix,aliases)		@@\
+ InstallHtmlManPageAliases(file,aliases,suffix)				@@\
+ 									@@\
+ InstallManPageAliasesBase(file,destdir,aliases)
+-#endif
+ 
+ #endif /* CompressManPages */
+ 
+@@ -1425,19 +1412,17 @@ InstallManPageAliasesBase(file,destdir,a
+ /*
+  * InstallManPage - generate rules to install the indicated manual page.
+  */
+-#ifndef InstallManPage
++#undef InstallManPage
+ #define	InstallManPage(file,destdir)					@@\
+ InstallManPageLong(file,destdir,file)
+-#endif /* InstallManPage */
+ 
+ 
+ /*
+  * InstallGenManPage - general equivalent of InstallManPage
+  */
+-#ifndef InstallGenManPage
++#undef InstallGenManPage
+ #define	InstallGenManPage(file,destdir,suffix)				@@\
+ InstallGenManPageLong(file,destdir,file,suffix)
+-#endif /* InstallGenManPage */
+ 
+ 
+ /*
+@@ -1499,7 +1484,8 @@ install.man:: file.suffix.html						@@\
  	for i in aliases; do (set -x; \					@@\
  	  RemoveFile($(DESTDIR)$(DOCHTMLDIR)/$$i.$$SUF.html); \		@@\
  	  (cd $(DESTDIR)$(DOCHTMLDIR); \				@@\
@@ -96,7 +231,7 @@ $$? when it's coming from inside make.)
  	done
  #else
  #define InstallHtmlManPageAliases(file,aliases,suffix) /**/
-@@ -1681,7 +1682,7 @@
+@@ -1681,7 +1667,7 @@ InstallNamedTargetNoClobber(install,srcn
  #ifndef MakeNamedTargetSubdir
  #define MakeNamedTargetSubdir(dir,flags,subname)\
  		(cd dir && $(MAKE) $(MFLAGS) $(PARALLELMFLAGS) \	@@\
@@ -105,7 +240,7 @@ $$? when it's coming from inside make.)
  #endif
  
  /*
-@@ -1692,7 +1693,7 @@
+@@ -1692,7 +1678,7 @@ InstallNamedTargetNoClobber(install,srcn
  step::									@@\
  	@MakeFlagsToShellFlags(i,set +e); \				@@\
  	echo "	cd" dir; cd dir && \					@@\
@@ -114,7 +249,7 @@ $$? when it's coming from inside make.)
  #endif
  
  
-@@ -1809,7 +1810,7 @@
+@@ -1809,7 +1795,7 @@ step:: list								@@\
  	MakeDir($(DESTDIR)dest)						@@\
  	@MakeFlagsToShellFlags(i,set +e); \				@@\
  	for i in list; do \						@@\
@@ -123,7 +258,7 @@ $$? when it's coming from inside make.)
  	done
  #endif /* InstallMultipleDestFlags */
  
-@@ -1876,7 +1877,7 @@
+@@ -1876,7 +1862,7 @@ install.man::								@@\
  	MakeDir($(DESTDIR)dest)						@@\
  	@MakeFlagsToShellFlags(i,set +e); \				@@\
  	for i in list; do \						@@\
@@ -132,7 +267,7 @@ $$? when it's coming from inside make.)
  	done
  #endif /* InstallMultipleManSuffix */
  
-@@ -2601,7 +2602,8 @@
+@@ -2601,7 +2587,8 @@ clean::									@@\
  #define LinkBuildLibraryMaybe(lib,doit) MakeDir($(BUILDLIBDIR))		@@\
  	@if doit; then (set -x; \					@@\
  	  RemoveFile($(BUILDLIBDIR)/lib); \				@@\
@@ -142,7 +277,7 @@ $$? when it's coming from inside make.)
  #endif
  #endif /* LinkBuildLibraryMaybe */
  
-@@ -2615,7 +2617,9 @@
+@@ -2615,7 +2602,9 @@ clean::									@@\
  #else
  #define LinkBuildSonameLibrary(lib) MakeDirInline($(BUILDLIBDIR));\	@@\
  	(set -x; RemoveFile($(BUILDLIBDIR)/lib);\			@@\
@@ -153,7 +288,7 @@ $$? when it's coming from inside make.)
  #endif
  #endif /* LinkBuildSonameLibrary */
  
-@@ -2713,9 +2717,9 @@
+@@ -2713,9 +2702,9 @@ AllTarget(LibraryTargetName(libname))			
  									@@\
  LibraryTargetName(libname): objlist1 objlist2 objlist3 $(EXTRALIBRARYDEPS)	@@\
  	RemoveFile($@)							@@\
@@ -166,7 +301,7 @@ $$? when it's coming from inside make.)
  	RanLibrary($@)							@@\
  	_LinkBuildLibrary($@)
  #endif /* UnsharedLibraryTarget3 */
-@@ -2952,7 +2956,7 @@
+@@ -2952,7 +2941,7 @@ step::  dir srclist							@@\
  	@-(list=`echo srclist | sed -e 's/[^ ]*\///g'`; \		@@\
  		set -x; cd dir && RemoveFiles($$list))			@@\
  	@for i in srclist; do \						@@\
@@ -175,7 +310,7 @@ $$? when it's coming from inside make.)
  	done								@@\
  									@@\
  dir::									@@\
-@@ -2974,8 +2978,9 @@
+@@ -2974,8 +2963,9 @@ name::									@@\
  	@MakeFlagsToShellFlags(ik,set +e); \				@@\
  	for i in dirs ;\						@@\
  	do \								@@\
@@ -187,7 +322,7 @@ $$? when it's coming from inside make.)
  	done
  #endif
  
-@@ -3384,7 +3389,7 @@
+@@ -3384,7 +3374,7 @@ clean::									@@\
  step::									@@\
  	DirFailPrefix@MakeFlagsToShellFlags(i,set +e); \		@@\
  	for i in dirs; do if [ -d $(DESTDIR)$$i ]; then \		@@\
@@ -196,7 +331,7 @@ $$? when it's coming from inside make.)
  	done
  #endif /* MakeDirectories */
  
-@@ -3610,7 +3615,7 @@
+@@ -3610,7 +3600,7 @@ objname.Osuf: Concat3(libpath,/lib,libna
  	@$(CP) Concat3(libpath,/lib,libname.a) tmp			@@\
  	@(cd tmp; set -x; ArExtCmd Concat(lib,libname.a); \		@@\
  	  $(LD) $(LDCOMBINEFLAGS) *.Osuf -o ../$@; \			@@\

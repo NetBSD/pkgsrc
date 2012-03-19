@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.2 2008/06/01 14:36:37 tnn Exp $
+$NetBSD: patch-aj,v 1.3 2012/03/19 12:34:24 joerg Exp $
 
 Force Rpath usage on Linux. For reasons analysed in details,
 the binutils detection seems to fail.
@@ -14,7 +14,20 @@ the binutils detection seems to fail.
  #endif
  
  #ifndef SharedOldX
-@@ -78,7 +78,7 @@ XCOMM $XFree86: xc/config/cf/lnxLib.rule
+@@ -69,7 +69,11 @@ XCOMM $XFree86: xc/config/cf/lnxLib.rule
+ # endif
+ #ifndef RpathLoadFlags
+ #if UseRpath
+-#define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
++#  ifdef RealProjectRoot
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH) -Wl,-rpath,$(REALPROJECTROOT)/lib -L $(REALPROJECTROOT)/lib
++#  else
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
++#  endif
+ #else
+ #define RpathLoadFlags /**/
+ #endif
+@@ -78,7 +82,7 @@ XCOMM $XFree86: xc/config/cf/lnxLib.rule
  #define LibraryRpathLoadFlags RpathLoadFlags
  #endif
  # ifndef SharedLibraryLoadFlags
@@ -23,7 +36,7 @@ the binutils detection seems to fail.
  # endif
  # ifndef PositionIndependentCFlags
  #  define PositionIndependentCFlags -fPIC
-@@ -87,17 +87,7 @@ XCOMM $XFree86: xc/config/cf/lnxLib.rule
+@@ -87,17 +91,7 @@ XCOMM $XFree86: xc/config/cf/lnxLib.rule
  #  define PositionIndependentCplusplusFlags -fPIC
  # endif
  # ifndef ExtraLoadFlags

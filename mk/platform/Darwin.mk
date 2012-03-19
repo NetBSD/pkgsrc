@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.47 2011/09/10 16:30:02 abs Exp $
+# $NetBSD: Darwin.mk,v 1.48 2012/03/19 12:34:16 joerg Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -68,20 +68,6 @@ GROUPADD?=		${LOCALBASE}/sbin/groupadd
 USERADD?=		${LOCALBASE}/sbin/useradd
 _PKG_USER_HOME?=	/var/empty	# to match other system accounts
 _USER_DEPENDS=		user>=20040801:../../sysutils/user_darwin
-
-# imake installs manpages in weird places
-# these values from /usr/X11R6/lib/X11/config/Imake.tmpl
-IMAKE_MAN_SOURCE_PATH=	man/man
-IMAKE_MAN_SUFFIX=	1
-IMAKE_LIBMAN_SUFFIX=	3
-IMAKE_FILEMAN_SUFFIX=	5
-IMAKE_GAMEMAN_SUFFIX=	6
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
-IMAKE_MANINSTALL?=	maninstall catinstall
 
 _OPSYS_EMULDIR.darwin=	# empty
 

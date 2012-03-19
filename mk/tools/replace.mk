@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.245 2012/02/23 13:09:55 hans Exp $
+# $NetBSD: replace.mk,v 1.246 2012/03/19 12:34:19 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1203,18 +1203,10 @@ TOOLS_CREATE+=		${_t_}
 TOOLS_DEPENDS.${_t_}?=	nbitools>=6.3nb4:../../devel/nbitools
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=nbitools
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/libexec/itools/${_t_}
-.      elif defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
+.      else
 TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
-.      else # !empty(X11_TYPE:Mnative)
-.        if exists(${X11BASE}/bin/${_t_})
-TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
-.        else # X11_TYPE native, but tool does not exist, so fall back
-TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
-.        endif
 .      endif
 .    endif
 .  endif
@@ -1237,17 +1229,6 @@ TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/bin/makedepend
 .    else # !empty(X11_TYPE:Mnative)
 TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
 .    endif
-.  endif
-.endif
-#
-# If we're using xpkgwedge, then we need to invoke the special xmkmf
-# script that will find imake config files in both ${PREFIX} and in
-# ${X11BASE}.
-#
-.if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
-.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS]) && empty(_USE_TOOLS:Mitools)
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.xpkgwedge=xpkgwedge
-TOOLS_PATH.xmkmf=	${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
 .  endif
 .endif
 

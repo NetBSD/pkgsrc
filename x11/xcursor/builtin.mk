@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2009/03/20 19:25:52 joerg Exp $
+# $NetBSD: builtin.mk,v 1.15 2012/03/19 12:34:22 joerg Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -12,11 +12,10 @@ BUILTIN_FIND_FILES.H_XCURSOR=	${X11BASE}/include/X11/Xcursor/Xcursor.h
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
 .if !defined(IS_BUILTIN.xcursor)
-IS_BUILTIN.xcursor=	no
 .  if empty(H_XCURSOR:M__nonexistent__)
-BUILTIN_IMAKE_CHECK:=	xcursor:BuildXcursorLibrary
-.    include "../../mk/buildlink3/imake-check.mk"
-IS_BUILTIN.xcursor=	${BUILTIN_IMAKE_CHECK.xcursor}
+IS_BUILTIN.xcursor=	yes
+.  else
+IS_BUILTIN.xcursor=	no
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.xcursor

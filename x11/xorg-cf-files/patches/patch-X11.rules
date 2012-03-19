@@ -1,0 +1,13 @@
+$NetBSD: patch-X11.rules,v 1.1 2012/03/19 12:34:23 joerg Exp $
+
+--- X11.rules.orig	2012-03-06 17:09:41.000000000 +0000
++++ X11.rules
+@@ -37,6 +37,8 @@ XCOMM $XFree86: xc/config/cf/X11.rules,v
+ 
+ #if defined(X11ProjectRoot)
+ # define XBinDir	$(XPROJECTROOT)/bin
++#elif defined(RealProjectRoot)
++# define XBinDir	$(REALPROJECTROOT)/bin
+ #elif defined(ProjectRoot) 
+ # define XBinDir	$(PROJECTROOT)/bin
+ #else
