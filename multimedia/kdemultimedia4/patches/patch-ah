@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2009/10/02 20:25:35 markd Exp $
+$NetBSD: patch-ah,v 1.2 2012/03/19 20:22:32 markd Exp $
 
---- kioslave/audiocd/audiocd.upd.orig	2006-10-26 15:29:33.000000000 +1300
+--- kioslave/audiocd/audiocd.upd.orig	2011-01-19 22:23:34.000000000 +0000
 +++ kioslave/audiocd/audiocd.upd
 @@ -1,4 +1,4 @@
  # Update for transport configuration

@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/10/02 20:25:35 markd Exp $
+$NetBSD: patch-af,v 1.2 2012/03/19 20:22:32 markd Exp $
 
---- kioslave/audiocd/plugins/wav/encodercda.cpp.orig	2008-10-31 02:24:16.000000000 +1300
+--- kioslave/audiocd/plugins/wav/encodercda.cpp.orig	2011-01-19 22:23:33.000000000 +0000
 +++ kioslave/audiocd/plugins/wav/encodercda.cpp
 @@ -44,7 +44,7 @@ extern "C"
  {
