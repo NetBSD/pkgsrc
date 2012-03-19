@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/19 23:01:43 markd Exp $
+
+--- libkexiv2/libkexiv2/kexiv2.cpp.orig	2009-02-27 08:39:37.000000000 +0000
++++ libkexiv2/libkexiv2/kexiv2.cpp
+@@ -49,6 +49,20 @@ extern "C"
+ #include "kexiv2private.h"
+ #include "kexiv2.h"
+ 
++#if defined(__NetBSD__) || defined(__DragonFly__)
++#include <sys/param.h>
++#endif
++
++#if (defined(__DragonFly__) && __DragonFly_version < 190000) || (defined(__NetBSD__) && __NetBSD_Version__ <= 399001700)
++static double trunc(double val)
++{
++	if (val > 0)
++		return floor(val);
++	else
++		return ceil(val);
++}
++#endif
++
+ namespace KExiv2Iface
+ {
+ 
+@@ -1603,7 +1617,11 @@ QString KExiv2::getExifTagTitle(const ch
+     {
+         std::string exifkey(exifTagName);
+         Exiv2::ExifKey ek(exifkey);
++#if (EXIV2_TEST_VERSION(0,21,0))
++	return QString::fromLocal8Bit( ek.tagLabel().c_str() );
++#else
+         return QString::fromLocal8Bit( Exiv2::ExifTags::tagTitle(ek.tag(), ek.ifdId()) );
++#endif
+     }
+     catch (Exiv2::Error& e)
+     {
+@@ -1619,7 +1637,11 @@ QString KExiv2::getExifTagDescription(co
+     {
+         std::string exifkey(exifTagName);
+         Exiv2::ExifKey ek(exifkey);
++#if (EXIV2_TEST_VERSION(0,21,0))
++	return QString::fromLocal8Bit( ek.tagDesc().c_str() );
++#else
+         return QString::fromLocal8Bit( Exiv2::ExifTags::tagDesc(ek.tag(), ek.ifdId()) );
++#endif
+     }
+     catch (Exiv2::Error& e)
+     {
