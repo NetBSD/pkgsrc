@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.891 2012/03/18 21:23:22 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.892 2012/03/19 10:38:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1340,3 +1340,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/mimedefang to 2.73 [pettai 2012-03-18]
 	Updated x11/xicc to 0.1nb3 [jakllsch 2012-03-18]
 	Updated x11/xcalib to 0.8nb1 [jakllsch 2012-03-18]
+	Updated www/seamonkey to 2.8 [ryoon 2012-03-19]
+	Updated www/seamonkey-l10n to 2.8 [ryoon 2012-03-19]
