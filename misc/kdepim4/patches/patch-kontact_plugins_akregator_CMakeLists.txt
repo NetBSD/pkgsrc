@@ -1,0 +1,13 @@
+$NetBSD: patch-kontact_plugins_akregator_CMakeLists.txt,v 1.1 2012/03/19 21:01:28 markd Exp $
+
+--- kontact/plugins/akregator/CMakeLists.txt.orig	2011-04-20 20:03:31.000000000 +0000
++++ kontact/plugins/akregator/CMakeLists.txt
+@@ -2,6 +2,8 @@
+ include_directories(${CMAKE_SOURCE_DIR}/akregator/src)
+ include_directories( ${Boost_INCLUDE_DIRS} )
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ ########### next target ###############
+ 
+ set(kontact_akregator_PART_SRCS akregator_plugin.cpp)
