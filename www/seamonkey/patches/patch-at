@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.8 2012/03/10 03:26:05 ryoon Exp $
+$NetBSD: patch-at,v 1.9 2012/03/19 10:35:58 ryoon Exp $
 
 Avoid silly redefinitions of standard types on NetBSD.
 
---- mozilla/gfx/qcms/qcmstypes.h.orig	2012-02-16 14:08:55.000000000 +0000
+--- mozilla/gfx/qcms/qcmstypes.h.orig	2012-03-13 05:32:34.000000000 +0000
 +++ mozilla/gfx/qcms/qcmstypes.h
 @@ -10,6 +10,8 @@
  #if defined (__SVR4) && defined (__sun)

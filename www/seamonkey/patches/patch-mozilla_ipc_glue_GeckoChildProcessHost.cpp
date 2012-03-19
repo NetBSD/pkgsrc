@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.2 2012/03/19 10:35:59 ryoon Exp $
 
---- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2012-02-16 14:09:03.000000000 +0000
+--- mozilla/ipc/glue/GeckoChildProcessHost.cpp.orig	2012-03-13 05:32:39.000000000 +0000
 +++ mozilla/ipc/glue/GeckoChildProcessHost.cpp
 @@ -430,7 +430,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
@@ -16,11 +16,11 @@ $NetBSD: patch-mozilla_ipc_glue_GeckoChildProcessHost.cpp,v 1.1 2012/03/10 03:26
          nsCString path;
          greDir->GetNativePath(path);
 -# ifdef OS_LINUX
--#  ifdef ANDROID
+-#  ifdef MOZ_WIDGET_ANDROID
 +# if defined(OS_LINUX) || defined(OS_BSD)
-+#  if defined(ANDROID) || defined(OS_BSD)
++#  if defined(MOZ_WIDGET_ANDROID) || defined(OS_BSD)
          path += "/lib";
- #  endif  // ANDROID
+ #  endif  // MOZ_WIDGET_ANDROID
          const char *ld_library_path = PR_GetEnv("LD_LIBRARY_PATH");
 @@ -557,7 +557,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);

@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.2 2012/03/15 08:36:43 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.3 2012/03/19 10:35:59 ryoon Exp $
 
---- mozilla/ipc/chromium/chromium-config.mk.orig	2012-02-16 07:40:33.000000000 +0100
-+++ mozilla/ipc/chromium/chromium-config.mk	2012-03-11 11:05:40.397182000 +0100
-@@ -56,17 +56,6 @@
+--- mozilla/ipc/chromium/chromium-config.mk.orig	2012-03-13 05:32:38.000000000 +0000
++++ mozilla/ipc/chromium/chromium-config.mk
+@@ -56,17 +56,6 @@ LOCAL_INCLUDES += \
    -I$(DEPTH)/ipc/ipdl/_ipdlheaders \
    $(NULL)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.2 2012/03/15 08:36:43
  ifeq ($(OS_ARCH),WINNT) # {
  OS_LIBS += $(call EXPAND_LIBNAME,psapi shell32 dbghelp)
  
-@@ -93,13 +82,64 @@
+@@ -93,13 +82,62 @@ DEFINES += -DCOMPILER_MSVC
  endif
  
  else # } {
@@ -41,7 +41,6 @@ $NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.2 2012/03/15 08:36:43
 +
 +OS_DRAGONFLY = 1
 +OS_BSD = 1
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
 +DEFINES += \
 +  -DOS_DRAGONFLY=1 \
 +  -DOS_BSD=1 \
@@ -52,7 +51,6 @@ $NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.2 2012/03/15 08:36:43
 +
 +OS_FREEBSD = 1
 +OS_BSD = 1
-+OS_LIBS += $(call EXPAND_LIBNAME,kvm)
 +DEFINES += \
 +  -DOS_FREEBSD=1 \
 +  -DOS_BSD=1 \
@@ -88,7 +86,7 @@ $NetBSD: patch-mozilla_ipc_chromium_chromium-config.mk,v 1.2 2012/03/15 08:36:43
    $(NULL)
  
  # NB: to stop gcc warnings about exporting template instantiation
-@@ -107,4 +147,8 @@
+@@ -107,4 +145,8 @@ OS_CXXFLAGS := $(filter-out -pedantic,$(
  
  endif # }
  endif # }

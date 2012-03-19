@@ -1,6 +1,6 @@
-$NetBSD: patch-directory_c-sdk_ldap_include_portable.h,v 1.5 2012/03/10 03:26:05 ryoon Exp $
+$NetBSD: patch-directory_c-sdk_ldap_include_portable.h,v 1.6 2012/03/19 10:35:58 ryoon Exp $
 
---- ldap/sdks/c-sdk/ldap/include/portable.h.orig	2012-02-16 14:10:12.000000000 +0000
+--- ldap/sdks/c-sdk/ldap/include/portable.h.orig	2012-03-13 05:33:47.000000000 +0000
 +++ ldap/sdks/c-sdk/ldap/include/portable.h
 @@ -122,8 +122,11 @@
   * some systems don't have the BSD re_comp and re_exec routines

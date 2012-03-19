@@ -1,8 +1,8 @@
-$NetBSD: patch-mm,v 1.4 2012/03/10 03:26:05 ryoon Exp $
+$NetBSD: patch-mm,v 1.5 2012/03/19 10:35:59 ryoon Exp $
 
---- mozilla/toolkit/library/Makefile.in.orig	2012-02-16 14:09:36.000000000 +0000
+--- mozilla/toolkit/library/Makefile.in.orig	2012-03-13 05:33:15.000000000 +0000
 +++ mozilla/toolkit/library/Makefile.in
-@@ -209,6 +209,17 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+@@ -554,6 +554,17 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
  endif
  

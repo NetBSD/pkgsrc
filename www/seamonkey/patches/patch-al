@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.6 2012/03/10 03:26:05 ryoon Exp $
+$NetBSD: patch-al,v 1.7 2012/03/19 10:35:58 ryoon Exp $
 
---- mozilla/storage/src/mozStorageConnection.cpp.orig	2012-02-16 14:09:33.000000000 +0000
+--- mozilla/storage/src/mozStorageConnection.cpp.orig	2012-03-13 05:33:11.000000000 +0000
 +++ mozilla/storage/src/mozStorageConnection.cpp
-@@ -632,6 +632,11 @@ Connection::initialize(nsIFile *aDatabas
+@@ -681,6 +681,11 @@ Connection::initialize(nsIFile *aDatabas
      (void)::NS_RegisterMemoryReporter(mMemoryReporters[i]);
    }
  
