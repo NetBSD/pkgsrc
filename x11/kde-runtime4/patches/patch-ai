@@ -1,0 +1,32 @@
+$NetBSD: patch-ai,v 1.1 2012/03/19 19:44:03 markd Exp $
+
+--- kdeeject/kdeeject.orig	2007-12-24 08:03:03.000000000 +1300
++++ kdeeject/kdeeject
+@@ -17,10 +17,26 @@ if test $# -ge 1 -a "$1" != "--help"; th
+     OpenBSD)
+       cdio -f $1 eject >/dev/null 2>&1
+       ;;
+-    *BSD)
++    FreeBSD)
+       dev=`echo $1 | sed -E -e 's#/dev/##' -e 's/([0-9])./\1/'`
+       cdcontrol -f $dev eject >/dev/null 2>&1
+       ;;
++    NetBSD)
++      dev=$1
++      if [ -h $1 ]; then
++        dev=$(readlink $dev 2> /dev/null) || dev=$1
++      fi
++      case $(sysctl -n kern.rawpartition 2> /dev/null) in
++      2) rawp=c ;;
++      3) rawp=d ;;
++      esac
++      rdev=$(echo $dev | sed -E -e 's#(/dev/)#\1r#; s#[a-z]$#'$rawp'#')
++      if [ -e $rdev ]; then
++        eject $rdev >/dev/null 2>&1
++      else
++        eject $dev >/dev/null 2>&1
++      fi
++      ;;
+     *)
+       eject $1 >/dev/null 2>&1
+       ;;

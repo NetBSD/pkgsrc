@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2012/03/19 19:44:03 markd Exp $
+
+--- kioslave/info/kde-info2html.conf.orig	2007-10-26 01:21:54.000000000 +1300
++++ kioslave/info/kde-info2html.conf
+@@ -29,6 +29,7 @@ our @INFODIR = (
+ 	    "/usr/info",
+ 	    "/usr/lib/info",
+ #	    "/usr/lib/teTeX/info",
++	    "@LOCALBASE@/info",
+ 	    "/usr/local/info",
+ 	    "/usr/local/lib/info",
+ 	    "/usr/X11R6/info",
