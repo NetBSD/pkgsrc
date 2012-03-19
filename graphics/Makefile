@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.626 2012/03/08 11:39:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.627 2012/03/19 23:35:07 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -197,7 +197,8 @@ SUBDIR+=	gtkimageview
 SUBDIR+=	gtksee
 SUBDIR+=	guile-cairo
 SUBDIR+=	gwenview
-SUBDIR+=	gwenview-i18n
+SUBDIR+=	gwenview-i18n-kde3
+SUBDIR+=	gwenview-kde3
 SUBDIR+=	h5utils
 SUBDIR+=	hermes
 SUBDIR+=	hicolor-icon-theme
@@ -253,9 +254,12 @@ SUBDIR+=	libgnomecanvas
 SUBDIR+=	libgnomecanvasmm
 SUBDIR+=	libjpeg-turbo
 SUBDIR+=	libkdcraw
+SUBDIR+=	libkdcraw-kde3
 SUBDIR+=	libkexif
 SUBDIR+=	libkexiv2
+SUBDIR+=	libkexiv2-kde3
 SUBDIR+=	libkipi
+SUBDIR+=	libkipi-kde3
 SUBDIR+=	liblqr
 SUBDIR+=	libotf
 SUBDIR+=	libpano13
