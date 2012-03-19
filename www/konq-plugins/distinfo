@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2011/01/08 09:29:35 markd Exp $
-
-SHA1 (konq-plugins-4.4.0.tar.bz2) = d352fa8b01998182187d0220ecca0d68d7fff919
-RMD160 (konq-plugins-4.4.0.tar.bz2) = 6cec3f25ca320ebb961358b3f7d0926720f8e01c
-Size (konq-plugins-4.4.0.tar.bz2) = 1123983 bytes
-SHA1 (patch-aa) = 45334098f82a29f612d08659d59b5650533bebdc
