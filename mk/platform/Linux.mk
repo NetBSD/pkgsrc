@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.48 2012/03/05 07:53:42 sbd Exp $
+# $NetBSD: Linux.mk,v 1.49 2012/03/19 12:34:17 joerg Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -44,24 +44,6 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		/usr/sbin/useradd
-
-# imake installs manpages in weird places
-# these values from /usr/X11R6/lib/X11/config/linux.cf
-IMAKE_MAN_SOURCE_PATH=	man/man
-IMAKE_MAN_SUFFIX=	1x
-IMAKE_LIBMAN_SUFFIX=	3x
-IMAKE_KERNMAN_SUFFIX=	4
-IMAKE_FILEMAN_SUFFIX=	5x
-IMAKE_GAMEMAN_SUFFIX=	6
-IMAKE_MISCMAN_SUFFIX=	7
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_KERNMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
-IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
-IMAKE_MANINSTALL?=	maninstall catinstall
 
 _OPSYS_EMULDIR.linux=	# empty
 _OPSYS_EMULDIR.linux32=	# empty

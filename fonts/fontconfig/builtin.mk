@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: builtin.mk,v 1.11 2012/03/19 12:34:13 joerg Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -13,11 +13,10 @@ BUILTIN_FIND_FILES.H_FONTCONFIG=	\
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
 .if !defined(IS_BUILTIN.fontconfig)
-IS_BUILTIN.fontconfig=	no
 .  if empty(H_FONTCONFIG:M__nonexistent__)
-BUILTIN_IMAKE_CHECK:=	fontconfig:BuildFontconfigLibrary
-.    include "../../mk/buildlink3/imake-check.mk"
-IS_BUILTIN.fontconfig=	${BUILTIN_IMAKE_CHECK.fontconfig}
+IS_BUILTIN.fontconfig=	yes
+.  else
+IS_BUILTIN.fontconfig=	no
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.fontconfig
