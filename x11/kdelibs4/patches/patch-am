@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2010/06/06 22:44:02 markd Exp $
+$NetBSD: patch-am,v 1.2 2012/03/19 11:28:49 markd Exp $
 
---- kdecore/sycoca/ksycoca.cpp.orig	2010-01-19 23:15:27.000000000 +0000
+--- kdecore/sycoca/ksycoca.cpp.orig	2011-04-01 13:56:18.000000000 +0000
 +++ kdecore/sycoca/ksycoca.cpp
 @@ -62,7 +62,7 @@
   */

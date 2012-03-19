@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.3 2010/04/11 13:55:49 markd Exp $
+$NetBSD: patch-ak,v 1.4 2012/03/19 11:28:49 markd Exp $
 
---- kdecore/auth/ConfigureChecks.cmake.orig	2010-03-26 17:24:30.000000000 +0000
+--- kdecore/auth/ConfigureChecks.cmake.orig	2011-04-01 13:55:50.000000000 +0000
 +++ kdecore/auth/ConfigureChecks.cmake
-@@ -198,7 +198,7 @@ if(KDE4_AUTH_HELPER_BACKEND_NAME STREQUA
+@@ -202,7 +202,7 @@ if(KDE4_AUTH_HELPER_BACKEND_NAME STREQUA
  
      # Install some files as well
      install( FILES auth/backends/dbus/org.kde.auth.conf
