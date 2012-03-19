@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/30 23:20:19 pettai Exp $
+$NetBSD: distinfo,v 1.2 2012/03/19 19:31:24 pettai Exp $
 
-SHA1 (pam-krb5-4.4.tar.gz) = 117ed0fd42cceac93d1d7a6801006bb13c098113
-RMD160 (pam-krb5-4.4.tar.gz) = 071ddf4d1e3c05da14702364f2300fbfd9f65d87
-Size (pam-krb5-4.4.tar.gz) = 394426 bytes
+SHA1 (pam-krb5-4.5.tar.gz) = 82fc9cf4820afc765ad236baf17e377353d1b2e7
+RMD160 (pam-krb5-4.5.tar.gz) = a1f6d2ba8067aa337f2ccb652d8cca554f551808
+Size (pam-krb5-4.5.tar.gz) = 504575 bytes
