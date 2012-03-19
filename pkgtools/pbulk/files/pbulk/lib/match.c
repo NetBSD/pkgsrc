@@ -1,4 +1,4 @@
-/* $NetBSD: match.c,v 1.4 2009/03/06 15:19:04 joerg Exp $ */
+/* $NetBSD: match.c,v 1.5 2012/03/19 12:17:15 joerg Exp $ */
 
 /*
  * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
@@ -68,7 +68,14 @@ pkg_order(const char *match1, const char *match2)
 	if (v1 == NULL || v2 == NULL)
 		errx(1, "Internal error");
 
+	++v1;
+	++v2;
+
 	if (dewey_cmp(v1, DEWEY_GT, v2))
+		return match1;
+	else if (dewey_cmp(v2, DEWEY_GT, v1))
+		return match2;
+	else if (strcmp(match1, match2) > 0)
 		return match1;
 	else
 		return match2;
