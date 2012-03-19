@@ -1,26 +1,18 @@
-$NetBSD: distinfo,v 1.23 2012/01/23 08:14:02 joerg Exp $
+$NetBSD: distinfo,v 1.24 2012/03/19 11:28:48 markd Exp $
 
-SHA1 (kdelibs-4.5.5.tar.bz2) = 127a2b50fe31ff345e05660dd50f7c55ae78d854
-RMD160 (kdelibs-4.5.5.tar.bz2) = 7c33afa12379119fbf7d70e8895c3f2ada9a2eba
-Size (kdelibs-4.5.5.tar.bz2) = 13876521 bytes
-SHA1 (patch-aa) = 7146107f78bbc618cf80479195581f29fc6b5977
-SHA1 (patch-ab) = aec1140bef01199f067b079c30d95fea1814839d
-SHA1 (patch-ac) = 55027a8e6502a938da7a7930e079b3ce21ad2322
-SHA1 (patch-ad) = 2a0dfd3dda071654c89b8dda3db8885e2a55ba2b
-SHA1 (patch-ag) = af1e58512984726a4efaf315bb958a9a529638b8
-SHA1 (patch-ah) = b583dbe1b712984bbe002cc9143352729fba94ed
-SHA1 (patch-aj) = 8520c322d4579e9485253c8e8b130669b0f8b618
-SHA1 (patch-ak) = 03883c05a2a600737d98a889034a2fb9984a5d58
-SHA1 (patch-al) = a3c48e8552ca39496134696f3d415a7b6a4db7d8
-SHA1 (patch-am) = da04e0450885dc4bca38a4e9b91822746d936639
-SHA1 (patch-an) = b5fe924970772bd8a5b420f8cc638ab8bf892c53
-SHA1 (patch-cmake_modules_FindTaglib.cmake) = 97baf0e5c9f53a17582d89ee41cb4d99fbd15424
-SHA1 (patch-kdeui_colors_kcolordialog.cpp) = f105006a778c42a93452fc4bf5d561aa62595a5c
-SHA1 (patch-khtml_khtml_part.cpp) = f8f5977b03463b6de909881178abed3ba351364c
-SHA1 (patch-kio_kio_scheduler.cpp) = a32f9dadf021115a819d4ff94bf63e6ee109c965
-SHA1 (patch-kio_kio_scheduler.h) = b09d3fba61f68685037a6cfa62b58ab768de71c1
-SHA1 (patch-kio_kssl_ksslcertificatebox.cpp) = 1f187968a49e251fbdbbf2569e4703ac05b474be
-SHA1 (patch-kioslave_http_http.cpp) = abd6446120fab21cd30da3e9e1fdc00218802d89
-SHA1 (patch-kjs_JSImmediate.h) = 29949739140d766362d308ece28c96aef593ed73
-SHA1 (patch-kjs_lookup.h) = 7a66c3e79d8177cf46579e153fbafb0b1cae9551
-SHA1 (patch-kjs_wtf_RefPtr.h) = ecf999e97edebdb53edeeffeee6200305ddacc3e
+SHA1 (kdelibs-4.8.0.tar.bz2) = 5e4744405734e6c3ce572ef7d16054390692b38a
+RMD160 (kdelibs-4.8.0.tar.bz2) = b5fd03eec81a390ea74d4713d6459b685352d362
+Size (kdelibs-4.8.0.tar.bz2) = 13044553 bytes
+SHA1 (patch-aa) = c3044205a964797a7718b7a7bd03bb99dd3ca37d
+SHA1 (patch-ab) = 3f89ddfa9a6101a016128d82dbbd0e985e396cae
+SHA1 (patch-ac) = 200391c0cf0a89ef43f0cb57e39d56eee51da505
+SHA1 (patch-ad) = 08467b484f3df864d343d9151b13bedc4f001976
+SHA1 (patch-ag) = 67561007567ba10f20d8e8572dd0a33c8139b7cd
+SHA1 (patch-ah) = 368f4f641ce55257409137185357e796666ae42f
+SHA1 (patch-aj) = 501e34c8fdf242c3718ecb26577ac5940d37fae5
+SHA1 (patch-ak) = 73cc1bb149039d2fe3c05ee631426a8773f951c6
+SHA1 (patch-al) = 5efa7d504fe75bec53837bfa062a4b3f910fd71f
+SHA1 (patch-am) = b6c315d152d2c3d3c66ad85050549d0b39b263e5
+SHA1 (patch-cmake_modules_FindTaglib.cmake) = be38479966da542343dd962c57f7e9d1be3e9ff4
+SHA1 (patch-kdecore_localization_klocale_kde.cpp) = b8a513a0c51e65d7e604a88c1d0e3325be6ad688
+SHA1 (patch-kdecore_util_kshareddatacache_p.h) = 6d064fe75fbecd489b0343960333864c717c0805

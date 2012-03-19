@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/10/02 19:19:00 markd Exp $
+$NetBSD: patch-aa,v 1.2 2012/03/19 11:28:49 markd Exp $
 
---- kded/CMakeLists.txt.orig	2008-12-11 05:12:28.000000000 +1300
+--- kded/CMakeLists.txt.orig	2011-04-01 13:55:50.000000000 +0000
 +++ kded/CMakeLists.txt
-@@ -69,7 +69,7 @@ install(TARGETS kdontchangethehostname D
+@@ -74,7 +74,7 @@ install(TARGETS kbuildsycoca4 ${INSTALL_
  if (WIN32)
  install( FILES applications.menu  DESTINATION  ${SHARE_INSTALL_PREFIX}/xdg/menus )
  else (WIN32)
