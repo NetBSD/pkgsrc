@@ -1,0 +1,12 @@
+$NetBSD: patch-kpimutils_CMakeLists.txt,v 1.1 2012/03/19 11:46:44 markd Exp $
+
+--- kpimutils/CMakeLists.txt.orig	2011-07-27 18:34:56.000000000 +0000
++++ kpimutils/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ project(kpimutils)
+ 
+ add_definitions( -DKDE_DEFAULT_DEBUG_AREA=5321 )
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
+ 
+ add_subdirectory( tests )
+ 
