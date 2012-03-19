@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.50 2009/12/20 12:32:55 jmmv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.51 2012/03/19 12:34:14 joerg Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -101,15 +101,4 @@ LIBTOOL_REQD?=		2.2.6bnb3
 BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-.endif
-
-### USE_XPKGWEDGE
-
-.if (defined(USE_X11BASE) || \
-     defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake) || \
-     !empty(USE_TOOLS:Mimake\:*:Nimake\:pkgsrc)) && \
-    empty(USE_TOOLS:Mitools) && \
-    empty(PKGPATH:Mpkgtools/xpkgwedge) && \
-    !empty(USE_XPKGWEDGE:M[yY][eE][sS])
-BUILD_DEPENDS+=		xpkgwedge>=${_XPKGWEDGE_REQD:U1.15}:../../pkgtools/xpkgwedge
 .endif

@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:59:29 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/19 12:34:19 joerg Exp $
 bin/xbattbar
-${IMAKE_MAN_DIR}/xbattbar.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xbattbar.${IMAKE_MAN_SUFFIX}
