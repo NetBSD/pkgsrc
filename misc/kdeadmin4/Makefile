@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2012/03/03 00:13:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/03/19 20:50:24 markd Exp $
 
 DISTNAME=	kdeadmin-${_KDE_VERSION}
-PKGREVISION=	9
+PKGNAME=	${DISTNAME:S/-4/4-4/}
 CATEGORIES=	misc
 COMMENT=	System administration tools for the KDE integrated X11 desktop
 
@@ -18,6 +18,6 @@ REPLACE_PERL+=	knetworkconf/backends/*.pl.cmake
 .include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdebase-runtime4/buildlink3.mk"
+.include "../../x11/kde-runtime4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
