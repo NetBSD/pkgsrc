@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2012/03/19 19:44:03 markd Exp $
+bin/solid-network
+lib/kde4/kcm_joystick.so
+lib/kde4/solid_modemmanager04.so
+share/kde4/services/joystick.desktop
+share/kde4/services/solidbackends/solid_modemmanager04.desktop

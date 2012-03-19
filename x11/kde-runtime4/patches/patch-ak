@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1 2012/03/19 19:44:03 markd Exp $
+
+To pull in strsignal() on NetBSD<5.99
+
+--- drkonqi/crashedapplication.cpp.orig	2011-02-25 21:54:12.000000000 +0000
++++ drkonqi/crashedapplication.cpp
+@@ -23,6 +23,7 @@
+ # include <clocale>
+ # include <cstring>
+ # include <cstdlib>
++# include <unistd.h>
+ #else
+ # if defined(Q_OS_UNIX)
+ #  include <signal.h>
