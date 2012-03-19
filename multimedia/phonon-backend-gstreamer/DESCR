@@ -1,0 +1,6 @@
+Phonon is the Multimedia API for KDE and QT.
+
+In Phonon there are three main concepts: MediaObjects, Paths and Outputs.
+The MediaObjects control the playback/capture and provide the media data.
+MediaObjects can be connected to Outputs using Path objects which also
+allow the insertion of Effect objects between MediaObject and Output.
