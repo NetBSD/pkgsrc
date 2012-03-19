@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/10 03:27:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/19 10:37:10 ryoon Exp $
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome.manifest
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/alerts/notificationNames.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/autoconfig/autoconfig.properties
@@ -392,7 +392,6 @@ lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/m
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/custom.properties
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-ca@seamonkey.mozilla.org/chrome/ca/locale/ca/messenger/eudoraImportMsgs.properties
@@ -930,7 +929,6 @@ lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/m
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/custom.properties
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-cs@seamonkey.mozilla.org/chrome/cs/locale/cs/messenger/eudoraImportMsgs.properties
@@ -1468,7 +1466,6 @@ lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/m
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/custom.properties
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-de@seamonkey.mozilla.org/chrome/de/locale/de/messenger/eudoraImportMsgs.properties
@@ -2006,7 +2003,6 @@ lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/local
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/custom.properties
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-en-GB@seamonkey.mozilla.org/chrome/en-GB/locale/en-GB/messenger/eudoraImportMsgs.properties
@@ -2544,7 +2540,6 @@ lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/local
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/custom.properties
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-en-US@seamonkey.mozilla.org/chrome/en-US/locale/en-US/messenger/eudoraImportMsgs.properties
@@ -3082,7 +3077,6 @@ lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/local
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/custom.properties
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-es-AR@seamonkey.mozilla.org/chrome/es-AR/locale/es-AR/messenger/eudoraImportMsgs.properties
@@ -3620,7 +3614,6 @@ lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/local
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/custom.properties
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-es-ES@seamonkey.mozilla.org/chrome/es-ES/locale/es-ES/messenger/eudoraImportMsgs.properties
@@ -4158,7 +4151,6 @@ lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/m
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/custom.properties
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-fi@seamonkey.mozilla.org/chrome/fi/locale/fi/messenger/eudoraImportMsgs.properties
@@ -4696,7 +4688,6 @@ lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/m
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/custom.properties
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-fr@seamonkey.mozilla.org/chrome/fr/locale/fr/messenger/eudoraImportMsgs.properties
@@ -5234,7 +5225,6 @@ lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/m
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/custom.properties
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-hu@seamonkey.mozilla.org/chrome/hu/locale/hu/messenger/eudoraImportMsgs.properties
@@ -5772,7 +5762,6 @@ lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/m
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/custom.properties
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-it@seamonkey.mozilla.org/chrome/it/locale/it/messenger/eudoraImportMsgs.properties
@@ -6310,7 +6299,6 @@ lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-m
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/custom.properties
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-ja-JP-mac@seamonkey.mozilla.org/chrome/ja-JP-mac/locale/ja-JP-mac/messenger/eudoraImportMsgs.properties
@@ -6848,7 +6836,6 @@ lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/m
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/custom.properties
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-ja@seamonkey.mozilla.org/chrome/ja/locale/ja/messenger/eudoraImportMsgs.properties
@@ -7386,7 +7373,6 @@ lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/m
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/custom.properties
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-lt@seamonkey.mozilla.org/chrome/lt/locale/lt/messenger/eudoraImportMsgs.properties
@@ -7924,7 +7910,6 @@ lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/local
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/custom.properties
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-nb-NO@seamonkey.mozilla.org/chrome/nb-NO/locale/nb-NO/messenger/eudoraImportMsgs.properties
@@ -8462,7 +8447,6 @@ lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/m
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/custom.properties
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-nl@seamonkey.mozilla.org/chrome/nl/locale/nl/messenger/eudoraImportMsgs.properties
@@ -9000,7 +8984,6 @@ lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/m
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/custom.properties
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-pl@seamonkey.mozilla.org/chrome/pl/locale/pl/messenger/eudoraImportMsgs.properties
@@ -9538,7 +9521,6 @@ lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/local
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/custom.properties
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-pt-PT@seamonkey.mozilla.org/chrome/pt-PT/locale/pt-PT/messenger/eudoraImportMsgs.properties
@@ -10076,7 +10058,6 @@ lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/m
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/custom.properties
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-ru@seamonkey.mozilla.org/chrome/ru/locale/ru/messenger/eudoraImportMsgs.properties
@@ -10614,7 +10595,6 @@ lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/m
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/custom.properties
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-sk@seamonkey.mozilla.org/chrome/sk/locale/sk/messenger/eudoraImportMsgs.properties
@@ -11152,7 +11132,6 @@ lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/local
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/custom.properties
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-sv-SE@seamonkey.mozilla.org/chrome/sv-SE/locale/sv-SE/messenger/eudoraImportMsgs.properties
@@ -11690,7 +11669,6 @@ lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/m
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/am-smime.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/am-smime.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/appleMailImportMsgs.properties
-lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/comm4xMailImportMsgs.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/custom.properties
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/downloadheaders.dtd
 lib/seamonkey/extensions/langpack-tr@seamonkey.mozilla.org/chrome/tr/locale/tr/messenger/eudoraImportMsgs.properties
