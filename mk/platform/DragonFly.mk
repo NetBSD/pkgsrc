@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.41 2011/12/17 16:20:01 marino Exp $
+# $NetBSD: DragonFly.mk,v 1.42 2012/03/19 12:34:16 joerg Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -23,23 +23,6 @@ ROOT_GROUP?=		wheel
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
-
-# imake installs manpages in weird places
-IMAKE_MAN_SOURCE_PATH=	man/man
-IMAKE_MAN_SUFFIX=	1
-IMAKE_LIBMAN_SUFFIX=	3
-IMAKE_KERNMAN_SUFFIX=	4
-IMAKE_FILEMAN_SUFFIX=	5
-IMAKE_GAMEMAN_SUFFIX=	6
-IMAKE_MISCMAN_SUFFIX=	7
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_KERNMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
-IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
-IMAKE_MANINSTALL?=	maninstall catinstall
 
 _OPSYS_EMULDIR.linux=	/compat/linux
 

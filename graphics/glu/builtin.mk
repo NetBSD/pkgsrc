@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2008/10/05 21:36:36 cube Exp $
+# $NetBSD: builtin.mk,v 1.13 2012/03/19 12:34:14 joerg Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -12,11 +12,10 @@ BUILTIN_FIND_FILES.H_GLU=	${X11BASE}/include/GL/glu.h
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
 .if !defined(IS_BUILTIN.glu)
-IS_BUILTIN.glu=	no
 .  if empty(H_GLU:M__nonexistent__)
-BUILTIN_IMAKE_CHECK:=	glu:BuildGLULibrary
-.    include "../../mk/buildlink3/imake-check.mk"
-IS_BUILTIN.glu=		${BUILTIN_IMAKE_CHECK.glu}
+IS_BUILTIN.glu=	yes
+.  else
+IS_BUILTIN.glu=	no
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.glu

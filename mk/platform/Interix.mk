@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.66 2011/09/17 08:05:02 abs Exp $
+# $NetBSD: Interix.mk,v 1.67 2012/03/19 12:34:17 joerg Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -104,23 +104,6 @@ TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
-
-# imake installs manpages in weird places
-IMAKE_MAN_SOURCE_PATH=	man/man
-IMAKE_MAN_SUFFIX=	n
-IMAKE_LIBMAN_SUFFIX=	3
-IMAKE_KERNMAN_SUFFIX=	4
-IMAKE_FILEMAN_SUFFIX=	5
-IMAKE_GAMEMAN_SUFFIX=	6
-IMAKE_MISCMAN_SUFFIX=	7
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}n
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_KERNMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
-IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
-IMAKE_MANINSTALL?=	maninstall catinstall
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

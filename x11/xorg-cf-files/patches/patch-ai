@@ -1,8 +1,19 @@
-$NetBSD: patch-ai,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+$NetBSD: patch-ai,v 1.2 2012/03/19 12:34:24 joerg Exp $
 
---- Imake.tmpl.orig	2006-12-18 01:09:37.000000000 +0100
+--- Imake.tmpl.orig	2009-10-16 21:45:42.000000000 +0000
 +++ Imake.tmpl
-@@ -1447,9 +1447,9 @@ TCLIBDIR = TclLibDir
+@@ -898,9 +898,8 @@ TCLIBDIR = TclLibDir
+ #ifndef ManPath
+ #define ManPath ManDirectoryRoot
+ #endif
+-#ifndef ManSourcePath
++#undef ManSourcePath
+ #define ManSourcePath $(MANPATH)/man
+-#endif
+ #ifndef ManDir
+ #define ManDir $(MANSOURCEPATH)$(MANSUFFIX)
+ #endif
+@@ -1447,9 +1446,9 @@ TCLIBDIR = TclLibDir
  #ifndef DependCmd
  #if UseGccMakeDepend
  #ifdef UseInstalled		/* assume BINDIR in path */
@@ -14,3 +25,55 @@ $NetBSD: patch-ai,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
  #endif
  #elif UseCCMakeDepend
  #ifdef UseInstalled		/* assume BINDIR in path */
+@@ -1610,39 +1609,23 @@ TCLIBDIR = TclLibDir
+ #define SHsuf sh
+ #endif
+ #ifndef ManSuffix
+-#define ManSuffix	n		/* use just one tab or cpp will die */
++#define ManSuffix	1		/* use just one tab or cpp will die */
+ #endif
+ #ifndef LibManSuffix
+ #define LibManSuffix	3		/* use just one tab or cpp will die */
+ #endif
+ #ifndef FileManSuffix
+-#if SystemV || SystemV4 || defined(OSF1Architecture)
+-#define FileManSuffix	4		/* use just one tab or cpp will die */
+-#else
+ #define FileManSuffix	5		/* use just one tab or cpp will die */
+ #endif
+-#endif
+ #ifndef MiscManSuffix
+-#if SystemV || SystemV4 || defined(OSF1Architecture)
+-#define MiscManSuffix	5		/* use just one tab or cpp will die */
+-#else
+ #define MiscManSuffix	7		/* use just one tab or cpp will die */
+ #endif
+-#endif
+ #ifndef DriverManSuffix
+-#if SystemV || SystemV4 || defined(OSF1Architecture)
+-#define DriverManSuffix	7		/* use just one tab or cpp will die */
+-#else
+ #define DriverManSuffix	4		/* use just one tab or cpp will die */
+ #endif
+-#endif
+ #ifndef AdminManSuffix
+-#if SystemV || SystemV4
+-#define AdminManSuffix	1m		/* use just one tab or cpp will die */
+-#else
+ #define AdminManSuffix	8		/* use just one tab or cpp will die */
+ #endif
+-#endif
+ #ifndef ExpandManNames
+ #if SystemV
+ #define ExpandManNames NO
+@@ -2049,6 +2032,10 @@ MODLDCOMBINEFLAGS = ModuleLdCombineFlags
+      INSTDATFLAGS = InstDatFlags	/* install flags for data files */
+     INSTKMEMFLAGS = InstKmemFlags	/* install flags for /dev/kmem progs */
+ 
++#ifdef RealProjectRoot
++REALPROJECTROOT = RealProjectRoot
++#endif
++
+ #ifdef ProjectRoot
+       PROJECTROOT = ProjectRoot
+ #endif

@@ -1,0 +1,17 @@
+$NetBSD: patch-gnuLib.rules,v 1.1 2012/03/19 12:34:24 joerg Exp $
+
+--- gnuLib.rules.orig	2012-03-04 18:07:20.000000000 +0000
++++ gnuLib.rules
+@@ -45,7 +45,11 @@ XCOMM XXX To rpath or not to rpath...
+ #endif
+ #ifndef RpathLoadFlags
+ #if UseRpath
+-#define RpathLoadFlags -Wl,-rpath=$(USRLIBDIRPATH)
++#  ifdef RealProjectRoot
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH) -Wl,-rpath,$(REALPROJECTROOT)/lib -L $(REALPROJECTROOT)/lib
++#  else
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
++#  endif
+ #else
+ #define RpathLoadFlags /**/
+ #endif

@@ -1,8 +1,21 @@
-$NetBSD: patch-ah,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2012/03/19 12:34:24 joerg Exp $
 
 --- bsdLib.rules.orig	2006-02-03 04:02:44.000000000 +0100
 +++ bsdLib.rules
-@@ -229,11 +229,7 @@ LintLibReferences(varname,libname,libsou
+@@ -192,7 +192,11 @@ LintLibReferences(varname,libname,libsou
+ #endif
+ #ifndef RpathLoadFlags
+ #if UseRpath
+-#define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
++#  ifdef RealProjectRoot
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH) -Wl,-rpath,$(REALPROJECTROOT)/lib -L $(REALPROJECTROOT)/lib
++#  else
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
++#  endif
+ #else
+ #define RpathLoadFlags /**/
+ #endif
+@@ -229,11 +233,7 @@ LintLibReferences(varname,libname,libsou
   * InstallSharedLibrary - generate rules to install the shared library.
   * NOTE: file must be executable, hence "INSTBINFLAGS"
   */

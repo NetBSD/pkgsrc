@@ -1,4 +1,4 @@
-# $NetBSD: Minix.mk,v 1.1 2011/11/05 17:09:15 tcort Exp $
+# $NetBSD: Minix.mk,v 1.2 2012/03/19 12:34:17 joerg Exp $
 #
 # Variable definitions for the Minix operating system.
 
@@ -24,24 +24,6 @@ ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 USERADD?=		/usr/bin/useradd
 ULIMIT_CMD_datasize?=	: 
-
-# imake installs manpages in weird places
-# these values from /usr/X11R6/lib/X11/config/linux.cf
-IMAKE_MAN_SOURCE_PATH=	man/man
-IMAKE_MAN_SUFFIX=	1x
-IMAKE_LIBMAN_SUFFIX=	3x
-IMAKE_KERNMAN_SUFFIX=	4
-IMAKE_FILEMAN_SUFFIX=	5x
-IMAKE_GAMEMAN_SUFFIX=	6
-IMAKE_MISCMAN_SUFFIX=	7
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_KERNMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
-IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
-IMAKE_MANINSTALL?=	maninstall catinstall
 
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard

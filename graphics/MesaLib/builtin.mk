@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2009/03/20 19:24:36 joerg Exp $
+# $NetBSD: builtin.mk,v 1.18 2012/03/19 12:34:13 joerg Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -12,11 +12,10 @@ BUILTIN_FIND_FILES.H_MESALIB=	${X11BASE}/include/GL/glx.h
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
 .if !defined(IS_BUILTIN.MesaLib)
-IS_BUILTIN.MesaLib=	no
 .  if empty(H_MESALIB:M__nonexistent__)
-BUILTIN_IMAKE_CHECK:=	MesaLib:BuildGLXLibrary
-.    include "../../mk/buildlink3/imake-check.mk"
-IS_BUILTIN.MesaLib=	${BUILTIN_IMAKE_CHECK.MesaLib}
+IS_BUILTIN.MesaLib=	yes
+.  else
+IS_BUILTIN.MesaLib=	no
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.MesaLib
