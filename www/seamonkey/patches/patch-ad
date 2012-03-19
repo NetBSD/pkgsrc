@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2012/03/10 03:26:04 ryoon Exp $
+$NetBSD: patch-ad,v 1.6 2012/03/19 10:35:57 ryoon Exp $
 
---- mozilla/xpcom/io/nsLocalFileUnix.h.orig	2012-02-16 14:09:41.000000000 +0000
+--- mozilla/xpcom/io/nsLocalFileUnix.h.orig	2012-03-13 05:33:19.000000000 +0000
 +++ mozilla/xpcom/io/nsLocalFileUnix.h
 @@ -86,7 +86,7 @@
  #endif

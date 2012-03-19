@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.7 2012/03/10 03:26:04 ryoon Exp $
+$NetBSD: patch-ae,v 1.8 2012/03/19 10:35:57 ryoon Exp $
 
---- mozilla/nsprpub/pr/src/misc/prnetdb.c.orig	2012-02-16 14:09:27.000000000 +0000
+--- mozilla/nsprpub/pr/src/misc/prnetdb.c.orig	2012-03-13 05:33:05.000000000 +0000
 +++ mozilla/nsprpub/pr/src/misc/prnetdb.c
 @@ -105,7 +105,7 @@ PRLock *_pr_dnsLock = NULL;
          || defined(AIX4_3_PLUS) || (defined(AIX) && defined(_THREAD_SAFE)) \
