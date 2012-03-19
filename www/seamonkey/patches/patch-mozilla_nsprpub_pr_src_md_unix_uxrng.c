@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_nsprpub_pr_src_md_unix_uxrng.c,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_nsprpub_pr_src_md_unix_uxrng.c,v 1.2 2012/03/19 10:36:00 ryoon Exp $
 
---- mozilla/nsprpub/pr/src/md/unix/uxrng.c.orig	2012-02-16 14:09:27.000000000 +0000
+--- mozilla/nsprpub/pr/src/md/unix/uxrng.c.orig	2012-03-13 05:33:05.000000000 +0000
 +++ mozilla/nsprpub/pr/src/md/unix/uxrng.c
 @@ -126,7 +126,7 @@ GetHighResClock(void *buf, size_t maxbyt
  

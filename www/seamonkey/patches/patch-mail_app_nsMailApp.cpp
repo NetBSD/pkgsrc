@@ -1,8 +1,8 @@
-$NetBSD: patch-zc,v 1.2 2012/03/10 03:26:07 ryoon Exp $
+$NetBSD: patch-mail_app_nsMailApp.cpp,v 1.1 2012/03/19 10:35:58 ryoon Exp $
 
---- suite/app/nsSuiteApp.cpp.orig	2012-02-16 13:59:53.000000000 +0000
-+++ suite/app/nsSuiteApp.cpp
-@@ -44,6 +44,27 @@
+--- mail/app/nsMailApp.cpp.orig	2012-03-13 05:23:12.000000000 +0000
++++ mail/app/nsMailApp.cpp
+@@ -48,6 +48,27 @@
  
  #include <stdio.h>
  #include <stdarg.h>
@@ -30,11 +30,11 @@ $NetBSD: patch-zc,v 1.2 2012/03/10 03:26:07 ryoon Exp $
  
  #include "nsCOMPtr.h"
  #include "nsILocalFile.h"
-@@ -83,6 +104,7 @@ public:
+@@ -147,6 +168,7 @@ static int do_main(const char *exePath, 
  
  int main(int argc, char* argv[])
  {
 +  netbsd_fixrlimit();
-   ScopedLogging log;
+   char exePath[MAXPATHLEN];
  
-   nsCOMPtr<nsILocalFile> appini;
+   nsresult rv = mozilla::BinaryPath::Get(argv[0], exePath);
