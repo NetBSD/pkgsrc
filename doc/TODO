@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10956 2012/03/18 21:16:06 pettai Exp $
+$NetBSD: TODO,v 1.10957 2012/03/19 10:38:08 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1217,7 +1217,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sdcc-2.9.0
 	o seahorse-2.32.0 [GNOME 2.32]
 	o seahorse-3.2.2
-	o seamonkey-2.8
 	o secpanel-0.6.1
 	o sendfile-20010424
 	o ser-0.9.6
