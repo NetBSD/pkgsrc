@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.5 2012/02/15 09:30:23 plunky Exp $
+$NetBSD: patch-ao,v 1.6 2012/03/19 12:09:00 plunky Exp $
 
---- src/hcidump.c.orig	2011-12-22 00:18:58.000000000 +0000
+--- src/hcidump.c.orig	2012-02-29 18:23:20.000000000 +0000
 +++ src/hcidump.c
 @@ -48,6 +48,10 @@
  #include "lib/hci.h"
@@ -124,7 +124,7 @@ $NetBSD: patch-ao,v 1.5 2012/02/15 09:30:23 plunky Exp $
  	int defpsm = 0;
  	int defcompid = DEFAULT_COMPID;
  	int opt, pppdump_fd = -1, audio_fd = -1;
-@@ -909,7 +939,7 @@ int main(int argc, char *argv[])
+@@ -910,7 +940,7 @@ int main(int argc, char *argv[])
  		switch(opt) {
  		case 'i':
  			if (strcasecmp(optarg, "none") && strcasecmp(optarg, "system"))

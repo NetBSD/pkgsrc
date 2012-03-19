@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2012/02/15 09:30:23 plunky Exp $
+$NetBSD: patch-ae,v 1.3 2012/03/19 12:09:00 plunky Exp $
 
---- lib/l2cap.h.orig	2011-12-22 00:18:58.000000000 +0000
+--- lib/l2cap.h.orig	2012-02-29 18:23:20.000000000 +0000
 +++ lib/l2cap.h
-@@ -30,6 +30,7 @@
+@@ -31,6 +31,7 @@
  extern "C" {
  #endif
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.2 2012/02/15 09:30:23 plunky Exp $
  #include <sys/socket.h>
  
  /* L2CAP defaults */
-@@ -69,6 +70,7 @@ struct l2cap_conninfo {
+@@ -70,6 +71,7 @@ struct l2cap_conninfo {
  #define L2CAP_LM_TRUSTED	0x0008
  #define L2CAP_LM_RELIABLE	0x0010
  #define L2CAP_LM_SECURE		0x0020
