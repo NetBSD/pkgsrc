@@ -1,11 +1,9 @@
-$NetBSD: patch-af,v 1.4 2011/10/02 04:35:03 markd Exp $
+$NetBSD: patch-af,v 1.5 2012/03/19 21:01:28 markd Exp $
 
 libassuan2 support from
 http://websvn.kde.org/?view=revision&revision=1078528
 
--DBOOST_NO_0X_HDR_INITIALIZER_LIST for gcc45 and recent boost
-
---- kleopatra/CMakeLists.txt.orig	2010-12-22 17:51:56.000000000 +0000
+--- kleopatra/CMakeLists.txt.orig	2009-11-02 12:02:09.000000000 +0000
 +++ kleopatra/CMakeLists.txt
 @@ -2,7 +2,7 @@ project(kleopatra)
  
@@ -16,7 +14,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
  set( kleopatra_release FALSE )
  
  if (NOT kleopatra_release)
-@@ -28,10 +28,11 @@ include_directories(
+@@ -28,7 +28,7 @@ include_directories(
    ${QGPGME_INCLUDES}
    ${GPGME_INCLUDES} )
  if (USABLE_ASSUAN_FOUND)
@@ -25,11 +23,7 @@ http://websvn.kde.org/?view=revision&revision=1078528
  endif(USABLE_ASSUAN_FOUND)
  add_definitions ( -DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS -D_ASSUAN_ONLY_GPG_ERRORS -DQT_STL )
  remove_definitions ( -DQT_NO_STL )
-+add_definitions( -DBOOST_NO_0X_HDR_INITIALIZER_LIST )
- 
- set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_ENABLE_EXCEPTIONS}")
- 
-@@ -84,11 +85,7 @@ if ( USABLE_ASSUAN_FOUND )
+@@ -84,11 +84,7 @@ if ( USABLE_ASSUAN_FOUND )
      selftest/uiservercheck.cpp
      )
  

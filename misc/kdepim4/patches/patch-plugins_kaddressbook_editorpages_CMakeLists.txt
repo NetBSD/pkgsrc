@@ -1,0 +1,12 @@
+$NetBSD: patch-plugins_kaddressbook_editorpages_CMakeLists.txt,v 1.1 2012/03/19 21:01:28 markd Exp $
+
+--- plugins/kaddressbook/editorpages/CMakeLists.txt.orig	2011-04-20 20:03:31.000000000 +0000
++++ plugins/kaddressbook/editorpages/CMakeLists.txt
+@@ -1,5 +1,7 @@
+ include_directories( ${CMAKE_SOURCE_DIR}/libkleo ${Boost_INCLUDE_DIR} )
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ ########### next target ###############
+ 
+ set(cryptopageplugin_SRCS cryptopageplugin.cpp )
