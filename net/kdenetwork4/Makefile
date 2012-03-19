@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/03/03 00:13:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/03/19 20:12:49 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	11
+PKGNAME=	${DISTNAME:S/-4/4-4/}
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -18,6 +18,8 @@ CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
 #CMAKE_ARGS+=	-DWITH_LibV4L2:BOOL=OFF
 
 REPLACE_PERL+= \
+	kget/conf/kget_limitdownloads.pl \
+	kget/conf/kget_sensitive.pl \
 	kopete/kopete/kconf_update/kopete-account-0.10.pl \
 	kopete/kopete/kconf_update/kopete-gaim_to_pidgin_style.pl \
 	kopete/kopete/kconf_update/kopete-initialstatus.pl \
@@ -31,6 +33,7 @@ REPLACE_SH+= \
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
+.include "../../audio/alsa-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../chat/libmsn/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
@@ -42,15 +45,18 @@ BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../misc/kdepimlibs4/buildlink3.mk"
+# libmms-0.6 has a broken header file. comment out till 0.6.2 in pkgsrc
+BUILDLINK_API_DEPENDS.libmms+=  libmms>=0.6.2
+#.include "../../net/libmms/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../net/ortp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdebase4/buildlink3.mk"
-.include "../../x11/kdebase-runtime4/buildlink3.mk"
-.include "../../x11/kdebase-workspace4/buildlink3.mk"
+.include "../../x11/kde-baseapps4/buildlink3.mk"
+.include "../../x11/kde-runtime4/buildlink3.mk"
+.include "../../x11/kde-workspace4/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
