@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.31 2011/09/17 08:10:33 abs Exp $
+# $NetBSD: UnixWare.mk,v 1.32 2012/03/19 12:34:18 joerg Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -26,19 +26,6 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
-
-# imake installs manpages in weird places
-IMAKE_MAN_SOURCE_PATH=	share/man/man
-IMAKE_MAN_SUFFIX=	1
-IMAKE_LIBMAN_SUFFIX=	3
-IMAKE_FILEMAN_SUFFIX=	4
-IMAKE_GAMEMAN_SUFFIX=	6
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
-IMAKE_MANINSTALL?=	maninstall
 
 .if exists(/usr/include/netinet/in6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard

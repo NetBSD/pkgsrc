@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.30 2011/09/17 08:06:40 abs Exp $
+# $NetBSD: BSDOS.mk,v 1.31 2012/03/19 12:34:16 joerg Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -33,20 +33,6 @@ ROOT_GROUP?=	wheel
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
-
-# imake installs manpages in weird places
-# XXX: assume NetBSD defaults until somebody determines correct values
-IMAKE_MAN_SOURCE_PATH=	man/cat
-IMAKE_MANNEWSUFFIX=	0
-IMAKE_MAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_LIBMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_FILEMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_GAMEMAN_SUFFIX=	${IMAKE_MANNEWSUFFIX}
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
-IMAKE_MANINSTALL?=	maninstall catinstall
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

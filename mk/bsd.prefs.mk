@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.320 2012/01/17 20:43:25 sbd Exp $
+# $NetBSD: bsd.prefs.mk,v 1.321 2012/03/19 12:34:15 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -552,18 +552,6 @@ X11BASE?=	/usr/X11R6
 .endif
 CROSSBASE?=	${LOCALBASE}/cross
 
-# If xpkgwedge.def is found, then clearly we're using xpkgwedge.
-.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
-    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-USE_XPKGWEDGE=  yes
-.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-USE_XPKGWEDGE=		yes
-.elif ${X11_TYPE} == "modular"
-USE_XPKGWEDGE=	no
-.else
-USE_XPKGWEDGE?=	yes
-.endif
-
 .if defined(FIX_SYSTEM_HEADERS) && ${FIX_SYSTEM_HEADERS} == "yes" && \
     !defined(BOOTSTRAP_PKG) && \
     exists(../../pkgtools/compat_headers/buildlink3.mk)
@@ -574,14 +562,26 @@ USE_XPKGWEDGE?=	yes
 X11BASE=		${LOCALBASE}
 .endif
 
-.if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss])
 X11PREFIX=		${LOCALBASE}
-.else
-X11PREFIX=		${X11BASE}
-.endif
 
 # Default directory for font encodings
 X11_ENCODINGSDIR?=	${X11BASE}/lib/X11/fonts/encodings
+
+IMAKE_MAN_SOURCE_PATH=	man/man
+IMAKE_MAN_SUFFIX=	1
+IMAKE_LIBMAN_SUFFIX=	3
+IMAKE_KERNMAN_SUFFIX=	4
+IMAKE_FILEMAN_SUFFIX=	5
+IMAKE_GAMEMAN_SUFFIX=	6
+IMAKE_MISCMAN_SUFFIX=	7
+IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
+IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
+IMAKE_KERNMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
+IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
+IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
+IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
+IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
+IMAKE_MANINSTALL?=	maninstall
 
 DEPOT_SUBDIR?=		packages
 DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
