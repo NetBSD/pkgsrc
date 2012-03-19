@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2012/03/19 19:44:03 markd Exp $
+
+--- khelpcenter/searchhandlers/khc_mansearch.pl.orig	2007-12-07 01:20:24.000000000 +1300
++++ khelpcenter/searchhandlers/khc_mansearch.pl
+@@ -55,7 +55,7 @@ my @results;
+ while( <MAN> ) {
+ #  print "RAW:$_";
+   chop;
+-  /^([^\s]+)\s+\((.*)\)\s+-\s+(.*)$/;
++  /^([^(]+)\s+\((.*)\)\s+-\s+(.*)$/;
+   my $page = $1;
+   my $section = $2;
+   my $description = $3;
+@@ -73,6 +73,7 @@ if ( $nummatches > 0 ) {
+   for my $result ( @results ) {
+     my ( $page, $section, $description ) = @$result;
+     my $url = "man:" . $page;
++    $url =~ s/,.*//;
+     print "<li><a href=\"$url\">";
+     print "$page - $description</a></li>\n";
+     if ( ++$count == $maxcount ) { last; }
