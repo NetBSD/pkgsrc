@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.2 2012/03/10 03:26:05 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_debug__util__posic.cc,v 1.3 2012/03/19 10:35:58 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/debug_util_posix.cc.orig	2012-02-16 14:09:02.000000000 +0000
+--- mozilla/ipc/chromium/src/base/debug_util_posix.cc.orig	2012-03-13 05:32:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/debug_util_posix.cc
 @@ -5,7 +5,7 @@
  #include "build/build_config.h"

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xulrunner_app_Makefile.in,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_xulrunner_app_Makefile.in,v 1.2 2012/03/19 10:36:00 ryoon Exp $
 
---- mozilla/xulrunner/app/Makefile.in.orig	2012-02-16 14:09:42.000000000 +0000
+--- mozilla/xulrunner/app/Makefile.in.orig	2012-03-13 05:33:19.000000000 +0000
 +++ mozilla/xulrunner/app/Makefile.in
 @@ -130,6 +130,10 @@ endif
  RCFLAGS += -DXULRUNNER_ICO=\"$(DIST)/branding/xulrunner.ico\" -DDOCUMENT_ICO=\"$(DIST)/branding/document.ico\"

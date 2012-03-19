@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_js_src_build_autoconf_gcc-pr49911.m4,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_build_autoconf_gcc-pr49911.m4,v 1.2 2012/03/19 10:36:00 ryoon Exp $
 
---- mozilla/js/src/build/autoconf/gcc-pr49911.m4.orig	2012-02-16 14:09:03.000000000 +0000
+--- mozilla/js/src/build/autoconf/gcc-pr49911.m4.orig	2012-03-13 05:32:40.000000000 +0000
 +++ mozilla/js/src/build/autoconf/gcc-pr49911.m4
 @@ -56,7 +56,7 @@ CXXFLAGS="$_SAVE_CXXFLAGS"
  

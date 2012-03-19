@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.2 2012/03/19 10:35:59 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-02-16 14:08:48.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-03-13 05:32:27.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.cpp
 @@ -236,7 +236,7 @@ PluginModuleChild::Init(const std::strin
  

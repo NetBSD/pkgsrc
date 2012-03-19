@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2012/03/15 08:36:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2012/03/19 10:35:57 ryoon Exp $
 #
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER}
-PKGREVISION=	1
-SM_VER=		2.7.2
+SM_VER=		2.8
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -46,6 +45,6 @@ do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
-.include "../../devel/xulrunner10/mozilla-common.mk"
+.include "../../devel/xulrunner/mozilla-common.mk"
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

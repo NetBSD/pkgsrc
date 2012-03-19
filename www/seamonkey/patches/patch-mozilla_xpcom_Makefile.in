@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xpcom_Makefile.in,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_Makefile.in,v 1.2 2012/03/19 10:36:00 ryoon Exp $
 
---- mozilla/xpcom/Makefile.in.orig	2012-02-16 14:09:41.000000000 +0000
+--- mozilla/xpcom/Makefile.in.orig	2012-03-13 05:33:18.000000000 +0000
 +++ mozilla/xpcom/Makefile.in
 @@ -68,6 +68,10 @@ DIRS		+= windbgdlg
  endif

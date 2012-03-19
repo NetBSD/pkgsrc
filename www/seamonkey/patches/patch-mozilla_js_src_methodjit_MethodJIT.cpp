@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.2 2012/03/19 10:36:00 ryoon Exp $
 
---- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2012-02-16 14:09:07.000000000 +0000
+--- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2012-03-13 05:32:43.000000000 +0000
 +++ mozilla/js/src/methodjit/MethodJIT.cpp
-@@ -171,7 +171,7 @@ SetVMFrameRegs(VMFrame &f)
+@@ -170,7 +170,7 @@ SetVMFrameRegs(VMFrame &f)
  
  JS_STATIC_ASSERT(offsetof(FrameRegs, sp) == 0);
  
