@@ -1,0 +1,13 @@
+$NetBSD: patch-klinkstatus_src_CMakeLists.txt,v 1.1 2012/03/19 20:01:10 markd Exp $
+
+--- klinkstatus/src/CMakeLists.txt.orig	2011-09-26 11:26:04.000000000 +0000
++++ klinkstatus/src/CMakeLists.txt
+@@ -3,6 +3,8 @@ add_subdirectory(plugins)
+ set(GENERIC_KLINKSTATUS_LIB_VERSION "4.0.0")
+ set(GENERIC_KLINKSTATUS_LIB_SOVERSION "4")
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ configure_file(config-tidy.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-tidy.h )
+ 
+ 
