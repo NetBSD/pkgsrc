@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/03/03 00:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/03/19 22:36:48 markd Exp $
 
 DISTNAME=	kipi-plugins-0.1.7
 PKGREVISION=	18
@@ -29,7 +29,7 @@ BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.7.0
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.4
-.include "../../graphics/libkdcraw/buildlink3.mk"
+.include "../../graphics/libkdcraw-kde3/buildlink3.mk"
 .include "../../graphics/libkexiv2/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
