@@ -1,31 +1,17 @@
-# $NetBSD: Makefile,v 1.29 2012/03/03 00:12:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/03/19 23:12:19 markd Exp $
 #
 
-DISTNAME=	libkexiv2-0.1.9
-PKGREVISION=	12
+DISTNAME=	libkexiv2-${_KDE_VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
-EXTRACT_SUFX=	.tar.bz2
+COMMENT=	a KDE wrapper around exiv2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kipi-plugins.org/
-COMMENT=	KDE wrapper for exiv2
-LICENSE=	gnu-gpl-v2
+.include "../../meta-pkgs/kde4/Makefile.kde4"
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+PKGCONFIG_OVERRIDE+=    libkexiv2.pc.cmake
 
-GNU_CONFIGURE=	yes
-SET_LIBDIR=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
+.include "../../meta-pkgs/kde4/kde4.mk"
 
-PKGCONFIG_OVERRIDE+=	libkexiv2/libkexiv2.pc.in
-
-.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
