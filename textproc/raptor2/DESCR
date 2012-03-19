@@ -1,0 +1,12 @@
+A Parser for the RDF/XML syntax as updated by the W3C RDF Core working group.
+
+ * Designed to integrate well with Redland
+ * Handles RDF/XML syntax updates for XML Base, xml:lang and RDF datatyping.
+ * Generates N-Triples supporting XML literals, language tagging and datatypes
+ * Parses content on the web if libcurl or libxml2 is available.
+ * Handles rdf:resource / resource attributes
+ * Uses expat and/or (GNOME) libxml XML parsers as available or required
+ * Optional features can be selected at run time.
+ * (Perl, Python, Java, Tcl, Ruby, PHP interfaces when used via Redland)
+ * No memory leaks
+ * Fast
