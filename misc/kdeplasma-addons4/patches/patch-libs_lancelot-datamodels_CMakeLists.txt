@@ -1,0 +1,12 @@
+$NetBSD: patch-libs_lancelot-datamodels_CMakeLists.txt,v 1.1 2012/03/19 20:50:25 markd Exp $
+
+--- libs/lancelot-datamodels/CMakeLists.txt.orig	2011-07-27 18:42:29.000000000 +0000
++++ libs/lancelot-datamodels/CMakeLists.txt
+@@ -4,6 +4,7 @@ find_package(KDE4 REQUIRED)
+ 
+ include (KDE4Defaults)
+ add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
+ 
+ find_package(Lancelot REQUIRED)
+ 
