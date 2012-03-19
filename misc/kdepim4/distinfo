@@ -1,21 +1,28 @@
-$NetBSD: distinfo,v 1.15 2011/10/02 04:35:03 markd Exp $
+$NetBSD: distinfo,v 1.16 2012/03/19 21:01:28 markd Exp $
 
-SHA1 (kdepim-4.4.9.tar.bz2) = efe91c4309fb09f49c816a6557a157170c8f0360
-RMD160 (kdepim-4.4.9.tar.bz2) = d11b5090bdf27c3ffd4558d9c3e6cd30aa6a7e88
-Size (kdepim-4.4.9.tar.bz2) = 9084259 bytes
+SHA1 (kdepim-4.4.11.1.tar.bz2) = 49dd6cc8406b0ef4bb681bfc0de6ad9368b4b5b2
+RMD160 (kdepim-4.4.11.1.tar.bz2) = 51394b9dcb3aecc4f108e87de37c21e3af820ee1
+Size (kdepim-4.4.11.1.tar.bz2) = 8964708 bytes
 SHA1 (patch-aa) = 19bc087365f31f2ab5f62238530185646e3826fb
 SHA1 (patch-ab) = 234c88df2dcb633f8c58039b34694a606dc48494
 SHA1 (patch-ac) = fa109df4489b5bad67b19272d1d3fee4fd934c18
 SHA1 (patch-ad) = 9c7fbc7223b74cafc30626a024b0177d9e80ad8f
 SHA1 (patch-ae) = d45948eb8a083cb2cf900bc946f0f346e1f56d73
-SHA1 (patch-af) = b13488ced72f4b6e617e9a4dee52c124602d680e
+SHA1 (patch-af) = 2a4341c4ae9e1a7aab20fee9c9d27b4cfaa63e1c
 SHA1 (patch-ag) = 45a094af644835a0859f354db0c880fc891aa977
 SHA1 (patch-ah) = 5b5235666c568de23fc79ef461df6b8f66a67ce6
 SHA1 (patch-ai) = 304ddaf381ae4cb217d033268868366760c2d071
 SHA1 (patch-aj) = 26285317562f55e1bee4740286069d4c2213d2fa
 SHA1 (patch-ak) = ba5152d71810759b4bcbe526f7d05eeb8ed8944b
+SHA1 (patch-akregator_plugins_mk4storage_CMakeLists.txt) = 804c66cd07ae0d5f71c4e6ff05be65e6c438e4cb
 SHA1 (patch-al) = 55c77b3ad49e97e304778f56379cabb62af95e07
 SHA1 (patch-am) = 862ed0d6c699146945bb6c5aff8aaec8030ce101
 SHA1 (patch-an) = 0644fda1025698dcb6833672ca88656931cd73dd
 SHA1 (patch-ao) = e8c93353d3d73662a55589dc71ceb8d7e03426bd
 SHA1 (patch-ap) = cf6854d683345d51c6d9f19286d73fea693a241a
+SHA1 (patch-kalarm_CMakeLists.txt) = 6799c123f626c50b8bef7ca3e720f899938accdc
+SHA1 (patch-knode_CMakeLists.txt) = 0f3fcf56b46ff0b82fbadb3602947b6235db5234
+SHA1 (patch-kontact_plugins_akregator_CMakeLists.txt) = d148f3adad4fd2889dbd5e80402904322a4721c4
+SHA1 (patch-korganizer_CMakeLists.txt) = 3beb3f01c7e77cb4551dfe359ee4dddbca035840
+SHA1 (patch-plugins_kaddressbook_editorpages_CMakeLists.txt) = 106a99f984eb1991065f920d120b03a5095f6688
+SHA1 (patch-plugins_kmail_bodypartformatter_CMakeLists.txt) = 63b88d4afdbb9901c7b0344559d41a21b733c57f

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/25 20:55:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/19 21:01:28 markd Exp $
 bin/akonadi2xml
 bin/akonadi_birthdays_resource
 bin/akonadi_contacts_resource
@@ -30,6 +30,7 @@ lib/kde4/akonadi_serializer_addressee.so
 lib/kde4/akonadi_serializer_bookmark.so
 lib/kde4/akonadi_serializer_contactgroup.so
 lib/kde4/akonadi_serializer_kcal.so
+lib/kde4/akonadi_serializer_kcalcore.so
 lib/kde4/akonadi_serializer_mail.so
 lib/kde4/akonadi_serializer_microblog.so
 lib/kde4/kabc_akonadi.so
@@ -40,16 +41,16 @@ lib/kde4/kcm_akonadi_server.so
 lib/kde4/kio_akonadi.so
 lib/libakonadi-xml.so
 lib/libakonadi-xml.so.4
-lib/libakonadi-xml.so.4.5.0
+lib/libakonadi-xml.so.4.8.0
 lib/libkdepim-copy.so
 lib/libkdepim-copy.so.4
-lib/libkdepim-copy.so.4.5.0
+lib/libkdepim-copy.so.4.8.0
 lib/libmaildir.so
 lib/libmaildir.so.4
-lib/libmaildir.so.4.5.0
+lib/libmaildir.so.4.8.0
 lib/libmbox.so
 lib/libmbox.so.4
-lib/libmbox.so.4.5.0
+lib/libmbox.so.4.8.0
 share/akonadi/agents/birthdaysresource.desktop
 share/akonadi/agents/contactsresource.desktop
 share/akonadi/agents/icalresource.desktop
@@ -82,6 +83,7 @@ share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_addressee.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_bookmark.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_contactgroup.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_kcal.desktop
+share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_kcalcore.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_mail.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_microblog.desktop
 share/kde/apps/akonadi_knut_resource/knut-template.xml

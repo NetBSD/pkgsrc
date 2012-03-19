@@ -1,0 +1,12 @@
+$NetBSD: patch-korganizer_CMakeLists.txt,v 1.1 2012/03/19 21:01:28 markd Exp $
+
+--- korganizer/CMakeLists.txt.orig	2011-04-20 20:03:31.000000000 +0000
++++ korganizer/CMakeLists.txt
+@@ -1,5 +1,7 @@
+ project(korganizer)
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ #
+ # The following macros can be defined to alter KOrganizer behavior.
+ # (if desired, use add_definitions() to define them)
