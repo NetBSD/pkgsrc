@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.17 2011/05/07 22:25:08 markd Exp $
+$NetBSD: distinfo,v 1.18 2012/03/19 20:12:49 markd Exp $
 
-SHA1 (kdenetwork-4.5.5.tar.bz2) = 2c7dd0bc1809ac477f46ddb966f232ca3f60bc0a
-RMD160 (kdenetwork-4.5.5.tar.bz2) = 769829e255830bf360d9796c0ea9dcb12faeac0b
-Size (kdenetwork-4.5.5.tar.bz2) = 8148708 bytes
+SHA1 (kdenetwork-4.8.0.tar.bz2) = 51ea55dbcbece59535af61f7450e8ac2aa1db28b
+RMD160 (kdenetwork-4.8.0.tar.bz2) = 48eb3b1666daa8ff696d1c4a91d1c34f30bcb9bb
+Size (kdenetwork-4.8.0.tar.bz2) = 9981102 bytes
 SHA1 (patch-aa) = 0359cd86501c57197242c398d63c1fc77c60a4d0
 SHA1 (patch-ab) = 0743b3b6c994623c507b8bcd52ee01dad31cf56f
 SHA1 (patch-ae) = 765d48550d2d8b7a59a1593a669b0909fef3bd96
-SHA1 (patch-af) = 5afe11d2691c0f3e9510d2cd1df5b4f736abafbe
-SHA1 (patch-kget_ui_metalinkcreator_metalinker.cpp) = 1c3aaf24097c25120ff95b329e0995bc91843214
+SHA1 (patch-af) = ebd1bc3ae40b5cd551a1283e28fb0f4a80764cfb
+SHA1 (patch-kget_CMakeLists.txt) = 91029f47cf50dbdd31b3ba63bf8e4e35c303f6cb
+SHA1 (patch-kopete_protocols_wlm_CMakeLists.txt) = bf4929a7e872adb13b2017957801385ca9623f37
