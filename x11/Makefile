@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2012/03/09 10:16:28 plunky Exp $
+# $NetBSD: Makefile,v 1.646 2012/03/19 19:50:49 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -110,7 +110,11 @@ SUBDIR+=	iceauth
 SUBDIR+=	ico
 SUBDIR+=	imwheel
 SUBDIR+=	inputproto
+SUBDIR+=	kactivities
 SUBDIR+=	kbproto
+SUBDIR+=	kde-baseapps4
+SUBDIR+=	kde-runtime4
+SUBDIR+=	kde-workspace4
 SUBDIR+=	kde3-i18n-af
 SUBDIR+=	kde3-i18n-ar
 SUBDIR+=	kde3-i18n-az
@@ -179,12 +183,8 @@ SUBDIR+=	kde3-i18n-zh_TW
 SUBDIR+=	kde4-l10n-de
 SUBDIR+=	kde4-l10n-en_GB
 SUBDIR+=	kde4-l10n-nl
-SUBDIR+=	kdebase-runtime4
-SUBDIR+=	kdebase-workspace4
 SUBDIR+=	kdebase3
-SUBDIR+=	kdebase4
 SUBDIR+=	kdebindings-ruby
-SUBDIR+=	kdebindings4-python
 SUBDIR+=	kdelibdocs3
 SUBDIR+=	kdelibs3
 SUBDIR+=	kdelibs4
@@ -289,6 +289,7 @@ SUBDIR+=	py-gnome2-desktop
 SUBDIR+=	py-gnome2-extras
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-gtksourceview
+SUBDIR+=	py-kde4
 SUBDIR+=	py-kiwi
 SUBDIR+=	py-qt3-base
 SUBDIR+=	py-qt3-modules
