@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/03/19 21:28:53 markd Exp $
+# $NetBSD: Makefile,v 1.35 2012/03/19 21:34:22 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -94,7 +94,6 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 
-.include "../../devel/libiberty/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
