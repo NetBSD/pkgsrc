@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.17 2011/10/02 04:32:22 markd Exp $
+$NetBSD: distinfo,v 1.18 2012/03/19 11:46:44 markd Exp $
 
-SHA1 (kdepimlibs-4.5.5.tar.bz2) = 436fd7897586294f327395981a714ae0695f4ee2
-RMD160 (kdepimlibs-4.5.5.tar.bz2) = 6e9e54fcf8fa2f1da1c76004a3998f9426a30f4c
-Size (kdepimlibs-4.5.5.tar.bz2) = 2674251 bytes
-SHA1 (patch-aa) = 4a90823acf9832232ea51cc1202dd88edebe5ee9
-SHA1 (patch-akonadi_CMakeLists.txt) = 01b0e467d7474312fb001af081648efa44d8278f
+SHA1 (kdepimlibs-4.8.0.tar.bz2) = 22409015a8047e3a78711093e3363775e8434fba
+RMD160 (kdepimlibs-4.8.0.tar.bz2) = 968c2a69ab6197741f20476c87b999ef5ea5c96a
+Size (kdepimlibs-4.8.0.tar.bz2) = 3306692 bytes
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c
+SHA1 (patch-kalarmcal_CMakeLists.txt) = 8237552f350f214c3380bf0fc54d19d36765c9b9
 SHA1 (patch-kblog_CMakeLists.txt) = 183d17f2de6f5f4f2f6bd29666b2a35d22c055aa
+SHA1 (patch-kcalutils_CMakeLists.txt) = 5c212ab23d0b1006a43c765bc1d860be85da284a
+SHA1 (patch-kmbox_CMakeLists.txt) = 924bd70a84c8af1c7d37501d4f718343a0aa7121
+SHA1 (patch-kpimutils_CMakeLists.txt) = 0a9f7283e2b70b38e0c545240251bc9ecb615eab
 SHA1 (patch-qgpgme_CMakeLists.txt) = 0860963f371a008f1d006dad58ea40329c358cfd
