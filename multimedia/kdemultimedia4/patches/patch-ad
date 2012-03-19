@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/10/02 20:25:35 markd Exp $
+$NetBSD: patch-ad,v 1.2 2012/03/19 20:22:32 markd Exp $
 
---- kmix/tests/CMakeLists.txt.orig	2008-12-22 09:21:07.000000000 +1300
+--- kmix/tests/CMakeLists.txt.orig	2011-01-19 22:23:29.000000000 +0000
 +++ kmix/tests/CMakeLists.txt
 @@ -21,7 +21,7 @@ kde4_add_executable(profiletest ${profil
      ${kmix_adaptor_SRCS}
