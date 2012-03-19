@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.20 2011/09/12 09:19:06 tnn Exp $
+# $NetBSD: options.mk,v 1.21 2012/03/19 20:28:11 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
-PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
+PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail mozilla-lightning
 
 PLIST_VARS+=	gnome
 
@@ -44,4 +44,18 @@ CONFIGURE_ARGS+=	--enable-install-strip
 CONFIGURE_ARGS+=	--enable-tracejit
 .else
 CONFIGURE_ARGS+=	--disable-tracejit
+.endif
+
+.if !empty(PKG_OPTIONS:Mmozilla-enigmail) || make(distinfo)
+.include "enigmail.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mmozilla-lightning)
+CONFIGURE_ARGS+=	--enable-calendar
+PLIST_SRC+=		PLIST.lightning
+XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/calendar-timezones.xpi
+XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/gdata-provider.xpi
+XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/lightning.xpi
+.else
+CONFIGURE_ARGS+=	--disable-calendar
 .endif
