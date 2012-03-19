@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.1 2012/03/10 03:26:06 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.2 2012/03/19 10:35:59 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util.h.orig	2012-02-16 14:09:02.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util.h.orig	2012-03-13 05:32:39.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util.h
 @@ -14,7 +14,6 @@
  #include <windows.h>

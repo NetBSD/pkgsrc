@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_chrome_common_ipc__channel__posix.h,v 1.2 2012/03/10 03:26:05 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_chrome_common_ipc__channel__posix.h,v 1.3 2012/03/19 10:35:58 ryoon Exp $
 
---- mozilla/ipc/chromium/src/chrome/common/ipc_channel_posix.h.orig	2012-02-16 14:09:02.000000000 +0000
+--- mozilla/ipc/chromium/src/chrome/common/ipc_channel_posix.h.orig	2012-03-13 05:32:39.000000000 +0000
 +++ mozilla/ipc/chromium/src/chrome/common/ipc_channel_posix.h
 @@ -95,7 +95,7 @@ class Channel::ChannelImpl : public Mess
    };
