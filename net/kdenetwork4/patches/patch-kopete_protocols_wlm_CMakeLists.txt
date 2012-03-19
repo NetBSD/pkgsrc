@@ -1,0 +1,12 @@
+$NetBSD: patch-kopete_protocols_wlm_CMakeLists.txt,v 1.1 2012/03/19 20:12:49 markd Exp $
+
+--- kopete/protocols/wlm/CMakeLists.txt.orig	2011-07-27 18:25:39.000000000 +0000
++++ kopete/protocols/wlm/CMakeLists.txt
+@@ -1,5 +1,7 @@
+ project(wlm)
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ # the wlm protocol uses KMime from kdepimlibs, which in turn requires Boost to work
+ find_package(Boost REQUIRED)
+ include_directories(
