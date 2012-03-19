@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2009/05/26 21:59:57 rillig Exp $
+# $NetBSD: builtin.mk,v 1.20 2012/03/19 12:34:21 joerg Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -12,11 +12,10 @@ BUILTIN_FIND_FILES.H_XRENDER=	${X11BASE}/include/X11/extensions/Xrender.h
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
 .if !defined(IS_BUILTIN.Xrender)
-IS_BUILTIN.Xrender=	no
 .  if empty(H_XRENDER:M__nonexistent__)
-BUILTIN_IMAKE_CHECK:=	Xrender:BuildRenderLibrary
-.    include "../../mk/buildlink3/imake-check.mk"
-IS_BUILTIN.Xrender=	${BUILTIN_IMAKE_CHECK.Xrender}
+IS_BUILTIN.Xrender=	yes
+.  else
+IS_BUILTIN.Xrender=	no
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.Xrender
