@@ -1,0 +1,8 @@
+$NetBSD: patch-ksysguard_example_CMakeLists.txt,v 1.1 2012/03/19 19:44:03 markd Exp $
+
+--- ksysguard/example/CMakeLists.txt.orig	2007-12-23 11:54:28.000000000 +1300
++++ ksysguard/example/CMakeLists.txt
+@@ -1,2 +1,2 @@
+-install( FILES ksysguarddrc  DESTINATION  ${SYSCONF_INSTALL_DIR} )
++install( FILES ksysguarddrc  DESTINATION  ${CMAKE_INSTALL_PREFIX}/share/examples/kde-workspace4 )
+ install( FILES ksysguard.notifyrc DESTINATION  ${DATA_INSTALL_DIR}/ksysguard )
