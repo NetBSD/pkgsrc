@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.893 2012/03/19 15:48:27 adam Exp $
+$NetBSD: CHANGES-2012,v 1.894 2012/03/19 19:38:44 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1343,3 +1343,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/seamonkey to 2.8 [ryoon 2012-03-19]
 	Updated www/seamonkey-l10n to 2.8 [ryoon 2012-03-19]
 	Updated devel/zlib to 1.2.6 [adam 2012-03-19]
+	Updated security/pam-krb5 to 4.5 [pettai 2012-03-19]
