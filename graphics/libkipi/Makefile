@@ -1,28 +1,15 @@
-# $NetBSD: Makefile,v 1.38 2012/03/03 00:12:35 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/03/19 22:57:09 markd Exp $
 
-DISTNAME=	libkipi-0.1.6
-PKGREVISION=	12
+DISTNAME=	libkipi-${_KDE_VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
-EXTRACT_SUFX=	.tar.bz2
+COMMENT=	KDE image plugin interface
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kipi-plugins.org/drupal/
-COMMENT=	KDE Image Plugin Interface
+.include "../../meta-pkgs/kde4/Makefile.kde4"
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+PKGCONFIG_OVERRIDE+=    libkipi.pc.cmake
 
-USE_TOOLS+=		gmake msgfmt
-USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		YES
-SET_LIBDIR=		YES
-USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	# empty
+.include "../../meta-pkgs/kde4/kde4.mk"
 
-.include "../../meta-pkgs/kde3/kde3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
