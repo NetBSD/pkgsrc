@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/19 22:29:41 markd Exp $
+
+Dont insist on 1990 standard or fails to handle // comments in lcms.h
+
+--- configure.orig	2011-01-29 02:35:31.561424350 +0000
++++ configure
+@@ -5266,7 +5266,7 @@ fi
+         CXXFLAGS="-Wall -W -Wpointer-arith $CXXFLAGS"
+         case $host in
+           *-*-linux-gnu)
+-            CFLAGS="-std=iso9899:1990 -W -Wall -Wchar-subscripts -Wshadow -Wpointer-arith -Wmissing-prototypes -Wwrite-strings -D_XOPEN_SOURCE=500 -D_BSD_SOURCE $CFLAGS"
++            CFLAGS="-W -Wall -Wchar-subscripts -Wshadow -Wpointer-arith -Wmissing-prototypes -Wwrite-strings -D_XOPEN_SOURCE=500 -D_BSD_SOURCE $CFLAGS"
+             CXXFLAGS="-ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wchar-subscripts $CXXFLAGS"
+ 
+ { echo "$as_me:$LINENO: checking whether $CXX supports -Wmissing-format-attribute" >&5
