@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/10/25 20:10:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/19 10:07:52 markd Exp $
 include/KDE/Phonon/AbstractAudioOutput
 include/KDE/Phonon/AbstractMediaStream
 include/KDE/Phonon/AbstractVideoOutput
@@ -51,12 +51,14 @@ include/phonon/AudioCaptureDevice
 include/phonon/AudioCaptureDeviceModel
 include/phonon/AudioChannelDescription
 include/phonon/AudioChannelDescriptionModel
+include/phonon/AudioDataOutput
 include/phonon/AudioOutput
 include/phonon/AudioOutputDevice
 include/phonon/AudioOutputDeviceModel
 include/phonon/AudioOutputInterface
 include/phonon/AudioOutputInterface40
 include/phonon/AudioOutputInterface42
+include/phonon/AvCapture
 include/phonon/BackendCapabilities
 include/phonon/BackendInterface
 include/phonon/Effect
@@ -71,6 +73,7 @@ include/phonon/MediaNode
 include/phonon/MediaObject
 include/phonon/MediaObjectInterface
 include/phonon/MediaSource
+include/phonon/Mrl
 include/phonon/ObjectDescription
 include/phonon/ObjectDescriptionData
 include/phonon/ObjectDescriptionModel
@@ -81,6 +84,8 @@ include/phonon/SeekSlider
 include/phonon/StreamInterface
 include/phonon/SubtitleDescription
 include/phonon/SubtitleDescriptionModel
+include/phonon/VideoCaptureDevice
+include/phonon/VideoCaptureDeviceModel
 include/phonon/VideoPlayer
 include/phonon/VideoWidget
 include/phonon/VideoWidgetInterface
@@ -109,6 +114,7 @@ include/phonon/experimental/audiodataoutput.h
 include/phonon/experimental/audiodataoutputinterface.h
 include/phonon/experimental/audioformat.h
 include/phonon/experimental/avcapture.h
+include/phonon/experimental/avcaptureinterface.h
 include/phonon/experimental/backendcapabilities.h
 include/phonon/experimental/backendinterface.h
 include/phonon/experimental/export.h
@@ -132,6 +138,7 @@ include/phonon/medianode.h
 include/phonon/mediaobject.h
 include/phonon/mediaobjectinterface.h
 include/phonon/mediasource.h
+include/phonon/mrl.h
 include/phonon/objectdescription.h
 include/phonon/objectdescriptionmodel.h
 include/phonon/path.h
@@ -148,22 +155,24 @@ include/phonon/videowidgetinterface.h
 include/phonon/volumefadereffect.h
 include/phonon/volumefaderinterface.h
 include/phonon/volumeslider.h
-lib/kde4/plugins/phonon_backend/phonon_gstreamer.so
-lib/kde4/plugins/phonon_backend/phonon_xine.so
 lib/libphonon.so
 lib/libphonon.so.4
-lib/libphonon.so.4.4.0
+lib/libphonon.so.${PKGVERSION}
 lib/libphononexperimental.so
 lib/libphononexperimental.so.4
-lib/libphononexperimental.so.4.4.0
+lib/libphononexperimental.so.${PKGVERSION}
 lib/pkgconfig/phonon.pc
+qt4/mkspecs/modules/qt_phonon.pri
+qt4/plugins/designer/libphononwidgets.so
 share/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
-share/icons/oxygen/128x128/apps/phonon-xine.png
-share/icons/oxygen/16x16/apps/phonon-xine.png
-share/icons/oxygen/22x22/apps/phonon-xine.png
-share/icons/oxygen/32x32/apps/phonon-xine.png
-share/icons/oxygen/48x48/apps/phonon-xine.png
-share/icons/oxygen/64x64/apps/phonon-xine.png
-share/icons/oxygen/scalable/apps/phonon-xine.svgz
-share/kde4/services/phononbackends/gstreamer.desktop
-share/kde4/services/phononbackends/xine.desktop
+share/phonon-buildsystem/COPYING-CMAKE-SCRIPTS
+share/phonon-buildsystem/FindAutomoc4.cmake
+share/phonon-buildsystem/FindPackageHandleStandardArgs.cmake
+share/phonon-buildsystem/FindPhononInternal.cmake
+share/phonon-buildsystem/FindQt4.cmake
+share/phonon-buildsystem/MacroEnsureVersion.cmake
+share/phonon-buildsystem/MacroLogFeature.cmake
+share/phonon-buildsystem/MacroOptionalFindPackage.cmake
+share/phonon-buildsystem/MacroPushRequiredVars.cmake
+share/phonon-buildsystem/PhononMacros.cmake
+share/phonon-buildsystem/cmake_uninstall.cmake.in
