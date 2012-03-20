@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.916 2012/03/20 13:43:13 taca Exp $
+$NetBSD: CHANGES-2012,v 1.917 2012/03/20 13:46:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1480,3 +1480,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-rspec-mocks to 2.9.0 [taca 2012-03-20]
 	Updated devel/ruby-rspec to 2.9.0 [taca 2012-03-20]
 	Updated devel/ruby-rspec-rails to 2.9.0 [taca 2012-03-20]
+	Updated textproc/ruby-libxml to 2.3.0 [taca 2012-03-20]
