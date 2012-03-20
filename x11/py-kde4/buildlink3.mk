@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/03/19 19:44:04 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/03/20 11:21:15 markd Exp $
 
 BUILDLINK_TREE+=	py-kde4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-kde4
 PY_KDE4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-kde4+=	${PYPKGPREFIX}-kde4>=4.8.0
-BUILDLINK_PKGSRCDIR.py-kde4?=	../../wip/py-kde4
+BUILDLINK_PKGSRCDIR.py-kde4?=	../../x11/py-kde4
 
 .endif # PY_KDE4_BUILDLINK3_MK
 
