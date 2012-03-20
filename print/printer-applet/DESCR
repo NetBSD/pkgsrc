@@ -1,0 +1,4 @@
+Printer Applet is a system tray utility that shows current print jobs,
+shows printer warnings and errors and shows when printers that have been
+plugged in for the first time are being auto-configured by hal-cups-utils.
+It is a port of the applet from Red Hat's system-config-printer to KDE.
