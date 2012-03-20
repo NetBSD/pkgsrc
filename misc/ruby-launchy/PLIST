@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2011/08/12 16:59:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/20 13:10:54 taca Exp $
 bin/launchy
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/HISTORY
+${GEM_LIBDIR}/HISTORY.rdoc
 ${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/NOTES
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/launchy
 ${GEM_LIBDIR}/lib/launchy.rb
@@ -35,6 +36,4 @@ ${GEM_LIBDIR}/spec/mock_application.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/tattle-host-os.yaml
 ${GEM_LIBDIR}/spec/version_spec.rb
-${GEM_LIBDIR}/tasks/bundler.rake
-${GEM_LIBDIR}/tasks/contribute.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
