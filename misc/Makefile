@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2012/03/20 00:29:27 markd Exp $
+# $NetBSD: Makefile,v 1.374 2012/03/20 06:39:17 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -110,6 +110,7 @@ SUBDIR+=	jive
 SUBDIR+=	kanjidic
 SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
+SUBDIR+=	kcharselect
 SUBDIR+=	kchm
 SUBDIR+=	kchmviewer
 SUBDIR+=	kde-wallpapers4
@@ -128,7 +129,6 @@ SUBDIR+=	kdepim4
 SUBDIR+=	kdepimlibs4
 SUBDIR+=	kdeplasma-addons4
 SUBDIR+=	kdeutils3
-SUBDIR+=	kdeutils4
 SUBDIR+=	kdrill
 SUBDIR+=	kodos
 SUBDIR+=	koffice
@@ -141,6 +141,7 @@ SUBDIR+=	koffice-l10n-fi
 SUBDIR+=	koffice-l10n-fr
 SUBDIR+=	koffice-l10n-pl
 SUBDIR+=	kp
+SUBDIR+=	kremotecontrol
 SUBDIR+=	latin-words-bin
 SUBDIR+=	less
 SUBDIR+=	libcarddav
@@ -236,6 +237,8 @@ SUBDIR+=	siag
 SUBDIR+=	softmaker-office-demo
 SUBDIR+=	splitvt
 SUBDIR+=	stellarium
+SUBDIR+=	superkaramba
+SUBDIR+=	sweeper
 SUBDIR+=	taskjuggler
 SUBDIR+=	tds
 SUBDIR+=	team
