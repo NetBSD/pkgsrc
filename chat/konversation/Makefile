@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2012/03/15 11:53:21 obache Exp $
+# $NetBSD: Makefile,v 1.40 2012/03/20 10:36:40 markd Exp $
 #
 
-DISTNAME=	konversation-1.3.1
-PKGREVISION=	11
+DISTNAME=	konversation-1.4
 CATEGORIES=	chat kde
-MASTER_SITES=	${MASTER_SITE_KDE:=konversation/1.3.1/src/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_KDE:=konversation/1.4/src/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://konversation.kde.org/
@@ -16,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+= automoc4>=0.9.87:../../devel/automoc4
 
-USE_CMAKE=	yes
 USE_TOOLS+=	perl msgfmt
 USE_LANGUAGES=	c c++
 
@@ -24,6 +22,7 @@ REPLACE_BASH+=		data/scripts/*
 REPLACE_PERL+=		data/updaters/konversation-*.pl
 REPLACE_PERL+=		data/scripts/*
 REPLACE_PYTHON+=	data/scripts/*
+REPLACE_PYTHON+=	data/scripting_support/python/konversation/dbus.py 
 
 USE_TOOLS+=		bash:run
 
