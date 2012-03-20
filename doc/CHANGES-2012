@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.925 2012/03/20 14:54:32 asau Exp $
+$NetBSD: CHANGES-2012,v 1.926 2012/03/20 17:08:08 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1497,3 +1497,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/zope3 [taca 2012-03-20]
 	Updated www/ruby-jekyll to 0.11.2nb1 [taca 2012-03-20]
 	Added parallel/slurm version 2.4.0pre4 [asau 2012-03-20]
+	Updated parallel/sge to 8.0.0.4 [asau 2012-03-20]
