@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2012/03/03 00:13:40 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2012/03/20 11:00:30 markd Exp $
 #
 
-DISTNAME=	kmplayer-0.11.2c
-PKGREVISION=	7
+DISTNAME=	kmplayer-0.11.3b
 CATEGORIES=	multimedia kde
 MASTER_SITES=	http://kmplayer.kde.org/pkgs/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +16,6 @@ DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_CMAKE=		yes
 USE_TOOLS+=		msgfmt perl pkg-config
 USE_LANGUAGES=		c c++
 
