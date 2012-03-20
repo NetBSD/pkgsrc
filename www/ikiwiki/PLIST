@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2012/02/03 12:38:01 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.35 2012/03/20 12:01:15 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-makerepo
@@ -20,11 +20,19 @@ share/examples/ikiwiki/auto-blog.setup
 share/examples/ikiwiki/auto.setup
 share/examples/ikiwiki/wikilist
 share/ikiwiki/attachment/ikiwiki/images/pbar-ani.gif
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_flat_0_aaaaaa_40x100.png
 share/ikiwiki/attachment/ikiwiki/images/ui-bg_flat_75_ffffff_40x100.png
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_glass_55_fbf9ee_1x400.png
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_glass_65_ffffff_1x400.png
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_glass_75_dadada_1x400.png
 share/ikiwiki/attachment/ikiwiki/images/ui-bg_glass_75_e6e6e6_1x400.png
+share/ikiwiki/attachment/ikiwiki/images/ui-bg_glass_95_fef1ec_1x400.png
 share/ikiwiki/attachment/ikiwiki/images/ui-bg_highlight-soft_75_cccccc_1x100.png
 share/ikiwiki/attachment/ikiwiki/images/ui-icons_222222_256x240.png
+share/ikiwiki/attachment/ikiwiki/images/ui-icons_2e83ff_256x240.png
+share/ikiwiki/attachment/ikiwiki/images/ui-icons_454545_256x240.png
 share/ikiwiki/attachment/ikiwiki/images/ui-icons_888888_256x240.png
+share/ikiwiki/attachment/ikiwiki/images/ui-icons_cd0a0a_256x240.png
 share/ikiwiki/attachment/ikiwiki/jquery-ui.min.css
 share/ikiwiki/attachment/ikiwiki/jquery-ui.min.js
 share/ikiwiki/attachment/ikiwiki/jquery.fileupload-ui.js
@@ -83,6 +91,7 @@ share/ikiwiki/directives/ikiwiki/directive/map.mdwn
 share/ikiwiki/directives/ikiwiki/directive/meta.mdwn
 share/ikiwiki/directives/ikiwiki/directive/more.mdwn
 share/ikiwiki/directives/ikiwiki/directive/orphans.mdwn
+share/ikiwiki/directives/ikiwiki/directive/osm.mdwn
 share/ikiwiki/directives/ikiwiki/directive/pagecount.mdwn
 share/ikiwiki/directives/ikiwiki/directive/pagestats.mdwn
 share/ikiwiki/directives/ikiwiki/directive/pagetemplate.mdwn
@@ -104,7 +113,12 @@ share/ikiwiki/directives/ikiwiki/directive/teximg.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toc.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggle.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggleable.mdwn
+share/ikiwiki/directives/ikiwiki/directive/trailitem.mdwn
+share/ikiwiki/directives/ikiwiki/directive/trailitems.mdwn
+share/ikiwiki/directives/ikiwiki/directive/traillink.mdwn
+share/ikiwiki/directives/ikiwiki/directive/trailoptions.mdwn
 share/ikiwiki/directives/ikiwiki/directive/version.mdwn
+share/ikiwiki/directives/ikiwiki/directive/waypoint.mdwn
 share/ikiwiki/examples/blog.mdwn
 share/ikiwiki/examples/blog/archives.mdwn
 share/ikiwiki/examples/blog/comments.mdwn
@@ -134,6 +148,8 @@ share/ikiwiki/javascript/ikiwiki/relativedate.js
 share/ikiwiki/javascript/ikiwiki/toggle.js
 share/ikiwiki/jquery/ikiwiki/jquery.min.js
 share/ikiwiki/openid-selector/ikiwiki/openid/openid-jquery.js
+share/ikiwiki/osm/ikiwiki/images/osm.png
+share/ikiwiki/osm/ikiwiki/osm.js
 share/ikiwiki/po/cs/basewiki/ikiwiki.cs.po
 share/ikiwiki/po/cs/basewiki/ikiwiki/directive.cs.po
 share/ikiwiki/po/cs/basewiki/ikiwiki/formatting.cs.po
@@ -425,6 +441,7 @@ share/ikiwiki/templates/rsspage.tmpl
 share/ikiwiki/templates/searchform.tmpl
 share/ikiwiki/templates/searchquery.tmpl
 share/ikiwiki/templates/titlepage.tmpl
+share/ikiwiki/templates/trails.tmpl
 share/ikiwiki/themes/actiontabs/style.css
 share/ikiwiki/themes/blueview/background_darkness.png
 share/ikiwiki/themes/blueview/header_background.png
