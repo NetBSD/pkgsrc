@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 10:12:24 markd Exp $
+include/qjson/parser.h
+include/qjson/parserrunnable.h
+include/qjson/qjson_export.h
+include/qjson/qobjecthelper.h
+include/qjson/serializer.h
+include/qjson/serializerrunnable.h
+lib/cmake/qjson/qjson-config-version.cmake
+lib/cmake/qjson/qjson-config.cmake
+lib/libqjson.so
+lib/libqjson.so.0
+lib/libqjson.so.${PKGVERSION}
+lib/pkgconfig/QJson.pc
+share/cmake-2.8/Modules/FindQJSON.cmake
