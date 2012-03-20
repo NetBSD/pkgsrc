@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2011/12/16 13:21:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/20 13:53:35 taca Exp $
 bin/ramaze
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gems
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.mailmap
 ${GEM_LIBDIR}/.rvmrc
@@ -142,8 +143,7 @@ ${GEM_LIBDIR}/examples/templates/view/external.tenjin
 ${GEM_LIBDIR}/examples/templates/view/external.zmr
 ${GEM_LIBDIR}/guide/AUTHORS
 ${GEM_LIBDIR}/guide/CHANGELOG
-${GEM_LIBDIR}/guide/GPL_LICENSE
-${GEM_LIBDIR}/guide/RUBY_LICENSE
+${GEM_LIBDIR}/guide/LICENSE
 ${GEM_LIBDIR}/guide/_static/logo.png
 ${GEM_LIBDIR}/guide/_static/logo.svg
 ${GEM_LIBDIR}/guide/_static/ramaze_console.png
@@ -305,6 +305,7 @@ ${GEM_LIBDIR}/lib/ramaze/view/nagoro.rb
 ${GEM_LIBDIR}/lib/ramaze/view/nagoro/render_partial.rb
 ${GEM_LIBDIR}/lib/ramaze/view/remarkably.rb
 ${GEM_LIBDIR}/lib/ramaze/view/sass.rb
+${GEM_LIBDIR}/lib/ramaze/view/slim.rb
 ${GEM_LIBDIR}/lib/ramaze/view/slippers.rb
 ${GEM_LIBDIR}/lib/ramaze/view/tagz.rb
 ${GEM_LIBDIR}/lib/ramaze/view/tenjin.rb
@@ -451,6 +452,9 @@ ${GEM_LIBDIR}/spec/ramaze/view/remarkably/external.rem
 ${GEM_LIBDIR}/spec/ramaze/view/remarkably/sum.rem
 ${GEM_LIBDIR}/spec/ramaze/view/sass.rb
 ${GEM_LIBDIR}/spec/ramaze/view/sass/file.css.sass
+${GEM_LIBDIR}/spec/ramaze/view/slim.rb
+${GEM_LIBDIR}/spec/ramaze/view/slim/external.slim
+${GEM_LIBDIR}/spec/ramaze/view/slim/external_vars.slim
 ${GEM_LIBDIR}/spec/ramaze/view/slippers.rb
 ${GEM_LIBDIR}/spec/ramaze/view/slippers/external.st
 ${GEM_LIBDIR}/spec/ramaze/view/slippers/sum.st
