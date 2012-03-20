@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.907 2012/03/20 12:11:53 markd Exp $
+$NetBSD: CHANGES-2012,v 1.908 2012/03/20 13:05:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/kmplayer to 0.11.3c [markd 2012-03-20]
 	Updated time/rsibreak to 0.11 [markd 2012-03-20]
 	Updated misc/tellico to 2.3.5 [markd 2012-03-20]
+	Updated archivers/libzip to 0.10.1 [wiz 2012-03-20]
