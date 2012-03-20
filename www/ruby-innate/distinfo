@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/12/16 13:18:37 taca Exp $
+$NetBSD: distinfo,v 1.5 2012/03/20 13:52:43 taca Exp $
 
-SHA1 (innate-2011.10.gem) = 2e178d3bcceadc165e6e012f40843a462da669a2
-RMD160 (innate-2011.10.gem) = 05adfd9ee77d1db800b12db07111818cf6c47e78
-Size (innate-2011.10.gem) = 103936 bytes
+SHA1 (innate-2012.03.gem) = 609828ec597603d8341e1802e7100da793a8fac5
+RMD160 (innate-2012.03.gem) = 703acf4aafc51562252dca2d1af8025c1b96b057
+Size (innate-2012.03.gem) = 105984 bytes
