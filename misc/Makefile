@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.374 2012/03/20 06:39:17 markd Exp $
+# $NetBSD: Makefile,v 1.375 2012/03/20 06:55:57 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -107,6 +107,7 @@ SUBDIR+=	ja-man
 SUBDIR+=	jhd
 SUBDIR+=	jitterbug
 SUBDIR+=	jive
+SUBDIR+=	kaccessible
 SUBDIR+=	kanjidic
 SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
@@ -115,7 +116,6 @@ SUBDIR+=	kchm
 SUBDIR+=	kchmviewer
 SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kdeaccessibility3
-SUBDIR+=	kdeaccessibility4
 SUBDIR+=	kdeaddons3
 SUBDIR+=	kdeadmin3
 SUBDIR+=	kdeadmin4
@@ -130,6 +130,9 @@ SUBDIR+=	kdepimlibs4
 SUBDIR+=	kdeplasma-addons4
 SUBDIR+=	kdeutils3
 SUBDIR+=	kdrill
+SUBDIR+=	kmag
+SUBDIR+=	kmouth
+SUBDIR+=	kmousetool
 SUBDIR+=	kodos
 SUBDIR+=	koffice
 SUBDIR+=	koffice-l10n-da
