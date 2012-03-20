@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:35 markd Exp $
+bin/kbackgroundsnapshot
+bin/ksnapshot
+share/applications/kde4/ksnapshot.desktop
+share/dbus-1/interfaces/org.kde.ksnapshot.xml
+share/doc/kde/HTML/en/ksnapshot/common
+share/doc/kde/HTML/en/ksnapshot/index.cache.bz2
+share/doc/kde/HTML/en/ksnapshot/index.docbook
+share/doc/kde/HTML/en/ksnapshot/preview.png
+share/doc/kde/HTML/en/ksnapshot/send-to-menu.png
+share/doc/kde/HTML/en/ksnapshot/window.png
+share/icons/hicolor/16x16/apps/ksnapshot.png
+share/icons/hicolor/22x22/apps/ksnapshot.png
+share/icons/hicolor/32x32/apps/ksnapshot.png
+share/icons/hicolor/48x48/apps/ksnapshot.png
+share/icons/hicolor/scalable/apps/ksnapshot.svgz

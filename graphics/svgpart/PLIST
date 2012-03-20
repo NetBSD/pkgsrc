@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:36 markd Exp $
+lib/kde4/svgpart.so
+share/kde/apps/svgpart/svgpart.rc
+share/kde4/services/svgpart.desktop
