@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2012/03/03 00:13:46 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2012/03/20 12:01:20 markd Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,6 @@ COMMENT=	Graphical BitTorrent client for KDE4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		awk msgfmt pkg-config perl
 
@@ -29,8 +28,8 @@ USE_TOOLS+=		awk msgfmt pkg-config perl
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdebase-runtime4/buildlink3.mk"
-.include "../../x11/kdebase-workspace4/buildlink3.mk"
+.include "../../x11/kde-runtime4/buildlink3.mk"
+.include "../../x11/kde-workspace4/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
