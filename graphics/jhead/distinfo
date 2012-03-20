@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2011/12/05 10:46:07 wiz Exp $
+$NetBSD: distinfo,v 1.15 2012/03/20 08:57:01 wiz Exp $
 
-SHA1 (jhead-2.93.tar.gz) = d4b9f1406c4236e987c7aed4974f25454f270262
-RMD160 (jhead-2.93.tar.gz) = 2765cc368bc64059956a5c38a46f42029af3f634
-Size (jhead-2.93.tar.gz) = 64419 bytes
+SHA1 (jhead-2.95.tar.gz) = e66b0a64e034054185da3e6c5e1ac7afb36776f8
+RMD160 (jhead-2.95.tar.gz) = 343ee3d4333ce9c5d02263e778c535d0e9685053
+Size (jhead-2.95.tar.gz) = 64700 bytes
