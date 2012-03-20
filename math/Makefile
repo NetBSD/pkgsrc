@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2012/03/20 05:26:59 markd Exp $
+# $NetBSD: Makefile,v 1.226 2012/03/20 07:32:13 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -47,6 +47,7 @@ SUBDIR+=	aamath
 SUBDIR+=	abs
 SUBDIR+=	admesh
 SUBDIR+=	algae
+SUBDIR+=	analitza
 SUBDIR+=	antixls
 SUBDIR+=	aribas
 SUBDIR+=	bc
@@ -54,6 +55,7 @@ SUBDIR+=	blas
 SUBDIR+=	blitz++
 SUBDIR+=	calc
 SUBDIR+=	calcoo
+SUBDIR+=	cantor
 SUBDIR+=	capc-calc
 SUBDIR+=	cgal
 SUBDIR+=	clisp-pari
@@ -99,6 +101,7 @@ SUBDIR+=	gtklife
 SUBDIR+=	heirloom-factor
 SUBDIR+=	heirloom-units
 SUBDIR+=	itpp
+SUBDIR+=	kalgebra
 SUBDIR+=	kcalc
 SUBDIR+=	kseg
 SUBDIR+=	lapack
