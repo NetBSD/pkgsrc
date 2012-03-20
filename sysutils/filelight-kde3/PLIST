@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 05:37:49 markd Exp $
+bin/filelight
+lib/kde3/libfilelight.la
+share/icons/crystalsvg/32x32/actions/view_filelight.png
+share/icons/hicolor/16x16/apps/filelight.png
+share/icons/hicolor/22x22/apps/filelight.png
+share/icons/hicolor/32x32/apps/filelight.png
+share/icons/hicolor/48x48/apps/filelight.png
+share/icons/hicolor/64x64/apps/filelight.png
+share/applications/kde/filelight.desktop
+share/kde/apps/filelight/filelight_partui.rc
+share/kde/apps/filelight/filelightui.rc
+share/kde/config/filelightrc
+share/kde/services/filelight_part.desktop
