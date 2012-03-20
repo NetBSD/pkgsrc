@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.900 2012/03/20 10:03:43 markd Exp $
+$NetBSD: CHANGES-2012,v 1.901 2012/03/20 10:13:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1452,3 +1452,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added misc/marble version 4.8.0 [markd 2012-03-20]
 	Added misc/libkdeedu version 4.8.0 [markd 2012-03-20]
 	Removed misc/kdeedu4 [markd 2012-03-20]
+	Updated databases/ruby-activeldap to 3.1.1nb1 [taca 2012-03-20]
