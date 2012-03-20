@@ -1,17 +1,44 @@
-$NetBSD: patch-av,v 1.1.1.1 2012/02/21 12:49:43 drochner Exp $
+$NetBSD: patch-av,v 1.2 2012/03/20 12:06:17 obache Exp $
 
 --- include/vlc_common.h.orig	2011-12-11 22:34:47.000000000 +0000
 +++ include/vlc_common.h
-@@ -625,6 +625,8 @@ static inline unsigned clz (unsigned x)
+@@ -51,6 +51,9 @@
+ #include <stdio.h>
+ #include <inttypes.h>
+ #include <stddef.h>
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
+ 
+ #ifndef __cplusplus
+ # include <stdbool.h>
+@@ -625,6 +628,8 @@ static inline unsigned clz (unsigned x)
  /* XXX: this assumes that int is 32-bits or more */
  #define clz32( x ) (clz(x) - ((sizeof(unsigned) - sizeof (uint32_t)) * 8))
  
-+#ifndef __NetBSD__
++#if !defined(__NetBSD_Version__) || (__NetBSD_Version__ < 599001600)
 +
  /** Bit weight */
  VLC_USED
  static inline unsigned popcount (unsigned x)
-@@ -696,6 +698,7 @@ static inline uint64_t bswap64 (uint64_t
+@@ -641,6 +646,7 @@ static inline unsigned popcount (unsigne
+     return count;
+ #endif
+ }
++#endif /* NetBSD < 5.99.16 */
+ 
+ #ifdef __OS2__
+ #   undef bswap16
+@@ -648,6 +654,8 @@ static inline unsigned popcount (unsigne
+ #   undef bswap64
+ #endif
+ 
++#ifndef __NetBSD__
++
+ /** Byte swap (16 bits) */
+ VLC_USED
+ static inline uint16_t bswap16 (uint16_t x)
+@@ -696,6 +704,7 @@ static inline uint64_t bswap64 (uint64_t
  #endif
  }
  
