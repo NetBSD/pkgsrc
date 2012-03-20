@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/03/17 15:08:56 taca Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/20 13:42:34 taca Exp $
 
-DISTNAME=	rspec-rails-2.8.1
+DISTNAME=	rspec-rails-2.9.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,9 +11,9 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-rspec>=2.8.0<2.9:../../devel/ruby-rspec
+DEPENDS+=	${RUBY_PKGPREFIX}-rspec>=2.9.0<2.10:../../devel/ruby-rspec
 
-RUBY_RAILS_SUPPORTED=	3 31 # 32
+RUBY_RAILS_SUPPORTED=
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
