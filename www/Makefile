@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.874 2012/03/20 14:14:16 taca Exp $
+# $NetBSD: Makefile,v 1.875 2012/03/20 14:15:57 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -542,7 +542,6 @@ SUBDIR+=	php-tiki6
 SUBDIR+=	php-uploadprogress
 SUBDIR+=	phraseanet
 SUBDIR+=	phraseanet-indexer
-#SUBDIR+=	plone		# only contains Makefile fragments
 SUBDIR+=	pound
 SUBDIR+=	privoxy
 SUBDIR+=	py-ClientForm
