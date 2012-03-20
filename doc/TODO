@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10961 2012/03/20 12:11:53 markd Exp $
+$NetBSD: TODO,v 1.10962 2012/03/20 17:09:17 asau Exp $
 
 Suggested new packages
 ======================
@@ -149,7 +149,7 @@ Suggested new packages
 	http://www.red-bean.com/labelnation/
 	Command-line label, business card printing program.
 
-	VirtualBox
+	VirtualBox [pkgsrc-wip]
 	http://www.virtualbox.org/
 	Fast x86 emulator
 
