@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.525 2012/03/20 00:36:15 markd Exp $
+# $NetBSD: Makefile,v 1.526 2012/03/20 06:24:07 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -104,6 +104,7 @@ SUBDIR+=	poppler-qt
 SUBDIR+=	poppler-qt4
 SUBDIR+=	poppler-utils
 SUBDIR+=	poster
+SUBDIR+=	printer-applet
 SUBDIR+=	pscal
 SUBDIR+=	psify
 SUBDIR+=	psjoin
