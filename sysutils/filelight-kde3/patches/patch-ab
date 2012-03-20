@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/03/20 05:37:50 markd Exp $
+
+--- src/part/radialMap/sincos.h.orig	2001-08-06 01:00:00.000000000 +0200
++++ src/part/radialMap/sincos.h	2007-10-17 11:06:22.000000000 +0200
+@@ -9,11 +9,11 @@
+ #if !defined(__GLIBC__) || (__GLIBC__ < 2) ||  (__GLIBC__ == 2 && __GLIBC_MINOR__ < 1)
+ 
+    void
+-   sincos( int angleRadians, double *Sin, double *Cos );
++   sincos( double angleRadians, double *Sin, double *Cos );
+ 
+ #ifdef SINCOS_H_IMPLEMENTATION
+    void
+-   sincos( int angleRadians, double *Sin, double *Cos )
++   sincos( double angleRadians, double *Sin, double *Cos )
+    {
+       *Sin = sin( angleRadians );
+       *Cos = cos( angleRadians );
