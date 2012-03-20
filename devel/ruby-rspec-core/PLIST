@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/17 15:06:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/03/20 13:36:31 taca Exp $
 bin/autospec
 bin/rspec
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/exe/autospec
@@ -108,8 +111,6 @@ ${GEM_LIBDIR}/lib/rspec/core/shared_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/core/subject.rb
 ${GEM_LIBDIR}/lib/rspec/core/version.rb
 ${GEM_LIBDIR}/lib/rspec/core/world.rb
-${GEM_LIBDIR}/lib/rspec/monkey.rb
-${GEM_LIBDIR}/lib/rspec/monkey/spork/test_framework/rspec.rb
 ${GEM_LIBDIR}/spec/autotest/discover_spec.rb
 ${GEM_LIBDIR}/spec/autotest/failed_results_re_spec.rb
 ${GEM_LIBDIR}/spec/autotest/rspec_spec.rb
