@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.928 2012/03/20 20:22:35 bsiegert Exp $
+$NetBSD: CHANGES-2012,v 1.929 2012/03/20 21:02:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1500,3 +1500,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Added parallel/slurm version 2.4.0pre4 [asau 2012-03-20]
 	Updated parallel/sge to 8.0.0.4 [asau 2012-03-20]
 	Updated graphics/optipng to 0.7.1 [adam 2012-03-20]
+	Updated databases/sqlite3 to 3.7.11 [adam 2012-03-20]
+	Updated databases/sqlite3-docs to 3.7.11 [adam 2012-03-20]
+	Updated databases/sqlite3-tcl to 3.7.11 [adam 2012-03-20]
