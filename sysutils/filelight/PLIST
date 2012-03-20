@@ -1,14 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/20 05:41:02 markd Exp $
 bin/filelight
-lib/kde3/libfilelight.la
-share/icons/crystalsvg/32x32/actions/view_filelight.png
+lib/kde4/filelightpart.so
+share/applications/kde4/filelight.desktop
+share/doc/kde/HTML/en/filelight/common
+share/doc/kde/HTML/en/filelight/config_appear.png
+share/doc/kde/HTML/en/filelight/config_scan.png
+share/doc/kde/HTML/en/filelight/index.cache.bz2
+share/doc/kde/HTML/en/filelight/index.docbook
+share/doc/kde/HTML/en/filelight/radial_map.png
+share/doc/kde/HTML/en/filelight/radial_map_context_menu.png
 share/icons/hicolor/16x16/apps/filelight.png
 share/icons/hicolor/22x22/apps/filelight.png
+share/icons/hicolor/32x32/actions/view_filelight.png
 share/icons/hicolor/32x32/apps/filelight.png
 share/icons/hicolor/48x48/apps/filelight.png
 share/icons/hicolor/64x64/apps/filelight.png
-share/applications/kde/filelight.desktop
-share/kde/apps/filelight/filelight_partui.rc
 share/kde/apps/filelight/filelightui.rc
+share/kde/apps/filelightpart/filelightpartui.rc
 share/kde/config/filelightrc
-share/kde/services/filelight_part.desktop
+share/kde4/services/filelightpart.desktop
