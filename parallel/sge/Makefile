@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.41 2011/12/09 14:36:36 drochner Exp $
+# $NetBSD: Makefile,v 1.42 2012/03/20 17:07:43 asau Exp $
 #
 
-PKGNAME=		sge-6.2.2.1
-DISTNAME=		ge-V62u2_1_TAG-src
-PKGREVISION=		5
+DISTNAME=		sge-8.0.0d
+PKGNAME=		sge-8.0.0.4
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/197/
+MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.0.0d/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gridengine.sunsource.net/
-COMMENT=		Sun Grid Engine distributed resource management system
+HOMEPAGE=		https://arc.liv.ac.uk/trac/SGE
+COMMENT=		Son of Grid Engine distributed resource management system
 
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
@@ -18,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run
 
-WRKSRC=			${WRKDIR}/gridengine
 CFLAGS+=		-D${UPPER_OPSYS}
 CONFIGURE_ENV+=		REMOTE=sge
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
@@ -89,6 +87,9 @@ PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
 .endif
 SGE_BUILDARCH?=		${SGE_BUILDARCH_cmd:sh}
 
+# Some hacks to get it properly linked:
+MAKE_ENV+=	SGE_ARCH=$(SGE_ARCH) SGE_ROOT=$(SGE_ROOT)
+
 LDFLAGS+=	-R${SGE_ROOT}/lib/${SGE_ARCH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${SGE_ROOT}/lib/${SGE_ARCH}
 
@@ -133,6 +134,18 @@ do-build:
 	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni
 	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -man -sunman
 
+CHECK_INTERPRETER_SKIP=	sge/bin/process-scheduler-log \
+			sge/bin/qsched \
+			sge/bin/status \
+			sge/examples/drmaa/ruby/* \
+			sge/hadoop/pestart.sh \
+			sge/hadoop/pestop.sh \
+			sge/hadoop/setup.pl \
+			sge/hadoop/wait.sh \
+			sge/util/resources/drmaa4ruby/* \
+			sge/util/resources/drmaa4ruby/samples/* \
+			sge/util/resources/wrappers/rshd-wrapper
+
 do-install:
 	${MKDIR} ${DESTDIR}${SGE_ROOT}
 	#${CHOWN} ${SGE_USER} ${DESTDIR}${SGE_ROOT}
@@ -153,6 +166,7 @@ do-install:
 PLIST_SUBST+=	SGE_ARCH=${SGE_ARCH}
 
 .include "../../databases/db4/buildlink3.mk" # 4.2 at least
+.include "../../x11/Xbae/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"

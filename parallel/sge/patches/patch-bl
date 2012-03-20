@@ -1,4 +1,4 @@
-$NetBSD: patch-bl,v 1.5 2011/02/17 08:55:11 markd Exp $
+$NetBSD: patch-bl,v 1.6 2012/03/20 17:07:43 asau Exp $
 
 --- source/libs/comm/cl_ssl_framework.c.orig	2009-02-16 08:50:41.000000000 +0000
 +++ source/libs/comm/cl_ssl_framework.c
@@ -45,15 +45,6 @@ $NetBSD: patch-bl,v 1.5 2011/02/17 08:55:11 markd Exp $
        void* cl_com_ssl_crypto_handle_saved = NULL;
  #endif
  
-@@ -1062,7 +1065,7 @@ static int cl_com_ssl_build_symbol_table
-       cl_com_ssl_crypto_handle = dlopen ("libssl.dylib", RTLD_NOW | RTLD_GLOBAL );
- #endif /* RTLD_NODELETE */
- 
--#elif defined(FREEBSD)
-+#elif defined(NETBSD) || defined(FREEBSD)
- #ifdef RTLD_NODELETE
-       cl_com_ssl_crypto_handle = dlopen ("libssl.so", RTLD_LAZY | RTLD_GLOBAL | RTLD_NODELETE);
- #else
 @@ -1091,7 +1094,7 @@ static int cl_com_ssl_build_symbol_table
           return CL_RETVAL_SSL_DLOPEN_SSL_LIB_FAILED;
        }

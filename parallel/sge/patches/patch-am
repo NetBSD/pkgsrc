@@ -1,30 +1,54 @@
-$NetBSD: patch-am,v 1.6 2011/02/17 08:55:11 markd Exp $
+$NetBSD: patch-am,v 1.7 2012/03/20 17:07:43 asau Exp $
 
 Pkgsrc stuff
 GridEngine dev mailing list patch for "nbsd-1" issue
 ArchLinux static crypto also needs libz.a
 
---- source/aimk.orig	2009-02-17 22:27:39.000000000 +1300
+--- source/aimk.orig	2011-11-28 23:06:13.000000000 +0000
 +++ source/aimk
-@@ -265,7 +265,7 @@ set DEBUGGED         = 0
- set COMPILE_DC       = 0
- set CC               = cc
- set CXX              = CC
--set CFLAGS           = "-DSGE_ARCH_STRING=$buildarch -D$TARGET_BITS $INP_CFLAGS"
-+set CFLAGS           = "-D$TARGET_BITS $INP_CFLAGS"
- set CORE_INCLUDE     = "-I../common -I../libs -I../libs/uti -I../libs/juti -I../libs/gdi -I../libs/japi -I../libs/sgeobj -I../libs/cull -I../libs/rmon -I../libs/comm -I../libs/comm/lists -I../libs/sched -I../libs/evc -I../libs/evm -I../libs/mir -I../libs/lck -I../daemons/common -I../daemons/qmaster -I../daemons/execd -I../daemons/schedd -I../clients/common -I."
- set DEBUG_FLAG       = ""
- set INSURE_FLAG      = ""
-@@ -386,7 +386,7 @@ set SPOOLING_DEPS   = "spoolloaderlib sp
- # we generate a berkeley db shared lib, so we need bdb include and lib path
- set CFLAGS            = "-I$BERKELEYDB_HOME/include/${BDB_INCLUDE_SUBDIR} $CFLAGS"
- set LFLAGS            = "-L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} $LFLAGS"
--set SHARED_LFLAGS    = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR}"
-+set SHARED_LFLAGS    = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib -R$BERKELEYDB_HOME/lib"
+@@ -961,7 +961,7 @@ if ( $SYSTEM_LIBS != 1 ) then
+    # we generate a berkeley db shared lib, so we need bdb include and lib path
+    set CFLAGS        = "-I$BERKELEYDB_HOME/include/${BDB_INCLUDE_SUBDIR} $CFLAGS"
+    set LFLAGS        = "-L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} $LFLAGS"
+-   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR}"
++   set SHARED_LFLAGS = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} -R$BERKELEYDB_HOME/lib"
+ endif
+ set CFLAGS = "$CFLAGS -DSPOOLING_$SPOOLING_METHOD $SECFLAGS"
  
- # JUTI Targets
- set JUTI_ALL  = juti_all
-@@ -1169,9 +1169,9 @@ case NETBSD_*:
+@@ -1213,9 +1213,9 @@ case DARWIN_PPC:
+ 
+    set XMTDEF   = ""
+    set XMTINCD  = "$XMTINCD -I$MOTIFHOME/include"
+-   set XINCD    = "$XMTINCD $XINCD -I/usr/X11R6/include"
++   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
+    set XCFLAGS  = "-DNeedFunctionPrototypes -DNeedVarargsPrototypes -Wno-error $XMTDEF $XINCD"
+-   set XLIBD    = "-L$MOTIFHOME/lib -L/usr/X11R6/lib"
++   set XLIBD    = "-L$MOTIFHOME/lib -R${MOTIFHOME}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
+    set XLIBS    = "-lXm -lXpm -lXt -lXext -lX11 -lSM -lICE"
+    if ("$ADOC" == 1) then
+       set CFLAGS = "$CFLAGS -Wno-error"
+@@ -1263,7 +1263,7 @@ case FREEBSD_*:
+    set DLLIB	 = ""
+    set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
+    set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
+-   set CFLAGS   = "$OFLAG -Wall -DFREEBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I/usr/X11R6/include"
++   set CFLAGS   = "$OFLAG -Wall -DFREEBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I${X11BASE}/include"
+    set NOERR_CFLAG = "-Wno-error"
+    set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic"
+    set LIBS     = "$LIBS -lkvm"
+@@ -1273,9 +1273,9 @@ case FREEBSD_*:
+    set AUTHLIBS = "-lcrypt -lpam"
+  
+    set XMTDEF   = ""
+-   set XINCD    = "$XMTINCD $XINCD -I/usr/X11/include"
++   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
+    set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD"
+-   set XLIBD    = "-L/usr/X11R6/lib"
++   set XLIBD    = "-L${X11BASE}/lib -R${X11BASE}/lib"
+    set XLFLAGS  = "$XLIBD"
+    set XLIBS    = " -Xlinker -lXm -Xlinker -Bdynamic -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
+    set RM	= "rm -f"
+@@ -1294,9 +1294,9 @@ case NETBSD_*:
     set DLLIB    = ""
     set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
     set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
@@ -36,7 +60,7 @@ ArchLinux static crypto also needs libz.a
     set LIBS     = "$LIBS -lkvm"
     set SHAREDLD = $CC
     set SHARED_CFLAGS = "-fPIC"
-@@ -1179,9 +1179,9 @@ case NETBSD_*:
+@@ -1304,9 +1304,9 @@ case NETBSD_*:
     set AUTHLIBS = "-lcrypt -lpam"
  
     set XMTDEF   = ""
@@ -44,11 +68,11 @@ ArchLinux static crypto also needs libz.a
 +   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
     set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD"
 -   set XLIBD    = "-L/usr/X11R6/lib -R/usr/X11R6/lib -L/usr/pkg/lib -R /usr/pkg/lib"
-+   set XLIBD    = "-L${X11BASE}/lib -R${X11BASE}/lib -L${LOCALBASE}/lib -R ${LOCALBASE}/lib"
++   set XLIBD    = "-L${X11BASE}/lib -R${X11BASE}/lib -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
     set XLFLAGS  = "$XLIBD"
     set XLIBS    = " -lXm -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
     set RM       = "rm -f"
-@@ -1376,6 +1376,8 @@ case LINUXSPARC64:
+@@ -1508,6 +1508,8 @@ case LINUXSPARC64:
        set DEBUG_FLAG = "$DEBUG_FLAG -fprofile-arcs -ftest-coverage"
     endif
  
@@ -57,16 +81,26 @@ ArchLinux static crypto also needs libz.a
     if ( -f /lib/libc.so.6 ) then
        strings /lib/libc.so.6 | grep "GNU C Library" | grep '2.[234]' >& /dev/null
        if ($status == 0) then
-@@ -1875,6 +1877,12 @@ default:
- endsw
+@@ -2103,6 +2105,13 @@ else
+   set LIBS_DIR = ${SDIR}
+ endif
  
- set DEPEND_FLAGS = "`echo $DEPEND_FLAGS | sed -e 's/-[^DI][^ ]*//g'`"
-+ 
++
 +# we set SGE_ARCH_STRING down here because the sed command above
 +# would mess up the quotes around buildarch
 +set ARCH_STRING = SGE_ARCH_STRING='\"'${buildarch}'\"'
 +set CFLAGS = "-D$ARCH_STRING $CFLAGS"
 +set DEPEND_FLAGS = "-D$ARCH_STRING $DEPEND_FLAGS"
- 
++ 
  if ( $JNI == 1 ) then
-    set CORE_INCLUDE = "$CORE_INCLUDE -I${JAVA_HOME}/${JAVA_INCL}"
+ 
+    if ( "${JAVA_HOME}/${JAVA_INCL}" != /usr/include ) then
+@@ -2326,7 +2335,7 @@ if ( "$BUILDMAN" == 1 ) then
+       setenv PATH ${PATH}:${GROFFPATH}
+    endif   
+ 
+-   $SOURCE/scripts/mk_ascman $SOURCE $SGE_PRODUCT_MODE $BUILDMAN $BUILDHTMLMAN
++   $SOURCE/scripts/mk_ascman $SOURCE $SGE_PRODUCT_MODE 0 $BUILDHTMLMAN
+ 
+    if ( $status != 0 ) then
+       echo not done

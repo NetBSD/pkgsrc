@@ -1,36 +1,29 @@
-$NetBSD: patch-bd,v 1.4 2009/05/13 21:00:25 markd Exp $
+$NetBSD: patch-bd,v 1.5 2012/03/20 17:07:43 asau Exp $
 
 Exclude Java files.
 DESTDIR support.
 
---- source/scripts/distinst.orig	2009-01-31 05:04:08.000000000 +1300
+--- source/scripts/distinst.orig	2011-11-28 23:06:15.000000000 +0000
 +++ source/scripts/distinst
-@@ -75,12 +75,12 @@ DRMAA_SHARED_LIBRARIES="libdrmaa"
+@@ -79,13 +79,13 @@ DRMAA_SHARED_LIBRARIES="libdrmaa"
  # The last number listed here will be the verson linked from libdrmaa.so
  DRMAA_SHARED_LIB_VERSIONS="1.0"
  DRMAA_HEADER_FILES="libs/japi/drmaa.h"
--DRMAAJ_FILES="CLASSES/drmaa"
-+#DRMAAJ_FILES="CLASSES/drmaa"
+-DRMAAJ_FILES="CLASSES/jdrmaa/drmaa"
++#DRMAAJ_FILES="CLASSES/jdrmaa/drmaa"
  
  JNI_SHARED_LIBRARIES="libdrmaa libjuti libjgdi"
  
 -JUTIJ_FILES="CLASSES/juti/juti"
 -JGDIJ_FILES="libs/jgdi/build/jgdi"
+-JJSV_FILES="CLASSES/jjsv/JSV"
 +#JUTIJ_FILES="CLASSES/juti/juti"
 +#JGDIJ_FILES="libs/jgdi/build/jgdi"
++#JJSV_FILES="CLASSES/jjsv/JSV"
+ JAVA_LIBRARIES="${DRMAAJ_FILES} ${JUTIJ_FILES} ${JGDIJ_FILES} ${JJSV_FILES}"
  
  PVMSOURCES="start_pvm.c stop_pvm.c slave.c master.c spmd.c Makefile"
- PVMSRCSCRIPTS="install.sh aimk"
-@@ -420,7 +420,7 @@ instclassictargets=false
- instopenssl=true
- instbdb=true
- instarco=false
--instguiinst=true
-+instguiinst=false
- enforce_shlibpath=false
- 
- cmdname=`basename $0`
-@@ -518,11 +518,11 @@ while [ $# -ge 1 ]; do
+@@ -544,11 +544,11 @@ while [ $# -ge 1 ]; do
           echo Please set variable SGE_ROOT. Installation failed.
           exit 1
        fi
@@ -45,3 +38,51 @@ DESTDIR support.
        localinst=true
        ;;
     -mansrc)
+@@ -927,13 +927,16 @@ if [ $instcommon = true ]; then
+                         $DEST_SGE_ROOT/util/sgeCA/*.cnf \
+                         $DEST_SGE_ROOT/util/sgeSMF/*.xml \
+                         $DEST_SGE_ROOT/util/sgeSMF/sge_smf_support.sh \
+-                        $DEST_SGE_ROOT/util/DetectJvmLibrary.jar \
+                         $DEST_SGE_ROOT/util/resources/calendars/* \
+                         $DEST_SGE_ROOT/util/resources/centry/* \
+                         $DEST_SGE_ROOT/util/resources/pe/* \
+                         $DEST_SGE_ROOT/util/resources/schemas/*/* \
+                         $DEST_SGE_ROOT/util/resources/usersets/*
+ 
++      if test -f $DEST_SGE_ROOT/util/DetectJvmLibrary.jar; then
++	  Execute chmod 644 $DEST_SGE_ROOT/util/DetectJvmLibrary.jar;
++      fi
++
+       Execute chmod 755 $DEST_SGE_ROOT/util/resources/jsv/jsv.sh \
+                         $DEST_SGE_ROOT/util/resources/jsv/jjsv.sh \
+                         $DEST_SGE_ROOT/util/resources/jsv/jsv.pl \
+@@ -951,8 +954,7 @@ if [ $instcommon = true ]; then
+       Execute cp libs/japi/example.c $DEST_SGE_ROOT/examples/drmaa
+       Execute cp libs/japi/howto/*.c $DEST_SGE_ROOT/examples/drmaa
+       MakeDir examples/drmaa/ruby
+-      Execute mv $DEST_SGE_ROOT/util/resources/drmaa4ruby/samples/* $DEST_SGE_ROOT/examples/drmaa/ruby
+-      Execute rmdir $DEST_SGE_ROOT/util/resources/drmaa4ruby/samples
++      Execute cp -r dist/util/resources/drmaa4ruby/samples/* $DEST_SGE_ROOT/examples/drmaa/ruby
+       Cleanup examples
+    fi
+ 
+@@ -1117,9 +1119,6 @@ if [ $instcommon = true ]; then
+ 
+       if [ -f CLASSES/herd/herd.jar ]; then
+          Execute cp CLASSES/herd/herd.jar $DEST_SGE_ROOT/lib/herd.jar
+-      elif [ $exit_on_error = true ]; then
+-         echo "\"CLASSES/herd/herd.jar\" not found. Installation failed."
+-         exit 1
+       fi
+    fi
+ 
+@@ -1276,7 +1275,9 @@ if [ $instguiinst = true ]; then
+       echo "Installing \"start_gui_installer\" and \"/util/gui-installer\""
+       Execute mkdir -p $DEST_SGE_ROOT/util/gui-installer/html/en/help
+       Execute mkdir -p $DEST_SGE_ROOT/util/gui-installer/templates
++      if [ -f "$GUI_DIR/dist/installer.jar" ]; then
+       Execute cp $GUI_DIR/dist/installer.jar $DEST_SGE_ROOT/util/gui-installer
++      fi
+       Execute cp $GUI_DIR/templates/start_gui_installer.sh $DEST_SGE_ROOT/start_gui_installer
+       Execute cp -r $GUI_DIR/html $DEST_SGE_ROOT/util/gui-installer
+       Execute cp $GUI_DIR/templates/install_component $GUI_DIR/templates/gui_inst_template.conf $GUI_DIR/templates/readme_template.html $GUI_DIR/templates/check_host $DEST_SGE_ROOT/util/gui-installer/templates
