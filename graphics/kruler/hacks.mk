@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2010/12/05 23:22:10 wiz Exp $
+# $NetBSD: hacks.mk,v 1.1 2012/03/20 00:14:35 markd Exp $
 
 #
 # Can't figure out why the kruler build is prefering the below file
