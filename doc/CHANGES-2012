@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.895 2012/03/19 22:28:51 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.896 2012/03/20 01:18:24 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -514,7 +514,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-pkg-config to 1.1.3 [obache 2012-02-01]
 	Updated graphics/rabbit to 1.0.5 [obache 2012-02-01]
 	Updated databases/py-table to 0.8.3anb4 [obache 2012-02-01]
-	Added filesystems/py-filesystem version filesystem [gdt 2012-02-01]
+	Added filesystems/py-filesystem version 0.4.0 [gdt 2012-02-01]
 	Updated devel/p5-Class-Load to 0.13 [rhaen 2012-02-01]
 	Updated devel/p5-Class-Load-XS to 0.03 [rhaen 2012-02-01]
 	Updated devel/p5-Class-Method-Modifiers to 1.08 [rhaen 2012-02-01]
