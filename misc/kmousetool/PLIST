@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 06:53:25 markd Exp $
+bin/kmousetool
+man/man1/kmousetool.1
+share/applications/kde4/kmousetool.desktop
+share/doc/kde/HTML/en/kmousetool/common
+share/doc/kde/HTML/en/kmousetool/index.cache.bz2
+share/doc/kde/HTML/en/kmousetool/index.docbook
+share/doc/kde/HTML/en/kmousetool/man-kmousetool.1.docbook
+share/icons/hicolor/16x16/actions/kmousetool_off.png
+share/icons/hicolor/16x16/actions/kmousetool_on.png
+share/icons/hicolor/16x16/apps/kmousetool.png
+share/icons/hicolor/32x32/actions/kmousetool_off.png
+share/icons/hicolor/32x32/actions/kmousetool_on.png
+share/icons/hicolor/32x32/apps/kmousetool.png
+share/kde/apps/kmousetool/sounds/mousetool_tap.wav
