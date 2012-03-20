@@ -1,3 +1,0 @@
-Zope needs a word splitter to search in text with ZCTextIndex.
-This ejSplitter is one of Japanese splitters and can be used with
-other Zope products.
