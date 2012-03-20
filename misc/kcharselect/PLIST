@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 06:35:27 markd Exp $
+bin/kcharselect
+share/applications/kde4/KCharSelect.desktop
+share/doc/kde/HTML/en/kcharselect/common
+share/doc/kde/HTML/en/kcharselect/index.cache.bz2
+share/doc/kde/HTML/en/kcharselect/index.docbook
+share/doc/kde/HTML/en/kcharselect/kcharselect.png
+share/kde/apps/kcharselect/kcharselectui.rc
+share/kde/apps/kconf_update/kcharselect.upd
