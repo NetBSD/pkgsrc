@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 06:21:42 markd Exp $
+bin/printer-applet
+share/doc/kde/HTML/en/printer-applet/common
+share/doc/kde/HTML/en/printer-applet/index.cache.bz2
+share/doc/kde/HTML/en/printer-applet/index.docbook
+share/kde/apps/printer-applet/authconn.py
+share/kde/apps/printer-applet/debug.py
+share/kde/apps/printer-applet/monitor.py
+share/kde/apps/printer-applet/printer-applet-printers.ui
+share/kde/apps/printer-applet/printer-applet.notifyrc
+share/kde/apps/printer-applet/printer-applet.py
+share/kde/apps/printer-applet/printer-applet.ui
+share/kde/apps/printer-applet/printer-appletui.rc
+share/kde/apps/printer-applet/statereason.py
+share/kde/autostart/printer-applet.desktop
