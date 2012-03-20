@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 06:53:24 markd Exp $
+lib/kde4/libexec/kaccessibleapp
+lib/kde4/plugins/accessiblebridge/kaccessiblebridge.so
+share/dbus-1/services/org.kde.kaccessible.service
