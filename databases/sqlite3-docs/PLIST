@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/01/17 15:53:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/20 21:00:47 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -29,11 +29,11 @@ share/doc/sqlite3/c3ref/blob_write.html
 share/doc/sqlite3/c3ref/busy_handler.html
 share/doc/sqlite3/c3ref/busy_timeout.html
 share/doc/sqlite3/c3ref/c_abort.html
+share/doc/sqlite3/c3ref/c_abort_rollback.html
 share/doc/sqlite3/c3ref/c_access_exists.html
 share/doc/sqlite3/c3ref/c_alter_table.html
 share/doc/sqlite3/c3ref/c_any.html
 share/doc/sqlite3/c3ref/c_blob.html
-share/doc/sqlite3/c3ref/c_busy_recovery.html
 share/doc/sqlite3/c3ref/c_checkpoint_full.html
 share/doc/sqlite3/c3ref/c_config_getmalloc.html
 share/doc/sqlite3/c3ref/c_dbconfig_enable_fkey.html
@@ -80,6 +80,7 @@ share/doc/sqlite3/c3ref/db_config.html
 share/doc/sqlite3/c3ref/db_filename.html
 share/doc/sqlite3/c3ref/db_handle.html
 share/doc/sqlite3/c3ref/db_mutex.html
+share/doc/sqlite3/c3ref/db_readonly.html
 share/doc/sqlite3/c3ref/db_release_memory.html
 share/doc/sqlite3/c3ref/db_status.html
 share/doc/sqlite3/c3ref/declare_vtab.html
@@ -143,7 +144,7 @@ share/doc/sqlite3/c3ref/stmt.html
 share/doc/sqlite3/c3ref/stmt_busy.html
 share/doc/sqlite3/c3ref/stmt_readonly.html
 share/doc/sqlite3/c3ref/stmt_status.html
-share/doc/sqlite3/c3ref/strnicmp.html
+share/doc/sqlite3/c3ref/stricmp.html
 share/doc/sqlite3/c3ref/table_column_metadata.html
 share/doc/sqlite3/c3ref/temp_directory.html
 share/doc/sqlite3/c3ref/test_control.html
@@ -285,6 +286,8 @@ share/doc/sqlite3/images/foreignlogos/adobe.gif
 share/doc/sqlite3/images/foreignlogos/airbus1.gif
 share/doc/sqlite3/images/foreignlogos/airbus2.gif
 share/doc/sqlite3/images/foreignlogos/apple.gif
+share/doc/sqlite3/images/foreignlogos/bentley.gif
+share/doc/sqlite3/images/foreignlogos/bentley.jpg
 share/doc/sqlite3/images/foreignlogos/bloomberg.gif
 share/doc/sqlite3/images/foreignlogos/dropbox.gif
 share/doc/sqlite3/images/foreignlogos/firefox.gif
@@ -555,6 +558,7 @@ share/doc/sqlite3/releaselog/3_7_0.html
 share/doc/sqlite3/releaselog/3_7_0_1.html
 share/doc/sqlite3/releaselog/3_7_1.html
 share/doc/sqlite3/releaselog/3_7_10.html
+share/doc/sqlite3/releaselog/3_7_11.html
 share/doc/sqlite3/releaselog/3_7_2.html
 share/doc/sqlite3/releaselog/3_7_3.html
 share/doc/sqlite3/releaselog/3_7_4.html
