@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.918 2012/03/20 13:50:43 taca Exp $
+$NetBSD: CHANGES-2012,v 1.919 2012/03/20 13:54:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1482,3 +1482,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-rspec-rails to 2.9.0 [taca 2012-03-20]
 	Updated textproc/ruby-libxml to 2.3.0 [taca 2012-03-20]
 	Updated textproc/ruby-libxml to 2.3.2 [taca 2012-03-20]
+	Updated www/ruby-innate to 2012.03 [taca 2012-03-20]
+	Updated www/ramaze to 2012.03.07 [taca 2012-03-20]
