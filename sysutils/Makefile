@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2012/03/08 01:11:21 joerg Exp $
+# $NetBSD: Makefile,v 1.536 2012/03/20 05:50:03 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -107,6 +107,7 @@ SUBDIR+=	fatback
 SUBDIR+=	fdupes
 SUBDIR+=	file
 SUBDIR+=	filelight
+SUBDIR+=	filelight-kde3
 SUBDIR+=	findutils
 SUBDIR+=	fix4SA110rev2
 SUBDIR+=	fixelfprot
@@ -226,7 +227,9 @@ SUBDIR+=	iwi-firmware
 SUBDIR+=	iwi-firmware3
 SUBDIR+=	iwn-firmware
 SUBDIR+=	k3b
+SUBDIR+=	kdf
 SUBDIR+=	kdirstat
+SUBDIR+=	kfloppy
 SUBDIR+=	krusader
 SUBDIR+=	lambd
 SUBDIR+=	lavaps
