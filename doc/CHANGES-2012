@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.898 2012/03/20 08:33:32 obache Exp $
+$NetBSD: CHANGES-2012,v 1.899 2012/03/20 08:57:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1348,3 +1348,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/ruby-io-like version 0.3.0 [taca 2012-03-20]
 	Updated archivers/ruby-xz to 0.1.1 [taca 2012-03-20]
 	Updated textproc/groonga to 2.0.0 [obache 2012-03-20]
+	Updated graphics/jhead to 2.95 [wiz 2012-03-20]
