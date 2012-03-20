@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 05:25:38 markd Exp $
+bin/kcalc
+lib/libkdeinit4_kcalc.so
+share/applications/kde4/kcalc.desktop
+share/doc/kde/HTML/en/kcalc/commands.docbook
+share/doc/kde/HTML/en/kcalc/common
+share/doc/kde/HTML/en/kcalc/index.cache.bz2
+share/doc/kde/HTML/en/kcalc/index.docbook
+share/kde/apps/kcalc/kcalcui.rc
+share/kde/apps/kcalc/scienceconstants.xml
+share/kde/apps/kconf_update/kcalcrc.upd
+share/kde/config.kcfg/kcalc.kcfg
