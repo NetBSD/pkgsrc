@@ -1,32 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2012/03/03 00:13:55 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.28 2012/03/20 05:41:02 markd Exp $
 
-DISTNAME=	filelight-1.0
-PKGREVISION=	20
+DISTNAME=	filelight-${_KDE_VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.methylblue.com/filelight/packages/
-EXTRACT_SUFX=	.tar.bz2
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.methylblue.com/filelight/
 COMMENT=	Graphical filesystem usage monitor
+LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+.include "../../meta-pkgs/kde4/Makefile.kde4"
 
-GNU_CONFIGURE=	yes
-SET_LIBDIR=	yes
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	perl
+.include "../../meta-pkgs/kde4/kde4.mk"
 
-pre-build:
-	cd ${WRKSRC}/src/part && env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} dialog.h
-
-.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
