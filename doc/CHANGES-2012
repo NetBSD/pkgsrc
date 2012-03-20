@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.906 2012/03/20 12:01:30 schmonz Exp $
+$NetBSD: CHANGES-2012,v 1.907 2012/03/20 12:11:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1459,3 +1459,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-kgio to 2.7.3 [taca 2012-03-20]
 	Updated devel/ruby-rcov to 1.0.0 [taca 2012-03-20]
 	Updated www/ikiwiki to 3.20120203 [schmonz 2012-03-20]
+	Added devel/qjson version 0.7.1 [markd 2012-03-20]
+	Updated audio/amarok to 2.5.0 [markd 2012-03-20]
+	Updated chat/konversation to 1.4 [markd 2012-03-20]
+	Updated devel/kdevplatform to 1.2.3 [markd 2012-03-20]
+	Updated devel/kdevelop4 to 4.2.3 [markd 2012-03-20]
+	Updated multimedia/kmplayer to 0.11.3c [markd 2012-03-20]
+	Updated time/rsibreak to 0.11 [markd 2012-03-20]
+	Updated misc/tellico to 2.3.5 [markd 2012-03-20]
