@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1580 2012/03/20 09:28:16 taca Exp $
+# $NetBSD: Makefile,v 1.1581 2012/03/20 10:14:40 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -1315,6 +1315,7 @@ SUBDIR+=	python-mode
 SUBDIR+=	pythontidy
 SUBDIR+=	qbzr
 SUBDIR+=	qconf
+SUBDIR+=	qjson
 SUBDIR+=	qof
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
