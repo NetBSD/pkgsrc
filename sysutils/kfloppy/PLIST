@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 05:48:09 markd Exp $
+bin/kfloppy
+share/applications/kde4/KFloppy.desktop
+share/doc/kde/HTML/en/kfloppy/common
+share/doc/kde/HTML/en/kfloppy/index.cache.bz2
+share/doc/kde/HTML/en/kfloppy/index.docbook
+share/icons/hicolor/128x128/apps/kfloppy.png
+share/icons/hicolor/16x16/apps/kfloppy.png
+share/icons/hicolor/22x22/apps/kfloppy.png
+share/icons/hicolor/32x32/apps/kfloppy.png
+share/icons/hicolor/48x48/apps/kfloppy.png
+share/icons/hicolor/64x64/apps/kfloppy.png
