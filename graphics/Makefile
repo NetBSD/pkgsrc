@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.627 2012/03/19 23:35:07 markd Exp $
+# $NetBSD: Makefile,v 1.628 2012/03/20 00:22:12 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -224,16 +224,25 @@ SUBDIR+=	jpeginfo
 SUBDIR+=	jpegoptim
 SUBDIR+=	jpegpixi
 SUBDIR+=	jpegquality
+SUBDIR+=	kamera
 SUBDIR+=	kbarcode
+SUBDIR+=	kcolorchooser
+SUBDIR+=	kdegraphics-mobipocket
+SUBDIR+=	kdegraphics-strigi-analyzer
+SUBDIR+=	kdegraphics-thumbnailers
 SUBDIR+=	kdegraphics3
-SUBDIR+=	kdegraphics4
+SUBDIR+=	kgamma
 SUBDIR+=	kipi-plugins
 SUBDIR+=	kipi-plugins-calendar-kde3
 SUBDIR+=	kipi-plugins-kde3
+SUBDIR+=	kolourpaint
 SUBDIR+=	koverartist
 SUBDIR+=	kphotoalbum
 SUBDIR+=	kphotobook
 SUBDIR+=	kphotools
+SUBDIR+=	kruler
+SUBDIR+=	ksaneplugin
+SUBDIR+=	ksnapshot
 SUBDIR+=	lcms
 SUBDIR+=	lcms2
 SUBDIR+=	lensfun
@@ -260,6 +269,7 @@ SUBDIR+=	libkexiv2
 SUBDIR+=	libkexiv2-kde3
 SUBDIR+=	libkipi
 SUBDIR+=	libkipi-kde3
+SUBDIR+=	libksane
 SUBDIR+=	liblqr
 SUBDIR+=	libotf
 SUBDIR+=	libpano13
@@ -420,6 +430,7 @@ SUBDIR+=	silgraphite-xft
 SUBDIR+=	simage
 SUBDIR+=	skencil
 SUBDIR+=	spcaview
+SUBDIR+=	svgpart
 SUBDIR+=	tango-icon-theme
 SUBDIR+=	tesseract
 SUBDIR+=	tex-a2ping
