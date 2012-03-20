@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2012/03/20 17:26:19 hans Exp $
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/crtbegin.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/crtend.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/4.0.3/gmon.o
