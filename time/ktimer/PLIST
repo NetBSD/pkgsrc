@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 06:17:10 markd Exp $
+bin/ktimer
+share/applications/kde4/ktimer.desktop
+share/doc/kde/HTML/en/ktimer/common
+share/doc/kde/HTML/en/ktimer/first.png
+share/doc/kde/HTML/en/ktimer/index.cache.bz2
+share/doc/kde/HTML/en/ktimer/index.docbook
+share/doc/kde/HTML/en/ktimer/main.png
+share/doc/kde/HTML/en/ktimer/running.png
+share/doc/kde/HTML/en/ktimer/two_at_once.png
+share/icons/hicolor/128x128/apps/ktimer.png
+share/icons/hicolor/16x16/apps/ktimer.png
+share/icons/hicolor/32x32/apps/ktimer.png
+share/icons/hicolor/48x48/apps/ktimer.png
