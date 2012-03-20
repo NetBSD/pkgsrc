@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.372 2012/03/17 16:30:47 taca Exp $
+# $NetBSD: Makefile,v 1.373 2012/03/20 00:29:27 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -112,6 +112,7 @@ SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
 SUBDIR+=	kchm
 SUBDIR+=	kchmviewer
+SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kdeaccessibility3
 SUBDIR+=	kdeaccessibility4
 SUBDIR+=	kdeaddons3
