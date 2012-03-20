@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/19 14:18:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/20 13:08:33 taca Exp $
+bin/pdf_callbacks
 bin/pdf_list_callbacks
 bin/pdf_object
 bin/pdf_text
@@ -8,16 +9,17 @@ ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/bin/pdf_callbacks
 ${GEM_LIBDIR}/bin/pdf_list_callbacks
 ${GEM_LIBDIR}/bin/pdf_object
 ${GEM_LIBDIR}/bin/pdf_text
 ${GEM_LIBDIR}/examples/callbacks.rb
 ${GEM_LIBDIR}/examples/extract_bates.rb
+${GEM_LIBDIR}/examples/extract_fonts.rb
 ${GEM_LIBDIR}/examples/extract_images.rb
 ${GEM_LIBDIR}/examples/hash.rb
 ${GEM_LIBDIR}/examples/metadata.rb
-${GEM_LIBDIR}/examples/page_counter_improved.rb
-${GEM_LIBDIR}/examples/page_counter_naive.rb
+${GEM_LIBDIR}/examples/page_count.rb
 ${GEM_LIBDIR}/examples/rspec.rb
 ${GEM_LIBDIR}/examples/text.rb
 ${GEM_LIBDIR}/examples/version.rb
@@ -38,16 +40,23 @@ ${GEM_LIBDIR}/lib/pdf/reader/encodings/zapf_dingbats.txt
 ${GEM_LIBDIR}/lib/pdf/reader/error.rb
 ${GEM_LIBDIR}/lib/pdf/reader/filter.rb
 ${GEM_LIBDIR}/lib/pdf/reader/font.rb
+${GEM_LIBDIR}/lib/pdf/reader/form_xobject.rb
+${GEM_LIBDIR}/lib/pdf/reader/glyph_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyphlist.txt
 ${GEM_LIBDIR}/lib/pdf/reader/lzw.rb
 ${GEM_LIBDIR}/lib/pdf/reader/metadata_strategy.rb
+${GEM_LIBDIR}/lib/pdf/reader/object_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_stream.rb
+${GEM_LIBDIR}/lib/pdf/reader/page.rb
+${GEM_LIBDIR}/lib/pdf/reader/page_text_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/pages_strategy.rb
 ${GEM_LIBDIR}/lib/pdf/reader/parser.rb
 ${GEM_LIBDIR}/lib/pdf/reader/print_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/reference.rb
 ${GEM_LIBDIR}/lib/pdf/reader/register_receiver.rb
+${GEM_LIBDIR}/lib/pdf/reader/resource_methods.rb
+${GEM_LIBDIR}/lib/pdf/reader/standard_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/stream.rb
 ${GEM_LIBDIR}/lib/pdf/reader/text_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/token.rb
