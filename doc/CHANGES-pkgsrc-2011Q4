@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.46 2012/03/14 17:45:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2011Q4,v 1.1.2.47 2012/03/20 14:27:24 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2011Q4 branch:
@@ -189,3 +189,5 @@ Pullup ticket #3702 - requested by taca
 security/openssl: security update
 Pullup ticket #3703 - requested by taca
 www/contao29: security patch
+Pullup ticket #3704 - requested by gdt
+net/quagga: security update
