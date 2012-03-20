@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.923 2012/03/20 14:28:27 taca Exp $
+$NetBSD: CHANGES-2012,v 1.924 2012/03/20 14:51:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/zope210 [taca 2012-03-20]
 	Removed www/zope29 [taca 2012-03-20]
 	Removed www/zope3 [taca 2012-03-20]
+	Updated www/ruby-jekyll to 0.11.2nb1 [taca 2012-03-20]
