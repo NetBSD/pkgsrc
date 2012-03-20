@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2012/02/23 19:17:31 drochner Exp $
+# $NetBSD: Makefile,v 1.350 2012/03/20 07:22:46 markd Exp $
 #
 
 COMMENT=	Games
@@ -26,6 +26,7 @@ SUBDIR+=	battalion
 SUBDIR+=	battleball
 SUBDIR+=	billardgl
 SUBDIR+=	blindmine
+SUBDIR+=	blinken
 SUBDIR+=	blokus
 SUBDIR+=	bluemoon
 SUBDIR+=	bomberclone
@@ -141,6 +142,7 @@ SUBDIR+=	ivan
 SUBDIR+=	jetpack
 SUBDIR+=	jools
 SUBDIR+=	kajaani-kombat
+SUBDIR+=	kanagram
 SUBDIR+=	kanatest
 SUBDIR+=	kapooka
 SUBDIR+=	kdegames3
@@ -148,6 +150,7 @@ SUBDIR+=	kdegames4
 SUBDIR+=	kdetoys3
 SUBDIR+=	kdetoys4
 SUBDIR+=	ketm
+SUBDIR+=	khangman
 SUBDIR+=	knightcap
 SUBDIR+=	knightcap-brain
 SUBDIR+=	knights
