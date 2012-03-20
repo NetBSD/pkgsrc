@@ -1,7 +1,11 @@
-# $NetBSD: modules.mk,v 1.32 2012/03/17 13:53:01 taca Exp $
+# $NetBSD: modules.mk,v 1.33 2012/03/20 06:14:30 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
+
+.if defined(RUBY_RAILS_SUPPORTED)
+USE_TOOLS+=		expr
+.endif
 
 .include "../../lang/ruby/rubyversion.mk"
 
@@ -14,6 +18,13 @@ PKGNAME?=	${RUBY_PKGPREFIX}-${DISTNAME}
 DEPENDS+= ruby${RUBY_VER}-base>=${RUBY_VERSION}:../../lang/${RUBY_BASE}
 .else
 .include "../../lang/ruby/buildlink3.mk"
+.endif
+
+.if defined(RUBY_RAILS_SUPPORTED)
+.include "../../lang/ruby/rails.mk"
+.if ${RUBY_RAILS} > 3
+RUBY_RDOC_REQD?=	2.5.0
+.endif
 .endif
 
 #

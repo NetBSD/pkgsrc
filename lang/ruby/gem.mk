@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.13 2012/03/18 02:24:13 taca Exp $
+# $NetBSD: gem.mk,v 1.14 2012/03/20 06:14:30 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -132,10 +132,6 @@ UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
 USE_RAKE?=		YES
 .endif
 
-.if defined(RUBY_RAILS_SUPPORTED)
-USE_TOOLS+=		expr
-.endif
-
 # print-PLIST support
 PRINT_PLIST_AWK+=	/${GEM_NAME}\.(gem|gemspec)$$/ \
 			{ gsub(/${GEM_NAME}\.gem/, "$${GEM_NAME}.gem"); }
@@ -154,10 +150,6 @@ PRINT_PLIST_AWK+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
 
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
-
-.if defined(RUBY_RAILS_SUPPORTED)
-.include "../../lang/ruby/rails.mk"
-.endif
 
 # Build and run-time dependencies for Ruby prior to 1.9.
 #
