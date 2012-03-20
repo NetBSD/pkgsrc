@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.912 2012/03/20 13:11:46 taca Exp $
+$NetBSD: CHANGES-2012,v 1.913 2012/03/20 13:18:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1472,3 +1472,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/libtasn1 to 2.12 [wiz 2012-03-20]
 	Updated print/ruby-pdf-reader to 1.0.0 [taca 2012-03-20]
 	Updated misc/ruby-launchy to 2.1.0 [taca 2012-03-20]
+	Added www/ruby-coffee-rails31 version 3.1.1 [taca 2012-03-20]
+	Added www/ruby-coffee-rails32 version 3.2.2 [taca 2012-03-20]
