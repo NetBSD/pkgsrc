@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/10 22:10:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/20 11:08:57 markd Exp $
 bin/rsibreak
 lib/kde4/plasma_applet_rsibreak.so
 lib/kde4/plasma_engine_rsibreak.so
 share/applications/kde4/rsibreak.desktop
 share/dbus-1/interfaces/org.rsibreak.rsiwidget.xml
 share/doc/kde/HTML/en/rsibreak/common
-share/doc/kde/HTML/en/rsibreak/dcop.png
 share/doc/kde/HTML/en/rsibreak/index.cache.bz2
 share/doc/kde/HTML/en/rsibreak/index.docbook
 share/doc/kde/HTML/en/rsibreak/logo.png
@@ -21,6 +20,9 @@ share/doc/kde/HTML/et/rsibreak/index.docbook
 share/doc/kde/HTML/fr/rsibreak/common
 share/doc/kde/HTML/fr/rsibreak/index.cache.bz2
 share/doc/kde/HTML/fr/rsibreak/index.docbook
+share/doc/kde/HTML/it/rsibreak/common
+share/doc/kde/HTML/it/rsibreak/index.cache.bz2
+share/doc/kde/HTML/it/rsibreak/index.docbook
 share/doc/kde/HTML/nl/rsibreak/common
 share/doc/kde/HTML/nl/rsibreak/index.cache.bz2
 share/doc/kde/HTML/nl/rsibreak/index.docbook
@@ -29,12 +31,16 @@ share/doc/kde/HTML/nl/rsibreak/statistics.png
 share/doc/kde/HTML/pt/rsibreak/common
 share/doc/kde/HTML/pt/rsibreak/index.cache.bz2
 share/doc/kde/HTML/pt/rsibreak/index.docbook
+share/doc/kde/HTML/pt_BR/rsibreak/common
+share/doc/kde/HTML/pt_BR/rsibreak/index.cache.bz2
+share/doc/kde/HTML/pt_BR/rsibreak/index.docbook
 share/doc/kde/HTML/sv/rsibreak/common
 share/doc/kde/HTML/sv/rsibreak/index.cache.bz2
 share/doc/kde/HTML/sv/rsibreak/index.docbook
 share/doc/kde/HTML/uk/rsibreak/common
 share/doc/kde/HTML/uk/rsibreak/index.cache.bz2
 share/doc/kde/HTML/uk/rsibreak/index.docbook
+share/doc/kde/HTML/uk/rsibreak/statistics.png
 share/icons/hicolor/128x128/apps/rsibreak.png
 share/icons/hicolor/16x16/actions/rsibreak0.png
 share/icons/hicolor/16x16/actions/rsibreak1.png
@@ -68,7 +74,10 @@ share/locale/ar/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/ar/LC_MESSAGES/rsibreak.mo
 share/locale/be/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/be/LC_MESSAGES/rsibreak.mo
+share/locale/ca/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/ca/LC_MESSAGES/rsibreak.mo
+share/locale/ca@valencia/LC_MESSAGES/plasma_applet_rsibreak.mo
+share/locale/ca@valencia/LC_MESSAGES/rsibreak.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/cs/LC_MESSAGES/rsibreak.mo
 share/locale/da/LC_MESSAGES/plasma_applet_rsibreak.mo
@@ -79,6 +88,8 @@ share/locale/el/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/el/LC_MESSAGES/rsibreak.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/en_GB/LC_MESSAGES/rsibreak.mo
+share/locale/eo/LC_MESSAGES/plasma_applet_rsibreak.mo
+share/locale/eo/LC_MESSAGES/rsibreak.mo
 share/locale/es/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/es/LC_MESSAGES/rsibreak.mo
 share/locale/et/LC_MESSAGES/plasma_applet_rsibreak.mo
@@ -93,6 +104,9 @@ share/locale/hi/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/hi/LC_MESSAGES/rsibreak.mo
 share/locale/hne/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/hne/LC_MESSAGES/rsibreak.mo
+share/locale/hr/LC_MESSAGES/plasma_applet_rsibreak.mo
+share/locale/hr/LC_MESSAGES/rsibreak.mo
+share/locale/hu/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/is/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/is/LC_MESSAGES/rsibreak.mo
 share/locale/it/LC_MESSAGES/plasma_applet_rsibreak.mo
@@ -105,6 +119,7 @@ share/locale/ko/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/ko/LC_MESSAGES/rsibreak.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/lt/LC_MESSAGES/rsibreak.mo
+share/locale/mai/LC_MESSAGES/rsibreak.mo
 share/locale/ml/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/nb/LC_MESSAGES/plasma_applet_rsibreak.mo
 share/locale/nb/LC_MESSAGES/rsibreak.mo
