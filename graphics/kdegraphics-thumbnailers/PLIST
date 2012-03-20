@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:36 markd Exp $
+lib/kde4/gsthumbnail.so
+lib/kde4/rawthumbnail.so
+share/kde4/services/gsthumbnail.desktop
+share/kde4/services/rawthumbnail.desktop
