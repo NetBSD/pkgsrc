@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2011/09/12 17:02:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/20 14:06:03 taca Exp $
 bin/termtter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/bin/termtter
 ${GEM_LIBDIR}/bin/termtter_frame
 ${GEM_LIBDIR}/doc/Termtter-1.0-Release-Note-English.txt
@@ -40,6 +41,7 @@ ${GEM_LIBDIR}/lib/plugins/defaults/command_line.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/confirm.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/eval.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/exec.rb
+${GEM_LIBDIR}/lib/plugins/defaults/expand_tco_url.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/fib.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/hashtag.rb
 ${GEM_LIBDIR}/lib/plugins/defaults/irb.rb
@@ -70,6 +72,7 @@ ${GEM_LIBDIR}/lib/plugins/favotter.rb
 ${GEM_LIBDIR}/lib/plugins/fib_filter.rb
 ${GEM_LIBDIR}/lib/plugins/fibyou.rb
 ${GEM_LIBDIR}/lib/plugins/filter.rb
+${GEM_LIBDIR}/lib/plugins/foo.rb
 ${GEM_LIBDIR}/lib/plugins/footer.rb
 ${GEM_LIBDIR}/lib/plugins/friends.rb
 ${GEM_LIBDIR}/lib/plugins/g.rb
@@ -77,6 +80,7 @@ ${GEM_LIBDIR}/lib/plugins/gem_install.rb
 ${GEM_LIBDIR}/lib/plugins/geo.rb
 ${GEM_LIBDIR}/lib/plugins/gist.rb
 ${GEM_LIBDIR}/lib/plugins/github-issues.rb
+${GEM_LIBDIR}/lib/plugins/googl.rb
 ${GEM_LIBDIR}/lib/plugins/graduatter.rb
 ${GEM_LIBDIR}/lib/plugins/grass.rb
 ${GEM_LIBDIR}/lib/plugins/group.rb
@@ -133,6 +137,7 @@ ${GEM_LIBDIR}/lib/plugins/notify-send.rb
 ${GEM_LIBDIR}/lib/plugins/notify-send2.rb
 ${GEM_LIBDIR}/lib/plugins/notify-send3.rb
 ${GEM_LIBDIR}/lib/plugins/nuance.rb
+${GEM_LIBDIR}/lib/plugins/nyancat.rb
 ${GEM_LIBDIR}/lib/plugins/open.rb
 ${GEM_LIBDIR}/lib/plugins/open_url.rb
 ${GEM_LIBDIR}/lib/plugins/other_user.rb
@@ -181,6 +186,7 @@ ${GEM_LIBDIR}/lib/plugins/system_status.rb
 ${GEM_LIBDIR}/lib/plugins/time_signal.rb
 ${GEM_LIBDIR}/lib/plugins/timer.rb
 ${GEM_LIBDIR}/lib/plugins/tinyurl.rb
+${GEM_LIBDIR}/lib/plugins/toppo.rb
 ${GEM_LIBDIR}/lib/plugins/train.rb
 ${GEM_LIBDIR}/lib/plugins/translate_tweet.rb
 ${GEM_LIBDIR}/lib/plugins/translation.rb
@@ -224,6 +230,7 @@ ${GEM_LIBDIR}/lib/termtter/system_extensions/termtter_compatibles.rb
 ${GEM_LIBDIR}/lib/termtter/system_extensions/windows.rb
 ${GEM_LIBDIR}/lib/termtter/task.rb
 ${GEM_LIBDIR}/lib/termtter/task_manager.rb
+${GEM_LIBDIR}/lib/termtter/version.rb
 ${GEM_LIBDIR}/spec/plugins/capital_update_spec.rb
 ${GEM_LIBDIR}/spec/plugins/cool_spec.rb
 ${GEM_LIBDIR}/spec/plugins/curry_spec.rb
