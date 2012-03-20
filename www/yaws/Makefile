@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/02 09:55:25 hans Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/20 16:25:51 dholland Exp $
 #
 
 DISTNAME=		yaws-1.91
@@ -20,6 +20,7 @@ AUTOCONF_REQD=		2.50
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/yaws
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-extrainclude=${PAMBASE}/include/security
 
 EGDIR=			${PREFIX}/share/examples/yaws
 CONF_FILES=		${EGDIR}/yaws.conf ${PKG_SYSCONFDIR}/yaws/yaws.conf
@@ -73,4 +74,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}/yaws
 
 .include "../../lang/erlang/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
