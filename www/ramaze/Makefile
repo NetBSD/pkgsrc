@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2011/12/16 13:21:50 taca Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/20 13:53:35 taca Exp $
 
-DISTNAME=	ramaze-2011.10.23
+DISTNAME=	ramaze-2012.03.07
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	http://ramaze.net/
 COMMENT=	Ruby lightweight, modular, web application framework
 LICENSE=	ruby-license
 
-DEPENDS+=	${RUBY_PKGPREFIX}-innate>=2010.03:../../www/ruby-innate
+DEPENDS+=	${RUBY_PKGPREFIX}-innate>=2012.3:../../www/ruby-innate
 
 CONFLICTS+=	ruby[1-9][0-9]-ramaze-[0-9]* ramaze-[0-9]*
 
