@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.646 2012/03/19 19:50:49 markd Exp $
+# $NetBSD: Makefile,v 1.647 2012/03/20 05:09:43 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -191,6 +191,7 @@ SUBDIR+=	kdelibs4
 SUBDIR+=	keylaunch
 SUBDIR+=	kkbswitch
 SUBDIR+=	kmessage
+SUBDIR+=	konsole
 SUBDIR+=	kterm
 SUBDIR+=	lablgtk
 SUBDIR+=	lablgtk1
