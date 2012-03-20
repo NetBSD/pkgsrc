@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.914 2012/03/20 13:28:43 taca Exp $
+$NetBSD: CHANGES-2012,v 1.915 2012/03/20 13:41:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1475,3 +1475,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/ruby-coffee-rails31 version 3.1.1 [taca 2012-03-20]
 	Added www/ruby-coffee-rails32 version 3.2.2 [taca 2012-03-20]
 	Updated www/ruby-sass-rails32 to 3.2.5 [taca 2012-03-20]
+	Updated devel/ruby-rspec-core to 2.9.0 [taca 2012-03-20]
+	Updated devel/ruby-rspec-expectations to 2.9.0 [taca 2012-03-20]
+	Updated devel/ruby-rspec-mocks to 2.9.0 [taca 2012-03-20]
+	Updated devel/ruby-rspec to 2.9.0 [taca 2012-03-20]
