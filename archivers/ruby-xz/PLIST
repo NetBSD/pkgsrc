@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/03 19:51:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/20 07:26:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/HISTORY.rdoc
 ${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/lib/xz.rb
+${GEM_LIBDIR}/lib/xz/lib_lzma.rb
+${GEM_LIBDIR}/lib/xz/stream.rb
+${GEM_LIBDIR}/lib/xz/stream_reader.rb
+${GEM_LIBDIR}/lib/xz/stream_writer.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
