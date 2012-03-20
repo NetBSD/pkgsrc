@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.920 2012/03/20 14:01:15 taca Exp $
+$NetBSD: CHANGES-2012,v 1.921 2012/03/20 14:06:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1485,3 +1485,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-innate to 2012.03 [taca 2012-03-20]
 	Updated www/ramaze to 2012.03.07 [taca 2012-03-20]
 	Updated www/ruby-compass to 0.12.1 [taca 2012-03-20]
+	Updated net/ruby-tweetstream to 1.1.4 [taca 2012-03-20]
+	Updated www/termtter to 1.10.3 [taca 2012-03-20]
