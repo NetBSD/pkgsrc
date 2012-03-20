@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10962 2012/03/20 17:09:17 asau Exp $
+$NetBSD: TODO,v 1.10963 2012/03/20 17:10:56 asau Exp $
 
 Suggested new packages
 ======================
@@ -288,6 +288,7 @@ Suggested new packages
 	Torque
 	http://www.clusterresources.com/products/torque-resource-manager.php
 	Open source batch jobs resource manager, successor to OpenPBS.
+	(Check me when taking on it - asau.)
 
 	lightspark
 	http://sourceforge.net/apps/trac/lightspark
