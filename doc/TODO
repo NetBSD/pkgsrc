@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10960 2012/03/20 08:57:09 wiz Exp $
+$NetBSD: TODO,v 1.10961 2012/03/20 12:11:53 markd Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o alsa-plugins-1.0.25
 	o alsa-utils-1.0.25
 	o amanda-3.1
-	o amarok-2.5
 	o amavis-perl-0.3.12 [called just amavis]
 	o amsn-0.98.4
 	o angband-3.2
@@ -829,7 +828,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdbg-2.5.1
 	o kde4-4.8.1
 	o kdenlive-0.8.2.1
-	o kdevelop-4.2.3
 	o kdiff3-0.9.96
 	o kdrill-6.5
 	o kid3-2.0.1
@@ -841,7 +839,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kmymoney2-4.6.1
 	o knights-2.4.0
 	o koffice-l10n-de-2.0.2
-	o konversation-1.4
 	o kphotobook-0.0.7
 	o kronolith-3.0.15
 	o krusader-2.0
@@ -1283,7 +1280,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tea-32.0.1
 	o ted-en-us-2.17
 	o teem-1.10.0
-	o tellico-2.3.5
 	o tesseract-3.01
 	o tetrinetx-1.40c
 	o texmaker-3.1 [pkg/45521]
