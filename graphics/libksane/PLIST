@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:34 markd Exp $
+include/libksane/ksane.h
+include/libksane/libksane_export.h
+include/libksane/version.h
+lib/cmake/KSane/KSaneConfig.cmake
+lib/libksane.so
+lib/libksane.so.0
+lib/libksane.so.0.2.0
+lib/pkgconfig/libksane.pc
+share/icons/hicolor/16x16/actions/black-white.png
+share/icons/hicolor/16x16/actions/color.png
+share/icons/hicolor/16x16/actions/gray-scale.png

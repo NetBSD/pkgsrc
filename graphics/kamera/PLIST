@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:34 markd Exp $
+lib/kde4/kcm_kamera.so
+lib/kde4/kio_kamera.so
+share/doc/kde/HTML/en/kcontrol/kamera/common
+share/doc/kde/HTML/en/kcontrol/kamera/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/kamera/index.docbook
+share/kde/apps/solid/actions/solid_camera.desktop
+share/kde4/services/camera.protocol
+share/kde4/services/kamera.desktop

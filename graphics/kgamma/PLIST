@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:35 markd Exp $
+bin/xf86gammacfg
+lib/kde4/kcm_kgamma.so
+share/doc/kde/HTML/en/kcontrol/kgamma/common
+share/doc/kde/HTML/en/kcontrol/kgamma/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/kgamma/index.docbook
+share/kde/apps/kgamma/pics/background.png
+share/kde/apps/kgamma/pics/cmyscale.png
+share/kde/apps/kgamma/pics/darkgrey.png
+share/kde/apps/kgamma/pics/greyscale.png
+share/kde/apps/kgamma/pics/lightgrey.png
+share/kde/apps/kgamma/pics/midgrey.png
+share/kde/apps/kgamma/pics/rgbscale.png
+share/kde4/services/kgamma.desktop
