@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.903 2012/03/20 10:20:56 taca Exp $
+$NetBSD: CHANGES-2012,v 1.904 2012/03/20 10:23:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-dm-active_model to 1.2.1 [taca 2012-03-20]
 	Updated databases/ruby-dm-rails to 1.2.1 [taca 2012-03-20]
 	Updated databases/ruby-dm-types to 1.2.1nb1 [taca 2012-03-20]
+	Updated devel/ruby-kgio to 2.7.3 [taca 2012-03-20]
