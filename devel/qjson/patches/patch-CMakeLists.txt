@@ -1,0 +1,42 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2012/03/20 10:12:24 markd Exp $
+
+--- CMakeLists.txt.orig	2009-12-04 00:02:16.000000000 +0000
++++ CMakeLists.txt
+@@ -9,7 +9,7 @@ IF(COMMAND cmake_policy)
+ ENDIF(COMMAND cmake_policy)
+ 
+ # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
+-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
++set (CMAKE_MODULE_PATH "/local/src/work/pkgsrc/wip/qjson/work.i386/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
+ 
+ set(CMAKE_INSTALL_NAME_DIR ${LIB_INSTALL_DIR})
+ 
+@@ -39,7 +39,7 @@ SET( QT_DONT_USE_QTGUI TRUE )
+ SET (LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)" )
+ SET (LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}" CACHE STRING "Directory where lib will install")
+ SET (INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "The directory the headers are installed in")
+-SET (CMAKE_MODULES_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/apps/cmake/modules" CACHE PATH "The directory to install FindQRpc.cmake to")
++SET (CMAKE_MODULES_INSTALL_DIR "${CMAKE_ROOT}/Modules" CACHE PATH "The directory to install FindQJSON.cmake to")
+ 
+ 
+ set(QJSON_LIB_MAJOR_VERSION "0")
+@@ -77,5 +77,19 @@ add_subdirectory(cmake/modules)
+ #  "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+ #  IMMEDIATE @ONLY)
+ 
++GET_TARGET_PROPERTY(LIB_OUT_NAME qjson LOCATION)
++GET_FILENAME_COMPONENT(LIB_OUT_NAME  ${LIB_OUT_NAME} NAME)
++
++# cmake-modules
++CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/qjson-config.cmake.in
++               ${CMAKE_CURRENT_BINARY_DIR}/qjson-config.cmake
++               @ONLY)
++CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/qjson-config-version.cmake.in
++               ${CMAKE_CURRENT_BINARY_DIR}/qjson-config-version.cmake
++               @ONLY)
++INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/qjson-config.cmake
++              ${CMAKE_CURRENT_BINARY_DIR}/qjson-config-version.cmake
++        DESTINATION "lib/cmake/qjson")
++
+ #ADD_CUSTOM_TARGET(uninstall
+ #  "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
