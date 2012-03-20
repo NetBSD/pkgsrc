@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/20 14:52:15 asau Exp $
+
+SHA1 (slurm-2.4.0-0.pre4.tar.bz2) = 869169e1eb2ed5cc2736804cc0e6a43120eed3f5
+RMD160 (slurm-2.4.0-0.pre4.tar.bz2) = cbc7bb456389032c8424dde628addf8b5a91ae0d
+Size (slurm-2.4.0-0.pre4.tar.bz2) = 5146463 bytes
+SHA1 (patch-doc_html_Makefile.am) = 92a1942ed7c532fee6597f4d8a3adf81352f6d98
+SHA1 (patch-doc_html_Makefile.in) = 65f05532ae7701c8d33fd46b7c5f853c9bd6a1b0
+SHA1 (patch-doc_man_man1_Makefile.am) = c21d927d0d4949d1b82c57e865ee7a79ed8b99ed
+SHA1 (patch-doc_man_man1_Makefile.in) = 9c568214983defe06627c701e96267f568597d50
+SHA1 (patch-doc_man_man5_Makefile.am) = b8473964ad03e95c8416fe623e198f50dd557a08
+SHA1 (patch-doc_man_man5_Makefile.in) = c1ea74633a8c59eaa6aaca3041c48770d7705432
+SHA1 (patch-doc_man_man8_Makefile.am) = 46fb6837dc31e6f7ca926ffff1ddda1bdefeb83a
+SHA1 (patch-doc_man_man8_Makefile.in) = e7c66557680c550f1d87147dad4107ad00c4c713
