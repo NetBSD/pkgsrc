@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2012/03/03 00:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2012/03/20 10:28:29 markd Exp $
 #
 
 DISTNAME=	amarok-${VERS}
-VERS=		2.4.0
-PKGREVISION=	8
+VERS=		2.5.0
 CATEGORIES=	audio multimedia
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/amarok/${VERS}/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +17,6 @@ DEPENDS+=	moodbar-[0-9]*:../../audio/moodbar
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config
 
@@ -55,6 +53,7 @@ SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-se
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/taglib-extras/buildlink3.mk"
+.include "../../devel/qjson/buildlink3.mk"
 .include "../../devel/qtscriptgenerator/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
@@ -63,7 +62,7 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 # for plasma
-.include "../../x11/kdebase-workspace4/buildlink3.mk"
+.include "../../x11/kde-workspace4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.5.0
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
