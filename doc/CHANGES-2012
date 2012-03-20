@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.922 2012/03/20 14:16:32 taca Exp $
+$NetBSD: CHANGES-2012,v 1.923 2012/03/20 14:28:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1489,3 +1489,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/termtter to 1.10.3 [taca 2012-03-20]
 	Removed www/plone3 [taca 2012-03-20]
 	Removed www/plone25 [taca 2012-03-20]
+	Removed www/zope-ejsplitter [taca 2012-03-20]
+	Removed www/zope-jamailhost [taca 2012-03-20]
+	Removed www/zope211 [taca 2012-03-20]
+	Removed www/zope210 [taca 2012-03-20]
+	Removed www/zope29 [taca 2012-03-20]
+	Removed www/zope3 [taca 2012-03-20]
