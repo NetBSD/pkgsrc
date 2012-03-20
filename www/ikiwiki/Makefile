@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2012/03/15 11:53:44 obache Exp $
+# $NetBSD: Makefile,v 1.92 2012/03/20 12:01:09 schmonz Exp $
 #
 
-DISTNAME=		ikiwiki_3.20120202
+DISTNAME=		ikiwiki_3.20120203
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
@@ -31,7 +30,7 @@ DEPENDS+=		p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=		p5-XML-RSS-[0-9]*:../../textproc/p5-XML-RSS
 DEPENDS+=		p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
 DEPENDS+=		p5-gettext-[0-9]*:../../devel/p5-gettext
-DEPENDS+=		p5-YAML-[0-9]*:../../textproc/p5-YAML
+DEPENDS+=		p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
 #DEPENDS+=		po4a-[0-9]*:../../textproc/po4a
 
 WRKSRC=			${WRKDIR}/${PKGBASE}
