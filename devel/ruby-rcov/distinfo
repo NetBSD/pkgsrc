@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/12/15 15:10:13 taca Exp $
+$NetBSD: distinfo,v 1.6 2012/03/20 10:25:47 taca Exp $
 
-SHA1 (rcov-0.9.11.gem) = 1fefab4bb63e82790a12a6349fbd5404f35b0b53
-RMD160 (rcov-0.9.11.gem) = 9861aba9890118290bdbba42e04cbe4abf08d4d9
-Size (rcov-0.9.11.gem) = 90624 bytes
+SHA1 (rcov-1.0.0.gem) = 83c01afe0936c2310425399b21402d6f74865b04
+RMD160 (rcov-1.0.0.gem) = ba26544e3c422b632781c3ab6ac781a488371b30
+Size (rcov-1.0.0.gem) = 59392 bytes
