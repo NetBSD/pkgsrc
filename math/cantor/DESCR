@@ -1,0 +1,4 @@
+Cantor is a front-end to powerful mathematics and statistics packages.
+Cantor integrates them into the KDE Platform and provides a nice,
+worksheet-based, graphical user interface.
+Support for four different environments (Maxima, R, SAGE, KAlgebra)
