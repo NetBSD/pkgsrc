@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2009/05/13 21:00:25 markd Exp $
+$NetBSD: patch-ag,v 1.5 2012/03/20 17:07:43 asau Exp $
 
---- source/libs/spool/Makefile.orig	2009-02-10 00:06:38.000000000 +1300
-+++ source/libs/spool/Makefile
-@@ -123,7 +123,7 @@ test_sge_spooling.o: $(SPOOLLIB_DIR)/tes
+--- source/libs/spool/Makefile.orig	2011-11-29 03:06:15.000000000 +0400
++++ source/libs/spool/Makefile	2012-02-20 19:58:29.000000000 +0400
+@@ -117,7 +117,7 @@
  	$(CC) $(CFLAGS) -c $(SPOOLLIB_DIR)/test_sge_spooling.c
  
- test_sge_spooling_utilities: test_sge_spooling_utilities.o $(SPOOLING_DEPS) $(SGEOBJLIB) $(SGEOBJDLIB) $(MIRLIB) $(EVCLIB) $(GDILIB) $(SCHEDLIB) $(LCKLIB) $(CULLLIB) $(COMMLIB) $(COMMLISTSLIB) $(UTILIB) $(RMONLIB) $(WINGRIDLIB_DEP)
--	$(LD_WRAPPER) $(CC) $(CFLAGS) -o test_sge_spooling_utilities $(LFLAGS) test_sge_spooling_utilities.o $(SPOOLING_LIBS) $(SCHEDLIB)  $(MIRLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(UTILIB) $(RMONLIB) $(WINGRIDLIB) $(LCKLIB) $(SECLIB) $(SLIBS) $(LIBS) $(DLLIB)
-+	$(LD_WRAPPER) $(CC) $(CFLAGS) -o test_sge_spooling_utilities $(LFLAGS) test_sge_spooling_utilities.o $(SPOOLING_LIBS) $(SPOOLLIB) $(SCHEDLIB)  $(MIRLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(UTILIB) $(RMONLIB) $(WINGRIDLIB) $(LCKLIB) $(SECLIB) $(SLIBS) $(LIBS) $(DLLIB)
+ test_sge_spooling_utilities: test_sge_spooling_utilities.o $(SPOOLING_DEPS) $(SGEOBJLIB) $(SGEOBJDLIB) $(MIRLIB) $(EVCLIB) $(GDILIB) $(SCHEDLIB) $(CULLLIB) $(COMMLIB) $(COMMLISTSLIB) $(UTILIB) $(WINGRIDLIB_DEP)
+-	$(LD_WRAPPER) $(CC) $(CFLAGS) -o test_sge_spooling_utilities $(LFLAGS) test_sge_spooling_utilities.o $(SPOOLING_LIBS) $(SCHEDLIB)  $(MIRLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(UTILIB) $(WINGRIDLIB) $(SECLIB) $(SLIBS) $(LIBS) $(DLLIB)
++	$(LD_WRAPPER) $(CC) $(CFLAGS) -o test_sge_spooling_utilities $(LFLAGS) test_sge_spooling_utilities.o $(SPOOLING_LIBS) $(SPOOLLIB) $(SCHEDLIB)  $(MIRLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(UTILIB) $(RMONLIB) $(WINGRIDLIB) $(SECLIB) $(SLIBS) $(LIBS) $(DLLIB)
  
  test_sge_spooling_utilities.o: $(SPOOLLIB_DIR)/test_sge_spooling_utilities.c
  	$(CC) $(CFLAGS) -c $(SPOOLLIB_DIR)/test_sge_spooling_utilities.c
