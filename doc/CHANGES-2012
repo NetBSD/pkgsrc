@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.896 2012/03/20 01:18:24 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.897 2012/03/20 07:27:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1345,3 +1345,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/seamonkey-l10n to 2.8 [ryoon 2012-03-19]
 	Updated devel/zlib to 1.2.6 [adam 2012-03-19]
 	Updated security/pam-krb5 to 4.5 [pettai 2012-03-19]
+	Added devel/ruby-io-like version 0.3.0 [taca 2012-03-20]
+	Updated archivers/ruby-xz to 0.1.1 [taca 2012-03-20]
