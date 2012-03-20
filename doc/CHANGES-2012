@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.905 2012/03/20 10:27:00 taca Exp $
+$NetBSD: CHANGES-2012,v 1.906 2012/03/20 12:01:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/ruby-dm-types to 1.2.1nb1 [taca 2012-03-20]
 	Updated devel/ruby-kgio to 2.7.3 [taca 2012-03-20]
 	Updated devel/ruby-rcov to 1.0.0 [taca 2012-03-20]
+	Updated www/ikiwiki to 3.20120203 [schmonz 2012-03-20]
