@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/03/19 09:12:26 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/03/20 15:18:05 dholland Exp $
 
 BUILDLINK_TREE+=	raptor2
 
@@ -7,7 +7,7 @@ RAPTOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.raptor2?=	raptor2>=2.0.6
 BUILDLINK_ABI_DEPENDS.raptor2+=	raptor2>=2.0.6
-BUILDLINK_PKGSRCDIR.raptor2?=	../../wip/raptor2
+BUILDLINK_PKGSRCDIR.raptor2?=	../../textproc/raptor2
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
