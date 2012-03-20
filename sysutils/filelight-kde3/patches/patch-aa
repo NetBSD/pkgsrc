@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/20 05:37:49 markd Exp $
+
+--- src/part/radialMap/map.cpp.orig	2001-08-06 01:00:00.000000000 +0200
++++ src/part/radialMap/map.cpp	2007-10-17 11:56:15.000000000 +0200
+@@ -337,7 +337,7 @@ RadialMap::Map::paint( unsigned int scal
+    {
+       int width = rect.width() / 2;
+       //clever geometric trick to find largest angle that will give biggest arrow head
+-      int a_max = int(acos( (double)width / double((width + 5) * scaleFactor) ) * (180*16 / M_PI));
++      double a_max = acos( (double)width / double((width + 5) * scaleFactor) ) * (180*16 / M_PI);
+ 
+       for( ConstIterator<Segment> it = m_signature[x].constIterator(); it != m_signature[x].end(); ++it )
+       {
+@@ -351,10 +351,10 @@ RadialMap::Map::paint( unsigned int scal
+             //draw arrow head to indicate undisplayed files/directories
+             QPointArray pts( 3 );
+             QPoint pos, cpos = rect.center();
+-            int a[3] = { (*it)->start(), (*it)->length(), 0 };
++            double a[3] = { (*it)->start(), (*it)->length(), 0 };
+ 
+             a[2] = a[0] + (a[1] / 2); //assign to halfway between
+-            if( a[1] > a_max )
++            if(a[1] > a_max )
+             {
+                a[1] = a_max;
+                a[0] = a[2] - a_max / 2;
