@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/12/16 13:18:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/20 13:52:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gems
 ${GEM_LIBDIR}/.gitignore
@@ -56,6 +56,7 @@ ${GEM_LIBDIR}/lib/innate/node.rb
 ${GEM_LIBDIR}/lib/innate/options.rb
 ${GEM_LIBDIR}/lib/innate/options/dsl.rb
 ${GEM_LIBDIR}/lib/innate/options/stub.rb
+${GEM_LIBDIR}/lib/innate/rack_file_wrapper.rb
 ${GEM_LIBDIR}/lib/innate/request.rb
 ${GEM_LIBDIR}/lib/innate/response.rb
 ${GEM_LIBDIR}/lib/innate/route.rb
