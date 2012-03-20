@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/18 07:13:47 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/20 13:25:45 taca Exp $
 
 DISTNAME=	sass-rails-3.1.5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rails/sass-rails/tree/3-1-stable
+HOMEPAGE=	https://github.com/rails/sass-rails/
 COMMENT=	Sass adapter for the Rails asset pipeline
 LICENSE=	mit
 
