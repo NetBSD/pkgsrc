@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2012/03/07 03:21:27 minskim Exp $
+# $NetBSD: Makefile,v 1.525 2012/03/20 00:36:15 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -77,6 +77,7 @@ SUBDIR+=	magicfilter
 SUBDIR+=	mp
 SUBDIR+=	mpage
 SUBDIR+=	mupdf
+SUBDIR+=	okular
 SUBDIR+=	p5-LaTeX-Driver
 SUBDIR+=	p5-LaTeX-Encode
 SUBDIR+=	p5-LaTeX-Table
