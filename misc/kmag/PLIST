@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2012/03/20 06:53:25 markd Exp $
+bin/kmag
+man/man1/kmag.1
+share/applications/kde4/kmag.desktop
+share/doc/kde/HTML/en/kmag/common
+share/doc/kde/HTML/en/kmag/index.cache.bz2
+share/doc/kde/HTML/en/kmag/index.docbook
+share/doc/kde/HTML/en/kmag/man-kmag.1.docbook
+share/doc/kde/HTML/en/kmag/screenshot.png
+share/icons/hicolor/16x16/actions/followmouse.png
+share/icons/hicolor/16x16/actions/hidemouse.png
+share/icons/hicolor/16x16/actions/window.png
+share/icons/hicolor/16x16/apps/kmag.png
+share/icons/hicolor/32x32/apps/kmag.png
+share/kde/apps/kmag/kmagui.rc
