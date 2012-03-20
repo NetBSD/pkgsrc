@@ -1,0 +1,11 @@
+KCharSelect is a tool to select special characters from all installed
+fonts and copy them into the clipboard.
+
+You can browse characters by their category or quickly find a certain
+character by searching for its name. KCharSelect displays various
+information about the selected character. This includes not only the
+Unicode character name, but also aliases, general notes and cross
+references to similar characters. For technical use, different
+representations of the character are shown. KCharSelect also contains
+Unihan data for East Asian characters to display English definitions
+and different pronunciations.
