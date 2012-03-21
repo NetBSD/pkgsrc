@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2012/03/21 10:40:25 drochner Exp $
+$NetBSD: distinfo,v 1.65 2012/03/21 20:10:11 ryoon Exp $
 
 SHA1 (firefox-11.0.source.tar.bz2) = 0b05f91b81803010502cf89f54c3d0187fb63d7e
 RMD160 (firefox-11.0.source.tar.bz2) = 13b7c7327063625904d00b58a6d6f15c04918e92
@@ -105,4 +105,3 @@ SHA1 (patch-xn) = b0d0943b2bc39d8395055550c0fedfa447a5de01
 SHA1 (patch-xo) = 437cbc7e0ed8777ae2313165f8754759d8eee01d
 SHA1 (patch-xpcom_Makefile.in) = ad9c0ed4347b0ed4f51a6f0f34ac48c65d2152c8
 SHA1 (patch-xpcom_idl-parser_header.py) = cd14f4056a31f15066aebb85e5c14fba2aa37f13
-SHA1 (patch-xulrunner_app_Makefile.in) = 488485373747f79a73393a06c797ed1141e69759
