@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/21 13:40:53 obache Exp $
+@pkgdir ${EMULSUBDIRSLASH}usr/lib/qt3/etc

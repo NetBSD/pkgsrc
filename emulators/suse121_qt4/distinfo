@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:40:53 obache Exp $
+
+SHA1 (suse121/libqt4-4.7.4-19.6.1.i586.rpm) = 44288d12723ea85157a802f6ef4956b6879a7f70
+RMD160 (suse121/libqt4-4.7.4-19.6.1.i586.rpm) = b94c1e7aa3f4daa616fd1389d376fde1caada6a7
+Size (suse121/libqt4-4.7.4-19.6.1.i586.rpm) = 3724518 bytes
+SHA1 (suse121/libqt4-4.7.4-19.6.1.x86_64.rpm) = ca0b6d3668c4c11a0187af536e4226a1b68d0340
+RMD160 (suse121/libqt4-4.7.4-19.6.1.x86_64.rpm) = 238c742d720e6493ec7f8b89b59c67c063900550
+Size (suse121/libqt4-4.7.4-19.6.1.x86_64.rpm) = 3646887 bytes
+SHA1 (suse121/libqt4-qt3support-4.7.4-19.6.1.i586.rpm) = 19fa254a0cf7b436b1453dd7e75c7e6ef194eada
+RMD160 (suse121/libqt4-qt3support-4.7.4-19.6.1.i586.rpm) = 7e18d9425b2df1af88be9658dbaac4875601c4a4
+Size (suse121/libqt4-qt3support-4.7.4-19.6.1.i586.rpm) = 1032685 bytes
+SHA1 (suse121/libqt4-qt3support-4.7.4-19.6.1.x86_64.rpm) = a7855f3b08bd5a13f2fb2eecd2586ae222c7e17f
+RMD160 (suse121/libqt4-qt3support-4.7.4-19.6.1.x86_64.rpm) = 03be90527d51d3c0a7fa24e11de1cbe844fb1ea7
+Size (suse121/libqt4-qt3support-4.7.4-19.6.1.x86_64.rpm) = 1085574 bytes
+SHA1 (suse121/libqt4-x11-4.7.4-19.6.1.i586.rpm) = 0be182e81a5e11b52c042e8d5079a5955cdad53b
+RMD160 (suse121/libqt4-x11-4.7.4-19.6.1.i586.rpm) = b08e68bab9c71ede0ba53d02ebaf8012c00a728f
+Size (suse121/libqt4-x11-4.7.4-19.6.1.i586.rpm) = 10627669 bytes
+SHA1 (suse121/libqt4-x11-4.7.4-19.6.1.x86_64.rpm) = 509a9a8dc64d2bdc0972923547601b564f7845c4
+RMD160 (suse121/libqt4-x11-4.7.4-19.6.1.x86_64.rpm) = 8476e8b35754f828150672b8c2e1c4cdce9afdb1
+Size (suse121/libqt4-x11-4.7.4-19.6.1.x86_64.rpm) = 10407082 bytes
