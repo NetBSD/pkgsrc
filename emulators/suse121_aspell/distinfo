@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:35:33 obache Exp $
+
+SHA1 (suse121/aspell-0.60.6.1-2.1.2.i586.rpm) = c0231c6cfe457cdb0a3f194578bb37a84ed0fd00
+RMD160 (suse121/aspell-0.60.6.1-2.1.2.i586.rpm) = 43d6af44406227b487ce0905bdbf3cff0d14573d
+Size (suse121/aspell-0.60.6.1-2.1.2.i586.rpm) = 381638 bytes
+SHA1 (suse121/aspell-0.60.6.1-2.1.2.x86_64.rpm) = 01a330f98fd06ebf0065cf54fd15168767c9e528
+RMD160 (suse121/aspell-0.60.6.1-2.1.2.x86_64.rpm) = a6e8c9524f1cc4acdeddf4e6ef8fd4b01c1a0211
+Size (suse121/aspell-0.60.6.1-2.1.2.x86_64.rpm) = 383373 bytes
