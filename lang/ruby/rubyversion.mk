@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.76 2012/03/21 15:47:33 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.77 2012/03/21 15:48:41 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -11,7 +11,7 @@
 #	The preferered Ruby version to use.
 #
 #		Possible values: 18 192 193
-#		Default: 192
+#		Default: 193
 #
 # RUBY_BUILD_RDOC
 #	Build rdoc of this package and so that install formated
@@ -35,7 +35,7 @@
 #
 #		Possible values: 18 192 193
 #		Compatible values: 19 (= 192)
-#		Default: 192
+#		Default: 193
 #
 # RUBY_VERSION_REQD
 #	The Ruby versions force to build (for pbulk).
@@ -213,7 +213,7 @@ RUBY19_API_VERSION=	1.9.1
 RUBY193_API_VERSION=	1.9.1
 
 #
-RUBY_VERSION_DEFAULT?=	192
+RUBY_VERSION_DEFAULT?=	193
 
 RUBY_VERSION_SUPPORTED?= 18 192 193
 RUBY_VER?=		${RUBY_VERSION_DEFAULT}
