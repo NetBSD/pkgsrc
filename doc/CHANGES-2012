@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.937 2012/03/21 18:52:09 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.938 2012/03/21 20:56:11 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1573,3 +1573,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/liferea-current to 1.6.8 [drochner 2012-03-21]
 	Updated www/bluefish to 2.2.2 [drochner 2012-03-21]
 	Updated devel/eric4 to 4.5.1 [drochner 2012-03-21]
+	Added parallel/hwloc version 1.4 [asau 2012-03-21]
+	Added parallel/gridscheduler version 2011.11 [asau 2012-03-21]
