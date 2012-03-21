@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/03/21 23:04:01 markd Exp $
+
+Fix build with gcc4.3
+
+--- src/diff.cpp.orig	2006-10-30 22:24:29.000000000 +0000
++++ src/diff.cpp
+@@ -17,6 +17,7 @@
+ 
+ #include <stdio.h>
+ #include <iostream>
++#include <cstdlib>
+ 
+ #include "diff.h"
+ #include "fileaccess.h"
