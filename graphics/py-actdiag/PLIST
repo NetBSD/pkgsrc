@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/07 13:27:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/21 14:36:47 obache Exp $
 bin/actdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -6,12 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/actdiag/DiagramDraw.py
-${PYSITELIB}/actdiag/DiagramDraw.pyc
-${PYSITELIB}/actdiag/DiagramDraw.pyo
-${PYSITELIB}/actdiag/DiagramMetrics.py
-${PYSITELIB}/actdiag/DiagramMetrics.pyc
-${PYSITELIB}/actdiag/DiagramMetrics.pyo
 ${PYSITELIB}/actdiag/__init__.py
 ${PYSITELIB}/actdiag/__init__.pyc
 ${PYSITELIB}/actdiag/__init__.pyo
@@ -21,12 +15,24 @@ ${PYSITELIB}/actdiag/builder.pyo
 ${PYSITELIB}/actdiag/command.py
 ${PYSITELIB}/actdiag/command.pyc
 ${PYSITELIB}/actdiag/command.pyo
-${PYSITELIB}/actdiag/diagparser.py
-${PYSITELIB}/actdiag/diagparser.pyc
-${PYSITELIB}/actdiag/diagparser.pyo
+${PYSITELIB}/actdiag/drawer.py
+${PYSITELIB}/actdiag/drawer.pyc
+${PYSITELIB}/actdiag/drawer.pyo
 ${PYSITELIB}/actdiag/elements.py
 ${PYSITELIB}/actdiag/elements.pyc
 ${PYSITELIB}/actdiag/elements.pyo
+${PYSITELIB}/actdiag/metrics.py
+${PYSITELIB}/actdiag/metrics.pyc
+${PYSITELIB}/actdiag/metrics.pyo
+${PYSITELIB}/actdiag/parser.py
+${PYSITELIB}/actdiag/parser.pyc
+${PYSITELIB}/actdiag/parser.pyo
+${PYSITELIB}/actdiag/plugins/__init__.py
+${PYSITELIB}/actdiag/plugins/__init__.pyc
+${PYSITELIB}/actdiag/plugins/__init__.pyo
+${PYSITELIB}/actdiag/plugins/autolane.py
+${PYSITELIB}/actdiag/plugins/autolane.pyc
+${PYSITELIB}/actdiag/plugins/autolane.pyo
 ${PYSITELIB}/actdiag/tests/test_pep8.py
 ${PYSITELIB}/actdiag/tests/test_pep8.pyc
 ${PYSITELIB}/actdiag/tests/test_pep8.pyo
@@ -42,3 +48,4 @@ ${PYSITELIB}/actdiag/utils/rst/directives.pyo
 ${PYSITELIB}/actdiag_sphinxhelper.py
 ${PYSITELIB}/actdiag_sphinxhelper.pyc
 ${PYSITELIB}/actdiag_sphinxhelper.pyo
+man/man1/actdiag.1
