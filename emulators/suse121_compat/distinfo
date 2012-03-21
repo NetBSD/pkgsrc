@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:36:05 obache Exp $
+
+SHA1 (suse121/libstdc++33-3.3.3-30.25.2.i586.rpm) = 7528181182be8794cc3ab0e0025c7d78148d5a5e
+RMD160 (suse121/libstdc++33-3.3.3-30.25.2.i586.rpm) = 307b124f3173dc90e3cfc5b9bcdd566b12a6cf74
+Size (suse121/libstdc++33-3.3.3-30.25.2.i586.rpm) = 205477 bytes
+SHA1 (suse121/libstdc++33-3.3.3-30.25.2.x86_64.rpm) = 91e73e2d97061ac548c60877cb58cda75c4f5aa7
+RMD160 (suse121/libstdc++33-3.3.3-30.25.2.x86_64.rpm) = 188e35e80f9bf93c76dbb86e27e133adc99bd300
+Size (suse121/libstdc++33-3.3.3-30.25.2.x86_64.rpm) = 192079 bytes
