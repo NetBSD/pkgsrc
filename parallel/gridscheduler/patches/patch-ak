@@ -1,0 +1,44 @@
+$NetBSD: patch-ak,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+Add LDFLAGS
+replace $(COMMLISTSLIB) with -lcommlists so that pkgsrc wrapper
+doesnt reorder.
+
+--- source/utilbin/Makefile.orig	2011-11-14 19:00:55.000000000 +0000
++++ source/utilbin/Makefile
+@@ -146,7 +146,7 @@ read_raw.o:		$(UTILBIN_DIR)/read_raw.c
+ 
+ #---------------------------------------------------------------------
+ echo_raw:		echo_raw.o version.o $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) $(CFLAGS) -o $@ $(LFLAGS) echo_raw.o version.o -luti -lrmon -llck $(COMMLISTSLIB) $(LIBS)
++		$(CC) $(CFLAGS) -o $@ $(LFLAGS) echo_raw.o version.o -luti -lrmon -llck -lcommlists $(LIBS)
+ 
+ echo_raw.o:		$(UTILBIN_DIR)/echo_raw.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/echo_raw.c
+@@ -188,7 +188,7 @@ signals.o:	$(UTILBIN_DIR)/signals.c
+ 
+ #---------------------------------------------------------------------
+ loadcheck: loadcheck.o version.o $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(CULLLIB)
+-	$(CC) -o $@ $(LFLAGS) loadcheck.o version.o -lsgeobj -lsgeobjd -lcull -luti $(WINGRIDLIB) -llck -lrmon $(COMMLISTSLIB) $(LOADAVGLIBS) $(LIBS)
++	$(CC) -o $@ $(LFLAGS) loadcheck.o version.o -lsgeobj -lsgeobjd -lcull -luti $(WINGRIDLIB) -llck -lrmon -lcommlists $(LOADAVGLIBS) $(LIBS)
+ 
+ loadcheck.o: $(UTILBIN_DIR)/loadcheck.c
+ 	$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/loadcheck.c
+@@ -222,7 +222,7 @@ fstype.o: $(UTILBIN_DIR)/fstype.c
+ 		$(CC) $(CFLAGS) $(MEMCFLAG) $(GCC_NODUPLWARN) -c $(UTILBIN_DIR)/fstype.c
+ #---------------------------------------------------------------------
+ spooldefaults:   spooldefaults.o  version.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLCLIB) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(LCKLIB) $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB)
+-		$(CC) -o $@ $(LFLAGS) spooldefaults.o version.o sge_mt_init.o -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon $(DLLIB) $(SLIBS) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) $(COMPILER_RPATH_FLAG)$(SGE_ROOT)/lib/$(SGE_ARCH) spooldefaults.o version.o sge_mt_init.o -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon $(DLLIB) $(SLIBS) $(LIBS)
+ 
+ spooldefaults.o: $(UTILBIN_DIR)/spooldefaults.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/spooldefaults.c
+@@ -290,7 +290,7 @@ valid_jvmlib.o:		$(UTILBIN_DIR)/valid_jv
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/valid_jvmlib.c
+ 
+ #---------------------------------------------------------------------
+-AUTHUSER_ADD_LIBS = -luti -llck -lrmon $(COMMLISTSLIB) $(DLLIB)
++AUTHUSER_ADD_LIBS = -luti -llck -lrmon -lcommlists $(DLLIB)
+ 
+ authuser: authuser.o juti.o $(UTILIB) $(LCKLIB) $(RMONLIB) $(COMMLISTSLIB)
+ 	$(CC) -o authuser $(LFLAGS) authuser.o juti.o $(AUTHLIBS) $(AUTHUSER_ADD_LIBS) $(LIBS)
