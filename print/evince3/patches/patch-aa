@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/21 17:40:20 drochner Exp $
+
+--- configure.orig	2011-10-17 15:50:49.000000000 +0000
++++ configure
+@@ -22407,7 +22407,7 @@ $as_echo "$as_me: WARNING: Offline help 
+     enable_help=no
+ fi
+ 
+-if test "x$enable_help" = "xyes" && test "x$gnome_doc_utils" == "xno"; then
++if test "x$enable_help" = "xyes" && test "x$gnome_doc_utils" = "xno"; then
+     as_fn_error $? "gnome-doc-utils not found; use --disable-help to disable help files
+     " "$LINENO" 5
+ fi
