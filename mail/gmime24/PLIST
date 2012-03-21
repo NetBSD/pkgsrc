@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/09/08 20:06:48 wiz Exp $
-bin/uudecode
-bin/uuencode
+@comment $NetBSD: PLIST,v 1.6 2012/03/21 12:26:35 drochner Exp $
 include/gmime-2.4/gmime/gmime-charset.h
 include/gmime-2.4/gmime/gmime-cipher-context.h
 include/gmime-2.4/gmime/gmime-content-type.h
