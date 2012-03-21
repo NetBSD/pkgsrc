@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/03/18 02:34:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/03/21 15:45:00 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -139,6 +139,7 @@ ${GEM_LIBDIR}/spec/fixtures/netstat/ubuntu_7_04
 ${GEM_LIBDIR}/spec/fixtures/processorcount/solaris-sparc-kstat-cpu-info
 ${GEM_LIBDIR}/spec/fixtures/processorcount/solaris-x86_64-kstat-cpu-info
 ${GEM_LIBDIR}/spec/fixtures/unit/selinux/selinux_sestatus
+${GEM_LIBDIR}/spec/fixtures/unit/util/ec2/centos-arp-ec2.out
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ec2/linux-arp-ec2.out
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ec2/linux-arp-not-ec2.out
 ${GEM_LIBDIR}/spec/fixtures/unit/util/ec2/windows-2008-arp-a-not-ec2.out
