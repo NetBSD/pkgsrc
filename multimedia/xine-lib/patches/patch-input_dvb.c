@@ -1,17 +1,16 @@
-$NetBSD: patch-input_dvb.c,v 1.1 2011/07/10 16:52:25 jmcneill Exp $
+$NetBSD: patch-input_dvb.c,v 1.2 2012/03/21 16:37:15 drochner Exp $
 
---- src/input/input_dvb.c.orig	2010-07-24 22:09:09.000000000 +0000
+--- src/input/input_dvb.c.orig	2012-02-04 00:41:43.000000000 +0000
 +++ src/input/input_dvb.c
-@@ -97,9 +97,13 @@
- #endif
- #include <ctype.h>
+@@ -109,8 +109,12 @@
+ /* XDG */
+ #include <basedir.h>
  
 +#ifdef HAVE_DEV_DTV_DTVIO_H
 +#include <dev/dtv/dtvio.h>
 +#else
- /* These will eventually be #include <linux/dvb/...> */
- #include "dvb/dmx.h"
- #include "dvb/frontend.h"
+ #include <linux/dvb/dmx.h>
+ #include <linux/dvb/frontend.h>
 +#endif
  
  #define LOG_MODULE "input_dvb"

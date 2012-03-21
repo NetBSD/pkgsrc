@@ -1,13 +1,10 @@
-$NetBSD: patch-ap,v 1.11 2011/12/24 03:02:25 sbd Exp $
+$NetBSD: patch-ap,v 1.12 2012/03/21 16:37:15 drochner Exp $
 
---- src/dxr3/Makefile.am.orig	2011-10-04 21:42:53.000000000 +0000
+--- src/dxr3/Makefile.am.orig	2012-02-04 00:41:43.000000000 +0000
 +++ src/dxr3/Makefile.am
-@@ -45,7 +48,7 @@ xineplug_vo_out_dxr3_la_SOURCES = \
- 	dxr3_scr.c \
+@@ -49,4 +49,4 @@ xineplug_vo_out_dxr3_la_SOURCES = \
  	video_out_dxr3.c
  
--xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm
-+xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(DYNAMIC_LD_LIBS) -lm $(XINERAMA_LIBS)
- xineplug_vo_out_dxr3_la_CFLAGS = $(VISIBILITY_FLAG) $(AM_CFLAGS)
- xineplug_vo_out_dxr3_la_LDFLAGS = $(xineplug_ldflags)
- 
+ xineplug_vo_out_dxr3_la_CFLAGS = $(AM_CFLAGS) $(AVUTIL_CFLAGS) $(FFMPEG_CFLAGS)
+-xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(AVUTIL_LIBS) $(FFMPEG_LIBS) -lm
++xineplug_vo_out_dxr3_la_LIBADD = $(XINE_LIB) $(link_fame) $(link_rte) $(link_x_libs) $(LTLIBINTL) $(AVUTIL_LIBS) $(FFMPEG_LIBS) -lm $(XINERAMA_LIBS)
