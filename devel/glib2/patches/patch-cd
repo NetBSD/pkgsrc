@@ -1,12 +1,12 @@
-$NetBSD: patch-cd,v 1.5 2010/11/17 14:36:45 drochner Exp $
+$NetBSD: patch-cd,v 1.6 2012/03/21 12:18:33 drochner Exp $
 
 sysutils/gio-fam builds the gio/fam backend as a separate module.  Force it
 to link against the installed version of glib2, as it is not rebuilt by the
 package.
 
---- gio/fam/Makefile.in.orig	2010-11-14 06:01:55.000000000 +0000
+--- gio/fam/Makefile.in.orig	2012-03-11 23:56:05.000000000 +0000
 +++ gio/fam/Makefile.in
-@@ -76,10 +76,7 @@ am__base_list = \
+@@ -87,10 +87,7 @@ am__uninstall_files_from_dir = { \
  am__installdirs = "$(DESTDIR)$(giomoduledir)"
  LTLIBRARIES = $(giomodule_LTLIBRARIES)
  am__DEPENDENCIES_1 =
@@ -18,7 +18,7 @@ package.
  am__objects_1 =
  am_libgiofam_la_OBJECTS = libgiofam_la-fam-helper.lo \
  	libgiofam_la-fam-module.lo \
-@@ -384,9 +381,7 @@ libgiofam_la_CFLAGS = \
+@@ -402,9 +399,7 @@ libgiofam_la_CFLAGS = \
  
  libgiofam_la_LDFLAGS = $(module_flags)
  libgiofam_la_LIBADD = \
@@ -29,7 +29,7 @@ package.
  		$(GLIB_LIBS) \
  		$(FAM_LIBS) \
  		$(NULL)
-@@ -817,9 +812,6 @@ lcov-clean:
+@@ -842,9 +837,6 @@ lcov-clean:
  check-local: test-nonrecursive
  
  install-data-hook:
@@ -38,4 +38,4 @@ package.
 -	fi
  
  uninstall-local:
- 	$(RM) $(DESTDIR)$(GIO_MODULE_DIR)/giomodules.cache
+ 	$(RM) $(DESTDIR)$(GIO_MODULE_DIR)/giomodule.cache
