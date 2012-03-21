@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:38:03 obache Exp $
+
+SHA1 (suse121/libjpeg62-62.0.0-10.1.2.i586.rpm) = a2efa1bd5fdda2d032bb8de7592851565011d1b1
+RMD160 (suse121/libjpeg62-62.0.0-10.1.2.i586.rpm) = 2eb2fb894c3da4979c2953f6f041a5a45e10863f
+Size (suse121/libjpeg62-62.0.0-10.1.2.i586.rpm) = 94134 bytes
+SHA1 (suse121/libjpeg62-62.0.0-10.1.2.x86_64.rpm) = bc4e19102c445dbf025b6be52f189aaa450b6e3f
+RMD160 (suse121/libjpeg62-62.0.0-10.1.2.x86_64.rpm) = 03471e020f193c14802b4433d1eb01a59217a282
+Size (suse121/libjpeg62-62.0.0-10.1.2.x86_64.rpm) = 89575 bytes
+SHA1 (suse121/libjpeg8-8.0.2-8.1.2.i586.rpm) = 017c8991ab90ff4ed3b67b31c4a8089dfd7206fd
+RMD160 (suse121/libjpeg8-8.0.2-8.1.2.i586.rpm) = f7e6fb22cc554561df0cb337a48ad5ab929c042b
+Size (suse121/libjpeg8-8.0.2-8.1.2.i586.rpm) = 97311 bytes
+SHA1 (suse121/libjpeg8-8.0.2-8.1.2.x86_64.rpm) = 299a857bd491cc62a9e2605e169460f928dcef31
+RMD160 (suse121/libjpeg8-8.0.2-8.1.2.x86_64.rpm) = adf1106b74c2c6891a1d2a90e4dc5369488a0628
+Size (suse121/libjpeg8-8.0.2-8.1.2.x86_64.rpm) = 98431 bytes
