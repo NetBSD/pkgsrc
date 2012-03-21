@@ -1,11 +1,11 @@
-$NetBSD: patch-cj,v 1.6 2012/01/29 10:46:54 drochner Exp $
+$NetBSD: patch-cj,v 1.7 2012/03/21 12:18:33 drochner Exp $
 
 The mem-overflow test contains a declaration of an empty struct, which breaks
 on at least SunPro cc, and presumably some other non-gcc compilers.  Skip this
 test for now, pending a better fix.
 https://bugzilla.gnome.org/show_bug.cgi?id=641350
 
---- glib/tests/Makefile.in.orig	2011-10-14 13:31:09.000000000 +0000
+--- glib/tests/Makefile.in.orig	2012-03-11 23:36:24.000000000 +0000
 +++ glib/tests/Makefile.in
 @@ -69,7 +69,7 @@ am__EXEEXT_2 = testing$(EXEEXT) option-c
  	strfuncs$(EXEEXT) string$(EXEEXT) markup-parse$(EXEEXT) \
@@ -52,17 +52,17 @@ https://bugzilla.gnome.org/show_bug.cgi?id=641350
  	base64 sequence scannerapi shell collate utf8-pointer \
  	utf8-validate utf8-misc unicode checksum hmac hash cache date \
  	node convert list slist queue tree uri dir pattern logging \
-@@ -785,9 +783,6 @@ markup-parse$(EXEEXT): $(markup_parse_OB
- markup-subparser$(EXEEXT): $(markup_subparser_OBJECTS) $(markup_subparser_DEPENDENCIES) 
+@@ -786,9 +784,6 @@ markup-parse$(EXEEXT): $(markup_parse_OB
+ markup-subparser$(EXEEXT): $(markup_subparser_OBJECTS) $(markup_subparser_DEPENDENCIES) $(EXTRA_markup_subparser_DEPENDENCIES) 
  	@rm -f markup-subparser$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(markup_subparser_OBJECTS) $(markup_subparser_LDADD) $(LIBS)
--mem-overflow$(EXEEXT): $(mem_overflow_OBJECTS) $(mem_overflow_DEPENDENCIES) 
+-mem-overflow$(EXEEXT): $(mem_overflow_OBJECTS) $(mem_overflow_DEPENDENCIES) $(EXTRA_mem_overflow_DEPENDENCIES) 
 -	@rm -f mem-overflow$(EXEEXT)
 -	$(AM_V_CCLD)$(LINK) $(mem_overflow_OBJECTS) $(mem_overflow_LDADD) $(LIBS)
- node$(EXEEXT): $(node_OBJECTS) $(node_DEPENDENCIES) 
+ node$(EXEEXT): $(node_OBJECTS) $(node_DEPENDENCIES) $(EXTRA_node_DEPENDENCIES) 
  	@rm -f node$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(node_OBJECTS) $(node_LDADD) $(LIBS)
-@@ -907,7 +902,6 @@ distclean-compile:
+@@ -908,7 +903,6 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-escape.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-parse.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/markup-subparser.Po@am__quote@

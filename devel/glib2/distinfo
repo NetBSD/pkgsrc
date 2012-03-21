@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.163 2012/03/05 07:48:10 abs Exp $
+$NetBSD: distinfo,v 1.164 2012/03/21 12:18:33 drochner Exp $
 
-SHA1 (glib-2.30.2.tar.bz2) = 70208757905037fa1f8b89797db0097c5e82a140
-RMD160 (glib-2.30.2.tar.bz2) = efe0d8ae945dd3b20ca4835dcb45696fd0914c06
-Size (glib-2.30.2.tar.bz2) = 7782266 bytes
+SHA1 (glib-2.30.3.tar.xz) = ec97dd659862dca05d18093a6ea6c309dcff0cdd
+RMD160 (glib-2.30.3.tar.xz) = 0887b08e2fff75c325ed1fb1123baaf42dc9779b
+Size (glib-2.30.3.tar.xz) = 5642448 bytes
 SHA1 (glib-gio-kqueue-2.28.8-v3.patch) = d50bee14ce72201c3ec2b82d0e498c8828fbd8c2
 RMD160 (glib-gio-kqueue-2.28.8-v3.patch) = ba4859d4336db50bacb6bdaace995ee761306a85
 Size (glib-gio-kqueue-2.28.8-v3.patch) = 89920 bytes
@@ -22,20 +22,20 @@ SHA1 (patch-am) = 062d3d295f00485ac3c3839dd4697957ebc66772
 SHA1 (patch-an) = 9384dca0b98bde4e2d64dbca6584a3aefa0c352c
 SHA1 (patch-ap) = 38a805f95e8f7ca35c73984be9142336c6a3ec4c
 SHA1 (patch-aq) = aa7087b91c7d0eca9f9895feb6924df95eccb372
-SHA1 (patch-ar) = 27679e663399ffa1ca1ad95876084f05930bece3
+SHA1 (patch-ar) = 93bf22a9debef8deb97918adeeaee5830280038b
 SHA1 (patch-as) = 0d9b461d5bf6d267b50eac892d8ad8a82f90be18
 SHA1 (patch-at) = f4c4a2fbe84eb8b361fb342f3c3b0b5a226d1794
 SHA1 (patch-ba) = 832c85a53565d323100da91ad514afd4960b38ca
 SHA1 (patch-cb) = 0f084c33fb67fbb8e12448034450699da26289ff
 SHA1 (patch-cc) = dd73079b727bca9013465204dc3b53b76a280e54
-SHA1 (patch-cd) = d1c6fa921be58469adb6b860f4e91f0a7eff067e
+SHA1 (patch-cd) = 9006b880e94ae4a4fc564c1978178a296dd63024
 SHA1 (patch-ce) = 5da41dc0807b0594d895af9ec4c285537065f572
 SHA1 (patch-cf) = 41ed2146e19cf088456795d4f0e8dc4af4368e44
 SHA1 (patch-cg) = f65c5a23102d3dee12bee68bd126385b3c3fe632
 SHA1 (patch-ch) = df8444835b9954f902936c8b6fab5b44ac350db0
 SHA1 (patch-ci) = f0191fd416222617a2e95e95a05c3dcf6b6ce2d2
-SHA1 (patch-cj) = baaa3d2ef2b58d17b81fd8341a28f99b850648a8
+SHA1 (patch-cj) = 041eb127b4454f37be664cb885d84f9342f9680d
 SHA1 (patch-ck) = 324116cc6fb8dbce8ce8d20f5b237fc469a55cd2
-SHA1 (patch-cl) = 5d4fd59b55bfc2f08fa4d4f67a3cc9323872c746
-SHA1 (patch-cm) = 8ddac97b3476c992abea3e5d9383cd3a5c9008f3
+SHA1 (patch-cl) = 42eb60fc66b881368f6f5f71d1fc5869f82db1b1
+SHA1 (patch-cm) = 7f14ab327d021537714f876fbfbd4b0350d98a6e
 SHA1 (patch-cn) = b930dc95d44eacc9448f2a3a799a95db2880bfd4
