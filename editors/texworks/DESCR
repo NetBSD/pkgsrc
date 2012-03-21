@@ -1,0 +1,20 @@
+The TeXworks project is an effort to build a simple TeX front-end program
+(working environment) that will be available for all todays major desktop
+operating systems-in particular, MS Windows (XP/Vista/7), typical GNU/Linux
+distros and other X11-based systems, as well as Mac OS X. It is deliberately
+modeled on Dick Koch?s award-winning TeXShop for Mac OS X, which is credited
+with a resurgence of TeX usage on the Mac platform.
+
+To provide a similar experience across all systems, TeXworks is based on
+cross-platform, open source tools and libraries. The Qt toolkit was chosen
+for the quality of its cross-platform user interface capabilities, with
+native "look and feel" on each platform being a realistic target. Qt also
+provides a rich application framework, facilitating the relatively rapid
+development of a usable product.
+
+The normal TeXworks workflow is PDF-centric, using pdfTeX and XeTeX as
+typesetting engines and generating PDF documents as the default formatted
+output. Although it is possible to configure a processing path based on DVI,
+newcomers to the TeX world need not be concerned with DVI at all, but can
+generally treat TeX as a system that goes directly from marked-up text files
+to ready-to-use PDF documents.
