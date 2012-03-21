@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/15 09:02:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/21 10:37:54 ryoon Exp $
 
 .include "../../devel/xulrunner10/dist.mk"
 PKGNAME=	firefox10-${FIREFOX_VER}
@@ -50,7 +50,7 @@ post-install:
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${MOZILLA_ICON}					\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
-	rm -f ${DESTDIR}${PREFIX}/bin/firefox
+	rm -f ${DESTDIR}${PREFIX}/bin/firefox10
 	${INSTALL_SCRIPT} ${WRKDIR}/${MOZILLA} ${DESTDIR}${PREFIX}/bin
 
 BUILDLINK_API_DEPENDS.xulrunner10+=	xulrunner10>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
