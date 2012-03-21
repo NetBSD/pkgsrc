@@ -1,0 +1,20 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2012/03/21 13:37:08 obache Exp $
+#
+# Initialize gtk/pango module configuration.
+#
+case ${STAGE} in
+POST-INSTALL)
+	GNOME_BINDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/bin"
+	GNOME_LIBDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/lib@ABISUFFIX@"
+	GNOME_ETCDIR="${PKG_PREFIX}/@EMULSUBDIR@/etc"
+	SUSECONFIG="${PKG_PREFIX}/@EMULSUBDIR@/sbin/SuSEconfig"
+
+	${ECHO} "${PKGNAME}: initializing GTK/Pango module configuration"
+	${GNOME_BINDIR}/gtk-query-immodules-2.0@BINSUFFIX@ > ${GNOME_ETCDIR}/gtk-2.0/gtk@ABISUFFIX@.immodules
+	${GNOME_BINDIR}/gdk-pixbuf-query-loaders@BINSUFFIX@ > ${GNOME_LIBDIR}/gdk-pixbuf-2.0/2.10.0/loaders.cache
+	${GNOME_BINDIR}/pango-querymodules@BINSUFFIX@ > ${GNOME_ETCDIR}/pango/pango@ABISUFFIX@.modules
+	${MKDIR} -p ${PKG_PREFIX}/@EMULSUBDIR@/var/lock
+	PATH=${PKG_PREFIX}/@EMULSUBDIR@/bin ROOT=${PKG_PREFIX}/@EMULSUBDIR@ bash ${SUSECONFIG} --module glib2
+	${LN} -s /../var/db/dbus/machine-id ${PKG_PREFIX}/@EMULSUBDIR@/var/lib/dbus/machine-id
+	;;
+esac
