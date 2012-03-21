@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/08/19 20:32:12 bjs Exp $
+$NetBSD: patch-ac,v 1.2 2012/03/21 10:07:36 wiz Exp $
 
 Remove *_DISABLE_DEPRECATED--how will the package know what is
 deprecated and what isn't in the future?
 
 Use LDADD as appropriate for libtool.
 
---- src/Makefile.in.orig	2007-11-26 17:24:06.000000000 -0500
+--- src/Makefile.in.orig	2007-11-26 22:24:06.000000000 +0000
 +++ src/Makefile.in
 @@ -261,14 +261,9 @@ jack_rack_CFLAGS = \
  	$(XML_CFLAGS) \
