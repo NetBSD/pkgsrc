@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.935 2012/03/21 14:36:57 obache Exp $
+$NetBSD: CHANGES-2012,v 1.936 2012/03/21 15:45:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1557,3 +1557,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/py-blockdiag to 1.1.4 [obache 2012-03-21]
 	Updated graphics/py-seqdiag to 0.7.3 [obache 2012-03-21]
 	Updated graphics/py-actdiag to 0.3.2 [obache 2012-03-21]
+	Updated devel/hoe to 3.0.0 [taca 2012-03-21]
+	Updated graphics/ruby-gnuplot to 2.4.1 [taca 2012-03-21]
+	Updated mail/ruby-mime-types to 1.18 [taca 2012-03-21]
+	Updated misc/ruby-bundler to 1.1.2 [taca 2012-03-21]
+	Updated sysutils/ruby-facter to 1.6.6 [taca 2012-03-21]
