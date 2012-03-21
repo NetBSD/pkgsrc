@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/21 13:35:50 obache Exp $
+sbin/${LINUX_BASE}-mkpwd
+${EMULSUBDIRSLASH}etc/SuSE-release
+@pkgdir emul/${LINUX_BASE}/dev/shm

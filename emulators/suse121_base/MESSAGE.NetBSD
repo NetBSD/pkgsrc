@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2012/03/21 13:35:50 obache Exp $
+
+Do not forget to include COMPAT_LINUX in your kernel configuration file.
+Linux binaries require this option in order to work.
+
+Most Linux binaries also require procfs to be mounted with -o linux.
+This can be automated by adding the following to your /etc/fstab:
+
+procfs /${EMULSUBDIR}/proc procfs ro,linux
+
+Some Linux binaries also require tmpfs to be mounted on /dev/shm.
+This can be automated by adding the following to your /etc/fstab:
+
+tmpfs /${EMULSUBDIR}/dev/shm tmpfs rw,-m1777
+
+===========================================================================
