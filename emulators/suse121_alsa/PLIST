@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/21 13:35:24 obache Exp $
+${EMULSUBDIRSLASH}etc/asound.conf
