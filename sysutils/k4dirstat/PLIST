@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/21 23:21:20 markd Exp $
+bin/k4dirstat
+share/applications/kde4/k4dirstat.desktop
+share/doc/kde/HTML/en/k4dirstat/common
+share/doc/kde/HTML/en/k4dirstat/feedback-mail.png
+share/doc/kde/HTML/en/k4dirstat/index.cache.bz2
+share/doc/kde/HTML/en/k4dirstat/index.docbook
+share/doc/kde/HTML/en/k4dirstat/kdirstat-config-cleanups.png
+share/doc/kde/HTML/en/k4dirstat/kdirstat-config-tree-colors.png
+share/doc/kde/HTML/en/k4dirstat/kdirstat-main.png
+share/icons/hicolor/16x16/apps/k4dirstat.png
+share/icons/hicolor/32x32/apps/k4dirstat.png
+share/icons/hicolor/48x48/apps/k4dirstat.png
+share/kde/apps/k4dirstat/k4dirstatui.rc
+share/kde/config.kcfg/k4dirstat.kcfg
+share/locale/de/LC_MESSAGES/k4dirstat.mo
+share/locale/fr/LC_MESSAGES/k4dirstat.mo
+share/locale/hu/LC_MESSAGES/k4dirstat.mo
+share/locale/it/LC_MESSAGES/k4dirstat.mo
+share/locale/ja/LC_MESSAGES/k4dirstat.mo
