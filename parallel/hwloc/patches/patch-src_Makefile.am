@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.am,v 1.1.1.1 2012/03/21 13:31:35 asau Exp $
+
+--- src/Makefile.am.orig	2012-01-26 09:49:56.000000000 +0000
++++ src/Makefile.am
+@@ -71,6 +71,11 @@ if HWLOC_HAVE_DARWIN
+ sources += topology-darwin.c
+ endif HWLOC_HAVE_DARWIN
+ 
++if HWLOC_HAVE_NETBSD
++sources += topology-netbsd.c
++ldflags += -lpthread
++endif HWLOC_HAVE_NETBSD
++
+ if HWLOC_HAVE_FREEBSD
+ sources += topology-freebsd.c
+ endif HWLOC_HAVE_FREEBSD
