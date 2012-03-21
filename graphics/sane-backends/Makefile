@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2012/02/06 12:40:35 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2012/03/21 18:16:41 hans Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKGREVISION=	2
@@ -26,9 +26,7 @@ CONFIGURE_ARGS+=	--without-snmp
 
 PLIST_VARS+=		mustek pint sm3600
 
-.if (${OPSYS} == "SunOS")
-# nothing
-.elif (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly")
+.if (${OPSYS} == "SunOS") || (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly")
 PLIST.sm3600=		yes
 .elif (${OPSYS} == "Darwin")
 PLIST.mustek=		yes
