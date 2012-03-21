@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/07/13 19:47:38 adam Exp $
+# $NetBSD: Makefile,v 1.13 2012/03/21 18:20:52 hans Exp $
 
 DISTNAME=	glew-1.6.0
 CATEGORIES=	graphics
@@ -25,6 +25,11 @@ post-patch:
 	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.netbsd
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" && !empty(CC:M*gcc*)
+MAKE_ENV+=	SYSTEM=solaris-gcc
+.endif
+
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
