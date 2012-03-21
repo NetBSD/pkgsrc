@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/19 09:12:26 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/21 07:39:44 wiz Exp $
 #
 
 DISTNAME=	raptor2-2.0.6
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+
+CONFLICTS=	raptor-[0-9]*
 
 PKGCONFIG_OVERRIDE+=	raptor2.pc.in
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
