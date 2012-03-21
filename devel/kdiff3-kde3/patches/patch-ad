@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/03/21 23:04:01 markd Exp $
+
+Fix build with gcc4.3
+
+--- src/fileaccess.cpp.orig	2006-10-28 20:02:05.000000000 +0000
++++ src/fileaccess.cpp
+@@ -10,6 +10,7 @@
+ 
+ #include "fileaccess.h"
+ #include <iostream>
++#include <cstdlib>
+ #include <kio/global.h>
+ #include <kmessagebox.h>
+ #include "optiondialog.h"
