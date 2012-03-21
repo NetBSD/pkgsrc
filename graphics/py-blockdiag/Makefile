@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/01/18 10:40:39 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/21 14:25:33 obache Exp $
 #
 
-DISTNAME=	blockdiag-1.1.2
+DISTNAME=	blockdiag-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://pypi.python.org/packages/source/b/blockdiag/
