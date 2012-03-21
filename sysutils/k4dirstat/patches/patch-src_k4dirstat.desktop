@@ -1,0 +1,9 @@
+$NetBSD: patch-src_k4dirstat.desktop,v 1.1.1.1 2012/03/21 23:21:20 markd Exp $
+
+--- src/k4dirstat.desktop.orig	2011-02-21 08:37:05.000000000 +0000
++++ src/k4dirstat.desktop
+@@ -12,3 +12,4 @@ Comment[de]=Verzeichnisstatistik und Pla
+ Comment[hu]=Könyvtárstatisztikák és szabad hely
+ Terminal=false
+ MimeType=inode/directory;
++Categories=Qt;KDE;Utility;

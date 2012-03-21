@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 23:21:20 markd Exp $
+
+SHA1 (k4dirstat-2.7.3.tar.bz2) = 55d2129a69710ff43fcf35f976aac4d24dd3ca15
+RMD160 (k4dirstat-2.7.3.tar.bz2) = 6cca23350e4c624cd3f274f658c34fe7916042a7
+Size (k4dirstat-2.7.3.tar.bz2) = 224451 bytes
+SHA1 (patch-aa) = 421bc97bcf09881145f52f096f640ae0de796555
+SHA1 (patch-src_k4dirstat.desktop) = 77938db387235ed07c20c4ba1a24906b6f16be29
