@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/21 23:21:20 markd Exp $
+
+--- src/kdirreadjob.cpp.orig	2010-05-31 10:55:01.000000000 +0000
++++ src/kdirreadjob.cpp
+@@ -18,7 +18,7 @@
+ #include <unistd.h>
+ 
+ #include <stdio.h>
+-#include <sys/errno.h>
++#include <errno.h>
+ #include <klocale.h>
+ #include <kapplication.h>
+ #include <kio/job.h>
