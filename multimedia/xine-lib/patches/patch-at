@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.7 2012/03/21 16:37:15 drochner Exp $
+
+--- src/xine-utils/memcpy.c.orig	2012-02-05 15:31:10.000000000 +0000
++++ src/xine-utils/memcpy.c
+@@ -414,7 +414,7 @@ static uint64_t memcpy_timing[sizeof(mem
+ static int64_t _x_gettime(void)
+ {
+   struct timespec tm;
+-  return (clock_gettime (CLOCK_THREAD_CPUTIME_ID, &tm) == -1)
++  return (clock_gettime (CLOCK_MONOTONIC, &tm) == -1)
+        ? times (NULL)
+        : (int64_t)tm.tv_sec * 1e9 + tm.tv_nsec;
+ }
