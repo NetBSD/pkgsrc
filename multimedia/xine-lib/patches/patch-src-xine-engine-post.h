@@ -1,7 +1,7 @@
-$NetBSD: patch-src-xine-engine-post.h,v 1.1 2011/09/04 14:34:52 joerg Exp $
+$NetBSD: patch-src-xine-engine-post.h,v 1.2 2012/03/21 16:37:15 drochner Exp $
 
---- src/xine-engine/post.h.orig	2010-03-09 22:17:05.000000000 +0000
-+++ src/xine-engine/post.h
+--- include/xine/post.h.orig	2010-03-09 22:17:05.000000000 +0000
++++ include/xine/post.h
 @@ -370,14 +370,15 @@ do {                                    
  
  
