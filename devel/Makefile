@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1581 2012/03/20 10:14:40 markd Exp $
+# $NetBSD: Makefile,v 1.1582 2012/03/21 23:11:46 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -297,6 +297,7 @@ SUBDIR+=	kdevelop-base
 SUBDIR+=	kdevelop4
 SUBDIR+=	kdevplatform
 SUBDIR+=	kdiff3
+SUBDIR+=	kdiff3-kde3
 SUBDIR+=	ko-po-check
 SUBDIR+=	kscope
 SUBDIR+=	kyua-cli
