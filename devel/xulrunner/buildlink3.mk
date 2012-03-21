@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2012/03/15 08:30:06 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2012/03/21 10:40:25 drochner Exp $
 
 BUILDLINK_TREE+=	xulrunner
 
@@ -22,6 +22,7 @@ pkgbase := xulrunner
 . include "../../devel/libgnomeui/buildlink3.mk"
 . include "../../sysutils/gnome-vfs/buildlink3.mk"
 .endif
+.include "../../devel/nspr/buildlink3.mk"
 .endif # XULRUNNER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-xulrunner
