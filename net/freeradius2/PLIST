@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/01/08 09:54:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/03/21 16:48:17 brook Exp $
 bin/radclient
 bin/radconf2xml
 bin/radcrypt
@@ -399,6 +399,7 @@ share/examples/freeradius/sites-available/robust-proxy-accounting
 share/examples/freeradius/sites-available/status
 share/examples/freeradius/sites-available/virtual.example.com
 share/examples/freeradius/sites-available/vmps
+@pkgdir share/examples/freeradius/sites-enabled
 share/examples/freeradius/sql.conf
 share/examples/freeradius/sql/mssql/dialup.conf
 share/examples/freeradius/sql/mssql/schema.sql

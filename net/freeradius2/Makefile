@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/03/12 21:54:13 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/21 16:48:17 brook Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -120,7 +120,7 @@ EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
 	sql/postgresql/update_radacct_group_trigger.sql \
 	sql/postgresql/voip-postpaid.conf sqlippool.conf templates.conf users
 EGDIRS=	certs certs/demoCA modules sql sql/mssql sql/mysql sql/oracle \
-	sql/postgresql sites-available
+	sql/postgresql sites-available sites-enabled
 
 .for f in ${EGFILES}
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
