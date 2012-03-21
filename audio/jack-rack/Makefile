@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/03/03 00:12:40 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/21 10:07:36 wiz Exp $
 #
 
 DISTNAME=	jack-rack-1.4.7
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jack-rack/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,13 +10,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jack-rack.sourceforge.net/
 COMMENT=	Effects "rack" for JACK
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		autoconf gmake msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--disable-aseq
 CONFIGURE_ARGS+=	--disable-lash
@@ -38,6 +39,9 @@ LADSPA_PLUGIN_PATH?=		${PREFIX}/lib/ladspa
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.glib2}/include/glib
 CPPFLAGS+=	-DLADSPA_PATH="\"${LADSPA_PLUGIN_PATH}\""
 
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/ecarack ${DESTDIR}${EGDIR}/ecarack.py
@@ -47,8 +51,8 @@ post-install:
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/liblrdf/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
