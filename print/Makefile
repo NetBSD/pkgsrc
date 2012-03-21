@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.526 2012/03/20 06:24:07 markd Exp $
+# $NetBSD: Makefile,v 1.527 2012/03/21 17:42:48 drochner Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -36,6 +36,7 @@ SUBDIR+=	epdfview
 SUBDIR+=	epstool
 SUBDIR+=	evince
 SUBDIR+=	evince-nautilus
+SUBDIR+=	evince3
 SUBDIR+=	flpsed
 SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-filters-cups
@@ -69,6 +70,7 @@ SUBDIR+=	lgrind
 SUBDIR+=	libgnomecups
 SUBDIR+=	libgnomeprint
 SUBDIR+=	libgnomeprintui
+SUBDIR+=	libgxps
 SUBDIR+=	libpaper
 SUBDIR+=	libspectre
 SUBDIR+=	lilypond
