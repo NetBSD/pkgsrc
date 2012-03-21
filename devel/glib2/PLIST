@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2012/01/29 17:43:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.65 2012/03/21 12:18:33 drochner Exp $
 bin/gdbus
 bin/gio-querymodules
 bin/glib-compile-schemas
@@ -255,8 +255,8 @@ man/man1/gtester.1
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load/libglib-2.0.so.0.3000.2-gdb.py
-share/gdb/auto-load/libgobject-2.0.so.0.3000.2-gdb.py
+share/gdb/auto-load/libglib-2.0.so.0.3000.3-gdb.py
+share/gdb/auto-load/libgobject-2.0.so.0.3000.3-gdb.py
 share/glib-2.0/gdb/glib.py
 share/glib-2.0/gdb/gobject.py
 share/glib-2.0/gettext/mkinstalldirs
@@ -428,6 +428,8 @@ share/gtk-doc/html/gio/gio-GDBusError.html
 share/gtk-doc/html/gio/gio-GFileAttribute.html
 share/gtk-doc/html/gio/gio-GIOError.html
 share/gtk-doc/html/gio/gio-GIOScheduler.html
+share/gtk-doc/html/gio/gio-GWin32InputStream.html
+share/gtk-doc/html/gio/gio-GWin32OutputStream.html
 share/gtk-doc/html/gio/gio-Owning-Bus-Names.html
 share/gtk-doc/html/gio/gio-TLS-Overview.html
 share/gtk-doc/html/gio/gio-Unix-Mounts.html
