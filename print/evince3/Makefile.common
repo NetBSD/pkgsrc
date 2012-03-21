@@ -1,0 +1,43 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2012/03/21 17:40:20 drochner Exp $
+#
+# used by print/evince/Makefile
+# used by print/evince-nautilus/Makefile
+
+DISTNAME=		evince-3.2.1
+CATEGORIES=		print
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/3.2/}
+EXTRACT_SUFX=		.tar.xz
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.gnome.org/projects/evince/
+LICENSE=		gnu-gpl-v2
+
+PATCHDIR=		${.CURDIR}/../evince3/patches
+DISTINFO_FILE=		${.CURDIR}/../evince3/distinfo
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_LANGUAGES=		c c++
+
+# XXX fake for "configure" to allow build w/o a gs installed
+# (avoid hard dependency on a specific version)
+CONFIGURE_ARGS+=	--with-gs=${LOCALBASE}/bin/gs
+pre-configure:
+	${ECHO} "echo 8.51" >${BUILDLINK_DIR}/bin/gs
+	${CHMOD} +x ${BUILDLINK_DIR}/bin/gs
+
+.include "../../databases/shared-mime-info/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.15.6
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.17.1
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/libspectre/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.12.0
+.include "../../print/poppler-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
