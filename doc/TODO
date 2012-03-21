@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10964 2012/03/21 13:56:59 obache Exp $
+$NetBSD: TODO,v 1.10965 2012/03/21 18:52:09 drochner Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.5.9
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -428,7 +427,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bitlbee-3.0.5
 	o bitmap-1.0.6
 	o blender-2.62
-	o bluefish-2.2.2
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bomberclone-0.11.9
@@ -555,7 +553,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
-	o eric4-4.5.1
 	o eric5-5.2.0
 	o erlang-15b
 	o esh-0.8.5
@@ -581,7 +578,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.31
 	o fbreader-0.12.10
 	o fcitx-3.6.2
-	o feh-2.4
 	o felt-3.07
 	o fetchyahoo-2.14.0
 	o ffmpeg-20120112.0.8.10
@@ -683,7 +679,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
 	o gle-4.2.4
-	o glib2-2.30.3
 	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
@@ -775,7 +770,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
-	o htop-1.0
 	o httptunnel-3.3
 	o hugin-2011.4.0
 	o hylafax-6.0.5
