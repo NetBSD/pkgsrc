@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:36:48 obache Exp $
+
+SHA1 (suse121/Mesa-7.11-11.1.2.i586.rpm) = 90cc66c14d3a2456f33afb98deb1993c638feb54
+RMD160 (suse121/Mesa-7.11-11.1.2.i586.rpm) = 41ba14436632183920d33ca3dfd9d8052ed2425e
+Size (suse121/Mesa-7.11-11.1.2.i586.rpm) = 15425294 bytes
+SHA1 (suse121/Mesa-7.11-11.1.2.x86_64.rpm) = eb06df66ebb802b1438c0c30585f04f866c41ed6
+RMD160 (suse121/Mesa-7.11-11.1.2.x86_64.rpm) = 1fa54d8b7c70e5e944fa6ac35e69823685889ed2
+Size (suse121/Mesa-7.11-11.1.2.x86_64.rpm) = 14937940 bytes
