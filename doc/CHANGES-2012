@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.929 2012/03/20 21:02:09 adam Exp $
+$NetBSD: CHANGES-2012,v 1.930 2012/03/21 10:04:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1503,3 +1503,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/sqlite3 to 3.7.11 [adam 2012-03-20]
 	Updated databases/sqlite3-docs to 3.7.11 [adam 2012-03-20]
 	Updated databases/sqlite3-tcl to 3.7.11 [adam 2012-03-20]
+	Updated textproc/liblrdf to 0.5.0 [wiz 2012-03-21]
