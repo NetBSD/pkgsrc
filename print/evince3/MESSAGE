@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/03/21 17:40:20 drochner Exp $
+
+Per the way the print/poppler package behaves, to change the default paper
+size to US Letter make sure that
+
+	LC_MESSAGES=en_US.UTF-8
+
+is in your environment.
+===========================================================================
