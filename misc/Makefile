@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2012/03/20 09:01:25 markd Exp $
+# $NetBSD: Makefile,v 1.377 2012/03/21 20:50:16 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -159,6 +159,8 @@ SUBDIR+=	less
 SUBDIR+=	libcarddav
 SUBDIR+=	libcdio
 SUBDIR+=	libkdeedu
+SUBDIR+=	libkgeomap
+SUBDIR+=	libkvkontakte
 SUBDIR+=	libquantum
 SUBDIR+=	libreoffice3-bin
 SUBDIR+=	libutf
