@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2012/02/18 06:28:46 taca Exp $
+# $NetBSD: Makefile.common,v 1.27 2012/03/21 15:40:12 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -88,4 +88,10 @@ do-patch:
 CONFIGURE_ARGS+=	--disable-pthread
 .else
 CONFIGURE_ARGS+=	--enable-pthread
+
+PTHREAD_OPTS+=		native
+PTHREAD_AUTO_VARS=	yes
+
+.include "../../mk/pthread.buildlink3.mk"
 .endif
+.include "../../mk/dlopen.buildlink3.mk"
