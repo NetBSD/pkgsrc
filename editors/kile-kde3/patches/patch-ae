@@ -1,0 +1,43 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/03/21 22:55:07 markd Exp $
+
+fix build with gcc4.5
+
+--- src/kile/codecompletion.cpp.orig	2008-04-13 17:40:47.000000000 +0000
++++ src/kile/codecompletion.cpp
+@@ -38,12 +38,12 @@
+ namespace KileDocument
+ {
+ 
+-	static QRegExp::QRegExp reRef;
+-	static QRegExp::QRegExp reRefExt;
+-	static QRegExp::QRegExp reCite;
+-	static QRegExp::QRegExp reCiteExt;
+-	static QRegExp::QRegExp reNotRefChars("[^a-zA-Z0-9_@\\.\\+\\-\\*\\:]");
+-	static QRegExp::QRegExp reNotCiteChars("[^a-zA-Z0-9_@\\-\\:]");
++	static QRegExp reRef;
++	static QRegExp reRefExt;
++	static QRegExp reCite;
++	static QRegExp reCiteExt;
++	static QRegExp reNotRefChars("[^a-zA-Z0-9_@\\.\\+\\-\\*\\:]");
++	static QRegExp reNotCiteChars("[^a-zA-Z0-9_@\\-\\:]");
+ 
+ 	CodeCompletion::CodeCompletion(KileInfo *info) : m_ki(info), m_view(0L)
+ 	{
+@@ -532,7 +532,7 @@ namespace KileDocument
+ 
+ 	QString CodeCompletion::filterCompletionText( const QString &text, const QString &type )
+ 	{
+-		static QRegExp::QRegExp reEnv = QRegExp("^\\\\(begin|end)[^a-zA-Z]+");
++		static QRegExp reEnv = QRegExp("^\\\\(begin|end)[^a-zA-Z]+");
+ 		KILE_DEBUG() << "   complete filter: " << text << " type " << type << endl;
+ 		m_type = getType( text );    // remember current type
+ 
+@@ -631,7 +631,7 @@ namespace KileDocument
+ 	QString CodeCompletion::buildEnvironmentText( const QString &text, const QString &type,
+ 	                                              const QString &prefix, uint &ypos, uint &xpos )
+ 	{
+-		static QRegExp::QRegExp reEnv = QRegExp("^\\\\(begin|end)\\{([^\\}]*)\\}(.*)");
++		static QRegExp reEnv = QRegExp("^\\\\(begin|end)\\{([^\\}]*)\\}(.*)");
+ 
+ 		if (reEnv.search(text) == -1) return text;
+ 

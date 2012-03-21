@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/21 22:55:07 markd Exp $
+
+--- src/kile/syntax/Makefile.in.orig	2005-05-21 23:19:32.000000000 +1200
++++ src/kile/syntax/Makefile.in
+@@ -312,7 +312,7 @@ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+ syntaxdir = $(kde_datadir)/katepart/syntax
+-syntax_DATA = latex.xml bibtex.xml
++syntax_DATA = 
+ #>- all: all-am
+ #>+ 1
+ all: docs-am  all-am
