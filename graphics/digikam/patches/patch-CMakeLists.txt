@@ -1,0 +1,49 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2012/03/21 21:14:47 markd Exp $
+
+Don't do extras -- they are separate packages
+
+--- CMakeLists.txt.orig	2012-01-03 00:42:09.000000000 +0000
++++ CMakeLists.txt
+@@ -65,15 +65,15 @@ IF(${DIGIKAMSC_USE_PRIVATE_KDEGRAPHICS})
+         )
+ ENDIF()
+ 
+-# prepend our own FindXXX modules to CMAKE_MODULE_PATH
+-SET(CMAKE_MODULE_PATH
+-        ${CMAKE_SOURCE_DIR}/extra/libkgeomap/cmake/modules
+-        ${CMAKE_SOURCE_DIR}/extra/libmediawiki/cmake/modules
+-        ${CMAKE_SOURCE_DIR}/extra/libkface/cmake/modules
+-        ${CMAKE_SOURCE_DIR}/extra/libkvkontakte/cmake/modules
+-        ${CMAKE_SOURCE_DIR}/cmake/modules
+-        ${CMAKE_MODULE_PATH}
+-    )
++## prepend our own FindXXX modules to CMAKE_MODULE_PATH
++#SET(CMAKE_MODULE_PATH
++#        ${CMAKE_SOURCE_DIR}/extra/libkgeomap/cmake/modules
++#        ${CMAKE_SOURCE_DIR}/extra/libmediawiki/cmake/modules
++#        ${CMAKE_SOURCE_DIR}/extra/libkface/cmake/modules
++#        ${CMAKE_SOURCE_DIR}/extra/libkvkontakte/cmake/modules
++#        ${CMAKE_SOURCE_DIR}/cmake/modules
++#        ${CMAKE_MODULE_PATH}
++#    )
+ 
+ IF(${DIGIKAMSC_USE_PRIVATE_KDEGRAPHICS})
+     SET(KIPI_LOCAL_DIR extra/libkipi)
+@@ -82,12 +82,12 @@ IF(${DIGIKAMSC_USE_PRIVATE_KDEGRAPHICS})
+     SET(KSANE_LOCAL_DIR extra/libksane)
+ ENDIF()
+ 
+-SET(KFACE_LOCAL_DIR extra/libkface)
+-SET(KGEOMAP_LOCAL_DIR extra/libkgeomap)
+-SET(MEDIAWIKI_LOCAL_DIR extra/libmediawiki)
+-SET(LIBKVKONTAKTE_LOCAL_DIR extra/libkvkontakte)
++#SET(KFACE_LOCAL_DIR extra/libkface)
++#SET(KGEOMAP_LOCAL_DIR extra/libkgeomap)
++#SET(MEDIAWIKI_LOCAL_DIR extra/libmediawiki)
++#SET(LIBKVKONTAKTE_LOCAL_DIR extra/libkvkontakte)
+ 
+-ADD_SUBDIRECTORY(extra)
++#ADD_SUBDIRECTORY(extra)
+ ADD_SUBDIRECTORY(core)
+ MACRO_OPTIONAL_ADD_SUBDIRECTORY(doc)
+ 
