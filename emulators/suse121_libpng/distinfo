@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:38:22 obache Exp $
+
+SHA1 (suse121/libpng12-0-1.2.47-9.3.1.i586.rpm) = 48c75e9e8c554519eebbc1456cbc329f1d9e98a1
+RMD160 (suse121/libpng12-0-1.2.47-9.3.1.i586.rpm) = bb00caf5cf096b9a9325da6584ef9c18077cf203
+Size (suse121/libpng12-0-1.2.47-9.3.1.i586.rpm) = 74700 bytes
+SHA1 (suse121/libpng12-0-1.2.47-9.3.1.x86_64.rpm) = 0857141073eb04b7435617a489fd4cde0bec2d46
+RMD160 (suse121/libpng12-0-1.2.47-9.3.1.x86_64.rpm) = c105ff7168885c42f496501d8792ce19358b1f47
+Size (suse121/libpng12-0-1.2.47-9.3.1.x86_64.rpm) = 74085 bytes
+SHA1 (suse121/libpng14-14-1.4.9-3.3.1.i586.rpm) = 9c2e7f3f6fcc19c68387f5974f2d0f30ab6bfa9d
+RMD160 (suse121/libpng14-14-1.4.9-3.3.1.i586.rpm) = 4c914e7bfddd4caf9f174907077609786e97db28
+Size (suse121/libpng14-14-1.4.9-3.3.1.i586.rpm) = 76176 bytes
+SHA1 (suse121/libpng14-14-1.4.9-3.3.1.x86_64.rpm) = a20270f12f8e057bf99f27fa3bbf428954f85cf6
+RMD160 (suse121/libpng14-14-1.4.9-3.3.1.x86_64.rpm) = e9a12be68ae9293f0348aa41d82d3a367b2c4378
+Size (suse121/libpng14-14-1.4.9-3.3.1.x86_64.rpm) = 74912 bytes
