@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10963 2012/03/20 17:10:56 asau Exp $
+$NetBSD: TODO,v 1.10964 2012/03/21 13:56:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -1257,7 +1257,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subversion-1.7.4
 	o sudo-1.8.4p4
 	o supertuxkart-0.7.3
-	o suse-12.1
 	o swfdec-gnome-2.30.1
 	o sympa-6.1.6
 	o sysinfo-4.2.2
