@@ -1,10 +1,20 @@
-$NetBSD: patch-aa,v 1.3 2011/01/25 09:07:58 obache Exp $
+$NetBSD: patch-aa,v 1.4 2012/03/21 18:24:00 hans Exp $
 
+* use gcc flags on SunOS
 * for PKGSRC layout
 * treat *BSDs same as FreeBSD.
 
 --- Makefile.orig	2006-11-07 00:26:58.000000000 +0000
 +++ Makefile
+@@ -69,7 +69,7 @@ CFLAGS = -I./common/ -DPIC
+ CFLAGS_GCC =	-O2 -Wall -Werror -Wno-format-y2k			\
+ 		-Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch	\
+ 		-Wshadow -Wchar-subscripts -Winline -Wnested-externs -fPIC
+-CFLAGS_SUN = -KPIC -xO2 -D_SUN_PAM_ -D_HAVE_USERDEFS_H_
++CFLAGS_SUN = -fPIC -O2 -D_SUN_PAM_ -D_HAVE_USERDEFS_H_
+ CFLAGS_HP = -Ae +w1 +W 474,486,542 +z +O2
+ CFLAGS_BSD = -D_HAVE_PATHS_H_ -D_HAVE_ERR_H_ -D_HAVE_GETPROGNAME_ -D_USE_MODULE_ENTRY_ -D_HAVE_SALEN_
+ CFLAGS_GNU =	-D_GNU_SOURCE -D_HAVE_PATHS_H_ -D_HAVE_ERR_H_ -D_HAVE_FLOCK_ \
 @@ -102,16 +102,16 @@ DISTTOOLMAN = pam_af_tool.8
  LIBMAN = $(LIBDIR)/$(DISTLIBMAN)
  TOOLMAN = $(TOOLDIR)/$(DISTTOOLMAN)
