@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+--- source/daemons/shepherd/Makefile.orig	2008-10-31 02:54:16.000000000 +1300
++++ source/daemons/shepherd/Makefile
+@@ -62,7 +62,7 @@ SHEPHERD_OBJS = $(SHEPHERD_SRC:.c=.o) sg
+ 
+ SHEPHERD_ADD_OBJS = $(SHEPHERD_ADD_SRC:.c=.o) 
+ 
+-SHEPHERD_ADD_LIBS = -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm_static -lcommlists -luti $(WINGRIDLIB_STATIC) -llck -lrmon $(DLLIB)
++SHEPHERD_ADD_LIBS = -lgdi -lsgeobj -lsgeobjd $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon $(DLLIB)
+ 
+ SHEPHERD_LIB_DEPENDS = $(GDILIB) $(SGEOBJDLIB) $(SGEOBJLIB) $(KRBLIBS) $(CULLLIB) $(COMMLIB) $(COMMLISTSLIB) $(COMMLIB_STATIC) $(UTILIB) $(WINGRIDLIB_DEP) $(LCKLIB) $(RMONLIB)
+ 
