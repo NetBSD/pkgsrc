@@ -1,0 +1,60 @@
+$NetBSD: patch-bm,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+DESTDIR support.
+
+--- source/dist/util/setfileperm.sh.orig	2011-11-14 23:00:55.000000000 +0400
++++ source/dist/util/setfileperm.sh	2012-02-22 01:42:23.000000000 +0400
+@@ -49,7 +49,7 @@
+ PATH=/bin:/usr/bin:/usr/sbin
+ 
+ FILELIST="3rd_party bin ckpt dtrace examples inst_sge install_execd install_qmaster \
+-          lib mpi pvm qmon util utilbin start_gui_installer"
++          lib mpi pvm qmon util utilbin"
+ 
+ OPTFILES="catman doc include man hadoop"
+ 
+@@ -81,7 +81,7 @@
+ 
+ instauto=false
+ 
+-if [ -z "$SGE_ROOT" -o ! -d "$SGE_ROOT" ]; then
++if [ -z "$SGE_ROOT" -o ! -d "$DESTDIR$SGE_ROOT" ]; then
+    echo 
+    echo ERROR: Please set your \$SGE_ROOT environment variable
+    echo and start this script again. Exit.
+@@ -89,7 +89,7 @@
+    exit 1
+ fi
+ 
+-if [ ! -f "$SGE_ROOT/util/arch" ]; then
++if [ ! -f "$DESTDIR$SGE_ROOT/util/arch" ]; then
+    echo 
+    echo ERROR: The shell script \"$SGE_ROOT/util/arch\" does not exist.
+    echo Please verify your distribution and restart this script. Exit.
+@@ -97,7 +97,7 @@
+    exit 1
+ fi
+ 
+-if [ ! -f $SGE_ROOT/util/arch_variables ]; then
++if [ ! -f "$DESTDIR$SGE_ROOT"/util/arch_variables ]; then
+    echo
+    echo ERROR: Missing shell script \"$SGE_ROOT/util/arch_variables\".
+    echo Please verify your distribution and restart this script. Exit.
+@@ -105,7 +105,7 @@
+    exit 1
+ fi
+ 
+-. $SGE_ROOT/util/arch_variables
++. "$DESTDIR$SGE_ROOT"/util/arch_variables
+ 
+ if [ $ARCH = "win32-x86" ]; then
+    echo
+@@ -183,7 +183,7 @@
+    done
+ fi
+ 
+-cd $1
++cd $DESTDIR$1
+ if [ $? != 0 ]; then
+    $ECHO "ERROR: can't change to directory \"$1\". Exiting."
+    exit 1

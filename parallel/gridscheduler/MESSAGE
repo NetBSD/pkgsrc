@@ -1,0 +1,31 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+You will need to add the following lines to /etc/services:
+
+sge_qmaster     6444/tcp
+sge_execd       6445/tcp
+
+In addition after installation, you need to set up SGE.  To configure the
+master node of the cluster, run:
+
+        cd ${SGE_ROOT} && ./install_qmaster -csp
+
+For the back-end compute nodes, run:
+
+        cd ${SGE_ROOT} && ./install_execd
+
+Additionally, you will want to add the following lines in /etc/csh.cshrc:
+
+# Sun Grid Engine Setup
+if ( -f ${SGE_ROOT}/default/common/settings.csh  ) then
+        source ${SGE_ROOT}/default/common/settings.csh
+endif
+
+and the following in /etc/profile:
+
+if [ -f ${SGE_ROOT}/default/common/settings.sh ]; then
+        . ${SGE_ROOT}/default/common/settings.sh
+fi
+
+===========================================================================
