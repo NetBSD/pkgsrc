@@ -1,0 +1,23 @@
+Kile is a LaTeX source editor, TeX shell and GnuPlot frontend. It simplifies
+the creation and modification of LaTeX source code documents as well as the
+use of LaTeX-related programs for users who want to retain control over their
+LaTeX documents.
+
+Features include:
++ syntax highlighting, help menus and spell checking;
++ integrated DVI, PS, PDF and HTML viewers;
++ wizards for generating LaTeX code (Quick document, Quick letter, tabular and
+  array environments);
++ direct insertion of the principal LaTeX tags via the LaTeX, Math and Greek
+  menus;
++ one-click insertion of 370 different mathematical symbols;
++ insertion of standard Bibtex entry types in the .bib file;
++ "inverse" and "forward" search with KDVI;
++ automatic launching of LaTeX-related programs via the Tools menu;
++ a "Messages / Log File" frame which provides process information and LaTeX
+  compilation log files;
++ Next Latex Error and Previous Latex Error commands for browsing LaTeX errors;
++ clicking line numbers in the log file for jumping to the corresponding line
+  in the editor;
++ a "structure view" with links for jumping directly to different parts of the
+  document in the "Structure" frame;
