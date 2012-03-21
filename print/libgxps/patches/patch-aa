@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/21 17:38:39 drochner Exp $
+
+--- libgxps.pc.in.orig	2010-09-05 10:21:14.000000000 +0000
++++ libgxps.pc.in
+@@ -6,6 +6,6 @@ includedir=@includedir@
+ Name: libgxps
+ Description: XPS Documents library
+ Version: @VERSION@
+-Requires: gio-2.0 >= @GLIB_REQUIRED@ libarchive >= @LIBARCHIVE_REQUIRED@ cairo >= @CAIRO_REQUIRED@ gobject-2.0 >= @GLIB_REQUIRED@
++Requires: gio-2.0 >= @GLIB_REQUIRED@ cairo >= @CAIRO_REQUIRED@ gobject-2.0 >= @GLIB_REQUIRED@
+ Libs: -L${libdir} -lgxps
+ Cflags: -I${includedir}
