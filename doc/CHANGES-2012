@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.938 2012/03/21 20:56:11 asau Exp $
+$NetBSD: CHANGES-2012,v 1.939 2012/03/21 21:29:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1575,3 +1575,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/eric4 to 4.5.1 [drochner 2012-03-21]
 	Added parallel/hwloc version 1.4 [asau 2012-03-21]
 	Added parallel/gridscheduler version 2011.11 [asau 2012-03-21]
+	Added misc/libkgeomap version 2.5.0 [markd 2012-03-21]
+	Added misc/libkvkontakte version 2.5.0 [markd 2012-03-21]
+	Added graphics/libkface version 2.5.0 [markd 2012-03-21]
+	Added www/libmediawiki version 2.5.0 [markd 2012-03-21]
+	Updated graphics/kipi-plugins to 2.5.0 [markd 2012-03-21]
+	Updated graphics/digikam to 2.5.0 [markd 2012-03-21]
