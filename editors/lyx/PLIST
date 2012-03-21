@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/04/15 16:32:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/21 18:06:48 drochner Exp $
 ${BIN_DIR}/lyx
 ${BIN_DIR}/lyxclient
 ${BIN_DIR}/tex2lyx
@@ -233,6 +233,7 @@ ${SHARE_DIR}/doc/sk/UserGuide.lyx
 ${SHARE_DIR}/doc/sl/Intro.lyx
 ${SHARE_DIR}/doc/sl/Tutorial.lyx
 ${SHARE_DIR}/doc/sv/Intro.lyx
+${SHARE_DIR}/doc/sv/Shortcuts.lyx
 ${SHARE_DIR}/doc/sv/Tutorial.lyx
 ${SHARE_DIR}/doc/uk/Intro.lyx
 ${SHARE_DIR}/doc/uk/clipart/FootnoteQT4.png
@@ -368,6 +369,7 @@ ${SHARE_DIR}/examples/sl/primer_surov.lyx
 ${SHARE_DIR}/examples/sl/splash.lyx
 ${SHARE_DIR}/examples/splash.lyx
 ${SHARE_DIR}/examples/sr/splash.lyx
+${SHARE_DIR}/examples/sv/splash.lyx
 ${SHARE_DIR}/examples/tufte-book.lyx
 ${SHARE_DIR}/examples/tufte-handout.lyx
 ${SHARE_DIR}/examples/uk/splash.lyx
@@ -1251,6 +1253,9 @@ ${SHARE_DIR}/lyx2lyx/lyx2lyx
 ${SHARE_DIR}/lyx2lyx/lyx2lyx_lang.py
 ${SHARE_DIR}/lyx2lyx/lyx2lyx_lang.pyc
 ${SHARE_DIR}/lyx2lyx/lyx2lyx_lang.pyo
+${SHARE_DIR}/lyx2lyx/lyx2lyx_tools.py
+${SHARE_DIR}/lyx2lyx/lyx2lyx_tools.pyc
+${SHARE_DIR}/lyx2lyx/lyx2lyx_tools.pyo
 ${SHARE_DIR}/lyx2lyx/lyx2lyx_version.py
 ${SHARE_DIR}/lyx2lyx/lyx2lyx_version.pyc
 ${SHARE_DIR}/lyx2lyx/lyx2lyx_version.pyo
@@ -1296,6 +1301,9 @@ ${SHARE_DIR}/lyx2lyx/lyx_1_5.pyo
 ${SHARE_DIR}/lyx2lyx/lyx_1_6.py
 ${SHARE_DIR}/lyx2lyx/lyx_1_6.pyc
 ${SHARE_DIR}/lyx2lyx/lyx_1_6.pyo
+${SHARE_DIR}/lyx2lyx/lyx_2_0.py
+${SHARE_DIR}/lyx2lyx/lyx_2_0.pyc
+${SHARE_DIR}/lyx2lyx/lyx_2_0.pyo
 ${SHARE_DIR}/lyx2lyx/parser_tools.py
 ${SHARE_DIR}/lyx2lyx/parser_tools.pyc
 ${SHARE_DIR}/lyx2lyx/parser_tools.pyo
@@ -1305,6 +1313,9 @@ ${SHARE_DIR}/lyx2lyx/profiling.pyo
 ${SHARE_DIR}/lyx2lyx/test_parser_tools.py
 ${SHARE_DIR}/lyx2lyx/test_parser_tools.pyc
 ${SHARE_DIR}/lyx2lyx/test_parser_tools.pyo
+${SHARE_DIR}/lyx2lyx/unicode_symbols.py
+${SHARE_DIR}/lyx2lyx/unicode_symbols.pyc
+${SHARE_DIR}/lyx2lyx/unicode_symbols.pyo
 ${SHARE_DIR}/scripts/TeXFiles.py
 ${SHARE_DIR}/scripts/TeXFiles.pyc
 ${SHARE_DIR}/scripts/TeXFiles.pyo
