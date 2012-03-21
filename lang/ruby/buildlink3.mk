@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2011/11/08 15:19:01 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/03/21 15:40:12 taca Exp $
 
 BUILDLINK_TREE+=	${RUBY_BASE}
 
@@ -23,6 +23,15 @@ buildlink-bin-ruby:
 	if ${TEST} -f $$f; then \
 		${LN} -s $$f ${BUILDLINK_DIR}/bin/ruby; \
 	fi
+
+.if empty(RUBY_USE_PTHREAD:M[nN][oO])
+PTHREAD_OPTS+=		native
+PTHREAD_AUTO_VARS=	yes
+
+.include "../../mk/pthread.buildlink3.mk"
+.endif
+.include "../../mk/dlopen.buildlink3.mk"
+
 .endif # RUBY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-${RUBY_BASE}
