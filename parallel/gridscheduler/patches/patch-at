@@ -1,0 +1,15 @@
+$NetBSD: patch-at,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+--- source/dist/util/arch_variables.orig	2005-11-11 03:53:15.000000000 +1300
++++ source/dist/util/arch_variables
+@@ -197,8 +197,8 @@ case $ARCH in
+    AWK=/usr/bin/awk
+    ECHO="/bin/echo"
+    RC_FILE=netbsd
+-   RC_PREFIX=/etc/rc.d
+-   RC_SUFFIX=.sh
++   RC_PREFIX=@rcd_dir@
++   RC_SUFFIX=
+    XTERM=/usr/X11R6/bin/xterm
+    MAILER=/usr/bin/mail
+    QLOGIN_COMMAND=telnet

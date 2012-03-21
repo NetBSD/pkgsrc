@@ -1,0 +1,119 @@
+$NetBSD: patch-am,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+--- source/aimk.orig	2011-11-14 19:01:16.000000000 +0000
++++ source/aimk
+@@ -412,7 +412,7 @@ set SPOOLING_DEPS   = "spoolloaderlib sp
+ # we generate a berkeley db shared lib, so we need bdb include and lib path
+ set CFLAGS            = "-I$BERKELEYDB_HOME/include/${BDB_INCLUDE_SUBDIR} $CFLAGS"
+ set LFLAGS            = "-L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} $LFLAGS"
+-set SHARED_LFLAGS    = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR}"
++set SHARED_LFLAGS    = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} -R$BERKELEYDB_HOME/lib"
+ 
+ # JUTI Targets
+ set JUTI_ALL  = juti_all
+@@ -1301,9 +1301,9 @@ case NETBSD_*:
+    set DLLIB    = ""
+    set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
+    set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
+-   set CFLAGS   = "$OFLAG -Wall -DNETBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I/usr/X11R6/include"
++   set CFLAGS   = "$OFLAG -Wall -DNETBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I${X11BASE}/include"
+    set NOERR_CFLAG = "-Wno-error"
+-   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic"
++   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
+    set LIBS     = "$LIBS -lkvm"
+    set SHAREDLD = $CC
+    set SHARED_CFLAGS = "-fPIC"
+@@ -1311,9 +1311,9 @@ case NETBSD_*:
+    set AUTHLIBS = "-lcrypt -lpam"
+ 
+    set XMTDEF   = ""
+-   set XINCD    = "$XMTINCD $XINCD -I/usr/X11/include -I/usr/pkg/include"
++   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
+    set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD $XCFLAGS"
+-   set XLIBD    = "-L/usr/X11R6/lib -R/usr/X11R6/lib -L/usr/pkg/lib -R /usr/pkg/lib"
++   set XLIBD    = "-L${X11BASE}/lib -R${X11BASE}/lib -L${LOCALBASE}/lib -R ${LOCALBASE}/lib"
+    set XLFLAGS  = "$XLIBD"
+    set XLIBS    = " -lXm -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
+    set RM       = "rm -f"
+@@ -2246,7 +2246,7 @@ endif
+ 
+ if ( $HWLOC == 1 ) then
+    set CFLAGS = "$CFLAGS -DTHREADBINDING -DHWLOC"
+-   set CORE_INCLUDE = "$CORE_INCLUDE -I$SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/include/ -I$SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH/include"
++#   set CORE_INCLUDE = "$CORE_INCLUDE -I$SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/include/ -I$SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH/include"
+    # set LFLAGS = "$LFLAGS -L$SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH/src/.libs/"
+    # set LIBS = "$LIBS -lhwloc"
+    set LIBS = "-L$SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH/src/.libs/ -lhwloc $LIBS"
+@@ -2317,7 +2317,7 @@ if ( "$BUILDMAN" == 1 ) then
+       exit 1
+    endif   
+ 
+-   $SOURCE/scripts/mk_ascman $SOURCE $SGE_PRODUCT_MODE $BUILDMAN $BUILDHTMLMAN $KVMAN
++   $SOURCE/scripts/mk_ascman $SOURCE $SGE_PRODUCT_MODE 0 $BUILDHTMLMAN $KVMAN
+ 
+    if ( $status != 0 ) then
+       echo not done
+@@ -2581,36 +2581,36 @@ if ( "$PLPA" == 1 ) then
+    cd $SOURCE
+ endif
+ 
+-if ( "$HWLOC" == 1 ) then
+-   echo _________3_r_d_p_a_r_t_y__H_W_L_O_C_______
+-
+-      set maj_ver = `echo $HWLOC_VERSION| cut -f 1 -d .`
+-      set min_ver = `echo $HWLOC_VERSION| cut -f 2 -d .`
+-
+-      if ( "$maj_ver" == 1 && "$min_ver" <= 2 ) then
+-        set HWLOC_CFLAGS_EXTRA = "--disable-xml"
+-      else
+-        set HWLOC_CFLAGS_EXTRA = "--disable-libxml2 --disable-pci"
+-      endif
+-
+-      if ( ! -d $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH || \
+-           ! -r $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH/Makefile ) then
+-         mkdir -p $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH
+-         cd $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH
+-         env CFLAGS="$HWLOC_CFLAGS" ../configure --enable-static --disable-shared $HWLOC_CFLAGS_EXTRA
+-      endif
++# if ( "$HWLOC" == 1 ) then
++#    echo _________3_r_d_p_a_r_t_y__H_W_L_O_C_______
+ 
+-      cd $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH
++#       set maj_ver = `echo $HWLOC_VERSION| cut -f 1 -d .`
++#       set min_ver = `echo $HWLOC_VERSION| cut -f 2 -d .`
+ 
+-      $MAKE $MAKEOPT -f Makefile "MAKE=$MAKE" "COMPILE_ARCH=$COMPILE_ARCH" $argv
++#       if ( "$maj_ver" == 1 && "$min_ver" <= 2 ) then
++#         set HWLOC_CFLAGS_EXTRA = "--disable-xml"
++#       else
++#         set HWLOC_CFLAGS_EXTRA = "--disable-libxml2 --disable-pci"
++#       endif
++
++#       if ( ! -d $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH || \
++#            ! -r $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH/Makefile ) then
++#          mkdir -p $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH
++#          cd $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH
++#          env CFLAGS="$HWLOC_CFLAGS" ../configure --enable-static --disable-shared $HWLOC_CFLAGS_EXTRA
++#       endif
++
++#       cd $SOURCE/3rdparty/hwloc/$HWLOC_DIRECTORY/$COMPILE_ARCH
++
++#       $MAKE $MAKEOPT -f Makefile "MAKE=$MAKE" "COMPILE_ARCH=$COMPILE_ARCH" $argv
++
++#       if ( $status != 0 ) then
++#          echo not done
++#          exit 1
++#       endif
+ 
+-      if ( $status != 0 ) then
+-         echo not done
+-         exit 1
+-      endif
+-
+-   cd $SOURCE
+-endif
++#    cd $SOURCE
++# endif
+ 
+ if ( "$MAKESTRPTIME" == 1 ) then
+    echo _________3_r_d_p_a_r_t_y__S_T_R_P_T_I_M_E_

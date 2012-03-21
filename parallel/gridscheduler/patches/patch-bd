@@ -1,0 +1,77 @@
+$NetBSD: patch-bd,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+Exclude Java files.
+DESTDIR support.
+
+--- source/scripts/distinst.orig	2011-11-14 23:00:44.000000000 +0400
++++ source/scripts/distinst	2012-02-22 01:09:06.000000000 +0400
+@@ -75,13 +75,13 @@
+ # The last number listed here will be the verson linked from libdrmaa.so
+ DRMAA_SHARED_LIB_VERSIONS="1.0"
+ DRMAA_HEADER_FILES="libs/japi/drmaa.h"
+-DRMAAJ_FILES="CLASSES/jdrmaa/drmaa"
++#DRMAAJ_FILES="CLASSES/jdrmaa/drmaa"
+ 
+ JNI_SHARED_LIBRARIES="libdrmaa libjuti libjgdi"
+ 
+-JUTIJ_FILES="CLASSES/juti/juti"
+-JGDIJ_FILES="libs/jgdi/build/jgdi"
+-JJSV_FILES="CLASSES/jjsv/JSV"
++#JUTIJ_FILES="CLASSES/juti/juti"
++#JGDIJ_FILES="libs/jgdi/build/jgdi"
++#JJSV_FILES="CLASSES/jjsv/JSV"
+ JAVA_LIBRARIES="${DRMAAJ_FILES} ${JUTIJ_FILES} ${JGDIJ_FILES} ${JJSV_FILES}"
+ 
+ PVMSOURCES="start_pvm.c stop_pvm.c slave.c master.c spmd.c Makefile"
+@@ -428,7 +428,7 @@
+ instopenssl=true
+ instbdb=true
+ instarco=false
+-instguiinst=true
++instguiinst=false
+ instsgeinspect=false
+ enforce_shlibpath=false
+ 
+@@ -527,11 +527,11 @@
+          echo Please set variable SGE_ROOT. Installation failed.
+          exit 1
+       fi
+-      if [ ! -d $SGE_ROOT ]; then
+-         echo Please create directory \"$SGE_ROOT\" first. Installation failed.
++      if [ ! -d "$DESTDIR$SGE_ROOT" ]; then
++         echo Please create directory \"$DESTDIR$SGE_ROOT\" first. Installation failed.
+          exit 1
+       fi
+-      DEST_SGE_ROOT=$SGE_ROOT
++      DEST_SGE_ROOT=$DESTDIR$SGE_ROOT
+       localinst=true
+       ;;
+    -mansrc)
+@@ -897,13 +897,16 @@
+                         $DEST_SGE_ROOT/util/sgeCA/*.cnf \
+                         $DEST_SGE_ROOT/util/sgeSMF/*.xml \
+                         $DEST_SGE_ROOT/util/sgeSMF/sge_smf_support.sh \
+-                        $DEST_SGE_ROOT/util/DetectJvmLibrary.jar \
+                         $DEST_SGE_ROOT/util/resources/calendars/* \
+                         $DEST_SGE_ROOT/util/resources/centry/* \
+                         $DEST_SGE_ROOT/util/resources/pe/* \
+                         $DEST_SGE_ROOT/util/resources/schemas/*/* \
+                         $DEST_SGE_ROOT/util/resources/usersets/*
+ 
++      if [ -f $DEST_SGE_ROOT/util/DetectJvmLibrary.jar ] ; then
++          Execute chmod 644 $DEST_SGE_ROOT/util/DetectJvmLibrary.jar
++      fi
++
+       Execute chmod 755 $DEST_SGE_ROOT/util/resources/jsv/jsv.sh \
+                         $DEST_SGE_ROOT/util/resources/jsv/jjsv.sh \
+                         $DEST_SGE_ROOT/util/resources/jsv/jsv.pl \
+@@ -1085,9 +1088,6 @@
+ 
+       if [ -f CLASSES/herd/herd.jar ]; then
+          Execute cp CLASSES/herd/herd.jar $DEST_SGE_ROOT/lib/herd.jar
+-      elif [ $exit_on_error = true ]; then
+-         echo "\"CLASSES/herd/herd.jar\" not found. Installation failed."
+-         exit 1
+       fi
+    fi
+ 
