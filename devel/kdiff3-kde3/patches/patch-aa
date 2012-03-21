@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/21 23:04:01 markd Exp $
+
+--- doc/Makefile.in.orig	2006-05-14 20:34:22.000000000 +0900
++++ doc/Makefile.in
+@@ -561,7 +561,7 @@ install-data: install-data-recursive
+ uninstall: uninstall-nls  uninstall-recursive
+ 
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
+ 
+ installcheck: installcheck-recursive
+ install-strip:
