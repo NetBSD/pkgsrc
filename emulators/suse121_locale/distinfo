@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:40:16 obache Exp $
+
+SHA1 (suse121/glibc-locale-2.14.1-14.25.1.i586.rpm) = 9d316ad0fce64a4f1b0886170dfcf09a8e119060
+RMD160 (suse121/glibc-locale-2.14.1-14.25.1.i586.rpm) = b3c247523b4bd2041a381f7f3557a7d6f60fbf6e
+Size (suse121/glibc-locale-2.14.1-14.25.1.i586.rpm) = 6128083 bytes
+SHA1 (suse121/glibc-locale-2.14.1-14.25.1.x86_64.rpm) = 8fec8587b30b481014aee2a10342c872739d7f17
+RMD160 (suse121/glibc-locale-2.14.1-14.25.1.x86_64.rpm) = 7e229657314c5cd88a6842e573dc30d6538aa195
+Size (suse121/glibc-locale-2.14.1-14.25.1.x86_64.rpm) = 6218069 bytes
