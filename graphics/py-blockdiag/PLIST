@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/01/18 10:40:39 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/21 14:25:33 obache Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -140,6 +140,7 @@ ${PYSITELIB}/blockdiag/tests/diagrams/background_url_image.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/beginpoint_color.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/branched.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_ref.diag
+${PYSITELIB}/blockdiag/tests/diagrams/circular_ref2.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_ref_and_parent_node.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_ref_to_root.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/circular_skipped_edge.diag
@@ -148,6 +149,7 @@ ${PYSITELIB}/blockdiag/tests/diagrams/diagram_attributes.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/diagram_attributes_order.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/diagram_orientation.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/edge_attribute.diag
+${PYSITELIB}/blockdiag/tests/diagrams/edge_datamodels.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/edge_label.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/edge_layout_landscape.diag
 ${PYSITELIB}/blockdiag/tests/diagrams/edge_layout_portrait.diag
