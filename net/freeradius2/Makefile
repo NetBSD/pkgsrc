@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/03/21 16:48:17 brook Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/21 18:02:21 brook Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -134,6 +134,10 @@ INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/${d}
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs ${RADIUS_USER} \
 			${RADIUS_GROUP} 750
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs/demoCA ${RADIUS_USER} \
+			${RADIUS_GROUP} 750
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/modules ${RADIUS_USER} \
+			${RADIUS_GROUP} 750
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/sites-enabled ${RADIUS_USER} \
 			${RADIUS_GROUP} 750
 
 .include "../../mk/pthread.buildlink3.mk"
