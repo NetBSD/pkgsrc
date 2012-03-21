@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2012/02/10 18:48:19 drochner Exp $
+$NetBSD: distinfo,v 1.22 2012/03/21 18:16:18 drochner Exp $
 
-SHA1 (feh-2.3.tar.bz2) = 9f42ba920baeb405777f834546223a9ff9eb43e7
-RMD160 (feh-2.3.tar.bz2) = 579c5dca9df392e00d1f3e0b28053ae357ce68a9
-Size (feh-2.3.tar.bz2) = 2226269 bytes
+SHA1 (feh-2.4.tar.bz2) = 1798186105da2dacebd49210d7f0bd78687922a5
+RMD160 (feh-2.4.tar.bz2) = fa5bd5e06461cf6836058d7b9c10f7adf6e6f641
+Size (feh-2.4.tar.bz2) = 2227350 bytes
 SHA1 (patch-config.mk) = e2af53c04595f7e55645ba9da816eff5da70e3de
 SHA1 (patch-src_getopt.c) = 337fd15564c1d5b5596fe7d0d2f9bd6b0ca44ca7
