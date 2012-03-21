@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/03/21 13:31:35 asau Exp $
+
+On NetBSD setting CPU affinity requires super-user privileges.
+Ordinary users can be allowed to control CPU affinity of their threads
+via the security.models.extensions.user_set_cpu_affinity sysctl.
+
+===========================================================================
