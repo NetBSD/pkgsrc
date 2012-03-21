@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/06/19 01:37:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/03/21 15:42:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS.txt
 ${GEM_LIBDIR}/ChangeLog
@@ -6,7 +6,9 @@ ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.textile
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/.gitignore
+${GEM_LIBDIR}/examples/3d_surface_plot.rb
 ${GEM_LIBDIR}/examples/discrete_points.rb
+${GEM_LIBDIR}/examples/histogram.rb
 ${GEM_LIBDIR}/examples/multiple_data_sets.rb
 ${GEM_LIBDIR}/examples/output_image_file.rb
 ${GEM_LIBDIR}/examples/sin_wave.rb
