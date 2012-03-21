@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2011/12/15 15:39:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/21 15:43:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.hoerc
 ${GEM_LIBDIR}/History.rdoc
-${GEM_LIBDIR}/License.rdoc
+${GEM_LIBDIR}/Licence.rdoc
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
