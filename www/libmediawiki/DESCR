@@ -1,0 +1,4 @@
+libmediawiki is a KDE C++ interface for MediaWiki based web service as
+wikipedia.org
+
+This library is used by kipi-plugins and digiKam.
