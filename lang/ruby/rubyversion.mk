@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.75 2012/03/15 08:35:24 marino Exp $
+# $NetBSD: rubyversion.mk,v 1.76 2012/03/21 15:47:33 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -375,8 +375,6 @@ RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
 RUBY_USE_PTHREAD?=	no
 .else
 RUBY_USE_PTHREAD?=	yes
-PTHREAD_OPTS+=		native
-PTHREAD_AUTO_VARS=	yes
 .endif
 
 RUBY_DYNAMIC_DIRS?=	# empty
@@ -508,17 +506,6 @@ RUBY_PLIST_FILES_CMD= ( cd ${DESTDIR}${PREFIX}; \
 RUBY_GENERATE_PLIST =	( \
 	${RUBY_PLIST_COMMENT_CMD}; \
 	${RUBY_PLIST_FILES_CMD} ) > ${RUBY_PLIST_DYNAMIC}
-.endif
-
-.if !empty(RUBY_NOVERSION:M[nN][oO])
-.if empty(RUBY_USE_PTHREAD:M[nN][oO])
-.include "../../mk/pthread.buildlink3.mk"
-.endif
-.include "../../mk/bdb.buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
 .endif
 
 PRINT_PLIST_AWK+=	/lib\/libruby${RUBY_STATICLIB}$$/ \
