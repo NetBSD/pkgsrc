@@ -1,0 +1,6 @@
+# $NetBSD: libarchive.pc,v 1.1.1.1 2012/03/21 17:38:39 drochner Exp $
+
+Name: libarchive
+Description: libarchive
+Version: 2.8.0
+Libs: -larchive
