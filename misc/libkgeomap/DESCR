@@ -1,0 +1,4 @@
+Libkgeomap is a wrapper around world map components as Marble, OpenstreetMap
+and GoogleMap, for browsing and arranging photos on a map
+
+This library is used by kipi-plugins, digiKam and other kipi host programs.
