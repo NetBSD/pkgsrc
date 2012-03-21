@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2012/02/13 11:01:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.72 2012/03/21 18:12:42 drochner Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -80,6 +80,7 @@ include/ImageMagick/magick/magick-type.h
 include/ImageMagick/magick/magick.h
 include/ImageMagick/magick/matrix.h
 include/ImageMagick/magick/memory_.h
+include/ImageMagick/magick/method-attribute.h
 include/ImageMagick/magick/methods.h
 include/ImageMagick/magick/mime.h
 include/ImageMagick/magick/module.h
@@ -133,6 +134,7 @@ include/ImageMagick/wand/magick-image.h
 include/ImageMagick/wand/magick-property.h
 include/ImageMagick/wand/magick-wand.h
 include/ImageMagick/wand/magick_wand.h
+include/ImageMagick/wand/method-attribute.h
 include/ImageMagick/wand/mogrify.h
 include/ImageMagick/wand/montage.h
 include/ImageMagick/wand/pixel-iterator.h
@@ -1176,6 +1178,7 @@ share/examples/ImageMagick/log.xml
 share/examples/ImageMagick/magic.xml
 share/examples/ImageMagick/mime.xml
 share/examples/ImageMagick/policy.xml
+share/examples/ImageMagick/quantization-table.xml
 share/examples/ImageMagick/sRGB.icc
 share/examples/ImageMagick/thresholds.xml
 share/examples/ImageMagick/type-dejavu.xml
