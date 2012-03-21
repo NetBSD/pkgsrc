@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/21 12:21:56 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2012/03/21 19:58:47 hans Exp $
 
 DISTNAME=	gtk+-3.2.4
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -55,6 +55,8 @@ BUILD_DIRS=		. demos/gtk-demo
 BUILD_DEPENDS+=		grep-[0-9]*:../../textproc/grep
 TOOLS_PATH.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
 .endif
+
+CFLAGS.SunOS+=		-std=gnu99 -D_XOPEN_SOURCE=600
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
