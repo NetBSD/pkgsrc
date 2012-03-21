@@ -1,0 +1,96 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/03/21 22:55:07 markd Exp $
+
+fix build with gcc4.5
+
+--- src/kile/latexoutputfilter.cpp.orig	2008-08-25 21:10:45.000000000 +0000
++++ src/kile/latexoutputfilter.cpp
+@@ -55,7 +55,7 @@ bool LatexOutputFilter::OnPreCreate()
+ 
+ bool LatexOutputFilter::fileExists(const QString & name)
+ {
+-	static QFileInfo::QFileInfo fi;
++	static QFileInfo fi;
+ 
+ 	if (name[0] == '/' )
+ 	{
+@@ -101,7 +101,7 @@ void LatexOutputFilter::updateFileStack(
+ {
+ 	//KILE_DEBUG() << "==LatexOutputFilter::updateFileStack()================" << endl;
+ 
+-	static QString::QString strPartialFileName;
++	static QString strPartialFileName;
+ 
+ 	switch (dwCookie)
+ 	{
+@@ -172,7 +172,7 @@ void LatexOutputFilter::updateFileStack(
+ void LatexOutputFilter::updateFileStackHeuristic(const QString &strLine, short & dwCookie)
+ {
+ 	//KILE_DEBUG() << "==LatexOutputFilter::updateFileStackHeuristic()================" << endl;
+-	static QString::QString strPartialFileName;
++	static QString strPartialFileName;
+ 	bool expectFileName = (dwCookie == FileNameHeuristic);
+ 	int index = 0;
+ 
+@@ -282,10 +282,10 @@ bool LatexOutputFilter::detectError(cons
+ 
+ 	bool found = false, flush = false;
+ 
+-	static QRegExp::QRegExp reLaTeXError("^! LaTeX Error: (.*)$", false);
+-	static QRegExp::QRegExp rePDFLaTeXError("^Error: pdflatex (.*)$", false);
+-	static QRegExp::QRegExp reTeXError("^! (.*)");
+-	static QRegExp::QRegExp reLineNumber("^l\\.([0-9]+)(.*)");
++	static QRegExp reLaTeXError("^! LaTeX Error: (.*)$", false);
++	static QRegExp rePDFLaTeXError("^Error: pdflatex (.*)$", false);
++	static QRegExp reTeXError("^! (.*)");
++	static QRegExp reLineNumber("^l\\.([0-9]+)(.*)");
+ 
+ 	switch (dwCookie)
+ 	{
+@@ -370,9 +370,9 @@ bool LatexOutputFilter::detectWarning(co
+ 	bool found = false, flush = false;
+ 	QString warning;
+ 
+-	static QRegExp::QRegExp reLaTeXWarning("^(((! )?(La|pdf)TeX)|Package|Class) .*Warning.*:(.*)", false);
+-	static QRegExp::QRegExp reNoFile("No file (.*)");
+-	static QRegExp::QRegExp reNoAsyFile("File .* does not exist."); // FIXME can be removed when http://sourceforge.net/tracker/index.php?func=detail&aid=1772022&group_id=120000&atid=685683 has promoted to the users
++	static QRegExp reLaTeXWarning("^(((! )?(La|pdf)TeX)|Package|Class) .*Warning.*:(.*)", false);
++	static QRegExp reNoFile("No file (.*)");
++	static QRegExp reNoAsyFile("File .* does not exist."); // FIXME can be removed when http://sourceforge.net/tracker/index.php?func=detail&aid=1772022&group_id=120000&atid=685683 has promoted to the users
+ 
+ 	switch (dwCookie)
+ 	{
+@@ -437,8 +437,8 @@ bool LatexOutputFilter::detectLaTeXLineN
+ {
+ 	//KILE_DEBUG() << "==LatexOutputFilter::detectLaTeXLineNumber(" << warning.length() << ")================" << endl;
+ 
+-	static QRegExp::QRegExp reLaTeXLineNumber("(.*) on input line ([0-9]+)\\.$", false);
+-	static QRegExp::QRegExp reInternationalLaTeXLineNumber("(.*)([0-9]+)\\.$", false);
++	static QRegExp reLaTeXLineNumber("(.*) on input line ([0-9]+)\\.$", false);
++	static QRegExp reInternationalLaTeXLineNumber("(.*)([0-9]+)\\.$", false);
+ 	if ( (reLaTeXLineNumber.search(warning) != -1) || (reInternationalLaTeXLineNumber.search(warning) != -1) )
+ 	{
+ 		//KILE_DEBUG() << "een" << endl;
+@@ -478,7 +478,7 @@ bool LatexOutputFilter::detectBadBox(con
+ 	bool found = false, flush = false;
+ 	QString badbox;
+ 
+-	static QRegExp::QRegExp reBadBox("^(Over|Under)(full \\\\[hv]box .*)", false);
++	static QRegExp reBadBox("^(Over|Under)(full \\\\[hv]box .*)", false);
+ 
+ 	switch (dwCookie)
+ 	{
+@@ -517,11 +517,11 @@ bool LatexOutputFilter::detectBadBoxLine
+ {
+ 	//KILE_DEBUG() << "==LatexOutputFilter::detectBadBoxLineNumber(" << strLine.length() << ")================" << endl;
+ 
+-	static QRegExp::QRegExp reBadBoxLines("(.*) at lines ([0-9]+)--([0-9]+)", false);
+-	static QRegExp::QRegExp reBadBoxLine("(.*) at line ([0-9]+)", false);
++	static QRegExp reBadBoxLines("(.*) at lines ([0-9]+)--([0-9]+)", false);
++	static QRegExp reBadBoxLine("(.*) at line ([0-9]+)", false);
+ 	//Use the following only, if you know how to get the source line for it.
+ 	// This is not simple, as TeX is not reporting it.
+-	static QRegExp::QRegExp reBadBoxOutput("(.*)has occurred while \\output is active^", false);
++	static QRegExp reBadBoxOutput("(.*)has occurred while \\output is active^", false);
+ 
+ 	if ( reBadBoxLines.search(strLine) != -1)
+ 	{
