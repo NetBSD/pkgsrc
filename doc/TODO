@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10965 2012/03/21 18:52:09 drochner Exp $
+$NetBSD: TODO,v 1.10966 2012/03/21 21:29:58 markd Exp $
 
 Suggested new packages
 ======================
@@ -508,7 +508,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o diffpdf-1.9.2
 	o diffstat-1.55
 	o diffutils-3.2
-	o digikam-2.5.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.5
@@ -827,7 +826,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdrill-6.5
 	o kid3-2.0.1
 	o kile-2.1
-	o kipi-plugins-2.0.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kmess-1.5.1
 	o kmp-0.5
