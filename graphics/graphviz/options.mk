@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2011/11/29 17:55:07 drochner Exp $
+# $NetBSD: options.mk,v 1.13 2012/03/21 16:25:47 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk guile lua ocaml pangocairo rsvg tcl x11 perl
@@ -132,6 +132,8 @@ USING_SWIG=	yes
 .include "../../x11/tk/buildlink3.mk"
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
+CONFIGURE_ARGS+=	--with-wish=${WISH}
+CONFIGURE_ARGS+=	--with-tclsh=${TCLSH}
 PLIST.tcl=		yes
 .else
 CONFIGURE_ARGS+=	--disable-tcl
