@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/03/21 22:55:07 markd Exp $
+
+fix build with gcc4.5
+
+--- src/kile/kilestructurewidget.cpp.orig	2008-06-08 11:34:46.000000000 +0000
++++ src/kile/kilestructurewidget.cpp
+@@ -648,7 +648,7 @@ namespace KileWidget
+ 	{
+ 		KILE_DEBUG() << "\tStructure::slotDoubleClicked" << endl;
+ 		KileListViewItem *item = (KileListViewItem*)(itm);
+-		static QRegExp::QRegExp suffix("\\.[\\d\\w]*$");
++		static QRegExp suffix("\\.[\\d\\w]*$");
+ 		
+ 		if (!item)
+ 			return;
