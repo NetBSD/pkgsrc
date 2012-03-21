@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 23:04:01 markd Exp $
+
+SHA1 (kdiff3-0.9.91.tar.gz) = e92778473d7267ea1c38855979840e74b261b31b
+RMD160 (kdiff3-0.9.91.tar.gz) = 5e30c0c40b6ad4775db7cddcd6725dfd503e2e36
+Size (kdiff3-0.9.91.tar.gz) = 2173290 bytes
+SHA1 (patch-aa) = 4269af8f2796b860650f696e6e16ec521bb97ea5
+SHA1 (patch-ab) = 7e9160cba637e0978c39964a1cd49d6f7b84959c
+SHA1 (patch-ac) = 884bae88e6a3004ab49e5155308de237d121788c
+SHA1 (patch-ad) = 596732f071a92c504c437dcd336b399fcb16fcfb
