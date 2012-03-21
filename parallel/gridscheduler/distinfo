@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+
+SHA1 (GE2011.11.tar.gz) = bd06d10f7186652e9b264bf8256cb6b633d2b6b9
+RMD160 (GE2011.11.tar.gz) = 9ed02a132993c34c89a47ae8e3ac22fbf10d6506
+Size (GE2011.11.tar.gz) = 14293882 bytes
+SHA1 (patch-aa) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ab) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ac) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ad) = 0da714b6f9f2dfb0d952f84863a76fdac23aed8e
+SHA1 (patch-ae) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-af) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ag) = f33c490bbb93c6d37ef1937210bff7b92cf19207
+SHA1 (patch-ak) = e73a58e547b8401eff27a4635629577767234f0f
+SHA1 (patch-am) = 3098e0016eaaff35c119cf8d0f67e0838c3eb28a
+SHA1 (patch-at) = d29e29e4915f8015618a4ebc5b17231c2bcc4bf5
+SHA1 (patch-av) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-bd) = 3977477ccf3d67a3e807bbda42d072397a9d9485
+SHA1 (patch-bl) = 5cf177b4b3d31a6483da6daa5ec5ff840b3be7fe
+SHA1 (patch-bm) = a760a1f06ab301acb1f0dcb88151c308f381ab60
+SHA1 (patch-ca) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-cb) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-cc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-daemons_common_procfs.c) = cdcbf58cb3278d5bc718fd235aaa76a10e938002
+SHA1 (patch-utilbin_Makefile) = da39a3ee5e6b4b0d3255bfef95601890afd80709
