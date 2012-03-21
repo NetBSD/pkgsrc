@@ -1,0 +1,24 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2012/03/21 13:35:50 obache Exp $
+
+EMULDIR="${PKG_PREFIX}/@EMULSUBDIR@"
+
+case "${STAGE}" in
+DEINSTALL)
+	# Run any actions that require root privileges.
+	${TEST} ! -x ./+ROOT_ACTIONS ||
+		./+ROOT_ACTIONS REMOVE ${PKG_METADATA_DIR} || exit 1
+
+	# Blow away the /proc directory
+	${RMDIR} -p ${EMULDIR}/proc
+
+	# Remove some files created by pkgsrc.
+	${RM} -f ${EMULDIR}/etc/ld.so.cache
+	${RM} -f ${EMULDIR}/etc/mtab
+	${RM} -f ${EMULDIR}/etc/group
+	${RM} -f ${EMULDIR}/etc/gshadow
+	${RM} -f ${EMULDIR}/etc/passwd
+	${RM} -f ${EMULDIR}/etc/shadow
+	${RM} -f ${EMULDIR}/var/cache/ldconfig/aux-cache
+	${RM} -rf ${EMULDIR}/var/lock
+	;;
+esac

@@ -1,0 +1,151 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2012/03/21 13:35:50 obache Exp $
+
+# Generate a +ROOT_ACTIONS script that runs certain actions that require
+# superuser privileges.
+#
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+ROOT_ACTIONS)
+	${CAT} > ./+ROOT_ACTIONS << 'EOF'
+#!@SH@
+#
+# +ROOT_ACTIONS - run actions requiring superuser privileges
+#
+# Usage: ./+ROOT_ACTIONS ADD|REMOVE [metadatadir]
+#
+# This script runs certain actions that require superuser privileges.
+# If such privileges are not available, then simply output a message
+# asking the user to run this script with the appropriate elevated
+# privileges.
+#
+
+CAT="@CAT@"
+CHMOD="@CHMOD@"
+CP="@CP@"
+DIRNAME="@DIRNAME@"
+ECHO="@ECHO@"
+ID="@ID@"
+LN="@LN@"
+MKDIR="@MKDIR@"
+PWD_CMD="@PWD_CMD@"
+RM="@RM@"
+SH="@SH@"
+TEST="@TEST@"
+
+SELF=$0
+ACTION=$1
+
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${2-${CURDIR}}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_PREFIX=@PREFIX@}
+
+EMULDIR="${PKG_PREFIX}/@EMULSUBDIR@"
+OPSYS_EMULDIR="@OPSYS_EMULDIR@"
+
+ROOT_ACTIONS_COOKIE="./+ROOT_ACTIONS_done"
+EUID=`${ID} -u`
+
+exitcode=0
+case $ACTION,$EUID in
+ADD,0)
+	${ECHO} "" > ${ROOT_ACTIONS_COOKIE}
+	${CHMOD} g+w ${ROOT_ACTIONS_COOKIE}
+	# Create an appropriate Linux-like /dev directory.
+	${ECHO} "${PKGNAME}: populating ${EMULDIR}/dev"
+	${MKDIR} ${EMULDIR}/dev
+	${TEST} ! -f /dev/MAKEDEV ||
+		${CP} /dev/MAKEDEV ${EMULDIR}/dev
+	${TEST} ! -f /dev/MAKEDEV.subr ||
+		${CP} /dev/MAKEDEV.subr ${EMULDIR}/dev
+	${TEST} ! -f ${EMULDIR}/dev/MAKEDEV ||
+		( cd ${EMULDIR}/dev &&
+		  ${SH} ./MAKEDEV std audio &&
+		  ${LN} -fs sound dsp )
+
+	# Create the appropriate symlink so that the kernel will
+	# find the installed files.
+	#
+	OPSYS_EMULDIR_PWD=`cd ${OPSYS_EMULDIR} 2>/dev/null && ${PWD_CMD}`
+	EMULDIR_PWD=`cd ${EMULDIR} 2>/dev/null && ${PWD_CMD}`
+
+	if ${TEST} "${OPSYS_EMULDIR_PWD}" != "${EMULDIR_PWD}"; then
+		if ${TEST} -e ${OPSYS_EMULDIR} -o -L ${OPSYS_EMULDIR}; then
+			${CAT} << EOM
+==============================================================================
+The following symbolic link must be created for ${PKGNAME}
+to work properly:
+
+	${EMULDIR} -> ${OPSYS_EMULDIR}
+
+==============================================================================
+EOM
+		else
+			${ECHO} "${PKGNAME}: creating symlink ${EMULDIR} -> ${OPSYS_EMULDIR}"
+			( ${MKDIR} -p `${DIRNAME} ${OPSYS_EMULDIR}` && 
+			  ${LN} -fs ${EMULDIR} ${OPSYS_EMULDIR} ) || ${TRUE}
+		fi
+	fi
+	;;
+
+REMOVE,0)
+	${ECHO} "${PKGNAME}: removing ${EMULDIR}/dev"
+	${RM} -fr ${EMULDIR}/dev
+	${RM} -f ${ROOT_ACTIONS_COOKIE}
+	;;
+
+ADD,*)
+	if ${TEST} ! -f ${ROOT_ACTIONS_COOKIE}; then
+		${CAT} << EOM
+==============================================================================
+Please run the following command with superuser privileges to complete
+the installation of ${PKGNAME}:
+
+    cd ${PKG_METADATA_DIR} && ${SELF} ADD
+
+==============================================================================
+EOM
+	fi
+	;;
+
+REMOVE,*)
+	if ${TEST} -f ${ROOT_ACTIONS_COOKIE}; then
+		${CAT} << EOM
+==============================================================================
+Please run the following command with superuser privileges to begin the
+removal of ${PKGNAME}:
+
+    cd ${PKG_METADATA_DIR} && ${SELF} REMOVE
+
+Then, please run pkg_delete(1) again to complete the removal of this
+package.
+
+==============================================================================
+EOM
+		exitcode=1
+	fi
+	;;
+esac
+exit $exitcode
+
+EOF
+	${CHMOD} +x ./+ROOT_ACTIONS
+	;;
+esac
+
+EMULDIR="${PKG_PREFIX}/@EMULSUBDIR@"
+OPSYS_EMULDIR="@OPSYS_EMULDIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	# Create a /proc mount point.
+	${MKDIR} -p ${EMULDIR}/proc
+
+	# Make /etc/mtab usable for Linux programs.
+	${RM} -f ${EMULDIR}/etc/mtab
+	${LN} -fs ${EMULDIR}/proc/mounts ${EMULDIR}/etc/mtab
+
+	# Run any actions that require root privileges.
+	${TEST} ! -x ./+ROOT_ACTIONS ||
+		./+ROOT_ACTIONS ADD ${PKG_METADATA_DIR}
+	;;
+esac
