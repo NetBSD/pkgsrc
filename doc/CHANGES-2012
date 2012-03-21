@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.933 2012/03/21 14:25:45 obache Exp $
+$NetBSD: CHANGES-2012,v 1.934 2012/03/21 14:32:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added emulators/suse121_x11 version 12.1 [obache 2012-03-21]
 	Added meta-pkgs/suse121 version 12.1 [obache 2012-03-21]
 	Updated graphics/py-blockdiag to 1.1.4 [obache 2012-03-21]
+	Updated graphics/py-seqdiag to 0.7.3 [obache 2012-03-21]
