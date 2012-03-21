@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:37:54 obache Exp $
+
+SHA1 (suse121/libdrm-2.4.26-15.1.2.i586.rpm) = 6fd54e92ae55ff962874fa27973ddb50515dc6a6
+RMD160 (suse121/libdrm-2.4.26-15.1.2.i586.rpm) = 18b8da0191e9be66b4b16ed67622b368c9c09724
+Size (suse121/libdrm-2.4.26-15.1.2.i586.rpm) = 85403 bytes
+SHA1 (suse121/libdrm-2.4.26-15.1.2.x86_64.rpm) = 691388c1ead55e709a51e395eb1f7984497c02f7
+RMD160 (suse121/libdrm-2.4.26-15.1.2.x86_64.rpm) = d4a5ddda83d1a4150b753b693928713b7a7ae845
+Size (suse121/libdrm-2.4.26-15.1.2.x86_64.rpm) = 82689 bytes
