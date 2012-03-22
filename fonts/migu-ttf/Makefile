@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2011/07/13 12:00:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/22 18:20:33 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	migu-ttf-${VERSION}
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mix-mplus-ipa/52283/}
-DISTFILES=	Migu-1P-${VERSION}.zip \
-		Migu-1C-${VERSION}.zip \
-		Migu-1M-${VERSION}.zip \
-		Migu-2M-${VERSION}.zip
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mix-mplus-ipa/53389/}
+DISTFILES=	migu-1p-${VERSION}.zip \
+		migu-1c-${VERSION}.zip \
+		migu-1m-${VERSION}.zip \
+		migu-2m-${VERSION}.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://mix-mplus-ipa.sourceforge.jp/
@@ -21,25 +21,25 @@ USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-VERSION=	20110610
+VERSION=	20111002
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${FONTDIR} ${DOCDIR}
 
-INSTALL_FONTS=	Migu-1C-${VERSION}/Migu-1C-bold.ttf \
-		Migu-1C-${VERSION}/Migu-1C-regular.ttf \
-		Migu-1M-${VERSION}/Migu-1M-bold.ttf \
-		Migu-1M-${VERSION}/Migu-1M-regular.ttf \
-		Migu-2M-${VERSION}/Migu-2M-bold.ttf \
-		Migu-2M-${VERSION}/Migu-2M-regular.ttf \
-		Migu-1P-${VERSION}/Migu-1P-bold.ttf \
-		Migu-1P-${VERSION}/Migu-1P-regular.ttf
+INSTALL_FONTS=	migu-1c-${VERSION}/migu-1c-bold.ttf \
+		migu-1c-${VERSION}/migu-1c-regular.ttf \
+		migu-1m-${VERSION}/migu-1m-bold.ttf \
+		migu-1m-${VERSION}/migu-1m-regular.ttf \
+		migu-2m-${VERSION}/migu-2m-bold.ttf \
+		migu-2m-${VERSION}/migu-2m-regular.ttf \
+		migu-1p-${VERSION}/migu-1p-bold.ttf \
+		migu-1p-${VERSION}/migu-1p-regular.ttf
 
-INSTALL_DOCS=	Migu-1C-${VERSION}/Migu-README.txt \
-		Migu-1C-${VERSION}/ipag00303/IPA_Font_License_Agreement_v1.0.txt \
-		Migu-1C-${VERSION}/mplus-TESTFLIGHT-040/LICENSE_E
+INSTALL_DOCS=	migu-1c-${VERSION}/migu-README.txt \
+		migu-1c-${VERSION}/ipag00303/IPA_Font_License_Agreement_v1.0.txt \
+		migu-1c-${VERSION}/mplus-TESTFLIGHT-043/LICENSE_E
 
 do-install:
 .for f in ${INSTALL_FONTS}
