@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10971 2012/03/22 18:21:49 ryoon Exp $
+$NetBSD: TODO,v 1.10972 2012/03/22 22:40:33 asau Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.2.2
-	o cherokee-1.2.101
 	o chromium-0.9.15
 	o chrony-1.26
 	o cinepaint-1.0
