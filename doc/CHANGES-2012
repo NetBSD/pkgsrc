@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.966 2012/03/22 13:48:51 sno Exp $
+$NetBSD: CHANGES-2012,v 1.967 2012/03/22 14:01:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1619,3 +1619,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Cache-FastMmap to 1.40 [sno 2012-03-22]
 	Updated devel/p5-Class-Autouse to 2.01 [sno 2012-03-22]
 	Updated devel/p5-Class-Base to 0.04 [sno 2012-03-22]
+	Updated devel/p5-Clone-Fast to 0.96 [sno 2012-03-22]
