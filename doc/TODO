@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10969 2012/03/22 15:00:29 taca Exp $
+$NetBSD: TODO,v 1.10970 2012/03/22 16:55:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -1259,7 +1259,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tcpillust-1.00b
 	o tcpreplay-3.4.4
 	o tcpslice-1.2a3
-	o tcsh-6.18.01
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
