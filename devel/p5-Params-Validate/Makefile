@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2011/08/16 09:30:36 obache Exp $
+# $NetBSD: Makefile,v 1.40 2012/03/22 14:10:05 sno Exp $
 
-DISTNAME=	Params-Validate-1.00
+DISTNAME=	Params-Validate-1.06
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5pva
 CATEGORIES=	devel perl5
@@ -16,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	{p5-Attribute-Handlers>=0.79,perl>=5.10.0}:../../devel/p5-Attribute-Handlers
 DEPENDS+=	{p5-Scalar-List-Utils>=1.0,perl>=5.10.0}:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation
 
 BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 
