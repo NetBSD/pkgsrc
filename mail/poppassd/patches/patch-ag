@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2006/01/08 17:22:29 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2012/03/22 14:15:32 taca Exp $
 
---- popper/popper.h.orig	2006-01-08 17:09:15.000000000 +0000
+--- popper/popper.h.orig	2011-05-30 19:13:40.000000000 +0000
 +++ popper/popper.h
-@@ -287,8 +287,6 @@ typedef struct _pop_tls             pop_
+@@ -308,8 +308,6 @@ typedef struct _pop_sasl            pop_
  #  define WILDCARD_SHELL    "/POPPER/ANY/SHELL/"
  #endif /* CHECK_SHELL */
  
