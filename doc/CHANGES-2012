@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.969 2012/03/22 14:10:15 sno Exp $
+$NetBSD: CHANGES-2012,v 1.970 2012/03/22 14:13:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1622,3 +1622,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Clone-Fast to 0.96 [sno 2012-03-22]
 	Updated devel/p5-Params-Util to 1.07 [sno 2012-03-22]
 	Updated devel/p5-Params-Validate to 1.06 [sno 2012-03-22]
+	Updated textproc/p5-Text-CSV_XS to 0.88 [sno 2012-03-22]
