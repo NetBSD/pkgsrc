@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2009/12/27 14:17:37 obache Exp $
+# $NetBSD: Makefile,v 1.63 2012/03/22 14:13:28 taca Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		qpopper-${VERSION}
-PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${QPOPPER_MASTER_SITES}
 
@@ -43,10 +42,15 @@ MESSAGE_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS} \
 
 PKG_USERS=		${QPOPPER_USER}:${QPOPPER_GROUP}
 
-SUBST_CLASSES+=		libexec
-SUBST_STAGE.libexec=	pre-configure
-SUBST_FILES.libexec=	man/popper.8
-SUBST_SED.libexec=	-e "s|/usr/local/lib|${PREFIX}/libexec|g"
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	man/popper.8
+SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+
+SUBST_CLASSES+=		sysconf
+SUBST_STAGE.sysconf=	pre-configure
+SUBST_FILES.sysconf=	man/popauth.8
+SUBST_SED.sysconf=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 
 SUBST_CLASSES+=		varbase
 SUBST_STAGE.varbase=	pre-configure

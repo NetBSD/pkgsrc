@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.21 2009/12/27 14:17:38 obache Exp $
+# $NetBSD: Makefile.common,v 1.22 2012/03/22 14:13:28 taca Exp $
 # used by mail/poppassd/Makefile
 
 QPOPPER_MASTER_SITES+=	ftp://ftp.qualcomm.com/eudora/servers/unix/popper/ \
 			http://core.ring.gr.jp/archives/net/mail/qpopper/
 QPOPPER_HOMEPAGE=	http://www.eudora.com/products/unsupported/qpopper/
-QPOPPER_PATCHSITES+=	http://www.imasy.or.jp/~ume/ipv6/
-QPOPPER_PATCHFILES=	qpopper4.0.9-ipv6-20060626.diff.gz
+#QPOPPER_PATCHSITES+=	http://www.imasy.or.jp/~ume/ipv6/
+#QPOPPER_PATCHFILES=	qpopper4.0.9-ipv6-20060626.diff.gz
 
-VERSION=		4.0.9
+VERSION=		4.1.0
 QPOPPER_FAC?=		LOCAL1
 BUILD_DEFS+=		QPOPPER_FAC
 
