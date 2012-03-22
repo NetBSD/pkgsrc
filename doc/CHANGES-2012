@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.978 2012/03/22 16:07:05 sno Exp $
+$NetBSD: CHANGES-2012,v 1.979 2012/03/22 16:17:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1633,3 +1633,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Module-Build to 0.40000 [sno 2012-03-22]
 	Updated devel/p5-Memoize to 1.02 [sno 2012-03-22]
 	Added archivers/p5-Archive-Peek version 0.35 [sno 2012-03-22]
+	Updated devel/p5-Parse-CPAN-Packages to 2.35 [sno 2012-03-22]
