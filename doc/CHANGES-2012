@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.982 2012/03/22 16:25:40 sno Exp $
+$NetBSD: CHANGES-2012,v 1.983 2012/03/22 16:28:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1637,3 +1637,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Path-Class to 0.25 [sno 2012-03-22]
 	Updated devel/p5-System-Command to 1.06 [sno 2012-03-22]
 	Updated devel/p5-Test-Fatal to 0.010 [sno 2012-03-22]
+	Updated devel/p5-namespace-clean to 0.23 [sno 2012-03-22]
