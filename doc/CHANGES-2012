@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.946 2012/03/22 08:55:04 sno Exp $
+$NetBSD: CHANGES-2012,v 1.947 2012/03/22 09:10:45 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1593,3 +1593,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-BerkeleyDB to 0.51 [sno 2012-03-22]
 	Updated devel/p5-B-Utils to 0.19 [sno 2012-03-22]
 	Updated devel/p5-B-Hooks-OP-Check-EntersubForCV to 0.09 [sno 2012-03-22]
+	Updated devel/p5-Bit-Vector to 7.2 [sno 2012-03-22]
