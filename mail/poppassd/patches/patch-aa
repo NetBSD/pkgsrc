@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/01/29 15:45:00 taca Exp $
+$NetBSD: patch-aa,v 1.3 2012/03/22 14:15:32 taca Exp $
 
---- man/poppassd.8.orig	2001-03-21 08:43:24.000000000 +0900
+--- man/poppassd.8.orig	2011-05-30 19:13:39.000000000 +0000
 +++ man/poppassd.8
 @@ -6,33 +6,36 @@
  .\" See License.txt file for terms and conditions for modification and
@@ -109,8 +109,17 @@ $NetBSD: patch-aa,v 1.2 2004/01/29 15:45:00 taca Exp $
 +Instructs
 +.I poppassd
 +to change the smb password and specifies the path to the executable 
-+to use.  The default is /usr/bin/smbpasswd.
++to use.  The default is @PREFIX@/bin/smbpasswd.
 +.TP
  .BI \-t " tracefile"
  Turns on debug tracing, and causes all trace and log output to be
  written to the file specified as
+@@ -125,7 +146,7 @@ through
+ .TP
+ .B /usr/bin/passwd password-change program
+ .TP
+-.B /usr/bin/smbpasswd smb password-change program
++.B @PREFIX@/bin/smbpasswd smb password-change program
+ 
+ .SH SEE ALSO
+ popper(8), popauth(8), inetd(8), inetd.conf(4)
