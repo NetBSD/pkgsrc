@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/07/11 12:18:55 obache Exp $
+$NetBSD: distinfo,v 1.5 2012/03/22 22:40:18 asau Exp $
 
-SHA1 (cherokee-1.0.5.tar.gz) = 61902974f839adbb0459c4df709b4d57f08b7ac2
-RMD160 (cherokee-1.0.5.tar.gz) = 00e64a63d861838c6df83b86ce25a518f3331bbb
-Size (cherokee-1.0.5.tar.gz) = 5364282 bytes
+SHA1 (cherokee-1.2.101.tar.gz) = b27f149c7d7111207ac8c3cd8a4856c05490d136
+RMD160 (cherokee-1.2.101.tar.gz) = dd3dedc352ba17bdcefd8e200143b8ffa19ad035
+Size (cherokee-1.2.101.tar.gz) = 6320209 bytes
+SHA1 (patch-cherokee_common-internal.h) = 730b67aa0cdf4990686e9529cec3a7fc1ddd90a5
