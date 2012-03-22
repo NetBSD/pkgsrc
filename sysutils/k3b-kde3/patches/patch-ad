@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/03/22 06:12:10 markd Exp $
+
+--- libk3bdevice/k3bdevicemanager.cpp.orig	2008-05-27 20:23:39.000000000 +1200
++++ libk3bdevice/k3bdevicemanager.cpp
+@@ -99,6 +99,7 @@ typedef unsigned char u8;
+ 
+ #ifdef Q_OS_NETBSD
+ #include <sys/scsiio.h>
++#include <util.h>
+ #endif
+ 
+ 
+@@ -324,13 +325,9 @@ void K3bDevice::DeviceManager::NetBSDDev
+ 
+   int   i;
+ 
+-  // Whole disk mask (According to cd(4), the AMD64, i386 and BeBox ports use
+-  // 'd' as whole-disk partition, the rest uses 'c'.)
+-
+-#if defined(__i386__) || defined (__amd64__) || defined (__bebox__)
+-  static const char slicename = 'd';
+-#else
+-  static const char slicename = 'c';
++  static char slicename = 'a';
++#ifdef Q_OS_NETBSD
++  slicename += getrawpartition();
+ #endif
+ 
+   char devicename[11]; // /dev/rcdXd + trailing zero
+@@ -831,7 +828,7 @@ bool K3bDevice::DeviceManager::determine
+     // XXX Re-map atapibus, so it doesn't conflict with "real" scsi
+     // busses
+ 
+-    bus = 15;
++    bus = 31;
+     id  = my_addr.addr.atapi.drive + 2 * my_addr.addr.atapi.atbus;
+     lun = 0;
+   }
