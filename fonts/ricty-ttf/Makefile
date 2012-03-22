@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2011/07/13 12:05:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/22 18:25:44 ryoon Exp $
 #
 
-DISTNAME=	Ricty-3.1.1
-PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
+DISTNAME=	yascentur-Ricty-3.1.3-0-gfe68161.tar.gz
+PKGNAME=	ricty-ttf-3.1.3
 CATEGORIES=	fonts japanese
-MASTER_SITES=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty/
+MASTER_SITES=	-https://github.com/yascentur/Ricty/tarball/3.1.3
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
@@ -13,8 +13,12 @@ LICENSE=	ipafont AND open-font-license AND mplusfont AND public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+# Force using "curl" for fetching the distribution file. It is only available
+# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
+FETCH_USING=	curl
+
 BUILD_DEPENDS+=		fontforge-[0-9]*:../../fonts/fontforge
-BUILD_DEPENDS+=		migu-ttf-[0-9]*:../../fonts/migu-ttf
+BUILD_DEPENDS+=		migu-ttf-20111002:../../fonts/migu-ttf
 BUILD_DEPENDS+=		inconsolata-ttf-[0-9]*:../../fonts/inconsolata-ttf
 
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -23,12 +27,12 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 
+WRKSRC=		${WRKDIR}/yascentur-Ricty-fe68161
+
 INSTALLATION_DIRS=	lib/X11/fonts/TTF
 
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
-
-WRKSRC=		${WRKDIR}/Ricty
 
 INSTALL_FONTS=	Ricty-Bold.ttf \
 		Ricty-Regular.ttf \
@@ -46,8 +50,8 @@ do-build:
 	cd ${WRKSRC}; \
 	./ricty_generator.sh \
 	${INCONSOLATADIR}/lib/X11/fonts/TTF/Inconsolata.otf \
-	${MIGUDIR}/lib/X11/fonts/TTF/Migu-1M-regular.ttf \
-	${MIGUDIR}/lib/X11/fonts/TTF/Migu-1M-bold.ttf
+	${MIGUDIR}/lib/X11/fonts/TTF/migu-1m-regular.ttf \
+	${MIGUDIR}/lib/X11/fonts/TTF/migu-1m-bold.ttf
 
 do-install:
 .for f in ${INSTALL_FONTS}
