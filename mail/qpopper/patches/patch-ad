@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.5 2006/01/08 17:34:47 joerg Exp $
+$NetBSD: patch-ad,v 1.6 2012/03/22 14:13:29 taca Exp $
 
---- popper/pop_init.c.orig	2006-01-08 17:27:18.000000000 +0000
+--- popper/pop_init.c.orig	2011-05-30 19:13:39.000000000 +0000
 +++ popper/pop_init.c
-@@ -211,7 +211,6 @@
- #endif /* HAVE_HSTRERROR */
- #endif /* INET6 */
+@@ -213,7 +213,6 @@
+ #  endif /* HAVE_HSTRERROR */
+ #endif /* not INET6 */
  
 -extern int      errno;
         int      no_rev_lookup;      /*  Avoid reverse lookup? */
