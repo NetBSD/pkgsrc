@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/22 20:20:46 markd Exp $
+share/texmf-dist/doc/latex/logreq/README
+share/texmf-dist/doc/latex/logreq/examples/01-basic.run.xml
+share/texmf-dist/doc/latex/logreq/examples/01-basic.tex
+share/texmf-dist/doc/latex/logreq/examples/02-index.run.xml
+share/texmf-dist/doc/latex/logreq/examples/02-index.tex
+share/texmf-dist/doc/latex/logreq/examples/03-biblatex+bibtex8.run.xml
+share/texmf-dist/doc/latex/logreq/examples/03-biblatex+bibtex8.tex
+share/texmf-dist/doc/latex/logreq/examples/04-biblatex+bibtex+refsections.run.xml
+share/texmf-dist/doc/latex/logreq/examples/04-biblatex+bibtex+refsections.tex
+share/texmf-dist/doc/latex/logreq/examples/05-biblatex+biber.run.xml
+share/texmf-dist/doc/latex/logreq/examples/05-biblatex+biber.tex
