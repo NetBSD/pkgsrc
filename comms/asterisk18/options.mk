@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2012/01/17 06:29:41 jnemeth Exp $
+# $NetBSD: options.mk,v 1.9 2012/03/22 03:43:42 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -44,11 +44,6 @@ CONFIGURE_ARGS+=	--without-unixodbc
 .endif
 
 .if !empty(PKG_OPTIONS:Milbc)
-DISTFILES+=		rfc3951.txt
-SITES.rfc3951.txt=	http://www.ietf.org/rfc/
-DISTFILES+=		extract-cfile.txt
-SITES.extract-cfile.txt=	http://www.ilbcfreeware.org/documentation/
-USE_TOOLS+=		awk tr
 PLIST.ilbc=		yes
 .endif
 
@@ -82,13 +77,6 @@ post-configure:
 	# this is a hack to work around a bug in menuselect
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
 	cd ${WRKSRC} && make menuselect.makeopts
-
-post-extract:
-.if !empty(PKG_OPTIONS:Milbc)
-	cp ${DISTDIR}/${DIST_SUBDIR}/rfc3951.txt ${WRKSRC}/codecs/ilbc
-	cp ${DISTDIR}/${DIST_SUBDIR}/extract-cfile.txt ${WRKSRC}/codecs/ilbc
-	cd ${WRKSRC}/codecs/ilbc && ${TR} -d '\r' < extract-cfile.txt | ${AWK} -f - rfc3951.txt
-.endif
 
 .if !empty(PKG_OPTIONS:Mwebvmail)
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
