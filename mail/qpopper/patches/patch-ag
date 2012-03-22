@@ -1,17 +1,17 @@
-$NetBSD: patch-ag,v 1.8 2001/06/10 15:08:41 taca Exp $
+$NetBSD: patch-ag,v 1.9 2012/03/22 14:13:29 taca Exp $
 
---- man/popper.8.orig	Wed Apr  4 09:23:13 2001
+--- man/popper.8.orig	2011-05-30 19:13:39.000000000 +0000
 +++ man/popper.8
 @@ -19,7 +19,7 @@
  .SH NAME
- qpopper \-\- POP3 server (v4.0)
+ qpopper \-\- POP3 server (v4.1)
  .SH SYNOPSIS
 -.B /usr/local/lib/popper
-+.B /usr/local/lib/qpopper
++.B @PREFIX@/libexec/qpopper
  [
  .I [ address ]
  .I [ ":" ]
-@@ -800,7 +803,7 @@
+@@ -829,7 +829,7 @@ Connection closed by foreign host.
  .PP
  The server implements several extended commands.
  .PP

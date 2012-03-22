@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.6 2009/12/27 14:17:38 obache Exp $
+$NetBSD: patch-am,v 1.7 2012/03/22 14:13:29 taca Exp $
 
---- popper/Makefile.in.orig	2006-03-09 22:32:37.000000000 +0000
+--- popper/Makefile.in.orig	2011-05-30 19:13:39.000000000 +0000
 +++ popper/Makefile.in
-@@ -86,6 +86,7 @@ CC              =   @CC@
+@@ -99,6 +99,7 @@ CC              =   @CC@
  GPERF           =   @GPERF@
  MAKEFILE        =   Makefile
  INSTALL         =   @INSTALL@
@@ -10,7 +10,7 @@ $NetBSD: patch-am,v 1.6 2009/12/27 14:17:38 obache Exp $
  
  @SET_MAKE@
  
-@@ -96,6 +97,8 @@ VPATH           =   @srcdir@
+@@ -109,6 +110,8 @@ VPATH           =   @srcdir@
  prefix          =   @prefix@
  exec_prefix     =   @exec_prefix@
  installdir      =   @sbindir@
@@ -19,7 +19,7 @@ $NetBSD: patch-am,v 1.6 2009/12/27 14:17:38 obache Exp $
  
  popper_srcdir   =   ${top_srcdir}/popper
  qd_srcdir       =   ${top_srcdir}/qd
-@@ -114,17 +117,20 @@ password_dir    =   ${base_dir}/password
+@@ -127,7 +130,7 @@ password_dir    =   ${base_dir}/password
  
  
  OBJS            =   pop_dele.o pop_dropcopy.o \
@@ -28,31 +28,19 @@ $NetBSD: patch-am,v 1.6 2009/12/27 14:17:38 obache Exp $
                      pop_last.o pop_list.o pop_log.o pop_lower.o \
                      pop_msg.o pop_parse.o pop_pass.o pop_quit.o \
                      pop_rset.o pop_send.o pop_stat.o pop_updt.o \
-                     pop_user.o pop_xtnd.o pop_xmit.o popper.o \
--                    pop_bull.o xtnd_xlst.o pop_uidl.o mktemp.o \
-+                    pop_bull.o xtnd_xlst.o pop_uidl.o \
-                     pop_rpop.o pop_apop.o md5.o pop_auth.o pop_pope.o \
-                     pop_extend.o scram.o hmac.o base64.o pop_util.o \
+@@ -137,7 +140,10 @@ OBJS            =   pop_dele.o pop_dropc
+                     pop_extend.o scram.o hmac.o pop_util.o \
                      get_sub_opt.o msg_ptr.o drac.o pop_config.o pop_tls.o \
                      pop_tls_openssl.o pop_tls_sslplus.o sslplus_utils.o \
--                    main.o pop_cache.o genpath.o 
-+                    pop_cache.o genpath.o 
+-                    main.o pop_cache.o genpath.o pop_sasl.o
++                    pop_cache.o genpath.o pop_sasl.o
 +
 +INETDOBJ	=   main.o pop_init.o
 +STANDOBJ	=   main-stand.o pop_init-stand.o
  
  SRCS            =   pop_dele.c pop_dropcopy.c \
                      pop_get_command.c pop_get_subcommand.c pop_init.c \
-@@ -132,7 +138,7 @@ SRCS            =   pop_dele.c pop_dropc
-                     pop_msg.c pop_parse.c pop_pass.c pop_quit.c \
-                     pop_rset.c pop_send.c pop_stat.c pop_updt.c \
-                     pop_user.c pop_xtnd.c pop_xmit.c popper.c \
--                    pop_bull.c xtnd_xlst.c pop_uidl.c mktemp.c \
-+                    pop_bull.c xtnd_xlst.c pop_uidl.c \
-                     pop_rpop.c pop_apop.c md5.c pop_auth.c pop_pope.c \
-                     pop_extend.c scram.c hmac.c base64.c pop_util.c \
-                     get_sub_opt.c msg_ptr.c drac.c pop_config.c pop_tls.c \
-@@ -181,7 +187,7 @@ USE_PAM         =   @USE_PAM@
+@@ -198,7 +204,7 @@ pam_sample      =   ${top_srcdir}/sample
  
  .SUFFIXES: .c .o
  
@@ -61,29 +49,31 @@ $NetBSD: patch-am,v 1.6 2009/12/27 14:17:38 obache Exp $
  
  mangler_library: 
  	cd ${mmangle_dir} && ${MAKE} all
-@@ -189,13 +195,18 @@ mangler_library: 
+@@ -206,14 +212,20 @@ mangler_library: 
  common_library:
  	cd ${common_dir} && ${MAKE} all
  
--popper: ${OBJS} mangler_library common_library
--	${CC}   ${OBJS} -o popper ${mmangle_dir}/libmangle.a \
-+popper: ${INETDOBJ} ${OBJS} mangler_library common_library
-+	${CC}   ${INETDOBJ} ${OBJS} -o popper ${mmangle_dir}/libmangle.a \
+-popper: ${OBJS} ${MISSING_OBJS} mangler_library common_library
+-	${CC}   ${OBJS} ${MISSING_OBJS} -o popper \
++popper: ${INETDOBJ} ${OBJS} ${MISSING_OBJS} mangler_library common_library
++	${CC}   ${INETDOBJ} ${OBJS} ${MISSING_OBJS} -o popper \
++	        ${mmangle_dir}/libmangle.a \
++	        -I${common_srcdir} ${common_dir}/libcommon.a \
++	        ${LIBS} ${LDFLAGS}
++
++popper-standalone: ${STANDOBJ} ${OBJS} ${MISSING_OBJS} mangler_library common_library
++	${CC}   ${STANDOBJ} ${OBJS} ${MISSING_OBJS} -o popper-standalone \
+ 	        ${mmangle_dir}/libmangle.a \
  	        -I${common_srcdir} ${common_dir}/libcommon.a \
  	        ${LIBS} ${LDFLAGS}
  
-+popper-standalone: ${STANDOBJ} ${OBJS} mangler_library common_library
-+	${CC}   ${STANDOBJ} ${OBJS} -o popper-standalone \
-+		${mmangle_dir}/libmangle.a -I${common_srcdir} \
-+		${common_dir}/libcommon.a ${LIBS}
-+
- popauth: ${POPAUTHOBJS}
--	${CC}  -o popauth ${POPAUTHOBJS} ${NETWORK_LIBS} ${DBM_LIBS} \
-+	${CC}  -o popauth ${POPAUTHOBJS} ${LIBS} ${NETWORK_LIBS} ${DBM_LIBS} \
+ popauth: ${POPAUTHOBJS} ${MISSING_OBJS}
+-	${CC}  -o popauth ${POPAUTHOBJS} ${NETWORK_LIBS} \
++	${CC}  -o popauth ${POPAUTHOBJS} ${LIBS} ${NETWORK_LIBS} \
+ 	       ${DBM_LIBS} ${MISSING_OBJS} \
  		${common_dir}/libcommon.a
  
- poppassd: common_library
-@@ -206,22 +217,35 @@ poppassd: common_library
+@@ -225,47 +237,36 @@ poppassd: common_library
  	        -I${mmangle_srcdir} -I${common_srcdir} ${SSL_INC} \
  	        ${CFLAGS} ${DEFS} ${CDEFS} ${OS_DEFS} $< -o $@
  
@@ -101,32 +91,53 @@ $NetBSD: patch-am,v 1.6 2009/12/27 14:17:38 obache Exp $
 +
  ${SRCS}:
  ${POPAUTHSRCS}:
+ ${MISSING_SRCS}:
  
--install: popper ${pop_auth}
--	${INSTALL} -s -m 0755 -o root popper ${installdir}/popper
--	echo "Installed popper as ${installdir}/popper"
--	if [ "x${poppassd}" != "x" ]; then \
--	    cd ${password_dir} && ${MAKE} $@ ;\
-+install: popper popper-standalone ${pop_auth}
+ install: popper ${pop_auth}
+-	@if [ ! -d ${installdir} ]; then \
+-		${base_dir}/mkdir-sh "${installdir}" "0755" "root:wheel" ; \
+-	fi
+-
+-	@${INSTALL} -s -m 0755 -o root popper ${installdir}/popper
+-	@echo "Installed popper as ${installdir}/popper"
 +	${BSD_INSTALL_PROGRAM} popper ${DESTDIR}${libexecdir}/qpopper
-+	echo "Installed popper as ${libexecdir}/qpopper"
++	@echo "Installed popper as ${libexecdir}/qpopper"
 +	${BSD_INSTALL_PROGRAM} popper-standalone ${DESTDIR}${sbindir}/qpopper
 +	@echo "Installed standalone popper as ${sbindir}/qpopper"
-+	@if [ "x${pop_auth}" != "x" ]; then \
-+		${BSD_INSTALL_PROGRAM} ${pop_auth} \
-+			${DESTDIR}${sbindir}/q${pop_auth}; \
-+		echo "Installed popauth as ${sbindir}/q${pop_auth} " \
-+			"with uid ${apop_uid}"; \
+ 
+ 	@if [ "x${poppassd}" != "x" ]; then \
+ 		cd ${password_dir} && ${MAKE} install ;\
  	fi
  
--	if [ "x${pop_auth}" != "x" ]; then \
--	    ${INSTALL} -s -m 4755 -o ${apop_uid} -g 0 ${pop_auth} \
--	               ${installdir}/${pop_auth}; \
--	    echo "Installed popauth as ${installdir}/${pop_auth} " \
--	         "with uid ${apop_uid}"; \
--	    ${installdir}/${pop_auth} -init -safe; \
-+	if [ "x${poppassd}" != "x" ]; then \
-+	    cd ${password_dir} && ${MAKE} $@ ;\
+-	@if [ "x${pop_auth}" != "x" ]; then                         \
+-		${INSTALL} -s -m 4755 -o ${apop_uid} -g 0 ${pop_auth}   \
+-			${installdir}/${pop_auth};                          \
+-		echo "Installed popauth as ${installdir}/${pop_auth} "  \
+-	          "with uid ${apop_uid}";                           \
+-	    if [ "x${apop_dir}" != "x" ]; then                      \
+-	        if [ ! -d "${apop_dir}" ]; then                     \
+-	            ${base_dir}/mkdir-sh "${apop_dir}" "0700" "${apop_uid}:0" ; \
+-	            echo "Created directory ${apop_dir}" ;          \
+-	        fi                                                  \
+-	    fi ;                                                    \
+-	    echo "Initializing popauth database";                   \
+-	    ${installdir}/${pop_auth} -init -safe;                  \
+-	fi
+-
+-	@if [ "x${USE_PAM}" != "x" ]; then                          \
+-		echo "Checking for pam.d file...";                      \
+-		if [ ! -e ${pam_file} ]; then                           \
+-			if [ -e ${pam_sample} ]; then                       \
+-				${INSTALL} -m 0444 -o root ${pam_sample} ${pam_file} ; \
+-				echo "Created ${pam_file}";                     \
+-			else                                                \
+-				echo "can't find ${pam_sample} file";           \
+-			fi                                                  \
+-		fi                                                      \
++	@if [ "x${pop_auth}" != "x" ]; then                          \
++		${BSD_INSTALL_PROGRAM} ${pop_auth}		     \
++			${DESTDIR}${sbindir}/q${pop_auth};           \
++		echo "Installed popauth as ${sbindir}/q${pop_auth}" ;\
  	fi
  
- 	if [ "x${USE_PAM}" != "x" ]; then     \
+ clean:
