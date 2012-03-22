@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2011/04/14 21:47:24 hans Exp $
+# $NetBSD: Makefile.common,v 1.10 2012/03/22 11:28:38 hans Exp $
 
 DISTNAME=		cdrdao-${CDRDAO_VER}
 CATEGORIES=		sysutils
@@ -29,6 +29,10 @@ LDFLAGS.SunOS=		-lvolmgt -lnsl
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=--with-scglib
+.endif
+
+.if !empty(CC:M*gcc*)
+MAKE_ENV+=	CCOM=gcc
 .endif
 
 # override ARCH to avoid picking up a bad ${ARCH} during the build
