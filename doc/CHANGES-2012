@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.975 2012/03/22 15:43:37 sno Exp $
+$NetBSD: CHANGES-2012,v 1.976 2012/03/22 15:51:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1630,3 +1630,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed www/contao29-example [taca 2012-03-22]
 	Removed www/contao29 [taca 2012-03-22]
 	Updated devel/p5-MetaCPAN-API to 0.42 [sno 2012-03-22]
+	Updated devel/p5-Module-Build to 0.40000 [sno 2012-03-22]
