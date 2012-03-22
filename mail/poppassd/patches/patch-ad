@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/10/20 14:18:42 taca Exp $
+$NetBSD: patch-ad,v 1.2 2012/03/22 14:15:32 taca Exp $
 
---- config.h.in.orig	2004-10-20 14:19:23.413009000 +0900
+--- config.h.in.orig	2011-05-30 19:13:39.000000000 +0000
 +++ config.h.in
-@@ -58,6 +58,9 @@
+@@ -66,6 +66,9 @@
  /* Define if you don't have vprintf but do have _doprnt.  */
  #undef HAVE_DOPRNT
  
