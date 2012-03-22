@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.941 2012/03/21 23:05:27 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.942 2012/03/22 03:43:53 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1583,3 +1583,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/digikam to 2.5.0 [markd 2012-03-21]
 	Updated databases/percona-toolkit to 2.0.4 [mspo 2012-03-21]
 	Updated editors/emacs-snapshot to 24.0.94.20120319 [minskim 2012-03-21]
+	Updated comms/asterisk18 to 1.8.10.1 [jnemeth 2012-03-22]
