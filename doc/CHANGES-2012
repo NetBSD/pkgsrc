@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.959 2012/03/22 13:27:29 sno Exp $
+$NetBSD: CHANGES-2012,v 1.960 2012/03/22 13:28:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1612,3 +1612,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-IO-Compress to 2.049 [sno 2012-03-22]
 	Updated devel/p5-Error to 0.17017 [sno 2012-03-22]
 	Updated devel/p5-Eval-Closure to 0.08 [sno 2012-03-22]
+	Updated www/fengoffice to 2.0.0 [taca 2012-03-22]
