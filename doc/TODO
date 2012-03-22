@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10972 2012/03/22 22:40:33 asau Exp $
+$NetBSD: TODO,v 1.10973 2012/03/22 23:00:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1417,6 +1417,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-tga-1.2.1
 	o xf86-video-trident-1.3.4
 	o xf86-video-tseng-1.2.4
+	o xf86-video-vesa-2.3.1
 	o xf86-video-vmware-12.0.2
 	o xf86-video-voodoo-1.2.4
 	o xf86-video-wsfb-0.4.0
