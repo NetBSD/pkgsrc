@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2009/10/11 09:55:38 sno Exp $
+$NetBSD: distinfo,v 1.12 2012/03/22 09:10:31 sno Exp $
 
-SHA1 (Bit-Vector-7.1.tar.gz) = de2ffdae784ea061689f424dca56b27a55b50cd5
-RMD160 (Bit-Vector-7.1.tar.gz) = 3d092f47596435b56400aa8c52da1291df4fe8a6
-Size (Bit-Vector-7.1.tar.gz) = 129871 bytes
+SHA1 (Bit-Vector-7.2.tar.gz) = 1e7b17a58a9af688263f8aca4c58a292255b4dcc
+RMD160 (Bit-Vector-7.2.tar.gz) = 1f13fa1fe839af540553d71297284cfdcfd5704d
+Size (Bit-Vector-7.2.tar.gz) = 137817 bytes
