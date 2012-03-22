@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/09/16 02:26:44 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/22 14:25:25 taca Exp $
 #
 
 PKGNAME=	ec2-ami-tools-1.3.57676
 DISTNAME=	ec2-ami-tools-1.3-57676
-PKGREVISION=	1
+PKGREVISION=	2
 
 .include "../../misc/ec2-api-tools/Makefile.common"
 
