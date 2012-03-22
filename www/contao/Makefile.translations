@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.translations,v 1.1 2011/08/12 12:46:42 taca Exp $
+# $NetBSD: Makefile.translations,v 1.2 2012/03/22 14:59:38 taca Exp $
 #
-# used by www/contao29-translations/Makefile
-# used by www/contao210-translations/Makefile
+#used by www/contao210-translations/Makefile
 #
 
 DISTNAME=	contao${CT_VER}-translations-${VERS}
