@@ -1,0 +1,4 @@
+The package that facilitates expressive syntax highlighting in
+LaTeX using the powerful Pygments library. The package also
+provides options to customize the highlighted source code
+output using fancyvrb.
