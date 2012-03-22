@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2012/03/22 14:01:03 sno Exp $
+
+--- Fast.xs.orig	2012-02-13 01:44:50.000000000 +0000
++++ Fast.xs
+@@ -130,7 +130,11 @@ static sv_clone_t sv_clone_table[] = {
+ #endif
+ 	(sv_clone_t)clone_sv,   // SVt_IV
+ 	(sv_clone_t)clone_sv,   // SVt_NV
++#if PERL_VERSION < 11
+ 	(sv_clone_t)clone_rv,   // SVt_RV
++#else
++	(sv_clone_t)clone_sv,   // SVt_IV
++#endif
+ 	(sv_clone_t)clone_sv,   // SVt_PV
+ 	(sv_clone_t)clone_sv,   // SVt_PVIV
+ 	(sv_clone_t)clone_sv,   // SVt_PVNV
