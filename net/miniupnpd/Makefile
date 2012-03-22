@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2010/05/11 08:53:29 roy Exp $
+# $NetBSD: Makefile,v 1.6 2012/03/22 12:56:51 obache Exp $
 #
 
-DISTNAME=	miniupnpd-1.4.20100308
+DISTNAME=	miniupnpd-1.6.20120320
 CATEGORIES=	net
 MASTER_SITES=	http://miniupnp.free.fr/files/download.php?file=
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://miniupnp.free.fr/
 COMMENT=	UPnP IGD service with NAT-PMP support
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
