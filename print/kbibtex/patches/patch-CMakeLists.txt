@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2012/03/22 07:06:25 markd Exp $
+
+Correct man path for pkgsrc
+
+--- CMakeLists.txt.orig	2011-06-02 09:38:01.000000000 +0000
++++ CMakeLists.txt
+@@ -2,7 +2,7 @@ project( kbibtex )
+ 
+ cmake_minimum_required(VERSION 2.6)
+ 
+-set(MANDIR "share/man" CACHE STRING "Where to install manpages")
++set(MANDIR "man" CACHE STRING "Where to install manpages")
+ 
+ find_package( Qt4 REQUIRED )
+ find_package( KDE4 REQUIRED )
