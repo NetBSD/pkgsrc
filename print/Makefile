@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.528 2012/03/22 08:23:42 markd Exp $
+# $NetBSD: Makefile,v 1.529 2012/03/22 20:23:34 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -185,6 +185,8 @@ SUBDIR+=	tex-beton
 SUBDIR+=	tex-beton-doc
 SUBDIR+=	tex-bezos
 SUBDIR+=	tex-bezos-doc
+SUBDIR+=	tex-biblatex
+SUBDIR+=	tex-biblatex-doc
 SUBDIR+=	tex-bibtex
 SUBDIR+=	tex-bibtex-doc
 SUBDIR+=	tex-bibtex8
@@ -442,6 +444,8 @@ SUBDIR+=	tex-listing
 SUBDIR+=	tex-listing-doc
 SUBDIR+=	tex-listings
 SUBDIR+=	tex-listings-doc
+SUBDIR+=	tex-logreq
+SUBDIR+=	tex-logreq-doc
 SUBDIR+=	tex-ltxmisc
 SUBDIR+=	tex-luatex
 SUBDIR+=	tex-luatex-doc
