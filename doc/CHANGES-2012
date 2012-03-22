@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.989 2012/03/22 20:49:07 asau Exp $
+$NetBSD: CHANGES-2012,v 1.990 2012/03/22 21:44:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1647,3 +1647,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/tex-logreq version 1.0 [markd 2012-03-22]
 	Added print/tex-logreq-doc version 1.0 [markd 2012-03-22]
 	Updated lang/polyml to 5.4.1 [asau 2012-03-22]
+	Updated textproc/doclifter to 2.3nb4 [wiz 2012-03-22]
