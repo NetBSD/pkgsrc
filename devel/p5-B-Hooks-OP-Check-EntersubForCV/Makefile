@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/15 16:05:35 sno Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/22 08:54:49 sno Exp $
 
-DISTNAME=	B-Hooks-OP-Check-EntersubForCV-0.08
+DISTNAME=	B-Hooks-OP-Check-EntersubForCV-0.09
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
@@ -11,9 +11,12 @@ COMMENT=	Perl 5 module to invoke callbacks on construction of entersub OPs for c
 LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
-DEPENDS+=	p5-parent>0:../../devel/p5-parent
+DEPENDS+=	p5-B-Utils>=0.19:../../devel/p5-B-Utils
+# requires parent, Scalar::Util
+PERL5_REQD+=	5.10.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Hooks/OP/Check/EntersubForCV/.packlist
