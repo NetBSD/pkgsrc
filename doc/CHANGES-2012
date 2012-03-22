@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.951 2012/03/22 11:52:00 obache Exp $
+$NetBSD: CHANGES-2012,v 1.952 2012/03/22 12:30:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1604,3 +1604,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_base to 12.1nb1 [obache 2012-03-22]
 	Updated emulators/suse121_gtk2 to 12.1nb1 [obache 2012-03-22]
 	Updated emulators/suse121_glx to 12.1nb1 [obache 2012-03-22]
+	Updated net/darkstat to 3.0.715 [obache 2012-03-22]
