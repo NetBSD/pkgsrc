@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10967 2012/03/22 05:27:51 markd Exp $
+$NetBSD: TODO,v 1.10968 2012/03/22 07:52:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -385,6 +385,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o appres-1.0.3 [pkg/45526]
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
+	o aranym-0.9.12
 	o argtable-2.9
 	o aria2-1.14.2
 	o arirang-1.70
@@ -559,11 +560,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o eterm-0.9.6
-	o etm-889
+	o etm-890
 	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evieext-1.1.1
-	o evince-3.2.1
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-exchange-2.32.2
@@ -631,6 +631,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-winitzki-cyrillic-1.0.3 [pkg/45549]
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontsproto-2.1.1
+	o fossil-1.22
 	o fotoxx-12.03
 	o fox-1.6.41
 	o freeciv-2.3.1
@@ -749,7 +750,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gutenprint-5.2.7
 	o gv-3.7.3
 	o gvfs-1.6.7
-	o gwaei-3.4.0
+	o gwaei-3.4.1
 	o gworkspace-0.9.0
 	o gxine-0.5.906
 	o gzip-1.4
@@ -812,12 +813,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o jpilot-1.8.0
 	o jpilot-syncmal-0.81
 	o jwm-2.1.0
-	o k3b-2.0.2
 	o kadu-0.11.1
 	o kaffe-1.1.9
 	o kaffeine-0.8.7
 	o kapooka-0.3
-	o kbibtex-0.2.2
 	o kbiff-4.0
 	o kdbg-2.5.1
 	o kde4-4.8.1
@@ -831,7 +830,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o knights-2.4.0
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
-	o kronolith-3.0.15
+	o kronolith-3.0.16
 	o krusader-2.0
 	o ktorrent-4.1.3
 	o ktorrent3-3.3.4
@@ -930,7 +929,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxklavier-5.2.1
 	o licq-1.3.8
 	o liferea-1.8.2
-	o liferea-current-1.6.8
 	o lighttpd-1.4.30
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
@@ -953,6 +951,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
+	o mc-4.8.1.1
 	o mediawiki-1.18.1
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -1003,6 +1002,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ne-2.01
 	o nessus-4.4.1
 	o net-snmp-5.7.1
+	o netcdf-4.2
 	o netramet-50
 	o newmail-1.0.2
 	o newt-0.52.12
@@ -1084,9 +1084,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pkg-config-0.26 [wip]
 	o pks-0.9.6
 	o planner-0.14.6
-	o plone-3.2.3 [should make plone-32?]
-	o plone-3.3.4
-	o plone-4.1.3
 	o ploticus-2.41
 	o ploticus-examples-230
 	o po4a-0.41
@@ -1111,7 +1108,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o puppet-2.7.6
 	o puzzle-9173
 	o puzzles-9411
-	o pv-1.1.4
+	o pv-1.2.0
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
 	o py-HappyDoc-3.0
@@ -1424,7 +1421,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-tga-1.2.1
 	o xf86-video-trident-1.3.4
 	o xf86-video-tseng-1.2.4
-	o xf86-video-vmware-12.0.1
+	o xf86-video-vmware-12.0.2
 	o xf86-video-voodoo-1.2.4
 	o xf86-video-wsfb-0.4.0
 	o xf86-video-xgi-1.6.0 [unpackaged]
@@ -1442,7 +1439,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xgamma-1.0.4
 	o xhippo-3.5
 	o xhost-1.0.4
-	o xine-lib-1.2.1
 	o xineramaproto-1.2.1
 	o xinit-1.3.2
 	o xinput-1.5.4
@@ -1515,11 +1511,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
-	o zile-2.4.6
+	o zile-2.4.7
 	o zircon-1.18.256
 	o zoom-1.1.3
-	o zope213-2.13.7
-	o zope34-3.4.1
 	o zopeedit-0.8
 
 Infrastructure problems which need addressing
