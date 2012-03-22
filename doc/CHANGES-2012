@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.950 2012/03/22 11:50:53 obache Exp $
+$NetBSD: CHANGES-2012,v 1.951 2012/03/22 11:52:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1603,3 +1603,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added print/tex-minted-doc version 1.7 [markd 2012-03-22]
 	Updated emulators/suse121_base to 12.1nb1 [obache 2012-03-22]
 	Updated emulators/suse121_gtk2 to 12.1nb1 [obache 2012-03-22]
+	Updated emulators/suse121_glx to 12.1nb1 [obache 2012-03-22]
