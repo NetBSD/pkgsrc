@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/03/22 06:12:10 markd Exp $
+
+--- libk3b/jobs/k3bdatatrackreader.cpp.orig	2007-06-24 06:35:52.000000000 +1200
++++ libk3b/jobs/k3bdatatrackreader.cpp
+@@ -219,7 +219,11 @@ void K3bDataTrackReader::WorkThread::run
+   //
+   m_device->setSpeed( 0xffff, 0xffff );
+ 
++#ifdef __NetBSD__
++  s_bufferSizeSectors = 31;
++#else
+   s_bufferSizeSectors = 128;
++#endif
+   unsigned char* buffer = new unsigned char[m_usedSectorSize*s_bufferSizeSectors];
+   while( s_bufferSizeSectors > 0 && read( buffer, m_firstSector.lba(), s_bufferSizeSectors ) < 0 ) {
+     kdDebug() << "(K3bDataTrackReader) determine max read sectors: "

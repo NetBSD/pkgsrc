@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/03/22 06:12:10 markd Exp $
+
+--- src/projects/k3bencodingconverter.cpp.orig	2007-03-17 08:04:05.000000000 +1300
++++ src/projects/k3bencodingconverter.cpp
+@@ -62,7 +62,7 @@ bool K3bEncodingConverter::encodedLocall
+ {
+ #ifdef HAVE_ICONV_H
+   QCString utf8Encoded( s.length()*2 );
+-#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
++#if (defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)) && !defined(__DragonFly__)
+   const char* in = s.data();
+ #else
+   char* in = s.data();
+@@ -111,7 +111,7 @@ bool K3bEncodingConverter::convert( cons
+   iconv_t ic = ::iconv_open( to.local8Bit(), from.local8Bit() );
+ 
+   result.resize( s.length() * 2 );
+-#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
++#if (defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)) && !defined(__DragonFly__)
+   const char* in = s.data();
+ #else
+   char* in = s.data();
