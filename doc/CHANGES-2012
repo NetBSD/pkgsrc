@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.962 2012/03/22 13:37:44 sno Exp $
+$NetBSD: CHANGES-2012,v 1.963 2012/03/22 13:40:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1615,3 +1615,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/fengoffice to 2.0.0 [taca 2012-03-22]
 	Updated devel/p5-ExtUtils-ParseXS to 3.15 [sno 2012-03-22]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.62 [sno 2012-03-22]
+	Updated devel/p5-CPAN-Meta-YAML to 0.008 [sno 2012-03-22]
