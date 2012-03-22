@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2010/03/14 14:06:09 adam Exp $
+$NetBSD: patch-aa,v 1.12 2012/03/22 16:54:25 adam Exp $
 
---- Makefile.in.orig	2009-06-24 22:09:05.000000000 +0000
+--- Makefile.in.orig	2011-02-05 17:35:31.000000000 +0000
 +++ Makefile.in
-@@ -278,7 +278,7 @@ P=
+@@ -357,7 +357,7 @@ P=
  prefix=@prefix@
  exec_prefix=@exec_prefix@
  bindir=@bindir@
@@ -11,16 +11,28 @@ $NetBSD: patch-aa,v 1.11 2010/03/14 14:06:09 adam Exp $
  MANSECT=1
  DESTBIN=${DESTDIR}${bindir}
  DESTMAN=${DESTDIR}${mandir}/man${MANSECT}
-@@ -512,17 +512,10 @@ vgrind:
+@@ -449,7 +449,7 @@ pure:$(P) ${OBJS} 
+ 
+ gethost:  gethost.c sh.err.h tc.const.h sh.h
+ 	rm -f gethost
+-	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} $(srcdir)/gethost.c
++	${CC_FOR_GETHOST} -o gethost ${CPPFLAGS} ${LDFLAGS} $(srcdir)/gethost.c
+ 
+ tc.defs.c:	gethost host.defs
+ 	@rm -f $@.tmp
+@@ -596,20 +596,13 @@ vgrind:
  install-strip: install
  
- install: tcsh$(EXEEXT) 
+ install: tcsh$(EXEEXT) install.catalogs install.man
 -	-mkdir -p ${DESTBIN}
 -	-mv -f ${DESTBIN}/tcsh$(EXEEXT)  ${DESTBIN}/tcsh.old
 -	cp tcsh$(EXEEXT) ${DESTBIN}/tcsh$(EXEEXT)
 -	-strip ${DESTBIN}/tcsh$(EXEEXT)
 -	chmod 755 ${DESTBIN}/tcsh$(EXEEXT)
 +	${BSD_INSTALL_PROGRAM} tcsh${EXEEXT} ${DESTBIN}/tcsh${EXEEXT}
+ 
+ install.catalogs:
+ 	@test "x${BUILD_CATALOGS}" = "xyes" && (cd nls; ${MAKE} install DESTDIR=${DESTDIR}) || exit 0
  
  install.man: tcsh.man
 -	-mkdir -p ${DESTMAN}
@@ -29,5 +41,5 @@ $NetBSD: patch-aa,v 1.11 2010/03/14 14:06:09 adam Exp $
 -	chmod 444 ${DESTMAN}/tcsh.${MANSECT}
 +	${BSD_INSTALL_MAN} tcsh.man ${DESTMAN}/tcsh.${MANSECT}
  
- install.cygwin: install install.man
- 	-mkdir -p ${DESTDIR}${prefix}/share/doc/tcsh
+ # Amiga Unix
+ #install.man: tcsh.man
