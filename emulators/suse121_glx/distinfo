@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:36:48 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/03/22 11:51:48 obache Exp $
 
 SHA1 (suse121/Mesa-7.11-11.1.2.i586.rpm) = 90cc66c14d3a2456f33afb98deb1993c638feb54
 RMD160 (suse121/Mesa-7.11-11.1.2.i586.rpm) = 41ba14436632183920d33ca3dfd9d8052ed2425e
@@ -6,3 +6,9 @@ Size (suse121/Mesa-7.11-11.1.2.i586.rpm) = 15425294 bytes
 SHA1 (suse121/Mesa-7.11-11.1.2.x86_64.rpm) = eb06df66ebb802b1438c0c30585f04f866c41ed6
 RMD160 (suse121/Mesa-7.11-11.1.2.x86_64.rpm) = 1fa54d8b7c70e5e944fa6ac35e69823685889ed2
 Size (suse121/Mesa-7.11-11.1.2.x86_64.rpm) = 14937940 bytes
+SHA1 (suse121/libudev0-173-3.3.1.i586.rpm) = 75337f631dee6aa4aecd3db402bd5f3b571afd15
+RMD160 (suse121/libudev0-173-3.3.1.i586.rpm) = 4051bf1c9e6772343bf7fb5a81cccbd24f0815cd
+Size (suse121/libudev0-173-3.3.1.i586.rpm) = 39401 bytes
+SHA1 (suse121/libudev0-173-3.3.1.x86_64.rpm) = a8f2c97931dcb73a3b5dbbbf9a55c521975ac5bf
+RMD160 (suse121/libudev0-173-3.3.1.x86_64.rpm) = 2ba4186f5b24d5563bac3176a8ee29550f99c5ec
+Size (suse121/libudev0-173-3.3.1.x86_64.rpm) = 37396 bytes
