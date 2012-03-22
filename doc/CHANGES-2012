@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.942 2012/03/22 03:43:53 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.943 2012/03/22 05:27:51 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1581,6 +1581,12 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/libmediawiki version 2.5.0 [markd 2012-03-21]
 	Updated graphics/kipi-plugins to 2.5.0 [markd 2012-03-21]
 	Updated graphics/digikam to 2.5.0 [markd 2012-03-21]
+	Added editors/texworks version 0.4.3 [markd 2012-03-21]
+	Added editors/kile-kde3 version 2.0.2nb11 [markd 2012-03-21]
+	Updated editors/kile to 2.1.1 [markd 2012-03-21]
+	Added devel/kdiff3-kde3 version 0.9.91nb12 [markd 2012-03-21]
+	Updated devel/kdiff3 to 0.9.96 [markd 2012-03-21]
+	Added sysutils/k4dirstat version 2.7.3 [markd 2012-03-21]
 	Updated databases/percona-toolkit to 2.0.4 [mspo 2012-03-21]
 	Updated editors/emacs-snapshot to 24.0.94.20120319 [minskim 2012-03-21]
 	Updated comms/asterisk18 to 1.8.10.1 [jnemeth 2012-03-22]
