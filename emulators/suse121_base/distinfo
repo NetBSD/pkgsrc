@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:35:50 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/03/22 11:49:19 obache Exp $
 
 SHA1 (suse121/aaa_base-12.1-534.107.1.i586.rpm) = 20a43c2c588cc88df835ca49ec844cb31ea08004
 RMD160 (suse121/aaa_base-12.1-534.107.1.i586.rpm) = e4e0cb09c7b64a5b3e47dfe2df4e874dd48253ce
@@ -132,6 +132,12 @@ Size (suse121/libsndfile-1.0.25-6.1.2.i586.rpm) = 151858 bytes
 SHA1 (suse121/libsndfile-1.0.25-6.1.2.x86_64.rpm) = 19dde664e1680f2155e2c1f1542d1120b7f84ada
 RMD160 (suse121/libsndfile-1.0.25-6.1.2.x86_64.rpm) = 688437ed8ce18a536654f938e24dc0312b22f6c7
 Size (suse121/libsndfile-1.0.25-6.1.2.x86_64.rpm) = 140496 bytes
+SHA1 (suse121/libspeex1-1.1.999_1.2rc1-12.1.2.i586.rpm) = eec73e56450fd53fced3aff2cacf51b27e116099
+RMD160 (suse121/libspeex1-1.1.999_1.2rc1-12.1.2.i586.rpm) = 75a10651c37ed6da1952788db5d7f72f9a009b97
+Size (suse121/libspeex1-1.1.999_1.2rc1-12.1.2.i586.rpm) = 48858 bytes
+SHA1 (suse121/libspeex1-1.1.999_1.2rc1-12.1.2.x86_64.rpm) = c1fc49d8ddd435b0d1c30bdfc53fa7f4cd9c8947
+RMD160 (suse121/libspeex1-1.1.999_1.2rc1-12.1.2.x86_64.rpm) = 356b6033373aac4c709f9dca4eadce96894cadbe
+Size (suse121/libspeex1-1.1.999_1.2rc1-12.1.2.x86_64.rpm) = 52286 bytes
 SHA1 (suse121/libssh2-1-1.2.9-7.1.3.i586.rpm) = b991862e1b5063ae14093a6343c9ac7d486b0ee4
 RMD160 (suse121/libssh2-1-1.2.9-7.1.3.i586.rpm) = b72270dffa3baee0ef3217b194b87be09f14efcb
 Size (suse121/libssh2-1-1.2.9-7.1.3.i586.rpm) = 66651 bytes
@@ -156,6 +162,12 @@ Size (suse121/libvorbis0-1.3.2-12.3.1.i586.rpm) = 85248 bytes
 SHA1 (suse121/libvorbis0-1.3.2-12.3.1.x86_64.rpm) = 658f252ad077acd6dd92666557390051d346bc3e
 RMD160 (suse121/libvorbis0-1.3.2-12.3.1.x86_64.rpm) = 85f2c3a834ede53e3df3d27aed9bd77f1cfded48
 Size (suse121/libvorbis0-1.3.2-12.3.1.x86_64.rpm) = 88635 bytes
+SHA1 (suse121/libvorbisenc2-1.3.2-12.3.1.i586.rpm) = eeb54cce85133c2c27c3a0744bec640ba104cd55
+RMD160 (suse121/libvorbisenc2-1.3.2-12.3.1.i586.rpm) = 7403a5d702af66e9f54005da04fc52ef5e0e962c
+Size (suse121/libvorbisenc2-1.3.2-12.3.1.i586.rpm) = 79372 bytes
+SHA1 (suse121/libvorbisenc2-1.3.2-12.3.1.x86_64.rpm) = 54931749bffbb4fe801ab01cdf3e94b3d8f5420f
+RMD160 (suse121/libvorbisenc2-1.3.2-12.3.1.x86_64.rpm) = 268ca7af55f6dc51ba89c95711a6f97a0fcf0a38
+Size (suse121/libvorbisenc2-1.3.2-12.3.1.x86_64.rpm) = 98167 bytes
 SHA1 (suse121/mozilla-nspr-4.8.9-3.1.2.i586.rpm) = efb769d764b56a6283721e92c0c47ff87e0ff267
 RMD160 (suse121/mozilla-nspr-4.8.9-3.1.2.i586.rpm) = dc98d7b5ba6410b38e289616f986ea6c5ff626f4
 Size (suse121/mozilla-nspr-4.8.9-3.1.2.i586.rpm) = 108036 bytes

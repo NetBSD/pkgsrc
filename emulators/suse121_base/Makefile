@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 13:35:50 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/22 11:49:19 obache Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators
 RPMUPDPKGS+=	aaa_base-${SUSE_VERSION}-534.107.1.${SUSE_ARCH}
 RPMPKGS+=	bash-4.2-1.8.1.${SUSE_ARCH}
@@ -24,6 +25,7 @@ RPMPKGS+=	libpcre0-8.13-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libreadline6-6.2-1.8.1.${SUSE_ARCH}
 RPMPKGS+=	libselinux1-2.0.91-14.1.12.${SUSE_ARCH}
 RPMPKGS+=	libsndfile-1.0.25-6.1.2.${SUSE_ARCH}
+RPMPKGS+=	libspeex1-1.1.999_1.2rc1-12.1.2.${SUSE_ARCH}
 RPMPKGS+=	libssh2-1-1.2.9-7.1.3.${SUSE_ARCH}
 RPMPKGS+=	libstdc++46-4.6.2_20111026-1.1.4.${SUSE_ARCH}
 RPMUPDPKGS+=	libuuid1-2.20.1-1.8.1.${SUSE_ARCH}
@@ -32,6 +34,7 @@ RPMPKGS+=	mozilla-nspr-4.8.9-3.1.2.${SUSE_ARCH}
 RPMUPDPKGS+=	mozilla-nss-3.13.1-9.11.1.${SUSE_ARCH}
 RPMPKGS+=	net-tools-1.60-751.1.2.${SUSE_ARCH}
 RPMPKGS+=	tcpd-7.6-870.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libvorbisenc2-1.3.2-12.3.1.${SUSE_ARCH}
 RPMUPDPKGS+=	zlib-1.2.5_git201105272030-20.3.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
