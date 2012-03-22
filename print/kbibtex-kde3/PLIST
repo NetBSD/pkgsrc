@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/22 06:58:08 markd Exp $
+bin/kbibtex
+lib/kde3/libkbibtexpart.la
+man/man1/kbibtex.1
+share/applications/kde/kbibtex.desktop
+share/doc/kde/HTML/en/kbibtex/common
+share/doc/kde/HTML/en/kbibtex/index.cache.bz2
+share/doc/kde/HTML/en/kbibtex/index.docbook
+share/icons/crystalsvg/128x128/apps/kbibtex.png
+share/icons/crystalsvg/16x16/apps/kbibtex.png
+share/icons/crystalsvg/22x22/apps/kbibtex.png
+share/icons/crystalsvg/32x32/apps/kbibtex.png
+share/icons/crystalsvg/48x48/apps/kbibtex.png
+share/icons/crystalsvg/64x64/apps/kbibtex.png
+share/kde/apps/kbibtex/kbibtex_shell.rc
+share/kde/apps/kbibtexpart/kbibtex_part.rc
+share/kde/apps/kbibtexpart/xslt/html.xsl
+share/kde/services/kbibtex_part.desktop
+share/locale/de/LC_MESSAGES/kbibtex.mo
+share/locale/ru/LC_MESSAGES/kbibtex.mo
