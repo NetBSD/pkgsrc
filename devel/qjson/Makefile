@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/20 10:12:24 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/22 21:32:54 wiz Exp $
 
 DISTNAME=	qjson-0.7.1
 CATEGORIES=	devel
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	QJson.pc.in
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
-	cp ${FILESDIR}/* ${WRKSRC}/
+	cp ${FILESDIR}/*.* ${WRKSRC}/
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
