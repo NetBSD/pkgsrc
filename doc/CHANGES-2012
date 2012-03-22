@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.967 2012/03/22 14:01:13 sno Exp $
+$NetBSD: CHANGES-2012,v 1.968 2012/03/22 14:05:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1620,3 +1620,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Class-Autouse to 2.01 [sno 2012-03-22]
 	Updated devel/p5-Class-Base to 0.04 [sno 2012-03-22]
 	Updated devel/p5-Clone-Fast to 0.96 [sno 2012-03-22]
+	Updated devel/p5-Params-Util to 1.07 [sno 2012-03-22]
