@@ -1,0 +1,36 @@
+$NetBSD: patch-doclifter.1,v 1.1 2012/03/22 21:43:35 wiz Exp $
+
+Avoid confusion with real macro calls.
+
+--- doclifter.1.orig	2006-12-25 07:43:35.000000000 +0000
++++ doclifter.1
+@@ -102,8 +102,7 @@ Troff and macro\-package special charact
+ .PP
+ When
+ \fBdoclifter\fR
+-encounters a
+-.so
++encounters a .so
+ directive, it searches for the file. If it can get read access to the file, and open it, and the file consists entirely of command lines and comments, then it is included. If any of these conditions fails, an entity reference for it is generated.
+ .PP
+ \fBdoclifter\fR
+@@ -637,8 +636,7 @@ The
+ .nf
+ and
+ .fi
+-macros are interpreted as literal\-layout boundaries. Calls to the
+-.so
++macros are interpreted as literal\-layout boundaries. Calls to the .so
+ macro either cause inclusion or are translated into XML entity inclusions (see above). Calls to the
+ .ul
+ and
+@@ -782,8 +780,7 @@ cannot be certain how subsections should
+ If you're translating a page that uses user\-defined macros and you get bad output, the first thing to do is simplify or eliminate the user\-defined macros. Replace them with stock requests where possible.
+ .SH "RETURN VALUES"
+ .PP
+-On successful completion, the program returns status 0. It returns 1 if some file or standard input could not be translated. It returns 2 if one of the input sources was a
+-.so
++On successful completion, the program returns status 0. It returns 1 if some file or standard input could not be translated. It returns 2 if one of the input sources was a .so
+ inclusion. It returns 3 if there is an error in reading or writing files. It returns 4 to indicate an internal error. It returns 5 when aborted by a keyboard interrupt.
+ .PP
+ Note that a zero return does not guarantee that the output is valid DocBook. It will almost always (as in, more than 96% of cases) be syntactically valid XML, but in some rare cases fixups by hand may be necessary to meet the semantics of the DocBook DTD. Validation problems are most likely to occur with complicated list markup.
