@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/03/15 11:53:43 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/03/22 22:40:18 asau Exp $
 #
 
-DISTNAME=	cherokee-1.0.5
-PKGREVISION=	3
+DISTNAME=	cherokee-1.2.101
 CATEGORIES=	www
-MASTER_SITES=	http://www.cherokee-project.com/download/1.0/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://www.cherokee-project.com/download/1.2/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cherokee-project.com/
@@ -38,12 +37,15 @@ INSTALLATION_DIRS+=	${EGDIR}/pam.d
 
 .include "options.mk"
 
-# Need to installation
-#TEST_TARGET=		test
-
 BUILD_DEFS+=		VARBASE
 
-REPLACE_PYTHON=		admin/server.py admin/upgrade_config.py
+REPLACE_PYTHON=		admin/CTK/CTK-run.pre \
+			admin/server.py admin/upgrade_config.py \
+			cherokee/cherokee-admin-launcher \
+			cherokee/cherokee-tweak
+
+# Needs installation:
+TEST_TARGET=		test
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/python/application.mk"
