@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/22 08:11:43 markd Exp $
+share/texmf-dist/doc/latex/minted/Makefile
+share/texmf-dist/doc/latex/minted/README
+share/texmf-dist/doc/latex/minted/minted.pdf
