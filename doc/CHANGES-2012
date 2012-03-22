@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.972 2012/03/22 14:16:07 taca Exp $
+$NetBSD: CHANGES-2012,v 1.973 2012/03/22 14:24:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1625,3 +1625,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-Text-CSV_XS to 0.88 [sno 2012-03-22]
 	Updated mail/qpopper to 4.1.0 [taca 2012-03-22]
 	Updated mail/poppassd to 4.1.0 [taca 2012-03-22]
+	Updated math/pear-Numbers_Words to 0.16.4 [taca 2012-03-22]
