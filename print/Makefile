@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2012/03/21 17:42:48 drochner Exp $
+# $NetBSD: Makefile,v 1.528 2012/03/22 08:23:42 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -64,6 +64,7 @@ SUBDIR+=	ja-vflib-utils
 SUBDIR+=	ja-vfxdvik
 SUBDIR+=	jcabc2ps
 SUBDIR+=	kbibtex
+SUBDIR+=	kbibtex-kde3
 SUBDIR+=	kpathsea
 SUBDIR+=	latex-mk
 SUBDIR+=	lgrind
@@ -462,6 +463,8 @@ SUBDIR+=	tex-midpage
 SUBDIR+=	tex-midpage-doc
 SUBDIR+=	tex-minitoc
 SUBDIR+=	tex-minitoc-doc
+SUBDIR+=	tex-minted
+SUBDIR+=	tex-minted-doc
 SUBDIR+=	tex-misc
 SUBDIR+=	tex-moreverb
 SUBDIR+=	tex-moreverb-doc
@@ -660,6 +663,7 @@ SUBDIR+=	tex-xcomment
 SUBDIR+=	tex-xcomment-doc
 SUBDIR+=	tex-xdvi
 SUBDIR+=	tex-xetex
+SUBDIR+=	tex-xetex-def
 SUBDIR+=	tex-xetex-doc
 SUBDIR+=	tex-xetexconfig
 SUBDIR+=	tex-xfor
