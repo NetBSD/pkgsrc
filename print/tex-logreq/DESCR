@@ -1,0 +1,12 @@
+The package helps to automate a typical LaTeX workflow that
+involves running LaTeX several times, running tools such as
+BibTeX or makeindex, and so on. It will log requests like
+"please rerun LaTeX" or "please run BibTeX on file X" to an
+external XML file which lists all open tasks in a machine-
+readable format. Compiler scripts and integrated LaTeX editing
+environments may parse this file to determine the next steps in
+the workflow in a way that is more efficient than parsing the
+main log file. In sum, the package will do two things: 1)
+enable package authors to use LaTeX commands to issue requests,
+2) collect all requests from all packages and write them to an
+external XML file at the end of the document.
