@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/03/03 00:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/03/22 14:18:44 obache Exp $
 #
 
 DISTNAME=	mxcl-liblastfm-0.3.3-0-gf0b3239
 PKGNAME=	liblastfm-0.3.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	audio net
 MASTER_SITES=	http://download.github.com/
 
@@ -39,8 +39,8 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../audio/libsamplerate/buildlink3.mk"
-BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../lang/ruby/replace.mk"
+BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
