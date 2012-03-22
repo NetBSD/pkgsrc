@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.957 2012/03/22 13:21:33 sno Exp $
+$NetBSD: CHANGES-2012,v 1.958 2012/03/22 13:23:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1610,3 +1610,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Compress-Raw-Zlib to 2.051 [sno 2012-03-22]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.049 [sno 2012-03-22]
 	Updated devel/p5-IO-Compress to 2.049 [sno 2012-03-22]
+	Updated devel/p5-Error to 0.17017 [sno 2012-03-22]
