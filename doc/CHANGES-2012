@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.985 2012/03/22 16:55:43 adam Exp $
+$NetBSD: CHANGES-2012,v 1.986 2012/03/22 18:21:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1640,3 +1640,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-namespace-clean to 0.23 [sno 2012-03-22]
 	Updated fonts/umefont-ttf to 0.437 [ryoon 2012-03-22]
 	Updated shells/tcsh to 6.18.01 [adam 2012-03-22]
+	Updated fonts/migu-ttf to 20111002 [ryoon 2012-03-22]
