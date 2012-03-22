@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.953 2012/03/22 12:57:03 obache Exp $
+$NetBSD: CHANGES-2012,v 1.954 2012/03/22 13:11:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1606,3 +1606,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_glx to 12.1nb1 [obache 2012-03-22]
 	Updated net/darkstat to 3.0.715 [obache 2012-03-22]
 	Updated net/miniupnpd to 1.6.20120320 [obache 2012-03-22]
+	Updated devel/p5-Git-Repository to 1.25 [sno 2012-03-22]
