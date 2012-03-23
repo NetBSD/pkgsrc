@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10974 2012/03/22 23:13:33 asau Exp $
+$NetBSD: TODO,v 1.10975 2012/03/23 10:09:23 taca Exp $
 
 Suggested new packages
 ======================
@@ -971,6 +971,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-2.10.9
+	o moodle-2.1.5 [security release]
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.2.1
@@ -989,6 +990,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mupdf-0.9
 	o muse-0.9.2
 	o musicbrainz-4.0.0
+	o mysql-5.0.96 [last version of mysql 5.0]
+	o mysql-5.1.62 [including security fix]
+	o mysql-5.5.22
 	o naim-0.11.8.3.2
 	o nano-2.2.6
 	o nap-1.5.3
