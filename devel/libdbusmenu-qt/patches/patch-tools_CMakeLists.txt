@@ -1,0 +1,12 @@
+$NetBSD: patch-tools_CMakeLists.txt,v 1.1 2012/03/23 22:19:08 markd Exp $
+
+Dont accidently find qjson.
+
+--- tools/CMakeLists.txt.orig	2011-08-30 09:40:07.000000000 +0000
++++ tools/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-find_package(QJSON)
++#find_package(QJSON)
+ if (QJSON_FOUND)
+     message(STATUS "QJSON found, testapp will be built")
+     add_subdirectory(testapp)
