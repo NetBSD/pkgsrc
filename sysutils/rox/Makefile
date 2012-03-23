@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/03/03 00:13:59 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2012/03/23 21:46:07 marino Exp $
 #
 
 DISTNAME=	rox-filer-2.10
@@ -44,6 +44,7 @@ BUILD_TARGET=		ROX-Filer
 CONFIGURE_DIRS=		ROX-Filer/src
 CONFIGURE_SCRIPT=	./configure.tmp
 LIBS.SunOS+=		-lm
+LDFLAGS.DragonFly+=	-lm
 
 post-patch:
 	${MV} ${WRKSRC}/ROX-Filer/src/configure ${WRKSRC}/ROX-Filer/src/${CONFIGURE_SCRIPT}
