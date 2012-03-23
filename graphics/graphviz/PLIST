@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2011/11/29 23:04:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2012/03/23 01:12:14 obache Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -106,6 +106,7 @@ lib/pkgconfig/libgvc.pc
 lib/pkgconfig/libgvpr.pc
 lib/pkgconfig/libpathplan.pc
 lib/pkgconfig/libxdot.pc
+${PLIST.tcl}lib/tcl8.4/graphviz
 man/man1/acyclic.1
 man/man1/bcomps.1
 man/man1/ccomps.1
