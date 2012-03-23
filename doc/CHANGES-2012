@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.993 2012/03/23 06:11:43 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.994 2012/03/23 21:21:57 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/cherokee to 1.2.101 [asau 2012-03-22]
 	Updated devel/fossil to 1.22 [asau 2012-03-22]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2012Q1 branch [wiz 2012-03-23]
+	Updated math/openaxiom to 1.4.1 [asau 2012-03-23]
