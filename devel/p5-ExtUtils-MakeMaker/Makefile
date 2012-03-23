@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2012/03/22 13:37:34 sno Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/23 13:12:48 obache Exp $
 
 DISTNAME=	ExtUtils-MakeMaker-6.62
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTROUT/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-MakeMaker/
