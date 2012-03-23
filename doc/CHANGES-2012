@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.992 2012/03/22 23:13:33 asau Exp $
+$NetBSD: CHANGES-2012,v 1.993 2012/03/23 06:11:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1626,9 +1626,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/qpopper to 4.1.0 [taca 2012-03-22]
 	Updated mail/poppassd to 4.1.0 [taca 2012-03-22]
 	Updated math/pear-Numbers_Words to 0.16.4 [taca 2012-03-22]
-	Removed www/contao29-translations [taca 2012-03-22]
-	Removed www/contao29-example [taca 2012-03-22]
-	Removed www/contao29 [taca 2012-03-22]
+	Removed www/contao29-translations successor www/contao211-translations [taca 2012-03-22]
+	Removed www/contao29-example successor www/contao211-example [taca 2012-03-22]
+	Removed www/contao29 successor www/contao211 [taca 2012-03-22]
 	Updated devel/p5-MetaCPAN-API to 0.42 [sno 2012-03-22]
 	Updated devel/p5-Module-Build to 0.40000 [sno 2012-03-22]
 	Updated devel/p5-Memoize to 1.02 [sno 2012-03-22]
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/doclifter to 2.3nb4 [wiz 2012-03-22]
 	Updated www/cherokee to 1.2.101 [asau 2012-03-22]
 	Updated devel/fossil to 1.22 [asau 2012-03-22]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2012Q1 branch [wiz 2012-03-23]
