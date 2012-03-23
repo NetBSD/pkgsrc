@@ -1,21 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2010/06/02 12:38:29 adam Exp $
+$NetBSD: patch-ab,v 1.5 2012/03/23 23:19:37 hans Exp $
 
---- libcob/fileio.c.orig	2007-12-27 10:57:51.000000000 +0000
+--- libcob/fileio.c.orig	2012-03-23 22:08:24.000000000 +0000
 +++ libcob/fileio.c
-@@ -79,16 +79,8 @@
- #include <db3/db_185.h>
- #elif HAVE_DB4_DB_185_H
- #include <db4/db_185.h>
--#elif HAVE_DB4_1_DB_185_H
--#include <db4.1/db_185.h>
--#elif HAVE_DB4_2_DB_185_H
--#include <db4.2/db_185.h>
--#elif HAVE_DB4_3_DB_185_H
--#include <db4.3/db_185.h>
--#elif HAVE_DB4_4_DB_185_H
--#include <db4.4/db_185.h>
--#elif HAVE_DB4_5_DB_185_H
--#include <db4.5/db_185.h>
+@@ -87,6 +87,8 @@
+ #include <db4.4/db_185.h>
+ #elif HAVE_DB4_5_DB_185_H
+ #include <db4.5/db_185.h>
 +#elif HAVE_DB5_DB_185_H
 +#include <db5/db_185.h>
  #elif HAVE_DB_H
