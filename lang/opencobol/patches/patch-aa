@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2010/06/02 12:38:29 adam Exp $
+$NetBSD: patch-aa,v 1.5 2012/03/23 23:19:37 hans Exp $
 
---- configure.orig	2007-12-27 10:57:51.000000000 +0000
+--- configure.orig	2012-03-23 22:06:12.000000000 +0000
 +++ configure
-@@ -24347,7 +24347,7 @@ echo "$as_me: error: Include file db.h i
+@@ -24810,7 +24810,7 @@ echo "$as_me: error: Include file db.h i
  
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2010/06/02 12:38:29 adam Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -26067,7 +26067,7 @@ then
+@@ -26532,7 +26532,7 @@ then
    COB_CFLAGS="$COB_CFLAGS $CPPFLAGS"
  fi
  
