@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/03/10 20:33:14 markd Exp $
+$NetBSD: distinfo,v 1.3 2012/03/23 22:19:07 markd Exp $
 
 SHA1 (libdbusmenu-qt-0.9.0.tar.bz2) = 690a885825d45579607f3d6708aad84b6f3ecdd0
 RMD160 (libdbusmenu-qt-0.9.0.tar.bz2) = 6fbaa348f10f7eedd68c1c6860805b0aaf4db195
 Size (libdbusmenu-qt-0.9.0.tar.bz2) = 37153 bytes
+SHA1 (patch-tools_CMakeLists.txt) = 1e270795ee3ee1d6a0a3a75b1c7e7c8806129aa5
