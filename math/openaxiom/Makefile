@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/12/16 01:58:08 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/03/23 21:20:46 asau Exp $
 #
 
-DISTNAME=		open-axiom-1.3.0
+DISTNAME=		open-axiom-1.4.1
 PKGNAME=		${DISTNAME:S/open-/open/}
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-axiom/}
@@ -14,6 +14,7 @@ COMMENT=		Platform for symbolic, algebraic, and numerical computations
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake makeinfo awk:run
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
