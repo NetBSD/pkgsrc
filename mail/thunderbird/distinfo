@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.91 2012/03/17 01:59:08 wiz Exp $
+$NetBSD: distinfo,v 1.92 2012/03/23 19:35:05 ryoon Exp $
 
 SHA1 (comm-release-f60c071e187b.tar.bz2) = 7b3770d918a7662688d6641bc367c1c375bc7200
 RMD160 (comm-release-f60c071e187b.tar.bz2) = e1efa6624eaf565b95f7e9d68ca04a3cbbe47f05
 Size (comm-release-f60c071e187b.tar.bz2) = 2261054 bytes
-SHA1 (enigmail-1.4.tar.gz) = 1ee4bcd8d38685af44c1aeeea4fbba7bf30513e4
-RMD160 (enigmail-1.4.tar.gz) = b3c717e150c826faae1daa09806e07dd16619c51
-Size (enigmail-1.4.tar.gz) = 1323467 bytes
 SHA1 (thunderbird-11.0.source.tar.bz2) = dce279de31e66940afc0d85756a7fd6da21a1dc1
 RMD160 (thunderbird-11.0.source.tar.bz2) = 2220b88d901a8ade3d52045275ced5f368c2716d
 Size (thunderbird-11.0.source.tar.bz2) = 101442328 bytes
@@ -84,6 +81,7 @@ SHA1 (patch-mozilla_js_src_methodjit_MethodJIT.cpp) = c27d2e4105ea47a0fe2bec42ed
 SHA1 (patch-mozilla_js_src_yarr_pcre_pcre.h) = 7d450964eba9c64cad932075c714087047fc8642
 SHA1 (patch-mozilla_media_libvpx_vpx__config.h) = cb7bb829ea120f6d295de7807b13e4c720b3f88f
 SHA1 (patch-mozilla_media_libvpx_vpx__config__c.c) = 0e04badaf5ff4b04a313cf9bb40727d87202051f
+SHA1 (patch-mozilla_netwerk_protocol_http_HttpChannelParent.cpp) = 3c245b1c3b61a4244c47760a0b9d4158f4abe13a
 SHA1 (patch-mozilla_nsprpub_pr_include_md___dragonfly.cfg) = 1496442dfa274cab6622db350c138635e6cf7376
 SHA1 (patch-mozilla_nsprpub_pr_include_md___pth.h) = b8aab2979a289512b93e04bc3bbc38845029719d
 SHA1 (patch-mozilla_nsprpub_pr_include_md_prosdep.h) = 576fc831d79e9594c1f90907d53e4fbc17f4644a
