@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.994 2012/03/23 21:21:57 asau Exp $
+$NetBSD: CHANGES-2012,v 1.995 2012/03/23 23:24:20 hans Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1652,3 +1652,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/fossil to 1.22 [asau 2012-03-22]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2012Q1 branch [wiz 2012-03-23]
 	Updated math/openaxiom to 1.4.1 [asau 2012-03-23]
+	Updated lang/opencobol to 1.1 [hans 2012-03-24]
