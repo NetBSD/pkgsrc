@@ -1,0 +1,16 @@
+$NetBSD: patch-makeMan.in,v 1.1 2012/03/23 11:26:18 obache Exp $
+
+* some platfoms does not have `file' utilty, others does not recognize such
+  files as `roff'.
+
+--- makeMan.in.orig	2004-01-22 03:42:35.000000000 +0000
++++ makeMan.in
+@@ -29,8 +29,6 @@ foreach my $file (@files)
+ 	next unless -f $file and $file =~ /^(.*\.[1-9])\.in$/;
+ 	my ($man) = $1;
+ 	$man =~ s,.*/,,;
+-	next unless ((`file $file` =~ m/\b[ntg]roff\b/) or
+-		     (`file $file` =~ m/\[nt\]roff/));
+ 	print STDERR "MATCHED\n" if $VERBOSE;
+ 	$append = '';
+ 	open IN, "<$file" or (warn "Can't read input file $file!" and next FILE);
