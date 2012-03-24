@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.34 2012/03/22 17:34:15 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.35 2012/03/24 13:21:43 drochner Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -162,16 +162,12 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_net.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_net.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_pnm.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_pnm.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_pvr.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_pvr.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_rtp.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_rtp.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_rtsp.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_rtsp.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_stdin_fifo.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_stdin_fifo.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_v4l2.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_v4l2.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcd.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcd.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_nsf.a

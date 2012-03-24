@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2012/03/21 16:37:15 drochner Exp $
+# $NetBSD: Makefile,v 1.97 2012/03/24 13:21:43 drochner Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -9,6 +9,7 @@ COMMENT=		Multimedia player library
 CONFLICTS+=		xine-xcb-[0-9]*
 
 CONFIGURE_ARGS+=	--disable-v4l
+CONFIGURE_ARGS+=	--disable-v4l2
 CONFIGURE_ARGS+=	--disable-real-codecs
 CONFIGURE_ARGS+=	--disable-aalib
 
