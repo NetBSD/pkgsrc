@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2009/04/12 07:20:10 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2012/03/24 08:17:57 obache Exp $
 
 DISTNAME=	docbook-dsssl-1.79
 PKGNAME=	dsssl-docbook-modular-1.79
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} docbook-dsssl-doc-1.79${EXTRACT_SUFX}
@@ -17,9 +17,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	docbook>=4.0:../../textproc/docbook
 
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	perl:run
+
 INSTDIR=	${PREFIX}/share/sgml/docbook/dsssl/modular
 
 SGML_CATALOGS=	${PREFIX}/share/sgml/docbook/dsssl/modular/catalog
+
+REPLACE_PERL+=	bin/collateindex.pl
+REPLACE_PERL+=	common/cs-hack.pl
+REPLACE_PERL+=	common/dbl10n.pl
 
 do-build:
 	@${RM} -rf ${WRKSRC}/docsrc
@@ -30,6 +36,7 @@ pre-install:
 do-install:
 	@${CP} -rp ${WRKSRC}/* ${DESTDIR}${INSTDIR}
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${INSTDIR}
+	${CHMOD} ${BINMODE} ${DESTDIR}${INSTDIR}/bin/collateindex.pl
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
