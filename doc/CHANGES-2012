@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.998 2012/03/24 08:58:18 obache Exp $
+$NetBSD: CHANGES-2012,v 1.999 2012/03/24 12:05:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1656,3 +1656,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.723 [obache 2012-03-24]
 	Updated textproc/dsssl-docbook-modular to 1.79nb4 [obache 2012-03-24]
 	Updated audio/ario to 1.5.1nb4 [obache 2012-03-24]
+	Updated lang/python27 to 2.7.2nb3 [tron 2012-03-24]
