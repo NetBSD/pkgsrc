@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/09/09 02:15:22 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/03/24 13:25:01 drochner Exp $
 
 BUILDLINK_TREE+=	openjpeg
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	openjpeg
 OPENJPEG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openjpeg+=	openjpeg>=1.3
+BUILDLINK_ABI_DEPENDS.openjpeg+=	openjpeg>=1.5
 BUILDLINK_PKGSRCDIR.openjpeg?=	../../graphics/openjpeg
 .endif	# OPENJPEG_BUILDLINK3_MK
 
