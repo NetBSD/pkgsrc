@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.996 2012/03/24 03:02:06 obache Exp $
+$NetBSD: CHANGES-2012,v 1.997 2012/03/24 08:18:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1654,3 +1654,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/openaxiom to 1.4.1 [asau 2012-03-23]
 	Updated lang/opencobol to 1.1 [hans 2012-03-24]
 	Updated net/mikutter to 0.1.0.723 [obache 2012-03-24]
+	Updated textproc/dsssl-docbook-modular to 1.79nb4 [obache 2012-03-24]
