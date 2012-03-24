@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/03/03 00:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2012/03/24 08:58:05 obache Exp $
 #
 
 DISTNAME=	ario-1.5.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ario-player/1.5.1/}
 
@@ -11,11 +11,13 @@ HOMEPAGE=	http://ario-player.sourceforge.net/
 COMMENT=	mpd client
 LICENSE=	gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT= user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool msgfmt pkg-config gmake
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS+= --disable-avahi
-PKG_DESTDIR_SUPPORT= user-destdir
+CONFIGURE_ARGS+= --with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
 
 .for fl in clobbered empty-body ignored-qualifiers \
 	missing-parameter-type old-style-declaration \
@@ -35,6 +37,8 @@ BUILDLINK_TRANSFORM+=	rm:-W${fl}
 .include "../../net/libsoup24/buildlink3.mk"
 #.include "../../net/avahi/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4.0
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
