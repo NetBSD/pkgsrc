@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2012/03/20 08:53:09 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/24 05:34:45 markd Exp $
 
 DISTNAME=	marble-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	KDE desktop globe
+
+MAKE_JOBS_SAFE=	NO
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
