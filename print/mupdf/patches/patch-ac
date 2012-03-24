@@ -1,196 +1,138 @@
-$NetBSD: patch-ac,v 1.2 2011/03/08 17:09:25 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2012/03/24 13:31:58 drochner Exp $
 
---- Makefile.orig	2011-03-03 15:10:58.000000000 +0000
+--- Makefile.orig	2011-09-05 11:55:39.000000000 +0000
 +++ Makefile
-@@ -41,32 +41,21 @@ CFLAGS += $(THIRD_INCS) $(SYS_FREETYPE_I
- # Build commands
- #
+@@ -21,17 +21,9 @@ THIRD_LIBS += $(JPEG_LIB)
+ THIRD_LIBS += $(OPENJPEG_LIB)
+ THIRD_LIBS += $(ZLIB_LIB)
  
--ifneq "$(verbose)" ""
--
- GENFILE_CMD = $(firstword $^) $@ $(wordlist 2, 999, $^)
- CC_CMD = $(CC) -o $@ -c $< $(CFLAGS)
--LD_CMD = $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
--AR_CMD = rm -f $@ && $(AR) cru $@ $^
--
--else
--
--GENFILE_CMD = @ echo GENFILE $@ && $(firstword $^) $@ $(wordlist 2, 999, $^)
--CC_CMD = @ echo CC $@ && $(CC) -o $@ -c $< $(CFLAGS)
--LD_CMD = @ echo LD $@ && $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
--AR_CMD = @ echo AR $@ && rm -f $@ && $(AR) cru $@ $^
--
+-ifeq "$(verbose)" ""
+-QUIET_AR = @ echo ' ' ' ' AR $@ ;
+-QUIET_CC = @ echo ' ' ' ' CC $@ ;
+-QUIET_GEN = @ echo ' ' ' ' GEN $@ ;
+-QUIET_LINK = @ echo ' ' ' ' LINK $@ ;
+-QUIET_MKDIR = @ echo ' ' ' ' MKDIR $@ ;
 -endif
-+LD_CMD = ${LIBTOOL} --mode=link $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
+-
+ CC_CMD = $(QUIET_CC) $(CC) $(CFLAGS) -o $@ -c $<
+-AR_CMD = $(QUIET_AR) $(AR) cru $@ $^
+-LINK_CMD = $(QUIET_LINK) $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
 +AR_CMD = ${LIBTOOL} --mode=link $(CC) -o $@ -version-info 0:0:0 -rpath ${PREFIX}/lib $^
++LINK_CMD = ${LIBTOOL} --mode=link $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
+ MKDIR_CMD = $(QUIET_MKDIR) mkdir -p $@
  
- #
- # Code generation tools
- #
+ # --- Rules ---
+@@ -39,40 +31,40 @@ MKDIR_CMD = $(QUIET_MKDIR) mkdir -p $@
+ $(OUT) $(GEN) :
+ 	$(MKDIR_CMD)
  
- FONTDUMP_EXE := $(OBJDIR)/fontdump
--$(FONTDUMP_EXE): $(OBJDIR)/fontdump.o
-+$(FONTDUMP_EXE): $(OBJDIR)/fontdump.lo
- 	$(LD_CMD)
+-$(OUT)/%.a :
++$(OUT)/%.la :
+ 	$(AR_CMD)
  
- CMAPDUMP_EXE := $(OBJDIR)/cmapdump
--$(CMAPDUMP_EXE): $(OBJDIR)/cmapdump.o
-+$(CMAPDUMP_EXE): $(OBJDIR)/cmapdump.lo
- 	$(LD_CMD)
+-$(OUT)/% : $(OUT)/%.o
++$(OUT)/% : $(OUT)/%.lo
+ 	$(LINK_CMD)
  
- #
-@@ -113,7 +102,7 @@ FITZ_SRC := \
- 	fitz/stm_buffer.c \
- 	fitz/stm_open.c \
- 	fitz/stm_read.c
--FITZ_OBJ := $(FITZ_SRC:fitz/%.c=$(OBJDIR)/%.o)
-+FITZ_OBJ := $(FITZ_SRC:fitz/%.c=$(OBJDIR)/%.lo)
- $(FITZ_OBJ): $(FITZ_HDR)
- 
- DRAW_SRC := $(DRAW_ARCH_SRC) \
-@@ -129,8 +118,8 @@ DRAW_SRC := $(DRAW_ARCH_SRC) \
- 	draw/pathscan.c \
- 	draw/pathstroke.c \
- 	draw/porterduff.c
--DRAW_OBJ := $(DRAW_SRC:draw/%.c=$(OBJDIR)/%.o)
--DRAW_OBJ := $(DRAW_OBJ:draw/%.s=$(OBJDIR)/%.o)
-+DRAW_OBJ := $(DRAW_SRC:draw/%.c=$(OBJDIR)/%.lo)
-+DRAW_OBJ := $(DRAW_OBJ:draw/%.s=$(OBJDIR)/%.lo)
- $(DRAW_OBJ): $(FITZ_HDR)
- 
- MUPDF_HDR := $(FITZ_HDR) mupdf/mupdf.h
-@@ -167,19 +156,19 @@ MUPDF_SRC := \
- 	mupdf/pdf_unicode.c \
- 	mupdf/pdf_xobject.c \
- 	mupdf/pdf_xref.c
--MUPDF_OBJ := $(MUPDF_SRC:mupdf/%.c=$(OBJDIR)/%.o)
-+MUPDF_OBJ := $(MUPDF_SRC:mupdf/%.c=$(OBJDIR)/%.lo)
- $(MUPDF_OBJ): $(MUPDF_HDR)
- 
--$(OBJDIR)/%.o: fitz/%.c
+-$(OUT)/%.o : fitz/%.c fitz/fitz.h | $(OUT)
 -	$(CC_CMD)
--$(OBJDIR)/%.o: draw/%.c
+-$(OUT)/%.o : draw/%.c fitz/fitz.h | $(OUT)
 -	$(CC_CMD)
--$(OBJDIR)/%.o: draw/%.s
+-$(OUT)/%.o : pdf/%.c fitz/fitz.h pdf/mupdf.h | $(OUT)
 -	$(CC_CMD)
--$(OBJDIR)/%.o: mupdf/%.c
+-$(OUT)/%.o : xps/%.c fitz/fitz.h xps/muxps.h | $(OUT)
 -	$(CC_CMD)
--$(OBJDIR)/%.o: $(GENDIR)/%.c
+-$(OUT)/%.o : apps/%.c fitz/fitz.h pdf/mupdf.h xps/muxps.h | $(OUT)
 -	$(CC_CMD)
-+$(OBJDIR)/%.lo: fitz/%.c
+-$(OUT)/%.o : scripts/%.c | $(OUT)
+-	$(CC_CMD)
++$(OUT)/%.lo : fitz/%.c fitz/fitz.h | $(OUT)
 +	libtool --mode=compile $(CC_CMD)
-+$(OBJDIR)/%.lo: draw/%.c
++$(OUT)/%.lo : draw/%.c fitz/fitz.h | $(OUT)
 +	libtool --mode=compile $(CC_CMD)
-+$(OBJDIR)/%.lo: draw/%.s
++$(OUT)/%.lo : pdf/%.c fitz/fitz.h pdf/mupdf.h | $(OUT)
 +	libtool --mode=compile $(CC_CMD)
-+$(OBJDIR)/%.lo: mupdf/%.c
++$(OUT)/%.lo : xps/%.c fitz/fitz.h xps/muxps.h | $(OUT)
 +	libtool --mode=compile $(CC_CMD)
-+$(OBJDIR)/%.lo: $(GENDIR)/%.c
++$(OUT)/%.lo : apps/%.c fitz/fitz.h pdf/mupdf.h xps/muxps.h | $(OUT)
++	libtool --mode=compile $(CC_CMD)
++$(OUT)/%.lo : scripts/%.c | $(OUT)
 +	libtool --mode=compile $(CC_CMD)
  
- #
- # Generated font file dumps
-@@ -218,7 +207,7 @@ FONT_SRC := \
- 	$(GENDIR)/font_base14.c \
- 	$(GENDIR)/font_cjk.c
+-.PRECIOUS : $(OUT)/%.o # Keep intermediates from chained rules
++.PRECIOUS : $(OUT)/%.lo # Keep intermediates from chained rules
  
--FONT_OBJ := $(FONT_SRC:$(GENDIR)/%.c=$(OBJDIR)/%.o)
-+FONT_OBJ := $(FONT_SRC:$(GENDIR)/%.c=$(OBJDIR)/%.lo)
+ # --- Fitz, MuPDF and MuXPS libraries ---
  
+-FITZ_LIB := $(OUT)/libfitz.a
+-MUPDF_LIB := $(OUT)/libmupdf.a
+-MUXPS_LIB := $(OUT)/libmuxps.a
++FITZ_LIB := $(OUT)/libfitz.la
++MUPDF_LIB := $(OUT)/libmupdf.la
++MUXPS_LIB := $(OUT)/libmuxps.la
  
- #
-@@ -288,13 +277,13 @@ CMAP_SRC := \
- 	$(GENDIR)/cmap_japan.c \
- 	$(GENDIR)/cmap_korea.c
+ FITZ_SRC := $(notdir $(wildcard fitz/*.c draw/*.c))
+ MUPDF_SRC := $(notdir $(wildcard pdf/*.c))
+ MUXPS_SRC := $(notdir $(wildcard xps/*.c))
  
--CMAP_OBJ := $(CMAP_SRC:$(GENDIR)/%.c=$(OBJDIR)/%.o)
-+CMAP_OBJ := $(CMAP_SRC:$(GENDIR)/%.c=$(OBJDIR)/%.lo)
+-$(FITZ_LIB) : $(addprefix $(OUT)/, $(FITZ_SRC:%.c=%.o))
+-$(MUPDF_LIB) : $(addprefix $(OUT)/, $(MUPDF_SRC:%.c=%.o))
+-$(MUXPS_LIB) : $(addprefix $(OUT)/, $(MUXPS_SRC:%.c=%.o))
++$(FITZ_LIB) : $(addprefix $(OUT)/, $(FITZ_SRC:%.c=%.lo))
++$(MUPDF_LIB) : $(addprefix $(OUT)/, $(MUPDF_SRC:%.c=%.lo))
++$(MUXPS_LIB) : $(addprefix $(OUT)/, $(MUXPS_SRC:%.c=%.lo))
  
- #
- # Library
- #
+ libs: $(MUXPS_LIB) $(MUPDF_LIB) $(FITZ_LIB) $(THIRD_LIBS)
+ 	@ echo MuPDF/XPS and underlying libraries built
+@@ -116,13 +108,13 @@ endif
  
--MUPDF_LIB = $(OBJDIR)/libmupdf.a
-+MUPDF_LIB = $(OBJDIR)/libmupdf.la
- $(MUPDF_LIB): $(FITZ_OBJ) $(DRAW_OBJ) $(MUPDF_OBJ) $(CMAP_OBJ) $(FONT_OBJ)
- 	 $(AR_CMD)
+ generate: $(CMAP_HDR) $(FONT_HDR)
  
-@@ -304,40 +293,40 @@ $(MUPDF_LIB): $(FITZ_OBJ) $(DRAW_OBJ) $(
+-$(OUT)/pdf_cmap_table.o : $(CMAP_HDR)
+-$(OUT)/pdf_fontfile.o : $(FONT_HDR)
+-$(OUT)/cmapdump.o : pdf/pdf_cmap.c pdf/pdf_cmap_parse.c
++$(OUT)/pdf_cmap_table.lo : $(CMAP_HDR)
++$(OUT)/pdf_fontfile.lo : $(FONT_HDR)
++$(OUT)/cmapdump.lo : pdf/pdf_cmap.c pdf/pdf_cmap_parse.c
  
- APPS = $(PDFSHOW_EXE) $(PDFCLEAN_EXE) $(PDFDRAW_EXE) $(PDFEXTRACT_EXE) $(PDFINFO_EXE) $(PDFVIEW_EXE)
+ # --- Tools and Apps ---
  
--$(OBJDIR)/%.o: apps/%.c
--	$(CC_CMD)
-+$(OBJDIR)/%.lo: apps/%.c
-+	libtool --mode=compile $(CC_CMD)
+-PDF_APPS := $(addprefix $(OUT)/, pdfdraw pdfclean pdfextract pdfinfo pdfshow)
++PDF_APPS := $(addprefix $(OUT)/, pdfdraw pdfclean pdfextract mupdf-pdfinfo pdfshow)
+ XPS_APPS := $(addprefix $(OUT)/, xpsdraw)
  
- PDFSHOW_SRC=apps/pdfshow.c
--PDFSHOW_OBJ=$(PDFSHOW_SRC:apps/%.c=$(OBJDIR)/%.o)
-+PDFSHOW_OBJ=$(PDFSHOW_SRC:apps/%.c=$(OBJDIR)/%.lo)
- PDFSHOW_EXE=$(OBJDIR)/pdfshow
- $(PDFSHOW_OBJ): $(MUPDF_HDR)
- $(PDFSHOW_EXE): $(PDFSHOW_OBJ) $(MUPDF_LIB) $(THIRD_LIBS)
- 	$(LD_CMD)
+ $(PDF_APPS) : $(MUPDF_LIB) $(FITZ_LIB) $(THIRD_LIBS)
+@@ -131,7 +123,7 @@ $(XPS_APPS) : $(MUXPS_LIB) $(FITZ_LIB) $
+ MUPDF := $(OUT)/mupdf
+ $(MUPDF) : $(MUXPS_LIB) $(MUPDF_LIB) $(FITZ_LIB) $(THIRD_LIBS)
+ ifeq "$(NOX11)" ""
+-$(MUPDF) : $(addprefix $(OUT)/, x11_main.o x11_image.o pdfapp.o)
++$(MUPDF) : $(addprefix $(OUT)/, x11_main.lo x11_image.lo pdfapp.lo)
+ 	$(LINK_CMD) $(X11_LIBS)
+ endif
  
- PDFCLEAN_SRC=apps/pdfclean.c
--PDFCLEAN_OBJ=$(PDFCLEAN_SRC:apps/%.c=$(OBJDIR)/%.o)
-+PDFCLEAN_OBJ=$(PDFCLEAN_SRC:apps/%.c=$(OBJDIR)/%.lo)
- PDFCLEAN_EXE=$(OBJDIR)/pdfclean
- $(PDFCLEAN_OBJ): $(MUPDF_HDR)
- $(PDFCLEAN_EXE): $(PDFCLEAN_OBJ) $(MUPDF_LIB) $(THIRD_LIBS)
- 	$(LD_CMD)
+@@ -141,14 +133,18 @@ prefix ?= /usr/local
+ bindir ?= $(prefix)/bin
+ libdir ?= $(prefix)/lib
+ incdir ?= $(prefix)/include
+-mandir ?= $(prefix)/share/man
++mandir ?= $(prefix)/man
  
- PDFDRAW_SRC=apps/pdfdraw.c
--PDFDRAW_OBJ=$(PDFDRAW_SRC:apps/%.c=$(OBJDIR)/%.o)
-+PDFDRAW_OBJ=$(PDFDRAW_SRC:apps/%.c=$(OBJDIR)/%.lo)
- PDFDRAW_EXE=$(OBJDIR)/pdfdraw
- $(PDFDRAW_OBJ): $(MUPDF_HDR)
- $(PDFDRAW_EXE): $(PDFDRAW_OBJ) $(MUPDF_LIB) $(THIRD_LIBS)
- 	$(LD_CMD)
+ install: $(MUXPS_LIB) $(MUPDF_LIB) $(FITZ_LIB) $(PDF_APPS) $(XPS_APPS) $(MUPDF)
+-	install -d $(bindir) $(libdir) $(incdir) $(mandir)/man1
+-	install $(MUXPS_LIB) $(MUPDF_LIB) $(FITZ_LIB) $(libdir)
+-	install fitz/fitz.h pdf/mupdf.h xps/muxps.h $(incdir)
+-	install $(PDF_APPS) $(XPS_APPS) $(MUPDF) $(bindir)
+-	install $(wildcard apps/man/*.1) $(mandir)/man1
++	${BSD_INSTALL_DATA_DIR} $(bindir) $(libdir) $(incdir) $(mandir)/man1
++	for f in $(MUXPS_LIB) $(MUPDF_LIB) $(FITZ_LIB); do \
++	 libtool --mode=install ${BSD_INSTALL_LIB} $$f $(libdir); \
++	done
++	${BSD_INSTALL_DATA} fitz/fitz.h pdf/mupdf.h xps/muxps.h $(incdir)
++	for f in $(PDF_APPS) $(XPS_APPS) $(MUPDF); do \
++	 libtool --mode=install ${BSD_INSTALL_PROGRAM} $$f $(bindir); \
++	done
++	${BSD_INSTALL_DATA} $(wildcard apps/man/*.1) $(mandir)/man1
  
- PDFEXTRACT_SRC=apps/pdfextract.c
--PDFEXTRACT_OBJ=$(PDFEXTRACT_SRC:apps/%.c=$(OBJDIR)/%.o)
-+PDFEXTRACT_OBJ=$(PDFEXTRACT_SRC:apps/%.c=$(OBJDIR)/%.lo)
- PDFEXTRACT_EXE=$(OBJDIR)/pdfextract
- $(PDFEXTRACT_OBJ): $(MUPDF_HDR)
- $(PDFEXTRACT_EXE): $(PDFEXTRACT_OBJ) $(MUPDF_LIB) $(THIRD_LIBS)
- 	$(LD_CMD)
+ # --- Clean and Default ---
  
- PDFINFO_SRC=apps/pdfinfo.c
--PDFINFO_OBJ=$(PDFINFO_SRC:apps/%.c=$(OBJDIR)/%.o)
--PDFINFO_EXE=$(OBJDIR)/pdfinfo
-+PDFINFO_OBJ=$(PDFINFO_SRC:apps/%.c=$(OBJDIR)/%.lo)
-+PDFINFO_EXE=$(OBJDIR)/mupdf-pdfinfo
- $(PDFINFO_OBJ): $(MUPDF_HDR)
- $(PDFINFO_EXE): $(PDFINFO_OBJ) $(MUPDF_LIB) $(THIRD_LIBS)
- 	$(LD_CMD)
-@@ -345,7 +334,7 @@ $(PDFINFO_EXE): $(PDFINFO_OBJ) $(MUPDF_L
- PDFAPP_HDR = apps/pdfapp.h
- 
- X11VIEW_SRC=apps/x11_main.c apps/x11_image.c apps/pdfapp.c
--X11VIEW_OBJ=$(X11VIEW_SRC:apps/%.c=$(OBJDIR)/%.o)
-+X11VIEW_OBJ=$(X11VIEW_SRC:apps/%.c=$(OBJDIR)/%.lo)
- X11VIEW_EXE=$(OBJDIR)/mupdf
- 
- $(X11VIEW_OBJ): $(MUPDF_HDR) $(PDFAPP_HDR)
-@@ -354,7 +343,7 @@ $(X11VIEW_EXE): $(X11VIEW_OBJ) $(MUPDF_L
- 
- WINVIEW_SRC=apps/win_main.c apps/pdfapp.c
- WINVIEW_RES=apps/win_res.rc
--WINVIEW_OBJ=$(WINVIEW_SRC:apps/%.c=$(OBJDIR)/%.o) $(WINVIEW_RES:apps/%.rc=$(OBJDIR)/%.o)
-+WINVIEW_OBJ=$(WINVIEW_SRC:apps/%.c=$(OBJDIR)/%.lo) $(WINVIEW_RES:apps/%.rc=$(OBJDIR)/%.lo)
- WINVIEW_EXE=$(OBJDIR)/mupdf.exe
- 
- $(OBJDIR)/%.o: apps/%.rc
-@@ -383,7 +372,7 @@ LIBDIR ?= $(prefix)/lib
- INCDIR ?= $(prefix)/include
- 
- install: $(OBJDIR) $(GENDIR) $(MUPDF_LIB) $(APPS)
--	install -d $(BINDIR) $(LIBDIR) $(INCDIR)
--	install $(APPS) $(BINDIR)
--	install $(MUPDF_LIB) $(LIBDIR)
--	install $(MUPDF_HDR) $(INCDIR)
-+	mkdir -p $(BINDIR) $(LIBDIR) $(INCDIR)
-+	libtool --mode=install ${BSD_INSTALL_PROGRAM} $(APPS) $(BINDIR)
-+	libtool --mode=install ${BSD_INSTALL_LIB} $(MUPDF_LIB) $(LIBDIR)
-+	${BSD_INSTALL_DATA} $(MUPDF_HDR) $(INCDIR)
