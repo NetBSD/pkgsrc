@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 23:21:20 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/25 13:50:35 wiz Exp $
 
 DISTNAME=	k4dirstat-2.7.3
 CATEGORIES=	sysutils
@@ -17,6 +17,8 @@ USE_TOOLS+=	perl msgfmt
 USE_LANGUAGES=	c c++
 
 WRKSRC=		${WRKDIR}/jeromerobert-k4dirstat-7764f6508187
+
+FETCH_USING=	curl
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
