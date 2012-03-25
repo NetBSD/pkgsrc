@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/07/04 21:37:34 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2012/03/25 05:27:42 ryoon Exp $
 
 DISTNAME=		hercules-3.07
 PKGREVISION=		1
@@ -14,7 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		hercules-images-[0-9]*:../../emulators/hercules-images
 
-USE_TOOLS+=		gmake bash:run
+AUTOCONF_REQD=		2.50
+USE_TOOLS+=		autoconf gmake bash:run
 GNU_CONFIGURE=		YES
 #MAKE_ENV+=		HOST_ARCH=${MACHINE_ARCH:Q}
 USE_LIBTOOL=		YES
@@ -30,6 +31,7 @@ INSTALLATION_DIRS+=	bin share/examples/hercules
 
 pre-configure:
 	${RM} ${WRKSRC}/ltdl.h ${WRKSRC}/ltdl.c
+	cd ${WRKSRC} && autoconf
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/hercules.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
 #	${INSTALL_DATA} ${WRKSRC}/zzsa.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
