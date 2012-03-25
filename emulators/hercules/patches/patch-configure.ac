@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.ac,v 1.1 2012/03/25 05:27:43 ryoon Exp $
+
+--- configure.ac.orig	2010-03-07 12:22:36.000000000 +0000
++++ configure.ac
+@@ -320,7 +320,7 @@ case "$host_os" in
+         fi
+         ;;
+ 
+-    *bsd*)
++    *bsd* | dragonfly*)
+         hc_cv_is_nix=yes
+         hc_cv_is_windows=no
+         hc_cv_is_mingw32=no
+@@ -558,7 +558,7 @@ AC_CHECK_DECLS( SIOCADDRT,            [h
+ AC_CHECK_DECLS( SIOCDELRT,            [hc_cv_have_siocdelrt=yes],           [hc_cv_have_siocdelrt=no],           [#include <linux/sockios.h>] )
+ AC_CHECK_DECLS( SIOCDIFADDR,          [hc_cv_have_siocdifaddr=yes],         [hc_cv_have_siocdifaddr=no],         [#include <linux/sockios.h>] )
+ 
+-if test "$hc_cv_have_sys_mtio_h" == "yes"; then
++if test "$hc_cv_have_sys_mtio_h" = "yes"; then
+     AC_CHECK_DECLS( MTEWARN,          [hc_cv_have_mtewarn=yes],             [hc_cv_have_mtewarn=no],             [#include <sys/mtio.h>] )
+ else
+     hc_cv_have_mtewarn=no
