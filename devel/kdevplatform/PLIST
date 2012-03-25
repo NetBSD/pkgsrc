@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/03/20 10:48:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/25 20:06:04 markd Exp $
 include/kdevplatform/debugger/breakpoint/breakpoint.h
 include/kdevplatform/debugger/breakpoint/breakpointdetails.h
 include/kdevplatform/debugger/breakpoint/breakpointmodel.h
@@ -329,6 +329,7 @@ lib/kde4/kdevpatchreview.so
 lib/kde4/kdevproblemreporter.so
 lib/kde4/kdevprojectmanagerview.so
 lib/kde4/kdevquickopen.so
+lib/kde4/kdevreviewboard.so
 lib/kde4/kdevsnippet.so
 lib/kde4/kdevstandardoutputview.so
 lib/kde4/kdevsubversion.so
@@ -365,7 +366,9 @@ lib/libkdevplatformvcs.so.3.0.0
 lib/libsublime.so
 lib/libsublime.so.3
 lib/libsublime.so.3.0.0
+share/icons/hicolor/128x128/apps/reviewboard.png
 share/icons/hicolor/16x16/apps/git.png
+share/icons/hicolor/16x16/apps/reviewboard.png
 share/icons/hicolor/22x22/actions/run-clean.png
 share/icons/hicolor/22x22/actions/run-install.png
 share/icons/hicolor/32x32/apps/git.png
@@ -426,6 +429,7 @@ share/kde4/services/kdevpatchreview.desktop
 share/kde4/services/kdevproblemreporter.desktop
 share/kde4/services/kdevprojectmanagerview.desktop
 share/kde4/services/kdevquickopen.desktop
+share/kde4/services/kdevreviewboard.desktop
 share/kde4/services/kdevsnippet.desktop
 share/kde4/services/kdevstandardoutputview.desktop
 share/kde4/services/kdevsubversion.desktop
