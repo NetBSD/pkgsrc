@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10976 2012/03/24 13:33:08 drochner Exp $
+$NetBSD: TODO,v 1.10977 2012/03/25 18:04:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -326,6 +326,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
+	o ImageMagick-6.7.6.2
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -352,6 +353,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o adtool-1.3
 	o aewm++-1.0.27
 	o afterstep-2.2.11
+	o akonadi-1.7.1
 	o alacarte-0.13.2
 	o album-4.06
 	o aliados-0.2.0
@@ -383,6 +385,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apache-maven-3.0
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
+	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
 	o aranym-0.9.12
@@ -422,7 +425,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o benchfft-3.1
 	o bftpd-3.7
 	o biew-6.1.0
-	o bigreqsproto-1.1.1
+	o bigreqsproto-1.1.2
 	o binutils-2.22 [wip]
 	o bioperl-1.5.0
 	o bitlbee-3.0.5
@@ -438,14 +441,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o byacc-20120115
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
+	o cairo-1.12.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.43
+	o calibre-0.8.44
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.3
 	o cddbd-1.5.2
 	o cdialog-1.1.20120215
 	o cdif-1.19
+	o cdk-5.0.20120323
 	o cdlabelgen-4.1.0
 	o cdrkit-1.1.10
 	o celestia-1.6.0
@@ -460,8 +465,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clamav-0.97.4
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-1.8.4
+	o clutter-1.10.0
 	o clutter-gst-1.4.6
+	o cmdpack-1.03
 	o coccigrep-1.8
 	o colorize-0.3.4
 	o colortail-0.3.3
@@ -629,7 +635,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-util-1.3.0
 	o font-winitzki-cyrillic-1.0.3 [pkg/45549]
 	o font-xfree86-type1-1.0.4 [pkg/45549]
-	o fontsproto-2.1.1
+	o fontconfig-2.9.0
+	o fontsproto-2.1.2
 	o fotoxx-12.03
 	o fox-1.6.41
 	o freeciv-2.3.1
@@ -677,6 +684,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.8.1 [GNOME 2.34]
 	o glade3-3.10.2
 	o gle-4.2.4
+	o glib2-2.32.0
 	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
@@ -730,6 +738,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.11
 	o gss-1.0.2
 	o gssdp-0.10.0
+	o gst123-0.3.0
 	o gtexinfo-4.13a
 	o gtick-0.4.2
 	o gtk-gnutella-0.97.1
@@ -758,7 +767,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o haproxy-1.4.20
 	o haskell-mode-1.45
 	o hdf-4.2.5 [jpeg library version 7 and higher is not currently supported]
-	o help2man-1.40.6
+	o help2man-1.40.7
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-8.1
@@ -816,6 +825,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kaffeine-0.8.7
 	o kapooka-0.3
 	o kbiff-4.0
+	o kbproto-1.0.6
 	o kdbg-2.5.1
 	o kde4-4.8.1
 	o kdenlive-0.8.2.1
@@ -849,7 +859,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libX11-1.4.4 [pkg/46183]
 	o libXScrnSaver-1.2.2
 	o libXau-1.0.7
-	o libXaw-1.0.9
+	o libXaw-1.0.10
 	o libXcomposite-0.4.3
 	o libXcursor-1.1.13
 	o libXdmcp-1.1.1
@@ -926,7 +936,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxkbfile-1.0.8
 	o libxklavier-5.2.1
 	o licq-1.3.8
-	o liferea-1.8.2
+	o liferea-1.8.3
 	o lighttpd-1.4.30
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
@@ -936,7 +946,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lottanzb-0.5.3
 	o lq-sp-1.3.4.13
 	o lua-5.2.0
-	o luit-1.1.0
+	o luit-1.1.1
 	o lwm-1.2.2
 	o lyx-2.0.3
 	o maelstrom-sdl-3.0.6
@@ -949,7 +959,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
+	o mathomatic-15.8.2
 	o mc-4.8.1.1
+	o mdocml-1.12.1
 	o mediawiki-1.18.1
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -963,6 +975,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mkfontdir-1.0.7
 	o mkfontscale-1.1.0
 	o mknmz-wwwoffle-0.7.2
+	o mksh-40e
 	o mkvtoolnix-5.4.0
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
@@ -970,7 +983,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.12.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
-	o mono-2.10.9
+	o mono-2.11.0
 	o moodle-2.1.5 [security release]
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
@@ -1047,7 +1060,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p0f-3.00b
 	o p5-Gtk2-1.223
 	o p5-Net-SNMP-5.7.1
-	o p5-PerlMagick-6.7.5.9
+	o p5-PerlMagick-6.7.6.2
 	o p5-cairo-1.082
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1055,8 +1068,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
 	o paprefs-0.9.8
-	o parallel-20120222
-	o pari-2.5.0
+	o parallel-20120322
+	o pari-2.5.1
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-4.1.0
 	o patch-2.6.1
@@ -1117,6 +1130,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.19
 	o py-cups-1.9.60
 	o py-dbus-1.0.0
+	o py-django-1.4
+	o py-feedparser-5.1.1
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
@@ -1128,7 +1143,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-sqlalchemy-0.6.8
 	o py-sybase-0.37
 	o py-urwid-1.0.1
-	o py-xcbgen-1.7
+	o py-xcbgen-1.7.1
 	o python-3.2
 	o qbrew-0.3.9
 	o qemu-1.0.1 [wip]
@@ -1147,7 +1162,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdesktop-1.7.1
 	o rdp-1.6
 	o re-alpine-2.02 [pkg/46025]
-	o recordproto-1.14.1
+	o recordproto-1.14.2
 	o remind-3.1.12
 	o rendercheck-1.4
 	o renderproto-0.11.1
@@ -1188,7 +1203,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-base-1.7.9.4
 	o scmgit-docs-1.7.9.4
 	o scons-2.0.1
-	o scrnsaverproto-1.2.1
+	o scrnsaverproto-1.2.2
 	o scrollz-1.9.99
 	o scrotwm-0.11.0
 	o scsh-1.3.0
@@ -1199,7 +1214,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.7
-	o setxkbmap-1.2.0
+	o setxkbmap-1.3.0
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
@@ -1366,22 +1381,22 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o x264-devel-20120303
 	o xanalyser-1.30
 	o xaric-0.13.2
-	o xauth-1.0.6
+	o xauth-1.0.7
 	o xbacklight-1.1.2
 	o xbindkeys-1.8.5
 	o xbindkeys-tk-1.8.0
 	o xbitmaps-1.1.1
 	o xboard-4.5.3
 	o xcalc-1.0.4.1
-	o xcb-proto-1.7
+	o xcb-proto-1.7.1
 	o xcb-util-0.3.8 [NOT binary compatible to 0.3.6, so perhaps wait with update -- wiz 20110524]
 	o xcircuit-3.6.85
 	o xclock-1.0.6
-	o xcmiscproto-1.2.1
+	o xcmiscproto-1.2.2
 	o xcmsdb-1.0.4 [unpackaged]
 	o xcompmgr-1.1.6
 	o xconsole-1.0.4
-	o xcursorgen-1.0.4
+	o xcursorgen-1.0.5
 	o xdesktopwaves-1.3
 	o xdpyinfo-1.2.0
 	o xdriinfo-1.0.4
@@ -1389,6 +1404,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xev-1.2.0
+	o xextproto-7.2.1
 	o xeyes-1.1.1
 	o xf86-input-keyboard-1.6.1
 	o xf86-input-mouse-1.7.2
@@ -1396,28 +1412,31 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-input-void-1.4.0
 	o xf86-video-apm-1.2.3
 	o xf86-video-ark-0.7.4
-	o xf86-video-ast-0.91.10
+	o xf86-video-ast-0.93.10
 	o xf86-video-ati-6.14.3
 	o xf86-video-chips-1.2.4
+	o xf86-video-cirrus-1.4.0
 	o xf86-video-dummy-0.3.4
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.0.3
 	o xf86-video-glint-1.2.7
-	o xf86-video-i128-1.3.4
+	o xf86-video-i128-1.3.5
 	o xf86-video-intel-2.18.0
-	o xf86-video-mach64-6.9.0
-	o xf86-video-mga-1.4.13
-	o xf86-video-neomagic-1.2.5
+	o xf86-video-mach64-6.9.1
+	o xf86-video-mga-1.5.0
+	o xf86-video-neomagic-1.2.6
 	o xf86-video-newport-0.2.3 [unpackaged]
 	o xf86-video-openchrome-0.2.905
+	o xf86-video-r128-6.8.2
 	o xf86-video-rendition-4.2.4
-	o xf86-video-savage-2.3.3
-	o xf86-video-siliconmotion-1.7.5
-	o xf86-video-sis-0.10.3
+	o xf86-video-savage-2.3.4
+	o xf86-video-siliconmotion-1.7.6
+	o xf86-video-sis-0.10.4
 	o xf86-video-sisusb-0.9.4
 	o xf86-video-sunffb-1.2.1 [unpackaged]
+	o xf86-video-tdfx-1.4.4
 	o xf86-video-tga-1.2.1
-	o xf86-video-trident-1.3.4
+	o xf86-video-trident-1.3.5
 	o xf86-video-tseng-1.2.4
 	o xf86-video-vesa-2.3.1
 	o xf86-video-vmware-12.0.2
@@ -1432,26 +1451,27 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xfd-1.1.1
 	o xfe-1.32.4
 	o xfontsel-1.0.3 [pkg/45523]
+	o xfontsel-1.0.4
 	o xforms-1.0.93sp1
 	o xfs-1.1.1 [wip]
 	o xfstt-1.8 [pkg/45478]
-	o xgamma-1.0.4
+	o xgamma-1.0.5
 	o xhippo-3.5
-	o xhost-1.0.4
+	o xhost-1.0.5
 	o xineramaproto-1.2.1
 	o xinit-1.3.2
 	o xinput-1.5.4
 	o xjman-0.7
-	o xkbcomp-1.2.3
+	o xkbcomp-1.2.4
 	o xkbevd-1.1.2 [unpackaged]
 	o xkbset-0.5
 	o xkbutils-1.0.2 [unpackaged]
 	o xkeyboard-config-2.5.1
 	o xkill-1.0.3
 	o xli-2006.11.10
-	o xload-1.1.0
+	o xload-1.1.1
 	o xlog-2.0.5
-	o xlogo-1.0.3
+	o xlogo-1.0.4
 	o xlsatoms-1.1.0 [unpackaged]
 	o xlsclients-1.1.2
 	o xmag-1.0.4 [pkg/45551]
@@ -1462,7 +1482,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmlto-2.0
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
-	o xmodmap-1.0.5
+	o xmodmap-1.0.6
 	o xmon-1.5.6
 	o xmp-3.5.0
 	o xmule-1.12.2
@@ -1490,7 +1510,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xsoldier-1.4
 	o xterm-278
 	o xtraceroute-0.9.1
-	o xtrans-1.2.6
+	o xtrans-1.2.7
 	o xtu-1.3
 	o xtux-20030306
 	o xvidcap-1.1.7
