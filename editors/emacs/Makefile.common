@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2012/02/19 17:44:35 minskim Exp $
+# $NetBSD: Makefile.common,v 1.35 2012/03/25 21:25:11 dholland Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
@@ -77,3 +77,4 @@ post-extract:
 	cp ${.CURDIR}/../../editors/emacs/files/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CHMOD} -R go-w ${WRKSRC}
+	${CHMOD} ugo+rx ${WRKSRC}/leim/ja-dic ${WRKSRC}/leim/quail
