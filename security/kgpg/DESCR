@@ -1,0 +1,3 @@
+KGpg is a simple interface for GnuPG, a powerful encryption utility. It
+can help you set up and manage your keys, import and export keys, view key
+signatures, trust status and expiry dates.
