@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.106 2012/03/20 10:28:29 markd Exp $
+# $NetBSD: Makefile,v 1.107 2012/03/26 13:59:01 joerg Exp $
 #
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.5.0
+PKGREVISION=	1
 CATEGORIES=	audio multimedia
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/amarok/${VERS}/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,13 +19,15 @@ DEPENDS+=	moodbar-[0-9]*:../../audio/moodbar
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	msgfmt pkg-config
+USE_TOOLS+=	msgfmt pkg-config perl:run
 
 CMAKE_ARGS+=	-DMYSQL_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 CMAKE_ARGS+=	-DMYSQL_EMBEDDED_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-server}/lib/mysql/libmysqld.a
 CMAKE_ARGS+=	-DMYSQL_EMBEDDED_FOUND:BOOL=TRUE
 CMAKE_ARGS+=	-DHAVE_MYSQL_OPT_EMBEDDED_CONNECTION:BOOL=TRUE
 CMAKE_ARGS+=	-DMYSQL_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-client}/lib/mysql/libmysqlclient.so
+
+REPLACE_PERL+=	src/kconf_update/amarok-2.4.1-tokens_syntax_update.pl
 
 SUBST_CLASSES+=		mysql
 SUBST_STAGE.mysql=	post-patch
