@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/11/11 23:43:43 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2012/03/26 11:56:12 obache Exp $
 
 DISTNAME=	gated-3-5-11
 PKGNAME=	gated-3.5.11
@@ -24,7 +24,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 NOT_FOR_PLATFORM=	Interix-*-* # no userland routing table support
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	lex yacc pax
 
 RCD_SCRIPTS=		gated
 RCD_SCRIPT_SRC.gated=	${FILESDIR}/gated
