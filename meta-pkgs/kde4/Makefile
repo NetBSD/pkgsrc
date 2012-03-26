@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/20 09:02:03 markd Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/26 09:29:54 markd Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -75,6 +75,7 @@ DEPENDS+=	kremotecontrol-4.8.0{,nb[0-9]*}:../../misc/kremotecontrol
 DEPENDS+=	ksecrets-4.8.0{,nb[0-9]*}:../../security/ksecrets
 DEPENDS+=	ktimer-4.8.0{,nb[0-9]*}:../../time/ktimer
 DEPENDS+=	kwallet-4.8.0{,nb[0-9]*}:../../security/kwallet
+DEPENDS+=	kgpg-4.8.0{,nb[0-9]*}:../../security/kgpg
 DEPENDS+=	printer-applet-4.8.0{,nb[0-9]*}:../../print/printer-applet
 DEPENDS+=	superkaramba-4.8.0{,nb[0-9]*}:../../misc/superkaramba
 DEPENDS+=	sweeper-4.8.0{,nb[0-9]*}:../../misc/sweeper
