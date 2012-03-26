@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/03/09 17:02:14 adam Exp $
+# $NetBSD: Makefile,v 1.42 2012/03/26 07:28:18 fhajny Exp $
 
 .include "../../devel/scmgit/Makefile.common"
 
@@ -86,7 +86,7 @@ SUBST_STAGE.fix-cd-P=	pre-build
 SUBST_SED.fix-cd-P=	-e "s/cd -P/cd/g"
 .endif
 
-LDFLAGS.SunOS+=		-lintl
+LDFLAGS.SunOS+=		-lintl -lnsl
 
 .include "options.mk"
 
