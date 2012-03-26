@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2011/04/28 10:27:39 mrg Exp $
+$NetBSD: patch-aa,v 1.2 2012/03/26 13:59:40 joerg Exp $
 
 diff -ru Sconstruct.orig Sconstruct
 --- Sconstruct.orig	2010-09-19 08:36:25.000000000 -0700
@@ -8,7 +8,7 @@ diff -ru Sconstruct.orig Sconstruct
  	env = Environment( options = opts )
  
 -	if sys.platform == "linux2" or sys.platform == "darwin":
-+	if sys.platform == "linux2" or sys.platform == "darwin" or sys.platform == "netbsd5":
++	if sys.platform == "linux2" or sys.platform == "darwin" or sys.platform[:6] == "netbsd":
  		if str(env['debug']) == "1":
  			cppflags += ['-Wall',  '-g2', '-ggdb', '-O0'] 
  			for flag in env["optflags"].split(" "):
@@ -16,7 +16,7 @@ diff -ru Sconstruct.orig Sconstruct
  	if sys.platform == 'linux2':
  		ldflags.append('-lasound')
  
-+	if sys.platform == 'netbsd5':
++	if sys.platform[:6] == 'netbsd':
 +		includes.append( env['prefix'] + "/include" )
 +		ldflags.append('-lossaudio')
 +		ldflags.append( "-L" + env['prefix'] + "/lib" )
@@ -32,7 +32,7 @@ diff -ru Sconstruct.orig Sconstruct
  	        env.ParseConfig('pkg-config --cflags --libs lash-1.0')
  
 -	if sys.platform == "darwin" or sys.platform == "linux2":
-+	if sys.platform == "darwin" or sys.platform == "linux2" or sys.platform == "netbsd5":
++	if sys.platform == "darwin" or sys.platform == "linux2" or sys.platform[:6] == "netbsd":
  		env.Append( LIBS = ["z"] )
  
  	if sys.platform == "darwin" and str(env['coreaudio']) == "1":
