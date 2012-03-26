@@ -1,3 +1,5 @@
+# $NetBSD: hacks.mk,v 1.2 2012/03/26 03:30:45 dholland Exp $
+
 # This package's distfile has the wonderful idea of containing
 # symlinks to various things in /usr/share/automake-1.11/. What
 # will they think of next?
