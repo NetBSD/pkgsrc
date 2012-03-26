@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/04/01 15:11:58 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/03/26 14:06:53 joerg Exp $
 #
 
 DISTNAME=		mod-auth-mysql_4.3.9.orig
@@ -13,6 +13,8 @@ HOMEPAGE=		http://packages.debian.org/sid/libapache2-mod-auth-mysql
 COMMENT=		Module to allow apache authentication against a MySQL database
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PKG_APACHE_ACCEPTED=	apache2 apache22
 
 CONFLICTS=	ap-auth-mysql-[0-9]*
 
