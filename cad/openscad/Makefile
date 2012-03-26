@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/03 00:12:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/26 08:15:07 reinoud Exp $
 #
 
 PKGNAME=	openscad-2011.12
@@ -31,6 +31,9 @@ SUBST_CLASSES+=destdir
 SUBST_SED.destdir=-e 's,@DESTDIR@,${DESTDIR},g'
 SUBST_FILES.destdir=${WRKSRC}/openscad.pro
 SUBST_STAGE.destdir=post-patch
+
+CHECK_PORTABILITY_SKIP=tests/compare-bitmaps.sh
+CHECK_INTERPRETER_SKIP+=share/openscad/libraries/MCAD/get_submodules.py
 
 pre-build:
 	(cd ${WRKSRC} && ${QTDIR$}/bin/qmake)
