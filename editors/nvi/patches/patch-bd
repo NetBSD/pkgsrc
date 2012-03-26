@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.1 2010/06/02 13:24:34 adam Exp $
+$NetBSD: patch-bd,v 1.2 2012/03/26 14:00:40 joerg Exp $
 
 --- ../dist/Makefile.in.orig	2010-06-01 08:47:30.000000000 +0000
 +++ ../dist/Makefile.in
@@ -11,3 +11,28 @@ $NetBSD: patch-bd,v 1.1 2010/06/02 13:24:34 adam Exp $
  CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
  CURSCPPFLAGS = @CURSCPPFLAGS@
+@@ -1698,24 +1698,7 @@ install-data-local: install_common
+ 	@[ -d $(DESTDIR)$(mandir) ] || \
+ 	    ($(mkdir) $(DESTDIR)$(mandir) && \
+ 	     $(chmod) $(dmode) $(DESTDIR)$(mandir))
+-	@[ -d $(DESTDIR)$(mandir)/cat1 ] || \
+-	    ($(mkdir) $(DESTDIR)$(mandir)/cat1 && \
+-	     $(chmod) $(dmode) $(DESTDIR)$(mandir)/cat1)
+ 	@echo "Installing man pages: $(DESTDIR)$(mandir) ..."
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(rm) -f `echo vi.0 | sed '$(transform)'`
+-	@$(cp) $(visrcdir)/docs/vi.man/vi.0 \
+-	    $(DESTDIR)$(mandir)/cat1/`echo vi.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(chmod) $(fmode) `echo vi.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(rm) -f `echo ex.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && \
+-	    $(rm) -f `echo view.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && $(ln) \
+-	    `echo vi.0 | sed '$(transform)'` `echo ex.0 | sed '$(transform)'`
+-	@cd $(DESTDIR)$(mandir)/cat1 && $(ln) \
+-	    `echo vi.0 | sed '$(transform)'` `echo view.0 | sed '$(transform)'`
+ 	@[ -d $(DESTDIR)$(mandir)/man1 ] || \
+ 	    ($(mkdir) $(DESTDIR)$(mandir)/man1 && \
+ 	     $(chmod) $(dmode) $(DESTDIR)$(mandir)/man1)
