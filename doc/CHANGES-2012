@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1006 2012/03/26 09:32:09 markd Exp $
+$NetBSD: CHANGES-2012,v 1.1007 2012/03/26 13:11:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/python26 to 2.6.7nb3 [tron 2012-03-25]
 	Updated net/mikutter to 0.1.0.723nb1 [obache 2012-03-25]
 	Added security/kgpg version 4.8.0 [markd 2012-03-26]
+	Updated devel/p5-Tie-File to 0.98 [obache 2012-03-26]
