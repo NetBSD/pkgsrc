@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2012/03/06 17:39:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2012/03/26 12:40:26 obache Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.32.0
@@ -34,6 +34,7 @@ PYTHON_VERSIONS_ACCEPTED=	27 26 25
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
 # works, but should better be in its own pkg to limit dependencies
 #.include "../../sysutils/brasero/buildlink3.mk"
+BUILDLINK_API_DEPENDS.evince+=	evince>=2.32<2.33
 .include "../../print/evince/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
