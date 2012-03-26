@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:53:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/26 14:00:40 joerg Exp $
 bin/nex
 bin/nvi
 bin/nview
 lib/libvi.la
-man/cat1/nex.0
-man/cat1/nvi.0
-man/cat1/nview.0
 man/man1/nex.1
 man/man1/nvi.1
 man/man1/nview.1
