@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/26 09:26:12 markd Exp $
+
+SHA1 (kgpg-4.8.0.tar.bz2) = 4edbfa73c62fdd99f87b5b42dd7f1330dc8f5986
+RMD160 (kgpg-4.8.0.tar.bz2) = c23fb0541ba3aa6ebd7d31b29aaadce65fafed9a
+Size (kgpg-4.8.0.tar.bz2) = 843966 bytes
