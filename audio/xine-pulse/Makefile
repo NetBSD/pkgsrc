@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/21 17:45:33 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/26 11:17:34 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,7 +12,8 @@ COMMENT=	The PulseAudio output plugin for xine-lib
 DEPENDS+=	xine-lib>=1rc3a:../../multimedia/xine-lib
 
 BUILD_DIRS=	${WRKSRC}/src/audio_out
-CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-x --disable-xinerama
+CONFIGURE_ARGS+=	--disable-vcd
 
 INSTALLATION_DIRS=	lib/xine/plugins/${XINE_MOD_DIR_VER}
 
