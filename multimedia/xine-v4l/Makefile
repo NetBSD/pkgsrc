@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/17 18:22:27 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/26 11:17:34 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -15,7 +15,8 @@ NOT_FOR_PLATFORM=	NetBSD-*-*
 DEPENDS+=	xine-lib>=1rc3a:../../multimedia/xine-lib
 
 BUILD_DIRS=	${WRKSRC}/src/input
-CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-x --disable-xinerama
+CONFIGURE_ARGS+=	--disable-vcd
 
 INSTALLATION_DIRS=	lib/xine/plugins/${XINE_MOD_DIR_VER}
 
