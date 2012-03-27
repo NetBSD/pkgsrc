@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1007 2012/03/26 13:11:51 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1008 2012/03/27 04:25:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1666,3 +1666,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.723nb1 [obache 2012-03-25]
 	Added security/kgpg version 4.8.0 [markd 2012-03-26]
 	Updated devel/p5-Tie-File to 0.98 [obache 2012-03-26]
+	Updated emulators/suse121_openssl to 12.1nb1 [obache 2012-03-27]
