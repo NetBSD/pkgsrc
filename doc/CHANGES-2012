@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1009 2012/03/27 15:17:30 plunky Exp $
+$NetBSD: CHANGES-2012,v 1.1010 2012/03/27 20:10:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1668,3 +1668,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Tie-File to 0.98 [obache 2012-03-26]
 	Updated emulators/suse121_openssl to 12.1nb1 [obache 2012-03-27]
 	Updated lang/pcc-current to 20120326 [plunky 2012-03-27]
+	Added net/p5-Net-DHCP version 0.67 [wiz 2012-03-27]
