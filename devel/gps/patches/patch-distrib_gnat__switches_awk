@@ -1,0 +1,53 @@
+$NetBSD: patch-distrib_gnat__switches_awk,v 1.1 2012/03/27 21:49:52 dholland Exp $
+
+Escape braces in gawk regexps; otherwise they become interval
+expressions, and the latest gawk doesn't like invalid interval
+expressions much.
+
+--- distrib/gnat_switches.awk~	2008-06-30 07:58:03.000000000 +0000
++++ distrib/gnat_switches.awk
+@@ -44,9 +44,9 @@ warnings == 1 && st > 0 && st < 4 && /^@
+ 
+ # print the short comment. Do this after all previous handling of st == 3, as
+ # we don't want them to analyse the current string.
+-warnings == 1 && st == 2 && /^@emph{/ {
+-    sub (/@emph{/, "         \"\"\"",$0)
+-    sub (/}$/, "\"\"\", \n         \"\"\"",$0)
++warnings == 1 && st == 2 && /^@emph\{/ {
++    sub (/@emph\{/, "         \"\"\"",$0)
++    sub (/\}$/, "\"\"\", \n         \"\"\"",$0)
+     printf ("%s", $0)
+     prev=""
+     itemize=0
+@@ -99,12 +99,12 @@ styles == 1 && /@item / {
+     st = 2
+ }
+ 
+-(validity == 1 || styles == 1) && st == 2 && /^@emph{/ {
+-    sub (/@emph{/, "         \"\"\"",$0)
+-    sub (/}$/, "\"\"\", \n         \"\"\"",$0)
++(validity == 1 || styles == 1) && st == 2 && /^@emph\{/ {
++    sub (/@emph\{/, "         \"\"\"",$0)
++    sub (/\}$/, "\"\"\", \n         \"\"\"",$0)
+     # remove any @code{sth} or other texi commands from the short description.
+-    sub (/@[^{]*{/,"",$0)
+-    sub (/}/,"",$0)
++    sub (/@[^\{]*\{/,"",$0)
++    sub (/\}/,"",$0)
+     printf ("%s", $0)
+     prev=""
+     itemize=0
+@@ -176,10 +176,10 @@ st == 3 {
+     gsub (/</, "\\&lt;", $0)
+     gsub (/>/, "\\&gt;", $0)
+     gsub (/\"/, "'", $0)
+-    gsub (/@dots{}/,"..",$0)
++    gsub (/@dots\{\}/,"..",$0)
+     # remove all @foo{}
+-    gsub (/@[^ {]*{/,"",$0)
+-    gsub (/}/,"",$0)
++    gsub (/@[^ \{]*\{/,"",$0)
++    gsub (/\}/,"",$0)
+     gsub (/@ifclear [^ ]*/,"",$0)
+     gsub (/@end [^ ]*/,"",$0)
+     gsub (/@[^ ]*/,"",$0)
