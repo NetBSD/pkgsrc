@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/01/30 05:40:02 asau Exp $
+# $NetBSD: Makefile,v 1.38 2012/03/27 18:43:30 dholland Exp $
 
 DISTNAME=		mercury-compiler-11.07
 PKGNAME=		mercury-11.07
@@ -14,7 +14,7 @@ COMMENT=		Modern logic/functional programming language
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pax
+USE_TOOLS+=		gmake pax bison
 USE_TOOLS+=		perl # ?
 USE_GNU_READLINE=	yes # rl_prep_term_function
 INFO_FILES=		# PLIST
