@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.5 2011/09/16 19:17:52 bsiegert Exp $
+$NetBSD: patch-al,v 1.6 2012/03/27 10:49:22 obache Exp $
 
---- configure.orig	Sat Jun 11 15:46:04 2011
+--- configure.orig	2011-06-11 15:46:28.000000000 +0000
 +++ configure
 @@ -3026,7 +3026,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
@@ -11,6 +11,15 @@ $NetBSD: patch-al,v 1.5 2011/09/16 19:17:52 bsiegert Exp $
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
+@@ -3035,7 +3035,7 @@ case $ac_sys_system/$ac_sys_release in
+ $as_echo "#define _BSD_SOURCE 1" >>confdefs.h
+ 
+     ;;
+-  OpenBSD/4.[789])
++  OpenBSD/4.[789] | OpenBSD/5.*)
+     # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
+     # also defined. This can be overridden by defining _BSD_SOURCE
+     # As this has a different meaning on Linux, only define it on OpenBSD
 @@ -4927,15 +4927,10 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
