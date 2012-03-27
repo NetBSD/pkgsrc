@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/27 20:09:44 wiz Exp $
+
+SHA1 (Net-DHCP-0.67.tar.gz) = 1513e3a336d7a15ea135a63b6df4984980e84fbc
+RMD160 (Net-DHCP-0.67.tar.gz) = 96581cbbdb06ce747cc193d7d26054a2c9c3e3da
+Size (Net-DHCP-0.67.tar.gz) = 21692 bytes
