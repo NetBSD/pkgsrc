@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1008 2012/03/27 04:25:12 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1009 2012/03/27 15:17:30 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1667,3 +1667,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added security/kgpg version 4.8.0 [markd 2012-03-26]
 	Updated devel/p5-Tie-File to 0.98 [obache 2012-03-26]
 	Updated emulators/suse121_openssl to 12.1nb1 [obache 2012-03-27]
+	Updated lang/pcc-current to 20120326 [plunky 2012-03-27]
