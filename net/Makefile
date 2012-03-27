@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.915 2012/03/15 17:29:04 asau Exp $
+# $NetBSD: Makefile,v 1.916 2012/03/27 20:10:20 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -364,6 +364,7 @@ SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-CIDR-Set
 SUBDIR+=	p5-Net-CUPS
 SUBDIR+=	p5-Net-DBus
+SUBDIR+=	p5-Net-DHCP
 SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-DNS-Zone-Parser
