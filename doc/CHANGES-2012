@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1013 2012/03/28 12:59:42 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1014 2012/03/28 14:24:59 manu Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1673,3 +1673,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/wireshark to 1.6.6 [tron 2012-03-28]
 	Updated www/typo3_45 to 4.5.14 [taca 2012-03-28]
 	Updated www/typo3_46 to 4.6.7 [taca 2012-03-28]
+	Updated filesystems/glusterfs to 3.2.6 [manu 2012-03-28]
