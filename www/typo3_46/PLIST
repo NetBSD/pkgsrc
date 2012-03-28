@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/07 12:54:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/28 12:58:28 taca Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -3174,6 +3174,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Security/Cryptography/Hash
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Security/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Security/Exception/InvalidArgumentForHashGeneration.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Security/Exception/InvalidArgumentForRequestHashGeneration.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Security/Exception/InvalidHash.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Security/Exception/SyntacticallyWrongRequestHash.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Service/CacheService.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Service/ExtensionService.php
