@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1012 2012/03/28 12:22:49 tron Exp $
+$NetBSD: CHANGES-2012,v 1.1013 2012/03/28 12:59:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1671,3 +1671,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added net/p5-Net-DHCP version 0.67 [wiz 2012-03-27]
 	Updated www/opera to 11.62 [obache 2012-03-28]
 	Updated net/wireshark to 1.6.6 [tron 2012-03-28]
+	Updated www/typo3_45 to 4.5.14 [taca 2012-03-28]
+	Updated www/typo3_46 to 4.6.7 [taca 2012-03-28]
