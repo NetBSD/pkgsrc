@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/27 06:41:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/03/28 20:46:57 wiz Exp $
 
 SHA1 (agg-2.5.tar.gz) = 08f23da64da40b90184a0414369f450115cdb328
 RMD160 (agg-2.5.tar.gz) = fac24d8ea56ee0a87307189f73c432b07b6d3c50
 Size (agg-2.5.tar.gz) = 564313 bytes
+SHA1 (patch-include_agg__renderer__outline__aa.h) = 157cd8287d171bf67039b80ecce1a5ac8360cea8
