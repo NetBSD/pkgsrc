@@ -1,0 +1,17 @@
+# $NetBSD: pam-xlock-NetBSD,v 1.1 2012/03/28 20:21:46 drochner Exp $
+#
+# PAM configuration for the "xlock" service
+#
+
+# auth
+#auth		sufficient	pam_pwauth_suid.so
+auth		include		system
+
+# account
+account		include		system
+
+# session
+session		include		system
+
+# password
+password	include		system
