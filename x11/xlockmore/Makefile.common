@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2012/03/11 03:22:09 markd Exp $
+# $NetBSD: Makefile.common,v 1.64 2012/03/28 20:21:46 drochner Exp $
 #
 # This Makefile.common is included by:
 #
@@ -22,6 +22,8 @@ CONFLICTS+=	xlockmore-[0-9]* xlockmore-lite-[0-9]*
 DISTINFO_FILE?=		${.CURDIR}/../xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../xlockmore/patches
 PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
+FILESDIR?=		${.CURDIR}/../xlockmore/files
+MESSAGE_SRC?=		${.CURDIR}/../xlockmore/MESSAGE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -98,6 +100,10 @@ SPECIAL_PERMS+=	bin/xlock ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	bin/xlock ${REAL_ROOT_USER} shadow 2511
 .endif
 
+EGDIR=			${PREFIX}/share/examples/xlock
+MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
+INSTALLATION_DIRS+=	${EGDIR}/pam.d
+
 # XXX framework bug: while we don't need it, this would kill
 # the inherited full dependency
 #BUILDLINK_DEPMETHOD.libXt?=	build
@@ -137,3 +143,5 @@ post-install:
 	for file in *.au; do						\
 		${INSTALL_DATA} $$file ${DESTDIR}${XLOCK_SOUNDDIR};	\
 	done
+	${INSTALL_DATA} ${FILESDIR}/pam-xlock-NetBSD \
+	    ${DESTDIR}${EGDIR}/pam.d/xlock-NetBSD
