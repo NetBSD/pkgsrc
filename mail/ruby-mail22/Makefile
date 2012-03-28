@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/15 14:17:30 taca Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/28 15:18:50 taca Exp $
 
 DISTNAME=	mail-2.2.19
+PKGREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +12,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.16:../../mail/ruby-mime-types
 DEPENDS+=	${RUBY_PKGPREFIX}-treetop>=1.4.8:../../textproc/ruby-treetop
-DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.5.0:../../devel/ruby-i18n_05
+DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0.5.0<0.6:../../devel/ruby-i18n_05
 
 RUBY_RAILS_SUPPORTED=	# defined
 
