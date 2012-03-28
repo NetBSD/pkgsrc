@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.36 2012/03/02 12:00:14 asau Exp $
+$NetBSD: distinfo,v 1.37 2012/03/28 05:00:36 obache Exp $
 
-SHA1 (opera-11.61-1250.amd64.freebsd.tar.xz) = 3bac82d74f3fd7fe65233956034a629905ec864c
-RMD160 (opera-11.61-1250.amd64.freebsd.tar.xz) = 312fac7b0fcfa5cd880c5e0b66db96b778a3224c
-Size (opera-11.61-1250.amd64.freebsd.tar.xz) = 12101656 bytes
-SHA1 (opera-11.61-1250.i386.freebsd.tar.xz) = 154e73851169f1a1150bcf0256529c6b05cce42e
-RMD160 (opera-11.61-1250.i386.freebsd.tar.xz) = 985a7bf4e82b09e8da3cb529019df78f227bac21
-Size (opera-11.61-1250.i386.freebsd.tar.xz) = 11542444 bytes
-SHA1 (opera-11.61-1250.i386.linux.tar.xz) = 504f05eeab4e2ef07b82ce8090c30bf49d108237
-RMD160 (opera-11.61-1250.i386.linux.tar.xz) = 7715b98548457260a838944b30b8e16de6915cec
-Size (opera-11.61-1250.i386.linux.tar.xz) = 11490920 bytes
-SHA1 (opera-11.61-1250.x86_64.linux.tar.xz) = 32256a638430a8298fea12fd909c773431063430
-RMD160 (opera-11.61-1250.x86_64.linux.tar.xz) = 36b8fe9df9717673a1252b0a1ecd72c18d36ad0f
-Size (opera-11.61-1250.x86_64.linux.tar.xz) = 12319616 bytes
+SHA1 (opera-11.62-1347.amd64.freebsd.tar.xz) = c08de2ffefa82073b3676c25d9ce6271131a0f42
+RMD160 (opera-11.62-1347.amd64.freebsd.tar.xz) = 73778da4571ddaa578427e53b50a5e09729a4a7c
+Size (opera-11.62-1347.amd64.freebsd.tar.xz) = 12097500 bytes
+SHA1 (opera-11.62-1347.i386.freebsd.tar.xz) = 9b0d113d2baaa03e398ef94495da4ea7a2a0a84b
+RMD160 (opera-11.62-1347.i386.freebsd.tar.xz) = 064af004ced3751a0ad2cf2885490f9e511ade7a
+Size (opera-11.62-1347.i386.freebsd.tar.xz) = 11529504 bytes
+SHA1 (opera-11.62-1347.i386.linux.tar.xz) = 6bfb8a2768a51e4189337e0a40e9fcb0fcbf44ba
+RMD160 (opera-11.62-1347.i386.linux.tar.xz) = 2ad8c94e2deafad2a540bf119cbbce560807f6c7
+Size (opera-11.62-1347.i386.linux.tar.xz) = 11496852 bytes
+SHA1 (opera-11.62-1347.x86_64.linux.tar.xz) = d943d07027ba0f40e6f7f964f14918a04169601a
+RMD160 (opera-11.62-1347.x86_64.linux.tar.xz) = f7413539de20f2178b3558acdfb95555016a2070
+Size (opera-11.62-1347.x86_64.linux.tar.xz) = 12322128 bytes
