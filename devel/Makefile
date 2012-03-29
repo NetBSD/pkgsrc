@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1582 2012/03/21 23:11:46 markd Exp $
+# $NetBSD: Makefile,v 1.1583 2012/03/29 07:34:56 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1412,6 +1412,7 @@ SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties
 SUBDIR+=	ruby-railties31
 SUBDIR+=	ruby-railties32
+SUBDIR+=	ruby-rake
 SUBDIR+=	ruby-randexp
 SUBDIR+=	ruby-rbtree
 SUBDIR+=	ruby-rbx-require-relative
@@ -1419,7 +1420,6 @@ SUBDIR+=	ruby-rcov
 SUBDIR+=	ruby-rcsparse
 SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-rdoc
-SUBDIR+=	ruby-rake
 SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-rgl
 SUBDIR+=	ruby-rspec
@@ -1429,9 +1429,9 @@ SUBDIR+=	ruby-rspec-mocks
 SUBDIR+=	ruby-rspec-rails
 SUBDIR+=	ruby-setup
 SUBDIR+=	ruby-sexp-processor
+SUBDIR+=	ruby-simple_uuid
 SUBDIR+=	ruby-simplecov
 SUBDIR+=	ruby-simplecov-html
-SUBDIR+=	ruby-simple_uuid
 SUBDIR+=	ruby-spruz
 SUBDIR+=	ruby-stream
 SUBDIR+=	ruby-subexec
@@ -1542,8 +1542,8 @@ SUBDIR+=	xulrunner
 SUBDIR+=	xulrunner10
 SUBDIR+=	xulrunner192
 SUBDIR+=	xxgdb
-SUBDIR+=	yasm
 SUBDIR+=	yajl
+SUBDIR+=	yasm
 SUBDIR+=	z80-asm
 SUBDIR+=	zlib
 SUBDIR+=	zzuf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.377 2012/03/21 20:50:16 markd Exp $
+# $NetBSD: Makefile,v 1.378 2012/03/29 07:35:27 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -136,8 +136,8 @@ SUBDIR+=	kig
 SUBDIR+=	kiten
 SUBDIR+=	klettres
 SUBDIR+=	kmag
-SUBDIR+=	kmouth
 SUBDIR+=	kmousetool
+SUBDIR+=	kmouth
 SUBDIR+=	kodos
 SUBDIR+=	koffice
 SUBDIR+=	koffice-l10n-da
@@ -170,10 +170,10 @@ SUBDIR+=	loco
 SUBDIR+=	logsurfer
 SUBDIR+=	lookup
 SUBDIR+=	lv
-SUBDIR+=	marble
 SUBDIR+=	m17n-contrib
 SUBDIR+=	m17n-db
 SUBDIR+=	m17n-docs
+SUBDIR+=	marble
 SUBDIR+=	mirmon
 SUBDIR+=	mkcue
 SUBDIR+=	mmv
@@ -254,8 +254,8 @@ SUBDIR+=	send-pr
 SUBDIR+=	siag
 SUBDIR+=	softmaker-office-demo
 SUBDIR+=	splitvt
-SUBDIR+=	step
 SUBDIR+=	stellarium
+SUBDIR+=	step
 SUBDIR+=	superkaramba
 SUBDIR+=	sweeper
 SUBDIR+=	taskjuggler
