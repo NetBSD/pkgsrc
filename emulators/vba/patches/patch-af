@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2007/02/16 01:52:20 wiz Exp $
+$NetBSD: patch-af,v 1.2 2012/03/29 20:32:34 wiz Exp $
 
---- src/sdl/debugger.cpp.orig	2004-05-13 16:13:14.000000000 +0200
+--- src/sdl/debugger.cpp.orig	2004-05-13 14:13:14.000000000 +0000
 +++ src/sdl/debugger.cpp
 @@ -950,9 +950,9 @@ void debuggerBreakOnWrite(u32 *mem, u32 
  {
@@ -14,3 +14,30 @@ $NetBSD: patch-af,v 1.1 2007/02/16 01:52:20 wiz Exp $
  
    if(size == 2)
      printf("Breakpoint (on write) address %08x old:%08x new:%08x\n", 
+@@ -1280,7 +1280,7 @@ void debuggerMemoryByte(int n, char **ar
+   if(n == 2) {
+     u32 addr = 0;
+     sscanf(args[1], "%x", &addr);
+-    for(int i = 0; i < 16; i++) {
++    for(int s = 0; s < 16; s++) {
+       int a = debuggerReadByte(addr);
+       int b = debuggerReadByte(addr+1);
+       int c = debuggerReadByte(addr+2);
+@@ -1316,7 +1316,7 @@ void debuggerMemoryHalfWord(int n, char 
+     u32 addr = 0;
+     sscanf(args[1], "%x", &addr);
+     addr = addr & 0xfffffffe;
+-    for(int i = 0; i < 16; i++) {
++    for(int s = 0; s < 16; s++) {
+       int a = debuggerReadByte(addr);
+       int b = debuggerReadByte(addr+1);
+       int c = debuggerReadByte(addr+2);
+@@ -1352,7 +1352,7 @@ void debuggerMemory(int n, char **args)
+     u32 addr = 0;
+     sscanf(args[1], "%x", &addr);
+     addr = addr & 0xfffffffc;
+-    for(int i = 0; i < 16; i++) {
++    for(int s = 0; s < 16; s++) {
+       int a = debuggerReadByte(addr);
+       int b = debuggerReadByte(addr+1);
+       int c = debuggerReadByte(addr+2);
