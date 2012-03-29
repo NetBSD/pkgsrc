@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1016 2012/03/28 15:20:49 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1017 2012/03/29 13:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1678,3 +1678,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211 to 2.11.2nb1 [taca 2012-03-28]
 	Updated mail/ruby-mail22 to 2.2.19nb1 [taca 2012-03-28]
 	Updated www/ruby-actionpack3 to 3.0.12nb1 [taca 2012-03-28]
+	Updated graphics/png to 1.5.10 [wiz 2012-03-29]
