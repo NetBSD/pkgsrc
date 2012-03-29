@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2011/09/12 19:14:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.42 2012/03/29 11:36:43 wiz Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -14,7 +14,7 @@ COMMENT=	Free peer-to-peer client with eDonkey support and more
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../net/mldonkey/distinfo
-#PATCHDIR=	${.CURDIR}/../../net/mldonkey/patches
+PATCHDIR=	${.CURDIR}/../../net/mldonkey/patches
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
