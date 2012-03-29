@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2012/03/15 08:30:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.40 2012/03/29 20:32:34 ryoon Exp $
 bin/xulrunner
 include/xulrunner/AtkSocketAccessible.h
 include/xulrunner/BasicLayers.h
@@ -4290,4 +4290,7 @@ include/xulrunner/snappy/snappy-c.h
 include/xulrunner/snappy/snappy-stubs-public.h
 include/xulrunner/snappy/snappy.h
 include/xulrunner/thread_helper.h
-
+${PLIST.gnome}lib/xulrunner/components/components.manifest
+${PLIST.gnome}lib/xulrunner/components/libdbusservice.so
+${PLIST.gnome}lib/xulrunner/components/libmozgnome.so
+${PLIST.gnome}lib/xulrunner/components/libnkgnomevfs.so
