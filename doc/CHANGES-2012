@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1018 2012/03/30 03:51:32 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1019 2012/03/30 03:54:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1680,3 +1680,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/ruby-actionpack3 to 3.0.12nb1 [taca 2012-03-28]
 	Updated graphics/png to 1.5.10 [wiz 2012-03-29]
 	Updated graphics/ImageMagick to 6.7.5.10nb1 [taca 2012-03-30]
+	Updated sysutils/file to 5.11 [taca 2012-03-30]
