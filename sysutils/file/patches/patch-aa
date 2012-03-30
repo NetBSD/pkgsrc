@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 2009/03/10 23:30:00 he Exp $
+$NetBSD: patch-aa,v 1.6 2012/03/30 03:53:54 taca Exp $
 
 Make pkgsrc file look in @sysconfdir@/magic first.
 
---- src/Makefile.in.orig	2009-02-03 21:16:19.000000000 +0100
+--- src/Makefile.in.orig	2012-02-21 19:17:04.000000000 +0000
 +++ src/Makefile.in
-@@ -197,10 +197,10 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+@@ -240,10 +240,10 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -MAGIC = $(pkgdatadir)/magic
