@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
+$NetBSD: patch-ab,v 1.18 2012/03/30 14:28:29 obache Exp $
 
---- dbus/dbus-sysdeps-unix.c.orig	2008-12-18 22:35:53 +0200
-+++ dbus/dbus-sysdeps-unix.c	2009-01-09 13:49:43 +0200
+--- dbus/dbus-sysdeps-unix.c.orig	2009-05-05 20:51:37.000000000 +0000
++++ dbus/dbus-sysdeps-unix.c
 @@ -23,6 +23,7 @@
   */
  
@@ -162,7 +162,19 @@ $NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
      {
        dbus_set_error (error, DBUS_ERROR_FAILED,
                        "Message from recvmsg() was not SCM_CREDS");
-@@ -1238,8 +1284,21 @@ _dbus_read_credentials_socket  (int     
+@@ -1223,7 +1269,11 @@ _dbus_read_credentials_socket  (int     
+ 
+   {
+ #ifdef SO_PEERCRED
++#ifdef __OpenBSD__
++    struct sockpeercred cr;   
++#else
+     struct ucred cr;   
++#endif
+     int cr_len = sizeof (cr);
+     
+     if (getsockopt (client_fd, SOL_SOCKET, SO_PEERCRED, &cr, &cr_len) == 0 &&
+@@ -1238,8 +1288,21 @@ _dbus_read_credentials_socket  (int     
  		       cr_len, (int) sizeof (cr), _dbus_strerror (errno));
        }
  #elif defined(HAVE_CMSGCRED)
@@ -186,7 +198,7 @@ $NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
  #elif defined(LOCAL_CREDS)
      pid_read = DBUS_PID_UNSET;
      uid_read = cmsg.cred.sc_uid;
-@@ -1301,7 +1360,7 @@ _dbus_read_credentials_socket  (int     
+@@ -1301,7 +1364,7 @@ _dbus_read_credentials_socket  (int     
        }
      if (ucred != NULL)
        ucred_free (ucred);
@@ -195,7 +207,7 @@ $NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
      _dbus_verbose ("Socket credentials not supported on this OS\n");
  #endif
    }
-@@ -1826,7 +1885,26 @@ _dbus_parse_uid (const DBusString      *
+@@ -1826,7 +1889,26 @@ _dbus_parse_uid (const DBusString      *
    return TRUE;
  }
  
@@ -204,7 +216,7 @@ $NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
 +_dbus_atomic_inc (DBusAtomic *atomic)
 +{
 +	register dbus_int32_t old = atomic->value;
-+
+ 
 +	atomic_inc_uint((unsigned *)&atomic->value);
 +	return old;
 +}
@@ -213,7 +225,7 @@ $NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
 +_dbus_atomic_dec (DBusAtomic *atomic)
 +{
 +	register dbus_int32_t old = atomic->value;
- 
++
 +	atomic_dec_uint((unsigned *)&atomic->value);
 +  	return old;
 +}
@@ -222,7 +234,7 @@ $NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
  _DBUS_DEFINE_GLOBAL_LOCK (atomic);
  
  #if DBUS_USE_ATOMIC_INT_486_COND
-@@ -1891,6 +1969,7 @@ _dbus_atomic_dec (DBusAtomic *atomic)
+@@ -1891,6 +1973,7 @@ _dbus_atomic_dec (DBusAtomic *atomic)
    return res;
  #endif
  }
@@ -230,7 +242,7 @@ $NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
  
  #ifdef DBUS_BUILD_TESTS
  /** Gets our GID
-@@ -2792,8 +2871,18 @@ int
+@@ -2792,8 +2875,18 @@ int
  _dbus_printf_string_upper_bound (const char *format,
                                   va_list     args)
  {
