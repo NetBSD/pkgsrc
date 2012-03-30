@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2012/03/28 20:21:46 drochner Exp $
+# $NetBSD: Makefile.common,v 1.65 2012/03/30 07:37:22 drochner Exp $
 #
 # This Makefile.common is included by:
 #
@@ -84,7 +84,7 @@ CONFIGURE_ARGS+=	--disable-allow-root
 
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-pam
+CONFIGURE_ARGS+=	--enable-pam --enable-bad-pam
 .else
 CONFIGURE_ARGS+=	--disable-pam
 .endif
