@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/01/13 11:27:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/31 12:45:25 obache Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/COPYING
 share/mediawiki/CREDITS
@@ -78,6 +78,7 @@ share/mediawiki/includes/ChangesList.php
 share/mediawiki/includes/Collation.php
 share/mediawiki/includes/ConfEditor.php
 share/mediawiki/includes/Credits.php
+share/mediawiki/includes/CryptRand.php
 share/mediawiki/includes/DefaultSettings.php
 share/mediawiki/includes/Defines.php
 share/mediawiki/includes/DjVuImage.php
