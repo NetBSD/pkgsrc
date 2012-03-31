@@ -1,8 +1,19 @@
-$NetBSD: patch-ak,v 1.1 2006/01/08 11:02:10 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2012/03/31 08:31:06 dholland Exp $
 
---- sn_packets.c.orig	1997-04-18 11:33:58.000000000 +0200
+- use standard headers
+- unclear other changes from a long time back
+
+--- sn_packets.c.orig	1997-04-18 09:33:58.000000000 +0000
 +++ sn_packets.c
-@@ -43,6 +43,7 @@ int unwrap_packet (unsigned char *sp, st
+@@ -4,6 +4,7 @@
+ #include "sn_config.h"
+ #include "sn_defines.h"
+ #include "sn_structs.h"
++#include <string.h>
+ #include <netinet/in.h>
+ 
+ extern int PROTO_HEAD;
+@@ -43,6 +44,7 @@ int unwrap_packet (unsigned char *sp, st
  	struct UDP_header UDPhead;
  
  	int i;
@@ -10,7 +21,7 @@ $NetBSD: patch-ak,v 1.1 2006/01/08 11:02:10 wiz Exp $
  
  	memcpy(&IPhead,(sp+PROTO_HEAD),sizeof(struct IP_header));
                                                    /* IP header Conversion */
-@@ -51,6 +52,7 @@ int unwrap_packet (unsigned char *sp, st
+@@ -51,6 +53,7 @@ int unwrap_packet (unsigned char *sp, st
  	unwrapped->TCP_len = 0;         	/* Reset structure NEEDED!!! */
  	unwrapped->UDP_len = 0;
  	unwrapped->DATA_len = 0;
@@ -18,7 +29,7 @@ $NetBSD: patch-ak,v 1.1 2006/01/08 11:02:10 wiz Exp $
          
  	if(NO_CHKSUM == 0)
  		{
-@@ -75,32 +77,74 @@ int unwrap_packet (unsigned char *sp, st
+@@ -75,32 +78,74 @@ int unwrap_packet (unsigned char *sp, st
  					/* restore orig buffer      */
          			 	/* general programming rule */
  		}
