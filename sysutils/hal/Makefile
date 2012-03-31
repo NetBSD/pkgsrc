@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2012/03/03 00:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2012/03/31 16:06:56 ryoon Exp $
 
 DISTNAME=		hal-0.5.14
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -36,7 +36,13 @@ CONFIGURE_ARGS+=	--without-os-type
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "DragonFly"
+.include "../../devel/libvolume_id/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-eject=/usr/sbin/cdcontrol
+CONFIGURE_ARGS+=	--with-backend=freebsd
+PLIST_SRC=		PLIST.DragonFly PLIST
+
+.elif ${OPSYS} == "FreeBSD"
 .include "../../devel/libvolume_id/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-eject=/usr/sbin/cdcontrol
 CONFIGURE_ARGS+=	--with-backend=freebsd
