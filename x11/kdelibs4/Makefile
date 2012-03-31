@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/03/22 22:08:29 markd Exp $
+# $NetBSD: Makefile,v 1.39 2012/03/31 21:46:55 hans Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -62,6 +62,7 @@ SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/_usr/pkg/share/kde/apps/
 SUBST_SED.phononrelpath=	-e 's:[^"]*/\.buildlink/lib/libphonon\.so::'
 
 USE_TOOLS+=	flex gmake
+PLIST_VARS+=	kgrantpty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,6 +70,12 @@ USE_TOOLS+=	flex gmake
 # make sure zone.tab is installed
 DEPENDS+=		zonetab-[0-9]*:../../time/zonetab
 .endif
+
+.if ${OPSYS} == "SunOS"
+PLIST.kgrantpty=	yes
+.endif
+
+LDFLAGS.SunOS+=		-lintl
 
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../meta-pkgs/kde4/kde4.mk"
