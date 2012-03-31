@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1021 2012/03/31 08:53:05 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1022 2012/03/31 11:12:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1683,3 +1683,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/file to 5.11 [taca 2012-03-30]
 	Updated emulators/suse121_libpng to 12.1nb1 [obache 2012-03-31]
 	Updated net/xipdump to 1.5.4nb5 [dholland 2012-03-31]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.16 [obache 2012-03-31]
