@@ -1,8 +1,50 @@
-$NetBSD: patch-ai,v 1.1 2006/01/08 11:02:10 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2012/03/31 08:31:06 dholland Exp $
 
---- sniffit.0.3.5.c.orig	1997-04-18 11:33:58.000000000 +0200
+- use standard headers
+- fix signature of signal handler, make it file-static
+- fix signature of pcap handler
+- make const declarations internally consistent
+- CORRUPT_IP/DONT_EXAMINE changes from a long time ago
+
+--- sniffit.0.3.5.c.orig	1997-04-18 09:33:58.000000000 +0000
 +++ sniffit.0.3.5.c
-@@ -411,11 +411,17 @@ int check_packet(unsigned long ipaddr,
+@@ -7,6 +7,8 @@
+ #include <unistd.h>
+ #include <signal.h>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <netdb.h>
+ #include <errno.h>
+ #include <sys/stat.h>
+@@ -93,7 +95,7 @@ printf("    9 -- %s\n",PLUGIN9_NAME);
+ exit(0); 
+ }
+ 
+-void my_exit (void)	{	exit(0);};
++static void my_exit (int sig)	{	exit(0);};
+ 
+ /* DEBUGGING INFO */
+ #ifdef DEBUG
+@@ -298,7 +300,7 @@ struct file_info *search_dynam(char *fil
+ 
+ /* Type 0: TELNET  */
+ void record_buf(struct file_info *dummy_pointer, unsigned long cur_seq_nr, 
+-						     char *data, int len, int type) 
++						     const char *data, int len, int type) 
+ {
+ int i,j,noloop=0;
+ 
+@@ -337,7 +339,7 @@ for(i=1;i<SCBUF;i++)
+ }
+ 
+ void sbuf_update(struct file_info *dummy_pointer, unsigned long cur_seq_nr, 
+-							      char *data, int len) 
++							      const char *data, int len) 
+ {
+ int i;
+ 
+@@ -411,11 +413,17 @@ int check_packet(unsigned long ipaddr,
  	proto=unwrap_packet(sp, info); 
  	if(proto == NO_IP)	return DONT_EXAMINE; /* no use in trying */
  	if(proto == NO_IP_4)	return DONT_EXAMINE; /* no use in trying */
@@ -20,7 +62,7 @@ $NetBSD: patch-ai,v 1.1 2006/01/08 11:02:10 wiz Exp $
  	if((proto==TCP)&&(PROTOCOLS&F_TCP)) 
  		{
  #ifdef DEBUG_ONSCREEN
-@@ -1220,6 +1226,10 @@ int check_mask (const struct packetheade
+@@ -1220,6 +1228,10 @@ int check_mask (const struct packetheade
  	proto=unwrap_packet(sp, info);
  	if(proto == NO_IP)	return DONT_EXAMINE; /* no use in trying */
  	if(proto == NO_IP_4)	return DONT_EXAMINE; /* no use in trying */
@@ -31,3 +73,12 @@ $NetBSD: patch-ai,v 1.1 2006/01/08 11:02:10 wiz Exp $
  
  	(*IP_nr_of_packets)++;
  	if(proto==ICMP)  
+@@ -1272,7 +1284,7 @@ int check_mask (const struct packetheade
+ 	return TCP_EXAMINE;                            /* interprete packet */
+ }
+ 
+-pcap_handler interactive_packethandler(	char *dummy, 
++pcap_handler interactive_packethandler(	unsigned char *dummy, 
+ 			 	const struct packetheader *p_header, 
+ 				const unsigned char *sp) 
+ { 
