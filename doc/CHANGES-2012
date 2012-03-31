@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1023 2012/03/31 11:23:44 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1024 2012/03/31 12:45:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1685,3 +1685,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/xipdump to 1.5.4nb5 [dholland 2012-03-31]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.16 [obache 2012-03-31]
 	Updated multimedia/adobe-flash-plugin11 to 11.1.102.63 [obache 2012-03-31]
+	Updated www/mediawiki to 1.17.3 [obache 2012-03-31]
