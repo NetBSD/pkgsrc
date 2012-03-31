@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2012/03/05 08:22:58 sbd Exp $
+# $NetBSD: Makefile,v 1.62 2012/03/31 02:12:34 ryoon Exp $
 
 .include "dist.mk"
 
@@ -86,7 +86,7 @@ PLIST.extra-so=	yes
 # ossaudiodev is only available on x86 for the following platforms
 PLIST_VARS+=	oss
 .if (${MACHINE_ARCH} == "i386") && \
-    (${PY_PLATNAME} == "linux2" || ${OPSYS} == "FreeBSD")
+    ${PY_PLATNAME} == "linux2"
 PLIST.oss=	yes
 .elif (${MACHINE_ARCH} == "x86_64") && (${PY_PLATNAME} == "linux2")
 PLIST.oss=	yes
