@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.3 2011/01/08 13:00:13 obache Exp $
+$NetBSD: patch-ak,v 1.4 2012/03/31 16:06:56 ryoon Exp $
 
 --- hald/freebsd/probing/probe-volume.c.orig	2009-09-17 13:45:09.000000000 +0000
 +++ hald/freebsd/probing/probe-volume.c
@@ -85,7 +85,25 @@ $NetBSD: patch-ak,v 1.3 2011/01/08 13:00:13 obache Exp $
  	  libhal_device_set_property_string(hfp_ctx, hfp_udi, "volume.freebsd.ufsid", ufsid, &hfp_error);
  	  ufs_devs = libhal_manager_find_device_string_match(hfp_ctx,
  			  				     "volume.freebsd.ufsid",
-@@ -597,7 +632,9 @@ main (int argc, char **argv)
+@@ -582,7 +617,11 @@ main (int argc, char **argv)
+ 	  dbus_error_free(&hfp_error);
+ 	  for (i = 0; i < num_udis; i++)
+             {
++#if defined(__FreeBSD__)
++	      if (ufs_devs[i] != NULL && strcmp(ufs_devs[i], hfp_udi))
++#else
+               if (ufs_devs[i] != NULL)
++#endif
+                 {
+                   gboolean mounted;
+ 
+@@ -592,12 +631,15 @@ main (int argc, char **argv)
+ 		    {
+                       libhal_device_set_property_bool(hfp_ctx, hfp_udi, "volume.ignore", TRUE, &hfp_error);
+ 		      dbus_error_free(&hfp_error);
++		      break;
+ 		    }
+ 		}
  	    }
  	  if (ufs_devs)
  	    libhal_free_string_array(ufs_devs);
@@ -95,7 +113,7 @@ $NetBSD: patch-ak,v 1.3 2011/01/08 13:00:13 obache Exp $
  	}
      }
  
-@@ -628,7 +665,11 @@ main (int argc, char **argv)
+@@ -628,7 +670,11 @@ main (int argc, char **argv)
  
    libhal_device_set_property_string(hfp_ctx, hfp_udi, "volume.uuid", vid ? vid->uuid : "", &hfp_error);
  

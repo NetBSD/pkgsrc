@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST.DragonFly,v 1.1 2012/03/31 16:06:56 ryoon Exp $
+libexec/hald-addon-mouse-sysmouse
+libexec/hald-addon-storage
+libexec/hald-probe-hiddev
+libexec/hald-probe-mouse
+libexec/hald-probe-scsi
+libexec/hald-probe-smbios
+libexec/hald-probe-storage
+libexec/hald-probe-volume
+libexec/scripts/freebsd/hal-system-lcd-get-brightness-freebsd
+libexec/scripts/freebsd/hal-system-lcd-set-brightness-freebsd
+libexec/scripts/freebsd/hal-system-power-reboot-freebsd
+libexec/scripts/freebsd/hal-system-power-set-power-save-freebsd
+libexec/scripts/freebsd/hal-system-power-shutdown-freebsd
+libexec/scripts/freebsd/hal-system-power-suspend-freebsd
