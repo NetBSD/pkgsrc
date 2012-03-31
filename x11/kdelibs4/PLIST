@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/03/19 11:28:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/03/31 21:46:55 hans Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1935,6 +1935,7 @@ lib/kde4/libexec/fileshareset
 lib/kde4/libexec/kauth-policy-gen
 lib/kde4/libexec/kconf_update
 lib/kde4/libexec/kdesu_stub
+${PLIST.kgrantpty}lib/kde4/libexec/kgrantpty
 lib/kde4/libexec/kio_http_cache_cleaner
 lib/kde4/libexec/kioslave
 lib/kde4/libexec/klauncher
