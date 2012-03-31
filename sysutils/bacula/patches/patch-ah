@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.8 2010/03/09 07:06:00 adam Exp $
+$NetBSD: patch-ah,v 1.9 2012/03/31 10:33:36 dholland Exp $
 
 --- src/wx-console/Makefile.in.orig	2010-02-24 15:33:48.000000000 +0000
 +++ src/wx-console/Makefile.in
@@ -16,7 +16,7 @@ $NetBSD: patch-ah,v 1.8 2010/03/09 07:06:00 adam Exp $
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bwx-console $(DESTDIR)$(sbindir)/bwx-console
  	@srcconf=bwx-console.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
++	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
  	   destconf=$$srcconf.new; \
  	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	else \
@@ -24,8 +24,8 @@ $NetBSD: patch-ah,v 1.8 2010/03/09 07:06:00 adam Exp $
  	fi; \
 -	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
  
  uninstall:
  	(cd $(DESTDIR)$(sbindir); $(RMF) bwx-console)
