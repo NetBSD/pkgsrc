@@ -1,0 +1,25 @@
+$NetBSD: patch-sniffit_h,v 1.1 2012/03/31 08:31:06 dholland Exp $
+
+- move strlower to sn_cfgfile.h to make it visible in the right places
+- my_exit should be file-static
+- update const to match changes to sniffit.0.3.5.c
+
+--- sniffit.h~	1997-04-18 09:33:58.000000000 +0000
++++ sniffit.h
+@@ -15,14 +15,12 @@ void print_iphead (struct IP_header *, c
+ unsigned long getaddrbyname(char *);
+ void quit (char *);
+ void reset_all (void);
+-char *strlower (char *);
+ struct file_info *add_dynam (char *, char, char, unsigned long, int);
+ void delete_dynam (char *, char, char);  
+-void record_buf(struct file_info *, unsigned long, char *, int, int);
++void record_buf(struct file_info *, unsigned long, const char *, int, int);
+ void sb_shift(struct file_info *); 
+-void sbuf_update(struct file_info *, unsigned long, char *, int);
++void sbuf_update(struct file_info *, unsigned long, const char *, int);
+ struct file_info *search_dynam(char *, char);
+-void my_exit (void);
+ 
+ /**** Sniffit functions (plugins) *******************************************/ 
+ void start_plugin (int, struct Plugin_data *);

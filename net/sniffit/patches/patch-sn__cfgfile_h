@@ -1,0 +1,14 @@
+$NetBSD: patch-sn__cfgfile_h,v 1.1 2012/03/31 08:31:06 dholland Exp $
+
+- declare strlower where it can be seen when used as well as when defined
+
+--- sn_cfgfile.h~	1997-04-18 09:33:58.000000000 +0000
++++ sn_cfgfile.h
+@@ -1,5 +1,7 @@
+ /* Sniffit Config File include                                                          */
+ 
++char *strlower (char *);
++
+ void clear_list_buffer (struct cfg_file_contense *);
+ struct cfg_file_contense *adjust_select_from_list (void);
+ struct cfg_file_contense *adjust_select_to_list (void);
