@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.5 2009/06/10 13:33:39 obache Exp $
+$NetBSD: patch-ab,v 1.6 2012/03/31 21:52:57 shattered Exp $
 
---- src/main.c.orig	2004-07-02 21:21:08.000000000 +0000
+--- src/main.c.orig	2011-09-23 20:31:32.000000000 +0000
 +++ src/main.c
 @@ -72,7 +72,7 @@
- #  define _POSIX_SOURCE 1 /* Solaris needs this */
+ #  define _POSIX_SOURCE 1               /* Solaris needs this */
  #endif
  
 -extern char origbotname[], userfile[], botnetnick[];
 +extern char origbotname[], userfile[], botnetnick[], tempdir[];
- extern int dcc_total, conmask, cache_hit, cache_miss, max_logs, quick_logs;
+ extern int dcc_total, conmask, cache_hit, cache_miss, max_logs, quick_logs,
+            quiet_save;
  extern struct dcc_t *dcc;
- extern struct userrec *userlist;
-@@ -102,7 +102,7 @@ int con_chan = 0;       /* Foreground: c
+@@ -108,7 +108,7 @@ int con_chan = 0;       /* Foreground: c
  int term_z = 0;         /* Foreground: use the terminal as a partyline?  */
  int use_stderr = 1;     /* Send stuff to stderr instead of logfiles?     */
  
@@ -20,16 +20,16 @@ $NetBSD: patch-ab,v 1.5 2009/06/10 13:33:39 obache Exp $
  char pid_file[120];                     /* Name of the pid file     */
  char helpdir[121] = "help/";            /* Directory of help files  */
  char textdir[121] = "text/";            /* Directory for text files */
-@@ -726,6 +726,8 @@ int main(int argc, char **argv)
-   }
+@@ -963,6 +963,8 @@ int main(int arg_c, char **arg_v)
+   setrlimit(RLIMIT_CORE, &cdlim);
  #endif
  
 +  chdir(__PREFIX__ "/share/eggdrop");
 +
+ #ifdef DEBUG_CONTEXT
    /* Initialise context list */
    for (i = 0; i < 16; i++)
-     Context;
-@@ -825,7 +827,8 @@ int main(int argc, char **argv)
+@@ -1075,7 +1077,8 @@ int main(int arg_c, char **arg_v)
    cache_miss = 0;
    cache_hit = 0;
    if (!pid_file[0])
