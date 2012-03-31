@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1019 2012/03/30 03:54:53 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1020 2012/03/31 05:40:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1681,3 +1681,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/png to 1.5.10 [wiz 2012-03-29]
 	Updated graphics/ImageMagick to 6.7.5.10nb1 [taca 2012-03-30]
 	Updated sysutils/file to 5.11 [taca 2012-03-30]
+	Updated emulators/suse121_libpng to 12.1nb1 [obache 2012-03-31]
