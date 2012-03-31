@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10979 2012/03/30 06:16:35 wiz Exp $
+$NetBSD: TODO,v 1.10980 2012/03/31 21:53:43 shattered Exp $
 
 Suggested new packages
 ======================
@@ -537,7 +537,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o editres-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.2.9
-	o eggdrop-1.6.21
 	o egtk-0.3.6.2
 	o eigen2-2.0.17
 	o eigen3-3.0.5
