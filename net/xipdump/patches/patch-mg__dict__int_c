@@ -1,0 +1,54 @@
+$NetBSD: patch-mg__dict__int_c,v 1.1 2012/03/31 08:52:31 dholland Exp $
+
+- fix LP64 problems
+
+--- mg_dict_int.c~	1999-11-15 08:47:23.000000000 +0000
++++ mg_dict_int.c
+@@ -7,6 +7,7 @@
+ ** Started on  Wed Aug 25 16:24:56 1999 vianney rancurel
+ ** Last update Thu Oct 28 20:16:20 1999 
+ */
++#include <stdint.h>
+ #include "mg.h"
+ 
+ /* is a t_vec_cmp_proc.
+@@ -21,7 +22,7 @@ VOID_PTR		*p2;
+   
+   he1 = (t_hash_elt *)(*p1);
+   he2 = (t_hash_elt *)(*p2);
+-  return ((int)(he1->value) - (int)(he2->value));
++  return ((intptr_t)(he1->value) - (intptr_t)(he2->value));
+ }
+ 
+ /* walks a dictionary according to numerical order of the values */
+@@ -48,10 +49,10 @@ char			*str;	/* String to be parsed */
+ int			sep;	/* Separator: e.g. comma */
+ {
+   t_vec			*vec_str;
+-  VOID_PTR		value;
++  intptr_t		value;
+   t_status		status;
+ 
+-  value = NULL;
++  value = 0;
+   if ((vec_str = vec_new(VEC_BASE,
+ 			 FALSE,
+ 			 dict->ht->alloc_algorithm_proc,
+@@ -73,14 +74,14 @@ int			sep;	/* Separator: e.g. comma */
+       if (s = index(str,'='))
+ 	{
+ 	  *s++ = 0;
+-	  value = (VOID_PTR)atoi(s);
++	  value = atoi(s);
+ 	}
+-      if ((status = dict_override(dict,str,value)) != 0)
++      if ((status = dict_override(dict,str,(VOID_PTR)value)) != 0)
+ 	{
+ 	  vec_str_delete(vec_str);
+ 	  return (status);
+ 	}
+-      value = (char *)value + 1;
++      value = value + 1;
+     }
+   VEC_ENDFOR;
+   vec_str_delete(vec_str);
