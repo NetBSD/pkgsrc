@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.39 2011/11/14 01:31:18 marino Exp $
+$NetBSD: patch-ab,v 1.40 2012/03/31 01:27:27 ryoon Exp $
 
 --- unix/configure.orig	2008-02-06 15:38:26.000000000 +0000
 +++ unix/configure
@@ -126,7 +126,15 @@ $NetBSD: patch-ab,v 1.39 2011/11/14 01:31:18 marino Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -3455,6 +3486,12 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
+@@ -3449,12 +3480,18 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
+ 	    	LDFLAGS="$LDFLAGS -pthread"
+ 	    fi
+ 	    case $system in
+-	    FreeBSD-3.*)
+-	    	# FreeBSD-3 doesn't handle version numbers with dots.
++	    FreeBSD-*)
++		# "nodots" required to confirm to pkgsrc lang/tcl PLIST
+ 	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
  	    	TCL_LIB_VERSIONS_OK=nodots
  		;;
