@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/12/14 04:05:33 sbd Exp $
+$NetBSD: distinfo,v 1.8 2012/03/31 08:52:31 dholland Exp $
 
 SHA1 (xipdump-1.5.4.tgz) = 8fa152cc9114fb3862a223be47e104394f00b250
 RMD160 (xipdump-1.5.4.tgz) = 4202c4c3ac7a749d1b7a25caa9577a6529ee87df
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 71c25f1fe5bb52667902c5a10f2a56d8809eb560
 SHA1 (patch-ad) = 0c7bd3c0be1bffe19a7823add4c5c2ae3ff29ba3
 SHA1 (patch-ae) = 7653b883f53ec90a231fa25d506f51f8cb75470a
 SHA1 (patch-af) = 115aca8ae051caf44accb9b8d2a7acd691cd78fc
+SHA1 (patch-mg__dict__int_c) = d01da78f568dd88c6439c2de4a8c31dfbc0367a8
