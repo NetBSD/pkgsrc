@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.13 2009/06/10 13:33:39 obache Exp $
+$NetBSD: distinfo,v 1.14 2012/03/31 21:52:57 shattered Exp $
 
-SHA1 (eggdrop1.6.19+ctcpfix.patch.gz) = 6d4c5aaab0a9e2e5cf5ef4295c9af03bb7066749
-RMD160 (eggdrop1.6.19+ctcpfix.patch.gz) = 242acc5f7e8ea23dfcc2595a6cbb8da7591882c3
-Size (eggdrop1.6.19+ctcpfix.patch.gz) = 666 bytes
-SHA1 (eggdrop1.6.19.tar.bz2) = e360afc87417d6bf9a7ddca4f4a464f348e6fad9
-RMD160 (eggdrop1.6.19.tar.bz2) = cc4ccb3efe84a90621f87d2b69234ee605b0751c
-Size (eggdrop1.6.19.tar.bz2) = 811072 bytes
-SHA1 (patch-aa) = 86b4795f28893d52e98bdea1b177e67d7cde05d6
-SHA1 (patch-ab) = 95547de7c440f569cb3fce1526112ca024f55a4c
+SHA1 (eggdrop1.6.21.tar.bz2) = 98ce7220c8aff19d2f8406fcc52aa1807aa0de01
+RMD160 (eggdrop1.6.21.tar.bz2) = 1006dfd6a6e735500c2b484eb3061f1d2dfd20f8
+Size (eggdrop1.6.21.tar.bz2) = 999211 bytes
+SHA1 (patch-aa) = 0dfc560d2ef0d92c65c5afa9396da00f80257ee6
+SHA1 (patch-ab) = c43cbe9586c6a05114a3ff21eb5fe5b806e8bb05
 SHA1 (patch-ac) = c71d67618a5b53a3de2f3041ed8fa098a89e4471
-SHA1 (patch-ad) = b3a8014bd664a22ec8c62d006ee02884df616a35
+SHA1 (patch-ad) = 9904f090a2a942a7442b1950489db0ae68a6e294
 SHA1 (patch-ae) = bdbb616282b7dc643182a35c606401850b33fdca
 SHA1 (patch-af) = 8f314d65d1a396b85e17400ee046f2ad4324a690
-SHA1 (patch-ag) = 2bade3c0aee6f1b9777ea8bb75ccf5871c4bc1fd
+SHA1 (patch-ag) = 0e69d8d867af7c1e3bb841e4fb06452f5cc1393d
 SHA1 (patch-ah) = a5360c748e16cbc3d6ae4f2968799e96007971f1
 SHA1 (patch-ai) = 77743bdf5fe790826159ffbb9246132f74a5fe38
 SHA1 (patch-ak) = 92f269a3f382a9f917d7e58c2cee5bb1d500ab6d
