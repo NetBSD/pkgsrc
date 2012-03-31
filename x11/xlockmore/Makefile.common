@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2012/03/30 07:37:22 drochner Exp $
+# $NetBSD: Makefile.common,v 1.66 2012/03/31 10:43:19 dholland Exp $
 #
 # This Makefile.common is included by:
 #
@@ -108,7 +108,6 @@ INSTALLATION_DIRS+=	${EGDIR}/pam.d
 # the inherited full dependency
 #BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
