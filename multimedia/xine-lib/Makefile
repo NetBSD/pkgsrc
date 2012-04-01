@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2012/03/24 13:21:43 drochner Exp $
+# $NetBSD: Makefile,v 1.98 2012/04/01 18:42:02 hans Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -39,6 +39,9 @@ PLIST_VARS+=	oss
 PLIST.oss=	yes
 .endif
 .endif
+
+CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86
+LDFLAGS.SunOS+=		-lresolv
 
 # flac is supported internally; don't know what the plugin is good for
 #.include "../../audio/flac/buildlink3.mk"

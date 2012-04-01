@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.24 2012/03/21 16:37:15 drochner Exp $
+$NetBSD: patch-ag,v 1.25 2012/04/01 18:42:02 hans Exp $
 
 --- configure.ac.orig	2012-02-04 00:41:43.000000000 +0000
 +++ configure.ac
@@ -24,3 +24,11 @@ $NetBSD: patch-ag,v 1.24 2012/03/21 16:37:15 drochner Exp $
  
  dnl ----------------
  dnl checks for types
+@@ -908,6 +916,7 @@ AC_CHECK_FUNCS([strncasecmp _strnicmp], 
+ 
+ AC_FUNC_FSEEKO
+ 
++AC_LIBOBJ(dummy)
+ AC_REPLACE_FUNCS([asprintf basename gettimeofday setenv strcasestr strndup strpbrk strsep strtok_r timegm unsetenv memmem])
+ 
+ AC_LIBSOURCE([hstrerror.c])
