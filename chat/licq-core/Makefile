@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/02/16 15:26:41 hans Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/01 18:30:34 hans Exp $
 #
 
 DISTNAME=	licq-1.3.5
@@ -17,10 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	msgmerge msgfmt
-USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+=	--localedir=${LOCALBASE}/${PKGLOCALEDIR}/locale
+CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,6 +27,10 @@ CONFIGURE_ARGS+=	--localedir=${LOCALBASE}/${PKGLOCALEDIR}/locale
 INSTALL_UNSTRIPPED=	yes
 .endif
 
-.include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-4.[6-9].*)
+CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600
+.endif
+
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
