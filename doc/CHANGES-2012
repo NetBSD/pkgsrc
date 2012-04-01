@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1046 2012/04/01 20:18:28 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.1047 2012/04/01 20:32:40 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1708,3 +1708,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-DBI to 1.618 [rhaen 2012-04-01]
 	Updated devel/p5-Test-Deep to 0.109 [rhaen 2012-04-01]
 	Updated devel/p5-Log-Log4perl to 1.36 [rhaen 2012-04-01]
+	Updated devel/p5-Module-Pluggable to 4.0 [rhaen 2012-04-01]
