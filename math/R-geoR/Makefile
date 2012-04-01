@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.7 2011/12/20 04:35:44 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/01 18:09:54 brook Exp $
 
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/Archive/geoR/}
+MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
-MAINTAINER=	mchittur@cs.nmsu.edu
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/geoR/
 COMMENT=	Geostatistical analysis including likelihood-based and Bayesian methods
+LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	geoR
-R_PKGVER=	1.6-36
+R_PKGVER=	1.7-2
 
-DEPENDS+=	R-sp>=0.9.26:../../math/R-sp
+DEPENDS+=	R-RandomFields>=2.0.54:../../math/R-RandomFields
+DEPENDS+=	R-sp>=0.9.98:../../math/R-sp
+DEPENDS+=	R-splancs>=2.01.31:../../math/R-splancs
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
