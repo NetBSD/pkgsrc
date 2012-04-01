@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1029 2012/04/01 08:52:57 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1030 2012/04/01 17:49:40 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1691,3 +1691,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.228 [obache 2012-04-01]
 	Updated emulators/suse121_expat to 12.1nb1 [obache 2012-04-01]
 	Updated textproc/expat to 2.1.0 [obache 2012-04-01]
+	Added math/R-RandomFields version 2.0.54 [brook 2012-04-01]
