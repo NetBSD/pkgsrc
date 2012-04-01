@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1037 2012/04/01 18:49:57 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.1038 2012/04/01 18:57:39 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1699,3 +1699,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/p5-Audio-Wav to 0.13 [rhaen 2012-04-01]
 	Updated audio/p5-CDDB_get to 2.28 [rhaen 2012-04-01]
 	Updated comms/p5-Asterisk to 1.03 [rhaen 2012-04-01]
+	Updated comms/p5-Device-Gsm to 1.60 [rhaen 2012-04-01]
