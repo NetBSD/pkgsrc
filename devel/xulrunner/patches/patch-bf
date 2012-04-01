@@ -1,17 +1,26 @@
-$NetBSD: patch-bf,v 1.5 2011/08/18 18:31:10 tnn Exp $
+$NetBSD: patch-bf,v 1.6 2012/04/01 15:18:45 ryoon Exp $
 
---- js/src/jsnativestack.cpp.orig	2011-08-11 21:41:05.000000000 +0000
+--- js/src/jsnativestack.cpp.orig	2012-03-13 01:36:56.000000000 +0000
 +++ js/src/jsnativestack.cpp
-@@ -50,7 +50,7 @@
+@@ -50,10 +50,16 @@
  #elif defined(XP_MACOSX) || defined(DARWIN) || defined(XP_UNIX)
  # include <pthread.h>
  
 -# if defined(__FreeBSD__) || defined(__OpenBSD__)
-+# if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
++# if defined(__OpenBSD__) || defined(__DragonFly__)
  #  include <pthread_np.h>
  # endif
  
-@@ -145,7 +145,7 @@ GetNativeStackBaseImpl()
++# if defined(__FreeBSD__) 
++_Pragma("GCC visibility push(default)")
++#  include <pthread_np.h>
++_Pragma("GCC visibility pop")
++# endif
++
+ #else
+ # error "Unsupported platform"
+ 
+@@ -145,7 +151,7 @@ GetNativeStackBaseImpl()
      pthread_attr_init(&sattr);
  #  if defined(__OpenBSD__)
      stack_t ss;
