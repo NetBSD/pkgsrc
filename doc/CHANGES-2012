@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1033 2012/04/01 18:11:00 brook Exp $
+$NetBSD: CHANGES-2012,v 1.1034 2012/04/01 18:35:18 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1695,3 +1695,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added math/R-splancs to 2.01.31 [brook 2012-04-01]
 	Updated math/R-sp to 0.9.98 [brook 2012-04-01]
 	Updated math/R-geoR to 1.7.2 [brook 2012-04-01]
+	Updated chat/p5-POE-Component-IRC to 6.78 [rhaen 2012-04-01]
