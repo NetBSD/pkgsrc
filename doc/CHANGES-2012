@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1044 2012/04/01 20:08:59 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.1045 2012/04/01 20:14:06 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1706,3 +1706,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated converters/p5-Unicode-Normalize to 1.14 [rhaen 2012-04-01]
 	Updated databases/p5-BDB to 1.9 [rhaen 2012-04-01]
 	Updated databases/p5-DBI to 1.618 [rhaen 2012-04-01]
+	Updated devel/p5-Test-Deep to 0.109 [rhaen 2012-04-01]
