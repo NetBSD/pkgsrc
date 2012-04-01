@@ -1,9 +1,8 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.3 2012/03/15 08:30:06 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.4 2012/04/01 15:18:45 ryoon Exp $
 
-
---- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-03-08 18:52:15.229788000 +0100
-+++ ipc/chromium/src/base/process_util_bsd.cc	2012-03-11 10:59:50.559480000 +0100
-@@ -0,0 +1,309 @@
+--- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-04-01 00:04:28.000000000 +0000
++++ ipc/chromium/src/base/process_util_bsd.cc
+@@ -0,0 +1,326 @@
 +// Copyright (c) 2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -16,8 +15,8 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.3 2012/03/15 08:3
 +#include <fcntl.h>
 +#include <unistd.h>
 +#include <string>
-+#if defined(OS_DRAGONFLY)
-+/* DragonFly, as of v3.0.1, does not explicitly mark symbols public */
++#if defined(OS_DRAGONFLY) || defined(OS_FREEBSD)
++/* DragonFly, as of v3.0.1, and FreeBSD 9.0-RELEASE do not explicitly mark symbols public */
 +#define PRE_SYS_INCLUDE		_Pragma("GCC visibility push(default)")
 +#define POST_SYS_INCLUDE	_Pragma("GCC visibility pop")
 +#else
@@ -31,8 +30,15 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.3 2012/03/15 08:3
 +#include <sys/types.h>
 +#include <sys/wait.h>
 +#if defined(OS_DRAGONFLY)
++PRE_SYS_INCLUDE
 +#include <sys/user.h>
++POST_SYS_INCLUDE
 +#define HAVE_POSIX_SPAWN	1
++#endif
++#if defined(OS_FREEBSD)
++PRE_SYS_INCLUDE
++#include <sys/user.h>
++POST_SYS_INCLUDE
 +#endif
 +
 +#include "base/debug_util.h"
@@ -269,11 +275,12 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.3 2012/03/15 08:3
 +  kvm_t *kvm;
 +  std::string exe(WideToASCII(executable_name));
 +
-+#if defined(OS_DRAGONFLY)
++#if defined(OS_DRAGONFLY) || defined(OS_FREEBSD)
 +  kvm  = kvm_open(NULL, NULL, NULL, O_RDONLY, NULL);
 +  struct kinfo_proc* procs = kvm_getprocs(kvm, KERN_PROC_UID, getuid(), &numEntries);
 +  if (procs != NULL && numEntries > 0) {
 +    for (int i = 0; i < numEntries; i++) {
++#  if defined(OS_DRAGONFLY)
 +    if (exe != procs[i].kp_comm) continue;
 +      if (filter && !filter->Includes(procs[i].kp_pid, procs[i].kp_ppid)) continue;
 +      ProcessEntry e;
@@ -281,6 +288,15 @@ $NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.3 2012/03/15 08:3
 +      e.ppid = procs[i].kp_ppid;
 +      strlcpy(e.szExeFile, procs[i].kp_comm, sizeof e.szExeFile);
 +      content.push_back(e);
++#  elif defined(OS_FREEBSD)
++    if (exe != procs[i].ki_comm) continue;
++      if (filter && !filter->Includes(procs[i].ki_pid, procs[i].ki_ppid)) continue;
++      ProcessEntry e;
++      e.pid = procs[i].ki_pid;
++      e.ppid = procs[i].ki_ppid;
++      strlcpy(e.szExeFile, procs[i].ki_comm, sizeof e.szExeFile);
++      content.push_back(e);
++#  endif
 +#else
 +  kvm  = kvm_open(NULL, NULL, NULL, KVM_NO_FILES, NULL);
 +  struct kinfo_proc2* procs = kvm_getproc2(kvm, KERN_PROC_UID, getuid(), sizeof(struct kinfo_proc2), &numEntries);
