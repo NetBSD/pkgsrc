@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1025 2012/03/31 21:53:43 shattered Exp $
+$NetBSD: CHANGES-2012,v 1.1026 2012/04/01 04:27:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/adobe-flash-plugin11 to 11.1.102.63 [obache 2012-03-31]
 	Updated www/mediawiki to 1.17.3 [obache 2012-03-31]
 	Updated chat/eggdrop to 1.6.21 [shattered 2012-03-31]
+	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.18 [obache 2012-04-01]
