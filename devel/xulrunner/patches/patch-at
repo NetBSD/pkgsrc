@@ -1,12 +1,12 @@
-$NetBSD: patch-at,v 1.5 2012/03/06 12:34:08 ryoon Exp $
+$NetBSD: patch-at,v 1.6 2012/04/01 15:18:45 ryoon Exp $
 
---- gfx/qcms/qcmstypes.h.orig	2011-12-20 23:28:18.000000000 +0000
+--- gfx/qcms/qcmstypes.h.orig	2012-03-13 01:36:50.000000000 +0000
 +++ gfx/qcms/qcmstypes.h
 @@ -10,6 +10,8 @@
  #if defined (__SVR4) && defined (__sun)
  /* int_types.h gets included somehow, so avoid redefining the types differently */
  #include <sys/int_types.h>
-+#elif defined(__NetBSD__) || defined(__DragonFly__)
++#elif defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
 +#include <stdint.h>
  #elif defined (_AIX)
  #include <sys/types.h>
