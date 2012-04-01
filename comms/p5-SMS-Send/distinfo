@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/17 10:31:52 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2012/04/01 19:04:34 rhaen Exp $
 
-SHA1 (SMS-Send-0.05.tar.gz) = 9ae10d916f203f2301c1c85216f3bac97dbcb336
-RMD160 (SMS-Send-0.05.tar.gz) = a8182bef7f61d69b46bbcbc31a353a9e635494cb
-Size (SMS-Send-0.05.tar.gz) = 27145 bytes
+SHA1 (SMS-Send-1.06.tar.gz) = edb840fc26f2c5353139df8562ea1c1710c66647
+RMD160 (SMS-Send-1.06.tar.gz) = a7b4f712379940554dc929b3ea7c75ca744edfa3
+Size (SMS-Send-1.06.tar.gz) = 35184 bytes
