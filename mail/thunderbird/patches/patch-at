@@ -1,14 +1,12 @@
-$NetBSD: patch-at,v 1.7 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-at,v 1.8 2012/04/01 20:53:43 ryoon Exp $
 
-Avoid silly redefinitions of standard types on NetBSD.
-
---- mozilla/gfx/qcms/qcmstypes.h.orig	2012-02-16 10:24:57.000000000 +0000
+--- mozilla/gfx/qcms/qcmstypes.h.orig	2012-03-13 02:43:07.000000000 +0000
 +++ mozilla/gfx/qcms/qcmstypes.h
 @@ -10,6 +10,8 @@
  #if defined (__SVR4) && defined (__sun)
  /* int_types.h gets included somehow, so avoid redefining the types differently */
  #include <sys/int_types.h>
-+#elif defined(__NetBSD__) || defined(__DragonFly__)
++#elif defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
 +#include <stdint.h>
  #elif defined (_AIX)
  #include <sys/types.h>
