@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1039 2012/04/01 19:01:35 rhaen Exp $
+$NetBSD: CHANGES-2012,v 1.1040 2012/04/01 19:05:16 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1701,3 +1701,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/p5-Asterisk to 1.03 [rhaen 2012-04-01]
 	Updated comms/p5-Device-Gsm to 1.60 [rhaen 2012-04-01]
 	Updated comms/p5-Device-Modem to 1.56 [rhaen 2012-04-01]
+	Updated comms/p5-SMS-Send to 1.06 [rhaen 2012-04-01]
