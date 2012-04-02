@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1048 2012/04/02 10:09:33 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1049 2012/04/02 18:08:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1710,3 +1710,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Log-Log4perl to 1.36 [rhaen 2012-04-01]
 	Updated devel/p5-Module-Pluggable to 4.0 [rhaen 2012-04-01]
 	Updated x11/kdelibs4 to 4.8.0nb2 [dholland 2012-04-02]
+	Updated print/teTeX3-texmf to 3.0nb34 [minskim 2012-04-02]
