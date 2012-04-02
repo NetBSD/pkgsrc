@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/21 18:06:16 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2012/04/02 04:02:46 dholland Exp $
 
 SHA1 (valide-0.4.0.tar.gz) = 0846f7a3e5494039b4abea4f8feb2b9e7b35ad16
 RMD160 (valide-0.4.0.tar.gz) = 9b4852bddeaaf88135676a77dd8bd0db4b90eaaa
 Size (valide-0.4.0.tar.gz) = 1427041 bytes
 SHA1 (patch-aa) = 81aa8bf7a8271a1061d718ed3270f35c4d2d509a
+SHA1 (patch-libvalide_executable-manager_vala) = 6978f35afd77653a1021367fdb4186eb7423ef6d
+SHA1 (patch-libvalide_project-manager_vala) = f9b8a42b0238e29ae0bff926404d442bab2f39c0
+SHA1 (patch-libvalide_project_vala) = d6533071b8e649d19d1f5b625a1fac6cccdda8ee
+SHA1 (patch-libvalide_template_vala) = 7206d7b6716e6de55b2e1286ea02c4d7d9ffb052
+SHA1 (patch-libvalide_utils_vala) = 93b4aeb3351a210c81e712e1852635c4a7915481

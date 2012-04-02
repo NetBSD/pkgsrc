@@ -1,0 +1,17 @@
+$NetBSD: patch-libvalide_project-manager_vala,v 1.1 2012/04/02 04:02:46 dholland Exp $
+
+Adjust for newer vala interfaces.
+
+--- libvalide/project-manager.vala.orig	2009-03-08 13:09:49.000000000 +0000
++++ libvalide/project-manager.vala
+@@ -54,8 +54,8 @@ public class Valide.ProjectManager : Gtk
+ 
+     // Transform XML
+     Xml.Doc* xml = Xml.Parser.parse_file (template.filename);
+-    Xml.XPathContext xpath = new Xml.XPathContext (xml);
+-    Xml.XPathObject* xpath_obj = xpath.eval ("/template");
++    Xml.XPath.Context xpath = new Xml.XPath.Context (xml);
++    Xml.XPath.Object* xpath_obj = xpath.eval ("/template");
+     xpath_obj->nodesetval->item (0)->name = "project";
+ 
+     xpath_obj = xpath.eval ("/project/description");
