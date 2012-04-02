@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2011/11/06 08:46:11 minskim Exp $
+# $NetBSD: Makefile,v 1.54 2012/04/02 18:07:35 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -48,6 +48,7 @@ DEPENDS+=	tex-collection-genericrecommended>=2010:../../print/tex-collection-gen
 DEPENDS+=	tex-collection-latex>=2010:../../print/tex-collection-latex
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-context>=2009:../../print/tex-context
+DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
 DEPENDS+=	tex-cyrillic>=2009:../../print/tex-cyrillic
 DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
 DEPENDS+=	tex-ec>=1.0:../../fonts/tex-ec
@@ -108,6 +109,7 @@ DEPENDS+=	tex-jurabib-[0-9]*:../../print/tex-jurabib
 DEPENDS+=	tex-kix-[0-9]*:../../print/tex-kix
 DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
+DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
 DEPENDS+=	tex-listing-[0-9]*:../../print/tex-listing
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
 DEPENDS+=	tex-lh>=3.5g:../../fonts/tex-lh
@@ -201,7 +203,6 @@ EXTRACT_ELEMENTS+=	omega
 EXTRACT_ELEMENTS+=	release-tetex-texmf.txt
 EXTRACT_ELEMENTS+=	scripts
 EXTRACT_ELEMENTS+=	tex
-EXTRACT_ELEMENTS+=	texdoctk
 
 WRKSRC=		${WRKDIR}/tetex
 EXTRACT_DIR=	${WRKSRC}
@@ -274,6 +275,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/generic/multido
 	rm -rf ${WRKSRC}/doc/generic/pstricks
 	rm -rf ${WRKSRC}/doc/generic/tex-ps
+	rm -rf ${WRKSRC}/doc/generic/u*
 	rm -rf ${WRKSRC}/doc/generic/x*
 	rm -rf ${WRKSRC}/doc/latex/a[f-m]*
 	rm -rf ${WRKSRC}/doc/latex/base
@@ -295,6 +297,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/h*
 	rm -rf ${WRKSRC}/doc/latex/jurabib
 	rm -rf ${WRKSRC}/doc/latex/k*
+	rm -rf ${WRKSRC}/doc/latex/lastpage
 	rm -rf ${WRKSRC}/doc/latex/lis*
 	rm -rf ${WRKSRC}/doc/latex/m[e-g]*
 	rm -rf ${WRKSRC}/doc/latex/mi*
@@ -321,6 +324,7 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/latex/wasysym
 	rm -rf ${WRKSRC}/doc/latex/wrapfig
 	rm -rf ${WRKSRC}/doc/latex/xcolor
+	rm -rf ${WRKSRC}/doc/programs
 	rm -rf ${WRKSRC}/doc/m[a-j]*
 	rm -rf ${WRKSRC}/doc/pdftex
 	rm -rf ${WRKSRC}/dvips/[b-n]*
@@ -481,6 +485,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/hyp*
 	rm -rf ${WRKSRC}/tex/latex/jurabib
 	rm -rf ${WRKSRC}/tex/latex/k*
+	rm -rf ${WRKSRC}/tex/latex/lastpage
 	rm -rf ${WRKSRC}/tex/latex/lis*
 	rm -rf ${WRKSRC}/tex/latex/lm
 	rm -rf ${WRKSRC}/tex/latex/marvosym
@@ -528,7 +533,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/xcolor
 	rm -rf ${WRKSRC}/tex/latex/xk*
 	rm -rf ${WRKSRC}/tex/plain/amsfonts
-	rm -f ${WRKSRC}/tex/plain/base/[gmp-z]*
+	rm -f ${WRKSRC}/tex/plain/base/[c-gmp-z]*
 	rm -f ${WRKSRC}/tex/plain/base/letter*
 	rm -rf ${WRKSRC}/tex/plain/[c-f]*
 	rm -rf ${WRKSRC}/tex/plain/[i-l]*
@@ -536,6 +541,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/plain/pdfcolor
 	rm -rf ${WRKSRC}/tex/plain/[r-u]*
 	rm -rf ${WRKSRC}/tex/plain/[w-z]*
+	rm -rf ${WRKSRC}/tex/platex
 
 do-install:
 	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/share/texmf-dist

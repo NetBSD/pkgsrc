@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2011/11/06 08:46:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.31 2012/04/02 18:07:35 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -165,18 +165,6 @@ share/texmf-dist/doc/generic/texdraw/ChangeLog
 share/texmf-dist/doc/generic/texdraw/texdraw.ps
 share/texmf-dist/doc/generic/texdraw/txdexamp.latex
 share/texmf-dist/doc/generic/thumbpdf/readme.txt
-share/texmf-dist/doc/generic/ukrhyph/README
-share/texmf-dist/doc/generic/ukrhyph/rules.ps
-share/texmf-dist/doc/generic/ukrhyph/rules.tex
-share/texmf-dist/doc/generic/ukrhyph/rules60.pdf
-share/texmf-dist/doc/generic/ukrhyph/rules60.ps
-share/texmf-dist/doc/generic/ukrhyph/rules60.tex
-share/texmf-dist/doc/generic/ukrhyph/rules90.pdf
-share/texmf-dist/doc/generic/ukrhyph/rules90.ps
-share/texmf-dist/doc/generic/ukrhyph/rules90.tex
-share/texmf-dist/doc/generic/ukrhyph/rules_ph.pdf
-share/texmf-dist/doc/generic/ukrhyph/rules_ph.ps
-share/texmf-dist/doc/generic/ukrhyph/rules_ph.tex
 share/texmf-dist/doc/generic/vntex/README
 share/texmf-dist/doc/generic/vntex/TODO
 share/texmf-dist/doc/generic/vntex/testbookmarks.tex
@@ -2701,7 +2689,6 @@ share/texmf-dist/doc/latex/index/sample.tex
 share/texmf-dist/doc/latex/jknappen/mathbbol.rme
 share/texmf-dist/doc/latex/jknappen/mathrsfs.rme
 share/texmf-dist/doc/latex/labels/labels.dvi
-share/texmf-dist/doc/latex/lastpage/lastpage.dvi
 share/texmf-dist/doc/latex/layouts/layman.dvi
 share/texmf-dist/doc/latex/leftidx/leftidx.dvi
 share/texmf-dist/doc/latex/lettrine/00README
@@ -2902,20 +2889,6 @@ share/texmf-dist/doc/polish/mex/utf8mex/test-math.utf8.tex
 share/texmf-dist/doc/polish/mex/utf8mex/test.utf8.tex
 share/texmf-dist/doc/polish/mex/utf8mex/utf8math.el
 share/texmf-dist/doc/polish/web2c.html
-share/texmf-dist/doc/programs/cwebman.dvi
-share/texmf-dist/doc/programs/dvipdfm.dvi
-share/texmf-dist/doc/programs/dvipdfm.pdf
-share/texmf-dist/doc/programs/dvipng.dvi
-share/texmf-dist/doc/programs/dvipng.pdf
-share/texmf-dist/doc/programs/dvips.dvi
-share/texmf-dist/doc/programs/dvips.pdf
-share/texmf-dist/doc/programs/kpathsea.dvi
-share/texmf-dist/doc/programs/kpathsea.pdf
-share/texmf-dist/doc/programs/pdfcrop.txt
-share/texmf-dist/doc/programs/texinfo.dvi
-share/texmf-dist/doc/programs/texinfo.pdf
-share/texmf-dist/doc/programs/web2c.dvi
-share/texmf-dist/doc/programs/web2c.pdf
 share/texmf-dist/doc/tdphp/INSTALL
 share/texmf-dist/doc/tdphp/config.php
 share/texmf-dist/doc/tdphp/css.php
@@ -6466,7 +6439,6 @@ share/texmf-dist/tex/latex/jknappen/ubbold.fd
 share/texmf-dist/tex/latex/jknappen/ursfs.fd
 share/texmf-dist/tex/latex/labels/labels.sty
 share/texmf-dist/tex/latex/labels/olabels.sty
-share/texmf-dist/tex/latex/lastpage/lastpage.sty
 share/texmf-dist/tex/latex/layouts/layouts.sty
 share/texmf-dist/tex/latex/leftidx/leftidx.sty
 share/texmf-dist/tex/latex/lettrine/lettrine.cfg
@@ -6719,7 +6691,6 @@ share/texmf-dist/tex/mex/utf8mex/utf8plsq.tex
 share/texmf-dist/tex/plain/antt/ofs-8x.tex
 share/texmf-dist/tex/plain/antt/pantyk.tex
 share/texmf-dist/tex/plain/arrow/arrow.tex
-share/texmf-dist/tex/plain/base/cwebmac.tex
 share/texmf-dist/tex/plain/base/logmac.tex
 share/texmf-dist/tex/plain/base/ordwebmac.tex
 share/texmf-dist/tex/plain/btxmac/btxmac.tex
@@ -6746,10 +6717,6 @@ share/texmf-dist/tex/plain/vietnam/plainenc.tex
 share/texmf-dist/tex/plain/vietnam/plnfss.tex
 share/texmf-dist/tex/plain/vietnam/t5cmr.pfd
 share/texmf-dist/tex/plain/vietnam/t5code.tex
-share/texmf-dist/tex/platex/config/hyphen.cfg
-share/texmf-dist/tex/platex/config/language.dat
-share/texmf-dist/tex/platex/config/pdfplatex.ini
-share/texmf-dist/tex/platex/config/platex.ini
 share/texmf-dist/tex/texinfo/texinfo.ini
 share/texmf-dist/tex/texinfo/texinfo.tex
 share/texmf-dist/tex/texinfo/txi-cs.tex
@@ -6764,5 +6731,3 @@ share/texmf-dist/tex/texinfo/txi-pl.tex
 share/texmf-dist/tex/texinfo/txi-pt.tex
 share/texmf-dist/tex/texinfo/txi-tr.tex
 share/texmf-dist/tex/texinfo/vntexinfo.tex
-share/texmf-dist/texdoctk/texdocrc.defaults
-share/texmf-dist/texdoctk/texdoctk.dat
