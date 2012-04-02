@@ -1,0 +1,17 @@
+$NetBSD: patch-libvalide_template_vala,v 1.1 2012/04/02 04:02:46 dholland Exp $
+
+Adjust for newer vala interfaces.
+
+--- libvalide/template.vala.orig	2009-03-08 13:09:49.000000000 +0000
++++ libvalide/template.vala
+@@ -54,8 +54,8 @@ public class Valide.Template : Object
+       if (xml != null)
+       {
+         this.path = Path.get_dirname (this.filename);
+-        Xml.XPathContext xpath = new Xml.XPathContext (xml);
+-        Xml.XPathObject* xpath_obj = xpath.eval ("/template/files/file/text ()");
++        Xml.XPath.Context xpath = new Xml.XPath.Context (xml);
++        Xml.XPath.Object* xpath_obj = xpath.eval ("/template/files/file/text ()");
+         for (int i = 0; i < xpath_obj->nodesetval->length (); i++)
+         {
+           this._files.append (Path.build_filename (this.path,

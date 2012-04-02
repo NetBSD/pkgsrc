@@ -1,0 +1,33 @@
+$NetBSD: patch-libvalide_project_vala,v 1.1 2012/04/02 04:02:46 dholland Exp $
+
+Adjust for newer vala interfaces.
+
+--- libvalide/project.vala.orig	2009-03-09 21:38:22.000000000 +0000
++++ libvalide/project.vala
+@@ -129,7 +129,7 @@ public class Valide.Project : Object
+     {
+       List<string> files_ = null;
+ 
+-      Xml.NodeSet* nodes = Markup.get_nodes (this.filename,
++      Xml.XPath.NodeSet* nodes = Markup.get_nodes (this.filename,
+                                              "/project/files/file/text ()");
+       for (int i = 0; i < nodes->length (); i++)
+       {
+@@ -335,7 +335,7 @@ public class Valide.Project : Object
+     {
+       List<string> pkg_ = null;
+ 
+-      Xml.NodeSet* nodes = Markup.get_nodes (this.filename,
++      Xml.XPath.NodeSet* nodes = Markup.get_nodes (this.filename,
+                                              "/project/compiler/pkg/text ()");
+       for (int i = 0; i < nodes->length (); i++)
+       {
+@@ -360,7 +360,7 @@ public class Valide.Project : Object
+     {
+       List<string> vapi_ = null;
+ 
+-      Xml.NodeSet* nodes = Markup.get_nodes (this.filename,
++      Xml.XPath.NodeSet* nodes = Markup.get_nodes (this.filename,
+                                              "/project/compiler/vapi/text ()");
+       for (int i = 0; i < nodes->length (); i++)
+       {

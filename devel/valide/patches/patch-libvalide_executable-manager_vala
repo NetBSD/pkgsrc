@@ -1,0 +1,21 @@
+$NetBSD: patch-libvalide_executable-manager_vala,v 1.1 2012/04/02 04:02:46 dholland Exp $
+
+Fix escaping of regexes.
+
+--- libvalide/executable-manager.vala~	2009-03-08 13:09:49.000000000 +0000
++++ libvalide/executable-manager.vala
+@@ -99,10 +99,10 @@ public class Valide.ExecutableManager : 
+     if (str != "")
+     {
+       HashTable<string, string> pattern = new HashTable<string, string> (str_hash, str_equal);
+-      pattern.insert ("<i>(.*)</i>", "[i]\1[/i]");
+-      pattern.insert ("<b>(.*)</b>", "[b]\1[/b]");
+-      pattern.insert ("<span background=\"(.*)\">(.*)</span>", "[color=\"\1\"]\2[/color]");
+-      pattern.insert ("<span foreground=\"(.*)\">(.*)</span>", "[color=\"\1\"]\2[/color]");
++      pattern.insert ("<i>(.*)</i>", "[i]\\1[/i]");
++      pattern.insert ("<b>(.*)</b>", "[b]\\1[/b]");
++      pattern.insert ("<span background=\"(.*)\">(.*)</span>", "[color=\"\\1\"]\\2[/color]");
++      pattern.insert ("<span foreground=\"(.*)\">(.*)</span>", "[color=\"\\1\"]\\2[/color]");
+ 
+       foreach (string key in pattern.get_keys ())
+       {
