@@ -1,0 +1,65 @@
+$NetBSD: patch-libvalide_utils_vala,v 1.1 2012/04/02 04:02:46 dholland Exp $
+
+Adjust for newer vala interfaces.
+
+--- libvalide/utils.vala.orig	2009-03-08 13:09:49.000000000 +0000
++++ libvalide/utils.vala
+@@ -169,8 +169,8 @@ public class Valide.Markup
+   public static void remove (string filename, string xpath)
+   {
+     Xml.Doc* xml = Xml.Parser.parse_file (filename);
+-    Xml.XPathContext xpath_context = new Xml.XPathContext (xml);
+-    Xml.XPathObject* xpath_obj = xpath_context.eval (xpath);
++    Xml.XPath.Context xpath_context = new Xml.XPath.Context (xml);
++    Xml.XPath.Object* xpath_obj = xpath_context.eval (xpath);
+     for (int i = 0; i < xpath_obj->nodesetval->length (); i++)
+     {
+       xpath_obj->nodesetval->item (i)->unlink ();
+@@ -182,8 +182,8 @@ public class Valide.Markup
+                                 string? content=null)
+   {
+     Xml.Doc* xml = Xml.Parser.parse_file (filename);
+-    Xml.XPathContext xpath_context = new Xml.XPathContext (xml);
+-    Xml.XPathObject* xpath_obj = xpath_context.eval (xpath);
++    Xml.XPath.Context xpath_context = new Xml.XPath.Context (xml);
++    Xml.XPath.Object* xpath_obj = xpath_context.eval (xpath);
+     xpath_obj->nodesetval->item (0)->new_text_child (null, name, content);
+     Markup.save (filename, xml);
+   }
+@@ -193,8 +193,8 @@ public class Valide.Markup
+     bool ret = false;
+ 
+     Xml.Doc* xml = Xml.Parser.parse_file (filename);
+-    Xml.XPathContext xpath_context = new Xml.XPathContext (xml);
+-    Xml.XPathObject* xpath_obj = xpath_context.eval (xpath);
++    Xml.XPath.Context xpath_context = new Xml.XPath.Context (xml);
++    Xml.XPath.Object* xpath_obj = xpath_context.eval (xpath);
+     if (xpath_obj != null && xpath_obj->nodesetval->length () > 0)
+     {
+       ret = true;
+@@ -206,8 +206,8 @@ public class Valide.Markup
+   {
+     string ret = null;
+     Xml.Doc* xml = Xml.Parser.parse_file (filename);
+-    Xml.XPathContext xpath_context = new Xml.XPathContext (xml);
+-    Xml.XPathObject* xpath_obj = xpath_context.eval (xpath);
++    Xml.XPath.Context xpath_context = new Xml.XPath.Context (xml);
++    Xml.XPath.Object* xpath_obj = xpath_context.eval (xpath);
+     if (xpath_obj != null && xpath_obj->nodesetval->length () > 0)
+     {
+       ret = xpath_obj->nodesetval->item (0)->content;
+@@ -215,11 +215,11 @@ public class Valide.Markup
+     return ret;
+   }
+ 
+-  public static Xml.NodeSet* get_nodes (string filename, string xpath)
++  public static Xml.XPath.NodeSet* get_nodes (string filename, string xpath)
+   {
+     Xml.Doc* xml = Xml.Parser.parse_file (filename);
+-    Xml.XPathContext xpath_context = new Xml.XPathContext (xml);
+-    Xml.XPathObject* xpath_obj = xpath_context.eval (xpath);
++    Xml.XPath.Context xpath_context = new Xml.XPath.Context (xml);
++    Xml.XPath.Object* xpath_obj = xpath_context.eval (xpath);
+     return xpath_obj->nodesetval;
+   }
+ }
