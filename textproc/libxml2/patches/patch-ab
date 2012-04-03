@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.22 2012/02/22 11:10:18 drochner Exp $
+$NetBSD: patch-ab,v 1.23 2012/04/03 09:08:33 obache Exp $
 
 --- configure.orig	2010-11-04 17:28:14.000000000 +0000
 +++ configure
@@ -46,7 +46,27 @@ $NetBSD: patch-ab,v 1.22 2012/02/22 11:10:18 drochner Exp $
  
  $as_echo "#define HAVE_LIBPTHREAD /**/" >>confdefs.h
  
-@@ -14582,10 +14582,10 @@ $as_echo "#define snprintf _snprintf" >>
+@@ -13879,7 +13879,7 @@ fi
+        *beos*) WITH_THREADS="1"
+ 	   THREAD_CFLAGS="$THREAD_CFLAGS -DHAVE_BEOS_THREADS"
+        ;;
+-       *linux*)
++       *linux* | *openbsd* | *mirbsd*)
+            if test "${GCC}" = "yes" ; then
+ 	       GCC_VERSION=`${CC} --version | head -1 | awk '{print $3}'`
+ 	       GCC_MAJOR=`echo ${GCC_VERSION} | sed 's+\..*++'`
+@@ -13901,6 +13901,10 @@ fi
+ 	       fi
+ 	   fi
+        ;;
++       *freebsd* | *netbsd* | *dragonfly*)
++	   THREAD_LIBS=""
++	   BASE_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++       ;;
+     esac
+     if test "$WITH_THREADS" = "1" ; then
+ 	THREAD_CFLAGS="$THREAD_CFLAGS -D_REENTRANT"
+@@ -14582,10 +14586,10 @@ $as_echo "#define snprintf _snprintf" >>
  
  $as_echo "#define vsnprintf _vsnprintf" >>confdefs.h
  
