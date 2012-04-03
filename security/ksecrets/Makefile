@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/03/20 05:55:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/03 08:13:30 markd Exp $
 
 DISTNAME=	ksecrets-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	security
 COMMENT=	KDE secrets service
 
@@ -10,6 +11,7 @@ COMMENT=	KDE secrets service
 
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/kde-workspace4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
