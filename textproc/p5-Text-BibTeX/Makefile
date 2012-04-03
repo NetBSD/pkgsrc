@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/04/03 08:43:48 markd Exp $
+# $NetBSD: Makefile,v 1.25 2012/04/03 08:51:28 markd Exp $
 
 DISTNAME=	Text-BibTeX-0.48
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
 BUILD_DEPENDS+=		p5-Config-AutoConf>=0.14:../../devel/p5-Config-AutoConf
 BUILD_DEPENDS+=		p5-ExtUtils-LibBuilder>=0.01:../../devel/p5-ExtUtils-LibBuilder
-BUILD_DEPENDS+=		p5-ExtUtils-CBuilder>=0.27:../../devel/p5-ExtUtils-CBuilder
+BUILD_DEPENDS+=		{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.27}:../../devel/p5-ExtUtils-CBuilder
 
 USE_LANGUAGES+=		c
 PERL5_PACKLIST=		auto/Text/BibTeX/.packlist
