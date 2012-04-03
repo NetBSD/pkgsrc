@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1051 2012/04/03 05:54:45 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1052 2012/04/03 08:56:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1712,3 +1712,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/kdelibs4 to 4.8.0nb2 [dholland 2012-04-02]
 	Updated print/teTeX3-texmf to 3.0nb34 [minskim 2012-04-02]
 	Updated net/tightvnc to 1.3.10nb5 [obache 2012-04-03]
+	Updated textproc/p5-Text-BibTeX to 0.48 [markd 2012-04-03]
