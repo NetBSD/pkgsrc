@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1049 2012/04/02 18:08:14 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.1050 2012/04/03 04:34:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1711,3 +1711,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-Module-Pluggable to 4.0 [rhaen 2012-04-01]
 	Updated x11/kdelibs4 to 4.8.0nb2 [dholland 2012-04-02]
 	Updated print/teTeX3-texmf to 3.0nb34 [minskim 2012-04-02]
+	Updated net/tightvnc to 1.3.10nb5 [obache 2012-04-03]
