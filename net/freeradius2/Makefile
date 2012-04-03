@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/04/03 01:22:02 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2012/04/03 01:38:18 obache Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -128,7 +128,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 .endfor
 
 .for d in ${EGDIRS}
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/${d}
+INSTALLATION_DIRS+=	${EGDIR}/${d}
 .endfor
 
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/certs ${RADIUS_USER} \
