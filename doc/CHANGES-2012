@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1050 2012/04/03 04:34:21 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1051 2012/04/03 05:54:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1692,7 +1692,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_expat to 12.1nb1 [obache 2012-04-01]
 	Updated textproc/expat to 2.1.0 [obache 2012-04-01]
 	Added math/R-RandomFields version 2.0.54 [brook 2012-04-01]
-	Added math/R-splancs to 2.01.31 [brook 2012-04-01]
+	Added math/R-splancs version 2.01.31 [brook 2012-04-01]
 	Updated math/R-sp to 0.9.98 [brook 2012-04-01]
 	Updated math/R-geoR to 1.7.2 [brook 2012-04-01]
 	Updated chat/p5-POE-Component-IRC to 6.78 [rhaen 2012-04-01]
