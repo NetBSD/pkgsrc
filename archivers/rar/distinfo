@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2007/08/22 16:43:36 jlam Exp $
+$NetBSD: distinfo,v 1.5 2012/04/04 21:22:19 ryoon Exp $
 
-SHA1 (rarbsd.sfx) = bafd5d6e4956ad10898ab19d601fa506d1681b4a
-RMD160 (rarbsd.sfx) = 3510af235244162f47d85fb7744468c9b093ffdf
-Size (rarbsd.sfx) = 246569 bytes
-SHA1 (rarlinux-3.6.0.tar.gz) = 4b43766371fd2f117fb3af5826001a7eab7a0f3b
-RMD160 (rarlinux-3.6.0.tar.gz) = c0f6d19738f69deb9fd75589e461a7a0ed430d39
-Size (rarlinux-3.6.0.tar.gz) = 752997 bytes
+SHA1 (rarlinux-4.1.1.tar.gz) = 4e5c8c7d5b610ce48a97729683688008c310e57e
+RMD160 (rarlinux-4.1.1.tar.gz) = a0aa14bc85996ca242ce6a48c7d244b4b171ecb6
+Size (rarlinux-4.1.1.tar.gz) = 915307 bytes
+SHA1 (rarlinux-x64-4.1.1.tar.gz) = 6ed70fe08e04bc2e381eb43be8905bc70f0582b2
+RMD160 (rarlinux-x64-4.1.1.tar.gz) = c81ff0fe9f1d001db61a0b8f92357b0b529b3953
+Size (rarlinux-x64-4.1.1.tar.gz) = 952748 bytes
