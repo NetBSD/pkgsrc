@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1055 2012/04/04 11:35:00 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1056 2012/04/04 12:27:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1716,3 +1716,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/libxml2 to 2.7.8nb9 [obache 2012-04-03]
 	Updated sysutils/cdrtools to 3.01alpha07nb1 [wiz 2012-04-04]
 	Updated www/apache-tomcat55 to 5.5.35 [obache 2012-04-04]
+	Updated www/contao211-translations to 201204040 [taca 2012-04-04]
