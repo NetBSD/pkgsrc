@@ -1,33 +1,47 @@
-# $NetBSD: Makefile,v 1.52 2009/05/19 08:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/04/04 21:22:18 ryoon Exp $
+#
 
-DISTNAME=		rar	# overridden in Makefile.${EMUL_PLATFORM}
-PKGNAME=		rar-2.02 # also overridden
-PKGREVISION=		1
-CATEGORIES=		archivers
-MASTER_SITES=		# empty
+DISTNAME=	# overridden
+PKGNAME=	rar-${RAR_VER}
+CATEGORIES=	archivers
+MASTER_SITES=	http://www.rarlabs.com/rar/
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://www.rarlabs.com/rar/
+COMMENT=	RAR file archiver (binary)
+LICENSE=	rar-license
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.rarsoft.com/
-COMMENT=		RAR file archiver (binary)
-LICENSE=		rar-license
+RAR_VER=	4.1.1
 
 RESTRICTED=		Only unmodified original package can be distributed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-EMUL_PLATFORMS=		linux-i386 netbsd-i386
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
 
-MESSAGE_SRC=		${PKGDIR}/MESSAGE.${EMUL_PLATFORM}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/rar
+USE_LANGUAGES=	# none
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(Makefile.${EMUL_PLATFORM})
-.  include "Makefile.${EMUL_PLATFORM}"
-.else
-NO_BUILD=		yes
-do-install:		# nothing
+.if ${EMUL_PLATFORM} == "linux-i386"
+DISTFILES=	rarlinux-${RAR_VER}.tar.gz
+.elif ${EMUL_PLATFORM} == "linux-x86_64"
+DISTFILES=	rarlinux-x64-${RAR_VER}.tar.gz
 .endif
 
+DOCSDIR=		share/doc/rar
+
+INSTALLATION_DIRS=	bin etc lib ${DOCSDIR}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/rar_static ${DESTDIR}${PREFIX}/bin/rar
+
+	${INSTALL_LIB} ${WRKSRC}/default.sfx ${DESTDIR}${PREFIX}/lib
+
+	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${DESTDIR}${PREFIX}/${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*txt ${DESTDIR}${PREFIX}/${DOCSDIR}
 .include "../../mk/bsd.pkg.mk"

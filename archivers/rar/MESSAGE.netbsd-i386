@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.netbsd-i386,v 1.1 2007/08/22 16:43:33 jlam Exp $
-
-You must have COMPAT_12, COMPAT_13, COMPAT_43, COMPAT_NOMID and a.out
-support compiled into your kernel to use this program.
-===========================================================================
