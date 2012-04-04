@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.85 2012/03/03 00:12:29 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2012/04/04 07:06:59 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
-
-DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 
 USE_TOOLS+=		pkg-config bash:run
 
