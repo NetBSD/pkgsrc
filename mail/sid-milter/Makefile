@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/12/05 08:07:52 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/04 22:09:49 pettai Exp $
 #
 
 DISTNAME=	sid-milter-1.0.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sid-milter/}
 
@@ -18,7 +19,7 @@ USE_BUILTIN.libmilter=	NO
 USE_TOOLS+=		gm4
 MAKE_ENV+=		M4=${M4:Q}
 PTHREAD_OPTS+=		require
-RCD_SCRIPTS=		sid-milter
+RCD_SCRIPTS=		sid-filter
 
 SIDDOC=		${PREFIX}/share/doc/sid-milter
 
@@ -28,7 +29,7 @@ SUBST_FILES.libs=	sid-filter/Makefile.m4
 SUBST_SED.libs=		-e "s|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g"
 SUBST_MESSAGE.libs=	Fixing paths.
 
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/cat8
+INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man3 ${PKGMANDIR}/man8
 
 post-extract:
 	${CP} ${FILESDIR}/sid-filter.m4 ${WRKSRC}/sid-filter/Makefile.m4
@@ -43,11 +44,11 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a \
 		${DESTDIR}${PREFIX}/lib
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat3/
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/
 	${INSTALL_PROGRAM} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter.0 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA} ${WRKSRC}/FEATURES ${DESTDIR}${SIDDOC}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${SIDDOC}
 	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${DESTDIR}${SIDDOC}
