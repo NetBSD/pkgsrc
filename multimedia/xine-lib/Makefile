@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2012/04/01 18:42:02 hans Exp $
+# $NetBSD: Makefile,v 1.99 2012/04/04 17:05:24 hans Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -12,6 +12,7 @@ CONFIGURE_ARGS+=	--disable-v4l
 CONFIGURE_ARGS+=	--disable-v4l2
 CONFIGURE_ARGS+=	--disable-real-codecs
 CONFIGURE_ARGS+=	--disable-aalib
+CONFIGURE_ARGS+=	--disable-mlib
 
 BUILDLINK_API_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
