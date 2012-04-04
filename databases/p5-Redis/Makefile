@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/01/26 20:55:08 rhaen Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/04 19:42:09 mishka Exp $
 #
 
-DISTNAME=	Redis-1.926
+DISTNAME=	Redis-1.951
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5rds
 CATEGORIES=	databases perl5
