@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1056 2012/04/04 12:27:30 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1057 2012/04/04 13:22:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1717,3 +1717,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/cdrtools to 3.01alpha07nb1 [wiz 2012-04-04]
 	Updated www/apache-tomcat55 to 5.5.35 [obache 2012-04-04]
 	Updated www/contao211-translations to 201204040 [taca 2012-04-04]
+	Updated chat/libpurple to 2.10.3 [obache 2012-04-04]
+	Updated chat/finch to 2.10.3 [obache 2012-04-04]
+	Updated chat/pidgin to 2.10.3 [obache 2012-04-04]
+	Updated chat/pidgin-sametime to 2.10.3 [obache 2012-04-04]
+	Updated chat/pidgin-silc to 2.10.3 [obache 2012-04-04]
