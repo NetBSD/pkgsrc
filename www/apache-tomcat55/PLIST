@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/03/17 21:22:56 abs Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/04/04 11:34:27 obache Exp $
 share/examples/rc.d/tomcat
 tomcat/LICENSE
 tomcat/NOTICE
@@ -31,7 +31,7 @@ tomcat/common/i18n/tomcat-i18n-es.jar
 tomcat/common/i18n/tomcat-i18n-fr.jar
 tomcat/common/i18n/tomcat-i18n-ja.jar
 tomcat/common/lib/commons-el.jar
-tomcat/common/lib/jasper-compiler-jdt.jar
+tomcat/common/lib/ecj-3.7.jar
 tomcat/common/lib/jasper-compiler.jar
 tomcat/common/lib/jasper-runtime.jar
 tomcat/common/lib/jsp-api.jar
@@ -483,7 +483,6 @@ tomcat/webapps/tomcat-docs/architecture/startup.html
 tomcat/webapps/tomcat-docs/architecture/startup/serverStartup.pdf
 tomcat/webapps/tomcat-docs/architecture/startup/serverStartup.txt
 tomcat/webapps/tomcat-docs/balancer-howto.html
-tomcat/webapps/tomcat-docs/build.xml
 tomcat/webapps/tomcat-docs/building.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/index.html
 tomcat/webapps/tomcat-docs/catalina/funcspecs/fs-admin-apps.html
@@ -513,6 +512,7 @@ tomcat/webapps/tomcat-docs/cluster-howto.html
 tomcat/webapps/tomcat-docs/config/ajp.html
 tomcat/webapps/tomcat-docs/config/context.html
 tomcat/webapps/tomcat-docs/config/engine.html
+tomcat/webapps/tomcat-docs/config/filter.html
 tomcat/webapps/tomcat-docs/config/globalresources.html
 tomcat/webapps/tomcat-docs/config/host.html
 tomcat/webapps/tomcat-docs/config/http.html
@@ -522,6 +522,7 @@ tomcat/webapps/tomcat-docs/config/manager.html
 tomcat/webapps/tomcat-docs/config/printer/ajp.html
 tomcat/webapps/tomcat-docs/config/printer/context.html
 tomcat/webapps/tomcat-docs/config/printer/engine.html
+tomcat/webapps/tomcat-docs/config/printer/filter.html
 tomcat/webapps/tomcat-docs/config/printer/globalresources.html
 tomcat/webapps/tomcat-docs/config/printer/host.html
 tomcat/webapps/tomcat-docs/config/printer/http.html

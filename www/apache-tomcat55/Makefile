@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/09/25 08:53:37 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/04/04 11:34:27 obache Exp $
 
 DISTNAME=	apache-tomcat-${TOMCAT_VERSION}
 CATEGORIES=	www java
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-TOMCAT_VERSION=	5.5.34
+TOMCAT_VERSION=	5.5.35
 
 USE_JAVA=	run
 # This needs java 1.5 or higher.
