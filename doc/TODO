@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10982 2012/04/01 22:02:16 dholland Exp $
+$NetBSD: TODO,v 1.10983 2012/04/04 14:28:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -341,8 +341,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o XaoS-3.5
 	o YoSucker-81
 	o ZIPIdent-2.9
-	o abcm2ps-6.6.3
-	o abcmidi-20120327
+	o abcm2ps-6.6.9
+	o abcmidi-20120403
 	o accerciser-1.12.2 [GNOME 2.32]
 	o accerciser-3.4.0
 	o acme-091 [pkg/44771]
@@ -408,6 +408,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacity-2.0
 	o autoconvert-0.3.16
 	o autogen-5.15
+	o automake-1.11.4
 	o avcheck-0.91
 	o avidemux-2.5.6
 	o avl-2.0.2a
@@ -445,7 +446,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cairo-1.12.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.44
+	o calibre-0.8.45
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.3
 	o cddbd-1.5.2
@@ -488,6 +489,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o csound5-5.13
 	o ctwm-3.8.1
+	o curl-7.25.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.23
 	o cygwin_lib-1.5.24.2
@@ -558,7 +560,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
-	o eric5-5.2.0
+	o eric5-5.2.1
 	o erlang-15b
 	o esh-0.8.5
 	o espeak-1.40
@@ -569,6 +571,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ettercap-0.7.4
 	o eukleides-1.5.4
 	o evieext-1.1.1
+	o evince-3.4.0
 	o evolution-3.0.0
 	o evolution-couchdb-0.4.5
 	o evolution-exchange-2.32.2
@@ -636,7 +639,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o font-xfree86-type1-1.0.4 [pkg/45549]
 	o fontconfig-2.9.0
 	o fontsproto-2.1.2
-	o fotoxx-12.03
+	o fotoxx-12.04
 	o fox-1.6.41
 	o freeciv-2.3.1
 	o freeglut-2.4.0
@@ -722,7 +725,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnucash-docs-2.4.1
 	o gnuchess-6.0.1
 	o gnupg2-2.0.19
-	o gnutls-3.0.16
+	o gnutls-3.0.18
 	o gok-2.30.1 [GNOME 2.32]
 	o golem-0.0.6
 	o goocanvas-2.0
@@ -762,7 +765,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gutenprint-5.2.7
 	o gv-3.7.3
 	o gvfs-1.6.7
-	o gwaei-3.4.1
+	o gwaei-3.4.2
 	o gworkspace-0.9.0
 	o gxine-0.5.906
 	o gzip-1.4
@@ -856,7 +859,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ldapsdk-6.0.7
 	o leafnode-1.11.8
 	o level9-4.1
-	o lftp-4.3.5
+	o lftp-4.3.6
 	o lgeneral-1.2.2
 	o libAppleWM-1.4.1
 	o libFS-1.0.4
@@ -901,7 +904,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgail-gnome-1.20.4
 	o libgda-4.2.1 [GNOME 2.32]
 	o libgda-4.2.5
-	o libgdata-0.10.2
+	o libgdata-0.12.0
 	o libgiigic-1.1.2
 	o libgnome-keyring-3.4.0
 	o libgnomedb-3.1.2
@@ -970,6 +973,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mc-4.8.1.1
 	o mdocml-1.12.1
 	o mediawiki-1.18.1
+	o meld-1.5.4
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
@@ -1032,7 +1036,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nikto-2.0.1
 	o nmh-1.4
 	o notification-daemon-0.7.0
-	o ns-3.12.1
+	o ns-3.13
 	o ns-plugger-common-5.1.3
 	o ntp-4.2.6p3
 	o ntp4-4.2.6p5
@@ -1044,6 +1048,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
+	o octave-3.6.1
 	o olvwm-4.5
 	o oo2c-2.1.7
 	o opal-3.8.0 [pkg/42942]
@@ -1165,10 +1170,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o quilt-0.60
 	o qvplay-0.95
 	o radiance-3.7.2
-	o rails-3.0.7
+	o rails-3.2.3
 	o raine-0.51.8
 	o randrproto-1.3.2
 	o rapidsvn-0.12
+	o raptor2-2.0.7
 	o rat-4.2.25
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rcs-5.8
@@ -1260,7 +1266,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stalin-0.11
 	o star-1.5.1
 	o statist-1.3.0
-	o stella-3.6
+	o stella-3.6.1
 	o stgit-0.16
 	o stlport-4.6.2
 	o stow-2.2.0
@@ -1379,7 +1385,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o windowlab-1.40
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4
-	o wine-devel-1.5.0
+	o wine-devel-1.5.1
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
@@ -1535,7 +1541,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xwd-1.0.5
 	o xwininfo-1.1.2
 	o xwpe-1.5.30a
-	o xwud-1.0.3
+	o xwud-1.0.4
 	o xye-0.12.1
 	o xzip-182
 	o yafc-1.1
@@ -1546,6 +1552,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
 	o zile-2.4.7
+	o zim-0.56
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zopeedit-0.8

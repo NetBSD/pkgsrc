@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1057 2012/04/04 13:22:39 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1058 2012/04/04 14:28:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/pidgin to 2.10.3 [obache 2012-04-04]
 	Updated chat/pidgin-sametime to 2.10.3 [obache 2012-04-04]
 	Updated chat/pidgin-silc to 2.10.3 [obache 2012-04-04]
+	Updated mail/rss2email to 2.71nb2 [wiz 2012-04-04]
