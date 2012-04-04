@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1054 2012/04/04 08:06:26 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1055 2012/04/04 11:35:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1715,3 +1715,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-Text-BibTeX to 0.48 [markd 2012-04-03]
 	Updated textproc/libxml2 to 2.7.8nb9 [obache 2012-04-03]
 	Updated sysutils/cdrtools to 3.01alpha07nb1 [wiz 2012-04-04]
+	Updated www/apache-tomcat55 to 5.5.35 [obache 2012-04-04]
