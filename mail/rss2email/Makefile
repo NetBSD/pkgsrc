@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/03/15 11:53:30 obache Exp $
+# $NetBSD: Makefile,v 1.29 2012/04/04 14:27:41 wiz Exp $
 #
 
 DISTNAME=		rss2email-2.71
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.zip
