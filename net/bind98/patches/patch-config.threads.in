@@ -1,13 +1,13 @@
-$NetBSD: patch-config.threads.in,v 1.1.1.1 2011/03/04 03:52:15 taca Exp $
+$NetBSD: patch-config.threads.in,v 1.2 2012/04/05 00:39:34 taca Exp $
 
---- config.threads.in.orig	2010-12-21 04:20:23.000000000 +0000
+--- config.threads.in.orig	2012-03-22 19:20:00.000000000 +0000
 +++ config.threads.in
-@@ -44,6 +44,8 @@ case $host in
+@@ -45,6 +45,8 @@ case $host in
  	use_threads=false ;;
  *-freebsd*)
  	use_threads=false ;;
 +*-dragonfly*)
 +	use_threads=false ;;
- *-bsdi[234]*)
+ [*-bsdi[234]*])
  	# Thread signals do not work reliably on some versions of BSD/OS.
  	use_threads=false ;;
