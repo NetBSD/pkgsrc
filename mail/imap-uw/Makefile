@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2012/03/20 16:34:32 dholland Exp $
+# $NetBSD: Makefile,v 1.136 2012/04/05 10:41:54 wiz Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -9,9 +9,8 @@
 # The most common reason to install this package is as a prerequisite for pine.
 # If you upgrade this package, you *must* test mail/pine with the new version.
 
-DISTNAME=	imap-2007e
+DISTNAME=	imap-2007f
 PKGNAME=	${DISTNAME:S/-/-uw-/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -19,6 +18,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
+LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
