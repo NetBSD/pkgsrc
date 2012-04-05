@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/03/12 15:40:15 taca Exp $
+# $NetBSD: Makefile,v 1.23 2012/04/05 00:41:10 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-ESV/.3.1.ESV/:S/-R/./:S/-P/pl/}
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.6-ESV-R5-P1
+BIND_VERSION=	9.6-ESV-R6
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -60,6 +60,8 @@ FILES_SUBST+=		BIND_GROUP=${BIND_GROUP:Q} \
 			BIND_USER=${BIND_USER:Q} PAX=${PAX:Q}
 MESSAGE_SUBST+=		BIND_DIR=${BIND_DIR} BIND_USER=${BIND_USER}
 DOCDIR=			${DESTDIR}${PREFIX}/share/doc/bind9
+MISCDOC=		dnssec ipv6 migration migration-4to9 options \
+			rfc-compliance roadmap sdb
 
 # include/isc/ipv6.h is installed on non-ipv6 platforms
 PLIST_VARS+=	inet6
@@ -69,15 +71,13 @@ PLIST.inet6=	yes
 
 RCD_SCRIPTS=		lwresd named9
 
-INSTALLATION_DIRS=	${DOCDIR} share/doc/bind9/arm share/doc/bind9/draft \
-			share/doc/bind9/rfc
+INSTALLATION_DIRS=	${DOCDIR} share/doc/bind9/arm share/doc/bind9/misc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/NSEC3-NOTES ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/arm/*.html ${DOCDIR}/arm
-	${INSTALL_DATA} ${WRKSRC}/doc/draft/draft-*.txt ${DOCDIR}/draft
-	${INSTALL_DATA} ${WRKSRC}/doc/rfc/rfc*.txt ${DOCDIR}/rfc
+	cd ${WRKSRC}/doc/misc && ${INSTALL_DATA} ${MISCDOC} ${DOCDIR}/misc
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
