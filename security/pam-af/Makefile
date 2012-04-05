@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/01/24 09:11:13 sbd Exp $
+# $NetBSD: Makefile,v 1.12 2012/04/05 04:55:42 obache Exp $
 
 DISTNAME=	pam_af-1.0.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -23,6 +23,8 @@ SUBST_SED.pkgvar+=	-e 's|/etc/|${PKG_SYSCONFDIR}/|g'
 
 BUILD_DEFS+=	VARBASE
 MAKE_DIRS+=	${VARBASE}/db
+
+BUILDLINK_TRANSFORM+=	rm:-Wcast-qual
 
 .include "../../mk/bsd.prefs.mk"
 
