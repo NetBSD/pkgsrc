@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2011/01/23 07:55:16 markd Exp $
+$NetBSD: distinfo,v 1.14 2012/04/05 22:30:02 markd Exp $
 
-SHA1 (kde-l10n-en_GB-4.5.5.tar.bz2) = f95acabb26250acd1ca6d77120680f682a348b60
-RMD160 (kde-l10n-en_GB-4.5.5.tar.bz2) = 612a29113a8e2226c9d6491dbc053c2cb6bc50f7
-Size (kde-l10n-en_GB-4.5.5.tar.bz2) = 2689162 bytes
+SHA1 (kde-l10n-en_GB-4.8.0.tar.bz2) = 7664caee4afcb30aa6b5f9a96b887da9ef0a03b8
+RMD160 (kde-l10n-en_GB-4.8.0.tar.bz2) = 8425460e092108f9ec24ade316d972b6079703de
+Size (kde-l10n-en_GB-4.8.0.tar.bz2) = 3631308 bytes
