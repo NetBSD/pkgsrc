@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1062 2012/04/05 10:42:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1063 2012/04/05 22:49:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1729,3 +1729,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind96 to 9.6.3.1.ESV.6 [taca 2012-04-05]
 	Updated lang/php53 to 5.3.10nb1 [taca 2012-04-05]
 	Updated mail/imap-uw to 2007f [wiz 2012-04-05]
+	Updated x11/kde4-l10n-de to 4.8.0 [markd 2012-04-05]
+	Updated x11/kde4-l10n-en_GB to 4.8.0 [markd 2012-04-05]
+	Updated x11/kde4-l10n-nl to 4.8.0 [markd 2012-04-05]
+	Updated textproc/p5-Text-BibTeX to 0.62 [markd 2012-04-05]
