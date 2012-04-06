@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10985 2012/04/06 11:29:20 wiz Exp $
+$NetBSD: TODO,v 1.10986 2012/04/06 11:30:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -459,6 +459,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cflow-1.4
 	o cheese-2.32.0 [GNOME 2.32]
 	o cheese-3.4.0
+	o chkrootkit-0.49
 	o chromium-0.9.15
 	o chrony-1.26
 	o cinepaint-1.0
@@ -1348,8 +1349,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
+	o vala-0.15.2
 	o vala-0.16.0
-	o vala-0.15.1
 	o valgrind-3.6.1
 	o vbetool-1.1
 	o vera-1.17
