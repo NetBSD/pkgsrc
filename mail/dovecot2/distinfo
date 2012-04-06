@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2012/03/17 02:14:15 ghen Exp $
+$NetBSD: distinfo,v 1.18 2012/04/06 15:56:26 tron Exp $
 
 SHA1 (dovecot-2.1.3.tar.gz) = b11d9dc3e058c291243e75d9cfda86241cf65f8a
 RMD160 (dovecot-2.1.3.tar.gz) = c5130de9737ee93fba896e02a7dba9725e4176c7
@@ -10,3 +10,4 @@ SHA1 (patch-ae) = 51d8cb998cc2ded8bfc767710e465b752c50e656
 SHA1 (patch-af) = 6d4b339898cba762243c1ff415e0fd09e3dec750
 SHA1 (patch-aj) = 9e7970d29d11c097b9588ad16611f6d0e48235c2
 SHA1 (patch-ak) = ca4edaa46472a0cb609cea4d06893c7bd1312f54
+SHA1 (patch-src_lib-storage_list_mailbox-list-fs-iter.c) = ec4a21ff3b357e6e97a2ab40491f90cbfa2e3144
