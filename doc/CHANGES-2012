@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1065 2012/04/06 15:56:42 tron Exp $
+$NetBSD: CHANGES-2012,v 1.1066 2012/04/06 19:12:03 mishka Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1724,6 +1724,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/pidgin-silc to 2.10.3 [obache 2012-04-04]
 	Updated mail/rss2email to 2.71nb2 [wiz 2012-04-04]
 	Updated archivers/rar to 4.1.1 [ryoon 2012-04-04]
+	Updated databases/p5-Redis to 1.951 [mishka 2012-04-04]
 	Updated net/bind98 to 9.8.2 [taca 2012-04-05]
 	Updated net/bind97 to 9.7.5 [taca 2012-04-05]
 	Updated net/bind96 to 9.6.3.1.ESV.6 [taca 2012-04-05]
