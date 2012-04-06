@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10984 2012/04/05 10:42:04 wiz Exp $
+$NetBSD: TODO,v 1.10985 2012/04/06 11:29:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -585,6 +585,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o farsight2-0.0.31
 	o fbreader-0.12.10
 	o fcitx-3.6.2
+	o feh-2.5
 	o felt-3.07
 	o fetchyahoo-2.14.0
 	o ffmpeg-20120112.0.8.10
@@ -835,7 +836,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kbiff-4.0
 	o kbproto-1.0.6
 	o kdbg-2.5.1
-	o kde4-4.8.1
+	o kde4-4.8.2
 	o kdenlive-0.8.2.1
 	o kdrill-6.5
 	o kid3-2.0.1
@@ -924,7 +925,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libplist-1.8
 	o libproxy-0.4.6
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o libraw-0.14.3
+	o libraw-0.14.6
 	o libreoffice3-3.4.5
 	o librep-0.92.2
 	o libspf2-1.2.9.1
