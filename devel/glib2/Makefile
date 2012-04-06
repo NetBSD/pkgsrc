@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.197 2012/03/21 12:18:33 drochner Exp $
+# $NetBSD: Makefile,v 1.198 2012/04/06 10:40:36 taca Exp $
 
 .include "Makefile.common"
 .include "options.mk"
 
+PKGREVISION=		1
 CATEGORIES=		devel
 
 COMMENT=		Some useful routines for C programming (glib2)
