@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2012/03/15 11:53:31 obache Exp $
+# $NetBSD: Makefile,v 1.85 2012/04/06 12:55:23 marino Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 PKGREVISION=	18
@@ -29,6 +29,10 @@ SUBST_SED.tarexe=	-e 's:<default>tar</default>:<default>${PREFIX.gtar}/bin/${GNU
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h)
 CPPFLAGS+=             -D__NetBSD_APM__
+.endif
+
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ENV+= 	ac_cv_c_long_double=no
 .endif
 
 CONFIGURE_ARGS+=	--with-snmp=no
