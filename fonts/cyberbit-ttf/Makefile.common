@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.23 2012/01/14 03:13:04 hans Exp $
+# $NetBSD: Makefile.common,v 1.24 2012/04/07 12:49:35 obache Exp $
 #
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://ftp.netscape.com/pub/communicator/extras/fonts/windows/
+MASTER_SITES=	http://ftp.netscape.com/pub/communicator/extras/fonts/windows/
 DISTFILES=	${FONT_FILE} ReadMe.htm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
