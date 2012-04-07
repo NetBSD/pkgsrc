@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/04/04 15:15:50 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2012/04/07 04:47:27 obache Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ruby-odbc
 PKG_OPTIONS_REQUIRED_GROUPS=	odbc
@@ -12,7 +12,8 @@ PKG_SUGGESTED_OPTIONS=		iodbc
 ###
 .if !empty(PKG_OPTIONS:Miodbc)
 .  include "../../databases/iodbc/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-odbc-dir=${BUILDLINK_PREFIX.iodbc}
+CONFIGURE_ARGS+=	--with-odbc-include=${BUILDLINK_PREFIX.iodbc}/include/iodbc
+CONFIGURE_ARGS+=	--with-odbc-lib=${BUILDLINK_PREFIX.iodbc}/lib/iodbc
 .endif
 
 ###
