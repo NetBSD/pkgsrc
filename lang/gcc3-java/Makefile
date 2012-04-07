@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2012/03/17 01:54:37 sbd Exp $
+# $NetBSD: Makefile,v 1.28 2012/04/07 17:34:31 dholland Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BROKEN=	Unbuildable for years and obsolete.
 
 BUILDLINK_API_DEPENDS.gcc3cxx+=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.gcc3cxx+=	full
