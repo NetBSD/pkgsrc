@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/11/23 17:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/07 15:08:55 wiz Exp $
 #
 
-DISTNAME=		xdelta3.0z
-PKGNAME=		xdelta3-3.0z
+DISTNAME=		xdelta3.0.0
+PKGNAME=		xdelta3-3.0za
 CATEGORIES=		devel
 MASTER_SITES=		http://xdelta.googlecode.com/files/
 
