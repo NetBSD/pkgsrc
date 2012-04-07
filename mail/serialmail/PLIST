@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/07 13:17:10 joerg Exp $
 bin/maildirqmtp
 bin/maildirserial
 bin/maildirsmtp
 bin/serialqmtp
 bin/serialsmtp
-man/cat1/maildirqmtp.0
-man/cat1/maildirserial.0
-man/cat1/maildirsmtp.0
-man/cat1/serialqmtp.0
-man/cat1/serialsmtp.0
 man/man1/maildirqmtp.1
 man/man1/maildirserial.1
 man/man1/maildirsmtp.1
