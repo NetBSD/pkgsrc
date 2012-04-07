@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1071 2012/04/07 15:08:30 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1072 2012/04/07 15:09:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1741,3 +1741,4 @@ Changes to the packages collection and infrastructure in 2012:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2012Q1 branch [wiz 2012-04-07]
 	Updated converters/libwps to 0.2.4 [wiz 2012-04-07]
 	Updated devel/mercurial to 2.1.2 [wiz 2012-04-07]
+	Updated devel/xdelta3 to 3.0za [wiz 2012-04-07]
