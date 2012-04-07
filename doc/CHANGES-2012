@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1074 2012/04/07 20:06:06 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.1075 2012/04/07 20:10:54 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/xdelta3 to 3.0za [wiz 2012-04-07]
 	Updated devel/diffutils to 3.2 [schwarz 2012-04-07]
 	Updated comms/asterisk10 to 10.3.0 [jnemeth 2012-04-07]
+	Updated comms/asterisk18 to 1.8.11.0 [jnemeth 2012-04-07]
