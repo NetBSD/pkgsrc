@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/04/18 02:27:21 rh Exp $
+$NetBSD: patch-aa,v 1.1 2009/04/18 02:19:23 rh Exp $
 
---- GNUmakefile.orig	2009-04-18 11:56:31.000000000 +1000
+--- GNUmakefile.orig	2009-04-18 10:49:03.000000000 +1000
 +++ GNUmakefile
 @@ -38,7 +38,7 @@ GNUSTEP_INSTALLATION_DOMAIN = SYSTEM
  include $(GNUSTEP_MAKEFILES)/common.make
  include ./Version
  
 -SUBPROJECTS = Foundation Resources examples
-+SUBPROJECTS = examples
++SUBPROJECTS = Foundation Resources
  
  include $(GNUSTEP_MAKEFILES)/aggregate.make
  
