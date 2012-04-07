@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/12/07 19:33:03 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2012/04/07 08:28:45 he Exp $
+
+Also handle DragonFly BSD.
 
 --- configure.orig	2005-12-07 19:04:43.000000000 +0000
 +++ configure
