@@ -1,12 +1,19 @@
-$NetBSD: patch-sniffit_h,v 1.1 2012/03/31 08:31:06 dholland Exp $
+$NetBSD: patch-sniffit_h,v 1.2 2012/04/07 09:23:11 obache Exp $
 
 - move strlower to sn_cfgfile.h to make it visible in the right places
 - my_exit should be file-static
 - update const to match changes to sniffit.0.3.5.c
 
---- sniffit.h~	1997-04-18 09:33:58.000000000 +0000
+--- sniffit.h.orig	1997-04-18 09:33:58.000000000 +0000
 +++ sniffit.h
-@@ -15,14 +15,12 @@ void print_iphead (struct IP_header *, c
+@@ -9,20 +9,18 @@ pcap_handler packethandler(unsigned char
+ 							const unsigned char *);
+ int check_mask (const struct packetheader *,const unsigned char *, char *,
+     	                                    char *,struct unwrap *);
+-pcap_handler interactive_packethandler( char *, const struct packetheader *,
++pcap_handler interactive_packethandler( unsigned char *, const struct packetheader *,
+                                         const unsigned char *);     
+ void print_iphead (struct IP_header *, char);
  unsigned long getaddrbyname(char *);
  void quit (char *);
  void reset_all (void);
