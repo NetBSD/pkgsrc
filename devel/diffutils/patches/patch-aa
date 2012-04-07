@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2008/11/24 08:02:16 obache Exp $
+$NetBSD: patch-aa,v 1.2 2012/04/07 16:30:05 schwarz Exp $
 
-PR 39941
-
---- configure.orig	2002-04-05 21:48:26.000000000 +0000
-+++ configure
-@@ -3722,7 +3722,7 @@ _ACEOF
+--- src/Makefile.in.orig	2012-04-07 01:21:43.000000000 +0200
++++ src/Makefile.in	2012-04-07 01:22:34.000000000 +0200
+@@ -1034,7 +1034,7 @@
  
- 
- cat >>confdefs.h <<\_ACEOF
--#define DEFAULT_DIFF_PROGRAM "diff"
-+#define DEFAULT_DIFF_PROGRAM "%DEFAULT_DIFF_PROGRAM%"
- _ACEOF
- 
- 
+ noinst_HEADERS = diff.h system.h
+ MOSTLYCLEANFILES = paths.h paths.ht
+-gdiff = `echo diff|sed '$(transform)'`
++gdiff = "%DEFAULT_DIFF_PROGRAM%"
+ BUILT_SOURCES = paths.h version.c version.h
+ noinst_LIBRARIES = libver.a
+ nodist_libver_a_SOURCES = version.c version.h

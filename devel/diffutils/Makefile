@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2012/03/09 13:11:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.26 2012/04/07 16:30:05 schwarz Exp $
 #
 
-DISTNAME=		diffutils-2.8.1
-PKGREVISION=		5
+DISTNAME=		diffutils-3.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=diffutils/}
 
@@ -15,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-INFO_FILES=		# PLIST
+INFO_FILES=		YES # PLIST
 
 CONFIGURE_ENV+=	gt_cv_func_gnugettext1_libintl=yes
 
@@ -33,7 +32,7 @@ BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 SUBST_CLASSES+=		diff
 SUBST_STAGE.diff=	pre-configure
-SUBST_FILES.diff=	configure
+SUBST_FILES.diff=	src/Makefile.in
 SUBST_SED.diff=		-e 's;%DEFAULT_DIFF_PROGRAM%;${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff;'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
