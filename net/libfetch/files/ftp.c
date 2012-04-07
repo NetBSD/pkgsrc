@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.40 2011/11/08 18:02:27 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.41 2012/04/07 15:09:23 wiz Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -98,6 +98,7 @@
 #include "common.h"
 #include "ftperr.h"
 
+static int ftp_cmd(conn_t *, const char *, ...) __printflike(2, 3);
 #define FTP_ANONYMOUS_USER	"anonymous"
 
 #define FTP_CONNECTION_ALREADY_OPEN	125
@@ -387,7 +388,7 @@ ftp_cwd(conn_t *conn, const char *path, int subdir)
 			++beg, ++i;
 		for (++i; dst + i < end && dst[i] != '/'; ++i)
 			/* nothing */ ;
-		e = ftp_cmd(conn, "CWD %.*s\r\n", dst + i - beg, beg);
+		e = ftp_cmd(conn, "CWD %.*s\r\n", (int)(dst + i - beg), beg);
 		if (e != FTP_FILE_ACTION_OK) {
 			free(dst);
 			ftp_seterr(e);
