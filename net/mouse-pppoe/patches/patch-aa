@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2008/10/02 17:01:16 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2012/04/07 13:22:31 bsiegert Exp $
 
---- pppoe.c.orig	2000-04-21 05:58:32.000000000 +0200
+--- pppoe.c.orig	Fri Apr 21 03:58:10 2000
 +++ pppoe.c
 @@ -5,6 +5,7 @@
  #include <stdarg.h>
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.4 2008/10/02 17:01:16 joerg Exp $
  #include <net/if_dl.h>
  #include <sys/ioctl.h>
  #include <sys/socket.h>
-+#if defined(__DragonFly__) || defined(__FreeBSD__)
++#if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__)
 +#include <netinet/in.h>
 +#include <netinet/if_ether.h>
 +#else
