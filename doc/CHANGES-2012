@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1069 2012/04/07 15:02:50 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1070 2012/04/07 15:08:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1739,3 +1739,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/ogle to 0.9.2nb7 [he 2012-04-07]
 	Updated net/sniffit to 0.3.5nb3 [obache 2012-04-07]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2012Q1 branch [wiz 2012-04-07]
+	Updated converters/libwps to 0.2.4 [wiz 2012-04-07]
