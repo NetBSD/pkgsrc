@@ -1,4 +1,4 @@
-/*	$NetBSD: common.h,v 1.18 2012/04/07 15:09:23 wiz Exp $	*/
+/*	$NetBSD: common.h,v 1.19 2012/04/07 15:27:21 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -43,6 +43,11 @@
 #include <openssl/pem.h>
 #include <openssl/ssl.h>
 #include <openssl/err.h>
+#endif
+
+#if defined(__GNUC__) && __GNUC__ >= 3
+#define LIBFETCH_PRINTFLIKE(fmtarg, firstvararg)	\
+	    __attribute__((__format__ (__printf__, fmtarg, firstvararg)))
 #endif
 
 #if !defined(__sun) && !defined(__hpux) && !defined(__INTERIX) && \
@@ -90,7 +95,7 @@ struct fetcherr {
 
 void		 fetch_seterr(struct fetcherr *, int);
 void		 fetch_syserr(void);
-void		 fetch_info(const char *, ...)  __printflike(1, 2);
+void		 fetch_info(const char *, ...)  LIBFETCH_PRINTFLIKE(1, 2);
 int		 fetch_default_port(const char *);
 int		 fetch_default_proxy_port(const char *);
 int		 fetch_bind(int, int, const char *);
