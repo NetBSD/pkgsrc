@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/12 20:17:47 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/07 22:34:13 dholland Exp $
 #
 
 DISTNAME=	oath-toolkit-1.10.5
@@ -18,4 +18,5 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	liboath/liboath.pc.in
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
