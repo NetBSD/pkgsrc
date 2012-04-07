@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/03/03 00:13:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/07 11:29:27 joerg Exp $
 #
 
 DISTNAME=	emerillon-0.1.2
@@ -25,6 +25,10 @@ GCONF_SCHEMAS=		emerillon.schemas
 #PKGCONFIG_OVERRIDE=	data/emerillon.pc.in
 
 BUILD_DEPENDS+=	vala-[0-9]*:../../lang/vala
+
+CONFIGURE_ARGS+=	VALAC=${PREFIX}/bin/valac-0.12
+
+BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
