@@ -1,7 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.1 2012/04/07 20:32:03 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.2 2012/04/07 21:01:01 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
 Pullup ticket #3707 - requested by bsiegert
 sysutils/xentools33: build fix
+Pullup ticket #3709 - requested by joerg
+security/oath-toolkit: build fix
 
