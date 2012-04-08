@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/03/15 11:53:35 obache Exp $
+# $NetBSD: Makefile,v 1.44 2012/04/08 19:09:08 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -14,12 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
 
 USE_TOOLS+=	msgfmt xgettext msgmerge
 
-.include "../../mk/bsd.prefs.mk"
-
-.include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
-
-.if ${PYVERSSUFFIX} != "2.4"
 SUBST_CLASSES+=         sha
 SUBST_MESSAGE.sha=	Fixing references to deprecated sha module.
 SUBST_STAGE.sha=	pre-configure
@@ -35,6 +29,7 @@ SUBST_FILES.sha+=	khashmir/khashmir.py
 SUBST_FILES.sha+=	khashmir/utkhashmir.py
 SUBST_FILES.sha+=	torrentinfo-console.py
 SUBST_SED.sha=		-e "s/^from sha import .*/from hashlib import sha1 as sha/"
-.endif
 
+.include "../../lang/python/application.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

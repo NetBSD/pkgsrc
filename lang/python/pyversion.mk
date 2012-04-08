@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.96 2012/03/08 11:44:06 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.97 2012/04/08 19:08:59 wiz Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 24 25 26 27 31
+#	Possible values: 25 26 27 31
 #	Default: 27
 #
 # === Package-settable variables ===
@@ -18,8 +18,8 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 31 27 26 25 24
-#	Default: (31) 27 26 25 24
+#	Possible values: 31 27 26 25
+#	Default: (31) 27 26 25
 #
 # PYTHON_VERSIONS_INCLUDE_3X
 #	Wether the default PYTHON_VERSIONS_ACCEPTED should include
@@ -32,7 +32,7 @@
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 24 25 26 27 31
+#	Possible values: 25 26 27 31
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -78,13 +78,12 @@ BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		27
 .if ${PYTHON_VERSIONS_INCLUDE_3X:U:tl} == "yes"
-PYTHON_VERSIONS_ACCEPTED?=		31 27 26 25 24
+PYTHON_VERSIONS_ACCEPTED?=		31 27 26 25
 .else
-PYTHON_VERSIONS_ACCEPTED?=		27 26 25 24
+PYTHON_VERSIONS_ACCEPTED?=		27 26 25
 .endif
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
-BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
 BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
 BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
 BUILDLINK_API_DEPENDS.python27?=		python27>=2.7
@@ -162,13 +161,6 @@ PYPACKAGE=	python25
 PYVERSSUFFIX=	2.5
 PYPKGPREFIX=	py25
 PYDISTUTILS_CREATES_EGGFILES=	yes
-.elif ${_PYTHON_VERSION} == "24"
-PYPKGSRCDIR=	../../lang/python24
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python24}:${PYPKGSRCDIR}
-PYPACKAGE=	python24
-PYVERSSUFFIX=	2.4
-PYPKGPREFIX=	py24
-PYDISTUTILS_CREATES_EGGFILES=	no
 .else
 PKG_FAIL_REASON+=   "No valid Python version"
 PYDISTUTILS_CREATES_EGGFILES=	no

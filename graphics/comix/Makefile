@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/03/09 12:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2012/04/08 19:08:56 wiz Exp $
 #
 
 DISTNAME=		comix-4.0.4
@@ -15,11 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
 .include "../../lang/python/extension.mk"
-.if ${PYPKGPREFIX} == "py24"
-.include "../../databases/py-sqlite2/buildlink3.mk"
-.else
 DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-.endif
 
 MANCOMPRESSED=		yes
 

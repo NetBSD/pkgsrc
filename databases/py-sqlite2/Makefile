@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/06/10 09:39:51 obache Exp $
+# $NetBSD: Makefile,v 1.25 2012/04/08 19:08:48 wiz Exp $
 
 DISTNAME=	pysqlite-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pysqlite/sqlite2/}
@@ -14,12 +14,6 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/distutils.mk"
-
-.if !defined(PYPACKAGE) || ${PYPACKAGE} != "python24"
-PLIST.python25=	yes
-.endif
-
-PLIST_VARS+=	python25
 
 do-postinstall-test: .PHONY
 	cd ${WRKDIR} && ${PYTHONBIN} -c "from pysqlite2 import test;test.test()"

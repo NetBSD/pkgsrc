@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/03/15 11:53:44 obache Exp $
+# $NetBSD: Makefile,v 1.57 2012/04/08 19:09:17 wiz Exp $
 #
 
 DISTNAME=	Trac-0.12.3
@@ -57,11 +57,7 @@ PYTHON_PATCH_SCRIPTS+=	trac/tests/functional/*.py
 .include "../../lang/python/application.mk"
 
 .if !empty(PKG_OPTIONS:Msqlite)
-.if defined(PYPACKAGE) && ${PYPACKAGE} == "python24"
-DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2:../../databases/py-sqlite2
-.else
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-.endif
 .endif
 # trac 0.12 dropped support for py-PgSQL.  Switching to py-psycopg2 with
 # an existing database that used to be accessed by py-PgSQL worked.

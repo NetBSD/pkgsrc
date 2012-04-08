@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/03/03 00:13:41 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2012/04/08 19:09:08 wiz Exp $
 #
 
 DISTNAME=		gst-python-0.10.22
@@ -14,8 +14,6 @@ COMMENT=		Python bindings for gstreamer0.10
 LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 CONFLICTS=		gst-python-[0-9]*
 

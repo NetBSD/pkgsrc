@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/20 06:21:42 markd Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:11 wiz Exp $
 
 DISTNAME=	printer-applet-${_KDE_VERSION}
 CATEGORIES=	print
@@ -6,7 +6,6 @@ COMMENT=	KDE printer applet
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 #make sure cmake picks up the same Python version as pkgsrc
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 

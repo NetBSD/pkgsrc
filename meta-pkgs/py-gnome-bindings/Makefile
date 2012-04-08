@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/06/14 11:25:57 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/08 19:09:07 wiz Exp $
 
 DISTNAME=	${PYPKGPREFIX}-gnome-bindings-2.26.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -9,8 +9,6 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for Python bindings for the GNOME desktop
 
 META_PACKAGE=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 .include "../../lang/python/pyversion.mk"
 

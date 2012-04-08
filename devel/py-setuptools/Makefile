@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/09/04 15:57:16 tron Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/08 19:08:54 wiz Exp $
 
 EGG_VERSION=		0.6c11
 DISTNAME=		setuptools-${EGG_VERSION}
@@ -36,16 +36,7 @@ PYSETUPINSTALLARGS+=	--root=/
 FILES_SUBST+=	PYSITELIB=${PREFIX}/${PYSITELIB}
 FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-PLIST_VARS+=	py24 py25
-
-.if ${PYPKGPREFIX} == "py24"
-PLIST.py24=		yes
-.else
-PLIST.py25=		yes
-.endif
-
-.if ${OPSYS} == "Darwin" && \
-    (${PYPKGPREFIX} != "py24" && ${PYPKGPREFIX} != "py25")
+.if ${OPSYS} == "Darwin" && ${PYPKGPREFIX} != "py25"
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
 

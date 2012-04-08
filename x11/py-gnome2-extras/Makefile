@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/03/03 00:12:18 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/04/08 19:09:18 wiz Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.25.3
@@ -26,8 +26,6 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=		pkg-config gmake
 USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--enable-docs
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

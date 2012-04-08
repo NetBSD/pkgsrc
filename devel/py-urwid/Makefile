@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/28 08:13:20 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/08 19:08:55 wiz Exp $
 
 DISTNAME=	urwid-0.9.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 REPLACE_PYTHON=	*.py */*.py
 
 FILESEXAMPLES=	bigtext.py \
