@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2012/02/09 13:09:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/04/08 20:21:52 wiz Exp $
 bin/f2py${PYVERSSUFFIX}
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/numpy/COMPATIBILITY
 ${PYSITELIB}/numpy/DEV_README.txt
 ${PYSITELIB}/numpy/INSTALL.txt

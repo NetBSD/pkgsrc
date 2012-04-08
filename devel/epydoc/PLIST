@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2012/02/02 12:58:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/04/08 20:21:44 wiz Exp $
 bin/epydoc
 bin/epydocgui
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/epydoc/__init__.py
 ${PYSITELIB}/epydoc/__init__.pyc
 ${PYSITELIB}/epydoc/__init__.pyo

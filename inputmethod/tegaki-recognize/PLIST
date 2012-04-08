@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 12:52:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:21:50 wiz Exp $
 bin/tegaki-recognize
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 share/applications/tegaki-recognize.desktop
 share/menu/tegaki-recognize
 share/pixmaps/tegaki-recognize.svg

@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/23 07:57:25 obache Exp $
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:21:43 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/japanese.pth
 ${PYSITELIB}/japanese/__init__.py
 ${PYSITELIB}/japanese/__init__.pyc

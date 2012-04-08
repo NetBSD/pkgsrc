@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/08/07 05:06:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:22:01 wiz Exp $
 ${PYSITELIB}/Xlib/X.py
 ${PYSITELIB}/Xlib/X.pyc
 ${PYSITELIB}/Xlib/X.pyo
@@ -158,4 +158,4 @@ ${PYSITELIB}/Xlib/xobject/icccm.pyo
 ${PYSITELIB}/Xlib/xobject/resource.py
 ${PYSITELIB}/Xlib/xobject/resource.pyc
 ${PYSITELIB}/Xlib/xobject/resource.pyo
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2011/07/22 14:54:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:21:47 wiz Exp $
 bin/subvertpy-fast-export
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/subvertpy/__init__.py
 ${PYSITELIB}/subvertpy/__init__.pyc
 ${PYSITELIB}/subvertpy/__init__.pyo

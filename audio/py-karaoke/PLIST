@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/12/10 14:17:37 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/04/08 20:21:42 wiz Exp $
 bin/cdg2mpg
 bin/pycdg
 bin/pykar
@@ -18,7 +18,7 @@ ${PYSITELIB}/pycdgAux.pyo
 ${PYSITELIB}/pykar.py
 ${PYSITELIB}/pykar.pyc
 ${PYSITELIB}/pykar.pyo
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pykaraoke.py
 ${PYSITELIB}/pykaraoke.pyc
 ${PYSITELIB}/pykaraoke.pyo

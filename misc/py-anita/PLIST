@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2012/01/28 08:43:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:21:52 wiz Exp $
 bin/anita
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/anita.py
 ${PYSITELIB}/anita.pyc
 ${PYSITELIB}/anita.pyo
