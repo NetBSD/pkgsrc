@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2012/01/25 13:19:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/04/08 20:21:59 wiz Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pycurl.so
 share/doc/pycurl${PYVERSSUFFIX}/COPYING
 share/doc/pycurl${PYVERSSUFFIX}/COPYING2
