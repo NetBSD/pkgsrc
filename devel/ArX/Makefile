@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/03/03 00:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.32.2.1 2012/04/08 09:18:54 sbd Exp $
 #
 
 DISTNAME=	ArX-2.2.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://savannah.nongnu.org/download/arx/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/arx/
 COMMENT=	Distributed revision control system
+
+BROKEN=		Has not been buildable for several years, and dead upstream.
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 DEPENDS+=	patch-[0-9]*:../../devel/patch
