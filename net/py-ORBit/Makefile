@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/03/03 00:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2012/04/08 19:09:09 wiz Exp $
 #
 
 DISTNAME=	pyorbit-2.24.0
@@ -24,7 +24,6 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
 BUILDLINK_API_DEPENDS.python26+= python26>=2.6.2nb4
 BUILDLINK_API_DEPENDS.python25+= python25>=2.5.4nb2
-BUILDLINK_API_DEPENDS.python24+= python24>=2.4.5nb4
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"

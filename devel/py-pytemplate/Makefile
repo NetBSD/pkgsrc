@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/14 06:27:42 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:08:54 wiz Exp $
 #
 
 DISTNAME=	pytemplate-1.5.1
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_LANGUAGES=			# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	31
 REPLACE_PYTHON=			${WRKSRC}/*.py
 
 EGDIR=				${PREFIX}/share/examples/${PYPKGPREFIX}-pytemplate
