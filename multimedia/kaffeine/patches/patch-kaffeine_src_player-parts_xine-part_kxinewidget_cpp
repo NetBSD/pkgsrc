@@ -1,0 +1,15 @@
+$NetBSD: patch-kaffeine_src_player-parts_xine-part_kxinewidget_cpp,v 1.1.2.2 2012/04/08 11:13:16 sbd Exp $
+
+Fix build with current xine-lib.
+
+--- kaffeine/src/player-parts/xine-part/kxinewidget.cpp~	2006-11-26 19:12:24.000000000 +0000
++++ kaffeine/src/player-parts/xine-part/kxinewidget.cpp
+@@ -2494,7 +2494,7 @@ void KXineWidget::getAutoplayPlugins(QSt
+ 
+ bool KXineWidget::getAutoplayPluginURLS(const QString& plugin, QStringList& list)
+ {
+-	char** urls = NULL;
++	const char *const *urls = NULL;
+ 	int num;
+ 	int i = 0;
+ 
