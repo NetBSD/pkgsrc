@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/02/10 19:34:07 joerg Exp $
+# $NetBSD: Makefile,v 1.17.18.1 2012/04/08 09:18:55 sbd Exp $
 #
 
 DISTNAME=		sope-4.5.4-nevermind-r878
@@ -10,6 +10,8 @@ MASTER_SITES=		http://download.opengroupware.org/nightly/sources/releases/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sope.opengroupware.org/
 COMMENT=		Set of frameworks for a complete web application server environment
+
+BROKEN=	Not buildable for years and apparently superseded by devel/SOPE.
 
 USE_LANGUAGES=		objc
 USE_TOOLS+=		bash
