@@ -1,0 +1,15 @@
+$NetBSD: patch-amarok_src_engine_xine_xine-engine_cpp,v 1.1.2.2 2012/04/08 10:53:25 sbd Exp $
+
+Fix build with newer xine-lib.
+
+--- amarok/src/engine/xine/xine-engine.cpp~	2008-08-13 21:21:51.000000000 +0000
++++ amarok/src/engine/xine/xine-engine.cpp
+@@ -1131,7 +1131,7 @@ bool XineEngine::metaDataForUrl(const KU
+ 
+ bool XineEngine::getAudioCDContents(const QString &device, KURL::List &urls)
+ {
+-    char **xine_urls = NULL;
++    const char *const *xine_urls = NULL;
+     int num;
+     int i = 0;
+ 
