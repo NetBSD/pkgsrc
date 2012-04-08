@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2012/04/08 04:49:56 dholland Exp $
+$NetBSD: distinfo,v 1.20 2012/04/08 05:11:13 dholland Exp $
 
 SHA1 (wu-ftpd/wu-ftpd-2.6.2.tar.gz) = e39112bd8a67f189b6a8da8dd81ceb00a910e271
 RMD160 (wu-ftpd/wu-ftpd-2.6.2.tar.gz) = 0b7451c185f80cf9a345f97b9642853e0323e3bd
@@ -23,7 +23,7 @@ SHA1 (patch-ak) = 8eca121c737498106a5e829cb166746436a87237
 SHA1 (patch-al) = b537901ac9e267a13247547d621215acd6595502
 SHA1 (patch-am) = 1b1cdf067382fce0cb6aa5e6ff605c15414b26ff
 SHA1 (patch-an) = fd1d50bd28b283df717c1ce5fe2f0d6f3eab4967
-SHA1 (patch-ao) = aa109f9d17e76207c3cae6dc33584c8b70f5092b
-SHA1 (patch-ap) = 13067ee5edade37774e406918d48adf1b63c8be2
-SHA1 (patch-configure_in) = 497232480d162f510ef4c2ad1f8cc91416724ffe
+SHA1 (patch-ao) = d64d90ec6d9b3cea66cdfe82e879c7d314551911
+SHA1 (patch-ap) = 993e4dd93b9ff56aac43d3472bca01ae2f890b26
+SHA1 (patch-configure_in) = 98cfb7718201651f7c6d7219c997bd853148435a
 SHA1 (patch-src_logwtmp_c) = c52a7950793dfed5a474e0d09a90bfc105a6dd4a
