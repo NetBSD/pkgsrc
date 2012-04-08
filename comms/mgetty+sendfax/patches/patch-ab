@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
+$NetBSD: patch-ab,v 1.15 2012/04/08 01:28:35 dholland Exp $
 
 - configure for pkgsrc
 - honor VARBASE
 - add vgetty to build
+- user-destdir support
 
 --- Makefile.orig	2010-06-05 09:48:22.000000000 +0000
 +++ Makefile
@@ -35,18 +36,21 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  #LIBS=-lprot -lsocket				# SCO Unix
  #LIBS=-lsocket
  #LIBS=-lbsd					# OSF/1
-@@ -171,8 +169,8 @@ LIBS=
+@@ -171,11 +169,12 @@ LIBS=
  #
  # if your systems doesn't have one, use the shell script that I provide
  # in "inst.sh" (taken from X11R5). Needed on IRIX5.2
 -INSTALL=install -c -o bin -g bin
--#INSTALL=install -c -o root -g wheel		# NeXT/BSD
 +#INSTALL=install -c -o bin -g bin
-+INSTALL=install -c -o ${ROOT_USER} -g ${ROOT_GROUP}	# NeXT/BSD
+ #INSTALL=install -c -o root -g wheel		# NeXT/BSD
  #INSTALL=/usr/ucb/install -c -o bin -g bin	# AIX, Solaris 2.x
  #INSTALL=installbsd -c -o bin -g bin		# OSF/1, AIX 4.1, 4.2
  #INSTALL=/usr/bin/X11/bsdinst -c -o bin 	# IRIX
-@@ -247,7 +245,7 @@ INFODIR=$(prefix)/info
++INSTALL=install -c
+ #
+ # prefix, where most (all?) of the stuff lives, usually /usr/local or /usr
+ #
+@@ -247,7 +246,7 @@ INFODIR=$(prefix)/info
  #  Usually this will be /bin/sh or /usr/bin/sh, but bash or ksh are fine.
  #  (on some ultrix systems, you may need /bin/sh5 here)
  #
@@ -55,7 +59,7 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  #
  # If your shell requires pre-posix syntax to disable traps ('trap 0' 
  #  instead of 'trap - 0'), set this to "0" (very rarely needed)
-@@ -265,12 +263,12 @@ AWK=awk
+@@ -265,12 +264,12 @@ AWK=awk
  # and the "tkperl" frontends without PERL, so don't worry if you don't
  # have it.
  # If you specify command line arguments (-w), don't forget the quotes!
@@ -70,7 +74,7 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  #
  #
  # An echo program that understands escapes like "\n" for newline or
-@@ -282,9 +280,9 @@ TKPERL=/usr/bin/tkperl
+@@ -282,9 +281,9 @@ TKPERL=/usr/bin/tkperl
  # please use the "mg.echo" program provided in the compat/ subdirectory.
  # Set ECHO="mg.echo" and INSTALL_MECHO to mg.echo
  #
@@ -82,7 +86,7 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  
  #
  # for mgetty, that's it. If you want to use the voice
-@@ -292,7 +290,7 @@ ECHO="echo"
+@@ -292,7 +291,7 @@ ECHO="echo"
  
  # To maintain security, I recommend creating a new group for
  # users who are allowed to manipulate the recorded voice messages.
@@ -91,7 +95,7 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  PHONE_PERMS=770
  
  # Add -DNO_STRSTR to CFLAGS if you don't have strstr().
-@@ -324,7 +322,7 @@ SFAXOBJ=sendfax.o logfile.o locks.o mode
+@@ -324,7 +323,7 @@ SFAXOBJ=sendfax.o logfile.o locks.o mode
  
  all:	bin-all doc-man-only
  
@@ -100,7 +104,7 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  
  # a few C files need extra compiler arguments
  
-@@ -572,8 +570,8 @@ newslock: compat/newslock.c
+@@ -572,8 +571,8 @@ newslock: compat/newslock.c
  # internal: use this to create a "clean" mgetty+sendfax tree
  bindist: all doc-all sedscript
  	-rm -rf bindist
@@ -111,7 +115,7 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  		BINDIR=$$bd$(BINDIR) SBINDIR=$$bd$(SBINDIR) \
  		LIBDIR=$$bd$(LIBDIR) CONFDIR=$$bd$(CONFDIR) \
  		spool=$$bd$(spool) FAX_SPOOL=$$bd$(FAX_SPOOL) \
-@@ -585,7 +583,7 @@ bindist: all doc-all sedscript
+@@ -585,7 +584,7 @@ bindist: all doc-all sedscript
  	cd bindist; gtar cvvfz mgetty$(MR).$(SR)-bin.tgz *
  
  
@@ -120,7 +124,7 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  
  install.bin: mgetty sendfax newslock \
  		login.config mgetty.config sendfax.config 
-@@ -593,7 +591,7 @@ install.bin: mgetty sendfax newslock \
+@@ -593,7 +592,7 @@ install.bin: mgetty sendfax newslock \
  # binaries
  #
  	-test -d $(BINDIR)  || ( ./mkidirs $(BINDIR)  ; chmod 755 $(BINDIR)  )
@@ -129,3 +133,55 @@ $NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
  
  	-test -d $(SBINDIR) || ( ./mkidirs $(SBINDIR) ; chmod 755 $(SBINDIR) )
  	if [ -f $(SBINDIR)/mgetty ] ; then \
+@@ -610,15 +609,15 @@ install.bin: mgetty sendfax newslock \
+ 	test -d $(CONFDIR) || \
+ 		( ./mkidirs $(CONFDIR) && chmod 755 $(CONFDIR))
+ 	test -f $(CONFDIR)/login.config || \
+-		$(INSTALL) -o root -m 600 login.config $(CONFDIR)/
++		$(INSTALL) -m 600 login.config $(CONFDIR)/
+ 	test -f $(CONFDIR)/mgetty.config || \
+-		$(INSTALL) -o root -m 600 mgetty.config $(CONFDIR)/
++		$(INSTALL) -m 600 mgetty.config $(CONFDIR)/
+ 	test -f $(CONFDIR)/sendfax.config || \
+-		$(INSTALL) -o root -m 644 sendfax.config $(CONFDIR)/
++		$(INSTALL) -m 644 sendfax.config $(CONFDIR)/
+ 	test -f $(CONFDIR)/dialin.config || \
+-		$(INSTALL) -o root -m 600 dialin.config $(CONFDIR)/
++		$(INSTALL) -m 600 dialin.config $(CONFDIR)/
+ 	test -f $(CONFDIR)/faxrunq.config || \
+-		$(INSTALL) -o root -m 644 faxrunq.config $(CONFDIR)/
++		$(INSTALL) -m 644 faxrunq.config $(CONFDIR)/
+ #
+ # test for outdated stuff
+ #
+@@ -632,18 +631,18 @@ install.bin: mgetty sendfax newslock \
+ #
+ # fax spool directories
+ #
+-	test -d $(spool) || \
+-		( mkdir $(spool) && chmod 755 $(spool) )
+-	test -d $(FAX_SPOOL) || \
+-		( mkdir $(FAX_SPOOL) && \
+-		  chown $(FAX_OUT_USER) $(FAX_SPOOL) && \
+-		  chmod 755 $(FAX_SPOOL) )
+-	test -d $(FAX_SPOOL_IN) || \
+-		( mkdir $(FAX_SPOOL_IN) && chmod 755 $(FAX_SPOOL_IN) )
+-	test -d $(FAX_SPOOL_OUT) || \
+-		  mkdir $(FAX_SPOOL_OUT)
+-	chown $(FAX_OUT_USER) $(FAX_SPOOL_OUT)
+-	chmod 755 $(FAX_SPOOL_OUT)
++	#test -d $(spool) || \
++	#	( mkdir $(spool) && chmod 755 $(spool) )
++	#test -d $(FAX_SPOOL) || \
++	#	( mkdir $(FAX_SPOOL) && \
++	#	  chown $(FAX_OUT_USER) $(FAX_SPOOL) && \
++	#	  chmod 755 $(FAX_SPOOL) )
++	#test -d $(FAX_SPOOL_IN) || \
++	#	( mkdir $(FAX_SPOOL_IN) && chmod 755 $(FAX_SPOOL_IN) )
++	#test -d $(FAX_SPOOL_OUT) || \
++	#	  mkdir $(FAX_SPOOL_OUT)
++	#chown $(FAX_OUT_USER) $(FAX_SPOOL_OUT)
++	#chmod 755 $(FAX_SPOOL_OUT)
+ #
+ # g3 tool programs
+ #
