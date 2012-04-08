@@ -1,0 +1,2 @@
+CLooG is a code generator for scanning Z-polyhedra and is used by
+gcc >= 4.4 for loop optimization.
