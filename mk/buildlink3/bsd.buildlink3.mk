@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.210 2012/01/17 22:19:22 sbd Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.211 2012/04/08 06:09:06 obache Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -732,7 +732,7 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^libdir=/s,/usr\(/lib/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g" \
 	-e "/^libdir=/s,${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g"
 
-.    if ${X11_TYPE} == "modular"
+.    if ${X11_TYPE} != "modular"
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^libdir=/s,${X11BASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_X11_DIR}\\1,g"
 .    endif
