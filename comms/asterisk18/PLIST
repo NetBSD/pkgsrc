@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/03/22 03:43:42 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.14.2.1 2012/04/08 11:04:26 sbd Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -234,7 +234,7 @@ lib/asterisk/modules/codec_alaw.so
 lib/asterisk/modules/codec_g722.so
 lib/asterisk/modules/codec_g726.so
 lib/asterisk/modules/codec_gsm.so
-${PLIST.ilbc}lib/asterisk/modules/codec_ilbc.so
+lib/asterisk/modules/codec_ilbc.so
 lib/asterisk/modules/codec_lpc10.so
 ${PLIST.speex}lib/asterisk/modules/codec_speex.so
 lib/asterisk/modules/codec_ulaw.so
