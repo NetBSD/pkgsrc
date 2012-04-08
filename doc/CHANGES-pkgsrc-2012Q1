@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.2 2012/04/07 21:01:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.3 2012/04/08 11:36:31 sbd Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -6,4 +6,19 @@ Pullup ticket #3707 - requested by bsiegert
 sysutils/xentools33: build fix
 Pullup ticket #3709 - requested by joerg
 security/oath-toolkit: build fix
-
+Pullup ticket #3710 - requested by dholland
+Mark packages as broken.
+Pullup ticket #3711 - requested by dholland
+Mark packages as not for ${LP64PLATFORMS}. 
+Pullup ticket #3712 - requested by dholland
+news/nn build fix
+Pullup ticket #3713 - requested by dholland
+audio/amarok-kde3 build fix.
+Pullup ticket #3714 - requested by dholland
+archivers/mousetar build fix
+Pullup ticket #3715 - requested by dholland
+comms/asterisk10 and comms/asterisk18 update/build fixes.
+Pullup ticket #3716 - requested by dholland
+comms/mgetty+sendfax build fix
+Pullup ticket #3717 - requested by dholland
+multimedia/kaffeine build fix
