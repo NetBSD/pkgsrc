@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/04/08 20:47:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/04/08 20:58:05 wiz Exp $
 
 BUILDLINK_TREE+=	cloog
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cloog
 CLOOG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cloog+=	cloog>=0.16.2
-BUILDLINK_PKGSRCDIR.cloog?=	../../wip/cloog
+BUILDLINK_PKGSRCDIR.cloog?=	../../math/cloog
 
 .endif # CLOOG_BUILDLINK3_MK
 
