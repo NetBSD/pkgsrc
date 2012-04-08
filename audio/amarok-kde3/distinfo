@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2011/01/29 21:36:10 markd Exp $
+$NetBSD: distinfo,v 1.2.10.1 2012/04/08 10:53:25 sbd Exp $
 
 SHA1 (amarok-1.4.10.tar.bz2) = cb0bebe99c6f4dc1b01601f2f3aee3a86da08fbd
 RMD160 (amarok-1.4.10.tar.bz2) = f86c71dd0459e0cf1ff586cd6de240ca6501cf62
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = 8afc89b7511971012d2335d1032dc99fbc8df32c
 SHA1 (patch-aj) = 667768476d217c78540368e450ca6048fa86d931
 SHA1 (patch-ak) = cc0b3d773af3441d99a0b3a5327ca694a0961d56
 SHA1 (patch-al) = f7cf6ade2fcdd4993287bde82cf41231dbb5b512
+SHA1 (patch-amarok_src_engine_xine_xine-engine_cpp) = 6319e5f6a902ae4d4b1372566e7ec4728a72297c
