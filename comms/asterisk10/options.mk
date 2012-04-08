@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/03/25 02:17:47 jnemeth Exp $
+# $NetBSD: options.mk,v 1.3.2.1 2012/04/08 11:04:26 sbd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		zaptel x11 unixodbc ilbc webvmail ldap spandsp
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		ldap jabber speex
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		zaptel x11 unixodbc ilbc webvmail ldap spandsp jabber
+PLIST_VARS+=		zaptel x11 unixodbc webvmail ldap spandsp jabber
 PLIST_VARS+=		speex
 
 # Asterisk now uses DAHDI, not zaptel; not implemented yet...
@@ -43,10 +43,6 @@ CONFIGURE_ARGS+=	--without-ltdl
 CONFIGURE_ARGS+=	--without-unixodbc
 .endif
 
-.if !empty(PKG_OPTIONS:Milbc)
-PLIST.ilbc=		yes
-.endif
-
 .if !empty(PKG_OPTIONS:Mspandsp)
 .  include "../../comms/spandsp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-spandsp
@@ -70,9 +66,6 @@ post-configure:
 .endif
 .if !empty(PKG_OPTIONS:Munixodbc)
 	${ECHO} "MENUSELECT_OPTS_app_voicemail=ODBC_STORAGE" >> ${WRKSRC}/pkgsrc.makeopts
-.endif
-.if !empty(PKG_OPTIONS:Milbc)
-	${ECHO} "MENUSELECT_CODECS=-codec_ilbc" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
 	# this is a hack to work around a bug in menuselect
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
