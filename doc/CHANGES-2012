@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1087 2012/04/08 21:07:21 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1088 2012/04/08 21:16:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1758,6 +1758,10 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed lang/python24 successor lang/python27 [wiz 2012-04-08]
 	Updated editors/OmegaT to 2.5.2.02 [ryoon 2012-04-08]
 	Updated multimedia/gst123 to 0.3.0 [ryoon 2012-04-08]
+	Updated databases/mysql55-client to 5.5.22 [adam 2012-04-08]
+	Updated databases/mysql55-server to 5.5.22 [adam 2012-04-08]
+	Updated databases/mysql51-client to 5.1.62 [adam 2012-04-08]
+	Updated databases/mysql51-server to 5.1.62 [adam 2012-04-08]
 	Added math/cloog version 0.16.2 [wiz 2012-04-08]
 	Updated lang/gcc34 to 3.4.6nb7 [ryoon 2012-04-08]
 	Added math/ppl version 0.11.2 [wiz 2012-04-08]
