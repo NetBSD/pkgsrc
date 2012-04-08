@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/03 00:11:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 17:13:01 wiz Exp $
 #
 
 DISTNAME=	vala-0.14.2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Vala
-COMMENT=	Compiler for the GObject type system
+COMMENT=	Compiler for the GObject type system (0.14 branch)
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
