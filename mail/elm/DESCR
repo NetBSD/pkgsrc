@@ -6,6 +6,6 @@ It is superseeded by mutt, in the view of many people.
 
 This package is the standard version of elm. Older versions
 of this package installed the ME extended version of elm, but
-this extensions are not available for the latest elm versions.
+these extensions are not available for the latest elm versions.
 There is another package now providing this extended, but older
 version in mail/elm-me.
