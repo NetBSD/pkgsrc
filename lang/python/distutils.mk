@@ -1,4 +1,4 @@
-# $NetBSD: distutils.mk,v 1.4 2012/04/08 20:22:01 wiz Exp $
+# $NetBSD: distutils.mk,v 1.5 2012/04/08 20:23:21 wiz Exp $
 #
 # Common logic for python distributions that use distutils.
 #
@@ -24,8 +24,7 @@ EGG_NAME?=	${DISTNAME}
 # Python distutils will create an eggfile.
 PY_NO_EGG?=	no
 
-# Egg files have the version encoded, so generalize in PLIST, and provide
-# our conditional.
+# Egg files have the version encoded, so generalize in PLIST.
 PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 .include "../../lang/python/extension.mk"
