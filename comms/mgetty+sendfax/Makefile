@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2012/04/07 23:51:00 dholland Exp $
+# $NetBSD: Makefile,v 1.79 2012/04/08 00:47:26 dholland Exp $
 
 DISTNAME=	mgetty1.1.37-Jun05
 PKGNAME=	mgetty-1.1.37
@@ -22,8 +22,10 @@ PKG_DESTDIR_SUPPORT=	destdir
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 MAKE_ENV+=		MGETTY_CONFDIR=${PKG_SYSCONFDIR:Q} PERL5=${PERL5:Q}
-MAKE_ENV+=		ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP}
+MAKE_ENV+=		ROOT_USER=${ROOT_USER:Q}
+MAKE_ENV+=		ROOT_GROUP=${ROOT_GROUP:Q}
 MAKE_FLAGS+=		prefix=${DESTDIR:Q}${PREFIX:Q}                  \
+			spool=${VARBASE}/spool				\
 			INFODIR=${DESTDIR:Q}${PREFIX:Q}/${PKGINFODIR:Q} \
 			MAN1DIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man1\
 			MAN4DIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man4\
@@ -35,7 +37,7 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CONFDIR=${DESTDIR:Q}${EXAMPLES_DIR:Q}
 BUILD_MAKE_FLAGS=	${MAKE_FLAGS:S,${DESTDIR},,} CONFDIR=${PKG_SYSCONFDIR:Q}
 
 CFLAGS.SunOS+=		-Dsolaris2
-CFLAGS+=		-DDEVICE_GROUP=${ROOT_GROUP}
+CFLAGS+=		-DDEVICE_GROUP=\"${ROOT_GROUP}\"
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "SunOS"
@@ -46,6 +48,13 @@ USE_TOOLS+=		makeinfo perl:run
 
 INFO_FILES=		yes
 PKG_SYSCONFSUBDIR=	mgetty+sendfax
+
+PKG_GROUPS=		dialer
+PKG_USERS=		fax:dialer
+USERGROUP_PHASE=	pre-install
+
+EXAMPLES_DIR=		${PREFIX}/share/examples/mgetty+sendfax
+SPOOL_DIR=		${VARBASE}/spool/fax
 
 .for cfg in		dialin.config		\
 			faxheader		\
@@ -58,19 +67,17 @@ PKG_SYSCONFSUBDIR=	mgetty+sendfax
 CONF_FILES+=		${EXAMPLES_DIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
 .endfor
 
-PKG_GROUPS=		dialer
-PKG_USERS=		fax:dialer
+ROOT_DIR_PERMS=		${ROOT_USER} ${ROOT_GROUP} 755
+FAX_DIR_PERMS=		fax ${ROOT_GROUP} 755
 
-USERGROUP_PHASE=	pre-install
-
-EXAMPLES_DIR=		${PREFIX}/share/examples/mgetty+sendfax
-OWN_DIRS_PERMS+=	/var/spool/fax ${ROOT_USER} ${ROOT_GROUP} 755
-OWN_DIRS_PERMS+=	/var/spool/fax/incoming ${ROOT_USER} ${ROOT_GROUP} 755
-OWN_DIRS_PERMS+=	/var/spool/fax/outgoing fax ${ROOT_GROUP} 755
+OWN_DIRS_PERMS+=	${SPOOL_DIR} ${ROOT_DIR_PERMS}
+OWN_DIRS_PERMS+=	${SPOOL_DIR}/incoming ${ROOT_DIR_PERMS}
+OWN_DIRS_PERMS+=	${SPOOL_DIR}/outgoing ${FAX_DIR_PERMS}
 
 SUBST_CLASSES+=		prefix
-SUBST_FILES.prefix=	faxrunq.config policy.h
+SUBST_FILES.prefix=	faxrunq.config
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|'
+SUBST_SED.prefix+=	-e 's|/var/log|${VARBASE}/log|'
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fixing hardcoded installation prefix.
 
