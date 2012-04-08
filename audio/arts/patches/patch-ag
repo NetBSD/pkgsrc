@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2008/01/21 00:43:50 markd Exp $
+$NetBSD: patch-ag,v 1.6 2012/04/08 02:02:08 dholland Exp $
 
---- configure.orig	2007-05-14 23:23:31.000000000 +1200
+--- configure.orig	2008-08-20 16:07:23.000000000 +0000
 +++ configure
-@@ -37433,7 +37433,7 @@ if test "${ac_cv_lib_audio_AuOpenServer+
+@@ -37578,7 +37578,7 @@ if test "${ac_cv_lib_audio_AuOpenServer+
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.5 2008/01/21 00:43:50 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -44241,7 +44241,7 @@ fi
+@@ -40395,7 +40395,7 @@ fi
  { echo "$as_me:$LINENO: result: $ac_cv_lib_ossaudio__oss_ioctl" >&5
  echo "${ECHO_T}$ac_cv_lib_ossaudio__oss_ioctl" >&6; }
  if test $ac_cv_lib_ossaudio__oss_ioctl = yes; then
