@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/07 10:45:06 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:08:54 wiz Exp $
 #
 
 DISTNAME=	testtools-0.9.12
@@ -14,8 +14,6 @@ LICENSE=	mit AND python-software-foundation
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	24
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

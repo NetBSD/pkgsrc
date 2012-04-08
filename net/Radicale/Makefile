@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/16 04:31:14 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:08 wiz Exp $
 #
 
 DISTNAME=	Radicale-0.6.4
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	24 25
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
