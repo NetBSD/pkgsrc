@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1079 2012/04/08 17:55:58 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1080 2012/04/08 18:24:24 gson Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1753,3 +1753,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-base to 1.7.9.3nb1 [dholland 2012-04-08]
 	Updated pkgtools/x11-links to 0.69 [obache 2012-04-08]
 	Updated math/maxima to 5.27.0 [asau 2012-04-08]
+	Updated misc/py-anita to 1.26 [gson 2012-04-08]
