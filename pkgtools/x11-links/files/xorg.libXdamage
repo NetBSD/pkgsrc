@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libXdamage,v 1.5 2011/09/09 09:08:07 abs Exp $
+# $NetBSD: xorg.libXdamage,v 1.6 2012/04/08 05:55:48 obache Exp $
 #
 include/X11/extensions/Xdamage.h
 lib/libXdamage.1.1.0.dylib
@@ -6,6 +6,7 @@ lib/libXdamage.1.0.0.dylib
 lib/libXdamage.1.dylib
 lib/libXdamage.a
 lib/libXdamage.dylib
+lib/libXdamage.la
 lib/libXdamage.so
 lib/libXdamage.so.1
 lib/libXdamage.so.1.0
