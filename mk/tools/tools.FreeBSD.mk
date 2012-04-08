@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.34 2011/12/14 03:28:54 joerg Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.35 2012/04/08 20:56:23 ryoon Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -84,4 +84,7 @@ TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+.if exists(/usr/bin/xzcat)
+TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
+.endif
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
