@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/08/29 21:15:18 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/08 19:08:47 wiz Exp $
 #
 
 DISTNAME=	pgnotify-0.1
@@ -13,8 +13,6 @@ HOMEPAGE=	http://sandbox.rulemaker.net/ngps/pgnotify
 COMMENT=	Python interface to PostgreSQL LISTEN/NOTIFY
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED=		27 26 25 24
 
 DEPENDS+=	${PYPKGPREFIX}-postgresql-[0-9]*:../../databases/py-postgresql
 

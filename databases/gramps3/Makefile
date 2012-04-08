@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/03/09 12:34:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/04/08 19:08:46 wiz Exp $
 #
 
 DISTNAME=		gramps-3.2.6
@@ -18,8 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		msgfmt pkg-config intltool msgconv
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 REPLACE_PYTHON=		src/DateHandler/_Date_fr.py
 REPLACE_PYTHON+=	src/plugins/quickview/Reporef.py

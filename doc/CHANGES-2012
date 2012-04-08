@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1080 2012/04/08 18:24:24 gson Exp $
+$NetBSD: CHANGES-2012,v 1.1081 2012/04/08 19:08:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1754,3 +1754,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated pkgtools/x11-links to 0.69 [obache 2012-04-08]
 	Updated math/maxima to 5.27.0 [asau 2012-04-08]
 	Updated misc/py-anita to 1.26 [gson 2012-04-08]
+	Removed devel/py-ctypes [wiz 2012-04-08]
+	Removed lang/python24 successor lang/python27 [wiz 2012-04-08]

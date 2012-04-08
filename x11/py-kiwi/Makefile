@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/03 00:14:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/04/08 19:09:19 wiz Exp $
 #
 
 DISTNAME=	kiwi-1.9.29
@@ -18,8 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		#none
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 SUBST_CLASSES+=		localedir
 SUBST_STAGE.localedir=	pre-configure

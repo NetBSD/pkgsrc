@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/09 07:08:25 sbd Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/08 19:09:17 wiz Exp $
 
 DISTNAME=	uwsgi-0.9.8.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c9:../../devel/py-setuptools
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 USE_LANGUAGES=		c
 PYDISTUTILSPKG=		yes

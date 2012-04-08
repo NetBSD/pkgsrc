@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/03/15 11:53:23 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/08 19:08:49 wiz Exp $
 
 DISTNAME=	coccinelle-0.2.5
 PKGREVISION=	2
@@ -24,8 +24,6 @@ BUILD_TARGET=	all all.opt
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIG_SHELL=	${PERL5}
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man+=	configure

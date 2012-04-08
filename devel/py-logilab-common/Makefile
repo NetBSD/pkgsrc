@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:08:53 wiz Exp $
 #
 
 VERS=			0.53.0
@@ -14,8 +14,6 @@ COMMENT=		Useful miscellaneous modules used by Logilab projects
 LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=			user-destdir
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 #comment this out to avoid problems to find the binary by other programs
 PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}

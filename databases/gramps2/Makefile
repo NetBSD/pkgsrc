@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/03/09 12:34:04 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/04/08 19:08:46 wiz Exp $
 #
 
 DISTNAME=		gramps-2.2.10
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-mime-install --enable-packager-mode
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 MAKE_JOBS_SAFE=		no
 # i18n support with other python versions appears to not work
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 GCONF_SCHEMAS+=	gramps.schemas

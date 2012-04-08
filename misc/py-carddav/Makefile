@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/01 12:30:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:07 wiz Exp $
 #
 
 DISTNAME=	pycarddav0.3.3
@@ -13,8 +13,6 @@ COMMENT=	Simple way of accessing a CardDAV resource
 LICENSE=	beer-ware
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml

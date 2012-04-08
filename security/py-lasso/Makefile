@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/03/03 00:13:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:11 wiz Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../lang/python/pyversion.mk"
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-.if ${PYPKGPREFIX} == "py24"
-BUILD_DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
-.endif
 
 CONFIGURE_ARGS+=	--disable-php4
 CONFIGURE_ARGS+=	--disable-perl

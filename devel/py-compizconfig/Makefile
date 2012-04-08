@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/03/03 00:12:57 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2012/04/08 19:08:51 wiz Exp $
 #
 
 PKGVER=			0.8.4
@@ -18,8 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 PY_PATCHPLIST=		yes
 

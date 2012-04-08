@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/08 07:56:58 adam Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:16 wiz Exp $
 
 DISTNAME=	django-cms-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Django content management system
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 EGG_NAME=		${DISTNAME:S/-/_/}
 USE_LANGUAGES=		# empty

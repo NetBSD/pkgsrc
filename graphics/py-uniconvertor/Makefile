@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/28 18:01:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:08:59 wiz Exp $
 
 DISTNAME=	uniconvertor-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 USE_LANGUAGES=		c
 PYDISTUTILSPKG=		yes
 

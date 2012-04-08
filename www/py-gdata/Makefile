@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/01/27 06:30:21 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/04/08 19:09:16 wiz Exp $
 
 DISTNAME=	gdata-2.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -126,8 +126,6 @@ REPLACE_PYTHON+=	src/gdata/youtube/client.py
 REPLACE_PYTHON+=	src/gdata/youtube/data.py
 REPLACE_PYTHON+=	src/gdata/youtube/service.py
 
-# 2.0.16 introduced a neologism
-PYTHON_VERSIONS_INCOMPATIBLE=	24
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
