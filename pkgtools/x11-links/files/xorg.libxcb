@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.4 2011/09/09 09:08:07 abs Exp $
+# $NetBSD: xorg.libxcb,v 1.5 2012/04/08 05:55:48 obache Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -78,6 +78,7 @@ lib/libxcb-randr.la
 lib/libxcb-randr.so
 lib/libxcb-randr.so.0
 lib/libxcb-randr.so.0.0
+lib/libxcb-randr.so.1.0
 lib/libxcb-record.0.0.0.dylib
 lib/libxcb-record.0.dylib
 lib/libxcb-record.a
@@ -153,6 +154,7 @@ lib/libxcb-xf86dri.la
 lib/libxcb-xf86dri.so
 lib/libxcb-xf86dri.so.0
 lib/libxcb-xf86dri.so.0.0
+lib/libxcb-xf86dri.so.1.0
 lib/libxcb-xfixes.0.0.0.dylib
 lib/libxcb-xfixes.0.dylib
 lib/libxcb-xfixes.a
@@ -173,6 +175,7 @@ lib/libxcb-xprint.0.0.0.dylib
 lib/libxcb-xprint.0.dylib
 lib/libxcb-xprint.dylib
 lib/libxcb-xprint.la
+lib/libxcb-xprint.so.0.0
 lib/libxcb-xtest.0.0.0.dylib
 lib/libxcb-xtest.0.dylib
 lib/libxcb-xtest.a
@@ -205,6 +208,7 @@ lib/libxcb.la
 lib/libxcb.so
 lib/libxcb.so.1
 lib/libxcb.so.1.1
+lib/libxcb.so.2.2
 lib/pkgconfig/xcb-composite.pc
 lib/pkgconfig/xcb-damage.pc
 lib/pkgconfig/xcb-dpms.pc
