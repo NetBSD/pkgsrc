@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1077 2012/04/08 05:56:11 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1078 2012/04/08 12:09:55 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1747,3 +1747,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.11.0 [jnemeth 2012-04-07]
 	Updated pkgtools/pkglint to 4.108 [sbd 2012-04-08]
 	Updated pkgtools/x11-links to 0.69 [obache 2012-04-08]
+	Updated math/maxima to 5.27.0 [asau 2012-04-08]
