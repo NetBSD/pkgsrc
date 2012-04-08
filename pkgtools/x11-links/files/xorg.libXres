@@ -1,10 +1,11 @@
-# $NetBSD: xorg.libXres,v 1.4 2010/02/18 12:32:19 obache Exp $
+# $NetBSD: xorg.libXres,v 1.5 2012/04/08 05:55:48 obache Exp $
 #
 include/X11/extensions/XRes.h
 lib/libXRes.a
 lib/libXRes.1.0.0.dylib
 lib/libXRes.1.dylib
 lib/libXRes.dylib
+lib/libXRes.la
 lib/libXRes.so
 lib/libXRes.so.1
 lib/libXRes.so.1.0
