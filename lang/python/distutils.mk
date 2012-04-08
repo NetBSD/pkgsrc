@@ -1,4 +1,4 @@
-# $NetBSD: distutils.mk,v 1.2 2011/02/13 08:09:43 obache Exp $
+# $NetBSD: distutils.mk,v 1.3 2012/04/08 20:17:10 wiz Exp $
 #
 # Common logic for python distributions that use distutils.
 #
@@ -23,15 +23,9 @@ PYDISTUTILSPKG=	yes
 EGG_NAME?=	${DISTNAME}
 
 PLIST_VARS+=	eggfile
-.if !empty(PYDISTUTILS_CREATES_EGGFILES:M[yY][eE][sS])
 # Python distutils will create an eggfile.
 PLIST.eggfile=	yes
 PY_NO_EGG?=	no
-.else
-# Python distutils will not create an eggfile.
-# (PLIST.eggfile being set to no is equivalent to being set to yes!)
-PY_NO_EGG?=	yes
-.endif
 
 # Egg files have the version encoded, so generalize in PLIST, and provide
 # our conditional.
