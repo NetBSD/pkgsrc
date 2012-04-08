@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/03/20 17:07:43 asau Exp $
+# $NetBSD: Makefile,v 1.42.2.1 2012/04/08 09:19:03 sbd Exp $
 #
 
 DISTNAME=		sge-8.0.0d
@@ -13,6 +13,9 @@ COMMENT=		Son of Grid Engine distributed resource management system
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Not 64-bit clean; crashes during build.
+NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run

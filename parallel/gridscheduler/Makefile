@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2012/04/08 09:19:03 sbd Exp $
 
 PKGNAME=		gridscheduler-2011.11
 DISTNAME=		GE2011.11
@@ -12,6 +12,9 @@ COMMENT=		Open Grid Scheduler/Grid Engine resource management system
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Not 64-bit clean; crashes during build.
+NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run
