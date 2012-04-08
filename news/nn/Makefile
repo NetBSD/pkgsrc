@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/04/07 11:47:19 obache Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2012/04/08 09:19:15 sbd Exp $
 
 DISTNAME=	nn-6.7.3
 CATEGORIES=	news
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_SYSCONFSUBDIR=	nntp
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
 SFILE=		s-sunos5.h
@@ -31,7 +32,7 @@ MFILE=         m-mipsel.h
 MFILE=		m-${LOWER_ARCH}.h
 .endif
 
-.if ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "DragonFly" || !empty(CC_VERSION:Mgcc*)
 CPP+=		-traditional
 .endif
 
