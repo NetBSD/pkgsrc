@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/03/03 00:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2012/04/08 19:08:58 wiz Exp $
 #
 
 DISTNAME=	pygtkglext-1.1.0
@@ -19,8 +19,6 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 PYDISTUTILSPKG=	yes
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 PKGCONFIG_OVERRIDE+=	pygtkglext.pc.in
 

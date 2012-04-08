@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/03/15 11:53:36 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/08 19:09:11 wiz Exp $
 
 DISTNAME=	lottanzb-0.4.1
 PKGREVISION=	1
@@ -18,8 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		#none
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt
-
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 REPLACE_PYTHON=	lottanzb/postprocessor.py
 
