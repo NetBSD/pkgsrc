@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2012/03/25 02:17:47 jnemeth Exp $
+$NetBSD: distinfo,v 1.7.2.1 2012/04/08 11:04:26 sbd Exp $
 
-SHA1 (asterisk-10.2.1/asterisk-10.2.1.tar.gz) = 1353019ade550eccd7989dc87fa4313f42919fc7
-RMD160 (asterisk-10.2.1/asterisk-10.2.1.tar.gz) = ad4bf33d0d544e3a1ac28d1547c771fc6c80b31f
-Size (asterisk-10.2.1/asterisk-10.2.1.tar.gz) = 25121295 bytes
-SHA1 (asterisk-10.2.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
-RMD160 (asterisk-10.2.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
-Size (asterisk-10.2.1/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
+SHA1 (asterisk-10.3.0/asterisk-10.3.0.tar.gz) = a381839702e6007b8d6d3412eebda4bd60a3b799
+RMD160 (asterisk-10.3.0/asterisk-10.3.0.tar.gz) = 69449a0232d10d574dfd53f65f76278bba8645aa
+Size (asterisk-10.3.0/asterisk-10.3.0.tar.gz) = 25168737 bytes
+SHA1 (asterisk-10.3.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 8692fa61423b4769dc8bfa78faf9ed5ef7a259b9
+RMD160 (asterisk-10.3.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 68170c769d739d6b5b35b00f999ad6bbf876f9f6
+Size (asterisk-10.3.0/asterisk-extra-sounds-en-gsm-1.4.11.tar.gz) = 3349898 bytes
 SHA1 (patch-Makefile) = 900252eff84bda22d2cbe09e0f22505531284cbb
 SHA1 (patch-apps_app__dial.c) = 2109ed50406dedc90a300981a3a7500b1397ff3a
 SHA1 (patch-apps_app__followme.c) = a0a507986ec9722337d46fdaaac0a79d23a634e4
@@ -14,7 +14,7 @@ SHA1 (patch-apps_app__sms.c) = 8013727b495dc0ac038eb28b84e9d3839d0bc23d
 SHA1 (patch-build__tools_mkpkgconfig) = 2bd3c0e24bc6d721cc234feb19b64a57106fcbe4
 SHA1 (patch-channels_chan__oss.c) = 3a69c29f4106bfabe05f63118d73538e85478e88
 SHA1 (patch-codecs_lpc10_Makefile) = 0c9955e87eb453d70517951114d335d91b3ee73a
-SHA1 (patch-configure) = e6be6277bc8896715a7b984e72d37616e2b29b77
+SHA1 (patch-configure) = bc87d1244016797db123831728208ca27736fca4
 SHA1 (patch-configure.ac) = 27ac6fd657c490689ec06cddf7cd10e9cc8a7927
 SHA1 (patch-contrib_scripts_autosupport) = c6c1d917dd0544c4f54ae760f68cbcd1f35030f4
 SHA1 (patch-contrib_scripts_vmail.cgi) = 650b9bbf3e322d1ad351932cfe6f747baa8f35e4
@@ -24,7 +24,7 @@ SHA1 (patch-include_asterisk_lock.h) = fc7b4934e5f53a09066802daa054300895cf7bcf
 SHA1 (patch-main_Makefile) = 4b80898802c75937510acf5252c5e82d379f578e
 SHA1 (patch-main_acl.c) = 85cea968f3c3a2651a687661bba2d8131c342d5a
 SHA1 (patch-main_asterisk.c) = 9670f68f5496a74ee359ba45c85757fa894775b6
-SHA1 (patch-main_features.c) = a63520c329df3192ee1b8bc4e2d36070ce450528
+SHA1 (patch-main_features.c) = ae9fce5975e83c2e0e8a9d7277898ddc21dd45dc
 SHA1 (patch-main_manager.c) = 305204b2602b5775d97e72852859ce793a96df0a
 SHA1 (patch-main_netsock.c) = 68721f0b1e8ed6744d467a39a82473c5d4946f0f
 SHA1 (patch-main_sched.c) = fac7764ef00c05057730b24fcdf833fe77d23ade
