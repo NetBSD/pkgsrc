@@ -1,8 +1,8 @@
-$NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
+$NetBSD: patch-main_features.c,v 1.1.1.1.2.1 2012/04/08 11:04:26 sbd Exp $
 
---- main/features.c.orig	2011-10-20 21:58:39.000000000 +0000
+--- main/features.c.orig	2012-02-27 16:05:24.000000000 +0000
 +++ main/features.c
-@@ -1494,14 +1494,14 @@ static int park_call_full(struct ast_cha
+@@ -1493,14 +1493,14 @@ static int park_call_full(struct ast_cha
  		"Channel: %s\r\n"
  		"Parkinglot: %s\r\n"
  		"From: %s\r\n"
@@ -13,13 +13,13 @@ $NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  		"ConnectedLineNum: %s\r\n"
  		"ConnectedLineName: %s\r\n"
  		"Uniqueid: %s\r\n",
- 		pu->parkingexten, pu->chan->name, pu->parkinglot->name, event_from ? event_from : "",
+ 		pu->parkingexten, chan->name, pu->parkinglot->name, event_from,
 -		(long)pu->start.tv_sec + (long)(pu->parkingtime/1000) - (long)time(NULL),
 +		(intmax_t)pu->start.tv_sec + (intmax_t)(pu->parkingtime/1000) - (intmax_t)time(NULL),
- 		S_COR(pu->chan->caller.id.number.valid, pu->chan->caller.id.number.str, "<unknown>"),
- 		S_COR(pu->chan->caller.id.name.valid, pu->chan->caller.id.name.str, "<unknown>"),
- 		S_COR(pu->chan->connected.id.number.valid, pu->chan->connected.id.number.str, "<unknown>"),
-@@ -2053,7 +2053,7 @@ static int builtin_automonitor(struct as
+ 		S_COR(chan->caller.id.number.valid, chan->caller.id.number.str, "<unknown>"),
+ 		S_COR(chan->caller.id.name.valid, chan->caller.id.name.str, "<unknown>"),
+ 		S_COR(chan->connected.id.number.valid, chan->connected.id.number.str, "<unknown>"),
+@@ -2057,7 +2057,7 @@ static int builtin_automonitor(struct as
  			len = strlen(touch_monitor) + 50;
  			args = alloca(len);
  			touch_filename = alloca(len);
@@ -28,7 +28,7 @@ $NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  			snprintf(args, len, "%s,%s,m", S_OR(touch_format, "wav"), touch_filename);
  		} else {
  			caller_chan_id = ast_strdupa(S_COR(caller_chan->caller.id.number.valid,
-@@ -2063,7 +2063,7 @@ static int builtin_automonitor(struct as
+@@ -2067,7 +2067,7 @@ static int builtin_automonitor(struct as
  			len = strlen(caller_chan_id) + strlen(callee_chan_id) + 50;
  			args = alloca(len);
  			touch_filename = alloca(len);
@@ -37,7 +37,7 @@ $NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  			snprintf(args, len, "%s,%s,m", S_OR(touch_format, "wav"), touch_filename);
  		}
  
-@@ -2169,7 +2169,7 @@ static int builtin_automixmonitor(struct
+@@ -2173,7 +2173,7 @@ static int builtin_automixmonitor(struct
  			len = strlen(touch_monitor) + 50;
  			args = alloca(len);
  			touch_filename = alloca(len);
@@ -46,7 +46,7 @@ $NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  			snprintf(args, len, "%s.%s,b", touch_filename, (touch_format) ? touch_format : "wav");
  		} else {
  			caller_chan_id = ast_strdupa(S_COR(caller_chan->caller.id.number.valid,
-@@ -2179,7 +2179,7 @@ static int builtin_automixmonitor(struct
+@@ -2183,7 +2183,7 @@ static int builtin_automixmonitor(struct
  			len = strlen(caller_chan_id) + strlen(callee_chan_id) + 50;
  			args = alloca(len);
  			touch_filename = alloca(len);
@@ -55,7 +55,7 @@ $NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  			snprintf(args, len, "%s.%s,b", touch_filename, S_OR(touch_format, "wav"));
  		}
  
-@@ -6922,10 +6922,10 @@ static char *handle_parkedcalls(struct a
+@@ -6973,10 +6973,10 @@ static char *handle_parkedcalls(struct a
  
  		AST_LIST_LOCK(&curlot->parkings);
  		AST_LIST_TRAVERSE(&curlot->parkings, cur, list) {
@@ -68,7 +68,7 @@ $NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  			++lotparked;
  		}
  		AST_LIST_UNLOCK(&curlot->parkings);
-@@ -6981,7 +6981,7 @@ static int manager_parking_status(struct
+@@ -7032,7 +7032,7 @@ static int manager_parking_status(struct
  				"Exten: %d\r\n"
  				"Channel: %s\r\n"
  				"From: %s\r\n"
@@ -77,7 +77,7 @@ $NetBSD: patch-main_features.c,v 1.1.1.1 2012/01/15 18:36:21 jnemeth Exp $
  				"CallerIDNum: %s\r\n"
  				"CallerIDName: %s\r\n"
  				"ConnectedLineNum: %s\r\n"
-@@ -6990,7 +6990,7 @@ static int manager_parking_status(struct
+@@ -7041,7 +7041,7 @@ static int manager_parking_status(struct
  				"\r\n",
  				curlot->name,
  				cur->parkingnum, cur->chan->name, cur->peername,
