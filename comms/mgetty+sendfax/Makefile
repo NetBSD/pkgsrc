@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2012/04/08 00:47:26 dholland Exp $
+# $NetBSD: Makefile,v 1.80 2012/04/08 01:28:35 dholland Exp $
 
 DISTNAME=	mgetty1.1.37-Jun05
 PKGNAME=	mgetty-1.1.37
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 
@@ -17,13 +17,13 @@ BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
 
 CONFLICTS=	hylafax-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 MAKE_ENV+=		MGETTY_CONFDIR=${PKG_SYSCONFDIR:Q} PERL5=${PERL5:Q}
-MAKE_ENV+=		ROOT_USER=${ROOT_USER:Q}
-MAKE_ENV+=		ROOT_GROUP=${ROOT_GROUP:Q}
+MAKE_ENV+=		ROOT_USER=${REAL_ROOT_USER:Q}
+MAKE_ENV+=		ROOT_GROUP=${REAL_ROOT_GROUP:Q}
 MAKE_FLAGS+=		prefix=${DESTDIR:Q}${PREFIX:Q}                  \
 			spool=${VARBASE}/spool				\
 			INFODIR=${DESTDIR:Q}${PREFIX:Q}/${PKGINFODIR:Q} \
@@ -37,7 +37,7 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CONFDIR=${DESTDIR:Q}${EXAMPLES_DIR:Q}
 BUILD_MAKE_FLAGS=	${MAKE_FLAGS:S,${DESTDIR},,} CONFDIR=${PKG_SYSCONFDIR:Q}
 
 CFLAGS.SunOS+=		-Dsolaris2
-CFLAGS+=		-DDEVICE_GROUP=\"${ROOT_GROUP}\"
+CFLAGS+=		-DDEVICE_GROUP=\"${REAL_ROOT_GROUP}\"
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "SunOS"
@@ -51,7 +51,7 @@ PKG_SYSCONFSUBDIR=	mgetty+sendfax
 
 PKG_GROUPS=		dialer
 PKG_USERS=		fax:dialer
-USERGROUP_PHASE=	pre-install
+#USERGROUP_PHASE=	pre-install
 
 EXAMPLES_DIR=		${PREFIX}/share/examples/mgetty+sendfax
 SPOOL_DIR=		${VARBASE}/spool/fax
@@ -67,12 +67,18 @@ SPOOL_DIR=		${VARBASE}/spool/fax
 CONF_FILES+=		${EXAMPLES_DIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
 .endfor
 
-ROOT_DIR_PERMS=		${ROOT_USER} ${ROOT_GROUP} 755
-FAX_DIR_PERMS=		fax ${ROOT_GROUP} 755
+ROOT_DIR_PERMS=		${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+FAX_DIR_PERMS=		fax ${REAL_ROOT_GROUP} 755
+SETUID_FAX_PERMS=	fax ${REAL_ROOT_GROUP} 4711
 
+# XXX the package's makefile sets SPOOL_DIR to FAX_DIR_PERMS but the
+# pkgsrc package has had it as ROOT_DIR_PERMS. I'm going to leave it
+# the way pkgsrc had it; if you find it breaks that way please file a PR.
 OWN_DIRS_PERMS+=	${SPOOL_DIR} ${ROOT_DIR_PERMS}
 OWN_DIRS_PERMS+=	${SPOOL_DIR}/incoming ${ROOT_DIR_PERMS}
 OWN_DIRS_PERMS+=	${SPOOL_DIR}/outgoing ${FAX_DIR_PERMS}
+
+SPECIAL_PERMS+=		lib/mgetty+sendfax/faxq-helper ${SETUID_FAX_PERMS}
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	faxrunq.config
