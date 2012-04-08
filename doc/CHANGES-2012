@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1078 2012/04/08 12:09:55 asau Exp $
+$NetBSD: CHANGES-2012,v 1.1079 2012/04/08 17:55:58 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1745,6 +1745,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/diffutils to 3.2 [schwarz 2012-04-07]
 	Updated comms/asterisk10 to 10.3.0 [jnemeth 2012-04-07]
 	Updated comms/asterisk18 to 1.8.11.0 [jnemeth 2012-04-07]
+	Updated archivers/mousetar to 20021217nb1 [dholland 2012-04-07]
+	Updated comms/mgetty+sendfax to 1.1.37nb2 [dholland 2012-04-08]
+	Updated comms/hylafax to 4.2.5nb7 [dholland 2012-04-08]
+	Updated sysutils/strace to 4.5.15nb4 [dholland 2012-04-08]
 	Updated pkgtools/pkglint to 4.108 [sbd 2012-04-08]
+	Updated devel/scmgit-base to 1.7.9.3nb1 [dholland 2012-04-08]
 	Updated pkgtools/x11-links to 0.69 [obache 2012-04-08]
 	Updated math/maxima to 5.27.0 [asau 2012-04-08]
