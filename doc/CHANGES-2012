@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1075 2012/04/07 20:10:54 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.1076 2012/04/08 04:42:47 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1745,3 +1745,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/diffutils to 3.2 [schwarz 2012-04-07]
 	Updated comms/asterisk10 to 10.3.0 [jnemeth 2012-04-07]
 	Updated comms/asterisk18 to 1.8.11.0 [jnemeth 2012-04-07]
+	Updated pkgtools/pkglint to 4.108 [sbd 2012-04-08]
