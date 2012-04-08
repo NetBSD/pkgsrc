@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/25 12:34:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/08 20:21:58 wiz Exp $
 bin/pytyle
 bin/pytyle-client
 ${PYSITELIB}/PyTyle/CHANGELOG
@@ -67,4 +67,4 @@ ${PYSITELIB}/PyTyle/__init__.py
 ${PYSITELIB}/PyTyle/__init__.pyc
 ${PYSITELIB}/PyTyle/__init__.pyo
 ${PYSITELIB}/PyTyle/pytylerc
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}

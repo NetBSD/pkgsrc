@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/26 10:49:41 obache Exp $
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.7 2012/04/08 20:21:44 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/psycopg2/__init__.py
 ${PYSITELIB}/psycopg2/__init__.pyc
 ${PYSITELIB}/psycopg2/__init__.pyo
