@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/01/27 05:52:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/04/08 20:21:59 wiz Exp $
 bin/moin
 ${PYSITELIB}/MoinMoin/Page.py
 ${PYSITELIB}/MoinMoin/Page.pyc
@@ -2508,7 +2508,7 @@ ${PYSITELIB}/jabberbot/xmlrpcbot.pyo
 ${PYSITELIB}/jabberbot/xmppbot.py
 ${PYSITELIB}/jabberbot/xmppbot.pyc
 ${PYSITELIB}/jabberbot/xmppbot.pyo
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 share/moin/config/logging/README
 share/moin/config/logging/logfile
 share/moin/config/logging/logfile_debug_auth

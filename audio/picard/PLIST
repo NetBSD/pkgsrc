@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2011/12/11 12:39:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/04/08 20:21:41 wiz Exp $
 bin/picard
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/picard/__init__.py
 ${PYSITELIB}/picard/__init__.pyc
 ${PYSITELIB}/picard/__init__.pyo

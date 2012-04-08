@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/01 10:18:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:21:52 wiz Exp $
 ${PYSITELIB}/ADNS.py
 ${PYSITELIB}/ADNS.pyc
 ${PYSITELIB}/ADNS.pyo
@@ -6,4 +6,4 @@ ${PYSITELIB}/DNSBL.py
 ${PYSITELIB}/DNSBL.pyc
 ${PYSITELIB}/DNSBL.pyo
 ${PYSITELIB}/adns.so
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}

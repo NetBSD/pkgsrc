@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2012/02/04 11:20:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/04/08 20:21:54 wiz Exp $
 bin/lottanzb
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/lottanzb/__init__.py
 ${PYSITELIB}/lottanzb/__init__.pyc
 ${PYSITELIB}/lottanzb/__init__.pyo

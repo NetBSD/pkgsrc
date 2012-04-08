@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.22 2012/01/26 11:34:28 obache Exp $
+@comment $NetBSD: PLIST,v 1.23 2012/04/08 20:21:59 wiz Exp $
 bin/django-admin.py
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
 ${PYSITELIB}/django/__init__.pyo

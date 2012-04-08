@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/07/24 12:49:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/04/08 20:21:54 wiz Exp $
 ${PYSITELIB}/OpenSSL/SSL.so
 ${PYSITELIB}/OpenSSL/__init__.py
 ${PYSITELIB}/OpenSSL/__init__.pyc
@@ -26,4 +26,4 @@ ${PYSITELIB}/OpenSSL/tsafe.pyo
 ${PYSITELIB}/OpenSSL/version.py
 ${PYSITELIB}/OpenSSL/version.pyc
 ${PYSITELIB}/OpenSSL/version.pyo
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}

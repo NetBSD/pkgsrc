@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/13 12:20:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:21:46 wiz Exp $
 ${PYSITELIB}/msgpack/__init__.py
 ${PYSITELIB}/msgpack/__init__.pyc
 ${PYSITELIB}/msgpack/__init__.pyo
@@ -6,4 +6,4 @@ ${PYSITELIB}/msgpack/__version__.py
 ${PYSITELIB}/msgpack/__version__.pyc
 ${PYSITELIB}/msgpack/__version__.pyo
 ${PYSITELIB}/msgpack/_msgpack.so
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}

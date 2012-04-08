@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2011/06/13 11:45:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/04/08 20:21:52 wiz Exp $
 bin/nicotine
 bin/nicotine-import-winconfig
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pynicotine/ConfigParser.py
 ${PYSITELIB}/pynicotine/ConfigParser.pyc
 ${PYSITELIB}/pynicotine/ConfigParser.pyo

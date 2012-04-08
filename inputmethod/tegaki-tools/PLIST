@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/07 12:53:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:21:50 wiz Exp $
 bin/tegaki-bootstrap
 bin/tegaki-build
 bin/tegaki-convert
 bin/tegaki-eval
 bin/tegaki-render
 bin/tegaki-stats
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tegakitools/__init__.py
 ${PYSITELIB}/tegakitools/__init__.pyc
 ${PYSITELIB}/tegakitools/__init__.pyo
