@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/18 16:04:35 gls Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/04/08 20:21:56 wiz Exp $
 bin/dblatex
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/dbtexmf/__init__.py
 ${PYSITELIB}/dbtexmf/__init__.pyc
 ${PYSITELIB}/dbtexmf/__init__.pyo
