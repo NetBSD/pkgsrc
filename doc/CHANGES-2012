@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1084 2012/04/08 20:48:44 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1085 2012/04/08 20:53:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1759,3 +1759,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated editors/OmegaT to 2.5.2.02 [ryoon 2012-04-08]
 	Updated multimedia/gst123 to 0.3.0 [ryoon 2012-04-08]
 	Added math/cloog version 0.16.2 [wiz 2012-04-08]
+	Updated lang/gcc34 to 3.4.6nb7 [ryoon 2012-04-08]
