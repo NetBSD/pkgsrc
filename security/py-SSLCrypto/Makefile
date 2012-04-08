@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/14 13:00:01 obache Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:11 wiz Exp $
 #
 
 DISTNAME=	SSLCrypto-0.1.1
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.4.1:../../lang/py-pyrex
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"

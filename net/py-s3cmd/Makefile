@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/06 00:25:42 jakllsch Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:10 wiz Exp $
 
 DISTNAME=	s3cmd-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,9 +17,6 @@ MAKE_ENV+=		S3CMD_INSTPATH_MAN=${PKGMANDIR}
 .include "../../lang/python/pyversion.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-.if ${PYPKGPREFIX} == "py24"
-DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
-.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
