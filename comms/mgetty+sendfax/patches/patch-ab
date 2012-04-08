@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2012/02/16 17:29:25 hans Exp $
+$NetBSD: patch-ab,v 1.14 2012/04/08 00:47:27 dholland Exp $
+
+- configure for pkgsrc
+- honor VARBASE
+- add vgetty to build
 
 --- Makefile.orig	2010-06-05 09:48:22.000000000 +0000
 +++ Makefile
@@ -18,7 +22,7 @@ $NetBSD: patch-ab,v 1.13 2012/02/16 17:29:25 hans Exp $
  #
  #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
 -CFLAGS=-O2 -Wall -pipe
-+CFLAGS+=-O2 -Wall -pipe -DPREFIX=\"${PREFIX}\"
++CFLAGS+=-O2 -Wall -pipe -DPREFIX=\"${PREFIX}\" -DVARBASE=\"${VARBASE}\"
  #CFLAGS=-O -DSVR4
  #CFLAGS=-O -DSVR4 -DSVR42
  #CFLAGS=-O -DUSE_POLL

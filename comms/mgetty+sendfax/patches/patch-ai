@@ -1,15 +1,37 @@
-$NetBSD: patch-ai,v 1.8 2012/04/08 00:04:12 dholland Exp $
+$NetBSD: patch-ai,v 1.9 2012/04/08 00:47:27 dholland Exp $
 
+- improve default configuration behavior for the modern world
+- configure for pkgsrc
 - DEVICE_GROUP is set from the pkgsrc makefile, so avoid compiler
-warnings by not defining it again when it's already set.
+  warnings by not defining it again when it's already set.
+- honor PREFIX and VARBASE in paths
+- turn on AUTO_PPP (whatever that is...?)
 
-- configure paths for pkgsrc.
-
-- ...?
-
---- policy.h.orig	2012-04-07 23:59:02.000000000 +0000
+--- policy.h.orig	2012-04-08 00:19:33.000000000 +0000
 +++ policy.h
-@@ -114,7 +114,9 @@
+@@ -48,7 +48,12 @@
+  * Normally, this is "/bin/login", just a few systems put "login"
+  * elsewhere (e.g. Free/NetBSD in "/usr/bin/login").
+  */
++#if defined(__NetBSD__) || defined(__FreeBSD__) ||\
++    defined(__OpenBSD__) || defined (__DragonFly__)
++#define DEFAULT_LOGIN_PROGRAM "/usr/bin/login"
++#else
+ #define DEFAULT_LOGIN_PROGRAM "/bin/login"
++#endif
+ 
+ /* FidoNet mailer support
+  * 
+@@ -86,7 +91,7 @@
+  * If the path doesn't start with "/", it's relative to CONFDIR.
+  */
+ /* #define CNDFILE "dialin.config" */
+-
++#define CNDFILE               "dialin.config"
+ 
+ /* If you want to use /etc/gettydefs to set tty flags, define this
+  * I recommend against it, I suspect some bugs lingering in that code
+@@ -114,7 +119,9 @@
  /* group id that the device is chown()ed to. If not defined, the
   * primary group of "DEVICE_OWNER" is used.
   */
@@ -19,29 +41,82 @@ warnings by not defining it again when it's already set.
  
  /* access mode for the line while getty has it - it should be accessible
   * by uucp / uucp, but not by others (imagine someone dialing into your
-@@ -593,6 +595,21 @@
+@@ -147,7 +154,7 @@
+  *
+  * if the directory does not exist, the log file goes to CONSOLE (!)
+  */
+-#define LOG_PATH "/var/log/mgetty.%s"
++#define LOG_PATH VARBASE "/log/mgetty.%s"
+ 
+ /* Default log error level threshold. Possible error levels are
+  * L_FATAL, L_ERROR, L_AUDIT, L_WARN, L_MESG, L_NOISE, L_JUNK (see mgetty.h)
+@@ -233,6 +240,7 @@
+  */
+ 
+ /* for a few systems, you can just take those defaults and be happy */
++/* pkgsrc note: these should *not* use VARBASE */
+ #if defined (SVR4) || defined(sunos4)
+ # define LOCK_PATH "/var/spool/locks"
+ # define LOCK      "/var/spool/locks/LCK..%s"
+@@ -459,7 +467,8 @@
+  * watch out: if you run 'sendfax' as non-privileged user (user 'fax' etc.)
+  * you might need to create this file manually and chown it to 'fax'
+  */
+-#define FAX_LOG		"/var/log/sendfax.log"
++/*#define FAX_LOG		"/var/log/sendfax.log" */ /* original */
++#define FAX_LOG         VARBASE "/spool/fax/Faxlog"
+ 
+ /* local station ID (your fax number)
+  * 20 character string, most faxmodem allow all ascii characters 32..127,
+@@ -552,20 +561,15 @@
+  */
+ #ifdef SVR4
+ # define MAILER		"/usr/bin/mailx -s 'Incoming facsimile message'"
+-#else
+-# if defined(_AIX) || defined(__NetBSD__) || defined(linux)
+-#  define MAILER	"/usr/sbin/sendmail"
+-#  define NEED_MAIL_HEADERS
+-# endif
+-# ifdef M_UNIX		/* SCO */
+-#  define MAILER	"/usr/lib/mail/execmail"
+-#  define NEED_MAIL_HEADERS
+-# endif
+-#endif
+-
+-#ifndef MAILER
++#elif defined(M_UNIX) /* SCO */
++# define MAILER		"/usr/lib/mail/execmail"
++# define NEED_MAIL_HEADERS
++#elif defined(__IRIX__)
+ # define MAILER		"/usr/lib/sendmail"
+ # define NEED_MAIL_HEADERS
++#else /* modern standard -- AIX, *BSD, Linux, etc. */
++# define MAILER		"/usr/sbin/sendmail"
++# define NEED_MAIL_HEADERS
+ #endif
+ 
+ /* where to send notify mail about incoming faxes to
+@@ -586,13 +590,18 @@
+  * If you don't want this type of service, do not define it at all
+  * Absolute path name has to be used here!
+  */
+-#define FAX_NOTIFY_PROGRAM "/usr/local/lib/mgetty+sendfax/new_fax"
++#define FAX_NOTIFY_PROGRAM PREFIX "/lib/mgetty+sendfax/new_fax"
+ 
+ /* default minimum space required on spooling partition for receiving a FAX
+  * (in KILObytes)
   */
  #define	MINFREESPACE 1024
  
-+#undef DEFAULT_LOGIN_PROGRAM
-+#define DEFAULT_LOGIN_PROGRAM "/usr/bin/login"
-+
-+#define CNDFILE               "dialin.config"
 +
 +#undef MGETTY_PID_FILE
 +#define MGETTY_PID_FILE       "/var/run/mg-pid.%s"
 +
-+#undef FAX_LOG
-+#define FAX_LOG         "/var/spool/fax/Faxlog"
 +
-+#undef MAILER
-+#define MAILER          "/usr/sbin/sendmail"
-+
-+#undef DEVICE_GROUP
  /* fax machines exchange so-called "non-standard-frames" that can be 
   * used to identify what vendor and model is on the other end.
   * mgetty parses and prints this by default, because it can help 
-@@ -601,3 +618,4 @@
+@@ -601,3 +610,4 @@
   */
  #define FAX_NSF_PARSER
  
