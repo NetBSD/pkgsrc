@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/16 21:04:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2012/04/08 21:28:17 wiz Exp $
 
 PKGNAME=	bzrtools-${VER}
 DISTNAME=	bzrtools-${VER:R}
@@ -12,7 +12,7 @@ COMMENT=	Collection of plugins for Bazaar
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-# Only this python versions are supported, see:
+# Only these python versions are supported, see:
 # http://doc.bazaar.canonical.com/bzr.dev/en/whats-new/whats-new-in-2.4.html
 PYTHON_VERSIONS_ACCEPTED=	27 26
 
