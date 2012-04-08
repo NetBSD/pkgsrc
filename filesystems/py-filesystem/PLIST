@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/01 14:36:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:21:48 wiz Exp $
 bin/fscat
 bin/fscp
 bin/fsinfo
@@ -9,7 +9,7 @@ bin/fsmv
 bin/fsrm
 bin/fsserve
 bin/fstree
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/fs/__init__.py
 ${PYSITELIB}/fs/__init__.pyc
 ${PYSITELIB}/fs/__init__.pyo

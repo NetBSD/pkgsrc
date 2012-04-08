@@ -1,4 +1,4 @@
-# $NetBSD: distutils.mk,v 1.3 2012/04/08 20:17:10 wiz Exp $
+# $NetBSD: distutils.mk,v 1.4 2012/04/08 20:22:01 wiz Exp $
 #
 # Common logic for python distributions that use distutils.
 #
@@ -16,22 +16,16 @@ PYDISTUTILSPKG=	yes
 
 # We expect distutils to create an egg-info file if Python distutils
 # can do so, and provide support for a PLIST entry that represents
-# this norm and will work with all python versions.  (If the package
-# set PY_NO_EGG, respect that choice, but PLIST.eggfile is still set.)
+# this norm and will work with all python versions.
 
 # Set the egg file basename.
 EGG_NAME?=	${DISTNAME}
 
-PLIST_VARS+=	eggfile
 # Python distutils will create an eggfile.
-PLIST.eggfile=	yes
 PY_NO_EGG?=	no
 
 # Egg files have the version encoded, so generalize in PLIST, and provide
 # our conditional.
 PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-# PYSITELIB is already de-expanded
-PRINT_PLIST_AWK+=	{ gsub("[$$]{PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
-				"$${PLIST.eggfile}$${PYSITELIB}/$${EGG_FILE}") }
 
 .include "../../lang/python/extension.mk"
