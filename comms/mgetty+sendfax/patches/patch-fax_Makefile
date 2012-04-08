@@ -1,0 +1,17 @@
+$NetBSD: patch-fax_Makefile,v 1.1 2012/04/08 01:28:35 dholland Exp $
+
+User-destdir support.
+
+--- fax/Makefile~	2006-02-22 17:25:30.000000000 +0000
++++ fax/Makefile
+@@ -58,8 +58,8 @@ install: all
+ 	done
+ 	$(INSTALL) -m 755 faxrunqd $(SBINDIR)
+ 	$(INSTALL) faxq-helper $(LIBDIR)
+-	chown $(FAX_OUT_USER) $(LIBDIR)/faxq-helper
+-	chmod 4711 $(LIBDIR)/faxq-helper
++	#chown $(FAX_OUT_USER) $(LIBDIR)/faxq-helper
++	#chmod 4711 $(LIBDIR)/faxq-helper
+ #
+ # data files
+ #

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.35 2012/04/08 00:47:27 dholland Exp $
+$NetBSD: distinfo,v 1.36 2012/04/08 01:28:35 dholland Exp $
 
 SHA1 (mgetty1.1.37-Jun05.tar.gz) = fec9672e8be29a41f1392c6bf90c0d5732cdb2c2
 RMD160 (mgetty1.1.37-Jun05.tar.gz) = 56aa9e213e4bd79c13ace2b7222253d91e756865
 Size (mgetty1.1.37-Jun05.tar.gz) = 1057939 bytes
 SHA1 (patch-aa) = f80c4e7f7eb23eac7ee23c2144612b82c122d45f
-SHA1 (patch-ab) = 84976f4834494193a4d0f2fe90ee6963a056d346
+SHA1 (patch-ab) = 21f2eee6e6534335e96d93f6a418068db1824c89
 SHA1 (patch-ac) = bdc69ccc3430634bb74742fd105ee8f3fcde4d21
 SHA1 (patch-ad) = f02a92a3a9a46fe71d7541897da24470e38f68c7
 SHA1 (patch-af) = 088be22c69f39ca099cbe497b7e845bf103bf1c7
@@ -19,3 +19,4 @@ SHA1 (patch-ap) = 4b101e76df0081cc62c6fcfb424300019c09819b
 SHA1 (patch-aq) = 160e94001568a0a4025a0d26140f972ec0ed8648
 SHA1 (patch-ar) = 313f76a5d989c4511935d6fdc2ea2aadcbed76a0
 SHA1 (patch-as) = 85bcf39cf5323625bb71f1659413e87864c824cf
+SHA1 (patch-fax_Makefile) = 4d4043d84dafe5993d546518b698b10af48f126a
