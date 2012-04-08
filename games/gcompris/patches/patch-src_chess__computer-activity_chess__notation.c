@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2007/12/17 18:55:32 drochner Exp $
+$NetBSD: patch-src_chess__computer-activity_chess__notation.c,v 1.1 2012/04/08 21:07:06 wiz Exp $
 
---- src/boards/chess_notation.c.orig	2007-08-31 00:52:28.000000000 +0200
-+++ src/boards/chess_notation.c
+--- src/chess_computer-activity/chess_notation.c.orig	2011-01-08 22:27:13.000000000 +0000
++++ src/chess_computer-activity/chess_notation.c
 @@ -203,7 +203,7 @@ piece_to_ascii (int piece)
    if(WPIECE(piece))
      return piece_to_ascii_full[i];
