@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/04/09 23:19:49 wiz Exp $
+
+Avoid unportable test(1) construct.
+
+--- configure.orig	2012-04-09 23:14:21.000000000 +0000
++++ configure
+@@ -16185,7 +16185,7 @@ else
+   USE_DEBUG="no"
+ fi
+ 
+-if test "x$USE_DEBUG" == "xyes" ; then
++if test "x$USE_DEBUG" = "xyes" ; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define DEBUG 1
