@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2012/02/24 10:40:49 obache Exp $
+# $NetBSD: Makefile,v 1.97.2.1 2012/04/09 19:52:24 spz Exp $
 
 DISTNAME=	cairo-1.10.2
 PKGREVISION=	4
@@ -44,6 +44,11 @@ TEST_TARGET=			check
 .include "../../mk/compiler.mk"
 .if ${MACHINE_PLATFORM:MDragonFly-*-x86_64} && ${CC_VERSION:Mgcc-4.1.*}
 CONFIGURE_ENV+=		ac_cv_type___uint128_t=no
+.endif
+
+# Workaround so that pthread is found on MirBSD
+.if ${OPSYS} == "MirBSD"
+CONFIGURE_ENV+=	PTHREAD_CFLAGS=${CFLAGS:Q}
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
