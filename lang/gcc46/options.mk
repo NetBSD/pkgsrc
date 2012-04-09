@@ -1,14 +1,13 @@
-# $NetBSD: options.mk,v 1.5 2012/04/04 22:20:37 sbd Exp $
+# $NetBSD: options.mk,v 1.5.2.1 2012/04/09 14:34:59 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc46
-PKG_SUPPORTED_OPTIONS=	nls gcc-cpp gcc-fortran gcc-java gcc-objc #gcc-ada
-PKG_SUGGESTED_OPTIONS=	gcc-cpp gcc-fortran gcc-objc
-PKG_OPTIONS_LEGACY_OPTS= gcc-c++:gcc-cpp
+PKG_SUPPORTED_OPTIONS=	nls gcc-c++ gcc-fortran gcc-java gcc-objc #gcc-ada
+PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
 .endif
 
-PKG_OPTIONS_LEGACY_VARS+=	BUILD_CXX:gcc-cpp
+PKG_OPTIONS_LEGACY_VARS+=	BUILD_CXX:gcc-c++
 PKG_OPTIONS_LEGACY_VARS+=	BUILD_FORTRAN:gcc-fortran
 PKG_OPTIONS_LEGACY_VARS+=	BUILD_JAVA:gcc-java
 PKG_OPTIONS_LEGACY_VARS+=	BUILD_OBJC:gcc-objc
@@ -37,8 +36,8 @@ CONFIGURE_ARGS+=	--disable-nls
 LANGS=			c
 
 .if !empty(PKG_OPTIONS:Mgcc-java)
-.  if empty(PKG_OPTIONS:Mgcc-cpp)
-PKG_OPTIONS+=		gcc-cpp
+.  if empty(PKG_OPTIONS:Mgcc-c++)
+PKG_OPTIONS+=		gcc-c++
 .  endif
 
 LANGS+=			java
@@ -65,7 +64,7 @@ MAKE_ENV+=		ac_cv_prog_JAR=no
 .include "../../lang/python/application.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mgcc-cpp)
+.if !empty(PKG_OPTIONS:Mgcc-c++)
 LANGS+=			c++
 USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
