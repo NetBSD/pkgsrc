@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 21:07:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/04/09 23:28:37 wiz Exp $
 bin/gcompris
 info/gcompris.info
 lib/gcompris/libalgebra.la
@@ -183,9 +183,6 @@ share/gcompris/boards/algorithm/scenery5_background.png
 share/gcompris/boards/algorithm/strawberry.png
 share/gcompris/boards/anim.svg
 share/gcompris/boards/anim.xml
-share/gcompris/boards/anim/Makefile
-share/gcompris/boards/anim/Makefile.am
-share/gcompris/boards/anim/Makefile.in
 share/gcompris/boards/anim/color-selector.png
 share/gcompris/boards/anim/counter.png
 share/gcompris/boards/anim/down.png
@@ -1465,7 +1462,6 @@ share/gcompris/boards/geo_country/turkey/van.png
 share/gcompris/boards/geo_country/turkey/yalova.png
 share/gcompris/boards/geo_country/turkey/yozgat.png
 share/gcompris/boards/geo_country/turkey/zonguldak.png
-share/gcompris/boards/geo_country/usa/Makefile.am
 share/gcompris/boards/geo_country/usa/alabama.png
 share/gcompris/boards/geo_country/usa/alaska.png
 share/gcompris/boards/geo_country/usa/arizona.png
@@ -1711,7 +1707,6 @@ share/gcompris/boards/gnumch-multiples.xml
 share/gcompris/boards/gnumch-primes.svg
 share/gcompris/boards/gnumch-primes.xml
 share/gcompris/boards/gnumch.svg
-share/gcompris/boards/gnumch/Makefile.am
 share/gcompris/boards/gnumch/diaper.gif
 share/gcompris/boards/gnumch/diaper.txt
 share/gcompris/boards/gnumch/diaper_eating.gif

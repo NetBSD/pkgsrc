@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/04/08 21:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/04/09 23:28:37 wiz Exp $
 
 DISTNAME=	gcompris-12.01
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcompris/}
 
@@ -36,6 +37,13 @@ CONFIGURE_ARGS+=	--enable-sdlmixer
 
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
+
+post-install:
+	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/anim/Makefile
+	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/anim/Makefile.am
+	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/anim/Makefile.in
+	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/geo_country/usa/Makefile.am
+	rm ${DESTDIR}${PREFIX}/share/gcompris/boards/gnumch/Makefile.am
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
