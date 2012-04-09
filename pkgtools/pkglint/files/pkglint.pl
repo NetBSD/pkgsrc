@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.831 2011/09/09 15:18:28 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.831.6.1 2012/04/09 15:02:07 spz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5164,7 +5164,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value ne $value_novar) {
 			$opt_debug_unchecked and $line->log_debug("Unchecked option name \"${value}\".");
 
-		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z]*)$") {
+		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z\+]*)$") {
 			my ($optname) = ($1);
 
 			if (!exists(get_pkg_options()->{$optname})) {
@@ -5176,7 +5176,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 "tech-pkg\@NetBSD.org mailing list.");
 			}
 
-		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z_]*)$") {
+		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z_\+]*)$") {
 			my ($optname) = ($1);
 
 			$line->log_warning("Use of the underscore character in option names is deprecated.");
