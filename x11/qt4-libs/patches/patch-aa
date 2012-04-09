@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2012/01/12 22:59:58 adam Exp $
+$NetBSD: patch-aa,v 1.14 2012/04/09 09:12:49 adam Exp $
 
---- qmake/generators/unix/unixmake2.cpp.orig	2010-09-10 09:04:41.000000000 +0000
+--- qmake/generators/unix/unixmake2.cpp.orig	2012-03-14 14:01:12.000000000 +0000
 +++ qmake/generators/unix/unixmake2.cpp
-@@ -239,6 +239,8 @@ UnixMakefileGenerator::writeMakeParts(QT
+@@ -244,6 +244,8 @@ UnixMakefileGenerator::writeMakeParts(QT
          if(!project->isEmpty("QMAKE_BUNDLE")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET_x.y")) << endl;
              t << "TARGET0       = " << escapeFilePath(var("TARGET_")) << endl;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.13 2012/01/12 22:59:58 adam Exp $
          } else if(!project->isEmpty("QMAKE_SYMBIAN_SHLIB")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET")) << endl;
          } else if(project->isEmpty("QMAKE_HPUX_SHLIB")) {
-@@ -1016,8 +1018,12 @@ void UnixMakefileGenerator::init2()
+@@ -1041,8 +1043,12 @@ void UnixMakefileGenerator::init2()
      } else if (project->isActiveConfig("staticlib")) {
          project->values("TARGET").first().prepend(project->first("QMAKE_PREFIX_STATICLIB"));
          project->values("TARGET").first() += "." + project->first("QMAKE_EXTENSION_STATICLIB");
