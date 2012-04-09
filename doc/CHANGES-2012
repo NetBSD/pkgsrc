@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1089 2012/04/09 08:58:39 imil Exp $
+$NetBSD: CHANGES-2012,v 1.1090 2012/04/09 09:20:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1767,3 +1767,13 @@ Changes to the packages collection and infrastructure in 2012:
 	Added math/ppl version 0.11.2 [wiz 2012-04-08]
 	Updated games/gcompris to 12.01 [wiz 2012-04-08]
 	Updated pkgtools/pkgin to 0.5.2.3 [imil 2012-04-09]
+	Updated x11/qt4 to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-libs to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-tools to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-docs to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-mng to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-mysql to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-pgsql to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-qdbus to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-sqlite3 to 4.8.1 [adam 2012-04-09]
+	Updated x11/qt4-tiff to 4.8.1 [adam 2012-04-09]
