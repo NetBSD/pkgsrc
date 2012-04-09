@@ -1,0 +1,24 @@
+$NetBSD: patch-configure_in,v 1.2.2.2 2012/04/09 18:34:58 spz Exp $
+
+- support netbsd-6 libquota API.
+
+caution: there's a dragonfly patch to configure in patch-ao that isn't
+reflected here. don't regen that from this without thinking.
+
+--- configure.in.orig	2001-11-29 17:10:58.000000000 +0000
++++ configure.in
+@@ -739,9 +739,12 @@ if test $paranoid = yes; then
+ 	AC_DEFINE(PARANOID)
+ fi
+ if test $quota != no; then
+-	AC_CHECK_HEADERS(sys/quota.h sys/fs/ufs_quota.h ufs/quota.h jfs/quota.h ufs/ufs/quota.h linux/quota.h)
+-	if test $ac_cv_header_sys_quota.h = yes -o $ac_cv_header_sys_fs_ufs_quota_h = yes -o $ac_cv_header_ufs_quota_h = yes -o $ac_cv_header_jfs_quota_h = yes -o $ac_cv_header_ufs_ufs_quota_h = yes -o $ac_cv_header_linux_quota_h = yes; then
++	AC_CHECK_HEADERS(quota.h sys/quota.h sys/fs/ufs_quota.h ufs/quota.h jfs/quota.h ufs/ufs/quota.h linux/quota.h)
++	if test $ac_cv_header_quota.h = yes -o $ac_cv_header_sys_quota.h = yes -o $ac_cv_header_sys_fs_ufs_quota_h = yes -o $ac_cv_header_ufs_quota_h = yes -o $ac_cv_header_jfs_quota_h = yes -o $ac_cv_header_ufs_ufs_quota_h = yes -o $ac_cv_header_linux_quota_h = yes; then
+ 		quota=yes
++		if test $ac_cv_header_quota_h = yes; then
++			LIBS="$LIBS -lquota"
++		fi
+ 	else
+ 		if test $quota = yes; then
+ 			AC_MSG_WARN(QUOTA not supported by OS - disabled)
