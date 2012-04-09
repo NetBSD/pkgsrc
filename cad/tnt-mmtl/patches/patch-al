@@ -1,20 +1,41 @@
-$NetBSD: patch-al,v 1.1 2008/03/18 11:48:25 dmcmahill Exp $
+$NetBSD: patch-al,v 1.1.38.1 2012/04/09 18:19:57 spz Exp $
 
 The automake manual clearly specifies that if we mix fortran sources
 in with c or c++ sources then we need to use the AC_F77_LIBRARY_LDFLAGS
 autoconf macro and then add $(FLIBS) to either LDADD for a program or
 LIBADD for a library.
 
---- bem/Makefile.am.orig	2004-04-22 20:07:12.000000000 +0000
-+++ bem/Makefile.am	2008-03-16 03:44:18.000000000 +0000
-@@ -27,5 +27,5 @@
+Automake prohibits scripts in the "pkglib" dir for some reason, so
+work around it by calling the dir "blahlib".
+
+--- bem/Makefile.am.orig	2012-04-08 02:41:28.000000000 +0000
++++ bem/Makefile.am
+@@ -26,12 +26,12 @@
+ #  autoconf, and automake for the first time, you'll need to
  #  supply command line switches --add-missing --copy.
  #----------------------------------------------------------------
 -AUTOMAKE_OPTIONS = foreign subdir-objects
 +AUTOMAKE_OPTIONS = foreign
  
  #---------------------------------------------------------------
-@@ -72,7 +72,9 @@
+ # tcl/tk scripts that may need to be installed.
+ #---------------------------------------------------------------
+-pkglib_SCRIPTS = \
++blahlib_SCRIPTS = \
+         lib/bem.tcl \
+ 	lib/bem_gpge.itcl \
+         lib/bem_graphs.itcl \
+@@ -46,7 +46,7 @@ pkglib_SCRIPTS = \
+ #  Define an installation directory that includes
+ #  the version number (from AC_INIT) like "bltmath1.0"
+ #---------------------------------------------------------------
+-pkglibdir = $(libdir)/$(PACKAGE)$(PACKAGE_VERSION)
++blahlibdir = $(libdir)/$(PACKAGE)$(PACKAGE_VERSION)
+ 
+ #----------------------------------------------------------------
+ #  nmmtl is our main target
+@@ -71,9 +71,11 @@ bem_TESTS = tests/test_bem.tcl
+ #----------------------------------------------------------------
  bem_SOURCES = $(cpp_SOURCES) $(fortran_SOURCES) \
  		src/nmmtl_parse_xsctn.cpp
 +bem_LDADD = $(FLIBS)
@@ -24,3 +45,4 @@ LIBADD for a library.
 +nmmtl_LDADD = $(FLIBS)
  
  
+ #----------------------------------------------------------------
