@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.9 2012/01/12 22:59:58 adam Exp $
+$NetBSD: patch-ao,v 1.10 2012/04/09 09:12:49 adam Exp $
 
---- src/corelib/codecs/qiconvcodec.cpp.orig	2011-12-08 05:06:03.000000000 +0000
+--- src/corelib/codecs/qiconvcodec.cpp.orig	2012-03-14 14:01:18.000000000 +0000
 +++ src/corelib/codecs/qiconvcodec.cpp
 @@ -50,9 +50,14 @@
  #include <stdio.h>
@@ -37,7 +37,7 @@ $NetBSD: patch-ao,v 1.9 2012/01/12 22:59:58 adam Exp $
      // GNU doesn't disagree with POSIX :/
      const char *inBytes = chars;
  #else
-@@ -314,7 +322,7 @@ static bool setByteOrder(iconv_t cd)
+@@ -318,7 +326,7 @@ static bool setByteOrder(iconv_t cd)
      size_t outBytesLeft = sizeof buf;
      size_t inBytesLeft = sizeof bom;
  
@@ -46,7 +46,7 @@ $NetBSD: patch-ao,v 1.9 2012/01/12 22:59:58 adam Exp $
      const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
      char **inBytesPtr = &inBytes;
-@@ -334,7 +342,7 @@ QByteArray QIconvCodec::convertFromUnico
+@@ -338,7 +346,7 @@ QByteArray QIconvCodec::convertFromUnico
      char *outBytes;
      size_t inBytesLeft;
  
@@ -55,8 +55,8 @@ $NetBSD: patch-ao,v 1.9 2012/01/12 22:59:58 adam Exp $
      const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
      char **inBytesPtr = &inBytes;
-@@ -466,11 +474,13 @@ iconv_t QIconvCodec::createIconv_t(const
-     static const char empty_codeset[] = "";
+@@ -475,11 +483,13 @@ iconv_t QIconvCodec::createIconv_t(const
+ #endif
      const char *codeset = empty_codeset;
      cd = iconv_open(to ? to : codeset, from ? from : codeset);
 +#elif defined(__NetBSD)
