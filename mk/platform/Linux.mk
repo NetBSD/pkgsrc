@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.49 2012/03/19 12:34:17 joerg Exp $
+# $NetBSD: Linux.mk,v 1.50 2012/04/09 04:19:24 sbd Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -94,6 +94,6 @@ GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .endif
 
 # If this is defined pass it to the make process. 
-.if !defined(NOGCCERROR)
+.if defined(NOGCCERROR)
 MAKE_ENV+=	NOGCCERROR=true
 .endif
