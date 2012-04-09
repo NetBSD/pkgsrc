@@ -1,4 +1,8 @@
-$NetBSD: patch-ae,v 1.15 2011/09/03 08:52:59 obache Exp $
+$NetBSD: patch-ae,v 1.15.6.1 2012/04/09 16:48:51 spz Exp $
+
+- Configure for pkgsrc.
+- Recognize libtiff 4.x.
+- ...
 
 --- configure.orig	2005-12-16 22:40:30.000000000 +0000
 +++ configure
@@ -106,7 +110,7 @@ $NetBSD: patch-ae,v 1.15 2011/09/03 08:52:59 obache Exp $
  	    case ${lib_ver} in
  		3.4)		tiff_runlen_t="uint16" ;;
 -		3.[567])	tiff_runlen_t="uint32" ;;
-+		3.[56789])	tiff_runlen_t="uint32" ;;
++		3.[56789]|4*)	tiff_runlen_t="uint32" ;;
  	    esac
  	fi
      else
