@@ -1,11 +1,31 @@
-$NetBSD: patch-ap,v 1.1 2006/09/22 19:44:01 joerg Exp $
+$NetBSD: patch-ap,v 1.1.50.1 2012/04/09 18:34:58 spz Exp $
 
---- src/extensions.c.orig	2006-09-22 21:22:18.000000000 +0000
+- support netbsd-6 libquota API
+- avoid build failure on netbsd 5.99 proplib quotas
+- support dragonfly quotas
+
+--- src/extensions.c.orig	2000-07-01 18:17:38.000000000 +0000
 +++ src/extensions.c
-@@ -67,6 +67,10 @@
+@@ -55,7 +55,9 @@
+ #include <sys/file.h>
+ #include <sys/param.h>
+ 
+-#ifdef HAVE_SYS_FS_UFS_QUOTA_H
++#if defined(HAVE_QUOTA_H)
++#include <quota.h>
++#elif defined(HAVE_SYS_FS_UFS_QUOTA_H)
+ #include <sys/fs/ufs_quota.h>
+ #elif defined(HAVE_UFS_UFS_QUOTA_H)
+ #include <ufs/ufs/quota.h>
+@@ -67,6 +69,15 @@
  #include <sys/mnttab.h>
  #endif
  
++#ifdef HAVE_QUOTA_H
++/* NetBSD quota_open() API and library */
++#define HAVE_NETBSD_LIBQUOTA
++#endif
++
 +#if defined(__DragonFly__) && __DragonFly_version >= 160000
 +#define dqblk ufs_dqblk
 +#endif
@@ -13,3 +33,224 @@ $NetBSD: patch-ap,v 1.1 2006/09/22 19:44:01 joerg Exp $
  #if defined(HAVE_STATVFS)
  #include <sys/statvfs.h>
  #elif defined(HAVE_SYS_VFS)
+@@ -91,8 +102,18 @@
+ #include "support/ftw.h"
+ #endif
+ 
++#if defined(HAVE_UFS_UFS_QUOTA_H) && defined(UFS_QUOTA_ENTRY_NAMES)
++/* netbsd 5.99 proplib quota interface (march 2011-january 2012) - punt */
++#undef QUOTA
++#endif
++
+ #ifdef QUOTA
++#ifdef HAVE_NETBSD_LIBQUOTA
++#undef QUOTA_DEVICE
++struct quotaval quota_blocks, quota_files;
++#else
+ struct dqblk quota;
++#endif
+ char *time_quota(long curstate, long softlimit, long timelimit, char *timeleft);
+ #endif
+ 
+@@ -252,6 +272,11 @@ void msg_massage(const char *inbuf, char
+     char *outptr = outbuf;
+ #ifdef QUOTA
+     char timeleft[80];
++#ifdef HAVE_NETBSD_LIBQUOTA
++    uint64_t quotaval;
++#else
++    long quotaval;
++#endif
+ #endif
+     char buffer[MAXPATHLEN];
+     time_t curtime;
+@@ -372,67 +397,101 @@ void msg_massage(const char *inbuf, char
+ 
+ #ifdef QUOTA
+ 	    case 'B':
++#ifdef HAVE_NETBSD_LIBQUOTA
++		quotaval = quota_blocks.qv_hardlimit;
++#else
++		quotaval = quota.dqb_bhardlimit;
++#endif
+ #ifdef QUOTA_BLOCKS		/* 1024-blocks instead of 512-blocks */
+ 		snprintf(outptr, outlen, "%ld", quota.dqb_bhardlimit % 2 ?
+-			 (long) (quota.dqb_bhardlimit / 2 + 1) : (long) (quota.dqb_bhardlimit / 2));
++			 (quotaval / 2 + 1) : (quotaval / 2));
+ #else
+-		snprintf(outptr, outlen, "%ld", (long) quota.dqb_bhardlimit);
++		snprintf(outptr, outlen, "%ld", quotaval);
+ #endif
+ 		break;
+ 
+ 	    case 'b':
++#ifdef HAVE_NETBSD_LIBQUOTA
++		quotaval = quota_blocks.qv_softlimit;
++#else
++		quotaval = quota.dqb_bsoftlimit;
++#endif
+ #ifdef QUOTA_BLOCKS		/* 1024-blocks instead of 512-blocks */
+-		snprintf(outptr, outlen, "%ld", quota.dqb_bsoftlimit % 2 ?
+-			 (long) (quota.dqb_bsoftlimit / 2 + 1) : (long) (quota.dqb_bsoftlimit / 2));
++		snprintf(outptr, outlen, "%ld", quotaval % 2 ?
++			 (quotaval / 2 + 1) : (quotaval / 2));
+ #else
+-		snprintf(outptr, outlen, "%ld", (long) quota.dqb_bsoftlimit);
++		snprintf(outptr, outlen, "%ld", quotaval);
+ #endif
+ 		break;
+ 
+ 	    case 'Q':
++#ifdef HAVE_NETBSD_LIBQUOTA
++		quotaval = quota_blocks.qv_usage;
++#else
++		quotaval = quota.dqb_curblocks;
++#endif
+ #ifdef QUOTA_BLOCKS		/* 1024-blocks instead of 512-blocks */
+-		snprintf(outptr, outlen, "%ld", quota.dqb_curblocks % 2 ?
+-			 (long) (quota.dqb_curblocks / 2 + 1) : (long) (quota.dqb_curblocks / 2));
++		snprintf(outptr, outlen, "%ld", quotaval % 2 ?
++			 (quotaval / 2 + 1) : (quotaval / 2));
+ #else
+-		snprintf(outptr, outlen, "%ld", quota.dqb_curblocks);
++		snprintf(outptr, outlen, "%ld", quotaval);
+ #endif
+ 		break;
+ 
+ 	    case 'I':
+-#if defined(QUOTA_INODE)
+-		snprintf(outptr, outlen, "%d", quota.dqb_ihardlimit);
++#ifdef HAVE_NETBSD_LIBQUOTA
++		quotaval = quota_files.qv_hardlimit;
++#elif defined(QUOTA_INODE)
++		quotaval = quota.dqb_ihardlimit;
+ #else
+-		snprintf(outptr, outlen, "%ld", (long) quota.dqb_fhardlimit);
++		quotaval = quota.dqb_fhardlimit;
+ #endif
++		snprintf(outptr, outlen, "%ld", quotaval);
+ 		break;
+ 
+ 	    case 'i':
+-#if defined(QUOTA_INODE)
+-		snprintf(outptr, outlen, "%d", quota.dqb_isoftlimit);
++#ifdef HAVE_NETBSD_LIBQUOTA
++		quotaval = quota_files.qv_softlimit;
++#elif defined(QUOTA_INODE)
++		quotaval = quota.dqb_isoftlimit;
+ #else
+-		snprintf(outptr, outlen, "%ld", (long) quota.dqb_fsoftlimit);
++		quotaval = quota.dqb_fsoftlimit;
+ #endif
++		snprintf(outptr, outlen, "%ld", quotaval);
+ 		break;
+ 
+ 	    case 'q':
+-#if defined(QUOTA_INODE)
+-		snprintf(outptr, outlen, "%d", quota.dqb_curinodes);
++#ifdef HAVE_NETBSD_LIBQUOTA
++		quotaval = quota_files.qv_usage;
++#elif defined(QUOTA_INODE)
++		quotaval = quota.dqb_curinodes;
+ #else
+-		snprintf(outptr, outlen, "%ld", (long) quota.dqb_curfiles);
++		quotaval = quota.dqb_curfiles;
+ #endif
++		snprintf(outptr, outlen, "%ld", quotaval);
+ 		break;
+ 
+ 	    case 'H':
++#ifdef HAVE_NETBSD_LIBQUOTA
++		time_quota(quota_blocks.qv_usage, quota_blocks.qv_softlimit,
++			   quota_blocks.qv_expiretime, timeleft);
++#else
+ 		time_quota(quota.dqb_curblocks, quota.dqb_bsoftlimit,
+ #if defined(QUOTA_INODE)
+ 			   quota.dqb_btime, timeleft);
+ #else
+ 			   quota.dqb_btimelimit, timeleft);
+ #endif
++#endif
+ 		strncpy(outptr, timeleft, outlen);
++		outptr[outlen] = 0;
+ 		break;
+ 
+ 	    case 'h':
++#ifdef HAVE_NETBSD_LIBQUOTA
++		time_quota(quota_files.qv_usage, quota_files.qv_softlimit,
++			   quota_files.qv_expiretime, timeleft);
++#else
+ #if defined(QUOTA_INODE)
+ 		time_quota(quota.dqb_curinodes, quota.dqb_isoftlimit,
+ 			   quota.dqb_itime, timeleft);
+@@ -440,7 +499,9 @@ void msg_massage(const char *inbuf, char
+ 		time_quota(quota.dqb_curfiles, quota.dqb_fsoftlimit,
+ 			   quota.dqb_ftimelimit, timeleft);
+ #endif
++#endif
+ 		strncpy(outptr, timeleft, outlen);
++		outptr[outlen] = 0;
+ 		break;
+ #endif /* QUOTA */
+ 
+@@ -1888,12 +1949,35 @@ int path_to_device(char *pathname, char 
+     }
+     return 1;
+ }
+-#endif
++#endif /* QUOTA_DEVICE */
+ 
+ void get_quota(char *fs, int uid)
+ {
+     char mnt_fsname[MNTMAXSTR];
+-#ifdef HAS_NO_QUOTACTL
++
++#if defined(HAVE_NETBSD_LIBQUOTA)
++    struct quotahandle *qh;
++    struct quotakey qk;
++
++    qh = quota_open(fs);
++    if (qh == NULL) {
++       quotaval_clear(&quota_blocks);
++       quotaval_clear(&quota_files);
++       return;
++    }
++    qk.qk_idtype = QUOTA_IDTYPE_USER;
++    qk.qk_id = uid;
++    qk.qk_objtype = QUOTA_OBJTYPE_BLOCKS;
++    if (quota_get(qh, &qk, &quota_blocks)) {
++       quotaval_clear(&quota_blocks);
++    }
++    qk.qk_objtype = QUOTA_OBJTYPE_FILES;
++    if (quota_get(qh, &qk, &quota_files)) {
++       quotaval_clear(&quota_files);
++    }
++    quota_close(qh);
++
++#elif defined(HAS_NO_QUOTACTL)
+     int dirfd;
+     struct quotctl qp;
+ 
+@@ -1905,19 +1989,18 @@ void get_quota(char *fs, int uid)
+ 	ioctl(dirfd, Q_QUOTACTL, &qp);
+ 	close(dirfd);
+     }
+-#else
+-#ifdef QUOTA_DEVICE
+ 
++#elif defined(QUOTA_DEVICE)
+     if (path_to_device(fs, mnt_fsname))
+ #ifdef QCMD
+ 	quotactl(QCMD(Q_GETQUOTA, USRQUOTA), mnt_fsname, uid, (char *) &quota);
+ #else
+ 	quotactl(Q_GETQUOTA, mnt_fsname, uid, (char *) &quota);
+ #endif
+-#else
++
++#else /* base case */
+     quotactl(fs, QCMD(Q_GETQUOTA, USRQUOTA), uid, (char *) &quota);
+ #endif
+-#endif /* HAS_NO_QUOTACTL */
+ }
+ 
+ char *time_quota(long curstate, long softlimit, long timelimit, char *timeleft)
