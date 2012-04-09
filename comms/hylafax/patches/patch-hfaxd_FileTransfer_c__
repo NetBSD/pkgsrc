@@ -1,0 +1,70 @@
+$NetBSD: patch-hfaxd_FileTransfer_c__,v 1.1.2.2 2012/04/09 16:48:51 spz Exp $
+
+Support libtiff 4.x. Hopefully.
+
+--- hfaxd/FileTransfer.c++.orig	2005-08-05 19:08:15.000000000 +0000
++++ hfaxd/FileTransfer.c++
+@@ -50,6 +50,14 @@
+ #define	HAVE_PSLEVEL2	false
+ #define	HAVE_PCL5	false
+ 
++/* XXX */
++struct TIFFDirEntry {
++   uint16_t tdir_tag;
++   uint16_t tdir_type;
++   uint16_t tdir_count;
++   uint16_t tdir_offset;
++};
++
+ static struct {
+     const char*	name;		// protocol token name
+     bool	supported;	// true if format is supported
+@@ -210,7 +218,7 @@ HylaFAXServer::retrievePageCmd(const cha
+ 		uint32* sb;
+ 		TIFFGetField(tif, TIFFTAG_STRIPBYTECOUNTS, &sb);
+ 		file_size = sizeof (DirTemplate) +
+-		    sizeof (TIFFHeader) + sizeof (uint16);
++		    sizeof (TIFFHeaderClassic) + sizeof (uint16);
+ 		for (tstrip_t s = 0, ns = TIFFNumberOfStrips(tif); s < ns; s++)
+ 		    file_size += sb[s];
+ 		reply(code, "%s for %s (%lu bytes).",
+@@ -242,10 +250,10 @@ HylaFAXServer::openTIFF(const char* name
+ 	if (fd >= 0) {
+ 	    union {
+ 		char buf[512];
+-		TIFFHeader h;
++		TIFFHeaderClassic h;
+ 	    } b;
+ 	    ssize_t cc = Sys::read(fd, (char*) &b, sizeof (b));
+-	    if (cc > (ssize_t)sizeof (b.h) && b.h.tiff_version == TIFF_VERSION &&
++	    if (cc > (ssize_t)sizeof (b.h) && b.h.tiff_version == TIFF_VERSION_CLASSIC &&
+ 	      (b.h.tiff_magic == TIFF_BIGENDIAN ||
+ 	       b.h.tiff_magic == TIFF_LITTLEENDIAN)) {
+ 		(void) lseek(fd, 0L, SEEK_SET);		// rewind
+@@ -324,7 +332,7 @@ HylaFAXServer::sendTIFFHeader(TIFF* tif,
+ {
+     static DirTemplate templ = {
+ #define	TIFFdiroff(v) \
+-    (uint32) (sizeof (TIFFHeader) + sizeof (uint16) + \
++    (uint32) (sizeof (TIFFHeaderClassic) + sizeof (uint16) + \
+       (intptr_t) &(((DirTemplate*) 0)->v))
+ 	{ TIFFTAG_SUBFILETYPE,		TIFF_LONG,	1 },
+ 	{ TIFFTAG_IMAGEWIDTH,		TIFF_LONG,	1 },
+@@ -358,14 +366,14 @@ HylaFAXServer::sendTIFFHeader(TIFF* tif,
+      * of things about the contents of the TIFF file.
+      */
+     struct {
+-	TIFFHeader h;
++	TIFFHeaderClassic h;
+ 	uint16	dircount;
+ 	u_char	dirstuff[sizeof (templ)];
+     } buf;
+     union { int32 i; char c[4]; } u; u.i = 1;
+     buf.h.tiff_magic = (u.c[0] == 0 ? TIFF_BIGENDIAN : TIFF_LITTLEENDIAN);
+-    buf.h.tiff_version = TIFF_VERSION;
+-    buf.h.tiff_diroff = sizeof (TIFFHeader);
++    buf.h.tiff_version = TIFF_VERSION_CLASSIC;
++    buf.h.tiff_diroff = sizeof (TIFFHeaderClassic);
+     buf.dircount = (uint16) NTAGS;
+     getLong(tif, templ.SubFileType);
+     getLong(tif, templ.ImageWidth);
