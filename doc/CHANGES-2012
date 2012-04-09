@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1090 2012/04/09 09:20:14 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1091 2012/04/09 15:58:04 tez Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1777,3 +1777,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qt4-qdbus to 4.8.1 [adam 2012-04-09]
 	Updated x11/qt4-sqlite3 to 4.8.1 [adam 2012-04-09]
 	Updated x11/qt4-tiff to 4.8.1 [adam 2012-04-09]
+	Updated graphics/ImageMagick to 6.7.5.10nb2 [tez 2012-04-09]
