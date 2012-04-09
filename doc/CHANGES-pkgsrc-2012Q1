@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.3 2012/04/08 11:36:31 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.4 2012/04/09 15:30:03 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -22,3 +22,11 @@ Pullup ticket #3716 - requested by dholland
 comms/mgetty+sendfax build fix
 Pullup ticket #3717 - requested by dholland
 multimedia/kaffeine build fix
+Pullup ticket #3722 - requested by sbd
+lang/gcc44: option syntax fix
+Pullup ticket #3723 - requested by sbd
+lang/gcc46: option syntax fix
+Pullup ticket #3724 - requested by sbd
+pkgtools/pkglint: option syntax fix
+Pullup ticket #3725 - requested by sbd
+mk/platform/Linux.mk: bug fix
