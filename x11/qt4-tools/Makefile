@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2012/03/03 00:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2012/04/09 09:12:50 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-tools-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base

@@ -1,7 +1,7 @@
-$NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.1 2012/02/16 20:42:46 hans Exp $
+$NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2012/04/09 09:12:49 adam Exp $
 
---- src/3rdparty/webkit/Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2011-12-08 06:06:02.000000000 +0100
-+++ src/3rdparty/webkit/Source/JavaScriptCore/heap/MachineStackMarker.cpp	2012-01-15 02:26:20.184685861 +0100
+--- src/3rdparty/webkit/Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2012-03-14 14:01:26.000000000 +0000
++++ src/3rdparty/webkit/Source/JavaScriptCore/heap/MachineStackMarker.cpp
 @@ -20,6 +20,9 @@
   */
  
@@ -12,7 +12,7 @@ $NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker
  #include "MachineStackMarker.h"
  
  #include "ConservativeRoots.h"
-@@ -60,6 +63,10 @@
+@@ -64,6 +67,10 @@
  #include <unistd.h>
  
  #if OS(SOLARIS)
@@ -23,7 +23,7 @@ $NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker
  #include <thread.h>
  #else
  #include <pthread.h>
-@@ -331,6 +338,7 @@ typedef pthread_attr_t PlatformThreadReg
+@@ -341,6 +348,7 @@ typedef pthread_attr_t PlatformThreadReg
  #error Need a thread register struct for this platform
  #endif
  
@@ -31,7 +31,7 @@ $NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker
  static size_t getPlatformThreadRegisters(const PlatformThread& platformThread, PlatformThreadRegisters& regs)
  {
  #if OS(DARWIN)
-@@ -381,6 +389,7 @@ static size_t getPlatformThreadRegisters
+@@ -391,6 +399,7 @@ static size_t getPlatformThreadRegisters
  #error Need a way to get thread registers on this platform
  #endif
  }
@@ -39,7 +39,7 @@ $NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker
  
  static inline void* otherThreadStackPointer(const PlatformThreadRegisters& regs)
  {
-@@ -431,6 +440,7 @@ static inline void* otherThreadStackPoin
+@@ -441,6 +450,7 @@ static inline void* otherThreadStackPoin
  #endif
  }
  
@@ -47,7 +47,7 @@ $NetBSD: patch-src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker
  static void freePlatformThreadRegisters(PlatformThreadRegisters& regs)
  {
  #if USE(PTHREADS) && !OS(WINDOWS) && !OS(DARWIN)
-@@ -439,24 +449,40 @@ static void freePlatformThreadRegisters(
+@@ -449,24 +459,40 @@ static void freePlatformThreadRegisters(
      UNUSED_PARAM(regs);
  #endif
  }
