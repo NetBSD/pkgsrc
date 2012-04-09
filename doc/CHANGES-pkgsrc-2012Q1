@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.6 2012/04/09 18:36:13 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.7 2012/04/09 19:54:44 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -38,4 +38,9 @@ Pullup ticket #3720 - requested by dholland
 sysutils/strace: build fix
 Pullup ticket #3721 - requested by dholland
 net/wu-ftpd: build fix
+Pullup ticket #3726 - requested by imil
+pkgtools/pkgin: bug fix
+Pullup ticket #3727 - requested by bsiegert
+graphics/cairo: build fix
+
 
