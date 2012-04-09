@@ -1,8 +1,19 @@
-$NetBSD: patch-aj,v 1.7 2004/09/08 15:28:39 sketch Exp $
+$NetBSD: patch-aj,v 1.7.66.1 2012/04/09 18:34:58 spz Exp $
 
---- src/config.h.in.orig	2004-09-08 16:21:50.000000000 +0100
-+++ src/config.h.in	2004-09-08 16:22:01.000000000 +0100
-@@ -76,6 +76,7 @@
+- check for <quota.h>
+- check for strcasestr()
+
+--- src/config.h.in.orig	2000-07-01 18:04:21.000000000 +0000
++++ src/config.h.in
+@@ -42,6 +42,7 @@
+ #undef HAVE_STRING_H
+ #undef HAVE_SYS_DIR_H
+ #undef HAVE_SYS_NDIR_H
++#undef HAVE_QUOTA_H
+ #undef HAVE_SYS_QUOTA_H
+ #undef HAVE_SYS_FS_UFS_QUOTA_H
+ #undef HAVE_UFS_QUOTA_H
+@@ -76,6 +77,7 @@
  #undef HAVE_REGEXEC
  #undef HAVE_SETSID
  #undef HAVE_MEMMOVE
