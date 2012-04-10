@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1096 2012/04/10 13:10:29 sno Exp $
+$NetBSD: CHANGES-2012,v 1.1097 2012/04/10 13:18:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/links to 2.6 [wiz 2012-04-10]
 	Updated www/links-gui to 2.6 [wiz 2012-04-10]
 	Updated devel/p5-App-Cmd to 0.317 [sno 2012-04-10]
+	Updated devel/p5-Config-Auto to 0.42 [sno 2012-04-10]
