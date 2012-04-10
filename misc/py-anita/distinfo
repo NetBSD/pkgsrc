@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2012/04/08 18:23:15 gson Exp $
+$NetBSD: distinfo,v 1.18 2012/04/10 13:23:58 gson Exp $
 
-SHA1 (anita-1.26.tar.gz) = bb272b6260e3c2e5e498549844b94cfa19875e3c
-RMD160 (anita-1.26.tar.gz) = 8e953e5325d1c971e6ab568dd7419c07e26fd42e
-Size (anita-1.26.tar.gz) = 21780 bytes
+SHA1 (anita-1.27.tar.gz) = ed1451b4e48f73b28251978d6c01e9b820ff0b72
+RMD160 (anita-1.27.tar.gz) = d3dccc6f65f6b32de884eb83489764e304d2ef87
+Size (anita-1.27.tar.gz) = 21873 bytes
