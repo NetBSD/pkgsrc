@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/08/09 19:37:45 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/10 15:24:59 mef Exp $
 #
 
 DISTNAME=	urjtag-0.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://downloads.sourceforge.net/project/urjtag/urjtag/0.10/
 
@@ -23,4 +23,5 @@ post-extract:
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/libftdi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
