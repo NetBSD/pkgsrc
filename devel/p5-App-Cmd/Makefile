@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2012/02/16 06:13:03 sno Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/10 13:10:18 sno Exp $
 
-DISTNAME=	App-Cmd-0.316
+DISTNAME=	App-Cmd-0.317
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
@@ -13,15 +13,15 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Capture-Tiny>=0.13:../../devel/p5-Capture-Tiny
-DEPENDS+=	p5-Getopt-Long-Descriptive>=0.084:../../devel/p5-Getopt-Long-Descriptive
 DEPENDS+=	p5-Class-Load>=0.06:../../devel/p5-Class-Load
 DEPENDS+=	p5-Data-OptList-[0-9]*:../../devel/p5-Data-OptList
+DEPENDS+=	p5-Getopt-Long-Descriptive>=0.084:../../devel/p5-Getopt-Long-Descriptive
+DEPENDS+=	p5-IO-TieCombine>=1:../../devel/p5-IO-TieCombine
 DEPENDS+=	{perl>=5.10,p5-Module-Pluggable-[0-9]*}:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-String-RewritePrefix-[0-9]*:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-Sub-Exporter>=0.975:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install
 
-BUILD_DEPENDS+=	p5-IO-TieCombine>=1:../../devel/p5-IO-TieCombine
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=		auto/App/Cmd/.packlist
