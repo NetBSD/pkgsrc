@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1101 2012/04/10 13:50:15 sno Exp $
+$NetBSD: CHANGES-2012,v 1.1102 2012/04/10 13:53:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1789,3 +1789,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-YAML-Tiny to 1.51 [sno 2012-04-10]
 	Updated textproc/p5-YAML-Syck to 1.20 [sno 2012-04-10]
 	Updated textproc/p5-YAML-LibYAML to 0.38 [sno 2012-04-10]
+	Updated textproc/p5-YAML to 0.80 [sno 2012-04-10]
