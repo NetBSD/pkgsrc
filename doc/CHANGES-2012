@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1104 2012/04/10 14:13:46 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1105 2012/04/10 15:31:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1792,3 +1792,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/p5-YAML to 0.80 [sno 2012-04-10]
 	Updated devel/p5-B-Utils to 0.21 [sno 2012-04-10]
 	Updated graphics/tiff to 4.0.1nb1 [taca 2012-04-10]
+	Updated misc/urjtag to 0.10nb3 [mef 2012-04-10]
