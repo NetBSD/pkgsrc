@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1095 2012/04/10 10:54:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1096 2012/04/10 13:10:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/gcompris to 12.01nb1 [wiz 2012-04-09]
 	Updated www/links to 2.6 [wiz 2012-04-10]
 	Updated www/links-gui to 2.6 [wiz 2012-04-10]
+	Updated devel/p5-App-Cmd to 0.317 [sno 2012-04-10]
