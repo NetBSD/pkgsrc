@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1098 2012/04/10 13:25:08 gson Exp $
+$NetBSD: CHANGES-2012,v 1.1099 2012/04/10 13:29:12 sno Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-App-Cmd to 0.317 [sno 2012-04-10]
 	Updated devel/p5-Config-Auto to 0.42 [sno 2012-04-10]
 	Updated misc/py-anita to 1.27 [gson 2012-04-10]
+	Updated textproc/p5-YAML-Tiny to 1.51 [sno 2012-04-10]
