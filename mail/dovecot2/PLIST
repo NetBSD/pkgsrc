@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/03/17 02:14:15 ghen Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/04/10 12:12:21 ghen Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -360,6 +360,7 @@ lib/dovecot/dovecot-config
 lib/dovecot/lib01_acl_plugin.la
 lib/dovecot/lib02_imap_acl_plugin.la
 lib/dovecot/lib02_lazy_expunge_plugin.la
+lib/dovecot/lib05_pop3_migration_plugin.la
 lib/dovecot/lib05_snarf_plugin.la
 lib/dovecot/lib10_quota_plugin.la
 lib/dovecot/lib11_imap_quota_plugin.la
@@ -559,6 +560,7 @@ share/doc/dovecot/wiki/MboxProblems.txt
 share/doc/dovecot/wiki/Migration.BincIMAP.txt
 share/doc/dovecot/wiki/Migration.Courier.txt
 share/doc/dovecot/wiki/Migration.Cyrus.txt
+share/doc/dovecot/wiki/Migration.Dsync.txt
 share/doc/dovecot/wiki/Migration.Linuxconf.txt
 share/doc/dovecot/wiki/Migration.MailFormat.txt
 share/doc/dovecot/wiki/Migration.Online.txt
