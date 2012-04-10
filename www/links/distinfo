@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.57 2012/01/20 12:27:35 wiz Exp $
+$NetBSD: distinfo,v 1.58 2012/04/10 10:53:28 wiz Exp $
 
-SHA1 (links-2.5.tar.bz2) = fe4bc37be8aebd9196c35ffef724435cea94349c
-RMD160 (links-2.5.tar.bz2) = ec0c2fbf239289d757fd12526495bdcb3c08a588
-Size (links-2.5.tar.bz2) = 3849259 bytes
+SHA1 (links-2.6.tar.bz2) = 228bd726c176ea44d35fa12cafd97aa83214d9dc
+RMD160 (links-2.6.tar.bz2) = ea13e446903fbeaa8b05b3aa81dcfe5f69224962
+Size (links-2.6.tar.bz2) = 3866614 bytes
 SHA1 (patch-ab) = a2d461c9d8b6300469ab6195886830fdd63be837
