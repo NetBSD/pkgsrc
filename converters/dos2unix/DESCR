@@ -1,0 +1,3 @@
+dos2unix includes utilities to convert text files with DOS or MAC
+line endings to Unix line endings and vice versa. It is an update
+of Benjamin Lin's implementations.
