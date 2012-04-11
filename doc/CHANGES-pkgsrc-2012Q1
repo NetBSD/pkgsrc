@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.7 2012/04/09 19:54:44 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.8 2012/04/11 11:26:54 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -42,5 +42,8 @@ Pullup ticket #3726 - requested by imil
 pkgtools/pkgin: bug fix
 Pullup ticket #3727 - requested by bsiegert
 graphics/cairo: build fix
-
-
+Pullup ticket #3728 - requested by taca
+graphics/tiff: security patch
+Pullup ticket #3729 - requested by jdf
+net/samba: security update
+net/samba35: security update
