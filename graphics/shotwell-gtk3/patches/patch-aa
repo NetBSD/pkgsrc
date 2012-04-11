@@ -1,0 +1,67 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/04/11 11:48:30 drochner Exp $
+
+--- Makefile.orig	2012-03-28 22:35:57.000000000 +0000
++++ Makefile
+@@ -280,7 +280,6 @@ EXT_PKGS = \
+ 	gstreamer-base-0.10 \
+ 	gstreamer-pbutils-0.10 \
+ 	gtk+-3.0 \
+-	gudev-1.0 \
+ 	libexif \
+ 	libgphoto2 \
+ 	libsoup-2.4 \
+@@ -316,7 +315,6 @@ EXT_PKG_VERSIONS = \
+ 	gstreamer-plugins-base-0.10 >= 0.10.32 \
+ 	gstreamer-pbutils-0.10 >= 0.10.32 \
+ 	gtk+-3.0 >= 3.0.11 \
+-	gudev-1.0 >= 145 \
+ 	libexif >= 0.6.16 \
+ 	libgphoto2 >= 2.4.2 \
+ 	libsoup-2.4 >= 2.26.0 \
+@@ -440,7 +438,7 @@ CFLAGS += -DG_UDEV_API_IS_SUBJECT_TO_CHA
+ # if not available.
+ LIBRAW_CONFIG=./libraw-config
+ 
+-define check_valac_version
++define xcheck_valac_version
+ 	@ ./chkver min $(VALAC_VERSION) $(MIN_VALAC_VERSION) || ( echo 'Shotwell requires Vala compiler $(MIN_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 )
+ 	$(if $(MAX_VALAC_VERSION),\
+ 		@ ./chkver max $(VALAC_VERSION) $(MAX_VALAC_VERSION) || ( echo 'Shotwell cannot be built by Vala compiler $(MAX_VALAC_VERSION) or greater.  You are running' $(VALAC_VERSION) '\b.'; exit 1 ),)
+@@ -666,7 +664,6 @@ $(UNITIZE_INITS) $(UNITIZE_ENTRIES): $(U
+ 
+ # EXPANDED_SRC_FILES includes UNITIZE_INITS and UNITIZE_ENTRY
+ $(VALA_STAMP): $(EXPANDED_SRC_FILES) $(EXPANDED_VAPI_FILES) $(EXPANDED_SRC_HEADER_FILES)
+-	$(call check_valac_version)
+ 	@echo Compiling Vala code...
+ 	@mkdir -p $(BUILD_DIR)
+ 	@$(VALAC) --ccode --directory=$(BUILD_DIR) --basedir=src \
+@@ -683,10 +680,10 @@ $(EXPANDED_C_FILES): $(VALA_STAMP)
+ 	@
+ 
+ $(EXPANDED_OBJ_FILES): %.o: %.c $(CONFIG_IN) Makefile
+-	$(CC) -c $(VALA_CFLAGS) `$(LIBRAW_CONFIG) --cflags` $(CFLAGS) -o $@ $<
++	$(CC) -c $(VALA_CFLAGS) $(CFLAGS) `pkg-config --cflags libraw` -o $@ $<
+ 
+ $(PROGRAM): $(EXPANDED_OBJ_FILES) $(RESOURCES) $(LANG_STAMP) $(THUMBNAILER_BIN)
+-	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(LDFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `$(LIBRAW_CONFIG) --libs` $(EXPORT_FLAGS) -o $@
++	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `pkg-config --libs libraw` $(EXPORT_FLAGS) -o $@
+ 	glib-compile-schemas misc
+ 
+ $(THUMBNAILER_BIN): $(EXPANDED_THUMBNAILER_SRC_FILES)
+@@ -697,7 +694,6 @@ $(PLUGINS_SO) $(EXTRA_PLUGINS_SO): $(PLU
+ 
+ .PHONY: $(PLUGINS_DIR)
+ $(PLUGINS_DIR): $(PLUGIN_VAPI) $(PLUGIN_HEADER) $(PLUGIN_DEPS)
+-	$(call check_valac_version)
+ 	@$(MAKE) --directory=$@ PLUGINS_VERSION="$(VERSION)" USER_VALAFLAGS="$(USER_VALAFLAGS)" \
+ 		PLUGIN_CFLAGS="$(PLUGIN_CFLAGS)"
+ 
+@@ -715,7 +711,7 @@ docs:
+ glade: lib$(PROGRAM).so
+ 
+ lib$(PROGRAM).so: $(EXPANDED_OBJ_FILES) $(RESOURCES) $(LANG_STAMP)
+-	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(LDFLAGS) $(RESOURCES) $(VALA_LDFLAGS) `$(LIBRAW_CONFIG) --libs` $(EXPORT_FLAGS) -shared -o $@
++	$(CC) $(EXPANDED_OBJ_FILES) $(CFLAGS) $(RESOURCES) $(VALA_LDFLAGS) $(LDFLAGS) `pkg-config --libs libraw` $(EXPORT_FLAGS) -shared -o $@
+ 
+ .PHONY: pkgcheck
+ pkgcheck:
