@@ -1,0 +1,6 @@
+Gitso is a frontend to reverse VNC connections. It is meant to be a simple
+two-step process that connects one person to another's screen. First, the
+support person offers to give support. Second, the person who needs help
+connects and has their screen remotely visible. Because Gitso is cross-
+platform and uses a reverse VNC connection, it greatly simplifies the
+process of getting and providing support.

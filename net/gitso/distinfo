@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/04/11 17:42:06 darcy Exp $
+
+SHA1 (gitso_0.6_linux_all.tar.gz) = 577edcb257aa2508a6ee9b5ea8a3de135e0abf6c
+RMD160 (gitso_0.6_linux_all.tar.gz) = 4428ecdbe73819a8251c3f9d05c61f62ae2e20df
+Size (gitso_0.6_linux_all.tar.gz) = 192753 bytes
