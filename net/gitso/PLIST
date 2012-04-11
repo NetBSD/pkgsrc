@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2012/04/11 17:42:06 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/11 19:32:17 darcy Exp $
 bin/gitso
 bin/run-gitso.sh
 ${PYSITELIB}/gitso/ConnectionWindow.py
+${PYSITELIB}/gitso/COPYING
 ${PYSITELIB}/gitso/AboutWindow.py
 ${PYSITELIB}/gitso/ArgsParser.py
 ${PYSITELIB}/gitso/Gitso.py

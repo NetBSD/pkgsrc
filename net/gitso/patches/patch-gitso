@@ -1,0 +1,18 @@
+$NetBSD: patch-gitso,v 1.1 2012/04/11 19:32:17 darcy Exp $
+
+Fix up PYTHONPATH
+
+--- bin/gitso.orig	2010-02-22 02:48:04.000000000 +0000
++++ bin/gitso
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python
+ 
+ import sys, os, wx
+-sys.path.append(os.path.join(sys.path[0], '..', 'share', 'gitso'))
++sys.path.append(os.path.join(sys.path[0], 'gitso'))
+ 
+-from Gitso import ConnectionWindow, ArgsParser
++from gitso import ConnectionWindow, ArgsParser
+ 
+ if __name__ == "__main__":
+ 	app = wx.PySimpleApp()

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/04/11 17:42:06 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/11 19:32:17 darcy Exp $
 
 DISTNAME=		gitso-0.6
 CATEGORIES=		net x11
@@ -15,7 +15,7 @@ WRKSRC=                 ${WRKDIR}/Gitso
 PY_PATCHPLIST=          yes
 USE_TOOLS+=             bash:run
 
-REPLACE_BASH+=          run-gitso.sh
+REPLACE_BASH+=          run-gitso.sh.local
 REPLACE_PYTHON+=        bin/gitso
 REPLACE_PYTHON+=        share/gitso/ArgsParser.py
 REPLACE_PYTHON+=        share/gitso/ConnectionWindow.py
@@ -31,6 +31,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 NO_BUILD=               yes
 INSTALLATION_DIRS+=     bin
+INSTALLATION_DIRS+=     share/gitso
 INSTALLATION_DIRS+=     ${PYSITELIB}/gitso
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,10 +39,22 @@ INSTALLATION_DIRS+=     ${PYSITELIB}/gitso
 DEPENDS+=		vncviewer-[0-9]*:../../net/vncviewer
 DEPENDS+=		x11vnc-[0-9]*:../../x11/x11vnc
 
+SITEFILES =	${WRKSRC}/share/gitso/*.py \
+		${WRKSRC}/share/gitso/icon.* \
+		${WRKSRC}/share/gitso/icon.* \
+		${WRKSRC}/share/gitso/hosts.txt \
+		${WRKSRC}/share/doc/gitso/COPYING
+
+post-patch:
+	${SED} -e 's|bin/gitso|${DESTDIR}${PREFIX}/bin/gitso|' \
+		< ${WRKSRC}/run-gitso.sh \
+		> ${WRKSRC}/run-gitso.sh.local
+
 do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/run-gitso.sh.local \
+		${DESTDIR}${PREFIX}/bin/run-gitso.sh
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/gitso ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/run-gitso.sh ${DESTDIR}${PREFIX}/bin
-	for i in ${WRKSRC}/share/gitso/*; do \
+	for i in ${SITEFILES}; do \
 		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/${PYSITELIB}/gitso; \
 	done
 
