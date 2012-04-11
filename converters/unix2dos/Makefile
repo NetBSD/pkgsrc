@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/02/26 10:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/04/11 17:48:54 ryoon Exp $
 
 DISTNAME=	unix2dos-1.3
 CATEGORIES=	converters
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Translate ASCII files to/from DOS (cr/lf) and UNIX (lf)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=	dos2unix-[0-9]*
 
 WRKSRC=		${WRKDIR}
 
