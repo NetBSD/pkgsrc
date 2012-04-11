@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/15 18:55:43 gls Exp $
+$NetBSD: patch-aa,v 1.2 2012/04/11 11:34:59 drochner Exp $
 
---- Makefile.orig	2010-09-10 21:52:54.000000000 +0000
+--- Makefile.orig	2012-03-28 22:41:52.000000000 +0000
 +++ Makefile
-@@ -159,7 +159,7 @@ $(VAPI_FILE): $(EXPANDED_VAPI_INPUT) $(D
- 	vapigen --library=$(PKGNAME) --metadata=vapi/$(PKGNAME).metadata vapi/$(PKGNAME).gi
+@@ -162,7 +162,7 @@ $(VAPI_FILE): $(EXPANDED_VAPI_INPUT) $(D
+ 	vapigen --library=$(PKGNAME) --metadatadir=vapi vapi/$(PKGNAME).gi
  
- $(PC_FILE) : $(PC_INPUT) Makefile $(CONFIG_IN)
+ $(PC_FILE): $(PC_INPUT) Makefile $(CONFIG_IN)
 -	m4 '--define=_VERSION_=$(VERSION)' '--define=_PREFIX_=$(PREFIX)' $< > $@
 +	m4 '-D_VERSION_=$(VERSION)' '-D_PREFIX_=$(PREFIX)' $< > $@
  
