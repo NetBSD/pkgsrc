@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/03/13 13:23:18 taca Exp $
+$NetBSD: distinfo,v 1.2.2.1 2012/04/11 18:26:36 spz Exp $
 
+SHA1 (samba-3.0.37-CVE-2012-1182.patch) = 0d90e57897fa6c2fefdd88dd8a6daa0c87302110
+RMD160 (samba-3.0.37-CVE-2012-1182.patch) = 417e58c300df8b6771bd93674fee1b96c9f3a933
+Size (samba-3.0.37-CVE-2012-1182.patch) = 3223 bytes
 SHA1 (samba-3.0.37.tar.gz) = 5ec6bc6558b3c799f747eb49fbba019d5edf0cbd
 RMD160 (samba-3.0.37.tar.gz) = 06b76ae22729e10c83d6af42d03b03ad69e49103
 Size (samba-3.0.37.tar.gz) = 23416703 bytes
