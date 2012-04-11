@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/08 20:47:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/11 21:22:00 wiz Exp $
 bin/cloog
 include/cloog/block.h
 include/cloog/clast.h
@@ -54,5 +54,6 @@ include/isl/version.h
 include/isl/vertices.h
 lib/libcloog-isl.la
 lib/libisl.la
+lib/libisl.so.6.0.0-gdb.py
 lib/pkgconfig/cloog-isl.pc
 lib/pkgconfig/isl.pc
