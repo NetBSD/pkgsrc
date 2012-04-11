@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/11/22 19:46:09 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2012/04/11 17:20:45 ryoon Exp $
 
-SHA1 (diffpdf-1.5.0.tar.gz) = f576005578ee31b69e49129ed55967435ec7e7c8
-RMD160 (diffpdf-1.5.0.tar.gz) = 99f12205bc37b00338dbb1616f65a268baeb315d
-Size (diffpdf-1.5.0.tar.gz) = 31412 bytes
-SHA1 (patch-aa) = 21175f2fd8dbf6ee78354cf941543c8e11edab8f
+SHA1 (diffpdf-1.9.2.tar.gz) = f9c22c4b1b07c25e9a8973ad07a6b78a1270255f
+RMD160 (diffpdf-1.9.2.tar.gz) = 4041ba877eea5f1f62f96033d023a5f0ea68f04c
+Size (diffpdf-1.9.2.tar.gz) = 51045 bytes
+SHA1 (patch-aa) = 2f893d32bc18e72d0189addd89bacdff8287b4af
