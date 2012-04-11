@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1106 2012/04/11 01:11:04 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1107 2012/04/11 09:30:22 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1794,3 +1794,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/tiff to 4.0.1nb1 [taca 2012-04-10]
 	Updated misc/urjtag to 0.10nb3 [mef 2012-04-10]
 	Updated emulators/suse121_openssl to 12.1nb2 [obache 2012-04-11]
+	Updated net/samba to 3.6.4 [asau 2012-04-11]
