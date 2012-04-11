@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.8 2012/04/11 11:26:54 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.9 2012/04/11 18:39:27 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -47,3 +47,8 @@ graphics/tiff: security patch
 Pullup ticket #3729 - requested by jdf
 net/samba: security update
 net/samba35: security update
+Pullup ticket #3730 - requested by jdf
+net/samba30: security fix
+Pullup ticket #3731 - requested by jdf
+net/samba33: security fix
+
