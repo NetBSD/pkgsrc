@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1109 2012/04/11 12:14:52 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.1110 2012/04/11 17:21:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1798,3 +1798,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/samba35 to 3.5.14 [asau 2012-04-11]
 	Updated graphics/libgexiv2 to 0.4.1 [drochner 2012-04-11]
 	Updated misc/stellarium to 0.11.2 [drochner 2012-04-11]
+	Updated print/diffpdf to 1.9.2 [ryoon 2012-04-11]
