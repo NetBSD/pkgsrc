@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2011/01/12 07:22:38 adam Exp $
+$NetBSD: patch-ae,v 1.2 2012/04/11 12:10:01 drochner Exp $
 
---- CMakeLists.txt.orig	2010-12-05 16:31:01.000000000 +0000
+--- CMakeLists.txt.orig	2012-03-10 06:01:05.000000000 +0000
 +++ CMakeLists.txt
 @@ -28,7 +28,6 @@ IF(NOT CMAKE_BUILD_TYPE)
  ENDIF()
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.1 2011/01/12 07:22:38 adam Exp $
  ENDIF()
  
  
-@@ -216,12 +215,8 @@ ENDIF()
+@@ -234,14 +233,10 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -19,11 +19,13 @@ $NetBSD: patch-ae,v 1.1 2011/01/12 07:22:38 adam Exp $
 -ELSE(APPLE)
    ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/share/stellarium")
    ADD_DEFINITIONS(-DINSTALL_LOCALEDIR="${CMAKE_INSTALL_PREFIX}/share/locale")
+   # Used in generating the documentation (doc/stellarium.pod.cmake):
+   SET(INSTALL_DATADIR "${CMAKE_INSTALL_PREFIX}/share/stellarium")
 -ENDIF()
  ELSE()
    ADD_DEFINITIONS(-DINSTALL_DATADIR=".")
    ADD_DEFINITIONS(-DINSTALL_LOCALEDIR="./locale")
-@@ -290,9 +285,6 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -310,9 +305,6 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### Macosx Bundling ###############
