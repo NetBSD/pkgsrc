@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10993 2012/04/09 09:20:14 adam Exp $
+$NetBSD: TODO,v 1.10994 2012/04/11 17:21:37 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -517,7 +517,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o desktop-file-utils-0.20
 	o dgen-1.30
 	o dhid-5.3
-	o diffpdf-1.9.2
 	o diffstat-1.55
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
