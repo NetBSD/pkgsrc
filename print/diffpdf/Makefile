@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2012/03/03 00:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/04/11 17:20:45 ryoon Exp $
 #
 
-DISTNAME=	diffpdf-1.5.0
-PKGREVISION=	3
+DISTNAME=	diffpdf-1.9.2
 CATEGORIES=	print
 MASTER_SITES=	http://www.qtrac.eu/
 
@@ -17,7 +16,8 @@ USE_LANGUAGES=	c++
 INSTALLATION_DIRS+= bin ${PKGMANDIR}/man1
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
+	cd ${WRKSRC} && ${QTDIR}/bin/lrelease diffpdf.pro && \
+		${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/diffpdf ${DESTDIR}${PREFIX}/bin
@@ -26,5 +26,6 @@ do-install:
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

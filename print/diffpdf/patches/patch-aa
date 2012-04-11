@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2011/07/15 02:41:30 ryoon Exp $
+$NetBSD: patch-aa,v 1.5 2012/04/11 17:20:45 ryoon Exp $
 
---- diffpdf.pro.orig	2011-06-20 08:20:22.000000000 +0000
+--- diffpdf.pro.orig	2012-02-28 09:36:12.000000000 +0000
 +++ diffpdf.pro
-@@ -14,8 +14,8 @@ exists($(HOME)/opt/poppler016/) {
-     INCLUDEPATH += $(HOME)/opt/poppler016/include/poppler/qt4
-     LIBS += -Wl,-rpath -Wl,$(HOME)/opt/poppler016/lib -Wl,-L$(HOME)/opt/poppler016/lib
+@@ -33,9 +33,9 @@ exists($(HOME)/opt/poppler018/) {
+     INCLUDEPATH += $(HOME)/opt/poppler018/include/poppler/qt4
+     LIBS += -Wl,-rpath -Wl,$(HOME)/opt/poppler018/lib -Wl,-L$(HOME)/opt/poppler018/lib
  } else {
 -    exists(/usr/include/poppler/qt4) {
+-	INCLUDEPATH += /usr/include/poppler/cpp
 -	INCLUDEPATH += /usr/include/poppler/qt4
 +    exists($(LOCALBASE)/include/poppler/qt4) {
++	INCLUDEPATH += $(LOCALBASE)/include/poppler/cpp
 +	INCLUDEPATH += $(LOCALBASE)/include/poppler/qt4
      } else {
+ 	INCLUDEPATH += /usr/local/include/poppler/cpp
  	INCLUDEPATH += /usr/local/include/poppler/qt4
-     }
