@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.9 2012/03/13 13:22:24 taca Exp $
+$NetBSD: distinfo,v 1.9.2.1 2012/04/11 18:37:38 spz Exp $
 
+SHA1 (samba-3.3.16-CVE-2012-1182.patch) = d3491c3f4a8a133b03b4d939b52047e22ee67706
+RMD160 (samba-3.3.16-CVE-2012-1182.patch) = db8425087d88c11a3490505e0603f1d0fb8d5d7f
+Size (samba-3.3.16-CVE-2012-1182.patch) = 1367588 bytes
 SHA1 (samba-3.3.16.tar.gz) = bfb06f2cd88ba6c2fb9d25cabf3b22bf1a402f08
 RMD160 (samba-3.3.16.tar.gz) = 30e181de0e5399503cad3e09f3dd172a0fc6a011
 Size (samba-3.3.16.tar.gz) = 25566685 bytes
