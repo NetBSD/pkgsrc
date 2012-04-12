@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/04/12 13:50:23 obache Exp $
+
+* test(1) portability fix
+
+--- configure.orig	2012-03-17 14:02:47.000000000 +0000
++++ configure
+@@ -4621,7 +4621,7 @@ echo $ECHO_N "checking major version... 
+ 	* ) darwin_shared="-arch i386 -arch x86_64";
+ 		deployment_target=MACOSX_DEPLOYMENT_TARGET=10.6;;
+     esac
+-    if test "$mactiger" == "yes"; then
++    if test "$mactiger" = "yes"; then
+ 	deployment_target="MACOSX_DEPLOYMENT_TARGET=10.4"
+     fi
+ fi
