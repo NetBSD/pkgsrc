@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.hipe,v 1.1 2011/04/14 20:38:09 asau Exp $
+@comment $NetBSD: PLIST.hipe,v 1.2 2012/04/12 12:14:12 asau Exp $
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_adj_list.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_assemble.beam
@@ -38,7 +38,6 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_ra_naive.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_ra_postconditions.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_registers.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_specific.beam
-lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_ceach.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_coalescing_regalloc.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_data_pp.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_graph_coloring_regalloc.beam
