@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1114 2012/04/12 08:22:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1115 2012/04/12 13:50:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1803,3 +1803,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added converters/dos2unix version 5.3.3 [ryoon 2012-04-11]
 	Updated math/cloog to 0.16.2nb1 [wiz 2012-04-11]
 	Updated security/dirmngr to 1.1.0nb3 [wiz 2012-04-12]
+	Updated converters/skf to 1.99.0 [obache 2012-04-12]
