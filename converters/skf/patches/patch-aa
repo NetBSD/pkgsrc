@@ -1,28 +1,30 @@
-$NetBSD: patch-aa,v 1.7 2010/02/07 13:17:55 obache Exp $
+$NetBSD: patch-aa,v 1.8 2012/04/12 13:50:23 obache Exp $
 
---- Makefile.in.orig	2010-01-09 15:37:45.000000000 +0000
+* fix localedir
+* fix manpath
+* enable locale
+
+--- Makefile.in.orig	2012-03-17 08:22:27.000000000 +0000
 +++ Makefile.in
-@@ -55,15 +55,16 @@ GNU_S_INCLUDE_DIR = @gnu_s_headers_dir@
+@@ -54,13 +54,14 @@ GNU_S_INCLUDE_DIR = @gnu_s_headers_dir@
  #
  DOCDIR		= $(datadir)/doc/@PACKAGE@
  #
--mandir = $(prefix)/$(manrawdir)
-+mandir = @mandir@
 +localedir= @localedir@
  
- LSFMANDIR	= $(datadir)/man
- MANCJDIR	= $(LSFMANDIR)/ja
- MANDIR		= $(mandir)/man1
--JOMANDIR	= $(mandir)/ja/man1
-+JOMANDIR	= $(mandir)/ja_JP.EUC/man1
- JMANDIR		= $(mandir)/ja_JP.UTF-8/man1
+-LSFMANDIR	= $(datadir)/man
++LSFMANDIR	= @mandir@
+ MANDIR		= $(LSFMANDIR)/man1
+-JOMANDIR	= $(LSFMANDIR)/ja/man1
++JOMANDIR	= $(LSFMANDIR)/ja_JP.EUC/man1
+ JMANDIR		= $(LSFMANDIR)/ja_JP.UTF-8/man1
  SKFTUTDIR	= $(DOCDIR)/doc
 -LOCALEDIR	= @localedir@
 +LOCALEDIR	= $(localedir)
  LOCALEJDIR	= "$(LOCALEDIR)/ja/LC_MESSAGES"
  SKFLIBDIR	= $(LSKFDIR)/lib
  
-@@ -111,8 +112,8 @@ CC = @CC@
+@@ -108,8 +109,8 @@ CC = @CC@
  
  SUBDIRS = 
  
