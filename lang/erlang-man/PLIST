@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/01/23 09:32:39 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/04/12 12:14:13 asau Exp $
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameter_compile.1
 lib/erlang/man/man1/epmd.1
@@ -132,10 +132,8 @@ lib/erlang/man/man3/digraph.3
 lib/erlang/man/man3/digraph_utils.3
 lib/erlang/man/man3/disk_log.3
 lib/erlang/man/man3/disksup.3
-lib/erlang/man/man3/docb_gen.3
-lib/erlang/man/man3/docb_transform.3
-lib/erlang/man/man3/docb_xml_check.3
 lib/erlang/man/man3/driver_entry.3
+lib/erlang/man/man3/dyntrace.3
 lib/erlang/man/man3/edoc.3
 lib/erlang/man/man3/edoc_doclet.3
 lib/erlang/man/man3/edoc_extract.3
@@ -145,6 +143,7 @@ lib/erlang/man/man3/edoc_run.3
 lib/erlang/man/man3/egd.3
 lib/erlang/man/man3/ei.3
 lib/erlang/man/man3/ei_connect.3
+lib/erlang/man/man3/eldap.3
 lib/erlang/man/man3/epp.3
 lib/erlang/man/man3/epp_dodger.3
 lib/erlang/man/man3/eprof.3
@@ -213,6 +212,7 @@ lib/erlang/man/man3/global_group.3
 lib/erlang/man/man3/glu.3
 lib/erlang/man/man3/gs.3
 lib/erlang/man/man3/heart.3
+lib/erlang/man/man3/http_uri.3
 lib/erlang/man/man3/httpc.3
 lib/erlang/man/man3/httpd.3
 lib/erlang/man/man3/httpd_conf.3
@@ -272,8 +272,8 @@ lib/erlang/man/man3/ms_transform.3
 lib/erlang/man/man3/net_adm.3
 lib/erlang/man/man3/net_kernel.3
 lib/erlang/man/man3/nteventlog.3
+lib/erlang/man/man3/observer.3
 lib/erlang/man/man3/odbc.3
-lib/erlang/man/man3/old_ssl.3
 lib/erlang/man/man3/orber.3
 lib/erlang/man/man3/orber_acl.3
 lib/erlang/man/man3/orber_diagnostics.3
@@ -302,7 +302,6 @@ lib/erlang/man/man3/queue.3
 lib/erlang/man/man3/random.3
 lib/erlang/man/man3/rb.3
 lib/erlang/man/man3/re.3
-lib/erlang/man/man3/regexp.3
 lib/erlang/man/man3/registry.3
 lib/erlang/man/man3/release_handler.3
 lib/erlang/man/man3/reltool.3
@@ -565,7 +564,10 @@ lib/erlang/man/man3/wxStdDialogButtonSizer.3
 lib/erlang/man/man3/wxStyledTextCtrl.3
 lib/erlang/man/man3/wxStyledTextEvent.3
 lib/erlang/man/man3/wxSysColourChangedEvent.3
+lib/erlang/man/man3/wxSystemOptions.3
 lib/erlang/man/man3/wxSystemSettings.3
+lib/erlang/man/man3/wxTaskBarIcon.3
+lib/erlang/man/man3/wxTaskBarIconEvent.3
 lib/erlang/man/man3/wxTextAttr.3
 lib/erlang/man/man3/wxTextCtrl.3
 lib/erlang/man/man3/wxTextDataObject.3
@@ -607,7 +609,7 @@ lib/erlang/man/man4/relup.4
 lib/erlang/man/man4/script.4
 lib/erlang/man/man6/common_test.6
 lib/erlang/man/man6/crypto.6
-lib/erlang/man/man6/docbuilder.6
+lib/erlang/man/man6/erl_docgen.6
 lib/erlang/man/man6/kernel.6
 lib/erlang/man/man6/observer.6
 lib/erlang/man/man6/os_mon.6
