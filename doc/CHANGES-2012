@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1118 2012/04/12 17:17:16 asau Exp $
+$NetBSD: CHANGES-2012,v 1.1119 2012/04/12 17:18:15 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1807,3 +1807,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated print/acroread9 to 9.5.1 [obache 2012-04-12]
 	Added www/dojo version 1.7.2 [darcy 2012-04-12]
 	Updated lang/erlang to 15.1.1 [asau 2012-04-12]
+	Updated lang/erlang-man to 15.1.1 [asau 2012-04-12]
