@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10996 2012/04/12 14:31:42 obache Exp $
+$NetBSD: TODO,v 1.10997 2012/04/12 20:27:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -318,6 +318,7 @@ Suggested package updates
 =========================
 For possible perl packages updates, see http://www.pkgbox.org/p2c/
 
+	o 
 	o CSP-0.34
 	o Canna-3.7p3
 	o Chinput-3.0.1
@@ -448,6 +449,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o calibre-0.8.46
+	o calligra-2.4.0 [koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.3
 	o cddbd-1.5.2
@@ -839,6 +841,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdbg-2.5.1
 	o kde4-4.8.2
 	o kdenlive-0.8.2.1
+	o kdevelop-4.3.0
 	o kdrill-6.5
 	o kid3-2.0.1
 	o kismet-2011.03r2 [pkg/45692]
@@ -1007,7 +1010,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3diags-1.1.18
 	o mpeg4ip-1.6.1
 	o mpfr-3.1.0
-	o mpg123-1.13.7
+	o mpg123-1.13.8
 	o mpich-1.4.1p1
 	o mpop-1.0.26
 	o mserv-devel-0.41
@@ -1034,7 +1037,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newmail-1.0.2
 	o newt-0.52.12
 	o ng-1.4.4
-	o nginx-1.0.14
+	o nginx-1.0.15
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
 	o nmh-1.4
