@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1116 2012/04/12 14:31:42 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1117 2012/04/12 16:37:14 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1805,3 +1805,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/dirmngr to 1.1.0nb3 [wiz 2012-04-12]
 	Updated converters/skf to 1.99.0 [obache 2012-04-12]
 	Updated print/acroread9 to 9.5.1 [obache 2012-04-12]
+	Added www/dojo version 1.7.2 [darcy 2012-04-12]
