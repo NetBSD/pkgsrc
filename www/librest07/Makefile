@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/11 11:40:18 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/12 09:51:12 drochner Exp $
 #
 
 DISTNAME=	rest-0.7.12
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
+# see pkgsrc/security/mozilla-rootcerts
+CONFIGURE_ARGS+= --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
 
 PKGCONFIG_OVERRIDE+=	rest.pc.in
 
