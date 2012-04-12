@@ -1,13 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dirmngr.sh,v 1.3 2007/11/07 19:38:12 shannonjr Exp $
+# $NetBSD: dirmngr.sh,v 1.4 2012/04/12 08:21:54 wiz Exp $
 #
 # PROVIDE: dirmngr
 # REQUIRE: DAEMON
 #
 
-if [ -f @PKG_SYSCONFDIR@/rc.subr ]; then
-	. @PKG_SYSCONFDIR@/rc.subr
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
 fi
 
 name="dirmngr"
