@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2012/04/13 10:35:38 hans Exp $
+# $NetBSD: Makefile,v 1.35 2012/04/13 11:01:32 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -70,8 +71,6 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--disable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
-CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 
@@ -123,6 +122,4 @@ GENERATE_PLIST+=                                                        \
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print \
 	| ${SORT} ;
 
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
