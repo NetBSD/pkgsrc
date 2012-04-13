@@ -1,0 +1,19 @@
+$NetBSD: patch-webspld_c,v 1.1 2012/04/13 05:51:44 dholland Exp $
+
+Use standard headers.
+
+--- webspld.c~	2006-10-22 11:08:09.000000000 +0000
++++ webspld.c
+@@ -34,11 +34,7 @@
+ #include <errno.h>
+ #include <signal.h>
+ #include <fcntl.h>
+-
+-#ifdef USEBSDAPI
+-//that's for PATH_MAX
+-#include <sys/syslimits.h>
+-#endif
++#include <limits.h>
+ 
+ #ifdef ENABLE_PTHREAD_SUPPORT
+ #  include <pthread.h>
