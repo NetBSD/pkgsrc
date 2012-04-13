@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1134 2012/04/13 19:18:57 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1135 2012/04/13 21:16:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1824,3 +1824,8 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ruby-twitter-stream to 0.1.15 [obache 2012-04-13]
 	Added www/apache24 version 2.4.1 [ryoon 2012-04-13]
 	Updated lang/python27 to 2.7.3 [adam 2012-04-13]
+	Updated devel/scmgit to 1.7.10 [adam 2012-04-13]
+	Updated devel/scmgit-base to 1.7.10 [adam 2012-04-13]
+	Updated devel/scmgit-docs to 1.7.10 [adam 2012-04-13]
+	Updated www/gitweb to 1.7.10 [adam 2012-04-13]
+	Updated audio/libgpod to 0.8.2 [adam 2012-04-13]
