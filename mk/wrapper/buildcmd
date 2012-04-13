@@ -1,4 +1,4 @@
-# $NetBSD: buildcmd,v 1.4 2008/04/21 14:43:50 joerg Exp $
+# $NetBSD: buildcmd,v 1.5 2012/04/13 03:11:13 sbd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,7 +65,12 @@ case $arg in
 	cmd="$cmd $arg"
 	libs="$libs $arg"
 	;;
--l*)
+######################################################################
+# Treat the '--as-needed' and '--no-as-needed' arguments to ld as if
+# thay are librarys so that they still surround the given library.
+# WARNING: this may not work if the wrapper reorders librarys.
+######################################################################
+-l*|--as-needed|--no-as-needed)
 	case $libs in
 	*" "$arg)
 		;;
