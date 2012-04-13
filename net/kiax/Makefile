@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/11/01 06:02:19 sbd Exp $
+# $NetBSD: Makefile,v 1.20 2012/04/13 22:59:16 hans Exp $
 
 DISTNAME=	kiax-0.8.51-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -36,7 +36,8 @@ SUBST_FILES.path=	src/src.pro bin/Makefile
 SUBST_SED.path=		-e 's:/usr/local:${PREFIX}:g'
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h) || \
+    ${OPSYS} == "SunOS"
 RT_LIB_SCHED=		-lrt
 .else
 RT_LIB_SCHED=		# empty
