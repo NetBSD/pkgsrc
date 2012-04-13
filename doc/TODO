@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10998 2012/04/13 07:37:17 dholland Exp $
+$NetBSD: TODO,v 1.10999 2012/04/13 12:44:42 asau Exp $
 
 Suggested new packages
 ======================
@@ -1221,7 +1221,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sarg-2.2.5
 	o sawfish-1.8.2
 	o saxon-9.2
-	o sbcl-1.0.55
 	o scala-2.9.1.1
 	o scapy-2.2.0
 	o scew-0.4.0
