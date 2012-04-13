@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10997 2012/04/12 20:27:52 wiz Exp $
+$NetBSD: TODO,v 1.10998 2012/04/13 07:37:17 dholland Exp $
 
 Suggested new packages
 ======================
@@ -318,7 +318,6 @@ Suggested package updates
 =========================
 For possible perl packages updates, see http://www.pkgbox.org/p2c/
 
-	o 
 	o CSP-0.34
 	o Canna-3.7p3
 	o Chinput-3.0.1
@@ -1051,7 +1050,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nxtvepg-2.8.1
 	o obexftp-0.23
 	o objc-3.2.8
-	o ocamlduce-3.11.2.0
 	o ocamlnet-2.2.4
 	o ocsigen-1.1.0 [pkg/40761]
 	o octave-3.6.1
