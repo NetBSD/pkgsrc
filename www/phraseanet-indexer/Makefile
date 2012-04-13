@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/04 08:02:19 manu Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/13 23:10:39 hans Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -11,6 +11,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal autoconf automake
 GNU_CONFIGURE=		yes
 CFLAGS+=	-I${BUILDLINK_PREFIX.libxml2}/include/libxml2
+LIBS.SunOS+=		-lrt -lsocket
 
 
 pre-configure:
