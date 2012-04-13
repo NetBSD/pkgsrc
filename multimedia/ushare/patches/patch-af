@@ -1,7 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
+$NetBSD: patch-af,v 1.2 2012/04/13 23:44:39 obache Exp $
 
 * Treat NetBSD same as FreeBSD.
 * Move sys/param.h and config.h header files before using conditions.
+* libupnp>=1.6.7 support.
 
 --- src/ushare.c.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/ushare.c
@@ -18,7 +19,7 @@ $NetBSD: patch-af,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
  #include <sys/socket.h>
  #include <sys/sysctl.h>
  #include <net/if_dl.h>
-@@ -49,18 +53,15 @@
+@@ -49,18 +53,19 @@
  #include <ifaddrs.h>
  #endif
  
@@ -29,6 +30,10 @@ $NetBSD: patch-af,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
  #include <upnp/upnp.h>
  #include <upnp/upnptools.h>
  
++#if UPNP_VERSION >= 10607
++#include <netdb.h>
++#endif
++
 +#include "config.h"
 +
  #if (defined(HAVE_SETLOCALE) && defined(CONFIG_NLS))
@@ -39,7 +44,36 @@ $NetBSD: patch-af,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
  #include "ushare.h"
  #include "services.h"
  #include "http.h"
-@@ -505,7 +506,7 @@ create_udn (char *interface)
+@@ -177,7 +182,11 @@ handle_action_request (struct Upnp_Actio
+   struct service_t *service;
+   struct service_action_t *action;
+   char val[256];
++#if UPNP_VERSION < 10607
+   uint32_t ip;
++#else
++  int error;
++#endif
+ 
+   if (!request || !ut)
+     return;
+@@ -188,10 +197,16 @@ handle_action_request (struct Upnp_Actio
+   if (strcmp (request->DevUDN + 5, ut->udn))
+     return;
+ 
++#if UPNP_VERSION < 10607
+   ip = request->CtrlPtIPAddr.s_addr;
+   ip = ntohl (ip);
+   sprintf (val, "%d.%d.%d.%d",
+            (ip >> 24) & 0xFF, (ip >> 16) & 0xFF, (ip >> 8) & 0xFF, ip & 0xFF);
++#else
++  error = getnameinfo((struct sockaddr *)&(request->CtrlPtIPAddr),
++                      request->CtrlPtIPAddr.ss_len,
++                      val, sizeof(val), NULL, 0, NI_NUMERICHOST);
++#endif
+ 
+   if (ut->verbose)
+   {
+@@ -505,7 +520,7 @@ create_udn (char *interface)
    char *buf;
    unsigned char *ptr;
  
@@ -48,7 +82,7 @@ $NetBSD: patch-af,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
    int mib[6];
    size_t len;
    struct if_msghdr *ifm;
-@@ -517,7 +518,7 @@ create_udn (char *interface)
+@@ -517,7 +532,7 @@ create_udn (char *interface)
    if (!interface)
      return NULL;
  
@@ -57,7 +91,7 @@ $NetBSD: patch-af,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
    mib[0] = CTL_NET;
    mib[1] = AF_ROUTE;
    mib[2] = 0;
-@@ -568,7 +569,7 @@ create_udn (char *interface)
+@@ -568,7 +583,7 @@ create_udn (char *interface)
    buf = (char *) malloc (64 * sizeof (char));
    memset (buf, 0, 64);
    ptr = (unsigned char *) ifr.ifr_hwaddr.sa_data;
@@ -66,16 +100,19 @@ $NetBSD: patch-af,v 1.1.1.1 2010/05/23 08:18:04 obache Exp $
  
    snprintf (buf, 64, "%s-%02x%02x%02x%02x%02x%02x", DEFAULT_UUID,
              (ptr[0] & 0377), (ptr[1] & 0377), (ptr[2] & 0377),
-@@ -734,7 +735,7 @@ setup_i18n(void)
+@@ -734,11 +749,8 @@ setup_i18n(void)
  #ifdef HAVE_SETLOCALE
    setlocale (LC_ALL, "");
  #endif
 -#if (!defined(BSD) && !defined(__FreeBSD__))
-+#if (!defined(BSD) && !defined(__FreeBSD__) && !defined(__NetBSD__))
    bindtextdomain (PACKAGE, LOCALEDIR);
  #endif
-   textdomain (PACKAGE);
-@@ -845,6 +846,9 @@ main (int argc, char **argv)
+-  textdomain (PACKAGE);
+-#endif
+ }
+ 
+ #define SHUTDOWN_MSG _("Server is shutting down: other clients will be notified soon, Bye bye ...\n")
+@@ -845,6 +857,9 @@ main (int argc, char **argv)
  
    signal (SIGINT, UPnPBreak);
    signal (SIGHUP, reload_config);
