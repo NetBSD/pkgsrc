@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/04/07 13:12:10 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2012/04/13 05:16:18 dholland Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -65,6 +65,8 @@ PKGSRC_ARCH=	8
 PKGSRC_ARCH=	12
 .elif ${OPSYS} == "Linux"
 PKGSRC_ARCH=	6
+.elif ${OPSYS} == "SunOS"
+PKGSRC_ARCH=	1
 .elif ${OPSYS} == "IRIX"
 PKGSRC_ARCH=	3
 PLIST.gl=	yes
