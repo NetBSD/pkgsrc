@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1121 2012/04/12 19:45:00 gls Exp $
+$NetBSD: CHANGES-2012,v 1.1122 2012/04/13 00:02:01 mspo Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1810,3 +1810,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/erlang-man to 15.1.1 [asau 2012-04-12]
 	Updated lang/erlang-doc to 15.1.1 [asau 2012-04-12]
 	Updated shells/lshell to 0.9.15.1 [gls 2012-04-12]
+	Updated devel/p5-AnyEvent-XMPP to 0.52 [mspo 2012-04-13]
