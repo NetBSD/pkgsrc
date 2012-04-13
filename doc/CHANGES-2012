@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1139 2012/04/13 23:44:53 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1140 2012/04/13 23:52:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1833,3 +1833,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/py-ssh to 1.7.13 [gls 2012-04-13]
 	Updated net/libupnp to 1.6.17 [obache 2012-04-13]
 	Updated multimedia/ushare to 1.1anb3 [obache 2012-04-13]
+	Updated multimedia/gmediaserver to 0.13.0nb3 [obache 2012-04-13]
