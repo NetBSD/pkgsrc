@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1140 2012/04/13 23:52:22 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1141 2012/04/13 23:55:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1834,3 +1834,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/libupnp to 1.6.17 [obache 2012-04-13]
 	Updated multimedia/ushare to 1.1anb3 [obache 2012-04-13]
 	Updated multimedia/gmediaserver to 0.13.0nb3 [obache 2012-04-13]
+	Updated filesystems/fuse-djmount to 0.71nb2 [obache 2012-04-13]
