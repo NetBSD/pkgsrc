@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1124 2012/04/13 07:36:49 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1125 2012/04/13 11:33:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1814,3 +1814,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/maelstrom-x11 to 2.0.6nb4 [dholland 2012-04-13]
 	Updated lang/elk to 3.99.8nb1 [dholland 2012-04-13]
 	Updated lang/ocamlduce to 3.12.1.0 [dholland 2012-04-13]
+	Updated textproc/the_silver_searcher to 0.5 [wiz 2012-04-13]
