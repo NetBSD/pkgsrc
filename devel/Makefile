@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1584 2012/04/08 19:08:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1585 2012/04/13 11:56:39 mspo Exp $
 #
 
 COMMENT=	Development utilities
@@ -504,6 +504,7 @@ SUBDIR+=	p5-Any-Moose
 SUBDIR+=	p5-AnyEvent
 SUBDIR+=	p5-AnyEvent-AIO
 SUBDIR+=	p5-AnyEvent-IRC
+SUBDIR+=	p5-AnyEvent-XMPP
 SUBDIR+=	p5-App-CLI
 SUBDIR+=	p5-App-Cache
 SUBDIR+=	p5-App-Cmd
