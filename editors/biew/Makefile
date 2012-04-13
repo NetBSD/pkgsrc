@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/03/03 18:25:52 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2012/04/13 22:47:47 hans Exp $
 #
 
 DISTNAME=	biew562
@@ -21,6 +21,9 @@ MAKE_FILE=	makefile
 WRKSRC=		${WRKDIR}/biew-562
 
 INSTALLATION_DIRS=	bin
+
+LIBS.SunOS+=	-lrt
+MAKE_ENV+=	OS_LIBS=${LIBS:Q}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/biew
