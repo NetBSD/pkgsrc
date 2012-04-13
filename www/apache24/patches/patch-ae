@@ -1,0 +1,59 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+
+--- docs/conf/httpd.conf.in.orig	2012-02-06 16:55:22.000000000 +0000
++++ docs/conf/httpd.conf.in
+@@ -361,42 +361,42 @@ LogLevel warn
+ # necessary.
+ 
+ # Server-pool management (MPM specific)
+-#Include @rel_sysconfdir@/extra/httpd-mpm.conf
++#Include @rel_sysconfdir@/httpd-mpm.conf
+ 
+ # Multi-language error messages
+-#Include @rel_sysconfdir@/extra/httpd-multilang-errordoc.conf
++#Include @rel_sysconfdir@/httpd-multilang-errordoc.conf
+ 
+ # Fancy directory listings
+-#Include @rel_sysconfdir@/extra/httpd-autoindex.conf
++#Include @rel_sysconfdir@/httpd-autoindex.conf
+ 
+ # Language settings
+-#Include @rel_sysconfdir@/extra/httpd-languages.conf
++#Include @rel_sysconfdir@/httpd-languages.conf
+ 
+ # User home directories
+-#Include @rel_sysconfdir@/extra/httpd-userdir.conf
++#Include @rel_sysconfdir@/httpd-userdir.conf
+ 
+ # Real-time info on requests and configuration
+-#Include @rel_sysconfdir@/extra/httpd-info.conf
++#Include @rel_sysconfdir@/httpd-info.conf
+ 
+ # Virtual hosts
+-#Include @rel_sysconfdir@/extra/httpd-vhosts.conf
++#Include @rel_sysconfdir@/httpd-vhosts.conf
+ 
+ # Local access to the Apache HTTP Server Manual
+-#Include @rel_sysconfdir@/extra/httpd-manual.conf
++#Include @rel_sysconfdir@/httpd-manual.conf
+ 
+ # Distributed authoring and versioning (WebDAV)
+-#Include @rel_sysconfdir@/extra/httpd-dav.conf
++#Include @rel_sysconfdir@/httpd-dav.conf
+ 
+ # Various default settings
+-#Include @rel_sysconfdir@/extra/httpd-default.conf
++#Include @rel_sysconfdir@/httpd-default.conf
+ 
+ # Configure mod_proxy_html to understand HTML4/XHTML1
+ <IfModule proxy_html_module>
+-Include @rel_sysconfdir@/extra/proxy-html.conf
++Include @rel_sysconfdir@/proxy-html.conf
+ </IfModule>
+ 
+ # Secure (SSL/TLS) connections
+-#Include @rel_sysconfdir@/extra/httpd-ssl.conf
++#Include @rel_sysconfdir@/httpd-ssl.conf
+ #
+ # Note: The following must must be present to support
+ #       starting without SSL on platforms with no /dev/random equivalent

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+
+PR#27567
+
+--- server/mpm_common.c.orig	2011-12-05 00:08:01.000000000 +0000
++++ server/mpm_common.c
+@@ -256,7 +256,7 @@ AP_DECLARE(gid_t) ap_gname2id(const char
+ #ifndef HAVE_INITGROUPS
+ int initgroups(const char *name, gid_t basegid)
+ {
+-#if defined(_OSD_POSIX) || defined(OS2) || defined(WIN32) || defined(NETWARE)
++#if defined(_OSD_POSIX) || defined(OS2) || defined(WIN32) || defined(NETWARE) || defined(__INTERIX)
+     return 0;
+ #else
+     gid_t groups[NGROUPS_MAX];
