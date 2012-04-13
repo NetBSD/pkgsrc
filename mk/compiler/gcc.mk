@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.115 2012/04/13 02:30:45 sbd Exp $
+# $NetBSD: gcc.mk,v 1.116 2012/04/13 03:03:36 sbd Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -8,6 +8,12 @@
 #	When set to "yes", the native gcc is used, no matter which
 #	compiler version a package requires.
 #
+# USE_PKGSRC_GCC
+#	Force using the appropriate version of GCC from pkgsrc based on
+#	GCC_REQD instead of the native compiler.
+#
+#	This should be disabled only for debugging.
+#
 # Package-settable variables:
 #
 # GCC_REQD
@@ -16,6 +22,11 @@
 #	change the compiler that is used for building packages. See
 #	ONLY_FOR_COMPILER for that purpose. This is a list of version
 #	numbers, of which the maximum version is the definitive one.
+#
+#	NOTE: Be conservative when setting GCC_REQD, as lang/gcc3 is
+#	known not to build on some platforms, e.g. Darwin.  If gcc3 is
+#	required, set GCC_REQD=3.0 so that we do not try to pull in
+#	lang/gcc3 unnecessarily and have it fail.
 #
 # System-defined variables:
 #
@@ -33,7 +44,7 @@
 COMPILER_GCC_MK=	defined
 
 _VARGROUPS+=	gcc
-_USER_VARS.gcc=	USE_NATIVE_GCC
+_USER_VARS.gcc=	USE_NATIVE_GCC USE_PKGSRC_GCC
 _PKG_VARS.gcc=	GCC_REQD
 _SYS_VARS.gcc=	CC_VERSION CC_VERSION_STRING LANGUAGES.gcc
 _DEF_VARS.gcc=	\
@@ -62,6 +73,7 @@ _DEF_VARS.gcc=	\
 .include "../../mk/bsd.prefs.mk"
 
 USE_NATIVE_GCC?=	no
+USE_PKGSRC_GCC?=	no
 
 GCC_REQD+=	2.8.0
 
@@ -395,6 +407,10 @@ _USE_GCC_SHLIB?=	yes
 
 .if !empty(USE_NATIVE_GCC:M[yY][eE][sS]) && !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
 _USE_PKGSRC_GCC=	no
+.elif !empty(USE_PKGSRC_GCC:M[yY][eE][sS])
+# For environments where there is an external gcc too, but pkgsrc
+# should use the pkgsrc one for consistency.
+_USE_PKGSRC_GCC=	yes
 .endif
 
 .if defined(_IGNORE_GCC)

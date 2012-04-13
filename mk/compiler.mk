@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.74 2010/11/17 08:40:22 obache Exp $
+# $NetBSD: compiler.mk,v 1.75 2012/04/13 03:03:36 sbd Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -33,27 +33,11 @@
 #	compiler.  The chain should always end in a real compiler.
 #	This should only be set in /etc/mk.conf.
 #
-# USE_PKGSRC_GCC
-#	Force using the appropriate version of GCC from pkgsrc based on
-#	GCC_REQD instead of the native compiler.
-#
-#	This should be disabled only for debugging.
-#
 # COMPILER_USE_SYMLINKS
 #	If set to yes, use symlinks for the compiler drivers, otherwise
 #	shell scripts are created.  The default is yes.
 #
 # The following variables may be set by a package:
-#
-# GCC_REQD
-#	A list of version numbers used to determine the minimum
-#	version of GCC required by a package.  This value should only
-#	be appended to by a package Makefile.
-#
-#	NOTE: Be conservative when setting GCC_REQD, as lang/gcc3 is
-#	known not to build on some platforms, e.g. Darwin.  If gcc3 is
-#	required, set GCC_REQD=3.0 so that we do not try to pull in
-#	lang/gcc3 unnecessarily and have it fail.
 #
 # USE_LANGUAGES
 #	Lists the languages used in the source code of the package,
@@ -94,13 +78,6 @@ USE_LANGUAGES+=	c
 .endif
 
 COMPILER_USE_SYMLINKS?=	yes
-
-# For environments where there is an external gcc too, but pkgsrc
-# should use the pkgsrc one for consistency.
-#
-.if defined(USE_PKGSRC_GCC)
-_USE_PKGSRC_GCC=	yes
-.endif
 
 _COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode \
 			sunpro xlc hp pcc clang
