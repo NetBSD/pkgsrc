@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/03/15 06:45:26 sbd Exp $
+# $NetBSD: Makefile,v 1.17 2012/04/13 10:38:26 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -87,7 +87,6 @@ CONFIGURE_ARGS+=	--disable-libquadmath --disable-libquadmath-support
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 
-MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD}
 
