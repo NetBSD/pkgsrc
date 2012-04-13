@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/04/13 11:32:58 wiz Exp $
+
+SHA1 (the_silver_searcher-0.5.tar.gz) = 99afb1930016377caf7a3bd9ab5dc0fa59352c4d
+RMD160 (the_silver_searcher-0.5.tar.gz) = 869622925f9d8e7aff3d0c26db50204703b4300e
+Size (the_silver_searcher-0.5.tar.gz) = 20232 bytes
+SHA1 (patch-src_options.c) = c1b734ec9e38417e3a90395762aa4ab026205619
+SHA1 (patch-src_util.c) = 0f843fb6885a91a2eb0b9a5cde6b2ae372fcdb49
+SHA1 (patch-src_util.h) = d76314bc134bff918037764c18bf9581311572fd
