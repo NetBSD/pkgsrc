@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/03/15 07:43:30 sbd Exp $
+# $NetBSD: Makefile,v 1.34 2012/04/13 10:35:38 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -75,7 +75,6 @@ CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 
-MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD}
 

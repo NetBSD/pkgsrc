@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2012/04/08 05:04:36 sbd Exp $
+# $NetBSD: options.mk,v 1.10 2012/04/13 10:35:38 hans Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc44
 PKG_SUPPORTED_OPTIONS=	nls gcc-c++ gcc-fortran gcc-java gcc-objc #gcc-ada
@@ -20,6 +20,7 @@ PKG_OPTIONS_LEGACY_VARS+=	BUILD_OBJC:gcc-objc
 .if !empty(PKG_OPTIONS:Mnls)
 CONFIGURE_ARGS+=	--enable-nls
 USE_TOOLS+=		msgfmt
+MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .else
