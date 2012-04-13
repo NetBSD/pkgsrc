@@ -1,0 +1,15 @@
+$NetBSD: patch-aw,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+
+--- modules/metadata/mod_mime_magic.c.orig	2011-12-05 00:08:01.000000000 +0000
++++ modules/metadata/mod_mime_magic.c
+@@ -106,6 +106,10 @@
+ #include <utime.h>
+ #endif
+ 
++#ifdef __QNX__ /* naming conflict with <malloc.h> */
++#define mcheck mod_mime_magic_mcheck
++#endif
++
+ /*
+  * data structures and related constants
+  */

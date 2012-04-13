@@ -1,0 +1,31 @@
+$NetBSD: patch-al,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+
+--- include/httpd.h.orig	2012-02-04 10:04:59.000000000 +0000
++++ include/httpd.h
+@@ -126,7 +126,7 @@ extern "C" {
+ #if defined(OS2) || defined(WIN32)
+ #define DEFAULT_ERRORLOG "logs/error.log"
+ #else
+-#define DEFAULT_ERRORLOG "logs/error_log"
++#define DEFAULT_ERRORLOG DEFAULT_REL_LOGFILEDIR "/error.log"
+ #endif
+ #endif /* DEFAULT_ERRORLOG */
+ 
+@@ -142,7 +142,7 @@ extern "C" {
+ 
+ /** The name of the server config file */
+ #ifndef SERVER_CONFIG_FILE
+-#define SERVER_CONFIG_FILE "conf/httpd.conf"
++#define SERVER_CONFIG_FILE DEFAULT_REL_SYSCONFDIR "/httpd.conf"
+ #endif
+ 
+ /** The default path for CGI scripts if none is currently set */
+@@ -220,7 +220,7 @@ extern "C" {
+ 
+ /** The name of the MIME types file */
+ #ifndef AP_TYPES_CONFIG_FILE
+-#define AP_TYPES_CONFIG_FILE "conf/mime.types"
++#define AP_TYPES_CONFIG_FILE DEFAULT_REL_SYSCONFDIR "/mime.types"
+ #endif
+ 
+ /*
