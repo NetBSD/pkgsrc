@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/14 02:09:36 hans Exp $
+# $NetBSD: Makefile,v 1.16 2012/04/13 04:53:34 dholland Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
@@ -28,8 +28,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 INSTALLATION_DIRS=	bin
 
 post-build:
-	cd ${WRKSRC}/WonderSnake && \
-		${LOCALBASE}/bin/zip Wondersnake.zip Wondersnake.wsc
+	cd ${WRKSRC}/WonderSnake && zip Wondersnake.zip Wondersnake.wsc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/cygne ${DESTDIR}${PREFIX}/bin/Cygne-SDL
