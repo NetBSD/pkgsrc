@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2012/03/21 13:40:05 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/04/13 14:19:17 obache Exp $
 # used by emulators/suse113_base/Makefile
 
 SUSE_PKG=		yes
@@ -40,7 +40,7 @@ MASTER_SITE_SUSE_${SUSE_VERSION}_UPD= \
 MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}/${SUSE_ARCH}/
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}
 
-HOMEPAGE?=		http://www.suse.com/
+HOMEPAGE?=		http://www.opensuse.org/
 
 WRKSRC?=		${WRKDIR}
 BUILD_DIRS?=		# empty
