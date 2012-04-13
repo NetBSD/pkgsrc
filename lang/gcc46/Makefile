@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/04/13 10:38:26 hans Exp $
+# $NetBSD: Makefile,v 1.18 2012/04/13 11:02:47 hans Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -74,8 +74,6 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
-CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
@@ -106,8 +104,6 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 #CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 #MAKE_ENV+=		AR=/usr/bin/ar
 #.endif # NetBSD
-
-LIBS.SunOS+=		-lgmp
 
 pre-configure:
 .if ${OPSYS} == "DragonFly"
@@ -148,7 +144,4 @@ GENERATE_PLIST+=                                                        \
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print \
 	| ${SORT} ;
 
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../math/mpcomplex/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
