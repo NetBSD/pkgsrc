@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1125 2012/04/13 11:33:37 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1126 2012/04/13 11:47:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1815,3 +1815,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/elk to 3.99.8nb1 [dholland 2012-04-13]
 	Updated lang/ocamlduce to 3.12.1.0 [dholland 2012-04-13]
 	Updated textproc/the_silver_searcher to 0.5 [wiz 2012-04-13]
+	Updated emulators/suse121_libpng to 12.1nb2 [obache 2012-04-13]
