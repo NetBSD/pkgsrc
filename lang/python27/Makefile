@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/03/24 12:04:36 tron Exp $
+# $NetBSD: Makefile,v 1.15 2012/04/13 18:47:27 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	3
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -76,7 +75,7 @@ PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 .if ${PY_PLATNAME} == "linux2"
-PLIST_SRC+=     ${.CURDIR}/../../lang/python27/PLIST.Linux2
+PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.Linux2
 .endif
 
 .if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "amd64") || \
