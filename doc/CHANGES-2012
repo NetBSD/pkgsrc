@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1123 2012/04/13 00:28:35 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1124 2012/04/13 07:36:49 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1811,3 +1811,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/erlang-doc to 15.1.1 [asau 2012-04-12]
 	Updated shells/lshell to 0.9.15.1 [gls 2012-04-12]
 	Added devel/p5-AnyEvent-XMPP version 0.52 [mspo 2012-04-13]
+	Updated games/maelstrom-x11 to 2.0.6nb4 [dholland 2012-04-13]
+	Updated lang/elk to 3.99.8nb1 [dholland 2012-04-13]
+	Updated lang/ocamlduce to 3.12.1.0 [dholland 2012-04-13]
