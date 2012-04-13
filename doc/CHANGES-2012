@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1127 2012/04/13 11:56:44 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1128 2012/04/13 12:44:42 asau Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1817,3 +1817,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/the_silver_searcher to 0.5 [wiz 2012-04-13]
 	Updated emulators/suse121_libpng to 12.1nb2 [obache 2012-04-13]
 	Updated emulators/suse121_freetype2 to 12.1nb1 [obache 2012-04-13]
+	Updated lang/sbcl to 1.0.56 [asau 2012-04-13]
