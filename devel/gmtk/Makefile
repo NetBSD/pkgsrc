@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/03/03 00:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/13 12:57:33 obache Exp $
 #
 
-DISTNAME=	gmtk-1.0.5
-PKGREVISION=	3
+DISTNAME=	gmtk-1.0.6
 CATEGORIES=	devel
 MASTER_SITES=	http://gmtk.googlecode.com/files/
 
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool msgfmt
+USE_TOOLS+=	gmake pkg-config intltool msgfmt
 
 PKGCONFIG_OVERRIDE+=	src/gmtk.pc.in
 PKGCONFIG_OVERRIDE+=	src/gmlib.pc.in
