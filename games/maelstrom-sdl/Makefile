@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2011/05/06 05:28:39 dholland Exp $
+# $NetBSD: Makefile,v 1.21 2012/04/13 04:33:19 dholland Exp $
 #
 
 DISTNAME=	Maelstrom-3.0.5
@@ -20,6 +20,7 @@ USE_LANGUAGES=		c c++
 USE_GAMESGROUP=		yes
 
 MAKE_ENV+=		CP=${CP:Q}
+LIBS.SunOS+=		-lsocket
 
 .if 0
 # setgid
