@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1129 2012/04/13 12:58:15 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1130 2012/04/13 13:04:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1819,3 +1819,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/suse121_freetype2 to 12.1nb1 [obache 2012-04-13]
 	Updated lang/sbcl to 1.0.56 [asau 2012-04-13]
 	Updated devel/gmtk to 1.0.6 [obache 2012-04-13]
+	Updated multimedia/gnome-mplayer to 1.0.6 [obache 2012-04-13]
