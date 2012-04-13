@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/13 11:32:58 wiz Exp $
+bin/ag
+man/man1/ag.1
