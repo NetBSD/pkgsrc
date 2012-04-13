@@ -162,6 +162,7 @@ fts			Enable full-text searching.
 gcc-ada			Build the gcc Ada frontend and libraries.
 gcc-c++			Build the gcc C++ frontend and libraries.
 gcc-fortran		Build the gcc Fortran frontend and libraries.
+gcc-inplace-math	Build math libs inplace instead of depending on them.
 gcc-java		Build the gcc Java frontend, tools and libraries.
 gcc-go			Build the gcc Go frontend and libraries.
 gcc-multilib		Build libraries for multiple ABI's.
