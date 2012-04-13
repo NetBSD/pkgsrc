@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2011/06/13 11:31:13 obache Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2012/04/13 18:47:27 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -904,6 +904,7 @@ lib/python${PY_VER_SUFFIX}/distutils/tests/test_version.pyo
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_versionpredicate.py
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_versionpredicate.pyc
 lib/python${PY_VER_SUFFIX}/distutils/tests/test_versionpredicate.pyo
+lib/python${PY_VER_SUFFIX}/distutils/tests/xxmodule.c
 lib/python${PY_VER_SUFFIX}/distutils/text_file.py
 lib/python${PY_VER_SUFFIX}/distutils/text_file.pyc
 lib/python${PY_VER_SUFFIX}/distutils/text_file.pyo
@@ -2601,6 +2602,10 @@ lib/python${PY_VER_SUFFIX}/test/cjkencodings/gbk-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/gbk.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/hz-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/hz.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/iso2022_jp-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/iso2022_jp.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/iso2022_kr-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/iso2022_kr.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/johab-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/johab.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis-utf8.txt
@@ -2794,6 +2799,7 @@ lib/python${PY_VER_SUFFIX}/test/mapping_tests.py
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/mapping_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/math_testcases.txt
+lib/python${PY_VER_SUFFIX}/test/nokia.pem
 lib/python${PY_VER_SUFFIX}/test/nullcert.pem
 lib/python${PY_VER_SUFFIX}/test/outstanding_bugs.py
 lib/python${PY_VER_SUFFIX}/test/outstanding_bugs.pyc
@@ -2822,9 +2828,6 @@ lib/python${PY_VER_SUFFIX}/test/randv3.pck
 lib/python${PY_VER_SUFFIX}/test/re_tests.py
 lib/python${PY_VER_SUFFIX}/test/re_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/re_tests.pyo
-lib/python${PY_VER_SUFFIX}/test/regex_tests.py
-lib/python${PY_VER_SUFFIX}/test/regex_tests.pyc
-lib/python${PY_VER_SUFFIX}/test/regex_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/regrtest.py
 lib/python${PY_VER_SUFFIX}/test/regrtest.pyc
 lib/python${PY_VER_SUFFIX}/test/regrtest.pyo
@@ -2856,7 +2859,6 @@ lib/python${PY_VER_SUFFIX}/test/string_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/subprocessdata/sigchild_ignore.py
 lib/python${PY_VER_SUFFIX}/test/subprocessdata/sigchild_ignore.pyc
 lib/python${PY_VER_SUFFIX}/test/subprocessdata/sigchild_ignore.pyo
-lib/python${PY_VER_SUFFIX}/test/svn_python_org_https_cert.pem
 lib/python${PY_VER_SUFFIX}/test/test_MimeWriter.py
 lib/python${PY_VER_SUFFIX}/test/test_MimeWriter.pyc
 lib/python${PY_VER_SUFFIX}/test/test_MimeWriter.pyo
@@ -3025,6 +3027,9 @@ lib/python${PY_VER_SUFFIX}/test/test_codecencodings_cn.pyo
 lib/python${PY_VER_SUFFIX}/test/test_codecencodings_hk.py
 lib/python${PY_VER_SUFFIX}/test/test_codecencodings_hk.pyc
 lib/python${PY_VER_SUFFIX}/test/test_codecencodings_hk.pyo
+lib/python${PY_VER_SUFFIX}/test/test_codecencodings_iso2022.py
+lib/python${PY_VER_SUFFIX}/test/test_codecencodings_iso2022.pyc
+lib/python${PY_VER_SUFFIX}/test/test_codecencodings_iso2022.pyo
 lib/python${PY_VER_SUFFIX}/test/test_codecencodings_jp.py
 lib/python${PY_VER_SUFFIX}/test/test_codecencodings_jp.pyc
 lib/python${PY_VER_SUFFIX}/test/test_codecencodings_jp.pyo
@@ -3654,6 +3659,9 @@ lib/python${PY_VER_SUFFIX}/test/test_pwd.pyo
 lib/python${PY_VER_SUFFIX}/test/test_py3kwarn.py
 lib/python${PY_VER_SUFFIX}/test/test_py3kwarn.pyc
 lib/python${PY_VER_SUFFIX}/test/test_py3kwarn.pyo
+lib/python${PY_VER_SUFFIX}/test/test_py_compile.py
+lib/python${PY_VER_SUFFIX}/test/test_py_compile.pyc
+lib/python${PY_VER_SUFFIX}/test/test_py_compile.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyclbr.py
 lib/python${PY_VER_SUFFIX}/test/test_pyclbr.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyclbr.pyo
