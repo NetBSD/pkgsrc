@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1132 2012/04/13 13:19:26 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1133 2012/04/13 18:56:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1822,3 +1822,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/gnome-mplayer to 1.0.6 [obache 2012-04-13]
 	Updated multimedia/gecko-mediaplayer to 1.0.6 [obache 2012-04-13]
 	Updated net/ruby-twitter-stream to 0.1.15 [obache 2012-04-13]
+	Added www/apache24 version 2.4.1 [ryoon 2012-04-13]

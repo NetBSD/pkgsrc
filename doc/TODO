@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.10999 2012/04/13 12:44:42 asau Exp $
+$NetBSD: TODO,v 1.11000 2012/04/13 18:56:56 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap-xslt-1.4.0
 	o ap2-auth-ldap-3.11
 	o ap2-transform-0.6.0
-	o apache-2.4.1
 	o apache-maven-3.0
 	o applewmproto-1.4.2
 	o appres-1.0.3 [pkg/45526]
