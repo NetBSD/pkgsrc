@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1136 2012/04/13 21:22:39 gls Exp $
+$NetBSD: CHANGES-2012,v 1.1137 2012/04/13 21:35:31 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1830,3 +1830,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/gitweb to 1.7.10 [adam 2012-04-13]
 	Updated audio/libgpod to 0.8.2 [adam 2012-04-13]
 	Updated textproc/asciidoc to 8.6.7 [gls 2012-04-13]
+	Updated security/py-ssh to 1.7.13 [gls 2012-04-13]
