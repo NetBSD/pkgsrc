@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/12 15:05:04 gls Exp $
+$NetBSD: distinfo,v 1.2 2012/04/13 21:35:18 gls Exp $
 
-SHA1 (ssh-1.7.12.tar.gz) = ef2c5affa5990aa6619f7b0ca56d672fcc621016
-RMD160 (ssh-1.7.12.tar.gz) = 56a887eb96c0588ec7bf05e7ef0e259db99f9067
-Size (ssh-1.7.12.tar.gz) = 790597 bytes
+SHA1 (ssh-1.7.13.tar.gz) = 547296a7d0653f05930d1c616aebe6cb12bfd6f0
+RMD160 (ssh-1.7.13.tar.gz) = 773ddc95899b144716a65ec140767adaa4e392d6
+Size (ssh-1.7.13.tar.gz) = 790781 bytes
