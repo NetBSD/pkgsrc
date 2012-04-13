@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/03/18 05:50:04 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/13 23:55:37 obache Exp $
 
 DISTNAME=	djmount-0.71
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djmount/}
 
