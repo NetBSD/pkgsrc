@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2011/07/11 11:58:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/13 13:19:15 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
