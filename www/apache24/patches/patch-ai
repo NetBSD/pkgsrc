@@ -1,0 +1,19 @@
+$NetBSD: patch-ai,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+
+--- support/apxs.in.orig	2010-06-22 17:12:44.000000000 +0000
++++ support/apxs.in
+@@ -352,8 +352,12 @@ if ($apr_major_version < 2) {
+     }
+ }
+ 
+-my $libtool = `$apr_config --apr-libtool`;
+-chomp($libtool);
++my $libtool = $ENV{'APR_LIBTOOL'};
++unless ($libtool) {
++	$libtool = `@LOCALBASE@/bin/apr-1-config --installbuilddir`;
++	chomp($libtool);
++	$libtool = "$libtool/libtool";
++}
+ 
+ my $apr_includedir = `$apr_config --includes`;
+ chomp($apr_includedir);
