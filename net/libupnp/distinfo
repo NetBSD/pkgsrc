@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.16 2011/08/20 15:36:16 joerg Exp $
+$NetBSD: distinfo,v 1.17 2012/04/13 23:38:34 obache Exp $
 
-SHA1 (libupnp-1.6.6.tar.bz2) = 24c2c349cb52ed3d62121fbdae205c8d9dc0f5fa
-RMD160 (libupnp-1.6.6.tar.bz2) = 25ff0390793cfa48cca32a335b4d633283b1fe64
-Size (libupnp-1.6.6.tar.bz2) = 1146854 bytes
-SHA1 (patch-aa) = cfdbe2bfdac1aab7f6f74534429ceec70f1ceac3
-SHA1 (patch-ab) = cfdedfc192854389d77ee79d875b618a204770f9
-SHA1 (patch-ac) = 05ba4584d2ebdb2de041e67f4c8d1c05e4fc1970
-SHA1 (patch-ae) = 7331c61d5b3a47ca3865788cf88a973d5e9352a1
-SHA1 (patch-ag) = b6b555fd2e7d5ddf5f63b25d8b915cdd7d0d03ba
-SHA1 (patch-ah) = f46422955005a8b1b187163e97ee84a45b713847
-SHA1 (patch-upnp-src-genlib-net-http-webserver.c) = d52857b9ea7d26686feebd7bb513ef62845b2636
+SHA1 (libupnp-1.6.17.tar.bz2) = 179e0c1337915d45ea8c04c1fa86257c9dfc5924
+RMD160 (libupnp-1.6.17.tar.bz2) = 179599a8253f7df2e1085493e2d5925458195a19
+Size (libupnp-1.6.17.tar.bz2) = 1187499 bytes
