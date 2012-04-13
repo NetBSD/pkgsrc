@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/03/03 12:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2012/04/13 05:10:24 dholland Exp $
 
 DISTNAME=	e-uae-0.8.28
 PKGREVISION=	12
@@ -19,6 +19,7 @@ CONFLICTS+=	uae-[0-9]*
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+LIBS.SunOS+=		-lsocket -lnsl
 
 .include "options.mk"
 
