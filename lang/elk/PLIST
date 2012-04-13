@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/22 18:11:05 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/04/13 05:43:26 dholland Exp $
 bin/elk
 bin/scheme-elk
 include/elk/compat.h
@@ -22,6 +22,7 @@ include/elk/type.h
 lib/elk/bitstring.la
 lib/elk/debug.la
 lib/elk/elk-eval.la
+lib/elk/gdbm.la
 lib/elk/hack.la
 lib/elk/newhandler.la
 lib/elk/record.la
@@ -122,6 +123,7 @@ share/elk/bitstring.scm
 share/elk/cscheme.scm
 share/elk/debug.scm
 share/elk/describe.scm
+share/elk/gdbmtest.scm
 share/elk/initscheme.scm
 share/elk/oops.scm
 share/elk/parse.scm
