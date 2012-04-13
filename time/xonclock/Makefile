@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/02/06 12:41:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/13 23:33:34 hans Exp $
 #
 
 DISTNAME=	xonclock-0.0.9.4
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 
 LDFLAGS.DragonFly=	-lm
+LDFLAGS.SunOS+=		-lm -lrt
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
