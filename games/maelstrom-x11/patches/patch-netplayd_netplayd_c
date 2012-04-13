@@ -1,0 +1,15 @@
+$NetBSD: patch-netplayd_netplayd_c,v 1.1 2012/04/13 04:43:23 dholland Exp $
+
+- use standard headers
+
+--- netplayd/netplayd.c~	1996-10-22 23:05:00.000000000 +0000
++++ netplayd/netplayd.c
+@@ -2,6 +2,8 @@
+ /* Here we go... */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <signal.h>
+ #include <errno.h>
+ #include <sys/time.h>
