@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.7 2012/04/13 10:38:26 hans Exp $
+# $NetBSD: options.mk,v 1.8 2012/04/13 11:02:47 hans Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc46
-PKG_SUPPORTED_OPTIONS=	nls gcc-c++ gcc-fortran gcc-java gcc-objc #gcc-ada
+PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc #gcc-ada
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
+.elif ${OPSYS} == "SunOS"
+PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
 .endif
 
 PKG_OPTIONS_LEGACY_VARS+=	BUILD_CXX:gcc-c++
@@ -13,6 +15,23 @@ PKG_OPTIONS_LEGACY_VARS+=	BUILD_JAVA:gcc-java
 PKG_OPTIONS_LEGACY_VARS+=	BUILD_OBJC:gcc-objc
 
 .include "../../mk/bsd.options.mk"
+
+###
+### Build math libraries in place
+###
+.if !empty(PKG_OPTIONS:Mgcc-inplace-math)
+.include "../../devel/gmp/inplace.mk"
+.include "../../math/mpcomplex/inplace.mk"
+.include "../../math/mpfr/inplace.mk"
+.else
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
+CONFIGURE_ARGS+=	--with-mpc=${BUILDLINK_PREFIX.mpcomplex}
+CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
+LIBS.SunOS+=		-lgmp
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../math/mpcomplex/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+.endif
 
 ###
 ### Native Language Support
