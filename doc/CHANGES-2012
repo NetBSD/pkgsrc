@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1152 2012/04/14 16:04:28 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1153 2012/04/14 21:57:07 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/wireshark to 1.6.7 [drochner 2012-04-14]
 	Added fonts/croscorefonts version 1.21.0 [ryoon 2012-04-14]
 	Updated shells/zsh-current to 4.3.17 [ryoon 2012-04-14]
+	Updated graphics/shotwell-gtk3 to 0.12.2 [gls 2012-04-14]
