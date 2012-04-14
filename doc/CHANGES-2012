@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1148 2012/04/14 11:22:24 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1149 2012/04/14 12:11:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1855,3 +1855,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/python26 to 2.6.8 [obache 2012-04-14]
 	Updated sysutils/capistrano to 2.12.0 [gls 2012-04-14]
 	Updated lang/python31 to 3.1.5 [obache 2012-04-14]
+	Updated databases/mysql55-client to 5.5.23 [adam 2012-04-14]
+	Updated databases/mysql55-server to 5.5.23 [adam 2012-04-14]
