@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.26 2012/03/03 12:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2012/04/14 16:02:45 ryoon Exp $
 
 .include "../../shells/zsh/Makefile.common"
 PKGREVISION=1
 
-ZSH_VERSION=	4.3.15
+ZSH_VERSION=	4.3.17
 ZSH_MAINTAINER=	ryoon@NetBSD.org
 
 USE_TOOLS+=	env
 
 CONFIGURE_ARGS+=	--disable-gdbm
 
-PLIST_VARS+=   xattr
+PLIST_VARS+=	xattr
 .if exists(/usr/include/sys/xattr.h)
-PLIST.xattr=   yes
+PLIST.xattr=	yes
 .endif
 
 SUBST_CLASSES+=	prefix-fixup
