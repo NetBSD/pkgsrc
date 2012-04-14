@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11005 2012/04/14 10:54:04 obache Exp $
+$NetBSD: TODO,v 1.11006 2012/04/14 11:22:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -1166,7 +1166,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-urwid-1.0.1
 	o py-xcbgen-1.7.1
 	o python-3.2
-	o python31-3.1.5
 	o qbrew-0.3.9
 	o qemu-1.0.1 [wip]
 	o qiv-2.2.4 [pkg/46167]
