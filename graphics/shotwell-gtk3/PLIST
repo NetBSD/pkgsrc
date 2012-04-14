@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/11 11:48:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/14 21:56:51 gls Exp $
 bin/shotwell
 bin/shotwell-video-thumbnailer
 lib/shotwell/plugins/builtin/f-spot-24.png
@@ -26,6 +26,7 @@ share/gnome/help/shotwell/C/edit-external.page
 share/gnome/help/shotwell/C/edit-nondestructive.page
 share/gnome/help/shotwell/C/edit-redeye.page
 share/gnome/help/shotwell/C/edit-rotate.page
+share/gnome/help/shotwell/C/edit-straighten.page
 share/gnome/help/shotwell/C/edit-time-date.page
 share/gnome/help/shotwell/C/edit-undo.page
 share/gnome/help/shotwell/C/figures/crop_thirds.jpg
@@ -49,6 +50,8 @@ share/gnome/help/shotwell/C/organize-title.page
 share/gnome/help/shotwell/C/other-files.page
 share/gnome/help/shotwell/C/other-missing.page
 share/gnome/help/shotwell/C/other-multiple.page
+share/gnome/help/shotwell/C/other-plugins.page
+share/gnome/help/shotwell/C/raw.page
 share/gnome/help/shotwell/C/running.page
 share/gnome/help/shotwell/C/share-background.page
 share/gnome/help/shotwell/C/share-export.page
