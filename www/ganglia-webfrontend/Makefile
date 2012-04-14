@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/09/16 05:46:26 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/14 16:25:11 adam Exp $
 #
 
 DISTNAME=	ganglia-3.1.2
@@ -44,6 +44,6 @@ do-build:
 do-install:
 	cd ${WRKDIR}/ganglia && ${PAX} -rw . ${DESTDIR}${DOCROOT}/
 
-.include "../../mk/apachever.mk"
+.include "../../mk/apache.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
