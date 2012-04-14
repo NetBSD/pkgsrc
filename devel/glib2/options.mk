@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2012/03/23 07:11:50 obache Exp $
+# $NetBSD: options.mk,v 1.15 2012/04/14 15:43:10 jmmv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.glib2
 PKG_SUPPORTED_OPTIONS=	kqueue
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS=	# empty
 
 .if $(PKG_OPTIONS:Mkqueue)
 PATCH_SITES=		http://dmitrymatveev.co.uk/files/
-PATCHFILES=		glib-gio-kqueue-2.28.8-v3.patch
+PATCHFILES=		glib-gio-kqueue-2.30.3-v4.1.patch
 PATCH_DIST_STRIP=	-p0
 
 BUILD_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
