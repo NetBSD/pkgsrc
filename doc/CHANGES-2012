@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1146 2012/04/14 10:47:36 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1147 2012/04/14 11:01:44 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1853,3 +1853,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/fabric to 1.4.1 [gls 2012-04-14]
 	Updated sysutils/fabric to 1.4.1nb1 [gls 2012-04-14]
 	Updated lang/python26 to 2.6.8 [obache 2012-04-14]
+	Updated sysutils/capistrano to 2.12.0 [gls 2012-04-14]
