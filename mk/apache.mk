@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.26 2011/03/12 14:07:13 wiz Exp $
+# $NetBSD: apache.mk,v 1.27 2012/04/14 12:58:19 adam Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -9,7 +9,7 @@
 #	The default apache server to use and install. If there already
 #	is an apache installed, this will have no effect.
 #
-#	Possible values: apache13 apache2 apache22
+#	Possible values: apache13 apache2 apache22 apache24
 #
 # Package-settable variables:
 #
@@ -34,7 +34,7 @@
 # APACHE_PKG_PREFIX
 #	The package name prefix for apache modules.
 #
-#	Possible values: ap13 ap2 ap22
+#	Possible values: ap13 ap2 ap22 ap24
 #
 
 .if !defined(APACHE_MK)
@@ -56,7 +56,7 @@ PKG_APACHE_ACCEPTED?=		${_PKG_APACHES}
 USE_APR?=			no
 
 # The available apache packages:
-_PKG_APACHES=			apache13 apache2 apache22
+_PKG_APACHES=			apache13 apache2 apache22 apache24
 
 _APACHE_PKGBASE.apache13=	apache-1*
 _APACHE_PKG_PREFIX.apache13=	ap13
@@ -66,9 +66,13 @@ _APACHE_PKGBASE.apache2=	apache-2.0*
 _APACHE_PKG_PREFIX.apache2=	ap2
 _APACHE_PKGSRCDIR.apache2=	../../www/apache2
 
-_APACHE_PKGBASE.apache22=	apache-2.[23456789]*
+_APACHE_PKGBASE.apache22=	apache-2.[23]*
 _APACHE_PKG_PREFIX.apache22=	ap22
 _APACHE_PKGSRCDIR.apache22=	../../www/apache22
+
+_APACHE_PKGBASE.apache24=	apache-2.[456789]*
+_APACHE_PKG_PREFIX.apache24=	ap24
+_APACHE_PKGSRCDIR.apache24=	../../www/apache24
 
 #
 # Sanity checks.
@@ -130,7 +134,7 @@ APACHE_PKG_PREFIX=	${_APACHE_PKG_PREFIX.${PKG_APACHE}}
 
 .if (${PKG_APACHE} == "apache2") && !empty(USE_APR:M[yY][eE][sS])
 .  include "../../devel/apr0/buildlink3.mk"
-.elif (${PKG_APACHE} == "apache22") && !empty(USE_APR:M[Yy][Ee][Ss])
+.elif (${PKG_APACHE} != "apache13") && !empty(USE_APR:M[Yy][Ee][Ss])
 .  include "../../devel/apr/buildlink3.mk"
 .  include "../../devel/apr-util/buildlink3.mk"
 .endif
