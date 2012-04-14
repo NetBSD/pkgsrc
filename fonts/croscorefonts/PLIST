@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/14 15:53:04 ryoon Exp $
+lib/X11/fonts/TTF/Arimo-Bold.ttf
+lib/X11/fonts/TTF/Arimo-BoldItalic.ttf
+lib/X11/fonts/TTF/Arimo-Italic.ttf
+lib/X11/fonts/TTF/Arimo-Regular.ttf
+lib/X11/fonts/TTF/Cousine-Bold.ttf
+lib/X11/fonts/TTF/Cousine-BoldItalic.ttf
+lib/X11/fonts/TTF/Cousine-Italic.ttf
+lib/X11/fonts/TTF/Cousine-Regular.ttf
+lib/X11/fonts/TTF/SymbolNeu.ttf
+lib/X11/fonts/TTF/Tinos-Bold.ttf
+lib/X11/fonts/TTF/Tinos-BoldItalic.ttf
+lib/X11/fonts/TTF/Tinos-Italic.ttf
+lib/X11/fonts/TTF/Tinos-Regular.ttf
+share/doc/croscorefonts/LICENSE
