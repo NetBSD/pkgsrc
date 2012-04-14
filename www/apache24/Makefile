@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/13 18:50:48 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.2 2012/04/14 12:46:46 adam Exp $
 
 DISTNAME=	httpd-2.4.1
 PKGNAME=	${DISTNAME:S/httpd/apache/}
@@ -20,21 +19,18 @@ BUILD_DEFS+=	IPV6_READY
 BUILD_DEFS+=	VARBASE
 BUILD_DEFS+=	APACHE_CUSTOM_CFLAGS
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pax perl pkg-config
-
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-layout=NetBSD
+CONFIGURE_ARGS+=	--enable-mods-shared=all
+CONFIGURE_ARGS+=	--enable-so
+CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
+CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr-util}
+CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
 CONFIGURE_ENV+=		CFLAGS=${APACHE_CUSTOM_CFLAGS:M*:Q}
-
-CONFIGURE_ARGS+=	--enable-layout=NetBSD
-CONFIGURE_ARGS+=	--with-port=80
-CONFIGURE_ARGS+=	--enable-so
-CONFIGURE_ARGS+=	--enable-mods-shared=all
-
-CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
-CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr-util}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/apr/buildlink3.mk"
@@ -45,20 +41,23 @@ CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr-util}
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-CONFIGURE_ARGS+=	--disable-include
-CONFIGURE_ARGS+=	--disable-log-config
-CONFIGURE_ARGS+=	--disable-env
-CONFIGURE_ARGS+=	--disable-mime
-CONFIGURE_ARGS+=	--disable-setenvif
-CONFIGURE_ARGS+=	--disable-status
+CONFIGURE_ARGS+=	--disable-actions
+CONFIGURE_ARGS+=	--disable-alias
 CONFIGURE_ARGS+=	--disable-autoindex
 CONFIGURE_ARGS+=	--disable-asis
 CONFIGURE_ARGS+=	--disable-cgi
-CONFIGURE_ARGS+=	--disable-negotiation
 CONFIGURE_ARGS+=	--disable-dir
-CONFIGURE_ARGS+=	--disable-actions
+CONFIGURE_ARGS+=	--disable-env
+CONFIGURE_ARGS+=	--disable-include
+CONFIGURE_ARGS+=	--disable-log-config
+CONFIGURE_ARGS+=	--disable-lua
+CONFIGURE_ARGS+=	--disable-mime
+CONFIGURE_ARGS+=	--disable-negotiation
+CONFIGURE_ARGS+=	--disable-proxy-html
+CONFIGURE_ARGS+=	--disable-setenvif
+CONFIGURE_ARGS+=	--disable-status
 CONFIGURE_ARGS+=	--disable-userdir
-CONFIGURE_ARGS+=	--disable-alias
+CONFIGURE_ARGS+=	--disable-xml2enc
 
 DFLT_APACHE_MODULES+=	all
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
