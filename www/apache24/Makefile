@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/14 12:46:46 adam Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/14 20:44:44 ryoon Exp $
 
 DISTNAME=	httpd-2.4.1
 PKGNAME=	${DISTNAME:S/httpd/apache/}
@@ -50,7 +50,6 @@ CONFIGURE_ARGS+=	--disable-dir
 CONFIGURE_ARGS+=	--disable-env
 CONFIGURE_ARGS+=	--disable-include
 CONFIGURE_ARGS+=	--disable-log-config
-CONFIGURE_ARGS+=	--disable-lua
 CONFIGURE_ARGS+=	--disable-mime
 CONFIGURE_ARGS+=	--disable-negotiation
 CONFIGURE_ARGS+=	--disable-proxy-html
