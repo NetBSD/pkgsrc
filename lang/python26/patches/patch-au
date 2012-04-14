@@ -1,30 +1,7 @@
-$NetBSD: patch-au,v 1.8 2012/03/25 09:09:05 tron Exp $
+$NetBSD: patch-au,v 1.9 2012/04/14 10:47:19 obache Exp $
 
-1.) Fix for CVE-2012-1150 taken from here:
+1.) Fix for unpriviliged build.
 
-http://hg.python.org/cpython/rev/6b7704fe1be1
-
-2.) Fix for unpriviliged build.
-
---- Makefile.pre.in.orig	2012-03-25 09:49:52.000000000 +0100
-+++ Makefile.pre.in	2012-03-25 09:51:50.000000000 +0100
-@@ -280,6 +280,7 @@
- 		Python/pymath.o \
- 		Python/pystate.o \
- 		Python/pythonrun.o \
-+                Python/random.o \
- 		Python/structmember.o \
- 		Python/symtable.o \
- 		Python/sysmodule.o \
-@@ -708,7 +709,7 @@
- 		-@if which pybuildbot.identify >/dev/null 2>&1; then \
- 			pybuildbot.identify "CC='$(CC)'" "CXX='$(CXX)'"; \
- 		fi
--		$(TESTPYTHON) $(TESTPROG) -uall -rw $(TESTOPTS)
-+		$(TESTPYTHON) -R $(TESTPROG) -uall -rw $(TESTOPTS)
- 
- QUICKTESTOPTS=	$(TESTOPTS) -x test_thread test_signal test_strftime \
- 		test_unicodedata test_re test_sre test_select test_poll \
 --- Makefile.pre.in.orig	2010-08-01 22:05:31.000000000 +0000
 +++ Makefile.pre.in
 @@ -785,7 +785,8 @@ altbininstall:	$(BUILDPYTHON)
