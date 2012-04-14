@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2012/01/14 14:39:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2012/04/14 16:02:45 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -93,6 +93,7 @@ share/zsh/${PKGVERSION}/functions/VCS_INFO_quilt
 share/zsh/${PKGVERSION}/functions/VCS_INFO_realpath
 share/zsh/${PKGVERSION}/functions/VCS_INFO_reposub
 share/zsh/${PKGVERSION}/functions/VCS_INFO_set
+share/zsh/${PKGVERSION}/functions/_SuSEconfig
 share/zsh/${PKGVERSION}/functions/_a2ps
 share/zsh/${PKGVERSION}/functions/_a2utils
 share/zsh/${PKGVERSION}/functions/_aap
@@ -332,6 +333,7 @@ share/zsh/${PKGVERSION}/functions/_history
 share/zsh/${PKGVERSION}/functions/_history_complete_word
 share/zsh/${PKGVERSION}/functions/_history_modifiers
 share/zsh/${PKGVERSION}/functions/_hosts
+share/zsh/${PKGVERSION}/functions/_hwinfo
 share/zsh/${PKGVERSION}/functions/_iconv
 share/zsh/${PKGVERSION}/functions/_id
 share/zsh/${PKGVERSION}/functions/_ifconfig
@@ -584,6 +586,7 @@ share/zsh/${PKGVERSION}/functions/_softwareupdate
 share/zsh/${PKGVERSION}/functions/_sort
 share/zsh/${PKGVERSION}/functions/_source
 share/zsh/${PKGVERSION}/functions/_spamassassin
+share/zsh/${PKGVERSION}/functions/_sqlite
 share/zsh/${PKGVERSION}/functions/_sqsh
 share/zsh/${PKGVERSION}/functions/_ssh
 share/zsh/${PKGVERSION}/functions/_sshfs
@@ -670,6 +673,7 @@ share/zsh/${PKGVERSION}/functions/_value
 share/zsh/${PKGVERSION}/functions/_values
 share/zsh/${PKGVERSION}/functions/_vared
 share/zsh/${PKGVERSION}/functions/_vars
+share/zsh/${PKGVERSION}/functions/_vcsh
 share/zsh/${PKGVERSION}/functions/_vim
 share/zsh/${PKGVERSION}/functions/_vim-addons
 share/zsh/${PKGVERSION}/functions/_vnc
@@ -712,8 +716,10 @@ share/zsh/${PKGVERSION}/functions/_x_visual
 share/zsh/${PKGVERSION}/functions/_x_window
 share/zsh/${PKGVERSION}/functions/_xargs
 share/zsh/${PKGVERSION}/functions/_xauth
+share/zsh/${PKGVERSION}/functions/_xclip
 share/zsh/${PKGVERSION}/functions/_xdvi
 share/zsh/${PKGVERSION}/functions/_xfig
+share/zsh/${PKGVERSION}/functions/_xft_fonts
 share/zsh/${PKGVERSION}/functions/_xloadimage
 share/zsh/${PKGVERSION}/functions/_xmlsoft
 share/zsh/${PKGVERSION}/functions/_xmms2
@@ -730,6 +736,7 @@ share/zsh/${PKGVERSION}/functions/_xv
 share/zsh/${PKGVERSION}/functions/_xwit
 share/zsh/${PKGVERSION}/functions/_yafc
 share/zsh/${PKGVERSION}/functions/_yast
+share/zsh/${PKGVERSION}/functions/_yast2
 share/zsh/${PKGVERSION}/functions/_yodl
 share/zsh/${PKGVERSION}/functions/_yp
 share/zsh/${PKGVERSION}/functions/_yum
@@ -754,6 +761,7 @@ share/zsh/${PKGVERSION}/functions/_zpty
 share/zsh/${PKGVERSION}/functions/_zsh-mime-handler
 share/zsh/${PKGVERSION}/functions/_zstyle
 share/zsh/${PKGVERSION}/functions/_ztodo
+share/zsh/${PKGVERSION}/functions/_zypper
 share/zsh/${PKGVERSION}/functions/add-zsh-hook
 share/zsh/${PKGVERSION}/functions/age
 share/zsh/${PKGVERSION}/functions/allopt
