@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1149 2012/04/14 12:11:56 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1150 2012/04/14 13:33:22 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1857,3 +1857,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/python31 to 3.1.5 [obache 2012-04-14]
 	Updated databases/mysql55-client to 5.5.23 [adam 2012-04-14]
 	Updated databases/mysql55-server to 5.5.23 [adam 2012-04-14]
+	Updated multimedia/ffmpeg to 20120409.0.7.12 [drochner 2012-04-14]
+	Updated math/genius to 1.0.15 [drochner 2012-04-14]
+	Updated net/wireshark to 1.6.7 [drochner 2012-04-14]

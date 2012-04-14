@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11007 2012/04/14 12:11:56 adam Exp $
+$NetBSD: TODO,v 1.11008 2012/04/14 13:33:22 drochner Exp $
 
 Suggested new packages
 ======================
@@ -677,7 +677,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gedit-3.2.6
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o gegl-0.2.0
-	o genius-1.0.15
 	o gentoo-0.19.13
 	o gfract-0.33
 	o ghc-7.0.4
@@ -1383,7 +1382,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o windowmaker-0.95.2 [wip]
 	o wine-1.4
 	o wine-devel-1.5.1
-	o wireshark-1.6.7
 	o wmi-11
 	o wml-2.0.11
 	o wmnd-0.4.13
