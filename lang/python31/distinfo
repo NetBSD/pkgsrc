@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2012/03/22 09:20:43 markd Exp $
+$NetBSD: distinfo,v 1.11 2012/04/14 11:22:07 obache Exp $
 
-SHA1 (Python-3.1.4.tar.bz2) = 043d0240247f289205deeb0e620d799005202b3c
-RMD160 (Python-3.1.4.tar.bz2) = d537706808b00989a636418b6b6a06357b6bb94b
-Size (Python-3.1.4.tar.bz2) = 9887870 bytes
+SHA1 (Python-3.1.5.tar.bz2) = 48f97250c0482d9672938f5781e66dbd19cd4374
+RMD160 (Python-3.1.5.tar.bz2) = e44b6e014d6750676f08fe3d3e953f4216055336
+Size (Python-3.1.5.tar.bz2) = 9889191 bytes
 SHA1 (patch-CVE-2012-0845) = 747ee5649e0f4062f4c5b6bfb9a7fce24d6e3647
 SHA1 (patch-aa) = ae156c486007cfd14d378dd211108d3af4b841b1
 SHA1 (patch-ab) = 7d4d6aa9239f53f1ce9ecd377890d71557c58ca4
