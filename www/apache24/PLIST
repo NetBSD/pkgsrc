@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/14 12:46:46 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -117,7 +117,6 @@ ${PLIST.ldap}lib/httpd/mod_ldap.so
 lib/httpd/mod_log_debug.so
 lib/httpd/mod_log_forensic.so
 lib/httpd/mod_logio.so
-lib/httpd/mod_lua.so
 lib/httpd/mod_mime_magic.so
 lib/httpd/mod_proxy.so
 lib/httpd/mod_proxy_ajp.so
