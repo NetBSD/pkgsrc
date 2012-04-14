@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2012/04/14 20:44:44 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_OPTIONS_REQUIRED_GROUPS=	mpm
 PKG_OPTIONS_GROUP.mpm=		apache-mpm-event apache-mpm-prefork apache-mpm-worker
-PKG_SUPPORTED_OPTIONS=		suexec
+PKG_SUPPORTED_OPTIONS=		lua suexec
 PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
 
 .include "../../mk/bsd.options.mk"
@@ -56,4 +56,12 @@ BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
 BUILD_TARGET=		all suexec
 PLIST.suexec=		yes
 SPECIAL_PERMS+=		sbin/suexec ${REAL_ROOT_USER} ${APACHE_GROUP} 4510
+.endif
+
+PLIST_VARS+=		lua
+.if !empty(PKG_OPTIONS:Mlua)
+CONFIGURE_ARGS+=	--enable-lua
+.include "../../lang/lua/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-lua
 .endif
