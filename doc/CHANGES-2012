@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1151 2012/04/14 15:55:29 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1152 2012/04/14 16:04:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1861,3 +1861,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/genius to 1.0.15 [drochner 2012-04-14]
 	Updated net/wireshark to 1.6.7 [drochner 2012-04-14]
 	Added fonts/croscorefonts version 1.21.0 [ryoon 2012-04-14]
+	Updated shells/zsh-current to 4.3.17 [ryoon 2012-04-14]
