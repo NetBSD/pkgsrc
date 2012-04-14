@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2012/02/23 10:34:07 obache Exp $
+# $NetBSD: Makefile,v 1.74 2012/04/14 16:25:11 adam Exp $
 
 DISTNAME=	horde-3.3.13
 CATEGORIES=	www
@@ -126,5 +126,5 @@ do-install:
 	${FIND} ${DESTDIR}${HORDEDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DESTDIR}${HORDEDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
-.include "../../mk/apachever.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
