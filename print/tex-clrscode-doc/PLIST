@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/15 03:03:19 minskim Exp $
+share/texmf-dist/doc/latex/clrscode/README
+share/texmf-dist/doc/latex/clrscode/clrscode.pdf
