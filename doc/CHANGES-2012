@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1161 2012/04/15 13:03:25 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1162 2012/04/15 13:29:35 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1956,3 +1956,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/phpmyadmin to 3.4.11 [tron 2012-04-15]
 	Updated www/apache24 to 2.4.1nb1 [ryoon 2012-04-15]
 	Updated pkgtools/bootstrap-mk-files to 20120415 [obache 2012-04-15]
+	Updated math/R-randomForest to 4.6.6 [brook 2012-04-15]
+	Updated math/R-randomForest to 4.6.6 [brook 2012-04-15]
