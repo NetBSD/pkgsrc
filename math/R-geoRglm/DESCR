@@ -1,0 +1,4 @@
+Functions for inference in generalised linear spatial models.  The
+posterior and predictive inference is based on Markov chain Monte
+Carlo methods.  Package geoRglm is an extension to the package geoR,
+which must be installed first.
