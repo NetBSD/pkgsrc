@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/04/15 04:10:23 markd Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/15 23:02:11 dholland Exp $
 #
 
 DISTNAME=	kmplayer-0.10.0c
@@ -12,6 +12,8 @@ HOMEPAGE=	http://kmplayer.kde.org/
 COMMENT=	KDE frontend to mplayer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 DEPENDS+=		mplayer>=1.0rc3:../../multimedia/mplayer
 DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
