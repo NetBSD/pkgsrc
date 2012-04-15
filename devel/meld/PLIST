@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/03/03 13:00:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/04/15 15:50:14 wiz Exp $
 bin/meld
 lib/meld/meld/__init__.py
 lib/meld/meld/__init__.pyc
@@ -170,6 +170,7 @@ share/locale/dz/LC_MESSAGES/meld.mo
 share/locale/el/LC_MESSAGES/meld.mo
 share/locale/en_CA/LC_MESSAGES/meld.mo
 share/locale/en_GB/LC_MESSAGES/meld.mo
+share/locale/eo/LC_MESSAGES/meld.mo
 share/locale/es/LC_MESSAGES/meld.mo
 share/locale/fi/LC_MESSAGES/meld.mo
 share/locale/fr/LC_MESSAGES/meld.mo
