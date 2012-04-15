@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11008 2012/04/14 13:33:22 drochner Exp $
+$NetBSD: TODO,v 1.11009 2012/04/15 02:06:41 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o apr0-2.4.1
 	o apsfilter-7.2.8
 	o aqsis-1.6.0
-	o aranym-0.9.12
 	o argtable-2.9
 	o aria2-1.15.0
 	o arirang-1.70
