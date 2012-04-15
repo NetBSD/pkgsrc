@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1185 2012/04/15 15:47:02 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1186 2012/04/15 15:50:07 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1979,3 +1979,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated sysutils/desktop-file-utils to 0.20 [wiz 2012-04-15]
 	Updated math/R-statmod to 1.4.14 [brook 2012-04-15]
 	Updated emulators/cmdpack to 1.03 [wiz 2012-04-15]
+	Updated math/R-Rcmdr to 1.8.4 [brook 2012-04-15]
