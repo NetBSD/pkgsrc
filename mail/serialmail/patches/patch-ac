@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2010/03/15 17:31:29 schmonz Exp $
+$NetBSD: patch-ac,v 1.2 2012/04/15 00:20:49 schmonz Exp $
+
+DESTDIR support.
 
 --- Makefile.orig	1998-11-15 02:28:23.000000000 +0000
 +++ Makefile
