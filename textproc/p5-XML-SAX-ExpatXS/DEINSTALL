@@ -1,0 +1,11 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2012/04/15 01:50:08 obache Exp $
+
+case ${STAGE} in
+
+DEINSTALL)
+        ${PERL5} -I@PERL5_INSTALLVENDORLIB@ -MXML::SAX -e "XML::SAX->remove_parser(q(XML::SAX::ExpatXS))->save_parsers()"
+	${ECHO} "Removed parser from XML::SAX registry."
+	;;
+
+esac
+
