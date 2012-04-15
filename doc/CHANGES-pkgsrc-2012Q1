@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.9 2012/04/11 18:39:27 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.10 2012/04/15 15:26:35 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -52,3 +52,17 @@ net/samba30: security fix
 Pullup ticket #3731 - requested by jdf
 net/samba33: security fix
 
+Pullup ticket #3732 - requested by obache
+emulators/suse121_openssl: security update
+Pullup ticket #3733 - requested by bsiegert
+devel/glib2: portability fix
+Pullup ticket #3734 - requested by obache
+print/acroread9: security update
+Pullup ticket #3735 - requested by dholland
+lang/ocamlduce: build fix
+Pullup ticket #3736 - requested by obache
+emulators/suse121_libpng: security update
+Pullup ticket #3737 - requested by obache
+emulators/suse121_freetype2: security update
+Pullup ticket #3738 - requested by dholland
+devel/ruby-railties31: build fix
