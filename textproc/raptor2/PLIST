@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/19 09:12:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 15:43:43 wiz Exp $
 bin/rapper
 include/raptor2/raptor.h
 include/raptor2/raptor2.h
@@ -31,6 +31,7 @@ share/doc/raptor2/raptor2-changes-1-4-21-to-2-0-0.html
 share/doc/raptor2/raptor2-changes-2-0-3-to-2-0-4.html
 share/doc/raptor2/raptor2-changes-2-0-4-to-2-0-5.html
 share/doc/raptor2/raptor2-changes-2-0-5-to-2-0-6.html
+share/doc/raptor2/raptor2-changes-2-0-6-to-2-0-7.html
 share/doc/raptor2/raptor2-changes.html
 share/doc/raptor2/raptor2-section-avltree.html
 share/doc/raptor2/raptor2-section-constants.html
