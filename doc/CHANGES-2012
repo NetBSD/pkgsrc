@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1177 2012/04/15 15:34:04 brook Exp $
+$NetBSD: CHANGES-2012,v 1.1178 2012/04/15 15:37:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1971,3 +1971,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/R-hwde to 0.62 [brook 2012-04-15]
 	Updated math/R-maps to 2.2.5 [brook 2012-04-15]
 	Updated math/R-mvtnorm to 0.9.9992 [brook 2012-04-15]
+	Updated devel/automake to 1.11.5 [wiz 2012-04-15]
