@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11014 2012/04/15 15:44:41 wiz Exp $
+$NetBSD: TODO,v 1.11015 2012/04/15 15:47:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clustalw-2.0.12 [pkg/43395]
 	o clutter-1.10.0
 	o clutter-gst-1.4.6
-	o cmdpack-1.03
 	o coccigrep-1.8
 	o colorize-0.3.4
 	o colortail-0.3.3
