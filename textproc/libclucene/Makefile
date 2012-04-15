@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/04/15 22:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/15 22:07:37 wiz Exp $
 
-DISTNAME=		clucene-core-2.3.3.4
+DISTNAME=		clucene-core-0.9.21b
 PKGNAME=		lib${DISTNAME:S/-core-/-/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clucene/}
@@ -12,12 +12,9 @@ LICENSE=		gnu-lgpl-v2.1 OR apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKGCONFIG_OVERRIDE+=	libclucene-core.pc.in
-
+USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-
-.include "../../devel/boost-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
