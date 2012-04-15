@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1171 2012/04/15 15:16:20 brook Exp $
+$NetBSD: CHANGES-2012,v 1.1172 2012/04/15 15:19:00 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1965,3 +1965,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/R-abind to 1.4.0 [brook 2012-04-15]
 	Updated math/R-akima to 0.5.7 [brook 2012-04-15]
 	Updated math/R-car to 2.0.12 [brook 2012-04-15]
+	Updated math/R-chron to 2.3.42 [brook 2012-04-15]
