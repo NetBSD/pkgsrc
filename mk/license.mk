@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.50 2012/01/28 10:46:08 wiz Exp $
+# $NetBSD: license.mk,v 1.51 2012/04/15 20:52:28 brook Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -128,6 +128,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	mplusfont \
 	cc-by-sa-v3.0 \
 	lppl-1.3c \
+	lucent \
 	epl-v1.0
 
 # not approved by OSI, derived from BSD
