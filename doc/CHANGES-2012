@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1187 2012/04/15 15:50:23 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1188 2012/04/15 16:00:38 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1981,3 +1981,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/cmdpack to 1.03 [wiz 2012-04-15]
 	Updated math/R-Rcmdr to 1.8.4 [brook 2012-04-15]
 	Updated devel/meld to 1.5.4 [wiz 2012-04-15]
+	Updated math/R-classInt to 0.1.17 [brook 2012-04-15]
