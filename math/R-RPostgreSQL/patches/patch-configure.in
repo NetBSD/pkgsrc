@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1.1.1 2012/04/15 17:57:36 brook Exp $
+
+# see http://code.google.com/p/rpostgresql/issues/detail?id=39
+
+--- configure.in.orig	2011-12-31 13:11:52.000000000 +0000
++++ configure.in
+@@ -115,7 +115,7 @@ AC_SUBST(PKG_CPPFLAGS)
+ AC_SUBST(PKG_LIBS)
+ 
+ ENABLE_LIBPQ=
+-if test $R_OS_TYPE == "darwin" ; then
++if test $R_OS_TYPE = "darwin" ; then
+ ENABLE_LIBPQ='
+ 
+ PKG_CPPFLAGS=-Ilibpq

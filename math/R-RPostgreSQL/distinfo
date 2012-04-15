@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/04/15 17:57:36 brook Exp $
+
+SHA1 (R/RPostgreSQL_0.3-2.tar.gz) = cffa6237894727008d7079e24ab3a561ae139816
+RMD160 (R/RPostgreSQL_0.3-2.tar.gz) = 4c53b8183716455100883545465d3437e2ef17f9
+Size (R/RPostgreSQL_0.3-2.tar.gz) = 470695 bytes
+SHA1 (patch-configure) = a1aa7d41ee22ff965dd5634e3024386b1ca6e413
+SHA1 (patch-configure.in) = a50d4d43da4c73020de86d06a3eb45a7944b8659
