@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2011/01/30 01:59:59 markd Exp $
+# $NetBSD: Makefile,v 1.32 2012/04/15 22:01:03 wiz Exp $
 #
 
 DISTNAME=	dvd+rw-tools-7.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://fy.chalmers.se/~appro/linux/DVD+RW/tools/
 
-MAINTAINER=	dan@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fy.chalmers.se/~appro/linux/DVD+RW/
 COMMENT=	Tools for writing DVD+R[W] disks
 LICENSE=	gnu-gpl-v2

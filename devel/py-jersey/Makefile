@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/15 22:01:00 wiz Exp $
 #
 
 DISTNAME=	jersey-0.1.2
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/j/jersey/
 
-MAINTAINER=	ver@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/jersey
 COMMENT=	Framework for building Twisted Python command-line interfaces
 LICENSE=	modified-bsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/07/20 21:48:29 tron Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/15 22:00:58 wiz Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -7,7 +7,7 @@ CATEGORIES=	benchmarks net
 MASTER_SITES=	ftp://ftp.ptb.de/pub/benchmarks/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	thorpej@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ccci.com/tools/ttcp/
 COMMENT=	TCP testing and performance measuring tool
 LICENSE=	public-domain

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2012/03/03 00:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2012/04/15 22:01:04 wiz Exp $
 
 DISTNAME=	gnotime-2.3.0
 PKGREVISION=	17
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gttr/}
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gttr.sourceforge.net/
 COMMENT=	Time tracker for GNOME2
 

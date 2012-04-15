@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2011/08/19 07:54:04 adam Exp $
+# $NetBSD: Makefile,v 1.46 2012/04/15 22:00:59 wiz Exp $
 
 DISTNAME=	freetds-0.91
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/stable/
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freetds.org/
 COMMENT=	Implementation of TDS protocol used by Sybase and MS-SQL servers
 LICENSE=	gnu-lgpl-v2
