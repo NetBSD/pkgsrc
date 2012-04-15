@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2012/04/15 17:14:34 brook Exp $
+# $NetBSD: Makefile,v 1.234 2012/04/15 17:33:52 brook Exp $
 
 COMMENT=	Mathematics
 
@@ -42,6 +42,7 @@ SUBDIR+=	R-randomForest
 SUBDIR+=	R-sgeostat
 SUBDIR+=	R-shapefiles
 SUBDIR+=	R-sp
+SUBDIR+=	R-spacetime
 SUBDIR+=	R-splancs
 SUBDIR+=	R-statmod
 SUBDIR+=	R-wle
