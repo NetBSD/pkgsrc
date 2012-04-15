@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2011/01/20 09:46:55 adam Exp $
+# $NetBSD: Makefile,v 1.16 2012/04/15 22:01:04 wiz Exp $
 
 DISTNAME=	lout-3.38
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lout/}
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lout.sourceforge.net/
 COMMENT=	Basser Lout, a TeX/troff-like formatter with PostScript/PDF output
 LICENSE=	gnu-gpl-v3
