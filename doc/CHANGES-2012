@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1166 2012/04/15 14:49:02 brook Exp $
+$NetBSD: CHANGES-2012,v 1.1167 2012/04/15 14:51:34 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1966,3 +1966,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/R-ISwR to 2.0.6 [brook 2012-04-15]
 	Updated math/R-PHYLOGR to 1.0.7 [brook 2012-04-15]
 	Updated math/R-PHYLOGR to 1.0.7 [brook 2012-04-15]
+	Updated math/R-R2HTML to 2.2 [brook 2012-04-15]
+	Updated math/R-R2HTML to 2.2 [brook 2012-04-15]
