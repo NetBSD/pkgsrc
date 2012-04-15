@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/04/03 18:57:22 adam Exp $
+# $NetBSD: Makefile,v 1.22 2012/04/15 03:49:00 markd Exp $
 
-DISTNAME=	OpenCV-2.2.0
-PKGNAME=	${DISTNAME:S/OpenCV/opencv/}
-PKGREVISION=	5
+DISTNAME=	OpenCV-2.3.1a
+PKGNAME=	${DISTNAME:S/OpenCV/opencv/:S/a$//}
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,16 +23,11 @@ INSTALLATION_DIRS+=	share/doc/opencv/papers share/doc/opencv/ref/pics \
 
 PKGCONFIG_OVERRIDE+=	opencv.pc.cmake.in
 
-SUBST_CLASSES+=		py
-SUBST_STAGE.py=		pre-configure
-SUBST_FILES.py=		samples/python/*.py
-SUBST_SED.py=		-e 's,/usr/bin/python,/usr/bin/env python,'
+REPLACE_PYTHON+=	samples/python/*.py
 
-#CONFIGURE_ARGS+=--with-swig=no
-CMAKE_ARGS+=	-D BUILD_NEW_PYTHON_SUPPORT=OFF
-# FIXME: should be option.mk'ed instead
-CMAKE_ARGS+=	-D WITH_OPENEXR:BOOL=OFF
-CMAKE_ARGS+=	-D BUILD_DOXYGEN_DOCS=OFF
+WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
+
+.include "options.mk"
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/opencv2/core/*.orig
