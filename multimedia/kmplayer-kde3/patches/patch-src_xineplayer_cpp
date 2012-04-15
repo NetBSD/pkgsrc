@@ -1,0 +1,15 @@
+$NetBSD: patch-src_xineplayer_cpp,v 1.1 2012/04/15 20:38:37 dholland Exp $
+
+Fix build with newer xine-lib.
+
+--- src/xineplayer.cpp~	2007-12-21 21:51:44.000000000 +0000
++++ src/xineplayer.cpp
+@@ -528,7 +528,7 @@ void KXinePlayer::play (int repeat) {
+     xine_event_create_listener_thread (event_queue, event_listener, NULL);
+     if (mrl == "cdda:/") {
+         int nr;
+-        char ** mrls = xine_get_autoplay_mrls (xine, "CD", &nr);
++        const char *const * mrls = xine_get_autoplay_mrls (xine, "CD", &nr);
+         running = 1;
+         for (int i = 0; i < nr; i++) {
+             QString m (mrls[i]);
