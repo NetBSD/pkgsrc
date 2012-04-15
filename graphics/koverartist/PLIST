@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/15 04:19:20 markd Exp $
 bin/koverartist
-share/doc/kde/HTML/en/koverartist/common
-share/doc/kde/HTML/en/koverartist/index.cache.bz2
-share/doc/kde/HTML/en/koverartist/index.docbook
+share/applications/kde4/koverartist.desktop
 share/icons/hicolor/128x128/apps/koverartist.png
 share/icons/hicolor/16x16/apps/koverartist.png
 share/icons/hicolor/22x22/apps/koverartist.png
 share/icons/hicolor/32x32/apps/koverartist.png
 share/icons/hicolor/48x48/apps/koverartist.png
 share/icons/hicolor/64x64/apps/koverartist.png
-share/kde/applnk/Multimedia/koverartist.desktop
+share/icons/hicolor/72x72/apps/koverartist.png
 share/kde/apps/koverartist/cases/cd-multiple.koac
 share/kde/apps/koverartist/cases/cd-slim-contents.koac
 share/kde/apps/koverartist/cases/cd-slim-simple.koac
@@ -18,12 +16,15 @@ share/kde/apps/koverartist/cases/cd-wideslim-contents.koac
 share/kde/apps/koverartist/cases/cd-wideslim-simple.koac
 share/kde/apps/koverartist/cases/dvd-slim.koac
 share/kde/apps/koverartist/cases/dvd-standard.koac
-share/kde/apps/koverartist/koverartistui.rc
-share/kde/mimelnk/application/x-koverartist.desktop
+share/locale/cs/LC_MESSAGES/koverartist.mo
 share/locale/de/LC_MESSAGES/koverartist.mo
 share/locale/es/LC_MESSAGES/koverartist.mo
 share/locale/fr/LC_MESSAGES/koverartist.mo
 share/locale/it/LC_MESSAGES/koverartist.mo
+share/locale/nl/LC_MESSAGES/koverartist.mo
 share/locale/pl/LC_MESSAGES/koverartist.mo
 share/locale/pt/LC_MESSAGES/koverartist.mo
 share/locale/ru/LC_MESSAGES/koverartist.mo
+share/mime/packages/mime-types/x-koac.xml
+share/mime/packages/mime-types/x-koad.xml
+share/mime/packages/mime-types/x-koap.xml
