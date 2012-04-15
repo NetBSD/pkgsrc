@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/04/14 20:44:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/15 12:23:49 ryoon Exp $
 
 DISTNAME=	httpd-2.4.1
 PKGNAME=	${DISTNAME:S/httpd/apache/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
 		http://archive.apache.org/dist/httpd/ \
@@ -41,21 +42,6 @@ CONFIGURE_ENV+=		CFLAGS=${APACHE_CUSTOM_CFLAGS:M*:Q}
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-CONFIGURE_ARGS+=	--disable-actions
-CONFIGURE_ARGS+=	--disable-alias
-CONFIGURE_ARGS+=	--disable-autoindex
-CONFIGURE_ARGS+=	--disable-asis
-CONFIGURE_ARGS+=	--disable-cgi
-CONFIGURE_ARGS+=	--disable-dir
-CONFIGURE_ARGS+=	--disable-env
-CONFIGURE_ARGS+=	--disable-include
-CONFIGURE_ARGS+=	--disable-log-config
-CONFIGURE_ARGS+=	--disable-mime
-CONFIGURE_ARGS+=	--disable-negotiation
-CONFIGURE_ARGS+=	--disable-proxy-html
-CONFIGURE_ARGS+=	--disable-setenvif
-CONFIGURE_ARGS+=	--disable-status
-CONFIGURE_ARGS+=	--disable-userdir
 CONFIGURE_ARGS+=	--disable-xml2enc
 
 DFLT_APACHE_MODULES+=	all

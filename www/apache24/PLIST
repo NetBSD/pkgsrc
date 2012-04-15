@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/14 20:44:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/15 12:23:49 ryoon Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -69,7 +69,10 @@ include/httpd/util_varbuf.h
 include/httpd/util_xml.h
 lib/httpd/httpd.exp
 lib/httpd/mod_access_compat.so
+lib/httpd/mod_actions.so
+lib/httpd/mod_alias.so
 lib/httpd/mod_allowmethods.so
+lib/httpd/mod_asis.so
 lib/httpd/mod_auth_basic.so
 lib/httpd/mod_auth_digest.so
 lib/httpd/mod_auth_form.so
@@ -87,9 +90,11 @@ lib/httpd/mod_authz_groupfile.so
 lib/httpd/mod_authz_host.so
 lib/httpd/mod_authz_owner.so
 lib/httpd/mod_authz_user.so
+lib/httpd/mod_autoindex.so
 lib/httpd/mod_buffer.so
 lib/httpd/mod_cache.so
 lib/httpd/mod_cache_disk.so
+${PLIST.prefork}lib/httpd/mod_cgi.so
 ${PLIST.worker}lib/httpd/mod_cgid.so
 lib/httpd/mod_charset_lite.so
 lib/httpd/mod_data.so
@@ -99,8 +104,10 @@ lib/httpd/mod_dav_lock.so
 lib/httpd/mod_dbd.so
 lib/httpd/mod_deflate.so
 lib/httpd/mod_dialup.so
+lib/httpd/mod_dir.so
 lib/httpd/mod_dumpio.so
 lib/httpd/mod_echo.so
+lib/httpd/mod_env.so
 lib/httpd/mod_expires.so
 lib/httpd/mod_ext_filter.so
 lib/httpd/mod_file_cache.so
@@ -108,17 +115,21 @@ lib/httpd/mod_filter.so
 lib/httpd/mod_headers.so
 lib/httpd/mod_heartbeat.so
 lib/httpd/mod_heartmonitor.so
+lib/httpd/mod_include.so
 lib/httpd/mod_info.so
 lib/httpd/mod_lbmethod_bybusyness.so
 lib/httpd/mod_lbmethod_byrequests.so
 lib/httpd/mod_lbmethod_bytraffic.so
 lib/httpd/mod_lbmethod_heartbeat.so
 ${PLIST.ldap}lib/httpd/mod_ldap.so
+lib/httpd/mod_log_config.so
 lib/httpd/mod_log_debug.so
 lib/httpd/mod_log_forensic.so
 lib/httpd/mod_logio.so
 ${PLIST.lua}lib/httpd/mod_lua.so
+lib/httpd/mod_mime.so
 lib/httpd/mod_mime_magic.so
+lib/httpd/mod_negotiation.so
 lib/httpd/mod_proxy.so
 lib/httpd/mod_proxy_ajp.so
 lib/httpd/mod_proxy_balancer.so
@@ -139,6 +150,7 @@ lib/httpd/mod_sed.so
 lib/httpd/mod_session.so
 lib/httpd/mod_session_cookie.so
 lib/httpd/mod_session_dbd.so
+lib/httpd/mod_setenvif.so
 lib/httpd/mod_slotmem_plain.so
 lib/httpd/mod_slotmem_shm.so
 lib/httpd/mod_socache_dbm.so
@@ -146,9 +158,11 @@ lib/httpd/mod_socache_memcache.so
 lib/httpd/mod_socache_shmcb.so
 lib/httpd/mod_speling.so
 lib/httpd/mod_ssl.so
+lib/httpd/mod_status.so
 lib/httpd/mod_substitute.so
 lib/httpd/mod_unique_id.so
 lib/httpd/mod_unixd.so
+lib/httpd/mod_userdir.so
 lib/httpd/mod_usertrack.so
 lib/httpd/mod_version.so
 lib/httpd/mod_vhost_alias.so

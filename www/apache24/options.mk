@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/04/14 20:44:44 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2012/04/15 12:23:49 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_OPTIONS_REQUIRED_GROUPS=	mpm
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS=		apache-mpm-prefork
 #	prefork		non-threaded, pre-forking web server
 #	worker		hybrid multi-threaded multi-process web server
 #
-PLIST_VARS+=		worker
+PLIST_VARS+=		worker prefork
 .if !empty(PKG_OPTIONS:Mapache-mpm-event)
 CONFIGURE_ARGS+=	--with-mpm=event
 PLIST.worker=		yes
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--with-mpm=worker
 PLIST.worker=		yes
 .else
 CONFIGURE_ARGS+=	--with-mpm=prefork
+PLIST.prefork=		yes
 .endif
 
 BUILD_DEFS+=		APACHE_MODULES
@@ -62,6 +63,7 @@ PLIST_VARS+=		lua
 .if !empty(PKG_OPTIONS:Mlua)
 CONFIGURE_ARGS+=	--enable-lua
 .include "../../lang/lua/buildlink3.mk"
+PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--disable-lua
 .endif
