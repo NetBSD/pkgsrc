@@ -1,1 +1,2 @@
-Computes the multivariate normal and t distribution
+Computes multivariate normal and t probabilities, quantiles, random
+deviates and densities.
