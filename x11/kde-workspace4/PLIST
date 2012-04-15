@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/19 19:44:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 05:54:59 markd Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -1062,10 +1062,12 @@ share/icons/oxygen/16x16/apps/waiting.png
 share/icons/oxygen/16x16/mimetypes/fonts-package.png
 share/icons/oxygen/22x22/apps/kcmkwm.png
 share/icons/oxygen/22x22/apps/kfontview.png
+share/icons/oxygen/22x22/apps/networkmanager.png
 share/icons/oxygen/22x22/mimetypes/fonts-package.png
 share/icons/oxygen/32x32/apps/kcmkwm.png
 share/icons/oxygen/32x32/apps/kfontview.png
 share/icons/oxygen/32x32/apps/kwin.png
+share/icons/oxygen/32x32/apps/networkmanager.png
 share/icons/oxygen/32x32/mimetypes/fonts-package.png
 share/icons/oxygen/48x48/apps/kcmkwm.png
 share/icons/oxygen/48x48/apps/kfontview.png
@@ -1073,6 +1075,7 @@ share/icons/oxygen/48x48/apps/kwin.png
 share/icons/oxygen/48x48/mimetypes/fonts-package.png
 share/icons/oxygen/64x64/apps/kcmkwm.png
 share/icons/oxygen/64x64/apps/kfontview.png
+share/icons/oxygen/64x64/apps/networkmanager.png
 share/icons/oxygen/64x64/mimetypes/fonts-package.png
 share/icons/oxygen/scalable/apps/kcmkwm.svgz
 share/icons/oxygen/scalable/apps/kfontview.svgz

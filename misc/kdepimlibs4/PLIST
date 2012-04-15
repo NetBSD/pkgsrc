@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/19 11:46:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/04/15 05:54:59 markd Exp $
 include/KDE/Akonadi/AgentBase
 include/KDE/Akonadi/AgentFilterProxyModel
 include/KDE/Akonadi/AgentInstance
@@ -1175,6 +1175,8 @@ share/kde/apps/libkholidays/plan2/holiday_hk_en-gb
 share/kde/apps/libkholidays/plan2/holiday_hk_zh-cn
 share/kde/apps/libkholidays/plan2/holiday_hr_hr
 share/kde/apps/libkholidays/plan2/holiday_hu_hu
+share/kde/apps/libkholidays/plan2/holiday_id_en-us
+share/kde/apps/libkholidays/plan2/holiday_id_id
 share/kde/apps/libkholidays/plan2/holiday_ie_en-gb
 share/kde/apps/libkholidays/plan2/holiday_ie_ga
 share/kde/apps/libkholidays/plan2/holiday_il_en-us
@@ -1208,6 +1210,7 @@ share/kde/apps/libkholidays/plan2/holiday_re_fr
 share/kde/apps/libkholidays/plan2/holiday_ro_ro
 share/kde/apps/libkholidays/plan2/holiday_ru_ru
 share/kde/apps/libkholidays/plan2/holiday_se_sv
+share/kde/apps/libkholidays/plan2/holiday_sg_en-gb
 share/kde/apps/libkholidays/plan2/holiday_si_sl
 share/kde/apps/libkholidays/plan2/holiday_sk_sk
 share/kde/apps/libkholidays/plan2/holiday_sm_it
