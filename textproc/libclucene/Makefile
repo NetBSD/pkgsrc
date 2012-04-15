@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2009/07/23 08:59:54 markd Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/15 22:07:36 wiz Exp $
 
-DISTNAME=		clucene-core-0.9.21b
+DISTNAME=		clucene-core-2.3.3.4
 PKGNAME=		lib${DISTNAME:S/-core-/-/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clucene/}
 
-MAINTAINER=		mkirby@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://clucene.sourceforge.net/index.php/Main_Page
 COMMENT=		Text search engine written in C++
 LICENSE=		gnu-lgpl-v2.1 OR apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake
+PKGCONFIG_OVERRIDE+=	libclucene-core.pc.in
+
 USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		yes
+USE_CMAKE=		yes
 USE_LIBTOOL=		yes
+
+.include "../../devel/boost-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
