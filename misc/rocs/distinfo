@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/03/20 08:29:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2012/04/15 05:54:52 markd Exp $
 
-SHA1 (rocs-4.8.0.tar.bz2) = d29daa9633e2ba6e2d3e0c7155ade752216a8969
-RMD160 (rocs-4.8.0.tar.bz2) = bf29f684d80c0c1db8081ea295380a266efc2cf3
-Size (rocs-4.8.0.tar.bz2) = 714724 bytes
+SHA1 (rocs-4.8.2.tar.xz) = 3e22d284ec0ba40bc82dfc5f3b58b4a5721a8c64
+RMD160 (rocs-4.8.2.tar.xz) = d73ec024f0ec940bb8d42162eec8a8fbad4d0c3e
+Size (rocs-4.8.2.tar.xz) = 656112 bytes

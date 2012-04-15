@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 08:37:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 05:54:52 markd Exp $
 bin/kiten
 bin/kitengen
 bin/kitenkanjibrowser
@@ -20,10 +20,22 @@ lib/libkiten.so.4
 lib/libkiten.so.4.8.0
 share/applications/kde4/kiten.desktop
 share/doc/kde/HTML/en/kiten/common
+share/doc/kde/HTML/en/kiten/common_uncommon_filtering.png
+share/doc/kde/HTML/en/kiten/ending_search.png
+share/doc/kde/HTML/en/kiten/font.png
+share/doc/kde/HTML/en/kiten/grade_search.png
 share/doc/kde/HTML/en/kiten/index.cache.bz2
 share/doc/kde/HTML/en/kiten/index.docbook
-share/doc/kde/HTML/en/kiten/kiten1.png
-share/doc/kde/HTML/en/kiten/kiten2.png
+share/doc/kde/HTML/en/kiten/introduction.png
+share/doc/kde/HTML/en/kiten/kanji_information.png
+share/doc/kde/HTML/en/kiten/kanji_list.png
+share/doc/kde/HTML/en/kiten/looking_up_words.png
+share/doc/kde/HTML/en/kiten/radical_selector.png
+share/doc/kde/HTML/en/kiten/search_in_results.png
+share/doc/kde/HTML/en/kiten/stroke_search.png
+share/doc/kde/HTML/en/kiten/verb_deinflection.png
+share/doc/kde/HTML/en/kiten/with_filtering.png
+share/doc/kde/HTML/en/kiten/word_type_results.png
 share/fonts/kanjistrokeorders/KanjiStrokeOrders.ttf
 share/icons/hicolor/128x128/apps/kiten.png
 share/icons/hicolor/16x16/apps/kiten.png

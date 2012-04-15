@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 08:53:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 05:54:53 markd Exp $
 bin/marble
 bin/marble-touch
 bin/routing-instructions
@@ -105,20 +105,6 @@ include/marble/WidgetGraphicsItem.h
 include/marble/geodata_export.h
 include/marble/global.h
 include/marble/marble_export.h
-lib/kde4/imports/org/kde/edu/marble/MarbleSettings.qml
-lib/kde4/imports/org/kde/edu/marble/libMarbleDeclarativePlugin.so
-lib/kde4/imports/org/kde/edu/marble/qmldir
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/FileDialog.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/FileOpenDialog.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/FileSaveDialog.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/MenuItemSwitch.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/RouteEditor.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/RoutingDialog.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/SearchField.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/SearchResultSelectionDialog.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/ViaPointEditor.qml
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/libQtComponentsPlugin.so
-lib/kde4/imports/org/kde/edu/marble/qtcomponents/qmldir
 lib/kde4/libmarble_part.so
 lib/kde4/plasma_applet_worldclock.so
 lib/kde4/plasma_runner_marble.so
@@ -163,6 +149,20 @@ lib/kde4/plugins/marble/YoursPlugin.so
 lib/libmarblewidget.so
 lib/libmarblewidget.so.0.13.0
 lib/libmarblewidget.so.13
+qt4/imports/org/kde/edu/marble/MarbleSettings.qml
+qt4/imports/org/kde/edu/marble/libMarbleDeclarativePlugin.so
+qt4/imports/org/kde/edu/marble/qmldir
+qt4/imports/org/kde/edu/marble/qtcomponents/FileDialog.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/FileOpenDialog.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/FileSaveDialog.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/MenuItemSwitch.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/RouteEditor.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/RoutingDialog.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/SearchField.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/SearchResultSelectionDialog.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/ViaPointEditor.qml
+qt4/imports/org/kde/edu/marble/qtcomponents/libQtComponentsPlugin.so
+qt4/imports/org/kde/edu/marble/qtcomponents/qmldir
 share/applications/kde4/marble.desktop
 share/doc/kde/HTML/en/marble/common
 share/doc/kde/HTML/en/marble/configure-cacheproxy.png

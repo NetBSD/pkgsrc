@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.kde4,v 1.14 2012/03/19 11:06:31 markd Exp $
+# $NetBSD: Makefile.kde4,v 1.15 2012/04/15 05:54:55 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE4-distributed packages (they all share common configure and build
 # settings).
 
 CATEGORIES+=	kde
-_KDE_VERSION=	4.8.0
-MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE:=4.8.0/src/kde-l10n/}
-MASTER_SITES?=	${MASTER_SITE_KDE:=4.8.0/src/}
-EXTRACT_SUFX?=	.tar.bz2
+_KDE_VERSION=	4.8.2
+MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE:=4.8.2/src/kde-l10n/}
+MASTER_SITES?=	${MASTER_SITE_KDE:=4.8.2/src/}
+EXTRACT_SUFX?=	.tar.xz
 
 MAINTAINER?=	markd@NetBSD.org
 HOMEPAGE?=	http://www.kde.org/

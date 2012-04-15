@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/03/20 08:27:54 markd Exp $
+$NetBSD: distinfo,v 1.2 2012/04/15 05:54:52 markd Exp $
 
-SHA1 (step-4.8.0.tar.bz2) = 08fff354effdc6f10e3b55ab011f8393a19de9fd
-RMD160 (step-4.8.0.tar.bz2) = e68ca41dcc5a71ee1b58a450f0620ac4b0d79d20
-Size (step-4.8.0.tar.bz2) = 408593 bytes
+SHA1 (step-4.8.2.tar.xz) = 0620924f7683c29e855482af8822067722ced080
+RMD160 (step-4.8.2.tar.xz) = 97515c2e148f68708dcbafefa31631d7a8006e59
+Size (step-4.8.2.tar.xz) = 373140 bytes

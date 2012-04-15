@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/03/20 00:14:34 markd Exp $
+$NetBSD: distinfo,v 1.2 2012/04/15 05:54:51 markd Exp $
 
-SHA1 (libksane-4.8.0.tar.bz2) = 417e0e65d3045548a29a9acdcbe1b0511a42295a
-RMD160 (libksane-4.8.0.tar.bz2) = d94285e3cbfe75cf5edb9a4944d77882b466c30d
-Size (libksane-4.8.0.tar.bz2) = 83896 bytes
+SHA1 (libksane-4.8.2.tar.xz) = fe9376710687c2e9354bd5f8245755c53e2ad91c
+RMD160 (libksane-4.8.2.tar.xz) = 2be70b255c1480bf9b06d90169f17fb7dbb8c115
+Size (libksane-4.8.2.tar.xz) = 80932 bytes

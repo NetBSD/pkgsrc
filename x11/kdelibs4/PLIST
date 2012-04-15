@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/03/31 21:46:55 hans Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/04/15 05:54:53 markd Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -221,6 +221,7 @@ include/KDE/KArchiveDirectory
 include/KDE/KArchiveEntry
 include/KDE/KArchiveFile
 include/KDE/KArrowButton
+include/KDE/KAscii
 include/KDE/KAssistantDialog
 include/KDE/KAuth/Action
 include/KDE/KAuth/ActionReply
@@ -2091,12 +2092,14 @@ lib/libthreadweaver.so
 lib/libthreadweaver.so.4
 lib/libthreadweaver.so.4.8.0
 man/man1/checkXML.1
+man/man1/kconfig_compiler.1
 man/man1/kde4-config.1
 man/man1/kdecmake.1
 man/man1/kjs.1
 man/man1/kjscmd.1
 man/man1/kross.1
 man/man1/makekdewidgets.1
+man/man1/preparetips.1
 man/man7/kdeoptions.7
 man/man7/qtoptions.7
 man/man8/kbuildsycoca4.8

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 05:55:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 05:54:58 markd Exp $
 bin/ksecrets
 bin/ksecretsserviced
 bin/ksecretsync
@@ -18,7 +18,7 @@ lib/kde4/kcm_ksecretsync.so
 lib/kde4/kio_ksecretsservice.so
 lib/libksecretsservice.so
 lib/libksecretsservice.so.4
-lib/libksecretsservice.so.${PKGVERSION}
+lib/libksecretsservice.so.4.8.0
 share/applications/kde4/ksecrets.desktop
 share/dbus-1/services/org.kde.ksecretsserviced.service
 share/kde/apps/ksecretsync/ksecretsync.rc

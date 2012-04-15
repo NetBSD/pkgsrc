@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/19 19:44:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 05:54:54 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -256,6 +256,8 @@ lib/libmolletnetwork.so.4
 lib/libmolletnetwork.so.4.8.0
 lib/libnepomukcommon.so
 lib/libnepomukdatamanagement.so
+lib/libnepomukdatamanagement.so.4
+lib/libnepomukdatamanagement.so.4.8.0
 lib/libnepomuksync.so
 lib/libnepomuksync.so.4
 lib/libnepomuksync.so.4.8.0
@@ -717,6 +719,7 @@ share/kde/apps/kcm_phonon/listview-background.png
 share/kde/apps/kcmlocale/pics/background.png
 share/kde/apps/kconf_update/devicepreference.upd
 share/kde/apps/kconf_update/kuriikwsfilter.upd
+share/kde/apps/kconf_update/nepomukstrigiservice-migrate.upd
 share/kde/apps/kde/kde.notifyrc
 share/kde/apps/kglobalaccel/kglobalaccel.notifyrc
 share/kde/apps/khelpcenter/glossary.html.in

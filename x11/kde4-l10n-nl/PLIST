@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/04/05 22:30:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/04/15 05:55:00 markd Exp $
 man/nl/man1/adddebug.1
 man/nl/man1/ark.1
 man/nl/man1/cheatmake.1
@@ -226,10 +226,22 @@ share/doc/kde/HTML/nl/kbounce/index.docbook
 share/doc/kde/HTML/nl/kbreakout/common
 share/doc/kde/HTML/nl/kbreakout/index.cache.bz2
 share/doc/kde/HTML/nl/kbreakout/index.docbook
+share/doc/kde/HTML/nl/kbruch/checked.png
 share/doc/kde/HTML/nl/kbruch/common
+share/doc/kde/HTML/nl/kbruch/compare.png
+share/doc/kde/HTML/nl/kbruch/convert.png
+share/doc/kde/HTML/nl/kbruch/factorize.png
+share/doc/kde/HTML/nl/kbruch/gui_main.png
+share/doc/kde/HTML/nl/kbruch/gui_mode.png
 share/doc/kde/HTML/nl/kbruch/index.cache.bz2
 share/doc/kde/HTML/nl/kbruch/index.docbook
+share/doc/kde/HTML/nl/kbruch/learning.png
 share/doc/kde/HTML/nl/kbruch/man-kbruch.1.docbook
+share/doc/kde/HTML/nl/kbruch/mixed.png
+share/doc/kde/HTML/nl/kbruch/percentage.png
+share/doc/kde/HTML/nl/kbruch/reduced.png
+share/doc/kde/HTML/nl/kbruch/settings.png
+share/doc/kde/HTML/nl/kbruch/statistics.png
 share/doc/kde/HTML/nl/kcachegrind/common
 share/doc/kde/HTML/nl/kcachegrind/index.cache.bz2
 share/doc/kde/HTML/nl/kcachegrind/index.docbook
@@ -567,6 +579,12 @@ share/doc/kde/HTML/nl/kig/simple_locus_construction.png
 share/doc/kde/HTML/nl/kig/test_run_macro.png
 share/doc/kde/HTML/nl/kig/text_label_attaching.png
 share/doc/kde/HTML/nl/kig/text_label_wizard.png
+share/doc/kde/HTML/nl/kigo/common
+share/doc/kde/HTML/nl/kigo/index.cache.bz2
+share/doc/kde/HTML/nl/kigo/index.docbook
+share/doc/kde/HTML/nl/killbots/common
+share/doc/kde/HTML/nl/killbots/index.cache.bz2
+share/doc/kde/HTML/nl/killbots/index.docbook
 share/doc/kde/HTML/nl/kimagemapeditor/common
 share/doc/kde/HTML/nl/kimagemapeditor/index.cache.bz2
 share/doc/kde/HTML/nl/kimagemapeditor/index.docbook
@@ -726,6 +744,7 @@ share/doc/kde/HTML/nl/kmail/index.cache.bz2
 share/doc/kde/HTML/nl/kmail/index.docbook
 share/doc/kde/HTML/nl/kmail/intro.docbook
 share/doc/kde/HTML/nl/kmail/menus.docbook
+share/doc/kde/HTML/nl/kmail/troubleshooting.docbook
 share/doc/kde/HTML/nl/kmail/using-kmail.docbook
 share/doc/kde/HTML/nl/kmenuedit/common
 share/doc/kde/HTML/nl/kmenuedit/index.cache.bz2
@@ -1091,9 +1110,6 @@ share/doc/kde/HTML/nl/lokalize/index.docbook
 share/doc/kde/HTML/nl/lskat/common
 share/doc/kde/HTML/nl/lskat/index.cache.bz2
 share/doc/kde/HTML/nl/lskat/index.docbook
-share/doc/kde/HTML/nl/mancala/common
-share/doc/kde/HTML/nl/mancala/index.cache.bz2
-share/doc/kde/HTML/nl/mancala/index.docbook
 share/doc/kde/HTML/nl/marble/common
 share/doc/kde/HTML/nl/marble/configure-cacheproxy.png
 share/doc/kde/HTML/nl/marble/configure-navigation.png
@@ -1282,6 +1298,7 @@ share/locale/nl/LC_MESSAGES/akonadi_strigi_feeder.mo
 share/locale/nl/LC_MESSAGES/akonadi_vcard_resource.mo
 share/locale/nl/LC_MESSAGES/akonadi_vcarddir_resource.mo
 share/locale/nl/LC_MESSAGES/akonadicontact.mo
+share/locale/nl/LC_MESSAGES/akonadinotes.mo
 share/locale/nl/LC_MESSAGES/akonaditray.mo
 share/locale/nl/LC_MESSAGES/akregator.mo
 share/locale/nl/LC_MESSAGES/akregator_konqplugin.mo
@@ -1792,7 +1809,6 @@ share/locale/nl/LC_MESSAGES/okular_tiff.mo
 share/locale/nl/LC_MESSAGES/okular_xps.mo
 share/locale/nl/LC_MESSAGES/palapeli.mo
 share/locale/nl/LC_MESSAGES/parley.mo
-share/locale/nl/LC_MESSAGES/phonon-xine.mo
 share/locale/nl/LC_MESSAGES/phonon_gstreamer.mo
 share/locale/nl/LC_MESSAGES/phonon_kde.mo
 share/locale/nl/LC_MESSAGES/phonon_vlc.mo

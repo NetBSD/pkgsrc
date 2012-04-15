@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/20 05:25:38 markd Exp $
+$NetBSD: distinfo,v 1.2 2012/04/15 05:54:51 markd Exp $
 
-SHA1 (kcalc-4.8.0.tar.bz2) = b832aadd21906a7bdad323b8f1cbfb59bf1b7c63
-RMD160 (kcalc-4.8.0.tar.bz2) = f9f0b2034f8fde73de0739c325f7bbe4607790d5
-Size (kcalc-4.8.0.tar.bz2) = 91894 bytes
+SHA1 (kcalc-4.8.2.tar.xz) = f2bbed3d7f991a4cd0484cc4fafe8c04bd29d986
+RMD160 (kcalc-4.8.2.tar.xz) = b1cfb7a7ae46e8ab89d9d1981913aac107671a75
+Size (kcalc-4.8.2.tar.xz) = 87180 bytes
