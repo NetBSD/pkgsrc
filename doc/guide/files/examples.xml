@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.12 2007/06/01 11:07:24 rillig Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.13 2012/04/15 22:01:00 wiz Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -23,7 +23,7 @@ DISTNAME=       bison-1.25
 CATEGORIES=     devel
 MASTER_SITES=   ${MASTER_SITE_GNU}
 
-MAINTAINER=     thorpej@NetBSD.org
+MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 COMMENT=        GNU yacc clone
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2010/09/30 10:49:15 obache Exp $
+# $NetBSD: Makefile,v 1.33 2012/04/15 22:00:59 wiz Exp $
 
 DISTNAME=	MySQL-python-${DIST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-mysqldb-${DIST_VERSION:S/c/rc/}
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mysql-python
 COMMENT=	MySQL interface for Python
 LICENSE=	gnu-gpl-v2
