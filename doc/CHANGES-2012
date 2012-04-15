@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1180 2012/04/15 15:39:56 brook Exp $
+$NetBSD: CHANGES-2012,v 1.1181 2012/04/15 15:43:46 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1974,3 +1974,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/automake to 1.11.5 [wiz 2012-04-15]
 	Updated math/R-pixmap to 0.4.11 [brook 2012-04-15]
 	Updated math/R-ncdf to 1.6.6 [brook 2012-04-15]
+	Updated math/R-sgeostat to 1.0.24 [brook 2012-04-15]
