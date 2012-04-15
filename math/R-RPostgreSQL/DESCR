@@ -1,0 +1,4 @@
+Database interface and PostgreSQL driver for R.  This package provides
+a Database Interface (DBI) compliant driver for R to access PostgreSQL
+database systems.  A wiki and issue tracking system for the package
+are available at Google Code at https://code.google.com/p/rpostgresql/.
