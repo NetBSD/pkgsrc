@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1201 2012/04/15 17:58:15 brook Exp $
+$NetBSD: CHANGES-2012,v 1.1202 2012/04/15 22:15:35 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/R-gstat to 1.0.10 [brook 2012-04-15]
 	Added math/R-DBI version 0.2.5 [brook 2012-04-15]
 	Added math/R-RPostgreSQL version 0.3.2 [brook 2012-04-15]
+	Added math/R-geoRglm version 0.9.2 [brook 2012-04-15]
