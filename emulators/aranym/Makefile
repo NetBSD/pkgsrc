@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2010/07/08 11:28:05 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/04/15 02:05:28 ryoon Exp $
 #
 
-DISTNAME=			aranym-0.9.10
+DISTNAME=			aranym_0.9.13.orig
+PKGNAME=			${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=			emulators
 MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=aranym/}
-SITES.emutos-512k-0.8.5.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
-DISTFILES=			${DEFAULT_DISTFILES} emutos-512k-0.8.5.zip
+SITES.emutos-512k-0.8.6.zip=	${MASTER_SITE_SOURCEFORGE:=emutos/}
+DISTFILES=			${DEFAULT_DISTFILES} emutos-512k-0.8.6.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
@@ -14,7 +15,11 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake gzip
+WRKSRC=			${WRKDIR}/${PKGNAME}
+
+AUTOCONF_REQD=		2..50
+
+USE_TOOLS+=		autoconf gmake gzip
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes
@@ -22,7 +27,7 @@ MANCOMPRESSED=		yes
 CONFIGURE_ARGS+=	--enable-fullmmu
 CONFIGURE_ARGS+=	--enable-atc=full
 
-EMUTOS_WRKSRC=		${WRKDIR}/emutos-512k-0.8.5
+EMUTOS_WRKSRC=		${WRKDIR}/emutos-512k-0.8.6
 EMUTOS_DOC_DIR=		${PREFIX}/share/doc/aranym/emutos
 EMUTOS_ROM_DIR=		${PREFIX}/share/aranym
 
@@ -49,6 +54,9 @@ CONFIGURE_ARGS+=	--enable-jit-fpu
 .endif
 
 INSTALLATION_DIRS+=	${EMUTOS_DOC_DIR} ${EMUTOS_ROM_DIR}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 post-install:
 	${INSTALL_DATA} ${EMUTOS_WRKSRC}/etos512k.img ${DESTDIR}${EMUTOS_ROM_DIR}
