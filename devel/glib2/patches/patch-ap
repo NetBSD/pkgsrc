@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
+$NetBSD: patch-ap,v 1.2.2.1 2012/04/15 13:06:03 tron Exp $
 
---- gio/gcredentials.c.orig	2011-08-16 00:51:30.000000000 +0000
+--- gio/gcredentials.c.orig	Tue Aug 16 00:51:06 2011
 +++ gio/gcredentials.c
 @@ -32,6 +32,9 @@
  #include <sys/socket.h>
@@ -12,11 +12,14 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
  #include <stdlib.h>
  
  #include <gobject/gvaluecollector.h>
-@@ -92,6 +95,12 @@ struct _GCredentials
+@@ -90,8 +93,14 @@ struct _GCredentials
+   struct ucred native;
+ #elif defined(__FreeBSD__)
    struct cmsgcred native;
- #elif defined(__OpenBSD__)
+-#elif defined(__OpenBSD__)
++#elif defined(__OpenBSD__) && !defined(__MirBSD__)
    struct sockpeercred native;
-+#elif defined(__NetBSD__)
++#elif defined(__NetBSD__) || defined(__MirBSD__)
 +  struct {
 +    pid_t pid;
 +    uid_t uid;
@@ -30,7 +33,7 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
  g_credentials_init (GCredentials *credentials)
  {
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__MirBSD__)
    credentials->native.pid = getpid ();
    credentials->native.uid = geteuid ();
    credentials->native.gid = getegid ();
@@ -39,7 +42,7 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
  
    ret = g_string_new ("GCredentials:");
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__MirBSD__)
    g_string_append (ret, "linux-ucred:");
    if (credentials->native.pid != -1)
      g_string_append_printf (ret, "pid=%" G_GINT64_FORMAT ",", (gint64) credentials->native.pid);
@@ -48,7 +51,7 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
  
    ret = FALSE;
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__MirBSD__)
    if (credentials->native.uid == other_credentials->native.uid)
      ret = TRUE;
  #elif defined(__FreeBSD__)
@@ -57,7 +60,7 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
    ret = NULL;
  
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__MirBSD__)
    if (native_type != G_CREDENTIALS_TYPE_LINUX_UCRED)
      {
        g_warning ("g_credentials_get_native: Trying to get credentials of type %d but only "
@@ -66,7 +69,7 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
                            gpointer          native)
  {
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__MirBSD__)
    if (native_type != G_CREDENTIALS_TYPE_LINUX_UCRED)
      {
        g_warning ("g_credentials_set_native: Trying to set credentials of type %d "
@@ -84,7 +87,7 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
    g_return_val_if_fail (error == NULL || *error == NULL, -1);
  
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__MirBSD__)
    ret = credentials->native.uid;
  #elif defined(__FreeBSD__)
    ret = credentials->native.cmcred_euid;
@@ -93,7 +96,7 @@ $NetBSD: patch-ap,v 1.2 2012/01/29 10:46:54 drochner Exp $
  
    ret = FALSE;
 -#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__MirBSD__)
    credentials->native.uid = uid;
    ret = TRUE;
  #elif defined(__FreeBSD__)
