@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/12/11 19:35:02 adam Exp $
+$NetBSD: distinfo,v 1.4 2012/04/15 16:35:01 brook Exp $
 
-SHA1 (R/mapproj_1.1-8.2.tar.gz) = 1e9d12ddc71e5b7e2f725b8433e1677d32f49afb
-RMD160 (R/mapproj_1.1-8.2.tar.gz) = 84662fc24d93fc62f166851fb569c729b7b60012
-Size (R/mapproj_1.1-8.2.tar.gz) = 24208 bytes
+SHA1 (R/mapproj_1.1-8.3.tar.gz) = b677060b9ae59ef5e18c0326ff79a98071c2bf40
+RMD160 (R/mapproj_1.1-8.3.tar.gz) = 17d589493d2c59e49f2b31d8b6fe0807d111b9a9
+Size (R/mapproj_1.1-8.3.tar.gz) = 23955 bytes
