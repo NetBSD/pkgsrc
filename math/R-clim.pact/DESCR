@@ -1,5 +1,5 @@
-Climate analysis and downscaling package for monthly and daily data.
-
 The package contains R functions for retrieving data, making climate
 analysis and downscaling of monthly mean and daily mean global climate
-scenarios.
+scenarios.  The package is also described in the book
+'Empirical-Statistical Downscaling
+(http://www.worldscibooks.com/environsci/6908.html)
