@@ -1,6 +1,3 @@
-uni- and multivariable geostatistical modelling, prediction and
-simulation
-
-variogram modelling; simple, ordinary and universal point or block
+Variogram modelling; simple, ordinary and universal point or block
 (co)kriging, sequential Gaussian or indicator (co)simulation;
-variogram and map plotting utility functions.
+variogram and variogram map plotting utility functions.
