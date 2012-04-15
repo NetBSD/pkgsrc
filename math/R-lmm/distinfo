@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/10/14 22:41:44 markd Exp $
+$NetBSD: distinfo,v 1.4 2012/04/15 13:46:13 brook Exp $
 
-SHA1 (R/lmm_0.3-5.tar.gz) = 47576977719aba4e8c0cf3f9b13db4747cc9a4d9
-RMD160 (R/lmm_0.3-5.tar.gz) = de3d86ae4ba7716bae8c2e56980da23ca9cee1a9
-Size (R/lmm_0.3-5.tar.gz) = 214352 bytes
+SHA1 (R/lmm_0.5.tar.gz) = 8bd440e0f2af203f2de93165473e28f32f2e1b50
+RMD160 (R/lmm_0.5.tar.gz) = 275d11471dcda200e062b1f380b58ac934fb6d70
+Size (R/lmm_0.5.tar.gz) = 451290 bytes
 SHA1 (patch-aa) = 85195d02f6be923e38aa5536f48f19b91d47269c
