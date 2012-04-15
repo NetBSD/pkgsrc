@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2012/04/07 22:19:13 dholland Exp $
+# $NetBSD: Makefile,v 1.44 2012/04/15 04:07:21 markd Exp $
 #
 
 DISTNAME=		sge-8.0.0d
 PKGNAME=		sge-8.0.0.4
+PKGREVISION=		1
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.0.0d/
 
@@ -14,11 +15,10 @@ BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# Not 64-bit clean; crashes during build.
-NOT_FOR_PLATFORM=	${LP64PLATFORMS}
-
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run
+
+MANINSTALL=		maninstall catinstall
 
 CFLAGS+=		-D${UPPER_OPSYS}
 CONFIGURE_ENV+=		REMOTE=sge
@@ -49,8 +49,6 @@ REPLACE.tclsh.old=	.*tclsh
 REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
 REPLACE_FILES.tclsh=	source/dist/util/resources/jsv/jsv.tcl
 REPLACE_PERL+=		source/dist/util/resources/jsv/jsv.pl
-
-CHECK_INTERPRETER_SKIP+=	sge/ckpt/cpr_* sge/mpi/myrinet/* sge/util/resources/loadsensors/interix-loadsensor.sh
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -83,7 +81,7 @@ SGE_ARCH=		darwin
 SGE_BUILDARCH=		DARWIN
 .elif ${OPSYS} == "Linux"
 AIMK+=			-no-dump
-SGE_ARCH=		lx26-x86
+SGE_ARCH=		lx-x86
 SGE_BUILDARCH=		LINUX86
 .else
 PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
@@ -91,9 +89,9 @@ PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
 SGE_BUILDARCH?=		${SGE_BUILDARCH_cmd:sh}
 
 # Some hacks to get it properly linked:
-MAKE_ENV+=	SGE_ARCH=$(SGE_ARCH) SGE_ROOT=$(SGE_ROOT)
+MAKE_ENV+=	SGE_ARCH=${SGE_ARCH} SGE_ROOT=${SGE_ROOT}
 
-LDFLAGS+=	-R${SGE_ROOT}/lib/${SGE_ARCH}
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${SGE_ROOT}/lib/${SGE_ARCH}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${SGE_ROOT}/lib/${SGE_ARCH}
 
 SGE_ROOT=	${PREFIX}/sge
@@ -115,11 +113,12 @@ post-patch:
 	${ECHO} "set PERL = ${PERL5}" ) > ${WRKSRC}/source/aimk.private
 	( ${ECHO} "OPENSSLBASE=${SSL_PREFIX}" ; \
 	${ECHO} "BERKELEYDBBASE=${BUILDLINK_PREFIX.db4}" ) > ${WRKSRC}/source/distinst.private
+	rm ${WRKSRC}/source/dist/util/*.orig
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	source/dist/util/arch_variables
-SUBST_SED.paths=	-e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};' 
+SUBST_SED.paths=	-e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};'
 
 do-configure:
 .for __prog__ in qmake qtcsh
@@ -131,22 +130,25 @@ do-configure:
 .endfor
 
 do-build:
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -only-depend
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc -only-depend
 	cd ${WRKSRC}/source && ${SETENV} ${MAKE_ENV} ./scripts/zerodepend
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-qmake -no-qtcsh depend
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni
-	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -man -sunman
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc -no-qmake -no-qtcsh depend
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-hwloc -man
 
 CHECK_INTERPRETER_SKIP=	sge/bin/process-scheduler-log \
 			sge/bin/qsched \
 			sge/bin/status \
+			sge/ckpt/cpr_* \
 			sge/examples/drmaa/ruby/* \
 			sge/hadoop/pestart.sh \
 			sge/hadoop/pestop.sh \
 			sge/hadoop/setup.pl \
 			sge/hadoop/wait.sh \
+			sge/mpi/myrinet/* \
 			sge/util/resources/drmaa4ruby/* \
 			sge/util/resources/drmaa4ruby/samples/* \
+			sge/util/resources/loadsensors/interix-loadsensor.sh \
 			sge/util/resources/wrappers/rshd-wrapper
 
 do-install:
