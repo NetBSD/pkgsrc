@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/04/05 22:30:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/04/15 05:55:00 markd Exp $
 man/de/man1/adddebug.1
 man/de/man1/ark.1
 man/de/man1/cheatmake.1
@@ -881,6 +881,7 @@ share/doc/kde/HTML/de/kmail/index.cache.bz2
 share/doc/kde/HTML/de/kmail/index.docbook
 share/doc/kde/HTML/de/kmail/intro.docbook
 share/doc/kde/HTML/de/kmail/menus.docbook
+share/doc/kde/HTML/de/kmail/troubleshooting.docbook
 share/doc/kde/HTML/de/kmail/using-kmail.docbook
 share/doc/kde/HTML/de/kmenuedit/common
 share/doc/kde/HTML/de/kmenuedit/done.png
@@ -2282,7 +2283,6 @@ share/locale/de/LC_MESSAGES/okular_tiff.mo
 share/locale/de/LC_MESSAGES/okular_xps.mo
 share/locale/de/LC_MESSAGES/palapeli.mo
 share/locale/de/LC_MESSAGES/parley.mo
-share/locale/de/LC_MESSAGES/phonon-xine.mo
 share/locale/de/LC_MESSAGES/phonon_gstreamer.mo
 share/locale/de/LC_MESSAGES/phonon_kde.mo
 share/locale/de/LC_MESSAGES/phonon_vlc.mo
