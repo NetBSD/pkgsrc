@@ -1,1 +1,4 @@
-Miscellaneous biostatistical modeling functions.
+Various statistical modeling functions including growth curve
+comparisons, limiting dilution analysis, mixed linear models,
+heteroscedastic regression, Tweedie family generalized linear models,
+the inverse-Gaussian distribution and Gauss quadrature.
