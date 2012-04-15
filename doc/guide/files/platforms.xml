@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.67 2012/04/15 01:08:22 obache Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.68 2012/04/15 13:08:07 obache Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -418,7 +418,7 @@ ICCBASE=                /opt/icc
     <sect2 id="openbsd">
       <title>OpenBSD</title>
 
-      <para>OpenBSD 3.0 and 3.2 are tested and supported.</para>
+      <para>OpenBSD 5.0 is tested and supported.</para>
 
       <para>Care should be taken so that the tools that this kit installs do not conflict
       with the OpenBSD userland tools. There are several steps:</para>
