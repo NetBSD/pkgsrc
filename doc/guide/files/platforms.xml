@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.66 2012/04/13 06:40:25 wiz Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.67 2012/04/15 01:08:22 obache Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -60,7 +60,7 @@
     <sect2 id="freebsd">
       <title>FreeBSD</title>
 
-      <para>FreeBSD 9.0 has been tested and is supported,
+      <para>FreeBSD 8.2 and 9.0 have been tested and are supported,
       other versions may work.</para>
 
       <para>Care should be taken so that the tools that this kit installs do not conflict
