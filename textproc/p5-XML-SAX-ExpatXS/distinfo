@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/04/15 01:50:08 obache Exp $
+
+SHA1 (XML-SAX-ExpatXS-1.31.tar.gz) = d21f226a024f802d37ee04730d4fff88007d70ba
+RMD160 (XML-SAX-ExpatXS-1.31.tar.gz) = c3744680c34fea258c9a227a7d3cfccfebd608c5
+Size (XML-SAX-ExpatXS-1.31.tar.gz) = 170540 bytes
+SHA1 (patch-Makefile.PL) = a8baf01fc0551c3367c6db787a72fabb9823a892
