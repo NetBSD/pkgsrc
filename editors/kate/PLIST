@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/20 00:48:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 05:54:51 markd Exp $
 bin/kate
 bin/ktesnippets_editor
 bin/kwrite
@@ -48,10 +48,10 @@ lib/kde4/plasma_applet_katesession.so
 lib/libacomment.a
 lib/libkateinterfaces.so
 lib/libkateinterfaces.so.4
-lib/libkateinterfaces.so.${PKGVERSION}
+lib/libkateinterfaces.so.4.8.0
 lib/libkatepartinterfaces.so
 lib/libkatepartinterfaces.so.4
-lib/libkatepartinterfaces.so.${PKGVERSION}
+lib/libkatepartinterfaces.so.4.8.0
 lib/libkdeinit4_kate.so
 lib/libkdeinit4_kwrite.so
 lib/libktexteditor_codesnippets_core.so

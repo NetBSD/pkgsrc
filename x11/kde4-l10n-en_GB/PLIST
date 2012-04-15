@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/04/05 22:30:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/04/15 05:55:00 markd Exp $
 share/doc/kde/HTML/en_GB/common/fdl-translated.html
 share/doc/kde/HTML/en_GB/common/gpl-translated.html
 share/doc/kde/HTML/en_GB/common/kde-localised.css
@@ -685,7 +685,6 @@ share/locale/en_GB/LC_MESSAGES/okular_tiff.mo
 share/locale/en_GB/LC_MESSAGES/okular_xps.mo
 share/locale/en_GB/LC_MESSAGES/palapeli.mo
 share/locale/en_GB/LC_MESSAGES/parley.mo
-share/locale/en_GB/LC_MESSAGES/phonon-xine.mo
 share/locale/en_GB/LC_MESSAGES/phonon_gstreamer.mo
 share/locale/en_GB/LC_MESSAGES/phonon_kde.mo
 share/locale/en_GB/LC_MESSAGES/phononserver.mo
