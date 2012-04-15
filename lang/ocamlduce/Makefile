@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2011/12/06 00:19:24 sbd Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2012/04/15 14:35:20 tron Exp $
 #
 
-DISTNAME=       ocamlduce-3.11.1.0
-PKGREVISION=     1
+DISTNAME=       ocamlduce-3.12.1.0
 CATEGORIES=     lang
-MASTER_SITES=   http://forge.ocamlcore.org/frs/download.php/225/
+MASTER_SITES=   http://forge.ocamlcore.org/frs/download.php/644/
 DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # we need the OCaml sources too
-DISTFILES+=	ocaml-3.11.1.tar.bz2
-SITES.ocaml-3.11.1.tar.bz2= http://caml.inria.fr/pub/distrib/ocaml-3.11/	
+DISTFILES+=	ocaml-3.12.1.tar.bz2
+SITES.ocaml-3.12.1.tar.bz2= http://caml.inria.fr/pub/distrib/ocaml-3.12/
 
 MAINTAINER=     jaapb@kerguelen.org
 HOMEPAGE=       http://ocamlduce.forge.ocamlcore.org/
@@ -20,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=       ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
-USE_TOOLS+=     gmake
+USE_TOOLS+=     gmake patch
 BUILD_TARGET=   all
 INSTALL_TARGET=	installbyte
 MAKE_JOBS_SAFE=	no
@@ -39,10 +38,11 @@ PLIST_SRC+=     PLIST.opt
 BUILD_TARGET=   world
 .endif
 
-BUILDLINK_API_DEPENDS.ocaml+=   ocaml>=3.11.1
+BUILDLINK_API_DEPENDS.ocaml+=   ocaml>=3.12.1
 pre-configure:
 	cd ${WRKSRC} && DISTDIR=${DISTDIR} make prepare
-	cd ${WRKSRC}/ocaml-3.11.1 && ./configure -prefix ${PREFIX} -libs ${LDFLAGS:Q} -with-pthread -host ${MACHINE_GNU_PLATFORM:Q} -mandir ${PREFIX}/${PKGMANDIR} -no-tk
+	cd ${WRKSRC}/ocaml-3.12.1 && ${PATCH} < ${FILESDIR}/ocaml-configure.diff
+	cd ${WRKSRC}/ocaml-3.12.1 && ./configure -prefix ${PREFIX} -libs ${LDFLAGS:Q} -with-pthread -host ${MACHINE_GNU_PLATFORM:Q} -mandir ${PREFIX}/${PKGMANDIR} -no-tk
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

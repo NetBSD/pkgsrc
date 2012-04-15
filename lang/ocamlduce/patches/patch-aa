@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2009/09/07 21:53:31 tonio Exp $
+$NetBSD: patch-aa,v 1.2.22.1 2012/04/15 14:35:20 tron Exp $
 
---- Makefile.orig	2009-06-13 01:49:38.000000000 +0200
-+++ Makefile	2009-07-10 10:55:08.000000000 +0200
+--- Makefile.orig	2011-07-06 16:21:30.000000000 +0000
++++ Makefile
 @@ -1,7 +1,7 @@
  #-include config/Makefile
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/07 21:53:31 tonio Exp $
  OCAML_SRCDIR := ocaml-$(OCAML_VERSION)
  
  DUCE_VERSION := $(shell head -n1 VERSION)
-@@ -36,7 +36,7 @@
+@@ -37,7 +37,7 @@ all:
  	@echo "===> Please explicit what you want <==="
  
  prepare:
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/07 21:53:31 tonio Exp $
  	cp -PpR $(DUCEP_FILES) $(OCAML_SRCDIR)
  	cp -PpR ocamlduce $(OCAML_SRCDIR)/otherlibs
  	cd $(OCAML_SRCDIR) && for X in ../patches/*.diff; do patch -p1 < $$X; done
-@@ -44,15 +44,11 @@
+@@ -45,15 +45,11 @@ prepare:
  	sed '\@^#-include config/Makefile@s/^#//' $(OCAML_SRCDIR)/Makefile.ocamlduce > $(OCAML_SRCDIR)/Makefile.ocamlduce.new
  	mv $(OCAML_SRCDIR)/Makefile.ocamlduce.new $(OCAML_SRCDIR)/Makefile.ocamlduce
  
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.2 2009/09/07 21:53:31 tonio Exp $
  
  META: META.in
  	sed 's/%VER%/$(DUCE_VERSION)/' $< > $@
-@@ -63,20 +59,20 @@
+@@ -64,20 +60,20 @@ installcommon-stamp: META
  	install -m 755 -d $(DUCE_LIBDIR)
  	install -m 755 ocamlducefind $(BINDIR)
  	install -m 644 META $(DUCE_LIBDIR)
@@ -63,9 +63,9 @@ $NetBSD: patch-aa,v 1.2 2009/09/07 21:53:31 tonio Exp $
  installopt: installcommon-stamp
  	@echo "===> Installing native files... <==="
 -	for X in $(OPT); do Y=$${X##*/}; Y=$${Y#ocaml}; install -m 755 _build/$$X $(BINDIR)/ocamlduce$$Y; done
--	install -m 644 $(addprefix _build/,$(CMXA)) $(DUCE_LIBDIR)
+-	install -m 644 $(addprefix _build/,$(CMXA) $(CMXS)) $(DUCE_LIBDIR)
 +	for X in $(OPT); do Y=$${X##*/}; Y=$${Y#ocaml}; install -m 755 $(OCAML_SRCDIR)/_build/$$X $(BINDIR)/ocamlduce$$Y; done
-+	install -m 644 $(addprefix $(OCAML_SRCDIR)/_build/,$(CMXA)) $(DUCE_LIBDIR)
++	install -m 644 $(addprefix $(OCAML_SRCDIR)/_build/,$(CMXA) $(CMXS)) $(DUCE_LIBDIR)
  
  clean:
  	build/distclean.sh
