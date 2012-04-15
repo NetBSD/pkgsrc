@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/19 21:28:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/04/15 05:54:56 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -24,7 +24,6 @@ bin/cxxmetric
 bin/dprof2calltree
 bin/extend_dmalloc
 bin/extractattr
-bin/extractqml
 bin/extractrc
 bin/findmissingcrystal
 bin/fix-include.sh
@@ -896,9 +895,6 @@ share/kde/apps/lokalize/lokalize.notifyrc
 share/kde/apps/lokalize/lokalizemainwindowui.rc
 share/kde/apps/lokalize/projectmanagerui.rc
 share/kde/apps/lokalize/scripts/find-gui-text.sh
-share/kde/apps/lokalize/scripts/kde/widget-text-capture.py
-share/kde/apps/lokalize/scripts/kde/widget-text-capture.rc
-share/kde/apps/lokalize/scripts/kde/widget-text-capture.ui
 share/kde/apps/lokalize/scripts/msgmerge.py
 share/kde/apps/lokalize/scripts/msgmerge.rc
 share/kde/apps/lokalize/scripts/newprojectwizard.py

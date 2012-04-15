@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/03/20 08:33:34 markd Exp $
+$NetBSD: distinfo,v 1.2 2012/04/15 05:54:52 markd Exp $
 
-SHA1 (kturtle-4.8.0.tar.bz2) = 3da036991fed5840fb45d033efe0082570e804d9
-RMD160 (kturtle-4.8.0.tar.bz2) = 47660320c8d90706cc52e1ba03d9912636f607c8
-Size (kturtle-4.8.0.tar.bz2) = 228802 bytes
+SHA1 (kturtle-4.8.2.tar.xz) = e27f02ae08b8cb3e6be4c0ad971681be5d55db8e
+RMD160 (kturtle-4.8.2.tar.xz) = bbff3e59e05ad24cd38b77e18108e89d163c695b
+Size (kturtle-4.8.2.tar.xz) = 213584 bytes

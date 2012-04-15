@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/19 19:44:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 05:54:51 markd Exp $
 bin/dolphin
 bin/fsview
 bin/kbookmarkmerger
@@ -118,7 +118,9 @@ share/doc/kde/HTML/en/dolphin/default-ui.png
 share/doc/kde/HTML/en/dolphin/index.cache.bz2
 share/doc/kde/HTML/en/dolphin/index.docbook
 share/doc/kde/HTML/en/dolphin/locationbar-breadcrumb.png
+share/doc/kde/HTML/en/dolphin/locationbar-context-menu.png
 share/doc/kde/HTML/en/dolphin/locationbar-editable.png
+share/doc/kde/HTML/en/dolphin/locationbar-places-icon.png
 share/doc/kde/HTML/en/dolphin/nepomuk-search.png
 share/doc/kde/HTML/en/dolphin/preferences-general-behavior.png
 share/doc/kde/HTML/en/dolphin/preferences-navigation.png
@@ -318,6 +320,8 @@ share/kde/apps/kwebkitpart/kpartplugins/autorefresh.desktop
 share/kde/apps/kwebkitpart/kpartplugins/autorefresh.rc
 share/kde/apps/kwebkitpart/kpartplugins/khtmlkttsd.desktop
 share/kde/apps/kwebkitpart/kpartplugins/khtmlkttsd.rc
+share/kde/apps/kwebkitpart/kpartplugins/khtmlsettingsplugin.desktop
+share/kde/apps/kwebkitpart/kpartplugins/khtmlsettingsplugin.rc
 share/kde/apps/kwebkitpart/kpartplugins/plugin_babelfish.desktop
 share/kde/apps/kwebkitpart/kpartplugins/plugin_babelfish.rc
 share/kde/apps/kwebkitpart/kpartplugins/plugin_validators.desktop

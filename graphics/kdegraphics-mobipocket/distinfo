@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/03/20 00:40:40 markd Exp $
+$NetBSD: distinfo,v 1.3 2012/04/15 05:54:55 markd Exp $
 
-SHA1 (kdegraphics-mobipocket-4.8.0.tar.bz2) = 86ae995f7278f14e1169335b24fe7a61069c39a2
-RMD160 (kdegraphics-mobipocket-4.8.0.tar.bz2) = 17a0f5041138dc91a5a11cacbe6a816f741c02a6
-Size (kdegraphics-mobipocket-4.8.0.tar.bz2) = 19982 bytes
+SHA1 (kdegraphics-mobipocket-4.8.2.tar.xz) = 60ea4e3e0e7030ed61c35761c5542d967cd161fc
+RMD160 (kdegraphics-mobipocket-4.8.2.tar.xz) = 9f1be98c5066501ca8ab3d0240c628e88901454b
+Size (kdegraphics-mobipocket-4.8.2.tar.xz) = 19856 bytes

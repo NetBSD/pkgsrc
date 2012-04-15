@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/20 08:40:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/15 05:54:53 markd Exp $
 bin/kgeography
 share/applications/kde4/kgeography.desktop
 share/doc/kde/HTML/en/kgeography/common
@@ -35,6 +35,8 @@ share/kde/apps/kgeography/albania_districts.kgm
 share/kde/apps/kgeography/albania_districts.png
 share/kde/apps/kgeography/albania_prefectures.kgm
 share/kde/apps/kgeography/albania_prefectures.png
+share/kde/apps/kgeography/algeria.kgm
+share/kde/apps/kgeography/algeria.png
 share/kde/apps/kgeography/andhrapradesh.kgm
 share/kde/apps/kgeography/andhrapradesh.png
 share/kde/apps/kgeography/andorra.kgm
@@ -49,10 +51,16 @@ share/kde/apps/kgeography/arunachalpradesh.kgm
 share/kde/apps/kgeography/arunachalpradesh.png
 share/kde/apps/kgeography/asia.kgm
 share/kde/apps/kgeography/asia.png
+share/kde/apps/kgeography/assam-district-map.png
+share/kde/apps/kgeography/assam.kgm
 share/kde/apps/kgeography/australia.kgm
 share/kde/apps/kgeography/australia.png
 share/kde/apps/kgeography/austria.kgm
 share/kde/apps/kgeography/austria.png
+share/kde/apps/kgeography/azerbaijan.kgm
+share/kde/apps/kgeography/azerbaijan.png
+share/kde/apps/kgeography/bangladesh.kgm
+share/kde/apps/kgeography/bangladesh.png
 share/kde/apps/kgeography/belarus.kgm
 share/kde/apps/kgeography/belarus.png
 share/kde/apps/kgeography/belgium.kgm
@@ -796,6 +804,8 @@ share/kde/apps/kgeography/georgia.kgm
 share/kde/apps/kgeography/georgia.png
 share/kde/apps/kgeography/germany.kgm
 share/kde/apps/kgeography/germany.png
+share/kde/apps/kgeography/goa.kgm
+share/kde/apps/kgeography/goa.png
 share/kde/apps/kgeography/great-britain_counties.kgm
 share/kde/apps/kgeography/great-britain_counties.png
 share/kde/apps/kgeography/greece.kgm
@@ -814,6 +824,8 @@ share/kde/apps/kgeography/haiti.kgm
 share/kde/apps/kgeography/haiti.png
 share/kde/apps/kgeography/haryana.kgm
 share/kde/apps/kgeography/haryana.png
+share/kde/apps/kgeography/himachal_pradesh.kgm
+share/kde/apps/kgeography/himachal_pradesh.png
 share/kde/apps/kgeography/honduras.kgm
 share/kde/apps/kgeography/honduras.png
 share/kde/apps/kgeography/hungary.kgm
@@ -842,6 +854,8 @@ share/kde/apps/kgeography/jamaica.kgm
 share/kde/apps/kgeography/jamaica.png
 share/kde/apps/kgeography/japan.kgm
 share/kde/apps/kgeography/japan.png
+share/kde/apps/kgeography/jharkhand-map.png
+share/kde/apps/kgeography/jharkhand.kgm
 share/kde/apps/kgeography/kazakhstan.kgm
 share/kde/apps/kgeography/kazakhstan.png
 share/kde/apps/kgeography/kgeographyui.rc
