@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1160 2012/04/15 12:25:07 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1161 2012/04/15 13:03:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1955,3 +1955,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/py-kde4 to 4.8.2 [markd 2012-04-15]
 	Updated databases/phpmyadmin to 3.4.11 [tron 2012-04-15]
 	Updated www/apache24 to 2.4.1nb1 [ryoon 2012-04-15]
+	Updated pkgtools/bootstrap-mk-files to 20120415 [obache 2012-04-15]
