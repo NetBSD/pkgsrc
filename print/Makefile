@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.529 2012/03/22 20:23:34 markd Exp $
+# $NetBSD: Makefile,v 1.530 2012/04/15 03:05:02 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -238,6 +238,8 @@ SUBDIR+=	tex-cjk
 SUBDIR+=	tex-cjk-doc
 SUBDIR+=	tex-cjkutils
 SUBDIR+=	tex-cjkutils-doc
+SUBDIR+=	tex-clrscode
+SUBDIR+=	tex-clrscode-doc
 SUBDIR+=	tex-collection-basic
 SUBDIR+=	tex-collection-basic-doc
 SUBDIR+=	tex-collection-documentation-base-doc
