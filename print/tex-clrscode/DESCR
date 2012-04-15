@@ -1,0 +1,6 @@
+This package allows you to typeset pseudocode in the style of
+Introduction to Algorithms, Second edition, by Cormen,
+Leiserson, Rivest, and Stein. The package was written by the
+authors. You use the commands the same way the package's author
+did when writing the book, and your output will look just like
+the pseudocode in the text.
