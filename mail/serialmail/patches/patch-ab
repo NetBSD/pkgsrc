@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2008/07/30 10:54:10 schmonz Exp $
+$NetBSD: patch-ab,v 1.2 2012/04/15 00:20:49 schmonz Exp $
+
+Fix to the included libtai, brought over from devel/libtai:
+
+#include <unistd.h> in leapsecs_read.c so we can read leapsecs.dat.
 
 --- leapsecs_read.c.orig	1998-09-04 22:33:37.000000000 -0400
 +++ leapsecs_read.c

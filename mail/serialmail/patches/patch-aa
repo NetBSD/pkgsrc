@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/21 01:00:29 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2012/04/15 00:20:49 schmonz Exp $
 
---- hier.c.orig	1998-11-14 21:28:23.000000000 -0500
+Install docs following hier(7), don't install catpages, set reasonable
+permissions, and avoid overwriting "setlock" from sysutils/daemontools.
+
+--- hier.c.orig	1998-11-15 02:28:23.000000000 +0000
 +++ hier.c
-@@ -2,21 +2,20 @@
+@@ -2,36 +2,27 @@
  
  void hier()
  {
@@ -20,7 +23,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/21 01:00:29 schmonz Exp $
 +  d(auto_home,"share/doc/serialmail",-1,-1,0755);
 +  d(auto_home,"man",-1,-1,0755);
 +  d(auto_home,"man/man1",-1,-1,0755);
-+  d(auto_home,"man/cat1",-1,-1,0755);
  
    c(auto_home,"bin","serialqmtp",-1,-1,0755);
    c(auto_home,"bin","serialsmtp",-1,-1,0755);
@@ -30,11 +32,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/21 01:00:29 schmonz Exp $
 -  c(auto_home,"bin","setlock",-1,-1,0755);
  
    c(auto_home,"man/man1","serialqmtp.1",-1,-1,0644);
-   c(auto_home,"man/cat1","serialqmtp.0",-1,-1,0644);
-@@ -28,10 +27,8 @@ void hier()
-   c(auto_home,"man/cat1","maildirsmtp.0",-1,-1,0644);
+-  c(auto_home,"man/cat1","serialqmtp.0",-1,-1,0644);
+   c(auto_home,"man/man1","serialsmtp.1",-1,-1,0644);
+-  c(auto_home,"man/cat1","serialsmtp.0",-1,-1,0644);
+   c(auto_home,"man/man1","maildirqmtp.1",-1,-1,0644);
+-  c(auto_home,"man/cat1","maildirqmtp.0",-1,-1,0644);
+   c(auto_home,"man/man1","maildirsmtp.1",-1,-1,0644);
+-  c(auto_home,"man/cat1","maildirsmtp.0",-1,-1,0644);
    c(auto_home,"man/man1","maildirserial.1",-1,-1,0644);
-   c(auto_home,"man/cat1","maildirserial.0",-1,-1,0644);
+-  c(auto_home,"man/cat1","maildirserial.0",-1,-1,0644);
 -  c(auto_home,"man/man1","setlock.1",-1,-1,0644);
 -  c(auto_home,"man/cat1","setlock.0",-1,-1,0644);
  
