@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.619 2012/04/13 11:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.620 2012/04/15 01:51:39 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -436,6 +436,7 @@ SUBDIR+=	p5-XML-Rabbit
 SUBDIR+=	p5-XML-RegExp
 SUBDIR+=	p5-XML-SAX
 SUBDIR+=	p5-XML-SAX-Expat
+SUBDIR+=	p5-XML-SAX-ExpatXS
 SUBDIR+=	p5-XML-SAX-Writer
 SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-XML-SemanticDiff
