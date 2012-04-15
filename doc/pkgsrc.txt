@@ -8783,7 +8783,7 @@ DISTNAME=       bison-1.25
 CATEGORIES=     devel
 MASTER_SITES=   ${MASTER_SITE_GNU}
 
-MAINTAINER=     thorpej@NetBSD.org
+MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 COMMENT=        GNU yacc clone
 

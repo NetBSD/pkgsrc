@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2011/10/03 04:37:05 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/15 22:01:01 wiz Exp $
 
 DISTNAME=	powwow-1.2.5
 PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://hoopajoo.net/static/powwow-mirror/powwow/
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hoopajoo.net/projects/powwow.html
 COMMENT=	Client to play MUDs
 

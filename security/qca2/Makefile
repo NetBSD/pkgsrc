@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/03/03 00:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/04/15 22:01:03 wiz Exp $
 
 DISTNAME=	qca-2.0.3
 PKGNAME=	qca2-${DISTNAME:C/.*-//}
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT
 LICENSE=	gnu-lgpl-v2.1
