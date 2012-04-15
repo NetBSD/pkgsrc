@@ -1,0 +1,13 @@
+$NetBSD: patch-po_koverartist_nl.po,v 1.1 2012/04/15 04:19:20 markd Exp $
+
+--- po/koverartist_nl.po.orig	2011-07-06 20:18:42.000000000 +0000
++++ po/koverartist_nl.po
+@@ -10,7 +10,7 @@ msgstr ""
+ "POT-Creation-Date: 2006-07-26 15:29+0200\n"
+ "PO-Revision-Date: 2008-07-04 12.30+0200\n"
+ "Last-Translator: Roger Gabriels <covernl@pcfreesoft.com>\n"
+-"Language-Team: LANGUAGE <LL@li.org>\n"
++"Language-Team: \n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
