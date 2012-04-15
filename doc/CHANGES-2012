@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1183 2012/04/15 15:44:41 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1184 2012/04/15 15:46:30 brook Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1977,3 +1977,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/R-sgeostat to 1.0.24 [brook 2012-04-15]
 	Updated textproc/raptor2 to 2.0.7 [wiz 2012-04-15]
 	Updated sysutils/desktop-file-utils to 0.20 [wiz 2012-04-15]
+	Updated math/R-statmod to 1.4.14 [brook 2012-04-15]
