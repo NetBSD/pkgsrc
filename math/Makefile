@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.234 2012/04/15 17:33:52 brook Exp $
+# $NetBSD: Makefile,v 1.235 2012/04/15 18:00:28 brook Exp $
 
 COMMENT=	Mathematics
 
 SUBDIR+=	R
 SUBDIR+=	R-CGIwithR
 SUBDIR+=	R-DAAG
+SUBDIR+=	R-DBI
 SUBDIR+=	R-GRASS
 SUBDIR+=	R-ISwR
 SUBDIR+=	R-PHYLOGR
 SUBDIR+=	R-R2HTML
 SUBDIR+=	R-RArcInfo
 SUBDIR+=	R-RColorBrewer
+SUBDIR+=	R-RPostgreSQL
 SUBDIR+=	R-RandomFields
 SUBDIR+=	R-Rcmdr
 SUBDIR+=	R-XML
