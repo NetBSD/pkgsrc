@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.8 2010/07/08 11:28:05 obache Exp $
+$NetBSD: distinfo,v 1.9 2012/04/15 02:05:28 ryoon Exp $
 
-SHA1 (aranym-0.9.10.tar.gz) = b7d55756c3c6a73b26f1e504ceee1016b7d40231
-RMD160 (aranym-0.9.10.tar.gz) = d0f5beffbc81d9ffbe22c54ec49e7d3353359c0d
-Size (aranym-0.9.10.tar.gz) = 1737163 bytes
-SHA1 (emutos-512k-0.8.5.zip) = 63ec3326e65d07c64e529694b7cfbbc559188f47
-RMD160 (emutos-512k-0.8.5.zip) = 8440e97667dbdf3de7b484d98ae6ada3b5e1fe2a
-Size (emutos-512k-0.8.5.zip) = 213435 bytes
-SHA1 (patch-aa) = 4b45ad6cf60d7c0766756db69cf33fe612d56025
+SHA1 (aranym_0.9.13.orig.tar.gz) = fa06e8204eef848c16411e4fbfdc2a19c64599c5
+RMD160 (aranym_0.9.13.orig.tar.gz) = c6e7303b56d8c63b836e573755cf592f935bb85e
+Size (aranym_0.9.13.orig.tar.gz) = 1779673 bytes
+SHA1 (emutos-512k-0.8.6.zip) = 9549027b6a1759f86d7d4467dac6377768fbd0bf
+RMD160 (emutos-512k-0.8.6.zip) = bc08eb71260fd11cf9531022603ff25a673140f3
+Size (emutos-512k-0.8.6.zip) = 240998 bytes
 SHA1 (patch-ab) = 8796751780cc559acd089298f3e8a0918d36db3a
 SHA1 (patch-ac) = 8899894456b01c84efd9f96f553750c87df7c21a
 SHA1 (patch-ad) = bb8d6b2ecd0c0066f3032a0ef196a1adb51d1786
 SHA1 (patch-ae) = 6c7ab7cf17bb9da5944c9a09474079bcfe7e7f43
+SHA1 (patch-configure.ac) = 528076ace6ef57332e051109ccbd07eda6eaed72
