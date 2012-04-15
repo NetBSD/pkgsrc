@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/05 01:15:25 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/04/15 15:46:53 wiz Exp $
 
-SHA1 (cmdpack-1.02-src.tar.gz) = cf235e77532aaa2464c1fd42d35d5de4f1a968b1
-RMD160 (cmdpack-1.02-src.tar.gz) = 0c3b018767f23fb1bf6535a31ddd45d858be477b
-Size (cmdpack-1.02-src.tar.gz) = 77037 bytes
+SHA1 (cmdpack-1.03-src.tar.gz) = a6df4184878adf3131b0578506118ad1e77c265c
+RMD160 (cmdpack-1.03-src.tar.gz) = a9073592aeb3514e8dd456189d34deb1e5e4952a
+Size (cmdpack-1.03-src.tar.gz) = 80716 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/05 01:15:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/15 15:46:53 wiz Exp $
 bin/bin2iso
 bin/bincomp
 bin/brrrip
@@ -9,6 +9,7 @@ bin/ecm
 bin/fakecrc
 bin/hax65816
 bin/id3point
+bin/pecompat
 bin/rels
 bin/screamf
 bin/subfile
