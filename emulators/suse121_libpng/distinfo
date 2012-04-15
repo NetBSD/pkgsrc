@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.2 2012/03/31 05:40:26 obache Exp $
+$NetBSD: distinfo,v 1.2.2.1 2012/04/15 14:39:05 tron Exp $
 
-SHA1 (suse121/libpng12-0-1.2.48-9.6.1.i586.rpm) = bc9b1f23676e2ba20e9a1e50bdcca90f65ed22b8
-RMD160 (suse121/libpng12-0-1.2.48-9.6.1.i586.rpm) = 5959c8d3848fc795e4d6aa12122852138bdc7be8
-Size (suse121/libpng12-0-1.2.48-9.6.1.i586.rpm) = 73766 bytes
-SHA1 (suse121/libpng12-0-1.2.48-9.6.1.x86_64.rpm) = deef59f22dae9583b86c3ab4bf273b25c3e25232
-RMD160 (suse121/libpng12-0-1.2.48-9.6.1.x86_64.rpm) = d891dadc5a1ce15dd355f57eb1a0a5f5b5122719
-Size (suse121/libpng12-0-1.2.48-9.6.1.x86_64.rpm) = 73205 bytes
-SHA1 (suse121/libpng14-14-1.4.10-3.6.1.i586.rpm) = 52de9766b086a5465f350b7cff65c001da966519
-RMD160 (suse121/libpng14-14-1.4.10-3.6.1.i586.rpm) = fd9484c40d05dc5a02ece6b4483a7cd6fd7a545e
-Size (suse121/libpng14-14-1.4.10-3.6.1.i586.rpm) = 75023 bytes
-SHA1 (suse121/libpng14-14-1.4.10-3.6.1.x86_64.rpm) = 7d289aac8e46803c10c199495da47ec3640cf0b3
-RMD160 (suse121/libpng14-14-1.4.10-3.6.1.x86_64.rpm) = 27bd43c084c944cfdc78bc6d116291b462d6a233
-Size (suse121/libpng14-14-1.4.10-3.6.1.x86_64.rpm) = 73761 bytes
+SHA1 (suse121/libpng12-0-1.2.49-9.9.1.i586.rpm) = 36545acddfb9d732d046603936c08541b69dd71d
+RMD160 (suse121/libpng12-0-1.2.49-9.9.1.i586.rpm) = ae20aa21f5158dd532e8f8f4a777684c311b2eb2
+Size (suse121/libpng12-0-1.2.49-9.9.1.i586.rpm) = 73904 bytes
+SHA1 (suse121/libpng12-0-1.2.49-9.9.1.x86_64.rpm) = e2ab520e63466bb035cc904c871ffcc9ea035494
+RMD160 (suse121/libpng12-0-1.2.49-9.9.1.x86_64.rpm) = e457914373814e6be0b544694b7b16138665c97d
+Size (suse121/libpng12-0-1.2.49-9.9.1.x86_64.rpm) = 73338 bytes
+SHA1 (suse121/libpng14-14-1.4.11-3.9.1.i586.rpm) = f334cec188d6fea3caf5bd8d662d7add7d082ea1
+RMD160 (suse121/libpng14-14-1.4.11-3.9.1.i586.rpm) = 4840e6f7ccae4b6b13f10b6f532e60894ded7089
+Size (suse121/libpng14-14-1.4.11-3.9.1.i586.rpm) = 75146 bytes
+SHA1 (suse121/libpng14-14-1.4.11-3.9.1.x86_64.rpm) = b5913bf450963f58bc9e8aad2084d702df41625f
+RMD160 (suse121/libpng14-14-1.4.11-3.9.1.x86_64.rpm) = 075865ec64fa17d1ec56eda853836cd8630653a5
+Size (suse121/libpng14-14-1.4.11-3.9.1.x86_64.rpm) = 73901 bytes
