@@ -1,0 +1,8 @@
+A package with classes and methods for spatio-temporal data.  In
+particular, space-time regular lattices, sparse lattices, and
+irregular data are supported, with limited support for trajectories,
+but not for topologies with S/T interactions such as space-time
+prisms.  Utility functions are provided for plotting data as map
+sequences (lattice or animation) or multiple time series; for spatial
+and temporal selection, as well as methods for retrieving coordinates,
+for subsetting, print, summary, etc.
