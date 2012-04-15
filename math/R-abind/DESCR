@@ -1,3 +1,4 @@
-Combine multi-dimensional arrays. This is a generalization of cbind
-and rbind. Takes a sequence of vectors, matrices, or arrays and
-produces a single array of the same or higher dimension.
+Combine multi-dimensional arrays into a single array.  This is a
+generalization of cbind and rbind.  Works with vectors, matrices, and
+higher-dimensional arrays.  Also provides functions adrop, asub, and
+afill for manipulating, extracting and replacing data in arrays.

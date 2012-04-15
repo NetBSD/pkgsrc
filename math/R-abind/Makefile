@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2008/10/13 11:30:50 markd Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/15 14:55:50 brook Exp $
 #
 
-PKGREVISION=             1
-CATEGORIES=		math
-MASTER_SITES=		${MASTER_SITE_R_CRAN:=contrib/}
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
-MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		${R_HOMEPAGE_BASE}/abind/
-COMMENT=		Combine multi-dimensional arrays
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	${R_HOMEPAGE_BASE}/abind/
+COMMENT=	Combine multi-dimensional arrays
+LICENSE=	gnu-lgpl-v2
 
-R_PKGNAME=		abind
-R_PKGVER=		1.1-0
+R_PKGNAME=	abind
+R_PKGVER=	1.4-0
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
