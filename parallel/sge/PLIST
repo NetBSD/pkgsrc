@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/20 17:07:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/04/15 04:07:21 markd Exp $
 bin/qacct
 bin/qalter
 bin/qconf
@@ -548,7 +548,6 @@ sge/qmon/qmon_help.ad
 sge/start_gui_installer
 sge/util/arch
 sge/util/arch_variables
-sge/util/arch_variables.orig
 sge/util/certtool.sh
 sge/util/create_settings.sh
 sge/util/dl.csh
@@ -707,7 +706,6 @@ sge/util/resources/wrappers/qlogin_wrapper
 sge/util/resources/wrappers/rshd-wrapper
 sge/util/rmiconsole.policy
 sge/util/setfileperm.sh
-sge/util/setfileperm.sh.orig
 sge/util/sgeCA/renew_all_certs.csh
 sge/util/sgeCA/sge_ca
 sge/util/sgeCA/sge_ca.cnf
