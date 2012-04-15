@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.7 2012/03/20 17:07:43 asau Exp $
+$NetBSD: patch-am,v 1.8 2012/04/15 04:07:21 markd Exp $
 
 Pkgsrc stuff
 GridEngine dev mailing list patch for "nbsd-1" issue
@@ -95,12 +95,11 @@ ArchLinux static crypto also needs libz.a
  if ( $JNI == 1 ) then
  
     if ( "${JAVA_HOME}/${JAVA_INCL}" != /usr/include ) then
-@@ -2326,7 +2335,7 @@ if ( "$BUILDMAN" == 1 ) then
-       setenv PATH ${PATH}:${GROFFPATH}
-    endif   
+@@ -2797,6 +2806,7 @@ if ( "$QMON" == 1 ) then
+    else
+       set FT_INC = ""
+    endif
++   set FT_INC = "-I${LOCALBASE}/include/freetype2"
  
--   $SOURCE/scripts/mk_ascman $SOURCE $SGE_PRODUCT_MODE $BUILDMAN $BUILDHTMLMAN
-+   $SOURCE/scripts/mk_ascman $SOURCE $SGE_PRODUCT_MODE 0 $BUILDHTMLMAN
+    cd $COMPILE_ARCH
  
-    if ( $status != 0 ) then
-       echo not done
