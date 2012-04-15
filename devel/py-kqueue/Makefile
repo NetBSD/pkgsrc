@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/10/15 08:23:55 obache Exp $
+# $NetBSD: Makefile,v 1.11 2012/04/15 22:01:00 wiz Exp $
 
 DISTNAME=	py-kqueue-2.0
 PKGNAME=	${PYPKGPREFIX}-kqueue-2.0
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jdolecek/
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python interface to kqueue(2) and kevent(2) system calls
 LICENSE=	modified-bsd
 

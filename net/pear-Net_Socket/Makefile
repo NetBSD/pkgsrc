@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/12/22 15:46:35 taca Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/15 22:01:02 wiz Exp $
 
 DISTNAME=	Net_Socket-1.0.10
 CATEGORIES+=	net
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	PHP classes to provide Network Socket Interface
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/04/08 19:08:48 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2012/04/15 22:00:59 wiz Exp $
 
 DISTNAME=	pysqlite-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pysqlite/sqlite2/}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://pysqlite.googlecode.com/files/
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pysqlite.googlecode.com/
 COMMENT=	SQLite database adapter for Python
 LICENSE=	mit

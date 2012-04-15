@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:47 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/15 22:01:04 wiz Exp $
 #
 
 DISTNAME=	Markdown_1.0.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://daringfireball.net/projects/downloads/
 EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-MAINTAINER=	dan@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://daringfireball.net/projects/markdown/
 COMMENT=	Text-to-HTML conversion tool for web writers
 

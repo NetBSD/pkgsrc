@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2011/01/07 09:16:26 taca Exp $
+# $NetBSD: Makefile.common,v 1.46 2012/04/15 22:01:01 wiz Exp $
 # used by lang/php5/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php5-extensions/Makefile
@@ -38,7 +38,7 @@ MASTER_SITES?=		http://www.php.net/distributions/ \
 EXTRACT_SUFX?=		.tar.bz2
 .endif
 
-MAINTAINER?=		jdolecek@NetBSD.org
+MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
 
 PHP_BASE_VERS=		5.2.17

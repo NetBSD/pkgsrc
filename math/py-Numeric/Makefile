@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2011/10/25 08:53:50 obache Exp $
+# $NetBSD: Makefile,v 1.49 2012/04/15 22:01:02 wiz Exp $
 
 DISTNAME=	Numeric-24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://numeric.scipy.org/
 COMMENT=	Adds multidimensional numeric arrays to Python
 

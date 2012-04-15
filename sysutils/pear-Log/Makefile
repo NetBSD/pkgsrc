@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2011/12/17 18:23:36 taca Exp $
+# $NetBSD: Makefile,v 1.18 2012/04/15 22:01:03 wiz Exp $
 
 DISTNAME=	Log-1.12.7
 CATEGORIES=	sysutils
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csh.rit.edu/~jon/projects/pear_log/
 COMMENT=	PHP Log framework provides an abstracted logging system
 
