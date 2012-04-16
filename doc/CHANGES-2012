@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1208 2012/04/16 12:06:28 asau Exp $
+$NetBSD: CHANGES-2012,v 1.1209 2012/04/16 17:01:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2002,3 +2002,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added lang/gcc47 version 4.7.0 [sbd 2012-04-16]
 	Updated net/scamper to 20111202b [markd 2012-04-16]
 	Updated lang/gambc to 4.6.5 [asau 2012-04-16]
+	Updated security/stunnel to 4.53 [ryoon 2012-04-16]
+	Updated mail/mew to 6.5 [ryoon 2012-04-16]
