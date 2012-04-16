@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1204 2012/04/16 03:41:19 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1205 2012/04/16 04:19:47 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1998,3 +1998,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added math/R-geoRglm version 0.9.2 [brook 2012-04-15]
 	Updated math/R-XML to 3.9.4 [brook 2012-04-15]
 	Removed audio/xine-arts [dholland 2012-04-16]
+	Updated x11/xmx to 2.1a7nb5 [dholland 2012-04-16]
