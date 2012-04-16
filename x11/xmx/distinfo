@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/10/06 15:50:37 dholland Exp $
+$NetBSD: distinfo,v 1.9 2012/04/16 04:19:16 dholland Exp $
 
 SHA1 (xmx-2.1alpha.pl7.tar.gz) = b517b20a7bfa352b12ffb7dd260d50ea6c1ec21b
 RMD160 (xmx-2.1alpha.pl7.tar.gz) = 18560824a35ffc55ce90fa63d1894362afa45405
 Size (xmx-2.1alpha.pl7.tar.gz) = 498352 bytes
-SHA1 (xmx-jumbo-patch-20110919.gz) = f7040e4e1be435e00165fe9080c793dc68d6ec66
-RMD160 (xmx-jumbo-patch-20110919.gz) = de056dbcd560856418ebe94d5f0977a75eb3f0a0
-Size (xmx-jumbo-patch-20110919.gz) = 14155 bytes
+SHA1 (xmx-jumbo-patch-20120416.gz) = 835a3a23e2b859aad26d0b2a7d8c3137dd063c5c
+RMD160 (xmx-jumbo-patch-20120416.gz) = 9dcfd6b971f692512e066800f137946e38370596
+Size (xmx-jumbo-patch-20120416.gz) = 14223 bytes
