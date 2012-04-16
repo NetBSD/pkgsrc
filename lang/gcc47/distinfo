@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/04/16 04:27:18 sbd Exp $
+
+SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
+RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
+Size (ecj-4.5.jar) = 1470676 bytes
+SHA1 (gcc-4.7.0.tar.bz2) = 03b8241477a9f8a34f6efe7273d92b9b6dd9fe82
+RMD160 (gcc-4.7.0.tar.bz2) = 4ed660b281cdb9bcf98f5c2cf2da105c71db5be4
+Size (gcc-4.7.0.tar.bz2) = 82518546 bytes
+SHA1 (patch-gcc_Makefile.in) = 2372899a37259c89281e6bd1223e39df9b53a7e3
+SHA1 (patch-gcc_config.gcc) = eeec5e63f000905c03186c4ccbac07e0cbe8a6b2
+SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
+SHA1 (patch-gcc_fortran_f95-lang.c) = 06470dbee79f8c762675d3060a870b7dd9ba38f8
+SHA1 (patch-gcc_gcc.c) = 67a74bf3a5fc4cc9d9b3c7b79807fe11e2b002b3
+SHA1 (patch-gcc_ginclude_stddef.h) = 635e3e7579e9395fa017ac38e8b768d98937a80e
+SHA1 (patch-libgfortran_configure) = b3bbc7d9201073a1bed0b7e10141465bab52c8be
+SHA1 (patch-libgo_Makefile.in) = c06e3f0deb9f906d2c158262cffdc3fb7af95602
+SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
+SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297

@@ -1,0 +1,17 @@
+$NetBSD: patch-libgo_Makefile.in,v 1.1.1.1 2012/04/16 04:27:18 sbd Exp $
+
+proc.c will not compile with inline-functions (implied by -O3) 
+so add -fno-inline-functions to it's cflags.
+
+
+--- libgo/Makefile.in.orig	2012-03-10 19:03:09.000000000 +0000
++++ libgo/Makefile.in
+@@ -3028,7 +3028,7 @@ msize.lo: runtime/msize.c
+ @am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o msize.lo `test -f 'runtime/msize.c' || echo '$(srcdir)/'`runtime/msize.c
+ 
+ proc.lo: runtime/proc.c
+-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT proc.lo -MD -MP -MF $(DEPDIR)/proc.Tpo -c -o proc.lo `test -f 'runtime/proc.c' || echo '$(srcdir)/'`runtime/proc.c
++@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) -fno-inline-functions $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT proc.lo -MD -MP -MF $(DEPDIR)/proc.Tpo -c -o proc.lo `test -f 'runtime/proc.c' || echo '$(srcdir)/'`runtime/proc.c
+ @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/proc.Tpo $(DEPDIR)/proc.Plo
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='runtime/proc.c' object='proc.lo' libtool=yes @AMDEPBACKSLASH@
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
