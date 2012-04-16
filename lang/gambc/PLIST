@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2010/11/23 21:22:11 asau Exp $
-bin/gambc-cc.bat
-bin/gambc-doc.bat
+@comment $NetBSD: PLIST,v 1.5 2012/04/16 10:19:34 asau Exp $
+bin/gambc-cc
+bin/gambc-doc
 bin/gsc
 bin/gsc-script
 bin/gsi
@@ -14,6 +14,9 @@ bin/six-script
 include/gambit-not.h
 include/gambit.h
 info/gambit-c.info
+lib/_asm#.scm
+lib/_assert#.scm
+lib/_codegen#.scm
 lib/_eval#.scm
 lib/_gambc.c
 lib/_gambcgsc.c
@@ -27,6 +30,7 @@ lib/_repl#.scm
 lib/_std#.scm
 lib/_system#.scm
 lib/_thread#.scm
+lib/_x86#.scm
 lib/digest#.scm
 lib/digest.scm
 lib/gambit#.scm
