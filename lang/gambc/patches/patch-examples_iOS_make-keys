@@ -1,0 +1,13 @@
+$NetBSD: patch-examples_iOS_make-keys,v 1.1 2012/04/16 10:19:34 asau Exp $
+
+--- examples/iOS/make-keys.orig	2011-07-25 18:21:39.000000000 +0000
++++ examples/iOS/make-keys
+@@ -33,7 +33,7 @@ make_key_with_wh()
+ 
+   FONT_SIZE=`expr \( ${KEY_HEIGHT} \* 1000 \) / 1625`
+ 
+-  if [ "${IMAGE}" == "" ]; then
++  if [ "${IMAGE}" = "" ]; then
+ 
+     DRAW_IMAGE=""
+ 
