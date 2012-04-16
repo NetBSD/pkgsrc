@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1205 2012/04/16 04:19:47 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1206 2012/04/16 04:27:48 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -1999,3 +1999,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated math/R-XML to 3.9.4 [brook 2012-04-15]
 	Removed audio/xine-arts [dholland 2012-04-16]
 	Updated x11/xmx to 2.1a7nb5 [dholland 2012-04-16]
+	Added lang/gcc47 version 4.7.0 [sbd 2012-04-16]
