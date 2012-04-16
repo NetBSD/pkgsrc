@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1209 2012/04/16 17:01:21 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1210 2012/04/16 17:18:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/gambc to 4.6.5 [asau 2012-04-16]
 	Updated security/stunnel to 4.53 [ryoon 2012-04-16]
 	Updated mail/mew to 6.5 [ryoon 2012-04-16]
+	Updated fonts/umefont-ttf to 0.438 [ryoon 2012-04-16]
