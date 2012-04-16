@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1206 2012/04/16 04:27:48 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1207 2012/04/16 06:18:23 markd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2000,3 +2000,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed audio/xine-arts [dholland 2012-04-16]
 	Updated x11/xmx to 2.1a7nb5 [dholland 2012-04-16]
 	Added lang/gcc47 version 4.7.0 [sbd 2012-04-16]
+	Updated net/scamper to 20111202b [markd 2012-04-16]
