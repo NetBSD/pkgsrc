@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2011/12/08 19:37:57 jym Exp $
+# $NetBSD: Makefile,v 1.77 2012/04/16 16:55:21 ryoon Exp $
 
-DISTNAME=		stunnel-4.50
+DISTNAME=		stunnel-4.53
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.stunnel.org/stunnel/
 
