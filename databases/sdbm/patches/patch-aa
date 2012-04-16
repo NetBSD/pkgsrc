@@ -1,4 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2005/12/05 20:50:01 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2012/04/16 04:01:10 dholland Exp $
+
+- Use standard headers.
+- Don't declare own errno.
+- Don't declare own malloc/free/lseek.
+- Remove wrong cast calling malloc.
 
 --- sdbm.c.orig	2004-04-27 19:10:43.000000000 -0500
 +++ sdbm.c
@@ -36,7 +41,7 @@ $NetBSD: patch-aa,v 1.5 2005/12/05 20:50:01 rillig Exp $
  	n = strlen(file) * 2 + strlen(DIRFEXT) + strlen(PAGFEXT) + 2;
  
 -	if ((dirname = malloc((unsigned) n)) == NULL)
-+	if ((dirname = (char *) malloc(n)) == NULL)
++	if ((dirname = malloc(n)) == NULL)
  		return errno = ENOMEM, (DBM *) NULL;
  /*
   * build the file names

@@ -1,4 +1,10 @@
-$NetBSD: patch-af,v 1.2 2008/08/12 13:11:30 agc Exp $
+$NetBSD: patch-af,v 1.3 2012/04/16 04:01:10 dholland Exp $
+
+- Use standard headers.
+- Don't provide own getopt on BSD platforms.
+- Use <ctype.h> functions correctly.
+- Avoid signed bitwise operations.
+- Use the modern regexp library interface.
 
 --- dbe.c.orig	Mon Sep 25 23:28:28 2000
 +++ dbe.c
