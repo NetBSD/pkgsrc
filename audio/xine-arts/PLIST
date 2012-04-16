@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.17 2011/11/17 13:43:11 obache Exp $
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_arts.la
