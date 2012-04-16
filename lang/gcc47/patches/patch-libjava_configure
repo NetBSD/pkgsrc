@@ -1,0 +1,17 @@
+$NetBSD: patch-libjava_configure,v 1.1.1.1 2012/04/16 04:27:18 sbd Exp $
+
+Avoid a reference to the wrapped make in the pkgsrc work directory from
+showing up in an installed file.
+See: libjava/contrib/aotcompile.py.in
+
+--- libjava/configure.orig	2012-03-22 07:37:39.000000000 +0000
++++ libjava/configure
+@@ -24692,7 +24692,7 @@ $as_echo "Python modules dir: ${python_m
+ 
+ 
+ # needed for aot-compile-rpm
+-MAKE=`which make`
++MAKE=${PKGSRC_MAKE}
+ 
+ 
+ # Check whether --enable-aot-compile-rpm was given.
