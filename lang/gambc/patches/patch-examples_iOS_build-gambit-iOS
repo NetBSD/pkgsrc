@@ -1,0 +1,22 @@
+$NetBSD: patch-examples_iOS_build-gambit-iOS,v 1.1 2012/04/16 10:19:34 asau Exp $
+
+--- examples/iOS/build-gambit-iOS.orig	2012-02-21 15:03:22.000000000 +0000
++++ examples/iOS/build-gambit-iOS
+@@ -111,7 +111,7 @@ get_gambit_dist_tgz()
+   rootfromhere="`grep \"^rootfromhere = *\" makefile 2> /dev/null | sed -e \"s/rootfromhere = //\"`"
+   gambit_dist="`grep \"^PACKAGE_TARNAME = *\" makefile 2> /dev/null | sed -e \"s/PACKAGE_TARNAME = *//\"`"
+ 
+-  if [ "$gambit_dist" == "" ]; then
++  if [ "$gambit_dist" = "" ]; then
+ 
+     download_gambit_dist_tgz
+ 
+@@ -151,7 +151,7 @@ make_gambit()
+   cd "$dir"
+   make clean
+   make -j 2
+-  if [ "$update_with_latest_changes" == "yes" ]; then
++  if [ "$update_with_latest_changes" = "yes" ]; then
+     make update
+     make -j 2
+   fi
