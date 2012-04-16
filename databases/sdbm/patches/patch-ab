@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2011/08/29 01:33:49 dholland Exp $
+$NetBSD: patch-ab,v 1.4 2012/04/16 04:01:10 dholland Exp $
+
+- Configure for pkgsrc.
+- libtoolize, build as shared library.
+- Provide working install target.
 
 --- makefile	2008/08/12 12:14:05	1.1
 +++ makefile	2008/08/12 11:24:23
@@ -67,7 +71,7 @@ $NetBSD: patch-ab,v 1.3 2011/08/29 01:33:49 dholland Exp $
 +	mkdir ${DESTDIR}$(LIBDIR)
 +	mkdir ${DESTDIR}$(INCDIR)
 +	mkdir ${DESTDIR}$(MANDIR)/man3
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${LIBS:.a=.la} ${DESTDIR}${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${LIBS:.a=.la} ${DESTDIR}${PREFIX}/lib
 +	${LIBTOOL} --mode=install $(BSD_INSTALL_PROGRAM) dbu ${DESTDIR}$(BINDIR)
 +	${LIBTOOL} --mode=install $(BSD_INSTALL_PROGRAM) dba ${DESTDIR}$(BINDIR)
 +	${LIBTOOL} --mode=install $(BSD_INSTALL_PROGRAM) dbd ${DESTDIR}$(BINDIR)
