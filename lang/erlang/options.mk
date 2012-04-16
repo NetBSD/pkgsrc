@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/04/14 19:34:07 asau Exp $
+# $NetBSD: options.mk,v 1.5 2012/04/16 07:28:14 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -16,9 +16,14 @@ PKG_SUGGESTED_OPTIONS=	# empty
 PKG_SUGGESTED_OPTIONS+=	erlang-hipe
 .endif
 
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD" || \
+    ${OPSYS} == "Linux"
+PKG_SUPPORTED_OPTIONS+=	dtrace
+.endif
+
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	odbc
+PLIST_VARS+=	odbc dtrace
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
@@ -49,6 +54,18 @@ PLIST.odbc=	yes
 .  include "../../databases/unixodbc/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-odbc=${BUILDLINK_PREFIX.unixodbc}
 PLIST.odbc=	yes
+.endif
+
+###
+### DTrace support
+###
+.if !empty(PKG_OPTIONS:Mdtrace)
+.  if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=	--with-dynamic-trace=dtrace
+.  elif ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-dynamic-trace=systemtap
+.  endif
+PLIST.dtrace=		yes
 .endif
 
 # Help generate optional PLIST parts:
