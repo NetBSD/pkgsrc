@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2011/02/17 10:33:38 markd Exp $
+$NetBSD: patch-ab,v 1.6 2012/04/17 17:17:28 drochner Exp $
 
---- setup.py.orig	2010-07-07 01:41:55.000000000 +0000
+--- setup.py.orig	2011-10-06 14:50:23.000000000 +0000
 +++ setup.py
-@@ -128,13 +128,13 @@ if not check_for_numpy():
+@@ -119,13 +119,13 @@ if not check_for_numpy():
  if not check_for_freetype():
      sys.exit(1)
  
@@ -23,12 +23,12 @@ $NetBSD: patch-ab,v 1.5 2011/02/17 10:33:38 markd Exp $
  
  print_raw("")
  print_raw("OPTIONAL BACKEND DEPENDENCIES")
-@@ -175,13 +175,13 @@ if options['build_wxagg']:
-             print_message("WxAgg extension not required for wxPython >= 2.8")
-         rc['backend'] = 'WXAgg'
+@@ -155,13 +155,13 @@ if options['build_tkagg']:
+         build_tkagg(ext_modules, packages)
+         rc['backend'] = 'TkAgg'
  
 -hasgtk = check_for_gtk()
-+hasgtk = 1   # check_for_gtk()
++hasgtk = 1
  if options['build_gtk']:
      if hasgtk or (options['build_gtk'] is True):
          build_gdk(ext_modules, packages)
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.5 2011/02/17 10:33:38 markd Exp $
          build_gtkagg(ext_modules, packages)
          rc['backend'] = 'GTKAgg'
  
-@@ -282,11 +282,11 @@ distrib = setup(name="matplotlib",
+@@ -263,11 +263,11 @@ distrib = setup(name="matplotlib",
        interfaces and hardcopy output formats.  There is a 'pylab' mode
        which emulates matlab graphics
        """,
