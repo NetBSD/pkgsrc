@@ -1,16 +1,18 @@
-$NetBSD: patch-bj,v 1.1 2007/11/01 13:08:07 rillig Exp $
+$NetBSD: patch-bj,v 1.2 2012/04/17 20:08:06 bsiegert Exp $
 
---- src/Window.cc.orig	2007-09-09 17:46:50.000000000 +0200
-+++ src/Window.cc	2007-11-01 13:45:10.824376000 +0100
-@@ -185,8 +185,9 @@ void lowerFluxboxWindow(FluxboxWindow &w
+--- src/Window.cc.orig	Sat Oct 29 13:45:51 2011
++++ src/Window.cc
+@@ -185,9 +185,10 @@ void lowerFluxboxWindow(FluxboxWindow &w
          win.screen().layerManager().lock();
  
      // lower the windows from the top down, so they don't change stacking order
--    WinClient::TransientList::const_reverse_iterator it = win.winClient().transientList().rbegin();
--    WinClient::TransientList::const_reverse_iterator it_end = win.winClient().transientList().rend();
+-    const WinClient::TransientList& transients = win.winClient().transientList();
+-    WinClient::TransientList::const_reverse_iterator it =     transients.rbegin();
+-    WinClient::TransientList::const_reverse_iterator it_end = transients.rend();
 +    // XXX: I'd rather use a const_reverse_iterator here, but sunpro has problems with it.
-+    WinClient::TransientList::reverse_iterator it = win.winClient().transientList().rbegin();
-+    WinClient::TransientList::reverse_iterator it_end = win.winClient().transientList().rend();
++    WinClient::TransientList& transients = win.winClient().transientList();
++    WinClient::TransientList::reverse_iterator it =     transients.rbegin();
++    WinClient::TransientList::reverse_iterator it_end = transients.rend();
      for (; it != it_end; ++it) {
          if ((*it)->fbwindow() && !(*it)->fbwindow()->isIconic())
              // TODO: should we also check if it is the active client?
