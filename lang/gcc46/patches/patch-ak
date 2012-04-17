@@ -1,4 +1,7 @@
-$NetBSD: patch-ak,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2012/04/17 07:48:13 sbd Exp $
+
+Fix build on NetBSD i386/amd64 after the ansi.h header include protection
+name change.
 
 --- gcc/ginclude/stddef.h.orig	2011-01-29 22:15:52.000000000 +0000
 +++ gcc/ginclude/stddef.h
