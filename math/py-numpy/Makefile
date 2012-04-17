@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/02/09 13:09:09 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/04/17 17:24:41 drochner Exp $
 #
 
-DISTNAME=	numpy-1.4.1
-PKGREVISION=	3
+DISTNAME=	numpy-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
@@ -14,7 +13,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES+=	c fortran77
+USE_LANGUAGES+=	c fortran
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=	ATLAS=None
 
