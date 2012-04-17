@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1.1.1 2012/04/17 17:45:40 drochner Exp $
+
+--- IPython/core/tests/test_interactiveshell.py.orig	2012-03-30 18:28:52.000000000 +0000
++++ IPython/core/tests/test_interactiveshell.py
+@@ -269,7 +269,7 @@ class TestSystemRaw(unittest.TestCase):
+     def test_1(self):
+         """Test system_raw with non-ascii cmd
+         """
+-        cmd = ur'''python -c "'åäö'"   '''
++        cmd = ur'''"%s" -c "'åäö'"   ''' % sys.executable
+         _ip.shell.system_raw(cmd)
+ 
+ 

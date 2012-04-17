@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/04/17 17:45:40 drochner Exp $
+
+SHA1 (ipython-0.12.tar.gz) = 49f6397d2957bb0a4492d0b35f3898dc161871de
+RMD160 (ipython-0.12.tar.gz) = 7086a8a5ebb5717091d1868907f6ae80abc9c7ab
+Size (ipython-0.12.tar.gz) = 9316219 bytes
+SHA1 (patch-ba) = e4fef4a3f58bb773deb3be3894e738807b327ae1
+SHA1 (patch-bb) = 821c566dbd00fb01b5f5c87932e7d676539419b6
+SHA1 (patch-setupbase.py) = ecd8aacaca2e19412ceeb7100f598e40df2f9c9f
