@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1211 2012/04/17 13:01:48 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1212 2012/04/17 17:59:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2007,3 +2007,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated fonts/umefont-ttf to 0.438 [ryoon 2012-04-16]
 	Updated www/typo3_45 to 4.5.15 [taca 2012-04-17]
 	Updated www/typo3_46 to 4.6.8 [taca 2012-04-17]
+	Updated databases/py-psycopg2 to 2.4.5 [adam 2012-04-17]
+	Updated www/py-django to 1.4 [adam 2012-04-17]
