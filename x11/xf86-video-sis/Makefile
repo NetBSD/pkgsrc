@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/09/14 11:03:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2012/04/17 17:52:53 joerg Exp $
 #
 
 DISTNAME=	xf86-video-sis-0.10.2
@@ -20,7 +20,10 @@ GNU_CONFIGURE=  yes
 USE_TOOLS+=     pkg-config
 
 .include "../../mk/compiler.mk"
-.if empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
+.elif empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
