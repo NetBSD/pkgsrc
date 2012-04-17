@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11018 2012/04/16 06:18:22 markd Exp $
+$NetBSD: TODO,v 1.11019 2012/04/17 17:59:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -1140,7 +1140,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-checker-0.8.19
 	o py-cups-1.9.60
 	o py-dbus-1.0.0
-	o py-django-1.4
 	o py-feedparser-5.1.1
 	o py-game-1.9.1 [needs portmidi]
 	o py-gnosis-1.2.2
