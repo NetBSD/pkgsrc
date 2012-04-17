@@ -1,4 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2012/04/17 07:48:13 sbd Exp $
+
+No need to use bash for this small script.
+
+Also -print0 is not portable to solaris and perhaps others.
 
 --- libjava/contrib/rebuild-gcj-db.in.orig	2008-07-02 13:17:54.000000000 +0000
 +++ libjava/contrib/rebuild-gcj-db.in
