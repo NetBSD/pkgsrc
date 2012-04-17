@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/09/12 21:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/17 21:56:52 wiz Exp $
 
 DISTNAME=	potrace-1.10
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://potrace.sourceforge.net/download/ \
 		${MASTER_SITE_SOURCEFORGE:=potrace/}
