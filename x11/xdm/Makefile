@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/11/09 18:28:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2012/04/17 17:53:13 joerg Exp $
 
 DISTNAME=	xdm-1.1.11
 CATEGORIES=	x11
@@ -35,7 +35,10 @@ OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm \
 CFLAGS+=	-fno-strict-aliasing
 .endif
 
-.if empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
+.elif empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
