@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11021 2012/04/17 20:57:24 gls Exp $
+$NetBSD: TODO,v 1.11022 2012/04/17 21:14:53 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1023,7 +1023,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o newmail-1.0.2
 	o newt-0.52.12
 	o ng-1.4.4
-	o nginx-1.0.15
 	o nhc98-1.22 [pkg/45318]
 	o nikto-2.0.1
 	o nmh-1.4
