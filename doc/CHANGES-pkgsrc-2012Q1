@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.12 2012/04/16 22:31:05 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.13 2012/04/17 05:56:30 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -70,3 +70,5 @@ Pullup ticket #3740 - requested by dholland
 multimedia/kmplayer-kde3: build fix
 Pullup ticket #3741 - requested by drochner
 net/wireshark: security update
+Pullup ticket #3739 - requested by tron
+databases/phpmyadmin: security update
