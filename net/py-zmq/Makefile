@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/17 17:33:09 drochner Exp $
 #
 
-DISTNAME=	pyzmq-2.1.10
-PKGREVISION=	1
+DISTNAME=	pyzmq-2.1.11
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/zeromq/pyzmq/downloads/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/zeromq/pyzmq/downloads/
+HOMEPAGE=	https://github.com/zeromq/pyzmq/
 COMMENT=	Python bindings for zeromq
 LICENSE=	gnu-lgpl-v3
 
