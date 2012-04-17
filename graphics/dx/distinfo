@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2012/03/06 23:26:38 joerg Exp $
+$NetBSD: distinfo,v 1.14 2012/04/17 17:44:02 joerg Exp $
 
 SHA1 (dx-4.4.4.tar.gz) = c8e4d72d169675c66acd2135599b211d80810f76
 RMD160 (dx-4.4.4.tar.gz) = db4cff78c9712a6e1e19265b0f42fdb87ab5ff7b
@@ -16,3 +16,22 @@ SHA1 (patch-an) = 39f15b7cc2558aa96c813487deb74f49a5f45f54
 SHA1 (patch-ap) = 960cc73c8a3d42fa2fb1a4cb0bd0f4e3d918babf
 SHA1 (patch-ar) = cafb9f3eec34cc3909eea194c644497ad53960ca
 SHA1 (patch-ba) = 41d20e76feebdb049729e46ca4240ccc41f51b1d
+SHA1 (patch-src_uipp_base_Application.C) = 2d947d8b40a9da10e4122e6013e29554deb8aeec
+SHA1 (patch-src_uipp_base_Application.h) = 006d80bd4ada9dd2bf06e46a6dc1e120aae54aeb
+SHA1 (patch-src_uipp_base_IBMApplication.C) = f2767b02ae68f173ee1cf239a0de3ceaf148c4e5
+SHA1 (patch-src_uipp_base_IBMApplication.h) = 23fb1c28939945b74cace4c9d5b288c3ca980a0b
+SHA1 (patch-src_uipp_dxui_Main.C) = 003942b7e4792b48c57c730545d8dd7f2d4ba2a0
+SHA1 (patch-src_uipp_dxuilib_DXApplication.C) = c30c07c4a64cdd1714fa106bb395450399202301
+SHA1 (patch-src_uipp_dxuilib_DXApplication.h) = da63ba65de3615da077c0e5cba763ff29c664ef9
+SHA1 (patch-src_uipp_mb_MBApplication.C) = 2e1253c880d8c1c800f3a6f338aa240f30fe5448
+SHA1 (patch-src_uipp_mb_MBApplication.h) = d166a22ade9cfba902a1b5428cbf09ebd165d166
+SHA1 (patch-src_uipp_mb_Main.C) = 6623a5f0bea972c13092df7bd0583b30c28dc435
+SHA1 (patch-src_uipp_prompter_GARApplication.C) = ddb43c7c103f1a20c1ec725f8f5c977c3821eb4b
+SHA1 (patch-src_uipp_prompter_GARApplication.h) = 76d2e0cdd45603692b3fbf1b6a044a0ab93e5e25
+SHA1 (patch-src_uipp_prompter_Main.C) = a47d59c7782e58667fb01bf23318dbf5ba990e5b
+SHA1 (patch-src_uipp_startup_Main.C) = 021356ce0dafd3a3d49229251588a373eaa40bba
+SHA1 (patch-src_uipp_startup_StartupApplication.C) = a0a01c96b83c078d7abae7b1464b685fb87afff0
+SHA1 (patch-src_uipp_startup_StartupApplication.h) = 61fef8f3d67ef90f79e26fe72570c8dfa6aacc37
+SHA1 (patch-src_uipp_tutor_Main.C) = 367af42a93a559fd0f61e74c71241c595f0f5395
+SHA1 (patch-src_uipp_tutor_TutorApplication.C) = bc86b520ff0038d9f551fad7a2a2ff0c7c64dd5d
+SHA1 (patch-src_uipp_tutor_TutorApplication.h) = b0f77603935b49fc867d5d80feef25ca39134e28
