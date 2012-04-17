@@ -1,4 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+$NetBSD: patch-af,v 1.2 2012/04/17 07:48:13 sbd Exp $
+
+Avoid a reference to the wrapped make in the pkgsrc work directory from
+showing up in an installed file.
+See: libjava/contrib/aotcompile.py.in
 
 --- libjava/configure.orig	2011-03-25 17:07:00.000000000 +0000
 +++ libjava/configure

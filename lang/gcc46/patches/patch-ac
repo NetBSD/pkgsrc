@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2011/10/18 17:56:16 hans Exp $
+$NetBSD: patch-ac,v 1.2 2012/04/17 07:48:13 sbd Exp $
+
+Add gcc libdir to a programs rpath so that _this gcc's_ support librarys
+are found.
 
 --- gcc/Makefile.in.orig	2004-06-17 15:56:58.000000000 -0600
 +++ gcc/Makefile.in

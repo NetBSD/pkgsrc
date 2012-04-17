@@ -1,4 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2011/05/15 00:09:56 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2012/04/17 07:48:13 sbd Exp $
+
+On NetBSD the 'cabs' and 'cabsf' functions are are __RENAME so that
+thay have '__c99_' prefixes.
 
 --- gcc/fortran/f95-lang.c.orig	2011-02-24 09:53:26.000000000 +0000
 +++ gcc/fortran/f95-lang.c
