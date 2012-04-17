@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/05/14 14:28:07 obache Exp $
+# $NetBSD: options.mk,v 1.3 2012/04/17 20:57:09 gls Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gajim
 PKG_SUPPORTED_OPTIONS=	avahi gnome gnome-keyring ssl
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	ssl
 # ssl
 .if !empty(PKG_OPTIONS:Mssl)
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.9:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-amkCrypto-[0-9]*:../../security/py-amkCrypto
+DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 .endif
 
 # avahi
