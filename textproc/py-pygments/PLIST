@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/02/28 08:54:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/04/17 17:35:25 drochner Exp $
 bin/pygmentize
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -78,6 +78,12 @@ ${PYSITELIB}/pygments/lexers/_mapping.pyo
 ${PYSITELIB}/pygments/lexers/_phpbuiltins.py
 ${PYSITELIB}/pygments/lexers/_phpbuiltins.pyc
 ${PYSITELIB}/pygments/lexers/_phpbuiltins.pyo
+${PYSITELIB}/pygments/lexers/_postgres_builtins.py
+${PYSITELIB}/pygments/lexers/_postgres_builtins.pyc
+${PYSITELIB}/pygments/lexers/_postgres_builtins.pyo
+${PYSITELIB}/pygments/lexers/_scilab_builtins.py
+${PYSITELIB}/pygments/lexers/_scilab_builtins.pyc
+${PYSITELIB}/pygments/lexers/_scilab_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_vimbuiltins.py
 ${PYSITELIB}/pygments/lexers/_vimbuiltins.pyc
 ${PYSITELIB}/pygments/lexers/_vimbuiltins.pyo
@@ -99,6 +105,9 @@ ${PYSITELIB}/pygments/lexers/functional.pyo
 ${PYSITELIB}/pygments/lexers/hdl.py
 ${PYSITELIB}/pygments/lexers/hdl.pyc
 ${PYSITELIB}/pygments/lexers/hdl.pyo
+${PYSITELIB}/pygments/lexers/jvm.py
+${PYSITELIB}/pygments/lexers/jvm.pyc
+${PYSITELIB}/pygments/lexers/jvm.pyo
 ${PYSITELIB}/pygments/lexers/math.py
 ${PYSITELIB}/pygments/lexers/math.pyc
 ${PYSITELIB}/pygments/lexers/math.pyo
@@ -108,9 +117,15 @@ ${PYSITELIB}/pygments/lexers/other.pyo
 ${PYSITELIB}/pygments/lexers/parsers.py
 ${PYSITELIB}/pygments/lexers/parsers.pyc
 ${PYSITELIB}/pygments/lexers/parsers.pyo
+${PYSITELIB}/pygments/lexers/shell.py
+${PYSITELIB}/pygments/lexers/shell.pyc
+${PYSITELIB}/pygments/lexers/shell.pyo
 ${PYSITELIB}/pygments/lexers/special.py
 ${PYSITELIB}/pygments/lexers/special.pyc
 ${PYSITELIB}/pygments/lexers/special.pyo
+${PYSITELIB}/pygments/lexers/sql.py
+${PYSITELIB}/pygments/lexers/sql.pyc
+${PYSITELIB}/pygments/lexers/sql.pyo
 ${PYSITELIB}/pygments/lexers/templates.py
 ${PYSITELIB}/pygments/lexers/templates.pyc
 ${PYSITELIB}/pygments/lexers/templates.pyo
@@ -174,6 +189,9 @@ ${PYSITELIB}/pygments/styles/pastie.pyo
 ${PYSITELIB}/pygments/styles/perldoc.py
 ${PYSITELIB}/pygments/styles/perldoc.pyc
 ${PYSITELIB}/pygments/styles/perldoc.pyo
+${PYSITELIB}/pygments/styles/rrt.py
+${PYSITELIB}/pygments/styles/rrt.pyc
+${PYSITELIB}/pygments/styles/rrt.pyo
 ${PYSITELIB}/pygments/styles/tango.py
 ${PYSITELIB}/pygments/styles/tango.pyc
 ${PYSITELIB}/pygments/styles/tango.pyo
