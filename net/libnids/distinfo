@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/11/26 17:17:53 joerg Exp $
+$NetBSD: distinfo,v 1.11 2012/04/17 17:45:35 joerg Exp $
 
 SHA1 (libnids-1.23.tar.gz) = 105bff0d0d35ab95ec90cce98cfb409f64ed44b4
 RMD160 (libnids-1.23.tar.gz) = 38994ad04f688291315bfcde38d8795e7a4c4226
 Size (libnids-1.23.tar.gz) = 140975 bytes
 SHA1 (patch-src_killtcp.c) = 77977d660cb55405b3501375185200bc37b702b1
+SHA1 (patch-src_util.c) = 1308beb64054caadb69ac7ba4e82b4bd15d07a4b
+SHA1 (patch-src_util.h) = 808a0b9e926ac3aab753123b621933c85797e643
