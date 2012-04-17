@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/05/22 11:33:31 alnsn Exp $
+$NetBSD: distinfo,v 1.3 2012/04/17 17:41:40 joerg Exp $
 
 SHA1 (cmph-1.1.tar.gz) = 005b17395451284cfbc9d4b3d65c7f64a2a97997
 RMD160 (cmph-1.1.tar.gz) = 55392941671d7aa5ade26e8d2f62ea05cc47e543
 Size (cmph-1.1.tar.gz) = 425150 bytes
 SHA1 (patch-src_brz.c) = 771589ac40e11240a0746f19cb63490d828c61db
+SHA1 (patch-src_fch__buckets.c) = 847906f8278ea8068a0897259e7a1bdfb6634d9b
