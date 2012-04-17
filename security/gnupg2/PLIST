@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/15 20:10:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/17 18:35:33 drochner Exp $
 bin/gpg-agent
 libexec/gpg-preset-passphrase
 libexec/gpg-protect-tool
@@ -30,5 +30,6 @@ share/locale/ru/LC_MESSAGES/gnupg2.mo
 share/locale/sk/LC_MESSAGES/gnupg2.mo
 share/locale/sv/LC_MESSAGES/gnupg2.mo
 share/locale/tr/LC_MESSAGES/gnupg2.mo
+share/locale/uk/LC_MESSAGES/gnupg2.mo
 share/locale/zh_CN/LC_MESSAGES/gnupg2.mo
 share/locale/zh_TW/LC_MESSAGES/gnupg2.mo
