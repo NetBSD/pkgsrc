@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/01 18:27:37 agc Exp $
+$NetBSD: patch-aa,v 1.2 2012/04/17 17:48:47 joerg Exp $
 
 --- makefile	2005/05/06 21:04:49	1.1
 +++ makefile	2005/05/06 21:05:19
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/01 18:27:37 agc Exp $
  # change the -O7 to -O3 if your compiler doesn't grok -O7
  #
 -CFLAGS = -DUSER=1 -O7
-+CFLAGS+= -DUSER=1 -O7
++CFLAGS+= -DUSER=1
  
  SUPPORT_OBJS = rootfs.o initfs.o kernel.o cache.o sl.o stub.o
  MISC_OBJS    = sysdep.o util.o hexdump.o argv.o
