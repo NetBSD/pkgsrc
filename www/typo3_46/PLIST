@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/03/28 12:58:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2012/04/17 23:50:40 tron Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -4053,6 +4053,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/doc/TODO.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/export.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/ext_autoload.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/ext_emconf.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/ext_tables.sql
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/import.gif
