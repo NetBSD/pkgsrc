@@ -1,0 +1,13 @@
+$NetBSD: patch-util_fbsetbg,v 1.1 2012/04/17 20:08:06 bsiegert Exp $
+
+--- util/fbsetbg.orig	Thu Dec 15 03:36:05 2011
++++ util/fbsetbg
+@@ -526,7 +526,7 @@ fi
+ 
+ 
+ if [ ! -r "$wallpaper" ]; then
+-	if [ "$ignore_missing_wallpaper" == "true" ]; then
++	if [ "$ignore_missing_wallpaper" = "true" ]; then
+ 		exit 0
+ 	fi
+     message "Can't find wallpaper $wallpaper"
