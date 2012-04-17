@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/09/10 19:39:29 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/04/17 17:52:29 joerg Exp $
 #
 
 DISTNAME=		xinit-1.2.1
@@ -18,7 +18,10 @@ CONFIGURE_ARGS+=	--with-xinit=${PREFIX}/bin/xinit
 USE_TOOLS+=		pkg-config xauth:run
 
 .include "../../mk/compiler.mk"
-.if empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
+.elif empty(PKGSRC_COMPILER:Mgcc)
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
