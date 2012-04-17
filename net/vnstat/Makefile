@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2011/11/01 06:11:57 sbd Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/17 21:35:56 gls Exp $
 
-DISTNAME=	vnstat-1.9
-PKGREVISION=	4
+DISTNAME=	vnstat-1.11
 CATEGORIES=	net
 MASTER_SITES=	http://humdi.net/vnstat/
 #DISTFILES=${DISTNAME}.tar.gz
@@ -58,11 +57,11 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vnstatd.1
 	${INSTALL_MAN} ${WRKSRC}/man/vnstat.conf.5 			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/vnstat.conf.5
-	if [ "${PLIST.gd}" = "yes" ]; then				\
+	if [ ${PLIST.gd:Q} = "yes" ]; then				\
 		${INSTALL_PROGRAM} ${WRKSRC}/src/vnstati		\
 		    ${DESTDIR}${PREFIX}/bin/vnstati;			\
 		${INSTALL_MAN} ${WRKSRC}/man/vnstati.1 			\
 		    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vnstati.1;	\
-	fi		
+	fi
 
 .include "../../mk/bsd.pkg.mk"
