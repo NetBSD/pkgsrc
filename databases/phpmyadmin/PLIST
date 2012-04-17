@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2012/02/16 20:19:25 tron Exp $
+@comment $NetBSD: PLIST,v 1.25.2.1 2012/04/17 05:52:46 spz Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -289,7 +289,6 @@ share/phpmyadmin/locale/ar/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/be/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/be@latin/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/bg/LC_MESSAGES/phpmyadmin.mo
-share/phpmyadmin/locale/bn/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/ca/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/cs/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/da/LC_MESSAGES/phpmyadmin.mo
@@ -307,9 +306,7 @@ share/phpmyadmin/locale/hu/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/id/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/it/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/ja/LC_MESSAGES/phpmyadmin.mo
-share/phpmyadmin/locale/ka/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/lt/LC_MESSAGES/phpmyadmin.mo
-share/phpmyadmin/locale/mn/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/nb/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/nl/LC_MESSAGES/phpmyadmin.mo
 share/phpmyadmin/locale/pl/LC_MESSAGES/phpmyadmin.mo
