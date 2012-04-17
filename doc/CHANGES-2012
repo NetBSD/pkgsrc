@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1215 2012/04/17 20:57:24 gls Exp $
+$NetBSD: CHANGES-2012,v 1.1216 2012/04/17 21:14:53 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2018,3 +2018,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/gnupg2 to 2.0.19 [drochner 2012-04-17]
 	Updated wm/fluxbox to 1.3.2 [bsiegert 2012-04-17]
 	Updated chat/gajim to 0.15 [gls 2012-04-17]
+	Updated www/nginx to 1.0.15 [shattered 2012-04-17]
