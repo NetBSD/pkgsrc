@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2009/07/07 15:47:59 sborrill Exp $
+$NetBSD: distinfo,v 1.29 2012/04/17 17:51:38 joerg Exp $
 
 SHA1 (fluxbox-1.1.1.tar.bz2) = 6d49deb6c4c7d73f7567e1cf7d2575c7edc4825f
 RMD160 (fluxbox-1.1.1.tar.bz2) = aabfdd10c835d0ef903885646a7f34f7df75af17
@@ -13,3 +13,6 @@ SHA1 (patch-bf) = 365d372379ddbeb7ed930a6a953c0f245e2fec9e
 SHA1 (patch-bg) = c6a1c79adb48c78a6ac6e5c57e1211d807eff2ce
 SHA1 (patch-bj) = 24eb486f2414bd82bcb85e2ee86f87a061faaa16
 SHA1 (patch-bk) = ae0c9857dd0cd203c8ae3f4bf5a0c7126cf48c92
+SHA1 (patch-src_FbTk_BoolMenuItem.hh) = aa8ecf88711c08d192da8ecf2c2931f1d9311251
+SHA1 (patch-src_FbTk_IntMenuItem.hh) = 817073a219c9ba75eeaccba7000e7929278d4911
+SHA1 (patch-src_FbTk_Menu.hh) = 138caaa070557ce742ecc81e2e20ad8417000ac1
