@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11020 2012/04/17 18:37:07 drochner Exp $
+$NetBSD: TODO,v 1.11021 2012/04/17 20:57:24 gls Exp $
 
 Suggested new packages
 ======================
@@ -653,7 +653,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fuse-ntfs-3g-2012.1.15
 	o fvwm-2.6.0
 	o fvwm2-themes-0.7.0
-	o gajim-0.15
 	o gammu-1.30.0
 	o gap-4r4p9
 	o gated-3.6
