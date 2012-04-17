@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.13 2012/04/17 05:56:30 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.14 2012/04/17 23:51:50 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -72,3 +72,7 @@ Pullup ticket #3741 - requested by drochner
 net/wireshark: security update
 Pullup ticket #3739 - requested by tron
 databases/phpmyadmin: security update
+Pullup ticket #3742 - requested by taca
+www/typo3_45: security update
+Pullup ticket #3743 - requested by taca
+www/typo3_46: security update
