@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2012/04/07 11:32:29 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2012/04/17 17:17:28 drochner Exp $
 
---- setupext.py.orig	2010-07-07 01:41:55.000000000 +0000
+--- setupext.py.orig	2011-10-06 14:50:23.000000000 +0000
 +++ setupext.py
-@@ -115,14 +115,14 @@ options = {'display_status': True,
+@@ -124,13 +124,13 @@ options = {'display_status': True,
             'verbose': False,
             'provide_pytz': 'auto',
             'provide_dateutil': 'auto',
@@ -11,7 +11,6 @@ $NetBSD: patch-aa,v 1.7 2012/04/07 11:32:29 joerg Exp $
             'build_gtk': 'auto',
             'build_gtkagg': 'auto',
             'build_tkagg': 'auto',
-            'build_wxagg': 'auto',
             'build_macosx': 'auto',
 -           'build_image': True,
 -           'build_windowing': True,
@@ -20,8 +19,8 @@ $NetBSD: patch-aa,v 1.7 2012/04/07 11:32:29 joerg Exp $
             'backend': None,
             'basedirlist': None}
  
-@@ -201,12 +201,8 @@ else:
-     print_status = print_message = print_raw = print_line
+@@ -221,12 +221,7 @@ sysconfig.customize_compiler = my_custom
+ 
  
  def run_child_process(cmd):
 -    p = subprocess.Popen(cmd, shell=True,
@@ -30,12 +29,11 @@ $NetBSD: patch-aa,v 1.7 2012/04/07 11:32:29 joerg Exp $
 -                         stderr=subprocess.STDOUT,
 -                         close_fds=(sys.platform != 'win32'))
 -    return p.stdin, p.stdout
-+    import os
 +    return None, os.popen(cmd + " 2>&1")
  
  class CleanUpFile:
      """CleanUpFile deletes the specified filename when self is destroyed."""
-@@ -344,11 +340,8 @@ def check_for_libpng():
+@@ -364,11 +359,8 @@ def check_for_libpng():
      return True
  
  def add_base_flags(module):
