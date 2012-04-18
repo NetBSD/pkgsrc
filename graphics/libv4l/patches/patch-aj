@@ -1,15 +1,12 @@
-$NetBSD: patch-aj,v 1.3 2012/04/18 18:25:22 hans Exp $
+$NetBSD: patch-aj,v 1.4 2012/04/18 21:16:44 hans Exp $
 
 --- include/libv4l1.h.orig	2009-01-10 15:36:53.000000000 -0500
 +++ include/libv4l1.h	2009-01-10 15:37:29.000000000 -0500
-@@ -57,6 +57,19 @@ LIBV4L_PUBLIC extern FILE *v4l1_log_file
+@@ -57,6 +57,18 @@ LIBV4L_PUBLIC extern FILE *v4l1_log_file
     capture formats, like hw specific bayer compression methods).
  */
  
-+#if defined(__NetBSD__) || defined(__DragonFly__)
-+#include <sys/types.h>
-+typedef off_t __off64_t;
-+#elif defined(__sun)
++#if defined(__sun)
 +#ifdef _LARGEFILE64_SOURCE
 +typedef off64_t __off64_t;
 +#else
@@ -17,6 +14,8 @@ $NetBSD: patch-aj,v 1.3 2012/04/18 18:25:22 hans Exp $
 +#endif
 +typedef off_t __off_t;
 +#include <sys/ioccom.h>
++#elif !defined(__off64_t)
++#define __off64_t off_t
 +#endif
 +
  LIBV4L_PUBLIC int v4l1_open (const char *file, int oflag, ...);
