@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/19 08:59:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/18 00:06:12 joerg Exp $
 
 DISTNAME=		kaname_k12_bdf
 PKGNAME=		ja-kaname-0.0.0.20030112
@@ -23,7 +23,7 @@ do-build:
 	cd ${WRKSRC}; \
 	for i in *.bdf; do \
 		p=`basename $$i .bdf`.pcf; \
-		bdftopcf -o $$p $$i; \
+		${TOOLS_PATH.bdftopcf} -o $$p $$i; \
 		${GZIP_CMD} -c $$p > $$p.gz; \
 	done
 
