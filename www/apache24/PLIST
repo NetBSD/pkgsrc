@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/15 12:23:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/18 11:27:01 ryoon Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -172,6 +172,7 @@ libexec/cgi-bin/test-cgi
 man/man1/ab.1
 man/man1/apxs.1
 man/man1/dbmmanage.1
+man/man8/fcgistarter.8
 man/man1/htdbm.1
 man/man1/htdigest.1
 man/man1/htpasswd.1
@@ -976,6 +977,7 @@ share/httpd/manual/mod/mod_logio.html.ko.euc-kr
 share/httpd/manual/mod/mod_logio.html.tr.utf8
 share/httpd/manual/mod/mod_lua.html
 share/httpd/manual/mod/mod_lua.html.en
+share/httpd/manual/mod/mod_lua.html.fr
 share/httpd/manual/mod/mod_mime.html
 share/httpd/manual/mod/mod_mime.html.en
 share/httpd/manual/mod/mod_mime.html.ja.utf8
@@ -1266,15 +1268,19 @@ share/httpd/manual/programs/suexec.html.ko.euc-kr
 share/httpd/manual/programs/suexec.html.tr.utf8
 share/httpd/manual/rewrite/access.html
 share/httpd/manual/rewrite/access.html.en
+share/httpd/manual/rewrite/access.html.fr
 share/httpd/manual/rewrite/advanced.html
 share/httpd/manual/rewrite/advanced.html.en
+share/httpd/manual/rewrite/advanced.html.fr
 share/httpd/manual/rewrite/avoid.html
 share/httpd/manual/rewrite/avoid.html.en
+share/httpd/manual/rewrite/avoid.html.fr
 share/httpd/manual/rewrite/flags.html
 share/httpd/manual/rewrite/flags.html.en
 share/httpd/manual/rewrite/flags.html.fr
 share/httpd/manual/rewrite/htaccess.html
 share/httpd/manual/rewrite/htaccess.html.en
+share/httpd/manual/rewrite/htaccess.html.fr
 share/httpd/manual/rewrite/index.html
 share/httpd/manual/rewrite/index.html.en
 share/httpd/manual/rewrite/index.html.fr
