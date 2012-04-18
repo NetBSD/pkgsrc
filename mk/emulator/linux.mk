@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.16 2012/03/17 06:08:17 obache Exp $
+# $NetBSD: linux.mk,v 1.17 2012/04/18 06:17:24 obache Exp $
 #
 # Linux binary emulation framework
 #
@@ -12,7 +12,8 @@ EMUL_TYPE.linux?=	none
 .else
 
 # NetBSD 5.99.50 or later default to 11.3, otherwise 10.0
-.if ${OPSYS} == "NetBSD" && (empty(OS_VERSION:M[0-5].*) || \
+.if ${OPSYS} == "NetBSD" && ${EMUL_ARCH} != "powerpc" && \
+	(empty(OS_VERSION:M[0-5].*) || \
 	!empty(OS_VERSION:M5.99.[5-9][0-9]) || \
 	!empty(OS_VERSION:M5.99.[0-9][0-9][0-9]*))
 SUSE_PREFER?=	11.3
