@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11022 2012/04/17 21:14:53 shattered Exp $
+$NetBSD: TODO,v 1.11023 2012/04/18 20:50:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1168,7 +1168,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rcs-5.8
 	o rdesktop-1.7.1
 	o rdp-1.6
-	o re-alpine-2.02 [pkg/46025]
 	o recordproto-1.14.2
 	o remind-3.1.12
 	o rendercheck-1.4
