@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/18 19:31:47 minskim Exp $
+share/texmf-dist/tex/latex/mdwtools/at.sty
+share/texmf-dist/tex/latex/mdwtools/cmtt.sty
+share/texmf-dist/tex/latex/mdwtools/doafter.sty
+share/texmf-dist/tex/latex/mdwtools/footnote.sty
+share/texmf-dist/tex/latex/mdwtools/mTTcmtt.fd
+share/texmf-dist/tex/latex/mdwtools/mTTenc.def
+share/texmf-dist/tex/latex/mdwtools/mathenv.sty
+share/texmf-dist/tex/latex/mdwtools/mdwlist.sty
+share/texmf-dist/tex/latex/mdwtools/mdwmath.sty
+share/texmf-dist/tex/latex/mdwtools/mdwtab.sty
+share/texmf-dist/tex/latex/mdwtools/sverb.sty
+share/texmf-dist/tex/latex/mdwtools/syntax.sty
