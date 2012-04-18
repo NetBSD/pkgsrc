@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
+$NetBSD: patch-ad,v 1.5 2012/04/18 17:47:22 hans Exp $
 
 * XXX
 * `mode_t' is promoted to `int' when passwd through `...'.
@@ -17,10 +17,14 @@ $NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
  #include <fcntl.h>
  #include <string.h>
  #include <unistd.h>
-@@ -69,6 +73,10 @@
+@@ -69,6 +73,14 @@
  #include "libv4l2.h"
  #include "libv4l2-priv.h"
  
++#ifdef __sun
++#define __off_t off_t
++#endif
++
 +#ifndef MAP_ANONYMOUS
 +#define MAP_ANONYMOUS MAP_ANON
 +#endif
@@ -28,7 +32,7 @@ $NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
  /* Note these flags are stored together with the flags passed to v4l2_fd_open()
     in v4l2_dev_info's flags member, so care should be taken that the do not
     use the same bits! */
-@@ -154,7 +162,7 @@ static int v4l2_map_buffers(int index)
+@@ -154,7 +166,7 @@ static int v4l2_map_buffers(int index)
        break;
      }
  
@@ -37,7 +41,7 @@ $NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
        (size_t)buf.length, PROT_READ|PROT_WRITE, MAP_SHARED, devices[index].fd,
        (__off_t)(buf.m.offset >> MMAP2_PAGE_SHIFT));
      if (devices[index].frame_pointers[i] == MAP_FAILED) {
-@@ -408,7 +416,7 @@ int v4l2_open (const char *file, int ofl
+@@ -408,7 +420,7 @@ int v4l2_open (const char *file, int ofl
      mode_t mode;
  
      va_start (ap, oflag);
@@ -46,7 +50,19 @@ $NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
  
      fd = syscall(SYS_open, file, oflag, mode);
  
-@@ -871,7 +879,7 @@ int v4l2_ioctl (int fd, unsigned long in
+@@ -584,7 +596,11 @@ int v4l2_dup(int fd)
+   int index;
+ 
+   if ((index = v4l2_get_index(fd)) == -1)
++#ifdef __sun
++    return syscall(SYS_fcntl, fd, F_DUPFD, 0);
++#else
+     return syscall(SYS_dup, fd);
++#endif
+ 
+   devices[index].open_count++;
+ 
+@@ -871,7 +887,7 @@ int v4l2_ioctl (int fd, unsigned long in
  	   but we need the buffer _now_ to write our converted data
  	   to it! */
  	if (devices[index].convert_mmap_buf == MAP_FAILED) {
@@ -55,7 +71,7 @@ $NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
  						   (size_t)(
  						     devices[index].no_frames *
  						     V4L2_FRAME_BUF_SIZE),
-@@ -995,7 +1003,7 @@ void *v4l2_mmap(void *start, size_t leng
+@@ -995,7 +1011,7 @@ void *v4l2_mmap(void *start, size_t leng
        return MAP_FAILED;
      }
  
@@ -64,7 +80,7 @@ $NetBSD: patch-ad,v 1.4 2010/12/27 04:58:10 obache Exp $
  			   (__off_t)(offset >> MMAP2_PAGE_SHIFT));
    }
  
-@@ -1012,7 +1020,7 @@ void *v4l2_mmap(void *start, size_t leng
+@@ -1012,7 +1028,7 @@ void *v4l2_mmap(void *start, size_t leng
    }
  
    if (devices[index].convert_mmap_buf == MAP_FAILED) {
