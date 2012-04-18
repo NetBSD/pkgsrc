@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1218 2012/04/17 21:57:07 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1219 2012/04/18 11:28:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2021,3 +2021,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/nginx to 1.0.15 [shattered 2012-04-17]
 	Updated net/vnstat to 1.11 [gls 2012-04-17]
 	Updated graphics/potrace to 1.10nb1 [wiz 2012-04-17]
+	Updated www/apache24 to 2.4.2 [ryoon 2012-04-18]
