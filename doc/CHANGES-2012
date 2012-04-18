@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1221 2012/04/18 19:33:05 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.1222 2012/04/18 19:38:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2025,3 +2025,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/nsd to 3.2.10 [pettai 2012-04-18]
 	Updated print/tex-mdwtools to 1.05.4 [minskim 2012-04-18]
 	Updated print/tex-mdwtools-doc to 1.05.4 [minskim 2012-04-18]
+	Updated print/teTeX3-texmf to 3.0nb35 [minskim 2012-04-18]
