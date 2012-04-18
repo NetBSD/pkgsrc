@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2007/05/13 20:59:48 agc Exp $
+$NetBSD: distinfo,v 1.24 2012/04/18 17:55:55 dholland Exp $
 
 SHA1 (arla-0.43.tar.gz) = b11130912a14ec469a3fde46b1993f4ad6386f31
 RMD160 (arla-0.43.tar.gz) = 68b953a2591b115b2a5842a6c7fc6fae2ee2f088
@@ -18,3 +18,4 @@ SHA1 (patch-bq) = c7bac5059b39ee4edfdf5215c0d4e5f1bf987c56
 SHA1 (patch-br) = 41a23e87005b8ba648d707f8ac6cccc4167e3e3e
 SHA1 (patch-bs) = 01101bdeff4b64dc1ad688f84d22167b323d06f7
 SHA1 (patch-libslmakefilein) = a31f5f110e59e132a4637268682b6abe61609bdd
+SHA1 (patch-ydr_Makefile_in) = 98e17d3efd4fce4694447c498a86835f9876b2d6
