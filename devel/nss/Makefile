@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2012/03/15 08:32:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2012/04/18 21:01:42 ryoon Exp $
 
-.include "../../devel/xulrunner/dist.mk"
-PKGNAME=		nss-${NSS_RELEASE}
-NSS_RELEASE=		3.13.3
+DISTNAME=		nss-${NSS_RELEASE}
+NSS_RELEASE=		3.13.4
 CATEGORIES=		security
+MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_3_13_4_RTM/src/}
 
 MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
@@ -14,6 +14,8 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
+
+WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla
 
 USE_TOOLS+=		gmake perl pax pkg-config
 
@@ -47,15 +49,6 @@ MAKE_ENV+=	BUILD_OPT=1
 MAKE_ENV+=	INCLUDES=-I${BUILDLINK_PREFIX.nspr}/include/nspr
 MAKE_ENV+=	NSS_USE_SYSTEM_SQLITE=1
 MAKE_ENV+=	EXTRA_SHARED_LIBS="-Wl,-R${BUILDLINK_PREFIX.nspr}/lib/nspr -Wl,-R,${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4"
-
-pre-configure:
-# sanity check: make sure the nss release is what we think it is.
-#	@set -e; if [ '"${NSS_RELEASE}"' !=			\
-#	  "`${AWK} '/NSS_VERSION/ {print $$3}' <		\
-#	  ${WRKSRC}/security/nss/lib/nss/nss.h`" ]; then	\
-#	  ${ECHO} "package is out of date";			\
-#	  exit 1;						\
-#	fi
 
 do-build:
 	cd ${WRKSRC}/security/nss && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
