@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2012/02/06 12:41:16 wiz Exp $
+# $NetBSD: Makefile,v 1.81.2.1 2012/04/18 14:06:58 tron Exp $
 
 DISTNAME=	netatalk-2.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,7 +42,6 @@ CONFIGURE_ARGS+=	--enable-netbsd
 CONFIGURE_ARGS+=	--enable-overwrite
 CONFIGURE_ARGS+=	--enable-timelord
 CONFIGURE_ARGS+=	--enable-ddp
-CONFIGURE_ARGS+=	--enable-quota
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
@@ -51,6 +50,14 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/netatalk
 CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
+
+# XXX Waiting for NetBSD quota patches
+.if empty(MACHINE_PLATFORM:MNetBSD-5.99.6[2-5]*) && \
+    empty(MACHINE_PLATFORM:MNetBSD-[6-9]*)
+CONFIGURE_ARGS+=	--enable-quota
+.else
+CONFIGURE_ARGS+=	--disable-quota
+.endif
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
