@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/13 18:50:49 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2012/04/18 11:27:01 ryoon Exp $
 
-SHA1 (httpd-2.4.1.tar.bz2) = 23beffce77529971e09d0fb1e760cadf80afa4e6
-RMD160 (httpd-2.4.1.tar.bz2) = 6d21d828028ce1cff8648fb29c8eb1b75fd96451
-Size (httpd-2.4.1.tar.bz2) = 4101303 bytes
+SHA1 (httpd-2.4.2.tar.bz2) = 8d391db515edfb6623c0c7c6ce5c1b2e1f7c64c2
+RMD160 (httpd-2.4.2.tar.bz2) = 1b97ab44075bea0f398f507dacb5f719a87b720b
+Size (httpd-2.4.2.tar.bz2) = 4132105 bytes
 SHA1 (patch-aa) = 2d92b1340aaae40289421f164346348c6d7fe839
 SHA1 (patch-ab) = a3edcc20b7654e0446c7d442cda1510b23e5d324
 SHA1 (patch-ac) = 9f86d845df30316d22bce677a4b176f51007ba0d
