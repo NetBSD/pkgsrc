@@ -1,0 +1,34 @@
+$NetBSD: patch-configure.in,v 1.1 2012/04/18 00:09:44 joerg Exp $
+
+- Fix shell redirection to work with any Bourne shell
+- Check for _pos in fpos_t as used by NetBSD
+- nasm -r has been removed, use modern -v.
+
+--- configure.in.orig	2012-04-17 21:03:44.000000000 +0000
++++ configure.in
+@@ -7,7 +7,7 @@ if test x$did_bootstrap = xno; then
+    AC_MSG_ERROR([Please run bootstrap first])
+    exit -1
+ fi
+-rm -f config.h >&/dev/null
++rm -f config.h 2> /dev/null
+ touch config.h
+ dnl Detect the canonical host and target build environment
+ AC_CANONICAL_HOST
+@@ -278,6 +278,7 @@ AC_CHECK_TYPES([struct ip_mreq_source],
+ 	[#include <netinet/in.h>])
+ 
+ AC_CHECK_MEMBERS(fpos_t.__pos,,, [#include <stdio.h>])
++AC_CHECK_MEMBERS(fpos_t._pos,,, [#include <stdio.h>])
+ 
+ dnl borrowed from ac-archive.sourceforge.net
+ dnl @author  Guido Draheim <guidod@gmx.de>
+@@ -682,7 +683,7 @@ if test x$enable_mmx = xyes; then
+ 
+    if test x$USENASM = xtrue; then
+ 	AC_MSG_CHECKING(nasm version...)
+-	BILLSNASM_arg=`nasm -r | tr '.' ' '`
++	BILLSNASM_arg=`nasm -v | tr '.' ' '`
+         BILLSNASM_ret=`util/testnasm.sh $BILLSNASM_arg`
+ 	if test x$BILLSNASM_ret = x"yes"; then
+ 	   USENASM=true
