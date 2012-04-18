@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/12/27 04:58:10 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/18 17:47:22 hans Exp $
 
 DISTNAME=	libv4l-0.4.3
 PKGREVISION=	2
@@ -34,5 +34,7 @@ pre-configure:
 .endif
 
 PLIST_VARS=	needs_videoio
+
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
 
 .include "../../mk/bsd.pkg.mk"
