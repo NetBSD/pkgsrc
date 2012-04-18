@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/04/16 04:27:18 sbd Exp $
+# $NetBSD: options.mk,v 1.2 2012/04/18 07:10:40 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -16,6 +16,7 @@ PKG_SUGGESTED_OPTIONS+= gcc-java
 ###
 ### Determine if multilib is avalible.
 ###
+MULTILIB_SUPPORTED?=	Yes
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) && \
      exists(/usr/include/gnu/stubs-64.h) && \
     !exists(/usr/include/gnu/stubs-32.h)
