@@ -1,0 +1,7 @@
+This collection of tools includes: support for short commands
+starting with @, macros to sanitise the OT1 encoding of the
+cmtt fonts; a 'do after' command; improved footnote
+support; mathenv for various alignment in maths; list
+handling; mdwmath which adds some minor changes to LaTeX
+maths; a rewrite of LaTeX's tabular and array environments;
+verbatim handling; and syntax diagrams.
