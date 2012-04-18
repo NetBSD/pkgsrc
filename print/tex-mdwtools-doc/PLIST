@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/18 19:32:02 minskim Exp $
+share/texmf-dist/doc/latex/mdwtools/COPYING
+share/texmf-dist/doc/latex/mdwtools/README
+share/texmf-dist/doc/latex/mdwtools/at.pdf
+share/texmf-dist/doc/latex/mdwtools/cmtt.pdf
+share/texmf-dist/doc/latex/mdwtools/doafter.pdf
+share/texmf-dist/doc/latex/mdwtools/doafter.tex
+share/texmf-dist/doc/latex/mdwtools/footnote.pdf
+share/texmf-dist/doc/latex/mdwtools/gpl.tex
+share/texmf-dist/doc/latex/mdwtools/mathenv.tex
+share/texmf-dist/doc/latex/mdwtools/mdwlist.pdf
+share/texmf-dist/doc/latex/mdwtools/mdwmath.pdf
+share/texmf-dist/doc/latex/mdwtools/mdwtab.pdf
+share/texmf-dist/doc/latex/mdwtools/mdwtools.tex
+share/texmf-dist/doc/latex/mdwtools/sverb.pdf
+share/texmf-dist/doc/latex/mdwtools/syntax.pdf
