@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.530 2012/04/15 03:05:02 minskim Exp $
+# $NetBSD: Makefile,v 1.531 2012/04/18 19:33:05 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -455,6 +455,8 @@ SUBDIR+=	tex-magaz
 SUBDIR+=	tex-magaz-doc
 SUBDIR+=	tex-marginnote
 SUBDIR+=	tex-marginnote-doc
+SUBDIR+=	tex-mdwtools
+SUBDIR+=	tex-mdwtools-doc
 SUBDIR+=	tex-memoir
 SUBDIR+=	tex-memoir-doc
 SUBDIR+=	tex-metalogo
