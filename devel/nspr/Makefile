@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.48 2012/03/15 08:34:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2012/04/18 20:51:12 ryoon Exp $
 #
 
-.include "../../devel/xulrunner/dist.mk"
-#PKGNAME=	nspr-${NSPR_RELEASE}.3${MOZ_BRANCH_MINOR}
-PKGNAME=	nspr-4.9.3
+DISTNAME=	nspr-4.9
+PKGNAME=	nspr-4.9.3 # some resaon
+PKGREVISION=	1
 NSPR_RELEASE=	4.9.0
 CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v4.9/src/}
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/projects/nspr/index.html
@@ -16,6 +17,8 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}js/src/configure
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
+
+WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBSUBDIR=nspr
@@ -71,13 +74,6 @@ BUILDLINK_PASSTHRU_DIRS+=	Developer/Headers/FlatCarbon
 .endif
 
 pre-configure:
-# sanity check: make sure the nspr release is what we think it is.
-#	@set -e; if [ '"${NSPR_RELEASE}"' !=			\
-#	  "`${AWK} '/PR_VERSION/ {print $$3}' <			\
-#	    ${WRKSRC}/nsprpub/pr/include/prinit.h`" ]; then	\
-#	  ${ECHO} "package is out of date";			\
-#	  exit 1;						\
-#	fi
 	cd ${WRKSRC}/nsprpub && autoconf
 
 post-build:
