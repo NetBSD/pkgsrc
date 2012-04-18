@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.18 2012/04/18 20:57:33 ryoon Exp $
+
+SHA1 (nspr-4.9.tar.gz) = 57a6bb09ccb90d14303c3d9a6ec2592d8a5c0752
+RMD160 (nspr-4.9.tar.gz) = 35298a4752aa657196b9d2f41ad46f1bef7e22a2
+Size (nspr-4.9.tar.gz) = 1218528 bytes
+SHA1 (patch-ab) = 5d4b7512f8bbdc9e2e05709cec5b36dc12c25997
+SHA1 (patch-ac) = 6aa120769b63efa5869029655f50af901edb9129
+SHA1 (patch-ae) = 470d64f32fe1e619a101486a4bec45d2a06b6cab
+SHA1 (patch-ag) = a924296e6a569eba4229d661fbe5290eeeb999e0
+SHA1 (patch-az) = 5a09ccfa14fab962c4e2916f00669a1fa4a8ade4
+SHA1 (patch-ba) = 9d4058f2a3a290429b26cb8335dd5b188bccc96d
+SHA1 (patch-nsprpub_pr_include_md__dragonfly.cfg) = 9888fa5070d2201a8912be33a32ae32f1d26f8ce
+SHA1 (patch-nsprpub_pr_include_md__pth.h) = 4bfa7e66ac4017169aca87b2643218d1b1bcddcf
+SHA1 (patch-nsprpub_pr_include_md_prosdep.h) = ffbe93d98a2d0c6e9587bdf2b9ccfc81a342c34e
+SHA1 (patch-nsprpub_pr_src_md_unix_uxrng.c) = df081b19c517b034b0aa37c66fcd5ab8e5bcf67c
+SHA1 (patch-nsprpub_pr_src_pthreads_ptio.c) = f4f6e9b5e24de217665ad3a41ad4f1a24deeb519
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 9099113a3f783ef410d8fcce5cfc730b98a93bc7
