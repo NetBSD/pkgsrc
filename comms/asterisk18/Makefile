@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2012/04/07 20:10:45 jnemeth Exp $
+# $NetBSD: Makefile,v 1.30 2012/04/18 01:33:24 manu Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
 DISTNAME=	asterisk-1.8.11.0
+PKGREVISION=	1
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
@@ -35,6 +36,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
 # XXX remove when lang/lua gets builtin.mk
 CONFIGURE_ARGS+=	--without-lua
+CONFIGURE_ARGS+=	--with-oss=yes
 
 INSTALL_TARGET=		install samples
 INSTALLATION_DIRS+=	lib/pkgconfig share/doc/${PKGBASE}
@@ -216,6 +218,7 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
