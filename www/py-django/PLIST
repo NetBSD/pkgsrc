@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2012/04/17 17:57:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2012/04/18 19:23:54 adam Exp $
 bin/django-admin.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/django/__init__.py
@@ -4891,9 +4891,24 @@ ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyo
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.py
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyc
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyo
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.py
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyc
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyo
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.py
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyc
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyo
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.py
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyc
 ${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyo
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/operations.py
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/operations.pyc
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/operations.pyo
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/version.py
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/version.pyc
+${PLIST.pgsql}${PYSITELIB}/django/db/backends/postgresql_psycopg2/version.pyo
+${PYSITELIB}/django/db/backends/signals.py
+${PYSITELIB}/django/db/backends/signals.pyc
+${PYSITELIB}/django/db/backends/signals.pyo
 ${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.py
 ${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyc
 ${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyo
@@ -4909,9 +4924,6 @@ ${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.pyo
 ${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.py
 ${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyc
 ${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyo
-${PYSITELIB}/django/db/backends/signals.py
-${PYSITELIB}/django/db/backends/signals.pyc
-${PYSITELIB}/django/db/backends/signals.pyo
 ${PYSITELIB}/django/db/backends/util.py
 ${PYSITELIB}/django/db/backends/util.pyc
 ${PYSITELIB}/django/db/backends/util.pyo
