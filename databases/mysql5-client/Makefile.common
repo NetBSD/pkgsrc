@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.41 2011/02/26 02:58:55 taca Exp $
+# $NetBSD: Makefile.common,v 1.41.10.1 2012/04/18 13:50:48 tron Exp $
 #
 # used by databases/mysql5-client/Makefile
 # used by databases/mysql5-server/Makefile
 #
 
-DISTNAME=		mysql-5.0.92
+DISTNAME=		mysql-5.0.96
 CATEGORIES=		databases
 MASTER_SITES=		http://downloads.mysql.com/archives/mysql-5.0/ \
 			${MASTER_SITE_MYSQL:=MySQL-5.0/}

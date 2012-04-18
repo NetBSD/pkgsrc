@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/02/26 02:58:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.17.10.1 2012/04/18 13:50:48 tron Exp $
 bin/comp_err
 bin/innochecksum
 bin/my_print_defaults
@@ -611,6 +611,7 @@ share/mysql-test/r/rpl_change_master.result
 share/mysql-test/r/rpl_charset.result
 share/mysql-test/r/rpl_charset_sjis.result
 share/mysql-test/r/rpl_commit_after_flush.result
+share/mysql-test/r/rpl_conditional_comments.result
 share/mysql-test/r/rpl_create_database.result
 share/mysql-test/r/rpl_critical_errors.result
 share/mysql-test/r/rpl_ddl.result
@@ -702,6 +703,7 @@ share/mysql-test/r/rpl_user_variables.result
 share/mysql-test/r/rpl_variables.result
 share/mysql-test/r/rpl_view.result
 share/mysql-test/r/schema.result
+share/mysql-test/r/secure_file_priv_win.result
 share/mysql-test/r/select.result
 share/mysql-test/r/select_found.result
 share/mysql-test/r/select_safe.result
@@ -1894,6 +1896,7 @@ share/mysql-test/t/rpl_change_master.test
 share/mysql-test/t/rpl_charset.test
 share/mysql-test/t/rpl_charset_sjis.test
 share/mysql-test/t/rpl_commit_after_flush.test
+share/mysql-test/t/rpl_conditional_comments.test
 share/mysql-test/t/rpl_create_database-master.opt
 share/mysql-test/t/rpl_create_database-slave.opt
 share/mysql-test/t/rpl_create_database.test
@@ -2042,6 +2045,8 @@ share/mysql-test/t/rpl_variables-master.opt
 share/mysql-test/t/rpl_variables.test
 share/mysql-test/t/rpl_view.test
 share/mysql-test/t/schema.test
+share/mysql-test/t/secure_file_priv_win-master.opt
+share/mysql-test/t/secure_file_priv_win.test
 share/mysql-test/t/select.test
 share/mysql-test/t/select_found.test
 share/mysql-test/t/select_safe.test
@@ -2214,3 +2219,4 @@ share/mysql/slovak/errmsg.sys
 share/mysql/spanish/errmsg.sys
 share/mysql/swedish/errmsg.sys
 share/mysql/ukrainian/errmsg.sys
+@pkgdir share/mysql-test/collections
