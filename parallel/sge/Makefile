@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.45 2012/04/15 19:35:15 dholland Exp $
+# $NetBSD: Makefile,v 1.46 2012/04/18 21:05:30 markd Exp $
 #
 
 DISTNAME=		sge-8.0.0d
 PKGNAME=		sge-8.0.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.0.0d/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://arc.liv.ac.uk/trac/SGE
 COMMENT=		Son of Grid Engine distributed resource management system
+LICENSE=		sun-iss AND 2-clause-bsd AND gnu-gpl-v2 AND gnu-lgpl-v2
 
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
@@ -158,9 +159,9 @@ do-install:
 	cd ${WRKSRC}/source && \
 		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} DESTDIR=${DESTDIR} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -all -nobdb -noopenssl -mansrc sge ${SGE_ARCH} -- doc man
 	for f in archive checkpoint deadlock dump load printlog recover stat upgrade verify ; do \
-		ln -s ${DESTDIR}${LOCALBASE}/bin/db4_$${f} ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
-	ln -s ${DESTDIR}${LOCALBASE}/bin/berkeley_db4_svc ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc
-	ln -s ${DESTDIR}${SSL_PREFIX}/bin/openssl ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/openssl
+		ln -s ${LOCALBASE}/bin/db4_$${f} ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
+	ln -s ${LOCALBASE}/bin/berkeley_db4_svc ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc
+	ln -s ${SSL_PREFIX}/bin/openssl ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/openssl
 	cd ${DESTDIR}${SGE_ROOT} && ${SETENV} SGE_ROOT=${SGE_ROOT} DESTDIR=${DESTDIR} ./util/setfileperm.sh -auto \
 		${SGE_ROOT}
 	for f in ${DESTDIR}${SGE_ROOT}/bin/${SGE_ARCH}/q* ; do \
