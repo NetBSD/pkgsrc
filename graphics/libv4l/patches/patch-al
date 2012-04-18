@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2009/01/10 21:04:23 jmcneill Exp $
+$NetBSD: patch-al,v 1.2 2012/04/18 17:47:22 hans Exp $
 
 --- libv4l1/log.c.orig	2008-08-06 04:46:13.000000000 -0400
 +++ libv4l1/log.c	2009-01-10 15:56:48.000000000 -0500
@@ -10,16 +10,23 @@ $NetBSD: patch-al,v 1.1 2009/01/10 21:04:23 jmcneill Exp $
  #include <linux/ioctl.h>
  /* These headers are not needed by us, but by linux/videodev2.h,
     which is broken on some systems and doesn't include them itself :( */
-@@ -25,8 +26,19 @@
+@@ -25,8 +26,26 @@
  #include <asm/types.h>
  /* end broken header workaround includes */
  #include <linux/videodev.h>
 +#else
++#ifdef __sun
++#include <sys/ioccom.h>
++#endif
 +#include <sys/ioctl.h>
 +#include "videodev.h"
 +#endif
  #include "libv4l1-priv.h"
  
++#if defined(__sun)
++#define IOCGROUP(x)	(((x) >> 8) & 0xff)
++#endif
++
 +#ifndef _IOC_NR
 +#define _IOC_NR(x)	((x) & 0xff)
 +#endif
