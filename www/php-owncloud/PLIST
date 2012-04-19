@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/17 16:40:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/19 15:39:24 ryoon Exp $
 share/owncloud/3rdparty/Console/Getopt.php
 share/owncloud/3rdparty/Crypt_Blowfish/Blowfish.php
 share/owncloud/3rdparty/Crypt_Blowfish/Blowfish/DefaultKey.php
@@ -408,7 +408,6 @@ share/owncloud/apps/calendar/lib/search.php
 share/owncloud/apps/calendar/resettimezone.php
 share/owncloud/apps/calendar/settings.php
 share/owncloud/apps/calendar/templates/calendar.php
-share/owncloud/apps/calendar/templates/lAfix.php
 share/owncloud/apps/calendar/templates/part.choosecalendar.php
 share/owncloud/apps/calendar/templates/part.choosecalendar.rowfields.php
 share/owncloud/apps/calendar/templates/part.editcalendar.php
@@ -501,6 +500,7 @@ share/owncloud/apps/contacts/templates/part.details.php
 share/owncloud/apps/contacts/templates/part.editaddressbook.php
 share/owncloud/apps/contacts/templates/part.messagebox.php
 share/owncloud/apps/contacts/templates/part.property.FN.php
+share/owncloud/apps/contacts/templates/part.property.N.php
 share/owncloud/apps/contacts/templates/part.property.php
 share/owncloud/apps/contacts/templates/part.setpropertyform.php
 share/owncloud/apps/contacts/templates/settings.php
@@ -865,6 +865,25 @@ share/owncloud/apps/remoteStorage/appinfo/info.xml
 share/owncloud/apps/remoteStorage/auth.php
 share/owncloud/apps/remoteStorage/lib_remoteStorage.php
 share/owncloud/apps/remoteStorage/oauth_ro_auth.php
+share/owncloud/apps/tasks/ajax/addtask.php
+share/owncloud/apps/tasks/ajax/addtaskform.php
+share/owncloud/apps/tasks/ajax/delete.php
+share/owncloud/apps/tasks/ajax/edittask.php
+share/owncloud/apps/tasks/ajax/edittaskform.php
+share/owncloud/apps/tasks/ajax/getdetails.php
+share/owncloud/apps/tasks/appinfo/app.php
+share/owncloud/apps/tasks/appinfo/info.xml
+share/owncloud/apps/tasks/css/style.css
+share/owncloud/apps/tasks/index.php
+share/owncloud/apps/tasks/js/tasks.js
+share/owncloud/apps/tasks/lib/vtodo.php
+share/owncloud/apps/tasks/templates/part.addtaskform.php
+share/owncloud/apps/tasks/templates/part.details.php
+share/owncloud/apps/tasks/templates/part.edittaskform.php
+share/owncloud/apps/tasks/templates/part.property.php
+share/owncloud/apps/tasks/templates/part.taskform.php
+share/owncloud/apps/tasks/templates/part.tasks.php
+share/owncloud/apps/tasks/templates/tasks.php
 share/owncloud/apps/user_ldap/appinfo/app.php
 share/owncloud/apps/user_ldap/appinfo/info.xml
 share/owncloud/apps/user_ldap/settings.php
@@ -1581,4 +1600,3 @@ share/owncloud/settings/templates/settings.php
 share/owncloud/settings/templates/users.php
 share/owncloud/settings/users.php
 share/owncloud/status.php
-@pkgdir share/owncloud/data
