@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/12/26 19:05:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/19 15:12:00 ryoon Exp $
 #
 
-DISTNAME=	tiki-6.5
+DISTNAME=	tiki-6.7
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/tiki-/tiki6-/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tikiwiki/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,8 +34,7 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		TIKIDIR=${TIKIDIR}
 
 do-install:
-	${RM} ${WRKSRC}/*orig
-	${RM} ${WRKSRC}/lib/wiki-plugins/*orig
+	${RM} -f ${WRKSRC}/*orig
 	cd ${WRKSRC} && sh setup.sh -u ${APACHE_USER} -g ${APACHE_GROUP} -n
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${TIKIDIR}
