@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1228 2012/04/19 15:13:22 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1229 2012/04/19 15:41:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/cyrus-imapd24 to 2.4.16 [obache 2012-04-19]
 	Updated sysutils/etcmanage to 0.8.2 [gdt 2012-04-19]
 	Updated www/php-tiki6 to 6.7 [ryoon 2012-04-19]
+	Updated www/php-owncloud to 3.0.2 [ryoon 2012-04-19]
