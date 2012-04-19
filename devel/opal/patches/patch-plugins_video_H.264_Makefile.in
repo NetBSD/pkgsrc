@@ -1,0 +1,17 @@
+$NetBSD: patch-plugins_video_H.264_Makefile.in,v 1.1 2012/04/19 12:44:07 hans Exp $
+
+--- plugins/video/H.264/Makefile.in.orig	2009-09-22 02:57:51.000000000 +0200
++++ plugins/video/H.264/Makefile.in	2012-04-18 21:03:01.250268246 +0200
+@@ -129,12 +129,7 @@ OBJECTS = $(addprefix $(OBJDIR)/,$(patsu
+ 
+ $(PLUGIN): $(OBJECTS)
+ 	@set -e; $(foreach dir,$(SUBDIRS),if test -d ${dir} ; then $(MAKE) -C $(dir); fi ; )
+-ifeq (,$(findstring solaris,$(target_os)))
+ 	$(Q_LD)$(CXX) $(LDSO) $(LDFLAGS) $(DL_LIBS) -o $@ $^
+-else
+-	$(Q_LD)$(CXX) $(LDSO) $(LDFLAGS) $(DL_LIBS) $@ -o $@ $^
+-endif
+-
+ 
+ install:
+ 	@set -e; $(foreach dir,$(SUBDIRS),if test -d ${dir} ; then $(MAKE) -C $(dir) install; fi ; )
