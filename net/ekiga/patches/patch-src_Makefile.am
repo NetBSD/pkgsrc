@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2012/04/19 13:07:45 hans Exp $
+
+--- src/Makefile.am.orig	2009-09-22 16:27:35.000000000 +0200
++++ src/Makefile.am	2012-04-19 14:17:59.954738664 +0200
+@@ -147,7 +147,7 @@ src/revision.h:
+             echo "#define EKIGA_REVISION $(GIT_REVISION)" > revision.h; \
+           fi \
+         else \
+-          if !(test -e "./revision.h"); then\
++          if (test ! -e "./revision.h"); then\
+             echo "#define EKIGA_REVISION \"unknown\"" > revision.h; \
+           fi \
+         fi
