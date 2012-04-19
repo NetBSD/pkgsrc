@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1227 2012/04/19 12:03:18 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.1228 2012/04/19 15:13:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2032,3 +2032,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated wm/notion to 3.2011102900nb1 [wiz 2012-04-18]
 	Updated mail/cyrus-imapd24 to 2.4.16 [obache 2012-04-19]
 	Updated sysutils/etcmanage to 0.8.2 [gdt 2012-04-19]
+	Updated www/php-tiki6 to 6.7 [ryoon 2012-04-19]
