@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/19 16:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/19 16:19:52 wiz Exp $
 #
 
 DISTNAME=	notion-3-2011102900-src
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	ion3-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-USE_TOOLS+=	gmake msgfmt pkg-config
+USE_TOOLS+=	gmake msgfmt pax pkg-config
 MAKE_FLAGS+=	X11_PREFIX=${BUILDLINK_PREFIX.libX11}
 
 EGDIR=		${PREFIX}/share/examples/notion
