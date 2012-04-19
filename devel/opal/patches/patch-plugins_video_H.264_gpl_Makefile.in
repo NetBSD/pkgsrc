@@ -1,0 +1,16 @@
+$NetBSD: patch-plugins_video_H.264_gpl_Makefile.in,v 1.1 2012/04/19 12:44:07 hans Exp $
+
+--- plugins/video/H.264/gpl/Makefile.in.orig	2009-09-22 02:57:50.000000000 +0200
++++ plugins/video/H.264/gpl/Makefile.in	2012-04-18 20:56:15.209450489 +0200
+@@ -142,11 +142,7 @@ $(OBJDIR)/%.o : %.c
+ OBJECTS = $(addprefix $(OBJDIR)/,$(patsubst %.c,%.o,$(patsubst %.cxx,%.o,$(notdir $(SRCS)))))
+ 
+ $(PLUGIN): $(OBJECTS)
+-ifeq (,$(findstring solaris,$(target_os)))
+ 	$(Q_LD)$(CXX) -o $@ $^ $(LDFLAGS) $(X264_LIBS)
+-else
+-	$(Q_LD)$(CXX) $@ -o $@ $^ $(LDFLAGS) $(X264_LIBS)
+-endif
+ 
+ install:
+ 	mkdir -p $(DESTDIR)$(libdir)/$(VC_PLUGIN_DIR)
