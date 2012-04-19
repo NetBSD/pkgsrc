@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/04/18 23:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/19 16:19:16 wiz Exp $
 #
 
 DISTNAME=	notion-3-2011102900-src
 PKGNAME=	${DISTNAME:S/3-/3./:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=notion/}
 EXTRACT_SUFX=	.tar.bz2
@@ -54,6 +54,9 @@ PKG_SYSCONFSUBDIR=	notion
 .for f in ${EGFILES}
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+post-install:
+	cd ${WRKSRC} && pax -rw contrib ${DESTDIR}${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
