@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/03/10 10:56:17 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/19 21:04:30 joerg Exp $
 #
 
 DISTNAME=	PackageKit-0.4.0
@@ -57,6 +57,11 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} && autoconf -f
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+BUILDLINK_TRANSFORM+=	rm:-Werror
+.endif
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
