@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/12/26 19:07:12 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2012/04/19 15:12:00 ryoon Exp $
 
-SHA1 (tiki-6.5.tar.bz2) = 645fd9c64e9ab998247749fcde90776359e07a69
-RMD160 (tiki-6.5.tar.bz2) = b2e985c2884e40502b59532c950c075de90a613c
-Size (tiki-6.5.tar.bz2) = 18366043 bytes
-SHA1 (patch-lib_wiki-plugins_wikiplugin__snarf.php) = cd34e0a5a031a91b304c16ac2fd2e5ec12dcc541
+SHA1 (tiki-6.7.tar.bz2) = be464dda11e934cd8701fb949f9e15ba5a96d1bb
+RMD160 (tiki-6.7.tar.bz2) = e7889de5930a7431bcfbdbf211c3e8220dae9787
+Size (tiki-6.7.tar.bz2) = 19038029 bytes
 SHA1 (patch-setup.sh) = b0e7c905700b97bdcb8b040679d477b4865fefc7
