@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2012/03/12 13:40:12 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/04/19 11:18:17 obache Exp $
 
-DISTNAME=	cyrus-imapd-2.4.14
+DISTNAME=	cyrus-imapd-2.4.16
 CATEGORIES=	mail
 MASTER_SITES=	http://cyrusimap.org/releases/ \
 		ftp://ftp.cyrusimap.org/cyrus-imapd/ \
@@ -13,7 +13,7 @@ COMMENT=	Cyrus IMAP server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		perl makedepend
+USE_TOOLS+=		perl:run makedepend
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
@@ -60,6 +60,8 @@ CONF_FILES=		${EGDIR}/imapd.conf ${PKG_SYSCONFDIR}/imapd.conf
 CONF_FILES+=		${EGDIR}/normal.conf ${PKG_SYSCONFDIR}/cyrus.conf
 RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
+
+REPLACE_PERL+=		tools/rehash
 
 PERL5_PACKLIST= \
 	auto/Cyrus/IMAP/.packlist			\
