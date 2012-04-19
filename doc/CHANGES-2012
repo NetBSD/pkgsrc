@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1226 2012/04/19 11:18:39 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1227 2012/04/19 12:03:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2031,3 +2031,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/nss to 3.13.4 [ryoon 2012-04-18]
 	Updated wm/notion to 3.2011102900nb1 [wiz 2012-04-18]
 	Updated mail/cyrus-imapd24 to 2.4.16 [obache 2012-04-19]
+	Updated sysutils/etcmanage to 0.8.2 [gdt 2012-04-19]
