@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.179 2012/04/09 15:56:21 tez Exp $
+# $NetBSD: Makefile,v 1.180 2012/04/20 15:22:37 adam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
-PKGREVISION=	2
 
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	Package for display and interactive manipulation of images
@@ -22,7 +21,11 @@ CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-xml=yes
 CONFIGURE_ARGS+=	--without-perl
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
+PKGCONFIG_OVERRIDE+=	Magick++/lib/Magick++.pc.in
 PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
+PKGCONFIG_OVERRIDE+=	magick/MagickCore.pc.in
+PKGCONFIG_OVERRIDE+=	wand/MagickWand.pc.in
+PKGCONFIG_OVERRIDE+=	wand/Wand.pc.in
 
 GCC_REQD+=		2.95.3
 
