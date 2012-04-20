@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2010/11/04 19:40:02 adam Exp $
-${PYSITELIB}/twisted/internet/cfsupport.so
