@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/03/03 00:12:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2012/04/20 12:13:48 obache Exp $
 #
 
-DISTNAME=		scim-1.4.11
-PKGREVISION=		2
+DISTNAME=		scim-1.4.12
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 
@@ -29,8 +28,10 @@ PKGCONFIG_OVERRIDE+=	scim.pc.in
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-gtk-version=2
 # dlopen c++ so module from c gtk2 apps cause some troubles.
 CONFIGURE_ARGS+=	--disable-gtk2-immodule
+CONFIGURE_ARGS+=	--disable-gtk3-immodule
 
 EGDIR=			${PREFIX}/share/examples/scim
 CONF_FILES=		${EGDIR}/config ${PKG_SYSCONFDIR}/config

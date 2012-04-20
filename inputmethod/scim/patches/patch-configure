@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/04/20 12:13:48 obache Exp $
+
+* docs/* are not in release tarball.
+
+--- configure.orig	2012-04-20 11:22:47.000000000 +0000
++++ configure
+@@ -21626,7 +21626,7 @@ SCIM_TEMPDIR="/tmp"
+ ##                      Output files.                    ##
+ ###########################################################
+ 
+-ac_config_files="$ac_config_files Makefile po/Makefile.in src/Makefile src/scim_types.h utils/Makefile data/Makefile data/icons/Makefile data/pixmaps/Makefile modules/Makefile modules/FrontEnd/IMdkit/Makefile modules/FrontEnd/Makefile modules/IMEngine/Makefile modules/Filter/Makefile modules/Config/Makefile modules/SetupUI/Makefile docs/scim.cfg docs/Makefile docs/manual/Makefile configs/Makefile extras/Makefile extras/gtk_immodule/gtk2/Makefile extras/gtk_immodule/gtk3/Makefile extras/setup/Makefile extras/setup/scim-setup extras/panel/Makefile tests/Makefile scim.pc scim-gtkutils.pc scim-x11utils.pc scim.spec"
++ac_config_files="$ac_config_files Makefile po/Makefile.in src/Makefile src/scim_types.h utils/Makefile data/Makefile data/icons/Makefile data/pixmaps/Makefile modules/Makefile modules/FrontEnd/IMdkit/Makefile modules/FrontEnd/Makefile modules/IMEngine/Makefile modules/Filter/Makefile modules/Config/Makefile modules/SetupUI/Makefile configs/Makefile extras/Makefile extras/gtk_immodule/gtk2/Makefile extras/gtk_immodule/gtk3/Makefile extras/setup/Makefile extras/setup/scim-setup extras/panel/Makefile tests/Makefile scim.pc scim-gtkutils.pc scim-x11utils.pc scim.spec"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
