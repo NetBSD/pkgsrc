@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/16 17:46:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/04/20 15:00:12 wiz Exp $
 
-SHA1 (tamsyn-font-1.6.tar.gz) = 52e4b54a413fb8855496283ad0ac30a7efe83df1
-RMD160 (tamsyn-font-1.6.tar.gz) = 1eaccc92e83052c461a7d3cc8c1ff0e9f4b864ba
-Size (tamsyn-font-1.6.tar.gz) = 24983 bytes
+SHA1 (tamsyn-font-1.9.tar.gz) = 1e4ecb65a20c19ff8a6dc472633568ff18b0c57a
+RMD160 (tamsyn-font-1.9.tar.gz) = a35a1ce01dbfa741e6989aced01f04624d13700b
+Size (tamsyn-font-1.9.tar.gz) = 53503 bytes
