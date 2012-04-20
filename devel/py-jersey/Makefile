@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/04/15 22:01:00 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.4 2012/04/20 18:49:25 adam Exp $
 
-DISTNAME=	jersey-0.1.2
+DISTNAME=	jersey-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/j/jersey/
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED= 27 26
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 
 .include "../../lang/python/egg.mk"

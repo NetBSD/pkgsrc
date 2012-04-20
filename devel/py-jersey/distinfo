@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2010/07/19 16:32:49 ver Exp $
+$NetBSD: distinfo,v 1.2 2012/04/20 18:49:25 adam Exp $
 
-SHA1 (jersey-0.1.2.tar.gz) = 0704464110df9d625c3a8fc5644a96045e790927
-RMD160 (jersey-0.1.2.tar.gz) = 80351c7065caa3956369a35d6f1e2eac1c78ab59
-Size (jersey-0.1.2.tar.gz) = 13372 bytes
+SHA1 (jersey-0.1.5.tar.gz) = 39b8d6d31335eb4acc62b0ed81ca5838d553595c
+RMD160 (jersey-0.1.5.tar.gz) = 1166db0b89cc9d81f373883739cbc595bb8d1d73
+Size (jersey-0.1.5.tar.gz) = 14031 bytes
