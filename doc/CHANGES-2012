@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1230 2012/04/19 16:19:25 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1231 2012/04/20 03:48:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2035,3 +2035,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-tiki6 to 6.7 [ryoon 2012-04-19]
 	Updated www/php-owncloud to 3.0.2 [ryoon 2012-04-19]
 	Updated wm/notion to 3.2011102900nb2 [wiz 2012-04-19]
+	Updated www/ikiwiki to 3.20120419 [schmonz 2012-04-20]
