@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.94 2012/03/21 18:12:42 drochner Exp $
+# $NetBSD: Makefile.common,v 1.95 2012/04/20 15:22:37 adam Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 
-IM_MAJOR_VER=		6.7.5
-IM_MINOR_VER=		10
+IM_MAJOR_VER=		6.7.6
+IM_MINOR_VER=		6
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
@@ -26,6 +26,7 @@ MASTER_SITES=	ftp://ftp.imagemagick.org/pub/ImageMagick/ \
 EXTRACT_SUFX=	.tar.bz2
 
 HOMEPAGE=	http://www.imagemagick.org/
+LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/ImageMagick-${DISTSUFFIX}
 
