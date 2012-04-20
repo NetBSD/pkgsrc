@@ -1,17 +1,18 @@
-$NetBSD: distinfo,v 1.2 2011/11/13 07:52:01 obache Exp $
+$NetBSD: distinfo,v 1.3 2012/04/20 12:13:48 obache Exp $
 
-SHA1 (scim-1.4.11.tar.gz) = e202e42df52f5c9a88f6ae4d4ce04f94bc22e27c
-RMD160 (scim-1.4.11.tar.gz) = 24e9632781eccefef287a62021a761c85fa4a47b
-Size (scim-1.4.11.tar.gz) = 2741428 bytes
+SHA1 (scim-1.4.12.tar.gz) = 948180ec0af18e435a95edbdb840cf41f3b24d32
+RMD160 (scim-1.4.12.tar.gz) = e902c14bffd8b957e1927eab26b265af023635c1
+Size (scim-1.4.12.tar.gz) = 1266185 bytes
 SHA1 (patch-ab) = c5220c83ec8125f75b1e5d7b41f4438ec73becbf
-SHA1 (patch-ac) = 633b17ff2618fb45d1a018df6308792c49f42bc3
+SHA1 (patch-ac) = c8c4a54b1b6ffd82211616c3b99de1239b29c652
 SHA1 (patch-ad) = 2812ded533f29bd69bad180c33c81fd49e6213e6
 SHA1 (patch-ae) = 61909935f6226d2126392d0990f81243dc2bb933
 SHA1 (patch-af) = 010d4f31d684b8163672d2521ebff74230591d66
 SHA1 (patch-ag) = 2f97e1d9c9a96096524903c43ba4f7626956450d
 SHA1 (patch-ah) = abb315ac44a36e99d8c456b1cb3af9290a29be12
-SHA1 (patch-bb) = ddd1125d92a754a3a7ae68a07777f6a547cc117a
-SHA1 (patch-bc) = 3b5f15368476658bd51beee20798569b6ecc93b9
-SHA1 (patch-bd) = 9912d596f5e54f59dfc0bd01c22a457f056c84e1
+SHA1 (patch-bb) = 69e001995a8caa65b885e438123a7efb0ad9995b
+SHA1 (patch-bc) = 5caafe0a6ca44ccacb5532e26d9c11950ea6c7da
+SHA1 (patch-bd) = 15982bf8a9aee6f6ccd94f186bff20b70b1a93cf
 SHA1 (patch-be) = 85a98134d77038d20544241410ec8130df2ea94c
+SHA1 (patch-configure) = 9a8e217d9d4419bcb24c632e88a1331b949c3cc5
 SHA1 (patch-src_scim__helper__manager__server.cpp) = 3a1130f37c7c93389e2ae7db65af7438bac5de51
