@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2010/07/19 16:32:49 ver Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/20 18:49:25 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/jersey/__init__.py
 ${PYSITELIB}/jersey/__init__.pyc
 ${PYSITELIB}/jersey/__init__.pyo
@@ -29,7 +34,3 @@ ${PYSITELIB}/jersey/inet.pyo
 ${PYSITELIB}/jersey/log.py
 ${PYSITELIB}/jersey/log.pyc
 ${PYSITELIB}/jersey/log.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
