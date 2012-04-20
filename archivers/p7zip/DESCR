@@ -1,3 +1,4 @@
-p7zip is a port of the Windows program 7za.exe.
+p7zip is an archiver to create and extract 7zip archives (.7z).
 
-7za.exe is a file archiver with the highest compression ratio.
+It uses the lzma compression method (see also the xz library/utils),
+which provides the highest (non content specific) compression ratio.
