@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11024 2012/04/20 15:24:20 adam Exp $
+$NetBSD: TODO,v 1.11025 2012/04/20 18:53:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -1140,11 +1140,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gobject-3.2.0
-	o py-jersey-1.0.3 [pkg/43762]
 	o py-karaoke-0.7.3
 	o py-moin-1.9.4
 	o py-mxDateTime-3.2.0
-	o py-psycopg-2.4.5
 	o py-simplejson-2.2.1
 	o py-sqlalchemy-0.6.8
 	o py-sybase-0.37
