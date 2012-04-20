@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1232 2012/04/20 12:14:02 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1233 2012/04/20 15:00:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2037,3 +2037,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated wm/notion to 3.2011102900nb2 [wiz 2012-04-19]
 	Updated www/ikiwiki to 3.20120419 [schmonz 2012-04-20]
 	Updated inputmethod/scim to 1.4.12 [obache 2012-04-20]
+	Updated fonts/tamsyn-font to 1.9 [wiz 2012-04-20]
