@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.13 2012/03/13 10:00:14 fhajny Exp $
+# $NetBSD: options.mk,v 1.14 2012/04/21 10:32:47 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache pcre \
+PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 mail-proxy memcache naxsi pcre \
 			push realip ssl sub uwsgi image-filter upload debug \
 			status
 PKG_SUGGESTED_OPTIONS=	pcre ssl
 
-PLIST_VARS+=		uwsgi
+PLIST_VARS+=		naxsi uwsgi
 
 .include "../../mk/bsd.options.mk"
 
@@ -49,6 +49,18 @@ CONFIGURE_ARGS+=	--with-mail
 
 .if empty(PKG_OPTIONS:Mmemcache)
 CONFIGURE_ARGS+=	--without-http_memcached_module
+.endif
+
+.if !empty(PKG_OPTIONS:Mnaxsi)
+PLIST.naxsi=		yes
+CONFIGURE_ARGS+=	--add-module=../${NAXSI}/naxsi_src
+.endif
+
+.if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum)
+NAXSI=			naxsi-0.45
+NAXSI_DISTFILE=		${NAXSI}.tgz
+SITES.${NAXSI_DISTFILE}=	http://naxsi.googlecode.com/files/
+DISTFILES+=		${NAXSI_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mrealip)
