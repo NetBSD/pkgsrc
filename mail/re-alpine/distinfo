@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/15 23:27:05 reed Exp $
+$NetBSD: distinfo,v 1.1.1.1.22.1 2012/04/21 16:20:59 tron Exp $
 
-SHA1 (re-alpine-2.01.tar.bz2) = 50a9715176d5da25f38816b73d12f84fd1c09bb1
-RMD160 (re-alpine-2.01.tar.bz2) = 3906b75ece8cca6561ff3fafb1a1ee9033a825d0
-Size (re-alpine-2.01.tar.bz2) = 5970290 bytes
+SHA1 (re-alpine-2.02.tar.bz2) = 9c2f13dbc7ca75e7a09f81df607db84694b10fa6
+RMD160 (re-alpine-2.02.tar.bz2) = ef7fc5b46315ec2d32ef4b4a60abd5ac1be16752
+Size (re-alpine-2.02.tar.bz2) = 5589414 bytes
+SHA1 (patch-pith_smkeys.c) = 6b60a00910850e257f770c80a988230f73cc6d21
