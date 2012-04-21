@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1238 2012/04/21 09:31:45 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1239 2012/04/21 09:52:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2046,3 +2046,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-jersey to 0.1.5 [adam 2012-04-20]
 	Updated emulators/suse121_libtiff to 12.1nb1 [obache 2012-04-21]
 	Updated security/openssl to 0.9.8v [taca 2012-04-21]
+	Updated net/mikutter to 0.1.0.749 [obache 2012-04-21]
