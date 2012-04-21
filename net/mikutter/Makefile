@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2012/03/25 15:20:04 obache Exp $
+# $NetBSD: Makefile,v 1.44 2012/04/21 09:52:19 obache Exp $
 #
 
-DISTNAME=	mikutter.0.1.0.723
+DISTNAME=	mikutter.0.1.0.749
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
@@ -38,7 +37,6 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
 REPLACE_RUBY=	mikutter.rb
-RUBY_ENCODING_ARG=	-Ku
 REPLACE_RUBY_DIRS=	core
 .include "../../lang/ruby/replace.mk"
 
