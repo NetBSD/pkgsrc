@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.21 2010/07/08 04:57:36 dholland Exp $
+# $NetBSD: unprivileged.mk,v 1.22 2012/04/21 19:29:47 cheusov Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -129,11 +129,7 @@ _UNPRIVILEGED+=		user-destdir
 UNPRIVILEGED_USER!=	${ID} -n -u
 .  endif
 .  if !defined(UNPRIVILEGED_GROUP) || empty(UNPRIVILEGED_GROUP)
-.    if "$(OPSYS)" == "Interix" # For at least Interix 3.5 SP-8.0.1969.1
-UNPRIVILEGED_GROUP!=	${ID} -g
-.    else
 UNPRIVILEGED_GROUP!=	${ID} -n -g
-.    endif 
 .  endif
 .  if !defined(UNPRIVILEGED_GROUPS) || empty(UNPRIVILEGED_GROUPS)
 UNPRIVILEGED_GROUPS!=	${ID} -n -G
