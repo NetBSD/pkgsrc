@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.7 2012/04/17 11:55:33 wiz Exp $
+# $NetBSD: files,v 1.8 2012/04/21 10:22:32 wiz Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -159,8 +159,6 @@ ADD)
 			*f*:*:*|[!r]:yes:*|[!r][!r]:yes:*|[!r][!r][!r]:yes:*|*r*:yes:yes)
 				if ${TEST} -f "$file"; then
 					${ECHO} "${PKGNAME}: $file already exists"
-				elif ${TEST} -h "$file"; then
-					${ECHO} "${PKGNAME}: $file is a symlink"
 				elif ${TEST} -f "$f_eg" -o -c "$f_eg"; then
 					${ECHO} "${PKGNAME}: copying $f_eg to $file"
 					${CP} $f_eg $file
