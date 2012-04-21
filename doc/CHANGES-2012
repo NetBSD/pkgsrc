@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1236 2012/04/21 04:42:36 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1237 2012/04/21 07:38:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2045,3 +2045,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/py-twisted-docs to 12.0.0 [adam 2012-04-20]
 	Updated devel/py-jersey 0.1.5 [adam 2012-04-20]
 	Updated emulators/suse121_libtiff to 12.1nb1 [obache 2012-04-21]
+	Updated security/openssl to 0.9.8v [taca 2012-04-21]
