@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/04 21:55:01 marino Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/21 07:37:08 taca Exp $
 #
 
 DISTNAME=	tinderbox-dragonfly-${TBOX_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://tinderbox.marcuscom.com/
 DISTFILES=	tinderbox-${TBOX_VERSION}.tar.gz
 
 MAINTAINER=	draco@marino.st
-HOMEPAGE=	http://tinderbox/marcuscom.com
+HOMEPAGE=	http://tinderbox.marcuscom.com/
 COMMENT=	Tinderbox package building system (pkgsrc)
 LICENSE=	modified-bsd
 
