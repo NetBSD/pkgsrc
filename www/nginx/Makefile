@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/04/17 21:12:42 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2012/04/21 10:32:47 imil Exp $
 
 DISTNAME=		nginx-1.0.15
 CATEGORIES=		www
@@ -50,12 +50,18 @@ CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
 
 PKG_SYSCONFSUBDIR=	nginx
 
+.include "options.mk"
+
 EGDIR=			${PREFIX}/share/examples/nginx
 EGFILES+=		fastcgi.conf fastcgi_params koi-utf koi-win \
 			mime.types nginx.conf win-utf
 
 .for file in ${EGFILES}
-CONF_FILES+=		${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
+CONF_FILES+=	${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
+.	if !empty(PKG_OPTIONS:Mnaxsi)
+CONF_FILES+=	${EGDIR}/conf/naxsi_core.rules
+CONF_FILES+=	${PKG_SYSCONFDIR}/naxsi_core.rules
+.	endif
 .endfor
 
 RCD_SCRIPTS=		nginx
@@ -80,8 +86,6 @@ SUBST_SED.paths+=	-e 's,%%NGINX_GROUP%%,${NGINX_GROUP},g'
 MESSAGE_SUBST+=		NGINX_LOGDIR=${NGINX_LOGDIR}
 MESSAGE_SUBST+=		NGINX_PIDDIR=${NGINX_PIDDIR}
 
-.include "options.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx
 .for file in ${EGFILES}
@@ -90,6 +94,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${DESTDIR}${EGDIR}/html/50x.html
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
 	${INSTALL_MAN} ${WRKSRC}/man/nginx.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+.if !empty(PKG_OPTIONS:Mnaxsi)
+	${INSTALL_DATA} ${WRKDIR}/${NAXSI}/naxsi_config/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
+.endif
+
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
