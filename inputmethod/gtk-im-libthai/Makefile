@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2011/12/06 11:41:02 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/04/21 08:20:22 obache Exp $
 #
 
 DISTNAME=	gtk-im-libthai-0.2.1
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
 		ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
@@ -20,7 +21,8 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--disable-gtk3
 
 GTK2_IMMODULES=	yes
+.include "../../x11/gtk2/modules.mk"
 
 .include "../../devel/libthai/buildlink3.mk"
-.include "../../x11/gtk2/modules.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
