@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1250 2012/04/22 10:51:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1251 2012/04/22 10:52:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2060,3 +2060,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-File-Listing to 6.04 [wiz 2012-04-22]
 	Updated devel/p5-IMDB-Film to 0.51 [wiz 2012-04-22]
 	Updated devel/p5-common-sense to 3.5 [wiz 2012-04-22]
+	Updated devel/p5-version to 0.9700 [wiz 2012-04-22]
