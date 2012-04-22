@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1241 2012/04/21 19:40:36 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.1242 2012/04/22 01:24:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.749 [obache 2012-04-21]
 	Updated www/nginx to 1.0.15 [imil 2012-04-21]
 	Updated www/gallery2 to 2.3.2 [pettai 2012-04-21]
+	Updated misc/urjtag to fix PLIST for *.mo (still 0.10nb3) [mef 2012-04-22]
