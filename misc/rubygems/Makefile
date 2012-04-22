@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2012/02/19 16:32:43 taca Exp $
+# $NetBSD: Makefile,v 1.46.2.1 2012/04/22 21:02:18 spz Exp $
 
-DISTNAME=	rubygems-1.8.17
+DISTNAME=	rubygems-1.8.23
 CATEGORIES=	misc ruby
 MASTER_SITES=	http://production.cf.rubygems.org/rubygems/ \
 		http://rubyforge.org/frs/download.php/75309/
@@ -44,8 +44,12 @@ FILES_SUBST+=		RUBYGEM_NAME=${RUBYGEM_NAME}
 GENERATE_PLIST+=	\
 	${ECHO} "@comment The following lines are automatically generated." && \
 	cd ${DESTDIR}${PREFIX} && \
-	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
-		${SORT};
+	    if [ -d ${GEM_DOCDIR:S|${PREFIX}/||} ]; then \
+		${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
+		${SORT}; \
+	    else \
+		:; \
+	    fi
 
 # Force the Gem repository to be under ${DESTDIR}.  This is harmless
 # because this package depends on no other gems.
@@ -54,7 +58,7 @@ INSTALL_ENV+=		GEM_HOME=${DESTDIR}${PREFIX}/${GEM_HOME}
 INSTALL_ENV+=		GEM_PATH=${DESTDIR}${PREFIX}/${GEM_HOME}
 
 INSTALL_TARGET=		install
-INSTALL_TARGET+=	--vendor
+INSTALL_TARGET+=	--vendor --no-rdoc --no-ri
 .if ${_USE_DESTDIR} != "no"
 INSTALL_TARGET+=	--destdir=${DESTDIR:Q}
 .endif
