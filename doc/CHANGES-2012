@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1246 2012/04/22 10:41:43 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1247 2012/04/22 10:48:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2049,7 +2049,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.749 [obache 2012-04-21]
 	Updated www/nginx to 1.0.15 [imil 2012-04-21]
 	Updated www/gallery2 to 2.3.2 [pettai 2012-04-21]
-	Updated misc/urjtag to fix PLIST for *.mo (still 0.10nb3) [mef 2012-04-22]
 	Updated misc/rubygems to 1.8.23 [taca 2012-04-22]
 	Updated lang/ruby193-base to 1.9.3p194 [taca 2012-04-22]
 	Updated lang/ruby193 to 1.9.3p194 [taca 2012-02-16]
@@ -2057,3 +2056,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/ruby19-base to 1.9.2pl320 [taca 2012-04-22]
 	Updated lang/ruby19 to 1.9.2pl320 [taca 2012-04-22]
 	Updated www/p5-URI to 1.60 [wiz 2012-04-22]
+	Updated devel/p5-Date-Manip to 6.31 [wiz 2012-04-22]
