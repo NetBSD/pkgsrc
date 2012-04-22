@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/11/27 13:43:06 cheusov Exp $
+$NetBSD: distinfo,v 1.4 2012/04/22 08:45:49 cheusov Exp $
 
-SHA1 (bzr-explorer-1.2.1.tar.gz) = 465def3efab1897aec92cbf0bdab4a81d227cfd5
-RMD160 (bzr-explorer-1.2.1.tar.gz) = 8e835af6c213f9ec4e36767130b68e19fc77e981
-Size (bzr-explorer-1.2.1.tar.gz) = 1436910 bytes
+SHA1 (bzr-explorer-1.2.2.tar.gz) = aac7ff6af5f3c836fb1036194aa135ce5a15efab
+RMD160 (bzr-explorer-1.2.2.tar.gz) = 4b19c5814d9d7b2470ef8a5c5d5425183ad4d584
+Size (bzr-explorer-1.2.2.tar.gz) = 1442649 bytes
