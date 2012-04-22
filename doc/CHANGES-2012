@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1302 2012/04/22 17:49:19 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1303 2012/04/22 19:33:17 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2112,3 +2112,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/bzr-explorer to 1.2.2nb2 [cheusov 2012-04-22]
 	Updated pkgtools/pkg_summary-utils to 0.58.0 [cheusov 2012-04-22]
 	Added converters/libcdr version 0.0.6 [wiz 2012-04-22]
+	Updated misc/calibre to 0.8.48 [gls 2012-04-22]
