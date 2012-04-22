@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.19 2012/04/22 22:05:41 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.20 2012/04/22 23:07:10 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -91,3 +91,11 @@ Pullup ticket #3748 - requested by pettai
 www/gallery2: security update
 Pullup ticket #3753 - requested by spz
 www/apache22: security patch
+Pullup ticket #3750 - requested by taca
+misc/rubygems: security fix
+Pullup ticket #3751 - requested by taca
+lang/ruby: version bump
+lang/ruby193-base: security fix
+Pullup ticket #3752 - requested by taca
+lang/ruby: version bump
+lang/ruby19-base: security fix
