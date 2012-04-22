@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/30 16:02:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/22 01:17:58 mef Exp $
 bin/bsdl2jtag
 bin/jtag
 man/man1/bsdl2jtag.1
 man/man1/jtag.1
+share/locale/fr/LC_MESSAGES/urjtag.mo
+share/locale/rw/LC_MESSAGES/urjtag.mo
+share/locale/sk/LC_MESSAGES/urjtag.mo
 share/urjtag/MANUFACTURERS
 share/urjtag/admtek/adm5120/adm5120
 share/urjtag/altera/PARTS
