@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1262 2012/04/22 12:12:06 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1263 2012/04/22 12:14:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2072,3 +2072,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/ruby-oauth to 0.4.6 [obache 2012-04-22]
 	Updated textproc/p5-Encode-Locale to 1.03 [wiz 2012-04-22]
 	Updated textproc/p5-Pod-Coverage to 0.22 [wiz 2012-04-22]
+	Updated textproc/p5-XML-LibXML to 1.96 [wiz 2012-04-22]
