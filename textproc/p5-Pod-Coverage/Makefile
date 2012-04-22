@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2011/08/14 15:14:07 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/22 12:11:53 wiz Exp $
 
-DISTNAME=	Pod-Coverage-0.21
+DISTNAME=	Pod-Coverage-0.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
@@ -16,7 +15,6 @@ DEPENDS+=	p5-Devel-Symdump>=2.01:../../devel/p5-Devel-Symdump
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Pod/Coverage/.packlist
 
 .include "../../lang/perl5/module.mk"
