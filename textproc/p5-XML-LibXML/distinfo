@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2011/10/04 02:51:40 hiramatsu Exp $
+$NetBSD: distinfo,v 1.18 2012/04/22 12:14:47 wiz Exp $
 
-SHA1 (XML-LibXML-1.88.tar.gz) = b53b35792b418307b2510e07c6aa7ec8c76667ef
-RMD160 (XML-LibXML-1.88.tar.gz) = b700308abd56eaa1b917d80b5c005259cd68e2bd
-Size (XML-LibXML-1.88.tar.gz) = 432186 bytes
+SHA1 (XML-LibXML-1.96.tar.gz) = bd0263e1d76ef96cbf6c734c9415d8c3cd64610f
+RMD160 (XML-LibXML-1.96.tar.gz) = e130fce12809046b939006587c8565f0f28b2bd3
+Size (XML-LibXML-1.96.tar.gz) = 441094 bytes
