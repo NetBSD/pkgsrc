@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1270 2012/04/22 12:48:04 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1271 2012/04/22 12:49:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2080,3 +2080,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTTP-Cookies to 6.01 [wiz 2012-04-22]
 	Updated www/p5-HTTP-Daemon to 6.01 [wiz 2012-04-22]
 	Updated www/p5-HTTP-Date to 6.02 [wiz 2012-04-22]
+	Updated www/p5-HTTP-Message to 6.03 [wiz 2012-04-22]
