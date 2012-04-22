@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/01/11 12:35:45 jym Exp $
+$NetBSD: distinfo,v 1.2.10.1 2012/04/22 18:02:50 spz Exp $
 
-SHA1 (gallery-2.3.1-full.tar.gz) = 6cecd8d9ca1dc036faebafe71352321b3b08074b
-RMD160 (gallery-2.3.1-full.tar.gz) = 751343d3ddaa7898eb0cb412e08c2c7570c70620
-Size (gallery-2.3.1-full.tar.gz) = 14564660 bytes
+SHA1 (gallery-2.3.2-full.tar.gz) = 3ab7164c607c124b97e08dd25d3a9712afebde2b
+RMD160 (gallery-2.3.2-full.tar.gz) = 5ce2a6ad7f6b4c02c025a1473e573f5105d66ab6
+Size (gallery-2.3.2-full.tar.gz) = 14569436 bytes
