@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2010/11/01 00:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2012/04/22 16:00:38 wiz Exp $
 
-DISTNAME=	pciutils-3.1.3
-PKGREVISION=	1
+DISTNAME=	pciutils-3.1.9
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/ \
-		ftp://ftp.kernel.org/pub/software/utils/pciutils/ 
+		ftp://ftp.kernel.org/pub/software/utils/pciutils/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mj.ucw.cz/pciutils.shtml
