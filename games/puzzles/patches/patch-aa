@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2011/09/08 20:11:53 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2012/04/22 15:04:09 wiz Exp $
 
 Rename "net" to "netgame" so there's less chances of conflicts
 with other packages.
 
---- Makefile.orig	2011-09-08 00:38:57.000000000 +0000
+--- Makefile.orig	2012-04-22 00:35:41.000000000 +0000
 +++ Makefile
 @@ -31,7 +31,7 @@ all: blackbox bridges cube dominosa fift
  		galaxies galaxiespicture galaxiessolver guess inertia keen \
@@ -11,9 +11,9 @@ with other packages.
  		loopysolver magnets magnetssolver map mapsolver mineobfusc \
 -		mines net netslide nullgame obfusc pattern patternsolver \
 +		mines netgame netslide nullgame obfusc pattern patternsolver \
- 		pegs range rect samegame signpost signpostsolver singles \
- 		singlessolver sixteen slant slantsolver solo solosolver \
- 		tents tentssolver towers towerssolver twiddle unequal \
+ 		pearl pearlbench pegs range rect samegame signpost \
+ 		signpostsolver singles singlessolver sixteen slant \
+ 		slantsolver solo solosolver tents tentssolver towers \
 @@ -176,7 +176,7 @@ mines: drawing.o gtk.o malloc.o midend.o
  		misc.o printing.o ps.o random.o tree234.o version.o  \
  		$(XLFLAGS) $(XLIBS)
@@ -23,7 +23,7 @@ with other packages.
  		printing.o ps.o random.o tree234.o version.o
  	$(CC) -o $@ drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o \
  		net-icon.o printing.o ps.o random.o tree234.o version.o  \
-@@ -627,7 +627,7 @@ GAMES += loopy
+@@ -651,7 +651,7 @@ GAMES += loopy
  GAMES += magnets
  GAMES += map
  GAMES += mines
@@ -31,10 +31,10 @@ with other packages.
 +GAMES += netgame
  GAMES += netslide
  GAMES += pattern
- GAMES += pegs
-@@ -667,4 +667,4 @@ install:
+ GAMES += pearl
+@@ -692,4 +692,4 @@ install:
  	done
  
  clean:
--	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia keen keensolver latincheck lightup lightupsolver loopy loopysolver magnets magnetssolver map mapsolver mineobfusc mines net netslide nullgame obfusc pattern patternsolver pegs range rect samegame signpost signpostsolver singles singlessolver sixteen slant slantsolver solo solosolver tents tentssolver towers towerssolver twiddle unequal unequalsolver untangle
+-	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia keen keensolver latincheck lightup lightupsolver loopy loopysolver magnets magnetssolver map mapsolver mineobfusc mines net netslide nullgame obfusc pattern patternsolver pearl pearlbench pegs range rect samegame signpost signpostsolver singles singlessolver sixteen slant slantsolver solo solosolver tents tentssolver towers towerssolver twiddle unequal unequalsolver untangle
 +	rm -f *.o blackbox bridges cube dominosa fifteen filling fillingsolver flip galaxies galaxiespicture galaxiessolver guess inertia keen keensolver latincheck lightup lightupsolver loopy loopysolver magnets magnetssolver map mapsolver mineobfusc mines netgame netslide nullgame obfusc pattern patternsolver pegs rect samegame singles singlessolver sixteen slant slantsolver solo solosolver tents tentssolver towers towerssolver twiddle unequal unequalsolver untangle
