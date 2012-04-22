@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2011/12/06 07:06:45 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.37 2012/04/22 10:48:26 wiz Exp $
 
-DISTNAME=	Date-Manip-6.25
+DISTNAME=	Date-Manip-6.31
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dma
 CATEGORIES=	textproc perl5
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
 # only needed for tests
-#DEPENDS+=	p5-Test-Inter-[0-9]*:../../devel/p5-Test-Inter
+BUILD_DEPENDS+=	p5-Test-Inter-[0-9]*:../../devel/p5-Test-Inter
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Date/Manip/.packlist
