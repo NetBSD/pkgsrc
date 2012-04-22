@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/27 13:43:06 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/22 08:45:49 cheusov Exp $
 ${PYSITELIB}/bzrlib/plugins/explorer/COPYING.txt
 ${PYSITELIB}/bzrlib/plugins/explorer/NEWS
 ${PYSITELIB}/bzrlib/plugins/explorer/README.txt
@@ -104,6 +104,9 @@ ${PYSITELIB}/bzrlib/plugins/explorer/lib/extensions/bookmarks.pyo
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/extensions/tools.py
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/extensions/tools.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/extensions/tools.pyo
+${PYSITELIB}/bzrlib/plugins/explorer/lib/filesystemwatcher.py
+${PYSITELIB}/bzrlib/plugins/explorer/lib/filesystemwatcher.pyc
+${PYSITELIB}/bzrlib/plugins/explorer/lib/filesystemwatcher.pyo
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/helpers.py
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/helpers.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/helpers.pyo
@@ -146,6 +149,9 @@ ${PYSITELIB}/bzrlib/plugins/explorer/lib/options_panel.pyo
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/parameter_parser.py
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/parameter_parser.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/parameter_parser.pyo
+${PYSITELIB}/bzrlib/plugins/explorer/lib/qbzr.py
+${PYSITELIB}/bzrlib/plugins/explorer/lib/qbzr.pyc
+${PYSITELIB}/bzrlib/plugins/explorer/lib/qbzr.pyo
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/script_engine.py
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/script_engine.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/lib/script_engine.pyo
@@ -236,6 +242,9 @@ ${PYSITELIB}/bzrlib/plugins/explorer/skin/toolbars.xml
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/__init__.py
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/explorer/tests/test_history_manager.py
+${PYSITELIB}/bzrlib/plugins/explorer/tests/test_history_manager.pyc
+${PYSITELIB}/bzrlib/plugins/explorer/tests/test_history_manager.pyo
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/test_new.py
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/test_new.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/tests/test_new.pyo
