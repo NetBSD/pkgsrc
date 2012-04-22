@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2010/09/16 10:09:07 obache Exp $
+$NetBSD: patch-aa,v 1.2 2012/04/22 14:06:16 obache Exp $
 
 standard location.
 
---- src/engine.cpp.orig	2010-09-11 11:56:49.000000000 +0000
+--- src/engine.cpp.orig	2012-02-29 02:48:14.000000000 +0000
 +++ src/engine.cpp
-@@ -3,7 +3,7 @@
- #endif
+@@ -4,7 +4,7 @@
  #include <libintl.h>
+ #include <stdlib.h>
  
 -#include <wait.h>
 +#include <sys/wait.h>
