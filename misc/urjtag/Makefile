@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2012/04/10 15:24:59 mef Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/22 00:19:54 obache Exp $
 #
 
 DISTNAME=	urjtag-0.10
 PKGREVISION=	3
 CATEGORIES=	misc
-MASTER_SITES=	http://downloads.sourceforge.net/project/urjtag/urjtag/0.10/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=urjtag/urjtag/0.10/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://downloads.sourceforge.net/project/urjtag/urjtag/0.10/
+HOMEPAGE=	http://www.urjtag.org/
 COMMENT=	JTAG tool
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
