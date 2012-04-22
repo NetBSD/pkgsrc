@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 14:56:27 agc Exp $
+$NetBSD: patch-aa,v 1.2 2012/04/22 22:04:24 dholland Exp $
 
---- config.h.orig	Sun Feb  4 18:30:34 2001
+- configure for pkgsrc
+- use valid compiler options
+
+--- config.h.orig	1999-06-28 22:36:58.000000000 +0000
 +++ config.h
 @@ -29,7 +29,7 @@
  /*
@@ -11,7 +14,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 14:56:27 agc Exp $
  /* #define UNIX_DEF -DSOLARIS */
  /* #define UNIX_DEF -DSUNOS */
  /* #define UNIX_DEF -DIRIX */
-@@ -56,7 +56,7 @@
+@@ -56,12 +56,12 @@
  /*
   * Which Compiler to use:
   */
@@ -20,3 +23,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 14:56:27 agc Exp $
  
  /*
   * Which Optimization Flags:
+  */
+-#define CDEBUGFLAGS_DEF -O6 -Wall
++#define CDEBUGFLAGS_DEF -O3 -Wall
+ 
+ /*
+  * Which Flags to pass to the Linker:
