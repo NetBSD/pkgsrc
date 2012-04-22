@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1268 2012/04/22 12:45:10 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1269 2012/04/22 12:46:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2078,3 +2078,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/p5-DateTime to 0.7400 [wiz 2012-04-22]
 	Updated time/p5-Net-Google-Calendar to 1.01 [wiz 2012-04-22]
 	Updated www/p5-HTTP-Cookies to 6.01 [wiz 2012-04-22]
+	Updated www/p5-HTTP-Daemon to 6.01 [wiz 2012-04-22]
