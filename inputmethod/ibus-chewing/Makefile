@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/03/03 00:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/22 14:09:10 obache Exp $
 #
 
 DISTNAME=	ibus-chewing-1.3.10-Source
 PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -34,6 +34,13 @@ CMAKE_ARGS+=	-DGCONF_SCHEMAS_INSTALLED_DIR=${GCONF_SCHEMAS_DIR}
 
 post-extract:
 	find ${WRKDIR} -type d -name PaxHeader | xargs rm -rf
+
+# avoid regen files
+post-patch:
+	touch -r ${WRKSRC}/src/IBusChewingEngine-input-events.c.orig	\
+		${WRKSRC}/src/IBusChewingEngine-input-events.c
+	touch -r ${WRKSRC}/src/IBusChewingEngine.gob.orig		\
+		${WRKSRC}/src/IBusChewingEngine.gob
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
