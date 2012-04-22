@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1257 2012/04/22 11:48:49 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1258 2012/04/22 11:50:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2067,3 +2067,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/p5-IO-Socket-INET6 to 2.69 [wiz 2012-04-22]
 	Updated security/p5-Digest-SHA to 5.71 [wiz 2012-04-22]
 	Updated security/p5-GnuPG-Interface to 0.45 [wiz 2012-04-22]
+	Updated security/p5-IO-Socket-SSL to 1.66 [wiz 2012-04-22]
