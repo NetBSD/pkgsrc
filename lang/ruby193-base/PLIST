@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/04 02:31:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2012/04/22 21:42:29 spz Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -198,7 +198,7 @@ ${RUBY_LIB}/psych/coder.rb
 ${RUBY_LIB}/psych/core_ext.rb
 ${RUBY_LIB}/psych/deprecated.rb
 ${RUBY_LIB}/psych/handler.rb
-${RUBY_LIB}/psych/json.rb
+${RUBY_LIB}/psych/handlers/document_stream.rb
 ${RUBY_LIB}/psych/json/ruby_events.rb
 ${RUBY_LIB}/psych/json/stream.rb
 ${RUBY_LIB}/psych/json/tree_builder.rb
@@ -217,6 +217,7 @@ ${RUBY_LIB}/psych/scalar_scanner.rb
 ${RUBY_LIB}/psych/set.rb
 ${RUBY_LIB}/psych/stream.rb
 ${RUBY_LIB}/psych/streaming.rb
+${RUBY_LIB}/psych/syntax_error.rb
 ${RUBY_LIB}/psych/tree_builder.rb
 ${RUBY_LIB}/psych/visitors.rb
 ${RUBY_LIB}/psych/visitors/depth_first.rb
@@ -553,6 +554,8 @@ ${RUBY_LIB}/rubygems/package/tar_writer.rb
 ${RUBY_LIB}/rubygems/package_task.rb
 ${RUBY_LIB}/rubygems/path_support.rb
 ${RUBY_LIB}/rubygems/platform.rb
+${RUBY_LIB}/rubygems/psych_additions.rb
+${RUBY_LIB}/rubygems/psych_tree.rb
 ${RUBY_LIB}/rubygems/remote_fetcher.rb
 ${RUBY_LIB}/rubygems/require_paths_builder.rb
 ${RUBY_LIB}/rubygems/requirement.rb
@@ -561,6 +564,11 @@ ${RUBY_LIB}/rubygems/server.rb
 ${RUBY_LIB}/rubygems/source_index.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
+${RUBY_LIB}/rubygems/ssl_certs/AddTrustExternalCARoot.pem
+${RUBY_LIB}/rubygems/ssl_certs/Entrust_net-Secure-Server-Certification-Authority.pem
+${RUBY_LIB}/rubygems/ssl_certs/VerisignClass3PublicPrimaryCertificationAuthority-G2.pem
+${RUBY_LIB}/rubygems/ssl_certs/ca-bundle.pem
+${RUBY_LIB}/rubygems/syck_hack.rb
 ${RUBY_LIB}/rubygems/test_case.rb
 ${RUBY_LIB}/rubygems/test_utilities.rb
 ${RUBY_LIB}/rubygems/text.rb

@@ -1,6 +1,11 @@
-$NetBSD: patch-lib_rubygems_specification.rb,v 1.1.1.1 2011/11/08 16:10:51 taca Exp $
+$NetBSD: patch-lib_rubygems_specification.rb,v 1.1.1.1.4.1 2012/04/22 21:42:30 spz Exp $
 
---- lib/rubygems/specification.rb.orig	2011-10-08 10:53:11.000000000 +0000
+Changes for pkgsrc environment:
+
+* Allow some attributes to nil.
+* Relax date/time format.
+
+--- lib/rubygems/specification.rb.orig	2012-04-19 22:43:16.000000000 +0000
 +++ lib/rubygems/specification.rb
 @@ -118,6 +118,12 @@ class Gem::Specification
      @@default_value[k].nil?
@@ -15,16 +20,16 @@ $NetBSD: patch-lib_rubygems_specification.rb,v 1.1.1.1 2011/11/08 16:10:51 taca 
    ######################################################################
    # :section: Required gemspec attributes
  
-@@ -984,7 +990,7 @@ class Gem::Specification
+@@ -1000,7 +1006,7 @@ class Gem::Specification
      # way to do it.
      @date = case date
              when String then
 -              if /\A(\d{4})-(\d{2})-(\d{2})\Z/ =~ date then
 +              if /\A(\d{4})-(\d{2})-(\d{2})/ =~ date then
                  Time.utc($1.to_i, $2.to_i, $3.to_i)
-               else
-                 raise(Gem::InvalidSpecificationException,
-@@ -1950,7 +1956,24 @@ class Gem::Specification
+ 
+               # Workaround for where the date format output from psych isn't
+@@ -1987,7 +1993,24 @@ class Gem::Specification
      normalize
  
      nil_attributes = self.class.non_nil_attributes.find_all do |name|
@@ -50,7 +55,7 @@ $NetBSD: patch-lib_rubygems_specification.rb,v 1.1.1.1 2011/11/08 16:10:51 taca 
      end
  
      unless nil_attributes.empty? then
-@@ -2053,10 +2076,15 @@ class Gem::Specification
+@@ -2090,10 +2113,15 @@ class Gem::Specification
        raise Gem::InvalidSpecificationException, "#{lazy} is not a summary"
      end
  
