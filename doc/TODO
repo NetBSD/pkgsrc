@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11034 2012/04/22 16:14:23 wiz Exp $
+$NetBSD: TODO,v 1.11035 2012/04/22 16:19:07 taca Exp $
 
 Suggested new packages
 ======================
@@ -981,7 +981,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moc-2.4.4
 	o modular-xorg-server-1.11.2 [wip]
 	o modular-xorg-server-1.12.1
-	o modular-xorg-server-1.12.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-2.11.1
