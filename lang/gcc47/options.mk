@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/04/22 08:14:22 sbd Exp $
+# $NetBSD: options.mk,v 1.4 2012/04/22 08:19:59 sbd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -81,6 +81,9 @@ LIBS.SunOS+=		-lgmp
 .if !empty(PKG_OPTIONS:Mgcc-objc++)
 .  if empty(PKG_OPTIONS:Mgcc-c++)
 PKG_OPTIONS+=		gcc-c++
+.  endif
+.  if empty(PKG_OPTIONS:Mgcc-objc)
+PKG_OPTIONS+=		gcc-objc
 .  endif
 LANGS+=			obj-c++
 .endif
