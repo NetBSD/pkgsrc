@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1299 2012/04/22 16:43:00 cheusov Exp $
+$NetBSD: CHANGES-2012,v 1.1300 2012/04/22 16:44:04 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2109,3 +2109,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated time/py-pytz to 2012c [wiz 2012-04-22]
 	Updated www/contao211-translations to 201204220 [taca 2012-04-22]
 	Updated devel/qbzr to 0.22.1nb2 [cheusov 2012-04-22]
+	Updated devel/bzr-explorer to 1.2.2nb2 [cheusov 2012-04-22]
