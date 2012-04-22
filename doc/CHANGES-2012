@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1274 2012/04/22 12:54:34 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1275 2012/04/22 12:55:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-HTTP-Negotiate to 6.01 [wiz 2012-04-22]
 	Updated www/p5-LWP-MediaTypes to 6.02 [wiz 2012-04-22]
 	Updated www/p5-Net-HTTP to 6.03 [wiz 2012-04-22]
+	Updated www/p5-WWW-RobotRules to 6.02 [wiz 2012-04-22]
