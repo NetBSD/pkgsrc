@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/11/23 06:01:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2012/04/22 23:04:03 spz Exp $
 bin/erb${RUBY_VER}
 bin/gem${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -489,6 +489,7 @@ ${RUBY_LIB}/rubygems/source_info_cache.rb
 ${RUBY_LIB}/rubygems/source_info_cache_entry.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
+${RUBY_LIB}/rubygems/ssl_certs/ca-bundle.pem
 ${RUBY_LIB}/rubygems/test_utilities.rb
 ${RUBY_LIB}/rubygems/text.rb
 ${RUBY_LIB}/rubygems/uninstaller.rb
