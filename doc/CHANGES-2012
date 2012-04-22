@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1296 2012/04/22 16:11:23 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1297 2012/04/22 16:13:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2106,3 +2106,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/avahi to 0.6.31 [wiz 2012-04-22]
 	Updated sysutils/pciutils to 3.1.9 [wiz 2012-04-22]
 	Updated textproc/libplist to 1.8 [wiz 2012-04-22]
+	Updated time/py-pytz to 2012c [wiz 2012-04-22]
