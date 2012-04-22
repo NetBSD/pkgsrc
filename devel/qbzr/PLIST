@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/11/27 13:47:53 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/04/22 08:43:02 cheusov Exp $
 ${PYSITELIB}/bzrlib/plugins/qbzr/AUTHORS.txt
 ${PYSITELIB}/bzrlib/plugins/qbzr/COPYING.txt
 ${PYSITELIB}/bzrlib/plugins/qbzr/NEWS.txt
@@ -106,6 +106,9 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/html_log.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/i18n.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/i18n.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/i18n.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/ignore.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/ignore.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/ignore.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/info.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/info.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/info.pyo
@@ -190,6 +193,9 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tag.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/__init__.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/compatibility.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/compatibility.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/compatibility.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/mock.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/mock.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests/mock.pyo
@@ -346,6 +352,9 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/splitters.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/tab_width_selector.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/tab_width_selector.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/tab_width_selector.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/texteditaccessory.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/texteditaccessory.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/texteditaccessory.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/toolbars.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/toolbars.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/widgets/toolbars.pyo
