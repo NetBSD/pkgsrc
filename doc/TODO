@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11025 2012/04/20 18:53:01 adam Exp $
+$NetBSD: TODO,v 1.11026 2012/04/22 14:01:45 obache Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o httptunnel-3.3
 	o hugin-2011.4.0
 	o hylafax-6.0.5
-	o ibus-input-pad-1.4.0 [for ibus-1.4.x]
 	o ical-2.3.2
 	o icdprog-0.5
 	o iceauth-1.0.5
