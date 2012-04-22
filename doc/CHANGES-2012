@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1290 2012/04/22 15:13:35 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1291 2012/04/22 15:51:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated games/puzzles to 9455 [wiz 2012-04-22]
 	Updated databases/iodbc to 3.52.8 [wiz 2012-04-22]
 	Updated math/mpfr to 3.1.0 [wiz 2012-04-22]
+	Updated converters/libvisio to 0.0.16 [wiz 2012-04-22]
