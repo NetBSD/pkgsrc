@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/03/09 12:34:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/22 13:57:30 obache Exp $
 #
 
-DISTNAME=	ibus-1.3.9
-PKGREVISION=	6
+DISTNAME=	ibus-1.4.1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -29,27 +28,23 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--disable-gtk3
+CONFIGURE_ARGS+=	--enable-surrounding-text
 
-BUILD_DEFS+=	PKG_SYSCONFBASE
+SUBST_CLASSES+=		dbus
+SUBST_STAGE.dbus=	post-configure
+SUBST_FILES.dbus=	src/ibusshare.c
+SUBST_SED.dbus=		-e 's,/var/lib/dbus/machine-id,${VARBASE}/db/dbus/machine-id,g'
 
-EXAMPLESDIR=		${PREFIX}/share/examples/ibus
-
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EXAMPLESDIR}
-
-MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/autostart
-CONF_FILES+=		${EXAMPLESDIR}/xdg/autostart/ibus.desktop \
-			${PKG_SYSCONFBASE}/xdg/autostart/ibus.desktop
+BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 
 BUILDLINK_API_DEPENDS.GConf+=		GConf>=2.12
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
-BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
-.include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=		${PYPKGPREFIX}-dbus>=0.83.0
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
