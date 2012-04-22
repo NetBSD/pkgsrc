@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2001/05/14 20:38:47 nathanw Exp $
+$NetBSD: patch-aa,v 1.3 2012/04/22 21:42:42 dholland Exp $
 
---- Makefile.orig	Sun Apr 15 20:56:31 2001
-+++ Makefile	Mon May 14 16:15:17 2001
-@@ -34,8 +34,8 @@
+- configure for pkgsrc
+- hardwire NetBSD instead of Linux serial port name (XXX: wrong)
+- use -O* options that really exist (required by clang)
+- don't use -W options that aren't defined for for C++
+
+--- Makefile.orig	2001-04-16 00:56:31.000000000 +0000
++++ Makefile
+@@ -34,8 +34,8 @@ CC=g++
  #
  # Pick your YACC processor
  #
@@ -13,7 +18,7 @@ $NetBSD: patch-aa,v 1.2 2001/05/14 20:38:47 nathanw Exp $
  
  #
  # Define the FLEX processor
-@@ -51,11 +51,11 @@
+@@ -51,11 +51,11 @@ FLEX = flex
  # Use this to define the default device driver name
  # for serial port connections.
  #
@@ -27,4 +32,15 @@ $NetBSD: patch-aa,v 1.2 2001/05/14 20:38:47 nathanw Exp $
 +MANDIR=${PREFIX}/man/man1
  MANEXT=1
  
+ 
+@@ -67,8 +67,8 @@ MV=mv -f
+ RM=rm -f
+ 
+ IFLAGS=-Iplatform -Ircxlib -Inqc -Icompiler
+-WFLAGS=-Wall -Wstrict-prototypes -Wmissing-prototypes
+-CFLAGS = -O6 -pipe $(IFLAGS) $(WFLAGS) -DDEFAULT_SERIAL_NAME='$(DEFAULT_SERIAL_NAME)'
++WFLAGS=-Wall #-Wstrict-prototypes -Wmissing-prototypes
++CFLAGS = -O3 -pipe $(IFLAGS) $(WFLAGS) -DDEFAULT_SERIAL_NAME='$(DEFAULT_SERIAL_NAME)'
+ 
+ OBJ = $(NQCOBJ) $(COBJ) $(RCXOBJ) $(POBJ)
  
