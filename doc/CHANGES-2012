@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1275 2012/04/22 12:55:26 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1276 2012/04/22 13:21:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2085,3 +2085,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-LWP-MediaTypes to 6.02 [wiz 2012-04-22]
 	Updated www/p5-Net-HTTP to 6.03 [wiz 2012-04-22]
 	Updated www/p5-WWW-RobotRules to 6.02 [wiz 2012-04-22]
+	Added inputmethod/libskk version 0.0.12 [obache 2012-04-22]
