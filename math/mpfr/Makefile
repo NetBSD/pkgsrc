@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.19 2011/05/08 21:06:51 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/04/22 15:13:26 wiz Exp $
 #
 
-DISTNAME=		mpfr-3.0.1
-PKGNAME=		${DISTNAME}.3	# append patch level
+DISTNAME=		mpfr-3.1.0
+#PKGNAME=		${DISTNAME}.3	# append patch level
 CATEGORIES=		math
-MASTER_SITES=		http://www.mpfr.org/mpfr-3.0.1/
+MASTER_SITES=		http://www.mpfr.org/mpfr-3.1.0/
+EXTRACT_SUFX=		.tar.xz
 
-DIST_SUBDIR=		${DISTNAME}
-
-PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		patch01 patch02 patch03
-PATCH_DIST_STRIP=	-p1
+#DIST_SUBDIR=		${DISTNAME}
+#PATCH_SITES=		${MASTER_SITES}
+#PATCHFILES=		patch01 patch02 patch03
+#PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.mpfr.org/
@@ -23,13 +23,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 INFO_FILES=		yes
-###
-### XXX These definitions are defined here merely to keep configure from
-###	needlessly whining about them.
-###
-###
-MAKE_ENV+=		AUTOCONF=${TRUE}
-MAKE_ENV+=		AUTOMAKE=${TRUE}
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
