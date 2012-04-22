@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1248 2012/04/22 10:49:58 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1249 2012/04/22 10:50:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2058,3 +2058,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/p5-URI to 1.60 [wiz 2012-04-22]
 	Updated devel/p5-Date-Manip to 6.31 [wiz 2012-04-22]
 	Updated devel/p5-File-Listing to 6.04 [wiz 2012-04-22]
+	Updated devel/p5-IMDB-Film to 0.51 [wiz 2012-04-22]
