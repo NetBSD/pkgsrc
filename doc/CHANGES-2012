@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1253 2012/04/22 10:56:43 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1254 2012/04/22 10:57:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2063,3 +2063,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/p5-version to 0.9700 [wiz 2012-04-22]
 	Updated graphics/p5-Image-ExifTool to 8.85 [wiz 2012-04-22]
 	Updated graphics/p5-Image-Info to 1.32 [wiz 2012-04-22]
+	Updated mail/p5-MailTools to 2.09 [wiz 2012-04-22]
