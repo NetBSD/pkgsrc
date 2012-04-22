@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/22 00:19:54 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/22 01:17:58 mef Exp $
 #
 
 DISTNAME=	urjtag-0.10
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 REPLACE_SH=		src/bsdl2jtag
 
 post-extract:
@@ -24,4 +24,5 @@ post-extract:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libftdi/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
