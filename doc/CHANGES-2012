@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1259 2012/04/22 11:51:46 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1260 2012/04/22 11:54:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/p5-GnuPG-Interface to 0.45 [wiz 2012-04-22]
 	Updated security/p5-IO-Socket-SSL to 1.66 [wiz 2012-04-22]
 	Updated security/p5-Mozilla-CA to 20120309 [wiz 2012-04-22]
+	Updated security/ruby-oauth to 0.4.6 [obache 2012-04-22]
