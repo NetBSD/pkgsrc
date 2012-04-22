@@ -1,0 +1,15 @@
+$NetBSD: patch-c__source_dint_c,v 1.1 2012/04/22 21:08:20 dholland Exp $
+
+Declare return type to be consistent with the declaration visible at
+the call site, and with the code itself. Fixes clang build.
+
+--- c_source/dint.c~	1998-10-20 16:42:11.000000000 +0000
++++ c_source/dint.c
+@@ -7,6 +7,7 @@ typedef FFTW_REAL real;
+     The author retains the right to distribute this software freely, but
+     is not responsible for it's quality or maintainance. */
+ 
++void
+ dint(x, length, wtab)
+ real *x, *wtab;
+ int length;
