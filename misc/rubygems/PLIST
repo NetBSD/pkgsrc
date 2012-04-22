@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/12/15 14:40:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.19.4.1 2012/04/22 21:02:18 spz Exp $
 bin/gem${RUBY_VER}.new
 ${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
@@ -74,6 +74,8 @@ ${RUBY_VENDORLIB}/rubygems/package/tar_writer.rb
 ${RUBY_VENDORLIB}/rubygems/package_task.rb
 ${RUBY_VENDORLIB}/rubygems/path_support.rb
 ${RUBY_VENDORLIB}/rubygems/platform.rb
+${RUBY_VENDORLIB}/rubygems/psych_additions.rb
+${RUBY_VENDORLIB}/rubygems/psych_tree.rb
 ${RUBY_VENDORLIB}/rubygems/remote_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/require_paths_builder.rb
 ${RUBY_VENDORLIB}/rubygems/requirement.rb
@@ -92,3 +94,4 @@ ${RUBY_VENDORLIB}/rubygems/validator.rb
 ${RUBY_VENDORLIB}/rubygems/version.rb
 ${RUBY_VENDORLIB}/rubygems/version_option.rb
 ${RUBY_VENDORLIB}/ubygems.rb
+@pkgdir lib/ruby/gems/1.9.3/doc

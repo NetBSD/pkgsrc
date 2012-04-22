@@ -1,10 +1,10 @@
-$NetBSD: patch-ao,v 1.3 2011/03/23 14:35:05 taca Exp $
+$NetBSD: patch-ao,v 1.3.10.1 2012/04/22 21:02:19 spz Exp $
 
 Don't hard code config file's path for gem.
 
---- lib/rubygems/config_file.rb.orig	2011-02-26 20:40:09.000000000 +0000
+--- lib/rubygems/config_file.rb.orig	2012-03-22 21:25:48.000000000 +0000
 +++ lib/rubygems/config_file.rb
-@@ -45,32 +45,7 @@ class Gem::ConfigFile
+@@ -47,32 +47,7 @@ class Gem::ConfigFile
  
    PLATFORM_DEFAULTS = {}
  
@@ -31,7 +31,7 @@ Don't hard code config file's path for gem.
 -
 -        path.strip
 -      rescue LoadError
--        "/etc"
+-        RbConfig::CONFIG["sysconfdir"] || "/etc"
 -      end
 -    end
 +  system_config_path = '@PKG_SYSCONFDIR@'
