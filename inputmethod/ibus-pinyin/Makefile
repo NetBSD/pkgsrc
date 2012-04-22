@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/03/10 10:56:13 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/22 14:02:50 obache Exp $
 #
 
-DISTNAME=	ibus-pinyin-1.3.11
-PKGREVISION=	5
+DISTNAME=	ibus-pinyin-1.4.0
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
@@ -38,7 +37,6 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--disable-db-android
 CONFIGURE_ARGS+=	--enable-db-open-phrase
-CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
 .include "options.mk"
 
@@ -50,13 +48,20 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 .endif
 
 .if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)) || !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=		-std=c++0x
+CONFIGURE_ARGS+=	--disable-boost
+.else
+CONFIGURE_ARGS+=	--enable-boost
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
+.include "../../devel/boost-headers/buildlink3.mk"
+SUBST_CLASSES+=		shared_ptr
+SUBST_STAGE.shared_ptr=	post-configure
+SUBST_FILES.shared_ptr=	src/*.h
+SUBST_SED.shared_ptr=	-e 's,std::shared_ptr,boost::shared_ptr,g'
 .endif
 
 .include "../../inputmethod/ibus/bad-env-usage.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
