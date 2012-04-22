@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/10 12:47:38 spz Exp $
+$NetBSD: distinfo,v 1.2 2012/04/22 12:55:18 wiz Exp $
 
-SHA1 (WWW-RobotRules-6.01.tar.gz) = 426920bbfc73a38dffa319dd2f53b0eb9b294b5b
-RMD160 (WWW-RobotRules-6.01.tar.gz) = 6f2c1bef375ad2b2f171b4feae721eec8e1007ec
-Size (WWW-RobotRules-6.01.tar.gz) = 9047 bytes
+SHA1 (WWW-RobotRules-6.02.tar.gz) = e158e6559307878b32d8e4c241bf257c2bc88ebb
+RMD160 (WWW-RobotRules-6.02.tar.gz) = dec9e82ddd551ec63dd3d541854ee0b52cab6214
+Size (WWW-RobotRules-6.02.tar.gz) = 9059 bytes
