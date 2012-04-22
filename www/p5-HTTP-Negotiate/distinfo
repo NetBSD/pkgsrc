@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/10 12:44:55 spz Exp $
+$NetBSD: distinfo,v 1.2 2012/04/22 12:50:00 wiz Exp $
 
-SHA1 (HTTP-Negotiate-6.00.tar.gz) = 4ef0f026a9c710d876444dcfdc3a56cbb2c8a478
-RMD160 (HTTP-Negotiate-6.00.tar.gz) = d6294ced942b213b851cfe5088334934ab5e9a43
-Size (HTTP-Negotiate-6.00.tar.gz) = 8560 bytes
+SHA1 (HTTP-Negotiate-6.01.tar.gz) = 4a4974639d9b64f7132cb075f551f7293f788c62
+RMD160 (HTTP-Negotiate-6.01.tar.gz) = bfc839ac4ff7ef24b7154f2702cdb107c882e8c6
+Size (HTTP-Negotiate-6.01.tar.gz) = 8596 bytes
