@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/10 12:40:29 spz Exp $
+$NetBSD: distinfo,v 1.2 2012/04/22 12:51:13 wiz Exp $
 
-SHA1 (LWP-MediaTypes-6.01.tar.gz) = b794d54a4f8c36ee51b28987bfc1abc33be5561d
-RMD160 (LWP-MediaTypes-6.01.tar.gz) = 2ea782c0da693951f1614f3a5f74d63e505368d6
-Size (LWP-MediaTypes-6.01.tar.gz) = 14917 bytes
+SHA1 (LWP-MediaTypes-6.02.tar.gz) = f56891f4e718a5f1f16f09ae37d32e454095cbed
+RMD160 (LWP-MediaTypes-6.02.tar.gz) = a99f980361c58b1fbf5f130964a213076a32c1fe
+Size (LWP-MediaTypes-6.02.tar.gz) = 18722 bytes
