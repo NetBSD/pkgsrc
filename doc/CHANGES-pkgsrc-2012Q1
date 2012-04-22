@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.16 2012/04/21 16:21:21 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.17 2012/04/22 15:23:06 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -85,3 +85,5 @@ Pullup ticket #3746 - requested by obache
 emulators/suse121_libtiff: security update
 Pullup ticket #3747 - requested by wiz
 mail/re-alpine: build fix update
+Pullup ticket #3749 - requested by taca
+security/openssl: security update
