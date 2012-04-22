@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/01/12 01:16:39 hiramatsu Exp $
+$NetBSD: distinfo,v 1.4 2012/04/22 11:51:38 wiz Exp $
 
-SHA1 (Mozilla-CA-20111025.tar.gz) = f6bc457f91eea7e0d302b30820c5904794c20deb
-RMD160 (Mozilla-CA-20111025.tar.gz) = 8755b9256a81bf1e3a02c57a9f78648d7205e17c
-Size (Mozilla-CA-20111025.tar.gz) = 118423 bytes
+SHA1 (Mozilla-CA-20120309.tar.gz) = 7d1eb413fffd9ff036ae626e3530bb340cf92dca
+RMD160 (Mozilla-CA-20120309.tar.gz) = 41174c5713324d89f0d85806ac162e5385c205fc
+Size (Mozilla-CA-20120309.tar.gz) = 119448 bytes
