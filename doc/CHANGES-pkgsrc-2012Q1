@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.17 2012/04/22 15:23:06 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.18 2012/04/22 18:03:37 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -87,3 +87,5 @@ Pullup ticket #3747 - requested by wiz
 mail/re-alpine: build fix update
 Pullup ticket #3749 - requested by taca
 security/openssl: security update
+Pullup ticket #3748 - requested by pettai
+www/gallery2: security update
