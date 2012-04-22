@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11029 2012/04/22 15:13:35 wiz Exp $
+$NetBSD: TODO,v 1.11030 2012/04/22 15:54:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -912,7 +912,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmilter-8.14.5
 	o libmusicbrainz-4.0.0
 	o libnasl-2.3.1
-	o libnice-0.1.2
 	o libnids-1.24
 	o libnotify-0.7.1
 	o liboobs-2.32.0 [GNOME 2.32]
