@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2011/08/16 22:40:51 wiz Exp $
+$NetBSD: distinfo,v 1.9 2012/04/22 10:50:20 wiz Exp $
 
-SHA1 (IMDB-Film-0.50.tar.gz) = bbe3239a1c4b6b18085505f4def21928f4b97641
-RMD160 (IMDB-Film-0.50.tar.gz) = 26730686df587839688040fce65beaa094c43602
-Size (IMDB-Film-0.50.tar.gz) = 86331 bytes
+SHA1 (IMDB-Film-0.51.tar.gz) = f3015b3419a825f3e99923d9b95ea7a3aea19668
+RMD160 (IMDB-Film-0.51.tar.gz) = 5838303cad80317fd950db37bc41ce3f66a82202
+Size (IMDB-Film-0.51.tar.gz) = 86376 bytes
 SHA1 (patch-aa) = f46b6329d55ee025db25dc3e708a7ed8fdbdebfe
