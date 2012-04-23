@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1308 2012/04/23 17:44:25 ghen Exp $
+$NetBSD: CHANGES-2012,v 1.1309 2012/04/23 21:37:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/py-testtools to 0.9.14 [obache 2012-04-23]
 	Updated textproc/py-xlrd to 0.7.7 [obache 2012-04-23]
 	Updated mail/dovecot2 to 2.1.5 [ghen 2012-04-23]
+	Updated wm/notion to 3.2012042300 [wiz 2012-04-23]
