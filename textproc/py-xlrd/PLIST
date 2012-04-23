@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/23 12:58:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/23 13:13:44 obache Exp $
 bin/runxlrd.py
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/xlrd/__init__.py
@@ -22,6 +22,9 @@ ${PYSITELIB}/xlrd/formatting.pyo
 ${PYSITELIB}/xlrd/formula.py
 ${PYSITELIB}/xlrd/formula.pyc
 ${PYSITELIB}/xlrd/formula.pyo
+${PYSITELIB}/xlrd/info.py
+${PYSITELIB}/xlrd/info.pyc
+${PYSITELIB}/xlrd/info.pyo
 ${PYSITELIB}/xlrd/licences.py
 ${PYSITELIB}/xlrd/licences.pyc
 ${PYSITELIB}/xlrd/licences.pyo
