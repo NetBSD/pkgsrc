@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.9 2010/08/21 05:07:51 obache Exp $
+# $NetBSD: find-libs.mk,v 1.10 2012/04/23 08:44:00 sbd Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,12 +74,16 @@ BUILTIN_LIB_FOUND.${_lib_}!=    \
 .        endif
 .      endfor
 .    else
+# XXX: Why are we looking in '/usr/lib${ABI}' and '/lib${ABI}', as we should
+# XXX: only be looking in '/usr/lib${LIBABISUFFIX}' and '/lib${LIBABISUFFIX}'
 BUILTIN_LIB_FOUND.${_lib_}!=	\
 	if ${TEST} "`${ECHO} /usr/lib${ABI}/lib${_lib_}.*`" != "/usr/lib${ABI}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
 	elif ${TEST} "`${ECHO} /lib${ABI}/lib${_lib_}.*`" != "/lib${ABI}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
 	elif ${TEST} "`${ECHO} /usr/lib${LIBABISUFFIX}/lib${_lib_}.*`" != "/usr/lib${LIBABISUFFIX}/lib${_lib_}.*"; then \
+		${ECHO} yes;						\
+	elif ${TEST} "`${ECHO} /lib${LIBABISUFFIX}/lib${_lib_}.*`" != "/lib${LIBABISUFFIX}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
