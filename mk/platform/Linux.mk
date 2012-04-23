@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.50 2012/04/09 04:19:24 sbd Exp $
+# $NetBSD: Linux.mk,v 1.51 2012/04/23 08:14:36 sbd Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -87,8 +87,8 @@ LIBABISUFFIX?=          64
 .endif
 
 ## Use _CMD so the command only gets run when needed!
-.if exists(/lib/libc.so.6)
-_GLIBC_VERSION_CMD=	/lib/libc.so.6 --version | \
+.if exists(/lib${LIBABISUFFIX}/libc.so.6)
+_GLIBC_VERSION_CMD=	/lib${LIBABISUFFIX}/libc.so.6 --version | \
 				sed -ne's/^GNU C.*version \(.*\),.*$$/\1/p'
 GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .endif
