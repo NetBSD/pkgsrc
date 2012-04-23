@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/26 09:51:52 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/23 03:41:28 mspo Exp $
 bin/sex
 man/man6/sex.6
+man/cat6/sex.0
