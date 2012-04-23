@@ -1,4 +1,4 @@
-# $NetBSD: distutils.mk,v 1.5 2012/04/08 20:23:21 wiz Exp $
+# $NetBSD: distutils.mk,v 1.6 2012/04/23 13:02:06 obache Exp $
 #
 # Common logic for python distributions that use distutils.
 #
@@ -26,5 +26,7 @@ PY_NO_EGG?=	no
 
 # Egg files have the version encoded, so generalize in PLIST.
 PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+PRINT_PLIST_AWK+=	{ gsub("${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
+				"$${EGG_FILE}") }
 
 .include "../../lang/python/extension.mk"
