@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/19 16:19:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/23 21:37:48 wiz Exp $
 bin/notion
 bin/pwm3plus
 lib/notion/bin/ion-completefile
@@ -63,8 +63,10 @@ share/examples/notion/cfg_statusbar.lua
 share/examples/notion/cfg_tiling.lua
 share/examples/notion/contrib/LICENSE
 share/examples/notion/contrib/README
+share/examples/notion/contrib/create_gitindex.sh
 share/examples/notion/contrib/exact-version
 share/examples/notion/contrib/index.html
+share/examples/notion/contrib/index_git.html
 share/examples/notion/contrib/install-scripts.sh
 share/examples/notion/contrib/keybindings/cfg_mouse.lua
 share/examples/notion/contrib/keybindings/dans_bindings.lua
@@ -209,10 +211,10 @@ share/examples/notion/look_newviolet.lua
 share/examples/notion/look_simpleblue.lua
 share/examples/notion/lookcommon_clean.lua
 share/examples/notion/lookcommon_emboss.lua
-share/locale/cs/LC_MESSAGES/ion3.mo
-share/locale/de/LC_MESSAGES/ion3.mo
-share/locale/fi/LC_MESSAGES/ion3.mo
-share/locale/fr/LC_MESSAGES/ion3.mo
+share/locale/cs/LC_MESSAGES/notion.mo
+share/locale/de/LC_MESSAGES/notion.mo
+share/locale/fi/LC_MESSAGES/notion.mo
+share/locale/fr/LC_MESSAGES/notion.mo
 share/notion/ion-completeman
 share/notion/ion-runinxterm
 share/notion/welcome.cs.txt

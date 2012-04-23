@@ -1,8 +1,8 @@
-$NetBSD: patch-system.mk,v 1.1.1.1 2012/01/08 15:22:14 wiz Exp $
+$NetBSD: patch-system.mk,v 1.2 2012/04/23 21:37:48 wiz Exp $
 
 Adapt for pkgsrc.
 
---- system.mk.orig	2011-10-29 18:27:06.000000000 +0000
+--- system.mk.orig	2012-04-23 16:41:31.000000000 +0000
 +++ system.mk
 @@ -8,7 +8,8 @@
  
@@ -60,7 +60,7 @@ Adapt for pkgsrc.
  #X11_PREFIX=/usr/openwin
  
 -X11_LIBS=-L$(X11_PREFIX)/lib -lX11 -lXext
-+X11_LIBS=${LINKER_RPATH_FLAG}${X11_PREFIX}/lib -L$(X11_PREFIX)/lib -lX11 -lXext
++X11_LIBS=${COMPILER_RPATH_FLAG}${X11_PREFIX}/lib -L$(X11_PREFIX)/lib -lX11 -lXext
  X11_INCLUDES=-I$(X11_PREFIX)/include
  
  # XFree86 libraries up to 4.3.0 have a bug that can cause a segfault.
