@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/04/10 12:12:21 ghen Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/04/23 17:43:15 ghen Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -521,6 +521,7 @@ share/doc/dovecot/wiki/Errors.ChgrpNoPerm.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
+share/doc/dovecot/wiki/HowTo.F5SLBTLSOffload.txt
 share/doc/dovecot/wiki/HowTo.ImapcProxy.txt
 share/doc/dovecot/wiki/HowTo.PopBSMTPAndDovecot.txt
 share/doc/dovecot/wiki/HowTo.PopRelay.txt
