@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1313 2012/04/24 07:52:06 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1314 2012/04/24 11:57:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated geography/viking to 1.3 [gdt 2012-04-24]
 	Updated security/openssl to 0.9.8w [taca 2012-04-24]
 	Updated emulators/suse121_expat to 12.1nb2 [obache 2012-04-24]
+	Updated www/py-webcolors to 1.4 [obache 2012-04-24]
