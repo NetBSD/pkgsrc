@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.118 2012/04/16 05:03:03 sbd Exp $
+# $NetBSD: gcc.mk,v 1.119 2012/04/24 07:44:11 sbd Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -610,6 +610,11 @@ _COMPILER_ABI_FLAG.64=  -m64
 .endif
 
 .if ${OPSYS} == "Darwin"
+_COMPILER_ABI_FLAG.32=  -m32
+_COMPILER_ABI_FLAG.64=  -m64
+.endif
+
+.if ${OPSYS} == "Linux"
 _COMPILER_ABI_FLAG.32=  -m32
 _COMPILER_ABI_FLAG.64=  -m64
 .endif
