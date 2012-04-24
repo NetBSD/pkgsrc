@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/12/03 00:02:17 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/24 11:57:23 obache Exp $
 #
 
-DISTNAME=	webcolors-1.3.1
+DISTNAME=	webcolors-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://bitbucket.org/ubernostrum/webcolors/downloads/ \
@@ -10,7 +10,7 @@ MASTER_SITES=	http://bitbucket.org/ubernostrum/webcolors/downloads/ \
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.bitbucket.org/ubernostrum/webcolors/overview/
 COMMENT=	Library for working with color specifications for HTML and CSS
-#LICENSE=	# just OSI Approved BSD License
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

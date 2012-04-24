@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/15 13:37:23 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/04/24 11:57:23 obache Exp $
 
-SHA1 (webcolors-1.3.1.tar.gz) = 6e0bddf81bd3b1258cd5b2c596964a2a98708304
-RMD160 (webcolors-1.3.1.tar.gz) = 479f2ed6ccffadbe7f1f0ede3ee2be43d0664bc1
-Size (webcolors-1.3.1.tar.gz) = 6429 bytes
+SHA1 (webcolors-1.4.tar.gz) = 6e3466a8803b2fd470bcb168bbcb3eb1d2189db1
+RMD160 (webcolors-1.4.tar.gz) = c6c976a70917f63e1df6fd90734cc356f5f845a7
+Size (webcolors-1.4.tar.gz) = 7843 bytes
