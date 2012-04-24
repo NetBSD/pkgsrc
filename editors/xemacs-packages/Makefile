@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2011/07/04 22:23:12 jym Exp $
+# $NetBSD: Makefile,v 1.57 2012/04/24 15:43:32 hauke Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.16
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=packages/}
@@ -29,7 +29,7 @@ DISTFILES=	\
 		edebug-1.20-pkg.tar.gz \
 		edict-1.16-pkg.tar.gz \
 		ediff-1.49-pkg.tar.gz \
-		edit-utils-2.11-pkg.tar.gz \
+		edit-utils-2.43-pkg.tar.gz \
 		edt-1.13-pkg.tar.gz \
 		efs-1.32-pkg.tar.gz \
 		egg-its-1.27-pkg.tar.gz \
@@ -141,7 +141,7 @@ DIST_SUBDIR=	${PKGBASE}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
-USE_TOOLS+=	gtar
+USE_TOOLS+=	printf gtar gawk
 
 FONTS_DIRS.x11+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/fonts
 FONTS_DIRS.x11+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/origfonts
@@ -185,7 +185,6 @@ PLIST_SUBST+=	ELSUFX=
 .if defined(PKG_DEVELOPER) && ${OPSYS} == "NetBSD"
 ED=	/bin/ed
 FTP=	/usr/bin/ftp
-PRINTF=	/usr/bin/printf
 
 # Make a list of packages from a directory list output
 .PHONY: xemacs-make-package-list
@@ -197,12 +196,12 @@ xemacs-fetch-package-list:
 # Merge package list data into Makefile
 .PHONY: xemacs-merge-package-list
 xemacs-merge-package-list:
-	@{ \
+	{ \
 		${SED} '/^DISTFILES/q' ${PKGDIR}/Makefile; \
 		${SED} 's|^|		|' ${PKGDIR}/packages.list; \
 		${SED} -n '/^### DISTFILES/,$$p' ${PKGDIR}/Makefile; \
 	} >${PKGDIR}/Makefile.work
-	@{ \
+	{ \
 		${PRINTF} '/^DISTFILES\n+1\nka\n/^### DISTFILES\n-2\nkb\n'; \
 		${PRINTF} "'a,'b"'s/$$/ \\\\/\nw\nq\n'; \
 	} | ${ED} - ${PKGDIR}/Makefile.work
@@ -215,29 +214,29 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
 .for DISTFILE in ${DISTFILES}
 	@${ECHO_MSG} -n "Extracting ${DISTFILE} ... "
-	@${GTAR} xCzf ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages \
+	${GTAR} xCzf ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages \
 		${DISTDIR}/${DIST_SUBDIR}/${DISTFILE}
 	@${ECHO_MSG} "done"
 .endfor
 	@${ECHO_MSG} -n "Fixing file ownerships ... "
-	@${CHOWN} -R ${BINOWN}:${BINGRP} \
+	${CHOWN} -R ${BINOWN}:${BINGRP} \
 		${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
 	@${ECHO_MSG} "done"
 	@${ECHO_MSG} -n "Fixing file permissions ... "
-	@${CHMOD} -R g-w,o-w ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
+	${CHMOD} -R g-w,o-w ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
 	@${ECHO_MSG} "done"
 .for PROG in ${REPLACEMENT_PROGS}
 	@${ECHO_MSG} "Fixing ${PROG} paths"
 	for f in ${REPLACEMENTS.${PROG}}; do 			\
 		cp ${DESTDIR}$$f ${DESTDIR}$$f.pre;		\
-		sed -e 's|#!.*${PROG}|${PREFIX}/bin/${PROG}|'	\
+		${SED} -e 's|#!.*${PROG}|${PREFIX}/bin/${PROG}|'	\
 			${DESTDIR}$$f.pre > ${DESTDIR}$$f;	\
 		rm ${DESTDIR}$$f.pre;				\
 	done
 .endfor
 .if defined(MANZ)
 	@${ECHO_MSG} -n "Compressing \".el\" files ... "
-	@cd ${DESTDIR}${PREFIX} && \
+	cd ${DESTDIR}${PREFIX} && \
 		${GREP} '\$${ELSUFX}$$' ${PLIST_SRC} | \
 		${SED} -e 's#\$${ELSUFX}$$##' | \
 		${XARGS} ${GZIP_CMD}
