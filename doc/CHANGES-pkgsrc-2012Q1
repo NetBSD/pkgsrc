@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.20 2012/04/22 23:07:10 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.21 2012/04/24 07:48:31 sbd Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -99,3 +99,5 @@ lang/ruby193-base: security fix
 Pullup ticket #3752 - requested by taca
 lang/ruby: version bump
 lang/ruby19-base: security fix
+Pullup ticket #3755 - requested by taca
+security/openssl security update.
