@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2006/07/04 17:50:22 rpaulo Exp $
+$NetBSD: distinfo,v 1.19 2012/04/24 15:43:32 hauke Exp $
 
 SHA1 (xemacs-packages/Sun-1.15-pkg.tar.gz) = fb227f01bee8ce85fdb64c999393a1c9b936b8a0
 RMD160 (xemacs-packages/Sun-1.15-pkg.tar.gz) = 523658714111aaae8915ae164f98cdc2d39883b6
@@ -66,9 +66,9 @@ Size (xemacs-packages/edict-1.16-pkg.tar.gz) = 96111 bytes
 SHA1 (xemacs-packages/ediff-1.49-pkg.tar.gz) = 7dcbe3d4606cc8a659f62844a9dcae91d7609141
 RMD160 (xemacs-packages/ediff-1.49-pkg.tar.gz) = 8b524e98396e1ac4ac3b9f9ed4cf57d46b809d41
 Size (xemacs-packages/ediff-1.49-pkg.tar.gz) = 305252 bytes
-SHA1 (xemacs-packages/edit-utils-2.11-pkg.tar.gz) = 705f66ec4a9c6011704ea4ec272762082c292994
-RMD160 (xemacs-packages/edit-utils-2.11-pkg.tar.gz) = c4bd8704ee7bbf3fae1c6382275253fad4693ace
-Size (xemacs-packages/edit-utils-2.11-pkg.tar.gz) = 925407 bytes
+SHA1 (xemacs-packages/edit-utils-2.43-pkg.tar.gz) = 30699e245a1993454fb03997dabf3807b0e3cdf9
+RMD160 (xemacs-packages/edit-utils-2.43-pkg.tar.gz) = 87b6dcadab81f634f2d7deb83f69493075ae964d
+Size (xemacs-packages/edit-utils-2.43-pkg.tar.gz) = 958798 bytes
 SHA1 (xemacs-packages/edt-1.13-pkg.tar.gz) = af1e8cadf883b2150411a965fceae06a7366a34c
 RMD160 (xemacs-packages/edt-1.13-pkg.tar.gz) = f969a1f722fa2b88689a73fdc784960bc1a42cbf
 Size (xemacs-packages/edt-1.13-pkg.tar.gz) = 62754 bytes
