@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:50:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/04/24 15:43:32 hauke Exp $
 lib/xemacs/xemacs-packages/etc/BABYL
 lib/xemacs/xemacs-packages/etc/app-defaults/de/Emacs
 lib/xemacs/xemacs-packages/etc/app-defaults/fr/Emacs
@@ -2345,6 +2345,8 @@ lib/xemacs/xemacs-packages/lisp/edit-utils/compare-w.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/compare-w.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/completion.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/completion.elc
+lib/xemacs/xemacs-packages/lisp/edit-utils/crm.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edit-utils/crm.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/custom-load.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/dabbrev.el${ELSUFX}
@@ -2447,6 +2449,8 @@ lib/xemacs/xemacs-packages/lisp/edit-utils/vertical-mode.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/vertical-mode.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/where-was-i-db.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/where-was-i-db.elc
+lib/xemacs/xemacs-packages/lisp/edit-utils/wide-edit.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/edit-utils/wide-edit.elc
 lib/xemacs/xemacs-packages/lisp/edit-utils/winring.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/edit-utils/winring.elc
 lib/xemacs/xemacs-packages/lisp/edt/ChangeLog
