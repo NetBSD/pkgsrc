@@ -1,0 +1,36 @@
+$NetBSD: patch-examples_cpp_Makefile,v 1.1 2012/04/25 17:52:59 hans Exp $
+
+--- examples/cpp/Makefile.orig	2011-03-25 17:58:35.000000000 +0100
++++ examples/cpp/Makefile	2012-04-25 17:31:34.833338175 +0200
+@@ -75,26 +75,26 @@ LIBS_BASE = \
+ all: $(PROGS)
+ 
+ $(SERVERPROGS_CGI):%.cgi:%_cgi.o
+-	$(CXXLD) -o $@ $^ $(LIBS_SERVER_CGI) $(LDFLAGS)
++	$(CXXLD) -o $@ $(LDFLAGS) $^ $(LIBS_SERVER_CGI)
+ 
+ $(SERVERPROGS_ABYSS):%:%.o
+-	$(CXXLD) -o $@ $^ $(LIBS_SERVER_ABYSS) $(LDFLAGS)
++	$(CXXLD) -o $@ $(LDFLAGS) $^ $(LIBS_SERVER_ABYSS)
+ 
+ $(CLIENTPROGS):%:%.o
+-	$(CXXLD) -o $@ $^ $(LIBS_CLIENT) $(LDFLAGS)
++	$(CXXLD) -o $@ $(LDFLAGS) $^ $(LIBS_CLIENT)
+ 
+ 
+ LIBS_PSTREAM_CLIENT = \
+   $(shell $(XMLRPC_C_CONFIG) c++2 client --libs)
+ 
+ pstream_client:%:%.o
+-	$(CXXLD) -o $@ $^ $(LIBS_PSTREAM_CLIENT) $(LDFLAGS)
++	$(CXXLD) -o $@ $(LDFLAGS) $^ $(LIBS_PSTREAM_CLIENT)
+ 
+ LIBS_PSTREAM_SERVER = \
+   $(shell $(XMLRPC_C_CONFIG) c++2 pstream-server --libs)
+ 
+ pstream_inetd_server:%:%.o
+-	$(CXXLD) -o $@ $^ $(LIBS_PSTREAM_SERVER) $(LDFLAGS)
++	$(CXXLD) -o $@ $(LDFLAGS) $^ $(LIBS_PSTREAM_SERVER)
+ 
+ OBJECTS = $(patsubst %,%.o,$(patsubst %.cgi,%_cgi,$(PROGS)))
+ 
