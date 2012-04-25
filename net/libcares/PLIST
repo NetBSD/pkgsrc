@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2010/07/25 13:09:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/25 15:50:51 drochner Exp $
 include/ares.h
+include/ares_build.h
 include/ares_dns.h
+include/ares_rules.h
 include/ares_version.h
 lib/libcares.la
 lib/pkgconfig/libcares.pc
@@ -11,8 +13,10 @@ man/man3/ares_dup.3
 man/man3/ares_expand_name.3
 man/man3/ares_expand_string.3
 man/man3/ares_fds.3
+man/man3/ares_free_data.3
 man/man3/ares_free_hostent.3
 man/man3/ares_free_string.3
+man/man3/ares_get_servers.3
 man/man3/ares_gethostbyaddr.3
 man/man3/ares_gethostbyname.3
 man/man3/ares_gethostbyname_file.3
@@ -20,16 +24,22 @@ man/man3/ares_getnameinfo.3
 man/man3/ares_getsock.3
 man/man3/ares_init.3
 man/man3/ares_init_options.3
+man/man3/ares_library_cleanup.3
+man/man3/ares_library_init.3
 man/man3/ares_mkquery.3
 man/man3/ares_parse_a_reply.3
 man/man3/ares_parse_aaaa_reply.3
+man/man3/ares_parse_mx_reply.3
 man/man3/ares_parse_ns_reply.3
 man/man3/ares_parse_ptr_reply.3
+man/man3/ares_parse_srv_reply.3
+man/man3/ares_parse_txt_reply.3
 man/man3/ares_process.3
 man/man3/ares_query.3
 man/man3/ares_save_options.3
 man/man3/ares_search.3
 man/man3/ares_send.3
+man/man3/ares_set_servers.3
 man/man3/ares_set_socket_callback.3
 man/man3/ares_strerror.3
 man/man3/ares_timeout.3
