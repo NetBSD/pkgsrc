@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/04/08 20:45:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2012/04/25 18:40:27 hans Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -20,6 +20,7 @@ GCC_VERSION=		3.4.6
 NOT_FOR_PLATFORM=	Interix-*-*
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 # Determine whether to use binutils
 .if ${OPSYS} == "NetBSD"
@@ -44,6 +45,14 @@ USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
 MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS:Q}
 .  endif
+.elif ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		OBJDUMP=/usr/sfw/bin/gobjdump
+CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
+.  if !exists(/usr/sfw/bin/gas)
+CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
+.  else
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
+.  endif
 .endif
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
 DEPENDS+=	binutils>=2.14:../../devel/binutils
@@ -53,103 +62,25 @@ CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 .endif
 
-REPLACE_AWK+=		libjava/addr2name.awk
-USE_TOOLS+=		awk:run
-
-# Optional languages - change as required
-#   If BUILD_ADA is YES, then you'll need to specify
-#   an Ada in the "Ada bootstrap compiler section"
-BUILD_DEFS+=	BUILD_ADA BUILD_CXX BUILD_F77 \
-		BUILD_JAVA BUILD_OBJC
-BUILD_ADA?=	NO
-BUILD_CXX?=	YES
-BUILD_F77?=	YES
-BUILD_JAVA?=	YES
-BUILD_OBJC?=	YES
-
-LANGS='c'
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-LANGS+='ada'
-.endif
-.if !empty(BUILD_CXX:M[Yy][Ee][Ss])
-LANGS+='c++'
-.endif
-.if !empty(BUILD_F77:M[Yy][Ee][Ss])
-LANGS+='f77'
-.endif
-.if !empty(BUILD_JAVA:M[Yy][Ee][Ss])
-LANGS+='java'
-.endif
-.if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
-LANGS+='objc'
-.endif
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
-CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
-MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
-
-# FIXME Because gcc ignores rpath for some reason, it breaks on DragonFly -
-# binaries are linked against libintl. Disabling NLS for now.
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-nls
-.endif
 
 UNLIMIT_RESOURCES+=	datasize
 
-.if !empty(BUILD_F77:M[Yy][Ee][Ss])
-.include "../../devel/gmp/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
-USE_TOOLS+=		chmod
-MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
-.endif
-
 # GNU pth is useless here
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-# ADA tasking strictly requires native threads
-PTHREAD_OPTS+=		require native
-.else
 PTHREAD_OPTS+=		native
-.endif
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
 CONFIGURE_ARGS+=	--disable-threads
 .endif
 
-USE_TOOLS+=		gmake makeinfo msgfmt
+USE_TOOLS+=		gmake makeinfo
 HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
-
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-
-# Ada bootstrap compiler section
-# An Ada compiler is required to build the Ada compiler. You
-# may specify:
-#USE_GCC34ADA	=# Define to use gcc-3.4.x-ada
-# Or, you may specify the path of any gcc/gnat Ada compiler
-# by providing the full path of the compiler (example) below:
-#ALT_GCC=	prefix/bin/gcc
-.  if defined(ALT_GCC)
-.     if exists(${ALT_GCC})
-ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
-.        if !empty(ALT_GCC_RTS)
-RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
-.        else
-PKG_SKIP_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
-.        endif
-.     else
-PKG_SKIP_REASON+=	"Missing bootstrap Ada compiler"
-.     endif
-.  endif
-.  if !defined(USE_GCC34ADA) && !defined(ALT_GCC)
-PKG_SKIP_REASON+=	"An Ada bootstrap compiler must be specified to BUILD_ADA"
-.  endif
-.endif
 
 GCC_SUBPREFIX=		gcc34
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
@@ -175,36 +106,9 @@ post-patch:
 		${WRKSRC}/libstdc++-v3/config/abi/${ABI_BASELINE_PAIR}/baseline_symbols.txt
 .  endif
 .endif
-	(cd ${FILESDIR}; \
-		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
-		${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
-		${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
-		for i in *.adb *.ads ; do \
-		${CP} $$i ${WRKSRC}/gcc/ada; \
-	done )
 
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-.  if defined(USE_GCC34ADA)
-# Overide compiler.mk setup to use gcc-3.4.x-ada
-pre-configure:
-.include "../../lang/gcc34-ada/preconfigure.mk"
-.  elif defined(ALT_GCC)
-pre-configure:
-	(${TEST} -d ${WRKDIR}/.gcc/bin/ || ${MKDIR} ${WRKDIR}/.gcc/bin/)
-	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
-	cd ${RALT_GCC_RTS} && ${LN} -sf ${ALT_GCC_RTS}/libgnat.a .)
-	(cd ${ALT_GCC:H} && \
-	bin_files=`${FIND} . -type f \( -perm -0100 \) -print` && \
-	cd ${WRKDIR}/.gcc/bin/ && \
-	for filename in ${ALT_GCC:T} $${bin_files} ; do \
-		${ECHO} '#!${TOOLS_SHELL}' > $${filename}; \
-		${ECHO} -n "exec ${ALT_GCC:H}/$${filename} " >>$${filename}; \
-		${ECHO} '"$$@"' >>$${filename}; \
-		${CHMOD} +x $${filename}; \
-	done )
-.  endif
-.endif
 .if ${OPSYS} == "DragonFly"
+pre-configure:
 	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/gcc/config/dragonfly.h
 	${CP} ${FILESDIR}/dragonfly-spec.h ${WRKSRC}/gcc/config/dragonfly-spec.h
 	${CP} ${FILESDIR}/i386-dragonfly.h ${WRKSRC}/gcc/config/i386/dragonfly.h
@@ -217,7 +121,7 @@ do-configure:
 
 do-build:
 	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Mgcc-ada)
 	(${_ULIMIT_CMD} cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib-shared)
 	(${_ULIMIT_CMD} cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
 .endif
@@ -231,7 +135,7 @@ do-test:
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${GMAKE} install \
 	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Mgcc-ada)
 		(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
 		for EXPANDEDSPECPATH in $${SPECPATH} ; do \
 			SPECDIR=`${DIRNAME} $${EXPANDEDSPECPATH}`; \
@@ -245,13 +149,4 @@ GENERATE_PLIST+=							\
 		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g";
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(BUILD_ADA:M[Yy][Ee][Ss])
-.  if  defined(USE_GCC34ADA)
-BUILDLINK_DEPMETHOD.gcc34-ada=build
-.include "../../lang/gcc34-ada/buildlink3.mk"
-.  endif
-.endif
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
