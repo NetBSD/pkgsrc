@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/15 11:10:58 wiz Exp $
-
-SHA1 (mscgen-src-0.20.tar.gz) = cb718587e5fda99ca8b36801c57ea794d07bf211
-RMD160 (mscgen-src-0.20.tar.gz) = 07db2a2eb21b2138298ef07da0f81b4973dc3a4b
-Size (mscgen-src-0.20.tar.gz) = 204818 bytes
