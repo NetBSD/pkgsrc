@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/04/25 10:00:53 obache Exp $
+# $NetBSD: Makefile,v 1.39 2012/04/25 12:20:48 obache Exp $
 #
 
 DISTNAME=	ircservices-5.0.64
@@ -30,9 +30,7 @@ CONFIGURE_ARGS+=	-prefix ${PREFIX:Q}
 CONFIGURE_ARGS+=	-cc ${CC:Q}
 CONFIGURE_ARGS+=	-cflags ${CFLAGS:Q}
 CONFIGURE_ARGS+=	-lflags ${LDFLAGS:Q}
-CONFIGURE_ARGS+=	-libs ${LIBS:Q}
-# XXX: why LIBS will not be quoted well?
-LIBS?=
+CONFIGURE_ARGS+=	${empty(LIBS):?:-libs ${LIBS:Q}}
 
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	post-patch
