@@ -1,18 +1,18 @@
-$NetBSD: patch-config_icu-config-bottom,v 1.1 2012/04/12 14:00:00 ryoon Exp $
+$NetBSD: patch-config_icu-config-bottom,v 1.2 2012/04/25 18:53:44 adam Exp $
 
---- config/icu-config-bottom.orig	2011-07-19 21:16:46.000000000 +0000
+--- config/icu-config-bottom.orig	2012-04-05 20:46:38.000000000 +0000
 +++ config/icu-config-bottom
 @@ -352,11 +352,11 @@ do
  	    ;;
  
  	--version)
--        echo $ECHO_N $VERSION
-+        echo $ECHO_N $VERSION${ECHO_C}
-         ;;
+-	    echo $ECHO_N $VERSION
++	    echo $ECHO_N $VERSION${ECHO_C}
+ 	    ;;
  
-     --unicode-version)
--        echo $ECHO_N $UNICODE_VERSION
-+        echo $ECHO_N $UNICODE_VERSION${ECHO_C}
-         ;;
- 
- 	--help)
+ 	--unicode-version)
+-	    echo $ECHO_N $UNICODE_VERSION
++	    echo $ECHO_N $UNICODE_VERSION${ECHO_C}
+ 	    ;;
+ 	
+ 	--host)
