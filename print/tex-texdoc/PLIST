@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/09 21:20:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/25 15:47:49 minskim Exp $
 bin/texdoc
-bin/texdoctk
+${PLIST.x11}bin/texdoctk
 share/texmf-dist/texdoc/texdoc.cnf
 share/texmf/scripts/texdoc/Data.meta.lua
 share/texmf/scripts/texdoc/Data.tlpdb.lua
