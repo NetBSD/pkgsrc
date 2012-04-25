@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/07/25 13:18:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/04/25 15:55:42 drochner Exp $
 sbin/ircd
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
@@ -23,6 +23,7 @@ share/examples/unrealircd/example.ru.conf
 share/examples/unrealircd/example.tr.conf
 share/unrealircd/aliases/aliases.conf
 share/unrealircd/aliases/anope.conf
+share/unrealircd/aliases/atheme.conf
 share/unrealircd/aliases/auspice.conf
 share/unrealircd/aliases/cygnus.conf
 share/unrealircd/aliases/epona.conf
@@ -64,6 +65,7 @@ share/unrealircd/modules/m_help.so
 share/unrealircd/modules/m_htm.so
 share/unrealircd/modules/m_invite.so
 share/unrealircd/modules/m_ison.so
+share/unrealircd/modules/m_issecure.so
 share/unrealircd/modules/m_join.so
 share/unrealircd/modules/m_kick.so
 share/unrealircd/modules/m_kill.so
@@ -82,6 +84,7 @@ share/unrealircd/modules/m_nachat.so
 share/unrealircd/modules/m_names.so
 share/unrealircd/modules/m_netinfo.so
 share/unrealircd/modules/m_nick.so
+share/unrealircd/modules/m_nopost.so
 share/unrealircd/modules/m_oper.so
 share/unrealircd/modules/m_opermotd.so
 share/unrealircd/modules/m_part.so
@@ -106,6 +109,7 @@ share/unrealircd/modules/m_silence.so
 share/unrealircd/modules/m_sjoin.so
 share/unrealircd/modules/m_sqline.so
 share/unrealircd/modules/m_squit.so
+share/unrealircd/modules/m_starttls.so
 share/unrealircd/modules/m_stats.so
 share/unrealircd/modules/m_svsfline.so
 share/unrealircd/modules/m_svsjoin.so
