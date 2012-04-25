@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.101 2012/02/06 12:40:05 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2012/04/25 11:56:42 hauke Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
 
 DISTNAME=	xemacs-21.4.22
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
@@ -38,6 +38,13 @@ CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--with-msw=no
 CFLAGS+=		-Dunix
+
+# Use terminfo on NetBSD-6 and newer.
+# We cannot use terminfo.*.mk as XEmacs enforces a link to termcap,
+# but this is fine for us.
+.if (${OPSYS} == "NetBSD") && exists(/usr/include/term.h)
+CPPFLAGS+=	-DTERMINFO
+.endif
 
 .if ${X11_TYPE} != "modular"
 INFOPATH=		${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}
