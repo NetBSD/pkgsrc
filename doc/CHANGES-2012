@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1317 2012/04/25 13:01:31 morr Exp $
+$NetBSD: CHANGES-2012,v 1.1318 2012/04/25 16:01:04 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2127,3 +2127,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated security/ruby-simple_oauth to 0.1.7 [obache 2012-04-24]
 	Removed devel/mscgen successor graphics/mscgen [wiz 2012-04-24]
 	Updated www/wordpress to 3.3.2 [morr 2012-04-25]
+	Updated devel/tre to 0.8.0 [drochner 2012-04-25]
+	Updated net/libcares to 1.7.5 [drochner 2012-04-25]
+	Updated chat/unrealircd to 3.2.9 [drochner 2012-04-25]
+	Updated net/aria2 to 1.15.0 [drochner 2012-04-25]
