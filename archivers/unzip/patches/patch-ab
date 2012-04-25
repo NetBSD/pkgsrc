@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2010/03/03 16:27:57 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2012/04/25 19:35:02 wiz Exp $
+
+pkgsrc adaptation.
 
 --- unix/Makefile.orig	2009-01-18 22:41:18.000000000 +0000
 +++ unix/Makefile
