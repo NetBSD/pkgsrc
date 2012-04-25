@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1319 2012/04/25 17:54:25 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1320 2012/04/25 18:57:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2132,3 +2132,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated chat/unrealircd to 3.2.9 [drochner 2012-04-25]
 	Updated net/aria2 to 1.15.0 [drochner 2012-04-25]
 	Updated misc/libreoffice3-bin to 3.5.2 [ryoon 2012-04-25]
+	Updated textproc/icu to 49.1.1 [adam 2012-04-25]
+	Updated textproc/php-intl to 2.0.0 [adam 2012-04-25]
