@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1318 2012/04/25 16:01:04 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.1319 2012/04/25 17:54:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2131,3 +2131,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/libcares to 1.7.5 [drochner 2012-04-25]
 	Updated chat/unrealircd to 3.2.9 [drochner 2012-04-25]
 	Updated net/aria2 to 1.15.0 [drochner 2012-04-25]
+	Updated misc/libreoffice3-bin to 3.5.2 [ryoon 2012-04-25]
