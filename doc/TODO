@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11039 2012/04/25 16:01:04 drochner Exp $
+$NetBSD: TODO,v 1.11040 2012/04/25 20:22:14 gls Exp $
 
 Suggested new packages
 ======================
@@ -982,7 +982,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o molden-4.8 [after which PR 40252 can be closed]
 	o monit-5.1.1
 	o mono-2.11.1
-	o moodle-2.1.5 [security release]
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.4.1
