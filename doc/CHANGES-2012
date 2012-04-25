@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1316 2012/04/25 09:20:56 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1317 2012/04/25 13:01:31 morr Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2126,3 +2126,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/py-webcolors to 1.4 [obache 2012-04-24]
 	Updated security/ruby-simple_oauth to 0.1.7 [obache 2012-04-24]
 	Removed devel/mscgen successor graphics/mscgen [wiz 2012-04-24]
+	Updated www/wordpress to 3.3.2 [morr 2012-04-25]
