@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/02/09 21:44:15 minskim Exp $
+# $NetBSD: Makefile,v 1.60 2012/04/25 22:17:19 minskim Exp $
 
 DISTNAME=	teTeX-3.0
 PKGREVISION=	11
@@ -21,8 +21,9 @@ DEPENDS+=	tex-a2ping-[0-9]*:../../graphics/tex-a2ping
 DEPENDS+=	tex-texdoc-[0-9]*:../../print/tex-texdoc
 DEPENDS+=	tex-pdftools-[0-9]*:../../print/tex-pdftools
 DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
-DEPENDS+=	xdvik-[0-9]*:../../print/xdvik
 
 META_PACKAGE=	yes
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
