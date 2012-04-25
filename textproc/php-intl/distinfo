@@ -1,15 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/02/26 02:55:28 taca Exp $
+$NetBSD: distinfo,v 1.4 2012/04/25 18:55:39 adam Exp $
 
-SHA1 (php-intl/intl-1.1.2.tgz) = c86b3a4734c331ac3e7a56bb50b11766f4c4d5f7
-RMD160 (php-intl/intl-1.1.2.tgz) = 913c9f7fbb0f117e90affbbe5b17c1f881fb2fce
-Size (php-intl/intl-1.1.2.tgz) = 142511 bytes
-SHA1 (patch-aa) = 213d5c9c99c28e7fce16436df58d9b430745d5b1
-SHA1 (patch-ab) = 01b4fa84d71319f29e0869f25e0dd1be869eaad0
-SHA1 (patch-ac) = 635ac309125521018a13dbb84d741210e80fe635
-SHA1 (patch-ad) = 3e09a48471dcf6fcfdcfca295dac778814fd2bd1
-SHA1 (patch-ae) = 750d9284f86a730fce7733ce488cbb4ae13983ce
-SHA1 (patch-af) = 815006577c08b1cab7f0e5e601770f786c61c910
-SHA1 (patch-ag) = 66db6e293f9eb9e81ccd6f8055aed2e036791247
-SHA1 (patch-ah) = 024f97675087d3f282e6cd8af059179ea7faea60
-SHA1 (patch-aj) = edb43a597a43db653af7be4d3066bf9bd376e8be
-SHA1 (patch-grapheme_grapheme__string.c) = 46d02667c47f68671a166db3ffdd3a33c2678018
+SHA1 (php-intl/intl-2.0.0.tgz) = b5876f140ad7bb071d6a8d9505446800855b4645
+RMD160 (php-intl/intl-2.0.0.tgz) = a3816f670ff7ab1ff88254f1ae8936d0ad4403d9
+Size (php-intl/intl-2.0.0.tgz) = 145979 bytes
+SHA1 (patch-aj) = 6c0ea08f73d50b43afe442bd67decc9608c5db29
