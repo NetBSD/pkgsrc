@@ -1,35 +1,58 @@
-# $NetBSD: buildlink3.mk,v 1.18 2011/04/22 13:41:55 obache Exp $
-
-BUILDLINK_PREFIX.gcc34:=${LOCALBASE}/gcc34
+# $NetBSD: buildlink3.mk,v 1.19 2012/04/25 18:40:27 hans Exp $
 
 BUILDLINK_TREE+=	gcc34
 
 .if !defined(GCC34_BUILDLINK3_MK)
 GCC34_BUILDLINK3_MK:=
 
+FIND_PREFIX:=	BUILDLINK_PREFIX.gcc34=gcc34
+.include "../../mk/find-prefix.mk"
+
+_GCC34_SUBDIR=	gcc34
+_GCC34_PREFIX=	${BUILDLINK_PREFIX.gcc34}/${_GCC34_SUBDIR}
+
 BUILDLINK_API_DEPENDS.gcc34+=	gcc34>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc34?=	gcc34>=3.4.6nb4
 BUILDLINK_PKGSRCDIR.gcc34?=	../../lang/gcc34
-.  if exists(${BUILDLINK_PREFIX.gcc34}/bin/gcc)
-_GNAT1!=${BUILDLINK_PREFIX.gcc34}/bin/gcc -print-prog-name=gnat1
-.    if exists(${_GNAT1})
-BUILDLINK_ENV+=	ADAC=${BUILDLINK_PREFIX.gcc34}/bin/gcc
+
+.  if exists(${_GCC34_PREFIX}/bin/gcc)
+# logic for detecting the ADA compiler
+gcc34_GNAT1!=${_GCC34_PREFIX}/bin/gcc -print-prog-name=gnat1
+.    if exists(${gcc34_GNAT1})
+BUILDLINK_ENV+=	ADAC=${_GCC34_PREFIX}/bin/gcc
 .    endif
-BUILDLINK_LIBDIRS.gcc34+=	lib
-_GCC_ARCHDIR!=	${DIRNAME} `${BUILDLINK_PREFIX.gcc34}/bin/gcc --print-libgcc-file-name`
-.    if empty(_GCC_ARCHDIR:M*not_found*)
-BUILDLINK_LIBDIRS.gcc34+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/
-.      if exists(${_GNAT1})
-BUILDLINK_LIBDIRS.gcc34+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/adalib
+
+# add libraries
+BUILDLINK_LIBDIRS.gcc34+=	${_GCC34_SUBDIR}/lib
+
+# find the gcc architecture
+gcc34_GCC_ARCHDIR!=	${DIRNAME} `${_GCC34_PREFIX}/bin/gcc --print-libgcc-file-name`
+
+# add the architecture dep libraries
+.    if empty(gcc34_GCC_ARCHDIR:M*not_found*)
+BUILDLINK_LIBDIRS.gcc34+=	${gcc34_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/
+
+# add the ada libraries
+.      if exists(${gcc34_GNAT1})
+BUILDLINK_LIBDIRS.gcc34+=	${gcc34_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/adalib
 .      endif
-BUILDLINK_INCDIRS.gcc34+=	include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/include
+
+# add the header files
+BUILDLINK_INCDIRS.gcc34+=	${_GCC34_SUBDIR}/include ${gcc34_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/include
 .    endif
 .  endif
 
 BUILDLINK_FILES_CMD.gcc34=	\
 	(cd  ${BUILDLINK_PREFIX.gcc34} &&	\
 	${FIND} bin libexec lib \( -type f -o -type l \) -print)
-BUILDLINK_FNAME_TRANSFORM.gcc34=	-e s:\buildlink:buildlink/gcc34:
+
+# When not using the GNU linker, gcc will always link shared libraries
+# against the shared version of libgcc. Always enable _USE_GCC_SHILB on
+# platforms that don't use the GNU linker, such as SunOS.
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+_USE_GCC_SHLIB= yes
+.endif
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(_USE_GCC_SHLIB)
@@ -39,7 +62,11 @@ BUILDLINK_DEPMETHOD.gcc34?=	build
 .  endif
 
 .include "../../mk/pthread.buildlink3.mk"
+pkgbase := gcc34
+.include "../../mk/pkg-build-options.mk"
+.if !empty(PKG_BUILD_OPTIONS.gcc34:Mnls)
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif
 .endif # GCC34_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gcc34
