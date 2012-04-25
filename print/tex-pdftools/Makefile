@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/24 20:27:18 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/25 15:47:19 minskim Exp $
 
 DISTNAME=	pdftools
 PKGNAME=	tex-${DISTNAME}-0.82
@@ -28,8 +28,8 @@ SUBST_SED.paths+=	-e 's,@EPSTOPDF@,${EPSTODPF_PREFIX}/bin/epstopdf,g'
 INSTALLATION_DIRS+=	bin
 TEX_TEXMF_DIRS=		# empty
 
-.include "options.mk"
 .include "../../print/texlive/package.mk"
+.include "options.mk"
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
