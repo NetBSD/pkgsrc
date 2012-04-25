@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/04/17 17:24:41 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2012/04/25 16:36:39 hans Exp $
 #
 
 DISTNAME=	numpy-1.6.1
@@ -39,6 +39,10 @@ PYSETUPBUILDARGS+= --fcompiler=gnu95
 .elif !empty(PKGSRC_COMPILER:Mgcc)
 PYSETUPBUILDARGS+= --fcompiler=gnu
 .endif
+
+# According to http://projects.scipy.org/numpy/ticket/1101,
+# LDFLAGS should either not be set or include -shared.
+LDFLAGS+=		-shared
 
 # needs devel/py-nose
 #do-test:
