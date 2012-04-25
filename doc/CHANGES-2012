@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1320 2012/04/25 18:57:20 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1321 2012/04/25 20:22:14 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2134,3 +2134,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/libreoffice3-bin to 3.5.2 [ryoon 2012-04-25]
 	Updated textproc/icu to 49.1.1 [adam 2012-04-25]
 	Updated textproc/php-intl to 2.0.0 [adam 2012-04-25]
+	Updated www/moodle to 2.1.5 [gls 2012-04-25]
