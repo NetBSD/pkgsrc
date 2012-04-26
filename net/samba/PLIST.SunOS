@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2012/04/26 13:04:02 hans Exp $
+lib/samba/vfs/dirsort.${LIBEXT}
+lib/samba/vfs/syncops.${LIBEXT}
