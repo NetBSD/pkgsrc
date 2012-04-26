@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/04/25 18:40:27 hans Exp $
+# $NetBSD: options.mk,v 1.2 2012/04/26 13:27:43 hans Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc34
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-ada
@@ -17,10 +17,10 @@ PKG_OPTIONS_LEGACY_VARS+=	BUILD_OBJC:gcc-objc
 .include "../../mk/bsd.options.mk"
 
 ###
-### Use internal math libs
+### Build math libraries in place
 ###
 .if !empty(PKG_OPTIONS:Mgcc-fortran)
-.  if !empty(PKG_OPTIONS:Mgcc-internal-math)
+.  if !empty(PKG_OPTIONS:Mgcc-inplace-math)
 .  include "../../devel/gmp/inplace.mk"
 .  else
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
