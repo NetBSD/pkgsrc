@@ -1,16 +1,16 @@
-$NetBSD: patch-mssqldbmodule_c,v 1.1 2011/10/14 04:14:36 dholland Exp $
+$NetBSD: patch-mssqldbmodule_c,v 1.2 2012/04/26 12:57:51 obache Exp $
 
 Fix build with latest freetds, which now provides BYTE and LPBYTE.
 
---- mssqldbmodule.c~	2006-09-22 19:44:17.000000000 +0000
+--- mssqldbmodule.c.orig	2012-04-26 12:47:37.000000000 +0000
 +++ mssqldbmodule.c
-@@ -67,9 +67,6 @@
-   #define SQLVARCHAR	SYBVARCHAR
-   #define SQLCHAR	SYBCHAR
-   #define SQLTEXT	SYBTEXT
+@@ -83,9 +83,6 @@ typedef int Py_ssize_t;
+ #define SQLVARCHAR     SYBVARCHAR
+ #define SQLCHAR        SYBCHAR
+ #define SQLTEXT        SYBTEXT
 -
--  #define BYTE		unsigned char
--  typedef unsigned char *LPBYTE;
+-#define BYTE           unsigned char
+-typedef unsigned char *LPBYTE;
  #endif
  
- #define TYPE_STRING	1
+ #define TYPE_STRING      1
