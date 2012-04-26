@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST.Linux,v 1.15 2011/10/19 01:12:01 sbd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.15.4.1 2012/04/26 13:42:20 tron Exp $
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_spu.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_spu.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_video.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_video.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_dvb.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_dvb.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcdo.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcdo.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_fb.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_fb.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_syncfb.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_syncfb.so
