@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11040 2012/04/25 20:22:14 gls Exp $
+$NetBSD: TODO,v 1.11041 2012/04/26 10:50:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -518,7 +518,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o doxygen-1.8.0
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
-	o dri2proto-2.6
 	o drivel-3.0.3
 	o dropbear-2012.055
 	o dspam-3.10.0

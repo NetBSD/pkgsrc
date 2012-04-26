@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1322 2012/04/26 10:48:46 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1323 2012/04/26 10:50:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2136,3 +2136,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/php-intl to 2.0.0 [adam 2012-04-25]
 	Updated www/moodle to 2.1.5 [gls 2012-04-25]
 	Added chat/emacs-jabber version 0.8.0 [obache 2012-04-26]
+	Updated x11/dri2proto to 2.6 [wiz 2012-04-26]
