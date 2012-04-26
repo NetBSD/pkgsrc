@@ -1,23 +1,26 @@
-# $NetBSD: Makefile,v 1.12 2011/06/14 11:23:15 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/26 12:57:51 obache Exp $
 #
 
-DISTNAME=		pymssql-0.8.0
+DISTNAME=		pymssql-1.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=		2
 CATEGORIES=		databases python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pymssql/}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://pymssql.sourceforge.net/
 COMMENT=		Python interface to MS SQL
+LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+SUBST_CLASSES+=		crlf
+SUBST_MESSAGE.crlf=	stripping EOL CR
+SUBST_STAGE.crlf=	post-extract
+SUBST_FILES.crlf=	mssqldbmodule.c pymssql.py
+SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
+
 BUILDLINK_API_DEPENDS.freetds+=	freetds>=0.63
 
-PYDISTUTILSPKG=		yes
-
 .include "../../databases/freetds/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
