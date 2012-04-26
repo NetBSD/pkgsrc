@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1324 2012/04/26 12:42:25 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1325 2012/04/26 12:58:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2138,3 +2138,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added chat/emacs-jabber version 0.8.0 [obache 2012-04-26]
 	Updated x11/dri2proto to 2.6 [wiz 2012-04-26]
 	Updated graphics/exiv2 to 0.23 [adam 2012-04-26]
+	Updated databases/py-mssql to 1.0.2 [obache 2012-04-26]
