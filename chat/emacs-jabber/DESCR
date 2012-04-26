@@ -1,0 +1,3 @@
+jabber.el is a Jabber client for Emacs. It may seem strange to have a chat
+client in an editor, but consider that chatting is, after all, just a special
+case of text editing.
