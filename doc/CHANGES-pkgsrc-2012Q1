@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.23 2012/04/26 10:08:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.24 2012/04/26 13:45:13 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -107,3 +107,5 @@ Pullup ticket #3756 - requested by morr
 www/wordpress: security update
 Pullup ticket #3757 - requested by gls
 www/moodle: security update
+Pullup ticket #3758 - requested by sbd
+multimedia/xine-lib: build fix
