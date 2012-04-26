@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/01/24 22:24:34 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/26 16:04:38 cheusov Exp $
 #
 
 DISTNAME=	dash-0.5.5.1
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	shells
 MASTER_SITES=	http://gondor.apana.org.au/~herbert/dash/files/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://gondor.apana.org.au/~herbert/dash/files/
 COMMENT=	Debian Almquist shell, POSIX-compliant shell faster than bash
 
