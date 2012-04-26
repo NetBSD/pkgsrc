@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2011/11/13 07:26:42 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.165 2012/04/26 10:49:27 obache Exp $
 #
 
 COMMENT=	Communication programs
@@ -23,6 +23,7 @@ SUBDIR+=	dircproxy
 SUBDIR+=	eggdrop
 SUBDIR+=	ejabberd
 SUBDIR+=	ekg
+SUBDIR+=	emacs-jabber
 SUBDIR+=	emech
 SUBDIR+=	empathy
 SUBDIR+=	epic4
