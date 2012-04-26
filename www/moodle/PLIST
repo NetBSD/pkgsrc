@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/01/22 12:16:02 gls Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2012/04/26 10:06:52 tron Exp $
 share/examples/moodle/moodle.conf
 share/moodle/COPYING.txt
 share/moodle/README.txt
@@ -1423,6 +1423,7 @@ share/moodle/install/lang/az/admin.php
 share/moodle/install/lang/az/error.php
 share/moodle/install/lang/az/install.php
 share/moodle/install/lang/az/langconfig.php
+share/moodle/install/lang/az/moodle.php
 share/moodle/install/lang/be/langconfig.php
 share/moodle/install/lang/be/moodle.php
 share/moodle/install/lang/bg/admin.php
@@ -1442,6 +1443,8 @@ share/moodle/install/lang/ca/error.php
 share/moodle/install/lang/ca/install.php
 share/moodle/install/lang/ca/langconfig.php
 share/moodle/install/lang/ca/moodle.php
+share/moodle/install/lang/ca_valencia/admin.php
+share/moodle/install/lang/ca_valencia/langconfig.php
 share/moodle/install/lang/ckb/langconfig.php
 share/moodle/install/lang/cs/admin.php
 share/moodle/install/lang/cs/error.php
@@ -1482,6 +1485,7 @@ share/moodle/install/lang/en/error.php
 share/moodle/install/lang/en/install.php
 share/moodle/install/lang/en/langconfig.php
 share/moodle/install/lang/en/moodle.php
+share/moodle/install/lang/en_ar/langconfig.php
 share/moodle/install/lang/en_kids/langconfig.php
 share/moodle/install/lang/en_us/install.php
 share/moodle/install/lang/en_us/langconfig.php
@@ -1515,6 +1519,7 @@ share/moodle/install/lang/fi/moodle.php
 share/moodle/install/lang/fil/langconfig.php
 share/moodle/install/lang/fil/moodle.php
 share/moodle/install/lang/fj/langconfig.php
+share/moodle/install/lang/fo/langconfig.php
 share/moodle/install/lang/fr/admin.php
 share/moodle/install/lang/fr/error.php
 share/moodle/install/lang/fr/install.php
@@ -1577,9 +1582,11 @@ share/moodle/install/lang/ja/moodle.php
 share/moodle/install/lang/ka/admin.php
 share/moodle/install/lang/ka/install.php
 share/moodle/install/lang/ka/langconfig.php
+share/moodle/install/lang/ka/moodle.php
 share/moodle/install/lang/kk/install.php
 share/moodle/install/lang/kk/langconfig.php
 share/moodle/install/lang/kk/moodle.php
+share/moodle/install/lang/kl/langconfig.php
 share/moodle/install/lang/km/admin.php
 share/moodle/install/lang/km/error.php
 share/moodle/install/lang/km/install.php
@@ -1600,6 +1607,7 @@ share/moodle/install/lang/lo/moodle.php
 share/moodle/install/lang/lt/admin.php
 share/moodle/install/lang/lt/langconfig.php
 share/moodle/install/lang/lt/moodle.php
+share/moodle/install/lang/lt_uni/langconfig.php
 share/moodle/install/lang/lv/admin.php
 share/moodle/install/lang/lv/error.php
 share/moodle/install/lang/lv/install.php
@@ -1665,7 +1673,9 @@ share/moodle/install/lang/pt_br/error.php
 share/moodle/install/lang/pt_br/install.php
 share/moodle/install/lang/pt_br/langconfig.php
 share/moodle/install/lang/pt_br/moodle.php
+share/moodle/install/lang/rm_surs/admin.php
 share/moodle/install/lang/rm_surs/langconfig.php
+share/moodle/install/lang/rm_surs/moodle.php
 share/moodle/install/lang/ro/admin.php
 share/moodle/install/lang/ro/error.php
 share/moodle/install/lang/ro/install.php
@@ -1752,6 +1762,7 @@ share/moodle/install/lang/tr/error.php
 share/moodle/install/lang/tr/install.php
 share/moodle/install/lang/tr/langconfig.php
 share/moodle/install/lang/tr/moodle.php
+share/moodle/install/lang/tt/langconfig.php
 share/moodle/install/lang/uk/langconfig.php
 share/moodle/install/lang/uk/moodle.php
 share/moodle/install/lang/ur/install.php
@@ -1761,6 +1772,7 @@ share/moodle/install/lang/uz/install.php
 share/moodle/install/lang/uz/langconfig.php
 share/moodle/install/lang/uz/moodle.php
 share/moodle/install/lang/vi/admin.php
+share/moodle/install/lang/vi/error.php
 share/moodle/install/lang/vi/install.php
 share/moodle/install/lang/vi/langconfig.php
 share/moodle/install/lang/vi/moodle.php
@@ -2573,6 +2585,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/DenyElementDecorator.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/Filter.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/Font.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/FontFamily.php
+share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/Ident.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/ImportantDecorator.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/Length.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/ListStyle.php
@@ -2581,6 +2594,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/Number.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/Percentage.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/TextDecoration.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/CSS/URI.php
+share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/Clone.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/Enum.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/HTML/Bool.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrDef/HTML/Class.php
@@ -2621,6 +2635,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/AttrTransform/SafeEmbed.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrTransform/SafeObject.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrTransform/SafeParam.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrTransform/ScriptRequired.php
+share/moodle/lib/htmlpurifier/HTMLPurifier/AttrTransform/TargetBlank.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrTransform/Textarea.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrTypes.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/AttrValidator.php
@@ -2630,6 +2645,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef/Chameleon.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef/Custom.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef/Empty.php
+share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef/List.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef/Optional.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef/Required.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/ChildDef/StrictBlockquote.php
@@ -2688,6 +2704,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.CollectError
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.ColorKeywords.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.ConvertDocumentToFragment.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.DirectLexLineNumberSyncInterval.txt
+share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.EnableIDNA.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.Encoding.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.EscapeInvalidChildren.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Core.EscapeInvalidTags.txt
@@ -2708,6 +2725,8 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Filter.ExtractSty
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/Filter.YouTube.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Allowed.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedAttributes.txt
+share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedComments.txt
+share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedCommentsRegexp.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedElements.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.AllowedModules.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Attr.Name.UseCDATA.txt
@@ -2725,8 +2744,10 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Nofollow.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Parent.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Proprietary.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.SafeEmbed.txt
+share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.SafeIframe.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.SafeObject.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.Strict.txt
+share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.TargetBlank.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.TidyAdd.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.TidyLevel.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/HTML.TidyRemove.txt
@@ -2755,6 +2776,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.Munge.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.MungeResources.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.OverrideAllowedSchemes.txt
+share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/URI.SafeIframeRegexp.txt
 share/moodle/lib/htmlpurifier/HTMLPurifier/ConfigSchema/schema/info.ini
 share/moodle/lib/htmlpurifier/HTMLPurifier/ContentSets.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/Context.php
@@ -2789,6 +2811,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/CommonAttributes.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Edit.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Forms.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Hypertext.php
+share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Iframe.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Image.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Legacy.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/List.php
@@ -2805,6 +2828,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Scripting.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/StyleAttribute.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Tables.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Target.php
+share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/TargetBlank.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Text.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Tidy.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/HTMLModule/Tidy/Name.php
@@ -2834,7 +2858,6 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/Length.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/Lexer.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/Lexer/DOMLex.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/Lexer/DirectLex.php
-share/moodle/lib/htmlpurifier/HTMLPurifier/Lexer/PEARSax3.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/Lexer/PH5P.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/PercentEncoder.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/Printer.php
@@ -2874,6 +2897,7 @@ share/moodle/lib/htmlpurifier/HTMLPurifier/URIFilter/DisableResources.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/URIFilter/HostBlacklist.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/URIFilter/MakeAbsolute.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/URIFilter/Munge.php
+share/moodle/lib/htmlpurifier/HTMLPurifier/URIFilter/SafeIframe.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/URIParser.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/URIScheme.php
 share/moodle/lib/htmlpurifier/HTMLPurifier/URIScheme/data.php
@@ -3220,7 +3244,6 @@ share/moodle/lib/simpletest/testoutputlib.php
 share/moodle/lib/simpletest/testpagelib_moodlepage.php
 share/moodle/lib/simpletest/testportfolioaddbutton.php
 share/moodle/lib/simpletest/testportfoliolib.php
-share/moodle/lib/simpletest/testpurifier.php
 share/moodle/lib/simpletest/testquestionlib.php
 share/moodle/lib/simpletest/testrepositorylib.php
 share/moodle/lib/simpletest/testrss.php
@@ -6236,6 +6259,7 @@ share/moodle/mod/data/field/radiobutton/mod.html
 share/moodle/mod/data/field/text/field.class.php
 share/moodle/mod/data/field/text/mod.html
 share/moodle/mod/data/field/textarea/field.class.php
+share/moodle/mod/data/field/textarea/lang/en/datafield_textarea.php
 share/moodle/mod/data/field/textarea/mod.html
 share/moodle/mod/data/field/url/field.class.php
 share/moodle/mod/data/field/url/mod.html
@@ -7524,6 +7548,7 @@ share/moodle/question/engine/simpletest/testquestionengine.php
 share/moodle/question/engine/simpletest/testquestionstate.php
 share/moodle/question/engine/simpletest/testquestionusagebyactivity.php
 share/moodle/question/engine/simpletest/testquestionutils.php
+share/moodle/question/engine/simpletest/testunitofwork.php
 share/moodle/question/engine/states.php
 share/moodle/question/engine/upgrade/behaviourconverters.php
 share/moodle/question/engine/upgrade/logger.php
@@ -7610,6 +7635,7 @@ share/moodle/question/type/calculated/questiontype.php
 share/moodle/question/type/calculated/renderer.php
 share/moodle/question/type/calculated/simpletest/helper.php
 share/moodle/question/type/calculated/simpletest/testquestion.php
+share/moodle/question/type/calculated/simpletest/testquestiontype.php
 share/moodle/question/type/calculated/simpletest/testvariablesubstituter.php
 share/moodle/question/type/calculated/simpletest/testwalkthrough.php
 share/moodle/question/type/calculated/styles.css
@@ -7798,6 +7824,7 @@ share/moodle/question/type/shortanswer/pix/icon.gif
 share/moodle/question/type/shortanswer/question.php
 share/moodle/question/type/shortanswer/questiontype.php
 share/moodle/question/type/shortanswer/renderer.php
+share/moodle/question/type/shortanswer/simpletest/helper.php
 share/moodle/question/type/shortanswer/simpletest/testquestion.php
 share/moodle/question/type/shortanswer/simpletest/testquestiontype.php
 share/moodle/question/type/shortanswer/styles.css
@@ -8655,6 +8682,7 @@ share/moodle/theme/sky_high/style/editor.css
 share/moodle/theme/sky_high/style/menu.css
 share/moodle/theme/sky_high/style/pagelayout.css
 share/moodle/theme/sky_high/style/report.css
+share/moodle/theme/sky_high/style/settings.css
 share/moodle/theme/splash/config.php
 share/moodle/theme/splash/lang/en/theme_splash.php
 share/moodle/theme/splash/layout/general.php
