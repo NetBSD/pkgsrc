@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.22 2012/04/25 19:15:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.23 2012/04/26 10:08:34 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -105,3 +105,5 @@ Pullup ticket #3754 - requested by obache
 emulators/suse121_openssl: security update
 Pullup ticket #3756 - requested by morr
 www/wordpress: security update
+Pullup ticket #3757 - requested by gls
+www/moodle: security update
