@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11043 2012/04/26 19:38:25 bsiegert Exp $
+$NetBSD: TODO,v 1.11044 2012/04/26 20:41:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -402,7 +402,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o attica-0.3.0
 	o audacious-plugins-2.4.4
 	o audacity-2.0
-	o autoconf-2.69
 	o autoconvert-0.3.16
 	o autogen-5.15
 	o automake-1.12
