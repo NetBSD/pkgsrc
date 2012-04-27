@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2004/10/02 22:09:46 adrianp Exp $
+$NetBSD: patch-aa,v 1.3 2012/04/27 16:53:13 dholland Exp $
 
---- configure.orig	2004-10-02 16:05:10.000000000 +0100
-+++ configure	2004-10-02 16:11:19.000000000 +0100
-@@ -1310,10 +1310,10 @@
+- avoid infinite loop in options processing
+- ...?
+
+--- configure.orig	2009-07-31 14:46:19.000000000 +0000
++++ configure
+@@ -485,6 +485,9 @@ the corresponding command-line options (
+ EOT
+ 	    exit $exitval
+ 	fi
++    else
++	echo "$0: $1: Invalid argument/option" 1>&2
++	exit 1
+     fi
+ done
+ 
+@@ -1374,10 +1377,10 @@ EOT
  	    cat >$CONFTMP/test-lib.c <<EOT
  		int foo() {no_such_symbol();}
  EOT
@@ -15,7 +28,7 @@ $NetBSD: patch-aa,v 1.2 2004/10/02 22:09:46 adrianp Exp $
  	    then
  		CC_DYN_LIBS=" -ldl"
  		log "dlopen() found (libdl)"
-@@ -1322,7 +1322,7 @@
+@@ -1386,7 +1389,7 @@ EOT
  		OK=
  	    fi
  	    if [ "$OK" ] ; then
@@ -24,7 +37,7 @@ $NetBSD: patch-aa,v 1.2 2004/10/02 22:09:46 adrianp Exp $
  		    log "-rdynamic works"
  		    CC_DYN_LFLAGS=" -rdynamic"
  		else
-@@ -1336,7 +1336,7 @@
+@@ -1400,7 +1403,7 @@ EOT
  		else
  		    CC_SHARED="$CC -shared"
  		fi
@@ -33,7 +46,7 @@ $NetBSD: patch-aa,v 1.2 2004/10/02 22:09:46 adrianp Exp $
  		    log "-shared works"
  		else
  		    log "no -shared, aborting dlfcn test"
-@@ -1374,8 +1374,8 @@
+@@ -1438,8 +1441,8 @@ EOT
  			return quux(bar)*2;
  		    }
  EOT
@@ -44,7 +57,7 @@ $NetBSD: patch-aa,v 1.2 2004/10/02 22:09:46 adrianp Exp $
  		then
  		    a=`$CONFTMP/test 1`
  		    log "symbol resolution test: $CONFTMP/test 1 => $a"
-@@ -1404,7 +1404,7 @@
+@@ -1468,7 +1471,7 @@ EOT
  		}
  		int quux(int x) {return x;}
  EOT
@@ -53,7 +66,7 @@ $NetBSD: patch-aa,v 1.2 2004/10/02 22:09:46 adrianp Exp $
  	    then
  		a=`$CONFTMP/test`
  		log "underscore test: $CONFTMP/test => $a"
-@@ -1428,6 +1428,7 @@
+@@ -1492,6 +1495,7 @@ EOT
  	if [ "$OK" ] ; then
  	    echo "yes."
  	    STATIC_MODULES=0
