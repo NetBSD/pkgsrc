@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2012/04/26 18:12:37 martin Exp $
+# $NetBSD: Makefile,v 1.71 2012/04/27 10:54:48 obache Exp $
 
 DISTNAME=	icu4c-49_1_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -53,6 +53,15 @@ PLIST_SUBST+=		MH_NAME=mh-unknown
 
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
+.endif
+
+# expect builtin gcc atomic functions for gcc>=4.1
+# (source/common/putilimp.h)
+.if !empty(CC_VERSION:Mgcc-*) &&	\
+	(empty(CC_VERSION:Mgcc-4.0*) && empty(CC_VERSION:Mgcc-[0-3].*))
+.  if ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-march=i486
+.  endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
