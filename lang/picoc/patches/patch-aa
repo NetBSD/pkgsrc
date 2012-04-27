@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/04/27 04:48:44 agc Exp $
+
+avoid macro fun with cpp definition
+
+--- cstdlib/stdio.c	2012/04/26 12:20:00	1.1
++++ cstdlib/stdio.c	2012/04/26 12:21:03
+@@ -414,7 +414,8 @@
+ 
+ void StdioFileno(struct ParseState *Parser, struct Value *ReturnValue, struct Value **Param, int NumArgs) 
+ {
+-    ReturnValue->Val->Integer = fileno(Param[0]->Val->Pointer);
++    FILE	*fp = (FILE *)Param[0]->Val->Pointer;
++    ReturnValue->Val->Integer = fileno(fp);
+ }
+ 
+ void StdioFflush(struct ParseState *Parser, struct Value *ReturnValue, struct Value **Param, int NumArgs) 
