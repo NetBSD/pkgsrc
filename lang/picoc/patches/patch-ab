@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/04/27 04:48:44 agc Exp $
+
+hardcode the Hz value
+
+--- cstdlib/time.c	2012/04/26 12:20:00	1.1
++++ cstdlib/time.c	2012/04/26 12:21:03
+@@ -11,7 +11,7 @@
+ #endif
+ 
+ #ifdef CLK_TCK
+-static int CLK_TCKValue = CLK_TCK;
++static int CLK_TCKValue = 100;
+ #endif
+ 
+ void StdAsctime(struct ParseState *Parser, struct Value *ReturnValue, struct Value **Param, int NumArgs)
