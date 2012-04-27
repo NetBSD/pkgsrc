@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2012/02/17 08:16:14 obache Exp $
+# $NetBSD: Makefile,v 1.36 2012/04/27 04:27:16 sbd Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
 
 DISTNAME=	jre-6u31-linux-${DIST_ARCH}
 PKGNAME=	sun-jre6-6.0.31
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 LICENSE=	sun-jre6-license
@@ -42,7 +43,7 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 PLIST_SRC=	PLIST.linux-${EMUL_ARCH}
 
-PLIST_VARS+=	jce x11
+PLIST_VARS+=	jce native
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-6.zip
 PLIST.jce=	yes
@@ -53,27 +54,43 @@ PLIST.jce=	yes
 #
 .if defined(EMUL_IS_NATIVE)
 .  if ${X11_TYPE} == "native"
-.    if ${EMUL_ARCH} == "x86_64"
-LIBX11=		${X11PREFIX}/lib64/libX11.so.6
-.    else
-LIBX11=		${X11PREFIX}/lib/libX11.so.6
-.    endif
-.    if !exists(${LIBX11})
+X11_LIBDIR=	${X11BASE}/lib${LIBABISUFFIX}
+.    if !exists(${X11_LIBDIR}/libX11.so.6)
 PKG_FAIL_REASON+=	"${LIBX11} does not exist.  Please install the" \
 			"X11 library packages for your system."
 .    endif
 .  else
-.    include "../../x11/libX11/buildlink3.mk"
-LIBX11=		${X11PREFIX}/lib/libX11.so.6
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXext/buildlink3.mk"
+.  include "../../x11/libXi/buildlink3.mk"
+.  include "../../x11/libXt/buildlink3.mk"
+.  include "../../x11/libXtst/buildlink3.mk"
+X11_LIBDIR=	${X11BASE}/lib
 .  endif
 
+.  include "../../audio/alsa-lib/buildlink3.mk"
+ALSA_LIBDIR=	${BUILDLINK_PREFIX.alsa-lib}/${BUILDLINK_LIBDIRS.alsa-lib}
+
+.  include "../../databases/unixodbc/buildlink3.mk"
+ODBC_LIBDIR=	${BUILDLINK_PREFIX.unixodbc}/${BUILDLINK_LIBDIRS.unixodbc}
+
+ARCH_LIBDIR=	${JAVA_HOME}/lib/${JAVA_ARCH}
 .PHONY: create-library-symlinks
 post-install: create-library-symlinks
 create-library-symlinks:
-	${RUN}${LN} -fs ${LIBX11} ${DESTDIR}${JAVA_HOME}/lib/${JAVA_ARCH}
+	${RUN}${LN} -fs ${X11_LIBDIR}/libX11.so.6 ${DESTDIR}${ARCH_LIBDIR}
+	${RUN}${LN} -fs ${X11_LIBDIR}/libX11.so.6 ${DESTDIR}${ARCH_LIBDIR}/jli
+	${RUN}${LN} -fs ${X11_LIBDIR}/libXext.so.6 ${DESTDIR}${ARCH_LIBDIR}
+	${RUN}${LN} -fs ${X11_LIBDIR}/libXi.so.6 ${DESTDIR}${ARCH_LIBDIR}
+	${RUN}${LN} -fs ${X11_LIBDIR}/libXt.so.6 ${DESTDIR}${ARCH_LIBDIR}
+	${RUN}${LN} -fs ${X11_LIBDIR}/libXtst.so.6 ${DESTDIR}${ARCH_LIBDIR}
+	${RUN}${LN} -fs ${ALSA_LIBDIR}/libasound.so.2 ${DESTDIR}${ARCH_LIBDIR}
+	${RUN}${LN} -fs ${ODBC_LIBDIR}/libodbc.so ${DESTDIR}${ARCH_LIBDIR}
+	${RUN}${LN} -fs ${ODBC_LIBDIR}/libodbcinst.so ${DESTDIR}${ARCH_LIBDIR}
 
-PLIST.x11=	yes
+PLIST.native=	yes
 .endif
+
 
 post-extract:
 	${MKDIR} ${WRKSRC}/.systemPrefs
