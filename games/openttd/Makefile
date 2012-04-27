@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2011/12/15 05:05:02 dholland Exp $
+# $NetBSD: Makefile,v 1.42 2012/04/27 12:31:48 obache Exp $
 
 DISTNAME=	openttd-1.0.5-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games x11
 MASTER_SITES=	http://binaries.openttd.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

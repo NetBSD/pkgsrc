@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/03/09 12:34:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/04/27 12:31:35 obache Exp $
 
 DISTNAME=	pidgin-facebookchat-source-1.69
 PKGNAME=	${DISTNAME:S/-source-/-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	chat
 MASTER_SITES=	http://pidgin-facebookchat.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
