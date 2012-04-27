@@ -1,17 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:28:48 joerg Exp $
-${GEM_HOME}/cache/rb-appscript-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.4 2012/04/27 10:30:40 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
-${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Makefile
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/SendThreadSafe.o
-${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/ae.${RUBY_DLEXT}
 ${GEM_LIBDIR}/doc/aem-manual/01_introduction.html
 ${GEM_LIBDIR}/doc/aem-manual/02_apioverview.html
 ${GEM_LIBDIR}/doc/aem-manual/03_packingandunpackingdata.html
 ${GEM_LIBDIR}/doc/aem-manual/04_references.html
-${GEM_LIBDIR}/doc/aem-manual/05_targettingapplications.html
+${GEM_LIBDIR}/doc/aem-manual/05_targetingapplications.html
 ${GEM_LIBDIR}/doc/aem-manual/06_buildingandsendingevents.html
 ${GEM_LIBDIR}/doc/aem-manual/07_findapp.html
 ${GEM_LIBDIR}/doc/aem-manual/08_examples.html
@@ -39,12 +37,22 @@ ${GEM_LIBDIR}/doc/appscript-manual/relationships_example.gif
 ${GEM_LIBDIR}/doc/appscript-manual/ruby_to_itunes_event.gif
 ${GEM_LIBDIR}/doc/full.css
 ${GEM_LIBDIR}/doc/index.html
+${GEM_LIBDIR}/doc/mactypes-manual/01_introduction.html
+${GEM_LIBDIR}/doc/mactypes-manual/02_aliasclass.html
+${GEM_LIBDIR}/doc/mactypes-manual/03_fileurlclass.html
+${GEM_LIBDIR}/doc/mactypes-manual/04_unitsclass.html
 ${GEM_LIBDIR}/doc/mactypes-manual/index.html
+${GEM_LIBDIR}/doc/osax-manual/01_introduction.html
+${GEM_LIBDIR}/doc/osax-manual/02_interface.html
+${GEM_LIBDIR}/doc/osax-manual/03_examples.html
+${GEM_LIBDIR}/doc/osax-manual/04_notes.html
 ${GEM_LIBDIR}/doc/osax-manual/index.html
+${GEM_LIBDIR}/doc/rb-appscript-logo.png
 ${GEM_LIBDIR}/extconf.rb
 ${GEM_LIBDIR}/lib/_aem/aemreference.rb
 ${GEM_LIBDIR}/lib/_aem/codecs.rb
 ${GEM_LIBDIR}/lib/_aem/connect.rb
+${GEM_LIBDIR}/lib/_aem/encodingsupport.rb
 ${GEM_LIBDIR}/lib/_aem/findapp.rb
 ${GEM_LIBDIR}/lib/_aem/mactypes.rb
 ${GEM_LIBDIR}/lib/_aem/send.rb
@@ -83,6 +91,7 @@ ${GEM_LIBDIR}/src/SendThreadSafe.h
 ${GEM_LIBDIR}/src/lib/_aem/aemreference.rb
 ${GEM_LIBDIR}/src/lib/_aem/codecs.rb
 ${GEM_LIBDIR}/src/lib/_aem/connect.rb
+${GEM_LIBDIR}/src/lib/_aem/encodingsupport.rb
 ${GEM_LIBDIR}/src/lib/_aem/findapp.rb
 ${GEM_LIBDIR}/src/lib/_aem/mactypes.rb
 ${GEM_LIBDIR}/src/lib/_aem/send.rb
@@ -108,4 +117,4 @@ ${GEM_LIBDIR}/test/test_findapp.rb
 ${GEM_LIBDIR}/test/test_mactypes.rb
 ${GEM_LIBDIR}/test/test_osax.rb
 ${GEM_LIBDIR}/test/testall.sh
-${GEM_HOME}/specifications/rb-appscript-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
