@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2012/03/28 03:55:38 dholland Exp $
+# $NetBSD: Makefile,v 1.60 2012/04/27 12:32:08 obache Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.32/}
 EXTRACT_SUFX=	.tar.bz2

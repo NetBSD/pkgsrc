@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/04/22 15:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/27 12:31:59 obache Exp $
 #
 # Also update gst-plugins0.10-libnice when you update this!
 
 DISTNAME=	libnice-0.1.2
+PKGREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 

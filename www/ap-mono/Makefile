@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2011/06/10 09:40:02 obache Exp $
+# $NetBSD: Makefile,v 1.21 2012/04/27 12:32:05 obache Exp $
 
 DISTNAME=	mod_mono-2.10
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mod_mono/
 EXTRACT_SUFX=	.tar.bz2
