@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.45 2012/03/06 17:39:03 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.46 2012/04/27 12:32:07 obache Exp $
 
 BUILDLINK_TREE+=	gnome-panel
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-panel
 GNOME_PANEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-panel+=		gnome-panel>=2.12.1nb3
-BUILDLINK_ABI_DEPENDS.gnome-panel?=	gnome-panel>=2.32.1nb10
+BUILDLINK_ABI_DEPENDS.gnome-panel?=	gnome-panel>=2.32.1nb12
 BUILDLINK_PKGSRCDIR.gnome-panel?=	../../x11/gnome-panel
 
 pkgbase:= gnome-panel
