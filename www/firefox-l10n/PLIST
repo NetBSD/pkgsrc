@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/15 08:48:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/04/28 16:34:46 ryoon Exp $
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome.manifest
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/alerts/notificationNames.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/af/autoconfig/autoconfig.properties
@@ -163,6 +163,7 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/devtools/styleinspector.dtd
@@ -178,6 +179,8 @@ lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-af@firefox.mozilla.org/chrome/af/locale/browser/pageInfo.dtd
@@ -397,6 +400,7 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/devtools/styleinspector.dtd
@@ -412,6 +416,8 @@ lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ak@firefox.mozilla.org/chrome/ak/locale/browser/pageInfo.dtd
@@ -631,6 +637,7 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/devtools/styleinspector.dtd
@@ -646,6 +653,8 @@ lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ar@firefox.mozilla.org/chrome/ar/locale/browser/pageInfo.dtd
@@ -865,6 +874,7 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/devtools/styleinspector.dtd
@@ -880,6 +890,8 @@ lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-as@firefox.mozilla.org/chrome/as/locale/browser/pageInfo.dtd
@@ -1099,6 +1111,7 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browse
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/devtools/styleinspector.dtd
@@ -1114,6 +1127,8 @@ lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browse
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ast@firefox.mozilla.org/chrome/ast/locale/browser/pageInfo.dtd
@@ -1333,6 +1348,7 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/devtools/styleinspector.dtd
@@ -1348,6 +1364,8 @@ lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-be@firefox.mozilla.org/chrome/be/locale/browser/pageInfo.dtd
@@ -1567,6 +1585,7 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/devtools/styleinspector.dtd
@@ -1582,6 +1601,8 @@ lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-bg@firefox.mozilla.org/chrome/bg/locale/browser/pageInfo.dtd
@@ -1801,6 +1822,7 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/br
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/devtools/styleinspector.dtd
@@ -1816,6 +1838,8 @@ lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/br
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-bn-BD@firefox.mozilla.org/chrome/bn-BD/locale/browser/pageInfo.dtd
@@ -2035,6 +2059,7 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/br
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/devtools/styleinspector.dtd
@@ -2050,6 +2075,8 @@ lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/br
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-bn-IN@firefox.mozilla.org/chrome/bn-IN/locale/browser/pageInfo.dtd
@@ -2269,6 +2296,7 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/devtools/styleinspector.dtd
@@ -2284,6 +2312,8 @@ lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-br@firefox.mozilla.org/chrome/br/locale/browser/pageInfo.dtd
@@ -2360,6 +2390,7 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/devtools/styleinspector.dtd
@@ -2375,6 +2406,8 @@ lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-bs@firefox.mozilla.org/chrome/bs/locale/browser/pageInfo.dtd
@@ -2594,6 +2627,7 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/devtools/styleinspector.dtd
@@ -2609,6 +2643,8 @@ lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ca@firefox.mozilla.org/chrome/ca/locale/browser/pageInfo.dtd
@@ -2828,6 +2864,7 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/devtools/styleinspector.dtd
@@ -2843,6 +2880,8 @@ lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-cs@firefox.mozilla.org/chrome/cs/locale/browser/pageInfo.dtd
@@ -3062,6 +3101,7 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browse
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/devtools/styleinspector.dtd
@@ -3077,6 +3117,8 @@ lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browse
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-csb@firefox.mozilla.org/chrome/csb/locale/browser/pageInfo.dtd
@@ -3296,6 +3338,7 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/devtools/styleinspector.dtd
@@ -3311,6 +3354,8 @@ lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-cy@firefox.mozilla.org/chrome/cy/locale/browser/pageInfo.dtd
@@ -3530,6 +3575,7 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/devtools/styleinspector.dtd
@@ -3545,6 +3591,8 @@ lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-da@firefox.mozilla.org/chrome/da/locale/browser/pageInfo.dtd
@@ -3764,6 +3812,7 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/devtools/styleinspector.dtd
@@ -3779,6 +3828,8 @@ lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-de@firefox.mozilla.org/chrome/de/locale/browser/pageInfo.dtd
@@ -3998,6 +4049,7 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/devtools/styleinspector.dtd
@@ -4013,6 +4065,8 @@ lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-el@firefox.mozilla.org/chrome/el/locale/browser/pageInfo.dtd
@@ -4232,6 +4286,7 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/br
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/devtools/styleinspector.dtd
@@ -4247,6 +4302,8 @@ lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/br
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-en-GB@firefox.mozilla.org/chrome/en-GB/locale/browser/pageInfo.dtd
@@ -4466,6 +4523,7 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/br
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/devtools/styleinspector.dtd
@@ -4481,6 +4539,8 @@ lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/br
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-en-US@firefox.mozilla.org/chrome/en-US/locale/browser/pageInfo.dtd
@@ -4700,6 +4760,7 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/br
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/devtools/styleinspector.dtd
@@ -4715,6 +4776,8 @@ lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/br
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-en-ZA@firefox.mozilla.org/chrome/en-ZA/locale/browser/pageInfo.dtd
@@ -4934,6 +4997,7 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/devtools/styleinspector.dtd
@@ -4949,6 +5013,8 @@ lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-eo@firefox.mozilla.org/chrome/eo/locale/browser/pageInfo.dtd
@@ -5168,6 +5234,7 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/br
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/devtools/styleinspector.dtd
@@ -5183,6 +5250,8 @@ lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/br
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-es-AR@firefox.mozilla.org/chrome/es-AR/locale/browser/pageInfo.dtd
@@ -5402,6 +5471,7 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/br
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/devtools/styleinspector.dtd
@@ -5417,6 +5487,8 @@ lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/br
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-es-CL@firefox.mozilla.org/chrome/es-CL/locale/browser/pageInfo.dtd
@@ -5636,6 +5708,7 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/br
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/devtools/styleinspector.dtd
@@ -5651,6 +5724,8 @@ lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/br
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-es-ES@firefox.mozilla.org/chrome/es-ES/locale/browser/pageInfo.dtd
@@ -5870,6 +5945,7 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/br
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/devtools/styleinspector.dtd
@@ -5885,6 +5961,8 @@ lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/br
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-es-MX@firefox.mozilla.org/chrome/es-MX/locale/browser/pageInfo.dtd
@@ -6104,6 +6182,7 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/devtools/styleinspector.dtd
@@ -6119,6 +6198,8 @@ lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-et@firefox.mozilla.org/chrome/et/locale/browser/pageInfo.dtd
@@ -6338,6 +6419,7 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/devtools/styleinspector.dtd
@@ -6353,6 +6435,8 @@ lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-eu@firefox.mozilla.org/chrome/eu/locale/browser/pageInfo.dtd
@@ -6572,6 +6656,7 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/devtools/styleinspector.dtd
@@ -6587,6 +6672,8 @@ lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-fa@firefox.mozilla.org/chrome/fa/locale/browser/pageInfo.dtd
@@ -6806,6 +6893,7 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/devtools/styleinspector.dtd
@@ -6821,6 +6909,8 @@ lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-fi@firefox.mozilla.org/chrome/fi/locale/browser/pageInfo.dtd
@@ -7040,6 +7130,7 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/devtools/styleinspector.dtd
@@ -7055,6 +7146,8 @@ lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-fr@firefox.mozilla.org/chrome/fr/locale/browser/pageInfo.dtd
@@ -7274,6 +7367,7 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/br
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/devtools/styleinspector.dtd
@@ -7289,6 +7383,8 @@ lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/br
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-fy-NL@firefox.mozilla.org/chrome/fy-NL/locale/browser/pageInfo.dtd
@@ -7508,6 +7604,7 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/br
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/devtools/styleinspector.dtd
@@ -7523,6 +7620,8 @@ lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/br
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ga-IE@firefox.mozilla.org/chrome/ga-IE/locale/browser/pageInfo.dtd
@@ -7742,6 +7841,7 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/devtools/styleinspector.dtd
@@ -7757,6 +7857,8 @@ lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-gd@firefox.mozilla.org/chrome/gd/locale/browser/pageInfo.dtd
@@ -7976,6 +8078,7 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/devtools/styleinspector.dtd
@@ -7991,6 +8094,8 @@ lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-gl@firefox.mozilla.org/chrome/gl/locale/browser/pageInfo.dtd
@@ -8210,6 +8315,7 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/br
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/devtools/styleinspector.dtd
@@ -8225,6 +8331,8 @@ lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/br
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-gu-IN@firefox.mozilla.org/chrome/gu-IN/locale/browser/pageInfo.dtd
@@ -8444,6 +8552,7 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/devtools/styleinspector.dtd
@@ -8459,6 +8568,8 @@ lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-he@firefox.mozilla.org/chrome/he/locale/browser/pageInfo.dtd
@@ -8678,6 +8789,7 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/br
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/devtools/styleinspector.dtd
@@ -8693,6 +8805,8 @@ lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/br
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-hi-IN@firefox.mozilla.org/chrome/hi-IN/locale/browser/pageInfo.dtd
@@ -8912,6 +9026,7 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/devtools/styleinspector.dtd
@@ -8927,6 +9042,8 @@ lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-hr@firefox.mozilla.org/chrome/hr/locale/browser/pageInfo.dtd
@@ -9146,6 +9263,7 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/devtools/styleinspector.dtd
@@ -9161,6 +9279,8 @@ lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-hu@firefox.mozilla.org/chrome/hu/locale/browser/pageInfo.dtd
@@ -9380,6 +9500,7 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/br
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/devtools/styleinspector.dtd
@@ -9395,6 +9516,8 @@ lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/br
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-hy-AM@firefox.mozilla.org/chrome/hy-AM/locale/browser/pageInfo.dtd
@@ -9614,6 +9737,7 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/devtools/styleinspector.dtd
@@ -9629,6 +9753,8 @@ lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-id@firefox.mozilla.org/chrome/id/locale/browser/pageInfo.dtd
@@ -9848,6 +9974,7 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/devtools/styleinspector.dtd
@@ -9863,6 +9990,8 @@ lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-is@firefox.mozilla.org/chrome/is/locale/browser/pageInfo.dtd
@@ -10082,6 +10211,7 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/devtools/styleinspector.dtd
@@ -10097,6 +10227,8 @@ lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-it@firefox.mozilla.org/chrome/it/locale/browser/pageInfo.dtd
@@ -10316,6 +10448,7 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/devtools/styleinspector.dtd
@@ -10331,6 +10464,8 @@ lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ja@firefox.mozilla.org/chrome/ja/locale/browser/pageInfo.dtd
@@ -10550,6 +10685,7 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/devtools/styleinspector.dtd
@@ -10565,6 +10701,8 @@ lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-kk@firefox.mozilla.org/chrome/kk/locale/browser/pageInfo.dtd
@@ -10784,6 +10922,7 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/devtools/styleinspector.dtd
@@ -10799,6 +10938,8 @@ lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-kn@firefox.mozilla.org/chrome/kn/locale/browser/pageInfo.dtd
@@ -11018,6 +11159,7 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/devtools/styleinspector.dtd
@@ -11033,6 +11175,8 @@ lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ko@firefox.mozilla.org/chrome/ko/locale/browser/pageInfo.dtd
@@ -11252,6 +11396,7 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/devtools/styleinspector.dtd
@@ -11267,6 +11412,8 @@ lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ku@firefox.mozilla.org/chrome/ku/locale/browser/pageInfo.dtd
@@ -11486,6 +11633,7 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/devtools/styleinspector.dtd
@@ -11501,6 +11649,8 @@ lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-lg@firefox.mozilla.org/chrome/lg/locale/browser/pageInfo.dtd
@@ -11720,6 +11870,7 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/devtools/styleinspector.dtd
@@ -11735,6 +11886,8 @@ lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-lt@firefox.mozilla.org/chrome/lt/locale/browser/pageInfo.dtd
@@ -11954,6 +12107,7 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/devtools/styleinspector.dtd
@@ -11969,6 +12123,8 @@ lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-lv@firefox.mozilla.org/chrome/lv/locale/browser/pageInfo.dtd
@@ -12188,6 +12344,7 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browse
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/devtools/styleinspector.dtd
@@ -12203,6 +12360,8 @@ lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browse
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-mai@firefox.mozilla.org/chrome/mai/locale/browser/pageInfo.dtd
@@ -12422,6 +12581,7 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/devtools/styleinspector.dtd
@@ -12437,6 +12597,8 @@ lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-mk@firefox.mozilla.org/chrome/mk/locale/browser/pageInfo.dtd
@@ -12656,6 +12818,7 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/devtools/styleinspector.dtd
@@ -12671,6 +12834,8 @@ lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ml@firefox.mozilla.org/chrome/ml/locale/browser/pageInfo.dtd
@@ -12890,6 +13055,7 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/devtools/styleinspector.dtd
@@ -12905,6 +13071,8 @@ lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-mr@firefox.mozilla.org/chrome/mr/locale/browser/pageInfo.dtd
@@ -13124,6 +13292,7 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/br
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/devtools/styleinspector.dtd
@@ -13139,6 +13308,8 @@ lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/br
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-nb-NO@firefox.mozilla.org/chrome/nb-NO/locale/browser/pageInfo.dtd
@@ -13358,6 +13529,7 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/devtools/styleinspector.dtd
@@ -13373,6 +13545,8 @@ lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-nl@firefox.mozilla.org/chrome/nl/locale/browser/pageInfo.dtd
@@ -13592,6 +13766,7 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/br
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/devtools/styleinspector.dtd
@@ -13607,6 +13782,8 @@ lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/br
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-nn-NO@firefox.mozilla.org/chrome/nn-NO/locale/browser/pageInfo.dtd
@@ -13826,6 +14003,7 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browse
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/devtools/styleinspector.dtd
@@ -13841,6 +14019,8 @@ lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browse
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-nso@firefox.mozilla.org/chrome/nso/locale/browser/pageInfo.dtd
@@ -14060,6 +14240,7 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/devtools/styleinspector.dtd
@@ -14075,6 +14256,8 @@ lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-or@firefox.mozilla.org/chrome/or/locale/browser/pageInfo.dtd
@@ -14294,6 +14477,7 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/br
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/devtools/styleinspector.dtd
@@ -14309,6 +14493,8 @@ lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/br
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-pa-IN@firefox.mozilla.org/chrome/pa-IN/locale/browser/pageInfo.dtd
@@ -14528,6 +14714,7 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/devtools/styleinspector.dtd
@@ -14543,6 +14730,8 @@ lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-pl@firefox.mozilla.org/chrome/pl/locale/browser/pageInfo.dtd
@@ -14762,6 +14951,7 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/br
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/devtools/styleinspector.dtd
@@ -14777,6 +14967,8 @@ lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/br
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-pt-BR@firefox.mozilla.org/chrome/pt-BR/locale/browser/pageInfo.dtd
@@ -14996,6 +15188,7 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/br
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/devtools/styleinspector.dtd
@@ -15011,6 +15204,8 @@ lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/br
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-pt-PT@firefox.mozilla.org/chrome/pt-PT/locale/browser/pageInfo.dtd
@@ -15230,6 +15425,7 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/devtools/styleinspector.dtd
@@ -15245,6 +15441,8 @@ lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-rm@firefox.mozilla.org/chrome/rm/locale/browser/pageInfo.dtd
@@ -15464,6 +15662,7 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/devtools/styleinspector.dtd
@@ -15479,6 +15678,8 @@ lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ro@firefox.mozilla.org/chrome/ro/locale/browser/pageInfo.dtd
@@ -15698,6 +15899,7 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/devtools/styleinspector.dtd
@@ -15713,6 +15915,8 @@ lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ru@firefox.mozilla.org/chrome/ru/locale/browser/pageInfo.dtd
@@ -15932,6 +16136,7 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/devtools/styleinspector.dtd
@@ -15947,6 +16152,8 @@ lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-si@firefox.mozilla.org/chrome/si/locale/browser/pageInfo.dtd
@@ -16166,6 +16373,7 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/devtools/styleinspector.dtd
@@ -16181,6 +16389,8 @@ lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-sk@firefox.mozilla.org/chrome/sk/locale/browser/pageInfo.dtd
@@ -16400,6 +16610,7 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/devtools/styleinspector.dtd
@@ -16415,6 +16626,8 @@ lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-sl@firefox.mozilla.org/chrome/sl/locale/browser/pageInfo.dtd
@@ -16634,6 +16847,7 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browse
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/devtools/styleinspector.dtd
@@ -16649,6 +16863,8 @@ lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browse
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-son@firefox.mozilla.org/chrome/son/locale/browser/pageInfo.dtd
@@ -16868,6 +17084,7 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/devtools/styleinspector.dtd
@@ -16883,6 +17100,8 @@ lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-sq@firefox.mozilla.org/chrome/sq/locale/browser/pageInfo.dtd
@@ -17102,6 +17321,7 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/devtools/styleinspector.dtd
@@ -17117,6 +17337,8 @@ lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-sr@firefox.mozilla.org/chrome/sr/locale/browser/pageInfo.dtd
@@ -17336,6 +17558,7 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/br
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/devtools/styleinspector.dtd
@@ -17351,6 +17574,8 @@ lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/br
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-sv-SE@firefox.mozilla.org/chrome/sv-SE/locale/browser/pageInfo.dtd
@@ -17570,6 +17795,7 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/br
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/devtools/styleinspector.dtd
@@ -17585,6 +17811,8 @@ lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/br
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ta-LK@firefox.mozilla.org/chrome/ta-LK/locale/browser/pageInfo.dtd
@@ -17804,6 +18032,7 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/devtools/styleinspector.dtd
@@ -17819,6 +18048,8 @@ lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-ta@firefox.mozilla.org/chrome/ta/locale/browser/pageInfo.dtd
@@ -18038,6 +18269,7 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/devtools/styleinspector.dtd
@@ -18053,6 +18285,8 @@ lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-te@firefox.mozilla.org/chrome/te/locale/browser/pageInfo.dtd
@@ -18272,6 +18506,7 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/devtools/styleinspector.dtd
@@ -18287,6 +18522,8 @@ lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-th@firefox.mozilla.org/chrome/th/locale/browser/pageInfo.dtd
@@ -18506,6 +18743,7 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/devtools/styleinspector.dtd
@@ -18521,6 +18759,8 @@ lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-tr@firefox.mozilla.org/chrome/tr/locale/browser/pageInfo.dtd
@@ -18740,6 +18980,7 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/devtools/styleinspector.dtd
@@ -18755,6 +18996,8 @@ lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-uk@firefox.mozilla.org/chrome/uk/locale/browser/pageInfo.dtd
@@ -18974,6 +19217,7 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/devtools/styleinspector.dtd
@@ -18989,6 +19233,8 @@ lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-vi@firefox.mozilla.org/chrome/vi/locale/browser/pageInfo.dtd
@@ -19208,6 +19454,7 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/br
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/devtools/styleinspector.dtd
@@ -19223,6 +19470,8 @@ lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/br
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-zh-CN@firefox.mozilla.org/chrome/zh-CN/locale/browser/pageInfo.dtd
@@ -19442,6 +19691,7 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/br
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/devtools/styleinspector.dtd
@@ -19457,6 +19707,8 @@ lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/br
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-zh-TW@firefox.mozilla.org/chrome/zh-TW/locale/browser/pageInfo.dtd
@@ -19676,6 +19928,7 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/inspector.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/scratchpad.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/scratchpad.properties
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/sourceeditor.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/styleeditor.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/styleeditor.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/devtools/styleinspector.dtd
@@ -19691,6 +19944,8 @@ lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/migration/migration.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/migration/migration.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/netError.dtd
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/newTab.dtd
+lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/newTab.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/openLocation.dtd
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/openLocation.properties
 lib/firefox/extensions/langpack-zu@firefox.mozilla.org/chrome/zu/locale/browser/pageInfo.dtd
