@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.5 2012/04/02 14:35:00 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.6 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/platform_thread_posix.cc.orig	2012-04-01 15:50:47.000000000 +0000
+--- mozilla/ipc/chromium/src/base/platform_thread_posix.cc.orig	2012-04-23 06:27:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/platform_thread_posix.cc
 @@ -9,9 +9,18 @@
  

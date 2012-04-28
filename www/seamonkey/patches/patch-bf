@@ -1,6 +1,6 @@
-$NetBSD: patch-bf,v 1.6 2012/04/02 14:35:00 ryoon Exp $
+$NetBSD: patch-bf,v 1.7 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/js/src/jsnativestack.cpp.orig	2012-03-13 02:43:15.000000000 +0000
+--- mozilla/js/src/jsnativestack.cpp.orig	2012-04-23 06:27:43.000000000 +0000
 +++ mozilla/js/src/jsnativestack.cpp
 @@ -50,10 +50,16 @@
  #elif defined(XP_MACOSX) || defined(DARWIN) || defined(XP_UNIX)

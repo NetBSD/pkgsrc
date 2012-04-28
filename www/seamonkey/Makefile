@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.68 2012/03/19 20:28:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2012/04/28 22:48:06 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER}
-SM_VER=		2.8
+SM_VER=		2.9
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/} \
-		${MASTER_SITE_LOCAL}
-DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2 \
-		comm-release-f60c071e187b.tar.bz2
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
+DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/

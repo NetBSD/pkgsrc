@@ -1,18 +1,12 @@
-# $NetBSD: options.mk,v 1.21 2012/03/19 20:28:11 ryoon Exp $
+# $NetBSD: options.mk,v 1.22 2012/04/28 22:48:06 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome mozilla-enigmail mozilla-lightning
 
-PLIST_VARS+=	gnome
+PLIST_VARS+=	gnome jemalloc
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
-.endif
-
-.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Msparc) || \
-	!empty(MACHINE_ARCH:Marm) || !empty(MACHINE_ARCH:Mx86_64)
-PKG_SUPPORTED_OPTIONS+=	mozilla-jit
-PKG_SUGGESTED_OPTIONS+=	mozilla-jit
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -27,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
+PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
@@ -38,12 +33,6 @@ CONFIGURE_ARGS+=	--disable-install-strip
 .else
 CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-install-strip
-.endif
-
-.if !empty(PKG_OPTIONS:Mmozilla-jit)
-CONFIGURE_ARGS+=	--enable-tracejit
-.else
-CONFIGURE_ARGS+=	--disable-tracejit
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-enigmail) || make(distinfo)

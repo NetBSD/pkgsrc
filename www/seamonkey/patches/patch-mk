@@ -1,10 +1,10 @@
-$NetBSD: patch-mk,v 1.4 2012/03/19 10:35:59 ryoon Exp $
+$NetBSD: patch-mk,v 1.5 2012/04/28 22:48:06 ryoon Exp $
 
 Treat DragonFly like FreeBSD.
 
---- mozilla/config/rules.mk.orig	2012-03-13 05:32:20.000000000 +0000
+--- mozilla/config/rules.mk.orig	2012-04-23 06:27:25.000000000 +0000
 +++ mozilla/config/rules.mk
-@@ -593,6 +593,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+@@ -601,6 +601,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
  endif
  endif
  
@@ -17,7 +17,7 @@ Treat DragonFly like FreeBSD.
  ifeq ($(OS_ARCH),NetBSD)
  ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
  ifeq ($(MODULE),layout)
-@@ -602,6 +608,10 @@ endif
+@@ -610,6 +616,10 @@ endif
  endif
  endif
  

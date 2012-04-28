@@ -1,6 +1,6 @@
-$NetBSD: patch-mb,v 1.4 2012/03/19 10:35:59 ryoon Exp $
+$NetBSD: patch-mb,v 1.5 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2012-03-13 05:33:19.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2012-04-23 06:28:29.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in
 @@ -82,7 +82,7 @@ endif
  endif

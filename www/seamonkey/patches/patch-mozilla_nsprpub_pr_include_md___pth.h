@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_nsprpub_pr_include_md___pth.h,v 1.2 2012/03/19 10:36:00 ryoon Exp $
+$NetBSD: patch-mozilla_nsprpub_pr_include_md___pth.h,v 1.3 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/nsprpub/pr/include/md/_pth.h.orig	2012-03-13 05:33:05.000000000 +0000
+--- mozilla/nsprpub/pr/include/md/_pth.h.orig	2012-04-23 06:28:13.000000000 +0000
 +++ mozilla/nsprpub/pr/include/md/_pth.h
 @@ -146,7 +146,7 @@
  #define _PT_PTHREAD_COPY_THR_HANDLE(st, dt)   (dt) = (st)
