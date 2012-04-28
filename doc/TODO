@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11047 2012/04/28 06:58:23 adam Exp $
+$NetBSD: TODO,v 1.11048 2012/04/28 14:18:36 drochner Exp $
 
 Suggested new packages
 ======================
@@ -1339,7 +1339,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-1.8.1
 	o webmin-1.550 [security] [pkg/45066]
 	o webmin-1.580 [security]
 	o websvn-2.3.2
