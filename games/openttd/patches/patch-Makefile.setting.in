@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile.setting.in,v 1.1 2012/04/28 06:56:43 adam Exp $
+
+--- Makefile.setting.in.orig	2012-04-15 11:55:05.000000000 +0000
++++ Makefile.setting.in
+@@ -9,13 +9,16 @@ SETTINGSGEN      = !!SETTINGSGEN!!
+ ENDIAN_CHECK     = !!ENDIAN_CHECK!!
+ SRC_DIR          = !!SRC_DIR!!
+ CXX_BUILD        = !!CXX_BUILD!!
+-CFLAGS_BUILD     = !!CFLAGS_BUILD!!
+-LDFLAGS_BUILD    = !!LDFLAGS_BUILD!!
++CFLAGS_BUILD     = !!CFLAGS!! !!CFLAGS_BUILD!!
++LDFLAGS_BUILD    = !!LDFLAGS!! !!LDFLAGS_BUILD!! !!LIBS!!
+ STAGE            = !!STAGE!!
+ SETTING_OBJS_DIR = !!SETTING_OBJS_DIR!!
+ 
+ ENDIAN_TARGETS := endian_host.h endian_target.h $(ENDIAN_CHECK)
+ 
++# Make sure endian_host.h is reachable as if it was in the src/ dir
++CFLAGS_BUILD += -I $(SETTING_OBJS_DIR)
++
+ # Check if we want to show what we are doing
+ ifdef VERBOSE
+ 	Q =
