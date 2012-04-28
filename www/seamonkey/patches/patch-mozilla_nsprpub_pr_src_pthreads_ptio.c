@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_nsprpub_pr_src_pthreads_ptio.c,v 1.2 2012/03/19 10:36:00 ryoon Exp $
+$NetBSD: patch-mozilla_nsprpub_pr_src_pthreads_ptio.c,v 1.3 2012/04/28 22:48:07 ryoon Exp $
 
---- mozilla/nsprpub/pr/src/pthreads/ptio.c.orig	2012-03-13 05:33:05.000000000 +0000
+--- mozilla/nsprpub/pr/src/pthreads/ptio.c.orig	2012-04-23 06:28:14.000000000 +0000
 +++ mozilla/nsprpub/pr/src/pthreads/ptio.c
 @@ -212,7 +212,8 @@ static PRBool _pr_ipv6_v6only_on_by_defa
      || defined(LINUX) || defined(__GNU__) || defined(__GLIBC__) \
