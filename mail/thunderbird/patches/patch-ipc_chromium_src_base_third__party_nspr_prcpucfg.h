@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_third__party_nspr_prcpucfg.h,v 1.2 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_third__party_nspr_prcpucfg.h,v 1.3 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/third_party/nspr/prcpucfg.h.orig	2012-02-16 10:25:01.000000000 +0000
+--- mozilla/ipc/chromium/src/base/third_party/nspr/prcpucfg.h.orig	2012-04-20 22:40:06.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/third_party/nspr/prcpucfg.h
 @@ -34,7 +34,7 @@
  #include "base/third_party/nspr/prcpucfg_win.h"
