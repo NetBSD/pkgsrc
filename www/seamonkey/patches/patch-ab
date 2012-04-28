@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.13 2012/03/19 10:35:57 ryoon Exp $
+$NetBSD: patch-ab,v 1.14 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/nsprpub/pr/include/md/_netbsd.h.orig	2012-03-13 05:33:05.000000000 +0000
+--- mozilla/nsprpub/pr/include/md/_netbsd.h.orig	2012-04-23 06:28:13.000000000 +0000
 +++ mozilla/nsprpub/pr/include/md/_netbsd.h
 @@ -79,7 +79,7 @@
  #define HAVE_DLL
