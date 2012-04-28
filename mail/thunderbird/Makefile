@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.90 2012/03/16 21:09:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.91 2012/04/28 16:56:58 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	thunderbird-${TB_VER}
-PKGREVISION=	1
-TB_VER=		11.0
+TB_VER=		12.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/} \
 		${MASTER_SITE_MOZILLA_ALL:=thunderbird/releases/${TB_VER}/source/}
-DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2 \
-		comm-release-f60c071e187b.tar.bz2
+DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/

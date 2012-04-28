@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.9 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-ag,v 1.10 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/nsprpub/pr/include/md/_freebsd.h.orig	2012-02-16 10:25:22.000000000 +0000
+--- mozilla/nsprpub/pr/include/md/_freebsd.h.orig	2012-04-20 22:40:20.000000000 +0000
 +++ mozilla/nsprpub/pr/include/md/_freebsd.h
 @@ -79,7 +79,7 @@
  #define _PR_HAVE_LARGE_OFF_T

@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.8 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-ak,v 1.9 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/js/src/ctypes/libffi/configure.orig	2012-02-16 10:25:02.000000000 +0000
+--- mozilla/js/src/ctypes/libffi/configure.orig	2012-04-20 22:40:07.000000000 +0000
 +++ mozilla/js/src/ctypes/libffi/configure
-@@ -11277,7 +11277,7 @@ case "$host" in
+@@ -11278,7 +11278,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;

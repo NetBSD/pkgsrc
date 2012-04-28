@@ -1,11 +1,11 @@
-$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.2 2012/03/10 11:42:39 ryoon Exp $
+$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.3 2012/04/28 16:56:59 ryoon Exp $
 
---- mozilla/toolkit/toolkit-tiers.mk.orig	2012-02-16 10:25:31.000000000 +0000
+--- mozilla/toolkit/toolkit-tiers.mk.orig	2012-04-20 22:40:26.000000000 +0000
 +++ mozilla/toolkit/toolkit-tiers.mk
-@@ -82,7 +82,7 @@ ifndef MOZ_NATIVE_BZ2
+@@ -80,7 +80,7 @@ ifdef MOZ_UPDATER
+ ifndef MOZ_NATIVE_BZ2
  tier_platform_dirs += modules/libbz2
  endif
- tier_platform_dirs += modules/libmar
 -tier_platform_dirs += other-licenses/bsdiff
 +#tier_platform_dirs += other-licenses/bsdiff
  endif

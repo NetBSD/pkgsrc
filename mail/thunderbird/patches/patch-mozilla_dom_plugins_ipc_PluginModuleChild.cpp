@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.1 2012/03/10 11:42:39 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.2 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-02-16 10:24:53.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2012-04-20 22:39:59.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.cpp
 @@ -236,7 +236,7 @@ PluginModuleChild::Init(const std::strin
  
@@ -11,7 +11,7 @@ $NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.1 2012/03/10 11
      mShutdownFunc =
          (NP_PLUGINSHUTDOWN) PR_FindFunctionSymbol(mLibrary, "NP_Shutdown");
  
-@@ -1824,7 +1824,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
+@@ -1821,7 +1821,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
      PLUGIN_LOG_DEBUG_METHOD;
      AssertPluginThread();
  
@@ -20,7 +20,7 @@ $NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.1 2012/03/10 11
      return true;
  #elif defined(OS_WIN) || defined(OS_MACOSX)
      *_retval = mGetEntryPointsFunc(&mFunctions);
-@@ -1851,7 +1851,7 @@ PluginModuleChild::AnswerNP_Initialize(N
+@@ -1848,7 +1848,7 @@ PluginModuleChild::AnswerNP_Initialize(N
      SendBackUpXResources(FileDescriptor(xSocketFd, false/*don't close*/));
  #endif
  

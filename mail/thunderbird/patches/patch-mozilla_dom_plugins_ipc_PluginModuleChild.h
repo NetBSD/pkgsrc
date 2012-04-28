@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.h,v 1.1 2012/03/10 11:42:39 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.h,v 1.2 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.h.orig	2012-02-16 10:24:53.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.h.orig	2012-04-20 22:39:59.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.h
-@@ -358,7 +358,7 @@ private:
+@@ -360,7 +360,7 @@ private:
  
      // we get this from the plugin
      NP_PLUGINSHUTDOWN mShutdownFunc;

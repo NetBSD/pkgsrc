@@ -1,6 +1,6 @@
-$NetBSD: patch-pc,v 1.5 2012/04/01 20:53:43 ryoon Exp $
+$NetBSD: patch-pc,v 1.6 2012/04/28 16:56:59 ryoon Exp $
 
---- mozilla/xulrunner/installer/libxul-embedding.pc.in.orig	2012-04-01 16:10:27.000000000 +0000
+--- mozilla/xulrunner/installer/libxul-embedding.pc.in.orig	2012-04-20 22:40:27.000000000 +0000
 +++ mozilla/xulrunner/installer/libxul-embedding.pc.in
 @@ -6,5 +6,6 @@ idldir=%idldir%
  Name: libxul-embedding
@@ -8,5 +8,5 @@ $NetBSD: patch-pc,v 1.5 2012/04/01 20:53:43 ryoon Exp $
  Version: %MOZILLA_VERSION%
 -Libs: -L${sdkdir}/lib -lxpcomglue -ldl
 +# XXXtnn -ldl removed
-+Libs: -Wl,-R${prefix}/lib/thunderbird -Wl,-R${prefix}/lib/thunderbird -L${prefix}/lib/thunderbird -lxpcomglue
++Libs: -Wl,-R${prefix}/lib/xulrunner -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lxpcomglue
  Cflags: -DXPCOM_GLUE -I${includedir} %WCHAR_CFLAGS%
