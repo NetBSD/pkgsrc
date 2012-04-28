@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1347 2012/04/28 15:56:09 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1348 2012/04/28 16:35:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2167,3 +2167,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-kgio to 2.7.4 [taca 2012-04-28]
 	Updated devel/ruby-logging to 1.7.2 [taca 2012-04-28]
 	Updated devel/ruby-mocha to 0.11.3 [taca 2012-04-28]
+	Updated www/firefox-l10n to 12.0 [ryoon 2012-04-28]
