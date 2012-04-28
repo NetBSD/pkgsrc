@@ -1,8 +1,8 @@
-$NetBSD: patch-mn,v 1.4 2012/03/19 10:35:59 ryoon Exp $
+$NetBSD: patch-mn,v 1.5 2012/04/28 22:48:06 ryoon Exp $
 
 Make sure we link correctly with sqlite3 from pkgsrc.
 
---- mozilla/security/nss/lib/softoken/config.mk.orig	2012-03-13 05:33:09.000000000 +0000
+--- mozilla/security/nss/lib/softoken/config.mk.orig	2012-04-23 06:28:18.000000000 +0000
 +++ mozilla/security/nss/lib/softoken/config.mk
 @@ -80,7 +80,7 @@ else
  # $(EXTRA_SHARED_LIBS) come before $(OS_LIBS), except on AIX.

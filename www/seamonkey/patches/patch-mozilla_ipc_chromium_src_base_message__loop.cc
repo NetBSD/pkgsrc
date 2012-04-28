@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_message__loop.cc,v 1.2 2012/03/19 10:35:59 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_message__loop.cc,v 1.3 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/message_loop.cc.orig	2012-03-13 05:32:39.000000000 +0000
+--- mozilla/ipc/chromium/src/base/message_loop.cc.orig	2012-04-23 06:27:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/message_loop.cc
 @@ -19,7 +19,7 @@
  #if defined(OS_POSIX)

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.h,v 1.2 2012/03/19 10:35:59 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.h,v 1.3 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.h.orig	2012-03-13 05:32:27.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.h.orig	2012-04-23 06:27:30.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.h
 @@ -360,7 +360,7 @@ private:
  

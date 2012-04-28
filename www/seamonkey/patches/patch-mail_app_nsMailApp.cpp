@@ -1,8 +1,8 @@
-$NetBSD: patch-mail_app_nsMailApp.cpp,v 1.1 2012/03/19 10:35:58 ryoon Exp $
+$NetBSD: patch-mail_app_nsMailApp.cpp,v 1.2 2012/04/28 22:48:06 ryoon Exp $
 
---- mail/app/nsMailApp.cpp.orig	2012-03-13 05:23:12.000000000 +0000
+--- mail/app/nsMailApp.cpp.orig	2012-04-23 06:20:50.000000000 +0000
 +++ mail/app/nsMailApp.cpp
-@@ -48,6 +48,27 @@
+@@ -52,6 +52,27 @@
  
  #include <stdio.h>
  #include <stdarg.h>
@@ -30,11 +30,11 @@ $NetBSD: patch-mail_app_nsMailApp.cpp,v 1.1 2012/03/19 10:35:58 ryoon Exp $
  
  #include "nsCOMPtr.h"
  #include "nsILocalFile.h"
-@@ -147,6 +168,7 @@ static int do_main(const char *exePath, 
+@@ -151,6 +172,7 @@ static int do_main(const char *exePath, 
  
  int main(int argc, char* argv[])
  {
 +  netbsd_fixrlimit();
    char exePath[MAXPATHLEN];
  
-   nsresult rv = mozilla::BinaryPath::Get(argv[0], exePath);
+ #ifdef XP_MACOSX
