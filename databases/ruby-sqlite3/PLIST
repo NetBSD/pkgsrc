@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/02/19 11:27:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/04/28 14:09:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/API_CHANGES.rdoc
@@ -49,6 +49,7 @@ ${GEM_LIBDIR}/test/test_integration_open_close.rb
 ${GEM_LIBDIR}/test/test_integration_pending.rb
 ${GEM_LIBDIR}/test/test_integration_resultset.rb
 ${GEM_LIBDIR}/test/test_integration_statement.rb
+${GEM_LIBDIR}/test/test_result_set.rb
 ${GEM_LIBDIR}/test/test_sqlite3.rb
 ${GEM_LIBDIR}/test/test_statement.rb
 ${GEM_LIBDIR}/test/test_statement_execute.rb
