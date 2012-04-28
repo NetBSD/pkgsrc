@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile.src.in,v 1.1 2012/04/28 06:56:43 adam Exp $
+
+--- Makefile.src.in.orig	2012-04-27 16:50:24.000000000 +0000
++++ Makefile.src.in
+@@ -12,12 +12,12 @@ CXX_BUILD      = !!CXX_BUILD!!
+ WINDRES        = !!WINDRES!!
+ STRIP          = !!STRIP!!
+ CFLAGS         = !!CFLAGS!!
+-CFLAGS_BUILD   = !!CFLAGS_BUILD!!
++CFLAGS_BUILD   = !!CFLAGS!! !!CFLAGS_BUILD!!
+ CXXFLAGS       = !!CXXFLAGS!!
+-CXXFLAGS_BUILD = !!CXXFLAGS_BUILD!!
++CXXFLAGS_BUILD = !!CXXFLAGS!! !!CXXFLAGS_BUILD!!
+ LIBS           = !!LIBS!!
+ LDFLAGS        = !!LDFLAGS!!
+-LDFLAGS_BUILD  = !!LDFLAGS_BUILD!!
++LDFLAGS_BUILD  = !!LDFLAGS!! !!LDFLAGS_BUILD!! !!LIBS!!
+ ROOT_DIR       = !!ROOT_DIR!!
+ BIN_DIR        = !!BIN_DIR!!
+ LANG_DIR       = !!LANG_DIR!!

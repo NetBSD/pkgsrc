@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2012/04/27 12:31:48 obache Exp $
+# $NetBSD: Makefile,v 1.43 2012/04/28 06:56:42 adam Exp $
 
-DISTNAME=	openttd-1.0.5-source
+DISTNAME=	openttd-1.2.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	5
 CATEGORIES=	games x11
 MASTER_SITES=	http://binaries.openttd.org/releases/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openttd.org/
@@ -31,7 +30,8 @@ CONFIGURE_ARGS+=	--man-dir=${PKGMANDIR}/man6
 CONFIGURE_ARGS+=	--menu-dir=share/applications
 CONFIGURE_ARGS+=	--personal-dir=.openttd
 CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
-CONFIGURE_ARGS+=	--with-lzo2=${BUILDLINK_PREFIX.lzo}/lib/liblzo2.so
+# Hack: built-in xz does not provide liblzma.pc, needed to configure
+PREFER_PKGSRC+=		xz
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--os=FREEBSD
 .endif
 
 .if (${OPSYS} == "Darwin")
+CONFIGURE_ARGS+=	--disable-cocoa-quickdraw
 CONFIGURE_ARGS+=	--with-cocoa
 CONFIGURE_ARGS+=	--without-application-bundle
 CONFIGURE_ARGS+=	--without-osx-sysroot
@@ -48,6 +49,7 @@ CONFIGURE_ARGS+=	--without-osx-sysroot
 .endif
 
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
