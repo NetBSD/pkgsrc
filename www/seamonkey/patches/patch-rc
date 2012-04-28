@@ -1,6 +1,6 @@
-$NetBSD: patch-rc,v 1.4 2012/03/19 10:36:00 ryoon Exp $
+$NetBSD: patch-rc,v 1.5 2012/04/28 22:48:07 ryoon Exp $
 
---- mozilla/browser/branding/unofficial/locales/en-US/brand.dtd.orig	2012-03-13 05:32:17.000000000 +0000
+--- mozilla/browser/branding/unofficial/locales/en-US/brand.dtd.orig	2012-04-23 06:27:23.000000000 +0000
 +++ mozilla/browser/branding/unofficial/locales/en-US/brand.dtd
 @@ -1,4 +1,4 @@
 -<!ENTITY  brandShortName        "Mozilla Developer Preview">

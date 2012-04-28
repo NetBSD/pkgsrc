@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_base__paths.h,v 1.2 2012/03/19 10:35:59 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_base__paths.h,v 1.3 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/base_paths.h.orig	2012-03-13 05:32:38.000000000 +0000
+--- mozilla/ipc/chromium/src/base/base_paths.h.orig	2012-04-23 06:27:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/base_paths.h
 @@ -13,7 +13,7 @@
  #include "base/base_paths_win.h"
