@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/16 11:54:04 taca Exp $
+$NetBSD: distinfo,v 1.2 2012/04/28 15:31:26 taca Exp $
 
-SHA1 (fast_gettext-0.6.4.gem) = 1f0ec02fcecbe49c65ff710d53154e6efc8536a0
-RMD160 (fast_gettext-0.6.4.gem) = b11f9a610a58767150e9c2eaad9b8fac62751786
-Size (fast_gettext-0.6.4.gem) = 83456 bytes
+SHA1 (fast_gettext-0.6.6.gem) = ff000c21bfa66617221855814a773a6f6cf7a4be
+RMD160 (fast_gettext-0.6.6.gem) = fa50b895087786c934d19f0bf524816de7cf0830
+Size (fast_gettext-0.6.6.gem) = 83456 bytes
