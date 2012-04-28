@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1346 2012/04/28 15:50:01 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1347 2012/04/28 15:56:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2164,3 +2164,6 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-gettext_i18n_rails to 0.4.6 [taca 2012-04-28]
 	Updated textproc/ruby-json to 1.6.6 [taca 2012-04-28]
 	Updated textproc/ruby-json-pure to 1.6.6 [taca 2012-04-28]
+	Updated devel/ruby-kgio to 2.7.4 [taca 2012-04-28]
+	Updated devel/ruby-logging to 1.7.2 [taca 2012-04-28]
+	Updated devel/ruby-mocha to 0.11.3 [taca 2012-04-28]
