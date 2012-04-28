@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/18 10:27:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/28 12:17:13 obache Exp $
 bin/xlsopcodes${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/GUIDE.txt
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/LICENSE.txt
@@ -33,6 +34,7 @@ ${GEM_LIBDIR}/lib/spreadsheet/excel/worksheet.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/writer.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/writer/biff8.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/writer/format.rb
+${GEM_LIBDIR}/lib/spreadsheet/excel/writer/n_worksheet.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/writer/workbook.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/writer/worksheet.rb
 ${GEM_LIBDIR}/lib/spreadsheet/font.rb
