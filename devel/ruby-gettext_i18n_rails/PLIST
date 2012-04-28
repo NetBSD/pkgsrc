@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/17 14:40:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/28 15:43:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
@@ -11,6 +11,7 @@ ${GEM_LIBDIR}/lib/gettext_i18n_rails.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/action_controller.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/active_record.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/backend.rb
+${GEM_LIBDIR}/lib/gettext_i18n_rails/base_parser.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/haml_parser.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/hamlet_parser.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/html_safe_translations.rb
