@@ -1,6 +1,6 @@
-$NetBSD: patch-ay,v 1.5 2012/03/15 08:52:34 ryoon Exp $
+$NetBSD: patch-ay,v 1.6 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/browser/app/nsBrowserApp.cpp.orig	2011-09-22 20:20:17.000000000 +0000
+--- mozilla/browser/app/nsBrowserApp.cpp.orig	2012-04-20 22:39:54.000000000 +0000
 +++ mozilla/browser/app/nsBrowserApp.cpp
 @@ -53,6 +53,30 @@
  #include <stdio.h>
@@ -33,7 +33,7 @@ $NetBSD: patch-ay,v 1.5 2012/03/15 08:52:34 ryoon Exp $
  
  #include "plstr.h"
  #include "prprf.h"
-@@ -215,6 +239,9 @@
+@@ -215,6 +239,9 @@ int main(int argc, char* argv[])
  #ifdef XP_MACOSX
    TriggerQuirks();
  #endif
