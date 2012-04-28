@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2012/04/28 14:12:16 drochner Exp $
+
+--- GNUmakefile.in.orig	2012-04-26 18:01:39.000000000 +0000
++++ GNUmakefile.in
+@@ -74082,7 +74082,7 @@ install-data-local:
+ @ENABLE_WEBKIT2_TRUE@	      $${installdir}/webkit2gtk-$(DOC_MODULE_VERSION).devhelp2; \
+ @ENABLE_WEBKIT2_TRUE@	  fi; \
+ @ENABLE_WEBKIT2_TRUE@	fi
+-	@$(AM_V_GEN)$(PYTHON) $(srcdir)/Tools/gtk/generate-gtkdoc --rebase --virtual-root=$${DESTDIR}
++#	@$(AM_V_GEN)$(PYTHON) $(srcdir)/Tools/gtk/generate-gtkdoc --rebase --virtual-root=$${DESTDIR}
+ 
+ uninstall-local:
+ 	@DOC_MODULE_VERSION=`cat ./Documentation/webkitgtk/version.xml`; \

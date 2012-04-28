@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.47 2012/04/19 21:08:04 joerg Exp $
+$NetBSD: distinfo,v 1.48 2012/04/28 14:12:16 drochner Exp $
 
-SHA1 (webkit-1.6.3.tar.xz) = 7df69608ef2ce9dd7328353b4ee34f69271cd43b
-RMD160 (webkit-1.6.3.tar.xz) = cc319ffe4c2810663ae05b90e69d9495f5c3f0aa
-Size (webkit-1.6.3.tar.xz) = 6794004 bytes
+SHA1 (webkit-1.8.1.tar.xz) = d26543baace03c31aa3de82bc24f06f14c6b3052
+RMD160 (webkit-1.8.1.tar.xz) = ebe10f63e2c514be13c7b61172b11c418d0ca0ff
+Size (webkit-1.8.1.tar.xz) = 7949924 bytes
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = a19c152025d16b32cf6e429483d3885bd8243de8
-SHA1 (patch-Source_JavaScriptCore_jit_JITStubs.cpp) = 87ff59a80fb8bc436ee0b7093b4e26dc515de984
-SHA1 (patch-Source_JavaScriptCore_wtf_MathExtras.h) = 17295aa1eacf1e5847e460bc99e70118f2f3f13b
+SHA1 (patch-Source_JavaScriptCore_wtf_MathExtras.h) = a47cf7e70688d46096930b2029d0970576a11b3c
 SHA1 (patch-Source_JavaScriptCore_wtf_Threading.h) = f056b8f08c68d44e1b9dfd2bcf60cb788b05f38f
-SHA1 (patch-Source_WebCore_plugins_gtk_PluginViewGtk.cpp) = df947af4c58e455c3adcbcb9ea27cab4d36f236c
-SHA1 (patch-ag) = 220a9925ba1eb4288d334997fda24f41595de1c8
-SHA1 (patch-ah) = de2e719f67534bf64fb5968b457888e9bd824a3d
-SHA1 (patch-ai) = 8998dbb783922a866dcd00e14f33086d7edecdef
-SHA1 (patch-configure) = 32c4c206fcb6cbeb49f757877d268a9106915858
+SHA1 (patch-ai) = 7b94becb603b88c66d8d8f1619d90dc6553d970c
+SHA1 (patch-aj) = 857bd0111fc6dee35dcf83523ff2438ed71981b7
+SHA1 (patch-ak) = 76890627e3fe3673577f1f5ca229e70474b2a567
+SHA1 (patch-al) = 3c9749547acd59e42b0390e9a94fd4484d2af7f4
+SHA1 (patch-configure) = 5f805583b6292d61a7b13cbf6d35d864774e4cd8
