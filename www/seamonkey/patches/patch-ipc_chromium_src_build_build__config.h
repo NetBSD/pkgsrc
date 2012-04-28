@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.5 2012/04/02 14:35:00 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.6 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/ipc/chromium/src/build/build_config.h.orig	2012-03-13 02:43:11.000000000 +0000
+--- mozilla/ipc/chromium/src/build/build_config.h.orig	2012-04-23 06:27:39.000000000 +0000
 +++ mozilla/ipc/chromium/src/build/build_config.h
 @@ -19,17 +19,23 @@
  #define OS_MACOSX 1
