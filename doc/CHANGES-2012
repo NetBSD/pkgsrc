@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1345 2012/04/28 15:43:48 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1346 2012/04/28 15:50:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2162,3 +2162,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/midori to 0.4.5 [drochner 2012-04-28]
 	Updated devel/ruby-fast_gettext to 0.6.6 [taca 2012-04-28]
 	Updated devel/ruby-gettext_i18n_rails to 0.4.6 [taca 2012-04-28]
+	Updated textproc/ruby-json to 1.6.6 [taca 2012-04-28]
+	Updated textproc/ruby-json-pure to 1.6.6 [taca 2012-04-28]
