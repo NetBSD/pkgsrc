@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/16 11:54:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/28 15:31:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Readme.md
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/benchmark/base.rb
 ${GEM_LIBDIR}/benchmark/baseline.rb
 ${GEM_LIBDIR}/benchmark/fast_gettext.rb
@@ -22,7 +22,6 @@ ${GEM_LIBDIR}/examples/db/migration.rb
 ${GEM_LIBDIR}/examples/missing_translation_logger.rb
 ${GEM_LIBDIR}/fast_gettext.gemspec
 ${GEM_LIBDIR}/lib/fast_gettext.rb
-${GEM_LIBDIR}/lib/fast_gettext/VERSION
 ${GEM_LIBDIR}/lib/fast_gettext/mo_file.rb
 ${GEM_LIBDIR}/lib/fast_gettext/po_file.rb
 ${GEM_LIBDIR}/lib/fast_gettext/storage.rb
@@ -43,6 +42,7 @@ ${GEM_LIBDIR}/lib/fast_gettext/vendor/iconv.rb
 ${GEM_LIBDIR}/lib/fast_gettext/vendor/mofile.rb
 ${GEM_LIBDIR}/lib/fast_gettext/vendor/poparser.rb
 ${GEM_LIBDIR}/lib/fast_gettext/vendor/string.rb
+${GEM_LIBDIR}/lib/fast_gettext/version.rb
 ${GEM_LIBDIR}/spec/aa_unconfigued_spec.rb
 ${GEM_LIBDIR}/spec/cases/fake_load_path/iconv.rb
 ${GEM_LIBDIR}/spec/cases/iconv_fallback.rb
