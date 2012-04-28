@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/06/27 10:03:38 obache Exp $
+# $NetBSD: Makefile,v 1.26 2012/04/28 13:15:33 obache Exp $
 #
 
 DISTNAME=	quake2-0.3
@@ -33,7 +33,7 @@ SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.snd=	Fixing hardcoded audio device.
 SUBST_STAGE.data=	post-patch
 SUBST_FILES.data=	configure
-SUBST_SED.data=		-e "s|PACKAGE=\'quake2\'|PACKAGE=\'${PKGBASE}\'|g"
+SUBST_SED.data=		-e s,PACKAGE=\'quake2\',PACKAGE=\'${PKGBASE}\',g
 SUBST_MESSAGE.data=	Fixing installation directories.
 
 .include "../../mk/bsd.prefs.mk"
