@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/10/15 23:07:24 spz Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/28 18:26:19 gendalia Exp $
 libexec/xymon/ackinfo.cgi
 libexec/xymon/acknowledge.cgi
+libexec/xymon/appfeed.cgi
 libexec/xymon/bb
 libexec/xymon/bbcmd
 libexec/xymon/bbdigest
@@ -8,6 +9,8 @@ libexec/xymon/bbhostgrep
 libexec/xymon/bbhostshow
 libexec/xymon/beastat
 libexec/xymon/boilerplate.cgi
+libexec/xymon/cgi-bin/appfeed-critical.sh
+libexec/xymon/cgi-bin/appfeed.sh
 libexec/xymon/cgi-bin/certreport.sh
 libexec/xymon/cgi-bin/columndoc.sh
 libexec/xymon/cgi-bin/confreport-critical.sh
@@ -65,6 +68,7 @@ libexec/xymon/trimhistory
 libexec/xymon/useradm.cgi
 libexec/xymon/xymon
 libexec/xymon/xymon-mailack
+libexec/xymon/xymon-snmpcollect
 libexec/xymon/xymon.sh
 libexec/xymon/xymoncfg
 libexec/xymon/xymoncgimsg.cgi
@@ -74,6 +78,7 @@ libexec/xymon/xymond_alert
 libexec/xymon/xymond_capture
 libexec/xymon/xymond_channel
 libexec/xymon/xymond_client
+libexec/xymon/xymond_distribute
 libexec/xymon/xymond_filestore
 libexec/xymon/xymond_history
 libexec/xymon/xymond_hostdata
@@ -92,6 +97,7 @@ libexec/xymon/xymonproxy
 libexec/xymon/xymonreports.sh
 man/man1/ackinfo.cgi.1
 man/man1/acknowledge.cgi.1
+man/man1/appfeed.cgi.1
 man/man1/clientupdate.1
 man/man1/combostatus.1
 man/man1/confreport.cgi.1
@@ -137,6 +143,7 @@ man/man5/xymon-xmh.5
 man/man5/xymonclient.cfg.5
 man/man5/xymonserver.cfg.5
 man/man5/xymonweb.5
+man/man5/xymonwebaccess.5
 man/man7/xymon.7
 man/man8/enadis.cgi.8
 man/man8/msgcache.8
@@ -148,6 +155,7 @@ man/man8/xymond_alert.8
 man/man8/xymond_capture.8
 man/man8/xymond_channel.8
 man/man8/xymond_client.8
+man/man8/xymond_distribute.8
 man/man8/xymond_filestore.8
 man/man8/xymond_history.8
 man/man8/xymond_hostdata.8
@@ -233,6 +241,7 @@ share/examples/xymon/www/help/mainview.jpg
 share/examples/xymon/www/help/manpages/index.html
 share/examples/xymon/www/help/manpages/man1/ackinfo.cgi.1.html
 share/examples/xymon/www/help/manpages/man1/acknowledge.cgi.1.html
+share/examples/xymon/www/help/manpages/man1/appfeed.cgi.1.html
 share/examples/xymon/www/help/manpages/man1/clientupdate.1.html
 share/examples/xymon/www/help/manpages/man1/combostatus.1.html
 share/examples/xymon/www/help/manpages/man1/confreport.cgi.1.html
@@ -278,6 +287,7 @@ share/examples/xymon/www/help/manpages/man5/xymon-xmh.5.html
 share/examples/xymon/www/help/manpages/man5/xymonclient.cfg.5.html
 share/examples/xymon/www/help/manpages/man5/xymonserver.cfg.5.html
 share/examples/xymon/www/help/manpages/man5/xymonweb.5.html
+share/examples/xymon/www/help/manpages/man5/xymonwebaccess.5.html
 share/examples/xymon/www/help/manpages/man7/xymon.7.html
 share/examples/xymon/www/help/manpages/man8/enadis.cgi.8.html
 share/examples/xymon/www/help/manpages/man8/msgcache.8.html
@@ -289,6 +299,7 @@ share/examples/xymon/www/help/manpages/man8/xymond_alert.8.html
 share/examples/xymon/www/help/manpages/man8/xymond_capture.8.html
 share/examples/xymon/www/help/manpages/man8/xymond_channel.8.html
 share/examples/xymon/www/help/manpages/man8/xymond_client.8.html
+share/examples/xymon/www/help/manpages/man8/xymond_distribute.8.html
 share/examples/xymon/www/help/manpages/man8/xymond_filestore.8.html
 share/examples/xymon/www/help/manpages/man8/xymond_history.8.html
 share/examples/xymon/www/help/manpages/man8/xymond_hostdata.8.html
