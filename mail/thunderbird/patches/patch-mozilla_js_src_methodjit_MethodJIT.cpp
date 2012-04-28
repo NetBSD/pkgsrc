@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.1 2012/03/10 11:42:39 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_methodjit_MethodJIT.cpp,v 1.2 2012/04/28 16:56:59 ryoon Exp $
 
---- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2012-02-16 10:25:04.000000000 +0000
+--- mozilla/js/src/methodjit/MethodJIT.cpp.orig	2012-04-20 22:40:08.000000000 +0000
 +++ mozilla/js/src/methodjit/MethodJIT.cpp
-@@ -171,7 +171,7 @@ SetVMFrameRegs(VMFrame &f)
+@@ -167,7 +167,7 @@ PopActiveVMFrame(VMFrame &f)
  
  JS_STATIC_ASSERT(offsetof(FrameRegs, sp) == 0);
  
