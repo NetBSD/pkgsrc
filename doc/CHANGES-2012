@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1335 2012/04/28 06:58:23 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1336 2012/04/28 12:17:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2151,3 +2151,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/abcmidi to 20120415 [ryoon 2012-04-27]
 	Updated games/openttd to 1.2.0 [adam 2012-04-28]
 	Updated games/openttd-data to 0.4.4 [adam 2012-04-28]
+	Updated math/ruby-spreadsheet to 0.6.9 [obache 2012-04-28]
