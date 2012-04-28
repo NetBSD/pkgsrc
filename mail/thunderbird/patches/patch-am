@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.5 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-am,v 1.6 2012/04/28 16:56:58 ryoon Exp $
 
 SHA1_Update conflicts with openssl which may be dynamically loaded
 at runtime via libcups or libgssapi so causing a crash due to using
 the wrong binding.  So rename here to avoid conflict.
 
---- mozilla/security/nss/lib/freebl/blapi.h.orig	2012-02-16 10:25:24.000000000 +0000
+--- mozilla/security/nss/lib/freebl/blapi.h.orig	2012-04-20 22:40:22.000000000 +0000
 +++ mozilla/security/nss/lib/freebl/blapi.h
 @@ -1038,6 +1038,8 @@ extern void SHA1_DestroyContext(SHA1Cont
  */

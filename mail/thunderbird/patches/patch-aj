@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.8 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-aj,v 1.9 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/profile/dirserviceprovider/src/nsProfileLock.cpp.orig	2012-02-16 10:25:23.000000000 +0000
+--- mozilla/profile/dirserviceprovider/src/nsProfileLock.cpp.orig	2012-04-20 22:40:21.000000000 +0000
 +++ mozilla/profile/dirserviceprovider/src/nsProfileLock.cpp
 @@ -408,6 +408,7 @@ nsresult nsProfileLock::LockWithSymlink(
  #endif

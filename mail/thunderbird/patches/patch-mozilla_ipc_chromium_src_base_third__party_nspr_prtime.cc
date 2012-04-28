@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_third__party_nspr_prtime.cc,v 1.1 2012/03/10 11:42:39 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_third__party_nspr_prtime.cc,v 1.2 2012/04/28 16:56:59 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/third_party/nspr/prtime.cc.orig	2012-02-16 10:25:01.000000000 +0000
+--- mozilla/ipc/chromium/src/base/third_party/nspr/prtime.cc.orig	2012-04-20 22:40:06.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/third_party/nspr/prtime.cc
 @@ -212,7 +212,7 @@ PR_ImplodeTime(const PRExplodedTime *exp
      LL_ADD(retVal, retVal, temp);

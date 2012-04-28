@@ -1,9 +1,9 @@
-$NetBSD: patch-al,v 1.9 2012/03/10 11:42:38 ryoon Exp $
+$NetBSD: patch-al,v 1.10 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/storage/src/mozStorageConnection.cpp.orig	2012-02-16 10:25:26.000000000 +0000
+--- mozilla/storage/src/mozStorageConnection.cpp.orig	2012-04-20 22:40:23.000000000 +0000
 +++ mozilla/storage/src/mozStorageConnection.cpp
-@@ -632,6 +632,11 @@ Connection::initialize(nsIFile *aDatabas
-     (void)::NS_RegisterMemoryReporter(mMemoryReporters[i]);
+@@ -718,6 +718,11 @@ Connection::initialize(nsIFile *aDatabas
+       break;
    }
  
 +  // XXX tnn: the configure script demands that sqlite3 is compiled with

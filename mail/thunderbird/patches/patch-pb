@@ -1,11 +1,11 @@
-$NetBSD: patch-pb,v 1.5 2012/04/01 20:53:43 ryoon Exp $
+$NetBSD: patch-pb,v 1.6 2012/04/28 16:56:59 ryoon Exp $
 
---- mozilla/xulrunner/installer/libxul.pc.in.orig	2012-04-01 16:07:35.000000000 +0000
+--- mozilla/xulrunner/installer/libxul.pc.in.orig	2012-04-20 22:40:27.000000000 +0000
 +++ mozilla/xulrunner/installer/libxul.pc.in
 @@ -7,5 +7,5 @@ Name: libxul
  Description: The Mozilla Runtime and Embedding Engine
  Version: %MOZILLA_VERSION%
  Requires: %NSPR_NAME% >= %NSPR_VERSION%
 -Libs: -L${sdkdir}/lib %MOZ_XUL_LINK%
-+Libs: -Wl,-R${prefix}/lib/thunderbird -Wl,-R${prefix}/lib/thunderbird -L${prefix}/lib/thunderbird %MOZ_XUL_LINK%
++Libs: -Wl,-R${prefix}/lib/xulrunner -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner %MOZ_XUL_LINK%
  Cflags: -I${includedir} %WCHAR_CFLAGS%

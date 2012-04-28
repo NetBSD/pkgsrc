@@ -1,6 +1,6 @@
-$NetBSD: patch-zb,v 1.4 2012/03/10 11:42:40 ryoon Exp $
+$NetBSD: patch-zb,v 1.5 2012/04/28 16:56:59 ryoon Exp $
 
---- mail/app/Makefile.in.orig	2012-02-16 10:18:22.000000000 +0000
+--- mail/app/Makefile.in.orig	2012-04-20 22:32:37.000000000 +0000
 +++ mail/app/Makefile.in
 @@ -103,6 +103,10 @@ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
  TK_LIBS := -framework Cocoa $(TK_LIBS)

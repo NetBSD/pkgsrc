@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.8 2012/04/01 20:53:43 ryoon Exp $
+$NetBSD: patch-at,v 1.9 2012/04/28 16:56:58 ryoon Exp $
 
---- mozilla/gfx/qcms/qcmstypes.h.orig	2012-03-13 02:43:07.000000000 +0000
+--- mozilla/gfx/qcms/qcmstypes.h.orig	2012-04-20 22:40:02.000000000 +0000
 +++ mozilla/gfx/qcms/qcmstypes.h
 @@ -10,6 +10,8 @@
  #if defined (__SVR4) && defined (__sun)
