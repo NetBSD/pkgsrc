@@ -1,6 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.3 2012/03/19 10:35:58 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_file__util__posix.cc,v 1.4 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2012-03-13 05:32:38.000000000 +0000
+--- mozilla/ipc/chromium/src/base/file_util_posix.cc.orig	2012-04-23 06:27:38.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/file_util_posix.cc
 @@ -31,7 +31,7 @@
  #include "base/time.h"

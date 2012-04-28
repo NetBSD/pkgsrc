@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.9 2012/03/19 10:35:57 ryoon Exp $
+$NetBSD: patch-ac,v 1.10 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/nsprpub/configure.in.orig	2012-03-13 05:33:05.000000000 +0000
+--- mozilla/nsprpub/configure.in.orig	2012-04-23 06:28:13.000000000 +0000
 +++ mozilla/nsprpub/configure.in
 @@ -71,7 +71,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ

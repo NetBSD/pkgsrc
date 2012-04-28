@@ -1,11 +1,11 @@
-$NetBSD: patch-mozilla_netwerk_protocol_http_HttpChannelParent.cpp,v 1.1 2012/03/23 22:01:45 ryoon Exp $
+$NetBSD: patch-mozilla_netwerk_protocol_http_HttpChannelParent.cpp,v 1.2 2012/04/28 22:48:06 ryoon Exp $
 
 * Fix build with gcc<4.5, for example, DragonFly 3.0.1.
   See https://bugzilla.mozilla.org/show_bug.cgi?id=621446
 
---- mozilla/netwerk/protocol/http/HttpChannelParent.cpp.orig	2012-03-13 02:43:37.000000000 +0000
+--- mozilla/netwerk/protocol/http/HttpChannelParent.cpp.orig	2012-04-23 06:28:12.000000000 +0000
 +++ mozilla/netwerk/protocol/http/HttpChannelParent.cpp
-@@ -333,10 +333,15 @@ HttpChannelParent::RecvUpdateAssociatedC
+@@ -331,10 +331,15 @@ HttpChannelParent::RecvUpdateAssociatedC
    return true;
  }
  

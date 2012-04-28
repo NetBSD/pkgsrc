@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_build_autoconf_nss.m4,v 1.2 2012/03/19 10:35:59 ryoon Exp $
+$NetBSD: patch-mozilla_build_autoconf_nss.m4,v 1.3 2012/04/28 22:48:06 ryoon Exp $
 
---- mozilla/build/autoconf/nss.m4.orig	2012-03-13 05:32:19.000000000 +0000
+--- mozilla/build/autoconf/nss.m4.orig	2012-04-23 06:27:25.000000000 +0000
 +++ mozilla/build/autoconf/nss.m4
 @@ -22,18 +22,18 @@ AC_ARG_WITH(nss-exec-prefix,
  	if test -n "$nss_config_exec_prefix"; then
