@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.21 2012/01/12 11:28:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2012/04/28 14:17:18 drochner Exp $
 bin/midori
+include/midori-0.4/extensions/external-download-manager.h
 include/midori-0.4/extensions/history-list.h
 lib/midori/libadblock.so
 lib/midori/libaddons.so
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
 lib/midori/libcopy-tabs.so
+lib/midori/libexternal-download-manager.so
 lib/midori/libfeed-panel.so
 lib/midori/libformhistory.so
 lib/midori/libhistory-list.so
@@ -54,6 +56,7 @@ share/locale/da/LC_MESSAGES/midori.mo
 share/locale/de/LC_MESSAGES/midori.mo
 share/locale/el/LC_MESSAGES/midori.mo
 share/locale/en_GB/LC_MESSAGES/midori.mo
+share/locale/eo/LC_MESSAGES/midori.mo
 share/locale/es/LC_MESSAGES/midori.mo
 share/locale/et/LC_MESSAGES/midori.mo
 share/locale/fi/LC_MESSAGES/midori.mo
@@ -84,11 +87,14 @@ share/locale/ug/LC_MESSAGES/midori.mo
 share/locale/uk/LC_MESSAGES/midori.mo
 share/locale/zh_CN/LC_MESSAGES/midori.mo
 share/locale/zh_TW/LC_MESSAGES/midori.mo
+share/midori/res/about.css
 share/midori/res/autosuggestcontrol.css
 share/midori/res/autosuggestcontrol.js
 share/midori/res/close.png
 share/midori/res/error.html
 share/midori/res/logo-shade.png
-share/midori/res/speeddial-head-0.4.3.html
+share/midori/res/speeddial-head-0.4.5.html
+share/vala/vapi/external-download-manager.deps
+share/vala/vapi/external-download-manager.vapi
 share/vala/vapi/history-list.deps
 share/vala/vapi/history-list.vapi
