@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1350 2012/04/28 22:50:39 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1351 2012/04/28 23:02:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2171,3 +2171,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/thunderbird to 12.0 [ryoon 2012-04-28]
 	Updated mail/thunderbird-l10n to 12.0 [ryoon 2012-04-28]
 	Updated www/seamonkey to 2.9 [ryoon 2012-04-28]
+	Updated www/seamonkey-l10n to 2.9 [ryoon 2012-04-28]
