@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/15 09:45:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/29 20:36:30 ryoon Exp $
 bin/thunderbird10
 ${PLIST.jit}include/thunderbird10/Allocator.h
 ${PLIST.jit}include/thunderbird10/Assembler.h
@@ -10,6 +10,7 @@ ${PLIST.jit}include/thunderbird10/Containers.h
 include/thunderbird10/CustomQS_Canvas2D.h
 include/thunderbird10/CustomQS_WebGL.h
 include/thunderbird10/EGLUtils.h
+include/thunderbird10/ForceDiscreteGPUHelperCGL.h
 ${PLIST.jit}include/thunderbird10/Fragmento.h
 include/thunderbird10/FrameLayerBuilder.h
 include/thunderbird10/FramePropertyTable.h
