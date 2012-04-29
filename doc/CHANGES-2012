@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1367 2012/04/29 14:19:22 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1368 2012/04/29 14:22:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2201,3 +2201,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/ruby-domain_name to 0.5.3 [taca 2012-04-29]
 	Updated net/ruby-soap4r to 2.0.5 [taca 2012-04-29]
 	Updated print/ruby-pdf-reader to 1.1.0 [taca 2012-04-29]
+	Updated sysutils/ruby-facter to 1.6.8 [taca 2012-04-29]
+	Updated sysutils/ruby-fssm to 0.2.9 [taca 2012-04-29]
