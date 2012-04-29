@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/03/19 10:07:52 markd Exp $
+# $NetBSD: Makefile,v 1.22 2012/04/29 04:09:50 dholland Exp $
 
 DISTNAME=	phonon-4.5.1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.5.1/src/}
 EXTRACT_SUFX=	.tar.xz
@@ -30,6 +31,7 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/_build
 
 .include "../../x11/qt4-libs/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 
