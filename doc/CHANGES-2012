@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1364 2012/04/29 14:05:59 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1365 2012/04/29 14:09:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2196,3 +2196,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/groonga to 2.0.2 [obache 2012-04-29]
 	Updated lang/ruby-coffee-script-source to 1.3.1 [taca 2012-04-29]
 	Updated lang/ruby-execjs to 1.3.1 [taca 2012-04-29]
+	Updated misc/ruby-bundler to 1.1.3 [taca 2012-04-29]
+	Updated misc/ruby-sprockets to 2.4.1 [taca 2012-04-29]
