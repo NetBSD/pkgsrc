@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2012/04/27 12:31:42 obache Exp $
+# $NetBSD: Makefile,v 1.91 2012/04/29 03:59:28 dholland Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -10,6 +10,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=	cervisia-[0-9]*
 CONFLICTS+=	umbrello-[0-9]*
 
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 BDB_ACCEPTED=		db4 db5
