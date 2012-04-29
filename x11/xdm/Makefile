@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/04/17 17:53:13 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2012/04/29 07:48:34 sbd Exp $
 
 DISTNAME=	xdm-1.1.11
 CATEGORIES=	x11
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--enable-dynamic-greeter
 CONFIGURE_ARGS+=	--enable-tcp-transport
 CONFIGURE_ARGS+=	--enable-unix-transport
 CONFIGURE_ARGS+=	--enable-xdmshell
+CONFIGURE_ARGS+=	--with-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
@@ -25,6 +26,8 @@ USE_LIBTOOL=	yes
 RCD_SCRIPTS=	xdm
 
 BUILD_DEFS+=		VARBASE
+CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
+CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-authdir=${VARBASE}/lib/xdm
 OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm \
 			  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
@@ -63,8 +66,6 @@ CONFIGURE_ARGS+=	--with-random-device=/dev/urandom
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 CONFIGURE_ARGS+=	--with-default-vt=vt05
 .endif
-
-MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "options.mk"
 
