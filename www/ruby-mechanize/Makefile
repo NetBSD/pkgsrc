@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/03/01 01:24:48 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/29 16:11:17 taca Exp $
 
-DISTNAME=	mechanize-2.3
+DISTNAME=	mechanize-2.4
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,12 +10,12 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${RUBY_PKGPREFIX}-domain_name>=0.5.1:../../net/ruby-domain_name
-DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.17:../../mail/ruby-mime-types
+DEPENDS+=	${RUBY_PKGPREFIX}-domain_name>=0.5<1:../../net/ruby-domain_name
+DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=1.17<2:../../mail/ruby-mime-types
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-digest_auth>=1.1<2:../../www/ruby-net-http-digest_auth
-DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=2.5:../../www/ruby-net-http-persistent
+DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=2.5<3:../../www/ruby-net-http-persistent
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.4<2:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-ntlm-http>=0.1.1:../../www/ruby-ntlm-http
+DEPENDS+=	${RUBY_PKGPREFIX}-ntlm-http>=0.1<1:../../www/ruby-ntlm-http
 DEPENDS+=	${RUBY_PKGPREFIX}-webrobots>=0.0<1:../../www/ruby-webrobots
 
 .include "../../lang/ruby/gem.mk"
