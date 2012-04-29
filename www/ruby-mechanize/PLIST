@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/01 01:24:48 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/04/29 16:11:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
@@ -49,6 +49,7 @@ ${GEM_LIBDIR}/lib/mechanize/http.rb
 ${GEM_LIBDIR}/lib/mechanize/http/agent.rb
 ${GEM_LIBDIR}/lib/mechanize/http/auth_challenge.rb
 ${GEM_LIBDIR}/lib/mechanize/http/auth_realm.rb
+${GEM_LIBDIR}/lib/mechanize/http/auth_store.rb
 ${GEM_LIBDIR}/lib/mechanize/http/content_disposition_parser.rb
 ${GEM_LIBDIR}/lib/mechanize/http/www_authenticate_parser.rb
 ${GEM_LIBDIR}/lib/mechanize/image.rb
@@ -148,6 +149,7 @@ ${GEM_LIBDIR}/test/test_mechanize_history.rb
 ${GEM_LIBDIR}/test/test_mechanize_http_agent.rb
 ${GEM_LIBDIR}/test/test_mechanize_http_auth_challenge.rb
 ${GEM_LIBDIR}/test/test_mechanize_http_auth_realm.rb
+${GEM_LIBDIR}/test/test_mechanize_http_auth_store.rb
 ${GEM_LIBDIR}/test/test_mechanize_http_content_disposition_parser.rb
 ${GEM_LIBDIR}/test/test_mechanize_http_www_authenticate_parser.rb
 ${GEM_LIBDIR}/test/test_mechanize_image.rb
