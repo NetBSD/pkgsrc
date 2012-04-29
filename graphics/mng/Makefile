@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2010/12/23 11:44:43 dsainty Exp $
+# $NetBSD: Makefile,v 1.37 2012/04/29 17:17:59 dholland Exp $
 
 DISTNAME=	libmng-1.0.10
 PKGNAME=	mng-1.0.10
@@ -18,7 +18,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		automake
+USE_TOOLS+=		aclocal autoconf automake
+LIBTOOLIZE=		${LIBTOOL:S/libtool$/libtoolize/}
 
 CONFIGURE_ARGS+=	--with-jpeg=${JPEGBASE}
 CONFIGURE_ARGS+=	--with-lcms=${BUILDLINK_PREFIX.lcms}
@@ -29,13 +30,12 @@ DOCDIR=			${PREFIX}/share/doc/mng
 INSTALLATION_DIRS=	${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${DOCDIR}
 
 pre-configure:
-	cd ${WRKSRC};							\
-	${RM} -f configure.in && ${LN} -sf makefiles/configure.in .;	\
-	${RM} -f Makefile.am && ${LN} -sf makefiles/Makefile.am .;	\
-	aclocal;							\
-	${LOCALBASE}/bin/libtoolize --automake;				\
-	automake -a --foreign -i;					\
-	autoconf
+	${RM} -f ${WRKSRC}/configure.in ${WRKSRC}/Makefile.am
+	${LN} -s makefiles/configure.in makefiles/Makefile.am ${WRKSRC}
+	cd ${WRKSRC} && aclocal
+	cd ${WRKSRC} && ${LIBTOOLIZE} --automake
+	cd ${WRKSRC} && automake -a --foreign -i
+	cd ${WRKSRC} && autoconf
 
 post-install:
 	cd ${WRKSRC}/doc && \
