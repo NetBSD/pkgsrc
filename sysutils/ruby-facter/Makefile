@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2012/03/21 15:45:00 taca Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/29 14:20:33 taca Exp $
 
-DISTNAME=	facter-1.6.6
+DISTNAME=	facter-1.6.8
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 
