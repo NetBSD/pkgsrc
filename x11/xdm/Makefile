@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/04/29 07:48:34 sbd Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/29 08:04:56 sbd Exp $
 
 DISTNAME=	xdm-1.1.11
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +13,17 @@ COMMENT=	X Display Manager from modular X.org
 DEPENDS+=	sessreg-[0-9]*:../../x11/sessreg
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PKG_SYSCONFSUBDIR=	xdm
+CONFIGURE_ARGS+=	--with-xdmconfigdir=${PKG_SYSCONFDIR:Q}
+
+EGDIR=			${PREFIX}/share/examples/xdm
+INSTALL_MAKE_FLAGS+=	xdmconfigdir=${EGDIR:Q}
+
+CONF_FILES+=		${EGDIR}/xdm-config	${PKG_SYSCONFDIR}/xdm-config
+CONF_FILES+=		${EGDIR}/Xaccess	${PKG_SYSCONFDIR}/Xaccess
+CONF_FILES+=		${EGDIR}/Xresources	${PKG_SYSCONFDIR}/Xresources
+CONF_FILES+=		${EGDIR}/Xservers	${PKG_SYSCONFDIR}/Xservers
 
 CONFIGURE_ARGS+=	--enable-dynamic-greeter
 CONFIGURE_ARGS+=	--enable-tcp-transport
