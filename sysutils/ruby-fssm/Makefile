@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/03/18 02:35:27 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/29 14:21:45 taca Exp $
 
-DISTNAME=	fssm-0.2.8.1
+DISTNAME=	fssm-0.2.9
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
