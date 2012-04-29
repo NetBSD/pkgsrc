@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1354 2012/04/29 05:54:33 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1355 2012/04/29 08:05:08 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2179,3 +2179,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/ruby-json-pure to 1.7.0 [taca 2012-04-29]
 	Updated devel/ruby-simplecov to 0.6.2 [taca 2012-04-29]
 	Updated devel/ruby-subexec to 0.2.2 [taca 2012-04-29]
+	Updated x11/xdm to 1.1.11nb1 [sbd 2012-04-29]
