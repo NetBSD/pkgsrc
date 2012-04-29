@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/03/22 15:33:43 obache Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/29 13:33:06 obache Exp $
 #
 
-DISTNAME=	groonga-2.0.0
-PKGREVISION=	1
+DISTNAME=	groonga-2.0.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
@@ -13,6 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+RUBY_VERSION_SUPPORTED=	192 193
 .include "../../lang/ruby/rubyversion.mk"
 DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:../../lang/${RUBY_BASE}
 
@@ -27,7 +27,7 @@ EXTRACT_USING=	bsdtar
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-ruby=${RUBY}
+CONFIGURE_ARGS+=	--with-ruby19=${RUBY}
 
 PKGCONFIG_OVERRIDE+=	groonga.pc.in
 
