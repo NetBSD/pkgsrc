@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/06 12:40:36 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2012/04/29 16:05:42 taca Exp $
 
-SHA1 (unicorn-4.2.0.gem) = 7340e1bdcc78e04035a0d68e26687c6500e26745
-RMD160 (unicorn-4.2.0.gem) = c04a19f3a6a513982b6f4f33a690917056430289
-Size (unicorn-4.2.0.gem) = 260096 bytes
+SHA1 (unicorn-4.3.1.gem) = 381a0ad9394070eb2da5255a7d2d3bc5fde1c2cb
+RMD160 (unicorn-4.3.1.gem) = a498c33f0f6c599b1c9f5c0db8602b5d08aa2e88
+Size (unicorn-4.3.1.gem) = 264192 bytes

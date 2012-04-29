@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/06 12:40:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/29 16:05:42 taca Exp $
 bin/unicorn
 bin/unicorn_rails
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -93,6 +93,7 @@ ${GEM_LIBDIR}/t/bin/sha1sum.rb
 ${GEM_LIBDIR}/t/bin/unused_listen
 ${GEM_LIBDIR}/t/bin/utee
 ${GEM_LIBDIR}/t/broken-app.ru
+${GEM_LIBDIR}/t/detach.ru
 ${GEM_LIBDIR}/t/env.ru
 ${GEM_LIBDIR}/t/heartbeat-timeout.ru
 ${GEM_LIBDIR}/t/my-tap-lib.sh
@@ -100,6 +101,7 @@ ${GEM_LIBDIR}/t/oob_gc.ru
 ${GEM_LIBDIR}/t/oob_gc_path.ru
 ${GEM_LIBDIR}/t/pid.ru
 ${GEM_LIBDIR}/t/preread_input.ru
+${GEM_LIBDIR}/t/t0021-process_detach.sh
 ${GEM_LIBDIR}/t/rack-input-tests.ru
 ${GEM_LIBDIR}/t/rails3-app/.gitignore
 ${GEM_LIBDIR}/t/rails3-app/Gemfile
