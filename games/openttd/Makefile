@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/04/28 06:56:42 adam Exp $
+# $NetBSD: Makefile,v 1.44 2012/04/29 22:49:31 dholland Exp $
 
 DISTNAME=	openttd-1.2.0-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -32,6 +32,8 @@ CONFIGURE_ARGS+=	--personal-dir=.openttd
 CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
 # Hack: built-in xz does not provide liblzma.pc, needed to configure
 PREFER_PKGSRC+=		xz
+
+CONFIGURE_ARGS+=	--with-lzo2=${BUILDLINK_PREFIX.lzo}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
