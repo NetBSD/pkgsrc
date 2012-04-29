@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/03/21 15:45:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/04/29 14:20:33 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -163,6 +163,8 @@ ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/linux_dmidecode_with_spaces
 ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/opensolaris_smbios
 ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/solaris_sunfire_v120_prtdiag
 ${GEM_LIBDIR}/spec/fixtures/unit/util/manufacturer/solaris_t5220_prtdiag
+${GEM_LIBDIR}/spec/fixtures/unit/util/processor/solaris-i86pc
+${GEM_LIBDIR}/spec/fixtures/unit/util/processor/solaris-sun4u
 ${GEM_LIBDIR}/spec/fixtures/unit/util/uptime/kstat_boot_time
 ${GEM_LIBDIR}/spec/fixtures/unit/util/uptime/sysctl_kern_boottime_darwin
 ${GEM_LIBDIR}/spec/fixtures/unit/util/uptime/sysctl_kern_boottime_openbsd
