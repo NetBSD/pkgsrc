@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11049 2012/04/28 16:56:54 wiz Exp $
+$NetBSD: TODO,v 1.11050 2012/04/29 10:26:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1476,8 +1476,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmp-3.5.0
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorg-util-macros-1.10.1 [pkg/43891]
-	o xorg-util-macros-1.17
 	o xorp-1.8.4
 	o xosview-1.9.3
 	o xpaint-2.9.9
