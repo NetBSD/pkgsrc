@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1379 2012/04/29 16:45:54 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1380 2012/04/29 20:38:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2221,3 +2221,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/php-apc to 3.1.10 [taca 2012-04-29]
 	Updated devel/ruby-readline to 1.9.3p194nb1 [taca 2012-04-29]
 	Updated www/contao211-translations to 201204290 [taca 2012-04-29]
+	Updated mail/thunderbird10 to 10.0.4 [ryoon 2012-04-29]
+	Updated mail/thunderbird10-l10n to 10.0.4 [ryoon 2012-04-29]
