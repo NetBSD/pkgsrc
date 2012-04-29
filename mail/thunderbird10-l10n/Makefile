@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/15 11:41:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/29 20:36:30 ryoon Exp $
 #
 
-TB_VER=		10.0.3
+TB_VER=		10.0.4
 PKGNAME=	thunderbird10-l10n-${TB_VER}
 DISTNAME=	# empty
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}esr/linux-i686/xpi/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}esr/linux-i686/xpi/} \
+		${MASTER_SITE_MOZILLA_ALL:=thunderbird/releases/${TB_VER}esr/linux-i686/xpi/}
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
@@ -18,13 +19,13 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-TB_LOCALES=	        ar be bn-BD br ca cs			\
+TB_LOCALES=	        ar ast be bg bn-BD br ca cs		\
                         da de el en-GB en-US es-AR es-ES et	\
-                        eu fi fr fy-NL ga-IE he			\
+                        eu fi fr fy-NL ga-IE gd gl he		\
                         hu id is it ja ko			\
                         lt nb-NO nl nn-NO			\
-                        pt-BR pt-PT rm ru si sk			\
-                        sl sq sv-SE ta-LK tr uk vi		\
+                        pa-IN pl pt-BR pt-PT rm ro ru si sk	\
+                        sl sq sr sv-SE ta-LK tr uk vi		\
                         zh-CN zh-TW
 
 EXTENSIONS_DIR=		${PREFIX}/lib/thunderbird10/extensions

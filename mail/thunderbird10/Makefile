@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2012/03/19 20:32:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/29 20:36:30 ryoon Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}esr.source
 PKGNAME=	thunderbird10-${TB_VER}
-TB_VER=		10.0.3
+TB_VER=		10.0.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}esr/source/} \
 		${MASTER_SITE_MOZILLA_ALL:=thunderbird/releases/${TB_VER}esr/source/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
-HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
+HOMEPAGE=	http://www.mozilla.org/en-US/thunderbird/organizations/
 COMMENT=	Organize, secure and customize your mail
 
 PKG_DESTDIR_SUPPORT=	user-destdir
