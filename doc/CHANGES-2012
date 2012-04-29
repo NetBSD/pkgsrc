@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1361 2012/04/29 13:16:27 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1362 2012/04/29 13:21:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2192,3 +2192,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/ruby-railties32 to 3.2.3 [taca 2012-04-29]
 	Updated www/ruby-rails32 to 3.2.3 [taca 2012-04-29]
 	Updated devel/ruby-uglifier to 1.2.4 [taca 2012-04-29]
+	Updated devel/ruby-turn to 0.9.5 [taca 2012-04-29]
