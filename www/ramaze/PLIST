@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/03/20 13:53:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/04/29 16:09:34 taca Exp $
 bin/ramaze
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gems
@@ -414,7 +414,11 @@ ${GEM_LIBDIR}/spec/ramaze/public/ramaze.png
 ${GEM_LIBDIR}/spec/ramaze/public/test_download.css
 ${GEM_LIBDIR}/spec/ramaze/request.rb
 ${GEM_LIBDIR}/spec/ramaze/rewrite/file.css
+${GEM_LIBDIR}/spec/ramaze/session/localmemcache.rb
+${GEM_LIBDIR}/spec/ramaze/session/lru.rb
 ${GEM_LIBDIR}/spec/ramaze/session/memcache.rb
+${GEM_LIBDIR}/spec/ramaze/session/redis.rb
+${GEM_LIBDIR}/spec/ramaze/session/sequel.rb
 ${GEM_LIBDIR}/spec/ramaze/struct.rb
 ${GEM_LIBDIR}/spec/ramaze/template/ramaze/external.test
 ${GEM_LIBDIR}/spec/ramaze/view.rb
