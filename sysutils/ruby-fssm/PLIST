@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/18 02:35:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/29 14:21:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -10,11 +10,9 @@ ${GEM_LIBDIR}/example.rb
 ${GEM_LIBDIR}/ext/rakefile.rb
 ${GEM_LIBDIR}/fssm.gemspec
 ${GEM_LIBDIR}/lib/fssm.rb
-${GEM_LIBDIR}/lib/fssm/backends/fsevents.rb
 ${GEM_LIBDIR}/lib/fssm/backends/inotify.rb
 ${GEM_LIBDIR}/lib/fssm/backends/polling.rb
 ${GEM_LIBDIR}/lib/fssm/backends/rbfsevent.rb
-${GEM_LIBDIR}/lib/fssm/backends/rubycocoa/fsevents.rb
 ${GEM_LIBDIR}/lib/fssm/monitor.rb
 ${GEM_LIBDIR}/lib/fssm/path.rb
 ${GEM_LIBDIR}/lib/fssm/pathname.rb
