@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/18 09:15:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/29 14:08:39 taca Exp $
 bin/sprockets
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/sprockets/index.rb
 ${GEM_LIBDIR}/lib/sprockets/jst_processor.rb
 ${GEM_LIBDIR}/lib/sprockets/manifest.rb
 ${GEM_LIBDIR}/lib/sprockets/mime.rb
+${GEM_LIBDIR}/lib/sprockets/paths.rb
 ${GEM_LIBDIR}/lib/sprockets/processed_asset.rb
 ${GEM_LIBDIR}/lib/sprockets/processing.rb
 ${GEM_LIBDIR}/lib/sprockets/processor.rb
@@ -34,7 +35,6 @@ ${GEM_LIBDIR}/lib/sprockets/sass_template.rb
 ${GEM_LIBDIR}/lib/sprockets/scss_template.rb
 ${GEM_LIBDIR}/lib/sprockets/server.rb
 ${GEM_LIBDIR}/lib/sprockets/static_asset.rb
-${GEM_LIBDIR}/lib/sprockets/trail.rb
 ${GEM_LIBDIR}/lib/sprockets/utils.rb
 ${GEM_LIBDIR}/lib/sprockets/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
