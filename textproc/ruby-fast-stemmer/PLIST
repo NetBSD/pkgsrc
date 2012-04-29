@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/23 02:56:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/29 14:32:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION.yml
+${GEM_LIBDIR}/ext/Makefile
 ${GEM_LIBDIR}/ext/extconf.rb
 ${GEM_LIBDIR}/ext/porter.c
 ${GEM_LIBDIR}/ext/porter_wrap.c
+${GEM_LIBDIR}/lib/fast-stemmer.rb
 ${GEM_LIBDIR}/lib/fast_stemmer.rb
 ${GEM_LIBDIR}/lib/stemmer.${RUBY_DLEXT}
 ${GEM_LIBDIR}/test/fast_stemmer_test.rb
