@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/15 08:58:27 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/29 16:30:08 ryoon Exp $
 bin/xulrunner10
 ${PLIST.jit}include/xulrunner10/Allocator.h
 ${PLIST.jit}include/xulrunner10/Assembler.h
@@ -10,6 +10,7 @@ ${PLIST.jit}include/xulrunner10/Containers.h
 include/xulrunner10/CustomQS_Canvas2D.h
 include/xulrunner10/CustomQS_WebGL.h
 include/xulrunner10/EGLUtils.h
+include/xulrunner10/ForceDiscreteGPUHelperCGL.h
 ${PLIST.jit}include/xulrunner10/Fragmento.h
 include/xulrunner10/FrameLayerBuilder.h
 include/xulrunner10/FramePropertyTable.h
