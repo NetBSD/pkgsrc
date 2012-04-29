@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/15 11:44:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/29 16:30:08 ryoon Exp $
 #
 
-FIREFOX_VER=	10.0.3
+FIREFOX_VER=	10.0.4
 PKGNAME=	firefox10-l10n-${FIREFOX_VER}
 DISTNAME=	# empty
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}esr/linux-i686/xpi/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}esr/linux-i686/xpi/} \
+		${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}esr/linux-i686/xpi/}
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
