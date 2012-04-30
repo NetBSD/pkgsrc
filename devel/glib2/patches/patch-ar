@@ -1,15 +1,20 @@
-$NetBSD: patch-ar,v 1.2 2012/03/21 12:18:33 drochner Exp $
+$NetBSD: patch-ar,v 1.3 2012/04/30 13:53:48 drochner Exp $
 
 avoid python dependency
 
---- gio/tests/Makefile.in.orig	2012-03-11 23:36:24.000000000 +0000
+--- gio/tests/Makefile.in.orig	2012-03-24 03:02:44.000000000 +0000
 +++ gio/tests/Makefile.in
-@@ -49,16 +49,13 @@ noinst_PROGRAMS = $(am__EXEEXT_5) $(am__
- @OS_UNIX_TRUE@	gdbus-non-socket gdbus-bz627724 appinfo \
- @OS_UNIX_TRUE@	contenttype file $(NULL) live-g-file \
- @OS_UNIX_TRUE@	desktop-app-info unix-fd unix-streams \
--@OS_UNIX_TRUE@	gapplication gdbus-test-codegen $(NULL)
-+@OS_UNIX_TRUE@	gapplication $(NULL)
+@@ -47,20 +47,17 @@ noinst_PROGRAMS = $(am__EXEEXT_5) $(am__
+ @OS_UNIX_TRUE@	gdbus-names gdbus-proxy gdbus-proxy-threads \
+ @OS_UNIX_TRUE@	gdbus-proxy-well-known-name gdbus-introspection \
+ @OS_UNIX_TRUE@	gdbus-threading gdbus-export gdbus-error \
+-@OS_UNIX_TRUE@	gdbus-peer gdbus-exit-on-close gdbus-non-socket \
++@OS_UNIX_TRUE@	gdbus-exit-on-close gdbus-non-socket \
+ @OS_UNIX_TRUE@	gdbus-bz627724 appinfo contenttype mimeapps file \
+ @OS_UNIX_TRUE@	$(NULL) live-g-file desktop-app-info unix-fd \
+ @OS_UNIX_TRUE@	unix-streams gapplication basic-application \
+-@OS_UNIX_TRUE@	gdbus-test-codegen $(NULL)
++@OS_UNIX_TRUE@	$(NULL)
  @OS_UNIX_TRUE@am__append_2 = \
  @OS_UNIX_TRUE@	gdbus-example-unix-fd-client 		\
 -@OS_UNIX_TRUE@	gdbus-example-objectmanager-server 	\
@@ -22,28 +27,37 @@ avoid python dependency
  subdir = gio/tests
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  am__aclocal_m4_deps = $(top_srcdir)/m4macros/gtk-doc.m4 \
-@@ -97,7 +94,7 @@ am__EXEEXT_1 =
- @OS_UNIX_TRUE@	$(am__EXEEXT_1) live-g-file$(EXEEXT) \
- @OS_UNIX_TRUE@	desktop-app-info$(EXEEXT) unix-fd$(EXEEXT) \
- @OS_UNIX_TRUE@	unix-streams$(EXEEXT) gapplication$(EXEEXT) \
+@@ -104,7 +101,7 @@ am__EXEEXT_1 =
+ @OS_UNIX_TRUE@	gdbus-proxy-well-known-name$(EXEEXT) \
+ @OS_UNIX_TRUE@	gdbus-introspection$(EXEEXT) \
+ @OS_UNIX_TRUE@	gdbus-threading$(EXEEXT) gdbus-export$(EXEEXT) \
+-@OS_UNIX_TRUE@	gdbus-error$(EXEEXT) gdbus-peer$(EXEEXT) \
++@OS_UNIX_TRUE@	gdbus-error$(EXEEXT) \
+ @OS_UNIX_TRUE@	gdbus-exit-on-close$(EXEEXT) \
+ @OS_UNIX_TRUE@	gdbus-non-socket$(EXEEXT) \
+ @OS_UNIX_TRUE@	gdbus-bz627724$(EXEEXT) appinfo$(EXEEXT) \
+@@ -113,7 +110,7 @@ am__EXEEXT_1 =
+ @OS_UNIX_TRUE@	live-g-file$(EXEEXT) desktop-app-info$(EXEEXT) \
+ @OS_UNIX_TRUE@	unix-fd$(EXEEXT) unix-streams$(EXEEXT) \
+ @OS_UNIX_TRUE@	gapplication$(EXEEXT) basic-application$(EXEEXT) \
 -@OS_UNIX_TRUE@	gdbus-test-codegen$(EXEEXT) $(am__EXEEXT_1)
 +@OS_UNIX_TRUE@	$(am__EXEEXT_1)
  @OS_WIN32_TRUE@am__EXEEXT_3 = win32-streams$(EXEEXT)
  @HAVE_DBUS1_TRUE@am__EXEEXT_4 = gdbus-serialization$(EXEEXT)
- am__EXEEXT_5 = io-stream$(EXEEXT) actions$(EXEEXT) \
-@@ -116,8 +113,6 @@ am__EXEEXT_5 = io-stream$(EXEEXT) action
- 	cancellable$(EXEEXT) $(am__EXEEXT_1) $(am__EXEEXT_2) \
- 	$(am__EXEEXT_3) $(am__EXEEXT_4)
+ am__EXEEXT_5 = io-stream$(EXEEXT) memory-input-stream$(EXEEXT) \
+@@ -133,8 +130,6 @@ am__EXEEXT_5 = io-stream$(EXEEXT) memory
+ 	gmenumodel$(EXEEXT) resources$(EXEEXT) $(am__EXEEXT_1) \
+ 	$(am__EXEEXT_2) $(am__EXEEXT_3) $(am__EXEEXT_4)
  @OS_UNIX_TRUE@am__EXEEXT_6 = gdbus-example-unix-fd-client$(EXEEXT) \
 -@OS_UNIX_TRUE@	gdbus-example-objectmanager-server$(EXEEXT) \
 -@OS_UNIX_TRUE@	gdbus-example-objectmanager-client$(EXEEXT) \
  @OS_UNIX_TRUE@	$(am__EXEEXT_1)
  am__EXEEXT_7 = resolver$(EXEEXT) socket-server$(EXEEXT) \
  	socket-client$(EXEEXT) echo-server$(EXEEXT) httpd$(EXEEXT) \
-@@ -912,7 +907,6 @@ TEST_PROGS = io-stream actions memory-in
- 	gdbus-addresses network-address gdbus-message socket pollable \
- 	tls-certificate tls-interaction cancellable $(NULL) \
- 	$(am__append_1) $(am__append_3) $(am__append_4)
+@@ -964,7 +959,6 @@ TEST_PROGS = io-stream memory-input-stre
+ 	tls-certificate tls-interaction cancellable vfs \
+ 	network-monitor fileattributematcher gmenumodel resources \
+ 	$(NULL) $(am__append_1) $(am__append_3) $(am__append_4)
 -SUBDIRS = gdbus-object-manager-example
  INCLUDES = \
  	-g 			\
