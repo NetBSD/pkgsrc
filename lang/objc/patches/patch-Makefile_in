@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile_in,v 1.1 2012/04/30 02:51:50 dholland Exp $
+
+destdir support.
+
+--- Makefile.in~	2000-10-29 21:20:20.000000000 +0000
++++ Makefile.in
+@@ -78,8 +78,8 @@ tags :
+ #
+ 
+ install : bootstrap
+-	test -d $(INSTALLDIR) || $(MKDIR) $(INSTALLDIR)
+-	$(TAR) cf - $(TARARGS) bin lib man include | ( $(CD) ${INSTALLDIR}; $(TAR) xvf - $(TARARGS))
++	test -d $(DESTDIR)$(INSTALLDIR) || $(MKDIR) $(DESTDIR)$(INSTALLDIR)
++	$(TAR) cf - $(TARARGS) bin lib man include | ( $(CD) $(DESTDIR)${INSTALLDIR}; $(TAR) xvf - $(TARARGS))
+ 
+ cleantmp :
+ 	-$(CD) src; $(CD) objcrt; $(MAKE) cleantmp
