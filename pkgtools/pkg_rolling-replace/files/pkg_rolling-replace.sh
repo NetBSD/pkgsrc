@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.31 2011/03/22 04:04:58 obache Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.32 2012/04/30 13:59:39 gdt Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -453,7 +453,7 @@ while [ -n "$REPLACE_TODO" ]; do
     # the appropriate version of Python can be derived from the
     # package name (so, when building py25-foo, use python-2.5,
     # not python-2.6).
-    MAKE_SET_VARS='PKGNAME_REQD=${pkg}-*'
+    MAKE_SET_VARS="PKGNAME_REQD=${pkg}-*"
 
     if ! is_member $pkg $DEPENDS_CHECKED; then
 	echo "${OPI} Checking if $pkg has new depends..."
