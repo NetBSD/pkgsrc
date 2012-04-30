@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1386 2012/04/30 14:00:00 gdt Exp $
+$NetBSD: CHANGES-2012,v 1.1387 2012/04/30 14:32:30 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2234,4 +2234,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk16 to 1.6.2.24 [jnemeth 2012-04-30]
 	Updated misc/hanzim to 1.3nb2 [dholland 2012-04-30]
 	Updated x11/xorg-cf-files to 1.0.4nb4 [sbd 2012-04-30]
+	Updated devel/glib2 to 2.32.1 [drochner 2012-04-30]
 	Updated pkgtools/pkg_rolling-replace to 0.24.1 [gdt 2012-04-30]
+	Updated devel/pango to 1.30.0 [drochner 2012-04-30]
+	Updated graphics/gdk-pixbuf2 to 2.26.1 [drochner 2012-04-30]
+	Updated net/glib-networking to 2.32.1 [drochner 2012-04-30]
+	Updated net/libsoup24 to 2.38.1 [drochner 2012-04-30]
+	Updated x11/gtk3 to 3.4.1 [drochner 2012-04-30]
+	Updated devel/gobject-introspection to 1.32.1 [drochner 2012-04-30]
