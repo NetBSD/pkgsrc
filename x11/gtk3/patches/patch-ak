@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2012/04/30 14:26:38 drochner Exp $
+
+--- gtk/gtkthemingengine.c.orig	2012-04-15 17:32:48.000000000 +0000
++++ gtk/gtkthemingengine.c
+@@ -1481,7 +1481,7 @@ set_stroke_style (cairo_t        *cr,
+       /* Optimize the common case of an integer-sized rectangle
+        * Again, we care about focus rectangles.
+        */
+-      if (n == nearbyint (n))
++      if (n == floor (n + 0.5))
+         {
+           segments[0] = 1;
+           segments[1] = 2;
