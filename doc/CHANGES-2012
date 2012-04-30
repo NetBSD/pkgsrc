@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1380 2012/04/29 20:38:46 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1381 2012/04/30 02:34:05 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2223,3 +2223,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211-translations to 201204290 [taca 2012-04-29]
 	Updated mail/thunderbird10 to 10.0.4 [ryoon 2012-04-29]
 	Updated mail/thunderbird10-l10n to 10.0.4 [ryoon 2012-04-29]
+	Updated comms/asterisk18 to 1.8.11.1 [jnemeth 2012-04-30]
