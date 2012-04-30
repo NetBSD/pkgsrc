@@ -1,14 +1,14 @@
-$NetBSD: patch-cf,v 1.1 2010/06/01 17:28:31 drochner Exp $
+$NetBSD: patch-cf,v 1.2 2012/04/30 13:53:48 drochner Exp $
 
---- gio/libasyncns/g-asyncns.h.orig	2010-06-01 15:28:52.000000000 +0000
-+++ gio/libasyncns/g-asyncns.h
-@@ -27,6 +27,9 @@
- 
- /* asyncns.c removed this for #580301, but that appears to have been wrong */
- #if HAVE_ARPA_NAMESER_COMPAT_H
+--- gio/gnetworkingprivate.h.orig	2012-03-31 18:24:51.000000000 +0000
++++ gio/gnetworkingprivate.h
+@@ -51,6 +51,9 @@
+ #include <arpa/inet.h>
+ #include <arpa/nameser.h>
+ #if defined(HAVE_ARPA_NAMESER_COMPAT_H) && !defined(GETSHORT)
 +#ifdef __NetBSD__
 +#include <sys/param.h>
 +#endif
  #include <arpa/nameser_compat.h>
  #endif
- 
+ #include <net/if.h>

@@ -1,12 +1,9 @@
-$NetBSD: patch-ce,v 1.4 2012/04/06 10:40:37 taca Exp $
+$NetBSD: patch-ce,v 1.5 2012/04/30 13:53:48 drochner Exp $
 
-* Fix inconsistency of .hidden attributes, leading to link error on amd64,
-  reported by Tobias Nygren.
-* Make sure to initialize mutex before use it since it is problem on platforms
-  without support of GCC bultin atomic operations, such as NetBSD 4.
-  It looks like this problem dosen't exist on glib 2.31.0 and later.
+Fix inconsistency of .hidden attributes, leading to link error on amd64,
+reported by Tobias Nygren.
 
---- glib/gatomic.c.orig	2012-03-11 21:43:28.000000000 +0000
+--- glib/gatomic.c.orig	2012-03-12 00:42:41.000000000 +0000
 +++ glib/gatomic.c
 @@ -22,6 +22,7 @@
  #include "config.h"
@@ -16,12 +13,3 @@ $NetBSD: patch-ce,v 1.4 2012/04/06 10:40:37 taca Exp $
  
  /**
   * SECTION:atomic_operations
-@@ -606,7 +606,7 @@ gsize
- 
- #include "gthread.h"
- 
--static GStaticMutex g_atomic_lock;
-+static GStaticMutex g_atomic_lock = G_STATIC_MUTEX_INIT;
- 
- gint
- (g_atomic_int_get) (volatile gint *atomic)
