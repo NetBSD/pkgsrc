@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2012/03/03 00:12:14 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2012/04/30 14:17:12 drochner Exp $
 
-DISTNAME=	librsvg-2.34.2
-PKGREVISION=	2
+DISTNAME=	librsvg-2.36.1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.34/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.36/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://librsvg.sourceforge.net/
@@ -21,6 +20,7 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gtk-theme --disable-tools
+CONFIGURE_ARGS+=	--disable-introspection
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
