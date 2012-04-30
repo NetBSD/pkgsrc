@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2012/03/06 17:38:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2012/04/30 09:54:03 obache Exp $
 
 DISTNAME=	js-1.8.0-rc1
 PKGNAME=	spidermonkey-1.8.0rc1
 PKGREVISION=	3
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=js/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=js/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/js/spidermonkey/
