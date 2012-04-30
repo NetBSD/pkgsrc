@@ -1,0 +1,15 @@
+$NetBSD: patch-hanzim_h,v 1.1 2012/04/30 04:01:08 dholland Exp $
+
+- Avoid overflows indexing own data file.
+
+--- hanzim.h~	2002-03-20 06:31:28.000000000 +0000
++++ hanzim.h
+@@ -27,7 +27,7 @@
+ /* max number of characters with same pronunciation */
+ #define MAXPCHAR 56
+ /* max number of pronunciations for one character */
+-#define MAXCPRON 5
++#define MAXCPRON 19
+ /* max number of characters one character will be remainder of */
+ #define MAXREMOF 25
+ /* number of radicals (depends on file "bushou.gb") */

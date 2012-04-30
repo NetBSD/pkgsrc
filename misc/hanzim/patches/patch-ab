@@ -1,8 +1,33 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/01/16 13:18:29 rxg Exp $
+$NetBSD: patch-ab,v 1.2 2012/04/30 04:01:08 dholland Exp $
 
---- hanzim.c.orig	Wed Jun 26 17:26:48 2002
+- honor HANZIM_LIB when doing -buildDB, for destdir support
+- use time_t properly
+
+--- hanzim.c.orig	2002-03-20 06:34:31.000000000 +0000
 +++ hanzim.c
-@@ -460,10 +460,10 @@
+@@ -164,13 +164,19 @@ int
+ buildOnly(char *dst, char *key, char *nextArg)
+ {
+   char fname[100];
+-  char datadir[80];
++  char datadir[400];
++  char *ev;
+ 
+   fprintf(stderr,"Hanzim: (re)building database...\n");
+ 
+   /* set datadir to LIBDIR; in future should allow simultaneous use of
+      '-db' and '-buildDB' */
+-  strcpy(datadir,LIBDIR);
++  ev = getenv("HANZIM_LIB");
++  if (ev != NULL && strlen(ev) < sizeof(datadir)) {
++    strcpy(datadir, ev);
++  } else {
++    strcpy(datadir,LIBDIR);
++  }
+ 
+   /* This code a subset of what occurs in db_init() below. */
+   if (!init_vars(datadir)) {
+@@ -460,10 +466,10 @@ db_init(char *datadir, Tcl_Interp *inter
    struct _timeb tp;
    _ftime(&tp);
  #else
