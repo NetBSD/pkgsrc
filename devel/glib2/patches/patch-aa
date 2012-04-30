@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
+$NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
 
---- configure.orig	2010-09-27 16:10:14.000000000 +0000
+--- configure.orig	2012-03-24 03:02:40.000000000 +0000
 +++ configure
-@@ -828,6 +828,7 @@ GIO
+@@ -697,6 +697,7 @@ GIO
  GSPAWN
  GLIB_DEBUG_FLAGS
  G_MODULE_NEED_USCORE
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
  G_MODULE_BROKEN_RTLD_GLOBAL
  G_MODULE_HAVE_DLERROR
  G_MODULE_LDFLAGS
-@@ -21584,8 +21585,8 @@ else
+@@ -22442,8 +22443,8 @@ else
  fi
  
  
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
-@@ -22829,16 +22830,48 @@ fi
+@@ -24038,16 +24039,48 @@ fi
  
  case $host in
    *-*-solaris* )
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
  esac
  
  if test "$ac_cv_func_statfs" = yes ; then
-@@ -23844,10 +23877,11 @@ if test x"$glib_native_win32" = xyes; th
+@@ -25040,10 +25073,11 @@ if test x"$glib_native_win32" = xyes; th
      G_MODULE_LDFLAGS=
  else
    export SED
@@ -84,16 +84,24 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -24054,7 +24088,7 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
+@@ -25250,13 +25284,13 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
  	LIBS="$G_MODULE_LIBS $LIBS"
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  	echo "void glib_plugin_test(void) { }" > plugin.c
--	${SHELL} ./libtool --mode=compile ${CC} -shared \
-+	${SHELL} libtool --mode=compile ${CC} -shared \
- 		-export-dynamic -o plugin.o plugin.c 2>&1 >/dev/null
+-	${SHELL} ./libtool --mode=compile --tag=CC ${CC} ${CFLAGS} \
++	${SHELL} libtool --mode=compile --tag=CC ${CC} ${CFLAGS} \
+ 		${CPPFLAGS} -c -o plugin.lo plugin.c >/dev/null 2>&1
+-	${SHELL} ./libtool --mode=link --tag=CC ${CC} ${CFLAGS} \
++	${SHELL} libtool --mode=link --tag=CC ${CC} ${CFLAGS} \
+ 		${LDFLAGS} -module -o plugin.la -export-dynamic \
+ 		-shrext ".o" -avoid-version plugin.lo \
+ 		-rpath /dont/care >/dev/null 2>&1
+-	eval `./libtool --config | grep ^objdir`
++	eval `libtool --config | grep ^objdir`
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for RTLD_GLOBAL brokenness" >&5
  $as_echo_n "checking for RTLD_GLOBAL brokenness... " >&6; }
-@@ -24164,6 +24198,56 @@ fi
+ if ${glib_cv_rtldglobal_broken+:} false; then :
+@@ -25365,6 +25399,56 @@ fi
  
  	LIBS="$LIBS_orig"
  fi
@@ -150,7 +158,7 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
          G_MODULE_SUPPORTED=false
-@@ -24174,7 +24258,7 @@ fi
+@@ -25375,7 +25459,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the suffix of module shared libraries" >&5
  $as_echo_n "checking for the suffix of module shared libraries... " >&6; }
  export SED
@@ -159,7 +167,7 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -24198,6 +24282,8 @@ fi
+@@ -25399,6 +25483,8 @@ fi
  
  
  
@@ -168,14 +176,14 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -24946,62 +25032,8 @@ if test x"$have_threads" != xno; then
-         G_THREAD_LIBS="-lpthread -lthread"
-         ;;
-       *)
--        for flag in pthread pthreads mt; do
--          glib_save_CFLAGS="$CFLAGS"
--          CFLAGS="$CFLAGS -$flag"
--          if test "$cross_compiling" = yes; then :
+@@ -26147,62 +26233,6 @@ if test x"$have_threads" = xposix; then
+       G_THREAD_LIBS="-lpthread -lthread"
+       ;;
+     *)
+-      for flag in pthread pthreads mt; do
+-        glib_save_CFLAGS="$CFLAGS"
+-        CFLAGS="$CFLAGS -$flag"
+-        if test "$cross_compiling" = yes; then :
 -  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 -/* end confdefs.h.  */
 -
@@ -221,24 +229,13 @@ $NetBSD: patch-aa,v 1.50 2010/11/02 14:52:24 drochner Exp $
 -  conftest.$ac_objext conftest.beam conftest.$ac_ext
 -fi
 -
--          CFLAGS="$glib_save_CFLAGS"
--          if test $glib_flag_works = yes ; then
--             G_THREAD_CFLAGS=-$flag
--	     G_THREAD_LIBS=-$flag
--	     break;
--          fi
--        done
-+	G_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
-+	G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
-          ;;
-     esac
-   fi
-@@ -27599,7 +27631,7 @@ rm -f core conftest.err conftest.$ac_obj
+-        CFLAGS="$glib_save_CFLAGS"
+-        if test $glib_flag_works = yes ; then
+-           G_THREAD_CFLAGS=-$flag
+-        G_THREAD_LIBS=-$flag
+-        break;
+-        fi
+-      done
+        ;;
+   esac
  fi
- 
- 
--if test "x${enable_Bsymbolic}" == "xyes"; then
-+if test "x${enable_Bsymbolic}" = "xyes"; then
-   GLIB_LINK_FLAGS=-Wl,-Bsymbolic-functions
- fi
- 
