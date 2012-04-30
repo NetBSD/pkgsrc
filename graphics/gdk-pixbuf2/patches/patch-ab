@@ -1,18 +1,18 @@
-$NetBSD: patch-ab,v 1.1 2010/11/14 20:11:42 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2012/04/30 14:12:05 drochner Exp $
 
---- gdk-pixbuf/Makefile.in.orig	2010-11-05 23:56:06.000000000 +0000
+--- gdk-pixbuf/Makefile.in.orig	2012-03-20 16:47:37.000000000 +0000
 +++ gdk-pixbuf/Makefile.in
-@@ -269,8 +269,7 @@ libpixbufloader_ico_la_LINK = $(LIBTOOL)
+@@ -276,8 +276,7 @@ libpixbufloader_ico_la_LINK = $(LIBTOOL)
  	$(LDFLAGS) -o $@
  @BUILD_DYNAMIC_MODULES_TRUE@@BUILD_GDIPLUS_LOADERS_FALSE@@INCLUDE_ICO_FALSE@am_libpixbufloader_ico_la_rpath = -rpath \
  @BUILD_DYNAMIC_MODULES_TRUE@@BUILD_GDIPLUS_LOADERS_FALSE@@INCLUDE_ICO_FALSE@	$(loaderdir)
--libpixbufloader_jasper_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
--	$(am__DEPENDENCIES_2)
-+libpixbufloader_jasper_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+-libpixbufloader_jasper_la_DEPENDENCIES = $(am__DEPENDENCIES_2) \
+-	$(am__DEPENDENCIES_3)
++libpixbufloader_jasper_la_DEPENDENCIES = $(am__DEPENDENCIES_2)
  am_libpixbufloader_jasper_la_OBJECTS = io-jasper.lo
  libpixbufloader_jasper_la_OBJECTS =  \
  	$(am_libpixbufloader_jasper_la_OBJECTS)
-@@ -1077,7 +1076,7 @@ libpixbufloader_pcx_la_LIBADD = $(module
+@@ -1103,7 +1102,7 @@ libpixbufloader_pcx_la_LIBADD = $(module
  libstatic_pixbufloader_jasper_la_SOURCES = io-jasper.c
  libpixbufloader_jasper_la_SOURCES = io-jasper.c
  libpixbufloader_jasper_la_LDFLAGS = -avoid-version -module $(no_undefined)
