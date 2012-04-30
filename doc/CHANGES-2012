@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1384 2012/04/30 07:26:19 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1385 2012/04/30 08:09:13 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2172,6 +2172,11 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated mail/thunderbird-l10n to 12.0 [ryoon 2012-04-28]
 	Updated www/seamonkey to 2.9 [ryoon 2012-04-28]
 	Updated www/seamonkey-l10n to 2.9 [ryoon 2012-04-28]
+	Updated audio/audacious-plugins to 1.5.1nb20 [dholland 2012-04-29]
+	Updated devel/kdesdk3 to 3.5.10nb26 [dholland 2012-04-29]
+	Updated misc/basket to 1.0.2nb16 [dholland 2012-04-29]
+	Updated multimedia/phonon to 4.5.1nb1 [dholland 2012-04-29]
+	Updated x11/kdebindings-ruby to 3.5.10nb16 [dholland 2012-04-29]
 	Updated devel/ruby-rspec-expectations to 2.9.1 [taca 2012-04-29]
 	Updated devel/ruby-sexp-processor to 3.2.0 [taca 2012-04-29]
 	Updated textproc/ruby-multi_json to 1.3.4 [taca 2012-04-29]
@@ -2223,7 +2228,9 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211-translations to 201204290 [taca 2012-04-29]
 	Updated mail/thunderbird10 to 10.0.4 [ryoon 2012-04-29]
 	Updated mail/thunderbird10-l10n to 10.0.4 [ryoon 2012-04-29]
+	Updated graphics/aqsis to 1.8.1 [dholland 2012-04-30]
 	Updated comms/asterisk18 to 1.8.11.1 [jnemeth 2012-04-30]
 	Updated comms/asterisk10 to 10.3.1 [jnemeth 2012-04-30]
 	Updated comms/asterisk16 to 1.6.2.24 [jnemeth 2012-04-30]
+	Updated misc/hanzim to 1.3nb2 [dholland 2012-04-30]
 	Updated x11/xorg-cf-files to 1.0.4nb4 [sbd 2012-04-30]
