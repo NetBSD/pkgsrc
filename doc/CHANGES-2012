@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1383 2012/04/30 03:19:49 jnemeth Exp $
+$NetBSD: CHANGES-2012,v 1.1384 2012/04/30 07:26:19 sbd Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2226,3 +2226,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.11.1 [jnemeth 2012-04-30]
 	Updated comms/asterisk10 to 10.3.1 [jnemeth 2012-04-30]
 	Updated comms/asterisk16 to 1.6.2.24 [jnemeth 2012-04-30]
+	Updated x11/xorg-cf-files to 1.0.4nb4 [sbd 2012-04-30]
