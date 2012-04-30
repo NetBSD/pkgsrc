@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/01/03 01:25:28 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/30 02:51:50 dholland Exp $
 
 DISTNAME=	objc-3.2.6
 CATEGORIES=	lang
@@ -8,6 +8,8 @@ DISTFILES=	${DIST_BS}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://users.pandora.be/stes/compiler.html
 COMMENT=	Portable Object Compiler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_BS=	objc-bootstrap-3.1.33
 WRKSRC_BS=	${WRKDIR}/${DIST_BS}
