@@ -1,0 +1,15 @@
+$NetBSD: patch-hutil_c,v 1.1 2012/04/30 04:01:08 dholland Exp $
+
+- Use ctype.h functions correctly; fixes problems reading in the data files.
+
+--- hutil.c~	2001-03-29 07:50:51.000000000 +0000
++++ hutil.c
+@@ -207,7 +207,7 @@ getnextline(FILE *fp, char *line, int ma
+         }
+ 
+     /*read in line*/
+-    while(isspace(c)) c=getc(fp);       /* skip any indentation */
++    while(isascii((u_char)c) && isspace((u_char)c)) c=getc(fp);       /* skip any indentation */
+     for (tpos=line;(c!='\n') && (++numRead < maxlen);c=getc(fp))
+         *tpos++ = c;
+     
