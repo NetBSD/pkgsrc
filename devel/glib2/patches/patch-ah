@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.9 2008/09/06 11:07:20 obache Exp $
+$NetBSD: patch-ah,v 1.10 2012/04/30 13:53:48 drochner Exp $
 
---- glib/gutils.c.orig	2008-09-02 16:44:24.000000000 +0000
+--- glib/gutils.c.orig	2012-03-12 00:42:42.000000000 +0000
 +++ glib/gutils.c
-@@ -2694,7 +2694,7 @@ g_get_system_data_dirs (void)
+@@ -1991,7 +1991,7 @@ g_get_system_data_dirs (void)
        gchar *data_dirs = (gchar *) g_getenv ("XDG_DATA_DIRS");
  
        if (!data_dirs || !data_dirs[0])
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.9 2008/09/06 11:07:20 obache Exp $
  
        data_dir_vector = g_strsplit (data_dirs, G_SEARCHPATH_SEPARATOR_S, 0);
  #endif
-@@ -2748,7 +2748,7 @@ g_get_system_config_dirs (void)
+@@ -2053,7 +2053,7 @@ g_get_system_config_dirs (void)
        conf_dirs = (gchar *) g_getenv ("XDG_CONFIG_DIRS");
  
        if (!conf_dirs || !conf_dirs[0])
@@ -20,12 +20,3 @@ $NetBSD: patch-ah,v 1.9 2008/09/06 11:07:20 obache Exp $
  
        conf_dir_vector = g_strsplit (conf_dirs, G_SEARCHPATH_SEPARATOR_S, 0);
  #endif
-@@ -2829,7 +2829,7 @@ unalias_lang (char *lang)
-   int i;
- 
-   if (!alias_table)
--    read_aliases ("/usr/share/locale/locale.alias");
-+    read_aliases (PREFIX "/" PKGLOCALEDIR "/locale/locale.alias");
- 
-   i = 0;
-   while ((p = g_hash_table_lookup (alias_table, lang)) && (strcmp (p, lang) != 0))

@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1 2012/01/31 18:36:01 drochner Exp $
+$NetBSD: patch-as,v 1.2 2012/04/30 13:53:48 drochner Exp $
 
 avoid python dependency
 
---- gio/tests/Makefile.am.orig	2011-11-11 17:56:52.000000000 +0000
+--- gio/tests/Makefile.am.orig	2012-03-21 02:24:32.000000000 +0000
 +++ gio/tests/Makefile.am
 @@ -4,7 +4,7 @@ BUILT_SOURCES =
  
@@ -13,10 +13,10 @@ avoid python dependency
  
  INCLUDES = 			\
  	-g 			\
-@@ -115,12 +115,9 @@ TEST_PROGS += 			\
- 	unix-fd 		\
+@@ -123,12 +123,9 @@ TEST_PROGS += 			\
  	unix-streams 		\
  	gapplication 		\
+ 	basic-application	\
 -	gdbus-test-codegen 	\
  	$(NULL)
  SAMPLE_PROGS +=					\
@@ -26,7 +26,7 @@ avoid python dependency
  	$(NULL)
  endif
  
-@@ -286,7 +283,7 @@ gdbus-test-codegen-generated.h gdbus-tes
+@@ -295,7 +292,7 @@ gdbus-test-codegen-generated.h gdbus-tes
  		$(srcdir)/test-codegen.xml \
  		$(NULL)
  
