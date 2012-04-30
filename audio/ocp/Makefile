@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/03/28 15:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/30 08:26:41 shattered Exp $
 
 DISTNAME=		ocp-0.1.21
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opencubicplayer/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,13 +27,15 @@ MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-CONFIGURE_ARGS+=	--without-x11
-CONFIGURE_ARGS+=	--without-sdl
 
 CFLAGS.SunOS+=		-mimpure-text
 CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_CHANNELS=SNDCTL_DSP_CHANNELS
 CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_BITS=SNDCTL_DSP_SETFMT
 CFLAGS.SunOS+=		-DSOUND_PCM_WRITE_RATE=SNDCTL_DSP_SPEED
+
+PLIST_VARS+=		sdl x11 desktop
+
+.include "options.mk"
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"

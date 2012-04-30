@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2010/06/05 14:45:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/04/30 08:26:41 shattered Exp $
 bin/ocp
 bin/${PKGNAME}
 bin/ocp-curses
+${PLIST.sdl}bin/ocp-sdl
+${PLIST.x11}bin/ocp-x11
 info/ocp.info.gz
 lib/${PKGNAME}/autoload/10-compat.so
 lib/${PKGNAME}/autoload/10-devi.so
@@ -27,6 +29,7 @@ lib/${PKGNAME}/autoload/40-cphlpif.so
 lib/${PKGNAME}/devpdisk.so
 lib/${PKGNAME}/devpnone.so
 lib/${PKGNAME}/devposs.so
+${PLIST.sdl}lib/${PKGNAME}/devpsdl.so
 lib/${PKGNAME}/devsnone.so
 lib/${PKGNAME}/devsoss.so
 lib/${PKGNAME}/devwmix.so
@@ -52,6 +55,7 @@ lib/${PKGNAME}/playogg.so
 lib/${PKGNAME}/playwav.so
 lib/${PKGNAME}/playxm.so
 lib/${PKGNAME}/playym.so
+${PLIST.desktop}share/applications/cubic.org-opencubicplayer.desktop
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/BUGS
 share/doc/${PKGNAME}/COPYING
@@ -73,4 +77,6 @@ share/doc/${PKGNAME}/html/support.html
 share/doc/${PKGNAME}/html/wap.html
 share/${PKGNAME}/data/ocp.hlp
 share/${PKGNAME}/etc/ocp.ini
+${PLIST.x11}share/icons/hicolor/16x16/apps/opencubicplayer.xpm
+${PLIST.x11}share/icons/hicolor/48x48/apps/opencubicplayer.xpm
 @pkgdir share/ocp/ultradir
