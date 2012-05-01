@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.3 2012/04/10 19:48:17 bsiegert Exp $
+$NetBSD: patch-aq,v 1.4 2012/05/01 18:45:52 adam Exp $
 
---- gio/gsocket.c.orig	Sun Mar 11 21:43:04 2012
+--- gio/gsocket.c.orig	2012-05-01 00:06:39.000000000 +0000
 +++ gio/gsocket.c
 @@ -37,6 +37,9 @@
  #include <signal.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-aq,v 1.3 2012/04/10 19:48:17 bsiegert Exp $
  
  #ifndef G_OS_WIN32
  # include <fcntl.h>
-@@ -3556,7 +3559,7 @@ g_socket_get_credentials (GSocket   *soc
+@@ -4301,7 +4304,7 @@ g_socket_get_credentials (GSocket   *soc
  
    ret = NULL;
  
@@ -21,12 +21,10 @@ $NetBSD: patch-aq,v 1.3 2012/04/10 19:48:17 bsiegert Exp $
    {
      socklen_t optlen;
  #if defined(__linux__)
-@@ -3589,6 +3592,35 @@ g_socket_get_credentials (GSocket   *soc
-                                   G_CREDENTIALS_TYPE_OPENBSD_SOCKPEERCRED,
- #endif
+@@ -4336,6 +4339,35 @@ g_socket_get_credentials (GSocket   *soc
                                    &native_creds);
-+      }
-+  }
+       }
+   }
 +#elif defined(__NetBSD__) && defined(LOCAL_PEEREID)
 +  {
 +    struct unpcbid cred;
@@ -54,6 +52,8 @@ $NetBSD: patch-aq,v 1.3 2012/04/10 19:48:17 bsiegert Exp $
 +	g_credentials_set_native (ret,
 +				  G_CREDENTIALS_TYPE_LINUX_UCRED,
 +				  &native_creds);
-       }
-   }
++      }
++  }
  #else
+   g_set_error_literal (error,
+                        G_IO_ERROR,

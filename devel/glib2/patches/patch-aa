@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
+$NetBSD: patch-aa,v 1.52 2012/05/01 18:45:52 adam Exp $
 
---- configure.orig	2012-03-24 03:02:40.000000000 +0000
+--- configure.orig	2012-05-01 00:10:54.000000000 +0000
 +++ configure
-@@ -697,6 +697,7 @@ GIO
+@@ -698,6 +698,7 @@ GIO
  GSPAWN
  GLIB_DEBUG_FLAGS
  G_MODULE_NEED_USCORE
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  G_MODULE_BROKEN_RTLD_GLOBAL
  G_MODULE_HAVE_DLERROR
  G_MODULE_LDFLAGS
-@@ -22442,8 +22443,8 @@ else
+@@ -22511,8 +22512,8 @@ else
  fi
  
  
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
-@@ -24038,16 +24039,48 @@ fi
+@@ -24107,16 +24108,48 @@ fi
  
  case $host in
    *-*-solaris* )
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  esac
  
  if test "$ac_cv_func_statfs" = yes ; then
-@@ -25040,10 +25073,11 @@ if test x"$glib_native_win32" = xyes; th
+@@ -25109,10 +25142,11 @@ if test x"$glib_native_win32" = xyes; th
      G_MODULE_LDFLAGS=
  else
    export SED
@@ -84,7 +84,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -25250,13 +25284,13 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
+@@ -25319,13 +25353,13 @@ if test "$G_MODULE_IMPL" = "G_MODULE_IMP
  	LIBS="$G_MODULE_LIBS $LIBS"
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -101,7 +101,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for RTLD_GLOBAL brokenness" >&5
  $as_echo_n "checking for RTLD_GLOBAL brokenness... " >&6; }
  if ${glib_cv_rtldglobal_broken+:} false; then :
-@@ -25365,6 +25399,56 @@ fi
+@@ -25434,6 +25468,56 @@ fi
  
  	LIBS="$LIBS_orig"
  fi
@@ -158,7 +158,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
          G_MODULE_SUPPORTED=false
-@@ -25375,7 +25459,7 @@ fi
+@@ -25444,7 +25528,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the suffix of module shared libraries" >&5
  $as_echo_n "checking for the suffix of module shared libraries... " >&6; }
  export SED
@@ -167,7 +167,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -25399,6 +25483,8 @@ fi
+@@ -25468,6 +25552,8 @@ fi
  
  
  
@@ -176,7 +176,7 @@ $NetBSD: patch-aa,v 1.51 2012/04/30 13:53:48 drochner Exp $
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -26147,62 +26233,6 @@ if test x"$have_threads" = xposix; then
+@@ -26401,62 +26487,6 @@ if test x"$have_threads" = xposix; then
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
