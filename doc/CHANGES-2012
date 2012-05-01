@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1391 2012/05/01 14:59:29 gls Exp $
+$NetBSD: CHANGES-2012,v 1.1392 2012/05/01 18:57:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2249,3 +2249,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/mikutter to 0.1.0.772 [obache 2012-05-01]
 	Updated devel/glib2 to 2.32.1nb1 [tron 2012-05-01]
 	Updated graphics/feh to 2.5 [gls 2012-05-01]
+	Updated devel/glib2 to 2.32.2 [adam 2012-05-01]
+	Updated sysutils/gio-fam to 2.32.2 [adam 2012-05-01]
