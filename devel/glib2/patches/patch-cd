@@ -1,4 +1,4 @@
-$NetBSD: patch-cd,v 1.6 2012/03/21 12:18:33 drochner Exp $
+$NetBSD: patch-cd,v 1.7 2012/05/01 18:45:53 adam Exp $
 
 sysutils/gio-fam builds the gio/fam backend as a separate module.  Force it
 to link against the installed version of glib2, as it is not rebuilt by the
@@ -18,7 +18,7 @@ package.
  am__objects_1 =
  am_libgiofam_la_OBJECTS = libgiofam_la-fam-helper.lo \
  	libgiofam_la-fam-module.lo \
-@@ -402,9 +399,7 @@ libgiofam_la_CFLAGS = \
+@@ -403,9 +400,7 @@ libgiofam_la_CFLAGS = \
  
  libgiofam_la_LDFLAGS = $(module_flags)
  libgiofam_la_LIBADD = \
@@ -29,7 +29,7 @@ package.
  		$(GLIB_LIBS) \
  		$(FAM_LIBS) \
  		$(NULL)
-@@ -842,9 +837,6 @@ lcov-clean:
+@@ -843,9 +838,6 @@ lcov-clean:
  check-local: test-nonrecursive
  
  install-data-hook:
