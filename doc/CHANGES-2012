@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1388 2012/05/01 02:51:13 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1389 2012/05/01 06:51:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2246,3 +2246,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/bind98 to 9.8.2nb1 [taca 2012-05-01]
 	Updated net/bind97 to 9.7.5nb1 [taca 2012-05-01]
 	Updated net/bind96 to 9.6.3.1.ESV.6nb1 [taca 2012-05-01]
+	Updated net/mikutter to 0.1.0.772 [obache 2012-05-01]
