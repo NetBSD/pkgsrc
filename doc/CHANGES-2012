@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1387 2012/04/30 14:32:30 drochner Exp $
+$NetBSD: CHANGES-2012,v 1.1388 2012/05/01 02:51:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2242,3 +2242,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/libsoup24 to 2.38.1 [drochner 2012-04-30]
 	Updated x11/gtk3 to 3.4.1 [drochner 2012-04-30]
 	Updated devel/gobject-introspection to 1.32.1 [drochner 2012-04-30]
+	Updated net/bind99 to 9.9.0nb1 [taca 2012-05-01]
+	Updated net/bind98 to 9.8.2nb1 [taca 2012-05-01]
+	Updated net/bind97 to 9.7.5nb1 [taca 2012-05-01]
+	Updated net/bind96 to 9.6.3.1.ESV.6nb1 [taca 2012-05-01]
