@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/02/06 12:40:16 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2012/05/01 19:04:06 adam Exp $
 
 DISTNAME=	SDL_image-1.2.12
 PKGREVISION=	1
@@ -18,13 +18,14 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-tif
+CONFIGURE_ENV+=		OBJC=${CC:Q}
 
 INSTALLATION_DIRS=	bin
 PKGCONFIG_OVERRIDE=	SDL_image.pc.in
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
-		${DESTDIR:Q}${PREFIX:Q}/bin
+		${DESTDIR}${PREFIX}/bin
 
 BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.10
 .include "../../devel/SDL/buildlink3.mk"
