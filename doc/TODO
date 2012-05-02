@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11054 2012/05/01 22:27:30 yyamano Exp $
+$NetBSD: TODO,v 1.11055 2012/05/02 06:46:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -1308,7 +1308,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o unicode-screensaver-0.4
 	o units-88 [pkg/43742]
 	o ups-nut-2.6.2
-	o upx-3.07
 	o uriparser-0.7.5
 	o userppp-030706
 	o utilisp-1.14
