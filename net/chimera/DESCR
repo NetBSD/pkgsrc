@@ -1,0 +1,22 @@
+Structured peer-to-peer overlays, sometimes also referred to as
+Distributed Hash Tables (DHTs), are scalable network infrastructures
+that support Internet-scale network applications utilizing a
+decentralized resource model.  At their core, these overlays provide
+Key-Based Routing (KBR), where messages addressed to any Key will
+incrementally route towards an overlay node responsible for that key.
+On top of the KBR layer, these overlays can support distributed
+storage using a DHT layer or data location using a DOLR layer.
+
+On top of these overlays, researchers have proposed numerous
+distributed applications, including distributed storage and backup
+systems, multicast systems, resilient routing networks, distributed
+spam filters, mobility support and anonymous routing networks.
+
+Chimera is a light-weight C implementation of a "next-generation"
+structured overlay that provides similar functionality as
+prefix-routing protocols Tapestry and Pastry.  Chimera gains
+simplicity and robustness from its use of Pastry's leafsets, and
+efficient routing from Tapestry's locality algorithms.  In addition to
+these properties, Chimera also provides efficient detection of node
+and network failures, and reroutes messages around them to maintain
+connectivity and throughput.
