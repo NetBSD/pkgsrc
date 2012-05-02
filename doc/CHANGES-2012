@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1399 2012/05/02 12:35:10 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1400 2012/05/02 14:48:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2258,3 +2258,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated inputmethod/ibus to 1.4.1nb1 [obache 2012-05-02]
 	Added archivers/lhasa version 0.0.4 [wiz 2012-05-02]
 	Updated net/ruby-tweetstream to 1.1.5 [obache 2012-05-02]
+	Updated net/samba to 3.6.5 [taca 2012-05-02]
