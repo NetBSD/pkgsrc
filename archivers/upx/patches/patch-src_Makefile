@@ -1,0 +1,14 @@
+$NetBSD: patch-src_Makefile,v 1.1 2012/05/02 08:26:21 adam Exp $
+
+Enable ZLIB support.
+
+--- src/Makefile.orig	2012-05-02 08:09:20.000000000 +0000
++++ src/Makefile
+@@ -57,6 +57,7 @@ ifneq ($(wildcard $(UPX_UCLDIR)/include/
+ INCLUDES += -I$(UPX_UCLDIR)/include
+ LIBS += $(addprefix -L,$(dir $(wildcard $(UPX_UCLDIR)/libucl$(libext) $(UPX_UCLDIR)/src/.libs/libucl$(libext))))
+ endif
++DEFS += -DWITH_ZLIB
+ LIBS += -lucl -lz
+ # you should set envvar UPX_LZMADIR to point to your unpacked LZMA SDK
+ include $(top_srcdir)/src/stub/src/c/Makevars.lzma
