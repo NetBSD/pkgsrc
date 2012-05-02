@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+Remove an incorrect definition - kills compilation on BSDs
+
+--- alclib/Makefile	2011/12/21 18:38:36	1.1
++++ alclib/Makefile	2011/12/21 18:39:26
+@@ -1,7 +1,7 @@
+ CC = gcc
+ 
+ CFLAGS += -Wall -O3 -g -fPIC -DLINUX -D_LARGE_FILE_API -D_LARGEFILE64_SOURCE \
+-	-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500
++	-D_ISOC99_SOURCE #-D_XOPEN_SOURCE=500
+ 
+ SOURCES = alc_channel.c alc_hdr.c alc_rx.c alc_session.c alc_socket.c alc_tx.c \
+ 	lct_hdr.c mad.c transport.c blocking_alg.c null_fec.c xor_fec.c fec.c rs_fec.c \
