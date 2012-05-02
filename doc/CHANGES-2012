@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1402 2012/05/02 22:02:38 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1403 2012/05/02 23:21:21 christos Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated net/samba to 3.6.5 [taca 2012-05-02]
 	Updated net/samba35 to 3.5.15 [taca 2012-05-02]
 	Updated fonts/ricty-ttf to 3.2.0 [ryoon 2012-05-02]
+	Updated net/openafs to 1.7.11 [christos 2012-05-02]
