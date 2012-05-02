@@ -6,3 +6,11 @@ scalability and transparent migration capabilities for data.  IBM
 branched the source of the AFS product, and made a copy of the source
 available for community development and maintenance.  They called the
 release OpenAFS.
+
+To build the kernel module
+    $ cd src/libafs
+    $ cp MakefileProto.NBSD Makefile
+    $ make obj && make && make install
+
+For instructions how to create a cell:
+    http://wiki.openafs.org/AFSLore/FedoraAFSInstall/
