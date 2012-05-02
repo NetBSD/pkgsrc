@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/05/02 04:48:04 agc Exp $
+
+correct header to get prototype
+
+--- src/log.c	2012/03/28 19:10:29	1.1
++++ src/log.c	2012/03/28 19:10:44
+@@ -9,12 +9,10 @@
+ #include <unistd.h>
+ #include <stdarg.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "log.h"
+ 
+-extern FILE *stdin;
+-
+-
+-void *log_init ()
++void *log_init (void)
+ {
+     static FILE **log_fp;
+     log_fp = (FILE **) malloc (sizeof (FILE *) * LOG_COUNT);
