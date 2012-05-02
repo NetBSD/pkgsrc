@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2012/04/13 20:43:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2012/05/02 19:51:22 gdt Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -201,6 +201,7 @@ libexec/git-core/mergetools/tkdiff
 libexec/git-core/mergetools/tortoisemerge
 libexec/git-core/mergetools/vim
 libexec/git-core/mergetools/xxdiff
+share/examples/scmgit/git-completion.bash
 share/examples/scmgit/templates/description
 share/examples/scmgit/templates/hooks/applypatch-msg.sample
 share/examples/scmgit/templates/hooks/commit-msg.sample
