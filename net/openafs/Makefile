@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.26 2011/03/19 23:35:40 jakllsch Exp $
+# $NetBSD: Makefile,v 1.27 2012/05/02 23:19:25 christos Exp $
 
-DISTNAME=	openafs-1.4.14-src
+DISTNAME=	openafs-1.7.11-src
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	net sysutils
-MASTER_SITES=	http://www.openafs.org/dl/openafs/1.4.14/
+MASTER_SITES=	http://www.openafs.org/dl/openafs/1.7.11/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gendalia@NetBSD.org
 HOMEPAGE=	http://www.openafs.org/
 COMMENT=	File system for sharing, scalability and transparent data migration
-#LICENSE=	ibm-public-license
+LICENSE=	ibm-public-license-1.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	heimdal-[0-9]*
-CONFLICTS+=	lwp-[0-9]*
 CONFLICTS+=	rx-[0-9]*
 
 MAKE_JOBS_SAFE=no
@@ -44,12 +43,13 @@ FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q}
 
 BUILD_DEFS+= VARBASE
 
-# attempt to future-proof configuration
-pre-build:
-	cd ${WRKSRC}/src/config && for i in 50 60 70 80 90; do	\
-		${SED} -e 's|nbsd40|nbsd'$$i'|g' param.i386_nbsd40.h > param.i386_nbsd$$i.h; \
-		${SED} -e 's|nbsd40|nbsd'$$i'|g' param.amd64_nbsd40.h > param.amd64_nbsd$$i.h; \
-		${CP} param.nbsd40.h param.nbsd$$i.h; 			\
-	done
+#
+# Rename liblwp.a to libafslwp.a to avoid conflict with the lwp package.
+#
+pre-configure:
+	find ${WRKSRC} -name Makefile.in | while read f; do \
+		${SED}	-e 's|liblwp.a|libafslwp.a|g' \
+			-e 's|-llwp|-lafslwp|g' < $$f > $$f.tmp && \
+		${MV} $$f.tmp $$f; done 
 
 .include "../../mk/bsd.pkg.mk"
