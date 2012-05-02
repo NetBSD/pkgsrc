@@ -1,0 +1,33 @@
+$NetBSD: patch-al,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+ftime() is deprecated, just use time().
+
+--- alclib/alc_session.c	2011/12/21 21:41:34	1.1
++++ alclib/alc_session.c	2011/12/21 21:45:03
+@@ -44,7 +44,7 @@
+ #include <pthread.h>
+ #endif
+ 
+-#include <sys/timeb.h>
++#include <time.h>
+ 
+ #include "alc_session.h"
+ #include "mad_rlc.h"
+@@ -103,7 +103,6 @@
+   alc_session_t *s;
+   int i;
+   int retval;
+-  struct timeb timeb_current_time;
+   
+ #if ABSOLUTE_PATH
+   char fullpath[MAX_PATH_LENGTH];
+@@ -158,8 +157,7 @@
+   
+   if(s->mode == SENDER) {
+ 
+-    ftime(&timeb_current_time);
+-	s->ftimestarttime = timeb_current_time.time+timeb_current_time.millitm/1000.0;
++	s->ftimestarttime = time(NULL);
+ 
+     memcpy(s->base_dir, a->base_dir, strlen(a->base_dir));
+     

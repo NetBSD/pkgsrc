@@ -1,0 +1,59 @@
+$NetBSD: patch-ak,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+portability patches
+
+--- flutelib/http_file_repair.c	2011/12/21 21:33:02	1.1
++++ flutelib/http_file_repair.c	2011/12/21 21:35:06
+@@ -34,6 +34,7 @@
+ #include <stdlib.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <fcntl.h>
+ #include <string.h>
+ #include <ctype.h>
+@@ -107,6 +108,8 @@
+ #ifdef USE_ZLIB
+ #ifdef _MSC_VER
+ 	struct __stat64 file_stats;
++#elif (defined(BSD) && BSD >= 199506)
++	struct stat file_stats;
+ #else
+ 	struct stat64 file_stats;
+ #endif
+@@ -244,6 +247,8 @@
+ 
+ #ifdef _MSC_VER
+ 				unit->offset = _lseeki64(obj->fd_st, 0, SEEK_END);
++#elif (defined(BSD) && BSD >= 199506)
++				unit->offset = lseek(obj->fd_st, 0, SEEK_END);
+ #else
+ 				unit->offset = lseek64(obj->fd_st, 0, SEEK_END);
+ #endif
+@@ -292,6 +297,8 @@
+ 						}
+ #ifdef _MSC_VER
+ 						if(_lseeki64(obj->fd_st, tu->offset, SEEK_SET) == -1) {
++#elif (defined(BSD) && BSD >= 199506)
++						if(lseek(obj->fd_st, tu->offset, SEEK_SET) == -1) {
+ #else
+ 						if(lseek64(obj->fd_st, tu->offset, SEEK_SET) == -1) {
+ #endif
+@@ -365,6 +372,8 @@
+ 
+ #ifdef _MSC_VER
+ 				if(_lseeki64(obj->fd, pos, SEEK_SET) == -1) {
++#elif (defined(BSD) && BSD >= 199506)
++				if(lseek(obj->fd, pos, SEEK_SET) == -1) {
+ #else
+ 				if(lseek64(obj->fd, pos, SEEK_SET) == -1) {
+ #endif
+@@ -444,6 +453,8 @@
+ 
+ #ifdef _MSC_VER
+ 							if(_stat64(obj->tmp_filename, &file_stats) == -1) {
++#elif (defined(BSD) && BSD >= 199506)
++							if(stat(obj->tmp_filename, &file_stats) == -1) {
+ #else
+ 							if(stat64(obj->tmp_filename, &file_stats) == -1) {
+ #endif

@@ -1,0 +1,43 @@
+$NetBSD: patch-ai,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+portability improvements
+
+--- flutelib/mad_md5.c	2011/12/21 19:10:18	1.1
++++ flutelib/mad_md5.c	2011/12/21 19:11:36
+@@ -33,7 +33,9 @@
+ #include <stdio.h>
+ #include <memory.h>
+ #include <string.h>
++#include <sys/types.h>
+ #include <sys/stat.h>
++#include <sys/param.h>
+ #include <errno.h>
+ 
+ #include "mad_md5.h"
+@@ -48,6 +50,8 @@
+ 
+ #ifdef _MSC_VER
+ 	struct __stat64 file_stats;
++#elif (defined(BSD) && BSD >= 199506)
++    struct stat file_stats;
+ #else
+     struct stat64 file_stats;
+ #endif
+@@ -71,6 +75,8 @@
+ 
+ #ifdef _MSC_VER
+ 	fp = fopen(filename, "rb");
++#elif (defined(BSD) && BSD >= 199506)
++	fp = fopen(filename, "rb");
+ #else
+ 	fp = fopen64(filename, "rb");
+ #endif
+@@ -83,6 +89,8 @@
+ 
+ #ifdef _MSC_VER
+ 	if(_stat64(filename, &file_stats) == -1) {
++#elif (defined(BSD) && BSD >= 199506)
++    if(stat(filename, &file_stats) == -1) {
+ #else
+     if(stat64(filename, &file_stats) == -1) {
+ #endif
