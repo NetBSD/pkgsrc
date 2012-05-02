@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+get the right header file paths
+
+--- flutelib/Makefile	2011/12/21 18:53:07	1.1
++++ flutelib/Makefile	2011/12/21 18:56:38
+@@ -1,7 +1,7 @@
+ CC = gcc
+ 
+ CFLAGS += -Wall -O3 -g -fPIC -DLINUX -D_LARGE_FILE_API -D_LARGEFILE64_SOURCE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 \
+-	-I/usr/local/ssl/include
++	-I${PREFIX}/ssl/include -I${PREFIX}/include/curl
+ 
+ SOURCES = flute.c sender.c receiver.c fdt.c fdt_gen.c mad_md5.c uri.c getdnsname.c mad_zlib.c \
+ 	padding_encoding.c parse_args.c mad_utf8.c http_file_repair.c flute_file_repair.c apd.c \

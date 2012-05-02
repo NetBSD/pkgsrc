@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+we don't have one of the headers they want
+
+--- flutelib/http_file_repair.h	2011/12/21 18:54:28	1.1
++++ flutelib/http_file_repair.h	2011/12/21 18:55:20
+@@ -40,7 +40,9 @@
+ #ifdef USE_FILE_REPAIR
+ 
+ #include <curl/curl.h>
++#ifdef __linux__
+ #include <curl/types.h>
++#endif
+ #include <curl/easy.h>
+ 
+ #ifdef __cplusplus

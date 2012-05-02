@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+portability fixes
+
+--- alclib/transport.h	2011/12/21 16:31:23	1.1
++++ alclib/transport.h	2011/12/21 16:33:10
+@@ -35,6 +35,7 @@
+ #define _TRANSPORT_H_
+ 
+ #include <sys/types.h>
++#include <sys/param.h>
+ 
+ #ifdef LINUX
+ #include <unistd.h>
+@@ -63,6 +64,8 @@
+   
+ #ifdef _MSC_VER
+   __int64 offset;			/**< data symbol offset in the temporary file */
++#elif (defined(BSD) && BSD >= 199506)
++  off_t	offset;			/**< data symbol offset in the temporaryfile */
+ #else
+   off64_t offset;			/**< data symbol offset in the temporaryfile */
+ #endif
