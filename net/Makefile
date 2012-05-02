@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.917 2012/04/11 17:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.918 2012/05/02 04:48:49 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -61,6 +61,7 @@ SUBDIR+=	cacti
 SUBDIR+=	calypso
 SUBDIR+=	cdpd
 SUBDIR+=	cftp
+SUBDIR+=	chimera
 SUBDIR+=	chksniff
 SUBDIR+=	choparp
 SUBDIR+=	chrony
