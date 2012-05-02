@@ -1,0 +1,50 @@
+$NetBSD: patch-aj,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+portability patches
+
+--- flutelib/padding_encoding.c	2011/12/21 19:12:31	1.1
++++ flutelib/padding_encoding.c	2011/12/21 19:13:59
+@@ -36,6 +36,7 @@
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <sys/param.h>
+ #include <fcntl.h>
+ 
+ #ifdef _MSC_VER
+@@ -69,6 +70,8 @@
+ 
+ #ifdef _MSC_VER
+   struct __stat64 file_stats;
++#elif (defined(BSD) && BSD >= 199506)
++  struct stat file_stats;
+ #else  
+   struct stat64 file_stats;
+ #endif
+@@ -85,6 +88,8 @@
+ 
+ #ifdef _MSC_VER
+   fp_in = open((const char*)file_name_in, _O_RDWR | _O_CREAT | _O_BINARY, _S_IREAD | _S_IWRITE);
++#elif (defined(BSD) && BSD >= 199506)
++  fp_in = open(file_name_in, O_RDWR | O_CREAT, S_IRWXU);
+ #else
+   fp_in = open64(file_name_in, O_RDWR | O_CREAT, S_IRWXU);
+ #endif
+@@ -96,6 +101,8 @@
+ 
+ #ifdef _MSC_VER
+   _fstat64(fp_in, &file_stats);
++#elif (defined(BSD) && BSD >= 199506)
++  fstat(fp_in, &file_stats);
+ #else
+   fstat64(fp_in, &file_stats);
+ #endif
+@@ -105,6 +112,8 @@
+   if(f_size > content_length) {
+ #ifdef _MSC_VER
+     retval = _chsize(fp_in, (long)content_length); /* TODO: 64 bits, how ??? */
++#elif (defined(BSD) && BSD >= 199506)
++	  retval = ftruncate(fp_in, content_length);
+ #else
+ 	  retval = ftruncate64(fp_in, content_length);
+ #endif

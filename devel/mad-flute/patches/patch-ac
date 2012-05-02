@@ -1,0 +1,61 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+get rid of some lunixisms
+
+--- alclib/alc_rx.c	2011/12/21 16:34:42	1.1
++++ alclib/alc_rx.c	2011/12/21 17:02:30
+@@ -39,6 +39,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <math.h>
+ #include <assert.h>
+ 
+@@ -690,6 +691,9 @@
+ #ifdef _MSC_VER
+ 						if((trans_obj->fd = open((const char*)trans_obj->tmp_filename,
+ 							_O_WRONLY | _O_CREAT | _O_BINARY | _O_TRUNC , _S_IWRITE)) < 0) {
++#elif (defined(BSD) && BSD >= 199506)
++						if((trans_obj->fd = open((const char*)trans_obj->tmp_filename,
++							O_WRONLY | O_CREAT | O_TRUNC , S_IRWXU)) < 0) {
+ #else
+ 						if((trans_obj->fd = open64(trans_obj->tmp_filename,
+ 							O_WRONLY | O_CREAT | O_TRUNC , S_IRWXU)) < 0) {
+@@ -720,6 +724,9 @@
+ #ifdef _MSC_VER
+ 						if((trans_obj->fd_st = open((const char*)trans_obj->tmp_st_filename,
+ 							_O_RDWR | _O_CREAT | _O_BINARY | _O_TRUNC , _S_IREAD | _S_IWRITE)) < 0) {
++#elif (defined(BSD) && BSD >= 199506)
++						if((trans_obj->fd_st = open(trans_obj->tmp_st_filename,
++							O_RDWR | O_CREAT | O_TRUNC , S_IRWXU)) < 0) {
+ #else
+ 						if((trans_obj->fd_st = open64(trans_obj->tmp_st_filename,
+ 							O_RDWR | O_CREAT | O_TRUNC , S_IRWXU)) < 0) {
+@@ -817,6 +824,8 @@
+ 
+ #ifdef _MSC_VER
+ 						trans_unit->offset = _lseeki64(trans_obj->fd_st, 0, SEEK_END);
++#elif (defined(BSD) && BSD >= 199506)
++						trans_unit->offset = lseek(trans_obj->fd_st, 0, SEEK_END);
+ #else
+ 						trans_unit->offset = lseek64(trans_obj->fd_st, 0, SEEK_END);
+ #endif
+@@ -901,6 +910,8 @@
+ 
+ #ifdef _MSC_VER
+ 								if(_lseeki64(trans_obj->fd_st, tu->offset, SEEK_SET) == -1) {
++#elif (defined(BSD) && BSD >= 199506)
++								if (lseek(trans_obj->fd_st, tu->offset, SEEK_SET) == -1) {
+ #else
+ 								if(lseek64(trans_obj->fd_st, tu->offset, SEEK_SET) == -1) {
+ #endif
+@@ -978,6 +989,8 @@
+ 
+ #ifdef _MSC_VER
+ 						if(_lseeki64(trans_obj->fd, pos, SEEK_SET) == -1) {
++#elif (defined(BSD) && BSD >= 199506)
++						if (lseek(trans_obj->fd, pos, SEEK_SET) == -1) {
+ #else
+ 						if(lseek64(trans_obj->fd, pos, SEEK_SET) == -1) {
+ #endif

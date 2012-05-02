@@ -1,0 +1,28 @@
+$NetBSD: patch-am,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+
+ftime() is deprectaed, just use time(3).
+
+--- alclib/alc_tx.c	2011/12/21 21:46:10	1.1
++++ alclib/alc_tx.c	2011/12/21 21:46:49
+@@ -37,7 +37,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <assert.h>
+-#include <sys/timeb.h>
++#include <time.h>
+ 
+ #ifdef _MSC_VER
+ #include <process.h>
+@@ -580,11 +580,8 @@
+ 
+     double curr_time;
+     float actual_kbit_rate = (float)s->def_tx_rate;
+-    struct timeb timeb_current_time;
+ 
+-    ftime(&timeb_current_time);
+-
+-    curr_time = timeb_current_time.time+timeb_current_time.millitm/1000.0;
++    curr_time = time(NULL);
+ 
+     if(s->sent_bytes > 0 && curr_time > s->ftimestarttime) {
+         actual_kbit_rate = (float)((s->sent_bytes*8/1024.0) / (curr_time - s->ftimestarttime));
