@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2012/03/22 18:25:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2012/05/02 22:02:00 ryoon Exp $
 #
 
-DISTNAME=	yascentur-Ricty-3.1.3-0-gfe68161.tar.gz
-PKGNAME=	ricty-ttf-3.1.3
+DISTNAME=	yascentur-Ricty-3.2.0-0-gb9d8b9c.tar.gz
+PKGNAME=	ricty-ttf-3.2.0
 CATEGORIES=	fonts japanese
-MASTER_SITES=	-https://github.com/yascentur/Ricty/tarball/3.1.3
+MASTER_SITES=	-https://github.com/yascentur/Ricty/tarball/3.2.0
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
@@ -27,7 +27,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 
-WRKSRC=		${WRKDIR}/yascentur-Ricty-fe68161
+WRKSRC=		${WRKDIR}/yascentur-Ricty-b9d8b9c
 
 INSTALLATION_DIRS=	lib/X11/fonts/TTF
 
@@ -52,6 +52,11 @@ do-build:
 	${INCONSOLATADIR}/lib/X11/fonts/TTF/Inconsolata.otf \
 	${MIGUDIR}/lib/X11/fonts/TTF/migu-1m-regular.ttf \
 	${MIGUDIR}/lib/X11/fonts/TTF/migu-1m-bold.ttf
+
+post-build:
+	set -e; \
+	cd ${WRKSRC}; \
+	./misc/os2version_reviser.sh Ricty*.ttf
 
 do-install:
 .for f in ${INSTALL_FONTS}
