@@ -1,44 +1,49 @@
-# $NetBSD: Makefile,v 1.17 2012/02/15 19:27:10 hans Exp $
+# $NetBSD: Makefile,v 1.18 2012/05/02 06:45:14 adam Exp $
 
-DISTNAME=	upx-1.25-src
+DISTNAME=	upx-3.08-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	misc archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upx/}
+EXTRACT_SUFX=	.tar.bz2
+# consult src/stub/src/c/Makevars.lzma for the supported LZMA SDK version
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} lzma443${EXTRACT_SUFX}
+SITES.lzma443.tar.bz2=	${MASTER_SITE_SOURCEFORGE:=sevenzip/}
 
 MAINTAINER=	fab@gnux.info
 HOMEPAGE=	http://upx.sourceforge.net/
 COMMENT=	Ultimate packer for executables
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake perl pod2man pod2html pod2text
+NO_CONFIGURE=		yes
 
-USE_TOOLS+=	gmake perl pod2man pod2html pod2text
-USE_LANGUAGES=	c c++
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/upx
 
-INSTALLATION_DIRS=	bin
-
-BUILDLINK_TRANSFORM=	rm:-mcpu=i686
+BUILDLINK_TRANSFORM+=	rm:-mcpu=i686
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM=	rm:-Wl,-Map rm:-Wl,upx.map
+BUILDLINK_TRANSFORM+=	rm:-Wl,-Map rm:-Wl,upx.map
 .endif
 
+post-extract:
+	mkdir -p ${WRKSRC}/src/stub/src/c/lzma-sdk
+	ln -sf ${WRKDIR}/C ${WRKSRC}/src/stub/src/c/lzma-sdk/C
+
 do-build:
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} PREFIX=${PREFIX} target=netbsd	\
-			UCLDIR=${PREFIX} LDLIBDIRS=-L${PREFIX}/lib
+	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
+		PREFIX=${PREFIX} UCLDIR=${PREFIX} LDLIBDIRS=-L${PREFIX}/lib
 	cd ${WRKSRC}/doc && ${MAKE_PROGRAM}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/upx ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/upx/
-	${INSTALL_DATA} ${WRKSRC}/doc/upx.doc \
-		${DESTDIR}${PREFIX}/share/doc/upx
-	${INSTALL_DATA} ${WRKSRC}/doc/upx.html \
-		${DESTDIR}${PREFIX}/share/doc/upx
+	${INSTALL_PROGRAM} ${WRKSRC}/src/upx.out ${DESTDIR}${PREFIX}/bin/upx
+	${INSTALL_MAN} ${WRKSRC}/doc/upx.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/upx.doc ${DESTDIR}${PREFIX}/share/doc/upx
+	${INSTALL_DATA} ${WRKSRC}/doc/upx.html ${DESTDIR}${PREFIX}/share/doc/upx
 
 .include "../../devel/ucl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
