@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/03/22 18:25:44 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2012/05/02 22:02:00 ryoon Exp $
 
-SHA1 (yascentur-Ricty-3.1.3-0-gfe68161.tar.gz.tar.gz) = cffb78345867cac94e635e49732b55d1b6d808f3
-RMD160 (yascentur-Ricty-3.1.3-0-gfe68161.tar.gz.tar.gz) = 9a0965a43af4ce617451c470df114988c3fa0b8c
-Size (yascentur-Ricty-3.1.3-0-gfe68161.tar.gz.tar.gz) = 12057 bytes
+SHA1 (yascentur-Ricty-3.2.0-0-gb9d8b9c.tar.gz.tar.gz) = 7441f310620d94e55020c9b15683c9a27e6902e7
+RMD160 (yascentur-Ricty-3.2.0-0-gb9d8b9c.tar.gz.tar.gz) = 2817699be804c03bbf8fd26d9b2a61b4e96c5410
+Size (yascentur-Ricty-3.2.0-0-gb9d8b9c.tar.gz.tar.gz) = 13286 bytes
