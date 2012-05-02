@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/02 04:48:04 agc Exp $
+bin/bighost
+bin/bignode
+bin/bigtest
+bin/dht
+bin/dhttest
+bin/monitor
+bin/receiver
+bin/sender
+bin/sha1_keygen
+bin/test
+lib/libchimera.a
