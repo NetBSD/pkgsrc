@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1587 2012/04/25 09:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1588 2012/05/02 04:44:09 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -432,6 +432,7 @@ SUBDIR+=	lutok
 SUBDIR+=	lwp
 SUBDIR+=	m17n-lib
 SUBDIR+=	m4
+SUBDIR+=	mad-flute
 SUBDIR+=	makedepend
 SUBDIR+=	makedepf90
 SUBDIR+=	maketool
