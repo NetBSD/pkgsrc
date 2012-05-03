@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2012/04/05 00:41:10 taca Exp $
+$NetBSD: distinfo,v 1.15.2.1 2012/05/03 19:15:50 tron Exp $
 
 SHA1 (bind-9.6-ESV-R6.tar.gz) = 8818ba00a7503e757d9d34053b2f16beac0d0f5e
 RMD160 (bind-9.6-ESV-R6.tar.gz) = 239d70e1bc1d7e16a42d36938de8aa3ffbab0b64
@@ -8,3 +8,4 @@ SHA1 (patch-ac) = 074649e1514870a3154c623a5f6d1507b72b5b05
 SHA1 (patch-ad) = 3fcfac007f7823d48573459e57810f442c5b7d2f
 SHA1 (patch-ag) = ffc547b444f01f51a12a01cfa884916a9a411a88
 SHA1 (patch-am) = a52d847354cd83b2474d5420925925e4614c966f
+SHA1 (patch-lib_dns_resolver.c) = e9b7460c15df6b942b9987aeb4d223f48dec712d
