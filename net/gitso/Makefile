@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/11 19:32:17 darcy Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/03 05:55:47 obache Exp $
 
 DISTNAME=		gitso-0.6
 CATEGORIES=		net x11
@@ -8,38 +8,39 @@ DISTFILES=		gitso_0.6_linux_all.tar.gz
 MAINTAINER=		darcy@NetBSD.org
 HOMEPAGE=		http://code.google.com/p/gitso/
 COMMENT=		Gitso is to support others
-
-LICENSE=                gnu-gpl-v3
-WRKSRC=                 ${WRKDIR}/Gitso
-
-PY_PATCHPLIST=          yes
-USE_TOOLS+=             bash:run
-
-REPLACE_BASH+=          run-gitso.sh.local
-REPLACE_PYTHON+=        bin/gitso
-REPLACE_PYTHON+=        share/gitso/ArgsParser.py
-REPLACE_PYTHON+=        share/gitso/ConnectionWindow.py
-REPLACE_PYTHON+=        share/gitso/Gitso.py
-REPLACE_PYTHON+=        share/gitso/GitsoThread.py
-REPLACE_PYTHON+=        share/gitso/NATPMP.py
-REPLACE_PYTHON+=        share/gitso/Processes.py
-
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/application.mk"
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_JOBS_SAFE=		no
-NO_BUILD=               yes
-INSTALLATION_DIRS+=     bin
-INSTALLATION_DIRS+=     share/gitso
-INSTALLATION_DIRS+=     ${PYSITELIB}/gitso
-
-.include "../../mk/bsd.prefs.mk"
+LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		vncviewer-[0-9]*:../../net/vncviewer
 DEPENDS+=		x11vnc-[0-9]*:../../x11/x11vnc
 
-SITEFILES =	${WRKSRC}/share/gitso/*.py \
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}/Gitso
+
+PY_PATCHPLIST=		yes
+USE_TOOLS+=		bash:run
+
+REPLACE_BASH+=		run-gitso.sh.local
+REPLACE_PYTHON+=	bin/gitso
+REPLACE_PYTHON+=	share/gitso/ArgsParser.py
+REPLACE_PYTHON+=	share/gitso/ConnectionWindow.py
+REPLACE_PYTHON+=	share/gitso/Gitso.py
+REPLACE_PYTHON+=	share/gitso/GitsoThread.py
+REPLACE_PYTHON+=	share/gitso/NATPMP.py
+REPLACE_PYTHON+=	share/gitso/Processes.py
+
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+
+MAKE_JOBS_SAFE=		no
+NO_BUILD=		yes
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/gitso
+INSTALLATION_DIRS+=	${PYSITELIB}/gitso
+
+.include "../../mk/bsd.prefs.mk"
+
+SITEFILES=	${WRKSRC}/share/gitso/*.py \
 		${WRKSRC}/share/gitso/icon.* \
 		${WRKSRC}/share/gitso/icon.* \
 		${WRKSRC}/share/gitso/hosts.txt \
