@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.24 2012/04/26 13:45:13 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.25 2012/05/03 19:56:36 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -109,3 +109,23 @@ Pullup ticket #3757 - requested by gls
 www/moodle: security update
 Pullup ticket #3758 - requested by sbd
 multimedia/xine-lib: build fix
+Pullup ticket #3760 - requested by dholland
+graphics/aqsis: build fix update
+Pullup ticket #3760 - requested by dholland
+graphics/aqsis: build fix update
+Pullup ticket #3761 - requested by dholland
+lang/objc: build fix
+Pullup ticket #3762 - requested by taca
+net/bind99: security patch
+Pullup ticket #3763 - requested by taca
+net/bind98: security patch
+Pullup ticket #3764 - requested by taca
+net/bind97: security patch
+Pullup ticket #3765 - requested by taca
+net/bind96: security patch
+Pullup ticket #3766 - requested by taca
+net/samba: security update
+Pullup ticket #3767 - requested by taca
+net/samba35: security update
+Pullup ticket #3768 - requested by taca
+www/drupal7: security update
