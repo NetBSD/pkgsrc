@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2012/05/03 09:55:30 obache Exp $
 
 DISTNAME=		xbmbrowser5.1
 PKGNAME=		xbmbrowser-5.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=utilities/}
 
@@ -16,6 +16,5 @@ USE_IMAKE=		YES
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

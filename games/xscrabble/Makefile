@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2012/05/03 09:55:30 obache Exp $
 #
 
 DISTNAME=	xscrabble-1.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -45,5 +45,4 @@ do-install:
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

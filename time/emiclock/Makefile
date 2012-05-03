@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/06/04 13:52:21 tsutsui Exp $
+# $NetBSD: Makefile,v 1.24 2012/05/03 09:55:31 obache Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 
@@ -37,5 +37,4 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults/EmiClock
 
 .include "../../mk/xaw.buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
