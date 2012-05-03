@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11056 2012/05/02 14:49:12 taca Exp $
+$NetBSD: TODO,v 1.11057 2012/05/03 08:44:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -326,6 +326,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
+	o ImageMagick-6.7.6.8
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -364,7 +365,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amsn-0.98.4
 	o angband-3.2
 	o anjuta-2.32.1.1 [GNOME 2.32]
-	o anjuta-3.2.2
+	o anjuta-3.4.1
 	o anjuta-extras-2.32.1.1 [GNOME 2.32]
 	o anope-1.8.7
 	o antiright-8.6
@@ -377,6 +378,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap-mp3-0.40
 	o ap-xslt-1.4.0
 	o ap2-auth-ldap-3.11
+	o ap2-perl-2.0.6
 	o ap2-transform-0.6.0
 	o apache-maven-3.0
 	o applewmproto-1.4.2
@@ -436,7 +438,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o byacc-20120115
 	o c4-1.10 [schmonz]
 	o cabextract-1.4
-	o cairo-1.12.0
+	o cacti-0.8.8a [pkg/46399]
+	o cairo-1.12.2
 	o cairo-gobject-1.12.0
 	o cal3d-0.11.0
 	o calamaris-2.59
@@ -464,8 +467,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o clamav-0.97.4
 	o classpath-0.98
 	o clustalw-2.0.12 [pkg/43395]
-	o clutter-1.10.2
+	o clutter-1.10.4
 	o clutter-gst-1.4.6
+	o cmake-2.8.8
 	o coccigrep-1.8
 	o colorize-0.3.4
 	o colortail-0.3.3
@@ -512,7 +516,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dmenu-4.5
-	o dnsmasq-2.60
+	o dnsmasq-2.61
 	o doclifter-2.7
 	o doxygen-1.8.0
 	o dpkg-1.16.0.3
@@ -551,7 +555,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epic4-2.6
 	o epiphany-extensions-3.2.0
 	o epstool-3.08
-	o eric5-5.2.1
+	o eric4-4.5.3
+	o eric5-5.2.2
 	o erlang-15b01
 	o esh-0.8.5
 	o espeak-1.40
@@ -739,7 +744,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-gnutella-0.97.1
 	o gtk-systrace-20030623
 	o gtk-vnc-0.4.3
-	o gtk3-3.4.1
 	o gtkmm-3.4.0
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkwave-3.3.35
@@ -767,7 +771,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hesiod-3.1.0
 	o heyu-2.9.0
 	o hiawatha-8.1
-	o highlight-3.8
+	o highlight-3.9
 	o honeyd-1.5c
 	o horde-4.0.14
 	o host-20070128
@@ -803,6 +807,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
+	o jabberd2-2.2.15
 	o jamvm-1.5.4 [pkg/45604]
 	o java-db3-3.87
 	o javacc-5.0
@@ -825,16 +830,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kdevelop-4.3.1
 	o kdrill-6.5
 	o kid3-2.0.1
+	o kile-2.1.2
 	o kismet-2011.03r2 [pkg/45692]
 	o kmess-1.5.1
 	o kmp-0.5
 	o kmymoney2-4.6.1
-	o knights-2.4.0
+	o knights-2.4.2
 	o koffice-l10n-de-2.0.2
 	o kphotobook-0.0.7
 	o kronolith-3.0.16
 	o krusader-2.0
-	o ktorrent-4.1.3
+	o ktorrent-4.2.0
 	o ktorrent3-3.3.4
 	o lapack-3.4.0
 	o latd-1.21
@@ -862,7 +868,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXfixes-5.0
 	o libXfont-1.4.5
 	o libXft-2.3.0
-	o libXi-1.6.0
+	o libXi-1.6.1
 	o libXinerama-1.1.2
 	o libXmu-1.1.1
 	o libXpm-3.5.10
@@ -876,6 +882,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libXxf86dga-1.1.3
 	o libXxf86misc-1.0.3
 	o libXxf86vm-1.1.2
+	o libaudiofile-0.3.4
 	o libcaca-0.99beta18
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.8.0
@@ -903,7 +910,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libltdl-2.4.2
 	o libmatheval-1.1.6
 	o libmcs-0.7.2
-	o libmemcached-1.0.6
+	o libmemcached-1.0.7
 	o libmilter-8.14.5
 	o libmusicbrainz-4.0.1
 	o libnasl-2.3.1
@@ -955,10 +962,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o manedit-1.2.1
 	o mantis-1.2.3
 	o matchbox-panel-0.9.3
-	o mathomatic-15.8.2
+	o mathomatic-15.8.3
 	o mc-4.8.1.3
 	o mdocml-1.12.1
 	o mediawiki-1.18.1
+	o meld-1.6.0
+	o mercurial-2.2
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
@@ -982,17 +991,19 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moserial-2.30.0 [GNOME 2.30]
 	o mousetweaks-2.32.1 [GNOME 2.32]
 	o mousetweaks-3.4.1
-	o mp3diags-1.1.18
+	o mp3diags-1.1.19
 	o mpeg4ip-1.6.1
-	o mpg123-1.13.8
+	o mpg123-1.14.0
 	o mpich-1.4.1p1
-	o mpop-1.0.26
+	o mpop-1.0.27
 	o mserv-devel-0.41
+	o msmtp-1.4.28
 	o mu-0.9.8.3
 	o multitail-5.2.9
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
+	o mupdf-1.0
 	o muse-0.9.2
 	o musicbrainz-4.0.0
 	o naim-0.11.8.3.2
@@ -1057,6 +1068,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
 	o pam-passwdqc-1.2.2
+	o pan-0.137
 	o paprefs-0.9.8
 	o parallel-20120422
 	o pari-2.5.1
@@ -1124,6 +1136,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-dbus-1.0.0 [needs dbus>=1.4]
 	o py-feedparser-5.1.1
 	o py-game-1.9.1 [needs portmidi]
+	o py-gdata-2.0.17
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gobject-3.2.0
@@ -1236,7 +1249,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stgit-0.16
 	o stlport-4.6.2
 	o stow-2.2.0
-	o strace-4.5.16
+	o strace-4.7
 	o stratagus-2.2.5.5
 	o streamripper-1.63.0
 	o subtitleeditor-0.33.0
@@ -1404,7 +1417,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-glide-1.0.3
 	o xf86-video-glint-1.2.7
 	o xf86-video-i128-1.3.5
-	o xf86-video-intel-2.18.0
+	o xf86-video-intel-2.19.0
 	o xf86-video-mach64-6.9.1
 	o xf86-video-mga-1.5.0
 	o xf86-video-neomagic-1.2.6
@@ -1429,6 +1442,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86dgaproto-2.1
 	o xf86driproto-2.1.1
 	o xf86vidmodeproto-2.3.1
+	o xfce-4.10
 	o xfce4-4.8
 	o xfce4-volman-0.3.80
 	o xfd-1.1.1
