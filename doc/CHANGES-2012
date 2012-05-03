@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1410 2012/05/03 09:08:03 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1411 2012/05/03 13:56:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2270,3 +2270,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/goffice0.8 to 0.8.17nb5 [wiz 2012-05-03]
 	Updated multimedia/mkvtoolnix to 5.0.1 [adam 2012-05-03]
 	Added math/p5-Math-Permute-List version 1.004 [wiz 2012-05-03]
+	Updated pkgtools/x11-links to 0.70 [obache 2012-05-03]
