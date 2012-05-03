@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1412 2012/05/03 16:17:01 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1413 2012/05/03 21:37:42 jdf Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2272,3 +2272,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added math/p5-Math-Permute-List version 1.004 [wiz 2012-05-03]
 	Updated pkgtools/x11-links to 0.70 [obache 2012-05-03]
 	Updated devel/mercurial to 2.2 [wiz 2012-05-03]
+	Added sysutils/fscd version 1.0 [jdf 2012-05-03]
