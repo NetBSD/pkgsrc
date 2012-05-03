@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2011/10/07 19:09:55 drochner Exp $
+$NetBSD: distinfo,v 1.31 2012/05/03 08:28:40 adam Exp $
 
-SHA1 (mkvtoolnix-5.0.0.tar.bz2) = 9e8d4fafa8f6916b4d92d6ff654906cf5b591c68
-RMD160 (mkvtoolnix-5.0.0.tar.bz2) = 6b2d099f06bb8f830387dbdfe236958939c4dbcd
-Size (mkvtoolnix-5.0.0.tar.bz2) = 2153252 bytes
+SHA1 (mkvtoolnix-5.0.1.tar.bz2) = 900211d47ba6cbeb4188bb45a492a2b9edf08ed2
+RMD160 (mkvtoolnix-5.0.1.tar.bz2) = 3c6220a1ff304a18e4d7125d6981966c3e9d368e
+Size (mkvtoolnix-5.0.1.tar.bz2) = 2155095 bytes
 SHA1 (patch-aa) = f34d52914908e54fef20c857c3fde28aa560ff91
