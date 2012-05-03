@@ -1,0 +1,15 @@
+$NetBSD: patch-cmake_modules_FindPNG_cmake,v 1.1.2.2 2012/05/03 17:54:53 tron Exp $
+
+Use the right library name for libpng.
+
+--- cmake/modules/FindPNG.cmake~	2012-03-11 12:33:09.000000000 +0000
++++ cmake/modules/FindPNG.cmake
+@@ -27,7 +27,7 @@ IF(WIN32)
+ 		SET(AQSIS_PNG_LIBRARY_NAMES png)
+ 	endif()
+ ELSE(WIN32)
+-	SET(AQSIS_PNG_LIBRARY_NAMES png)
++	SET(AQSIS_PNG_LIBRARY_NAMES png15)
+ 	SET(AQSIS_PNG_LIBRARIES_DIR CACHE PATH "Semi-colon separated list of paths to search for the png libraries")
+ ENDIF(WIN32)
+ 
