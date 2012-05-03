@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2011/12/22 14:14:22 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2012/05/03 12:20:19 hans Exp $
 
 --- configure.orig	2010-04-02 13:35:47.000000000 -0400
 +++ configure
@@ -11,3 +11,18 @@ $NetBSD: patch-ad,v 1.2 2011/12/22 14:14:22 wiz Exp $
    gmpinc="-I$with_mpfr/include $gmpinc"
  fi
  if test "x$with_mpfr_include" != x; then
+@@ -5279,9 +5279,11 @@ if test "x$with_mpfr_lib" != x; then
+   gmplibs="-L$with_mpfr_lib $gmplibs"
+ fi
+ if test "x$with_mpfr$with_mpfr_include$with_mpfr_lib" = x && test -d ${srcdir}/mpfr; then
+-  gmplibs='-L$$r/$(HOST_SUBDIR)/mpfr/'"$lt_cv_objdir $gmplibs"
+-  gmpinc='-I$$r/$(HOST_SUBDIR)/mpfr -I$$s/mpfr '"$gmpinc"
+-  extra_mpc_mpfr_configure_flags='--with-mpfr-include=$$s/mpfr --with-mpfr-lib=$$r/$(HOST_SUBDIR)/mpfr/'"$lt_cv_objdir"
++  sdir=
++  test -d "${srcdir}/mpfr/src" && sdir=/src
++  gmplibs='-L$$r/$(HOST_SUBDIR)/mpfr'"$sdir/$lt_cv_objdir $gmplibs"
++  gmpinc='-I$$r/$(HOST_SUBDIR)/mpfr'"$sdir "'-I$$s/mpfr'"$sdir $gmpinc"
++  extra_mpc_mpfr_configure_flags='--with-mpfr-include=$$s/mpfr'"$sdir "'--with-mpfr-lib=$$r/$(HOST_SUBDIR)/mpfr'"$sdir/$lt_cv_objdir"
+   # Do not test the mpfr version.  Assume that it is sufficient, since
+   # it is in the source tree, and the library has not been built yet
+   # but it would be included on the link line in the version check below

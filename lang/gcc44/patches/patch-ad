@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2012/04/13 11:01:32 hans Exp $
+$NetBSD: patch-ad,v 1.4 2012/05/03 12:20:19 hans Exp $
 
 --- configure.orig	2010-10-02 11:40:32.000000000 +0000
 +++ configure
-@@ -4532,7 +4532,7 @@ if test "${with_mpfr_lib+set}" = set; th
+@@ -4534,7 +4534,7 @@ if test "${with_mpfr_lib+set}" = set; th
  fi;
  
  if test "x$with_mpfr" != x; then
@@ -11,7 +11,20 @@ $NetBSD: patch-ad,v 1.3 2012/04/13 11:01:32 hans Exp $
    gmpinc="-I$with_mpfr/include"
  fi
  if test "x$with_mpfr_include" != x; then
-@@ -4596,7 +4596,7 @@
+@@ -4544,8 +4544,10 @@ if test "x$with_mpfr_lib" != x; then
+   gmplibs="-L$with_mpfr_lib $gmplibs"
+ fi
+ if test "x$with_mpfr$with_mpfr_include$with_mpfr_lib" = x && test -d ${srcdir}/mpfr; then
+-  gmplibs='-L$$r/$(HOST_SUBDIR)/mpfr/.libs -L$$r/$(HOST_SUBDIR)/mpfr/_libs '"$gmplibs"
+-  gmpinc='-I$$r/$(HOST_SUBDIR)/mpfr -I$$s/mpfr '"$gmpinc"
++  sdir=
++  test -d "${srcdir}/mpfr/src" && sdir=/src
++  gmplibs='-L$$r/$(HOST_SUBDIR)/mpfr'"${sdir}"'/.libs -L$$r/$(HOST_SUBDIR)/mpfr'"${sdir}/_libs $gmplibs"
++  gmpinc='-I$$r/$(HOST_SUBDIR)/mpfr'"${sdir} "'-I$$s/mpfr'"${sdir} $gmpinc"
+   # Do not test the mpfr version.  Assume that it is sufficient, since
+   # it is in the source tree, and the library has not been built yet
+   # but it would be included on the link line in the version check below
+@@ -4598,7 +4600,7 @@ fi
  if test "x$with_gmp$with_gmp_include$with_gmp_lib" = x && test -d ${srcdir}/gmp; then
    gmplibs='-L$$r/$(HOST_SUBDIR)/gmp/.libs -L$$r/$(HOST_SUBDIR)/gmp/_libs '"$gmplibs"
    gmpinc='-I$$r/$(HOST_SUBDIR)/gmp -I$$s/gmp '"$gmpinc"
@@ -20,4 +33,3 @@ $NetBSD: patch-ad,v 1.3 2012/04/13 11:01:32 hans Exp $
    # Do not test the gmp version.  Assume that it is sufficient, since
    # it is in the source tree, and the library has not been built yet
    # but it would be included on the link line in the version check below
-
