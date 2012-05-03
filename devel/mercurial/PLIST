@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/04/08 20:21:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/05/03 16:16:51 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -69,6 +69,9 @@ ${PYSITELIB}/hgext/eol.pyo
 ${PYSITELIB}/hgext/extdiff.py
 ${PYSITELIB}/hgext/extdiff.pyc
 ${PYSITELIB}/hgext/extdiff.pyo
+${PYSITELIB}/hgext/factotum.py
+${PYSITELIB}/hgext/factotum.pyc
+${PYSITELIB}/hgext/factotum.pyo
 ${PYSITELIB}/hgext/fetch.py
 ${PYSITELIB}/hgext/fetch.pyc
 ${PYSITELIB}/hgext/fetch.pyo
@@ -265,6 +268,9 @@ ${PYSITELIB}/mercurial/filemerge.pyo
 ${PYSITELIB}/mercurial/fileset.py
 ${PYSITELIB}/mercurial/fileset.pyc
 ${PYSITELIB}/mercurial/fileset.pyo
+${PYSITELIB}/mercurial/formatter.py
+${PYSITELIB}/mercurial/formatter.pyc
+${PYSITELIB}/mercurial/formatter.pyo
 ${PYSITELIB}/mercurial/graphmod.py
 ${PYSITELIB}/mercurial/graphmod.pyc
 ${PYSITELIB}/mercurial/graphmod.pyo
@@ -433,6 +439,9 @@ ${PYSITELIB}/mercurial/posix.pyo
 ${PYSITELIB}/mercurial/pushkey.py
 ${PYSITELIB}/mercurial/pushkey.pyc
 ${PYSITELIB}/mercurial/pushkey.pyo
+${PYSITELIB}/mercurial/pvec.py
+${PYSITELIB}/mercurial/pvec.pyc
+${PYSITELIB}/mercurial/pvec.pyo
 ${PYSITELIB}/mercurial/py3kcompat.py
 ${PYSITELIB}/mercurial/py3kcompat.pyc
 ${PYSITELIB}/mercurial/py3kcompat.pyo
