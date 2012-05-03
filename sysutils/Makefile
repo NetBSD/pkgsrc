@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.538 2012/03/22 06:40:01 markd Exp $
+# $NetBSD: Makefile,v 1.539 2012/05/03 21:37:42 jdf Exp $
 #
 
 COMMENT=	System utilities
@@ -115,6 +115,7 @@ SUBDIR+=	flashrom
 SUBDIR+=	foremost
 SUBDIR+=	free
 SUBDIR+=	fs-kit
+SUBDIR+=	fscd
 SUBDIR+=	fsviewer
 SUBDIR+=	ftwin
 SUBDIR+=	gamin
