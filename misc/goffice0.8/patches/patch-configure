@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/05/03 06:01:35 wiz Exp $
+
+pcretest -C also reports UTF-16 support, adapt pattern.
+
+--- configure.orig	2012-05-03 05:55:28.000000000 +0000
++++ configure
+@@ -15285,7 +15285,7 @@ fi
+ 
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for UTF-8 support in pcre" >&5
+ $as_echo_n "checking for UTF-8 support in pcre... " >&6; }
+-  if (pcretest -C 2>&1) | grep -i "^ *UTF-8 support" >/dev/null; then
++  if (pcretest -C 2>&1) | grep -i "^ *UTF-8 .*support" >/dev/null; then
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+       LIBS="$LIBS -lpcre"
