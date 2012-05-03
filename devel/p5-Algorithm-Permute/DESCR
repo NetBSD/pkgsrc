@@ -1,0 +1,3 @@
+This handy module makes performing permutation in Perl easy and
+fast, although perhaps its algorithm is not the fastest on the
+earth. Currently it only supports permutation n of n objects.
