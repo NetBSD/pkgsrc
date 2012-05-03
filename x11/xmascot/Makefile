@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2009/06/30 00:07:25 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2012/05/03 09:55:33 obache Exp $
 
 DISTNAME=	xmascot2.6a
 PKGNAME=	xmascot-2.6a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://cclub-flying.dsl.gr.jp/products/xmascot/
 
@@ -19,6 +19,5 @@ USE_IMAKE=	yes
 INSTALL_MAKE_FLAGS+=	LANG=ja_JP.eucJP
 
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

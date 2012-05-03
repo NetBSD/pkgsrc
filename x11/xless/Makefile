@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2009/07/07 17:22:27 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2012/05/03 09:55:32 obache Exp $
 
 DISTNAME=	xless-1.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/} \
 		ftp://ftp.cs.berkeley.edu/ucb/people/dglo/xless/
@@ -18,6 +18,5 @@ USE_IMAKE=	yes
 INSTALLATION_DIRS=	lib/X11
 
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
