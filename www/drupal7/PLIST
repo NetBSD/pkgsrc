@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/02/19 16:31:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/05/03 07:02:57 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -300,6 +300,7 @@ share/drupal/modules/contextual/contextual.css
 share/drupal/modules/contextual/contextual.info
 share/drupal/modules/contextual/contextual.js
 share/drupal/modules/contextual/contextual.module
+share/drupal/modules/contextual/contextual.test
 share/drupal/modules/contextual/images/gear-select.png
 share/drupal/modules/dashboard/dashboard-rtl.css
 share/drupal/modules/dashboard/dashboard.api.php
@@ -679,8 +680,11 @@ share/drupal/modules/simpletest/tests/module_test.file.inc
 share/drupal/modules/simpletest/tests/module_test.info
 share/drupal/modules/simpletest/tests/module_test.install
 share/drupal/modules/simpletest/tests/module_test.module
+share/drupal/modules/simpletest/tests/pager.test
 share/drupal/modules/simpletest/tests/password.test
 share/drupal/modules/simpletest/tests/path.test
+share/drupal/modules/simpletest/tests/path_test.info
+share/drupal/modules/simpletest/tests/path_test.module
 share/drupal/modules/simpletest/tests/registry.test
 share/drupal/modules/simpletest/tests/requirements1_test.info
 share/drupal/modules/simpletest/tests/requirements1_test.install
@@ -709,6 +713,7 @@ share/drupal/modules/simpletest/tests/taxonomy_test.info
 share/drupal/modules/simpletest/tests/taxonomy_test.install
 share/drupal/modules/simpletest/tests/taxonomy_test.module
 share/drupal/modules/simpletest/tests/theme.test
+share/drupal/modules/simpletest/tests/theme_test.inc
 share/drupal/modules/simpletest/tests/theme_test.info
 share/drupal/modules/simpletest/tests/theme_test.module
 share/drupal/modules/simpletest/tests/theme_test.template_test.tpl.php
@@ -736,13 +741,19 @@ share/drupal/modules/simpletest/tests/upgrade/drupal-6.locale.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.menu.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.node_type_broken.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.translatable.database.php
+share/drupal/modules/simpletest/tests/upgrade/drupal-6.trigger.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.user-no-password-token.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-6.user-password-token.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.bare.minimal.database.php.gz
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.bare.standard_all.database.php.gz
+share/drupal/modules/simpletest/tests/upgrade/drupal-7.field.database.php
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.filled.minimal.database.php.gz
 share/drupal/modules/simpletest/tests/upgrade/drupal-7.filled.standard_all.database.php.gz
+share/drupal/modules/simpletest/tests/upgrade/drupal-7.trigger.database.php
+share/drupal/modules/simpletest/tests/upgrade/update.field.test
+share/drupal/modules/simpletest/tests/upgrade/update.trigger.test
+share/drupal/modules/simpletest/tests/upgrade/update.user.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.comment.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.filter.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.forum.test
@@ -753,6 +764,7 @@ share/drupal/modules/simpletest/tests/upgrade/upgrade.poll.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.taxonomy.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.translatable.test
+share/drupal/modules/simpletest/tests/upgrade/upgrade.trigger.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.upload.test
 share/drupal/modules/simpletest/tests/upgrade/upgrade.user.test
 share/drupal/modules/simpletest/tests/url_alter_test.info
@@ -774,6 +786,7 @@ share/drupal/modules/syslog/syslog.module
 share/drupal/modules/syslog/syslog.test
 share/drupal/modules/system/html.tpl.php
 share/drupal/modules/system/image.gd.inc
+share/drupal/modules/system/language.api.php
 share/drupal/modules/system/maintenance-page.tpl.php
 share/drupal/modules/system/page.tpl.php
 share/drupal/modules/system/region.tpl.php
@@ -903,6 +916,7 @@ share/drupal/profiles/standard/standard.profile
 share/drupal/profiles/standard/translations/README.txt
 share/drupal/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info
 share/drupal/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.module
+share/drupal/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.test
 share/drupal/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info
 share/drupal/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.module
 share/drupal/profiles/testing/testing.info
