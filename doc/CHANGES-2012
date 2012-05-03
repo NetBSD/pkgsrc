@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1409 2012/05/03 08:29:39 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1410 2012/05/03 09:08:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added devel/p5-Algorithm-Permute version 0.12 [wiz 2012-05-03]
 	Updated misc/goffice0.8 to 0.8.17nb5 [wiz 2012-05-03]
 	Updated multimedia/mkvtoolnix to 5.0.1 [adam 2012-05-03]
+	Added math/p5-Math-Permute-List version 1.004 [wiz 2012-05-03]
