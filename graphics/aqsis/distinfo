@@ -1,22 +1,6 @@
-$NetBSD: distinfo,v 1.7 2008/09/01 08:02:23 dholland Exp $
+$NetBSD: distinfo,v 1.7.32.1 2012/05/03 17:54:53 tron Exp $
 
-SHA1 (aqsis-0.6.4.tar.gz) = 7a8e10db5502907840d8d2f4269eb3b489875dd4
-RMD160 (aqsis-0.6.4.tar.gz) = d2b034e05d47e31aa040471be37b34750154e6e5
-Size (aqsis-0.6.4.tar.gz) = 857020 bytes
-SHA1 (patch-aa) = e98cedaea79ce45897387f82448468b14b1d033f
-SHA1 (patch-ab) = 2f0f878996aa551a35c65d90299162e13661cbab
-SHA1 (patch-ac) = 5633148c8f7617ddef0e8831bd003dc9cb3f3596
-SHA1 (patch-ad) = d5dc010175fc749268075e391fcb9fd5ff0ae6b9
-SHA1 (patch-ae) = d2ce4d8833a0ea27aaa6242c476fe542efe92574
-SHA1 (patch-af) = 5251aedf37fd4ab8e954d90e484d82bdcf0a8e45
-SHA1 (patch-ag) = 673c7fb0a9619d5a8f8a0ad0906c5f29fb639358
-SHA1 (patch-ah) = 30c2605ef5f0f82df71fc1b494c3ed5beeea78e8
-SHA1 (patch-ai) = 60ab77412e3e4a223604028087f377f94d113bdc
-SHA1 (patch-aj) = 0cd6dcc80463ffb1193e25b55f6c160849ef0ab6
-SHA1 (patch-ak) = 45ee2a15967b5c0f75ed4ba7ecc3790373f5e44d
-SHA1 (patch-al) = 3f721b5a28714c7ed601aace984096ef142c105b
-SHA1 (patch-am) = 8227295b85018e5294ab1c8ca5c415dbe0371282
-SHA1 (patch-an) = 2a0dead7923ce600b70577f9f476bc0bab527131
-SHA1 (patch-ao) = 8776ff34346420d34a0ccfa1f952815c7a0328b8
-SHA1 (patch-ap) = b8659e4027114c1f1ecd0e8ab9d9c4eed61575a1
-SHA1 (patch-aq) = e4e2aef5e57f58e2f5f02d00277084c73ce4fe74
+SHA1 (aqsis-1.8.1.tar.gz) = 61b2552fd1fe782f008ba3a17efd3b185da70d5b
+RMD160 (aqsis-1.8.1.tar.gz) = 12d13a851188339c99fa5cb7fc0d5ce40d077fd6
+Size (aqsis-1.8.1.tar.gz) = 5663787 bytes
+SHA1 (patch-cmake_modules_FindPNG_cmake) = 24de84a90d62bcdbb767f5e16df2563f32e723aa
