@@ -1,0 +1,7 @@
+fscd (FreeBSD service check daemon) is a daemon that monitors and checks the
+status of running services started by rc(8). It connects to started services via
+kqueue(2) and will be noticed when the service terminates, trying to restart it
+via service(8).
+
+fscd is controlled with the fscadm(8) utility to enable and disable service
+monitoring.
