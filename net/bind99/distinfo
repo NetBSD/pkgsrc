@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/03/23 21:25:01 marino Exp $
+$NetBSD: distinfo,v 1.2.2.1 2012/05/03 18:13:43 tron Exp $
 
 SHA1 (bind-9.9.0.tar.gz) = 6be77c75c8649088b0ae7124d819b5f412bb0094
 RMD160 (bind-9.9.0.tar.gz) = 5fda36a3aa84062f7936978cb540e8ad3f1c4e08
@@ -10,6 +10,7 @@ SHA1 (patch-configure) = 6a8b709d8369864c397d4315348c9c96753618f6
 SHA1 (patch-lib_bind9_Makefile.in) = 89e21d21fa512f11a2fdb8d7455abd5d95f20ba5
 SHA1 (patch-lib_dns_Makefile.in) = 1770a8bd86901c618b11d255f3af54748d04b759
 SHA1 (patch-lib_dns_rbt.c) = df4b029369d9fa3b250d8505b5f7590e2cd86654
+SHA1 (patch-lib_dns_resolver.c) = 48f17278af67ea8f5a282b1194281c36959a046e
 SHA1 (patch-lib_dns_zone.c) = e01378ee95bf7c5b903a2c3a90acf83a3a4cae52
 SHA1 (patch-lib_isc_Makefile.in) = 5e0739d19957b1f26bcc24a6c76bcab6248cbff5
 SHA1 (patch-lib_isccc_Makefile.in) = a31831872b7724cb84f663ed70a82335d812f95f
