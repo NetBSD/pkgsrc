@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2012/04/16 04:33:30 dholland Exp $
+$NetBSD: distinfo,v 1.7 2012/05/03 09:08:11 obache Exp $
 
 SHA1 (xrn/9.01.tgz) = a560d07629efaa907ae01527192dd474e11555ad
 RMD160 (xrn/9.01.tgz) = c98d26e17fd8c511d9272378a54943ef9a453d3a
@@ -10,4 +10,4 @@ SHA1 (patch-ad) = b4b88f463cfab63500d284620fb32a6a418fd6ca
 SHA1 (patch-ae) = 3a1eef86f89acaa3b0bb6a78bfbd8d7c4be969d2
 SHA1 (patch-af) = 849b86cac73328cf2a773bc289f97c3e21456f71
 SHA1 (patch-ag) = f42c743a45c68b7702494399dbf40c3ac9cefd13
-SHA1 (patch-rclex.l) = 598c68250fa30ce166c135b0b413cf59a1ef64ca
+SHA1 (patch-rclex.l) = 9fa36815375c1d389cbf286cd15a8322d7006209
