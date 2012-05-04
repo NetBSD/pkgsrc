@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2008/10/20 20:41:47 adrianp Exp $
+$NetBSD: distinfo,v 1.5 2012/05/04 16:37:19 joerg Exp $
 
 SHA1 (CGI-SpeedyCGI-2.22.tar.gz) = 155437a83eedc2cb1ae2b9f93a731a0cfb7ce7f2
 RMD160 (CGI-SpeedyCGI-2.22.tar.gz) = 90bc10281f4380d6d9e3b376ce385567fb3d165d
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 099bf2fa764488a70cf1b70ef9b7cfb44dc70853
 SHA1 (patch-ab) = dc6c90c52a855280824738e98301560640932cfa
 SHA1 (patch-ac) = ada49b40a665f28656a238b2b7566980d1736f24
 SHA1 (patch-ad) = 099ebd36ffb48da38e0af21416f427afb0ed9012
+SHA1 (patch-src_speedy__inc.h) = d2bf220fe6aa0ec39a2276453cc1555899e9254c
