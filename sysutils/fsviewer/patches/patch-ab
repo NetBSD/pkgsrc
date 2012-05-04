@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2006/03/24 12:26:47 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2012/05/04 16:34:48 joerg Exp $
 
---- src/FSUtils.c.orig	2006-03-24 12:19:39.000000000 +0000
+--- src/FSUtils.c.orig	2012-05-04 13:27:48.000000000 +0000
 +++ src/FSUtils.c
 @@ -66,6 +66,10 @@ typedef unsigned long ulong;
  #define DF_COMMAND "df -k"
@@ -13,3 +13,21 @@ $NetBSD: patch-ab,v 1.4 2006/03/24 12:26:47 joerg Exp $
  const char *formatk(ulong k);
  
  static RContext *rContext = NULL;
+@@ -1193,7 +1197,7 @@ FSGetDNDType(FileInfo *fileInfo)
+     char *pathname = NULL;
+ 
+     if(fileInfo == NULL)
+-	return;
++	return -1;
+     
+     switch (fileInfo->fileType)
+     {
+@@ -1227,7 +1231,7 @@ FSExecCommand(char *path, char *execStr)
+     {
+ 	char s[0xff];
+ 	
+-	sprintf(s, _("Error changing to %s, \"%s\" cancelled."), path);
++	sprintf(s, _("Error changing to %s, \"%s\" cancelled."), path, execStr);
+ 	FSErrorDialog(_("Error File Operation"), s);
+ 	
+ 	return 1;
