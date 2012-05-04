@@ -1,47 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2008/11/01 05:15:42 obache Exp $
+$NetBSD: patch-ab,v 1.7 2012/05/04 09:38:23 hans Exp $
 
---- sim_ether.c.orig	2007-05-17 12:08:20.000000000 +0200
-+++ sim_ether.c
-@@ -1131,6 +1131,15 @@ void eth_callback(u_char* info, const st
-     /* set data in passed read packet */
-     tmp_packet.len = header->len;
-     memcpy(tmp_packet.msg, data, header->len);
-+    /*
-+     * Pad packet to minimum ethernet len, in case it comes from the local
-+     * host.
-+     */
-+    if (header->len < 60) {
-+        tmp_packet.len = 60;
-+        memset(dev->read_packet->msg + header->len, 0, 60 - header->len);
-+    }
-+
-     if (dev->need_crc)
-       eth_add_crc32(&tmp_packet);
- 
-@@ -1143,6 +1152,15 @@ void eth_callback(u_char* info, const st
-     /* set data in passed read packet */
-     dev->read_packet->len = header->len;
-     memcpy(dev->read_packet->msg, data, header->len);
-+    /*
-+     * Pad packet to minimum ethernet len, in case it comes from the local
-+     * host.
-+     */
-+    if (header->len <60) {
-+        dev->read_packet->len = 60;
-+         memset(dev->read_packet->msg + header->len, 0, 60 - header->len);
-+    }
-+ 
-     if (dev->need_crc)
-       eth_add_crc32(dev->read_packet);
- 
-@@ -1431,8 +1449,10 @@ int eth_host_devices(int used, int max, 
- 
- int eth_devices(int max, ETH_LIST* list)
- {
-+#ifndef DONT_USE_PCAP_FINDALLDEVS
-   pcap_if_t* alldevs;
-   pcap_if_t* dev;
-+#endif
-   int i = 0;
-   char errbuf[PCAP_ERRBUF_SIZE];
- 
+--- sim_ether.c.orig	2012-03-30 16:30:26.000000000 +0200
++++ sim_ether.c	2012-05-03 23:31:13.438944514 +0200
+@@ -806,6 +806,8 @@ void eth_show_dev (FILE* st, ETH_DEV* de
+ #include <sys/ioctl.h> 
+ #include <net/if.h> 
+ #include <linux/if_tun.h> 
++#elif defined(__sun)
++#undef USE_TAP_NETWORK
+ #elif defined(USE_BSDTUNTAP)
+ #include <sys/types.h>
+ #include <net/if_types.h>
