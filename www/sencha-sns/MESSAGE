@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2012/05/04 09:42:06 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2012/05/04 10:33:44 ryoon Exp $
 
 To use Sencha SNS with Apache 2.2, you will need to perform the following steps.
 
@@ -59,7 +59,7 @@ To use Sencha SNS with Apache 2.2, you will need to perform the following steps.
 
 	# ${RCD_SCRIPTS_DIR}/apache start
 
-10. Set salt and seed
+10. Set salt and seed in ${PREFIX}/share/sencha-sns/app/config/core.php
 
 	Replace DYhG93b0qyIfIxfs2guVoUubWwvniR2G0FgaC9mi with the output of
 	$ cat /dev/urandom | tr -dc "a-zA-Z0-9" | fold -w 40 | head -n 1
