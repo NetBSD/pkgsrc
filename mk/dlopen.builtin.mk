@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.23 2010/07/04 16:25:13 obache Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.24 2012/05/04 08:31:14 obache Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -52,7 +52,8 @@ _BLNK_DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
 	NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*			\
 	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*				\
 	NetBSD-[3-9]*-*							\
-	NetBSD-[1-9][0-9]*-*
+	NetBSD-[1-9][0-9]*-*						\
+	OpenBSD-*-*
 
 .if !defined(_BLNK_DLOPEN_REQUIRE_PTHREADS)
 _BLNK_DLOPEN_REQUIRE_PTHREADS?=	no
