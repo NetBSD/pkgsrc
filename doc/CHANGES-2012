@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1419 2012/05/04 11:23:34 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1420 2012/05/04 11:53:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2279,3 +2279,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added www/sencha-sns version 1.0.3 [ryoon 2012-05-04]
 	Updated devel/glib2 to 2.32.2nb1 [obache 2012-05-04]
 	Updated textproc/xmlrpc-c to 1.16.41 [adam 2012-05-04]
+	Added lang/clojure version 1.4.0 [ryoon 2012-05-04]
