@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/04/30 02:51:50 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/05/04 06:58:04 sbd Exp $
 
 DISTNAME=	objc-3.2.6
 CATEGORIES=	lang
@@ -34,6 +34,12 @@ SUBST_SED.mflags=	-e 's,MFLAGS,MMFLAGS,g'
 SUBST_FILES.mflags=	configure configure.in manual.html \
 			*/Makefile* src/*/Makefile*
 
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	post-configure
+SUBST_MESSAGE.mandir=	Making mandir=${PKGMANDIR} 
+SUBST_SED.mandir=	-e '/$$(TAR)/s,man,${PKGMANDIR},' 
+SUBST_FILES.mandir=	Makefile
+
 pre-configure:
 	${ECHO} >> ${WRKSRC_BS}/configure \
 	'${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}'
@@ -44,5 +50,13 @@ post-configure:
 		-e 's|${PREFIX}|${WRKSRC_BS}|g'
 	${MV} ${WRKDIR}/oc.tmp ${WRKSRC_BS}/objc
 	${CHMOD} +x ${WRKSRC_BS}/objc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGMANDIR:M*/*)
+post-build:
+	${MKDIR} ${WRKSRC}/${PKGMANDIR:H}
+	${MV} ${WRKSRC}/man ${WRKSRC}/${PKGMANDIR}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
