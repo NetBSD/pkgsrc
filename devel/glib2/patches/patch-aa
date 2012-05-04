@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.52 2012/05/01 18:45:52 adam Exp $
+$NetBSD: patch-aa,v 1.53 2012/05/04 10:22:08 obache Exp $
 
 --- configure.orig	2012-05-01 00:10:54.000000000 +0000
 +++ configure
@@ -176,7 +176,7 @@ $NetBSD: patch-aa,v 1.52 2012/05/01 18:45:52 adam Exp $
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -26401,62 +26487,6 @@ if test x"$have_threads" = xposix; then
+@@ -26401,62 +26487,8 @@ if test x"$have_threads" = xposix; then
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
@@ -236,6 +236,16 @@ $NetBSD: patch-aa,v 1.52 2012/05/01 18:45:52 adam Exp $
 -        break;
 -        fi
 -      done
++      G_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++      G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
         ;;
    esac
  fi
+@@ -26954,6 +26986,7 @@ case $host in
+     ;;
+   *-*-openbsd*)
+     LDFLAGS="$LDFLAGS -pthread"
++    G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
+     ;;
+   *)
+     G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
