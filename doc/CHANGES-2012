@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1420 2012/05/04 11:53:27 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1421 2012/05/04 13:07:22 hans Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2280,3 +2280,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/glib2 to 2.32.2nb1 [obache 2012-05-04]
 	Updated textproc/xmlrpc-c to 1.16.41 [adam 2012-05-04]
 	Added lang/clojure version 1.4.0 [ryoon 2012-05-04]
+	Updated emulators/simh to 3.9.0 [hans 2012-05-04]
