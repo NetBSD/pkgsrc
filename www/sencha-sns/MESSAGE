@@ -1,0 +1,76 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/05/04 09:42:06 ryoon Exp $
+
+To use Sencha SNS with Apache 2.2, you will need to perform the following steps.
+
+1. Install www/apache22 and www/ap-php
+
+2. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
+   If your machine are located in Tokyo, Japan, you should get the following.
+
+	# cat ${PREFIX}/etc/php.ini | grep date.timezone
+	date.timezone = "Asia/Tokyo"
+
+3. Install MySQL database server.
+
+	# cd databases/mysql51-server
+	# make install
+
+4. Start MySQL server, and setup MySQL server
+
+	# ${RCD_SCRIPTS_DIR}/mysqld start
+	And see messages.
+
+5. Add MySQL user, senchasns
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create user senchasns identified by 'senchasns_user_password';
+	> quit
+
+6. Create database for Sencha SNS
+
+	$ mysql -u root -p
+	Enter password: YOUR_MYSQL_ROOT_PASSWORD
+	> create database senchasns_db;
+	> grant SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER
+	on senchasns_db.* to senchasns@localhost identified by 'senchasns_password';
+	> quit
+
+7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+
+	extension=gd.so
+	extension=mbstring.so
+	extension=mysql.so
+
+8. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	DocumentRoot "${PREFIX}/share/senchasns"
+	LoadModule php5_module lib/httpd/mod_php5.so
+	AddType application/x-httpd-php .php
+	<Directory ${PREFIX}/share/senchasns>
+		DirectoryIndex index.php
+		Options All
+		Allow from All
+		AllowOverride All
+	</Directory>
+
+9. Start Apache httpd 2.2
+
+	# ${RCD_SCRIPTS_DIR}/apache start
+
+10. Set salt and seed
+
+	Replace DYhG93b0qyIfIxfs2guVoUubWwvniR2G0FgaC9mi with the output of
+	$ cat /dev/urandom | tr -dc "a-zA-Z0-9" | fold -w 40 | head -n 1
+	and
+	Replace 76859309657198048034862324894 with the output of
+	$ cat /dev/urandom | tr -dc "0-9" | fold -w 30 | head -n 1
+
+11. Access http://localhost/index.php
+   And setup with the following information.
+
+	database name:	senchasns_db
+	user name:	senchasns
+	password:	senchasns_password
+===========================================================================

@@ -1,0 +1,16 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2012/05/04 09:42:06 ryoon Exp $
+
+SENCHADIR="@PREFIX@/@SENCHADIR@"
+WWWOWN="@WWWOWN@"
+WWWGRP="@WWWGRP@"
+
+case ${STAGE} in
+POST-INSTALL)
+	${CHGRP} -R ${WWWGRP}	${SENCHADIR}/app/tmp \
+				${SENCHADIR}/app/config \
+				${SENCHADIR}/app/files
+	${CHOWN} -R ${WWWOWN}	${SENCHADIR}/app/tmp \
+				${SENCHADIR}/app/config \
+				${SENCHADIR}/app/files
+	;;
+esac
