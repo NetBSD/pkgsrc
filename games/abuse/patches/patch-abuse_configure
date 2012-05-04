@@ -1,0 +1,13 @@
+$NetBSD: patch-abuse_configure,v 1.1 2012/05/04 16:12:30 joerg Exp $
+
+--- abuse/configure.orig	2012-05-04 14:21:54.000000000 +0000
++++ abuse/configure
+@@ -1036,7 +1036,7 @@ cross_compiling=$ac_cv_prog_cxx_cross
+ cat > conftest.$ac_ext <<EOF
+ #line 1038 "configure"
+ #include "confdefs.h"
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:1042: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   ac_cv_prog_cxx_works=yes
