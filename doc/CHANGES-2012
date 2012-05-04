@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1416 2012/05/04 01:49:12 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1417 2012/05/04 09:44:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2276,3 +2276,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/meld to 1.6.0 [wiz 2012-05-03]
 	Updated www/php-concrete5 to 5.5.2.1 [ryoon 2012-05-04]
 	Updated lang/php53 to 5.3.12 [taca 2012-05-04]
+	Added www/sencha-sns version 1.0.3 [ryoon 2012-05-04]
