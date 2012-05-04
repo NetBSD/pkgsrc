@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/05/04 11:00:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2012/05/04 16:25:59 joerg Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -80,11 +80,11 @@ PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-shorten-64-to-32 -Wno-conversion \
-			-Wno-unused-value -Wno-switch-enum \
+			-Wno-unused-value -Wno-switch-enum -Wno-switch \
 			-Wno-tautological-compare \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
-			-Wno-parentheses-equality
+			-Wno-parentheses-equality -Wno-empty-body
 .endif
 .include "bootstrap.mk"
 .include "icedtea-extras.mk"
