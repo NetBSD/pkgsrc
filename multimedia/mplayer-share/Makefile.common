@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2011/05/18 08:28:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.50 2012/05/04 16:29:14 joerg Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -71,6 +71,12 @@ SUBST_MESSAGE.arm_bswap=	Fixing "arm/bswap.h" conflict in libavutil
 
 # autodetect code enables these options on NetBSD/arm but it should not
 CONFIGURE_ARGS+=        --disable-armv5te --disable-armv6 --disable-armv6t2
+.endif
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-no-integrated-as
 .endif
 
 .include "../../multimedia/mplayer-share/options.mk"
