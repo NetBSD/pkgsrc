@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.25 2012/05/03 19:56:36 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.26 2012/05/04 08:52:21 spz Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -129,3 +129,5 @@ Pullup ticket #3767 - requested by taca
 net/samba35: security update
 Pullup ticket #3768 - requested by taca
 www/drupal7: security update
+Pullup ticket #3769 - requested by taca
+lang/php53: security update
