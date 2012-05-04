@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2011/12/17 10:14:40 sbd Exp $
+$NetBSD: distinfo,v 1.18 2012/05/04 16:01:04 joerg Exp $
 
 SHA1 (festival-2.1-release.tar.gz) = f0c5a4282667898c584516e3605742835f59cb77
 RMD160 (festival-2.1-release.tar.gz) = b3c646ecc532e4e05f846db06bbab12a13ec1d6b
@@ -11,4 +11,16 @@ SHA1 (patch-ab) = 7f22ea2a89caf72dcb18818eb98bdb54911d5e7c
 SHA1 (patch-ac) = 9ffe5f44dc50d9ab5161b9ca107956e799fff463
 SHA1 (patch-ae) = 9d630d198f829979508b90416ddb0f56d721b422
 SHA1 (patch-aq) = 81109b22e5db0f733fa2a3d8e7cdef1cdcbe0185
+SHA1 (patch-speech__tools_base__class_EST__TSimpleMatrix.cc) = e1ad503b0ea0f7c2e051cbc633dc343f5df5164f
+SHA1 (patch-speech__tools_base__class_EST__TSimpleVector.cc) = 07acc5515d038733eeddd84ea6245e1fd0d2894a
+SHA1 (patch-speech__tools_base__class_EST__TVector.cc) = 0e205df1ac66bb747696c72eee08db16ca58865f
+SHA1 (patch-speech__tools_base__class_inst__tmpl_vector__dmatrix__t.cc) = 5ee2d525df6a289b376bfa3375b8905d5752dad4
+SHA1 (patch-speech__tools_base__class_inst__tmpl_vector__dvector__t.cc) = 8a2a4c1b1816c7be2479c0e0310cacfc9917c7ee
+SHA1 (patch-speech__tools_base__class_inst__tmpl_vector__fmatrix__t.cc) = 1d64a2e5aa1dc8c5b7d275e2bf66b2e96b599c35
 SHA1 (patch-speech__tools_config_rules_compile__options.mak) = d3aa93029edba84f8130f1bc33c8d74219bafd9a
+SHA1 (patch-speech__tools_include_EST__SCFG.h) = d58bc030dec4d526a89719e32c3624c642f33f3e
+SHA1 (patch-speech__tools_include_EST__TIterator.h) = db7617f5c4a802672ce3b098ecd512b6cdb96aeb
+SHA1 (patch-speech__tools_include_EST__TNamedEnum.h) = f240a338d17d7a36a5dba1b0f3b48190b235bf03
+SHA1 (patch-speech__tools_include_ling__class_EST__FeatureFunctionPackage.h) = ec5eb54fba5a50b43d1a0c9f0a5ae36407f55bff
+SHA1 (patch-speech__tools_stats_dynamic__program.cc) = d932f865d5c5577f7c1adc446adf9a2ab25c59c9
+SHA1 (patch-speech__tools_utils_EST__ServiceTable.cc) = d085b9e1a925a12e80e0fc25884f4373ba271fd5
