@@ -1,10 +1,8 @@
-$NetBSD: patch-locator.cc,v 1.1 2011/07/20 12:23:01 obache Exp $
-
-* modern C++ style
+$NetBSD: patch-locator.cc,v 1.2 2012/05/04 16:19:37 joerg Exp $
 
 --- locator.cc.orig	2001-07-29 11:33:02.000000000 +0000
 +++ locator.cc
-@@ -3,10 +3,12 @@
+@@ -3,15 +3,17 @@
  /* Last change 29.07.2001  */
  
  /* A few includes */
@@ -17,4 +15,10 @@ $NetBSD: patch-locator.cc,v 1.1 2011/07/20 12:23:01 obache Exp $
 +
  /* A few definitions */
  #define VERSION "0.1"
+ 
+ /* Main program */
+-main(int argc, char *argv[]) {
++int main(int argc, char *argv[]) {
+   float c_long, c_lat;
+   char  *locator;
  
