@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/04 11:51:30 ryoon Exp $
+
+SHA1 (clojure-1.4.0.zip) = 34daf1bb035aba4c0e5ff3b4afef837d21700e72
+RMD160 (clojure-1.4.0.zip) = 0874a4271b35c450a9eb893d1ecf68476ef50980
+Size (clojure-1.4.0.zip) = 4553941 bytes
