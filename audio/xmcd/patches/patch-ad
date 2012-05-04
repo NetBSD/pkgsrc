@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.9 2006/02/22 00:06:21 rillig Exp $
+$NetBSD: patch-ad,v 1.10 2012/05/04 16:01:53 joerg Exp $
 
---- install.sh.orig	2001-08-08 02:14:54.000000000 +0200
-+++ install.sh	2006-02-22 00:59:18.000000000 +0100
+--- install.sh.orig	2001-08-08 00:14:54.000000000 +0000
++++ install.sh
 @@ -57,7 +57,7 @@ XBINOWNER=root
  XBINGROUP=bin
  ERRFILE=/tmp/xmcd.err
@@ -29,6 +29,21 @@ $NetBSD: patch-ad,v 1.9 2006/02/22 00:06:21 rillig Exp $
  	then
  		$ECHO "\nWARNING: Without super-user privilege, some files may"
  		$ECHO "not be properly installed, or they may be installed"
+@@ -1159,10 +1159,10 @@ fi
+ # Install files
+ 
+ SHELL_S=`echo $SHELL | sed 's/\//\\\\\//g'`
+-BINDIR_S=`echo $BINDIR | sed 's/\//\\\\\//g'`
+-LIBDIR_S=`echo $LIBDIR | sed 's/\//\\\\\//g'`
+-XMCDLIB_S=`echo $XMCDLIB | sed 's/\//\\\\\//g'`
+-DISCOGDIR_S=`echo $DISCOGDIR | sed 's/\//\\\\\//g'`
++BINDIR_S=`echo $REAL_BINDIR | sed 's/\//\\\\\//g'`
++LIBDIR_S=`echo $REAL_LIBDIR | sed 's/\//\\\\\//g'`
++XMCDLIB_S=`echo $REAL_XMCDLIB | sed 's/\//\\\\\//g'`
++DISCOGDIR_S=`echo $REAL_DISCOGDIR | sed 's/\//\\\\\//g'`
+ XMCDURL_S=`echo $XMCD_URL | sed 's/\//\\\\\//g'`
+ 
+ $ECHO "\nInstalling xmcd files..."
 @@ -1226,20 +1226,11 @@ do
  done
  
@@ -53,3 +68,16 @@ $NetBSD: patch-ad,v 1.9 2006/02/22 00:06:21 rillig Exp $
  	$FILEPERM $OWNER $GROUP
  
  rm -f $XMCDLIB/config/.tbl/*
+@@ -1595,12 +1586,6 @@ then
+ 	done
+ fi
+ 
+-# Generate local discography index files
+-if [ -x $XMCDLIB/scripts/genidx ]
+-then
+-	$XMCDLIB/scripts/genidx
+-fi
+-
+ if [ -z "$BATCH" ]
+ then
+ 	# Run device-dependent config script
