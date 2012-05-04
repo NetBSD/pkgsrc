@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.36 2012/04/05 03:17:26 taca Exp $
+$NetBSD: distinfo,v 1.36.2.1 2012/05/04 08:39:30 spz Exp $
 
-SHA1 (php-5.3.10/php-5.3.10.tar.bz2) = 689d8463b5d9e24b9bf297e35826f2ebdb69afda
-RMD160 (php-5.3.10/php-5.3.10.tar.bz2) = acab30a19b340f21a64e06b524906f2b064dd1c9
-Size (php-5.3.10/php-5.3.10.tar.bz2) = 11707402 bytes
-SHA1 (php-5.3.10/suhosin-patch-5.3.9-0.9.10.patch.gz) = 7b9ef5c3e0831154df0d6290aba0989ca90138ed
-RMD160 (php-5.3.10/suhosin-patch-5.3.9-0.9.10.patch.gz) = ce43921fd9b183b154713ecda98294f6c68d5f22
-Size (php-5.3.10/suhosin-patch-5.3.9-0.9.10.patch.gz) = 40967 bytes
+SHA1 (php-5.3.12/php-5.3.12.tar.bz2) = 1aef7c01207637671299e3eb2d74eb81dd6a8f83
+RMD160 (php-5.3.12/php-5.3.12.tar.bz2) = 5d91c2d16b54632aa123677f63776b312872997c
+Size (php-5.3.12/php-5.3.12.tar.bz2) = 11394871 bytes
+SHA1 (php-5.3.12/suhosin-patch-5.3.9-0.9.10.patch.gz) = 7b9ef5c3e0831154df0d6290aba0989ca90138ed
+RMD160 (php-5.3.12/suhosin-patch-5.3.9-0.9.10.patch.gz) = ce43921fd9b183b154713ecda98294f6c68d5f22
+Size (php-5.3.12/suhosin-patch-5.3.9-0.9.10.patch.gz) = 40967 bytes
 SHA1 (patch-aa) = b0dc6cd0b2103d5858280202506b33322a98496e
 SHA1 (patch-ab) = d08bb50cf074a6065ef0d1d67a713b7573cb2f5b
 SHA1 (patch-ac) = 1720f154232241c19d0c6e08a824e33252f1b690
@@ -17,6 +17,5 @@ SHA1 (patch-ah) = b20c29c64b3099f77855a5ec28960dc1c4f65c83
 SHA1 (patch-ai) = d4766893a2c47a4e4a744248dda265b0a9a66a1f
 SHA1 (patch-aj) = d611d13fcc28c5d2b9e9586832ce4b8ae5707b48
 SHA1 (patch-al) = fbbee5502e0cd1c47c6e7c15e0d54746414ec32e
-SHA1 (patch-main_SAPI.c) = 8fd664c97cb9fa295ad8a1f42ed3e1b878554065
 SHA1 (patch-main_streams_cast.c) = c169ccb73dc660e40eff9f9e168374f35eedadad
 SHA1 (patch-php__mssql.c) = b46c688ff2d8da33ca2f9beb0eb9182b6edf7e23
