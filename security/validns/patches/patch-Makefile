@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2012/05/04 23:57:46 pettai Exp $
+
+Add (PKG_)PREFIX support
+
+--- Makefile.orig	2012-05-04 21:35:44.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ OPTIMIZE=-O2 -g
+-CFLAGS=-Wall -Werror -pthread
+-INCPATH=-I/usr/local/include -I/opt/local/include
++CFLAGS=-Wall -pthread
++INCPATH=-I/usr/include -I${PREFIX}/include
+ CC?=cc
+ 
+ validns: main.o carp.o mempool.o textparse.o base64.o base32hex.o \
+@@ -18,7 +18,7 @@ validns: main.o carp.o mempool.o textpar
+ 	    hinfo.o loc.o nsec3checks.o ptr.o \
+ 	    sshfp.o threads.o rp.o spf.o cert.o \
+ 	    dname.o \
+-	    -L/usr/local/lib -L/opt/local/lib -lJudy -lcrypto
++	    -L/usr/lib -L${PREFIX}/lib -lJudy -lcrypto -R${PREFIX}/lib
+ 
+ clean:
+ 	-rm -f validns main.o carp.o mempool.o textparse.o
