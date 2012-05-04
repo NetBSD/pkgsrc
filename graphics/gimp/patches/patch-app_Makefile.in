@@ -1,0 +1,23 @@
+$NetBSD: patch-app_Makefile.in,v 1.1 2012/05/04 16:17:39 joerg Exp $
+
+--- app/Makefile.in.orig	2012-04-27 17:59:44.000000000 +0000
++++ app/Makefile.in
+@@ -556,12 +556,12 @@ INCLUDES = \
+ AM_LDFLAGS = \
+ 	$(munix)					\
+ 	$(CARBON_LDFLAGS)				\
+-	-u $(SYMPREFIX)xcf_init				\
+-	-u $(SYMPREFIX)internal_procs_init		\
+-	-u $(SYMPREFIX)gimp_coords_mix			\
+-	-u $(SYMPREFIX)gimp_curve_map_pixels		\
+-	-u $(SYMPREFIX)gimp_image_map_config_get_type	\
+-	-u $(SYMPREFIX)gimp_plug_in_manager_restore
++	-Wl,-u,$(SYMPREFIX)xcf_init				\
++	-Wl,-u,$(SYMPREFIX)internal_procs_init		\
++	-Wl,-u,$(SYMPREFIX)gimp_coords_mix			\
++	-Wl,-u,$(SYMPREFIX)gimp_curve_map_pixels		\
++	-Wl,-u,$(SYMPREFIX)gimp_image_map_config_get_type	\
++	-Wl,-u,$(SYMPREFIX)gimp_plug_in_manager_restore
+ 
+ gimp_2_6_LDFLAGS = $(AM_LDFLAGS) $(win32_ldflags) 
+ gimp_2_6_LDADD = \
