@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/04/22 08:17:16 taca Exp $
+# $NetBSD: Makefile,v 1.12 2012/05/04 01:23:37 obache Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -120,7 +120,8 @@ REPLACE_RUBY=		bin/erb bin/gem bin/irb bin/rake bin/rdoc \
 			bin/ri bin/testrb
 REPLACE_RUBY_DIRS=	ext lib sample
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 \
-			${RUBY_DOC}/irb ${RUBY_EG}/bigdecimal ${RUBY_EG}/pty
+			${RUBY_DOC}/irb ${RUBY_DOC}/ripper ${RUBY_DOC}/stringio \
+			${RUBY_EG}/bigdecimal ${RUBY_EG}/pty
 # ${RUBY_ARCHINC} ${RUBY_ARCHLIB}
 EMPTY_DIRS=		generator/template markup/simple_markup
 
