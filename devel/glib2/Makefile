@@ -1,27 +1,24 @@
-# $NetBSD: Makefile,v 1.201 2012/05/01 18:45:51 adam Exp $
+# $NetBSD: Makefile,v 1.202 2012/05/04 10:22:08 obache Exp $
 
 .include "Makefile.common"
 .include "options.mk"
 
+PKGREVISION=		1
 CATEGORIES=		devel
 
 COMMENT=		Some useful routines for C programming (glib2)
 
 USE_TOOLS+=		msgfmt perl:run
 
-PKGCONFIG_OVERRIDE=	glib-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	glib-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gmodule-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-export-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gmodule-no-export-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-no-export-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gobject-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gthread-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gthread-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gio-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gio-unix-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gio-windows-2.0.pc.in
 
 FILES_SUBST+=		GIO_MODULES_DIR=${PREFIX}/lib/gio/modules
 FILES_SUBST+=		GIO_QUERYMODULES=${PREFIX}/bin/gio-querymodules
