@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2012/04/27 04:49:47 agc Exp $
+# $NetBSD: Makefile,v 1.319 2012/05/04 11:52:17 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -26,6 +26,7 @@ SUBDIR+=	clang
 SUBDIR+=	classpath
 SUBDIR+=	classpath-gui
 SUBDIR+=	clisp
+SUBDIR+=	clojure
 SUBDIR+=	coq
 SUBDIR+=	cparser
 SUBDIR+=	cu-prolog
