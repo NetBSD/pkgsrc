@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/04/30 03:19:40 jnemeth Exp $
+# $NetBSD: Makefile,v 1.42 2012/05/04 16:06:13 joerg Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -89,6 +89,7 @@ MAKE_FLAGS+=		WRKSRC=${WRKSRC}
 MAKE_FLAGS+=		LDOPTS=${LDFLAGS:M*:Q}
 MAKE_FLAGS+=		HTTP_DOCSDIR=${PREFIX}/share/httpd/htdocs
 MAKE_FLAGS+=		HTTP_CGIDIR=${PREFIX}/libexec/cgi-bin
+MAKE_FLAGS+=		OPTIMIZE=
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 BUILDLINK_TRANSFORM+=	rm:-march=i386
