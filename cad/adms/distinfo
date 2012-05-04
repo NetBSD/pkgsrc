@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2007/05/12 11:33:42 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3 2012/05/04 16:03:13 joerg Exp $
 
 SHA1 (adms-2.2.5.tar.gz) = 03093643feee7ef759cf2f65b497155e2e0df791
 RMD160 (adms-2.2.5.tar.gz) = 274f2330696e9e0825b77a3a3ca0a307e9f00bed
 Size (adms-2.2.5.tar.gz) = 706220 bytes
 SHA1 (patch-aa) = d1aae5799925a164841b7905ef991d261a33867a
 SHA1 (patch-ab) = fc6914555c5ccaa33c1b787f705ce6a205d83235
+SHA1 (patch-admsVeriloga_verilogaLex.l) = d064e39c6e265d8e9af1b623cc88a1c005cdd67b
+SHA1 (patch-admsXml_admsXml.c) = 2bebb05f316177326f064088381623850694c8f0
