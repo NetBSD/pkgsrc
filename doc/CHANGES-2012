@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1414 2012/05/03 22:58:12 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1415 2012/05/04 01:28:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/mercurial to 2.2 [wiz 2012-05-03]
 	Added sysutils/fscd version 1.0 [jdf 2012-05-03]
 	Updated devel/meld to 1.6.0 [wiz 2012-05-03]
+	Updated www/php-concrete5 to 5.5.2.1 [ryoon 2012-05-04]
