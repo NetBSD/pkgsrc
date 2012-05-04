@@ -1,12 +1,15 @@
-$NetBSD: patch-ai,v 1.1 2001/05/01 09:35:42 agc Exp $
+$NetBSD: patch-ai,v 1.2 2012/05/04 16:38:44 joerg Exp $
 
---- 9term/pty.c.orig	Fri Jul 22 16:47:29 1994
-+++ 9term/pty.c	Fri Sep 26 16:49:08 1997
-@@ -12,7 +12,18 @@
+--- 9term/pty.c.orig	1994-07-22 15:47:29.000000000 +0000
++++ 9term/pty.c
+@@ -11,8 +11,21 @@
+ #include <text.h>
  
  #include <utmp.h>
++#include <ctype.h>
  #include <errno.h>
 -#ifdef SUNOS
++#include <sys/ioctl.h>
 +
 +#include <sys/param.h>
 +
@@ -22,7 +25,7 @@ $NetBSD: patch-ai,v 1.1 2001/05/01 09:35:42 agc Exp $
  #	undef _POSIX_SOURCE
  #	include <sys/termio.h>
  #	include <stropts.h>
-@@ -41,7 +52,7 @@
+@@ -41,7 +54,7 @@
  #	define 	VEOL2	_VEOL2
  #endif
  
@@ -31,7 +34,7 @@ $NetBSD: patch-ai,v 1.1 2001/05/01 09:35:42 agc Exp $
  #	include <sys/stat.h>
  #	include </usr/include/ctype.h>		/* to defeat posix version */
  #	define  VLNEXT V_LNEXT
-@@ -49,10 +60,12 @@
+@@ -49,10 +62,12 @@
  #	define	VRPRNT V_RPRNT
  #	define	VWERASE V_WERAS
  #else
@@ -45,7 +48,7 @@ $NetBSD: patch-ai,v 1.1 2001/05/01 09:35:42 agc Exp $
  #	define 	V_START VSTART
  #	define 	V_STOP VSTOP
  #	define 	V_SUSP VSUSP
-@@ -115,7 +128,7 @@
+@@ -115,7 +130,7 @@ struct modenames {
  	char udef, p9def;
  };
  
@@ -54,7 +57,7 @@ $NetBSD: patch-ai,v 1.1 2001/05/01 09:35:42 agc Exp $
  #	define V_START VSTART
  #	define V_STOP VSTOP
  #	define V_SUSP VSUSP
-@@ -139,7 +152,7 @@
+@@ -139,7 +154,7 @@ modenames ttymodelist[] = {
  #ifndef _POSIX_SOURCE
  	{ "eol2",	4, VEOL2,	0,		0 },
  #endif
@@ -63,7 +66,7 @@ $NetBSD: patch-ai,v 1.1 2001/05/01 09:35:42 agc Exp $
  	{ "swtch", 	5, VSWTCH,	0,		0 },
  #endif
  	{ "start",	5, V_START,	ctrl('q'),	ctrl('q') },
-@@ -292,10 +305,16 @@
+@@ -292,10 +307,16 @@ gttymodes(int fd)
  		/* Insure some sanity. */
  		ttmode.c_lflag |= ECHO;
  		ttmode.c_oflag &= ~(ONLCR);
