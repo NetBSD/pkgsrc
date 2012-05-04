@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/02/16 22:14:12 hans Exp $
+# $NetBSD: Makefile,v 1.30 2012/05/04 11:00:43 ryoon Exp $
 
 DISTNAME=	openjdk-7-fcs-src-b147-27_jun_2011
 PKGNAME=	openjdk7-1.7.0.147.20110811
@@ -64,6 +64,10 @@ MAKE_ENV+=	NO_DOCS=true
 MAKE_ENV+=	SKIP_COMPARE_IMAGES=true
 MAKE_ENV+=	SKIP_FASTDEBUG_BUILD=yes
 MAKE_ENV+=	SKIP_DEBUG_BUILD=yes
+
+# Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
+MAKE_ENV+=	JAVA_HOME=
+MAKE_ENV+=	CLASSPATH=
 
 MAKE_ENV+=	EXTRA_CFLAGS="-DDEFAULT_LIBPATH=\\\"${PREFIX}/lib/jni:${PREFIX}/lib:/lib:/usr/lib\\\""
 
