@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:10:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2012/05/04 16:01:53 joerg Exp $
 bin/cda
 bin/xmcd
 bin/xmcd_start
@@ -52,21 +52,9 @@ lib/X11/xmcd/config/common.cfg.dist
 lib/X11/xmcd/config/config.sh
 lib/X11/xmcd/config/device.cfg.dist
 lib/X11/xmcd/config/wwwwarp.cfg.dist
-lib/X11/xmcd/discog/Blues/General_Blues/index.html
-lib/X11/xmcd/discog/Classical/General_Classical/index.html
-lib/X11/xmcd/discog/Country/General_Country/index.html
-lib/X11/xmcd/discog/Data/General_Data/index.html
-lib/X11/xmcd/discog/Folk/General_Folk/index.html
-lib/X11/xmcd/discog/Jazz/General_Jazz/index.html
-lib/X11/xmcd/discog/Newage/General_Newage/index.html
-lib/X11/xmcd/discog/Rock/General_Rock/index.html
-lib/X11/xmcd/discog/Soundtrack/General_Soundtrack/index.html
-lib/X11/xmcd/discog/Unclassifiable/General_Unclassifiable/index.html
-lib/X11/xmcd/discog/World/Reggae/index.html
 lib/X11/xmcd/discog/bkgnd.gif
 lib/X11/xmcd/discog/cda.html
 lib/X11/xmcd/discog/discog.html
-lib/X11/xmcd/discog/index.html
 lib/X11/xmcd/discog/xmcd.html
 lib/X11/xmcd/discog/xmcdlogo.gif
 lib/X11/xmcd/docs/ACKS
