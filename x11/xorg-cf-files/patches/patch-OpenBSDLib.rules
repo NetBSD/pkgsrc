@@ -1,0 +1,17 @@
+$NetBSD: patch-OpenBSDLib.rules,v 1.1 2012/05/04 11:38:20 obache Exp $
+
+--- OpenBSDLib.rules.orig	2009-10-16 21:45:42.000000000 +0000
++++ OpenBSDLib.rules
+@@ -42,7 +42,11 @@ XCOMM $XFree86: xc/config/cf/OpenBSDLib.
+ #endif
+ #ifndef RpathLoadFlags
+ #if UseRpath
+-#define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
++#  ifdef RealProjectRoot
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH) -Wl,-rpath,$(REALPROJECTROOT)/lib -L $(REALPROJECTROOT)/lib
++#  else
++#  define RpathLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
++#  endif
+ #else
+ #define RpathLoadFlags /**/
+ #endif
