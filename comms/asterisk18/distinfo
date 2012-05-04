@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2012/04/30 02:33:21 jnemeth Exp $
+$NetBSD: distinfo,v 1.28 2012/05/04 16:06:14 joerg Exp $
 
 SHA1 (asterisk-1.8.11.1/asterisk-1.8.11.1.tar.gz) = 401be7f99665bc423cbafd8ae4c0d7d76769b3db
 RMD160 (asterisk-1.8.11.1/asterisk-1.8.11.1.tar.gz) = 5f1cc9449c243e56be4d778bc262e5cd931aa29e
@@ -39,3 +39,4 @@ SHA1 (patch-bk) = 93679dfb04d26c99ac9c2822e0d74d869d16369f
 SHA1 (patch-bl) = 35cede8f5c253baed3d3983f58986c7c662e35e2
 SHA1 (patch-bm) = 284b34e20091b3427cd67b835fc7aa62c9d92a6c
 SHA1 (patch-bn) = 51d14bde5591bd4a68c8074838196e05ac86f2f2
+SHA1 (patch-include_asterisk_inline__api.h) = ff43d14e2608dd08d7d03799dfe9847f9f7f5666
