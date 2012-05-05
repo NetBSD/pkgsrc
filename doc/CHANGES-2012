@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1423 2012/05/05 00:03:36 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.1424 2012/05/05 12:44:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2283,3 +2283,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/simh to 3.9.0 [hans 2012-05-04]
 	Added security/validns version 0.4 [pettai 2012-05-05]
 	Added devel/p5-Test-Command-Simple version 0.03 [pettai 2012-05-05]
+	Updated www/contao211 to 2.11.3 [taca 2012-05-05]
