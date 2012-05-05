@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/03/28 15:14:43 taca Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/05 12:44:08 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
 DIST_SUBDIR=	${CT_DIST_SUBDIR}
@@ -36,6 +35,7 @@ RESTRICT_DIRS=	system/html system/logs system/scripts system/tmp \
 		templates tl_files
 
 CONF_FILES+=	${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf
+CONF_FILES+=	${CT_EGDIR}/htaccess.default ${CT_WEBDIR}/.htaccess
 
 .for f in ${EG_CONFIG}
 CONF_FILES+=	${CT_EGDIR}/system/config/${f} ${CT_WEBDIR}/system/config/${f}
