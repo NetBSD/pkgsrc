@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1429 2012/05/05 21:54:06 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1430 2012/05/05 22:24:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2289,3 +2289,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/py-cssutils to 0.9.9 [gls 2012-05-05]
 	Updated graphics/darktable to 1.0.3 [jakllsch 2012-05-05]
 	Updated graphics/py-matplotlib to 1.1.0nb1 [wiz 2012-05-05]
+	Added misc/py-libanki version 1.2.9 [wiz 2012-05-05]
+	Added misc/py-anki version 1.2.9 [wiz 2012-05-05]
