@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1426 2012/05/05 14:15:11 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1427 2012/05/05 15:20:31 gls Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2286,3 +2286,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211 to 2.11.3 [taca 2012-05-05]
 	Updated devel/p5-Config-IniFiles to 2.71 [gls 2012-05-05]
 	Updated www/contao211-translations to 201205050 [taca 2012-05-05]
+	Updated textproc/py-cssutils to 0.9.9 [gls 2012-05-05]
