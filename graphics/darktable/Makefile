@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2012/04/27 12:31:49 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/05/05 19:18:33 jakllsch Exp $
 
-DISTNAME=	darktable-1.0
-PKGREVISION=	2
+DISTNAME=	darktable-1.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darktable/}
 
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config bash
 
 CMAKE_ARGS+=	-DGTHREAD_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
 CMAKE_ARGS+=	-DGMODULE_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
