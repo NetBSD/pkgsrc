@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/05/02 23:19:25 christos Exp $
+# $NetBSD: Makefile,v 1.28 2012/05/05 16:03:23 dholland Exp $
 
 DISTNAME=	openafs-1.7.11-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -27,6 +27,7 @@ RCD_SCRIPTS+=		bosserver
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-roken=internal
 
 USE_GNU_CONFIGURE_HOST= no
 
@@ -52,4 +53,5 @@ pre-configure:
 			-e 's|-llwp|-lafslwp|g' < $$f > $$f.tmp && \
 		${MV} $$f.tmp $$f; done 
 
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
