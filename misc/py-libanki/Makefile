@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/05 22:22:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/05 22:23:26 wiz Exp $
 
-.include "../../wip/py-anki/Makefile.common"
+.include "../../misc/py-anki/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/anki/libanki/}
 COMMENT=	Flashcard learning program (support libraries)
