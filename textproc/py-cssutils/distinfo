@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/01 09:20:46 obache Exp $
+$NetBSD: distinfo,v 1.2 2012/05/05 15:20:07 gls Exp $
 
-SHA1 (cssutils-0.9.7.zip) = 95a25352ab067c7b13aa82c5f6a5408cf82a2678
-RMD160 (cssutils-0.9.7.zip) = 6119363eb9b8e38188cb8943c59d6d345681b227
-Size (cssutils-0.9.7.zip) = 447664 bytes
+SHA1 (cssutils-0.9.9.zip) = ac8d4ff2e56d7e4d4a37c6c1944cbdd5fdffabaa
+RMD160 (cssutils-0.9.9.zip) = 0affdb2edc523e4f22d54d7a92ce81bccbeb76a6
+Size (cssutils-0.9.9.zip) = 426449 bytes
