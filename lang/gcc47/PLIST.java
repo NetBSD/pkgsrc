@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.1.1.1 2012/04/16 04:27:18 sbd Exp $
+@comment $NetBSD: PLIST.java,v 1.2 2012/05/05 22:15:06 joerg Exp $
 bin/${JAVA_NAME}-appletviewer
 bin/${JAVA_NAME}-jar
 bin/${JAVA_NAME}-jarsigner
@@ -27,8 +27,8 @@ java/${JAVA_NAME}/bin/serialver
 java/${JAVA_NAME}/bin/tnameserv
 java/${JAVA_NAME}/include/jawt.h
 java/${JAVA_NAME}/include/jni.h
-java/${JAVA_NAME}/include/${LOWER_OPSYS}/jawt_md.h
-java/${JAVA_NAME}/include/${LOWER_OPSYS}/jni_md.h
+java/${JAVA_NAME}/include/linux/jawt_md.h
+java/${JAVA_NAME}/include/linux/jni_md.h
 java/${JAVA_NAME}/jre/bin/java
 java/${JAVA_NAME}/jre/bin/keytool
 java/${JAVA_NAME}/jre/bin/orbd
