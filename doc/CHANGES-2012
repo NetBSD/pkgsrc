@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1428 2012/05/05 19:22:44 jakllsch Exp $
+$NetBSD: CHANGES-2012,v 1.1429 2012/05/05 21:54:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2288,3 +2288,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated www/contao211-translations to 201205050 [taca 2012-05-05]
 	Updated textproc/py-cssutils to 0.9.9 [gls 2012-05-05]
 	Updated graphics/darktable to 1.0.3 [jakllsch 2012-05-05]
+	Updated graphics/py-matplotlib to 1.1.0nb1 [wiz 2012-05-05]
