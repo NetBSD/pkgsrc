@@ -1,0 +1,15 @@
+$NetBSD: patch-engines_clearlooks_src_animation_c,v 1.1 2012/05/05 13:44:58 dholland Exp $
+
+Fix build with recent glib2.
+
+--- engines/clearlooks/src/animation.c~	2010-09-23 13:40:24.000000000 +0000
++++ engines/clearlooks/src/animation.c
+@@ -28,7 +28,7 @@
+ #include "animation.h"
+ 
+ #ifdef HAVE_WORKING_ANIMATION
+-#include <glib/gtimer.h>
++#include <glib.h>
+ 
+ struct _AnimationInfo {
+ 	GTimer *timer;
