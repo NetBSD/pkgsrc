@@ -1,0 +1,15 @@
+$NetBSD: patch-glib_gnome_gobject_guile-support_h,v 1.1 2012/05/05 15:00:49 dholland Exp $
+
+Fix build with latest glib2.
+
+--- glib/gnome/gobject/guile-support.h~	2008-04-24 10:10:14.000000000 +0000
++++ glib/gnome/gobject/guile-support.h
+@@ -24,7 +24,7 @@
+ #ifndef __GUILE_SUPPORT_H__
+ #define __GUILE_SUPPORT_H__
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ #include <libguile.h>
+ 
