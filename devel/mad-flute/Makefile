@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/02 04:43:11 agc Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/05 13:53:58 dholland Exp $
 
 DISTNAME=		mad_fcl_v1.7_src
 PKGNAME=		mad-flute-1.7
@@ -11,6 +11,8 @@ COMMENT=		Reliable Multicast Layering
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake
 
