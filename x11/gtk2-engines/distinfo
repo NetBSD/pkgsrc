@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.35 2010/10/22 19:02:43 drochner Exp $
+$NetBSD: distinfo,v 1.36 2012/05/05 13:44:58 dholland Exp $
 
 SHA1 (gtk-engines-2.20.2.tar.bz2) = 574c7577d70eaacecd2ffa14e288ef88fdcb6c2a
 RMD160 (gtk-engines-2.20.2.tar.bz2) = 941b71cd2346a349d89f68962c2ce28e3520297c
 Size (gtk-engines-2.20.2.tar.bz2) = 688171 bytes
+SHA1 (patch-engines_clearlooks_src_animation_c) = 18e9e491be3b669569bf8a30491230ff03f4c135
