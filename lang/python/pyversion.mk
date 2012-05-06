@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.98 2012/04/08 20:17:10 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.99 2012/05/06 13:18:30 obache Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 25 26 27 31
+#	Possible values: 25 26 27 31 32
 #	Default: 27
 #
 # === Package-settable variables ===
@@ -18,8 +18,8 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 31 27 26 25
-#	Default: (31) 27 26 25
+#	Possible values: 32 31 27 26 25
+#	Default: (32 31) 27 26 25
 #
 # PYTHON_VERSIONS_INCLUDE_3X
 #	Wether the default PYTHON_VERSIONS_ACCEPTED should include
@@ -32,7 +32,7 @@
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 25 26 27 31
+#	Possible values: 25 26 27 31 32
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -78,7 +78,7 @@ BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		27
 .if ${PYTHON_VERSIONS_INCLUDE_3X:U:tl} == "yes"
-PYTHON_VERSIONS_ACCEPTED?=		31 27 26 25
+PYTHON_VERSIONS_ACCEPTED?=		32 31 27 26 25
 .else
 PYTHON_VERSIONS_ACCEPTED?=		27 26 25
 .endif
@@ -88,6 +88,7 @@ BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
 BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
 BUILDLINK_API_DEPENDS.python27?=		python27>=2.7
 BUILDLINK_API_DEPENDS.python31?=		python31>=3.1
+BUILDLINK_API_DEPENDS.python32?=		python32>=3.2
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -133,7 +134,13 @@ MULTI+=	PYTHON_VERSION_REQD=${_PYTHON_VERSION}
 _PYTHON_VERSION=	none
 .endif
 
-.if ${_PYTHON_VERSION} == "31"
+.if ${_PYTHON_VERSION} == "32"
+PYPKGSRCDIR=	../../lang/python32
+PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python32}:${PYPKGSRCDIR}
+PYPACKAGE=	python32
+PYVERSSUFFIX=	3.2
+PYPKGPREFIX=	py32
+.elif ${_PYTHON_VERSION} == "31"
 PYPKGSRCDIR=	../../lang/python31
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python31}:${PYPKGSRCDIR}
 PYPACKAGE=	python31
