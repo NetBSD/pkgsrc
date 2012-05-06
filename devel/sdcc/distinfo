@@ -1,10 +1,16 @@
-$NetBSD: distinfo,v 1.17 2012/05/06 03:07:23 dholland Exp $
+$NetBSD: distinfo,v 1.18 2012/05/06 04:14:02 dholland Exp $
 
 SHA1 (sdcc-src-2.8.0.tar.bz2) = 487a9c576130bb1bfb225fe36984f485aac0f513
 RMD160 (sdcc-src-2.8.0.tar.bz2) = b91d6ca5642011f0e735c63e0ed4bc6b33128b9f
 Size (sdcc-src-2.8.0.tar.bz2) = 3460693 bytes
 SHA1 (patch-Makefile_in) = 024ed627a88c2d17ac3981c59ec186a8a8ef48d3
 SHA1 (patch-aa) = 7ef1d2d005340b0e18039ff14334b889df5b8b3f
-SHA1 (patch-sim_ucsim_cmd.src_Makefile.in) = e31d041b38fc372ffd513522ec33c12a61c6c67c
+SHA1 (patch-as_Makefile_in) = 1077722b49028e583f1cc82a2a027d09d59c71ad
+SHA1 (patch-as_link_Makefile_in) = 7e7a596ae5f6293669d1c30eab94215d68067670
+SHA1 (patch-doc_Makefile_in) = bfb976234319c3623665da30dbfe40714499a6f1
+SHA1 (patch-sim_ucsim_cmd.src_Makefile.in) = 469680363f2e5b2d7e1e6384b7da5146dcb133ed
 SHA1 (patch-sim_ucsim_cmd.src_cmdlex.cc) = e02bdf0d70d060646f6473bad6477687c4360144
 SHA1 (patch-sim_ucsim_cmd.src_cmdlex.l) = 4efc91e3c1a0beefded5be5cce256c23e216319f
+SHA1 (patch-sim_ucsim_doc_Makefile_in) = acb451d699535af6d60314eaf0143a873735b228
+SHA1 (patch-support_cpp2_Makefile_in) = 72b9fe08b8c7f26047fa667dd88c64bac45db01c
+SHA1 (patch-support_makebin_Makefile_in) = 226ad246ea6a8d3c0a15799ccfba6a124e611994

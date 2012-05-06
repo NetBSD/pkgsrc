@@ -1,0 +1,16 @@
+$NetBSD: patch-as_Makefile_in,v 1.1 2012/05/06 04:14:02 dholland Exp $
+
+Actually define all the targets used by the package's upper-level
+makefiles.
+
+--- as/Makefile.in~	2007-01-03 21:19:58.000000000 +0000
++++ as/Makefile.in
+@@ -13,6 +13,8 @@ DOCS = README abstra.doc appendk.txt asm
+ all:
+ 	$(MAKE) -C z80 _as-z80 _as-gbz80 E=$(E) BUILDDIR=$(BUILDDIR)
+ 
++dep: ;
++
+ install: all install-doc
+ 	$(INSTALL) $(top_builddir)/bin/as-z80$(EXEEXT) `echo $(DESTDIR)$(bindir)/as-z80$(EXEEXT)|sed '$(transform)'`
+ 	$(STRIP) `echo $(DESTDIR)$(bindir)/as-z80$(EXEEXT)|sed '$(transform)'`
