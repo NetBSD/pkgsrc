@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tomcat.sh,v 1.1.1.1 2011/11/19 17:11:11 ryoon Exp $
+# $NetBSD: tomcat.sh,v 1.2 2012/05/06 08:08:16 ryoon Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
@@ -40,8 +40,6 @@ CATALINA_PID=${pidfile}
 export CATALINA_HOME
 export TOMCAT_HOME
 export CATALINA_PID
-
-CLASSPATH=${CLASSPATH}:${PREFIX}/lib/java/servlet.jar:${PREFIX}/lib/java/jaxp.jar:${PREFIX}/lib/java/parser.jar:${PREFIX}/lib/java/crimson.jar:${PREFIX}/lib/java/ant.jar
 
 if [ -n "${tomcat_classpath}" ]
 then
