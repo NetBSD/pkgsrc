@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2011/10/14 14:02:17 marino Exp $
+$NetBSD: distinfo,v 1.4 2012/05/06 17:55:52 marino Exp $
 
 SHA1 (gtkada-2.22.tar.bz2) = 99cce5b7847b6c497aef8f388250034df462cfa6
 RMD160 (gtkada-2.22.tar.bz2) = f12409882e31213eae2817309193025eec9bf20b
@@ -21,3 +21,4 @@ SHA1 (patch-bd) = 20d46afcf551edf9a999ed9ee98672f5e8c03a4d
 SHA1 (patch-bf) = 21414cb2d68b71fcd3f24e6318c7928fcd287418
 SHA1 (patch-bg) = 4f182257953b52ed431782ade6b438e3fca60360
 SHA1 (patch-bh) = 726f1a4e2d508fd4432f8186f78f5f5dee73fa20
+SHA1 (patch-src_misc.c) = 9635ae8791abdca4a10cec31937b8ceb85d904a4
