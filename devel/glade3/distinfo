@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/05/15 18:19:27 drochner Exp $
+$NetBSD: distinfo,v 1.5 2012/05/06 20:15:36 dholland Exp $
 
 SHA1 (glade3-3.4.5.tar.bz2) = 6f6e144a07edd0446f031bc40abcde8e9437c7f6
 RMD160 (glade3-3.4.5.tar.bz2) = 3fa7df673d1ca2106f1327aebc8c714eafa42dab
 Size (glade3-3.4.5.tar.bz2) = 1777173 bytes
+SHA1 (patch-gladeui_glade-widget-adaptor_c) = b0a6d6a7f59bbd1ee3c9dfdea822b6c7c30478e3
