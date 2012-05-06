@@ -1,0 +1,15 @@
+$NetBSD: patch-src_gq-hash_h,v 1.1 2012/05/06 20:12:35 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/gq-hash.h~	2007-05-14 16:26:51.000000000 +0000
++++ src/gq-hash.h
+@@ -24,7 +24,7 @@
+ #ifndef GQ_ENCRYPTION_H
+ #define GQ_ENCRYPTION_H
+ 
+-#include <glib/garray.h>
++#include <glib.h>
+ #include "util.h"
+ 
+ G_BEGIN_DECLS
