@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2012/05/06 20:38:52 christos Exp $
+$NetBSD: distinfo,v 1.18 2012/05/06 21:43:12 wiz Exp $
 
 SHA1 (openafs-1.7.11-src.tar.bz2) = 7baa664ea521520a3355c6d8ab7cafff004e7d97
 RMD160 (openafs-1.7.11-src.tar.bz2) = 4e6c61496989b69544d0039a9fd6ca8627fc4df0
@@ -21,6 +21,6 @@ SHA1 (patch-src-config-shlib-install.in) = 5ccbc19116d09f6bb42eba8be6811d7f72345
 SHA1 (patch-src-crypto-hcrypto-kernel-config.h) = 6bb549f6d2ac09faa7a3f5f74396d379c37387b7
 SHA1 (patch-src-external-heimdal-roken-roken-common.h) = 6a2113aaaf4ba5a31888b2f00176961fff49078d
 SHA1 (patch-src-external-heimdal-roken-roken.h.in) = 59c4ca254b533643ca213c28061219848b13a680
-SHA1 (patch-src-libafs-MakefileProto.NBSD.in) = e29528c11d8f76f276c354556d0801f41f981649
+SHA1 (patch-src-libafs-MakefileProto.NBSD.in) = 97b4dba8b2b6bc33dc3af3e2164f5295610f904f
 SHA1 (patch-src-rxkad-fcrypt.c) = 7e626426baceb392e58082f087dbd61ae6eb8c63
 SHA1 (patch-sys-config-afs_sysnames.h) = 371ea77eb6fd7ecf6a254631e2b734069e09761e
