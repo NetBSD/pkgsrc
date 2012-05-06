@@ -1,0 +1,15 @@
+$NetBSD: patch-src_state_c,v 1.1 2012/05/06 20:12:35 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/state.c~	2007-05-14 16:26:51.000000000 +0000
++++ src/state.c
+@@ -36,7 +36,7 @@
+ #include <errno.h>
+ 
+ #include <glib/gi18n.h>
+-#include <glib/gmessages.h>
++#include <glib.h>
+ #include <gtk/gtk.h>
+ 
+ #include "xmlparse.h"
