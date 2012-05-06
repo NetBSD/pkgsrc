@@ -1,0 +1,16 @@
+$NetBSD: patch-doc_Makefile_in,v 1.1 2012/05/06 04:14:02 dholland Exp $
+
+Actually define all the targets used by the package's upper-level
+makefiles.
+
+--- doc/Makefile.in~	2006-06-17 21:40:28.000000000 +0000
++++ doc/Makefile.in
+@@ -17,6 +17,8 @@ all: $(MANUAL).pdf $(MANUAL).html/index.
+ 	$(TSS).pdf $(TSS).html/index.html $(TSS).txt \
+ 	$(CDB).pdf $(CDB).html/index.html $(CDB).txt
+ 
++dep: ;
++
+ install:
+ 	$(INSTALL) -d $(DESTDIR)$(docdir)
+ 	cp -rf $(srcdir)/*.txt $(srcdir)/z80 $(srcdir)/avr $(DESTDIR)$(docdir)

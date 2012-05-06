@@ -1,0 +1,16 @@
+$NetBSD: patch-sim_ucsim_doc_Makefile_in,v 1.1 2012/05/06 04:14:02 dholland Exp $
+
+Actually define all the targets used by the package's upper-level
+makefiles.
+
+--- sim/ucsim/doc/Makefile.in~	2007-01-03 21:19:58.000000000 +0000
++++ sim/ucsim/doc/Makefile.in
+@@ -70,6 +70,8 @@ installdirs:
+ 
+ # Creating dependencies
+ # ---------------------
++dep: ;
++
+ include $(srcdir)/clean.mk
+ 
+ # My rules
