@@ -1,0 +1,15 @@
+$NetBSD: patch-drivers_viavoice_viavoicesynthesisdriver_c,v 1.1 2012/05/06 19:49:37 dholland Exp $
+
+Fix build with latest glib2.
+
+--- drivers/viavoice/viavoicesynthesisdriver.c~	2008-12-10 13:36:00.000000000 +0000
++++ drivers/viavoice/viavoicesynthesisdriver.c
+@@ -24,7 +24,7 @@
+  */
+ 
+ #include <libbonobo.h>
+-#include <glib/gmain.h>
++#include <glib.h>
+ #include <gnome-speech/gnome-speech.h>
+ #include <string.h>
+ #include "viavoicesynthesisdriver.h"
