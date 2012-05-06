@@ -1,0 +1,14 @@
+$NetBSD: patch-libedataserver_e-categories_c,v 1.1 2012/05/06 04:34:03 dholland Exp $
+
+Fix build with latest glib2.
+
+--- libedataserver/e-categories.c~	2011-04-21 19:35:37.000000000 +0000
++++ libedataserver/e-categories.c
+@@ -20,6 +20,7 @@
+ #include <config.h>
+ #include <string.h>
+ #include <libxml/parser.h>
++#include <glib.h>
+ #include <glib/gstdio.h>
+ #include <glib/gi18n-lib.h>
+ #include <gconf/gconf-client.h>
