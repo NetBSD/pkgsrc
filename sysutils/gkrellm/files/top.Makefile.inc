@@ -133,7 +133,7 @@ SYS_LIBS+=	-lnsl
 BINGROUP=	kmem
 NEED_MD5=	no
 MD5_LIBS=	-lmd
-SYS_LIBS=	-lkvm -lkinfo -ldevstat -lX11 -lm
+SYS_LIBS=	-lkvm -lkinfo -ldevstat -lX11 -lm -lgmodule-2.0
       endif
     endif
    endif
