@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/04/05 18:54:29 drochner Exp $
+$NetBSD: distinfo,v 1.5 2012/05/06 20:04:50 dholland Exp $
 
 SHA1 (telepathy-mission-control-5.7.9.tar.gz) = 0eeb7b98ffd26277e5930322db7a30015af58dca
 RMD160 (telepathy-mission-control-5.7.9.tar.gz) = 07473a0bfe9b0796b8424a04e32d62e45e7766ec
 Size (telepathy-mission-control-5.7.9.tar.gz) = 1110156 bytes
+SHA1 (patch-libmcclient_dbus-api_h) = 4122b2638407d2a162a558c2bd7875747e314e7c
