@@ -1,0 +1,15 @@
+$NetBSD: patch-src_mw__debug_c,v 1.1 2012/05/06 17:53:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/mw_debug.c~	2005-12-03 03:46:10.000000000 +0000
++++ src/mw_debug.c
+@@ -19,7 +19,7 @@
+ */
+ 
+ 
+-#include <glib/gstring.h>
++#include <glib.h>
+ 
+ #include "mw_debug.h"
+ 

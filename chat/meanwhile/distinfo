@@ -1,5 +1,23 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/08/13 05:29:27 dan Exp $
+$NetBSD: distinfo,v 1.2 2012/05/06 17:53:44 dholland Exp $
 
 SHA1 (meanwhile-1.0.2.tar.gz) = e0e9836581da3c4a569135cb238eaa566c324540
 RMD160 (meanwhile-1.0.2.tar.gz) = 2ae78a2f5586c1a106c462c19018872308dd6af0
 Size (meanwhile-1.0.2.tar.gz) = 479325 bytes
+SHA1 (patch-src_channel_c) = 766515d353e300d9ad40ca00ef5dd04ebf7b21a6
+SHA1 (patch-src_mw__debug_c) = b252c02f93baf3799bd236d3f8ac71d2d6f46914
+SHA1 (patch-src_mw__message_h) = 73b49c091d6bd63dbf47f9810ad251bcd988b6e0
+SHA1 (patch-src_mw__srvc__conf_h) = 6e158b22f8c04608709d6acdc65f8369504d1239
+SHA1 (patch-src_mw__srvc__dir_h) = 218abf514be5df08763807bcbd0d1b1dea6cc5b1
+SHA1 (patch-src_mw__srvc__place_h) = bd6202959869c3d15b62b361940c53e22e84a4a7
+SHA1 (patch-src_mw__srvc__resolve_h) = 7262f518e6c3d788e4951535b15b8807fb5eed96
+SHA1 (patch-src_mw__st__list_h) = e2a070ec54193e82b293d8a8bacad8a02665c483
+SHA1 (patch-src_mw__util_h) = 13377d9e31ed12755b204a24d8e6e084b94d5ce6
+SHA1 (patch-src_srvc__aware_c) = 2004f3f5c6c75d8b300dc03397615e6ba51ff73b
+SHA1 (patch-src_srvc__conf_c) = fbce4507977ef4d6b8583593b4481bf899c1e500
+SHA1 (patch-src_srvc__dir_c) = bee63617fea6fe1a72c2aad1691cbe2c805fd175
+SHA1 (patch-src_srvc__ft_c) = a62d27961a3c6bb9fc97ac1399013dcde5d01828
+SHA1 (patch-src_srvc__im_c) = 6acf037b5e285717839f7cf0fbedcaee9ec6aa28
+SHA1 (patch-src_srvc__place_c) = ac18e9f9b930bfdfae5eca0a554df247efc00bdc
+SHA1 (patch-src_srvc__resolve_c) = ebdee8419d3e3558d18208c66a69f283ca5b4489
+SHA1 (patch-src_srvc__store_c) = 66a9035c1ef53547c0793d2b67e633ca7b779b99
+SHA1 (patch-src_st__list_c) = e8b3aad64b9384674b1e2ffde92f9f5494907a60

@@ -1,0 +1,14 @@
+$NetBSD: patch-src_mw__st__list_h,v 1.1 2012/05/06 17:53:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/mw_st_list.h~	2005-12-15 00:30:28.000000000 +0000
++++ src/mw_st_list.h
+@@ -30,7 +30,6 @@
+ 
+ 
+ #include <glib.h>
+-#include <glib/glist.h>
+ #include "mw_common.h"
+ 
+ 
