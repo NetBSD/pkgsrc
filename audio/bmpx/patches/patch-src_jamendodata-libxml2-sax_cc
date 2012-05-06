@@ -1,0 +1,15 @@
+$NetBSD: patch-src_jamendodata-libxml2-sax_cc,v 1.1 2012/05/06 19:35:57 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/jamendodata-libxml2-sax.cc~	2008-03-05 21:31:06.000000000 +0000
++++ src/jamendodata-libxml2-sax.cc
+@@ -29,7 +29,7 @@
+ #include <boost/format.hpp>
+ 
+ #include <glibmm/ustring.h>
+-#include <glib/gmessages.h>
++#include <glib.h>
+ 
+ #include "jamendodata-libxml2-sax.hh"
+ 
