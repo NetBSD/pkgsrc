@@ -1,0 +1,16 @@
+$NetBSD: patch-drivers_loquendo_loquendospeaker_c,v 1.1 2012/05/06 19:49:37 dholland Exp $
+
+Fix build with latest glib2.
+
+--- drivers/loquendo/loquendospeaker.c~	2008-12-10 13:36:00.000000000 +0000
++++ drivers/loquendo/loquendospeaker.c
+@@ -27,8 +27,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <libbonobo.h>
+-#include <glib/gmain.h>
+-#include <glib/gthread.h>
++#include <glib.h>
+ #include <gnome-speech/gnome-speech.h>
+ #include <loqtts.h>
+ #include "loquendospeaker.h"

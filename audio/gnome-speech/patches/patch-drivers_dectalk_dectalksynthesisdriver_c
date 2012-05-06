@@ -1,0 +1,15 @@
+$NetBSD: patch-drivers_dectalk_dectalksynthesisdriver_c,v 1.1 2012/05/06 19:49:37 dholland Exp $
+
+Fix build with latest glib2.
+
+--- drivers/dectalk/dectalksynthesisdriver.c~	2008-12-10 13:36:00.000000000 +0000
++++ drivers/dectalk/dectalksynthesisdriver.c
+@@ -26,7 +26,7 @@
+ 
+ #include <string.h>
+ #include <libbonobo.h>
+-#include <glib/gmain.h>
++#include <glib.h>
+ #include <gnome-speech/gnome-speech.h>
+ #include "dectalksynthesisdriver.h"
+ #include <dtk/ttsapi.h>
