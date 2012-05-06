@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2012/02/22 09:50:24 cheusov Exp $
+$NetBSD: distinfo,v 1.8 2012/05/06 09:08:36 obache Exp $
 
-SHA1 (LibVNCServer-0.9.8.2.tar.gz) = 26995fd92fed9ddeecf40a4bdf0067fdae8c647c
-RMD160 (LibVNCServer-0.9.8.2.tar.gz) = 0dbb7bd53f0298be948a2b47a5f900eb6543102e
-Size (LibVNCServer-0.9.8.2.tar.gz) = 1238439 bytes
-SHA1 (patch-configure) = f58e0bf55c00db9c0bfe1eb5477e06db12bcd303
+SHA1 (LibVNCServer-0.9.9.tar.gz) = 2004c6ae493baeff3da40b61e0a0f73c83182dad
+RMD160 (LibVNCServer-0.9.9.tar.gz) = e62e0903124abb85746bcac6498214fe09c3b4d7
+Size (LibVNCServer-0.9.9.tar.gz) = 1678609 bytes
+SHA1 (patch-libvncserver_websockets.c) = 059c8a3d0971caa3a43eb48a69b8ca81e6df0a78
