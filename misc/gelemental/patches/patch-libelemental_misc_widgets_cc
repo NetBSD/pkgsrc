@@ -1,0 +1,15 @@
+$NetBSD: patch-libelemental_misc_widgets_cc,v 1.1 2012/05/06 23:07:05 dholland Exp $
+
+Fix build with new glib2.
+
+--- libelemental/misc/widgets.cc~	2007-09-25 04:39:02.000000000 +0000
++++ libelemental/misc/widgets.cc
+@@ -20,7 +20,7 @@
+ #include "macros.hh"
+ #include "widgets.hh"
+ 
+-#include <glib/gmessages.h>
++#include <glib.h>
+ #include <gtkmm/alignment.h>
+ #include <gtkmm/image.h>
+ #include <gtkmm/label.h>
