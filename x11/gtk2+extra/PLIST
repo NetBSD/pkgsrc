@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/04/13 17:44:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/05/06 17:07:45 dholland Exp $
 include/gtkextra-2.0/gtkextra/gtkbordercombo.h
 include/gtkextra-2.0/gtkextra/gtkcharsel.h
 include/gtkextra-2.0/gtkextra/gtkcheckitem.h
@@ -61,7 +61,6 @@ share/gtk-doc/html/gtkextra/gtkextra-GtkDirTree.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkFileList.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkFontCombo.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkIconFileSel.html
-share/gtk-doc/html/gtkextra/home.png
 share/gtk-doc/html/gtkextra/gtkextra-GtkIconList.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkItemEntry.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlot.html
@@ -75,7 +74,6 @@ share/gtk-doc/html/gtkextra/gtkextra-GtkPlotCanvas.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotCanvasEllipse.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotCanvasLine.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotCanvasPixmap.html
-share/gtk-doc/html/gtkextra/gtkextra.devhelp
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotCanvasPlot.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotCanvasRectangle.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotCanvasText.html
@@ -89,7 +87,6 @@ share/gtk-doc/html/gtkextra/gtkextra-GtkPlotPixmap.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotPolar.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotSegment.html
 share/gtk-doc/html/gtkextra/gtkextra-GtkPlotSurface.html
-share/gtk-doc/html/gtkextra/gtkextra.devhelp2
 share/gtk-doc/html/gtkextra/gtkextra-GtkToggleCombo.html
 share/gtk-doc/html/gtkextra/gtkextra-gdk-pixbuf-hacks.html
 share/gtk-doc/html/gtkextra/gtkextra-gtkextra-marshal.html
@@ -98,6 +95,9 @@ share/gtk-doc/html/gtkextra/gtkextra-gtkextratypebuiltins.html
 share/gtk-doc/html/gtkextra/gtkextra-gtkplotdtriangle.html
 share/gtk-doc/html/gtkextra/gtkextra-gtkplotprint.html
 share/gtk-doc/html/gtkextra/gtkextra-gtkpsfont.html
+share/gtk-doc/html/gtkextra/gtkextra.devhelp
+share/gtk-doc/html/gtkextra/gtkextra.devhelp2
+share/gtk-doc/html/gtkextra/home.png
 share/gtk-doc/html/gtkextra/index.html
 share/gtk-doc/html/gtkextra/index.sgml
 share/gtk-doc/html/gtkextra/left.png
