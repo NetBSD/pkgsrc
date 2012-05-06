@@ -1,0 +1,15 @@
+$NetBSD: patch-src_srvc__conf_c,v 1.1 2012/05/06 17:53:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/srvc_conf.c~	2005-12-28 02:46:54.000000000 +0000
++++ src/srvc_conf.c
+@@ -19,8 +19,6 @@
+ */
+ 
+ #include <glib.h>
+-#include <glib/ghash.h>
+-#include <glib/glist.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>

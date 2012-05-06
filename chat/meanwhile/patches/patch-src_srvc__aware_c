@@ -1,0 +1,15 @@
+$NetBSD: patch-src_srvc__aware_c,v 1.1 2012/05/06 17:53:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/srvc_aware.c~	2005-12-08 22:02:11.000000000 +0000
++++ src/srvc_aware.c
+@@ -19,8 +19,6 @@
+ */
+ 
+ #include <glib.h>
+-#include <glib/ghash.h>
+-#include <glib/glist.h>
+ #include <string.h>
+ 
+ #include "mw_channel.h"
