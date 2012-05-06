@@ -1,0 +1,16 @@
+$NetBSD: patch-as_link_Makefile_in,v 1.1 2012/05/06 04:14:02 dholland Exp $
+
+Actually define all the targets used by the package's upper-level
+makefiles.
+
+--- as/link/Makefile.in~	2007-01-03 21:19:58.000000000 +0000
++++ as/link/Makefile.in
+@@ -9,6 +9,8 @@ PORTS = z80 gbz80
+ all: 
+ 	$(MAKE) -C z80 _link-z80 _link-gbz80 E=$(E) BUILDDIR=../../../bin/
+ 
++dep: ;
++
+ install: all
+ 	$(INSTALL) $(top_builddir)/bin/link-z80$(EXEEXT) `echo $(DESTDIR)$(bindir)/link-z80$(EXEEXT)|sed '$(transform)'`
+ 	$(STRIP) `echo $(DESTDIR)$(bindir)/link-z80$(EXEEXT)|sed '$(transform)'`
