@@ -1,0 +1,14 @@
+$NetBSD: patch-routines_system_Makefile.in,v 1.1 2012/05/06 11:07:24 hans Exp $
+
+--- routines/system/Makefile.in.orig	2006-10-23 13:49:02.000000000 +0200
++++ routines/system/Makefile.in	2012-05-06 11:51:37.838241380 +0200
+@@ -41,6 +41,9 @@ include ../Make.lib
+ getsym.o: getsym.f
+ 	$(FC) @FC_OPTIONS2@ -c getsym.f -o getsym.o
+ 
++algebre.o: algebre.f
++	$(FC) $(FC_OPTIONS) -fno-range-check -c $< -o $@
++
+ allops.o:  ../stack.h
+ bexec.o:  ../stack.h
+ clause.o:  ../stack.h
