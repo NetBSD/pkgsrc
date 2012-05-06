@@ -1,0 +1,15 @@
+$NetBSD: patch-libelemental_misc_extras_cc,v 1.1 2012/05/06 23:07:05 dholland Exp $
+
+Fix build with new glib2.
+
+--- libelemental/misc/extras.cc~	2007-09-25 04:39:02.000000000 +0000
++++ libelemental/misc/extras.cc
+@@ -21,7 +21,7 @@
+ 
+ #include <algorithm>
+ #include <stdexcept>
+-#include <glib/gmem.h>
++#include <glib.h>
+ #include <glibmm/utility.h>
+ 
+ namespace misc {
