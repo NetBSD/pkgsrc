@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/03/05 11:18:17 abs Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/06 08:08:16 ryoon Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-7/v${TOMCAT_VER}/bin/}
 
@@ -16,7 +17,7 @@ CONFLICTS+=	jakarta-tomcat-[0-9]*
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 USE_JAVA=	run
-USE_JAVA2=	1.5
+USE_JAVA2=	6
 USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	destdir
