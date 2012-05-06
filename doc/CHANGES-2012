@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1433 2012/05/06 08:24:55 ryoon Exp $
+$NetBSD: CHANGES-2012,v 1.1434 2012/05/06 08:30:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2294,3 +2294,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated comms/asterisk18 to 1.8.12.0 [jnemeth 2012-05-06]
 	Updated www/apache-tomcat7 to 7.0.26nb1 [ryoon 2012-05-06]
 	Added graphics/glm version 0.9.3.2 [ryoon 2012-05-06]
+	Updated graphics/gource to 0.38 [ryoon 2012-05-06]
