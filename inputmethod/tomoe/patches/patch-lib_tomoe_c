@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_tomoe_c,v 1.1 2012/05/06 17:24:41 dholland Exp $
+
+Fix build with latest glib2.
+
+--- lib/tomoe.c~	2007-06-06 07:35:53.000000000 +0000
++++ lib/tomoe.c
+@@ -26,7 +26,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <glib/garray.h>
++#include <glib.h>
+ #include "tomoe.h"
+ 
+ static gboolean initialized = FALSE;
