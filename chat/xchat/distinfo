@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.42 2010/11/16 12:21:10 tron Exp $
+$NetBSD: distinfo,v 1.43 2012/05/06 18:41:51 dholland Exp $
 
 SHA1 (xchat-2.8.8.tar.bz2) = a4ac161e4e40f4bbabc492675a1ff4380dba8d68
 RMD160 (xchat-2.8.8.tar.bz2) = 1bc3e0ff00e15c83588dd21a3ef3e8e34f953331
 Size (xchat-2.8.8.tar.bz2) = 1509993 bytes
-SHA1 (patch-ab) = 109d61363f040d4f9716b6698a002b804847da33
+SHA1 (patch-src_common_servlist_c) = 3f5b8f7dbe51155266071b8aa0bea74c8db445a2
+SHA1 (patch-src_common_text_c) = 8907bd99ef0bc867e57ac21ff592489876cf83f7
+SHA1 (patch-src_common_util_c) = 486bb9c270e718e55efd01043b30f8545ffeac02
+SHA1 (patch-src_common_xchat_h) = 61d1132dffeec7d236144543559b7cd15b43346d
