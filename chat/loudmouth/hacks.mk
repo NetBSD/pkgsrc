@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2012/02/21 06:27:38 sbd Exp $
+# $NetBSD: hacks.mk,v 1.2 2012/05/06 17:41:30 dholland Exp $
 
 .if !defined(HACKS_MK)
 HACKS_MK= defined
@@ -8,8 +8,8 @@ HACKS_MK= defined
 ### symbol name is '__res_query'.
 ###
 .if "${OPSYS}" == "Linux"
-PKG_HACKS+=     libresolv
-LIBS+=          -lresolv
+PKG_HACKS+=	libresolv
+LIBS+=		-lresolv
 .endif
 
 .endif
