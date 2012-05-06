@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1435 2012/05/06 08:34:29 gls Exp $
+$NetBSD: CHANGES-2012,v 1.1436 2012/05/06 09:01:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2296,3 +2296,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Added graphics/glm version 0.9.3.2 [ryoon 2012-05-06]
 	Updated graphics/gource to 0.38 [ryoon 2012-05-06]
 	Updated misc/calibre to 0.8.50 [gls 2012-05-06]
+	Updated databases/phpmyadmin to 3.5.1 [tron 2012-05-06]
