@@ -1,0 +1,15 @@
+$NetBSD: patch-src_st__list_c,v 1.1 2012/05/06 17:53:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/st_list.c~	2005-12-08 22:01:27.000000000 +0000
++++ src/st_list.c
+@@ -20,7 +20,7 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
+-#include <glib/gstring.h>
++#include <glib.h>
+ 
+ #include "mw_debug.h"
+ #include "mw_util.h"
