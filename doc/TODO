@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11059 2012/05/03 22:58:12 wiz Exp $
+$NetBSD: TODO,v 1.11060 2012/05/06 08:34:29 gls Exp $
 
 Suggested new packages
 ======================
@@ -443,7 +443,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cairo-gobject-1.12.0
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o calibre-0.8.49
 	o calligra-2.4.1 [koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cc65-2.13.3
