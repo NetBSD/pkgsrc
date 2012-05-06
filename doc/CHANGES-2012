@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1436 2012/05/06 09:01:35 tron Exp $
+$NetBSD: CHANGES-2012,v 1.1437 2012/05/06 09:09:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2297,3 +2297,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gource to 0.38 [ryoon 2012-05-06]
 	Updated misc/calibre to 0.8.50 [gls 2012-05-06]
 	Updated databases/phpmyadmin to 3.5.1 [tron 2012-05-06]
+	Updated net/libvncserver to 0.9.9 [obache 2012-05-06]
