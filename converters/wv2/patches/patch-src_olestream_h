@@ -1,0 +1,15 @@
+$NetBSD: patch-src_olestream_h,v 1.1 2012/05/06 20:08:43 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/olestream.h~	2006-06-12 16:40:11.000000000 +0000
++++ src/olestream.h
+@@ -23,7 +23,7 @@
+ #include "global.h"  // U8,... typedefs
+ #include <stack>
+ 
+-#include <glib/giochannel.h> // GSeekType
++#include <glib.h> // GSeekType
+ 
+ namespace wvWare {
+ 
