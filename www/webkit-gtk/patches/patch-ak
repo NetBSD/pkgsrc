@@ -1,13 +1,12 @@
-$NetBSD: patch-ak,v 1.1 2012/04/28 14:12:16 drochner Exp $
+$NetBSD: patch-ak,v 1.2 2012/05/06 17:06:37 marino Exp $
 
---- Source/ThirdParty/ANGLE/src/compiler/osinclude.h.orig	2012-04-25 21:36:09.000000000 +0000
+--- Source/ThirdParty/ANGLE/src/compiler/osinclude.h.orig	2012-04-24 01:35:21.000000000 +0000
 +++ Source/ThirdParty/ANGLE/src/compiler/osinclude.h
-@@ -15,7 +15,7 @@
- #if defined(_WIN32) || defined(_WIN64)
+@@ -16,6 +16,7 @@
  #define ANGLE_OS_WIN
  #elif defined(__APPLE__) || defined(__linux__) || \
--      defined(__FreeBSD__) || defined(__OpenBSD__) || \
-+      defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || \
+       defined(__FreeBSD__) || defined(__OpenBSD__) || \
++      defined(__NetBSD__) || defined(__DragonFly__) || \
        defined(__sun) || defined(ANDROID)
  #define ANGLE_OS_POSIX
  #else
