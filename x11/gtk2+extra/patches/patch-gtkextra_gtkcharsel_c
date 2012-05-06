@@ -1,0 +1,15 @@
+$NetBSD: patch-gtkextra_gtkcharsel_c,v 1.1 2012/05/06 17:08:27 dholland Exp $
+
+Fix build with latest glib2.
+
+--- gtkextra/gtkcharsel.c~	2004-08-27 21:46:14.000000000 +0000
++++ gtkextra/gtkcharsel.c
+@@ -18,7 +18,7 @@
+  */
+ 
+ #include <gtk/gtk.h>
+-#include <glib/gunicode.h>
++#include <glib.h>
+ 
+ #include <string.h>
+ #include "gtkcharsel.h"
