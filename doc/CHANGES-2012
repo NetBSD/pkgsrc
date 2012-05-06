@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1440 2012/05/06 14:28:18 taca Exp $
+$NetBSD: CHANGES-2012,v 1.1441 2012/05/06 18:10:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2302,3 +2302,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Removed net/ispman [wiz 2012-05-06]
 	Added lang/python32 version 3.2.3 [obache 2012-05-06]
 	Updated lang/php53 to 5.3.12nb1 [taca 2012-05-06]
+	Updated devel/scmgit to 1.7.10.1 [adam 2012-05-06]
+	Updated devel/scmgit-base to 1.7.10.1 [adam 2012-05-06]
+	Updated devel/scmgit-docs to 1.7.10.1 [adam 2012-05-06]
+	Updated www/gitweb to 1.7.10.1 [adam 2012-05-06]
