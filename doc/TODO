@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11060 2012/05/06 08:34:29 gls Exp $
+$NetBSD: TODO,v 1.11061 2012/05/06 09:01:35 tron Exp $
 
 Suggested new packages
 ======================
@@ -1083,7 +1083,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o photopc-3.05
 	o php-5.4.0
 	o php-jpgraph-3.0.6
-	o phpmyadmin-3.5.0
 	o phppgadmin-5.0.3
 	o picp-0.6.8
 	o pim6dd-20040819a
