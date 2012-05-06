@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2011/05/13 02:50:06 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5.8.1 2012/05/06 01:06:25 tron Exp $
 
 SHA1 (guile-gnome-platform-2.16.1.tar.gz) = 3cf7cc8de6f261e6cf48d34e691706fe4b7f1061
 RMD160 (guile-gnome-platform-2.16.1.tar.gz) = 4723f091e015c4fca6986c48fa143e7fd3070631
@@ -6,3 +6,5 @@ Size (guile-gnome-platform-2.16.1.tar.gz) = 3494333 bytes
 SHA1 (patch-aa) = 6343a2d81e9f2747250f231beee376c21ba3bfb5
 SHA1 (patch-ab) = bcfc2cf7eccbef8c17db683a7fbbdef7b05c9d42
 SHA1 (patch-ac) = 7409fd75f94ec0a59b94939853b41b85e1a69768
+SHA1 (patch-corba_gnome_corba_Makefile.in) = 52e00564e2d246e78e82787809706aa7c7e44523
+SHA1 (patch-glib_gnome_gobject_Makefile.in) = 83a5533d70e36bb55476661af066e0ceaf13c1f0
