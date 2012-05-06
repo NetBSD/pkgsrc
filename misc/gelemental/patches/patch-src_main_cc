@@ -1,0 +1,16 @@
+$NetBSD: patch-src_main_cc,v 1.1 2012/05/06 23:07:05 dholland Exp $
+
+Fix build with new glib2.
+
+--- src/main.cc~	2007-09-25 04:49:33.000000000 +0000
++++ src/main.cc
+@@ -26,8 +26,7 @@
+ #include <clocale>
+ #include <iostream>
+ #include <locale>
+-#include <glib/goption.h>
+-#include <glib/gutils.h>
++#include <glib.h>
+ #include <glibmm/optionentry.h>
+ #include <gtk/gtkaboutdialog.h>
+ #include <gtk/gtkversion.h>
