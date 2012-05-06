@@ -1,4 +1,4 @@
-$NetBSD: patch-src-afs-NBSD-osi_vnodeops.c,v 1.1 2012/05/02 23:19:25 christos Exp $
+$NetBSD: patch-src-afs-NBSD-osi_vnodeops.c,v 1.2 2012/05/06 20:37:16 christos Exp $
 
 --- src/afs/NBSD/osi_vnodeops.c.orig	2012-04-22 23:40:23.000000000 -0400
 +++ src/afs/NBSD/osi_vnodeops.c	2012-04-30 16:47:20.000000000 -0400
@@ -9,7 +9,7 @@ $NetBSD: patch-src-afs-NBSD-osi_vnodeops.c,v 1.1 2012/05/02 23:19:25 christos Ex
 -    while (getnewvnode(VT_AFS, afs_globalVFS, afs_vnodeop_p, &AFSTOV(tvc))) {
 +    while (getnewvnode(VT_AFS, afs_globalVFS, afs_vnodeop_p,
 +#ifdef AFS_NBSD70_ENV
-+	AFSTOV(tvc)->v_interlock,
++	NULL,
 +#define AMP 
 +#else
 +#define AMP &
