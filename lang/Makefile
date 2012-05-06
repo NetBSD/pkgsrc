@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.319 2012/05/04 11:52:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.320 2012/05/06 13:13:17 obache Exp $
 #
 
 COMMENT=	Programming languages
@@ -150,6 +150,7 @@ SUBDIR+=	python25
 SUBDIR+=	python26
 SUBDIR+=	python27
 SUBDIR+=	python31
+SUBDIR+=	python32
 SUBDIR+=	racket
 SUBDIR+=	racket-textual
 SUBDIR+=	rcfunge
