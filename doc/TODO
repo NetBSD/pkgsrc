@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11062 2012/05/06 10:10:10 wiz Exp $
+$NetBSD: TODO,v 1.11063 2012/05/06 10:20:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -804,7 +804,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ispell-gaeilge-4.1
 	o ispell-german-20110609
 	o ispell-slovak-0.3.2
-	o ispman-1.2
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
@@ -1064,7 +1063,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Net-SNMP-5.7.1
 	o p5-PerlMagick-6.7.6.6
 	o p5-cairo-1.082
-	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.59
 	o packagekit-0.5.1
