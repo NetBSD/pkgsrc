@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11064 2012/05/06 20:00:34 wiz Exp $
+$NetBSD: TODO,v 1.11065 2012/05/06 20:21:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o DatUtil-2.45
 	o GMT-4.2.1
 	o GUIlib-1.1.2
-	o ImageMagick-6.7.6.8
+	o ImageMagick-6.7.6.9
 	o MAMEDiff-2.30
 	o Mesa-7.11.1
 	o MesaLib-7.11
@@ -512,6 +512,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o delegate-9.9.7
 	o dgen-1.30
 	o dhid-5.3
+	o diffpdf-2.0.0
 	o diffstat-1.55
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -587,6 +588,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ffmpeg-20120105.0.9.1
 	o ffmpeg-20120415.0.10.2
 	o ffplay-20120415.0.10.2
+	o fftw-3.3.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.5.10
@@ -689,6 +691,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-6.2 [pkg/45925]
 	o glom-1.14.2 [GNOME 2.26]
 	o glproto-1.4.15
+	o gmp-5.0.5
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.4.1
@@ -968,6 +971,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mc-4.8.1.3
 	o mdocml-1.12.1
 	o mediawiki-1.18.1
+	o mercurial-2.2.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o mgetty+sendfax-1.1.35
@@ -1211,6 +1215,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ser-0.9.6
 	o sessreg-1.0.7
 	o setxkbmap-1.3.0
+	o sfxr-1.2.1
 	o sharity-3.7
 	o sharity-light-1.3
 	o shc-3.8
