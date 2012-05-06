@@ -1,0 +1,15 @@
+$NetBSD: patch-src_audacious_i18n_h,v 1.1 2012/05/06 19:12:22 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/audacious/i18n.h~	2008-05-23 22:00:34.000000000 +0000
++++ src/audacious/i18n.h
+@@ -20,7 +20,7 @@
+ #ifndef AUDACIOUS_I18N_H
+ #define AUDACIOUS_I18N_H
+ 
+-#include <glib/gstrfuncs.h>
++#include <glib.h>
+ #include <libintl.h>
+ 
+ #define _(String) dgettext (PACKAGE, String)
