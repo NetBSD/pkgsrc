@@ -1,0 +1,16 @@
+$NetBSD: patch-drivers_eloquence_eloquencespeaker_c,v 1.1 2012/05/06 19:49:37 dholland Exp $
+
+Fix build with latest glib2.
+
+--- drivers/eloquence/eloquencespeaker.c~	2009-02-08 16:14:55.000000000 +0000
++++ drivers/eloquence/eloquencespeaker.c
+@@ -25,8 +25,7 @@
+ 
+ #include <unistd.h>
+ #include <libbonobo.h>
+-#include <glib/gmain.h>
+-#include <glib/gthread.h>
++#include <glib.h>
+ #include <gnome-speech/gnome-speech.h>
+ #include "eloquencespeaker.h"
+  

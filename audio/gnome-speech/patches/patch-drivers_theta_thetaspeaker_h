@@ -1,0 +1,15 @@
+$NetBSD: patch-drivers_theta_thetaspeaker_h,v 1.1 2012/05/06 19:49:37 dholland Exp $
+
+Fix build with latest glib2.
+
+--- drivers/theta/thetaspeaker.h~	2008-12-10 13:36:00.000000000 +0000
++++ drivers/theta/thetaspeaker.h
+@@ -30,7 +30,7 @@
+ #define __THETA_SPEAKER_H_
+ 
+ #include <bonobo/bonobo-object.h>
+-#include <glib/gthread.h>
++#include <glib.h>
+ #include <gnome-speech/gnome-speech.h>
+ #include <theta.h>
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-drivers_espeak_espeakspeaker_h,v 1.1 2012/05/06 19:49:37 dholland Exp $
+
+Fix build with latest glib2.
+
+--- drivers/espeak/espeakspeaker.h~	2008-12-10 13:36:00.000000000 +0000
++++ drivers/espeak/espeakspeaker.h
+@@ -34,7 +34,7 @@ extern "C" {
+ #endif /* __cplusplus */
+ 
+ #include <bonobo/bonobo-object.h>
+-#include <glib/gthread.h>
++#include <glib.h>
+ #include <speak_lib.h>
+ #include <gnome-speech/gnome-speech.h>
+ 

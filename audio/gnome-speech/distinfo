@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2009/02/24 15:04:15 wiz Exp $
+$NetBSD: distinfo,v 1.30 2012/05/06 19:49:36 dholland Exp $
 
 SHA1 (gnome-speech-0.4.25.tar.bz2) = c229af1583c522212e067990eafaf6a58df42966
 RMD160 (gnome-speech-0.4.25.tar.bz2) = 305f0e820ce77039776a1c3d3fa259d4f628b88e
@@ -6,3 +6,28 @@ Size (gnome-speech-0.4.25.tar.bz2) = 336706 bytes
 SHA1 (patch-aa) = d858b42547ff02b1ee47bfaee83ffc5230d4df31
 SHA1 (patch-ab) = 2a0212e0dab613371db44c278f96d88acd1f5b1c
 SHA1 (patch-ac) = 44c38746c51fc6dbf3e086532ed05f1b0c0c158c
+SHA1 (patch-drivers_dectalk_dectalkspeaker_c) = 82c3af75f2f8bd59a0118c4bc695d4cebbda5172
+SHA1 (patch-drivers_dectalk_dectalkspeaker_h) = 626662c439caf1d531138515c8af272a5472b1af
+SHA1 (patch-drivers_dectalk_dectalksynthesisdriver_c) = 638b94061077bc6b57b95c2d218a2f6463ee4e88
+SHA1 (patch-drivers_dectalk_dectalksynthesisdriver_h) = 671bc87a7145e78445d7e2fa9ff8ac1bc6b034ae
+SHA1 (patch-drivers_eloquence_eloquencespeaker_c) = 30437763bace4be2be5820a62067995e124b9a5d
+SHA1 (patch-drivers_eloquence_eloquencespeaker_h) = 6ec99b265ae453a3892db1b80570efb22a9617ad
+SHA1 (patch-drivers_eloquence_eloquencesynthesisdriver_c) = 3d8e6724a3d6d12a9438afa2ad703bb850ae7b8c
+SHA1 (patch-drivers_espeak_espeakspeaker_c) = cbb558528f2c17379480ad87464f995264bf8bce
+SHA1 (patch-drivers_espeak_espeakspeaker_h) = 5f2607762f4033677b95be3a28ee971de23e4e0c
+SHA1 (patch-drivers_espeak_espeaksynthesisdriver_c) = 9ec8b44e20c7255d4dd6fc7a9ebd724abdde1cdc
+SHA1 (patch-drivers_espeak_espeaksynthesisdriver_h) = f83955a1f5bd90e31340076858695309734daeb1
+SHA1 (patch-drivers_loquendo_loquendospeaker_c) = d0667787b00f8d1c23031de3ef4ec0bda4a893cb
+SHA1 (patch-drivers_loquendo_loquendospeaker_h) = ed42be11f999117c42c3fe60ad6f35230b77bdb5
+SHA1 (patch-drivers_loquendo_loquendosynthesisdriver_c) = 58465a7d4be2faf4d663802996324b69c2448dda
+SHA1 (patch-drivers_loquendo_loquendosynthesisdriver_h) = 31cf625fb1e3e4cfba1eb8130abbc6645ff29232
+SHA1 (patch-drivers_swift_swiftspeaker_c) = 2b35afdb12362a6377bbb017de3fb143959f70eb
+SHA1 (patch-drivers_swift_swiftspeaker_h) = e8dafc3b34a156ec2b4aadffb5fd39a49d87c45c
+SHA1 (patch-drivers_swift_swiftsynthesisdriver_c) = 78287b3adac07f80ac2118257c05dfb732f1c7db
+SHA1 (patch-drivers_theta_thetaspeaker_c) = 9d7876afec5b6c0e6950914b26c1a865fd617191
+SHA1 (patch-drivers_theta_thetaspeaker_h) = a240f76d9e69809df0103a8aed50deab38f085b5
+SHA1 (patch-drivers_theta_thetasynthesisdriver_c) = 77f2a9710aa501b999de101430797d90972432fc
+SHA1 (patch-drivers_viavoice_viavoicespeaker_c) = fc1183dd7b3e6b44fcb8d7cf1eb070391811456a
+SHA1 (patch-drivers_viavoice_viavoicespeaker_h) = aef307b3e2a95b00e15c17278136622f5ea5c528
+SHA1 (patch-drivers_viavoice_viavoicesynthesisdriver_c) = b8b87e6ac964b43887dfab579d43c773700a585e
+SHA1 (patch-drivers_viavoice_viavoicesynthesisdriver_h) = a836015f8b3f7df41e2b76f7aa3b99f54f8996d4
