@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2012/05/04 16:08:09 joerg Exp $
+$NetBSD: distinfo,v 1.32 2012/05/06 05:29:53 dholland Exp $
 
 SHA1 (libgda-3.0.1.tar.bz2) = 78c9054c4c40463020b8f62da72fca909dd9df03
 RMD160 (libgda-3.0.1.tar.bz2) = a9a1f71cc3a6faf8086bf3044b8de91dfc3f3032
@@ -7,4 +7,25 @@ SHA1 (patch-ab) = 2304f46df0500f3f15af210fcb1f9770df59e99e
 SHA1 (patch-ad) = 5deb66dc704027625ce6fc795d880779a4b69d4b
 SHA1 (patch-ak) = dafc05f5697a733a32d135bb08b9a4275673d359
 SHA1 (patch-al) = 0267218fb02aa3e011bddc1675d2f427a97c954f
+SHA1 (patch-libgda_gda-column_c) = a290e71510d5f1171522a3a435dc3bcac2a13d30
+SHA1 (patch-libgda_gda-column_h) = 6ef0873737eca8ff005b739ea7c6a050044e9fa8
+SHA1 (patch-libgda_gda-command_c) = 9f8a27830fad60d4cb74dc9ab1e6ee1aba0483ce
+SHA1 (patch-libgda_gda-command_h) = ddcc2ca38c982e0f39c99cd5349a9da296e50254
+SHA1 (patch-libgda_gda-config_h) = 61afb51e75057b445ad9f6c0eb3b33fb470343f3
+SHA1 (patch-libgda_gda-data-model-array_c) = 8ca31d1cf8c18212e593d27fa23e5d1f4968a6d0
+SHA1 (patch-libgda_gda-data-model-filter-sql_c) = 748ad56779a532609a886652d7df922dc86c2d0a
+SHA1 (patch-libgda_gda-data-model-hash_c) = 4a89040ba9443edcce79b86b26c674454f500499
 SHA1 (patch-libgda_gda-entity-field.c) = 08902eac2340a3e9f5f7dbe4073791e551c71fdf
+SHA1 (patch-libgda_gda-init_c) = 66b132bae6ef6cf8792b1a83d3459387d6f5b151
+SHA1 (patch-libgda_gda-log_c) = 3bf3b1f84b303b866d2fcc1b949288a918922e21
+SHA1 (patch-libgda_gda-log_h) = 1af8d379c3547fef7680fadcb40f99206da4bc9c
+SHA1 (patch-libgda_gda-quark-list_c) = b99dff8e054a9a1fa74b2e302471d620b918e67a
+SHA1 (patch-libgda_gda-quark-list_h) = da3aae6366f505ac5bb5de412aa856cb8bef29d3
+SHA1 (patch-libgda_gda-row_h) = 06ec64d71ff0ca70ae2381c1bc82f35253d15fd3
+SHA1 (patch-libgda_gda-server-operation_c) = 0d9f77aefe874bd4f5bc4032181861abf1905a42
+SHA1 (patch-libgda_gda-server-provider_c) = 89498b56c2180ddcb4050c37034c14ef53ec7809
+SHA1 (patch-libgda_gda-util_c) = c8101c12d5db7d5e495db917e1688535c247100b
+SHA1 (patch-libgda_gda-util_h) = 507592a437ce2139af54a6fa5130a6e74550866b
+SHA1 (patch-libgda_gda-value_c) = f7ed4a4344971f0d3e9f6e5941333a3b0faa71bc
+SHA1 (patch-libgda_gda-value_h) = 7e9446931123ca90b0af9e3545fccc3306553132
+SHA1 (patch-providers_sqlite_gda-sqlite_h) = a4bf8c7f6da3a25fa2bd2b9c390cafbe655b586f
