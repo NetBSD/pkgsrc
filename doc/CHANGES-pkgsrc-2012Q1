@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.26 2012/05/04 08:52:21 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.27 2012/05/06 01:08:36 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -131,3 +131,9 @@ Pullup ticket #3768 - requested by taca
 www/drupal7: security update
 Pullup ticket #3769 - requested by taca
 lang/php53: security update
+Pullup ticket #3770 - requested by gls
+graphics/feh: build fix
+Pullup ticket #3771 - requested by gls
+devel/p5-Config-IniFiles: security update
+Pullup ticket #3772 - requested by dholland
+devel/guile-gnome: build fix
