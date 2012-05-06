@@ -1,4 +1,4 @@
-$NetBSD: patch-src-libafs-MakefileProto.NBSD.in,v 1.1 2012/05/02 23:19:25 christos Exp $
+$NetBSD: patch-src-libafs-MakefileProto.NBSD.in,v 1.2 2012/05/06 21:43:12 wiz Exp $
 
 --- src/libafs/MakefileProto.NBSD.in.orig	2012-04-22 23:40:23.000000000 -0400
 +++ src/libafs/MakefileProto.NBSD.in	2012-05-02 12:04:41.000000000 -0400
@@ -52,7 +52,7 @@ $NetBSD: patch-src-libafs-MakefileProto.NBSD.in,v 1.1 2012/05/02 23:19:25 christ
 -	-I${KSRC} -I${KSRC}/sys \
 -	-I${KBLD} -I../afs
 -DBUG = -O2 -g3
-+#	$NetBSD: patch-src-libafs-MakefileProto.NBSD.in,v 1.1 2012/05/02 23:19:25 christos Exp $
++#	NetBSD: patch-src-libafs-MakefileProto.NBSD.in,v 1.1 2012/05/02 23:19:25 christos Exp
 +
 +.include <bsd.own.mk>
 +
