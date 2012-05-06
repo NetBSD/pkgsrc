@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2012/05/06 13:12:12 obache Exp $
+
+--- Lib/distutils/util.py.orig	2012-02-23 20:22:44.000000000 +0000
++++ Lib/distutils/util.py
+@@ -182,6 +182,8 @@ def get_platform ():
+                 # See 'i386' case
+                 if sys.maxsize >= 2**32:
+                     machine = 'ppc64'
++    elif osname[:9] == "dragonfly":
++        release = str.split(release, "-")[0]
+ 
+     return "%s-%s-%s" % (osname, release, machine)
+ 
