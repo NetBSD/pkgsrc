@@ -1,4 +1,4 @@
-$NetBSD: patch-include_asterisk_inline__api.h,v 1.1 2012/05/04 16:06:14 joerg Exp $
+$NetBSD: patch-bo,v 1.1 2012/05/06 05:40:50 jnemeth Exp $
 
 --- include/asterisk/inline_api.h.orig	2006-02-14 19:14:15.000000000 +0000
 +++ include/asterisk/inline_api.h
