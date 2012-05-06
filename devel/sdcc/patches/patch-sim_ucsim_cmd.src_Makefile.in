@@ -1,4 +1,4 @@
-$NetBSD: patch-sim_ucsim_cmd.src_Makefile.in,v 1.1 2012/01/24 06:06:32 sbd Exp $
+$NetBSD: patch-sim_ucsim_cmd.src_Makefile.in,v 1.2 2012/05/06 04:13:35 dholland Exp $
 
 Search $(srcdir) before directorys in CXXFLAGS so that the "FlexLexer.h"
 in $(srcdir) is found before the one under PREFIX (from CXXFLAGS).
@@ -15,4 +15,4 @@ in $(srcdir) is found before the one under PREFIX (from CXXFLAGS).
 +CXXFLAGS        = -I$(srcdir) @CXXFLAGS@ -Wall
  M_OR_MM         = @M_OR_MM@
  WINSOCK_AVAIL	= @WINSOCK_AVAIL@
-
+ 
