@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/04/21 20:01:03 hans Exp $
+$NetBSD: distinfo,v 1.5 2012/05/06 19:12:22 dholland Exp $
 
 SHA1 (audacious-1.5.1.tbz2) = 571ed77333c4d85dab901770f6640501930a748c
 RMD160 (audacious-1.5.1.tbz2) = 1748b7075cef3fd0d41fb74c44109e294433d03b
 Size (audacious-1.5.1.tbz2) = 1374028 bytes
 SHA1 (patch-aa) = a95588e0f2c27f1f520cb687421f5d33e01e5155
+SHA1 (patch-src_audacious_i18n_h) = a0524ed265fb1298cf741f5c3af2f9893bde3bfe
+SHA1 (patch-src_audacious_ui__skinned__window_c) = 1aa195373ee7a2542a8d4e2b71b611a533c00483
