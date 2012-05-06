@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2012/03/21 18:16:18 drochner Exp $
+# $NetBSD: Makefile,v 1.47.2.1 2012/05/06 00:16:05 tron Exp $
 #
 
-DISTNAME=	feh-2.4
+DISTNAME=	feh-2.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,8 +20,6 @@ USE_TOOLS+=	bash:run perl:run gmake
 
 REPLACE_BASH=		cam/gen-cam-menu
 REPLACE_PERL=		scripts/*.pl cam/feh-cam
-
-CFLAGS+=			-std=c99
 
 LDFLAGS.SunOS+=		-lnsl -lsocket
 
