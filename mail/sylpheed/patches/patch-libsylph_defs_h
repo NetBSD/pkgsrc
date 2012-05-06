@@ -1,0 +1,15 @@
+$NetBSD: patch-libsylph_defs_h,v 1.1 2012/05/06 23:02:30 dholland Exp $
+
+Fix build with new glib2.
+
+--- libsylph/defs.h~	2011-09-07 04:23:19.000000000 +0000
++++ libsylph/defs.h
+@@ -24,7 +24,7 @@
+ #  include "config.h"
+ #endif
+ 
+-#include <glibconfig.h>
++#include <glib.h>
+ 
+ #ifdef G_OS_WIN32
+ #  include <glib/gwin32.h>
