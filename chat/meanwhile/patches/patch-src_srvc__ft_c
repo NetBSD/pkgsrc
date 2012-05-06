@@ -1,0 +1,15 @@
+$NetBSD: patch-src_srvc__ft_c,v 1.1 2012/05/06 17:53:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/srvc_ft.c~	2005-09-15 20:30:37.000000000 +0000
++++ src/srvc_ft.c
+@@ -19,7 +19,7 @@
+ */
+ 
+ 
+-#include <glib/glist.h>
++#include <glib.h>
+ 
+ #include "mw_channel.h"
+ #include "mw_common.h"
