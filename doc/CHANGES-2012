@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1441 2012/05/06 18:10:51 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1442 2012/05/06 18:52:32 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/scmgit-base to 1.7.10.1 [adam 2012-05-06]
 	Updated devel/scmgit-docs to 1.7.10.1 [adam 2012-05-06]
 	Updated www/gitweb to 1.7.10.1 [adam 2012-05-06]
+	Updated x11/py-qt3-modules to 3.18.1nb9 [dholland 2012-05-06]
