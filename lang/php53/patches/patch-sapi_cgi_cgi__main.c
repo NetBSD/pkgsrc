@@ -1,6 +1,6 @@
 $NetBSD$
 
-Additional fix for CVS-2012-1823.
+Additional fix for CVE-2012-1823.
 
 --- sapi/cgi/cgi_main.c.orig	2012-05-03 13:54:59.000000000 +0000
 +++ sapi/cgi/cgi_main.c
