@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.12 2008/08/15 17:25:32 tron Exp $
+$NetBSD: patch-src_common_util_c,v 1.1 2012/05/06 18:41:51 dholland Exp $
 
---- src/common/util.c.orig	2008-02-24 02:59:48.000000000 +0000
-+++ src/common/util.c	2008-08-15 11:16:47.000000000 +0100
-@@ -49,6 +49,10 @@
+ - Fix build with latest glib2
+ - add NetBSD support
+
+--- src/common/util.c.orig	2009-08-16 09:40:16.000000000 +0000
++++ src/common/util.c
+@@ -39,7 +39,6 @@
+ #include <errno.h>
+ #include "xchat.h"
+ #include "xchatc.h"
+-#include <glib/gmarkup.h>
+ #include <ctype.h>
+ #include "util.h"
+ #include "../../config.h"
+@@ -49,6 +48,10 @@
  
  #if defined (USING_FREEBSD) || defined (__APPLE__)
  #include <sys/sysctl.h>
@@ -13,7 +24,7 @@ $NetBSD: patch-ab,v 1.12 2008/08/15 17:25:32 tron Exp $
  #endif
  #ifdef SOCKS
  #include <socks.h>
-@@ -510,7 +514,7 @@
+@@ -510,7 +513,7 @@ strip_hidden_attribute (char *src, char 
  	return len;
  }
  
@@ -22,7 +33,7 @@ $NetBSD: patch-ab,v 1.12 2008/08/15 17:25:32 tron Exp $
  
  static void
  get_cpu_info (double *mhz, int *cpus)
-@@ -554,7 +558,7 @@
+@@ -554,7 +557,7 @@ get_cpu_info (double *mhz, int *cpus)
  		*cpus = 1;
  
  #endif
@@ -31,7 +42,7 @@ $NetBSD: patch-ab,v 1.12 2008/08/15 17:25:32 tron Exp $
  
  	int mib[2], ncpu;
  	u_long freq;
-@@ -656,7 +660,7 @@
+@@ -656,7 +659,7 @@ get_cpu_str (void)
  char *
  get_cpu_str (void)
  {
@@ -40,7 +51,7 @@ $NetBSD: patch-ab,v 1.12 2008/08/15 17:25:32 tron Exp $
  	double mhz;
  #endif
  	int cpus = 1;
-@@ -670,7 +674,7 @@
+@@ -670,7 +673,7 @@ get_cpu_str (void)
  
  	uname (&un);
  
