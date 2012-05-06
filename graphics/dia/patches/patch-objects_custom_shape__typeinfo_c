@@ -1,0 +1,15 @@
+$NetBSD: patch-objects_custom_shape__typeinfo_c,v 1.1 2012/05/06 20:25:02 dholland Exp $
+
+Fix build with latest glib2.
+
+--- objects/custom/shape_typeinfo.c~	2009-11-07 14:28:34.000000000 +0000
++++ objects/custom/shape_typeinfo.c
+@@ -27,7 +27,7 @@
+ #include "custom_util.h"
+ #include <string.h>
+ #include <stdarg.h>
+-#include <glib/gstrfuncs.h>
++#include <glib.h>
+ #include <glib/gstdio.h>
+ #include <libxml/parser.h>
+ 
