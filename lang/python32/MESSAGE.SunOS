@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE.SunOS,v 1.1.1.1 2012/05/06 13:12:09 obache Exp $
+
+In order for the Python installation to successfuly compile the
+"sunaudiodev" module you must install the SUNWaudh package to have
+the necessary headers installed.
+
+===========================================================================
