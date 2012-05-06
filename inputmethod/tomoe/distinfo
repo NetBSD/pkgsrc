@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.3 2008/06/04 13:01:36 obache Exp $
+$NetBSD: distinfo,v 1.4 2012/05/06 17:24:41 dholland Exp $
 
 SHA1 (tomoe-0.6.0.tar.gz) = 0ab5b4fd4609d0439f90010c35305595522f54f2
 RMD160 (tomoe-0.6.0.tar.gz) = fc8e799c4b845e9c4b41879980fecc9d9dc77c69
 Size (tomoe-0.6.0.tar.gz) = 4918949 bytes
 SHA1 (patch-aa) = beaf6abd17e985d3b11eccdd0d870329b9088b00
 SHA1 (patch-ab) = 718f888ec731ea5183c0af40bb90abe1807be89e
+SHA1 (patch-lib_glib-utils_h) = a03c9f060241257cbc42d9624bfe685f53094e1e
+SHA1 (patch-lib_tomoe_c) = b38e905e6311c966291891430c3c0b7ad624d799
