@@ -1,0 +1,15 @@
+$NetBSD: patch-src_hal_hh,v 1.1 2012/05/06 19:35:57 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/hal.hh~	2008-04-02 20:11:49.000000000 +0000
++++ src/hal.hh
+@@ -33,7 +33,7 @@
+ #include <map>
+ #include <vector>
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <glibmm/ustring.h>
+ 
+ #include <dbus/dbus.h>

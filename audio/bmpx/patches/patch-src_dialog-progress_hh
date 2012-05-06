@@ -1,0 +1,15 @@
+$NetBSD: patch-src_dialog-progress_hh,v 1.1 2012/05/06 19:35:57 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/dialog-progress.hh~	2008-03-05 21:31:06.000000000 +0000
++++ src/dialog-progress.hh
+@@ -31,7 +31,7 @@
+ 
+ #include <string>
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <glibmm/ustring.h>
+ #include <gtkmm/dialog.h>
+ #include <gtkmm/progressbar.h>
