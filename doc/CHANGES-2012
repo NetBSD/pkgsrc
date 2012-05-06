@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1446 2012/05/06 20:47:32 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.1447 2012/05/06 20:51:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2312,3 +2312,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated audio/bmpx to 0.40.14nb17 [dholland 2012-05-06]
 	Updated x11/xf86-input-keyboard to 1.6.1 [wiz 2012-05-06]
 	Updated devel/mercurial to 2.2.1 [wiz 2012-05-06]
+	Updated x11/xf86-input-mouse to 1.7.2 [wiz 2012-05-06]

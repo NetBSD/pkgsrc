@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11066 2012/05/06 20:47:32 wiz Exp $
+$NetBSD: TODO,v 1.11067 2012/05/06 20:51:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1404,7 +1404,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xev-1.2.0
 	o xextproto-7.2.1
 	o xeyes-1.1.1
-	o xf86-input-mouse-1.7.2
 	o xf86-input-vmmouse-12.8.0
 	o xf86-input-void-1.4.0
 	o xf86-video-apm-1.2.3
