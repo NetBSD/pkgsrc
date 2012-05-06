@@ -1,4 +1,4 @@
-$NetBSD: patch-e_data_server_util_c,v 1.1 2012/02/06 10:44:44 drochner Exp $
+$NetBSD: patch-e_data_server_util_c,v 1.2 2012/05/06 04:34:03 dholland Exp $
 
 In glib 2.30 G_UNICODE_COMBINING_MARK became known as
 G_UNICODE_SPACING_MARK, and g_unicode_canonical_decomposition was
@@ -6,16 +6,21 @@ deprecated in favour of g_unichar_fully_decompose.
 
 --- libedataserver/e-data-server-util.c.orig	2011-04-21 19:35:37.000000000 +0000
 +++ libedataserver/e-data-server-util.c
-@@ -245,7 +245,7 @@ e_util_utf8_strstrcase (const gchar *hay
+@@ -245,7 +245,12 @@ e_util_utf8_strstrcase (const gchar *hay
  static gunichar
  stripped_char (gunichar ch)
  {
 -	gunichar *decomp, retval;
-+	gunichar decomp[4], retval;
++#ifdef G_UNICODE_COMBINING_MARK
++	gunichar *decomp;
++#else
++	gunichar decomp[4];
++#endif
++	gunichar retval;
  	GUnicodeType utype;
  	gsize dlen;
  
-@@ -255,14 +255,23 @@ stripped_char (gunichar ch)
+@@ -255,16 +260,27 @@ stripped_char (gunichar ch)
  	case G_UNICODE_CONTROL:
  	case G_UNICODE_FORMAT:
  	case G_UNICODE_UNASSIGNED:
@@ -37,5 +42,9 @@ deprecated in favour of g_unichar_fully_decompose.
 +		if ((dlen = g_unichar_fully_decompose(ch, FALSE, decomp, 4))) {
 +#endif
  			retval = decomp[0];
++#ifdef G_UNICODE_COMBINING_MARK
  			g_free (decomp);
++#endif
  			return retval;
+ 		}
+ 		break;
