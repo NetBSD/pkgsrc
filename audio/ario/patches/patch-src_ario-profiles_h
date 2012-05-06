@@ -1,0 +1,15 @@
+$NetBSD: patch-src_ario-profiles_h,v 1.1 2012/05/06 19:06:21 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/ario-profiles.h~	2011-05-17 17:54:49.000000000 +0000
++++ src/ario-profiles.h
+@@ -20,7 +20,7 @@
+ #ifndef __ARIO_PROFILES_H
+ #define __ARIO_PROFILES_H
+ 
+-#include <glib/gslist.h>
++#include <glib.h>
+ #include "servers/ario-server.h"
+ 
+ G_BEGIN_DECLS
