@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1444 2012/05/06 19:38:32 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1445 2012/05/06 20:00:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2310,3 +2310,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/qwt-qt4 to 5.2.2nb4 [dholland 2012-05-06]
 	Updated x11/qwt6-qt4 to 6.0.1nb1 [dholland 2012-05-06]
 	Updated audio/bmpx to 0.40.14nb17 [dholland 2012-05-06]
+	Updated x11/xf86-input-keyboard to 1.6.1 [wiz 2012-05-06]
