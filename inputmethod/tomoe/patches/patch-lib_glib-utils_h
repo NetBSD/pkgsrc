@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_glib-utils_h,v 1.1 2012/05/06 17:24:41 dholland Exp $
+
+Fix build with latest glib2.
+
+--- lib/glib-utils.h~	2007-04-25 07:35:58.000000000 +0000
++++ lib/glib-utils.h
+@@ -28,7 +28,7 @@
+ #include "config.h"
+ #endif /* HAVE_CONFIG_H */
+ 
+-#include <glib/garray.h>
++#include <glib.h>
+ #include <glib/gi18n-lib.h>
+ #include "glib-compat-file-utilities.h"
+ #include "glib-compat-key-file.h"
