@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.9 2012/04/07 20:10:45 jnemeth Exp $
+$NetBSD: patch-aq,v 1.10 2012/05/06 05:40:50 jnemeth Exp $
 
---- configure.orig	2012-02-16 19:26:16.000000000 +0000
+--- configure.orig	2012-03-27 14:32:40.000000000 +0000
 +++ configure
-@@ -25178,6 +25178,146 @@ fi
+@@ -17094,6 +17094,146 @@ fi
  
  
  
@@ -149,21 +149,21 @@ $NetBSD: patch-aq,v 1.9 2012/04/07 20:10:45 jnemeth Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -29482,6 +29622,8 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
+@@ -18219,6 +18359,8 @@ $as_echo_n "checking if \"struct ifaddrs
+ 
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-+#include <sys/types.h>
-+#include <sys/socket.h>
- #include <ifaddrs.h>
++ #include <sys/types.h>
++ #include <sys/socket.h>
+  #include <ifaddrs.h>
  int
  main ()
-@@ -55700,10 +55842,9 @@ cat >>confdefs.h <<\_ACEOF
- #define HAVE_SBIN_LAUNCHD 1
- _ACEOF
+@@ -29288,10 +29430,10 @@ if test "x$ac_cv_file__sbin_launchd" = x
+ 
+ $as_echo "#define HAVE_SBIN_LAUNCHD 1" >>confdefs.h
  
 -fi
--
+ 
    PBX_LAUNCHD=1
  fi
 +fi
