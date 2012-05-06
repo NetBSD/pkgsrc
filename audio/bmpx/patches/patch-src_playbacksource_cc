@@ -1,0 +1,15 @@
+$NetBSD: patch-src_playbacksource_cc,v 1.1 2012/05/06 19:35:57 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/playbacksource.cc~	2008-03-05 21:31:06.000000000 +0000
++++ src/playbacksource.cc
+@@ -26,7 +26,7 @@
+ #endif //HAVE_CONFIG_H
+ 
+ #include <exception>
+-#include <glib/ghash.h>
++#include <glib.h>
+ #include <glibmm/ustring.h>
+ #include <glibmm/i18n.h>
+ #include <sigc++/signal.h>

@@ -1,0 +1,16 @@
+$NetBSD: patch-src_shell_hh,v 1.1 2012/05/06 19:35:57 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/shell.hh~	2008-03-05 21:31:06.000000000 +0000
++++ src/shell.hh
+@@ -32,8 +32,7 @@
+ #include <map>
+ #include <string>
+ 
+-#include <glib/gtypes.h>
+-#include <glib/ghash.h>
++#include <glib.h>
+ #include <glibmm/main.h>
+ #include <glibmm/ustring.h>
+ #include <gdkmm/pixbuf.h>
