@@ -1,0 +1,15 @@
+$NetBSD: patch-src_sanity_h,v 1.1 2012/05/06 19:27:12 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/sanity.h~	2008-03-05 21:31:06.000000000 +0000
++++ src/sanity.h
+@@ -21,7 +21,7 @@
+ #ifndef BMP_SANITY_HPP
+ #define BMP_SANITY_HPP
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
