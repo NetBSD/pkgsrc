@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/05/05 16:03:23 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2012/05/06 21:42:35 wiz Exp $
 
 DISTNAME=	openafs-1.7.11-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -51,7 +51,7 @@ pre-configure:
 	find ${WRKSRC} -name Makefile.in | while read f; do \
 		${SED}	-e 's|liblwp.a|libafslwp.a|g' \
 			-e 's|-llwp|-lafslwp|g' < $$f > $$f.tmp && \
-		${MV} $$f.tmp $$f; done 
+		${MV} $$f.tmp $$f; done
 
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
