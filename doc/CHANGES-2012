@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1437 2012/05/06 09:09:35 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1438 2012/05/06 10:20:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2298,3 +2298,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/calibre to 0.8.50 [gls 2012-05-06]
 	Updated databases/phpmyadmin to 3.5.1 [tron 2012-05-06]
 	Updated net/libvncserver to 0.9.9 [obache 2012-05-06]
+	Removed net/p5-ispman [wiz 2012-05-06]
+	Removed net/ispman [wiz 2012-05-06]
