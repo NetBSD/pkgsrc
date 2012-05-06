@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2012/04/27 12:31:54 obache Exp $
+# $NetBSD: Makefile,v 1.38 2012/05/06 08:34:14 gls Exp $
 #
 
-DISTNAME=	calibre-0.8.48
-PKGREVISION=	1
+DISTNAME=	calibre-0.8.50
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
-DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.7:../../textproc/py-cssutils
+DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.9:../../textproc/py-cssutils
 # Let's depend on the ones we have in pkgsrc instead of the bundled ones.
 DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
 DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
@@ -74,6 +73,7 @@ FIX_PYTHON_PATHS+=	src/calibre/ebooks/conversion/plugins/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/djvu/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/epub/fix/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/epub/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/fb2/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/html/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/iterator/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/lit/*.py
@@ -95,6 +95,7 @@ FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/display/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/display/test-cfi/*.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/oeb/transforms/*.py
+FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdb/haodoo/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdf/__init__.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/pdf/reflow.py
 FIX_PYTHON_PATHS+=	src/calibre/ebooks/readability/*.py
