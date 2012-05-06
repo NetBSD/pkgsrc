@@ -1,0 +1,15 @@
+$NetBSD: patch-src_urihandler_hh,v 1.1 2012/05/06 19:35:58 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/urihandler.hh~	2008-03-05 21:31:06.000000000 +0000
++++ src/urihandler.hh
+@@ -28,7 +28,7 @@
+ #  include <config.h>
+ #endif //HAVE_CONFIG_H
+ 
+-#include <glib/ghash.h>
++#include <glib.h>
+ #include <glibmm/ustring.h>
+ #include <sigc++/signal.h>
+ #include <boost/format.hpp>
