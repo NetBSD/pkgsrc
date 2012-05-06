@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1443 2012/05/06 18:59:11 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1444 2012/05/06 19:38:32 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2309,3 +2309,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated x11/py-qt3-modules to 3.18.1nb9 [dholland 2012-05-06]
 	Updated x11/qwt-qt4 to 5.2.2nb4 [dholland 2012-05-06]
 	Updated x11/qwt6-qt4 to 6.0.1nb1 [dholland 2012-05-06]
+	Updated audio/bmpx to 0.40.14nb17 [dholland 2012-05-06]
