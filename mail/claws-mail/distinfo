@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2011/09/12 17:43:05 drochner Exp $
+$NetBSD: distinfo,v 1.20 2012/05/06 16:48:34 dholland Exp $
 
 SHA1 (claws-mail-3.7.10.tar.bz2) = 6cdb5695bfff8f8eab2bcbfd5d98576ca37a5edd
 RMD160 (claws-mail-3.7.10.tar.bz2) = 6da263b0ccc313ab346648cdb9b5c128734621d5
@@ -9,3 +9,4 @@ SHA1 (patch-af) = 2655fac7e0e7bfb2d50291537eab9481dbc83691
 SHA1 (patch-ag) = 4e487c358b7da1317db07ecd7be5d36587c936c0
 SHA1 (patch-ah) = dbc2c4095ebee928e086c3d39c1fd11788613d49
 SHA1 (patch-bb) = 2d432d7c1c3869b76965adea77f05127796a27f5
+SHA1 (patch-src_common_defs_h) = f5c4342afb8fb57c359d75b72cb1cd695717b308
