@@ -1,0 +1,100 @@
+$NetBSD: patch-Makefile_in,v 1.1 2012/05/06 03:07:23 dholland Exp $
+
+Make the makefile stop on error.
+
+--- Makefile.in~	2007-02-14 20:08:31.000000000 +0000
++++ Makefile.in
+@@ -75,16 +75,16 @@ all: checkconf sdcc
+ tini: checkconf sdcc-tini
+ 
+ sdcc-libs:
+-	for lib in $(SDCC_LIBS); do $(MAKE) -C $$lib; done
++	for lib in $(SDCC_LIBS); do $(MAKE) -C $$lib || exit 1; done
+ 
+ sdcc-cc: sdcc-libs
+ 	$(MAKE) -C src
+ 
+ sdcc-aslink:
+-	for as in $(SDCC_ASLINK); do $(MAKE) -C $$as ; done
++	for as in $(SDCC_ASLINK); do $(MAKE) -C $$as || exit 1; done
+ 
+ sdcc-misc:
+-	for misc in $(SDCC_MISC); do $(MAKE) -C $$misc ; done
++	for misc in $(SDCC_MISC); do $(MAKE) -C $$misc || exit 1; done
+ 
+ sdcc-packihx:
+ 	$(MAKE) -C $(SDCC_PACKIHX)
+@@ -121,13 +121,13 @@ sdcc-base: sdcc-cc sdcc-aslink
+ install:
+ 	$(MAKE) -f main.mk install
+ 	@for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg install ;\
++	  $(MAKE) -C $$pkg install || exit 1;\
+ 	done
+ 
+ install-tini:
+ 	$(MAKE) -f main.mk install
+ 	@for pkg in $(PKGS_TINI); do\
+-	  $(MAKE) -C $$pkg install ;\
++	  $(MAKE) -C $$pkg install || exit 1;\
+ 	done
+ 	$(MAKE) -C device/lib install
+ 
+@@ -138,7 +138,7 @@ install-tini:
+ uninstall:
+ 	$(MAKE) -f main.mk uninstall
+ 	@for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg uninstall ;\
++	  $(MAKE) -C $$pkg uninstall || exit 1;\
+ 	done
+ 
+ 
+@@ -149,7 +149,7 @@ clean:
+ 	$(MAKE) -f $(srcdir)/clean.mk clean
+ 	@echo "+ Cleaning packages in their directories..."
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) clean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) clean || exit 1;\
+ 	done
+ 
+ # Deleting all files created by configuring or building the program
+@@ -157,10 +157,10 @@ clean:
+ distclean:
+ 	@echo "+ DistCleaning packages using clean.mk..."
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) distclean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) distclean || exit 1;\
+ 	done
+ 	for pkg in $(SDCC_EXTRA); do \
+-	  $(MAKE) -C $$pkg distclean; \
++	  $(MAKE) -C $$pkg distclean || exit 1; \
+ 	done
+ 	@echo "+ DistCleaning root of the project..."
+ 	$(MAKE) -f $(srcdir)/clean.mk distclean
+@@ -170,7 +170,7 @@ distclean:
+ mostlyclean: clean
+ 	$(MAKE) -f $(srcdir)/clean.mk mostlyclean
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) mostlyclean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) mostlyclean || exit 1;\
+ 	done
+ 
+ 
+@@ -180,7 +180,7 @@ mostlyclean: clean
+ realclean: distclean
+ 	$(MAKE) -f $(srcdir)/clean.mk realclean
+ 	for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) realclean ;\
++	  $(MAKE) -C $$pkg PORTS="$(PORTS)" EXEEXT=$(EXEEXT) realclean || exit 1;\
+ 	done
+ 
+ 
+@@ -209,7 +209,7 @@ installcheck:
+ dep:
+ 	$(MAKE) -f main.mk dep
+ 	@for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg dep ;\
++	  $(MAKE) -C $$pkg dep || exit 1;\
+ 	done
+ 
+ 
