@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/07 07:25:55 agc Exp $
+
+SHA1 (sfslite-1.2.7.tar.gz) = 774c1defc74d9f354622f60aa5c038400b401c5b
+RMD160 (sfslite-1.2.7.tar.gz) = 3e72a4d6cb0975c13b51f13ff615e8a390c36e3b
+Size (sfslite-1.2.7.tar.gz) = 1379432 bytes
+SHA1 (patch-aa) = 9c13092b1fe5e9d7c25eea9293fadbbaab096299
+SHA1 (patch-ab) = 0bfc67711150e5dc8eb74fba29e9abd5272e62db
+SHA1 (patch-ac) = 88294e8dc9785a68019f66d0513c6d043a6b9f2e

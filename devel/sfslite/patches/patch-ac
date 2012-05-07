@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/05/07 07:25:55 agc Exp $
+
+Don't try to be clever when including gmp.h - it has all the smarts
+in it for C++ and C linkage
+
+--- crypt/bigint.h	2012/03/28 12:57:51	1.1
++++ crypt/bigint.h	2012/03/28 12:58:32
+@@ -27,15 +27,7 @@
+ 
+ #include "sysconf.h"
+ 
+-#if defined (HAVE_GMP_CXX_OPS) || !defined (__cplusplus)
+ #include <gmp.h>
+-#else /* !HAVE_GMP_CXX_OPS */
+-/* Some older C++ header files fail to include some declarations
+- * inside an extern "C". */
+-extern "C" {
+-#include <gmp.h>
+-}
+-#endif /* !HAVE_GMP_CXX_OPS */
+ 
+ #ifdef __cplusplus
+ extern "C" {
