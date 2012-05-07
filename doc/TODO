@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11067 2012/05/06 20:51:33 wiz Exp $
+$NetBSD: TODO,v 1.11068 2012/05/07 01:29:33 dholland Exp $
 
 Suggested new packages
 ======================
@@ -714,7 +714,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-power-manager-3.2.1
 	o gnome-session-2.32.1 [GNOME 2.32, wants DeviceKit-power]
 	o gnome-subtitles-1.2
-	o gnome-system-monitor-2.28.2
 	o gnome-system-tools-2.32.0 [GNOME 2.32]
 	o gnome-system-tools-3.0.0
 	o gnome-user-share-2.30.2 [GNOME 2.32]
