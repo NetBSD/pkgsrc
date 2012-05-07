@@ -1,8 +1,8 @@
-$NetBSD: patch-devel-docs_app_Makefile.in,v 1.1 2012/05/04 16:17:39 joerg Exp $
+$NetBSD: patch-devel-docs_app_Makefile.in,v 1.2 2012/05/07 08:40:08 adam Exp $
 
 --- devel-docs/app/Makefile.in.orig	2012-04-27 17:59:56.000000000 +0000
 +++ devel-docs/app/Makefile.in
-@@ -423,10 +423,10 @@ GTKDOC_CFLAGS = \
+@@ -473,10 +473,10 @@ GTKDOC_CFLAGS = \
  	-UGTK_DISABLE_SINGLE_INCLUDES
  
  GTKDOC_LIBS = \
