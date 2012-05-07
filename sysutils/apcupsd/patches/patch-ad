@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2006/11/15 21:46:25 bouyer Exp $
+$NetBSD: patch-ad,v 1.5 2012/05/07 12:55:23 shattered Exp $
 
---- /dev/null	2006-11-15 17:26:11.000000000 +0100
-+++ platforms/netbsd/apccontrol.in	2006-11-15 17:42:37.000000000 +0100
+--- platforms/netbsd/apccontrol.in.orig	2012-04-21 20:53:17.000000000 +0000
++++ platforms/netbsd/apccontrol.in
 @@ -0,0 +1,147 @@
 +#!@SCRIPTSHELL@
 +#
@@ -58,15 +58,15 @@ $NetBSD: patch-ad,v 1.4 2006/11/15 21:46:25 bouyer Exp $
 +	;;
 +	commfailure)
 +		printf "Communications with UPS lost." | wall
-+		/usr/bin/logger -p user.info -t apccontrol "Warning serial port communications with UPS lost."
++		/usr/bin/logger -p user.info -t apccontrol "Warning, serial port communications with UPS lost."
 +	;;
 +	commok)
-+		printf "Communciations with UPS restored." | wall
-+		/usr/bin/logger -p user.info -t apccontrol  "Communciations with UPS restored."
++		printf "Communications with UPS restored." | wall
++		/usr/bin/logger -p user.info -t apccontrol "Communications with UPS restored."
 +	;;
 +	powerout)
 +		printf "Warning power loss detected." | wall
-+		/usr/bin/logger -p user.info -t apccontrol "Warning power loss detected."
++		/usr/bin/logger -p user.info -t apccontrol "Warning, power loss detected."
 +	;;
 +	onbattery)
 +		printf "Power failure. Running on UPS batteries." | wall
@@ -84,20 +84,20 @@ $NetBSD: patch-ad,v 1.4 2006/11/15 21:46:25 bouyer Exp $
 +	;;
 +	failing)
 +		printf "UPS battery power exhaused. Doing shutdown.\n" | wall
-+		/usr/bin/logger -p user.info -t apccontrol "UPS battery power exhaused. Doing shutdown.\n"
++		/usr/bin/logger -p user.info -t apccontrol "UPS battery power exhaused. Doing shutdown."
 +	;;
 +	timeout)
 +		printf "UPS battery runtime limit exceeded. Doing shutdown.\n" | wall
-+		/usr/bin/logger -p user.info -t apccontrol "UPS battery runtime limit exceeded. Doing shutdown.\n"
++		/usr/bin/logger -p user.info -t apccontrol "UPS battery runtime limit exceeded. Doing shutdown."
 +	;;
 +	loadlimit)
 +		printf "UPS battery discharge limit reached. Doing shutdown.\n" | wall
-+		/usr/bin/logger -p user.info -t apccontrol "UPS battery discharge limit reached. Doing shutdown.\n"
++		/usr/bin/logger -p user.info -t apccontrol "UPS battery discharge limit reached. Doing shutdown."
 +	;;
 +	runlimit)
 +		printf "UPS battery runtime percent reached. Doing shutdown.\n" \
 +			| wall
-+		/usr/bin/logger -p user.info -t apccontrol "UPS battery runtime percent reached. Doing shutdown.\n"
++		/usr/bin/logger -p user.info -t apccontrol "UPS battery runtime percent reached. Doing shutdown."
 +	;;
 +	doreboot)
 +		printf "Beginning Reboot Sequence" | wall
@@ -108,18 +108,18 @@ $NetBSD: patch-ad,v 1.4 2006/11/15 21:46:25 bouyer Exp $
 +		${SHUTDOWN} -h now "apcupsd initiated shutdown"
 +	;;
 +	annoyme)
-+		printf "Power problems please logoff." | wall
++		printf "Power problems, please logoff." | wall
 +	;;
 +	emergency)
 +		printf "Emergency Shutdown. Possible UPS battery failure." \
 +			| wall
-+		/usr/bin/logger -p user.info -t apccontrol "Emergency Shutdown. Possible UPS battery failure."
++		/usr/bin/logger -p user.crit -t apccontrol "Emergency Shutdown. Possible UPS battery failure."
 +		${SHUTDOWN} -h now "apcupsd emergency shutdown"
 +	;;
 +	changeme)
 +		printf "Emergency! UPS batteries have failed\nChange them NOW" \
 +			| wall
-+		/usr/bin/logger -p user.info -t apccontrol "Emergency! UPS batteries have failed\nChange them NOW"
++		/usr/bin/logger -p user.info -t apccontrol "Emergency! UPS batteries have failed. Change them NOW."
 +	;;
 +	remotedown)
 +		printf "Remote Shutdown.\nBeginning Shutdown Sequence." | wall
