@@ -1,0 +1,15 @@
+$NetBSD: patch-include_linc_linc-protocol_h,v 1.1 2012/05/07 00:20:34 dholland Exp $
+
+Fix build with latest glib2.
+
+--- include/linc/linc-protocol.h~	2002-06-12 16:46:39.000000000 +0000
++++ include/linc/linc-protocol.h
+@@ -12,7 +12,7 @@
+ #ifndef _LINC_PROTOCOL_H_
+ #define _LINC_PROTOCOL_H_
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
