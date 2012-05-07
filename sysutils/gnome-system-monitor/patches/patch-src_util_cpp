@@ -1,0 +1,15 @@
+$NetBSD: patch-src_util_cpp,v 1.1 2012/05/07 01:28:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/util.cpp~	2010-02-09 13:23:26.000000000 +0000
++++ src/util.cpp
+@@ -1,7 +1,7 @@
+ #include <config.h>
+ 
+ #include <glib/gi18n.h>
+-#include <glib/gstring.h>
++#include <glib.h>
+ #include <gtk/gtk.h>
+ 
+ #include <glibtop/proctime.h>

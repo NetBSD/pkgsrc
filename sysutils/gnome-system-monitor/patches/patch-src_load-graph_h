@@ -1,0 +1,15 @@
+$NetBSD: patch-src_load-graph_h,v 1.1 2012/05/07 01:28:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/load-graph.h~	2010-02-09 13:23:26.000000000 +0000
++++ src/load-graph.h
+@@ -1,7 +1,7 @@
+ #ifndef _PROCMAN_LOAD_GRAPH_H_
+ #define _PROCMAN_LOAD_GRAPH_H_
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <glibtop/cpu.h>
+ 
+ enum
