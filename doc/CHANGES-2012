@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1453 2012/05/07 08:42:00 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1454 2012/05/07 15:21:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2321,3 +2321,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/babl to 0.1.10 [adam 2012-05-07]
 	Updated graphics/gegl to 0.2.0 [adam 2012-05-07]
 	Updated graphics/gimp to 2.8.0 [adam 2012-05-07]
+	Updated www/fengoffice to 2.0.0nb1 [taca 2012-05-07]
