@@ -1,0 +1,15 @@
+$NetBSD: patch-src_eel-canvas-rect_c,v 1.1 2012/05/07 01:34:55 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/eel-canvas-rect.c~	2008-07-22 13:41:47.000000000 +0000
++++ src/eel-canvas-rect.c
+@@ -28,7 +28,7 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-#include <glib/gstring.h>
++#include <glib.h>
+ #include <libgnomecanvas/gnome-canvas-util.h>
+ 
+ /* FIXME: check for this in configure and use it. */
