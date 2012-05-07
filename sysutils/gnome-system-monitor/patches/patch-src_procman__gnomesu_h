@@ -1,0 +1,15 @@
+$NetBSD: patch-src_procman__gnomesu_h,v 1.1 2012/05/07 01:28:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/procman_gnomesu.h~	2010-02-09 13:23:26.000000000 +0000
++++ src/procman_gnomesu.h
+@@ -1,7 +1,7 @@
+ #ifndef H_GNOME_SYSTEM_MONITOR_GNOMESU_H_1132171917
+ #define H_GNOME_SYSTEM_MONITOR_GNOMESU_H_1132171917
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ gboolean
+ procman_gnomesu_create_root_password_dialog(const char * message);

@@ -1,0 +1,15 @@
+$NetBSD: patch-src_lsof_h,v 1.1 2012/05/07 01:28:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/lsof.h~	2010-02-09 13:23:26.000000000 +0000
++++ src/lsof.h
+@@ -1,7 +1,7 @@
+ #ifndef H_PROCMAN_LSOF_1161179202
+ #define H_PROCMAN_LSOF_1161179202
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ #include "procman.h"
+ 
+ void procman_lsof(ProcData *data);
