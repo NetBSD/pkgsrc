@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2011/07/11 10:44:29 drochner Exp $
+$NetBSD: distinfo,v 1.9 2012/05/07 00:26:48 dholland Exp $
 
 SHA1 (epdfview-0.1.8.tar.bz2) = 72da8958f58cf7ec55b55541f2e67895b402df3f
 RMD160 (epdfview-0.1.8.tar.bz2) = f9444fe278863fdbb545543957a8777e1129ffed
 Size (epdfview-0.1.8.tar.bz2) = 466270 bytes
+SHA1 (patch-src_gtk_StockIcons_h) = be421819baa4c05916d3dc213bd9d9968b9e83ca
