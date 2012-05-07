@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2012/05/07 01:53:42 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2012/05/07 02:45:47 dholland Exp $
 
 BUILDLINK_TREE+=	${RUBY_BASE}
 
@@ -9,7 +9,7 @@ RUBY_BUILDLINK3_MK:=
 .include "../../lang/ruby/rubyversion.mk"
 .endif
 
-BUILDLINK_API_DEPENDS.${RUBY_BASE}?=	${RUBY_BASE}>=${RUBY_VERSION}
+BUILDLINK_API_DEPENDS.${RUBY_BASE}+=	${RUBY_BASE}>=${RUBY_VERSION}
 BUILDLINK_ABI_DEPENDS.${RUBY_BASE}+=	${RUBY_BASE}>=${RUBY_ABI_VERSION}
 BUILDLINK_PKGSRCDIR.${RUBY_BASE}?=	../../lang/${RUBY_BASE}
 BUILDLINK_FILES.${RUBY_BASE}+=		lib/libruby${RUBY_VER}.*
