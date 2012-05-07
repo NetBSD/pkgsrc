@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2009/04/07 11:12:27 drochner Exp $
+$NetBSD: distinfo,v 1.8 2012/05/07 00:31:46 dholland Exp $
 
 SHA1 (libgnomecups-0.2.3.tar.gz) = f7e9a2be39e4e52b346a121d738dc935f45dcee1
 RMD160 (libgnomecups-0.2.3.tar.gz) = 13215f0304440f53a3e91f0b0a02d6fcef626c44
 Size (libgnomecups-0.2.3.tar.gz) = 455261 bytes
+SHA1 (patch-libgnomecups_gnome-cups-i18n_c) = d67cebfe703ac2a283c5096c8af30ddab79de725
+SHA1 (patch-libgnomecups_gnome-cups-init_h) = 0613660a334235db366c4d4d4cd22abc96f6dbff
