@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2010/12/23 11:44:27 dsainty Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/05/07 01:53:23 dholland Exp $
 
 BUILDLINK_TREE+=	hdf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hdf
 HDF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hdf+=	hdf>=4.1r5
-BUILDLINK_ABI_DEPENDS.hdf?=	hdf>=4.2r1nb1
+BUILDLINK_ABI_DEPENDS.hdf+=	hdf>=4.2r1nb1
 BUILDLINK_PKGSRCDIR.hdf?=	../../devel/hdf
 .endif # HDF_BUILDLINK3_MK
 

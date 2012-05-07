@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/04/16 04:55:17 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/05/07 01:53:41 dholland Exp $
 
 BUILDLINK_TREE+=	gcc47
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gcc47
 GCC47_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc47+=	gcc47>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc47?=	gcc47>=4.7.0
+BUILDLINK_ABI_DEPENDS.gcc47+=	gcc47>=4.7.0
 BUILDLINK_PKGSRCDIR.gcc47?=	../../lang/gcc47
 
 FIND_PREFIX:=	BUILDLINK_PREFIX.gcc47=gcc47

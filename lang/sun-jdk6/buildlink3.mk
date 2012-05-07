@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:24:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2012/05/07 01:53:43 dholland Exp $
 
 BUILDLINK_TREE+=	sun-jdk6
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sun-jdk6
 SUN_JDK6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sun-jdk6+=	sun-jdk6-[0-9]*
-BUILDLINK_ABI_DEPENDS.sun-jdk6?=	sun-jdk6>=6.0.4
+BUILDLINK_ABI_DEPENDS.sun-jdk6+=	sun-jdk6>=6.0.4
 BUILDLINK_PKGSRCDIR.sun-jdk6?=	../../lang/sun-jdk6
 BUILDLINK_DEPMETHOD.sun-jdk6?= build
 
