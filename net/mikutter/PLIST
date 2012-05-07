@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2012/05/01 06:50:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/05/07 21:45:25 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
+share/mikutter/core/addon/activity/activity.rb
 share/mikutter/core/addon/addon.rb
 share/mikutter/core/addon/alsa/alsa.rb
 share/mikutter/core/addon/api_request_file_cache.rb
@@ -37,12 +38,16 @@ share/mikutter/core/addon/set_view.rb
 share/mikutter/core/addon/settings/basic_settings.rb
 share/mikutter/core/addon/settings/builder.rb
 share/mikutter/core/addon/settings/listener.rb
+share/mikutter/core/addon/settings/multiselect.rb
 share/mikutter/core/addon/settings/select.rb
 share/mikutter/core/addon/settings/settings.rb
 share/mikutter/core/addon/settings/test_listener.rb
 share/mikutter/core/addon/shortcutkey.rb
 share/mikutter/core/addon/smartthread.rb
-share/mikutter/core/addon/streaming.rb
+share/mikutter/core/addon/streaming/parma_streamer.rb
+share/mikutter/core/addon/streaming/streamer.rb
+share/mikutter/core/addon/streaming/streamer_error.rb
+share/mikutter/core/addon/streaming/streaming.rb
 share/mikutter/core/addon/tco/tco.rb
 share/mikutter/core/addon/tco/test_tco.rb
 share/mikutter/core/autotag.rb
@@ -74,6 +79,7 @@ share/mikutter/core/lib/mikutwitter/error.rb
 share/mikutter/core/lib/mikutwitter/oauth_hacks.rb
 share/mikutter/core/lib/mikutwitter/query.rb
 share/mikutter/core/lib/mikutwitter/rate_limiting.rb
+share/mikutter/core/lib/mikutwitter/streaming_failed_actions.rb
 share/mikutter/core/lib/mikutwitter/test/154380989328662530.json
 share/mikutter/core/lib/mikutwitter/test/friendship.json
 share/mikutter/core/lib/mikutwitter/test/list_member.json
@@ -91,6 +97,7 @@ share/mikutter/core/lib/mikutwitter/test/test_api_call_support.rb
 share/mikutter/core/lib/mikutwitter/test/test_api_shortcuts.rb
 share/mikutter/core/lib/mikutwitter/test/test_cache.rb
 share/mikutter/core/lib/mikutwitter/test/test_query.rb
+share/mikutter/core/lib/mikutwitter/test/test_streaming_failed_actions.rb
 share/mikutter/core/lib/mikutwitter/test/test_unauthorized.rb
 share/mikutter/core/lib/mikutwitter/test/test_utils.rb
 share/mikutter/core/lib/mikutwitter/test/user.json
@@ -151,6 +158,7 @@ share/mikutter/core/mui/gtk_pseudo_signal_handler.rb
 share/mikutter/core/mui/gtk_selectbox.rb
 share/mikutter/core/mui/gtk_skin.rb
 share/mikutter/core/mui/gtk_timeline_utils.rb
+share/mikutter/core/mui/gtk_tree_view_pretty_scroll.rb
 share/mikutter/core/mui/gtk_userlist.rb
 share/mikutter/core/mui/gtk_web_image_loader.rb
 share/mikutter/core/mui/gtk_web_image_loader_image_cache.rb
@@ -215,9 +223,7 @@ share/mikutter/core/test/test_gtk_webicon.rb
 share/mikutter/core/test/test_message.rb
 share/mikutter/core/test/test_messageconverters.rb
 share/mikutter/core/test/test_miquire.rb
-share/mikutter/core/test/test_plugin.rb
 share/mikutter/core/test/test_retriever.rb
-share/mikutter/core/test/test_user.rb
 share/mikutter/core/test/test_utils.rb
 share/mikutter/core/test/test_web_image_loader.rb
 share/mikutter/core/user.rb
