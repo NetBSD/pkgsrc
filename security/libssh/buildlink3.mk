@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2011/11/27 03:49:03 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/05/07 01:53:57 dholland Exp $
 
 BUILDLINK_TREE+=	libssh
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libssh
 LIBSSH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libssh+=	libssh>=0.11
-BUILDLINK_ABI_DEPENDS.libssh?=	libssh>=0.11nb3
+BUILDLINK_ABI_DEPENDS.libssh+=	libssh>=0.11nb3
 BUILDLINK_PKGSRCDIR.libssh?=	../../security/libssh
 
 .include "../../devel/zlib/buildlink3.mk"

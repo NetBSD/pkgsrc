@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:24:49 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/05/07 01:53:39 dholland Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	gcc
 GCC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc+=		gcc>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc?=	gcc>=2.95.3nb7
+BUILDLINK_ABI_DEPENDS.gcc+=	gcc>=2.95.3nb7
 BUILDLINK_PKGSRCDIR.gcc?=	../../lang/gcc
 BUILDLINK_LIBDIRS.gcc?=		\
 	${_GCC_PREFIX:S/^${BUILDLINK_PREFIX.gcc}\///}lib \

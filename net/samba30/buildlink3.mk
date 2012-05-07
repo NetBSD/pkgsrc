@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2011/12/15 22:59:28 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/05/07 01:53:53 dholland Exp $
 
 BUILDLINK_TREE+=	samba
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	samba
 SAMBA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.samba+=	samba>=3.0.7
-BUILDLINK_ABI_DEPENDS.samba?=	samba>=3.0.34nb1
+BUILDLINK_ABI_DEPENDS.samba+=	samba>=3.0.34nb1
 BUILDLINK_PKGSRCDIR.samba?=	../../net/samba30
 
 .include "../../converters/libiconv/buildlink3.mk"

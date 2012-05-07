@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2011/04/22 13:42:43 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2012/05/07 01:53:53 dholland Exp $
 
 BUILDLINK_TREE+=	net6
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	net6
 NET6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.net6+=	net6>=1.3.5
-BUILDLINK_ABI_DEPENDS.net6?=	net6>=1.3.10nb1
+BUILDLINK_ABI_DEPENDS.net6+=	net6>=1.3.10nb1
 BUILDLINK_PKGSRCDIR.net6?=	../../net/net6
 
 .include "../../devel/libsigc++/buildlink3.mk"

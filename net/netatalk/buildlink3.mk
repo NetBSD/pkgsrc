@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:25:11 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2012/05/07 01:53:53 dholland Exp $
 
 BUILDLINK_TREE+=	netatalk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	netatalk
 NETATALK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.netatalk+=	netatalk>=2.0.3nb2
-BUILDLINK_ABI_DEPENDS.netatalk?=	netatalk>=2.0.3nb3
+BUILDLINK_ABI_DEPENDS.netatalk+=	netatalk>=2.0.3nb3
 BUILDLINK_PKGSRCDIR.netatalk?=	../../net/netatalk
 BUILDLINK_DEPMETHOD.netatalk?=	build
 .endif # NETATALK_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2011/11/13 08:11:28 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2012/05/07 01:53:12 dholland Exp $
 
 BUILDLINK_TREE+=	libarchive
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libarchive
 LIBARCHIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.2
-BUILDLINK_ABI_DEPENDS.libarchive?=	libarchive>=2.8.4nb1
+BUILDLINK_ABI_DEPENDS.libarchive+=	libarchive>=2.8.4nb1
 BUILDLINK_PKGSRCDIR.libarchive?=	../../archivers/libarchive
 
 CHECK_BUILTIN.libarchive:=     yes

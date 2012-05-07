@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:27 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2012/05/07 01:53:27 dholland Exp $
 
 BUILDLINK_TREE+=	pycursespanel
 
@@ -8,7 +8,7 @@ PY_CURSESPANEL_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pycursespanel+=	${PYPKGPREFIX}-cursespanel-[0-9]*
-BUILDLINK_ABI_DEPENDS.pycursespanel?=	${PYPKGPREFIX}-cursespanel>=0nb3
+BUILDLINK_ABI_DEPENDS.pycursespanel+=	${PYPKGPREFIX}-cursespanel>=0nb3
 BUILDLINK_PKGSRCDIR.pycursespanel?=	../../devel/py-cursespanel
 
 .include "../../devel/ncurses/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:25:09 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2012/05/07 01:53:52 dholland Exp $
 
 BUILDLINK_TREE+=	libdnet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdnet
 LIBDNET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdnet+=	libdnet>=1.7
-BUILDLINK_ABI_DEPENDS.libdnet?=	libdnet>=1.10nb1
+BUILDLINK_ABI_DEPENDS.libdnet+=	libdnet>=1.10nb1
 BUILDLINK_PKGSRCDIR.libdnet?=	../../net/libdnet
 .endif # LIBDNET_BUILDLINK3_MK
 
