@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1451 2012/05/07 00:21:15 obache Exp $
+$NetBSD: CHANGES-2012,v 1.1452 2012/05/07 07:28:37 agc Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2317,3 +2317,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated multimedia/kmplayer to 0.11.3bnb1 [dholland 2012-05-06]
 	Added security/google-authenticator version 0.0.20120506 [jmmv 2012-05-07]
 	Updated www/ruby-httpclient to 2.2.5 [obache 2012-05-07]
+	Added devel/sfslite version 1.2.7 [agc 2012-05-07]
