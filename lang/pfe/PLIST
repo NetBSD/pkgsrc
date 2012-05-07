@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/15 14:17:46 asau Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.20.1 2012/05/07 09:41:32 sbd Exp $
 bin/pfe
 bin/pfe-exec
 bin/pfe-exec-forth
@@ -1346,6 +1346,7 @@ share/doc/pfe/${PKGVERSION}/pfe-manual/ch01s17.html
 share/doc/pfe/${PKGVERSION}/pfe-manual/ch01s18.html
 share/doc/pfe/${PKGVERSION}/pfe-manual/ch01s19.html
 share/doc/pfe/${PKGVERSION}/pfe-manual/index.html
+share/doc/pfe/${PKGVERSION}/pfe-manual/pfe-manual.proc
 share/doc/pfe/${PKGVERSION}/pfe-words.html
 share/doc/pfe/${PKGVERSION}/pfe-wordsets.html
 share/doc/pfe/${PKGVERSION}/pfe-wordsets/assembler.html
