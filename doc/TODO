@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11068 2012/05/07 01:29:33 dholland Exp $
+$NetBSD: TODO,v 1.11069 2012/05/07 08:42:00 adam Exp $
 
 Suggested new packages
 ======================
@@ -672,13 +672,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geany-0.21
 	o gedit-3.2.6
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o gegl-0.2.0
 	o gentoo-0.19.13
 	o gfract-0.33
 	o ghc-7.0.4
 	o ghostscript-9.05 [wip]
 	o gifsicle-1.48
-	o gimp-2.8
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
