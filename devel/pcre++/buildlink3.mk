@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2012/03/03 00:11:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2012/05/07 01:53:26 dholland Exp $
 
 BUILDLINK_TREE+=	pcrexx
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pcrexx
 PCREXX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pcrexx+=	pcre++>=0.9.5
-BUILDLINK_ABI_DEPENDS.pcrexx?=	pcre++>=0.9.5nb2
+BUILDLINK_ABI_DEPENDS.pcrexx+=	pcre++>=0.9.5nb2
 BUILDLINK_PKGSRCDIR.pcrexx?=	../../devel/pcre++
 
 .include "../../devel/pcre/buildlink3.mk"
