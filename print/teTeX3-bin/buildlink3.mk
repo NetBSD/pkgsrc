@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:25:16 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2012/05/07 01:53:55 dholland Exp $
 
 BUILDLINK_TREE+=	teTeX-bin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	teTeX-bin
 TETEX_BIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb2
-BUILDLINK_ABI_DEPENDS.teTeX-bin?=	teTeX-bin>=3.0nb7
+BUILDLINK_ABI_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb7
 BUILDLINK_PKGSRCDIR.teTeX-bin?=	../../print/teTeX3-bin
 
 TEXMFDIST=	${PREFIX}/share/texmf-dist

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:25:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/05/07 01:54:04 dholland Exp $
 
 BUILDLINK_TREE+=	ap13-perl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ap13-perl
 AP_PERL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ap13-perl+=	ap13-perl>=1.29
-BUILDLINK_ABI_DEPENDS.ap13-perl?=	ap13-perl>=1.29
+BUILDLINK_ABI_DEPENDS.ap13-perl+=	ap13-perl>=1.29
 BUILDLINK_PKGSRCDIR.ap13-perl?=	../../www/ap-perl
 
 BUILDLINK_FILES.ap13-perl+=	lib/httpd/mod_perl.*
