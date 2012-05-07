@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:48 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/05/07 01:54:12 dholland Exp $
 
 BUILDLINK_TREE+=	pytk
 
@@ -8,7 +8,7 @@ PYTK_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pytk+=	${PYPKGPREFIX}-Tk-[0-9]*
-BUILDLINK_ABI_DEPENDS.pytk?=	${PYPKGPREFIX}-Tk>=0nb4
+BUILDLINK_ABI_DEPENDS.pytk+=	${PYPKGPREFIX}-Tk>=0nb4
 BUILDLINK_PKGSRCDIR.pytk?=	../../x11/py-Tk
 
 .include "../../x11/tk/buildlink3.mk"

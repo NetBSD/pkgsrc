@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2010/12/23 11:44:33 dsainty Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2012/05/07 01:53:31 dholland Exp $
 
 BUILDLINK_TREE+=	OpenRM
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	OpenRM
 OPENRM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.OpenRM+=	OpenRM>=1.5.1
-BUILDLINK_ABI_DEPENDS.OpenRM?=	OpenRM>=1.5.2nb5
+BUILDLINK_ABI_DEPENDS.OpenRM+=	OpenRM>=1.5.2nb5
 BUILDLINK_PKGSRCDIR.OpenRM?=	../../graphics/OpenRM
 
 .include "../../graphics/MesaLib/buildlink3.mk"
