@@ -1,0 +1,25 @@
+$NetBSD: patch-libdmapsharing_dpap-share_c,v 1.1 2012/05/07 00:10:24 dholland Exp $
+
+Fix build with latest glib2.
+
+--- libdmapsharing/dpap-share.c~	2010-11-07 17:58:43.000000000 +0000
++++ libdmapsharing/dpap-share.c
+@@ -29,8 +29,7 @@
+ #include <stdlib.h>
+ 
+ #include <glib/gi18n.h>
+-#include <glib/gslist.h>
+-#include <glib/gmappedfile.h>
++#include <glib.h>
+ 
+ #include <unistd.h>
+ #include <sys/types.h>
+@@ -451,7 +450,7 @@ add_entry_to_mlcl (gpointer id,
+ 			g_object_get (record, "location", &location, NULL);
+ 			if (mapped_file) {
+ 				/* Free any previously mapped image */
+-				g_mapped_file_free (mapped_file);
++				g_mapped_file_unref (mapped_file);
+ 				mapped_file = NULL;
+ 			}
+ 
