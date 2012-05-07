@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1.1.1 2012/05/06 13:12:12 obache Exp $
+$NetBSD: patch-am,v 1.2 2012/05/07 05:52:02 obache Exp $
 
 --- setup.py.orig	2012-04-11 06:54:08.000000000 +0000
 +++ setup.py
@@ -7,7 +7,7 @@ $NetBSD: patch-am,v 1.1.1.1 2012/05/06 13:12:12 obache Exp $
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
-+disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree", "_sqlite3", "_tkinter", "_gdbm", "pyexpat", "readline"]
++disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree", "_sqlite3", "_tkinter", "_gdbm", "pyexpat", "readline", "xxlimited"]
  
  # File which contains the directory for shared mods (for sys.path fixup
  # when running from the build dir, see Modules/getpath.c)
