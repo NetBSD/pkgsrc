@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/07 00:01:48 jmmv Exp $
+bin/google-authenticator
+lib/security/pam_google_authenticator.so
+share/doc/google-authenticator/README
