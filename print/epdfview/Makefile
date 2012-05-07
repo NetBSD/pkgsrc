@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/03 00:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2012/05/07 00:26:48 dholland Exp $
 #
 
 DISTNAME=	epdfview-0.1.8
@@ -14,7 +14,7 @@ COMMENT=	Lightweight PDF viewer using Poppler and GTK2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt
 
