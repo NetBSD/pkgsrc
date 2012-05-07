@@ -1,0 +1,15 @@
+$NetBSD: patch-src_gtk_StockIcons_h,v 1.1 2012/05/07 00:26:49 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/gtk/StockIcons.h~	2011-05-28 10:24:57.000000000 +0000
++++ src/gtk/StockIcons.h
+@@ -18,7 +18,7 @@
+ #if !defined (__STOCK_ICONS_H__)
+ #define __STOCK_ICONS_H__
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
