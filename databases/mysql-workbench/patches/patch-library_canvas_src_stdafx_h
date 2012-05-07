@@ -1,0 +1,15 @@
+$NetBSD: patch-library_canvas_src_stdafx_h,v 1.1 2012/05/07 18:40:35 dholland Exp $
+
+Fix build with latest glib2.
+
+--- library/canvas/src/stdafx.h~	2011-03-17 12:48:45.000000000 +0000
++++ library/canvas/src/stdafx.h
+@@ -53,7 +53,7 @@
+ #include <gl/glu.h>
+ 
+ 
+-#include <glib/gthread.h>
++#include <glib.h>
+ 
+ #endif // _WIN32
+ 
