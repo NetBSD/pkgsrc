@@ -1,13 +1,28 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/04/30 10:17:46 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2012/05/07 01:41:44 dholland Exp $
 
---- glibmm-utils/date.cc.orig	2008-01-16 18:22:26.000000000 +0100
+- fix build with latest glib2
+- use time_t correctly
+
+--- glibmm-utils/date.cc.orig	2008-01-16 17:22:26.000000000 +0000
 +++ glibmm-utils/date.cc
-@@ -50,7 +50,7 @@ get_current_daytime_generic(Glib::ustrin
+@@ -25,7 +25,7 @@
+ 
+ #include <sys/time.h>
+ 
+-#include <glib/gmessages.h>
++#include <glib.h>
+ 
+ #include <glibmm/convert.h>
+ #include <glibmm/date.h>
+@@ -50,7 +50,10 @@ get_current_daytime_generic(Glib::ustrin
  
      // Obtain the time of day, and convert it to a tm struct.
      gettimeofday(&tv, NULL);
 -    ptm = localtime(&tv.tv_sec);
-+    ptm = localtime((time_t *)&tv.tv_sec);
++    {
++        time_t thetime = tv.tv_sec;
++        ptm = localtime(&thetime);
++    }
  
      strftime(time_string, sizeof (time_string), format, ptm);
  

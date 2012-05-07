@@ -1,0 +1,16 @@
+$NetBSD: patch-glibmm-utils_ustring_cc,v 1.1 2012/05/07 01:41:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- glibmm-utils/ustring.cc~	2008-06-19 13:12:29.000000000 +0000
++++ glibmm-utils/ustring.cc
+@@ -20,8 +20,7 @@
+  */
+ 
+ #include <cstring> // for g++ 4.3
+-#include <glib/gmem.h>
+-#include <glib/gmessages.h>
++#include <glib.h>
+ #include "ustring.h"
+ 
+ namespace Glib {
