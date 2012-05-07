@@ -1,0 +1,17 @@
+$NetBSD: patch-libgeda_src_s__path_c,v 1.1 2012/05/07 18:14:15 dholland Exp $
+
+Fix build with latest glib2.
+
+--- libgeda/src/s_path.c~	2011-01-14 05:02:35.000000000 +0000
++++ libgeda/src/s_path.c
+@@ -37,9 +37,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-#include <glib/gmem.h>
+-#include <glib/gmessages.h>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ #include "libgeda_priv.h"
+ 
