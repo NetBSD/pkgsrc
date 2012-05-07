@@ -1,8 +1,8 @@
-$NetBSD: patch-src-afs-NBSD-osi_kmod.c,v 1.1 2012/05/02 23:19:25 christos Exp $
+$NetBSD: patch-src-afs-NBSD-osi_kmod.c,v 1.2 2012/05/07 17:54:44 christos Exp $
 
 --- src/afs/NBSD/osi_kmod.c.orig	2012-04-22 23:40:23.000000000 -0400
-+++ src/afs/NBSD/osi_kmod.c	2012-04-30 16:47:59.000000000 -0400
-@@ -64,6 +64,62 @@
++++ src/afs/NBSD/osi_kmod.c	2012-05-03 22:11:02.000000000 -0400
+@@ -64,6 +64,63 @@
  static sy_call_t *old_setgroups;
  static sy_call_t *old_ioctl;
  
@@ -21,7 +21,8 @@ $NetBSD: patch-src-afs-NBSD-osi_kmod.c,v 1.1 2012/05/02 23:19:25 christos Exp $
 +# define LOCK() kernconfig_lock()
 +# define UNLOCK() kernconfig_unlock()
 +# ifndef RUMP
-+	    old_sysent.sy_call != sys_nosys
++	    old_sysent.sy_call != sys_nosys &&
++	    old_sysent.sy_call != sys_nomodule
 +# else
 +	    false
 +# endif
@@ -65,7 +66,7 @@ $NetBSD: patch-src-afs-NBSD-osi_kmod.c,v 1.1 2012/05/02 23:19:25 christos Exp $
  MODULE(MODULE_CLASS_VFS, openafs, NULL);
  
  static int
-@@ -80,53 +136,21 @@
+@@ -80,53 +137,21 @@
  
  	switch (cmd) {
  	case MODULE_CMD_INIT:
