@@ -1,0 +1,13 @@
+$NetBSD: patch-libgnomecups_gnome-cups-i18n_c,v 1.1 2012/05/07 00:31:46 dholland Exp $
+
+Fix build with latest glib2.
+
+--- libgnomecups/gnome-cups-i18n.c~	2007-01-02 00:18:51.000000000 +0000
++++ libgnomecups/gnome-cups-i18n.c
+@@ -1,5 +1,5 @@
+ #include <config.h>
+-#include <glib/gmacros.h>
++#include <glib.h>
+ #include "gnome-cups-i18n.h"
+ 
+ #ifdef ENABLE_NLS
