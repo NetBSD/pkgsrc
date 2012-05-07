@@ -1,21 +1,29 @@
-$NetBSD: patch-app_config_Makefile.in,v 1.1 2012/05/04 16:17:39 joerg Exp $
+$NetBSD: patch-app_config_Makefile.in,v 1.2 2012/05/07 08:40:08 adam Exp $
 
---- app/config/Makefile.in.orig	2012-04-27 17:59:47.000000000 +0000
+--- app/config/Makefile.in.orig	2012-05-02 08:56:34.000000000 +0000
 +++ app/config/Makefile.in
-@@ -444,11 +444,11 @@ libappconfig_a_SOURCES = \
- EXTRA_DIST = makefile.msc
- test_config_DEPENDENCIES = $(gimpconfig_libs)
+@@ -522,15 +522,15 @@ test_config_DEPENDENCIES = $(gimpconfig_
+ # We need this due to circular dependencies, see more detailed
+ # comments about it in app/Makefile.am
  test_config_LDFLAGS = \
 -	-u $(SYMPREFIX)xcf_init				\
+-	-u $(SYMPREFIX)gimp_pdb_new			\
 -	-u $(SYMPREFIX)internal_procs_init		\
--	-u $(SYMPREFIX)gimp_coords_mix			\
 -	-u $(SYMPREFIX)gimp_plug_in_manager_restore	\
+-	-u $(SYMPREFIX)plug_in_icc_profile_apply_rgb	\
+-	-u $(SYMPREFIX)gimp_vectors_undo_get_type	\
+-	-u $(SYMPREFIX)gimp_vectors_mod_undo_get_type	\
+-	-u $(SYMPREFIX)gimp_vectors_prop_undo_get_type	\
 -	-u $(SYMPREFIX)gimp_image_map_config_get_type
 +	-Wl,-u,$(SYMPREFIX)xcf_init				\
++	-Wl,-u,$(SYMPREFIX)gimp_pdb_new			\
 +	-Wl,-u,$(SYMPREFIX)internal_procs_init		\
-+	-Wl,-u,$(SYMPREFIX)gimp_coords_mix			\
 +	-Wl,-u,$(SYMPREFIX)gimp_plug_in_manager_restore	\
++	-Wl,-u,$(SYMPREFIX)plug_in_icc_profile_apply_rgb	\
++	-Wl,-u,$(SYMPREFIX)gimp_vectors_undo_get_type	\
++	-Wl,-u,$(SYMPREFIX)gimp_vectors_mod_undo_get_type	\
++	-Wl,-u,$(SYMPREFIX)gimp_vectors_prop_undo_get_type	\
 +	-Wl,-u,$(SYMPREFIX)gimp_image_map_config_get_type
  
  test_config_LDADD = \
- 	../widgets/widgets-enums.o		\
+ 	../xcf/libappxcf.a			\
