@@ -1,0 +1,51 @@
+$NetBSD: patch-auto__map_h,v 1.1 2012/05/07 20:38:41 dholland Exp $
+
+Update the C++ dialect.
+
+--- auto_map.h.orig	2004-06-17 21:00:33.000000000 +0000
++++ auto_map.h
+@@ -23,10 +23,10 @@
+ #include <assert.h>
+ #include <map>
+ 
+-template <class K, class T, template <class BK, class BT> class Base>
+-class auto_map_base : public Base<K, restricted_ptr<T> > {
++template <class K, class T,  class Base>
++class auto_map_base : public Base {
+ 	protected:
+-		typedef Base<K, restricted_ptr<T> > super;
++		typedef Base super;
+ 	public:
+ 		typedef typename super::iterator iterator;
+ 
+@@ -55,9 +55,9 @@ class auto_map_base : public Base<K, res
+ 
+ 
+ template <class K, class T>
+-class auto_map : public auto_map_base<K, T, std::map> {
++class auto_map : public auto_map_base<K, T, std::map<K, restricted_ptr<T> > > {
+ 	public:
+-		typedef typename auto_map_base<K, T, std::map>::super super;
++		typedef typename auto_map_base<K, T, std::map<K, restricted_ptr<T> > >::super super;
+ 		typedef typename super::iterator iterator;
+ 		typedef typename super::value_type value_type;
+ 		/*super::value_type value_type(const K &k, T*p) {
+@@ -68,15 +68,15 @@ class auto_map : public auto_map_base<K,
+ 			return super::insert(v);
+ 		}*/
+ 		std::pair<iterator, bool> insert_value(const K &k, T* p) { //we can't really use the normal insert funcs, but we don't want to just name it insert since it would be easy to confuse with all the normal map insert funcs
+-			assert(find(k)==this->end());
++			assert(this->find(k)==this->end());
+ 			return super::insert(value_type(k, restricted_ptr<T>(p)));
+ 		}
+ };
+ 
+ template <class K, class T>
+-class auto_multimap : public auto_map_base<K, T, std::multimap> {
++class auto_multimap : public auto_map_base<K, T, std::multimap<K, restricted_ptr<T> > > {
+ 	public:
+-		typedef typename auto_map_base<K, T, std::multimap>::super super;
++		typedef typename auto_map_base<K, T, std::multimap<K, restricted_ptr<T> > >::super super;
+ 		typedef typename super::iterator iterator;
+ 		typedef typename super::value_type value_type;
+ 		iterator insert_value(const K &k, T* p) { //we can't really use the normal insert funcs, but we don't want to just name it insert since it would be easy to confuse with all the normal map insert funcs
