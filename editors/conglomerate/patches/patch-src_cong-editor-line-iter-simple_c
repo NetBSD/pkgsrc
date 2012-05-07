@@ -1,0 +1,31 @@
+$NetBSD: patch-src_cong-editor-line-iter-simple_c,v 1.1 2012/05/07 18:59:39 dholland Exp $
+
+Avoid symbol conflict with clone(2).
+
+--- src/cong-editor-line-iter-simple.c~	2004-11-04 19:18:48.000000000 +0000
++++ src/cong-editor-line-iter-simple.c
+@@ -26,13 +26,13 @@
+ #include "cong-editor-line-iter-simple.h"
+ 
+ static CongEditorLineIter*
+-clone (CongEditorLineIter *line_iter);
++clone_ (CongEditorLineIter *line_iter);
+ 
+ static CongEditorAreaLine*
+ get_line (CongEditorLineIter *line_iter);
+ 
+ CONG_DEFINE_CLASS_PUBLIC_DATA (CongEditorLineIterSimple, cong_editor_line_iter_simple, CONG_EDITOR_LINE_ITER_SIMPLE, CongEditorLineIter, CONG_EDITOR_LINE_ITER_TYPE, 
+-			       CONG_EDITOR_LINE_ITER_CLASS (klass)->clone = clone;
++			       CONG_EDITOR_LINE_ITER_CLASS (klass)->clone = clone_;
+ 			       CONG_EDITOR_LINE_ITER_CLASS (klass)->get_line = get_line;)
+ 
+ CONG_DEFINE_EMPTY_DISPOSE(cong_editor_line_iter_simple)
+@@ -58,7 +58,7 @@ cong_editor_line_iter_simple_new (CongEd
+ }
+ 
+ static CongEditorLineIter*
+-clone (CongEditorLineIter *line_iter)
++clone_ (CongEditorLineIter *line_iter)
+ {
+ 	CongEditorLineIterSimple* simple_iter = CONG_EDITOR_LINE_ITER_SIMPLE (line_iter);
+ 	CongEditorLineIterSimple* new_iter;
