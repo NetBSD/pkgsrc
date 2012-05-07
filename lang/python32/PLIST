@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/06 13:12:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/07 05:52:02 obache Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1909,7 +1909,6 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/syslog.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/termios.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/time.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/unicodedata.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/xxlimited.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/zlib.so
 lib/python${PY_VER_SUFFIX}/lib2to3/Grammar.txt
 lib/python${PY_VER_SUFFIX}/lib2to3/Grammar${PKGVERSION}.final.0.pickle
