@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1450 2012/05/07 00:03:00 jmmv Exp $
+$NetBSD: CHANGES-2012,v 1.1451 2012/05/07 00:21:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2316,3 +2316,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated misc/gelemental to 1.2.0nb10 [dholland 2012-05-06]
 	Updated multimedia/kmplayer to 0.11.3bnb1 [dholland 2012-05-06]
 	Added security/google-authenticator version 0.0.20120506 [jmmv 2012-05-07]
+	Updated www/ruby-httpclient to 2.2.5 [obache 2012-05-07]
