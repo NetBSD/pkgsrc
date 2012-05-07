@@ -1,0 +1,17 @@
+$NetBSD: patch-ext_spc_tag_c,v 1.1 2012/05/07 18:10:13 dholland Exp $
+
+Fix build with latest glib2.
+
+--- ext/spc/tag.c~	2011-12-11 18:49:11.000000000 +0000
++++ ext/spc/tag.c
+@@ -16,9 +16,7 @@
+  * Boston, MA 02111-1307, USA.
+  */
+ 
+-#include <glib/gstring.h>
+-#include <glib/gtypes.h>
+-#include <glib/gmem.h>
++#include <glib.h>
+ #include <glib/gprintf.h>
+ 
+ #include <tag.h>
