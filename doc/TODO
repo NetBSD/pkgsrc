@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11069 2012/05/07 08:42:00 adam Exp $
+$NetBSD: TODO,v 1.11070 2012/05/07 21:27:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -491,6 +491,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ctwm-3.8.1
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.23
+	o cwm-5.1
 	o cygwin_lib-1.5.24.2
 	o damageproto-1.2.1
 	o dansguardian-2.10.0.3
@@ -519,6 +520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dmenu-4.5
 	o dnsmasq-2.61
 	o doclifter-2.7
+	o dos2unix-6.0
 	o doxygen-1.8.0
 	o dpkg-1.16.0.3
 	o dri-7.8.2 [wip]
@@ -586,8 +588,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fetchyahoo-2.14.0
 	o ffmpeg-20120415.0.8.11
 	o ffmpeg-20120105.0.9.1
-	o ffmpeg-20120415.0.10.2
-	o ffplay-20120415.0.10.2
+	o ffmpeg-20120507.0.10.3
+	o ffplay-20120507.0.10.3
 	o fftw-3.3.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -1087,6 +1089,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php-jpgraph-3.0.6
 	o phppgadmin-5.0.3
 	o picp-0.6.8
+	o pidgin-2.10.4
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
@@ -1122,6 +1125,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pulseaudio-1.0
 	o puppet-2.7.6
 	o puzzle-9173
+	o puzzles-9505
 	o pv-1.2.0
 	o pwlib-1.11.1
 	o py-FourSuite-1.0.2
