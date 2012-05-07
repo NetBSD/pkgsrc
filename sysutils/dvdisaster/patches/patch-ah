@@ -1,8 +1,11 @@
-$NetBSD: patch-ah,v 1.1 2007/08/05 19:15:47 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2012/05/07 01:22:50 dholland Exp $
 
---- memtrack.c.orig	2007-08-01 20:40:51.000000000 +0000
+- use standard includes
+- fix build with latest glib2
+
+--- memtrack.c.orig	2011-10-02 18:32:04.000000000 +0000
 +++ memtrack.c
-@@ -21,9 +21,6 @@
+@@ -21,16 +21,12 @@
  
  #define _GNU_SOURCE
  
@@ -12,3 +15,10 @@ $NetBSD: patch-ah,v 1.1 2007/08/05 19:15:47 joerg Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
+ 
+ #include <glib.h>
+ #include <glib/gprintf.h>
+-#include <glib/gstrfuncs.h>
+ 
+ /*
+  * We're not pulling in dvdisaster.h on purpose...
