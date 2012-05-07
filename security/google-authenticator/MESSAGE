@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/05/07 00:01:48 jmmv Exp $
+
+Quick start to get OTPs for incoming SSH connections:
+
+1) Run google-authenticator to set up OTPs for your user.
+
+2) Install "Google Authenticator" on your phone.
+
+3) Set up a new account on your phone using the data printed on your screen
+   during step 1.  To make things easier, copy/paste the printed URL in
+   your browser.
+
+4) Add the following line to /etc/pam.d/sshd:
+
+   auth required ${PREFIX}/lib/security/pam_google_authenticator.so
+
+Please read ${PREFIX}/share/doc/google-authenticator/README for more
+details.
+
+===========================================================================
