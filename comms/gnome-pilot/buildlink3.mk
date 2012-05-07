@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.38 2012/05/07 01:53:17 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2012/05/07 02:45:47 dholland Exp $
 
 BUILDLINK_TREE+=	gnome-pilot
 
 .if !defined(GNOME_PILOT_BUILDLINK3_MK)
 GNOME_PILOT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnome-pilot?=		gnome-pilot>=2.0.12nb2
+BUILDLINK_API_DEPENDS.gnome-pilot+=		gnome-pilot>=2.0.12nb2
 BUILDLINK_ABI_DEPENDS.gnome-pilot+=	gnome-pilot>=2.0.17nb17
 BUILDLINK_PKGSRCDIR.gnome-pilot?=	../../comms/gnome-pilot
 
