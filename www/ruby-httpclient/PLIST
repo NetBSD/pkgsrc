@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/17 01:43:56 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/05/07 00:20:47 obache Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/lib/hexdump.rb
 ${GEM_LIBDIR}/lib/http-access2.rb
 ${GEM_LIBDIR}/lib/http-access2/cookie.rb
@@ -35,6 +36,7 @@ ${GEM_LIBDIR}/sample/ssl/webrick_httpsd.rb
 ${GEM_LIBDIR}/sample/stream.rb
 ${GEM_LIBDIR}/sample/thread.rb
 ${GEM_LIBDIR}/sample/wcat.rb
+${GEM_LIBDIR}/test/ca-chain.cert
 ${GEM_LIBDIR}/test/ca.cert
 ${GEM_LIBDIR}/test/client.cert
 ${GEM_LIBDIR}/test/client.key
@@ -48,6 +50,7 @@ ${GEM_LIBDIR}/test/sslsvr.rb
 ${GEM_LIBDIR}/test/subca.cert
 ${GEM_LIBDIR}/test/test_auth.rb
 ${GEM_LIBDIR}/test/test_cookie.rb
+${GEM_LIBDIR}/test/test_hexdump.rb
 ${GEM_LIBDIR}/test/test_http-access2.rb
 ${GEM_LIBDIR}/test/test_httpclient.rb
 ${GEM_LIBDIR}/test/test_ssl.rb
