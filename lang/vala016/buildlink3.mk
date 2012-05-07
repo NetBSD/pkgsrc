@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/04/11 11:43:58 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/05/07 01:53:44 dholland Exp $
 
 BUILDLINK_TREE+=	vala
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vala
 VALA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vala+=	vala016>=0.16
-BUILDLINK_ABI_DEPENDS.vala?=	vala016>=0.16
+BUILDLINK_ABI_DEPENDS.vala+=	vala016>=0.16
 BUILDLINK_PKGSRCDIR.vala?=	../../lang/vala016
 
 VALAC=${LOCALBASE}/bin/valac-0.16

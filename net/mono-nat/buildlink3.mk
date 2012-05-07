@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2012/04/27 12:31:59 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2012/05/07 01:53:53 dholland Exp $
 
 BUILDLINK_TREE+=	mono-nat
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mono-nat
 MONO_NAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mono-nat+=	mono-nat>=1.0.2
-BUILDLINK_ABI_DEPENDS.mono-nat?=	mono-nat>=1.0.2nb4
+BUILDLINK_ABI_DEPENDS.mono-nat+=	mono-nat>=1.0.2nb4
 BUILDLINK_PKGSRCDIR.mono-nat?=	../../net/mono-nat
 
 .include "../../lang/mono/buildlink3.mk"

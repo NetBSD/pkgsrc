@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:25:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/05/07 01:54:06 dholland Exp $
 
 BUILDLINK_TREE+=	Xaw-Xpm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	Xaw-Xpm
 XAW_XPM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.Xaw-Xpm+=	Xaw-Xpm>=1.1
-BUILDLINK_ABI_DEPENDS.Xaw-Xpm?=	Xaw-Xpm>=1.1nb2
+BUILDLINK_ABI_DEPENDS.Xaw-Xpm+=	Xaw-Xpm>=1.1nb2
 BUILDLINK_PKGSRCDIR.Xaw-Xpm?=	../../x11/Xaw-Xpm
 
 .include "../../mk/bsd.fast.prefs.mk"

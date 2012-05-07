@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:34 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2012/05/07 01:53:30 dholland Exp $
 
 BUILDLINK_TREE+=	mftrace
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mftrace
 MFTRACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mftrace+=	mftrace>=1.0.19
-BUILDLINK_ABI_DEPENDS.mftrace?=	mftrace>=1.1.1nb3
+BUILDLINK_ABI_DEPENDS.mftrace+=	mftrace>=1.1.1nb3
 BUILDLINK_PKGSRCDIR.mftrace?=	../../fonts/mftrace
 .endif # MFTRACE_BUILDLINK3_MK
 

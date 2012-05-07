@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:25:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2012/05/07 01:54:06 dholland Exp $
 
 BUILDLINK_TREE+=	Xaw3d
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	Xaw3d
 XAW3D_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.Xaw3d+=	Xaw3d>=1.5
-BUILDLINK_ABI_DEPENDS.Xaw3d?=	Xaw3d>=1.5Enb1
+BUILDLINK_ABI_DEPENDS.Xaw3d+=	Xaw3d>=1.5Enb1
 BUILDLINK_PKGSRCDIR.Xaw3d?=	../../x11/Xaw3d
 
 BUILDLINK_TRANSFORM+=		l:Xaw:Xaw3d

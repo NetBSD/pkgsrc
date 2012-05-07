@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:17 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/05/07 01:53:56 dholland Exp $
 
 BUILDLINK_TREE+=	dirmngr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dirmngr
 DIRMNGR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dirmngr+=	dirmngr>=0.9.3nb1
-BUILDLINK_ABI_DEPENDS.dirmngr?=	dirmngr>=0.9.3nb2
+BUILDLINK_ABI_DEPENDS.dirmngr+=	dirmngr>=0.9.3nb2
 BUILDLINK_PKGSRCDIR.dirmngr?=	../../security/dirmngr
 .endif # DIRMNGR_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/04/17 22:01:19 rh Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2012/05/07 01:53:21 dholland Exp $
 
 BUILDLINK_TREE+=	edcommon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	edcommon
 EDCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.edcommon+=	edcommon>=32nb6
-BUILDLINK_ABI_DEPENDS.edcommon?=	edcommon>=32nb6
+BUILDLINK_ABI_DEPENDS.edcommon+=	edcommon>=32nb6
 BUILDLINK_PKGSRCDIR.edcommon?=	../../devel/edcommon
 .endif # EDCOMMON_BUILDLINK3_MK
 

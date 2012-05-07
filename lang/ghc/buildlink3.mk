@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2010/03/24 21:54:16 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2012/05/07 01:53:41 dholland Exp $
 
 BUILDLINK_TREE+=	ghc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ghc
 GHC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ghc+=	ghc>=6.8.3
-BUILDLINK_ABI_DEPENDS.ghc?=	ghc>=6.8.3nb2
+BUILDLINK_ABI_DEPENDS.ghc+=	ghc>=6.8.3nb2
 BUILDLINK_PKGSRCDIR.ghc?=	../../lang/ghc
 
 BUILDLINK_DEPMETHOD.ghc?=	build

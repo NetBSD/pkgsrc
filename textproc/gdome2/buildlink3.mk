@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2012/03/03 00:12:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2012/05/07 01:54:02 dholland Exp $
 
 BUILDLINK_TREE+=	gdome2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdome2
 GDOME2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdome2+=	gdome2>=0.8.1nb1
-BUILDLINK_ABI_DEPENDS.gdome2?=	gdome2>=0.8.1nb5
+BUILDLINK_ABI_DEPENDS.gdome2+=	gdome2>=0.8.1nb5
 BUILDLINK_PKGSRCDIR.gdome2?=	../../textproc/gdome2
 
 .include "../../devel/glib2/buildlink3.mk"

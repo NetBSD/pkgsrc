@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:24:53 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2012/05/07 01:53:43 dholland Exp $
 
 BUILDLINK_TREE+=	tcl-tclX
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tcl-tclX
 TCL_TCLX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tcl-tclX+=	tcl-tclX>=8.3.5
-BUILDLINK_ABI_DEPENDS.tcl-tclX?=	tcl-tclX>=8.3.5nb3
+BUILDLINK_ABI_DEPENDS.tcl-tclX+=	tcl-tclX>=8.3.5nb3
 BUILDLINK_PKGSRCDIR.tcl-tclX?=	../../lang/tcl-tclX
 
 .include "../../lang/tcl/buildlink3.mk"

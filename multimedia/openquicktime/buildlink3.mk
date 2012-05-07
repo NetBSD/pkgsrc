@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/03/03 00:12:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2012/05/07 01:53:50 dholland Exp $
 
 BUILDLINK_TREE+=	openquicktime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openquicktime
 OPENQUICKTIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openquicktime+=	openquicktime>=1.0nb2
-BUILDLINK_ABI_DEPENDS.openquicktime?=	openquicktime>=1.0nb10
+BUILDLINK_ABI_DEPENDS.openquicktime+=	openquicktime>=1.0nb10
 BUILDLINK_PKGSRCDIR.openquicktime?=	../../multimedia/openquicktime
 
 .include "../../devel/glib2/buildlink3.mk"
