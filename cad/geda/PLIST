@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/06/19 06:37:44 dholland Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/05/07 18:15:59 dholland Exp $
 bin/convert_sym
 bin/garchive
 bin/gattrib
@@ -232,8 +232,8 @@ share/doc/geda-gaf/wiki/geda-ngspice_mp.html
 share/doc/geda-gaf/wiki/geda-olib_readme.html
 share/doc/geda-gaf/wiki/geda-pcb-quick_reference.fr.html
 share/doc/geda-gaf/wiki/geda-pcb-quick_reference.html
-share/doc/geda-gaf/wiki/geda-pcb_footprints.html
 share/doc/geda-gaf/wiki/geda-pcb_footprint_naming_conventions.html
+share/doc/geda-gaf/wiki/geda-pcb_footprints.html
 share/doc/geda-gaf/wiki/geda-pcb_funding_sow-fwdann_ideas.html
 share/doc/geda-gaf/wiki/geda-pcb_funding_sow-gui_ideas.html
 share/doc/geda-gaf/wiki/geda-pcb_funding_sow.html
