@@ -1,0 +1,4 @@
+The SFS toolkit was developed to support the SFS distributed file
+system (see http://www.fs.net).  But because others use the toolkit
+for other reasons, we're making SFS's libraries available as a
+separate, lightweight package.

@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/05/07 07:25:55 agc Exp $
+
+Old C++ warning
+
+--- async/myaddrs.C	2012/03/28 12:41:30	1.1
++++ async/myaddrs.C	2012/03/28 12:42:18
+@@ -74,7 +74,7 @@
+   res->clear ();
+   bhash<in_addr> addrs;
+ 
+-  p = ifc.ifc_buf;
++  p = (char *)(void *)ifc.ifc_buf;
+   e = p + ifc.ifc_len;
+   while (p < e) {
+     struct ifreq *ifrp = (struct ifreq *) p;
