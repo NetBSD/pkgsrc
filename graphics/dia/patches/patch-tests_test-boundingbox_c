@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_test-boundingbox_c,v 1.1 2012/05/07 00:46:25 dholland Exp $
+
+Fix build with latest glib2.
+
+--- tests/test-boundingbox.c~	2009-11-07 14:28:35.000000000 +0000
++++ tests/test-boundingbox.c
+@@ -28,9 +28,6 @@
+ #include <glib.h>
+ #include <glib-object.h>
+ 
+-#if GLIB_CHECK_VERSION(2,16,0)
+-#include <glib/gtestutils.h>
+-#endif
+ #include "dialib.h"
+ 
+ /*
