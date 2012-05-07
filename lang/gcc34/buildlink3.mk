@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2012/04/25 18:40:27 hans Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2012/05/07 01:53:40 dholland Exp $
 
 BUILDLINK_TREE+=	gcc34
 
@@ -12,7 +12,7 @@ _GCC34_SUBDIR=	gcc34
 _GCC34_PREFIX=	${BUILDLINK_PREFIX.gcc34}/${_GCC34_SUBDIR}
 
 BUILDLINK_API_DEPENDS.gcc34+=	gcc34>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc34?=	gcc34>=3.4.6nb4
+BUILDLINK_ABI_DEPENDS.gcc34+=	gcc34>=3.4.6nb4
 BUILDLINK_PKGSRCDIR.gcc34?=	../../lang/gcc34
 
 .  if exists(${_GCC34_PREFIX}/bin/gcc)
