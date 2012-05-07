@@ -1,10 +1,10 @@
-$NetBSD: patch-plug-ins_script-fu_script-fu-server.c,v 1.1 2012/02/04 21:10:45 adam Exp $
+$NetBSD: patch-plug-ins_script-fu_script-fu-server.c,v 1.2 2012/05/07 08:40:08 adam Exp $
 
 AI_ADDRCONFIG is not defined on some platforms.
 
 --- plug-ins/script-fu/script-fu-server.c.orig	2012-02-04 18:42:45.000000000 +0000
 +++ plug-ins/script-fu/script-fu-server.c
-@@ -446,7 +446,11 @@ server_start (gint         port,
+@@ -456,7 +456,11 @@ server_start (gint         port,
    const gchar     *progress;
  
    memset (&hints, 0, sizeof (hints));

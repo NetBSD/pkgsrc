@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.211 2012/03/03 00:12:14 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2012/05/07 08:40:07 adam Exp $
 
-DISTNAME=	gimp-2.6.12
-PKGREVISION=	2
+DISTNAME=	gimp-2.8.0
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.6/ \
-		${MASTER_SITE_GNU:=gimp/v2.6/} \
-		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v2.6/
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/ \
+		${MASTER_SITE_GNU:=gimp/v${PKGVERSION_NOREV:R}/} \
+		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
@@ -43,7 +42,7 @@ CONFIGURE_ARGS+=	--without-linux-input
 UNLIMIT_RESOURCES+=	datasize
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
-.for f in controllerrc gimprc gtkrc menurc ps-menurc sessionrc templaterc unitrc
+.for f in controllerrc gimprc gtkrc menurc sessionrc templaterc unitrc
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
