@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/05/07 07:25:55 agc Exp $
+
+use the correct function without ambiguous details
+
+--- rpcc/genheader.C	2012/03/28 12:43:45	1.1
++++ rpcc/genheader.C	2012/03/28 12:45:10
+@@ -351,7 +351,7 @@
+ }
+ 
+ static str
+-tolower (const str &in)
++sfslitetolower (const str &in)
+ {
+   strbuf r;
+   for (const char *c = in.cstr (); *c; c++) {
+@@ -505,7 +505,7 @@
+ dump_tmpl_proc (const rpc_proc *rc)
+ {
+   str arg, res;
+-  str fn = tolower (rc->id);
++  str fn = sfslitetolower (rc->id);
+   if (rc->arg != "void") arg = rc->arg;
+   if (rc->res != "void") res = rc->res;
+   str spc = "    ";
