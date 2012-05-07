@@ -1,0 +1,15 @@
+$NetBSD: patch-include_linc_linc-server_h,v 1.1 2012/05/07 00:20:34 dholland Exp $
+
+Fix build with latest glib2.
+
+--- include/linc/linc-server.h~	2002-01-23 17:29:03.000000000 +0000
++++ include/linc/linc-server.h
+@@ -12,7 +12,7 @@
+ #ifndef _LINC_SERVER_H_
+ #define _LINC_SERVER_H_
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
