@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1590 2012/05/04 23:41:13 pettai Exp $
+# $NetBSD: Makefile,v 1.1591 2012/05/07 07:26:56 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -1469,6 +1469,7 @@ SUBDIR+=	sdcc
 SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	sfio
+SUBDIR+=	sfslite
 SUBDIR+=	sgb
 SUBDIR+=	sgi-stl
 SUBDIR+=	sgi-stl-docs
