@@ -1,0 +1,16 @@
+$NetBSD: patch-fposval_c,v 1.1 2012/05/07 19:57:17 dholland Exp $
+
+Avoid generating incorrect code that leads to a build failure on
+NetBSD 6+.
+
+--- fposval.c~	2007-09-19 22:35:23.000000000 +0000
++++ fposval.c
+@@ -129,7 +129,7 @@ main(int argc, char **argv)
+ 	 * systems a FILEPOS is not a scalar hince we must memcpy.
+ 	 */
+ 	printf("#define SWAP_HALF_IN_FILEPOS(dest, src)\t%s\n",
+-	    "memcpy((void *)(dest), (void *)(src), sizeof(FPOS_POS_LEN))");
++	    "memcpy((void *)(dest), (void *)(src), FILEPOS_LEN)");
+ #endif /* HAVE_FILEPOS_SCALAR */
+ #endif /* CALC_BYTE_ORDER == BIG_ENDIAN */
+ 	putchar('\n');
