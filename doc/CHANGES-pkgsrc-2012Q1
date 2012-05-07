@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.28 2012/05/06 09:54:31 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.29 2012/05/07 09:43:40 sbd Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -139,3 +139,7 @@ Pullup ticket #3772 - requested by dholland
 devel/guile-gnome: build fix
 Pullup ticket #3773 - requested by joerg
 graphics/digikam-kde3: packaging fix
+Pullup ticket #3774 - requested by taca
+lang/php53 security update
+Pullup ticket #3775 - requested by dholland
+lang/pfe builde fix
