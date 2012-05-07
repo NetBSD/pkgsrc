@@ -1,0 +1,25 @@
+$NetBSD: patch-lib_ext_wocky_wocky_wocky-heartbeat-source_c,v 1.1 2012/05/07 18:54:44 dholland Exp $
+
+Fix build with latest glib2.
+
+--- lib/ext/wocky/wocky/wocky-heartbeat-source.c~	2011-02-16 15:40:58.000000000 +0000
++++ lib/ext/wocky/wocky/wocky-heartbeat-source.c
+@@ -30,6 +30,18 @@
+ # include <iphbd/libiphb.h>
+ #endif
+ 
++/*
++ * While the deprecation warning says "use g_source_get_time instead",
++ * that returns a different type and appears to have different
++ * semantics.
++ *
++ * According to Google and confirmed by checking the glib2 source,
++ * g_source_get_current_time is equivalent to g_get_current_time, so
++ * we'll use that, and hopefully upstream will deal with this
++ * eventually.
++ */
++#define g_source_get_current_time(s, t) g_get_current_time(t)
++
+ typedef struct _WockyHeartbeatSource {
+     GSource parent;
+ 
