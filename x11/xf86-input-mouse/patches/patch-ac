@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2009/05/22 19:05:57 tnn Exp $
+$NetBSD: patch-ac,v 1.2 2012/05/08 11:20:13 drochner Exp $
 
 Changes from NetBSD xsrc/external/mit/xorg-server/dist/\
 hw/xfree86/os-support/bsd/bsd_mouse.c
@@ -23,8 +23,8 @@ Set the mouse event protocol version. (untested, but head will be broken
 unless I add this).
 ----------------------------
 
---- src/bsd_mouse.c.orig	2009-05-19 15:12:28 +0300
-+++ src/bsd_mouse.c	2009-05-19 15:13:13 +0300
+--- src/bsd_mouse.c.orig	2012-03-16 06:34:27.000000000 +0000
++++ src/bsd_mouse.c
 @@ -53,12 +53,15 @@
  
  #define HUP_GENERIC_DESKTOP     0x0001
@@ -41,6 +41,15 @@ unless I add this).
  #define HID_USAGE2(p,u) (((p) << 16) | u)
  
  /* The UMS mices have middle button as number 3 */
+@@ -98,7 +101,7 @@ static int
+ SupportedInterfaces(void)
+ {
+ #if defined(__NetBSD__)
+-    return MSE_SERIAL | MSE_BUS | MSE_PS2 | MSE_AUTO;
++    return MSE_SERIAL | MSE_BUS | MSE_PS2 | MSE_AUTO | MSE_MISC;
+ #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
+     return MSE_SERIAL | MSE_BUS | MSE_PS2 | MSE_AUTO | MSE_MISC;
+ #else
 @@ -339,6 +342,23 @@ FindDevice(InputInfoPtr pInfo, const cha
  }
  #endif
@@ -65,7 +74,7 @@ unless I add this).
  #if (defined(__OpenBSD__) || defined(__NetBSD__)) && defined(WSCONS_SUPPORT)
  
  /* Only support wsmouse configuration for now */
-@@ -496,7 +516,7 @@ typedef struct _UsbMseRec {
+@@ -473,7 +493,7 @@ typedef struct _UsbMseRec {
      hid_item_t loc_x;		/* x locator item */
      hid_item_t loc_y;		/* y locator item */
      hid_item_t loc_z;		/* z (wheel) locator item */
@@ -74,7 +83,7 @@ unless I add this).
      hid_item_t loc_btn[MSE_MAXBUTTONS]; /* buttons locator items */
     unsigned char *buffer;
  } UsbMseRec, *UsbMsePtr;
-@@ -708,6 +728,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -688,6 +708,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
      if (hid_locate(reportDesc, HID_USAGE2(HUP_GENERIC_DESKTOP, HUG_WHEEL),
  		   hid_input, &pUsbMse->loc_z, pUsbMse->iid) < 0) {
      }
@@ -84,7 +93,7 @@ unless I add this).
  #else
      if (hid_locate(reportDesc, HID_USAGE2(HUP_GENERIC_DESKTOP, HUG_X),
  		   hid_input, &pUsbMse->loc_x) < 0) {
-@@ -720,6 +743,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
+@@ -700,6 +723,9 @@ usbPreInit(InputInfoPtr pInfo, const cha
      if (hid_locate(reportDesc, HID_USAGE2(HUP_GENERIC_DESKTOP, HUG_WHEEL),
  		   hid_input, &pUsbMse->loc_z) < 0) {
      }
@@ -94,7 +103,7 @@ unless I add this).
  #endif
      /* Probe for number of buttons */
      for (i = 1; i <= MSE_MAXBUTTONS; i++) {
-@@ -790,6 +816,9 @@ xf86OSMouseInit(int flags)
+@@ -772,6 +798,9 @@ OSMouseInit(int flags)
      p->SetupAuto = SetupAuto;
      p->SetMiscRes = SetMouseRes;
  #endif
