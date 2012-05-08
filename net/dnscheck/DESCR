@@ -1,0 +1,9 @@
+DNSCheck is a program that was designed to help people check, measure and
+hopefully also understand the workings of the Domain Name System, DNS.
+When a domain (aka zone) is submitted to DNSCheck it will investigate
+the domain's general health by traversing the DNS from root (.) to
+the TLD (Top Level Domain, like .SE) to eventually the nameserver(s)
+that holds the information about the specified domain (like iis.se).
+Some other sanity checks, for example measuring host connectivity,
+validity of IP-addresses and control of DNSSEC signatures
+will also be performed.
