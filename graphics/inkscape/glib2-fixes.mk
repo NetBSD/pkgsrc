@@ -1,11 +1,13 @@
-# $NetBSD: glib2-fixes.mk,v 1.2 2012/05/07 00:54:19 dholland Exp $
+# $NetBSD: glib2-fixes.mk,v 1.3 2012/05/08 02:42:09 dholland Exp $
 
 # Fix build with the latest glib2.
 
 SUBST_CLASSES+=		glib2
 SUBST_MESSAGE.glib2=	Fixing glib2 includes.
-#SUBST_STAGE.glib2=	pre-build
-SUBST_STAGE.glib2=	post-patch
+# For testing, post-patch is better. For production, pre-build decreases
+# the chances of confusion and of bad interactions with patches.
+#SUBST_STAGE.glib2=	post-patch
+SUBST_STAGE.glib2=	pre-build
 
 SUBST_FILES.glib2+=	src/2geom/matrix.h
 SUBST_FILES.glib2+=	src/application/application.h
