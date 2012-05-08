@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2012/04/01 20:07:31 rhaen Exp $
+$NetBSD: distinfo,v 1.33 2012/05/08 20:53:53 rhaen Exp $
 
-SHA1 (DBI-1.618.tar.gz) = e8fa89be193c04cfb36eac50b25c0c26f7f39a83
-RMD160 (DBI-1.618.tar.gz) = 4eb2b87e37d3788a7e7532413bbc3710c1e66ae6
-Size (DBI-1.618.tar.gz) = 583067 bytes
+SHA1 (DBI-1.620.tar.gz) = 6eeb432f60894e58c4c404edfd67a9420beb0b3f
+RMD160 (DBI-1.620.tar.gz) = 69f1d7df887a396f1afe7cbcc065af7a11111423
+Size (DBI-1.620.tar.gz) = 584922 bytes
