@@ -1,0 +1,15 @@
+$NetBSD: patch-libf95.a-0.92_configure,v 1.1 2012/05/08 03:14:25 sbd Exp $
+
+Use $host_alias in the gcc-libdir path so it matches ${MACHINE_GNU_PLATFORM}
+
+--- libf95.a-0.92/configure.orig	2008-09-17 04:06:15.000000000 +0000
++++ libf95.a-0.92/configure
+@@ -7470,7 +7470,7 @@ fi
+ { echo "$as_me:$LINENO: result: $gcc_version" >&5
+ echo "${ECHO_T}$gcc_version" >&6; }
+ 
+-DEST_LIBDIR=$prefix/lib/gcc-lib/$host/$gcc_version
++DEST_LIBDIR=$prefix/lib/gcc-lib/$host_alias/$gcc_version
+ 
+ 
+ 
