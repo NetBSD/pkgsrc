@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.532 2012/05/08 16:55:44 minskim Exp $
+# $NetBSD: Makefile,v 1.533 2012/05/08 18:42:52 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -304,6 +304,8 @@ SUBDIR+=	tex-exam
 SUBDIR+=	tex-exam-doc
 SUBDIR+=	tex-excludeonly
 SUBDIR+=	tex-excludeonly-doc
+SUBDIR+=	tex-extsizes
+SUBDIR+=	tex-extsizes-doc
 SUBDIR+=	tex-fancybox
 SUBDIR+=	tex-fancybox-doc
 SUBDIR+=	tex-fancyhdr
