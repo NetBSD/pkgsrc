@@ -1,0 +1,9 @@
+The files offer an Adobe Type 1 format version of the 5pt, 7pt
+and 10pt versions of the bbold fonts. The distribution also
+includes a map file, for use when incorporating the fonts into
+TeX documents, but no macro sets are provided (the fonts will
+not provide the correct results using macros designed for use
+with the MetaFont versions of the fonts. The fonts were
+produced to be part of the TeX distribution from Y&Y; they were
+generously donated to the TeX Users' Group when Y&Y closed its
+doors as a business.
