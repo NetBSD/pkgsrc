@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.115 2007/11/22 09:36:38 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.116 2012/05/08 23:11:48 sbd Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -994,7 +994,7 @@ sub parse_makefile_vars($$) {
     }
 
     while ( defined( $_ = shift(@data) ) ) {
-        s/\s*#.*//;
+        s/\s*[^\\]#.*//;
 
         # Continuation lines
         #
