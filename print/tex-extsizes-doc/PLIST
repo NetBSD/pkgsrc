@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/08 18:41:27 minskim Exp $
+share/texmf-dist/doc/latex/extsizes/README
+share/texmf-dist/doc/latex/extsizes/extsizes.pdf
+share/texmf-dist/doc/latex/extsizes/extsizes.tex
+share/texmf-dist/doc/latex/extsizes/readme.extsizes
