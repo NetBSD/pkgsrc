@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/28 12:17:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/05/08 09:37:51 obache Exp $
 bin/xlsopcodes${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/spreadsheet/excel/internals.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/internals/biff5.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/internals/biff8.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/offset.rb
+${GEM_LIBDIR}/lib/spreadsheet/excel/password_hash.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/reader.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/reader/biff5.rb
 ${GEM_LIBDIR}/lib/spreadsheet/excel/reader/biff8.rb
@@ -53,6 +54,7 @@ ${GEM_LIBDIR}/test/data/test_datetime.xls
 ${GEM_LIBDIR}/test/data/test_empty.xls
 ${GEM_LIBDIR}/test/data/test_formula.xls
 ${GEM_LIBDIR}/test/data/test_long_sst_record.xls
+${GEM_LIBDIR}/test/data/test_merged_and_protected.xls
 ${GEM_LIBDIR}/test/data/test_merged_cells.xls
 ${GEM_LIBDIR}/test/data/test_missing_row.xls
 ${GEM_LIBDIR}/test/data/test_version_excel5.xls
@@ -67,5 +69,6 @@ ${GEM_LIBDIR}/test/integration.rb
 ${GEM_LIBDIR}/test/row.rb
 ${GEM_LIBDIR}/test/suite.rb
 ${GEM_LIBDIR}/test/workbook.rb
+${GEM_LIBDIR}/test/workbook_protection.rb
 ${GEM_LIBDIR}/test/worksheet.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
