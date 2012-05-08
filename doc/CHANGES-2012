@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1470 2012/05/08 21:39:18 pettai Exp $
+$NetBSD: CHANGES-2012,v 1.1471 2012/05/08 21:49:02 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2342,3 +2342,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-DBI to 1.620 [rhaen 2012-05-08]
 	Updated sysutils/shelldap to 0.5 [imil 2012-05-08]
 	Updated security/p5-Crypt-OpenSSL-RSA to 0.28 [pettai 2012-05-08]
+	Updated databases/p5-DBD-mysq to 4.021 [rhaen 2012-05-08]
