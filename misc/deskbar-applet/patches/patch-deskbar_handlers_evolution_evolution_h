@@ -1,0 +1,15 @@
+$NetBSD: patch-deskbar_handlers_evolution_evolution_h,v 1.1 2012/05/08 02:48:26 dholland Exp $
+
+Fix build with latest glib2.
+
+--- deskbar/handlers/evolution/evolution.h~	2010-09-27 13:25:25.000000000 +0000
++++ deskbar/handlers/evolution/evolution.h
+@@ -2,7 +2,7 @@
+ #ifndef __DESKBAR_EVOLUTION_H__
+ #define __DESKBAR_EVOLUTION_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <gdk-pixbuf/gdk-pixbuf.h>
+ 
+ G_BEGIN_DECLS

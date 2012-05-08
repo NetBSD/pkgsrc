@@ -1,0 +1,12 @@
+$NetBSD: patch-deskbar_handlers_evolution_evolution_c,v 1.1 2012/05/08 02:48:26 dholland Exp $
+
+Fix build with latest glib2.
+
+--- deskbar/handlers/evolution/evolution.c~	2010-09-27 13:25:25.000000000 +0000
++++ deskbar/handlers/evolution/evolution.c
+@@ -1,5 +1,4 @@
+ #include <glib.h>
+-#include <glib/gstring.h>
+ #include <libebook/e-book.h>
+ #include <pango/pango.h>
+ #include <string.h>
