@@ -1,0 +1,14 @@
+$NetBSD: patch-dupe__file_cc,v 1.1 2012/05/08 18:25:08 dholland Exp $
+
+Use standard headers.
+
+--- dupe_file.cc~	2004-05-29 23:00:05.000000000 +0000
++++ dupe_file.cc
+@@ -20,6 +20,7 @@
+ #include "log.h"
+ #include "path.h"
+ 
++#include <cstring>
+ #include <dirent.h>
+ #include <ctype.h>
+ #include <sys/stat.h>
