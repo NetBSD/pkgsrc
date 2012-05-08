@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/08 18:00:02 minskim Exp $
+share/texmf-dist/fonts/afm/public/bbold-type1/bbold10.afm
+share/texmf-dist/fonts/afm/public/bbold-type1/bbold5.afm
+share/texmf-dist/fonts/afm/public/bbold-type1/bbold7.afm
+share/texmf-dist/fonts/map/dvips/bbold-type1/bbold.map
+share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
+share/texmf-dist/fonts/type1/public/bbold-type1/bbold5.pfb
+share/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb
