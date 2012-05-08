@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/08 09:34:17 imil Exp $
+
+SHA1 (tolua++-1.0.93.tar.bz2) = 4a4d4d948e03320ef74314aa6698677c0af4199f
+RMD160 (tolua++-1.0.93.tar.bz2) = 1e1ffaff985832d2355a07ee6a94c4c67ca38551
+Size (tolua++-1.0.93.tar.bz2) = 163956 bytes
+SHA1 (patch-SConstruct) = dfd520a0c30e64f9c895b956175b1dd996863691
+SHA1 (patch-src_lib_SCsub) = e86f249905b171d248f0a498728ce4b17ae074f7
