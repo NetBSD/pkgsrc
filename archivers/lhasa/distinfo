@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/02 12:19:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2012/05/08 06:13:27 wiz Exp $
 
-SHA1 (lhasa-0.0.4.tar.gz) = f2a99b5b6c35d2428cfca5206fe704d910a5555f
-RMD160 (lhasa-0.0.4.tar.gz) = 3b9123e2d0282756aa14f498c6d628b25a03dd51
-Size (lhasa-0.0.4.tar.gz) = 1748043 bytes
+SHA1 (lhasa-0.0.5.tar.gz) = 3433b13a208aebcd0b966c4642d49ecbb9caa681
+RMD160 (lhasa-0.0.5.tar.gz) = e9204197595c38e11304f0b308679cc2da0da201
+Size (lhasa-0.0.5.tar.gz) = 1753764 bytes
