@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/05/04 01:23:37 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/05/08 16:08:53 hans Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -44,6 +44,7 @@ LIBS.SunOS+=	-lm
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=	OBJCOPY=:
+CONFIGURE_ENV+=	ac_cv_prog_PKG_CONFIG=""
 .endif
 
 # Ruby build process depends on config.status's content
