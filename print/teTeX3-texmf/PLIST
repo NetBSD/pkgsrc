@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2012/04/18 19:37:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.33 2012/05/08 18:43:46 minskim Exp $
 share/texmf-dist/aliases
 share/texmf-dist/bibtex/bst/adrconv/adrconv.bst
 share/texmf-dist/bibtex/bst/adrconv/adrfax.bst
@@ -2587,7 +2587,6 @@ share/texmf-dist/doc/latex/appendix/README
 share/texmf-dist/doc/latex/appendix/appendix.dvi
 share/texmf-dist/doc/latex/bar/README.package
 share/texmf-dist/doc/latex/bbm/bbm.dvi
-share/texmf-dist/doc/latex/bbold/bbold.dvi
 share/texmf-dist/doc/latex/bibunits/00Readme
 share/texmf-dist/doc/latex/bibunits/bibtexall
 share/texmf-dist/doc/latex/bibunits/bibunits.dvi
@@ -2653,7 +2652,6 @@ share/texmf-dist/doc/latex/esint/esint.dvi
 share/texmf-dist/doc/latex/eulervm/README.eulervm
 share/texmf-dist/doc/latex/eulervm/eulervm.pdf
 share/texmf-dist/doc/latex/eulervm/manifest.txt
-share/texmf-dist/doc/latex/extsizes/readme.extsizes
 share/texmf-dist/doc/latex/filecontents/filecontents.dvi
 share/texmf-dist/doc/latex/floatflt/floatexm.dvi
 share/texmf-dist/doc/latex/floatflt/floatexm.tex
@@ -3488,24 +3486,6 @@ share/texmf-dist/fonts/source/public/bbm/blbord.mf
 share/texmf-dist/fonts/source/public/bbm/blbordl.mf
 share/texmf-dist/fonts/source/public/bbm/blbordsp.mf
 share/texmf-dist/fonts/source/public/bbm/blbordu.mf
-share/texmf-dist/fonts/source/public/bbold/bbbase.mf
-share/texmf-dist/fonts/source/public/bbold/bbgreekl.mf
-share/texmf-dist/fonts/source/public/bbold/bbgreeku.mf
-share/texmf-dist/fonts/source/public/bbold/bbligs.mf
-share/texmf-dist/fonts/source/public/bbold/bblower.mf
-share/texmf-dist/fonts/source/public/bbold/bbnum.mf
-share/texmf-dist/fonts/source/public/bbold/bbold.mf
-share/texmf-dist/fonts/source/public/bbold/bbold10.mf
-share/texmf-dist/fonts/source/public/bbold/bbold12.mf
-share/texmf-dist/fonts/source/public/bbold/bbold17.mf
-share/texmf-dist/fonts/source/public/bbold/bbold5.mf
-share/texmf-dist/fonts/source/public/bbold/bbold6.mf
-share/texmf-dist/fonts/source/public/bbold/bbold7.mf
-share/texmf-dist/fonts/source/public/bbold/bbold8.mf
-share/texmf-dist/fonts/source/public/bbold/bbold9.mf
-share/texmf-dist/fonts/source/public/bbold/bbparams.mf
-share/texmf-dist/fonts/source/public/bbold/bbpunc.mf
-share/texmf-dist/fonts/source/public/bbold/bbupper.mf
 share/texmf-dist/fonts/source/public/cbgreek/cbaccent.mf
 share/texmf-dist/fonts/source/public/cbgreek/cbbase.mf
 share/texmf-dist/fonts/source/public/cbgreek/cbdigits.mf
@@ -4758,14 +4738,6 @@ share/texmf-dist/fonts/tfm/public/bbm/bbmtt12.tfm
 share/texmf-dist/fonts/tfm/public/bbm/bbmtt8.tfm
 share/texmf-dist/fonts/tfm/public/bbm/bbmtt9.tfm
 share/texmf-dist/fonts/tfm/public/bbm/bbmvtt10.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold17.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold5.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
-share/texmf-dist/fonts/tfm/public/bbold/bbold9.tfm
 share/texmf-dist/fonts/tfm/public/cc-pl/pccsc10.tfm
 share/texmf-dist/fonts/tfm/public/cc-pl/pcmi10.tfm
 share/texmf-dist/fonts/tfm/public/cc-pl/pcr10.tfm
@@ -6287,8 +6259,6 @@ share/texmf-dist/tex/latex/bbm/bbm.sty
 share/texmf-dist/tex/latex/bbm/ubbm.fd
 share/texmf-dist/tex/latex/bbm/ubbmss.fd
 share/texmf-dist/tex/latex/bbm/ubbmtt.fd
-share/texmf-dist/tex/latex/bbold/Ubbold.fd
-share/texmf-dist/tex/latex/bbold/bbold.sty
 share/texmf-dist/tex/latex/bibunits/bibunits.sty
 share/texmf-dist/tex/latex/calrsfs/calrsfs.sty
 share/texmf-dist/tex/latex/ccaption/ccaption.sty
@@ -6387,18 +6357,6 @@ share/texmf-dist/tex/latex/eulervm/uzeuex.fd
 share/texmf-dist/tex/latex/eulervm/uzeur.fd
 share/texmf-dist/tex/latex/eulervm/uzeus.fd
 share/texmf-dist/tex/latex/example/example.sty
-share/texmf-dist/tex/latex/extsizes/autopagewidth.sty
-share/texmf-dist/tex/latex/extsizes/extarticle.cls
-share/texmf-dist/tex/latex/extsizes/extbook.cls
-share/texmf-dist/tex/latex/extsizes/extletter.cls
-share/texmf-dist/tex/latex/extsizes/extproc.cls
-share/texmf-dist/tex/latex/extsizes/extreport.cls
-share/texmf-dist/tex/latex/extsizes/extsizes.sty
-share/texmf-dist/tex/latex/extsizes/size14.clo
-share/texmf-dist/tex/latex/extsizes/size17.clo
-share/texmf-dist/tex/latex/extsizes/size20.clo
-share/texmf-dist/tex/latex/extsizes/size8.clo
-share/texmf-dist/tex/latex/extsizes/size9.clo
 share/texmf-dist/tex/latex/fguill/fguill.sty
 share/texmf-dist/tex/latex/filecontents/filecontents.sty
 share/texmf-dist/tex/latex/floatflt/floatflt.sty
