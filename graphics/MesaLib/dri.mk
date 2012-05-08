@@ -1,10 +1,11 @@
-# $NetBSD: dri.mk,v 1.4 2009/08/08 15:03:18 drochner Exp $
+# $NetBSD: dri.mk,v 1.5 2012/05/08 20:33:14 wiz Exp $
 #
 # Currently, this is for convenience only.
 #
 .if !defined(DRI_MK)
 DRI_MK=		# defined
 
+.  include "../../sysutils/libpciaccess/buildlink3.mk"
 .  include "../../textproc/expat/buildlink3.mk"
 .  include "../../x11/dri2proto/buildlink3.mk"
 .  include "../../x11/glproto/buildlink3.mk"
