@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2011/01/23 09:42:10 markd Exp $
+$NetBSD: patch-ac,v 1.2 2012/05/08 02:59:16 sbd Exp $
 
---- configure.orig	2011-01-18 12:06:11.000000000 +0000
+Use $host_alias in the gcc-libdir path so it matches ${MACHINE_GNU_PLATFORM}
+
+--- configure.orig	2008-08-20 01:05:52.000000000 +0000
 +++ configure
 @@ -4669,7 +4669,7 @@ target_version=0
  
@@ -10,4 +12,13 @@ $NetBSD: patch-ac,v 1.1 2011/01/23 09:42:10 markd Exp $
 +   CPPFLAGS="-I$with_gcc_dir/gcc -I$with_gcc_dir/include -I$with_gcc_dir/gcc/config -I$with_gcc_dir/libcpp/include -I$with_gcc_dir/g95/gcc $CPPFLAGS"
  
     DEFAULT_INCLUDES=" "
+ 
+@@ -4876,7 +4876,7 @@ _ACEOF
+    { echo "$as_me:$LINENO: result: $gcc_version" >&5
+ echo "${ECHO_T}$gcc_version" >&6; }
+ 
+-   DEST_LIBDIR=$prefix/lib/gcc-lib/$host/$gcc_version
++   DEST_LIBDIR=$prefix/lib/gcc-lib/$host_alias/$gcc_version
+    SAVE_DIR=`pwd`
+    PREFIX=$prefix
  
