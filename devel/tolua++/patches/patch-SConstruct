@@ -1,0 +1,23 @@
+$NetBSD: patch-SConstruct,v 1.1.1.1 2012/05/08 09:34:17 imil Exp $
+
+Create shared object.
+
+--- SConstruct.orig	2008-04-21 00:05:35.000000000 +0000
++++ SConstruct
+@@ -22,6 +22,7 @@ opts.Add('CXX', 'The C++ compiler (for t
+ opts.Add('CCFLAGS', 'Flags for the compiler.', ['-O2', '-Wall'])
+ opts.Add('LINK', 'The linker.')
+ opts.Add('LINKFLAGS', 'Linker flags.', [])
++opts.Add('SONAME', 'Shared library name.')
+ opts.Add('no_cygwin', 'Use -mno-cygwin to build using the mingw compiler on cygwin', 0)
+ opts.Add('LIBS', 'libraries', [])
+ opts.Add('LIBPATH', 'library path', [])
+@@ -147,6 +148,8 @@ Files will be installed on <prefix>/bin,
+ env['CPPPATH'] = '#/include'
+ env['LIBPATH'] =  ['#/lib'] + env['LIBPATH']
+ 
++env.Append(SHLINKFLAGS=' -Wl,-soname='+env['SONAME'])
++
+ if env['no_cygwin']:
+ 
+ 	env['CCFLAGS'] += ['-mno-cygwin']

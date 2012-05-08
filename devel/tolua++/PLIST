@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/08 09:34:17 imil Exp $
+bin/tolua++
+include/tolua++.h
+lib/libtolua++.a
+lib/libtolua++.so
+lib/libtolua++.so.${LUA_VERSION}
+share/doc/tolua++/README
+share/doc/tolua++/README-5.1
+share/doc/tolua++/tolua++.html
