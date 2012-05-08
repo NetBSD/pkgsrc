@@ -1,0 +1,6 @@
+A geometric sans serif blackboard bold font, for use in
+mathematics; MetaFont sources are provided, as well as macros
+for use with LaTeX. The Sauter font package has MetaFont
+parameter source files for building the fonts at more sizes
+than you could reasonably imagine. See the blackboard sampler
+for a feel for the font's appearance.
