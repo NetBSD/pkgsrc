@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/03/20 17:26:19 hans Exp $
+# $NetBSD: Makefile,v 1.10 2012/05/08 02:59:57 sbd Exp $
 
 DISTNAME=		g95_source
 VERSION=		0.92
@@ -27,6 +27,7 @@ GCC_G95_DIR=		${GCC_DIR}/g95
 GCC_CONFIGURE_SCRIPT=	../configure
 GCC_CONFIGURE_ARGS=	${CONFIGURE_ARGS}
 GCC_CONFIGURE_ARGS+=	--enable-languages=c
+GCC_CONFIGURE_ARGS+=	--disable-multilib
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
