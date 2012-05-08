@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/08 18:28:51 minskim Exp $
+share/texmf-dist/doc/latex/bbold/INSTALL
+share/texmf-dist/doc/latex/bbold/README
+share/texmf-dist/doc/latex/bbold/bbold.pdf
