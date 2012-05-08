@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1463 2012/05/08 18:29:45 minskim Exp $
+$NetBSD: CHANGES-2012,v 1.1464 2012/05/08 18:42:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2334,3 +2334,5 @@ Changes to the packages collection and infrastructure in 2012:
 	Added fonts/tex-bbold-type1-doc version 2011 [minskim 2012-05-08]
 	Added fonts/tex-bbold version 1.01 [minskim 2012-05-08]
 	Added fonts/tex-bbold-doc version 1.01 [minskim 2012-05-08]
+	Added print/tex-extsizes version 1.4a [minskim 2012-05-08]
+	Added print/tex-extsizes-doc version 1.4a [minskim 2012-05-08]
