@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_third__party_nspr_prtime.cc,v 1.1 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_third__party_nspr_prtime.cc,v 1.2 2012/05/08 19:29:37 martin Exp $
+
+# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
 
 --- ipc/chromium/src/base/third_party/nspr/prtime.cc.orig	2011-12-20 23:28:19.000000000 +0000
 +++ ipc/chromium/src/base/third_party/nspr/prtime.cc
