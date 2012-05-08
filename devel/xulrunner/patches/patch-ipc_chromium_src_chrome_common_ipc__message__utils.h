@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_chrome_common_ipc__message__utils.h,v 1.1 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_chrome_common_ipc__message__utils.h,v 1.2 2012/05/08 19:29:37 martin Exp $
+
+# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
 
 --- ipc/chromium/src/chrome/common/ipc_message_utils.h.orig	2011-12-20 23:28:19.000000000 +0000
 +++ ipc/chromium/src/chrome/common/ipc_message_utils.h

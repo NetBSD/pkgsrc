@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.4 2012/04/01 15:18:45 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.5 2012/05/08 19:29:37 martin Exp $
+
+# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
 
 --- ipc/chromium/src/build/build_config.h.orig	2012-03-13 01:36:53.000000000 +0000
 +++ ipc/chromium/src/build/build_config.h

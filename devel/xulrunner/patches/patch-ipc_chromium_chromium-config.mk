@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_chromium-config.mk,v 1.2 2012/03/15 08:30:06 ryoon Exp $
+$NetBSD: patch-ipc_chromium_chromium-config.mk,v 1.3 2012/05/08 19:29:36 martin Exp $
+
+# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
 
 --- ipc/chromium/chromium-config.mk.orig	2012-02-16 07:40:33.000000000 +0100
 +++ ipc/chromium/chromium-config.mk	2012-03-11 11:05:40.397182000 +0100

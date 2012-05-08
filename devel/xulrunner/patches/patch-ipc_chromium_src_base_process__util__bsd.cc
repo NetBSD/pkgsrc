@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.4 2012/04/01 15:18:45 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util__bsd.cc,v 1.5 2012/05/08 19:29:36 martin Exp $
+
+# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
 
 --- ipc/chromium/src/base/process_util_bsd.cc.orig	2012-04-01 00:04:28.000000000 +0000
 +++ ipc/chromium/src/base/process_util_bsd.cc
