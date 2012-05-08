@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/08 18:41:18 minskim Exp $
+share/texmf-dist/tex/latex/extsizes/autopagewidth.sty
+share/texmf-dist/tex/latex/extsizes/extarticle.cls
+share/texmf-dist/tex/latex/extsizes/extbook.cls
+share/texmf-dist/tex/latex/extsizes/extletter.cls
+share/texmf-dist/tex/latex/extsizes/extproc.cls
+share/texmf-dist/tex/latex/extsizes/extreport.cls
+share/texmf-dist/tex/latex/extsizes/extsizes.sty
+share/texmf-dist/tex/latex/extsizes/size14.clo
+share/texmf-dist/tex/latex/extsizes/size17.clo
+share/texmf-dist/tex/latex/extsizes/size20.clo
+share/texmf-dist/tex/latex/extsizes/size8.clo
+share/texmf-dist/tex/latex/extsizes/size9.clo
