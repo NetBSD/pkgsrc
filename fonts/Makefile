@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2012/05/08 18:01:26 minskim Exp $
+# $NetBSD: Makefile,v 1.221 2012/05/08 18:29:45 minskim Exp $
 #
 
 COMMENT=	Fonts
@@ -171,6 +171,8 @@ SUBDIR+=	tex-amsfonts-doc
 SUBDIR+=	tex-arphic
 SUBDIR+=	tex-arphic-doc
 SUBDIR+=	tex-avantgar
+SUBDIR+=	tex-bbold
+SUBDIR+=	tex-bbold-doc
 SUBDIR+=	tex-bbold-type1
 SUBDIR+=	tex-bbold-type1-doc
 SUBDIR+=	tex-bera
