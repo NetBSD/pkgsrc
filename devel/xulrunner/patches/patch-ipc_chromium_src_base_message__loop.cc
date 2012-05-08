@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_message__loop.cc,v 1.1 2012/03/06 12:34:09 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_message__loop.cc,v 1.2 2012/05/08 19:29:36 martin Exp $
+
+# Reported upstream: https://bugzilla.mozilla.org/show_bug.cgi?id=753046
 
 --- ipc/chromium/src/base/message_loop.cc.orig	2012-02-16 07:40:33.000000000 +0100
 +++ ipc/chromium/src/base/message_loop.cc	2012-02-21 21:24:41.000000000 +0100
