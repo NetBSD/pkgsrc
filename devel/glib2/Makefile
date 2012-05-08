@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2012/05/04 10:22:08 obache Exp $
+# $NetBSD: Makefile,v 1.203 2012/05/08 16:07:22 hans Exp $
 
 .include "Makefile.common"
 .include "options.mk"
@@ -40,7 +40,8 @@ CONFIGURE_ARGS+=	PCRE_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib -
 # needs gz_header structure
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.2.1
 
-LIBS.SunOS+=	-lnsl -lsocket
+LIBS.SunOS+=		-lnsl -lsocket
+CPPFLAGS.SunOS+=	-DBSD_COMP
 
 .if ${OBJECT_FMT} == "ELF"
 .include "../../devel/libelf/buildlink3.mk"
