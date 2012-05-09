@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1482 2012/05/09 11:58:30 mspo Exp $
+$NetBSD: CHANGES-2012,v 1.1483 2012/05/09 19:21:38 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated devel/zlib to 1.2.7 [adam 2012-05-09]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.235 [obache 2012-05-09]
 	Updated multimedia/adobe-flash-plugin10.1 to 10.3.183.19 [obache 2012-05-09]
+	Updated textproc/p5-CAM-PDF to 1.57 [rhaen 2012-05-09]
