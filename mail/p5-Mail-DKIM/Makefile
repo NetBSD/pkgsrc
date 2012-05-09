@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2011/08/14 13:25:26 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/05/09 06:21:39 wiz Exp $
 #
 
 DISTNAME=		Mail-DKIM-0.38
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		p5mdk
 CATEGORIES=		mail perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mail/}
@@ -16,7 +16,7 @@ LICENSE=		${PERL5_LICENSE}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.24:../../security/p5-Crypt-OpenSSL-RSA
+DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.27:../../security/p5-Crypt-OpenSSL-RSA
 DEPENDS+=		p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
