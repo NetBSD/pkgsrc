@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1473 2012/05/08 23:13:38 sbd Exp $
+$NetBSD: CHANGES-2012,v 1.1474 2012/05/09 05:11:41 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2345,3 +2345,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated databases/p5-DBD-mysq to 4.021 [rhaen 2012-05-08]
 	Added net/dnscheck version 1.2.6 [pettai 2012-05-08]
 	Updated pkgtools/lintpkgsrc to 4.83 [sbd 2012-05-08]
+	Updated devel/p5-Want to 0.21 [rhaen 2012-05-09]
