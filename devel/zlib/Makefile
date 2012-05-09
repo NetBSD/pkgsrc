@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2012/03/19 15:47:12 adam Exp $
+# $NetBSD: Makefile,v 1.44 2012/05/09 11:33:09 adam Exp $
 
-DISTNAME=	zlib-1.2.6
+DISTNAME=	zlib-1.2.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.gzip.org/zlib/
