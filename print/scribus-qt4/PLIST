@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/09 17:44:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/09 09:28:31 drochner Exp $
 bin/scribus
 include/scribus/KarbonCurveFit.h
 include/scribus/about.h
@@ -389,6 +389,10 @@ include/scribus/plugins/tools/2geomtools/meshdistortion/ui_meshdistortiondialog.
 include/scribus/plugins/tools/2geomtools/pathalongpath/pathalongpath.h
 include/scribus/plugins/tools/2geomtools/pathalongpath/pathdialog.h
 include/scribus/plugins/tools/2geomtools/pathalongpath/ui_pathdialogbase.h
+include/scribus/plugins/tools/hunspellcheck/hunspelldialog.h
+include/scribus/plugins/tools/hunspellcheck/hunspellplugin.h
+include/scribus/plugins/tools/hunspellcheck/hunspellpluginimpl.h
+include/scribus/plugins/tools/hunspellcheck/hunspellpluginstructs.h
 include/scribus/plugins/tools/lenseffects/lensdialog.h
 include/scribus/plugins/tools/lenseffects/lenseffects.h
 include/scribus/plugins/tools/lenseffects/ui_lensdialogbase.h
@@ -692,170 +696,6 @@ lib/scribus/plugins/libsvgimplugin.so
 lib/scribus/plugins/libtransformeffect.so
 lib/scribus/plugins/libwmfimplugin.so
 lib/scribus/plugins/libx_aspellplugin.so
-lib/scribus/profiles/GenericCMYK.icm
-lib/scribus/profiles/GenericCMYK.txt
-lib/scribus/profiles/Readme
-lib/scribus/profiles/sRGB.icm
-lib/scribus/profiles/srgb.license
-lib/scribus/swatches/AFNOR_X_08-002.xml
-lib/scribus/swatches/AS_2007S-1996.xml
-lib/scribus/swatches/Alligator Collection 3000_bs00_3.eps
-lib/scribus/swatches/Alligator Collection 3000_bs01_3.eps
-lib/scribus/swatches/Alligator Collection 3000_kd01_4.eps
-lib/scribus/swatches/Alligator Collection 3000_np01_4.eps
-lib/scribus/swatches/Alligator Collection 3000_zd01_4.eps
-lib/scribus/swatches/Alligator Collection 4000_bs00_3.eps
-lib/scribus/swatches/Alligator Collection 4000_bs01_3.eps
-lib/scribus/swatches/Alligator Collection 4000_kd01_4.eps
-lib/scribus/swatches/Alligator Collection 4000_np01_4.eps
-lib/scribus/swatches/Alligator Collection 4000_zd01_4.eps
-lib/scribus/swatches/BS_381C.xml
-lib/scribus/swatches/BS_4800.xml
-lib/scribus/swatches/BannerRite_bs00_3.eps
-lib/scribus/swatches/BannerRite_bs01_3.eps
-lib/scribus/swatches/BannerRite_kd01_4.eps
-lib/scribus/swatches/BannerRite_np01_4.eps
-lib/scribus/swatches/BannerRite_zd01_4.eps
-lib/scribus/swatches/Baumann System Prase_bs00_3.eps
-lib/scribus/swatches/Baumann System Prase_bs01_3.eps
-lib/scribus/swatches/Baumann System Prase_kd01_4.eps
-lib/scribus/swatches/Baumann System Prase_np01_4.eps
-lib/scribus/swatches/Baumann System Prase_zd01_4.eps
-lib/scribus/swatches/COPYING_RESENE.txt
-lib/scribus/swatches/Colortrend Wood Stains_bs00_3.eps
-lib/scribus/swatches/Colortrend Wood Stains_bs01_3.eps
-lib/scribus/swatches/Colortrend Wood Stains_kd01_4.eps
-lib/scribus/swatches/Colortrend Wood Stains_np01_4.eps
-lib/scribus/swatches/Colortrend Wood Stains_zd01_4.eps
-lib/scribus/swatches/CrayonTM.xml
-lib/scribus/swatches/DEUTSCHEpapier_bs00_3.eps
-lib/scribus/swatches/DEUTSCHEpapier_bs01_3.eps
-lib/scribus/swatches/DEUTSCHEpapier_kd01_4.eps
-lib/scribus/swatches/DEUTSCHEpapier_np01_4.eps
-lib/scribus/swatches/DEUTSCHEpapier_zd01_4.eps
-lib/scribus/swatches/DRAKA POLYA_bs00_3.eps
-lib/scribus/swatches/DRAKA POLYA_bs01_3.eps
-lib/scribus/swatches/DRAKA POLYA_kd01_4.eps
-lib/scribus/swatches/DRAKA POLYA_np01_4.eps
-lib/scribus/swatches/DRAKA POLYA_zd01_4.eps
-lib/scribus/swatches/GCMI_Colors.xml
-lib/scribus/swatches/GS Palette 141 Kunstdruck_bs00_3.eps
-lib/scribus/swatches/GS Palette 141 Kunstdruck_bs01_3.eps
-lib/scribus/swatches/GS Palette 141 Kunstdruck_kd01_4.eps
-lib/scribus/swatches/GS Palette 141 Kunstdruck_np01_4.eps
-lib/scribus/swatches/GS Palette 141 Kunstdruck_zd01_4.eps
-lib/scribus/swatches/GS Palette 141 Naturpapier_bs00_3.eps
-lib/scribus/swatches/GS Palette 141 Naturpapier_bs01_3.eps
-lib/scribus/swatches/GS Palette 141 Naturpapier_kd01_4.eps
-lib/scribus/swatches/GS Palette 141 Naturpapier_np01_4.eps
-lib/scribus/swatches/GS Palette 141 Naturpapier_zd01_4.eps
-lib/scribus/swatches/Gnome.xml
-lib/scribus/swatches/Heidelberger ip Oberputze_bs00_3.eps
-lib/scribus/swatches/Heidelberger ip Oberputze_bs01_3.eps
-lib/scribus/swatches/Heidelberger ip Oberputze_kd01_4.eps
-lib/scribus/swatches/Heidelberger ip Oberputze_np01_4.eps
-lib/scribus/swatches/Heidelberger ip Oberputze_zd01_4.eps
-lib/scribus/swatches/J&S K_bs00_3.eps
-lib/scribus/swatches/J&S K_bs01_3.eps
-lib/scribus/swatches/J&S K_kd01_4.eps
-lib/scribus/swatches/J&S K_np01_4.eps
-lib/scribus/swatches/J&S K_zd01_4.eps
-lib/scribus/swatches/JIS_8721.xml
-lib/scribus/swatches/Japanese_Traditional.xml
-lib/scribus/swatches/Japanese_Traditional_README.txt
-lib/scribus/swatches/KOBRA_bs00_3.eps
-lib/scribus/swatches/KOBRA_bs01_3.eps
-lib/scribus/swatches/KOBRA_kd01_4.eps
-lib/scribus/swatches/KOBRA_np01_4.eps
-lib/scribus/swatches/KOBRA_zd01_4.eps
-lib/scribus/swatches/Koessinger Keramik-Druck_bs00_3.eps
-lib/scribus/swatches/Koessinger Keramik-Druck_bs01_3.eps
-lib/scribus/swatches/Koessinger Keramik-Druck_kd01_4.eps
-lib/scribus/swatches/Koessinger Keramik-Druck_np01_4.eps
-lib/scribus/swatches/Koessinger Keramik-Druck_zd01_4.eps
-lib/scribus/swatches/LibreOffice.xml
-lib/scribus/swatches/Munsell_Soil_Colors.xml
-lib/scribus/swatches/NBS-ISCC_Colors.xml
-lib/scribus/swatches/OSMO Einmallasur_bs00_3.eps
-lib/scribus/swatches/OSMO Einmallasur_bs01_3.eps
-lib/scribus/swatches/OSMO Einmallasur_kd01_4.eps
-lib/scribus/swatches/OSMO Einmallasur_np01_4.eps
-lib/scribus/swatches/OSMO Einmallasur_zd01_4.eps
-lib/scribus/swatches/OpenOffice_dot_org_CMYK.xml
-lib/scribus/swatches/OpenSUSE.xml
-lib/scribus/swatches/Oracal 451_bs00_3.eps
-lib/scribus/swatches/Oracal 451_bs01_3.eps
-lib/scribus/swatches/Oracal 451_kd01_4.eps
-lib/scribus/swatches/Oracal 451_np01_4.eps
-lib/scribus/swatches/Oracal 451_zd01_4.eps
-lib/scribus/swatches/Oracal 6510_bs00_3.eps
-lib/scribus/swatches/Oracal 6510_bs01_3.eps
-lib/scribus/swatches/Oracal 6510_kd01_4.eps
-lib/scribus/swatches/Oracal 6510_np01_4.eps
-lib/scribus/swatches/Oracal 6510_zd01_4.eps
-lib/scribus/swatches/Oxygen.xml
-lib/scribus/swatches/PRB Color_bs00_3.eps
-lib/scribus/swatches/PRB Color_bs01_3.eps
-lib/scribus/swatches/PRB Color_kd01_4.eps
-lib/scribus/swatches/PRB Color_np01_4.eps
-lib/scribus/swatches/PRB Color_zd01_4.eps
-lib/scribus/swatches/Resene_BS2660_101.xml
-lib/scribus/swatches/Resene_BS5252_2008.xml
-lib/scribus/swatches/Resene_Decks_Paths_2009.xml
-lib/scribus/swatches/Resene_Heritage_2008.xml
-lib/scribus/swatches/Resene_Karen_Walker_2008.xml
-lib/scribus/swatches/Resene_KidzColour_2008.xml
-lib/scribus/swatches/Resene_Multi-Finish.xml
-lib/scribus/swatches/Resene_Summit_Roof_2010.xml
-lib/scribus/swatches/Resene_The_Range_2011-12.xml
-lib/scribus/swatches/Resene_The_Range_WandN_2010.xml
-lib/scribus/swatches/SVG.xml
-lib/scribus/swatches/Scribus_Basic.xml
-lib/scribus/swatches/Scribus_Splash.xml
-lib/scribus/swatches/Sericol_UCG_Leuchtfarben_bs00_3.eps
-lib/scribus/swatches/Sericol_UCG_Leuchtfarben_bs01_3.eps
-lib/scribus/swatches/Sericol_UCG_Leuchtfarben_kd01_4.eps
-lib/scribus/swatches/Sericol_UCG_Leuchtfarben_np01_4.eps
-lib/scribus/swatches/Sericol_UCG_Leuchtfarben_zd01_4.eps
-lib/scribus/swatches/Sericol_UCG_MatchingSystem_bs00_3.eps
-lib/scribus/swatches/Sericol_UCG_MatchingSystem_bs01_3.eps
-lib/scribus/swatches/Sericol_UCG_MatchingSystem_kd01_4.eps
-lib/scribus/swatches/Sericol_UCG_MatchingSystem_np01_4.eps
-lib/scribus/swatches/Sericol_UCG_MatchingSystem_zd01_4.eps
-lib/scribus/swatches/Standardised_Rock_Colours.xml
-lib/scribus/swatches/TAG Farbe erleben_bs00_3.eps
-lib/scribus/swatches/TAG Farbe erleben_bs01_3.eps
-lib/scribus/swatches/TAG Farbe erleben_kd01_4.eps
-lib/scribus/swatches/TAG Farbe erleben_np01_4.eps
-lib/scribus/swatches/TAG Farbe erleben_zd01_4.eps
-lib/scribus/swatches/Tango.xml
-lib/scribus/swatches/US_FS_595.xml
-lib/scribus/swatches/Ubuntu_CMYK.xml
-lib/scribus/swatches/Ubuntu_RGB.xml
-lib/scribus/swatches/X11.xml
-lib/scribus/swatches/X11Grey.xml
-lib/scribus/swatches/Xfig.xml
-lib/scribus/swatches/dtp-studio-free-palettes-license.rtf
-lib/scribus/swatches/ispo 2001_bs00_3.eps
-lib/scribus/swatches/ispo 2001_bs01_3.eps
-lib/scribus/swatches/ispo 2001_kd01_4.eps
-lib/scribus/swatches/ispo 2001_np01_4.eps
-lib/scribus/swatches/ispo 2001_zd01_4.eps
-lib/scribus/swatches/ispo 840_bs00_3.eps
-lib/scribus/swatches/ispo 840_bs01_3.eps
-lib/scribus/swatches/ispo 840_kd01_4.eps
-lib/scribus/swatches/ispo 840_np01_4.eps
-lib/scribus/swatches/ispo 840_zd01_4.eps
-lib/scribus/swatches/kera Colour-Line_bs00_3.eps
-lib/scribus/swatches/kera Colour-Line_bs01_3.eps
-lib/scribus/swatches/kera Colour-Line_kd01_4.eps
-lib/scribus/swatches/kera Colour-Line_np01_4.eps
-lib/scribus/swatches/kera Colour-Line_zd01_4.eps
-lib/scribus/swatches/swedex_bs00_3.eps
-lib/scribus/swatches/swedex_bs01_3.eps
-lib/scribus/swatches/swedex_kd01_4.eps
-lib/scribus/swatches/swedex_np01_4.eps
-lib/scribus/swatches/swedex_zd01_4.eps
 man/de/man1/scribus.1
 man/man1/scribus.1
 man/pl/man1/scribus.1
@@ -872,6 +712,401 @@ share/doc/scribus/README
 share/doc/scribus/README.MacOSX
 share/doc/scribus/TODO
 share/doc/scribus/TRANSLATION
+share/doc/scribus/de/about1.html
+share/doc/scribus/de/about2.html
+share/doc/scribus/de/bugreport.html
+share/doc/scribus/de/cms.html
+share/doc/scribus/de/cms2.html
+share/doc/scribus/de/cms3.html
+share/doc/scribus/de/codingstandards.html
+share/doc/scribus/de/color1.html
+share/doc/scribus/de/config.html
+share/doc/scribus/de/contributions.html
+share/doc/scribus/de/developers.html
+share/doc/scribus/de/doccopyright.html
+share/doc/scribus/de/docinfo.html
+share/doc/scribus/de/documentation.html
+share/doc/scribus/de/download.html
+share/doc/scribus/de/editorial.html
+share/doc/scribus/de/faq1.html
+share/doc/scribus/de/faq2.html
+share/doc/scribus/de/faq3.html
+share/doc/scribus/de/fonts1.html
+share/doc/scribus/de/fonts2.html
+share/doc/scribus/de/gettexthowto.html
+share/doc/scribus/de/gsview.html
+share/doc/scribus/de/hyphenator.html
+share/doc/scribus/de/images/Cover_en1-page1.png
+share/doc/scribus/de/images/DrawLatexFrame.png
+share/doc/scribus/de/images/Image_Properties.png
+share/doc/scribus/de/images/Mantis_my_view.png
+share/doc/scribus/de/images/Mantis_new_report1.png
+share/doc/scribus/de/images/Mantis_new_report2.png
+share/doc/scribus/de/images/Mantis_new_report3.png
+share/doc/scribus/de/images/Mantis_searching.png
+share/doc/scribus/de/images/Mantis_signup.png
+share/doc/scribus/de/images/RYB_color_wheel.png
+share/doc/scribus/de/images/Rembrandt1.png
+share/doc/scribus/de/images/Rembrandt10.png
+share/doc/scribus/de/images/Rembrandt11.png
+share/doc/scribus/de/images/Rembrandt12.png
+share/doc/scribus/de/images/Rembrandt13.png
+share/doc/scribus/de/images/Rembrandt14.png
+share/doc/scribus/de/images/Rembrandt15.png
+share/doc/scribus/de/images/Rembrandt16.png
+share/doc/scribus/de/images/Rembrandt17.png
+share/doc/scribus/de/images/Rembrandt17a.png
+share/doc/scribus/de/images/Rembrandt17b.png
+share/doc/scribus/de/images/Rembrandt18.png
+share/doc/scribus/de/images/Rembrandt18b.png
+share/doc/scribus/de/images/Rembrandt19.png
+share/doc/scribus/de/images/Rembrandt2.png
+share/doc/scribus/de/images/Rembrandt20.png
+share/doc/scribus/de/images/Rembrandt21.png
+share/doc/scribus/de/images/Rembrandt3.png
+share/doc/scribus/de/images/Rembrandt4.png
+share/doc/scribus/de/images/Rembrandt5.png
+share/doc/scribus/de/images/Rembrandt6.png
+share/doc/scribus/de/images/Rembrandt7.png
+share/doc/scribus/de/images/Rembrandt8.png
+share/doc/scribus/de/images/Rembrandt9.png
+share/doc/scribus/de/images/Scripter.png
+share/doc/scribus/de/images/SwB.png
+share/doc/scribus/de/images/XYZ_Prop.png
+share/doc/scribus/de/images/XYZ_Prop1.png
+share/doc/scribus/de/images/alert.png
+share/doc/scribus/de/images/batik1.png
+share/doc/scribus/de/images/boundingbox.png
+share/doc/scribus/de/images/boundingbox1.png
+share/doc/scribus/de/images/cmcanvas.png
+share/doc/scribus/de/images/cms-gamut1.png
+share/doc/scribus/de/images/cms-gamut2.png
+share/doc/scribus/de/images/cms.png
+share/doc/scribus/de/images/cmsmodify1.png
+share/doc/scribus/de/images/cmyk.png
+share/doc/scribus/de/images/colormanager2.png
+share/doc/scribus/de/images/colorwheel.png
+share/doc/scribus/de/images/colrs-caricature.png
+share/doc/scribus/de/images/colrs-mgt1.png
+share/doc/scribus/de/images/colrs-mgt2.png
+share/doc/scribus/de/images/combine_polygons.png
+share/doc/scribus/de/images/combine_polygons1.png
+share/doc/scribus/de/images/combine_polygons2.png
+share/doc/scribus/de/images/combine_polygons3.png
+share/doc/scribus/de/images/combine_polygons4.png
+share/doc/scribus/de/images/combine_polygons5.png
+share/doc/scribus/de/images/context_image.png
+share/doc/scribus/de/images/context_shape.png
+share/doc/scribus/de/images/context_text135.png
+share/doc/scribus/de/images/contourline_flow.png
+share/doc/scribus/de/images/cw-analogous.png
+share/doc/scribus/de/images/cw-compl.png
+share/doc/scribus/de/images/cw-splitcompl.png
+share/doc/scribus/de/images/cw-tetradic.png
+share/doc/scribus/de/images/cw-triadic.png
+share/doc/scribus/de/images/cw-warning.png
+share/doc/scribus/de/images/docheader1.png
+share/doc/scribus/de/images/docheader2.png
+share/doc/scribus/de/images/docinfo.png
+share/doc/scribus/de/images/docinfo1.png
+share/doc/scribus/de/images/docinfo2.png
+share/doc/scribus/de/images/dtp-studio.png
+share/doc/scribus/de/images/duotone-imp.png
+share/doc/scribus/de/images/duotone-imp2.png
+share/doc/scribus/de/images/edit_shapes.png
+share/doc/scribus/de/images/editcols1.png
+share/doc/scribus/de/images/editcols1a.png
+share/doc/scribus/de/images/editcols2.png
+share/doc/scribus/de/images/editcols3.png
+share/doc/scribus/de/images/eps-imp1.png
+share/doc/scribus/de/images/eps-imp2.png
+share/doc/scribus/de/images/eps-imp3.png
+share/doc/scribus/de/images/eps-imp4.png
+share/doc/scribus/de/images/eps-imp5.png
+share/doc/scribus/de/images/file-error1.png
+share/doc/scribus/de/images/file-error2.png
+share/doc/scribus/de/images/file-error3.png
+share/doc/scribus/de/images/fileimport.png
+share/doc/scribus/de/images/font-preview.png
+share/doc/scribus/de/images/font-subst.png
+share/doc/scribus/de/images/fontmatrix.png
+share/doc/scribus/de/images/fontpref1.png
+share/doc/scribus/de/images/fontpref2.png
+share/doc/scribus/de/images/fontpref3.png
+share/doc/scribus/de/images/fonts.png
+share/doc/scribus/de/images/fonts2.png
+share/doc/scribus/de/images/frame_shape_flow.png
+share/doc/scribus/de/images/geometry.png
+share/doc/scribus/de/images/geometry1.png
+share/doc/scribus/de/images/gimpoptions1.png
+share/doc/scribus/de/images/gimpoptions2.png
+share/doc/scribus/de/images/gimpoptions3.png
+share/doc/scribus/de/images/givelife1.png
+share/doc/scribus/de/images/gradient_adjuster.png
+share/doc/scribus/de/images/gradient_adjuster1.png
+share/doc/scribus/de/images/gradient_adjuster_vector.png
+share/doc/scribus/de/images/htmlimport.png
+share/doc/scribus/de/images/htmlstyle.png
+share/doc/scribus/de/images/hyphen1.png
+share/doc/scribus/de/images/hyphen2.png
+share/doc/scribus/de/images/hyphen3.png
+share/doc/scribus/de/images/import-pdfimage.png
+share/doc/scribus/de/images/ink-cov.png
+share/doc/scribus/de/images/insert-frame-1.png
+share/doc/scribus/de/images/insert-frame-2.png
+share/doc/scribus/de/images/krita.jpg
+share/doc/scribus/de/images/krita1.jpg
+share/doc/scribus/de/images/layers1.png
+share/doc/scribus/de/images/layers2.png
+share/doc/scribus/de/images/lilyp.png
+share/doc/scribus/de/images/line_tab.png
+share/doc/scribus/de/images/line_tab1.png
+share/doc/scribus/de/images/line_tab2.png
+share/doc/scribus/de/images/line_tab3.png
+share/doc/scribus/de/images/line_tab4.png
+share/doc/scribus/de/images/line_tab5.png
+share/doc/scribus/de/images/line_tab6.png
+share/doc/scribus/de/images/line_tab7.png
+share/doc/scribus/de/images/lprof.png
+share/doc/scribus/de/images/missing-gs.png
+share/doc/scribus/de/images/mpage1.png
+share/doc/scribus/de/images/mpage2.png
+share/doc/scribus/de/images/mpage3.png
+share/doc/scribus/de/images/mpage4.png
+share/doc/scribus/de/images/mpage5.png
+share/doc/scribus/de/images/multipledup_copies.png
+share/doc/scribus/de/images/multipledup_rotation.png
+share/doc/scribus/de/images/multipledup_rows.png
+share/doc/scribus/de/images/new1.png
+share/doc/scribus/de/images/new2.png
+share/doc/scribus/de/images/new3.png
+share/doc/scribus/de/images/new4.png
+share/doc/scribus/de/images/new5.png
+share/doc/scribus/de/images/new6.png
+share/doc/scribus/de/images/node_edit_close.png
+share/doc/scribus/de/images/nodes_edit.png
+share/doc/scribus/de/images/numb-sections.png
+share/doc/scribus/de/images/oogettext1.png
+share/doc/scribus/de/images/pagenumbering.png
+share/doc/scribus/de/images/patterns1.png
+share/doc/scribus/de/images/patterns2.png
+share/doc/scribus/de/images/pdf-form-ht1.png
+share/doc/scribus/de/images/pdf-form-ht2.png
+share/doc/scribus/de/images/pdf-form-ht3.png
+share/doc/scribus/de/images/pdf-form-ht4.png
+share/doc/scribus/de/images/pdf-form-ht5.png
+share/doc/scribus/de/images/pdf-form-ht6.png
+share/doc/scribus/de/images/pdfx1a-lo.png
+share/doc/scribus/de/images/pdfx3-1.png
+share/doc/scribus/de/images/pdfxcolor.png
+share/doc/scribus/de/images/pdfxintent.png
+share/doc/scribus/de/images/plot1.png
+share/doc/scribus/de/images/plot2.png
+share/doc/scribus/de/images/polygons.png
+share/doc/scribus/de/images/polygons1.png
+share/doc/scribus/de/images/povray.png
+share/doc/scribus/de/images/preflight-v.png
+share/doc/scribus/de/images/prefs-mac-1.png
+share/doc/scribus/de/images/prefs_9parts.png
+share/doc/scribus/de/images/prefs_colormgmt.png
+share/doc/scribus/de/images/prefs_display.png
+share/doc/scribus/de/images/prefs_document.png
+share/doc/scribus/de/images/prefs_document1.png
+share/doc/scribus/de/images/prefs_exttools.png
+share/doc/scribus/de/images/prefs_fibonacci.png
+share/doc/scribus/de/images/prefs_general.png
+share/doc/scribus/de/images/prefs_goldenmean.png
+share/doc/scribus/de/images/prefs_guides.png
+share/doc/scribus/de/images/prefs_guides1.png
+share/doc/scribus/de/images/prefs_gutenberg.png
+share/doc/scribus/de/images/prefs_keyboard.png
+share/doc/scribus/de/images/prefs_magazine.png
+share/doc/scribus/de/images/prefs_misc.png
+share/doc/scribus/de/images/prefs_pdfexport.png
+share/doc/scribus/de/images/prefs_pdfexport1.png
+share/doc/scribus/de/images/prefs_preflight.png
+share/doc/scribus/de/images/prefs_shortwords.png
+share/doc/scribus/de/images/prefs_tools.png
+share/doc/scribus/de/images/prefs_tools1.png
+share/doc/scribus/de/images/prefs_tools2.png
+share/doc/scribus/de/images/prefs_tools3.png
+share/doc/scribus/de/images/prefs_tools4.png
+share/doc/scribus/de/images/prefs_tools5.png
+share/doc/scribus/de/images/prefs_tools6.png
+share/doc/scribus/de/images/prefs_typog.png
+share/doc/scribus/de/images/print-dialog1.png
+share/doc/scribus/de/images/print-dialog2.png
+share/doc/scribus/de/images/printer2.png
+share/doc/scribus/de/images/printpreview.png
+share/doc/scribus/de/images/prop_shape.png
+share/doc/scribus/de/images/qsg-col1.png
+share/doc/scribus/de/images/qsg-col2.png
+share/doc/scribus/de/images/register.png
+share/doc/scribus/de/images/resene-pal.png
+share/doc/scribus/de/images/result.png
+share/doc/scribus/de/images/rf-error1.png
+share/doc/scribus/de/images/rf-error2.png
+share/doc/scribus/de/images/rf-error3.png
+share/doc/scribus/de/images/rf1.png
+share/doc/scribus/de/images/rf2.png
+share/doc/scribus/de/images/rf3.png
+share/doc/scribus/de/images/rf4.png
+share/doc/scribus/de/images/rf5.png
+share/doc/scribus/de/images/rf6.png
+share/doc/scribus/de/images/rf7.png
+share/doc/scribus/de/images/rf8.png
+share/doc/scribus/de/images/rgb-cmyk.png
+share/doc/scribus/de/images/rgb.png
+share/doc/scribus/de/images/round_rectangle.png
+share/doc/scribus/de/images/sadie4by2b.png
+share/doc/scribus/de/images/scribus-os2.png
+share/doc/scribus/de/images/scribus-pres1.png
+share/doc/scribus/de/images/scribus-pres2.png
+share/doc/scribus/de/images/shape_edit.png
+share/doc/scribus/de/images/shapes7.png
+share/doc/scribus/de/images/shapes8.png
+share/doc/scribus/de/images/skewing.png
+share/doc/scribus/de/images/spot.png
+share/doc/scribus/de/images/squat_tux.png
+share/doc/scribus/de/images/style_manager1.png
+share/doc/scribus/de/images/style_manager10.png
+share/doc/scribus/de/images/style_manager1b.png
+share/doc/scribus/de/images/style_manager3b.png
+share/doc/scribus/de/images/style_manager7.png
+share/doc/scribus/de/images/style_manager8.png
+share/doc/scribus/de/images/style_manager9.png
+share/doc/scribus/de/images/swdialog.png
+share/doc/scribus/de/images/table-import-1.png
+share/doc/scribus/de/images/table-import-2.png
+share/doc/scribus/de/images/table-import-3.png
+share/doc/scribus/de/images/tb-bookbinder.png
+share/doc/scribus/de/images/tb-gsview.png
+share/doc/scribus/de/images/tb-inkscape.png
+share/doc/scribus/de/images/tb-jpdf.png
+share/doc/scribus/de/images/tb-libreoffice.png
+share/doc/scribus/de/images/tb-pdf-imp.png
+share/doc/scribus/de/images/text-frame-link.png
+share/doc/scribus/de/images/text-frame-unlink.png
+share/doc/scribus/de/images/text_filter135.png
+share/doc/scribus/de/images/text_filter136.png
+share/doc/scribus/de/images/text_filter136b.png
+share/doc/scribus/de/images/text_flow.png
+share/doc/scribus/de/images/text_linking.png
+share/doc/scribus/de/images/text_tab1.png
+share/doc/scribus/de/images/text_tab10.png
+share/doc/scribus/de/images/text_tab11.png
+share/doc/scribus/de/images/text_tab11b.png
+share/doc/scribus/de/images/text_tab12.png
+share/doc/scribus/de/images/text_tab13.png
+share/doc/scribus/de/images/text_tab2.png
+share/doc/scribus/de/images/text_tab3.png
+share/doc/scribus/de/images/text_tab4.png
+share/doc/scribus/de/images/text_tab5.png
+share/doc/scribus/de/images/text_tab6.png
+share/doc/scribus/de/images/text_tab7.png
+share/doc/scribus/de/images/text_tab7a.png
+share/doc/scribus/de/images/text_tab7b.png
+share/doc/scribus/de/images/text_tab8.png
+share/doc/scribus/de/images/text_tab9.png
+share/doc/scribus/de/images/transform_dialogb.png
+share/doc/scribus/de/images/transform_translaterotation.png
+share/doc/scribus/de/images/transform_translaterotation1.png
+share/doc/scribus/de/images/transform_translatescaling.png
+share/doc/scribus/de/images/transform_translateskewing.png
+share/doc/scribus/de/images/transform_translateskewing1.png
+share/doc/scribus/de/images/vectimp1.png
+share/doc/scribus/de/images/vectimp2.png
+share/doc/scribus/de/images/vectimp3.png
+share/doc/scribus/de/images/vectimp4.png
+share/doc/scribus/de/images/vectimp5.png
+share/doc/scribus/de/images/vector-advanced.png
+share/doc/scribus/de/images/vector-clipart.png
+share/doc/scribus/de/images/xnview.png
+share/doc/scribus/de/importhints.html
+share/doc/scribus/de/importhints1.html
+share/doc/scribus/de/importhints2.html
+share/doc/scribus/de/importhints3.html
+share/doc/scribus/de/importhints4.html
+share/doc/scribus/de/index.html
+share/doc/scribus/de/install-dpkg.html
+share/doc/scribus/de/install.html
+share/doc/scribus/de/install1.html
+share/doc/scribus/de/install2.html
+share/doc/scribus/de/install4.html
+share/doc/scribus/de/install5.html
+share/doc/scribus/de/intro.html
+share/doc/scribus/de/irc.html
+share/doc/scribus/de/keys.html
+share/doc/scribus/de/layers.html
+share/doc/scribus/de/mailing_lists.html
+share/doc/scribus/de/menu.xml
+share/doc/scribus/de/moncal.html
+share/doc/scribus/de/mouse.html
+share/doc/scribus/de/otherinfo.html
+share/doc/scribus/de/pagenumber.html
+share/doc/scribus/de/pagetemplate1.html
+share/doc/scribus/de/pdf_form.html
+share/doc/scribus/de/pdfexport1.html
+share/doc/scribus/de/pdfexport2.html
+share/doc/scribus/de/pdfexport3.html
+share/doc/scribus/de/pdfexport4.html
+share/doc/scribus/de/pdflavor.html
+share/doc/scribus/de/pdfx3.html
+share/doc/scribus/de/plugin_howto.html
+share/doc/scribus/de/print1.html
+share/doc/scribus/de/print2.html
+share/doc/scribus/de/print3.html
+share/doc/scribus/de/psd.html
+share/doc/scribus/de/readme-macosx.html
+share/doc/scribus/de/readme-os2.html
+share/doc/scribus/de/readme-win32.html
+share/doc/scribus/de/readme.html
+share/doc/scribus/de/releases.html
+share/doc/scribus/de/resources.html
+share/doc/scribus/de/scribus-svg.html
+share/doc/scribus/de/scribuscopyright.html
+share/doc/scribus/de/scribusfileformat.html
+share/doc/scribus/de/scripter-extensions.html
+share/doc/scribus/de/scripter-faq.html
+share/doc/scribus/de/scripter1.html
+share/doc/scribus/de/scripterapi-ImageExport.html
+share/doc/scribus/de/scripterapi-PDFfile.html
+share/doc/scribus/de/scripterapi-Printer.html
+share/doc/scribus/de/scripterapi-color.html
+share/doc/scribus/de/scripterapi-constants.html
+share/doc/scribus/de/scripterapi-dialogs.html
+share/doc/scribus/de/scripterapi-doc.html
+share/doc/scribus/de/scripterapi-font.html
+share/doc/scribus/de/scripterapi-getobjprop.html
+share/doc/scribus/de/scripterapi-layer.html
+share/doc/scribus/de/scripterapi-manobj.html
+share/doc/scribus/de/scripterapi-object.html
+share/doc/scribus/de/scripterapi-page.html
+share/doc/scribus/de/scripterapi-pydoc.html
+share/doc/scribus/de/scripterapi-select.html
+share/doc/scribus/de/scripterapi-setobjprop.html
+share/doc/scribus/de/scripterapi-textframes.html
+share/doc/scribus/de/scripterapi.html
+share/doc/scribus/de/settings1.html
+share/doc/scribus/de/short-words.html
+share/doc/scribus/de/specs.html
+share/doc/scribus/de/toolbox.html
+share/doc/scribus/de/toolbox1.html
+share/doc/scribus/de/toolbox12.html
+share/doc/scribus/de/toolbox13.html
+share/doc/scribus/de/toolbox14.html
+share/doc/scribus/de/toolbox15.html
+share/doc/scribus/de/toolbox2.html
+share/doc/scribus/de/toolbox3.html
+share/doc/scribus/de/toolbox4.html
+share/doc/scribus/de/toolbox5.html
+share/doc/scribus/de/toolbox6.html
+share/doc/scribus/de/toolbox7.html
+share/doc/scribus/de/toolbox8.html
+share/doc/scribus/de/toolbox9.html
+share/doc/scribus/de/topten.html
+share/doc/scribus/de/translation_howto.html
+share/doc/scribus/de/tutorials.html
 share/doc/scribus/en/EditingShapes.html
 share/doc/scribus/en/WwFill.html
 share/doc/scribus/en/WwFrames.html
@@ -888,7 +1123,6 @@ share/doc/scribus/en/cli.html
 share/doc/scribus/en/cms.html
 share/doc/scribus/en/cms2.html
 share/doc/scribus/en/cms3.html
-share/doc/scribus/en/cms4.html
 share/doc/scribus/en/codingstandards.html
 share/doc/scribus/en/color1.html
 share/doc/scribus/en/color2.html
@@ -896,12 +1130,11 @@ share/doc/scribus/en/color3.html
 share/doc/scribus/en/color4.html
 share/doc/scribus/en/color5.html
 share/doc/scribus/en/color6.html
+share/doc/scribus/en/color7.html
 share/doc/scribus/en/color8.html
 share/doc/scribus/en/colorwheel.html
 share/doc/scribus/en/config.html
 share/doc/scribus/en/contributions.html
-share/doc/scribus/en/cross-platform.html
-share/doc/scribus/en/cups.html
 share/doc/scribus/en/developers.html
 share/doc/scribus/en/doccopyright.html
 share/doc/scribus/en/docinfo.html
@@ -911,15 +1144,9 @@ share/doc/scribus/en/editorial.html
 share/doc/scribus/en/faq1.html
 share/doc/scribus/en/faq3.html
 share/doc/scribus/en/fileproblems.html
-share/doc/scribus/en/fonts-win32.html
 share/doc/scribus/en/fonts1.html
 share/doc/scribus/en/fonts2.html
-share/doc/scribus/en/fonts3.html
-share/doc/scribus/en/fonts4.html
-share/doc/scribus/en/fonts5.html
 share/doc/scribus/en/gettexthowto.html
-share/doc/scribus/en/gsadv.html
-share/doc/scribus/en/gsfont.html
 share/doc/scribus/en/gsview.html
 share/doc/scribus/en/hyphenator.html
 share/doc/scribus/en/images/Cover_en1-page1.png
@@ -931,7 +1158,6 @@ share/doc/scribus/en/images/Mantis_new_report2.png
 share/doc/scribus/en/images/Mantis_new_report3.png
 share/doc/scribus/en/images/Mantis_searching.png
 share/doc/scribus/en/images/Mantis_signup.png
-share/doc/scribus/en/images/RDF.png
 share/doc/scribus/en/images/RYB_color_wheel.png
 share/doc/scribus/en/images/Rembrandt1.png
 share/doc/scribus/en/images/Rembrandt10.png
@@ -958,22 +1184,11 @@ share/doc/scribus/en/images/Rembrandt7.png
 share/doc/scribus/en/images/Rembrandt8.png
 share/doc/scribus/en/images/Rembrandt9.png
 share/doc/scribus/en/images/Scripter.png
-share/doc/scribus/en/images/Scripter_error_string.png
 share/doc/scribus/en/images/SwB.png
 share/doc/scribus/en/images/XYZ_Prop.png
 share/doc/scribus/en/images/XYZ_Prop1.png
-share/doc/scribus/en/images/acro1.png
-share/doc/scribus/en/images/acro2.png
-share/doc/scribus/en/images/acro3.png
-share/doc/scribus/en/images/acroinfo.png
-share/doc/scribus/en/images/acropass.png
-share/doc/scribus/en/images/acroreader5.1.png
-share/doc/scribus/en/images/acrosec.png
-share/doc/scribus/en/images/after_short_words.png
 share/doc/scribus/en/images/alert.png
-share/doc/scribus/en/images/automargins.png
 share/doc/scribus/en/images/batik1.png
-share/doc/scribus/en/images/before_short_words.png
 share/doc/scribus/en/images/boundingbox.png
 share/doc/scribus/en/images/boundingbox1.png
 share/doc/scribus/en/images/cmcanvas.png
@@ -981,9 +1196,7 @@ share/doc/scribus/en/images/cms-gamut1.png
 share/doc/scribus/en/images/cms-gamut2.png
 share/doc/scribus/en/images/cmsmodify1.png
 share/doc/scribus/en/images/cmyk.png
-share/doc/scribus/en/images/colormanager1.png
 share/doc/scribus/en/images/colormanager2.png
-share/doc/scribus/en/images/colormgmtscreen.png
 share/doc/scribus/en/images/colorwheel.png
 share/doc/scribus/en/images/colrs-caricature.png
 share/doc/scribus/en/images/colrs-mgt1.png
@@ -998,8 +1211,6 @@ share/doc/scribus/en/images/context_image.png
 share/doc/scribus/en/images/context_shape.png
 share/doc/scribus/en/images/context_text135.png
 share/doc/scribus/en/images/contourline_flow.png
-share/doc/scribus/en/images/cups1.png
-share/doc/scribus/en/images/cups2.png
 share/doc/scribus/en/images/cw-analogous.png
 share/doc/scribus/en/images/cw-compl.png
 share/doc/scribus/en/images/cw-splitcompl.png
@@ -1023,7 +1234,6 @@ share/doc/scribus/en/images/eps-imp2.png
 share/doc/scribus/en/images/eps-imp3.png
 share/doc/scribus/en/images/eps-imp4.png
 share/doc/scribus/en/images/eps-imp5.png
-share/doc/scribus/en/images/external.png
 share/doc/scribus/en/images/file-error1.png
 share/doc/scribus/en/images/file-error2.png
 share/doc/scribus/en/images/file-error3.png
@@ -1034,44 +1244,26 @@ share/doc/scribus/en/images/fontmatrix.png
 share/doc/scribus/en/images/fontpref1.png
 share/doc/scribus/en/images/fontpref2.png
 share/doc/scribus/en/images/fontpref3.png
-share/doc/scribus/en/images/fontpref4.png
-share/doc/scribus/en/images/fontprev.png
 share/doc/scribus/en/images/fonts.png
 share/doc/scribus/en/images/fonts2.png
-share/doc/scribus/en/images/fonts3.png
-share/doc/scribus/en/images/fonts4.png
-share/doc/scribus/en/images/fontsampler.png
-share/doc/scribus/en/images/fontsampler2.png
-share/doc/scribus/en/images/formularz_export_PDF.png
-share/doc/scribus/en/images/formularz_js_skrypt.png
-share/doc/scribus/en/images/formularz_js_sprawdzanie.png
-share/doc/scribus/en/images/formularz_nowy.png
-share/doc/scribus/en/images/formularz_pole_num.png
 share/doc/scribus/en/images/frame_shape_flow.png
-share/doc/scribus/en/images/gammagrayscale.png
 share/doc/scribus/en/images/geometry.png
 share/doc/scribus/en/images/geometry1.png
 share/doc/scribus/en/images/gimpoptions1.png
 share/doc/scribus/en/images/gimpoptions2.png
 share/doc/scribus/en/images/gimpoptions3.png
+share/doc/scribus/en/images/givelife1.png
 share/doc/scribus/en/images/gradient_adjuster.png
 share/doc/scribus/en/images/gradient_adjuster1.png
 share/doc/scribus/en/images/gradient_adjuster_vector.png
-share/doc/scribus/en/images/gsadv1.png
-share/doc/scribus/en/images/gsadv2.png
-share/doc/scribus/en/images/gsadv3.png
 share/doc/scribus/en/images/htmlimport.png
 share/doc/scribus/en/images/htmlstyle.png
 share/doc/scribus/en/images/hyphen1.png
-share/doc/scribus/en/images/imageeffects.png
 share/doc/scribus/en/images/import-pdfimage.png
 share/doc/scribus/en/images/ink-cov.png
-share/doc/scribus/en/images/inkscape.png
 share/doc/scribus/en/images/insert-frame-1.png
 share/doc/scribus/en/images/insert-frame-2.png
-share/doc/scribus/en/images/kfontinstaller.png
 share/doc/scribus/en/images/krita1.jpg
-share/doc/scribus/en/images/ksnapshot.png
 share/doc/scribus/en/images/layers1.png
 share/doc/scribus/en/images/layers2.png
 share/doc/scribus/en/images/lilyp.png
@@ -1085,10 +1277,6 @@ share/doc/scribus/en/images/line_tab6.png
 share/doc/scribus/en/images/line_tab7.png
 share/doc/scribus/en/images/lprof.png
 share/doc/scribus/en/images/missing-gs.png
-share/doc/scribus/en/images/monprof1.png
-share/doc/scribus/en/images/monprof2.png
-share/doc/scribus/en/images/monprof3.png
-share/doc/scribus/en/images/monprof4.png
 share/doc/scribus/en/images/mpage1.png
 share/doc/scribus/en/images/mpage2.png
 share/doc/scribus/en/images/mpage3.png
@@ -1106,10 +1294,7 @@ share/doc/scribus/en/images/new6.png
 share/doc/scribus/en/images/node_edit_close.png
 share/doc/scribus/en/images/nodes_edit.png
 share/doc/scribus/en/images/numb-sections.png
-share/doc/scribus/en/images/oochart.png
-share/doc/scribus/en/images/ooeps1.png
 share/doc/scribus/en/images/oogettext1.png
-share/doc/scribus/en/images/pagetemplate1.png
 share/doc/scribus/en/images/patterns1.png
 share/doc/scribus/en/images/patterns2.png
 share/doc/scribus/en/images/pdf-form-ht1.png
@@ -1118,8 +1303,6 @@ share/doc/scribus/en/images/pdf-form-ht3.png
 share/doc/scribus/en/images/pdf-form-ht4.png
 share/doc/scribus/en/images/pdf-form-ht5.png
 share/doc/scribus/en/images/pdf-form-ht6.png
-share/doc/scribus/en/images/pdfeffect1.png
-share/doc/scribus/en/images/pdfeffect2.png
 share/doc/scribus/en/images/pdfx1a-lo.png
 share/doc/scribus/en/images/pdfx3-1.png
 share/doc/scribus/en/images/pdfxcolor.png
@@ -1131,17 +1314,6 @@ share/doc/scribus/en/images/polygons1.png
 share/doc/scribus/en/images/povray.png
 share/doc/scribus/en/images/preflight-v.png
 share/doc/scribus/en/images/prefs-mac-1.png
-share/doc/scribus/en/images/prefs.png
-share/doc/scribus/en/images/prefs10.png
-share/doc/scribus/en/images/prefs11.png
-share/doc/scribus/en/images/prefs12.png
-share/doc/scribus/en/images/prefs15.png
-share/doc/scribus/en/images/prefs2.png
-share/doc/scribus/en/images/prefs3.png
-share/doc/scribus/en/images/prefs4.png
-share/doc/scribus/en/images/prefs5.png
-share/doc/scribus/en/images/prefs6.png
-share/doc/scribus/en/images/prefs8.png
 share/doc/scribus/en/images/prefs_9parts.png
 share/doc/scribus/en/images/prefs_colormgmt.png
 share/doc/scribus/en/images/prefs_display.png
@@ -1169,18 +1341,11 @@ share/doc/scribus/en/images/prefs_tools4.png
 share/doc/scribus/en/images/prefs_tools5.png
 share/doc/scribus/en/images/prefs_tools6.png
 share/doc/scribus/en/images/prefs_typog.png
-share/doc/scribus/en/images/prefsblgrid1.png
-share/doc/scribus/en/images/prefsdisplay.png
-share/doc/scribus/en/images/prefsgeneral.png
 share/doc/scribus/en/images/print-dialog1.png
 share/doc/scribus/en/images/print-dialog2.png
-share/doc/scribus/en/images/printer1.png
 share/doc/scribus/en/images/printer2.png
-share/doc/scribus/en/images/printer3.png
 share/doc/scribus/en/images/printpreview.png
-share/doc/scribus/en/images/printseps.png
 share/doc/scribus/en/images/prop_shape.png
-share/doc/scribus/en/images/pstoedit1.png
 share/doc/scribus/en/images/qsg-col1.png
 share/doc/scribus/en/images/qsg-col2.png
 share/doc/scribus/en/images/register.png
@@ -1204,16 +1369,10 @@ share/doc/scribus/en/images/sadie4by2b.png
 share/doc/scribus/en/images/scribus-os2.png
 share/doc/scribus/en/images/scribus-pres1.png
 share/doc/scribus/en/images/scribus-pres2.png
-share/doc/scribus/en/images/scribus2.png
-share/doc/scribus/en/images/scribuscms1.png
-share/doc/scribus/en/images/scribustru4.png
 share/doc/scribus/en/images/shape_edit.png
 share/doc/scribus/en/images/shapes7.png
 share/doc/scribus/en/images/shapes8.png
-share/doc/scribus/en/images/siatka_jednostki_miar.png
-share/doc/scribus/en/images/siatka_menu.png
 share/doc/scribus/en/images/skewing.png
-share/doc/scribus/en/images/spinbox1.png
 share/doc/scribus/en/images/spot.png
 share/doc/scribus/en/images/squat_tux.png
 share/doc/scribus/en/images/style_manager1.png
@@ -1223,10 +1382,7 @@ share/doc/scribus/en/images/style_manager3b.png
 share/doc/scribus/en/images/style_manager7.png
 share/doc/scribus/en/images/style_manager8.png
 share/doc/scribus/en/images/style_manager9.png
-share/doc/scribus/en/images/svg1.png
 share/doc/scribus/en/images/swdialog.png
-share/doc/scribus/en/images/swmenu.png
-share/doc/scribus/en/images/symbole.png
 share/doc/scribus/en/images/table-import-1.png
 share/doc/scribus/en/images/table-import-2.png
 share/doc/scribus/en/images/table-import-3.png
@@ -1259,16 +1415,12 @@ share/doc/scribus/en/images/text_tab7a.png
 share/doc/scribus/en/images/text_tab7b.png
 share/doc/scribus/en/images/text_tab8.png
 share/doc/scribus/en/images/text_tab9.png
-share/doc/scribus/en/images/toolbar1.png
-share/doc/scribus/en/images/toolbar1d.png
-share/doc/scribus/en/images/toolbar3.png
 share/doc/scribus/en/images/transform_dialogb.png
 share/doc/scribus/en/images/transform_translaterotation.png
 share/doc/scribus/en/images/transform_translaterotation1.png
 share/doc/scribus/en/images/transform_translatescaling.png
 share/doc/scribus/en/images/transform_translateskewing.png
 share/doc/scribus/en/images/transform_translateskewing1.png
-share/doc/scribus/en/images/ulica.png
 share/doc/scribus/en/images/vectimp1.png
 share/doc/scribus/en/images/vectimp2.png
 share/doc/scribus/en/images/vectimp3.png
@@ -1276,8 +1428,6 @@ share/doc/scribus/en/images/vectimp4.png
 share/doc/scribus/en/images/vectimp5.png
 share/doc/scribus/en/images/vector-advanced.png
 share/doc/scribus/en/images/vector-clipart.png
-share/doc/scribus/en/images/wlasciwosci_pola.png
-share/doc/scribus/en/images/wyslij_formularz.png
 share/doc/scribus/en/images/xnview.png
 share/doc/scribus/en/importbitmap1.html
 share/doc/scribus/en/importhints.html
@@ -1295,12 +1445,9 @@ share/doc/scribus/en/install4.html
 share/doc/scribus/en/install5.html
 share/doc/scribus/en/intro.html
 share/doc/scribus/en/irc.html
-share/doc/scribus/en/javascriptpdf.html
 share/doc/scribus/en/keys.html
 share/doc/scribus/en/layers.html
 share/doc/scribus/en/lipsum.html
-share/doc/scribus/en/machints1.html
-share/doc/scribus/en/machints2.html
 share/doc/scribus/en/mailing_lists.html
 share/doc/scribus/en/menu.xml
 share/doc/scribus/en/moncal.html
@@ -1309,7 +1456,6 @@ share/doc/scribus/en/multiple_transform.html
 share/doc/scribus/en/otherinfo.html
 share/doc/scribus/en/pagenumber.html
 share/doc/scribus/en/pagetemplate1.html
-share/doc/scribus/en/parallel-install.html
 share/doc/scribus/en/pdf_form.html
 share/doc/scribus/en/pdfexport1.html
 share/doc/scribus/en/pdfexport2.html
@@ -1318,7 +1464,6 @@ share/doc/scribus/en/pdfexport4.html
 share/doc/scribus/en/pdflavor.html
 share/doc/scribus/en/pdfx3.html
 share/doc/scribus/en/plugin_howto.html
-share/doc/scribus/en/prepress.html
 share/doc/scribus/en/print1.html
 share/doc/scribus/en/print2.html
 share/doc/scribus/en/print3.html
@@ -1332,7 +1477,6 @@ share/doc/scribus/en/readme.html
 share/doc/scribus/en/releases.html
 share/doc/scribus/en/renderframes.html
 share/doc/scribus/en/resources.html
-share/doc/scribus/en/scprinters.html
 share/doc/scribus/en/scribus-svg.html
 share/doc/scribus/en/scribuscopyright.html
 share/doc/scribus/en/scribusfileformat.html
@@ -1362,8 +1506,6 @@ share/doc/scribus/en/short-words.html
 share/doc/scribus/en/specs.html
 share/doc/scribus/en/toolbox.html
 share/doc/scribus/en/toolbox1.html
-share/doc/scribus/en/toolbox10.html
-share/doc/scribus/en/toolbox11.html
 share/doc/scribus/en/toolbox12.html
 share/doc/scribus/en/toolbox13.html
 share/doc/scribus/en/toolbox14.html
@@ -1399,79 +1541,39 @@ share/doc/scribus/it/WwRenderframes.html
 share/doc/scribus/it/WwShapes.html
 share/doc/scribus/it/WwStyles.html
 share/doc/scribus/it/WwText.html
+share/doc/scribus/it/about1.html
 share/doc/scribus/it/about2.html
+share/doc/scribus/it/bugreport.html
 share/doc/scribus/it/cli.html
+share/doc/scribus/it/cms.html
+share/doc/scribus/it/cms2.html
+share/doc/scribus/it/cms3.html
+share/doc/scribus/it/codingstandards.html
 share/doc/scribus/it/color1.html
 share/doc/scribus/it/color2.html
 share/doc/scribus/it/color3.html
 share/doc/scribus/it/color4.html
 share/doc/scribus/it/color5.html
 share/doc/scribus/it/color6.html
+share/doc/scribus/it/color7.html
 share/doc/scribus/it/color8.html
+share/doc/scribus/it/colorwheel.html
 share/doc/scribus/it/config.html
+share/doc/scribus/it/contributions.html
+share/doc/scribus/it/developers.html
+share/doc/scribus/it/doccopyright.html
 share/doc/scribus/it/docinfo.html
 share/doc/scribus/it/documentation.html
+share/doc/scribus/it/download.html
+share/doc/scribus/it/editorial.html
+share/doc/scribus/it/faq1.html
+share/doc/scribus/it/faq3.html
+share/doc/scribus/it/fileproblems.html
 share/doc/scribus/it/fonts1.html
 share/doc/scribus/it/fonts2.html
+share/doc/scribus/it/gettexthowto.html
+share/doc/scribus/it/gsview.html
 share/doc/scribus/it/hyphenator.html
-share/doc/scribus/it/images/Image_Properties.png
-share/doc/scribus/it/images/XYZ_Prop.png
-share/doc/scribus/it/images/XYZ_Prop1.png
-share/doc/scribus/it/images/cmcanvas.png
-share/doc/scribus/it/images/context_image.png
-share/doc/scribus/it/images/context_text135.png
-share/doc/scribus/it/images/docinfo.png
-share/doc/scribus/it/images/docinfo2.png
-share/doc/scribus/it/images/font-preview.png
-share/doc/scribus/it/images/font-subst.png
-share/doc/scribus/it/images/fontpref1.png
-share/doc/scribus/it/images/fontpref2.png
-share/doc/scribus/it/images/fontpref3.png
-share/doc/scribus/it/images/hyphen1.png
-share/doc/scribus/it/images/plot1.png
-share/doc/scribus/it/images/plot2.png
-share/doc/scribus/it/images/prefs_colormgmt.png
-share/doc/scribus/it/images/prefs_display.png
-share/doc/scribus/it/images/prefs_document.png
-share/doc/scribus/it/images/prefs_exttools.png
-share/doc/scribus/it/images/prefs_general.png
-share/doc/scribus/it/images/prefs_guides.png
-share/doc/scribus/it/images/prefs_keyboard.png
-share/doc/scribus/it/images/prefs_misc.png
-share/doc/scribus/it/images/prefs_pdfexport.png
-share/doc/scribus/it/images/prefs_pdfexport1.png
-share/doc/scribus/it/images/prefs_preflight.png
-share/doc/scribus/it/images/prefs_shortwords.png
-share/doc/scribus/it/images/prefs_tools.png
-share/doc/scribus/it/images/prefs_tools1.png
-share/doc/scribus/it/images/prefs_tools2.png
-share/doc/scribus/it/images/prefs_tools3.png
-share/doc/scribus/it/images/prefs_tools4.png
-share/doc/scribus/it/images/prefs_tools5.png
-share/doc/scribus/it/images/prefs_tools6.png
-share/doc/scribus/it/images/prefs_typog.png
-share/doc/scribus/it/images/rf-error2.png
-share/doc/scribus/it/images/rf-error3.png
-share/doc/scribus/it/images/rf1.png
-share/doc/scribus/it/images/rf4.png
-share/doc/scribus/it/images/rf5.png
-share/doc/scribus/it/images/rf6.png
-share/doc/scribus/it/images/rf7.png
-share/doc/scribus/it/images/rf8.png
-share/doc/scribus/it/images/shapes7.png
-share/doc/scribus/it/images/style_manager1.png
-share/doc/scribus/it/images/style_manager10.png
-share/doc/scribus/it/images/style_manager1b.png
-share/doc/scribus/it/images/style_manager3b.png
-share/doc/scribus/it/images/style_manager9.png
-share/doc/scribus/it/images/text_filter135.png
-share/doc/scribus/it/images/text_filter136.png
-share/doc/scribus/it/images/text_filter136b.png
-share/doc/scribus/it/images/text_linking.png
-share/doc/scribus/it/images/text_tab1.png
-share/doc/scribus/it/images/text_tab10.png
-share/doc/scribus/it/images/text_tab13.png
-share/doc/scribus/it/images/text_tab3.png
 share/doc/scribus/it/importbitmap1.html
 share/doc/scribus/it/importhints.html
 share/doc/scribus/it/importhints1.html
@@ -1479,11 +1581,21 @@ share/doc/scribus/it/importhints2.html
 share/doc/scribus/it/importhints3.html
 share/doc/scribus/it/importhints4.html
 share/doc/scribus/it/index.html
+share/doc/scribus/it/install-dpkg.html
 share/doc/scribus/it/install.html
+share/doc/scribus/it/install1.html
+share/doc/scribus/it/install2.html
+share/doc/scribus/it/install3.html
+share/doc/scribus/it/install4.html
+share/doc/scribus/it/install5.html
 share/doc/scribus/it/intro.html
+share/doc/scribus/it/irc.html
 share/doc/scribus/it/keys.html
 share/doc/scribus/it/layers.html
+share/doc/scribus/it/lipsum.html
+share/doc/scribus/it/mailing_lists.html
 share/doc/scribus/it/menu.xml
+share/doc/scribus/it/moncal.html
 share/doc/scribus/it/mouse.html
 share/doc/scribus/it/multiple_transform.html
 share/doc/scribus/it/otherinfo.html
@@ -1496,13 +1608,69 @@ share/doc/scribus/it/pdfexport3.html
 share/doc/scribus/it/pdfexport4.html
 share/doc/scribus/it/pdflavor.html
 share/doc/scribus/it/pdfx3.html
+share/doc/scribus/it/plugin_howto.html
+share/doc/scribus/it/print1.html
+share/doc/scribus/it/print2.html
+share/doc/scribus/it/print3.html
+share/doc/scribus/it/print4.html
 share/doc/scribus/it/psd.html
 share/doc/scribus/it/qsg.html
+share/doc/scribus/it/readme-macosx.html
+share/doc/scribus/it/readme-os2.html
+share/doc/scribus/it/readme-win32.html
+share/doc/scribus/it/readme.html
+share/doc/scribus/it/releases.html
 share/doc/scribus/it/renderframes.html
 share/doc/scribus/it/resources.html
 share/doc/scribus/it/scribus-svg.html
+share/doc/scribus/it/scribuscopyright.html
+share/doc/scribus/it/scribusfileformat.html
+share/doc/scribus/it/scripter-extensions.html
+share/doc/scribus/it/scripter-faq.html
+share/doc/scribus/it/scripter1.html
+share/doc/scribus/it/scripterapi-ImageExport.html
+share/doc/scribus/it/scripterapi-PDFfile.html
+share/doc/scribus/it/scripterapi-Printer.html
+share/doc/scribus/it/scripterapi-color.html
+share/doc/scribus/it/scripterapi-constants.html
+share/doc/scribus/it/scripterapi-dialogs.html
+share/doc/scribus/it/scripterapi-doc.html
+share/doc/scribus/it/scripterapi-extensions.html
+share/doc/scribus/it/scripterapi-font.html
+share/doc/scribus/it/scripterapi-getobjprop.html
+share/doc/scribus/it/scripterapi-layer.html
+share/doc/scribus/it/scripterapi-manobj.html
+share/doc/scribus/it/scripterapi-object.html
+share/doc/scribus/it/scripterapi-page.html
+share/doc/scribus/it/scripterapi-select.html
+share/doc/scribus/it/scripterapi-setobjprop.html
+share/doc/scribus/it/scripterapi-textframes.html
+share/doc/scribus/it/scripterapi.html
 share/doc/scribus/it/settings1.html
 share/doc/scribus/it/short-words.html
+share/doc/scribus/it/specs.html
+share/doc/scribus/it/toolbox.html
+share/doc/scribus/it/toolbox1.html
+share/doc/scribus/it/toolbox12.html
+share/doc/scribus/it/toolbox13.html
+share/doc/scribus/it/toolbox14.html
+share/doc/scribus/it/toolbox15.html
+share/doc/scribus/it/toolbox16.html
+share/doc/scribus/it/toolbox17.html
+share/doc/scribus/it/toolbox18.html
+share/doc/scribus/it/toolbox19.html
+share/doc/scribus/it/toolbox2.html
+share/doc/scribus/it/toolbox3.html
+share/doc/scribus/it/toolbox4.html
+share/doc/scribus/it/toolbox5.html
+share/doc/scribus/it/toolbox6.html
+share/doc/scribus/it/toolbox7.html
+share/doc/scribus/it/toolbox8.html
+share/doc/scribus/it/toolbox9.html
+share/doc/scribus/it/topten.html
+share/doc/scribus/it/translation_howto.html
+share/doc/scribus/it/tutorials.html
+share/doc/scribus/it/workspace1.html
 share/mime/packages/scribus.xml
 share/pixmaps/scribus.png
 share/scribus/dicts/CMakeLists.txt
@@ -2070,6 +2238,11 @@ share/scribus/loremipsum/sk.xml
 share/scribus/loremipsum/sl.xml
 share/scribus/plugins/barcode.ps
 share/scribus/plugins/scribus-short-words.rc
+share/scribus/profiles/GenericCMYK.icm
+share/scribus/profiles/GenericCMYK.txt
+share/scribus/profiles/Readme
+share/scribus/profiles/sRGB.icm
+share/scribus/profiles/srgb.license
 share/scribus/samples/3columnA4.py
 share/scribus/samples/3columnUSLTR.py
 share/scribus/samples/Calender.py
@@ -2098,6 +2271,168 @@ share/scribus/scripts/TODO
 share/scribus/scripts/color2csv.py
 share/scribus/scripts/csv2color.py
 share/scribus/scripts/importcsv2table.py
+share/scribus/swatches/AFNOR_X_08-002.xml
+share/scribus/swatches/AS_2007S-1996.xml
+share/scribus/swatches/Alligator Collection 3000_bs00_3.eps
+share/scribus/swatches/Alligator Collection 3000_bs01_3.eps
+share/scribus/swatches/Alligator Collection 3000_kd01_4.eps
+share/scribus/swatches/Alligator Collection 3000_np01_4.eps
+share/scribus/swatches/Alligator Collection 3000_zd01_4.eps
+share/scribus/swatches/Alligator Collection 4000_bs00_3.eps
+share/scribus/swatches/Alligator Collection 4000_bs01_3.eps
+share/scribus/swatches/Alligator Collection 4000_kd01_4.eps
+share/scribus/swatches/Alligator Collection 4000_np01_4.eps
+share/scribus/swatches/Alligator Collection 4000_zd01_4.eps
+share/scribus/swatches/BS_381C.xml
+share/scribus/swatches/BS_4800.xml
+share/scribus/swatches/BannerRite_bs00_3.eps
+share/scribus/swatches/BannerRite_bs01_3.eps
+share/scribus/swatches/BannerRite_kd01_4.eps
+share/scribus/swatches/BannerRite_np01_4.eps
+share/scribus/swatches/BannerRite_zd01_4.eps
+share/scribus/swatches/Baumann System Prase_bs00_3.eps
+share/scribus/swatches/Baumann System Prase_bs01_3.eps
+share/scribus/swatches/Baumann System Prase_kd01_4.eps
+share/scribus/swatches/Baumann System Prase_np01_4.eps
+share/scribus/swatches/Baumann System Prase_zd01_4.eps
+share/scribus/swatches/COPYING_RESENE.txt
+share/scribus/swatches/Colortrend Wood Stains_bs00_3.eps
+share/scribus/swatches/Colortrend Wood Stains_bs01_3.eps
+share/scribus/swatches/Colortrend Wood Stains_kd01_4.eps
+share/scribus/swatches/Colortrend Wood Stains_np01_4.eps
+share/scribus/swatches/Colortrend Wood Stains_zd01_4.eps
+share/scribus/swatches/CrayonTM.xml
+share/scribus/swatches/DEUTSCHEpapier_bs00_3.eps
+share/scribus/swatches/DEUTSCHEpapier_bs01_3.eps
+share/scribus/swatches/DEUTSCHEpapier_kd01_4.eps
+share/scribus/swatches/DEUTSCHEpapier_np01_4.eps
+share/scribus/swatches/DEUTSCHEpapier_zd01_4.eps
+share/scribus/swatches/DRAKA POLYA_bs00_3.eps
+share/scribus/swatches/DRAKA POLYA_bs01_3.eps
+share/scribus/swatches/DRAKA POLYA_kd01_4.eps
+share/scribus/swatches/DRAKA POLYA_np01_4.eps
+share/scribus/swatches/DRAKA POLYA_zd01_4.eps
+share/scribus/swatches/GCMI_Colors.xml
+share/scribus/swatches/GS Palette 141 Kunstdruck_bs00_3.eps
+share/scribus/swatches/GS Palette 141 Kunstdruck_bs01_3.eps
+share/scribus/swatches/GS Palette 141 Kunstdruck_kd01_4.eps
+share/scribus/swatches/GS Palette 141 Kunstdruck_np01_4.eps
+share/scribus/swatches/GS Palette 141 Kunstdruck_zd01_4.eps
+share/scribus/swatches/GS Palette 141 Naturpapier_bs00_3.eps
+share/scribus/swatches/GS Palette 141 Naturpapier_bs01_3.eps
+share/scribus/swatches/GS Palette 141 Naturpapier_kd01_4.eps
+share/scribus/swatches/GS Palette 141 Naturpapier_np01_4.eps
+share/scribus/swatches/GS Palette 141 Naturpapier_zd01_4.eps
+share/scribus/swatches/GiveLife_Color_System_CMYK.xml
+share/scribus/swatches/GiveLife_Color_System_RGB.xml
+share/scribus/swatches/Gnome.xml
+share/scribus/swatches/Heidelberger ip Oberputze_bs00_3.eps
+share/scribus/swatches/Heidelberger ip Oberputze_bs01_3.eps
+share/scribus/swatches/Heidelberger ip Oberputze_kd01_4.eps
+share/scribus/swatches/Heidelberger ip Oberputze_np01_4.eps
+share/scribus/swatches/Heidelberger ip Oberputze_zd01_4.eps
+share/scribus/swatches/J&S K_bs00_3.eps
+share/scribus/swatches/J&S K_bs01_3.eps
+share/scribus/swatches/J&S K_kd01_4.eps
+share/scribus/swatches/J&S K_np01_4.eps
+share/scribus/swatches/J&S K_zd01_4.eps
+share/scribus/swatches/JIS_8721.xml
+share/scribus/swatches/Japanese_Traditional.xml
+share/scribus/swatches/Japanese_Traditional_README.txt
+share/scribus/swatches/KOBRA_bs00_3.eps
+share/scribus/swatches/KOBRA_bs01_3.eps
+share/scribus/swatches/KOBRA_kd01_4.eps
+share/scribus/swatches/KOBRA_np01_4.eps
+share/scribus/swatches/KOBRA_zd01_4.eps
+share/scribus/swatches/Koessinger Keramik-Druck_bs00_3.eps
+share/scribus/swatches/Koessinger Keramik-Druck_bs01_3.eps
+share/scribus/swatches/Koessinger Keramik-Druck_kd01_4.eps
+share/scribus/swatches/Koessinger Keramik-Druck_np01_4.eps
+share/scribus/swatches/Koessinger Keramik-Druck_zd01_4.eps
+share/scribus/swatches/LibreOffice.xml
+share/scribus/swatches/Munsell_Soil_Colors.xml
+share/scribus/swatches/NBS-ISCC_Colors.xml
+share/scribus/swatches/OSMO Einmallasur_bs00_3.eps
+share/scribus/swatches/OSMO Einmallasur_bs01_3.eps
+share/scribus/swatches/OSMO Einmallasur_kd01_4.eps
+share/scribus/swatches/OSMO Einmallasur_np01_4.eps
+share/scribus/swatches/OSMO Einmallasur_zd01_4.eps
+share/scribus/swatches/OpenOffice_dot_org_CMYK.xml
+share/scribus/swatches/OpenSUSE.xml
+share/scribus/swatches/Oracal 451_bs00_3.eps
+share/scribus/swatches/Oracal 451_bs01_3.eps
+share/scribus/swatches/Oracal 451_kd01_4.eps
+share/scribus/swatches/Oracal 451_np01_4.eps
+share/scribus/swatches/Oracal 451_zd01_4.eps
+share/scribus/swatches/Oracal 6510_bs00_3.eps
+share/scribus/swatches/Oracal 6510_bs01_3.eps
+share/scribus/swatches/Oracal 6510_kd01_4.eps
+share/scribus/swatches/Oracal 6510_np01_4.eps
+share/scribus/swatches/Oracal 6510_zd01_4.eps
+share/scribus/swatches/Oxygen.xml
+share/scribus/swatches/PRB Color_bs00_3.eps
+share/scribus/swatches/PRB Color_bs01_3.eps
+share/scribus/swatches/PRB Color_kd01_4.eps
+share/scribus/swatches/PRB Color_np01_4.eps
+share/scribus/swatches/PRB Color_zd01_4.eps
+share/scribus/swatches/Resene_BS2660_101.xml
+share/scribus/swatches/Resene_BS5252_2008.xml
+share/scribus/swatches/Resene_Decks_Paths_2009.xml
+share/scribus/swatches/Resene_Heritage_2008.xml
+share/scribus/swatches/Resene_Karen_Walker_2008.xml
+share/scribus/swatches/Resene_KidzColour_2008.xml
+share/scribus/swatches/Resene_Multi-Finish.xml
+share/scribus/swatches/Resene_Summit_Roof_2010.xml
+share/scribus/swatches/Resene_The_Range_2011-12.xml
+share/scribus/swatches/Resene_The_Range_WandN_2010.xml
+share/scribus/swatches/SVG.xml
+share/scribus/swatches/Scribus_Basic.xml
+share/scribus/swatches/Scribus_Splash.xml
+share/scribus/swatches/Sericol_UCG_Leuchtfarben_bs00_3.eps
+share/scribus/swatches/Sericol_UCG_Leuchtfarben_bs01_3.eps
+share/scribus/swatches/Sericol_UCG_Leuchtfarben_kd01_4.eps
+share/scribus/swatches/Sericol_UCG_Leuchtfarben_np01_4.eps
+share/scribus/swatches/Sericol_UCG_Leuchtfarben_zd01_4.eps
+share/scribus/swatches/Sericol_UCG_MatchingSystem_bs00_3.eps
+share/scribus/swatches/Sericol_UCG_MatchingSystem_bs01_3.eps
+share/scribus/swatches/Sericol_UCG_MatchingSystem_kd01_4.eps
+share/scribus/swatches/Sericol_UCG_MatchingSystem_np01_4.eps
+share/scribus/swatches/Sericol_UCG_MatchingSystem_zd01_4.eps
+share/scribus/swatches/Standardised_Rock_Colours.xml
+share/scribus/swatches/TAG Farbe erleben_bs00_3.eps
+share/scribus/swatches/TAG Farbe erleben_bs01_3.eps
+share/scribus/swatches/TAG Farbe erleben_kd01_4.eps
+share/scribus/swatches/TAG Farbe erleben_np01_4.eps
+share/scribus/swatches/TAG Farbe erleben_zd01_4.eps
+share/scribus/swatches/Tango.xml
+share/scribus/swatches/US_FS_595.xml
+share/scribus/swatches/Ubuntu_CMYK.xml
+share/scribus/swatches/Ubuntu_RGB.xml
+share/scribus/swatches/X11.xml
+share/scribus/swatches/X11Grey.xml
+share/scribus/swatches/Xfig.xml
+share/scribus/swatches/dtp-studio-free-palettes-license.rtf
+share/scribus/swatches/givelife_colors_license.rtf
+share/scribus/swatches/ispo 2001_bs00_3.eps
+share/scribus/swatches/ispo 2001_bs01_3.eps
+share/scribus/swatches/ispo 2001_kd01_4.eps
+share/scribus/swatches/ispo 2001_np01_4.eps
+share/scribus/swatches/ispo 2001_zd01_4.eps
+share/scribus/swatches/ispo 840_bs00_3.eps
+share/scribus/swatches/ispo 840_bs01_3.eps
+share/scribus/swatches/ispo 840_kd01_4.eps
+share/scribus/swatches/ispo 840_np01_4.eps
+share/scribus/swatches/ispo 840_zd01_4.eps
+share/scribus/swatches/kera Colour-Line_bs00_3.eps
+share/scribus/swatches/kera Colour-Line_bs01_3.eps
+share/scribus/swatches/kera Colour-Line_kd01_4.eps
+share/scribus/swatches/kera Colour-Line_np01_4.eps
+share/scribus/swatches/kera Colour-Line_zd01_4.eps
+share/scribus/swatches/swedex_bs00_3.eps
+share/scribus/swatches/swedex_bs01_3.eps
+share/scribus/swatches/swedex_kd01_4.eps
+share/scribus/swatches/swedex_np01_4.eps
+share/scribus/swatches/swedex_zd01_4.eps
 share/scribus/templates/br1/br1.png
 share/scribus/templates/br1/br1.sla.gz
 share/scribus/templates/br1/br1tn.png
