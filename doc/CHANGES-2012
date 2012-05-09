@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1479 2012/05/09 11:36:53 adam Exp $
+$NetBSD: CHANGES-2012,v 1.1480 2012/05/09 11:45:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2351,3 +2351,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated lang/php53 to 5.3.13 [taca 2012-05-09]
 	Updated editors/emacs to 23.4nb2 [wiz 2012-05-09]
 	Updated devel/zlib to 1.2.7 [adam 2012-05-09]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.235 [obache 2012-05-09]
