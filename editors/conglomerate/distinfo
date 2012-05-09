@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2012/05/07 18:59:39 dholland Exp $
+$NetBSD: distinfo,v 1.11 2012/05/09 05:47:03 dholland Exp $
 
 SHA1 (conglomerate-0.9.1.tar.gz) = 26174924865f095452c59b595f99a31737c9ece5
 RMD160 (conglomerate-0.9.1.tar.gz) = 255f80da8efd672f5ad7ac97d3f1bd6e640c254e
 Size (conglomerate-0.9.1.tar.gz) = 3291367 bytes
 SHA1 (patch-aa) = 49275d1a9f81638e8eb945ff7c9732fc01bf0a08
 SHA1 (patch-src_cong-editor-line-iter-simple_c) = 0c77b7efb843a7eb44d77c54a5c1ae2eb26d19c9
+SHA1 (patch-src_cong-editor-line-iter-span-wrapper_c) = c87806a848f1179b169bfea84ea3465bf136a613
