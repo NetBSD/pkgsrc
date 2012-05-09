@@ -1,0 +1,31 @@
+$NetBSD: patch-src_cong-editor-line-iter-span-wrapper_c,v 1.1 2012/05/09 05:31:28 dholland Exp $
+
+Avoid symbol conflict with clone(2).
+
+--- src/cong-editor-line-iter-span-wrapper.c~	2004-11-04 19:18:48.000000000 +0000
++++ src/cong-editor-line-iter-span-wrapper.c
+@@ -26,13 +26,13 @@
+ #include "cong-editor-line-iter-span-wrapper.h"
+ 
+ static CongEditorLineIter*
+-clone (CongEditorLineIter *line_iter);
++clone_ (CongEditorLineIter *line_iter);
+ 
+ static CongEditorAreaLine*
+ get_line (CongEditorLineIter *line_iter);
+ 
+ CONG_DEFINE_CLASS_PUBLIC_DATA (CongEditorLineIterSpanWrapper, cong_editor_line_iter_span_wrapper, CONG_EDITOR_LINE_ITER_SPAN_WRAPPER, CongEditorLineIter, CONG_EDITOR_LINE_ITER_TYPE, 
+-			       CONG_EDITOR_LINE_ITER_CLASS (klass)->clone = clone;
++			       CONG_EDITOR_LINE_ITER_CLASS (klass)->clone = clone_;
+ 			       CONG_EDITOR_LINE_ITER_CLASS (klass)->get_line = get_line;)
+ 
+ /* Implementation of CongLineEditorIterSpanWrapper: */
+@@ -80,7 +80,7 @@ cong_editor_line_iter_span_wrapper_dispo
+ }
+ 
+ static CongEditorLineIter*
+-clone (CongEditorLineIter *line_iter)
++clone_ (CongEditorLineIter *line_iter)
+ {
+ 	CongEditorLineIterSpanWrapper* span_wrapper_iter = CONG_EDITOR_LINE_ITER_SPAN_WRAPPER (line_iter);
+ 	CongEditorLineIterSpanWrapper* new_iter;
