@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2012/05/07 08:40:07 adam Exp $
+# $NetBSD: Makefile,v 1.213 2012/05/09 18:39:35 tron Exp $
 
 DISTNAME=	gimp-2.8.0
 CATEGORIES=	graphics
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-linux-input
+CONFIGURE_ARGS+=	--without-mac-twain
 
 UNLIMIT_RESOURCES+=	datasize
 
@@ -49,10 +50,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-PLIST_VARS+=		remote twain
-.if exists(/System/Library/Frameworks/TWAIN.framework)
-PLIST.twain=		yes
-.endif
+PLIST_VARS+=		remote
 
 .include "options.mk"
 
