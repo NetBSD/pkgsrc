@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.14 2012/05/07 18:54:44 dholland Exp $
+$NetBSD: distinfo,v 1.15 2012/05/09 03:57:45 dholland Exp $
 
 SHA1 (telepathy-gabble-0.11.10.tar.gz) = 26ca4e8a98b01b78007f88caea56b08ae5070fdd
 RMD160 (telepathy-gabble-0.11.10.tar.gz) = b4906a01b8cc6e6630e1707e97250bcdefeac9c4
 Size (telepathy-gabble-0.11.10.tar.gz) = 3443486 bytes
 SHA1 (patch-lib_ext_wocky_examples_connect.c) = 4f22cadb5e39f68630c3d09671aaef4e6a480394
+SHA1 (patch-lib_ext_wocky_tests_test-resolver_h) = 4fc2950543c9ea9b902c1608082e60c644659a91
 SHA1 (patch-lib_ext_wocky_tests_wocky-test-sasl-auth-server.c) = f53a0b3247df5a5dcf90809a9495966ff26c6c3f
 SHA1 (patch-lib_ext_wocky_wocky_wocky-heartbeat-source_c) = d8f0192f7f34e6fb98150283f5ff05de6313ee4a
 SHA1 (patch-lib_ext_wocky_wocky_wocky-openssl.c) = 21dd4df0c50e766bab0d3d1cbaa9fbe2feef7a17
 SHA1 (patch-src_bytestream-socks5.c) = d6f72478bef2b2502f3955e50dc11b51f0e2b502
 SHA1 (patch-src_ft-manager.c) = d660079ff74dd6f275ab8022ad0f7f5cd9b37897
+SHA1 (patch-tests_twisted_test-resolver_h) = d5539523e6ef34c4a8ce495457cfee1224d82891
