@@ -1,0 +1,105 @@
+$NetBSD: patch-src_liboe_c,v 1.1.2.2 2012/05/09 06:26:08 tron Exp $
+
+Hack around misuse of fpos_t. Fix some places where the code assumes
+fpos_t is a 4-byte integer (it has always been an 8-byte integer on
+NetBSD...) Cannot fix the core assumption that fpos_t is an integer,
+though, so work around it.
+
+--- src/liboe.c~	2000-06-18 22:16:55.000000000 +0000
++++ src/liboe.c
+@@ -24,6 +24,15 @@
+ #endif
+ #include <sys/stat.h>
+ 
++#ifdef __NetBSD__
++/*
++ * NetBSD 6 and up has a non-integer fpos_t. This code requires an
++ * integer type, so we'll have to use fseeko instead.
++ */
++#define fpos_t off_t
++#define fsetpos(f, offp) fseeko(f, *(offp), SEEK_SET)
++#endif
++
+ #define OE_CANNOTREAD 1
+ #define OE_NOTOEBOX   2
+ #define OE_POSITION   3
+@@ -69,10 +78,13 @@ typedef struct oe_list oe_list;
+    anywhere in the mailbox file, some times far from each other. */
+ 
+ struct oe_msg_segmentheader {
+-  int self,  /* Pointer to self (filepos) */
++  fpos_t self;  /* Pointer to self (filepos) */
++  int
+     increase, /* Increase to next segment header (not in msg, in file!) */
+-    include, /* Number of bytes to include from this segment */
+-    next,  /* Pointer to next message segment (in msg) (filepos) */
++    include; /* Number of bytes to include from this segment */
++  fpos_t
++    next;  /* Pointer to next message segment (in msg) (filepos) */
++  int
+     usenet; /* Only used with usenet posts */
+ };
+ typedef struct oe_msg_segmentheader oe_msg_segmentheader;
+@@ -125,7 +137,8 @@ int oe_readmessage(oe_data *data, 
+   int segheadsize = sizeof(oe_msg_segmentheader)-4; /*+(newsarticle<<2);*/
+   oe_msg_segmentheader *sgm = malloc(sizeof(oe_msg_segmentheader));
+   char buff[16], *ss = malloc(2048), *s = ss;
+-  int nextsegment, endofsegment, i, headerwritten = 0;
++  fpos_t nextsegment, endofsegment;
++  int i, headerwritten = 0;
+   fsetpos(data->oe,&pos);
+   while (1) {
+     fread(sgm,segheadsize,1,data->oe);
+@@ -156,7 +169,7 @@ int oe_readmessage(oe_data *data, 
+ 	  if (buff[i]==0x0a) { *s='\0'; data->oput(ss); s=ss; }
+ 	}
+     }
+-    fsetpos(data->oe,(fpos_t *) &sgm->next);
++    fsetpos(data->oe, &sgm->next);
+     pos = sgm->next;
+     if (pos==0) break;
+   }
+@@ -252,12 +265,14 @@ void oe_readdamaged(oe_data *data) { 
+      that even OE couldn't read to work. Should generally not 
+      be needed, but is nice to have in here */
+   fpos_t pos = 0x7C;
++  int tmp;
+   int i,check, lastID;
+ #ifdef DEBUG
+   printf("  Trying to construct internal mailbox structure\n");
+ #endif
+   fsetpos(data->oe,&pos);
+-  fread(&pos,sizeof(int),1,data->oe); 
++  fread(&tmp,sizeof(int),1,data->oe); 
++  pos = tmp;
+   if (pos==0) return; /* No, sorry, didn't work */
+   fsetpos(data->oe,&pos);
+   fread(&i,sizeof(int),1,data->oe);
+@@ -286,7 +301,8 @@ void oe_readdamaged(oe_data *data) { 
+ }
+ 
+ void oe_readbox_oe4(oe_data *data) {
+-  fpos_t pos = 0x54, endpos=0, i;
++  fpos_t pos = 0x54, endpos=0;
++  int i;
+   oe_msg_segmentheader *header=malloc(sizeof(oe_msg_segmentheader));
+   char *cb = malloc(4), *sfull = malloc(65536), *s = sfull;
+   fsetpos(data->oe,&pos); 
+@@ -323,6 +339,7 @@ void oe_readbox_oe4(oe_data *data) {
+ 
+ oe_data* oe_readbox(char* filename,void (*oput)(char*)) {
+   int signature[4], i;
++  fpos_t tmp;
+   oe_data *data = malloc(sizeof(oe_data));
+   data->success=data->failure=data->justheaders=data->errcode=0;
+   data->used = NULL;
+@@ -359,7 +376,8 @@ oe_data* oe_readbox(char* filename,void 
+ 
+   /* ACTUAL WORK */
+   i = 0x30;
+-  fsetpos(data->oe,(fpos_t *) &i);
++  tmp = i;
++  fsetpos(data->oe, &tmp);
+   fread(&i,4,1,data->oe);
+   if (!i) i=0x1e254;
+   i = oe_readtable(data,i); /* Reads the box */
