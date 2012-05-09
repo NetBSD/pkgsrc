@@ -1,0 +1,14 @@
+$NetBSD: patch-nrange_h,v 1.1 2012/05/09 06:27:05 dholland Exp $
+
+Add missing header file, affects gcc 4.5+.
+
+--- nrange.h~	2004-05-29 23:00:08.000000000 +0000
++++ nrange.h
+@@ -23,6 +23,7 @@
+ #include "config.h"
+ #endif
+ #include <sys/types.h>
++#include <climits>
+ #include <map>
+ #include <stdexcept>
+ 
