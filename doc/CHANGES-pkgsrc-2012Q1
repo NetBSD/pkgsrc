@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.29 2012/05/07 09:43:40 sbd Exp $
+$NetBSD: CHANGES-pkgsrc-2012Q1,v 1.1.2.30 2012/05/09 06:27:17 tron Exp $
 
 Changes to the packages collection and infrastructure in pkgsrc-2012Q1:
 
@@ -143,3 +143,7 @@ Pullup ticket #3774 - requested by taca
 lang/php53 security update
 Pullup ticket #3775 - requested by dholland
 lang/pfe builde fix
+Pullup ticket #3776 - requested by sbd
+x11/xorg-cf-files: portability fix
+Pullup ticket #3777 - requested by dholland
+mail/oe2mbx: build fix
