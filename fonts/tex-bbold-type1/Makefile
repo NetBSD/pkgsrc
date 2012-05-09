@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/08 18:00:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/09 21:02:03 minskim Exp $
 
 DISTNAME=	bbold-type1
 PKGNAME=	tex-${DISTNAME}-2011
+PKGREVISION=	1
 TEXLIVE_REV=	20524
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
