@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_ext_wocky_tests_test-resolver_h,v 1.1 2012/05/09 03:57:45 dholland Exp $
+
+Fix build with latest glib2.
+
+--- lib/ext/wocky/tests/test-resolver.h~	2009-10-07 11:33:35.000000000 +0000
++++ lib/ext/wocky/tests/test-resolver.h
+@@ -22,7 +22,7 @@
+ #define __TEST_RESOLVER_H__
+ 
+ #include <gio/gio.h>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
