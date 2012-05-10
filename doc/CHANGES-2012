@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1488 2012/05/10 07:43:40 dholland Exp $
+$NetBSD: CHANGES-2012,v 1.1489 2012/05/10 12:12:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2361,3 +2361,4 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated emulators/gpsim to 0.21.11nb11 [dholland 2012-05-10]
 	Updated emulators/gpsim-devel to 20050905nb15 [dholland 2012-05-10]
 	Updated databases/mergeant to 0.66nb20 [dholland 2012-05-10]
+	Updated security/ruby-simple_oauth to 0.1.8 [obache 2012-05-10]
