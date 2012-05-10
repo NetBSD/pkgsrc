@@ -1,0 +1,70 @@
+$NetBSD: patch-src_tags_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- remove useless sccs id
+- don't use implicit int
+
+--- src/tags.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/tags.c
+@@ -29,7 +29,7 @@
+ #include "edef.h"
+ #include "elang.h"
+ 
+-static char SVER[] = "@(#) %M% %I% %H%";
++/*static char SVER[] = "@(#) %M% %I% %H%";*/
+ 
+ #ifdef	min
+ #undef min
+@@ -67,7 +67,7 @@ static TAG *curtp = NULL;	/* Currently i
+  * return with TRUE only if we are succesfull.
+  */
+ 
+-newtags(path)
++int newtags(path)
+ char path[NFILEN];
+ 	{
+ 	register TAG	*tnewp;
+@@ -105,7 +105,7 @@ char path[NFILEN];
+  * try it the hard way.  If we find the file we return TRUE.
+  */
+ 
+-lookup()
++int lookup()
+ 	{
+ 	TAG		*tmp = curtp;	/* Remember current 'tags'	*/
+ 	char		cpath[NFILEN];	/* Path of current file		*/
+@@ -176,7 +176,7 @@ VOID fix_index()
+  * str (but maximum lmax characters).  '.' is preserved.
+  */
+ 
+-restword(str, lmax)
++int restword(str, lmax)
+ char *str;
+ int  lmax;
+ 	{
+@@ -207,7 +207,7 @@ int  lmax;
+  * results from this code (I did).
+  */
+ 
+-backupword(f, n)
++int backupword(f, n)
+ 
+ int f, n;
+ 
+@@ -232,7 +232,7 @@ int f, n;
+  * and search direction characters (? or /)
+  */
+ 
+-alterpattern(pattern)
++int alterpattern(pattern)
+ register char pattern[];
+ 	{
+ 	register int	i = 0;	/* EMACS pattern index	*/
+@@ -298,7 +298,7 @@ char *filename;
+  * so as to prevent loosing the return information.
+  */
+ 
+-tagger(errmsg, retag)
++int tagger(errmsg, retag)
+ char *errmsg;
+ int  retag;
+ 	{
