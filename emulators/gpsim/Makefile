@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2012/03/03 00:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2012/05/10 06:52:44 dholland Exp $
 #
 
 DISTNAME=	gpsim-0.21.11
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpsim/}
 
@@ -27,6 +27,7 @@ post-install:
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2+extra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
