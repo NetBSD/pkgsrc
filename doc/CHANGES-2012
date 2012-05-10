@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.1485 2012/05/09 22:44:06 jdf Exp $
+$NetBSD: CHANGES-2012,v 1.1486 2012/05/10 01:58:16 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -2323,6 +2323,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated graphics/gimp to 2.8.0 [adam 2012-05-07]
 	Updated www/fengoffice to 2.0.0nb1 [taca 2012-05-07]
 	Updated editors/conglomerate to 0.9.1nb23 [dholland 2012-05-07]
+	Updated mail/oe2mbx to 1.21nb1 [dholland 2012-05-07]
 	Updated net/mikutter to 0.1.1.780 [obache 2012-05-07]
 	Updated archivers/lhasa to 0.0.5 [wiz 2012-05-08]
 	Updated math/ruby-spreadsheet to 0.7.1 [obache 2012-05-08]
