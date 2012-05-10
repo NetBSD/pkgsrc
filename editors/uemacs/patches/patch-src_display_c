@@ -1,0 +1,78 @@
+$NetBSD: patch-src_display_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- fix braces warning from gcc
+- fix false initialization warning seen with gcc 4.1
+
+--- src/display.c~	2012-05-10 19:12:43.000000000 +0000
++++ src/display.c
+@@ -250,7 +250,7 @@ int PASCAL NEAR vtsizescr(SCREEN *sp, in
+  * system prompt will be written in the line). Shut down the channel to the
+  * terminal.
+  */
+-PASCAL NEAR vttidy()
++VOID PASCAL NEAR vttidy()
+ {
+     mlerase();
+     movecursor(term.t_nrow, 0);
+@@ -264,7 +264,7 @@ PASCAL NEAR vttidy()
+  * screen. There is no checking for nonsense values; this might be a good
+  * idea during the early stages.
+  */
+-PASCAL NEAR vtmove(row, col)
++VOID PASCAL NEAR vtmove(row, col)
+ 
+ int row, col;
+ 
+@@ -280,7 +280,7 @@ int row, col;
+    terminal buffers. Only column overflow is checked.
+ */
+ 
+-PASCAL NEAR vtputc(c)
++VOID PASCAL NEAR vtputc(c)
+ 
+ int c;
+ 
+@@ -338,7 +338,7 @@ int c;
+  * Erase from the end of the software cursor to the end of the line on which
+  * the software cursor is located.
+  */
+-PASCAL NEAR vteeol()
++VOID PASCAL NEAR vteeol()
+ {
+     register VIDEO	*vp;
+ 
+@@ -480,11 +480,12 @@ int force;	/* force update past type ahe
+ 		upddex();
+ 
+ 		/* if screen is garbage, re-plot it */
+-		if (sgarbf != FALSE)
++		if (sgarbf != FALSE) {
+ 			if (gflags & GFSDRAW)
+ 				sgarbf = FALSE;
+ 			else
+ 				updgar();
++		}
+ 	
+ 		/* update the virtual screen to the physical screen */
+ 		updupd(force);
+@@ -633,6 +634,10 @@ VOID PASCAL NEAR update_hilite()
+ 	if (hilite > NMARKS)
+ 		return;
+ 
++	/* required by gcc 4.1 */
++	first_line = -1;
++	last_line = -1;
++
+ 	/* Both marks must be set to define a highlighted region */
+ 	first_mark = curwp->w_markp[hilite];
+ 	last_mark = curwp->w_markp[hilite+1];
+@@ -2162,7 +2167,7 @@ int s;	/* scaled integer to output */
+ }
+ 
+ #if HANDLE_WINCH
+-winch_vtresize(rows, cols)
++VOID winch_vtresize(rows, cols)
+      int rows, cols;
+ {
+   int i;
