@@ -1,0 +1,16 @@
+$NetBSD: patch-goffice_math_go-cspline_c,v 1.1 2012/05/10 07:28:16 dholland Exp $
+
+Fix build with latest glib2.
+
+--- goffice/math/go-cspline.c~	2009-01-18 16:39:34.000000000 +0000
++++ goffice/math/go-cspline.c
+@@ -26,8 +26,7 @@
+ #include <goffice/goffice-config.h>
+ #include "go-rangefunc.h"
+ #include "go-cspline.h"
+-#include <glib/gmem.h>
+-#include <glib/gmessages.h>
++#include <glib.h>
+ 
+ #ifndef DOUBLE
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-goffice_app_goffice-app_h,v 1.1 2012/05/10 07:28:16 dholland Exp $
+
+Fix build with latest glib2.
+
+--- goffice/app/goffice-app.h~	2008-07-08 09:54:58.000000000 +0000
++++ goffice/app/goffice-app.h
+@@ -22,7 +22,7 @@
+ #ifndef GOFFICE_APP_H
+ #define GOFFICE_APP_H
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 

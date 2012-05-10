@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.12 2011/09/12 17:43:06 drochner Exp $
+$NetBSD: distinfo,v 1.13 2012/05/10 07:31:02 dholland Exp $
 
 SHA1 (notification_plugin-0.28.tar.gz) = 3bc25dafca2a745c7115cd94d7f909f2d31814ab
 RMD160 (notification_plugin-0.28.tar.gz) = 12585e14dd2f21f27d5d59fbd24637d9ecdd4192
 Size (notification_plugin-0.28.tar.gz) = 538454 bytes
+SHA1 (patch-gtkhotkey_gtk-hotkey-error_h) = dc8a68a6e6fa5e79f33794a6b1cccf9460510752
+SHA1 (patch-gtkhotkey_x11_tomboykeybinder_h) = b184f704f22d0f5507d24d2f08f092e5743bcaca

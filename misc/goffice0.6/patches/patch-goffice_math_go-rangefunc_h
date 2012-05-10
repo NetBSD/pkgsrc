@@ -1,0 +1,14 @@
+$NetBSD: patch-goffice_math_go-rangefunc_h,v 1.1 2012/05/10 07:28:16 dholland Exp $
+
+Fix build with latest glib2.
+
+--- goffice/math/go-rangefunc.h~	2008-07-08 09:54:59.000000000 +0000
++++ goffice/math/go-rangefunc.h
+@@ -1,6 +1,6 @@
+ #ifndef GO_RANGEFUNC_H
+ #define GO_RANGEFUNC_H
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
