@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/04/27 12:31:33 obache Exp $
+# $NetBSD: Makefile,v 1.24 2012/05/10 16:36:51 dholland Exp $
 
 DISTNAME=	libgpod-0.8.2
 PKGREVISION=	2
@@ -19,6 +19,12 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+CONFIGURE_ARGS+=	--disable-udev
+.endif
 
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.0
