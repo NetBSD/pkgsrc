@@ -1,0 +1,15 @@
+$NetBSD: patch-src_plugins_GUI_gtkimhtml_c,v 1.1 2012/05/10 02:44:33 dholland Exp $
+
+Fix build with latest glib2.
+
+--- src/plugins/GUI/gtkimhtml.c~	2006-10-14 22:03:40.000000000 +0000
++++ src/plugins/GUI/gtkimhtml.c
+@@ -32,7 +32,7 @@
+ #include "gtkimhtml.h"
+ #include "gtksourceiter.h"
+ #include <gtk/gtk.h>
+-#include <glib/gerror.h>
++#include <glib.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <string.h>
+ #include <ctype.h>
