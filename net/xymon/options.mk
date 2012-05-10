@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2011/10/16 15:19:08 spz Exp $
+# $NetBSD: options.mk,v 1.2 2012/05/10 21:58:38 spz Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.xymon
 PKG_SUPPORTED_OPTIONS=  ldap snmp ssl
 PKG_SUGGESTED_OPTIONS=  ldap ssl
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		snmp
 
 # include support for ldap
 .if !empty(PKG_OPTIONS:Mldap)
@@ -24,6 +26,7 @@ CONFIGURE_ENV+=		ENABLELDAP=n
 CONFIGURE_ENV+=		SNMP=1
 CONFIGURE_ARGS+=	"--snmpconfig" "${BUILDLINK_PREFIX.net-snmp}/bin/net-snmp-config"
 .include "../../net/net-snmp/buildlink3.mk"
+PLIST.snmp=		yes
 .else
 CONFIGURE_ENV+=		SNMP=n
 .endif
