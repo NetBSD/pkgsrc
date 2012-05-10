@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2011/07/09 17:22:43 tron Exp $
+$NetBSD: distinfo,v 1.3 2012/05/10 10:49:49 wiz Exp $
 
 SHA1 (fuse-ext2-0.0.7.tar.gz) = cdfef525838d2de07a4da6d60b65efce5a1cffa0
 RMD160 (fuse-ext2-0.0.7.tar.gz) = 29cb85f033b65fba4d82d14de907dd4458173c2b
 Size (fuse-ext2-0.0.7.tar.gz) = 570156 bytes
-SHA1 (patch-aa) = e8dc764411ea62f2c714df71bee7ea06a84c337b
+SHA1 (patch-aa) = 51605e31f82da8919ec5a01e10298a2f1784dc56
 SHA1 (patch-ab) = 830bc968c55b13125700a6fbeff9808610d065f0
 SHA1 (patch-ac) = 253561f1e6a67b5d66d7409af3bf26477ad57b2c
 SHA1 (patch-af) = ced88c0a278c4924ee9fb6585271093742f0eb09
