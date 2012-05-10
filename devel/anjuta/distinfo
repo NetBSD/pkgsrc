@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2009/07/10 19:18:53 hasso Exp $
+$NetBSD: distinfo,v 1.22 2012/05/10 02:18:13 dholland Exp $
 
 SHA1 (anjuta-2.24.2.tar.bz2) = bcbab37d362f36bf1811bcd5c62c26c4fd31ec3e
 RMD160 (anjuta-2.24.2.tar.bz2) = 1f1a7b2820b8f7c10e05f7da0a51727f497dcb75
@@ -6,3 +6,12 @@ Size (anjuta-2.24.2.tar.bz2) = 6713913 bytes
 SHA1 (patch-aa) = 4702c50c7a0ecc94446e1b4b5dcdfbb2d84d6d42
 SHA1 (patch-ab) = d197146b046fdfa030ca2cab168b52350602206b
 SHA1 (patch-ac) = 6ffb8da0d923d5e017d10cbfebfa4d7bb0d0f155
+SHA1 (patch-libanjuta_anjuta-profile_c) = 491fa75c1538b0cd32231b82f0a313e205e172b6
+SHA1 (patch-plugins_class-gen_transform_h) = d1b225c8c5aea3cd517007a35726c6aa634e7a69
+SHA1 (patch-plugins_class-gen_window_c) = 0868212754cc1a665b986332b426ffe63a3db84f
+SHA1 (patch-plugins_project-wizard_action_c) = bcbe0fb12a022c12a584f98b885da74b65795a42
+SHA1 (patch-plugins_project-wizard_autogen_c) = d917efc838ac70b7c8765768a9dc52add5d8d951
+SHA1 (patch-plugins_project-wizard_druid_h) = 5d7ef084597164fc8806c345d7b585042bfaac67
+SHA1 (patch-plugins_project-wizard_header_c) = d4547c7ceef61c498a034a228724b0416b5ab7c8
+SHA1 (patch-plugins_project-wizard_parser_c) = ea49775bcda3331bb9c218f3f01f7dd4ed679da0
+SHA1 (patch-plugins_project-wizard_property_c) = 3878c5e3edaee349a792f8752035dc4d7b5941d3
