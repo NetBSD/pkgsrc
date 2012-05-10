@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/04/13 18:47:27 adam Exp $
+# $NetBSD: Makefile,v 1.16 2012/05/10 08:10:00 sbd Exp $
 
 .include "dist.mk"
 
@@ -69,14 +69,12 @@ PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
 .elif ${OPSYS} == "HPUX"
 PY_PLATNAME=	hp-ux11
+.elif ${OPSYS} == "Linux"
+PY_PLATNAME=	linux2
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
-
-.if ${PY_PLATNAME} == "linux2"
-PLIST_SRC+=	${.CURDIR}/../../lang/python27/PLIST.Linux2
-.endif
 
 .if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "amd64") || \
     (${MACHINE_ARCH} == "sparc64") || (${MACHINE_ARCH} == "x86_64") || \
