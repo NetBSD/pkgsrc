@@ -1,10 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/07/09 15:27:11 tron Exp $
+$NetBSD: patch-aa,v 1.2 2012/05/10 10:49:49 wiz Exp $
 
+Make automake-1.12 happy.
 Add NetBSD support.
 
 --- configure.ac.orig	2009-12-24 12:38:06.000000000 +0000
-+++ configure.ac	2011-07-09 13:54:03.000000000 +0100
-@@ -15,6 +15,7 @@
++++ configure.ac
+@@ -11,10 +11,13 @@ AC_PROG_CC
+ AC_PROG_INSTALL
+ AC_PROG_LIBTOOL
+ AC_PATH_PROG(CHMOD, chmod, :)
++AM_PROG_AR
++AM_PROG_CC_C_O
+ 
  case $target_os in
       *linux*)	arch=linux;;
       *darwin*)	arch=darwin;;
@@ -12,7 +19,7 @@ Add NetBSD support.
       *)			arch=unknown;;
  esac
  
-@@ -137,7 +138,7 @@
+@@ -137,7 +140,7 @@ AC_CHECK_FUNCS([	\
  ])
  
  # Checks for libraries
@@ -21,7 +28,7 @@ Add NetBSD support.
  
  AC_MSG_CHECKING([if FUSE on this system is too new for us])
  AC_EGREP_CPP([fuse_version_yes], [
-@@ -193,6 +194,7 @@
+@@ -193,6 +196,7 @@ AC_SUBST(pkgconfigdir)
  
  AM_CONDITIONAL(LINUX, test "$arch" = linux)
  AM_CONDITIONAL(DARWIN, test "$arch" = darwin)
