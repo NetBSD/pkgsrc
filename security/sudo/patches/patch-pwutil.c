@@ -1,4 +1,7 @@
-$NetBSD: patch-pwutil.c,v 1.1 2012/05/03 08:31:05 martin Exp $
+$NetBSD: patch-pwutil.c,v 1.2 2012/05/10 09:44:58 martin Exp $
+
+# Tracked upstream at;
+#   http://www.gratisoft.us/bugzilla/show_bug.cgi?id=555
 
 # NetBSD uses 64bit time_t, even on 32bit architectures.
 # This makes struct passwd require 8 byte-alginement on, for example,
