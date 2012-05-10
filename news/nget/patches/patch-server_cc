@@ -1,0 +1,14 @@
+$NetBSD: patch-server_cc,v 1.1 2012/05/10 02:04:36 dholland Exp $
+
+Use standard headers.
+
+--- server.cc~	2004-12-20 20:44:11.000000000 +0000
++++ server.cc
+@@ -16,6 +16,7 @@
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
++#include <climits>
+ #include "server.h"
+ #include "strreps.h"
+ #include "nget.h"
