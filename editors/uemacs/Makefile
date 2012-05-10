@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/05/10 20:53:30 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2012/05/10 20:59:41 dholland Exp $
 
 DISTNAME=	ue400dev
 PKGNAME=	uemacs-4.0
@@ -17,13 +17,12 @@ INSTALLATION_DIRS=	bin share/uemacs
 WRKSRC=		${WRKDIR}
 EXTRACT_OPTS_ZIP=	-Laqo
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	src/bind.c h/epath.h
+SUBST_SED.paths=	-e s,%%PREFIX%%,${PREFIX},g
+
 post-extract:
 	${CP} -r ${WRKSRC}/freebsd ${WRKSRC}/netbsd
-
-post-patch:
-	for FILE in ${WRKSRC}/src/*.c ${WRKSRC}/h/*.h; do \
-	  ${MV} $${FILE} $${FILE}.old; \
-	  ${SED} -e "s|%%PREFIX%%|${PREFIX}|g" <$${FILE}.old >$${FILE}; \
-	done
 
 .include "../../mk/bsd.pkg.mk"
