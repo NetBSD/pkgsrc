@@ -1,7 +1,17 @@
-$NetBSD: distinfo,v 1.7 2012/05/10 04:43:53 dholland Exp $
+$NetBSD: distinfo,v 1.8 2012/05/10 07:28:16 dholland Exp $
 
 SHA1 (goffice-0.6.6.tar.gz) = fdb00804de201e057628ba5b997512ab882ca9ea
 RMD160 (goffice-0.6.6.tar.gz) = d67f6eef8ecc4e26a4ddc807e6682b08d42d86f9
 Size (goffice-0.6.6.tar.gz) = 3246559 bytes
 SHA1 (patch-configure) = 820c5696f0d158c83558020ca06b8b8d5e81e5a3
+SHA1 (patch-goffice_app_goffice-app_h) = 6986dc8f238fbde32184ef45e14124c8f423fbf8
+SHA1 (patch-goffice_graph_gog-child-button_c) = ed0b19a706c5674259a7a89b4469502ab92696ca
+SHA1 (patch-goffice_math_go-cspline_c) = 26155e5cd9597430f40b8b96ba96da87f8a3c0d1
+SHA1 (patch-goffice_math_go-math_h) = 37b3bce845ac4425766f7456b730a6b716e17fc8
+SHA1 (patch-goffice_math_go-rangefunc_c) = f177041fe1f58686ec564f68fb7cbaa50d1d2956
+SHA1 (patch-goffice_math_go-rangefunc_h) = d61b67b879baa1db74b2e29a4cee00fcc4e4cee3
+SHA1 (patch-goffice_math_go-regression_c) = feb19375294561f24b4f87b9a496b62e03021627
+SHA1 (patch-goffice_math_go-regression_h) = 229552efa2ded799d99a409f84bfd6f554537d5a
+SHA1 (patch-goffice_ms-compat_go-ms-parser_c) = 69b1cb4147322c228384bf3e0a6a6d1cc4f43f25
+SHA1 (patch-goffice_ms-compat_god-drawing-ms_c) = d3cbde39a1a68d59f858e9348418af4325b7b1bb
 SHA1 (patch-goffice_utils_regutf8.c) = 4e058782463cf539339c6ac2782119ae9966eb24
