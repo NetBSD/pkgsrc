@@ -1,0 +1,147 @@
+$NetBSD: patch-src_exec_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- const correctness required by existing const declarations
+- fix uninitialized variable bug on error path, caught by gcc
+
+--- src/exec.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/exec.c
+@@ -11,7 +11,7 @@
+ 
+ /* namedcmd:	execute a named command even if it is not bound */
+ 
+-PASCAL NEAR namedcmd(f, n)
++int PASCAL NEAR namedcmd(f, n)
+ 
+ int f, n;	/* command arguments [passed through to command executed] */
+ 
+@@ -61,7 +61,7 @@ int f, n;	/* command arguments [passed t
+ /*	execcmd:	Execute a command line command to be typed in
+ 			by the user					*/
+ 
+-PASCAL NEAR execcmd(f, n)
++int PASCAL NEAR execcmd(f, n)
+ 
+ int f, n;	/* default Flag and Numeric argument */
+ 
+@@ -88,7 +88,7 @@ int f, n;	/* default Flag and Numeric ar
+ 
+ */
+ 
+-PASCAL NEAR docmd(cline)
++int PASCAL NEAR docmd(cline)
+ 
+ char *cline;	/* command line to execute */
+ 
+@@ -238,7 +238,7 @@ int size;		/* maximum size of token */
+ 	return(src);
+ }
+ 
+-PASCAL NEAR macarg(tok)	/* get a macro line argument */
++int PASCAL NEAR macarg(tok)	/* get a macro line argument */
+ 
+ char *tok;	/* buffer to place argument */
+ 
+@@ -255,7 +255,7 @@ char *tok;	/* buffer to place argument *
+ 
+ /*	nextarg:	get the next argument	*/
+ 
+-PASCAL NEAR nextarg(prompt, buffer, size, terminator)
++int PASCAL NEAR nextarg(prompt, buffer, size, terminator)
+ 
+ char *prompt;		/* prompt to use if we must be interactive */
+ char *buffer;		/* buffer to put token into */
+@@ -263,7 +263,7 @@ int size;		/* size of the buffer */
+ int terminator;		/* terminating char to be used on interactive fetch */
+ 
+ {
+-	register char *sp;	/* return pointer from getval() */
++	register CONST char *sp;	/* return pointer from getval() */
+ 
+ 	/* if we are interactive, go get it! */
+ 	if (clexec == FALSE) {
+@@ -290,7 +290,7 @@ int terminator;		/* terminating char to 
+ /*	storeproc:	Set up a procedure buffer and flag to store all
+ 			executed command lines there			*/
+ 
+-PASCAL NEAR storeproc(f, n)
++int PASCAL NEAR storeproc(f, n)
+ 
+ int f;		/* default flag */
+ int n;		/* macro number to use */
+@@ -361,7 +361,7 @@ int n;		/* macro number to use */
+ 
+ /*	execproc:	Execute a procedure				*/
+ 
+-PASCAL NEAR execproc(f, n)
++int PASCAL NEAR execproc(f, n)
+ 
+ int f, n;	/* default flag and numeric arg */
+ 
+@@ -395,7 +395,7 @@ int f, n;	/* default flag and numeric ar
+ 
+ /*	execbuf:	Execute the contents of a buffer of commands	*/
+ 
+-PASCAL NEAR execbuf(f, n)
++int PASCAL NEAR execbuf(f, n)
+ 
+ int f, n;	/* default flag and numeric arg */
+ 
+@@ -436,7 +436,7 @@ int f, n;	/* default flag and numeric ar
+ 	*LBL01
+ */
+ 
+-PASCAL NEAR dobuf(bp)
++int PASCAL NEAR dobuf(bp)
+ 
+ BUFFER *bp;	/* buffer to execute */
+ 
+@@ -468,6 +468,10 @@ BUFFER *bp;	/* buffer to execute */
+ 	VDESC vd;		/* variable num/type */
+ 	char value[NSTRING];	/* evaluated argument */
+ 
++	/* there's an error path where these are used but not set otherwise */
++	ut = NULL;
++	einit = NULL;
++
+ 	/* clear IF level flags/while ptr */
+ 	execlevel = 0;
+ 	whlist = NULL;
+@@ -971,7 +975,7 @@ LINE *lp;	/* line " */
+ 		if $debug == TRUE, The interactive debugger is invoked
+ 		commands are listed out with the ? key			*/
+ 
+-PASCAL NEAR debug(bp, eline, skipflag)
++int PASCAL NEAR debug(bp, eline, skipflag)
+ 
+ BUFFER *bp;	/* buffer to execute */
+ char *eline;	/* text of line to debug */
+@@ -1110,14 +1114,14 @@ WHBLOCK *wp;	/* head of structure to fre
+ 	}
+ }
+ 
+-PASCAL NEAR execfile(f, n)	/* execute a series of commands in a file */
++int PASCAL NEAR execfile(f, n)	/* execute a series of commands in a file */
+ 
+ int f, n;	/* default flag and numeric arg to pass on to file */
+ 
+ {
+ 	register int status;	/* return status of name query */
+ 	char fname[NSTRING];	/* name of file to execute */
+-	char *fspec;		/* full file spec */
++	CONST char *fspec;		/* full file spec */
+ 
+ #if WINDOW_MSWIN
+ 	/* special case: we want filenamedlg to refrain from stuffing a
+@@ -1161,9 +1165,9 @@ exec1:	/* otherwise, execute it */
+ /*	dofile:	yank a file into a buffer and execute it
+ 		if there are no errors, delete the buffer on exit */
+ 
+-PASCAL NEAR dofile(fname)
++int PASCAL NEAR dofile(fname)
+ 
+-char *fname;	/* file name to execute */
++CONST char *fname;	/* file name to execute */
+ 
+ {
+ 	register BUFFER *bp;	/* buffer to place file to exeute */
