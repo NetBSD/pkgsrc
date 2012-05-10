@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile_in,v 1.1 2012/05/10 17:46:34 dholland Exp $
+
+Do gconf schemas the pkgsrc way.
+
+--- Makefile.in~	2010-12-19 13:55:19.000000000 +0000
++++ Makefile.in
+@@ -391,7 +391,7 @@ SUBDIRS = \
+ 	src			\
+ 	tests
+ 
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = $(GCONF_SCHEMA_FILE_DIR)
+ schema_in_files = f-spot.schemas.in
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ CLEANFILES = \
