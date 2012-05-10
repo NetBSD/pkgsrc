@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1.1.1 2012/05/06 13:12:12 obache Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2012/05/10 08:39:33 obache Exp $
 lib/libpython${PY_VER_SUFFIX}.dylib
-lib/python${PY_VER_SUFFIX}/lib-dynload/_gestalt.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/_scproxy.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_gestalt.cpython-32.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_scproxy.cpython-32.so
