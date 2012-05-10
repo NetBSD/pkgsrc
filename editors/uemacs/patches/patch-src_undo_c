@@ -1,0 +1,33 @@
+$NetBSD: patch-src_undo_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- return values from non-void functions on unreachable paths
+
+--- src/undo.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/undo.c
+@@ -263,7 +263,7 @@ int f,n;	/* prefix flag and argument */
+ 	return(wpopup(ulistp));
+ }
+ 
+-PASCAL NEAR undolist()
++int PASCAL NEAR undolist()
+ 
+ {
+ 	register char *cp1;	/* scanning pointer into line to build */
+@@ -448,6 +448,8 @@ nextbuf:	bp = getoldb();
+ 		lp->next = (UNDO_OBJ *)NULL;
+ 		bp->undo_count--;
+ 	}
++	/* notreached */
++	return NULL;
+ }
+ 
+ /*	RE-ROOM: Allocate memory using realloc()
+@@ -511,5 +513,7 @@ nxtbuf:		bp = getoldb();
+ 		lp->next = (UNDO_OBJ *)NULL;
+ 		bp->undo_count--;
+ 	}
++	/* notreached */
++	return NULL;
+ }
+ 

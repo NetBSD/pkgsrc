@@ -1,0 +1,38 @@
+$NetBSD: patch-src_replace_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- silence initialization warning seen with gcc 4.1
+- fix mixing of signed and unsigned char pointers
+- const correctness required by existing const declarations
+
+--- src/replace.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/replace.c
+@@ -55,6 +55,11 @@ int	n;					/* # of repetitions wanted */
+ 	int lastoff;		/* offset (for 'u' query option) */
+ 	int oldmatchlen;	/* Closure may alter the match length.*/
+ 
++	/* required by gcc 4.1 */
++	c = 0;
++	lastoff = 0;
++	oldmatchlen = 0;
++
+ 	/*
+ 	 * Don't allow this command if we are
+ 	 * in read only mode.
+@@ -83,7 +88,7 @@ int	n;					/* # of repetitions wanted */
+ 	/* Set up flags so we can make sure not to do a recursive
+ 	 * replace on the last line.
+ 	 */
+-	nlflag = (pat[strlen(pat) - 1] == '\r');
++	nlflag = (pat[strlen((char *)pat) - 1] == '\r');
+ 	nlrepl = FALSE;
+ 
+ 	/* Save original . position, reset the number of matches and
+@@ -340,7 +345,7 @@ char	*instr;
+ int	use_rmc;
+ {
+ 	register int	status;
+-	register char	*rstr;
++	register CONST char	*rstr;
+ #if	MAGIC
+ 	register RMC	*rmcptr;
+ #endif

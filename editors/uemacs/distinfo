@@ -1,12 +1,40 @@
-$NetBSD: distinfo,v 1.6 2010/01/29 19:59:12 joerg Exp $
+$NetBSD: distinfo,v 1.7 2012/05/10 20:53:30 dholland Exp $
 
 SHA1 (ue400dev.zip) = edbb0261cdaa1803d9f7dc7debfd4a9df3a668eb
 RMD160 (ue400dev.zip) = 75bc1b1e11035ed24d33ec4c6afad43880d5985f
 Size (ue400dev.zip) = 1179949 bytes
 SHA1 (patch-aa) = 2e81eaf2d4b09baf8a54daa675d85d9bae68fb4b
-SHA1 (patch-ab) = 996e5f094b26991ba111f635a9a02d05188628aa
-SHA1 (patch-ac) = f7aaa2514f74987a68da726a397d58089fc2d82e
-SHA1 (patch-ad) = 977e0ca09cc53ba4bb90936dd5e34a460d0ea4e8
+SHA1 (patch-ab) = bef63275aa8a88b12ce47fd568059360e1e972c8
+SHA1 (patch-ac) = beeba5d9686f6009248437f3eb0fd10e8b72057b
+SHA1 (patch-ad) = 493eb3bf0c24d91d55f532029a0aa5d2ad5abe44
 SHA1 (patch-ae) = 40998fe8f82a65cbfdabc849ee68a04aac9ef821
 SHA1 (patch-af) = 80050d29e3f3e43116f86ea9a4d93c68d9500556
-SHA1 (patch-ag) = c584a8c41f5d7bccd3ef7b3bcf07d202938ae54e
+SHA1 (patch-ag) = 2f6e1bd24888f02083fba88d73bdcc5672cb3aab
+SHA1 (patch-h_ebind_h) = fd262c8559f86a923c4ca4d6ee237229c21e15c3
+SHA1 (patch-h_eproto_h) = 20abd7755c63292cc87197a4de31d69491f973a8
+SHA1 (patch-h_evar_h) = 3491307028a9249a159abb3d92394dbdb475c289
+SHA1 (patch-src_abbrev_c) = 9252165a1a60f4984ba7e68ace5ab1e3b9aba5ff
+SHA1 (patch-src_basic_c) = 9c46f2526102342c2c0b13f7febfb04913245a58
+SHA1 (patch-src_buffer_c) = a2589f58e8adf6a227be33a3c97560b01a0f6af6
+SHA1 (patch-src_crypt_c) = 5e76bada1614497596675026465a448fe2ea7779
+SHA1 (patch-src_display_c) = aad3a3e1e08eb60faf8fddda248b5d5e81cc3c96
+SHA1 (patch-src_dolock_c) = 76065c2713b521d4e82f1ee9c261ff392e254428
+SHA1 (patch-src_eval_c) = fe624ff82f021eee53de21f4682bd28872703a37
+SHA1 (patch-src_exec_c) = 27238fd0b2948cbaff2ee83d2cc1547d7554d3c2
+SHA1 (patch-src_file_c) = f62c778b710e2bd61e762514bbc3136ff8f7b201
+SHA1 (patch-src_fileio_c) = ee5034687a031a5d69e31ef6126fe7e34adcf8a3
+SHA1 (patch-src_input_c) = 53e4c06eaef9dfcdb2bbe52c54338fbaa2fa0de9
+SHA1 (patch-src_isearch_c) = 23405d0dd9a82d874df41714fdfa1c79bff90e24
+SHA1 (patch-src_keyboard_c) = 607aecf64f0ed212f642e25671c995f83373bc88
+SHA1 (patch-src_line_c) = 50943baedce5c4cb41a4d155cf2713cd33f4734d
+SHA1 (patch-src_main_c) = 7f6ad81de9646e0d358739fdaf58005927687b06
+SHA1 (patch-src_mouse_c) = 49c0d8ff5da8f171d2e784ba9a38951a2d95ef3c
+SHA1 (patch-src_random_c) = 76bedf9bafbf17fa47608ffc0a2ecb301580ef36
+SHA1 (patch-src_region_c) = 0290a4f2146bfb21eef233f91347f98e24b5d309
+SHA1 (patch-src_replace_c) = 373766f5fed7086a3bb3da4ae660575a501f591c
+SHA1 (patch-src_screen_c) = c41c79986005d1f6318f9f3fc0a7493477224038
+SHA1 (patch-src_search_c) = de8b5f5f9728d5d7ec93dffd4bedf05e9011de2f
+SHA1 (patch-src_tags_c) = 9651f05b94f293af2ad7490cca7667ce91f5cce2
+SHA1 (patch-src_undo_c) = fb8a3aae42e5c820178333f635edce21c91a5064
+SHA1 (patch-src_window_c) = 438b0007009d5dcb423d7627d77cc41a7288a715
+SHA1 (patch-src_word_c) = 462e5e6c053a1f7f97627c6e273403dd7876f546

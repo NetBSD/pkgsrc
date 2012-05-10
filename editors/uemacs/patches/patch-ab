@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2004/02/13 23:49:12 snj Exp $
+$NetBSD: patch-ab,v 1.5 2012/05/10 20:53:30 dholland Exp $
 
---- netbsd/estruct.h.orig	Wed Mar 25 14:21:05 1998
-+++ netbsd/estruct.h	Wed Mar 25 14:25:34 1998
+Configure for pkgsrc. Fix some of the conditionals for a C89+ world.
+
+--- netbsd/estruct.h.orig	2012-05-10 18:13:41.000000000 +0000
++++ netbsd/estruct.h
 @@ -0,0 +1,1254 @@
 +/*	ESTRUCT:	Structure and preprocesser defined for
 +			MicroEMACS 4.00
@@ -169,7 +171,7 @@ $NetBSD: patch-ab,v 1.4 2004/02/13 23:49:12 snj Exp $
 +#define NOISY	1	/* Use a fancy BELL if it exists		*/
 +#define CTAGS	1	/* include vi-like tagging?			*/
 +#define SPEECH	0	/* spoken EMACS, for the sight impared [not ready] */
-+#define VARARG	0	/* use varargs.h for mlwrite()			*/
++#define VARARG	1	/* use stdarg.h for mlwrite()			*/
 +
 +#if	XVT
 +#undef	COLOR
@@ -237,7 +239,7 @@ $NetBSD: patch-ab,v 1.4 2004/02/13 23:49:12 snj Exp $
 +
 +/*	Prototypes in use?	*/
 +
-+#if	MSC || TURBO || IC || VMS || GCC || ZTC
++#if	__STDC__ || MSC || TURBO || IC || VMS || GCC || ZTC
 +#define PROTO	1
 +#else
 +#define PROTO	0
@@ -496,7 +498,7 @@ $NetBSD: patch-ab,v 1.4 2004/02/13 23:49:12 snj Exp $
 +#endif
 +
 +#if	VARARG
-+#if	(GCC == 0) && (USG || AIX || AUX || BSD || FREEBSD || SUN || XENIX || HPUX8 || HPUX9 || AVIION || MPE)
++#if	(GCC == 0) && (__STDC__ == 0) && (USG || AIX || AUX || BSD || FREEBSD || SUN || XENIX || HPUX8 || HPUX9 || AVIION || MPE)
 +#define VARG	1
 +#define SARG	0
 +#include	<varargs.h>

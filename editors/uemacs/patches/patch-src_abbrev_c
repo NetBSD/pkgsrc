@@ -1,0 +1,24 @@
+$NetBSD: patch-src_abbrev_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- return values from non-void functions
+
+--- src/abbrev.c.orig	1995-05-31 17:49:36.000000000 +0000
++++ src/abbrev.c
+@@ -224,7 +224,7 @@ int f,n;	/* prefix flag and argument */
+ {
+ 	register BUFFER *bp;	/* ptr to buffer to dump */
+ 	register LINE *lp;	/* ptr to current line in our buffer */
+-	register llength;	/* length of the current line being examined */
++	register int llength;	/* length of the current line being examined */
+ 	char cur_sym[MAXSYM+1];	/* current symbol being defined */
+ 	char cur_exp[NSTRING];	/* current expansion */
+ 	
+@@ -264,6 +264,7 @@ int f,n;	/* prefix flag and argument */
+ 		/* on to the next pair */
+ 		lp = lforw(lp);
+ 	}
++	return TRUE;
+ }
+ 
+ VOID PASCAL NEAR ab_init()

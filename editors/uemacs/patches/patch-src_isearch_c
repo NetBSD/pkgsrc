@@ -1,0 +1,49 @@
+$NetBSD: patch-src_isearch_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- silence some gcc warnings
+- fix uninitialized variable bug caught by gcc
+
+--- src/isearch.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/isearch.c
+@@ -64,7 +64,7 @@ int f, n;				/* prefix flag and argument
+ 	 */
+ 	backchar(TRUE, 1);
+ 
+-	if (status = isearch(REVERSE))
++	if ((status = isearch(REVERSE)) != 0)
+ 		mlerase();		/* If happy, just erase the cmd line  */
+ 	else
+ 		mlwrite(TEXT164);
+@@ -79,7 +79,7 @@ int f, n;
+ {
+ 	register int	 status;
+ 
+-	if (status = isearch(FORWARD))
++	if ((status = isearch(FORWARD)) != 0)
+ 		mlerase();		/* If happy, just erase the cmd line  */
+ 	else
+ 		mlwrite(TEXT164);
+@@ -357,6 +357,8 @@ int dir;				/* Search direction 		*/
+ 	register char *patrn;	/* The entire search string (incl chr) */
+ 	register int sts;	/* how well things go		*/
+ 
++	sts = FALSE;
++
+ 	/* setup the local scan pointer to current "." */
+ 
+ 	curline = curwp->w_dotp;	/* Get the current line structure */
+@@ -364,12 +366,12 @@ int dir;				/* Search direction 		*/
+ 
+ 	if (dir == FORWARD)
+ 		{				/* If searching forward		*/
+-		if (sts = !boundry(curline, curoff, FORWARD))
++		if ((sts = !boundry(curline, curoff, FORWARD)) != 0)
+ 			{
+ 			/* If it's what we're looking for, set the point
+ 			 * and say that we've moved.
+ 			 */
+-			if (sts = eq(nextch(&curline, &curoff, FORWARD), chr))
++			if ((sts = eq(nextch(&curline, &curoff, FORWARD), chr)) != 0)
+ 				{
+ 				curwp->w_dotp = curline;
+ 				curwp->w_doto = curoff;

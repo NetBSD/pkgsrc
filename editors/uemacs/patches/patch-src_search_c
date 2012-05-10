@@ -1,0 +1,62 @@
+$NetBSD: patch-src_search_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- silence initialization warning seen with gcc 4.1
+- fix mixing of signed and unsigned char pointers
+- silence gcc braces and parentheses warnings
+
+--- src/search.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/search.c
+@@ -255,6 +255,10 @@ int repeats;
+ 	int	patlenadd;
+ 	int	jump;
+ 
++	/* required by gcc 4.1  */
++	patlenadd = 0;
++	jump = 0;
++
+ 	/* If we are going in reverse, then the 'end' is actually
+ 	 * the beginning of the pattern.  Toggle it.
+ 	 */
+@@ -410,7 +414,7 @@ int *pcwoff;
+ 		/* Is the current meta-character modified
+ 		 * by a closure?
+ 		 */
+-		if (cl_type = (mcptr->mc_type & ALLCLOS)) {
++		if ((cl_type = (mcptr->mc_type & ALLCLOS)) != 0) {
+ 
+ 			/* Minimum number of characters that may
+ 			 * match is 0 or 1.
+@@ -807,7 +811,7 @@ DELTA *tbl;
+  */
+ VOID PASCAL NEAR setjtable()
+ {
+-	make_delta(pat, &deltapat);
++	make_delta((char *)pat, &deltapat);
+ 	make_delta(strrev(strcpy((char *)tap, (char *)pat)), &tapatled);
+ }
+ 
+@@ -876,13 +880,14 @@ int srch;
+ 	/* Only make the meta-pattern if in magic mode, since the
+ 	 * pattern in question might have an invalid meta combination.
+ 	 */
+-	if (status == TRUE)
++	if (status == TRUE) {
+ 		if ((curwp->w_bufp->b_mode & MDMAGIC) == 0) {
+ 			mcclear();
+ 			rmcclear();
+ 		}
+ 		else
+ 			status = srch? mcstr(): rmcstr();
++	}
+ #endif
+ 	return (status);
+ }
+@@ -1500,7 +1505,7 @@ MC *mcptr;
+ 	 * Now loop through the pattern, collecting characters until
+ 	 * we run into a meta-character.
+ 	 */
+-	while (pchr = *++patptr)
++	while ((pchr = *++patptr) != 0)
+ 	{
+ 		/*
+ 		 * If the current character is a closure character,

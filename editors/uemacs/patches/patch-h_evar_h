@@ -1,0 +1,113 @@
+$NetBSD: patch-h_evar_h,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- use correct initializers
+
+--- h/evar.h~	2012-05-10 19:25:36.000000000 +0000
++++ h/evar.h
+@@ -213,56 +213,56 @@ typedef struct UFUNC {
+ #define TRINAMIC	3
+ 
+ NOSHARE UFUNC funcs[] = {
+-	"abbrev", MONAMIC,	/* look up abbreviation */
+-	"abs", MONAMIC, 	/* absolute value of a number */
+-	"add", DYNAMIC,		/* add two numbers together */
+-	"and", DYNAMIC, 	/* logical and */
+-	"ascii", MONAMIC, 	/* char to integer conversion */
+-	"band", DYNAMIC, 	/* bitwise and	 9-10-87  jwm */
+-	"bind", MONAMIC, 	/* loopup what function name is bound to a key */
+-	"bnot", MONAMIC, 	/* bitwise not */
+-	"bor", DYNAMIC, 	/* bitwise or	 9-10-87  jwm */
+-	"bxor", DYNAMIC, 	/* bitwise xor	 9-10-87  jwm */
+-	"call", MONAMIC,	/* call a procedure */
+-	"cat", DYNAMIC, 	/* concatenate string */
+-	"chr", MONAMIC, 	/* integer to char conversion */
+-	"divide", DYNAMIC, 	/* division */
+-	"env", MONAMIC, 	/* retrieve a system environment var */
+-	"equal", DYNAMIC, 	/* logical equality check */
+-	"exist", MONAMIC, 	/* check if a file exists */
+-	"find", MONAMIC, 	/* look for a file on the path... */
+-	"greater", DYNAMIC, 	/* logical greater than */
+-	"group", MONAMIC,	/* return group match in MAGIC mode */
+-	"gtc", NILNAMIC,	/* get 1 emacs command */
+-	"gtk", NILNAMIC,	/* get 1 charater */
+-	"indirect", MONAMIC, 	/* evaluate indirect value */
+-	"isnum", MONAMIC,	/* is the arg a number? */
+-	"left", DYNAMIC, 	/* left string(string, len) */
+-	"length", MONAMIC, 	/* string length */
+-	"less", DYNAMIC, 	/* logical less than */
+-	"lower", MONAMIC, 	/* lower case string */
+-	"mid", TRINAMIC,	/* mid string(string, pos, len) */
+-	"mkcol", MONAMIC,	/* column position of a mark */
+-	"mkline", MONAMIC,	/* line number of a mark */
+-	"modulo", DYNAMIC, 	/* mod */
+-	"negate", MONAMIC, 	/* negate */
+-	"not", MONAMIC, 	/* logical not */
+-	"or",  DYNAMIC, 	/* logical or */
+-	"reverse", MONAMIC,	/* reverse */
+-	"right", DYNAMIC, 	/* right string(string, pos) */
+-	"rnd", MONAMIC, 	/* get a random number */
+-	"sequal", DYNAMIC, 	/* string logical equality check */
+-	"sgreater", DYNAMIC, 	/* string logical greater than */
+-	"sindex", DYNAMIC, 	/* find the index of one string in another */
+-	"sless", DYNAMIC, 	/* string logical less than */
+-	"slower", DYNAMIC,	/* set lower to upper char translation */
+-	"subtract", DYNAMIC, 	/* subtraction */
+-	"supper", DYNAMIC,	/* set upper to lower char translation */
+-	"times", DYNAMIC, 	/* multiplication */
+-	"trim", MONAMIC,	/* trim whitespace off the end of a string */
+-	"true", MONAMIC, 	/* Truth of the universe logical test */
+-	"upper", MONAMIC, 	/* uppercase string */
+-	"xlate", TRINAMIC	/* XLATE character string translation */
++	{ "abbrev", MONAMIC },	/* look up abbreviation */
++	{ "abs", MONAMIC }, 	/* absolute value of a number */
++	{ "add", DYNAMIC },	/* add two numbers together */
++	{ "and", DYNAMIC }, 	/* logical and */
++	{ "ascii", MONAMIC }, 	/* char to integer conversion */
++	{ "band", DYNAMIC }, 	/* bitwise and	 9-10-87  jwm */
++	{ "bind", MONAMIC }, 	/* loopup what function name is bound to a key */
++	{ "bnot", MONAMIC }, 	/* bitwise not */
++	{ "bor", DYNAMIC }, 	/* bitwise or	 9-10-87  jwm */
++	{ "bxor", DYNAMIC }, 	/* bitwise xor	 9-10-87  jwm */
++	{ "call", MONAMIC },	/* call a procedure */
++	{ "cat", DYNAMIC }, 	/* concatenate string */
++	{ "chr", MONAMIC }, 	/* integer to char conversion */
++	{ "divide", DYNAMIC }, 	/* division */
++	{ "env", MONAMIC }, 	/* retrieve a system environment var */
++	{ "equal", DYNAMIC }, 	/* logical equality check */
++	{ "exist", MONAMIC }, 	/* check if a file exists */
++	{ "find", MONAMIC }, 	/* look for a file on the path... */
++	{ "greater", DYNAMIC }, /* logical greater than */
++	{ "group", MONAMIC },	/* return group match in MAGIC mode */
++	{ "gtc", NILNAMIC },	/* get 1 emacs command */
++	{ "gtk", NILNAMIC },	/* get 1 charater */
++	{ "indirect", MONAMIC },/* evaluate indirect value */
++	{ "isnum", MONAMIC },	/* is the arg a number? */
++	{ "left", DYNAMIC }, 	/* left string(string, len) */
++	{ "length", MONAMIC }, 	/* string length */
++	{ "less", DYNAMIC }, 	/* logical less than */
++	{ "lower", MONAMIC }, 	/* lower case string */
++	{ "mid", TRINAMIC },	/* mid string(string, pos, len) */
++	{ "mkcol", MONAMIC },	/* column position of a mark */
++	{ "mkline", MONAMIC },	/* line number of a mark */
++	{ "modulo", DYNAMIC }, 	/* mod */
++	{ "negate", MONAMIC }, 	/* negate */
++	{ "not", MONAMIC }, 	/* logical not */
++	{ "or",  DYNAMIC }, 	/* logical or */
++	{ "reverse", MONAMIC },	/* reverse */
++	{ "right", DYNAMIC }, 	/* right string(string, pos) */
++	{ "rnd", MONAMIC }, 	/* get a random number */
++	{ "sequal", DYNAMIC }, 	/* string logical equality check */
++	{ "sgreater", DYNAMIC },/* string logical greater than */
++	{ "sindex", DYNAMIC }, 	/* find the index of one string in another */
++	{ "sless", DYNAMIC }, 	/* string logical less than */
++	{ "slower", DYNAMIC },	/* set lower to upper char translation */
++	{ "subtract", DYNAMIC },/* subtraction */
++	{ "supper", DYNAMIC },	/* set upper to lower char translation */
++	{ "times", DYNAMIC }, 	/* multiplication */
++	{ "trim", MONAMIC },	/* trim whitespace off the end of a string */
++	{ "true", MONAMIC }, 	/* Truth of the universe logical test */
++	{ "upper", MONAMIC }, 	/* uppercase string */
++	{ "xlate", TRINAMIC },	/* XLATE character string translation */
+ };
+ 
+ #define NFUNCS	sizeof(funcs) / sizeof(UFUNC)

@@ -1,0 +1,70 @@
+$NetBSD: patch-src_screen_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- declare void functions void
+
+--- src/screen.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/screen.c
+@@ -66,7 +66,7 @@ SCREEN *sp;	/* screen image to refresh *
+ 	to A-N on machines with an ALT key
+ */
+ 
+-PASCAL NEAR cycle_screens(f, n)
++int PASCAL NEAR cycle_screens(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -82,7 +82,7 @@ int f,n;	/* prefix flag and argument */
+ 	return(select_screen(sp, TRUE));
+ }
+ 
+-PASCAL NEAR find_screen(f, n)
++int PASCAL NEAR find_screen(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -113,7 +113,7 @@ int f,n;	/* prefix flag and argument */
+ 	return(select_screen(sp, TRUE));
+ }
+ 
+-PASCAL NEAR free_screen(sp)	/* free all resouces associated with a screen */
++VOID PASCAL NEAR free_screen(sp)	/* free all resouces associated with a screen */
+ 
+ SCREEN *sp;	/* screen to dump */
+ 
+@@ -149,7 +149,7 @@ SCREEN *sp;	/* screen to dump */
+ 	free((char *) sp);
+ }
+ 
+-int PASCAL NEAR unlist_screen(sp)
++VOID PASCAL NEAR unlist_screen(sp)
+ 
+ SCREEN *sp;         /* screen to remove from the list */
+ {
+@@ -164,7 +164,7 @@ SCREEN *sp;         /* screen to remove 
+ 	last_scr->s_next_screen = sp->s_next_screen;
+ }
+ 
+-PASCAL NEAR delete_screen(f, n)
++int PASCAL NEAR delete_screen(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -396,7 +396,7 @@ int announce;	/* announce the selection?
+ 	Bound to "A-B".
+ */
+ 
+-PASCAL NEAR list_screens(f, n)
++int PASCAL NEAR list_screens(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
+@@ -418,7 +418,7 @@ int f,n;	/* prefix flag and argument */
+  * is an error (if there is no memory). Iflag
+  * indicates whether to list hidden screens.
+  */
+-PASCAL NEAR screenlist(iflag)
++int PASCAL NEAR screenlist(iflag)
+ 
+ int iflag;	/* list hidden screen flag */
+ 
