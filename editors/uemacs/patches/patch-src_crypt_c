@@ -1,0 +1,15 @@
+$NetBSD: patch-src_crypt_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+
+--- src/crypt.c~	2012-05-10 19:12:43.000000000 +0000
++++ src/crypt.c
+@@ -16,7 +16,7 @@ static int PASCAL NEAR mod95(int);
+ static int PASCAL NEAR mod95();
+ #endif
+ 
+-PASCAL NEAR setekey(f, n)	/* reset encryption key of current buffer */
++int PASCAL NEAR setekey(f, n)	/* reset encryption key of current buffer */
+ 
+ int f;		/* default flag */
+ int n;		/* numeric argument */

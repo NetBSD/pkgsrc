@@ -1,0 +1,125 @@
+$NetBSD: patch-src_eval_c,v 1.1 2012/05/10 20:53:30 dholland Exp $
+
+- don't use implicit int
+- const correctness required by existing const declarations
+- return NULL on some unreachable paths
+- fix uninitialized variable bug caught by gcc
+- silence gcc 4.1 parenthesis warning
+
+--- src/eval.c~	2012-05-10 19:25:36.000000000 +0000
++++ src/eval.c
+@@ -68,7 +68,7 @@ UTABLE *ut;	/* table to clear */
+ 	free(ut);
+ }
+ 
+-char *PASCAL NEAR gtfun(fname)	/* evaluate a function */
++CONST char *PASCAL NEAR gtfun(fname)	/* evaluate a function */
+ 
+ char *fname;		/* name of function to evaluate */
+ 
+@@ -237,9 +237,10 @@ char *fname;		/* name of function to eva
+ 	}
+ 
+ 	meexit(-11);	/* never should get here */
++	return NULL;
+ }
+ 
+-char *PASCAL NEAR gtusr(vname)	/* look up a user var's value */
++CONST char *PASCAL NEAR gtusr(vname)	/* look up a user var's value */
+ 
+ char *vname;		/* name of user variable to fetch */
+ 
+@@ -299,7 +300,7 @@ int i;
+ 	return(envars[i]);
+ }
+ 
+-PASCAL NEAR binary(key, tval, tlength, klength)
++int PASCAL NEAR binary(key, tval, tlength, klength)
+ 
+ char *key;		/* key string to look for */
+ char *(PASCAL NEAR *tval)();	/* ptr to function to fetch table value with */
+@@ -331,7 +332,7 @@ int klength;		/* maximum length of strin
+ 	return(-1);
+ }
+ 
+-char *PASCAL NEAR gtenv(vname)
++CONST char *PASCAL NEAR gtenv(vname)
+ 
+ char *vname;		/* name of environment variable to retrieve */
+ 
+@@ -451,11 +452,12 @@ char *vname;		/* name of environment var
+ 		case EVYPOS:	return(int_asc(ypos));
+ 	}
+ 	meexit(-12);	/* again, we should never get here */
++	return NULL;
+ }
+ 
+-char *PASCAL NEAR fixnull(s)	/* Don't return NULL pointers! */
++CONST char *PASCAL NEAR fixnull(s)	/* Don't return NULL pointers! */
+ 
+-char *s;
++CONST char *s;
+ 
+ {
+ 	if (s == NULL)
+@@ -753,6 +755,7 @@ int scope;	/* intended scope of any crea
+ 
+ fvar:	vtype = -1;
+ 	vut = uv_head;
++	vnum = -1;
+ 
+ 	switch (var[0]) {
+ 
+@@ -1245,7 +1248,7 @@ char *token;	/* token to analyze */
+ 	}
+ }
+ 
+-char *PASCAL NEAR getval(token) /* find the value of a token */
++CONST char *PASCAL NEAR getval(token) /* find the value of a token */
+ 
+ char *token;		/* token to evaluate */
+ 
+@@ -1316,6 +1319,7 @@ char *token;		/* token to evaluate */
+ 		case TKSTR:	return(token+1);
+ 		case TKCMD:	return(token);
+ 	}
++	return NULL;
+ }
+ 
+ int PASCAL NEAR stol(val)	/* convert a string to a numeric logical */
+@@ -1333,7 +1337,7 @@ char *val;	/* value to check for stol */
+ 	return((asc_int(val) != 0));
+ }
+ 
+-char *PASCAL NEAR ltos(val)	/* numeric logical to string logical */
++CONST char *PASCAL NEAR ltos(val)	/* numeric logical to string logical */
+ 
+ int val;	/* value to translate */
+ 
+@@ -1470,7 +1474,7 @@ xnext:		++sp;
+ /*	setwlist:	Set an alternative list of character to be
+ 			considered "in a word */
+ 
+-PASCAL NEAR setwlist(wclist)
++VOID PASCAL NEAR setwlist(wclist)
+ 
+ char *wclist;	/* list of characters to consider "in a word" */
+ 
+@@ -1539,7 +1543,7 @@ char *st;
+  
+ 	/* scan digits */
+ 	period_flag = FALSE;
+-	while ((*st >= '0') && (*st <= '9') ||
++	while ((*st >= '0' && *st <= '9') ||
+ 	       (*st == '.' && period_flag == FALSE)) {
+ 		if (*st == '.')
+ 			period_flag = TRUE;
+@@ -1605,7 +1609,7 @@ int n;		/* numeric arg (can overide prom
+ 				of all the environment variables
+ */
+ 
+-PASCAL NEAR desvars(f, n)
++int PASCAL NEAR desvars(f, n)
+ 
+ int f,n;	/* prefix flag and argument */
+ 
