@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1.1.1 2012/05/06 13:12:12 obache Exp $
+$NetBSD: patch-al,v 1.2 2012/05/10 08:38:25 obache Exp $
 
 --- configure.orig	2012-04-11 06:54:08.000000000 +0000
 +++ configure
@@ -92,3 +92,12 @@ $NetBSD: patch-al,v 1.1.1.1 2012/05/06 13:12:12 obache Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
+@@ -12738,8 +12741,6 @@ then
+ 		esac
+ 		;;
+ 	CYGWIN*)   SO=.dll;;
+-	Linux*|GNU*)
+-		   SO=.${SOABI}.so;;
+ 	*)	   SO=.so;;
+ 	esac
+ else
